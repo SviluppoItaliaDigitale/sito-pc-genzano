@@ -1,0 +1,36 @@
+<!-- Slim Header — Barra istituzionale superiore (Linee guida Designers Italia) -->
+<div class="it-header-slim-wrapper" role="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="https://www.comune.genzanodiroma.roma.it/" target="_blank" rel="noopener noreferrer" aria-label="Vai al sito del Comune di Genzano di Roma (si apre in una nuova finestra)">
+            Comune di Genzano di Roma
+          </a>
+          <div class="nav-mobile">
+            <nav aria-label="Navigazione enti collegati">
+              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu-enti" role="button" aria-expanded="false" aria-controls="menu-enti">
+                <span>Comune di Genzano di Roma</span>
+                <svg class="icon icon-sm"><use href="/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg>
+              </a>
+              <div class="link-list-wrapper collapse" id="menu-enti">
+                <ul class="link-list" role="list">
+                  <li role="listitem"><a class="dropdown-item list-item" href="https://www.protezionecivile.gov.it/it/" target="_blank" rel="noopener noreferrer">Dipartimento Nazionale</a></li>
+                  <li role="listitem"><a class="dropdown-item list-item" href="https://protezionecivile.regione.lazio.it/" target="_blank" rel="noopener noreferrer">Agenzia Regionale Lazio</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="it-header-slim-right-zone" role="navigation" aria-label="Link ai social">
+            <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Facebook (si apre in una nuova finestra)" class="btn btn-icon btn-sm btn-white">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Instagram (si apre in una nuova finestra)" class="btn btn-icon btn-sm btn-white">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <nav aria-label="Percorso di navigazione">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          {{ if .Parent }}
+          <li class="breadcrumb-item"><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
+          {{ end }}
+          <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+        </ol>
+      </nav>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
+      {{ if .Date }}
+      <p class="text-muted small">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      </p>
+      {{ end }}
+      <article>
+        {{ .Content }}
+      </article>
+    </div>
+  </div>
+</div>
+{{ end }}

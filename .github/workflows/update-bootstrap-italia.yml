@@ -1,0 +1,137 @@
+# ============================================================
+# Workflow: Aggiornamento Automatico Bootstrap Italia
+# Si attiva:
+#   - Ogni lunedì alle 06:00 UTC (08:00 ora italiana)
+#   - Manualmente dal tab "Actions" su GitHub
+# ============================================================
+name: "🔄 Aggiorna Bootstrap Italia"
+
+on:
+  # Esecuzione programmata: ogni lunedì alle 06:00 UTC (08:00 CEST)
+  schedule:
+    - cron: '0 6 * * 1'
+
+  # Permette l'esecuzione manuale dal pannello Actions di GitHub
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      # Passo 1: Scarica il codice
+      - name: "📥 Checkout del repository"
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Passo 2: Controlla la versione attuale installata
+      - name: "🔍 Leggi versione attuale"
+        id: current
+        run: |
+          if [ -f .bootstrap-italia-version ]; then
+            CURRENT_VERSION=$(cat .bootstrap-italia-version | tr -d '[:space:]')
+          else
+            CURRENT_VERSION="0.0.0"
+          fi
+          echo "version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+          echo "📌 Versione attuale: $CURRENT_VERSION"
+
+      # Passo 3: Controlla l'ultima versione disponibile su GitHub
+      - name: "🌐 Controlla ultima versione su GitHub"
+        id: latest
+        run: |
+          LATEST=$(curl -s https://api.github.com/repos/italia/bootstrap-italia/releases/latest | grep '"tag_name"' | sed -E 's/.*"v([^"]+)".*/\1/')
+          echo "version=$LATEST" >> $GITHUB_OUTPUT
+          echo "🆕 Ultima versione disponibile: $LATEST"
+
+      # Passo 4: Confronta e aggiorna se necessario
+      - name: "⬆️ Aggiorna Bootstrap Italia"
+        if: steps.current.outputs.version != steps.latest.outputs.version
+        run: |
+          NEW_VERSION="${{ steps.latest.outputs.version }}"
+          echo "============================================"
+          echo "🔄 AGGIORNAMENTO IN CORSO"
+          echo "   Da: ${{ steps.current.outputs.version }}"
+          echo "   A:  $NEW_VERSION"
+          echo "============================================"
+
+          # Scarica la nuova versione
+          DOWNLOAD_URL="https://github.com/italia/bootstrap-italia/releases/download/v${NEW_VERSION}/bootstrap-italia.zip"
+          echo "📥 Download da: $DOWNLOAD_URL"
+          curl -L -o /tmp/bootstrap-italia.zip "$DOWNLOAD_URL"
+
+          # Verifica che il download sia andato a buon fine
+          if [ ! -s /tmp/bootstrap-italia.zip ]; then
+            echo "❌ ERRORE: Download fallito!"
+            exit 1
+          fi
+
+          # Rimuovi la vecchia versione
+          rm -rf static/vendor/bootstrap-italia
+
+          # Estrai la nuova versione
+          mkdir -p static/vendor/bootstrap-italia
+          unzip -o /tmp/bootstrap-italia.zip -d static/vendor/bootstrap-italia/
+
+          # Se l'archivio crea una sottocartella, spostiamo il contenuto
+          SUBDIR=$(find static/vendor/bootstrap-italia -mindepth 1 -maxdepth 1 -type d | head -1)
+          if [ -n "$SUBDIR" ] && [ "$SUBDIR" != "static/vendor/bootstrap-italia" ]; then
+            echo "📁 Rilevata sottocartella: $SUBDIR — sposto contenuto..."
+            mv "$SUBDIR"/* static/vendor/bootstrap-italia/ 2>/dev/null || true
+            mv "$SUBDIR"/.* static/vendor/bootstrap-italia/ 2>/dev/null || true
+            rmdir "$SUBDIR" 2>/dev/null || true
+          fi
+
+          # Aggiorna il file di versione
+          echo "$NEW_VERSION" > .bootstrap-italia-version
+
+          # Pulizia
+          rm -f /tmp/bootstrap-italia.zip
+
+          # Verifica che i file essenziali esistano
+          echo ""
+          echo "✅ Verifica file installati:"
+          ls -la static/vendor/bootstrap-italia/css/ 2>/dev/null && echo "  ✓ CSS trovato" || echo "  ✗ CSS MANCANTE!"
+          ls -la static/vendor/bootstrap-italia/js/ 2>/dev/null && echo "  ✓ JS trovato" || echo "  ✗ JS MANCANTE!"
+          echo ""
+          echo "✅ Aggiornamento completato a v$NEW_VERSION"
+
+      # Passo 5: Committa e pusha le modifiche
+      - name: "📤 Commit e Push aggiornamento"
+        if: steps.current.outputs.version != steps.latest.outputs.version
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add -A
+          git commit -m "⬆️ Aggiorna Bootstrap Italia da v${{ steps.current.outputs.version }} a v${{ steps.latest.outputs.version }}" \
+                     -m "Aggiornamento automatico eseguito da GitHub Actions." \
+                     -m "Release: https://github.com/italia/bootstrap-italia/releases/tag/v${{ steps.latest.outputs.version }}"
+          git push
+
+      # Passo 6: Nessun aggiornamento necessario
+      - name: "✅ Nessun aggiornamento necessario"
+        if: steps.current.outputs.version == steps.latest.outputs.version
+        run: |
+          echo "✅ Bootstrap Italia è già aggiornato alla versione ${{ steps.current.outputs.version }}"
+          echo "   Nessuna azione necessaria."
+
+      # Passo 7: Crea un "Summary" visibile nel tab Actions
+      - name: "📊 Riepilogo"
+        if: always()
+        run: |
+          echo "## 🔄 Controllo Aggiornamento Bootstrap Italia" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Informazione | Valore |" >> $GITHUB_STEP_SUMMARY
+          echo "|---|---|" >> $GITHUB_STEP_SUMMARY
+          echo "| Versione installata | \`v${{ steps.current.outputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Ultima versione disponibile | \`v${{ steps.latest.outputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.current.outputs.version }}" != "${{ steps.latest.outputs.version }}" ]; then
+            echo "| **Azione** | ✅ **Aggiornato!** |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| **Azione** | Nessun aggiornamento necessario |" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📅 Prossimo controllo: lunedì prossimo alle 08:00" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Titolo della pagina -->
+  <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+  <!-- Bootstrap Italia CSS -->
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="/vendor/bootstrap-icons/bootstrap-icons.min.css">
+
+  <!-- CSS Personalizzato -->
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ .Permalink }}">
+</head>
+<body>
+
+  <!-- Skip to main content (Accessibilità WCAG 2.1) -->
+  <a class="skip-to-content" href="#main-content">
+    Vai al contenuto principale
+  </a>
+
+  <!-- Header istituzionale (slim header PA) -->
+  {{ partial "slim-header.html" . }}
+
+  <!-- Navbar principale -->
+  {{ partial "navbar.html" . }}
+
+  <!-- Contenuto principale -->
+  <main id="main-content" tabindex="-1">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <!-- Footer -->
+  {{ partial "footer.html" . }}
+
+  <!-- Cookie Banner (GDPR) -->
+  {{ partial "cookie-banner.html" . }}
+
+  <!-- Bootstrap Italia JS -->
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+
+  <!-- JS personalizzato -->
+  {{ block "scripts" . }}{{ end }}
+
+</body>
+</html>

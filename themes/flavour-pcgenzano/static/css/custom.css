@@ -1,0 +1,102 @@
+/* ============================================================
+   CSS Personalizzato — Protezione Civile Genzano di Roma
+   Questo file sovrascrive/estende Bootstrap Italia
+   ============================================================ */
+
+/* Colori personalizzati del gruppo */
+:root {
+  --pc-genzano-primary: #003366;      /* Blu Protezione Civile */
+  --pc-genzano-secondary: #FF6600;    /* Arancione emergenza */
+  --pc-genzano-accent: #009246;       /* Verde Italia */
+  --pc-genzano-light-bg: #f5f7fa;     /* Sfondo chiaro sezioni alternate */
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(135deg, var(--pc-genzano-primary) 0%, #004080 100%);
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Sezione servizi */
+.servizi-section {
+  background-color: var(--pc-genzano-light-bg);
+  padding: 3rem 0;
+}
+
+/* Card servizi */
+.card-servizio {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-servizio:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Timeline eventi */
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--pc-genzano-primary);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--pc-genzano-primary);
+}
+
+/* Badge allerte */
+.badge-allerta-verde { background-color: #28a745; }
+.badge-allerta-gialla { background-color: #ffc107; color: #000; }
+.badge-allerta-arancione { background-color: #fd7e14; }
+.badge-allerta-rossa { background-color: #dc3545; }
+
+/* Accessibilità: focus visibile per navigazione da tastiera */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #ff9900;
+  outline-offset: 2px;
+}
+
+/* Skip to content link (accessibilità) */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--pc-genzano-primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  z-index: 9999;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Print styles */
+@media print {
+  .navbar, footer, .cookie-banner, .skip-to-content {
+    display: none !important;
+  }
+}

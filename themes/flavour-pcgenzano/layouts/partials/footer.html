@@ -1,0 +1,95 @@
+<!-- Footer (conforme Linee guida Designers Italia) -->
+<footer class="it-footer" id="footer" role="contentinfo">
+  <div class="it-footer-main">
+    <div class="container">
+      <section class="py-4">
+        <div class="row">
+          <!-- Colonna info ente -->
+          <div class="col-lg-4 col-md-4 pb-2">
+            <h2 class="h4 text-white">Protezione Civile</h2>
+            <p class="text-white-50">Gruppo Comunale Volontari di Genzano di Roma</p>
+            <p class="text-white-50">
+              <strong>Sede:</strong> {{ .Site.Params.sede }}<br>
+              <strong>Telefono:</strong> <a href="tel:{{ .Site.Params.telefono }}" class="text-white">{{ .Site.Params.telefono }}</a><br>
+              <strong>Email:</strong> <a href="mailto:{{ .Site.Params.email }}" class="text-white">{{ .Site.Params.email }}</a>
+            </p>
+            <p class="text-white-50 small">
+              {{ .Site.Params.coi }} — Registro Regionale P.C. {{ .Site.Params.registroRegionale }}<br>
+              {{ .Site.Params.runts }}<br>
+              Aderente al Coordinamento {{ .Site.Params.coordinamento }}
+            </p>
+          </div>
+
+          <!-- Colonna Servizi -->
+          <div class="col-lg-4 col-md-4 pb-2">
+            <h2 class="h4 text-white">Servizi</h2>
+            <nav aria-label="Servizi nel footer">
+              <ul class="footer-list" role="list">
+                {{ range .Site.Menus.servizi }}
+                <li role="listitem">
+                  <a class="list-item" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Colonna Link utili -->
+          <div class="col-lg-4 col-md-4 pb-2">
+            <h2 class="h4 text-white">Link Utili</h2>
+            <nav aria-label="Link utili nel footer">
+              <ul class="footer-list" role="list">
+                {{ range .Site.Menus.footer }}
+                <li role="listitem">
+                  <a class="list-item" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+              </ul>
+            </nav>
+
+            <!-- Social -->
+            <div class="mt-3">
+              <h3 class="h6 text-white">Seguici su</h3>
+              <ul class="list-inline" role="list">
+                <li class="list-inline-item" role="listitem">
+                  <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Facebook (si apre in una nuova finestra)">
+                    <i class="bi bi-facebook fs-4" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item" role="listitem">
+                  <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Instagram (si apre in una nuova finestra)">
+                    <i class="bi bi-instagram fs-4" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Footer basso — Copyright e link legali -->
+  <div class="it-footer-small-prints clearfix">
+    <div class="container">
+      <h3 class="visually-hidden">Informazioni legali</h3>
+      <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row" role="list">
+        <li class="list-inline-item" role="listitem">
+          <a href="/note-legali/" title="Note legali">Note legali</a>
+        </li>
+        <li class="list-inline-item" role="listitem">
+          <a href="/privacy/" title="Privacy e cookie">Privacy e cookie</a>
+        </li>
+        <li class="list-inline-item" role="listitem">
+          <!-- OBBLIGATORIO: Link alla dichiarazione di accessibilità (AGID) -->
+          <a href="/accessibilita/" title="Dichiarazione di accessibilità">Accessibilità</a>
+        </li>
+      </ul>
+      <p class="mt-2 mb-0 small">
+        &copy; {{ now.Year }} {{ .Site.Params.author }} — C.F. {{ .Site.Params.cf }}<br>
+        I contenuti di questo sito, salvo diversa indicazione, sono distribuiti con licenza
+        <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer license" class="text-white-50">CC BY 4.0</a>.
+      </p>
+    </div>
+  </div>
+</footer>

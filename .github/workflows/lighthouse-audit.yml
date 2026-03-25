@@ -1,0 +1,48 @@
+# ============================================================
+# Workflow: Audit Accessibilità Automatico con Lighthouse
+# Si attiva dopo ogni deploy riuscito
+# ============================================================
+name: "♿ Audit Accessibilità"
+
+on:
+  # Si attiva quando il workflow di deploy è completato
+  workflow_run:
+    workflows: ["🚀 Build e Deploy"]
+    types:
+      - completed
+
+  # Permette esecuzione manuale
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      # Aspetta che GitHub Pages si aggiorni
+      - name: "⏳ Attendi propagazione deploy"
+        run: sleep 60
+
+      - name: "🔦 Esegui Lighthouse"
+        id: lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          # Inserisci qui l'URL del tuo sito
+          urls: |
+            https://www.protezionecivilegenzano.it/
+          uploadArtifacts: true
+
+      - name: "📊 Riepilogo punteggi"
+        if: always()
+        run: |
+          echo "## ♿ Risultati Audit Accessibilità" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Verifica completata. Controlla gli artifact per i dettagli." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Obiettivo" >> $GITHUB_STEP_SUMMARY
+          echo "- Accessibilità: ≥ 90/100 (requisito WCAG 2.1 AA)" >> $GITHUB_STEP_SUMMARY
+          echo "- Performance: ≥ 80/100" >> $GITHUB_STEP_SUMMARY
+          echo "- Best Practices: ≥ 90/100" >> $GITHUB_STEP_SUMMARY

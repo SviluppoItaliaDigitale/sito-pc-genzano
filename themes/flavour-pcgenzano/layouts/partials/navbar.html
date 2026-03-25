@@ -1,0 +1,62 @@
+<!-- Header Centrale e Navigazione -->
+<div class="it-header-center-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-center-content-wrapper">
+          <div class="it-brand-wrapper">
+            <a href="/" aria-label="Torna alla pagina iniziale">
+              <img src="/images/logo-pc-genzano.png" alt="" width="82" height="82" aria-hidden="true">
+              <div class="it-brand-text">
+                <div class="it-brand-title">Protezione Civile</div>
+                <div class="it-brand-tagline d-none d-md-block">Gruppo Comunale Volontari di Genzano di Roma</div>
+              </div>
+            </a>
+          </div>
+          <div class="it-right-zone">
+            <div class="it-search-wrapper">
+              <a class="search-link rounded-icon" href="/cerca/" aria-label="Cerca nel sito">
+                <svg class="icon"><use href="/vendor/bootstrap-italia/svg/sprites.svg#it-search"></use></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navigazione principale -->
+<div class="it-header-navbar-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav-main" aria-expanded="false" aria-label="Apri il menu di navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav-main">
+            <svg class="icon"><use href="/vendor/bootstrap-italia/svg/sprites.svg#it-burger"></use></svg>
+          </button>
+          <div class="navbar-collapsable" id="nav-main">
+            <div class="overlay" style="display: none;"></div>
+            <div class="close-div">
+              <button class="btn close-menu" type="button" aria-label="Chiudi il menu di navigazione">
+                <span class="visually-hidden">Chiudi</span>
+                <svg class="icon"><use href="/vendor/bootstrap-italia/svg/sprites.svg#it-close-big"></use></svg>
+              </button>
+            </div>
+            <div class="menu-wrapper">
+              <ul class="navbar-nav" role="menubar">
+                {{ range .Site.Menus.main }}
+                <li class="nav-item" role="none">
+                  <a class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>
+                    <span>{{ .Name }}</span>
+                  </a>
+                </li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+# ============================================================
+# Configurazione Hugo — Protezione Civile Genzano di Roma
+# ============================================================
+
+baseURL = "https://www.protezionecivilegenzano.it/"
+languageCode = "it"
+defaultContentLanguage = "it"
+title = "Protezione Civile Genzano di Roma"
+
+# Tema personalizzato
+theme = "flavour-pcgenzano"
+
+# Impostazioni generali
+[params]
+  description = "Sito ufficiale del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+  author = "Gruppo Comunale Volontari di Protezione Civile Genzano di Roma"
+  cf = "92011880588"
+  sede = "Via Sicilia, 13-15 - 00045 Genzano Di Roma (RM)"
+  telefono = "+39 069362600"
+  email = "segreteria@protezionecivilegenzano.it"
+  pec = ""
+  facebook = "https://www.facebook.com/protezionecivilegenzanodiroma"
+  instagram = "https://www.instagram.com/protezionecivilegenzano/"
+  # Imposta a true quando avrai attivato HTTPS
+  httpsAttivo = false
+  # Link alla dichiarazione di accessibilità su form.agid.gov.it
+  dichiarazioneAccessibilita = ""
+  # Informazioni istituzionali
+  coi = "14° C.O.I. Prov. di Roma"
+  registroRegionale = "n.184"
+  runts = "Iscritta al RUNTS sez. 'Altri Enti del Terzo Settore' con determina n. G14230 del 28/10/2024"
+  coordinamento = "FEPIVOL"
+
+# Menu principale di navigazione
+[[menus.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menus.main]]
+  name = "Chi Siamo"
+  url = "/chi-siamo/"
+  weight = 2
+
+[[menus.main]]
+  name = "Rischi e Prevenzione"
+  url = "/rischi-prevenzione/"
+  weight = 3
+
+[[menus.main]]
+  name = "Allerte Meteo"
+  url = "/allerte-meteo/"
+  weight = 4
+
+[[menus.main]]
+  name = "Comunicazioni"
+  url = "/comunicazioni/"
+  weight = 5
+
+[[menus.main]]
+  name = "Diventa Volontario"
+  url = "/diventa-volontario/"
+  weight = 6
+
+[[menus.main]]
+  name = "Contatti"
+  url = "/contatti/"
+  weight = 7
+
+# Menu footer — Link utili
+[[menus.footer]]
+  name = "Note Legali"
+  url = "/note-legali/"
+  weight = 1
+
+[[menus.footer]]
+  name = "Privacy"
+  url = "/privacy/"
+  weight = 2
+
+[[menus.footer]]
+  name = "Accessibilità"
+  url = "/accessibilita/"
+  weight = 3
+
+[[menus.footer]]
+  name = "Siti Utili"
+  url = "/siti-utili/"
+  weight = 4
+
+# Menu footer — Servizi
+[[menus.servizi]]
+  name = "Piano di Emergenza"
+  url = "/piano-emergenza/"
+  weight = 1
+
+[[menus.servizi]]
+  name = "Piano Familiare"
+  url = "/piano-familiare/"
+  weight = 2
+
+[[menus.servizi]]
+  name = "Area Download"
+  url = "/area-download/"
+  weight = 3
+
+# Impostazioni di output
+[outputs]
+  home = ["HTML", "RSS"]
+
+# Impostazioni Markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,10 @@
+name = "Flavour PC Genzano"
+license = "BSD-3-Clause"
+licenselink = "https://opensource.org/licenses/BSD-3-Clause"
+description = "Tema Hugo con Bootstrap Italia 2.x per la Protezione Civile di Genzano di Roma"
+tags = ["bootstrap-italia", "protezione-civile", "italia", "PA"]
+min_version = "0.100.0"
+
+[author]
+  name = "Alessandro IU0QVW"
+  homepage = "https://www.protezionecivilegenzano.it"
