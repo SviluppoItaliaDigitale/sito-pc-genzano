@@ -1,0 +1,25 @@
+{{ $allerta := .Site.Data.allerta }}
+{{ if $allerta }}
+<div class="allerta-status-card mb-4">
+  <div class="allerta-status-header allerta-{{ $allerta.livello }}">
+    {{ if eq $allerta.livello "verde" }}
+    <i class="bi bi-shield-check me-1" aria-hidden="true"></i>
+    {{ else if eq $allerta.livello "gialla" }}
+    <i class="bi bi-exclamation-triangle me-1" aria-hidden="true"></i>
+    {{ else }}
+    <i class="bi bi-exclamation-octagon-fill me-1" aria-hidden="true"></i>
+    {{ end }}
+    Stato Allerta: {{ $allerta.titolo }}
+  </div>
+  <div class="p-3">
+    <p class="small mb-1">{{ $allerta.descrizione }}</p>
+    <p class="small text-muted mb-2">
+      Zona: {{ $allerta.zona }}<br>
+      {{ with $allerta.ultimo_check }}Ultimo controllo: {{ . }}{{ end }}
+    </p>
+    <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary w-100">
+      Vai al Bollettino Ufficiale
+    </a>
+  </div>
+</div>
+{{ end }}

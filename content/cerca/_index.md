@@ -12,35 +12,57 @@ layout: "single"
 </div>
 
 <script>
-var searchIndex = null;
-var searchInput = document.getElementById('search-input');
-var searchResults = document.getElementById('search-results');
+(function(){
+  var searchIndex = null;
+  var input = document.getElementById('search-input');
+  var results = document.getElementById('search-results');
 
-fetch(document.baseURI.replace(/cerca\/$/, '') + 'index.json')
-  .then(function(r) { return r.json(); })
-  .then(function(data) { searchIndex = data; });
+  // Trova il baseURL dal tag canonical o dal link della pagina
+  var base = document.querySelector('link[rel="canonical"]');
+  var baseURL = '';
+  if (base) {
+    baseURL = base.href.replace(/cerca\/$/, '').replace(/cerca$/, '');
+  } else {
+    // Fallback: prendi dall'URL corrente
+    baseURL = window.location.href.replace(/cerca\/?$/, '');
+  }
+  var jsonURL = baseURL + 'index.json';
 
-searchInput.addEventListener('input', function() {
-  var query = this.value.toLowerCase().trim();
-  if (query.length < 3) {
-    searchResults.innerHTML = '';
-    return;
-  }
-  if (!searchIndex) {
-    searchResults.innerHTML = '<p>Caricamento indice di ricerca...</p>';
-    return;
-  }
-  var results = searchIndex.filter(function(page) {
-    return page.title.toLowerCase().indexOf(query) !== -1 || page.content.toLowerCase().indexOf(query) !== -1;
+  // Carica indice
+  fetch(jsonURL)
+    .then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function(data) { searchIndex = data; })
+    .catch(function(err) {
+      console.log('Errore caricamento indice:', err);
+      console.log('URL tentato:', jsonURL);
+    });
+
+  input.addEventListener('input', function() {
+    var query = this.value.toLowerCase().trim();
+    if (query.length < 3) { results.innerHTML = ''; return; }
+    if (!searchIndex) {
+      results.innerHTML = '<p class="text-muted">Caricamento in corso...</p>';
+      return;
+    }
+    var found = searchIndex.filter(function(p) {
+      return (p.title && p.title.toLowerCase().indexOf(query) !== -1) ||
+             (p.content && p.content.toLowerCase().indexOf(query) !== -1);
+    });
+    if (found.length === 0) {
+      results.innerHTML = '<p class="text-muted">Nessun risultato per "<strong>' + query + '</strong>".</p>';
+      return;
+    }
+    var html = '<p class="fw-bold">' + found.length + ' risultat' + (found.length === 1 ? 'o' : 'i') + ' per "' + query + '":</p>';
+    found.forEach(function(r) {
+      html += '<div class="search-result-item">';
+      html += '<h3 class="h5"><a href="' + r.url + '">' + r.title + '</a></h3>';
+      html += '<p class="small text-muted">' + (r.content || '') + '</p>';
+      html += '</div>';
+    });
+    results.innerHTML = html;
   });
-  if (results.length === 0) {
-    searchResults.innerHTML = '<p class="text-muted">Nessun risultato trovato per "<strong>' + query + '</strong>".</p>';
-    return;
-  }
-  var html = '<p class="fw-bold">' + results.length + ' risultat' + (results.length === 1 ? 'o' : 'i') + ' per "' + query + '":</p>';
-  results.forEach(function(r) {
-    html += '<div class="search-result-item"><h3 class="h5"><a href="' + r.url + '">' + r.title + '</a></h3><p class="small text-muted">' + r.content + '</p></div>';
-  });
-  searchResults.innerHTML = html;
-});
+})();
 </script>
