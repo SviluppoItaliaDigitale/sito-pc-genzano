@@ -21,6 +21,9 @@ theme = "flavour-pcgenzano"
   pec = ""
   facebook = "https://www.facebook.com/protezionecivilegenzanodiroma"
   instagram = "https://www.instagram.com/protezionecivilegenzano/"
+twitter = "https://x.com/alfagenzano"
+  telegram = "https://t.me/pcalfagenzano"
+  linktree = "https://linktr.ee/protezionecivilegenzano"
   # Imposta a true quando avrai attivato HTTPS
   httpsAttivo = false
   # Link alla dichiarazione di accessibilità su form.agid.gov.it
@@ -103,6 +106,11 @@ theme = "flavour-pcgenzano"
   name = "Area Download"
   url = "/area-download/"
   weight = 3
+
+[[menus.servizi]]
+  name = "Cartografia Operativa"
+  url = "/cartografia/"
+  weight = 4
 
 # Impostazioni di output
 [outputs]
