@@ -1,6 +1,4 @@
 {{ define "main" }}
-
-<!-- HERO SECTION -->
 <section class="hero-section" aria-label="Benvenuto">
   <div class="container">
     <div class="row align-items-center">
@@ -8,22 +6,14 @@
         <h1>Protezione Civile Genzano di Roma</h1>
         <p class="lead">Il sito ufficiale del Gruppo Comunale Volontari. Qui trovi informazioni, allerte meteo, buone pratiche e i contatti per la sicurezza del nostro territorio.</p>
         <div class="mt-4">
-          <a href="/allerte-meteo/" class="btn btn-warning btn-lg me-2 mb-2" role="button">
-            Consulta Allerte Meteo
-          </a>
-          <a href="/piano-emergenza/" class="btn btn-outline-light btn-lg me-2 mb-2" role="button">
-            Piano di Emergenza
-          </a>
-          <a href="/diventa-volontario/" class="btn btn-outline-light btn-lg mb-2" role="button">
-            Diventa Volontario
-          </a>
+          <a href="{{ "allerte-meteo/" | relURL }}" class="btn btn-warning btn-lg me-2 mb-2">Consulta Allerte Meteo</a>
+          <a href="{{ "piano-emergenza/" | relURL }}" class="btn btn-outline-light btn-lg me-2 mb-2">Piano di Emergenza</a>
+          <a href="{{ "diventa-volontario/" | relURL }}" class="btn btn-outline-light btn-lg mb-2">Diventa Volontario</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- SEZIONE SERVIZI AL CITTADINO -->
 <section class="servizi-section" aria-labelledby="servizi-heading">
   <div class="container">
     <h2 id="servizi-heading" class="text-center mb-5">Servizi per il cittadino</h2>
@@ -34,7 +24,7 @@
             <i class="bi bi-house-heart fs-1 text-primary mb-3 d-block" aria-hidden="true"></i>
             <h3 class="h5">Crea il tuo Piano Familiare</h3>
             <p>Usa il nostro strumento interattivo per creare e stampare il piano di emergenza per la tua famiglia.</p>
-            <a href="/piano-familiare/" class="btn btn-primary btn-sm">Crea il piano</a>
+            <a href="{{ "piano-familiare/" | relURL }}" class="btn btn-primary btn-sm">Crea il piano</a>
           </div>
         </div>
       </div>
@@ -44,7 +34,7 @@
             <i class="bi bi-exclamation-triangle fs-1 text-warning mb-3 d-block" aria-hidden="true"></i>
             <h3 class="h5">Rischi e Prevenzione</h3>
             <p>Impara a conoscere e affrontare i rischi del territorio: incendi, terremoti, alluvioni e altro.</p>
-            <a href="/rischi-prevenzione/" class="btn btn-primary btn-sm">Scopri i rischi</a>
+            <a href="{{ "rischi-prevenzione/" | relURL }}" class="btn btn-primary btn-sm">Scopri i rischi</a>
           </div>
         </div>
       </div>
@@ -54,15 +44,13 @@
             <i class="bi bi-download fs-1 text-success mb-3 d-block" aria-hidden="true"></i>
             <h3 class="h5">Area Download</h3>
             <p>Trova la modulistica, i piani, la normativa e i documenti ufficiali del gruppo.</p>
-            <a href="/area-download/" class="btn btn-primary btn-sm">Vai ai download</a>
+            <a href="{{ "area-download/" | relURL }}" class="btn btn-primary btn-sm">Vai ai download</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- SEZIONE ULTIME NOTIZIE -->
 <section class="py-5" aria-labelledby="notizie-heading">
   <div class="container">
     <h2 id="notizie-heading" class="mb-4">Ultime Notizie</h2>
@@ -77,35 +65,24 @@
             <p class="small text-muted">{{ .Date.Format "2 January 2006" }}</p>
             <h3 class="h5">{{ .Title }}</h3>
             <p>{{ .Summary }}</p>
-            <a href="{{ .Permalink }}" class="read-more" aria-label="Leggi di più su {{ .Title }}">
-              Leggi di più
-              <svg class="icon icon-sm ms-1" aria-hidden="true"><use href="/vendor/bootstrap-italia/svg/sprites.svg#it-arrow-right"></use></svg>
-            </a>
+            <a href="{{ .Permalink }}" class="read-more" aria-label="Leggi di piu su {{ .Title }}">Leggi di piu</a>
           </div>
         </div>
       </div>
       {{ end }}
     </div>
     <div class="text-center mt-3">
-      <a href="/comunicazioni/" class="btn btn-outline-primary">Tutte le comunicazioni</a>
+      <a href="{{ "comunicazioni/" | relURL }}" class="btn btn-outline-primary">Tutte le comunicazioni</a>
     </div>
   </div>
 </section>
-
-<!-- SEZIONE METEO EMBED -->
 <section class="servizi-section py-5" aria-labelledby="meteo-heading">
   <div class="container">
     <h2 id="meteo-heading" class="mb-4">Meteo e Rischi in Tempo Reale</h2>
     <p><strong>Suggerimento:</strong> Clicca sull'icona delle opzioni per accedere a mappe e scenari diversi.</p>
     <div class="ratio ratio-16x9">
-      <iframe
-        src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=%C2%B0C&metricWind=km/h&zoom=10&overlay=rain&product=ecmwf&level=surface&lat=41.71&lon=12.69"
-        title="Mappa meteo interattiva per il territorio di Genzano di Roma"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
+      <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=%C2%B0C&metricWind=km/h&zoom=10&overlay=rain&product=ecmwf&level=surface&lat=41.71&lon=12.69" title="Mappa meteo interattiva per il territorio di Genzano di Roma" loading="lazy" allowfullscreen></iframe>
     </div>
   </div>
 </section>
-
 {{ end }}

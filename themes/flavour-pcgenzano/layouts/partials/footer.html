@@ -1,10 +1,8 @@
-<!-- Footer (conforme Linee guida Designers Italia) -->
 <footer class="it-footer" id="footer" role="contentinfo">
   <div class="it-footer-main">
     <div class="container">
       <section class="py-4">
         <div class="row">
-          <!-- Colonna info ente -->
           <div class="col-lg-4 col-md-4 pb-2">
             <h2 class="h4 text-white">Protezione Civile</h2>
             <p class="text-white-50">Gruppo Comunale Volontari di Genzano di Roma</p>
@@ -19,35 +17,25 @@
               Aderente al Coordinamento {{ .Site.Params.coordinamento }}
             </p>
           </div>
-
-          <!-- Colonna Servizi -->
           <div class="col-lg-4 col-md-4 pb-2">
             <h2 class="h4 text-white">Servizi</h2>
             <nav aria-label="Servizi nel footer">
               <ul class="footer-list" role="list">
                 {{ range .Site.Menus.servizi }}
-                <li role="listitem">
-                  <a class="list-item" href="{{ .URL }}">{{ .Name }}</a>
-                </li>
+                <li role="listitem"><a class="list-item" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                 {{ end }}
               </ul>
             </nav>
           </div>
-
-          <!-- Colonna Link utili -->
           <div class="col-lg-4 col-md-4 pb-2">
             <h2 class="h4 text-white">Link Utili</h2>
             <nav aria-label="Link utili nel footer">
               <ul class="footer-list" role="list">
                 {{ range .Site.Menus.footer }}
-                <li role="listitem">
-                  <a class="list-item" href="{{ .URL }}">{{ .Name }}</a>
-                </li>
+                <li role="listitem"><a class="list-item" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                 {{ end }}
               </ul>
             </nav>
-
-            <!-- Social -->
             <div class="mt-3">
               <h3 class="h6 text-white">Seguici su</h3>
               <ul class="list-inline" role="list">
@@ -68,22 +56,13 @@
       </section>
     </div>
   </div>
-
-  <!-- Footer basso — Copyright e link legali -->
   <div class="it-footer-small-prints clearfix">
     <div class="container">
       <h3 class="visually-hidden">Informazioni legali</h3>
       <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row" role="list">
-        <li class="list-inline-item" role="listitem">
-          <a href="/note-legali/" title="Note legali">Note legali</a>
-        </li>
-        <li class="list-inline-item" role="listitem">
-          <a href="/privacy/" title="Privacy e cookie">Privacy e cookie</a>
-        </li>
-        <li class="list-inline-item" role="listitem">
-          <!-- OBBLIGATORIO: Link alla dichiarazione di accessibilità (AGID) -->
-          <a href="/accessibilita/" title="Dichiarazione di accessibilità">Accessibilità</a>
-        </li>
+        <li class="list-inline-item" role="listitem"><a href="{{ "note-legali/" | relURL }}">Note legali</a></li>
+        <li class="list-inline-item" role="listitem"><a href="{{ "privacy/" | relURL }}">Privacy e cookie</a></li>
+        <li class="list-inline-item" role="listitem"><a href="{{ "accessibilita/" | relURL }}">Accessibilita</a></li>
       </ul>
       <p class="mt-2 mb-0 small">
         &copy; {{ now.Year }} {{ .Site.Params.author }} — C.F. {{ .Site.Params.cf }}<br>
