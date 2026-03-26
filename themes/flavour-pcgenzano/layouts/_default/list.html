@@ -4,32 +4,29 @@
     <div class="col-lg-8 mx-auto">
       <nav aria-label="Percorso di navigazione">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
         </ol>
       </nav>
       <h1>{{ .Title }}</h1>
       {{ .Content }}
-
       {{ range .Paginator.Pages }}
       <article class="card mb-4 shadow-sm">
         <div class="card-body">
           {{ with .Params.badge }}
           <span class="badge badge-allerta-{{ . | lower }} mb-2">{{ . }}</span>
           {{ end }}
+          {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
           <p class="small text-muted">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
           </p>
+          {{ end }}
           <h2 class="h5"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
           <p>{{ .Summary }}</p>
-          <a href="{{ .Permalink }}" class="read-more" aria-label="Leggi la comunicazione: {{ .Title }}">
-            Leggi di più
-          </a>
+          <a href="{{ .Permalink }}" class="read-more" aria-label="Leggi la comunicazione: {{ .Title }}">Leggi di più</a>
         </div>
       </article>
       {{ end }}
-
-      <!-- Paginazione -->
       {{ template "_internal/pagination.html" . }}
     </div>
   </div>

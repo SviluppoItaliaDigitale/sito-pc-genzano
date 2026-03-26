@@ -5,7 +5,7 @@
       <nav aria-label="Percorso di navigazione">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
-          {{ if and .Parent (not .Parent.IsHome) }}
+          {{ if and .Parent (not .Parent.IsHome) (ne .Parent.Permalink .Permalink) }}
           <li class="breadcrumb-item"><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
           {{ end }}
           <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
@@ -15,7 +15,7 @@
       {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
       {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
       <p class="text-muted small">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
       </p>
       {{ end }}
       <article>

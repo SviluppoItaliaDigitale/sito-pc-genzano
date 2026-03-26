@@ -62,10 +62,10 @@
             {{ with .Params.badge }}
             <span class="badge badge-allerta-{{ . | lower }} mb-2">{{ . }}</span>
             {{ end }}
-            <p class="small text-muted">{{ .Date.Format "2 January 2006" }}</p>
+            <p class="small text-muted">{{ .Date | time.Format ":date_long" }}</p>
             <h3 class="h5">{{ .Title }}</h3>
             <p>{{ .Summary }}</p>
-            <a href="{{ .Permalink }}" class="read-more" aria-label="Leggi di piu su {{ .Title }}">Leggi di piu</a>
+            <a href="{{ .Permalink }}" class="read-more" aria-label="Leggi di più su {{ .Title }}">Leggi di più</a>
           </div>
         </div>
       </div>
