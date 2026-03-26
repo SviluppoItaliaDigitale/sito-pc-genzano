@@ -1,72 +1,50 @@
-# ============================================================
-# Workflow: Build e Deploy del sito su GitHub Pages
-# Si attiva:
-#   - Ad ogni push sul branch main
-#   - Quando chiamato da altri workflow (workflow_call)
-# ============================================================
 name: "🚀 Build e Deploy"
 
 on:
-  # Si attiva ad ogni push su main
   push:
     branches:
       - main
-
-  # Permette ad altri workflow di attivarlo (es. dopo aggiornamento BI)
   workflow_dispatch:
 
-# Permessi necessari per pubblicare su GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Evita deploy simultanei
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # ── JOB 1: Costruisci il sito ──
   build:
     runs-on: ubuntu-latest
     steps:
-      # Passo 1: Scarica il codice dal repository
       - name: "📥 Checkout del repository"
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Necessario per .GitInfo e .Lastmod
+          fetch-depth: 0
 
-      # Passo 2: Installa Hugo Extended
       - name: "🔧 Installa Hugo"
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
 
-      # Passo 3: Configura GitHub Pages
       - name: "⚙️ Configura Pages"
         id: pages
         uses: actions/configure-pages@v5
 
-      # Passo 4: Costruisci il sito con Hugo
       - name: "🏗️ Build del sito Hugo"
         env:
           TZ: 'Europe/Rome'
           HUGO_ENVIRONMENT: production
-        run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --minify
 
-      # Passo 5: Carica il sito costruito come "artifact"
       - name: "📦 Upload artifact"
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
-  # ── JOB 2: Pubblica su GitHub Pages ──
   deploy:
     environment:
       name: github-pages
