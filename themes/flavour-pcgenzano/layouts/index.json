@@ -1,0 +1,1 @@
+[{{ range $index, $page := .Site.RegularPages }}{{ if $index }},{{ end }}{"title":"{{ .Title }}","url":"{{ .Permalink }}","content":"{{ .Plain | htmlUnescape | truncate 200 }}","section":"{{ .Section }}"}{{ end }}]

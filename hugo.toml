@@ -114,10 +114,12 @@ twitter = "https://x.com/alfagenzano"
 
 # Impostazioni di output
 [outputs]
-  home = ["HTML", "RSS"]
+home = ["HTML", "RSS", "JSON"]  
+
 
 # Impostazioni Markdown
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
