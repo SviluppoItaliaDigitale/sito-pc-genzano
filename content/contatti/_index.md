@@ -14,14 +14,14 @@ Per informazioni, richieste non urgenti o per comunicazioni amministrative, ques
 - **Links:** [Tutti i link web del Gruppo](https://linktr.ee/protezionecivilegenzano)
 
 <div class="alert alert-danger mt-4 mb-4 p-4" role="alert">
-<h2 class="h4 alert-heading"><i class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i>ATTENZIONE: Come Attivarci in Caso di Emergenza</h2>
+<h2 class="h4 alert-heading">ATTENZIONE: Come Attivarci in Caso di Emergenza</h2>
 <p>Il Gruppo Comunale di Protezione Civile <strong>non può essere attivato direttamente dai cittadini</strong>. Per garantire un coordinamento efficace dei soccorsi, il nostro intervento viene richiesto esclusivamente dalle autorità competenti. In caso di emergenza, contatta i seguenti numeri:</p>
-<ul class="mb-0">
+<ul class="mb-2">
 <li>Numero Unico di Emergenza: <strong>112</strong></li>
 <li>Sala Operativa Protezione Civile Lazio: <strong>803 555</strong></li>
 <li>Comando Polizia Locale di Genzano di Roma: <strong><a href="tel:069364687">06 9364687</a></strong> o <strong><a href="tel:069397994">06 9397994</a></strong></li>
 </ul>
-<p class="mt-2 mb-0">Saranno loro, una volta valutata la situazione, ad allertare e attivare le nostre squadre sul territorio.</p>
+<p class="mb-0">Saranno loro, una volta valutata la situazione, ad allertare e attivare le nostre squadre sul territorio.</p>
 </div>
 
 ## Mappa della Sede
