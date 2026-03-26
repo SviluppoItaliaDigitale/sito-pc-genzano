@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sviluppoitaliadigitale.github.io/sito-pc-genzano/sitemap.xml

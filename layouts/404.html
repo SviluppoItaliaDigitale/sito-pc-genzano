@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="page-404">
+  <div class="container">
+    <h1>404</h1>
+    <h2>Pagina non trovata</h2>
+    <p class="text-muted mb-4">La pagina che stai cercando non esiste o e stata spostata.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <a href="{{ "/" | relURL }}" class="btn btn-primary btn-lg"><i class="bi bi-house me-1" aria-hidden="true"></i> Torna alla Home</a>
+      <a href="{{ "contatti/" | relURL }}" class="btn btn-outline-primary btn-lg"><i class="bi bi-envelope me-1" aria-hidden="true"></i> Contattaci</a>
+    </div>
+    <p class="text-muted mt-5">Emergenze: <strong>112</strong> — Sala Operativa PC Lazio: <strong>803 555</strong></p>
+  </div>
+</div>
+{{ end }}

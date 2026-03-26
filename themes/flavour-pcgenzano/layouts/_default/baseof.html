@@ -12,7 +12,9 @@
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="{{ .Site.Title }}">
-  <link rel="icon" type="image/x-icon" href="{{ "images/favicon.ico" | relURL }}">
+  <meta property="og:image" content="{{ "images/notizia-default.svg" | absURL }}">
+  <link rel="icon" type="image/png" href="{{ "images/logo-pc-genzano.png" | relURL }}">
+  <link rel="apple-touch-icon" href="{{ "images/logo-pc-genzano.png" | relURL }}">
   <link rel="stylesheet" href="{{ "vendor/bootstrap-italia/css/bootstrap-italia.min.css" | relURL }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
@@ -27,7 +29,16 @@
   </main>
   {{ partial "footer.html" . }}
   {{ partial "cookie-banner.html" . }}
+  <button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina" title="Torna su">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
   <script src="{{ "vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js" | relURL }}"></script>
+  <script>
+    // Back to top
+    (function(){var b=document.getElementById('backToTop');window.addEventListener('scroll',function(){b.classList.toggle('visible',window.scrollY>300)});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})})();
+    // Scroll animations
+    (function(){var e=document.querySelectorAll('.fade-in-up');if(!e.length)return;var o=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});e.forEach(function(el){o.observe(el)})})();
+  </script>
   {{ block "scripts" . }}{{ end }}
 </body>
 </html>

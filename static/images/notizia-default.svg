@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003366"/>
+      <stop offset="100%" style="stop-color:#004080"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <circle cx="650" cy="80" r="120" fill="rgba(255,255,255,0.03)"/>
+  <circle cx="150" cy="350" r="80" fill="rgba(255,102,0,0.05)"/>
+  <text x="400" y="170" font-family="Arial,sans-serif" font-size="48" fill="rgba(255,255,255,0.9)" text-anchor="middle" font-weight="700">PROTEZIONE CIVILE</text>
+  <text x="400" y="220" font-family="Arial,sans-serif" font-size="24" fill="rgba(255,255,255,0.6)" text-anchor="middle">Genzano di Roma</text>
+  <text x="400" y="280" font-family="Arial,sans-serif" font-size="16" fill="rgba(255,255,255,0.4)" text-anchor="middle">Gruppo Comunale Volontari</text>
+  <line x1="350" y1="240" x2="450" y2="240" stroke="#FF6600" stroke-width="3"/>
+</svg>

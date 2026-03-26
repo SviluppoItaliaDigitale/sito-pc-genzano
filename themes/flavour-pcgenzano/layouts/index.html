@@ -1,4 +1,16 @@
 {{ define "main" }}
+
+<!-- BANNER EMERGENZA — Solo 112 e 803 555 -->
+<div class="emergency-banner" role="complementary" aria-label="Numeri di emergenza">
+  <div class="container text-center">
+    <i class="bi bi-telephone-fill me-1" aria-hidden="true"></i>
+    <strong>Emergenze: 112</strong>
+    <span class="mx-2 d-none d-md-inline">|</span>
+    <span class="d-block d-md-inline">Sala Operativa PC Lazio: <strong>803 555</strong></span>
+  </div>
+</div>
+
+<!-- HERO -->
 <section class="hero-section" aria-label="Benvenuto">
   <div class="container">
     <div class="row align-items-center">
@@ -6,7 +18,9 @@
         <h1>Protezione Civile Genzano di Roma</h1>
         <p class="lead">Il sito ufficiale del Gruppo Comunale Volontari. Qui trovi informazioni, allerte meteo, buone pratiche e i contatti per la sicurezza del nostro territorio.</p>
         <div class="mt-4">
-          <a href="{{ "allerte-meteo/" | relURL }}" class="btn btn-warning btn-lg me-2 mb-2">Consulta Allerte Meteo</a>
+          <a href="{{ "allerte-meteo/" | relURL }}" class="btn btn-warning btn-lg me-2 mb-2">
+            <i class="bi bi-exclamation-triangle-fill me-1" aria-hidden="true"></i> Allerte Meteo
+          </a>
           <a href="{{ "piano-emergenza/" | relURL }}" class="btn btn-outline-light btn-lg me-2 mb-2">Piano di Emergenza</a>
           <a href="{{ "diventa-volontario/" | relURL }}" class="btn btn-outline-light btn-lg mb-2">Diventa Volontario</a>
         </div>
@@ -14,75 +28,242 @@
     </div>
   </div>
 </section>
-<section class="servizi-section" aria-labelledby="servizi-heading">
+
+<!-- STATISTICHE -->
+<section class="stats-section" aria-label="Il gruppo in numeri">
   <div class="container">
-    <h2 id="servizi-heading" class="text-center mb-5">Servizi per il cittadino</h2>
     <div class="row">
-      <div class="col-lg-4 col-md-6 mb-4">
+      <div class="col-6 col-md-3">
+        <div class="stat-item"><span class="stat-number" data-count="44">0</span><span class="stat-label">Anni di attivita</span></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item"><span class="stat-number" data-count="8">0</span><span class="stat-label">Automezzi operativi</span></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item"><span class="stat-number" data-count="20">0</span><span class="stat-label">Emergenze nazionali</span></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item"><span class="stat-number" data-count="365">0</span><span class="stat-label">Giorni di disponibilita</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COSA FARE IN CASO DI... (Quick Actions) -->
+<section class="py-4 bg-white fade-in-up" aria-labelledby="quickactions-heading">
+  <div class="container">
+    <h2 id="quickactions-heading" class="section-title text-center">Cosa fare in caso di...</h2>
+    <div class="row mt-3">
+      <div class="col-6 col-md-3 mb-3">
+        <a href="{{ "rischi-prevenzione/rischio-sismico/" | relURL }}" class="quick-action-card">
+          <i class="bi bi-tsunami text-warning" aria-hidden="true"></i>
+          <strong>Terremoto</strong>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <a href="{{ "rischi-prevenzione/rischio-idrogeologico/" | relURL }}" class="quick-action-card">
+          <i class="bi bi-cloud-rain-heavy text-primary" aria-hidden="true"></i>
+          <strong>Alluvione</strong>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <a href="{{ "rischi-prevenzione/rischio-incendio/" | relURL }}" class="quick-action-card">
+          <i class="bi bi-fire text-danger" aria-hidden="true"></i>
+          <strong>Incendio</strong>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <a href="{{ "piano-familiare/" | relURL }}" class="quick-action-card">
+          <i class="bi bi-house-heart text-success" aria-hidden="true"></i>
+          <strong>Piano Familiare</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section class="servizi-section fade-in-up" aria-labelledby="servizi-heading">
+  <div class="container">
+    <h2 id="servizi-heading" class="section-title text-center">Servizi per il cittadino</h2>
+    <div class="row mt-4">
+      <div class="col-lg-3 col-md-6 mb-4">
         <div class="card card-servizio shadow-sm h-100">
           <div class="card-body text-center p-4">
             <i class="bi bi-house-heart fs-1 text-primary mb-3 d-block" aria-hidden="true"></i>
-            <h3 class="h5">Crea il tuo Piano Familiare</h3>
-            <p>Usa il nostro strumento interattivo per creare e stampare il piano di emergenza per la tua famiglia.</p>
-            <a href="{{ "piano-familiare/" | relURL }}" class="btn btn-primary btn-sm">Crea il piano</a>
+            <h3 class="h6">Piano Familiare</h3>
+            <p class="text-muted small">Crea il piano di emergenza per la tua famiglia.</p>
+            <a href="{{ "piano-familiare/" | relURL }}" class="btn btn-outline-primary btn-sm">Crea il piano</a>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4">
         <div class="card card-servizio shadow-sm h-100">
           <div class="card-body text-center p-4">
             <i class="bi bi-exclamation-triangle fs-1 text-warning mb-3 d-block" aria-hidden="true"></i>
-            <h3 class="h5">Rischi e Prevenzione</h3>
-            <p>Impara a conoscere e affrontare i rischi del territorio: incendi, terremoti, alluvioni e altro.</p>
-            <a href="{{ "rischi-prevenzione/" | relURL }}" class="btn btn-primary btn-sm">Scopri i rischi</a>
+            <h3 class="h6">Rischi e Prevenzione</h3>
+            <p class="text-muted small">Conosci i rischi del territorio.</p>
+            <a href="{{ "rischi-prevenzione/" | relURL }}" class="btn btn-outline-primary btn-sm">Scopri</a>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card card-servizio shadow-sm h-100">
+          <div class="card-body text-center p-4">
+            <i class="bi bi-map fs-1 text-info mb-3 d-block" aria-hidden="true"></i>
+            <h3 class="h6">Cartografia Operativa</h3>
+            <p class="text-muted small">Aree di emergenza del Piano Comunale.</p>
+            <a href="{{ "cartografia/" | relURL }}" class="btn btn-outline-primary btn-sm">Consulta</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
         <div class="card card-servizio shadow-sm h-100">
           <div class="card-body text-center p-4">
             <i class="bi bi-download fs-1 text-success mb-3 d-block" aria-hidden="true"></i>
-            <h3 class="h5">Area Download</h3>
-            <p>Trova la modulistica, i piani, la normativa e i documenti ufficiali del gruppo.</p>
-            <a href="{{ "area-download/" | relURL }}" class="btn btn-primary btn-sm">Vai ai download</a>
+            <h3 class="h6">Area Download</h3>
+            <p class="text-muted small">Documenti e modulistica ufficiale.</p>
+            <a href="{{ "area-download/" | relURL }}" class="btn btn-outline-primary btn-sm">Scarica</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="py-5" aria-labelledby="notizie-heading">
+
+<!-- NOTIZIE + SIDEBAR -->
+<section class="notizie-section fade-in-up" aria-labelledby="notizie-heading">
   <div class="container">
-    <h2 id="notizie-heading" class="mb-4">Ultime Notizie</h2>
     <div class="row">
-      {{ range first 3 (where .Site.RegularPages "Section" "comunicazioni") }}
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            {{ with .Params.badge }}
-            <span class="badge badge-allerta-{{ . | lower }} mb-2">{{ . }}</span>
-            {{ end }}
-            <p class="small text-muted">{{ .Date | time.Format ":date_long" }}</p>
-            <h3 class="h5">{{ .Title }}</h3>
-            <p>{{ .Summary }}</p>
-            <a href="{{ .Permalink }}" class="read-more" aria-label="Leggi di più su {{ .Title }}">Leggi di più</a>
+      <div class="col-lg-8">
+        <h2 id="notizie-heading" class="section-title">Ultime Notizie</h2>
+        {{ range first 5 (where .Site.RegularPages "Section" "comunicazioni") }}
+        <article class="card card-notizia mb-3">
+          <div class="row g-0">
+            <div class="col-md-4 d-none d-md-block">
+              <div class="notizia-img-wrapper">
+                {{ with .Params.image }}
+                <img src="{{ . }}" alt="" loading="lazy">
+                {{ else }}
+                <img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy">
+                {{ end }}
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                  {{ with .Params.badge }}
+                  <span class="notizia-categoria {{ . | lower }}">{{ . }}</span>
+                  {{ end }}
+                  <span class="notizia-data">
+                    <i class="bi bi-calendar3" aria-hidden="true"></i>
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+                  </span>
+                </div>
+                <h3 class="notizia-titolo"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <p class="notizia-excerpt">{{ .Summary | truncate 120 }}</p>
+                <a href="{{ .Permalink }}" class="notizia-link">Leggi di piu <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </article>
+        {{ end }}
+        <div class="mt-4">
+          <a href="{{ "comunicazioni/" | relURL }}" class="btn btn-outline-primary">Tutte le comunicazioni <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <!-- SIDEBAR -->
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <!-- Stato allerta -->
+        <div class="allerta-status-card mb-4">
+          <div class="allerta-status-header allerta-verde">
+            <i class="bi bi-shield-check me-1" aria-hidden="true"></i> Stato Allerta: NESSUNA ALLERTA
+          </div>
+          <div class="p-3">
+            <p class="small mb-2">Controlla sempre il bollettino ufficiale della Regione Lazio per aggiornamenti.</p>
+            <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary w-100">Vai al Bollettino Ufficiale</a>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <h3 class="h6 fw-bold mb-3">Seguici</h3>
+        <a href="https://www.facebook.com/protezionecivilegenzanodiroma" target="_blank" rel="noopener noreferrer" class="card-social-link mb-2">
+          <i class="bi bi-facebook fs-4 text-primary me-3" aria-hidden="true"></i>
+          <div><strong>Facebook</strong><div class="small text-muted">Notizie e aggiornamenti</div></div>
+        </a>
+        <a href="https://www.instagram.com/protezionecivilegenzano/" target="_blank" rel="noopener noreferrer" class="card-social-link mb-2">
+          <i class="bi bi-instagram fs-4 text-danger me-3" aria-hidden="true"></i>
+          <div><strong>Instagram</strong><div class="small text-muted">Foto e storie dal campo</div></div>
+        </a>
+        <a href="https://t.me/pcalfagenzano" target="_blank" rel="noopener noreferrer" class="card-social-link mb-2">
+          <i class="bi bi-telegram fs-4 text-info me-3" aria-hidden="true"></i>
+          <div><strong>Telegram</strong><div class="small text-muted">Allerte in tempo reale</div></div>
+        </a>
+        <a href="https://x.com/alfagenzano" target="_blank" rel="noopener noreferrer" class="card-social-link mb-3">
+          <i class="bi bi-twitter-x fs-4 me-3" aria-hidden="true"></i>
+          <div><strong>X (Twitter)</strong><div class="small text-muted">Aggiornamenti rapidi</div></div>
+        </a>
+
+        <!-- IT-alert -->
+        <div class="card bg-warning bg-opacity-10 border-warning mt-3">
+          <div class="card-body p-3">
+            <h3 class="h6 fw-bold"><i class="bi bi-phone-vibrate text-warning me-1" aria-hidden="true"></i> IT-alert</h3>
+            <p class="small mb-2">Il sistema nazionale di allarme pubblico che invia messaggi sul tuo telefono in caso di gravi emergenze.</p>
+            <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-warning w-100">Scopri IT-alert</a>
+          </div>
+        </div>
+
+        <!-- Numeri utili -->
+        <div class="card bg-light border-0 mt-3">
+          <div class="card-body p-3">
+            <h3 class="h6 fw-bold"><i class="bi bi-telephone-fill text-danger me-1" aria-hidden="true"></i> Numeri Utili</h3>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-1"><strong>112</strong> — Numero Unico Emergenza</li>
+              <li><strong>803 555</strong> — Sala Operativa PC Lazio</li>
+            </ul>
           </div>
         </div>
       </div>
-      {{ end }}
-    </div>
-    <div class="text-center mt-3">
-      <a href="{{ "comunicazioni/" | relURL }}" class="btn btn-outline-primary">Tutte le comunicazioni</a>
     </div>
   </div>
 </section>
-<section class="servizi-section py-5" aria-labelledby="meteo-heading">
+
+<!-- METEO -->
+<section class="servizi-section py-5 fade-in-up" aria-labelledby="meteo-heading">
   <div class="container">
-    <h2 id="meteo-heading" class="mb-4">Meteo e Rischi in Tempo Reale</h2>
+    <h2 id="meteo-heading" class="section-title">Meteo e Rischi in Tempo Reale</h2>
     <p><strong>Suggerimento:</strong> Clicca sull'icona delle opzioni per accedere a mappe e scenari diversi.</p>
     <div class="ratio ratio-16x9">
-      <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=%C2%B0C&metricWind=km/h&zoom=10&overlay=rain&product=ecmwf&level=surface&lat=41.71&lon=12.69" title="Mappa meteo interattiva per il territorio di Genzano di Roma" loading="lazy" allowfullscreen></iframe>
+      <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=%C2%B0C&metricWind=km/h&zoom=10&overlay=rain&product=ecmwf&level=surface&lat=41.71&lon=12.69" title="Mappa meteo interattiva per Genzano di Roma" loading="lazy" allowfullscreen></iframe>
     </div>
   </div>
 </section>
+
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+// Animazione contatori
+(function(){
+  var counters=document.querySelectorAll('[data-count]');
+  if(!counters.length)return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target;
+      var target=parseInt(el.getAttribute('data-count'));
+      var duration=1500;
+      var start=0;
+      var step=Math.ceil(target/60);
+      var timer=setInterval(function(){
+        start+=step;
+        if(start>=target){start=target;clearInterval(timer)}
+        el.textContent=start+(target===20?'+':'');
+      },duration/60);
+      obs.unobserve(el);
+    });
+  },{threshold:0.5});
+  counters.forEach(function(c){obs.observe(c)});
+})();
+</script>
 {{ end }}

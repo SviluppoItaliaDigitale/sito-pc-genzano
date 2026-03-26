@@ -8,22 +8,33 @@
           <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
         </ol>
       </nav>
-      <h1>{{ .Title }}</h1>
+      <h1 class="section-title">{{ .Title }}</h1>
       {{ .Content }}
       {{ range .Paginator.Pages }}
-      <article class="card mb-4 shadow-sm">
-        <div class="card-body">
-          {{ with .Params.badge }}
-          <span class="badge badge-allerta-{{ . | lower }} mb-2">{{ . }}</span>
-          {{ end }}
-          {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
-          <p class="small text-muted">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
-          </p>
-          {{ end }}
-          <h2 class="h5"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          <p>{{ .Summary }}</p>
-          <a href="{{ .Permalink }}" class="read-more" aria-label="Leggi la comunicazione: {{ .Title }}">Leggi di più</a>
+      <article class="card card-notizia mb-3">
+        <div class="row g-0">
+          <div class="col-md-3 d-none d-md-block">
+            <div class="notizia-img-wrapper" style="height:100%;min-height:140px;">
+              {{ with .Params.image }}
+              <img src="{{ . }}" alt="" loading="lazy">
+              {{ else }}
+              <img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy">
+              {{ end }}
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}">{{ . }}</span>{{ end }}
+                {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
+                <span class="notizia-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></span>
+                {{ end }}
+              </div>
+              <h2 class="notizia-titolo"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+              <p class="notizia-excerpt">{{ .Summary | truncate 150 }}</p>
+              <a href="{{ .Permalink }}" class="notizia-link">Leggi di piu <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
         </div>
       </article>
       {{ end }}

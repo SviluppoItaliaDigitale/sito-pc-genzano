@@ -1,87 +1,243 @@
+/* ============================================================
+   CSS v3.0 — Protezione Civile Genzano di Roma
+   Best-in-class per siti di protezione civile italiani
+   ============================================================ */
+
 :root {
-  --pc-genzano-primary: #003366;
-  --pc-genzano-secondary: #FF6600;
-  --pc-genzano-accent: #009246;
-  --pc-genzano-light-bg: #f5f7fa;
+  --pc-primary: #003366;
+  --pc-primary-dark: #001a33;
+  --pc-primary-light: #004080;
+  --pc-secondary: #FF6600;
+  --pc-accent: #009246;
+  --pc-danger: #dc3545;
+  --pc-light-bg: #f0f2f5;
+  --pc-card-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --pc-card-shadow-hover: 0 8px 24px rgba(0,0,0,0.12);
+  --pc-radius: 8px;
 }
 
-/* Hero section con sfondo elaborato */
+/* ── HERO ── */
 .hero-section {
-  background: linear-gradient(135deg, #001a33 0%, #003366 40%, #004080 70%, #002855 100%);
+  background: linear-gradient(135deg, var(--pc-primary-dark) 0%, var(--pc-primary) 40%, var(--pc-primary-light) 100%);
   color: #fff;
-  padding: 5rem 0;
+  padding: 4rem 0 5rem;
   position: relative;
   overflow: hidden;
 }
-
 .hero-section::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  top: -30%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
   border-radius: 50%;
 }
-
 .hero-section::after {
   content: '';
   position: absolute;
-  bottom: -30%;
-  left: -10%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255,102,0,0.08) 0%, transparent 70%);
+  bottom: -20%;
+  left: -5%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255,102,0,0.06) 0%, transparent 70%);
   border-radius: 50%;
 }
-
 .hero-section h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
   position: relative;
   z-index: 1;
+  margin-bottom: 1rem;
 }
-
 .hero-section .lead {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   opacity: 0.9;
   position: relative;
   z-index: 1;
+  max-width: 600px;
+}
+.hero-section .btn { position: relative; z-index: 1; }
+@media (max-width: 768px) {
+  .hero-section h1 { font-size: 1.75rem; }
+  .hero-section { padding: 3rem 0; }
 }
 
-.hero-section .mt-4 {
+/* ── EMERGENCY BANNER ── */
+.emergency-banner {
+  background: var(--pc-danger);
+  color: #fff;
+  padding: 0.6rem 0;
+  font-size: 0.9rem;
+}
+.emergency-banner a { color: #fff; font-weight: 700; }
+
+/* ── STATS ── */
+.stats-section {
+  background: var(--pc-primary);
+  color: #fff;
+  padding: 2.5rem 0;
+}
+.stat-item { text-align: center; padding: 1rem; }
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.stat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.75;
+}
+
+/* ── ALLERTA STATUS CARD ── */
+.allerta-status-card {
+  border-radius: var(--pc-radius);
+  overflow: hidden;
+  border: 2px solid #e9ecef;
+}
+.allerta-status-header {
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.allerta-verde { background: #28a745; color: #fff; }
+.allerta-gialla { background: #ffc107; color: #000; }
+.allerta-arancione { background: #fd7e14; color: #fff; }
+.allerta-rossa { background: #dc3545; color: #fff; }
+
+/* ── SECTIONS ── */
+.servizi-section { background-color: var(--pc-light-bg); padding: 3.5rem 0; }
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--pc-primary);
+  margin-bottom: 2rem;
   position: relative;
-  z-index: 1;
+  padding-bottom: 0.75rem;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--pc-secondary);
+  border-radius: 2px;
+}
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Sezione servizi */
-.servizi-section {
-  background-color: var(--pc-genzano-light-bg);
-  padding: 3rem 0;
-}
-
-/* Card servizi */
+/* ── CARD SERVIZI ── */
 .card-servizio {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--pc-radius);
+  background: #fff;
 }
-
 .card-servizio:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--pc-card-shadow-hover);
 }
 
-/* Timeline eventi */
+/* ── NOTIZIE STILE COMUNI ── */
+.notizie-section { padding: 3.5rem 0; background: #fff; }
+
+.card-notizia {
+  border: none;
+  border-radius: 0;
+  border-left: 4px solid var(--pc-primary);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+.card-notizia:hover {
+  border-left-color: var(--pc-secondary);
+  box-shadow: var(--pc-card-shadow-hover);
+}
+
+.notizia-img-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--pc-primary);
+}
+.notizia-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.notizia-categoria {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+}
+.notizia-categoria.allerta { background: #dc3545; color: #fff; }
+.notizia-categoria.avviso { background: #ffc107; color: #000; }
+.notizia-categoria.evento { background: var(--pc-accent); color: #fff; }
+.notizia-categoria.comunicazione { background: var(--pc-primary); color: #fff; }
+
+.notizia-data { font-size: 0.8rem; color: #6c757d; }
+.notizia-data i { margin-right: 0.25rem; }
+
+.notizia-titolo { font-size: 1.05rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.4rem; }
+.notizia-titolo a { color: inherit; text-decoration: none; }
+.notizia-titolo a:hover { color: var(--pc-primary); }
+
+.notizia-excerpt { font-size: 0.88rem; color: #555; line-height: 1.5; }
+
+.notizia-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pc-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.notizia-link:hover { color: var(--pc-secondary); }
+
+/* ── NOTIZIA CON IMMAGINE (lista home) ── */
+.card-notizia-featured {
+  border: none;
+  border-radius: var(--pc-radius);
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: var(--pc-card-shadow);
+}
+.card-notizia-featured:hover {
+  box-shadow: var(--pc-card-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* ── BADGES ALLERTE ── */
+.badge-allerta-verde { background: #28a745; color: #fff; padding: 0.5em 1em; font-size: 0.85rem; border-radius: 4px; }
+.badge-allerta-gialla { background: #ffc107; color: #000; padding: 0.5em 1em; font-size: 0.85rem; border-radius: 4px; }
+.badge-allerta-arancione { background: #fd7e14; color: #fff; padding: 0.5em 1em; font-size: 0.85rem; border-radius: 4px; }
+.badge-allerta-rossa { background: #dc3545; color: #fff; padding: 0.5em 1em; font-size: 0.85rem; border-radius: 4px; }
+
+/* ── TIMELINE ── */
+.timeline-wrapper { position: relative; padding-left: 1rem; }
 .timeline-item {
   position: relative;
   padding-left: 2rem;
   margin-bottom: 1.5rem;
-  border-left: 3px solid var(--pc-genzano-primary);
+  border-left: 3px solid var(--pc-primary);
+  padding-bottom: 0.5rem;
 }
-
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -90,71 +246,118 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: var(--pc-genzano-primary);
+  background: var(--pc-primary);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--pc-primary);
 }
 
-/* Badge allerte */
-.badge-allerta-verde { background-color: #28a745; color: #fff; padding: 0.5em 1em; font-size: 0.9rem; }
-.badge-allerta-gialla { background-color: #ffc107; color: #000; padding: 0.5em 1em; font-size: 0.9rem; }
-.badge-allerta-arancione { background-color: #fd7e14; color: #fff; padding: 0.5em 1em; font-size: 0.9rem; }
-.badge-allerta-rossa { background-color: #dc3545; color: #fff; padding: 0.5em 1em; font-size: 0.9rem; }
+/* ── TABLES ── */
+table { width: 100%; margin-bottom: 1rem; border-collapse: collapse; }
+table th { background: var(--pc-primary); color: #fff; padding: 0.75rem 1rem; font-weight: 600; font-size: 0.9rem; }
+table td { padding: 0.75rem 1rem; border-bottom: 1px solid #e9ecef; font-size: 0.9rem; }
+table tr:nth-child(even) { background: #f8f9fa; }
+table tr:hover { background: #e8f4fd; }
 
-/* Accessibilità: focus visibile */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
+/* ── BACK TO TOP ── */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background: var(--pc-primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--pc-secondary); transform: translateY(-3px); }
+
+/* ── ANIMATIONS ── */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-in-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ── SOCIAL SIDEBAR ── */
+.card-social-link {
+  border: 1px solid #e9ecef;
+  border-radius: var(--pc-radius);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 0.75rem 1rem;
+}
+.card-social-link:hover { border-color: var(--pc-primary); box-shadow: var(--pc-card-shadow); color: #333; }
+
+/* ── QUICK ACTIONS (Cosa fare in caso di...) ── */
+.quick-action-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: var(--pc-radius);
+  padding: 1.25rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+.quick-action-card:hover {
+  border-color: var(--pc-primary);
+  box-shadow: var(--pc-card-shadow-hover);
+  color: var(--pc-primary);
+  transform: translateY(-2px);
+}
+.quick-action-card i { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
+
+/* ── 404 ── */
+.page-404 { text-align: center; padding: 5rem 0; }
+.page-404 h1 { font-size: 6rem; font-weight: 700; color: var(--pc-primary); margin-bottom: 0; }
+.page-404 h2 { font-size: 1.5rem; color: #555; margin-bottom: 2rem; }
+
+/* ── FOOTER ── */
+.footer-list { list-style: none; padding: 0; margin: 0; }
+.footer-list li { margin-bottom: 0.5rem; }
+.footer-list .list-item { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; }
+.footer-list .list-item:hover { color: #fff; }
+
+/* ── ACCESSIBILITY ── */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
   outline: 3px solid #ff9900;
   outline-offset: 2px;
 }
-
-/* Skip to content */
 .skip-to-content {
-  position: absolute;
-  top: -100%;
-  left: 0;
-  background: var(--pc-genzano-primary);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  z-index: 9999;
-  font-weight: 700;
-  text-decoration: none;
+  position: absolute; top: -100%; left: 0;
+  background: var(--pc-primary); color: #fff;
+  padding: 0.75rem 1.5rem; z-index: 9999;
+  font-weight: 700; text-decoration: none;
 }
+.skip-to-content:focus { top: 0; }
 
-.skip-to-content:focus {
-  top: 0;
-}
+/* ── SEARCH ── */
+#search-results .search-result-item { padding: 1rem 0; border-bottom: 1px solid #eee; }
+#search-results .search-result-item h3 a { color: var(--pc-primary); }
 
-/* Tabelle responsive */
-table {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-table th, table td {
-  padding: 0.75rem;
-  border: 1px solid #dee2e6;
-}
-
-table th {
-  background-color: var(--pc-genzano-primary);
-  color: #fff;
-}
-
-table tr:nth-child(even) {
-  background-color: #f8f9fa;
-}
-
-/* Ricerca */
-#search-results .search-result-item {
-  padding: 1rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-/* Print styles */
+/* ── PRINT ── */
 @media print {
-  .navbar, footer, .cookiebar, .skip-to-content, .it-header-slim-wrapper {
+  .navbar, footer, .cookiebar, .skip-to-content, .it-header-slim-wrapper,
+  .it-header-navbar-wrapper, .back-to-top, .emergency-banner, .stats-section {
     display: none !important;
   }
+  .hero-section { background: #fff !important; color: #000 !important; padding: 1rem 0; }
 }

@@ -11,16 +11,39 @@
           <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
         </ol>
       </nav>
+
+      {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
+      {{ with .Params.image }}
+      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;">
+        <img src="{{ . }}" alt="" loading="lazy">
+      </div>
+      {{ else }}
+      {{ if eq $.Section "comunicazioni" }}
+      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;">
+        <img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy">
+      </div>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+
       <h1>{{ .Title }}</h1>
       {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
       {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
-      <p class="text-muted small">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
-      </p>
+      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+        {{ with .Params.badge }}
+        <span class="notizia-categoria {{ . | lower }}">{{ . }}</span>
+        {{ end }}
+        <span class="notizia-data">
+          <i class="bi bi-calendar3" aria-hidden="true"></i>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+        </span>
+      </div>
       {{ end }}
-      <article>
-        {{ .Content }}
-      </article>
+      <article>{{ .Content }}</article>
+      {{ if eq .Section "comunicazioni" }}
+      <hr class="mt-5">
+      <a href="{{ "comunicazioni/" | relURL }}" class="notizia-link"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna a tutte le comunicazioni</a>
+      {{ end }}
     </div>
   </div>
 </div>
