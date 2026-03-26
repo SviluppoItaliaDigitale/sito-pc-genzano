@@ -4,6 +4,7 @@
 
 
 baseURL = "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
+relativeURLs = true
 languageCode = "it"
 defaultContentLanguage = "it"
 title = "Protezione Civile Genzano di Roma"
