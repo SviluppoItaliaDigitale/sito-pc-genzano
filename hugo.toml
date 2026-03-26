@@ -1,8 +1,9 @@
-# ============================================================
+ ============================================================
 # Configurazione Hugo — Protezione Civile Genzano di Roma
 # ============================================================
 
-baseURL = "https://www.protezionecivilegenzano.it/"
+
+baseURL = "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
 languageCode = "it"
 defaultContentLanguage = "it"
 title = "Protezione Civile Genzano di Roma"
