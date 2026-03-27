@@ -1,3 +1,19 @@
+#!/bin/bash
+# ============================================================
+# REDESIGN HOME PAGE v4
+# Notizie stile Comune + Barra allerta dinamica
+# Esegui con: bash redesign-homepage.sh
+# ============================================================
+
+set -e
+cd ~/sito-pc-genzano
+
+echo "📥 Pull..."
+git pull --rebase 2>/dev/null || git pull 2>/dev/null || true
+
+# ── 1. HOME PAGE v4 ──
+echo "🏠 Redesign Home Page..."
+cat > themes/flavour-pcgenzano/layouts/index.html << 'HTMLEOF'
 {{ define "main" }}
 
 <!-- BARRA EMERGENZA -->
@@ -269,3 +285,133 @@
 })();
 </script>
 {{ end }}
+HTMLEOF
+
+# ── 2. CSS AGGIUNTIVO ──
+echo "🎨 Aggiunta stili per nuova homepage..."
+cat >> themes/flavour-pcgenzano/static/css/custom.css << 'CSSEOF'
+
+/* ── ALLERTA BAR (barra dinamica) ── */
+.allerta-bar {
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.allerta-bar-verde { background: #28a745; color: #fff; }
+.allerta-bar-gialla { background: #ffc107; color: #000; }
+.allerta-bar-arancione { background: #fd7e14; color: #fff; }
+.allerta-bar-rossa { background: #dc3545; color: #fff; }
+
+.allerta-bar-verde .allerta-bar-btn { color: #fff; border-color: rgba(255,255,255,0.5); }
+.allerta-bar-verde .allerta-bar-btn:hover { background: rgba(255,255,255,0.2); }
+.allerta-bar-gialla .allerta-bar-btn { color: #000; border-color: rgba(0,0,0,0.3); }
+.allerta-bar-gialla .allerta-bar-btn:hover { background: rgba(0,0,0,0.1); }
+.allerta-bar-arancione .allerta-bar-btn { color: #fff; border-color: rgba(255,255,255,0.5); }
+.allerta-bar-arancione .allerta-bar-btn:hover { background: rgba(255,255,255,0.2); }
+.allerta-bar-rossa .allerta-bar-btn { color: #fff; border-color: rgba(255,255,255,0.5); }
+.allerta-bar-rossa .allerta-bar-btn:hover { background: rgba(255,255,255,0.2); }
+
+/* ── STATS NELL'HERO ── */
+.stats-hero {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.stat-hero-item {
+  text-align: center;
+  padding: 0.75rem 0;
+}
+.stat-hero-num {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+.stat-hero-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+/* ── NOTIZIA HERO (grande, stile Comune) ── */
+.card-notizia-hero {
+  border: none;
+  border-radius: var(--pc-radius);
+  overflow: hidden;
+  box-shadow: var(--pc-card-shadow);
+  transition: all 0.3s ease;
+}
+.card-notizia-hero:hover {
+  box-shadow: var(--pc-card-shadow-hover);
+  transform: translateY(-3px);
+}
+.card-notizia-hero-img {
+  height: 280px;
+  overflow: hidden;
+}
+.card-notizia-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card-notizia-hero:hover .card-notizia-hero-img img {
+  transform: scale(1.03);
+}
+
+/* ── NOTIZIA SMALL (card compatte, stile Comune) ── */
+.card-notizia-small {
+  border: none;
+  border-radius: var(--pc-radius);
+  overflow: hidden;
+  box-shadow: var(--pc-card-shadow);
+  transition: all 0.2s ease;
+}
+.card-notizia-small:hover {
+  box-shadow: var(--pc-card-shadow-hover);
+  transform: translateX(3px);
+}
+.card-notizia-small-img {
+  height: 100%;
+  min-height: 90px;
+  overflow: hidden;
+}
+.card-notizia-small-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .card-notizia-hero-img { height: 200px; }
+}
+CSSEOF
+
+# ── 3. COMMIT E PUSH ──
+echo "📤 Pubblicazione..."
+git add -A
+git commit -m "🏠 Redesign homepage v4: notizie stile Comune, barra allerta dinamica, stats nell'hero, max 2 mesi"
+git push
+
+echo ""
+echo "============================================"
+echo "  ✅ REDESIGN HOMEPAGE COMPLETATO!"
+echo "============================================"
+echo ""
+echo "  NOVITA:"
+echo "  ✓ Barra allerta meteo dinamica (cambia colore!)"
+echo "    - Verde: sfondo verde, testo bianco"
+echo "    - Gialla: sfondo giallo, testo nero"
+echo "    - Arancione: sfondo arancione, testo bianco"
+echo "    - Rossa: sfondo rosso, testo bianco"
+echo "  ✓ Notizie stile Comune di Genzano"
+echo "    - 1 notizia grande a sinistra con immagine"
+echo "    - 4 notizie compatte a destra"
+echo "    - Solo notizie degli ultimi 2 mesi"
+echo "  ✓ Statistiche integrate nell'hero"
+echo "  ✓ Social e IT-alert compatti in una riga"
+echo "  ✓ Meteo ridotto (meno scroll)"
+echo "  ✓ Pagina piu corta e accattivante"
+echo "============================================"
