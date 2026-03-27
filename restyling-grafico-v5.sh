@@ -1,3 +1,19 @@
+#!/bin/bash
+# ============================================================
+# RESTYLING GRAFICO COMPLETO v5
+# Protezione Civile Genzano di Roma
+# Esegui con: bash restyling-grafico-v5.sh
+# ============================================================
+
+set -e
+cd ~/sito-pc-genzano
+
+echo "📥 Pull..."
+git pull --rebase 2>/dev/null || git pull 2>/dev/null || true
+
+# ── 1. CSS COMPLETO v5 — RESTYLING PROFESSIONALE ──
+echo "🎨 CSS v5 completo..."
+cat > themes/flavour-pcgenzano/static/css/custom.css << 'CSSEOF'
 /* ============================================================
    CSS v5.0 — Protezione Civile Genzano di Roma
    Restyling grafico professionale
@@ -399,3 +415,34 @@ select:focus-visible, textarea:focus-visible {
   .quick-action-card { padding: 1rem; }
   .quick-action-card i { font-size: 1.5rem; }
 }
+CSSEOF
+
+# ── 2. COMMIT ──
+echo "📤 Pubblicazione restyling..."
+git add -A
+git commit -m "🎨 Restyling grafico v5: CSS professionale, micro-interazioni, tipografia raffinata, ombre migliorate"
+git push
+
+echo ""
+echo "============================================"
+echo "  ✅ RESTYLING GRAFICO v5 COMPLETATO!"
+echo "============================================"
+echo ""
+echo "  MIGLIORIE CSS:"
+echo "  ✓ Sistema di variabili CSS completo"
+echo "  ✓ Ombre progressive (sm/md/lg/hover)"
+echo "  ✓ Transizioni fluide cubic-bezier"
+echo "  ✓ Bordi arrotondati consistenti"
+echo "  ✓ Micro-interazioni su hover (card, quick actions, timeline)"
+echo "  ✓ Bottone Warning arancione (non giallo) nel hero"
+echo "  ✓ Font smoothing antialiased"
+echo "  ✓ Selezione testo con colore primario"
+echo "  ✓ Breadcrumb raffinato"
+echo "  ✓ Bottoni con border-radius pillola (20px)"
+echo "  ✓ Tipografia: letter-spacing e line-height raffinati"
+echo "  ✓ Mobile: spacing e font-size ottimizzati"
+echo "  ✓ Quick actions con zoom icona su hover"
+echo "  ✓ Timeline con colore che cambia su hover"
+echo "  ✓ Tabelle con border-radius e ombre"
+echo "  ✓ Footer link con transizione colore"
+echo "============================================"
