@@ -17,28 +17,15 @@ layout: "single"
   var input = document.getElementById('search-input');
   var results = document.getElementById('search-results');
 
-  // Trova il baseURL dal tag canonical o dal link della pagina
-  var base = document.querySelector('link[rel="canonical"]');
-  var baseURL = '';
-  if (base) {
-    baseURL = base.href.replace(/cerca\/$/, '').replace(/cerca$/, '');
-  } else {
-    // Fallback: prendi dall'URL corrente
-    baseURL = window.location.href.replace(/cerca\/?$/, '');
-  }
-  var jsonURL = baseURL + 'index.json';
+  // Costruisci URL del JSON dal pathname corrente
+  var path = window.location.pathname;
+  var basePath = path.substring(0, path.indexOf('/cerca'));
+  var jsonURL = window.location.origin + basePath + '/index.json';
 
-  // Carica indice
   fetch(jsonURL)
-    .then(function(r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
+    .then(function(r) { return r.json(); })
     .then(function(data) { searchIndex = data; })
-    .catch(function(err) {
-      console.log('Errore caricamento indice:', err);
-      console.log('URL tentato:', jsonURL);
-    });
+    .catch(function(err) { console.log('Errore:', err, 'URL:', jsonURL); });
 
   input.addEventListener('input', function() {
     var query = this.value.toLowerCase().trim();
@@ -55,12 +42,9 @@ layout: "single"
       results.innerHTML = '<p class="text-muted">Nessun risultato per "<strong>' + query + '</strong>".</p>';
       return;
     }
-    var html = '<p class="fw-bold">' + found.length + ' risultat' + (found.length === 1 ? 'o' : 'i') + ' per "' + query + '":</p>';
+    var html = '<p class="fw-bold">' + found.length + ' risultat' + (found.length === 1 ? 'o' : 'i') + ':</p>';
     found.forEach(function(r) {
-      html += '<div class="search-result-item">';
-      html += '<h3 class="h5"><a href="' + r.url + '">' + r.title + '</a></h3>';
-      html += '<p class="small text-muted">' + (r.content || '') + '</p>';
-      html += '</div>';
+      html += '<div class="search-result-item"><h3 class="h5"><a href="' + r.url + '">' + r.title + '</a></h3><p class="small text-muted">' + (r.content || '') + '</p></div>';
     });
     results.innerHTML = html;
   });
