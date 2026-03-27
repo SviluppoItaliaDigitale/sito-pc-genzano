@@ -1,0 +1,44 @@
+{{ define "main" }}
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <nav aria-label="Percorso di navigazione">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Cerca nel sito</li>
+        </ol>
+      </nav>
+      <h1>Cerca nel sito</h1>
+      <div id="search-container">
+        <label for="search-input" class="form-label fw-bold">Cosa stai cercando?</label>
+        <input type="search" id="search-input" class="form-control form-control-lg" placeholder="Digita qui per cercare...">
+        <small class="form-text">Inserisci almeno 3 caratteri per avviare la ricerca.</small>
+        <div id="search-results" class="mt-4" role="region" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+var idx=null;
+var el=document.getElementById('search-input');
+var box=document.getElementById('search-results');
+var xhr=new XMLHttpRequest();
+xhr.open('GET','{{ "index.json" | absURL }}');
+xhr.onload=function(){if(xhr.status===200){idx=JSON.parse(xhr.responseText)}};
+xhr.send();
+el.addEventListener('input',function(){
+  var q=this.value.toLowerCase().trim();
+  if(q.length<3){box.innerHTML='';return}
+  if(!idx){box.innerHTML='<p>Caricamento...</p>';return}
+  var res=[];
+  for(var i=0;i<idx.length;i++){var p=idx[i];if((p.title&&p.title.toLowerCase().indexOf(q)>-1)||(p.content&&p.content.toLowerCase().indexOf(q)>-1)){res.push(p)}}
+  if(res.length===0){box.innerHTML='<p class="text-muted">Nessun risultato per "'+q+'".</p>';return}
+  var h='<p class="fw-bold">'+res.length+' risultat'+(res.length===1?'o':'i')+':</p>';
+  for(var j=0;j<res.length;j++){h+='<div class="search-result-item"><h3 class="h5"><a href="'+res[j].url+'">'+res[j].title+'</a></h3><p class="small text-muted">'+(res[j].content||'')+'</p></div>'}
+  box.innerHTML=h;
+});
+</script>
+{{ end }}
