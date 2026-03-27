@@ -1,8 +1,8 @@
 {
-  "livello": "verde",
-  "titolo": "NESSUNA ALLERTA",
-  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
+  "livello": "rossa",
+  "titolo": "ALLERTA ROSSA",
+  "descrizione": "Criticita elevata. Fenomeni molto intensi. Seguire le indicazioni delle autorita.",
   "zona": "F - Bacini Costieri Sud / D - Bacini di Roma",
-  "aggiornamento": "Aggiornamento manuale",
-  "ultimo_check": "27/03/2026 18:08"
+  "aggiornamento": "Fonte: DPC Bollettino Nazionale",
+  "ultimo_check": "27/03/2026 19:48"
 }
