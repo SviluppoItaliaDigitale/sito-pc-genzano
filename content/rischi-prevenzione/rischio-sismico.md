@@ -25,9 +25,3 @@ Il terremoto è un evento naturale non prevedibile. L'unica difesa possibile è 
 - Raggiungi le aree di attesa previste dal Piano di Emergenza Comunale
 - Non usare il telefono se non per reali necessità, per non intasare le linee
 - Ascolta le notizie fornite dalle autorità tramite radio o canali ufficiali
-
-## Approfondisci i Rischi
-
-- [Panoramica Rischi](../)
-- [Rischio Incendi](../rischio-incendio/)
-- [Rischio Idrogeologico](../rischio-idrogeologico/)

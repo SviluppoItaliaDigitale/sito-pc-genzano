@@ -23,9 +23,3 @@ Il nostro territorio è ricco di aree verdi che rappresentano un patrimonio da p
 - Chiudi porte, finestre e tutte le prese d'aria
 - Se possibile e senza correre rischi, bagna l'area intorno alla casa per renderla meno infiammabile
 - Segui sempre le indicazioni delle squadre di soccorso
-
-## Approfondisci i Rischi
-
-- [Panoramica Rischi](../)
-- [Rischio Idrogeologico](../rischio-idrogeologico/)
-- [Rischio Sismico](../rischio-sismico/)

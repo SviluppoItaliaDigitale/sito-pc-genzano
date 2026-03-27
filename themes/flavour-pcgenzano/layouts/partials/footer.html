@@ -6,12 +6,12 @@
           <div class="col-lg-4 col-md-4 pb-2">
             <h2 class="h4 text-white">Protezione Civile</h2>
             <p class="text-white">Gruppo Comunale Volontari di Genzano di Roma</p>
-            <p class="text-white" style="opacity:0.85;">
+            <p style="color:rgba(255,255,255,0.85);">
               <strong>Sede:</strong> {{ .Site.Params.sede }}<br>
               <strong>Telefono:</strong> <a href="tel:{{ .Site.Params.telefono }}" class="text-white fw-bold">{{ .Site.Params.telefono }}</a><br>
               <strong>Email:</strong> <a href="mailto:{{ .Site.Params.email }}" class="text-white fw-bold">{{ .Site.Params.email }}</a>
             </p>
-            <p class="text-white small" style="opacity:0.75;">
+            <p class="small" style="color:rgba(255,255,255,0.75);">
               {{ .Site.Params.coi }} — Registro Regionale P.C. {{ .Site.Params.registroRegionale }}<br>
               {{ .Site.Params.runts }}<br>
               Aderente al Coordinamento {{ .Site.Params.coordinamento }}
@@ -39,18 +39,10 @@
             <div class="mt-3">
               <h3 class="h6 text-white">Seguici su</h3>
               <ul class="list-inline" role="list">
-                <li class="list-inline-item" role="listitem">
-                  <a href="https://www.facebook.com/protezionecivilegenzanodiroma" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Facebook"><i class="bi bi-facebook fs-4" aria-hidden="true"></i></a>
-                </li>
-                <li class="list-inline-item" role="listitem">
-                  <a href="https://www.instagram.com/protezionecivilegenzano/" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Instagram"><i class="bi bi-instagram fs-4" aria-hidden="true"></i></a>
-                </li>
-                <li class="list-inline-item" role="listitem">
-                  <a href="https://x.com/alfagenzano" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="X Twitter"><i class="bi bi-twitter-x fs-4" aria-hidden="true"></i></a>
-                </li>
-                <li class="list-inline-item" role="listitem">
-                  <a href="https://t.me/pcalfagenzano" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Telegram"><i class="bi bi-telegram fs-4" aria-hidden="true"></i></a>
-                </li>
+                <li class="list-inline-item" role="listitem"><a href="https://www.facebook.com/protezionecivilegenzanodiroma" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Facebook"><i class="bi bi-facebook fs-4" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item" role="listitem"><a href="https://www.instagram.com/protezionecivilegenzano/" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Instagram"><i class="bi bi-instagram fs-4" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item" role="listitem"><a href="https://x.com/alfagenzano" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="X Twitter"><i class="bi bi-twitter-x fs-4" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item" role="listitem"><a href="https://t.me/pcalfagenzano" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Telegram"><i class="bi bi-telegram fs-4" aria-hidden="true"></i></a></li>
               </ul>
             </div>
           </div>
@@ -58,7 +50,7 @@
       </section>
     </div>
   </div>
-  <div class="it-footer-small-prints clearfix" style="background:rgba(0,0,0,0.2);">
+  <div class="it-footer-small-prints clearfix">
     <div class="container">
       <h3 class="visually-hidden">Informazioni legali</h3>
       <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row" role="list">

@@ -22,9 +22,3 @@ Con questo termine si intendono i rischi legati all'azione delle acque, come all
 - Non attraversare mai un sottopassaggio o una strada allagata
 - Anche pochi centimetri d'acqua possono far perdere aderenza al veicolo o spegnere il motore
 - Se sei bloccato, abbandona l'auto e cerca di raggiungere un punto più elevato a piedi
-
-## Approfondisci i Rischi
-
-- [Panoramica Rischi](../)
-- [Rischio Incendi](../rischio-incendio/)
-- [Rischio Sismico](../rischio-sismico/)
