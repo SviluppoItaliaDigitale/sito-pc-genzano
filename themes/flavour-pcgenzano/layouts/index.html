@@ -114,7 +114,7 @@
             {{ end }}
             <span class="notizia-data ms-2">{{ .Date | time.Format ":date_long" }}</span>
             <h3 class="h4 mt-2 text-dark">{{ .Title }}</h3>
-            <p class="text-muted">{{ .Summary | truncate 200 }}</p>
+            <p class="text-muted">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 200 }}{{ end }}</p>
           </div>
         </a>
       </div>
