@@ -1,18 +1,10 @@
-# ============================================================
-# Workflow: Controllo Automatico Allerte Meteo
-# Controlla il bollettino della Regione Lazio per la Zona F
-# (Bacini Costieri Sud) dove ricade Genzano di Roma
-#
-# Si attiva:
-#   - Ogni giorno alle 13:00 e 17:00 UTC (15:00 e 19:00 CEST)
-#   - Manualmente dal tab Actions
-# ============================================================
 name: "🌦️ Controlla Allerta Meteo"
 
 on:
   schedule:
-    # Alle 13:00 UTC (15:00 ora italiana) e 17:00 UTC (19:00 ora italiana)
-    - cron: '0 13,17 * * *'
+    # Ogni 6 ore: 00:00, 06:00, 12:00, 18:00 UTC
+    # Corrispondono a: 02:00, 08:00, 14:00, 20:00 ora italiana (CEST)
+    - cron: '0 0,6,12,18 * * *'
   workflow_dispatch:
 
 permissions:
@@ -30,31 +22,15 @@ jobs:
       - name: "🌦️ Controlla bollettino Regione Lazio"
         id: allerta
         run: |
-          echo "🔍 Scaricamento pagina bollettini..."
-
-          # Scarica la pagina del Centro Funzionale Regionale
+          echo "🔍 Scaricamento bollettini..."
           PAGE=$(curl -sL "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" 2>/dev/null || echo "")
-
-          # Scarica anche la pagina di criticità
           PAGE2=$(curl -sL "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/criticita-idrogeologica-idraulica" 2>/dev/null || echo "")
-
-          # Scarica il bollettino dal DPC nazionale (più affidabile)
           DPC=$(curl -sL "https://www.protezionecivile.gov.it/it/bollettino-di-criticita" 2>/dev/null || echo "")
-
           COMBINED="$PAGE $PAGE2 $DPC"
-
-          # Data e ora corrente
           NOW=$(TZ="Europe/Rome" date "+%d/%m/%Y %H:%M")
-
-          # Default: verde
           LIVELLO="verde"
           TITOLO="NESSUNA ALLERTA"
           DESC="Non sono previsti fenomeni significativi sul nostro territorio."
-
-          # Cerca menzioni di allerta per le zone che interessano Genzano
-          # Zona F (Bacini Costieri Sud) e Zona D (Bacini di Roma)
-          # Priorità: rossa > arancione > gialla > verde
-
           if echo "$COMBINED" | grep -qi "rossa.*\(zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\)" || \
              echo "$COMBINED" | grep -qi "\(zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\).*rossa"; then
             LIVELLO="rossa"
@@ -72,7 +48,6 @@ jobs:
             TITOLO="ALLERTA GIALLA"
             DESC="Criticità ordinaria. Possibili fenomeni localizzati di intensità moderata. Prestare attenzione."
           fi
-
           echo "📊 Risultato: $TITOLO"
           echo "livello=$LIVELLO" >> $GITHUB_OUTPUT
           echo "titolo=$TITOLO" >> $GITHUB_OUTPUT
@@ -87,7 +62,7 @@ jobs:
             "titolo": "${{ steps.allerta.outputs.titolo }}",
             "descrizione": "${{ steps.allerta.outputs.desc }}",
             "zona": "F - Bacini Costieri Sud / D - Bacini di Roma",
-            "aggiornamento": "Controllo automatico ogni giorno alle 15:00 e 19:00",
+            "aggiornamento": "Controllo automatico ogni 6 ore",
             "ultimo_check": "${{ steps.allerta.outputs.now }}"
           }
           JSONEOF
@@ -98,20 +73,19 @@ jobs:
           git config --local user.name "GitHub Actions Bot"
           git add data/allerta.json
           if git diff --cached --quiet; then
-            echo "✅ Nessuna modifica al livello di allerta."
+            echo "✅ Nessuna modifica."
           else
-            git commit -m "🌦️ Allerta aggiornata: ${{ steps.allerta.outputs.titolo }} (${{ steps.allerta.outputs.now }})"
+            git commit -m "🌦️ Allerta: ${{ steps.allerta.outputs.titolo }} (${{ steps.allerta.outputs.now }})"
             git push
-            echo "⚠️ Livello di allerta aggiornato a: ${{ steps.allerta.outputs.titolo }}"
           fi
 
       - name: "📊 Riepilogo"
         if: always()
         run: |
           echo "## 🌦️ Controllo Allerta Meteo" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Info | Valore |" >> $GITHUB_STEP_SUMMARY
           echo "|---|---|" >> $GITHUB_STEP_SUMMARY
           echo "| Livello | **${{ steps.allerta.outputs.titolo }}** |" >> $GITHUB_STEP_SUMMARY
-          echo "| Zona | F (Bacini Costieri Sud) / D (Bacini di Roma) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Zona | F + D (Genzano di Roma) |" >> $GITHUB_STEP_SUMMARY
           echo "| Controllo | ${{ steps.allerta.outputs.now }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Prossimo | Tra 6 ore |" >> $GITHUB_STEP_SUMMARY
