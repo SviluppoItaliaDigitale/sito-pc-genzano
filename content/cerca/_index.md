@@ -12,41 +12,39 @@ layout: "single"
 </div>
 
 <script>
-(function(){
-  var searchIndex = null;
-  var input = document.getElementById('search-input');
-  var results = document.getElementById('search-results');
+var searchIndex = null;
+var input = document.getElementById('search-input');
+var results = document.getElementById('search-results');
 
-  // Costruisci URL del JSON dal pathname corrente
-  var path = window.location.pathname;
-  var basePath = path.substring(0, path.indexOf('/cerca'));
-  var jsonURL = window.location.origin + basePath + '/index.json';
+var jsonURL = 'https://sviluppoitaliadigitale.github.io/sito-pc-genzano/index.json';
 
-  fetch(jsonURL)
-    .then(function(r) { return r.json(); })
-    .then(function(data) { searchIndex = data; })
-    .catch(function(err) { console.log('Errore:', err, 'URL:', jsonURL); });
+fetch(jsonURL)
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    searchIndex = data;
+    console.log('Indice caricato:', data.length, 'pagine');
+  })
+  .catch(function(err) { console.log('Errore:', err); });
 
-  input.addEventListener('input', function() {
-    var query = this.value.toLowerCase().trim();
-    if (query.length < 3) { results.innerHTML = ''; return; }
-    if (!searchIndex) {
-      results.innerHTML = '<p class="text-muted">Caricamento in corso...</p>';
-      return;
-    }
-    var found = searchIndex.filter(function(p) {
-      return (p.title && p.title.toLowerCase().indexOf(query) !== -1) ||
-             (p.content && p.content.toLowerCase().indexOf(query) !== -1);
-    });
-    if (found.length === 0) {
-      results.innerHTML = '<p class="text-muted">Nessun risultato per "<strong>' + query + '</strong>".</p>';
-      return;
-    }
-    var html = '<p class="fw-bold">' + found.length + ' risultat' + (found.length === 1 ? 'o' : 'i') + ':</p>';
-    found.forEach(function(r) {
-      html += '<div class="search-result-item"><h3 class="h5"><a href="' + r.url + '">' + r.title + '</a></h3><p class="small text-muted">' + (r.content || '') + '</p></div>';
-    });
-    results.innerHTML = html;
+input.addEventListener('input', function() {
+  var query = this.value.toLowerCase().trim();
+  if (query.length < 3) { results.innerHTML = ''; return; }
+  if (!searchIndex) {
+    results.innerHTML = '<p class="text-muted">Caricamento in corso...</p>';
+    return;
+  }
+  var found = searchIndex.filter(function(p) {
+    return (p.title && p.title.toLowerCase().indexOf(query) !== -1) ||
+           (p.content && p.content.toLowerCase().indexOf(query) !== -1);
   });
-})();
+  if (found.length === 0) {
+    results.innerHTML = '<p class="text-muted">Nessun risultato per "<strong>' + query + '</strong>".</p>';
+    return;
+  }
+  var html = '<p class="fw-bold">' + found.length + ' risultat' + (found.length === 1 ? 'o' : 'i') + ':</p>';
+  found.forEach(function(r) {
+    html += '<div class="search-result-item"><h3 class="h5"><a href="' + r.url + '">' + r.title + '</a></h3><p class="small text-muted">' + (r.content || '') + '</p></div>';
+  });
+  results.innerHTML = html;
+});
 </script>
