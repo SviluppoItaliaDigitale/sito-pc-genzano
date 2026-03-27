@@ -1,1 +1,1 @@
-[{{ range $index, $page := .Site.RegularPages }}{{ if $index }},{{ end }}{"title":"{{ .Title }}","url":"{{ .Permalink }}","content":"{{ .Plain | htmlUnescape | truncate 200 }}","section":"{{ .Section }}"}{{ end }}]
+[{{ range $index, $page := .Site.RegularPages }}{{ if $index }},{{ end }}{"title":{{ .Title | jsonify }},"url":{{ .Permalink | jsonify }},"content":{{ .Plain | truncate 200 | jsonify }},"section":{{ .Section | jsonify }}}{{ end }}]
