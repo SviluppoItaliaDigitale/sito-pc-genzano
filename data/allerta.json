@@ -3,6 +3,6 @@
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
   "zona": "F - Bacini Costieri Sud / D - Bacini di Roma",
-  "aggiornamento": "Controllo automatico ogni giorno alle 15:00 e 19:00",
-  "ultimo_check": "26/03/2026 18:59"
+  "aggiornamento": "Controllo automatico ogni 6 ore",
+  "ultimo_check": "27/03/2026 08:00"
 }
