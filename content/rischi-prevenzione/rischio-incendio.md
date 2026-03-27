@@ -13,7 +13,7 @@ Il nostro territorio è ricco di aree verdi che rappresentano un patrimonio da p
 
 ## Cosa faccio se vedo un incendio?
 
-- Chiama immediatamente il **Numero Unico di Emergenza 112** o il **Numero di Emergenza Ambientale 1515** (Corpo Forestale)
+- Chiama immediatamente il **Numero Unico di Emergenza 112**
 - Cerca di fornire indicazioni precise sul luogo (Comune, località, un riferimento visibile)
 - Non avvicinarti mai alle fiamme e non tentare di spegnere l'incendio da solo
 
@@ -26,6 +26,6 @@ Il nostro territorio è ricco di aree verdi che rappresentano un patrimonio da p
 
 ## Approfondisci i Rischi
 
-- [Panoramica Rischi](/rischi-prevenzione/)
-- [Rischio Idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
-- [Rischio Sismico](/rischi-prevenzione/rischio-sismico/)
+- [Panoramica Rischi](../)
+- [Rischio Idrogeologico](../rischio-idrogeologico/)
+- [Rischio Sismico](../rischio-sismico/)

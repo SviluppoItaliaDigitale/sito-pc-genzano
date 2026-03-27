@@ -25,6 +25,6 @@ Con questo termine si intendono i rischi legati all'azione delle acque, come all
 
 ## Approfondisci i Rischi
 
-- [Panoramica Rischi](/rischi-prevenzione/)
-- [Rischio Incendi](/rischi-prevenzione/rischio-incendio/)
-- [Rischio Sismico](/rischi-prevenzione/rischio-sismico/)
+- [Panoramica Rischi](../)
+- [Rischio Incendi](../rischio-incendio/)
+- [Rischio Sismico](../rischio-sismico/)

@@ -28,6 +28,6 @@ Il terremoto è un evento naturale non prevedibile. L'unica difesa possibile è 
 
 ## Approfondisci i Rischi
 
-- [Panoramica Rischi](/rischi-prevenzione/)
-- [Rischio Incendi](/rischi-prevenzione/rischio-incendio/)
-- [Rischio Idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
+- [Panoramica Rischi](../)
+- [Rischio Incendi](../rischio-incendio/)
+- [Rischio Idrogeologico](../rischio-idrogeologico/)
