@@ -1,14 +1,18 @@
 {{ define "main" }}
-<div class="container py-5">
+<div class="page-hero">
+  <div class="container">
+    <nav aria-label="Percorso di navigazione">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cerca nel sito</li>
+      </ol>
+    </nav>
+    <h1>Cerca nel sito</h1>
+  </div>
+</div>
+<div class="container py-4">
   <div class="row">
     <div class="col-lg-8 mx-auto">
-      <nav aria-label="Percorso di navigazione">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Cerca nel sito</li>
-        </ol>
-      </nav>
-      <h1>Cerca nel sito</h1>
       <div id="search-container">
         <label for="search-input" class="form-label fw-bold">Cosa stai cercando?</label>
         <input type="search" id="search-input" class="form-control form-control-lg" placeholder="Digita qui per cercare...">
@@ -25,8 +29,9 @@
 var idx=null;
 var el=document.getElementById('search-input');
 var box=document.getElementById('search-results');
+var jsonURL='{{ "index.json" | absURL }}';
 var xhr=new XMLHttpRequest();
-xhr.open('GET','{{ "index.json" | absURL }}');
+xhr.open('GET',jsonURL);
 xhr.onload=function(){if(xhr.status===200){idx=JSON.parse(xhr.responseText)}};
 xhr.send();
 el.addEventListener('input',function(){

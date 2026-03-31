@@ -19,7 +19,7 @@ Email: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivil
 
 <!-- NOTA IMPORTANTE: Se avete nominato un DPO, inserite qui i suoi contatti.
      Per un ETS non è sempre obbligatorio, ma è consigliato. -->
-*(da nominare / da inserire)*
+*Per informazioni contattare: segreteria@protezionecivilegenzano.it*
 
 ### Tipologie di dati raccolti
 
@@ -70,4 +70,4 @@ Il sito incorpora un widget meteo di Windy.com che potrebbe installare propri co
 
 L'utente può disabilitare i cookie modificando le impostazioni del proprio browser. La disabilitazione dei cookie tecnici potrebbe compromettere alcune funzionalità del sito.
 
-*Ultimo aggiornamento: {{ now.Format "January 2006" }}*
+*Ultimo aggiornamento: Marzo 2026*
