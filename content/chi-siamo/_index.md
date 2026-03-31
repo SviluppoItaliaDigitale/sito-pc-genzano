@@ -155,6 +155,30 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 </div>
 </div>
 </div>
+<div class="col-lg-6 mb-3">
+<div class="card h-100 shadow-sm">
+<div class="card-body">
+<h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> Fiat Doblo</h3>
+<p class="small text-muted mb-0">Trasporto persone, unita droni e attrezzature</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 mb-3">
+<div class="card h-100 shadow-sm">
+<div class="card-body">
+<h3 class="h6"><i class="bi bi-display text-info me-2" aria-hidden="true"></i> Sala Operativa Mobile</h3>
+<p class="small text-muted mb-0 fst-italic">In allestimento</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 mb-3">
+<div class="card h-100 shadow-sm">
+<div class="card-body">
+<h3 class="h6"><i class="bi bi-truck text-success me-2" aria-hidden="true"></i> Astra BM201</h3>
+<p class="small text-muted mb-0 fst-italic">In allestimento</p>
+</div>
+</div>
+</div>
 </div>
 
 ## I Gruppi di Lavoro
