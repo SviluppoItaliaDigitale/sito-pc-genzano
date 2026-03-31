@@ -1,43 +1,34 @@
 {{ define "main" }}
-<div class="container py-5">
+<div class="page-hero">
+  <div class="container">
+    <nav aria-label="Percorso di navigazione">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+        {{ if and .Parent (not .Parent.IsHome) (ne .Parent.Permalink .Permalink) }}
+        <li class="breadcrumb-item"><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
+        {{ end }}
+        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+      </ol>
+    </nav>
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+<div class="container py-4">
   <div class="row">
     <div class="col-lg-8 mx-auto">
-      <nav aria-label="Percorso di navigazione">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
-          {{ if and .Parent (not .Parent.IsHome) (ne .Parent.Permalink .Permalink) }}
-          <li class="breadcrumb-item"><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
-          {{ end }}
-          <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
-        </ol>
-      </nav>
-
-      {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
-      {{ with .Params.image }}
-      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;">
-        <img src="{{ . }}" alt="" loading="lazy">
-      </div>
-      {{ else }}
-      {{ if eq $.Section "comunicazioni" }}
-      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;">
-        <img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy">
-      </div>
-      {{ end }}
-      {{ end }}
-      {{ end }}
-
-      <h1>{{ .Title }}</h1>
       {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
       {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
       <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-        {{ with .Params.badge }}
-        <span class="notizia-categoria {{ . | lower }}">{{ . }}</span>
-        {{ end }}
-        <span class="notizia-data">
-          <i class="bi bi-calendar3" aria-hidden="true"></i>
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
-        </span>
+        {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}">{{ . }}</span>{{ end }}
+        <span class="notizia-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></span>
       </div>
+      {{ end }}
+      {{ if and (eq .Section "comunicazioni") }}
+      {{ with .Params.image }}
+      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ . }}" alt="" loading="lazy"></div>
+      {{ else }}
+      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy"></div>
+      {{ end }}
       {{ end }}
       <article>{{ .Content }}</article>
       {{ if eq .Section "comunicazioni" }}
