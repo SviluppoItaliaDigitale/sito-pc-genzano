@@ -1,8 +1,8 @@
 {
-  "livello": "rossa",
-  "titolo": "ALLERTA ROSSA",
-  "descrizione": "Criticita elevata. Fenomeni molto intensi. Seguire le indicazioni delle autorita.",
+  "livello": "gialla",
+  "titolo": "ALLERTA GIALLA",
+  "descrizione": "Previste piogge e vento forte",
   "zona": "F - Bacini Costieri Sud / D - Bacini di Roma",
-  "aggiornamento": "Fonte: DPC Bollettino Nazionale",
-  "ultimo_check": "31/03/2026 20:54"
+  "aggiornamento": "Aggiornamento manuale",
+  "ultimo_check": "31/03/2026 21:32"
 }
