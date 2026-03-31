@@ -2,7 +2,6 @@ name: "🌦️ Controlla Allerta Meteo"
 
 on:
   schedule:
-    # Ogni 6 ore: 02:00, 08:00, 14:00, 20:00 ora italiana
     - cron: '0 0,6,12,18 * * *'
   workflow_dispatch:
 
@@ -21,133 +20,79 @@ jobs:
       - name: "🌦️ Controlla allerta per Genzano di Roma"
         id: allerta
         run: |
-          echo "🔍 Controllo allerte meteo per Genzano di Roma..."
-          echo "   Fonti: DPC Bollettino Nazionale + API allertameteo.app"
-          echo ""
-
           NOW=$(TZ="Europe/Rome" date "+%d/%m/%Y %H:%M")
           LIVELLO="verde"
           TITOLO="NESSUNA ALLERTA"
           DESC="Non sono previsti fenomeni significativi sul nostro territorio."
-          FONTE=""
+          FONTE="controllo automatico"
 
-          # ── FONTE 1: API allertameteo.app (dati DPC per comune) ──
+          # ── FONTE 1: API allertameteo.app ──
           echo "📡 Fonte 1: API allertameteo.app..."
-          API_RESP=$(curl -sL --max-time 15 "https://allertameteo.app/api/alert/genzano-di-roma" 2>/dev/null || echo "")
-
-          if echo "$API_RESP" | python3 -c "
-          import sys, json
-          try:
-              data = json.load(sys.stdin)
-              # Cerca il livello massimo tra oggi e domani
-              max_level = 'verde'
-              levels = {'verde':0, 'gialla':1, 'arancione':2, 'rossa':3}
-              for day in ['oggi','domani','today','tomorrow']:
-                  if day in data:
-                      for risk_type in data[day]:
-                          level = data[day][risk_type].get('level','') if isinstance(data[day][risk_type], dict) else str(data[day][risk_type])
-                          level = level.lower().strip()
-                          if level in levels and levels.get(level,0) > levels.get(max_level,0):
-                              max_level = level
-              print(max_level)
-          except:
-              print('errore')
-          " 2>/dev/null | grep -qvE "errore|verde"; then
+          API_RESP=$(curl -sL --max-time 15 "https://allertameteo.app/api/alert/genzano-di-roma" 2>/dev/null || echo "ERRORE")
+          if [ "$API_RESP" != "ERRORE" ] && echo "$API_RESP" | grep -q "{"; then
             API_LEVEL=$(echo "$API_RESP" | python3 -c "
           import sys, json
           try:
               data = json.load(sys.stdin)
-              max_level = 'verde'
               levels = {'verde':0, 'gialla':1, 'arancione':2, 'rossa':3}
-              for day in ['oggi','domani','today','tomorrow']:
-                  if day in data:
-                      for risk_type in data[day]:
-                          level = data[day][risk_type].get('level','') if isinstance(data[day][risk_type], dict) else str(data[day][risk_type])
-                          level = level.lower().strip()
-                          if level in levels and levels.get(level,0) > levels.get(max_level,0):
-                              max_level = level
-              print(max_level)
+              max_l = 'verde'
+              def check(obj):
+                  global max_l
+                  if isinstance(obj, dict):
+                      for v in obj.values():
+                          check(v)
+                  elif isinstance(obj, str):
+                      l = obj.lower().strip()
+                      if l in levels and levels[l] > levels.get(max_l,0):
+                          max_l = l
+              check(data)
+              print(max_l)
           except:
               print('verde')
-          " 2>/dev/null)
-            if [ -n "$API_LEVEL" ] && [ "$API_LEVEL" != "verde" ]; then
+          " 2>/dev/null || echo "verde")
+            if [ "$API_LEVEL" != "verde" ]; then
               LIVELLO="$API_LEVEL"
               FONTE="allertameteo.app API"
-              echo "   ⚠️ Trovata allerta $LIVELLO da API"
+              echo "   ⚠️ API: allerta $LIVELLO"
             else
               echo "   ✅ API: nessuna allerta"
             fi
           else
-            echo "   ℹ️ API non disponibile o nessuna allerta"
+            echo "   ⚠️ API non disponibile"
           fi
 
-          # ── FONTE 2: Pagina DPC bollettino testo ──
-          echo "📡 Fonte 2: DPC bollettino nazionale (testo HTML)..."
-          DPC_PAGE=$(curl -sL --max-time 15 "https://mappe.protezionecivile.gov.it/it/mappe-rischi/bollettino-di-criticita/" 2>/dev/null || echo "")
-
-          if [ -n "$DPC_PAGE" ]; then
-            # Cerca "Lazio" nel testo del bollettino
-            LAZIO_SECTION=$(echo "$DPC_PAGE" | grep -i "lazio" || echo "")
-            if [ -n "$LAZIO_SECTION" ]; then
-              echo "   Trovata menzione Lazio nel bollettino"
-              # Controlla i livelli nel contesto del Lazio
-              # Il bollettino elenca le regioni sotto ogni livello di criticità
-              if echo "$DPC_PAGE" | grep -B5 -i "lazio" | grep -qi "ELEVATA CRITICITA\|ALLERTA ROSSA"; then
-                if [ "$(echo "rossa" | awk '{print length}')" -gt 0 ]; then
-                  LIVELLO="rossa"
-                  FONTE="DPC Bollettino Nazionale"
-                fi
-              elif echo "$DPC_PAGE" | grep -B5 -i "lazio" | grep -qi "MODERATA CRITICITA\|ALLERTA ARANCIONE"; then
-                if [ "$LIVELLO" != "rossa" ]; then
-                  LIVELLO="arancione"
-                  FONTE="DPC Bollettino Nazionale"
-                fi
-              elif echo "$DPC_PAGE" | grep -B5 -i "lazio" | grep -qi "ORDINARIA CRITICITA\|ALLERTA GIALLA"; then
-                if [ "$LIVELLO" = "verde" ]; then
-                  LIVELLO="gialla"
-                  FONTE="DPC Bollettino Nazionale"
-                fi
-              fi
-            else
-              echo "   ✅ DPC: nessuna menzione Lazio"
-            fi
-          else
-            echo "   ⚠️ Pagina DPC non raggiungibile"
-          fi
-
-          # ── FONTE 3: Pagina Regione Lazio (fallback) ──
-          echo "📡 Fonte 3: Regione Lazio (fallback)..."
+          # ── FONTE 2: Regione Lazio (solo testo HTML, NO bollettino nazionale) ──
+          echo "📡 Fonte 2: Regione Lazio..."
           LAZIO_PAGE=$(curl -sL --max-time 15 "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" 2>/dev/null || echo "")
           if [ -n "$LAZIO_PAGE" ]; then
             if echo "$LAZIO_PAGE" | grep -qi "rossa.*\(zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\)" || \
                echo "$LAZIO_PAGE" | grep -qi "\(zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\).*rossa"; then
-              LIVELLO="rossa"; FONTE="Regione Lazio"
+              if [ "$LIVELLO" != "rossa" ]; then LIVELLO="rossa"; FONTE="Regione Lazio"; fi
             elif echo "$LAZIO_PAGE" | grep -qi "arancione.*\(zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\)" || \
                  echo "$LAZIO_PAGE" | grep -qi "\(zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\).*arancione"; then
-              if [ "$LIVELLO" != "rossa" ]; then LIVELLO="arancione"; FONTE="Regione Lazio"; fi
+              if [ "$LIVELLO" != "rossa" ] && [ "$LIVELLO" != "arancione" ]; then LIVELLO="arancione"; FONTE="Regione Lazio"; fi
             elif echo "$LAZIO_PAGE" | grep -qi "gialla.*\(zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\|tutte le zone\)" || \
                  echo "$LAZIO_PAGE" | grep -qi "\(zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\|tutte le zone\).*gialla"; then
               if [ "$LIVELLO" = "verde" ]; then LIVELLO="gialla"; FONTE="Regione Lazio"; fi
             fi
           fi
 
-          # Imposta titolo e descrizione
+          # NOTA: Rimossa la fonte DPC Bollettino Nazionale perche causava falsi positivi
+          # (mescolava allerte di altre regioni con il Lazio nella stessa pagina)
+
           case $LIVELLO in
             verde) TITOLO="NESSUNA ALLERTA"; DESC="Non sono previsti fenomeni significativi sul nostro territorio." ;;
-            gialla) TITOLO="ALLERTA GIALLA"; DESC="Criticita ordinaria. Possibili fenomeni localizzati di intensita moderata. Prestare attenzione." ;;
-            arancione) TITOLO="ALLERTA ARANCIONE"; DESC="Criticita moderata. Fenomeni diffusi e potenzialmente pericolosi. Limitare gli spostamenti." ;;
+            gialla) TITOLO="ALLERTA GIALLA"; DESC="Criticita ordinaria. Possibili fenomeni localizzati. Prestare attenzione." ;;
+            arancione) TITOLO="ALLERTA ARANCIONE"; DESC="Criticita moderata. Fenomeni diffusi e pericolosi. Limitare gli spostamenti." ;;
             rossa) TITOLO="ALLERTA ROSSA"; DESC="Criticita elevata. Fenomeni molto intensi. Seguire le indicazioni delle autorita." ;;
           esac
 
-          echo ""
-          echo "📊 RISULTATO: $TITOLO"
-          [ -n "$FONTE" ] && echo "   Fonte: $FONTE"
-
+          echo "📊 RISULTATO: $TITOLO (fonte: $FONTE)"
           echo "livello=$LIVELLO" >> $GITHUB_OUTPUT
           echo "titolo=$TITOLO" >> $GITHUB_OUTPUT
           echo "desc=$DESC" >> $GITHUB_OUTPUT
           echo "now=$NOW" >> $GITHUB_OUTPUT
-          echo "fonte=${FONTE:-controllo automatico}" >> $GITHUB_OUTPUT
+          echo "fonte=$FONTE" >> $GITHUB_OUTPUT
 
       - name: "📝 Aggiorna file dati allerta"
         run: |
