@@ -18,6 +18,33 @@ layout: "single"
 </div>
 </div>
 
+## Riferimenti Istituzionali
+
+<div class="row mb-5">
+<div class="col-md-6 mb-3">
+<div class="card h-100 shadow-sm border-start border-primary border-4">
+<div class="card-body">
+<h3 class="h6"><i class="bi bi-building text-primary me-2" aria-hidden="true"></i> Comune di Genzano di Roma</h3>
+<ul class="list-unstyled mb-0 small">
+<li class="mb-2"><strong>Sindaco:</strong> Carlo Zoccolotti</li>
+<li class="mb-2"><strong>Assessore alla Protezione Civile:</strong> Roberto Silvestrini</li>
+<li class="mb-2"><strong>Consigliere con delega alla Protezione Civile:</strong> Marcello Marianecci</li>
+<li><strong>Comandante Polizia Locale e Dirigente Protezione Civile:</strong> Monica Palladinelli</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-3">
+<div class="card h-100 shadow-sm border-start border-4" style="border-color:var(--pc-secondary)!important;">
+<div class="card-body">
+<h3 class="h6"><i class="bi bi-people-fill text-primary me-2" aria-hidden="true"></i> Gruppo Volontari</h3>
+<p class="small mb-2">Il Gruppo Comunale Volontari è un Ente del Terzo Settore iscritto al RUNTS, dotato di proprio Statuto e Regolamento.</p>
+<p class="small mb-0">Opera in coordinamento con il Sindaco, autorità locale di Protezione Civile, e con il Comando di Polizia Locale.</p>
+</div>
+</div>
+</div>
+</div>
+
 ## La Nostra Storia
 
 <div class="row mb-4">
@@ -49,6 +76,8 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 </thead>
 <tbody>
 <tr><td><strong><i class="bi bi-star-fill text-warning me-1" aria-hidden="true"></i> Coordinatore</strong></td><td>Dario Iacoangeli</td></tr>
+<tr><td><strong>Vice Coordinatore Operativo</strong></td><td>Alessandro Cesaroni</td></tr>
+<tr><td><strong>Vice Coordinatore Operativo</strong></td><td>Tiziano Di Miceli</td></tr>
 <tr><td>Consigliere</td><td>Fabrizio Moghetti</td></tr>
 <tr><td>Consigliere</td><td>Federico Spinetti</td></tr>
 <tr><td>Consigliere</td><td>Alessandro Pantani</td></tr>
@@ -140,7 +169,7 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 </div>
 </div>
 <div class="col-md-6 mb-3">
-<div class="card h-100 shadow-sm border-start border-secondary border-4" style="border-color:var(--pc-secondary)!important;">
+<div class="card h-100 shadow-sm border-start border-4" style="border-color:var(--pc-secondary)!important;">
 <div class="card-body">
 <h3 class="h5"><i class="bi bi-megaphone text-warning me-2" aria-hidden="true"></i> Settore Web, Social e Divulgazione</h3>
 <p>La comunicazione con la cittadinanza è un pilastro della moderna Protezione Civile. Questo gruppo gestisce il sito web istituzionale e i canali social, fornendo aggiornamenti in tempo reale durante le allerte meteo e le emergenze. Si occupa inoltre della divulgazione delle buone pratiche di autoprotezione.</p>
