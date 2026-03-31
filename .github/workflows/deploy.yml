@@ -2,8 +2,7 @@ name: "🚀 Build e Deploy"
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -16,42 +15,46 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: "📥 Checkout del repository"
+      - name: "📥 Checkout"
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: "🔧 Installa Hugo"
+      - name: "⚙️ Setup Hugo"
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
 
-      - name: "⚙️ Configura Pages"
-        id: pages
-        uses: actions/configure-pages@v5
+      - name: "🏗️ Build per Aruba"
+        run: hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
 
-      - name: "🏗️ Build del sito Hugo"
-        env:
-          TZ: 'Europe/Rome'
-          HUGO_ENVIRONMENT: production
-        run: hugo --gc --minify
+      - name: "📤 Deploy FTP su Aruba"
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./public/
+          server-dir: /www.protezionecivilegenzano.it/
+          dangerous-clean-slate: false
 
-      - name: "📦 Upload artifact"
+      - name: "🏗️ Build per GitHub Pages"
+        run: hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
+
+      - name: "📦 Upload artifact GitHub Pages"
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
-  deploy:
+  deploy-pages:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: build-and-deploy
     steps:
-      - name: "🌐 Deploy su GitHub Pages"
+      - name: "🌐 Deploy GitHub Pages"
         id: deployment
         uses: actions/deploy-pages@v4
