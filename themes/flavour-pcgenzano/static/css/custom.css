@@ -413,17 +413,7 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
   .servizio-icon { width: 56px; height: 56px; font-size: 1.4rem; }
 }
 
-/* ── FIX NAVBAR MOBILE ── */
-.navbar-collapsable .overlay { display: none !important; }
-.it-header-navbar-wrapper { min-height: auto !important; }
-@media (max-width: 991px) {
-  .it-header-navbar-wrapper .navbar-collapsable:not(.expanded) {
-    display: none !important;
-  }
-  .it-header-navbar-wrapper .navbar-collapsable.expanded {
-    display: block !important;
-  }
-}
+
 
 /* ── FIX NAVBAR MOBILE: icone visibili ── */
 .custom-navbar-toggler {
@@ -444,12 +434,7 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
   min-height: 0 !important;
   padding: 0.25rem 0;
 }
-@media (max-width: 991px) {
-  .it-header-navbar-wrapper .navbar-collapsable:not(.expanded) .menu-wrapper,
-  .it-header-navbar-wrapper .navbar-collapsable:not(.expanded) .close-div {
-    display: none !important;
-  }
-}
+
 .it-search-wrapper .search-link {
   background: rgba(0,51,102,0.08) !important;
 }
