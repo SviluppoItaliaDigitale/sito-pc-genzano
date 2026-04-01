@@ -256,4 +256,39 @@
   counters.forEach(function(c){obs.observe(c)});
 })();
 </script>
+
+<!-- Sync allerta in tempo reale -->
+<script>
+(function(){
+  var bar = document.querySelector('.allerta-bar');
+  if (!bar) return;
+  var url = 'https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/main/data/bollettino-latest-oggi-comuni.csv';
+  fetch(url).then(function(r){return r.text()}).then(function(csv){
+    var lines = csv.split('\n');
+    var genzano = '';
+    for (var i=0; i<lines.length; i++){
+      if (lines[i].toLowerCase().indexOf('genzano') > -1){
+        genzano = lines[i]; break;
+      }
+    }
+    if (!genzano) return;
+    var fields = genzano.split(',');
+    var levels = {verde:0,gialla:1,arancione:2,rossa:3};
+    var max = 'verde';
+    for (var j=0; j<fields.length; j++){
+      var f = fields[j].trim().replace(/"/g,'').toLowerCase();
+      if (levels[f] !== undefined && levels[f] > levels[max]) max = f;
+    }
+    var titles = {verde:'NESSUNA ALLERTA',gialla:'ALLERTA GIALLA',arancione:'ALLERTA ARANCIONE',rossa:'ALLERTA ROSSA'};
+    var descs = {verde:'Non sono previsti fenomeni significativi sul nostro territorio.',gialla:'Criticita ordinaria. Possibili fenomeni localizzati. Prestare attenzione.',arancione:'Criticita moderata. Fenomeni diffusi e pericolosi. Limitare gli spostamenti.',rossa:'Criticita elevata. Fenomeni molto intensi. Seguire le indicazioni delle autorita.'};
+    bar.className = 'allerta-bar allerta-bar-' + max;
+    var strong = bar.querySelector('strong');
+    if (strong) strong.textContent = titles[max];
+    var span = bar.querySelector('span.d-none');
+    if (span) span.textContent = '\u2014 ' + descs[max];
+    var icon = bar.querySelector('i');
+    if (icon) icon.className = max === 'verde' ? 'bi bi-shield-check me-2' : 'bi bi-exclamation-triangle-fill me-2';
+  }).catch(function(){});
+})();
+</script>
 {{ end }}
