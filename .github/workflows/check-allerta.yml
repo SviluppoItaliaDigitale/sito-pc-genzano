@@ -17,93 +17,173 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "🌦️ Controlla allerta per Genzano di Roma"
+      - name: "🌦️ Controlla allerta multi-fonte per Genzano"
         id: allerta
         run: |
           NOW=$(TZ="Europe/Rome" date "+%d/%m/%Y %H:%M")
-          LIVELLO="verde"
-          TITOLO="NESSUNA ALLERTA"
-          DESC="Non sono previsti fenomeni significativi sul nostro territorio."
-          FONTE="controllo automatico"
+          MAX_LIVELLO="verde"
+          FONTI_USATE=""
 
-          echo "📡 Fonte 1: CSV OpenDataSicilia (dati DPC per comune)..."
+          levels_num() {
+            case $1 in
+              verde) echo 0 ;; gialla) echo 1 ;; arancione) echo 2 ;; rossa) echo 3 ;; *) echo 0 ;;
+            esac
+          }
 
-          # Scarica CSV bollettino OGGI per comuni
+          update_max() {
+            local new_level="$1"
+            local fonte="$2"
+            local new_num=$(levels_num "$new_level")
+            local max_num=$(levels_num "$MAX_LIVELLO")
+            if [ "$new_num" -gt "$max_num" ]; then
+              MAX_LIVELLO="$new_level"
+              FONTI_USATE="$fonte"
+            fi
+          }
+
+          # ══════════════════════════════════════
+          # FONTE 1: CSV OpenDataSicilia (DPC per comune)
+          # Copre: rischio idrogeologico, idraulico, temporali
+          # ══════════════════════════════════════
+          echo "📡 FONTE 1: CSV DPC per Genzano (criticita idrogeologica)..."
           CSV_OGGI=$(curl -sL --max-time 20 "https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/main/data/bollettino-latest-oggi-comuni.csv" 2>/dev/null || echo "")
-          # Scarica CSV bollettino DOMANI per comuni
           CSV_DOMANI=$(curl -sL --max-time 20 "https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/main/data/bollettino-latest-domani-comuni.csv" 2>/dev/null || echo "")
-
-          # Cerca Genzano di Roma (codice ISTAT 058041) in entrambi
-          GENZANO_OGGI=$(echo "$CSV_OGGI" | grep -i "genzano di roma\|058041" || echo "")
-          GENZANO_DOMANI=$(echo "$CSV_DOMANI" | grep -i "genzano di roma\|058041" || echo "")
-
-          echo "   Oggi: $GENZANO_OGGI"
-          echo "   Domani: $GENZANO_DOMANI"
-
-          # Analizza i livelli con Python
-          RESULT=$(python3 << PYEOF
-          import sys
-          levels = {'verde':0, 'gialla':1, 'arancione':2, 'rossa':3}
-          max_level = 'verde'
-          fonte = ''
-
-          for label, line in [('oggi', """$GENZANO_OGGI"""), ('domani', """$GENZANO_DOMANI""")]:
-              if not line.strip():
-                  continue
-              fields = line.strip().split(',')
-              # I campi allerta sono gli ultimi 4: criticita, idrogeologico, temporali, idraulico
-              for f in fields:
-                  f_clean = f.strip().strip('"').lower()
-                  if f_clean in levels and levels[f_clean] > levels[max_level]:
-                      max_level = f_clean
-                      fonte = f'CSV DPC ({label})'
-
-          print(f'{max_level}|{fonte}')
-          PYEOF
-          )
-
-          CSV_LEVEL=$(echo "$RESULT" | cut -d'|' -f1)
-          CSV_FONTE=$(echo "$RESULT" | cut -d'|' -f2)
-
-          if [ -n "$CSV_LEVEL" ] && [ "$CSV_LEVEL" != "verde" ]; then
-            LIVELLO="$CSV_LEVEL"
-            FONTE="$CSV_FONTE"
-            echo "   ⚠️ CSV: allerta $LIVELLO ($CSV_FONTE)"
+          GENZANO_OGGI=$(echo "$CSV_OGGI" | grep -i "genzano" || echo "")
+          GENZANO_DOMANI=$(echo "$CSV_DOMANI" | grep -i "genzano" || echo "")
+          
+          if [ -n "$GENZANO_OGGI$GENZANO_DOMANI" ]; then
+            CSV_LVL=$(python3 -c "
+          lines = '''$GENZANO_OGGI
+          $GENZANO_DOMANI'''
+          levels = {'verde':0,'gialla':1,'arancione':2,'rossa':3}
+          mx = 'verde'
+          for line in lines.strip().split('\n'):
+              for f in line.split(','):
+                  f = f.strip().strip('\"').lower()
+                  if f in levels and levels[f] > levels[mx]: mx = f
+          print(mx)" 2>/dev/null || echo "verde")
+            echo "   CSV DPC: $CSV_LVL"
+            update_max "$CSV_LVL" "DPC Criticita Idrogeologica"
           else
-            echo "   ✅ CSV: nessuna allerta per Genzano"
+            echo "   CSV DPC: dati non disponibili"
           fi
 
-          # Se CSV non ha trovato nulla, prova API allertameteo.app come fallback
-          if [ "$LIVELLO" = "verde" ]; then
-            echo "📡 Fonte 2 (fallback): API allertameteo.app..."
-            API_RESP=$(curl -sL --max-time 15 "https://allertameteo.app/api/alert/genzano-di-roma" 2>/dev/null || echo "ERRORE")
-            if [ "$API_RESP" != "ERRORE" ] && echo "$API_RESP" | grep -q "{"; then
-              API_LEVEL=$(echo "$API_RESP" | python3 -c "
+          # ══════════════════════════════════════
+          # FONTE 2: API allertameteo.app
+          # Copre: rischio idrogeologico, idraulico, temporali
+          # ══════════════════════════════════════
+          echo "📡 FONTE 2: API allertameteo.app..."
+          API_RESP=$(curl -sL --max-time 15 "https://allertameteo.app/api/alert/genzano-di-roma" 2>/dev/null || echo "")
+          if echo "$API_RESP" | grep -q "{" 2>/dev/null; then
+            API_LVL=$(echo "$API_RESP" | python3 -c "
           import sys, json
           try:
               data = json.load(sys.stdin)
-              levels = {'verde':0, 'gialla':1, 'arancione':2, 'rossa':3}
-              max_l = 'verde'
+              levels = {'verde':0,'gialla':1,'arancione':2,'rossa':3}
+              mx = 'verde'
               def check(obj):
-                  global max_l
+                  global mx
                   if isinstance(obj, dict):
                       for v in obj.values(): check(v)
                   elif isinstance(obj, str):
                       l = obj.lower().strip()
-                      if l in levels and levels[l] > levels.get(max_l,0): max_l = l
+                      if l in levels and levels[l] > levels[mx]: mx = l
               check(data)
-              print(max_l)
-          except: print('verde')
-          " 2>/dev/null || echo "verde")
-              if [ "$API_LEVEL" != "verde" ]; then
-                LIVELLO="$API_LEVEL"
-                FONTE="allertameteo.app API"
-              fi
-            fi
+              print(mx)
+          except: print('verde')" 2>/dev/null || echo "verde")
+            echo "   API: $API_LVL"
+            update_max "$API_LVL" "allertameteo.app"
+          else
+            echo "   API: non disponibile"
           fi
 
-          # Imposta titolo e descrizione
-          case $LIVELLO in
+          # ══════════════════════════════════════
+          # FONTE 3: Regione Lazio (allertamenti)
+          # Copre: TUTTI i rischi incluso VENTO e NEVE
+          # ══════════════════════════════════════
+          echo "📡 FONTE 3: Regione Lazio allertamenti..."
+          LAZIO=$(curl -sL --max-time 15 "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" 2>/dev/null || echo "")
+          if [ -n "$LAZIO" ]; then
+            # Cerca allerte per Zone F (Bacini Costieri Sud) e D (Bacini di Roma)
+            if echo "$LAZIO" | grep -qi "rossa"; then
+              if echo "$LAZIO" | grep -qi "zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\|tutte le zone\|intero territorio"; then
+                update_max "rossa" "Regione Lazio"
+                echo "   Lazio: ROSSA"
+              fi
+            fi
+            if echo "$LAZIO" | grep -qi "arancione"; then
+              if echo "$LAZIO" | grep -qi "zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\|tutte le zone\|intero territorio"; then
+                update_max "arancione" "Regione Lazio"
+                echo "   Lazio: ARANCIONE"
+              fi
+            fi
+            if echo "$LAZIO" | grep -qi "gialla"; then
+              if echo "$LAZIO" | grep -qi "zona.*[DF]\|bacini.*costieri.*sud\|bacini.*roma\|tutte le zone\|intero territorio\|lazio"; then
+                update_max "gialla" "Regione Lazio"
+                echo "   Lazio: GIALLA"
+              fi
+            fi
+            if [ "$MAX_LIVELLO" = "verde" ]; then
+              echo "   Lazio: nessuna allerta rilevata"
+            fi
+          else
+            echo "   Lazio: pagina non raggiungibile"
+          fi
+
+          # ══════════════════════════════════════
+          # FONTE 4: DPC Bollettino Vigilanza Meteorologica
+          # Copre: vento forte, neve, mareggiate (NON nel CSV!)
+          # ══════════════════════════════════════
+          echo "📡 FONTE 4: DPC Vigilanza Meteorologica..."
+          VIGILANZA=$(curl -sL --max-time 15 "https://mappe.protezionecivile.gov.it/it/mappe-rischi/bollettino-di-vigilanza/" 2>/dev/null || echo "")
+          if [ -n "$VIGILANZA" ]; then
+            # Cerca menzione Lazio con fenomeni significativi
+            LAZIO_VIG=$(echo "$VIGILANZA" | grep -i -A2 "lazio" || echo "")
+            if echo "$LAZIO_VIG" | grep -qi "arancione\|elevata\|forte\|intensa\|abbondant"; then
+              update_max "arancione" "DPC Vigilanza Meteo (vento/neve)"
+              echo "   Vigilanza: fenomeni intensi per Lazio"
+            elif echo "$LAZIO_VIG" | grep -qi "gialla\|ordinaria\|moderata\|locali"; then
+              update_max "gialla" "DPC Vigilanza Meteo"
+              echo "   Vigilanza: fenomeni moderati per Lazio"
+            else
+              echo "   Vigilanza: nessun fenomeno significativo per Lazio"
+            fi
+          else
+            echo "   Vigilanza: pagina non raggiungibile"
+          fi
+
+          # ══════════════════════════════════════
+          # FONTE 5: Pagina bollettino criticità DPC (solo Lazio)
+          # ══════════════════════════════════════
+          echo "📡 FONTE 5: DPC Bollettino Criticita (testo)..."
+          DPC_CRIT=$(curl -sL --max-time 15 "https://mappe.protezionecivile.gov.it/it/mappe-rischi/bollettino-di-criticita/" 2>/dev/null || echo "")
+          if [ -n "$DPC_CRIT" ]; then
+            # Estrai SOLO la sezione Lazio
+            LAZIO_CRIT=$(echo "$DPC_CRIT" | grep -i "lazio" || echo "")
+            if [ -n "$LAZIO_CRIT" ]; then
+              if echo "$LAZIO_CRIT" | grep -qi "rossa"; then
+                update_max "rossa" "DPC Criticita Nazionale (Lazio)"
+                echo "   DPC Criticita: ROSSA per Lazio"
+              elif echo "$LAZIO_CRIT" | grep -qi "arancione"; then
+                update_max "arancione" "DPC Criticita Nazionale (Lazio)"
+                echo "   DPC Criticita: ARANCIONE per Lazio"
+              elif echo "$LAZIO_CRIT" | grep -qi "gialla"; then
+                update_max "gialla" "DPC Criticita Nazionale (Lazio)"
+                echo "   DPC Criticita: GIALLA per Lazio"
+              else
+                echo "   DPC Criticita: Lazio menzionato senza allerta"
+              fi
+            else
+              echo "   DPC Criticita: Lazio non menzionato (= verde)"
+            fi
+          else
+            echo "   DPC Criticita: pagina non raggiungibile"
+          fi
+
+          # ══════════════════════════════════════
+          # RISULTATO FINALE (livello piu alto tra tutte le fonti)
+          # ══════════════════════════════════════
+          case $MAX_LIVELLO in
             verde) TITOLO="NESSUNA ALLERTA"; DESC="Non sono previsti fenomeni significativi sul nostro territorio." ;;
             gialla) TITOLO="ALLERTA GIALLA"; DESC="Criticita ordinaria. Possibili fenomeni localizzati. Prestare attenzione." ;;
             arancione) TITOLO="ALLERTA ARANCIONE"; DESC="Criticita moderata. Fenomeni diffusi e pericolosi. Limitare gli spostamenti." ;;
@@ -111,12 +191,16 @@ jobs:
           esac
 
           echo ""
-          echo "📊 RISULTATO: $TITOLO (fonte: ${FONTE:-nessuna allerta})"
-          echo "livello=$LIVELLO" >> $GITHUB_OUTPUT
+          echo "═══════════════════════════════════"
+          echo "📊 RISULTATO FINALE: $TITOLO"
+          echo "   Fonte decisiva: ${FONTI_USATE:-nessuna allerta da tutte le fonti}"
+          echo "═══════════════════════════════════"
+
+          echo "livello=$MAX_LIVELLO" >> $GITHUB_OUTPUT
           echo "titolo=$TITOLO" >> $GITHUB_OUTPUT
           echo "desc=$DESC" >> $GITHUB_OUTPUT
           echo "now=$NOW" >> $GITHUB_OUTPUT
-          echo "fonte=${FONTE:-controllo automatico}" >> $GITHUB_OUTPUT
+          echo "fonte=${FONTI_USATE:-controllo automatico (5 fonti)}" >> $GITHUB_OUTPUT
 
       - name: "📝 Aggiorna file dati allerta"
         run: |
@@ -146,10 +230,11 @@ jobs:
       - name: "📊 Riepilogo"
         if: always()
         run: |
-          echo "## 🌦️ Controllo Allerta Meteo" >> $GITHUB_STEP_SUMMARY
+          echo "## 🌦️ Controllo Allerta Meteo — 5 Fonti" >> $GITHUB_STEP_SUMMARY
           echo "| Info | Valore |" >> $GITHUB_STEP_SUMMARY
           echo "|---|---|" >> $GITHUB_STEP_SUMMARY
           echo "| Livello | **${{ steps.allerta.outputs.titolo }}** |" >> $GITHUB_STEP_SUMMARY
-          echo "| Fonte | ${{ steps.allerta.outputs.fonte }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Zona | Genzano di Roma (ISTAT 058041) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Fonte decisiva | ${{ steps.allerta.outputs.fonte }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Zona | Genzano di Roma (Bacini Costieri Sud) |" >> $GITHUB_STEP_SUMMARY
           echo "| Controllo | ${{ steps.allerta.outputs.now }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Fonti consultate | CSV DPC, allertameteo.app, Regione Lazio, DPC Vigilanza, DPC Criticità |" >> $GITHUB_STEP_SUMMARY
