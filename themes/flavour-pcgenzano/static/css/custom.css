@@ -396,9 +396,6 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
 /* ── PRINT ── */
 @media print {
   .navbar, footer, .cookiebar, .skip-to-content, .it-header-slim-wrapper,
-  .it-header-navbar-wrapper, .back-to-top, .emergency-banner, .allerta-bar, .stats-hero, .page-hero {
-    display: none !important;
-  }
   .hero-section { background: #fff !important; color: #000 !important; padding: 1rem 0; }
 }
 
@@ -413,32 +410,3 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
   .servizio-icon { width: 56px; height: 56px; font-size: 1.4rem; }
 }
 
-
-
-/* ── FIX NAVBAR MOBILE: icone visibili ── */
-.custom-navbar-toggler {
-  background: none;
-  border: 2px solid var(--pc-primary) !important;
-  padding: 0.5rem;
-  border-radius: var(--pc-radius-sm);
-  cursor: pointer;
-}
-.custom-navbar-toggler .icon {
-  fill: var(--pc-primary) !important;
-  color: var(--pc-primary) !important;
-  width: 24px;
-  height: 24px;
-}
-.it-header-navbar-wrapper {
-  background: #fff !important;
-  min-height: 0 !important;
-  padding: 0.25rem 0;
-}
-
-.it-search-wrapper .search-link {
-  background: rgba(0,51,102,0.08) !important;
-}
-.it-search-wrapper .search-link .icon {
-  fill: var(--pc-primary) !important;
-  color: var(--pc-primary) !important;
-}
