@@ -410,3 +410,8 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
   .servizio-icon { width: 56px; height: 56px; font-size: 1.4rem; }
 }
 
+
+/* ── HAMBURGER MOBILE: icona visibile ── */
+.custom-navbar-toggler .icon {
+  fill: var(--pc-primary);
+}
