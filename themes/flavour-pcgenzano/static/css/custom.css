@@ -416,12 +416,12 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
   fill: var(--pc-primary);
 }
 
-/* ── CARD PREVISIONI METEO ── */
-#forecast-container .card {
+/* ── CARD PREVISIONI METEO (solo le 3 giornaliere, non la card blu) ── */
+#forecast-container .row .card {
   border: 1px solid rgba(0,51,102,0.1) !important;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
   background: #f8fafc !important;
 }
-#forecast-container .card:hover {
+#forecast-container .row .card:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
 }
