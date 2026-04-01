@@ -1,1 +1,1 @@
-[{{ range $index, $page := .Site.RegularPages }}{{ if $index }},{{ end }}{"title":{{ .Title | jsonify }},"url":{{ .Permalink | jsonify }},"content":{{ .Plain | truncate 200 | jsonify }},"section":{{ .Section | jsonify }}}{{ end }}]
+[{{ $first := true }}{{ range .Site.Pages }}{{ if not .IsHome }}{{ if $first }}{{ $first = false }}{{ else }},{{ end }}{"title":{{ .Title | jsonify }},"url":{{ .Permalink | jsonify }},"content":{{ .Plain | truncate 300 | jsonify }},"section":{{ .Section | jsonify }}}{{ end }}{{ end }}]

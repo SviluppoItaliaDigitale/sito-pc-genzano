@@ -412,3 +412,15 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
   .page-hero h1 { font-size: 1.4rem; }
   .servizio-icon { width: 56px; height: 56px; font-size: 1.4rem; }
 }
+
+/* ── FIX NAVBAR MOBILE ── */
+.navbar-collapsable .overlay { display: none !important; }
+.it-header-navbar-wrapper { min-height: auto !important; }
+@media (max-width: 991px) {
+  .it-header-navbar-wrapper .navbar-collapsable:not(.expanded) {
+    display: none !important;
+  }
+  .it-header-navbar-wrapper .navbar-collapsable.expanded {
+    display: block !important;
+  }
+}
