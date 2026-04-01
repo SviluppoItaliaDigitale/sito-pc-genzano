@@ -1,8 +1,8 @@
 {
-  "livello": "rossa",
-  "titolo": "ALLERTA ROSSA",
-  "descrizione": "Criticita elevata. Fenomeni molto intensi. Seguire le indicazioni delle autorita.",
+  "livello": "verde",
+  "titolo": "NESSUNA ALLERTA",
+  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
   "zona": "F - Bacini Costieri Sud / D - Bacini di Roma",
-  "aggiornamento": "Fonte: DPC Criticita Nazionale (Lazio)",
-  "ultimo_check": "01/04/2026 21:07"
+  "aggiornamento": "Fonte: allertameteo.app API",
+  "ultimo_check": "01/04/2026 23:46"
 }
