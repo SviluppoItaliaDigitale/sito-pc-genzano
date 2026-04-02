@@ -1,0 +1,45 @@
+# Redirect vecchio sito → nuovo sito
+RewriteEngine On
+
+# Pagine vecchie → nuove
+Redirect 301 /chisiamo.html /chi-siamo/
+Redirect 301 /contatti.html /contatti/
+Redirect 301 /comunicazioni.html /comunicazioni/
+Redirect 301 /allertameteo.html /allerte-meteo/
+Redirect 301 /emergenza.html /piano-emergenza/
+Redirect 301 /pianodiemergenza.html /piano-emergenza/
+Redirect 301 /pianofamiliare.html /piano-familiare/
+Redirect 301 /diventavolontario.html /diventa-volontario/
+Redirect 301 /areadownload.html /area-download/
+Redirect 301 /mappe.html /cartografia/
+Redirect 301 /notelegali.html /note-legali/
+Redirect 301 /privacy.html /privacy/
+Redirect 301 /cerca.html /cerca/
+Redirect 301 /sitiutili.html /siti-utili/
+Redirect 301 /dichiarazione-accessibilita.html /accessibilita/
+Redirect 301 /areerischio.html /rischi-prevenzione/
+Redirect 301 /rischio-sismico.html /rischi-prevenzione/rischio-sismico/
+Redirect 301 /rischio-idrogeologico.html /rischi-prevenzione/rischio-idrogeologico/
+Redirect 301 /rischio-incendio.html /rischi-prevenzione/rischio-incendio/
+Redirect 301 /cosafacciamo.html /chi-siamo/
+Redirect 301 /simulatore.html /
+
+# Cartelle vecchie → home
+Redirect 301 /assets/ /
+Redirect 301 /cache/ /
+Redirect 301 /cartelli/ /
+Redirect 301 /documenti/ /area-download/
+Redirect 301 /formazionepc/ /
+Redirect 301 /giochi-bambini/ /
+Redirect 301 /immagini_web/ /
+Redirect 301 /piano_protezione_civile/ /piano-emergenza/
+Redirect 301 /quizpc/ /
+Redirect 301 /sito_pc/ /
+Redirect 301 /sitovecchio/ /
+
+# Forza HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Errore 404 personalizzato
+ErrorDocument 404 /404.html

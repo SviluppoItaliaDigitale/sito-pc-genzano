@@ -3,7 +3,9 @@
 <!-- BANNER EMERGENZA (se attiva) -->
 {{ $emergenza := .Site.Data.emergenza }}
 {{ if and $emergenza $emergenza.attiva }}
-<div class="emergenza-banner emergenza-{{ $emergenza.tipo }}" role="alert" aria-label="Comunicazione di emergenza">
+{{ $colori := dict "blu" "#0066CC" "azzurro" "#0073E6" "verde" "#008758" "giallo" "#A66300" "arancione" "#CC5C00" "rosso" "#CC334D" "viola" "#7B2D8E" }}
+{{ $bg := index $colori $emergenza.tipo | default "#0066CC" }}
+<div class="emergenza-banner" style="background:{{ $bg }};color:#fff;padding:0.75rem 0;font-weight:500;" role="alert" aria-label="Comunicazione di emergenza">
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-between">
       <div>

@@ -1,0 +1,53 @@
+{{ define "main" }}
+<div class="page-hero">
+  <div class="container">
+    <h1>Pagina non trovata</h1>
+  </div>
+</div>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto text-center">
+      <p class="display-1 fw-bold text-primary" style="opacity:0.3;">404</p>
+      <h2 class="h4 mb-3">La pagina che cerchi non esiste piu</h2>
+      <p class="text-muted mb-4">Il nostro sito web e stato completamente rinnovato. La pagina che stavi cercando potrebbe essere stata spostata o rinominata.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <a href="/" class="btn btn-primary">Vai alla Home</a>
+        <a href="/chi-siamo/" class="btn btn-outline-primary">Chi Siamo</a>
+        <a href="/comunicazioni/" class="btn btn-outline-primary">Comunicazioni</a>
+        <a href="/contatti/" class="btn btn-outline-primary">Contatti</a>
+        <a href="/cerca/" class="btn btn-outline-primary">Cerca nel sito</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Redirect automatici dal vecchio sito al nuovo
+var redirects = {
+  'chisiamo.html': '/chi-siamo/',
+  'contatti.html': '/contatti/',
+  'comunicazioni.html': '/comunicazioni/',
+  'allertameteo.html': '/allerte-meteo/',
+  'emergenza.html': '/piano-emergenza/',
+  'pianodiemergenza.html': '/piano-emergenza/',
+  'pianofamiliare.html': '/piano-familiare/',
+  'diventavolontario.html': '/diventa-volontario/',
+  'areadownload.html': '/area-download/',
+  'mappe.html': '/cartografia/',
+  'notelegali.html': '/note-legali/',
+  'privacy.html': '/privacy/',
+  'cerca.html': '/cerca/',
+  'sitiutili.html': '/siti-utili/',
+  'dichiarazione-accessibilita.html': '/accessibilita/',
+  'areerischio.html': '/rischi-prevenzione/',
+  'rischio-sismico.html': '/rischi-prevenzione/rischio-sismico/',
+  'rischio-idrogeologico.html': '/rischi-prevenzione/rischio-idrogeologico/',
+  'rischio-incendio.html': '/rischi-prevenzione/rischio-incendio/',
+  'index.html': '/'
+};
+var path = window.location.pathname.split('/').pop();
+if (redirects[path]) {
+  window.location.replace(redirects[path]);
+}
+</script>
+{{ end }}
