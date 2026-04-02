@@ -1,8 +1,8 @@
 {
-  "attiva": true,
+  "attiva": false,
   "tipo": "blu",
-  "titolo": "Test di testo per emergenze",
-  "descrizione": "attenzione, è un testo di prova per la barra del sito web.",
+  "titolo": "",
+  "descrizione": "",
   "link": "",
-  "ultimo_aggiornamento": "2026-04-02T05:14:13+02:00"
+  "ultimo_aggiornamento": ""
 }
