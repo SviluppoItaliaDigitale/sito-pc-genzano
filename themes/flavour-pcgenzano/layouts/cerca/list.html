@@ -15,9 +15,9 @@
     <div class="col-lg-8 mx-auto">
       <div id="search-container">
         <label for="search-input" class="form-label fw-bold">Cosa stai cercando?</label>
-        <input type="search" id="search-input" class="form-control form-control-lg" placeholder="Digita qui per cercare...">
-        <small class="form-text">Inserisci almeno 3 caratteri per avviare la ricerca.</small>
-        <div id="search-results" class="mt-4" role="region" aria-live="polite"></div>
+        <input type="search" id="search-input" class="form-control form-control-lg" placeholder="Digita almeno 3 caratteri..." autofocus>
+        <div id="search-count" class="mt-2 small text-muted"></div>
+        <div id="search-results" class="mt-3" role="region" aria-live="polite"></div>
       </div>
     </div>
   </div>
@@ -26,24 +26,94 @@
 
 {{ define "scripts" }}
 <script>
-var idx=null;
-var el=document.getElementById('search-input');
-var box=document.getElementById('search-results');
-var jsonURL='{{ "index.json" | absURL }}';
-var xhr=new XMLHttpRequest();
-xhr.open('GET',jsonURL);
-xhr.onload=function(){if(xhr.status===200){idx=JSON.parse(xhr.responseText)}};
-xhr.send();
-el.addEventListener('input',function(){
-  var q=this.value.toLowerCase().trim();
-  if(q.length<3){box.innerHTML='';return}
-  if(!idx){box.innerHTML='<p>Caricamento...</p>';return}
-  var res=[];
-  for(var i=0;i<idx.length;i++){var p=idx[i];if((p.title&&p.title.toLowerCase().indexOf(q)>-1)||(p.content&&p.content.toLowerCase().indexOf(q)>-1)){res.push(p)}}
-  if(res.length===0){box.innerHTML='<p class="text-muted">Nessun risultato per "'+q+'".</p>';return}
-  var h='<p class="fw-bold">'+res.length+' risultat'+(res.length===1?'o':'i')+':</p>';
-  for(var j=0;j<res.length;j++){h+='<div class="search-result-item"><h3 class="h5"><a href="'+res[j].url+'">'+res[j].title+'</a></h3><p class="small text-muted">'+(res[j].content||'')+'</p></div>'}
-  box.innerHTML=h;
-});
+(function(){
+  var idx=null;
+  var el=document.getElementById('search-input');
+  var box=document.getElementById('search-results');
+  var cnt=document.getElementById('search-count');
+  var jsonURL='{{ "index.json" | absURL }}';
+
+  fetch(jsonURL).then(function(r){return r.json()}).then(function(d){
+    idx=d;
+    cnt.textContent=idx.length+' pagine indicizzate';
+  }).catch(function(){cnt.textContent='Errore caricamento indice';});
+
+  el.addEventListener('input',function(){
+    var q=this.value.toLowerCase().trim();
+    if(q.length<3){box.innerHTML='';cnt.textContent=idx?idx.length+' pagine indicizzate':'';return}
+    if(!idx){box.innerHTML='<p>Caricamento...</p>';return}
+
+    var res=[];
+    for(var i=0;i<idx.length;i++){
+      var p=idx[i];
+      var score=0;
+      var titleLow=(p.title||'').toLowerCase();
+      var contentLow=(p.content||'').toLowerCase();
+      var descLow=(p.description||'').toLowerCase();
+
+      // Cerca in tutte le parole della query
+      var words=q.split(/\s+/);
+      var allFound=true;
+      for(var w=0;w<words.length;w++){
+        if(words[w].length<2)continue;
+        var inTitle=titleLow.indexOf(words[w])>-1;
+        var inContent=contentLow.indexOf(words[w])>-1;
+        var inDesc=descLow.indexOf(words[w])>-1;
+        if(!inTitle && !inContent && !inDesc){allFound=false;break}
+        if(inTitle)score+=10;
+        if(inDesc)score+=5;
+        if(inContent)score+=1;
+      }
+      if(allFound && score>0){
+        // Estrai snippet con evidenziazione
+        var snippet='';
+        var pos=contentLow.indexOf(words[0]);
+        if(pos>-1){
+          var start=Math.max(0,pos-80);
+          var end=Math.min(contentLow.length,pos+200);
+          snippet=(start>0?'...':'')+p.content.substring(start,end)+(end<contentLow.length?'...':'');
+        } else if(p.description){
+          snippet=p.description;
+        } else {
+          snippet=p.content.substring(0,200)+'...';
+        }
+        res.push({page:p,score:score,snippet:snippet});
+      }
+    }
+
+    // Ordina per punteggio
+    res.sort(function(a,b){return b.score-a.score});
+
+    if(res.length===0){
+      box.innerHTML='<p class="text-muted py-3">Nessun risultato per "<strong>'+q+'</strong>".</p>';
+      cnt.textContent='0 risultati';
+      return;
+    }
+
+    cnt.textContent=res.length+' risultat'+(res.length===1?'o':'i')+' per "'+q+'"';
+
+    var h='';
+    for(var j=0;j<Math.min(res.length,30);j++){
+      var r=res[j];
+      var sec=r.page.section||'';
+      var badge=r.page.badge?'<span class="notizia-categoria '+r.page.badge.toLowerCase()+'" style="font-size:0.6rem;margin-right:0.5rem;">'+r.page.badge+'</span>':'';
+      // Evidenzia parole cercate nello snippet
+      var snip=r.snippet;
+      for(var w2=0;w2<words.length;w2++){
+        if(words[w2].length<2)continue;
+        var re=new RegExp('('+words[w2].replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+        snip=snip.replace(re,'<mark>$1</mark>');
+      }
+      h+='<div class="search-result-item py-3" style="border-bottom:1px solid #eee;">';
+      h+='<div>'+badge;
+      if(sec)h+='<span class="text-muted small text-uppercase">'+sec+'</span>';
+      h+='</div>';
+      h+='<h3 class="h5 mb-1"><a href="'+r.page.url+'" style="color:var(--pc-primary);text-decoration:none;">'+r.page.title+'</a></h3>';
+      h+='<p class="small text-muted mb-0" style="line-height:1.5;">'+snip+'</p>';
+      h+='</div>';
+    }
+    box.innerHTML=h;
+  });
+})();
 </script>
 {{ end }}
