@@ -2,7 +2,5 @@
   "livello": "verde",
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
-  "zona": "F - Bacini Costieri Sud / D - Bacini di Roma",
-  "aggiornamento": "Fonte: allertameteo.app API",
-  "ultimo_check": "02/04/2026 04:38"
+  "ultimo_aggiornamento": "2026-04-02T00:00:00"
 }

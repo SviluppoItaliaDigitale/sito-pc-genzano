@@ -1,5 +1,26 @@
 {{ define "main" }}
 
+<!-- BANNER EMERGENZA (se attiva) -->
+{{ $emergenza := .Site.Data.emergenza }}
+{{ if and $emergenza $emergenza.attiva }}
+<div class="emergenza-banner emergenza-{{ $emergenza.tipo }}" role="alert" aria-label="Comunicazione di emergenza">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-between">
+      <div>
+        <i class="bi bi-megaphone-fill me-2" aria-hidden="true"></i>
+        <strong>{{ $emergenza.titolo }}</strong>
+        <span class="d-none d-md-inline ms-2">— {{ $emergenza.descrizione }}</span>
+      </div>
+      {{ with $emergenza.link }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-light ms-2 mt-1 mt-md-0 fw-bold">
+        Maggiori informazioni <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
+
 <!-- BANNER EMERGENZA -->
 <div class="emergency-banner" role="complementary" aria-label="Numeri di emergenza">
   <div class="container text-center">
@@ -10,19 +31,23 @@
   </div>
 </div>
 
-<!-- BARRA ALLERTA -->
-<div id="allerta-bar" class="allerta-bar allerta-bar-verde" role="alert" aria-label="Stato allerta meteo">
+<!-- BARRA ALLERTA METEO (statica da data/allerta.json, auto-verde dopo 24h via JS) -->
+{{ $allerta := .Site.Data.allerta }}
+{{ if $allerta }}
+<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $allerta.livello }}" role="alert" aria-label="Stato allerta meteo" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}">
   <div class="container d-flex flex-wrap justify-content-between align-items-center">
     <div>
-      <i id="allerta-icon" class="bi bi-shield-check me-2" aria-hidden="true"></i>
-      <strong id="allerta-titolo">Caricamento allerta...</strong>
-      <span id="allerta-desc" class="d-none d-md-inline ms-2"></span>
+      {{ if eq $allerta.livello "verde" }}<i id="allerta-icon" class="bi bi-shield-check me-2" aria-hidden="true"></i>
+      {{ else }}<i id="allerta-icon" class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i>{{ end }}
+      <strong id="allerta-titolo">{{ $allerta.titolo }}</strong>
+      <span id="allerta-desc" class="d-none d-md-inline ms-2">— {{ $allerta.descrizione }}</span>
     </div>
-    <a href="https://allertameteo.app/lazio/roma/genzano-di-roma" target="_blank" rel="noopener noreferrer" class="btn btn-sm allerta-bar-btn ms-2 mt-1 mt-md-0">
-      Dettaglio Allerta <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
+    <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm allerta-bar-btn ms-2 mt-1 mt-md-0">
+      Bollettino Ufficiale <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
     </a>
   </div>
 </div>
+{{ end }}
 
 <!-- HERO -->
 <section class="hero-section" aria-label="Benvenuto">
@@ -218,30 +243,11 @@
   </div>
 </section>
 
-<!-- PREVISIONI GIORNALIERE -->
-<section class="py-4 bg-white fade-in-up" aria-labelledby="previsioni-heading">
-  <div class="container">
-    <h2 id="previsioni-heading" class="section-title">Previsioni Meteo — Genzano di Roma</h2>
-    <div id="forecast-container">
-      <p class="text-muted"><i class="bi bi-hourglass-split me-1"></i> Caricamento previsioni...</p>
-    </div>
-  </div>
-</section>
-
-<!-- METEO -->
-<section class="servizi-section py-4 fade-in-up" aria-labelledby="meteo-heading">
-  <div class="container">
-    <h2 id="meteo-heading" class="h5 fw-bold mb-3"><i class="bi bi-cloud-sun me-2" aria-hidden="true"></i>Meteo in Tempo Reale</h2>
-    <div class="ratio ratio-21x9">
-      <iframe src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=%C2%B0C&metricWind=km/h&zoom=10&overlay=rain&product=ecmwf&level=surface&lat=41.71&lon=12.69" title="Mappa meteo interattiva per Genzano di Roma" loading="lazy" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-
 {{ end }}
 
 {{ define "scripts" }}
 <script>
+// Contatori animati
 (function(){
   var counters=document.querySelectorAll('[data-count]');
   if(!counters.length)return;
@@ -261,61 +267,25 @@
   },{threshold:0.5});
   counters.forEach(function(c){obs.observe(c)});
 })();
-</script>
 
-<!-- Previsioni meteo giornaliere da Open-Meteo -->
-<script>
+// Auto-verde dopo 24h
 (function(){
-  var box = document.getElementById('forecast-container');
-  if (!box) return;
-  var lat = 41.71, lon = 12.69;
-  var url = 'https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max,wind_gusts_10m_max,weathercode&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Europe/Rome&forecast_days=3';
-  fetch(url).then(function(r){return r.json()}).then(function(data){
-    var wmo = {0:'Sereno',1:'Prevalentemente sereno',2:'Parzialmente nuvoloso',3:'Coperto',45:'Nebbia',48:'Nebbia con brina',51:'Pioviggine leggera',53:'Pioviggine',55:'Pioviggine intensa',61:'Pioggia leggera',63:'Pioggia moderata',65:'Pioggia intensa',66:'Pioggia gelata leggera',67:'Pioggia gelata intensa',71:'Neve leggera',73:'Neve moderata',75:'Neve intensa',80:'Rovesci leggeri',81:'Rovesci moderati',82:'Rovesci violenti',85:'Neve a tratti',86:'Neve intensa a tratti',95:'Temporale',96:'Temporale con grandine leggera',99:'Temporale con grandine'};
-    var icons = {0:'bi-sun',1:'bi-cloud-sun',2:'bi-cloud-sun',3:'bi-clouds',45:'bi-cloud-fog',48:'bi-cloud-fog',51:'bi-cloud-drizzle',53:'bi-cloud-drizzle',55:'bi-cloud-drizzle',61:'bi-cloud-rain',63:'bi-cloud-rain',65:'bi-cloud-rain-heavy',66:'bi-cloud-sleet',67:'bi-cloud-sleet',71:'bi-snow',73:'bi-snow',75:'bi-snow',80:'bi-cloud-rain',81:'bi-cloud-rain',82:'bi-cloud-rain-heavy',85:'bi-snow',86:'bi-snow',95:'bi-cloud-lightning-rain',96:'bi-cloud-hail',99:'bi-cloud-hail'};
-    var giorni = ['Domenica','Lunedi','Martedi','Mercoledi','Giovedi','Venerdi','Sabato'];
-    var mesi = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
-    // Situazione attuale
-    var c = data.current;
-    var cw = wmo[c.weather_code] || 'N/D';
-    var ci = icons[c.weather_code] || 'bi-thermometer-half';
-    var h = '<div class="card shadow-sm mb-3 border-0" style="background:linear-gradient(135deg,var(--pc-primary),var(--pc-primary-light));color:#fff;"><div class="card-body p-4">';
-    h += '<div class="row align-items-center"><div class="col-md-6">';
-    h += '<h3 class="h5 mb-1"><i class="bi '+ci+' me-2"></i>Adesso a Genzano di Roma</h3>';
-    h += '<p class="display-4 fw-bold mb-0">'+Math.round(c.temperature_2m)+'°C</p>';
-    h += '<p class="mb-0" style="opacity:0.85;">'+cw+' — Umidita: '+c.relative_humidity_2m+'% — Vento: '+Math.round(c.wind_speed_10m)+' km/h</p>';
-    h += '</div></div></div></div>';
-    // Prossimi 3 giorni
-    h += '<div class="row">';
-    for (var i=0; i<3; i++){
-      var d = new Date(data.daily.time[i]);
-      var giorno = (i===0) ? 'Oggi' : (i===1) ? 'Domani' : giorni[d.getDay()];
-      var dataStr = d.getDate()+' '+mesi[d.getMonth()];
-      var code = data.daily.weathercode[i];
-      var desc = wmo[code] || 'N/D';
-      var ic = icons[code] || 'bi-thermometer-half';
-      var tmax = Math.round(data.daily.temperature_2m_max[i]);
-      var tmin = Math.round(data.daily.temperature_2m_min[i]);
-      var pioggia = data.daily.precipitation_sum[i];
-      var prob = data.daily.precipitation_probability_max[i];
-      var vento = Math.round(data.daily.wind_speed_10m_max[i]);
-      var raffica = Math.round(data.daily.wind_gusts_10m_max[i]);
-      h += '<div class="col-md-4 mb-3"><div class="card shadow-sm h-100"><div class="card-body text-center p-3">';
-      h += '<p class="fw-bold mb-0">'+giorno+'</p><p class="small text-muted mb-2">'+dataStr+'</p>';
-      h += '<i class="bi '+ic+'" style="font-size:2.5rem;color:var(--pc-primary);"></i>';
-      h += '<p class="fw-bold mt-2 mb-0" style="font-size:1.1rem;">'+tmin+'° / '+tmax+'°C</p>';
-      h += '<p class="small mb-1">'+desc+'</p>';
-      if(pioggia > 0) h += '<p class="small mb-0"><i class="bi bi-droplet text-primary"></i> '+pioggia.toFixed(1)+' mm ('+prob+'%)</p>';
-      if(vento > 30) h += '<p class="small mb-0 text-danger"><i class="bi bi-wind"></i> Vento: '+vento+' km/h (raffiche '+raffica+')</p>';
-      else h += '<p class="small mb-0"><i class="bi bi-wind"></i> Vento: '+vento+' km/h</p>';
-      h += '</div></div></div>';
-    }
-    h += '</div>';
-    h += '<p class="small text-muted mt-2">Fonte: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> — Aggiornamento automatico ad ogni visita</p>';
-    box.innerHTML = h;
-  }).catch(function(){ box.innerHTML = '<p class="text-muted">Previsioni non disponibili al momento.</p>'; });
+  var bar=document.getElementById('allerta-bar');
+  if(!bar)return;
+  var agg=bar.getAttribute('data-aggiornamento');
+  if(!agg)return;
+  var ts=new Date(agg).getTime();
+  var now=Date.now();
+  var h24=24*60*60*1000;
+  if((now-ts)>h24 && !bar.classList.contains('allerta-bar-verde')){
+    bar.className='allerta-bar allerta-bar-verde';
+    var t=document.getElementById('allerta-titolo');
+    var d=document.getElementById('allerta-desc');
+    var i=document.getElementById('allerta-icon');
+    if(t)t.textContent='NESSUNA ALLERTA';
+    if(d)d.textContent='\u2014 Non sono previsti fenomeni significativi sul nostro territorio.';
+    if(i)i.className='bi bi-shield-check me-2';
+  }
 })();
 </script>
-
-
 {{ end }}
