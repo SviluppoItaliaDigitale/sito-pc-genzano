@@ -426,14 +426,19 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
   box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
 }
 
-/* ── BANNER EMERGENZA ── */
+
+/* ── BANNER EMERGENZA (7 colori Designers Italia) ── */
 .emergenza-banner {
-  padding: 0.7rem 0;
+  padding: 0.75rem 0;
   font-size: 0.9rem;
   font-weight: 500;
   animation: pulse-allerta 2.5s ease-in-out infinite;
 }
-.emergenza-info { background: #0d6efd; color: #fff; }
-.emergenza-warning { background: #fd7e14; color: #fff; }
-.emergenza-danger { background: #dc3545; color: #fff; }
-.emergenza-banner a.btn { font-size: 0.78rem; }
+.emergenza-banner a.btn { font-size: 0.78rem; border-radius: 20px; }
+.emergenza-blu { background: #0066CC; color: #fff; }
+.emergenza-azzurro { background: #0073E6; color: #fff; }
+.emergenza-verde { background: #008758; color: #fff; }
+.emergenza-giallo { background: #A66300; color: #fff; }
+.emergenza-arancione { background: #CC5C00; color: #fff; }
+.emergenza-rosso { background: #CC334D; color: #fff; }
+.emergenza-viola { background: #7B2D8E; color: #fff; }
