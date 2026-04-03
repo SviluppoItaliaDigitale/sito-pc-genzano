@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00244d"/>
+      <stop offset="100%" style="stop-color:#004080"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <text x="600" y="250" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="52" fill="#ffffff">PROTEZIONE CIVILE</text>
+  <text x="600" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="36" fill="#FF6600">Genzano di Roma</text>
+  <line x1="500" y1="340" x2="700" y2="340" stroke="#FF6600" stroke-width="3"/>
+  <text x="600" y="390" text-anchor="middle" font-family="Arial,sans-serif" font-weight="400" font-size="20" fill="rgba(255,255,255,0.6)">Gruppo Comunale Volontari — dal 1981</text>
+</svg>
