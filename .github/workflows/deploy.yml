@@ -38,7 +38,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
           server-dir: /www.protezionecivilegenzano.it/
-          dangerous-clean-slate: false
+          dangerous-clean-slate: true
 
       - name: "🏗️ Build per GitHub Pages"
         run: hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
