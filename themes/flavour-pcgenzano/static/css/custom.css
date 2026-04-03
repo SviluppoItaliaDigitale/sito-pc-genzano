@@ -442,3 +442,19 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
 .emergenza-arancione { background: #CC5C00; color: #fff; }
 .emergenza-rosso { background: #CC334D; color: #fff; }
 .emergenza-viola { background: #7B2D8E; color: #fff; }
+
+/* ── IMMAGINI ARTICOLI: sempre centrate e responsive ── */
+article img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+  article img {
+    max-width: 280px;
+  }
+}
