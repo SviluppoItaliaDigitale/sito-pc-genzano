@@ -458,3 +458,32 @@ article img {
     max-width: 280px;
   }
 }
+
+/* ── GALLERIA AUTOMATICA: 2+ immagini consecutive ── */
+article p:has(img) + p:has(img) {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+  margin-right: 2%;
+}
+article .galleria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+article .galleria img {
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  article .galleria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  article .galleria img {
+    height: 150px;
+  }
+}
