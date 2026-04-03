@@ -3,7 +3,7 @@ title: "Nuovo logo della Protezione Civile: cosa cambia per i volontari di Genza
 date: 2026-04-03
 badge: "Comunicazione"
 description: "Il Dipartimento della Protezione Civile ha adottato una nuova identità visiva."
-image: ""
+image: "/images/logo-pc-volontariato.jpg"
 ---
 
 ## **Nuovo logo della Protezione Civile: cosa cambia per i volontari di Genzano**
@@ -24,6 +24,8 @@ L'obiettivo del restyling non è puramente estetico. Il nuovo simbolo nasce per:
 
 Il Comune sta predisponendo l'utilizzo del logo secondo un piano graduale. In questa prima fase, l'aggiornamento riguarderà il sito web e i profili social ufficiali. Successivamente, si procederà con la sostituzione della segnaletica, degli adesivi sui mezzi di soccorso e, progressivamente, delle patch sulle uniformi dei volontari.
 
-### **Cosa devono sapere i cittadini**
+### **![Nuovo logo Protezione Civile Volontariato](/images/logo-pc-volontariato.jpg)
+
+### Cosa devono sapere i cittadini**
 
 Nonostante il cambio di veste grafica, le modalità di contatto e di intervento del Gruppo Comunale restano invariate. Il nuovo logo è la garanzia che l'operatore che avete di fronte fa parte del sistema ufficiale di Protezione Civile, addestrato e coordinato secondo gli standard del Dipartimento.
