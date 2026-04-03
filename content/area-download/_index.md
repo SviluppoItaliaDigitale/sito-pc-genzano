@@ -8,28 +8,28 @@ In questa sezione puoi consultare e scaricare documenti importanti relativi all'
 
 ## Pianificazione e Cartografia Comunale
 
-- [Piano di Emergenza Comunale di PC](https://www.protezionecivilegenzano.it/documenti/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf)
-- [Carta delle Aree di Emergenza e degli Edifici Strategici](https://www.protezionecivilegenzano.it/documenti/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf)
-- [Carta di Inquadramento Territoriale](https://www.protezionecivilegenzano.it/documenti/normativa/Inquadramento_Territoriale_PC_Genzano.pdf)
-- [Carta Rischio Idrogeologico](https://www.protezionecivilegenzano.it/documenti/normativa/Rischio_Idrogeologico_PC_Genzano.pdf)
-- [Carta Rischio Incendio](https://www.protezionecivilegenzano.it/documenti/normativa/Rischio_Incendio_PC_Genzano.pdf)
-- [Carta Rischio Sismico](https://www.protezionecivilegenzano.it/documenti/normativa/Rischio_Sismico_PC_Genzano.pdf)
-- [Cartina Genzano Di Roma](https://www.protezionecivilegenzano.it/documenti/normativa/Cartina_Genzano_di_Roma.pdf)
+- [Piano di Emergenza Comunale di PC](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf)
+- [Carta delle Aree di Emergenza e degli Edifici Strategici](https://www.protezionecivilegenzano.it/area-download/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf)
+- [Carta di Inquadramento Territoriale](https://www.protezionecivilegenzano.it/area-download/normativa/Inquadramento_Territoriale_PC_Genzano.pdf)
+- [Carta Rischio Idrogeologico](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Idrogeologico_PC_Genzano.pdf)
+- [Carta Rischio Incendio](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Incendio_PC_Genzano.pdf)
+- [Carta Rischio Sismico](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Sismico_PC_Genzano.pdf)
+- [Cartina Genzano Di Roma](https://www.protezionecivilegenzano.it/area-download/normativa/Cartina_Genzano_di_Roma.pdf)
 
 ## Documenti Operativi e Regolamenti
 
-- [Schema Ordinanza Sindacale](https://www.protezionecivilegenzano.it/documenti/normativa/Schema_Ordinanza_Sindacale_PC_Genzano.pdf)
-- [Ordinanza Sindacale AIB 2024](https://www.protezionecivilegenzano.it/documenti/normativa/Ordinanza_Sindacale_AIB_2024.pdf)
-- [Ordinanza Sindacale AIB 2025](https://www.protezionecivilegenzano.it/documenti/normativa/Ordinanza_Sindacale_AIB_2025.pdf)
-- [Regolamento del Gruppo di P.C. Genzano](https://www.protezionecivilegenzano.it/documenti/normativa/Regolamento_Gruppo_Comunale_PC_Genzano.pdf)
+- [Schema Ordinanza Sindacale](https://www.protezionecivilegenzano.it/area-download/normativa/Schema_Ordinanza_Sindacale_PC_Genzano.pdf)
+- [Ordinanza Sindacale AIB 2024](https://www.protezionecivilegenzano.it/area-download/normativa/Ordinanza_Sindacale_AIB_2024.pdf)
+- [Ordinanza Sindacale AIB 2025](https://www.protezionecivilegenzano.it/area-download/normativa/Ordinanza_Sindacale_AIB_2025.pdf)
+- [Regolamento del Gruppo di P.C. Genzano](https://www.protezionecivilegenzano.it/area-download/normativa/Regolamento_Gruppo_Comunale_PC_Genzano.pdf)
 
 ## Pianificazione e Normativa Regionale (Lazio)
 
-- [Piano AIB Lazio](https://www.protezionecivilegenzano.it/documenti/normativa/Piano_AIB_Lazio.pdf)
-- [Piano Triennale di Protezione Civile Lazio](https://www.protezionecivilegenzano.it/documenti/normativa/Piano_Triennale_PC_Lazio.pdf)
-- [Direttive Allertamento di Protezione Civile Lazio](https://www.protezionecivilegenzano.it/documenti/normativa/Direttive_Allertamento_PC_Lazio.pdf)
-- [Norme di comportamento Protezione Civile Lazio](https://www.protezionecivilegenzano.it/documenti/normativa/Norme_comportamento_PC_Lazio.pdf)
-- [Tabella Comuni di Protezione Civile Lazio](https://www.protezionecivilegenzano.it/documenti/normativa/Tabella_Comuni_PC_Lazio.pdf)
+- [Piano AIB Lazio](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_AIB_Lazio.pdf)
+- [Piano Triennale di Protezione Civile Lazio](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_Triennale_PC_Lazio.pdf)
+- [Direttive Allertamento di Protezione Civile Lazio](https://www.protezionecivilegenzano.it/area-download/normativa/Direttive_Allertamento_PC_Lazio.pdf)
+- [Norme di comportamento Protezione Civile Lazio](https://www.protezionecivilegenzano.it/area-download/normativa/Norme_comportamento_PC_Lazio.pdf)
+- [Tabella Comuni di Protezione Civile Lazio](https://www.protezionecivilegenzano.it/area-download/normativa/Tabella_Comuni_PC_Lazio.pdf)
 
 ## Normativa Nazionale
 
