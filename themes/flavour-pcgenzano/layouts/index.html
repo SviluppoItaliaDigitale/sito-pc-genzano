@@ -270,24 +270,92 @@
   counters.forEach(function(c){obs.observe(c)});
 })();
 
-// Auto-verde dopo 24h
-(function(){
+// === ALLERTE METEO ===
+// Fonte unica: CSV DPC per comune (opendatasicilia)
+// Aggiornamento: ad ogni visita + ogni 30 minuti
+
+function checkAllertaDPC(){
   var bar=document.getElementById('allerta-bar');
   if(!bar)return;
+
   var agg=bar.getAttribute('data-aggiornamento');
-  if(!agg)return;
-  var ts=new Date(agg).getTime();
-  var now=Date.now();
-  var h24=24*60*60*1000;
-  if((now-ts)>h24 && !bar.classList.contains('allerta-bar-verde')){
-    bar.className='allerta-bar allerta-bar-verde';
-    var t=document.getElementById('allerta-titolo');
-    var d=document.getElementById('allerta-desc');
-    var i=document.getElementById('allerta-icon');
-    if(t)t.textContent='NESSUNA ALLERTA';
-    if(d)d.textContent='\u2014 Non sono previsti fenomeni significativi sul nostro territorio.';
-    if(i)i.className='bi bi-shield-check me-2';
+  if(agg){
+    var ts=new Date(agg).getTime();
+    var manuale=!bar.classList.contains('allerta-bar-verde');
+    if(manuale && (Date.now()-ts)<86400000) return;
+    if((Date.now()-ts)>86400000 && manuale){
+      bar.className='allerta-bar allerta-bar-verde';
+    }
   }
-})();
+
+  var CSV_URL='https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/bollettino-oggi-comuni-latest.csv';
+
+  fetch(CSV_URL)
+    .then(function(r){return r.text()})
+    .then(function(csv){
+      var lines=csv.split('\n');
+      if(lines.length<2)return;
+
+      var header=lines[0].split(',');
+      var colCriticita=-1,colIdrogeo=-1,colTemporali=-1,colIdraulico=-1;
+      for(var h=0;h<header.length;h++){
+        var col=header[h].trim().toLowerCase();
+        if(col.indexOf('avviso_criticita')>-1)colCriticita=h;
+        if(col.indexOf('avviso_idrogeologico')>-1)colIdrogeo=h;
+        if(col.indexOf('avviso_temporali')>-1)colTemporali=h;
+        if(col.indexOf('avviso_idraulico')>-1)colIdraulico=h;
+      }
+
+      var genzanoRow=null;
+      for(var i=1;i<lines.length;i++){
+        if(lines[i].toLowerCase().indexOf('genzano di roma')>-1){
+          genzanoRow=lines[i];
+          break;
+        }
+      }
+      if(!genzanoRow)return;
+
+      var fields=genzanoRow.split(',');
+      var levels={verde:0,gialla:1,arancione:2,rossa:3};
+      var maxLiv='verde';
+      var dettagli=[];
+
+      var colonne=[
+        {idx:colCriticita,nome:'Criticita'},
+        {idx:colIdrogeo,nome:'Idrogeologico'},
+        {idx:colTemporali,nome:'Temporali'},
+        {idx:colIdraulico,nome:'Idraulico'}
+      ];
+
+      for(var c2=0;c2<colonne.length;c2++){
+        var idx=colonne[c2].idx;
+        if(idx<0||idx>=fields.length)continue;
+        var val=fields[idx].trim().replace(/"/g,'').toLowerCase();
+        if(levels[val]!==undefined){
+          if(levels[val]>0)dettagli.push(colonne[c2].nome+': '+val);
+          if(levels[val]>levels[maxLiv])maxLiv=val;
+        }
+      }
+
+      var titles={verde:'NESSUNA ALLERTA',gialla:'ALLERTA GIALLA',arancione:'ALLERTA ARANCIONE',rossa:'ALLERTA ROSSA'};
+      var descs={verde:'Non sono previsti fenomeni significativi sul nostro territorio.',gialla:'Criticita ordinaria. Prestare attenzione.',arancione:'Criticita moderata. Limitare gli spostamenti.',rossa:'Criticita elevata. Seguire le indicazioni delle autorita.'};
+
+      bar.className='allerta-bar allerta-bar-'+maxLiv;
+      var t=document.getElementById('allerta-titolo');
+      var d=document.getElementById('allerta-desc');
+      var ic=document.getElementById('allerta-icon');
+      if(t)t.textContent=titles[maxLiv];
+      if(d){
+        var testo='— '+descs[maxLiv];
+        if(dettagli.length>0)testo+=' ('+dettagli.join(', ')+')';
+        d.textContent=testo;
+      }
+      if(ic)ic.className=maxLiv==='verde'?'bi bi-shield-check me-2':'bi bi-exclamation-triangle-fill me-2';
+    })
+    .catch(function(){});
+}
+
+checkAllertaDPC();
+setInterval(checkAllertaDPC, 30 * 60 * 1000);
 </script>
 {{ end }}
