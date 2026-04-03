@@ -6,7 +6,11 @@ description: "Il Dipartimento della Protezione Civile ha adottato una nuova iden
 image: "/images/logo-pc-volontariato.jpg"
 ---
 
-## **Nuovo logo della Protezione Civile: cosa cambia per i volontari di Genzano**
+## Nuovo logo della Protezione Civile: cosa cambia per i volontari di Genzano
+
+<div class="text-center my-4">
+  <img src="/images/logo-pc-volontariato.jpg" alt="Nuovo logo Protezione Civile Volontariato" style="max-width:300px;width:100%;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+</div>
 
 Il Dipartimento della Protezione Civile ha adottato una nuova identità visiva. Il Gruppo Comunale di Genzano di Roma ha avviato le procedure per l'aggiornamento dei propri canali di comunicazione e delle dotazioni operative, seguendo le direttive nazionali per garantire uniformità e riconoscimento immediato su tutto il territorio.
 
@@ -24,8 +28,6 @@ L'obiettivo del restyling non è puramente estetico. Il nuovo simbolo nasce per:
 
 Il Comune sta predisponendo l'utilizzo del logo secondo un piano graduale. In questa prima fase, l'aggiornamento riguarderà il sito web e i profili social ufficiali. Successivamente, si procederà con la sostituzione della segnaletica, degli adesivi sui mezzi di soccorso e, progressivamente, delle patch sulle uniformi dei volontari.
 
-### **![Nuovo logo Protezione Civile Volontariato](/images/logo-pc-volontariato.jpg)
-
-### Cosa devono sapere i cittadini**
+### **### Cosa devono sapere i cittadini**
 
 Nonostante il cambio di veste grafica, le modalità di contatto e di intervento del Gruppo Comunale restano invariate. Il nuovo logo è la garanzia che l'operatore che avete di fronte fa parte del sistema ufficiale di Protezione Civile, addestrato e coordinato secondo gli standard del Dipartimento.
