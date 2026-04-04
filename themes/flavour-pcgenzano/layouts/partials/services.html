@@ -1,0 +1,24 @@
+{{/* Servizi per il cittadino — pilotati da data/quick_links.yaml
+     Usato in: homepage */}}
+{{ $links := .Site.Data.quick_links }}
+{{ if $links }}
+<section class="servizi-section fade-in-up" aria-labelledby="servizi-heading">
+  <div class="container">
+    <h2 id="servizi-heading" class="section-title text-center">Servizi per il cittadino</h2>
+    <div class="row mt-4">
+      {{ range $links.servizi }}
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card card-servizio shadow-sm h-100">
+          <div class="card-body text-center p-4">
+            <div class="servizio-icon {{ .classe_icona }}"><i class="bi {{ .icona }}" aria-hidden="true"></i></div>
+            <h3 class="h6">{{ .titolo }}</h3>
+            <p class="text-muted small">{{ .descrizione }}</p>
+            <a href="{{ .url | relURL }}" class="btn btn-outline-primary btn-sm">{{ .azione }}</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

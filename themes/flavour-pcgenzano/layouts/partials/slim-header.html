@@ -20,11 +20,26 @@
               </div>
             </nav>
           </div>
-          <div class="it-header-slim-right-zone" role="navigation" aria-label="Link ai social">
+          <div class="it-header-slim-right-zone" role="navigation" aria-label="Link rapidi e social">
+            {{/* Area Riservata — posizione AGID standard */}}
+            <a href="https://activepager.com/auth/login" target="_blank" rel="noopener noreferrer" class="btn btn-slim-header me-3" aria-label="Accedi al gestionale volontari (si apre in una nuova finestra)">
+              <i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i>
+              <span class="d-none d-md-inline">Area Volontari</span>
+              <span class="d-md-none">Accedi</span>
+            </a>
+            <span class="slim-header-divider d-none d-lg-inline" aria-hidden="true"></span>
+            {{/* Social */}}
+            {{ $social := .Site.Data.social_links }}
+            {{ if $social }}
+            {{ range $social.canali }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .aria_label }}" class="text-white me-2"><i class="bi {{ .icona }}" aria-hidden="true"></i></a>
+            {{ end }}
+            {{ else }}
             <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-white me-2"><i class="bi bi-facebook" aria-hidden="true"></i></a>
             <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-white me-2"><i class="bi bi-instagram" aria-hidden="true"></i></a>
             <a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="X Twitter" class="text-white me-2"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
             <a href="{{ .Site.Params.telegram }}" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="text-white"><i class="bi bi-telegram" aria-hidden="true"></i></a>
+            {{ end }}
           </div>
         </div>
       </div>

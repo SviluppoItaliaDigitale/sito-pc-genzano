@@ -1,0 +1,46 @@
+{{/* Barra utility — data/ora live + ultimo aggiornamento sito
+     Posizionata tra main e footer su tutte le pagine
+     Data/ora aggiornata via JS ogni minuto
+     Ultimo aggiornamento = data build Hugo (hugo.BuildDate non disponibile,
+     usiamo la data dell'ultimo contenuto modificato) */}}
+<div class="utility-bar" role="contentinfo" aria-label="Informazioni di aggiornamento">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      {{/* Data e ora corrente */}}
+      <div class="utility-bar-item">
+        <i class="bi bi-clock me-1" aria-hidden="true"></i>
+        <span id="live-datetime" aria-live="polite" aria-label="Data e ora corrente">
+          <noscript>Abilita JavaScript per visualizzare data e ora</noscript>
+        </span>
+      </div>
+      {{/* Ultimo aggiornamento sito */}}
+      <div class="utility-bar-item">
+        <i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i>
+        Sito aggiornato al:
+        <time datetime="{{ (index .Site.RegularPages.ByLastmod.Reverse 0).Lastmod.Format "2006-01-02" }}">
+          {{ (index .Site.RegularPages.ByLastmod.Reverse 0).Lastmod | time.Format ":date_long" }}
+        </time>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var el=document.getElementById('live-datetime');
+  if(!el)return;
+  function aggiorna(){
+    var now=new Date();
+    var giorni=['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
+    var mesi=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+    var g=giorni[now.getDay()];
+    var d=now.getDate();
+    var m=mesi[now.getMonth()];
+    var a=now.getFullYear();
+    var ore=String(now.getHours()).padStart(2,'0');
+    var min=String(now.getMinutes()).padStart(2,'0');
+    el.textContent=g+' '+d+' '+m+' '+a+' — '+ore+':'+min;
+  }
+  aggiorna();
+  setInterval(aggiorna,30000);
+})();
+</script>

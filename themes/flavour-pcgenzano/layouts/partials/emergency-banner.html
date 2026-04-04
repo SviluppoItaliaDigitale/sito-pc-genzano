@@ -1,0 +1,28 @@
+{{/* Banner emergenza — pilotato da data/emergenza.json
+     Colori Designers Italia: blu, azzurro, verde, giallo, arancione, rosso, viola
+     Stili inline per evitare override Bootstrap Italia */}}
+{{ $emergenza := .Site.Data.emergenza }}
+{{ if and $emergenza $emergenza.attiva }}
+{{ $colori := dict "blu" "#0066CC" "azzurro" "#0073E6" "verde" "#008758" "giallo" "#A66300" "arancione" "#CC5C00" "rosso" "#CC334D" "viola" "#7B2D8E" }}
+{{ $bg := index $colori $emergenza.tipo | default "#0066CC" }}
+<div class="emergenza-banner" style="background:{{ $bg }};color:#fff;padding:0.75rem 0;font-weight:500;" role="alert" aria-label="Comunicazione di emergenza">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-between">
+      <div>
+        <i class="bi bi-megaphone-fill me-2" aria-hidden="true"></i>
+        <strong>{{ $emergenza.titolo }}</strong>
+        <span class="d-none d-md-inline ms-2">— {{ $emergenza.descrizione }}</span>
+      </div>
+      {{ with $emergenza.link }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-light ms-2 mt-1 mt-md-0 fw-bold" style="border-radius:20px;font-size:0.78rem;">
+        Maggiori informazioni <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+      </a>
+      {{ end }}
+    </div>
+    {{/* Versione mobile descrizione */}}
+    <div class="d-md-none mt-1">
+      <small>{{ $emergenza.descrizione }}</small>
+    </div>
+  </div>
+</div>
+{{ end }}

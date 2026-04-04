@@ -1,0 +1,21 @@
+{{/* Card "Cosa fare in caso di..." — pilotate da data/quick_links.yaml
+     Usato in: homepage */}}
+{{ $links := .Site.Data.quick_links }}
+{{ if $links }}
+<section class="py-5 bg-white" aria-labelledby="quickactions-heading">
+  <div class="container">
+    <h2 id="quickactions-heading" class="section-title text-center">Cosa fare in caso di...</h2>
+    <div class="row mt-4">
+      {{ range $links.cosa_fare }}
+      <div class="col-6 col-md-3 mb-3">
+        <a href="{{ .url | relURL }}" class="quick-action-card">
+          <div class="quick-action-icon {{ .classe_icona }}"><i class="bi {{ .icona }}" aria-hidden="true"></i></div>
+          <strong>{{ .titolo }}</strong>
+          <span class="qa-desc">{{ .descrizione }}</span>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,43 @@
+# Numeri di Emergenza e Utili
+# Usati in: homepage, contatti, footer, pagine rischio
+
+emergenza:
+  - numero: "112"
+    nome: "Numero Unico Emergenza (NUE)"
+    descrizione: "Per qualsiasi emergenza: sanitaria, ordine pubblico, incendi"
+    icona: "bi-telephone-fill"
+    principale: true
+
+  - numero: "803 555"
+    nome: "Sala Operativa Protezione Civile Lazio"
+    descrizione: "Per segnalazioni e informazioni su emergenze regionali"
+    icona: "bi-shield-fill"
+    principale: true
+
+utili:
+  - numero: "115"
+    nome: "Vigili del Fuoco"
+    descrizione: "Incendi, soccorso tecnico urgente"
+    icona: "bi-fire"
+
+  - numero: "118"
+    nome: "Emergenza Sanitaria"
+    descrizione: "Soccorso sanitario urgente"
+    icona: "bi-heart-pulse"
+
+  - numero: "1515"
+    nome: "Emergenza Ambientale"
+    descrizione: "Incendi boschivi e emergenze ambientali"
+    icona: "bi-tree"
+
+  - numero: "1530"
+    nome: "Guardia Costiera"
+    descrizione: "Emergenze in mare e sui laghi"
+    icona: "bi-water"
+
+locale:
+  - numero: "+39 069362600"
+    nome: "Segreteria Gruppo PC Genzano"
+    descrizione: "Per informazioni e richieste non urgenti"
+    icona: "bi-building"
+    nota: "NON per emergenze"

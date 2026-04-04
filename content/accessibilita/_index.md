@@ -2,6 +2,8 @@
 title: "Dichiarazione di Accessibilità"
 description: "Dichiarazione di accessibilità del sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
+aliases:
+  - /dichiarazione-accessibilita.html
 ---
 
 ## Stato di accessibilità

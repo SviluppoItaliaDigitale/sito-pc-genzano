@@ -1,0 +1,55 @@
+{{/* Notizie in evidenza — ultimi 2 mesi, hero + lista laterale
+     Usato in: homepage */}}
+{{ $maxAge := now.AddDate 0 -2 0 }}
+{{ $recentNews := where (where .Site.RegularPages "Section" "comunicazioni") ".Date" ">=" $maxAge }}
+{{ if $recentNews }}
+<section class="notizie-section fade-in-up" aria-labelledby="notizie-heading">
+  <div class="container">
+    <h2 id="notizie-heading" class="section-title">Notizie in Evidenza</h2>
+    <div class="row">
+      {{/* Notizia principale */}}
+      {{ with index $recentNews 0 }}
+      <div class="col-lg-6 mb-4">
+        <a href="{{ .Permalink }}" class="card card-notizia-hero text-decoration-none h-100">
+          <div class="card-notizia-hero-img">
+            {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">
+            {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy">{{ end }}
+          </div>
+          <div class="card-body">
+            {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}">{{ . }}</span>{{ end }}
+            <span class="notizia-data ms-2">{{ .Date | time.Format ":date_long" }}</span>
+            <h3 class="h4 mt-2 text-dark">{{ .Title }}</h3>
+            <p class="text-muted">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 200 }}{{ end }}</p>
+          </div>
+        </a>
+      </div>
+      {{ end }}
+      {{/* Notizie secondarie */}}
+      <div class="col-lg-6">
+        {{ range after 1 (first 5 $recentNews) }}
+        <a href="{{ .Permalink }}" class="card card-notizia-small mb-3 text-decoration-none">
+          <div class="row g-0">
+            <div class="col-4">
+              <div class="card-notizia-small-img">
+                {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">
+                {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy">{{ end }}
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="card-body py-2 px-3">
+                {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}" style="font-size:0.6rem;">{{ . }}</span>{{ end }}
+                <h3 class="h6 mt-1 mb-1 text-dark" style="line-height:1.3;">{{ .Title }}</h3>
+                <span class="notizia-data" style="font-size:0.75rem;">{{ .Date | time.Format ":date_long" }}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <a href="{{ "comunicazioni/" | relURL }}" class="btn btn-outline-primary">Tutte le comunicazioni <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,6 +1,8 @@
 ---
 title: "Comunicazioni Ufficiali dai Canali Social"
 description: "Segui le comunicazioni ufficiali del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma sui canali social."
+aliases:
+  - /comunicazioni.html
 ---
 
 Rimani aggiornato in tempo reale seguendo le nostre comunicazioni sui canali ufficiali del Gruppo. Se un riquadro non dovesse caricarsi, è probabile che le impostazioni di privacy del tuo browser stiano bloccando i contenuti esterni.

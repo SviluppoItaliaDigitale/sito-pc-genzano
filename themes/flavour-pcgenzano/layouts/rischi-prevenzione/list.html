@@ -1,12 +1,7 @@
 {{ define "main" }}
 <div class="page-hero">
   <div class="container">
-    <nav aria-label="Percorso di navigazione">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
-      </ol>
-    </nav>
+    {{ partial "breadcrumb.html" . }}
     <h1>{{ .Title }}</h1>
   </div>
 </div>
@@ -14,6 +9,27 @@
   <div class="row">
     <div class="col-lg-10 mx-auto">
       {{ .Content }}
+
+      {{/* Griglia card rischi da data file */}}
+      {{ $rischi := .Site.Data.risk_cards }}
+      {{ if $rischi }}
+      <div class="row mt-4 fade-in-up">
+        {{ range $rischi.rischi }}
+        {{ $url := printf "/rischi-prevenzione/%s/" .id }}
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card card-servizio shadow-sm h-100">
+            <div class="card-body p-4 text-center">
+              <div class="servizio-icon {{ .classe_icona }} mx-auto"><i class="bi {{ .icona }}" aria-hidden="true"></i></div>
+              <h2 class="h5 mt-2">{{ .titolo }}</h2>
+              <p class="text-muted small">{{ .descrizione_breve }}</p>
+              <a href="{{ $url | relURL }}" class="notizia-link">Approfondisci <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ else }}
+      {{/* Fallback: mostra le pagine figlie se data file non disponibile */}}
       <div class="row mt-4 fade-in-up">
         {{ range .Pages }}
         <div class="col-lg-4 col-md-6 mb-4">
@@ -21,7 +37,8 @@
             <div class="card-body p-4 text-center">
               {{ if in .Title "Incendi" }}<div class="servizio-icon si-orange mx-auto"><i class="bi bi-fire" aria-hidden="true"></i></div>
               {{ else if in .Title "Idrogeologico" }}<div class="servizio-icon si-blue mx-auto"><i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i></div>
-              {{ else }}<div class="servizio-icon si-orange mx-auto"><i class="bi bi-tsunami" aria-hidden="true"></i></div>{{ end }}
+              {{ else if in .Title "Sismico" }}<div class="servizio-icon si-orange mx-auto"><i class="bi bi-tsunami" aria-hidden="true"></i></div>
+              {{ else }}<div class="servizio-icon si-teal mx-auto"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i></div>{{ end }}
               <h2 class="h5 mt-2">{{ .Title }}</h2>
               <p class="text-muted small">{{ .Description }}</p>
               <a href="{{ .Permalink }}" class="notizia-link">Approfondisci <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
@@ -29,6 +46,20 @@
           </div>
         </div>
         {{ end }}
+      </div>
+      {{ end }}
+
+      {{/* Box informativo */}}
+      <div class="card border-primary mt-4 mb-3">
+        <div class="card-body bg-primary bg-opacity-10 p-4">
+          <h2 class="h5 text-primary"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>La prevenzione salva la vita</h2>
+          <p class="mb-2">Un cittadino informato è un cittadino preparato. Consulta le pagine dedicate a ciascun rischio per conoscere i comportamenti corretti da adottare prima, durante e dopo un'emergenza.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="{{ "piano-emergenza/" | relURL }}" class="btn btn-sm btn-outline-primary">Piano di Emergenza</a>
+            <a href="{{ "piano-familiare/" | relURL }}" class="btn btn-sm btn-outline-primary">Piano Familiare</a>
+            <a href="{{ "rischi-prevenzione/kit-emergenza/" | relURL }}" class="btn btn-sm btn-outline-primary">Kit di Emergenza</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

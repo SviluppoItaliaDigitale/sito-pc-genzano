@@ -39,10 +39,17 @@
             <div class="mt-3">
               <h3 class="h6 text-white">Seguici su</h3>
               <ul class="list-inline" role="list">
-                <li class="list-inline-item" role="listitem"><a href="https://www.facebook.com/protezionecivilegenzanodiroma" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Facebook"><i class="bi bi-facebook fs-4" aria-hidden="true"></i></a></li>
-                <li class="list-inline-item" role="listitem"><a href="https://www.instagram.com/protezionecivilegenzano/" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Instagram"><i class="bi bi-instagram fs-4" aria-hidden="true"></i></a></li>
-                <li class="list-inline-item" role="listitem"><a href="https://x.com/alfagenzano" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="X Twitter"><i class="bi bi-twitter-x fs-4" aria-hidden="true"></i></a></li>
-                <li class="list-inline-item" role="listitem"><a href="https://t.me/pcalfagenzano" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Telegram"><i class="bi bi-telegram fs-4" aria-hidden="true"></i></a></li>
+                {{ $social := .Site.Data.social_links }}
+                {{ if $social }}
+                {{ range $social.canali }}
+                <li class="list-inline-item" role="listitem"><a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="{{ .aria_label }}"><i class="bi {{ .icona }} fs-4" aria-hidden="true"></i></a></li>
+                {{ end }}
+                {{ else }}
+                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Facebook"><i class="bi bi-facebook fs-4" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Instagram"><i class="bi bi-instagram fs-4" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="X Twitter"><i class="bi bi-twitter-x fs-4" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.telegram }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Telegram"><i class="bi bi-telegram fs-4" aria-hidden="true"></i></a></li>
+                {{ end }}
               </ul>
             </div>
           </div>
@@ -56,7 +63,7 @@
       <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row" role="list">
         <li class="list-inline-item" role="listitem"><a href="{{ "note-legali/" | relURL }}" style="color:rgba(255,255,255,0.85);">Note legali</a></li>
         <li class="list-inline-item" role="listitem"><a href="{{ "privacy/" | relURL }}" style="color:rgba(255,255,255,0.85);">Privacy e cookie</a></li>
-        <li class="list-inline-item" role="listitem"><a href="{{ "accessibilita/" | relURL }}" style="color:rgba(255,255,255,0.85);">Accessibilita</a></li>
+        <li class="list-inline-item" role="listitem"><a href="{{ "accessibilita/" | relURL }}" style="color:rgba(255,255,255,0.85);">Accessibilità</a></li>
       </ul>
       <p class="mt-2 mb-0 small" style="color:rgba(255,255,255,0.75);">
         &copy; {{ now.Year }} {{ .Site.Params.author }} — C.F. {{ .Site.Params.cf }}<br>

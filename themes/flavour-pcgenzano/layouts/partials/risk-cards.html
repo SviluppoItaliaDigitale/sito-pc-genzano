@@ -1,0 +1,23 @@
+{{/* Griglia card rischi — pilotata da data/risk_cards.yaml
+     Usato in: hub rischi-prevenzione, homepage (versione compatta)
+     Associa automaticamente icona e colore a ogni sottopagina */}}
+{{ $rischi := .Site.Data.risk_cards }}
+{{ $section := .Site.GetPage "/rischi-prevenzione" }}
+{{ if and $rischi $section }}
+<div class="row mt-4 fade-in-up">
+  {{ range $rischi.rischi }}
+  {{ $page := $section.GetPage . }}
+  {{ $url := printf "/rischi-prevenzione/%s/" .id }}
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card card-servizio shadow-sm h-100">
+      <div class="card-body p-4 text-center">
+        <div class="servizio-icon {{ .classe_icona }} mx-auto"><i class="bi {{ .icona }}" aria-hidden="true"></i></div>
+        <h2 class="h5 mt-2">{{ .titolo }}</h2>
+        <p class="text-muted small">{{ .descrizione_breve }}</p>
+        <a href="{{ $url | relURL }}" class="notizia-link">Approfondisci <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

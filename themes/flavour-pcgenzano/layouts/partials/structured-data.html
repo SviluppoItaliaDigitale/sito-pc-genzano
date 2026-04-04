@@ -1,0 +1,71 @@
+{{/* Dati strutturati JSON-LD — SEO
+     Organization per homepage, Article per comunicazioni, WebPage per il resto */}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentOrganization",
+  "name": "{{ .Site.Title }}",
+  "description": "{{ .Site.Params.description }}",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ "images/logo-pc-genzano.png" | absURL }}",
+  "telephone": "{{ .Site.Params.telefono }}",
+  "email": "{{ .Site.Params.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Sicilia, 13-15",
+    "addressLocality": "Genzano di Roma",
+    "postalCode": "00045",
+    "addressRegion": "RM",
+    "addressCountry": "IT"
+  },
+  "sameAs": [
+    {{ with .Site.Params.facebook }}"{{ . }}"{{ end }}
+    {{ with .Site.Params.instagram }},"{{ . }}"{{ end }}
+    {{ with .Site.Params.telegram }},"{{ . }}"{{ end }}
+    {{ with .Site.Params.twitter }},"{{ . }}"{{ end }}
+  ]
+}
+</script>
+{{ else if eq .Section "comunicazioni" }}
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}",
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "author": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ "images/logo-pc-genzano.png" | absURL }}"
+    }
+  },
+  "mainEntityOfPage": "{{ .Permalink }}"
+}
+</script>
+{{ end }}
+{{ else }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ .Title }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
+{{ end }}

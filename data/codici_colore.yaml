@@ -1,0 +1,41 @@
+# Codici colore del sistema di allertamento
+# Usati in: allerte meteo, homepage, pagine rischio, FAQ
+
+codici:
+  - livello: "verde"
+    titolo: "Nessuna Allerta"
+    colore_bg: "#28a745"
+    colore_testo: "#fff"
+    significato: "Assenza di fenomeni significativi prevedibili. La situazione è sotto controllo."
+    cosa_fare: "Nessuna azione richiesta. Resta informato seguendo i canali ufficiali."
+    icona: "bi-shield-check"
+
+  - livello: "gialla"
+    titolo: "Allerta Gialla — Livello di Attenzione"
+    colore_bg: "#ffc107"
+    colore_testo: "#000"
+    significato: "Criticità ordinaria. Sono possibili fenomeni meteorologici localizzati e di intensità moderata."
+    cosa_fare: "Presta attenzione ai bollettini. Evita zone a rischio allagamento. Non sostare lungo i corsi d'acqua o sotto alberi isolati."
+    icona: "bi-exclamation-triangle"
+
+  - livello: "arancione"
+    titolo: "Allerta Arancione — Livello di Preallarme"
+    colore_bg: "#fd7e14"
+    colore_testo: "#fff"
+    significato: "Criticità moderata. I fenomeni previsti possono essere diffusi e potenzialmente pericolosi."
+    cosa_fare: "Limita gli spostamenti allo stretto necessario. Metti in sicurezza beni in locali interrati. Tieni pronto il kit di emergenza. Segui le indicazioni delle autorità."
+    icona: "bi-exclamation-triangle-fill"
+
+  - livello: "rossa"
+    titolo: "Allerta Rossa — Livello di Allarme"
+    colore_bg: "#dc3545"
+    colore_testo: "#fff"
+    significato: "Criticità elevata. I fenomeni previsti sono molto intensi e con elevata probabilità di causare danni gravi."
+    cosa_fare: "Non uscire di casa se non strettamente necessario. Allontanati dai piani interrati. Non attraversare strade allagate o sottopassaggi. Segui esclusivamente le indicazioni delle autorità. Tieni il telefono carico."
+    icona: "bi-exclamation-octagon-fill"
+
+# Fonti ufficiali
+fonti:
+  bollettino_regionale: "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti"
+  dpc_nazionale: "https://www.protezionecivile.gov.it/it/"
+  it_alert: "https://www.it-alert.it/it/"

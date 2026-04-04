@@ -1,0 +1,77 @@
+# Link rapidi — Homepage e sezioni trasversali
+# Pilotano i pulsanti di accesso rapido
+
+principali:
+  - titolo: "Allerte Meteo"
+    url: "/allerte-meteo/"
+    icona: "bi-exclamation-triangle-fill"
+    classe: "btn-warning"
+    descrizione: "Stato allerta in tempo reale"
+
+  - titolo: "Piano di Emergenza"
+    url: "/piano-emergenza/"
+    icona: "bi-geo-alt-fill"
+    classe: "btn-outline-light"
+    descrizione: "Aree di emergenza e procedure"
+
+  - titolo: "Diventa Volontario"
+    url: "/diventa-volontario/"
+    icona: "bi-heart-fill"
+    classe: "btn-outline-light"
+    descrizione: "Unisciti al nostro gruppo"
+
+# Card "Cosa fare in caso di..."
+cosa_fare:
+  - titolo: "Terremoto"
+    url: "/rischi-prevenzione/rischio-sismico/"
+    icona: "bi-tsunami"
+    classe_icona: "icon-warning"
+    descrizione: "Scopri come proteggerti"
+
+  - titolo: "Alluvione"
+    url: "/rischi-prevenzione/rischio-idrogeologico/"
+    icona: "bi-cloud-rain-heavy"
+    classe_icona: "icon-primary"
+    descrizione: "Norme di comportamento"
+
+  - titolo: "Incendio"
+    url: "/rischi-prevenzione/rischio-incendio/"
+    icona: "bi-fire"
+    classe_icona: "icon-danger"
+    descrizione: "Previeni e segnala"
+
+  - titolo: "Piano Familiare"
+    url: "/piano-familiare/"
+    icona: "bi-house-heart"
+    classe_icona: "icon-success"
+    descrizione: "Crea il tuo piano"
+
+# Servizi per il cittadino
+servizi:
+  - titolo: "Piano Familiare"
+    url: "/piano-familiare/"
+    icona: "bi-house-heart"
+    classe_icona: "si-blue"
+    descrizione: "Crea il piano di emergenza per la tua famiglia."
+    azione: "Crea il piano"
+
+  - titolo: "Rischi e Prevenzione"
+    url: "/rischi-prevenzione/"
+    icona: "bi-exclamation-triangle"
+    classe_icona: "si-orange"
+    descrizione: "Conosci i rischi del territorio."
+    azione: "Scopri"
+
+  - titolo: "Cartografia Operativa"
+    url: "/cartografia/"
+    icona: "bi-map"
+    classe_icona: "si-teal"
+    descrizione: "Aree di emergenza del Piano Comunale."
+    azione: "Consulta"
+
+  - titolo: "Area Download"
+    url: "/area-download/"
+    icona: "bi-download"
+    classe_icona: "si-green"
+    descrizione: "Documenti e modulistica ufficiale."
+    azione: "Scarica"

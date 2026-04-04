@@ -26,6 +26,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
+  {{ partial "structured-data.html" . }}
 </head>
 <body>
   <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
@@ -34,6 +36,7 @@
   <main id="main-content" tabindex="-1">
     {{ block "main" . }}{{ end }}
   </main>
+  {{ partial "utility-bar.html" . }}
   {{ partial "footer.html" . }}
   {{ partial "cookie-banner.html" . }}
   <button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina" title="Torna su">

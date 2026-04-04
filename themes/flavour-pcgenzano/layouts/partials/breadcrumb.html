@@ -1,0 +1,12 @@
+{{/* Breadcrumb accessibile — usato in single.html, list.html e layout specifici */}}
+<nav aria-label="Percorso di navigazione" class="breadcrumb-nav">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+    {{- if and .Parent (not .Parent.IsHome) }}
+    {{- if and (ne .Parent.Permalink .Permalink) }}
+    <li class="breadcrumb-item"><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
+    {{- end }}
+    {{- end }}
+    <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+  </ol>
+</nav>

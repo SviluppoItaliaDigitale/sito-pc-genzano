@@ -1,0 +1,33 @@
+# Canali social ufficiali
+# Usati in: slim header, footer, homepage, contatti
+
+canali:
+  - nome: "Facebook"
+    url: "https://www.facebook.com/protezionecivilegenzanodiroma"
+    icona: "bi-facebook"
+    classe_btn: "btn-primary"
+    aria_label: "Facebook"
+    descrizione: "Avvisi, notizie e resoconti delle attività."
+
+  - nome: "Instagram"
+    url: "https://www.instagram.com/protezionecivilegenzano/"
+    icona: "bi-instagram"
+    classe_btn: "btn-danger"
+    aria_label: "Instagram"
+    descrizione: "Storie e post dalle attività sul campo."
+
+  - nome: "Telegram"
+    url: "https://t.me/pcalfagenzano"
+    icona: "bi-telegram"
+    classe_btn: "btn-info"
+    aria_label: "Telegram"
+    descrizione: "Notifiche di allerta e comunicazioni importanti."
+
+  - nome: "X"
+    url: "https://x.com/alfagenzano"
+    icona: "bi-twitter-x"
+    classe_btn: "btn-dark"
+    aria_label: "X Twitter"
+    descrizione: "Aggiornamenti rapidi e allerte in tempo reale."
+
+linktree: "https://linktr.ee/protezionecivilegenzano"

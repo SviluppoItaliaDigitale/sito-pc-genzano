@@ -22,9 +22,10 @@ theme = "flavour-pcgenzano"
   pec = ""
   facebook = "https://www.facebook.com/protezionecivilegenzanodiroma"
   instagram = "https://www.instagram.com/protezionecivilegenzano/"
-twitter = "https://x.com/alfagenzano"
+  twitter = "https://x.com/alfagenzano"
   telegram = "https://t.me/pcalfagenzano"
   linktree = "https://linktr.ee/protezionecivilegenzano"
+  gestionale = "https://activepager.com/auth/login"
   # Imposta a true quando avrai attivato HTTPS
   httpsAttivo = false
   # Link alla dichiarazione di accessibilità su form.agid.gov.it
@@ -113,10 +114,39 @@ twitter = "https://x.com/alfagenzano"
   url = "/cartografia/"
   weight = 4
 
+[[menus.servizi]]
+  name = "Cosa Fare Adesso"
+  url = "/cosa-fare-adesso/"
+  weight = 5
+
+[[menus.servizi]]
+  name = "Numeri Utili"
+  url = "/numeri-utili/"
+  weight = 6
+
+[[menus.servizi]]
+  name = "FAQ"
+  url = "/faq/"
+  weight = 7
+
+[[menus.servizi]]
+  name = "Formazione"
+  url = "/formazione/"
+  weight = 8
+
+# Tassonomie
+[taxonomies]
+  badge = "badges"
+
 # Impostazioni di output
 [outputs]
-home = ["HTML", "RSS", "JSON"]  
+home = ["HTML", "RSS", "JSON"]
 
+# Sitemap
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 # Impostazioni Markdown
 [markup]

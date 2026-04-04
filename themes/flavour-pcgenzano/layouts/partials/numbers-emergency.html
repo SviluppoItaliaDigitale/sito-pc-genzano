@@ -1,0 +1,28 @@
+{{/* Barra numeri di emergenza — sempre visibile
+     Dati da data/numeri_utili.yaml */}}
+{{ $numeri := .Site.Data.numeri_utili }}
+{{ if $numeri }}
+<div class="emergency-banner" role="complementary" aria-label="Numeri di emergenza">
+  <div class="container text-center">
+    {{ range $numeri.emergenza }}
+    {{ if .principale }}
+    <span class="d-inline-block">
+      <i class="bi {{ .icona }} me-1" aria-hidden="true"></i>
+      <strong>{{ .nome | replaceRE "\\s*\\(.*\\)$" "" }}: {{ .numero }}</strong>
+    </span>
+    <span class="mx-2 d-none d-md-inline">|</span>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ else }}
+{{/* Fallback statico se data file non disponibile */}}
+<div class="emergency-banner" role="complementary" aria-label="Numeri di emergenza">
+  <div class="container text-center">
+    <i class="bi bi-telephone-fill me-1" aria-hidden="true"></i>
+    <strong>Emergenze: 112</strong>
+    <span class="mx-2 d-none d-md-inline">|</span>
+    <span class="d-block d-md-inline">Sala Operativa PC Lazio: <strong>803 555</strong></span>
+  </div>
+</div>
+{{ end }}

@@ -1,15 +1,7 @@
 {{ define "main" }}
 <div class="page-hero">
   <div class="container">
-    <nav aria-label="Percorso di navigazione">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
-        {{ if and .Parent (not .Parent.IsHome) (ne .Parent.Permalink .Permalink) }}
-        <li class="breadcrumb-item"><a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></li>
-        {{ end }}
-        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
-      </ol>
-    </nav>
+    {{ partial "breadcrumb.html" . }}
     <h1>{{ .Title }}</h1>
   </div>
 </div>
@@ -23,16 +15,28 @@
         <span class="notizia-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></span>
       </div>
       {{ end }}
-      {{ if and (eq .Section "comunicazioni") }}
+      {{/* Immagine hero solo per comunicazioni */}}
+      {{ if eq .Section "comunicazioni" }}
       {{ with .Params.image }}
       <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ . }}" alt="" loading="lazy"></div>
       {{ else }}
       <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy"></div>
       {{ end }}
       {{ end }}
+
       <article>{{ .Content }}</article>
+
+      {{/* Link correlati per pagine di prevenzione e pianificazione */}}
+      {{ if or (eq .Section "rischi-prevenzione") (eq .Section "piano-emergenza") (eq .Section "piano-familiare") (eq .Section "allerte-meteo") (eq .Section "cartografia") (eq .Section "cosa-fare-adesso") }}
+      {{ partial "related-links.html" . }}
+      {{ end }}
+
+      {{/* Strumenti pagina */}}
+      {{ partial "page-tools.html" . }}
+
+      {{/* Link ritorno per comunicazioni */}}
       {{ if eq .Section "comunicazioni" }}
-      <hr class="mt-5">
+      <hr class="mt-4">
       <a href="{{ "comunicazioni/" | relURL }}" class="notizia-link"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna a tutte le comunicazioni</a>
       {{ end }}
     </div>

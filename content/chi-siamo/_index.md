@@ -2,6 +2,9 @@
 title: "Chi Siamo"
 description: "La storia, il direttivo, gli automezzi e le attività del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma."
 layout: "single"
+aliases:
+  - /chisiamo.html
+  - /chisiamo/
 ---
 
 <div class="card border-primary mb-5">

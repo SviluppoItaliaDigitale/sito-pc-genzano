@@ -2,6 +2,9 @@
 title: "Siti Utili e Risorse Esterne"
 description: "Raccolta di link a siti istituzionali, portali operativi e numeri di emergenza utili per la Protezione Civile e per il cittadino."
 layout: "single"
+aliases:
+  - /sitiutili.html
+  - /sitiutili/
 ---
 
 Una raccolta di link a siti istituzionali, portali operativi e numeri di emergenza utili per la Protezione Civile e per il cittadino.

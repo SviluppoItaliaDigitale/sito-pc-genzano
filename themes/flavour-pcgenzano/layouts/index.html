@@ -1,39 +1,21 @@
 {{ define "main" }}
 
-<!-- BANNER EMERGENZA (se attiva) -->
+{{/* ═══════════════════════════════════════════════════
+     HOMEPAGE — Protezione Civile Genzano di Roma
+     Doppia modalità: ordinaria / emergenza
+     L'ordine delle sezioni cambia quando emergenza è attiva
+     ═══════════════════════════════════════════════════ */}}
+
 {{ $emergenza := .Site.Data.emergenza }}
-{{ if and $emergenza $emergenza.attiva }}
-{{ $colori := dict "blu" "#0066CC" "azzurro" "#0073E6" "verde" "#008758" "giallo" "#A66300" "arancione" "#CC5C00" "rosso" "#CC334D" "viola" "#7B2D8E" }}
-{{ $bg := index $colori $emergenza.tipo | default "#0066CC" }}
-<div class="emergenza-banner" style="background:{{ $bg }};color:#fff;padding:0.75rem 0;font-weight:500;" role="alert" aria-label="Comunicazione di emergenza">
-  <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-between">
-      <div>
-        <i class="bi bi-megaphone-fill me-2" aria-hidden="true"></i>
-        <strong>{{ $emergenza.titolo }}</strong>
-        <span class="d-none d-md-inline ms-2">— {{ $emergenza.descrizione }}</span>
-      </div>
-      {{ with $emergenza.link }}
-      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-light ms-2 mt-1 mt-md-0 fw-bold">
-        Maggiori informazioni <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
-      </a>
-      {{ end }}
-    </div>
-  </div>
-</div>
-{{ end }}
+{{ $isEmergenza := and $emergenza $emergenza.attiva }}
 
-<!-- BANNER EMERGENZA -->
-<div class="emergency-banner" role="complementary" aria-label="Numeri di emergenza">
-  <div class="container text-center">
-    <i class="bi bi-telephone-fill me-1" aria-hidden="true"></i>
-    <strong>Emergenze: 112</strong>
-    <span class="mx-2 d-none d-md-inline">|</span>
-    <span class="d-block d-md-inline">Sala Operativa PC Lazio: <strong>803 555</strong></span>
-  </div>
-</div>
+{{/* ── BANNER EMERGENZA (se attiva, sopra tutto) ── */}}
+{{ partial "emergency-banner.html" . }}
 
-<!-- BARRA ALLERTA METEO (statica da data/allerta.json, auto-verde dopo 24h via JS) -->
+{{/* ── BARRA NUMERI EMERGENZA ── */}}
+{{ partial "numbers-emergency.html" . }}
+
+{{/* ── BARRA ALLERTA METEO ── */}}
 {{ $allerta := .Site.Data.allerta }}
 {{ if $allerta }}
 <div id="allerta-bar" class="allerta-bar allerta-bar-{{ $allerta.livello }}" role="alert" aria-label="Stato allerta meteo" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}">
@@ -51,28 +33,75 @@
 </div>
 {{ end }}
 
-<!-- HERO -->
+{{/* ══════════════════════════════════════════════════════
+     MODALITÀ EMERGENZA — ordine prioritario
+     ══════════════════════════════════════════════════════ */}}
+{{ if $isEmergenza }}
+
+{{/* In emergenza: azioni immediate PRIMA di tutto */}}
+{{ partial "emergency-actions.html" . }}
+
+{{/* Hero compatto in emergenza */}}
+<section class="hero-section hero-compact" aria-label="Protezione Civile Genzano di Roma">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h1>Protezione Civile<br><span class="hero-highlight">Genzano di Roma</span></h1>
+        <p class="lead mt-3">Gruppo Comunale Volontari — al servizio della comunità dal 1981.</p>
+        <div class="mt-3 d-flex flex-wrap gap-2">
+          {{ range (.Site.Data.quick_links).principali }}
+          <a href="{{ .url | relURL }}" class="btn {{ .classe }} btn-lg">
+            <i class="bi {{ .icona }} me-1" aria-hidden="true"></i> {{ .titolo }}
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* Numeri utili in evidenza */}}
+{{ partial "numbers-utility.html" . }}
+
+{{/* Cosa fare in caso di... */}}
+{{ partial "quick-links.html" . }}
+
+{{/* Notizie — in emergenza scendono */}}
+{{ partial "latest-news.html" . }}
+
+{{/* Servizi */}}
+{{ partial "services.html" . }}
+
+{{/* Social */}}
+{{ partial "social-channels.html" . }}
+
+{{ else }}
+{{/* ══════════════════════════════════════════════════════
+     MODALITÀ ORDINARIA — ordine standard
+     ══════════════════════════════════════════════════════ */}}
+
+{{/* ── HERO ── */}}
 <section class="hero-section" aria-label="Benvenuto">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-7">
         <h1>Protezione Civile<br><span class="hero-highlight">Genzano di Roma</span></h1>
-        <p class="lead mt-3">Gruppo Comunale Volontari — al servizio della comunita dal 1981.</p>
+        <p class="lead mt-3">Gruppo Comunale Volontari — al servizio della comunità dal 1981.</p>
         <div class="mt-4 d-flex flex-wrap gap-2">
-          <a href="{{ "allerte-meteo/" | relURL }}" class="btn btn-warning btn-lg">
-            <i class="bi bi-exclamation-triangle-fill me-1" aria-hidden="true"></i> Allerte Meteo
+          {{ range (.Site.Data.quick_links).principali }}
+          <a href="{{ .url | relURL }}" class="btn {{ .classe }} btn-lg">
+            <i class="bi {{ .icona }} me-1" aria-hidden="true"></i> {{ .titolo }}
           </a>
-          <a href="{{ "piano-emergenza/" | relURL }}" class="btn btn-outline-light btn-lg">Piano di Emergenza</a>
-          <a href="{{ "diventa-volontario/" | relURL }}" class="btn btn-outline-light btn-lg">Diventa Volontario</a>
+          {{ end }}
         </div>
       </div>
       <div class="col-lg-5 d-none d-lg-block text-end" style="position:relative;z-index:1;">
         <div class="stats-hero">
           <div class="row g-3">
-            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="44">0</span><span class="stat-hero-label">Anni di Attivita</span></div></div>
+            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="44">0</span><span class="stat-hero-label">Anni di Attività</span></div></div>
             <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="11">0</span><span class="stat-hero-label">Automezzi Operativi</span></div></div>
             <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="20">0</span><span class="stat-hero-label">Emergenze Nazionali</span></div></div>
-            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="365">0</span><span class="stat-hero-label">Giorni di Operativita</span></div></div>
+            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="365">0</span><span class="stat-hero-label">Giorni di Operatività</span></div></div>
           </div>
         </div>
       </div>
@@ -80,170 +109,22 @@
   </div>
 </section>
 
-<!-- COSA FARE IN CASO DI... -->
-<section class="py-5 bg-white" aria-labelledby="quickactions-heading">
-  <div class="container">
-    <h2 id="quickactions-heading" class="section-title text-center">Cosa fare in caso di...</h2>
-    <div class="row mt-4">
-      <div class="col-6 col-md-3 mb-3">
-        <a href="{{ "rischi-prevenzione/rischio-sismico/" | relURL }}" class="quick-action-card">
-          <div class="quick-action-icon icon-warning"><i class="bi bi-tsunami" aria-hidden="true"></i></div>
-          <strong>Terremoto</strong>
-          <span class="qa-desc">Scopri come proteggerti</span>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <a href="{{ "rischi-prevenzione/rischio-idrogeologico/" | relURL }}" class="quick-action-card">
-          <div class="quick-action-icon icon-primary"><i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i></div>
-          <strong>Alluvione</strong>
-          <span class="qa-desc">Norme di comportamento</span>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <a href="{{ "rischi-prevenzione/rischio-incendio/" | relURL }}" class="quick-action-card">
-          <div class="quick-action-icon icon-danger"><i class="bi bi-fire" aria-hidden="true"></i></div>
-          <strong>Incendio</strong>
-          <span class="qa-desc">Previeni e segnala</span>
-        </a>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <a href="{{ "piano-familiare/" | relURL }}" class="quick-action-card">
-          <div class="quick-action-icon icon-success"><i class="bi bi-house-heart" aria-hidden="true"></i></div>
-          <strong>Piano Familiare</strong>
-          <span class="qa-desc">Crea il tuo piano</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+{{/* Cosa fare in caso di... */}}
+{{ partial "quick-links.html" . }}
 
-<!-- SERVIZI -->
-<section class="servizi-section fade-in-up" aria-labelledby="servizi-heading">
-  <div class="container">
-    <h2 id="servizi-heading" class="section-title text-center">Servizi per il cittadino</h2>
-    <div class="row mt-4">
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card card-servizio shadow-sm h-100">
-          <div class="card-body text-center p-4">
-            <div class="servizio-icon si-blue"><i class="bi bi-house-heart" aria-hidden="true"></i></div>
-            <h3 class="h6">Piano Familiare</h3>
-            <p class="text-muted small">Crea il piano di emergenza per la tua famiglia.</p>
-            <a href="{{ "piano-familiare/" | relURL }}" class="btn btn-outline-primary btn-sm">Crea il piano</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card card-servizio shadow-sm h-100">
-          <div class="card-body text-center p-4">
-            <div class="servizio-icon si-orange"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i></div>
-            <h3 class="h6">Rischi e Prevenzione</h3>
-            <p class="text-muted small">Conosci i rischi del territorio.</p>
-            <a href="{{ "rischi-prevenzione/" | relURL }}" class="btn btn-outline-primary btn-sm">Scopri</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card card-servizio shadow-sm h-100">
-          <div class="card-body text-center p-4">
-            <div class="servizio-icon si-teal"><i class="bi bi-map" aria-hidden="true"></i></div>
-            <h3 class="h6">Cartografia Operativa</h3>
-            <p class="text-muted small">Aree di emergenza del Piano Comunale.</p>
-            <a href="{{ "cartografia/" | relURL }}" class="btn btn-outline-primary btn-sm">Consulta</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card card-servizio shadow-sm h-100">
-          <div class="card-body text-center p-4">
-            <div class="servizio-icon si-green"><i class="bi bi-download" aria-hidden="true"></i></div>
-            <h3 class="h6">Area Download</h3>
-            <p class="text-muted small">Documenti e modulistica ufficiale.</p>
-            <a href="{{ "area-download/" | relURL }}" class="btn btn-outline-primary btn-sm">Scarica</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{{/* Servizi per il cittadino */}}
+{{ partial "services.html" . }}
 
-<!-- NOTIZIE -->
-{{ $maxAge := now.AddDate 0 -2 0 }}
-{{ $recentNews := where (where .Site.RegularPages "Section" "comunicazioni") ".Date" ">=" $maxAge }}
-{{ if $recentNews }}
-<section class="notizie-section fade-in-up" aria-labelledby="notizie-heading">
-  <div class="container">
-    <h2 id="notizie-heading" class="section-title">Notizie in Evidenza</h2>
-    <div class="row">
-      {{ with index $recentNews 0 }}
-      <div class="col-lg-6 mb-4">
-        <a href="{{ .Permalink }}" class="card card-notizia-hero text-decoration-none h-100">
-          <div class="card-notizia-hero-img">
-            {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">
-            {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy">{{ end }}
-          </div>
-          <div class="card-body">
-            {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}">{{ . }}</span>{{ end }}
-            <span class="notizia-data ms-2">{{ .Date | time.Format ":date_long" }}</span>
-            <h3 class="h4 mt-2 text-dark">{{ .Title }}</h3>
-            <p class="text-muted">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 200 }}{{ end }}</p>
-          </div>
-        </a>
-      </div>
-      {{ end }}
-      <div class="col-lg-6">
-        {{ range after 1 (first 5 $recentNews) }}
-        <a href="{{ .Permalink }}" class="card card-notizia-small mb-3 text-decoration-none">
-          <div class="row g-0">
-            <div class="col-4">
-              <div class="card-notizia-small-img">
-                {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">
-                {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy">{{ end }}
-              </div>
-            </div>
-            <div class="col-8">
-              <div class="card-body py-2 px-3">
-                {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}" style="font-size:0.6rem;">{{ . }}</span>{{ end }}
-                <h3 class="h6 mt-1 mb-1 text-dark" style="line-height:1.3;">{{ .Title }}</h3>
-                <span class="notizia-data" style="font-size:0.75rem;">{{ .Date | time.Format ":date_long" }}</span>
-              </div>
-            </div>
-          </div>
-        </a>
-        {{ end }}
-      </div>
-    </div>
-    <div class="text-center mt-3">
-      <a href="{{ "comunicazioni/" | relURL }}" class="btn btn-outline-primary">Tutte le comunicazioni <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
-    </div>
-  </div>
-</section>
+{{/* Notizie in evidenza */}}
+{{ partial "latest-news.html" . }}
+
+{{/* Numeri utili */}}
+{{ partial "numbers-utility.html" . }}
+
+{{/* Social + IT-alert */}}
+{{ partial "social-channels.html" . }}
+
 {{ end }}
-
-<!-- SOCIAL + IT-ALERT -->
-<section class="py-4 bg-white fade-in-up">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h2 class="h5 fw-bold mb-3"><i class="bi bi-share me-2" aria-hidden="true"></i>Seguici sui nostri canali</h2>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="https://www.facebook.com/protezionecivilegenzanodiroma" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="bi bi-facebook me-1"></i> Facebook</a>
-          <a href="https://www.instagram.com/protezionecivilegenzano/" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-sm"><i class="bi bi-instagram me-1"></i> Instagram</a>
-          <a href="https://t.me/pcalfagenzano" target="_blank" rel="noopener noreferrer" class="btn btn-info btn-sm text-white"><i class="bi bi-telegram me-1"></i> Telegram</a>
-          <a href="https://x.com/alfagenzano" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm"><i class="bi bi-twitter-x me-1"></i> X</a>
-        </div>
-      </div>
-      <div class="col-lg-4 mt-3 mt-lg-0">
-        <div class="card bg-warning bg-opacity-10 border-warning">
-          <div class="card-body p-3 d-flex align-items-center">
-            <i class="bi bi-phone-vibrate fs-3 text-warning me-3" aria-hidden="true"></i>
-            <div><strong class="small">IT-alert</strong><p class="small text-muted mb-0">Sistema di allarme pubblico.</p></div>
-            <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-warning ms-auto">Info</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 {{ end }}
 
@@ -321,7 +202,7 @@ function checkAllertaDPC(){
       var dettagli=[];
 
       var colonne=[
-        {idx:colCriticita,nome:'Criticita'},
+        {idx:colCriticita,nome:'Criticità'},
         {idx:colIdrogeo,nome:'Idrogeologico'},
         {idx:colTemporali,nome:'Temporali'},
         {idx:colIdraulico,nome:'Idraulico'}
@@ -338,7 +219,7 @@ function checkAllertaDPC(){
       }
 
       var titles={verde:'NESSUNA ALLERTA',gialla:'ALLERTA GIALLA',arancione:'ALLERTA ARANCIONE',rossa:'ALLERTA ROSSA'};
-      var descs={verde:'Non sono previsti fenomeni significativi sul nostro territorio.',gialla:'Criticita ordinaria. Prestare attenzione.',arancione:'Criticita moderata. Limitare gli spostamenti.',rossa:'Criticita elevata. Seguire le indicazioni delle autorita.'};
+      var descs={verde:'Non sono previsti fenomeni significativi sul nostro territorio.',gialla:'Criticità ordinaria. Prestare attenzione.',arancione:'Criticità moderata. Limitare gli spostamenti.',rossa:'Criticità elevata. Seguire le indicazioni delle autorità.'};
 
       bar.className='allerta-bar allerta-bar-'+maxLiv;
       var t=document.getElementById('allerta-titolo');

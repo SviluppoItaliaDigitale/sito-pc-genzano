@@ -1,0 +1,75 @@
+# Card rischi — Usate nell'hub Rischi e Prevenzione e nella homepage
+# Icona, colore e mapping per ogni tipologia
+
+rischi:
+  - id: "rischio-sismico"
+    titolo: "Rischio Sismico"
+    icona: "bi-tsunami"
+    colore: "warning"
+    classe_icona: "si-orange"
+    descrizione_breve: "Cosa fare prima, durante e dopo un terremoto."
+    peso: 1
+
+  - id: "rischio-idrogeologico"
+    titolo: "Rischio Idrogeologico"
+    icona: "bi-cloud-rain-heavy"
+    colore: "primary"
+    classe_icona: "si-blue"
+    descrizione_breve: "Alluvioni, frane e temporali intensi."
+    peso: 2
+
+  - id: "rischio-incendio"
+    titolo: "Rischio Incendi Boschivi"
+    icona: "bi-fire"
+    colore: "danger"
+    classe_icona: "si-orange"
+    descrizione_breve: "Prevenzione e comportamento in caso di incendio."
+    peso: 3
+
+  - id: "vento-forte"
+    titolo: "Vento Forte"
+    icona: "bi-wind"
+    colore: "info"
+    classe_icona: "si-teal"
+    descrizione_breve: "Come comportarsi durante raffiche di vento."
+    peso: 4
+
+  - id: "temporali-intensi"
+    titolo: "Temporali Intensi"
+    icona: "bi-cloud-lightning-rain"
+    colore: "primary"
+    classe_icona: "si-blue"
+    descrizione_breve: "Fulmini, grandine e piogge violente."
+    peso: 5
+
+  - id: "ondate-di-calore"
+    titolo: "Ondate di Calore"
+    icona: "bi-thermometer-sun"
+    colore: "danger"
+    classe_icona: "si-orange"
+    descrizione_breve: "Come proteggersi dal caldo estremo."
+    peso: 6
+
+  - id: "blackout"
+    titolo: "Blackout e Interruzione Servizi"
+    icona: "bi-lightning-charge"
+    colore: "dark"
+    classe_icona: "si-dark"
+    descrizione_breve: "Cosa fare in caso di interruzione elettrica."
+    peso: 7
+
+  - id: "kit-emergenza"
+    titolo: "Kit di Emergenza"
+    icona: "bi-bag-check"
+    colore: "success"
+    classe_icona: "si-green"
+    descrizione_breve: "Prepara il tuo zaino per le emergenze."
+    peso: 8
+
+  - id: "persone-necessita-specifiche"
+    titolo: "Persone con Necessità Specifiche"
+    icona: "bi-people-fill"
+    colore: "info"
+    classe_icona: "si-teal"
+    descrizione_breve: "Indicazioni per anziani, bambini e persone fragili."
+    peso: 9

@@ -1,6 +1,6 @@
 /* ============================================================
-   CSS v6.0 — Protezione Civile Genzano di Roma
-   Migliorie grafiche complete
+   CSS v7.0 — Protezione Civile Genzano di Roma
+   Evoluzione completa: nuovi componenti, doppia modalità, hub rischi
    ============================================================ */
 
 :root {
@@ -487,3 +487,257 @@ article .galleria img {
     height: 150px;
   }
 }
+
+/* ============================================================
+   CSS v7.0 — NUOVI COMPONENTI
+   ============================================================ */
+
+/* ── HERO COMPATTO (modalità emergenza) ── */
+.hero-section.hero-compact {
+  padding: 2.5rem 0 3rem;
+}
+.hero-section.hero-compact h1 {
+  font-size: 2.2rem;
+}
+@media (max-width: 768px) {
+  .hero-section.hero-compact {
+    padding: 2rem 0;
+  }
+  .hero-section.hero-compact h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ── EMERGENCY ACTIONS ── */
+.emergency-actions-section {
+  background: #fff5f5;
+  border-bottom: 3px solid var(--pc-danger);
+}
+.emergency-actions-section .card {
+  border-radius: var(--pc-radius);
+  transition: all var(--pc-transition);
+}
+.emergency-actions-section .card:hover {
+  box-shadow: var(--pc-shadow-md);
+}
+
+/* ── NUMERI UTILI (blocco espanso) ── */
+.numero-utile-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ── SERVIZIO ICON — variante dark ── */
+.servizio-icon.si-dark {
+  background: rgba(33,37,41,0.1);
+  color: #212529;
+}
+
+/* ── PAGE TOOLS ── */
+.page-tools {
+  border-color: var(--pc-border-subtle) !important;
+}
+.page-tools .btn-outline-secondary {
+  border-radius: 20px;
+  font-size: 0.8rem;
+  padding: 0.3rem 1rem;
+}
+
+/* ── BREADCRUMB NAV ── */
+.breadcrumb-nav {
+  margin-bottom: 0.5rem;
+}
+
+/* ── CARD NOTIZIA HERO (homepage) ── */
+.card-notizia-hero {
+  border: none;
+  border-radius: var(--pc-radius-lg);
+  overflow: hidden;
+  transition: all var(--pc-transition);
+  box-shadow: var(--pc-shadow-sm);
+}
+.card-notizia-hero:hover {
+  box-shadow: var(--pc-shadow-lg);
+  transform: translateY(-3px);
+}
+.card-notizia-hero-img {
+  height: 220px;
+  overflow: hidden;
+  background: var(--pc-light-bg);
+}
+.card-notizia-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.card-notizia-hero:hover .card-notizia-hero-img img {
+  transform: scale(1.03);
+}
+
+/* ── CARD NOTIZIA SMALL (homepage laterale) ── */
+.card-notizia-small {
+  border: 1px solid var(--pc-border-subtle);
+  border-radius: var(--pc-radius);
+  overflow: hidden;
+  transition: all var(--pc-transition);
+}
+.card-notizia-small:hover {
+  border-color: var(--pc-primary);
+  box-shadow: var(--pc-shadow-sm);
+}
+.card-notizia-small-img {
+  height: 100%;
+  min-height: 80px;
+  overflow: hidden;
+  background: var(--pc-light-bg);
+}
+.card-notizia-small-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── NOTIZIE SECTION ── */
+.notizie-section {
+  padding: 3rem 0;
+  background: var(--pc-warm-bg);
+}
+
+/* ── FAQ ACCORDION STYLE ── */
+.faq-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--pc-primary);
+  margin-top: 1.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--pc-border-subtle);
+}
+
+/* ── BADGE NOTIZIE — nuovi tipi ── */
+.notizia-categoria.allerta {
+  background: var(--pc-danger);
+  color: #fff;
+}
+.notizia-categoria.formazione {
+  background: #6f42c1;
+  color: #fff;
+}
+.notizia-categoria.volontariato {
+  background: var(--pc-accent);
+  color: #fff;
+}
+.notizia-categoria.attività {
+  background: #17a2b8;
+  color: #fff;
+}
+
+/* ── PRINT MIGLIORATO ── */
+@media print {
+  .emergency-banner,
+  .allerta-bar,
+  .emergenza-banner,
+  .back-to-top,
+  #cookie-banner,
+  .it-header-slim-wrapper,
+  .page-tools .btn {
+    display: none !important;
+  }
+  .page-hero {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 1rem 0;
+  }
+  .page-hero h1 {
+    color: #000 !important;
+  }
+  .page-hero .breadcrumb-item a,
+  .page-hero .breadcrumb-item.active {
+    color: #333 !important;
+  }
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+  a[href^="#"]::after,
+  a[href^="javascript"]::after,
+  nav a[href]::after {
+    content: none;
+  }
+}
+
+/* ── LINK CARD (cosa fare adesso) ── */
+.card.shadow-sm:hover {
+  box-shadow: var(--pc-shadow-md) !important;
+}
+
+/* ── UTILITY BAR (data/ora + ultimo aggiornamento) ── */
+.utility-bar {
+  background: var(--pc-light-bg);
+  border-top: 1px solid var(--pc-border-subtle);
+  border-bottom: 1px solid var(--pc-border-subtle);
+  padding: 0.5rem 0;
+  font-size: 0.78rem;
+  color: #6c757d;
+}
+.utility-bar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.utility-bar-item i {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+@media (max-width: 768px) {
+  .utility-bar .d-flex {
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+}
+@media print {
+  .utility-bar { display: none !important; }
+}
+
+/* ── SLIM HEADER — Pulsante Area Volontari ── */
+.btn-slim-header {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.75rem;
+  text-decoration: none;
+  transition: all var(--pc-transition);
+  white-space: nowrap;
+}
+.btn-slim-header:hover {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  border-color: rgba(255,255,255,0.5);
+}
+.btn-slim-header:focus-visible {
+  outline: 3px solid #ff9900;
+  outline-offset: 2px;
+}
+.slim-header-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255,255,255,0.3);
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}
+
