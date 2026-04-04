@@ -1,24 +1,24 @@
 {{/* Barra utility — data/ora live + ultimo aggiornamento sito
      Posizionata tra main e footer su tutte le pagine
-     Data/ora aggiornata via JS ogni minuto
-     Ultimo aggiornamento = data build Hugo (hugo.BuildDate non disponibile,
-     usiamo la data dell'ultimo contenuto modificato) */}}
+     Data/ora corrente: aggiornata via JS ogni 30 secondi
+     Ultimo aggiornamento: usa "now" di Hugo = momento della build
+     Si aggiorna automaticamente ad ogni git push / deploy */}}
 <div class="utility-bar" role="contentinfo" aria-label="Informazioni di aggiornamento">
   <div class="container">
     <div class="d-flex flex-wrap justify-content-between align-items-center">
-      {{/* Data e ora corrente */}}
+      {{/* Data e ora corrente (browser) */}}
       <div class="utility-bar-item">
         <i class="bi bi-clock me-1" aria-hidden="true"></i>
         <span id="live-datetime" aria-live="polite" aria-label="Data e ora corrente">
           <noscript>Abilita JavaScript per visualizzare data e ora</noscript>
         </span>
       </div>
-      {{/* Ultimo aggiornamento sito */}}
+      {{/* Ultimo aggiornamento sito = data e ora della build Hugo */}}
       <div class="utility-bar-item">
         <i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i>
-        Sito aggiornato al:
-        <time datetime="{{ (index .Site.RegularPages.ByLastmod.Reverse 0).Lastmod.Format "2006-01-02" }}">
-          {{ (index .Site.RegularPages.ByLastmod.Reverse 0).Lastmod | time.Format ":date_long" }}
+        Sito aggiornato il
+        <time datetime="{{ now.Format "2006-01-02T15:04:05" }}">
+          {{ now | time.Format ":date_long" }} alle {{ now.Format "15:04" }}
         </time>
       </div>
     </div>

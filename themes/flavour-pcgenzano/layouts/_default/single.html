@@ -9,32 +9,92 @@
   <div class="row">
     <div class="col-lg-8 mx-auto">
       {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
+
+      {{/* ── METADATI COMUNICAZIONE ── */}}
+      {{ if eq .Section "comunicazioni" }}
+
+      {{/* Avviso scadenza */}}
+      {{ with .Params.scadenza }}
+      {{ $scadenza := time . }}
+      {{ if lt $scadenza now }}
+      <div class="alert alert-secondary py-2 px-3 small mb-3" role="alert">
+        <i class="bi bi-clock-history me-1" aria-hidden="true"></i>
+        <strong>Comunicazione non più attuale</strong> — Scaduta il {{ $scadenza | time.Format ":date_long" }}.
+        Le informazioni contenute potrebbero non essere più valide.
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{/* Priorità urgente */}}
+      {{ if eq .Params.priorita "urgente" }}
+      <div class="comunicazione-urgente">
+      {{ end }}
+
+      {{/* Badge + data + autore + area */}}
+      <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+        {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}">{{ . }}</span>{{ end }}
+        {{ if eq .Params.priorita "urgente" }}<span class="notizia-categoria allerta">URGENTE</span>{{ end }}
+        {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
+        <span class="notizia-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></span>
+        {{ end }}
+        {{ with .Params.autore }}<span class="notizia-data"><i class="bi bi-person" aria-hidden="true"></i> {{ . }}</span>{{ end }}
+        {{ with .Params.area }}<span class="notizia-data"><i class="bi bi-geo-alt" aria-hidden="true"></i> {{ . }}</span>{{ end }}
+      </div>
+
+      {{/* Immagine */}}
+      {{ with .Params.image }}
+      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ . }}" alt="" loading="lazy"></div>
+      {{ else }}
+      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy"></div>
+      {{ end }}
+
+      {{ else }}
+      {{/* Pagine non-comunicazione: solo data e badge */}}
       {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
       <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
         {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}">{{ . }}</span>{{ end }}
         <span class="notizia-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></span>
       </div>
       {{ end }}
-      {{/* Immagine hero solo per comunicazioni */}}
-      {{ if eq .Section "comunicazioni" }}
-      {{ with .Params.image }}
-      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ . }}" alt="" loading="lazy"></div>
-      {{ else }}
-      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy"></div>
-      {{ end }}
       {{ end }}
 
+      {{/* ── CONTENUTO ── */}}
       <article>{{ .Content }}</article>
 
-      {{/* Link correlati per pagine di prevenzione e pianificazione */}}
+      {{/* ── ALLEGATI (solo comunicazioni) ── */}}
+      {{ if eq .Section "comunicazioni" }}
+      {{ with .Params.allegati }}
+      <div class="card bg-light border-0 mt-4 mb-3">
+        <div class="card-body p-3">
+          <h2 class="h6 fw-bold mb-2"><i class="bi bi-paperclip me-1" aria-hidden="true"></i> Allegati</h2>
+          <ul class="list-unstyled mb-0">
+            {{ range . }}
+            <li class="mb-1">
+              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> {{ .titolo }}
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+
+      {{/* Chiudi div priorità urgente */}}
+      {{ if eq .Params.priorita "urgente" }}
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{/* ── LINK CORRELATI (pagine prevenzione/pianificazione) ── */}}
       {{ if or (eq .Section "rischi-prevenzione") (eq .Section "piano-emergenza") (eq .Section "piano-familiare") (eq .Section "allerte-meteo") (eq .Section "cartografia") (eq .Section "cosa-fare-adesso") }}
       {{ partial "related-links.html" . }}
       {{ end }}
 
-      {{/* Strumenti pagina */}}
+      {{/* ── STRUMENTI PAGINA ── */}}
       {{ partial "page-tools.html" . }}
 
-      {{/* Link ritorno per comunicazioni */}}
+      {{/* ── NAVIGAZIONE COMUNICAZIONI ── */}}
       {{ if eq .Section "comunicazioni" }}
       <hr class="mt-4">
       <a href="{{ "comunicazioni/" | relURL }}" class="notizia-link"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna a tutte le comunicazioni</a>

@@ -741,3 +741,9 @@ article .galleria img {
   vertical-align: middle;
 }
 
+/* ── COMUNICAZIONE URGENTE ── */
+.comunicazione-urgente {
+  border-left: 4px solid var(--pc-danger);
+  padding-left: 1rem;
+  margin-left: -1rem;
+}
