@@ -1,7 +1,7 @@
 #!/bin/bash
 # ============================================================
 # GESTIONE SITO — Protezione Civile Genzano di Roma
-# v2.2 — Aprile 2026
+# v2.3 — Aprile 2026
 # ============================================================
 
 SITO_DIR="$HOME/sito-pc-genzano"
@@ -16,67 +16,110 @@ CYAN='\033[0;36m'
 BOLD='\033[1m'
 NC='\033[0m'
 
+# Funzione per contare le bozze
+conta_bozze() {
+  local count=0
+  for f in "$CONTENT_DIR/comunicazioni/"*.md; do
+    [ "$(basename "$f")" = "_index.md" ] && continue
+    [ ! -f "$f" ] && continue
+    if grep -q "^draft: true" "$f" 2>/dev/null; then
+      count=$((count+1))
+    fi
+  done
+  echo $count
+}
+
 mostra_menu() {
   clear
   echo -e "${BLUE}${BOLD}"
   echo "╔══════════════════════════════════════════════════════════╗"
   echo "║   GESTIONE SITO — Protezione Civile Genzano di Roma    ║"
-  echo "║   v2.2 — $(date '+%d/%m/%Y %H:%M')                              ║"
+  echo "║   v2.3 — $(date '+%d/%m/%Y %H:%M')                              ║"
   echo "╚══════════════════════════════════════════════════════════╝"
   echo -e "${NC}"
 
   # Stato emergenza
   if [ -f "$DATA_DIR/emergenza.json" ]; then
-    stato_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print('ATTIVA — '+d.get('titolo','') if d.get('attiva') else 'disattivata')" 2>/dev/null)
+    stato_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print('ATTIVA — '+d.get('titolo','') if d.get('attiva') else 'sospesa' if d.get('titolo','') else 'disattivata')" 2>/dev/null)
     if echo "$stato_em" | grep -q "ATTIVA"; then
       echo -e "  ${RED}${BOLD}⚠ EMERGENZA: $stato_em${NC}"
     else
       echo -e "  Emergenza: $stato_em"
     fi
-    echo ""
   fi
+
+  # Conta bozze
+  nbozze=$(conta_bozze)
+  if [ "$nbozze" -gt 0 ]; then
+    echo -e "  ${YELLOW}📝 Bozze in attesa: $nbozze${NC}"
+  fi
+  echo ""
 
   echo -e "${CYAN}── COMUNICAZIONI ──${NC}"
   echo "  1) Crea nuova comunicazione"
   echo "  2) Crea comunicazione da file Word"
-  echo "  3) Modifica comunicazione"
-  echo "  4) Elimina comunicazione"
+  echo "  3) Modifica comunicazione pubblicata"
+  echo "  4) Elimina comunicazione pubblicata"
+  echo ""
+  echo -e "${CYAN}── BOZZE ──${NC}"
+  echo "  5) Vedi bozze in attesa"
+  echo "  6) Modifica bozza"
+  echo "  7) Pubblica bozza"
+  echo "  8) Elimina bozza"
   echo ""
   echo -e "${CYAN}── PAGINE ──${NC}"
-  echo "  5) Crea nuova pagina"
-  echo "  6) Modifica pagina"
-  echo "  7) Modifica pagina rischio"
-  echo "  8) Elimina pagina"
+  echo "  9) Crea nuova pagina"
+  echo " 10) Modifica pagina"
+  echo " 11) Modifica pagina rischio"
+  echo " 12) Elimina pagina"
   echo ""
   echo -e "${CYAN}── EMERGENZA ──${NC}"
-  echo "  9) Attiva emergenza"
-  echo " 10) Modifica emergenza attiva"
-  echo " 11) Sospendi emergenza (mantiene i dati)"
+  echo " 13) Attiva emergenza"
+  echo " 14) Modifica emergenza attiva"
+  echo " 15) Sospendi emergenza (mantiene i dati)"
   echo ""
   echo -e "${CYAN}── ALLERTA METEO ──${NC}"
-  echo " 12) Imposta livello allerta"
+  echo " 16) Imposta livello allerta"
   echo ""
   echo -e "${CYAN}── PUBBLICA E TESTA ──${NC}"
-  echo " 13) Test sito in locale"
-  echo " 14) Pubblica modifiche online"
-  echo " 15) Stato repository"
+  echo " 17) Test sito in locale"
+  echo " 18) Test sito con bozze visibili"
+  echo " 19) Pubblica modifiche online"
+  echo " 20) Stato repository"
   echo ""
   echo -e "${CYAN}── LINK RAPIDI ──${NC}"
-  echo " 16) Sito produzione    17) GitHub Actions"
-  echo " 18) Repository GitHub  19) Bollettino Lazio"
-  echo " 20) ActivePager        21) Claude AI"
+  echo " 21) Sito produzione    22) GitHub Actions"
+  echo " 23) Repository GitHub  24) Bollettino Lazio"
+  echo " 25) ActivePager        26) Claude AI"
   echo ""
   echo -e "${CYAN}── GUIDE ──${NC}"
-  echo " 22) Struttura del sito"
-  echo " 23) Guida pubblicazione"
+  echo " 27) Struttura del sito"
+  echo " 28) Guida pubblicazione"
   echo ""
   echo -e "${YELLOW}  0) Esci${NC}"
   echo ""
 }
 
+# Funzione: lista file comunicazioni (escluso _index), filtra per draft/published
+# $1 = "draft" o "published"
+lista_comunicazioni() {
+  local tipo=$1
+  local files=()
+  for f in "$CONTENT_DIR/comunicazioni/"*.md; do
+    [ "$(basename "$f")" = "_index.md" ] && continue
+    [ ! -f "$f" ] && continue
+    if [ "$tipo" = "draft" ]; then
+      grep -q "^draft: true" "$f" 2>/dev/null && files+=("$(basename "$f")")
+    else
+      grep -q "^draft: true" "$f" 2>/dev/null || files+=("$(basename "$f")")
+    fi
+  done
+  echo "${files[@]}"
+}
+
 # ══════════════════════════════════════════
 mostra_menu
-echo -ne "${BOLD}Scegli [0-23]: ${NC}"
+echo -ne "${BOLD}Scegli [0-28]: ${NC}"
 read scelta
 
 case $scelta in
@@ -119,16 +162,23 @@ case $scelta in
   read -e -p "> " -i "Gruppo Comunale Volontari PC Genzano" autore
 
   echo ""
-  echo -e "${BOLD}Area interessata (opzionale, es. Tutto il territorio comunale):${NC}"
+  echo -e "${BOLD}Area interessata (opzionale):${NC}"
   read -e -p "> " area
 
   echo ""
-  echo -e "${BOLD}Data scadenza (opzionale, formato AAAA-MM-GG):${NC}"
+  echo -e "${BOLD}Data scadenza (opzionale, AAAA-MM-GG):${NC}"
   read -e -p "> " scadenza
 
   echo ""
   echo -e "${BOLD}Immagine (opzionale, es. /images/foto.jpg):${NC}"
   read -e -p "> " image
+
+  echo ""
+  echo -e "${BOLD}Salvare come:${NC}"
+  echo "  1) Bozza — la scrivi dopo con calma, non va online"
+  echo "  2) Pubblicata — pronta per andare online"
+  read -p "Scegli [1-2, default 1]: " draft_scelta
+  [ "$draft_scelta" = "2" ] && draft_val="false" || draft_val="true"
 
   slug=$(echo "$titolo" | tr '[:upper:]' '[:lower:]' | sed 's/à/a/g;s/è/e/g;s/é/e/g;s/ì/i/g;s/ò/o/g;s/ù/u/g' | sed 's/ /-/g;s/[^a-z0-9-]//g;s/--*/-/g;s/^-//;s/-$//')
   data=$(date +%Y-%m-%d)
@@ -146,7 +196,7 @@ image: "$image"
 area: "$area"
 scadenza: "$scadenza"
 allegati: []
-draft: false
+draft: $draft_val
 ---
 
 Scrivi qui il contenuto della comunicazione.
@@ -154,16 +204,25 @@ EOF
 
   echo ""
   echo -e "${GREEN}════════════════════════════════════════${NC}"
-  echo -e "${GREEN}Comunicazione creata!${NC}"
+  if [ "$draft_val" = "true" ]; then
+    echo -e "${YELLOW}Comunicazione salvata come BOZZA.${NC}"
+    echo -e "${YELLOW}Non andrà online finché non la pubblichi (opzione 7).${NC}"
+  else
+    echo -e "${GREEN}Comunicazione salvata come PUBBLICATA.${NC}"
+    echo -e "${GREEN}Andrà online al prossimo push (opzione 19).${NC}"
+  fi
   echo -e "${GREEN}════════════════════════════════════════${NC}"
   echo ""
   echo -e "File: ${BOLD}$file${NC}"
   echo ""
   echo -e "Prossimi passi:"
-  echo -e "  1. Scrivi il contenuto:  ${BOLD}nano $file${NC}"
-  echo -e "     (salva: Ctrl+O poi INVIO, esci: Ctrl+X)"
-  echo -e "  2. Testa in locale:      ${BOLD}cd ~/sito-pc-genzano && hugo server${NC}"
-  echo -e "  3. Pubblica:             usa opzione 14 del menu"
+  echo -e "  1. Scrivi il contenuto:   ${BOLD}nano $file${NC}"
+  echo -e "     (salva: Ctrl+O → INVIO, esci: Ctrl+X)"
+  if [ "$draft_val" = "true" ]; then
+    echo -e "  2. Quando è pronta:      usa opzione ${BOLD}7${NC} del menu per pubblicarla"
+  fi
+  echo -e "  3. Testa in locale:       usa opzione ${BOLD}17${NC} del menu"
+  echo -e "  4. Metti online:          usa opzione ${BOLD}19${NC} del menu"
   echo ""
   read -p "Aprire il file adesso con nano? [S/n]: " apri
   [ "$apri" != "n" ] && [ "$apri" != "N" ] && nano "$file"
@@ -187,21 +246,21 @@ EOF
     echo "  2. Rimuovi backslash dagli apostrofi:"
     echo -e "     ${BOLD}sed -i \"s/\\\\\\\\'/'/g\" articolo.md${NC}"
     echo ""
-    echo "  3. Aggiungi il frontmatter in cima (usa opzione 1 del menu per creare"
-    echo "     il file con tutti i campi, poi incolla il contenuto convertito)"
+    echo "  3. Usa opzione 1 del menu per creare il file con tutti i campi,"
+    echo "     poi incolla il contenuto convertito."
   fi
   ;;
 
 # ══════════════════════════════════════════
-# 3) MODIFICA COMUNICAZIONE
+# 3) MODIFICA COMUNICAZIONE PUBBLICATA
 # ══════════════════════════════════════════
 3)
   echo ""
-  echo -e "${GREEN}══ Modifica comunicazione ══${NC}"
+  echo -e "${GREEN}══ Modifica comunicazione pubblicata ══${NC}"
   echo ""
-  files=($(ls -1 "$CONTENT_DIR/comunicazioni/" | grep -v "_index"))
+  IFS=' ' read -ra files <<< "$(lista_comunicazioni published)"
   if [ ${#files[@]} -eq 0 ]; then
-    echo "Nessuna comunicazione trovata."
+    echo "Nessuna comunicazione pubblicata trovata."
   else
     for i in "${!files[@]}"; do
       echo "  $((i+1))) ${files[$i]}"
@@ -211,7 +270,7 @@ EOF
     idx=$((num-1))
     if [ $idx -ge 0 ] && [ $idx -lt ${#files[@]} ]; then
       echo ""
-      echo -e "${YELLOW}Salva: Ctrl+O poi INVIO — Esci: Ctrl+X${NC}"
+      echo -e "${YELLOW}Salva: Ctrl+O → INVIO — Esci: Ctrl+X${NC}"
       read -p "Premi INVIO per aprire..."
       nano "$CONTENT_DIR/comunicazioni/${files[$idx]}"
     else
@@ -221,15 +280,15 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 4) ELIMINA COMUNICAZIONE
+# 4) ELIMINA COMUNICAZIONE PUBBLICATA
 # ══════════════════════════════════════════
 4)
   echo ""
-  echo -e "${RED}══ Elimina comunicazione ══${NC}"
+  echo -e "${RED}══ Elimina comunicazione pubblicata ══${NC}"
   echo ""
-  files=($(ls -1 "$CONTENT_DIR/comunicazioni/" | grep -v "_index"))
+  IFS=' ' read -ra files <<< "$(lista_comunicazioni published)"
   if [ ${#files[@]} -eq 0 ]; then
-    echo "Nessuna comunicazione trovata."
+    echo "Nessuna comunicazione pubblicata trovata."
   else
     for i in "${!files[@]}"; do
       echo "  $((i+1))) ${files[$i]}"
@@ -254,22 +313,155 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 5) CREA PAGINA
+# 5) VEDI BOZZE
 # ══════════════════════════════════════════
 5)
+  echo ""
+  echo -e "${YELLOW}══ Bozze in attesa ══${NC}"
+  echo ""
+  IFS=' ' read -ra files <<< "$(lista_comunicazioni draft)"
+  if [ ${#files[@]} -eq 0 ]; then
+    echo "Nessuna bozza trovata."
+    echo ""
+    echo "Per creare una nuova comunicazione come bozza, usa l'opzione 1."
+  else
+    echo "Bozze trovate: ${#files[@]}"
+    echo ""
+    for i in "${!files[@]}"; do
+      titolo_bozza=$(grep "^title:" "$CONTENT_DIR/comunicazioni/${files[$i]}" | head -1 | sed 's/^title: *"//;s/"$//')
+      echo -e "  $((i+1))) ${files[$i]}"
+      echo -e "      ${CYAN}→ $titolo_bozza${NC}"
+    done
+    echo ""
+    echo "Per modificare una bozza:    opzione 6"
+    echo "Per pubblicare una bozza:    opzione 7"
+    echo "Per eliminare una bozza:     opzione 8"
+  fi
+  ;;
+
+# ══════════════════════════════════════════
+# 6) MODIFICA BOZZA
+# ══════════════════════════════════════════
+6)
+  echo ""
+  echo -e "${YELLOW}══ Modifica bozza ══${NC}"
+  echo ""
+  IFS=' ' read -ra files <<< "$(lista_comunicazioni draft)"
+  if [ ${#files[@]} -eq 0 ]; then
+    echo "Nessuna bozza trovata."
+  else
+    for i in "${!files[@]}"; do
+      titolo_bozza=$(grep "^title:" "$CONTENT_DIR/comunicazioni/${files[$i]}" | head -1 | sed 's/^title: *"//;s/"$//')
+      echo -e "  $((i+1))) ${files[$i]}  ${CYAN}→ $titolo_bozza${NC}"
+    done
+    echo ""
+    read -p "Numero da modificare: " num
+    idx=$((num-1))
+    if [ $idx -ge 0 ] && [ $idx -lt ${#files[@]} ]; then
+      echo ""
+      echo -e "${YELLOW}Salva: Ctrl+O → INVIO — Esci: Ctrl+X${NC}"
+      read -p "Premi INVIO per aprire..."
+      nano "$CONTENT_DIR/comunicazioni/${files[$idx]}"
+    else
+      echo -e "${RED}Selezione non valida.${NC}"
+    fi
+  fi
+  ;;
+
+# ══════════════════════════════════════════
+# 7) PUBBLICA BOZZA
+# ══════════════════════════════════════════
+7)
+  echo ""
+  echo -e "${GREEN}══ Pubblica bozza ══${NC}"
+  echo ""
+  IFS=' ' read -ra files <<< "$(lista_comunicazioni draft)"
+  if [ ${#files[@]} -eq 0 ]; then
+    echo "Nessuna bozza trovata."
+  else
+    for i in "${!files[@]}"; do
+      titolo_bozza=$(grep "^title:" "$CONTENT_DIR/comunicazioni/${files[$i]}" | head -1 | sed 's/^title: *"//;s/"$//')
+      echo -e "  $((i+1))) ${files[$i]}  ${CYAN}→ $titolo_bozza${NC}"
+    done
+    echo ""
+    read -p "Numero da pubblicare: " num
+    idx=$((num-1))
+    if [ $idx -ge 0 ] && [ $idx -lt ${#files[@]} ]; then
+      filepath="$CONTENT_DIR/comunicazioni/${files[$idx]}"
+      echo ""
+      echo -e "Stai per pubblicare: ${BOLD}${files[$idx]}${NC}"
+      echo "La comunicazione diventerà visibile sul sito al prossimo push."
+      echo ""
+      read -p "Confermi? [S/n]: " conf
+      if [ "$conf" != "n" ] && [ "$conf" != "N" ]; then
+        sed -i 's/^draft: true/draft: false/' "$filepath"
+        # Aggiorna anche la data alla data odierna
+        data_oggi=$(date +%Y-%m-%d)
+        sed -i "s/^date: .*/date: $data_oggi/" "$filepath"
+        echo ""
+        echo -e "${GREEN}════════════════════════════════════════${NC}"
+        echo -e "${GREEN}Bozza PUBBLICATA!${NC}"
+        echo -e "${GREEN}════════════════════════════════════════${NC}"
+        echo ""
+        echo -e "Data aggiornata a: $data_oggi"
+        echo -e "Per metterla online: usa opzione ${BOLD}19${NC} del menu."
+      else
+        echo "Annullato."
+      fi
+    else
+      echo -e "${RED}Selezione non valida.${NC}"
+    fi
+  fi
+  ;;
+
+# ══════════════════════════════════════════
+# 8) ELIMINA BOZZA
+# ══════════════════════════════════════════
+8)
+  echo ""
+  echo -e "${RED}══ Elimina bozza ══${NC}"
+  echo ""
+  IFS=' ' read -ra files <<< "$(lista_comunicazioni draft)"
+  if [ ${#files[@]} -eq 0 ]; then
+    echo "Nessuna bozza trovata."
+  else
+    for i in "${!files[@]}"; do
+      titolo_bozza=$(grep "^title:" "$CONTENT_DIR/comunicazioni/${files[$i]}" | head -1 | sed 's/^title: *"//;s/"$//')
+      echo -e "  $((i+1))) ${files[$i]}  ${CYAN}→ $titolo_bozza${NC}"
+    done
+    echo ""
+    read -p "Numero da eliminare: " num
+    idx=$((num-1))
+    if [ $idx -ge 0 ] && [ $idx -lt ${#files[@]} ]; then
+      echo ""
+      echo -e "${RED}Stai per eliminare la bozza: ${files[$idx]}${NC}"
+      read -p "Scrivi 'elimina' per confermare: " conf
+      if [ "$conf" = "elimina" ]; then
+        rm "$CONTENT_DIR/comunicazioni/${files[$idx]}"
+        echo -e "${GREEN}Bozza eliminata.${NC}"
+      else
+        echo "Annullato."
+      fi
+    else
+      echo -e "${RED}Selezione non valida.${NC}"
+    fi
+  fi
+  ;;
+
+# ══════════════════════════════════════════
+# 9) CREA PAGINA
+# ══════════════════════════════════════════
+9)
   echo ""
   echo -e "${GREEN}══ Crea nuova pagina ══${NC}"
   echo ""
   echo -e "${BOLD}Nome della sezione (diventerà l'URL, es. 'avvisi-neve'):${NC}"
   echo -e "${YELLOW}Usa lettere minuscole e trattini, niente spazi o accenti.${NC}"
   read -e -p "> " sezione
-  if [ -z "$sezione" ]; then
-    echo -e "${RED}Errore: il nome è obbligatorio.${NC}"
-    read -p "Premi INVIO..."; exec bash "$0"
-  fi
+  [ -z "$sezione" ] && { echo -e "${RED}Nome obbligatorio.${NC}"; read -p "Premi INVIO..."; exec bash "$0"; }
 
   echo ""
-  echo -e "${BOLD}Titolo della pagina (come apparirà sul sito):${NC}"
+  echo -e "${BOLD}Titolo:${NC}"
   read -e -p "> " titolo
 
   echo ""
@@ -291,116 +483,84 @@ EOF
   echo -e "${GREEN}Pagina creata: content/$sezione/_index.md${NC}"
   echo -e "URL: /$sezione/"
   echo ""
-  read -p "Aprire il file con nano? [S/n]: " apri
+  read -p "Aprire con nano? [S/n]: " apri
   [ "$apri" != "n" ] && [ "$apri" != "N" ] && nano "$CONTENT_DIR/$sezione/_index.md"
   ;;
 
 # ══════════════════════════════════════════
-# 6) MODIFICA PAGINA
+# 10) MODIFICA PAGINA
 # ══════════════════════════════════════════
-6)
+10)
   echo ""
   echo -e "${GREEN}══ Modifica pagina ══${NC}"
   echo ""
-  pagine=()
-  nomi=()
+  pagine=(); nomi=()
   while IFS= read -r f; do
     sez=$(echo "$f" | sed "s|$CONTENT_DIR/||;s|/_index.md||")
-    pagine+=("$f")
-    nomi+=("$sez")
+    pagine+=("$f"); nomi+=("$sez")
   done < <(find "$CONTENT_DIR" -maxdepth 2 -name "_index.md" | sort)
-
-  for i in "${!nomi[@]}"; do
-    echo "  $((i+1))) ${nomi[$i]}"
-  done
+  for i in "${!nomi[@]}"; do echo "  $((i+1))) ${nomi[$i]}"; done
   echo ""
-  read -p "Numero da modificare: " num
-  idx=$((num-1))
+  read -p "Numero: " num; idx=$((num-1))
   if [ $idx -ge 0 ] && [ $idx -lt ${#pagine[@]} ]; then
-    echo ""
-    echo -e "${YELLOW}Salva: Ctrl+O poi INVIO — Esci: Ctrl+X${NC}"
+    echo -e "${YELLOW}Salva: Ctrl+O → INVIO — Esci: Ctrl+X${NC}"
     read -p "Premi INVIO per aprire..."
     nano "${pagine[$idx]}"
-  else
-    echo -e "${RED}Selezione non valida.${NC}"
-  fi
+  else echo -e "${RED}Selezione non valida.${NC}"; fi
   ;;
 
 # ══════════════════════════════════════════
-# 7) MODIFICA PAGINA RISCHIO
+# 11) MODIFICA PAGINA RISCHIO
 # ══════════════════════════════════════════
-7)
+11)
   echo ""
   echo -e "${GREEN}══ Modifica pagina rischio ══${NC}"
   echo ""
   files=($(ls -1 "$CONTENT_DIR/rischi-prevenzione/" | grep -v "_index"))
-  for i in "${!files[@]}"; do
-    echo "  $((i+1))) ${files[$i]}"
-  done
+  for i in "${!files[@]}"; do echo "  $((i+1))) ${files[$i]}"; done
   echo ""
-  read -p "Numero da modificare: " num
-  idx=$((num-1))
+  read -p "Numero: " num; idx=$((num-1))
   if [ $idx -ge 0 ] && [ $idx -lt ${#files[@]} ]; then
-    echo ""
-    echo -e "${YELLOW}Salva: Ctrl+O poi INVIO — Esci: Ctrl+X${NC}"
+    echo -e "${YELLOW}Salva: Ctrl+O → INVIO — Esci: Ctrl+X${NC}"
     read -p "Premi INVIO per aprire..."
     nano "$CONTENT_DIR/rischi-prevenzione/${files[$idx]}"
-  else
-    echo -e "${RED}Selezione non valida.${NC}"
-  fi
+  else echo -e "${RED}Selezione non valida.${NC}"; fi
   ;;
 
 # ══════════════════════════════════════════
-# 8) ELIMINA PAGINA
+# 12) ELIMINA PAGINA
 # ══════════════════════════════════════════
-8)
+12)
   echo ""
   echo -e "${RED}══ Elimina pagina ══${NC}"
   echo ""
-  echo -e "${YELLOW}ATTENZIONE: le pagine principali del sito (chi-siamo, contatti, ecc.)${NC}"
-  echo -e "${YELLOW}non dovrebbero essere eliminate. Usa questa funzione solo per pagine${NC}"
-  echo -e "${YELLOW}che hai creato tu e che non servono più.${NC}"
+  echo -e "${YELLOW}Non eliminare le pagine principali del sito!${NC}"
   echo ""
-
-  pagine=()
-  nomi=()
+  pagine=(); nomi=()
   while IFS= read -r f; do
     sez=$(echo "$f" | sed "s|$CONTENT_DIR/||;s|/_index.md||")
-    pagine+=("$f")
-    nomi+=("$sez")
+    pagine+=("$f"); nomi+=("$sez")
   done < <(find "$CONTENT_DIR" -maxdepth 2 -name "_index.md" | sort)
-
-  for i in "${!nomi[@]}"; do
-    echo "  $((i+1))) ${nomi[$i]}"
-  done
+  for i in "${!nomi[@]}"; do echo "  $((i+1))) ${nomi[$i]}"; done
   echo ""
-  read -p "Numero da eliminare: " num
-  idx=$((num-1))
+  read -p "Numero da eliminare: " num; idx=$((num-1))
   if [ $idx -ge 0 ] && [ $idx -lt ${#pagine[@]} ]; then
-    echo ""
     echo -e "${RED}Stai per eliminare: ${nomi[$idx]}${NC}"
     read -p "Scrivi 'elimina' per confermare: " conf
-    if [ "$conf" = "elimina" ]; then
-      rm -rf "$CONTENT_DIR/${nomi[$idx]}"
-      echo -e "${GREEN}Eliminato.${NC}"
-    else
-      echo "Annullato."
-    fi
-  else
-    echo -e "${RED}Selezione non valida.${NC}"
-  fi
+    [ "$conf" = "elimina" ] && { rm -rf "$CONTENT_DIR/${nomi[$idx]}"; echo -e "${GREEN}Eliminato.${NC}"; } || echo "Annullato."
+  else echo -e "${RED}Selezione non valida.${NC}"; fi
   ;;
 
 # ══════════════════════════════════════════
-# 9) ATTIVA EMERGENZA
+# 13) ATTIVA EMERGENZA
 # ══════════════════════════════════════════
-9)
+13)
   echo ""
   echo -e "${RED}══ Attiva emergenza ══${NC}"
   echo ""
 
-  # Controlla se c'è un'emergenza sospesa da riattivare
   titolo_esistente=""
+  attiva_esistente="False"
   if [ -f "$DATA_DIR/emergenza.json" ]; then
     titolo_esistente=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('titolo',''))" 2>/dev/null)
     attiva_esistente=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('attiva',False))" 2>/dev/null)
@@ -408,17 +568,16 @@ EOF
 
   if [ "$attiva_esistente" = "True" ]; then
     echo -e "${YELLOW}L'emergenza è già attiva!${NC}"
-    echo "Usa opzione 10 per modificarla o 11 per sospenderla."
+    echo "Usa opzione 14 per modificarla o 15 per sospenderla."
     read -p "Premi INVIO..."; exec bash "$0"
   fi
 
   if [ -n "$titolo_esistente" ] && [ "$titolo_esistente" != "" ]; then
-    echo -e "Trovata emergenza sospesa: ${BOLD}$titolo_esistente${NC}"
+    echo -e "Emergenza sospesa trovata: ${BOLD}$titolo_esistente${NC}"
     echo ""
     echo "  1) Riattiva questa emergenza"
     echo "  2) Crea una nuova emergenza"
     read -p "Scegli [1-2]: " riattiva
-
     if [ "$riattiva" = "1" ]; then
       python3 -c "
 import json
@@ -427,38 +586,21 @@ d['attiva']=True
 d['ultimo_aggiornamento']='$(date -Is)'
 with open('$DATA_DIR/emergenza.json','w') as f: json.dump(d,f,indent=2,ensure_ascii=False)
 "
-      echo ""
-      echo -e "${GREEN}════════════════════════════════════════${NC}"
-      echo -e "${GREEN}Emergenza RIATTIVATA: $titolo_esistente${NC}"
-      echo -e "${GREEN}════════════════════════════════════════${NC}"
-      echo ""
-      echo -e "La homepage è in modalità emergenza."
-      echo -e "Per rendere visibile online: usa opzione ${BOLD}14${NC} del menu."
+      echo -e "${GREEN}Emergenza RIATTIVATA!${NC}"
+      echo -e "Per rendere visibile: opzione ${BOLD}19${NC}."
       read -p "Premi INVIO..."; exec bash "$0"
     fi
   fi
 
-  # Nuova emergenza
-  echo -e "${YELLOW}ATTENZIONE: la homepage si riorganizzerà in modalità emergenza.${NC}"
+  echo -e "${YELLOW}La homepage si riorganizzerà in modalità emergenza.${NC}"
   echo ""
-
-  echo "Colore del banner:"
-  echo "  1) Blu    2) Azzurro  3) Verde   4) Giallo"
-  echo "  5) Arancione  6) Rosso  7) Viola"
+  echo "Colore:  1) Blu  2) Azzurro  3) Verde  4) Giallo  5) Arancione  6) Rosso  7) Viola"
   read -p "Scegli [1-7]: " tn
   case $tn in 1) tipo="blu";; 2) tipo="azzurro";; 3) tipo="verde";; 4) tipo="giallo";; 5) tipo="arancione";; 6) tipo="rosso";; 7) tipo="viola";; *) tipo="blu";; esac
 
-  echo ""
-  echo -e "${BOLD}Titolo del banner:${NC}"
-  read -e -p "> " titolo
-
-  echo ""
-  echo -e "${BOLD}Descrizione (cosa sta succedendo):${NC}"
-  read -e -p "> " desc
-
-  echo ""
-  echo -e "${BOLD}Link per maggiori informazioni (opzionale):${NC}"
-  read -e -p "> " link
+  echo ""; echo -e "${BOLD}Titolo:${NC}"; read -e -p "> " titolo
+  echo ""; echo -e "${BOLD}Descrizione:${NC}"; read -e -p "> " desc
+  echo ""; echo -e "${BOLD}Link (opzionale):${NC}"; read -e -p "> " link
 
   cat > "$DATA_DIR/emergenza.json" << EOF
 {
@@ -470,86 +612,54 @@ with open('$DATA_DIR/emergenza.json','w') as f: json.dump(d,f,indent=2,ensure_as
   "ultimo_aggiornamento": "$(date -Is)"
 }
 EOF
-
-  echo ""
-  echo -e "${GREEN}════════════════════════════════════════${NC}"
-  echo -e "${GREEN}Emergenza ATTIVATA${NC}"
-  echo -e "${GREEN}════════════════════════════════════════${NC}"
-  echo ""
-  echo -e "Per rendere visibile online: usa opzione ${BOLD}14${NC} del menu."
+  echo -e "${GREEN}Emergenza ATTIVATA! Per rendere visibile: opzione 19.${NC}"
   ;;
 
 # ══════════════════════════════════════════
-# 10) MODIFICA EMERGENZA
+# 14) MODIFICA EMERGENZA
 # ══════════════════════════════════════════
-10)
+14)
   echo ""
-  echo -e "${YELLOW}══ Modifica emergenza attiva ══${NC}"
-  echo ""
-  if [ -f "$DATA_DIR/emergenza.json" ]; then
-    echo "Contenuto attuale:"
-    echo ""
-    cat "$DATA_DIR/emergenza.json"
-    echo ""
-    echo -e "${YELLOW}Salva: Ctrl+O poi INVIO — Esci: Ctrl+X${NC}"
-    read -p "Premi INVIO per aprire il file..."
-    nano "$DATA_DIR/emergenza.json"
-  else
-    echo "Nessun file emergenza trovato."
-  fi
+  echo -e "${YELLOW}══ Modifica emergenza ══${NC}"
+  echo ""; cat "$DATA_DIR/emergenza.json"; echo ""
+  echo -e "${YELLOW}Salva: Ctrl+O → INVIO — Esci: Ctrl+X${NC}"
+  read -p "Premi INVIO per aprire..."
+  nano "$DATA_DIR/emergenza.json"
   ;;
 
 # ══════════════════════════════════════════
-# 11) SOSPENDI EMERGENZA
+# 15) SOSPENDI EMERGENZA
 # ══════════════════════════════════════════
-11)
+15)
   echo ""
   echo -e "${YELLOW}══ Sospendi emergenza ══${NC}"
   echo ""
-
-  if [ -f "$DATA_DIR/emergenza.json" ]; then
-    titolo_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('titolo',''))" 2>/dev/null)
-    attiva_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('attiva',False))" 2>/dev/null)
-
-    if [ "$attiva_em" != "True" ]; then
-      echo "L'emergenza non è attiva al momento."
-      read -p "Premi INVIO..."; exec bash "$0"
-    fi
-
-    echo -e "Emergenza attuale: ${BOLD}$titolo_em${NC}"
-    echo ""
-    echo -e "${YELLOW}L'emergenza verrà SOSPESA ma i dati restano salvati.${NC}"
-    echo -e "${YELLOW}Potrai riattivare la stessa emergenza con l'opzione 9.${NC}"
-    echo ""
-    read -p "Confermi la sospensione? [S/n]: " conf
-
-    if [ "$conf" = "n" ] || [ "$conf" = "N" ]; then
-      echo "Annullato."
-    else
-      python3 -c "
+  attiva_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('attiva',False))" 2>/dev/null)
+  if [ "$attiva_em" != "True" ]; then
+    echo "L'emergenza non è attiva."
+    read -p "Premi INVIO..."; exec bash "$0"
+  fi
+  titolo_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('titolo',''))" 2>/dev/null)
+  echo -e "Emergenza: ${BOLD}$titolo_em${NC}"
+  echo -e "${YELLOW}I dati restano salvati. Potrai riattivare con opzione 13.${NC}"
+  echo ""
+  read -p "Confermi sospensione? [S/n]: " conf
+  if [ "$conf" != "n" ] && [ "$conf" != "N" ]; then
+    python3 -c "
 import json
 with open('$DATA_DIR/emergenza.json','r') as f: d=json.load(f)
 d['attiva']=False
 with open('$DATA_DIR/emergenza.json','w') as f: json.dump(d,f,indent=2,ensure_ascii=False)
 "
-      echo ""
-      echo -e "${GREEN}════════════════════════════════════════${NC}"
-      echo -e "${GREEN}Emergenza SOSPESA${NC}"
-      echo -e "${GREEN}════════════════════════════════════════${NC}"
-      echo ""
-      echo "La homepage è tornata in modalità ordinaria."
-      echo "I dati dell'emergenza sono conservati."
-      echo -e "Per rendere visibile online: usa opzione ${BOLD}14${NC} del menu."
-    fi
-  else
-    echo "Nessun file emergenza trovato."
-  fi
+    echo -e "${GREEN}Emergenza SOSPESA. Homepage in modalità ordinaria.${NC}"
+    echo -e "Per rendere visibile: opzione ${BOLD}19${NC}."
+  else echo "Annullato."; fi
   ;;
 
 # ══════════════════════════════════════════
-# 12) ALLERTA METEO
+# 16) ALLERTA
 # ══════════════════════════════════════════
-12)
+16)
   echo ""
   echo -e "${YELLOW}══ Imposta allerta meteo ══${NC}"
   echo ""
@@ -564,9 +674,8 @@ with open('$DATA_DIR/emergenza.json','w') as f: json.dump(d,f,indent=2,ensure_as
     2) livello="gialla"; titolo="ALLERTA GIALLA"; desc="Criticità ordinaria. Prestare attenzione.";;
     3) livello="arancione"; titolo="ALLERTA ARANCIONE"; desc="Criticità moderata. Limitare gli spostamenti.";;
     4) livello="rossa"; titolo="ALLERTA ROSSA"; desc="Criticità elevata. Seguire le indicazioni delle autorità.";;
-    *) echo -e "${RED}Scelta non valida.${NC}"; read -p "Premi INVIO..."; exec bash "$0";;
+    *) echo -e "${RED}Non valida.${NC}"; read -p "Premi INVIO..."; exec bash "$0";;
   esac
-
   cat > "$DATA_DIR/allerta.json" << EOF
 {
   "livello": "$livello",
@@ -575,29 +684,42 @@ with open('$DATA_DIR/emergenza.json','w') as f: json.dump(d,f,indent=2,ensure_as
   "ultimo_aggiornamento": "$(date -Is)"
 }
 EOF
-  echo ""
-  echo -e "${GREEN}Allerta impostata: $titolo${NC}"
-  echo "Il CSV del DPC sovrascrive dopo 24 ore."
+  echo -e "${GREEN}Allerta: $titolo${NC}"
   ;;
 
 # ══════════════════════════════════════════
-# 13) TEST LOCALE
+# 17) TEST LOCALE (senza bozze)
 # ══════════════════════════════════════════
-13)
+17)
   echo ""
-  echo -e "${GREEN}══ Test locale ══${NC}"
+  echo -e "${GREEN}══ Test locale (solo contenuti pubblicati) ══${NC}"
   echo ""
-  echo -e "Apri nel browser: ${BOLD}http://localhost:1313/${NC}"
-  echo -e "Per fermare: ${BOLD}Ctrl+C${NC}"
+  echo -e "Browser: ${BOLD}http://localhost:1313/${NC}"
+  echo -e "Ferma: ${BOLD}Ctrl+C${NC}"
+  echo ""
+  read -p "Premi INVIO per avviare..."
+  cd "$SITO_DIR" && hugo server
+  ;;
+
+# ══════════════════════════════════════════
+# 18) TEST CON BOZZE
+# ══════════════════════════════════════════
+18)
+  echo ""
+  echo -e "${YELLOW}══ Test locale (bozze visibili) ══${NC}"
+  echo ""
+  echo -e "${YELLOW}Le bozze saranno visibili solo in questo test, NON andranno online.${NC}"
+  echo -e "Browser: ${BOLD}http://localhost:1313/${NC}"
+  echo -e "Ferma: ${BOLD}Ctrl+C${NC}"
   echo ""
   read -p "Premi INVIO per avviare..."
   cd "$SITO_DIR" && hugo server -D
   ;;
 
 # ══════════════════════════════════════════
-# 14) PUBBLICA
+# 19) PUBBLICA
 # ══════════════════════════════════════════
-14)
+19)
   echo ""
   echo -e "${GREEN}══ Pubblica modifiche online ══${NC}"
   echo ""
@@ -605,126 +727,85 @@ EOF
   echo -e "${BOLD}File modificati:${NC}"
   git status --short
   echo ""
-
   modifiche=$(git status --short | wc -l)
-  if [ "$modifiche" -eq 0 ]; then
-    echo "Nessuna modifica da pubblicare."
-    read -p "Premi INVIO..."; exec bash "$0"
+  [ "$modifiche" -eq 0 ] && { echo "Nessuna modifica."; read -p "Premi INVIO..."; exec bash "$0"; }
+
+  # Avvisa se ci sono bozze
+  nbozze=$(conta_bozze)
+  if [ "$nbozze" -gt 0 ]; then
+    echo -e "${YELLOW}Nota: ci sono $nbozze bozze. NON andranno online (è corretto così).${NC}"
+    echo ""
   fi
 
-  read -p "Procedere con la pubblicazione? [S/n]: " conf
+  read -p "Procedere? [S/n]: " conf
   [ "$conf" = "n" ] || [ "$conf" = "N" ] && { echo "Annullato."; read -p "Premi INVIO..."; exec bash "$0"; }
 
-  echo ""
-  echo -e "${BOLD}Descrizione delle modifiche:${NC}"
+  echo -e "${BOLD}Descrizione modifiche:${NC}"
   read -e -p "> " -i "Aggiornamento contenuti" msg
 
-  echo ""
-  echo "Pubblicazione in corso..."
-  git add .
-  git commit -m "$msg"
-  git push
+  echo ""; echo "Pubblicazione..."
+  git add . && git commit -m "$msg" && git push
 
   if [ $? -eq 0 ]; then
     echo ""
-    echo -e "${GREEN}════════════════════════════════════════${NC}"
-    echo -e "${GREEN}Pubblicato!${NC}"
-    echo -e "${GREEN}════════════════════════════════════════${NC}"
-    echo ""
-    echo "I siti saranno aggiornati entro 2-3 minuti."
-    echo "Controlla: https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions"
-    echo ""
-    echo -e "${YELLOW}Dopo 3 minuti, apri il sito e premi Ctrl+F5 per vedere le modifiche.${NC}"
+    echo -e "${GREEN}Pubblicato! Siti aggiornati entro 2-3 minuti.${NC}"
+    echo -e "${YELLOW}Dopo 3 min, apri il sito e premi Ctrl+F5.${NC}"
   else
-    echo ""
-    echo -e "${RED}Errore durante il push!${NC}"
-    echo "Prova a eseguire: git pull --rebase && git push"
+    echo -e "${RED}Errore! Prova: git pull --rebase && git push${NC}"
   fi
   ;;
 
 # ══════════════════════════════════════════
-# 15) STATO
+# 20) STATO
 # ══════════════════════════════════════════
-15)
-  echo ""
-  echo -e "${GREEN}══ Stato repository ══${NC}"
-  echo ""
-  cd "$SITO_DIR"
-  git status
-  echo ""
-  echo -e "${BOLD}Ultime 10 modifiche:${NC}"
-  git log --oneline -10
+20)
+  echo ""; cd "$SITO_DIR"; git status; echo ""; echo -e "${BOLD}Ultime 10:${NC}"; git log --oneline -10
   ;;
 
 # ══════════════════════════════════════════
-# 16-21) LINK RAPIDI
+# 21-26) LINK
 # ══════════════════════════════════════════
-16) xdg-open "https://www.protezionecivilegenzano.it/" 2>/dev/null || echo "https://www.protezionecivilegenzano.it/" ;;
-17) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions" 2>/dev/null || echo "Vai su github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions" ;;
-18) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano" 2>/dev/null || echo "Vai su github.com/SviluppoItaliaDigitale/sito-pc-genzano" ;;
-19) xdg-open "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" 2>/dev/null || echo "Vai su protezionecivile.regione.lazio.it" ;;
-20) xdg-open "https://activepager.com/auth/login" 2>/dev/null || echo "https://activepager.com/auth/login" ;;
-21) xdg-open "https://claude.ai" 2>/dev/null || echo "https://claude.ai" ;;
+21) xdg-open "https://www.protezionecivilegenzano.it/" 2>/dev/null || echo "https://www.protezionecivilegenzano.it/" ;;
+22) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions" 2>/dev/null || echo "github.com actions" ;;
+23) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano" 2>/dev/null || echo "github.com repo" ;;
+24) xdg-open "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" 2>/dev/null ;;
+25) xdg-open "https://activepager.com/auth/login" 2>/dev/null || echo "activepager.com" ;;
+26) xdg-open "https://claude.ai" 2>/dev/null || echo "claude.ai" ;;
 
 # ══════════════════════════════════════════
-# 22) STRUTTURA
+# 27) STRUTTURA
 # ══════════════════════════════════════════
-22)
+27)
   echo ""
-  echo -e "${GREEN}══ Struttura del sito ══${NC}"
+  echo -e "${BOLD}STRUTTURA DEL SITO${NC}"
   echo ""
-  echo -e "${BOLD}MENU PRINCIPALE:${NC}"
-  echo "  Home | Chi Siamo | Rischi e Prevenzione | Allerte Meteo"
-  echo "  Comunicazioni | Diventa Volontario | Contatti"
+  echo "Menu: Home | Chi Siamo | Rischi e Prevenzione | Allerte Meteo"
+  echo "      Comunicazioni | Diventa Volontario | Contatti"
   echo ""
-  echo -e "${BOLD}PAGINE RISCHIO (9):${NC}"
-  echo "  rischio-sismico | rischio-idrogeologico | rischio-incendio"
-  echo "  vento-forte | temporali-intensi | ondate-di-calore"
-  echo "  blackout | kit-emergenza | persone-necessita-specifiche"
+  echo "Rischi (9): sismico, idrogeologico, incendio, vento, temporali,"
+  echo "            calore, blackout, kit-emergenza, necessità-specifiche"
   echo ""
-  echo -e "${BOLD}ALTRE SEZIONI:${NC}"
-  echo "  piano-emergenza | piano-familiare | cartografia | area-download"
-  echo "  cosa-fare-adesso | numeri-utili | faq | formazione | siti-utili"
+  echo "Altre: piano-emergenza, piano-familiare, cartografia, area-download,"
+  echo "       cosa-fare-adesso, numeri-utili, faq, formazione, siti-utili"
   echo ""
-  echo -e "${BOLD}DATA FILES:${NC}"
-  echo "  allerta.json | emergenza.json | numeri_utili.yaml"
-  echo "  quick_links.yaml | risk_cards.yaml | social_links.yaml"
+  echo "Data: allerta.json, emergenza.json, numeri_utili.yaml,"
+  echo "      quick_links.yaml, risk_cards.yaml, social_links.yaml"
   echo ""
-  echo -e "${BOLD}BADGE COMUNICAZIONI:${NC}"
-  echo "  Allerta | Avviso | Comunicazione | Attività"
-  echo "  Formazione | Evento | Volontariato"
+  echo "Badge: Allerta|Avviso|Comunicazione|Attività|Formazione|Evento|Volontariato"
   echo ""
-  echo -e "${BOLD}PARAMETRI ARTICOLI:${NC}"
-  echo "  title, date, badge, description (obbligatori)"
-  echo "  priorita, autore, image, area, scadenza, allegati (opzionali)"
+  echo "Articoli: title, date, badge, description (obbligatori)"
+  echo "          priorita, autore, image, area, scadenza, allegati, draft"
   ;;
 
 # ══════════════════════════════════════════
-# 23) GUIDA
+# 28) GUIDA
 # ══════════════════════════════════════════
-23)
-  echo ""
-  if [ -f "$SITO_DIR/GUIDA-UPLOAD-V2.md" ]; then
-    less "$SITO_DIR/GUIDA-UPLOAD-V2.md"
-  elif [ -f "$HOME/GUIDA-PUBBLICAZIONE.txt" ]; then
-    less "$HOME/GUIDA-PUBBLICAZIONE.txt"
-  else
-    echo "File guida non trovato."
-  fi
+28)
+  [ -f "$SITO_DIR/GUIDA-UPLOAD-V2.md" ] && less "$SITO_DIR/GUIDA-UPLOAD-V2.md" || echo "Guida non trovata."
   ;;
 
-# ══════════════════════════════════════════
-# 0) ESCI
-# ══════════════════════════════════════════
-0)
-  echo -e "\n${GREEN}Arrivederci!${NC}"
-  exit 0
-  ;;
-
-*)
-  echo -e "\n${RED}Opzione non valida.${NC}"
-  ;;
-
+0) echo -e "\n${GREEN}Arrivederci!${NC}"; exit 0 ;;
+*) echo -e "\n${RED}Opzione non valida.${NC}" ;;
 esac
 
 echo ""
