@@ -1,18 +1,13 @@
 #!/bin/bash
 # ============================================================
 # GESTIONE SITO — Protezione Civile Genzano di Roma
-# Menu principale per la gestione del sito web
-# Versione 2.1 — Aprile 2026
-#
-# NOTA: tutti i campi di testo usano "read -e" che permette
-# di muovere il cursore con le frecce, Home, Fine, Canc, ecc.
+# v2.2 — Aprile 2026
 # ============================================================
 
 SITO_DIR="$HOME/sito-pc-genzano"
 CONTENT_DIR="$SITO_DIR/content"
 DATA_DIR="$SITO_DIR/data"
 
-# Colori
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -26,148 +21,119 @@ mostra_menu() {
   echo -e "${BLUE}${BOLD}"
   echo "╔══════════════════════════════════════════════════════════╗"
   echo "║   GESTIONE SITO — Protezione Civile Genzano di Roma    ║"
-  echo "║   v2.1 — $(date '+%d/%m/%Y %H:%M')                              ║"
+  echo "║   v2.2 — $(date '+%d/%m/%Y %H:%M')                              ║"
   echo "╚══════════════════════════════════════════════════════════╝"
   echo -e "${NC}"
-  echo -e "${CYAN}── ARTICOLI E COMUNICAZIONI ──${NC}"
-  echo "  1) Pubblica nuova comunicazione"
-  echo "  2) Pubblica comunicazione da file Word"
-  echo "  3) Modifica comunicazione esistente"
+
+  # Stato emergenza
+  if [ -f "$DATA_DIR/emergenza.json" ]; then
+    stato_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print('ATTIVA — '+d.get('titolo','') if d.get('attiva') else 'disattivata')" 2>/dev/null)
+    if echo "$stato_em" | grep -q "ATTIVA"; then
+      echo -e "  ${RED}${BOLD}⚠ EMERGENZA: $stato_em${NC}"
+    else
+      echo -e "  Emergenza: $stato_em"
+    fi
+    echo ""
+  fi
+
+  echo -e "${CYAN}── COMUNICAZIONI ──${NC}"
+  echo "  1) Crea nuova comunicazione"
+  echo "  2) Crea comunicazione da file Word"
+  echo "  3) Modifica comunicazione"
   echo "  4) Elimina comunicazione"
   echo ""
-  echo -e "${CYAN}── PAGINE DEL SITO ──${NC}"
-  echo "  5) Modifica pagina esistente"
-  echo "  6) Modifica pagina rischio (Rischi e Prevenzione)"
-  echo ""
-  echo -e "${CYAN}── ALLERTA METEO ──${NC}"
-  echo "  7) Imposta livello allerta manuale"
+  echo -e "${CYAN}── PAGINE ──${NC}"
+  echo "  5) Crea nuova pagina"
+  echo "  6) Modifica pagina"
+  echo "  7) Modifica pagina rischio"
+  echo "  8) Elimina pagina"
   echo ""
   echo -e "${CYAN}── EMERGENZA ──${NC}"
-  echo "  8) Pubblica banner emergenza"
-  echo "  9) Modifica banner emergenza"
-  echo " 10) Revoca banner emergenza"
+  echo "  9) Attiva emergenza"
+  echo " 10) Modifica emergenza attiva"
+  echo " 11) Sospendi emergenza (mantiene i dati)"
   echo ""
-  echo -e "${CYAN}── STRUMENTI ──${NC}"
-  echo " 11) Apri AI Claude per assistenza"
-  echo " 12) Validatore contenuti Designers Italia"
+  echo -e "${CYAN}── ALLERTA METEO ──${NC}"
+  echo " 12) Imposta livello allerta"
   echo ""
-  echo -e "${CYAN}── MANUTENZIONE ──${NC}"
-  echo " 13) Test sito in locale (hugo server)"
-  echo " 14) Pubblica modifiche (git push)"
-  echo " 15) Aggiorna dipendenze (Bootstrap Italia)"
-  echo " 16) Ultime modifiche (git log)"
-  echo " 17) Stato del repository (git status)"
+  echo -e "${CYAN}── PUBBLICA E TESTA ──${NC}"
+  echo " 13) Test sito in locale"
+  echo " 14) Pubblica modifiche online"
+  echo " 15) Stato repository"
   echo ""
   echo -e "${CYAN}── LINK RAPIDI ──${NC}"
-  echo " 18) Apri sito produzione (Aruba)"
-  echo " 19) Apri GitHub Actions"
-  echo " 20) Apri repository GitHub"
-  echo " 21) Apri bollettino Regione Lazio"
-  echo " 22) Apri gestionale ActivePager"
+  echo " 16) Sito produzione    17) GitHub Actions"
+  echo " 18) Repository GitHub  19) Bollettino Lazio"
+  echo " 20) ActivePager        21) Claude AI"
   echo ""
   echo -e "${CYAN}── GUIDE ──${NC}"
-  echo " 23) Guida alla pubblicazione"
-  echo " 24) Checklist contenuti"
-  echo " 25) Struttura del sito (mappa file)"
+  echo " 22) Struttura del sito"
+  echo " 23) Guida pubblicazione"
   echo ""
   echo -e "${YELLOW}  0) Esci${NC}"
   echo ""
 }
 
-# ── Mostra menu e chiedi scelta ──
+# ══════════════════════════════════════════
 mostra_menu
-echo -ne "${BOLD}Scegli un'opzione [0-25]: ${NC}"
+echo -ne "${BOLD}Scegli [0-23]: ${NC}"
 read scelta
 
 case $scelta in
 
 # ══════════════════════════════════════════
-# 1) PUBBLICA NUOVA COMUNICAZIONE
+# 1) CREA COMUNICAZIONE
 # ══════════════════════════════════════════
 1)
   echo ""
   echo -e "${GREEN}══ Nuova comunicazione ══${NC}"
   echo ""
+  echo -e "${YELLOW}Puoi usare le frecce ← → per muovere il cursore in ogni campo.${NC}"
+  echo ""
 
-  # Titolo
-  echo -e "${BOLD}Titolo della comunicazione:${NC}"
-  echo -e "${YELLOW}  (puoi usare le frecce per correggere)${NC}"
+  echo -e "${BOLD}Titolo:${NC}"
   read -e -p "> " titolo
   if [ -z "$titolo" ]; then
     echo -e "${RED}Errore: il titolo è obbligatorio.${NC}"
-    read -p "Premi INVIO per tornare al menu..."
-    exec bash "$0"
+    read -p "Premi INVIO..."; exec bash "$0"
   fi
 
-  # Badge
   echo ""
-  echo -e "${BOLD}Tipo di comunicazione:${NC}"
-  echo "  1) Comunicazione (default)"
-  echo "  2) Allerta"
-  echo "  3) Avviso"
-  echo "  4) Evento"
-  echo "  5) Formazione"
-  echo "  6) Attività"
-  echo "  7) Volontariato"
-  read -p "Scegli [1-7, default 1]: " badge_num
-  case $badge_num in
-    2) badge="Allerta";;
-    3) badge="Avviso";;
-    4) badge="Evento";;
-    5) badge="Formazione";;
-    6) badge="Attività";;
-    7) badge="Volontariato";;
-    *) badge="Comunicazione";;
-  esac
+  echo -e "${BOLD}Tipo:${NC}"
+  echo "  1) Comunicazione   2) Allerta   3) Avviso    4) Evento"
+  echo "  5) Formazione      6) Attività  7) Volontariato"
+  read -p "Scegli [1-7, default 1]: " bn
+  case $bn in 2) badge="Allerta";; 3) badge="Avviso";; 4) badge="Evento";; 5) badge="Formazione";; 6) badge="Attività";; 7) badge="Volontariato";; *) badge="Comunicazione";; esac
 
-  # Priorità
   echo ""
-  echo -e "${BOLD}Priorità:${NC}"
-  echo "  1) Normale (default)"
-  echo "  2) Urgente (bordo rosso + badge URGENTE)"
-  read -p "Scegli [1-2, default 1]: " prio_num
-  if [ "$prio_num" = "2" ]; then
-    priorita="urgente"
-  else
-    priorita="normale"
-  fi
+  echo -e "${BOLD}Priorità:${NC}  1) Normale   2) Urgente"
+  read -p "Scegli [1-2, default 1]: " pn
+  [ "$pn" = "2" ] && priorita="urgente" || priorita="normale"
 
-  # Descrizione
   echo ""
-  echo -e "${BOLD}Descrizione breve (1-2 righe, appare nelle anteprime):${NC}"
+  echo -e "${BOLD}Descrizione breve (appare nelle anteprime):${NC}"
   read -e -p "> " desc
 
-  # Autore
   echo ""
-  echo -e "${BOLD}Autore (chi ha scritto o approvato):${NC}"
+  echo -e "${BOLD}Autore:${NC}"
   read -e -p "> " -i "Gruppo Comunale Volontari PC Genzano" autore
-  autore=${autore:-"Gruppo Comunale Volontari PC Genzano"}
 
-  # Area
   echo ""
-  echo -e "${BOLD}Area interessata (opzionale, es. 'Tutto il territorio comunale'):${NC}"
+  echo -e "${BOLD}Area interessata (opzionale, es. Tutto il territorio comunale):${NC}"
   read -e -p "> " area
 
-  # Scadenza
   echo ""
-  echo -e "${BOLD}Data di scadenza (opzionale, formato AAAA-MM-GG, es. 2026-04-10):${NC}"
-  echo -e "${YELLOW}  Dopo questa data comparirà 'Comunicazione scaduta'. Lascia vuoto se non scade.${NC}"
+  echo -e "${BOLD}Data scadenza (opzionale, formato AAAA-MM-GG):${NC}"
   read -e -p "> " scadenza
 
-  # Immagine
   echo ""
   echo -e "${BOLD}Immagine (opzionale, es. /images/foto.jpg):${NC}"
-  echo -e "${YELLOW}  L'immagine deve essere nella cartella static/images/${NC}"
   read -e -p "> " image
 
-  # Crea slug e file
-  slug=$(echo "$titolo" | tr '[:upper:]' '[:lower:]' | \
-         sed 's/à/a/g; s/è/e/g; s/é/e/g; s/ì/i/g; s/ò/o/g; s/ù/u/g' | \
-         sed 's/ /-/g; s/[^a-z0-9-]//g; s/--*/-/g; s/^-//; s/-$//')
+  slug=$(echo "$titolo" | tr '[:upper:]' '[:lower:]' | sed 's/à/a/g;s/è/e/g;s/é/e/g;s/ì/i/g;s/ò/o/g;s/ù/u/g' | sed 's/ /-/g;s/[^a-z0-9-]//g;s/--*/-/g;s/^-//;s/-$//')
   data=$(date +%Y-%m-%d)
   file="$CONTENT_DIR/comunicazioni/${data}-${slug}.md"
 
-  # Scrivi il file
   cat > "$file" << EOF
 ---
 title: "$titolo"
@@ -184,68 +150,45 @@ draft: false
 ---
 
 Scrivi qui il contenuto della comunicazione.
-Puoi usare il formato Markdown:
-
-## Sottotitolo
-
-Testo del paragrafo.
-
-- Elenco puntato
-- Altro punto
-
-**Testo in grassetto** e *testo in corsivo*.
 EOF
 
   echo ""
   echo -e "${GREEN}════════════════════════════════════════${NC}"
-  echo -e "${GREEN}File creato con successo!${NC}"
+  echo -e "${GREEN}Comunicazione creata!${NC}"
   echo -e "${GREEN}════════════════════════════════════════${NC}"
   echo ""
   echo -e "File: ${BOLD}$file${NC}"
   echo ""
-  echo -e "Cosa fare adesso:"
-  echo -e "  1. Apri il file per scrivere il contenuto:"
-  echo -e "     ${BOLD}nano $file${NC}"
+  echo -e "Prossimi passi:"
+  echo -e "  1. Scrivi il contenuto:  ${BOLD}nano $file${NC}"
+  echo -e "     (salva: Ctrl+O poi INVIO, esci: Ctrl+X)"
+  echo -e "  2. Testa in locale:      ${BOLD}cd ~/sito-pc-genzano && hugo server${NC}"
+  echo -e "  3. Pubblica:             usa opzione 14 del menu"
   echo ""
-  echo -e "  2. Quando hai finito, salva con ${BOLD}Ctrl+O${NC} e esci con ${BOLD}Ctrl+X${NC}"
-  echo ""
-  echo -e "  3. Testa in locale:"
-  echo -e "     ${BOLD}cd ~/sito-pc-genzano && hugo server${NC}"
-  echo ""
-  echo -e "  4. Se tutto ok, pubblica:"
-  echo -e "     ${BOLD}cd ~/sito-pc-genzano && git add . && git commit -m \"Nuovo articolo: $titolo\" && git push${NC}"
-  echo ""
-  echo -ne "Vuoi aprire il file adesso con nano? [S/n]: "
-  read apri
-  if [ "$apri" != "n" ] && [ "$apri" != "N" ]; then
-    nano "$file"
-  fi
+  read -p "Aprire il file adesso con nano? [S/n]: " apri
+  [ "$apri" != "n" ] && [ "$apri" != "N" ] && nano "$file"
   ;;
 
 # ══════════════════════════════════════════
-# 2) PUBBLICA DA FILE WORD
+# 2) DA WORD
 # ══════════════════════════════════════════
 2)
   echo ""
-  echo -e "${GREEN}══ Pubblica da file Word ══${NC}"
+  echo -e "${GREEN}══ Comunicazione da file Word ══${NC}"
   echo ""
   if [ -f "$HOME/pubblica-da-word.sh" ]; then
     bash "$HOME/pubblica-da-word.sh"
   else
-    echo "Per convertire un file Word in Markdown:"
+    echo "Comandi da eseguire:"
     echo ""
-    echo -e "  1. Copia il file .docx nella tua home directory"
-    echo ""
-    echo -e "  2. Converti con pandoc:"
+    echo "  1. Converti il file Word:"
     echo -e "     ${BOLD}pandoc nomefile.docx -t markdown -o articolo.md${NC}"
     echo ""
-    echo -e "  3. Rimuovi i backslash dagli apostrofi:"
+    echo "  2. Rimuovi backslash dagli apostrofi:"
     echo -e "     ${BOLD}sed -i \"s/\\\\\\\\'/'/g\" articolo.md${NC}"
     echo ""
-    echo -e "  4. Aggiungi il frontmatter in cima al file (titolo, data, badge, ecc.)"
-    echo ""
-    echo -e "  5. Sposta il file nella cartella comunicazioni:"
-    echo -e "     ${BOLD}mv articolo.md ~/sito-pc-genzano/content/comunicazioni/$(date +%Y-%m-%d)-titolo.md${NC}"
+    echo "  3. Aggiungi il frontmatter in cima (usa opzione 1 del menu per creare"
+    echo "     il file con tutti i campi, poi incolla il contenuto convertito)"
   fi
   ;;
 
@@ -256,21 +199,24 @@ EOF
   echo ""
   echo -e "${GREEN}══ Modifica comunicazione ══${NC}"
   echo ""
-  echo "Comunicazioni disponibili:"
-  echo ""
-  ls -1 "$CONTENT_DIR/comunicazioni/" | grep -v "_index" | nl -ba
-  echo ""
-  read -p "Numero da modificare: " num
-  file=$(ls -1 "$CONTENT_DIR/comunicazioni/" | grep -v "_index" | sed -n "${num}p")
-  if [ -n "$file" ]; then
-    echo ""
-    echo -e "Apro: ${BOLD}$file${NC}"
-    echo -e "${YELLOW}Ricorda: salva con Ctrl+O, esci con Ctrl+X${NC}"
-    echo ""
-    read -p "Premi INVIO per aprire..."
-    nano "$CONTENT_DIR/comunicazioni/$file"
+  files=($(ls -1 "$CONTENT_DIR/comunicazioni/" | grep -v "_index"))
+  if [ ${#files[@]} -eq 0 ]; then
+    echo "Nessuna comunicazione trovata."
   else
-    echo -e "${RED}Selezione non valida.${NC}"
+    for i in "${!files[@]}"; do
+      echo "  $((i+1))) ${files[$i]}"
+    done
+    echo ""
+    read -p "Numero da modificare: " num
+    idx=$((num-1))
+    if [ $idx -ge 0 ] && [ $idx -lt ${#files[@]} ]; then
+      echo ""
+      echo -e "${YELLOW}Salva: Ctrl+O poi INVIO — Esci: Ctrl+X${NC}"
+      read -p "Premi INVIO per aprire..."
+      nano "$CONTENT_DIR/comunicazioni/${files[$idx]}"
+    else
+      echo -e "${RED}Selezione non valida.${NC}"
+    fi
   fi
   ;;
 
@@ -281,21 +227,164 @@ EOF
   echo ""
   echo -e "${RED}══ Elimina comunicazione ══${NC}"
   echo ""
-  echo "Comunicazioni disponibili:"
+  files=($(ls -1 "$CONTENT_DIR/comunicazioni/" | grep -v "_index"))
+  if [ ${#files[@]} -eq 0 ]; then
+    echo "Nessuna comunicazione trovata."
+  else
+    for i in "${!files[@]}"; do
+      echo "  $((i+1))) ${files[$i]}"
+    done
+    echo ""
+    read -p "Numero da eliminare: " num
+    idx=$((num-1))
+    if [ $idx -ge 0 ] && [ $idx -lt ${#files[@]} ]; then
+      echo ""
+      echo -e "${RED}Stai per eliminare: ${files[$idx]}${NC}"
+      read -p "Scrivi 'elimina' per confermare: " conf
+      if [ "$conf" = "elimina" ]; then
+        rm "$CONTENT_DIR/comunicazioni/${files[$idx]}"
+        echo -e "${GREEN}Eliminato.${NC}"
+      else
+        echo "Annullato."
+      fi
+    else
+      echo -e "${RED}Selezione non valida.${NC}"
+    fi
+  fi
+  ;;
+
+# ══════════════════════════════════════════
+# 5) CREA PAGINA
+# ══════════════════════════════════════════
+5)
   echo ""
-  ls -1 "$CONTENT_DIR/comunicazioni/" | grep -v "_index" | nl -ba
+  echo -e "${GREEN}══ Crea nuova pagina ══${NC}"
+  echo ""
+  echo -e "${BOLD}Nome della sezione (diventerà l'URL, es. 'avvisi-neve'):${NC}"
+  echo -e "${YELLOW}Usa lettere minuscole e trattini, niente spazi o accenti.${NC}"
+  read -e -p "> " sezione
+  if [ -z "$sezione" ]; then
+    echo -e "${RED}Errore: il nome è obbligatorio.${NC}"
+    read -p "Premi INVIO..."; exec bash "$0"
+  fi
+
+  echo ""
+  echo -e "${BOLD}Titolo della pagina (come apparirà sul sito):${NC}"
+  read -e -p "> " titolo
+
+  echo ""
+  echo -e "${BOLD}Descrizione breve:${NC}"
+  read -e -p "> " desc
+
+  mkdir -p "$CONTENT_DIR/$sezione"
+  cat > "$CONTENT_DIR/$sezione/_index.md" << EOF
+---
+title: "$titolo"
+description: "$desc"
+layout: "single"
+---
+
+Scrivi qui il contenuto della pagina.
+EOF
+
+  echo ""
+  echo -e "${GREEN}Pagina creata: content/$sezione/_index.md${NC}"
+  echo -e "URL: /$sezione/"
+  echo ""
+  read -p "Aprire il file con nano? [S/n]: " apri
+  [ "$apri" != "n" ] && [ "$apri" != "N" ] && nano "$CONTENT_DIR/$sezione/_index.md"
+  ;;
+
+# ══════════════════════════════════════════
+# 6) MODIFICA PAGINA
+# ══════════════════════════════════════════
+6)
+  echo ""
+  echo -e "${GREEN}══ Modifica pagina ══${NC}"
+  echo ""
+  pagine=()
+  nomi=()
+  while IFS= read -r f; do
+    sez=$(echo "$f" | sed "s|$CONTENT_DIR/||;s|/_index.md||")
+    pagine+=("$f")
+    nomi+=("$sez")
+  done < <(find "$CONTENT_DIR" -maxdepth 2 -name "_index.md" | sort)
+
+  for i in "${!nomi[@]}"; do
+    echo "  $((i+1))) ${nomi[$i]}"
+  done
+  echo ""
+  read -p "Numero da modificare: " num
+  idx=$((num-1))
+  if [ $idx -ge 0 ] && [ $idx -lt ${#pagine[@]} ]; then
+    echo ""
+    echo -e "${YELLOW}Salva: Ctrl+O poi INVIO — Esci: Ctrl+X${NC}"
+    read -p "Premi INVIO per aprire..."
+    nano "${pagine[$idx]}"
+  else
+    echo -e "${RED}Selezione non valida.${NC}"
+  fi
+  ;;
+
+# ══════════════════════════════════════════
+# 7) MODIFICA PAGINA RISCHIO
+# ══════════════════════════════════════════
+7)
+  echo ""
+  echo -e "${GREEN}══ Modifica pagina rischio ══${NC}"
+  echo ""
+  files=($(ls -1 "$CONTENT_DIR/rischi-prevenzione/" | grep -v "_index"))
+  for i in "${!files[@]}"; do
+    echo "  $((i+1))) ${files[$i]}"
+  done
+  echo ""
+  read -p "Numero da modificare: " num
+  idx=$((num-1))
+  if [ $idx -ge 0 ] && [ $idx -lt ${#files[@]} ]; then
+    echo ""
+    echo -e "${YELLOW}Salva: Ctrl+O poi INVIO — Esci: Ctrl+X${NC}"
+    read -p "Premi INVIO per aprire..."
+    nano "$CONTENT_DIR/rischi-prevenzione/${files[$idx]}"
+  else
+    echo -e "${RED}Selezione non valida.${NC}"
+  fi
+  ;;
+
+# ══════════════════════════════════════════
+# 8) ELIMINA PAGINA
+# ══════════════════════════════════════════
+8)
+  echo ""
+  echo -e "${RED}══ Elimina pagina ══${NC}"
+  echo ""
+  echo -e "${YELLOW}ATTENZIONE: le pagine principali del sito (chi-siamo, contatti, ecc.)${NC}"
+  echo -e "${YELLOW}non dovrebbero essere eliminate. Usa questa funzione solo per pagine${NC}"
+  echo -e "${YELLOW}che hai creato tu e che non servono più.${NC}"
+  echo ""
+
+  pagine=()
+  nomi=()
+  while IFS= read -r f; do
+    sez=$(echo "$f" | sed "s|$CONTENT_DIR/||;s|/_index.md||")
+    pagine+=("$f")
+    nomi+=("$sez")
+  done < <(find "$CONTENT_DIR" -maxdepth 2 -name "_index.md" | sort)
+
+  for i in "${!nomi[@]}"; do
+    echo "  $((i+1))) ${nomi[$i]}"
+  done
   echo ""
   read -p "Numero da eliminare: " num
-  file=$(ls -1 "$CONTENT_DIR/comunicazioni/" | grep -v "_index" | sed -n "${num}p")
-  if [ -n "$file" ]; then
+  idx=$((num-1))
+  if [ $idx -ge 0 ] && [ $idx -lt ${#pagine[@]} ]; then
     echo ""
-    echo -e "${RED}Stai per eliminare: $file${NC}"
-    read -p "Sei sicuro? Scrivi 'elimina' per confermare: " conf
+    echo -e "${RED}Stai per eliminare: ${nomi[$idx]}${NC}"
+    read -p "Scrivi 'elimina' per confermare: " conf
     if [ "$conf" = "elimina" ]; then
-      rm "$CONTENT_DIR/comunicazioni/$file"
+      rm -rf "$CONTENT_DIR/${nomi[$idx]}"
       echo -e "${GREEN}Eliminato.${NC}"
     else
-      echo "Operazione annullata."
+      echo "Annullato."
     fi
   else
     echo -e "${RED}Selezione non valida.${NC}"
@@ -303,78 +392,174 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 5) MODIFICA PAGINA
+# 9) ATTIVA EMERGENZA
 # ══════════════════════════════════════════
-5)
+9)
   echo ""
-  echo -e "${GREEN}══ Modifica pagina ══${NC}"
+  echo -e "${RED}══ Attiva emergenza ══${NC}"
   echo ""
-  echo "Pagine disponibili:"
-  echo ""
-  i=1
-  pagine=()
-  while IFS= read -r f; do
-    sezione=$(echo "$f" | sed "s|$CONTENT_DIR/||" | sed 's|/_index.md||')
-    echo "  $i) $sezione"
-    pagine+=("$f")
-    i=$((i+1))
-  done < <(find "$CONTENT_DIR" -maxdepth 2 -name "_index.md" | sort)
-  echo ""
-  read -p "Numero da modificare: " num
-  idx=$((num-1))
-  if [ $idx -ge 0 ] && [ $idx -lt ${#pagine[@]} ]; then
-    file="${pagine[$idx]}"
+
+  # Controlla se c'è un'emergenza sospesa da riattivare
+  titolo_esistente=""
+  if [ -f "$DATA_DIR/emergenza.json" ]; then
+    titolo_esistente=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('titolo',''))" 2>/dev/null)
+    attiva_esistente=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('attiva',False))" 2>/dev/null)
+  fi
+
+  if [ "$attiva_esistente" = "True" ]; then
+    echo -e "${YELLOW}L'emergenza è già attiva!${NC}"
+    echo "Usa opzione 10 per modificarla o 11 per sospenderla."
+    read -p "Premi INVIO..."; exec bash "$0"
+  fi
+
+  if [ -n "$titolo_esistente" ] && [ "$titolo_esistente" != "" ]; then
+    echo -e "Trovata emergenza sospesa: ${BOLD}$titolo_esistente${NC}"
     echo ""
-    echo -e "Apro: ${BOLD}$file${NC}"
-    echo -e "${YELLOW}Ricorda: salva con Ctrl+O, esci con Ctrl+X${NC}"
+    echo "  1) Riattiva questa emergenza"
+    echo "  2) Crea una nuova emergenza"
+    read -p "Scegli [1-2]: " riattiva
+
+    if [ "$riattiva" = "1" ]; then
+      python3 -c "
+import json
+with open('$DATA_DIR/emergenza.json','r') as f: d=json.load(f)
+d['attiva']=True
+d['ultimo_aggiornamento']='$(date -Is)'
+with open('$DATA_DIR/emergenza.json','w') as f: json.dump(d,f,indent=2,ensure_ascii=False)
+"
+      echo ""
+      echo -e "${GREEN}════════════════════════════════════════${NC}"
+      echo -e "${GREEN}Emergenza RIATTIVATA: $titolo_esistente${NC}"
+      echo -e "${GREEN}════════════════════════════════════════${NC}"
+      echo ""
+      echo -e "La homepage è in modalità emergenza."
+      echo -e "Per rendere visibile online: usa opzione ${BOLD}14${NC} del menu."
+      read -p "Premi INVIO..."; exec bash "$0"
+    fi
+  fi
+
+  # Nuova emergenza
+  echo -e "${YELLOW}ATTENZIONE: la homepage si riorganizzerà in modalità emergenza.${NC}"
+  echo ""
+
+  echo "Colore del banner:"
+  echo "  1) Blu    2) Azzurro  3) Verde   4) Giallo"
+  echo "  5) Arancione  6) Rosso  7) Viola"
+  read -p "Scegli [1-7]: " tn
+  case $tn in 1) tipo="blu";; 2) tipo="azzurro";; 3) tipo="verde";; 4) tipo="giallo";; 5) tipo="arancione";; 6) tipo="rosso";; 7) tipo="viola";; *) tipo="blu";; esac
+
+  echo ""
+  echo -e "${BOLD}Titolo del banner:${NC}"
+  read -e -p "> " titolo
+
+  echo ""
+  echo -e "${BOLD}Descrizione (cosa sta succedendo):${NC}"
+  read -e -p "> " desc
+
+  echo ""
+  echo -e "${BOLD}Link per maggiori informazioni (opzionale):${NC}"
+  read -e -p "> " link
+
+  cat > "$DATA_DIR/emergenza.json" << EOF
+{
+  "attiva": true,
+  "tipo": "$tipo",
+  "titolo": "$titolo",
+  "descrizione": "$desc",
+  "link": "$link",
+  "ultimo_aggiornamento": "$(date -Is)"
+}
+EOF
+
+  echo ""
+  echo -e "${GREEN}════════════════════════════════════════${NC}"
+  echo -e "${GREEN}Emergenza ATTIVATA${NC}"
+  echo -e "${GREEN}════════════════════════════════════════${NC}"
+  echo ""
+  echo -e "Per rendere visibile online: usa opzione ${BOLD}14${NC} del menu."
+  ;;
+
+# ══════════════════════════════════════════
+# 10) MODIFICA EMERGENZA
+# ══════════════════════════════════════════
+10)
+  echo ""
+  echo -e "${YELLOW}══ Modifica emergenza attiva ══${NC}"
+  echo ""
+  if [ -f "$DATA_DIR/emergenza.json" ]; then
+    echo "Contenuto attuale:"
     echo ""
-    read -p "Premi INVIO per aprire..."
-    nano "$file"
+    cat "$DATA_DIR/emergenza.json"
+    echo ""
+    echo -e "${YELLOW}Salva: Ctrl+O poi INVIO — Esci: Ctrl+X${NC}"
+    read -p "Premi INVIO per aprire il file..."
+    nano "$DATA_DIR/emergenza.json"
   else
-    echo -e "${RED}Selezione non valida.${NC}"
+    echo "Nessun file emergenza trovato."
   fi
   ;;
 
 # ══════════════════════════════════════════
-# 6) MODIFICA PAGINA RISCHIO
+# 11) SOSPENDI EMERGENZA
 # ══════════════════════════════════════════
-6)
+11)
   echo ""
-  echo -e "${GREEN}══ Modifica pagina rischio ══${NC}"
+  echo -e "${YELLOW}══ Sospendi emergenza ══${NC}"
   echo ""
-  echo "Pagine rischio disponibili:"
-  echo ""
-  ls -1 "$CONTENT_DIR/rischi-prevenzione/" | grep -v "_index" | nl -ba
-  echo ""
-  read -p "Numero da modificare: " num
-  file=$(ls -1 "$CONTENT_DIR/rischi-prevenzione/" | grep -v "_index" | sed -n "${num}p")
-  if [ -n "$file" ]; then
+
+  if [ -f "$DATA_DIR/emergenza.json" ]; then
+    titolo_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('titolo',''))" 2>/dev/null)
+    attiva_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('attiva',False))" 2>/dev/null)
+
+    if [ "$attiva_em" != "True" ]; then
+      echo "L'emergenza non è attiva al momento."
+      read -p "Premi INVIO..."; exec bash "$0"
+    fi
+
+    echo -e "Emergenza attuale: ${BOLD}$titolo_em${NC}"
     echo ""
-    echo -e "Apro: ${BOLD}$file${NC}"
-    echo -e "${YELLOW}Ricorda: salva con Ctrl+O, esci con Ctrl+X${NC}"
+    echo -e "${YELLOW}L'emergenza verrà SOSPESA ma i dati restano salvati.${NC}"
+    echo -e "${YELLOW}Potrai riattivare la stessa emergenza con l'opzione 9.${NC}"
     echo ""
-    read -p "Premi INVIO per aprire..."
-    nano "$CONTENT_DIR/rischi-prevenzione/$file"
+    read -p "Confermi la sospensione? [S/n]: " conf
+
+    if [ "$conf" = "n" ] || [ "$conf" = "N" ]; then
+      echo "Annullato."
+    else
+      python3 -c "
+import json
+with open('$DATA_DIR/emergenza.json','r') as f: d=json.load(f)
+d['attiva']=False
+with open('$DATA_DIR/emergenza.json','w') as f: json.dump(d,f,indent=2,ensure_ascii=False)
+"
+      echo ""
+      echo -e "${GREEN}════════════════════════════════════════${NC}"
+      echo -e "${GREEN}Emergenza SOSPESA${NC}"
+      echo -e "${GREEN}════════════════════════════════════════${NC}"
+      echo ""
+      echo "La homepage è tornata in modalità ordinaria."
+      echo "I dati dell'emergenza sono conservati."
+      echo -e "Per rendere visibile online: usa opzione ${BOLD}14${NC} del menu."
+    fi
   else
-    echo -e "${RED}Selezione non valida.${NC}"
+    echo "Nessun file emergenza trovato."
   fi
   ;;
 
 # ══════════════════════════════════════════
-# 7) ALLERTA METEO
+# 12) ALLERTA METEO
 # ══════════════════════════════════════════
-7)
+12)
   echo ""
   echo -e "${YELLOW}══ Imposta allerta meteo ══${NC}"
   echo ""
-  echo "Livelli disponibili:"
   echo "  1) Verde — Nessuna allerta"
   echo "  2) Gialla — Attenzione"
   echo "  3) Arancione — Preallarme"
   echo "  4) Rossa — Allarme"
   echo ""
-  read -p "Scegli [1-4]: " liv_num
-  case $liv_num in
+  read -p "Scegli [1-4]: " ln
+  case $ln in
     1) livello="verde"; titolo="NESSUNA ALLERTA"; desc="Non sono previsti fenomeni significativi sul nostro territorio.";;
     2) livello="gialla"; titolo="ALLERTA GIALLA"; desc="Criticità ordinaria. Prestare attenzione.";;
     3) livello="arancione"; titolo="ALLERTA ARANCIONE"; desc="Criticità moderata. Limitare gli spostamenti.";;
@@ -392,130 +577,7 @@ EOF
 EOF
   echo ""
   echo -e "${GREEN}Allerta impostata: $titolo${NC}"
-  echo ""
-  echo "NOTA: il dato CSV del DPC ha priorità e sovrascrive"
-  echo "questa impostazione manuale dopo 24 ore."
-  ;;
-
-# ══════════════════════════════════════════
-# 8) PUBBLICA BANNER EMERGENZA
-# ══════════════════════════════════════════
-8)
-  echo ""
-  echo -e "${RED}══ Pubblica banner emergenza ══${NC}"
-  echo ""
-  echo -e "${YELLOW}ATTENZIONE: attivare l'emergenza riorganizza la homepage.${NC}"
-  echo -e "${YELLOW}Il blocco 'Cosa fare adesso' comparirà in alto.${NC}"
-  echo ""
-
-  echo "Colore del banner:"
-  echo "  1) Blu"
-  echo "  2) Azzurro"
-  echo "  3) Verde"
-  echo "  4) Giallo"
-  echo "  5) Arancione"
-  echo "  6) Rosso"
-  echo "  7) Viola"
-  read -p "Scegli [1-7]: " tipo_num
-  case $tipo_num in
-    1) tipo="blu";; 2) tipo="azzurro";; 3) tipo="verde";; 4) tipo="giallo";;
-    5) tipo="arancione";; 6) tipo="rosso";; 7) tipo="viola";; *) tipo="blu";;
-  esac
-
-  echo ""
-  echo -e "${BOLD}Titolo del banner:${NC}"
-  read -e -p "> " titolo
-
-  echo ""
-  echo -e "${BOLD}Descrizione (cosa sta succedendo):${NC}"
-  read -e -p "> " desc
-
-  echo ""
-  echo -e "${BOLD}Link per maggiori informazioni (opzionale, lascia vuoto se non c'è):${NC}"
-  read -e -p "> " link
-
-  cat > "$DATA_DIR/emergenza.json" << EOF
-{
-  "attiva": true,
-  "tipo": "$tipo",
-  "titolo": "$titolo",
-  "descrizione": "$desc",
-  "link": "$link",
-  "ultimo_aggiornamento": "$(date -Is)"
-}
-EOF
-  echo ""
-  echo -e "${GREEN}════════════════════════════════════════${NC}"
-  echo -e "${GREEN}Banner emergenza ATTIVATO${NC}"
-  echo -e "${GREEN}════════════════════════════════════════${NC}"
-  echo ""
-  echo "Per rendere visibile online:"
-  echo -e "  ${BOLD}cd ~/sito-pc-genzano && git add . && git commit -m \"Emergenza attivata\" && git push${NC}"
-  ;;
-
-# ══════════════════════════════════════════
-# 9) MODIFICA BANNER EMERGENZA
-# ══════════════════════════════════════════
-9)
-  echo ""
-  echo -e "${YELLOW}══ Modifica banner emergenza ══${NC}"
-  echo ""
-  echo "Contenuto attuale:"
-  echo ""
-  cat "$DATA_DIR/emergenza.json"
-  echo ""
-  echo -e "${YELLOW}Ricorda: salva con Ctrl+O, esci con Ctrl+X${NC}"
-  read -p "Premi INVIO per aprire il file..."
-  nano "$DATA_DIR/emergenza.json"
-  ;;
-
-# ══════════════════════════════════════════
-# 10) REVOCA EMERGENZA
-# ══════════════════════════════════════════
-10)
-  echo ""
-  echo -e "${GREEN}══ Revoca banner emergenza ══${NC}"
-  echo ""
-  read -p "Confermi la disattivazione del banner? [S/n]: " conf
-  if [ "$conf" = "n" ] || [ "$conf" = "N" ]; then
-    echo "Operazione annullata."
-  else
-    cat > "$DATA_DIR/emergenza.json" << EOF
-{
-  "attiva": false,
-  "tipo": "blu",
-  "titolo": "",
-  "descrizione": "",
-  "link": "",
-  "ultimo_aggiornamento": ""
-}
-EOF
-    echo ""
-    echo -e "${GREEN}Banner emergenza DISATTIVATO.${NC}"
-    echo -e "La homepage è tornata in modalità ordinaria."
-    echo ""
-    echo "Per rendere visibile online:"
-    echo -e "  ${BOLD}cd ~/sito-pc-genzano && git add . && git commit -m \"Emergenza revocata\" && git push${NC}"
-  fi
-  ;;
-
-# ══════════════════════════════════════════
-# 11-12) STRUMENTI
-# ══════════════════════════════════════════
-11)
-  echo ""
-  echo -e "${GREEN}Apro Claude AI nel browser...${NC}"
-  xdg-open "https://claude.ai" 2>/dev/null || echo "Vai su https://claude.ai"
-  ;;
-
-12)
-  echo ""
-  echo -e "${GREEN}Validatore Designers Italia...${NC}"
-  if [ -f "$HOME/valida-contenuto.sh" ]; then
-    bash "$HOME/valida-contenuto.sh"
-  else
-    xdg-open "https://designers.italia.it/modello/comuni/" 2>/dev/null || echo "Vai su https://designers.italia.it/modello/comuni/"
-  fi
+  echo "Il CSV del DPC sovrascrive dopo 24 ore."
   ;;
 
 # ══════════════════════════════════════════
@@ -525,214 +587,142 @@ EOF
   echo ""
   echo -e "${GREEN}══ Test locale ══${NC}"
   echo ""
-  echo -e "Avvio il server locale Hugo."
-  echo -e "Quando è pronto, apri nel browser: ${BOLD}http://localhost:1313/${NC}"
-  echo -e "Per fermare il server: premi ${BOLD}Ctrl+C${NC}"
+  echo -e "Apri nel browser: ${BOLD}http://localhost:1313/${NC}"
+  echo -e "Per fermare: ${BOLD}Ctrl+C${NC}"
   echo ""
   read -p "Premi INVIO per avviare..."
-  cd "$SITO_DIR"
-  hugo server -D
+  cd "$SITO_DIR" && hugo server -D
   ;;
 
 # ══════════════════════════════════════════
-# 14) PUBBLICA MODIFICHE
+# 14) PUBBLICA
 # ══════════════════════════════════════════
 14)
   echo ""
   echo -e "${GREEN}══ Pubblica modifiche online ══${NC}"
   echo ""
   cd "$SITO_DIR"
-
-  # Mostra cosa è cambiato
   echo -e "${BOLD}File modificati:${NC}"
   git status --short
   echo ""
 
-  # Chiedi conferma
-  read -p "Vuoi procedere con la pubblicazione? [S/n]: " conf
-  if [ "$conf" = "n" ] || [ "$conf" = "N" ]; then
-    echo "Operazione annullata."
-    read -p "Premi INVIO per tornare al menu..."
-    exec bash "$0"
+  modifiche=$(git status --short | wc -l)
+  if [ "$modifiche" -eq 0 ]; then
+    echo "Nessuna modifica da pubblicare."
+    read -p "Premi INVIO..."; exec bash "$0"
   fi
 
-  # Messaggio di commit
+  read -p "Procedere con la pubblicazione? [S/n]: " conf
+  [ "$conf" = "n" ] || [ "$conf" = "N" ] && { echo "Annullato."; read -p "Premi INVIO..."; exec bash "$0"; }
+
   echo ""
-  echo -e "${BOLD}Descrizione delle modifiche (es. 'Aggiornamento notizia'):${NC}"
+  echo -e "${BOLD}Descrizione delle modifiche:${NC}"
   read -e -p "> " -i "Aggiornamento contenuti" msg
-  msg=${msg:-"Aggiornamento contenuti"}
 
   echo ""
   echo "Pubblicazione in corso..."
-  echo ""
-
   git add .
   git commit -m "$msg"
   git push
 
-  echo ""
-  echo -e "${GREEN}════════════════════════════════════════${NC}"
-  echo -e "${GREEN}Pubblicato con successo!${NC}"
-  echo -e "${GREEN}════════════════════════════════════════${NC}"
-  echo ""
-  echo "GitHub Actions sta aggiornando i siti."
-  echo "Controlla lo stato su:"
-  echo "  https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions"
-  echo ""
-  echo "I siti saranno aggiornati entro 2-3 minuti."
+  if [ $? -eq 0 ]; then
+    echo ""
+    echo -e "${GREEN}════════════════════════════════════════${NC}"
+    echo -e "${GREEN}Pubblicato!${NC}"
+    echo -e "${GREEN}════════════════════════════════════════${NC}"
+    echo ""
+    echo "I siti saranno aggiornati entro 2-3 minuti."
+    echo "Controlla: https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions"
+    echo ""
+    echo -e "${YELLOW}Dopo 3 minuti, apri il sito e premi Ctrl+F5 per vedere le modifiche.${NC}"
+  else
+    echo ""
+    echo -e "${RED}Errore durante il push!${NC}"
+    echo "Prova a eseguire: git pull --rebase && git push"
+  fi
   ;;
 
 # ══════════════════════════════════════════
-# 15-17) MANUTENZIONE
+# 15) STATO
 # ══════════════════════════════════════════
 15)
-  echo ""
-  echo -e "${GREEN}══ Aggiorna dipendenze ══${NC}"
-  echo ""
-  cd "$SITO_DIR"
-  echo -n "Versione Bootstrap Italia attuale: "
-  cat .bootstrap-italia-version 2>/dev/null || echo "Non trovata"
-  echo ""
-  echo "Il workflow controlla automaticamente ogni lunedì."
-  echo "Per forzare: vai su GitHub Actions e lancia manualmente"
-  echo "il workflow 'update-bootstrap-italia'."
-  ;;
-
-16)
-  echo ""
-  echo -e "${GREEN}══ Ultime 15 modifiche ══${NC}"
-  echo ""
-  cd "$SITO_DIR"
-  git log --oneline -15
-  ;;
-
-17)
   echo ""
   echo -e "${GREEN}══ Stato repository ══${NC}"
   echo ""
   cd "$SITO_DIR"
   git status
+  echo ""
+  echo -e "${BOLD}Ultime 10 modifiche:${NC}"
+  git log --oneline -10
   ;;
 
 # ══════════════════════════════════════════
-# 18-22) LINK RAPIDI
+# 16-21) LINK RAPIDI
 # ══════════════════════════════════════════
-18) xdg-open "https://www.protezionecivilegenzano.it/" 2>/dev/null || echo "https://www.protezionecivilegenzano.it/" ;;
-19) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions" 2>/dev/null || echo "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions" ;;
-20) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano" 2>/dev/null || echo "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano" ;;
-21) xdg-open "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" 2>/dev/null || echo "Vai su protezionecivile.regione.lazio.it" ;;
-22) xdg-open "https://activepager.com/auth/login" 2>/dev/null || echo "https://activepager.com/auth/login" ;;
+16) xdg-open "https://www.protezionecivilegenzano.it/" 2>/dev/null || echo "https://www.protezionecivilegenzano.it/" ;;
+17) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions" 2>/dev/null || echo "Vai su github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions" ;;
+18) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano" 2>/dev/null || echo "Vai su github.com/SviluppoItaliaDigitale/sito-pc-genzano" ;;
+19) xdg-open "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" 2>/dev/null || echo "Vai su protezionecivile.regione.lazio.it" ;;
+20) xdg-open "https://activepager.com/auth/login" 2>/dev/null || echo "https://activepager.com/auth/login" ;;
+21) xdg-open "https://claude.ai" 2>/dev/null || echo "https://claude.ai" ;;
 
 # ══════════════════════════════════════════
-# 23-25) GUIDE
+# 22) STRUTTURA
 # ══════════════════════════════════════════
-23)
-  echo ""
-  echo -e "${GREEN}══ Guida alla pubblicazione ══${NC}"
-  echo ""
-  if [ -f "$HOME/GUIDA-PUBBLICAZIONE.txt" ]; then
-    less "$HOME/GUIDA-PUBBLICAZIONE.txt"
-  elif [ -f "$SITO_DIR/GUIDA-UPLOAD-V2.md" ]; then
-    less "$SITO_DIR/GUIDA-UPLOAD-V2.md"
-  else
-    echo "File guida non trovato."
-  fi
-  ;;
-
-24)
-  echo ""
-  echo -e "${GREEN}══ Checklist contenuti ══${NC}"
-  echo ""
-  if [ -f "$HOME/CHECKLIST-CONTENUTI.txt" ]; then
-    less "$HOME/CHECKLIST-CONTENUTI.txt"
-  else
-    echo "Checklist rapida per ogni comunicazione:"
-    echo ""
-    echo "  [ ] Titolo chiaro e descrittivo"
-    echo "  [ ] Data corretta"
-    echo "  [ ] Badge corretto (Allerta/Avviso/Comunicazione/ecc.)"
-    echo "  [ ] Descrizione breve compilata"
-    echo "  [ ] Autore indicato"
-    echo "  [ ] Testo senza errori"
-    echo "  [ ] Link funzionanti"
-    echo "  [ ] Immagine (se presente) in static/images/"
-    echo "  [ ] Scadenza impostata (se la notizia è temporanea)"
-    echo "  [ ] Test locale eseguito (hugo server)"
-  fi
-  ;;
-
-25)
+22)
   echo ""
   echo -e "${GREEN}══ Struttura del sito ══${NC}"
   echo ""
-  echo -e "${BOLD}MENU PRINCIPALE (7 voci):${NC}"
+  echo -e "${BOLD}MENU PRINCIPALE:${NC}"
   echo "  Home | Chi Siamo | Rischi e Prevenzione | Allerte Meteo"
   echo "  Comunicazioni | Diventa Volontario | Contatti"
   echo ""
-  echo -e "${BOLD}SEZIONI CONTENUTO:${NC}"
-  echo "  content/chi-siamo/           — Chi Siamo"
-  echo "  content/rischi-prevenzione/   — Hub 9 pagine rischio"
-  echo "    rischio-sismico.md"
-  echo "    rischio-idrogeologico.md"
-  echo "    rischio-incendio.md"
-  echo "    vento-forte.md"
-  echo "    temporali-intensi.md"
-  echo "    ondate-di-calore.md"
-  echo "    blackout.md"
-  echo "    kit-emergenza.md"
-  echo "    persone-necessita-specifiche.md"
-  echo "  content/allerte-meteo/        — Sistema allertamento"
-  echo "  content/comunicazioni/        — Articoli e notizie"
-  echo "  content/diventa-volontario/   — Reclutamento"
-  echo "  content/contatti/             — Recapiti e sede"
-  echo "  content/piano-emergenza/      — Piano Comunale"
-  echo "  content/piano-familiare/      — Form interattivo"
-  echo "  content/cartografia/          — Aree emergenza"
-  echo "  content/area-download/        — Documenti PDF"
-  echo "  content/cosa-fare-adesso/     — Azioni immediate"
-  echo "  content/numeri-utili/         — Tutti i numeri"
-  echo "  content/faq/                  — Domande frequenti"
-  echo "  content/formazione/           — Corsi e scuole"
-  echo "  content/siti-utili/           — Link esterni"
+  echo -e "${BOLD}PAGINE RISCHIO (9):${NC}"
+  echo "  rischio-sismico | rischio-idrogeologico | rischio-incendio"
+  echo "  vento-forte | temporali-intensi | ondate-di-calore"
+  echo "  blackout | kit-emergenza | persone-necessita-specifiche"
   echo ""
-  echo -e "${BOLD}DATA FILES (dati semi-dinamici):${NC}"
-  echo "  data/allerta.json             — Stato allerta"
-  echo "  data/emergenza.json           — Banner emergenza"
-  echo "  data/numeri_utili.yaml        — Numeri telefono"
-  echo "  data/quick_links.yaml         — Link rapidi homepage"
-  echo "  data/risk_cards.yaml          — Card rischi"
-  echo "  data/social_links.yaml        — Social"
-  echo "  data/codici_colore.yaml       — Codici allerta"
+  echo -e "${BOLD}ALTRE SEZIONI:${NC}"
+  echo "  piano-emergenza | piano-familiare | cartografia | area-download"
+  echo "  cosa-fare-adesso | numeri-utili | faq | formazione | siti-utili"
+  echo ""
+  echo -e "${BOLD}DATA FILES:${NC}"
+  echo "  allerta.json | emergenza.json | numeri_utili.yaml"
+  echo "  quick_links.yaml | risk_cards.yaml | social_links.yaml"
   echo ""
   echo -e "${BOLD}BADGE COMUNICAZIONI:${NC}"
   echo "  Allerta | Avviso | Comunicazione | Attività"
   echo "  Formazione | Evento | Volontariato"
   echo ""
   echo -e "${BOLD}PARAMETRI ARTICOLI:${NC}"
-  echo "  title       — Titolo (obbligatorio)"
-  echo "  date        — Data pubblicazione (obbligatorio)"
-  echo "  badge       — Tipo comunicazione (obbligatorio)"
-  echo "  description — Breve descrizione (obbligatorio)"
-  echo "  priorita    — 'normale' o 'urgente'"
-  echo "  autore      — Chi ha scritto/approvato"
-  echo "  image       — Immagine copertina"
-  echo "  area        — Zona geografica interessata"
-  echo "  scadenza    — Data dopo la quale è 'scaduta'"
-  echo "  allegati    — Lista PDF allegati"
+  echo "  title, date, badge, description (obbligatori)"
+  echo "  priorita, autore, image, area, scadenza, allegati (opzionali)"
+  ;;
+
+# ══════════════════════════════════════════
+# 23) GUIDA
+# ══════════════════════════════════════════
+23)
+  echo ""
+  if [ -f "$SITO_DIR/GUIDA-UPLOAD-V2.md" ]; then
+    less "$SITO_DIR/GUIDA-UPLOAD-V2.md"
+  elif [ -f "$HOME/GUIDA-PUBBLICAZIONE.txt" ]; then
+    less "$HOME/GUIDA-PUBBLICAZIONE.txt"
+  else
+    echo "File guida non trovato."
+  fi
   ;;
 
 # ══════════════════════════════════════════
 # 0) ESCI
 # ══════════════════════════════════════════
 0)
-  echo ""
-  echo -e "${GREEN}Arrivederci!${NC}"
+  echo -e "\n${GREEN}Arrivederci!${NC}"
   exit 0
   ;;
 
 *)
-  echo ""
-  echo -e "${RED}Opzione non valida. Riprova.${NC}"
+  echo -e "\n${RED}Opzione non valida.${NC}"
   ;;
 
 esac
