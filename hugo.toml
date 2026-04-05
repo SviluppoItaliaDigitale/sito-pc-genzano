@@ -7,6 +7,7 @@ baseURL = "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
 languageCode = "it"
 defaultContentLanguage = "it"
 title = "Protezione Civile Genzano di Roma"
+timeZone = "Europe/Rome"
 
 # Tema personalizzato
 theme = "flavour-pcgenzano"
