@@ -92,11 +92,11 @@ Non esiste un impegno fisso obbligatorio. Ciascun volontario contribuisce in bas
 
 ### Costa qualcosa iscriversi?
 
-L'iscrizione al Gruppo è **gratuita**. È prevista una quota associativa annuale simbolica stabilita dall'Assemblea dei volontari.
+L'iscrizione al Gruppo è **gratuita**. L'iscrizione e tutte le spese sono a carico dell'ente comunale.
 
 ### Quanto tempo devo dedicare?
 
-Non c'è un monte ore obbligatorio. Chiediamo la partecipazione al corso base e la disponibilità durante le allerte. Il resto è in base alla tua disponibilità.
+È previsto un monte ore obbligatorio di **16 ore al mese** per tutti i volontari, necessarie a coprire i turni mensili in sede. Chiediamo inoltre la partecipazione al corso base e la disponibilità durante le allerte.
 
 ### Posso partecipare se lavoro a tempo pieno?
 
