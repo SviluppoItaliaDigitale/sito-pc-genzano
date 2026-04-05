@@ -169,8 +169,8 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 <div class="col-lg-6 mb-3">
 <div class="card h-100 shadow-sm">
 <div class="card-body">
-<h3 class="h6"><i class="bi bi-display text-info me-2" aria-hidden="true"></i> Sala Operativa Mobile</h3>
-<p class="small text-muted mb-0 fst-italic">In allestimento</p>
+<h3 class="h6"><i class="bi bi-display text-info me-2" aria-hidden="true"></i> Iveco Cacciamali</h3>
+<p class="small text-muted mb-0 fst-italic">In allestimento come Sala Operativa Mobile</p>
 </div>
 </div>
 </div>
@@ -219,13 +219,16 @@ Di seguito alcuni eventi e calamità significative dove il nostro gruppo ha part
 <div class="timeline-item"><strong>2000</strong> — Alluvione Bovalino (RC)</div>
 <div class="timeline-item"><strong>2000</strong> — Alluvione Val D'Aosta</div>
 <div class="timeline-item"><strong>2002</strong> — Terremoto Molise</div>
-<div class="timeline-item"><strong>2003</strong> — Alluvione Teramo (CB)</div>
+<div class="timeline-item"><strong>2003</strong> — Alluvione Termoli (CB)</div>
 <div class="timeline-item"><strong>2005</strong> — Funerali Santo Padre</div>
 <div class="timeline-item"><strong>2005</strong> — Elezioni Santo Padre</div>
 <div class="timeline-item"><strong>2009</strong> — Terremoto Abruzzo</div>
 <div class="timeline-item"><strong>2016</strong> — Terremoto Centro Italia (Amatrice, Norcia, Accumoli)</div>
 <div class="timeline-item"><strong>2020</strong> — Emergenza COVID-19</div>
 <div class="timeline-item"><strong>2023</strong> — Riforma ETS e nuovo Statuto</div>
+<div class="timeline-item"><strong>2023</strong> — Alluvione Emilia Romagna</div>
+<div class="timeline-item"><strong>2023</strong> — Alluvione Toscana</div>
+<div class="timeline-item"><strong>2024</strong> — Alluvione Emilia Romagna</div>
 <div class="timeline-item"><strong>2025</strong> — Emergenza incendio Parco del Vesuvio</div>
 <div class="timeline-item"><strong>2025</strong> — Giubileo dei Giovani — Campo base Tor Vergata</div>
 </div>
