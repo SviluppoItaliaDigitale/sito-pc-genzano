@@ -16,7 +16,7 @@
       {{/* Ultimo aggiornamento sito = data e ora della build Hugo */}}
       <div class="utility-bar-item">
         <i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i>
-        Sito aggiornato il&nbsp;<time datetime="{{ now.Format "2006-01-02T15:04:05" }}">{{ now | time.Format ":date_long" }} alle {{ now.Format "15:04" }}</time>
+        Sito aggiornato il&nbsp;<time datetime="{{ now.Format "2006-01-02T15:04:05Z" }}">{{ now | time.Format ":date_long" }} alle {{ now.Format "15:04" }} UTC</time>
       </div>
     </div>
   </div>
