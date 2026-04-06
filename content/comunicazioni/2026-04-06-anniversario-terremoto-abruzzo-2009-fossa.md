@@ -21,7 +21,7 @@ Tra i Comuni che subirono danni gravissimi c'era **Fossa**, un piccolo borgo med
 
 ## La chiamata alle armi
 
-Nel giro di poche ore, la macchina della Protezione Civile nazionale si mosse su tutto il territorio colpito. Tra le organizzazioni che risposero immediatamente all'appello ci fu il **Coordinamento Fepivol** — Federazione Provinciale Volontari — al quale è affiliato il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**.
+Nel giro di poche ore, la macchina della Protezione Civile nazionale si mosse su tutto il territorio colpito. Tra le organizzazioni che risposero immediatamente all'appello ci fu il **Coordinamento Fepivol**, coordinamento regionale di protezione civile della Regione Lazio, al quale è affiliato il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**.
 
 I volontari genzanesi lasciarono le proprie famiglie, i propri lavori, la propria quotidianità, e raggiunsero l'area del sisma in tempi rapidissimi. Non era la prima volta che erano chiamati a operare fuori dal territorio comunale, ma ciò che li attendeva a Fossa era uno scenario tra i più difficili mai affrontati.
 
