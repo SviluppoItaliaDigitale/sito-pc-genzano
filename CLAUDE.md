@@ -76,6 +76,25 @@ Custom theme, not an external dependency — edit freely. Structure:
 - `comunicazioni.md` — full front matter template for news posts (use this)
 - `default.md` — minimal template for other pages
 
+## Regole contenuti e qualità
+
+1. **FORMATO DATA**: nel frontmatter degli articoli usare SEMPRE il formato `AAAA-MM-GG` (esempio: `2026-04-06`). MAI usare il formato con timezone (esempio: `2026-04-06T03:32:00Z`) perché causa esclusione degli articoli dalla build.
+
+2. **CONFORMITÀ AGID**: il sito rispetta rigorosamente le linee guida AGID/Designers Italia per la PA. Ogni template deve usare Bootstrap Italia, garantire accessibilità WCAG 2.2, e seguire la struttura AGID.
+
+3. **QUALITÀ TESTI**: ogni articolo o testo prodotto deve essere:
+   - Scritto in italiano corretto
+   - Riscritto secondo le linee guida AGID per il linguaggio della PA
+   - Frasi brevi e chiare
+   - Voce attiva preferita alla passiva
+   - Niente burocratese o termini tecnici non necessari
+   - Accessibile a tutti i cittadini
+   - Inclusivo nel linguaggio
+
+4. **VERIFICA**: prima di pubblicare qualsiasi contenuto, controllare sempre ortografia, grammatica e conformità AGID. Se il testo fornito dall'utente non rispetta questi criteri, riscriverlo mantenendo il significato.
+
+5. **AGGIORNAMENTO**: le linee guida AGID sono in continuo aggiornamento. Verificare periodicamente il manuale su designers.italia.it per eventuali novità.
+
 ## Key operational notes
 
 - **To activate emergency mode**: set `"attiva": true` in `data/emergenza.json` and fill `tipo`, `titolo`, `descrizione`. Reset to `false` when done.
