@@ -1,10 +1,19 @@
 ---
 title: "Volontari in allerta"
 date: 2025-08-16
+description: "Dopo l'intervento per l'incendio del Parco del Vesuvio e un vasto incendio locale, i volontari del Gruppo restano in stato di allerta."
 badge: "Allerta"
-description: "I volontari del Gruppo mantengono alto il livello di allerta per le prossime attivazioni."
+priorita: "urgente"
+autore: "Gruppo Comunale Volontari PC Genzano"
+image: ""
+scadenza: ""
+area: "Territorio comunale di Genzano di Roma"
+allegati: []
+draft: false
 ---
 
-A seguito dell'impegno nell'emergenza nazionale per l'incendio del Parco del Vesuvio e del successivo intervento per un vasto incendio sul nostro territorio, i volontari del Gruppo mantengono alto il livello di allerta per le prossime attivazioni.
+I volontari del Gruppo hanno partecipato all'emergenza nazionale per l'incendio del Parco del Vesuvio e a un successivo intervento per un vasto incendio sul nostro territorio.
 
-Per informazioni contattare la sede del gruppo.
+Al termine delle operazioni, il Gruppo mantiene un alto livello di allerta per eventuali nuove attivazioni.
+
+Per informazioni, contatta la sede del Gruppo.
