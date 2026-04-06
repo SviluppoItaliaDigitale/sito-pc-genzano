@@ -60,6 +60,7 @@ These JSON/YAML files are the primary way to update dynamic site content without
 
 - `comunicazioni/` — News posts. Use the archetype: `hugo new comunicazioni/YYYY-MM-DD-titolo.md`
   - Key front matter: `badge` (Allerta/Avviso/Comunicazione/Attività/Formazione/Evento/Volontariato), `priorita` (normale/urgente), `scadenza` (date), `allegati` (list of PDFs), `draft`
+  - **IMPORTANTE**: nel frontmatter degli articoli usare sempre il formato data semplice `AAAA-MM-GG` (esempio: `2026-04-06`), MAI il formato con orario e timezone (esempio: `2026-04-06T03:32:00Z`). Il formato con timezone causa problemi di pubblicazione.
 - All other folders are static pages (one `_index.md` per section)
 
 ### Theme (`themes/flavour-pcgenzano/`)
