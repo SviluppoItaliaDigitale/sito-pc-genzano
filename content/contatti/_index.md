@@ -74,6 +74,7 @@ Seguici per ricevere aggiornamenti, allerte e comunicazioni:
 | **Diventare volontario** | Vieni in sede, chiama o [scrivi un'email](mailto:segreteria@protezionecivilegenzano.it) |
 | **Collaborazione con scuole** | Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) |
 | **Segnalazione problema sul sito** | Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) |
+| **Media e giornalisti** (richiesta interviste, dichiarazioni, immagini) | Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) |
 
 ## Mappa della Sede
 
