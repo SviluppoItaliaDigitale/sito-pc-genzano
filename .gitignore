@@ -17,3 +17,6 @@ Thumbs.db
 # Node (se usato)
 node_modules/
 package-lock.json
+
+# Claude Code (impostazioni locali)
+.claude/settings.local.json
