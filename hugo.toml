@@ -27,8 +27,7 @@ theme = "flavour-pcgenzano"
   telegram = "https://t.me/pcalfagenzano"
   linktree = "https://linktr.ee/protezionecivilegenzano"
   gestionale = "https://activepager.com/auth/login"
-  # Imposta a true quando avrai attivato HTTPS
-  httpsAttivo = false
+  httpsAttivo = true
   # Link alla dichiarazione di accessibilità su form.agid.gov.it
   dichiarazioneAccessibilita = ""
   # Informazioni istituzionali

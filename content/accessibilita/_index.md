@@ -14,15 +14,9 @@ La presente dichiarazione si applica al sito web **www.protezionecivilegenzano.i
 
 ### Conformità
 
-Questo sito web è stato progettato seguendo le **Linee Guida WCAG 2.1 livello AA** e utilizza il framework Bootstrap Italia 2.x del design system della Pubblica Amministrazione italiana.
+Questo sito web è stato progettato seguendo le **Linee Guida WCAG 2.2 livello AA** e utilizza il framework Bootstrap Italia 2.x del design system della Pubblica Amministrazione italiana.
 
-<!-- AZIONE RICHIESTA:
-     Compilare la Dichiarazione di accessibilità ufficiale su https://form.agid.gov.it/
-     e inserire qui il link generato.
-     Ad esempio:
-     La dichiarazione di accessibilità ufficiale è consultabile al seguente link:
-     [Dichiarazione di Accessibilità su AGID](https://form.agid.gov.it/view/XXXXXXXX)
--->
+La dichiarazione di accessibilità ufficiale, compilata secondo quanto previsto dalla Decisione di esecuzione (UE) 2018/1523, sarà pubblicata su [form.agid.gov.it](https://form.agid.gov.it/) e il relativo link verrà inserito in questa pagina.
 
 ### Meccanismo di feedback
 

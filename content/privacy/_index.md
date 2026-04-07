@@ -64,7 +64,7 @@ Il presente sito, essendo un sito statico, **utilizza esclusivamente cookie tecn
 
 ### Cookie di terze parti
 
-Il sito incorpora un widget meteo di Windy.com che potrebbe installare propri cookie. Per la politica sui cookie di Windy, si rimanda a: [Windy Privacy Policy](https://www.windy.com/privacy).
+Il presente sito non incorpora widget, player o strumenti di terze parti che installano cookie di profilazione.
 
 ### Come disabilitare i cookie
 
