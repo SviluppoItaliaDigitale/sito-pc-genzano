@@ -70,8 +70,8 @@
           <ul class="list-unstyled mb-0">
             {{ range . }}
             <li class="mb-1">
-              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> {{ .titolo }}
+              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .titolo }} (PDF, si apre in una nuova finestra)">
+                <i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> {{ .titolo }} <span class="visually-hidden">(PDF, si apre in una nuova finestra)</span>
               </a>
             </li>
             {{ end }}

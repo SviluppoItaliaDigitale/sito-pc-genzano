@@ -28,7 +28,7 @@
               </div>
               <h2 class="notizia-titolo"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
               <p class="notizia-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 150 }}{{ end }}</p>
-              <a href="{{ .Permalink }}" class="notizia-link">Leggi di più <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              <a href="{{ .Permalink }}" class="notizia-link" aria-label="Leggi di più: {{ .Title }}">Leggi di più <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>

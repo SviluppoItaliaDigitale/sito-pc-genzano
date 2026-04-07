@@ -13,10 +13,11 @@
   </div>
   <div class="p-3">
     <p class="small mb-1">{{ $allerta.descrizione }}</p>
+    {{ with $allerta.ultimo_aggiornamento }}
     <p class="small text-muted mb-2">
-      Zona: {{ $allerta.zona }}<br>
-      {{ with $allerta.ultimo_check }}Ultimo controllo: {{ . }}{{ end }}
+      <i class="bi bi-clock me-1" aria-hidden="true"></i>Aggiornato il: <time datetime="{{ . }}">{{ . | time.Format ":date_long" }}</time>
     </p>
+    {{ end }}
     <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary w-100">
       Vai al Bollettino Ufficiale
     </a>

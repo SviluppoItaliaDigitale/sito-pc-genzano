@@ -161,8 +161,8 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 <div class="col-lg-6 mb-3">
 <div class="card h-100 shadow-sm">
 <div class="card-body">
-<h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> Fiat Doblo</h3>
-<p class="small text-muted mb-0">Trasporto persone, unita droni e attrezzature</p>
+<h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> Fiat Doblò</h3>
+<p class="small text-muted mb-0">Trasporto persone, unità droni e attrezzature</p>
 </div>
 </div>
 </div>
