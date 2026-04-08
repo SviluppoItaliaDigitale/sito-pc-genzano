@@ -1,0 +1,80 @@
+name: "🔗 Verifica link normativa"
+
+on:
+  schedule:
+    # Ogni primo del mese alle 08:00 UTC
+    - cron: "0 8 1 * *"
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🔍 Verifica link portali normativi"
+        id: check
+        run: |
+          FAILED=""
+
+          check_url() {
+            local url="$1"
+            local label="$2"
+            HTTP=$(curl -o /dev/null -s -w "%{http_code}" --max-time 15 --user-agent "Mozilla/5.0" "$url")
+            if [ "$HTTP" -ge 200 ] && [ "$HTTP" -lt 400 ]; then
+              echo "✅ OK ($HTTP): $label"
+            else
+              echo "❌ ERRORE ($HTTP): $label — $url"
+              FAILED="$FAILED\n- $label ($HTTP): $url"
+            fi
+          }
+
+          # Portali ufficiali
+          check_url "https://protezionecivile.regione.lazio.it/agenzia/normative/regolamenti-regionali-dgr" \
+            "Normativa regionale Lazio (Agenzia PC Lazio)"
+
+          check_url "https://www.protezionecivile.gov.it/it/dipartimento/amministrazione-trasparente/provvedimenti-normativi/" \
+            "Normativa nazionale (Dipartimento PC)"
+
+          # Documenti PDF locali sul server
+          check_url "https://www.protezionecivilegenzano.it/documenti/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf" \
+            "Piano di Emergenza Comunale"
+
+          check_url "https://www.protezionecivilegenzano.it/documenti/normativa/Ordinanza_Sindacale_AIB_2025.pdf" \
+            "Ordinanza Sindacale AIB 2025"
+
+          check_url "https://www.protezionecivilegenzano.it/documenti/normativa/Piano_AIB_Lazio.pdf" \
+            "Piano AIB Lazio"
+
+          check_url "https://www.protezionecivilegenzano.it/documenti/normativa/Piano_Triennale_PC_Lazio.pdf" \
+            "Piano Triennale PC Lazio"
+
+          # Normativa Normattiva
+          check_url "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018;1~art25!vig=" \
+            "D.Lgs. 1/2018 Testo Unico PC"
+
+          check_url "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2000;353" \
+            "L. 353/2000 Incendi boschivi"
+
+          if [ -n "$FAILED" ]; then
+            echo "found_errors=true" >> "$GITHUB_OUTPUT"
+            printf "failed_links<<EOF\n%b\nEOF" "$FAILED" >> "$GITHUB_OUTPUT"
+          else
+            echo "found_errors=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: "🚨 Apri issue se ci sono errori"
+        if: steps.check.outputs.found_errors == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const failed = `${{ steps.check.outputs.failed_links }}`;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Automatico] Link normativa non raggiungibili — ${today}`,
+              body: `## Verifica mensile link normativa — ${today}\n\nI seguenti link risultano non raggiungibili o restituiscono un errore:\n\n${failed}\n\n**Azione richiesta:** verificare e aggiornare i link nella pagina [Area Download](/content/area-download/_index.md).\n\n---\n*Issue generata automaticamente dal workflow \`check-normativa-links.yml\`.*`,
+              labels: ['manutenzione', 'link-rotti']
+            });

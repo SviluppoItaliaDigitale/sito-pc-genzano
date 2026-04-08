@@ -38,6 +38,18 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 
 ## Normativa Regionale (Lazio)
 
+<div class="card border-primary mb-4">
+<div class="card-body bg-primary bg-opacity-10 p-3">
+<h3 class="h6 text-primary mb-2"><i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Portale normativo ufficiale — Agenzia di Protezione Civile della Regione Lazio</h3>
+<p class="small mb-2">Regolamenti regionali, delibere di giunta e direttive in vigore. L'elenco è aggiornato direttamente dall'Agenzia regionale.</p>
+<a href="https://protezionecivile.regione.lazio.it/agenzia/normative/regolamenti-regionali-dgr" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+  Consulta la normativa regionale <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
+</a>
+</div>
+</div>
+
+Documenti regionali disponibili localmente:
+
 | Documento | Formato |
 |---|---|
 | [Piano AIB Lazio](https://www.protezionecivilegenzano.it/documenti/normativa/Piano_AIB_Lazio.pdf) | PDF |
@@ -48,10 +60,30 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 
 ## Normativa Nazionale
 
+<div class="card border-secondary mb-4">
+<div class="card-body bg-secondary bg-opacity-10 p-3">
+<h3 class="h6 mb-2"><i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Portale normativo ufficiale — Dipartimento della Protezione Civile</h3>
+<p class="small mb-2">Provvedimenti normativi in vigore pubblicati dal Dipartimento nazionale. L'elenco è aggiornato direttamente dal DPC.</p>
+<a href="https://www.protezionecivile.gov.it/it/dipartimento/amministrazione-trasparente/provvedimenti-normativi/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+  Consulta la normativa nazionale <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
+</a>
+</div>
+</div>
+
+Principali riferimenti normativi nazionali in vigore:
+
 | Documento | Fonte |
 |---|---|
 | [Testo Unico della Protezione Civile (D.Lgs. n. 1/2018)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018;1~art25!vig=) | Normattiva |
 | [Legge-quadro incendi boschivi (L. n. 353/2000)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2000;353) | Normattiva |
+
+<div class="card border-0 bg-light mt-3 mb-2">
+<div class="card-body py-2 px-3 small text-muted">
+<i class="bi bi-clock-history me-1" aria-hidden="true"></i>
+I link ai portali ufficiali vengono verificati automaticamente ogni mese. Ultimo controllo: aprile 2026.
+Per segnalare un link non funzionante scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.
+</div>
+</div>
 
 ## Materiale Informativo e Divulgativo
 
