@@ -43,9 +43,9 @@
 
       {{/* Immagine */}}
       {{ with .Params.image }}
-      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ . }}" alt="" loading="lazy"></div>
+      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy"></div>
       {{ else }}
-      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy"></div>
+      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy"></div>
       {{ end }}
 
       {{ else }}

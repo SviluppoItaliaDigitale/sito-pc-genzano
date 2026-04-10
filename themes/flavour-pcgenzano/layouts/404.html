@@ -11,11 +11,11 @@
       <h2 class="h4 mb-3">La pagina che cerchi non esiste più</h2>
       <p class="text-muted mb-4">Il nostro sito web è stato completamente rinnovato. La pagina che cercavi potrebbe essere stata spostata o rinominata.</p>
       <div class="d-flex flex-wrap justify-content-center gap-2">
-        <a href="/" class="btn btn-primary">Vai alla Home</a>
-        <a href="/chi-siamo/" class="btn btn-outline-primary">Chi Siamo</a>
-        <a href="/comunicazioni/" class="btn btn-outline-primary">Comunicazioni</a>
-        <a href="/contatti/" class="btn btn-outline-primary">Contatti</a>
-        <a href="/cerca/" class="btn btn-outline-primary">Cerca nel sito</a>
+        <a href="{{ "/" | relURL }}" class="btn btn-primary">Vai alla Home</a>
+        <a href="{{ "/chi-siamo/" | relURL }}" class="btn btn-outline-primary">Chi Siamo</a>
+        <a href="{{ "/comunicazioni/" | relURL }}" class="btn btn-outline-primary">Comunicazioni</a>
+        <a href="{{ "/contatti/" | relURL }}" class="btn btn-outline-primary">Contatti</a>
+        <a href="{{ "/cerca/" | relURL }}" class="btn btn-outline-primary">Cerca nel sito</a>
       </div>
     </div>
   </div>

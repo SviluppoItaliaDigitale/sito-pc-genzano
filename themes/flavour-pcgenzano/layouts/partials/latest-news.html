@@ -12,8 +12,8 @@
       <div class="col-lg-6 mb-4">
         <a href="{{ .Permalink }}" class="card card-notizia-hero text-decoration-none h-100">
           <div class="card-notizia-hero-img">
-            {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">
-            {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy">{{ end }}
+            {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+            {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
           </div>
           <div class="card-body">
             {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}">{{ . }}</span>{{ end }}
@@ -31,8 +31,8 @@
           <div class="row g-0">
             <div class="col-4">
               <div class="card-notizia-small-img">
-                {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">
-                {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" loading="lazy">{{ end }}
+                {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+                {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
               </div>
             </div>
             <div class="col-8">
