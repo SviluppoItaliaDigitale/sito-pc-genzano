@@ -23,12 +23,12 @@
     "addressRegion": "RM",
     "addressCountry": "IT"
   },
-  "sameAs": [
-    {{ with .Site.Params.facebook }}"{{ . }}"{{ end }}
-    {{ with .Site.Params.instagram }},"{{ . }}"{{ end }}
-    {{ with .Site.Params.telegram }},"{{ . }}"{{ end }}
-    {{ with .Site.Params.twitter }},"{{ . }}"{{ end }}
-  ]
+  {{- $sameAs := slice -}}
+  {{- with .Site.Params.facebook }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  {{- with .Site.Params.instagram }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  {{- with .Site.Params.telegram }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  {{- with .Site.Params.twitter }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  "sameAs": {{ $sameAs | jsonify }}
 }
 </script>
 {{ else if eq .Section "comunicazioni" }}
