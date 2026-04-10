@@ -52,14 +52,47 @@ Aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata, dove v
 | AR3 | Campo Sportivo Via Sardegna | Via Sardegna |
 | AR4 | Campo Sportivo Salesiani | Via Appia Nuova (Salesiani) |
 
+## Segnaletica delle aree di emergenza
+
+Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che identificano le aree di emergenza previste dal Piano Comunale. Conoscere questa segnaletica aiuta a orientarsi rapidamente in caso di necessità.
+
+I cartelli indicano:
+
+- **Aree di attesa** — dove la popolazione deve radunarsi dopo un evento
+- **Aree di ammassamento** — destinate ai mezzi e ai soccorritori
+- **Aree di ricovero** — per l'alloggio temporaneo degli evacuati
+
+<div class="row row-cols-1 row-cols-md-2 g-3 mb-4">
+<div class="col">
+<div class="card h-100 border-primary">
+<div class="card-body text-center">
+<i class="bi bi-signpost-2 display-5 text-primary mb-3" aria-hidden="true"></i>
+<h3 class="h6">Consulta i cartelli</h3>
+<p class="small">Visualizza tutti i cartelli segnaletici installati nelle aree di emergenza del territorio comunale.</p>
+<a href="https://www.protezionecivilegenzano.it/cartelli/" class="btn btn-outline-primary btn-sm">Vai alla galleria cartelli</a>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card h-100 border-success">
+<div class="card-body text-center">
+<i class="bi bi-geo-alt display-5 text-success mb-3" aria-hidden="true"></i>
+<h3 class="h6">Individua la tua area</h3>
+<p class="small">Cerca nelle tabelle sopra l'area di attesa più vicina a casa tua e comunicala alla tua famiglia.</p>
+<a href="#aree-di-attesa-della-popolazione-aa" class="btn btn-outline-success btn-sm">Vai alle aree di attesa</a>
+</div>
+</div>
+</div>
+</div>
+
 ## Mappe scaricabili
 
-- [Carta delle Aree di Emergenza e degli Edifici Strategici (PDF)](https://www.protezionecivilegenzano.it/documenti/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf)
-- [Carta di Inquadramento Territoriale (PDF)](https://www.protezionecivilegenzano.it/documenti/normativa/Inquadramento_Territoriale_PC_Genzano.pdf)
-- [Carta Rischio Idrogeologico (PDF)](https://www.protezionecivilegenzano.it/documenti/normativa/Rischio_Idrogeologico_PC_Genzano.pdf)
-- [Carta Rischio Incendio (PDF)](https://www.protezionecivilegenzano.it/documenti/normativa/Rischio_Incendio_PC_Genzano.pdf)
-- [Carta Rischio Sismico (PDF)](https://www.protezionecivilegenzano.it/documenti/normativa/Rischio_Sismico_PC_Genzano.pdf)
-- [Cartina Genzano di Roma (PDF)](https://www.protezionecivilegenzano.it/documenti/normativa/Cartina_Genzano_di_Roma.pdf)
+- [Carta delle Aree di Emergenza e degli Edifici Strategici (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf)
+- [Carta di Inquadramento Territoriale (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Inquadramento_Territoriale_PC_Genzano.pdf)
+- [Carta Rischio Idrogeologico (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Idrogeologico_PC_Genzano.pdf)
+- [Carta Rischio Incendio (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Incendio_PC_Genzano.pdf)
+- [Carta Rischio Sismico (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Sismico_PC_Genzano.pdf)
+- [Cartina Genzano di Roma (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Cartina_Genzano_di_Roma.pdf)
 
 ## Mappe esterne ufficiali
 

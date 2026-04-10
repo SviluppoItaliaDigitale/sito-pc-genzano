@@ -74,7 +74,7 @@ Sono le sedi operative da cui viene coordinata l'emergenza: Municipio, sede Poli
 
 ## Documenti scaricabili
 
-- [Piano di Emergenza Comunale di PC](https://www.protezionecivilegenzano.it/documenti/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf)
-- [Carta delle Aree di Emergenza e degli Edifici Strategici](https://www.protezionecivilegenzano.it/documenti/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf)
+- [Piano di Emergenza Comunale di PC](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf)
+- [Carta delle Aree di Emergenza e degli Edifici Strategici](https://www.protezionecivilegenzano.it/area-download/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf)
 
 Per tutti i documenti disponibili, visita l'[Area Download](/area-download/).

@@ -24,18 +24,21 @@ Redirect 301 /rischio-incendio.html /rischi-prevenzione/rischio-incendio/
 Redirect 301 /cosafacciamo.html /chi-siamo/
 Redirect 301 /simulatore.html /
 
-# Cartelle vecchie → home
+# Cartelle vecchie → nuove
 Redirect 301 /assets/ /
 Redirect 301 /cache/ /
-Redirect 301 /cartelli/ /
 Redirect 301 /documenti/ /area-download/
-Redirect 301 /formazionepc/ /
-Redirect 301 /giochi-bambini/ /
 Redirect 301 /immagini_web/ /
 Redirect 301 /piano_protezione_civile/ /piano-emergenza/
-Redirect 301 /quizpc/ /
 Redirect 301 /sito_pc/ /
 Redirect 301 /sitovecchio/ /
+
+# Le cartelle seguenti contengono risorse standalone sul server FTP
+# e NON devono essere reindirizzate — i file sono serviti direttamente
+# /cartelli/        — segnaletica aree di emergenza
+# /giochi-bambini/  — giochi educativi per bambini
+# /formazionepc/    — piattaforma e-learning
+# /quizpc/          — quiz interattivo
 
 # Forza HTTPS
 RewriteCond %{HTTPS} off

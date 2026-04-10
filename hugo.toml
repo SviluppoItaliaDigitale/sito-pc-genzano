@@ -14,6 +14,8 @@ theme = "flavour-pcgenzano"
 
 # Impostazioni generali
 [params]
+  # URL di produzione — usato per canonical, og:url e sitemap
+  productionBaseURL = "https://www.protezionecivilegenzano.it/"
   description = "Sito ufficiale del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
   author = "Gruppo Comunale Volontari di Protezione Civile Genzano di Roma"
   cf = "92011880588"

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Sitemap: https://www.protezionecivilegenzano.it/sitemap.xml
 
-# Blocca i file del vecchio sito
+# Blocca le pagine redirect del vecchio sito
 Disallow: /allertameteo.html
 Disallow: /areadownload.html
 Disallow: /areerischio.html
@@ -26,14 +26,12 @@ Disallow: /simulatore.html
 Disallow: /sitiutili.html
 Disallow: /search.js
 Disallow: /style.css
+
+# Cartelle del vecchio sito (redirect a nuove sezioni)
 Disallow: /assets/
 Disallow: /cache/
-Disallow: /cartelli/
 Disallow: /documenti/
-Disallow: /formazionepc/
-Disallow: /giochi-bambini/
 Disallow: /immagini_web/
 Disallow: /piano_protezione_civile/
-Disallow: /quizpc/
 Disallow: /sito_pc/
 Disallow: /sitovecchio/

@@ -9,7 +9,15 @@
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-  <meta property="og:url" content="{{ .Permalink }}">
+  {{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
+  {{- $basePath := (urls.Parse .Site.BaseURL).Path | default "/" -}}
+  {{- $pagePath := strings.TrimPrefix $basePath .RelPermalink -}}
+  {{- $canonicalURL := printf "%s%s" (strings.TrimRight "/" $prodBase) (printf "/%s" $pagePath) -}}
+  {{- $isProduction := eq (strings.TrimRight "/" .Site.BaseURL) (strings.TrimRight "/" $prodBase) -}}
+  {{- if not $isProduction }}
+  <meta name="robots" content="noindex, nofollow">
+  {{- end }}
+  <meta property="og:url" content="{{ $canonicalURL }}">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="{{ .Site.Title }}">
   {{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">
@@ -24,7 +32,7 @@
   <link rel="stylesheet" href="{{ "vendor/bootstrap-italia/css/bootstrap-italia.min.css" | relURL }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
-  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="canonical" href="{{ $canonicalURL }}">
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
   {{ partial "structured-data.html" . }}
 </head>
