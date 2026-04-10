@@ -41,6 +41,12 @@ jobs:
           dangerous-clean-slate: false
           timeout: 60000
           log-level: verbose
+          exclude: |
+            **/documenti/**
+            **/cartelli/**
+            **/giochi-bambini/**
+            **/formazionepc/**
+            **/quizpc/**
 
       - name: "🏗️ Build per GitHub Pages"
         run: hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
