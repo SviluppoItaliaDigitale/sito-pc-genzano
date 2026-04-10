@@ -27,11 +27,16 @@ Redirect 301 /simulatore.html /
 # Cartelle vecchie → nuove
 Redirect 301 /assets/ /
 Redirect 301 /cache/ /
-Redirect 301 /documenti/ /area-download/
 Redirect 301 /immagini_web/ /
 Redirect 301 /piano_protezione_civile/ /piano-emergenza/
 Redirect 301 /sito_pc/ /
 Redirect 301 /sitovecchio/ /
+
+# /documenti/download/ contiene PDF accessibili direttamente (NON reindirizzare)
+# /documenti/normativa/ reindirizza a /area-download/normativa/ (file duplicati lì)
+# Tutto il resto di /documenti/ reindirizza a /area-download/
+RewriteCond %{REQUEST_URI} !^/documenti/download/
+RewriteRule ^documenti/(.*)$ /area-download/$1 [R=301,L]
 
 # Le cartelle seguenti contengono risorse standalone sul server FTP
 # e NON devono essere reindirizzate — i file sono serviti direttamente

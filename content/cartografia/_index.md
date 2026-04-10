@@ -56,33 +56,40 @@ Aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata, dove v
 
 Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che identificano le aree di emergenza previste dal Piano Comunale. Conoscere questa segnaletica aiuta a orientarsi rapidamente in caso di necessità.
 
-I cartelli indicano:
+<div class="card border-primary mb-4">
+<div class="card-body bg-primary bg-opacity-10 p-3">
+<p class="mb-0"><i class="bi bi-signpost-2 me-2" aria-hidden="true"></i><strong>Cosa indicano i cartelli:</strong> ogni area di emergenza è contrassegnata da un cartello che ne riporta il codice identificativo (AA, AS, AR), la denominazione e la tipologia. Individua quelli più vicini a casa tua.</p>
+</div>
+</div>
 
-- **Aree di attesa** — dove la popolazione deve radunarsi dopo un evento
-- **Aree di ammassamento** — destinate ai mezzi e ai soccorritori
-- **Aree di ricovero** — per l'alloggio temporaneo degli evacuati
+### Aree di Attesa (AA)
 
-<div class="row row-cols-1 row-cols-md-2 g-3 mb-4">
-<div class="col">
-<div class="card h-100 border-primary">
-<div class="card-body text-center">
-<i class="bi bi-signpost-2 display-5 text-primary mb-3" aria-hidden="true"></i>
-<h3 class="h6">Consulta i cartelli</h3>
-<p class="small">Visualizza tutti i cartelli segnaletici installati nelle aree di emergenza del territorio comunale.</p>
-<a href="https://www.protezionecivilegenzano.it/cartelli/" class="btn btn-outline-primary btn-sm">Vai alla galleria cartelli</a>
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 mb-4">
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA1.png" class="card-img-top" alt="Cartello area di attesa AA1 — Palazzo Sforza, Piazza Tommaso Frasconi"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA1</p><p class="small text-muted mb-0">Palazzo Sforza</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA2.png" class="card-img-top" alt="Cartello area di attesa AA2 — Parcheggio Via Piave"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA2</p><p class="small text-muted mb-0">Via Piave</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA3.png" class="card-img-top" alt="Cartello area di attesa AA3 — Parcheggio Via Toscana / Via Lazio"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA3</p><p class="small text-muted mb-0">Via Toscana</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA4.png" class="card-img-top" alt="Cartello area di attesa AA4 — Parcheggio Via Enrico Mattei"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA4</p><p class="small text-muted mb-0">Via E. Mattei</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA5.png" class="card-img-top" alt="Cartello area di attesa AA5 — Parcheggio Via Napoli / Via Emilia Romagna"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA5</p><p class="small text-muted mb-0">Via Napoli</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA6.png" class="card-img-top" alt="Cartello area di attesa AA6 — Parcheggio Palazzetto dello Sport, Via G. di Vittorio"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA6</p><p class="small text-muted mb-0">Palazzetto Sport</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA7.png" class="card-img-top" alt="Cartello area di attesa AA7 — Scuola C. A. dalla Chiesa, Via Appia Vecchia"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA7</p><p class="small text-muted mb-0">C. A. dalla Chiesa</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA8.png" class="card-img-top" alt="Cartello area di attesa AA8 — Parcheggio Via del Lavoro, Zona Industriale"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA8</p><p class="small text-muted mb-0">Zona Industriale</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA9.png" class="card-img-top" alt="Cartello area di attesa AA9 — Parcheggio Via Colli di Cicerone"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA9</p><p class="small text-muted mb-0">Colli di Cicerone</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA10.png" class="card-img-top" alt="Cartello area di attesa AA10 — Piazzale Frazione Landi"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA10</p><p class="small text-muted mb-0">Landi</p></div></div></div>
 </div>
+
+### Aree di Ammassamento Soccorritori (AS)
+
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 mb-4">
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AS1.png" class="card-img-top" alt="Cartello area ammassamento soccorritori AS1 — Via del Lavoro, Zona Industriale"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AS1</p><p class="small text-muted mb-0">Via del Lavoro</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AS2.png" class="card-img-top" alt="Cartello area ammassamento soccorritori AS2 — Viale G. Mazzini"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AS2</p><p class="small text-muted mb-0">Viale Mazzini</p></div></div></div>
 </div>
-</div>
-<div class="col">
-<div class="card h-100 border-success">
-<div class="card-body text-center">
-<i class="bi bi-geo-alt display-5 text-success mb-3" aria-hidden="true"></i>
-<h3 class="h6">Individua la tua area</h3>
-<p class="small">Cerca nelle tabelle sopra l'area di attesa più vicina a casa tua e comunicala alla tua famiglia.</p>
-<a href="#aree-di-attesa-della-popolazione-aa" class="btn btn-outline-success btn-sm">Vai alle aree di attesa</a>
-</div>
-</div>
-</div>
+
+### Aree di Ricovero della Popolazione (AR)
+
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 mb-4">
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AR1.png" class="card-img-top" alt="Cartello area di ricovero AR1 — Palazzetto dello Sport, Via G. di Vittorio"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR1</p><p class="small text-muted mb-0">Palazzetto Sport</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AR2.png" class="card-img-top" alt="Cartello area di ricovero AR2 — Campo Sportivo Via Piemonte"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR2</p><p class="small text-muted mb-0">Via Piemonte</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AR3.png" class="card-img-top" alt="Cartello area di ricovero AR3 — Campo Sportivo Via Sardegna"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR3</p><p class="small text-muted mb-0">Via Sardegna</p></div></div></div>
 </div>
 
 ## Mappe scaricabili

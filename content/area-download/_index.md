@@ -89,10 +89,31 @@ Per segnalare un link non funzionante scrivi a <a href="mailto:segreteria@protez
 
 | Documento | Descrizione | Formato |
 |---|---|---|
-| [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/area-download/download/PC_scuola.pdf) | Manuale redatto dal DPC e dal Ministero dell'Istruzione | PDF |
-| [Il Volontariato di Protezione Civile](https://www.protezionecivilegenzano.it/area-download/download/Volontariato_PC.pdf) | Il ruolo del volontariato nel sistema nazionale | PDF |
-| [La Protezione Civile in famiglia](https://www.protezionecivilegenzano.it/area-download/download/PC_famiglia.pdf) | Buone pratiche da adottare in famiglia | PDF |
-| [Il ruolo del DPC](https://www.protezionecivilegenzano.it/area-download/download/Ruolo_DPC.pdf) | Pieghevole informativo | PDF |
+| [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) | Manuale redatto dal DPC e dal Ministero dell'Istruzione | PDF |
+| [Il Volontariato di Protezione Civile](https://www.protezionecivilegenzano.it/documenti/download/Volontariato_PC.pdf) | Il ruolo del volontariato nel sistema nazionale | PDF |
+| [La Protezione Civile in famiglia](https://www.protezionecivilegenzano.it/documenti/download/PC_famiglia.pdf) | Buone pratiche da adottare in famiglia | PDF |
+| [Il ruolo del DPC](https://www.protezionecivilegenzano.it/documenti/download/Ruolo_DPC.pdf) | Pieghevole informativo | PDF |
+
+## Campagna "Io Non Rischio"
+
+Materiali informativi della campagna nazionale [Io Non Rischio](https://www.iononrischio.it/) promossa dal Dipartimento della Protezione Civile. Per ogni rischio sono disponibili un pieghevole sintetico e una scheda di approfondimento.
+
+| Documento | Descrizione | Formato |
+|---|---|---|
+| [Terremoto — Pieghevole](https://www.protezionecivilegenzano.it/documenti/download/INR_terremoto_pieghevole.pdf) | Cosa fare prima, durante e dopo un terremoto | PDF |
+| [Terremoto — Scheda](https://www.protezionecivilegenzano.it/documenti/download/INR_terremoto_scheda.pdf) | Approfondimento sul rischio sismico | PDF |
+| [Alluvione — Pieghevole](https://www.protezionecivilegenzano.it/documenti/download/INR_alluvione_pieghevole.pdf) | Cosa fare prima, durante e dopo un'alluvione | PDF |
+| [Alluvione — Scheda](https://www.protezionecivilegenzano.it/documenti/download/INR_alluvione_scheda.pdf) | Approfondimento sul rischio alluvione | PDF |
+| [Incendi — Pieghevole](https://www.protezionecivilegenzano.it/documenti/download/INR_incendi_pieghevole.pdf) | Cosa fare prima, durante e dopo un incendio boschivo | PDF |
+| [Incendi — Scheda](https://www.protezionecivilegenzano.it/documenti/download/INR_incendi_scheda.pdf) | Approfondimento sul rischio incendi | PDF |
+| [Maremoto — Pieghevole](https://www.protezionecivilegenzano.it/documenti/download/INR_maremoto_pieghevole.pdf) | Cosa fare prima, durante e dopo un maremoto | PDF |
+| [Maremoto — Scheda](https://www.protezionecivilegenzano.it/documenti/download/INR_maremoto_scheda.pdf) | Approfondimento sul rischio maremoto | PDF |
+
+## Atlante dei Territori
+
+| Documento | Descrizione | Formato |
+|---|---|---|
+| [Atlante 2025 — Territori in trasformazione](https://www.protezionecivilegenzano.it/documenti/download/ATLANTE-2025-TERRITORI-IN-TRASFORMAZIONE.pdf) | Rapporto nazionale sui territori e i rischi ambientali (124 MB) | PDF |
 
 ## Materiali per le scuole
 
