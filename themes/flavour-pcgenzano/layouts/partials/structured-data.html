@@ -1,5 +1,9 @@
 {{/* Dati strutturati JSON-LD — SEO
      Organization per homepage, Article per comunicazioni, WebPage per il resto */}}
+{{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
+{{- $basePath := (urls.Parse .Site.BaseURL).Path | default "/" -}}
+{{- $pagePath := strings.TrimPrefix $basePath .RelPermalink -}}
+{{- $prodURL := printf "%s/%s" (strings.TrimRight "/" $prodBase) $pagePath -}}
 {{ if .IsHome }}
 <script type="application/ld+json">
 {
@@ -7,8 +11,8 @@
   "@type": "GovernmentOrganization",
   "name": "{{ .Site.Title }}",
   "description": "{{ .Site.Params.description }}",
-  "url": "{{ .Site.BaseURL }}",
-  "logo": "{{ "images/logo-pc-genzano.png" | absURL }}",
+  "url": "{{ $prodBase }}",
+  "logo": "{{ printf "%simages/logo-pc-genzano.png" $prodBase }}",
   "telephone": "{{ .Site.Params.telefono }}",
   "email": "{{ .Site.Params.email }}",
   "address": {
@@ -46,10 +50,10 @@
     "name": "{{ .Site.Title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ "images/logo-pc-genzano.png" | absURL }}"
+      "url": "{{ printf "%simages/logo-pc-genzano.png" $prodBase }}"
     }
   },
-  "mainEntityOfPage": "{{ .Permalink }}"
+  "mainEntityOfPage": "{{ $prodURL }}"
 }
 </script>
 {{ end }}
@@ -60,11 +64,11 @@
   "@type": "WebPage",
   "name": "{{ .Title }}",
   "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
-  "url": "{{ .Permalink }}",
+  "url": "{{ $prodURL }}",
   "isPartOf": {
     "@type": "WebSite",
     "name": "{{ .Site.Title }}",
-    "url": "{{ .Site.BaseURL }}"
+    "url": "{{ $prodBase }}"
   }
 }
 </script>
