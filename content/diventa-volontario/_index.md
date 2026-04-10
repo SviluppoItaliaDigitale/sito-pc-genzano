@@ -113,7 +113,7 @@ Sì, puoi iscriverti e partecipare alla formazione. La piena operatività sul ca
 ## Documenti utili
 
 - [Regolamento del Gruppo](https://www.protezionecivilegenzano.it/area-download/normativa/Regolamento_Gruppo_Comunale_PC_Genzano.pdf)
-- [Il Volontariato di Protezione Civile (Pieghevole)](https://www.protezionecivilegenzano.it/area-download/download/Volontariato_PC.pdf)
+- [Il Volontariato di Protezione Civile (Pieghevole)](https://www.protezionecivilegenzano.it/documenti/download/Volontariato_PC.pdf)
 
 <div class="card border-primary mt-4">
 <div class="card-body text-center p-4">
