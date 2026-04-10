@@ -113,7 +113,7 @@ Materiali informativi della campagna nazionale [Io Non Rischio](https://www.iono
 
 | Documento | Descrizione | Formato |
 |---|---|---|
-| [Atlante 2025 — Territori in trasformazione](https://www.protezionecivilegenzano.it/documenti/download/ATLANTE-2025-TERRITORI-IN-TRASFORMAZIONE.pdf) | Rapporto nazionale sui territori e i rischi ambientali (124 MB) | PDF |
+| [Atlante 2025 — Territori in trasformazione](https://www.protezionecivilegenzano.it/documenti/download/ATLANTE-2025-TERRITORI-IN-TRASFORMAZIONE-12-05.pdf) | Rapporto nazionale sui territori e i rischi ambientali (124 MB) | PDF |
 
 ## Materiali per le scuole
 
