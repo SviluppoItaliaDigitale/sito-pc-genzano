@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Gestione Segnalazione Avvistamento | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="ricerca.html">Ricerca Dispersi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Gestione Segnalazione Avvistamento</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="ricerca.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Mentre la ricerca di un ragazzo di 22 anni disperso durante un'escursione e in corso, il COM riceve una telefonata da un cittadino che afferma di aver visto una persona corrispondente alla descrizione nella zona di Via dei Laghi, a circa 3 km dall'area di ricerca.", question: "Come valuti questa segnalazione?", choices: [{ text: "La ignoro: probabilmente e un errore, siamo gia impegnati nell'area assegnata.", is_correct: false, feedback: "SBAGLIATO. Ogni segnalazione va presa in considerazione e verificata, anche se sembra improbabile." },{ text: "La comunico immediatamente al coordinamento e attendo disposizioni, senza modificare autonomamente il piano di ricerca.", is_correct: true, feedback: "CORRETTO. Le segnalazioni vanno sempre riportate al coordinamento che ha il quadro completo e puo decidere come impiegare le risorse." },{ text: "Sposto la mia squadra verso il punto segnalato per verificare.", is_correct: false, feedback: "SBAGLIATO. Spostare una squadra autonomamente crea un vuoto nel settore assegnato. Le decisioni spettano al coordinamento." }] },
+            { situation_update: "Il coordinamento decide di inviare la tua squadra a verificare la segnalazione. Ti forniscono il punto preciso e il numero del cittadino che ha chiamato.", question: "Come gestisci il contatto con il cittadino che ha fatto la segnalazione?", choices: [{ text: "Lo chiamo e gli chiedo di rimanere sul posto ad aspettarci.", is_correct: true, feedback: "CORRETTO. Il cittadino e un testimone prezioso. Puo indicarti il punto esatto e la direzione in cui ha visto muoversi la persona." },{ text: "Non lo chiamo, vado direttamente al punto indicato.", is_correct: false, feedback: "SBAGLIATO. Il cittadino potrebbe avere dettagli importanti non comunicati nella prima telefonata, e potrebbe guidarti nel punto esatto." },{ text: "Gli chiedo di cercare lui stesso la persona nel frattempo.", is_correct: false, feedback: "SBAGLIATO. Un civile non addestrato non deve fare ricerche autonome. Rischia di perdersi o di inquinare eventuali tracce." }] },
+            { situation_update: "Arrivi al punto indicato. Il cittadino ti dice: 'Ho visto un ragazzo con lo zaino rosso che camminava barcollando verso il bosco, circa 20 minuti fa. Sembrava confuso.'", question: "Come utilizzi queste informazioni?", choices: [{ text: "Entro subito nel bosco nella direzione indicata.", is_correct: false, feedback: "FRETTOLOSO. Prima devi comunicare al coordinamento e raccogliere tutti i dettagli utili dal testimone." },{ text: "Ringrazio il cittadino, comunico al coordinamento tutti i dettagli (descrizione, direzione, tempo trascorso, condizioni della persona). Chiedo disposizioni prima di procedere.", is_correct: true, feedback: "PERFETTO. Hai raccolto e trasmesso le informazioni in modo strutturato. Il coordinamento puo ora ricalibrare il piano di ricerca." },{ text: "Chiedo al cittadino di accompagnarmi nel bosco per mostrarmi il punto esatto.", is_correct: false, feedback: "SBAGLIATO. Il civile non deve entrare nell'area di ricerca. Rischia di creare confusione e la sua sicurezza sarebbe sotto la tua responsabilita." }] },
+            { situation_update: "Il coordinamento conferma: la descrizione corrisponde. Ti ordina di procedere nella direzione indicata, ma ti avvisa che sta calando la luce e tra 40 minuti sara buio.", question: "Come pianifichi l'intervento con il tempo limitato?", choices: [{ text: "Cerchiamo il piu possibile, se cala il buio usiamo le torce.", is_correct: false, feedback: "RISCHIOSO. La ricerca notturna in bosco senza preparazione specifica e pericolosa. Bisogna avere un piano preciso." },{ text: "Comunico la stima dei tempi, procedo con la squadra per il tempo disponibile definendo un orario limite di rientro, segno il percorso per non perdermi e comunico la posizione a intervalli regolari.", is_correct: true, feedback: "ECCELLENTE. Hai gestito il fattore tempo in modo razionale: orario limite, segnatura del percorso e comunicazione costante." },{ text: "Chiedo di aspettare domani mattina quando c'e luce.", is_correct: false, feedback: "COMPRENSIBILE ma non ottimale. Il disperso potrebbe essere in pericolo e ogni minuto conta. Si puo operare ancora per il tempo disponibile, con prudenza." }] },
+            { situation_update: "A 300 metri dal punto indicato trovi lo zaino rosso appoggiato a un albero, ma nessuna traccia della persona.", question: "Come gestisci questo ritrovamento?", choices: [{ text: "Prendo lo zaino e lo porto con me per farlo identificare ai familiari.", is_correct: false, feedback: "SBAGLIATO. Lo zaino e un indizio importante. La posizione esatta puo indicare la direzione presa dal disperso. Non va spostato." },{ text: "NON tocco lo zaino, segno la posizione GPS, comunico il ritrovamento con tutti i dettagli e descrivo le condizioni dell'area circostante (tracce, oggetti, terreno).", is_correct: true, feedback: "PROCEDURA PERFETTA. Lo zaino e un punto di riferimento fondamentale. La posizione va preservata e comunicata perche il coordinamento possa ridefinire l'area di ricerca attorno a quel punto." },{ text: "Apro lo zaino per cercare documenti che confermino l'identita.", is_correct: false, feedback: "SBAGLIATO. Non devi manipolare oggetti trovati durante la ricerca. Potrebbero servire anche alle Forze dell'Ordine." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

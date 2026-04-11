@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Emergenza Neve e Ghiaccio | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="meteo.html">Rischio Meteo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Emergenza Neve e Ghiaccio</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="meteo.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Allerta arancione per nevicata intensa prevista sui Castelli Romani. Sono attesi 15-20 cm di neve a Genzano. Il COC attiva il piano neve e ti assegna alla squadra operativa per il presidio del territorio.", question: "Quali sono le priorita operative prima della nevicata?", choices: [{ text: "Mettere il sale sulle strade principali.", is_correct: false, feedback: "IMPORTANTE ma non la prima azione. Serve prima una verifica complessiva della preparazione." },{ text: "Verificare la disponibilita di sale e mezzi spargisale, controllare catene a bordo dei mezzi, individuare i punti critici (salite ripide, curve pericolose, scuole, ospedale), contattare le persone fragili della lista, verificare scorte di emergenza.", is_correct: true, feedback: "PREPARAZIONE COMPLETA. Hai verificato mezzi, materiali, punti critici e persone vulnerabili. Questa e la fase di prevenzione." },{ text: "Aspettare che inizi a nevicare per vedere quanto sara forte.", is_correct: false, feedback: "SBAGLIATO. La preparazione deve avvenire PRIMA dell'evento. Aspettare significa perdere tempo prezioso." }] },
+            { situation_update: "La nevicata inizia alle 22:00 con intensita crescente. Alle 2:00 di notte ci sono gia 10 cm di neve. Ricevi la segnalazione di un albero caduto sulla strada provinciale che collega Genzano a Lanuvio.", question: "Come gestisci la segnalazione dell'albero caduto?", choices: [{ text: "Vado subito a verificare con il mezzo.", is_correct: false, feedback: "RISCHIOSO. Con 10 cm di neve e visibilita ridotta, muoversi senza piano e pericoloso. Serve coordinamento." },{ text: "Comunico al COC la segnalazione con la posizione esatta, verifico se il mezzo ha catene montate e dotazioni per intervento in sicurezza, parto con la squadra solo dopo conferma del COC e con l'equipaggiamento adeguato.", is_correct: true, feedback: "PROCEDURA CORRETTA. Comunicazione, verifica equipaggiamento e autorizzazione. In condizioni notturne con neve la sicurezza e ancora piu critica." },{ text: "Chiamo i Vigili del Fuoco, non e compito nostro.", is_correct: false, feedback: "PARZIALE. I VVF possono intervenire per l'albero, ma la segnalazione va al COC che coordina tutte le risorse. Nel frattempo la strada va segnalata come pericolosa." }] },
+            { situation_update: "La mattina seguente la neve ha raggiunto 20 cm. Le strade secondarie sono impraticabili. Diverse persone anziane in zone collinari sono isolate.", question: "Come organizzi l'assistenza alle persone isolate?", choices: [{ text: "Aspetto che la neve si sciolga, non possiamo arrivarci.", is_correct: false, feedback: "SBAGLIATO. Le persone isolate potrebbero avere bisogno di farmaci, cibo o assistenza sanitaria urgente." },{ text: "Organizzo squadre con mezzi 4x4 dotati di catene per raggiungere le persone isolate. Porto farmaci, alimenti, coperte. Verifico le condizioni delle abitazioni (riscaldamento funzionante, scorte). Chiedo supporto al COC per lo sgombero delle strade prioritarie.", is_correct: true, feedback: "INTERVENTO COMPLETO. Hai pianificato il raggiungimento con mezzi adeguati, portando il necessario e verificando le condizioni." },{ text: "Le chiamo al telefono per verificare se stanno bene.", is_correct: false, feedback: "PRIMO PASSO ma non sufficiente. Se sono senza riscaldamento o farmaci, la telefonata non risolve il problema." }] },
+            { situation_update: "Una famiglia ti segnala che il tetto del loro garage sta cedendo sotto il peso della neve.", question: "Come intervieni?", choices: [{ text: "Salgo sul tetto per spalare la neve.", is_correct: false, feedback: "PERICOLOSISSIMO. Un tetto che sta cedendo puo crollare. Non puoi salire su una struttura compromessa." },{ text: "Faccio allontanare immediatamente le persone dalla struttura e dall'area circostante, comunico al COC la situazione e richiedo l'intervento dei VVF per la valutazione strutturale. Delimito l'area con nastro.", is_correct: true, feedback: "CORRETTO. La sicurezza delle persone viene prima di tutto. Solo i tecnici possono valutare e intervenire su una struttura compromessa." },{ text: "Chiedo ai vicini di aiutarmi a puntellare il tetto dall'interno.", is_correct: false, feedback: "PERICOLOSO. Entrare in una struttura che sta cedendo espone a rischio di crollo. L'area va evacuata, non rinforzata con mezzi improvvisati." }] },
+            { situation_update: "Dopo 2 giorni la neve inizia a sciogliersi rapidamente per un rialzo delle temperature. Il rischio si sposta dalla neve al ghiaccio notturno e agli allagamenti da disgelo.", question: "Come si modifica l'intervento nella fase di disgelo?", choices: [{ text: "L'emergenza neve e finita, si torna alla normalita.", is_correct: false, feedback: "SBAGLIATO. Il disgelo e una fase altrettanto pericolosa: ghiaccio, allagamenti, smottamenti." },{ text: "Passo al monitoraggio dei punti critici per il ghiaccio (ponti, sottopassi, curve all'ombra), verifico i fossi e le caditoie per possibili allagamenti da disgelo, mantengo il sale sulle strade nelle ore notturne e mattutine.", is_correct: true, feedback: "TRANSIZIONE CORRETTA. Hai riconosciuto che il rischio cambia forma ma non scompare. Il monitoraggio continuo e fondamentale." },{ text: "Continuo a spalare la neve residua dalle strade.", is_correct: false, feedback: "PARZIALE. La neve residua va gestita, ma la priorita nella fase di disgelo e il monitoraggio del ghiaccio e degli allagamenti." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Ricerca in Condizioni Notturne | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="ricerca.html">Ricerca Dispersi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Ricerca in Condizioni Notturne</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="ricerca.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sono le 21:00. La ricerca del disperso continua e il coordinamento decide di proseguire anche in notturna. La tua squadra viene designata per il turno 21:00-01:00. La zona assegnata e un'area collinare con sentieri sterrati.", question: "Qual e la prima verifica da fare prima di uscire per un turno notturno?", choices: [{ text: "Verificare che tutti abbiano il telefono carico.", is_correct: false, feedback: "IMPORTANTE ma non sufficiente. La dotazione per la ricerca notturna richiede attrezzature specifiche." },{ text: "Torce frontali con batterie di riserva, abbigliamento ad alta visibilita con bande riflettenti, radio carica e funzionante, fischietto, coperta termica, acqua e cibo energetico.", is_correct: true, feedback: "PERFETTO. L'operativita notturna richiede illuminazione personale affidabile, visibilita reciproca e autonomia prolungata." },{ text: "Controllare solo le torce e partire subito.", is_correct: false, feedback: "INSUFFICIENTE. La ricerca notturna e piu rischiosa e richiede una preparazione piu accurata rispetto al giorno." }] },
+            { situation_update: "Siete in zona. La visibilita e limitata alla portata delle torce. Il terreno e irregolare con radici e sassi.", question: "Come deve procedere la squadra in condizioni notturne?", choices: [{ text: "Veloci come di giorno, per coprire piu terreno possibile.", is_correct: false, feedback: "PERICOLOSO. Di notte la velocita di avanzamento deve essere ridotta per evitare inciampi e infortuni." },{ text: "Avanzamento lento e metodico, comunicazione frequente tra i membri, soste regolari per orientarsi, attenzione ai rumori (il disperso potrebbe chiamare aiuto).", is_correct: true, feedback: "CORRETTO. Di notte l'udito diventa lo strumento principale. Fermarsi periodicamente in silenzio per ascoltare e fondamentale." },{ text: "Accendiamo tutte le luci possibili del mezzo e perlustriamo solo dalla strada.", is_correct: false, feedback: "PARZIALE. Il mezzo illumina solo la strada. Il disperso potrebbe trovarsi nel bosco adiacente, fuori dalla portata dei fari." }] },
+            { situation_update: "Durante una sosta di ascolto, sentite un suono ritmico debole, come qualcuno che batte su qualcosa a intervalli regolari. Proviene da circa 100 metri a ovest.", question: "Come interpretate questo suono e come agite?", choices: [{ text: "Probabilmente e un animale, continuiamo la ricerca nel settore assegnato.", is_correct: false, feedback: "SBAGLIATO. Un suono ritmico e regolare non e tipico di un animale. Potrebbe essere il disperso che cerca di farsi sentire." },{ text: "Ci fermiamo, facciamo silenzio completo per 30 secondi, poi rispondiamo con il fischietto con tre colpi (segnale convenzionale). Se il suono si ripete, comunichiamo al coordinamento e ci avviciniamo con cautela.", is_correct: true, feedback: "PROCEDURA PERFETTA. Tre fischi e il segnale internazionale di soccorso. L'ascolto attento e la risposta codificata permettono di stabilire un contatto." },{ text: "Gridiamo tutti insieme nella direzione del suono.", is_correct: false, feedback: "CONTROPRODUCENTE. Gridare in gruppo crea confusione e impedisce di sentire la risposta. Meglio il fischietto e il silenzio." }] },
+            { situation_update: "Al vostro fischio, il suono ritmico si intensifica e sentite una voce debole. Vi state avvicinando. Il terreno scende in un piccolo avvallamento non visibile dal sentiero.", question: "Come gestite l'avvicinamento notturno in terreno sconosciuto?", choices: [{ text: "Uno di noi corre giu per l'avvallamento con la torcia.", is_correct: false, feedback: "PERICOLOSO. In notturna un avvallamento puo nascondere dislivelli, fossi o terreno franoso. Mai correre." },{ text: "Procediamo insieme lentamente, illuminando il terreno davanti ai piedi. Un volontario resta sul bordo dell'avvallamento come punto di riferimento e per comunicare via radio.", is_correct: true, feedback: "OTTIMO. Avanzare con cautela e mantenere un volontario come riferimento garantisce sicurezza e comunicazione." },{ text: "Aspettiamo l'alba per scendere in sicurezza.", is_correct: false, feedback: "COMPRENSIBILE ma non ideale. Se la persona e in difficolta, attendere ore puo essere pericoloso. Si puo procedere con cautela." }] },
+            { situation_update: "Trovate il disperso in fondo all'avvallamento. E caduto, ha dolore a una gamba e non riesce a muoversi. E cosciente ma infreddolito e spaventato. La temperatura esterna e di 8 gradi.", question: "Qual e la procedura corretta?", choices: [{ text: "Lo solleviamo tra due e lo portiamo su al sentiero.", is_correct: false, feedback: "SBAGLIATO. Muovere una persona con possibili traumi agli arti senza attrezzatura adeguata puo causare danni gravi." },{ text: "Comunico il ritrovamento con posizione GPS, condizioni del disperso e accessibilita del punto. Copro la persona con la coperta termica, lo rassicuro, monitoro le funzioni vitali e attendo i soccorsi sanitari.", is_correct: true, feedback: "PROCEDURA CORRETTA. La comunicazione immediata, la protezione termica e il monitoraggio sono le priorita. Lo spostamento spetta ai sanitari con le attrezzature idonee." },{ text: "Gli do del cibo caldo dal thermos per scaldarlo.", is_correct: false, feedback: "SBAGLIATO. Non somministrare cibo o bevande a persone con possibili traumi senza indicazione dei sanitari." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

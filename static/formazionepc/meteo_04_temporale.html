@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Temporale Violento con Grandine | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="meteo.html">Rischio Meteo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Temporale Violento con Grandine</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="meteo.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Allerta gialla per temporali intensi sui Castelli Romani. Sono previste celle temporalesche con possibile grandine di grandi dimensioni. La tua squadra e in stato di pre-allertamento in sede.", question: "Cosa fai durante la fase di pre-allertamento?", choices: [{ text: "Aspetto in sede che succeda qualcosa.", is_correct: false, feedback: "PASSIVO. Il pre-allertamento e una fase attiva di preparazione, non di attesa." },{ text: "Verifico l'efficienza dei mezzi, preparo le dotazioni di emergenza (pompe, motoseghe, generatori, teli), controllo le radio, aggiorno la lista dei punti critici del territorio soggetti ad allagamento.", is_correct: true, feedback: "PREPARAZIONE ATTIVA. Il pre-allertamento serve a essere pronti a intervenire nel minor tempo possibile quando l'evento si manifesta." },{ text: "Vado a casa e torno quando chiamano.", is_correct: false, feedback: "SBAGLIATO. Il pre-allertamento richiede la presenza in sede o la reperibilita immediata. Tornare a casa allunga i tempi di risposta." }] },
+            { situation_update: "Alle 16:30 il cielo diventa improvvisamente scuro. In 10 minuti inizia un temporale violentissimo con grandine di 3-4 cm di diametro. Le strade si allagano rapidamente.", question: "Qual e la prima azione operativa?", choices: [{ text: "Uscire subito con i mezzi per verificare la situazione.", is_correct: false, feedback: "PERICOLOSO. Durante la fase acuta del temporale (grandine, fulmini, allagamento rapido) uscire espone a rischi elevati. Si aspetta la fase calante." },{ text: "Restare in sede durante la fase acuta, monitorare le segnalazioni in arrivo, pianificare gli interventi per ordine di priorita. Uscire solo quando le condizioni lo permettono, partendo dalle emergenze piu gravi.", is_correct: true, feedback: "CORRETTO. La fase acuta di un temporale violento e il momento piu pericoloso. Operare durante grandine e fulmini mette a rischio i volontari senza benefici reali." },{ text: "Chiamare tutti i volontari disponibili per avere piu personale.", is_correct: false, feedback: "UTILE ma non la priorita. L'organizzazione degli interventi e piu importante del numero di persone." }] },
+            { situation_update: "Il temporale cala di intensita. Ricevi tre segnalazioni simultanee: un sottopassaggio allagato con un'auto bloccata, un albero caduto su una casa, una frana di fango su una strada collinare.", question: "Come stabilisci le priorita?", choices: [{ text: "Intervengo prima su quella piu vicina alla sede.", is_correct: false, feedback: "SBAGLIATO. La priorita non e la distanza ma la gravita: persone in pericolo vengono prima dei danni materiali." },{ text: "Priorita 1: auto nel sottopassaggio (persone in pericolo imminente, chiamo anche 112). Priorita 2: albero sulla casa (rischio strutturale, possibili feriti). Priorita 3: frana (se non ci sono persone coinvolte, si delimita l'area).", is_correct: true, feedback: "PRIORITIZZAZIONE PERFETTA. Le persone sempre prima: l'auto nel sottopassaggio e un'emergenza mortale. Poi le strutture abitate, poi le infrastrutture." },{ text: "Mando una squadra su ciascuna segnalazione.", is_correct: false, feedback: "IDEALE ma spesso non possibile con risorse limitate. La prioritizzazione e necessaria quando le squadre sono poche." }] },
+            { situation_update: "Arrivate al sottopassaggio. L'acqua e alta circa 70 cm e sale. All'interno un'auto con una donna al volante che gesticola. L'acqua le arriva ai finestrini.", question: "Come intervenite?", choices: [{ text: "Entro nell'acqua e cerco di aprire la portiera.", is_correct: false, feedback: "RISCHIOSO. A 70 cm d'acqua la corrente puo essere forte e il fondo invisibile. La pressione dell'acqua potrebbe impedire l'apertura della portiera." },{ text: "Chiamo il 112 se non gia fatto. Mi avvicino solo se posso farlo in sicurezza (con corda di sicurezza e giubbotto). Comunico con la donna per tenerla calma. Se l'acqua sale ancora, tento il soccorso con la massima cautela.", is_correct: true, feedback: "GESTIONE CORRETTA. L'equilibrio tra urgenza del soccorso e sicurezza propria e la sfida piu difficile. La corda di sicurezza e il giubbotto sono essenziali." },{ text: "Aspetto i sommozzatori dei VVF.", is_correct: false, feedback: "COMPRENSIBILE ma se l'acqua sale rapidamente la donna potrebbe non avere tempo. La valutazione va fatta sul momento con il principio: soccorso se possibile in sicurezza." }] },
+            { situation_update: "La donna e stata tratta in salvo. Il temporale e cessato ma l'acqua defluisce lentamente. Il COC chiede un rapporto sulla situazione del territorio.", question: "Cosa deve contenere il rapporto post-evento?", choices: [{ text: "Un elenco degli interventi fatti.", is_correct: false, feedback: "PARZIALE. Il rapporto deve dare un quadro completo della situazione per pianificare il ripristino." },{ text: "Elenco dettagliato degli interventi con orari, zone ancora allagate, strade interrotte, strutture danneggiate, persone assistite, mezzi impiegati, criticita residue che richiedono ulteriore intervento.", is_correct: true, feedback: "RAPPORTO COMPLETO. Queste informazioni permettono al COC di pianificare il ripristino e di rendicontare alle autorita superiori." },{ text: "Una telefonata al COC dicendo che va tutto bene.", is_correct: false, feedback: "INSUFFICIENTE e potenzialmente falso. Il rapporto deve essere scritto, dettagliato e oggettivo." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

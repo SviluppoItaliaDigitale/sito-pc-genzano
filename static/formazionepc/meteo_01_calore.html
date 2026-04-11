@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Emergenza Ondata di Calore | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="meteo.html">Rischio Meteo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Emergenza Ondata di Calore</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="meteo.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Il Ministero della Salute ha emesso un bollettino con livello 3 (ondata di calore) per i Castelli Romani. Temperature previste fino a 40 gradi per i prossimi 3 giorni. Il COC attiva il piano calore e ti assegna al monitoraggio delle persone fragili.", question: "Qual e la prima azione da intraprendere?", choices: [{ text: "Andare porta a porta a distribuire bottiglie d'acqua.", is_correct: false, feedback: "PREMATURA. Prima devi organizzare l'intervento sulla base delle liste dei servizi sociali." },{ text: "Recuperare la lista delle persone vulnerabili dai servizi sociali, verificare i numeri di telefono, organizzare le squadre per le chiamate e le visite domiciliari, preparare le dotazioni (acqua, ventagli, materiale informativo).", is_correct: true, feedback: "CORRETTO. L'intervento strutturato parte dalla lista delle persone a rischio e dall'organizzazione delle squadre." },{ text: "Pubblicare un avviso sui social del Gruppo.", is_correct: false, feedback: "UTILE ma non prioritario. La comunicazione social e un complemento, non un sostituto dell'azione diretta sulle persone fragili." }] },
+            { situation_update: "Chiami una signora di 85 anni che vive sola. Risponde con voce debole e confusa. Dice che sta bene ma non riesci a capire se ha bevuto o mangiato.", question: "Come valuti la situazione e cosa fai?", choices: [{ text: "Mi fido della sua risposta, dice che sta bene.", is_correct: false, feedback: "SBAGLIATO. La confusione e la voce debole sono segnali di possibile disidratazione o colpo di calore. Le persone anziane spesso sottovalutano il proprio stato." },{ text: "La confusione e la voce debole sono segnali d'allarme. Organizzo una visita domiciliare immediata per verificare le condizioni, lo stato dell'abitazione (finestre chiuse, condizionatore funzionante) e se ha acqua e cibo.", is_correct: true, feedback: "DECISIONE CORRETTA. I sintomi descritti richiedono una verifica diretta. Non puoi fidarti dell'autovalutazione di una persona confusa." },{ text: "Le dico di bere acqua e la richiamo domani.", is_correct: false, feedback: "INSUFFICIENTE. Una persona confusa potrebbe non essere in grado di provvedere a se stessa. La verifica a domicilio e urgente." }] },
+            { situation_update: "Arrivi a casa della signora. L'appartamento e bollente: finestre chiuse, tapparelle abbassate ma niente aria condizionata ne ventilatore. La signora e seduta in poltrona, sudata, con la pelle arrossata e respira velocemente.", question: "Quali sono le condizioni della signora e come intervieni?", choices: [{ text: "Apro le finestre per far entrare aria.", is_correct: false, feedback: "ATTENZIONE. Se fuori ci sono 40 gradi, aprire le finestre fa entrare aria calda. Meglio creare correnti solo se la temperatura esterna e inferiore a quella interna." },{ text: "Riconosco i sintomi di un possibile colpo di calore. Chiamo il 118, sposto la signora in un punto piu fresco, la faccio sdraiare con le gambe sollevate, le applico panni umidi su fronte, collo e polsi, le offro acqua a piccoli sorsi.", is_correct: true, feedback: "INTERVENTO PERFETTO. Hai riconosciuto i sintomi, allertato i sanitari e iniziato il raffreddamento. Il colpo di calore puo essere mortale se non trattato rapidamente." },{ text: "Le porto un bicchiere d'acqua e aspetto che si riprenda.", is_correct: false, feedback: "INSUFFICIENTE. I sintomi descritti indicano una situazione potenzialmente grave. Il colpo di calore richiede intervento sanitario." }] },
+            { situation_update: "Il 118 arriva e prende in carico la signora. Il COC ti chiede di allestire un'area refrigerata aperta al pubblico nella sala consiliare del Comune.", question: "Come organizzi l'area refrigerata?", choices: [{ text: "Accendo l'aria condizionata e apro le porte.", is_correct: false, feedback: "INSUFFICIENTE. Un'area refrigerata pubblica richiede organizzazione: acqua, sedie, assistenza e informazione." },{ text: "Verifico il funzionamento dell'aria condizionata (temperatura 24-26 gradi), dispongo sedie comode, predispongo acqua fresca e bicchieri, preparo materiale informativo sui rischi del caldo, assicuro la presenza di un volontario per l'assistenza.", is_correct: true, feedback: "ORGANIZZAZIONE COMPLETA. L'area refrigerata non e solo uno spazio freddo ma un punto di assistenza e informazione." },{ text: "Abbasso la temperatura a 18 gradi per rinfrescare bene.", is_correct: false, feedback: "SBAGLIATO. Uno sbalzo termico troppo forte (da 40 a 18 gradi) puo causare malori. La temperatura ideale e 24-26 gradi." }] },
+            { situation_update: "Terzo giorno di ondata di calore. Un volontario della tua squadra mostra segni di affaticamento: suda molto, ha mal di testa e dice di sentirsi stordito.", question: "Come gestisci la situazione del volontario?", choices: [{ text: "Gli dico di bere un po' d'acqua e continuare, non possiamo fermarci.", is_correct: false, feedback: "SBAGLIATO. I sintomi del volontario indicano possibile stress da calore. Farlo continuare puo portare al colpo di calore." },{ text: "Fermo immediatamente il volontario, lo faccio sedere all'ombra o in ambiente fresco, gli faccio bere acqua a piccoli sorsi, lo monitoro. Se i sintomi non migliorano in 15-20 minuti, chiamo il 118. Comunico al Responsabile la necessita di un sostituto.", is_correct: true, feedback: "GESTIONE CORRETTA. La sicurezza dei volontari e prioritaria. Un volontario incapacitato diventa un paziente in piu da gestire." },{ text: "Lo mando a casa a riposare e continuo da solo.", is_correct: false, feedback: "SBAGLIATO su due fronti: il volontario non deve guidare in quelle condizioni, e tu non devi operare da solo." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

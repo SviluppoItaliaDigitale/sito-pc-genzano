@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Battuta di Ricerca in Area Boschiva | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="ricerca.html">Ricerca Dispersi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Battuta di Ricerca in Area Boschiva</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="ricerca.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "E in corso la ricerca di un escursionista di 35 anni disperso da ieri sera nel Parco dei Castelli Romani. Il coordinamento Prefettizio ha organizzato una battuta di ricerca a cui partecipa anche il tuo Gruppo. L'area assegnata e un tratto di bosco in pendenza con sottobosco fitto.", question: "Come ti prepari per una battuta di ricerca in area boschiva?", choices: [{ text: "Indosso scarpe da ginnastica leggere per muovermi velocemente.", is_correct: false, feedback: "SBAGLIATO. In bosco servono scarponi con suola antiscivolo e caviglia alta. Le scarpe da ginnastica non proteggono da radici, pietre e pendenze." },{ text: "Indosso scarponi, pantaloni lunghi, alta visibilita, guanti, casco forestale se disponibile. Porto radio, acqua, fischietto, torcia, kit primo soccorso.", is_correct: true, feedback: "CORRETTO. L'equipaggiamento completo e fondamentale in bosco: protezione personale, visibilita per i compagni, comunicazione e autonomia." },{ text: "Vado come sono vestito, tanto non staremo fuori a lungo.", is_correct: false, feedback: "SBAGLIATO. Una battuta di ricerca puo durare molte ore. L'equipaggiamento inadeguato mette a rischio te e rallenta il gruppo." }] },
+            { situation_update: "Il coordinatore della battuta schiera le squadre in linea con intervallo di 5 metri tra un volontario e l'altro. La linea deve avanzare mantenendo l'allineamento.", question: "Perche e fondamentale mantenere l'allineamento durante una battuta?", choices: [{ text: "Per fare una bella figura davanti ai coordinatori.", is_correct: false, feedback: "Non e una questione estetica. L'allineamento ha una funzione operativa precisa." },{ text: "Per assicurarsi che ogni metro quadro di terreno venga ispezionato senza zone d'ombra, evitando di non vedere il disperso.", is_correct: true, feedback: "ESATTO. Se un volontario avanza troppo o resta indietro, si creano buchi nella linea e intere zone non vengono coperte. Il disperso potrebbe trovarsi proprio li." },{ text: "Per non perdersi tra di noi.", is_correct: false, feedback: "PARZIALMENTE VERO ma non e il motivo principale. L'allineamento serve per coprire sistematicamente il terreno." }] },
+            { situation_update: "Durante l'avanzamento, il terreno diventa molto ripido e scivoloso per le foglie bagnate. Noti che il volontario alla tua destra e in difficolta e sta scivolando.", question: "Come ti comporti?", choices: [{ text: "Gli grido di stare attento e continuo ad avanzare per non rallentare la linea.", is_correct: false, feedback: "SBAGLIATO. La sicurezza dei compagni viene prima della velocita di avanzamento." },{ text: "Fermo la linea comunicando l'ALT, verifico le condizioni del compagno. Se necessario, comunico al coordinatore la necessita di modificare il tracciato per il tratto pericoloso.", is_correct: true, feedback: "CORRETTO. La sicurezza della squadra e prioritaria. Fermare la linea e comunicare le criticita e la procedura giusta." },{ text: "Lo raggiungo correndo per aiutarlo a rialzarsi.", is_correct: false, feedback: "PERICOLOSO. Correre su terreno scivoloso e ripido puo causare un secondo infortunio. Procedi con cautela." }] },
+            { situation_update: "Dopo due ore di battuta, la tua radio inizia a dare segnale debole a causa della morfologia del terreno. Le comunicazioni con il coordinamento sono intermittenti.", question: "Come gestisci il problema di comunicazione?", choices: [{ text: "Continuo la ricerca, tanto prima o poi riprende il segnale.", is_correct: false, feedback: "SBAGLIATO. Perdere il contatto radio e una situazione critica: il coordinamento non sa dove sei e tu non ricevi aggiornamenti." },{ text: "Fermo la squadra, cerco un punto piu elevato per migliorare il segnale. Se non funziona, comunico la situazione al coordinatore e valuto il rientro al punto prestabilito.", is_correct: true, feedback: "CORRETTO. La comunicazione e un requisito operativo essenziale. Senza radio funzionante non puoi operare in sicurezza." },{ text: "Uso il telefono cellulare come alternativa.", is_correct: false, feedback: "PARZIALMENTE UTILE, ma in bosco il segnale cellulare potrebbe essere assente o insufficiente. La radio UHF/VHF e lo strumento primario." }] },
+            { situation_update: "Ristabilite le comunicazioni, ricevi l'ordine di convergere verso un punto specifico: un altro gruppo ha trovato tracce recenti (una bottiglia d'acqua e impronte fresche nel fango).", question: "Come ti muovi verso il punto di convergenza?", choices: [{ text: "Corro verso il punto indicato per arrivarci prima possibile.", is_correct: false, feedback: "SBAGLIATO. Correndo nel bosco rischi infortuni e potresti calpestare altre tracce utili." },{ text: "Mi muovo con la squadra seguendo il percorso indicato dal coordinatore, prestando attenzione a non calpestare possibili tracce e comunicando la mia posizione durante lo spostamento.", is_correct: true, feedback: "PROCEDURA CORRETTA. Le tracce sono preziose e vanno preservate. Lo spostamento coordinato evita confusione e garantisce copertura del terreno." },{ text: "Lascio la squadra e ci vado da solo perche sono piu veloce.", is_correct: false, feedback: "VIETATO. Non ci si separa mai dalla squadra durante le operazioni di ricerca." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

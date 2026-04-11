@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Assistenza Persone Fragili | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="assistenza.html">Assistenza alla Popolazione</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Assistenza Persone Fragili</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="assistenza.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Durante l'emergenza, il COC ti incarica di verificare le condizioni di 12 persone anziane sole segnalate dai servizi sociali. Vivono in diverse zone del comune e alcune potrebbero non essere a conoscenza dell'allerta in corso.", question: "Come organizzi le verifiche?", choices: [{ text: "Chiamo tutti al telefono per verificare.", is_correct: false, feedback: "PARZIALE. La telefonata e un primo contatto, ma molti anziani potrebbero non rispondere (sordita, paura, telefono scarico). Serve la verifica a domicilio." },{ text: "Provo a chiamare tutti telefonicamente, poi organizzo squadre da 2 volontari per verificare a domicilio chi non risponde o chi ha bisogno di assistenza diretta. Partendo dai casi piu critici segnalati dai servizi sociali.", is_correct: true, feedback: "ORGANIZZAZIONE CORRETTA. Telefono come primo filtro, verifica a domicilio per chi non risponde. Priorita ai casi piu critici." },{ text: "Mando un volontario singolo a fare il giro di tutte le abitazioni.", is_correct: false, feedback: "SBAGLIATO. I volontari operano sempre almeno in coppia e le verifiche vanno organizzate per priorita, non come giro postale." }] },
+            { situation_update: "Arrivi a casa di una signora di 82 anni. Apre la porta confusa, non sa dell'allerta meteo in corso. Vive al piano terra, la zona e a rischio allagamento. Non ha parenti vicini.", question: "Come ti comporti?", choices: [{ text: "Le dico che deve uscire subito di casa.", is_correct: false, feedback: "BRUSCO. Una persona anziana va informata con calma e accompagnata nelle decisioni, non spaventata con ordini." },{ text: "Mi presento, la informo con calma della situazione, verifico le sue condizioni di salute, i farmaci che assume, se ha bisogno di assistenza. Le spiego le opzioni: restare se la situazione lo consente o essere accompagnata in un luogo sicuro.", is_correct: true, feedback: "APPROCCIO PERFETTO. Calma, chiarezza, rispetto e verifica delle esigenze. Le persone anziane vanno informate e accompagnate, non comandate." },{ text: "La porto subito al centro di accoglienza senza perdere tempo.", is_correct: false, feedback: "SBAGLIATO. Non puoi spostare una persona anziana senza il suo consenso e senza aver verificato le sue condizioni e i suoi bisogni (farmaci, ausili, documenti)." }] },
+            { situation_update: "La signora decide di venire al centro di accoglienza. Prima di uscire, devi aiutarla a preparare il necessario.", question: "Cosa la aiuti a portare?", choices: [{ text: "Solo i documenti, al centro c'e tutto.", is_correct: false, feedback: "INSUFFICIENTE. Le persone anziane hanno esigenze specifiche che al centro potrebbero non essere immediatamente disponibili." },{ text: "Documenti di identita, tessera sanitaria, tutti i farmaci che assume con le prescrizioni, un cambio di abiti, occhiali, protesi dentaria se la usa, telefono e caricatore, un oggetto di conforto.", is_correct: true, feedback: "LISTA COMPLETA. Hai pensato a tutto: documenti, salute, comfort e benessere psicologico. L'oggetto di conforto aiuta a ridurre l'ansia." },{ text: "Tutto quello che vuole portare, anche se sono valigie pesanti.", is_correct: false, feedback: "NON PRATICO. In emergenza si porta l'essenziale. Le valigie pesanti rallentano e creano problemi logistici al centro." }] },
+            { situation_update: "Nella lista c'e anche un uomo di 70 anni con disabilita motoria che usa la sedia a rotelle. Vive al secondo piano senza ascensore.", question: "Come gestisci l'evacuazione?", choices: [{ text: "Gli dico di restare a casa, tanto la casa e sicura ai piani alti.", is_correct: false, feedback: "RISCHIOSO. Se la situazione peggiora potrebbe restare isolato senza possibilita di evacuazione autonoma." },{ text: "Valuto la situazione con il COC. Se l'evacuazione e necessaria, richiedo supporto specifico (sedia da evacuazione o squadra addestrata). Non tentare di portarlo giu per le scale senza attrezzatura adeguata.", is_correct: true, feedback: "CORRETTO. L'evacuazione di persone con disabilita motoria richiede attrezzature e formazione specifiche. Il fai-da-te e pericoloso per tutti." },{ text: "Lo prendo in braccio e lo porto giu per le scale.", is_correct: false, feedback: "PERICOLOSISSIMO. Rischi di cadere con lui sulle scale. Servono attrezzature specifiche e personale addestrato." }] },
+            { situation_update: "Hai completato le verifiche. Tre anziani sono stati accompagnati al centro, gli altri stanno bene e hanno parenti che li assistono. Un signore pero ha rifiutato ogni aiuto nonostante la situazione a rischio.", question: "Come gestisci il rifiuto?", choices: [{ text: "Lo lascio in pace, e una sua scelta.", is_correct: false, feedback: "NON PUOI SEMPLICEMENTE ANDARTENE. Il rifiuto va documentato e la situazione comunicata al COC per un eventuale intervento successivo." },{ text: "Rispetto la sua decisione, ma gli lascio il mio numero e quello del COC, gli spiego i rischi in modo chiaro, segnalo il caso al COC e chiedo che venga monitorato. Documento il rifiuto nel rapporto.", is_correct: true, feedback: "GESTIONE CORRETTA DEL RIFIUTO. Rispetto della volonta, informazione chiara, rete di sicurezza e documentazione. Non puoi obbligare ma puoi proteggere." },{ text: "Chiamo i Carabinieri per portarlo via con la forza.", is_correct: false, feedback: "SPROPORZIONATO. Il TSO (Trattamento Sanitario Obbligatorio) richiede condizioni specifiche e l'intervento dell'autorita sanitaria. Un rifiuto di evacuazione non lo giustifica." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>
