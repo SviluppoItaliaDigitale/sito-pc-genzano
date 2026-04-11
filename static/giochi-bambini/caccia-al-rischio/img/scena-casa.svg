@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <title>Soggiorno con rischi da trovare</title>
+  <!-- Pavimento -->
+  <rect x="0" y="350" width="800" height="150" fill="#d4a574"/>
+  <!-- Parete -->
+  <rect x="0" y="0" width="800" height="350" fill="#f5e6d3"/>
+  <!-- Battiscopa -->
+  <rect x="0" y="345" width="800" height="10" fill="#8b6914"/>
+  <!-- Finestra -->
+  <rect x="300" y="60" width="200" height="160" fill="#87ceeb" stroke="#8b6914" stroke-width="4"/>
+  <line x1="400" y1="60" x2="400" y2="220" stroke="#8b6914" stroke-width="3"/>
+  <line x1="300" y1="140" x2="500" y2="140" stroke="#8b6914" stroke-width="3"/>
+  <!-- Tende -->
+  <path d="M290,55 L290,230 Q320,200 350,230 L350,55" fill="#d4a0a0" opacity="0.6"/>
+  <path d="M450,55 L450,230 Q480,200 510,230 L510,55" fill="#d4a0a0" opacity="0.6"/>
+  <!-- Quadro -->
+  <rect x="580" y="80" width="100" height="80" fill="#4a7c59" stroke="#8b6914" stroke-width="3"/>
+  <circle cx="630" cy="110" r="15" fill="#f0c040"/>
+  <path d="M590,150 L620,120 L650,140 L680,100 L670,150" fill="#2d5a3d"/>
+  <!-- Divano -->
+  <rect x="80" y="230" width="300" height="100" rx="10" fill="#6b8e9b"/>
+  <rect x="80" y="210" width="300" height="30" rx="8" fill="#5a7d8a"/>
+  <rect x="80" y="230" width="60" height="100" rx="8" fill="#5a7d8a"/>
+  <rect x="320" y="230" width="60" height="100" rx="8" fill="#5a7d8a"/>
+  <!-- Cuscini -->
+  <ellipse cx="150" cy="260" rx="30" ry="20" fill="#e8c170"/>
+  <ellipse cx="310" cy="260" rx="30" ry="20" fill="#c17070"/>
+  <!-- Gambe divano -->
+  <rect x="100" y="330" width="10" height="20" fill="#4a6570"/>
+  <rect x="360" y="330" width="10" height="20" fill="#4a6570"/>
+  <!-- Tavolino -->
+  <rect x="430" y="280" width="120" height="10" rx="3" fill="#8b6914"/>
+  <rect x="445" y="290" width="10" height="60" fill="#705010"/>
+  <rect x="535" y="290" width="10" height="60" fill="#705010"/>
+  <!-- Oggetti sul tavolino -->
+  <rect x="460" y="265" width="30" height="15" rx="2" fill="#4a90d9"/>
+  <circle cx="520" cy="272" r="8" fill="#e0e0e0"/>
+  <!-- RISCHIO: Lampada accesa (top 42.67%, left 17.42%) — posizione ~139,213 -->
+  <rect x="120" y="170" width="8" height="80" fill="#c0c0c0"/>
+  <path d="M95,170 L153,170 L140,130 L108,130 Z" fill="#ffeb3b"/>
+  <circle cx="124" cy="155" r="12" fill="#fff9c4"/>
+  <line x1="124" y1="135" x2="124" y2="125" stroke="#ffd600" stroke-width="2"/>
+  <line x1="110" y1="140" x2="103" y2="133" stroke="#ffd600" stroke-width="2"/>
+  <line x1="138" y1="140" x2="145" y2="133" stroke="#ffd600" stroke-width="2"/>
+  <!-- RISCHIO: Presa elettrica scoperta (top 69.24%, left 21.56%) — posizione ~172,346 -->
+  <rect x="164" y="335" width="20" height="25" rx="2" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+  <circle cx="170" cy="343" r="2.5" fill="#333"/>
+  <circle cx="178" cy="343" r="2.5" fill="#333"/>
+  <rect x="171" y="350" width="6" height="4" rx="1" fill="#333"/>
+  <!-- Filo penzolante dalla presa -->
+  <path d="M174,360 Q180,380 170,395" stroke="#333" stroke-width="2" fill="none"/>
+  <!-- RISCHIO: Cassetti aperti (top 66.15%, left 87.04%) — posizione ~696,331 -->
+  <rect x="650" y="250" width="120" height="100" fill="#a0522d" stroke="#8b4513" stroke-width="2"/>
+  <rect x="655" y="255" width="110" height="25" fill="#c0763c"/>
+  <circle cx="710" cy="267" r="3" fill="#daa520"/>
+  <!-- Cassetto aperto che sporge -->
+  <rect x="650" y="285" width="130" height="25" fill="#c0763c" stroke="#8b4513" stroke-width="1"/>
+  <circle cx="715" cy="297" r="3" fill="#daa520"/>
+  <!-- Secondo cassetto aperto -->
+  <rect x="650" y="315" width="140" height="25" fill="#c0763c" stroke="#8b4513" stroke-width="1"/>
+  <circle cx="720" cy="327" r="3" fill="#daa520"/>
+  <!-- Tappeto -->
+  <rect x="200" y="380" width="350" height="80" rx="5" fill="#c17070" opacity="0.4"/>
+  <rect x="210" y="390" width="330" height="60" rx="3" fill="#b05050" opacity="0.3"/>
+</svg>

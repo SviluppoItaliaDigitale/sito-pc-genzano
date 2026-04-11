@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <title>Scuolabus con rischi da trovare</title>
+  <!-- Cielo -->
+  <rect x="0" y="0" width="800" height="350" fill="#87ceeb"/>
+  <!-- Nuvole -->
+  <ellipse cx="200" cy="50" rx="50" ry="20" fill="#fff" opacity="0.7"/>
+  <ellipse cx="600" cy="70" rx="45" ry="18" fill="#fff" opacity="0.7"/>
+  <!-- Strada -->
+  <rect x="0" y="350" width="800" height="150" fill="#666"/>
+  <rect x="0" y="415" width="800" height="8" fill="#fff" opacity="0.5"/>
+  <!-- Marciapiede -->
+  <rect x="0" y="340" width="800" height="15" fill="#c0b8a0"/>
+  <!-- Scuolabus - corpo principale -->
+  <rect x="150" y="140" width="400" height="200" rx="10" fill="#f0c040"/>
+  <rect x="150" y="140" width="400" height="30" rx="10" fill="#e0a020"/>
+  <!-- Scritta SCUOLABUS -->
+  <rect x="250" y="148" width="200" height="18" rx="3" fill="#333"/>
+  <text x="350" y="162" text-anchor="middle" fill="#f0c040" font-size="14" font-weight="bold" font-family="sans-serif">SCUOLABUS</text>
+  <!-- Finestrini -->
+  <rect x="180" y="185" width="60" height="50" rx="5" fill="#a8d4f0" stroke="#c09020" stroke-width="2"/>
+  <rect x="260" y="185" width="60" height="50" rx="5" fill="#a8d4f0" stroke="#c09020" stroke-width="2"/>
+  <rect x="340" y="185" width="60" height="50" rx="5" fill="#a8d4f0" stroke="#c09020" stroke-width="2"/>
+  <rect x="420" y="185" width="60" height="50" rx="5" fill="#a8d4f0" stroke="#c09020" stroke-width="2"/>
+  <!-- Parabrezza -->
+  <rect x="510" y="175" width="35" height="80" rx="5" fill="#a8d4f0" stroke="#c09020" stroke-width="2"/>
+  <!-- RISCHIO: Autista - disturbare il conducente (top 43.65%, left 38.36%) — posizione ~307,218 -->
+  <!-- Posto autista visibile dal finestrino -->
+  <rect x="500" y="185" width="40" height="50" rx="3" fill="#c8e8f8"/>
+  <!-- Sagoma autista -->
+  <circle cx="520" cy="200" r="12" fill="#d4a574"/>
+  <rect x="510" y="210" width="20" height="25" rx="3" fill="#4090e0"/>
+  <!-- Volante -->
+  <circle cx="540" cy="225" r="12" fill="#333" stroke="#555" stroke-width="2"/>
+  <circle cx="540" cy="225" r="6" fill="#444"/>
+  <!-- Porta -->
+  <rect x="350" y="260" width="60" height="80" rx="3" fill="#d4a020" stroke="#c09020" stroke-width="2"/>
+  <rect x="365" y="265" width="30" height="30" rx="2" fill="#a8d4f0"/>
+  <circle cx="400" cy="305" r="4" fill="#999"/>
+  <!-- RISCHIO: Scalini porta (top 71.88%, left 50.01%) — posizione ~400,359 -->
+  <!-- Scalini dello scuolabus -->
+  <rect x="355" y="340" width="50" height="8" fill="#888"/>
+  <rect x="360" y="330" width="45" height="8" fill="#888"/>
+  <rect x="365" y="320" width="40" height="8" fill="#888"/>
+  <!-- Ruote -->
+  <circle cx="230" cy="345" r="30" fill="#333"/>
+  <circle cx="230" cy="345" r="15" fill="#666"/>
+  <circle cx="230" cy="345" r="5" fill="#999"/>
+  <circle cx="480" cy="345" r="30" fill="#333"/>
+  <circle cx="480" cy="345" r="15" fill="#666"/>
+  <circle cx="480" cy="345" r="5" fill="#999"/>
+  <!-- Paraurti -->
+  <rect x="145" y="325" width="15" height="20" rx="3" fill="#999"/>
+  <rect x="540" y="325" width="15" height="20" rx="3" fill="#999"/>
+  <!-- Fari -->
+  <circle cx="155" cy="300" r="8" fill="#ffeb3b" stroke="#f0c040" stroke-width="2"/>
+  <circle cx="545" cy="300" r="8" fill="#ffeb3b" stroke="#f0c040" stroke-width="2"/>
+  <!-- RISCHIO: Attraversare la strada (top 72.11%, left 76.77%) — posizione ~614,361 -->
+  <!-- Strisce pedonali -->
+  <rect x="590" y="360" width="80" height="10" fill="#fff"/>
+  <rect x="590" y="380" width="80" height="10" fill="#fff"/>
+  <rect x="590" y="400" width="80" height="10" fill="#fff"/>
+  <rect x="590" y="420" width="80" height="10" fill="#fff"/>
+  <rect x="590" y="440" width="80" height="10" fill="#fff"/>
+  <!-- Bambino che attraversa senza guardare -->
+  <circle cx="630" cy="340" r="10" fill="#d4a574"/>
+  <rect x="622" y="350" width="16" height="25" rx="3" fill="#e04040"/>
+  <rect x="622" y="375" width="7" height="15" fill="#4090e0"/>
+  <rect x="631" y="375" width="7" height="15" fill="#4090e0"/>
+  <!-- Zainetto -->
+  <rect x="635" y="352" width="10" height="15" rx="2" fill="#40c040"/>
+  <!-- Segnale stradale -->
+  <rect x="68" y="200" width="6" height="150" fill="#888"/>
+  <polygon points="71,200 40,180 71,160 102,180" fill="#ff4444" stroke="#333" stroke-width="2"/>
+  <text x="71" y="185" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">STOP</text>
+  <!-- Edificio scuola sfondo -->
+  <rect x="650" y="100" width="140" height="250" fill="#e8d4b8" stroke="#c0a888" stroke-width="2"/>
+  <rect x="670" y="120" width="40" height="40" fill="#a8d4f0" stroke="#999" stroke-width="1"/>
+  <rect x="730" y="120" width="40" height="40" fill="#a8d4f0" stroke="#999" stroke-width="1"/>
+  <rect x="670" y="180" width="40" height="40" fill="#a8d4f0" stroke="#999" stroke-width="1"/>
+  <rect x="730" y="180" width="40" height="40" fill="#a8d4f0" stroke="#999" stroke-width="1"/>
+  <rect x="700" y="280" width="40" height="70" fill="#8b6914" stroke="#705010" stroke-width="2"/>
+  <text x="720" y="100" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">SCUOLA</text>
+</svg>
