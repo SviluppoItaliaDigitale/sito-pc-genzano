@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Supporto Logistico AIB | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="aib.html">Antincendio Boschivo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🔥 Supporto Logistico alla Squadra Operativa</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="aib.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei stato assegnato al ruolo di 'logista' presso il campo base. Ricevi via radio una richiesta generica dal fronte: 'Ci servono acqua e cibo per 5 persone'.", question: "Cosa prepari per un supporto nutrizionale efficace?", choices: [{ text: "Un pacco di bottiglie d'acqua e 5 panini con la mortadella.", is_correct: false, feedback: "INCOMPLETO. I salumi sono pesanti da digerire e sottraggono energie durante lo sforzo fisico." },{ text: "Acqua in abbondanza (almeno 2-3 litri a testa), integratori salini, frutta fresca, barrette energetiche e frutta secca.", is_correct: true, feedback: "PREPARAZIONE PERFETTA. Hai fornito idratazione, sali minerali e calorie a rapido e lento assorbimento, ideali per chi è sotto sforzo." },{ text: "Una cassa di bibite gassate zuccherate e delle merendine.", is_correct: false, feedback: "SBAGLIATO. Le bevande zuccherate aumentano la sete e non idratano correttamente. Le merendine non forniscono un nutrimento adeguato." }] },
+            { situation_update: "Hai preparato i rifornimenti. Prima di partire con il mezzo 4x4 per la consegna in zona impervia, quale controllo è vitale?", question: "Quale controllo fondamentale devi fare?", choices: [{ text: "Controllare di avere abbastanza carburante e che le comunicazioni radio del mezzo funzionino perfettamente.", is_correct: true, feedback: "CONTROLLO ESSENZIALE. L'autonomia del mezzo e le comunicazioni sono la tua unica ancora di salvezza. Partire senza questi controlli è da irresponsabili." },{ text: "Controllare che l'aria condizionata funzioni, per stare comodo durante il tragitto.", is_correct: false, feedback: "IRRILEVANTE. Il comfort personale è l'ultima delle priorità. La sicurezza e l'efficienza vengono prima di tutto." },{ text: "Caricare più materiale possibile 'già che ci sei', senza un ordine preciso.", is_correct: false, feedback: "SBAGLIATO. Sovraccaricare un mezzo o caricare materiale non richiesto può renderlo instabile e creare confusione alla consegna." }] },
+            { situation_update: "Parti per la consegna. La strada diventa uno sterrato stretto e ripido. Incontri un veicolo che scende in senso opposto. Lo spazio è appena sufficiente per uno.", question: "Chi ha la precedenza?", choices: [{ text: "Io, perché sto portando rifornimenti urgenti e sono in salita.", is_correct: true, feedback: "REGOLA DI SICUREZZA APPLICATA CORRETTAMENTE. Per convenzione e sicurezza sui percorsi di montagna/stretti, il veicolo che sale ha la precedenza su quello che scende (che può fare retromarcia più facilmente)." },{ text: "Lui, perché sta scendendo e liberando l'area operativa.", is_correct: false, feedback: "SBAGLIATO. La manovra di retromarcia in salita è molto più complessa e pericolosa di quella in discesa." },{ text: "Chi arriva prima o chi ha il mezzo più grosso e non può spostarsi.", is_correct: false, feedback: "SBAGLIATO. Le precedenze in scenari operativi non si basano sulla prepotenza, ma su regole di sicurezza condivise." }] },
+            { situation_update: "Arrivi al punto di incontro designato, ma la squadra non c'è.", question: "Cosa fai?", choices: [{ text: "Contatto il caposquadra via radio sul canale assegnato, comunico la mia posizione e chiedo istruzioni. NON mi muovo dal punto concordato.", is_correct: true, feedback: "PROCEDURA PERFETTA. Non si abbandona mai un punto sicuro e concordato. La comunicazione radio è l'unico strumento da usare in questi casi." },{ text: "Li chiamo al loro cellulare privato per fare prima.", is_correct: false, feedback: "SBAGLIATO. In zona impervia la copertura cellulare è spesso assente. Le comunicazioni radio sono l'unico canale affidabile e ufficiale." },{ text: "Proseguo a piedi lungo il sentiero per cercarli, sicuramente sono lì vicino.", is_correct: false, feedback: "PERICOLOSO. Abbandonare il mezzo e la zona sicura ti espone a rischi (fumo, fuoco, terreno sconnesso) e ti rende difficile da localizzare." }] },
+            { situation_update: "Consegni i viveri. Il caposquadra ti chiede: 'Ci servono anche una manichetta da 45 e due raccordi'. Tu non li hai caricati.", question: "Come rispondi?", choices: [{ text: "'Non me li avevate chiesti, non è colpa mia.'", is_correct: false, feedback: "POCO COSTRUTTIVO. La logistica non cerca colpe, ma soluzioni. Il tuo ruolo è risolvere problemi." },{ text: "'Ricevuto. Lo comunico subito al campo base per organizzare una seconda consegna e vi faccio sapere i tempi.'", is_correct: true, feedback: "COMUNICAZIONE EFFICIENTE. Hai preso in carico la richiesta e attivato subito la catena logistica, mostrando spirito di servizio e proattività." },{ text: "'Vedrò cosa posso fare quando torno, ora ho altro da fare.'", is_correct: false, feedback: "SBAGLIATO. Una risposta vaga e scortese non è professionale. Le necessità del fronte hanno la priorità." }] },
+            { situation_update: "Mentre sei lì, un elicottero inizia a operare nella tua zona, prelevando acqua da un vascone vicino.", question: "Cosa devi fare?", choices: [{ text: "Avvicinarsi per fare delle belle foto, è uno spettacolo.", is_correct: false, feedback: "PERICOLOSISSIMO. L'area di operazione di un elicottero è estremamente pericolosa a causa del rotore e dello spostamento d'aria. Vanno mantenute le massime distanze di sicurezza." },{ text: "Allontanarsi dall'area, rimanere bassi o all'interno del veicolo, e indossare sempre il casco.", is_correct: true, feedback: "COMPORTAMENTO SICURO. Hai applicato le procedure corrette per la sicurezza personale in presenza di mezzi aerei." },{ text: "Rimanere in piedi e fare cenno al pilota per fargli vedere dove sei.", is_correct: false, feedback: "SBAGLIATO. Distrarre un pilota durante una manovra critica è irresponsabile e pericoloso. Devi rimanere fuori dalla sua area di lavoro." }] },
+            { situation_update: "Tornando indietro, vedi del fumo da una piccola ripresa di fiamma a lato della strada, lontano dal fronte principale.", question: "Cosa fai?", choices: [{ text: "La ignoro, non è il mio compito e l'ordine è di rientrare.", is_correct: false, feedback: "SBAGLIATO. Ogni volontario è un 'sensore' sul territorio. Ignorare una ripresa può portare a un nuovo grande incendio." },{ text: "Mi fermo in sicurezza, comunico immediatamente al DOS o al campo base la posizione esatta della ripresa e attendo istruzioni.", is_correct: true, feedback: "CORRETTO. La segnalazione tempestiva di una ripresa è un contributo fondamentale. Potrebbero dirottare te o un'altra squadra per un intervento rapido." },{ text: "Mi fermo e provo a spegnerla da solo con l'estintore del mezzo.", is_correct: false, feedback: "RISCHIOSO. L'estintore è insufficiente per un incendio di vegetazione. Potresti rimanere bloccato e creare un'emergenza in più." }] },
+            { situation_update: "Rientrato al campo base, fai rapporto al responsabile logistico.", question: "Quali sono le informazioni chiave da riferire?", choices: [{ text: "'Tutto a posto, consegnato tutto.'", is_correct: false, feedback: "INCOMPLETO. La logistica non è solo consegna, ma un flusso di informazioni." },{ text: "Faccio un report preciso: orario, materiale consegnato, nuovo materiale richiesto (manichette) e la posizione della ripresa di fiamma segnalata.", is_correct: true, feedback: "DEBRIEFING PERFETTO. Hai fornito tutte le informazioni operative rilevanti, dimostrando che la logistica è un ruolo strategico." },{ text: "Mi lamento della strada brutta e dei colleghi che non erano al punto di incontro.", is_correct: false, feedback: "NON PROFESSIONALE. Le lamentele personali non sono oggetto di un report operativo, che deve essere fattuale e conciso." }] },
+            { situation_update: "Al campo base, noti che la riserva di barrette energetiche sta finendo.", question: "Qual è il tuo ruolo proattivo come logista?", choices: [{ text: "Metto da parte le ultime per la mia squadra, non si sa mai.", is_correct: false, feedback: "SBAGLIATO. Le risorse sono della comunità e vanno gestite con equità, non per tornaconto personale o di squadra." },{ text: "Lo segnalo immediatamente al responsabile del campo base, in modo che possa richiederne di nuove prima che si esauriscano del tutto.", is_correct: true, feedback: "OTTIMA GESTIONE PROATTIVA. Un buon logista non gestisce solo le richieste, ma anticipa i bisogni e previene le criticità. Hai garantito la continuità dei rifornimenti." },{ text: "Aspetto che finiscano del tutto prima di dirlo, altrimenti sembra che non sappiamo gestire le scorte.", is_correct: false, feedback: "SBAGLIATO. Nascondere un problema per paura di fare brutta figura è il modo migliore per creare un'emergenza più grande dopo." }] },
+            { situation_update: "Rifletti sul tuo ruolo durante l'intervento.", question: "Qual è la funzione più importante di un logista in un'emergenza complessa?", choices: [{ text: "Essere il 'magazziniere' che gestisce il materiale.", is_correct: false, feedback: "RIDUTTIVO. La gestione del materiale è solo uno degli strumenti, non il fine ultimo." },{ text: "Garantire che le squadre operative possano lavorare senza interruzioni, anticipando i loro bisogni e mantenendo un flusso costante di materiali e informazioni.", is_correct: true, feedback: "DEFINIZIONE PERFETTA. Hai compreso l'essenza strategica della logistica: essere il motore che permette a chi è in prima linea di fare il proprio lavoro al meglio." },{ text: "Fare l'autista e portare in giro persone e cose.", is_correct: false, feedback: "RIDUTTIVO. La guida è una delle competenze, ma il ruolo del logista è soprattutto di pianificazione, comunicazione e problem-solving." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

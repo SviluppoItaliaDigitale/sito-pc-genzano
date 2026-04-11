@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Censimento Danni | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="terremoto.html">Rischio Sismico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🌎 Censimento Danni (Scheda AeDES)</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="terremoto.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei attivato in supporto a un tecnico rilevatore (ingegnere) per i sopralluoghi di agibilità post-sisma. Arrivate presso un edificio con danni evidenti all'esterno.", question: "Prima che il tecnico entri, qual è la tua prima responsabilità?", choices: [{ text: "Entrare per primo per vedere se è sicuro per il tecnico.", is_correct: false, feedback: "SBAGLIATO. La tua sicurezza viene prima. Non sei addestrato a valutare la stabilità strutturale; entrare sarebbe un rischio enorme e inutile." },{ text: "Delimitare un'area di sicurezza attorno all'edificio con nastro per tenere lontani i curiosi e monitorare la struttura dall'esterno.", is_correct: true, feedback: "PROCEDURA PERFETTA. La sicurezza della squadra di rilevamento e dell'area circostante è la tua priorità assoluta in questa fase." },{ text: "Iniziare a compilare la parte anagrafica della scheda per velocizzare il lavoro.", is_correct: false, feedback: "SBAGLIATO. Le procedure burocratiche vengono sempre dopo la messa in sicurezza della scena e degli operatori." }] },
+            { situation_update: "Avete creato un'area sicura. Il tecnico entra per il sopralluogo.", question: "Qual è la tua posizione e il tuo compito durante la sua ispezione interna?", choices: [{ text: "Vado a prendere un caffè, tanto il tecnico è esperto e sa cosa fare.", is_correct: false, feedback: "SBAGLIATO. Il tuo ruolo di supporto è attivo, non passivo. Non puoi allontanarti dall'area di operazione." },{ text: "Entro con lui per aiutarlo a misurare le crepe e tenere la torcia.", is_correct: false, feedback: "SBAGLIATO. Se non sei un tecnico, entrare ti espone a un rischio che non ti compete. Solo il personale essenziale deve entrare." },{ text: "Rimango all'esterno, in un punto sicuro ma con contatto visivo/radio con il tecnico, pronto a dare l'allarme.", is_correct: true, feedback: "POSIZIONE CORRETTA. Sei l''angelo custode' del tecnico. Il tuo compito è monitorare la situazione dall'esterno e garantire una linea di comunicazione sicura." }] },
+            { situation_update: "Il tecnico esce e comunica l'esito: 'Inagibile, esito E'. I proprietari, una coppia di anziani, arrivano e chiedono: 'Allora, possiamo rientrare?'", question: "Come va comunicato l'esito?", choices: [{ text: "Il tecnico, con il tuo supporto, comunica con calma ed empatia: 'Allo stato attuale, l'edificio non ha i requisiti di sicurezza. L'esito è E, inagibile. Vi daremo tutte le informazioni per l'assistenza'.", is_correct: true, feedback: "COMUNICAZIONE UMANA ED EFFICACE. L'empatia, unita alla chiarezza, è fondamentale per gestire lo shock dei cittadini in questi momenti drammatici." },{ text: "'Assolutamente no, la casa è distrutta, vi crolla addosso.'", is_correct: false, feedback: "SBAGLIATO. Un linguaggio brutale e non tecnicamente corretto aumenta solo il trauma e il panico delle persone." },{ text: "'Non potete entrare. Firmate qui sulla scheda e poi andate al centro di accoglienza.'", is_correct: false, feedback: "SBAGLIATO. Un approccio freddo e burocratico è contro i principi di assistenza alla popolazione della Protezione Civile." }] },
+            { situation_update: "I proprietari sono sconvolti. Il marito ha un lieve attacco di panico (respiro affannoso, agitazione).", question: "Come gestisci la crisi di panico?", choices: [{ text: "Lo accompagno in un'area tranquilla, lo faccio sedere, lo invito a respirare lentamente e parlo con lui con voce calma.", is_correct: true, feedback: "SUPPORTO PSICOLOGICO DI BASE (PFA - Psychological First Aid) PERFETTO. Hai applicato le tecniche corrette per aiutare la persona a calmarsi." },{ text: "Gli dico di 'non fare sceneggiate e di essere forte', perché ci sono problemi più gravi.", is_correct: false, feedback: "SBAGLIATO. Minimizzare la reazione di una persona è dannoso e controproducente. La reazione allo stress è soggettiva e va rispettata." },{ text: "Chiamo subito un'ambulanza per un codice rosso.", is_correct: false, feedback: "ESAGERATO. Un attacco di panico, se non associato ad altri sintomi, di solito non è un'emergenza sanitaria da codice rosso. L'approccio corretto è prima di tutto calmare la persona." }] },
+            { situation_update: "Il signore si è calmato. La moglie ti chiede se può rientrare solo un attimo per prendere il gatto, rimasto dentro.", question: "Cosa rispondi alla richiesta?", choices: [{ text: "'Assolutamente no, è troppo pericoloso e gli animali non contano in emergenza.'", is_correct: false, feedback: "SBAGLIATO. Una risposta così insensibile crea un muro con la popolazione. Per le persone, gli animali d'affezione sono membri della famiglia." },{ text: "'Capisco la sua preoccupazione, ma nessuno può più entrare. Saranno i Vigili del Fuoco, in un secondo momento e in sicurezza, a occuparsi del recupero degli animali.'", is_correct: true, feedback: "RISPOSTA CORRETTA ED EMPATICA. Hai negato l'accesso pericoloso ma hai fornito la soluzione procedurale corretta, mostrando comprensione." },{ text: "'Certo, signora, faccia in fretta, l'accompagno io così non corre rischi.'", is_correct: false, feedback: "SBAGLIATO. Rientrare in un edificio dichiarato inagibile è vietato e pericolosissimo. Non puoi prenderti questa responsabilità." }] },
+            { situation_update: "Passate all'edificio successivo, che dall'esterno sembra intatto. Il proprietario insiste: 'La mia casa è perfetta, non perdete tempo qui'.", question: "Cosa fate?", choices: [{ text: "Vi fidate e passate all'edificio dopo per velocizzare.", is_correct: false, feedback: "SBAGLIATO. Il censimento deve essere sistematico. La valutazione del proprietario non ha valore tecnico e i danni gravi possono essere nascosti." },{ text: "Segnalate il proprietario come 'non collaborativo' e ve ne andate.", is_correct: false, feedback: "SBAGLIATO. Creare conflitto non è la soluzione. Bisogna sempre tentare un approccio basato sul dialogo e sulla spiegazione delle procedure." },{ text: "Spiegate gentilmente che il sopralluogo va fatto comunque per legge, perché i danni gravi possono essere interni e non visibili.", is_correct: true, feedback: "CORRETTO. Avete agito con professionalità, spiegando le motivazioni della procedura e facendo valere la necessità del controllo tecnico." }] },
+            { situation_update: "Il tecnico entra, esce dopo 10 minuti e ti comunica l'esito: 'Agibile, esito A'.", question: "Cosa significa operativamente?", choices: [{ text: "Che la casa è sicura al 100% e non subirà mai più danni da altri terremoti.", is_correct: false, feedback: "SBAGLIATO. L'agibilità è una 'fotografia' dello stato attuale. Non è una garanzia per il futuro." },{ text: "Che allo stato attuale, l'edificio non ha subito danni strutturali significativi e può essere riutilizzato in sicurezza.", is_correct: true, feedback: "PERFETTO. Hai compreso il significato dell'esito. La casa è sicura rispetto all'evento che si è verificato." },{ text: "Che possono rientrare, ma probabilmente dovranno fare dei lavori per sicurezza.", is_correct: false, feedback: "IMPRECISO. L'esito 'A' significa che l'edificio è agibile e non necessita di interventi per essere riutilizzato. Altri esiti (B, C, D) indicano agibilità con provvedimenti." }] },
+            { situation_update: "A fine giornata, tornate al COM con tutte le schede AeDES compilate.", question: "Qual è il tuo compito una volta rientrati?", choices: [{ text: "Consegnare le schede al primo che passa e tornare a casa, il lavoro è finito.", is_correct: false, feedback: "SBAGLIATO. Le schede sono documenti ufficiali e importantissimi. La loro corretta consegna è parte integrante del tuo compito." },{ text: "Assistere il tecnico nella consegna ordinata delle schede all'ufficio preposto (Funzione Censimento Danni), assicurandosi che la documentazione sia completa.", is_correct: true, feedback: "PROCEDURA CORRETTA. La catena di consegna della documentazione è importante quanto il sopralluogo stesso per garantire che i dati non vengano persi." },{ text: "Fare una fotocopia di tutte le schede per tenerla come archivio personale.", is_correct: false, feedback: "SBAGLIATO E ILLEGALE. Le schede contengono dati sensibili dei cittadini. La loro divulgazione è una grave violazione della privacy." }] },
+            { situation_update: "Il responsabile della funzione ti chiede: 'Avete notato danni diffusi alle recinzioni o ai muretti di contenimento nella via?'", question: "Perché questa domanda è rilevante?", choices: [{ text: "Perché i danni agli 'elementi non strutturali esterni' possono indicare problemi di instabilità del terreno (rischio idrogeologico indotto).", is_correct: true, feedback: "OTTIMA INTUIZIONE. Le emergenze sono complesse. Un sisma può attivare rischi secondari, come le frane. La tua osservazione del contesto è preziosa." },{ text: "Per capire se i proprietari dovranno spendere molti soldi per le riparazioni.", is_correct: false, feedback: "NON RILEVANTE. Le valutazioni economiche non sono il focus primario della gestione dell'emergenza." },{ text: "È solo una domanda per curiosità, per farsi un'idea generale.", is_correct: false, feedback: "SBAGLIATO. In un COM, ogni domanda ha uno scopo operativo. Si raccolgono dati per avere un quadro completo della situazione." }] },
+            { situation_update: "La giornata è finita. Rifletti sul ruolo che hai avuto a supporto del tecnico.", question: "Qual è la definizione più corretta del tuo compito?", choices: [{ text: "'Angelo custode' del tecnico e 'interfaccia umana' con la popolazione colpita.", is_correct: true, feedback: "DEFINIZIONE PERFETTA. Hai capito appieno la duplice e fondamentale natura del tuo ruolo: garantire la sicurezza dell'operatore tecnico e gestire il delicato impatto umano sui cittadini." },{ text: "Il 'detective' dei danni, quello che trova le crepe.", is_correct: false, feedback: "SBAGLIATO. Quello è il ruolo del tecnico rilevatore. Tu sei di supporto, non sei il valutatore." },{ text: "Il 'burocrate' incaricato di compilare scartoffie e portare la borsa.", is_correct: false, feedback: "RIDUTTIVO. Il tuo ruolo è molto più attivo e importante. La sicurezza e il supporto psicologico che fornisci sono contributi essenziali." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

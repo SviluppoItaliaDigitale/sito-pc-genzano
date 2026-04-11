@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Uso DPI AIB | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="aib.html">Antincendio Boschivo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🔥 Uso Corretto dei DPI in AIB</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="aib.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Stai per partire per un intervento AIB. Ti rechi in magazzino per prelevare e indossare i tuoi DPI (Dispositivi di Protezione Individuale).", question: "Qual è la primissima cosa da fare prima ancora di indossare qualsiasi DPI?", choices: [{ text: "Controllare visivamente l'integrità di ogni singolo pezzo: tuta, casco, visiera, guanti, maschera e scarponi.", is_correct: true, feedback: "PROCEDURA PERFETTA. L'ispezione preliminare è fondamentale per garantire che i dispositivi che dovrebbero proteggerti non siano essi stessi un rischio." },{ text: "Firmare il registro di uscita del materiale, per una questione burocratica.", is_correct: false, feedback: "SBAGLIATO. La burocrazia è importante, ma viene dopo il controllo di sicurezza. Firmerai per un materiale che hai verificato essere idoneo." },{ text: "Scegliere i DPI che sembrano più comodi o più nuovi degli altri.", is_correct: false, feedback: "SBAGLIATO. Devi usare i DPI che ti sono stati assegnati e controllarli. La 'comodità' non è il primo criterio di scelta, la sicurezza sì." }] },
+            { situation_update: "Durante il controllo, noti che la visiera del tuo casco ha una piccola crepa.", question: "Come ti comporti?", choices: [{ text: "La ignoro. È piccola e non dovrebbe dare problemi durante l'intervento.", is_correct: false, feedback: "SBAGLIATO. Un DPI danneggiato è un DPI inutile. Una piccola crepa può cedere di schianto a causa del calore, lasciando i tuoi occhi esposti." },{ text: "Lo fai presente al caposquadra/responsabile materiali e sostituisci immediatamente il casco o la visiera. Non parti finché il tuo DPI non è integro.", is_correct: true, feedback: "DECISIONE CORRETTA. La sicurezza personale non ammette compromessi. Hai correttamente identificato un difetto e l'hai risolto prima di esporti al rischio." },{ text: "Usi del nastro adesivo ignifugo per riparare la crepa dall'esterno.", is_correct: false, feedback: "PERICOLOSO. Le riparazioni di fortuna sui DPI sono inaccettabili. Non ripristinano l'integrità strutturale e danno una falsa sicurezza." }] },
+            { situation_update: "Hai ricevuto un casco sostitutivo. Inizi a indossare la tuta ignifuga sopra i tuoi vestiti.", question: "Cosa è fondamentale indossare SOTTO la tuta ignifuga?", choices: [{ text: "Indumenti in fibra sintetica (pile, poliestere) perché sono caldi e leggeri.", is_correct: false, feedback: "PERICOLOSISSIMO. Le fibre sintetiche a contatto con il calore fondono sulla pelle, causando ustioni gravissime. Vanno assolutamente evitate." },{ text: "Indumenti in fibra naturale (cotone, lana) che carbonizzano ma non fondono, e che coprano tutto il corpo.", is_correct: true, feedback: "SCELTA CORRETTA. La fibra naturale è l'unica sicura da indossare sotto i DPI AIB, perché non si fonde sulla pelle in caso di calore estremo." },{ text: "Pantaloni corti e maglietta per soffrire meno il caldo.", is_correct: false, feedback: "SBAGLIATO. Bisogna creare più strati di protezione. Lasciare parti del corpo scoperte sotto la tuta annulla parte della sua efficacia." }] },
+            { situation_update: "Hai completato la vestizione. Salite sul mezzo e arrivate sullo scenario operativo.", question: "Senti molto caldo e sei tentato di abbassare la cerniera della tuta sul petto per prendere un po' d'aria. Cosa fai?", choices: [{ text: "Lo faccio per pochi secondi, quando nessuno mi vede, non succede niente.", is_correct: false, feedback: "SBAGLIATO. Un tizzone o del materiale incandescente può entrare nell'apertura in una frazione di secondo. I DPI vanno tenuti sempre chiusi in area operativa." },{ text: "Non lo faccio. Comunico al caposquadra che ho bisogno di una pausa per reidratarmi e la effettuo in una 'zona sicura' lontana dal fronte.", is_correct: true, feedback: "COMPORTAMENTO RESPONSABILE. La gestione della fatica e dell'idratazione attraverso pause programmate è la chiave per operare a lungo in sicurezza." },{ text: "Mi slaccio la tuta fino alla vita, tanto sono rivolto dalla parte opposta al fronte del fuoco.", is_correct: false, feedback: "SBAGLIATO. Il vento può far girare il fuoco o portare materiale incandescente da direzioni inaspettate. La protezione deve essere sempre a 360 gradi." }] },
+            { situation_update: "Un tizzone ardente ti cade su un guanto. Il guanto resiste al calore ma senti comunque una forte sensazione di bruciore.", question: "Qual è l'azione corretta?", choices: [{ text: "Stringo i denti e continuo a lavorare, il guanto ha protetto la pelle.", is_correct: false, feedback: "SBAGLIATO. Il dolore è un segnale. Ignorarlo può portare a un'ustione vera e propria. Devi verificare." },{ text: "Mi allontano in un'area sicura, mi tolgo il guanto per valutare la scottatura, la raffreddo con acqua pulita e la segnalo al caposquadra.", is_correct: true, feedback: "CORRETTO. Hai gestito l'infortunio in sicurezza. Anche una piccola scottatura, se non trattata, può infettarsi e diventare un problema serio." },{ text: "Metto il guanto nell'acqua per raffreddarlo senza toglierlo dalla mano.", is_correct: false, feedback: "SBAGLIATO. In questo modo l'acqua calda rimane intrappolata nel guanto a contatto con la pelle, peggiorando la scottatura (effetto 'lesso')." }] },
+            { situation_update: "L'intervento è concluso e tornate in sede. Sei coperto di fuliggine e cenere.", question: "Qual è la prima operazione da fare una volta sceso dal mezzo?", choices: [{ text: "Andare subito a bere qualcosa al bar con la squadra per festeggiare.", is_correct: false, feedback: "SBAGLIATO. La convivialità viene dopo le procedure di sicurezza e ripristino." },{ text: "Soffiare via la fuliggine dai DPI con l'aria compressa.", is_correct: false, feedback: "PERICOLOSISSIMO. L'aria compressa nebulizza le particelle tossiche e cancerogene della fuliggine, facendole inalare a tutti i presenti." },{ text: "Procedere con la 'decontaminazione grossolana', spazzolando o sciacquando i DPI prima di toglierli, per evitare di contaminare sé stessi e gli ambienti.", is_correct: true, feedback: "PROCEDURA PERFETTA. La fuliggine contiene sostanze pericolose. Rimuoverla prima di svestirsi è una fondamentale norma di igiene e prevenzione sanitaria." }] },
+            { situation_update: "Dopo esserti svestito e lavato, devi riporre i tuoi DPI personali nell'armadietto.", question: "Cosa fai con la maschera FFP3 che hai usato?", choices: [{ text: "La piego e la metto in tasca per il prossimo intervento, così si risparmia.", is_correct: false, feedback: "SBAGLIATO. I facciali filtranti come gli FFP3 sono monouso. Riutilizzarli significa respirare le polveri accumulate e compromettere la salute." },{ text: "La getto nell'apposito contenitore dei rifiuti indifferenziati, perché è un dispositivo monouso.", is_correct: true, feedback: "CORRETTO. I DPI monouso vanno smaltiti dopo ogni utilizzo per garantire la massima efficacia protettiva e l'igiene." },{ text: "La lascio appesa sull'armadietto ad 'arieggiare' per il giorno dopo.", is_correct: false, feedback: "SBAGLIATO. Non si 'arieggia'. Le particelle rimangono intrappolate nel filtro, che perde anche di efficacia con l'umidità." }] },
+            { situation_update: "È il momento della manutenzione. I tuoi scarponi AIB in pelle sono sporchi di fango e cenere.", question: "Come te ne prendi cura?", choices: [{ text: "Li lascio così, tanto si sporcheranno di nuovo al prossimo incendio.", is_correct: false, feedback: "SBAGLIATO. La mancata manutenzione secca la pelle degli scarponi, che si crepa e perde le sue proprietà di impermeabilità e resistenza." },{ text: "Li pulisco con una spazzola e acqua, li lascio asciugare lontano da fonti di calore dirette e poi li tratto con l'apposito grasso per la pelle.", is_correct: true, feedback: "MANUTENZIONE PERFETTA. In questo modo gli scarponi rimarranno morbidi, impermeabili e sicuri per molti anni. La cura del materiale è cura di sé stessi." },{ text: "Li lavo con l'idropulitrice per fare prima e li metto sul termosifone ad asciugare.", is_correct: false, feedback: "SBAGLIATO. L'idropulitrice danneggia le cuciture e il calore diretto secca e spacca la pelle, rovinando irrimediabilmente gli scarponi." }] },
+            { situation_update: "Il tuo interfono da casco non funziona bene, la comunicazione è disturbata.", question: "Cosa fai?", choices: [{ text: "Non dico nulla, cercherò di farmi capire a gesti durante il prossimo intervento.", is_correct: false, feedback: "SBAGLIATO E PERICOLOSO. La comunicazione è vita in emergenza. Un apparato non funzionante è un grave rischio per la sicurezza." },{ text: "Lo segnalo immediatamente al responsabile delle comunicazioni o dei materiali per la verifica e l'eventuale sostituzione/riparazione.", is_correct: true, feedback: "PROCEDURA CORRETTA. Ogni anomalia va segnalata subito per garantire che tutta l'attrezzatura sia sempre al 100% dell'efficienza." },{ text: "Provo a smontarlo da solo per vedere se riesco a sistemarlo.", is_correct: false, feedback: "SCONSIGLIATO. Se non sei un tecnico specializzato, potresti peggiorare il danno. La manutenzione va fatta da personale competente." }] },
+            { situation_update: "Riflettendo sull'uso dei DPI.", question: "Qual è il concetto fondamentale da ricordare?", choices: [{ text: "I DPI mi rendono invulnerabile al fuoco e posso correre più rischi.", is_correct: false, feedback: "SBAGLIATO. Questo è l'errore più pericoloso. I DPI aumentano il tuo margine di sicurezza, non ti rendono invincibile. Il rischio va sempre evitato." },{ text: "I DPI sono l'ultima barriera di difesa; la prima è la corretta valutazione del rischio, la formazione e l'applicazione delle procedure.", is_correct: true, feedback: "ANALISI PERFETTA. Hai capito il vero ruolo dei DPI: non sono un'armatura per l'eroismo, ma un sistema di protezione che si integra con l'intelligenza e la preparazione." },{ text: "I DPI sono scomodi e rallentano il lavoro, ma purtroppo sono obbligatori per legge.", is_correct: false, feedback: "ATTEGGIAMENTO SBAGLIATO. Vedere i DPI come un fastidio invece che come un alleato per la propria vita è il primo passo verso un uso scorretto e pericoloso." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

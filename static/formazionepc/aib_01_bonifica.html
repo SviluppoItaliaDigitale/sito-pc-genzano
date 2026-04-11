@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Bonifica AIB | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="aib.html">Antincendio Boschivo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🔥 Operazione di Bonifica</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="aib.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Il giorno dopo un incendio, la tua squadra AIB è sul campo per la bonifica. Hai a disposizione un modulo con lancia e attrezzi manuali.", question: "Prima di iniziare a bagnare l'area, qual è la prima operazione logica da fare?", choices: [{ text: "Percorrere a piedi il perimetro dell'area assegnata per avere una visione d'insieme e individuare i punti più sospetti (ceppi, grandi alberi, cumuli).", is_correct: true, feedback: "AZIONE CORRETTA. Un sopralluogo preliminare permette di pianificare il lavoro in modo efficiente e mirato, risparmiando acqua ed energie." },{ text: "Iniziare a bagnare a caso dal punto più vicino al mezzo.", is_correct: false, feedback: "INEFFICIENTE. Partire senza un piano porta a sprecare risorse preziose (acqua) e a tralasciare punti critici nascosti." },{ text: "Fare una pausa e mangiare qualcosa prima di iniziare il duro lavoro.", is_correct: false, feedback: "SBAGLIATO. La bonifica è una fase critica dell'incendio e va iniziata senza indugi. La pausa si fa dopo aver messo in sicurezza l'area." }] },
+            { situation_update: "Durante il giro, noti del fumo levarsi da un grosso ceppo d'albero annerito.", question: "Qual è la procedura corretta per trattare il ceppo fumante?", choices: [{ text: "Ricoprire il ceppo con della terra per soffocare il fumo.", is_correct: false, feedback: "INCOMPLETO E RISCHIOSO. Coprire con la terra può nascondere il fuoco, che continua a covare sotto e può ripartire in seguito." },{ text: "Allagare il ceppo, aprirlo con un'ascia o un altro attrezzo per esporre le braci interne e bagnare fino a completo raffreddamento.", is_correct: true, feedback: "PROCEDURA DA MANUALE. L'azione meccanica (aprire) unita all'azione estinguente (acqua) è l'unico modo per essere certi di estinguere un focolaio insidioso come un ceppo." },{ text: "Versare un po' d'acqua dall'esterno e proseguire, sembra spento.", is_correct: false, feedback: "SBAGLIATO. Il fuoco può covare all'interno del legno per giorni. Una bagnata superficiale è inutile e pericolosa perché dà una falsa sicurezza." }] },
+            { situation_update: "Hai estinto il focolaio. Un collega indica un grande pino annerito ma in piedi, chiedendoti se sia il caso di abbatterlo per sicurezza.", question: "Cosa rispondi riguardo all'abbattimento dell'albero?", choices: [{ text: "No. L'abbattimento di alberi è un'operazione specialistica. Noi mettiamo in sicurezza l'area sottostante e segnaliamo l'albero pericolante al DOS.", is_correct: true, feedback: "RISPOSTA CORRETTA. Conoscere i limiti delle proprie competenze è fondamentale per la sicurezza. Il volontario AIB non è un boscaiolo." },{ text: "Sì, prendi la motosega e tiralo giù, così non ci pensiamo più.", is_correct: false, feedback: "SBAGLIATO E PERICOLOSO. L'uso della motosega per abbattimenti richiede un patentino e una tecnica specifica. Un abbattimento sbagliato può essere letale." },{ text: "Valuteremo dopo, ora concentriamoci sulla bonifica a terra.", is_correct: false, feedback: "SBAGLIATO. Ignorare un pericolo identificato non è corretto. L'albero va segnalato subito, perché rappresenta un rischio per chiunque operi nell'area." }] },
+            { situation_update: "Avete messo in sicurezza l'area. Mentre lavori, inciampi e ti procuri una leggera distorsione alla caviglia. Ti duole ma riesci a camminare.", question: "Cosa fai dopo l'infortunio?", choices: [{ text: "Non dico niente a nessuno per non essere un peso e continuo a lavorare.", is_correct: false, feedback: "SBAGLIATO. Un volontario infortunato è un rischio per sé e per la squadra. L'infortunio potrebbe peggiorare, rendendo necessario un soccorso complesso." },{ text: "Lo comunico immediatamente al tuo caposquadra per una valutazione. La sicurezza del personale è una priorità.", is_correct: true, feedback: "DECISIONE GIUSTA. La sicurezza individuale è la sicurezza della squadra. Il caposquadra può assegnarti un compito più leggero o decidere per il tuo rientro." },{ text: "Prendo un antidolorifico dal mio zaino e continuo a lavorare come se nulla fosse.", is_correct: false, feedback: "SBAGLIATO. Mascherare il dolore non risolve il problema fisico e ti espone a rischi maggiori, perché non senti i segnali del tuo corpo." }] },
+            { situation_update: "Il caposquadra ti assegna un compito più leggero. Noti che una manichetta ha una piccola perdita, uno zampillo d'acqua.", question: "Come gestisci la manichetta che perde?", choices: [{ text: "La avvolgo con del nastro isolante per ripararla alla buona.", is_correct: false, feedback: "SBAGLIATO. Le riparazioni di fortuna sono inaffidabili. La pressione dell'acqua farebbe saltare il nastro in pochi minuti." },{ text: "La segnalo e, se possibile, la sostituisco con una di scorta oppure la fascio con un'apposita 'fascia stringitubo' se in dotazione.", is_correct: true, feedback: "CORRETTO. Mantenere l'attrezzatura efficiente è cruciale. Una piccola perdita può diventare una rottura e farti perdere pressione nel momento del bisogno." },{ text: "La ignoro, è una perdita minima e c'è ancora abbastanza pressione.", is_correct: false, feedback: "SBAGLIATO. Le piccole perdite vanno gestite subito, prima che diventino grossi problemi che compromettono l'operatività." }] },
+            { situation_update: "Hai sostituito il tratto danneggiato. Il vento inizia a rinforzare notevolmente.", question: "L'aumento del vento durante una bonifica cosa comporta?", choices: [{ text: "È un grave pericolo perché può riattizzare le braci nascoste e far ripartire il fuoco. Bisogna aumentare il livello di allerta.", is_correct: true, feedback: "ESATTO. Il vento è il peggior nemico in un AIB, anche during la bonifica. Può trasformare una situazione sotto controllo in una nuova emergenza in pochi istanti." },{ text: "Niente di particolare, il fuoco principale è spento e non ci sono più fiamme.", is_correct: false, feedback: "SBAGLIATO. La bonifica si fa proprio perché il fuoco non è mai 'spento' finché l'ultimo focolaio non è estinto. Il vento è il fattore scatenante delle riprese." },{ text: "È una buona cosa perché aiuta a raffreddare l'ambiente e ad asciugare il terreno.", is_correct: false, feedback: "SBAGLIATO. Il vento alimenta le braci con ossigeno e disperde le ceneri, esponendo nuovo materiale combustibile. È un fattore di rischio enorme." }] },
+            { situation_update: "Infatti, vedi del fumo alzarsi da un tappeto di aghi di pino che sembrava già bagnato e spento.", question: "Come tratti il tappeto di aghi di pino che ha ripreso a fumare?", choices: [{ text: "Ci passo sopra con gli scarponi per compattarlo e soffocare il fumo.", is_correct: false, feedback: "SBAGLIATO. Così facendo nascondi solo il fuoco sotto la superficie, che continuerà a bruciare e potrebbe ripartire più tardi." },{ text: "Lo bagno abbondantemente dall'alto con la lancia a getto pieno.", is_correct: false, feedback: "INSUFFICIENTE. L'acqua potrebbe non penetrare lo strato compatto di aghi. Il fuoco 'cammina' sotto la lettiera, protetto dalla superficie." },{ text: "Lo smuovo e lo rivolto con un rastrello o un altro attrezzo mentre un altro collega bagna, per essere sicuri che l'acqua penetri in profondità.", is_correct: true, feedback: "TECNICA PERFETTA. Il fuoco di lettiera si combatte solo con un'azione combinata meccanica (rottura dello strato) e idrica (bagnatura in profondità)." }] },
+            { situation_update: "Finite l'area. Il DOS vi comunica che potete rientrare in sede.", question: "Prima di caricare le manichette sul mezzo, quale operazione è fondamentale?", choices: [{ text: "Svuotarle completamente dall'acqua residua per renderle più leggere e prevenire danni.", is_correct: true, feedback: "CORRETTO. Le manichette piene d'acqua sono pesantissime, difficili da gestire e l'acqua residua a lungo andare le danneggia. Vanno svuotate prima di essere riavvolte." },{ text: "Arrotolarle velocemente così come sono per fare prima e tornare in sede.", is_correct: false, feedback: "SBAGLIATO. È una prassi scorretta che danneggia il materiale e rende più lento il successivo ripristino del mezzo." },{ text: "Lasciarle stese ad asciugare al sole per qualche ora prima di rientrare.", is_correct: false, feedback: "IMPRATICABILE. Non c'è tempo per questo. Lo svuotamento è la procedura standard da campo. L'asciugatura completa avverrà in sede." }] },
+            { situation_update: "Durante il tragitto, passi vicino a una casa. Il proprietario sta bruciando delle sterpaglie nel suo giardino, in periodo di massimo rischio.", question: "Qual è il tuo ruolo in questo caso?", choices: [{ text: "Mi fermo e gli faccio una multa per il comportamento scorretto.", is_correct: false, feedback: "SBAGLIATO. Non sei un pubblico ufficiale e non puoi elevare sanzioni. È un abuso di ruolo." },{ text: "Lo ignoro, il mio intervento è finito e non è un mio problema.", is_correct: false, feedback: "SBAGLIATO. Il volontario di PC è un presidio del territorio sempre. La prevenzione è un compito fondamentale." },{ text: "Mi fermo, lo informo con cortesia che vige il divieto, e segnalo la situazione al COM o alla Polizia Locale.", is_correct: true, feedback: "OTTIMO. Hai agito da cittadino responsabile e da volontario attento. L'educazione e la segnalazione alle autorità competenti sono gli strumenti corretti." }] },
+            { situation_update: "Rientrato in sede, la squadra è stanca.", question: "Qual è il compito che conclude ufficialmente la giornata operativa AIB?", choices: [{ text: "Il ripristino completo del mezzo (pieno d'acqua, carburante, pulizia attrezzature) e la compilazione degli atti.", is_correct: true, feedback: "PROCEDURA PERFETTA. La missione finisce solo quando uomini e mezzi sono pronti a ripartire per una nuova emergenza in qualsiasi momento." },{ text: "Andare subito a casa a riposare, il materiale si pulisce domani.", is_correct: false, feedback: "SBAGLIATO. Lasciare un mezzo non operativo è una grave mancanza. Una nuova emergenza potrebbe verificarsi da un momento all'altro." },{ text: "Il 'terzo tempo': una mangiata tutti insieme per fare gruppo.", is_correct: false, feedback: "IMPORTANTE per il morale e lo spirito di squadra, ma viene sempre DOPO aver completato i doveri procedurali e il ripristino dei mezzi." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

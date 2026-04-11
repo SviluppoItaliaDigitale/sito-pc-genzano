@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Avvistamento Incendio | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="aib.html">Antincendio Boschivo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🔥 Avvistamento e Segnalazione</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="aib.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei in perlustrazione AIB in una zona collinare in una giornata calda e ventosa. Vedi una colonna di fumo levarsi da un bosco a circa un chilometro.", question: "Qual è la tua primissima azione, ancora prima di prendere in mano la radio?", choices: [{ text: "Avvicinarmi il più possibile con il mezzo per vedere meglio.", is_correct: false, feedback: "SBAGLIATO. Avvicinarsi senza un piano ti espone al rischio di rimanere intrappolato. La prima regola è la sicurezza." },{ text: "Fermare il mezzo in un punto sicuro (piazzola, slargo) che garantisca una buona via di fuga e osservare attentamente il fumo.", is_correct: true, feedback: "AZIONE PERFETTA. La sicurezza personale e la scelta di un punto di osservazione strategico (P.O.) sono i primi passi fondamentali di ogni intervento AIB." },{ text: "Scattare subito una foto con il cellulare e mandarla sulla chat dei volontari.", is_correct: false, feedback: "SBAGLIATO. Le chat non sono un canale di comunicazione operativo ufficiale. La segnalazione va fatta via radio alla Sala Operativa." }] },
+            { situation_update: "Sei fermo e al sicuro. Devi comunicare l'avvistamento alla Sala Operativa.", question: "Quali sono le informazioni FONDAMENTALI da comunicare subito?", choices: [{ text: "Chi sono, da dove chiamo (località/coordinate), cosa vedo (colore fumo), direzione del vento e tipo di vegetazione.", is_correct: true, feedback: "COMUNICAZIONE PERFETTA. Hai fornito tutti gli elementi essenziali che permettono alla Sala Operativa di comprendere la situazione e pianificare l'invio delle risorse." },{ text: "Chi sono, che vedo fumo e che mi sembra un incendio di grandi dimensioni.", is_correct: false, feedback: "INCOMPLETO. Una comunicazione generica è quasi inutile. Senza una localizzazione precisa, la Sala Operativa non sa dove indirizzare le squadre." },{ text: "Chi sono e chiedo l'invio immediato di un Canadair perché il fuoco è alto.", is_correct: false, feedback: "IMPROPRIO. La richiesta dei mezzi aerei spetta unicamente al Direttore delle Operazioni di Spegnimento (DOS), non al volontario che effettua l'avvistamento." }] },
+            { situation_update: "La Sala Operativa ti risponde: 'Ricevuto. Ti nominiamo 'punto di osservazione Alfa'. Rimani in posizione e aggiornaci sull'evoluzione'.", question: "Quale dato è più importante monitorare e comunicare ora?", choices: [{ text: "La velocità e la direzione con cui il fumo e le fiamme si spostano, per capire dove sta andando l'incendio.", is_correct: true, feedback: "ESATTO. La propagazione (velocità e direzione) è il dato più critico perché determina quali zone e quali infrastrutture (case, strade) sono a rischio." },{ text: "Se arrivano altri curiosi o giornalisti sul posto.", is_correct: false, feedback: "SECONDARIO. La gestione dei curiosi è importante, ma la priorità assoluta è il monitoraggio dell'evoluzione dell'incendio." },{ text: "L'ora esatta in cui hai fatto la prima chiamata.", is_correct: false, feedback: "INUTILE. La Sala Operativa ha già registrato l'orario della tua chiamata. Ora servono dati sull'evoluzione." }] },
+            { situation_update: "Noti che il vento spinge il fumo velocemente verso nord-est, in direzione di alcune case isolate.", question: "Come comunichi questo nuovo dato cruciale?", choices: [{ text: "ALLARME ALLARME! IL FUOCO BRUCERA' LE CASE! MANDATE TUTTI!", is_correct: false, feedback: "SBAGLIATO. Le comunicazioni radio devono essere sempre calme e professionali per non generare panico e confusione. Usa un linguaggio operativo." },{ text: "Sala Operativa da Alfa. Il fuoco sta andando verso le case.", is_correct: false, feedback: "TROPPO GENERICO. 'Le case' non è un'indicazione precisa. Sii il più specifico possibile per aiutare chi sta coordinando i soccorsi." },{ text: "Sala Operativa da Alfa, aggiornamento: confermo forte vento da sud-ovest, la testa dell'incendio si propaga velocemente in direzione nord-est verso case isolate in Località Colle Pardo. Passo.", is_correct: true, feedback: "COMUNICAZIONE ECCELLENTE. Calma, precisa e operativa. Hai fornito dati utili per la strategia di spegnimento e per l'eventuale evacuazione preventiva." }] },
+            { situation_update: "La Sala Operativa ti chiede di individuare un punto di incontro sicuro ('safe point') per le squadre in arrivo.", question: "Che caratteristiche deve avere questo punto?", choices: [{ text: "Un ampio spazio aperto (parcheggio, campo coltivato) facilmente accessibile, fuori dalla direzione del fumo e con più vie di fuga.", is_correct: true, feedback: "SCELTA PERFETTA. Un buon punto di incontro è la base per un intervento coordinato e sicuro. Accessibilità e sicurezza sono le parole chiave." },{ text: "Un sentiero stretto vicino al bosco per farle avvicinare di più e prima al fuoco.", is_correct: false, feedback: "SBAGLIATO. I sentieri stretti non offrono vie di fuga e possono trasformarsi in una trappola mortale per i mezzi e gli operatori." },{ text: "Sotto una linea elettrica, perché di solito lì la vegetazione è più bassa.", is_correct: false, feedback: "PERICOLOSISSIMO. Il calore e il fumo possono causare archi elettrici e il crollo dei cavi. Bisogna sempre mantenere le distanze di sicurezza dagli elettrodotti." }] },
+            { situation_update: "Arriva la prima squadra AIB sul posto. Il caposquadra ti chiede 'Com'è la situazione?'", question: "Qual è la tua risposta ideale?", choices: [{ text: "Fornire un aggiornamento rapido e fattuale: 'Fronte attivo di circa 200 metri, si muove verso N-E spinto da vento forte, vegetazione mista pini e macchia.'", is_correct: true, feedback: "BRIEFING IMPECCABILE. Hai dato al caposquadra le informazioni tattiche essenziali di cui aveva bisogno per decidere come impostare il primo attacco." },{ text: "'Un disastro, è enorme, non so se ce la facciamo.'", is_correct: false, feedback: "SBAGLIATO. Un atteggiamento negativo è demoralizzante e non fornisce alcuna informazione utile a livello operativo. Mantieni sempre un approccio calmo e fattuale." },{ text: "'Seguitemi, vi faccio vedere io dove andare.'", is_correct: false, feedback: "SBAGLIATO. Non prendere l'iniziativa se non ti viene richiesto. Il caposquadra ha la responsabilità della sua squadra. Il tuo ruolo è fornire informazioni." }] },
+            { situation_update: "Arriva il DOS (Direttore delle Operazioni di Spegnimento) e assume il comando.", question: "Qual diventa il tuo ruolo?", choices: [{ text: "Continuo a fare quello che stavo facendo, riportando direttamente alla Sala Operativa.", is_correct: false, feedback: "SBAGLIATO. In presenza del DOS, la catena di comando cambia. Ignorarlo significa creare confusione e rompere l'unità di comando." },{ text: "Ti presenti al DOS, ti metti a sua completa disposizione e da quel momento in poi rispondi direttamente a lui.", is_correct: true, feedback: "PROCEDURA CORRETTA. Per garantire l'unità di comando, tutte le forze in campo rispondono al DOS. Ti assegnerà lui un nuovo compito o ti svincolerà." },{ text: "Visto che è arrivato il 'capo', il mio lavoro è finito e posso rientrare in sede in autonomia.", is_correct: false, feedback: "SBAGLIATO. Nessun volontario abbandona lo scenario operativo finché non viene ufficialmente 'svincolato' dal responsabile delle operazioni." }] },
+            { situation_update: "Il DOS ti assegna il compito di registrare su un diario di bordo tutti gli eventi principali (arrivo squadre, uso mezzi aerei, ecc.).", question: "Senti alla radio 'Lancio dell'elicottero tra 2 minuti sull'obiettivo Bravo'. Cosa fai?", choices: [{ text: "Rispondo alla radio 'Ricevuto, ottimo!' per dare conferma.", is_correct: false, feedback: "SBAGLIATO. Il canale radio deve essere lasciato libero per le comunicazioni operative. Se il messaggio non è per te, non devi rispondere." },{ text: "Mi avvicino all'obiettivo Bravo per fare un video del lancio con il cellulare.", is_correct: false, feedback: "PERICOLOSO E INUTILE. Avvicinarsi all'area di lancio è rischioso. Il tuo compito non è fare il reporter." },{ text: "Annoto sul diario di bordo: 'Ore [ora attuale], Elicottero 'Drago XX' in procinto di effettuare lancio su obiettivo Bravo'.", is_correct: true, feedback: "COMPITO ESEGUITO. Il tuo ruolo è registrare. La precisione degli orari e degli eventi è fondamentale per la ricostruzione post-operativa." }] },
+            { situation_update: "L'incendio viene contenuto. Il DOS ti ringrazia e ti 'svincola', dicendoti che puoi rientrare in sede.", question: "Cosa significa esattamente 'essere svincolati'?", choices: [{ text: "Che il tuo compito nell'ambito di quell'intervento è ufficialmente terminato e devi lasciare l'area delle operazioni.", is_correct: true, feedback: "ESATTO. 'Svincolare' è un termine operativo preciso. Significa che non sei più necessario in quello scenario e sei di nuovo a disposizione del tuo coordinatore." },{ text: "Che puoi andare a mangiare un panino e tornare dopo se serve.", is_correct: false, feedback: "SBAGLIATO. Essere svincolati non è una pausa. È la fine del tuo impiego in quello specifico scenario." },{ text: "Che è un modo di dire e devi rimanere finché l'incendio non è completamente spento e bonificato.", is_correct: false, feedback: "SBAGLIATO. Se il DOS ti svincola, devi lasciare lo scenario. Rimanere sul posto creerebbe solo confusione e affollamento inutile." }] },
+            { situation_update: "Sei stato svincolato dal DOS.", question: "Qual è la prima comunicazione che fai una volta lasciato lo scenario operativo?", choices: [{ text: "Comunico alla mia Sala Operativa (COM) che il DOS mi ha svincolato e che sto iniziando il tragitto di rientro verso la sede.", is_correct: true, feedback: "COMUNICAZIONE PERFETTA. Il tuo COM deve sempre sapere lo stato e la posizione delle sue squadre. Il rientro è una fase dell'intervento e va comunicata." },{ text: "Chiamo a casa per dire che sto tornando.", is_correct: false, feedback: "SBAGLIATO. La comunicazione di servizio ha sempre la precedenza su quelle personali. Prima avvisi la Sala Operativa, poi puoi avvisare la famiglia." },{ text: "Non comunico nulla finché non sono arrivato in sede.", is_correct: false, feedback: "SBAGLIATO. Il COM deve poterti rintracciare o riassegnare a un altro compito durante il tragitto se necessario. Devi essere sempre tracciato." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Allestimento Area Attesa | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="terremoto.html">Rischio Sismico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🌎 Allestimento Area di Attesa</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="terremoto.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Dopo una scossa, arrivi nella piazza designata come Area di Attesa. I cittadini arrivano confusi. Hai a disposizione nastro, paletti e moduli di registrazione.", question: "Qual è la prima cosa da fare per gestire l'area in modo efficace?", choices: [{ text: "Iniziare subito a registrare i nomi dei presenti per avere un censimento rapido.", is_correct: false, feedback: "SBAGLIATO. La registrazione è fondamentale, ma va fatta dopo aver messo in sicurezza le persone in un'area definita, altrimenti è caotico e poco sicuro." },{ text: "Delimitare chiaramente un perimetro sicuro con il nastro, lontano da pericoli (edifici, alberi), e creare un unico punto di accesso/uscita.", is_correct: true, feedback: "AZIONE CORRETTA. La definizione di uno spazio fisico sicuro ('il contenitore') è il primo passo per trasformare il caos in gestione. Permette di controllare i flussi e garantire la sicurezza." },{ text: "Fornire informazioni e rassicurazioni ai cittadini, spiegando cosa sta succedendo.", is_correct: false, feedback: "SBAGLIATO. L'assistenza è un compito primario, ma è più efficace quando le persone si sentono al sicuro in un ambiente ordinato. La sicurezza fisica precede quella psicologica." }] },
+            { situation_update: "Hai creato un'area sicura e incanalato le persone attraverso un unico varco.", question: "Qual è il tuo prossimo compito prioritario al varco di accesso?", choices: [{ text: "Iniziare la registrazione dei presenti, chiedendo nome, cognome e segnalando eventuali necessità immediate (es. feriti, patologie, bambini soli).", is_correct: true, feedback: "PROCEDURA PERFETTA. La registrazione è fondamentale per sapere chi è presente, per pianificare le risorse e, soprattutto, per identificare subito le fragilità." },{ text: "Distribuire subito bottigliette d'acqua e coperte a tutti.", is_correct: false, feedback: "IMPORTANTE, MA NON PRIORITARIO. La distribuzione dei beni va fatta in modo ordinato dopo aver capito chi c'è e quali sono le vere urgenze. La priorità è il censimento." },{ text: "Montare una tenda pneumatica per creare un punto informazioni ben visibile.", is_correct: false, feedback: "TROPPO LENTO. Le strutture più complesse si allestiscono in una fase successiva. La priorità è la gestione delle persone che continuano ad arrivare." }] },
+            { situation_update: "Durante la registrazione, una signora ti dice che suo marito è cardiopatico e ha finito le sue pastiglie salvavita.", question: "Come gestisci questa criticità sanitaria?", choices: [{ text: "Le dico di stare tranquilla e che appena possibile qualcuno se ne occuperà.", is_correct: false, feedback: "INSUFFICIENTE. Una risposta vaga non gestisce il problema. Le criticità sanitarie richiedono un'azione immediata e tracciata." },{ text: "Le suggerisco di provare a tornare velocemente a casa a prenderle.", is_correct: false, feedback: "ASSOLUTAMENTE NO. È vietato e pericolosissimo far rientrare i cittadini nelle case non verificate. Potresti causare una tragedia." },{ text: "Segnalo immediatamente la criticità al COM o al referente sanitario, fornendo le generalità della persona e l'ubicazione.", is_correct: true, feedback: "OTTIMA GESTIONE. Hai identificato una priorità sanitaria e l'hai comunicata al canale corretto per l'attivazione dei soccorsi sanitari (es. Posto Medico Avanzato)." }] },
+            { situation_update: "Continui la registrazione. Arriva un cane di grossa taglia, senza guinzaglio, che abbaia spaventato tra la gente, creando panico.", question: "Come gestisci la presenza dell'animale vagante?", choices: [{ text: "Chiedo via radio l'intervento di un servizio specializzato e nel frattempo chiedo ai presenti di non spaventarlo e di lasciargli spazio.", is_correct: true, feedback: "DECISIONE CORRETTA. Gli animali spaventati possono essere imprevedibili. Hai evitato rischi per le persone e per l'animale e hai attivato il servizio competente." },{ text: "Provo ad accalappiarlo da solo per non farlo scappare e tranquillizzare la gente.", is_correct: false, feedback: "RISCHIOSO. Se non sei addestrato per la gestione di animali, potresti ferirti o peggiorare la situazione. È un compito per specialisti." },{ text: "Lo caccio via in malo modo per allontanare il pericolo dall'area.", is_correct: false, feedback: "SBAGLIATO. Un simile approccio è crudele e potrebbe rendere l'animale aggressivo, aumentando il pericolo per le persone all'esterno dell'area." }] },
+            { situation_update: "Arriva una famiglia di turisti stranieri che non parlano italiano e sembrano disorientati.", question: "Come comunichi con loro?", choices: [{ text: "Cerco di comunicare a gesti e con parole semplici in inglese (se possibile) e cerco tra i presenti o via radio un mediatore culturale.", is_correct: true, feedback: "APPROCCIO INCLUSIVO ED EFFICACE. Superare le barriere linguistiche è fondamentale per non lasciare nessuno indietro. Ottima iniziativa." },{ text: "Li ignori perché non riesco a capirli e ho altre persone da registrare.", is_correct: false, feedback: "SBAGLIATO. L'assistenza va fornita a tutti. Ignorarli è contro ogni principio di soccorso e potrebbe nascondere gravi problemi." },{ text: "Urlo più forte in italiano, sperando che prima o poi capiscano le parole chiave.", is_correct: false, feedback: "INEFFICACE. Alzare la voce non aiuta la comprensione e aumenta solo lo stato di stress e confusione." }] },
+            { situation_update: "Il COM comunica che è in arrivo un carico di acqua e coperte.", question: "Come organizzi la distribuzione dei beni di conforto?", choices: [{ text: "Lascio le casse d'acqua al centro dell'area e lascio che le persone si servano da sole.", is_correct: false, feedback: "SBAGLIATO. Questo approccio genera ressa, possibili conflitti e uno spreco di risorse. Va evitato sempre." },{ text: "Organizzo un punto di distribuzione ordinato, chiamando le persone per nucleo familiare registrato per evitare resse e sprechi.", is_correct: true, feedback: "GESTIONE PERFETTA. Una distribuzione ordinata e tracciata (basata sulla registrazione) è più equa, efficiente e soprattutto mantiene la calma e l'ordine." },{ text: "Do la precedenza a chi si lamenta di più, così si calmano.", is_correct: false, feedback: "SBAGLIATO. Questo metodo è iniquo e incentiva i comportamenti polemici, minando la tua autorevolezza e la calma generale." }] },
+            { situation_update: "Mentre distribuisci l'acqua, un signore ti chiede con insistenza: 'Quando potrò tornare a casa?'", question: "Cosa rispondi?", choices: [{ text: "'Non lo so, non chiedetelo a me, io sono solo un volontario.'", is_correct: false, feedback: "POCO PROFESSIONALE. Anche se non hai la risposta, il tuo ruolo è anche quello di gestire la comunicazione con il pubblico in modo empatico." },{ text: "'Penso tra un paio d'ore, vedrà che si risolve tutto presto, non si preoccupi.'", is_correct: false, feedback: "SBAGLIATO. Non dare mai informazioni incerte o false speranze. Se la promessa non viene mantenuta, la fiducia della popolazione crolla." },{ text: "'Non abbiamo ancora questa informazione. La priorità ora è la sicurezza. Appena le autorità ci daranno notizie certe, sarete i primi a saperlo.'", is_correct: true, feedback: "COMUNICAZIONE CORRETTA E ONESTA. È la risposta migliore: è sincera, non crea false aspettative e riafferma che la sicurezza è la priorità." }] },
+            { situation_update: "Il tuo caposquadra ti chiede un report via radio sullo stato dell'Area di Attesa.", question: "Quali sono i dati essenziali da comunicare al COM?", choices: [{ text: "Il numero approssimativo di persone presenti (adulti/bambini), le criticità sanitarie segnalate e il materiale ricevuto/necessario.", is_correct: true, feedback: "REPORT SINTETICO ED EFFICACE. Hai fornito tutti i dati strategici necessari al COM per pianificare le fasi successive (es. allestimento aree di ricovero)." },{ text: "L'elenco completo dei nomi di tutti i presenti, leggendoli uno a uno via radio.", is_correct: false, feedback: "SBAGLIATO. Un'operazione del genere è lentissima e occupa il canale radio per troppo tempo, impedendo comunicazioni più urgenti." },{ text: "'Qui tutto bene, c'è un po' di gente ma la situazione è tranquilla.'", is_correct: false, feedback: "TROPPO GENERICO. Il COM ha bisogno di dati quantitativi per poter prendere decisioni. 'Un po' di gente' non significa nulla a livello operativo." }] },
+            { situation_update: "Dopo diverse ore, il Sindaco revoca lo stato di allarme e le persone possono iniziare a tornare alle loro case verificate come agibili.", question: "Qual è il tuo ultimo compito prima di smontare l'area?", choices: [{ text: "Comunicare ufficialmente la fine dell'emergenza ai presenti, assicurarsi che le persone fragili abbiano supporto per il rientro e bonificare l'area.", is_correct: true, feedback: "CHIUSURA PERFETTA. L'assistenza continua fino all'ultimo momento e il ripristino dei luoghi sono parte integrante del servizio di un volontario." },{ text: "Assicurarsi che tutti se ne siano andati e lasciare tutto così com'è. Penseranno gli operatori ecologici a pulire.", is_correct: false, feedback: "SBAGLIATO. La Protezione Civile non lascia mai un'area in disordine. La 'bonifica' finale e il ripristino dello stato dei luoghi è un dovere." },{ text: "Smontare tutto il più in fretta possibile per poter rientrare subito in sede.", is_correct: false, feedback: "INCOMPLETO. La fretta è cattiva consigliera. Bisogna prima assicurarsi che l'assistenza alla popolazione sia conclusa, specialmente per le persone più vulnerabili." }] },
+            { situation_update: "L'area è stata sgomberata e bonificata. Torni in sede.", question: "Quale atto formale conclude definitivamente il tuo servizio?", choices: [{ text: "La firma sul registro di uscita.", is_correct: false, feedback: "INCOMPLETO. La firma è solo una parte. Manca l'elemento più importante per la tracciabilità delle operazioni." },{ text: "La compilazione del report di servizio e lo scarico del materiale usato dal magazzino.", is_correct: true, feedback: "PROCEDURA CORRETTA. Ogni operazione deve essere tracciata. Il report serve come memoria storica e per fini legali/amministrativi. Lo scarico del magazzino garantisce che le risorse siano sempre aggiornate." },{ text: "Una stretta di mano con il coordinatore che ti ringrazia per il servizio.", is_correct: false, feedback: "IMPORTANTE per il morale, ma non è un atto formale che conclude l'intervento. La burocrazia, in emergenza, è una forma di tutela e organizzazione." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

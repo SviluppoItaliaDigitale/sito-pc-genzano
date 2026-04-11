@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configura Esame — Quiz Protezione Civile</title>
+  <meta name="description" content="Configura il quiz formativo: scegli gli argomenti e inizia l'esame a tempo.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Quiz Formativo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Configurazione Esame</li>
+          </ol>
+        </nav>
+        <h1>Configurazione Esame</h1>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div class="mb-3">
+                <label for="candidateName" class="form-label fw-bold">Nome e Cognome <span class="text-danger" aria-hidden="true">*</span></label>
+                <input type="text" class="form-control" id="candidateName" placeholder="es. Mario Rossi" required autocomplete="name" aria-required="true">
+                <div id="nameError" class="invalid-feedback">Inserisci il tuo nome e cognome per continuare.</div>
+              </div>
+              <div class="mb-4">
+                <label for="candidateId" class="form-label fw-bold">Matricola / Ente di appartenenza <span class="text-muted fw-normal">(facoltativo)</span></label>
+                <input type="text" class="form-control" id="candidateId" placeholder="es. A123 / ODV Prova" autocomplete="organization">
+              </div>
+              <div class="card p-3 mb-4 bg-light">
+                <h2 class="h5 mb-3">Seleziona gli argomenti del quiz</h2>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="selectAllCheckbox">
+                  <label class="form-check-label fw-bold" for="selectAllCheckbox">Seleziona tutti / Deseleziona tutti</label>
+                </div>
+                <hr class="my-2">
+                <div id="categoriesContainer"></div>
+              </div>
+              <details class="mb-4">
+                <summary class="fw-bold small"><i class="bi bi-shield-check me-1" aria-hidden="true"></i> Privacy, sicurezza e funzionamento</summary>
+                <div class="small mt-2 text-muted">
+                  <ul>
+                    <li><strong>Nessun dato inviato al server</strong>: il questionario opera nel tuo browser. Nome e risposte non vengono trasmessi.</li>
+                    <li><strong>Memoria locale</strong>: i dati della sessione vengono salvati temporaneamente nel browser per il funzionamento del quiz.</li>
+                    <li><strong>Attestato</strong>: ha solo valore formativo e viene creato dal browser, non è registrato in archivi centrali.</li>
+                  </ul>
+                </div>
+              </details>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary btn-lg" id="startQuizBtn"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia il Quiz</button>
+                <a href="index.html" class="btn btn-outline-secondary">Torna indietro</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="js/banco_domande/1_principi_e_organizzazione.js"></script>
+  <script src="js/banco_domande/2_rischio_sismico.js"></script>
+  <script src="js/banco_domande/3_rischio_alluvione.js"></script>
+  <script src="js/banco_domande/4_incendi_boschivi.js"></script>
+  <script src="js/banco_domande/5_operativita_e_logistica.js"></script>
+  <script src="js/banco_domande/6_piano_comunale_genzano.js"></script>
+  <script src="js/main_loader.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      localStorage.removeItem('quizResults');
+      localStorage.removeItem('selectedCategories');
+
+      var categoriesContainer = document.getElementById('categoriesContainer');
+      var selectAllCheckbox = document.getElementById('selectAllCheckbox');
+
+      if (typeof CATEGORIES !== 'undefined' && typeof FULL_QUESTION_BANK !== 'undefined') {
+        CATEGORIES.forEach(function(category) {
+          var count = FULL_QUESTION_BANK.filter(function(q) { return q.category === category; }).length;
+          var div = document.createElement('div');
+          div.className = 'form-check';
+          var safeId = 'cat-' + category.replace(/\s/g, '');
+          div.innerHTML =
+            '<input class="form-check-input category-checkbox" type="checkbox" value="' + category + '" id="' + safeId + '">' +
+            '<label class="form-check-label" for="' + safeId + '">' + category + ' <span class="badge bg-secondary rounded-pill">' + count + '</span></label>';
+          categoriesContainer.appendChild(div);
+        });
+      }
+
+      var categoryCheckboxes = document.querySelectorAll('.category-checkbox');
+      selectAllCheckbox.addEventListener('change', function() {
+        var checked = this.checked;
+        categoryCheckboxes.forEach(function(cb) { cb.checked = checked; });
+      });
+
+      document.getElementById('startQuizBtn').addEventListener('click', function() {
+        var nameInput = document.getElementById('candidateName');
+        var name = nameInput.value.trim();
+        var id = document.getElementById('candidateId').value;
+        var selectedCategories = Array.from(categoryCheckboxes).filter(function(i) { return i.checked; }).map(function(i) { return i.value; });
+
+        // Validazione con feedback visivo
+        var hasError = false;
+        if (name === '') {
+          nameInput.classList.add('is-invalid');
+          nameInput.focus();
+          hasError = true;
+        } else {
+          nameInput.classList.remove('is-invalid');
+        }
+
+        if (selectedCategories.length === 0 && !hasError) {
+          // Evidenzia il box categorie
+          var catBox = categoriesContainer.closest('.card');
+          catBox.style.borderColor = '#dc3545';
+          catBox.style.borderWidth = '2px';
+          var msg = document.createElement('div');
+          msg.className = 'text-danger small mt-2';
+          msg.id = 'catError';
+          msg.setAttribute('role', 'alert');
+          msg.textContent = 'Seleziona almeno un argomento per il quiz.';
+          if (!document.getElementById('catError')) catBox.appendChild(msg);
+          hasError = true;
+        }
+
+        if (hasError) return;
+
+        localStorage.setItem('candidateName', name);
+        localStorage.setItem('candidateId', id);
+        localStorage.setItem('selectedCategories', JSON.stringify(selectedCategories));
+        window.location.href = 'quiz.html';
+      });
+
+      // Rimuovi errore campo nome quando si digita
+      document.getElementById('candidateName').addEventListener('input', function() {
+        this.classList.remove('is-invalid');
+      });
+    });
+  </script>
+</body>
+</html>

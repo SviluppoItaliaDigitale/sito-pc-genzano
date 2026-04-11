@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Chiusura Strada | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="idrogeologico.html">Rischio Idrogeologico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">⛈️ Chiusura Strada e Viabilità</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="idrogeologico.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "A causa di una piccola frana, il COM ti ordina di chiudere una strada comunale. Ti posizioni in un punto sicuro e ben visibile prima del pericolo.", question: "Quali sono i primi presidi che posizioni per rendere efficace la chiusura?", choices: [{ text: "Un cartello di 'strada chiusa' ben prima della chiusura, il mezzo di traverso con i lampeggianti e del nastro per delimitare.", is_correct: true, feedback: "ALLESTIMENTO PERFETTO. La pre-segnalazione è fondamentale per dare agli automobilisti il tempo di rallentare e fermarsi in sicurezza." },{ text: "Parcheggio semplicemente il mezzo di traverso e accendo i lampeggianti.", is_correct: false, feedback: "INCOMPLETO. Un blocco improvviso senza preavviso può causare tamponamenti. La pre-segnalazione è una regola base della sicurezza stradale." },{ text: "Metto un volontario in mezzo alla strada che sbraccia per fermare le auto.", is_correct: false, feedback: "PERICOLOSO. Esporre un operatore al traffico in arrivo è un rischio enorme. I presidi fisici e i veicoli vanno usati prima delle persone." }] },
+            { situation_update: "La strada è chiusa. Un automobilista insiste per passare, dicendo che deve tornare a casa e che conosce una 'scorciatoia' oltre la frana.", question: "Come ti comporti?", choices: [{ text: "Lo lascio passare sotto la sua responsabilità, dopotutto è adulto.", is_correct: false, feedback: "SBAGLIATO. Non hai l'autorità per concedere deroghe. Se gli accadesse qualcosa, la responsabilità ricadrebbe su di te. Un'ordinanza va fatta rispettare." },{ text: "Spiego con calma che l'ordinanza non ammette eccezioni per la sicurezza di tutti e, se insiste, contatto la Polizia Locale per supporto.", is_correct: true, feedback: "GESTIONE IMPECCABILE. Hai mantenuto un comportamento professionale, applicato il regolamento e attivato il supporto corretto (Polizia Locale)." },{ text: "Discuto animatamente con l'automobilista per convincerlo che sta sbagliando.", is_correct: false, feedback: "INEFFICACE E RISCHIOSO. Alzare i toni non è mai una soluzione e può peggiorare la situazione. Mantieni sempre un ruolo calmo e autorevole." }] },
+            { situation_update: "L'automobilista se ne va. Poco dopo, arriva un'ambulanza a sirene spiegate, diretta verso la frana.", question: "L'ambulanza deve passare per un'emergenza. Cosa fai?", choices: [{ text: "Comunico immediatamente via radio al COM la situazione, chiedo se esiste un percorso alternativo verificato da comunicare all'equipaggio.", is_correct: true, feedback: "PROCEDURA CORRETTA. Non prendi decisioni sulla sicurezza di altri soccorritori. Hai fatto da tramite informativo per trovare la soluzione più rapida e sicura." },{ text: "Dico che la strada è chiusa e che devono fare un altro giro, come tutti gli altri.", is_correct: false, feedback: "SBAGLIATO. I mezzi di soccorso hanno esigenze diverse. Il tuo compito è aiutarli a trovare una soluzione, non solo bloccarli." },{ text: "Sposto il mezzo e li faccio passare attraverso la frana, tanto loro sono un mezzo di soccorso.", is_correct: false, feedback: "PERICOLOSISSIMO. Se la strada è chiusa per una frana, è chiusa per tutti. Farli passare significherebbe metterli in grave pericolo." }] },
+            { situation_update: "Mentre sei di presidio, noti che dalla frana scende un rigagnolo d'acqua fangosa che prima non c'era.", question: "Come interpreti questo segnale?", choices: [{ text: "È un segnale di potenziale instabilità. Comunico subito al COM questa osservazione, perché la frana potrebbe essere ancora attiva.", is_correct: true, feedback: "OTTIMA OSSERVAZIONE. Hai colto un segnale di evoluzione del rischio. La tua segnalazione è preziosa per la sicurezza dei tecnici che dovranno intervenire." },{ text: "È normale che esca acqua dopo la pioggia, non segnalo nulla per non creare allarmismi.", is_correct: false, feedback: "SBAGLIATO. In un contesto franoso, l'acqua è il principale fattore di innesco e di movimento. Va sempre segnalata." },{ text: "Vado a vedere da vicino da dove esce l'acqua per essere più preciso.", is_correct: false, feedback: "SBAGLIATO. Avvicinarsi a una frana attiva è vietato e pericolosissimo. L'osservazione si fa sempre da distanza di sicurezza." }] },
+            { situation_update: "Arrivano i Vigili del Fuoco e i tecnici comunali che iniziano a lavorare sulla frana.", question: "Qual è il tuo ruolo ora?", choices: [{ text: "Mantengo il presidio sul blocco stradale per garantire la sicurezza della loro area di lavoro, mettendomi a disposizione del responsabile.", is_correct: true, feedback: "CORRETTO. Il tuo compito di 'sentinella' è fondamentale per permettere ai soccorritori tecnici di lavorare senza il pericolo del traffico." },{ text: "Il mio lavoro è finito, sono arrivati i professionisti, posso rientrare.", is_correct: false, feedback: "SBAGLIATO. Il tuo compito non finisce finché non vieni ufficialmente svincolato dal responsabile dell'intervento o dal COM." },{ text: "Vado a dare una mano a spalare con loro per essere più utile.", is_correct: false, feedback: "SBAGLIATO. A meno che non ti venga specificamente richiesto, non devi entrare nell'area di lavoro. Il tuo compito assegnato è il presidio stradale." }] },
+            { situation_update: "Un gruppo di ragazzi in scooter tenta di aggirare il blocco passando su un prato a lato.", question: "Come gestisci la situazione?", choices: [{ text: "Li lascio fare, tanto non passano sulla strada e non è un mio problema.", is_correct: false, feedback: "SBAGLIATO. La tua area di responsabilità include le immediate vicinanze del blocco. Potrebbero mettersi in pericolo o intralciare le operazioni." },{ text: "Con il megafono o a voce, li richiamo con fermezza, spiego che l'intera area è interdetta per pericolo e li invito a tornare indietro.", is_correct: true, feedback: "AZIONE CORRETTA. Hai gestito la situazione con autorevolezza ma senza aggressività, ripristinando le condizioni di sicurezza." },{ text: "Urlo contro di loro minacciando di chiamare i Carabinieri.", is_correct: false, feedback: "INEFFICACE. Un approccio aggressivo crea solo conflitto. La comunicazione ferma ma calma è sempre la più efficace." }] },
+            { situation_update: "Il responsabile VVF ti comunica: 'Stiamo per fare una manovra con un mezzo pesante. Per 10 minuti, silenzio radio e nessuno deve avvicinarsi'.", question: "Cosa fai?", choices: [{ text: "Prendo atto dell'informazione e sto attento.", is_correct: false, feedback: "INCOMPLETO. Devi assicurarti che questa informazione cruciale per la sicurezza sia nota anche al livello superiore di coordinamento." },{ text: "Comunico via radio al COM: 'Inizio manovra mezzo pesante VVF. Silenzio radio sul canale locale per 10 minuti.' e garantisco il blocco.", is_correct: true, feedback: "COMUNICAZIONE E AZIONE PERFETTE. Hai compreso l'importanza di inoltrare l'informazione sulla sicurezza al COM e hai garantito l'isolamento dell'area." },{ text: "Vado a vedere la manovra da vicino, sembra interessante.", is_correct: false, feedback: "SBAGLIATO. L'ordine era chiaro: nessuno deve avvicinarsi. La curiosità in emergenza può essere fatale." }] },
+            { situation_update: "La strada è parzialmente libera. Il responsabile VVF ipotizza di poter istituire un senso unico alternato.", question: "Cosa fai?", choices: [{ text: "Comunico la proposta al COM e attendo che sia un'autorità competente (es. Polizia Locale) a decidere e ufficializzare la riapertura.", is_correct: true, feedback: "PROCEDURA IMPECCABILE. I volontari di PC eseguono le disposizioni, non prendono decisioni sulla viabilità pubblica. Hai rispettato la catena di comando." },{ text: "Prendo l'iniziativa e inizio a far passare le macchine per fluidificare il traffico.", is_correct: false, feedback: "SBAGLIATO. Non hai l'autorità per riaprire una strada. È una decisione che spetta solo agli enti preposti." },{ text: "Dico che secondo me è meglio tenerla chiusa per non avere problemi e discussioni.", is_correct: false, feedback: "SBAGLIATO. Il tuo compito non è dare pareri personali sulla strategia, ma riportare i fatti e le comunicazioni tra gli enti sul campo e il COM." }] },
+            { situation_update: "Viene istituito il senso unico alternato, gestito dalla Polizia Locale. Il COM ti assegna il compito di supportarli.", question: "In cosa consiste il tuo supporto?", choices: [{ text: "Mi metto a disposizione dell'agente ed eseguo le sue indicazioni, ad esempio per il preavviso alle auto in coda o per dare informazioni.", is_correct: true, feedback: "CORRETTO. La gestione del traffico spetta alla Polizia. Il nostro è un ruolo di supporto, sempre in stretta collaborazione e sotto il loro coordinamento." },{ text: "Prendo in mano la paletta 'rosso/verde' e mi metto a dirigere il traffico al posto dell'agente.", is_correct: false, feedback: "SBAGLIATO. Dirigere il traffico è una funzione di polizia stradale che non compete al volontario di Protezione Civile." },{ text: "Mi metto a chiacchierare con gli automobilisti in coda per passare il tempo.", is_correct: false, feedback: "NON PROFESSIONALE. Devi mantenere un ruolo attivo e attento, pronto a intervenire se richiesto dall'agente o dal COM." }] },
+            { situation_update: "L'emergenza rientra e la strada viene riaperta.", question: "Qual è stata la funzione principale del tuo presidio?", choices: [{ text: "Evitare che le persone si facessero male e garantire che le squadre di soccorso potessero lavorare in un ambiente sicuro.", is_correct: true, feedback: "ANALISI PERFETTA. Hai compreso che il blocco stradale non è un atto punitivo, ma una misura fondamentale di prevenzione e sicurezza per tutti." },{ text: "Far rispettare la legge e le ordinanze del sindaco.", is_correct: false, feedback: "INCOMPLETO. Sebbene tu contribuisca a far rispettare un'ordinanza, il tuo scopo primario è operativo e di sicurezza, non di polizia." },{ text: "Creare un disagio necessario alla circolazione per far capire la gravità della situazione.", is_correct: false, feedback: "SBAGLIATO. Lo scopo non è mai creare disagio, ma prevenire un danno o un pericolo maggiore. Il disagio è una conseguenza, non l'obiettivo." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

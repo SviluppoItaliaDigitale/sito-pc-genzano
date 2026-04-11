@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caccia al Rischio — Giochi Protezione Civile</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Giochi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Caccia al Rischio</li>
+          </ol>
+        </nav>
+        <h1>Caccia al Rischio</h1>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div id="selection-screen" class="selection-container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="h4 mb-4">Scegli uno scenario</h2>
+            <div id="scenario-buttons" class="row g-3 justify-content-center"></div>
+            <a href="../index.html" class="app-back-link mt-4 d-inline-block"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
+          </div>
+        </div>
+      </div>
+      <div id="game-screen" class="hide">
+        <div class="row">
+          <div class="col-lg-4 mb-3">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h2 id="scenario-title" class="h5 mb-3">Caccia al Rischio</h2>
+                <p class="small text-muted">Osserva la scena e clicca sui pericoli. Ne devi trovare <strong><span id="total-risks">0</span></strong>!</p>
+                <ul id="risks-list" class="list-group list-group-flush small"></ul>
+                <a href="#" id="back-to-selection" class="app-back-link mt-3 d-inline-block"><i class="bi bi-arrow-left" aria-hidden="true"></i> Cambia scenario</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div id="scene-container" class="scene-container">
+              <img src="" alt="Scena da analizzare" id="scene-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="win-screen" class="win-screen-container hide" role="dialog" aria-labelledby="win-title-caccia" aria-modal="true">
+      <div class="win-box">
+        <h2 id="win-title-caccia">Complimenti!</h2>
+        <p>Hai trovato tutti i rischi!</p>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <button id="restart-button" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i> Gioca Ancora</button>
+          <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

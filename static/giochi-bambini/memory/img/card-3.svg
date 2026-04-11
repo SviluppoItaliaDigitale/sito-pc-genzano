@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <title>Casa con crepa - Terremoto</title>
+  <circle cx="50" cy="50" r="48" fill="#FFF8E1" stroke="#F57F17" stroke-width="2"/>
+  <polygon points="50,22 22,48 78,48" fill="#F57F17"/>
+  <rect x="30" y="48" width="40" height="30" fill="#FFB74D"/>
+  <rect x="42" y="58" width="16" height="20" fill="#795548"/>
+  <path d="M48 35 L52 48 L46 55 L54 65 L48 78" fill="none" stroke="#D32F2F" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

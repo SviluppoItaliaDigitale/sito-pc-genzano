@@ -1,0 +1,111 @@
+/* Quiz Bambini — stili specifici */
+.quiz-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+.screen h2 {
+  color: var(--pc-primary, #003366);
+  margin-bottom: 1rem;
+}
+.btn-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .btn-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.btn-grid .btn {
+  padding: 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-grid .btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.btn-grid .btn.correct {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  color: #fff !important;
+}
+.btn-grid .btn.wrong {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: #fff !important;
+}
+.btn-grid .btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.hide {
+  display: none;
+}
+/* Progress bar */
+.quiz-progress {
+  margin-bottom: 1.5rem;
+}
+.quiz-progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: #e9ecef;
+  overflow: hidden;
+}
+.quiz-progress-bar-fill {
+  height: 100%;
+  background: #004d99;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+.quiz-progress-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+}
+/* Feedback explanation */
+.quiz-feedback {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  animation: fadeIn 0.3s ease;
+}
+.quiz-feedback.correct {
+  background: #d4edda;
+  border-left: 4px solid #28a745;
+  color: #155724;
+}
+.quiz-feedback.wrong {
+  background: #f8d7da;
+  border-left: 4px solid #dc3545;
+  color: #721c24;
+}
+.quiz-feedback .feedback-title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Question count selector */
+.question-count-selector {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.question-count-selector .btn {
+  min-width: 100px;
+}
+.question-count-selector .btn.active {
+  background-color: #004d99;
+  border-color: #004d99;
+  color: #fff;
+}

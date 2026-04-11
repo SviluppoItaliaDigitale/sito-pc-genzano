@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Evacuazione Scantinato | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="idrogeologico.html">Rischio Idrogeologico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">⛈️ Evacuazione Scantinato Allagato</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="idrogeologico.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Durante un'alluvione, arrivi presso una villetta. I residenti ti dicono che il loro vicino è bloccato nello scantinato, dove l'acqua sta salendo. La luce in casa è ancora attiva.", question: "Qual è la prima, inderogabile, azione da compiere PRIMA di tentare qualunque soccorso?", choices: [{ text: "Trovare una pompa o dei secchi per iniziare subito a togliere l'acqua.", is_correct: false, feedback: "SBAGLIATO E MORTALE. Svuotare l'acqua con la corrente attiva espone tutti a un elevatissimo rischio di folgorazione." },{ text: "Far staccare immediatamente l'interruttore generale dell'energia elettrica dal contatore principale della casa.", is_correct: true, feedback: "AZIONE CORRETTA. La messa in sicurezza della scena dal rischio elettrico è la priorità assoluta. Nessuna operazione può iniziare prima." },{ text: "Urlare allo sventurato di salire su un tavolo per guadagnare tempo.", is_correct: false, feedback: "UTILE, MA NON È LA PRIMA COSA DA FARE. La tua priorità è eliminare il pericolo maggiore, non solo mitigarne temporaneamente gli effetti." }] },
+            { situation_update: "La corrente è stata staccata. Senti la persona gridare aiuto dallo scantinato.", question: "Qual è il tuo passo successivo?", choices: [{ text: "Provare subito a forzare la porta per entrare.", is_correct: false, feedback: "SBAGLIATO. Agire senza informazioni è pericoloso. Devi prima capire la situazione all'interno." },{ text: "Stabilire un contatto verbale, presentarsi, chiedere come sta, quanta acqua c'è e se è ferito.", is_correct: true, feedback: "PROCEDURA PERFETTA. Raccogliere informazioni e calmare la persona intrappolata sono i passi fondamentali prima di ogni azione fisica." },{ text: "Chiamare subito i sommozzatori dei Vigili del Fuoco.", is_correct: false, feedback: "ESAGERATO. Prima di attivare risorse specialistiche, devi raccogliere più informazioni possibili sulla situazione per comunicarle al COM." }] },
+            { situation_update: "La persona ti dice che l'acqua gli arriva alla vita e che nella cantina ci sono delle taniche di gasolio per la caldaia.", question: "Questa nuova informazione cosa comporta?", choices: [{ text: "Un rischio di inquinamento. Comunico subito al COM la presenza di idrocarburi per allertare gli enti competenti (es. ARPA).", is_correct: true, feedback: "OTTIMA VALUTAZIONE. Hai riconosciuto un rischio secondario (inquinamento) e hai capito che va comunicato subito, perché richiede procedure e attrezzature specifiche." },{ text: "Niente di particolare, il gasolio non è esplosivo come il gas.", is_correct: false, feedback: "SBAGLIATO. Anche se non esplode, è un inquinante pericoloso e rende scivolosa ogni superficie, aumentando il rischio per soccorritori e soccorso." },{ text: "Provo a dirgli di mettere le taniche più in alto possibile.", is_correct: false, feedback: "PERICOLOSO. Chiedere a una persona in difficoltà di muovere carichi pesanti in acqua è rischioso. Potrebbe cadere e farsi male." }] },
+            { situation_update: "La porta dello scantinato si apre verso l'interno ed è bloccata dalla pressione dell'acqua.", question: "Qual è la soluzione più realistica per entrare?", choices: [{ text: "Sfondarla a spallate tutti insieme.", is_correct: false, feedback: "QUASI IMPOSSIBILE. La pressione dell'acqua è enorme. Un metro d'acqua su una porta di 80cm esercita una spinta di quasi 400kg. È inutile e pericoloso." },{ text: "Cercare un'altra via d'accesso, come una finestra o un'apertura più in alto, da cui calarsi o far defluire l'acqua.", is_correct: true, feedback: "APPROCCIO STRATEGICO. Se l'accesso principale è impraticabile, cercare vie alternative è la soluzione più intelligente e sicura." },{ text: "Aspettare che l'acqua scenda da sola.", is_correct: false, feedback: "SBAGLIATO. Non puoi sapere se il livello continuerà a salire. L'inazione non è un'opzione quando una persona è in pericolo." }] },
+            { situation_update: "Trovi una piccola finestra seminterrata (bocca di lupo). È troppo piccola per entrare ma si può far passare un tubo.", question: "Quale attrezzatura richiedi al COM per svuotare l'acqua?", choices: [{ text: "Una pompa elettrica a immersione, perché è la più veloce.", is_correct: false, feedback: "SBAGLIATO. Hai staccato la corrente, quindi una pompa elettrica è inutilizzabile. Bisogna sempre pensare alle condizioni reali dello scenario." },{ text: "Una motopompa da alluvione, che ha un motore a scoppio e può aspirare anche acqua sporca.", is_correct: true, feedback: "ATTREZZATURA CORRETTA. La motopompa è l'unica soluzione autonoma ed efficace in questo contesto." },{ text: "Tanti secchi e delle corde per tirarli su.", is_correct: false, feedback: "INEFFICIENTE. Sarebbe un processo lentissimo che non riuscirebbe a contrastare l'eventuale continuo afflusso d'acqua." }] },
+            { situation_update: "La motopompa è in funzione e il livello dell'acqua scende. La persona all'interno inizia a tremare violentemente dal freddo.", question: "Questo è un chiaro sintomo di cosa?", choices: [{ text: "Paura e stress, è una reazione normale.", is_correct: false, feedback: "INCOMPLETO. Certo, c'è anche la paura, ma il tremore violento è un sintomo fisico specifico di un problema più grave." },{ text: "Ipotermia, un pericoloso abbassamento della temperatura corporea.", is_correct: true, feedback: "DIAGNOSI CORRETTA. L'ipotermia è un rischio mortale in ambienti freddi e umidi. Riconoscerla è fondamentale per pre-allertare i soccorsi sanitari." },{ text: "Disidratazione, perché è da tanto che è lì dentro.", is_correct: false, feedback: "IMPROBABILE. I sintomi della disidratazione sono altri. Il tremore in questo contesto è quasi certamente legato al freddo." }] },
+            { situation_update: "Il livello è abbastanza basso da permetterti di aprire la porta. Aiuti la persona a uscire.", question: "Qual è la prima cosa da fare per contrastare l'ipotermia?", choices: [{ text: "Dargli una bevanda calda, come un tè o un caffè.", is_correct: false, feedback: "SBAGLIATO. Dare bevande calde a una persona in ipotermia grave può causare aritmie cardiache. L'assistenza va fatta con cautela." },{ text: "Fargli fare un po' di movimento, come saltare sul posto, per riscaldarsi.", is_correct: false, feedback: "SBAGLIATO E PERICOLOSO. Il movimento fa circolare il sangue freddo dalla periferia al cuore, peggiorando l'ipotermia (afterdrop)." },{ text: "Rimuovere i suoi vestiti bagnati e avvolgerlo in coperte asciutte, possibilmente una coperta isotermica (metallina).", is_correct: true, feedback: "TRATTAMENTO PRE-OSPEDALIERO PERFETTO. Interrompere la dispersione di calore (togliendo il bagnato) e isolare il corpo è la manovra salvavita corretta." }] },
+            { situation_update: "La persona è al sicuro, avvolta nelle coperte. Arriva l'ambulanza che avevi fatto pre-allertare.", question: "Quali informazioni fornisci al personale sanitario?", choices: [{ text: "'Sta bene, ha solo preso un po' di freddo.'", is_correct: false, feedback: "INCOMPLETO E IMPRECISO. Minimizzare la situazione non aiuta i sanitari. Devi fornire dati oggettivi." },{ text: "Fornisco un report preciso: 'Persona rimasta in acqua fredda per circa X minuti, ora in sospetta ipotermia, cosciente, tremore diffuso'.", is_correct: true, feedback: "PASSAGGIO DI CONSEGNE EFFICACE. Hai usato un linguaggio chiaro e operativo, fornendo ai sanitari tutte le informazioni chiave per un soccorso rapido." },{ text: "Lascio che lo visitino loro, sono loro i dottori.", is_correct: false, feedback: "SBAGLIATO. Le informazioni che puoi fornire tu (es. il tempo di permanenza in acqua) sono preziose e non possono ottenerle con la sola visita." }] },
+            { situation_update: "La persona è stata presa in carico dai sanitari. L'intervento è quasi concluso.", question: "Cosa fai riguardo allo scantinato allagato?", choices: [{ text: "Lo dichiaro 'inagibile' e affiggo un cartello sulla porta.", is_correct: false, feedback: "SBAGLIATO. Non hai l'autorità né le competenze per dichiarare un'inagibilità. È un compito che spetta a tecnici qualificati (VVF o comunali)." },{ text: "Delimito l'accesso all'area con del nastro e informo i proprietari che la struttura necessita di una verifica tecnica prima di essere riutilizzata.", is_correct: true, feedback: "PROCEDURA CORRETTA. Hai messo in sicurezza l'area e hai comunicato correttamente ai proprietari la necessità di ulteriori verifiche, senza prenderti responsabilità non tue." },{ text: "Aiuto i proprietari a portare fuori le cose rovinate dall'acqua.", is_correct: false, feedback: "SBAGLIATO. Lo svuotamento di locali allagati non è un compito da fare nell'immediato. La priorità è la messa in sicurezza e la verifica strutturale." }] },
+            { situation_update: "Rifletti sull'intervento.", question: "Qual è stata la lezione più importante di questo scenario?", choices: [{ text: "Che la forza fisica è lo strumento più importante per un soccorritore.", is_correct: false, feedback: "SBAGLIATO. La forza fisica è stata quasi inutile. L'intelligenza tattica e la conoscenza delle procedure sono state le chiavi del successo." },{ text: "Che la sicurezza della scena (es. rischio elettrico) e la conoscenza delle procedure sono più importanti di qualsiasi azione impulsiva.", is_correct: true, feedback: "LEZIONE APPRESA. Hai capito che un soccorritore efficace non è quello che si butta nel pericolo, ma quello che lo analizza, lo neutralizza e poi agisce secondo un piano." },{ text: "Che i cittadini sono sempre d'intralcio durante le emergenze.", is_correct: false, feedback: "SBAGLIATO. I cittadini sono le persone da aiutare. Sono stati loro a dare l'allarme e a fornirti le prime informazioni. La collaborazione è fondamentale." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>
