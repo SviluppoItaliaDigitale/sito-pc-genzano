@@ -13,8 +13,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if(candidateId) {
         document.getElementById('cert-candidate-id').textContent = `Matricola/Ente: ${candidateId}`;
     }
-    document.getElementById('cert-date').textContent = new Date().toLocaleDateString('it-IT');
-    document.getElementById('cert-unique-id').textContent = `ID Univoco: ${resultsData.uniqueId}`;
+    var now = new Date();
+    var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var dateFormatted = now.toLocaleDateString('it-IT', dateOptions);
+    document.getElementById('cert-date').textContent = dateFormatted;
+    var datePlaceEl = document.getElementById('cert-date-place');
+    if (datePlaceEl) datePlaceEl.textContent = dateFormatted;
+    document.getElementById('cert-unique-id').textContent = 'Codice verifica: ' + resultsData.uniqueId;
     
     const resultBadge = document.createElement('span');
     resultBadge.classList.add('result-badge');
