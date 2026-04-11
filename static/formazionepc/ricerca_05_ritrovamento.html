@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Ritrovamento e Primo Soccorso | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="ricerca.html">Ricerca Dispersi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Ritrovamento e Primo Soccorso</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="ricerca.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "La tua squadra ha appena ritrovato una donna di 45 anni dispersa da 8 ore durante un'escursione. E seduta contro un albero, cosciente ma confusa. Ha una ferita alla fronte sanguinante e dice di avere molto freddo.", question: "Qual e la prima azione da compiere?", choices: [{ text: "Pulisco e medico la ferita alla fronte.", is_correct: false, feedback: "IMPORTANTE ma non prioritario. Prima bisogna comunicare il ritrovamento e valutare le condizioni generali." },{ text: "Comunico immediatamente al coordinamento: ritrovamento, posizione GPS, condizioni generali della persona (cosciente, ferita alla testa, ipotermia probabile). Poi procedo con la valutazione.", is_correct: true, feedback: "CORRETTO. La comunicazione e sempre la prima azione. Il coordinamento puo attivare i sanitari mentre tu valuti la situazione." },{ text: "La aiuto ad alzarsi e la accompagno verso il sentiero.", is_correct: false, feedback: "SBAGLIATO. Non muovere mai una persona con possibile trauma cranico senza valutazione sanitaria." }] },
+            { situation_update: "Il coordinamento conferma: sanitari in arrivo, tempo stimato 25 minuti. La donna trema visibilmente e la ferita alla fronte sanguina moderatamente.", question: "Come gestisci l'attesa dei sanitari?", choices: [{ text: "Non tocco niente e aspetto i sanitari.", is_correct: false, feedback: "INSUFFICIENTE. Hai il dovere di stabilizzare la persona entro le tue competenze: protezione termica e contenimento emorragia." },{ text: "Copro la persona con la coperta termica, tampono la ferita con garze sterili dal kit, la tengo sveglia parlandole, monitoro respiro e coscienza, e la proteggo dal contatto diretto col terreno freddo.", is_correct: true, feedback: "GESTIONE PERFETTA. Hai applicato le procedure corrette: protezione termica, primo soccorso di base, monitoraggio continuo." },{ text: "Le verso acqua sulla ferita per pulirla e le offro da bere.", is_correct: false, feedback: "SBAGLIATO. Non lavare ferite alla testa con acqua in campo. Non somministrare liquidi a persone con possibile trauma cranico." }] },
+            { situation_update: "Mentre la assisti, la donna diventa sempre piu confusa e inizia a rispondere in modo incoerente. I sanitari sono ancora a 15 minuti.", question: "Cosa fai di fronte al peggioramento delle condizioni?", choices: [{ text: "Continuo a monitorarla, tanto i sanitari stanno arrivando.", is_correct: false, feedback: "INSUFFICIENTE. Un peggioramento va comunicato immediatamente perche potrebbe richiedere un cambio di priorita o l'invio di un elicottero." },{ text: "Comunico immediatamente al coordinamento il peggioramento: confusione in aumento, possibile trauma cranico in evoluzione. Chiedo se e possibile accelerare l'arrivo dei sanitari o valutare l'elisoccorso.", is_correct: true, feedback: "COMUNICAZIONE CRITICA CORRETTA. Il peggioramento cambia il quadro clinico. Il coordinamento deve saperlo per adeguare la risposta sanitaria." },{ text: "Provo a tenerla sveglia scuotendola.", is_correct: false, feedback: "SBAGLIATO. Non scuotere mai una persona con possibile trauma cranico. Parlale con calma, tienile la mano, mantieni il contatto." }] },
+            { situation_update: "I sanitari arrivano sul posto con la barella. Ti chiedono un rapido resoconto.", question: "Quali informazioni devi fornire ai sanitari?", choices: [{ text: "Le dico solo dove l'abbiamo trovata.", is_correct: false, feedback: "INSUFFICIENTE. I sanitari hanno bisogno di un quadro completo per decidere il trattamento." },{ text: "Orario ritrovamento, condizioni al momento del ritrovamento, ferita alla fronte con sanguinamento, ipotermia, evoluzione delle condizioni (confusione crescente), trattamenti effettuati (coperta termica, tamponamento ferita).", is_correct: true, feedback: "PASSAGGIO DI CONSEGNE PERFETTO. Hai fornito un quadro completo, strutturato e cronologico. Queste informazioni sono preziose per i sanitari." },{ text: "Racconto tutta la storia della ricerca dall'inizio.", is_correct: false, feedback: "TROPPO. I sanitari hanno bisogno di informazioni cliniche sintetiche, non della cronistoria della ricerca." }] },
+            { situation_update: "I sanitari stabilizzano la donna e la preparano per il trasporto. Il coordinamento ti ringrazia e ti chiede di rientrare in sede.", question: "Prima di lasciare la scena, cosa fai?", choices: [{ text: "Parto subito, sono stanco e voglio tornare a casa.", is_correct: false, feedback: "SBAGLIATO. Il rientro prevede procedure specifiche di chiusura." },{ text: "Verifico che non rimangano attrezzature sulla scena, ripristino il kit di primo soccorso usato, confermo via radio il rientro e una volta in sede compilo il rapporto dell'intervento.", is_correct: true, feedback: "PROCEDURA DI CHIUSURA CORRETTA. Il rapporto finale e fondamentale per documentare l'intervento e migliorare le procedure future." },{ text: "Faccio una foto per il gruppo WhatsApp del Gruppo.", is_correct: false, feedback: "VIETATO. Le immagini di persone soccorse non vanno diffuse per ragioni di privacy e dignita della persona." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

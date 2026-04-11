@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Allestimento Punto di Accoglienza | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="assistenza.html">Assistenza alla Popolazione</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Allestimento Punto di Accoglienza</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="assistenza.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Un evento sismico di magnitudo 4.2 ha colpito l'area dei Castelli Romani. Diverse abitazioni sono state evacuate a scopo precauzionale. Il COC (Centro Operativo Comunale) ti assegna il compito di allestire un punto di accoglienza presso la palestra comunale per circa 80 persone sfollate.", question: "Qual e la prima cosa da fare all'arrivo nella struttura?", choices: [{ text: "Iniziare subito a montare le brandine.", is_correct: false, feedback: "FRETTOLOSO. Prima di allestire devi verificare che la struttura sia agibile e adatta allo scopo." },{ text: "Verificare l'agibilita della struttura (crepe, danni strutturali), controllare che impianti elettrici, idrici e servizi igienici funzionino, individuare le uscite di sicurezza.", is_correct: true, feedback: "CORRETTO. La sicurezza della struttura ospitante e il primo controllo. Non puoi accogliere persone in un luogo potenzialmente insicuro." },{ text: "Chiamare i familiari degli sfollati per avvisarli.", is_correct: false, feedback: "NON E COMPITO TUO in questa fase. La comunicazione con i familiari e gestita dal COC." }] },
+            { situation_update: "La struttura e agibile. Devi organizzare gli spazi per 80 persone, tra cui famiglie con bambini, anziani e persone con disabilita.", question: "Come organizzi la disposizione degli spazi?", choices: [{ text: "Metto le brandine tutte in fila come in una caserma, cosi entrano tutti.", is_correct: false, feedback: "SBAGLIATO. La dignita e la privacy delle persone vanno rispettate anche in emergenza. Le famiglie devono stare insieme." },{ text: "Creo aree separate per famiglie, anziani e persone fragili. Prevedo uno spazio per bambini, un'area comune per i pasti, un punto informazioni e un'area sanitaria. Le persone con disabilita vicino ai servizi igienici.", is_correct: true, feedback: "ORGANIZZAZIONE ECCELLENTE. Hai considerato le diverse esigenze, la dignita delle persone e l'accessibilita." },{ text: "Lascio che le persone scelgano dove mettersi, cosi sono piu contente.", is_correct: false, feedback: "SBAGLIATO. Senza organizzazione si crea caos: le persone piu deboli resteranno senza posto adeguato." }] },
+            { situation_update: "Iniziano ad arrivare i primi sfollati. Sono spaventati, alcuni piangono, i bambini sono agitati. Una signora anziana e in evidente stato di agitazione.", question: "Come accogli le persone?", choices: [{ text: "Li faccio entrare rapidamente e assegno subito i posti.", is_correct: false, feedback: "TROPPO FRETTOLOSO. Le persone hanno bisogno di essere accolte, rassicurate e orientate prima di essere 'sistemate'." },{ text: "Accolgo ogni nucleo familiare con calma, mi presento, spiego dove si trovano e cosa stiamo facendo per loro, li accompagno al posto assegnato e verifico se hanno bisogni immediati (medicinali, allergie, bambini da allattare).", is_correct: true, feedback: "ACCOGLIENZA PERFETTA. Il primo contatto umano e fondamentale. Le persone devono sentirsi al sicuro e ascoltate." },{ text: "Chiedo a tutti di aspettare fuori finche non abbiamo finito di allestire tutto.", is_correct: false, feedback: "SBAGLIATO. Le persone sono gia in difficolta. L'accoglienza deve iniziare subito, anche se l'allestimento non e completato." }] },
+            { situation_update: "Un uomo arriva molto agitato e pretende di rientrare a casa per prendere i documenti. Dice che l'ordinanza di sgombero e esagerata e che casa sua e sicura.", question: "Come gestisci questa situazione?", choices: [{ text: "Lo lascio andare, e un adulto e puo decidere per se.", is_correct: false, feedback: "SBAGLIATO. Se c'e un'ordinanza di sgombero, la zona e interdetta. Lasciarlo andare mette a rischio lui e potenzialmente i soccorritori." },{ text: "Ascolto le sue ragioni con empatia, gli spiego che l'ordinanza e a tutela della sua sicurezza, che i tecnici stanno verificando le abitazioni e che appena possibile potra rientrare. Se insiste, lo indirizzo al referente del COC.", is_correct: true, feedback: "GESTIONE CORRETTA. Ascolto, empatia e fermezza. Non sei tu a decidere sullo sgombero, ma puoi indirizzare la persona a chi ha l'autorita." },{ text: "Gli dico in modo deciso che non puo andare e basta.", is_correct: false, feedback: "CORRETTO nel contenuto ma sbagliato nel modo. Un approccio brusco con una persona in stato di stress puo degenerare in un conflitto." }] },
+            { situation_update: "Sono passate 4 ore. Arriva l'ora di cena. Avete ricevuto 80 pasti dalla cucina da campo. Devi organizzare la distribuzione.", question: "Come organizzi la distribuzione dei pasti?", choices: [{ text: "Li metto tutti sul tavolo e ognuno si serve.", is_correct: false, feedback: "SBAGLIATO. Senza organizzazione le persone piu deboli (anziani, disabili, famiglie con bambini piccoli) resteranno ultime o senza pasto." },{ text: "Organizzo una distribuzione ordinata: prima le persone fragili, gli anziani e le famiglie con bambini piccoli, poi gli altri. Verifico allergie e intolleranze alimentari. Assicuro che tutti ricevano il pasto.", is_correct: true, feedback: "DISTRIBUZIONE CORRETTA. Priorita alle persone piu vulnerabili, attenzione alle esigenze alimentari e verifica che nessuno resti senza." },{ text: "Chiamo tutti con il megafono e distribuisco in ordine di arrivo.", is_correct: false, feedback: "INSUFFICIENTE. L'ordine di arrivo non tiene conto delle priorita. Le persone fragili devono essere servite per prime." }] },
+            { situation_update: "Durante la notte, un anziano si sente male: ha dolori al petto e respira con difficolta.", question: "Come intervieni?", choices: [{ text: "Gli do un bicchiere d'acqua e lo faccio sdraiare.", is_correct: false, feedback: "INSUFFICIENTE. Dolori al petto e difficolta respiratorie possono indicare una situazione cardiaca. Serve intervento sanitario immediato." },{ text: "Chiamo immediatamente il 118, lo faccio sedere in posizione semi-seduta, lo rassicuro, chiedo se assume farmaci per il cuore e li recupero. Resto con lui fino all'arrivo dei sanitari.", is_correct: true, feedback: "GESTIONE CORRETTA DELL'EMERGENZA SANITARIA. Posizione semi-seduta per facilitare la respirazione, allertamento 118 e verifica farmaci." },{ text: "Lo porto subito in ospedale con la mia auto.", is_correct: false, feedback: "PERICOLOSO. Trasportare una persona con sospetto infarto senza attrezzature sanitarie puo peggiorare la situazione. Il 118 ha defibrillatore e farmaci a bordo." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

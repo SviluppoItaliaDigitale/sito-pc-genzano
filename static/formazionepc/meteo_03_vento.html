@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Emergenza Vento Forte | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="meteo.html">Rischio Meteo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Emergenza Vento Forte</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="meteo.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Allerta arancione per vento forte sui Castelli Romani. Raffiche previste fino a 90 km/h. Il COC attiva il piano e la tua squadra e destinata al presidio del territorio e alla gestione delle segnalazioni.", question: "Quali sono i punti critici da monitorare prioritariamente in caso di vento forte?", choices: [{ text: "Solo le strade principali.", is_correct: false, feedback: "INSUFFICIENTE. Il vento forte crea pericoli specifici legati a elementi verticali e strutture precarie." },{ text: "Strade alberate (rischio caduta rami e alberi), impalcature di cantieri, cartelloni pubblicitari, antenne, strutture temporanee (gazebo, bancarelle), aree con linee elettriche aeree.", is_correct: true, feedback: "CORRETTO. Hai individuato tutti gli elementi a rischio. Le strade alberate di Genzano (come il Corso) sono particolarmente esposte." },{ text: "I tetti delle case.", is_correct: false, feedback: "PARZIALE. I tetti sono a rischio (tegole che volano) ma non puoi monitorarli direttamente. Puoi monitorare le strade sottostanti." }] },
+            { situation_update: "Ricevi la segnalazione di un grosso ramo pericolante su Via Italo Belardi, sopra un tratto dove passano auto e pedoni. Il ramo non e ancora caduto ma oscilla pericolosamente.", question: "Come intervieni?", choices: [{ text: "Cerco di tirarlo giu con una fune per evitare che cada su qualcuno.", is_correct: false, feedback: "PERICOLOSISSIMO. Tirare un ramo pesante sotto raffiche di vento espone a rischi gravissimi. L'intervento e dei VVF." },{ text: "Delimito immediatamente l'area sottostante con nastro e coni, devio il traffico veicolare e pedonale, comunico al COC la necessita di intervento dei VVF per la rimozione.", is_correct: true, feedback: "PERFETTO. Hai messo in sicurezza l'area e richiesto l'intervento dei tecnici competenti. Il tuo ruolo e proteggere, non rimuovere." },{ text: "Metto un cartello 'pericolo' e continuo il giro.", is_correct: false, feedback: "INSUFFICIENTE. Un cartello non basta con raffiche a 90 km/h. L'area va delimitata fisicamente e il traffico deviato." }] },
+            { situation_update: "Mentre sei al blocco, un albero cade sulla carreggiata a 50 metri da te, travolgendo un'auto in sosta. Non sembra che ci siano persone dentro.", question: "Come gestisci la caduta dell'albero?", choices: [{ text: "Corro verso l'auto per verificare se c'e qualcuno dentro.", is_correct: false, feedback: "RISCHIOSO. Con il vento forte altri rami o alberi possono cadere. Avvicinati con cautela valutando i rischi sopra di te." },{ text: "Comunico immediatamente al COC: albero caduto, posizione esatta, auto coinvolta. Mi avvicino con estrema cautela valutando lo stato degli alberi circostanti. Verifico se ci sono persone nell'auto. Se si, chiamo il 112.", is_correct: true, feedback: "SEQUENZA CORRETTA. Comunicazione, valutazione del rischio residuo, verifica con cautela. Sotto vento forte il pericolo non e finito con la prima caduta." },{ text: "Aspetto i VVF, non posso fare niente.", is_correct: false, feedback: "PARZIALMENTE GIUSTO nell'attendere i VVF per la rimozione, ma devi comunque verificare se ci sono persone coinvolte e mettere in sicurezza l'area." }] },
+            { situation_update: "Un cavo dell'alta tensione e caduto a terra a causa di un albero sradicato. Il cavo sembra emettere scintille. Alcuni curiosi si stanno avvicinando.", question: "Qual e il pericolo e come reagisci?", choices: [{ text: "Mi avvicino al cavo per verificare se e sotto tensione.", is_correct: false, feedback: "MORTALE. Un cavo dell'alta tensione a terra puo essere sotto tensione e fulminare a distanza. Non avvicinarsi MAI." },{ text: "Mantengo una distanza di almeno 20 metri dal cavo, grido alle persone di allontanarsi immediatamente, comunico al COC l'emergenza specificando: cavo alta tensione a terra. Chiedo l'intervento urgente del gestore elettrico e dei VVF.", is_correct: true, feedback: "REAZIONE SALVAVITA. Il cavo dell'alta tensione e forse il pericolo piu letale e sottovalutato. La distanza di 20 metri e il minimo di sicurezza." },{ text: "Cerco di spostare il cavo con un bastone di legno.", is_correct: false, feedback: "MORTALE. L'alta tensione puo attraversare qualsiasi materiale. Nessun oggetto improvvisato e isolante a quelle tensioni." }] },
+            { situation_update: "L'allerta rientra dopo 8 ore. Il vento cala a 30 km/h. Il COC chiede una ricognizione dei danni sul territorio.", question: "Come organizzi la ricognizione post-evento?", choices: [{ text: "Faccio un giro veloce in auto e riferisco a voce.", is_correct: false, feedback: "INSUFFICIENTE. La ricognizione deve essere sistematica e documentata." },{ text: "Organizzo un percorso sistematico per zona, documento ogni danno con foto e posizione (alberi caduti, strutture danneggiate, cavi a terra, segnaletica abbattuta). Compilo una scheda per ogni segnalazione e la trasmetto al COC.", is_correct: true, feedback: "RICOGNIZIONE PROFESSIONALE. La documentazione sistematica e essenziale per il COC, per le richieste di risarcimento e per migliorare la prevenzione futura." },{ text: "Chiedo ai cittadini di segnalare i danni sui social.", is_correct: false, feedback: "UTILE come complemento ma non sostitutivo. La ricognizione professionale deve essere fatta dai volontari con metodo e documentazione." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

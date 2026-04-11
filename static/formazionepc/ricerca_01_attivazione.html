@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Attivazione per Persona Scomparsa | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="ricerca.html">Ricerca Dispersi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Attivazione per Persona Scomparsa</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="ricerca.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Ore 16:30. La Prefettura attiva il tuo Gruppo per la ricerca di un anziano di 78 anni, uscito di casa alle 10:00 per una passeggiata nel Parco dei Castelli Romani e non ancora rientrato. I familiari lo descrivono come lucido ma con difficolta di deambulazione.", question: "Qual e la prima cosa da fare quando ricevi la comunicazione di attivazione?", choices: [{ text: "Partire subito con il mezzo verso il parco per non perdere tempo.", is_correct: false, feedback: "SBAGLIATO. Partire senza organizzazione porta a confusione e sovrapposizioni. Serve prima un briefing operativo." },{ text: "Recarsi in sede, verificare la disponibilita dei volontari e attendere il briefing del Responsabile con tutte le informazioni disponibili.", is_correct: true, feedback: "CORRETTO. La fase di attivazione prevede il raduno in sede, la raccolta informazioni e il briefing prima della partenza." },{ text: "Chiamare direttamente i familiari per avere piu dettagli.", is_correct: false, feedback: "SBAGLIATO. Il contatto con i familiari e compito della Prefettura o delle Forze dell'Ordine. Tu devi seguire la catena di comando." }] },
+            { situation_update: "In sede il Responsabile vi informa: il disperso si chiama Mario, indossa giacca blu e pantaloni grigi, ha un bastone da passeggio. L'ultimo avvistamento e stato alle 11:30 nei pressi del sentiero che porta verso il Lago di Nemi.", question: "Quali informazioni sono fondamentali da annotare prima di partire per la ricerca?", choices: [{ text: "Solo il nome e il colore della giacca.", is_correct: false, feedback: "INSUFFICIENTE. Servono tutti i dettagli disponibili per riconoscere la persona e pianificare la ricerca." },{ text: "Descrizione fisica completa, ultimo abbigliamento, punto di ultimo avvistamento, orario, condizioni di salute, farmaci assunti, numero di telefono se ha il cellulare.", is_correct: true, feedback: "PERFETTO. Ogni dettaglio puo fare la differenza: il colore degli abiti per il riconoscimento a distanza, le condizioni di salute per valutare l'urgenza, il telefono per tentare la localizzazione." },{ text: "Solo il punto di ultimo avvistamento per andare subito li.", is_correct: false, feedback: "INSUFFICIENTE. Il punto di avvistamento e importante ma non basta. Servono tutti gli elementi per una ricerca efficace." }] },
+            { situation_update: "Il Responsabile divide i volontari in squadre da 3 persone ciascuna. Ti assegna come caposquadra della Squadra 2 con il compito di perlustrare il settore est del sentiero.", question: "Prima di partire, cosa verifichi per la tua squadra?", choices: [{ text: "Che tutti abbiano il telefono carico.", is_correct: false, feedback: "IMPORTANTE ma non sufficiente. Il telefono non e lo strumento principale di comunicazione operativa." },{ text: "Radio carica e funzionante, DPI indossati, acqua, kit di primo soccorso, torcia (sta calando il sole), fischietto, mappa del settore assegnato.", is_correct: true, feedback: "ECCELLENTE. Hai verificato tutti gli elementi essenziali: comunicazione, sicurezza, autonomia operativa e orientamento." },{ text: "Che la macchina abbia benzina sufficiente.", is_correct: false, feedback: "UTILE ma non prioritario. I controlli operativi sulla squadra vengono prima dei controlli logistici." }] },
+            { situation_update: "La tua squadra raggiunge il punto di inizio del settore assegnato. Il sentiero si biforca e la vegetazione e fitta.", question: "Come organizzi la perlustrazione?", choices: [{ text: "Ci dividiamo per coprire piu terreno: uno a destra, uno a sinistra, uno dritto.", is_correct: false, feedback: "PERICOLOSO. Non ci si separa mai durante una ricerca. Si rischia di perdere un volontario e di non poter gestire un eventuale ritrovamento." },{ text: "Procediamo insieme mantenendo una distanza di 5-10 metri tra noi, a portata visiva e uditiva, coprendo il sentiero e i margini laterali.", is_correct: true, feedback: "CORRETTO. La ricerca a vista si fa in linea mantenendo contatto visivo e uditivo. Cosi coprite una fascia ampia restando in sicurezza." },{ text: "Restiamo tutti insieme sullo stesso sentiero in fila indiana.", is_correct: false, feedback: "INEFFICACE. In fila indiana coprite solo la larghezza del sentiero. Serve una disposizione a ventaglio per ampliare l'area di ricerca." }] },
+            { situation_update: "Dopo 40 minuti di ricerca, uno dei tuoi volontari sente un richiamo debole provenire dalla vegetazione a circa 30 metri dal sentiero.", question: "Come gestisci questa segnalazione?", choices: [{ text: "Mando subito il volontario a verificare da solo mentre io comunico via radio.", is_correct: false, feedback: "SBAGLIATO. Non si manda mai un volontario da solo nella vegetazione fitta. Si procede sempre almeno in coppia." },{ text: "Fermiamo tutti la ricerca, comunico via radio la posizione approssimativa al coordinatore, poi ci avviciniamo insieme con cautela chiamando il nome del disperso.", is_correct: true, feedback: "PROCEDURA CORRETTA. Hai comunicato subito la potenziale localizzazione e ti stai avvicinando in sicurezza. Il coordinatore puo predisporre i soccorsi sanitari." },{ text: "Grido a voce alta per verificare se risponde prima di fare qualsiasi cosa.", is_correct: false, feedback: "PARZIALMENTE CORRETTO. Chiamare e giusto, ma prima devi comunicare via radio la posizione al coordinatore, per non perdere tempo prezioso." }] },
+            { situation_update: "Trovate Mario seduto a terra con una caviglia gonfia, cosciente ma infreddolito e disorientato. Non riesce ad alzarsi.", question: "Qual e la sequenza corretta di azioni?", choices: [{ text: "Lo aiuto ad alzarsi e lo accompagno al sentiero appoggiandosi a noi.", is_correct: false, feedback: "SBAGLIATO. Muovere una persona con un possibile trauma alla caviglia senza valutazione sanitaria puo peggiorare la lesione." },{ text: "Comunico il ritrovamento via radio con posizione e condizioni, copro Mario con la coperta termica, monitoro le condizioni vitali e attendo i sanitari.", is_correct: true, feedback: "PERFETTO. Hai seguito la procedura: comunicazione immediata, protezione dal freddo, monitoraggio e attesa dei soccorsi sanitari qualificati." },{ text: "Gli do da bere e mangiare per farlo riprendere, poi decido come trasportarlo.", is_correct: false, feedback: "SBAGLIATO. Non somministrare cibo o bevande senza valutazione sanitaria. La priorita e comunicare e proteggere." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

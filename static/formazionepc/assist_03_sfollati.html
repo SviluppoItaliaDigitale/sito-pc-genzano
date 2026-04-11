@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Gestione Sfollati in Struttura Ricettiva | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="assistenza.html">Assistenza alla Popolazione</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Gestione Sfollati in Struttura Ricettiva</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="assistenza.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei assegnato alla gestione di una scuola adibita a ricovero temporaneo per 60 sfollati dopo un evento alluvionale. Le persone sono arrivate da poche ore. Devi tenere un registro aggiornato della presenza.", question: "Quali dati devi raccogliere per ogni nucleo familiare accolto?", choices: [{ text: "Solo nome e cognome.", is_correct: false, feedback: "INSUFFICIENTE. Servono molte piu informazioni per gestire l'assistenza e la sicurezza." },{ text: "Nome, cognome, data di nascita, indirizzo di residenza, numero di componenti del nucleo, contatti telefonici, esigenze sanitarie (farmaci, patologie), presenza di minori o persone non autosufficienti, animali domestici.", is_correct: true, feedback: "REGISTRAZIONE COMPLETA. Questi dati servono per l'assistenza, la sicurezza, il ricongiungimento familiare e la comunicazione con le autorita." },{ text: "Solo quante persone ci sono in totale.", is_correct: false, feedback: "INSUFFICIENTE. Il numero totale non basta: servono dati individuali per gestire le esigenze specifiche." }] },
+            { situation_update: "Tra gli sfollati c'e una famiglia con un neonato di 3 mesi. La madre e in evidente stato di ansia e dice di avere poco latte artificiale rimasto.", question: "Come gestisci questa situazione prioritaria?", choices: [{ text: "Dico alla madre di rivolgersi alla farmacia piu vicina.", is_correct: false, feedback: "SBAGLIATO. In emergenza la responsabilita dell'assistenza e tua. Non puoi delegare a una madre in stato di ansia con un neonato." },{ text: "Segnalo immediatamente l'urgenza al COC chiedendo latte artificiale e pannolini, assegno alla famiglia un'area riservata e tranquilla, verifico se nella struttura c'e acqua calda per preparare il biberon.", is_correct: true, feedback: "GESTIONE PRIORITARIA CORRETTA. I neonati sono la categoria piu vulnerabile. Hai garantito rifornimenti, comfort e condizioni igieniche." },{ text: "Le dico di non preoccuparsi, arriveranno i rifornimenti prima o poi.", is_correct: false, feedback: "INADEGUATO. Un neonato non puo aspettare. La richiesta di rifornimenti deve essere immediata e tracciata come priorita." }] },
+            { situation_update: "La seconda notte, alcuni sfollati si lamentano del rumore e della mancanza di privacy. Due persone litigano per la posizione delle brandine. La tensione cresce.", question: "Come gestisci il conflitto?", choices: [{ text: "Dico a tutti di stare zitti e rispettare le regole.", is_correct: false, feedback: "CONTROPRODUCENTE. Un approccio autoritario con persone gia sotto stress peggiora la situazione." },{ text: "Ascolto le lamentele con empatia, cerco soluzioni pratiche (teli divisori per la privacy, regole condivise sugli orari di silenzio), mediano tra le parti in conflitto con calma e fermezza.", is_correct: true, feedback: "MEDIAZIONE CORRETTA. In emergenza i conflitti sono normali. L'ascolto, le soluzioni pratiche e la mediazione sono gli strumenti migliori." },{ text: "Chiamo le Forze dell'Ordine per far calmare tutti.", is_correct: false, feedback: "SPROPORZIONATO. Le Forze dell'Ordine intervengono per situazioni di ordine pubblico, non per liti domestiche in un ricovero temporaneo." }] },
+            { situation_update: "Un uomo anziano confida a un volontario che la moglie, rimasta a casa, e allettata e ha bisogno di assistenza continua. Non era nella lista degli sfollati.", question: "Come gestisci questa segnalazione critica?", choices: [{ text: "Dico all'uomo di chiamare il 118.", is_correct: false, feedback: "PARZIALE. Il 118 e per emergenze sanitarie acute. Qui serve un intervento coordinato con il COC per una persona non autosufficiente rimasta in zona evacuata." },{ text: "Comunico immediatamente al COC la presenza di una persona non autosufficiente in zona evacuata, fornendo indirizzo e condizioni. Chiedo l'invio urgente di una squadra per la verifica e l'eventuale evacuazione assistita.", is_correct: true, feedback: "SEGNALAZIONE CRITICA CORRETTA. Una persona allettata in zona evacuata e un'emergenza nell'emergenza. Il COC deve saperlo subito per intervenire." },{ text: "Accompagno l'uomo a casa sua per verificare personalmente.", is_correct: false, feedback: "SBAGLIATO. Non puoi lasciare il tuo posto e rientrare in zona evacuata autonomamente. La catena di comando va rispettata." }] },
+            { situation_update: "Dopo 3 giorni, il COC comunica che parte degli sfollati puo rientrare a casa perche le abitazioni sono state dichiarate agibili. Ma alcuni non vogliono tornare per paura.", question: "Come gestisci il rientro parziale?", choices: [{ text: "Li obbligo a tornare: la struttura serve a chi ne ha davvero bisogno.", is_correct: false, feedback: "SBAGLIATO. Non puoi obbligare le persone. La paura e comprensibile e va gestita con informazione e supporto." },{ text: "Informo tutti della comunicazione del COC, spiego che l'agibilita e stata verificata dai tecnici, offro supporto psicologico se disponibile, aggiorno il registro degli ospiti e organizzo il trasporto per chi rientra.", is_correct: true, feedback: "GESTIONE DEL RIENTRO CORRETTA. Informazione chiara, rispetto delle paure, supporto pratico e aggiornamento della documentazione." },{ text: "Aspetto che decidano da soli quando vogliono tornare.", is_correct: false, feedback: "PASSIVO. Il tuo ruolo e informare, supportare e facilitare il rientro. Non puoi restare in attesa senza agire." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

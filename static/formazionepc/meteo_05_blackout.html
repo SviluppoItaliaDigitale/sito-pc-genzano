@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Blackout Prolungato | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="meteo.html">Rischio Meteo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Blackout Prolungato</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="meteo.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Un violento temporale ha causato un blackout su tutto il territorio comunale. Sono le 19:00, sta facendo buio e il gestore elettrico stima un ripristino non prima di 6-8 ore. Il COC ti attiva per il supporto alla popolazione.", question: "Quali sono le categorie di persone piu a rischio durante un blackout prolungato?", choices: [{ text: "Tutti sono a rischio allo stesso modo.", is_correct: false, feedback: "SBAGLIATO. Alcune persone dipendono dall'elettricita per la sopravvivenza." },{ text: "Persone con apparecchiature elettromedicali (ventilatori, dialisi, concentratori di ossigeno), anziani soli (rischio cadute al buio, mancanza di riscaldamento/raffreddamento), famiglie con neonati, persone in edifici con ascensore bloccato.", is_correct: true, feedback: "CORRETTO. Le utenze elettromedicali sono la priorita assoluta: senza corrente la vita della persona e in pericolo diretto." },{ text: "Le attivita commerciali che perdono la merce refrigerata.", is_correct: false, feedback: "PROBLEMA REALE ma non prioritario rispetto alla salute delle persone." }] },
+            { situation_update: "La lista delle utenze non disalimentabili del Comune indica 4 persone con apparecchiature elettromedicali. Due sono dotate di gruppo di continuita (UPS), due no.", question: "Come gestisci le utenze elettromedicali?", choices: [{ text: "Chiamo tutte e 4 al telefono per verificare.", is_correct: false, feedback: "PRIMO PASSO ma se il telefono fisso non funziona (VOIP) e il cellulare e scarico, la telefonata potrebbe non arrivare." },{ text: "Invio immediatamente una squadra dalle 2 persone SENZA UPS (sono le piu urgenti) con un generatore portatile. Contemporaneamente verifico telefonicamente le altre 2 con UPS per conoscere l'autonomia residua.", is_correct: true, feedback: "PRIORITIZZAZIONE PERFETTA. Le persone senza UPS sono in emergenza immediata. Le altre hanno un margine di tempo ma vanno monitorate." },{ text: "Chiedo al gestore elettrico di ripristinare prima quelle utenze.", is_correct: false, feedback: "IDEALE ma non realistico: il gestore ripristina per zone, non per singole utenze. Serve l'intervento diretto con generatore." }] },
+            { situation_update: "Arrivi a casa di un uomo di 65 anni che usa un concentratore di ossigeno. L'apparecchio e spento da 40 minuti. L'uomo e cosciente ma respira con affanno.", question: "Come intervieni?", choices: [{ text: "Collego subito il generatore al concentratore.", is_correct: false, feedback: "ATTENZIONE. Prima verifica che il generatore sia compatibile (voltaggio, potenza) e posizionalo all'esterno per i fumi di scarico." },{ text: "Verifico la compatibilita elettrica del generatore, lo posiziono all'ESTERNO dell'abitazione (i fumi di scarico contengono monossido di carbonio letale), collego il concentratore tramite una prolunga, verifico che funzioni correttamente. Se le condizioni dell'uomo sono gravi, chiamo il 118.", is_correct: true, feedback: "INTERVENTO TECNICO PERFETTO. Il posizionamento esterno del generatore e FONDAMENTALE: il monossido di carbonio in ambiente chiuso uccide in pochi minuti." },{ text: "Chiamo il 118 e aspetto l'ambulanza.", is_correct: false, feedback: "PARZIALE. Il 118 va chiamato se le condizioni sono gravi, ma nel frattempo devi ripristinare l'alimentazione del concentratore: il tempo e essenziale." }] },
+            { situation_update: "Il blackout si protrae. Ricevi segnalazioni di persone bloccate negli ascensori di due palazzine diverse.", question: "Come gestisci le persone bloccate in ascensore?", choices: [{ text: "Cerco di aprire le porte dell'ascensore con un cacciavite.", is_correct: false, feedback: "PERICOLOSO e potenzialmente illegale. L'apertura degli ascensori richiede tecnici specializzati o VVF." },{ text: "Comunico con le persone bloccate attraverso la porta per rassicurarle, verifico se ci sono persone fragili o in panico, chiamo i VVF (115 o 112) per la liberazione. Resto sul posto fino all'arrivo dei soccorsi.", is_correct: true, feedback: "GESTIONE CORRETTA. La comunicazione e rassicurazione sono fondamentali. Le persone bloccate possono avere attacchi di panico. I VVF hanno le competenze per aprire in sicurezza." },{ text: "Dico alle persone di premere il pulsante di emergenza e vado alla prossima segnalazione.", is_correct: false, feedback: "INSUFFICIENTE. Restare sul posto e rassicurare le persone e parte del tuo compito. L'attesa in un ascensore bloccato al buio e molto angosciante." }] },
+            { situation_update: "Dopo 5 ore il gestore elettrico comunica che il ripristino avverra per zone. La prima zona sara il centro, l'ultima le zone collinari. Le persone nelle zone collinari dovranno attendere ancora 3-4 ore.", question: "Come comunichi questa informazione alla popolazione?", choices: [{ text: "Aspetto che la corrente torni, le persone se ne accorgeranno.", is_correct: false, feedback: "SBAGLIATO. Le persone al buio da 5 ore hanno bisogno di informazioni per gestire l'attesa." },{ text: "Comunico attraverso il megafono nelle zone ancora senza corrente, informo sulle tempistiche previste, offro acqua e supporto, verifico che nessuno abbia acceso fuochi o barbecue in ambienti chiusi (rischio monossido di carbonio).", is_correct: true, feedback: "COMUNICAZIONE E PREVENZIONE. L'informazione riduce l'ansia. La verifica sull'uso improprio di fiamme libere e fondamentale: il monossido di carbonio e il killer silenzioso dei blackout." },{ text: "Pubblico un aggiornamento sui social del Gruppo.", is_correct: false, feedback: "INUTILE. Le persone senza corrente probabilmente hanno i telefoni scarichi e non possono accedere ai social." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

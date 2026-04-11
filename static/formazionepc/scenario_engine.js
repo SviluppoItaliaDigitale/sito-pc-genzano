@@ -146,7 +146,7 @@ function showFinalScreen() {
     if (nextInfo) {
         // Find all links on the category page to determine if next exists
         // We use a simpler approach: check known scenario counts
-        const scenarioCounts = { terremoto: 6, idro: 7, aib: 7 };
+        const scenarioCounts = { terremoto: 6, idro: 7, aib: 7, ricerca: 5, assist: 5, meteo: 5 };
         const maxScenarios = scenarioCounts[nextInfo.prefix] || 0;
         if (nextInfo.currentNum < maxScenarios) {
             // Build next URL by scanning sibling links
@@ -154,7 +154,7 @@ function showFinalScreen() {
             let categoryPage = '';
             allLinks.forEach(a => {
                 const href = a.getAttribute('href');
-                if (href && (href === 'terremoto.html' || href === 'idrogeologico.html' || href === 'aib.html')) {
+                if (href && (href === 'terremoto.html' || href === 'idrogeologico.html' || href === 'aib.html' || href === 'ricerca.html' || href === 'assistenza.html' || href === 'meteo.html')) {
                     categoryPage = href;
                 }
             });

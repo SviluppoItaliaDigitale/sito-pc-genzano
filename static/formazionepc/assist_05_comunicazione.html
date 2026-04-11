@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Comunicazione e Informazione ai Cittadini | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="assistenza.html">Assistenza alla Popolazione</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Comunicazione e Informazione ai Cittadini</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="assistenza.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Il COC ti assegna il compito di gestire il punto informazioni per la popolazione durante l'emergenza. Sei il primo contatto per i cittadini che arrivano chiedendo notizie, indicazioni e aiuto.", question: "Qual e la regola fondamentale della comunicazione con i cittadini in emergenza?", choices: [{ text: "Dare piu informazioni possibili, anche se non sono confermate, per tranquillizzare.", is_correct: false, feedback: "PERICOLOSO. Informazioni non confermate generano confusione e sfiducia. Solo notizie verificate dal COC." },{ text: "Fornire solo informazioni verificate e confermate dal COC, con tono calmo e rassicurante. Se non sai qualcosa, dillo onestamente e impegnati a ottenere la risposta.", is_correct: true, feedback: "CORRETTO. La credibilita del punto informazioni dipende dall'accuratezza. Dire 'non lo so ancora, mi informo' e molto meglio di inventare risposte." },{ text: "Minimizzare sempre la situazione per non creare panico.", is_correct: false, feedback: "SBAGLIATO. Minimizzare e pericoloso quanto allarmismo. La comunicazione deve essere onesta, chiara e proporzionata alla realta." }] },
+            { situation_update: "Una folla di circa 30 persone si raduna al punto informazioni. Sono agitate, parlano tutte insieme, qualcuno alza la voce. Chiedono quando potranno rientrare a casa.", question: "Come gestisci la folla?", choices: [{ text: "Urlo piu forte di loro per farmi sentire.", is_correct: false, feedback: "CONTROPRODUCENTE. Alzare la voce aumenta la tensione. Serve calma e autorita, non volume." },{ text: "Chiedo con fermezza ma gentilezza un attimo di silenzio, mi presento e spiego che daro tutte le informazioni disponibili. Parlo lentamente, con frasi brevi e chiare, usando un megafono se disponibile.", is_correct: true, feedback: "COMUNICAZIONE EFFICACE. Autorevole ma empatico. Le informazioni chiare e strutturate riducono l'ansia collettiva." },{ text: "Aspetto che si calmino da soli.", is_correct: false, feedback: "PASSIVO. Una folla agitata raramente si calma da sola. Serve un intervento comunicativo attivo e strutturato." }] },
+            { situation_update: "Un giornalista di una TV locale ti si avvicina con la telecamera accesa e ti chiede un'intervista sulla situazione.", question: "Come ti comporti con i media?", choices: [{ text: "Rilascio l'intervista: e un'occasione per dare visibilita al nostro Gruppo.", is_correct: false, feedback: "SBAGLIATO. Non sei autorizzato a rilasciare dichiarazioni alla stampa. Le informazioni ufficiali passano attraverso il COC o il portavoce designato." },{ text: "Indirizzo il giornalista con cortesia al referente comunicazione del COC o al Sindaco, spiegando che solo le autorita possono rilasciare dichiarazioni ufficiali.", is_correct: true, feedback: "COMPORTAMENTO CORRETTO. La comunicazione istituzionale e responsabilita delle autorita. Tu puoi fornire solo indicazioni logistiche." },{ text: "Lo mando via perche i giornalisti creano solo problemi.", is_correct: false, feedback: "SBAGLIATO. I media hanno un ruolo importante nella comunicazione di emergenza. Il rapporto deve essere cortese e professionale." }] },
+            { situation_update: "Sui social media iniziano a circolare notizie false: qualcuno scrive che c'e stato un crollo con vittime. La notizia non e vera ma i cittadini al punto informazioni ti chiedono conferma.", question: "Come gestisci la disinformazione?", choices: [{ text: "Dico che non ne so niente e cambio argomento.", is_correct: false, feedback: "INSUFFICIENTE. Le fake news in emergenza possono causare panico. Vanno smentite attivamente con informazioni corrette." },{ text: "Smentisco con chiarezza la notizia falsa, confermo le informazioni ufficiali ricevute dal COC, invito i cittadini a seguire solo i canali ufficiali del Comune e della Protezione Civile.", is_correct: true, feedback: "CONTRASTO ALLA DISINFORMAZIONE CORRETTO. La smentita attiva, il rimando alle fonti ufficiali e l'invito alla prudenza informativa sono le azioni giuste." },{ text: "Scrivo un post sui social per smentire.", is_correct: false, feedback: "NON E COMPITO TUO. La comunicazione social istituzionale e responsabilita del COC o dell'ufficio stampa comunale." }] },
+            { situation_update: "Alla fine della giornata, il COC decide di fare un'assemblea pubblica per aggiornare tutti i cittadini sulla situazione. Ti chiedono di aiutare nell'organizzazione.", question: "Come prepari l'assemblea informativa?", choices: [{ text: "Metto sedie e microfono e basta.", is_correct: false, feedback: "INSUFFICIENTE. Un'assemblea pubblica in emergenza richiede preparazione nel contenuto, non solo nella logistica." },{ text: "Preparo lo spazio con sedie, microfono e illuminazione. Predispongo un elenco delle informazioni confermate dal COC, preparo una scaletta (stato della situazione, azioni in corso, tempistiche previste, comportamenti da adottare). Prevedo spazio per le domande.", is_correct: true, feedback: "ORGANIZZAZIONE COMPLETA. L'assemblea informativa e uno strumento potente se ben preparata: riduce l'ansia e ricostruisce la fiducia nelle istituzioni." },{ text: "Dico al Sindaco di parlare lui, non e un mio compito.", is_correct: false, feedback: "PARZIALE. Il Sindaco parlera certamente, ma il supporto logistico e organizzativo e compito tuo. Prepara tutto perche il messaggio arrivi efficacemente." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

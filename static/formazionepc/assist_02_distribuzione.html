@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Distribuzione Pasti e Generi di Prima Necessita | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="assistenza.html">Assistenza alla Popolazione</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">Distribuzione Pasti e Generi di Prima Necessita</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="assistenza.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "E il secondo giorno di emergenza post-sismica. Il COC ti affida la gestione della cucina da campo e la distribuzione pasti per 120 persone sfollate nella tendopoli allestita al campo sportivo.", question: "Qual e la prima cosa da verificare per la gestione di una cucina da campo?", choices: [{ text: "Che ci sia abbastanza cibo per tutti.", is_correct: false, feedback: "IMPORTANTE ma non la prima verifica. Prima vengono le condizioni igienico-sanitarie." },{ text: "Condizioni igieniche dell'area, disponibilita di acqua potabile, corretta conservazione degli alimenti, presenza di attrezzature funzionanti, rispetto della catena del freddo.", is_correct: true, feedback: "CORRETTO. L'igiene alimentare e la priorita assoluta. Un'intossicazione alimentare in emergenza sarebbe un disastro nel disastro." },{ text: "Che i volontari sappiano cucinare.", is_correct: false, feedback: "UTILE ma non prioritario. Le competenze si gestiscono dopo aver verificato la sicurezza alimentare." }] },
+            { situation_update: "Tra gli sfollati ci sono persone celiache, diabetiche, vegetariane, bambini sotto i 3 anni e persone di religione islamica.", question: "Come gestisci le esigenze alimentari diverse?", choices: [{ text: "Preparo un menu unico, chi ha esigenze particolari si arrangia.", is_correct: false, feedback: "SBAGLIATO. In emergenza il diritto all'alimentazione adeguata va garantito a tutti, comprese le esigenze sanitarie e religiose." },{ text: "Censisco tutte le esigenze alimentari, preparo menu differenziati (senza glutine, pasti per diabetici, opzioni vegetariane, pasti halal per chi lo richiede, pappa per i piu piccoli), etichetto chiaramente i contenitori.", is_correct: true, feedback: "GESTIONE ESEMPLARE. Hai garantito il rispetto delle esigenze sanitarie, culturali e religiose. L'etichettatura previene errori nella distribuzione." },{ text: "Chiedo alla Croce Rossa di occuparsi dei casi speciali.", is_correct: false, feedback: "PARZIALE. Se la Croce Rossa e presente puo collaborare, ma la responsabilita della cucina assegnata a te include la gestione di tutte le esigenze." }] },
+            { situation_update: "Durante la preparazione del pranzo, un volontario nota che alcune confezioni di latte sono rimaste fuori dal frigo per tutta la mattina con 30 gradi di temperatura.", question: "Cosa decidi?", choices: [{ text: "Le uso comunque, tanto il latte e sigillato.", is_correct: false, feedback: "SBAGLIATO. La catena del freddo interrotta rende il prodotto potenzialmente pericoloso, anche se la confezione e integra." },{ text: "Elimino tutto il latte rimasto fuori dal frigo e lo sostituisco. Segnalo l'accaduto e verifico che le procedure di conservazione vengano rispettate d'ora in poi.", is_correct: true, feedback: "DECISIONE CORRETTA. In emergenza la sicurezza alimentare e ancora piu importante perche le persone sono gia debilitate. Meglio un pasto in meno che un'intossicazione." },{ text: "Lo metto in frigo adesso, si raffreddera e sara buono.", is_correct: false, feedback: "SBAGLIATO. Rimettere in frigo un alimento che ha interrotto la catena del freddo non lo rende sicuro. I batteri si sono gia sviluppati." }] },
+            { situation_update: "All'ora di pranzo si forma una lunga coda. Alcune persone anziane faticano a stare in piedi e il sole batte forte.", question: "Come organizzi la distribuzione per evitare disagi?", choices: [{ text: "Chi arriva prima mangia prima, e la regola.", is_correct: false, feedback: "SBAGLIATO. Gli anziani e le persone fragili non possono competere con gli altri per un posto in coda." },{ text: "Creo un percorso ombreggiato, predispongo sedie per chi non riesce a stare in piedi, stabilisco turni: prima anziani e fragili, poi famiglie con bambini, poi gli altri. Distribuisco acqua a chi aspetta.", is_correct: true, feedback: "ORGANIZZAZIONE OTTIMA. Hai pensato alla protezione dal sole, al comfort fisico, alle priorita per i piu vulnerabili e all'idratazione." },{ text: "Chiedo a tutti di tornare piu tardi quando c'e meno coda.", is_correct: false, feedback: "SBAGLIATO. In emergenza le persone hanno diritto ai pasti negli orari stabiliti. Devi organizzare la distribuzione, non rimandarla." }] },
+            { situation_update: "Dopo pranzo, avanzano 15 pasti. Un gruppo di curiosi del paese chiede se possono avere i pasti avanzati.", question: "Come ti comporti?", choices: [{ text: "Li distribuisco ai curiosi, tanto avanzano.", is_correct: false, feedback: "SBAGLIATO. I pasti della cucina da campo sono destinati agli sfollati. I pasti avanzati vanno conservati per eventuali arrivi successivi." },{ text: "Spiego cortesemente che i pasti sono riservati agli sfollati, conservo gli avanzi correttamente per eventuali nuovi arrivi e comunico al COC la disponibilita residua.", is_correct: true, feedback: "CORRETTO. Le risorse di emergenza sono destinate esclusivamente alla popolazione colpita. La gestione corretta degli avanzi evita sprechi e garantisce riserve." },{ text: "Li butto, non si possono conservare.", is_correct: false, feedback: "SPRECO INGIUSTIFICATO. I pasti confezionati correttamente possono essere conservati per i turni successivi o per nuovi arrivi." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>
