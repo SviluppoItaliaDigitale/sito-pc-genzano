@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   { id: 'lampada', name: 'Lampada accesa che scotta se toccata', top: 42.67, left: 17.42, size: 10 }
 ]},
                 { image: 'img/scenariocasa1.svg', risks: [
-  { id: 'finestre_aperte', name: 'Finestre aperte che possono chiudersi all'improvviso', top: 57.3, left: 47.94, size: 20 },
+  { id: 'finestre_aperte', name: 'Finestre aperte che possono chiudersi di colpo', top: 57.3, left: 47.94, size: 20 },
   { id: 'gradini', name: 'Inciampare sui gradini delle scale', top: 83.55, left: 63.35, size: 10 },
   { id: 'tappeto', name: 'Tappeto stropicciato può causare inciampo', top: 84.42, left: 42.42, size: 10 },
   { id: 'spigolo_tavolo', name: 'Il bordo dello spigolo del tavolo, se urtato, può causare dolore.', top: 84.57, left: 82.21, size: 10 }
