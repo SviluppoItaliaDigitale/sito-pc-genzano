@@ -25,6 +25,8 @@ I volontari già operativi partecipano periodicamente a:
 
 - Esercitazioni pratiche sul territorio
 - Corsi di aggiornamento specialistici (AIB, rischio idrogeologico, TLC)
+- Addestramento piloti droni (APR) per ricognizione e monitoraggio
+- Formazione dei divulgatori per gli interventi nelle scuole
 - Simulazioni coordinate con la Sala Operativa Regionale
 - Incontri formativi con altri enti del sistema di protezione civile
 

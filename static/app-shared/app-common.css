@@ -245,8 +245,12 @@ body:not(.chrome-loaded) > .app-content {
 .logo-certificato { height: 90px; }
 .cert-title { font-size: 1.5rem; font-weight: bold; color: #333; }
 .cert-subtitle { font-size: 1.2rem; color: #555; }
+.cert-org-info { font-size: 0.75rem; color: #888; }
 .cert-main-title { color: var(--pc-primary, #003366); font-weight: bold; letter-spacing: 1px; }
+.cert-type-label { font-size: 1rem; color: #666; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0; }
 #cert-candidate-name { color: var(--pc-primary-dark, #00244d); font-weight: bold; font-style: italic; font-size: 2.2rem; }
+.cert-threshold { font-style: italic; }
+.cert-disclaimer { max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.4; }
 .result-badge { font-size: 2.2rem; font-weight: 700; padding: 0.5rem 2rem; border-radius: 8px; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
 .result-badge.promosso { background-color: #28a745; }
 .result-badge.bocciato { background-color: #dc3545; }
@@ -302,9 +306,12 @@ body:not(.chrome-loaded) > .app-content {
   #non-printable-section { display: none !important; }
   body, main { background-color: white !important; font-size: 12pt; }
   .container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
-  #certificate { box-shadow: none !important; border: 2px solid black !important; width: 100%; page-break-inside: avoid; border-radius: 0; }
+  #certificate { box-shadow: none !important; border: 2px solid black !important; width: 100%; page-break-inside: avoid; border-radius: 0; padding: 40px !important; }
   #certificate::before { border: 4px double #000000 !important; border-radius: 0; }
   .result-badge.promosso, .result-badge.bocciato { -webkit-print-color-adjust: exact; color-adjust: exact; }
+  .cert-footer { border-top: 1px solid #000 !important; }
+  .cert-disclaimer { font-size: 9pt; }
+  .cert-org-info { font-size: 8pt; }
 }
 
 /* ── Revisione quiz ── */
