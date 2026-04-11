@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <title>Salotto con rischi da trovare</title>
+  <!-- Pavimento parquet -->
+  <rect x="0" y="370" width="800" height="130" fill="#c4956a"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#b08050" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#b08050" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="460" x2="800" y2="460" stroke="#b08050" stroke-width="1" opacity="0.4"/>
+  <!-- Parete -->
+  <rect x="0" y="0" width="800" height="370" fill="#e8ddd0"/>
+  <!-- Battiscopa -->
+  <rect x="0" y="365" width="800" height="8" fill="#8b6914"/>
+  <!-- RISCHIO: Finestre aperte (top 57.3%, left 47.94%) — posizione ~383,286 -->
+  <rect x="300" y="60" width="180" height="200" fill="#87ceeb" stroke="#8b6914" stroke-width="4"/>
+  <line x1="390" y1="60" x2="390" y2="260" stroke="#8b6914" stroke-width="3"/>
+  <!-- Anta sinistra aperta verso interno -->
+  <path d="M300,60 L300,260 L340,250 L340,70 Z" fill="#c4e0f0" stroke="#8b6914" stroke-width="2" opacity="0.8"/>
+  <!-- Anta destra aperta verso interno -->
+  <path d="M480,60 L480,260 L440,250 L440,70 Z" fill="#c4e0f0" stroke="#8b6914" stroke-width="2" opacity="0.8"/>
+  <!-- Vento che entra -->
+  <path d="M390,130 Q420,125 430,140" stroke="#90caf9" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M390,160 Q430,155 445,170" stroke="#90caf9" stroke-width="2" fill="none" opacity="0.6"/>
+  <!-- Scale a destra -->
+  <rect x="580" y="200" width="180" height="170" fill="#d4a574"/>
+  <!-- RISCHIO: Gradini scale (top 83.55%, left 63.35%) — posizione ~507,418 -->
+  <rect x="480" y="370" width="100" height="20" fill="#c49464"/>
+  <rect x="500" y="350" width="100" height="20" fill="#c49464"/>
+  <rect x="520" y="330" width="100" height="20" fill="#c49464"/>
+  <rect x="540" y="310" width="100" height="20" fill="#c49464"/>
+  <rect x="560" y="290" width="100" height="20" fill="#c49464"/>
+  <rect x="580" y="270" width="100" height="20" fill="#c49464"/>
+  <!-- Ringhiera -->
+  <line x1="480" y1="370" x2="680" y2="200" stroke="#8b6914" stroke-width="4"/>
+  <line x1="520" y1="370" x2="520" y2="340" stroke="#8b6914" stroke-width="2"/>
+  <line x1="560" y1="340" x2="560" y2="295" stroke="#8b6914" stroke-width="2"/>
+  <line x1="600" y1="305" x2="600" y2="260" stroke="#8b6914" stroke-width="2"/>
+  <!-- Divano -->
+  <rect x="50" y="250" width="200" height="90" rx="8" fill="#7b968f"/>
+  <rect x="50" y="235" width="200" height="25" rx="6" fill="#6b8680"/>
+  <!-- RISCHIO: Tappeto stropicciato (top 84.42%, left 42.42%) — posizione ~339,422 -->
+  <path d="M250,395 Q290,385 340,400 Q380,390 420,400 L420,450 Q380,440 340,450 Q290,440 250,450 Z" fill="#b05050" opacity="0.5"/>
+  <!-- Piega visibile -->
+  <path d="M310,395 L320,420 L330,395" stroke="#8b3030" stroke-width="2" fill="none"/>
+  <path d="M360,400 L370,425 L380,400" stroke="#8b3030" stroke-width="2" fill="none"/>
+  <!-- RISCHIO: Spigolo tavolo (top 84.57%, left 82.21%) — posizione ~658,423 -->
+  <rect x="630" y="380" width="130" height="10" fill="#8b6914"/>
+  <rect x="640" y="390" width="10" height="60" fill="#705010"/>
+  <rect x="745" y="390" width="10" height="60" fill="#705010"/>
+  <!-- Spigolo evidenziato -->
+  <circle cx="630" cy="385" r="4" fill="#8b6914"/>
+  <!-- Quadro sulla parete -->
+  <rect x="100" y="80" width="120" height="90" fill="#5a8a5a" stroke="#8b6914" stroke-width="3"/>
+  <circle cx="160" cy="115" r="20" fill="#f0c040"/>
+  <path d="M110,160 L140,130 L170,150 L200,110 L210,160" fill="#3a6a3a"/>
+  <!-- Lampada a stelo -->
+  <rect x="720" y="220" width="6" height="140" fill="#c0c0c0"/>
+  <path d="M700,220 L748,220 L738,190 L710,190 Z" fill="#f5e6c8"/>
+</svg>

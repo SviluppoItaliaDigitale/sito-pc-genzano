@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <title>Camera da letto con rischi da trovare</title>
+  <!-- Pavimento -->
+  <rect x="0" y="380" width="800" height="120" fill="#c4956a"/>
+  <!-- Parete -->
+  <rect x="0" y="0" width="800" height="380" fill="#dde8d0"/>
+  <!-- Battiscopa -->
+  <rect x="0" y="375" width="800" height="8" fill="#8b6914"/>
+  <!-- Letto -->
+  <!-- RISCHIO: Testata letto (top 55.83%, left 26.16%) — posizione ~209,279 -->
+  <rect x="80" y="260" width="300" height="20" rx="3" fill="#5a3a1a"/>
+  <!-- RISCHIO: Piedi letto (top 89.65%, left 11.14%) — posizione ~89,448 -->
+  <rect x="80" y="280" width="300" height="100" rx="5" fill="#f0e6d6"/>
+  <rect x="80" y="270" width="10" height="120" fill="#5a3a1a"/>
+  <rect x="370" y="270" width="10" height="120" fill="#5a3a1a"/>
+  <!-- Coperta -->
+  <rect x="90" y="290" width="280" height="80" rx="5" fill="#7b96b0"/>
+  <rect x="90" y="290" width="280" height="25" rx="3" fill="#e8e0d0"/>
+  <!-- Cuscino -->
+  <ellipse cx="160" cy="285" rx="50" ry="15" fill="#fff"/>
+  <ellipse cx="280" cy="285" rx="50" ry="15" fill="#fff"/>
+  <!-- Comodino con cassetti -->
+  <!-- RISCHIO: Cassetti (top 65.91%, left 77.15%) — posizione ~617,330 -->
+  <rect x="580" y="280" width="100" height="100" fill="#a0522d" stroke="#8b4513" stroke-width="2"/>
+  <rect x="585" y="285" width="90" height="25" fill="#c0763c"/>
+  <circle cx="630" cy="297" r="3" fill="#daa520"/>
+  <!-- Cassetto aperto -->
+  <rect x="580" y="315" width="115" height="25" fill="#c0763c" stroke="#8b4513" stroke-width="1"/>
+  <circle cx="637" cy="327" r="3" fill="#daa520"/>
+  <rect x="585" y="345" width="90" height="25" fill="#c0763c"/>
+  <circle cx="630" cy="357" r="3" fill="#daa520"/>
+  <!-- RISCHIO: Lampadina che scotta (top 56.36%, left 84.67%) — posizione ~677,282 -->
+  <rect x="627" y="260" width="6" height="25" fill="#c0c0c0"/>
+  <path d="M610,260 L648,260 L643,235 L615,235 Z" fill="#ffeb3b"/>
+  <circle cx="629" cy="248" r="10" fill="#fff9c4"/>
+  <!-- Raggi di luce -->
+  <line x1="629" y1="230" x2="629" y2="220" stroke="#ffd600" stroke-width="2"/>
+  <line x1="615" y1="238" x2="608" y2="231" stroke="#ffd600" stroke-width="2"/>
+  <line x1="643" y1="238" x2="650" y2="231" stroke="#ffd600" stroke-width="2"/>
+  <!-- RISCHIO: Tavolo spigolo (top 83.81%, left 57.37%) — posizione ~459,419 -->
+  <rect x="420" y="380" width="100" height="8" fill="#8b6914"/>
+  <rect x="430" y="388" width="8" height="60" fill="#705010"/>
+  <rect x="505" y="388" width="8" height="60" fill="#705010"/>
+  <!-- Finestra -->
+  <rect x="450" y="50" width="150" height="150" fill="#87ceeb" stroke="#8b6914" stroke-width="4"/>
+  <line x1="525" y1="50" x2="525" y2="200" stroke="#8b6914" stroke-width="3"/>
+  <line x1="450" y1="125" x2="600" y2="125" stroke="#8b6914" stroke-width="3"/>
+  <!-- Tende -->
+  <path d="M440,45 L440,210 Q460,190 480,210 L480,45" fill="#c4a0c4" opacity="0.5"/>
+  <path d="M570,45 L570,210 Q590,190 610,210 L610,45" fill="#c4a0c4" opacity="0.5"/>
+  <!-- Quadro -->
+  <rect x="150" y="70" width="100" height="80" fill="#e8c170" stroke="#8b6914" stroke-width="3"/>
+  <circle cx="200" cy="100" r="15" fill="#ff8a65"/>
+  <rect x="170" y="120" width="60" height="20" fill="#a1887f"/>
+  <!-- Armadio -->
+  <rect x="0" y="100" width="60" height="280" fill="#a0522d" stroke="#8b4513" stroke-width="2"/>
+  <line x1="30" y1="100" x2="30" y2="380" stroke="#8b4513" stroke-width="2"/>
+  <circle cx="25" cy="240" r="3" fill="#daa520"/>
+  <circle cx="35" cy="240" r="3" fill="#daa520"/>
+</svg>

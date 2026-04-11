@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <title>Bagno con rischi da trovare</title>
+  <!-- Pavimento piastrelle -->
+  <rect x="0" y="370" width="800" height="130" fill="#c8dde8"/>
+  <line x1="100" y1="370" x2="100" y2="500" stroke="#b0c8d8" stroke-width="1"/>
+  <line x1="200" y1="370" x2="200" y2="500" stroke="#b0c8d8" stroke-width="1"/>
+  <line x1="300" y1="370" x2="300" y2="500" stroke="#b0c8d8" stroke-width="1"/>
+  <line x1="400" y1="370" x2="400" y2="500" stroke="#b0c8d8" stroke-width="1"/>
+  <line x1="500" y1="370" x2="500" y2="500" stroke="#b0c8d8" stroke-width="1"/>
+  <line x1="600" y1="370" x2="600" y2="500" stroke="#b0c8d8" stroke-width="1"/>
+  <line x1="700" y1="370" x2="700" y2="500" stroke="#b0c8d8" stroke-width="1"/>
+  <line x1="0" y1="410" x2="800" y2="410" stroke="#b0c8d8" stroke-width="1"/>
+  <line x1="0" y1="450" x2="800" y2="450" stroke="#b0c8d8" stroke-width="1"/>
+  <!-- Parete piastrelle -->
+  <rect x="0" y="0" width="800" height="370" fill="#e0eef4"/>
+  <line x1="0" y1="80" x2="800" y2="80" stroke="#d0dfe8" stroke-width="1"/>
+  <line x1="0" y1="160" x2="800" y2="160" stroke="#d0dfe8" stroke-width="1"/>
+  <line x1="0" y1="240" x2="800" y2="240" stroke="#d0dfe8" stroke-width="1"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#d0dfe8" stroke-width="1"/>
+  <!-- Lavatrice -->
+  <!-- RISCHIO: Oblo lavatrice (top 67.05%, left 16.58%) — posizione ~133,335 -->
+  <rect x="60" y="230" width="140" height="140" rx="5" fill="#e8e8e8" stroke="#ccc" stroke-width="2"/>
+  <rect x="65" y="235" width="130" height="30" fill="#d0d0d0"/>
+  <circle cx="80" cy="250" r="5" fill="#4caf50"/>
+  <rect x="120" y="245" width="40" height="10" rx="3" fill="#bbb"/>
+  <!-- Oblo -->
+  <circle cx="130" cy="320" r="35" fill="#c8dde8" stroke="#aaa" stroke-width="3"/>
+  <circle cx="130" cy="320" r="28" fill="#a0c4d8"/>
+  <!-- Vestiti visibili -->
+  <circle cx="120" cy="315" r="10" fill="#e07050" opacity="0.5"/>
+  <circle cx="140" cy="325" r="8" fill="#5090c0" opacity="0.5"/>
+  <!-- Lavandino con mobile -->
+  <!-- RISCHIO: Spigoli sporgenti (top 58.56%, left 40.81%) — posizione ~326,293 -->
+  <rect x="280" y="200" width="150" height="170" fill="#e8e0d0" stroke="#c0b090" stroke-width="2"/>
+  <rect x="285" y="205" width="65" height="80" fill="#f0e8d8" stroke="#d0c0a0" stroke-width="1"/>
+  <rect x="358" y="205" width="65" height="80" fill="#f0e8d8" stroke="#d0c0a0" stroke-width="1"/>
+  <circle cx="345" cy="245" r="3" fill="#daa520"/>
+  <circle cx="365" cy="245" r="3" fill="#daa520"/>
+  <!-- Lavandino sopra -->
+  <ellipse cx="355" cy="200" rx="55" ry="15" fill="#f8f8f8" stroke="#ddd" stroke-width="2"/>
+  <ellipse cx="355" cy="200" rx="35" ry="8" fill="#e0e8f0"/>
+  <!-- Rubinetto -->
+  <rect x="350" y="170" width="10" height="25" fill="#c0c0c0"/>
+  <path d="M345,170 L365,170 Q370,170 370,165 L370,160 L340,160 L340,165 Q340,170 345,170" fill="#c0c0c0"/>
+  <!-- Specchio -->
+  <rect x="300" y="50" width="110" height="100" rx="5" fill="#d0e8f0" stroke="#c0c0c0" stroke-width="2"/>
+  <!-- WC -->
+  <ellipse cx="680" cy="340" rx="40" ry="30" fill="#f8f8f8" stroke="#ddd" stroke-width="2"/>
+  <rect x="645" y="280" width="70" height="50" rx="5" fill="#f0f0f0" stroke="#ddd" stroke-width="2"/>
+  <rect x="660" y="260" width="40" height="25" rx="3" fill="#e8e8e8" stroke="#ddd" stroke-width="1"/>
+  <!-- RISCHIO: Tappeto scivoloso (top 80.83%, left 58.75%) — posizione ~470,404 -->
+  <rect x="380" y="385" width="180" height="50" rx="5" fill="#7baacc" opacity="0.5"/>
+  <rect x="390" y="395" width="160" height="30" rx="3" fill="#6a99bb" opacity="0.4"/>
+  <!-- Gocce d'acqua sul tappeto -->
+  <circle cx="420" cy="400" r="3" fill="#a0d0f0" opacity="0.6"/>
+  <circle cx="500" cy="410" r="4" fill="#a0d0f0" opacity="0.6"/>
+  <circle cx="460" cy="395" r="2" fill="#a0d0f0" opacity="0.6"/>
+  <!-- RISCHIO: Sgabello instabile (top 71.88%, left 75.77%) — posizione ~606,359 -->
+  <rect x="580" y="345" width="50" height="8" fill="#c0a060"/>
+  <line x1="585" y1="353" x2="580" y2="380" stroke="#a08040" stroke-width="3"/>
+  <line x1="625" y1="353" x2="630" y2="380" stroke="#a08040" stroke-width="3"/>
+  <!-- Sgabello inclinato -->
+  <line x1="585" y1="353" x2="570" y2="375" stroke="#a08040" stroke-width="3"/>
+  <!-- Doccia -->
+  <rect x="470" y="80" width="120" height="200" fill="#d8e8f0" stroke="#c0d0d8" stroke-width="2" opacity="0.3"/>
+  <rect x="470" y="80" width="120" height="10" fill="#c0c0c0"/>
+  <!-- Soffione -->
+  <circle cx="530" cy="95" r="15" fill="#d0d0d0" stroke="#bbb" stroke-width="1"/>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <title>Cucina con rischi da trovare</title>
+  <!-- Pavimento piastrelle -->
+  <rect x="0" y="370" width="800" height="130" fill="#d9cfc0"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#c0b8a8" stroke-width="1"/>
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#c0b8a8" stroke-width="1"/>
+  <line x1="0" y1="460" x2="800" y2="460" stroke="#c0b8a8" stroke-width="1"/>
+  <line x1="100" y1="370" x2="100" y2="500" stroke="#c0b8a8" stroke-width="1"/>
+  <line x1="200" y1="370" x2="200" y2="500" stroke="#c0b8a8" stroke-width="1"/>
+  <line x1="300" y1="370" x2="300" y2="500" stroke="#c0b8a8" stroke-width="1"/>
+  <line x1="400" y1="370" x2="400" y2="500" stroke="#c0b8a8" stroke-width="1"/>
+  <line x1="500" y1="370" x2="500" y2="500" stroke="#c0b8a8" stroke-width="1"/>
+  <line x1="600" y1="370" x2="600" y2="500" stroke="#c0b8a8" stroke-width="1"/>
+  <line x1="700" y1="370" x2="700" y2="500" stroke="#c0b8a8" stroke-width="1"/>
+  <!-- Parete -->
+  <rect x="0" y="0" width="800" height="370" fill="#f0ece4"/>
+  <!-- Pensili in alto -->
+  <!-- RISCHIO: Spigoli sporgenti (top 28.1%, left 46.71%) — posizione ~374,140 -->
+  <rect x="250" y="50" width="120" height="80" fill="#d4a574" stroke="#8b6914" stroke-width="2"/>
+  <rect x="380" y="50" width="120" height="80" fill="#d4a574" stroke="#8b6914" stroke-width="2"/>
+  <circle cx="310" cy="90" r="4" fill="#daa520"/>
+  <circle cx="440" cy="90" r="4" fill="#daa520"/>
+  <!-- Spigolo sporgente evidenziato -->
+  <rect x="370" y="50" width="4" height="80" fill="#c09050"/>
+  <!-- Piano cucina -->
+  <rect x="150" y="200" width="500" height="15" fill="#e0d4c0"/>
+  <!-- Mobili sotto -->
+  <rect x="150" y="215" width="500" height="155" fill="#d4a574" stroke="#8b6914" stroke-width="2"/>
+  <!-- Ante -->
+  <rect x="155" y="220" width="80" height="145" fill="#dab88c" stroke="#c09050" stroke-width="1"/>
+  <rect x="240" y="220" width="80" height="145" fill="#dab88c" stroke="#c09050" stroke-width="1"/>
+  <rect x="420" y="220" width="80" height="145" fill="#dab88c" stroke="#c09050" stroke-width="1"/>
+  <rect x="505" y="220" width="80" height="145" fill="#dab88c" stroke="#c09050" stroke-width="1"/>
+  <!-- Maniglie -->
+  <circle cx="225" cy="290" r="3" fill="#daa520"/>
+  <circle cx="310" cy="290" r="3" fill="#daa520"/>
+  <circle cx="490" cy="290" r="3" fill="#daa520"/>
+  <circle cx="575" cy="290" r="3" fill="#daa520"/>
+  <!-- RISCHIO: Fornelli e forno accesi (top 44.74%, left 40.81%) — posizione ~326,224 -->
+  <rect x="325" y="160" width="150" height="55" fill="#555" stroke="#333" stroke-width="2"/>
+  <!-- Fornelli -->
+  <circle cx="365" cy="177" r="15" fill="#444" stroke="#333" stroke-width="2"/>
+  <circle cx="365" cy="177" r="8" fill="#ff6600"/>
+  <circle cx="435" cy="177" r="15" fill="#444" stroke="#333" stroke-width="2"/>
+  <circle cx="435" cy="177" r="8" fill="#ff6600"/>
+  <!-- Fiamme -->
+  <path d="M360,167 Q365,155 370,167" fill="#ff4400" opacity="0.8"/>
+  <path d="M430,167 Q435,155 440,167" fill="#ff4400" opacity="0.8"/>
+  <!-- Pentola -->
+  <rect x="350" y="160" width="30" height="18" rx="3" fill="#808080"/>
+  <path d="M355,160 Q365,150 375,160" fill="none" stroke="#ccc" stroke-width="2" opacity="0.5"/>
+  <!-- Forno sotto -->
+  <rect x="325" y="220" width="90" height="100" fill="#555" stroke="#333" stroke-width="2"/>
+  <rect x="330" y="225" width="80" height="50" fill="#3a3a3a"/>
+  <circle cx="370" cy="300" r="4" fill="#daa520"/>
+  <!-- Luce forno acceso -->
+  <rect x="332" y="227" width="76" height="46" fill="#ff8800" opacity="0.2"/>
+  <!-- RISCHIO: Apertura ante con spigoli (top 58.65%, left 79.53%) — posizione ~636,293 -->
+  <rect x="590" y="220" width="70" height="145" fill="#dab88c" stroke="#c09050" stroke-width="1"/>
+  <!-- Anta aperta -->
+  <path d="M660,220 L660,365 L700,355 L700,230 Z" fill="#dab88c" stroke="#c09050" stroke-width="1"/>
+  <circle cx="695" cy="290" r="3" fill="#daa520"/>
+  <!-- RISCHIO: Tappeto arricciato (top 84.02%, left 62.51%) — posizione ~500,420 -->
+  <path d="M420,400 Q460,390 500,405 Q540,395 580,405 L580,450 Q540,440 500,450 Q460,440 420,450 Z" fill="#8b5e3c" opacity="0.5"/>
+  <path d="M470,400 L480,425 L490,400" stroke="#6b3e1c" stroke-width="2" fill="none"/>
+  <!-- Lavandino -->
+  <rect x="100" y="160" width="45" height="40" rx="5" fill="#c0c0c0" stroke="#999" stroke-width="2"/>
+  <ellipse cx="122" cy="180" rx="15" ry="10" fill="#a0a0a0"/>
+  <rect x="118" y="155" width="8" height="10" fill="#c0c0c0"/>
+  <!-- Finestra cucina -->
+  <rect x="550" y="30" width="120" height="110" fill="#87ceeb" stroke="#8b6914" stroke-width="3"/>
+  <line x1="610" y1="30" x2="610" y2="140" stroke="#8b6914" stroke-width="2"/>
+</svg>
