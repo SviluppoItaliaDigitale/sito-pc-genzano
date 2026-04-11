@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Assistenza Popolazione | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="idrogeologico.html">Rischio Idrogeologico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">⛈️ Assistenza alla Popolazione in Area di Ricovero</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="idrogeologico.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei assegnato all'area di ricovero allestita in una palestra. Una famiglia (genitori e due bambini piccoli) arriva bagnata e infreddolita.", question: "Qual è la tua prima azione di accoglienza?", choices: [{ text: "Chiedere subito i documenti per la registrazione.", is_correct: false, feedback: "SBAGLIATO. La burocrazia non è mai la priorità. Le persone hanno bisogni immediati a cui rispondere." },{ text: "Accoglierli con calma, fornire subito coperte asciutte e una bevanda calda, dando priorità ai bisogni dei bambini.", is_correct: true, feedback: "ACCOGLIENZA PERFETTA. Hai risposto prima ai bisogni umani primari (calore, sicurezza), poi a quelli gestionali. Questo crea subito un clima di fiducia." },{ text: "Indicare loro dove sono le brandine e dire di sceglierne una libera.", is_correct: false, feedback: "TROPPO SBRIGATIVO. Un approccio così distaccato non è accogliente e fa sentire le persone abbandonate a sé stesse." }] },
+            { situation_update: "La famiglia si è calmata e rifocillata. Ora puoi procedere con la registrazione.", question: "Qual è lo scopo principale della registrazione delle persone?", choices: [{ text: "Sapere chi è presente, da dove viene, tracciare necessità (sanitarie, alimentari), gestire ricongiungimenti e avere un registro ufficiale.", is_correct: true, feedback: "CORRETTO. La registrazione è uno strumento fondamentale di gestione, non un semplice elenco di nomi. Permette di pianificare l'assistenza." },{ text: "Solo per avere un numero totale dei presenti da comunicare al Sindaco.", is_correct: false, feedback: "INCOMPLETO. Il numero totale è solo uno dei dati. Le informazioni qualitative (chi sono, di cosa hanno bisogno) sono altrettanto importanti." },{ text: "Per motivi di sicurezza, per sapere chi entra e chi esce dal campo.", is_correct: false, feedback: "INCOMPLETO. La sicurezza è un aspetto, ma lo scopo primario della registrazione è l'assistenza mirata alla persona." }] },
+            { situation_update: "Durante la registrazione, i genitori ti dicono che la loro figlia più piccola è celiaca.", question: "Come gestisci questa segnalazione?", choices: [{ text: "Dico loro che in emergenza bisogna adattarsi e mangiare quello che c'è.", is_correct: false, feedback: "SBAGLIATO E PERICOLOSO. La celiachia è una condizione medica seria. Ignorarla può causare gravi problemi di salute." },{ text: "Annoto la necessità sulla scheda e la comunico immediatamente al responsabile della funzione Logistica/Mensa.", is_correct: true, feedback: "GESTIONE PERFETTA. Hai capito che le necessità sanitarie, anche alimentari, sono una priorità e hai attivato subito il canale corretto." },{ text: "Suggerisco loro di andare a comprare qualcosa di adatto in un supermercato vicino.", is_correct: false, feedback: "SBAGLIATO. Le persone evacuate spesso non hanno soldi o mezzi. L'assistenza deve essere completa e fornita dall'organizzazione." }] },
+            { situation_update: "Arriva una persona anziana in sedia a rotelle.", question: "Dove sistemi la persona con disabilità motoria?", choices: [{ text: "In un'area tranquilla, facilmente accessibile, vicino ai servizi igienici per disabili e lungo una via di fuga sgombra.", is_correct: true, feedback: "SCELTA ECCELLENTE. Hai considerato accessibilità, dignità e sicurezza, i principi guida nell'assistenza a persone con vulnerabilità." },{ text: "In un punto qualsiasi, l'importante è che abbia una brandina come gli altri.", is_correct: false, feedback: "SBAGLIATO. Non hai considerato le sue necessità specifiche, come l'accesso facilitato ai servizi o alle vie di fuga." },{ text: "In un angolo isolato per non essere d'intralcio agli altri.", is_correct: false, feedback: "SBAGLIATO. Isolare le persone vulnerabili è una forma di discriminazione e rende più difficile fornire loro assistenza." }] },
+            { situation_update: "Una famiglia si lamenta perché la loro brandina è vicino all'ingresso e sentono freddo, chiedendoti di essere spostati subito.", question: "Come gestisci la lamentela?", choices: [{ text: "Ascolto, mostro comprensione, fornisco subito una coperta in più e assicuro che verificherò col responsabile la possibilità di una sistemazione migliore.", is_correct: true, feedback: "GESTIONE PERFETTA. Hai applicato la tecnica 'Ascoltare, Comprendere, Agire'. Una soluzione tampone immediata (la coperta) e la presa in carico del problema risolvono il 90% dei conflitti." },{ text: "Rispondo che i posti sono assegnati e non si possono cambiare, e di avere pazienza.", is_correct: false, feedback: "INEFFICACE. Una risposta rigida e burocratica aumenta la frustrazione in persone già stressate e mina il rapporto di fiducia." },{ text: "Ignoro la lamentela perché in quel momento ci sono cose più urgenti da fare.", is_correct: false, feedback: "SBAGLIATO. Le piccole lamentele, se ignorate, possono trasformarsi in grossi problemi, minando il clima di collaborazione nell'area." }] },
+            { situation_update: "Un gruppo di ragazzi gioca a pallone tra le brandine.", question: "Come intervieni?", choices: [{ text: "Li sgrido ad alta voce davanti a tutti e gli sequestro la palla.", is_correct: false, feedback: "CONTROPRODUCENTE. Un approccio aggressivo crea un conflitto e ti fa apparire come un 'nemico', non come un aiuto." },{ text: "Li avvicino con calma, spiego che capisco la loro voglia di giocare e propongo di trovare insieme uno spazio più adatto dove non disturbare.", is_correct: true, feedback: "APPROCCIO EDUCATIVO E COSTRUTTIVO. Hai gestito il problema senza creare un conflitto, ma ponendoti come mediatore e trovando una soluzione positiva." },{ text: "Li lascio fare, almeno si sfogano e non creano altri problemi.", is_correct: false, feedback: "SBAGLIATO. Il gioco incontrollato può causare infortuni (a loro o ad altri) e disturba la quiete di chi ha bisogno di riposare." }] },
+            { situation_update: "Un giornalista con tesserino ti chiede il numero esatto di sfollati e le loro condizioni.", question: "Cosa rispondi?", choices: [{ text: "Gli fornisco tutti i dati che ho, così diamo un'informazione precisa.", is_correct: false, feedback: "SBAGLIATO E VIOLAZIONE DELLA PRIVACY. Non sei autorizzato a comunicare dati sensibili. La comunicazione con la stampa segue canali ufficiali." },{ text: "Lo indirizzo con cortesia al responsabile del campo o all'addetto stampa designato, spiegando che sono le uniche figure autorizzate a rilasciare dichiarazioni.", is_correct: true, feedback: "PROCEDURA CORRETTA. Hai protetto la privacy delle persone assistite e rispettato la catena di comunicazione ufficiale con l'esterno." },{ text: "Gli dico di andarsene perché sta disturbando e qui non può stare.", is_correct: false, feedback: "SBAGLIATO. Creare un rapporto conflittuale con la stampa è sempre controproducente. La cortesia e la fermezza sono le chiavi." }] },
+            { situation_update: "Viene allestita un'area giochi per i bambini. Noti che molti genitori, inizialmente diffidenti, portano lì i loro figli.", question: "Qual è il principale beneficio di questa iniziativa?", choices: [{ text: "Aiuta i bambini a elaborare il trauma attraverso il gioco e permette ai genitori di avere un momento di respiro.", is_correct: true, feedback: "ANALISI CORRETTA. Hai compreso l'importanza del supporto psico-sociale. Un bambino che gioca è un bambino che sta reagendo, e un genitore più tranquillo gestisce meglio l'emergenza." },{ text: "Serve solo a tenere occupati i bambini per non farli disturbare.", is_correct: false, feedback: "RIDUTTIVO. Il gioco in emergenza non è un semplice 'passatempo', ma un vero e proprio strumento di supporto psicologico." },{ text: "È un'attività utile per fare belle foto che mostrano l'efficienza dei soccorsi.", is_correct: false, feedback: "SBAGLIATO. Lo scopo non è mai l'immagine, ma il benessere reale delle persone assistite. L'immagine positiva è una conseguenza, non l'obiettivo." }] },
+            { situation_update: "La convivenza forzata genera tensioni. Due famiglie litigano per il volume di una radiolina.", question: "Come intervieni?", choices: [{ text: "Mi avvicino come mediatore, li faccio parlare uno alla volta in un'area appartata, ascolto le loro ragioni e cerco una soluzione pratica.", is_correct: true, feedback: "OTTIME CAPACITÀ DI MEDIAZIONE. La gestione dei conflitti minori è fondamentale per mantenere la pace in un ambiente affollato e stressato. Il tuo ruolo è disinnescare, non giudicare." },{ text: "Intervengo subito prendendo le parti di chi, secondo me, ha ragione.", is_correct: false, feedback: "SBAGLIATO. Schierarsi ti fa perdere l'imparzialità. Devi essere visto come un aiuto per entrambi, non come un giudice." },{ text: "Li minaccio di cacciarli entrambi se non la smettono subito.", is_correct: false, feedback: "SBAGLIATO. Le minacce creano solo più rabbia e risentimento. Un approccio autoritario va usato solo in casi estremi e da chi ne ha l'autorità." }] },
+            { situation_update: "Rifletti sul tuo ruolo.", question: "Qual è la caratteristica più importante per un volontario in un'area di ricovero?", choices: [{ text: "La capacità organizzativa di gestire le brandine e i materiali.", is_correct: false, feedback: "IMPORTANTE, ma non è la caratteristica chiave. La logistica è uno strumento, non il fine. Puoi essere un ottimo organizzatore ma un pessimo soccorritore se ti manca la componente umana." },{ text: "La capacità di ascoltare, l'empatia e la pazienza nel gestire lo stress e i bisogni di persone che hanno perso tutto.", is_correct: true, feedback: "SINTESI PERFETTA. Hai capito che l'assistenza alla popolazione è prima di tutto un'attività umana, dove le capacità relazionali sono lo strumento più importante." },{ text: "La forza fisica per spostare i materiali pesanti e allestire il campo.", is_correct: false, feedback: "UTILE, ma non è la caratteristica più importante. Le brandine può spostarle chiunque, ma calmare un bambino o ascoltare un anziano richiede competenze specifiche." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

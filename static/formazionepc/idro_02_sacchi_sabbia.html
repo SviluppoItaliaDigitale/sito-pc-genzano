@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Posizionamento Sacchi | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="idrogeologico.html">Rischio Idrogeologico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">⛈️ Posizionamento Sacchi di Sabbia</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="idrogeologico.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei incaricato di proteggere l'ingresso di un edificio pubblico. Hai a disposizione sacchi vuoti e un cumulo di sabbia.", question: "Qual è la prima cosa da fare prima di iniziare a posizionare i sacchi?", choices: [{ text: "Riempire completamente ogni sacco fino all'orlo.", is_correct: false, feedback: "SBAGLIATO. Un sacco troppo pieno è rigido, pesante e non si adatta bene agli altri, creando fessure." },{ text: "Riempire i sacchi a metà o al massimo a due terzi.", is_correct: true, feedback: "AZIONE CORRETTA. Riempire i sacchi correttamente è il segreto per una barriera efficace. Devono rimanere malleabili." },{ text: "Iniziare a posizionare i sacchi vuoti e riempirli sul posto.", is_correct: false, feedback: "INEFFICIENTE. Questa operazione è estremamente lenta e ti farebbe perdere tempo prezioso." }] },
+            { situation_update: "Hai riempito correttamente una buona quantità di sacchi. L'acqua inizia a scorrere lungo la strada.", question: "Come disponi la prima fila di sacchi per creare la base della barriera?", choices: [{ text: "Li appoggio in fila contro il muro dell'edificio.", is_correct: false, feedback: "SBAGLIATO. La barriera non va mai costruita a diretto contatto con il muro, ma a una certa distanza (almeno 1 metro)." },{ text: "Li dispongo in una fila singola, ben allineati.", is_correct: false, feedback: "INCOMPLETO. Una fila singola non ha stabilità. La base deve essere sempre più larga dell'altezza." },{ text: "Li dispongo a distanza dall'ingresso, creando una base larga almeno due sacchi.", is_correct: true, feedback: "BASE PERFETTA. Hai creato una fondazione solida e stabile, pronta per essere sviluppata in altezza." }] },
+            { situation_update: "Hai creato una base solida. Ora devi alzare la barriera.", question: "Come posizioni le file successive?", choices: [{ text: "Continuo a impilare i sacchi esattamente uno sopra l'altro.", is_correct: false, feedback: "SBAGLIATO. Impilare i sacchi a colonna crea dei punti deboli verticali dove l'acqua può infiltrarsi." },{ text: "Li posiziono sfalsati, come se fossero mattoni in un muro, stringendo la struttura verso l'alto a piramide.", is_correct: true, feedback: "TECNICA CORRETTA. La disposizione a 'muratura' sfalsata distribuisce la pressione e sigilla le fughe." },{ text: "Li metto in verticale per guadagnare altezza più in fretta.", is_correct: false, feedback: "SBAGLIATO. I sacchi in verticale sono instabili e non hanno tenuta." }] },
+            { situation_update: "La barriera è quasi completata. Per sigillarla meglio, hai a disposizione un telo di plastica.", question: "Come e dove posizioni il telo?", choices: [{ text: "Lo metto sopra la barriera completata per non farla bagnare.", is_correct: false, feedback: "INUTILE. Il telo sopra non impedisce all'acqua di filtrare dalla base." },{ text: "Lo posiziono sul lato a contatto con l'acqua (lato 'bagnato'), facendolo partire da terra e risalire lungo la barriera.", is_correct: true, feedback: "POSIZIONAMENTO PERFETTO. In questo modo, la pressione dell'acqua spingerà il telo contro la barriera, sigillando ogni fessura." },{ text: "Lo metto sul lato interno (lato 'asciutto') per raccogliere le eventuali perdite.", is_correct: false, feedback: "SBAGLIATO. Il telo va messo all'esterno per fermare l'acqua, non all'interno per raccoglierla." }] },
+            { situation_update: "La barriera è completata. Il COM ti chiede di rimanere a monitorare.", question: "Cosa devi monitorare attentamente sulla barriera?", choices: [{ text: "Eventuali piccoli trafilamenti d'acqua, punti di erosione alla base o rigonfiamenti anomali.", is_correct: true, feedback: "MONITORAGGIO CORRETTO. Questi sono i segnali che indicano un possibile punto debole che potrebbe cedere." },{ text: "Se il colore dei sacchi cambia a causa dell'acqua.", is_correct: false, feedback: "IRRILEVANTE. Devi cercare segni di cedimento strutturale, non cambiamenti estetici." },{ text: "Quante macchine passano sulla strada.", is_correct: false, feedback: "FUORI TEMA. Il tuo compito è monitorare l'efficacia dell'opera di difesa." }] },
+            { situation_update: "L'emergenza rientra e l'acqua si ritira. Devi rimuovere la barriera.", question: "Cosa fai con la sabbia contenuta nei sacchi?", choices: [{ text: "La lascio sul posto, così se serve è già lì.", is_correct: false, feedback: "SBAGLIATO. Abbandonare il materiale sul suolo pubblico è illegale e crea intralcio." },{ text: "La sabbia bagnata potrebbe essere contaminata. I sacchi vanno chiusi e smaltiti come rifiuto speciale secondo le procedure.", is_correct: true, feedback: "PROCEDURA CORRETTA. La sabbia venuta a contatto con l'acqua di un allagamento è considerata rifiuto e va gestita correttamente." },{ text: "La svuoto nel tombino più vicino per fare prima.", is_correct: false, feedback: "SBAGLIATO E DANNOSO. Svuotare la sabbia nelle fognature le intaserebbe, creando un problema peggiore." }] },
+            { situation_update: "Durante la rimozione, un cittadino ti chiede se può prendere un po' di sacchi e sabbia.", question: "Come rispondi alla richiesta?", choices: [{ text: "Certo, si serva pure, tanto a noi non serve più.", is_correct: false, feedback: "SBAGLIATO. Il materiale è di proprietà del Comune o dell'associazione. Non puoi cederlo." },{ text: "Spiego gentilmente che il materiale non è mio e non posso cederlo, e di rivolgersi agli uffici comunali.", is_correct: true, feedback: "RISPOSTA PROFESSIONALE. Hai declinato in modo educato e hai indirizzato il cittadino verso il canale istituzionale corretto." },{ text: "Gli dico di non disturbare perché stiamo lavorando.", is_correct: false, feedback: "POCO PROFESSIONALE. La cortesia è sempre parte del ruolo del volontario." }] },
+            { situation_update: "Hai finito di rimuovere tutto. Torni in sede.", question: "Cosa fai con gli attrezzi usati (pale, guanti, ecc.)?", choices: [{ text: "Li lascio sul mezzo, pronti per la prossima volta.", is_correct: false, feedback: "SBAGLIATO. Il materiale sporco e bagnato si deteriora. Va pulito e riposto correttamente." },{ text: "Pulisco e asciugo tutto il materiale e lo ripongo in magazzino, segnalando eventuali rotture.", is_correct: true, feedback: "PROCEDURA PERFETTA. Il ripristino dell'efficienza dei materiali è un dovere." },{ text: "Li metto in un angolo, ci penserà qualcun altro.", is_correct: false, feedback: "SBAGLIATO. Ogni volontario è responsabile del materiale che usa." }] },
+            { situation_update: "Il coordinatore ti chiede se durante l'intervento sono emerse particolari difficoltà.", question: "Perché questa domanda è importante?", choices: [{ text: "Per raccogliere feedback dal campo (debriefing) per migliorare le procedure future.", is_correct: true, feedback: "ESATTO. Il debriefing post-intervento è uno strumento fondamentale per la crescita dell'organizzazione." },{ text: "Per trovare un colpevole se qualcosa è andato storto.", is_correct: false, feedback: "SBAGLIATO. Lo scopo del debriefing non è mai punitivo, ma sempre costruttivo." },{ text: "È solo una domanda di cortesia, non ha un vero scopo.", is_correct: false, feedback: "SBAGLIATO. In un'organizzazione di emergenza, ogni informazione ha un valore." }] },
+            { situation_update: "L'intervento è concluso e registrato.", question: "Quale principio fondamentale hai applicato costruendo la barriera a piramide?", choices: [{ text: "Il principio di Archimede.", is_correct: false, feedback: "NON CORRETTO. Il principio di Archimede riguarda la spinta dei fluidi." },{ text: "Il principio della massima efficienza, usando meno sacchi possibile.", is_correct: false, feedback: "SBAGLIATO. La priorità non è il risparmio, ma la sicurezza e la tenuta." },{ text: "Il principio della distribuzione del carico, per cui una base larga scarica meglio a terra la pressione.", is_correct: true, feedback: "PRINCIPIO CORRETTO. Una base larga distribuisce le forze su una superficie maggiore, garantendo stabilità." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

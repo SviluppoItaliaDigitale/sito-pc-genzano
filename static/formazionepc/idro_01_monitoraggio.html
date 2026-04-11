@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Monitoraggio Allerta | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="idrogeologico.html">Rischio Idrogeologico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">⛈️ Monitoraggio Punto Critico</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="idrogeologico.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei arrivato sul posto assegnato: un sottopasso a rischio. La pioggia sta aumentando di intensità ma il livello dell'acqua è ancora basso.", question: "Qual è la tua prima azione preventiva?", choices: [{ text: "Posizionare il mezzo in un punto sicuro e rialzato, con buona visibilità, e accendere i lampeggianti per segnalare la tua presenza.", is_correct: true, feedback: "AZIONE CORRETTA. La sicurezza del volontario e la visibilità del presidio sono le priorità assolute prima che l'emergenza si manifesti pienamente." },{ text: "Aspettare in macchina che la situazione peggiori prima di agire.", is_correct: false, feedback: "SBAGLIATO. La prevenzione è fondamentale. Agire prima che la criticità sia massima ti permette di operare con più calma e sicurezza." },{ text: "Scendere e controllare a piedi la griglia di scolo all'interno del sottopasso.", is_correct: false, feedback: "PERICOLOSO. Non bisogna mai entrare in un sottopasso a rischio allagamento, nemmeno se l'acqua è bassa. La situazione può cambiare in pochi secondi." }] },
+            { situation_update: "Dopo pochi minuti, noti che il livello dell'acqua sta salendo rapidamente e alcune auto, ignorando le avvertenze, stanno per impegnare il sottopasso.", question: "Cosa fai per fermare le auto?", choices: [{ text: "Posizionare il mezzo per bloccare fisicamente l'accesso e chiamare subito la Sala Operativa per comunicare la criticità.", is_correct: true, feedback: "AZIONE PERFETTA. Hai dato priorità alla prevenzione, bloccando l'accesso al pericolo. La comunicazione al COM è il passo successivo corretto." },{ text: "Chiamare la Sala Operativa per avvisare, senza però bloccare il transito, sperando che capiscano da soli.", is_correct: false, feedback: "INCOMPLETO. La chiamata è giusta, ma non sufficiente. L'azione preventiva diretta (il blocco) è fondamentale per evitare che il rischio diventi un danno." },{ text: "Faccio cenno agli automobilisti di accelerare per superare il sottopasso prima che si allaghi del tutto.", is_correct: false, feedback: "SBAGLIATO. Questa azione potrebbe indurre gli automobilisti a rimanere intrappolati nell'acqua, creando un'emergenza ancora più grave." }] },
+            { situation_update: "Hai bloccato la strada. Un cittadino furioso scende dall'auto e inizia a inveire contro di te perché 'ha fretta e deve passare'.", question: "Come gestisci il cittadino arrabbiato?", choices: [{ text: "Rispondo a tono e inizio a discutere animatamente con lui per fargli capire che ho ragione.", is_correct: false, feedback: "SBAGLIATO. Discutere non è il tuo ruolo e peggiora solo la situazione. Bisogna sempre mantenere un profilo professionale e calmo." },{ text: "Con calma e fermezza, spiego che la strada è chiusa per un allagamento pericoloso e per la sua sicurezza, senza entrare in polemica.", is_correct: true, feedback: "APPROCCIO PROFESSIONALE. Hai mantenuto la calma, non ti sei lasciato provocare e hai fornito l'informazione corretta. Questo de-escala la situazione." },{ text: "Lo ignoro completamente, così capisce che non deve disturbare.", is_correct: false, feedback: "POCO EFFICACE. Ignorare un cittadino, anche se arrabbiato, può essere percepito come arroganza e peggiorare la sua frustrazione. Una comunicazione calma è sempre la scelta migliore." }] },
+            { situation_update: "Il cittadino, seppur borbottando, torna in auto. Noti che l'acqua ha raggiunto i 30-40 cm e dei detriti stanno ostruendo la griglia di scolo.", question: "Cosa fai riguardo alla griglia ostruita?", choices: [{ text: "Aggiorno il COM sulla nuova criticità (ostruzione della griglia) che sta accelerando l'allagamento, rimanendo in posizione sicura.", is_correct: true, feedback: "COMUNICAZIONE CORRETTA. Hai fornito un aggiornamento importante che permette al COM di valutare l'invio di squadre tecniche, il tutto senza esporti a rischi." },{ text: "Entro nel sottopasso con l'acqua alle ginocchia per liberare la griglia a mano. È importante agire subito.", is_correct: false, feedback: "RISCHIO MORTALE. Entrare in acqua senza sapere la profondità, con correnti e pericoli nascosti è una delle azioni più pericolose in assoluto." },{ text: "Non faccio nulla, non è compito mio. Il mio ordine era solo di monitorare il sottopasso.", is_correct: false, feedback: "SBAGLIATO. Il tuo compito è il monitoraggio ATTIVO. Questo include osservare e riportare ogni evoluzione della situazione alla Sala Operativa." }] },
+            { situation_update: "Il COM ti ringrazia. Arriva la pattuglia della Polizia Locale che avevi richiesto.", question: "Come ti interfacci con la Polizia Locale appena arrivata?", choices: [{ text: "Dico loro che è tutto sotto controllo e che possono andare, per non sprecare risorse.", is_correct: false, feedback: "SBAGLIATO. La gestione della viabilità è un compito di Polizia. Hai chiesto il loro intervento, ora devi collaborare con loro." },{ text: "Faccio loro un breve e preciso passaggio di consegne sulla situazione attuale (strada bloccata, livello acqua, griglia ostruita) e mi metto a loro disposizione.", is_correct: true, feedback: "COLLABORAZIONE PERFETTA. Il raccordo tra enti è fondamentale. Un passaggio di consegne chiaro ed efficiente è segno di grande professionalità." },{ text: "Dico loro 'finalmente siete arrivati' e mi allontano per fare una pausa.", is_correct: false, feedback: "POCO PROFESSIONALE. La collaborazione inizia con un atteggiamento costruttivo. Il tuo compito non è finito finché non ricevi ordini diversi dal COM." }] },
+            { situation_update: "Un residente ti informa che le cantine del palazzo adiacente si stanno allagando.", question: "Cosa fai?", choices: [{ text: "Riferisco immediatamente la nuova informazione al COM e attendo istruzioni specifiche da loro.", is_correct: true, feedback: "PROCEDURA CORRETTA. Non si abbandona mai la propria postazione o si inizia una nuova operazione senza l'autorizzazione del Centro Operativo. Sei parte di un sistema coordinato." },{ text: "Prendo l'iniziativa e vado con la squadra a ispezionare le cantine, visto che è un'emergenza.", is_correct: false, feedback: "SBAGLIATO. Agire in autonomia rompe la catena di comando e controllo. Il COM deve sapere sempre dove sono le sue squadre e cosa stanno facendo." },{ text: "Dico al residente di chiamare i Vigili del Fuoco per conto suo, così sbrighiamo prima.", is_correct: false, feedback: "SBAGLIATO. Tutte le richieste di soccorso devono essere centralizzate e gestite dal sistema di emergenza (COM o Sala Operativa Unica) per evitare sovrapposizioni e confusione." }] },
+            { situation_update: "Il COM ti autorizza a un sopralluogo. Entrando nel palazzo, senti odore di gas provenire dalle cantine allagate.", question: "Qual è la tua azione immediata e prioritaria?", choices: [{ text: "Scendere a vedere da dove viene la perdita per provare a chiuderla.", is_correct: false, feedback: "RISCHIO MORTALE. La presenza di gas in un ambiente chiuso crea un'atmosfera esplosiva. L'intervento spetta esclusivamente ai VVF specializzati (nucleo NBCR)." },{ text: "Far evacuare immediatamente l'edificio, allontanare tutti e comunicare l'allarme 'pericolo di esplosione' al COM.", is_correct: true, feedback: "AZIONE PERFETTA. Di fronte a un pericolo così grave, la priorità assoluta è l'evacuazione e l'allarme immediato per attivare le squadre specialistiche." },{ text: "Aprire tutte le finestre del vano scale per far arieggiare e poi scendere a controllare.", is_correct: false, feedback: "INSUFFICIENTE E PERICOLOSO. Arieggiare non elimina il rischio esplosione e ti fa perdere tempo prezioso che dovresti usare per evacuare e dare l'allarme." }] },
+            { situation_update: "L'edificio è stato evacuato e messo in sicurezza dai VVF. L'emergenza generale rientra. Il COM ti dà l'ordine di tornare in sede.", question: "Cosa non devi assolutamente dimenticare di fare a fine turno?", choices: [{ text: "Fare un post sui social per raccontare il complesso intervento e il pericolo scampato.", is_correct: false, feedback: "ASSOLUTAMENTE NO. Le informazioni operative sono riservate. La comunicazione esterna è gestita solo da personale autorizzato." },{ text: "Compilare la scheda di intervento (report) con orari, luoghi, eventi e personale impiegato.", is_correct: true, feedback: "ESATTO. 'Ciò che non è scritto, non è mai accaduto'. La compilazione dei report è un dovere fondamentale che conclude formalmente l'intervento." },{ text: "Passare a salutare i residenti del palazzo per rassicurarli un'ultima volta.", is_correct: false, feedback: "Un bel gesto, ma non è un obbligo procedurale. La compilazione degli atti ufficiali ha sempre la precedenza a fine servizio." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

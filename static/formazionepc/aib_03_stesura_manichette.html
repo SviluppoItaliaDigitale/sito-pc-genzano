@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Stesura Manichette | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="aib.html">Antincendio Boschivo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🔥 Stesura Manichette in Terreno Scosceso</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="aib.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Durante un incendio, il caposquadra ti ordina di portare una linea d'acqua su un fronte di fuoco attivo su un pendio in salita, partendo dal modulo AIB sulla strada.", question: "Qual è la tecnica corretta per stendere le manichette in salita?", choices: [{ text: "Collegare tutte le manichette a terra e poi trascinare l'intera linea verso l'alto.", is_correct: false, feedback: "SBAGLIATO. Una linea di manichette è pesantissima. Trascinarla in salita è fisicamente quasi impossibile e danneggia l'attrezzatura." },{ text: "Portare le manichette arrotolate in spalla e collegarle una alla volta man mano che si sale.", is_correct: true, feedback: "TECNICA PERFETTA. È il metodo più sicuro ed efficiente, che permette di creare la linea con il minimo sforzo e il massimo controllo." },{ text: "Collegare la prima manichetta, metterla in pressione e farsi 'spingere' dall'acqua.", is_correct: false, feedback: "PERICOLOSO. Una manichetta in pressione è rigida e difficile da manovrare (effetto cobra). È una tecnica da non usare mai." }] },
+            { situation_update: "Arrivi sul punto designato, hai steso la linea e collegato la lancia.", question: "Ora devi chiedere acqua alla radio. Il nominativo del caposquadra con la pompa è 'ALFA 1', il tuo è 'ALFA 2'. Come comunichi?", choices: [{ text: "'Acqua!'", is_correct: false, feedback: "TROPPO SINTETICO. Manca il mittente e il destinatario, creando confusione sul canale radio." },{ text: "'ALFA 1 da ALFA 2, dai pure acqua. Passo.'", is_correct: true, feedback: "COMUNICAZIONE CHIARA E PROCEDURALE. Hai usato la sintassi corretta (destinatario da mittente), il messaggio è breve e la parola 'passo' cede la comunicazione." },{ text: "'Sono pronto, puoi mandare l'acqua quando vuoi.'", is_correct: false, feedback: "NON STANDARD. Le comunicazioni radio in emergenza devono seguire una procedura standard per essere immediatamente comprensibili da tutti." }] },
+            { situation_update: "L'acqua arriva alla lancia. Devi effettuare un attacco diretto su un cespuglio in fiamme.", question: "Quale getto della lancia usi?", choices: [{ text: "Il getto pieno e diretto (a spillo), per la massima potenza.", is_correct: false, feedback: "SBAGLIATO. Il getto pieno spreca acqua e tende a 'sfondare' il combustibile, spargendo le braci e propagando il fuoco." },{ text: "Il getto frazionato (a cono o a pioggia), per raffreddare un'area più ampia.", is_correct: true, feedback: "USO CORRETTO. Il getto frazionato massimizza la superficie di raffreddamento dell'acqua, abbattendo la fiamma e soffocando il fuoco con il vapore prodotto." },{ text: "La chiudo e la apro velocemente per creare piccoli spruzzi intermittenti.", is_correct: false, feedback: "INEFFICACE. Questa tecnica non ha potere di spegnimento e provoca colpi d'ariete dannosi per la linea." }] },
+            { situation_update: "Mentre operi, una pietra smossa da un collega più in alto rotola velocemente nella tua direzione.", question: "Qual è il corretto allarme verbale da gridare per avvisare i colleghi più in basso?", choices: [{ text: "'ATTENZIONE!'", is_correct: false, feedback: "TROPPO GENERICO. 'Attenzione' non specifica la natura del pericolo imminente." },{ text: "'SASSO!!!' o 'PIETRA!!!', gridato forte e ripetutamente.", is_correct: true, feedback: "ALLARME CORRETTO. In ambiente montano/scosceso, 'sasso' è la parola d'ordine universale e immediatamente comprensibile per questo tipo di pericolo." },{ text: "'OCCHIOOO, STA CADENDO ROBA!'", is_correct: false, feedback: "POCO PROFESSIONALE. Gli allarmi devono essere codificati, brevi e chiari, non colloquiali." }] },
+            { situation_update: "Il fronte di fiamma si abbassa e il caposquadra ti ordina di avanzare.", question: "Come ti muovi sul pendio con la manichetta in pressione?", choices: [{ text: "Avanzo con cautela, guardando dove metto i piedi e assicurandomi che la manichetta non si incastri in rocce o radici.", is_correct: true, feedback: "MOVIMENTO SICURO E CONTROLLATO. La gestione della linea ('il dragone') è tanto importante quanto la gestione della lancia per evitare interruzioni d'acqua." },{ text: "La trascino dietro di me, guardando solo il fuoco.", is_correct: false, feedback: "PERICOLOSO. Non guardare dove cammini su un terreno impervio è la prima causa di infortuni. Inoltre, la manichetta si incastrerà sicuramente." },{ text: "Corro per raggiungere il fuoco più in fretta possibile.", is_correct: false, feedback: "SBAGLIATO. Correre in queste condizioni è pericolosissimo. La stabilità e un passo sicuro vengono prima della velocità." }] },
+            { situation_update: "Arrivi su un tratto di terreno coperto di cenere calda e braci.", question: "Come attraversi in sicurezza quest'area?", choices: [{ text: "Ci cammino sopra velocemente, tanto gli scarponi sono ignifughi.", is_correct: false, feedback: "SBAGLIATO. Gli scarponi proteggono, ma il calore intenso può danneggiarli e trasferirsi ai piedi. Inoltre, sotto la cenere possono nascondersi buche o tronchi incandescenti." },{ text: "Bagno il terreno davanti a me con la lancia per raffreddarlo prima di appoggiare i piedi.", is_correct: true, feedback: "TECNICA CORRETTA. 'Spegnere la strada' è una procedura standard che garantisce di camminare su un terreno sicuro e raffreddato." },{ text: "Salto da un punto all'altro per toccare il terreno il meno possibile.", is_correct: false, feedback: "PERICOLOSO E INEFFICACE. Saltare su un terreno sconnesso e instabile aumenta a dismisura il rischio di cadute e infortuni." }] },
+            { situation_update: "Un collega vicino a te sembra affaticato, respira a fatica e si appoggia a un albero.", question: "Cosa fai?", choices: [{ text: "Lo ignoro, deve imparare a gestire la fatica da solo.", is_correct: false, feedback: "SBAGLIATO. Ignorare un compagno in difficoltà è contro ogni principio di squadra e sicurezza. Potrebbe essere un colpo di calore, un problema serio." },{ text: "Lo segnalo immediatamente al caposquadra via radio, indicando la mia posizione e la sua condizione.", is_correct: true, feedback: "OTTIMA GESTIONE. La sicurezza del compagno è la tua sicurezza. Il caposquadra è l'unico che può decidere come gestire la situazione (pausa, sostituzione, soccorso)." },{ text: "Gli urlo di darsi una mossa e di non rallentare la squadra.", is_correct: false, feedback: "SBAGLIATO E DANNOSO. Un simile comportamento è non professionale, crea un clima negativo e ignora un potenziale problema sanitario grave." }] },
+            { situation_update: "Arretrando per soccorrere il collega, devi chiudere la lancia.", question: "Qual è il modo corretto per farlo?", choices: [{ text: "Chiuderla lentamente e gradualmente.", is_correct: true, feedback: "CORRETTO. Chiudere una lancia di scatto provoca un 'colpo d'ariete', un'onda di pressione che può danneggiare la pompa o far scoppiare le manichette." },{ text: "Chiuderla di scatto per fare prima.", is_correct: false, feedback: "SBAGLIATO E PERICOLOSO. Il colpo d'ariete è un fenomeno fisico violento. Danneggiare la linea d'acqua in un incendio è un errore gravissimo." },{ text: "Lasciarla cadere a terra, si chiuderà da sola con la pressione.", is_correct: false, feedback: "SBAGLIATO. Lasciare una lancia incustodita è pericoloso, continuerà a sprecare acqua e potrebbe muoversi in modo incontrollato." }] },
+            { situation_update: "La riserva d'acqua del modulo sta per finire.", question: "Qual è la comunicazione corretta da fare?", choices: [{ text: "Aspetto che finisca del tutto prima di dirlo, per non disturbare.", is_correct: false, feedback: "SBAGLIATO. La logistica va pianificata in anticipo. Comunicare all'ultimo momento significa lasciare il fronte scoperto senz'acqua." },{ text: "Comunico al caposquadra: 'ALFA 1 da ALFA 2, informo che siamo quasi a secco. A disposizione per rientro per rifornimento. Passo.'", is_correct: true, feedback: "COMUNICAZIONE PREVENTIVA PERFETTA. Hai informato il responsabile con anticipo, permettendogli di pianificare la logistica (es. una staffetta tra mezzi) senza interrompere le operazioni." },{ text: "Uso l'acqua rimasta con parsimonia, cercando di farla durare il più possibile.", is_correct: false, feedback: "INCOMPLETO. Risparmiare acqua è giusto, ma non comunicare il livello basso è un errore. Il caposquadra deve sapere quante risorse ha a disposizione." }] },
+            { situation_update: "A fine intervento, riavvolgendo le manichette, ti accorgi che una ha una 'bruciacchiatura'.", question: "Cosa fai?", choices: [{ text: "La riavvolgo normalmente, sperando che nessuno se ne accorga.", is_correct: false, feedback: "SBAGLIATO E IRRESPONSABILE. Una manichetta danneggiata può scoppiare durante il prossimo intervento, ferendo chi la usa." },{ text: "La separo dalle altre, la etichetto come 'DANNEGGIATA' e lo segnalo al responsabile dei materiali in sede.", is_correct: true, feedback: "GESTIONE IMPECCABILE. Hai garantito la sicurezza futura della squadra, impedendo che un'attrezzatura difettosa torni in servizio." },{ text: "La butto via nel bosco per non avere problemi e non dover compilare moduli.", is_correct: false, feedback: "SBAGLIATO. Abbandonare rifiuti è un reato e un danno all'ambiente e all'associazione." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

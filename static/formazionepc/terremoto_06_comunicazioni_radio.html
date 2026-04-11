@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Comunicazioni Radio | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="terremoto.html">Rischio Sismico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🌎 Gestione Comunicazioni Radio</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="terremoto.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei in servizio radio presso il COC. Il traffico sulla maglia radio è intenso. Una squadra (SQUADRA 3) chiama concitata: 'COC da SQUADRA 3, emergenza, serve subito un'ambulanza in Via Appia, c'è un ferito grave!'", question: "Qual è la tua prima risposta?", choices: [{ text: "'Ricevuto Squadra 3, attivo subito l'ambulanza.'", is_correct: false, feedback: "INCOMPLETO. 'Via Appia' è troppo generico. Inviare un'ambulanza senza una posizione precisa è inutile e fa perdere tempo vitale." },{ text: "'COC riceve SQUADRA 3. Confermate posizione esatta, numero civico o riferimento. Specificate natura infortunio. Passo.'", is_correct: true, feedback: "RISPOSTA PERFETTA. Hai mantenuto la calma e hai richiesto le informazioni essenziali (posizione precisa, natura evento) necessarie per un invio mirato dei soccorsi." },{ text: "'Squadra 3 state calmi. Ci sono altre priorità, attendete.'", is_correct: false, feedback: "SBAGLIATO. Non puoi mai giudicare la priorità di un'altra squadra senza dati. La tua funzione è raccogliere informazioni, non decidere le priorità operative." }] },
+            { situation_update: "Squadra 3 risponde: 'Confermo, Via Appia Nuova 123, ferita alla testa da caduta calcinacci, persona cosciente'.", question: "Cosa fai ORA?", choices: [{ text: "Contatto immediatamente il 118 (o la Funzione Sanità) comunicando: 'Richiesta ambulanza per trauma cranico da crollo in Via Appia Nuova 123'.", is_correct: true, feedback: "ATTIVAZIONE CORRETTA. Hai inoltrato la richiesta all'ente competente usando un linguaggio chiaro, preciso e operativo." },{ text: "Dico a Squadra 3 via radio di iniziare le manovre di primo soccorso, descrivendogliele.", is_correct: false, feedback: "SBAGLIATO. Non si danno mai istruzioni mediche via radio. Il tuo compito è attivare il soccorso qualificato, non improvvisarti medico." },{ text: "Prendo nota e aspetto che si liberi una linea telefonica per non intasare le linee.", is_correct: false, feedback: "SBAGLIATO. Una richiesta di soccorso sanitario per trauma cranico è una priorità assoluta e richiede un'attivazione immediata." }] },
+            { situation_update: "Dopo aver allertato i soccorsi sanitari.", question: "Quale comunicazione fai a Squadra 3?", choices: [{ text: "Nessuna, ormai sanno che ho ricevuto e non intaso la radio.", is_correct: false, feedback: "SBAGLIATO. La squadra sul campo è in attesa e sotto stress. Lasciarla senza un feedback è un errore. Il cerchio della comunicazione va sempre chiuso." },{ text: "'COC a Squadra 3: ricevuto, soccorso sanitario attivato. Mantenete la posizione e tenete libero un accesso per l'ambulanza. Passo.'", is_correct: true, feedback: "COMUNICAZIONE PERFETTA. Hai dato un feedback, confermando la presa in carico, e hai assegnato un compito operativo utile (tenere libero l'accesso)." },{ text: "'Squadra 3, sta arrivando l'ambulanza, speriamo facciano in fretta.'", is_correct: false, feedback: "NON PROFESSIONALE. Le comunicazioni radio non devono contenere opinioni o commenti personali, ma solo informazioni operative chiare e concise." }] },
+            { situation_update: "Il canale radio è affollato. Devi fare una comunicazione non urgente (richiesta di bottigliette d'acqua per una squadra).", question: "Come ti comporti?", choices: [{ text: "Attendo una pausa, chiamo per stabilire il contatto ('SQUADRA 5 da COC, passo') e solo dopo la loro risposta inoltro il messaggio.", is_correct: true, feedback: "DISCIPLINA RADIO IMPECCABILE. Hai rispettato le priorità e seguito la procedura standard per una comunicazione non urgente, mantenendo il canale libero per le emergenze." },{ text: "Interrompo gli altri. Anche se non è urgente, è pur sempre una comunicazione di servizio.", is_correct: false, feedback: "SBAGLIATO. La regola fondamentale è non interrompere mai una comunicazione in corso, a meno che la tua non sia un'emergenza di priorità superiore." },{ text: "Mando un messaggio su WhatsApp al caposquadra, così non disturbo la radio.", is_correct: false, feedback: "SBAGLIATO. Le comunicazioni operative devono essere tracciate e avvenire sui canali ufficiali (la radio) per garantire che tutti siano informati." }] },
+            { situation_update: "Una comunicazione arriva debole e disturbata: '...da Squadra 7... pericolo... crollo parziale... via Mazzini...'. Non sei sicuro del nome della via.", question: "Cosa fai?", choices: [{ text: "Faccio finta di aver capito per non far perdere tempo alla squadra.", is_correct: false, feedback: "PERICOLOSO. Agire su un'informazione incerta può portare a inviare soccorsi nel posto sbagliato, con conseguenze tragiche." },{ text: "Rispondo: 'COC a Squadra 7, messaggio non compreso. Ripetete lentamente l'indirizzo usando l'alfabeto fonetico. Passo.'", is_correct: true, feedback: "AZIONE CORRETTA. Chiedere di ripetere e suggerire l'uso dell'alfabeto fonetico (Alfa, Bravo...) è la procedura standard per garantire la comprensione di informazioni vitali." },{ text: "Ignoro la chiamata, se è importante richiameranno con una radio migliore.", is_correct: false, feedback: "SBAGLIATO. Potrebbe essere la loro unica possibilità di comunicare un pericolo. È tuo dovere fare ogni sforzo per comprendere il messaggio." }] },
+            { situation_update: "Devi comunicare a tutte le squadre che è prevista una forte replica a breve (comunicazione ufficiale del Dipartimento).", question: "Quale termine usi per una comunicazione così importante e generalizzata?", choices: [{ text: "Faccio una chiamata circolare: 'Attenzione a tutte le unità da COC. Comunicazione di sicurezza: prevista a breve replica sismica. Mettetevi in sicurezza. Passo.'", is_correct: true, feedback: "PROCEDURA CORRETTA. Hai usato la chiamata 'circolare' per raggiungere tutti contemporaneamente e hai trasmesso un messaggio di sicurezza chiaro, conciso e autorevole." },{ text: "Chiamo le squadre una per una per assicurarmi che tutti ricevano.", is_correct: false, feedback: "TROPPO LENTO. In caso di un allarme imminente, la velocità è tutto. La chiamata circolare è lo strumento più rapido." },{ text: "Dico 'Ragazzi, attenti che sta per tremare di nuovo forte!'.", is_correct: false, feedback: "NON PROFESSIONALE. Il linguaggio deve essere sempre operativo e mai colloquiale o allarmistico." }] },
+            { situation_update: "Senti due squadre che chiacchierano tra loro sulla radio di argomenti non di servizio, occupando il canale.", question: "Qual è il tuo ruolo?", choices: [{ text: "Li lascio fare, così si tengono compagnia e il morale alto.", is_correct: false, feedback: "SBAGLIATO. Il canale radio di emergenza non è una chat. Deve essere lasciato libero per comunicazioni operative. Potrebbero bloccare una chiamata di soccorso." },{ text: "Intervengo con fermezza ma con cortesia: 'Interrompo per disciplina radio. Mantenere il canale libero per comunicazioni di servizio. Passo.'", is_correct: true, feedback: "AZIONE CORRETTA. Il responsabile della sala radio ha il dovere di garantire la disciplina sul canale. Lo hai fatto in modo autorevole e professionale." },{ text: "Li sgrido via radio dicendo che sono degli incompetenti e di smetterla.", is_correct: false, feedback: "SBAGLIATO. Le reprimende personali non si fanno mai via radio. Inoltre, un tono aggressivo crea solo conflitto e risentimento." }] },
+            { situation_update: "Il Sindaco entra in sala radio e ti chiede di passargli il microfono per parlare direttamente con una squadra.", question: "Come ti comporti?", choices: [{ text: "Spiego gentilmente che, per procedura, le comunicazioni operative passano sempre attraverso l'operatore per evitare confusione e che sarò felice di inoltrare il suo messaggio.", is_correct: true, feedback: "DECISIONE CORRETTA E DIPLOMATICA. Hai protetto l'integrità del canale radio e rispettato la catena di comando, senza creare uno scontro con la massima Autorità di Protezione Civile." },{ text: "Glielo passo immediatamente, è il Sindaco e può fare ciò che vuole.", is_correct: false, feedback: "SBAGLIATO. Persone non addestrate all'uso della radio possono creare enorme confusione, usare un linguaggio non standard e violare le procedure." },{ text: "Gli dico di no perché non è autorizzato e non sa come si fa.", is_correct: false, feedback: "SCORTESE E CONTRAPproducente. Anche se il concetto è giusto, il modo è sbagliato. Bisogna sempre essere diplomatici con le autorità." }] },
+            { situation_update: "L'elettricità al COC salta. Il gruppo elettrogeno parte ma la tua radio principale è fuori uso.", question: "Cosa fai?", choices: [{ text: "Comunico subito al responsabile della sala il problema e prendo la radio portatile di scorta per ristabilire un contatto sulla maglia radio alternativa.", is_correct: true, feedback: "GESTIONE DELL'IMPREVISTO PERFETTA. Hai identificato il problema e hai subito applicato la procedura di backup, garantendo la continuità delle comunicazioni." },{ text: "Vado in panico e inizio a urlare che siamo isolati e non possiamo più comunicare.", is_correct: false, feedback: "SBAGLIATO. Il panico è contagioso. Un operatore radio deve essere l'emblema della calma e del problem-solving." },{ text: "Aspetto che i tecnici sistemino la radio principale, tanto le squadre sanno cosa fare.", is_correct: false, feedback: "SBAGLIATO. Non puoi mai dare per scontato che le squadre non abbiano bisogno di te. La continuità radio va ripristinata immediatamente con ogni mezzo." }] },
+            { situation_update: "Rifletti sul tuo ruolo.", question: "Qual è la qualità più importante per un operatore radio in emergenza?", choices: [{ text: "La capacità di rimanere calmo sotto pressione, essere preciso, sintetico e seguire le procedure standard senza eccezioni.", is_correct: true, feedback: "SINTESI PERFETTA. Hai capito che l'operatore radio è il 'sistema nervoso' del soccorso. Calma, precisione e disciplina sono le qualità che salvano vite." },{ text: "Avere una voce forte e potente per farsi sentire da tutti.", is_correct: false, feedback: "SBAGLIATO. Non serve una voce forte, serve una dizione chiara e un linguaggio standard. La potenza la dà l'apparato, non i polmoni." },{ text: "Conoscere a memoria i nomi di tutti i volontari.", is_correct: false, feedback: "UTILE, ma non essenziale. La cosa fondamentale è usare correttamente i nominativi di chiamata ufficiali ('Squadra 3', 'Alfa 1', ecc.)." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

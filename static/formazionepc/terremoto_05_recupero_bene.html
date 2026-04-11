@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Recupero Bene | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="terremoto.html">Rischio Sismico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🌎 Recupero Bene Essenziale in Zona Rossa</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="terremoto.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei in servizio di presidio a un varco della 'zona rossa'. Un cittadino agitato ti chiede di entrare per recuperare dei farmaci salvavita per sua madre.", question: "Qual è la tua risposta iniziale?", choices: [{ text: "Visto che si tratta di farmaci salvavita, lo accompagni velocemente dentro e fuori.", is_correct: false, feedback: "SBAGLIATO E ILLEGALE. Entrare in una zona interdetta è una violazione. Non hai l'autorità né l'addestramento per farlo." },{ text: "Comunichi la richiesta al tuo caposquadra o al COM e attendi l'arrivo dei Vigili del Fuoco, gli unici autorizzati a entrare per il recupero.", is_correct: true, feedback: "PROCEDURA PERFETTA. Hai seguito la procedura: hai fermato il cittadino, compreso il problema e attivato la catena di comando per l'ente corretto." },{ text: "Gli neghi l'accesso in modo assoluto, spiegando che la zona rossa è interdetta a tutti senza eccezioni.", is_correct: false, feedback: "INCOMPLETO. È corretto negare l'accesso, ma il tuo compito non finisce qui. Ignorare una richiesta per un farmaco salvavita non è la soluzione." }] },
+            { situation_update: "Mentre attendete i VVF, il cittadino diventa sempre più ansioso e insiste: 'Faccio io, è un attimo, la casa è solida!'", question: "Come gestisci la sua ansia?", choices: [{ text: "Lo allontano con fermezza e gli dico di non disturbare le operazioni.", is_correct: false, feedback: "SBAGLIATO. Un approccio aggressivo peggiora solo la situazione e aumenta la sua frustrazione." },{ text: "Lo tengo impegnato in una conversazione, lo rassicuro sul fatto che la procedura è attivata e gli chiedo dettagli utili per i VVF (es. dove sono i farmaci).", is_correct: true, feedback: "GESTIONE OTTIMALE. Hai applicato le tecniche di supporto psicologico (PFA), mantenendolo calmo e raccogliendo informazioni utili per velocizzare il recupero." },{ text: "Lo ignoro, prima o poi si calmerà da solo.", is_correct: false, feedback: "PERICOLOSO. Una persona in ansia potrebbe compiere gesti avventati, come tentare di forzare il blocco. Va sempre tenuto sotto controllo." }] },
+            { situation_update: "Arriva la squadra dei Vigili del Fuoco.", question: "Qual è il tuo ruolo al loro arrivo?", choices: [{ text: "Li lascio passare e torno al mio presidio, il mio compito è finito.", is_correct: false, feedback: "INCOMPLETO. Sei la persona che ha tutte le informazioni. Un passaggio di consegne è fondamentale." },{ text: "Fornisco al caposquadra VVF un briefing rapido e preciso: motivo della richiesta, generalità del cittadino e posizione esatta dei farmaci nell'abitazione.", is_correct: true, feedback: "COLLABORAZIONE PERFETTA. Hai fatto da 'ponte' informativo tra il cittadino e la squadra tecnica, facendo guadagnare tempo prezioso e aumentando la sicurezza." },{ text: "Chiedo di poter entrare con loro per dare una mano.", is_correct: false, feedback: "SBAGLIATO. L'accesso in zona rossa per queste operazioni è riservato esclusivamente al personale VVF specializzato." }] },
+            { situation_update: "I VVF entrano nell'edificio per il recupero.", question: "Cosa fai durante la loro operazione?", choices: [{ text: "Continuo a presidiare il varco, tenendo il cittadino al sicuro con me e mantenendo il contatto radio per ogni evenienza.", is_correct: true, feedback: "COMPITO ESEGUITO. Il tuo ruolo di presidio e di assistenza al cittadino non si interrompe finché l'operazione non è conclusa e tutti sono al sicuro." },{ text: "Vado a vedere da vicino come operano i VVF per imparare.", is_correct: false, feedback: "SBAGLIATO. Avvicinarsi all'edificio pericolante è un rischio inutile. Devi rimanere nella tua zona di sicurezza." },{ text: "Mi allontano per fare un giro di ispezione, tanto ora ci sono loro.", is_correct: false, feedback: "SBAGLIATO. Non si abbandona mai un presidio, specialmente quando c'è un civile affidato alla tua assistenza." }] },
+            { situation_update: "I VVF escono con i farmaci e li consegnano. Il cittadino, sollevato, ti ringrazia e fa per andarsene.", question: "Cosa devi fare prima che si allontani?", choices: [{ text: "Nulla, lo saluto e lo lascio andare.", is_correct: false, feedback: "INCOMPLETO. L'operazione va tracciata. Serve una registrazione formale di quanto accaduto." },{ text: "Lo identifico formalmente (se non già fatto) e comunico al COM l'avvenuta conclusione dell'intervento con esito positivo.", is_correct: true, feedback: "PROCEDURA CORRETTA. La chiusura della comunicazione al COM è fondamentale per informare che l'emergenza specifica è risolta e per la registrazione degli atti." },{ text: "Gli chiedo una firma su un foglio per 'scarico di responsabilità'.", is_correct: false, feedback: "SBAGLIATO. Non hai l'autorità né la competenza per redigere o far firmare documenti legali di questo tipo." }] },
+            { situation_update: "Poco dopo, arriva un'altra persona che ti dice: 'Devo entrare solo per prendere il mio portafoglio, l'ho lasciato sul tavolo'.", question: "Come ti comporti?", choices: [{ text: "Visto che non è un bene salvavita, nego l'accesso e spiego che per i beni non essenziali verranno organizzati recuperi programmati in futuro.", is_correct: true, feedback: "RISPOSTA CORRETTA. Hai applicato correttamente il protocollo, distinguendo tra un bene essenziale/salvavita e un bene normale." },{ text: "Attivo di nuovo i Vigili del Fuoco, una richiesta è una richiesta.", is_correct: false, feedback: "SBAGLIATO. Attivare i VVF per un bene non essenziale è uno spreco di risorse preziose che potrebbero servire per emergenze reali." },{ text: "Gli dico di aspettare che i VVF siano più liberi e di chiedere a loro direttamente.", is_correct: false, feedback: "SBAGLIATO. Non devi 'scaricare' il problema su altri. Il primo filtro e la corretta informazione al cittadino sono un tuo compito." }] },
+            { situation_update: "Il cittadino del portafoglio insiste e diventa polemico: 'Ma come, prima avete fatto entrare quello dei farmaci e a me no? È un'ingiustizia!'", question: "Qual è la spiegazione corretta da fornire?", choices: [{ text: "Spiego con calma la differenza fondamentale tra un bene 'salvavita' (come un farmaco) e un bene 'personale', e che i protocolli di emergenza danno priorità assoluta solo al primo.", is_correct: true, feedback: "SPIEGAZIONE PERFETTA. Hai comunicato in modo chiaro, calmo e trasparente, facendo capire la logica operativa dietro le decisioni e prevenendo polemiche." },{ text: "'Quello era un caso diverso, non si impicci.'", is_correct: false, feedback: "SBAGLIATO. Una risposta arrogante e non trasparente alimenta solo la rabbia e la sfiducia dei cittadini verso i soccorritori." },{ text: "'Ha ragione, è un'ingiustizia, ma questi sono gli ordini.'", is_correct: false, feedback: "SBAGLIATO. Concordare con la sua polemica mina l'autorevolezza delle procedure e delle istituzioni che rappresenti." }] },
+            { situation_update: "Il tuo turno sta per finire e sta arrivando la squadra per il cambio.", question: "Cosa fai prima di lasciare il presidio?", choices: [{ text: "Appena vedo arrivare i colleghi, li saluto e me ne vado.", is_correct: false, feedback: "SBAGLIATO. Un presidio non va mai lasciato scoperto, nemmeno per un secondo. Il cambio deve essere coordinato." },{ text: "Attendo l'arrivo del nuovo caposquadra, gli faccio un passaggio di consegne dettagliato su tutti gli eventi accaduti e le criticità della zona, e lascio il presidio solo quando lui è pronto.", is_correct: true, feedback: "CAMBIO IMPECCABILE. Il passaggio di consegne è un momento cruciale per garantire la continuità operativa e la sicurezza." },{ text: "Chiamo il mio sostituto al telefono e gli spiego tutto mentre vado via.", is_correct: false, feedback: "RISCHIOSO. Le comunicazioni telefoniche possono interrompersi. Il passaggio di consegne va fatto di persona, sul posto." }] },
+            { situation_update: "Durante il passaggio di consegne, informi il nuovo caposquadra che un cornicione su un palazzo vicino sembra pericolante.", question: "Perché questa informazione è vitale?", choices: [{ text: "Perché è un pericolo latente che potrebbe attivarsi con una nuova scossa, e la nuova squadra deve esserne a conoscenza per la propria sicurezza.", is_correct: true, feedback: "CORRETTO. La mappatura e la comunicazione dei pericoli residui è una delle attività più importanti per garantire la sicurezza degli operatori." },{ text: "Perché così possono chiamare i muratori per ripararlo.", is_correct: false, feedback: "IMPRECISO. La riparazione avverrà molto dopo. Lo scopo immediato della segnalazione è la sicurezza dei soccorritori e dei cittadini." },{ text: "Per dimostrare che sei stato attento e hai fatto un buon lavoro.", is_correct: false, feedback: "SBAGLIATO. Le comunicazioni operative non servono a mettersi in mostra, ma a garantire la sicurezza e l'efficacia delle operazioni." }] },
+            { situation_update: "Rifletti sull'intervento.", question: "Qual è il concetto chiave che definisce una 'zona rossa'?", choices: [{ text: "Un'area dove le case sono tutte crollate.", is_correct: false, feedback: "INCOMPLETO. Possono esserci anche case intatte in una zona rossa, se ad esempio le vie di accesso sono pericolose." },{ text: "Un perimetro di sicurezza, interdetto a tutti tranne che ai soccorritori autorizzati, definito da un'ordinanza per proteggere la popolazione da pericoli residui.", is_correct: true, feedback: "DEFINIZIONE PERFETTA. Hai colto l'aspetto fondamentale: non è solo una zona di crolli, ma un'area interdetta per motivi di sicurezza pubblica." },{ text: "Un'area dove i volontari di PC non possono entrare.", is_correct: false, feedback: "IMPRECISO. I volontari possono entrare se autorizzati e per compiti specifici (es. supporto ai VVF), ma mai per iniziative personali." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

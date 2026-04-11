@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Supporto Anziani | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="terremoto.html">Rischio Sismico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🌎 Supporto a Persona Anziana Isolata</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="terremoto.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Dopo un sisma, il COM ti invia a verificare le condizioni di un'anziana che vive sola. Bussando, risponde da dentro spaventata: 'Sto bene, ma non apro a nessuno! Andatevene!'", question: "Qual è il tuo approccio iniziale?", choices: [{ text: "Insistere con forza, dicendo che è un ordine.", is_correct: false, feedback: "SBAGLIATO. Un approccio autoritario aumenterà solo la sua paura e diffidenza. L'obiettivo è guadagnare la sua fiducia." },{ text: "Mantenere la calma, parlarle attraverso la porta con tono rassicurante, presentarsi e chiedere se ha bisogno di qualcosa per stabilire un contatto.", is_correct: true, feedback: "APPROCCIO PERFETTO. L'empatia e la pazienza sono gli strumenti più importanti per gestire lo shock e la paura." },{ text: "Forzare la porta per entrare e verificare di persona.", is_correct: false, feedback: "SBAGLIATO E ILLEGALE. Forzare un accesso è un compito esclusivo dei VVF in caso di conclamato pericolo di vita." }] },
+            { situation_update: "Dopo qualche minuto, la signora apre la porta con la catenella inserita.", question: "Ora che la vedi, cosa fai?", choices: [{ text: "Metto subito un piede nella porta per non farla richiudere.", is_correct: false, feedback: "SBAGLIATO. È un gesto aggressivo che distruggerebbe la poca fiducia che hai costruito. Rispetta il suo spazio." },{ text: "Le sorrido, mi tengo a distanza, e le chiedo di nuovo con calma se ha bisogno di qualcosa, come un bicchiere d'acqua.", is_correct: true, feedback: "OTTIMO. Rispettare il suo spazio e la sua paura è fondamentale. Un gesto semplice come offrire acqua può rompere il ghiaccio." },{ text: "Le intimo di togliere la catenella perché dobbiamo controllare la casa.", is_correct: false, feedback: "SBAGLIATO. Un tono autoritario la farà richiudere immediatamente. La pazienza è la tua migliore alleata." }] },
+            { situation_update: "La signora si fida, toglie la catenella e ti fa entrare. Continua a ripetere che sta bene.", question: "Una volta dentro, qual è la prima cosa da verificare, al di là di quello che dice?", choices: [{ text: "Le sue condizioni fisiche evidenti (ferite, respiro) e lo stato dell'ambiente (rischi imminenti come odore di gas, oggetti in bilico).", is_correct: true, feedback: "VALUTAZIONE CORRETTA. La sicurezza della scena e le condizioni palesi della persona vengono prima di tutto. Devi essere i suoi occhi." },{ text: "Se la televisione funziona, per tenerla informata.", is_correct: false, feedback: "IRRILEVANTE. Le notizie in questa fase potrebbero solo aumentare la sua ansia. La sua sicurezza è la priorità." },{ text: "Se la casa è in ordine o in disordine.", is_correct: false, feedback: "SBAGLIATO. Lo stato di ordine non è un indicatore affidabile. Concentrati sui pericoli reali e immediati." }] },
+            { situation_update: "Noti che è illesa, ma c'è un forte odore di gas vicino alla cucina.", question: "Qual è la tua azione prioritaria?", choices: [{ text: "Far evacuare subito la signora, chiudere il rubinetto principale del gas (se accessibile e sicuro), aprire le finestre e segnalare l'emergenza al COM/VVF.", is_correct: true, feedback: "HAI GESTITO UN'EMERGENZA NELL'EMERGENZA. Hai seguito la sequenza corretta: sicurezza delle persone, messa in sicurezza della fonte di pericolo, allarme." },{ text: "Chiedere alla signora se ha lasciato il gas aperto prima di fare qualsiasi cosa.", is_correct: false, feedback: "SBAGLIATO. Perde tempo prezioso. Una persona anziana e sotto shock potrebbe non ricordare o non sapere. Devi agire." },{ text: "Accendere e spegnere la luce per vedere se c'è una scintilla.", is_correct: false, feedback: "ASSOLUTAMENTE NO. Questa azione potrebbe innescare un'esplosione. Non usare mai interruttori elettrici in presenza di odore di gas." }] },
+            { situation_update: "Siete fuori dall'appartamento, al sicuro. La signora ora piange e dice 'Voglio mio figlio!'.", question: "Come rispondi al suo bisogno affettivo?", choices: [{ text: "'Signora, ora non è il momento, abbiamo cose più importanti da fare.'", is_correct: false, feedback: "SBAGLIATO. Un bisogno affettivo è un bisogno primario in emergenza. Ignorarlo significa non dare un soccorso completo." },{ text: "'Certo. Mi dia il suo numero, proviamo a chiamarlo subito con il nostro telefono di servizio.'", is_correct: true, feedback: "AZIONE PERFETTA. Riunire le famiglie è uno dei compiti più importanti della Protezione Civile. Hai risposto a un bisogno reale." },{ text: "'Non si preoccupi, vedrà che arriverà.'", is_correct: false, feedback: "INSUFFICIENTE. È una rassicurazione vaga. Un'azione concreta (la telefonata) è molto più efficace." }] },
+            { situation_update: "Riesci a contattare il figlio che è al centro d'accoglienza. Devi accompagnare la signora lì, ma lei non vuole lasciare il pianerottolo.", question: "Come la convinci?", choices: [{ text: "Le spiego con pazienza che l'area di attesa è il posto più sicuro, dove troverà assistenza e, soprattutto, dove potrà riabbracciare suo figlio.", is_correct: true, feedback: "PERSUASIONE CORRETTA. Hai usato le motivazioni giuste: sicurezza, assistenza e, la più importante di tutte, il ricongiungimento familiare." },{ text: "La prendo per un braccio e la porto via, è per il suo bene.", is_correct: false, feedback: "SBAGLIATO. La coercizione fisica non è un'opzione per un volontario. Devi usare il dialogo." },{ text: "La lascio lì e dico al figlio di venirsela a prendere.", is_correct: false, feedback: "SBAGLIATO. Non puoi abbandonare una persona vulnerabile che ti è stata affidata. Devi garantire la continuità dell'assistenza." }] },
+            { situation_update: "Arrivati all'area di attesa, qual è il tuo primo compito?", choices: [{ text: "Lasciarla su una sedia e tornare subito operativo.", is_correct: false, feedback: "INCOMPLETO. Se te ne vai senza un passaggio di consegne, nessuno saprà chi è, da dove viene e di cosa ha bisogno." },{ text: "Affidarla ufficialmente al responsabile dell'area, comunicandogli le sue generalità e le criticità (sola, cardiopatica, ricongiungimento...).", is_correct: true, feedback: "PASSAGGIO DI CONSEGNE PERFETTO. Hai garantito la continuità dell'assistenza, trasferendo tutte le informazioni importanti al responsabile successivo." },{ text: "Mettersi subito a cercare suo figlio tra la folla.", is_correct: false, feedback: "DISORGANIZZATO. È meglio comunicare la necessità al responsabile dell'area, che ha il quadro completo delle presenze e può gestire il ricongiungimento in modo più efficiente." }] },
+            { situation_update: "Il COM ti dà un nuovo incarico: 'Verifica appartamento al piano di sopra, non rispondono'. Salendo, noti che la porta è socchiusa.", question: "Come procedi?", choices: [{ text: "Entro da solo urlando 'Permesso!', per fare prima.", is_correct: false, feedback: "SBAGLIATO. Non si entra mai da soli in un luogo non sicuro o sconosciuto. È una regola fondamentale di sicurezza per l'operatore." },{ text: "Applico la procedura 'due dentro e uno fuori': comunico al COM la situazione, entro con un collega mentre un terzo rimane fuori come collegamento radio.", is_correct: true, feedback: "PROCEDURA DI SICUREZZA DA MANUALE. Questo metodo garantisce che ci sia sempre qualcuno all'esterno pronto a dare l'allarme in caso di problemi." },{ text: "Chiamo i Carabinieri perché potrebbe essere una violazione di domicilio.", is_correct: false, feedback: "ESAGERATO. In un contesto di emergenza post-sisma, il primo obiettivo è verificare la presenza di persone da soccorrere, non ipotizzare reati." }] },
+            { situation_update: "Entrando, trovate l'appartamento vuoto e un biglietto sul tavolo: 'Siamo andati tutti dai parenti in via Verdi'.", question: "Cosa fai con questa informazione?", choices: [{ text: "Comunico al COM l'esito negativo della ricerca e il contenuto del biglietto, in modo che possano registrare che gli occupanti sono al sicuro.", is_correct: true, feedback: "CORRETTO. Ogni informazione che chiude un 'caso' è preziosa perché libera risorse che possono essere usate per altre persone che hanno davvero bisogno." },{ text: "Niente, l'importante è che non ci sia nessuno. Il biglietto non è una comunicazione ufficiale.", is_correct: false, feedback: "SBAGLIATO. Anche un'informazione non ufficiale è un dato importante in emergenza. Il tuo compito è raccogliere e riferire." },{ text: "Chiudo la porta a chiave per sicurezza e me ne vado.", is_correct: false, feedback: "SBAGLIATO. Non devi alterare lo stato dei luoghi. Chiudere a chiave potrebbe impedire un successivo accesso ai proprietari o ai soccorritori." }] },
+            { situation_update: "Riflettendo sull'intervento con la signora anziana.", question: "Qual è stata la competenza più importante che hai usato?", choices: [{ text: "L'abilità tecnica nel chiudere il rubinetto del gas.", is_correct: false, feedback: "IMPORTANTE, ma non è stata la competenza chiave. L'abilità tecnica da sola non ti avrebbe permesso nemmeno di entrare in casa." },{ text: "La forza fisica per convincere le persone.", is_correct: false, feedback: "SBAGLIATO. La forza fisica non è quasi mai la soluzione. Anzi, spesso è controproducente." },{ text: "L'ascolto attivo e l'empatia per creare un rapporto di fiducia.", is_correct: true, feedback: "PERFETTO. Hai capito che in molti interventi di Protezione Civile, le competenze relazionali e la capacità di creare fiducia sono lo strumento più potente per risolvere situazioni complesse." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

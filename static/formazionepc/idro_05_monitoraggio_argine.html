@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Monitoraggio Argine | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="idrogeologico.html">Rischio Idrogeologico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">⛈️ Monitoraggio Argine di un Fiume</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="idrogeologico.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei in servizio di monitoraggio su un argine durante una piena. Stai percorrendo a piedi il tratto assegnato.", question: "Qual è la posizione più sicura per camminare?", choices: [{ text: "Sulla sommità dell'argine per vedere bene entrambi i lati.", is_correct: false, feedback: "SBAGLIATO. La sommità è il punto più esposto in caso di cedimento. Va percorsa solo se strettamente necessario." },{ text: "Alla base dell'argine, sul lato campagna (lato 'asciutto'), per poter osservare la struttura dal basso e avere una via di fuga sicura.", is_correct: true, feedback: "POSIZIONE CORRETTA. È il punto più sicuro che permette di osservare i segnali di stress dell'argine (filtrazioni, smottamenti) e di allontanarsi velocemente." },{ text: "Sulla riva del fiume, per controllare meglio il livello dell'acqua.", is_correct: false, feedback: "PERICOLOSO. La riva potrebbe essere erosa e instabile. Il livello si controlla da punti sicuri e predefiniti (idrometri)." }] },
+            { situation_update: "Mentre cammini, noti un piccolo zampillo d'acqua limpida che esce dal terreno alla base dell'argine, sul lato campagna.", question: "Come interpreti questo segnale e cosa fai?", choices: [{ text: "È un segnale molto grave (un 'fontanazzo'). Comunico subito l'allarme al COM, indicando il punto esatto, e inizio a creare una 'coronella' di sacchi di sabbia attorno.", is_correct: true, feedback: "PROCEDURA PERFETTA. Hai riconosciuto un 'fontanazzo', uno dei precursori più pericolosi del collasso di un argine. L'allarme e la coronella sono le azioni corrette." },{ text: "Probabilmente è una sorgente naturale attivata dalla pioggia. Continuo il monitoraggio.", is_correct: false, feedback: "SBAGLIATO. Sottovalutare un fontanazzo è un errore gravissimo. L'acqua che filtra erode l'interno dell'argine, portandolo al collasso." },{ text: "Tappo il buco con un sasso per fermare la perdita.", is_correct: false, feedback: "PERICOLOSO. Tappare il foro aumenta la pressione interna, accelerando l'erosione e rischiando un collasso immediato. La pressione va contrastata, non bloccata." }] },
+            { situation_update: "Hai creato la coronella di sacchi attorno al fontanazzo. Noti che l'acqua all'interno della coronella sale fino a un certo livello e poi si stabilizza.", question: "Cosa significa?", choices: [{ text: "Che la coronella ha fermato la spinta e la situazione è risolta.", is_correct: false, feedback: "SBAGLIATO. La coronella non risolve il problema, lo contiene. La spinta dell'acqua all'interno dell'argine è ancora presente." },{ text: "Significa che la 'battente idraulico' della coronella ha raggiunto l'equilibrio con la spinta del fiume. La situazione è contenuta ma resta critica e va monitorata.", is_correct: true, feedback: "ANALISI CORRETTA. Hai capito il principio idraulico della coronella. È una misura di contenimento temporanea, non la soluzione definitiva." },{ text: "Che il buco si è probabilmente chiuso da solo con il fango.", is_correct: false, feedback: "IMPROBABILE E PERICOLOSO. Mai fare supposizioni ottimistiche in questi casi. Il pericolo è ancora presente finché il livello del fiume non scende." }] },
+            { situation_update: "Poco più avanti, vedi una porzione di terreno sull'argine, lato campagna, che sembra 'gonfia' e umida, con piccole crepe.", question: "Di cosa si tratta?", choices: [{ text: "È un 'morbido', un punto in cui l'argine è saturo d'acqua e ha perso stabilità. È un grave segnale di rischio di scivolamento.", is_correct: true, feedback: "RICONOSCIMENTO PERFETTO. Hai identificato un altro segnale critico che precede una frana dell'argine. Va segnalato immediatamente." },{ text: "Probabilmente il passaggio di un animale selvatico ha smosso il terreno.", is_correct: false, feedback: "SBAGLIATO. La combinazione di rigonfiamento, umidità e crepe è un chiaro indicatore di stress strutturale, non un semplice smottamento superficiale." },{ text: "È solo un accumulo di fango dovuto alla pioggia.", is_correct: false, feedback: "SBAGLIATO. Il fango è solo la conseguenza. La causa è l'acqua che ha saturato l'intero corpo arginale in quel punto." }] },
+            { situation_update: "Hai segnalato il 'morbido'. Il COM ti chiede di delimitare l'area per tenerla sotto osservazione a distanza.", question: "Come la delimiti?", choices: [{ text: "Ci cammino sopra per piantare dei paletti e stendere il nastro.", is_correct: false, feedback: "PERICOLOSISSIMO. Camminare su un 'morbido' potrebbe innescare il collasso. Il tuo peso è sufficiente a dare il via alla frana." },{ text: "Uso dei paletti e del nastro per creare un perimetro di sicurezza attorno all'area, lavorando sempre da terreno stabile e senza mai entrare nella zona a rischio.", is_correct: true, feedback: "PROCEDURA DI SICUREZZA CORRETTA. Hai messo in sicurezza l'area senza mettere a rischio te stesso." },{ text: "Lancio dei sassi colorati per segnare il punto, così si vede da lontano.", is_correct: false, feedback: "INEFFICACE. Una delimitazione deve essere chiara, invalicabile e ben visibile. I sassi non sono sufficienti." }] },
+            { situation_update: "Mentre monitori, vedi un grosso tronco galleggiante che si dirige verso un ponte vicino.", question: "Cosa fai?", choices: [{ text: "Niente, è un evento naturale e non posso farci nulla.", is_correct: false, feedback: "SBAGLIATO. Un grosso tronco può incastrarsi tra le pile del ponte, creando un 'tappo' che fa salire il livello dell'acqua e aumenta il rischio di esondazione." },{ text: "Segnalo immediatamente al COM la presenza del tronco e la sua traiettoria verso il ponte, in modo che possano allertare le squadre competenti.", is_correct: true, feedback: "SEGNALAZIONE PREZIOSA. Hai agito da 'sentinella' del territorio, identificando un pericolo per un'infrastruttura critica." },{ text: "Provo a deviarlo con un bastone lungo dalla riva.", is_correct: false, feedback: "PERICOLOSO E INUTILE. Avvicinarsi alla riva in piena è rischioso e non avresti la forza per deviare un tronco pesante." }] },
+            { situation_update: "Inizia a piovere forte e si alza il vento. Le condizioni meteo peggiorano.", question: "Come influisce questo sulla tua operatività?", choices: [{ text: "Aumenta il rischio per me (scivolamento, fulmini) e per l'argine (maggiore erosione). Devo aumentare la mia soglia di attenzione e comunicare ogni cambiamento.", is_correct: true, feedback: "ANALISI DEI RISCHI CORRETTA. Hai capito che le condizioni meteo avverse sono un moltiplicatore di rischio sia per l'ambiente che per l'operatore." },{ text: "Mi riparo sotto un albero e aspetto che smetta.", is_correct: false, feedback: "SBAGLIATO E PERICOLOSO. Ripararsi sotto un albero durante un temporale è pericolosissimo per i fulmini. Devi trovare un riparo sicuro (es. veicolo)." },{ text: "Non cambia nulla, sono equipaggiato con la cerata.", is_correct: false, feedback: "SBAGLIATO. L'equipaggiamento ti protegge, ma non annulla i rischi ambientali. Devi sempre rivalutare la situazione." }] },
+            { situation_update: "Il livello del fiume inizia a scendere. L'emergenza sembra rientrare.", question: "Puoi considerare finito il pericolo sull'argine?", choices: [{ text: "Sì, se l'acqua scende, la spinta diminuisce e l'argine è salvo.", is_correct: false, feedback: "SBAGLIATO. La fase di discesa del livello è una delle più pericolose. L'argine, saturo d'acqua, perde la controspinta del fiume e può collassare." },{ text: "No, la fase di 'sghiappamento' (discesa rapida) è molto critica. L'argine è ancora saturo e instabile. Il monitoraggio deve continuare con la massima attenzione.", is_correct: true, feedback: "CONOSCenza TECNICA PERFETTA. Hai capito che il pericolo non finisce con la piena, ma continua anche durante la fase di deflusso." },{ text: "Posso rilassarmi e abbassare il livello di guardia.", is_correct: false, feedback: "SBAGLIATO. Il livello di guardia va mantenuto alto finché non arriva l'ordine di 'cessato allarme' dal COM." }] },
+            { situation_update: "Il COM comunica il 'cessato allarme' e ti ordina di rientrare.", question: "Prima di lasciare la zona, cosa fai?", choices: [{ text: "Rimuovo tutte le delimitazioni e i materiali che ho posizionato (nastro, sacchi), lasciando l'area pulita.", is_correct: true, feedback: "PROCEDURA CORRETTA. La bonifica e il ripristino dello stato dei luoghi sono l'ultima fase di ogni intervento." },{ text: "Lascio tutto com'è, servirà per la prossima volta.", is_correct: false, feedback: "SBAGLIATO. Il materiale abbandonato è un rifiuto e un potenziale intralcio. L'area va sempre ripristinata." },{ text: "Faccio un'ultima foto per documentare il livello massimo raggiunto dall'acqua.", is_correct: false, feedback: "UTILE, ma non è la priorità. La prima cosa da fare è rimuovere i presidi e bonificare l'area." }] },
+            { situation_update: "Rifletti sull'intervento.", question: "Qual è la caratteristica più importante per un volontario in servizio di monitoraggio arginale?", choices: [{ text: "La forza fisica per mettere i sacchi di sabbia.", is_correct: false, feedback: "IMPORTANTE, ma non è la caratteristica chiave. Molti segnali di pericolo non richiedono forza, ma osservazione." },{ text: "La capacità di osservazione, la conoscenza dei segnali di pericolo e la disciplina nel comunicare secondo procedura.", is_correct: true, feedback: "SINTESI PERFETTA. Hai colto l'essenza del monitoraggio: essere occhi e orecchie intelligenti sul territorio, in grado di interpretare e comunicare." },{ text: "Il coraggio di avvicinarsi al fiume in piena per vedere meglio.", is_correct: false, feedback: "SBAGLIATO. Quello non è coraggio, è incoscienza. La prima regola del volontario è 'Io Sicuro, Squadra Sicura'." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

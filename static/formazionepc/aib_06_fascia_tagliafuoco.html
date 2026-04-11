@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Fascia Tagliafuoco | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="aib.html">Antincendio Boschivo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🔥 Creazione di una Fascia Tagliafuoco</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="aib.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Il DOS vi ordina di creare una fascia tagliafuoco manuale per proteggere un'abitazione da un incendio di bassa intensità in avvicinamento. Il vento è debole.", question: "Qual è la tua prima valutazione strategica sul posto?", choices: [{ text: "Inizio subito a tagliare la vegetazione più vicina alla casa.", is_correct: false, feedback: "INCOMPLETO. Partire senza un piano è da dilettanti. Prima si valuta, poi si agisce." },{ text: "Valuto pendenza, vegetazione, vie di fuga sicure per la squadra e la distanza di sicurezza dal fuoco prima di iniziare.", is_correct: true, feedback: "VALUTAZIONE PERFETTA. La sicurezza della squadra (vie di fuga) e la scelta del punto tatticamente migliore vengono prima di ogni altra cosa." },{ text: "Chiedo al proprietario della casa dove secondo lui è meglio fare la fascia.", is_correct: false, feedback: "SBAGLIATO. La decisione è tecnica e operativa, non emotiva. Spetta al caposquadra, su indicazione del DOS." }] },
+            { situation_update: "Hai scelto un buon punto, con una via di fuga sicura. Iniziate a lavorare.", question: "Qual è l'elemento chiave per rendere EFFICACE una fascia tagliafuoco?", choices: [{ text: "Rimuovere completamente la vegetazione fino a scoprire il suolo minerale (terra), e allontanare tutto il materiale tagliato.", is_correct: true, feedback: "TECNICA CORRETTA. Una fascia tagliafuoco funziona solo se interrompe la continuità del combustibile. L'obiettivo è eliminare tutto ciò che può bruciare." },{ text: "Tagliare l'erba molto corta, lasciando il materiale tagliato sul posto.", is_correct: false, feedback: "SBAGLIATO. L'erba tagliata e lasciata sul terreno secca rapidamente e diventa combustibile di prim'ordine, un invito per il fuoco." },{ text: "Bagnare abbondantemente la vegetazione con l'acqua, senza tagliarla.", is_correct: false, feedback: "INEFFICACE. Bagnare la vegetazione è una soluzione temporanea che il calore di un incendio vanifica in pochi minuti. Non è una barriera affidabile." }] },
+            { situation_update: "Mentre un collega usa il decespugliatore, il tuo compito è la 'messa in sicurezza'.", question: "Cosa significa in pratica?", choices: [{ text: "Stare a guardare che non si faccia male, senza un ruolo attivo.", is_correct: false, feedback: "TROPPO PASSIVO. La sicurezza non è solo guardare, ma monitorare attivamente una serie di fattori di rischio." },{ text: "Rimanere a distanza di sicurezza, osservando l'operatore, il fronte di fuoco e l'ambiente circostante per avvisarlo di pericoli (cambio vento, caduta rami).", is_correct: true, feedback: "RUOLO DI 'ANGELO CUSTODE' PERFETTO. La sicurezza in AIB si basa sul lavoro di squadra e sulla sorveglianza reciproca. Hai descritto il compito alla perfezione." },{ text: "Usare un altro decespugliatore al suo fianco per raddoppiare la velocità.", is_correct: false, feedback: "SBAGLIATO E PERICOLOSO. Le distanze di sicurezza tra operatori con attrezzi a motore vanno sempre rispettate per evitare incidenti." }] },
+            { situation_update: "State creando la fascia, accumulando vegetazione tagliata (lo 'sfalcio').", question: "Dove accumulate questo materiale?", choices: [{ text: "Lo portiamo e lo spargiamo sul lato già bruciato ('nero'), se accessibile, o sul lato del fuoco, lontano dal lato da proteggere.", is_correct: true, feedback: "POSIZIONAMENTO CORRETTO. Mai accumulare combustibile sul lato da difendere. Il lato già bruciato è il posto più sicuro." },{ text: "Lo lasciamo in un unico grande cumulo al centro della fascia.", is_correct: false, feedback: "SBAGLIATO. Un cumulo di vegetazione secca al centro della fascia è un 'ponte' perfetto che il fuoco userebbe per superare la linea." },{ text: "Lo accumuliamo sul lato della casa da proteggere, lontano dal fuoco.", is_correct: false, feedback: "PERICOLOSISSIMO. Se una proiezione di fuoco dovesse raggiungere il cumulo, avresti portato un 'falò' proprio a ridosso del tuo obiettivo da difendere." }] },
+            { situation_update: "La fascia è larga 3 metri. Il caposquadra ti chiede se è sufficiente.", question: "Qual è la risposta più corretta tecnicamente?", choices: [{ text: "Sì, 3 metri sono più che sufficienti per fermare qualunque tipo di fuoco.", is_correct: false, feedback: "SBAGLIATO. Questa è un'affermazione troppo assolutistica e pericolosa. La larghezza dipende sempre dal tipo di incendio." },{ text: "Dipende. Per un fuoco di bassa intensità come questo potrebbe bastare, ma la regola generale dice che la fascia dovrebbe essere larga almeno 2.5 volte l'altezza della fiamma.", is_correct: true, feedback: "RISPOSTA TECNICAMENTE CORRETTA. Hai dimostrato di conoscere le regole di base del dimensionamento delle opere di difesa. Questo permette al caposquadra di prendere una decisione informata." },{ text: "Più larga è, meglio è. Continuiamo a tagliare finché non finisce la benzina.", is_correct: false, feedback: "INEFFICIENTE. Le risorse (tempo, energie, carburante) sono limitate e vanno usate con criterio, non a caso." }] },
+            { situation_update: "Il fronte di fiamma, a bassa intensità, raggiunge la fascia. La vostra squadra è posizionata.", question: "Qual è il posizionamento tattico corretto?", choices: [{ text: "Rimaniamo posizionati in sicurezza sul lato protetto ('nero' o sulla strada), pronti a intervenire con attrezzi manuali (flabelli) o acqua per estinguere eventuali proiezioni.", is_correct: true, feedback: "POSIZIONAMENTO TATTICO PERFETTO. La fascia tagliafuoco non è un muro magico; va 'tenuta' attivamente per essere efficace. Il lato protetto è l'unica posizione sicura." },{ text: "Appena il fuoco tocca la fascia, ci ritiriamo velocemente attraverso la via di fuga, la missione è compiuta.", is_correct: false, feedback: "SBAGLIATO. La missione non è finita. Abbandonare la linea significa renderla inutile, perché le proiezioni scavalcheranno indisturbate." },{ text: "Attraversiamo la fascia e proviamo ad attaccare il fuoco dal lato 'verde' (non ancora bruciato).", is_correct: false, feedback: "ESTREMAMENTE PERICOLOSO. Lavorare dal lato 'verde' significa mettersi in trappola, senza vie di fuga e con il fuoco che avanza verso di te." }] },
+            { situation_update: "Un piccolo tizzone scavalca la linea e accende un ciuffo d'erba secca a 2 metri da te, sul lato protetto.", question: "Qual è l'attrezzo più rapido ed efficace per spegnerlo?", choices: [{ text: "Il flabello (o battifuoco), usato con colpi decisi dall'esterno verso l'interno per soffocare la fiamma.", is_correct: true, feedback: "USO CORRETTO DELL'ATTREZZATURA. Per piccole riprese isolate, il flabello è lo strumento più agile e veloce. L'acqua richiederebbe più tempo per essere messa in azione." },{ text: "I miei piedi, calpestandolo energicamente.", is_correct: false, feedback: "RISCHIOSO. Calpestare il fuoco può far aderire braci incandescenti agli scarponi e, peggio, spargere le braci stesse, creando nuove accensioni." },{ text: "La lancia con l'acqua, chiedendo pressione massima.", is_correct: false, feedback: "ECCESSIVO E LENTO. Per un piccolo focolaio, attivare una linea d'acqua è uno spreco di tempo e risorse. Bisogna usare l'attrezzo più adeguato." }] },
+            { situation_update: "Il fronte principale si allontana e l'area è in sicurezza. Il DOS vi ordina di rientrare. Prima di riporre il decespugliatore sul mezzo...", question: "Cosa è fondamentale fare?", choices: [{ text: "Pulirlo dalla vegetazione incastrata e controllare che non ci siano danni evidenti alla testina o alle protezioni.", is_correct: true, feedback: "CONTROLLO CORRETTO. Una rapida ispezione post-utilizzo permette di individuare subito danni e garantire che l'attrezzo sia pronto e sicuro per l'intervento successivo." },{ text: "Niente, basta spegnerlo e caricarlo. La pulizia si fa in sede.", is_correct: false, feedback: "INCOMPLETO. Una pulizia grossolana e un controllo visivo vanno sempre fatti sul posto. La manutenzione approfondita si fa in sede." },{ text: "Svuotare il serbatoio della miscela per motivi di sicurezza durante il trasporto.", is_correct: false, feedback: "NON NECESSARIO. Non è una procedura standard da campo. I mezzi sono progettati per trasportare gli attrezzi con il loro carburante." }] },
+            { situation_update: "In sede, devi fare la manutenzione del decespugliatore. Oltre alla pulizia...", question: "Qual è un controllo di sicurezza essenziale da non dimenticare mai?", choices: [{ text: "Verificare il corretto funzionamento del pulsante di spegnimento e che la protezione di sicurezza della lama/filo non sia danneggiata o rimossa.", is_correct: true, feedback: "CONTROLLO DI SICUREZZA VITALE. Un attrezzo che non si può spegnere rapidamente o con le protezioni rimosse è un'arma pericolosa per chi lo usa." },{ text: "Verificare che la lama o il filo siano ben affilati/nuovi.", is_correct: false, feedback: "IMPORTANTE per l'efficienza del taglio, ma la sicurezza dell'operatore (spegnimento, protezioni) ha sempre la priorità." },{ text: "Controllare che sia esteticamente bello e senza graffi.", is_correct: false, feedback: "IRRILEVANTE. L'attrezzatura da lavoro è fatta per essere usata, non per essere bella. La funzionalità e la sicurezza sono tutto." }] },
+            { situation_update: "Rifletti sull'operazione.", question: "Qual è il principio tattico dietro l'uso di una fascia tagliafuoco?", choices: [{ text: "È una forma di Attacco Indiretto: non si agisce direttamente sulla fiamma, ma si modifica il combustibile in un punto strategico dove il fuoco arriverà.", is_correct: true, feedback: "ANALISI TATTICA PERFETTA. Hai compreso la differenza fondamentale tra l'attacco diretto (con acqua) e l'attacco indiretto (con la modifica del combustibile)." },{ text: "È una forma di Attacco Diretto, perché si lavora vicino al fuoco.", is_correct: false, feedback: "SBAGLIATO. L'attacco diretto implica l'uso di un agente estinguente (acqua, schiuma) direttamente sulla fiamma. Qui si agisce sul combustibile, non sulla fiamma." },{ text: "Serve principalmente come punto di riferimento per guidare i lanci dei mezzi aerei.", is_correct: false, feedback: "USO SECONDARIO. Può essere usata anche come riferimento, ma il suo scopo primario e tattico è quello di interrompere il combustibile." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

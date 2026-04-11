@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Verifica Viabilità | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="terremoto.html">Rischio Sismico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🌎 Verifica di Viabilità Post-Evento</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="terremoto.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Sei a metà percorso. Trovi la strada parzialmente ostruita da massi e un palo della luce inclinato.", question: "Qual è la tua priorità assoluta in questo momento?", choices: [{ text: "Tentare di rimuovere i massi più piccoli per creare un passaggio.", is_correct: false, feedback: "SBAGLIATO. Agire d'impulso senza valutare tutti i rischi è pericoloso. Il costone potrebbe essere instabile e il palo sotto tensione." },{ text: "Fermarsi a distanza di sicurezza e comunicare subito al COM la situazione esatta, attendendo disposizioni.", is_correct: true, feedback: "AZIONE CORRETTA. La sicurezza e la comunicazione vengono prima di tutto. Hai garantito la tua sicurezza e fornito le informazioni necessarie." },{ text: "Scendere dal mezzo per valutare meglio la stabilità del palo e la possibilità di rimuovere i detriti.", is_correct: false, feedback: "AZIONE PERICOLOSA. Scendere dal veicolo ti espone a rischi non necessari (caduta massi, folgorazione). La valutazione va fatta da una posizione sicura." }] },
+            { situation_update: "Il COM ti risponde: 'Ricevuto. Rimani in osservazione. VVF in arrivo'. Nel frattempo, vedi persone a piedi che tentano di superare la frana.", question: "Cosa fai riguardo ai pedoni?", choices: [{ text: "Li lasci passare, sono affari loro e hanno fretta di tornare a casa.", is_correct: false, feedback: "SBAGLIATO. La tua responsabilità include la sicurezza dei civili presenti sulla scena. Lasciarli passare significa esporli a un grave rischio." },{ text: "Usando il megafono o la voce, li inviti con fermezza a non superare la frana, spiegando il pericolo di ulteriori crolli e del palo.", is_correct: true, feedback: "AZIONE CORRETTA. Hai gestito la popolazione a distanza, informando del pericolo senza esporti a rischi. La comunicazione è il tuo strumento migliore." },{ text: "Scendi dal mezzo e li blocchi fisicamente per non farli passare.", is_correct: false, feedback: "INEFFICACE E RISCHIOSO. Un approccio fisico può creare un conflitto e ti espone agli stessi pericoli. Usa gli strumenti a disposizione." }] },
+            { situation_update: "Mentre parli con i pedoni, noti che dal palo inclinato escono delle scintille.", question: "Le scintille dal palo cosa ti indicano e come ti comporti?", choices: [{ text: "Comunico immediatamente al COM questo nuovo, grave pericolo, sottolineando l'urgenza di un intervento tecnico.", is_correct: true, feedback: "COMUNICAZIONE PERFETTA. Hai riconosciuto un'evoluzione del rischio e l'hai riportata correttamente. Il COM ora può allertare anche il servizio elettrico." },{ text: "È un problema minore, probabilmente si sistemerà da solo. Non disturbo il COM per così poco.", is_correct: false, feedback: "SBAGLIATO. Il rischio elettrico è uno dei più letali. La tua comunicazione è vitale per attivare le squadre specializzate corrette." },{ text: "Provo a tirare dei sassi contro il palo per far smettere le scintille.", is_correct: false, feedback: "ASSOLUTAMENTE NO. È un'azione pericolosissima che potrebbe causare il crollo definitivo del palo o un cortocircuito peggiore." }] },
+            { situation_update: "Il COM ti informa che ha allertato anche il servizio elettrico. Passano 10 minuti e i VVF non sono ancora arrivati.", question: "Come occupi il tempo di attesa?", choices: [{ text: "Resto in posizione sicura e continuo l'osservazione a 360 gradi, monitorando la frana, il versante e la strada.", is_correct: true, feedback: "ESATTO. L'osservazione continua è un compito attivo, non passivo. Ti permette di cogliere ogni cambiamento della scena." },{ text: "Mi avvicino di nuovo alla frana per vedere se è cambiato qualcosa.", is_correct: false, feedback: "SBAGLIATO. La situazione di pericolo non è cambiata. Avvicinarsi significa esporsi di nuovo a un rischio inutile." },{ text: "Scendo e faccio due passi per sgranchirmi le gambe nei pressi del mezzo.", is_correct: false, feedback: "SCONSIGLIATO. In una zona a rischio, rimanere all'interno del veicolo (se posizionato in sicurezza) offre una protezione maggiore." }] },
+            { situation_update: "Mentre guardi, noti una piccola crepa nell'asfalto, a circa 20 metri da dove ti sei fermato, dalla parte opposta alla frana.", question: "Cosa significa quella crepa e cosa fai?", choices: [{ text: "Potrebbe essere un segno di instabilità più ampia. Arretro ulteriormente con il mezzo e lo comunico al COM.", is_correct: true, feedback: "DECISIONE ECCELLENTE. Hai applicato il principio di precauzione, riconoscendo un potenziale indicatore di un rischio più esteso." },{ text: "Probabilmente è una vecchia crepa, la ignoro per non creare falsi allarmismi.", is_correct: false, feedback: "SBAGLIATO. In emergenza, nulla va dato per scontato. È meglio un allarme in più che uno in meno. Il tuo compito è segnalare, non interpretare." },{ text: "Scendo a misurarla per essere più preciso nella comunicazione.", is_correct: false, feedback: "INUTILE E RISCHIOSO. La precisione millimetrica non serve. Ciò che serve è la segnalazione dell'esistenza e della posizione approssimativa, fatta dalla sicurezza del tuo veicolo." }] },
+            { situation_update: "Il COM ti ringrazia per l'aggiornamento. Finalmente, senti in lontananza le sirene dei Vigili del Fuoco in arrivo.", question: "All'arrivo dei VVF, qual è il tuo primo dovere?", choices: [{ text: "Andare incontro al Caposquadra VVF, presentarsi e fornirgli un quadro sintetico e preciso della situazione.", is_correct: true, feedback: "COLLABORAZIONE PERFETTA. Il passaggio di consegne è un momento cruciale. Informazioni chiare e rapide fanno guadagnare tempo prezioso ai soccorritori." },{ text: "Lasciarli lavorare e allontanarsi senza dire nulla, per non essere d'intralcio.", is_correct: false, feedback: "SBAGLIATO. Sei la persona con più informazioni sulla scena. Andarsene senza un passaggio di consegne è una grave perdita di dati." },{ text: "Iniziare a dare istruzioni ai VVF su come operare, basandomi sulla mia osservazione.", is_correct: false, feedback: "SBAGLIATO. La strategia operativa spetta al comandante dell'intervento (in questo caso il Caposquadra VVF). Il tuo ruolo è fornire informazioni, non dirigere." }] },
+            { situation_update: "Il Caposquadra VVF ti ringrazia e ti chiede di posizionare il tuo mezzo per creare un blocco stradale invalicabile più a monte.", question: "Come posizioni il veicolo?", choices: [{ text: "Sul ciglio della strada con i lampeggianti, per non ostruire del tutto.", is_correct: false, feedback: "SBAGLIATO. Un blocco deve essere invalicabile. Lasciare spazio potrebbe indurre qualcuno a tentare di passare." },{ text: "Di traverso sulla carreggiata, con i lampeggianti accesi, in un punto con buona visibilità per chi arriva.", is_correct: true, feedback: "POSIZIONAMENTO CORRETTO. Hai creato una barriera fisica e visiva chiara, garantendo la sicurezza dell'area di lavoro." },{ text: "Dietro il mezzo dei VVF per non essere di intralcio alla loro manovra.", is_correct: false, feedback: "SBAGLIATO. Il blocco stradale serve a proteggere l'area di lavoro. Posizionarsi dietro non serve a questo scopo." }] },
+            { situation_update: "Mentre sei al blocco stradale, arriva un giornalista che inizia a farti domande e a filmare.", question: "Come ti relazioni con la stampa?", choices: [{ text: "Rilascio un'intervista dettagliata su quello che è successo per dare visibilità all'intervento.", is_correct: false, feedback: "SBAGLIATO. Non sei autorizzato a parlare con la stampa. Potresti fornire informazioni imprecise o sensibili, creando problemi." },{ text: "Lo ignoro completamente e mi giro dall'altra parte.", is_correct: false, feedback: "POCO PROFESSIONALE. Ignorarlo potrebbe creare un'impressione di ostilità o di disorganizzazione. La cortesia è sempre richiesta." },{ text: "Lo indirizzo con cortesia al personale autorizzato (es. il DOS VVF o l'addetto stampa), spiegando che non sono autorizzato a rilasciare dichiarazioni.", is_correct: true, feedback: "COMPORTAMENTO PERFETTO. Hai rispettato la catena di comunicazione e mantenuto un atteggiamento professionale e cortese." }] },
+            { situation_update: "L'intervento si protrae e inizia a fare buio. L'area va illuminata.", question: "Quale dotazione di bordo è essenziale per l'operatività notturna?", choices: [{ text: "Torce portatili, batterie di scorta e una torre faro, se in dotazione.", is_correct: true, feedback: "ESATTO. La visibilità è fondamentale per la sicurezza notturna. Queste dotazioni sono indispensabili." },{ text: "Un kit di primo soccorso.", is_correct: false, feedback: "IMPORTANTE, ma non è specifico per l'operatività notturna. Il kit di primo soccorso deve esserci sempre." },{ text: "Una radio con la batteria carica.", is_correct: false, feedback: "FONDAMENTALE, ma non è specifico per la notte. La radio deve essere sempre operativa." }] },
+            { situation_update: "L'intervento di messa in sicurezza si conclude. Il COM ti dà l'ordine di rientrare in sede.", question: "Prima di lasciare la scena, quale operazione è fondamentale?", choices: [{ text: "Chiedere al COM se puoi tornare a casa direttamente visto che è tardi.", is_correct: false, feedback: "SBAGLIATO. L'intervento finisce solo dopo il rientro in sede e il ripristino dei mezzi. Abbandonare il servizio non è un'opzione." },{ text: "Salutare tutti e partire subito per non perdere tempo.", is_correct: false, feedback: "INCOMPLETO. Partire senza un controllo finale può lasciare problemi per la squadra successiva." },{ text: "Effettuare una rapida verifica del tuo mezzo e delle attrezzature usate per assicurarti che sia tutto in ordine, pulito e a bordo.", is_correct: true, feedback: "PROCEDURA DI RIENTRO CORRETTA. Il ripristino dell'efficienza del mezzo è parte integrante dell'intervento. Un mezzo non efficiente è un problema per la prossima emergenza." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

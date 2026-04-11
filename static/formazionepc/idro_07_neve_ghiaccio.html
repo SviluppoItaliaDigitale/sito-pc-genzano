@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Neve e Ghiaccio | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="idrogeologico.html">Rischio Idrogeologico</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">⛈️ Intervento per Neve e Ghiaccio</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="idrogeologico.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Un'allerta meteo per neve si è concretizzata. Sei a bordo di un mezzo spargisale. Il COM comunica tre richieste: una strada residenziale in pendenza, l'accesso all'ospedale e il piazzale di una scuola.", question: "Qual è l'intervento con priorità assoluta?", choices: [{ text: "La strada residenziale in pendenza, perché gli abitanti sono bloccati e rischiano incidenti.", is_correct: false, feedback: "IMPORTANTE, MA NON PRIORITARIO. La sicurezza dei residenti è fondamentale, ma viene dopo le infrastrutture strategiche." },{ text: "Il viale di accesso all'ospedale, per garantire il transito dei mezzi di soccorso e l'accesso alla struttura sanitaria.", is_correct: true, feedback: "PRIORITÀ CORRETTA. Garantire l'operatività di un ospedale e la viabilità per i mezzi di soccorso è sempre il primo obiettivo in un piano neve." },{ text: "Il piazzale della scuola, per permettere ai genitori di recuperare i figli in sicurezza.", is_correct: false, feedback: "IMPORTANTE, MA SECONDARIO. Solitamente, in caso di allerta neve, le scuole vengono chiuse per ordinanza proprio per evitare questo tipo di criticità." }] },
+            { situation_update: "Vi state dirigendo verso l'ospedale. Lungo il tragitto, vedete un'auto in testa coda che blocca parzialmente un incrocio. Il guidatore è fuori e sta bene.", question: "Cosa fate?", choices: [{ text: "Ci fermiamo in sicurezza, aiutiamo il guidatore a spostare l'auto a lato strada per liberare l'incrocio e proseguiamo, segnalando l'evento al COM.", is_correct: true, feedback: "OTTIMA GESTIONE. Hai risolto una criticità per la viabilità che avrebbe potuto bloccare altri mezzi di soccorso, senza perdere di vista la tua missione prioritaria." },{ text: "Continuiamo dritti senza fermarci, la nostra priorità assoluta è l'ospedale.", is_correct: false, feedback: "SBAGLIATO. Ignorare un ostacolo sulla viabilità principale è un errore. Potresti essere l'unico mezzo in grado di liberare l'incrocio in quel momento." },{ text: "Chiamiamo il carro attrezzi e aspettiamo con lui che arrivi.", is_correct: false, feedback: "TROPPO LENTO. Se il veicolo può essere spostato a mano in sicurezza, è l'opzione più rapida per ripristinare il flusso. Attivare il carro attrezzi richiede troppo tempo." }] },
+            { situation_update: "Arrivate al viale dell'ospedale, coperto da 5 cm di neve. Il vostro mezzo ha sia la lama che lo spargisale.", question: "Come effettuate il trattamento per la massima efficacia?", choices: [{ text: "Spargo il sale direttamente sopra la neve fresca.", is_correct: false, feedback: "POCO EFFICACE. Il sale si diluirebbe nella massa di neve, perdendo gran parte del suo potere fondente. È uno spreco di materiale." },{ text: "Prima passo con la lama per rimuovere il grosso della neve, e poi spargo il sale sull'asfalto quasi pulito.", is_correct: true, feedback: "TECNICA PERFETTA. Il sale è più efficace se agisce sul ghiaccio residuo o sull'asfalto per impedirne la formazione. Prima si pulisce, poi si tratta." },{ text: "Scarico una grande quantità di sale in un unico punto all'inizio del viale, poi ci penseranno le auto a spargerlo.", is_correct: false, feedback: "SBAGLIATO. Il sale va distribuito uniformemente. Accumularlo in un punto è inutile e dannoso per l'asfalto e l'ambiente." }] },
+            { situation_update: "Avete reso agibile il viale. Il COM vi invia sulla strada residenziale in pendenza.", question: "Come affrontate una salita/discesa ghiacciata con il vostro mezzo pesante?", choices: [{ text: "Prendo la rincorsa per avere più slancio in salita.", is_correct: false, feedback: "PERICOLOSISSIMO. La velocità sul ghiaccio porta solo alla perdita di controllo del mezzo. È una manovra da evitare sempre." },{ text: "Procedo a velocità molto bassa e costante, usando marce ridotte, evitando accelerazioni o frenate brusche. Se necessario, monto le catene prima.", is_correct: true, feedback: "GUIDA SICURA E PROFESSIONALE. La guida su ghiaccio richiede dolcezza, costanza e prevenzione (catene). Hai descritto l'approccio corretto." },{ text: "Faccio la strada in retromarcia perché la trazione è posteriore e ho più controllo.", is_correct: false, feedback: "SBAGLIATO. La guida in retromarcia per lunghi tratti è pericolosa, riduce la visibilità e non garantisce un controllo maggiore in queste condizioni." }] },
+            { situation_update: "Mentre spargete il sale in salita, un residente esce e si lamenta: 'State sprecando il sale! Dovevate venire prima!'", question: "Come gestisci la lamentela?", choices: [{ text: "Gli spiego con calma che stiamo seguendo un piano di priorità comunale e che il trattamento è ancora efficace per prevenire la formazione di ghiaccio.", is_correct: true, feedback: "COMUNICAZIONE CORRETTA. Hai fornito una spiegazione professionale senza entrare in polemica, mantenendo la calma e rappresentando correttamente la tua organizzazione." },{ text: "Lo ignoro e continuo a lavorare, non ho tempo da perdere.", is_correct: false, feedback: "POCO PROFESSIONALE. Anche se il cittadino è polemico, ignorarlo può peggiorare la percezione del vostro lavoro. Una breve e calma spiegazione è sempre utile." },{ text: "Scendo e discuto con lui sulla gestione dell'emergenza, spiegandogli che non capisce nulla.", is_correct: false, feedback: "SBAGLIATO. Entrare in conflitto diretto non è mai la soluzione. Il tuo ruolo è operativo, non polemico." }] },
+            { situation_update: "Il sale sul vostro mezzo sta per finire. La temperatura esterna è di -3°C e nevischia.", question: "Qual è l'azione corretta?", choices: [{ text: "Comunico al COM che il carico è quasi esaurito e chiedo istruzioni se rientrare alla base per ricaricare o se ci sono punti di stoccaggio più vicini.", is_correct: true, feedback: "PROCEDURA LOGISTICA PERFETTA. Hai comunicato in anticipo la fine delle risorse, permettendo al coordinatore di pianificare il rifornimento senza interrompere il servizio." },{ text: "Continuo a spargere finché l'ultima briciola non è finita, poi comunico che abbiamo finito.", is_correct: false, feedback: "SBAGLIATO. Comunicare un problema quando è già troppo tardi non è professionale. La logistica si basa sull'anticipazione." },{ text: "Conservo l'ultimo po' di sale per la strada davanti a casa mia, per sicurezza.", is_correct: false, feedback: "ILLEGALE E NON ETICO. Il materiale è destinato al servizio pubblico secondo le priorità stabilite. Un simile comportamento è passibile di denuncia." }] },
+            { situation_update: "Il COM vi ordina di rientrare in sede per ricaricare. Il mezzo è coperto di neve e sale.", question: "Cosa fate prima di metterlo in garage?", choices: [{ text: "Effettuo un lavaggio rapido con acqua dolce, specialmente al telaio e al meccanismo spargisale.", is_correct: true, feedback: "MANUTENZIONE ECCELLENTE. Il sale è estremamente corrosivo. Lavare il mezzo dopo ogni utilizzo previene la ruggine e mantiene il veicolo efficiente e sicuro per anni." },{ text: "Lo lascio così com'è, tanto si sporcherà di nuovo tra poco.", is_correct: false, feedback: "SBAGLIATO. La mancata manutenzione porta a guasti e costi di riparazione molto più alti, oltre a rendere il mezzo inaffidabile." },{ text: "Lo parcheggio e vado a bere un caffè caldo, la pulizia si fa a fine emergenza.", is_correct: false, feedback: "SBAGLIATO. La manutenzione ordinaria va fatta sempre, anche durante l'emergenza, per garantire la continua operatività del mezzo." }] },
+            { situation_update: "Durante il rifornimento, noti che il meccanismo di rotazione dello spargisale fa uno strano rumore.", question: "Come ti comporti?", choices: [{ text: "Lo segnalo immediatamente al responsabile dei mezzi per una verifica. Non esco finché non ho un parere tecnico.", is_correct: true, feedback: "COMPORTAMENTO RESPONSABILE. La manutenzione preventiva e la segnalazione di anomalie sono fondamentali per evitare guasti gravi durante un'emergenza." },{ text: "Fa niente, finché gira e butta fuori il sale va bene.", is_correct: false, feedback: "SBAGLIATO. Un rumore anomalo è il preavviso di un guasto. Ignorarlo significa rischiare di rimanere fermi nel mezzo di un intervento." },{ text: "Metto un po' di olio spray a caso, di solito funziona con i rumori.", is_correct: false, feedback: "SUPERFICIALE E RISCHIOSO. Potrebbe essere un problema meccanico serio che l'olio non può risolvere, anzi, potrebbe mascherare." }] },
+            { situation_update: "Ricevete una chiamata per un senza fissa dimora che rischia l'assideramento. L'ambulanza è già in arrivo.", question: "Qual è il vostro ruolo?", choices: [{ text: "Ci coordiniamo con il COM per andare in supporto al 118, portando coperte termiche e per l'eventuale trasporto in una struttura di accoglienza.", is_correct: true, feedback: "OTTIMO SPIRITO DI COLLABORAZIONE. L'assistenza socio-sanitaria alla popolazione fragile è una parte importantissima del piano neve. La PC agisce in supporto e sinergia con gli altri enti." },{ text: "Non è compito nostro, c'è già il 118, quindi continuiamo con le strade.", is_correct: false, feedback: "SBAGLIATO. La protezione della vita umana ha sempre la priorità sulla pulizia delle strade. L'assistenza alla persona è il cuore della Protezione Civile." },{ text: "Andiamo lì e portiamo via la persona prima che arrivi l'ambulanza per velocizzare.", is_correct: false, feedback: "SBAGLIATO. Il soccorso sanitario è di competenza del 118. Il nostro è un ruolo di supporto, non di sostituzione. Non possiamo trasportare pazienti." }] },
+            { situation_update: "Rifletti sull'emergenza neve.", question: "Qual è l'obiettivo principale del servizio di viabilità invernale della Protezione Civile?", choices: [{ text: "Garantire la percorribilità delle sole strade principali per i servizi essenziali e di soccorso, riducendo il rischio per la popolazione.", is_correct: true, feedback: "ANALISI PERFETTA. Hai compreso la natura strategica del servizio. L'obiettivo è mantenere la funzionalità della comunità e la sicurezza, non pulire ogni singolo centimetro di asfalto." },{ text: "Pulire tutte le strade del comune, nessuna esclusa, come un servizio di pulizia stradale.", is_correct: false, feedback: "IMPOSSIBILE E SBAGLIATO. Le risorse non sono infinite. La Protezione Civile opera per priorità, non a tappeto." },{ text: "Dare ai volontari l'occasione di guidare mezzi speciali e sentirsi utili.", is_correct: false, feedback: "RIDUTTIVO. L'utilità non è una sensazione, ma il risultato di un servizio strategico e coordinato a beneficio dell'intera comunità." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>

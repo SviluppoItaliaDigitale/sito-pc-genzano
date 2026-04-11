@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenario: Evacuazione Preventiva | PC Genzano di Roma</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Piattaforma Formativa</a></li>
+            <li class="breadcrumb-item"><a href="aib.html">Antincendio Boschivo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scenario</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div id="scenario-container">
+                <h1 id="main-scenario-title" class="h3 mb-4" style="color:var(--pc-primary);font-weight:700;">🔥 Evacuazione Preventiva</h1>
+                <div id="initial-situation-container" class="alert alert-secondary mt-3"></div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span id="progress-text" class="fw-bold"></span>
+                </div>
+                <div class="progress mb-4" role="progressbar" aria-label="Avanzamento scenario" style="height:10px;">
+                  <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="question-and-choices">
+                  <div class="alert alert-info d-none" id="current-situation-wrapper">
+                    <p class="lead mb-0" id="situation-text"></p>
+                  </div>
+                  <h2 class="h4 fw-bold mt-4" id="question-text"></h2>
+                  <div id="choices-container" class="mt-4"></div>
+                  <div class="mt-4 text-center">
+                    <a id="back-to-list-link-final" href="aib.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Abbandona lo scenario</a>
+                  </div>
+                </div>
+                <div id="feedback-container" class="mt-4 d-none">
+                  <div id="feedback-alert" class="alert" role="alert">
+                    <h3 class="h4 alert-heading fw-bold" id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button id="next-question-btn" class="btn btn-primary btn-lg"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+        const scenarioData = [
+            { situation_update: "Il Sindaco ha emesso un'ordinanza di evacuazione per alcune case isolate minacciate da un incendio. Devi andare casa per casa a comunicare l'ordine.", question: "Arrivi alla prima casa. Una famiglia è già pronta ma molto spaventata. Qual è la tua prima azione?", choices: [{ text: "Mettergli fretta dicendo che il fuoco sta arrivando per farli muovere.", is_correct: false, feedback: "SBAGLIATO. Aumentare il panico è sempre controproducente. La calma è la tua migliore alleata." },{ text: "Con voce calma, confermi che stanno facendo la cosa giusta, li indirizzi verso l'area di accoglienza e chiedi se hanno bisogno di aiuto.", is_correct: true, feedback: "APPROCCIO PERFETTO. Hai gestito l'ansia, rinforzato il loro comportamento corretto e fornito supporto pratico e informativo." },{ text: "Chiedo subito i documenti per registrare chi sta lasciando l'abitazione.", is_correct: false, feedback: "SBAGLIATO. La burocrazia non è la priorità. Il tuo primo compito è il supporto umano e la messa in sicurezza." }] },
+            { situation_update: "Il proprietario della seconda casa si rifiuta di andarsene: 'Questa è casa mia, so io come difenderla. Ho la pompa piena d'acqua.'", question: "Qual è la procedura corretta?", choices: [{ text: "Lo informi con calma dei rischi, illustri l'ordinanza, ma se persiste nel rifiuto comunichi immediatamente la sua decisione e le generalità al COM/Forze dell'Ordine.", is_correct: true, feedback: "PROCEDURA CORRETTA. Hai informato, non hai usato la forza e hai comunicato il rifiuto a chi di dovere. Questo documenta la situazione." },{ text: "Lo obblighi a salire sul mezzo della PC, perché l'ordinanza del Sindaco è legge.", is_correct: false, feedback: "SBAGLIATO. Non hai l'autorità per obbligare fisicamente una persona. L'uso della forza è riservato esclusivamente alle Forze dell'Ordine." },{ text: "Te ne vai, lasciandolo al suo destino dato che è una sua scelta.", is_correct: false, feedback: "PERICOLOSO. Andarsene senza comunicare il rifiuto è una grave mancanza. La Sala Operativa deve sapere chi è rimasto in zona a rischio." }] },
+            { situation_update: "Alla terza casa, una coppia di anziani è nel panico. Corre per casa cercando di raccogliere oggetti, perdendo tempo prezioso.", question: "Come intervieni?", choices: [{ text: "Li sgridi dicendo di lasciare tutto e uscire subito, altrimenti li lasci lì.", is_correct: false, feedback: "SBAGLIATO. Un approccio aggressivo aumenta il panico e la loro immobilità. Devi essere una figura rassicurante." },{ text: "Li fermi con calma e dici: 'La cosa più importante da salvare siete voi. Per favore, prendete solo farmaci, documenti e cellulare. Vi aiutiamo noi'.", is_correct: true, feedback: "OTTIMA GESTIONE. Hai riportato la loro attenzione sulle vere priorità (la vita) e offerto aiuto concreto, calmando la situazione." },{ text: "Li aiuti a fare le valigie caricando più roba possibile per accontentarli.", is_correct: false, feedback: "SBAGLIATO. In questo modo perdi tempo prezioso e avalli un comportamento pericoloso. Devi essere tu a guidare le priorità." }] },
+            { situation_update: "Gli anziani ti dicono che il loro vicino non risponde. La casa è silenziosa e la porta chiusa.", question: "Cosa fai?", choices: [{ text: "Vado via, probabilmente non c'è nessuno e ho già perso troppo tempo.", is_correct: false, feedback: "SBAGLIATO. Non puoi mai dare per scontato che una casa sia vuota. Potrebbe esserci una persona impossibilitata a rispondere." },{ text: "Comunico immediatamente al COM che nell'abitazione X potrebbe esserci una persona che non risponde e che serve un intervento dei VVF per l'apertura porta.", is_correct: true, feedback: "CORRETTO. Hai attivato la procedura corretta per una verifica di sicurezza, che solo i Vigili del Fuoco sono autorizzati a compiere." },{ text: "Sfascio una finestra per entrare e controllare di persona.", is_correct: false, feedback: "SBAGLIATO E ILLEGALE. È una violazione di domicilio e ti esponi a rischi enormi. Non è il tuo compito." }] },
+            { situation_update: "Mentre aspetti i VVF, noti che la strada di accesso alla zona è stretta.", question: "Cosa fai per facilitare il loro arrivo?", choices: [{ text: "Mi posiziono all'inizio della strada, in un punto sicuro e visibile, per fare da 'pilotino' e guidare il mezzo dei VVF rapidamente.", is_correct: true, feedback: "AZIONE PROATTIVA ED EFFICIENTE. Hai facilitato l'arrivo dei soccorsi, facendo guadagnare tempo prezioso. Questo è un ottimo esempio di collaborazione." },{ text: "Parcheggio il mio mezzo davanti alla casa giusta con i lampeggianti accesi.", is_correct: false, feedback: "RISCHIOSO. Potresti essere d'intralcio alla manovra del loro mezzo pesante. È meglio rimanere all'esterno dell'area di lavoro immediata." },{ text: "Accendo la sirena del mio mezzo per far capire che c'è un'emergenza.", is_correct: false, feedback: "SBAGLIATO. L'uso dei dispositivi acustici è regolamentato. Se non sei in movimento per un'emergenza, non vanno usati." }] },
+            { situation_update: "Hai completato il tuo settore. Il caposquadra ti chiede: 'Quante persone hai evacuato?'", question: "Qual è la risposta più professionale?", choices: [{ text: "'Ho evacuato 3 nuclei familiari per un totale di 8 persone. Un nucleo di 1 persona ha rifiutato (già comunicato). Un'abitazione è da verificare da parte dei VVF.'", is_correct: true, feedback: "REPORT PERFETTO. Preciso, quantitativo e riassuntivo. Questi sono i dati che servono al centro di coordinamento per avere il polso della situazione." },{ text: "'Un bel po', forse una ventina, ho perso il conto.'", is_correct: false, feedback: "TROPPO VAGO. In emergenza servono dati precisi, non stime approssimative. La precisione è fondamentale." },{ text: "'Ho evacuato tutti quelli che ho trovato, direi che ho finito.'", is_correct: false, feedback: "INCOMPLETO. La comunicazione deve includere anche le criticità, come le persone che hanno rifiutato l'evacuazione." }] },
+            { situation_update: "Ricevi l'ordine di presidiare il varco di accesso alla zona evacuata. Arriva un'auto. Il guidatore dice: 'Sono un residente, sto tornando dal lavoro'.", question: "Cosa gli comunichi?", choices: [{ text: "Lo faccio passare, è un suo diritto tornare a casa.", is_correct: false, feedback: "SBAGLIATO. L'ordinanza di evacuazione sospende temporaneamente quel diritto per un motivo di sicurezza superiore." },{ text: "Gli spiego con calma che è in vigore un'ordinanza di evacuazione per un incendio e che per la sua sicurezza non può accedere. Lo indirizzo al centro di accoglienza.", is_correct: true, feedback: "CORRETTO. Hai applicato l'ordinanza, motivandola, e hai fornito al cittadino l'informazione corretta su dove recarsi per assistenza e aggiornamenti." },{ text: "Gli dico 'Si arrangi, la zona è chiusa, non ha sentito le notizie?'.", is_correct: false, feedback: "SCORTESE E NON PROFESSIONALE. Il cittadino potrebbe non essere informato. Il tuo ruolo è comunicare, non giudicare." }] },
+            { situation_update: "L'incendio viene domato. Il Sindaco revoca l'ordinanza di evacuazione. Le persone possono rientrare.", question: "Quale pericolo nascosto va comunicato ai residenti che rientrano?", choices: [{ text: "Il rischio di caduta alberi o rami indeboliti dal fuoco e il rischio di frane alle prime piogge a causa della vegetazione bruciata.", is_correct: true, feedback: "INFORMAZIONE DI SICUREZZA FONDAMENTALE. L'emergenza incendio finisce, ma iniziano i rischi post-evento. L'informazione alla popolazione su questi rischi è un compito cruciale." },{ text: "Nessuno, il pericolo è finito, il fuoco è spento.", is_correct: false, feedback: "SBAGLIATO. La fine dell'incendio è solo l'inizio della fase di post-emergenza, che presenta nuovi e diversi rischi." },{ text: "Il rischio che i ladri (sciacalli) approfittino della situazione.", is_correct: false, feedback: "IMPORTANTE, ma è un problema di ordine pubblico gestito dalle Forze dell'Ordine. Il tuo compito è informare sui rischi di protezione civile." }] },
+            { situation_update: "Un residente rientrando si lamenta con te che il suo giardino è stato rovinato dalle manichette dei soccorritori.", question: "Come gestisci la lamentela?", choices: [{ text: "Esprimo comprensione per il suo disagio e lo informo delle procedure per la richiesta di conta dei danni, indirizzandolo agli uffici comunali.", is_correct: true, feedback: "RISPOSTA PROFESSIONALE ED EMPATICA. Hai gestito la lamentela senza creare conflitto e hai fornito al cittadino il percorso istituzionale corretto per le sue istanze." },{ text: "Gli dico che dovrebbe ringraziarci per avergli salvato la casa invece di lamentarsi per un po' di erba.", is_correct: false, feedback: "SBAGLIATO. Anche se comprensibile, una risposta del genere è polemica e non professionale. Bisogna sempre mostrare empatia." },{ text: "Gli dico che non è un problema mio e che deve vedersela con i Vigili del Fuoco.", is_correct: false, feedback: "SBAGLIATO. Anche se non sei direttamente responsabile, fai parte del sistema di soccorso. 'Scaricare' il problema su altri enti non è un comportamento corretto." }] },
+            { situation_update: "Rifletti sull'operazione di evacuazione.", question: "Qual è stata la sfida più grande?", choices: [{ text: "La logistica e lo spostamento fisico delle persone.", is_correct: false, feedback: "IMPORTANTE, ma non è la sfida principale. La vera difficoltà non è nel 'fare', ma nel 'convincere'." },{ text: "La gestione della paura, dell'irrazionalità e dell'attaccamento ai beni delle persone sotto stress, che richiede grandi doti di comunicazione ed empatia.", is_correct: true, feedback: "ANALISI PERFETTA. Hai capito che la gestione di un'evacuazione è prima di tutto una complessa operazione psicologica e relazionale, dove la fiducia è lo strumento più importante." },{ text: "La fatica fisica di andare casa per casa a piedi.", is_correct: false, feedback: "È un fattore, ma la gestione delle persone è una sfida mentale ed emotiva molto più complessa di quella fisica." }] }
+        ];
+    </script>
+  <script src="scenario_engine.js"></script>
+</body>
+</html>
