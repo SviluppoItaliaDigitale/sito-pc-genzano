@@ -250,6 +250,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
+    // Fisher-Yates shuffle
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
     // Genera i pulsanti delle categorie
     let selectedCategories = new Set(categories.map(c => c.id));
 
@@ -315,8 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsScreen.classList.add('hide');
         quizScreen.classList.remove('hide');
 
-        let pool = questions.filter(q => selectedCategories.has(q.category));
-        pool = [...pool].sort(() => Math.random() - 0.5);
+        let pool = shuffle([...questions.filter(q => selectedCategories.has(q.category))]);
         if (selectedCount !== 'all') {
             const count = parseInt(selectedCount, 10);
             pool = pool.slice(0, Math.min(count, pool.length));
@@ -344,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showQuestion(question) {
         questionElement.innerText = question.question;
-        const shuffledAnswers = [...question.answers].sort(() => Math.random() - 0.5);
+        const shuffledAnswers = shuffle([...question.answers]);
         shuffledAnswers.forEach(answer => {
             const button = document.createElement('button');
             button.innerText = answer.text;
