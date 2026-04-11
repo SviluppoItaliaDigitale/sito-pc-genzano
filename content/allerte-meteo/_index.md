@@ -5,6 +5,9 @@ layout: "single"
 aliases:
   - /allertameteo.html
   - /allertameteo/
+sitemap:
+  priority: 0.9
+  changefreq: daily
 ---
 
 <div class="card border-warning mb-4">

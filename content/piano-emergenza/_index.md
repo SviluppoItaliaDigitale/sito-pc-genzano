@@ -5,6 +5,9 @@ layout: "single"
 aliases:
   - /pianodiemergenza.html
   - /pianodiemergenza/
+sitemap:
+  priority: 0.8
+  changefreq: monthly
 ---
 
 Il Piano di Emergenza Comunale è lo strumento fondamentale che stabilisce le procedure operative per affrontare qualsiasi calamità in modo organizzato ed efficace. È un documento predisposto dal Comune per la tutela della popolazione e del territorio.
