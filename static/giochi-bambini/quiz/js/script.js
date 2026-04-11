@@ -31,7 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const questions = [
-        // Terremoto
+        // ═══════════════════════════════════════
+        // TERREMOTO (9 domande)
+        // ═══════════════════════════════════════
         {
             category: 'terremoto',
             question: 'Cosa fai se senti una scossa di terremoto mentre sei in casa?',
@@ -65,7 +67,76 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             explanation: 'Sotto il banco sei protetto da quello che pu\u00f2 cadere. Le finestre possono rompersi, stai lontano!'
         },
-        // Incendio
+        {
+            category: 'terremoto',
+            question: 'Se sei al parco e senti una scossa di terremoto, dove vai?',
+            answers: [
+                { text: 'Sotto un albero grande', correct: false },
+                { text: 'Vicino a un muro alto', correct: false },
+                { text: 'In uno spazio aperto, lontano da edifici e alberi', correct: true },
+                { text: 'Dentro il bar pi\u00f9 vicino', correct: false }
+            ],
+            explanation: 'In uno spazio aperto non rischi che ti cadano addosso muri, tegole o rami. Stai lontano da tutto quello che pu\u00f2 crollare!'
+        },
+        {
+            category: 'terremoto',
+            question: 'Cosa devi proteggere per prima cosa durante una scossa?',
+            answers: [
+                { text: 'Il telefono', correct: false },
+                { text: 'Lo zaino di scuola', correct: false },
+                { text: 'La testa e il collo', correct: true },
+                { text: 'Le scarpe', correct: false }
+            ],
+            explanation: 'La testa \u00e8 la parte pi\u00f9 importante da proteggere. Usa le braccia, un cuscino o mettiti sotto qualcosa di solido!'
+        },
+        {
+            category: 'terremoto',
+            question: 'Dopo un terremoto, perch\u00e9 \u00e8 meglio indossare le scarpe prima di uscire?',
+            answers: [
+                { text: 'Per correre pi\u00f9 veloce', correct: false },
+                { text: 'Perch\u00e9 per terra ci possono essere vetri rotti e calcinacci', correct: true },
+                { text: 'Per non prendere freddo ai piedi', correct: false },
+                { text: 'Non serve, si pu\u00f2 uscire scalzi', correct: false }
+            ],
+            explanation: 'Dopo una scossa per terra ci possono essere pezzi di vetro, tegole e mattoni. Le scarpe ti proteggono i piedi!'
+        },
+        {
+            category: 'terremoto',
+            question: 'Si pu\u00f2 prevedere quando arriva un terremoto?',
+            answers: [
+                { text: 'S\u00ec, i meteorologi lo annunciano in TV', correct: false },
+                { text: 'S\u00ec, gli animali lo sentono sempre prima', correct: false },
+                { text: 'No, i terremoti non si possono prevedere', correct: true },
+                { text: 'S\u00ec, basta guardare le crepe nei muri', correct: false }
+            ],
+            explanation: 'Nessuno pu\u00f2 sapere in anticipo quando ci sar\u00e0 un terremoto. Per questo bisogna essere sempre preparati!'
+        },
+        {
+            category: 'terremoto',
+            question: 'Se durante un terremoto sei in auto con i tuoi genitori, cosa bisogna fare?',
+            answers: [
+                { text: 'Scendere subito e correre', correct: false },
+                { text: 'Fermarsi lontano da ponti e edifici e restare in auto', correct: true },
+                { text: 'Accelerare per fuggire', correct: false },
+                { text: 'Suonare il clacson per chiedere aiuto', correct: false }
+            ],
+            explanation: 'In auto si \u00e8 abbastanza protetti. Bisogna fermarsi in un posto aperto e aspettare che la scossa finisca.'
+        },
+        {
+            category: 'terremoto',
+            question: 'Dopo il terremoto, puoi rientrare subito in casa?',
+            answers: [
+                { text: 'S\u00ec, per prendere i giocattoli', correct: false },
+                { text: 'S\u00ec, se la porta si apre', correct: false },
+                { text: 'No, bisogna aspettare che le autorit\u00e0 dicano che \u00e8 sicuro', correct: true },
+                { text: 'S\u00ec, se non ci sono crepe visibili', correct: false }
+            ],
+            explanation: 'Anche se la casa sembra a posto, potrebbero esserci danni nascosti. Solo i tecnici possono dire se \u00e8 sicura!'
+        },
+
+        // ═══════════════════════════════════════
+        // INCENDIO (9 domande)
+        // ═══════════════════════════════════════
         {
             category: 'incendio',
             question: 'Se vedi un incendio in un bosco, cosa fai?',
@@ -99,7 +170,168 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             explanation: 'Il fumo tossico sale verso l\'alto. Vicino al pavimento l\'aria \u00e8 pi\u00f9 pulita e puoi respirare meglio.'
         },
-        // Numeri di emergenza
+        {
+            category: 'incendio',
+            question: 'Cosa pu\u00f2 causare un incendio nel bosco?',
+            answers: [
+                { text: 'La pioggia', correct: false },
+                { text: 'Un mozzicone di sigaretta gettato a terra', correct: true },
+                { text: 'Il vento leggero', correct: false },
+                { text: 'Gli uccelli', correct: false }
+            ],
+            explanation: 'Un piccolo mozzicone pu\u00f2 incendiare un intero bosco! Non si getta mai nulla per terra, soprattutto in estate.'
+        },
+        {
+            category: 'incendio',
+            question: 'Se vedi del fumo uscire da sotto la porta di una stanza, cosa fai?',
+            answers: [
+                { text: 'Apro la porta per vedere cosa succede', correct: false },
+                { text: 'Non apro la porta e cerco un\'altra via di uscita', correct: true },
+                { text: 'Butto acqua sotto la porta', correct: false },
+                { text: 'Aspetto che il fumo passi', correct: false }
+            ],
+            explanation: 'Se apri la porta, le fiamme e il fumo possono entrare di colpo! Cerca un\'altra uscita e chiedi aiuto.'
+        },
+        {
+            category: 'incendio',
+            question: 'A cosa serve l\'estintore che vedi a scuola?',
+            answers: [
+                { text: '\u00c8 un giocattolo rosso per decorare il corridoio', correct: false },
+                { text: 'Serve a spegnere un piccolo fuoco appena iniziato', correct: true },
+                { text: 'Serve a fare il ghiaccio', correct: false },
+                { text: 'Si usa per pulire i pavimenti', correct: false }
+            ],
+            explanation: 'L\'estintore serve a spegnere un fuoco piccolo. Solo gli adulti addestrati devono usarlo. Tu devi allontanarti e dare l\'allarme!'
+        },
+        {
+            category: 'incendio',
+            question: 'In estate, perch\u00e9 \u00e8 vietato accendere fuochi vicino al bosco?',
+            answers: [
+                { text: 'Perch\u00e9 fa troppo caldo per il fuoco', correct: false },
+                { text: 'Perch\u00e9 la vegetazione secca prende fuoco facilmente', correct: true },
+                { text: 'Perch\u00e9 si disturbano gli animali', correct: false },
+                { text: 'Non \u00e8 vietato, si pu\u00f2 fare se si sta attenti', correct: false }
+            ],
+            explanation: 'In estate piove poco e le foglie secche prendono fuoco con una sola scintilla. Basta pochissimo per un disastro!'
+        },
+        {
+            category: 'incendio',
+            question: 'Se i tuoi vestiti prendono fuoco, cosa devi fare?',
+            answers: [
+                { text: 'Correre velocissimo', correct: false },
+                { text: 'Fermarmi, buttarmi a terra e rotolarmi', correct: true },
+                { text: 'Togliere i vestiti tirando forte', correct: false },
+                { text: 'Saltare su e gi\u00f9', correct: false }
+            ],
+            explanation: 'Fermati, buttati a terra e rotola: cos\u00ec soffochi le fiamme. Correre fa entrare pi\u00f9 aria e il fuoco aumenta!'
+        },
+        {
+            category: 'incendio',
+            question: 'Dove si trova il numero dei Vigili del Fuoco?',
+            answers: [
+                { text: 'Non esiste un numero apposito', correct: false },
+                { text: 'Si chiama il 115 oppure il 112', correct: true },
+                { text: 'Si cerca su Internet durante l\'emergenza', correct: false },
+                { text: 'Bisogna andare di persona alla caserma', correct: false }
+            ],
+            explanation: 'I Vigili del Fuoco si chiamano al 115. In ogni emergenza puoi anche chiamare il 112, il numero unico europeo.'
+        },
+
+        // ═══════════════════════════════════════
+        // ALLUVIONE (8 domande)
+        // ═══════════════════════════════════════
+        {
+            category: 'alluvione',
+            question: 'Se piove molto forte e l\'acqua sale in strada, cosa fai?',
+            answers: [
+                { text: 'Esco a giocare con l\'acqua', correct: false },
+                { text: 'Scendo in cantina a controllare', correct: false },
+                { text: 'Vado ai piani alti e resto lontano dall\'acqua', correct: true },
+                { text: 'Attraverso la strada allagata a piedi', correct: false }
+            ],
+            explanation: 'I piani alti sono il posto pi\u00f9 sicuro. L\'acqua pu\u00f2 essere pericolosa anche se sembra bassa!'
+        },
+        {
+            category: 'alluvione',
+            question: 'Durante un\'alluvione, perch\u00e9 non bisogna scendere in cantina?',
+            answers: [
+                { text: 'Perch\u00e9 \u00e8 buio', correct: false },
+                { text: 'Perch\u00e9 l\'acqua pu\u00f2 riempirla velocemente e restare intrappolati', correct: true },
+                { text: 'Perch\u00e9 c\'\u00e8 troppo disordine', correct: false },
+                { text: 'Perch\u00e9 fa freddo', correct: false }
+            ],
+            explanation: 'La cantina \u00e8 il primo posto che si riempie d\'acqua. Si rischia di restare intrappolati senza via di uscita.'
+        },
+        {
+            category: 'alluvione',
+            question: 'Perch\u00e9 non si deve attraversare una strada allagata a piedi?',
+            answers: [
+                { text: 'Perch\u00e9 ci si bagnano le scarpe', correct: false },
+                { text: 'Perch\u00e9 sotto l\'acqua possono esserci buche, tombini aperti o correnti forti', correct: true },
+                { text: 'Perch\u00e9 l\'acqua \u00e8 sporca', correct: false },
+                { text: 'Si pu\u00f2 attraversare se l\'acqua \u00e8 bassa', correct: false }
+            ],
+            explanation: 'Anche pochi centimetri d\'acqua possono nascondere pericoli. Non sai cosa c\'\u00e8 sotto e la corrente ti pu\u00f2 trascinare!'
+        },
+        {
+            category: 'alluvione',
+            question: 'Se sei in auto e trovi un sottopassaggio pieno d\'acqua, cosa fai?',
+            answers: [
+                { text: 'Passo veloce cos\u00ec non mi fermo', correct: false },
+                { text: 'Mi fermo e torno indietro, cerco un\'altra strada', correct: true },
+                { text: 'Aspetto che l\'acqua si abbassi', correct: false },
+                { text: 'Passo piano piano', correct: false }
+            ],
+            explanation: 'Nei sottopassaggi l\'acqua pu\u00f2 essere molto pi\u00f9 profonda di quanto sembra. L\'auto si pu\u00f2 bloccare e rimanere sommersa!'
+        },
+        {
+            category: 'alluvione',
+            question: 'Cosa significa allerta arancione per rischio idrogeologico?',
+            answers: [
+                { text: 'Che fa caldo', correct: false },
+                { text: 'Che ci sar\u00e0 il sole', correct: false },
+                { text: 'Che sono previste piogge molto forti e bisogna fare attenzione', correct: true },
+                { text: 'Che si pu\u00f2 uscire normalmente', correct: false }
+            ],
+            explanation: 'Allerta arancione significa che possono arrivare piogge intense con rischio di allagamenti e frane. Meglio stare al sicuro!'
+        },
+        {
+            category: 'alluvione',
+            question: 'Dopo un\'alluvione, si pu\u00f2 bere l\'acqua del rubinetto?',
+            answers: [
+                { text: 'S\u00ec, sempre', correct: false },
+                { text: 'Solo se \u00e8 calda', correct: false },
+                { text: 'No, finch\u00e9 le autorit\u00e0 non dicono che \u00e8 sicura', correct: true },
+                { text: 'S\u00ec, basta farla bollire', correct: false }
+            ],
+            explanation: 'L\'acqua del rubinetto potrebbe essere inquinata. Aspetta sempre che le autorit\u00e0 dicano che si pu\u00f2 bere!'
+        },
+        {
+            category: 'alluvione',
+            question: 'Cosa \u00e8 una frana?',
+            answers: [
+                { text: 'Un forte vento che soffia dalla montagna', correct: false },
+                { text: 'Una massa di terra e rocce che scivola lungo un pendio', correct: true },
+                { text: 'Un tipo di terremoto', correct: false },
+                { text: 'Un fiume che straripa', correct: false }
+            ],
+            explanation: 'Una frana \u00e8 quando la terra di un pendio si stacca e scende verso il basso, portando con s\u00e9 tutto quello che incontra.'
+        },
+        {
+            category: 'alluvione',
+            question: 'Dove bisogna andare se la propria casa rischia di essere allagata?',
+            answers: [
+                { text: 'In cantina', correct: false },
+                { text: 'In garage', correct: false },
+                { text: 'Ai piani alti o in un luogo sicuro indicato dal Comune', correct: true },
+                { text: 'Sul tetto', correct: false }
+            ],
+            explanation: 'I piani alti sono pi\u00f9 sicuri. Il Comune indica anche le aree di raccolta dove andare in caso di evacuazione.'
+        },
+
+        // ═══════════════════════════════════════
+        // NUMERI DI EMERGENZA (8 domande)
+        // ═══════════════════════════════════════
         {
             category: 'numeri',
             question: 'Qual \u00e8 il numero unico di emergenza da chiamare in Italia?',
@@ -133,7 +365,65 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             explanation: 'Il 1515 \u00e8 il numero per gli incendi boschivi. Puoi anche chiamare il 112 o il 115 (Vigili del Fuoco).'
         },
-        // Zaino di emergenza
+        {
+            category: 'numeri',
+            question: 'Il 112 funziona anche se non hai credito sul telefono?',
+            answers: [
+                { text: 'No, serve credito', correct: false },
+                { text: 'S\u00ec, il 112 \u00e8 sempre gratuito e funziona anche senza credito', correct: true },
+                { text: 'Solo con i telefoni fissi', correct: false },
+                { text: 'Funziona solo di giorno', correct: false }
+            ],
+            explanation: 'Il 112 \u00e8 gratuito e funziona sempre: senza credito, senza SIM e da qualsiasi telefono, anche da quello di un amico!'
+        },
+        {
+            category: 'numeri',
+            question: 'Quale numero chiami se qualcuno si sente molto male?',
+            answers: [
+                { text: '115', correct: false },
+                { text: '117', correct: false },
+                { text: '118 oppure il 112', correct: true },
+                { text: '1515', correct: false }
+            ],
+            explanation: 'Il 118 \u00e8 il numero dell\'emergenza sanitaria: manda l\'ambulanza. Puoi anche chiamare il 112, che smista la chiamata.'
+        },
+        {
+            category: 'numeri',
+            question: '\u00c8 giusto chiamare il 112 per scherzo?',
+            answers: [
+                { text: 'S\u00ec, tanto non succede niente', correct: false },
+                { text: 'S\u00ec, per fare una prova', correct: false },
+                { text: 'No, perch\u00e9 si occupano le linee e chi ha davvero bisogno potrebbe non riuscire a chiamare', correct: true },
+                { text: 'Solo se lo faccio una volta sola', correct: false }
+            ],
+            explanation: 'Chiamare per scherzo \u00e8 un reato! Ogni chiamata falsa toglie tempo e risorse a chi ha davvero bisogno di aiuto.'
+        },
+        {
+            category: 'numeri',
+            question: 'Il numero 112 funziona in tutta Europa?',
+            answers: [
+                { text: 'No, solo in Italia', correct: false },
+                { text: 'S\u00ec, \u00e8 il numero di emergenza in tutta Europa', correct: true },
+                { text: 'Solo in Italia e Francia', correct: false },
+                { text: 'Solo se hai una SIM europea', correct: false }
+            ],
+            explanation: 'Il 112 \u00e8 il numero unico europeo. Se sei in vacanza in un altro Paese, puoi sempre chiamare il 112!'
+        },
+        {
+            category: 'numeri',
+            question: 'Se ti perdi in un luogo che non conosci, chi chiami?',
+            answers: [
+                { text: 'Nessuno, cerco da solo la strada', correct: false },
+                { text: 'I miei genitori o, se non rispondono, il 112', correct: true },
+                { text: 'Un amico per farmi compagnia al telefono', correct: false },
+                { text: 'Il pizzaiolo', correct: false }
+            ],
+            explanation: 'Prima chiama un adulto di fiducia. Se non riesci a raggiungerlo, il 112 pu\u00f2 aiutarti a farti trovare.'
+        },
+
+        // ═══════════════════════════════════════
+        // ZAINO DI EMERGENZA (8 domande)
+        // ═══════════════════════════════════════
         {
             category: 'zaino',
             question: 'Cosa non deve mancare in uno zaino di emergenza?',
@@ -156,30 +446,76 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             explanation: 'Il fischietto si sente molto lontano e non ti fa stancare la voce. I soccorritori lo cercano!'
         },
-        // Alluvione
         {
-            category: 'alluvione',
-            question: 'Se piove molto forte e l\'acqua sale in strada, cosa fai?',
+            category: 'zaino',
+            question: 'Dove bisogna tenere lo zaino di emergenza?',
             answers: [
-                { text: 'Esco a giocare con l\'acqua', correct: false },
-                { text: 'Scendo in cantina a controllare', correct: false },
-                { text: 'Vado ai piani alti e resto lontano dall\'acqua', correct: true },
-                { text: 'Attraverso la strada allagata a piedi', correct: false }
+                { text: 'In cantina, nascosto', correct: false },
+                { text: 'Nella macchina', correct: false },
+                { text: 'Vicino alla porta di casa, facile da prendere', correct: true },
+                { text: 'A scuola', correct: false }
             ],
-            explanation: 'I piani alti sono il posto pi\u00f9 sicuro. L\'acqua pu\u00f2 essere pericolosa anche se sembra bassa!'
+            explanation: 'Lo zaino deve essere facile da prendere e pronto: vicino alla porta o in corridoio. In emergenza non c\'\u00e8 tempo di cercarlo!'
         },
         {
-            category: 'alluvione',
-            question: 'Durante un\'alluvione, perch\u00e9 non bisogna scendere in cantina?',
+            category: 'zaino',
+            question: 'Perch\u00e9 nello zaino di emergenza serve una radio a pile?',
             answers: [
-                { text: 'Perch\u00e9 \u00e8 buio', correct: false },
-                { text: 'Perch\u00e9 l\'acqua pu\u00f2 riempirla velocemente e restare intrappolati', correct: true },
-                { text: 'Perch\u00e9 c\'\u00e8 troppo disordine', correct: false },
-                { text: 'Perch\u00e9 fa freddo', correct: false }
+                { text: 'Per ascoltare la musica', correct: false },
+                { text: 'Per ricevere le informazioni ufficiali anche se manca la corrente', correct: true },
+                { text: 'Per parlare con i vicini', correct: false },
+                { text: 'Non serve, basta il telefono', correct: false }
             ],
-            explanation: 'La cantina \u00e8 il primo posto che si riempie d\'acqua. Si rischia di restare intrappolati senza via di uscita.'
+            explanation: 'Se manca la corrente e il telefono non ha batteria, la radio a pile funziona sempre e ti permette di ascoltare le notizie!'
         },
-        // Evacuazione scuola
+        {
+            category: 'zaino',
+            question: 'Ogni quanto bisogna controllare lo zaino di emergenza?',
+            answers: [
+                { text: 'Mai, una volta preparato va bene per sempre', correct: false },
+                { text: 'Almeno due volte l\'anno, per verificare scadenze e pile', correct: true },
+                { text: 'Solo quando c\'\u00e8 un\'emergenza', correct: false },
+                { text: 'Ogni giorno', correct: false }
+            ],
+            explanation: 'L\'acqua scade, le pile si scaricano e i medicinali possono scadere. Controlla tutto almeno due volte l\'anno!'
+        },
+        {
+            category: 'zaino',
+            question: 'Nello zaino di emergenza servono anche i documenti?',
+            answers: [
+                { text: 'No, non servono a niente', correct: false },
+                { text: 'S\u00ec, una copia dei documenti della famiglia', correct: true },
+                { text: 'Solo la tessera della biblioteca', correct: false },
+                { text: 'Solo la tessera del supermercato', correct: false }
+            ],
+            explanation: 'Una copia dei documenti \u00e8 importante per farsi identificare, ricevere aiuto e dimostrare chi sei durante l\'emergenza.'
+        },
+        {
+            category: 'zaino',
+            question: 'Quale tipo di scarpe bisogna avere pronte nello zaino?',
+            answers: [
+                { text: 'Ciabatte da spiaggia', correct: false },
+                { text: 'Scarpe chiuse e robuste', correct: true },
+                { text: 'Scarpe con i tacchi', correct: false },
+                { text: 'Non servono scarpe', correct: false }
+            ],
+            explanation: 'Dopo un\'emergenza per terra possono esserci vetri, macerie e fango. Le scarpe chiuse proteggono i piedi!'
+        },
+        {
+            category: 'zaino',
+            question: 'Se hai un animale domestico, cosa devi aggiungere allo zaino?',
+            answers: [
+                { text: 'I suoi giocattoli preferiti', correct: false },
+                { text: 'Cibo, acqua e il suo libretto sanitario', correct: true },
+                { text: 'Niente, gli animali si arrangiano', correct: false },
+                { text: 'Solo il guinzaglio', correct: false }
+            ],
+            explanation: 'Anche il tuo animale ha bisogno di cibo, acqua e documenti. Non dimenticarlo nello zaino di emergenza!'
+        },
+
+        // ═══════════════════════════════════════
+        // EVACUAZIONE SCUOLA (8 domande)
+        // ═══════════════════════════════════════
         {
             category: 'evacuazione',
             question: 'Quando suona l\'allarme di evacuazione a scuola, cosa fai?',
@@ -202,7 +538,76 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             explanation: 'Al punto di raccolta l\'insegnante fa l\'appello per verificare che nessuno manchi. \u00c8 un posto sicuro!'
         },
-        // Protezione Civile
+        {
+            category: 'evacuazione',
+            question: 'Chi guida la fila durante l\'evacuazione a scuola?',
+            answers: [
+                { text: 'Il pi\u00f9 veloce della classe', correct: false },
+                { text: 'L\'aprifila, un compagno scelto dall\'insegnante', correct: true },
+                { text: 'Il rappresentante di classe', correct: false },
+                { text: 'Ognuno va per conto suo', correct: false }
+            ],
+            explanation: 'In ogni classe c\'\u00e8 un aprifila che guida i compagni e un chiudifila che si assicura che nessuno resti indietro.'
+        },
+        {
+            category: 'evacuazione',
+            question: 'Durante l\'evacuazione, perch\u00e9 non devi correre?',
+            answers: [
+                { text: 'Perch\u00e9 l\'insegnante si arrabbia', correct: false },
+                { text: 'Perch\u00e9 correndo si pu\u00f2 cadere, fare cadere gli altri e creare panico', correct: true },
+                { text: 'Perch\u00e9 si suda', correct: false },
+                { text: 'Si pu\u00f2 correre se si ha paura', correct: false }
+            ],
+            explanation: 'Camminare spediti ma senza correre evita cadute e panico. Quando tutti restano calmi, si esce pi\u00f9 in fretta!'
+        },
+        {
+            category: 'evacuazione',
+            question: 'Se durante l\'evacuazione un compagno cade, cosa fai?',
+            answers: [
+                { text: 'Lo scavalco e continuo', correct: false },
+                { text: 'Lo aiuto ad alzarsi e avviso l\'insegnante', correct: true },
+                { text: 'Mi fermo e aspetto', correct: false },
+                { text: 'Torno in classe', correct: false }
+            ],
+            explanation: 'Aiutare un compagno in difficolt\u00e0 \u00e8 importante, ma senza bloccare la fila. Avvisa subito l\'insegnante!'
+        },
+        {
+            category: 'evacuazione',
+            question: 'Perch\u00e9 a scuola si fanno le prove di evacuazione?',
+            answers: [
+                { text: 'Per perdere un\'ora di lezione', correct: false },
+                { text: 'Per imparare cosa fare in caso di emergenza vera', correct: true },
+                { text: 'Perch\u00e9 il preside lo ordina per divertimento', correct: false },
+                { text: 'Per fare ginnastica', correct: false }
+            ],
+            explanation: 'Le prove servono a imparare il percorso e i comportamenti corretti. Cos\u00ec, se succede davvero, sai gi\u00e0 cosa fare!'
+        },
+        {
+            category: 'evacuazione',
+            question: 'Se sei in bagno quando suona l\'allarme di evacuazione, cosa fai?',
+            answers: [
+                { text: 'Resto in bagno ad aspettare', correct: false },
+                { text: 'Torno in classe a prendere le cose', correct: false },
+                { text: 'Esco subito e raggiungo il punto di raccolta o la classe pi\u00f9 vicina', correct: true },
+                { text: 'Chiamo i miei genitori', correct: false }
+            ],
+            explanation: 'Se sei fuori dalla classe, raggiungi il punto di raccolta o unisciti alla fila pi\u00f9 vicina. L\'importante \u00e8 farsi trovare!'
+        },
+        {
+            category: 'evacuazione',
+            question: 'Cosa NON devi portare con te durante l\'evacuazione?',
+            answers: [
+                { text: 'Me stesso', correct: false },
+                { text: 'Lo zaino pesante, i libri e gli oggetti ingombranti', correct: true },
+                { text: 'Il giubbotto se fa freddo', correct: false },
+                { text: 'Un compagno in difficolt\u00e0', correct: false }
+            ],
+            explanation: 'Zaini e oggetti rallentano la fila e possono far inciampare. Lascia tutto in classe e pensa solo a uscire in sicurezza!'
+        },
+
+        // ═══════════════════════════════════════
+        // PROTEZIONE CIVILE (8 domande)
+        // ═══════════════════════════════════════
         {
             category: 'protezione-civile',
             question: 'Chi sono i volontari di Protezione Civile?',
@@ -225,7 +630,76 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             explanation: 'Arancione significa attenzione! Possono arrivare piogge forti o vento. Meglio restare al sicuro.'
         },
-        // Sicurezza in casa
+        {
+            category: 'protezione-civile',
+            question: 'Cosa significa "prevenzione" nella Protezione Civile?',
+            answers: [
+                { text: 'Aspettare che succeda qualcosa e poi intervenire', correct: false },
+                { text: 'Prepararsi prima che arrivi un\'emergenza per ridurre i danni', correct: true },
+                { text: 'Prevedere il futuro', correct: false },
+                { text: 'Costruire muri altissimi', correct: false }
+            ],
+            explanation: 'Prevenzione significa prepararsi in anticipo: conoscere i rischi, sapere cosa fare e avere tutto pronto. \u00c8 la cosa pi\u00f9 importante!'
+        },
+        {
+            category: 'protezione-civile',
+            question: 'Quale colore di allerta meteo indica il pericolo pi\u00f9 alto?',
+            answers: [
+                { text: 'Giallo', correct: false },
+                { text: 'Verde', correct: false },
+                { text: 'Arancione', correct: false },
+                { text: 'Rosso', correct: true }
+            ],
+            explanation: 'Rosso \u00e8 il livello massimo: significa fenomeni molto forti e rischio elevato. Bisogna seguire tutte le indicazioni delle autorit\u00e0!'
+        },
+        {
+            category: 'protezione-civile',
+            question: 'Cosa fa la Protezione Civile quando non ci sono emergenze?',
+            answers: [
+                { text: 'Niente, aspetta che succeda qualcosa', correct: false },
+                { text: 'Si allena, fa prevenzione, controlla il territorio e forma i volontari', correct: true },
+                { text: 'Va in vacanza', correct: false },
+                { text: 'Lavora solo in ufficio', correct: false }
+            ],
+            explanation: 'La Protezione Civile lavora soprattutto quando non ci sono emergenze: si prepara, fa esercitazioni e aiuta i cittadini a essere pronti.'
+        },
+        {
+            category: 'protezione-civile',
+            question: 'Allerta verde significa che:',
+            answers: [
+                { text: 'Bisogna stare a casa', correct: false },
+                { text: 'Non ci sono pericoli particolari, situazione tranquilla', correct: true },
+                { text: 'C\'\u00e8 un pericolo legato alla natura', correct: false },
+                { text: 'Si deve andare al punto di raccolta', correct: false }
+            ],
+            explanation: 'Verde significa tutto tranquillo: nessuna allerta in corso. Ma ricorda: essere preparati \u00e8 sempre importante!'
+        },
+        {
+            category: 'protezione-civile',
+            question: 'Anche i bambini possono aiutare nella prevenzione?',
+            answers: [
+                { text: 'No, la prevenzione \u00e8 solo per gli adulti', correct: false },
+                { text: 'S\u00ec, imparando le regole di sicurezza e aiutando la famiglia a prepararsi', correct: true },
+                { text: 'Solo i bambini molto grandi', correct: false },
+                { text: 'Solo se vanno a un corso speciale', correct: false }
+            ],
+            explanation: 'Certo che s\u00ec! Imparare i comportamenti corretti, preparare lo zaino di emergenza e conoscere i numeri da chiamare: anche tu fai prevenzione!'
+        },
+        {
+            category: 'protezione-civile',
+            question: 'Cos\'\u00e8 il Piano di Emergenza Comunale?',
+            answers: [
+                { text: 'Un piano per costruire case nuove', correct: false },
+                { text: 'Un documento che spiega cosa fare e dove andare in caso di emergenza nel proprio Comune', correct: true },
+                { text: 'Un elenco di ristoranti', correct: false },
+                { text: 'Un programma televisivo', correct: false }
+            ],
+            explanation: 'Ogni Comune ha un Piano di Emergenza che indica le aree sicure, i percorsi di evacuazione e chi fa cosa in caso di emergenza.'
+        },
+
+        // ═══════════════════════════════════════
+        // SICUREZZA IN CASA (8 domande)
+        // ═══════════════════════════════════════
         {
             category: 'sicurezza',
             question: 'Se senti odore di gas in casa, cosa fai?',
@@ -247,6 +721,72 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Non \u00e8 importante, ci pensa l\'insegnante', correct: false }
             ],
             explanation: 'Se conosci la via di fuga, in emergenza sai subito dove andare. La preparazione \u00e8 la migliore protezione!'
+        },
+        {
+            category: 'sicurezza',
+            question: 'Se manca la corrente in casa, cosa usi per fare luce?',
+            answers: [
+                { text: 'Le candele', correct: false },
+                { text: 'L\'accendino', correct: false },
+                { text: 'Una torcia elettrica a pile', correct: true },
+                { text: 'Il forno acceso', correct: false }
+            ],
+            explanation: 'La torcia \u00e8 sicura perch\u00e9 non ha fiamme. Candele e accendini possono causare incendi, soprattutto al buio!'
+        },
+        {
+            category: 'sicurezza',
+            question: 'Perch\u00e9 non si devono toccare le prese elettriche con le mani bagnate?',
+            answers: [
+                { text: 'Perch\u00e9 si sporcano le prese', correct: false },
+                { text: 'Perch\u00e9 l\'acqua conduce l\'elettricit\u00e0 e si rischia una scossa', correct: true },
+                { text: 'Perch\u00e9 si rompono', correct: false },
+                { text: 'Si possono toccare, non \u00e8 pericoloso', correct: false }
+            ],
+            explanation: 'L\'acqua fa passare la corrente elettrica attraverso il corpo. \u00c8 molto pericoloso! Asciuga sempre bene le mani prima.'
+        },
+        {
+            category: 'sicurezza',
+            question: 'Dove si conservano i prodotti per la pulizia in modo sicuro?',
+            answers: [
+                { text: 'Sul tavolo della cucina', correct: false },
+                { text: 'Vicino al cibo', correct: false },
+                { text: 'In un mobile chiuso, lontano dalla portata dei bambini', correct: true },
+                { text: 'In camera da letto', correct: false }
+            ],
+            explanation: 'I prodotti per la pulizia sono velenosi. Devono stare in un mobile chiuso a chiave o in alto dove i bambini non arrivano.'
+        },
+        {
+            category: 'sicurezza',
+            question: 'Se sei da solo in casa e qualcuno bussa alla porta, cosa fai?',
+            answers: [
+                { text: 'Apro subito', correct: false },
+                { text: 'Guardo dallo spioncino e se non conosco la persona non apro', correct: true },
+                { text: 'Apro un po\' per vedere chi \u00e8', correct: false },
+                { text: 'Grido "chi \u00e8?" e poi apro', correct: false }
+            ],
+            explanation: 'Non aprire mai la porta a sconosciuti quando sei solo! Guarda dallo spioncino e, se hai dubbi, chiama un adulto di fiducia.'
+        },
+        {
+            category: 'sicurezza',
+            question: 'Perch\u00e9 \u00e8 importante che tutti in famiglia sappiano dove si chiude il gas?',
+            answers: [
+                { text: 'Per risparmiare sulla bolletta', correct: false },
+                { text: 'Per chiuderlo subito in caso di fuga di gas o terremoto', correct: true },
+                { text: 'Per pulire il tubo del gas', correct: false },
+                { text: 'Non \u00e8 importante, ci pensa il tecnico', correct: false }
+            ],
+            explanation: 'Se senti odore di gas o c\'\u00e8 un terremoto, chiudere subito il rubinetto del gas pu\u00f2 evitare esplosioni e incendi.'
+        },
+        {
+            category: 'sicurezza',
+            question: 'Qual \u00e8 il posto pi\u00f9 sicuro dove ripararsi in casa durante un temporale con fulmini?',
+            answers: [
+                { text: 'Vicino alla finestra per guardare', correct: false },
+                { text: 'In balcone sotto la tettoia', correct: false },
+                { text: 'Al centro della stanza, lontano da finestre e apparecchi elettrici', correct: true },
+                { text: 'Nella vasca da bagno', correct: false }
+            ],
+            explanation: 'I fulmini possono colpire gli apparecchi collegati alla corrente e le finestre. Stai al centro della stanza, al sicuro!'
         }
     ];
 
