@@ -4,6 +4,9 @@ description: "Risposte alle domande più comuni su allerte meteo, emergenze, pro
 layout: "single"
 aliases:
   - /faq/
+sitemap:
+  priority: 0.7
+  changefreq: monthly
 ---
 
 ## Allerte Meteo

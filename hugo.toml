@@ -65,14 +65,19 @@ theme = "flavour-pcgenzano"
   weight = 5
 
 [[menus.main]]
+  name = "Formazione"
+  url = "/formazione/"
+  weight = 6
+
+[[menus.main]]
   name = "Diventa Volontario"
   url = "/diventa-volontario/"
-  weight = 6
+  weight = 7
 
 [[menus.main]]
   name = "Contatti"
   url = "/contatti/"
-  weight = 7
+  weight = 8
 
 # Menu footer — Link utili
 [[menus.footer]]
@@ -149,6 +154,11 @@ home = ["HTML", "RSS", "JSON"]
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
+
+# Sitemap — priorità per sezione (override del default 0.5)
+[frontmatter]
+  date = ["date"]
+  lastmod = [":fileModTime", "lastmod"]
 
 # Impostazioni Markdown
 [markup]

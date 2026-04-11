@@ -1,9 +1,11 @@
 {{/* Dati strutturati JSON-LD — SEO
-     Organization per homepage, Article per comunicazioni, WebPage per il resto */}}
+     Organization per homepage, Article per comunicazioni, FAQPage per FAQ, WebPage per il resto */}}
 {{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
 {{- $basePath := (urls.Parse .Site.BaseURL).Path | default "/" -}}
 {{- $pagePath := strings.TrimPrefix $basePath .RelPermalink -}}
 {{- $prodURL := printf "%s/%s" (strings.TrimRight "/" $prodBase) $pagePath -}}
+{{- $isFAQ := false -}}
+{{- with .File }}{{ if eq .LogicalName "_index.md" }}{{ if eq $.Section "faq" }}{{ $isFAQ = true }}{{ end }}{{ end }}{{ end -}}
 {{ if .IsHome }}
 <script type="application/ld+json">
 {
@@ -57,6 +59,98 @@
 }
 </script>
 {{ end }}
+{{ else if $isFAQ }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "url": "{{ $prodURL }}",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cosa significa allerta gialla, arancione e rossa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I codici colore indicano il livello di criticità prevista. Il verde significa nessuna criticità. Il giallo indica attenzione per fenomeni moderati. L'arancione indica preallarme con fenomeni potenzialmente pericolosi. Il rosso indica allarme con fenomeni molto intensi e possibili danni gravi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Chi emette le allerte meteo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le allerte sono emesse dal Centro Funzionale Regionale dell'Agenzia di Protezione Civile del Lazio, sulla base dei bollettini del Dipartimento Nazionale della Protezione Civile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dove trovo il bollettino ufficiale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sul sito dell'Agenzia di Protezione Civile della Regione Lazio. Lo stato aggiornato è visibile anche sulla barra allerta nella homepage del sito."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come posso attivare la Protezione Civile di Genzano?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In caso di emergenza, chiama il 112 o l'803 555: saranno loro ad allertare le squadre se necessario."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cosa devo fare se sento una scossa di terremoto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se sei in casa, riparati sotto un tavolo robusto o vicino a un muro portante. Non usare ascensori. Dopo la scossa, esci con prudenza e raggiungi le aree di attesa previste dal Piano di Emergenza."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dove sono le aree di emergenza più vicine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le aree di attesa, ricovero e ammassamento sono elencate nella pagina Cartografia Operativa con indirizzi e tabelle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cos'è IT-alert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IT-alert è il sistema nazionale di allarme pubblico che invia messaggi ai telefoni cellulari presenti in un'area colpita da una grave emergenza. Funziona anche senza connessione internet e senza app installate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come preparo un kit di emergenza?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prepara uno zaino con acqua, cibo a lunga conservazione, torcia, radio a pile, documenti, medicinali e un cambio di vestiti."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cos'è il Piano Familiare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "È un documento che ogni famiglia dovrebbe compilare per sapere cosa fare, dove andare e chi contattare in caso di emergenza."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come posso diventare volontario?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puoi iscriverti di persona alla sede (Via Sicilia, 13-15), telefonicamente o via email. Si può entrare nel Gruppo a partire dai 16 anni, con piena operatività al compimento dei 18 anni. Ogni nuovo volontario segue un corso di formazione base obbligatorio."
+      }
+    }
+  ]
+}
+</script>
 {{ else }}
 <script type="application/ld+json">
 {
@@ -70,6 +164,39 @@
     "name": "{{ .Site.Title }}",
     "url": "{{ $prodBase }}"
   }
+}
+</script>
+{{ end }}
+{{/* BreadcrumbList — tutte le pagine tranne la homepage */}}
+{{ if not .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ $prodBase }}"
+    }{{ if and .Parent (not .Parent.IsHome) }},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ .Parent.Title }}",
+      "item": "{{ printf "%s/%s" (strings.TrimRight "/" $prodBase) (strings.TrimPrefix $basePath .Parent.RelPermalink) }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ .Title }}"
+    }{{ else }},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ .Title }}"
+    }{{ end }}
+  ]
 }
 </script>
 {{ end }}

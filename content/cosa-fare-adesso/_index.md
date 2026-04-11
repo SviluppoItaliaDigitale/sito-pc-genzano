@@ -4,6 +4,9 @@ description: "Azioni immediate in caso di emergenza a Genzano di Roma: numeri da
 layout: "single"
 aliases:
   - /cosa-fare/
+sitemap:
+  priority: 0.8
+  changefreq: monthly
 ---
 
 <div class="card border-danger mb-4">
