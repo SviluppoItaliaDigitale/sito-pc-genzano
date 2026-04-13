@@ -110,22 +110,29 @@ Un piano familiare efficace risponde a tre domande:
 </div>
 
 <div id="piano-output" class="d-none">
-<div class="card shadow p-4 mb-4" id="piano-stampabile">
-<h2 class="text-center mb-1">Piano di Emergenza Familiare</h2>
-<p class="text-center text-muted mb-0">Protezione Civile Genzano di Roma — Gruppo Comunale Volontari</p>
-<p class="text-center text-muted small">Documento generato il <span id="data-piano"></span></p>
+<div id="piano-stampabile" class="card shadow p-4 mb-4">
+<div class="piano-print-header text-center">
+<h2 class="mb-1">Piano di Emergenza Familiare</h2>
+<p class="text-muted mb-0">Protezione Civile Genzano di Roma &mdash; Gruppo Comunale Volontari</p>
+<p class="text-muted small mb-0">Documento generato il <span id="data-piano"></span></p>
+</div>
 <hr>
 <div id="piano-contenuto"></div>
-<hr>
-<p class="small text-muted text-center mb-0">
-Numeri di Emergenza: <strong>112</strong> (NUE) — <strong>115</strong> (VVF) — <strong>118</strong> (Sanitaria) — <strong>803 555</strong> (PC Lazio) — <strong>1515</strong> (Incendi boschivi)<br>
-Conservare in un luogo accessibile a tutti i familiari. Aggiornare almeno una volta all'anno.</p>
+<div class="piano-numeri text-center mt-4 p-3">
+<strong>Numeri di Emergenza</strong><br>
+<strong>112</strong> Numero Unico Emergenze &mdash; <strong>115</strong> Vigili del Fuoco &mdash; <strong>118</strong> Emergenza Sanitaria<br>
+<strong>803 555</strong> Protezione Civile Lazio &mdash; <strong>1515</strong> Incendi Boschivi<br>
+<small class="text-muted">Conservare in un luogo accessibile a tutti i familiari. Aggiornare almeno una volta all'anno.</small>
 </div>
-<div class="d-flex flex-wrap gap-2 mb-4">
-<button type="button" class="btn btn-success btn-lg" onclick="window.print()"><i class="bi bi-printer me-2" aria-hidden="true"></i>Stampa il Piano</button>
+<div id="piano-print-appendice"></div>
+</div>
+<div class="d-flex flex-wrap gap-2 mb-4 piano-buttons">
+<button type="button" class="btn btn-success btn-lg" onclick="stampaPiano()"><i class="bi bi-printer me-2" aria-hidden="true"></i>Stampa / Salva PDF</button>
 <button type="button" class="btn btn-outline-primary btn-lg" onclick="document.getElementById('piano-output').classList.add('d-none');window.scrollTo({top:0,behavior:'smooth'})"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Modifica</button>
 </div>
 </div>
+
+<div class="piano-screen-only">
 
 ## Consigli per famiglie con bambini
 
@@ -169,49 +176,96 @@ Verifica di aver fatto tutto:
 - ☐ Verificato dove sono i rubinetti del gas/acqua e il quadro elettrico
 - ☐ Scaricato l'app [Where ARE U](https://where.areu.lombardia.it/) per le chiamate al 112
 
+</div>
+
 <script>
-function generaPiano() {
-  var cognome = document.getElementById('cognome').value || 'Non indicato';
-  var indirizzo = document.getElementById('indirizzo').value || 'Non indicato';
-  var adulti = document.getElementById('adulti').value;
-  var bambini = document.getElementById('bambini').value;
-  var anziani = document.getElementById('anziani').value;
-  var animali = document.getElementById('animali').value || 'Nessuno';
-  var vicino = document.getElementById('ritrovo-vicino').value || 'Non indicato';
-  var lontano = document.getElementById('ritrovo-lontano').value || 'Non indicato';
-  var contatto = document.getElementById('contatto-fuori').value || 'Non indicato';
-  var medico = document.getElementById('medico').value || 'Non indicato';
-  var kit = document.getElementById('kit-emergenza').value || 'Non indicato';
-  var chiusure = document.getElementById('chiusure').value || 'Non indicato';
-  var farmaci = document.getElementById('farmaci').value || 'Nessuno';
-  var ausili = document.getElementById('ausili').value || 'Nessuno';
-  var note = document.getElementById('note').value || '';
+function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
 
-  var html = '<h3>Famiglia ' + cognome + '</h3>';
-  html += '<p><strong>Indirizzo:</strong> ' + indirizzo + '</p>';
-  html += '<p>Adulti: <strong>' + adulti + '</strong> — Bambini/Ragazzi: <strong>' + bambini + '</strong> — Anziani/Fragili: <strong>' + anziani + '</strong></p>';
-  html += '<p>Animali domestici: <strong>' + animali + '</strong></p>';
+function generaPiano(){
+  var cognome=esc(document.getElementById('cognome').value||'Non indicato');
+  var indirizzo=esc(document.getElementById('indirizzo').value||'Non indicato');
+  var adulti=parseInt(document.getElementById('adulti').value)||0;
+  var bambini=parseInt(document.getElementById('bambini').value)||0;
+  var anziani=parseInt(document.getElementById('anziani').value)||0;
+  var animali=esc(document.getElementById('animali').value||'Nessuno');
+  var vicino=esc(document.getElementById('ritrovo-vicino').value||'Non indicato');
+  var lontano=esc(document.getElementById('ritrovo-lontano').value||'Non indicato');
+  var contatto=esc(document.getElementById('contatto-fuori').value||'Non indicato');
+  var medico=esc(document.getElementById('medico').value||'Non indicato');
+  var kit=esc(document.getElementById('kit-emergenza').value||'Non indicato');
+  var chiusure=esc(document.getElementById('chiusure').value||'Non indicato');
+  var farmaci=esc(document.getElementById('farmaci').value||'Nessuno');
+  var ausili=esc(document.getElementById('ausili').value||'Nessuno');
+  var note=esc(document.getElementById('note').value||'');
 
-  html += '<h3>Punti di Ritrovo</h3>';
-  html += '<p>Vicino casa: <strong>' + vicino + '</strong></p>';
-  html += '<p>Lontano da casa: <strong>' + lontano + '</strong></p>';
+  var h='';
 
-  html += '<h3>Contatti e Risorse</h3>';
-  html += '<p>Riferimento fuori città: <strong>' + contatto + '</strong></p>';
-  html += '<p>Medico di famiglia: <strong>' + medico + '</strong></p>';
-  html += '<p>Kit di emergenza: <strong>' + kit + '</strong></p>';
-  html += '<p>Rubinetti e quadro elettrico: <strong>' + chiusure + '</strong></p>';
+  /* ── Sezione 1: Famiglia ── */
+  h+='<h3 class="piano-section-title">La mia Famiglia</h3>';
+  h+='<table class="piano-table" role="presentation"><tbody>';
+  h+='<tr><td>Cognome</td><td><strong>'+cognome+'</strong></td></tr>';
+  h+='<tr><td>Indirizzo</td><td><strong>'+indirizzo+'</strong></td></tr>';
+  h+='<tr><td>Composizione</td><td>Adulti: <strong>'+adulti+'</strong> &mdash; Bambini/Ragazzi: <strong>'+bambini+'</strong> &mdash; Anziani/Fragili: <strong>'+anziani+'</strong></td></tr>';
+  h+='<tr><td>Animali domestici</td><td><strong>'+animali+'</strong></td></tr>';
+  h+='</tbody></table>';
 
-  if (farmaci !== 'Nessuno' || ausili !== 'Nessuno' || note) {
-    html += '<h3>Esigenze Specifiche</h3>';
-    if (farmaci !== 'Nessuno') html += '<p>Farmaci: <strong>' + farmaci + '</strong></p>';
-    if (ausili !== 'Nessuno') html += '<p>Ausili: <strong>' + ausili + '</strong></p>';
-    if (note) html += '<p>Note: <strong>' + note + '</strong></p>';
+  /* ── Sezione 2: Punti di Ritrovo ── */
+  h+='<h3 class="piano-section-title">Punti di Ritrovo</h3>';
+  h+='<table class="piano-table" role="presentation"><tbody>';
+  h+='<tr><td>Vicino casa</td><td><strong>'+vicino+'</strong></td></tr>';
+  h+='<tr><td>Lontano da casa</td><td><strong>'+lontano+'</strong></td></tr>';
+  h+='</tbody></table>';
+
+  /* ── Sezione 3: Contatti e Risorse ── */
+  h+='<h3 class="piano-section-title">Contatti e Risorse</h3>';
+  h+='<table class="piano-table" role="presentation"><tbody>';
+  h+='<tr><td>Riferimento fuori citt\u00e0</td><td><strong>'+contatto+'</strong></td></tr>';
+  h+='<tr><td>Medico di famiglia</td><td><strong>'+medico+'</strong></td></tr>';
+  h+='<tr><td>Kit di emergenza</td><td><strong>'+kit+'</strong></td></tr>';
+  h+='<tr><td>Rubinetti e quadro elettrico</td><td><strong>'+chiusure+'</strong></td></tr>';
+  h+='</tbody></table>';
+
+  /* ── Sezione 4: Esigenze specifiche (solo se compilate) ── */
+  if(farmaci!=='Nessuno'||ausili!=='Nessuno'||note){
+    h+='<h3 class="piano-section-title">Esigenze Specifiche</h3>';
+    h+='<table class="piano-table" role="presentation"><tbody>';
+    if(farmaci!=='Nessuno') h+='<tr><td>Farmaci</td><td><strong>'+farmaci+'</strong></td></tr>';
+    if(ausili!=='Nessuno') h+='<tr><td>Ausili</td><td><strong>'+ausili+'</strong></td></tr>';
+    if(note) h+='<tr><td>Note</td><td><strong>'+note+'</strong></td></tr>';
+    h+='</tbody></table>';
   }
 
-  document.getElementById('piano-contenuto').innerHTML = html;
-  document.getElementById('data-piano').textContent = new Date().toLocaleDateString('it-IT');
+  document.getElementById('piano-contenuto').innerHTML=h;
+  document.getElementById('data-piano').textContent=new Date().toLocaleDateString('it-IT');
   document.getElementById('piano-output').classList.remove('d-none');
-  document.getElementById('piano-output').scrollIntoView({behavior: 'smooth'});
+  document.getElementById('piano-output').scrollIntoView({behavior:'smooth'});
+}
+
+function stampaPiano(){
+  /* Clona consigli e checklist dentro l'area stampabile */
+  var source=document.querySelector('.piano-screen-only');
+  var target=document.getElementById('piano-print-appendice');
+  if(source&&target){
+    target.innerHTML='';
+    var clone=source.cloneNode(true);
+    clone.classList.remove('piano-screen-only');
+    clone.className='piano-appendice-content';
+    target.appendChild(clone);
+  }
+
+  document.body.classList.add('piano-printing');
+  var cleanup=function(){
+    document.body.classList.remove('piano-printing');
+    if(target) target.innerHTML='';
+  };
+  window.addEventListener('afterprint',function handler(){
+    cleanup();
+    window.removeEventListener('afterprint',handler);
+  });
+  window.print();
+  /* Fallback per browser senza afterprint */
+  setTimeout(function(){
+    if(document.body.classList.contains('piano-printing')) cleanup();
+  },2000);
 }
 </script>

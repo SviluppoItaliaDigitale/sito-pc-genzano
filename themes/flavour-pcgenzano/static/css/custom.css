@@ -747,3 +747,204 @@ article .galleria img {
   padding-left: 1rem;
   margin-left: -1rem;
 }
+
+/* ══════════════════════════════════════════════════════════
+   PIANO FAMILIARE — Stili schermo e stampa
+   ══════════════════════════════════════════════════════════ */
+
+/* Tabella dati piano (schermo) */
+.piano-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.5rem;
+}
+.piano-table td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: top;
+  font-size: 0.95rem;
+}
+.piano-table td:first-child {
+  width: 38%;
+  color: #555;
+  font-weight: 500;
+}
+.piano-section-title {
+  font-size: 1.15rem;
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.3rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+.piano-numeri {
+  background: #f0f4f8;
+  border: 1px solid #003366;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ── PIANO FAMILIARE — STAMPA ── */
+@media print {
+
+  /* Quando si stampa il piano, nascondere TUTTO il chrome del sito */
+  body.piano-printing .it-header-wrapper,
+  body.piano-printing .it-header-slim-wrapper,
+  body.piano-printing .it-header-navbar-wrapper,
+  body.piano-printing header,
+  body.piano-printing nav,
+  body.piano-printing footer,
+  body.piano-printing .page-hero,
+  body.piano-printing .breadcrumb,
+  body.piano-printing .cookiebar,
+  body.piano-printing .skip-to-content,
+  body.piano-printing .back-to-top,
+  body.piano-printing .allerta-bar,
+  body.piano-printing .emergency-banner,
+  body.piano-printing .emergenza-banner,
+  body.piano-printing #cookie-banner,
+  body.piano-printing .utility-bar,
+  body.piano-printing .page-tools,
+  body.piano-printing .related-links,
+  body.piano-printing .piano-screen-only,
+  body.piano-printing .piano-buttons,
+  body.piano-printing .piano-intro {
+    display: none !important;
+  }
+
+  /* Nascondere il form e il testo introduttivo */
+  body.piano-printing article > h2,
+  body.piano-printing article > p,
+  body.piano-printing article > .card.shadow-sm {
+    display: none !important;
+  }
+
+  /* Mostrare solo il piano stampabile a piena larghezza */
+  body.piano-printing .container,
+  body.piano-printing .row,
+  body.piano-printing .col-lg-8 {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  body.piano-printing #piano-stampabile {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  /* Impostazioni pagina A4 */
+  @page {
+    size: A4;
+    margin: 18mm 15mm 18mm 15mm;
+  }
+
+  body.piano-printing {
+    font-size: 11pt;
+    line-height: 1.45;
+    color: #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Intestazione */
+  body.piano-printing .piano-print-header h2 {
+    font-size: 20pt;
+    font-weight: 700;
+    color: #003366 !important;
+    margin-bottom: 2pt;
+  }
+  body.piano-printing .piano-print-header p {
+    color: #333 !important;
+    font-size: 10pt;
+  }
+
+  /* Titoli sezione */
+  body.piano-printing .piano-section-title {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #003366 !important;
+    border-bottom: 1.5pt solid #003366 !important;
+    padding-bottom: 2pt;
+    margin-top: 14pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+  }
+
+  /* Tabella dati */
+  body.piano-printing .piano-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  body.piano-printing .piano-table td {
+    padding: 4pt 6pt;
+    border-bottom: 0.5pt solid #ccc;
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+  body.piano-printing .piano-table td:first-child {
+    width: 35%;
+    color: #444;
+    font-weight: 600;
+  }
+
+  /* Box numeri di emergenza */
+  body.piano-printing .piano-numeri {
+    background: #f0f4f8 !important;
+    border: 1.5pt solid #003366 !important;
+    border-radius: 0 !important;
+    padding: 10pt !important;
+    margin-top: 16pt !important;
+    font-size: 10pt;
+    line-height: 1.8;
+  }
+  body.piano-printing .piano-numeri strong {
+    font-size: 11pt;
+  }
+
+  /* Appendice (consigli + checklist) — nuova pagina */
+  body.piano-printing .piano-appendice-content {
+    page-break-before: always;
+  }
+  body.piano-printing .piano-appendice-content h2 {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #003366 !important;
+    border-bottom: 1.5pt solid #003366;
+    padding-bottom: 2pt;
+    margin-top: 14pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+  }
+  body.piano-printing .piano-appendice-content ul {
+    padding-left: 16pt;
+    font-size: 10pt;
+    line-height: 1.65;
+    margin-bottom: 8pt;
+  }
+  body.piano-printing .piano-appendice-content li {
+    margin-bottom: 2pt;
+  }
+  body.piano-printing .piano-appendice-content p {
+    font-size: 10pt;
+    display: block !important;
+  }
+
+  /* Non mostrare URL dei link nel piano */
+  body.piano-printing a[href]::after {
+    content: none !important;
+  }
+
+  /* Evitare tagli a metà delle sezioni */
+  body.piano-printing h3,
+  body.piano-printing .piano-numeri,
+  body.piano-printing table {
+    page-break-inside: avoid;
+  }
+}
