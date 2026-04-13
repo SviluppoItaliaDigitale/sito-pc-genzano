@@ -29,7 +29,7 @@ Il volontariato di Protezione Civile è aperto a tutti. Non servono competenze s
 
 ## Percorso formativo
 
-Ogni nuovo volontario segue un **corso di formazione base obbligatorio** che fornisce le conoscenze essenziali:
+Ogni nuovo volontario segue un **corso di accesso obbligatorio** che fornisce le conoscenze essenziali:
 
 1. **Il Sistema di Protezione Civile** — come funziona, chi fa cosa
 2. **I rischi del territorio** — quali pericoli possono colpire Genzano
@@ -38,7 +38,7 @@ Ogni nuovo volontario segue un **corso di formazione base obbligatorio** che for
 5. **Le comunicazioni radio** — le basi del collegamento in emergenza
 6. **Il primo soccorso** — nozioni essenziali
 
-Dopo il corso base, i volontari possono specializzarsi in settori specifici: antincendio boschivo (AIB), telecomunicazioni, logistica, comunicazione e social media, divulgazione nelle scuole e pilotaggio droni (APR).
+Dopo il corso base di accesso, i volontari possono specializzarsi in settori specifici: antincendio boschivo (AIB), telecomunicazioni, logistica, comunicazione e social media, divulgazione nelle scuole e pilotaggio droni (APR).
 
 ## Cosa facciamo
 
