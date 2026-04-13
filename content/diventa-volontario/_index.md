@@ -1,5 +1,4 @@
----
-title: "Diventa Volontario"
+formazionene "Diventa Volontario"
 description: "Unisciti al Gruppo Comunale di Protezione Civile di Genzano di Roma."
 layout: "single"
 aliases:
@@ -57,7 +56,7 @@ Le attività del Gruppo non si limitano alle emergenze. I volontari partecipano 
 
 Non esiste un impegno fisso obbligatorio. Ciascun volontario contribuisce in base alla propria disponibilità. Tuttavia, ci aspettiamo:
 
-- La partecipazione al **corso di formazione base**
+- La partecipazione al **corso di accesso base**
 - La disponibilità a essere **reperibile** durante le allerte
 - La partecipazione periodica alle **esercitazioni** e ai turni operativi
 - Il rispetto del **Regolamento** del Gruppo e dello **Statuto**
