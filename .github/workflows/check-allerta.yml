@@ -1,0 +1,184 @@
+name: "⛈️ Aggiornamento Allerta Meteo"
+
+on:
+  schedule:
+    # Ogni ora, al minuto 12 (evita picchi di carico al minuto 0)
+    - cron: '12 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-allerta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🔍 Verifica livello allerta DPC per Genzano di Roma"
+        id: check
+        run: |
+          python3 << 'PYEOF'
+          import csv, json, io, os, sys, urllib.request
+
+          CSV_URL = (
+              "https://raw.githubusercontent.com/opendatasicilia/"
+              "DPC-bollettini-criticita-idrogeologica-idraulica/"
+              "refs/heads/main/data/bollettini/bollettino-oggi-comuni-latest.csv"
+          )
+          COMUNE = "Genzano di Roma"
+          ALLERTA_PATH = "data/allerta.json"
+
+          # ── 1. Scarica il CSV ──────────────────────────────────────
+          try:
+              req = urllib.request.Request(CSV_URL, headers={"User-Agent": "PC-Genzano-Bot/1.0"})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  data = r.read().decode("utf-8")
+          except Exception as e:
+              print(f"::warning::CSV non disponibile: {e}")
+              sys.exit(0)  # Non toccare allerta.json se la fonte non risponde
+
+          # ── 2. Trova la riga di Genzano di Roma ────────────────────
+          reader = csv.DictReader(io.StringIO(data))
+          genzano = None
+          for row in reader:
+              if row.get("comune_nome", "").strip() == COMUNE:
+                  genzano = row
+                  break
+
+          if not genzano:
+              print(f"::warning::{COMUNE} non trovato nel CSV DPC")
+              sys.exit(0)
+
+          print(f"Riga trovata: {json.dumps(genzano, ensure_ascii=False)}")
+
+          # ── 3. Estrai il livello massimo di allerta ────────────────
+          LEVEL_MAP = {"verde": 0, "gialla": 1, "arancione": 2, "rossa": 3}
+          LEVEL_NAME = {0: "verde", 1: "gialla", 2: "arancione", 3: "rossa"}
+
+          def extract_level(value):
+              v = value.lower()
+              if "allerta rossa" in v:
+                  return 3
+              if "allerta arancione" in v:
+                  return 2
+              if "allerta gialla" in v:
+                  return 1
+              return 0
+
+          RISK_FIELDS = {
+              "avviso_idrogeologico": "rischio idrogeologico",
+              "avviso_temporali": "temporali",
+              "avviso_idraulico": "rischio idraulico",
+          }
+
+          max_level = 0
+          active_risks = []
+
+          # Livello complessivo da avviso_criticita
+          crit_level = extract_level(genzano.get("avviso_criticita", ""))
+          if crit_level > max_level:
+              max_level = crit_level
+
+          # Livelli per singolo rischio (per i dettagli)
+          for field, label in RISK_FIELDS.items():
+              level = extract_level(genzano.get(field, ""))
+              if level > 0:
+                  active_risks.append(label)
+              if level > max_level:
+                  max_level = level
+
+          livello = LEVEL_NAME[max_level]
+
+          # ── 4. Costruisci titolo e descrizione ─────────────────────
+          TITLES = {
+              "verde": "NESSUNA ALLERTA",
+              "gialla": "ALLERTA GIALLA",
+              "arancione": "ALLERTA ARANCIONE",
+              "rossa": "ALLERTA ROSSA",
+          }
+
+          BASE_DESCS = {
+              "verde": "Non sono previsti fenomeni significativi sul nostro territorio.",
+              "gialla": "Prestare attenzione.",
+              "arancione": "Limitare gli spostamenti.",
+              "rossa": "Seguire le indicazioni delle autorità.",
+          }
+
+          titolo = TITLES[livello]
+
+          if livello == "verde" or not active_risks:
+              descrizione = BASE_DESCS[livello]
+          else:
+              rischi_str = ", ".join(active_risks)
+              descrizione = f"Criticità per {rischi_str}. {BASE_DESCS[livello]}"
+
+          # ── 5. Confronta con allerta.json attuale ──────────────────
+          try:
+              with open(ALLERTA_PATH, "r", encoding="utf-8") as f:
+                  current = json.load(f)
+          except Exception:
+              current = {}
+
+          if current.get("livello") == livello:
+              print(f"✅ Livello invariato: {livello}")
+              gh_out = os.environ.get("GITHUB_OUTPUT", "")
+              if gh_out:
+                  with open(gh_out, "a") as f:
+                      f.write("changed=false\n")
+              sys.exit(0)
+
+          # ── 6. Aggiorna allerta.json ───────────────────────────────
+          from datetime import datetime, timezone, timedelta
+
+          rome_tz = timezone(timedelta(hours=2))
+          now = datetime.now(rome_tz)
+          timestamp = now.strftime("%Y-%m-%dT%H:%M:%S+02:00")
+
+          new_data = {
+              "livello": livello,
+              "titolo": titolo,
+              "descrizione": descrizione,
+              "ultimo_aggiornamento": timestamp,
+          }
+
+          with open(ALLERTA_PATH, "w", encoding="utf-8") as f:
+              json.dump(new_data, f, indent=2, ensure_ascii=False)
+              f.write("\n")
+
+          old_level = current.get("livello", "sconosciuto")
+          print(f"⚠️ Livello aggiornato: {old_level} → {livello}")
+
+          gh_out = os.environ.get("GITHUB_OUTPUT", "")
+          if gh_out:
+              with open(gh_out, "a") as f:
+                  f.write("changed=true\n")
+                  f.write(f"old_level={old_level}\n")
+                  f.write(f"new_level={livello}\n")
+                  f.write(f"descrizione={descrizione}\n")
+          PYEOF
+
+      - name: "📝 Commit e push"
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/allerta.json
+          git diff --cached --quiet && exit 0
+          git commit -m "$(cat <<EOF
+          Allerta meteo: ${{ steps.check.outputs.old_level }} → ${{ steps.check.outputs.new_level }}
+
+          Aggiornamento automatico da bollettino DPC (opendatasicilia).
+          ${{ steps.check.outputs.descrizione }}
+          EOF
+          )"
+          git push
+
+      - name: "🚀 Avvia deploy"
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Triggering deploy workflow..."
+          gh workflow run deploy.yml --ref main
