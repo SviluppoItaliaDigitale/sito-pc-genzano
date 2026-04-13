@@ -212,10 +212,12 @@ function checkAllertaDPC(){
         var idx=colonne[c2].idx;
         if(idx<0||idx>=fields.length)continue;
         var val=fields[idx].trim().replace(/"/g,'').toLowerCase();
-        if(levels[val]!==undefined){
-          if(levels[val]>0)dettagli.push(colonne[c2].nome+': '+val);
-          if(levels[val]>levels[maxLiv])maxLiv=val;
-        }
+        var color='verde';
+        if(val.indexOf('allerta rossa')>-1)color='rossa';
+        else if(val.indexOf('allerta arancione')>-1)color='arancione';
+        else if(val.indexOf('allerta gialla')>-1)color='gialla';
+        if(levels[color]>0)dettagli.push(colonne[c2].nome+': '+color);
+        if(levels[color]>levels[maxLiv])maxLiv=color;
       }
 
       var titles={verde:'NESSUNA ALLERTA',gialla:'ALLERTA GIALLA',arancione:'ALLERTA ARANCIONE',rossa:'ALLERTA ROSSA'};
