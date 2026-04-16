@@ -1,6 +1,6 @@
 {
-  "livello": "gialla",
-  "titolo": "ALLERTA GIALLA",
-  "descrizione": "Criticità per rischio idrogeologico. Prestare attenzione.",
-  "ultimo_aggiornamento": "2026-04-15T16:01:52+02:00"
+  "livello": "verde",
+  "titolo": "NESSUNA ALLERTA",
+  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
+  "ultimo_aggiornamento": "2026-04-16T16:09:22+02:00"
 }
