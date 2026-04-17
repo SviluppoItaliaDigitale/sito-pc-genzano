@@ -12,6 +12,9 @@ timeZone = "Europe/Rome"
 # Tema personalizzato
 theme = "flavour-pcgenzano"
 
+# Usa i metadati git per determinare l'ultimo aggiornamento di ogni pagina
+enableGitInfo = true
+
 # Impostazioni generali
 [params]
   # URL di produzione — usato per canonical, og:url e sitemap
@@ -158,7 +161,7 @@ home = ["HTML", "RSS", "JSON"]
 # Sitemap — priorità per sezione (override del default 0.5)
 [frontmatter]
   date = ["date"]
-  lastmod = [":fileModTime", "lastmod"]
+  lastmod = [":git", "lastmod", ":fileModTime"]
 
 # Impostazioni Markdown
 [markup]

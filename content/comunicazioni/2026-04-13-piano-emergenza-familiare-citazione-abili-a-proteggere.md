@@ -1,10 +1,10 @@
 ---
 title: "Il nostro Piano di Emergenza Familiare citato da Abili a proteggere, il portale del Dipartimento della Protezione Civile"
 date: 2026-04-13
-description: "Il portale Abili a proteggere, realizzato in collaborazione con il Dipartimento della Protezione Civile, ha dedicato un articolo al Piano di Emergenza Familiare digitale e inclusivo del Gruppo Comunale di Genzano di Roma."
+description: "Il portale Abili a proteggere del Dipartimento della Protezione Civile cita il Piano di Emergenza Familiare digitale del nostro Gruppo."
 
 badge: "Comunicazione"
-priorita: "alta"
+priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: ""
 scadenza: ""

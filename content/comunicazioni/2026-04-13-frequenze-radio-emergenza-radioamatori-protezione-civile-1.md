@@ -1,7 +1,7 @@
 ---
 title: "Le frequenze radio della Rete Zamberletti: i radioamatori al servizio della Protezione Civile nelle prove di sintonia tra le Prefetture d'Italia"
 date: 2026-04-13
-description: "Le frequenze della Rete Zamberletti utilizzate dai radioamatori per le comunicazioni di emergenza: 3.645 kHz e 6.990 kHz in LSB sulle onde corte, 145,275 MHz FM e 433,425 MHz FM per la sottorete di Roma. La storia della rete, le prove di sintonia mensili con le Prefetture e il ruolo della Marina Militare."
+description: "La Rete Zamberletti: frequenze HF e VHF dei radioamatori per le emergenze, le prove di sintonia mensili tra le Prefetture e il ruolo nella protezione civile."
 
 badge: "Radiocomunicazioni"
 priorita: "normale"
