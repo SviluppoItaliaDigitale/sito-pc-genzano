@@ -32,7 +32,7 @@
 
       {{/* Badge + data + autore + area */}}
       <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-        {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}">{{ . }}</span>{{ end }}
+        {{ with .Params.badge }}{{ partial "badge.html" . }}{{ end }}
         {{ if eq .Params.priorita "urgente" }}<span class="notizia-categoria allerta">URGENTE</span>{{ end }}
         {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
         <span class="notizia-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></span>
@@ -52,7 +52,7 @@
       {{/* Pagine non-comunicazione: solo data e badge */}}
       {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
       <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-        {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}">{{ . }}</span>{{ end }}
+        {{ with .Params.badge }}{{ partial "badge.html" . }}{{ end }}
         <span class="notizia-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></span>
       </div>
       {{ end }}

@@ -37,7 +37,8 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 .emergency-banner a { color: #fff; font-weight: 700; }
 
 /* ── ALLERTA BAR + PULSE ── */
-.allerta-bar { padding: 0.6rem 0; font-size: 0.85rem; font-weight: 500; transition: background var(--pc-transition); }
+.allerta-bar { padding: 0.6rem 0; font-size: 0.85rem; font-weight: 500; transition: background var(--pc-transition), opacity 0.3s ease; }
+.allerta-bar-loading { opacity: 0; }
 .allerta-bar-verde { background: #28a745 !important; color: #fff !important; }
 .allerta-bar-gialla { background: #ffc107 !important; color: #000 !important; }
 .allerta-bar-arancione { background: #fd7e14 !important; color: #fff !important; }
@@ -279,11 +280,20 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   letter-spacing: 0.12em;
   padding: 0.2rem 0.6rem;
   border-radius: 3px;
+  /* Colore di default per categorie nuove/sconosciute */
+  background: #546e7a;
+  color: #fff;
 }
-.notizia-categoria.allerta { background: var(--pc-danger); color: #fff; }
+.notizia-categoria.allerta { background: var(--pc-danger); }
 .notizia-categoria.avviso { background: #ffc107; color: #000; }
-.notizia-categoria.evento { background: var(--pc-accent); color: #fff; }
-.notizia-categoria.comunicazione { background: var(--pc-primary); color: #fff; }
+.notizia-categoria.evento { background: var(--pc-accent); }
+.notizia-categoria.comunicazione { background: var(--pc-primary); }
+.notizia-categoria.radiocomunicazioni { background: #0277bd; }
+.notizia-categoria.prevenzione { background: #00897b; }
+.notizia-categoria.esercitazione { background: #e65100; }
+.notizia-categoria.aggiornamento { background: #5c6bc0; }
+.notizia-categoria.informazione { background: #2196f3; }
+.notizia-categoria.emergenza { background: var(--pc-danger); }
 .notizia-data { font-size: 0.78rem; color: #6c757d; }
 .notizia-titolo { font-size: 1.05rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.4rem; line-height: 1.35; }
 .notizia-titolo a { color: inherit; text-decoration: none; }
@@ -620,23 +630,10 @@ article .galleria img {
   border-bottom: 1px solid var(--pc-border-subtle);
 }
 
-/* ── BADGE NOTIZIE — nuovi tipi ── */
-.notizia-categoria.allerta {
-  background: var(--pc-danger);
-  color: #fff;
-}
-.notizia-categoria.formazione {
-  background: #6f42c1;
-  color: #fff;
-}
-.notizia-categoria.volontariato {
-  background: var(--pc-accent);
-  color: #fff;
-}
-.notizia-categoria.attività {
-  background: #17a2b8;
-  color: #fff;
-}
+/* ── BADGE NOTIZIE — categorie aggiuntive ── */
+.notizia-categoria.formazione { background: #6f42c1; }
+.notizia-categoria.volontariato { background: var(--pc-accent); }
+.notizia-categoria.attività { background: #17a2b8; }
 
 /* ── PRINT MIGLIORATO ── */
 @media print {

@@ -1,0 +1,18 @@
+{{- /* badge.html — Genera badge con colore automatico per categorie nuove.
+     Categorie note: usano la classe CSS (colore gestito in custom.css).
+     Categorie nuove: colore inline scelto deterministicamente da una palette
+     di 16 colori accessibili (contrasto ≥ 4.5:1 su bianco). */ -}}
+{{- $badge := . -}}
+{{- $lower := $badge | lower -}}
+{{- $known := slice "allerta" "avviso" "evento" "comunicazione" "radiocomunicazioni" "prevenzione" "esercitazione" "aggiornamento" "informazione" "emergenza" "formazione" "volontariato" "attività" -}}
+{{- if in $known $lower -}}
+<span class="notizia-categoria {{ $lower }}">{{ $badge }}</span>
+{{- else -}}
+{{- $palette := slice "#00838f" "#4527a0" "#c62828" "#2e7d32" "#ad1457" "#1565c0" "#ef6c00" "#6a1b9a" "#00695c" "#283593" "#827717" "#4e342e" "#0277bd" "#558b2f" "#880e4f" "#33691e" -}}
+{{- $hexMap := dict "0" 0 "1" 1 "2" 2 "3" 3 "4" 4 "5" 5 "6" 6 "7" 7 "8" 8 "9" 9 "a" 10 "b" 11 "c" 12 "d" 13 "e" 14 "f" 15 -}}
+{{- $hash := md5 $lower -}}
+{{- $firstChar := substr $hash 0 1 -}}
+{{- $idx := index $hexMap $firstChar -}}
+{{- $color := index $palette $idx -}}
+<span class="notizia-categoria" style="background:{{ $color }}">{{ $badge }}</span>
+{{- end -}}

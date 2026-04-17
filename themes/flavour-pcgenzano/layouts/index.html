@@ -18,7 +18,8 @@
 {{/* ── BARRA ALLERTA METEO ── */}}
 {{ $allerta := .Site.Data.allerta }}
 {{ if $allerta }}
-<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $allerta.livello }}" role="alert" aria-label="Stato allerta meteo" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}">
+<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $allerta.livello }} allerta-bar-loading" role="alert" aria-label="Stato allerta meteo" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}">
+<noscript><style>.allerta-bar-loading{opacity:1!important}</style></noscript>
   <div class="container d-flex flex-wrap justify-content-between align-items-center">
     <div>
       {{ if eq $allerta.livello "verde" }}<i id="allerta-icon" class="bi bi-shield-check me-2" aria-hidden="true"></i>
@@ -159,16 +160,6 @@ function checkAllertaDPC(){
   var bar=document.getElementById('allerta-bar');
   if(!bar)return;
 
-  var agg=bar.getAttribute('data-aggiornamento');
-  if(agg){
-    var ts=new Date(agg).getTime();
-    var manuale=!bar.classList.contains('allerta-bar-verde');
-    if(manuale && (Date.now()-ts)<86400000) return;
-    if((Date.now()-ts)>86400000 && manuale){
-      bar.className='allerta-bar allerta-bar-verde';
-    }
-  }
-
   var CSV_URL='https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/bollettino-oggi-comuni-latest.csv';
 
   fetch(CSV_URL)
@@ -234,8 +225,9 @@ function checkAllertaDPC(){
         d.textContent=testo;
       }
       if(ic)ic.className=maxLiv==='verde'?'bi bi-shield-check me-2':'bi bi-exclamation-triangle-fill me-2';
+      bar.classList.remove('allerta-bar-loading');
     })
-    .catch(function(){});
+    .catch(function(){ bar.classList.remove('allerta-bar-loading'); });
 }
 
 checkAllertaDPC();

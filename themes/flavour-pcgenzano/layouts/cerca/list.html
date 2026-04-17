@@ -96,7 +96,19 @@
     for(var j=0;j<Math.min(res.length,30);j++){
       var r=res[j];
       var sec=r.page.section||'';
-      var badge=r.page.badge?'<span class="notizia-categoria '+r.page.badge.toLowerCase()+'" style="font-size:0.6rem;margin-right:0.5rem;">'+r.page.badge+'</span>':'';
+      var badge='';
+      if(r.page.badge){
+        var bLow=r.page.badge.toLowerCase();
+        var knownBadges=['allerta','avviso','evento','comunicazione','radiocomunicazioni','prevenzione','esercitazione','aggiornamento','informazione','emergenza','formazione','volontariato','attività'];
+        if(knownBadges.indexOf(bLow)>-1){
+          badge='<span class="notizia-categoria '+bLow+'" style="font-size:0.6rem;margin-right:0.5rem;">'+r.page.badge+'</span>';
+        }else{
+          var bPalette=['#00838f','#4527a0','#c62828','#2e7d32','#ad1457','#1565c0','#ef6c00','#6a1b9a','#00695c','#283593','#827717','#4e342e','#0277bd','#558b2f','#880e4f','#33691e'];
+          var bHash=0;for(var bi=0;bi<bLow.length;bi++)bHash=((bHash<<5)-bHash)+bLow.charCodeAt(bi);
+          var bColor=bPalette[Math.abs(bHash)%bPalette.length];
+          badge='<span class="notizia-categoria" style="background:'+bColor+';font-size:0.6rem;margin-right:0.5rem;">'+r.page.badge+'</span>';
+        }
+      }
       // Evidenzia parole cercate nello snippet
       var snip=r.snippet;
       for(var w2=0;w2<words.length;w2++){
