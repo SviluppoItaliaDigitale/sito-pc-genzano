@@ -26,6 +26,20 @@ Ogni testo deve aiutare l'utente a capire cosa sta leggendo, cosa deve fare e do
 - Numeri di telefono: scrivi sempre in formato leggibile (es. 06 1234 5678).
 - Date: scrivi in formato esteso quando rivolto ai cittadini (es. "martedì 6 aprile 2026"), usa AAAA-MM-GG solo nel frontmatter Hugo.
 
+## Regola immagini — fascia blu istituzionale
+
+Ogni immagine di copertina degli articoli DEVE avere una fascia blu in basso con:
+- Sfondo: `#003366` (--pc-primary), opacità 85-90%, altezza ~15-18% dell'immagine
+- Logo: `logo-pc-genzano.png` a sinistra (~75px di altezza)
+- Riga 1: "PROTEZIONE CIVILE" — bianco, bold, ~30px
+- Riga 2: "Gruppo Comunale Volontari — Genzano di Roma" — bianco, regular, ~15px
+- Formato: WebP, 1200px di larghezza, max 200 KB
+- Nome file: `AAAA-MM-GG-descrizione-breve.webp` in `static/images/`
+- Alt text: sempre significativo, mai "Immagine di..."
+
+Riferimento visivo: `static/images/zamberletti-protezione-civile-genzano.webp`
+Specifiche complete: `MANUALE-SITO.md`, Parte 3.
+
 ## Regola critica — formato data nel frontmatter Hugo
 
 Nel frontmatter degli articoli usa SEMPRE il formato `AAAA-MM-GG` (esempio: `2026-04-06`).
@@ -45,7 +59,7 @@ Ogni articolo deve avere tutti i campi previsti dall'archetipo:
 - `title`: titolo chiaro e informativo
 - `date`: formato AAAA-MM-GG
 - `description`: breve sommario (massimo 160 caratteri, utile anche per SEO)
-- `badge`: Allerta | Avviso | Comunicazione | Attività | Formazione | Evento | Volontariato
+- `badge`: Allerta | Avviso | Comunicazione | Attività | Formazione | Evento | Volontariato | Radiocomunicazioni | Prevenzione | Esercitazione | Aggiornamento | Informazione | Emergenza (categorie nuove ricevono colore automatico)
 - `priorita`: normale | urgente
 - `autore`: "Gruppo Comunale Volontari PC Genzano" (default)
 - `image`: percorso immagine o stringa vuota

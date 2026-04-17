@@ -132,6 +132,10 @@ Custom theme, not an external dependency — edit freely. Structure:
 
 5. **AGGIORNAMENTO**: le linee guida AGID sono in continuo aggiornamento. Verificare periodicamente il manuale su designers.italia.it per eventuali novità.
 
+6. **MANUALE DI STILE**: il file `MANUALE-SITO.md` nella root del progetto contiene il manuale operativo completo con: template articoli, regole di scrittura AGID integrate, specifiche immagini (fascia blu), checklist pre-pubblicazione. È il riferimento unico per la redazione dei contenuti, anche da parte di AI esterne.
+
+7. **IMMAGINI**: ogni immagine di copertina deve avere la fascia blu istituzionale (#003366) con logo e testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari — Genzano di Roma". Formato WebP, 1200px, max 200 KB. Specifiche complete in `MANUALE-SITO.md` Parte 3.
+
 ## Key operational notes
 
 - **To activate emergency mode**: set `"attiva": true` in `data/emergenza.json` and fill `tipo`, `titolo`, `descrizione`. Reset to `false` when done.
