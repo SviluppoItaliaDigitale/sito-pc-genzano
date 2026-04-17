@@ -1,7 +1,11 @@
 {{/* Notizie in evidenza — ultimi 2 mesi, hero + lista laterale
      Usato in: homepage */}}
 {{ $maxAge := now.AddDate 0 -2 0 }}
-{{ $recentNews := where (where .Site.RegularPages "Section" "comunicazioni") ".Date" ">=" $maxAge }}
+{{ $filtered := where (where .Site.RegularPages "Section" "comunicazioni") ".Date" ">=" $maxAge }}
+{{/* Ordina per Lastmod (tiebreaker per articoli con stessa data), poi per Date.
+     Hugo sort è stabile: articoli con stessa Date mantengono l'ordine Lastmod. */}}
+{{ $byLastmod := sort $filtered ".Lastmod" "desc" }}
+{{ $recentNews := sort $byLastmod ".Date" "desc" }}
 {{ if $recentNews }}
 <section class="notizie-section fade-in-up" aria-labelledby="notizie-heading">
   <div class="container">
