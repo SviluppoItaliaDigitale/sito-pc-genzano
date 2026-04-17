@@ -16,7 +16,7 @@
             {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
           </div>
           <div class="card-body">
-            {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}">{{ . }}</span>{{ end }}
+            {{ with .Params.badge }}{{ partial "badge.html" . }}{{ end }}
             <span class="notizia-data ms-2">{{ .Date | time.Format ":date_long" }}</span>
             <h3 class="h4 mt-2 text-dark">{{ .Title }}</h3>
             <p class="text-muted">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 200 }}{{ end }}</p>
@@ -37,7 +37,7 @@
             </div>
             <div class="col-8">
               <div class="card-body py-2 px-3">
-                {{ with .Params.badge }}<span class="notizia-categoria {{ . | lower }}" style="font-size:0.6rem;">{{ . }}</span>{{ end }}
+                {{ with .Params.badge }}{{ partial "badge.html" . }}{{ end }}
                 <h3 class="h6 mt-1 mb-1 text-dark" style="line-height:1.3;">{{ .Title }}</h3>
                 <span class="notizia-data" style="font-size:0.75rem;">{{ .Date | time.Format ":date_long" }}</span>
               </div>
