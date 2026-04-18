@@ -28,7 +28,34 @@
     cursor: default;
 }
 .card.matched {
-    opacity: 0.75;
+    animation: matchPulse 0.5s ease;
+}
+.card.matched .card-back {
+    border: 3px solid #2e7d32;
+    box-shadow: 0 0 12px rgba(46, 125, 50, 0.5);
+    position: relative;
+}
+.card.matched .card-back::after {
+    content: '\2713';
+    position: absolute;
+    bottom: 2px;
+    right: 6px;
+    background: #2e7d32;
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+@keyframes matchPulse {
+    0%   { transform: rotateY(180deg) scale(1); }
+    50%  { transform: rotateY(180deg) scale(1.1); }
+    100% { transform: rotateY(180deg) scale(1); }
 }
 .card-face {
     position: absolute;
@@ -87,6 +114,23 @@
 }
 .hide {
     display: none !important;
+}
+.match-toast {
+    position: fixed;
+    transform: translateX(-50%);
+    background: #2e7d32;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    pointer-events: none;
+    z-index: 50;
+    animation: toastUp 0.9s ease forwards;
+}
+@keyframes toastUp {
+    0%   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-40px); }
 }
 @media (max-width: 600px) {
     :root {
