@@ -21,6 +21,8 @@ In caso di emergenza, contatta sempre i numeri ufficiali per garantire un interv
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/) — Punto di riferimento nazionale per normative, attività e campagne informative
 - [Agenzia di Protezione Civile della Regione Lazio](https://protezionecivile.regione.lazio.it/) — Bollettini di allertamento, piani e informazioni per il Lazio
 - [Normattiva](https://www.normattiva.it/) — Consultazione gratuita e aggiornata di tutta la normativa italiana
+- [Abili a proteggere](https://www.abiliaproteggere.net/) — Portale del Dipartimento della Protezione Civile dedicato alle persone con disabilità e alle fragilità in emergenza
+- [Io non rischio](https://www.iononrischio.it/) — Campagna nazionale del Dipartimento della Protezione Civile sulle buone pratiche di prevenzione
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/) — Sito ufficiale dell'ente comunale
 - [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/) — Informazioni sul territorio e normative di tutela ambientale
 
