@@ -74,6 +74,6 @@ In caso di emergenza, contatta sempre i numeri ufficiali per garantire un interv
 
 ## Risorse Didattiche del Gruppo
 
-- [Piattaforma E-Learning](https://www.protezionecivilegenzano.it/formazionepc/index.html) — Formazione a distanza riservata ai volontari del Gruppo
-- [Quiz di Protezione Civile](https://www.protezionecivilegenzano.it/quizpc/index.html) — Metti alla prova le tue conoscenze con il quiz interattivo
-- [Giochiamo con la Protezione Civile](https://www.protezionecivilegenzano.it/giochi-bambini/index.html) — Giochi interattivi per insegnare la prevenzione ai più piccoli
+- [Piattaforma E-Learning](/formazionepc/index.html) — Formazione a distanza riservata ai volontari del Gruppo
+- [Quiz di Protezione Civile](/quizpc/index.html) — Metti alla prova le tue conoscenze con il quiz interattivo
+- [Giochiamo con la Protezione Civile](/giochi-bambini/index.html) — Giochi interattivi per insegnare la prevenzione ai più piccoli
