@@ -1,0 +1,118 @@
+/* Zaino Facile — Stile accessibile */
+
+.hide { display: none !important; }
+
+.zaino-display {
+  text-align: center;
+  font-size: 5rem;
+  color: #003366;
+  position: relative;
+}
+.zaino-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 0.5rem;
+  min-height: 40px;
+}
+.zaino-item-badge {
+  background: #e8f5e9;
+  border: 2px solid #2e7d32;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 1.5rem;
+  animation: dropIn 0.3s ease;
+}
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.item-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border: 3px solid #dee2e6;
+  border-radius: 16px;
+  background: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 100px;
+}
+.item-btn:hover:not(:disabled) {
+  border-color: #003366;
+  background: #e8f0fe;
+}
+.item-btn:focus-visible {
+  outline: 3px solid #ff6600;
+  outline-offset: 2px;
+}
+.item-btn:disabled { cursor: default; opacity: 0.5; }
+
+.item-emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.item-btn.item-correct {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+  color: #1b5e20;
+  animation: correctBounce 0.5s ease;
+}
+@keyframes correctBounce {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.item-btn.item-wrong {
+  border-color: #dc3545;
+  background: #fde8ea;
+  animation: wrongShake 0.4s ease;
+}
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+.feedback-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  z-index: 100;
+  animation: toastIn 0.3s ease;
+  max-width: 90vw;
+  text-align: center;
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.feedback-toast.toast-ok { background: #2e7d32; }
+.feedback-toast.toast-no { background: #d32f2f; }
+
+@media (max-width: 400px) {
+  .items-grid { grid-template-columns: 1fr; }
+  .item-btn { min-height: 80px; }
+}

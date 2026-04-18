@@ -41,6 +41,10 @@ Il Gruppo ha sviluppato kit didattici completi per ogni grado di istruzione, con
 | [Scuola Secondaria di I grado](kit-scuola-secondaria-primo-grado/) | 11-14 anni | Sistema di allertamento, autoprotezione, cittadinanza attiva |
 | [Scuola Secondaria di II grado](kit-scuola-secondaria-secondo-grado/) | 14-19 anni | Basi scientifiche, quadro normativo, comunicazione del rischio, PCTO |
 
+### Abili a proteggere
+
+Il Gruppo ha sviluppato [attività educative accessibili](/abili-a-proteggere/index.html) per persone con difficoltà cognitive o motorie, anziani e bambini fragili, nell'ambito del programma nazionale **Abili a proteggere**. Le attività hanno pulsanti grandi, testi semplici, nessun limite di tempo e possono essere svolte con l'aiuto di un familiare o un operatore.
+
 Il Gruppo promuove la cultura della prevenzione fin dalla giovane età anche attraverso:
 
 - **Incontri nelle scuole** del territorio per spiegare i rischi e i comportamenti corretti

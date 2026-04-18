@@ -1,0 +1,224 @@
+/* Chiama il 112 — Stile accessibile */
+
+.hide { display: none !important; }
+
+/* Telefono */
+.phone-frame {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 24px;
+  padding: 1.5rem;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.phone-display {
+  background: #fff;
+  border: 2px solid #003366;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  min-height: 60px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #003366;
+}
+
+.phone-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  min-height: 3.5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.phone-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.key-btn {
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 80px;
+  border: 2px solid #dee2e6;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.key-btn:hover:not(:disabled) {
+  background: #e8f0fe;
+  border-color: #003366;
+}
+.key-btn:active:not(:disabled) {
+  background: #003366;
+  color: #fff;
+  transform: scale(0.95);
+}
+.key-btn:focus-visible {
+  outline: 3px solid #ff6600;
+  outline-offset: 2px;
+}
+.key-empty {
+  visibility: hidden;
+}
+.key-call {
+  background: #2e7d32;
+  color: #fff;
+  border-color: #2e7d32;
+  font-size: 1.6rem;
+}
+.key-call:hover:not(:disabled) {
+  background: #1b5e20;
+  border-color: #1b5e20;
+}
+.key-call:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.key-btn.key-highlight {
+  animation: keyPulse 0.8s ease infinite;
+  border-color: #003366;
+  box-shadow: 0 0 12px rgba(0, 51, 102, 0.4);
+}
+@keyframes keyPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(0, 51, 102, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(0, 51, 102, 0.6); }
+}
+
+.key-btn.key-wrong {
+  animation: keyShake 0.4s ease;
+  border-color: #dc3545;
+  background: #fde8ea;
+}
+@keyframes keyShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+/* Conversazione */
+.conversation-frame {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.call-header {
+  background: #003366;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.chat-area {
+  padding: 1rem;
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.chat-bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 16px;
+  margin-bottom: 0.75rem;
+  max-width: 85%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  animation: bubbleIn 0.3s ease;
+}
+@keyframes bubbleIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-operator {
+  background: #e8f0fe;
+  color: #003366;
+  border-bottom-left-radius: 4px;
+  margin-right: auto;
+}
+.chat-operator::before {
+  content: '☎ Operatore: ';
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.chat-user {
+  background: #003366;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+  margin-left: auto;
+}
+
+.answer-area {
+  padding: 1rem;
+  border-top: 2px solid #dee2e6;
+  background: #fff;
+}
+
+.answer-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.5rem;
+  border: 3px solid #dee2e6;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.answer-btn:hover {
+  border-color: #003366;
+  background: #e8f0fe;
+}
+.answer-btn:focus-visible {
+  outline: 3px solid #ff6600;
+  outline-offset: 2px;
+}
+.answer-btn.correct {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+.answer-btn.wrong {
+  border-color: #dc3545;
+  background: #fde8ea;
+  animation: keyShake 0.4s ease;
+}
+
+@media (max-width: 480px) {
+  .phone-frame { padding: 1rem; }
+  .key-btn { font-size: 1.6rem; }
+  .phone-number { font-size: 2rem; }
+  .answer-btn { font-size: 1.1rem; padding: 0.85rem 1rem; }
+}

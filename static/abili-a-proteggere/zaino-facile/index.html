@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lo Zaino Facile — Abili a Proteggere</title>
+  <meta name="description" content="Scegli gli oggetti giusti per lo zaino di emergenza: attività semplificata e accessibile per persone con difficoltà.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Abili a Proteggere</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Lo Zaino Facile</li>
+          </ol>
+        </nav>
+        <h1>Lo Zaino Facile</h1>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div id="intro-screen">
+            <p class="lead text-center mb-3">Prepara lo zaino di emergenza!</p>
+            <p class="text-center text-muted mb-4">Tocca gli oggetti che servono nello zaino di emergenza. Sono solo pochi oggetti importanti. I pulsanti sono grandi: prenditi tutto il tempo che vuoi!</p>
+            <div class="text-center">
+              <button id="start-btn" class="btn btn-primary btn-lg px-5 py-3" style="font-size: 1.3rem;"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia</button>
+            </div>
+          </div>
+
+          <div id="game-screen" class="hide">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+              <p class="mb-0 fw-bold" style="font-size: 1.1rem;">Nello zaino: <span id="items-count">0</span> / <span id="items-total">6</span></p>
+              <p class="mb-0">Errori: <span id="errors-count" class="text-danger fw-bold">0</span></p>
+            </div>
+            <div class="zaino-display mb-3" aria-hidden="true">
+              <i class="bi bi-backpack2-fill"></i>
+              <div id="zaino-items" class="zaino-items"></div>
+            </div>
+            <div id="items-grid" class="items-grid" role="group" aria-label="Oggetti da scegliere"></div>
+            <div id="feedback-toast" class="feedback-toast hide" role="alert" aria-live="assertive"></div>
+          </div>
+
+          <div id="end-screen" class="hide">
+            <div class="text-center py-4">
+              <div class="mb-3" style="font-size: 4rem; color: #2e7d32;"><i class="bi bi-backpack2-fill" aria-hidden="true"></i></div>
+              <h2 class="h3 mb-3" style="color: #2e7d32;">Zaino pronto!</h2>
+              <p class="lead mb-2">Hai preparato lo zaino di emergenza.</p>
+              <p class="text-muted mb-4" id="end-message"></p>
+              <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button id="restart-btn" class="btn btn-primary btn-lg px-4 py-3"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i> Rifai</button>
+                <a href="../index.html" class="btn btn-outline-secondary btn-lg px-4 py-3"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna alle attività</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

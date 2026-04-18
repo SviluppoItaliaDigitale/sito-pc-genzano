@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Mia Scheda di Emergenza — Abili a Proteggere</title>
+  <meta name="description" content="Crea la tua scheda personale di emergenza con nome, indirizzo e numeri importanti. Puoi stamparla!">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero no-print">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Abili a Proteggere</a></li>
+            <li class="breadcrumb-item active" aria-current="page">La Mia Scheda</li>
+          </ol>
+        </nav>
+        <h1>La Mia Scheda di Emergenza</h1>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <!-- Form -->
+          <div id="form-screen">
+            <p class="lead text-center mb-2">Compila la tua scheda personale di emergenza</p>
+            <p class="text-center text-muted mb-4">Scrivi i tuoi dati importanti. Poi potrai stamparla e tenerla sempre con te. Un adulto può aiutarti a compilarla.</p>
+
+            <form id="emergency-form" novalidate>
+              <div class="form-section">
+                <h2 class="form-section-title"><i class="bi bi-person-fill me-2" aria-hidden="true"></i>I miei dati</h2>
+                <div class="mb-3">
+                  <label for="nome" class="form-label-big">Come ti chiami?</label>
+                  <input type="text" id="nome" class="form-control form-control-lg" placeholder="Il tuo nome e cognome" autocomplete="name">
+                </div>
+                <div class="mb-3">
+                  <label for="indirizzo" class="form-label-big">Dove abiti?</label>
+                  <input type="text" id="indirizzo" class="form-control form-control-lg" placeholder="Via, numero e città" autocomplete="street-address">
+                </div>
+                <div class="mb-3">
+                  <label for="allergie" class="form-label-big">Hai allergie o prendi medicine importanti?</label>
+                  <input type="text" id="allergie" class="form-control form-control-lg" placeholder="Scrivi qui (se non ne hai, lascia vuoto)">
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h2 class="form-section-title"><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>Chi chiamare</h2>
+                <div class="mb-3">
+                  <label for="contatto1-nome" class="form-label-big">Persona 1 — Nome</label>
+                  <input type="text" id="contatto1-nome" class="form-control form-control-lg" placeholder="Es: Mamma, Papà, Nonna...">
+                </div>
+                <div class="mb-3">
+                  <label for="contatto1-tel" class="form-label-big">Persona 1 — Numero di telefono</label>
+                  <input type="tel" id="contatto1-tel" class="form-control form-control-lg" placeholder="Es: 333 1234567" autocomplete="tel">
+                </div>
+                <div class="mb-3">
+                  <label for="contatto2-nome" class="form-label-big">Persona 2 — Nome</label>
+                  <input type="text" id="contatto2-nome" class="form-control form-control-lg" placeholder="Es: Zio Marco, vicina di casa...">
+                </div>
+                <div class="mb-3">
+                  <label for="contatto2-tel" class="form-label-big">Persona 2 — Numero di telefono</label>
+                  <input type="tel" id="contatto2-tel" class="form-control form-control-lg" placeholder="Es: 06 1234567" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h2 class="form-section-title"><i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>Il mio punto di incontro</h2>
+                <div class="mb-3">
+                  <label for="punto-incontro" class="form-label-big">Dove vi trovate se succede qualcosa?</label>
+                  <input type="text" id="punto-incontro" class="form-control form-control-lg" placeholder="Es: Piazza del paese, parcheggio della scuola...">
+                </div>
+              </div>
+
+              <div class="text-center mt-4 no-print">
+                <button type="submit" class="btn btn-primary btn-lg px-5 py-3" style="font-size: 1.3rem;"><i class="bi bi-card-text me-2" aria-hidden="true"></i> Crea la mia scheda</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Preview / Print -->
+          <div id="card-screen" class="hide">
+            <div class="no-print text-center mb-3">
+              <p class="lead">Ecco la tua scheda di emergenza! Puoi stamparla.</p>
+            </div>
+            <div id="emergency-card" class="emergency-card" role="region" aria-label="Scheda di emergenza personale">
+              <div class="card-header-stripe">
+                <i class="bi bi-shield-fill-check me-2" aria-hidden="true"></i>
+                La Mia Scheda di Emergenza
+              </div>
+              <div class="card-body-content">
+                <div class="card-row">
+                  <span class="card-label">Nome:</span>
+                  <span id="card-nome" class="card-value"></span>
+                </div>
+                <div class="card-row">
+                  <span class="card-label">Indirizzo:</span>
+                  <span id="card-indirizzo" class="card-value"></span>
+                </div>
+                <div class="card-row">
+                  <span class="card-label">Allergie / Medicine:</span>
+                  <span id="card-allergie" class="card-value"></span>
+                </div>
+                <hr>
+                <div class="card-row">
+                  <span class="card-label">☎ Chiama 1:</span>
+                  <span class="card-value"><strong id="card-c1-nome"></strong> — <span id="card-c1-tel"></span></span>
+                </div>
+                <div class="card-row">
+                  <span class="card-label">☎ Chiama 2:</span>
+                  <span class="card-value"><strong id="card-c2-nome"></strong> — <span id="card-c2-tel"></span></span>
+                </div>
+                <hr>
+                <div class="card-row">
+                  <span class="card-label">📍 Punto di incontro:</span>
+                  <span id="card-punto" class="card-value"></span>
+                </div>
+                <div class="card-emergency-numbers">
+                  <div class="emergency-number-big">
+                    <span class="en-label">Emergenze</span>
+                    <span class="en-number">112</span>
+                  </div>
+                  <div class="emergency-number-big">
+                    <span class="en-label">Pompieri</span>
+                    <span class="en-number">115</span>
+                  </div>
+                  <div class="emergency-number-big">
+                    <span class="en-label">Ambulanza</span>
+                    <span class="en-number">118</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer-stripe">
+                Protezione Civile — Gruppo Comunale Volontari — Genzano di Roma
+              </div>
+            </div>
+            <div class="text-center mt-4 no-print">
+              <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button id="print-btn" class="btn btn-primary btn-lg px-4 py-3"><i class="bi bi-printer me-1" aria-hidden="true"></i> Stampa</button>
+                <button id="edit-btn" class="btn btn-outline-secondary btn-lg px-4 py-3"><i class="bi bi-pencil me-1" aria-hidden="true"></i> Modifica</button>
+                <a href="../index.html" class="btn btn-outline-secondary btn-lg px-4 py-3"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna alle attività</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
