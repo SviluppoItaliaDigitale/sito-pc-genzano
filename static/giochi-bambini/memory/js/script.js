@@ -67,19 +67,32 @@ document.addEventListener('DOMContentLoaded', () => {
         (firstCard.dataset.name === secondCard.dataset.name) ? disableCards() : unflipCards();
     }
 
+    const matchMessages = ['Bravo!', 'Giusto!', 'Ottimo!', 'Bene!', 'Super!', 'Grande!'];
+
+    function showMatchFeedback(card) {
+        const msg = matchMessages[Math.floor(Math.random() * matchMessages.length)];
+        const toast = document.createElement('div');
+        toast.className = 'match-toast';
+        toast.textContent = msg;
+        toast.setAttribute('aria-live', 'polite');
+        const rect = card.getBoundingClientRect();
+        toast.style.left = rect.left + rect.width / 2 + 'px';
+        toast.style.top = rect.top + 'px';
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 900);
+    }
+
     function disableCards() {
-        // --- CORREZIONE APPLICATA QUI ---
-        // Rimuoviamo la possibilità di cliccare di nuovo sulle carte abbinate
         firstCard.removeEventListener('click', flipCard);
         secondCard.removeEventListener('click', flipCard);
-        
         firstCard.classList.add('matched');
         secondCard.classList.add('matched');
+        showMatchFeedback(firstCard);
         matchedPairs++;
         pairsCountSpan.textContent = matchedPairs;
         resetBoard();
-        if (matchedPairs === cardNames.length) { 
-            setTimeout(() => winScreen.classList.remove('hide'), 500); 
+        if (matchedPairs === cardNames.length) {
+            setTimeout(() => winScreen.classList.remove('hide'), 500);
         }
     }
 
