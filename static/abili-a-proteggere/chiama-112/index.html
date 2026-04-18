@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chiama il 112 — Abili a Proteggere</title>
+  <meta name="description" content="Impara a chiamare il 112 con un telefono simulato: attività accessibile per persone con difficoltà.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Abili a Proteggere</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chiama il 112</li>
+          </ol>
+        </nav>
+        <h1>Chiama il 112</h1>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+
+          <!-- Intro -->
+          <div id="intro-screen">
+            <p class="lead text-center mb-3">Impara a fare una telefonata di emergenza!</p>
+            <p class="text-center text-muted mb-4">In questa attività userai un telefono finto per esercitarti a chiamare il <strong>112</strong>. Ti guideremo passo dopo passo.</p>
+            <div class="text-center">
+              <button id="start-btn" class="btn btn-primary btn-lg px-5 py-3" style="font-size: 1.3rem;"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia</button>
+            </div>
+          </div>
+
+          <!-- Phone screen -->
+          <div id="phone-screen" class="hide">
+            <div class="phone-frame" role="region" aria-label="Telefono simulato">
+              <div id="phone-display" class="phone-display" aria-live="polite" aria-atomic="true">
+                <span id="display-text" class="display-text">Digita 1 — 1 — 2</span>
+              </div>
+              <div id="phone-number" class="phone-number" aria-label="Numero digitato"></div>
+              <div class="phone-keypad" role="group" aria-label="Tastierino numerico">
+                <button class="key-btn" data-digit="1" aria-label="1">1</button>
+                <button class="key-btn" data-digit="2" aria-label="2">2</button>
+                <button class="key-btn" data-digit="3" aria-label="3">3</button>
+                <button class="key-btn" data-digit="4" aria-label="4">4</button>
+                <button class="key-btn" data-digit="5" aria-label="5">5</button>
+                <button class="key-btn" data-digit="6" aria-label="6">6</button>
+                <button class="key-btn" data-digit="7" aria-label="7">7</button>
+                <button class="key-btn" data-digit="8" aria-label="8">8</button>
+                <button class="key-btn" data-digit="9" aria-label="9">9</button>
+                <button class="key-btn key-empty" disabled aria-hidden="true"></button>
+                <button class="key-btn" data-digit="0" aria-label="0">0</button>
+                <button id="call-btn" class="key-btn key-call" aria-label="Chiama" disabled>
+                  <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                </button>
+              </div>
+              <button id="clear-btn" class="btn btn-outline-secondary btn-sm mt-2 w-100" aria-label="Cancella numero">
+                <i class="bi bi-backspace me-1" aria-hidden="true"></i> Cancella
+              </button>
+            </div>
+          </div>
+
+          <!-- Conversation screen -->
+          <div id="conversation-screen" class="hide">
+            <div class="conversation-frame" role="region" aria-label="Conversazione con operatore 112">
+              <div class="call-header">
+                <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>
+                <span>Chiamata al 112 in corso...</span>
+              </div>
+              <div id="chat-area" class="chat-area" aria-live="polite"></div>
+              <div id="answer-area" class="answer-area"></div>
+            </div>
+          </div>
+
+          <!-- End screen -->
+          <div id="end-screen" class="hide">
+            <div class="text-center py-4">
+              <div class="mb-3" style="font-size: 4rem; color: #2e7d32;"><i class="bi bi-check-circle-fill" aria-hidden="true"></i></div>
+              <h2 class="h3 mb-3" style="color: #2e7d32;">Bravissimo!</h2>
+              <p class="lead mb-2">Hai imparato a chiamare il 112.</p>
+              <p class="text-muted mb-4">Ricorda: il <strong>112</strong> è il numero da chiamare in caso di emergenza. Funziona sempre, anche senza credito sul telefono.</p>
+              <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button id="restart-btn" class="btn btn-primary btn-lg px-4 py-3"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i> Rifai</button>
+                <a href="../index.html" class="btn btn-outline-secondary btn-lg px-4 py-3"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna alle attività</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

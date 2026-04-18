@@ -1,0 +1,157 @@
+/* La Mia Scheda di Emergenza — Stile accessibile */
+
+.hide { display: none !important; }
+
+/* Form */
+.form-section {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.form-label-big {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-control-lg {
+  font-size: 1.15rem;
+  padding: 0.85rem 1rem;
+  border: 2px solid #dee2e6;
+  border-radius: 12px;
+}
+.form-control-lg:focus {
+  border-color: #003366;
+  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.15);
+}
+
+/* Scheda stampabile */
+.emergency-card {
+  border: 3px solid #003366;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header-stripe {
+  background: #003366;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card-body-content {
+  padding: 1.5rem;
+}
+
+.card-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.card-label {
+  font-weight: 700;
+  color: #003366;
+  white-space: nowrap;
+}
+
+.card-value {
+  color: #333;
+  word-break: break-word;
+}
+
+.card-body-content hr {
+  border-color: #dee2e6;
+  margin: 1rem 0;
+}
+
+.card-emergency-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.emergency-number-big {
+  text-align: center;
+  background: #fde8ea;
+  border: 2px solid #dc3545;
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  min-width: 100px;
+}
+
+.en-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #842029;
+}
+
+.en-number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #dc3545;
+}
+
+.card-footer-stripe {
+  background: #f0f4f8;
+  border-top: 2px solid #dee2e6;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Stampa */
+@media print {
+  .no-print,
+  #site-header,
+  #site-footer,
+  .back-to-top,
+  .app-page-hero { display: none !important; }
+
+  body { background: #fff !important; }
+  .container { max-width: 100% !important; padding: 0 !important; }
+
+  .emergency-card {
+    box-shadow: none !important;
+    border: 3px solid #000 !important;
+    border-radius: 0;
+    page-break-inside: avoid;
+  }
+  .card-header-stripe {
+    background: #003366 !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+  .emergency-number-big {
+    background: #fde8ea !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+  .en-number {
+    color: #dc3545 !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
