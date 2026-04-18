@@ -177,7 +177,7 @@ Insegnate ai bambini a memorizzare il numero **112**.
 
 Per approfondire e avere materiale aggiuntivo:
 
-- [Giochiamo con la Protezione Civile](https://www.protezionecivilegenzano.it/giochi-bambini/index.html) — Giochi interattivi online per i più piccoli
+- [Giochiamo con la Protezione Civile](/giochi-bambini/index.html) — Giochi interattivi online per i più piccoli
 - [Io non rischio](https://www.iononrischio.it/) — Campagna nazionale con materiali scaricabili
 - [La Protezione Civile in famiglia](https://www.protezionecivilegenzano.it/documenti/download/PC_famiglia.pdf) — Da consegnare ai genitori
 

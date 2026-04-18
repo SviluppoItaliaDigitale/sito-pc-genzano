@@ -374,7 +374,7 @@ Per saperne di più: [Chi siamo](/chi-siamo/) | [Diventa Volontario](/diventa-vo
 - [Piano di Emergenza Familiare](/piano-familiare/) — Modello stampabile e compilabile
 - [Aree di emergenza di Genzano](/cartografia/) — Mappa delle aree di attesa e accoglienza
 - [Piano di Emergenza Comunale](/piano-emergenza/) — Struttura del piano del Comune
-- [Quiz di Protezione Civile](https://www.protezionecivilegenzano.it/quizpc/index.html) — Quiz interattivo
+- [Quiz di Protezione Civile](/quizpc/index.html) — Quiz interattivo
 - [Io non rischio](https://www.iononrischio.it/) — Materiali della campagna nazionale
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
 - [IdroGEO](https://idrogeo.isprambiente.it/) — Mappa frane e alluvioni di ISPRA
