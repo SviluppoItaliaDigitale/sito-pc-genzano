@@ -30,9 +30,18 @@ I volontari già operativi partecipano periodicamente a:
 - Simulazioni coordinate con la Sala Operativa Regionale
 - Incontri formativi con altri enti del sistema di protezione civile
 
-## Attività nelle scuole
+## Materiale didattico per le scuole
 
-Il Gruppo promuove la cultura della prevenzione fin dalla giovane età attraverso:
+Il Gruppo ha sviluppato kit didattici completi per ogni grado di istruzione, con guide per i docenti, schede per gli alunni, attività pratiche e quiz di verifica.
+
+| Kit | Età | Contenuti principali |
+|---|---|---|
+| [Scuola dell'Infanzia](kit-scuola-infanzia/) | 3-6 anni | Storie, giochi, la regola della tartaruga, il numero 112 |
+| [Scuola Primaria](kit-scuola-primaria/) | 6-11 anni | I rischi del territorio, comportamenti corretti, il piano familiare |
+| [Scuola Secondaria di I grado](kit-scuola-secondaria-primo-grado/) | 11-14 anni | Sistema di allertamento, autoprotezione, cittadinanza attiva |
+| [Scuola Secondaria di II grado](kit-scuola-secondaria-secondo-grado/) | 14-19 anni | Basi scientifiche, quadro normativo, comunicazione del rischio, PCTO |
+
+Il Gruppo promuove la cultura della prevenzione fin dalla giovane età anche attraverso:
 
 - **Incontri nelle scuole** del territorio per spiegare i rischi e i comportamenti corretti
 - **Dimostrazioni pratiche** con gli automezzi e le attrezzature operative

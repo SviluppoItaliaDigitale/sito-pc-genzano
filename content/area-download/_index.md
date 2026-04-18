@@ -117,4 +117,11 @@ Materiali informativi della campagna nazionale [Io Non Rischio](https://www.iono
 
 ## Materiali per le scuole
 
+Il Gruppo ha sviluppato **kit didattici completi** per ogni grado di istruzione, consultabili online nella sezione [Formazione e Scuole](/formazione/):
+
+- [Kit Scuola dell'Infanzia](/formazione/kit-scuola-infanzia/) (3-6 anni)
+- [Kit Scuola Primaria](/formazione/kit-scuola-primaria/) (6-11 anni)
+- [Kit Scuola Secondaria di I grado](/formazione/kit-scuola-secondaria-primo-grado/) (11-14 anni)
+- [Kit Scuola Secondaria di II grado](/formazione/kit-scuola-secondaria-secondo-grado/) (14-19 anni)
+
 Se sei un insegnante e desideri materiale aggiuntivo per attività in classe, contattaci a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). Siamo disponibili anche per incontri formativi nelle scuole del territorio.
