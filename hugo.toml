@@ -20,7 +20,7 @@ enableGitInfo = true
   # URL di produzione — usato per canonical, og:url e sitemap
   productionBaseURL = "https://www.protezionecivilegenzano.it/"
   description = "Sito ufficiale del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
-  author = "Alessandro Cuollo - Alfa 19 - IU0QVW"
+  author = "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
   cf = "92011880588"
   sede = "Via Sicilia, 13-15 - 00045 Genzano Di Roma (RM)"
   telefono = "+39 069362600"
