@@ -23,6 +23,7 @@ In caso di emergenza, contatta sempre i numeri ufficiali per garantire un interv
 - [Normattiva](https://www.normattiva.it/) — Consultazione gratuita e aggiornata di tutta la normativa italiana
 - [Abili a proteggere](https://www.abiliaproteggere.net/) — Portale del Dipartimento della Protezione Civile dedicato alle persone con disabilità e alle fragilità in emergenza
 - [Io non rischio](https://www.iononrischio.it/) — Campagna nazionale del Dipartimento della Protezione Civile sulle buone pratiche di prevenzione
+- [Città Metropolitana di Roma Capitale](https://www.cittametropolitanaroma.it/) — Ente di area vasta con competenze su viabilità e protezione civile sovracomunale
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/) — Sito ufficiale dell'ente comunale
 - [Geoportale Nazionale](https://www.pcn.minambiente.it/mattm/) — Cartografia e dati territoriali del Ministero dell'Ambiente
 - [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/) — Informazioni sul territorio e normative di tutela ambientale
