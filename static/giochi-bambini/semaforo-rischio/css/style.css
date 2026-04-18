@@ -1,0 +1,33 @@
+.game-container { max-width: 600px; margin: 0 auto; text-align: center; }
+.situation-card {
+    background: #fff; border: 2px solid #dee2e6; border-radius: 12px;
+    padding: 2rem 1.5rem; margin-bottom: 1.5rem;
+    min-height: 100px; display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.3s;
+}
+.situation-text { font-size: 1.15rem; font-weight: 600; margin: 0; line-height: 1.5; }
+.semaforo-buttons { display: flex; gap: 12px; justify-content: center; margin-bottom: 1rem; }
+.sem-btn {
+    flex: 1; max-width: 160px; padding: 14px 16px; border: 3px solid transparent;
+    border-radius: 12px; font-size: 1rem; font-weight: 700;
+    cursor: pointer; transition: all 0.2s ease; color: #fff;
+}
+.sem-btn:hover { transform: scale(1.05); }
+.sem-btn:disabled { opacity: 0.5; cursor: default; transform: none; }
+.sem-verde { background: #2e7d32; border-color: #1b5e20; }
+.sem-giallo { background: #f9a825; border-color: #f57f17; color: #333; }
+.sem-rosso { background: #c62828; border-color: #b71c1c; }
+.feedback-box {
+    padding: 12px 20px; border-radius: 10px; font-size: 0.95rem;
+    font-weight: 600; margin-top: 1rem; animation: fadeIn 0.3s ease;
+}
+.feedback-box.correct { background: #e8f5e9; border: 2px solid #2e7d32; color: #1b5e20; }
+.feedback-box.wrong { background: #ffebee; border: 2px solid #c62828; color: #b71c1c; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.situation-card.flash-correct { border-color: #2e7d32; background: #e8f5e9; }
+.situation-card.flash-wrong { border-color: #c62828; background: #ffebee; }
+.hide { display: none !important; }
+@media (max-width: 480px) {
+    .sem-btn { font-size: 0.85rem; padding: 12px 10px; }
+    .situation-text { font-size: 1rem; }
+}
