@@ -1,5 +1,5 @@
 {{/* CTA Giochi della Sicurezza — Homepage
-     3 card colorate per fascia di età + bottone "vedi tutti" */}}
+     Card immersive colorate con icone flottanti, effetto lift su hover */}}
 <section class="games-cta-section" aria-labelledby="games-cta-heading">
   <div class="container">
     <div class="games-cta-header text-center">
@@ -15,18 +15,26 @@
 
     <div class="row g-4 games-cta-grid">
       <div class="col-md-6 col-lg-4">
-        <a href="{{ "/giochi/infanzia/" | relURL }}" class="games-fascia-card games-fascia-infanzia">
-          <div class="games-fascia-icon">
-            <i class="bi bi-emoji-smile-fill" aria-hidden="true"></i>
+        <a href="{{ "/giochi/infanzia/" | relURL }}" class="games-fascia-card games-fascia-infanzia" aria-label="Giochi per la fascia infanzia, 3-6 anni, 4 giochi disponibili">
+          <div class="games-fascia-bg" aria-hidden="true">
+            <i class="bi bi-stars games-fascia-deco games-fascia-deco-1"></i>
+            <i class="bi bi-heart-fill games-fascia-deco games-fascia-deco-2"></i>
+            <i class="bi bi-balloon-fill games-fascia-deco games-fascia-deco-3"></i>
           </div>
-          <div class="games-fascia-content">
+          <div class="games-fascia-body">
+            <div class="games-fascia-icon-wrap">
+              <i class="bi bi-emoji-smile-fill games-fascia-icon" aria-hidden="true"></i>
+            </div>
             <span class="games-fascia-eta">3 – 6 anni</span>
             <h3 class="games-fascia-title">Piccoli Esploratori</h3>
-            <p class="games-fascia-desc">Giochi semplici con icone grandi, suoni e pochissimo testo. Da fare con un adulto accanto.</p>
+            <p class="games-fascia-desc">Icone grandi, suoni e pochissimo testo. Da fare con un adulto accanto.</p>
             <div class="games-fascia-footer">
-              <span class="games-fascia-count"><i class="bi bi-joystick me-1" aria-hidden="true"></i>4 giochi</span>
-              <span class="games-fascia-arrow" aria-hidden="true">
-                <i class="bi bi-arrow-right"></i>
+              <span class="games-fascia-count">
+                <i class="bi bi-joystick" aria-hidden="true"></i>
+                <strong>4</strong> giochi
+              </span>
+              <span class="games-fascia-cta">
+                Gioca <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
               </span>
             </div>
           </div>
@@ -34,18 +42,26 @@
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <a href="{{ "/giochi/primaria/" | relURL }}" class="games-fascia-card games-fascia-primaria">
-          <div class="games-fascia-icon">
-            <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
+        <a href="{{ "/giochi/primaria/" | relURL }}" class="games-fascia-card games-fascia-primaria" aria-label="Giochi per la scuola primaria, 6-11 anni, 10 giochi disponibili">
+          <div class="games-fascia-bg" aria-hidden="true">
+            <i class="bi bi-puzzle-fill games-fascia-deco games-fascia-deco-1"></i>
+            <i class="bi bi-lightbulb-fill games-fascia-deco games-fascia-deco-2"></i>
+            <i class="bi bi-book-fill games-fascia-deco games-fascia-deco-3"></i>
           </div>
-          <div class="games-fascia-content">
+          <div class="games-fascia-body">
+            <div class="games-fascia-icon-wrap">
+              <i class="bi bi-mortarboard-fill games-fascia-icon" aria-hidden="true"></i>
+            </div>
             <span class="games-fascia-eta">6 – 11 anni</span>
             <h3 class="games-fascia-title">Scuola Primaria</h3>
-            <p class="games-fascia-desc">Memory, puzzle, caccia al rischio, anagrammi, cruciverba e scenari interattivi sui comportamenti corretti.</p>
+            <p class="games-fascia-desc">Memory, puzzle, anagrammi, cruciverba e scenari sui comportamenti corretti.</p>
             <div class="games-fascia-footer">
-              <span class="games-fascia-count"><i class="bi bi-joystick me-1" aria-hidden="true"></i>10 giochi</span>
-              <span class="games-fascia-arrow" aria-hidden="true">
-                <i class="bi bi-arrow-right"></i>
+              <span class="games-fascia-count">
+                <i class="bi bi-joystick" aria-hidden="true"></i>
+                <strong>10</strong> giochi
+              </span>
+              <span class="games-fascia-cta">
+                Gioca <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
               </span>
             </div>
           </div>
@@ -53,18 +69,26 @@
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <a href="{{ "/giochi/ragazzi/" | relURL }}" class="games-fascia-card games-fascia-ragazzi">
-          <div class="games-fascia-icon">
-            <i class="bi bi-shield-shaded" aria-hidden="true"></i>
+        <a href="{{ "/giochi/ragazzi/" | relURL }}" class="games-fascia-card games-fascia-ragazzi" aria-label="Giochi per ragazzi e famiglie, 11-19 anni, 5 giochi disponibili">
+          <div class="games-fascia-bg" aria-hidden="true">
+            <i class="bi bi-broadcast games-fascia-deco games-fascia-deco-1"></i>
+            <i class="bi bi-geo-alt-fill games-fascia-deco games-fascia-deco-2"></i>
+            <i class="bi bi-hexagon-fill games-fascia-deco games-fascia-deco-3"></i>
           </div>
-          <div class="games-fascia-content">
+          <div class="games-fascia-body">
+            <div class="games-fascia-icon-wrap">
+              <i class="bi bi-shield-shaded games-fascia-icon" aria-hidden="true"></i>
+            </div>
             <span class="games-fascia-eta">11 – 19 anni</span>
             <h3 class="games-fascia-title">Ragazzi e Famiglie</h3>
-            <p class="games-fascia-desc">Simulatore COC, mappa del rischio, radio di emergenza e gestione delle emergenze. Scenari realistici ispirati al Metodo Augustus.</p>
+            <p class="games-fascia-desc">Simulatore COC, mappa del rischio, radio di emergenza. Scenari realistici.</p>
             <div class="games-fascia-footer">
-              <span class="games-fascia-count"><i class="bi bi-joystick me-1" aria-hidden="true"></i>5 giochi</span>
-              <span class="games-fascia-arrow" aria-hidden="true">
-                <i class="bi bi-arrow-right"></i>
+              <span class="games-fascia-count">
+                <i class="bi bi-joystick" aria-hidden="true"></i>
+                <strong>5</strong> giochi
+              </span>
+              <span class="games-fascia-cta">
+                Gioca <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
               </span>
             </div>
           </div>
@@ -72,7 +96,7 @@
       </div>
     </div>
 
-    <div class="text-center mt-4">
+    <div class="text-center mt-5">
       <a href="{{ "/giochi/" | relURL }}" class="btn btn-primary btn-lg games-cta-all-btn">
         <i class="bi bi-grid-3x3-gap-fill me-2" aria-hidden="true"></i>
         Vedi tutti i giochi
