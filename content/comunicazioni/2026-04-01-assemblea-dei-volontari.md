@@ -6,7 +6,7 @@ badge: "Avviso"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: ""
-scadenza: "2026-04-04"
+scadenza: ""
 area: "Sede operativa, Genzano di Roma"
 allegati: []
 draft: false

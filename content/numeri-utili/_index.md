@@ -37,7 +37,7 @@ aliases:
 Questi recapiti sono **per informazioni e richieste non urgenti**. In caso di emergenza, chiama sempre il **112**.
 
 - **Sede:** Via Sicilia, 13-15 — 00045 Genzano di Roma (RM)
-- **Telefono:** [+39 069362600](tel:+39069362600)
+- **Telefono:** [+39 06 9362600](tel:+39069362600)
 - **Email:** [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
 
 ## App utili

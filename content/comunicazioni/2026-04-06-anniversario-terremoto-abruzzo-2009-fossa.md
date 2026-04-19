@@ -1,7 +1,7 @@
 ---
 title: "Diciassette anni fa il terremoto dell'Aquila: quando i volontari di Genzano portarono la speranza a Fossa"
 date: 2026-04-06
-description: "Nel 17° anniversario del sisma che devastò l'Abruzzo il 6 aprile 2009, ricordiamo l'impegno straordinario dei volontari del Gruppo Comunale di Genzano di Roma nel comune di Fossa, coordinati dalla Fepivol."
+description: "Nel 17° anniversario del sisma del 6 aprile 2009, ricordiamo l'impegno dei volontari di Genzano nel comune di Fossa con la Fepivol."
 
 badge: "Volontariato"
 priorita: "normale"

@@ -23,7 +23,7 @@ La dichiarazione di accessibilità ufficiale, compilata secondo quanto previsto 
 Se durante la navigazione riscontri problemi di accessibilità che ti impediscono di accedere ai contenuti del sito, puoi segnalarlo a:
 
 - **Email:** [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
-- **Telefono:** [+39 069362600](tel:+39069362600)
+- **Telefono:** [+39 06 9362600](tel:+39069362600)
 
 Cercheremo di rispondere entro 30 giorni dalla segnalazione.
 

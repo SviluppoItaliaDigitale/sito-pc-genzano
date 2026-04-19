@@ -76,7 +76,7 @@ Non esiste un impegno fisso obbligatorio. Ciascun volontario contribuisce in bas
 <div class="card text-center p-3 h-100 shadow-sm">
 <i class="bi bi-telephone fs-2 text-primary d-block mb-2" aria-hidden="true"></i>
 <strong>Telefonicamente</strong>
-<p class="small text-muted mb-0"><a href="tel:+39069362600">+39 069362600</a></p>
+<p class="small text-muted mb-0"><a href="tel:+39069362600">+39 06 9362600</a></p>
 </div>
 </div>
 <div class="col-md-4 mb-3">

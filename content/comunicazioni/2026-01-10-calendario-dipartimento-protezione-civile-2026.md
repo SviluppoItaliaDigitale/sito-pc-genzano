@@ -1,7 +1,7 @@
 ---
 title: "Calendario del Dipartimento della Protezione Civile 2026: le emergenze internazionali"
 date: 2026-01-10
-description: "L'edizione 2026 del calendario del Dipartimento è dedicata all'impegno della protezione civile italiana nelle emergenze internazionali. Disponibile online e scaricabile in PDF."
+description: "Il calendario 2026 del Dipartimento è dedicato all'impegno della protezione civile italiana nelle emergenze internazionali. Scaricabile in PDF."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
