@@ -1,110 +1,56 @@
 {{/* CTA Giochi della Sicurezza — Homepage
-     Card immersive colorate con icone flottanti, effetto lift su hover */}}
-<section class="games-cta-section" aria-labelledby="games-cta-heading">
+     Stesso stile della sezione "Servizi per il cittadino" */}}
+<section class="servizi-section fade-in-up" aria-labelledby="games-cta-heading">
   <div class="container">
-    <div class="games-cta-header text-center">
-      <span class="games-cta-eyebrow">
-        <i class="bi bi-controller me-2" aria-hidden="true"></i>Formazione · Educazione · Gioco
-      </span>
-      <h2 id="games-cta-heading" class="games-cta-title">Giochi della Sicurezza</h2>
-      <p class="games-cta-subtitle">
-        Impara la Protezione Civile divertendoti. Attività educative gratuite per tre fasce di età,
-        con attestato finale di partecipazione.
-      </p>
-    </div>
+    <h2 id="games-cta-heading" class="section-title text-center">Giochi della Sicurezza</h2>
+    <p class="text-center text-muted mb-4 mx-auto" style="max-width:680px;">
+      Impara la Protezione Civile divertendoti. Attività educative gratuite per tre fasce di età, con attestato finale di partecipazione.
+    </p>
 
-    <div class="row g-4 games-cta-grid">
-      <div class="col-md-6 col-lg-4">
-        <a href="{{ "/giochi/infanzia/" | relURL }}" class="games-fascia-card games-fascia-infanzia" aria-label="Giochi per la fascia infanzia, 3-6 anni, 4 giochi disponibili">
-          <div class="games-fascia-bg" aria-hidden="true">
-            <i class="bi bi-stars games-fascia-deco games-fascia-deco-1"></i>
-            <i class="bi bi-heart-fill games-fascia-deco games-fascia-deco-2"></i>
-            <i class="bi bi-balloon-fill games-fascia-deco games-fascia-deco-3"></i>
+    <div class="row mt-4 justify-content-center">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card card-servizio shadow-sm h-100">
+          <div class="card-body text-center p-4">
+            <div class="servizio-icon si-red"><i class="bi bi-emoji-smile-fill" aria-hidden="true"></i></div>
+            <h3 class="h6">Piccoli Esploratori</h3>
+            <p class="text-muted small">3 – 6 anni · 4 giochi con icone, suoni e pochissimo testo.</p>
+            <a href="{{ "/giochi/infanzia/" | relURL }}" class="btn btn-outline-primary btn-sm">Gioca</a>
           </div>
-          <div class="games-fascia-body">
-            <div class="games-fascia-icon-wrap">
-              <i class="bi bi-emoji-smile-fill games-fascia-icon" aria-hidden="true"></i>
-            </div>
-            <span class="games-fascia-eta">3 – 6 anni</span>
-            <h3 class="games-fascia-title">Piccoli Esploratori</h3>
-            <p class="games-fascia-desc">Icone grandi, suoni e pochissimo testo. Da fare con un adulto accanto.</p>
-            <div class="games-fascia-footer">
-              <span class="games-fascia-count">
-                <i class="bi bi-joystick" aria-hidden="true"></i>
-                <strong>4</strong> giochi
-              </span>
-              <span class="games-fascia-cta">
-                Gioca <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
-              </span>
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <a href="{{ "/giochi/primaria/" | relURL }}" class="games-fascia-card games-fascia-primaria" aria-label="Giochi per la scuola primaria, 6-11 anni, 10 giochi disponibili">
-          <div class="games-fascia-bg" aria-hidden="true">
-            <i class="bi bi-puzzle-fill games-fascia-deco games-fascia-deco-1"></i>
-            <i class="bi bi-lightbulb-fill games-fascia-deco games-fascia-deco-2"></i>
-            <i class="bi bi-book-fill games-fascia-deco games-fascia-deco-3"></i>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card card-servizio shadow-sm h-100">
+          <div class="card-body text-center p-4">
+            <div class="servizio-icon si-green"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></div>
+            <h3 class="h6">Scuola Primaria</h3>
+            <p class="text-muted small">6 – 11 anni · 10 giochi: memory, puzzle, anagrammi, cruciverba.</p>
+            <a href="{{ "/giochi/primaria/" | relURL }}" class="btn btn-outline-primary btn-sm">Gioca</a>
           </div>
-          <div class="games-fascia-body">
-            <div class="games-fascia-icon-wrap">
-              <i class="bi bi-mortarboard-fill games-fascia-icon" aria-hidden="true"></i>
-            </div>
-            <span class="games-fascia-eta">6 – 11 anni</span>
-            <h3 class="games-fascia-title">Scuola Primaria</h3>
-            <p class="games-fascia-desc">Memory, puzzle, anagrammi, cruciverba e scenari sui comportamenti corretti.</p>
-            <div class="games-fascia-footer">
-              <span class="games-fascia-count">
-                <i class="bi bi-joystick" aria-hidden="true"></i>
-                <strong>10</strong> giochi
-              </span>
-              <span class="games-fascia-cta">
-                Gioca <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
-              </span>
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <a href="{{ "/giochi/ragazzi/" | relURL }}" class="games-fascia-card games-fascia-ragazzi" aria-label="Giochi per ragazzi e famiglie, 11-19 anni, 5 giochi disponibili">
-          <div class="games-fascia-bg" aria-hidden="true">
-            <i class="bi bi-broadcast games-fascia-deco games-fascia-deco-1"></i>
-            <i class="bi bi-geo-alt-fill games-fascia-deco games-fascia-deco-2"></i>
-            <i class="bi bi-hexagon-fill games-fascia-deco games-fascia-deco-3"></i>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card card-servizio shadow-sm h-100">
+          <div class="card-body text-center p-4">
+            <div class="servizio-icon si-blue"><i class="bi bi-shield-shaded" aria-hidden="true"></i></div>
+            <h3 class="h6">Ragazzi e Famiglie</h3>
+            <p class="text-muted small">11 – 19 anni · 5 giochi con scenari realistici di emergenza.</p>
+            <a href="{{ "/giochi/ragazzi/" | relURL }}" class="btn btn-outline-primary btn-sm">Gioca</a>
           </div>
-          <div class="games-fascia-body">
-            <div class="games-fascia-icon-wrap">
-              <i class="bi bi-shield-shaded games-fascia-icon" aria-hidden="true"></i>
-            </div>
-            <span class="games-fascia-eta">11 – 19 anni</span>
-            <h3 class="games-fascia-title">Ragazzi e Famiglie</h3>
-            <p class="games-fascia-desc">Simulatore COC, mappa del rischio, radio di emergenza. Scenari realistici.</p>
-            <div class="games-fascia-footer">
-              <span class="games-fascia-count">
-                <i class="bi bi-joystick" aria-hidden="true"></i>
-                <strong>5</strong> giochi
-              </span>
-              <span class="games-fascia-cta">
-                Gioca <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
-              </span>
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
-    </div>
 
-    <div class="text-center mt-5">
-      <a href="{{ "/giochi/" | relURL }}" class="btn btn-primary btn-lg games-cta-all-btn">
-        <i class="bi bi-grid-3x3-gap-fill me-2" aria-hidden="true"></i>
-        Vedi tutti i giochi
-      </a>
-      <p class="games-cta-note mt-3">
-        <i class="bi bi-award-fill me-1" aria-hidden="true"></i>
-        Al termine di ogni gioco ricevi un attestato di partecipazione da stampare
-      </p>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card card-servizio shadow-sm h-100">
+          <div class="card-body text-center p-4">
+            <div class="servizio-icon si-orange"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i></div>
+            <h3 class="h6">Tutti i giochi</h3>
+            <p class="text-muted small">19 giochi educativi. Attestato finale da stampare e conservare.</p>
+            <a href="{{ "/giochi/" | relURL }}" class="btn btn-outline-primary btn-sm">Vedi tutti</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
