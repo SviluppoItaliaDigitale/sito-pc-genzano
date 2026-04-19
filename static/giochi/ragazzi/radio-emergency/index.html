@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radio Emergency — Giochi Ragazzi</title>
+  <meta name="description" content="Alfabeto fonetico NATO, formato messaggio radio, dettato: impara a comunicare in emergenza.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <style>
+    .mode-tabs { display: flex; gap: .5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .mode-tabs button {
+      flex: 1; min-width: 140px; padding: .6rem;
+      background: #fff; border: 2px solid var(--rag-blu); color: var(--rag-blu);
+      border-radius: 8px; font-weight: 600; cursor: pointer;
+    }
+    .mode-tabs button.active { background: var(--rag-blu); color: #fff; }
+    .radio-card {
+      background: #1d2d40; color: #cfe9ff; border-radius: 12px;
+      padding: 1.2rem; margin: 1rem 0; font-family: monospace; font-size: 1.1rem;
+      border-left: 4px solid var(--rag-arancio);
+    }
+    .opt-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem; margin-top: 1rem; }
+    @media (max-width: 560px) { .opt-grid { grid-template-columns: 1fr; } }
+    .opt-btn {
+      padding: .7rem; border-radius: 8px; border: 2px solid #e9ecef;
+      background: #fff; color: var(--rag-blu); cursor: pointer; font-weight: 500;
+      text-align: left;
+    }
+    .opt-btn:hover, .opt-btn:focus { background: #eef4fc; border-color: var(--rag-blu); }
+    .opt-btn.correct { background: #d1e7dd; border-color: #198754; color: #0f5132; }
+    .opt-btn.wrong { background: #f8d7da; border-color: #dc3545; color: #8B1F2E; }
+    .alfabeto-table {
+      font-size: .85rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: .4rem;
+    }
+    .alfabeto-table span { background: #eef4fc; border-radius: 4px; padding: .3rem .5rem; }
+    .alfabeto-table span b { color: var(--rag-blu); }
+  </style>
+</head>
+<body class="rag-body">
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Ragazzi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Radio Emergency</li>
+          </ol>
+        </nav>
+        <h1>Radio Emergency</h1>
+        <p class="lead">Alfabeto fonetico NATO, formato messaggio, dettato: impara a comunicare in emergenza.</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div id="intro" class="rag-panel">
+            <h2>Come si gioca</h2>
+            <p>Tre prove: <strong>Alfabeto NATO</strong>, <strong>Formato messaggio</strong>, <strong>Dettato radio</strong>. Il totale determina il punteggio finale.</p>
+            <details class="mb-2">
+              <summary class="fw-bold">Tabella alfabeto NATO (per ripasso)</summary>
+              <div class="alfabeto-table mt-2" id="alfabeto-ripasso"></div>
+            </details>
+            <button id="start" class="btn btn-primary btn-lg"><i class="bi bi-broadcast me-1"></i> Vai in radio</button>
+          </div>
+
+          <div id="game" class="hide">
+            <div class="mode-tabs">
+              <button data-mode="alfabeto" class="active"><i class="bi bi-alphabet me-1"></i> Alfabeto NATO</button>
+              <button data-mode="formato"><i class="bi bi-list-ol me-1"></i> Formato messaggio</button>
+              <button data-mode="dettato"><i class="bi bi-pencil-square me-1"></i> Dettato radio</button>
+            </div>
+            <div class="d-flex justify-content-between small mb-2">
+              <span>Prova <strong id="prova-n">1</strong> di <strong id="prova-tot">5</strong></span>
+              <span>Punti: <strong id="punti">0</strong></span>
+            </div>
+            <div id="prompt" class="radio-card"></div>
+            <div id="opzioni" class="opt-grid"></div>
+            <div id="risposta-libera" class="hide mt-3">
+              <label for="input-libero" class="form-label">Scrivi qui la decodifica:</label>
+              <input id="input-libero" class="form-control" type="text" autocomplete="off">
+              <button id="invia" class="btn btn-primary mt-2"><i class="bi bi-send me-1"></i> Invia</button>
+            </div>
+            <div id="feedback" class="mt-3" aria-live="polite"></div>
+          </div>
+
+          <div id="end" class="rag-panel hide text-center">
+            <div class="display-4 text-primary mb-2"><i class="bi bi-broadcast-pin"></i></div>
+            <h2>Turno radio concluso</h2>
+            <p class="lead">Punteggio: <strong><span id="final-punti">0</span></strong> su <strong><span id="final-max">0</span></strong>.</p>
+            <p id="final-msg" class="text-muted"></p>
+            <div class="attestato-inject my-3"></div>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <button id="restart" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Nuovo turno</button>
+              <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    var NATO = [
+      ['A','Alfa'],['B','Bravo'],['C','Charlie'],['D','Delta'],['E','Echo'],['F','Foxtrot'],
+      ['G','Golf'],['H','Hotel'],['I','India'],['J','Juliet'],['K','Kilo'],['L','Lima'],
+      ['M','Mike'],['N','November'],['O','Oscar'],['P','Papa'],['Q','Quebec'],['R','Romeo'],
+      ['S','Sierra'],['T','Tango'],['U','Uniform'],['V','Victor'],['W','Whiskey'],['X','X-ray'],
+      ['Y','Yankee'],['Z','Zulu']
+    ];
+
+    var MESSAGGI = [
+      {
+        domanda: 'Sequenza corretta del formato messaggio radio:',
+        opzioni: [
+          'Nominativo chiamato → Nominativo chiamante → Messaggio → Chiudo',
+          'Messaggio → Nominativo chiamato → Nominativo chiamante → Chiudo',
+          'Nominativo chiamante → Nominativo chiamato → Messaggio → Passo',
+          'Messaggio → Passo → Chiudo'
+        ],
+        corretta: 0,
+        spiega: 'Si chiama prima il destinatario, ci si identifica, poi si trasmette il messaggio.'
+      },
+      {
+        domanda: 'La parola "PASSO" in radio significa:',
+        opzioni: [
+          'Chiudo la comunicazione definitivamente',
+          'Ho finito, aspetto risposta',
+          'Ripeti l\'ultimo messaggio',
+          'Richiesta soccorso immediato'
+        ],
+        corretta: 1,
+        spiega: '"Passo" significa: ho finito, a te la parola, aspetto risposta.'
+      },
+      {
+        domanda: '"Ricevuto" in radio significa:',
+        opzioni: [
+          'Ho capito ma non sono d\'accordo',
+          'Ho ricevuto e compreso il messaggio',
+          'Sto ricevendo il messaggio adesso',
+          'Segnale troppo debole'
+        ],
+        corretta: 1,
+        spiega: '"Ricevuto" (o "Roger") significa: messaggio ricevuto e compreso.'
+      },
+      {
+        domanda: 'Il messaggio va strutturato in:',
+        opzioni: [
+          'Forma libera per essere più veloci',
+          'Frasi brevi, chiare, una informazione per volta',
+          'Linguaggio tecnico complesso',
+          'Dialetto locale per riconoscibilità'
+        ],
+        corretta: 1,
+        spiega: 'Frasi brevi e chiare: la radio ha tempo limitato e va capita subito.'
+      }
+    ];
+
+    var DETTATO = [
+      { frase: 'GENZANO', spell: 'Golf - Echo - November - Zulu - Alfa - November - Oscar' },
+      { frase: 'COC', spell: 'Charlie - Oscar - Charlie' },
+      { frase: 'BRAVO 3', spell: 'Bravo - Romeo - Alfa - Victor - Oscar - tre' },
+      { frase: 'APPIA', spell: 'Alfa - Papa - Papa - India - Alfa' }
+    ];
+
+    // Render ripasso
+    var ripasso = document.getElementById('alfabeto-ripasso');
+    if (ripasso){
+      ripasso.innerHTML = NATO.map(function(p){ return '<span><b>' + p[0] + '</b> = ' + p[1] + '</span>'; }).join('');
+    }
+
+    var intro = document.getElementById('intro'),
+        game = document.getElementById('game'),
+        end = document.getElementById('end'),
+        prompt = document.getElementById('prompt'),
+        opzioni = document.getElementById('opzioni'),
+        rispostaLibera = document.getElementById('risposta-libera'),
+        inputLibero = document.getElementById('input-libero'),
+        invia = document.getElementById('invia'),
+        feedback = document.getElementById('feedback'),
+        puntiEl = document.getElementById('punti'),
+        provaN = document.getElementById('prova-n'),
+        provaTot = document.getElementById('prova-tot'),
+        tabs = document.querySelectorAll('.mode-tabs button');
+
+    var mode = 'alfabeto';
+    var queue = [], idx = 0, punti = 0, punteggioMax = 0;
+    var modeQueues = { alfabeto: [], formato: [], dettato: [] };
+
+    function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+
+    function start(){
+      intro.classList.add('hide'); end.classList.add('hide'); game.classList.remove('hide');
+      punti = 0; punteggioMax = 0;
+      puntiEl.textContent = 0;
+      // Prepara 5 domande alfabeto, 3 formato, 3 dettato
+      modeQueues.alfabeto = shuffle(NATO.slice()).slice(0, 5).map(function(p){
+        var opts = shuffle([p[1]].concat(shuffle(NATO.filter(function(q){ return q[0] !== p[0]; })).slice(0, 3).map(function(q){ return q[1]; })));
+        return { tipo:'mc', testo: 'Come si dice in NATO la lettera <strong>' + p[0] + '</strong>?', opzioni: opts, corretta: opts.indexOf(p[1]), spiega: p[0] + ' = ' + p[1] };
+      });
+      modeQueues.formato = MESSAGGI.slice().map(function(m){
+        return { tipo:'mc', testo: m.domanda, opzioni: m.opzioni, corretta: m.corretta, spiega: m.spiega };
+      });
+      modeQueues.dettato = shuffle(DETTATO.slice()).slice(0, 3).map(function(d){
+        return { tipo:'free', testo: 'Scrivi cosa significa: <strong>' + d.spell + '</strong>', risposta: d.frase, spiega: 'La decodifica corretta è <strong>' + d.frase + '</strong>.' };
+      });
+      switchMode('alfabeto');
+    }
+
+    function switchMode(m){
+      mode = m;
+      tabs.forEach(function(t){ t.classList.toggle('active', t.dataset.mode === m); });
+      queue = modeQueues[m];
+      idx = 0;
+      provaTot.textContent = queue.length;
+      feedback.innerHTML = '';
+      show();
+    }
+
+    tabs.forEach(function(t){
+      t.addEventListener('click', function(){ switchMode(t.dataset.mode); });
+    });
+
+    function show(){
+      feedback.innerHTML = '';
+      rispostaLibera.classList.add('hide');
+      opzioni.innerHTML = '';
+      if (idx >= queue.length){
+        prompt.innerHTML = '<strong>Sezione completata.</strong> Usa le schede in alto per la prossima, oppure clicca <em>Concludi turno</em>.';
+        var btn = document.createElement('button');
+        btn.className = 'btn btn-success mt-2';
+        btn.innerHTML = '<i class="bi bi-flag-fill me-1"></i> Concludi turno';
+        btn.addEventListener('click', finish);
+        opzioni.appendChild(btn);
+        return;
+      }
+      provaN.textContent = idx+1;
+      var q = queue[idx];
+      prompt.innerHTML = '<i class="bi bi-broadcast me-1"></i> ' + q.testo;
+      if (q.tipo === 'mc'){
+        q.opzioni.forEach(function(opt, i){
+          var b = document.createElement('button');
+          b.className = 'opt-btn';
+          b.innerHTML = opt;
+          b.addEventListener('click', function(){
+            opzioni.querySelectorAll('.opt-btn').forEach(function(x){ x.disabled = true; });
+            punteggioMax++;
+            if (i === q.corretta){
+              b.classList.add('correct');
+              punti++; puntiEl.textContent = punti;
+              feedback.innerHTML = '<div class="alert alert-success py-2 mb-0"><i class="bi bi-check-circle-fill me-1"></i> ' + q.spiega + '</div>';
+            } else {
+              b.classList.add('wrong');
+              opzioni.querySelectorAll('.opt-btn')[q.corretta].classList.add('correct');
+              feedback.innerHTML = '<div class="alert alert-warning py-2 mb-0"><i class="bi bi-x-circle-fill me-1"></i> ' + q.spiega + '</div>';
+            }
+            setTimeout(function(){ idx++; show(); }, 1700);
+          });
+          opzioni.appendChild(b);
+        });
+      } else {
+        rispostaLibera.classList.remove('hide');
+        inputLibero.value = '';
+        inputLibero.focus();
+      }
+    }
+
+    invia.addEventListener('click', function(){
+      if (idx >= queue.length) return;
+      var q = queue[idx];
+      if (q.tipo !== 'free') return;
+      punteggioMax++;
+      var v = inputLibero.value.trim().toUpperCase();
+      if (v === q.risposta.toUpperCase()){
+        punti++; puntiEl.textContent = punti;
+        feedback.innerHTML = '<div class="alert alert-success py-2 mb-0"><i class="bi bi-check-circle-fill me-1"></i> Perfetto! ' + q.spiega + '</div>';
+      } else {
+        feedback.innerHTML = '<div class="alert alert-warning py-2 mb-0"><i class="bi bi-x-circle-fill me-1"></i> Hai scritto "' + inputLibero.value + '". ' + q.spiega + '</div>';
+      }
+      setTimeout(function(){ idx++; show(); }, 1800);
+    });
+
+    function finish(){
+      game.classList.add('hide');
+      end.classList.remove('hide');
+      document.getElementById('final-punti').textContent = punti;
+      document.getElementById('final-max').textContent = punteggioMax;
+      var perc = punteggioMax > 0 ? (punti / punteggioMax) * 100 : 0;
+      var msg;
+      if (perc >= 90) msg = 'Ottima padronanza della comunicazione radio!';
+      else if (perc >= 70) msg = 'Buon livello. Ripassa alfabeto NATO e procedure.';
+      else msg = 'Ripassa la tabella NATO e le procedure base, poi riprova.';
+      document.getElementById('final-msg').textContent = msg;
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('radio-emergency', punti, punteggioMax || 1, '#end');
+    }
+
+    document.getElementById('start').addEventListener('click', start);
+    document.getElementById('restart').addEventListener('click', start);
+  })();
+  </script>
+</body>
+</html>

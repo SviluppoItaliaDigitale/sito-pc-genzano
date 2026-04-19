@@ -1,0 +1,240 @@
+/* ============================================================
+   Giochi della Sicurezza — CSS condiviso
+   Additivo su Bootstrap Italia + app-common.css
+   ============================================================ */
+
+:root {
+  --giochi-primary: #0066CC;
+  --giochi-primary-dark: #003366;
+  --giochi-success: #008758;
+  --giochi-warning: #A66300;
+  --giochi-danger: #D9364F;
+  --giochi-info: #579DD9;
+  --giochi-dark: #17324D;
+  --giochi-infanzia: #D9364F;
+  --giochi-primaria: #008758;
+  --giochi-ragazzi: #0066CC;
+}
+
+/* ── Fasce età ───────────────────────────────────────────── */
+.fascia-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.fascia-infanzia { background: #FFE5E9; color: #8B1F2E; }
+.fascia-primaria { background: #E0F2E9; color: #00563A; }
+.fascia-ragazzi  { background: #E0EDFB; color: #003E7C; }
+
+/* ── Card gioco (hub) ─────────────────────────────────────── */
+.gioco-card {
+  background: #fff;
+  border: 1px solid rgba(0,51,102,0.08);
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #17324D;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+.gioco-card:hover,
+.gioco-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+  border-color: var(--giochi-primary);
+  color: var(--giochi-primary-dark);
+  outline: none;
+}
+.gioco-card-icon {
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+.gioco-card-icon.icon-infanzia { background: linear-gradient(135deg, #D9364F, #B01F39); }
+.gioco-card-icon.icon-primaria { background: linear-gradient(135deg, #008758, #006F47); }
+.gioco-card-icon.icon-ragazzi  { background: linear-gradient(135deg, #0066CC, #004A96); }
+
+.gioco-card h3, .gioco-card .h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem 0;
+  font-weight: 700;
+}
+.gioco-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #5b6b7c;
+}
+
+/* ── Hub fasce (card grandi) ──────────────────────────────── */
+.fascia-card {
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  text-decoration: none;
+  color: #17324D;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+.fascia-card:hover, .fascia-card:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.14);
+  color: #17324D;
+  outline: none;
+}
+.fascia-card-infanzia:hover, .fascia-card-infanzia:focus-visible { border-color: #D9364F; }
+.fascia-card-primaria:hover, .fascia-card-primaria:focus-visible { border-color: #008758; }
+.fascia-card-ragazzi:hover,  .fascia-card-ragazzi:focus-visible  { border-color: #0066CC; }
+
+.fascia-icon-big {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.4rem; color: #fff;
+  margin-bottom: 1.2rem;
+}
+.fascia-icon-infanzia { background: linear-gradient(135deg, #D9364F, #B01F39); }
+.fascia-icon-primaria { background: linear-gradient(135deg, #008758, #006F47); }
+.fascia-icon-ragazzi  { background: linear-gradient(135deg, #0066CC, #004A96); }
+
+.fascia-card h2 { font-size: 1.4rem; margin: 0 0 0.3rem 0; font-weight: 700; }
+.fascia-card .fascia-eta { color: #5b6b7c; font-size: 0.95rem; margin-bottom: 0.8rem; font-weight: 600; }
+.fascia-card .fascia-desc { font-size: 0.95rem; line-height: 1.5; color: #17324D; margin: 0 0 1rem 0; }
+.fascia-card .fascia-conteggio { color: #008758; font-weight: 700; font-size: 0.9rem; }
+
+/* ── Badge ottenuti ───────────────────────────────────────── */
+.badge-giochi {
+  background: #fff;
+  border: 1px solid rgba(0,51,102,0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex; align-items: center; gap: 0.75rem;
+  transition: transform 0.2s;
+}
+.badge-giochi.badge-ottenuto {
+  border-color: #008758;
+  background: #F0FBF5;
+}
+.badge-giochi.badge-bloccato {
+  opacity: 0.55;
+  filter: grayscale(0.3);
+}
+.badge-giochi .badge-icona {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: #E0F2E9;
+  color: #008758;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.badge-giochi.badge-bloccato .badge-icona {
+  background: #f2f4f7;
+  color: #8a96a6;
+}
+.badge-giochi .badge-nome { font-weight: 600; font-size: 0.95rem; margin: 0 0 0.2rem 0; }
+.badge-giochi .badge-dettaglio { font-size: 0.82rem; color: #5b6b7c; margin: 0; }
+
+/* ── Feedback generico ────────────────────────────────────── */
+.feedback-ok, .feedback-ko, .feedback-info {
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  border-left: 4px solid;
+}
+.feedback-ok   { background: #F0FBF5; border-color: #008758; color: #00563A; }
+.feedback-ko   { background: #FFF5F6; border-color: #D9364F; color: #8B1F2E; }
+.feedback-info { background: #F0F7FF; border-color: #0066CC; color: #003E7C; }
+
+/* ── Miglior risultato (tag corner) ───────────────────────── */
+.gioco-miglior-risultato {
+  display: inline-flex; align-items: center;
+  gap: 0.35rem;
+  background: #FFF8E1;
+  border: 1px solid #A66300;
+  color: #6C3E00;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ── Pulsante volume ──────────────────────────────────────── */
+.gioco-volume-btn {
+  width: 42px; height: 42px;
+  padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+}
+
+/* ── Grandi pulsanti infanzia ─────────────────────────────── */
+.btn-infanzia {
+  min-width: 140px;
+  min-height: 90px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  border: 3px solid transparent;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.4rem;
+  line-height: 1.2;
+}
+.btn-infanzia:hover, .btn-infanzia:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  outline: none;
+}
+.btn-infanzia i { font-size: 2.2rem; }
+.btn-infanzia.btn-ok { background: #E0F2E9; color: #00563A; border-color: #008758; }
+.btn-infanzia.btn-ko { background: #FFF5F6; color: #8B1F2E; border-color: #D9364F; }
+.btn-infanzia.btn-n  { background: #F0F7FF; color: #003E7C; border-color: #0066CC; }
+
+/* ── Cornice fine-gioco ───────────────────────────────────── */
+.gioco-fine {
+  padding: 2rem 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ── Focus visibile (rinforzato) ──────────────────────────── */
+.giochi-section :focus-visible,
+.gioco-card:focus-visible {
+  outline: 3px solid #0066CC;
+  outline-offset: 2px;
+}
+
+/* ── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .gioco-card, .fascia-card, .btn-infanzia, .badge-giochi {
+    transition: none !important;
+  }
+  .gioco-card:hover, .fascia-card:hover, .btn-infanzia:hover {
+    transform: none !important;
+  }
+}
+
+/* ── Print (per attestato in pagina) ──────────────────────── */
+@media print {
+  header, footer, .app-page-hero, nav, .gioco-controls, .btn, button {
+    display: none !important;
+  }
+  body { background: #fff; }
+  .gioco-fine { break-inside: avoid; }
+}

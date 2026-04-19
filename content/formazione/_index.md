@@ -59,7 +59,7 @@ Se sei un insegnante e vuoi organizzare un incontro, contattaci a [segreteria@pr
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
 - [La Protezione Civile in famiglia](https://www.protezionecivilegenzano.it/documenti/download/PC_famiglia.pdf) — Buone pratiche da adottare in famiglia
 - [Quiz di Protezione Civile](/quizpc/index.html) — Metti alla prova le tue conoscenze
-- [Giochiamo con la Protezione Civile](/giochi-bambini/index.html) — Giochi interattivi per i più piccoli
+- [Giochi della Sicurezza](/giochi/index.html) — Giochi educativi per infanzia, scuola primaria e ragazzi
 - [Piattaforma E-Learning](/formazionepc/index.html) — Formazione a distanza per volontari
 
 ## Vuoi unirti a noi?

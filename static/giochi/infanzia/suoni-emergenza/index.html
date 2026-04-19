@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I Suoni dell'Emergenza — Giochi Piccoli Esploratori</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
+  <style>
+    .scelta {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+      max-width: 560px; margin: 0 auto;
+    }
+    .scelta .inf-big-btn {
+      width: 100%; min-height: 120px; flex-direction: column;
+      background: #fff; color: var(--inf-testo); border: 3px solid var(--inf-blu);
+    }
+    .scelta .inf-big-btn .emo { font-size: 3rem; line-height: 1; }
+    .scelta .inf-big-btn .lbl { font-size: 1rem; }
+    .ascolta {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--inf-blu); color: #fff;
+      padding: .9rem 1.5rem; border-radius: 999px;
+      border: 0; font-weight: 800; font-size: 1.2rem;
+      box-shadow: 0 4px 0 rgba(0,0,0,.2); cursor: pointer;
+    }
+    .ascolta:hover { transform: translateY(-2px); }
+    .wave { display:inline-block; width: 80px; }
+  </style>
+</head>
+<body class="inf-body">
+  <main id="main-content" tabindex="-1" class="inf-main">
+    <nav aria-label="Percorso">
+      <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left"></i> Torna ai giochi</a>
+    </nav>
+    <div class="inf-home">
+      <h1>I Suoni dell'Emergenza</h1>
+      <p>Ascolta il suono e scegli l'immagine giusta.</p>
+    </div>
+
+    <div id="intro" class="inf-card text-center">
+      <p class="h5">Ascolterai i suoni dell'ambulanza, del tuono, dell'allarme e del campanello.</p>
+      <button id="start" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-play-fill"></i> Iniziamo</button>
+    </div>
+
+    <div id="game" class="inf-card hide">
+      <div class="text-center mb-3">
+        <span class="inf-score"><i class="bi bi-star-fill"></i> Stelle: <span id="stars">0</span> / <span id="total">4</span></span>
+      </div>
+      <div class="text-center mb-3">
+        <button id="ascolta" class="ascolta"><i class="bi bi-volume-up-fill"></i> Ascolta il suono</button>
+      </div>
+      <p class="text-center mb-2">Che suono è?</p>
+      <div id="scelta" class="scelta" role="group" aria-label="Scegli il suono"></div>
+      <div id="feedback" class="text-center mt-3 h5" aria-live="polite"></div>
+    </div>
+
+    <div id="end" class="inf-card inf-end hide">
+      <div class="bravi">Orecchie d'oro!</div>
+      <div class="inf-stars mb-3" id="stars-final"></div>
+      <p id="end-msg" class="h5 mb-3">Hai riconosciuto i suoni dell'emergenza!</p>
+      <div class="attestato-inject my-3"></div>
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button id="restart" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-repeat"></i> Ancora</button>
+        <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left"></i> Altri giochi</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    var SUONI = [
+      { id: 'ambulanza', emo: '🚑', lbl: 'Ambulanza', play: function(){ window.AudioSintetico.sirenaAmbulanza(1.5); } },
+      { id: 'tuono', emo: '⛈️', lbl: 'Tuono', play: function(){ window.AudioSintetico.tuono(); } },
+      { id: 'allarme', emo: '🔔', lbl: 'Allarme', play: function(){ window.AudioSintetico.allarmeIncendio(1.2); } },
+      { id: 'campanello', emo: '🛎️', lbl: 'Campanello', play: function(){ window.AudioSintetico.campanello(); } }
+    ];
+
+    var intro = document.getElementById('intro'),
+        game = document.getElementById('game'),
+        end = document.getElementById('end'),
+        scelta = document.getElementById('scelta'),
+        feedback = document.getElementById('feedback'),
+        starsEl = document.getElementById('stars'),
+        totalEl = document.getElementById('total'),
+        starsFinal = document.getElementById('stars-final');
+    var queue = [], idx = 0, stars = 0;
+
+    function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+
+    function start(){
+      if (window.AudioSintetico) window.AudioSintetico.init();
+      queue = shuffle(SUONI.slice());
+      idx = 0; stars = 0;
+      intro.classList.add('hide'); end.classList.add('hide');
+      game.classList.remove('hide');
+      totalEl.textContent = queue.length;
+      starsEl.textContent = '0';
+      show();
+    }
+
+    function show(){
+      var target = queue[idx];
+      scelta.innerHTML = '';
+      feedback.textContent = '';
+      var opts = shuffle(SUONI.slice());
+      opts.forEach(function(s){
+        var b = document.createElement('button');
+        b.className = 'inf-big-btn';
+        b.innerHTML = '<span class="emo">' + s.emo + '</span><span class="lbl">' + s.lbl + '</span>';
+        b.setAttribute('aria-label', s.lbl);
+        b.addEventListener('click', function(){ scegli(s, target, b); });
+        scelta.appendChild(b);
+      });
+      setTimeout(function(){ target.play(); }, 300);
+    }
+
+    function scegli(scelto, target, btn){
+      var btns = scelta.querySelectorAll('.inf-big-btn');
+      btns.forEach(function(b){ b.disabled = true; });
+      if (scelto.id === target.id){
+        btn.classList.add('correct');
+        stars++;
+        starsEl.textContent = stars;
+        feedback.style.color = '#0f5132';
+        feedback.innerHTML = '✅ Bravo! Era il ' + target.lbl.toLowerCase() + '.';
+        if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
+      } else {
+        btn.classList.add('wrong');
+        feedback.style.color = '#8B1F2E';
+        feedback.innerHTML = '🐢 Era il ' + target.lbl.toLowerCase() + '. Continua!';
+        if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
+      }
+      setTimeout(function(){
+        idx++;
+        if (idx >= queue.length) finish();
+        else show();
+      }, 2200);
+    }
+
+    function finish(){
+      game.classList.add('hide');
+      end.classList.remove('hide');
+      var out = '';
+      for (var i=0;i<queue.length;i++) out += (i < stars ? '<span class="on">★</span>' : '<span>★</span>');
+      starsFinal.innerHTML = out;
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('suoni-emergenza', stars, queue.length, '#end');
+    }
+
+    document.getElementById('start').addEventListener('click', start);
+    document.getElementById('restart').addEventListener('click', start);
+    document.getElementById('ascolta').addEventListener('click', function(){
+      if (queue[idx]) queue[idx].play();
+    });
+  })();
+  </script>
+</body>
+</html>

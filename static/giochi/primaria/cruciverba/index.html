@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cruciverba della Sicurezza — Giochi Protezione Civile</title>
+  <meta name="description" content="Cruciverba con definizioni sulla protezione civile: risolvi le parole orizzontali e verticali.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Scuola Primaria</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cruciverba</li>
+          </ol>
+        </nav>
+        <h1>Cruciverba della Sicurezza</h1>
+        <p class="lead">Completa la griglia con le parole della protezione civile!</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+          <div id="start-screen" class="screen text-center">
+            <div class="app-card-icon icon-blue mx-auto mb-3" style="width:80px;height:80px;font-size:2rem;">
+              <i class="bi bi-grid-3x3" aria-hidden="true"></i>
+            </div>
+            <h2>Come si gioca</h2>
+            <p class="text-muted">Leggi le definizioni e scrivi le parole nella griglia. Le parole orizzontali si leggono da sinistra a destra, le verticali dall'alto verso il basso. Usa il pulsante <strong>Aiuto</strong> se sei in difficoltà.</p>
+            <p class="fw-bold mb-2">Scegli la difficoltà:</p>
+            <div class="difficulty-selector" role="radiogroup" aria-label="Difficoltà">
+              <button class="btn btn-outline-primary active" data-level="facile" role="radio" aria-checked="true">Facile</button>
+              <button class="btn btn-outline-primary" data-level="medio" role="radio" aria-checked="false">Medio</button>
+              <button class="btn btn-outline-primary" data-level="difficile" role="radio" aria-checked="false">Difficile</button>
+            </div>
+            <button id="start-btn" class="btn btn-primary btn-lg mt-3"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia!</button>
+          </div>
+
+          <div id="game-screen" class="screen hide">
+            <div class="cw-toolbar">
+              <div class="cw-stat"><i class="bi bi-check-circle me-1" aria-hidden="true"></i> Parole: <strong><span id="cw-solved">0</span>/<span id="cw-total">0</span></strong></div>
+              <div class="cw-stat"><i class="bi bi-lightbulb me-1" aria-hidden="true"></i> Aiuti: <strong id="cw-hints">3</strong></div>
+              <div class="cw-btns">
+                <button id="check-btn" class="btn btn-sm btn-outline-primary" type="button"><i class="bi bi-check2-square me-1" aria-hidden="true"></i> Verifica</button>
+                <button id="hint-btn" class="btn btn-sm btn-outline-warning" type="button"><i class="bi bi-lightbulb me-1" aria-hidden="true"></i> Aiuto</button>
+                <button id="reset-btn" class="btn btn-sm btn-outline-secondary" type="button"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i> Pulisci</button>
+                <button id="new-grid-btn" class="btn btn-sm btn-outline-secondary" type="button"><i class="bi bi-shuffle me-1" aria-hidden="true"></i> Nuovo schema</button>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-2">
+              <div class="col-lg-7">
+                <div id="grid-wrap" class="grid-wrap">
+                  <div id="grid" class="grid" role="grid" aria-label="Griglia del cruciverba"></div>
+                </div>
+                <div id="current-clue" class="current-clue" aria-live="polite">Seleziona una casella per vedere la definizione.</div>
+              </div>
+              <div class="col-lg-5">
+                <div class="clues-block">
+                  <h3 class="clues-title">Orizzontali</h3>
+                  <ol id="clues-across" class="clues-list"></ol>
+                </div>
+                <div class="clues-block mt-3">
+                  <h3 class="clues-title">Verticali</h3>
+                  <ol id="clues-down" class="clues-list"></ol>
+                </div>
+              </div>
+            </div>
+
+            <div id="feedback-box" class="cw-feedback hide" aria-live="polite"></div>
+          </div>
+
+          <div id="results-screen" class="screen hide text-center">
+            <h2>Cruciverba completato!</h2>
+            <p class="lead">Hai risolto <strong><span id="final-solved">0</span></strong> parole con <strong><span id="final-hints">0</span></strong> aiuti usati.</p>
+            <p id="feedback-message" class="text-muted"></p>
+            <div class="attestato-inject my-3"></div>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+              <button id="restart-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i> Gioca ancora</button>
+              <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script src="js/puzzles.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

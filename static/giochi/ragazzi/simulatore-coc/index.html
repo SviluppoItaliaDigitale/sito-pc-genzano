@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulatore COC — Giochi Ragazzi</title>
+  <meta name="description" content="Sei funzionario di sala al Centro Operativo Comunale: gestisci un'allerta arancione coordinando le 9 funzioni di supporto.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <style>
+    .coc-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem; }
+    @media (max-width: 900px) { .coc-layout { grid-template-columns: 1fr; } }
+    .funzione {
+      background: #fff; border: 2px solid #e9ecef; border-radius: 8px;
+      padding: .6rem .8rem; cursor: pointer; font-size: .9rem;
+      transition: all .15s; display: flex; align-items: center; gap: .5rem;
+      margin-bottom: .4rem;
+    }
+    .funzione:hover, .funzione:focus { border-color: var(--rag-blu); background: #eef4fc; outline: none; }
+    .funzione.selected { background: var(--rag-blu); color: #fff; border-color: var(--rag-blu); }
+    .funzione .n {
+      background: var(--rag-arancio); color: var(--rag-blu);
+      border-radius: 50%; width: 24px; height: 24px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: .8rem; flex-shrink: 0;
+    }
+    .funzione.selected .n { background: #fff; }
+    .evento-card {
+      border-left: 5px solid var(--rag-arancio); background: #fffbf0;
+      padding: .8rem 1rem; border-radius: 6px; margin-bottom: .8rem;
+    }
+    .timeline {
+      border-left: 2px dashed #ccc; padding-left: 1rem; margin-left: .4rem;
+      max-height: 260px; overflow-y: auto;
+    }
+    .timeline .tl-item {
+      position: relative; padding: .3rem 0; font-size: .85rem;
+    }
+    .timeline .tl-item::before {
+      content: ''; position: absolute; left: -1.45rem; top: .7rem;
+      width: 10px; height: 10px; border-radius: 50%; background: var(--rag-blu);
+    }
+    .timeline .tl-item.ok::before { background: var(--rag-verde); }
+    .timeline .tl-item.ko::before { background: var(--rag-rosso); }
+    .kpi-bar {
+      height: 8px; background: #e9ecef; border-radius: 999px; overflow: hidden; margin: .2rem 0 .6rem;
+    }
+    .kpi-bar > div { height: 100%; background: var(--rag-verde); transition: width .3s; }
+  </style>
+</head>
+<body class="rag-body">
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Ragazzi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Simulatore COC</li>
+          </ol>
+        </nav>
+        <h1>Simulatore COC</h1>
+        <p class="lead">Centro Operativo Comunale — Allerta arancione sui Castelli Romani</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+
+      <div id="intro" class="rag-panel">
+        <h2>Briefing operativo</h2>
+        <p>Sei funzionario di sala al <strong>Centro Operativo Comunale (COC)</strong> di Genzano di Roma. La Regione Lazio ha diramato un'<strong>allerta arancione</strong> per rischio idrogeologico e temporali forti.</p>
+        <p>Il tuo compito: per ogni evento che arriva, assegnare la <strong>funzione di supporto</strong> giusta del <strong>Metodo Augustus</strong>. Hai 10 eventi da gestire.</p>
+        <details class="mb-3">
+          <summary class="fw-bold text-primary">Le 9 funzioni di supporto (clicca per espandere)</summary>
+          <ol class="small mt-2">
+            <li><strong>F1 — Tecnica e pianificazione</strong>: monitoraggio, scenari, cartografia</li>
+            <li><strong>F2 — Sanità e assistenza sociale</strong>: ASL, 118, psicologi</li>
+            <li><strong>F3 — Volontariato</strong>: coordina i gruppi comunali e nazionali</li>
+            <li><strong>F4 — Materiali e mezzi</strong>: scorte, attrezzature, logistica</li>
+            <li><strong>F5 — Servizi essenziali</strong>: acqua, luce, gas, telefoni</li>
+            <li><strong>F6 — Censimento danni</strong>: rilievi e schede AeDES</li>
+            <li><strong>F7 — Strutture operative e viabilità</strong>: VVFF, CC, PS, strade</li>
+            <li><strong>F8 — Telecomunicazioni</strong>: radio, ponti radio, comunicazioni</li>
+            <li><strong>F9 — Assistenza alla popolazione</strong>: aree accoglienza, pasti</li>
+          </ol>
+        </details>
+        <button id="start" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Apri la sala operativa</button>
+      </div>
+
+      <div id="game" class="hide">
+        <div class="rag-panel">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div>
+              <span class="rag-badge arancio"><i class="bi bi-exclamation-triangle-fill me-1"></i> ALLERTA ARANCIONE</span>
+              <span class="ms-2 small text-muted">Evento <strong id="ev-n">1</strong> di <strong id="ev-tot">10</strong> &middot; Ore <span id="ore">07:30</span></span>
+            </div>
+            <div class="small">
+              Corrette: <strong id="corrette" class="text-success">0</strong> &middot; Errate: <strong id="errate" class="text-danger">0</strong>
+            </div>
+          </div>
+          <div class="kpi-bar"><div id="kpi-fill" style="width:0%"></div></div>
+        </div>
+
+        <div class="coc-layout">
+          <div>
+            <div class="rag-panel">
+              <h3 class="h6">Funzioni di supporto</h3>
+              <div id="funzioni-list"></div>
+            </div>
+            <div class="rag-panel">
+              <h3 class="h6">Registro eventi</h3>
+              <div id="timeline" class="timeline"></div>
+            </div>
+          </div>
+          <div>
+            <div class="rag-panel">
+              <h3 class="h6">Evento in arrivo</h3>
+              <div id="evento" class="evento-card"></div>
+              <p class="small mb-2">Seleziona la <strong>funzione</strong> da attivare:</p>
+              <button id="assegna" class="btn btn-primary" disabled><i class="bi bi-send me-1"></i> Assegna</button>
+              <div id="feedback" class="mt-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="end" class="rag-panel hide text-center">
+        <div class="display-4 text-primary mb-2"><i class="bi bi-diagram-3-fill"></i></div>
+        <h2>Turno concluso</h2>
+        <p class="lead">Risultato: <strong><span id="final-score">0</span></strong> su <strong><span id="final-max">10</span></strong> eventi gestiti correttamente.</p>
+        <p id="final-msg" class="text-muted"></p>
+        <div class="attestato-inject my-3"></div>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <button id="restart" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Nuovo turno</button>
+          <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    var FUNZIONI = [
+      { n: 1, nome: 'Tecnica e pianificazione', icona: 'bi-graph-up' },
+      { n: 2, nome: 'Sanità e assistenza sociale', icona: 'bi-heart-pulse-fill' },
+      { n: 3, nome: 'Volontariato', icona: 'bi-people-fill' },
+      { n: 4, nome: 'Materiali e mezzi', icona: 'bi-box-seam-fill' },
+      { n: 5, nome: 'Servizi essenziali', icona: 'bi-lightning-charge-fill' },
+      { n: 6, nome: 'Censimento danni', icona: 'bi-clipboard-data-fill' },
+      { n: 7, nome: 'Strutture operative e viabilità', icona: 'bi-shield-check' },
+      { n: 8, nome: 'Telecomunicazioni', icona: 'bi-broadcast' },
+      { n: 9, nome: 'Assistenza alla popolazione', icona: 'bi-house-heart-fill' }
+    ];
+
+    var EVENTI = [
+      { ora: '07:45', testo: 'Il Centro Funzionale Regionale conferma temporali forti per le prossime 12 ore sui Castelli. Aggiornare la cartografia delle zone critiche.', corretta: 1, spiega: 'F1 gestisce monitoraggio, scenari e cartografia.' },
+      { ora: '08:10', testo: 'Chiama il responsabile del Gruppo Comunale: 12 volontari disponibili per presidi territoriali.', corretta: 3, spiega: 'F3 coordina il volontariato.' },
+      { ora: '08:40', testo: 'Serve posizionare sacchi di sabbia al sottopasso di via Appia Nuova. Chi organizza approvvigionamento e trasporto?', corretta: 4, spiega: 'F4 si occupa di materiali e mezzi.' },
+      { ora: '09:15', testo: 'I Carabinieri segnalano un albero caduto su strada provinciale con blocco del traffico.', corretta: 7, spiega: 'F7 coordina strutture operative e viabilità.' },
+      { ora: '09:40', testo: 'Una signora anziana in via dei Platani chiede aiuto per raggiungere il parente: serve supporto socio-sanitario.', corretta: 2, spiega: 'F2 gestisce sanità e assistenza sociale.' },
+      { ora: '10:20', testo: 'Acea comunica sospensione energia elettrica in zona Cynthianum. Come coordinare il ripristino con il gestore?', corretta: 5, spiega: 'F5 coordina i servizi essenziali (acqua, luce, gas, telefono).' },
+      { ora: '11:00', testo: 'La radio del volontario in ricognizione si scollega per un guasto. Bisogna ripristinare le comunicazioni.', corretta: 8, spiega: 'F8 gestisce le telecomunicazioni.' },
+      { ora: '11:30', testo: 'Smottamento in via delle Sorgenti: possibili danni a due abitazioni. Serve rilievo tecnico.', corretta: 6, spiega: 'F6 gestisce il censimento danni e schede AeDES.' },
+      { ora: '12:00', testo: 'Quattro famiglie chiedono accoglienza: palazzetto comunale attivato, servono pasti e brande.', corretta: 9, spiega: 'F9 gestisce assistenza alla popolazione e aree accoglienza.' },
+      { ora: '13:15', testo: 'Il Sindaco chiede l\'aggiornamento ufficiale con mappa dei presidi attivi per il briefing in Regione.', corretta: 1, spiega: 'F1 produce la cartografia e i quadri di sintesi.' }
+    ];
+
+    var intro = document.getElementById('intro'),
+        game = document.getElementById('game'),
+        end = document.getElementById('end'),
+        funzioniList = document.getElementById('funzioni-list'),
+        eventoBox = document.getElementById('evento'),
+        timeline = document.getElementById('timeline'),
+        corretteEl = document.getElementById('corrette'),
+        errateEl = document.getElementById('errate'),
+        evNEl = document.getElementById('ev-n'),
+        evTotEl = document.getElementById('ev-tot'),
+        oreEl = document.getElementById('ore'),
+        kpiFill = document.getElementById('kpi-fill'),
+        feedback = document.getElementById('feedback'),
+        assegnaBtn = document.getElementById('assegna'),
+        finalScore = document.getElementById('final-score'),
+        finalMax = document.getElementById('final-max'),
+        finalMsg = document.getElementById('final-msg');
+
+    var selezione = null, idx = 0, ok = 0, ko = 0;
+
+    function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+
+    function render(){
+      funzioniList.innerHTML = '';
+      FUNZIONI.forEach(function(f){
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'funzione w-100 text-start';
+        b.innerHTML = '<span class="n">' + f.n + '</span> <i class="bi ' + f.icona + '"></i> ' + f.nome;
+        b.dataset.n = f.n;
+        b.addEventListener('click', function(){
+          funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.classList.remove('selected'); });
+          b.classList.add('selected');
+          selezione = f.n;
+          assegnaBtn.disabled = false;
+        });
+        funzioniList.appendChild(b);
+      });
+    }
+
+    function start(){
+      intro.classList.add('hide');
+      end.classList.add('hide');
+      game.classList.remove('hide');
+      idx = 0; ok = 0; ko = 0;
+      corretteEl.textContent = '0'; errateEl.textContent = '0';
+      timeline.innerHTML = '';
+      evTotEl.textContent = EVENTI.length;
+      render();
+      mostraEvento();
+    }
+
+    function mostraEvento(){
+      selezione = null;
+      assegnaBtn.disabled = true;
+      feedback.innerHTML = '';
+      funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.classList.remove('selected'); });
+      var ev = EVENTI[idx];
+      evNEl.textContent = idx+1;
+      oreEl.textContent = ev.ora;
+      eventoBox.innerHTML = '<div class="small text-muted mb-1"><i class="bi bi-clock me-1"></i>' + ev.ora + '</div><p class="mb-0">' + ev.testo + '</p>';
+    }
+
+    assegnaBtn.addEventListener('click', function(){
+      if (selezione == null) return;
+      var ev = EVENTI[idx];
+      var corretto = (selezione === ev.corretta);
+      var tl = document.createElement('div');
+      tl.className = 'tl-item ' + (corretto ? 'ok' : 'ko');
+      tl.innerHTML = '<strong>' + ev.ora + '</strong> &middot; F' + selezione + (corretto ? ' ✓' : ' ✗ (giusta: F' + ev.corretta + ')');
+      timeline.appendChild(tl);
+      if (corretto){
+        ok++; corretteEl.textContent = ok;
+        feedback.innerHTML = '<div class="alert alert-success py-2 mb-0 small"><i class="bi bi-check-circle-fill me-1"></i> Corretto! ' + ev.spiega + '</div>';
+      } else {
+        ko++; errateEl.textContent = ko;
+        feedback.innerHTML = '<div class="alert alert-warning py-2 mb-0 small"><i class="bi bi-exclamation-triangle-fill me-1"></i> Era <strong>F' + ev.corretta + '</strong>. ' + ev.spiega + '</div>';
+      }
+      kpiFill.style.width = Math.round(((idx+1) / EVENTI.length) * 100) + '%';
+      assegnaBtn.disabled = true;
+      setTimeout(function(){
+        idx++;
+        if (idx >= EVENTI.length) finish();
+        else mostraEvento();
+      }, 2200);
+    });
+
+    function finish(){
+      game.classList.add('hide');
+      end.classList.remove('hide');
+      finalScore.textContent = ok;
+      finalMax.textContent = EVENTI.length;
+      var perc = (ok / EVENTI.length) * 100;
+      if (perc >= 90) finalMsg.textContent = 'Eccellente! Hai coordinato il COC con grande padronanza del Metodo Augustus.';
+      else if (perc >= 70) finalMsg.textContent = 'Buon lavoro! Hai gestito bene l\'allerta: ripassa le funzioni meno chiare.';
+      else if (perc >= 50) finalMsg.textContent = 'Discreto. Ripassa le 9 funzioni: ogni decisione in sala è rapida.';
+      else finalMsg.textContent = 'Ripassa il Metodo Augustus e le 9 funzioni di supporto, poi riprova.';
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('simulatore-coc', ok, EVENTI.length, '#end');
+    }
+
+    document.getElementById('start').addEventListener('click', start);
+    document.getElementById('restart').addEventListener('click', start);
+  })();
+  </script>
+</body>
+</html>

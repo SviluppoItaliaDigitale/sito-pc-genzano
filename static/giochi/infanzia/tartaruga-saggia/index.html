@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Tartaruga Saggia — Giochi Piccoli Esploratori</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
+</head>
+<body class="inf-body">
+  <main id="main-content" tabindex="-1" class="inf-main">
+    <nav aria-label="Percorso">
+      <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
+    </nav>
+    <div class="inf-home">
+      <h1>La Tartaruga Saggia</h1>
+      <p>Tina ti chiede: è la cosa giusta?</p>
+    </div>
+
+    <div id="intro" class="inf-card text-center">
+      <svg viewBox="0 0 180 120" width="160" height="110" role="img" aria-label="Tina la tartaruga saluta" focusable="false">
+        <ellipse cx="90" cy="105" rx="70" ry="6" fill="rgba(0,0,0,0.08)"/>
+        <path d="M 30 85 Q 30 35 90 30 Q 150 35 150 85 Z" fill="#4E8B3E" stroke="#2F5A25" stroke-width="2"/>
+        <circle cx="90" cy="25" r="18" fill="#8ABF78" stroke="#2F5A25" stroke-width="2"/>
+        <circle cx="84" cy="23" r="2.5" fill="#17324D"/>
+        <circle cx="96" cy="23" r="2.5" fill="#17324D"/>
+        <path d="M 86 30 Q 90 34 94 30" stroke="#17324D" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M 72 18 Q 90 5 108 18 L 108 22 L 72 22 Z" fill="#D9364F" stroke="#8B1F2E" stroke-width="2"/>
+      </svg>
+      <p class="h5 text-primary">Ciao! Sono Tina. Rispondi con <strong>SÌ</strong> o <strong>NO</strong>.</p>
+      <button id="start-btn" class="inf-big-btn" style="background:var(--inf-blu);">
+        <i class="bi bi-play-fill" aria-hidden="true"></i> Iniziamo!
+      </button>
+    </div>
+
+    <div id="game" class="inf-card hide">
+      <div class="text-center mb-2">
+        <span class="inf-score"><i class="bi bi-star-fill" aria-hidden="true"></i> Stelle: <span id="stars">0</span></span>
+      </div>
+      <div class="inf-scene">
+        <div id="emoji" style="font-size:5rem;margin-bottom:.3rem" aria-hidden="true">🔥</div>
+        <h2 id="question">Domanda...</h2>
+      </div>
+      <div class="text-center mt-3">
+        <button id="btn-si" class="inf-big-btn si m-2"><i class="bi bi-check-lg" aria-hidden="true"></i> SÌ</button>
+        <button id="btn-no" class="inf-big-btn no m-2"><i class="bi bi-x-lg" aria-hidden="true"></i> NO</button>
+      </div>
+      <div id="feedback" class="text-center mt-3 h5" aria-live="polite"></div>
+    </div>
+
+    <div id="end" class="inf-card inf-end hide">
+      <div class="bravi">Bravissimo!</div>
+      <div class="inf-stars mb-3" id="stars-final" aria-label="Stelle ottenute"></div>
+      <p id="end-msg" class="h5 mb-3">Hai aiutato Tina!</p>
+      <div class="attestato-inject my-3"></div>
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button id="restart" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Ancora</button>
+        <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left" aria-hidden="true"></i> Altri giochi</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    var SCENES = [
+      { emoji: '🔥', q: 'Vedi il fuoco. Tocchi con le mani?', si: false, tip: 'Giusto! Il fuoco scotta, non si tocca.' },
+      { emoji: '📞', q: 'Se c\'è pericolo, chiami il 112?', si: true, tip: 'Bravissimo! Il 112 è il numero per chiedere aiuto.' },
+      { emoji: '⛑️', q: 'Metti il casco quando vai in bici?', si: true, tip: 'Esatto! Il casco protegge la testa.' },
+      { emoji: '🚨', q: 'Senti un allarme: devi nasconderti senza dirlo a nessuno?', si: false, tip: 'No! Chiama sempre un grande vicino a te.' },
+      { emoji: '🌧️', q: 'Piove tanto. Vai a giocare vicino al fiume?', si: false, tip: 'No! Quando piove tanto, stai lontano dai fiumi.' },
+      { emoji: '🧯', q: 'Un adulto spegne un piccolo fuoco con l\'estintore. Lo guardi da lontano?', si: true, tip: 'Sì! Restare lontano è la scelta giusta.' },
+      { emoji: '🌳', q: 'C\'è un terremoto. Ti metti sotto il tavolo resistente?', si: true, tip: 'Sì! Sotto un tavolo robusto sei più al sicuro.' },
+      { emoji: '🚒', q: 'Arrivano i pompieri. Corri in mezzo alla strada?', si: false, tip: 'No! Lascia passare i soccorritori.' }
+    ];
+
+    var intro = document.getElementById('intro'),
+        game = document.getElementById('game'),
+        end = document.getElementById('end'),
+        emoji = document.getElementById('emoji'),
+        question = document.getElementById('question'),
+        feedback = document.getElementById('feedback'),
+        starsEl = document.getElementById('stars'),
+        starsFinal = document.getElementById('stars-final'),
+        endMsg = document.getElementById('end-msg');
+    var btnSi = document.getElementById('btn-si'),
+        btnNo = document.getElementById('btn-no');
+    var idx = 0, stars = 0, queue = [];
+
+    function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+
+    function start(){
+      intro.classList.add('hide');
+      end.classList.add('hide');
+      game.classList.remove('hide');
+      queue = shuffle(SCENES.slice()).slice(0, 5);
+      idx = 0; stars = 0;
+      starsEl.textContent = '0';
+      show();
+      if (window.AudioSintetico) window.AudioSintetico.init();
+    }
+
+    function show(){
+      var s = queue[idx];
+      emoji.textContent = s.emoji;
+      question.textContent = s.q;
+      feedback.textContent = '';
+      btnSi.disabled = false; btnNo.disabled = false;
+      btnSi.classList.remove('correct','wrong');
+      btnNo.classList.remove('correct','wrong');
+    }
+
+    function answer(val){
+      var s = queue[idx];
+      var correct = (val === s.si);
+      btnSi.disabled = true; btnNo.disabled = true;
+      var btn = val ? btnSi : btnNo;
+      if (correct){
+        btn.classList.add('correct');
+        stars++;
+        starsEl.textContent = stars;
+        feedback.style.color = '#0f5132';
+        feedback.innerHTML = '✅ ' + s.tip;
+        if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
+      } else {
+        btn.classList.add('wrong');
+        feedback.style.color = '#8B1F2E';
+        feedback.innerHTML = '🐢 ' + s.tip;
+        if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
+      }
+      setTimeout(function(){
+        idx++;
+        if (idx >= queue.length) finish();
+        else show();
+      }, 2200);
+    }
+
+    function finish(){
+      game.classList.add('hide');
+      end.classList.remove('hide');
+      var out = '';
+      for (var i=0;i<queue.length;i++) out += (i < stars ? '<span class="on">★</span>' : '<span>★</span>');
+      starsFinal.innerHTML = out;
+      endMsg.textContent = stars >= queue.length - 1 ? 'Tina è fiera di te!' : 'Bravo, continua così!';
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('tartaruga-saggia', stars, queue.length, '#end');
+    }
+
+    document.getElementById('start-btn').addEventListener('click', start);
+    document.getElementById('restart').addEventListener('click', start);
+    btnSi.addEventListener('click', function(){ answer(true); });
+    btnNo.addEventListener('click', function(){ answer(false); });
+  })();
+  </script>
+</body>
+</html>

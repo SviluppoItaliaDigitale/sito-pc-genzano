@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codice Arancione — Giochi Ragazzi</title>
+  <meta name="description" content="Allestisci un'area di accoglienza per 200 sfollati rispettando i vincoli logistici e di sicurezza.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <style>
+    .coa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 800px) { .coa-grid { grid-template-columns: 1fr; } }
+    .risorse-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: .5rem; }
+    .risorsa {
+      background: #fff; border: 2px solid #e9ecef; border-radius: 8px;
+      padding: .55rem .7rem; cursor: pointer; position: relative;
+      display: flex; align-items: center; gap: .4rem;
+      font-size: .88rem;
+    }
+    .risorsa:hover { border-color: var(--rag-blu); }
+    .risorsa.attiva { background: var(--rag-blu); color: #fff; border-color: var(--rag-blu); }
+    .risorsa .q {
+      position: absolute; top: -8px; right: -8px;
+      background: var(--rag-verde); color: #fff;
+      border-radius: 50%; width: 22px; height: 22px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .7rem; font-weight: 700;
+    }
+    .budget-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .3rem 0; border-bottom: 1px dashed #ddd; font-size: .9rem;
+    }
+    .check-item { padding: .4rem 0; display: flex; gap: .4rem; }
+    .check-item .icon { width: 24px; font-weight: 700; }
+    .check-item.ok .icon { color: var(--rag-verde); }
+    .check-item.warn .icon { color: var(--rag-arancio); }
+    .check-item.ko .icon { color: var(--rag-rosso); }
+  </style>
+</head>
+<body class="rag-body">
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Ragazzi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Codice Arancione</li>
+          </ol>
+        </nav>
+        <h1>Codice Arancione</h1>
+        <p class="lead">Allestisci un'area di accoglienza per 200 sfollati rispettando i vincoli.</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+          <div id="intro" class="rag-panel">
+            <h2>Briefing</h2>
+            <p>A seguito di una frana precauzionale in zona <em>Cynthianum</em>, la Prefettura ha disposto l'evacuazione di <strong>200 persone</strong> (di cui 40 anziani, 15 con disabilità motoria, 60 bambini).</p>
+            <p>Hai un <strong>budget di 200 unità</strong> (tempo + risorse). Devi scegliere cosa allestire nell'area del palazzetto comunale. Ogni risorsa ha un costo e un impatto sui bisogni.</p>
+            <button id="start" class="btn btn-primary btn-lg"><i class="bi bi-bounding-box me-1"></i> Apri il campo</button>
+          </div>
+
+          <div id="game" class="hide">
+            <div class="coa-grid">
+              <div class="rag-panel">
+                <h3 class="h6">Risorse da allestire</h3>
+                <p class="small text-muted">Clicca per aggiungere/rimuovere.</p>
+                <div id="risorse" class="risorse-grid"></div>
+              </div>
+              <div class="rag-panel">
+                <h3 class="h6">Dashboard</h3>
+                <div class="budget-row"><span>Budget disponibile</span><strong id="budget">200</strong></div>
+                <div class="budget-row"><span>Posti letto allestiti</span><strong id="posti">0</strong> / 200</div>
+                <div class="budget-row"><span>Servizi igienici</span><strong id="igienici">0</strong></div>
+                <div class="budget-row"><span>Pasti/giorno</span><strong id="pasti">0</strong></div>
+                <div class="budget-row"><span>Copertura sanitaria</span><strong id="sanita">No</strong></div>
+                <div class="budget-row"><span>Accessibilità</span><strong id="access">No</strong></div>
+                <div class="budget-row"><span>Copertura bambini</span><strong id="bambini">No</strong></div>
+                <button id="verifica" class="btn btn-primary w-100 mt-3"><i class="bi bi-check-circle me-1"></i> Allestimento pronto</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="end" class="rag-panel hide">
+            <div class="text-center">
+              <div class="display-4 text-primary mb-2"><i class="bi bi-bounding-box"></i></div>
+              <h2>Esito allestimento</h2>
+              <p class="lead">Punteggio: <strong><span id="final-punti">0</span></strong> / <strong><span id="final-max">100</span></strong></p>
+            </div>
+            <div id="checklist" class="mt-3"></div>
+            <p id="final-msg" class="text-muted text-center mt-3"></p>
+            <div class="attestato-inject my-3"></div>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <button id="restart" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Riprova</button>
+              <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    var RISORSE = [
+      { id: 'brande-50', label: '50 brande base', costo: 30, posti: 50, icon: 'bi-layers-fill' },
+      { id: 'brande-100', label: '100 brande base', costo: 55, posti: 100, icon: 'bi-layers-half' },
+      { id: 'brande-disabili', label: '15 brande accessibili', costo: 25, posti: 15, access: true, icon: 'bi-person-wheelchair' },
+      { id: 'bagni-6', label: '6 bagni chimici', costo: 20, igienici: 6, icon: 'bi-droplet' },
+      { id: 'bagni-12', label: '12 bagni chimici + lavabi', costo: 35, igienici: 12, icon: 'bi-droplet-fill' },
+      { id: 'cucina', label: 'Cucina da campo (300 pasti/g)', costo: 35, pasti: 300, icon: 'bi-egg-fried' },
+      { id: 'ristorazione-pac', label: 'Pasti pronti (200/g)', costo: 20, pasti: 200, icon: 'bi-cup-straw' },
+      { id: 'ambulatorio', label: 'Presidio sanitario (ASL + CRI)', costo: 25, sanita: true, icon: 'bi-hospital' },
+      { id: 'ludoteca', label: 'Area bambini protetta', costo: 15, bambini: true, icon: 'bi-balloon-heart-fill' },
+      { id: 'generatore', label: 'Generatore elettrico + illuminazione', costo: 20, essenziale: 'elettricita', icon: 'bi-lightning-charge' },
+      { id: 'telecom', label: 'Ponte radio + wifi emergenza', costo: 15, essenziale: 'telecom', icon: 'bi-broadcast' },
+      { id: 'sicurezza', label: 'Servizio d\'ordine (VVUU + volontari)', costo: 15, essenziale: 'sicurezza', icon: 'bi-shield-fill' }
+    ];
+
+    var MAX_BUDGET = 200;
+    var selezione = {};
+
+    var intro = document.getElementById('intro'),
+        game = document.getElementById('game'),
+        end = document.getElementById('end'),
+        risorseEl = document.getElementById('risorse'),
+        budgetEl = document.getElementById('budget'),
+        postiEl = document.getElementById('posti'),
+        igEl = document.getElementById('igienici'),
+        pastiEl = document.getElementById('pasti'),
+        sanEl = document.getElementById('sanita'),
+        accEl = document.getElementById('access'),
+        bamEl = document.getElementById('bambini');
+
+    function start(){
+      intro.classList.add('hide'); end.classList.add('hide'); game.classList.remove('hide');
+      selezione = {};
+      render();
+    }
+
+    function render(){
+      risorseEl.innerHTML = '';
+      RISORSE.forEach(function(r){
+        var attiva = !!selezione[r.id];
+        var b = document.createElement('button');
+        b.className = 'risorsa' + (attiva ? ' attiva' : '');
+        b.type = 'button';
+        b.innerHTML = '<i class="bi ' + r.icon + '"></i> <span>' + r.label + '</span><small class="ms-auto">' + r.costo + '</small>' + (attiva ? '<span class="q">✓</span>' : '');
+        b.addEventListener('click', function(){
+          if (attiva) delete selezione[r.id];
+          else selezione[r.id] = r;
+          render();
+        });
+        risorseEl.appendChild(b);
+      });
+      aggiornaDashboard();
+    }
+
+    function aggiornaDashboard(){
+      var tot = 0, posti = 0, ig = 0, pasti = 0, san = false, access = false, bambini = false;
+      Object.keys(selezione).forEach(function(k){
+        var r = selezione[k];
+        tot += r.costo;
+        posti += r.posti || 0;
+        ig += r.igienici || 0;
+        pasti += r.pasti || 0;
+        if (r.sanita) san = true;
+        if (r.access) access = true;
+        if (r.bambini) bambini = true;
+      });
+      var residuo = MAX_BUDGET - tot;
+      budgetEl.textContent = residuo;
+      budgetEl.style.color = residuo < 0 ? '#DC3545' : '#003366';
+      postiEl.textContent = posti;
+      igEl.textContent = ig;
+      pastiEl.textContent = pasti;
+      sanEl.textContent = san ? 'Sì' : 'No';
+      accEl.textContent = access ? 'Sì' : 'No';
+      bamEl.textContent = bambini ? 'Sì' : 'No';
+    }
+
+    document.getElementById('verifica').addEventListener('click', function(){
+      var tot = 0, posti = 0, ig = 0, pasti = 0;
+      var san=false, access=false, bambini=false, elettro=false, telecom=false, sicurezza=false;
+      Object.keys(selezione).forEach(function(k){
+        var r = selezione[k];
+        tot += r.costo;
+        posti += r.posti || 0;
+        ig += r.igienici || 0;
+        pasti += r.pasti || 0;
+        if (r.sanita) san = true;
+        if (r.access) access = true;
+        if (r.bambini) bambini = true;
+        if (r.essenziale === 'elettricita') elettro = true;
+        if (r.essenziale === 'telecom') telecom = true;
+        if (r.essenziale === 'sicurezza') sicurezza = true;
+      });
+
+      var check = [];
+      var score = 0;
+      check.push({ ok: posti >= 200, msg: 'Posti letto ≥ 200 (hai ' + posti + ')', punti: 20 });
+      check.push({ ok: ig >= 8, msg: 'Bagni ≥ 8 (hai ' + ig + ') — minimo di ~1 ogni 25 persone', punti: 15 });
+      check.push({ ok: pasti >= 200, msg: 'Pasti ≥ 200/giorno (hai ' + pasti + ')', punti: 15 });
+      check.push({ ok: san, msg: 'Copertura sanitaria presente', punti: 15 });
+      check.push({ ok: access, msg: 'Soluzioni accessibili per disabili', punti: 10 });
+      check.push({ ok: bambini, msg: 'Area bambini protetta', punti: 5 });
+      check.push({ ok: elettro, msg: 'Alimentazione elettrica e illuminazione', punti: 5 });
+      check.push({ ok: telecom, msg: 'Telecomunicazioni di emergenza', punti: 5 });
+      check.push({ ok: sicurezza, msg: 'Servizio d\'ordine', punti: 5 });
+      check.push({ ok: tot <= MAX_BUDGET, msg: 'Budget rispettato (speso ' + tot + '/' + MAX_BUDGET + ')', punti: 5 });
+
+      check.forEach(function(c){ if (c.ok) score += c.punti; });
+      finish(score, check);
+    });
+
+    function finish(score, check){
+      game.classList.add('hide');
+      end.classList.remove('hide');
+      document.getElementById('final-punti').textContent = score;
+      document.getElementById('final-max').textContent = 100;
+      var checklist = document.getElementById('checklist');
+      checklist.innerHTML = check.map(function(c){
+        return '<div class="check-item ' + (c.ok ? 'ok' : 'ko') + '"><span class="icon"><i class="bi ' + (c.ok ? 'bi-check-circle-fill' : 'bi-x-circle-fill') + '"></i></span><span>' + c.msg + ' <small class="text-muted">(' + (c.ok ? '+' : '+0/') + c.punti + ')</small></span></div>';
+      }).join('');
+
+      var msg;
+      if (score >= 90) msg = 'Allestimento eccellente: tutti i requisiti coperti.';
+      else if (score >= 70) msg = 'Buon allestimento. Qualche servizio da rinforzare.';
+      else if (score >= 50) msg = 'Allestimento sufficiente ma con carenze importanti.';
+      else msg = 'Allestimento insufficiente: ripassa i requisiti base dell\'accoglienza.';
+      document.getElementById('final-msg').textContent = msg;
+
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('codice-arancione', score, 100, '#end');
+    }
+
+    document.getElementById('start').addEventListener('click', start);
+    document.getElementById('restart').addEventListener('click', start);
+  })();
+  </script>
+</body>
+</html>

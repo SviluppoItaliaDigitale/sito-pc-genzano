@@ -1,0 +1,216 @@
+/* Anagrammi — stile dedicato */
+
+.screen { display: block; }
+.screen.hide { display: none !important; }
+
+.difficulty-selector,
+.count-selector {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center;
+  margin-bottom: .5rem;
+}
+.difficulty-selector .btn.active,
+.count-selector .btn.active {
+  background: #003366;
+  color: #fff;
+  border-color: #003366;
+}
+
+.game-progress {
+  margin-bottom: 1rem;
+}
+.game-progress-text {
+  font-size: .9rem;
+  color: #333;
+  margin-bottom: .25rem;
+}
+.game-progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.game-progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6600, #003366);
+  transition: width .4s ease;
+}
+
+.anagram-card {
+  background: #fff;
+  border: 1px solid rgba(0,51,102,.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,.05);
+}
+
+.anagram-hint {
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #6c757d;
+  margin: 0 0 .25rem;
+  text-align: center;
+}
+.anagram-category {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #003366;
+  margin: 0 0 1.2rem;
+}
+
+/* Slot della risposta */
+.answer-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  justify-content: center;
+  min-height: 64px;
+  margin-bottom: 1.3rem;
+  padding: .5rem;
+  background: #f8f9fa;
+  border: 2px dashed #c4cdd9;
+  border-radius: 10px;
+}
+
+.slot {
+  width: 44px;
+  height: 54px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1.5px solid #c4cdd9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #003366;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .15s ease, background .2s ease, border-color .2s ease;
+}
+.slot.filled {
+  background: #003366;
+  color: #fff;
+  border-color: #003366;
+}
+.slot.filled:hover {
+  transform: translateY(-2px);
+}
+.slot.space {
+  background: #e9ecef;
+  border-style: dotted;
+  border-color: #adb5bd;
+  cursor: default;
+  width: 16px;
+}
+.slot.correct {
+  background: #198754;
+  border-color: #198754;
+  color: #fff;
+}
+.slot.wrong {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+  animation: shake .4s ease;
+}
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.letters-label {
+  font-size: .85rem;
+  color: #6c757d;
+  text-align: center;
+  margin: .5rem 0 .4rem;
+}
+
+/* Pool lettere */
+.letter-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  justify-content: center;
+  min-height: 54px;
+  margin-bottom: 1rem;
+}
+.letter-tile {
+  width: 44px;
+  height: 54px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #ff8533, #ff6600);
+  color: #fff;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #c24e00, 0 4px 8px rgba(0,0,0,.15);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.letter-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 #c24e00, 0 6px 10px rgba(0,0,0,.18);
+}
+.letter-tile:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #c24e00;
+}
+.letter-tile.used {
+  visibility: hidden;
+}
+.letter-tile:focus-visible {
+  outline: 3px solid #ffc107;
+  outline-offset: 2px;
+}
+
+.game-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center;
+  margin-top: .5rem;
+}
+
+.anagram-feedback {
+  margin-top: 1rem;
+  padding: .9rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+.anagram-feedback.correct {
+  background: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+.anagram-feedback.wrong {
+  background: #f8d7da;
+  color: #58151c;
+  border: 1px solid #f5c2c7;
+}
+
+.next-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .slot, .letter-tile {
+    width: 38px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+  .slot.space { width: 12px; }
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency Responder — Giochi Ragazzi</title>
+  <meta name="description" content="Avventura narrativa: terremoto nella notte ai Colli Albani. Ogni scelta ha conseguenze, finali multipli.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <style>
+    body.rag-body { background: linear-gradient(180deg, #0a1a2f 0%, #1a2e4a 100%); color: #dce5f0; min-height: 100vh; }
+    .scene-box {
+      background: rgba(255,255,255,0.06); border-radius: 12px; padding: 1.5rem;
+      border-left: 4px solid var(--rag-arancio); margin-bottom: 1rem;
+      font-size: 1.05rem; line-height: 1.6;
+    }
+    .scene-box p { color: #e8edf3; }
+    .choice-btn {
+      display: block; width: 100%; text-align: left;
+      background: rgba(255,255,255,0.08); color: #fff;
+      border: 2px solid rgba(255,255,255,0.2);
+      padding: .9rem 1.1rem; border-radius: 8px; margin-bottom: .6rem;
+      cursor: pointer; font-weight: 500; transition: all .2s;
+    }
+    .choice-btn:hover, .choice-btn:focus {
+      background: var(--rag-arancio); color: var(--rag-blu); border-color: var(--rag-arancio); outline: none;
+    }
+    .stats {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      background: rgba(0,0,0,0.3); padding: .7rem 1rem; border-radius: 8px;
+      margin-bottom: 1rem; font-size: .9rem;
+    }
+    .stats span { display: flex; align-items: center; gap: .3rem; }
+    .rag-panel {
+      background: rgba(255,255,255,0.05); color: #dce5f0;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .rag-panel h2, .rag-panel h3 { color: #fff; }
+    .breadcrumb, .breadcrumb-item a { color: #b6c2d1; }
+    .app-page-hero { background: transparent; }
+    .app-page-hero h1, .app-page-hero .lead { color: #fff; }
+  </style>
+</head>
+<body class="rag-body">
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Ragazzi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Emergency Responder</li>
+          </ol>
+        </nav>
+        <h1>Emergency Responder</h1>
+        <p class="lead">Terremoto nella notte ai Colli Albani. Ogni scelta conta.</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div id="intro" class="rag-panel p-4">
+            <h2>03:42 del mattino</h2>
+            <p>Una scossa di magnitudo 4.8 ha svegliato Genzano di Roma. Sei un giovane volontario di Protezione Civile. Il tuo telefono suona: la sala operativa ti sta chiamando.</p>
+            <p class="small">Ogni scelta influenzerà persone, sicurezza e tempo. Gioca con attenzione: non ci sono risposte scontate.</p>
+            <button id="start" class="btn btn-warning btn-lg"><i class="bi bi-play-fill me-1"></i> Rispondo alla chiamata</button>
+          </div>
+
+          <div id="game" class="hide">
+            <div class="stats">
+              <span><i class="bi bi-heart-fill text-danger"></i> Sicurezza: <strong id="st-sicurezza">10</strong></span>
+              <span><i class="bi bi-people-fill text-info"></i> Persone aiutate: <strong id="st-aiutate">0</strong></span>
+              <span><i class="bi bi-clock text-warning"></i> Tempo: <strong id="st-tempo">03:42</strong></span>
+            </div>
+            <div id="scene" class="scene-box"></div>
+            <div id="choices"></div>
+          </div>
+
+          <div id="end" class="rag-panel p-4 hide">
+            <h2 id="end-title">Fine turno</h2>
+            <p id="end-text" class="lead"></p>
+            <div class="stats">
+              <span><i class="bi bi-heart-fill text-danger"></i> Sicurezza finale: <strong id="end-sicurezza">0</strong></span>
+              <span><i class="bi bi-people-fill text-info"></i> Persone aiutate: <strong id="end-aiutate">0</strong></span>
+            </div>
+            <div class="attestato-inject my-3"></div>
+            <div class="d-flex flex-wrap gap-2">
+              <button id="restart" class="btn btn-warning"><i class="bi bi-arrow-repeat me-1"></i> Nuova avventura</button>
+              <a href="../index.html" class="btn btn-outline-light"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    /* Grafo narrativo: ogni nodo = scena. Le scelte modificano stato + portano a nodi successivi. */
+    var SCENE = {
+      start: {
+        ora: '03:42',
+        testo: 'Rispondi al telefono. La voce del coordinatore è concitata: «Attivazione! Scossa 4.8, epicentro sui Colli. Presentati al COC tra 30 minuti. Prima però: passaparola alla tua famiglia. Sono al sicuro?»',
+        scelte: [
+          { testo: 'Controllo una stanza alla volta, senza accendere la luce se sento odore di gas.', next: 'famiglia_ok', delta: { sicurezza: 0, aiutate: 0 } },
+          { testo: 'Accendo tutte le luci e chiamo forte i nomi di tutti.', next: 'famiglia_ko', delta: { sicurezza: -2, aiutate: 0 } },
+          { testo: 'Corro in strada subito: i soccorsi prima di tutto.', next: 'strada_panico', delta: { sicurezza: -3, aiutate: 0 } }
+        ]
+      },
+      famiglia_ok: {
+        ora: '03:50',
+        testo: 'Tutti stanno bene. Prendi lo zaino di emergenza già pronto, cellulare, torcia, documenti. Esci con calma dopo aver spento i quadri elettrici. Che fai?',
+        scelte: [
+          { testo: 'Vado al COC a piedi: le strade potrebbero avere detriti.', next: 'strada_piedi', delta: { sicurezza: 0, aiutate: 0 } },
+          { testo: 'Prendo l\'auto per fare prima.', next: 'strada_auto', delta: { sicurezza: -1, aiutate: 0 } }
+        ]
+      },
+      famiglia_ko: {
+        ora: '03:50',
+        testo: 'L\'accensione delle luci rischia se c\'è stata fuga di gas. Per fortuna in casa non ci sono perdite. La famiglia è in strada. Che fai?',
+        scelte: [
+          { testo: 'Metto tutti in un punto sicuro lontano dall\'edificio e vado al COC a piedi.', next: 'strada_piedi', delta: { sicurezza: 1, aiutate: 0 } },
+          { testo: 'Corro al COC lasciandoli davanti al portone.', next: 'strada_auto', delta: { sicurezza: -2, aiutate: 0 } }
+        ]
+      },
+      strada_panico: {
+        ora: '03:48',
+        testo: 'In strada c\'è confusione. Qualcuno grida. Tu non hai con te torcia, documenti, zaino. Un signore anziano ti chiede di accompagnarlo alla farmacia.',
+        scelte: [
+          { testo: 'Torno a casa a prendere zaino ed esco con la famiglia, poi aiuto il signore.', next: 'torna_indietro', delta: { sicurezza: 1, aiutate: 1 } },
+          { testo: 'Lo accompagno subito senza tornare a casa.', next: 'no_zaino', delta: { sicurezza: -1, aiutate: 1 } }
+        ]
+      },
+      torna_indietro: {
+        ora: '04:00',
+        testo: 'Buon compromesso: prendi lo zaino e riesci ad aiutare anche il signore anziano. Raggiungi il COC con 15 minuti di ritardo ma operativo.',
+        scelte: [
+          { testo: 'Vai al COC e ti presenti.', next: 'arrivo_coc', delta: { sicurezza: 0, aiutate: 0 } }
+        ]
+      },
+      no_zaino: {
+        ora: '03:55',
+        testo: 'Senza zaino ed equipaggiamento, al COC non sei utilizzabile per attività di presidio. Ti assegnano compiti di retrovia.',
+        scelte: [
+          { testo: 'Accetto: organizzo le registrazioni di chi arriva al centro di accoglienza.', next: 'retrovia', delta: { sicurezza: 0, aiutate: 2 } }
+        ]
+      },
+      strada_piedi: {
+        ora: '04:12',
+        testo: 'Arrivi al COC di Genzano. Il Responsabile ti dà scelta: pattuglia con un collega esperto in un quartiere, oppure supporto radio in sala.',
+        scelte: [
+          { testo: 'Pattuglia sul territorio: rischioso ma utile.', next: 'pattuglia', delta: { sicurezza: -1, aiutate: 3 } },
+          { testo: 'Supporto radio in sala: gestisco le comunicazioni.', next: 'radio', delta: { sicurezza: 1, aiutate: 2 } }
+        ]
+      },
+      strada_auto: {
+        ora: '04:05',
+        testo: 'In via Appia trovi un\'auto che ha sbandato per un cornicione caduto. Niente feriti gravi ma strada bloccata.',
+        scelte: [
+          { testo: 'Chiamo il 112 e aspetto i VVFF prima di toccare il mezzo.', next: 'arrivo_coc', delta: { sicurezza: 1, aiutate: 1 } },
+          { testo: 'Provo a spostare i detriti da solo per passare.', next: 'arrivo_coc', delta: { sicurezza: -2, aiutate: 0 } }
+        ]
+      },
+      arrivo_coc: {
+        ora: '04:25',
+        testo: 'Al COC la sala è attivata: F1, F3, F7 e F8 già operative. Ti affiancano a un volontario esperto. Arriva una chiamata: una famiglia di 4 persone è sotto choc, in una casa dichiarata inagibile.',
+        scelte: [
+          { testo: 'Accompagno la squadra sanitaria e segnalo la famiglia all\'area di accoglienza.', next: 'finale_buono', delta: { sicurezza: 0, aiutate: 4 } },
+          { testo: 'Vado da solo a rassicurarli e li porto fuori senza attendere la squadra.', next: 'finale_medio', delta: { sicurezza: -2, aiutate: 2 } }
+        ]
+      },
+      pattuglia: {
+        ora: '05:00',
+        testo: 'In una via laterale scoprite un garage con finestre sfondate: una persona chiede aiuto all\'interno. Il collega esperto valuta la struttura.',
+        scelte: [
+          { testo: 'Attendo il via libera strutturale e preparo il recupero secondo la procedura.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 4 } },
+          { testo: 'Entro subito: una vita vale più di una procedura.', next: 'finale_medio', delta: { sicurezza: -3, aiutate: 3 } }
+        ]
+      },
+      radio: {
+        ora: '05:00',
+        testo: 'In radio arriva un messaggio confuso da una squadra esterna. Come lo gestisci?',
+        scelte: [
+          { testo: 'Rispondo con la procedura ufficiale e chiedo di ripetere con formato standard.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 3 } },
+          { testo: 'Rispondo colloquialmente per fare prima.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 1 } }
+        ]
+      },
+      retrovia: {
+        ora: '05:00',
+        testo: 'Al centro di accoglienza del Palazzetto comunale registri 35 persone nelle prime 2 ore. Organizzi la distribuzione di pasti caldi con la squadra F9.',
+        scelte: [
+          { testo: 'Finisco il turno come supporto F9.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 3 } }
+        ]
+      },
+      finale_buono: {
+        ora: '07:30',
+        testo: 'Alla fine del turno, la sala operativa ringrazia: la gestione è stata lineare, nessuno si è fatto male. Hai contribuito in modo sostanziale.',
+        fine: true,
+        esito: 'buono'
+      },
+      finale_medio: {
+        ora: '07:30',
+        testo: 'Il turno finisce senza gravi conseguenze, ma alcune decisioni rischiose avrebbero potuto creare guai. Buon cuore, procedure da ripassare.',
+        fine: true,
+        esito: 'medio'
+      }
+    };
+
+    var intro = document.getElementById('intro'),
+        game = document.getElementById('game'),
+        end = document.getElementById('end'),
+        sceneEl = document.getElementById('scene'),
+        choicesEl = document.getElementById('choices'),
+        stSicurezza = document.getElementById('st-sicurezza'),
+        stAiutate = document.getElementById('st-aiutate'),
+        stTempo = document.getElementById('st-tempo');
+
+    var sicurezza = 10, aiutate = 0;
+
+    function start(){
+      sicurezza = 10; aiutate = 0;
+      intro.classList.add('hide'); end.classList.add('hide');
+      game.classList.remove('hide');
+      show('start');
+    }
+
+    function show(id){
+      var s = SCENE[id];
+      if (!s) return;
+      stTempo.textContent = s.ora || '';
+      stSicurezza.textContent = sicurezza;
+      stAiutate.textContent = aiutate;
+      sceneEl.innerHTML = '<p>' + s.testo + '</p>';
+      choicesEl.innerHTML = '';
+      if (s.fine){
+        setTimeout(function(){ finish(s.esito); }, 1000);
+        return;
+      }
+      s.scelte.forEach(function(c){
+        var b = document.createElement('button');
+        b.className = 'choice-btn';
+        b.type = 'button';
+        b.textContent = c.testo;
+        b.addEventListener('click', function(){
+          if (c.delta){
+            sicurezza = Math.max(0, sicurezza + (c.delta.sicurezza || 0));
+            aiutate += (c.delta.aiutate || 0);
+          }
+          show(c.next);
+        });
+        choicesEl.appendChild(b);
+      });
+    }
+
+    function finish(esito){
+      game.classList.add('hide');
+      end.classList.remove('hide');
+      document.getElementById('end-sicurezza').textContent = sicurezza;
+      document.getElementById('end-aiutate').textContent = aiutate;
+      var title = document.getElementById('end-title');
+      var text = document.getElementById('end-text');
+      if (esito === 'buono'){
+        title.textContent = 'Turno completato con successo';
+        text.textContent = 'Hai messo in pratica procedure, collaborazione e priorità corrette. Il tuo contributo è stato importante.';
+      } else {
+        title.textContent = 'Turno completato';
+        text.textContent = 'Hai aiutato ma hai preso alcuni rischi. Un volontario efficace impara a rispettare le procedure: salvano vite, anche la tua.';
+      }
+      var punti = Math.min(10, Math.round((sicurezza + aiutate) / 2));
+      var max = 10;
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('emergency-responder', punti, max, '#end');
+    }
+
+    document.getElementById('start').addEventListener('click', start);
+    document.getElementById('restart').addEventListener('click', start);
+  })();
+  </script>
+</body>
+</html>

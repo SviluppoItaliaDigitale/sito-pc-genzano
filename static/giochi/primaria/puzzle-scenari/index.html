@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Puzzle degli Scenari — Giochi Protezione Civile</title>
+  <meta name="description" content="Rimetti in ordine i passi corretti per affrontare terremoto, alluvione e incendio.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <style>
+    .screen { display: block; }
+    .screen.hide { display: none !important; }
+    .scenario-card {
+      background: #fff; border-radius: 14px; padding: 1rem 1.2rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,.06);
+      border-left: 4px solid #008758; margin-bottom: 1rem;
+    }
+    .scenario-card h3 { color: #003366; font-size: 1.1rem; margin-bottom: .3rem; }
+    .scenario-card p { margin: 0; font-size: .95rem; color: #5b6b7c; }
+    .step-list { list-style: none; padding: 0; margin: 0; }
+    .step-item {
+      background: #fff; border: 2px solid #e9ecef; border-radius: 12px;
+      padding: .8rem 1rem; margin-bottom: .6rem;
+      display: flex; align-items: center; gap: .8rem;
+      cursor: grab; user-select: none; transition: box-shadow .15s, transform .15s;
+    }
+    .step-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); border-color: #008758; }
+    .step-item.dragging { opacity: .5; }
+    .step-item .move-btns {
+      display: flex; flex-direction: column; gap: 2px;
+    }
+    .step-item .move-btns button {
+      width: 30px; height: 22px; border: 1px solid #008758; background: #fff;
+      color: #008758; border-radius: 4px; padding: 0; cursor: pointer;
+      font-size: .8rem; display: inline-flex; align-items: center; justify-content: center;
+    }
+    .step-item .move-btns button:hover { background: #008758; color: #fff; }
+    .step-item .num-pos {
+      background: #008758; color: #fff;
+      border-radius: 50%; width: 32px; height: 32px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; flex-shrink: 0;
+    }
+    .step-item .step-text { flex: 1; font-size: .95rem; }
+    .step-item.correct { border-color: #198754; background: #d1e7dd; }
+    .step-item.wrong { border-color: #dc3545; background: #f8d7da; animation: pshake .3s; }
+    @keyframes pshake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+    .feedback-msg {
+      padding: .8rem 1rem; border-radius: 8px; margin: 1rem 0;
+      text-align: center; font-weight: 600;
+    }
+    .feedback-msg.ok { background: #d1e7dd; color: #0f5132; }
+    .feedback-msg.ko { background: #fff3cd; color: #664d03; }
+  </style>
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Scuola Primaria</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Puzzle degli Scenari</li>
+          </ol>
+        </nav>
+        <h1>Puzzle degli Scenari</h1>
+        <p class="lead">Rimetti in ordine i passi corretti per ogni emergenza!</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div id="select-screen" class="screen">
+            <p class="lead text-center mb-3">Scegli uno scenario:</p>
+            <div id="scenario-list"></div>
+            <div class="text-center mt-3">
+              <a href="../index.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
+            </div>
+          </div>
+
+          <div id="game-screen" class="screen hide">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+              <h2 id="game-title" class="h4 mb-0"></h2>
+              <span class="badge bg-primary">Scenario</span>
+            </div>
+            <p id="game-desc" class="text-muted small mb-3"></p>
+            <p class="mb-2 small"><i class="bi bi-info-circle me-1"></i> Riordina i passi con le frecce ▲ ▼ (o trascina con il mouse). Quando sei sicuro, clicca <strong>Verifica</strong>.</p>
+            <ol id="step-list" class="step-list" aria-label="Passi da riordinare"></ol>
+            <div id="feedback" class="feedback-msg hide" aria-live="polite"></div>
+            <div class="text-center">
+              <button id="check-btn" class="btn btn-primary btn-lg"><i class="bi bi-check-circle me-1"></i> Verifica</button>
+              <button id="back-btn" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Cambia scenario</button>
+            </div>
+          </div>
+
+          <div id="end-screen" class="screen hide text-center">
+            <div class="display-4 text-success mb-2"><i class="bi bi-trophy-fill"></i></div>
+            <h2>Ben fatto!</h2>
+            <p class="lead">Hai completato <strong><span id="done-count">0</span></strong> scenari su <strong><span id="done-total">3</span></strong>.</p>
+            <p id="end-msg" class="text-muted"></p>
+            <div class="attestato-inject my-3"></div>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <button id="another" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Altro scenario</button>
+              <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    var SCENARI = [
+      {
+        id: 'terremoto',
+        titolo: 'Terremoto a scuola',
+        desc: 'La terra trema durante la lezione: qual è la sequenza corretta delle azioni?',
+        passi: [
+          'Non corro e non urlo: mi calmo per ascoltare le istruzioni.',
+          'Mi ripari sotto il banco, coprendo testa e collo con le braccia.',
+          'Aspetta che la scossa finisca senza uscire di corsa.',
+          'Segui le maestre verso il punto di raccolta all\'aperto.',
+          'Al punto di raccolta rispondi all\'appello così sanno che stai bene.'
+        ]
+      },
+      {
+        id: 'alluvione',
+        titolo: 'Alluvione in casa',
+        desc: 'L\'acqua comincia a entrare dalla porta: come ti comporti?',
+        passi: [
+          'Avvisa subito un adulto e non uscire di casa da solo.',
+          'Sposta gli oggetti importanti ai piani alti.',
+          'Stacca la corrente elettrica se l\'adulto lo dice.',
+          'Saliti ai piani alti: non scendere in cantina o garage.',
+          'Se arriva la Protezione Civile, seguine le indicazioni.'
+        ]
+      },
+      {
+        id: 'incendio',
+        titolo: 'Incendio in casa',
+        desc: 'Senti odore di bruciato e vedi del fumo: qual è la sequenza giusta?',
+        passi: [
+          'Avvisa subito un adulto gridando "Fuoco!".',
+          'Abbassati vicino al pavimento dove l\'aria è più pulita.',
+          'Esci dalla casa senza fermarti a prendere nulla.',
+          'Chiama o fai chiamare il 115 (Vigili del Fuoco).',
+          'Aspetta i soccorsi lontano dall\'edificio.'
+        ]
+      }
+    ];
+
+    var selectScreen = document.getElementById('select-screen'),
+        gameScreen = document.getElementById('game-screen'),
+        endScreen = document.getElementById('end-screen'),
+        scenarioList = document.getElementById('scenario-list'),
+        stepList = document.getElementById('step-list'),
+        gameTitle = document.getElementById('game-title'),
+        gameDesc = document.getElementById('game-desc'),
+        feedback = document.getElementById('feedback'),
+        doneCount = document.getElementById('done-count'),
+        doneTotal = document.getElementById('done-total'),
+        endMsg = document.getElementById('end-msg');
+
+    var current = null, completed = 0, totalScore = 0, totalMax = 0;
+    var completedIds = {};
+
+    function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+
+    function renderList(){
+      selectScreen.classList.remove('hide');
+      gameScreen.classList.add('hide');
+      endScreen.classList.add('hide');
+      scenarioList.innerHTML = '';
+      SCENARI.forEach(function(s){
+        var card = document.createElement('div');
+        card.className = 'scenario-card';
+        var doneMark = completedIds[s.id] ? ' <span class="badge bg-success">fatto</span>' : '';
+        card.innerHTML = '<h3>' + s.titolo + doneMark + '</h3><p>' + s.desc + '</p>';
+        card.style.cursor = 'pointer';
+        card.tabIndex = 0;
+        card.setAttribute('role','button');
+        card.addEventListener('click', function(){ start(s); });
+        card.addEventListener('keydown', function(e){ if (e.key === 'Enter') start(s); });
+        scenarioList.appendChild(card);
+      });
+      doneTotal.textContent = SCENARI.length;
+    }
+
+    function start(s){
+      current = s;
+      selectScreen.classList.add('hide');
+      gameScreen.classList.remove('hide');
+      endScreen.classList.add('hide');
+      gameTitle.textContent = s.titolo;
+      gameDesc.textContent = s.desc;
+      feedback.classList.add('hide');
+      var ordine = s.passi.map(function(p, i){ return { text: p, correctIndex: i }; });
+      // Mix finché non è diverso dall'originale
+      var tries = 0;
+      do { ordine = shuffle(ordine); tries++; } while (tries < 5 && ordine.every(function(o, i){ return o.correctIndex === i; }));
+      stepList.innerHTML = '';
+      ordine.forEach(function(p, i){
+        var li = document.createElement('li');
+        li.className = 'step-item';
+        li.draggable = true;
+        li.dataset.correct = p.correctIndex;
+        li.innerHTML = ''
+          + '<span class="num-pos" aria-hidden="true">' + (i+1) + '</span>'
+          + '<span class="step-text">' + p.text + '</span>'
+          + '<span class="move-btns">'
+          + '<button type="button" class="up" aria-label="Sposta su"><i class="bi bi-chevron-up"></i></button>'
+          + '<button type="button" class="down" aria-label="Sposta giù"><i class="bi bi-chevron-down"></i></button>'
+          + '</span>';
+        li.querySelector('.up').addEventListener('click', function(){ moveUp(li); });
+        li.querySelector('.down').addEventListener('click', function(){ moveDown(li); });
+        attachDrag(li);
+        stepList.appendChild(li);
+      });
+      renumber();
+    }
+
+    function renumber(){
+      var items = stepList.querySelectorAll('.step-item');
+      items.forEach(function(it, i){ it.querySelector('.num-pos').textContent = i+1; });
+    }
+
+    function moveUp(li){
+      var prev = li.previousElementSibling;
+      if (prev) { stepList.insertBefore(li, prev); renumber(); }
+    }
+    function moveDown(li){
+      var next = li.nextElementSibling;
+      if (next) { stepList.insertBefore(next, li); renumber(); }
+    }
+
+    var dragEl = null;
+    function attachDrag(li){
+      li.addEventListener('dragstart', function(e){
+        dragEl = li; li.classList.add('dragging');
+        e.dataTransfer.effectAllowed = 'move';
+      });
+      li.addEventListener('dragend', function(){ li.classList.remove('dragging'); dragEl = null; renumber(); });
+      li.addEventListener('dragover', function(e){
+        e.preventDefault();
+        if (!dragEl || dragEl === li) return;
+        var rect = li.getBoundingClientRect();
+        var after = (e.clientY - rect.top) / rect.height > 0.5;
+        if (after) stepList.insertBefore(dragEl, li.nextElementSibling);
+        else stepList.insertBefore(dragEl, li);
+      });
+    }
+
+    document.getElementById('check-btn').addEventListener('click', function(){
+      var items = stepList.querySelectorAll('.step-item');
+      var right = 0;
+      items.forEach(function(it, i){
+        it.classList.remove('correct','wrong');
+        if (+it.dataset.correct === i) { it.classList.add('correct'); right++; }
+        else it.classList.add('wrong');
+      });
+      if (right === items.length){
+        feedback.className = 'feedback-msg ok';
+        feedback.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Perfetto! Sequenza corretta!';
+        feedback.classList.remove('hide');
+        totalScore += items.length;
+        totalMax += items.length;
+        if (!completedIds[current.id]) { completed++; completedIds[current.id] = true; }
+        setTimeout(finish, 1600);
+      } else {
+        feedback.className = 'feedback-msg ko';
+        feedback.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-1"></i> ' + right + ' passi giusti su ' + items.length + '. Riprova a sistemare i rossi!';
+        feedback.classList.remove('hide');
+      }
+    });
+
+    document.getElementById('back-btn').addEventListener('click', renderList);
+
+    function finish(){
+      if (completed >= SCENARI.length){
+        gameScreen.classList.add('hide');
+        endScreen.classList.remove('hide');
+        doneCount.textContent = completed;
+        endMsg.textContent = 'Hai completato tutti gli scenari! Sei un vero volontario in erba.';
+        if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('puzzle-scenari', totalScore, totalMax, '#end-screen');
+      } else {
+        renderList();
+      }
+    }
+
+    document.getElementById('another').addEventListener('click', renderList);
+
+    renderList();
+  })();
+  </script>
+</body>
+</html>
