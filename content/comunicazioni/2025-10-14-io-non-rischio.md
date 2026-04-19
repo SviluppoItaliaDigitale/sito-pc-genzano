@@ -6,7 +6,7 @@ badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: ""
-scadenza: "2025-10-15"
+scadenza: ""
 area: "Piazza Tommaso Frasconi, Genzano di Roma"
 allegati: []
 draft: false

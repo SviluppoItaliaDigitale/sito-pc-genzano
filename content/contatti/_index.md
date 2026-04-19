@@ -29,7 +29,7 @@ aliases:
 Questi recapiti sono per **informazioni e richieste non urgenti**.
 
 - **Sede:** Via Sicilia, 13-15 — 00045 Genzano di Roma (RM)
-- **Telefono Segreteria:** [+39 069362600](tel:+39069362600)
+- **Telefono Segreteria:** [+39 06 9362600](tel:+39069362600)
 - **Email:** [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
 - **Links:** [Tutti i link web del Gruppo](https://linktr.ee/protezionecivilegenzano)
 

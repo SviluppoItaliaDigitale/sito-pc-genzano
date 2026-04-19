@@ -3,10 +3,10 @@ title: "Avvio Campagna Antincendio Boschivo 2025"
 date: 2025-06-15
 description: "Dal 15 giugno al 30 settembre il territorio è in stato di massima allerta per il rischio incendi boschivi."
 badge: "Allerta"
-priorita: "urgente"
+priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: ""
-scadenza: "2025-09-30"
+scadenza: ""
 area: "Territorio comunale di Genzano di Roma"
 allegati: []
 draft: false
