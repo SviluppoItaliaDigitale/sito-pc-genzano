@@ -1,40 +1,86 @@
 {{/* CTA Giochi della Sicurezza — Homepage
-     Rimanda ai giochi educativi divisi per fascia di età */}}
+     3 card colorate per fascia di età + bottone "vedi tutti" */}}
 <section class="games-cta-section" aria-labelledby="games-cta-heading">
   <div class="container">
-    <div class="games-cta-card">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-7">
-          <div class="d-flex align-items-center mb-2">
-            <i class="bi bi-controller games-cta-icon" aria-hidden="true"></i>
-            <span class="games-cta-badge">Formazione ed educazione</span>
+    <div class="games-cta-header text-center">
+      <span class="games-cta-eyebrow">
+        <i class="bi bi-controller me-2" aria-hidden="true"></i>Formazione · Educazione · Gioco
+      </span>
+      <h2 id="games-cta-heading" class="games-cta-title">Giochi della Sicurezza</h2>
+      <p class="games-cta-subtitle">
+        Impara la Protezione Civile divertendoti. Attività educative gratuite per tre fasce di età,
+        con attestato finale di partecipazione.
+      </p>
+    </div>
+
+    <div class="row g-4 games-cta-grid">
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ "/giochi/infanzia/" | relURL }}" class="games-fascia-card games-fascia-infanzia">
+          <div class="games-fascia-icon">
+            <i class="bi bi-emoji-smile-fill" aria-hidden="true"></i>
           </div>
-          <h2 id="games-cta-heading" class="games-cta-title">Giochi della Sicurezza</h2>
-          <p class="games-cta-lead">
-            Giochi educativi gratuiti per imparare la protezione civile divertendosi.
-            Pensati per tre fasce di età, con attività accessibili e attestato finale di partecipazione.
-          </p>
-          <ul class="games-cta-list list-unstyled">
-            <li><i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>Scuola dell'infanzia — 3-6 anni</li>
-            <li><i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>Scuola primaria — 6-11 anni</li>
-            <li><i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>Ragazzi e famiglie — 11-19 anni</li>
-          </ul>
-          <a href="{{ "/giochi/" | relURL }}" class="btn btn-primary btn-lg games-cta-btn">
-            <i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>
-            Scopri i giochi
-          </a>
-        </div>
-        <div class="col-lg-5 d-none d-lg-flex justify-content-center">
-          <div class="games-cta-visual" aria-hidden="true">
-            <div class="games-cta-visual-inner">
-              <i class="bi bi-puzzle"></i>
-              <i class="bi bi-joystick"></i>
-              <i class="bi bi-award"></i>
-              <i class="bi bi-mortarboard"></i>
+          <div class="games-fascia-content">
+            <span class="games-fascia-eta">3 – 6 anni</span>
+            <h3 class="games-fascia-title">Piccoli Esploratori</h3>
+            <p class="games-fascia-desc">Giochi semplici con icone grandi, suoni e pochissimo testo. Da fare con un adulto accanto.</p>
+            <div class="games-fascia-footer">
+              <span class="games-fascia-count"><i class="bi bi-joystick me-1" aria-hidden="true"></i>4 giochi</span>
+              <span class="games-fascia-arrow" aria-hidden="true">
+                <i class="bi bi-arrow-right"></i>
+              </span>
             </div>
           </div>
-        </div>
+        </a>
       </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ "/giochi/primaria/" | relURL }}" class="games-fascia-card games-fascia-primaria">
+          <div class="games-fascia-icon">
+            <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
+          </div>
+          <div class="games-fascia-content">
+            <span class="games-fascia-eta">6 – 11 anni</span>
+            <h3 class="games-fascia-title">Scuola Primaria</h3>
+            <p class="games-fascia-desc">Memory, puzzle, caccia al rischio, anagrammi, cruciverba e scenari interattivi sui comportamenti corretti.</p>
+            <div class="games-fascia-footer">
+              <span class="games-fascia-count"><i class="bi bi-joystick me-1" aria-hidden="true"></i>10 giochi</span>
+              <span class="games-fascia-arrow" aria-hidden="true">
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ "/giochi/ragazzi/" | relURL }}" class="games-fascia-card games-fascia-ragazzi">
+          <div class="games-fascia-icon">
+            <i class="bi bi-shield-shaded" aria-hidden="true"></i>
+          </div>
+          <div class="games-fascia-content">
+            <span class="games-fascia-eta">11 – 19 anni</span>
+            <h3 class="games-fascia-title">Ragazzi e Famiglie</h3>
+            <p class="games-fascia-desc">Simulatore COC, mappa del rischio, radio di emergenza e gestione delle emergenze. Scenari realistici ispirati al Metodo Augustus.</p>
+            <div class="games-fascia-footer">
+              <span class="games-fascia-count"><i class="bi bi-joystick me-1" aria-hidden="true"></i>5 giochi</span>
+              <span class="games-fascia-arrow" aria-hidden="true">
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="{{ "/giochi/" | relURL }}" class="btn btn-primary btn-lg games-cta-all-btn">
+        <i class="bi bi-grid-3x3-gap-fill me-2" aria-hidden="true"></i>
+        Vedi tutti i giochi
+      </a>
+      <p class="games-cta-note mt-3">
+        <i class="bi bi-award-fill me-1" aria-hidden="true"></i>
+        Al termine di ogni gioco ricevi un attestato di partecipazione da stampare
+      </p>
     </div>
   </div>
 </section>

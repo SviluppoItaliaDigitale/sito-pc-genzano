@@ -49,17 +49,30 @@ Il Gruppo promuove la cultura della prevenzione fin dalla giovane età anche att
 
 - **Incontri nelle scuole** del territorio per spiegare i rischi e i comportamenti corretti
 - **Dimostrazioni pratiche** con gli automezzi e le attrezzature operative
-- **Giochi educativi** per i bambini delle scuole primarie
+- **Giochi educativi online** per bambini dell'infanzia, della primaria e ragazzi
 - **Percorsi formativi** per le scuole secondarie
 
 Se sei un insegnante e vuoi organizzare un incontro, contattaci a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+
+## Giochi della Sicurezza — Impara giocando
+
+Il Gruppo ha sviluppato una collezione di **19 giochi educativi gratuiti** sulla protezione civile, divisi per fascia di età. Ogni gioco è pensato per trasmettere un messaggio chiaro di autoprotezione e termina con un **attestato di partecipazione** da stampare o conservare.
+
+I giochi sono utilizzabili anche dai docenti come attività complementari ai kit didattici, sia in aula sia come compiti a casa. Funzionano da computer, tablet e smartphone, senza registrazione e senza installazione.
+
+| Fascia | Età | Giochi | Esempi |
+|---|---|---|---|
+| [Piccoli Esploratori](/giochi/infanzia/) | 3-6 anni | 4 | La tartaruga saggia, Il numero 112, Suoni dell'emergenza, Memory facile |
+| [Scuola Primaria](/giochi/primaria/) | 6-11 anni | 10 | Memory, Caccia al rischio, Zaino dell'emergenza, Cruciverba, Puzzle degli scenari |
+| [Ragazzi e Famiglie](/giochi/ragazzi/) | 11-19 anni | 5 | Simulatore COC, Emergency Responder, Mappa del rischio, Radio di emergenza, Codice arancione |
+
+<a href="/giochi/index.html" class="btn btn-primary btn-lg mt-2"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Vai ai Giochi della Sicurezza</a>
 
 ## Risorse educative online
 
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
 - [La Protezione Civile in famiglia](https://www.protezionecivilegenzano.it/documenti/download/PC_famiglia.pdf) — Buone pratiche da adottare in famiglia
 - [Quiz di Protezione Civile](/quizpc/index.html) — Metti alla prova le tue conoscenze
-- [Giochi della Sicurezza](/giochi/index.html) — Giochi educativi per infanzia, scuola primaria e ragazzi
 - [Piattaforma E-Learning](/formazionepc/index.html) — Formazione a distanza per volontari
 
 ## Vuoi unirti a noi?

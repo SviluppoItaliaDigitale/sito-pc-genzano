@@ -950,121 +950,255 @@ article .galleria img {
    GIOCHI DELLA SICUREZZA — CTA homepage
    ============================================================ */
 .games-cta-section {
-  padding: 3rem 0;
-}
-
-.games-cta-card {
-  background: linear-gradient(135deg, #003366 0%, #0066CC 100%);
-  color: #fff;
-  border-radius: 16px;
-  padding: 2.5rem;
-  box-shadow: 0 8px 24px rgba(0, 51, 102, 0.18);
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
   position: relative;
-  overflow: hidden;
 }
 
-.games-cta-card::before {
+.games-cta-section::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.12), transparent 55%);
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #D9364F 0%, #D9364F 33%, #008758 33%, #008758 66%, #0066CC 66%, #0066CC 100%);
 }
 
-.games-cta-icon {
-  font-size: 1.75rem;
-  margin-right: 0.75rem;
-  color: #FFC107;
+.games-cta-header {
+  margin-bottom: 2.5rem;
 }
 
-.games-cta-badge {
+.games-cta-eyebrow {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  padding: 0.25rem 0.75rem;
+  background: rgba(0, 102, 204, 0.08);
+  color: #003366;
+  padding: 0.4rem 1rem;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
 }
 
 .games-cta-title {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  color: #fff;
+  color: #003366;
   margin-bottom: 0.75rem;
+  line-height: 1.15;
 }
 
-.games-cta-lead {
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.92);
+.games-cta-subtitle {
+  font-size: 1.1rem;
+  color: #455a73;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+.games-cta-grid {
+  margin-top: 0;
+}
+
+/* Card fascia */
+.games-fascia-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #17324D;
+  box-shadow: 0 4px 16px rgba(23, 50, 77, 0.08);
+  border: 1px solid rgba(23, 50, 77, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.games-fascia-card:hover,
+.games-fascia-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(23, 50, 77, 0.14);
+  color: #17324D;
+  text-decoration: none;
+}
+
+.games-fascia-card:focus-visible {
+  outline: 3px solid #0066CC;
+  outline-offset: 3px;
+}
+
+.games-fascia-icon {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.games-fascia-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2), transparent 55%);
+  pointer-events: none;
+}
+
+.games-fascia-content {
+  padding: 1.5rem 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.games-fascia-eta {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+  align-self: flex-start;
+}
+
+.games-fascia-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: #17324D;
+}
+
+.games-fascia-desc {
+  color: #5a6772;
+  font-size: 0.95rem;
+  line-height: 1.55;
   margin-bottom: 1.25rem;
+  flex-grow: 1;
 }
 
-.games-cta-list {
-  margin-bottom: 1.5rem;
+.games-fascia-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(23, 50, 77, 0.08);
 }
 
-.games-cta-list li {
-  color: rgba(255, 255, 255, 0.95);
-  margin-bottom: 0.35rem;
-  font-size: 0.98rem;
+.games-fascia-count {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #455a73;
 }
 
-.games-cta-list .bi-check-circle-fill {
+.games-fascia-arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #fff;
+  transition: transform 0.25s ease;
+}
+
+.games-fascia-card:hover .games-fascia-arrow {
+  transform: translateX(4px);
+}
+
+/* Varianti per fascia — colori identici a /giochi/ */
+.games-fascia-infanzia .games-fascia-icon {
+  background: linear-gradient(135deg, #D9364F 0%, #f15f74 100%);
+}
+.games-fascia-infanzia .games-fascia-eta {
+  background: rgba(217, 54, 79, 0.1);
+  color: #a22a3e;
+}
+.games-fascia-infanzia .games-fascia-arrow {
+  background: #D9364F;
+}
+
+.games-fascia-primaria .games-fascia-icon {
+  background: linear-gradient(135deg, #008758 0%, #20a373 100%);
+}
+.games-fascia-primaria .games-fascia-eta {
+  background: rgba(0, 135, 88, 0.1);
+  color: #006a45;
+}
+.games-fascia-primaria .games-fascia-arrow {
+  background: #008758;
+}
+
+.games-fascia-ragazzi .games-fascia-icon {
+  background: linear-gradient(135deg, #003366 0%, #0066CC 100%);
+}
+.games-fascia-ragazzi .games-fascia-eta {
+  background: rgba(0, 102, 204, 0.1);
+  color: #003366;
+}
+.games-fascia-ragazzi .games-fascia-arrow {
+  background: #0066CC;
+}
+
+/* Pulsante "Vedi tutti" */
+.games-cta-all-btn.btn-primary {
+  background: #003366;
+  border-color: #003366;
+  padding: 0.85rem 2rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0, 51, 102, 0.25);
+}
+
+.games-cta-all-btn.btn-primary:hover,
+.games-cta-all-btn.btn-primary:focus {
+  background: #0066CC;
+  border-color: #0066CC;
+  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+}
+
+.games-cta-note {
+  color: #5a6772;
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+.games-cta-note .bi-award-fill {
   color: #FFC107;
 }
 
-.games-cta-btn.btn-primary {
-  background: #FFC107;
-  border-color: #FFC107;
-  color: #003366;
-  font-weight: 700;
-  padding: 0.75rem 1.75rem;
-}
-
-.games-cta-btn.btn-primary:hover,
-.games-cta-btn.btn-primary:focus {
-  background: #ffd23f;
-  border-color: #ffd23f;
-  color: #003366;
-}
-
-.games-cta-visual {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-}
-
-.games-cta-visual-inner {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.games-cta-visual-inner i {
-  font-size: 3rem;
-  color: rgba(255, 255, 255, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-}
-
 @media (max-width: 768px) {
-  .games-cta-card {
-    padding: 1.75rem;
+  .games-cta-section {
+    padding: 2.5rem 0;
   }
   .games-cta-title {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
+  }
+  .games-cta-subtitle {
+    font-size: 1rem;
+  }
+  .games-fascia-icon {
+    height: 100px;
+    font-size: 3rem;
+  }
+  .games-fascia-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .games-fascia-card,
+  .games-fascia-arrow {
+    transition: none;
+  }
+  .games-fascia-card:hover {
+    transform: none;
   }
 }
