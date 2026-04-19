@@ -1,0 +1,199 @@
+/* Cruciverba — stile dedicato */
+
+.screen { display: block; }
+.screen.hide { display: none !important; }
+
+.difficulty-selector {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center;
+  margin-bottom: .5rem;
+}
+.difficulty-selector .btn.active {
+  background: #003366;
+  color: #fff;
+  border-color: #003366;
+}
+
+.cw-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: .6rem 1rem;
+}
+.cw-stat {
+  font-size: .9rem;
+  color: #003366;
+}
+.cw-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.grid-wrap {
+  background: #fff;
+  border: 1px solid rgba(0,51,102,.1);
+  border-radius: 10px;
+  padding: .6rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  overflow-x: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 2px;
+  background: #003366;
+  padding: 2px;
+  border-radius: 6px;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+/* ogni cella */
+.cell {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.cell.black {
+  background: #003366;
+}
+.cell input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #003366;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 0;
+  line-height: 1;
+  caret-color: #ff6600;
+}
+.cell input:focus {
+  outline: 2px solid #ff6600;
+  outline-offset: -2px;
+  background: #fff3e0;
+}
+.cell.highlight input {
+  background: #e8f0fe;
+}
+.cell.active input {
+  background: #ffe0b2;
+}
+.cell.correct input {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+.cell.wrong input {
+  background: #f8d7da;
+  color: #58151c;
+}
+.cell-number {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  font-size: .6rem;
+  font-weight: 700;
+  color: #003366;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.current-clue {
+  margin-top: .75rem;
+  padding: .7rem .9rem;
+  background: #e8f0fe;
+  border-left: 4px solid #003366;
+  border-radius: 6px;
+  font-size: .95rem;
+  color: #003366;
+  font-weight: 500;
+  min-height: 2.4em;
+}
+
+.clues-block {
+  background: #fff;
+  border: 1px solid rgba(0,51,102,.08);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,.04);
+}
+.clues-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #003366;
+  margin: 0 0 .5rem;
+  padding-bottom: .3rem;
+  border-bottom: 2px solid #ff6600;
+}
+.clues-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.clues-list li {
+  padding: .35rem .2rem;
+  font-size: .88rem;
+  line-height: 1.35;
+  cursor: pointer;
+  border-bottom: 1px dashed #e9ecef;
+  color: #333;
+}
+.clues-list li:hover { background: #f8f9fa; }
+.clues-list li.active {
+  background: #fff3e0;
+  color: #003366;
+  font-weight: 600;
+}
+.clues-list li.solved {
+  color: #0f5132;
+  text-decoration: line-through;
+  opacity: .7;
+}
+.clues-list li .num {
+  display: inline-block;
+  min-width: 1.8em;
+  font-weight: 700;
+  color: #003366;
+}
+
+.cw-feedback {
+  margin-top: 1rem;
+  padding: .8rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+.cw-feedback.correct {
+  background: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+.cw-feedback.wrong {
+  background: #fff3cd;
+  color: #664d03;
+  border: 1px solid #ffe69c;
+}
+
+@media (max-width: 520px) {
+  .cell { width: 32px; height: 32px; }
+  .cell input { font-size: .95rem; }
+  .cell-number { font-size: .52rem; }
+}

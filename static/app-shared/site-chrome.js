@@ -1,7 +1,7 @@
 /**
  * Site Chrome — Layout condiviso per le app standalone
  * Inietta header e footer del sito principale nelle app
- * (quizpc, giochi-bambini, formazionepc)
+ * (quizpc, giochi, formazionepc)
  */
 (function () {
   'use strict';

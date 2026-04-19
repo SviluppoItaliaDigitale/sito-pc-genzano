@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giochi della Sicurezza — Protezione Civile Genzano di Roma</title>
+  <meta name="description" content="Giochi educativi sulla protezione civile divisi per fascia d'età: infanzia, scuola primaria e ragazzi.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1" class="giochi-section">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Giochi della Sicurezza</li>
+          </ol>
+        </nav>
+        <h1>Giochi della Sicurezza</h1>
+        <p class="lead">Impara le regole della Protezione Civile divertendoti. Scegli la fascia d'età.</p>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <a href="infanzia/index.html" class="fascia-card fascia-card-infanzia">
+            <div class="fascia-icon-big fascia-icon-infanzia">
+              <i class="bi bi-emoji-smile-fill" aria-hidden="true"></i>
+            </div>
+            <h2>Piccoli Esploratori</h2>
+            <div class="fascia-eta">3 – 6 anni</div>
+            <p class="fascia-desc">Giochi semplici con icone grandi, suoni e pochissimo testo. Ideali da fare con un adulto accanto.</p>
+            <span class="fascia-conteggio">4 giochi disponibili</span>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="primaria/index.html" class="fascia-card fascia-card-primaria">
+            <div class="fascia-icon-big fascia-icon-primaria">
+              <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
+            </div>
+            <h2>Scuola Primaria</h2>
+            <div class="fascia-eta">6 – 11 anni</div>
+            <p class="fascia-desc">Quiz, memory, cruciverba e scenari di emergenza: imparare i comportamenti corretti giocando.</p>
+            <span class="fascia-conteggio">10 giochi disponibili</span>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="ragazzi/index.html" class="fascia-card fascia-card-ragazzi">
+            <div class="fascia-icon-big fascia-icon-ragazzi">
+              <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+            </div>
+            <h2>Ragazzi</h2>
+            <div class="fascia-eta">11 – 19 anni</div>
+            <p class="fascia-desc">Simulazioni, narrativa interattiva, radiocomunicazioni e pianificazione: pensa come un volontario.</p>
+            <span class="fascia-conteggio">5 giochi disponibili</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Box: I tuoi badge -->
+      <section class="mt-5" aria-labelledby="titolo-badge">
+        <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+          <h2 id="titolo-badge" class="h4 m-0"><i class="bi bi-award-fill text-warning me-1" aria-hidden="true"></i> I tuoi badge</h2>
+          <button type="button" id="btn-reset-badge" class="btn btn-sm btn-outline-secondary">
+            <i class="bi bi-arrow-counterclockwise me-1" aria-hidden="true"></i> Azzera progressi
+          </button>
+        </div>
+        <p class="text-muted small mb-3" id="badge-intro">I badge si ottengono rispondendo correttamente almeno all'80% delle domande di un gioco. I progressi sono salvati solo su questo dispositivo.</p>
+        <div class="row g-3" id="elenco-badge" aria-live="polite">
+          <!-- Popolato da JS -->
+        </div>
+      </section>
+
+      <!-- Box Abili a proteggere -->
+      <div class="alert alert-info border-0 mt-5" style="background:#e8f0fe;border-left:4px solid #003366 !important;border-radius:12px;">
+        <p class="mb-1"><strong><i class="bi bi-heart-fill me-1" aria-hidden="true"></i> Abili a proteggere</strong></p>
+        <p class="mb-0">Cerchi attività per persone con difficoltà, anziani o bambini fragili? Vai alla sezione
+          <a href="/abili-a-proteggere/index.html"><strong>Abili a Proteggere</strong></a>
+          con pulsanti grandi, testi semplici e nessun limite di tempo.</p>
+      </div>
+
+      <div class="app-disclaimer mt-3">
+        <strong><i class="bi bi-info-circle me-1" aria-hidden="true"></i> Per genitori e insegnanti:</strong>
+        i giochi sono strumenti didattici complementari. Per attività strutturate consultate i
+        <a href="/formazione/">kit didattici per le scuole</a>.
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script>
+  (function(){
+    var cont = document.getElementById('elenco-badge');
+    var intro = document.getElementById('badge-intro');
+    if (!cont || !window.GiochiPC) return;
+
+    function render(){
+      var badge = window.GiochiPC.elencoBadge();
+      var ottenuti = badge.filter(function(b){return b.ottenuto;}).length;
+      var totale = badge.length;
+
+      cont.innerHTML = '';
+      if (ottenuti === 0) {
+        cont.innerHTML = '<div class="col-12"><p class="text-muted fst-italic mb-0">Non hai ancora ottenuto nessun badge. Inizia a giocare!</p></div>';
+      } else {
+        intro.innerHTML = 'Hai ottenuto <strong>' + ottenuti + '</strong> badge su ' + totale + '. I progressi sono salvati solo su questo dispositivo.';
+      }
+      badge.forEach(function(b){
+        if (!b.ottenuto && !b.completato) return;
+        var col = document.createElement('div');
+        col.className = 'col-md-6 col-lg-4';
+        var stato = b.ottenuto ? 'badge-ottenuto' : 'badge-bloccato';
+        var fasciaLabel = { infanzia:'Infanzia', primaria:'Primaria', ragazzi:'Ragazzi' }[b.fascia] || '';
+        var dataStr = b.data ? window.GiochiPC.formattaData(b.data) : '';
+        col.innerHTML = ''
+          + '<div class="badge-giochi ' + stato + '">'
+          + '  <div class="badge-icona"><i class="bi ' + (b.ottenuto ? 'bi-award-fill' : 'bi-hourglass-split') + '" aria-hidden="true"></i></div>'
+          + '  <div>'
+          + '    <p class="badge-nome">' + b.nome + '</p>'
+          + '    <p class="badge-dettaglio"><span class="fascia-badge fascia-' + b.fascia + '">' + fasciaLabel + '</span> &middot; ' + b.percentuale + '%'
+          + (dataStr ? ' &middot; ' + dataStr : '')
+          + '</p>'
+          + '  </div>'
+          + '</div>';
+        cont.appendChild(col);
+      });
+    }
+
+    render();
+
+    var btn = document.getElementById('btn-reset-badge');
+    if (btn) {
+      btn.addEventListener('click', function(){
+        if (!confirm('Sei sicuro di voler azzerare tutti i progressi e i badge ottenuti?')) return;
+        window.GiochiPC.reset();
+        render();
+      });
+    }
+  })();
+  </script>
+</body>
+</html>

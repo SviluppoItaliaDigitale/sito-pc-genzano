@@ -1,0 +1,151 @@
+/* Stile condiviso giochi infanzia 3-6 anni — pulsanti grandi, colori caldi */
+
+:root {
+  --inf-rosso: #D9364F;
+  --inf-giallo: #F4B700;
+  --inf-verde: #4E8B3E;
+  --inf-blu: #3E7BC8;
+  --inf-testo: #17324D;
+}
+
+body.inf-body {
+  background: linear-gradient(180deg, #FFF8E8 0%, #FFEFD1 100%);
+  min-height: 100vh;
+}
+
+.inf-main {
+  padding: 1rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.inf-home {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.inf-home h1 {
+  color: var(--inf-testo);
+  font-size: 1.8rem;
+  margin-bottom: .25rem;
+}
+
+.inf-home p {
+  color: #5b6b7c;
+  font-size: 1.05rem;
+}
+
+.inf-back {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .55rem 1rem;
+  background: #fff;
+  border: 2px solid var(--inf-testo);
+  border-radius: 999px;
+  color: var(--inf-testo);
+  font-weight: 700;
+  text-decoration: none;
+  margin: .5rem;
+}
+.inf-back:hover, .inf-back:focus {
+  background: var(--inf-testo);
+  color: #fff;
+}
+
+.inf-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+  margin-bottom: 1rem;
+}
+
+.inf-big-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-width: 140px;
+  min-height: 90px;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  background: var(--inf-blu);
+  color: #fff;
+  box-shadow: 0 6px 0 rgba(0,0,0,.15);
+  transition: transform .15s;
+}
+.inf-big-btn:hover, .inf-big-btn:focus {
+  transform: translateY(-3px);
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+.inf-big-btn:active { transform: translateY(0); box-shadow: 0 2px 0 rgba(0,0,0,.15); }
+
+.inf-big-btn.si { background: var(--inf-verde); }
+.inf-big-btn.no { background: var(--inf-rosso); }
+.inf-big-btn.giallo { background: var(--inf-giallo); color: var(--inf-testo); }
+
+.inf-big-btn.correct { animation: inf-pulse-green .6s ease; background: var(--inf-verde) !important; }
+.inf-big-btn.wrong { animation: inf-shake .4s ease; }
+
+@keyframes inf-pulse-green {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+@keyframes inf-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+.inf-scene {
+  text-align: center;
+  padding: 1rem;
+}
+
+.inf-scene h2 {
+  color: var(--inf-testo);
+  font-size: 1.5rem;
+  margin-bottom: .75rem;
+}
+
+.inf-score {
+  background: var(--inf-giallo);
+  color: var(--inf-testo);
+  border-radius: 999px;
+  padding: .4rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-weight: 700;
+  box-shadow: 0 4px 0 rgba(0,0,0,.12);
+}
+
+.inf-stars {
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  color: #ddd;
+}
+.inf-stars .on { color: var(--inf-giallo); }
+
+.inf-end {
+  text-align: center;
+  padding: 1.5rem;
+}
+.inf-end .bravi {
+  font-size: 2.5rem;
+  color: var(--inf-verde);
+  font-weight: 900;
+  margin-bottom: .5rem;
+}
+
+.hide { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .inf-big-btn, .inf-big-btn.correct, .inf-big-btn.wrong { animation: none; transition: none; }
+}

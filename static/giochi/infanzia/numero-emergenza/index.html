@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Il Numero 112 — Giochi Piccoli Esploratori</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
+  <style>
+    .phone {
+      max-width: 360px; margin: 0 auto; padding: 1rem;
+      background: #1d2d40; border-radius: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    }
+    .phone-screen {
+      background: #cfe9ff; border-radius: 14px; padding: 1rem;
+      min-height: 80px; text-align: center;
+      color: #003366; font-weight: 800; font-size: 2.5rem;
+      letter-spacing: .6rem; margin-bottom: 1rem;
+      font-family: monospace;
+    }
+    .keypad {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem;
+    }
+    .key {
+      min-height: 70px; border: 0; border-radius: 14px;
+      background: #fff; color: #1d2d40;
+      font-size: 1.8rem; font-weight: 800; cursor: pointer;
+      box-shadow: 0 4px 0 rgba(0,0,0,.2);
+    }
+    .key:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,.2); }
+    .key.active-hint {
+      background: var(--inf-giallo); animation: hint-pulse 1s infinite;
+    }
+    .key.call {
+      background: var(--inf-verde); color: #fff; grid-column: span 3;
+      min-height: 60px;
+    }
+    @keyframes hint-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+  </style>
+</head>
+<body class="inf-body">
+  <main id="main-content" tabindex="-1" class="inf-main">
+    <nav aria-label="Percorso">
+      <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
+    </nav>
+    <div class="inf-home">
+      <h1>Il Numero 112</h1>
+      <p>Impara a chiamare aiuto. Tocca <strong>1</strong>, poi <strong>1</strong>, poi <strong>2</strong>.</p>
+    </div>
+
+    <div class="inf-card">
+      <div class="phone">
+        <div class="phone-screen" id="screen" aria-live="polite">---</div>
+        <div class="keypad">
+          <button class="key" data-n="1">1</button>
+          <button class="key" data-n="2">2</button>
+          <button class="key" data-n="3">3</button>
+          <button class="key" data-n="4">4</button>
+          <button class="key" data-n="5">5</button>
+          <button class="key" data-n="6">6</button>
+          <button class="key" data-n="7">7</button>
+          <button class="key" data-n="8">8</button>
+          <button class="key" data-n="9">9</button>
+          <button class="key" data-n="clear" style="background:#D9364F;color:#fff"><i class="bi bi-backspace-fill"></i></button>
+          <button class="key" data-n="0">0</button>
+          <button class="key call" data-n="call"><i class="bi bi-telephone-fill"></i> Chiama</button>
+        </div>
+      </div>
+
+      <div id="message" class="text-center mt-3 h5" aria-live="polite">Tocca il tasto che lampeggia!</div>
+    </div>
+
+    <div id="end" class="inf-card inf-end hide">
+      <div class="bravi">Bravissimo!</div>
+      <p class="h5 mb-3">Hai chiamato il <strong>112</strong>, il numero per chiedere aiuto!</p>
+      <p class="text-muted small">Ricorda: chiama sempre insieme a un adulto.</p>
+      <div class="attestato-inject my-3"></div>
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button id="restart" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-repeat"></i> Ancora</button>
+        <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left"></i> Altri giochi</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    var TARGET = ['1','1','2'];
+    var screen = document.getElementById('screen');
+    var message = document.getElementById('message');
+    var keys = document.querySelectorAll('.key');
+    var endScreen = document.getElementById('end');
+    var digits = [];
+    var step = 0;
+    var errors = 0;
+
+    function highlightNext() {
+      keys.forEach(function(k){ k.classList.remove('active-hint'); });
+      if (step < TARGET.length) {
+        var next = TARGET[step];
+        document.querySelector('.key[data-n="'+next+'"]').classList.add('active-hint');
+      } else {
+        document.querySelector('.key[data-n="call"]').classList.add('active-hint');
+      }
+    }
+
+    function refresh() {
+      screen.textContent = digits.length ? digits.join(' ') : '---';
+    }
+
+    keys.forEach(function(k){
+      k.addEventListener('click', function(){
+        var n = k.dataset.n;
+        if (window.AudioSintetico) {
+          window.AudioSintetico.init();
+        }
+        if (n === 'clear') {
+          digits = []; step = 0; refresh(); highlightNext();
+          message.textContent = 'Ricomincia: tocca il tasto che lampeggia.';
+          return;
+        }
+        if (n === 'call') {
+          if (digits.join('') === '112') {
+            finish();
+          } else {
+            message.textContent = 'Ops! Premi prima 1, 1, 2 e poi Chiama.';
+            if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
+          }
+          return;
+        }
+        if (step >= TARGET.length) return;
+        if (n === TARGET[step]) {
+          digits.push(n);
+          step++;
+          refresh();
+          if (window.AudioSintetico) window.AudioSintetico.tono({freq: 440 + step*100, durata: 0.15, gain: 0.18});
+          if (step === TARGET.length) {
+            message.textContent = 'Perfetto! Ora tocca il pulsante verde Chiama.';
+          } else {
+            message.textContent = 'Giusto! Continua.';
+          }
+          highlightNext();
+        } else {
+          errors++;
+          message.textContent = 'Quasi! Tocca il tasto che lampeggia.';
+          if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
+        }
+      });
+    });
+
+    function finish() {
+      if (window.AudioSintetico) {
+        window.AudioSintetico.tono({freq: 523, durata: 0.2});
+        setTimeout(function(){ window.AudioSintetico.tono({freq: 659, durata: 0.2}); }, 200);
+        setTimeout(function(){ window.AudioSintetico.tono({freq: 784, durata: 0.3}); }, 400);
+      }
+      endScreen.classList.remove('hide');
+      var punti = Math.max(1, 3 - errors);
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('numero-emergenza', punti, 3, '#end');
+    }
+
+    document.getElementById('restart').addEventListener('click', function(){
+      digits = []; step = 0; errors = 0;
+      refresh(); highlightNext();
+      endScreen.classList.add('hide');
+      message.textContent = 'Tocca il tasto che lampeggia!';
+    });
+
+    highlightNext();
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Mappa del Rischio — Giochi Ragazzi</title>
+  <meta name="description" content="Sulla mappa stilizzata di Genzano, posiziona rischi, aree di emergenza e strutture strategiche.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <style>
+    .map-container {
+      position: relative; width: 100%; aspect-ratio: 4 / 3;
+      background: #eef4fc; border-radius: 12px; overflow: hidden;
+      border: 2px solid var(--rag-blu); margin-bottom: 1rem;
+    }
+    .map-svg { width: 100%; height: 100%; display: block; }
+    .map-marker {
+      position: absolute; transform: translate(-50%, -50%);
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--rag-blu); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; box-shadow: 0 3px 8px rgba(0,0,0,.3);
+      cursor: pointer; border: 2px solid #fff;
+    }
+    .map-marker.correct { background: var(--rag-verde); }
+    .map-marker.wrong { background: var(--rag-rosso); }
+    .item-pool {
+      display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem;
+    }
+    .map-item {
+      padding: .55rem 1rem; border-radius: 8px;
+      background: #fff; border: 2px solid var(--rag-blu);
+      display: inline-flex; align-items: center; gap: .4rem;
+      cursor: pointer; user-select: none;
+    }
+    .map-item.active { background: var(--rag-blu); color: #fff; }
+    .map-item.used { opacity: .4; pointer-events: none; }
+    .map-item i { font-size: 1rem; }
+    .clue-box {
+      background: #fffbf0; border-left: 4px solid var(--rag-arancio);
+      padding: .6rem 1rem; border-radius: 6px; margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body class="rag-body">
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Ragazzi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mappa del Rischio</li>
+          </ol>
+        </nav>
+        <h1>La Mappa del Rischio</h1>
+        <p class="lead">Posiziona correttamente rischi e strutture strategiche sulla mappa stilizzata.</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+          <div id="intro" class="rag-panel">
+            <h2>Come si gioca</h2>
+            <p>Sulla mappa vedi tre zone schematiche di Genzano di Roma: il <strong>centro storico</strong>, l'<strong>area del lago</strong> (Lago di Nemi nel cratere vulcanico), e la <strong>zona residenziale nuova</strong>.</p>
+            <ol class="small">
+              <li>Seleziona un elemento dalla lista in basso.</li>
+              <li>Clicca sulla mappa dove va posizionato.</li>
+              <li>Alla fine verifichi tutti i piazzamenti insieme.</li>
+            </ol>
+            <p class="small text-muted"><em>Nota didattica: la mappa è una rappresentazione stilizzata. Per il piano reale consulta il Piano di Emergenza Comunale.</em></p>
+            <button id="start" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Inizia</button>
+          </div>
+
+          <div id="game" class="hide">
+            <div class="clue-box">
+              <strong><i class="bi bi-info-circle me-1"></i> Obiettivo</strong>: posiziona tutti gli <strong id="totale-items">8</strong> elementi sulla mappa. Piazzati: <strong id="piazzati-n">0</strong>.
+            </div>
+
+            <div class="map-container" id="map">
+              <svg class="map-svg" viewBox="0 0 400 300" role="img" aria-label="Mappa stilizzata di Genzano di Roma" preserveAspectRatio="none">
+                <rect width="400" height="300" fill="#eef4fc"/>
+                <!-- Centro storico (in alto a sinistra, area blu) -->
+                <rect x="40" y="40" width="120" height="100" fill="#cfdff2" stroke="#003366" stroke-width="2"/>
+                <text x="100" y="95" text-anchor="middle" fill="#003366" font-size="14" font-weight="700">CENTRO STORICO</text>
+                <!-- Lago di Nemi (in basso a destra, blu più scuro) -->
+                <ellipse cx="310" cy="215" rx="70" ry="55" fill="#3b8bc8" stroke="#003366" stroke-width="2"/>
+                <text x="310" y="220" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">LAGO</text>
+                <!-- Zona residenziale (a destra in alto) -->
+                <rect x="210" y="40" width="150" height="90" fill="#e6f0e6" stroke="#2F5A25" stroke-width="2"/>
+                <text x="285" y="90" text-anchor="middle" fill="#2F5A25" font-size="12" font-weight="700">ZONA RESIDENZIALE</text>
+                <!-- Area verde (in basso a sinistra, parco) -->
+                <rect x="40" y="170" width="140" height="90" fill="#c8e0c8" stroke="#2F5A25" stroke-width="2"/>
+                <text x="110" y="220" text-anchor="middle" fill="#2F5A25" font-size="12" font-weight="700">PARCO / SCUOLE</text>
+                <!-- Strade -->
+                <line x1="160" y1="90" x2="210" y2="90" stroke="#666" stroke-width="3"/>
+                <line x1="180" y1="140" x2="180" y2="170" stroke="#666" stroke-width="3"/>
+                <line x1="260" y1="130" x2="280" y2="170" stroke="#666" stroke-width="3"/>
+              </svg>
+            </div>
+
+            <p class="small mb-2">Seleziona un elemento e clicca sulla mappa:</p>
+            <div id="item-pool" class="item-pool"></div>
+
+            <div class="d-flex gap-2 flex-wrap mt-3">
+              <button id="verifica" class="btn btn-primary" disabled><i class="bi bi-check-circle me-1"></i> Verifica tutti</button>
+              <button id="reset-map" class="btn btn-outline-secondary"><i class="bi bi-arrow-counterclockwise me-1"></i> Ricomincia</button>
+            </div>
+            <div id="feedback" class="mt-3"></div>
+          </div>
+
+          <div id="end" class="rag-panel hide text-center">
+            <div class="display-4 text-primary mb-2"><i class="bi bi-geo-alt-fill"></i></div>
+            <h2>Mappa completata</h2>
+            <p class="lead">Piazzamenti corretti: <strong><span id="final-ok">0</span></strong> su <strong><span id="final-tot">0</span></strong>.</p>
+            <p id="final-msg" class="text-muted"></p>
+            <div class="attestato-inject my-3"></div>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <button id="restart" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Nuova mappa</button>
+              <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    /* Le zone sono definite come rettangoli/cerchi su viewBox 400x300.
+       Per ogni elemento indichiamo in quale zona (A/B/C/D) deve stare. */
+    var ZONE = {
+      centro:       { test: function(x,y){ return x>=40 && x<=160 && y>=40 && y<=140; } },
+      residenziale: { test: function(x,y){ return x>=210 && x<=360 && y>=40 && y<=130; } },
+      parco:        { test: function(x,y){ return x>=40 && x<=180 && y>=170 && y<=260; } },
+      lago:         { test: function(x,y){ var dx=x-310, dy=y-215; return (dx*dx)/(70*70) + (dy*dy)/(55*55) <= 1; } }
+    };
+
+    var ELEMENTI = [
+      { id: 'area-accoglienza', icon: 'bi-house-heart-fill', label: 'Area accoglienza', zona: 'parco', perche: 'Le aree di accoglienza vanno in spazi aperti, lontani da edifici vulnerabili. Il parco/area scuole è l\'ideale.' },
+      { id: 'punto-raccolta', icon: 'bi-geo-fill', label: 'Punto di raccolta', zona: 'parco', perche: 'I punti di raccolta sono in aree aperte note, come piazze o spazi verdi pubblici.' },
+      { id: 'rischio-frana', icon: 'bi-arrow-down-circle-fill', label: 'Rischio frana', zona: 'lago', perche: 'Le scarpate verso il cratere del lago sono zone a rischio frana, tipiche dei Castelli.' },
+      { id: 'rischio-esondazione', icon: 'bi-water', label: 'Rischio esondazione', zona: 'lago', perche: 'L\'area del lago e dei bacini collinari è più esposta a esondazioni in caso di piogge intense.' },
+      { id: 'magazzino-pc', icon: 'bi-box-seam-fill', label: 'Magazzino PC', zona: 'residenziale', perche: 'I magazzini operativi si collocano dove strade e viabilità permettono l\'accesso ai mezzi.' },
+      { id: 'scuola-sicura', icon: 'bi-mortarboard-fill', label: 'Scuola da tutelare', zona: 'parco', perche: 'Le scuole sono edifici strategici da proteggere. Nella nostra mappa sono nella zona parco/scuole.' },
+      { id: 'centro-storico', icon: 'bi-bank', label: 'Patrimonio storico', zona: 'centro', perche: 'Il centro storico va identificato come zona da tutelare (edifici antichi spesso più fragili).' },
+      { id: 'presidio-sanita', icon: 'bi-hospital-fill', label: 'Presidio sanitario', zona: 'residenziale', perche: 'I presidi sanitari in emergenza si collocano in aree accessibili, non nel centro stretto.' }
+    ];
+
+    var intro = document.getElementById('intro'),
+        game = document.getElementById('game'),
+        end = document.getElementById('end'),
+        pool = document.getElementById('item-pool'),
+        mapEl = document.getElementById('map'),
+        piazzatiN = document.getElementById('piazzati-n'),
+        totaleItems = document.getElementById('totale-items'),
+        verifica = document.getElementById('verifica'),
+        feedback = document.getElementById('feedback');
+
+    var active = null;
+    var piazzamenti = {};
+
+    function start(){
+      intro.classList.add('hide'); end.classList.add('hide');
+      game.classList.remove('hide');
+      piazzamenti = {};
+      active = null;
+      feedback.innerHTML = '';
+      totaleItems.textContent = ELEMENTI.length;
+      piazzatiN.textContent = 0;
+      verifica.disabled = true;
+      renderPool();
+      mapEl.querySelectorAll('.map-marker').forEach(function(m){ m.remove(); });
+    }
+
+    function renderPool(){
+      pool.innerHTML = '';
+      ELEMENTI.forEach(function(el){
+        var b = document.createElement('button');
+        b.className = 'map-item';
+        b.type = 'button';
+        b.dataset.id = el.id;
+        b.innerHTML = '<i class="bi ' + el.icon + '"></i> ' + el.label;
+        if (piazzamenti[el.id]) b.classList.add('used');
+        b.addEventListener('click', function(){
+          if (b.classList.contains('used')) return;
+          pool.querySelectorAll('.map-item').forEach(function(x){ x.classList.remove('active'); });
+          b.classList.add('active');
+          active = el;
+        });
+        pool.appendChild(b);
+      });
+    }
+
+    mapEl.addEventListener('click', function(e){
+      if (!active) return;
+      var rect = mapEl.getBoundingClientRect();
+      var xp = (e.clientX - rect.left) / rect.width;
+      var yp = (e.clientY - rect.top) / rect.height;
+      var x = xp * 400, y = yp * 300;
+      var marker = document.createElement('div');
+      marker.className = 'map-marker';
+      marker.dataset.id = active.id;
+      marker.style.left = (xp * 100) + '%';
+      marker.style.top = (yp * 100) + '%';
+      marker.innerHTML = '<i class="bi ' + active.icon + '"></i>';
+      marker.title = active.label;
+      mapEl.appendChild(marker);
+      piazzamenti[active.id] = { x: x, y: y, el: active, marker: marker };
+      active = null;
+      piazzatiN.textContent = Object.keys(piazzamenti).length;
+      renderPool();
+      if (Object.keys(piazzamenti).length === ELEMENTI.length) verifica.disabled = false;
+    });
+
+    verifica.addEventListener('click', function(){
+      var ok = 0;
+      var details = '<ul class="small mb-0">';
+      ELEMENTI.forEach(function(el){
+        var p = piazzamenti[el.id];
+        if (!p) return;
+        var zonaCorretta = ZONE[el.zona].test(p.x, p.y);
+        p.marker.classList.add(zonaCorretta ? 'correct' : 'wrong');
+        details += '<li>' + (zonaCorretta ? '✅' : '❌') + ' <strong>' + el.label + '</strong>: ' + el.perche + '</li>';
+        if (zonaCorretta) ok++;
+      });
+      details += '</ul>';
+      feedback.innerHTML = '<div class="alert alert-info">' + details + '</div>';
+      setTimeout(function(){ finish(ok); }, 1000);
+    });
+
+    document.getElementById('reset-map').addEventListener('click', start);
+    document.getElementById('start').addEventListener('click', start);
+    document.getElementById('restart').addEventListener('click', start);
+
+    function finish(ok){
+      game.classList.add('hide');
+      end.classList.remove('hide');
+      document.getElementById('final-ok').textContent = ok;
+      document.getElementById('final-tot').textContent = ELEMENTI.length;
+      var msg;
+      var perc = (ok / ELEMENTI.length) * 100;
+      if (perc >= 90) msg = 'Eccellente! Hai una solida intuizione della pianificazione territoriale.';
+      else if (perc >= 70) msg = 'Buon risultato. Ripassa le logiche di aree di accoglienza e vulnerabilità.';
+      else msg = 'Rivedi il Piano di Emergenza Comunale e il principio delle aree di attesa/accoglienza.';
+      document.getElementById('final-msg').textContent = msg;
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('mappa-rischio', ok, ELEMENTI.length, '#end');
+    }
+  })();
+  </script>
+</body>
+</html>

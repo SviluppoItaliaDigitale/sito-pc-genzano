@@ -1,0 +1,46 @@
+/* Stile condiviso giochi ragazzi 11-19 anni */
+
+:root {
+  --rag-blu: #003366;
+  --rag-blu-acceso: #0066CC;
+  --rag-arancio: #E5A13A;
+  --rag-verde: #198754;
+  --rag-rosso: #DC3545;
+  --rag-bg: #f4f7fb;
+}
+
+body.rag-body { background: var(--rag-bg); }
+
+.rag-panel {
+  background: #fff; border-radius: 10px;
+  padding: 1.2rem; box-shadow: 0 3px 14px rgba(0,0,0,.06);
+  margin-bottom: 1rem; border: 1px solid rgba(0,51,102,.08);
+}
+
+.rag-panel h2, .rag-panel h3 { color: var(--rag-blu); }
+
+.rag-badge {
+  display: inline-flex; align-items: center; gap: .25rem;
+  background: var(--rag-blu); color: #fff;
+  padding: .2rem .6rem; border-radius: 4px;
+  font-size: .8rem; font-weight: 600;
+}
+.rag-badge.verde { background: var(--rag-verde); }
+.rag-badge.arancio { background: var(--rag-arancio); color: var(--rag-blu); }
+.rag-badge.rosso { background: var(--rag-rosso); }
+
+.rag-dashboard {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+}
+@media (max-width: 760px) { .rag-dashboard { grid-template-columns: 1fr; } }
+
+.rag-stat {
+  background: #eef4fc; border-left: 4px solid var(--rag-blu);
+  padding: .6rem 1rem; border-radius: 6px;
+  margin-bottom: .5rem;
+}
+.rag-stat strong { color: var(--rag-blu); }
+
+.hide { display: none !important; }
+.screen { display: block; }
+.screen.hide { display: none !important; }

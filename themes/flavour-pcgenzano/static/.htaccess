@@ -39,7 +39,7 @@ RedirectMatch 301 ^/documenti/normativa/(.*)$ /area-download/normativa/$1
 # Le cartelle seguenti contengono risorse standalone sul server FTP
 # e NON devono essere reindirizzate — i file sono serviti direttamente
 # /cartelli/        — segnaletica aree di emergenza
-# /giochi-bambini/  — giochi educativi per bambini
+# /giochi/          — giochi educativi per infanzia, primaria e ragazzi
 # /formazionepc/    — piattaforma e-learning
 # /quizpc/          — quiz interattivo
 
