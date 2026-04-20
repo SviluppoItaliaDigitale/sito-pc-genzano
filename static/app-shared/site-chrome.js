@@ -73,6 +73,7 @@
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/allerte-meteo/" role="menuitem"><span>Allerte Meteo</span></a></li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/comunicazioni/" role="menuitem"><span>Comunicazioni</span></a></li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Formazione</span></a></li>' +
+                '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi</span></a></li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/diventa-volontario/" role="menuitem"><span>Diventa Volontario</span></a></li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/contatti/" role="menuitem"><span>Contatti</span></a></li>' +
               '</ul></div>' +
