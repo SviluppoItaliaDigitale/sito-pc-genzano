@@ -1,0 +1,32 @@
+name: "🗓️ Pubblicazione programmata articoli"
+
+# Rilancia il deploy ogni mattina alle 06:00 UTC (08:00 ora italiana legale / 07:00 solare).
+# Serve per pubblicare automaticamente gli articoli con date futura:
+# Hugo esclude dal build gli articoli con `date` > oggi, quindi al passaggio di mezzanotte
+# basta rifare il build perché gli articoli del giorno entrino nel sito.
+#
+# Il workflow chiama il deploy ufficiale (deploy.yml) via workflow_dispatch:
+# se non ci sono articoli nuovi da pubblicare il build produce lo stesso output
+# e l'FTP non rileva differenze, quindi nessuna modifica effettiva.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  trigger-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🚀 Rilancia workflow deploy"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run deploy.yml --ref main
