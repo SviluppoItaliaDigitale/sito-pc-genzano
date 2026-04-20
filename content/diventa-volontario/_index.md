@@ -1,6 +1,6 @@
 ---
 title: "Diventa Volontario"
-description: "Unisciti al Gruppo Comunale di Protezione Civile di Genzano di Roma."
+description: "Unisciti al Gruppo Comunale di Protezione Civile di Genzano di Roma: formazione gratuita, percorsi di specializzazione, un ruolo attivo per il tuo territorio."
 layout: "single"
 aliases:
   - /diventavolontario.html
@@ -10,57 +10,121 @@ aliases:
 <div class="card border-primary mb-4">
 <div class="card-body bg-primary bg-opacity-10 p-4 text-center">
 <i class="bi bi-heart-fill fs-1 text-primary d-block mb-3" aria-hidden="true"></i>
-<h2 class="h4 text-primary">Metti il tuo tempo al servizio della comunità</h2>
-<p class="mb-0">Entrare a far parte della Protezione Civile significa fare una scelta di cuore e di responsabilità. Significa mettere il proprio tempo e le proprie energie al servizio della comunità, per costruire un futuro più sicuro per tutti.</p>
+<h2 class="h4 text-primary">Il tuo tempo, la nostra comunità</h2>
+<p class="mb-0">Essere volontario di Protezione Civile non è un gesto simbolico: è una responsabilità che si costruisce con la formazione, si esercita con la pratica, si mette al servizio del territorio quando serve. A Genzano di Roma ti formiamo, ti affianchiamo, ti diamo un ruolo reale.</p>
 </div>
 </div>
+
+## Perché diventare volontario
+
+Non lo si fa per un premio. Lo si fa perché:
+
+- **Conosci meglio il tuo territorio** — versanti, boschi, punti critici, risorse.
+- **Impari cose che servono nella vita** — primo soccorso, orientamento, uso della radio, lettura delle mappe, gestione della calma sotto stress.
+- **Fai parte di una squadra** — persone diverse per età, lavoro ed esperienza, unite da un impegno concreto.
+- **Sei utile davvero** — quando un temporale fa danni, quando un anziano resta isolato, quando una scuola ha bisogno di informazioni corrette.
+- **Rappresenti un'istituzione** — indossi una divisa riconosciuta dalla Repubblica, operi sotto coordinamento del Sindaco, fai parte del **Sistema Nazionale di Protezione Civile**.
+
+Non servono eroismi. Serve **costanza**, **disponibilità** e la voglia di imparare.
 
 ## Chi può aderire
 
-Il volontariato di Protezione Civile è aperto a tutti. Non servono competenze specifiche: quello che serve è la voglia di mettersi a disposizione.
+Il volontariato di Protezione Civile è **aperto a tutti**. Non servono competenze tecniche preliminari: porterai quelle che hai, ne imparerai di nuove.
+
+Tra i nostri volontari ci sono **studenti**, **pensionati**, **professionisti**, **operai**, **insegnanti**, **impiegati**, **artigiani**, **medici**, **elettricisti**, **radioamatori**, **informatici**, **autisti**, **mamme** e **papà**. Ognuno porta qualcosa: una mano, una competenza, un'ora del proprio tempo.
+
+### Ogni competenza serve
+
+- Sai **guidare un furgone**? Ti formiamo per condurlo in convoglio.
+- Sai **comunicare**? Ti formiamo per raccontare il Gruppo sui social, nelle scuole, ai cittadini.
+- Sai **usare il computer**? Ti formiamo per la cartografia, la logistica, la gestione dei dati.
+- Sai **stare con le persone**? Ti formiamo per l'assistenza alla popolazione, ai fragili, ai bambini.
+- Hai **esperienze sanitarie**? Ti formiamo in BLSD e primo soccorso avanzato.
+- Sei appassionato di **radio**? Ti formiamo per le reti di emergenza VHF/UHF e HF.
+- Ami **stare all'aperto**? Ti formiamo per l'antincendio boschivo, il monitoraggio, la ricerca dispersi.
 
 ## Requisiti
 
-- Aver compiuto il **16° anno di età** (piena operatività al compimento del 18°)
-- Essere cittadino italiano, UE, o extracomunitario con regolare permesso di soggiorno
-- Godere dei diritti civili e politici
-- Non aver riportato condanne penali
-- Avere una sana e robusta costituzione fisica (certificata dal medico)
+- Aver compiuto il **16° anno di età** (piena operatività al compimento del 18°).
+- Essere cittadino italiano, UE, o extracomunitario con regolare permesso di soggiorno.
+- Godere dei diritti civili e politici.
+- Non aver riportato condanne penali.
+- Avere una sana e robusta costituzione fisica (certificata dal medico).
 
-## Percorso formativo
+Sono requisiti di legge, non filtri di selezione: chi rientra in questi criteri **è benvenuto**.
 
-Ogni nuovo volontario segue un **corso di accesso obbligatorio** che fornisce le conoscenze essenziali:
+## Cosa farai davvero
 
-1. **Il Sistema di Protezione Civile** — come funziona, chi fa cosa
-2. **I rischi del territorio** — quali pericoli possono colpire Genzano
-3. **Le procedure operative** — come si interviene in emergenza
-4. **La sicurezza personale** — come proteggere sé stessi durante un intervento
-5. **Le comunicazioni radio** — le basi del collegamento in emergenza
-6. **Il primo soccorso** — nozioni essenziali
+Le attività del Gruppo **non sono solo emergenze**. La maggior parte del tempo si dedica a **preparazione**, **formazione** e **presidio**. Concretamente, un volontario può trovarsi a:
 
-Dopo il corso base di accesso, i volontari possono specializzarsi in settori specifici: antincendio boschivo (AIB), telecomunicazioni, logistica, comunicazione e social media, divulgazione nelle scuole e pilotaggio droni (APR).
+- **Presidiare** una strada durante un'allerta rossa per idrogeologico.
+- **Pattugliare** i boschi di Nemi, dell'Appia, del Pratone durante la campagna AIB estiva.
+- **Gestire** una radio in esercitazione o in attivazione reale.
+- **Assistere** la popolazione durante un'evacuazione simulata o vera.
+- **Partecipare** a un corso di primo soccorso, radiocomunicazioni, AIB avanzato.
+- **Raccontare** la Protezione Civile in una classe di quinta elementare.
+- **Fare la manutenzione** ordinaria dei mezzi, perché in emergenza deve partire tutto al primo giro.
+- **Essere di turno** in sede in un fine settimana.
+- **Partire** per una missione fuori sede in supporto ad altre comunità colpite (alluvione, terremoto, incendio).
 
-## Cosa facciamo
+Alcune di queste attività sono **silenziose**. Nessuno ne parla al telegiornale. Ma senza di esse, il Sistema non regge.
 
-Le attività del Gruppo non si limitano alle emergenze. I volontari partecipano a:
+## Il percorso di crescita
 
-- **Presidio del territorio** durante le allerte meteo
-- **Campagne antincendio boschivo** nel periodo estivo
-- **Esercitazioni** e simulazioni operative
-- **Assistenza alla popolazione** durante eventi e manifestazioni
-- **Divulgazione** nelle scuole e sul territorio
-- **Manutenzione** degli automezzi e delle attrezzature
-- **Supporto** a grandi eventi nazionali (es. Giubileo)
-- **Missioni fuori sede** in supporto ad altre comunità colpite da calamità
+Il volontariato di Protezione Civile non è una "iscrizione". È un **percorso**.
+
+### Fase 1 — Ingresso
+
+Colloquio conoscitivo, iscrizione formale, **corso base di accesso obbligatorio**. Affronta:
+
+1. **Il Sistema di Protezione Civile** — come funziona, chi fa cosa, perché sei parte di una struttura dello Stato.
+2. **I rischi del territorio** — idrogeologico, sismico, incendi, meteo, rischi specifici dei Castelli Romani.
+3. **Le procedure operative** — come ci si attiva, come ci si coordina, come ci si comporta in scenario.
+4. **La sicurezza personale** — autoprotezione, DPI, regole che salvano.
+5. **Le comunicazioni radio** — nozioni minime per operare in rete.
+6. **Il primo soccorso** — nozioni essenziali da conoscere prima di entrare in servizio.
+
+### Fase 2 — Affiancamento
+
+I primi mesi si lavora **fianco a fianco** con volontari esperti. Si osserva, si aiuta, si capisce. Nessuno viene lasciato da solo.
+
+### Fase 3 — Specializzazione
+
+Dopo il corso base puoi scegliere una o più **specializzazioni** a seconda di interessi e attitudini:
+
+- **AIB** (Antincendio Boschivo) — il settore più impegnativo in estate.
+- **Radiocomunicazioni** — reti VHF/UHF, ponti radio, HF per le lunghe distanze.
+- **Logistica** — allestimento campi, magazzino, convogli.
+- **Comunicazione** — social, stampa, fotografia, video.
+- **Divulgazione** — scuole, incontri pubblici, eventi.
+- **Piloti APR (droni)** — riprese aeree per monitoraggio e ricognizione.
+- **Primo soccorso avanzato e BLSD** — assistenza sanitaria in scenario.
+
+### Fase 4 — Formatore
+
+I volontari più esperti possono a loro volta **formare** i nuovi arrivati — sia nel proprio gruppo sia a livello regionale. È la chiusura naturale del cerchio: si riceve formazione, si restituisce formazione. Alcuni dei nostri volontari sono oggi **formatori regionali**.
+
+## Cosa ti porti a casa
+
+Oltre al valore del servizio reso alla comunità, la partecipazione al Gruppo offre una crescita personale concreta:
+
+- **Attestati riconosciuti** a livello regionale e nazionale (BLSD, AIB, radiocomunicazioni, primo soccorso).
+- **Competenze trasversali** utili anche nel lavoro: gestione dello stress, problem solving, lavoro in squadra, comunicazione chiara.
+- **Una rete di persone** con cui condividere esperienze, difficoltà, successi.
+- **Un curriculum più forte**: il volontariato strutturato è riconosciuto da molte aziende e nei bandi pubblici.
+- **Consapevolezza civica**: capirai il tuo territorio in un modo che non si impara leggendo.
 
 ## Impegno richiesto
 
-Non esiste un impegno fisso obbligatorio. Ciascun volontario contribuisce in base alla propria disponibilità. Tuttavia, ci aspettiamo:
+Non esiste un impegno fisso obbligatorio nella singola settimana. Ciascun volontario contribuisce secondo la propria disponibilità. Tuttavia, chiediamo:
 
-- La partecipazione al **corso di accesso base**
-- La disponibilità a essere **reperibile** durante le allerte
-- La partecipazione periodica alle **esercitazioni** e ai turni operativi
-- Il rispetto del **Regolamento** del Gruppo e dello **Statuto**
+- La partecipazione al **corso di accesso base**.
+- Un impegno medio di **16 ore al mese** per coprire i turni di presidio in sede (concordabili).
+- La disponibilità a essere **reperibile** durante le allerte meteo significative.
+- La partecipazione periodica alle **esercitazioni** e agli **aggiornamenti formativi**.
+- Il rispetto del **Regolamento** del Gruppo e dello **Statuto**.
+
+**Se lavori a tempo pieno**, puoi comunque partecipare: molte attività si svolgono nei weekend o in orario serale. Durante le attivazioni reali, il D.Lgs. 1/2018 tutela i permessi retribuiti dal datore di lavoro.
 
 ## Come iscriversi
 
@@ -88,37 +152,59 @@ Non esiste un impegno fisso obbligatorio. Ciascun volontario contribuisce in bas
 </div>
 </div>
 
+Il **primo passo** è un semplice colloquio conoscitivo, senza impegno. Ti raccontiamo chi siamo e cosa facciamo, tu ci racconti chi sei e cosa vorresti fare. Se entrambi sentiamo che può funzionare, si parte con l'iscrizione e il corso base.
+
 ## Domande frequenti
 
 ### Costa qualcosa iscriversi?
 
-L'iscrizione al Gruppo è **gratuita**. L'iscrizione e tutte le spese sono a carico dell'ente comunale.
+No. L'iscrizione al Gruppo è **gratuita**. Anche la **formazione** è gratuita: i costi sono a carico dell'ente comunale.
 
 ### Quanto tempo devo dedicare?
 
-È previsto un monte ore obbligatorio di **16 ore al mese** per tutti i volontari, necessarie a coprire i turni mensili in sede. Chiediamo inoltre la partecipazione al corso base e la disponibilità durante le allerte.
+Chiediamo un impegno medio di **16 ore al mese** per i turni di presidio in sede, più la partecipazione alle esercitazioni e la disponibilità durante le allerte. I tempi si concordano in base alla tua vita personale e lavorativa.
 
 ### Posso partecipare se lavoro a tempo pieno?
 
-Assolutamente sì. Molte attività si svolgono nei fine settimana o in orario serale. Durante le emergenze, i volontari che lavorano possono ottenere permessi dal datore di lavoro secondo quanto previsto dalla normativa (D.Lgs. 1/2018).
+Sì. Molte attività si svolgono nei fine settimana o in orario serale. In caso di attivazione per emergenza, i volontari che lavorano possono ottenere **permessi retribuiti** dal datore di lavoro, secondo il D.Lgs. 1/2018.
 
 ### Serve un'esperienza specifica?
 
-No. La formazione viene fornita dal Gruppo. Porterai le tue competenze personali e professionali, qualunque esse siano.
+No. La formazione è fornita dal Gruppo. Porterai le tue competenze personali e professionali, qualunque esse siano — ognuna ha un suo posto.
 
 ### Posso iscrivermi se ho 16 o 17 anni?
 
-Sì, puoi iscriverti e partecipare alla formazione. La piena operatività sul campo è prevista al compimento dei 18 anni.
+Sì. Puoi iscriverti e partecipare alla formazione. La **piena operatività sul campo** è prevista al compimento dei 18 anni, ma nel frattempo puoi partecipare a tutte le attività formative e di preparazione.
+
+### Devo essere già in forma smagliante?
+
+No. Ti chiediamo una **sana e robusta costituzione fisica**, certificata dal medico. Le attività sono di diversi tipi e intensità: c'è spazio per chi cammina bene nei boschi e per chi preferisce la radio o la logistica.
+
+### Posso lasciare il Gruppo se cambio idea?
+
+Certamente. Il volontariato è una scelta libera e lo resta nel tempo. Se in futuro non potrai più continuare, basterà comunicarcelo.
+
+### Ci sono altre strade per aiutare senza entrare nel Gruppo?
+
+Sì. Puoi:
+
+- **Segnalare** situazioni di rischio nel tuo quartiere.
+- **Partecipare** alle giornate di sensibilizzazione e alle esercitazioni aperte al pubblico.
+- **Formarti** al primo soccorso e alle manovre di disostruzione pediatrica (corsi aperti anche fuori dal Gruppo).
+- **Donare tempo** in altre associazioni di volontariato civico del territorio.
 
 ## Documenti utili
 
-- [Regolamento del Gruppo](https://www.protezionecivilegenzano.it/area-download/normativa/Regolamento_Gruppo_Comunale_PC_Genzano.pdf)
-- [Il Volontariato di Protezione Civile (Pieghevole)](https://www.protezionecivilegenzano.it/documenti/download/Volontariato_PC.pdf)
+- [Regolamento del Gruppo (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Regolamento_Gruppo_Comunale_PC_Genzano.pdf)
+- [Il Volontariato di Protezione Civile — Pieghevole (PDF)](https://www.protezionecivilegenzano.it/documenti/download/Volontariato_PC.pdf)
+- Articolo: [Attivazione squadre di primavera: il calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/)
+- Articolo: [Lo zaino del volontario](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
+- Articolo: [Formazione regionale: le lezioni in Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)
 
 <div class="card border-primary mt-4">
 <div class="card-body text-center p-4">
-<h2 class="h5 text-primary">Pronto a fare la differenza?</h2>
-<p>Contattaci oggi stesso. Ti aspettiamo.</p>
+<h2 class="h5 text-primary">Un passo alla volta</h2>
+<p class="mb-3">Il primo passo è solo una chiacchierata. Non stai firmando nulla, stai solo facendo una domanda. Quando vorrai, ti rispondiamo.</p>
 <a href="mailto:segreteria@protezionecivilegenzano.it" class="btn btn-primary btn-lg"><i class="bi bi-envelope me-2" aria-hidden="true"></i>Scrivici</a>
 <a href="tel:+39069362600" class="btn btn-outline-primary btn-lg ms-2"><i class="bi bi-telephone me-2" aria-hidden="true"></i>Chiamaci</a>
 </div>
