@@ -1,0 +1,150 @@
+name: "Aggiornamento MANUALE-SITO.md"
+
+# Controllo settimanale delle fonti AGID / Designers Italia / Bootstrap Italia.
+# Se una pagina ufficiale cambia, apre una issue con checklist di revisione.
+
+on:
+  schedule:
+    # Ogni lunedi alle 06:00 UTC (08:00 Europe/Rome in ora legale, 07:00 in ora solare)
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  verifica-fonti:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v4
+
+      - name: "Verifica fonti ufficiali e calcola hash"
+        id: check
+        shell: bash
+        run: |
+          set -u
+          STATE_FILE=".manuale/sources-hashes.json"
+          CHANGES_FILE="/tmp/manuale-changes.md"
+          : > "$CHANGES_FILE"
+
+          declare -A FONTI=(
+            ["linee_guida_design_pa"]="https://www.agid.gov.it/it/design-servizi/linee-guida-design-servizi-web-pa"
+            ["designers_italia_home"]="https://designers.italia.it/"
+            ["designers_italia_guide"]="https://designers.italia.it/risorse-per-progettare/"
+            ["writing_toolkit"]="https://designers.italia.it/risorse-per-progettare/content-design/writing-toolkit/"
+            ["content_toolkit"]="https://designers.italia.it/risorse-per-progettare/content-design/"
+            ["ui_kit"]="https://designers.italia.it/kit/ui-kit/"
+            ["bootstrap_italia_docs"]="https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/"
+            ["accessibilita_agid"]="https://www.agid.gov.it/it/design-servizi/accessibilita"
+            ["dichiarazione_accessibilita"]="https://form.agid.gov.it/"
+            ["dipartimento_pc"]="https://www.protezionecivile.gov.it/"
+          )
+
+          HAS_CHANGES="false"
+          NEW_JSON=$(jq -n --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" '{
+            "_meta": {
+              "descrizione": "Hash SHA-256 delle fonti AGID / Designers Italia monitorate settimanalmente dal workflow .github/workflows/aggiorna-manuale.yml. Se un hash cambia, il workflow apre una issue con la checklist di revisione del MANUALE-SITO.md.",
+              "ultimo_aggiornamento": $ts,
+              "note": "Aggiornato automaticamente dal workflow. Non modificare manualmente."
+            },
+            "fonti": {}
+          }')
+
+          for key in "${!FONTI[@]}"; do
+            url="${FONTI[$key]}"
+            echo "Verifica: $key -> $url"
+
+            content=$(curl -sSL --max-time 30 \
+              --user-agent "Mozilla/5.0 (compatible; PCGenzanoBot/1.0; +https://www.protezionecivilegenzano.it/)" \
+              "$url" || echo "")
+
+            if [ -z "$content" ]; then
+              echo "  ATTENZIONE: impossibile scaricare $url"
+              hash="errore-download"
+            else
+              # Rimuove elementi volatili (csrf token, timestamp, numeri cache) prima dell'hash
+              hash=$(echo "$content" \
+                | sed -E 's/[a-f0-9]{32,}//g' \
+                | sed -E 's/[0-9]{10,}//g' \
+                | sed -E 's/<script[^>]*>.*?<\/script>//g' \
+                | sha256sum | awk '{print $1}')
+            fi
+
+            prev_hash=$(jq -r --arg k "$key" '.fonti[$k].hash // ""' "$STATE_FILE" 2>/dev/null || echo "")
+
+            if [ -n "$prev_hash" ] && [ "$prev_hash" != "$hash" ] && [ "$hash" != "errore-download" ]; then
+              HAS_CHANGES="true"
+              echo "- **$key** — [$url]($url)" >> "$CHANGES_FILE"
+            fi
+
+            NEW_JSON=$(echo "$NEW_JSON" | jq \
+              --arg k "$key" \
+              --arg u "$url" \
+              --arg h "$hash" \
+              --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+              '.fonti[$k] = {"url": $u, "hash": $h, "verificato": $ts}')
+          done
+
+          echo "$NEW_JSON" | jq '.' > "$STATE_FILE"
+
+          echo "has_changes=$HAS_CHANGES" >> "$GITHUB_OUTPUT"
+          if [ "$HAS_CHANGES" = "true" ]; then
+            {
+              echo "changes<<EOF"
+              cat "$CHANGES_FILE"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: "Commit aggiornamento hash"
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet .manuale/sources-hashes.json; then
+            echo "Nessuna modifica agli hash."
+          else
+            git add .manuale/sources-hashes.json
+            git commit -m "Aggiornamento hash fonti manuale — verifica settimanale"
+            git push
+          fi
+
+      - name: "Apri issue di revisione se ci sono cambiamenti"
+        if: steps.check.outputs.has_changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const changes = `${{ steps.check.outputs.changes }}`;
+            const body = [
+              `## Revisione settimanale MANUALE-SITO.md — ${today}`,
+              ``,
+              `Il controllo automatico ha rilevato modifiche nelle fonti ufficiali AGID / Designers Italia.`,
+              `Le pagine seguenti sono cambiate dall'ultima verifica:`,
+              ``,
+              changes,
+              ``,
+              `### Checklist di revisione`,
+              ``,
+              `- [ ] Aprire ogni URL e annotare le modifiche rilevanti`,
+              `- [ ] Valutare l'impatto sulle sezioni di MANUALE-SITO.md (Parti 1-7)`,
+              `- [ ] Aggiornare le regole AGID nella Parte 2 se il Writing Toolkit e cambiato`,
+              `- [ ] Aggiornare le specifiche immagini nella Parte 3 se il UI Kit e cambiato`,
+              `- [ ] Verificare che gli esempi di codice Bootstrap Italia siano ancora validi`,
+              `- [ ] Verificare la dichiarazione di accessibilita`,
+              `- [ ] Aggiornare il changelog in fondo al manuale con la data e le modifiche`,
+              `- [ ] Chiudere questa issue con il riferimento al commit di aggiornamento`,
+              ``,
+              `---`,
+              `*Issue generata automaticamente dal workflow \`aggiorna-manuale.yml\` lunedi mattina.*`
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Automatico] Revisione MANUALE-SITO.md — ${today}`,
+              body: body,
+              labels: ['manuale', 'documentazione', 'revisione']
+            });

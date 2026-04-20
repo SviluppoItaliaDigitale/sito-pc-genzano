@@ -1,0 +1,8 @@
+{
+  "_meta": {
+    "descrizione": "Hash SHA-256 delle fonti AGID / Designers Italia monitorate settimanalmente dal workflow .github/workflows/aggiorna-manuale.yml. Se un hash cambia, il workflow apre una issue con la checklist di revisione del MANUALE-SITO.md.",
+    "ultimo_aggiornamento": "",
+    "note": "I valori vuoti indicano che la prima esecuzione del workflow stabilirà la baseline. Non modificare manualmente questo file."
+  },
+  "fonti": {}
+}
