@@ -31,11 +31,12 @@
             Tutte <span class="filter-count">({{ len $pages }})</span>
           </button>
           {{ range $uniqueBadges }}
+          {{- $badgeName := . -}}
           {{- $lower := . | lower -}}
           {{- $count := 0 -}}
-          {{- range $pages }}{{- if eq .Params.badge $ }}{{ $count = add $count 1 }}{{ end }}{{ end -}}
+          {{- range $pages }}{{- if eq .Params.badge $badgeName }}{{ $count = add $count 1 }}{{ end }}{{ end -}}
           <button type="button" class="filter-pill" data-filter="{{ $lower }}" aria-pressed="false">
-            {{ . }} <span class="filter-count">({{ $count }})</span>
+            {{ $badgeName }} <span class="filter-count">({{ $count }})</span>
           </button>
           {{ end }}
         </div>
@@ -116,12 +117,13 @@
             <h2 class="h5 mb-3"><i class="bi bi-tags" aria-hidden="true"></i> Categorie</h2>
             <ul class="archivio-categorie-lista list-unstyled mb-0">
               {{ range $uniqueBadges }}
+              {{- $badgeName := . -}}
               {{- $lower := . | lower -}}
               {{- $count := 0 -}}
-              {{- range $pages }}{{- if eq .Params.badge $ }}{{ $count = add $count 1 }}{{ end }}{{ end -}}
+              {{- range $pages }}{{- if eq .Params.badge $badgeName }}{{ $count = add $count 1 }}{{ end }}{{ end -}}
               <li>
                 <button type="button" class="sidebar-categoria-btn" data-filter="{{ $lower }}">
-                  {{ . }} <span class="archivio-badge">{{ $count }}</span>
+                  {{ $badgeName }} <span class="archivio-badge">{{ $count }}</span>
                 </button>
               </li>
               {{ end }}
