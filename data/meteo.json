@@ -1,16 +1,16 @@
 {
-  "aggiornamento": "2026-04-20T10:26:16+00:00",
+  "aggiornamento": "2026-04-20T13:01:59+00:00",
   "fonte": "Open-Meteo (modelli ECMWF/DWD)",
   "fonte_url": "https://open-meteo.com/",
   "localita": "Genzano di Roma",
   "attuale": {
-    "temperatura": 17,
+    "temperatura": 18,
     "temperatura_percepita": 17,
     "condizione": "Parzialmente nuvoloso",
     "icona": "bi-cloud-sun",
     "colore": "si-teal",
-    "umidita": 70,
-    "vento_kmh": 12,
+    "umidita": 63,
+    "vento_kmh": 18,
     "precipitazione_mm": 0.0,
     "giorno": true
   },
@@ -21,11 +21,11 @@
       "condizione": "Rovesci leggeri",
       "icona": "bi-cloud-rain",
       "colore": "si-blue",
-      "temp_max": 19,
+      "temp_max": 18,
       "temp_min": 11,
       "precip_prob": 33,
-      "precip_mm": 0.3,
-      "vento_max_kmh": 17
+      "precip_mm": 0.6,
+      "vento_max_kmh": 18
     },
     {
       "data": "2026-04-21",
@@ -33,11 +33,11 @@
       "condizione": "Nebbia",
       "icona": "bi-cloud-fog2",
       "colore": "si-teal",
-      "temp_max": 19,
+      "temp_max": 18,
       "temp_min": 12,
       "precip_prob": 0,
       "precip_mm": 0,
-      "vento_max_kmh": 19
+      "vento_max_kmh": 17
     },
     {
       "data": "2026-04-22",
