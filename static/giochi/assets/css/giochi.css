@@ -65,7 +65,7 @@
 .gioco-card-icon.icon-primaria { background: linear-gradient(135deg, #008758, #006F47); }
 .gioco-card-icon.icon-ragazzi  { background: linear-gradient(135deg, #0066CC, #004A96); }
 
-.gioco-card h3, .gioco-card .h3 {
+.gioco-card h2, .gioco-card h3, .gioco-card .h3 {
   font-size: 1.15rem;
   margin: 0 0 0.4rem 0;
   font-weight: 700;

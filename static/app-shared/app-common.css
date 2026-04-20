@@ -95,7 +95,7 @@ body:not(.chrome-loaded) > .app-content {
 .app-card-icon.icon-purple { background: rgba(111,66,193,0.1); color: #6f42c1; }
 .app-card-icon.icon-teal { background: rgba(0,123,138,0.08); color: #007b8a; }
 
-.app-card h3 {
+.app-card h2, .app-card h3 {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--pc-primary, #003366);

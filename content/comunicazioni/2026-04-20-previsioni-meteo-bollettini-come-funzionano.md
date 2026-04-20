@@ -100,7 +100,7 @@ Qualche indicazione pratica:
 
 1. **Consulta sempre il bollettino regionale**, non solo le app di previsione commerciali. Le app dicono se piove, il bollettino dice se la pioggia può provocare danni.
 2. **Segui i canali ufficiali**: sito del Comune, sito della Regione, canali social istituzionali, pagina [Allerte Meteo](/allerte-meteo/) del nostro sito.
-3. **Prepara in anticipo** cosa fare in caso di allerta arancione o rossa. Leggi la sezione [Rischi e Prevenzione](/rischi/) del sito.
+3. **Prepara in anticipo** cosa fare in caso di allerta arancione o rossa. Leggi la sezione [Rischi e Prevenzione](/rischi-prevenzione/) del sito.
 4. **Non diffondere previsioni non ufficiali** su chat e social: in emergenza, un'informazione sbagliata può creare panico o comportamenti pericolosi.
 5. **Il 112 è per le emergenze in corso**, non per chiedere informazioni meteo. Per il meteo usa i bollettini ufficiali.
 
