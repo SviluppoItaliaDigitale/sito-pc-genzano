@@ -52,4 +52,12 @@ Il volontariato moderno è una **forma di lavoro civico**: non retribuito econom
 - [INAIL — Pubblicazioni](https://www.inail.it/cs/internet/comunicazione/pubblicazioni.html)
 - [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/)
 
+## Per approfondire
+
+- Articolo: [Giornata mondiale sicurezza sul lavoro](/comunicazioni/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari/)
+- Articolo: [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
+- Articolo: [Il 25 aprile: il volontariato di Protezione Civile come impegno civico](/comunicazioni/2026-04-25-festa-liberazione-volontariato-civico/)
+- Articolo: [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)
+- Pagina: [Diventa volontario](/diventa-volontario/)
+
 **Buon primo maggio.** A chi lavora ogni giorno per la sicurezza degli altri, e a chi, come volontario, sceglie di dedicare tempo gratuito alla comunità.

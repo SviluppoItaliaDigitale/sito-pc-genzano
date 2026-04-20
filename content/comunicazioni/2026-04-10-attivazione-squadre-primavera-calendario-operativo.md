@@ -166,7 +166,7 @@ Ai volontari che parteciperanno alle attività dei prossimi mesi: **grazie in an
 
 - [Regione Lazio — Agenzia di Protezione Civile](https://www.regione.lazio.it/)
 - Articolo: [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
-- Articolo: [Come diventare volontario](/volontariato/)
+- Pagina: [Diventa volontario](/diventa-volontario/)
 - Articolo: [Lo zaino del volontario](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
 
 La primavera del volontariato è fatta di molti piccoli passi. Passo dopo passo, la stagione è pronta.

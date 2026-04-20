@@ -99,3 +99,11 @@ Dietro questi numeri c'è un sistema che funziona da oltre quarant'anni, testato
 ---
 
 *Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma opera in stretto raccordo con i radioamatori del territorio dei Castelli Romani per garantire la continuità delle comunicazioni in ogni scenario di emergenza.*
+
+## Per approfondire
+
+- Articolo: [Radiocomunicazioni in emergenza: il ruolo dei volontari](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/)
+- Articolo: [Giornata mondiale delle telecomunicazioni](/comunicazioni/2026-05-17-giornata-mondiale-telecomunicazioni/)
+- Articolo: [Sicurezza della rete e cybersecurity in emergenza](/comunicazioni/2026-02-07-sicurezza-rete-cybersecurity-emergenza/)
+- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
+- Pagina: [Diventa volontario](/diventa-volontario/)

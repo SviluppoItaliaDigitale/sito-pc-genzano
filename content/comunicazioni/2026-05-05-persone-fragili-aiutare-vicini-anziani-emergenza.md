@@ -90,10 +90,13 @@ Non è obbligatorio, ma per un soccorritore che entra in casa è un'informazione
 
 Il Gruppo Comunale Volontari coordina con il Comune e l'ASL le attività di **assistenza alla popolazione fragile** in emergenza. Non sostituiamo i servizi sociali o sanitari: li **integriamo**, con presenza capillare sul territorio. In un'emergenza complessa, senza il volontariato organizzato, le istituzioni non possono arrivare ovunque in tempo utile.
 
-## Letture correlate
+## Per approfondire
 
-- [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
-- [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
-- [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/)
+- Articolo: [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
+- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+- Articolo: [Consapevolezza sull'autismo: emergenze inclusive](/comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/)
+- Articolo: [Giornata delle famiglie: il piano di emergenza insieme](/comunicazioni/2026-05-15-giornata-famiglie-piano-emergenza-insieme/)
+- Articolo: [Il Piano di Emergenza Familiare digitale citato da Abili a proteggere](/comunicazioni/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere/)
+- Pagina: [Rischi e prevenzione](/rischi-prevenzione/)
 
 La **prossimità** non è un servizio pubblico, è una virtù civile. In un paese come Genzano, dove molti si conoscono da sempre, coltivarla è più facile che in una grande città. Farlo è già un gesto di Protezione Civile.

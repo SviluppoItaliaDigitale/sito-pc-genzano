@@ -15,3 +15,10 @@ draft: false
 Da alcuni giorni il vento forte interessa tutto il territorio comunale. Le autorità competenti hanno diramato un'allerta meteo per vento forte sulla nostra zona.
 
 **Si raccomanda la massima attenzione** per limitare i disagi e ridurre i rischi.
+
+## Per approfondire
+
+- Articolo: [Vento forte: cosa fare prima, durante e dopo](/comunicazioni/2026-05-16-vento-forte-prima-durante-dopo/)
+- Articolo: [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
+- Articolo: [Previsioni meteo e bollettini di allerta](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
+- Pagina: [Vento forte](/rischi-prevenzione/vento-forte/)

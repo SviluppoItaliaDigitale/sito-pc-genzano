@@ -15,3 +15,10 @@ draft: false
 Con l'arrivo dell'estate aumenta il rischio di incendi boschivi. Dal 15 giugno al 30 settembre è in vigore lo **stato di massima allerta** su tutto il territorio comunale.
 
 Se avvisti un incendio, chiama subito il **112**.
+
+## Per approfondire
+
+- Articolo: [Triangolo del fuoco: capire come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
+- Articolo: [Prevenzione incendi: pulizia dei terreni a primavera](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/)
+- Articolo: [Esercitazione antincendio boschivo: come ci prepariamo](/comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/)
+- Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)

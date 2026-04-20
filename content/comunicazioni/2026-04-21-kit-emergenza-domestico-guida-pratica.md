@@ -90,10 +90,15 @@ Un buon momento per il controllo: l'inizio della primavera e l'inizio dell'autun
 
 Oltre allo zaino di casa, è utile avere una versione **minima** in auto (acqua, torcia, giubbotto, coperta termica, kit di primo soccorso) e una piccola riserva sul luogo di lavoro (acqua, barretta, torcia, scarpe comode).
 
-## Collegamenti utili
+## Per approfondire
 
-- [Piano di emergenza familiare](/piano-familiare/) — come organizzare la famiglia prima dell'emergenza
-- [Rischi e prevenzione](/rischi-prevenzione/) — i rischi del territorio di Genzano
-- [Numeri utili](/numeri-utili/) — contatti ufficiali da conoscere
+- Articolo: [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
+- Articolo: [Il Piano di Emergenza Familiare digitale citato da Abili a proteggere](/comunicazioni/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere/)
+- Articolo: [Blackout: cosa fare quando salta la corrente](/comunicazioni/2026-05-06-blackout-interruzione-corrente-cosa-fare/)
+- Articolo: [Allagamenti urbani: cosa fare quando l'acqua entra in casa](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
+- Articolo: [Check casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
+- Pagina: [Piano familiare](/piano-familiare/)
+- Pagina: [Rischi e prevenzione](/rischi-prevenzione/)
+- Pagina: [Numeri utili](/numeri-utili/)
 
 Lo zaino non serve a vivere nel timore: è uno strumento di **normalità**, come la cintura di sicurezza in auto. Una volta preparato, si dimentica. Ma il giorno in cui serve, è lì.

@@ -89,6 +89,18 @@ L'allerta si basa su previsioni emesse in anticipo. A volte fenomeni localizzati
 
 Iscriviti al nostro [canale Telegram](https://t.me/pcalfagenzano) per ricevere aggiornamenti in tempo reale. Per emergenze gravi, il sistema nazionale [IT-alert](https://www.it-alert.it/it/) invia messaggi direttamente ai telefoni cellulari nell'area interessata.
 
+## Approfondimenti dall'archivio
+
+Letture consigliate per capire meglio previsioni e bollettini:
+
+- Articolo: [Previsioni meteo e bollettini: come funziona il sistema](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
+- Articolo: [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
+- Articolo: [Temporali intensi: comportamenti corretti](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/)
+- Articolo: [Vento forte: cosa fare prima, durante e dopo](/comunicazioni/2026-05-16-vento-forte-prima-durante-dopo/)
+- Articolo: [Sentinelle del tempo: osservazione meteo amatoriale](/comunicazioni/2026-03-03-sentinelle-meteo-osservazione-amatoriale/)
+
+Tutti gli articoli sulle allerte meteo sono filtrabili nell'[archivio delle comunicazioni](/comunicazioni/) con i tag **Allerta** e **Informazione**.
+
 ## Fonti ufficiali
 
 - [Bollettini e allertamenti — Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)

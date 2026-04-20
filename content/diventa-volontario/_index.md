@@ -197,9 +197,18 @@ Sì. Puoi:
 
 - [Regolamento del Gruppo (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Regolamento_Gruppo_Comunale_PC_Genzano.pdf)
 - [Il Volontariato di Protezione Civile — Pieghevole (PDF)](https://www.protezionecivilegenzano.it/documenti/download/Volontariato_PC.pdf)
-- Articolo: [Attivazione squadre di primavera: il calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/)
-- Articolo: [Lo zaino del volontario](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
+
+## Approfondimenti dall'archivio
+
+Letture consigliate per chi sta valutando di diventare volontario:
+
 - Articolo: [Formazione regionale: le lezioni in Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)
+- Articolo: [Attivazione squadre di primavera: il calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/)
+- Articolo: [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
+- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
+- Articolo: [25 aprile: il volontariato come impegno civico](/comunicazioni/2026-04-25-festa-liberazione-volontariato-civico/)
+
+Tutti gli articoli sul volontariato e la formazione sono filtrabili nell'[archivio delle comunicazioni](/comunicazioni/) con i tag **Volontariato** e **Formazione**.
 
 <div class="card border-primary mt-4">
 <div class="card-body text-center p-4">

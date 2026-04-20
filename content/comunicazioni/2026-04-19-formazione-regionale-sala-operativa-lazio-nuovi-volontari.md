@@ -63,8 +63,11 @@ Una **Protezione Civile capillare e preparata** nasce dall'investimento continuo
 
 ## Per approfondire
 
-- [Agenzia Regionale di Protezione Civile Lazio](https://www.regione.lazio.it/cittadini/protezione-civile)
 - Articolo: [Attivazione squadre di primavera: il calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/)
-- Articolo: [Come diventare volontario](/volontariato/)
+- Articolo: [Corso di formazione base](/comunicazioni/2025-03-10-formazione-base/)
+- Articolo: [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
+- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
+- Pagina: [Diventa volontario](/diventa-volontario/)
+- [Agenzia Regionale di Protezione Civile Lazio](https://www.regione.lazio.it/cittadini/protezione-civile)
 
 Chi forma forma due volte: chi impara e chi insegna. La formazione è la prima linea della Protezione Civile.

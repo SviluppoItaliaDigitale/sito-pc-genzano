@@ -127,6 +127,14 @@ Per chi opera nel volontariato di protezione civile, nella scuola, nelle associa
 
 > *"Prevenire un incendio significa riconoscere il rischio prima che diventi fiamma."*
 
+## Per approfondire
+
+- Articolo: [Prevenzione incendi: pulizia dei terreni a primavera](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/)
+- Articolo: [Esercitazione antincendio boschivo: come ci prepariamo](/comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/)
+- Articolo: [Incendi domestici: cause più comuni e come prevenirli](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/)
+- Articolo: [Sant'Antonio Abate: tradizione dei fuochi e rischio incendi](/comunicazioni/2026-01-17-sant-antonio-abate-fuochi-tradizione-sicurezza/)
+- Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
+
 ---
 
 *Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma promuove la cultura della prevenzione e della sicurezza attraverso informazione, formazione e vicinanza alla comunità.*

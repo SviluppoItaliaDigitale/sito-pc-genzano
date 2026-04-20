@@ -37,3 +37,11 @@ L'obiettivo è fornire a ogni volontario le competenze necessarie per intervenir
 ---
 
 Il Gruppo di Genzano integra il defibrillatore nella propria dotazione operativa, a supporto delle attività sul territorio e delle squadre impegnate nelle emergenze.
+
+## Per approfondire
+
+- Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
+- Articolo: [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/)
+- Articolo: [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/)
+- Articolo: [Malori estivi: riconoscere colpo di calore e ictus](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/)
+- Pagina: [Diventa volontario](/diventa-volontario/)

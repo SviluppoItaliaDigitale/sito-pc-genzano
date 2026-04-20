@@ -61,6 +61,15 @@ A livello regionale, il [Centro Funzionale del Lazio](https://protezionecivile.r
 
 Sulla pagina [rischi e prevenzione](/rischi-prevenzione/) trovi la scheda dedicata al **rischio idrogeologico**, con indicazioni specifiche per il nostro territorio. Leggerla quando non c'è emergenza è il modo migliore per sapere cosa fare il giorno in cui l'emergenza arriva.
 
+## Per approfondire
+
+- Articolo: [Allagamenti urbani: cosa fare quando l'acqua entra in casa](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
+- Articolo: [Giornata mondiale dell'acqua: rete idrica e sicurezza](/comunicazioni/2026-03-22-giornata-mondiale-acqua-rete-idrica-sicurezza/)
+- Articolo: [Giornata delle zone umide: rischio idrogeologico](/comunicazioni/2026-02-02-giornata-zone-umide-rischio-idrogeologico/)
+- Articolo: [Temporali intensi: comportamenti corretti](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/)
+- Articolo: [Sicurezza sui laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/)
+- Pagina: [Rischi e prevenzione](/rischi-prevenzione/)
+
 ## Fonti
 
 - [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico)
