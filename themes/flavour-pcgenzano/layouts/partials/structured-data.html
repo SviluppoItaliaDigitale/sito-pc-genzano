@@ -41,7 +41,8 @@
   "@type": "Article",
   "headline": "{{ .Title }}",
   "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}",
-  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  {{ with .Params.image }}"image": "{{ . | absURL }}",
+  {{ end }}"datePublished": "{{ .Date.Format "2006-01-02" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
   "author": {
     "@type": "Organization",
