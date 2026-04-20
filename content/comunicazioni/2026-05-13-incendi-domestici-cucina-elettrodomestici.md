@@ -5,8 +5,8 @@ description: "La maggior parte degli incendi in Italia parte dalla cucina. Frigg
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-13-incendi-domestici-cucina-elettrodomestici.webp"
+image_alt: "Cover dell'articolo: Incendi domestici: cause piu comuni e come prevenirli"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

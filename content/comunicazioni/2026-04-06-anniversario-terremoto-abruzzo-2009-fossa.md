@@ -6,7 +6,7 @@ description: "Nel 17° anniversario del sisma del 6 aprile 2009, ricordiamo l'im
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa.webp"
 scadenza: ""
 area: "Comune di Fossa (AQ)"
 allegati: []

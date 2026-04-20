@@ -5,8 +5,8 @@ description: "Anziani soli, persone con disabilita, famiglie in difficolta: in e
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza.webp"
+image_alt: "Cover dell'articolo: Aiutare i vicini fragili in emergenza: un gesto di comunita che salva vite"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

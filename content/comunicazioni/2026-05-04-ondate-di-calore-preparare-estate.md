@@ -5,8 +5,8 @@ description: "Le ondate di calore sono il rischio meteorologico con piu impatto 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-04-ondate-di-calore-preparare-estate.webp"
+image_alt: "Cover dell'articolo: Ondate di calore: prepararsi ora, prima che arrivi l'estate"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

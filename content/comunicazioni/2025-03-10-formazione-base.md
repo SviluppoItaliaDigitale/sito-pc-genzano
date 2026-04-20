@@ -5,7 +5,7 @@ description: "A marzo parte il nuovo ciclo di formazione per i volontari appena 
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2025-03-10-formazione-base.webp"
 scadenza: ""
 area: "Sede operativa, Via Sicilia - Genzano di Roma"
 allegati: []

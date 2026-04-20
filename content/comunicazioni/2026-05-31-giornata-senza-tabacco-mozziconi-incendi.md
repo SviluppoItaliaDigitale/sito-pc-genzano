@@ -5,8 +5,8 @@ description: "La Giornata mondiale senza tabacco tocca un tema di Protezione Civ
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-31-giornata-senza-tabacco-mozziconi-incendi.webp"
+image_alt: "Cover dell'articolo: 31 maggio: Giornata senza tabacco, mozziconi e rischio incendi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

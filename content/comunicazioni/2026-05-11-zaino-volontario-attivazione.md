@@ -5,8 +5,8 @@ description: "Quando suona l'attivazione, non c'è tempo di preparare tutto. Lo 
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-11-zaino-volontario-attivazione.webp"
+image_alt: "Cover dell'articolo: Lo zaino del volontario: cosa portare in attivazione"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

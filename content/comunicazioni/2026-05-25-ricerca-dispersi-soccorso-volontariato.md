@@ -5,8 +5,8 @@ description: "Un anziano che non rientra, un escursionista non arrivato, un bamb
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-25-ricerca-dispersi-soccorso-volontariato.webp"
+image_alt: "Cover dell'articolo: La ricerca dispersi: come funziona e chi la coordina"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

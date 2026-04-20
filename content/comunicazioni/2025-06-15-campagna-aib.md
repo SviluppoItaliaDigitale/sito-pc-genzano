@@ -5,7 +5,7 @@ description: "Dal 15 giugno al 30 settembre il territorio è in stato di massima
 badge: "Allerta"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2025-06-15-campagna-aib.webp"
 scadenza: ""
 area: "Territorio comunale di Genzano di Roma"
 allegati: []

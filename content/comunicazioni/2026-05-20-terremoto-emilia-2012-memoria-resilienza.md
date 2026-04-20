@@ -5,8 +5,8 @@ description: "Quattordici anni dal sisma emiliano. Cosa abbiamo imparato sulla v
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-20-terremoto-emilia-2012-memoria-resilienza.webp"
+image_alt: "Cover dell'articolo: 20 maggio 2012: il terremoto in Emilia e la memoria che diventa prevenzione"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

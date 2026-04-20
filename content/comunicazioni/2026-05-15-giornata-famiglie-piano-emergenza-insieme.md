@@ -5,8 +5,8 @@ description: "La Giornata internazionale delle famiglie, istituita dall'ONU, inv
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-15-giornata-famiglie-piano-emergenza-insieme.webp"
+image_alt: "Cover dell'articolo: 15 maggio: Giornata delle Famiglie, un'occasione per un piano condiviso"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

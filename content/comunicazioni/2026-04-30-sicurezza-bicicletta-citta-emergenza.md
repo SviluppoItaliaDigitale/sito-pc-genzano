@@ -5,8 +5,8 @@ description: "La Giornata mondiale della bicicletta ricorda che la mobilita dolc
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-04-30-sicurezza-bicicletta-citta-emergenza.webp"
+image_alt: "Cover dell'articolo: Andare in bicicletta in sicurezza: anche la mobilita e prevenzione"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

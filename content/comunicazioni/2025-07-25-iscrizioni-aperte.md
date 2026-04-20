@@ -5,7 +5,7 @@ description: "Sono aperte le iscrizioni al Gruppo Comunale Volontari di Protezio
 badge: "Avviso"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2025-07-25-iscrizioni-aperte.webp"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

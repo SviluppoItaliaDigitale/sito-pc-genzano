@@ -5,8 +5,8 @@ description: "La Festa dei Lavoratori ricorda il diritto al lavoro dignitoso e s
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile.webp"
+image_alt: "Cover dell'articolo: Primo maggio: dignita del lavoro e sicurezza anche in emergenza"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

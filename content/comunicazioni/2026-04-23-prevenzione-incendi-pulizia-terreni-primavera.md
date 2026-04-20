@@ -5,8 +5,8 @@ description: "La primavera è il momento per mettere in sicurezza terreni, giard
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera.webp"
+image_alt: "Cover dell'articolo: Prevenzione incendi: pulire i terreni prima dell'estate è una responsabilità di tutti"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

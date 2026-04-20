@@ -5,7 +5,7 @@ description: "Il calendario 2026 del Dipartimento è dedicato all'impegno della 
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-01-10-calendario-dipartimento-protezione-civile-2026.webp"
 scadenza: ""
 area: ""
 allegati:

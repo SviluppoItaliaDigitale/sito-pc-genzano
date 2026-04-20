@@ -6,7 +6,7 @@ description: "Il triangolo del fuoco spiega come nasce e si mantiene un incendio
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-04-13-triangolo-del-fuoco.webp"
+image: "/images/2026-04-13-triangolo-del-fuoco-prevenzione-incendi.webp"
 scadenza: ""
 area: "Comune di Genzano di Roma"
 allegati: []

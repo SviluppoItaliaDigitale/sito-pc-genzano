@@ -5,8 +5,8 @@ description: "Poche regole chiare dal Dipartimento di Protezione Civile su come 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa.webp"
+image_alt: "Cover dell'articolo: Terremoto: cosa fare durante la scossa e nei minuti successivi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

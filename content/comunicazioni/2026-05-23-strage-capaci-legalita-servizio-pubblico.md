@@ -5,8 +5,8 @@ description: "L'anniversario della strage di Capaci ricorda che il servizio allo
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-23-strage-capaci-legalita-servizio-pubblico.webp"
+image_alt: "Cover dell'articolo: 23 maggio: Capaci e il servizio pubblico come scelta quotidiana"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

@@ -5,8 +5,8 @@ description: "A 14 anni dalla seconda forte scossa che colpi l'Emilia il 29 magg
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria.webp"
+image_alt: "Cover dell'articolo: 29 maggio 2012: la seconda scossa in Emilia e la resilienza comunitaria"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

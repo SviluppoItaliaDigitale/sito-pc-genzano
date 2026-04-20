@@ -5,8 +5,8 @@ description: "Il soffocamento da corpo estraneo e' una delle emergenze piu' freq
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-12-manovre-antisoffocamento-pediatrico.webp"
+image_alt: "Cover dell'articolo: Manovre antisoffocamento: cosa sapere per i bambini"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

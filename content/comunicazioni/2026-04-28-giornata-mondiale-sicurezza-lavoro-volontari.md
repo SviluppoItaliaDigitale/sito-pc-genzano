@@ -5,8 +5,8 @@ description: "La Giornata mondiale sulla sicurezza del lavoro ricorda il diritto
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari.webp"
+image_alt: "Cover dell'articolo: 28 aprile: la sicurezza sul lavoro riguarda anche i volontari"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

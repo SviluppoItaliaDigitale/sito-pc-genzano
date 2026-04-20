@@ -5,7 +5,7 @@ description: "Il Dipartimento della Protezione Civile ha adottato una nuova iden
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
+image: "/images/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano.webp"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

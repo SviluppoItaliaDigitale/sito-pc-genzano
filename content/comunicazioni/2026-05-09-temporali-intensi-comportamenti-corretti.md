@@ -5,8 +5,8 @@ description: "La primavera porta i primi temporali forti della stagione. Fulmini
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-09-temporali-intensi-comportamenti-corretti.webp"
+image_alt: "Cover dell'articolo: Temporali intensi: come riconoscerli e cosa fare"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

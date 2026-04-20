@@ -5,8 +5,8 @@ description: "I laghi dei Castelli Romani sono un patrimonio naturale da rispett
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-19-sicurezza-laghi-nemi-albano.webp"
+image_alt: "Cover dell'articolo: Laghi di Nemi e Albano: sicurezza in acqua e sulle sponde"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

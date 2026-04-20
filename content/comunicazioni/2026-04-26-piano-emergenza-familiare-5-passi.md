@@ -5,8 +5,8 @@ description: "Un'ora di tempo, un foglio di carta, una conversazione con la fami
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-04-26-piano-emergenza-familiare-5-passi.webp"
+image_alt: "Cover dell'articolo: Il piano di emergenza familiare in 5 passi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

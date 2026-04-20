@@ -5,8 +5,8 @@ description: "Parchi, biciclette, piscine gonfiabili, scalate, giochi in strada:
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-28-sicurezza-giochi-bambini-aperto.webp"
+image_alt: "Cover dell'articolo: Bambini all'aperto: sicurezza nei giochi e nel tempo libero"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

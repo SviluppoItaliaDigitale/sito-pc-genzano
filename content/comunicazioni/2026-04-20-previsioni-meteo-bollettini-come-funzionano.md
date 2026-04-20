@@ -5,7 +5,7 @@ description: "Dai satelliti ai supercomputer, dai Centri Funzionali ai codici co
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-04-20-previsioni-meteo-bollettini.webp"
+image: "/images/2026-04-20-previsioni-meteo-bollettini-come-funzionano.webp"
 image_alt: "Cielo azzurro con nuvole sfumate e sole, sormontato dalla scritta 'Previsioni meteo e bollettini di allerta'. In basso fascia blu istituzionale con logo e testo 'Protezione Civile - Gruppo Comunale Volontari - Genzano di Roma'."
 scadenza: ""
 area: "Genzano di Roma"

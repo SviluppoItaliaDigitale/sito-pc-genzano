@@ -5,8 +5,8 @@ description: "La biodiversita non e' solo tutela della natura: e' infrastruttura
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-22-giornata-biodiversita-territori-resilienti.webp"
+image_alt: "Cover dell'articolo: 22 maggio: Giornata della Biodiversita e territori piu resilienti"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
