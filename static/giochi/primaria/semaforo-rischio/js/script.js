@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'Senti un forte odore di gas in cucina.', answer: 'rosso', tip: 'Fuga di gas! Apri le finestre, esci e chiama un adulto. Non toccare gli interruttori!' },
         { text: 'La radio dice che domani sono previste piogge intense.', answer: 'giallo', tip: 'Allerta prevista: preparati, evita zone a rischio e tieniti informato.' },
         { text: 'Stai giocando al parco e fa bel tempo.', answer: 'verde', tip: 'Tutto tranquillo, divertiti!' },
-        { text: 'Vedi del fumo uscire da un bosco vicino.', answer: 'rosso', tip: 'Possibile incendio! Allontanati e chiama subito il 1515 o il 112.' },
+        { text: 'Vedi del fumo uscire da un bosco vicino.', answer: 'rosso', tip: 'Possibile incendio! Allontanati e chiama subito il 112, il numero unico di emergenza.' },
         { text: 'E uscita un\'allerta arancione per rischio alluvione.', answer: 'rosso', tip: 'Allerta arancione: fenomeni intensi, resta al sicuro e segui le indicazioni!' },
         { text: 'Fa molto caldo, il termometro segna 38 gradi.', answer: 'giallo', tip: 'Ondata di calore: bevi acqua, resta all\'ombra nelle ore piu calde (11-17).' },
         { text: 'La terra trema per qualche secondo.', answer: 'rosso', tip: 'Terremoto! Riparati sotto un tavolo, proteggiti la testa. Non uscire durante la scossa.' },

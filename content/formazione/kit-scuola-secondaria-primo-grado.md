@@ -190,7 +190,7 @@ Scaricate un bollettino di allerta reale dal sito dell'[Agenzia di Protezione Ci
 **Prima**: non accendere fuochi in aree naturali, non abbandonare rifiuti, non lanciare mozziconi.
 
 **Durante**:
-- Chiama immediatamente 1515, 115 o 112
+- Chiama immediatamente il 112: nel Lazio è l'unico numero di emergenza e attiva vigili del fuoco e forestali
 - Allontanati in direzione opposta al vento, perpendicolarmente al fronte del fuoco
 - Se il fumo è denso, copriti bocca e naso e stai basso
 - Non rifugiarti in un veicolo
@@ -243,13 +243,14 @@ In un'emergenza le reti telefoniche possono essere sovraccariche, le strade bloc
 - Una persona che vive in un'altra città che tutti i familiari possono chiamare per scambiarsi notizie
 
 **4. Numeri utili**
+
+Nel Lazio, dal 2017, **l'unico numero di emergenza per il cittadino è il 112** (NUE). Tutte le chiamate arrivano alla Centrale Unica che smista l'intervento all'ente competente.
+
 | Numero | Servizio |
 |---|---|
-| 112 | Numero unico di emergenza |
-| 115 | Vigili del Fuoco |
-| 118 | Emergenza sanitaria |
-| 1515 | Incendi boschivi |
-| 803 555 | Sala operativa PC Lazio |
+| 112 | Numero Unico Emergenze (NUE) — qualsiasi emergenza |
+| 803 555 | Sala Operativa Protezione Civile Lazio — non urgenze |
+| 1530 | Guardia Costiera — emergenze in mare e laghi |
 
 **5. Kit di emergenza**
 - Acqua (almeno 2 litri a persona)
@@ -358,9 +359,9 @@ Per saperne di più: [Chi siamo](/chi-siamo/) | [Diventa Volontario](/diventa-vo
 - c) Solo dai 21 anni
 
 **9. Quale numero chiami se vedi un incendio boschivo?**
-- a) Solo il 118
-- b) Il 1515, il 115 o il 112 ✔
-- c) Solo la polizia locale
+- a) La polizia locale
+- b) Il 112, unico numero di emergenza nel Lazio ✔
+- c) Nessuno, si spegne da solo
 
 **10. Cos'è IT-alert?**
 - a) Un'app da scaricare

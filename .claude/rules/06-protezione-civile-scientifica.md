@@ -44,7 +44,7 @@ Non usare "massima allerta" o "allerta rossa" in modo improprio per fenomeni ord
 Genzano di Roma è nel territorio dei Castelli Romani, con versanti collinari soggetti a fenomeni di erosione e frane localizzate. In caso di allerta idrogeologica, indicare sempre l'area interessata e i comportamenti di autoprotezione raccomandati dal Piano di Protezione Civile comunale.
 
 ### Rischio incendi boschivi (AIB)
-Il periodo di massima pericolosità è giugno–settembre. Il numero da chiamare è il 1515 (Corpo Forestale) o il 115 (Vigili del Fuoco) o il 112. Non chiamare direttamente il gruppo di volontari per segnalare incendi attivi.
+Il periodo di massima pericolosità è giugno–settembre. Nel Lazio il numero da chiamare è **il 112** (NUE): la Centrale Unica smista l'intervento a vigili del fuoco e squadre AIB. Non chiamare direttamente il gruppo di volontari per segnalare incendi attivi.
 
 ### Rischio sismico
 Il Lazio è una regione a sismicità media. In caso di scossa, rimanda sempre alle linee guida ufficiali del Dipartimento di Protezione Civile per i comportamenti di autoprotezione.
@@ -54,14 +54,17 @@ Per allerte meteo usa solo i dati ufficiali di ARPAM Lazio o del Centro Funziona
 
 ## Numeri di emergenza da citare sempre correttamente
 
+Nel Lazio, dal 2017, **l'unico numero di emergenza per il cittadino è il 112** (NUE — Numero Unico Europeo). Tutte le chiamate arrivano alla Centrale Unica del NUE, che smista l'intervento all'ente competente (vigili del fuoco, emergenza sanitaria, forze dell'ordine, squadre AIB). Le vecchie linee 115, 118 e 1515 non sono più il riferimento da comunicare al cittadino.
+
 | Numero | Servizio |
 |---|---|
-| 112 | Numero unico di emergenza |
-| 115 | Vigili del Fuoco |
-| 118 | Emergenza sanitaria |
-| 1515 | Incendi boschivi (Corpo Forestale) |
+| 112 | Numero Unico Emergenze (NUE) — qualsiasi emergenza |
+| 803 555 | Sala Operativa Protezione Civile Lazio — segnalazioni non urgenti |
+| 1530 | Guardia Costiera — emergenze in mare e sui laghi |
 
-Non citare numeri di emergenza non verificati. I numeri del gruppo di volontari non sostituiscono il 112.
+Non citare numeri di emergenza non verificati. Non presentare più 115/118/1515 come numeri da chiamare: il cittadino deve memorizzare un solo numero, il 112. I numeri del gruppo di volontari non sostituiscono il 112.
+
+**Nota**: "NUE 112" e "ARES 118" possono essere citati come **nomi di organizzazioni** quando il contesto lo richiede (es. riferimenti istituzionali), ma mai come numero da chiamare in emergenza.
 
 ## Regole di comunicazione del rischio
 

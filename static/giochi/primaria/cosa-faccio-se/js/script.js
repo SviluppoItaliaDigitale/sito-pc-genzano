@@ -102,10 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 },
                 {
-                    text: 'Siete usciti dal palazzo. La mamma chiama i vigili del fuoco. Quale numero compone?',
+                    text: 'Siete usciti dal palazzo. La mamma chiama i soccorsi. Quale numero compone?',
                     choices: [
-                        { text: '118', correct: false, tip: 'Il 118 e per le emergenze sanitarie. Per gli incendi si chiama il 115 o il 112!' },
-                        { text: '115 oppure il 112', correct: true, tip: 'Esatto! Il 115 sono i Vigili del Fuoco, il 112 e il numero unico per tutte le emergenze.' }
+                        { text: '118', correct: false, tip: 'Nel Lazio non si chiama piu il 118 per le emergenze. L\'unico numero da chiamare e il 112!' },
+                        { text: '112', correct: true, tip: 'Esatto! Il 112 e l\'unico numero di emergenza nel Lazio. La centrale invia subito i Vigili del Fuoco.' }
                     ]
                 },
                 {
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 }
             ],
-            endMsg: 'Hai gestito l\'incendio in modo perfetto! Ricorda: abbassati nel fumo, non rientrare mai, chiama il 115 o il 112.'
+            endMsg: 'Hai gestito l\'incendio in modo perfetto! Ricorda: abbassati nel fumo, non rientrare mai, chiama il 112.'
         },
         {
             id: 'alluvione', title: 'Pioggia fortissima', icon: '\uD83C\uDF0A',

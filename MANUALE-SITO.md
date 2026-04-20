@@ -341,7 +341,7 @@ Rileggi la **Parte 2** per la lista completa. In sintesi:
 - **Elenchi puntati** per 3+ elementi paralleli.
 - **Grassetto** solo per parole chiave (non frasi intere).
 - **Link** con testo descrittivo (mai "clicca qui").
-- Numeri di emergenza **sempre verificati** (112, 115, 118, 1515).
+- Numeri di emergenza **sempre verificati**. Nel Lazio il riferimento per il cittadino è il **112** (NUE), unico numero di emergenza. Citare inoltre **803 555** (Sala Operativa PC Lazio) e **1530** (Guardia Costiera).
 
 ### Passo 1.9 — Aggiungi le fonti e i riferimenti
 
@@ -724,7 +724,7 @@ Non:
 | Codici colore | Verde, gialla, arancione, rossa. Non usare "massima allerta" per fenomeni ordinari. |
 | Previsto vs in corso | "È previsto" (futuro) vs "è in corso" (presente). Non confondere. |
 | Allerta vs emergenza | Allerta = preavviso, emergenza = evento in atto. |
-| Numeri | 112 (NUE), 115 (VVF), 118 (sanitaria), 1515 (incendi boschivi). Sempre verificati. |
+| Numeri | Nel Lazio il cittadino chiama **solo il 112** (NUE). Altri riferimenti: 803 555 (Sala Operativa PC Lazio), 1530 (Guardia Costiera). |
 | Tono | Calmo, informativo, rassicurante. Mai allarmistico. Mai minimizzante. |
 | Autoprotezione | Per i comportamenti, cita sempre fonti ufficiali (DPC, Regione, Comune). |
 
@@ -1247,7 +1247,7 @@ Voglio creare una pagina `/mezzi/` che elenca i mezzi operativi del gruppo.
 **Contenuto:**
 
 - [ ] Fonti citate per dati meteo, allerte, rischi
-- [ ] Numeri di emergenza verificati (112, 115, 118, 1515)
+- [ ] Numeri di emergenza verificati: nel Lazio solo **112** (NUE) per il cittadino, più 803 555 e 1530
 - [ ] Nessuna informazione non verificata
 - [ ] Linguaggio inclusivo
 

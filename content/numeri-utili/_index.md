@@ -24,13 +24,13 @@ aliases:
 
 ## Numeri di Soccorso
 
+Nel Lazio, dal 2017, **l'unico numero di emergenza per il cittadino è il 112**. Tutte le chiamate arrivano alla Centrale Unica del NUE, che smista l'intervento all'ente competente (Vigili del Fuoco, emergenza sanitaria, Carabinieri, Polizia, incendi boschivi).
+
 | Numero | Servizio | Quando chiamare |
 |---|---|---|
-| **112** | Numero Unico Emergenze | Qualsiasi emergenza |
-| **115** | Vigili del Fuoco | Incendi, soccorso tecnico |
-| **118** | Emergenza Sanitaria | Soccorso sanitario urgente |
-| **1515** | Emergenza Ambientale | Incendi boschivi |
-| **1530** | Guardia Costiera | Emergenze in mare e laghi |
+| **112** | Numero Unico Emergenze (NUE) | Qualsiasi emergenza: sanitaria, ordine pubblico, incendi, soccorso tecnico |
+| **803 555** | Sala Operativa Protezione Civile Lazio | Segnalazioni non urgenti e informazioni su emergenze regionali |
+| **1530** | Guardia Costiera | Emergenze in mare e sui laghi |
 
 ## Recapiti del Gruppo di Protezione Civile
 

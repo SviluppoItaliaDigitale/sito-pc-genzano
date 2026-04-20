@@ -3,9 +3,9 @@
   'use strict';
 
   var helpers = {
-    pompieri: { icon: '🚒', label: 'Vigili del Fuoco', number: '115' },
-    ambulanza: { icon: '🚑', label: 'Ambulanza', number: '118' },
-    volontari: { icon: '🧡', label: 'Volontari PC', number: '' },
+    pompieri: { icon: '🚒', label: 'Vigili del Fuoco', number: '112' },
+    ambulanza: { icon: '🚑', label: 'Ambulanza', number: '112' },
+    volontari: { icon: '🧡', label: 'Volontari PC', number: '112' },
     carabinieri: { icon: '👮', label: 'Carabinieri', number: '112' }
   };
 
@@ -16,7 +16,7 @@
       desc: 'Vedi delle fiamme che escono da un bosco vicino a casa.',
       correct: 'pompieri',
       wrong: 'ambulanza',
-      feedback: 'I Vigili del Fuoco (115) spengono gli incendi. Puoi anche chiamare il 112!'
+      feedback: 'I Vigili del Fuoco spengono gli incendi. Per chiamarli componi il 112, il numero unico di emergenza.'
     },
     {
       emoji: '🤕',
@@ -24,7 +24,7 @@
       desc: 'Il nonno si è sentito male e non riesce ad alzarsi.',
       correct: 'ambulanza',
       wrong: 'pompieri',
-      feedback: 'L\u2019Ambulanza (118) porta i medici. Puoi anche chiamare il 112!'
+      feedback: 'L\u2019ambulanza porta i medici. Per chiamarla componi il 112: la centrale invia subito i soccorsi sanitari.'
     },
     {
       emoji: '🏠💨',
@@ -32,7 +32,7 @@
       desc: 'C\u2019è stato un forte terremoto e un muro è caduto.',
       correct: 'pompieri',
       wrong: 'volontari',
-      feedback: 'I Vigili del Fuoco (115) intervengono per i crolli. Chiama il 112!'
+      feedback: 'I Vigili del Fuoco intervengono per i crolli. Chiama il 112!'
     },
     {
       emoji: '🌊',
@@ -40,7 +40,7 @@
       desc: 'L\u2019acqua sta salendo e alcune famiglie hanno bisogno di aiuto.',
       correct: 'volontari',
       wrong: 'ambulanza',
-      feedback: 'I Volontari della Protezione Civile aiutano le persone durante le alluvioni. Chiama il 112 per le emergenze!'
+      feedback: 'I volontari della Protezione Civile aiutano le persone durante le alluvioni. Per le emergenze chiama il 112!'
     },
     {
       emoji: '🚗💥',
@@ -48,7 +48,7 @@
       desc: 'Due macchine si sono scontrate e una persona è ferita.',
       correct: 'ambulanza',
       wrong: 'volontari',
-      feedback: 'L\u2019Ambulanza (118) porta i medici per soccorrere i feriti. Chiama il 112!'
+      feedback: 'L\u2019ambulanza porta i medici per soccorrere i feriti. Chiama subito il 112!'
     },
     {
       emoji: '🏠🔒',
@@ -56,7 +56,7 @@
       desc: 'Un anziano è rimasto chiuso in casa e non riesce ad aprire la porta.',
       correct: 'pompieri',
       wrong: 'carabinieri',
-      feedback: 'I Vigili del Fuoco (115) possono aprire le porte. Chiama il 112!'
+      feedback: 'I Vigili del Fuoco possono aprire le porte. Chiama il 112!'
     }
   ];
 

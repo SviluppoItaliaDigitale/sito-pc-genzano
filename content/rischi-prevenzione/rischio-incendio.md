@@ -29,7 +29,7 @@ Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani
 
 **Se vedi un incendio:**
 
-- Chiama immediatamente il **112** (o il **1515** per incendi boschivi)
+- Chiama immediatamente il **112**: nel Lazio è l'unico numero di emergenza e attiva vigili del fuoco, forestali ed eventuale soccorso sanitario
 - Cerca di fornire indicazioni precise: Comune, località, un riferimento visibile, direzione del fumo
 - **Non avvicinarti alle fiamme** e non tentare di spegnere l'incendio da solo
 - Non sostare nelle strade percorse dal fumo: la visibilità può annullarsi rapidamente

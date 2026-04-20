@@ -142,11 +142,11 @@ document.addEventListener('DOMContentLoaded', () => {
             question: 'Se vedi un incendio in un bosco, cosa fai?',
             answers: [
                 { text: 'Cerco di spegnerlo da solo', correct: false },
-                { text: 'Chiamo subito il 112 o il 115', correct: true },
+                { text: 'Chiamo subito il 112', correct: true },
                 { text: 'Faccio un video da postare', correct: false },
                 { text: 'Non faccio niente, passer\u00e0 da solo', correct: false }
             ],
-            explanation: 'Mai provare a spegnere un incendio da solo! Chiama subito il 112 e allontanati dal fuoco.'
+            explanation: 'Mai provare a spegnere un incendio da solo! Chiama subito il 112 e allontanati dal fuoco. Nel Lazio il 112 \u00e8 l\'unico numero di emergenza da chiamare.'
         },
         {
             category: 'incendio',
@@ -227,14 +227,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'incendio',
-            question: 'Dove si trova il numero dei Vigili del Fuoco?',
+            question: 'Se serve l\'intervento dei Vigili del Fuoco, quale numero si chiama?',
             answers: [
                 { text: 'Non esiste un numero apposito', correct: false },
-                { text: 'Si chiama il 115 oppure il 112', correct: true },
+                { text: 'Il 112, il numero unico di emergenza', correct: true },
                 { text: 'Si cerca su Internet durante l\'emergenza', correct: false },
                 { text: 'Bisogna andare di persona alla caserma', correct: false }
             ],
-            explanation: 'I Vigili del Fuoco si chiamano al 115. In ogni emergenza puoi anche chiamare il 112, il numero unico europeo.'
+            explanation: 'Nel Lazio si chiama sempre il 112, il numero unico europeo di emergenza. La centrale capisce di cosa hai bisogno e invia i Vigili del Fuoco, l\'ambulanza o i carabinieri.'
         },
 
         // ═══════════════════════════════════════
@@ -359,11 +359,11 @@ document.addEventListener('DOMContentLoaded', () => {
             question: 'Quale numero chiami per segnalare un incendio nel bosco?',
             answers: [
                 { text: '118', correct: false },
-                { text: '1515', correct: true },
+                { text: '112', correct: true },
                 { text: '113', correct: false },
                 { text: '117', correct: false }
             ],
-            explanation: 'Il 1515 \u00e8 il numero per gli incendi boschivi. Puoi anche chiamare il 112 o il 115 (Vigili del Fuoco).'
+            explanation: 'Nel Lazio il 112 \u00e8 il numero unico di emergenza, anche per gli incendi boschivi. La centrale manda subito i soccorsi giusti: Vigili del Fuoco, Forestale o Protezione Civile.'
         },
         {
             category: 'numeri',
@@ -382,10 +382,10 @@ document.addEventListener('DOMContentLoaded', () => {
             answers: [
                 { text: '115', correct: false },
                 { text: '117', correct: false },
-                { text: '118 oppure il 112', correct: true },
+                { text: 'Il 112', correct: true },
                 { text: '1515', correct: false }
             ],
-            explanation: 'Il 118 \u00e8 il numero dell\'emergenza sanitaria: manda l\'ambulanza. Puoi anche chiamare il 112, che smista la chiamata.'
+            explanation: 'Nel Lazio il 112 \u00e8 il numero unico di emergenza, anche per l\'ambulanza. La centrale capisce il tipo di aiuto che serve e invia subito i soccorsi sanitari.'
         },
         {
             category: 'numeri',
@@ -727,7 +727,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Incendi boschivi', correct: true },
                 { text: 'Nevicate intense', correct: false }
             ],
-            explanation: 'Da giugno a settembre la vegetazione dei boschi dei Castelli Romani pu\u00f2 prendere fuoco molto facilmente. Per segnalare un incendio boschivo chiama il 1515 o il 112.'
+            explanation: 'Da giugno a settembre la vegetazione dei boschi dei Castelli Romani pu\u00f2 prendere fuoco molto facilmente. Nel Lazio per segnalare un incendio boschivo si chiama il 112, il numero unico di emergenza.'
         },
 
         // ═══════════════════════════════════════
