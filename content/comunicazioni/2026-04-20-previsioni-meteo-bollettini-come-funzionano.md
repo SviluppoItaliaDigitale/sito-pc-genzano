@@ -5,11 +5,12 @@ description: "Dai satelliti ai supercomputer, dai Centri Funzionali ai codici co
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-04-20-previsioni-meteo-bollettini.webp"
+image_alt: "Cielo azzurro con nuvole sfumate e sole, sormontato dalla scritta 'Previsioni meteo e bollettini di allerta'. In basso fascia blu istituzionale con logo e testo 'Protezione Civile - Gruppo Comunale Volontari - Genzano di Roma'."
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
-draft: true
+draft: false
 ---
 
 Ogni mattina apriamo il telefono per sapere se prendere l'ombrello. Durante un'emergenza, invece, il bollettino meteo diventa uno strumento che può salvare la vita. Ma come nasce una previsione? Chi decide se diramare un'allerta? E cosa significano davvero i codici colore?
