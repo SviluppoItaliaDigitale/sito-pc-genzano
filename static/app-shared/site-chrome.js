@@ -88,6 +88,7 @@
       '<div class="container">' +
         '<div class="d-flex flex-wrap justify-content-between align-items-center">' +
           '<div class="utility-bar-item"><i class="bi bi-clock me-1" aria-hidden="true"></i><span id="live-datetime" aria-live="polite" aria-label="Data e ora corrente"></span></div>' +
+          '<div class="utility-bar-item"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i><span id="site-build-time">Sito aggiornato</span></div>' +
         '</div>' +
       '</div>' +
     '</div>' +
@@ -165,16 +166,39 @@
     main.parentNode.insertBefore(footerDiv, main.nextSibling);
 
     // Data/ora live
+    var giorni = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
+    var mesi = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
     var el = document.getElementById('live-datetime');
     if (el) {
-      var giorni = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
-      var mesi = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
       function aggiorna() {
         var now = new Date();
         el.textContent = giorni[now.getDay()] + ' ' + now.getDate() + ' ' + mesi[now.getMonth()] + ' ' + now.getFullYear() + ' — ' + String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
       }
       aggiorna();
       setInterval(aggiorna, 30000);
+    }
+
+    // Ultimo aggiornamento sito (timestamp build Hugo) — caricato da /build-info.js
+    var buildEl = document.getElementById('site-build-time');
+    if (buildEl) {
+      function renderBuild() {
+        var raw = window.SITE_BUILD_TIME;
+        if (!raw) return;
+        var d = new Date(raw);
+        if (isNaN(d.getTime())) return;
+        var label = 'Sito aggiornato il ' + d.getDate() + ' ' + mesi[d.getMonth()] + ' ' + d.getFullYear() +
+                    ' alle ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+        buildEl.innerHTML = '<time datetime="' + raw + '">' + label + '</time>';
+      }
+      if (window.SITE_BUILD_TIME) {
+        renderBuild();
+      } else {
+        var bi = document.createElement('script');
+        bi.src = SITE_URL + '/build-info.js';
+        bi.onload = renderBuild;
+        bi.onerror = function () { buildEl.textContent = ''; };
+        document.head.appendChild(bi);
+      }
     }
 
     // Back to top
