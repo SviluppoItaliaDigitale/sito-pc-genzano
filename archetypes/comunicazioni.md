@@ -25,6 +25,12 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 # Es: /images/2026-04-20-titolo.webp
 image: ""
 
+# ── TESTO ALTERNATIVO IMMAGINE (a11y) ──
+# Descrive cosa si vede nell'immagine per chi usa screen reader.
+# Non ripetere il titolo: descrivi il contenuto visivo.
+# Se vuoto, viene usato il titolo come fallback.
+image_alt: ""
+
 # ── SCADENZA ──
 # Data dopo la quale la comunicazione non è più attuale (opzionale)
 # Formato: 2026-12-31
