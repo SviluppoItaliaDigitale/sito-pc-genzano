@@ -1,7 +1,7 @@
 ---
 title: "Formazione regionale: un nostro formatore in Sala Operativa per i nuovi volontari"
 date: 2026-04-19
-description: "Un formatore regionale del Gruppo Comunale di Genzano ha guidato le lezioni ai nuovi volontari del sistema regionale, presso la Sala Operativa della Protezione Civile del Lazio."
+description: "Daniele Toscani, formatore regionale del Gruppo Comunale di Genzano, ha guidato le lezioni ai nuovi volontari del sistema regionale, presso la Sala Operativa della Protezione Civile del Lazio."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -15,7 +15,7 @@ draft: false
 
 Si è concluso nel fine settimana il ciclo di **formazione base** dedicato ai nuovi volontari del **sistema regionale di Protezione Civile**. Le sessioni si sono svolte presso la **Sala Operativa Regionale del Lazio** e hanno visto la partecipazione di volontari provenienti da diversi gruppi comunali del territorio.
 
-A guidare le lezioni in aula è stato un **formatore regionale** appartenente al **Gruppo Comunale di Genzano di Roma**. La sua presenza tra i docenti conferma il contributo che il nostro Gruppo porta alla formazione dei nuovi operatori, a beneficio di tutto il sistema regionale.
+A guidare le lezioni in aula è stato **Daniele Toscani**, **formatore regionale** del **Gruppo Comunale di Genzano di Roma**. La sua presenza tra i docenti conferma il contributo che il nostro Gruppo porta alla formazione dei nuovi operatori, a beneficio di tutto il sistema regionale.
 
 ## Cosa si è trattato
 
@@ -49,7 +49,7 @@ Come sottolineato dai responsabili dell'attività, l'obiettivo è chiaro: offrir
 
 I **nuclei territoriali dei Castelli Romani** portano da anni un contributo costante al sistema regionale, sia in fase di emergenza sia nella formazione. Genzano, con il suo Gruppo Comunale, è parte attiva di questa rete.
 
-Avere un formatore regionale tra i nostri volontari è il risultato di **anni di impegno**, corsi, esercitazioni e attivazioni reali. È anche un invito a chi vuole avvicinarsi al volontariato: la formazione non si ferma mai, e a ogni tappa corrisponde una **crescita professionale** riconosciuta.
+Avere un formatore regionale come **Daniele Toscani** tra i nostri volontari è il risultato di **anni di impegno**, corsi, esercitazioni e attivazioni reali. È anche un invito a chi vuole avvicinarsi al volontariato: la formazione non si ferma mai, e a ogni tappa corrisponde una **crescita professionale** riconosciuta.
 
 ## Prossimi passi
 
