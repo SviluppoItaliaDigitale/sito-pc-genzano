@@ -13,7 +13,7 @@ draft: false
 ---
 
 <div class="text-center my-4">
-  <img src="/images/logo-pc-volontariato.jpg" alt="Nuovo logo Protezione Civile Volontariato" style="max-width:300px;width:100%;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+  <img src="/images/logo-pc-volontariato.jpg" alt="Nuovo logo Protezione Civile Volontariato" loading="lazy" decoding="async" style="max-width:300px;width:100%;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,0.1);">
 </div>
 
 Il Dipartimento della Protezione Civile ha adottato una nuova identità visiva. Il Gruppo Comunale di Genzano di Roma ha avviato le procedure per aggiornare i propri canali di comunicazione e le dotazioni operative, seguendo le direttive nazionali.
