@@ -954,3 +954,178 @@ article .galleria img {
   background: rgba(217, 54, 79, 0.10);
   color: #D9364F;
 }
+
+/* ============================================================
+   Archivio comunicazioni — filtri, archivio mensile, card
+   ============================================================ */
+
+.comunicazioni-archivio .filter-bar {
+  background: #f8f9fa;
+  border: 1px solid #e4e7ea;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.comunicazioni-archivio .filter-label {
+  font-weight: 600;
+  color: var(--pc-primary);
+  font-size: 0.95rem;
+}
+
+.comunicazioni-archivio .filter-pill {
+  background: #ffffff;
+  color: #333;
+  border: 1.5px solid #d1d5db;
+  border-radius: 999px;
+  padding: 0.375rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.comunicazioni-archivio .filter-pill:hover {
+  border-color: var(--pc-primary);
+  color: var(--pc-primary);
+  background: #f0f4f9;
+}
+
+.comunicazioni-archivio .filter-pill.active {
+  background: var(--pc-primary);
+  border-color: var(--pc-primary);
+  color: #fff;
+}
+
+.comunicazioni-archivio .filter-pill:focus-visible {
+  outline: 3px solid #ffb703;
+  outline-offset: 2px;
+}
+
+.comunicazioni-archivio .filter-count {
+  opacity: 0.7;
+  font-weight: 400;
+  margin-left: 0.25rem;
+}
+
+.comunicazioni-archivio .archivio-mese {
+  margin-bottom: 2.5rem;
+}
+
+.comunicazioni-archivio .archivio-mese-titolo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--pc-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--pc-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.comunicazioni-archivio .archivio-mese-count {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.comunicazioni-archivio .notizia-img-wrapper {
+  height: 100%;
+  min-height: 180px;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.comunicazioni-archivio .notizia-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.comunicazioni-archivio .notizia-reading-time {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.comunicazioni-archivio .card-notizia {
+  border: 1px solid #e4e7ea;
+  border-radius: 8px;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  overflow: hidden;
+}
+
+.comunicazioni-archivio .card-notizia:hover {
+  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.08);
+  transform: translateY(-1px);
+}
+
+.sidebar-archivio .card-bordo {
+  border: 1px solid #e4e7ea;
+  border-radius: 8px;
+}
+
+.sidebar-archivio .archivio-mensile-lista li,
+.sidebar-archivio .archivio-categorie-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #f0f2f4;
+}
+
+.sidebar-archivio .archivio-mensile-lista li:last-child,
+.sidebar-archivio .archivio-categorie-lista li:last-child {
+  border-bottom: none;
+}
+
+.sidebar-archivio .archivio-mensile-lista a {
+  color: var(--pc-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar-archivio .archivio-mensile-lista a:hover,
+.sidebar-archivio .archivio-mensile-lista a:focus-visible {
+  text-decoration: underline;
+}
+
+.sidebar-archivio .sidebar-categoria-btn {
+  background: transparent;
+  border: none;
+  color: var(--pc-primary);
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-archivio .sidebar-categoria-btn:hover,
+.sidebar-archivio .sidebar-categoria-btn:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+.sidebar-archivio .archivio-badge {
+  background: var(--pc-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  min-width: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar-archivio {
+    margin-top: 2rem;
+  }
+}

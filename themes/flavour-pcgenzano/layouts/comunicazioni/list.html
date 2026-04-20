@@ -1,0 +1,173 @@
+{{ define "main" }}
+{{- $pages := .Pages -}}
+{{- $badges := slice -}}
+{{- range $pages -}}
+  {{- with .Params.badge -}}
+    {{- $badges = $badges | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $uniqueBadges := $badges | uniq | sort -}}
+{{- $grouped := $pages.GroupByDate "2006-01" -}}
+{{- $monthNames := dict
+  "01" "Gennaio" "02" "Febbraio" "03" "Marzo" "04" "Aprile"
+  "05" "Maggio" "06" "Giugno" "07" "Luglio" "08" "Agosto"
+  "09" "Settembre" "10" "Ottobre" "11" "Novembre" "12" "Dicembre" -}}
+<div class="page-hero">
+  <div class="container">
+    {{ partial "breadcrumb.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
+  </div>
+</div>
+<div class="container py-4 comunicazioni-archivio">
+  <div class="row g-4">
+    <div class="col-lg-8">
+      {{ .Content }}
+
+      <div class="filter-bar mb-4" role="region" aria-label="Filtri per categoria">
+        <p class="filter-label mb-2"><i class="bi bi-funnel" aria-hidden="true"></i> Filtra per categoria:</p>
+        <div class="filter-pills d-flex flex-wrap gap-2" role="group" aria-label="Categorie">
+          <button type="button" class="filter-pill active" data-filter="all" aria-pressed="true">
+            Tutte <span class="filter-count">({{ len $pages }})</span>
+          </button>
+          {{ range $uniqueBadges }}
+          {{- $lower := . | lower -}}
+          {{- $count := 0 -}}
+          {{- range $pages }}{{- if eq .Params.badge $ }}{{ $count = add $count 1 }}{{ end }}{{ end -}}
+          <button type="button" class="filter-pill" data-filter="{{ $lower }}" aria-pressed="false">
+            {{ . }} <span class="filter-count">({{ $count }})</span>
+          </button>
+          {{ end }}
+        </div>
+      </div>
+
+      <div id="archivio-articoli">
+      {{ range $grouped }}
+        {{- $parts := split .Key "-" -}}
+        {{- $year := index $parts 0 -}}
+        {{- $monthNum := index $parts 1 -}}
+        {{- $monthName := index $monthNames $monthNum -}}
+        <section class="archivio-mese" id="mese-{{ .Key }}" data-mese="{{ .Key }}">
+          <h2 class="archivio-mese-titolo">
+            <span>{{ $monthName }} {{ $year }}</span>
+            <span class="archivio-mese-count">{{ len .Pages }} articoli</span>
+          </h2>
+          <div class="archivio-lista">
+          {{ range .Pages }}
+          {{- $badgeLower := .Params.badge | lower -}}
+          <article class="card card-notizia mb-3" data-badge="{{ $badgeLower }}">
+            <div class="row g-0">
+              <div class="col-md-4 d-none d-md-block">
+                <div class="notizia-img-wrapper">
+                  {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ with $.Params.image_alt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" loading="lazy">
+                  {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                    {{ with .Params.badge }}{{ partial "badge.html" . }}{{ end }}
+                    {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
+                    <span class="notizia-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></span>
+                    {{ end }}
+                    {{ if .ReadingTime }}
+                    <span class="notizia-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> {{ .ReadingTime }} min di lettura</span>
+                    {{ end }}
+                  </div>
+                  <h3 class="notizia-titolo"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                  <p class="notizia-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}</p>
+                  <a href="{{ .Permalink }}" class="notizia-link" aria-label="Leggi l'articolo: {{ .Title }}">Leggi l'articolo <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+          {{ end }}
+          </div>
+        </section>
+      {{ end }}
+      </div>
+
+      <p id="filter-no-results" class="alert alert-info d-none" role="status">
+        <i class="bi bi-info-circle" aria-hidden="true"></i> Nessun articolo in questa categoria.
+      </p>
+    </div>
+
+    <aside class="col-lg-4" aria-label="Archivio e categorie">
+      <div class="sidebar-archivio sticky-lg-top">
+        <div class="card card-bordo mb-3">
+          <div class="card-body">
+            <h2 class="h5 mb-3"><i class="bi bi-calendar-range" aria-hidden="true"></i> Archivio mensile</h2>
+            <ul class="archivio-mensile-lista list-unstyled mb-0">
+              {{ range $grouped }}
+              {{- $parts := split .Key "-" -}}
+              {{- $year := index $parts 0 -}}
+              {{- $monthNum := index $parts 1 -}}
+              {{- $monthName := index $monthNames $monthNum -}}
+              <li>
+                <a href="#mese-{{ .Key }}">{{ $monthName }} {{ $year }}</a>
+                <span class="archivio-badge">{{ len .Pages }}</span>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+        <div class="card card-bordo">
+          <div class="card-body">
+            <h2 class="h5 mb-3"><i class="bi bi-tags" aria-hidden="true"></i> Categorie</h2>
+            <ul class="archivio-categorie-lista list-unstyled mb-0">
+              {{ range $uniqueBadges }}
+              {{- $lower := . | lower -}}
+              {{- $count := 0 -}}
+              {{- range $pages }}{{- if eq .Params.badge $ }}{{ $count = add $count 1 }}{{ end }}{{ end -}}
+              <li>
+                <button type="button" class="sidebar-categoria-btn" data-filter="{{ $lower }}">
+                  {{ . }} <span class="archivio-badge">{{ $count }}</span>
+                </button>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+(function(){
+  const pills = document.querySelectorAll('[data-filter]');
+  const cards = document.querySelectorAll('[data-badge]');
+  const monthSections = document.querySelectorAll('.archivio-mese');
+  const noResults = document.getElementById('filter-no-results');
+
+  function apply(filter){
+    let visible = 0;
+    cards.forEach(function(c){
+      const match = filter === 'all' || c.dataset.badge === filter;
+      c.style.display = match ? '' : 'none';
+      if(match) visible++;
+    });
+    // Hide empty month sections
+    monthSections.forEach(function(s){
+      const visibleInSection = s.querySelectorAll('[data-badge]:not([style*="none"])');
+      s.style.display = visibleInSection.length ? '' : 'none';
+    });
+    noResults.classList.toggle('d-none', visible > 0);
+    // Sync pill state (both top and sidebar)
+    document.querySelectorAll('.filter-pill').forEach(function(p){
+      const active = p.dataset.filter === filter;
+      p.classList.toggle('active', active);
+      p.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+  }
+
+  pills.forEach(function(p){
+    p.addEventListener('click', function(){
+      apply(p.dataset.filter);
+    });
+  });
+})();
+</script>
+{{ end }}
