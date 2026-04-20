@@ -8,7 +8,26 @@
 <div class="container py-4">
   <div class="row">
     <div class="col-lg-10 mx-auto">
-      {{ .Content }}
+      {{/* Split del contenuto: intro sopra, approfondimenti sotto */}}
+      {{ $parts := split .RawContent "<!--more-->" }}
+      {{ $intro := index $parts 0 }}
+      {{ $approfondimenti := "" }}
+      {{ if gt (len $parts) 1 }}{{ $approfondimenti = index $parts 1 }}{{ end }}
+
+      {{ .RenderString (dict "display" "block") $intro }}
+
+      {{/* Box informativo — La prevenzione salva la vita */}}
+      <div class="card border-primary mt-4 mb-3">
+        <div class="card-body bg-primary bg-opacity-10 p-4">
+          <h2 class="h5 text-primary"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>La prevenzione salva la vita</h2>
+          <p class="mb-2">Un cittadino informato è un cittadino preparato. Consulta le pagine dedicate a ciascun rischio per conoscere i comportamenti corretti da adottare prima, durante e dopo un'emergenza.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="{{ "piano-emergenza/" | relURL }}" class="btn btn-sm btn-outline-primary">Piano di Emergenza</a>
+            <a href="{{ "piano-familiare/" | relURL }}" class="btn btn-sm btn-outline-primary">Piano Familiare</a>
+            <a href="{{ "rischi-prevenzione/kit-emergenza/" | relURL }}" class="btn btn-sm btn-outline-primary">Kit di Emergenza</a>
+          </div>
+        </div>
+      </div>
 
       {{/* Griglia card rischi da data file */}}
       {{ $rischi := .Site.Data.risk_cards }}
@@ -49,18 +68,12 @@
       </div>
       {{ end }}
 
-      {{/* Box informativo */}}
-      <div class="card border-primary mt-4 mb-3">
-        <div class="card-body bg-primary bg-opacity-10 p-4">
-          <h2 class="h5 text-primary"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>La prevenzione salva la vita</h2>
-          <p class="mb-2">Un cittadino informato è un cittadino preparato. Consulta le pagine dedicate a ciascun rischio per conoscere i comportamenti corretti da adottare prima, durante e dopo un'emergenza.</p>
-          <div class="d-flex flex-wrap gap-2">
-            <a href="{{ "piano-emergenza/" | relURL }}" class="btn btn-sm btn-outline-primary">Piano di Emergenza</a>
-            <a href="{{ "piano-familiare/" | relURL }}" class="btn btn-sm btn-outline-primary">Piano Familiare</a>
-            <a href="{{ "rischi-prevenzione/kit-emergenza/" | relURL }}" class="btn btn-sm btn-outline-primary">Kit di Emergenza</a>
-          </div>
-        </div>
+      {{/* Approfondimenti dall'archivio — sotto le card */}}
+      {{ with $approfondimenti }}
+      <div class="mt-4">
+        {{ . | markdownify }}
       </div>
+      {{ end }}
     </div>
   </div>
 </div>
