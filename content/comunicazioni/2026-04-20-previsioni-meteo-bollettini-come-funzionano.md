@@ -118,5 +118,3 @@ Qualche indicazione pratica:
 - Articolo: [Vento forte: cosa fare prima, durante e dopo](/comunicazioni/2026-05-16-vento-forte-prima-durante-dopo/)
 - Articolo: [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
 - Articolo: [Sentinelle del tempo: osservazione meteo amatoriale](/comunicazioni/2026-03-03-sentinelle-meteo-osservazione-amatoriale/)
-
-Per la situazione meteorologica aggiornata ogni tre ore su Genzano puoi consultare la card **Meteo Genzano di Roma** in homepage.
