@@ -78,9 +78,11 @@ Il miglior modo di ricordare le vittime del 20 maggio 2012 è **continuare a lav
 
 ## Per approfondire
 
+- Articolo: [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/)
+- Articolo: [29 maggio 2012: la seconda scossa in Emilia](/comunicazioni/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria/)
+- Articolo: [Diciassette anni fa il terremoto dell'Aquila: Fossa](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/)
 - [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/)
 - [Dipartimento della Protezione Civile — Terremoti](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico)
 - [Regione Emilia-Romagna — Sisma 2012](https://sismacentro.regione.emilia-romagna.it/)
-- Articolo correlato: [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/)
 
 *In memoria delle vittime del sisma emiliano.*

@@ -97,3 +97,10 @@ Più persone in bicicletta significa meno traffico, meno inquinamento, meno rumo
 - [Fondazione ANIA per la sicurezza stradale](https://www.fondazioneania.it/)
 
 Pedalare è una forma di libertà. Farlo in sicurezza è un gesto di rispetto — per sé stessi, per gli altri e per la città.
+
+## Per approfondire
+
+- Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
+- Articolo: [Escursioni estive: sicurezza in montagna e sui Castelli](/comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli/)
+- Articolo: [Sicurezza dei giochi dei bambini all'aperto](/comunicazioni/2026-05-28-sicurezza-giochi-bambini-aperto/)
+- Articolo: [Giornata della Terra: clima ed eventi estremi](/comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani/)

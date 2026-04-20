@@ -36,3 +36,10 @@ Per il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, qu
 
 Consulta la pagina ufficiale del Dipartimento:
 [www.protezionecivile.gov.it](https://www.protezionecivile.gov.it/it/pubblicazione/calendario-dipartimento-della-protezione-civile-2026/)
+
+## Per approfondire
+
+- Articolo: [Giornata Nazionale della Protezione Civile](/comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/)
+- Articolo: [Diciassette anni fa il terremoto dell'Aquila: Fossa](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/)
+- Articolo: [20 maggio 2012: terremoto in Emilia, memoria e resilienza](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/)
+- Articolo: [Nuovo logo della Protezione Civile](/comunicazioni/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano/)

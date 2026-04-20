@@ -90,6 +90,14 @@ In alcune città, durante le ondate di livello 2 e 3, i gruppi di volontariato d
 
 Sulla pagina [Ondate di calore](/rischi-prevenzione/ondate-di-calore/) del nostro sito trovi una scheda dedicata con i comportamenti di autoprotezione. Farla leggere a un familiare anziano è un gesto concreto.
 
+## Per approfondire
+
+- Articolo: [Malori estivi: riconoscere colpo di calore e ictus](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/)
+- Articolo: [Persone fragili: aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
+- Articolo: [Check casa prima dell'estate: prevenzione](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
+- Articolo: [Previsioni meteo e bollettini di allerta](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
+- Articolo: [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
+
 ## Fonti
 
 - [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp)

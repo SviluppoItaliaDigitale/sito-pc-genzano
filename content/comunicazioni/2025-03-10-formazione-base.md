@@ -17,3 +17,11 @@ Il Gruppo organizza un nuovo **Corso di Formazione Base** per i volontari iscrit
 Le lezioni si tengono nella sede di Via Sicilia.
 
 Per informazioni e iscrizioni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
+
+## Per approfondire
+
+- Articolo: [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)
+- Articolo: [Iscrizioni aperte al Gruppo](/comunicazioni/2025-07-25-iscrizioni-aperte/)
+- Articolo: [Assemblea dei volontari](/comunicazioni/2026-04-01-assemblea-dei-volontari/)
+- Pagina: [Diventa volontario](/diventa-volontario/)
+- Pagina: [Formazione](/formazione/)

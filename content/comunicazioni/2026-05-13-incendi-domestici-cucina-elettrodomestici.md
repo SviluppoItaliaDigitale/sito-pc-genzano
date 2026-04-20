@@ -114,6 +114,9 @@ In un incendio domestico **muoiono più persone per intossicazione da fumi** che
 
 ## Per approfondire
 
+- Articolo: [Triangolo del fuoco: capire come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
+- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+- Articolo: [Check-list casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
 - [Vigili del Fuoco — Prevenzione](https://www.vigilfuoco.it/aspx/Home.aspx)
 - [Ministero dell'Interno — Campagne sicurezza](https://www.interno.gov.it/)
 - [UNI — Norme tecniche impianti domestici](https://www.uni.com/)

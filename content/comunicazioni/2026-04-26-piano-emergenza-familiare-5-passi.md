@@ -84,3 +84,12 @@ Evita di affidarti a chat e a post non verificati: in emergenza, un'informazione
 ## Scarica il modello stampabile
 
 La pagina [Piano familiare](/piano-familiare/) del nostro sito contiene un modello di piano pronto da compilare e stampare. Un foglio solo, in famiglia, in un'ora. È uno dei gesti più concreti di prevenzione che una famiglia possa fare.
+
+## Per approfondire
+
+- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+- Articolo: [Il Piano di Emergenza Familiare digitale citato da Abili a proteggere](/comunicazioni/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere/)
+- Articolo: [Giornata delle famiglie: il piano di emergenza insieme](/comunicazioni/2026-05-15-giornata-famiglie-piano-emergenza-insieme/)
+- Articolo: [Persone fragili: aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
+- Articolo: [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/)
+- Pagina: [Piano familiare](/piano-familiare/)

@@ -59,6 +59,14 @@ Per informazioni sulla [CRI Lazio](https://crilazio.it/) e sui comitati locali, 
 
 ## Per approfondire
 
+- Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
+- Articolo: [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/)
+- Articolo: [Il Gruppo riceve un defibrillatore dalla Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/)
+- Articolo: [Giornata Nazionale della Protezione Civile](/comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/)
+- Pagina: [Diventa volontario](/diventa-volontario/)
+
+## Fonti
+
 - [Croce Rossa Italiana](https://www.cri.it/)
 - [Federazione Internazionale CR/MR](https://www.ifrc.org/)
 - [Comitato Internazionale della Croce Rossa](https://www.icrc.org/)

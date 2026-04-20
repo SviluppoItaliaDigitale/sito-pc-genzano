@@ -84,10 +84,14 @@ Il Gruppo Comunale Volontari di Genzano partecipa, con altri gruppi dei Castelli
 
 Se ti interessa partecipare, trovi le informazioni nella pagina [Diventa volontario](/diventa-volontario/).
 
-## Collegamenti utili
+## Per approfondire
 
-- [Rischio incendio boschivo — scheda](/rischi-prevenzione/rischio-incendio/)
-- [Formazione e kit didattici](/formazione/)
-- [Numeri utili](/numeri-utili/)
+- Articolo: [Triangolo del fuoco: capire come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
+- Articolo: [Esercitazione antincendio boschivo: come ci prepariamo](/comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/)
+- Articolo: [Campagna AIB 2025: avvio stagione](/comunicazioni/2025-06-15-campagna-aib/)
+- Articolo: [Giornata senza tabacco: mozziconi e rischio incendi](/comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi/)
+- Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
+- Pagina: [Formazione e kit didattici](/formazione/)
+- Pagina: [Numeri utili](/numeri-utili/)
 
 La sicurezza dei nostri boschi e dei nostri paesi comincia da un gesto banale: un terreno pulito, a primavera. È un piccolo lavoro che, moltiplicato per tutti i proprietari, riduce in modo enorme il rischio collettivo.

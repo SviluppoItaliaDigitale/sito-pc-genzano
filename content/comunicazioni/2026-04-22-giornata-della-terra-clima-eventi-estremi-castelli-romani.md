@@ -78,3 +78,12 @@ Sulla pagina [Rischi e prevenzione](/rischi-prevenzione/) del nostro sito trovi 
 - [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp)
 
 La Giornata della Terra non è un appuntamento simbolico: è un richiamo a ricordare che **la sicurezza dei territori comincia dalla cura dei territori**.
+
+## Per approfondire
+
+- Articolo: [Giornata della biodiversità: territori resilienti](/comunicazioni/2026-05-22-giornata-biodiversita-territori-resilienti/)
+- Articolo: [Giornata delle zone umide: rischio idrogeologico](/comunicazioni/2026-02-02-giornata-zone-umide-rischio-idrogeologico/)
+- Articolo: [Giornata mondiale dell'acqua: rete idrica e sicurezza](/comunicazioni/2026-03-22-giornata-mondiale-acqua-rete-idrica-sicurezza/)
+- Articolo: [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
+- Articolo: [Frane e movimenti del terreno: Castelli Romani](/comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani/)
+- Pagina: [Rischi e prevenzione](/rischi-prevenzione/)

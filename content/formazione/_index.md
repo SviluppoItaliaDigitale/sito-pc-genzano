@@ -75,6 +75,18 @@ I giochi sono utilizzabili anche dai docenti come attività complementari ai kit
 - [Quiz di Protezione Civile](/quizpc/index.html) — Metti alla prova le tue conoscenze
 - [Piattaforma E-Learning](/formazionepc/index.html) — Formazione a distanza per volontari
 
+## Approfondimenti dall'archivio
+
+Letture consigliate per chi si occupa di formazione e scuole:
+
+- Articolo: [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)
+- Articolo: [Corso di formazione base per nuovi volontari](/comunicazioni/2025-03-10-formazione-base/)
+- Articolo: [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/)
+- Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
+- Articolo: [Il Gruppo riceve un defibrillatore dalla Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/)
+
+Tutti gli articoli su formazione e scuole sono filtrabili nell'[archivio delle comunicazioni](/comunicazioni/) con il tag **Formazione**.
+
 ## Vuoi unirti a noi?
 
 La formazione è gratuita e aperta a tutti i nuovi volontari. Scopri come iscriverti nella pagina [Diventa Volontario](/diventa-volontario/).

@@ -29,3 +29,10 @@ Il Comune sta aggiornando l'utilizzo del logo in modo graduale. Nella prima fase
 ## Cosa devono sapere i cittadini
 
 Le modalità di contatto e di intervento del Gruppo Comunale restano invariate. Il nuovo logo è la garanzia che l'operatore di fronte a te fa parte del sistema ufficiale di Protezione Civile, addestrato e coordinato secondo gli standard del Dipartimento.
+
+## Per approfondire
+
+- Articolo: [Giornata Nazionale della Protezione Civile](/comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/)
+- Articolo: [Donne nella Protezione Civile di Genzano](/comunicazioni/2026-03-08-donne-protezione-civile-genzano/)
+- Articolo: [Nuovo gestionale del Gruppo](/comunicazioni/2026-04-04-nuovo-gestionale/)
+- Pagina: [Chi siamo](/chi-siamo/)

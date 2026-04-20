@@ -100,11 +100,14 @@ Un blackout esteso che dura molte ore o giorni è un'**emergenza di Protezione C
 
 Come cittadino, il contributo più utile è **non intralciare** e **aiutare i vicini** fragili, tenendo informate le autorità di situazioni di reale emergenza sanitaria.
 
-## Letture correlate
+## Per approfondire
 
-- [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
-- [Aiutare i vicini fragili](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
-- Pagina [Blackout](/rischi-prevenzione/blackout/) del nostro sito
+- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+- Articolo: [Persone fragili: aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
+- Articolo: [Allagamenti urbani: cosa fare quando l'acqua entra in casa](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
+- Articolo: [Check casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
+- Articolo: [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
+- Pagina: [Rischi e prevenzione](/rischi-prevenzione/)
 
 ## Fonti
 

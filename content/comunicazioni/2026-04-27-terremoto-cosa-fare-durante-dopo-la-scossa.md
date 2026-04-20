@@ -69,6 +69,14 @@ La vera protezione dal rischio sismico è **la qualità degli edifici**. L'Itali
 
 Sulla pagina [Rischio sismico](/rischi-prevenzione/rischio-sismico/) trovi la classificazione del Lazio e indicazioni specifiche per il territorio comunale.
 
+## Per approfondire
+
+- Articolo: [Diciassette anni fa il terremoto dell'Aquila: Fossa](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/)
+- Articolo: [20 maggio 2012: terremoto in Emilia, memoria e resilienza](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/)
+- Articolo: [29 maggio 2012: la seconda scossa in Emilia](/comunicazioni/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria/)
+- Articolo: [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
+- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+
 ## Fonti
 
 - [DPC — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico)

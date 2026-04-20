@@ -68,6 +68,15 @@ Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma porta ancor
 
 > *"Il volontario non è chi ha più tempo libero, ma chi sceglie di non restare indifferente."*
 
+## Per approfondire
+
+- Articolo: [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/)
+- Articolo: [20 maggio 2012: terremoto in Emilia, memoria e resilienza](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/)
+- Articolo: [29 maggio 2012: seconda scossa in Emilia](/comunicazioni/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria/)
+- Pagina: [Diventa volontario](/diventa-volontario/)
+- [Dipartimento Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico)
+- [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/)
+
 ---
 
 *Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma esprime la propria vicinanza alle comunità abruzzesi colpite dal sisma del 2009 e a tutte le famiglie che ancora portano nel cuore quella notte.*

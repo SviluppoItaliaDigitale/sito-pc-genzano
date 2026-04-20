@@ -95,6 +95,13 @@ Il Ministero della Salute ha prodotto materiali informativi gratuiti, consultabi
 
 ## Per approfondire
 
+- Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
+- Articolo: [Festa della mamma: neonati e bambini in emergenza](/comunicazioni/2026-05-10-festa-mamma-neonati-bambini-emergenza/)
+- Articolo: [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/)
+- Articolo: [Malori estivi: riconoscere colpo di calore e ictus](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/)
+
+## Fonti
+
 - [Italian Resuscitation Council — Sezione pediatrica](https://www.ircouncil.it/)
 - [Ministero della Salute — Disostruzione pediatrica](https://www.salute.gov.it/)
 - [Società Italiana di Pediatria](https://sip.it/)

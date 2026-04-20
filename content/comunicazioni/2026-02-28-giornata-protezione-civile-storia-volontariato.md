@@ -131,10 +131,12 @@ Per informazioni, visita la sezione **Volontariato** del sito o contatta diretta
 
 ## Per approfondire
 
+- Articolo: [Donne nella Protezione Civile di Genzano](/comunicazioni/2026-03-08-donne-protezione-civile-genzano/)
+- Articolo: [25 aprile: il volontariato di Protezione Civile come impegno civico](/comunicazioni/2026-04-25-festa-liberazione-volontariato-civico/)
+- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
+- Articolo: [Nuovo logo della Protezione Civile](/comunicazioni/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano/)
+- Pagina: [Diventa volontario](/diventa-volontario/)
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 - [Codice della Protezione Civile (D.Lgs. 1/2018)](https://www.normattiva.it/)
-- Articolo: [Memoria di Giuseppe Zamberletti](/memoria-zamberletti/) *(sezione Memoria)*
-- Articolo: [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
-- Articolo: [Come diventare volontario](/volontariato/)
 
 Il 28 febbraio è la festa di chi protegge e di chi è protetto. Un giorno per dire: **il sistema siamo tutti noi**.

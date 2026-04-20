@@ -132,10 +132,12 @@ Ogni **tre mesi**:
 
 Se sei un volontario di recente ingresso, chiedi al coordinatore del tuo gruppo una **lista ufficiale** specifica per il gruppo e il ruolo. L'elenco di questo articolo è una base generale, non una disposizione operativa. Ogni gruppo può avere dotazioni e regole proprie.
 
-## Letture correlate
+## Per approfondire
 
-- [Giornata mondiale sicurezza sul lavoro](/comunicazioni/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari/)
-- [Primo maggio: dignità del lavoro e sicurezza](/comunicazioni/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile/)
-- Pagina [Diventa volontario](/diventa-volontario/)
+- Articolo: [Giornata mondiale sicurezza sul lavoro](/comunicazioni/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari/)
+- Articolo: [Primo maggio: dignità del lavoro e sicurezza](/comunicazioni/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile/)
+- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
+- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+- Pagina: [Diventa volontario](/diventa-volontario/)
 
 Uno zaino ben preparato fa il **lavoro prima** di arrivare sul luogo dell'attivazione. È una forma di disciplina personale che accompagna il ruolo e dà sicurezza alla squadra.

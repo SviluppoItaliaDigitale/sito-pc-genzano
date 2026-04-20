@@ -17,3 +17,10 @@ Sabato 4 aprile 2026, dalle ore 15:00, si tiene presso la sede operativa del Gru
 L'incontro serve a fare il punto sull'andamento operativo e organizzativo del Gruppo.
 
 La partecipazione è aperta a tutti i volontari iscritti.
+
+## Per approfondire
+
+- Articolo: [Attivazione squadre primavera: calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/)
+- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
+- Articolo: [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
+- Pagina: [Diventa volontario](/diventa-volontario/)

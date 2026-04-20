@@ -45,3 +45,10 @@ L'adozione di ActivePager garantisce:
 | **Personale** | Turni, Unità Cinofile, Formazione, Messaggi |
 | **Infrastruttura** | Checklist, Stato dei Veicoli |
 | **Gestione** | Statistiche e monitoraggio attività |
+
+## Per approfondire
+
+- Articolo: [Nuovo logo della Protezione Civile](/comunicazioni/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano/)
+- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
+- Articolo: [Attivazione squadre primavera: calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/)
+- Articolo: [Sicurezza della rete e cybersecurity in emergenza](/comunicazioni/2026-02-07-sicurezza-rete-cybersecurity-emergenza/)

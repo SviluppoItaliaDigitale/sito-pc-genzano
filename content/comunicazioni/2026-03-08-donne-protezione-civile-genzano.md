@@ -92,8 +92,10 @@ E **grazie** anche alle tante donne che, pur non essendo nel Gruppo, sostengono 
 
 ## Per approfondire
 
-- Articolo: [Come diventare volontario](/volontariato/)
 - Articolo: [La storia della Protezione Civile italiana](/comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/)
+- Articolo: [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)
+- Articolo: [Nuovo logo della Protezione Civile](/comunicazioni/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano/)
+- Pagina: [Diventa volontario](/diventa-volontario/)
 - [ONU Donne — Giornata Internazionale della donna](https://www.unwomen.org/)
 
 L'8 marzo è tutti i giorni. Per ogni volontaria: grazie. Il sistema, davvero, non funzionerebbe senza di voi.

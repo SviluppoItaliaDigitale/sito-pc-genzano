@@ -70,3 +70,11 @@ La sicurezza parte da te e dalla tua famiglia. Dedicare pochi minuti oggi può f
 ---
 
 *Crea il tuo Piano di Emergenza Familiare su [www.protezionecivilegenzano.it/piano-familiare](https://www.protezionecivilegenzano.it/piano-familiare/). È gratuito, anonimo e richiede pochi minuti.*
+
+## Per approfondire
+
+- Articolo: [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
+- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+- Articolo: [Giornata delle famiglie: il piano di emergenza insieme](/comunicazioni/2026-05-15-giornata-famiglie-piano-emergenza-insieme/)
+- Articolo: [Consapevolezza sull'autismo: emergenze inclusive](/comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/)
+- Pagina: [Piano familiare](/piano-familiare/)

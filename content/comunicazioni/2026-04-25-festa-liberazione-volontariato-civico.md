@@ -52,3 +52,11 @@ Nella pagina [Diventa volontario](/diventa-volontario/) trovi tutte le informazi
 Il 25 aprile non è solo ricordo del passato: è un impegno per il futuro. Ogni volta che un volontario mette in ordine un kit, segnala un fosso intasato, fa un'esercitazione, va in una scuola a parlare ai bambini, sta onorando quella stessa idea di cittadinanza attiva che la Liberazione ha reso possibile.
 
 **Buon 25 aprile.**
+
+## Per approfondire
+
+- Articolo: [Giornata Nazionale della Protezione Civile](/comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/)
+- Articolo: [Donne nella Protezione Civile di Genzano](/comunicazioni/2026-03-08-donne-protezione-civile-genzano/)
+- Articolo: [Festa del Lavoro: i DPI dei volontari](/comunicazioni/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile/)
+- Articolo: [Strage di Capaci: legalità e servizio pubblico](/comunicazioni/2026-05-23-strage-capaci-legalita-servizio-pubblico/)
+- Pagina: [Diventa volontario](/diventa-volontario/)

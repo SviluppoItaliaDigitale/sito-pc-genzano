@@ -78,6 +78,14 @@ Molti luoghi pubblici (scuole, palestre, stazioni, uffici comunali) sono dotati 
 
 Il sistema sanitario regionale e le associazioni di volontariato (Croce Rossa Italiana, ANPAS, Misericordie, IRC) organizzano **corsi BLS-D** (Basic Life Support e Defibrillazione) aperti a tutti. Sono corsi pratici, brevi (poche ore), che si possono ripetere periodicamente. Sono **la migliore forma di prevenzione personale e collettiva**.
 
+## Per approfondire
+
+- Articolo: [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/)
+- Articolo: [Malori estivi: riconoscere colpo di calore e ictus](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/)
+- Articolo: [Il Gruppo riceve un defibrillatore dalla Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/)
+- Articolo: [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/)
+- Articolo: [Giornata mondiale della Croce Rossa e Mezzaluna Rossa](/comunicazioni/2026-05-08-giornata-mondiale-croce-rossa-mezzaluna/)
+
 ## Fonti
 
 - [Italian Resuscitation Council (IRC)](https://www.ircouncil.it/)
