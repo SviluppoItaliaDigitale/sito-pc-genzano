@@ -10,8 +10,6 @@ sitemap:
   changefreq: daily
 ---
 
-{{< meteo-genzano >}}
-
 <div class="card border-warning mb-4">
 <div class="card-body bg-warning bg-opacity-10 p-4">
 <h2 class="h5 text-dark"><i class="bi bi-broadcast me-2" aria-hidden="true"></i>Stato allerta in tempo reale</h2>

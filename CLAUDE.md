@@ -92,7 +92,6 @@ These JSON/YAML files are the primary way to update dynamic site content without
 | `quick_links.yaml` | CTA buttons on the homepage hero |
 | `social_links.yaml` | Social channel links |
 | `codici_colore.yaml` | Color code descriptions for the Allerte Meteo page |
-| `meteo.json` | Meteo Genzano (temperatura, condizioni, previsione 3 giorni) — aggiornato ogni 3 ore dal workflow `aggiorna-meteo.yml` con dati Open-Meteo |
 
 ### Content (`content/`)
 
@@ -149,7 +148,6 @@ Custom theme, not an external dependency — edit freely. Structure:
 | `lighthouse-audit.yml` | Settimanale | Audit performance/accessibilità/SEO |
 | `update-bootstrap-italia.yml` | Mensile | Verifica aggiornamenti Bootstrap Italia |
 | `aggiorna-manuale.yml` | Settimanale (lunedì) | Confronta hash fonti AGID/Designers Italia, apre issue se cambiano |
-| `aggiorna-meteo.yml` | Ogni 3 ore | Aggiorna `data/meteo.json` da Open-Meteo per la card meteo |
 | `coerenza-docs.yml` | 1° del mese | Verifica coerenza interna tra CLAUDE.md, archetype, regole, badge |
 
 ## Key operational notes
