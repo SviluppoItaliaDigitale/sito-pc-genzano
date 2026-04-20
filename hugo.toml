@@ -155,7 +155,19 @@ enableGitInfo = true
 
 # Impostazioni di output
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS", "JSON", "BUILDINFO"]
+
+# Formato output per /build-info.js — timestamp della build Hugo
+# usato dalle pagine statiche (giochi, quizpc, formazionepc, ecc.)
+# tramite site-chrome.js per mostrare "Sito aggiornato il..." nella utility bar
+[mediaTypes."application/javascript"]
+  suffixes = ["js"]
+
+[outputFormats.BUILDINFO]
+  mediaType = "application/javascript"
+  baseName = "build-info"
+  isPlainText = true
+  notAlternative = true
 
 # Sitemap
 [sitemap]
