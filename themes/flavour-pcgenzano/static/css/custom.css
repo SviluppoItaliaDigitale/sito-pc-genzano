@@ -1188,3 +1188,27 @@ article .galleria img {
     margin-top: 2rem;
   }
 }
+
+/* Sticky sidebar: quando il contenuto supera il viewport, permette lo scroll
+   interno così tutte le voci restano raggiungibili. */
+@media (min-width: 992px) {
+  .sidebar-archivio.sticky-lg-top {
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #cfd6df transparent;
+    padding-right: 0.25rem;
+  }
+  .sidebar-archivio.sticky-lg-top::-webkit-scrollbar {
+    width: 8px;
+  }
+  .sidebar-archivio.sticky-lg-top::-webkit-scrollbar-thumb {
+    background: #cfd6df;
+    border-radius: 999px;
+  }
+  .sidebar-archivio.sticky-lg-top::-webkit-scrollbar-thumb:hover {
+    background: #9aa6b4;
+  }
+}
