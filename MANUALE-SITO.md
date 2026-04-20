@@ -114,6 +114,17 @@ Il badge determina il colore e l'etichetta visibile. Scegli in base al contenuto
 **Regola d'oro:** una sola categoria per articolo. Se è ambiguo, scegli la più **operativa**
 (quella che dice al lettore cosa fare).
 
+**Palette dei colori** (contrasto WCAG AA ≥ 4.5:1 su bianco). Ogni badge ha una tinta dedicata,
+applicata sia al tag dell'articolo sia al pulsante di filtro nella pagina di archivio:
+
+- Allerta `#d9364f` · Emergenza `#7f1d1d` · Avviso `#b45309` · Evento `#c026d3`
+- Comunicazione `#003366` · Radiocomunicazioni `#0369a1` · Informazione `#0284c7`
+- Prevenzione `#15803d` · Esercitazione `#ea580c` · Aggiornamento `#4338ca`
+- Formazione `#7c3aed` · Volontariato `#b45309` · Attività `#0891b2`
+
+Se crei un badge nuovo (non in lista), riceve un colore automatico deterministico da una palette
+accessibile di 16 tinte (vedi `themes/flavour-pcgenzano/layouts/partials/badge.html`).
+
 ### Passo 1.3 — Crea il file con Hugo
 
 Apri il terminale nella cartella del sito (`~/sito-pc-genzano`) e lancia:

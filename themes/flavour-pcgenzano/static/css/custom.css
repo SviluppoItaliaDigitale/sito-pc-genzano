@@ -284,16 +284,16 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   background: #546e7a;
   color: #fff;
 }
-.notizia-categoria.allerta { background: var(--pc-danger); }
-.notizia-categoria.avviso { background: #ffc107; color: #000; }
-.notizia-categoria.evento { background: var(--pc-accent); }
-.notizia-categoria.comunicazione { background: var(--pc-primary); }
-.notizia-categoria.radiocomunicazioni { background: #0277bd; }
-.notizia-categoria.prevenzione { background: #00897b; }
-.notizia-categoria.esercitazione { background: #e65100; }
-.notizia-categoria.aggiornamento { background: #5c6bc0; }
-.notizia-categoria.informazione { background: #2196f3; }
-.notizia-categoria.emergenza { background: var(--pc-danger); }
+.notizia-categoria.allerta { background: #d9364f; }
+.notizia-categoria.emergenza { background: #7f1d1d; }
+.notizia-categoria.avviso { background: #f59e0b; color: #000; }
+.notizia-categoria.evento { background: #c026d3; }
+.notizia-categoria.comunicazione { background: #003366; }
+.notizia-categoria.radiocomunicazioni { background: #0369a1; }
+.notizia-categoria.informazione { background: #0284c7; }
+.notizia-categoria.prevenzione { background: #15803d; }
+.notizia-categoria.esercitazione { background: #ea580c; }
+.notizia-categoria.aggiornamento { background: #4338ca; }
 .notizia-data { font-size: 0.78rem; color: #6c757d; }
 .notizia-titolo { font-size: 1.05rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.4rem; line-height: 1.35; }
 .notizia-titolo a { color: inherit; text-decoration: none; }
@@ -631,9 +631,9 @@ article .galleria img {
 }
 
 /* ── BADGE NOTIZIE — categorie aggiuntive ── */
-.notizia-categoria.formazione { background: #6f42c1; }
-.notizia-categoria.volontariato { background: var(--pc-accent); }
-.notizia-categoria.attività { background: #17a2b8; }
+.notizia-categoria.formazione { background: #7c3aed; }
+.notizia-categoria.volontariato { background: #b45309; }
+.notizia-categoria.attività { background: #0891b2; }
 
 /* ── PRINT MIGLIORATO ── */
 @media print {
@@ -960,10 +960,11 @@ article .galleria img {
    ============================================================ */
 
 .comunicazioni-archivio .filter-bar {
-  background: #f8f9fa;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
   border: 1px solid #e4e7ea;
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .comunicazioni-archivio .filter-label {
@@ -972,39 +973,88 @@ article .galleria img {
   font-size: 0.95rem;
 }
 
+/* Pill base: tono neutro, animazione di hover/active */
 .comunicazioni-archivio .filter-pill {
+  --pill-color: #475569;
+  --pill-tint: #f1f5f9;
   background: #ffffff;
-  color: #333;
-  border: 1.5px solid #d1d5db;
+  color: var(--pill-color);
+  border: 1.5px solid var(--pill-color);
   border-radius: 999px;
-  padding: 0.375rem 1rem;
+  padding: 0.42rem 1.05rem;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   cursor: pointer;
-  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.18s ease,
+              color 0.18s ease;
 }
 
 .comunicazioni-archivio .filter-pill:hover {
-  border-color: var(--pc-primary);
-  color: var(--pc-primary);
-  background: #f0f4f9;
+  background: var(--pill-tint);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+}
+
+.comunicazioni-archivio .filter-pill:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.1);
 }
 
 .comunicazioni-archivio .filter-pill.active {
-  background: var(--pc-primary);
-  border-color: var(--pc-primary);
+  background: var(--pill-color);
   color: #fff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
 }
 
 .comunicazioni-archivio .filter-pill:focus-visible {
   outline: 3px solid #ffb703;
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
+/* Varianti per ciascuna categoria: tinta e sfondo coerenti con il badge */
+.comunicazioni-archivio .filter-pill[data-filter="all"]              { --pill-color: #003366; --pill-tint: #e8eef5; }
+.comunicazioni-archivio .filter-pill[data-filter="allerta"]          { --pill-color: #d9364f; --pill-tint: #fdecef; }
+.comunicazioni-archivio .filter-pill[data-filter="emergenza"]        { --pill-color: #7f1d1d; --pill-tint: #fbeaea; }
+.comunicazioni-archivio .filter-pill[data-filter="avviso"]           { --pill-color: #b45309; --pill-tint: #fef3e2; }
+.comunicazioni-archivio .filter-pill[data-filter="evento"]           { --pill-color: #c026d3; --pill-tint: #fae8fc; }
+.comunicazioni-archivio .filter-pill[data-filter="comunicazione"]    { --pill-color: #003366; --pill-tint: #e8eef5; }
+.comunicazioni-archivio .filter-pill[data-filter="radiocomunicazioni"] { --pill-color: #0369a1; --pill-tint: #e3f1fa; }
+.comunicazioni-archivio .filter-pill[data-filter="informazione"]     { --pill-color: #0284c7; --pill-tint: #e3f2fb; }
+.comunicazioni-archivio .filter-pill[data-filter="prevenzione"]      { --pill-color: #15803d; --pill-tint: #e6f4ec; }
+.comunicazioni-archivio .filter-pill[data-filter="esercitazione"]    { --pill-color: #ea580c; --pill-tint: #fdecde; }
+.comunicazioni-archivio .filter-pill[data-filter="aggiornamento"]    { --pill-color: #4338ca; --pill-tint: #ebeafa; }
+.comunicazioni-archivio .filter-pill[data-filter="formazione"]       { --pill-color: #7c3aed; --pill-tint: #f1ebfd; }
+.comunicazioni-archivio .filter-pill[data-filter="volontariato"]     { --pill-color: #b45309; --pill-tint: #fef3e2; }
+.comunicazioni-archivio .filter-pill[data-filter="attività"]         { --pill-color: #0891b2; --pill-tint: #def5f9; }
+
 .comunicazioni-archivio .filter-count {
-  opacity: 0.7;
-  font-weight: 400;
-  margin-left: 0.25rem;
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.comunicazioni-archivio .filter-pill:not(.active) .filter-count {
+  background: rgba(15, 23, 42, 0.06);
+  border-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .comunicazioni-archivio .filter-pill,
+  .comunicazioni-archivio .filter-pill:hover,
+  .comunicazioni-archivio .filter-pill:active {
+    transition: none;
+    transform: none;
+  }
 }
 
 .comunicazioni-archivio .archivio-mese {
@@ -1026,9 +1076,16 @@ article .galleria img {
 }
 
 .comunicazioni-archivio .archivio-mese-count {
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: #6c757d;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--pc-primary);
+  background: #e8eef5;
+  border: 1px solid #cfdae8;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  line-height: 1.3;
+  white-space: nowrap;
 }
 
 .comunicazioni-archivio .notizia-img-wrapper {
@@ -1117,11 +1174,13 @@ article .galleria img {
   background: var(--pc-primary);
   color: #fff;
   font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.15rem 0.5rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
   border-radius: 999px;
   min-width: 2rem;
   text-align: center;
+  margin-left: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 51, 102, 0.2);
 }
 
 @media (max-width: 991.98px) {

@@ -59,7 +59,27 @@ Ogni articolo deve avere tutti i campi previsti dall'archetipo:
 - `title`: titolo chiaro e informativo
 - `date`: formato AAAA-MM-GG
 - `description`: breve sommario (massimo 160 caratteri, utile anche per SEO)
-- `badge`: Allerta | Avviso | Comunicazione | Attività | Formazione | Evento | Volontariato | Radiocomunicazioni | Prevenzione | Esercitazione | Aggiornamento | Informazione | Emergenza (categorie nuove ricevono colore automatico)
+- `badge`: Allerta | Avviso | Comunicazione | Attività | Formazione | Evento | Volontariato | Radiocomunicazioni | Prevenzione | Esercitazione | Aggiornamento | Informazione | Emergenza (categorie nuove ricevono colore automatico da palette in `themes/flavour-pcgenzano/layouts/partials/badge.html`)
+
+**Palette ufficiale delle categorie** (contrasto WCAG AA ≥ 4.5:1 su bianco):
+
+| Categoria | Hex | Note |
+|---|---|---|
+| Allerta | `#d9364f` | Rosso allerta — richiede attenzione immediata |
+| Emergenza | `#7f1d1d` | Rosso scuro — evento in corso di gravità massima |
+| Avviso | `#b45309` | Ambra scuro — segnalazione operativa non urgente |
+| Evento | `#c026d3` | Magenta — iniziativa pubblica |
+| Comunicazione | `#003366` | Blu istituzionale — informazione ordinaria |
+| Radiocomunicazioni | `#0369a1` | Blu radio — attività HF/VHF/UHF |
+| Informazione | `#0284c7` | Azzurro — notizia di servizio |
+| Prevenzione | `#15803d` | Verde — contenuti di auto-protezione |
+| Esercitazione | `#ea580c` | Arancione — addestramento operativo |
+| Aggiornamento | `#4338ca` | Indaco — stato avanzamento |
+| Formazione | `#7c3aed` | Viola — corsi e didattica |
+| Volontariato | `#b45309` | Ambra scuro — reclutamento e attività volontari |
+| Attività | `#0891b2` | Turchese — operatività ordinaria |
+
+Queste tinte sono applicate in `custom.css` in due gruppi coordinati: le classi `.notizia-categoria.<categoria>` (badge nelle card) e i selettori `.filter-pill[data-filter="<categoria>"]` (pulsanti filtro nell'archivio). Qualsiasi modifica alla palette va replicata in **entrambi** i gruppi per mantenere la coerenza visiva.
 - `priorita`: normale | urgente
 - `autore`: "Gruppo Comunale Volontari PC Genzano" (default)
 - `image`: percorso immagine o stringa vuota
