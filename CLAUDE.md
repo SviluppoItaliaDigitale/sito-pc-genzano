@@ -96,7 +96,7 @@ These JSON/YAML files are the primary way to update dynamic site content without
 ### Content (`content/`)
 
 - `comunicazioni/` — News posts. Use the archetype: `hugo new comunicazioni/YYYY-MM-DD-titolo.md`
-  - Key front matter: `badge` (Allerta/Avviso/Comunicazione/Attività/Formazione/Evento/Volontariato), `priorita` (normale/urgente), `scadenza` (date), `allegati` (list of PDFs), `draft`
+  - Key front matter: `badge` (Allerta | Avviso | Comunicazione | Attività | Formazione | Evento | Volontariato | Radiocomunicazioni | Prevenzione | Esercitazione | Aggiornamento | Informazione | Emergenza — le categorie non in elenco ricevono un colore automatico), `priorita` (normale/urgente), `scadenza` (date), `allegati` (list of PDFs), `draft`
   - **IMPORTANTE**: nel frontmatter degli articoli usare sempre il formato data semplice `AAAA-MM-GG` (esempio: `2026-04-06`), MAI il formato con orario e timezone (esempio: `2026-04-06T03:32:00Z`). Il formato con timezone causa problemi di pubblicazione.
 - All other folders are static pages (one `_index.md` per section)
 
@@ -132,9 +132,23 @@ Custom theme, not an external dependency — edit freely. Structure:
 
 5. **AGGIORNAMENTO**: le linee guida AGID sono in continuo aggiornamento. Verificare periodicamente il manuale su designers.italia.it per eventuali novità.
 
-6. **MANUALE DI STILE**: il file `MANUALE-SITO.md` nella root del progetto contiene il manuale operativo completo con: template articoli, regole di scrittura AGID integrate, specifiche immagini (fascia blu), checklist pre-pubblicazione. È il riferimento unico per la redazione dei contenuti, anche da parte di AI esterne.
+6. **MANUALE DI STILE**: il file `MANUALE-SITO.md` nella root del progetto contiene il manuale operativo completo (v2.0) con: procedura passo-passo per articoli, regole AGID integrate, specifiche immagini (fascia blu), procedura pagine, checklist pre-pubblicazione e procedura di aggiornamento automatico settimanale. È il riferimento unico per la redazione dei contenuti, anche da parte di AI esterne.
 
 7. **IMMAGINI**: ogni immagine di copertina deve avere la fascia blu istituzionale (#003366) con logo e testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari — Genzano di Roma". Formato WebP, 1200px, max 200 KB. Specifiche complete in `MANUALE-SITO.md` Parte 3.
+
+8. **PIANO EDITORIALE**: il file `PIANO-EDITORIALE.md` elenca le fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, Comune) e il calendario redazionale mensile. Usalo per proporre nuovi articoli coerenti con la strategia (2-4 al mese).
+
+## Automazioni periodiche (GitHub Actions)
+
+| Workflow | Frequenza | Scopo |
+|---|---|---|
+| `deploy.yml` | Ogni push su `main` | Build Hugo + deploy Aruba (FTP) + GitHub Pages |
+| `check-allerta.yml` | Orario | Verifica stato allerta meteo Regione Lazio |
+| `check-normativa-links.yml` | 1° del mese | Verifica raggiungibilità link normativi |
+| `lighthouse-audit.yml` | Settimanale | Audit performance/accessibilità/SEO |
+| `update-bootstrap-italia.yml` | Mensile | Verifica aggiornamenti Bootstrap Italia |
+| `aggiorna-manuale.yml` | Settimanale (lunedì) | Confronta hash fonti AGID/Designers Italia, apre issue se cambiano |
+| `coerenza-docs.yml` | 1° del mese | Verifica coerenza interna tra CLAUDE.md, archetype, regole, badge |
 
 ## Key operational notes
 

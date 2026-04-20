@@ -4,7 +4,9 @@ date: {{ .Date }}
 description: ""
 
 # ── TIPO DI COMUNICAZIONE ──
-# Badge visivo: Allerta | Avviso | Comunicazione | Attività | Formazione | Evento | Volontariato
+# Badge visivo (13 categorie con colore dedicato — altre categorie ricevono un colore automatico):
+# Allerta | Avviso | Comunicazione | Attività | Formazione | Evento | Volontariato |
+# Radiocomunicazioni | Prevenzione | Esercitazione | Aggiornamento | Informazione | Emergenza
 badge: "Comunicazione"
 
 # ── PRIORITÀ ──
@@ -17,7 +19,10 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 
 # ── IMMAGINE ──
 # Percorso immagine di copertina (opzionale)
-# Es: /images/nome-immagine.jpg
+# Formato: WebP, 1200px larghezza, max 200 KB
+# Deve includere la fascia blu istituzionale (#003366) con logo + testo ufficiale
+# Specifiche complete: MANUALE-SITO.md — Parte 3
+# Es: /images/2026-04-20-titolo.webp
 image: ""
 
 # ── SCADENZA ──
