@@ -157,6 +157,38 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 
 /* ── SEZIONI ── */
 .servizi-section { background: var(--pc-light-bg); padding: 3.5rem 0; }
+.meteo-section { background: #fff; padding: 3rem 0; }
+.meteo-section .servizio-icon { font-size: 2rem; }
+.meteo-etichetta {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--pc-primary);
+  background: rgba(0,51,102,0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+.meteo-etichetta-attuale {
+  background: var(--pc-primary);
+  color: #fff;
+}
+.meteo-temp {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--pc-primary);
+  margin: 0 0 0.25rem 0;
+}
+.meteo-temp-range {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--pc-primary);
+  margin: 0 0 0.5rem 0;
+}
+.meteo-temp-range .meteo-min { color: #6c757d; font-weight: 400; }
+.meteo-temp-range .meteo-sep { color: #adb5bd; }
 .section-title {
   font-size: 1.6rem;
   font-weight: 700;

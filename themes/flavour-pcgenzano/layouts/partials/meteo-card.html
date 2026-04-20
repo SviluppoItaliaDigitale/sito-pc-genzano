@@ -1,0 +1,64 @@
+{{/* Meteo Genzano — alimentato da data/meteo.json (workflow aggiorna-meteo.yml, ogni 3 ore)
+     Fonte: Open-Meteo. Per allerte ufficiali: Centro Funzionale Regione Lazio. */}}
+{{ $meteo := .Site.Data.meteo }}
+{{ if and $meteo $meteo.attuale }}
+<section class="meteo-section fade-in-up" aria-labelledby="meteo-heading">
+  <div class="container">
+    <h2 id="meteo-heading" class="section-title text-center">Meteo Genzano di Roma</h2>
+    <p class="text-center text-muted small mb-4">
+      Aggiornato {{ dateFormat "il 2 gennaio 2006 alle 15:04" $meteo.aggiornamento }} &middot;
+      fonte: <a href="{{ $meteo.fonte_url }}" target="_blank" rel="noopener noreferrer">{{ $meteo.fonte }}</a>.<br>
+      Per le allerte ufficiali consulta il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regione Lazio</a>.
+    </p>
+    <div class="row mt-4">
+
+      {{/* Card: condizioni attuali */}}
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card card-servizio card-meteo shadow-sm h-100">
+          <div class="card-body text-center p-4">
+            <span class="meteo-etichetta meteo-etichetta-attuale">Adesso</span>
+            <div class="servizio-icon {{ $meteo.attuale.colore }}">
+              <i class="bi {{ $meteo.attuale.icona }}" aria-hidden="true"></i>
+            </div>
+            <h3 class="meteo-temp">{{ $meteo.attuale.temperatura }}&deg;C</h3>
+            <p class="text-muted small mb-2">Percepita {{ $meteo.attuale.temperatura_percepita }}&deg;C</p>
+            <p class="fw-bold mb-2">{{ $meteo.attuale.condizione }}</p>
+            <p class="text-muted small mb-0">
+              <i class="bi bi-droplet" aria-hidden="true"></i>&nbsp;{{ $meteo.attuale.umidita }}%
+              &middot;
+              <i class="bi bi-wind" aria-hidden="true"></i>&nbsp;{{ $meteo.attuale.vento_kmh }}&nbsp;km/h
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {{/* Card: previsione 3 giorni */}}
+      {{ range $meteo.previsione }}
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card card-servizio card-meteo shadow-sm h-100">
+          <div class="card-body text-center p-4">
+            <span class="meteo-etichetta">{{ .giorno }}</span>
+            <div class="servizio-icon {{ .colore }}">
+              <i class="bi {{ .icona }}" aria-hidden="true"></i>
+            </div>
+            <h3 class="meteo-temp-range">
+              <span class="meteo-max">{{ .temp_max }}&deg;</span>
+              <span class="meteo-sep" aria-hidden="true"> / </span>
+              <span class="meteo-min">{{ .temp_min }}&deg;</span>
+              <span class="visually-hidden">Massima {{ .temp_max }} gradi, minima {{ .temp_min }} gradi</span>
+            </h3>
+            <p class="fw-bold mb-2">{{ .condizione }}</p>
+            <p class="text-muted small mb-0">
+              <i class="bi bi-cloud-rain" aria-hidden="true"></i>&nbsp;{{ .precip_prob }}% pioggia
+              &middot;
+              <i class="bi bi-wind" aria-hidden="true"></i>&nbsp;{{ .vento_max_kmh }}&nbsp;km/h
+            </p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+</section>
+{{ end }}

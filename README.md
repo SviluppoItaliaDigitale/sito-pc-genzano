@@ -115,6 +115,7 @@ bash ~/gestione-sito.sh
 | `lighthouse-audit.yml` | Settimanale | Audit performance/accessibilità/SEO |
 | `update-bootstrap-italia.yml` | Mensile | Verifica aggiornamenti Bootstrap Italia |
 | `aggiorna-manuale.yml` | Settimanale (lunedì) | Confronta hash fonti AGID/Designers Italia, apre issue se cambiano |
+| `aggiorna-meteo.yml` | Ogni 3 ore | Aggiorna `data/meteo.json` da Open-Meteo per la card meteo in homepage |
 | `coerenza-docs.yml` | 1° del mese | Verifica coerenza interna tra CLAUDE.md, archetype, regole, badge |
 
 Le issue generate automaticamente compaiono nella [tab Issues](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/issues) con label `manutenzione`, `documentazione`, `link-rotti`, ecc.
