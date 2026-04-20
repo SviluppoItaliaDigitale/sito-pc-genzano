@@ -5,7 +5,7 @@ description: "Dopo l'intervento per l'incendio del Parco del Vesuvio e un vasto 
 badge: "Allerta"
 priorita: "urgente"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2025-08-16-volontari-in-allerta.webp"
 scadenza: ""
 area: "Territorio comunale di Genzano di Roma"
 allegati: []

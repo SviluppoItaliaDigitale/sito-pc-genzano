@@ -5,8 +5,8 @@ description: "Il Lazio e suddiviso in sei zone di allerta. Sapere in quale zona 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-07-zone-allerta-lazio-come-leggere-bollettino.webp"
+image_alt: "Cover dell'articolo: Le zone di allerta del Lazio: come leggere il bollettino di criticita"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

@@ -5,8 +5,8 @@ description: "Bombe d'acqua e piogge intense possono causare allagamenti anche i
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa.webp"
+image_alt: "Cover dell'articolo: Allagamenti urbani: cosa fare se l'acqua entra in casa"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

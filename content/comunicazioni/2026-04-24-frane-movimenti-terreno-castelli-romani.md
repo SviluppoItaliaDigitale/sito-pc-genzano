@@ -5,8 +5,8 @@ description: "Il territorio dei Castelli Romani ha caratteristiche geologiche pa
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-04-24-frane-movimenti-terreno-castelli-romani.webp"
+image_alt: "Cover dell'articolo: Frane e movimenti del terreno: cosa succede sotto i Castelli Romani"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

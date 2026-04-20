@@ -5,8 +5,8 @@ description: "Un kit pensato per neonati e bambini piccoli fa la differenza in u
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-10-festa-mamma-neonati-bambini-emergenza.webp"
+image_alt: "Cover dell'articolo: Festa della Mamma: un piano di emergenza per chi ha neonati e bambini piccoli"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

@@ -5,8 +5,8 @@ description: "Non sostituisce un corso, ma conoscere poche regole essenziali puo
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-04-29-primo-soccorso-cinque-regole-base.webp"
+image_alt: "Cover dell'articolo: Primo soccorso: le cinque regole di base che tutti dovrebbero sapere"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

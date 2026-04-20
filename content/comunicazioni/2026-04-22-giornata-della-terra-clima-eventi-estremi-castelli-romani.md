@@ -5,8 +5,8 @@ description: "Il 22 aprile si celebra la Giornata della Terra. Per la Protezione
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani.webp"
+image_alt: "Cover dell'articolo: Giornata della Terra: il clima che cambia e i rischi sul nostro territorio"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

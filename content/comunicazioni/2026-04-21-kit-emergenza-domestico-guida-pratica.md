@@ -5,8 +5,8 @@ description: "Una guida pratica per preparare lo zaino di emergenza per la famig
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-04-21-kit-emergenza-domestico-guida-pratica.webp"
+image_alt: "Cover dell'articolo: Il kit di emergenza domestico: cosa mettere e dove tenerlo"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

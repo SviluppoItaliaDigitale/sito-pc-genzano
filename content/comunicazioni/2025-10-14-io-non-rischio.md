@@ -5,7 +5,7 @@ description: "I volontari del Gruppo in Piazza Tommaso Frasconi per la campagna 
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2025-10-14-io-non-rischio.webp"
 scadenza: ""
 area: "Piazza Tommaso Frasconi, Genzano di Roma"
 allegati: []

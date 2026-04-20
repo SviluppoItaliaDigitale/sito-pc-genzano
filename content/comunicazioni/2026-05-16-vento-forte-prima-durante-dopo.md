@@ -5,8 +5,8 @@ description: "Raffiche improvvise possono causare danni anche seri: alberi cadut
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-16-vento-forte-prima-durante-dopo.webp"
+image_alt: "Cover dell'articolo: Vento forte: cosa fare prima, durante e dopo"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

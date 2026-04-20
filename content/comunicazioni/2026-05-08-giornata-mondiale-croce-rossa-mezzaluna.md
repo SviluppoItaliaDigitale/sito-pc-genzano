@@ -5,8 +5,8 @@ description: "Il movimento nato da Henry Dunant unisce 192 Paesi nel soccorso e 
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-08-giornata-mondiale-croce-rossa-mezzaluna.webp"
+image_alt: "Cover dell'articolo: 8 maggio: Giornata mondiale della Croce Rossa e della Mezzaluna Rossa"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

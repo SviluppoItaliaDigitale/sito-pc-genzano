@@ -6,7 +6,7 @@ description: "La Rete Zamberletti: frequenze HF e VHF dei radioamatori per le em
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/zamberletti-protezione-civile-genzano.webp"
+image: "/images/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1.webp"
 scadenza: ""
 area: "Territorio nazionale"
 allegati: []

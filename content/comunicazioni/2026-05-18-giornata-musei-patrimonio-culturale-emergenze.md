@@ -5,8 +5,8 @@ description: "Terremoti, alluvioni, incendi: anche il patrimonio artistico e cul
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-18-giornata-musei-patrimonio-culturale-emergenze.webp"
+image_alt: "Cover dell'articolo: 18 maggio: Giornata dei Musei e tutela del patrimonio in emergenza"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

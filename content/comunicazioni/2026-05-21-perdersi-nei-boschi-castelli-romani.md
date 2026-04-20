@@ -5,8 +5,8 @@ description: "I boschi dei Castelli Romani sono splendidi e frequentati. Come pi
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-21-perdersi-nei-boschi-castelli-romani.webp"
+image_alt: "Cover dell'articolo: Perdersi in bosco: come evitarlo e cosa fare se succede"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

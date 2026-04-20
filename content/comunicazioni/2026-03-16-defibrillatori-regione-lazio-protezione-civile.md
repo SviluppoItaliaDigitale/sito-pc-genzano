@@ -5,7 +5,7 @@ description: "La Regione Lazio ha consegnato 100 defibrillatori alle associazion
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-03-16-defibrillatori-regione-lazio-protezione-civile.webp"
 scadenza: ""
 area: "Sede della Regione Lazio, Roma"
 allegati: []

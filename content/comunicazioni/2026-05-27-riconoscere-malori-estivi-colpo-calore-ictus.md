@@ -5,8 +5,8 @@ description: "D'estate i malori sono piu frequenti. Distinguere colpo di calore,
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus.webp"
+image_alt: "Cover dell'articolo: Malori estivi: come riconoscere colpo di calore, ictus, infarto"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

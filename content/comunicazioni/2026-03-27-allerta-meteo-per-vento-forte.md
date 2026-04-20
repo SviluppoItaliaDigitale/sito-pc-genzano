@@ -5,7 +5,7 @@ description: "È in vigore un'allerta meteo per vento forte sul territorio di Ge
 badge: "Allerta"
 priorita: "urgente"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-03-27-allerta-meteo-per-vento-forte.webp"
 scadenza: ""
 area: "Territorio comunale di Genzano di Roma"
 allegati: []

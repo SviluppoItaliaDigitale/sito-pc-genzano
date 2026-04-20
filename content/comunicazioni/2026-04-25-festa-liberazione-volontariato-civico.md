@@ -5,8 +5,8 @@ description: "La Festa della Liberazione ricorda i valori della Costituzione: so
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-04-25-festa-liberazione-volontariato-civico.webp"
+image_alt: "Cover dell'articolo: 25 aprile: il volontariato di Protezione Civile come impegno civico"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

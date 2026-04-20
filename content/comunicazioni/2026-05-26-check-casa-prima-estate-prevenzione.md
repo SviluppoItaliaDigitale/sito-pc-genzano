@@ -5,8 +5,8 @@ description: "Prima che arrivi il caldo vero, un pomeriggio dedicato a una verif
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-26-check-casa-prima-estate-prevenzione.webp"
+image_alt: "Cover dell'articolo: Check-list casa prima dell'estate: cosa verificare"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

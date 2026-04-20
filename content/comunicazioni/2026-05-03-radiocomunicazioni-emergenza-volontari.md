@@ -5,8 +5,8 @@ description: "Quando telefono e internet cadono, restano le radio. Il ruolo dell
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-03-radiocomunicazioni-emergenza-volontari.webp"
+image_alt: "Cover dell'articolo: Radio in emergenza: perche sono ancora fondamentali per la Protezione Civile"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

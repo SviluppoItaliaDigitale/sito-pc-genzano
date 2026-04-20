@@ -6,7 +6,7 @@ description: "Il portale Abili a proteggere del Dipartimento della Protezione Ci
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere.webp"
 scadenza: ""
 area: "Comune di Genzano di Roma"
 allegati: []

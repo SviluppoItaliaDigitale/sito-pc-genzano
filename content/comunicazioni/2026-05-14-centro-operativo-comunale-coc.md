@@ -5,8 +5,8 @@ description: "Quando l'emergenza arriva, il Sindaco attiva il COC. Cos'e, come f
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-14-centro-operativo-comunale-coc.webp"
+image_alt: "Cover dell'articolo: Il Centro Operativo Comunale (COC): il cuore della Protezione Civile locale"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

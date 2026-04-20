@@ -5,7 +5,7 @@ description: "Sabato 4 aprile 2026 si tiene in sede l'assemblea dei volontari pe
 badge: "Avviso"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-04-01-assemblea-dei-volontari.webp"
 scadenza: ""
 area: "Sede operativa, Genzano di Roma"
 allegati: []

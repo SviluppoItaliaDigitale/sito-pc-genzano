@@ -5,8 +5,8 @@ description: "Estate e stagione di escursioni. Preparazione, equipaggiamento, co
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-30-escursioni-estive-sicurezza-montagna-castelli.webp"
+image_alt: "Cover dell'articolo: Escursioni estive: sicurezza in montagna e nei sentieri"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

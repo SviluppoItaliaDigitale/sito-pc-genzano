@@ -5,7 +5,7 @@ description: "Il Gruppo adotta ActivePager, una piattaforma digitale per il coor
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-04-04-nuovo-gestionale.webp"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

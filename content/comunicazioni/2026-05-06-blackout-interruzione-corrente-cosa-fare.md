@@ -5,8 +5,8 @@ description: "Un'interruzione di corrente puo durare minuti, ore o giorni. Come 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-06-blackout-interruzione-corrente-cosa-fare.webp"
+image_alt: "Cover dell'articolo: Blackout: cosa fare quando salta la corrente (anche per ore o giorni)"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

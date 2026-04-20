@@ -5,8 +5,8 @@ description: "La Giornata mondiale delle telecomunicazioni ricorda quanto la con
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-17-giornata-mondiale-telecomunicazioni.webp"
+image_alt: "Cover dell'articolo: 17 maggio: Giornata mondiale delle telecomunicazioni e il ruolo in emergenza"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

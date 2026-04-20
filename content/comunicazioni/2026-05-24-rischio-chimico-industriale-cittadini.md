@@ -5,8 +5,8 @@ description: "Incidenti in impianti, fughe di sostanze, trasporto di materiali p
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/notizia-default.svg"
-image_alt: ""
+image: "/images/2026-05-24-rischio-chimico-industriale-cittadini.webp"
+image_alt: "Cover dell'articolo: Rischio chimico e industriale: cosa deve sapere un cittadino"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
