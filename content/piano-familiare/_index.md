@@ -120,8 +120,8 @@ Un piano familiare efficace risponde a tre domande:
 <div id="piano-contenuto"></div>
 <div class="piano-numeri text-center mt-4 p-3">
 <strong>Numeri di Emergenza</strong><br>
-<strong>112</strong> Numero Unico Emergenze &mdash; <strong>115</strong> Vigili del Fuoco &mdash; <strong>118</strong> Emergenza Sanitaria<br>
-<strong>803 555</strong> Protezione Civile Lazio &mdash; <strong>1515</strong> Incendi Boschivi<br>
+<strong>112</strong> Numero Unico Emergenze (NUE) &mdash; valido nel Lazio per qualsiasi emergenza<br>
+<strong>803 555</strong> Sala Operativa Protezione Civile Lazio &mdash; segnalazioni non urgenti<br>
 <small class="text-muted">Conservare in un luogo accessibile a tutti i familiari. Aggiornare almeno una volta all'anno.</small>
 </div>
 <div id="piano-print-appendice"></div>

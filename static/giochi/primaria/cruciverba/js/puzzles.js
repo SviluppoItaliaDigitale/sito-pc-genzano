@@ -75,7 +75,7 @@ window.CRUCIVERBA_PUZZLES = {
         { n: 7,  dir: 'D', row: 0, col: 6, answer: 'ZAINO', clue: 'Lo prepari con acqua, torcia e documenti' },
         { n: 8,  dir: 'D', row: 0, col: 7, answer: 'IDEA', clue: 'Soluzione che ti viene in mente' },
         { n: 9,  dir: 'D', row: 0, col: 8, answer: 'ORSO', clue: 'Animale che vive nei boschi' },
-        { n: 10, dir: 'D', row: 0, col: 9, answer: 'NUMERI', clue: 'Quelli di emergenza: 112, 115, 118...' },
+        { n: 10, dir: 'D', row: 0, col: 9, answer: 'NUMERI', clue: 'Nel Lazio quello unico di emergenza e il 112' },
         { n: 11, dir: 'D', row: 0, col: 10, answer: 'ESCA', clue: 'Attrae gli animali o accende il fuoco' }
       ]
     },

@@ -40,10 +40,10 @@ Il percorso si articola in **3 o 4 incontri da 30 minuti** ciascuno, da svolgere
 
 ### Concetti chiave (per il docente)
 
-- I **vigili del fuoco** (il 115) spengono gli incendi e ci tirano fuori dai pericoli
-- L'**ambulanza** (il 118) porta i dottori quando qualcuno sta male
+- I **vigili del fuoco** spengono gli incendi e ci tirano fuori dai pericoli
+- L'**ambulanza** porta i dottori quando qualcuno sta male
 - I **volontari della Protezione Civile** aiutano le persone durante le emergenze: portano coperte, acqua e cibo, e aiutano a trovare posti sicuri
-- Il **numero da ricordare** è il **112**: funziona per tutte le emergenze
+- Il **numero da ricordare è uno solo**: il **112**. Nel Lazio chiami il 112 per qualsiasi emergenza e ti mandano l'aiuto giusto (vigili del fuoco, ambulanza, carabinieri)
 
 ### Attività: il cerchio degli aiutanti
 
@@ -142,7 +142,7 @@ Regole semplici:
 - Non toccare mai fiammiferi, accendini o candele
 - Se vedi del fumo, dillo subito a un adulto
 - Se suona l'allarme antincendio, segui la fila di evacuazione come abbiamo imparato
-- I vigili del fuoco (115) sono gli esperti che spengono gli incendi
+- I vigili del fuoco sono gli esperti che spengono gli incendi: per chiamarli basta il 112
 
 ### Attività: semaforo del pericolo
 

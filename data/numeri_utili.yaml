@@ -1,35 +1,25 @@
 # Numeri di Emergenza e Utili
 # Usati in: homepage, contatti, footer, pagine rischio
+#
+# Nel Lazio, dal 2017, l'unico numero di emergenza per il cittadino è il 112 (NUE).
+# Le vecchie linee 115 (Vigili del Fuoco), 118 (Emergenza sanitaria) e 1515 (incendi
+# boschivi) non sono più il riferimento per chi chiama: tutte le chiamate passano
+# dalla Centrale Unica del NUE 112, che smista l'intervento all'ente competente.
 
 emergenza:
   - numero: "112"
     nome: "Numero Unico Emergenza (NUE)"
-    descrizione: "Per qualsiasi emergenza: sanitaria, ordine pubblico, incendi"
+    descrizione: "Unico numero per qualsiasi emergenza nel Lazio: sanitaria, ordine pubblico, incendi, soccorso tecnico"
     icona: "bi-telephone-fill"
     principale: true
 
   - numero: "803 555"
     nome: "Sala Operativa Protezione Civile Lazio"
-    descrizione: "Per segnalazioni e informazioni su emergenze regionali"
+    descrizione: "Numero verde per segnalazioni non urgenti e informazioni su emergenze regionali"
     icona: "bi-shield-fill"
     principale: true
 
 utili:
-  - numero: "115"
-    nome: "Vigili del Fuoco"
-    descrizione: "Incendi, soccorso tecnico urgente"
-    icona: "bi-fire"
-
-  - numero: "118"
-    nome: "Emergenza Sanitaria"
-    descrizione: "Soccorso sanitario urgente"
-    icona: "bi-heart-pulse"
-
-  - numero: "1515"
-    nome: "Emergenza Ambientale"
-    descrizione: "Incendi boschivi e emergenze ambientali"
-    icona: "bi-tree"
-
   - numero: "1530"
     nome: "Guardia Costiera"
     descrizione: "Emergenze in mare e sui laghi"

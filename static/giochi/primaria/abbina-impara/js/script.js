@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Numeri di emergenza', icon: '\uD83D\uDCDE',
             pairs: [
-                { left: '112', right: 'Numero unico di emergenza' },
-                { left: '115', right: 'Vigili del Fuoco' },
-                { left: '118', right: 'Emergenza sanitaria' },
-                { left: '1515', right: 'Incendi boschivi' },
-                { left: '803 555', right: 'Sala Operativa PC Lazio' },
-                { left: '112 (Europa)', right: 'Funziona in tutta Europa' }
+                { left: '112', right: 'Numero unico di emergenza nel Lazio' },
+                { left: '803 555', right: 'Sala Operativa Protezione Civile Lazio' },
+                { left: 'Chiamata al 112', right: 'Gratis, senza credito, da qualsiasi telefono' },
+                { left: '112 in Europa', right: 'Stesso numero in tutti i Paesi europei' },
+                { left: 'Cosa dire al 112', right: 'Cosa succede, dove sei, chi ha bisogno di aiuto' },
+                { left: 'Chiamata per scherzo', right: 'E un reato e toglie aiuto a chi ne ha davvero bisogno' }
             ]
         },
         {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pairs: [
                 { left: 'Terremoto', right: 'Riparati sotto un tavolo, proteggiti la testa' },
                 { left: 'Alluvione', right: 'Sali ai piani alti, non scendere in cantina' },
-                { left: 'Incendio boschivo', right: 'Chiama il 1515 e allontanati' },
+                { left: 'Incendio boschivo', right: 'Chiama il 112 e allontanati dal fuoco' },
                 { left: 'Temporale con fulmini', right: 'Entra in un edificio, stai lontano dagli alberi' },
                 { left: 'Ondata di calore', right: 'Bevi molto, resta all\'ombra dalle 11 alle 17' },
                 { left: 'Fuga di gas', right: 'Apri le finestre, esci, non toccare interruttori' }

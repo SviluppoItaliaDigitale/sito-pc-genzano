@@ -44,12 +44,14 @@ La Protezione Civile non è solo un ufficio o un gruppo di persone. È un **sist
 
 | Chi | Cosa fa |
 |---|---|
-| **Vigili del Fuoco** (115) | Spengono incendi, salvano persone in pericolo, intervengono in caso di crolli |
-| **Soccorso sanitario** (118) | Portano medici e infermieri dove servono |
-| **Forze dell'ordine** (112) | Gestiscono la sicurezza e aiutano nell'evacuazione |
+| **Vigili del Fuoco** | Spengono incendi, salvano persone in pericolo, intervengono in caso di crolli |
+| **Soccorso sanitario** | Portano medici e infermieri dove servono |
+| **Forze dell'ordine** | Gestiscono la sicurezza e aiutano nell'evacuazione |
 | **Volontari di Protezione Civile** | Aiutano la popolazione durante le emergenze: distribuiscono acqua e cibo, montano tende, assistono le persone fragili |
 | **Sindaco** | È la prima autorità di protezione civile nel comune |
 | **Prefetto, Regione, Stato** | Coordinano le emergenze più gravi |
+
+Nel Lazio **tutte** queste emergenze si chiamano componendo un solo numero: il **112** (Numero Unico Europeo). La centrale del 112 capisce di che aiuto hai bisogno e invia subito chi serve.
 
 **A Genzano di Roma** esiste un Gruppo Comunale di Volontari di Protezione Civile che opera sul territorio dei Castelli Romani. I volontari sono cittadini comuni che dedicano il loro tempo libero alla sicurezza della comunità.
 
@@ -57,12 +59,12 @@ La Protezione Civile non è solo un ufficio o un gruppo di persone. È un **sist
 
 Leggi le situazioni e chiedi alla classe chi bisogna chiamare:
 
-1. C'è un incendio nel bosco vicino a casa → **115** (Vigili del Fuoco) o **112**
-2. Il nonno si è sentito male → **118** (Emergenza sanitaria) o **112**
+1. C'è un incendio nel bosco vicino a casa → **112**
+2. Il nonno si è sentito male → **112**
 3. C'è stata una scossa di terremoto e un muro è crollato → **112**
 4. Qualcuno ha rubato la bicicletta → **112**
 
-**Regola importante**: il **112** funziona per tutte le emergenze. Se non sai chi chiamare, chiama il 112.
+**Regola importante**: nel Lazio il **112** funziona per tutte le emergenze. È l'unico numero da ricordare.
 
 ---
 
@@ -179,7 +181,7 @@ Il territorio dei Castelli Romani è ricco di vegetazione e comprende un Parco R
 - Rispettare i divieti del Parco dei Castelli Romani
 
 **Se vedi un incendio:**
-1. **Chiama subito** il **1515** (Corpo Forestale), il **115** (Vigili del Fuoco) o il **112**
+1. **Chiama subito il 112**: è il numero unico di emergenza. La centrale invia i vigili del fuoco e, se serve, i forestali
 2. Indica dove si trova l'incendio nel modo più preciso possibile
 3. **Allontanati** dalla zona in direzione opposta al vento e al fumo
 4. **Non provare** a spegnere il fuoco da solo
@@ -203,7 +205,7 @@ Se togli uno dei tre elementi, il fuoco si spegne. Questo è il principio con cu
 | Il vento fa propagare l'incendio più velocemente | **Vero** |
 | Un mozzicone di sigaretta può incendiare un bosco | **Vero** |
 | Gli incendi boschivi sono quasi tutti causati dai fulmini | **Falso** |
-| Se vedo un incendio devo chiamare il 1515 o il 112 | **Vero** |
+| Se vedo un incendio devo chiamare il 112 | **Vero** |
 | Posso provare a spegnere l'incendio con una coperta | **Falso** |
 
 ---
@@ -278,7 +280,7 @@ Su una cartina del territorio di Genzano (o su un disegno semplificato):
 
 **3. Se vedi un incendio nel bosco, cosa fai?**
 - a) Provo a spegnerlo con l'acqua
-- b) Chiamo il 1515 o il 112 e mi allontano ✔
+- b) Chiamo il 112 e mi allontano ✔
 - c) Scappo senza dire niente a nessuno
 
 **4. Durante un'alluvione, dove è più sicuro stare?**
