@@ -227,7 +227,7 @@ Di seguito alcuni eventi e calamità significative dove il nostro gruppo ha part
 
 <div class="timeline-wrapper mt-4">
 <div class="timeline-item"><strong>1981</strong> — Fondazione del Comitato di Protezione Civile di Genzano Di Roma</div>
-<div class="timeline-item"><strong>1997</strong> — Fondazione del Gruppo Comunale di Protezione Civile</div>
+<div class="timeline-item"><strong>1991</strong> — Fondazione del Gruppo Comunale di Protezione Civile</div>
 <div class="timeline-item"><strong>1997</strong> — Terremoto Umbria - Marche</div>
 <div class="timeline-item"><strong>1998</strong> — Frana Sarno (SA)</div>
 <div class="timeline-item"><strong>1999</strong> — Missione Arcobaleno (Kosovo)</div>

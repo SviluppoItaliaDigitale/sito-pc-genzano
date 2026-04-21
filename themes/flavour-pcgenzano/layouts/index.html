@@ -99,10 +99,10 @@
       <div class="col-lg-5 d-none d-lg-block text-end" style="position:relative;z-index:1;">
         <div class="stats-hero">
           <div class="row g-3">
-            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="45">0</span><span class="stat-hero-label">Anni di Attività</span></div></div>
-            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="11">0</span><span class="stat-hero-label">Automezzi Operativi</span></div></div>
-            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="20">0</span><span class="stat-hero-label">Emergenze Nazionali</span></div></div>
-            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="365">0</span><span class="stat-hero-label">Giorni di Operatività</span></div></div>
+            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="45">45</span><span class="stat-hero-label">Anni di Attività</span></div></div>
+            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="11">11</span><span class="stat-hero-label">Automezzi Operativi</span></div></div>
+            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="20">20+</span><span class="stat-hero-label">Emergenze Nazionali</span></div></div>
+            <div class="col-6"><div class="stat-hero-item"><span class="stat-hero-num" data-count="365">365</span><span class="stat-hero-label">Giorni di Operatività</span></div></div>
           </div>
         </div>
       </div>
@@ -134,20 +134,24 @@
 
 {{ define "scripts" }}
 <script>
-// Contatori animati
+// Contatori animati — il valore finale è già nell'HTML (SEO/a11y/no-JS).
+// Se l'utente ha richiesto motion ridotto, non animiamo affatto.
 (function(){
   var counters=document.querySelectorAll('[data-count]');
   if(!counters.length)return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(!e.isIntersecting)return;
       var el=e.target;
       var target=parseInt(el.getAttribute('data-count'));
+      var suffix=(target===20?'+':'');
       var start=0,step=Math.ceil(target/50);
+      el.textContent='0'+suffix;
       var timer=setInterval(function(){
         start+=step;
         if(start>=target){start=target;clearInterval(timer)}
-        el.textContent=start+(target===20?'+':'');
+        el.textContent=start+suffix;
       },30);
       obs.unobserve(el);
     });
