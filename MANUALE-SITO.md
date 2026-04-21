@@ -1,17 +1,26 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 2.0
-**Ultimo aggiornamento manuale:** 2026-04-20
+**Versione:** 2.1
+**Ultimo aggiornamento manuale:** 2026-04-21
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
 **Bootstrap Italia:** versione 2.17.3
 **Writing Toolkit Designers Italia:** versione bozza corrente
 **WCAG di riferimento:** 2.2 livello AA
+**Hugo di riferimento:** 0.143.x extended
 
 > Questo manuale viene verificato automaticamente ogni lunedì mattina dalla GitHub Action
 > `aggiorna-manuale.yml`: se vengono rilevati cambiamenti nei documenti ufficiali AGID/Designers Italia
 > o nuove versioni di Bootstrap Italia, viene aperta un'Issue sul repository con la checklist
 > dei punti da verificare. Vedi **Parte 7** per dettagli.
+
+> **Changelog 2.1 (2026-04-21)**
+> - Aggiunta **Parte 8** — Modificare e cancellare contenuti (articoli, pagine, redirect).
+> - Aggiunta **Parte 9** — File dati `data/` (modalità emergenza, allerta meteo, card rischi, ecc.).
+> - Aggiunta **Parte 10** — GitHub Actions e automazioni (tutti gli 8 workflow documentati).
+> - Documentato il comportamento del **render-link hook**: link interni verso pagine non ancora
+>   buildate (articoli con data futura) vengono resi come testo inerte, non più come anchor rotti.
+> - Aggiornato elenco rischi (9 card) e numeri utili nel riferimento.
 
 ---
 
@@ -25,6 +34,9 @@
 - [Parte 5 — Checklist pre-pubblicazione](#parte-5--checklist-pre-pubblicazione)
 - [Parte 6 — Procedura di aggiornamento manuale](#parte-6--procedura-di-aggiornamento-manuale)
 - [Parte 7 — Aggiornamento automatico settimanale](#parte-7--aggiornamento-automatico-settimanale)
+- [Parte 8 — Modificare e cancellare contenuti](#parte-8--modificare-e-cancellare-contenuti)
+- [Parte 9 — File dati `data/` e stati del sito](#parte-9--file-dati-data-e-stati-del-sito)
+- [Parte 10 — GitHub Actions e automazioni](#parte-10--github-actions-e-automazioni)
 - [Appendici](#appendici)
 
 ---
@@ -1399,6 +1411,588 @@ Puoi triggerare la Action a mano:
 1. Vai su GitHub → Actions → "Aggiorna manuale di stile".
 2. Clicca "Run workflow" → "Run workflow".
 3. Attendi ~1 minuto. Se ci sono novità, apparirà una nuova Issue.
+
+---
+
+## Parte 8 — Modificare e cancellare contenuti
+
+Questa parte documenta **come intervenire su contenuti già pubblicati**: correzioni, aggiornamenti, rimozioni, gestione URL storici. Ogni operazione ha effetti su SEO, link interni e cache: seguire le procedure previene pagine 404 e perdita di traffico.
+
+### 8.1 — Modificare un articolo esistente
+
+**Quando farlo:**
+- correzione di errori di battitura, grammatica o fattuali;
+- aggiornamento con nuovi sviluppi (allerta rientrata, esercitazione conclusa, ecc.);
+- completamento di informazioni mancanti;
+- aggiornamento allegati.
+
+**Procedura:**
+
+1. Individua l'articolo in `content/comunicazioni/AAAA-MM-GG-slug.md`.
+2. Apri il file con un editor che preservi gli accenti UTF-8 e i line-ending Unix.
+3. Modifica il contenuto. **Non modificare** `date` e `slug` a meno che non sia proprio necessario (vedi 8.3).
+4. Se aggiungi contenuti sostanziali, aggiorna `description` in frontmatter (massimo 160 caratteri).
+5. Se cambi la sostanza dell'articolo, aggiungi in coda al corpo un **blocco "Aggiornamento"** con data:
+
+   ```markdown
+   ---
+
+   **Aggiornamento del 21 aprile 2026**
+
+   Il testo precedente è stato corretto dopo una nuova comunicazione del Centro Funzionale Regionale.
+   ```
+
+6. Verifica in locale con `hugo server -D`.
+7. Commit con messaggio chiaro: `Aggiornamento articolo <titolo breve>`.
+
+**Cosa NON fare:**
+- Non cambiare il titolo in modo drastico senza coordinarlo con chi ha linkato l'articolo altrove.
+- Non eliminare campi frontmatter obbligatori (vedi Parte 1).
+- Non aggiungere `draft: true` a un articolo già pubblicato: il cittadino vedrebbe il link rotto. Per ritirare un articolo, vedi 8.4.
+
+### 8.2 — Modificare una pagina statica
+
+Le pagine statiche (`content/<sezione>/_index.md` o sottopagine) si modificano come gli articoli, ma con alcune accortezze in più:
+
+- **Navbar e menu**: se modifichi il titolo (`title`) di una sezione principale, controlla anche la voce di menu in `hugo.toml` (`[[menu.main]]`). I due devono combaciare.
+- **Breadcrumb**: Hugo costruisce il breadcrumb dalla gerarchia dei file, non dal `title`. Se rinomini una cartella, aggiorni il breadcrumb di tutte le pagine figlie.
+- **URL**: cambiare la cartella di una pagina statica ne cambia l'URL. Prima di farlo, leggi 8.5 sulla gestione degli alias.
+
+### 8.3 — Rinominare un articolo o cambiarne la data
+
+Lo slug di un articolo (la parte finale della URL) deriva dal nome del file, tolta l'estensione `.md`. Esempio: `2026-03-10-esercitazione-castelli.md` → `/comunicazioni/2026-03-10-esercitazione-castelli/`.
+
+**Cambiare lo slug** è un'operazione **critica**: tutti i link esterni all'articolo (social, email, altri siti, motori di ricerca) puntano al vecchio URL. Dopo la rinomina, il vecchio URL restituisce 404.
+
+**Procedura sicura per rinominare:**
+
+1. Rinomina il file: `git mv content/comunicazioni/vecchio-nome.md content/comunicazioni/nuovo-nome.md`.
+2. Apri il file rinominato e **aggiungi un alias** nel frontmatter verso il vecchio URL:
+
+   ```yaml
+   aliases:
+     - /comunicazioni/2026-03-10-esercitazione-castelli/
+   ```
+
+3. Hugo genererà una pagina al vecchio URL che redireziona automaticamente al nuovo (redirect HTML con `<meta http-equiv="refresh">`).
+4. Verifica in locale che sia il vecchio sia il nuovo URL funzionino.
+5. Commit con messaggio: `Rinomina articolo <titolo>, alias di redirect mantenuto`.
+
+**Cambiare la data** cambia lo slug solo se la data è parte del nome del file (ed è sempre il caso per gli articoli di questo sito). Stesse regole: `git mv` + `aliases`.
+
+### 8.4 — Ritirare o cancellare un articolo
+
+Tre scenari distinti, tre procedure diverse.
+
+#### Scenario A — Articolo pubblicato per errore, da togliere subito
+
+Se l'articolo contiene dati non verificati, un errore grave o è stato pubblicato su richiesta e poi revocato:
+
+1. Apri il file in `content/comunicazioni/`.
+2. Imposta `draft: true` nel frontmatter **oppure** imposta `expiryDate` a una data passata:
+
+   ```yaml
+   expiryDate: 2026-04-21
+   ```
+
+3. Commit: `Ritiro articolo <titolo> — motivo: ...`.
+4. Al prossimo deploy l'articolo sparisce dal sito. L'URL inizia a restituire 404.
+
+**Nota**: se l'URL era già stato condiviso, restituire 404 è il comportamento corretto (indica "non disponibile"). Non mettere al suo posto un articolo diverso.
+
+#### Scenario B — Articolo obsoleto ma con valore storico
+
+Quando un articolo è vecchio ma qualcuno potrebbe ancora arrivarci via link o motore di ricerca:
+
+1. Lascialo pubblicato.
+2. Aggiungi in cima al corpo un avviso:
+
+   ```markdown
+   > **Articolo di archivio del <data>.** Le informazioni operative contenute possono essere superate.
+   > Per dati aggiornati consulta [Allerte Meteo](/allerte-meteo/) o [Rischi e Prevenzione](/rischi-prevenzione/).
+   ```
+
+3. Mantieni intatto il contenuto storico originale, con date e riferimenti dell'epoca.
+
+#### Scenario C — Articolo da rimuovere completamente dal repository
+
+Solo se non ha mai avuto valore o se contiene dati sensibili da eliminare per motivi di privacy/GDPR:
+
+1. `git rm content/comunicazioni/AAAA-MM-GG-slug.md`.
+2. Rimuovi anche l'immagine di copertina se non più usata: `git rm static/images/AAAA-MM-GG-slug.webp`.
+3. Commit: `Rimozione articolo <titolo> — motivo: richiesta di cancellazione dati`.
+4. **Sul sito pubblicato** l'URL restituirà 404 fino al prossimo deploy, poi il file sparirà del tutto.
+5. Se c'è un rischio di richieste di cache (es. Google), considera un redirect 301 a un URL simile tramite `aliases:` su un articolo esistente coerente.
+
+**Nota git**: il contenuto rimosso resta nella cronologia git del repository. Per dati che devono sparire anche dalla storia (solo in caso di reale necessità legale) serve `git filter-repo` o una procedura coordinata con GitHub Support: **non** è operazione da fare in autonomia.
+
+### 8.5 — Gestione alias e redirect
+
+Hugo gestisce i redirect lato client tramite il campo `aliases:` nel frontmatter. Quando imposti:
+
+```yaml
+aliases:
+  - /vecchio-url/
+  - /altro-vecchio-url/
+```
+
+Hugo genera, per ciascun alias, una pagina HTML minimale con:
+
+```html
+<meta http-equiv="refresh" content="0; url=/nuovo-url/">
+```
+
+Questo funziona su qualsiasi hosting statico (incluso Aruba) senza bisogno di configurare nulla lato server.
+
+**Quando usare aliases:**
+- rinomina di articolo o pagina (vedi 8.3);
+- fusione di due pagine in una sola;
+- cambio della struttura di una sezione (es. `/volontariato/` → `/diventa-volontario/`).
+
+**Quando NON è il caso:**
+- articoli eliminati per dati errati: non vuoi redirezionare a nulla, vuoi un 404 onesto;
+- URL di test mai indicizzati.
+
+### 8.6 — Link verso articoli futuri o non ancora pubblicati (render-link hook)
+
+Il tema `flavour-pcgenzano` implementa un **render-link hook** personalizzato in `layouts/_default/_markup/render-link.html` (e copia speculare nel tema) che risolve un problema specifico: link Markdown interni verso pagine non ancora buildate (tipicamente articoli con `date` futura) venivano renderizzati come anchor HTML, restituendo 404 al cittadino.
+
+**Comportamento attuale dell'hook:**
+
+| Tipo di link | Resa HTML |
+|---|---|
+| Link interno `/...` verso pagina esistente | `<a href="/...">testo</a>` — anchor normale |
+| Link interno `/...` verso pagina non trovata | `<span class="text-muted" title="Contenuto non ancora disponibile">testo</span>` — testo inerte |
+| Link esterno `http://` o `https://` | `<a href="..." target="_blank" rel="noopener noreferrer">testo</a>` |
+| Link `tel:` o `mailto:` | `<a href="..." safeURL>testo</a>` |
+| Altri formati (ancore `#...`, relativi, ecc.) | anchor grezzo, nessun controllo |
+
+**Conseguenze per chi scrive:**
+
+- Puoi tranquillamente inserire link markdown verso articoli correlati **anche se non ancora pubblicati**: il giorno in cui l'articolo viene pubblicato, il link diventa attivo automaticamente al deploy successivo.
+- Se un lettore vede testo in grigio muto ("Contenuto non ancora disponibile") significa che l'articolo linkato non esiste (tipo, refuso nello slug, o articolo rimosso). Verifica con `hugo server -D`.
+- I link esterni si aprono sempre in nuova scheda con `rel="noopener noreferrer"` per sicurezza.
+- Frammenti (`#sezione`) e query string vengono ignorati nella lookup: l'hook controlla solo il path.
+
+**Quando va aggiornato l'hook**: solo se cambia la struttura degli URL interni o si vuole modificare la modalità di fallback (es. tooltip, icona, classe CSS). Qualsiasi modifica va applicata **in entrambi i file** (`layouts/_default/_markup/render-link.html` e `themes/flavour-pcgenzano/layouts/_default/_markup/render-link.html`) per coerenza.
+
+### 8.7 — Sostituzione immagini di copertina
+
+Le immagini di copertina (in `static/images/AAAA-MM-GG-slug.webp`) possono essere sostituite in due modi.
+
+**Modo A — Stessa versione, file aggiornato** (es. ritocco grafico della fascia blu):
+
+1. Sovrascrivi il file esistente con la nuova versione (stesso nome).
+2. `git add static/images/<nomefile>.webp`.
+3. Commit: `Aggiornamento grafica copertina <titolo>`.
+
+Non serve cambiare nulla nell'articolo: il path in frontmatter è invariato.
+
+**Modo B — Immagine completamente diversa**:
+
+1. Crea la nuova immagine seguendo le specifiche di Parte 3 (WebP, 1200px, fascia blu).
+2. Nominala con lo stesso slug dell'articolo (`AAAA-MM-GG-slug.webp`).
+3. `git rm` della vecchia, `git add` della nuova (se lo slug cambia).
+4. Aggiorna `image:` nel frontmatter dell'articolo.
+5. Verifica che `alt:` sia ancora coerente con la nuova immagine; se non lo è, riscrivilo.
+
+**Cosa NON fare:**
+- mai cambiare una foto di copertina che ritrae persone senza verificare il consenso al trattamento dell'immagine (GDPR);
+- mai usare immagini da banche dati non libere senza licenza commerciale verificata;
+- mai usare immagini generate da AI senza averlo esplicitato in didascalia o in nota editoriale (per trasparenza istituzionale).
+
+---
+
+## Parte 9 — File dati `data/` e stati del sito
+
+I file nella cartella `data/` pilotano comportamenti dinamici del sito **senza toccare i template**. Questa è la strada preferita per aggiornare card, banner, numeri di emergenza, canali social. Tutti i file sono letti da Hugo a build time: modifiche richiedono un nuovo build per comparire online (automatico al push).
+
+### 9.1 — Panoramica dei file dati
+
+| File | Formato | Scopo |
+|---|---|---|
+| `emergenza.json` | JSON | Attiva/disattiva modalità emergenza sulla home |
+| `allerta.json` | JSON | Livello allerta meteo corrente (verde / giallo / arancione / rossa) |
+| `risk_cards.yaml` | YAML | 9 card della pagina Rischi e Prevenzione |
+| `numeri_utili.yaml` | YAML | Numeri di emergenza mostrati in home, contatti, footer |
+| `quick_links.yaml` | YAML | CTA del hero + "Cosa fare in caso di..." + servizi |
+| `social_links.yaml` | YAML | Canali social + linktree |
+| `codici_colore.yaml` | YAML | Descrizioni colori allertamento (pagina Allerte Meteo) |
+
+Regola d'oro: **prima di creare un nuovo partial o template, verifica se la stessa cosa può essere fatta con un data file**. Questo mantiene il sito manutenibile da chi non conosce Hugo.
+
+### 9.2 — `emergenza.json` (modalità emergenza home)
+
+**Schema completo:**
+
+```json
+{
+  "attiva": false,
+  "tipo": "blu",
+  "titolo": "",
+  "descrizione": "",
+  "link": "",
+  "ultimo_aggiornamento": ""
+}
+```
+
+**Campi:**
+- `attiva` *(boolean, obbligatorio)*: `true` attiva la modalità emergenza; `false` la disattiva. Quando è `true` la homepage cambia layout: compare in alto il banner rosso e i numeri di emergenza, l'hero diventa compatto e le notizie scendono più in basso. Vedi `themes/flavour-pcgenzano/layouts/index.html`.
+- `tipo` *(string)*: `blu` | `giallo` | `arancione` | `rosso`. Pilota il colore del banner. `rosso` = emergenza massima (terremoto, alluvione in corso, evacuazione). `blu` = informativa istituzionale.
+- `titolo` *(string)*: breve, in maiuscoletto o frase istituzionale. Esempi accettabili: "EMERGENZA IN CORSO — RESTATE IN CASA", "EVENTO SISMICO — VERIFICHE IN CORSO".
+- `descrizione` *(string)*: una o due frasi brevi. **Niente punto esclamativo**, niente allarmismo gratuito. Indica fonte e azione.
+- `link` *(string, opzionale)*: URL a un articolo di dettaglio sul sito o a una pagina istituzionale. Se vuoto, il banner non mostra pulsante.
+- `ultimo_aggiornamento` *(string)*: ISO date-time dell'ultimo aggiornamento del banner (compare in piccolo sul banner). Formato consigliato: `2026-04-21T14:30:00+02:00`.
+
+#### Procedura — Attivare la modalità emergenza
+
+1. **Verifica la fonte**: la decisione di attivare la modalità emergenza è del responsabile del Gruppo o del COC, non del redattore. Non attivare mai di propria iniziativa.
+2. Apri `data/emergenza.json`.
+3. Compila i campi:
+
+   ```json
+   {
+     "attiva": true,
+     "tipo": "arancione",
+     "titolo": "ALLERTA METEO ARANCIONE SUI CASTELLI ROMANI",
+     "descrizione": "Il Centro Funzionale Regionale prevede piogge intense fino alle 24:00 di mercoledi. Limitare gli spostamenti.",
+     "link": "/comunicazioni/2026-04-21-allerta-arancione-castelli/",
+     "ultimo_aggiornamento": "2026-04-21T09:15:00+02:00"
+   }
+   ```
+
+4. Commit: `Attivazione modalità emergenza — allerta arancione`.
+5. Push: il sito si aggiorna in 2–3 minuti.
+6. **In parallelo**: pubblica l'articolo linkato (vedi Parte 1).
+
+#### Procedura — Disattivare la modalità emergenza
+
+1. Verifica con il responsabile che l'evento sia chiuso.
+2. Apri `data/emergenza.json`.
+3. Riporta `attiva` a `false`. Svuota gli altri campi (lascia `""` o `"blu"`), per non lasciare residui in repository:
+
+   ```json
+   {
+     "attiva": false,
+     "tipo": "blu",
+     "titolo": "",
+     "descrizione": "",
+     "link": "",
+     "ultimo_aggiornamento": ""
+   }
+   ```
+
+4. Commit: `Chiusura modalità emergenza — allerta rientrata`.
+5. Pubblica in parallelo un articolo di aggiornamento operativo ("allerta rientrata, nessuna criticità rilevata").
+
+### 9.3 — `allerta.json` (banner allerta meteo)
+
+**Schema:**
+
+```json
+{
+  "livello": "verde",
+  "titolo": "NESSUNA ALLERTA",
+  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
+  "ultimo_aggiornamento": "2026-04-21"
+}
+```
+
+**Campi:**
+- `livello` *(string, obbligatorio)*: `verde` | `gialla` | `arancione` | `rossa`. Pilota colore della barra allerta in cima a ogni pagina.
+- `titolo` *(string)*: es. "ALLERTA GIALLA SUI CASTELLI ROMANI".
+- `descrizione` *(string)*: una frase sintetica.
+- `ultimo_aggiornamento` *(string)*: data in formato `AAAA-MM-GG`.
+
+**Aggiornamento automatico**: il workflow `check-allerta.yml` (vedi Parte 10) interroga il feed ufficiale DPC **ogni ora** e aggiorna `allerta.json` se il livello è cambiato. Nella maggior parte dei casi **non serve intervenire manualmente**.
+
+**Aggiornamento manuale**: serve solo se l'automazione fallisce o se si vuole forzare un messaggio istituzionale specifico. Modifica il file, commit, push. **Nota**: al successivo ciclo orario il workflow sovrascriverà il tuo intervento con il valore letto dal feed DPC. Per evitarlo, disabilita temporaneamente il workflow (vedi 10.9).
+
+**Fonte dati ufficiale**: CSV pubblicato dal Dipartimento Protezione Civile, mirror mantenuto da opendatasicilia: `https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/bollettino-oggi-comuni-latest.csv`.
+
+### 9.4 — `risk_cards.yaml` (Rischi e Prevenzione)
+
+Contiene le 9 card mostrate nella pagina hub "Rischi e Prevenzione" e nella homepage. Ogni card rimanda a una sottopagina di `content/rischi-prevenzione/`.
+
+**Schema di ogni card:**
+
+```yaml
+- id: "rischio-sismico"
+  titolo: "Rischio Sismico"
+  icona: "bi-tsunami"
+  colore: "warning"
+  classe_icona: "si-orange"
+  descrizione_breve: "Cosa fare prima, durante e dopo un terremoto."
+  peso: 1
+```
+
+**Campi:**
+- `id`: slug della pagina di dettaglio (`/rischi-prevenzione/<id>/`). Deve esistere in `content/rischi-prevenzione/<id>/_index.md` o `<id>.md`.
+- `titolo`: titolo card, coerente con l'H1 della pagina di dettaglio.
+- `icona`: nome icona Bootstrap Italia (prefisso `bi-`). Vedi [icons.getbootstrap.com](https://icons.getbootstrap.com/).
+- `colore`: variante Bootstrap (`primary`, `warning`, `danger`, `info`, `success`, `dark`). Pilota il bordo/sfondo della card.
+- `classe_icona`: classe custom per colorare l'icona (`si-orange`, `si-blue`, `si-teal`, `si-green`, `si-dark`). Definite in `custom.css`.
+- `descrizione_breve`: una frase max 100 caratteri.
+- `peso`: intero, determina l'ordine di visualizzazione (1 = prima, 9 = ultima).
+
+**Modifiche tipiche:**
+- Aggiungere una card nuova: aggiungi blocco YAML + crea la pagina di dettaglio in `content/rischi-prevenzione/<id>.md`. Ricorda di aggiornare l'archivio e il menu se serve.
+- Togliere una card: rimuovi il blocco + considera di lasciare la pagina di dettaglio come archivio (vedi 8.4 scenario B) o rimuoverla.
+- Riordinare: modifica solo i `peso`.
+
+### 9.5 — `numeri_utili.yaml` (numeri di emergenza)
+
+**Regola chiave**: nel Lazio il **solo numero da comunicare al cittadino è il 112** (NUE). 115, 118, 1515 non sono più il riferimento. Qualunque AI che proponga di aggiungerli come "numeri da chiamare" va corretta.
+
+**Struttura:**
+
+```yaml
+emergenza:      # Numeri in evidenza massima
+  - numero: "112"
+    nome: "Numero Unico Emergenza (NUE)"
+    descrizione: "..."
+    icona: "bi-telephone-fill"
+    principale: true
+
+utili:          # Numeri utili secondari
+  - numero: "1530"
+    nome: "Guardia Costiera"
+    ...
+
+locale:         # Numeri del Gruppo (MAI per emergenze)
+  - numero: "+39 06 9362600"
+    nome: "Segreteria Gruppo PC Genzano"
+    ...
+    nota: "NON per emergenze"
+```
+
+**Campi:**
+- `numero`: formato leggibile con spaziature (`112`, `803 555`, `+39 06 9362600`).
+- `nome`: ufficiale del servizio.
+- `descrizione`: a cosa serve, una frase.
+- `icona`: classe Bootstrap Italia.
+- `principale`: se `true`, la card è in evidenza grafica maggiore.
+- `nota` (opzionale): testo di avviso (tipicamente "NON per emergenze" per i numeri del Gruppo).
+
+### 9.6 — `quick_links.yaml` (CTA hero + servizi)
+
+Tre sezioni distinte:
+- `principali`: pulsanti del hero homepage (tipicamente 3).
+- `cosa_fare`: card "Cosa fare in caso di..." in homepage.
+- `servizi`: card "Servizi per il cittadino".
+
+Campi comuni: `titolo`, `url`, `icona` (Bootstrap Italia icon), `classe` o `classe_icona`, `descrizione`, opzionalmente `azione` (testo sul pulsante).
+
+Regole:
+- Ogni URL deve esistere come pagina nel sito (altrimenti il render-link hook mostra testo inerte solo in contenuti markdown, ma in questi partial i link sono generati direttamente: qui un URL inesistente produce un 404 vero).
+- Mantieni numero card coerente con il layout (3 principali, 4 cosa_fare, 4 servizi è la configurazione testata).
+
+### 9.7 — `social_links.yaml`
+
+Lista `canali:` + singolo `linktree:`. Campi per canale: `nome`, `url`, `icona`, `classe_btn`, `aria_label`, `descrizione`.
+
+Aggiungere un canale nuovo: aggiungi blocco + verifica che l'icona Bootstrap Italia esista (`bi-whatsapp`, `bi-youtube`, ecc.). Rimuovere un canale: togli il blocco; i partial che usano `range canali` si adattano.
+
+### 9.8 — `codici_colore.yaml`
+
+Pilota la pagina "Allerte Meteo" sezione "Significato dei colori". Ogni livello ha: `livello` (slug), `titolo`, `colore_bg`, `colore_testo`, `significato`, `cosa_fare`, `icona`. I colori sono coordinati con la palette ufficiale del sistema di allertamento nazionale.
+
+**Non modificare** `colore_bg` e `colore_testo` senza ricontrollare il contrasto WCAG (≥ 4.5:1 testo normale).
+
+### 9.9 — Validazione data files
+
+Prima di commit, verifica:
+
+- **JSON** (`emergenza.json`, `allerta.json`): formato valido. Errori di virgola o virgolette rompono il build. Usa un linter o `python3 -m json.tool < data/emergenza.json`.
+- **YAML**: indentazione a 2 spazi, niente tab. Stringhe con caratteri speciali tra virgolette doppie. Usa `python3 -c "import yaml; yaml.safe_load(open('data/risk_cards.yaml'))"`.
+- **Caratteri accentati**: sempre UTF-8, mai entità HTML (`è`, non `&egrave;`).
+
+Un `data` rotto blocca `hugo --minify` e il deploy fallisce: il sito resta sulla versione precedente e il monitoring Actions mostra un fallimento rosso.
+
+---
+
+## Parte 10 — GitHub Actions e automazioni
+
+Il repository ha **8 workflow** attivi che automatizzano deploy, controlli, aggiornamenti e audit. Ogni workflow vive in `.github/workflows/*.yml`. Tutti supportano l'esecuzione manuale tramite `workflow_dispatch` dalla tab Actions del repository.
+
+### 10.1 — Panoramica
+
+| Workflow | File | Trigger | Scopo |
+|---|---|---|---|
+| Build e Deploy | `deploy.yml` | push su `main`, manuale | Build Hugo, deploy Aruba (FTP), deploy GitHub Pages |
+| Aggiornamento Allerta Meteo | `check-allerta.yml` | orario (cron `12 * * * *`), manuale | Legge feed DPC, aggiorna `data/allerta.json` |
+| Pubblicazione programmata | `pubblica-programmata.yml` | giornaliero (06:00 UTC), manuale | Riavvia il deploy per pubblicare articoli a data futura |
+| Verifica link normativa | `check-normativa-links.yml` | 1° del mese (08:00 UTC), manuale | Controlla raggiungibilità portali normativi |
+| Audit Accessibilità | `lighthouse-audit.yml` | dopo ogni deploy, manuale | Lighthouse su home e 5 pagine chiave |
+| Aggiorna Bootstrap Italia | `update-bootstrap-italia.yml` | lunedì 06:00 UTC, manuale | Verifica nuove release Bootstrap Italia, apre PR |
+| Aggiornamento MANUALE | `aggiorna-manuale.yml` | lunedì 06:00 UTC, manuale | Confronta hash fonti AGID/DI, apre Issue se cambiate |
+| Coerenza documentazione | `coerenza-docs.yml` | 1° del mese (07:00 UTC), manuale | Verifica coerenza tra CLAUDE.md, archetype, regole, badge |
+
+### 10.2 — `deploy.yml` — Build e Deploy
+
+**Trigger**: push su `main`, esecuzione manuale.
+
+**Cosa fa:**
+1. Checkout del repository (fetch-depth 0 per ottenere la storia completa).
+2. Setup Hugo extended.
+3. Build principale con `hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"` (per Aruba).
+4. Build secondario con `hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"` (per GitHub Pages).
+5. Deploy FTP su Aruba usando i secret `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
+6. Deploy su GitHub Pages tramite `actions/deploy-pages`.
+
+**Durata tipica**: 2–4 minuti.
+
+**Fallimenti comuni:**
+- build Hugo rotto (frontmatter malformato, shortcode non definito, YAML data invalido): il commit va revertito o corretto subito;
+- FTP timeout: retry automatico, altrimenti richiede intervento;
+- secret scaduto: aggiornare nei Settings del repo.
+
+**Come usarlo manualmente**: Actions → "🚀 Build e Deploy" → Run workflow. Utile per ripubblicare dopo aver corretto un secret o dopo un rollback DNS.
+
+### 10.3 — `check-allerta.yml` — Aggiornamento allerta meteo
+
+**Trigger**: cron orario (`12 * * * *`, minuto 12 per evitare picchi), esecuzione manuale.
+
+**Cosa fa:**
+1. Scarica il CSV ufficiale del Dipartimento Protezione Civile dal mirror opendatasicilia.
+2. Cerca la riga di "Genzano di Roma".
+3. Estrae il livello massimo tra `avviso_criticita`, `avviso_idrogeologico`, `avviso_temporali`, `avviso_idraulico`.
+4. Se diverso dal livello corrente in `data/allerta.json`, aggiorna il file.
+5. Commit automatico dal bot `github-actions[bot]` con messaggio `chore: aggiornamento allerta <livello>`.
+6. Il commit su `main` ritriggera `deploy.yml`.
+
+**Permessi**: `contents: write`.
+
+**Quando NON intervenire manualmente**: mai, se non per test. L'automazione è affidabile e le modifiche umane vengono sovrascritte al ciclo successivo.
+
+**Disattivazione temporanea**: commenta la sezione `schedule:` e lascia solo `workflow_dispatch:`. Esempio in caso di manutenzione straordinaria del feed DPC.
+
+### 10.4 — `pubblica-programmata.yml` — Pubblicazione programmata
+
+**Trigger**: cron giornaliero (`0 6 * * *` = 06:00 UTC = 08:00 CEST / 07:00 CET), esecuzione manuale.
+
+**Cosa fa:**
+1. Chiama via `workflow_dispatch` il workflow `deploy.yml`.
+
+**Perché esiste**: Hugo esclude dal build gli articoli con `date` futura (comportamento default `buildFuture: false`). Al passaggio di mezzanotte, gli articoli del giorno diventano "pubblicabili" ma il sito resta fermo all'ultimo deploy finché non si fa un nuovo build. Questo workflow garantisce un build quotidiano alle 08:00 del mattino italiano: gli articoli con data = oggi entrano nel sito.
+
+**Nota operativa**: se vuoi pubblicare un articolo **a un'ora specifica** diversa dalle 08:00, lancia manualmente `deploy.yml` dall'interfaccia Actions.
+
+### 10.5 — `check-normativa-links.yml` — Verifica link normativa
+
+**Trigger**: cron mensile (`0 8 1 * *` = 1° del mese alle 08:00 UTC), esecuzione manuale.
+
+**Cosa fa:**
+1. Verifica raggiungibilità (HTTP 2xx/3xx) di una lista curata di URL normativi (normattiva.it, agid.gov.it, designers.italia.it, protezionecivile.gov.it, regione.lazio.it, ecc.).
+2. Se uno o più URL falliscono, apre una Issue con la lista dei link rotti.
+
+**Quando guardarlo**: solo se arriva una Issue dal bot. La Issue conterrà i link da aggiornare nel sito (tipicamente su `riferimenti-normativi.md` o su pagine di servizio).
+
+### 10.6 — `lighthouse-audit.yml` — Audit Accessibilità e Performance
+
+**Trigger**: `workflow_run` dopo il successo di `deploy.yml`, esecuzione manuale.
+
+**Cosa fa:**
+1. Attende che GitHub Pages propaghi (pochi secondi).
+2. Esegue Lighthouse CI su un set di URL chiave (home, rischi, allerte, contatti, un articolo recente).
+3. Produce un report scaricabile come artifact.
+4. Se i punteggi scendono sotto soglia (tipicamente 90 performance, 95 accessibilità, 100 best-practices), apre una Issue.
+
+**Quando guardarlo**: quando un deploy produce una Issue di regressione. Le cause più frequenti sono immagini non ottimizzate, nuovi script bloccanti, contrasti troppo bassi.
+
+### 10.7 — `update-bootstrap-italia.yml` — Aggiornamento Bootstrap Italia
+
+**Trigger**: cron settimanale (lunedì 06:00 UTC), manuale.
+
+**Cosa fa:**
+1. Interroga la release più recente del repository `italia/bootstrap-italia`.
+2. Confronta con la versione usata nel sito (nel template base `layouts/_default/baseof.html` o nel config).
+3. Se c'è una nuova release, apre una PR con l'aggiornamento del riferimento CDN/asset e un commento con il changelog ufficiale.
+
+**Permessi**: `contents: write`.
+
+**Cosa fare quando apre una PR:**
+1. Leggi il changelog della release (linkato nella PR).
+2. Esegui `hugo server` in locale dopo il merge di prova per verificare che non ci siano breaking changes.
+3. Testa manualmente: navbar, hero, card, form, alert, footer.
+4. Lancia `lighthouse-audit.yml` manuale per confermare che accessibilità/performance non regrediscono.
+5. Approva e fai merge.
+
+**Quando rifiutare una PR**: major version bump (es. da 2.x a 3.x) richiede review completa del tema — non approvare automaticamente.
+
+### 10.8 — `aggiorna-manuale.yml` — Verifica fonti AGID/Designers Italia
+
+**Trigger**: cron settimanale (lunedì 06:00 UTC), manuale.
+
+**Cosa fa:**
+1. Scarica (con `curl`) le pagine ufficiali AGID / Designers Italia / Writing Toolkit / WCAG indicate nella configurazione del workflow.
+2. Calcola hash SHA-256 del contenuto.
+3. Confronta con gli hash salvati nel repository (commit precedente).
+4. Se uno o più hash sono cambiati, apre una Issue con:
+   - elenco delle pagine cambiate;
+   - checklist di revisione ("confronta la sezione X del manuale con la nuova versione della pagina Y");
+   - link alla pagina ufficiale aggiornata.
+
+**Permessi**: `contents: write`, `issues: write`.
+
+**Cosa fare quando apre una Issue:**
+1. Apri la pagina ufficiale aggiornata.
+2. Confronta con la Parte rilevante di `MANUALE-SITO.md` e con i file in `.claude/rules/`.
+3. Aggiorna testo del manuale e/o delle regole se necessario.
+4. Aggiorna il campo "Ultimo check linee guida AGID" in testa al manuale.
+5. Commit + push, chiudi la Issue con un commento che cita il commit.
+
+### 10.9 — `coerenza-docs.yml` — Coerenza documentazione interna
+
+**Trigger**: cron mensile (1° del mese 07:00 UTC), manuale.
+
+**Cosa fa:**
+1. Legge `CLAUDE.md`, `archetypes/comunicazioni.md`, `.claude/rules/*.md`, `MANUALE-SITO.md`, `PIANO-EDITORIALE.md`, `themes/flavour-pcgenzano/layouts/partials/badge.html`.
+2. Verifica coerenza interna: le categorie badge elencate in `CLAUDE.md` combaciano con quelle dell'archetype? La palette hex combacia con `custom.css`? I riferimenti tra file non sono rotti?
+3. Se trova deviazioni, apre una Issue con la lista puntuale.
+
+**Quando intervenire**: sempre che apra una Issue. La coerenza tra questi file è critica per l'affidabilità delle AI che li usano come guida.
+
+### 10.10 — Disabilitare temporaneamente un workflow
+
+Due modi:
+
+**Modo A — Interfaccia GitHub** (reversibile, nessun commit):
+1. Vai su Actions.
+2. Seleziona il workflow nella sidebar.
+3. Menu "···" in alto a destra → "Disable workflow".
+4. Per riabilitare: stesso menu, "Enable workflow".
+
+**Modo B — Commento in YAML** (tracciato in git):
+1. Apri il file `.github/workflows/<nome>.yml`.
+2. Commenta la sezione `schedule:` con `#`.
+3. Commit con messaggio chiaro ("Sospensione temporanea workflow X — motivo: ...").
+4. Per riabilitare: rimuovi i commenti, commit, push.
+
+Preferisci sempre Modo B per tracciabilità, salvo esigenze di emergenza.
+
+### 10.11 — Leggere i log di un workflow
+
+1. Actions → workflow interessato → seleziona run specifica.
+2. Espandi il job e lo step che ha fallito.
+3. Leggi dalla prima riga rossa o gialla.
+
+**Errori tipici e come leggerli:**
+- `Error: YAMLParseError` → data file rotto, vedi 9.9.
+- `hugo: error: failed to render...` → template o frontmatter rotto; riga indicata in output.
+- `ftp: 550 ...` → permessi o path errato su Aruba; controlla secret.
+- `Hash mismatch` → stai aggiornando un file con conflitto; riesegui dopo pull.
+
+### 10.12 — Aggiungere un nuovo workflow
+
+Regole:
+- Nome file descrittivo in kebab-case: `nome-azione.yml`.
+- `name:` con emoji opzionale ma coerente con gli altri.
+- Sempre supportare `workflow_dispatch` per test manuale.
+- Dichiarare esplicitamente i `permissions:` minimi necessari.
+- Usare action ufficiali o mantenute (`actions/checkout@v4`, `actions/setup-node@v4`, ecc.), pinnate a major version.
+- Niente secret hardcoded. Usare `${{ secrets.NAME }}` con secret creati nei Settings del repository.
+- Documentare il nuovo workflow in questa Parte 10 e in `CLAUDE.md` (sezione Automazioni).
 
 ---
 
