@@ -1,1 +1,20 @@
-{{ $link := .Destination }}{{ if strings.HasPrefix $link "/" }}<a href="{{ $link | relURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>{{ else if strings.HasPrefix $link "http" }}<a href="{{ $link }}"{{ with .Title }} title="{{ . }}"{{ end }} target="_blank" rel="noopener noreferrer">{{ .Text | safeHTML }}</a>{{ else if or (strings.HasPrefix $link "tel:") (strings.HasPrefix $link "mailto:") }}<a href="{{ $link | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>{{ else }}<a href="{{ $link }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>{{ end }}
+{{- $link := .Destination -}}
+{{- if strings.HasPrefix $link "/" -}}
+  {{- /* Link interno: estraggo il path senza fragment/query per la lookup */ -}}
+  {{- $path := $link -}}
+  {{- if in $path "#" }}{{ $path = index (split $path "#") 0 }}{{ end -}}
+  {{- if in $path "?" }}{{ $path = index (split $path "?") 0 }}{{ end -}}
+  {{- $cleanPath := strings.TrimSuffix "/" (strings.TrimPrefix "/" $path) -}}
+  {{- $target := site.GetPage $cleanPath -}}
+  {{- if $target -}}
+    <a href="{{ $link | relURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+  {{- else -}}
+    <span class="text-muted" title="Contenuto non ancora disponibile">{{ .Text | safeHTML }}</span>
+  {{- end -}}
+{{- else if strings.HasPrefix $link "http" -}}
+  <a href="{{ $link }}"{{ with .Title }} title="{{ . }}"{{ end }} target="_blank" rel="noopener noreferrer">{{ .Text | safeHTML }}</a>
+{{- else if or (strings.HasPrefix $link "tel:") (strings.HasPrefix $link "mailto:") -}}
+  <a href="{{ $link | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- else -}}
+  <a href="{{ $link }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- end -}}
