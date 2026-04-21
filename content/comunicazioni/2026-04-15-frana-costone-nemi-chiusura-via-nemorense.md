@@ -1,0 +1,51 @@
+---
+title: "Frana di un costone nel territorio di Nemi: supporto alla chiusura di via Nemorense"
+date: 2026-04-15
+description: "Il 15 aprile la Polizia Locale ha richiesto il supporto del nostro Gruppo per la chiusura di via Nemorense, a seguito del cedimento di un costone in territorio nemese."
+badge: "Attività"
+priorita: "normale"
+autore: "Gruppo Comunale Volontari PC Genzano"
+image: "/images/2026-04-15-frana-via-nemorense-chiusura-strada.webp"
+image_alt: "Strada via Nemorense chiusa al traffico con transenne e segnali di divieto di accesso dopo la frana del costone in territorio di Nemi"
+scadenza: ""
+area: "Genzano di Roma — Nemi"
+allegati: []
+draft: false
+---
+
+Nella giornata di **mercoledì 15 aprile 2026** la **Polizia Locale di Genzano di Roma** ha richiesto il supporto del **Gruppo Comunale Volontari di Protezione Civile** per la **chiusura di via Nemorense**, strada che da Genzano porta a Nemi, a seguito del **cedimento di un costone** avvenuto in territorio del Comune di Nemi.
+
+## L'intervento
+
+I volontari del Gruppo hanno prestato **supporto alla Polizia Locale di Genzano** nelle attività di chiusura della strada e gestione della viabilità locale, con posizionamento di transenne e segnaletica di divieto di accesso. L'azione è stata condotta in **subordinazione** agli ordini degli agenti di Polizia Locale presenti sul posto.
+
+![Particolare del dissesto del costone lungo via Nemorense, con palo dell'illuminazione pubblica piegato dal movimento del terreno](/images/2026-04-15-frana-via-nemorense-costone-dissesto.webp)
+
+## Il contesto
+
+Il cedimento del costone ha reso **necessaria l'interdizione al traffico** lungo la via Nemorense, con conseguenti deviazioni per i collegamenti tra Genzano e Nemi. Le competenze tecniche sulla stabilizzazione del versante e sulla verifica del dissesto spettano agli **enti competenti del Comune di Nemi** e agli **enti sovracomunali** preposti al rischio idrogeologico.
+
+## Il ruolo del Gruppo
+
+Nell'attività del 15 aprile i volontari hanno operato a **supporto della Polizia Locale di Genzano**, con compiti di:
+
+- **Gestione della viabilità** e posizionamento transenne.
+- **Segnalazione** dell'area interdetta.
+- **Informazione** agli automobilisti in transito.
+- **Comunicazione via radio** con il responsabile dell'intervento.
+
+L'intervento si è svolto secondo le procedure ordinarie di collaborazione tra **Polizia Locale** e **Gruppo Comunale di Protezione Civile**, nell'ambito delle funzioni del Piano Comunale di Protezione Civile.
+
+## Ringraziamenti
+
+Un ringraziamento alla **Polizia Locale di Genzano di Roma** per il coordinamento e ai **volontari del Gruppo** che hanno risposto alla richiesta di supporto.
+
+## Per approfondire
+
+- Articolo: [Chi siamo](/chi-siamo/)
+- Articolo: [Diventa volontario](/diventa-volontario/)
+- Pagina: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
+- [Comune di Nemi](https://www.comune.nemi.rm.it/)
+- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+
+La collaborazione tra Polizia Locale e Gruppo di Protezione Civile è uno strumento ordinario del sistema comunale per gestire situazioni che richiedono risorse aggiuntive sul territorio.
