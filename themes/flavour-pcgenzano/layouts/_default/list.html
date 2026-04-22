@@ -14,7 +14,7 @@
         <div class="row g-0">
           <div class="col-md-3 d-none d-md-block">
             <div class="notizia-img-wrapper" style="height:100%;min-height:140px;">
-              {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+              {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Params.image_alt | default $.Title }}" loading="lazy">
               {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
             </div>
           </div>
@@ -28,7 +28,7 @@
               </div>
               <h2 class="notizia-titolo"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
               <p class="notizia-excerpt">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 150 }}{{ end }}</p>
-              <a href="{{ .Permalink }}" class="notizia-link" aria-label="Leggi di più: {{ .Title }}">Leggi di più <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              <a href="{{ .Permalink }}" class="notizia-link">Leggi l'articolo<span class="visually-hidden">: {{ .Title }}</span> <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
