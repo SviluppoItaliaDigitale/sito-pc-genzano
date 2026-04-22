@@ -167,15 +167,18 @@ Produce `<figure>` con immagine cliccabile (apre a dimensione intera in nuova sc
 
 ## Automazioni periodiche (GitHub Actions)
 
+Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della settimana), scaglionati in orari diversi per non caricare il runner nello stesso momento. L'utente ha scelto il lunedì per avere una finestra settimanale costante di issue/verifica da affrontare.
+
 | Workflow | Frequenza | Scopo |
 |---|---|---|
 | `deploy.yml` | Ogni push su `main` | Build Hugo + deploy Aruba (FTP) + GitHub Pages |
-| `check-allerta.yml` | Orario | Verifica stato allerta meteo Regione Lazio |
-| `check-normativa-links.yml` | 1° del mese | Verifica raggiungibilità link normativi |
-| `lighthouse-audit.yml` | Settimanale | Audit performance/accessibilità/SEO |
-| `update-bootstrap-italia.yml` | Mensile | Verifica aggiornamenti Bootstrap Italia |
-| `aggiorna-manuale.yml` | Settimanale (lunedì) | Confronta hash fonti AGID/Designers Italia, apre issue se cambiano |
-| `coerenza-docs.yml` | 1° del mese | Verifica coerenza interna tra CLAUDE.md, archetype, regole, badge |
+| `check-allerta.yml` | Orario (min 12) | Verifica stato allerta meteo Regione Lazio |
+| `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Pubblica articoli programmati con `draft: true` + data futura |
+| `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO (si attiva dopo ogni deploy riuscito) |
+| `aggiorna-manuale.yml` | Lunedì 06:00 UTC | Confronta hash fonti AGID/Designers Italia, apre issue se cambiano |
+| `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Verifica aggiornamenti Bootstrap Italia |
+| `coerenza-docs.yml` | Lunedì 07:00 UTC | Verifica coerenza interna: CLAUDE.md, archetype, regole, badge, shortcode foto, pagine content/ obbligatorie (incluse privacy, note-legali, social-media-policy, accessibilita) |
+| `check-normativa-links.yml` | Lunedì 08:00 UTC | Verifica raggiungibilità link normativi (Lazio, DPC, Normattiva) |
 
 ## Key operational notes
 
