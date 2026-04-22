@@ -11,7 +11,7 @@ scadenza: ""
 area: ""
 allegati:
   - titolo: "Manuale di Cucina in Emergenza — DSEFIC / Federazione Italiana Cuochi"
-    url: "/documenti/download/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf"
+    url: "/manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf"
     dimensione: "3,8 MB"
 draft: false
 ---
