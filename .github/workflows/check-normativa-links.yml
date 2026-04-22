@@ -2,8 +2,8 @@ name: "🔗 Verifica link normativa"
 
 on:
   schedule:
-    # Ogni primo del mese alle 08:00 UTC
-    - cron: "0 8 1 * *"
+    # Ogni lunedi alle 08:00 UTC (primo giorno della settimana)
+    - cron: "0 8 * * 1"
   workflow_dispatch:
 
 jobs:
@@ -75,6 +75,6 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: `[Automatico] Link normativa non raggiungibili — ${today}`,
-              body: `## Verifica mensile link normativa — ${today}\n\nI seguenti link risultano non raggiungibili o restituiscono un errore:\n\n${failed}\n\n**Azione richiesta:** verificare e aggiornare i link nella pagina [Area Download](/content/area-download/_index.md).\n\n---\n*Issue generata automaticamente dal workflow \`check-normativa-links.yml\`.*`,
+              body: `## Verifica settimanale link normativa — ${today}\n\nI seguenti link risultano non raggiungibili o restituiscono un errore:\n\n${failed}\n\n**Azione richiesta:** verificare e aggiornare i link nella pagina [Area Download](/content/area-download/_index.md).\n\n---\n*Issue generata automaticamente dal workflow \`check-normativa-links.yml\`.*`,
               labels: ['manutenzione', 'link-rotti']
             });

@@ -1,14 +1,16 @@
 name: "Coerenza documentazione"
 
-# Controllo mensile della coerenza interna tra i file di governance:
+# Controllo settimanale della coerenza interna tra i file di governance:
 # CLAUDE.md, archetypes/comunicazioni.md, .claude/rules/*.md,
-# MANUALE-SITO.md, PIANO-EDITORIALE.md e il partial badge.html.
+# MANUALE-SITO.md, PIANO-EDITORIALE.md, partial badge.html,
+# shortcode foto e pagine content/ obbligatorie (incluse privacy,
+# note-legali, social-media-policy, accessibilita).
 # Apre una issue se trova deviazioni o riferimenti rotti.
 
 on:
   schedule:
-    # Primo del mese alle 07:00 UTC
-    - cron: "0 7 1 * *"
+    # Ogni lunedi alle 07:00 UTC (primo giorno della settimana)
+    - cron: "0 7 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -141,6 +143,68 @@ jobs:
           fi
           echo "" >> "$REPORT"
 
+          # 7) Pagine content/ obbligatorie (istituzionali / conformità PA)
+          echo "### 7. Pagine content/ obbligatorie" >> "$REPORT"
+          REQUIRED_PAGES=(
+            "content/_index.md"
+            "content/accessibilita/_index.md"
+            "content/allerte-meteo/_index.md"
+            "content/area-download/_index.md"
+            "content/cartografia/_index.md"
+            "content/chi-siamo/_index.md"
+            "content/contatti/_index.md"
+            "content/cosa-fare-adesso/_index.md"
+            "content/diventa-volontario/_index.md"
+            "content/faq/_index.md"
+            "content/formazione/_index.md"
+            "content/note-legali/_index.md"
+            "content/numeri-utili/_index.md"
+            "content/piano-emergenza/_index.md"
+            "content/piano-familiare/_index.md"
+            "content/privacy/_index.md"
+            "content/rischi-prevenzione/_index.md"
+            "content/siti-utili/_index.md"
+            "content/social-media-policy/_index.md"
+          )
+          for page in "${REQUIRED_PAGES[@]}"; do
+            if [ ! -f "$page" ]; then
+              echo "- Pagina obbligatoria mancante: \`$page\`" >> "$REPORT"
+              FOUND_ISSUES="true"
+            fi
+          done
+          echo "" >> "$REPORT"
+
+          # 8) Shortcode custom (foto) presente e documentato
+          echo "### 8. Shortcode custom" >> "$REPORT"
+          SHORTCODE_FOTO="themes/flavour-pcgenzano/layouts/shortcodes/foto.html"
+          if [ ! -f "$SHORTCODE_FOTO" ]; then
+            echo "- Shortcode mancante: \`$SHORTCODE_FOTO\`" >> "$REPORT"
+            FOUND_ISSUES="true"
+          else
+            # Lo shortcode deve essere citato nel MANUALE-SITO.md e nella rule 02
+            if ! grep -q "foto" MANUALE-SITO.md; then
+              echo "- Shortcode \`foto\` non documentato in \`MANUALE-SITO.md\`" >> "$REPORT"
+              FOUND_ISSUES="true"
+            fi
+            if ! grep -q "foto" .claude/rules/02-content-design-pa.md; then
+              echo "- Shortcode \`foto\` non documentato in \`.claude/rules/02-content-design-pa.md\`" >> "$REPORT"
+              FOUND_ISSUES="true"
+            fi
+          fi
+          echo "" >> "$REPORT"
+
+          # 9) Script di export contesto AI presente e documentato
+          echo "### 9. Script export contesto AI" >> "$REPORT"
+          EXPORT_SCRIPT="scripts/export-contesto-ai.sh"
+          if [ ! -f "$EXPORT_SCRIPT" ]; then
+            echo "- Script mancante: \`$EXPORT_SCRIPT\`" >> "$REPORT"
+            FOUND_ISSUES="true"
+          elif [ ! -x "$EXPORT_SCRIPT" ]; then
+            echo "- Script \`$EXPORT_SCRIPT\` non eseguibile (manca chmod +x)" >> "$REPORT"
+            FOUND_ISSUES="true"
+          fi
+          echo "" >> "$REPORT"
+
           # Output
           echo "found_issues=$FOUND_ISSUES" >> "$GITHUB_OUTPUT"
           {
@@ -160,7 +224,7 @@ jobs:
             const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
             const report = `${{ steps.check.outputs.report }}`;
             const body = [
-              `# Verifica mensile coerenza documentazione — ${today}`,
+              `# Verifica settimanale coerenza documentazione — ${today}`,
               ``,
               `Il controllo automatico ha rilevato deviazioni nella documentazione di governance.`,
               ``,

@@ -142,15 +142,18 @@ Il file è `.gitignore`d perché si rigenera on-demand dallo stato corrente del 
 
 ## Automazioni attive (GitHub Actions)
 
+Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della settimana), scaglionati in orari diversi per ridurre il carico sul runner.
+
 | Workflow | Frequenza | Scopo |
 |---|---|---|
 | `deploy.yml` | Ogni push su `main` | Build + deploy Aruba (FTP) + GitHub Pages |
-| `check-allerta.yml` | Orario | Verifica stato allerta meteo Regione Lazio |
-| `check-normativa-links.yml` | 1° del mese | Verifica raggiungibilità link normativi |
-| `lighthouse-audit.yml` | Settimanale | Audit performance/accessibilità/SEO |
-| `update-bootstrap-italia.yml` | Mensile | Verifica aggiornamenti Bootstrap Italia |
-| `aggiorna-manuale.yml` | Settimanale (lunedì) | Confronta hash fonti AGID/Designers Italia, apre issue se cambiano |
-| `coerenza-docs.yml` | 1° del mese | Verifica coerenza interna tra CLAUDE.md, archetype, regole, badge |
+| `check-allerta.yml` | Orario (min 12) | Verifica stato allerta meteo Regione Lazio |
+| `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Pubblica articoli programmati |
+| `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO |
+| `aggiorna-manuale.yml` | Lunedì 06:00 UTC | Hash fonti AGID/Designers Italia → issue se cambiano |
+| `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Aggiornamenti Bootstrap Italia |
+| `coerenza-docs.yml` | Lunedì 07:00 UTC | Coerenza documentazione: CLAUDE.md, archetype, regole, badge, shortcode foto, pagine content/ (incluse privacy, note-legali, social-media-policy, accessibilita) |
+| `check-normativa-links.yml` | Lunedì 08:00 UTC | Raggiungibilità link normativi (Lazio, DPC, Normattiva) |
 
 Le issue generate automaticamente compaiono nella [tab Issues](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/issues) con label `manutenzione`, `documentazione`, `link-rotti`, ecc.
 
