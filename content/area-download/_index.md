@@ -100,7 +100,9 @@ Manuali tecnici prodotti da enti del Terzo Settore in collaborazione con il sist
 
 | Documento | Descrizione | Formato |
 |---|---|---|
-| [Manuale di Cucina in Emergenza](/documenti/download/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf) | A cura del DSEFIC — Dipartimento Solidarietà Emergenze della Federazione Italiana Cuochi. Protocolli per cucine da campo: zone, HACCP, alimentazioni speciali, ricette (3,8 MB) | PDF |
+| [Manuale di Cucina in Emergenza](/manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf) | A cura del DSEFIC — Dipartimento Solidarietà Emergenze della Federazione Italiana Cuochi. Protocolli per cucine da campo: zone, HACCP, alimentazioni speciali, ricette (3,8 MB) | PDF |
+| [Il Libro del Risparmio — 120 azioni contro lo spreco alimentare](/manuali/FondazioneBarilla_Libro_del_Risparmio.pdf) | A cura di Fondazione Barilla con Università di Bologna. Guida pratica per ridurre lo spreco di cibo in casa e fuori casa: conservazione, cucina a zero spreco, avanzi, spesa consapevole (27,3 MB) | PDF |
+| [Recupero, raccolta e distribuzione di cibo per solidarietà sociale](/manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf) | A cura di Caritas Italiana e Fondazione Banco Alimentare. Manuale di corrette prassi operative per le organizzazioni caritative, validato dal Ministero della Salute: HACCP semplificato, semaforo di attenzione, tracciabilità (4,1 MB) | PDF |
 
 ## Campagna "Io Non Rischio"
 
