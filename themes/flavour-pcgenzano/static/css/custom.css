@@ -407,11 +407,7 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
 .btn-primary { background: var(--pc-primary); border-color: var(--pc-primary); border-radius: 20px; font-weight: 600; }
 .btn-primary:hover { background: var(--pc-primary-dark); border-color: var(--pc-primary-dark); }
 
-/* ── PRINT ── */
-@media print {
-  .navbar, footer, .cookiebar, .skip-to-content, .it-header-slim-wrapper,
-  .hero-section { background: #fff !important; color: #000 !important; padding: 1rem 0; }
-}
+/* ── PRINT: vedi blocco consolidato più sotto ── */
 
 /* ── MOBILE ── */
 @media (max-width: 768px) {
@@ -639,42 +635,152 @@ article .galleria img {
 .notizia-categoria.volontariato { background: #b45309; }
 .notizia-categoria.attività { background: #0891b2; }
 
-/* ── PRINT MIGLIORATO ── */
+/* ══════════════════════════════════════════════════════════
+   STAMPA — Regole globali
+   Obiettivo: quando l'utente clicca "Stampa", deve finire sulla
+   carta solo il contenuto della pagina (titolo + articolo + allegati).
+   Tutto il "chrome" del sito (header, navbar, footer, banner, cookie,
+   utility bar, pulsanti, breadcrumb, link di ritorno) viene nascosto.
+   ══════════════════════════════════════════════════════════ */
 @media print {
-  .emergency-banner,
-  .allerta-bar,
-  .emergenza-banner,
-  .back-to-top,
-  #cookie-banner,
+
+  /* Impostazioni pagina A4 */
+  @page {
+    size: A4;
+    margin: 18mm 15mm 18mm 15mm;
+  }
+
+  /* Nascondi tutto il chrome del sito */
+  .skip-to-content,
   .it-header-slim-wrapper,
-  .page-tools .btn {
+  .it-header-wrapper,
+  .it-header-navbar-wrapper,
+  header.it-header-wrapper,
+  nav.navbar,
+  .navbar,
+  .emergency-banner,
+  .emergenza-banner,
+  .allerta-bar,
+  .utility-bar,
+  footer,
+  .footer-pc,
+  #cookie-banner,
+  .cookiebar,
+  .back-to-top,
+  .page-tools,
+  .related-links,
+  .breadcrumb,
+  nav[aria-label="Percorso di navigazione"],
+  .pagination,
+  .page-hero .breadcrumb,
+  /* Link "Torna a tutte le comunicazioni" in fondo al single */
+  .col-lg-8 > hr + .notizia-link,
+  .col-lg-8 > hr {
     display: none !important;
   }
+
+  /* Reset pagina: sfondo bianco, testo nero */
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* Page hero: mantieni solo il titolo, senza banda blu */
   .page-hero {
     background: #fff !important;
     color: #000 !important;
-    padding: 1rem 0;
+    padding: 0 0 0.5rem 0 !important;
+    border-bottom: 2pt solid #003366;
+    margin-bottom: 1rem !important;
   }
   .page-hero h1 {
     color: #000 !important;
+    font-size: 20pt;
+    margin: 0;
   }
-  .page-hero .breadcrumb-item a,
-  .page-hero .breadcrumb-item.active {
-    color: #333 !important;
+
+  /* Occupa tutta la larghezza della pagina stampata */
+  .container,
+  .container-fluid,
+  .row,
+  .col-lg-8,
+  .col-md-9,
+  main {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
-  body {
-    font-size: 12pt;
-    line-height: 1.5;
+
+  /* Metadati comunicazione (badge, data, autore) in stampa */
+  .notizia-categoria,
+  .notizia-data {
+    color: #000 !important;
+    background: transparent !important;
+    border: 1pt solid #333 !important;
+    padding: 1pt 4pt !important;
+    font-size: 9pt !important;
   }
+
+  /* Immagini articoli: dimensione ragionevole su carta */
+  article img,
+  .notizia-img-wrapper img,
+  figure img {
+    max-width: 100% !important;
+    max-height: 90mm !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+  .notizia-img-wrapper {
+    height: auto !important;
+    max-height: 90mm !important;
+  }
+
+  /* Titoli: evita orfani */
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+
+  /* Paragrafi e liste: evita di spezzarli tra pagine */
+  p, li, blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Allegati: mantieni leggibili */
+  .card.bg-light {
+    background: #fff !important;
+    border: 1pt solid #333 !important;
+    box-shadow: none !important;
+  }
+
+  /* Link: mostra URL dopo il testo (tranne ancore e JS) */
   a[href]::after {
     content: " (" attr(href) ")";
     font-size: 0.8em;
-    color: #666;
+    color: #333;
+    word-break: break-all;
   }
   a[href^="#"]::after,
   a[href^="javascript"]::after,
-  nav a[href]::after {
+  article a[href^="/"]::after {
     content: none;
+  }
+  /* Per link interni al sito, mostra URL completo */
+  article a[href^="/"]::after {
+    content: " (protezionecivilegenzano.it" attr(href) ")";
+    font-size: 0.8em;
+    color: #333;
+  }
+
+  /* Nasconde elementi marcati come "solo schermo" */
+  .screen-only,
+  .d-print-none {
+    display: none !important;
   }
 }
 
@@ -708,9 +814,7 @@ article .galleria img {
     text-align: center;
   }
 }
-@media print {
-  .utility-bar { display: none !important; }
-}
+/* .utility-bar è già nascosta dal blocco @media print consolidato */
 
 /* ── SLIM HEADER — Pulsante Area Volontari ── */
 .btn-slim-header {
