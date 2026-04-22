@@ -19,7 +19,9 @@ Nella giornata di **mercoledì 15 aprile 2026** la **Polizia Locale di Genzano d
 
 I volontari del Gruppo hanno prestato **supporto alla Polizia Locale di Genzano** nelle attività di chiusura della strada e gestione della viabilità locale, con posizionamento di transenne e segnaletica di divieto di accesso. L'azione è stata condotta in **subordinazione** agli ordini degli agenti di Polizia Locale presenti sul posto.
 
-![Particolare del dissesto del costone lungo via Nemorense, con palo dell'illuminazione pubblica piegato dal movimento del terreno](/images/2026-04-15-frana-via-nemorense-costone-dissesto.webp)
+{{< foto src="/images/2026-04-15-frana-via-nemorense-chiusura-strada.webp" alt="Strada via Nemorense chiusa al traffico con transenne e segnali di divieto di accesso dopo la frana del costone" caption="Chiusura di via Nemorense al confine con il Comune di Nemi, con transenne e segnaletica di divieto di accesso." >}}
+
+{{< foto src="/images/2026-04-15-frana-via-nemorense-costone-dissesto.webp" alt="Particolare del dissesto del costone lungo via Nemorense, con palo dell'illuminazione pubblica piegato dal movimento del terreno" caption="Particolare del dissesto: il movimento del terreno ha piegato il palo dell'illuminazione pubblica." >}}
 
 ## Il contesto
 

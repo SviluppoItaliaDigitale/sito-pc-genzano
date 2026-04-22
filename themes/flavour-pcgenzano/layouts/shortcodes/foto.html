@@ -1,0 +1,40 @@
+{{- /*
+  Shortcode: foto
+  Inserisce una foto nell'articolo con:
+   - <figure>/<figcaption> semantici
+   - click per aprire a dimensione intera in nuova scheda (accessibile da tastiera)
+   - alt text obbligatorio
+   - didascalia opzionale
+   - lazy loading
+
+  Uso:
+    {{< foto src="/images/2026-04-20-incendio-cecchina-casolare-spegnimento.webp"
+             alt="Casolare dopo lo spegnimento a Cecchina"
+             caption="Il casolare dopo le operazioni di spegnimento dei Vigili del Fuoco." >}}
+
+  Parametri:
+    src      (obbligatorio) — percorso immagine
+    alt      (obbligatorio) — testo alternativo significativo
+    caption  (opzionale)    — didascalia visibile sotto la foto
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $caption := .Get "caption" -}}
+{{- if or (not $src) (not $alt) -}}
+  {{- errorf "shortcode foto: parametri 'src' e 'alt' sono obbligatori (chiamato in %s)" .Page.File.Path -}}
+{{- end -}}
+<figure class="figure my-4 w-100 text-center">
+  <a href="{{ $src | relURL }}"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Apri a dimensione intera: {{ $alt }} (si apre in una nuova scheda)"
+     class="d-inline-block">
+    <img src="{{ $src | relURL }}"
+         alt="{{ $alt }}"
+         class="figure-img img-fluid rounded shadow-sm"
+         loading="lazy">
+  </a>
+  {{- with $caption }}
+  <figcaption class="figure-caption text-center mt-2">{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>
