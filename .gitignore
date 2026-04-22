@@ -20,3 +20,6 @@ package-lock.json
 
 # Claude Code (impostazioni locali)
 .claude/settings.local.json
+
+# Contesto AI generato on-demand (rigenerabile con scripts/export-contesto-ai.sh)
+CONTESTO-AI.md

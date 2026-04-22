@@ -106,7 +106,37 @@ git add . && git commit -m "..." && git push
 
 # Script interattivo di gestione (se installato)
 bash ~/gestione-sito.sh
+
+# Export contesto completo per altra AI (ChatGPT, Gemini, Claude web, ecc.)
+bash scripts/export-contesto-ai.sh
+# → Genera CONTESTO-AI.md nella root con TUTTA la documentazione del sito
+#   in un unico file, pronto da copia-incollare in qualsiasi altra AI per
+#   avere continuità di gestione senza perdere nulla.
 ```
+
+---
+
+## Continuità su altra AI o altra sessione
+
+Per lavorare sul sito con un'AI diversa (ChatGPT, Gemini, Claude web) o in una
+nuova sessione dove non si ha accesso automatico ai file del repo, esiste uno
+**script di export** che raccoglie tutta la documentazione in un singolo file:
+
+```bash
+bash scripts/export-contesto-ai.sh
+```
+
+Produce `CONTESTO-AI.md` (~275 KB) contenente:
+- README, CLAUDE.md, 6 regole di governance
+- Manuale operativo completo (MANUALE-SITO.md)
+- Piano editoriale (fonti + calendario + biblioteca evergreen)
+- Archetype articoli, configurazione Hugo, shortcode `foto`
+- Memorie utente (feedback durevoli salvati da Claude Code)
+
+Basta copiare il contenuto di `CONTESTO-AI.md` e incollarlo come primo messaggio
+nell'altra AI per avere continuità operativa senza perdere contesto.
+
+Il file è `.gitignore`d perché si rigenera on-demand dallo stato corrente del repo.
 
 ---
 

@@ -67,6 +67,11 @@ git add . && git commit -m "..." && git push
 
 # Interactive site management script (menus for content, emergencies, alerts)
 bash ~/gestione-sito.sh
+
+# Export contesto completo per altra AI (ChatGPT, Gemini, Claude web, ecc.)
+bash scripts/export-contesto-ai.sh
+# Produce CONTESTO-AI.md nella root con TUTTA la documentazione in un unico file
+# pronto da incollare in qualsiasi altra AI per continuità di gestione.
 ```
 
 ## Architecture

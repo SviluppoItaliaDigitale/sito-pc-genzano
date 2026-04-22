@@ -40,8 +40,10 @@ sito-pc-genzano/
 │   ├── comunicazioni.md     # Archetype completo per news
 │   └── default.md           # Archetype minimale
 ├── scripts/
-│   ├── genera-cover.py      # Genera copertine tipografiche automatiche
-│   └── aggiorna-image-frontmatter.py  # Aggiorna il campo image negli articoli
+│   ├── genera-cover.py              # Genera copertine tipografiche automatiche
+│   ├── aggiorna-image-frontmatter.py # Aggiorna il campo image negli articoli
+│   └── export-contesto-ai.sh        # Export di tutta la documentazione in
+│                                    # un unico CONTESTO-AI.md per altra AI
 ├── .claude/rules/           # Regole di governance (questo file)
 └── CLAUDE.md                # Istruzioni per Claude Code
 ```
