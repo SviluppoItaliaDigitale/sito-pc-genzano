@@ -1067,6 +1067,72 @@ static/
 - [ ] Diritti di pubblicazione verificati
 - [ ] Alt text definito (nel frontmatter o nel Markdown)
 
+### 3.13 — Copertina automatica (tipografica) vs foto evento
+
+Il sito distingue **due tipi** di immagine per articolo:
+
+**1. Copertina automatica (tipografica)** — generata dallo script `scripts/genera-cover.py`
+che produce una grafica istituzionale con gradiente blu, titolo dell'articolo, badge
+colorato e fascia blu con logo. È associata automaticamente al frontmatter tramite
+`scripts/aggiorna-image-frontmatter.py`. Nome file: identico allo slug dell'articolo,
+es. `2026-04-15-frana-costone-nemi-chiusura-via-nemorense.webp`.
+
+**2. Foto evento (contenuto redazionale)** — forniscono testimonianza fotografica reale
+di un intervento, attività, formazione. Vanno sempre **inserite nel corpo dell'articolo**,
+non sostituiscono la copertina.
+
+Regole per le foto evento:
+- Nome file: `AAAA-MM-GG-descrizione-specifica.webp`, con descrizione **diversa dallo slug**
+  (così `genera-cover.py` non le sovrascrive).
+- Devono comunque avere la **fascia blu istituzionale** (vedi Parte 3.8).
+- Si inseriscono con lo shortcode `foto` — mai con markdown `![...]()` diretto.
+
+### 3.14 — Shortcode `foto` (click per ingrandire)
+
+Lo shortcode `foto` inserisce un'immagine nel corpo dell'articolo con click-per-ingrandire
+accessibile da tastiera, `<figure>`/`<figcaption>` semantici, alt text obbligatorio e
+didascalia opzionale.
+
+**Sintassi:**
+
+```go-html-template
+{{< foto src="/images/AAAA-MM-GG-descrizione.webp"
+         alt="Descrizione significativa dell'immagine per screen reader"
+         caption="Didascalia visibile sotto la foto (opzionale)." >}}
+```
+
+**Parametri:**
+
+| Parametro | Obbligatorio | Descrizione |
+|---|---|---|
+| `src` | sì | Percorso dell'immagine in `/images/...` |
+| `alt` | sì | Testo alternativo per screen reader. Mai "immagine di..." |
+| `caption` | no | Didascalia visibile. Supporta markdown inline. |
+
+**Comportamento:**
+
+- L'immagine è cliccabile: si apre a dimensione intera in una **nuova scheda**.
+- Il link ha `aria-label` descrittivo per screen reader.
+- `loading="lazy"` per performance.
+- Responsive (`img-fluid` di Bootstrap Italia).
+- Nessun JavaScript richiesto: funziona con tastiera, screen reader, e anche con JS
+  disattivato.
+
+**Esempio reale:**
+
+```go-html-template
+{{< foto src="/images/2026-04-20-incendio-cecchina-casolare-spegnimento.webp"
+         alt="Casolare dopo le operazioni di spegnimento a Cecchina"
+         caption="Il casolare dopo le operazioni di spegnimento e messa in sicurezza." >}}
+```
+
+**Quando usare lo shortcode vs markdown:**
+
+- **Shortcode `foto`**: per tutte le foto evento (interventi, formazione, attività,
+  ricorrenze con foto reali). Sempre.
+- **Markdown `![alt](src)`**: solo per icone o immagini puramente decorative inline,
+  quando non serve l'ingrandimento.
+
 ---
 
 ## Parte 4 — Scrivere una pagina (diverso da articolo)

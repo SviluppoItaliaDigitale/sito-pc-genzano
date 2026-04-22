@@ -17,7 +17,7 @@ Si è concluso nel fine settimana il ciclo di **formazione base** dedicato ai nu
 
 A guidare le lezioni in aula è stato **Daniele Toscani**, **formatore regionale** del **Gruppo Comunale di Genzano di Roma**. La sua presenza tra i docenti conferma il contributo che il nostro Gruppo porta alla formazione dei nuovi operatori, a beneficio di tutto il sistema regionale.
 
-![Daniele Toscani, formatore regionale, durante la docenza in Sala Operativa Lazio](/images/2026-04-19-toscani-docenza-sala-operativa-lazio.webp)
+{{< foto src="/images/2026-04-19-toscani-docenza-sala-operativa-lazio.webp" alt="Daniele Toscani, formatore regionale del Gruppo Comunale di Genzano, durante la docenza in Sala Operativa Regionale del Lazio davanti ai nuovi volontari" caption="Daniele Toscani durante la docenza in Sala Operativa Regionale del Lazio." >}}
 
 ## Cosa si è trattato
 

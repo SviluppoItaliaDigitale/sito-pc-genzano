@@ -19,7 +19,9 @@ Nel pomeriggio di **lunedì 20 aprile 2026** il **Gruppo Comunale Volontari di P
 
 Giunti sul posto, i volontari hanno prestato **supporto ai Vigili del Fuoco** e alle altre squadre di Protezione Civile intervenute per le operazioni di **spegnimento di un casolare**. L'attività è proseguita fino a completa messa in sicurezza dell'area, con i volontari impiegati nelle attività logistiche a supporto degli operatori.
 
-![Casolare dopo le operazioni di spegnimento a Cecchina](/images/2026-04-20-incendio-cecchina-casolare-spegnimento.webp)
+{{< foto src="/images/2026-04-20-incendio-cecchina-albano-supporto-vvf.webp" alt="Mezzo dei Vigili del Fuoco e mezzo del Gruppo Comunale di Protezione Civile di Genzano in una strada di Cecchina durante l'intervento per l'incendio di un casolare" caption="Supporto ai Vigili del Fuoco durante l'intervento a Cecchina, Albano Laziale." >}}
+
+{{< foto src="/images/2026-04-20-incendio-cecchina-casolare-spegnimento.webp" alt="Casolare dopo le operazioni di spegnimento a Cecchina" caption="Il casolare dopo le operazioni di spegnimento e messa in sicurezza." >}}
 
 ## Il coordinamento
 
