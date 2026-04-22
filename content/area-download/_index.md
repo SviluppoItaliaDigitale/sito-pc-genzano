@@ -94,6 +94,14 @@ Per segnalare un link non funzionante scrivi a <a href="mailto:segreteria@protez
 | [La Protezione Civile in famiglia](https://www.protezionecivilegenzano.it/documenti/download/PC_famiglia.pdf) | Buone pratiche da adottare in famiglia | PDF |
 | [Il ruolo del DPC](https://www.protezionecivilegenzano.it/documenti/download/Ruolo_DPC.pdf) | Pieghevole informativo | PDF |
 
+## Formazione e solidarietà
+
+Manuali tecnici prodotti da enti del Terzo Settore in collaborazione con il sistema di Protezione Civile, utili per i volontari impiegati in attività di supporto alla popolazione.
+
+| Documento | Descrizione | Formato |
+|---|---|---|
+| [Manuale di Cucina in Emergenza](/documenti/download/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf) | A cura del DSEFIC — Dipartimento Solidarietà Emergenze della Federazione Italiana Cuochi. Protocolli per cucine da campo: zone, HACCP, alimentazioni speciali, ricette (3,8 MB) | PDF |
+
 ## Campagna "Io Non Rischio"
 
 Materiali informativi della campagna nazionale [Io Non Rischio](https://www.iononrischio.it/) promossa dal Dipartimento della Protezione Civile. Per ogni rischio sono disponibili un pieghevole sintetico e una scheda di approfondimento.
