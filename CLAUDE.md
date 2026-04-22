@@ -165,6 +165,8 @@ Produce `<figure>` con immagine cliccabile (apre a dimensione intera in nuova sc
 
 10. **STAMPA**: il file `themes/flavour-pcgenzano/static/css/custom.css` contiene regole `@media print` globali che, quando l'utente clicca "Stampa" su una pagina, nascondono header/navbar/footer/banner/cookie/utility bar/page tools e stampano solo il contenuto della pagina (H1 + articolo + allegati) su A4 con margini standard. Non modificare questa sezione senza valutare l'impatto su tutti i layout.
 
+11. **DATA ULTIMA REVISIONE (pagine legali/istituzionali)**: le pagine `privacy`, `note-legali`, `accessibilita`, `social-media-policy` hanno nel frontmatter il campo **`dataUltimaRevisione: "AAAA-MM-GG"`**. Il template `single.html` lo mostra come box evidente in cima al contenuto ("Pagina rivista il …"). Quando modifichi il contenuto sostanziale di una di queste pagine, aggiorna anche la data. Non usare stringhe tipo "Marzo 2026" nel corpo: il riferimento è unico e nel frontmatter. Il partial `page-tools.html` riconosce il campo e omette la `.Lastmod` automatica su queste pagine, per evitare date duplicate in conflitto.
+
 ## Automazioni periodiche (GitHub Actions)
 
 Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della settimana), scaglionati in orari diversi per non caricare il runner nello stesso momento. L'utente ha scelto il lunedì per avere una finestra settimanale costante di issue/verifica da affrontare.

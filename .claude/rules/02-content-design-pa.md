@@ -110,3 +110,16 @@ Queste tinte sono applicate in `custom.css` in due gruppi coordinati: le classi 
       dimensione: "120 KB"
   ```
 - `draft`: false (per articoli pubblicati)
+
+## Frontmatter per le pagine legali / istituzionali
+
+Le pagine `content/privacy/_index.md`, `content/note-legali/_index.md`, `content/accessibilita/_index.md` e `content/social-media-policy/_index.md` devono avere il campo:
+
+- **`dataUltimaRevisione: "AAAA-MM-GG"`** — data dell'ultima revisione sostanziale della pagina.
+
+Il template `themes/flavour-pcgenzano/layouts/_default/single.html` mostra questo valore come box evidente (`<div class="alert alert-light">`) in cima al contenuto con il testo "Pagina rivista il …". Il partial `page-tools.html` disattiva la `.Lastmod` automatica se il campo è presente, per evitare date duplicate o in conflitto.
+
+**Regole operative:**
+- Aggiorna `dataUltimaRevisione` ogni volta che modifichi contenuto sostanziale (non refusi o link morti).
+- Non scrivere date di revisione nel corpo del testo (stringhe tipo "Marzo 2026", "Ultimo aggiornamento: …"): il riferimento è unico e nel frontmatter.
+- Il workflow `coerenza-docs.yml` verifica settimanalmente che le 4 pagine legali abbiano il campo impostato.

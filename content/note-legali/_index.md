@@ -2,6 +2,7 @@
 title: "Note Legali"
 description: "Informazioni legali sul sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
+dataUltimaRevisione: "2026-04-22"
 ---
 
 ## Titolarità del sito
