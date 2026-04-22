@@ -1,6 +1,6 @@
 {
-  "livello": "verde",
-  "titolo": "NESSUNA ALLERTA",
-  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
-  "ultimo_aggiornamento": "2026-04-17"
+  "livello": "gialla",
+  "titolo": "ALLERTA GIALLA",
+  "descrizione": "Criticità per temporali. Prestare attenzione.",
+  "ultimo_aggiornamento": "2026-04-22T16:05:11+02:00"
 }
