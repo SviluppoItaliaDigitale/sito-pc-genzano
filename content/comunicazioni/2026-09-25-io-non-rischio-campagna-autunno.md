@@ -5,7 +5,7 @@ description: "Ogni autunno Io Non Rischio porta migliaia di volontari nelle piaz
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-25-io-non-rischio-campagna-autunno.webp"
 image_alt: "Piazza italiana animata durante una giornata Io Non Rischio con gazebo della Protezione Civile e cittadini in ascolto"
 scadenza: ""
 area: "Lazio"

@@ -5,7 +5,7 @@ description: "I laghi vulcanici dei Castelli sono meta estiva amata. Balneazione
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-12-balneazione-laghi-nemi-albano-sicurezza.webp"
 image_alt: "Superficie del lago di Nemi al mattino presto, con riflessi verdi della vegetazione circostante"
 scadenza: ""
 area: "Castelli Romani"

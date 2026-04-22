@@ -5,7 +5,7 @@ description: "Il 4 novembre si celebra il Giorno dell'Unità Nazionale e delle F
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-04-forze-armate-ruolo-protezione-civile.webp"
 image_alt: "Corteo commemorativo del 4 novembre con tricolore italiano e militari in alta uniforme davanti a monumento ai Caduti"
 scadenza: ""
 area: "Lazio"

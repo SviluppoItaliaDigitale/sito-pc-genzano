@@ -5,7 +5,7 @@ description: "Dal 2017 il vecchio Corpo Forestale è confluito nei Carabinieri. 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-06-corpo-forestale-carabinieri-ruolo.webp"
 image_alt: "Carabiniere del Corpo Forestale in un bosco dei Castelli Romani durante un sopralluogo"
 scadenza: ""
 area: "Genzano di Roma"

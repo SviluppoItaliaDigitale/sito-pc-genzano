@@ -5,7 +5,7 @@ description: "La comunicazione del rischio è una disciplina scientifica. Le reg
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-16-risk-communication-comunicare-rischio.webp"
 image_alt: "Conferenza stampa istituzionale con portavoce della Protezione Civile e mappe del territorio proiettate sullo schermo"
 scadenza: ""
 area: "Lazio"

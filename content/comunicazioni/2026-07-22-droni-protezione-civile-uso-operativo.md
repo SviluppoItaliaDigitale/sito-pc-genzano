@@ -5,7 +5,7 @@ description: "I droni (APR) sono sempre più integrati nel sistema di PC: ricerc
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-22-droni-protezione-civile-uso-operativo.webp"
 image_alt: "Drone di Protezione Civile in volo su un'area boschiva per monitoraggio ambientale"
 scadenza: ""
 area: "Genzano di Roma"

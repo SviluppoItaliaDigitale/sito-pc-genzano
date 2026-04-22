@@ -5,7 +5,7 @@ description: "A 25 anni dall'attacco alle Torri Gemelle, una riflessione sulla c
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-11-anniversario-11-settembre-comunicazione-crisi.webp"
 image_alt: "Lampada di commemorazione accesa al tramonto in onore delle vittime dell'11 settembre 2001"
 scadenza: ""
 area: "Lazio"

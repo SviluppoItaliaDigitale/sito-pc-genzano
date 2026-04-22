@@ -5,7 +5,7 @@ description: "Parte nel weekend il modulo primo soccorso del corso base, tenuto 
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-18-modulo-primo-soccorso-corso.webp"
 image_alt: "Istruttore dimostra manovra di rianimazione su manichino durante corso di primo soccorso davanti ad allievi attenti"
 scadenza: ""
 area: "Genzano di Roma"

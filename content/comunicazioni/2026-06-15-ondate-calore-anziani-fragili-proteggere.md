@@ -5,7 +5,7 @@ description: "Le ondate di calore sono il rischio sanitario estivo più sottoval
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-15-ondate-calore-anziani-fragili-proteggere.webp"
 image_alt: "Mano anziana appoggiata a un bicchiere d'acqua su un tavolo in un ambiente domestico luminoso"
 scadenza: ""
 area: "Genzano di Roma"

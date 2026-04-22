@@ -5,7 +5,7 @@ description: "Il Testo Unico sulla sicurezza sul lavoro tutela oltre 23 milioni 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-21-sicurezza-lavoro-81-2008.webp"
 image_alt: "Lavoratore con casco, imbragatura e DPI durante attività in altezza su impalcatura di cantiere"
 scadenza: ""
 area: "Lazio"

@@ -5,7 +5,7 @@ description: "Prima delle piogge autunnali, verificare la pulizia di fossi, cadi
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno.webp"
 image_alt: "Operaio al lavoro per pulire una caditoia stradale ostruita da foglie e detriti"
 scadenza: ""
 area: "Castelli Romani"

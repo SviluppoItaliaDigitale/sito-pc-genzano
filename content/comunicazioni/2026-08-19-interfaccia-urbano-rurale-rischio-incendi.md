@@ -5,7 +5,7 @@ description: "Le zone dove il costruito incontra il bosco sono quelle più espos
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-19-interfaccia-urbano-rurale-rischio-incendi.webp"
 image_alt: "Casa di campagna ai margini di un bosco in un paesaggio collinare dei Castelli Romani"
 scadenza: ""
 area: "Castelli Romani"

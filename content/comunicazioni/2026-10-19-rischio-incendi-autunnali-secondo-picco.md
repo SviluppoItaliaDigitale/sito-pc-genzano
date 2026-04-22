@@ -5,7 +5,7 @@ description: "Gli incendi non si limitano all'estate. L'autunno può presentare 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-19-rischio-incendi-autunnali-secondo-picco.webp"
 image_alt: "Campo a riposo autunnale con residui vegetali secchi e albero spoglio sullo sfondo, scena che illustra il rischio di incendi"
 scadenza: ""
 area: "Castelli Romani"

@@ -5,7 +5,7 @@ description: "Ogni estate i Castelli Romani ospitano decine di sagre e feste. Di
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-21-sagre-feste-patronali-sicurezza-eventi.webp"
 image_alt: "Volontari di Protezione Civile presenti in una sagra serale dei Castelli Romani con luminarie e folla"
 scadenza: ""
 area: "Castelli Romani"

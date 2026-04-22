@@ -5,7 +5,7 @@ description: "La sera del 7 dicembre, vigilia dell'Immacolata, è tradizionalmen
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-07-vigilia-immacolata-servizio-sicurezza.webp"
 image_alt: "Piazza del centro storico di Genzano illuminata con luminarie natalizie durante la vigilia dell'Immacolata con persone raccolte"
 scadenza: "2026-12-09"
 area: "Genzano di Roma"

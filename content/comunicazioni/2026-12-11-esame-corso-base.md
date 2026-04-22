@@ -5,7 +5,7 @@ description: "Si svolge l'esame finale del corso base avviato a ottobre. Nuovi v
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-11-esame-corso-base.webp"
 image_alt: "Aula con tavoli e corsisti concentrati nell'esame scritto del corso base di Protezione Civile con commissione esaminatrice"
 scadenza: ""
 area: "Genzano di Roma"

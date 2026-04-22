@@ -5,7 +5,7 @@ description: "La cultura della prevenzione si costruisce a scuola. Progetti nazi
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-26-pc-scuola-educazione-rischi-bambini.webp"
 image_alt: "Bambini delle elementari in aula durante una lezione di educazione ai rischi condotta da volontari di Protezione Civile"
 scadenza: ""
 area: "Genzano di Roma"

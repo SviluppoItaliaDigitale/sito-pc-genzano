@@ -5,7 +5,7 @@ description: "L'ONU ha proclamato il 13 ottobre Giornata Internazionale per la R
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-13-giornata-internazionale-riduzione-disastri.webp"
 image_alt: "Globo terrestre stilizzato con simboli di rischi naturali e tecnologici nel logo della giornata ONU"
 scadenza: ""
 area: "Lazio"

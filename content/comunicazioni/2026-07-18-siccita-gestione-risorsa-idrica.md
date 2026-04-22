@@ -5,7 +5,7 @@ description: "La siccità non è solo un problema agricolo. Il cittadino ha un r
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-18-siccita-gestione-risorsa-idrica.webp"
 image_alt: "Rubinetto con rivolo d'acqua in un'inquadratura che suggerisce risparmio idrico estivo"
 scadenza: ""
 area: "Genzano di Roma"

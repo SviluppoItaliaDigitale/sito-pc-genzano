@@ -5,7 +5,7 @@ description: "A metà ottobre, un aggiornamento sulle attività in corso: corso 
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-15-aggiornamento-operativo-meta-ottobre.webp"
 image_alt: "Sala operativa del Gruppo con mappa del territorio e volontari che discutono del piano settimanale"
 scadenza: ""
 area: "Genzano di Roma"

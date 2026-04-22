@@ -5,7 +5,7 @@ description: "I laghi di Nemi e Albano attraggono ogni estate migliaia di person
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-02-sicurezza-in-spiaggia-laghi-castelli.webp"
 image_alt: "Lago di Nemi con spiaggia affollata di bagnanti in una giornata estiva"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "Nel pomeriggio del 20 aprile il nostro Gruppo è stato attivato da
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-04-20-incendio-cecchina-albano-supporto-vvf.webp"
+image: "/images/2026-04-20-attivazione-incendio-cecchina-albano-laziale.webp"
 image_alt: "Mezzo dei Vigili del Fuoco e mezzo del Gruppo Comunale di Protezione Civile di Genzano in una strada di Cecchina durante l'intervento per l'incendio di un casolare"
 scadenza: ""
 area: "Albano Laziale — Cecchina"

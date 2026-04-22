@@ -5,7 +5,7 @@ description: "Luglio è in media il mese più caldo dell'anno nel Lazio centrale
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-01-luglio-mese-piu-caldo-statistico.webp"
 image_alt: "Termometro all'ombra che segna temperature elevate in un pomeriggio di inizio luglio"
 scadenza: ""
 area: "Genzano di Roma"

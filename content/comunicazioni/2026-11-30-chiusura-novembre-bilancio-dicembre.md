@@ -5,7 +5,7 @@ description: "Bilancio delle attività di novembre 2026 del Gruppo Comunale Volo
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-30-chiusura-novembre-bilancio-dicembre.webp"
 image_alt: "Sala riunioni con calendario mensile dicembre evidenziato e volontari che pianificano le attività del mese"
 scadenza: ""
 area: "Genzano di Roma"

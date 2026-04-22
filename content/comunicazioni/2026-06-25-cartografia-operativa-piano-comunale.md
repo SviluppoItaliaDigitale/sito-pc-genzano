@@ -5,7 +5,7 @@ description: "Dietro ogni Piano comunale c'è una serie di carte tematiche che g
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-25-cartografia-operativa-piano-comunale.webp"
 image_alt: "Carta tematica del territorio di Genzano con sovrapposti livelli di rischio idrogeologico e sismico"
 scadenza: ""
 area: "Genzano di Roma"

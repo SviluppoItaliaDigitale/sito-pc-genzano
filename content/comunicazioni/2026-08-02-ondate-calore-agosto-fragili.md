@@ -5,7 +5,7 @@ description: "Nei giorni più caldi dell'anno, le ondate di calore rappresentano
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-02-ondate-calore-agosto-fragili.webp"
 image_alt: "Persona anziana al riparo in una stanza fresca durante un'ondata di calore estiva"
 scadenza: ""
 area: "Genzano di Roma"

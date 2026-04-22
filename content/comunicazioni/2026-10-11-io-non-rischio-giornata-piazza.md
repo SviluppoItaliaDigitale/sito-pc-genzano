@@ -5,7 +5,7 @@ description: "In occasione della giornata nazionale Io Non Rischio, il Gruppo di
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-11-io-non-rischio-giornata-piazza.webp"
 image_alt: "Gazebo di Protezione Civile con volontari che accolgono cittadini durante la giornata Io Non Rischio"
 scadenza: "2026-10-31"
 area: "Genzano di Roma"

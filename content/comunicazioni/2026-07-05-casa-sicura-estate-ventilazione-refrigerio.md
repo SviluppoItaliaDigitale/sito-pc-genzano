@@ -5,7 +5,7 @@ description: "In estate la casa è il primo rifugio dal caldo. Come organizzarla
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-05-casa-sicura-estate-ventilazione-refrigerio.webp"
 image_alt: "Interno di casa con tapparelle abbassate e ventilatore, ambiente fresco durante un pomeriggio estivo"
 scadenza: ""
 area: "Genzano di Roma"

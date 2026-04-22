@@ -5,7 +5,7 @@ description: "Ogni volontario di Protezione Civile indossa Dispositivi di Protez
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-17-dpi-volontari-cosa-sono-perche-importanti.webp"
 image_alt: "Casco, giubbino alta visibilita, guanti e scarponi di volontario PC ordinati su un tavolo"
 scadenza: ""
 area: "Genzano di Roma"

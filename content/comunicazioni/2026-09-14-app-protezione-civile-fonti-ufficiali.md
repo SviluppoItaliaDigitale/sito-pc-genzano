@@ -5,7 +5,7 @@ description: "Una selezione ragionata di siti, app e canali ufficiali da seguire
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-14-app-protezione-civile-fonti-ufficiali.webp"
 image_alt: "Schermo di cellulare con icone delle principali app istituzionali di Protezione Civile italiane"
 scadenza: ""
 area: "Lazio"

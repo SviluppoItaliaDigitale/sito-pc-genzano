@@ -5,7 +5,7 @@ description: "Sagre, feste patronali, concerti, eventi sportivi: la Protezione C
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-23-assistenza-sagre-grandi-eventi-locali.webp"
 image_alt: "Piazza di Genzano durante una sagra con volontari PC in alta visibilità tra la folla"
 scadenza: ""
 area: "Genzano di Roma"

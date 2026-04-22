@@ -5,7 +5,7 @@ description: "Fine luglio segna un momento di passaggio nell'estate. Bilancio de
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-31-fine-luglio-bilancio-preparazione-agosto.webp"
 image_alt: "Tramonto estivo sui Castelli Romani a fine luglio, simbolo di passaggio di stagione e preparazione"
 scadenza: ""
 area: "Genzano di Roma"

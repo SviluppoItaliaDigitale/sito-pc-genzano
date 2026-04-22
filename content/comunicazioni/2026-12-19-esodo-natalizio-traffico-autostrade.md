@@ -5,7 +5,7 @@ description: "Il weekend 19-21 dicembre è il picco dell'esodo natalizio. Previs
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-19-esodo-natalizio-traffico-autostrade.webp"
 image_alt: "Autostrada italiana A1 con traffico intenso durante l'esodo natalizio 2026, con mezzi pesanti e auto verso sud Italia"
 scadenza: "2026-12-23"
 area: "Lazio"

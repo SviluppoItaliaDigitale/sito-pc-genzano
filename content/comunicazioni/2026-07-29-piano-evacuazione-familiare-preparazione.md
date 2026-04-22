@@ -5,7 +5,7 @@ description: "In caso di emergenza ogni famiglia dovrebbe avere un piano chiaro.
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-29-piano-evacuazione-familiare-preparazione.webp"
 image_alt: "Famiglia che discute attorno a un tavolo il proprio piano di evacuazione domestica con mappa e checklist"
 scadenza: ""
 area: "Genzano di Roma"

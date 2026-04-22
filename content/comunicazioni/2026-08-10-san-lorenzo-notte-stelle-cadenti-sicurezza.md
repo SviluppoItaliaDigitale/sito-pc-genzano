@@ -5,7 +5,7 @@ description: "Il 10 agosto è la notte delle Perseidi. Come godersi lo spettacol
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-10-san-lorenzo-notte-stelle-cadenti-sicurezza.webp"
 image_alt: "Cielo stellato estivo con scia di stella cadente sopra il profilo collinare dei Castelli Romani"
 scadenza: ""
 area: "Castelli Romani"

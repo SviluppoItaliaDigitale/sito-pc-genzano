@@ -5,7 +5,7 @@ description: "Il colpo di calore è un'emergenza che può essere fatale. Imparar
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-19-colpo-calore-riconoscere-primo-soccorso.webp"
 image_alt: "Persona che offre acqua e pronto soccorso a chi sta male per il caldo in un parco estivo"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "Bilancio delle attività 2026 del Gruppo Comunale Volontari di PC 
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-28-bilancio-annuale-pc-genzano.webp"
 image_alt: "Volontari in divisa del Gruppo Comunale di Protezione Civile di Genzano in una foto di gruppo di fine anno davanti alla sede operativa"
 scadenza: ""
 area: "Genzano di Roma"

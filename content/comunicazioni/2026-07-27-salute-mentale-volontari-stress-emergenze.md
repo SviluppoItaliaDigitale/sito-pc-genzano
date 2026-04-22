@@ -5,7 +5,7 @@ description: "Essere volontario di PC espone a stress psicologico significativo.
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-27-salute-mentale-volontari-stress-emergenze.webp"
 image_alt: "Volontari di Protezione Civile durante un debriefing post-intervento in un'atmosfera riflessiva"
 scadenza: ""
 area: "Genzano di Roma"

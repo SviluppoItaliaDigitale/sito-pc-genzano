@@ -5,7 +5,7 @@ description: "Il 9 dicembre è giorno di rientri e ripresa della normalità dopo
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-09-rientro-post-ponte-sicurezza-stradale.webp"
 image_alt: "Autostrada italiana con traffico di rientro del martedì post Immacolata e segnaletica per guida sicura in inverno"
 scadenza: "2026-12-10"
 area: "Lazio"

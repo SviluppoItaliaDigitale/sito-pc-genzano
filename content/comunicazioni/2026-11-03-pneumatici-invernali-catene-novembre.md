@@ -5,7 +5,7 @@ description: "Dal 15 novembre al 15 aprile scattano gli obblighi invernali sui p
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-03-pneumatici-invernali-catene-novembre.webp"
 image_alt: "Pneumatico invernale con marcatura M+S e simbolo del fiocco di neve montato su cerchio di auto"
 scadenza: "2026-11-15"
 area: "Lazio"

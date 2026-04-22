@@ -5,7 +5,7 @@ description: "Molte persone passano più tempo al lavoro che a casa. Un kit di e
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-18-kit-emergenza-ufficio-lavoro.webp"
 image_alt: "Scrivania ordinata di un ufficio con sopra una borsa compatta contenente kit di emergenza"
 scadenza: ""
 area: "Genzano di Roma"

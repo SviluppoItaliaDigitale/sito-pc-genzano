@@ -5,7 +5,7 @@ description: "Il Sindaco è autorità comunale di Protezione Civile. Ruoli, resp
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-24-comune-protezione-civile-ruolo-sindaco.webp"
 image_alt: "Sala operativa comunale con Sindaco e tecnici durante il coordinamento di un'emergenza locale"
 scadenza: ""
 area: "Genzano di Roma"

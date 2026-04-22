@@ -5,7 +5,7 @@ description: "A metà novembre, un aggiornamento sulle attività in corso: corso
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-15-aggiornamento-meta-novembre.webp"
 image_alt: "Sala operativa del Gruppo con mappe del territorio e calendario attività di novembre esposto durante una riunione settimanale"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "Il corso base di Protezione Civile si avvia alla conclusione. Ulti
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-27-corso-base-ultima-settimana-esame.webp"
 image_alt: "Aula di formazione con volontari in ripasso collettivo prima dell'esame finale del corso base di Protezione Civile"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "In emergenza la rete telefonica può saltare. La radio resta uno d
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-27-radiocomunicazioni-base-volontari-pc.webp"
 image_alt: "Radio portatile VHF appesa alla cintura di un volontario di Protezione Civile in servizio"
 scadenza: ""
 area: "Genzano di Roma"

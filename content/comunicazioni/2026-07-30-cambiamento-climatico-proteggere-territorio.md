@@ -5,7 +5,7 @@ description: "Il cambiamento climatico modifica i rischi del nostro territorio. 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-30-cambiamento-climatico-proteggere-territorio.webp"
 image_alt: "Paesaggio dei Castelli Romani con cielo estivo carico di significato climatico tra boschi e case"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "Chiusura di settembre: riprese scuole, fine stagione AIB, avvio fo
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-30-settembre-bilancio-ottobre-prospettive.webp"
 image_alt: "Foglie d'autunno a terra in una strada del centro storico di Genzano con colori caldi"
 scadenza: ""
 area: "Genzano di Roma"

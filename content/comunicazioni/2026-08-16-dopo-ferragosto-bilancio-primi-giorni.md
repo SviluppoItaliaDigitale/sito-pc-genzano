@@ -5,7 +5,7 @@ description: "La prima settimana di agosto è passata. Il bilancio operativo, le
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-16-dopo-ferragosto-bilancio-primi-giorni.webp"
 image_alt: "Stradina di Genzano tranquilla il giorno dopo Ferragosto, al mattino presto"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "Un kit ben fatto può fare la differenza nelle prime 72 ore di un'
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-02-kit-emergenza-famiglia-72-ore.webp"
 image_alt: "Zaino di emergenza aperto con borraccia, radio a pile, torcia, kit medico e documenti protetti"
 scadenza: ""
 area: "Genzano di Roma"

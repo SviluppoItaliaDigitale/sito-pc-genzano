@@ -5,7 +5,7 @@ description: "Il 30 settembre termina ufficialmente il periodo di massima perico
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-28-chiusura-stagione-aib-lazio.webp"
 image_alt: "Bosco dei Castelli Romani dopo la stagione estiva con foglie che iniziano a cambiare colore verso l'autunno"
 scadenza: ""
 area: "Castelli Romani"

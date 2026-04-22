@@ -5,7 +5,7 @@ description: "A dieci anni dal sisma di Amatrice, Accumoli, Arquata, la memoria 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-24-terremoto-amatrice-10-anni-memoria.webp"
 image_alt: "Campanile di una chiesa tra le macerie di un paese dell'entroterra ferito dal sisma del 2016, vista d'archivio"
 scadenza: ""
 area: "Lazio"

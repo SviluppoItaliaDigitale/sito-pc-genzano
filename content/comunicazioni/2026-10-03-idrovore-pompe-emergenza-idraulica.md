@@ -5,7 +5,7 @@ description: "Quando l'acqua invade garage, scantinati, ambienti a rischio, le i
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-03-idrovore-pompe-emergenza-idraulica.webp"
 image_alt: "Volontari della Protezione Civile operano con una idrovora per svuotare un locale allagato dopo una forte pioggia"
 scadenza: ""
 area: "Genzano di Roma"

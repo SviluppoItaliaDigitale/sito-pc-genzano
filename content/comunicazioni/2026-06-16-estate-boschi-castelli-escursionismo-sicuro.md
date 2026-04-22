@@ -5,7 +5,7 @@ description: "L'estate porta nei boschi dei Castelli migliaia di escursionisti. 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-16-estate-boschi-castelli-escursionismo-sicuro.webp"
 image_alt: "Sentiero tra faggi e castagni nel Parco dei Castelli Romani con luce filtrata dalle chiome"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "Dieci anni fa il sisma del Centro Italia devastava Amatrice, Norci
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-28-centro-italia-2016-memoria.webp"
 image_alt: "Paese dell'Appennino danneggiato dal sisma con edifici storici ancora in fase di ricostruzione dieci anni dopo il terremoto"
 scadenza: ""
 area: "Lazio"

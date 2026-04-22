@@ -5,7 +5,7 @@ description: "La Giornata internazionale contro la droga è un'occasione per rif
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-21-giornata-contro-droga-resilienza-comunita.webp"
 image_alt: "Mani che si tendono in segno di aiuto reciproco, simbolo di comunità solidale"
 scadenza: ""
 area: "Genzano di Roma"

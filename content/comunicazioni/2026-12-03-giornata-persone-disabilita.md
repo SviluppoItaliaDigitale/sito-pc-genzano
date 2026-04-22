@@ -5,7 +5,7 @@ description: "Giornata ONU dedicata ai diritti e inclusione delle persone con di
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-03-giornata-persone-disabilita.webp"
 image_alt: "Volontaria di Protezione Civile che assiste persona in carrozzina durante una simulazione di evacuazione accessibile"
 scadenza: ""
 area: "Lazio"

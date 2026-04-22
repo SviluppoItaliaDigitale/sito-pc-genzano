@@ -5,7 +5,7 @@ description: "L'alluvione della Versilia del 19 giugno 1996 è stata uno dei dis
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-08-alluvione-versilia-1996-trent-anni.webp"
 image_alt: "Bosco devastato dalla frana con alberi divelti e detriti sul letto di un torrente in piena nell'alta Versilia"
 scadenza: ""
 area: "Lazio"

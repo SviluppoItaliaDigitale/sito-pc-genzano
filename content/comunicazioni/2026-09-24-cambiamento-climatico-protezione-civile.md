@@ -5,7 +5,7 @@ description: "Il cambiamento climatico aumenta la frequenza e l'intensità di ev
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-24-cambiamento-climatico-protezione-civile.webp"
 image_alt: "Scenario meteorologico estremo con cielo carico e fulmini lontani sopra una città del Lazio"
 scadenza: ""
 area: "Lazio"

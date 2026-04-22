@@ -5,7 +5,7 @@ description: "I Castelli Romani sono classificati in zona sismica 2B. Cosa signi
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-06-sismicita-castelli-romani-zona-2b.webp"
 image_alt: "Mappa di pericolosità sismica del Lazio con Genzano evidenziata in zona 2B"
 scadenza: ""
 area: "Castelli Romani"

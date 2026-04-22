@@ -5,7 +5,7 @@ description: "Ogni anno la terza domenica di novembre ricorda le vittime di inci
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-17-giornata-vittime-strada.webp"
 image_alt: "Candele accese e fiori bianchi deposti accanto a segnale stradale in ricordo delle vittime di incidente"
 scadenza: ""
 area: "Lazio"

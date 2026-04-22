@@ -5,7 +5,7 @@ description: "Con il 1° settembre si apre la stagione autunnale dal punto di vi
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-01-autunno-meteorologico-riapre-scuola.webp"
 image_alt: "Strada alberata in una mattina di inizio settembre con prime foglie a terra e luce tenue"
 scadenza: ""
 area: "Genzano di Roma"

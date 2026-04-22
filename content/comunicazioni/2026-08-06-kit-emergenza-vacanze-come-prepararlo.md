@@ -5,7 +5,7 @@ description: "Prima di partire per le ferie, preparare un piccolo kit di emergen
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-06-kit-emergenza-vacanze-come-prepararlo.webp"
 image_alt: "Zaino aperto con dentro kit di emergenza: torcia, acqua, fischietto, bende, radio a batteria"
 scadenza: ""
 area: "Genzano di Roma"

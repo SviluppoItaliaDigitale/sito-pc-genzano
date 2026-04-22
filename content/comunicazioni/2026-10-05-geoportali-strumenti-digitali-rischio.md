@@ -5,7 +5,7 @@ description: "I geoportali pubblici mettono a disposizione mappe di rischio sism
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-05-geoportali-strumenti-digitali-rischio.webp"
 image_alt: "Schermata di un geoportale pubblico con mappe di pericolosità idrogeologica visualizzate su un monitor"
 scadenza: ""
 area: "Lazio"

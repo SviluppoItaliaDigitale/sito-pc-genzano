@@ -5,7 +5,7 @@ description: "Le zanzare non sono solo un fastidio estivo: vettori di malattie c
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-25-zanzare-rischio-sanitario-prevenzione.webp"
 image_alt: "Zanzara Aedes su pelle umana, illustrazione del rischio sanitario di malattie trasmesse da vettori"
 scadenza: ""
 area: "Genzano di Roma"

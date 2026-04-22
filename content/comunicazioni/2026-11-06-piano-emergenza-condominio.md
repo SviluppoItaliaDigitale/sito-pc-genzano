@@ -5,7 +5,7 @@ description: "Il condominio è un'entità complessa in caso di emergenza. Serve 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-06-piano-emergenza-condominio.webp"
 image_alt: "Palazzo residenziale con segnaletica di uscita di emergenza nel cortile e scala antincendio esterna ben visibile"
 scadenza: ""
 area: "Genzano di Roma"

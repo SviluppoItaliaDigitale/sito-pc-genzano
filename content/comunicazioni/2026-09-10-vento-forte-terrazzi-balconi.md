@@ -5,7 +5,7 @@ description: "Le raffiche di vento autunnali possono trasformare vasi e ombrello
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-10-vento-forte-terrazzi-balconi.webp"
 image_alt: "Balcone italiano con vasi e sedie correttamente assicurati prima di una giornata di forte vento annunciato"
 scadenza: ""
 area: "Castelli Romani"

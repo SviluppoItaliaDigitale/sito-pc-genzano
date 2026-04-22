@@ -5,7 +5,7 @@ description: "Dal 5 all'8 dicembre il Gruppo Comunale di PC attiva un presidio t
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-05-presidio-ponte-immacolata.webp"
 image_alt: "Volontari di Protezione Civile in divisa istituzionale con mezzi del Gruppo in presidio sul corso di Genzano durante il ponte dell'Immacolata"
 scadenza: "2026-12-08"
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "Dicembre è il mese di picco del riscaldamento. Ricapitoliamo le r
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-04-riscaldamento-sicuro-dicembre.webp"
 image_alt: "Soggiorno di abitazione con caminetto acceso e stufa a pellet a norma, con rilevatori di fumo e CO visibili"
 scadenza: ""
 area: "Genzano di Roma"

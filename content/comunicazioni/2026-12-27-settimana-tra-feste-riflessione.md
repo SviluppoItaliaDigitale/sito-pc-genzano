@@ -5,7 +5,7 @@ description: "La settimana tra Natale e Capodanno è spesso sospesa. Come usarla
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-27-settimana-tra-feste-riflessione.webp"
 image_alt: "Persona prende appunti in un diario accanto a tazza di tè caldo durante la settimana tra Natale e Capodanno in casa accogliente"
 scadenza: "2026-12-31"
 area: "Lazio"

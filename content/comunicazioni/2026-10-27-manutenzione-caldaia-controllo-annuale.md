@@ -5,7 +5,7 @@ description: "Prima dell'accensione invernale, la caldaia va controllata. Un obb
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-27-manutenzione-caldaia-controllo-annuale.webp"
 image_alt: "Tecnico abilitato mentre esegue manutenzione su caldaia murale in ambiente domestico con attrezzi e sensori"
 scadenza: ""
 area: "Genzano di Roma"

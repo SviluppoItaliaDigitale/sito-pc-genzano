@@ -5,7 +5,7 @@ description: "L'8 dicembre 2026 cade di martedì. Ponte lungo: come prepararsi c
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-29-ponte-immacolata-preparazione.webp"
 image_alt: "Strada dei Castelli Romani con luminarie natalizie accese e traffico moderato nel ponte dell'Immacolata di dicembre"
 scadenza: "2026-12-08"
 area: "Lazio"

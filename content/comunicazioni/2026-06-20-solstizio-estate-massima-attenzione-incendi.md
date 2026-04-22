@@ -5,7 +5,7 @@ description: "Il solstizio d'estate segna l'inizio della fase critica per gli in
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-20-solstizio-estate-massima-attenzione-incendi.webp"
 image_alt: "Sole al tramonto sopra campi aridi ai Castelli Romani in una giornata estiva"
 scadenza: ""
 area: "Genzano di Roma"

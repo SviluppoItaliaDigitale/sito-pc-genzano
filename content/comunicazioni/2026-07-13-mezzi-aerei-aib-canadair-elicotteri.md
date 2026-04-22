@@ -5,7 +5,7 @@ description: "I mezzi aerei sono spesso la differenza tra incendio contenuto e d
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-13-mezzi-aerei-aib-canadair-elicotteri.webp"
 image_alt: "Aereo Canadair in fase di sgancio di acqua su un incendio boschivo estivo"
 scadenza: ""
 area: "Genzano di Roma"

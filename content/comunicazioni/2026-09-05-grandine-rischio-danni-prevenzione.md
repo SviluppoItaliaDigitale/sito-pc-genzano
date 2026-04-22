@@ -5,7 +5,7 @@ description: "La grandine di settembre può causare danni a persone, auto, coltu
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-05-grandine-rischio-danni-prevenzione.webp"
 image_alt: "Chicchi di grandine di dimensioni diverse raccolti in un palmo di mano dopo un temporale estivo"
 scadenza: ""
 area: "Castelli Romani"

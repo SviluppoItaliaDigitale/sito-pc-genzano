@@ -5,7 +5,7 @@ description: "La nebbia è uno dei rischi più sottovalutati sulla viabilità au
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-12-nebbia-rischio-viabilita.webp"
 image_alt: "Strada avvolta da nebbia densa con sagome sfumate di veicoli e fari accesi che illuminano debolmente la carreggiata"
 scadenza: ""
 area: "Lazio"

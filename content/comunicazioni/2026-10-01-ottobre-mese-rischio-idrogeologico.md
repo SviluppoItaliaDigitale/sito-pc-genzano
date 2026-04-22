@@ -5,7 +5,7 @@ description: "Con ottobre si apre il periodo di maggiore attenzione per il risch
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-01-ottobre-mese-rischio-idrogeologico.webp"
 image_alt: "Versante collinare dei Castelli Romani bagnato dalle prime piogge autunnali con vegetazione iniziale di stagione"
 scadenza: ""
 area: "Castelli Romani"

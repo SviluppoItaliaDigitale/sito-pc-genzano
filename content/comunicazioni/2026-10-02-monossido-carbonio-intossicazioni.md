@@ -5,7 +5,7 @@ description: "Il monossido di carbonio causa decine di morti ogni anno in Italia
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-02-monossido-carbonio-intossicazioni.webp"
 image_alt: "Rilevatore di monossido di carbonio fissato a una parete domestica accanto a una caldaia"
 scadenza: ""
 area: "Genzano di Roma"

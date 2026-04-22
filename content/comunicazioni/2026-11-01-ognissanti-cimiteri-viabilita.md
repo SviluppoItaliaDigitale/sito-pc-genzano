@@ -5,7 +5,7 @@ description: "Il 1° novembre aumenta l'afflusso verso i cimiteri. Indicazioni p
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-01-ognissanti-cimiteri-viabilita.webp"
 image_alt: "Ingresso del cimitero comunale di Genzano con fila di persone con fiori e auto in parcheggio durante Ognissanti"
 scadenza: "2026-11-02"
 area: "Genzano di Roma"

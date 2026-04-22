@@ -5,7 +5,7 @@ description: "Il 10 dicembre è la Giornata Internazionale dei Diritti Umani. Di
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-10-giornata-diritti-umani.webp"
 image_alt: "Documento Dichiarazione Universale dei Diritti Umani con bandiera delle Nazioni Unite sullo sfondo e mani unite in simbolo di universalità"
 scadenza: ""
 area: "Lazio"

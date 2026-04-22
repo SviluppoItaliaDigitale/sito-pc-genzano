@@ -5,7 +5,7 @@ description: "L'allerta gialla non è un falso allarme e non è un'emergenza: è
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-08-allerta-gialla-cosa-significa.webp"
 image_alt: "Bollettino di allerta meteo della Regione Lazio con simbolo giallo di attenzione"
 scadenza: ""
 area: "Lazio"

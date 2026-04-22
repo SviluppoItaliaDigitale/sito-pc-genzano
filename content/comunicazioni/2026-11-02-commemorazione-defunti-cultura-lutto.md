@@ -5,7 +5,7 @@ description: "Il 2 novembre è una giornata di raccolta collettiva. Anche la Pro
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-02-commemorazione-defunti-cultura-lutto.webp"
 image_alt: "Cimitero comunale al tramonto con lumini accesi sulle tombe e visitatori in raccolto silenzio durante la commemorazione"
 scadenza: ""
 area: "Genzano di Roma"

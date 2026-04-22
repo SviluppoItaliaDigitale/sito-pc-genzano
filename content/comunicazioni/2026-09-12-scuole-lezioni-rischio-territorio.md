@@ -5,7 +5,7 @@ description: "Il Gruppo Comunale di PC porta nelle scuole di Genzano lezioni sui
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-12-scuole-lezioni-rischio-territorio.webp"
 image_alt: "Volontario di Protezione Civile che presenta una mappa del territorio a una classe di scuola primaria attenta"
 scadenza: ""
 area: "Genzano di Roma"

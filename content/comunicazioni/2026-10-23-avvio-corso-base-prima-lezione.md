@@ -5,7 +5,7 @@ description: "Parte oggi il corso base per nuovi volontari. La prima lezione int
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-23-avvio-corso-base-prima-lezione.webp"
 image_alt: "Aula didattica con sedie ordinate e lavagna luminosa pronte per inizio della prima lezione del corso base"
 scadenza: ""
 area: "Genzano di Roma"

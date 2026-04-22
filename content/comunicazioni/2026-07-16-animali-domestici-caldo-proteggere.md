@@ -5,7 +5,7 @@ description: "Cani, gatti e altri animali domestici soffrono il caldo estremo qu
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-16-animali-domestici-caldo-proteggere.webp"
 image_alt: "Cane che beve acqua da una ciotola all'ombra di un albero in un pomeriggio estivo"
 scadenza: ""
 area: "Genzano di Roma"

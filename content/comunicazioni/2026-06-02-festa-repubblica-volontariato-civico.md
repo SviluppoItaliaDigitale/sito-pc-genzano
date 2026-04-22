@@ -5,7 +5,7 @@ description: "La Festa della Repubblica ci ricorda che la Protezione Civile nasc
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-02-festa-repubblica-volontariato-civico.webp"
 image_alt: "Bandiera italiana sventola davanti a un edificio pubblico in una mattinata chiara"
 scadenza: ""
 area: "Genzano di Roma"

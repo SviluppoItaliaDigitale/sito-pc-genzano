@@ -5,7 +5,7 @@ description: "Il 21 novembre è la Giornata nazionale degli alberi. Il ruolo dei
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-21-giornata-nazionale-alberi.webp"
 image_alt: "Bosco autunnale con sottobosco curato e sentiero in mezzo ad alberi maturi, scena che evoca la cura del territorio"
 scadenza: ""
 area: "Lazio"

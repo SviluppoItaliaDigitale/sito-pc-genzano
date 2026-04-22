@@ -5,7 +5,7 @@ description: "In emergenza circolano molte informazioni, non tutte affidabili. S
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-28-comunicazione-emergenza-canali-verifica.webp"
 image_alt: "Persona che consulta una fonte ufficiale di Protezione Civile tramite smartphone durante un evento meteo"
 scadenza: ""
 area: "Genzano di Roma"

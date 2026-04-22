@@ -5,7 +5,7 @@ description: "Il 6 maggio e 15 settembre 1976 due terremoti devastarono il Friul
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-26-friuli-1976-memoria-terremoto.webp"
 image_alt: "Borgo friulano ricostruito con architettura tradizionale e patrimonio culturale conservato dopo il terremoto del 1976"
 scadenza: ""
 area: "Lazio"

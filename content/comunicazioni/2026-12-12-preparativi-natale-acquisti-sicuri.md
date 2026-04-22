@@ -5,7 +5,7 @@ description: "Dodici giorni a Natale. Come pianificare acquisti, gestire stress 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-12-preparativi-natale-acquisti-sicuri.webp"
 image_alt: "Famiglia italiana che prepara decorazioni natalizie e pacchetti regalo in ambiente domestico sicuro con albero addobbato"
 scadenza: "2026-12-25"
 area: "Lazio"

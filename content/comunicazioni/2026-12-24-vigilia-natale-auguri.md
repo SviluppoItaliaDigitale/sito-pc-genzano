@@ -5,7 +5,7 @@ description: "Vigilia di Natale 2026. Auguri sinceri dalla Protezione Civile di 
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-24-vigilia-natale-auguri.webp"
 image_alt: "Presepe artistico illuminato in chiesa italiana durante la vigilia di Natale con candele accese e atmosfera raccolta"
 scadenza: "2026-12-26"
 area: "Genzano di Roma"

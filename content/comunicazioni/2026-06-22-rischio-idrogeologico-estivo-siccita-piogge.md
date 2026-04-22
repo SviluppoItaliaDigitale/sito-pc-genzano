@@ -5,7 +5,7 @@ description: "L'estate non è una stagione tranquilla per il rischio idrogeologi
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge.webp"
 image_alt: "Terreno arido e screpolato vicino a un fiume in secca, con cielo scuro di temporale all'orizzonte"
 scadenza: ""
 area: "Genzano di Roma"

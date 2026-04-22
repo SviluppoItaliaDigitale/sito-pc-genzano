@@ -5,7 +5,7 @@ description: "Il Natale è anche tempo di solidarietà concreta. Iniziative loca
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-20-solidarieta-natalizia-caritas-mense.webp"
 image_alt: "Volontari Caritas distribuiscono pasti caldi e pacchi alimentari durante pranzo solidale di Natale in struttura parrocchiale italiana"
 scadenza: "2026-12-26"
 area: "Genzano di Roma"

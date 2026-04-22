@@ -5,7 +5,7 @@ description: "D'inverno la qualità dell'aria peggiora per via di riscaldamento 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-09-qualita-aria-pm10-inverno.webp"
 image_alt: "Vista urbana invernale con cielo grigiastro, smog visibile tra i palazzi e fumo che esce da caminetti domestici"
 scadenza: ""
 area: "Lazio"

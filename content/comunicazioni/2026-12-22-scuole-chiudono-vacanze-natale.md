@@ -5,7 +5,7 @@ description: "Inizia la pausa scolastica natalizia. Consigli pratici per famigli
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-22-scuole-chiudono-vacanze-natale.webp"
 image_alt: "Bambini italiani di scuola primaria escono dalla classe dell'ultimo giorno prima delle vacanze di Natale con zaini e allegria"
 scadenza: "2027-01-08"
 area: "Lazio"

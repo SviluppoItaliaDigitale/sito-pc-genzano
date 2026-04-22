@@ -5,7 +5,7 @@ description: "Non tutti i terreni rispondono allo stesso modo a un sisma. La mic
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-19-microzonazione-sismica-castelli-romani.webp"
 image_alt: "Carta topografica dei Castelli Romani con aree colorate in diverse sfumature per rappresentare diverse categorie sismiche"
 scadenza: ""
 area: "Genzano di Roma"

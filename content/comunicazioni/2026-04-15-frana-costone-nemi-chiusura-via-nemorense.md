@@ -5,7 +5,7 @@ description: "Il 15 aprile la Polizia Locale ha richiesto il supporto del nostro
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-04-15-frana-via-nemorense-chiusura-strada.webp"
+image: "/images/2026-04-15-frana-costone-nemi-chiusura-via-nemorense.webp"
 image_alt: "Strada via Nemorense chiusa al traffico con transenne e segnali di divieto di accesso dopo la frana del costone in territorio di Nemi"
 scadenza: ""
 area: "Genzano di Roma — Nemi"

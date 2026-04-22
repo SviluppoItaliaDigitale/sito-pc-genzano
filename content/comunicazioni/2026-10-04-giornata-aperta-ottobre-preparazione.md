@@ -5,7 +5,7 @@ description: "La sede del Gruppo si prepara alla Giornata Aperta. Ecco come volo
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-04-giornata-aperta-ottobre-preparazione.webp"
 image_alt: "Sede del Gruppo di Protezione Civile con mezzi allineati e volontari che preparano l'accoglienza per il pubblico"
 scadenza: "2026-10-31"
 area: "Genzano di Roma"

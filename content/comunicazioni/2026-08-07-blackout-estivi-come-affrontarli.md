@@ -5,7 +5,7 @@ description: "D'estate la rete elettrica è sotto stress per i condizionatori. P
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-07-blackout-estivi-come-affrontarli.webp"
 image_alt: "Lampioni stradali spenti durante un blackout notturno in un quartiere residenziale"
 scadenza: ""
 area: "Genzano di Roma"
