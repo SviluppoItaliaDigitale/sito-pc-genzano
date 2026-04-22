@@ -17,6 +17,32 @@ Il file `.github/workflows/deploy.yml` gestisce il deploy automatico:
 3. Carica su Aruba via FTP usando i secret GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`
 4. Pubblica su GitHub Pages tramite l'azione ufficiale
 
+## Cartelle escluse dal deploy FTP (contenuto lato server)
+
+L'azione FTP usa `dangerous-clean-slate: false` e una lista di esclusioni per proteggere contenuto gestito manualmente sul server Aruba. Queste cartelle **non vengono né caricate né aggiornate né rimosse** dal deploy:
+
+```yaml
+exclude: |
+  **/documenti/**
+  **/cartelli/**
+  **/giochi-bambini/**
+  **/formazionepc/**
+  **/quizpc/**
+```
+
+**Conseguenza operativa fondamentale:** un file depositato via git in `static/documenti/`, `static/cartelli/`, `static/giochi-bambini/`, `static/formazionepc/` o `static/quizpc/` **non arriverà mai su Aruba**. Compare solo nella build locale e su GitHub Pages.
+
+**Cartelle canoniche per nuovi file statici depositati via git:**
+
+| Contenuto | Cartella | URL pubblico |
+|---|---|---|
+| Manuali tecnici permanenti citati da più articoli | `static/manuali/` | `/manuali/nome.pdf` |
+| Allegati specifici di un articolo | `static/allegati/AAAA/` | `/allegati/AAAA/nome.pdf` |
+| Comunicati stampa firmati | `static/comunicati/AAAA/` | `/comunicati/AAAA/nome.pdf` |
+| Immagini di copertina / foto evento | `static/images/` | `/images/nome.webp` |
+
+Se aggiungi nuove esclusioni al workflow, aggiorna anche questa tabella e la **Parte 1.10** e **Parte 10.2** di `MANUALE-SITO.md`.
+
 ## Regole operative
 
 - Il branch `main` è il branch di produzione: ogni push avvia il deploy.
