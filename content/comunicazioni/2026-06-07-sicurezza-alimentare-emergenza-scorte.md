@@ -5,7 +5,7 @@ description: "La Giornata mondiale della sicurezza alimentare tocca un aspetto p
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-07-sicurezza-alimentare-emergenza-scorte.webp"
 image_alt: "Scaffale di dispensa con barattoli, scatolette, bottiglie d'acqua ordinati con etichette"
 scadenza: ""
 area: "Genzano di Roma"

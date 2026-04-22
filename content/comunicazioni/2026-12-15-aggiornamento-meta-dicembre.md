@@ -5,7 +5,7 @@ description: "A metà dicembre 2026, breve bilancio del mese e preparativi per l
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-15-aggiornamento-meta-dicembre.webp"
 image_alt: "Calendario di dicembre 2026 aperto alla pagina del 15 con evidenziate le festività natalizie e le attività pianificate"
 scadenza: ""
 area: "Genzano di Roma"

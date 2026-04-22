@@ -5,7 +5,7 @@ description: "Con la fine di agosto, ecco le attività previste per settembre 20
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-31-chiusura-agosto-settembre-agenda.webp"
 image_alt: "Calendario aperto con appuntamenti istituzionali segnati per il mese di settembre"
 scadenza: ""
 area: "Genzano di Roma"

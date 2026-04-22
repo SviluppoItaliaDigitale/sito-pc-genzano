@@ -5,7 +5,7 @@ description: "IT-alert è il sistema di allarme pubblico italiano. Come riconosc
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-11-it-alert-come-funziona-reagire.webp"
 image_alt: "Smartphone posato su un tavolo che mostra un'allerta di prova IT-alert sullo schermo"
 scadenza: ""
 area: "Genzano di Roma"

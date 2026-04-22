@@ -5,7 +5,7 @@ description: "Nove anni fa Livorno fu colpita da un'alluvione lampo che causò 9
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-20-alluvione-livorno-2017-memoria.webp"
 image_alt: "Strada urbana con fango e detriti dopo un'alluvione lampo in area costiera italiana"
 scadenza: ""
 area: "Lazio"

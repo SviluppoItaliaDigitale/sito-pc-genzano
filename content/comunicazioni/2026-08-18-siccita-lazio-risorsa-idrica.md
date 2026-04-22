@@ -5,7 +5,7 @@ description: "Agosto è il mese in cui la siccità estiva tocca i suoi picchi. C
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-18-siccita-lazio-risorsa-idrica.webp"
 image_alt: "Rubinetto d'acqua potabile in una zona rurale del Lazio durante un'estate secca"
 scadenza: ""
 area: "Lazio"

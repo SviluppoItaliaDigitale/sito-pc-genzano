@@ -5,7 +5,7 @@ description: "Dopo il Ferragosto iniziano i primi rientri. Consigli pratici per 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-17-controesodo-viabilita-sicurezza.webp"
 image_alt: "Autostrada estiva nel pomeriggio con traffico sostenuto di veicoli in rientro dalle vacanze"
 scadenza: ""
 area: "Genzano di Roma"

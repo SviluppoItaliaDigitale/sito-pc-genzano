@@ -5,7 +5,7 @@ description: "Dal 1 giugno parte la campagna antincendio boschivo regionale. Cam
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-01-avvio-campagna-aib-lazio-2026.webp"
 image_alt: "Bosco dei Castelli Romani in estate con luce pomeridiana sulle chiome degli alberi"
 scadenza: ""
 area: "Genzano di Roma"

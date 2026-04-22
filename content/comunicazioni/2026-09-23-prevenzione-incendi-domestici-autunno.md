@@ -5,7 +5,7 @@ description: "Stufe, camini, canne fumarie, impianti elettrici: prima di accende
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-23-prevenzione-incendi-domestici-autunno.webp"
 image_alt: "Rilevatore di fumo installato a soffitto in un ambiente domestico"
 scadenza: ""
 area: "Genzano di Roma"

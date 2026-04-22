@@ -5,7 +5,7 @@ description: "Agosto è un mese difficile per chi vive solo. La rete di vicinato
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-23-persone-sole-vigilanza-solidarieta.webp"
 image_alt: "Persona anziana seduta al balcone di un palazzo in una giornata estiva di Genzano"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "La Giornata del donatore è un pilastro della resilienza sanitaria
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-14-giornata-donatori-sangue-resilienza.webp"
 image_alt: "Braccio di un donatore di sangue in fase di prelievo con operatore sanitario accanto"
 scadenza: ""
 area: "Genzano di Roma"

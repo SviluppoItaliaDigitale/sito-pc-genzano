@@ -5,7 +5,7 @@ description: "Le ondate di freddo non sono solo disagio: sono un rischio concret
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-05-ondate-freddo-prevenzione-anziani.webp"
 image_alt: "Anziana donna con coperta calda sul divano di casa mentre controlla il termometro ambiente durante giornata di freddo intenso"
 scadenza: ""
 area: "Lazio"

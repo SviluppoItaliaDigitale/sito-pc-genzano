@@ -5,7 +5,7 @@ description: "L'11 novembre, San Martino: proverbi meteo, tradizioni contadine, 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-11-san-martino-meteo-tradizione.webp"
 image_alt: "Castagne arrostite e bicchieri di vino rosso su tavolo rustico durante celebrazione di San Martino con foglie autunnali"
 scadenza: ""
 area: "Genzano di Roma"

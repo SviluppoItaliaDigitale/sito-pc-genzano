@@ -5,7 +5,7 @@ description: "Il 31 agosto finisce l'estate meteorologica. Cambia il quadro dei 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-29-fine-estate-meteorologica-passaggio-autunno.webp"
 image_alt: "Paesaggio dei Castelli Romani con nuvole di fine estate e luce dorata del tramonto"
 scadenza: ""
 area: "Castelli Romani"

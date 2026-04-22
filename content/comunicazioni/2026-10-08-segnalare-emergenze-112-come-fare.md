@@ -5,7 +5,7 @@ description: "Una chiamata al 112 ben fatta può salvare vite. Cosa dire, come d
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-08-segnalare-emergenze-112-come-fare.webp"
 image_alt: "Operatore della Centrale Unica di Risposta NUE 112 al lavoro davanti a un monitor con mappa"
 scadenza: ""
 area: "Lazio"

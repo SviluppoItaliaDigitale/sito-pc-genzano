@@ -5,7 +5,7 @@ description: "In emergenza i primi soccorsi arrivano dai vicini, non dalle squad
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-28-rete-vicinato-attivo-resilienza-quartiere.webp"
 image_alt: "Vicini di casa riuniti in cortile che discutono un piano di emergenza condominiale"
 scadenza: ""
 area: "Genzano di Roma"

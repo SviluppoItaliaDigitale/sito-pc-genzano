@@ -5,7 +5,7 @@ description: "Luglio è il mese dei grandi esodi. Un kit di emergenza in auto, q
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-03-viaggi-estivi-kit-emergenza-auto.webp"
 image_alt: "Baule di un'auto aperto con kit di emergenza, acqua e giubbotto ad alta visibilità ordinati"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "IT-Alert è il sistema nazionale di allarme pubblico via cellulare
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-27-it-alert-test-settembre-cosa-sapere.webp"
 image_alt: "Schermo di cellulare che mostra una notifica IT-Alert di test con testo istituzionale"
 scadenza: ""
 area: "Lazio"

@@ -5,7 +5,7 @@ description: "Entra in vigore l'ora solare. Il sole tramonta prima. Come adattar
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-26-ora-solare-primo-giorno-buio-alle-17.webp"
 image_alt: "Strada urbana al tramonto con lampioni accesi e pedoni con giubbotti colorati per essere visibili durante la fase buia"
 scadenza: ""
 area: "Genzano di Roma"

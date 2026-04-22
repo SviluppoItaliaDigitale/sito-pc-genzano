@@ -5,7 +5,7 @@ description: "A settembre il Gruppo effettua la revisione di mezzi, radio, dotaz
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-17-manutenzione-mezzi-attrezzature-autunno.webp"
 image_alt: "Volontario in tuta tecnica esegue controllo periodico su un mezzo del Gruppo di Protezione Civile"
 scadenza: ""
 area: "Genzano di Roma"

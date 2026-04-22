@@ -5,7 +5,7 @@ description: "Il 26 dicembre è Santo Stefano. Un giorno di pausa tra Natale e n
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-26-santo-stefano-protomartire.webp"
 image_alt: "Famiglia italiana fa una passeggiata invernale tranquilla in un bosco dei Castelli Romani nel giorno di Santo Stefano"
 scadenza: "2026-12-27"
 area: "Lazio"

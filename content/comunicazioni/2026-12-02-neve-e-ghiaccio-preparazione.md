@@ -5,7 +5,7 @@ description: "A Genzano nevica raramente ma non è impossibile. Come comportarsi
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-02-neve-e-ghiaccio-preparazione.webp"
 image_alt: "Strada dei Castelli Romani con leggera nevicata e marciapiedi puliti con sale antighiaccio e mezzo spazzaneve in lontananza"
 scadenza: ""
 area: "Genzano di Roma"

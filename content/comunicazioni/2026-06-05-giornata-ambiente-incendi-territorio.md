@@ -5,7 +5,7 @@ description: "La Giornata mondiale dell'ambiente cade all'inizio della stagione 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-05-giornata-ambiente-incendi-territorio.webp"
 image_alt: "Veduta aerea del Parco dei Castelli Romani con boschi, laghi e aree coltivate"
 scadenza: ""
 area: "Genzano di Roma"

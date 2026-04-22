@@ -5,7 +5,7 @@ description: "Giornata internazionale contro la violenza sulle donne. I numeri d
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-25-violenza-donne-numeri-emergenza.webp"
 image_alt: "Nastro rosso simbolo della campagna contro la violenza sulle donne con mano che compone numero di telefono 1522"
 scadenza: ""
 area: "Lazio"

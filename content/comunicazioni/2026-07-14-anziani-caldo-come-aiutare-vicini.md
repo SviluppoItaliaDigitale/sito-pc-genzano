@@ -5,7 +5,7 @@ description: "Un anziano solo nel caldo estremo è una situazione di rischio con
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-14-anziani-caldo-come-aiutare-vicini.webp"
 image_alt: "Volontario che porta una bottiglia d'acqua a una signora anziana in un pomeriggio estivo"
 scadenza: ""
 area: "Genzano di Roma"

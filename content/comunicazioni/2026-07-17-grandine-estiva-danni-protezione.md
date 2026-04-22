@@ -5,7 +5,7 @@ description: "La grandine è una delle conseguenze più spettacolari e dannose d
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-17-grandine-estiva-danni-protezione.webp"
 image_alt: "Chicchi di grandine accumulati su un prato dopo un violento temporale estivo"
 scadenza: ""
 area: "Genzano di Roma"

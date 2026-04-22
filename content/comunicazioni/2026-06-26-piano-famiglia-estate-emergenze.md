@@ -5,7 +5,7 @@ description: "L'estate cambia ritmi, luoghi e rischi della famiglia. Un piano fa
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-26-piano-famiglia-estate-emergenze.webp"
 image_alt: "Famiglia che controlla una lista di cose da preparare per l'estate davanti alla porta di casa"
 scadenza: ""
 area: "Genzano di Roma"

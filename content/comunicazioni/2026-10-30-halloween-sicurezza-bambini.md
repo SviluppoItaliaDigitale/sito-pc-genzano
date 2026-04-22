@@ -5,7 +5,7 @@ description: "Halloween può essere divertente, ma porta bambini in giro la sera
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-30-halloween-sicurezza-bambini.webp"
 image_alt: "Gruppo di bambini in costume di Halloween con luci riflettenti sui vestiti durante la raccolta di dolcetti in un quartiere"
 scadenza: "2026-10-31"
 area: "Genzano di Roma"

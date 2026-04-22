@@ -5,7 +5,7 @@ description: "Il sistema IT-alert ha cambiato il modo di comunicare con la popol
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-10-app-it-alert-test-nazionale.webp"
 image_alt: "Schermo di smartphone che visualizza un messaggio IT-alert di test con suono di allerta"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "Oltre al corso base, i volontari in servizio fanno aggiornamenti p
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-19-giornata-aggiornamento-volontari.webp"
 image_alt: "Aula con volontari in divisa partecipano a una sessione di aggiornamento sulle procedure operative"
 scadenza: ""
 area: "Genzano di Roma"

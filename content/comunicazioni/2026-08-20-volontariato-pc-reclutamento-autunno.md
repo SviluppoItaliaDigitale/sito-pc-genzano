@@ -5,7 +5,7 @@ description: "A settembre riapriranno le iscrizioni ai corsi base del Gruppo Com
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-20-volontariato-pc-reclutamento-autunno.webp"
 image_alt: "Volontari di Protezione Civile in divisa durante una sessione di formazione teorica in aula"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "A fine agosto, un bilancio operativo della campagna antincendio bo
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-30-bilancio-campagna-aib-2026.webp"
 image_alt: "Squadra di volontari AIB in divisa arancione dopo un intervento di spegnimento in area boscata"
 scadenza: ""
 area: "Castelli Romani"

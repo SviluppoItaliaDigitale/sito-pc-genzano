@@ -5,7 +5,7 @@ description: "Studi e cronaca mostrano che le prime piogge autunnali su terreno 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-22-prima-pioggia-intensa-autunno.webp"
 image_alt: "Pioggia autunnale battente che cade su una strada collinare dei Castelli Romani con foglie gialle a terra"
 scadenza: ""
 area: "Castelli Romani"

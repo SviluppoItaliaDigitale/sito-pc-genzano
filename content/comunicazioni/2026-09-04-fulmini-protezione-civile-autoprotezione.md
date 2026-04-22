@@ -5,7 +5,7 @@ description: "Il fulmine colpisce, in Italia, centinaia di persone ogni anno. Le
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-04-fulmini-protezione-civile-autoprotezione.webp"
 image_alt: "Fulmine che colpisce la campagna con cielo carico di nubi nere"
 scadenza: ""
 area: "Castelli Romani"

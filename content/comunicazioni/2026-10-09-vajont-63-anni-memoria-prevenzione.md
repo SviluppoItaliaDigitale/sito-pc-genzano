@@ -5,7 +5,7 @@ description: "A 63 anni dalla tragedia del Vajont, la memoria delle 1.910 vittim
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-09-vajont-63-anni-memoria-prevenzione.webp"
 image_alt: "Diga del Vajont vista dal basso con il Monte Toc alle spalle e il segno storico della frana"
 scadenza: ""
 area: "Lazio"

@@ -5,7 +5,7 @@ description: "31 dicembre 2026. Gli auguri di fine anno del Gruppo Comunale Volo
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-31-san-silvestro-auguri-fine-anno.webp"
 image_alt: "Orologio da tavolo mostra la mezzanotte con calice di spumante e stelle filanti su tavolo apparecchiato per il cenone di San Silvestro"
 scadenza: "2027-01-02"
 area: "Genzano di Roma"

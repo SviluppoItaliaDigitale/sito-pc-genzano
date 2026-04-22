@@ -5,7 +5,7 @@ description: "Il volontario di PC attivato in emergenza ha diritti riconosciuti 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-12-volontariato-diritto-lavoratore-assenza.webp"
 image_alt: "Volontario in divisa di Protezione Civile firma documento di attivazione per uscita dal lavoro autorizzata"
 scadenza: ""
 area: "Lazio"

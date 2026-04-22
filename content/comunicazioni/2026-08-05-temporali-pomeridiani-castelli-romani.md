@@ -5,7 +5,7 @@ description: "In agosto i Castelli Romani vedono temporali pomeridiani improvvis
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-05-temporali-pomeridiani-castelli-romani.webp"
 image_alt: "Temporale estivo sopra il lago di Nemi con nuvole nere e lampi all'orizzonte"
 scadenza: ""
 area: "Castelli Romani"

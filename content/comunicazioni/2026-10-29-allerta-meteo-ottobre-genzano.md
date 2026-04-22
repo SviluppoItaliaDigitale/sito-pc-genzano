@@ -5,7 +5,7 @@ description: "Il Centro Funzionale Regionale Lazio ha emesso allerta gialla per 
 badge: "Allerta"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-29-allerta-meteo-ottobre-genzano.webp"
 image_alt: "Nuvoloni temporaleschi in formazione sulle colline dei Castelli Romani con primi piani di campi agricoli"
 scadenza: "2026-10-30"
 area: "Castelli Romani"

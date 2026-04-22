@@ -5,7 +5,7 @@ description: "Bere correttamente d'estate non è solo questione di comodità: è
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-04-idratazione-colpo-calore-sintomi.webp"
 image_alt: "Bottiglia d'acqua e bicchiere su un tavolo in una giornata estiva assolata"
 scadenza: ""
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "Chiudiamo l'anno ricordando l'importanza della donazione di sangue
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-14-donazione-sangue-bilancio-annuale.webp"
 image_alt: "Donatore di sangue in poltrona dedicata presso centro trasfusionale italiano con operatori sanitari in servizio"
 scadenza: ""
 area: "Lazio"

@@ -5,7 +5,7 @@ description: "Le prove di evacuazione nelle scuole salvano vite. Come funzionano
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-06-rientro-scuola-prove-evacuazione.webp"
 image_alt: "Studenti in fila ordinata che escono dall'edificio scolastico durante una prova di evacuazione"
 scadenza: ""
 area: "Genzano di Roma"

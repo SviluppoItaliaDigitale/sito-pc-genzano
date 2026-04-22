@@ -5,7 +5,7 @@ description: "Le reti radio VHF, UHF, HF restano strategiche in emergenza, sopra
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-22-radiocomunicazioni-emergenza-hf-vhf.webp"
 image_alt: "Volontario radioamatore di Protezione Civile con ricetrasmettitore portatile durante un'esercitazione"
 scadenza: ""
 area: "Genzano di Roma"

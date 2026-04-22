@@ -5,7 +5,7 @@ description: "A metà della campagna antincendio boschivo, è il momento di un b
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-15-meta-luglio-bilancio-campagna-aib.webp"
 image_alt: "Panorama estivo dei Castelli Romani con nuvole di mezzogiorno e vegetazione boschiva"
 scadenza: ""
 area: "Genzano di Roma"

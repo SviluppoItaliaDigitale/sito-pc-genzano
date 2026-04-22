@@ -5,7 +5,7 @@ description: "Il Parco Regionale dei Castelli Romani è un interlocutore strateg
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-29-parco-castelli-romani-collaborazione.webp"
 image_alt: "Paesaggio del Parco Regionale dei Castelli Romani con lago e boschi in una giornata autunnale"
 scadenza: ""
 area: "Castelli Romani"

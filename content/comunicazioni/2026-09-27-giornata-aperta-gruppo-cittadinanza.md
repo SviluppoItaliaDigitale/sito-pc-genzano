@@ -5,7 +5,7 @@ description: "Il Gruppo Comunale di PC apre le porte della propria sede ai citta
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-27-giornata-aperta-gruppo-cittadinanza.webp"
 image_alt: "Sede del Gruppo di Protezione Civile in una giornata di porte aperte con mezzi esposti e cittadini che osservano"
 scadenza: "2026-10-15"
 area: "Genzano di Roma"

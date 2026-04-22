@@ -5,7 +5,7 @@ description: "Nei Castelli Romani agosto è il mese di massima pericolosità per
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-03-rischio-incendi-agosto-picco.webp"
 image_alt: "Squadra AIB al lavoro in un bosco dei Castelli Romani durante un intervento estivo"
 scadenza: ""
 area: "Castelli Romani"

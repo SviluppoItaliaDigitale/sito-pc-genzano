@@ -5,7 +5,7 @@ description: "Vacanze, campi estivi, piscine, sagre: l'estate dei bambini moltip
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-08-bambini-in-estate-sicurezza-sorveglianza.webp"
 image_alt: "Bambini che giocano in una piscina sorvegliati da un adulto attento sulla riva"
 scadenza: ""
 area: "Genzano di Roma"

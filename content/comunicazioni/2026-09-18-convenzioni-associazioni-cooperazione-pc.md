@@ -5,7 +5,7 @@ description: "La Protezione Civile è un sistema. A Genzano, il Gruppo collabora
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-18-convenzioni-associazioni-cooperazione-pc.webp"
 image_alt: "Incontro di coordinamento tra rappresentanti del Gruppo PC, Croce Rossa, Vigili del Fuoco e Polizia Locale"
 scadenza: ""
 area: "Castelli Romani"

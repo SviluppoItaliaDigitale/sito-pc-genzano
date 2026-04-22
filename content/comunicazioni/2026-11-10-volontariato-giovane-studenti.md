@@ -5,7 +5,7 @@ description: "Il volontariato di Protezione Civile è aperto a studenti e giovan
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-10-volontariato-giovane-studenti.webp"
 image_alt: "Giovani studenti volontari in divisa di Protezione Civile durante un'attività di addestramento in una giornata assolata"
 scadenza: ""
 area: "Genzano di Roma"

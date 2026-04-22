@@ -5,7 +5,7 @@ description: "Il messaggio del Gruppo Comunale Volontari di Protezione Civile di
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-15-ferragosto-2026-comunicazione-cittadini.webp"
 image_alt: "Panorama di Genzano di Roma al tramonto nel giorno di Ferragosto"
 scadenza: "2026-08-16"
 area: "Genzano di Roma"

@@ -5,7 +5,7 @@ description: "La formazione BLS-D è una competenza civica fondamentale. Come fu
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-26-bls-d-defibrillatore-formazione.webp"
 image_alt: "Defibrillatore semiautomatico pubblico installato su una colonnina accessibile in luogo pubblico di Genzano"
 scadenza: ""
 area: "Genzano di Roma"

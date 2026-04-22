@@ -5,7 +5,7 @@ description: "Con l'arrivo del caldo torna il problema delle zanzare tigre e del
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-09-zanzara-tigre-arbovirosi-prevenzione.webp"
 image_alt: "Sottovaso su un davanzale con piante in fiore e assenza di ristagni d'acqua"
 scadenza: ""
 area: "Genzano di Roma"

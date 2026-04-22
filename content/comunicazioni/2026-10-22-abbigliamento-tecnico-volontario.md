@@ -5,7 +5,7 @@ description: "La divisa del volontario di PC non è un'uniforme estetica. È un 
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-22-abbigliamento-tecnico-volontario.webp"
 image_alt: "Divisa di Protezione Civile gialla ordinatamente riposta con casco, guanti e scarponcini accanto su tavolo di legno"
 scadenza: ""
 area: "Genzano di Roma"

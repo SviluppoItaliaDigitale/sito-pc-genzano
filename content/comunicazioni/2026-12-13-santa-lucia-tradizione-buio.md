@@ -5,7 +5,7 @@ description: "Il 13 dicembre è Santa Lucia, tradizionalmente il giorno più cor
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-13-santa-lucia-tradizione-buio.webp"
 image_alt: "Rappresentazione tradizionale di Santa Lucia con candele accese e bambini in processione invernale nel Nord Italia"
 scadenza: ""
 area: "Lazio"

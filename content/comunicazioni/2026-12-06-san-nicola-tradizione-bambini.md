@@ -5,7 +5,7 @@ description: "Il 6 dicembre è tradizionalmente legato a San Nicola e ai bambini
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-06-san-nicola-tradizione-bambini.webp"
 image_alt: "Bambini con dolci e doni della tradizione di San Nicola in una scuola dei Castelli Romani, in ambiente sicuro e sorvegliato"
 scadenza: ""
 area: "Lazio"

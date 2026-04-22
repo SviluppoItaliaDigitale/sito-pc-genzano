@@ -5,7 +5,7 @@ description: "Le cadute domestiche sono la prima causa di infortunio per gli ove
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-16-cadute-anziani-prevenzione-casa.webp"
 image_alt: "Bagno domestico adattato per anziani con maniglioni di sicurezza, tappetini antiscivolo e sedile da doccia"
 scadenza: ""
 area: "Genzano di Roma"

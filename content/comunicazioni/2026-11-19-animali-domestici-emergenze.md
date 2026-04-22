@@ -5,7 +5,7 @@ description: "Anche gli animali domestici fanno parte della famiglia. In emergen
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-19-animali-domestici-emergenze.webp"
 image_alt: "Cane di famiglia con trasportino, ciotole e documenti veterinari pronti per evacuazione in caso di emergenza"
 scadenza: ""
 area: "Genzano di Roma"

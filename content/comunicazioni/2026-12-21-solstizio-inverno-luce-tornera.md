@@ -5,7 +5,7 @@ description: "Il 21 dicembre è il solstizio d'inverno. Simbolicamente la luce t
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-21-solstizio-inverno-luce-tornera.webp"
 image_alt: "Alba invernale dei Castelli Romani nel giorno del solstizio con sole basso all'orizzonte e paesaggio silente della campagna romana"
 scadenza: ""
 area: "Lazio"

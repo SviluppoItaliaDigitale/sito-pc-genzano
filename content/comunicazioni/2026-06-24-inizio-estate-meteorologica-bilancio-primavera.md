@@ -5,7 +5,7 @@ description: "In meteorologia l'estate inizia il 1° giugno, non al solstizio. U
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-24-inizio-estate-meteorologica-bilancio-primavera.webp"
 image_alt: "Grafico di temperature e precipitazioni di una stagione primaverile su sfondo di colline verdeggianti"
 scadenza: ""
 area: "Genzano di Roma"

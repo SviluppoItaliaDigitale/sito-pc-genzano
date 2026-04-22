@@ -5,7 +5,7 @@ description: "Oggi 8 dicembre, festa dell'Immacolata. Un augurio dalla Protezion
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-08-immacolata-festa-auguri.webp"
 image_alt: "Centro storico di Genzano illuminato con luminarie natalizie durante la festa dell'Immacolata con atmosfera serena e istituzionale"
 scadenza: "2026-12-09"
 area: "Genzano di Roma"

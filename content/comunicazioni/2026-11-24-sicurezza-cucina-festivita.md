@@ -5,7 +5,7 @@ description: "La cucina è il luogo più pericoloso della casa, soprattutto dura
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-24-sicurezza-cucina-festivita.webp"
 image_alt: "Cucina domestica ordinata in preparazione di pranzo festivo con pentole accese, estintore visibile e ambiente aerato"
 scadenza: ""
 area: "Genzano di Roma"

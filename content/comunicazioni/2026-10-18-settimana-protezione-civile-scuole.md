@@ -5,7 +5,7 @@ description: "Anche quest'anno il Gruppo di Genzano partecipa alla Settimana naz
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-18-settimana-protezione-civile-scuole.webp"
 image_alt: "Volontari della Protezione Civile in aula di scuola primaria con bambini seduti al loro posto durante lezione interattiva"
 scadenza: ""
 area: "Genzano di Roma"

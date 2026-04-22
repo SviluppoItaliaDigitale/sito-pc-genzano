@@ -5,7 +5,7 @@ description: "Nell'era del GPS, saper leggere una mappa e orientarsi con carta e
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-13-cartografia-orientamento-esercitazione.webp"
 image_alt: "Volontari di Protezione Civile in esercitazione di cartografia con carte topografiche e bussola su un tavolo da campo"
 scadenza: ""
 area: "Castelli Romani"

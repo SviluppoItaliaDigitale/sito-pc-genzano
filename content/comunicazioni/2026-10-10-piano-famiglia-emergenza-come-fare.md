@@ -5,7 +5,7 @@ description: "Un Piano di Emergenza Familiare è un documento semplice che si sc
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-10-piano-famiglia-emergenza-come-fare.webp"
 image_alt: "Famiglia italiana seduta al tavolo di casa che compila insieme il proprio Piano di Emergenza Familiare su un foglio"
 scadenza: ""
 area: "Genzano di Roma"

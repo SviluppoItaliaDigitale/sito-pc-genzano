@@ -5,7 +5,7 @@ description: "Il 14 agosto apre il fine settimana più intenso dell'estate. Alle
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-14-vigilia-ferragosto-stato-allerta.webp"
 image_alt: "Vista serale di una piazza di Genzano illuminata nella vigilia di Ferragosto"
 scadenza: "2026-08-16"
 area: "Genzano di Roma"

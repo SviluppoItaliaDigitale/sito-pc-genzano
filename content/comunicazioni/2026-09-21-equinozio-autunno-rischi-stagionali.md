@@ -5,7 +5,7 @@ description: "Il 22 settembre segna l'equinozio d'autunno astronomico. Un'occasi
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-21-equinozio-autunno-rischi-stagionali.webp"
 image_alt: "Tramonto di equinozio d'autunno con cielo dorato su un paesaggio collinare italiano"
 scadenza: ""
 area: "Genzano di Roma"

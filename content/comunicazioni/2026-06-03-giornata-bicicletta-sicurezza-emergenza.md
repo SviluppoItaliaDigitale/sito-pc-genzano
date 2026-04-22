@@ -5,7 +5,7 @@ description: "La Giornata mondiale della bicicletta invita a riflettere su un me
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-03-giornata-bicicletta-sicurezza-emergenza.webp"
 image_alt: "Ciclista su via secondaria dei Castelli Romani in una giornata di primavera"
 scadenza: ""
 area: "Genzano di Roma"

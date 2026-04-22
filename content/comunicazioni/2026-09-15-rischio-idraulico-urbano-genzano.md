@@ -5,7 +5,7 @@ description: "Anche a Genzano, come in molti centri dei Castelli Romani, esiston
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-15-rischio-idraulico-urbano-genzano.webp"
 image_alt: "Strada urbana allagata dopo una pioggia intensa con acqua che defluisce verso un tombino ostruito"
 scadenza: ""
 area: "Genzano di Roma"

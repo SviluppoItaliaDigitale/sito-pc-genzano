@@ -5,7 +5,7 @@ description: "La Giornata internazionale dei bambini vittime di aggressione è o
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-04-tutela-minori-emergenze-bambini-vittime.webp"
 image_alt: "Mani di un adulto e di un bambino stringono una matita colorata su un foglio da disegno"
 scadenza: ""
 area: "Genzano di Roma"

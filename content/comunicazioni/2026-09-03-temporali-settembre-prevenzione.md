@@ -5,7 +5,7 @@ description: "I temporali di settembre sono tra i più intensi dell'anno. Come l
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-03-temporali-settembre-prevenzione.webp"
 image_alt: "Nube temporalesca a forma di incudine sulle colline dei Castelli Romani in una giornata di settembre"
 scadenza: ""
 area: "Castelli Romani"

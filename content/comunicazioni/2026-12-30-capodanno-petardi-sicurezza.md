@@ -5,7 +5,7 @@ description: "Capodanno si avvicina: regole, rischi e buone pratiche per petardi
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-30-capodanno-petardi-sicurezza.webp"
 image_alt: "Segnale di divieto di botti e fuochi d'artificio in piazza italiana con cartello ordinanza comunale affisso vicino all'ingresso del comune"
 scadenza: "2027-01-02"
 area: "Genzano di Roma"

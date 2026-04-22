@@ -5,7 +5,7 @@ description: "L'estate è la stagione di traumi, colpi di calore, punture di ins
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-29-primo-soccorso-estivo-caldo-traumi.webp"
 image_alt: "Kit di primo soccorso aperto con cerotti, garze sterili, ghiaccio istantaneo e disinfettante"
 scadenza: ""
 area: "Genzano di Roma"

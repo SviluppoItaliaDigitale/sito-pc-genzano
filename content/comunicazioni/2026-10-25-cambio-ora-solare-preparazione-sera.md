@@ -5,7 +5,7 @@ description: "Con il cambio ora solare nella notte del 26 ottobre, cala prima la
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-25-cambio-ora-solare-preparazione-sera.webp"
 image_alt: "Orologio da parete al tramonto che segna il passaggio all'ora solare, con vista crepuscolare sulla città"
 scadenza: ""
 area: "Genzano di Roma"

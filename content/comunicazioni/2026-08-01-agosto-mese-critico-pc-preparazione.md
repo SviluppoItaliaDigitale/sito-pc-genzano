@@ -5,7 +5,7 @@ description: "Agosto è il mese più impegnativo per la Protezione Civile italia
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-01-agosto-mese-critico-pc-preparazione.webp"
 image_alt: "Campi assolati e vegetazione secca nei Castelli Romani all'inizio di agosto"
 scadenza: ""
 area: "Genzano di Roma"

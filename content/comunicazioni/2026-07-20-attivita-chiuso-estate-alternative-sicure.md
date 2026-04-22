@@ -5,7 +5,7 @@ description: "Nelle ore più calde la cosa più saggia è stare al riparo. Luogh
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-20-attivita-chiuso-estate-alternative-sicure.webp"
 image_alt: "Famiglia che visita una biblioteca pubblica climatizzata in un pomeriggio estivo"
 scadenza: ""
 area: "Genzano di Roma"

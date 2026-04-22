@@ -5,7 +5,7 @@ description: "Il 20 novembre è la Giornata Internazionale dell'Infanzia. Come e
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-20-educazione-al-rischio-bambini.webp"
 image_alt: "Bambini in aula durante lezione di protezione civile con mappe colorate e schede illustrative sui rischi, sorrisi e attenzione"
 scadenza: ""
 area: "Genzano di Roma"

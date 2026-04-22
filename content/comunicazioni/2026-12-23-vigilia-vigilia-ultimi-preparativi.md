@@ -5,7 +5,7 @@ description: "Il 23 dicembre è giornata di ultimi preparativi, spesa finale e o
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-23-vigilia-vigilia-ultimi-preparativi.webp"
 image_alt: "Famiglia italiana fa spesa finale in supermercato affollato il 23 dicembre in preparazione del cenone di Natale"
 scadenza: "2026-12-25"
 area: "Lazio"

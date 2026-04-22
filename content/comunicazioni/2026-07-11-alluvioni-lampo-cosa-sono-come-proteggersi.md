@@ -5,7 +5,7 @@ description: "In pochi minuti un torrente asciutto può diventare una massa trav
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-11-alluvioni-lampo-cosa-sono-come-proteggersi.webp"
 image_alt: "Torrente in piena che supera un ponticello durante un violento temporale estivo"
 scadenza: ""
 area: "Genzano di Roma"

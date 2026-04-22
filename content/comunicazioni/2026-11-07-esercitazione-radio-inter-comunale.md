@@ -5,7 +5,7 @@ description: "Oggi esercitazione radio congiunta tra Gruppi Comunali di PC dei C
 badge: "Esercitazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-07-esercitazione-radio-inter-comunale.webp"
 image_alt: "Volontario con cuffia e microfono davanti a stazione radio HF-VHF-UHF durante esercitazione con mappa sul tavolo"
 scadenza: ""
 area: "Castelli Romani"

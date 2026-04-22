@@ -5,7 +5,7 @@ description: "Affittare un appartamento per le ferie è diffuso. Alcune verifich
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-13-casa-vacanze-affittate-sicurezza.webp"
 image_alt: "Chiave e cartellino di un affitto breve poggiati sul ripiano di un appartamento in affitto"
 scadenza: ""
 area: "Genzano di Roma"

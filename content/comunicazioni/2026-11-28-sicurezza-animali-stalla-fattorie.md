@@ -5,7 +5,7 @@ description: "Nelle fattorie e stalle del territorio, la sicurezza di animali e 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-28-sicurezza-animali-stalla-fattorie.webp"
 image_alt: "Stalla agricola con animali bovini e recinzioni in ordine, con segnaletica di sicurezza e accesso ai mezzi di soccorso"
 scadenza: ""
 area: "Castelli Romani"

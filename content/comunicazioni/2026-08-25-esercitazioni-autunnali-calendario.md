@@ -5,7 +5,7 @@ description: "A settembre riprendono le esercitazioni periodiche del Gruppo. Per
 badge: "Esercitazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-25-esercitazioni-autunnali-calendario.webp"
 image_alt: "Squadra di volontari di Protezione Civile al lavoro con mezzi e attrezzature durante un'esercitazione sul territorio"
 scadenza: ""
 area: "Genzano di Roma"

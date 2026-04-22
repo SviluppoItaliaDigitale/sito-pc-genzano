@@ -5,7 +5,7 @@ description: "Uno sguardo alle prospettive 2027 per la Protezione Civile di Genz
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-29-prospettive-2027-nuovo-anno.webp"
 image_alt: "Calendario 2027 aperto sulla scrivania accanto a penna e pianta verde in un ufficio con luce naturale che entra dalla finestra"
 scadenza: "2026-12-31"
 area: "Genzano di Roma"

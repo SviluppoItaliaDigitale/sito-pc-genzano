@@ -5,7 +5,7 @@ description: "Con l'arrivo del caldo cambiano gli inquinanti atmosferici. Cosa m
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-10-qualita-aria-estate-ozono-pm10.webp"
 image_alt: "Vista dei Castelli Romani in una giornata estiva con sfumature di foschia nella valle"
 scadenza: ""
 area: "Genzano di Roma"

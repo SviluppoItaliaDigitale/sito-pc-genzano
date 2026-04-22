@@ -5,7 +5,7 @@ description: "Inizia dicembre 2026 e, con esso, l'inverno meteorologico. Cosa as
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-01-avvio-dicembre-inverno-meteorologico.webp"
 image_alt: "Paesaggio dei Castelli Romani all'alba del primo dicembre con brina sui tetti e atmosfera invernale istituzionale"
 scadenza: ""
 area: "Lazio"

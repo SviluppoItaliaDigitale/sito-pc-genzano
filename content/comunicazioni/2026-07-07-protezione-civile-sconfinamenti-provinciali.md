@@ -5,7 +5,7 @@ description: "Un'alluvione o un incendio spesso travalicano i confini amministra
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-07-protezione-civile-sconfinamenti-provinciali.webp"
 image_alt: "Sala operativa con mappa dei Comuni dei Castelli Romani proiettata e persone al telefono in coordinamento"
 scadenza: ""
 area: "Genzano di Roma"

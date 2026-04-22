@@ -5,7 +5,7 @@ description: "Si chiude ottobre con un bilancio delle attività del Gruppo: iscr
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-31-chiusura-ottobre-bilancio-novembre.webp"
 image_alt: "Calendario di ottobre con giorni segnati a matita e note operative, accanto a taccuino con riepilogo attività di Protezione Civile"
 scadenza: ""
 area: "Genzano di Roma"

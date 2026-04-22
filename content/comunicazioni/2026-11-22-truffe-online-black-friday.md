@@ -5,7 +5,7 @@ description: "Periodo di sconti e acquisti online: cresce anche il numero di tru
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-22-truffe-online-black-friday.webp"
 image_alt: "Schermo di computer con finestre di shopping online e simboli di allarme sicurezza, metafora del rischio di truffa"
 scadenza: "2026-12-01"
 area: "Lazio"

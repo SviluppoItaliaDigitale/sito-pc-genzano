@@ -5,7 +5,7 @@ description: "A ridosso del Natale, picco di consegne. Come gestire ricezione pa
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-16-pacchi-natalizi-logistica-corriere.webp"
 image_alt: "Corriere che consegna pacchi natalizi a destinatario italiano davanti a portone con firma digitale e identificazione"
 scadenza: "2026-12-25"
 area: "Lazio"

@@ -5,7 +5,7 @@ description: "Ogni anno il Dipartimento di PC organizza esercitazioni nazionali 
 badge: "Esercitazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-16-esercitazione-nazionale-pc-settembre.webp"
 image_alt: "Campo base di una grande esercitazione nazionale di PC con tende, mezzi e volontari in coordinamento"
 scadenza: ""
 area: "Lazio"

@@ -5,7 +5,7 @@ description: "L'Italia gestisce centinaia di grandi dighe. Sicurezza, monitoragg
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-07-dighe-sicurezza-grandi-opere.webp"
 image_alt: "Grande diga italiana in montagna con serbatoio ampio sullo sfondo di valli boscose"
 scadenza: ""
 area: "Lazio"

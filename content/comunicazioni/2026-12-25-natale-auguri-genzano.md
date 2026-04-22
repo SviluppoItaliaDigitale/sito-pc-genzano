@@ -5,7 +5,7 @@ description: "Il nostro augurio di buon Natale a tutta la cittadinanza di Genzan
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-25-natale-auguri-genzano.webp"
 image_alt: "Cupola di basilica italiana innevata con alberello di Natale decorato in primo piano durante la giornata di Natale"
 scadenza: "2026-12-27"
 area: "Genzano di Roma"

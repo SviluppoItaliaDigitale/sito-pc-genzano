@@ -5,7 +5,7 @@ description: "Le parole della Protezione Civile non sono sinonimi. Distinguere a
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-09-differenza-allerta-emergenza-linguaggio.webp"
 image_alt: "Centro sala operativa di Protezione Civile con monitor che mostrano bollettini meteo e mappe del territorio"
 scadenza: ""
 area: "Genzano di Roma"

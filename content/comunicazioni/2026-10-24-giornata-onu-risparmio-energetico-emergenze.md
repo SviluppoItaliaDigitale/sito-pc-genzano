@@ -5,7 +5,7 @@ description: "Il risparmio energetico non è solo una questione economica. Una f
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-24-giornata-onu-risparmio-energetico-emergenze.webp"
 image_alt: "Lampadina LED e contatore elettrico domestico con indicatore di consumo basso a testimoniare l'efficienza energetica"
 scadenza: ""
 area: "Genzano di Roma"

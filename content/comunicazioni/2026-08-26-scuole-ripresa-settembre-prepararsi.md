@@ -5,7 +5,7 @@ description: "A settembre riaprono le scuole. È il momento giusto per verificar
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-26-scuole-ripresa-settembre-prepararsi.webp"
 image_alt: "Ingresso di una scuola italiana con la segnaletica di emergenza ben visibile"
 scadenza: ""
 area: "Genzano di Roma"

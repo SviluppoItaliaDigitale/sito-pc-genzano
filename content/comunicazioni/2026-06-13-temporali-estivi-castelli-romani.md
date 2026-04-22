@@ -5,7 +5,7 @@ description: "I temporali estivi dei Castelli sono violenti, rapidi, localizzati
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-13-temporali-estivi-castelli-romani.webp"
 image_alt: "Nuvolone a sviluppo verticale sopra i Castelli Romani alla luce del tardo pomeriggio"
 scadenza: ""
 area: "Genzano di Roma"

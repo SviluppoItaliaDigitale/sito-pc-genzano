@@ -5,7 +5,7 @@ description: "I temporali estivi nei Castelli portano fulmini. Regole semplici p
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-09-fulmini-come-proteggersi.webp"
 image_alt: "Fulmine che cade su una collina boscosa durante un temporale estivo serale"
 scadenza: ""
 area: "Castelli Romani"

@@ -5,7 +5,7 @@ description: "La Giornata mondiale degli oceani cade nel periodo in cui i laghi 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-08-giornata-oceani-laghi-castelli.webp"
 image_alt: "Lago di Nemi visto dall'alto in una mattinata limpida, con il borgo affacciato sulla caldera"
 scadenza: ""
 area: "Genzano di Roma"

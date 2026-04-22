@@ -5,7 +5,7 @@ description: "La Giornata mondiale contro il lavoro minorile tocca anche scenari
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-12-contrasto-sfruttamento-minorile-emergenza-umanitaria.webp"
 image_alt: "Mano di bambino tiene una matita colorata sopra un quaderno aperto"
 scadenza: ""
 area: "Genzano di Roma"

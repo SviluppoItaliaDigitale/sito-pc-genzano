@@ -5,7 +5,7 @@ description: "Dai tagli alle scottature, dalle ustioni al trauma da caduta: i ge
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-14-primo-soccorso-base-famiglie.webp"
 image_alt: "Kit di primo soccorso domestico aperto con bende, cerotti, disinfettanti e materiale di base ordinato"
 scadenza: ""
 area: "Genzano di Roma"

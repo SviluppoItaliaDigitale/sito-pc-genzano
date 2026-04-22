@@ -5,7 +5,7 @@ description: "La Giornata internazionale dello sport per lo sviluppo e la pace c
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-06-sport-movimento-resilienza-comunita.webp"
 image_alt: "Gruppo di persone corre in un sentiero alberato alla luce del tramonto"
 scadenza: ""
 area: "Genzano di Roma"

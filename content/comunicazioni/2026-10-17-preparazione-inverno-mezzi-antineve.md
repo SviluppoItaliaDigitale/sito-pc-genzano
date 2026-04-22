@@ -5,7 +5,7 @@ description: "A metà autunno il Gruppo prepara i mezzi e le attrezzature per la
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-17-preparazione-inverno-mezzi-antineve.webp"
 image_alt: "Mezzo di Protezione Civile con catene da neve montate parcheggiato di fronte al magazzino durante controllo tecnico"
 scadenza: ""
 area: "Genzano di Roma"

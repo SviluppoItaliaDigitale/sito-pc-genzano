@@ -5,7 +5,7 @@ description: "In agosto i Castelli Romani accolgono molti turisti. Informazioni 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-08-turisti-nei-castelli-sicurezza.webp"
 image_alt: "Veduta del centro storico di Genzano di Roma affollato di visitatori in una giornata estiva"
 scadenza: ""
 area: "Genzano di Roma"

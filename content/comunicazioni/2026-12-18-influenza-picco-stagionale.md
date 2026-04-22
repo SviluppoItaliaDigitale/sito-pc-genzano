@@ -5,7 +5,7 @@ description: "L'influenza raggiunge il suo picco tra dicembre e gennaio. Come pr
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-18-influenza-picco-stagionale.webp"
 image_alt: "Paziente a letto durante influenza stagionale con tisana calda e fazzoletti, ambiente domestico curato con termometro"
 scadenza: ""
 area: "Lazio"

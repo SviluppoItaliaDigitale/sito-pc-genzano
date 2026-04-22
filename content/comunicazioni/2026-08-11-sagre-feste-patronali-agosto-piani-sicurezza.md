@@ -5,7 +5,7 @@ description: "Agosto è il mese delle sagre nei Castelli. Ecco come si organizza
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-11-sagre-feste-patronali-agosto-piani-sicurezza.webp"
 image_alt: "Piazza gremita di pubblico durante una sagra serale in un comune dei Castelli Romani"
 scadenza: ""
 area: "Castelli Romani"

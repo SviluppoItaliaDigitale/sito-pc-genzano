@@ -5,7 +5,7 @@ description: "Un Gruppo di Protezione Civile non è un'isola. Gemellaggi, colonn
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-12-gemellaggi-pc-solidarieta-territori.webp"
 image_alt: "Volontari di Protezione Civile di diversi Gruppi che si stringono la mano in un'esercitazione congiunta"
 scadenza: ""
 area: "Genzano di Roma"

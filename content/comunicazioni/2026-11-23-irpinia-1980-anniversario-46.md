@@ -5,7 +5,7 @@ description: "46 anni dal sisma che cambiò la Protezione Civile italiana. Irpin
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-23-irpinia-1980-anniversario-46.webp"
 image_alt: "Borgo appenninico dell'Irpinia ricostruito dopo il sisma del 1980 con patrimonio architettonico visibile e segni di memoria"
 scadenza: ""
 area: "Lazio"

@@ -5,7 +5,7 @@ description: "L'estate del volontariato AIB nel Lazio è fatta di turni di avvis
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-04-turni-avvistamento-aib-come-funzionano.webp"
 image_alt: "Volontari di Protezione Civile in postazione di avvistamento su un punto panoramico con vista sulle colline boschive"
 scadenza: ""
 area: "Genzano di Roma"

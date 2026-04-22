@@ -5,7 +5,7 @@ description: "Dietro ogni esercitazione ci sono mesi di pianificazione e obietti
 badge: "Esercitazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-09-esercitazioni-pc-a-cosa-servono.webp"
 image_alt: "Volontari di Protezione Civile durante un'esercitazione di evacuazione con mezzi ed equipaggiamento"
 scadenza: ""
 area: "Genzano di Roma"

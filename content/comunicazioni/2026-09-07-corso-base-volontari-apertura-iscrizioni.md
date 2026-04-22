@@ -5,7 +5,7 @@ description: "Sono aperte le iscrizioni al nuovo corso base del Gruppo Comunale 
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-09-07-corso-base-volontari-apertura-iscrizioni.webp"
 image_alt: "Aula di formazione con partecipanti in divisa da volontari di Protezione Civile durante una lezione teorica"
 scadenza: "2026-10-31"
 area: "Genzano di Roma"

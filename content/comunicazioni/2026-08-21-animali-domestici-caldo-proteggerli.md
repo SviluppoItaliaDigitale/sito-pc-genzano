@@ -5,7 +5,7 @@ description: "Gli animali domestici soffrono il caldo come le persone. Regole se
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-21-animali-domestici-caldo-proteggerli.webp"
 image_alt: "Cane a riposo all'ombra con una ciotola d'acqua fresca in una giornata estiva calda"
 scadenza: ""
 area: "Genzano di Roma"

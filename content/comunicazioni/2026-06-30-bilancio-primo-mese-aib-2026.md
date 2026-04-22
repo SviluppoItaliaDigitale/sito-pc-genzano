@@ -5,7 +5,7 @@ description: "A un mese dall'avvio della campagna antincendio boschivo 2026, un 
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-06-30-bilancio-primo-mese-aib-2026.webp"
 image_alt: "Elicottero regionale in volo sopra le colline dei Castelli Romani durante una missione antincendio"
 scadenza: ""
 area: "Genzano di Roma"

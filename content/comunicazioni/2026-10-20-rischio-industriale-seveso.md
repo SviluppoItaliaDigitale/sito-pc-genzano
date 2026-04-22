@@ -5,7 +5,7 @@ description: "Il rischio industriale è regolato dalla direttiva europea Seveso.
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-20-rischio-industriale-seveso.webp"
 image_alt: "Impianto industriale chimico con ciminiere e serbatoi, recinzione perimetrale e cartelli di rischio in primo piano"
 scadenza: ""
 area: "Lazio"

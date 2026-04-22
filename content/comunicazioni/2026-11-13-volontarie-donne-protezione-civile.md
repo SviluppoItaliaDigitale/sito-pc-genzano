@@ -5,7 +5,7 @@ description: "Cresce la presenza femminile nel volontariato di PC. Storia, dati,
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-13-volontarie-donne-protezione-civile.webp"
 image_alt: "Volontaria di Protezione Civile in divisa gialla opera radio durante esercitazione con colleghi in sfondo al centro operativo"
 scadenza: ""
 area: "Genzano di Roma"

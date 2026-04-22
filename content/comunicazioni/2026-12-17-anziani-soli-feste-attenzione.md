@@ -5,7 +5,7 @@ description: "Le feste amplificano la solitudine degli anziani. Come riconoscere
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-12-17-anziani-soli-feste-attenzione.webp"
 image_alt: "Donna anziana seduta in salotto di casa guarda finestra durante una giornata invernale con luminarie natalizie in strada sullo sfondo"
 scadenza: ""
 area: "Genzano di Roma"

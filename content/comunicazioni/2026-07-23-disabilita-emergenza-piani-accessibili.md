@@ -5,7 +5,7 @@ description: "In emergenza le persone con disabilità affrontano ostacoli aggiun
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-07-23-disabilita-emergenza-piani-accessibili.webp"
 image_alt: "Persona in carrozzina durante un'esercitazione di evacuazione con supporto di volontari di Protezione Civile"
 scadenza: ""
 area: "Genzano di Roma"

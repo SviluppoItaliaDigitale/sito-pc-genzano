@@ -5,7 +5,7 @@ description: "L'impianto elettrico è responsabile di molti incendi domestici. N
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-11-14-sicurezza-impianti-elettrici-casa.webp"
 image_alt: "Quadro elettrico domestico ordinato con interruttori differenziali etichettati e impianto a norma dietro sportello aperto"
 scadenza: ""
 area: "Genzano di Roma"
