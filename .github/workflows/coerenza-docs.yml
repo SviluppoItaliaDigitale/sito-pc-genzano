@@ -205,6 +205,28 @@ jobs:
           fi
           echo "" >> "$REPORT"
 
+          # 10) Data ultima revisione sulle pagine legali/istituzionali
+          echo "### 10. Data ultima revisione pagine legali" >> "$REPORT"
+          LEGAL_PAGES=(
+            "content/privacy/_index.md"
+            "content/note-legali/_index.md"
+            "content/accessibilita/_index.md"
+            "content/social-media-policy/_index.md"
+          )
+          for page in "${LEGAL_PAGES[@]}"; do
+            if [ ! -f "$page" ]; then
+              echo "- Pagina legale mancante: \`$page\`" >> "$REPORT"
+              FOUND_ISSUES="true"
+              continue
+            fi
+            fm=$(awk '/^---$/{c++; next} c==1' "$page")
+            if ! echo "$fm" | grep -qE '^dataUltimaRevisione:[[:space:]]*"[0-9]{4}-[0-9]{2}-[0-9]{2}"'; then
+              echo "- \`$page\`: campo \`dataUltimaRevisione\` mancante o con formato diverso da \`AAAA-MM-GG\` tra virgolette" >> "$REPORT"
+              FOUND_ISSUES="true"
+            fi
+          done
+          echo "" >> "$REPORT"
+
           # Output
           echo "found_issues=$FOUND_ISSUES" >> "$GITHUB_OUTPUT"
           {

@@ -10,6 +10,15 @@
     <div class="col-lg-8 mx-auto">
       {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
 
+      {{/* ── DATA ULTIMA REVISIONE (pagine istituzionali/legali) ── */}}
+      {{ with .Params.dataUltimaRevisione }}
+      {{ $d := time . }}
+      <div class="alert alert-light border small mb-4 py-2 px-3" role="note">
+        <i class="bi bi-clock-history me-1" aria-hidden="true"></i>
+        Pagina rivista il <strong><time datetime="{{ $d.Format "2006-01-02" }}">{{ $d | time.Format ":date_long" }}</time></strong>.
+      </div>
+      {{ end }}
+
       {{/* ── METADATI COMUNICAZIONE ── */}}
       {{ if eq .Section "comunicazioni" }}
 

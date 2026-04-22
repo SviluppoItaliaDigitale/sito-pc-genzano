@@ -1289,7 +1289,42 @@ Voglio creare una pagina `/mezzi/` che elenca i mezzi operativi del gruppo.
    git push origin main
    ```
 
-### 4.6 — Pagine esistenti sul sito
+### 4.6 — Pagine legali e istituzionali: campo `dataUltimaRevisione`
+
+Quattro pagine hanno un trattamento speciale perché devono mostrare al cittadino l'**ultima revisione esplicita** (non automatica da git):
+
+| Pagina | File |
+|---|---|
+| Privacy e Cookie Policy | `content/privacy/_index.md` |
+| Note Legali | `content/note-legali/_index.md` |
+| Dichiarazione di Accessibilità | `content/accessibilita/_index.md` |
+| Social Media Policy | `content/social-media-policy/_index.md` |
+
+**Frontmatter obbligatorio** per queste pagine:
+
+```yaml
+---
+title: "…"
+description: "…"
+layout: "single"
+dataUltimaRevisione: "2026-04-22"   # AAAA-MM-GG
+---
+```
+
+Il template `single.html` del tema mostra questa data come **box evidente** in cima al contenuto:
+
+> 🕑 **Pagina rivista il martedì 22 aprile 2026.**
+
+**Regole operative:**
+
+- Aggiorna `dataUltimaRevisione` **ogni volta** che cambi contenuto sostanziale (non per refusi o link morti).
+- **Non scrivere** date di revisione nel corpo del testo (tipo "Ultimo aggiornamento: Marzo 2026"): il riferimento è unico e vive nel frontmatter.
+- Il workflow `coerenza-docs.yml` verifica ogni lunedì che le 4 pagine abbiano il campo impostato.
+- La `.Lastmod` automatica di Hugo (git-based) viene **omessa** sulle pagine che hanno `dataUltimaRevisione`: lo controlla il partial `page-tools.html`.
+
+**Perché non usare la data automatica da git?** Le pagine legali cambiano raramente e la data di revisione ha valore giuridico-istituzionale: deve essere sotto controllo editoriale esplicito, non dipendere da un commit git che può riguardare anche modifiche minime (refusi, link aggiornati).
+
+### 4.7 — Pagine esistenti sul sito
 
 | URL | File | Note |
 |---|---|---|

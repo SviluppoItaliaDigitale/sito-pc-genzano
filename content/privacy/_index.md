@@ -2,6 +2,7 @@
 title: "Privacy e Cookie Policy"
 description: "Informativa sulla privacy e utilizzo dei cookie ai sensi del GDPR."
 layout: "single"
+dataUltimaRevisione: "2026-04-22"
 ---
 
 ## Informativa sul trattamento dei dati personali
@@ -69,5 +70,3 @@ Il presente sito non incorpora widget, player o strumenti di terze parti che ins
 ### Come disabilitare i cookie
 
 L'utente può disabilitare i cookie modificando le impostazioni del proprio browser. La disabilitazione dei cookie tecnici potrebbe compromettere alcune funzionalità del sito.
-
-*Ultimo aggiornamento: Marzo 2026*
