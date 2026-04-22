@@ -70,9 +70,11 @@
           <h2 class="h6 fw-bold mb-2"><i class="bi bi-paperclip me-1" aria-hidden="true"></i> Allegati</h2>
           <ul class="list-unstyled mb-0">
             {{ range . }}
+            {{ $sizeSuffix := "" }}
+            {{ with .dimensione }}{{ $sizeSuffix = printf ", %s" . }}{{ end }}
             <li class="mb-1">
-              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .titolo }} (PDF, si apre in una nuova finestra)">
-                <i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> {{ .titolo }} <span class="visually-hidden">(PDF, si apre in una nuova finestra)</span>
+              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .titolo }} (PDF{{ $sizeSuffix }}, si apre in una nuova finestra)">
+                <i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> {{ .titolo }} <span class="visually-hidden">(PDF{{ $sizeSuffix }}, si apre in una nuova finestra)</span>{{ with .dimensione }} <span class="small text-muted" aria-hidden="true">({{ . }})</span>{{ end }}
               </a>
             </li>
             {{ end }}

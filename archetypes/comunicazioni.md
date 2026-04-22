@@ -44,10 +44,12 @@ area: ""
 
 # ── ALLEGATI ──
 # Lista di file PDF allegati (opzionale)
+# Il campo `dimensione` è opzionale ma raccomandato (WCAG 3.3.5 Help).
 # Es:
 # allegati:
 #   - titolo: "Ordinanza sindacale"
 #     url: "/documenti/ordinanza.pdf"
+#     dimensione: "120 KB"
 allegati: []
 
 # ── IMPOSTAZIONI ──
