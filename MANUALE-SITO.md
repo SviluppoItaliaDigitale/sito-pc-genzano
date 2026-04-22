@@ -1,7 +1,7 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 2.1
-**Ultimo aggiornamento manuale:** 2026-04-21
+**Versione:** 2.3
+**Ultimo aggiornamento manuale:** 2026-04-22
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
 **Bootstrap Italia:** versione 2.17.3
@@ -14,6 +14,20 @@
 > o nuove versioni di Bootstrap Italia, viene aperta un'Issue sul repository con la checklist
 > dei punti da verificare. Vedi **Parte 7** per dettagli.
 
+> **Changelog 2.3 (2026-04-22)**
+> - **Parte 11**: aggiunto **X (Twitter)** come canale autonomo, completati i template per tutti i canali, generalizzata la checklist, aggiunto il **Referente comunicazione** e le regole contro engagement bait, gestione post con errore, archivio screenshot.
+> - **Parte 12**: introdotto l'**holding statement** nei primi 15 minuti di emergenza, riscritti i template emergenziali in voce attiva, aggiunta la sezione sul ritorno alla normalità comunicativa.
+> - Aggiunta **Parte 13** — Social Media Policy pubblica, con la pagina istituzionale collegata in `content/social-media-policy/`.
+> - Dichiarata esplicitamente la licenza **CC BY 4.0** per i contenuti pubblicati sui canali social (coerente con le note legali del sito).
+> - Corrette incongruenze interne: uso della voce attiva nei comunicati, coerenza cross-canale, rimozione riferimenti a script non esistenti.
+>
+> **Changelog 2.2 (2026-04-21)**
+> - Aggiunta **Parte 11** — Testi per i social (Instagram, Facebook collegato, Telegram).
+> - Aggiunta **Parte 12** — Comunicati stampa (tempo ordinario e tempo emergenziale).
+> - Introdotta la **palette ufficiale di hashtag** e le formule di rimando al sito.
+> - Definito il blocco firma istituzionale per i comunicati, con varianti per coordinatore e sindaco.
+> - Stabilito che i comunicati stampa vengono archiviati come articoli in `content/comunicazioni/`.
+>
 > **Changelog 2.1 (2026-04-21)**
 > - Aggiunta **Parte 8** — Modificare e cancellare contenuti (articoli, pagine, redirect).
 > - Aggiunta **Parte 9** — File dati `data/` (modalità emergenza, allerta meteo, card rischi, ecc.).
@@ -37,6 +51,9 @@
 - [Parte 8 — Modificare e cancellare contenuti](#parte-8--modificare-e-cancellare-contenuti)
 - [Parte 9 — File dati `data/` e stati del sito](#parte-9--file-dati-data-e-stati-del-sito)
 - [Parte 10 — GitHub Actions e automazioni](#parte-10--github-actions-e-automazioni)
+- [Parte 11 — Testi per i social (Instagram, Facebook, X, Telegram)](#parte-11--testi-per-i-social-instagram-facebook-x-telegram)
+- [Parte 12 — Comunicati stampa (tempo ordinario e tempo emergenziale)](#parte-12--comunicati-stampa-tempo-ordinario-e-tempo-emergenziale)
+- [Parte 13 — Social Media Policy pubblica](#parte-13--social-media-policy-pubblica)
 - [Appendici](#appendici)
 
 ---
@@ -1993,6 +2010,1576 @@ Regole:
 - Usare action ufficiali o mantenute (`actions/checkout@v4`, `actions/setup-node@v4`, ecc.), pinnate a major version.
 - Niente secret hardcoded. Usare `${{ secrets.NAME }}` con secret creati nei Settings del repository.
 - Documentare il nuovo workflow in questa Parte 10 e in `CLAUDE.md` (sezione Automazioni).
+
+---
+
+## Parte 11 — Testi per i social (Instagram, Facebook, X, Telegram)
+
+### 11.0 — In breve: cosa fare, cosa non fare
+
+Prima di scrivere un post, queste sono le dieci regole sintetiche da tenere a mente. Il
+dettaglio di ciascuna è nelle sezioni successive.
+
+| ✅ Fare | ❌ Non fare |
+|---|---|
+| Tono formale ma umano, rivolto a persone reali | Tono finto-giovanile, slang, emoji decorativi |
+| Fatti verificati, fonti citate, link al sito | Notizie non confermate, "pare che…", "sembra che…" |
+| Voce attiva, frasi brevi, italiano corretto | Burocratese, passive inutili, frasi sopra 20 parole |
+| Codici colore allerta secondo Regione Lazio | "Allerta massima" per fenomeni ordinari |
+| Solo il 112 come numero di emergenza | 115 / 118 / 1515 come riferimento per il cittadino |
+| Hashtag coerenti, istituzionali, in CamelCase | Hashtag di tendenza non pertinenti, in minuscolo fuso |
+| Immagine con fascia blu e logo | Foto "grezze" dal campo senza trattamento istituzionale |
+| Rimando esplicito al sito per approfondire | Informazioni operative solo nel post, senza archivio |
+| Correzione trasparente con timestamp | Cancellazione silenziosa di un post con errore |
+| Presìdio dichiarato onestamente nei limiti reali | Promessa di risposte H24 che non si possono garantire |
+
+Le regole valgono per **tutti e quattro i canali** (Instagram, Facebook, X, Telegram). Le
+differenze di formato, lunghezza e hashtag sono nelle sezioni dedicate a ciascun canale
+(11.4, 11.5, 11.6, 11.7).
+
+### 11.1 — A chi parliamo sui social
+
+Il cittadino che ci segue sui social non è un tecnico della protezione civile. È un residente di
+Genzano, un genitore, un volontario, un anziano che riceve il post inoltrato dal figlio, un insegnante
+che vuole portare l'argomento in classe. Scriviamo pensando a tutti loro contemporaneamente.
+
+Il tono è **formale ma umano**: siamo un'istituzione, non un'agenzia di marketing, ma parliamo con
+persone vere. Niente slogan, niente enfasi, niente emoji decorativi. Sì al "voi" quando ci rivolgiamo
+direttamente al pubblico, sì a periodi brevi ma in prosa, sì a rimandi chiari al sito per chi vuole
+approfondire.
+
+### 11.2 — Canali ufficiali
+
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma pubblica su:
+
+- **Instagram**. Canale visuale, raggiunge un pubblico trasversale (volontari, famiglie, scuole).
+  Fino a oggi è stato il canale di partenza per semplicità d'uso.
+- **Facebook**. Canale storico della PA locale, raggiunge in particolare un pubblico adulto e
+  anziano, molto rappresentativo del territorio di Genzano. Consente post più discorsivi, link
+  cliccabili direttamente nel testo e la creazione di eventi pubblici.
+- **X (Twitter)**. Canale di broadcast rapido, utile soprattutto per allerte e aggiornamenti
+  operativi che devono raggiungere media e istituzioni. Il testo è sempre breve e contiene un
+  link al sito.
+- **Telegram** (canale broadcast). Serve per notifiche rapide, allerte meteo, aggiornamenti
+  operativi rivolti alla cittadinanza iscritta al canale.
+
+#### Relazione tra Instagram e Facebook
+
+Instagram è tecnicamente collegato a Facebook tramite il cross-posting di Meta: un post
+Instagram può essere pubblicato automaticamente anche sulla pagina Facebook. Per i contenuti
+semplici (foto singola con didascalia breve) il cross-posting funziona bene. Però **Facebook e
+Instagram non sono due facce dello stesso canale**: hanno pubblici, formati e abitudini diverse.
+
+Quando si parte da **Instagram**, il post è pensato per la scorciatoia mobile, con caption breve,
+immagine forte, hashtag a fine post. Il cross-post su Facebook è accettabile.
+
+Quando si parte da **Facebook**, si può sfruttare il formato più lungo, il link cliccabile nel
+testo, l'eventuale creazione di un evento pubblico, il tag ad altre pagine istituzionali
+(Comune di Genzano, Regione Lazio). Il contenuto scritto per Facebook è **quasi sempre
+migliore** sul suo canale nativo rispetto a un post Instagram cross-postato, soprattutto per
+comunicati articolati, campagne di reclutamento, iniziative con programma esteso.
+
+**Regola pratica**: il redattore sceglie il canale di partenza in base al tipo di contenuto,
+non in base all'abitudine.
+
+- Contenuto visuale forte, messaggio sintetico → parti da **Instagram**.
+- Contenuto articolato, programma di eventi, testo lungo, link esteso → parti da **Facebook**.
+- Se il contenuto vuole coprire bene entrambi i pubblici, scrivi **due versioni** (una per
+  Facebook, una per Instagram) e disattiva il cross-posting per quel post.
+
+Non abbiamo account LinkedIn, TikTok, YouTube: se verranno attivati, questa Parte andrà
+aggiornata con le regole di piattaforma prima del primo post.
+
+### 11.3 — Principi di scrittura social (coerenti con AGID)
+
+Le regole AGID descritte nella **Parte 2** valgono anche qui, con alcuni adattamenti:
+
+1. **Discorsivo, non schematico.** Niente elenchi a pallini dentro il post: raccontiamo in prosa,
+   con due o tre periodi brevi. Gli elenchi funzionano sul sito, non su Instagram.
+2. **Voce attiva, verbi concreti.** "Il Gruppo ha attivato una squadra" non "È stata disposta
+   l'attivazione di una squadra".
+3. **Frasi brevi.** Sotto le 20 parole quando possibile. Un pensiero per frase.
+4. **Niente burocratese.** "Comportamenti di autoprotezione" sì, "misure comportamentali da porre
+   in essere" no.
+5. **Niente titoli schematici a effetto.** Evita formule tipo "⚠️ ATTENZIONE ⚠️" a inizio post:
+   sul sito sono un abuso visivo, sui social sono grido. Apri con la notizia, non con l'allarme
+   grafico.
+6. **Sempre inclusivo.** "Cittadine e cittadini", "volontarie e volontari" quando la forma lo permette
+   senza appesantire.
+7. **Date e orari in forma estesa**: "martedì 21 aprile alle 10" non "21/04 h 10:00".
+8. **Numeri di telefono leggibili**: "112" isolato, "06 1234 5678" con spazi.
+9. **Fonte sempre esplicita** per previsioni o allerte: "secondo il Centro Funzionale Regionale
+   del Lazio", "bollettino della Protezione Civile Lazio".
+10. **Niente allarmismo, niente minimizzazione.** Il tono resta calmo anche in emergenza.
+
+### 11.4 — Uso degli emoji
+
+Gli emoji sui canali istituzionali sono ammessi **solo con funzione informativa**, mai decorativa.
+
+| Emoji | Uso consentito |
+|---|---|
+| ⚠️ | Apre un'allerta meteo o rischio in corso. Uno solo, a inizio post. |
+| 🌧️ 🌊 🔥 ❄️ 💨 | Identificano il fenomeno (pioggia, piene, incendi, neve, vento). Uno solo, accanto al titolo interno. |
+| ℹ️ | Aggiornamento informativo, nessuna azione richiesta. |
+| 📍 | Localizzazione (prima di un indirizzo o zona). |
+| 📞 | Precede un numero di telefono. |
+| 🗓️ | Precede una data di evento o scadenza. |
+
+Non usare: cuori, pollici in su, applausi, fuochi d'artificio, faccine sorridenti, bandiere, megafoni
+a raffica. Mai emoji nel primo rigo del titolo di un'allerta se non ⚠️.
+
+### 11.5 — Regole per piattaforma
+
+#### Instagram
+
+- **Lunghezza consigliata della caption**: 80-150 parole. Massimo 2200 caratteri tecnici, ma oltre
+  le 200 parole perdiamo il lettore mobile.
+- **Prima riga (sotto la foto)**: deve reggere da sola come titolo. Instagram taglia dopo circa
+  125 caratteri con "…altro". La notizia principale deve stare lì.
+- **Hashtag**: da **5 a 8**, mai più di 10. Vanno in fondo al post, separati dal testo da una
+  riga vuota, non mescolati dentro il discorso.
+- **Menzioni**: `@comune.genzanodiroma` per il Comune, `@regionelazioofficial` per la Regione,
+  `@protezionecivile` per il Dipartimento nazionale. Verifica sempre l'handle corrente prima di
+  taggare: può cambiare.
+- **Link nella caption**: Instagram non rende cliccabili i link nel testo. Rimanda con la formula
+  *"Tutti i dettagli sul sito: protezionecivilegenzano.it"* e, se il post lo richiede, aggiorna
+  il link in bio.
+- **Storie**: ammesse per rilanci, eventi in corso, reminder. Le allerte devono restare anche
+  come post permanenti, non solo storie.
+- **Reel**: se si usano, aggiungere sempre i sottotitoli (accessibilità) e un alt-text.
+- **Alt-text immagine**: obbligatorio, descrittivo. Vedi regola 11.8.
+
+#### Facebook
+
+- **Solo pagina ufficiale verificata**. Non pubblichiamo mai da gruppi Facebook, profili
+  personali, pagine sussidiarie o pagine non verificate. L'identità istituzionale del Gruppo
+  deve essere inequivocabile.
+- **Lunghezza consigliata**: 80-300 parole. Facebook premia i post discorsivi e legge bene anche
+  testi più articolati (massimo 500 parole per comunicati strutturati). Niente limiti bloccanti
+  fino a 63.206 caratteri, ma oltre le 500 parole meglio passare a un articolo sul sito con
+  rimando.
+- **Prima riga**: deve funzionare come occhiello informativo. Facebook non tronca come Instagram,
+  ma il lettore scorre rapidamente: la notizia principale va nelle prime due righe.
+- **Link**: **cliccabili** direttamente nella caption e Facebook genera l'anteprima Open Graph
+  dell'articolo del sito. Metti sempre il link all'articolo `content/comunicazioni/` dopo il
+  corpo del testo, non prima: il link pulito senza decorazioni dà un'anteprima più ordinata.
+- **Hashtag**: da **2 a 3**, mai più di 5. Su Facebook gli hashtag sono meno efficaci rispetto a
+  Instagram e un'alta concentrazione fa "spam". Palette base ridotta:
+  `#ProtezioneCivileGenzano #GenzanoDiRoma` + al massimo un hashtag tematico.
+- **Menzioni pagine**: usa `@ComuneDiGenzano`, `@RegioneLazio`, `@ProtezioneCivile` (verifica
+  l'handle corrente della pagina prima di taggare). Le menzioni creano link attivi alla pagina
+  citata.
+- **Eventi Facebook**: per formazione, esercitazioni aperte al pubblico, campagne di reclutamento
+  con scadenza, crea un **evento Facebook** collegato al post, con data, luogo, descrizione
+  completa e link al sito. Non sostituisce il post, lo affianca.
+- **Programma e liste**: su Facebook l'elenco puntato è più tollerato rispetto a Instagram
+  (lettori adulti, lettura più lenta). Ammesso per programmi di evento o step di iscrizione,
+  ma tenere il corpo principale discorsivo.
+- **Foto multiple**: Facebook supporta bene gli album. Per un'esercitazione o un evento concluso,
+  un album con 4-10 foto (tutte con fascia blu) è più efficace di una singola foto.
+- **Alt-text immagine**: obbligatorio. Lo strumento di Facebook lo chiede esplicitamente.
+- **Commenti**: rispondere sempre ai commenti con domande concrete dei cittadini, con tono
+  istituzionale. Non rispondere a commenti polemici o di parte.
+
+#### Cross-posting Instagram → Facebook
+
+Se un contenuto nasce su Instagram e si usa il cross-posting automatico:
+
+- va bene per foto singole con caption breve e visuale forte;
+- **non va bene** per contenuti che beneficerebbero del formato lungo di Facebook, del link
+  cliccabile o di un evento collegato;
+- in questi casi, disattivare il cross-posting e pubblicare due versioni separate.
+
+#### X (Twitter)
+
+- **Limite tecnico**: 280 caratteri per post nell'account free, che è quello istituzionale da
+  preferire. Non puntiamo ai formati estesi Premium: il messaggio deve restare telegrafico.
+- **Lunghezza consigliata**: 200-260 caratteri, lasciando margine per il link e gli hashtag.
+- **Struttura**: notizia in apertura + una riga di istruzione o contesto + link al sito +
+  hashtag. Niente introduzioni.
+- **Link al sito**: obbligatorio in ogni post. X genera automaticamente l'anteprima (card Open
+  Graph), che sul sito Hugo è già configurata correttamente.
+- **Hashtag**: da **1 a 2**, mai più di 3. Sempre in CamelCase. Vanno a fine post, non dentro
+  la frase.
+- **Menzioni istituzionali**: `@RegioneLazio` per la Regione, `@DPCgov` per il Dipartimento
+  nazionale, `@ComuneGenzano` per il Comune (verificare sempre l'handle corrente prima di
+  taggare). Le menzioni consumano caratteri: usarle solo quando davvero informative.
+- **Thread**: ammessi solo per comunicati emergenziali lunghi (cronaca in evoluzione). Massimo
+  5 post per thread, numerati (1/5, 2/5…). Non usare i thread per attività ordinarie.
+- **Immagini**: ogni post con contenuto rilevante accompagnato da immagine istituzionale con
+  fascia blu (vedi Parte 3.8). Alt-text obbligatorio anche su X.
+- **Nessun retweet senza commento** di fonti non istituzionali. I rilanci di allerte vanno solo
+  da account ufficiali (Regione, DPC, Protezione Civile nazionale, 112).
+- **Nessuna polemica o risposta a commenti polemici**: i commenti sui post istituzionali non si
+  alimentano.
+
+#### Telegram
+
+- **Lunghezza consigliata**: 300-500 caratteri per le notifiche; fino a 1500 caratteri per
+  comunicati più strutturati (limite tecnico: 4096).
+- **Niente hashtag**: su Telegram i cittadini non li cercano. Se servono per archiviazione interna,
+  usarne al massimo uno alla fine (es. `#AllertaMeteo`).
+- **Link**: sono cliccabili e generano anteprima. Metti **sempre** il link al sito in fondo:
+  `https://www.protezionecivilegenzano.it/comunicazioni/nome-articolo/`.
+- **Formattazione**: Telegram supporta `**grassetto**`, `__corsivo__`, `` `codice` ``. Usare solo
+  grassetto, solo per evidenziare il tipo di allerta e il codice colore.
+- **Emoji**: stesse regole della 11.4. Telegram tollera meglio una sola icona di apertura.
+- **Pin del messaggio**: le allerte arancioni e rosse vanno pinnate nel canale finché valide; al
+  termine, rimuovere il pin e pubblicare un messaggio di chiusura evento.
+
+### 11.6 — Hashtag ufficiali
+
+Esiste una **palette base** da usare sempre (sul canale Instagram), più hashtag aggiuntivi scelti
+di volta in volta in base al contenuto.
+
+#### Palette base (da includere in ogni post Instagram)
+
+- `#ProtezioneCivileGenzano`
+- `#GenzanoDiRoma`
+- `#ProtezioneCivile`
+
+Questi tre identificano il mittente e il territorio: non vanno mai omessi. Sono scritti in CamelCase
+(prima lettera di ogni parola maiuscola) per leggibilità anche con lettori di schermo.
+
+#### Hashtag tematici (scegliere in base al contenuto, 2-5 in aggiunta ai base)
+
+| Tema | Hashtag |
+|---|---|
+| Territorio Castelli Romani | `#CastelliRomani` `#ParcoCastelliRomani` |
+| Allerta meteo | `#AllertaMeteo` `#AllertaMeteoLazio` `#MeteoLazio` |
+| Rischio idrogeologico | `#RischioIdrogeologico` `#Maltempo` |
+| Rischio incendi | `#IncendiBoschivi` `#RischioIncendi` `#CampagnaAIB` |
+| Rischio sismico | `#RischioSismico` `#Terremoto` |
+| Rischio neve/ghiaccio | `#Neve` `#Ghiaccio` `#EmergenzaNeve` |
+| Volontariato e reclutamento | `#VolontariatoPC` `#DiventaVolontario` `#VolontariProtezioneCivile` |
+| Formazione ed esercitazioni | `#FormazionePC` `#Esercitazione` `#AddestramentoPC` |
+| Prevenzione e auto-protezione | `#AutoProtezione` `#IoNonRischio` `#Prevenzione` |
+| Radiocomunicazioni | `#Radioamatori` `#Radiocomunicazioni` `#EmergencyRadio` |
+| Istituzioni | `#RegioneLazio` `#ComuneDiGenzano` `#DipartimentoProtezioneCivile` |
+| Eventi pubblici | `#ServizioCivile` `#AttivitàIstituzionali` |
+
+#### Regole d'uso hashtag per piattaforma
+
+- **Instagram** (con cross-post Facebook): totale fra 5 e 8, mai sopra 10. In fondo al post, dopo una riga vuota.
+- **X (Twitter)**: da 1 a 2, mai sopra 3. In fondo al post, consumano caratteri preziosi.
+- **Telegram**: nessun hashtag, oppure al massimo uno di servizio in fondo (es. `#AllertaMeteo`).
+
+#### Regole d'uso hashtag (trasversali)
+
+- **In CamelCase**: `#AllertaMeteoLazio` non `#allertameteolazio`. Gli screen reader leggono meglio.
+- **Niente hashtag in inglese** se non sono nomi propri di iniziative (es. `#IoNonRischio`).
+- **Niente hashtag generici svuotati** (`#italia`, `#news`, `#amazing`).
+- **Niente hashtag politici o divisivi.**
+- **Niente hashtag di trend** non pertinenti al messaggio istituzionale.
+
+### 11.7 — Rimando al sito (formule standard)
+
+Ogni post deve rimandare al sito. Varianti approvate, da alternare per non suonare ripetitivi:
+
+- *"Aggiornamenti e tutti i dettagli sul sito: protezionecivilegenzano.it"*
+- *"Trovate il comunicato completo su protezionecivilegenzano.it"*
+- *"Per restare aggiornati consultate protezionecivilegenzano.it"*
+- *"La scheda completa con le raccomandazioni di auto-protezione è sul nostro sito."*
+- *"Il bollettino integrale e le mappe sono disponibili su protezionecivilegenzano.it"*
+
+Su Telegram il link va reso cliccabile con l'URL esteso dell'articolo specifico.
+Su Instagram, dove i link non sono cliccabili, citare solo il dominio e aggiornare il link in bio.
+
+### 11.8 — Accessibilità social
+
+- **Alt-text immagine obbligatorio** su Instagram e Facebook. Descrive il contenuto informativo
+  della foto, non il mittente. Esempio: *"Volontari di protezione civile con pettorina arancione
+  caricano sacchi di sabbia su un furgone bianco accanto al Lago di Nemi"*. Vedi Parte 3.10 per
+  le regole generali di alt-text.
+- **Hashtag in CamelCase** per i lettori di schermo.
+- **Niente testo essenziale dentro l'immagine**: il messaggio informativo deve stare nella caption,
+  non nella grafica. Le immagini con testo sono ammesse come rinforzo visivo, non come unico veicolo
+  dell'informazione.
+- **Sottotitoli sempre attivi** nei video e nei reel.
+- **Contrasto**: se si usano card grafiche, contrasto minimo 4.5:1 su sfondo bianco.
+- **Niente GIF animate o effetti lampeggianti** (rispetto di `prefers-reduced-motion` anche nella
+  comunicazione social).
+
+### 11.9 — Cosa NON pubblicare
+
+#### Contenuti vietati
+
+- Volti riconoscibili di cittadini o colleghi senza liberatoria esplicita.
+- Targhe di veicoli privati.
+- Dati sensibili (indirizzi di abitazioni coinvolte, nomi di infortunati, informazioni sanitarie).
+- Numeri telefonici privati dei volontari.
+- Foto operative che possano compromettere sicurezza o segreto istruttorio.
+- Meme, frasi a effetto, battute.
+- Commenti politici o di parte.
+- Previsioni meteo non ufficiali, rilancio di post da pagine meteo amatoriali.
+- Ringraziamenti generici a "tutti coloro che…": sempre specifici e verificati.
+- Complimenti o critiche ad altre istituzioni.
+- Contenuti allarmistici, enfatici o sensazionalistici.
+
+#### Formule vietate (engagement bait)
+
+Le seguenti formule sono tipiche del marketing e **non trovano posto** nella comunicazione
+istituzionale del Gruppo:
+
+- "Tagga un amico che…"
+- "Condividete se siete d'accordo"
+- "Scrivete SÌ nei commenti"
+- "Mettete un cuore se vi è piaciuto"
+- "Chi è con noi?"
+- "Il primo che…"
+- Richieste di emoji di reazione, sondaggi-gioco, quiz frivoli.
+
+L'unica richiesta di azione ammessa al cittadino è informativa e utile: *"consultate il sito
+per restare aggiornati"*, *"iscrivetevi al canale Telegram per gli aggiornamenti in tempo
+reale"*, *"chiamate il 112 in caso di emergenza"*.
+
+#### Mai tono finto-giovanile
+
+La PA non deve rincorrere il lessico dei social per "sembrare accessibile". Usare abbreviazioni
+da chat, slang, emoji esuberanti o tono scherzoso rompe la fiducia istituzionale. Si può essere
+**umani senza smettere di essere istituzione**: è questo l'equilibrio del manuale.
+
+### 11.9 bis — Gestione errori e post fuori controllo
+
+Gli errori capitano. Una comunicazione istituzionale che sbaglia e **corregge in modo
+trasparente** mantiene la fiducia dei cittadini; una che cancella silenziosamente un post la
+perde.
+
+#### Se un post contiene un errore fattuale
+
+1. **Non cancellare** il post originale (a meno che contenga dati sensibili o errori gravi non
+   correggibili).
+2. **Modificare** il post originale (Facebook e Telegram consentono la modifica; Instagram e X
+   consentono la modifica con limiti di tempo), aggiungendo in apertura la formula:
+   *"Aggiornamento delle ore HH:MM: la versione precedente indicava erroneamente […]. La
+   versione corretta è la seguente."*
+3. Se la modifica non è possibile, **pubblicare un secondo post di correzione** che rimanda al
+   primo e chiarisce cosa cambia.
+4. **Segnalare** la correzione sugli altri canali dove il contenuto era stato replicato.
+5. **Archiviare** uno screenshot della versione originale errata e della versione corretta in
+   `static/archivio-social/AAAA/` (vedi 11.17).
+
+#### Se un post genera polemica o viene distorto
+
+1. **Non rispondere di impulso** ai commenti polemici. La pagina istituzionale non si difende,
+   chiarisce i fatti quando necessario.
+2. **Non cancellare** i commenti critici se non violano la netiquette (vedi Parte 13).
+3. **Rimuovere** invece i commenti che violano la netiquette, senza spiegazioni polemiche.
+4. Se nasce una narrazione distorta, **pubblicare un chiarimento** basato sui fatti, non
+   sull'emozione.
+5. **Coinvolgere** il Coordinatore (e, se necessario, il Comune) prima di reagire
+   pubblicamente a situazioni critiche.
+
+#### Se un contenuto deve essere ritirato
+
+Esempio: una notizia che si rivela errata, un'iniziativa cancellata, un dato poi rivisto.
+
+1. Pubblicare un post di **ritiro esplicito**: *"La comunicazione del HH:MM sul tema [X] è
+   superata. La situazione aggiornata è […]"*.
+2. Aggiornare l'articolo corrispondente sul sito con una nota di superamento in cima.
+3. Lasciare visibile la cronologia: la trasparenza vale più della pulizia.
+
+### 11.10 — Ruoli e flusso di approvazione
+
+#### Ruoli istituzionali
+
+Il **DL 25/2025 convertito in Legge 69/2025** ha formalizzato nella PA il ruolo del Social Media
+e Digital Manager. Per il nostro contesto (ente del terzo settore iscritto al RUNTS), il ruolo è
+adattato nel profilo del **Referente comunicazione**, designato dal Coordinatore del Gruppo.
+
+| Ruolo | Responsabilità |
+|---|---|
+| **Coordinatore del Gruppo** | Approvazione finale dei contenuti sensibili (allerte, comunicati stampa, post in emergenza), responsabilità dei virgolettati istituzionali, interlocuzione con Sindaco e Comune. |
+| **Referente comunicazione** | Coordina la redazione di articoli, post social e comunicati stampa. Applica la checklist 11.12, cura la pianificazione editoriale (vedi `PIANO-EDITORIALE.md`), presidia la netiquette pubblicata. |
+| **Redattori volontari** | Producono le bozze, inseriscono gli allegati, applicano la fascia blu alle immagini. |
+| **Pubblicatore** | Chi ha le credenziali dei canali. Pubblica solo bozze già approvate. |
+| **Sala operativa** | In emergenza, unifica i ruoli di redazione, verifica e pubblicazione. |
+
+In piccoli gruppi uno stesso volontario può ricoprire più ruoli: l'importante è che per ogni
+contenuto sia chiaro **chi lo ha scritto** e **chi lo ha approvato** prima della pubblicazione.
+
+#### Flusso ordinario
+
+1. **Chi scrive**: un volontario redige la bozza in un documento condiviso (non direttamente
+   nell'app social).
+2. **Chi verifica**: il Referente comunicazione legge la bozza e applica la **checklist 11.12**.
+3. **Chi approva** (quando necessario): il Coordinatore dà l'OK sui contenuti sensibili.
+4. **Chi pubblica**: chi ha le credenziali del canale, dopo le approvazioni previste. Mai
+   pubblicare una bozza non verificata "per velocità".
+5. **Archiviazione**: i post importanti (allerte, comunicati, eventi) restano anche come
+   articolo sul sito (`content/comunicazioni/`) e come screenshot archiviato (vedi 11.17) per
+   garantirne la reperibilità e la paternità nel tempo.
+
+#### Flusso in emergenza
+
+Il flusso si comprime: Sala operativa e Coordinatore (o chi ne fa le veci) possono coincidere
+con chi scrive, verifica e pubblica. La regola dei contenuti **non cambia**: niente dati non
+verificati, niente stime non confermate, niente promesse. La velocità si ottiene semplificando
+la catena di approvazione, non saltando i controlli sostanziali.
+
+### 11.11 — Template per tipo di contenuto
+
+I template che seguono sono esempi operativi. Vanno sempre adattati al contesto reale, mai copiati
+a scatola chiusa.
+
+#### Template 1 — Allerta meteo (livello giallo/arancione/rosso)
+
+**Instagram** (caption) — la stessa caption funziona bene anche come cross-post Facebook per contenuti sintetici come questo:
+
+> ⚠️ Allerta meteo arancione sui Castelli Romani per martedì 21 aprile.
+>
+> Il Centro Funzionale Regionale del Lazio ha emesso un'allerta arancione per rischio
+> idrogeologico sulla zona dei Castelli Romani. Sono previste piogge intense e possibili
+> allagamenti nelle ore pomeridiane.
+>
+> Se possibile rimanete in casa durante i fenomeni più intensi. Non sostate in sottopassi o
+> aree a rischio allagamento. In caso di emergenza chiamate il 112.
+>
+> Il bollettino completo e le raccomandazioni di auto-protezione sono su
+> protezionecivilegenzano.it
+>
+> #ProtezioneCivileGenzano #GenzanoDiRoma #ProtezioneCivile #AllertaMeteoLazio
+> #RischioIdrogeologico #CastelliRomani #RegioneLazio
+
+**X (Twitter)**:
+
+> ⚠️ Allerta meteo arancione sui Castelli Romani per martedì 21 aprile. Piogge intense e
+> rischio allagamenti nel pomeriggio. Non sostate in sottopassi. In emergenza: 112.
+>
+> Bollettino: https://www.protezionecivilegenzano.it/comunicazioni/allerta-meteo-21-aprile-2026/
+>
+> #AllertaMeteoLazio #CastelliRomani
+
+**Telegram**:
+
+> ⚠️ **Allerta meteo arancione** — martedì 21 aprile
+>
+> Il Centro Funzionale Regionale del Lazio segnala rischio idrogeologico sulla zona dei
+> Castelli Romani. Piogge intense e possibili allagamenti nel pomeriggio.
+>
+> Restate in casa durante i fenomeni più intensi. Non sostate in sottopassi o aree a rischio
+> allagamento. In caso di emergenza: 📞 112.
+>
+> Bollettino completo: https://www.protezionecivilegenzano.it/comunicazioni/allerta-meteo-21-aprile-2026/
+
+#### Template 2 — Evento formativo o esercitazione
+
+**Instagram** (con cross-post Facebook accettabile per questo contenuto sintetico):
+
+> 🗓️ Sabato 10 maggio il Gruppo Comunale Volontari partecipa all'esercitazione regionale
+> "Castelli Sicuri 2026" insieme alla Regione Lazio e ai comuni dei Castelli Romani.
+>
+> L'esercitazione simula una scossa sismica di magnitudo moderata e prevede l'attivazione
+> delle procedure di assistenza alla popolazione, la gestione delle aree di attesa e le
+> comunicazioni radio tra sale operative.
+>
+> L'area interessata sarà il centro storico di Genzano dalle 9 alle 13. Nessun disagio per
+> la cittadinanza.
+>
+> Programma completo su protezionecivilegenzano.it
+>
+> #ProtezioneCivileGenzano #GenzanoDiRoma #ProtezioneCivile #Esercitazione #FormazionePC
+> #CastelliRomani #RischioSismico
+
+**Facebook** (versione estesa con evento collegato — consigliata per esercitazioni pubbliche):
+
+> Sabato 10 maggio il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma
+> partecipa all'esercitazione regionale "Castelli Sicuri 2026" insieme a @RegioneLazio e
+> ai comuni dei Castelli Romani.
+>
+> L'esercitazione simula una scossa sismica di magnitudo moderata. Le squadre dei
+> volontari testeranno le procedure di assistenza alla popolazione, la gestione delle aree
+> di attesa e le comunicazioni radio tra sale operative. L'iniziativa rientra nel
+> programma regionale di preparazione al rischio sismico.
+>
+> L'area interessata è il centro storico di Genzano, dalle 9 alle 13 di sabato 10 maggio.
+> Non sono previsti disagi per la cittadinanza: le attività si svolgono in modo
+> coordinato con la Polizia Locale.
+>
+> Il programma completo e le mappe dei punti di prova sono sul sito:
+> https://www.protezionecivilegenzano.it/comunicazioni/esercitazione-castelli-sicuri-2026/
+>
+> #ProtezioneCivileGenzano #GenzanoDiRoma #CastelliRomani
+
+> *Consiglio operativo: collega al post un **evento Facebook** con data/ora, luogo e link
+> al sito. I commenti sono moderati secondo la netiquette pubblicata su
+> protezionecivilegenzano.it/social-media-policy.*
+
+**X (Twitter)**:
+
+> 🗓️ Sabato 10 maggio il Gruppo Volontari PC Genzano partecipa all'esercitazione
+> regionale "Castelli Sicuri 2026". Centro storico, ore 9-13. Nessun disagio per i
+> cittadini.
+>
+> Programma: https://www.protezionecivilegenzano.it/comunicazioni/esercitazione-castelli-sicuri-2026/
+>
+> #Esercitazione #CastelliRomani
+
+**Telegram** (facoltativo per eventi formativi, utile come reminder 48 ore prima):
+
+> 🗓️ **Reminder** — esercitazione "Castelli Sicuri 2026"
+>
+> Sabato 10 maggio, dalle 9 alle 13, il Gruppo Comunale Volontari partecipa
+> all'esercitazione sismica regionale nel centro storico di Genzano. Attività coordinate
+> con la Polizia Locale, nessun disagio previsto per i cittadini.
+>
+> Programma completo: https://www.protezionecivilegenzano.it/comunicazioni/esercitazione-castelli-sicuri-2026/
+
+#### Template 3 — Reclutamento volontari
+
+**Instagram** (versione sintetica):
+
+> Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma cerca nuove
+> volontarie e nuovi volontari.
+>
+> Non servono competenze tecniche: la formazione è interna e gratuita. Serve tempo, spirito
+> di servizio e voglia di imparare. Si parte con il corso base, si prosegue con
+> specializzazioni a scelta (radio, logistica, avvistamento incendi, protezione sismica).
+>
+> Informazioni e modulo di iscrizione su protezionecivilegenzano.it alla pagina
+> "Diventa volontario".
+>
+> #ProtezioneCivileGenzano #GenzanoDiRoma #ProtezioneCivile #VolontariatoPC
+> #DiventaVolontario #CastelliRomani
+
+**Facebook** (versione estesa con link cliccabile e tag istituzionale — disattivare il
+cross-posting da Instagram per pubblicare questa variante):
+
+> Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma cerca nuove
+> volontarie e nuovi volontari per il 2026.
+>
+> Unirsi al Gruppo significa dedicare parte del proprio tempo alla propria comunità, in
+> attività che vanno dall'assistenza alla popolazione durante le emergenze alla prevenzione,
+> alla formazione, al presidio del territorio. Non servono competenze tecniche di partenza:
+> la formazione è gratuita, interna e accompagna la persona dall'ingresso fino alla
+> specializzazione.
+>
+> Il percorso inizia con il corso base (dodici lezioni serali), prosegue con esercitazioni
+> pratiche e consente di scegliere una specializzazione fra radiocomunicazioni, logistica,
+> avvistamento antincendio, assistenza alla popolazione. Il Gruppo opera sul territorio di
+> Genzano e collabora con @ComuneDiGenzano, @RegioneLazio e le altre protezioni civili dei
+> Castelli Romani.
+>
+> Possono iscriversi residenti maggiorenni. Le iscrizioni si chiudono il 30 aprile 2026.
+>
+> Tutte le informazioni, i requisiti e il modulo di iscrizione sono qui:
+> https://www.protezionecivilegenzano.it/diventa-volontario/
+>
+> #ProtezioneCivileGenzano #GenzanoDiRoma #VolontariatoPC
+
+> *Consiglio operativo: a questo post va collegato un **evento Facebook** con data di chiusura
+> iscrizioni (30 aprile 2026), luogo (sede comunale), descrizione breve e link al sito. L'evento
+> moltiplica la visibilità e genera reminder automatici ai cittadini interessati.*
+
+#### Template 4 — Aggiornamento operativo (post-evento)
+
+**Instagram**:
+
+> Si è conclusa alle 22 di ieri l'attivazione del Gruppo Comunale Volontari per il
+> maltempo che ha interessato Genzano nella giornata di lunedì.
+>
+> Sei volontari hanno presidiato le aree più esposte di via Nemorense e via dei Laghi,
+> supportando la Polizia Locale nella chiusura temporanea di un tratto stradale allagato.
+> Nessuna persona coinvolta, nessun danno rilevante alle abitazioni.
+>
+> Grazie a chi era in strada e a chi, da casa, ha seguito le raccomandazioni di auto-protezione.
+>
+> Il resoconto completo dell'attivazione è su protezionecivilegenzano.it
+>
+> #ProtezioneCivileGenzano #GenzanoDiRoma #ProtezioneCivile #Maltempo #RischioIdrogeologico
+> #CastelliRomani
+
+**Facebook** (versione dedicata, formato discorsivo esteso):
+
+> Si è conclusa alle 22 di ieri, lunedì 20 aprile, l'attivazione straordinaria del
+> Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma avviata alle 13:15
+> per il maltempo che ha interessato il territorio comunale nella giornata.
+>
+> Sei volontari su due squadre operative hanno presidiato le aree più esposte — via
+> Nemorense e via dei Laghi — supportando la Polizia Locale nella chiusura temporanea
+> di un tratto stradale interessato da allagamento. Il tratto è stato riaperto alle 20:30
+> al termine delle operazioni di ripristino.
+>
+> Sulla base delle segnalazioni pervenute alla Sala operativa entro le 22, non si
+> registrano persone coinvolte né danni rilevanti alle abitazioni.
+>
+> Un ringraziamento ai volontari che sono stati in strada, alla @PoliziaLocaleGenzano
+> e a tutti i cittadini che hanno seguito le raccomandazioni di auto-protezione limitando
+> gli spostamenti non necessari.
+>
+> Il resoconto completo dell'attivazione — con cronologia, forze coinvolte e numeri —
+> è disponibile su https://www.protezionecivilegenzano.it/comunicazioni/resoconto-maltempo-20-aprile-2026/
+>
+> I commenti sono moderati secondo la netiquette pubblicata su
+> protezionecivilegenzano.it/social-media-policy
+>
+> #ProtezioneCivileGenzano #GenzanoDiRoma #Maltempo
+
+**X (Twitter)**:
+
+> ℹ️ Conclusa alle 22 l'attivazione del Gruppo Comunale Volontari per il maltempo a Genzano.
+> Sei volontari in strada a supporto della Polizia Locale. Nessuna persona coinvolta.
+>
+> Resoconto: https://www.protezionecivilegenzano.it/comunicazioni/resoconto-maltempo-20-aprile-2026/
+>
+> #Maltempo #CastelliRomani
+
+**Telegram** (versione breve):
+
+> ℹ️ **Attivazione conclusa** — maltempo del 20 aprile
+>
+> Alle 22 di ieri si è chiusa l'attivazione del Gruppo Comunale Volontari. Sei volontari
+> hanno presidiato via Nemorense e via dei Laghi a supporto della Polizia Locale. Nessuna
+> persona coinvolta, nessun danno rilevante.
+>
+> Resoconto completo: https://www.protezionecivilegenzano.it/comunicazioni/resoconto-maltempo-20-aprile-2026/
+
+#### Template 5 — Prevenzione stagionale
+
+**Instagram** (con cross-post Facebook):
+
+> Da giugno a settembre nel Lazio è periodo di massima pericolosità per gli incendi
+> boschivi. La campagna AIB (Anti Incendi Boschivi) della Regione Lazio è attiva.
+>
+> Cosa può fare ogni cittadino: non accendere fuochi all'aperto nei boschi e nelle aree
+> adiacenti, non abbandonare mozziconi di sigaretta, mantenere pulita la fascia intorno
+> alle abitazioni isolate. Se vedete un principio di incendio, chiamate subito il 112:
+> la centrale attiverà vigili del fuoco e squadre AIB.
+>
+> Tutte le raccomandazioni della campagna AIB sono sul nostro sito.
+>
+> #ProtezioneCivileGenzano #GenzanoDiRoma #ProtezioneCivile #CampagnaAIB
+> #IncendiBoschivi #AutoProtezione #RegioneLazio
+
+**Facebook** (versione estesa consigliata per approfondimenti stagionali):
+
+> Da giugno a settembre nel Lazio è periodo di massima pericolosità per gli incendi
+> boschivi. La campagna AIB (Anti Incendi Boschivi) della @RegioneLazio è attiva su
+> tutto il territorio regionale, Castelli Romani compresi.
+>
+> Gli incendi boschivi in questo periodo hanno quasi sempre origine umana: un
+> comportamento scorretto può innescare un evento che mette in pericolo la vita, i
+> boschi e le abitazioni. Le regole di comportamento sono semplici e sono valide per
+> chiunque frequenti aree verdi. Non accendere fuochi all'aperto nei boschi e nelle
+> aree adiacenti. Non abbandonare mozziconi di sigaretta. Mantenere pulita la fascia
+> intorno alle abitazioni isolate eliminando erba secca e materiali infiammabili. Non
+> bruciare residui agricoli nel periodo a rischio.
+>
+> Se vedi un principio di incendio, chiama subito il **112**: la centrale unica di
+> emergenza attiverà i vigili del fuoco e le squadre AIB regionali.
+>
+> Tutte le raccomandazioni della campagna AIB e la mappa delle zone a rischio sono qui:
+> https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-incendi/
+>
+> #ProtezioneCivileGenzano #GenzanoDiRoma #CampagnaAIB
+
+**X (Twitter)**:
+
+> 🔥 Campagna AIB 2026 attiva nel Lazio da giugno a settembre. Non accendere fuochi nei
+> boschi, non abbandonare mozziconi, tieni pulita l'area intorno a casa. Se vedi un
+> incendio: 112.
+>
+> Dettagli: https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-incendi/
+>
+> #CampagnaAIB #IncendiBoschivi
+
+**Telegram** (facoltativo all'avvio stagione o durante ondate di calore):
+
+> 🔥 **Campagna AIB 2026 — attenzione agli incendi boschivi**
+>
+> Da giugno a settembre il rischio è al massimo. Non accendere fuochi nei boschi, non
+> abbandonare mozziconi, mantieni pulita la fascia intorno alle abitazioni isolate. Se
+> vedi un principio di incendio chiama il 📞 112.
+>
+> Tutte le raccomandazioni: https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-incendi/
+
+### 11.12 — Checklist pre-pubblicazione social
+
+Controlli comuni a tutti i canali:
+
+- [ ] Il post ha una notizia chiara nella prima riga?
+- [ ] Il tono è formale-umano, senza burocratese né enfasi?
+- [ ] Verbi attivi, frasi brevi, italiano corretto?
+- [ ] Date in forma estesa, numeri di telefono leggibili?
+- [ ] Fonte dell'informazione esplicita (quando allerta o previsione)?
+- [ ] Niente numeri di emergenza diversi dal 112 come numero da chiamare?
+- [ ] Rimando al sito presente e corretto?
+- [ ] Alt-text dell'immagine compilato e descrittivo?
+- [ ] Immagine con fascia blu istituzionale (Parte 3.8)?
+- [ ] Nessun volto o targa riconoscibile senza liberatoria?
+- [ ] Emoji solo funzionali (11.4)?
+- [ ] Nessun hashtag in inglese, politico, generico, di trend?
+- [ ] Nessuna formula di engagement bait ("tagga un amico", "condividi se…")?
+- [ ] Hashtag in CamelCase?
+- [ ] Il Referente comunicazione o il Coordinatore hanno approvato la bozza?
+
+Controlli specifici per canale:
+
+- [ ] **Instagram**: 80-150 parole, prima riga sotto 125 caratteri, 5-8 hashtag a fine post (palette base presente), link in bio aggiornato se necessario.
+- [ ] **Facebook**: 80-300 parole (fino a 500 per contenuti strutturati), 2-3 hashtag, link cliccabile al sito, eventuale evento collegato per iniziative con scadenza, pubblicato dalla pagina ufficiale verificata (mai da un gruppo).
+- [ ] **X (Twitter)**: sotto 280 caratteri (200-260 consigliati), 1-2 hashtag, link al sito nel post.
+- [ ] **Telegram**: 300-500 caratteri, nessun hashtag (o uno solo di servizio), link cliccabile completo all'articolo del sito.
+
+Se il post è un'allerta o un comunicato di emergenza:
+
+- [ ] Il contenuto è anche sul sito come articolo (`content/comunicazioni/`)?
+- [ ] Il livello di allerta è quello ufficiale del Centro Funzionale Regionale?
+- [ ] Sul canale Telegram il messaggio è pinnato fino a termine dell'evento?
+- [ ] Screenshot del post archiviato in `static/archivio-social/AAAA/` (vedi 11.17)?
+
+### 11.13 — Blocco firma per post istituzionali
+
+I post social non necessitano di una firma: il profilo parla per sé. Ma se un post contiene un
+virgolettato, la firma va esplicitata dentro il testo, non in fondo:
+
+> *"Ringraziamo la cittadinanza per la collaborazione durante l'attivazione di ieri" —
+> Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.*
+
+Per virgolettati attribuiti personalmente: vedi **Parte 12.6** (regole comuni a stampa e social).
+
+### 11.14 — Allegati, immagini e file forniti dall'utente
+
+Quando chi redige (o chi chiede a un'AI di redigere) fornisce insieme al testo **immagini, PDF,
+documenti o altri file**, questi vanno **sempre integrati** nell'articolo o nel post secondo le
+regole del manuale. Non vanno né ignorati né lasciati senza trattamento.
+
+#### Immagini fornite
+
+Ogni immagine fornita per un articolo o un post social va:
+
+1. **Ridimensionata** a 1200 px di larghezza (Parte 3.7).
+2. **Trattata con la fascia blu istituzionale** (`#003366`, logo, scritta "PROTEZIONE CIVILE /
+   Gruppo Comunale Volontari — Genzano di Roma"). Vedi **Parte 3.8** per le specifiche complete
+   e la procedura passo-passo.
+3. **Convertita in WebP** e compressa sotto i 200 KB (Parte 3.9).
+4. **Salvata** in `static/images/` con naming `AAAA-MM-GG-descrizione-breve.webp` (Parte 3.11).
+5. **Dotata di alt-text significativo** sia sul sito (frontmatter `image:` e campo `alt`) sia
+   nei post social (campo alt-text della piattaforma). Vedi Parte 3.10.
+
+Nessun articolo e nessun post social con immagine va pubblicato con una foto **senza fascia blu**.
+Se l'immagine originale fornita dall'utente è già "pulita" (ha già fascia e logo), va comunque
+verificata: contrasto, leggibilità del logo, correttezza della dicitura. Se l'immagine non può
+essere trattata (es. infografica tecnica con layout complesso), va affiancata da una seconda
+immagine istituzionale con fascia usata come copertina.
+
+#### PDF e documenti forniti
+
+Ogni PDF o documento fornito per un articolo va:
+
+1. **Rinominato** in formato leggibile: `AAAA-MM-GG-descrizione-breve.pdf` (niente spazi,
+   niente caratteri accentati, niente maiuscole casuali).
+2. **Salvato** nella cartella appropriata:
+   - `static/allegati/AAAA/` per allegati di articoli ordinari.
+   - `static/comunicati/AAAA/` per versioni PDF firmate di comunicati stampa (Parte 12.8).
+   - `static/documenti/` per documenti istituzionali permanenti (regolamenti, piani).
+3. **Linkato** nel frontmatter dell'articolo attraverso il campo `allegati:`, con titolo
+   leggibile, dimensione del file e tipo. Vedi **Parte 1.10**.
+4. **Verificato**: peso ragionevole (preferibilmente sotto 2 MB), PDF accessibile (testo
+   selezionabile, non solo immagine), titolo e metadati del PDF coerenti con il contenuto.
+5. **Citato nel testo dell'articolo** con la formula *"Ordinanza sindacale (PDF, 120 KB)"* o
+   equivalente, non come link anonimo. Vedi regola AGID 2.15 sui link.
+
+Nei post social i PDF non vengono caricati direttamente: vanno lasciati sul sito e richiamati
+tramite il rimando *"Documento completo su protezionecivilegenzano.it"*.
+
+#### Altri file (video, audio, dataset)
+
+- **Video brevi** (clip da una dashcam, da uno smartphone durante un'esercitazione): vanno
+  convertiti in formato MP4 H.264, peso ragionevole per il web, con sottotitoli se contengono
+  parlato. Su Instagram usabili come Reel, su X come clip nativi, su Telegram come video inline.
+- **Audio** (interviste radio, podcast): da evitare come unico canale informativo; se usati,
+  sempre accompagnati da trascrizione scritta per accessibilità.
+- **Dataset** (fogli di calcolo, GeoJSON, dati di attivazione): non si pubblicano sui social.
+  Si pubblicano sul sito, eventualmente in una pagina dedicata, con licenza e metadati chiari.
+
+#### Regola operativa per l'AI redattrice
+
+Se chi chiede la redazione fornisce uno o più file insieme al testo, l'AI (o il redattore
+umano) deve:
+
+1. **Riconoscere** tutti i file forniti e chiedere conferma se il loro ruolo non è chiaro
+   (*"Questa foto è la copertina dell'articolo o un allegato interno?"*).
+2. **Applicare** automaticamente tutti i trattamenti previsti sopra (fascia blu sulle immagini,
+   rinomina dei PDF, alt-text significativo).
+3. **Integrare** i file nel frontmatter e nel corpo dell'articolo/post.
+4. **Dichiarare** esplicitamente nella risposta quali file ha trattato e come (es.: *"Ho
+   applicato la fascia blu alla foto, l'ho convertita in WebP e salvata come
+   `2026-04-21-intervento-maltempo.webp`. L'ordinanza sindacale è stata rinominata in
+   `2026-04-21-ordinanza-chiusura-via-nemorense.pdf` e aggiunta al campo `allegati:`"*).
+
+### 11.15 — Cross-pubblicazione fra sito e canali social
+
+Un contenuto istituzionale vive raramente su un solo canale. Quando si produce una
+comunicazione, bisogna chiedersi **su quali canali va** e produrre **versioni coerenti ma
+adattate** a ciascuno.
+
+#### Regola operativa
+
+Quando il redattore (umano o AI) riceve la richiesta di produrre **un articolo per il sito**,
+deve chiedere se serve anche la versione per **Instagram**, **Facebook**, **X (Twitter)** e/o
+**Telegram**.
+
+Quando il redattore riceve la richiesta di produrre **un post per un social** (es. Instagram),
+deve chiedere se serve anche:
+
+- la versione per **gli altri social** attivi (Facebook, X, Telegram);
+- la versione **articolo sul sito** (`content/comunicazioni/`), che è sempre raccomandata per
+  contenuti che devono essere reperibili nel tempo (allerte, comunicati, eventi, formazione,
+  reclutamento).
+
+Instagram e Facebook vanno considerati **due canali distinti**, anche se tecnicamente collegati
+dal cross-posting. Il redattore decide se scrivere **una sola versione** (da pubblicare su
+entrambi con cross-posting) o **due versioni separate**. Due versioni separate sono consigliate
+quando Facebook può sfruttare il formato lungo, il link cliccabile o un evento pubblico (vedi
+**11.5 — Facebook**).
+
+La domanda va posta **in apertura**, prima di redigere il testo, in modo che le versioni siano
+scritte in parallelo e coerenti fra loro (non traduzioni successive).
+
+Esempio di domanda:
+
+> *"Questo contenuto lo scriviamo solo per Instagram oppure anche come articolo sul sito, post
+> su X e messaggio Telegram? Le versioni le posso preparare tutte insieme."*
+
+#### Matrice cross-canale consigliata
+
+| Tipo di contenuto | Sito | Instagram | Facebook | X | Telegram |
+|---|---|---|---|---|---|
+| Allerta meteo (gialla/arancione/rossa) | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Comunicato emergenziale | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Aggiornamento operativo post-evento | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Esercitazione, formazione, corso | ✅ | ✅ | ✅ (+evento) | facoltativo | facoltativo |
+| Reclutamento volontari | ✅ | ✅ | ✅ (+evento) | facoltativo | facoltativo |
+| Prevenzione stagionale | ✅ | ✅ | ✅ | facoltativo | facoltativo |
+| Ringraziamenti, celebrazioni | facoltativo | ✅ | ✅ | no | no |
+| Album foto di un evento concluso | ✅ | carosello | ✅ (album) | no | no |
+| Storie dietro le quinte | no | ✅ | facoltativo | no | no |
+| Documenti istituzionali (piani, regolamenti) | ✅ | no | ✅ (link) | no | no |
+
+Le colonne **non** si riempiono con lo stesso testo. Si adattano:
+
+- Sul sito: versione completa, discorsiva, con frontmatter, immagine con fascia blu, allegati.
+- Su Instagram: versione di 80-150 parole, con immagine, 5-8 hashtag, rimando al sito.
+- Su Facebook: versione di 80-300 parole (fino a 500 per contenuti strutturati), link cliccabile
+  nel testo, 2-3 hashtag, eventuale evento collegato, eventuale album foto.
+- Su X: versione di 200-260 caratteri, con link, 1-2 hashtag.
+- Su Telegram: versione di 300-500 caratteri, con link cliccabile, senza hashtag.
+
+I fatti, le fonti, le fonti di allerta, i numeri, le date restano **identici** su tutti i canali.
+
+#### Ordine di pubblicazione
+
+Per contenuti ordinari: prima l'articolo sul sito, poi i post social (così i rimandi al sito
+puntano a una pagina esistente).
+
+Per contenuti emergenziali: come da **Parte 12.12**, Telegram è il primo canale (entro 10
+minuti), sito entro 20 minuti, Instagram/Facebook/X entro 30 minuti, mail stampa entro 30
+minuti. L'articolo sul sito viene comunque pubblicato rapidamente perché è la "fonte unica"
+citata in tutti gli altri canali.
+
+### 11.16 — Licenza dei contenuti social
+
+Tutti i contenuti testuali, fotografici e grafici pubblicati sui canali social del Gruppo
+(Instagram, Facebook, X, Telegram) sono rilasciati, ove non diversamente indicato, con licenza
+**Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)**, coerentemente con quanto
+dichiarato per il sito (vedi pagina [Note legali](/note-legali/) e `content/note-legali/_index.md`).
+
+Questo significa che chiunque può:
+
+- riprendere il contenuto (testo, foto, infografica) su altri canali, anche commerciali;
+- modificarlo o adattarlo;
+- citarlo in articoli, tesi, materiali formativi.
+
+A condizione di:
+
+- **attribuire** la paternità al *Gruppo Comunale Volontari di Protezione Civile di Genzano di
+  Roma*, con link a `https://www.protezionecivilegenzano.it/`;
+- **non alterare i fatti** comunicati (numeri, fonti, codici colore di allerta);
+- **non presentare** l'adattamento come comunicazione ufficiale del Gruppo se modifica la
+  sostanza del messaggio.
+
+Fanno eccezione:
+
+- **fotografie con persone riconoscibili**: soggette a liberatoria individuale, non ridistribuibili;
+- **loghi e identità visiva** del Gruppo, del Comune, del Dipartimento di Protezione Civile:
+  protetti da diritti specifici, non rilasciati in CC BY;
+- **materiali di terzi** (es. infografiche DPC, ISPRA, INGV) citati con attribuzione alla fonte
+  originaria, che mantiene la propria licenza.
+
+Nei post che rilanciano comunicati stampa o documenti istituzionali, inserire il rimando:
+
+> *"Testo completo e licenza su protezionecivilegenzano.it/note-legali/"*
+
+### 11.17 — Archivio screenshot post importanti
+
+Per garantire la tracciabilità e la verificabilità della comunicazione social, tutti i post
+classificabili come **istituzionali rilevanti** vengono archiviati in forma di screenshot
+all'interno del repository del sito.
+
+#### Cosa archiviare
+
+- Tutti i post di **allerta meteo** (giallo, arancione, rosso) e di **emergenza**.
+- Tutti i **comunicati ufficiali** (rilancio social di un comunicato stampa, della Parte 12).
+- Tutti gli **aggiornamenti operativi** durante un evento.
+- Tutti i post che **citano numeri di emergenza**, orari di servizi o istruzioni di
+  autoprotezione.
+- Tutti i post **successivamente corretti o ritirati** (sia la versione originale sia la
+  correzione — vedi **11.9 bis — Gestione errori e post fuori controllo**).
+
+Non serve archiviare: auguri, ringraziamenti generici, rilanci di attività ordinarie senza
+informazioni operative.
+
+#### Dove archiviare
+
+```
+static/archivio-social/
+├── 2026/
+│   ├── 2026-04-21-allerta-gialla-ig-post.png
+│   ├── 2026-04-21-allerta-gialla-fb-post.png
+│   ├── 2026-04-21-allerta-gialla-x-post.png
+│   ├── 2026-04-21-allerta-gialla-tg-post.png
+│   └── 2026-04-21-allerta-gialla-correzione-ig.png
+└── 2027/
+```
+
+Convenzione di naming: `AAAA-MM-GG-argomento-canale-post.png`.
+
+- `argomento`: breve, in kebab-case (es. `allerta-gialla-idro`, `emergenza-incendio-cecchina`).
+- `canale`: `ig` (Instagram), `fb` (Facebook), `x` (X / Twitter), `tg` (Telegram).
+- `post`: il tipo di artefatto (`post`, `storia`, `reel`, `evento`, `correzione`).
+
+#### Formato
+
+- PNG a piena risoluzione (niente JPEG, per non perdere dettaglio del testo).
+- Screenshot che includa: nome account, orario di pubblicazione visibile, corpo del post,
+  immagine, hashtag.
+- Se il post è una correzione, catturare **sia la correzione sia un riferimento temporale**
+  (es. badge "modificato alle…" se la piattaforma lo mostra).
+
+#### Chi archivia
+
+Il pubblicatore (vedi **11.10 — Ruoli e flusso di approvazione**) esegue lo screenshot entro
+**due ore** dalla pubblicazione e lo committa al repository con il messaggio:
+
+```
+Archivio social: [argomento] del [data] — [canale]
+```
+
+#### Durata di conservazione
+
+Gli screenshot restano nel repository **a tempo indeterminato**, come memoria istituzionale.
+Non si eliminano neanche se il post corrispondente viene rimosso dal canale: la rimozione
+viene invece annotata in un file `README.md` nella cartella dell'anno, con motivazione e data.
+
+---
+
+## Parte 12 — Comunicati stampa (tempo ordinario e tempo emergenziale)
+
+### 12.1 — A cosa serve un comunicato stampa
+
+Il comunicato stampa è lo strumento con cui il Gruppo comunica ufficialmente con i media. Nasce
+per essere:
+
+- **Ripreso** dai giornalisti anche senza riscrittura.
+- **Archiviato** come documento istituzionale verificabile.
+- **Condiviso** con altri enti (Comune, Regione, Prefettura, altre protezioni civili).
+- **Pubblicato** sul sito del Gruppo come articolo, per essere consultabile dai cittadini.
+
+Per questo motivo il comunicato ha una forma più rigorosa di un post social e una struttura
+più asciutta di un articolo divulgativo. È un testo che deve resistere al taglia-e-incolla
+del giornalista.
+
+### 12.2 — Due tipologie
+
+| Tipo | Quando | Tempi di redazione | Canali |
+|---|---|---|---|
+| **Comunicato ordinario** | Attività istituzionali, eventi, formazione, reclutamento, bilanci, anniversari, ringraziamenti | Ore o giorni | Mail a testate, sito, social |
+| **Comunicato emergenziale** | Evento in corso o appena concluso: maltempo, incendio, sisma, attivazione straordinaria | Minuti | Mail a testate, sito, social, Telegram |
+
+Le due tipologie hanno struttura simile ma tono e tempi diversi. Un comunicato emergenziale scritto
+con ritmo ordinario arriva tardi; un comunicato ordinario scritto con ritmo emergenziale suona
+allarmistico.
+
+### 12.3 — Struttura del comunicato ordinario
+
+Ogni comunicato ordinario contiene, in quest'ordine:
+
+1. **Intestazione istituzionale** — nome completo del Gruppo e dicitura "Comunicato stampa".
+2. **Data e luogo di emissione** — "Genzano di Roma, 21 aprile 2026".
+3. **Occhiello** (opzionale, una riga) — inquadra il tema. Es.: *"Protezione civile e territorio"*.
+4. **Titolo** — informativo, non promozionale. Max 80 caratteri. Es.: *"Il Gruppo Comunale Volontari
+   apre le iscrizioni al corso base 2026"*.
+5. **Sottotitolo** (opzionale, una riga) — aggiunge un'informazione concreta. Es.: *"Dodici lezioni
+   serali da maggio a luglio, iscrizioni entro il 30 aprile."*
+6. **Lead (primo paragrafo)** — risponde alle 5W classiche: chi, cosa, dove, quando, perché.
+   Max 60 parole.
+7. **Corpo** — 2-4 paragrafi discorsivi. Dettagli, contesto, virgolettati.
+8. **Virgolettato istituzionale** (facoltativo ma consigliato) — vedi 12.6.
+9. **Chiusura con riferimenti** — rimando al sito, eventuali allegati, scadenze.
+10. **Blocco firma** — vedi 12.7.
+11. **Note per la redazione** (facoltativo) — informazioni operative per il giornalista (disponibilità
+    del Coordinatore per interviste, presenza di materiale fotografico, orari di un evento).
+
+Lunghezza complessiva consigliata: **300-500 parole**. Mai sopra 800.
+
+### 12.4 — Struttura del comunicato emergenziale
+
+In emergenza la priorità è far arrivare **fatti verificati** nel minor tempo possibile. La struttura
+si semplifica:
+
+1. **Intestazione** — nome del Gruppo e dicitura "Comunicato stampa — Emergenza in corso" (o
+   "Comunicato stampa — Aggiornamento emergenza").
+2. **Timestamp preciso** — "Genzano di Roma, 21 aprile 2026, ore 14:30". L'orario serve al
+   giornalista per datare l'informazione.
+3. **Apertura standardizzata** — *"Il Gruppo Comunale Volontari di Protezione Civile di Genzano
+   di Roma comunica che…"*. Questa formula rende subito chiaro che è una comunicazione ufficiale.
+4. **Cosa è successo / sta succedendo** — in un solo paragrafo breve, solo fatti verificati.
+   Niente stime, niente congetture, niente aggettivi.
+5. **Dove** — area o vie interessate, con precisione.
+6. **Quando** — orario di inizio evento e orario attuale.
+7. **Chi è stato attivato** — forze in campo (Gruppo volontari, Polizia Locale, Vigili del Fuoco,
+   ASL, ecc.) senza millantare.
+8. **Istruzioni ai cittadini** — cosa fare, cosa evitare, sempre rinviando al 112 per emergenze.
+9. **Rimando al sito** — *"Gli aggiornamenti vengono pubblicati in tempo reale su
+   protezionecivilegenzano.it e sul canale Telegram."*
+10. **Blocco firma**.
+11. **Prossimo aggiornamento** — quando verrà diffuso il prossimo comunicato (es. *"Prossimo
+    aggiornamento alle ore 17:00 o in caso di variazioni significative"*).
+
+Lunghezza consigliata: **150-300 parole**. In emergenza il meno è più.
+
+### 12.4 bis — Holding statement (dichiarazione dei primi 15 minuti)
+
+Nei primi 15 minuti di un evento in corso non si dispone ancora di un quadro verificato dei
+fatti, ma **il silenzio istituzionale alimenta il rumore sui canali non ufficiali**. In questo
+intervallo si pubblica una dichiarazione di 40-60 parole — il *holding statement* — che fa
+tre cose soltanto:
+
+1. **Riconoscere** che un evento è in corso (senza descriverlo se non è ancora chiaro).
+2. **Dichiarare** che il Gruppo e le autorità competenti sono attivati.
+3. **Rimandare** ai canali ufficiali per gli aggiornamenti verificati.
+
+Il holding statement **non** anticipa cause, numeri, vittime, zone precise, o valutazioni. Se
+non si sa, si dice che non si sa ancora.
+
+#### Template holding statement — primi 15 minuti
+
+```
+[Genzano di Roma, DD mese AAAA, ore HH:MM]
+
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma conferma di avere
+attivato le procedure di intervento per un evento in corso sul territorio comunale. È in
+corso il coordinamento con le autorità competenti. I primi aggiornamenti verificati saranno
+pubblicati entro [orario preciso, tipicamente 30-60 minuti] sul sito
+protezionecivilegenzano.it e sul canale Telegram ufficiale.
+
+Per emergenze: 112.
+```
+
+(50 parole circa.)
+
+Il holding statement va pubblicato **su tutti i canali** simultaneamente (sito, Telegram,
+Facebook, Instagram, X) entro 15 minuti dalla presa in carico dell'evento, anche se i dati
+operativi mancano ancora. Il primo aggiornamento strutturato — Template B di 12.10 — arriva
+dopo, quando i fatti sono verificati.
+
+Se l'evento si chiarisce rapidamente (falso allarme, rientro, intervento minore), il
+holding statement viene superato direttamente dal comunicato completo.
+
+### 12.5 — Regole di linguaggio in emergenza
+
+Queste regole sono vincolanti e non negoziabili.
+
+- **Niente aggettivi enfatici**: no *"drammatico", "terribile", "gravissimo"*. Sì *"l'evento
+  coinvolge", "è in corso", "sono previsti"*.
+- **Niente stime non verificate**: *"alcune decine di abitazioni"* si dice solo dopo conferma
+  operativa. Meglio *"al momento sono in corso le verifiche sul numero di abitazioni coinvolte"*.
+- **Niente numeri non confermati di persone**: non pubblicare mai un conteggio di feriti, sfollati
+  o vittime prima della conferma degli enti competenti (112, ASL, Prefettura, sindaco).
+- **Niente previsioni non ufficiali**: solo bollettini del Centro Funzionale Regionale Lazio,
+  Dipartimento di Protezione Civile, ARPA Lazio.
+- **Distinguere "previsto" da "in corso"**: sono due realtà diverse per il cittadino.
+- **Sempre il 112** come unico numero di emergenza da comunicare al cittadino. Non 115, 118, 1515.
+  (Vedi regola `.claude/rules/06-protezione-civile-scientifica.md`.)
+- **Niente accuse o polemiche**: il comunicato riporta fatti, non posizioni.
+- **Niente promesse**: no *"risolveremo entro sera"*. Sì *"le operazioni proseguono fino al
+  ripristino della sicurezza"*.
+- **Privacy assoluta**: nessun nome di persona coinvolta, nessun indirizzo specifico di abitazione,
+  nessun dato sanitario.
+
+### 12.6 — Virgolettati
+
+I virgolettati rendono il comunicato più "vivo" per la stampa e sono spesso ripresi integralmente.
+Regole:
+
+- **Sempre attribuiti** a una persona con nome e ruolo. *"Ha dichiarato il Coordinatore del Gruppo
+  Comunale Volontari Mario Rossi."*
+- **Verificati con l'interessato prima dell'invio**. Mai virgolettare a memoria.
+- **Brevi**: 1-3 frasi, complessivamente sotto le 60 parole.
+- **In italiano corretto**: anche un virgolettato va revisionato prima della pubblicazione.
+- **Mai polemici o politici**.
+- **In emergenza**: il virgolettato è facoltativo e spesso sconsigliato; il tempo va al fatto.
+
+Chi può essere virgolettato:
+
+- **Coordinatore del Gruppo Comunale Volontari** — su attività operative e organizzative del Gruppo.
+- **Sindaco di Genzano di Roma** — su decisioni di competenza comunale (ordinanze, chiusure,
+  attivazione COC). Da concordare con l'Ufficio comunicazione del Comune.
+- **Assessore delegato alla protezione civile** — su linee di indirizzo.
+- **Dirigenti regionali o del Dipartimento** — solo se autorizzati e previa verifica.
+
+### 12.7 — Blocco firma istituzionale
+
+Il blocco firma standard, a chiusura di ogni comunicato, è:
+
+```
+— — —
+
+Gruppo Comunale Volontari di Protezione Civile
+Comune di Genzano di Roma
+
+Sito: https://www.protezionecivilegenzano.it/
+Canale Telegram: [inserire link ufficiale]
+Instagram: [inserire handle ufficiale]
+
+Contatti per la stampa: [indirizzo email ufficiale da definire]
+```
+
+#### Varianti
+
+**Comunicato su attività operative o decisioni del Gruppo**:
+
+```
+— — —
+
+Il Coordinatore
+Gruppo Comunale Volontari di Protezione Civile
+Comune di Genzano di Roma
+```
+
+**Comunicato su decisioni di competenza comunale (ordinanze, COC, chiusure strade)**:
+
+```
+— — —
+
+Il Sindaco del Comune di Genzano di Roma
+Il Coordinatore del Gruppo Comunale Volontari di Protezione Civile
+```
+
+**Comunicato emergenziale**:
+
+```
+— — —
+
+Sala operativa del Gruppo Comunale Volontari di Protezione Civile
+Comune di Genzano di Roma
+
+Contatti per la stampa: [indirizzo email ufficiale]
+Prossimo aggiornamento: [orario previsto]
+```
+
+Il nome del Coordinatore in carica e del Sindaco si inseriscono solo quando richiesto
+esplicitamente: i ruoli cambiano nel tempo, la firma istituzionale resta stabile.
+
+### 12.8 — Archiviazione e pubblicazione
+
+Ogni comunicato stampa viene pubblicato **anche come articolo sul sito**, nella cartella
+`content/comunicazioni/`.
+
+Regole di archiviazione:
+
+- **Nome del file**: `AAAA-MM-GG-cs-breve-descrizione.md`. Il prefisso `cs-` identifica i
+  comunicati stampa rispetto agli altri articoli.
+- **Badge**: `Comunicazione` per comunicati ordinari; `Emergenza` o `Allerta` per quelli
+  emergenziali (in coerenza con la palette categorie in `.claude/rules/02-content-design-pa.md`).
+- **Priorità**: `normale` per ordinari; `urgente` per emergenziali.
+- **Scadenza**: per comunicati legati a eventi con data (es. iscrizioni, esercitazioni), indicare
+  la data di scadenza. Dopo quella data l'articolo resta ma esce dai rilievi in homepage.
+- **Frontmatter**: tutti i campi obbligatori dell'archetipo `comunicazioni.md`. Vedi **Parte 1.4**.
+- **Allegati**: se esiste una versione PDF firmata del comunicato inviata alla stampa, va caricata
+  in `static/comunicati/AAAA/` e linkata nel campo `allegati:` del frontmatter.
+- **Immagine di copertina**: si applica la fascia blu istituzionale come per ogni articolo. Vedi
+  **Parte 3.8**.
+
+### 12.9 — Distribuzione ai media
+
+- Destinatari: testate locali dei Castelli Romani, testate regionali, uffici stampa di Comune,
+  Regione, Dipartimento di Protezione Civile. L'elenco specifico non è fissato nel manuale perché
+  le testate cambiano nel tempo: viene mantenuto in un foglio di lavoro separato condiviso con
+  il Coordinatore.
+- Formato di invio: testo nel corpo della mail + PDF firmato in allegato + immagine di copertina
+  a bassa risoluzione.
+- Oggetto mail: per ordinario, *"Comunicato stampa — [titolo breve] — Protezione Civile Genzano"*;
+  per emergenziale, *"COMUNICATO URGENTE — [tema] — Protezione Civile Genzano"*.
+- Mittente: indirizzo email istituzionale del Gruppo, mai indirizzi personali dei volontari.
+
+### 12.10 — Template operativi
+
+#### Template A — Comunicato ordinario (esempio: apertura iscrizioni corso base)
+
+```
+Gruppo Comunale Volontari di Protezione Civile
+Comune di Genzano di Roma
+
+COMUNICATO STAMPA
+
+Genzano di Roma, 21 aprile 2026
+
+Protezione civile e formazione
+
+Il Gruppo Comunale Volontari apre le iscrizioni al corso base 2026
+
+Dodici lezioni serali da maggio a luglio, iscrizioni entro il 30 aprile.
+
+Da lunedì 5 maggio prende il via il corso base per nuove volontarie e nuovi
+volontari del Gruppo Comunale di Protezione Civile di Genzano di Roma. Il
+percorso formativo, gratuito e aperto a residenti maggiorenni, si svolge nella
+sede comunale di via […] e dura dodici lezioni serali, fino al 24 luglio.
+
+Il corso affronta i fondamenti del sistema nazionale di protezione civile, i
+principali rischi del territorio dei Castelli Romani (idrogeologico, incendi
+boschivi, sismico) e le procedure operative di base. Al termine del corso, le
+persone formate potranno scegliere una specializzazione fra radiocomunicazioni,
+logistica, avvistamento antincendio e assistenza alla popolazione.
+
+"Il corso base è il punto di ingresso nel Gruppo: non chiede competenze
+tecniche preliminari, ma impegno e costanza" — ha dichiarato il Coordinatore
+del Gruppo Comunale Volontari.
+
+Le iscrizioni si chiudono il 30 aprile 2026. Il modulo e il programma completo
+sono disponibili sul sito protezionecivilegenzano.it alla pagina
+"Diventa volontario".
+
+— — —
+
+Il Coordinatore
+Gruppo Comunale Volontari di Protezione Civile
+Comune di Genzano di Roma
+
+Sito: https://www.protezionecivilegenzano.it/
+Contatti per la stampa: [indirizzo email ufficiale]
+
+Note per la redazione: è disponibile materiale fotografico di precedenti
+edizioni del corso. Il Coordinatore è disponibile per interviste previo
+accordo telefonico.
+```
+
+#### Template B — Comunicato emergenziale (esempio: attivazione per maltempo)
+
+```
+Gruppo Comunale Volontari di Protezione Civile
+Comune di Genzano di Roma
+
+COMUNICATO STAMPA — Emergenza in corso
+
+Genzano di Roma, 21 aprile 2026, ore 14:30
+
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma comunica
+di avere attivato alle ore 13:15 le proprie squadre operative a seguito delle
+precipitazioni intense in corso sul territorio comunale.
+
+Due squadre del Gruppo stanno presidiando via Nemorense e via dei Laghi a
+supporto della Polizia Locale, che ha chiuso temporaneamente un tratto di via
+Nemorense per allagamento.
+
+L'allerta meteo diramata dal Centro Funzionale Regionale del Lazio per la
+giornata odierna è di livello arancione per rischio idrogeologico sulla zona
+dei Castelli Romani.
+
+Si raccomanda alla cittadinanza di limitare gli spostamenti non necessari, di
+non sostare in sottopassi o aree soggette ad allagamento e di non avvicinarsi
+a corsi d'acqua o tombini in esondazione. Per emergenze chiamare il 112.
+
+Gli aggiornamenti vengono pubblicati in tempo reale su
+protezionecivilegenzano.it e sul canale Telegram del Gruppo.
+
+— — —
+
+Sala operativa del Gruppo Comunale Volontari di Protezione Civile
+Comune di Genzano di Roma
+
+Contatti per la stampa: [indirizzo email ufficiale]
+Prossimo aggiornamento: ore 17:00 o in caso di variazioni significative.
+```
+
+#### Template C — Aggiornamento emergenziale (evoluzione o chiusura)
+
+```
+Gruppo Comunale Volontari di Protezione Civile
+Comune di Genzano di Roma
+
+COMUNICATO STAMPA — Aggiornamento emergenza
+
+Genzano di Roma, 21 aprile 2026, ore 22:00
+
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma comunica
+che alle ore 21:45 si è conclusa l'attivazione straordinaria avviata alle
+13:15 per il maltempo che ha interessato il territorio comunale nella giornata
+odierna.
+
+Durante l'attivazione sono stati impiegati sei volontari in due squadre
+operative, a supporto della Polizia Locale per la chiusura temporanea di un
+tratto di via Nemorense. Il tratto è stato riaperto alle 20:30 dopo il
+ripristino delle condizioni di sicurezza.
+
+Non si registrano persone coinvolte. Non si registrano danni rilevanti alle
+abitazioni sulla base delle segnalazioni pervenute alle ore 22:00.
+
+Il resoconto completo dell'attivazione sarà pubblicato nelle prossime ore sul
+sito protezionecivilegenzano.it
+
+— — —
+
+Sala operativa del Gruppo Comunale Volontari di Protezione Civile
+Comune di Genzano di Roma
+
+Contatti per la stampa: [indirizzo email ufficiale]
+```
+
+### 12.11 — Checklist pre-invio comunicato stampa
+
+Prima di inviare il comunicato alla stampa e pubblicarlo sul sito:
+
+- [ ] Intestazione istituzionale completa e corretta?
+- [ ] Data (ed eventuale orario) precisa e in forma estesa?
+- [ ] Titolo informativo, sotto 80 caratteri?
+- [ ] Lead risponde alle 5W entro le prime 60 parole?
+- [ ] Frasi brevi, voce attiva, italiano corretto?
+- [ ] Niente burocratese, niente aggettivi enfatici, niente slogan?
+- [ ] Tutti i fatti sono verificati con almeno una fonte operativa?
+- [ ] Eventuale virgolettato attribuito, concordato con l'interessato, entro 60 parole?
+- [ ] Nessun dato sensibile (nomi di persone coinvolte, indirizzi, salute)?
+- [ ] Il 112 è l'unico numero di emergenza citato per il cittadino?
+- [ ] La fonte dell'allerta è esplicita (se pertinente)?
+- [ ] Rimando al sito presente e corretto?
+- [ ] Blocco firma adeguato al contenuto (ordinario / emergenziale / ordinanza)?
+- [ ] Se emergenziale: indicato l'orario del prossimo aggiornamento?
+- [ ] Versione articolo sul sito (`content/comunicazioni/`) pronta e coerente con il testo del comunicato?
+- [ ] Eventuale allegato PDF firmato caricato in `static/comunicati/`?
+- [ ] Coordinatore (o Sala operativa, in emergenza) ha approvato la versione finale?
+
+### 12.12 — Integrazione con i social
+
+Ogni comunicato stampa genera **automaticamente** tre output social coordinati:
+
+1. **Articolo sul sito** in `content/comunicazioni/`, versione completa e navigabile.
+2. **Post Instagram**, versione breve visuale secondo i template della **Parte 11.11**, con
+   rimando al sito.
+3. **Post Facebook**, versione discorsiva più estesa con link cliccabile all'articolo del sito
+   (su Facebook il formato consente di riportare il comunicato quasi integralmente).
+4. **Post X (Twitter)**, versione telegrafica (200-260 caratteri) con link al sito e hashtag
+   essenziali.
+5. **Messaggio Telegram**, versione compatta con link cliccabile all'articolo del sito.
+
+Le cinque versioni non sono identiche: sono riscritte per il canale ma conservano gli stessi
+fatti, lo stesso tono, la stessa fonte. Non si tratta mai di versioni contraddittorie.
+
+Per i comunicati emergenziali, il ritmo di pubblicazione è:
+
+- **Telegram entro 10 minuti** dall'evento (notifica rapida al canale iscritti).
+- **X (Twitter) entro 15 minuti** (raggiunge media e istituzioni).
+- **Articolo sul sito entro 20 minuti** (versione estesa consultabile).
+- **Instagram entro 30 minuti** (versione visuale).
+- **Facebook entro 30 minuti** (versione estesa con link al sito cliccabile, eventualmente
+  taggando le pagine istituzionali coinvolte).
+- **Mail stampa entro 30 minuti**.
+
+In caso di evento molto rapido, l'ordine può essere compresso ma non invertito: Telegram e X
+sono sempre i primi canali.
+
+### 12.13 — Allegati ai comunicati
+
+Ai comunicati stampa si applicano le stesse regole su allegati e immagini descritte in
+**Parte 11.14**:
+
+- **Immagine di copertina**: sempre con fascia blu istituzionale (Parte 3.8), WebP, 1200 px,
+  sotto 200 KB, salvata in `static/images/`.
+- **PDF firmato del comunicato** (quando esiste la versione firmata inviata alla stampa):
+  salvato in `static/comunicati/AAAA/`, con naming `AAAA-MM-GG-cs-descrizione-breve.pdf`, e
+  linkato nel campo `allegati:` dell'articolo che archivia il comunicato sul sito.
+- **Allegati informativi** (ordinanze, bollettini, piani di emergenza citati): salvati in
+  `static/allegati/AAAA/`, rinominati in modo leggibile, linkati nel frontmatter e citati nel
+  testo con dimensione del file.
+- **Foto aggiuntive** (es. foto di un intervento): tutte ridimensionate e dotate di fascia blu;
+  inserite nell'articolo come galleria o immagini di corpo.
+
+Se il comunicato è emergenziale e chi lo redige riceve immagini dal campo operativo (via radio,
+via messaggistica), queste vanno trattate **prima della pubblicazione**, non dopo. Nessuna foto
+non istituzionale (cioè senza fascia blu e logo) deve finire sui canali ufficiali.
+
+### 12.14 — Ritorno alla normalità comunicativa
+
+Chiudere bene una fase di emergenza è importante quanto aprirla. Quando l'evento si conclude,
+il Gruppo deve comunicare in modo chiaro che **si rientra in fase ordinaria**, per non lasciare
+i cittadini in uno stato di allerta percepita che non corrisponde più alla realtà operativa.
+
+#### Cosa fare quando l'emergenza si chiude
+
+1. **Comunicato di chiusura** (Template C di 12.10) — entro 30 minuti dalla fine delle operazioni,
+   anche se breve.
+2. **Aggiornamento sul sito** — il banner di emergenza (`data/emergenza.json`, campo `attiva`)
+   viene riportato a `false`. Eventuale allerta meteo (`data/allerta.json`) riallineata al livello
+   reale (verde se non c'è più allerta).
+3. **Messaggio Telegram di chiusura** — ripin-ato al posto del messaggio di allerta iniziale.
+   Dopo 24 ore, l'unpin del messaggio di emergenza restituisce il canale all'uso ordinario.
+4. **Post di chiusura** su Instagram, Facebook e X — brevissimo, con rimando al sito:
+
+   > *"L'attivazione di oggi si è conclusa alle [orario]. Il dettaglio su
+   > protezionecivilegenzano.it. Grazie ai volontari, alle forze coinvolte e alla cittadinanza."*
+
+5. **Ringraziamento separato** — eventuale post dedicato ai volontari e alle forze coinvolte,
+   pubblicato **nelle 24 ore successive** alla chiusura, mai contestualmente al comunicato di
+   chiusura (si perde la funzione operativa dell'informazione).
+6. **Resoconto operativo** — articolo sul sito entro 7 giorni, con: cronologia, forze impiegate,
+   risorse, lezioni apprese. Utile come memoria istituzionale e materiale per la comunicazione
+   del Gruppo nei mesi successivi.
+
+#### Errori tipici da evitare
+
+- Lasciare il banner di emergenza attivo sul sito per giorni dopo la chiusura operativa.
+- Continuare a pubblicare "aggiornamenti" quando non ci sono più fatti nuovi: il silenzio
+  informato è meglio del rumore per tenere alto l'engagement.
+- Mescolare la chiusura dell'emergenza con ringraziamenti lunghi o contenuti celebrativi: il
+  cittadino vuole sapere se può tornare alla normalità, non leggere elogi.
+- Chiudere sui social ma dimenticare di riallineare il sito (o viceversa): la coerenza
+  cross-canale è un indicatore di affidabilità istituzionale.
+
+#### Note SEO e dati strutturati
+
+Gli articoli di tipo comunicato stampa pubblicati su `content/comunicazioni/` beneficiano
+dell'inserimento di metadati **schema.org / JSON-LD** di tipo `NewsArticle` (o
+`GovernmentNotice` per comunicati ufficiali), nell'`head` del template `single.html`, con
+campi `headline`, `datePublished`, `dateModified`, `author` (Organization: Gruppo Comunale
+Volontari…), `publisher`, `image`. Questo migliora la ripresa da parte degli aggregatori di
+Google News e facilita il riconoscimento dei contenuti istituzionali dai motori di ricerca.
+
+Il dettaglio tecnico dell'integrazione va discusso con lo sviluppatore del tema, ma il
+manuale prescrive che ogni comunicato debba essere accompagnato da questi metadati a partire
+dalla prima pubblicazione utile.
+
+---
+
+## Parte 13 — Social Media Policy pubblica
+
+### 13.1 — A cosa serve la Social Media Policy
+
+La Social Media Policy è il documento pubblico che spiega ai cittadini **come si comporta** il
+Gruppo sui propri canali social, **cosa chiede** a chi commenta o scrive, e **quali limiti**
+pone alla comunicazione digitale. È una promessa di trasparenza: il cittadino sa in anticipo
+cosa aspettarsi e può valutare se il comportamento dell'istituzione è coerente con quanto
+dichiarato.
+
+Il documento copre due ambiti:
+
+- **Social Media Policy esterna** (*netiquette*) — le regole di comportamento attese da chi
+  interagisce con i canali del Gruppo. È pubblicata su
+  [`/social-media-policy/`](/social-media-policy/) del sito ed è linkata in ciascuna biografia
+  di canale.
+- **Social Media Policy interna** — le regole operative per i volontari, i redattori e il
+  pubblicatore. È documentata **in questo manuale** (Parte 11 e Parte 12).
+
+### 13.2 — Principi
+
+La policy pubblica si fonda su tre principi semplici, coerenti con le linee guida per la
+comunicazione digitale della PA:
+
+1. **Chiarezza** — il cittadino deve sapere chi parla, in che nome, con quali orari e con
+   quali limiti. Niente finzioni di presidio H24 se non è vero.
+2. **Rispetto** — il confronto sulle pagine istituzionali è benvenuto, le offese personali e le
+   violazioni di legge non lo sono. I criteri di moderazione sono pubblici.
+3. **Trasparenza** — gli errori si correggono in modo visibile (**11.9 bis**). La cancellazione
+   silenziosa non appartiene a una comunicazione pubblica istituzionale.
+
+### 13.3 — Contenuti obbligatori della pagina /social-media-policy
+
+La pagina pubblica deve contenere, come minimo:
+
+- **Elenco dei canali ufficiali** con link diretti e handle, indicando per ciascuno se
+  verificato dalla piattaforma.
+- **Chi scrive**: il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, con
+  citazione esplicita della natura istituzionale.
+- **Orari di presìdio dichiarati onestamente**: indicare la fascia in cui i messaggi e i
+  commenti vengono tipicamente letti (es. *"Lun-ven 9-18, in emergenza h24 sul canale
+  Telegram; per le emergenze il canale unico è il 112"*). Non promettere H24 su tutti i
+  canali se non è sostenibile da una struttura di volontariato.
+- **Tipi di contenuti pubblicati**: informazioni istituzionali, allerte meteo, comunicati,
+  aggiornamenti operativi, formazione, reclutamento volontari, prevenzione.
+- **Licenza dei contenuti**: Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0),
+  coerente con la pagina [Note legali](/note-legali/). Con le eccezioni della 11.16.
+- **Netiquette per i commenti**: cosa è accettato, cosa viene moderato.
+- **Criteri di moderazione**: quando un commento viene nascosto o rimosso, e come si fa
+  ricorso.
+- **Gestione degli errori**: rimando a 11.9 bis del manuale operativo, con sintesi per il
+  cittadino (*"Se sbagliamo un post, lo modifichiamo con un timestamp visibile e lo diciamo
+  chiaramente. Non cancelliamo in silenzio"*).
+- **Responsabilità editoriale**: chi firma la comunicazione (Gruppo + Coordinatore + Comune).
+- **Canale di contatto per segnalazioni** sulla policy stessa (email istituzionale).
+
+### 13.4 — Netiquette per i commenti
+
+Sono **benvenuti** sui nostri canali i commenti che:
+
+- **chiedono informazioni** sui contenuti pubblicati;
+- **segnalano errori** o imprecisioni, così che possiamo correggere;
+- **condividono esperienze** utili alla comunità;
+- **esprimono critiche** argomentate, anche severe, sull'operato del Gruppo o delle istituzioni.
+
+Sono **moderati** (nascosti o rimossi) i commenti che:
+
+- contengono **insulti**, **minacce**, **linguaggio d'odio** o discriminazioni;
+- diffondono **informazioni false** su rischi, allerte, emergenze in corso;
+- contengono **dati personali** di terzi (nomi, indirizzi, targhe, numeri di telefono) senza
+  consenso;
+- sono **spam**, promozione commerciale, catene o contenuti fuori tema ripetuti;
+- sono **minacce** a persone o istituzioni;
+- fanno **propaganda politica**, elettorale o di parte (il Gruppo è un ente di volontariato,
+  non un soggetto politico).
+
+I criteri di moderazione sono applicati nello stesso modo a tutti, indipendentemente dalla
+posizione espressa.
+
+### 13.5 — Ricorso
+
+Chi ritiene che un proprio commento sia stato moderato ingiustamente può scrivere
+all'indirizzo istituzionale del Gruppo (da pubblicare sulla pagina). La Sala comunicazione
+rivede la decisione entro sette giorni lavorativi.
+
+### 13.6 — Cosa NON facciamo
+
+Per trasparenza verso il cittadino, esplicitiamo anche ciò che il Gruppo **non fa** sui
+propri canali:
+
+- Non seguiamo account personali o politici.
+- Non accettiamo pubblicità a pagamento, non promuoviamo prodotti o servizi commerciali.
+- Non pubblichiamo foto o video di persone coinvolte in eventi di emergenza senza
+  liberatoria.
+- Non diffondiamo previsioni meteo da fonti non istituzionali.
+- Non rispondiamo in privato su emergenze in corso: in quel caso il canale unico è il 112.
+- Non siamo un servizio di emergenza: il servizio è il 112.
+
+### 13.7 — Aggiornamenti della policy
+
+La Social Media Policy pubblica viene rivista almeno una volta l'anno, in corrispondenza
+della verifica periodica delle linee guida AGID / Designers Italia descritta nella Parte 13
+di questo manuale (v. workflow `.github/workflows/aggiorna-manuale.yml`). Ogni revisione
+viene annotata nel changelog in cima al manuale e nella pagina pubblica con la formula
+*"Versione aggiornata al DD/MM/AAAA"*.
+
+### 13.8 — Coerenza con la normativa
+
+La presente policy è redatta in coerenza con:
+
+- **Linee guida per la comunicazione digitale della PA** (AGID / Dipartimento per la
+  Trasformazione digitale).
+- **Decreto-legge 14 marzo 2025 n. 25**, convertito con modificazioni dalla **Legge 9 maggio
+  2025 n. 69**, che disciplina il ruolo del *Social Media Manager* e del *Digital Manager*
+  nella PA (vedi **11.10 — Ruoli e flusso di approvazione**).
+- **Regolamento UE 2016/679 (GDPR)** per la gestione dei dati personali eventualmente emersi
+  dai commenti.
+- **Legge 4/2004 (Stanca)** e **Direttiva UE 2016/2102** sull'accessibilità dei contenuti
+  digitali della PA.
+- **Codice dell'amministrazione digitale** (D.Lgs. 82/2005 e successive modificazioni).
+- **D.Lgs. 1/2018** (Codice della Protezione Civile) per il quadro di riferimento operativo.
 
 ---
 
