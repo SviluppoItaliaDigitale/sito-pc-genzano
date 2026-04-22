@@ -20,7 +20,7 @@ Questo repository contiene diversi file Markdown con ruoli diversi. Non vanno el
 |---|---|---|
 | [`README.md`](README.md) | Panoramica del progetto, guida ai file, comandi principali. | Primo file da leggere. |
 | [`MANUALE-SITO.md`](MANUALE-SITO.md) | **Manuale di stile v2.0** — guida passo-passo per scrivere articoli e pagine secondo AGID, specifiche immagini (fascia blu), checklist pre-pubblicazione. | Quando devi scrivere un articolo, una pagina o preparare un'immagine. |
-| [`PIANO-EDITORIALE.md`](PIANO-EDITORIALE.md) | Fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, ASL, Parco Castelli) e calendario redazionale mensile. Obiettivo: 2-4 articoli/mese. | Quando devi proporre nuovi contenuti o cerchi ispirazione sulle fonti. |
+| [`PIANO-EDITORIALE.md`](PIANO-EDITORIALE.md) | Fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, ASL, Parco Castelli), calendario redazionale mensile e biblioteca di 250+ titoli evergreen. Obiettivo: tendere a un articolo al giorno (300-365/anno), minimo sostenibile 3-4 a settimana. | Quando devi proporre nuovi contenuti o cerchi ispirazione sulle fonti. |
 | [`CLAUDE.md`](CLAUDE.md) | Istruzioni operative per Claude Code (o altra AI) — mandato, priorità, regole di qualità e sicurezza. Importa automaticamente le 6 regole in `.claude/rules/`. | Lettura automatica per ogni sessione AI. Va aggiornato solo se cambia la governance. |
 
 ### File in `.claude/rules/` (governance di dettaglio)
@@ -67,7 +67,8 @@ sito-pc-genzano/
 ├── archetypes/                 ← template per nuovi contenuti
 ├── content/                    ← contenuti del sito
 │   ├── comunicazioni/          ← articoli/news
-│   └── <altre-sezioni>/        ← pagine statiche
+│   └── <altre-sezioni>/        ← pagine statiche (chi-siamo, contatti, faq,
+│                                  rischi-prevenzione, cosa-fare-adesso, ecc.)
 ├── data/                       ← file dati (JSON/YAML) per contenuti dinamici
 │   ├── emergenza.json          ← modalità emergenza on/off
 │   ├── allerta.json            ← livello allerta meteo
@@ -76,8 +77,12 @@ sito-pc-genzano/
 │   ├── quick_links.yaml        ← CTA homepage
 │   ├── social_links.yaml       ← link social
 │   └── codici_colore.yaml      ← descrizioni codici allerta
+├── scripts/                    ← script Python di automazione (genera-cover,
+│                                  aggiorna-image-frontmatter)
 ├── static/                     ← asset statici (immagini, PDF, JS condivisi)
 └── themes/flavour-pcgenzano/   ← tema custom (Bootstrap Italia 2.x)
+    ├── layouts/shortcodes/     ← shortcode {{< foto >}} (click-per-ingrandire)
+    └── static/css/custom.css   ← override CSS + regole @media print globali
 ```
 
 ---
@@ -129,10 +134,11 @@ Le issue generate automaticamente compaiono nella [tab Issues](https://github.co
 4. Compila il frontmatter (vedi Parte 1.5 del manuale).
 5. Scrivi il corpo seguendo le regole AGID (Parte 2 del manuale).
 6. Prepara l'immagine di copertina con fascia blu (Parte 3 del manuale).
-7. Verifica con `hugo server` in locale.
-8. Esegui la checklist pre-pubblicazione (Parte 5).
-9. `git add . && git commit -m "Nuovo articolo: titolo" && git push`.
-10. Controlla il deploy nella tab Actions.
+7. Se hai foto evento, inseriscile nel corpo con lo shortcode `{{< foto >}}` (Parte 3.14 del manuale) — nome file diverso dallo slug così non vengono sovrascritte dal generatore di copertine.
+8. Verifica con `hugo server` in locale.
+9. Esegui la checklist pre-pubblicazione (Parte 5).
+10. `git add . && git commit -m "Nuovo articolo: titolo" && git push`.
+11. Controlla il deploy nella tab Actions.
 
 ---
 

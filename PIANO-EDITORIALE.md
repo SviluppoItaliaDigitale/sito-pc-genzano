@@ -518,7 +518,9 @@ Checklist rapida (vedi `MANUALE-SITO.md` per quella estesa):
 - [ ] Linguaggio AGID: frasi brevi, voce attiva, niente burocratese
 - [ ] Numeri di emergenza corretti: nel Lazio **solo 112** per il cittadino
 - [ ] Fonti citate con link ufficiale
-- [ ] Immagine con fascia blu o fallback `notizia-default.svg`
-- [ ] Alt text significativo su tutte le immagini
+- [ ] Immagine copertina con fascia blu o fallback `notizia-default.svg`
+- [ ] Foto evento inserite con shortcode `{{< foto >}}` (non markdown diretto), con nome file diverso dallo slug per non essere sovrascritte da `genera-cover.py`
+- [ ] Alt text significativo su tutte le immagini (mai "Immagine di...")
+- [ ] Allegati PDF con campo `dimensione` (es. "120 KB") per WCAG 3.3.5 Help
 - [ ] Link interni testati (nessun 404)
 - [ ] Build Hugo pulito prima del push

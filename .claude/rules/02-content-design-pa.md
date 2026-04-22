@@ -40,6 +40,23 @@ Ogni immagine di copertina degli articoli DEVE avere una fascia blu in basso con
 Riferimento visivo: `static/images/zamberletti-protezione-civile-genzano.webp`
 Specifiche complete: `MANUALE-SITO.md`, Parte 3.
 
+## Regola foto evento — quando l'utente fornisce foto reali
+
+**Quando l'utente fornisce foto** di un intervento, esercitazione, attività o evento, vale la **regola rigida**:
+
+1. **TUTTE** le foto fornite vanno **inserite nel corpo dell'articolo** (mai sostituite dalla sola copertina).
+2. Ogni foto deve essere inserita con lo shortcode `{{< foto >}}` — mai con markdown `![...]()` diretto:
+   ```go-html-template
+   {{< foto src="/images/AAAA-MM-GG-descrizione-specifica.webp"
+            alt="Descrizione significativa per screen reader"
+            caption="Didascalia opzionale." >}}
+   ```
+3. Il **nome del file foto** deve essere **diverso dallo slug dell'articolo** (es. `2026-04-20-incendio-cecchina-casolare.webp`), così lo script `genera-cover.py` non sovrascrive la foto reale con una copertina tipografica.
+4. Ogni foto deve comunque avere la **fascia blu istituzionale** (vedi regola sopra).
+5. Lo shortcode produce `<figure>`/`<figcaption>` accessibili, immagine cliccabile per ingrandire (apre in nuova scheda), `aria-label` descrittivo, `loading="lazy"`.
+
+Questa regola nasce dopo un incidente in cui una foto fornita dall'utente era stata sostituita dalla sola copertina automatica — comportamento non accettabile.
+
 ## Regola critica — formato data nel frontmatter Hugo
 
 Nel frontmatter degli articoli usa SEMPRE il formato `AAAA-MM-GG` (esempio: `2026-04-06`).
@@ -85,5 +102,11 @@ Queste tinte sono applicate in `custom.css` in due gruppi coordinati: le classi 
 - `image`: percorso immagine o stringa vuota
 - `scadenza`: data di scadenza o stringa vuota
 - `area`: zona geografica o stringa vuota
-- `allegati`: lista di PDF o array vuoto `[]`
+- `allegati`: lista di PDF o array vuoto `[]`. Ogni voce è un oggetto con `titolo`, `url` e `dimensione` opzionale ma raccomandata (WCAG 3.3.5 Help):
+  ```yaml
+  allegati:
+    - titolo: "Ordinanza sindacale"
+      url: "/documenti/ordinanza.pdf"
+      dimensione: "120 KB"
+  ```
 - `draft`: false (per articoli pubblicati)
