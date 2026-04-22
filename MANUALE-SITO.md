@@ -282,13 +282,14 @@ allegati: []
 # Con allegati
 allegati:
   - titolo: "Ordinanza sindacale n. 42/2026 (PDF, 120 KB)"
-    url: "/documenti/ordinanza-42-2026.pdf"
+    url: "/allegati/2026/ordinanza-42-2026.pdf"
   - titolo: "Mappa aree di attesa (PDF, 1,2 MB)"
-    url: "/documenti/mappa-aree-attesa.pdf"
+    url: "/allegati/2026/mappa-aree-attesa.pdf"
 ```
 
 - Il `titolo` deve indicare **tipo** (PDF, ODT, DOCX) e **dimensione** del file.
-- L'`url` è il percorso relativo (se il PDF è in `static/documenti/`, l'URL è `/documenti/...`).
+- L'`url` è il percorso relativo del file, risolto rispetto alla root del sito. Deposita il file in `static/<cartella>/nome.pdf` e l'URL sarà `/<cartella>/nome.pdf`.
+- Per nuovi PDF depositati via git il percorso canonico è **`static/allegati/AAAA/`** (allegati di articoli) o **`static/manuali/`** (manuali tecnici permanenti). **Non** usare `static/documenti/` per file depositati via git: è escluso dal deploy FTP (vedi Parte 10.2 — Cartelle protette).
 - Per PDF esterni (es. dipartimento): URL completo `https://...`.
 
 **`draft`** — `true` o `false` (senza virgolette).
@@ -398,7 +399,10 @@ Se l'articolo cita dati, allerte, leggi, bollettini:
 
 Se hai PDF o documenti:
 
-1. Metti il file in `static/documenti/` (es. `static/documenti/ordinanza-42-2026.pdf`).
+1. Metti il file nella cartella `static/` appropriata:
+   - `static/allegati/AAAA/` — allegati specifici di un articolo (ordinanze, mappe, moduli).
+   - `static/manuali/` — manuali tecnici permanenti citati da più articoli (es. manuale FIC, Libro Risparmio Barilla).
+   - **Non** usare `static/documenti/`, `static/cartelli/`, `static/giochi-bambini/`, `static/formazionepc/`, `static/quizpc/` per file depositati via git: queste cartelle sono **escluse dal deploy FTP** (vedi Parte 10.2 — Cartelle protette) e i nuovi file non arriverebbero su Aruba. Sono riservate a contenuto gestito direttamente sul server.
 2. Aggiungi alla lista `allegati:` del frontmatter (vedi Passo 1.4).
 3. **Non linkare direttamente il PDF nel corpo** a meno che non sia un riferimento breve:
    il sito genera automaticamente la sezione "Allegati" a fine pagina.
@@ -1679,8 +1683,9 @@ Il tema `flavour-pcgenzano` implementa un **render-link hook** personalizzato in
 
 | Tipo di link | Resa HTML |
 |---|---|
+| Link interno `/...` verso **file statico** (estensione `.pdf`, `.webp`, `.jpg`, `.png`, `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`, `.zip`, `.mp3`, `.mp4`, `.csv`, `.txt`, `.rtf`, `.svg`, `.gif`, `.jpeg`) | `<a href="/...">testo</a>` — anchor diretto, nessun lookup di pagina |
 | Link interno `/...` verso pagina esistente | `<a href="/...">testo</a>` — anchor normale |
-| Link interno `/...` verso pagina non trovata | `<span class="text-muted" title="Contenuto non ancora disponibile">testo</span>` — testo inerte |
+| Link interno `/...` verso pagina non trovata (né file statico) | `<span class="text-muted" title="Contenuto non ancora disponibile">testo</span>` — testo inerte |
 | Link esterno `http://` o `https://` | `<a href="..." target="_blank" rel="noopener noreferrer">testo</a>` |
 | Link `tel:` o `mailto:` | `<a href="..." safeURL>testo</a>` |
 | Altri formati (ancore `#...`, relativi, ecc.) | anchor grezzo, nessun controllo |
@@ -1688,9 +1693,12 @@ Il tema `flavour-pcgenzano` implementa un **render-link hook** personalizzato in
 **Conseguenze per chi scrive:**
 
 - Puoi tranquillamente inserire link markdown verso articoli correlati **anche se non ancora pubblicati**: il giorno in cui l'articolo viene pubblicato, il link diventa attivo automaticamente al deploy successivo.
+- I link verso **file statici** in `static/` (es. `/manuali/nome.pdf`, `/images/foto.webp`) sono sempre resi come anchor diretti: il controllo avviene per estensione, non via `site.GetPage`. Quindi un PDF in `static/manuali/` è cliccabile anche se non c'è una pagina Hugo con quell'URL.
 - Se un lettore vede testo in grigio muto ("Contenuto non ancora disponibile") significa che l'articolo linkato non esiste (tipo, refuso nello slug, o articolo rimosso). Verifica con `hugo server -D`.
 - I link esterni si aprono sempre in nuova scheda con `rel="noopener noreferrer"` per sicurezza.
 - Frammenti (`#sezione`) e query string vengono ignorati nella lookup: l'hook controlla solo il path.
+
+**Se devi estendere la lista di estensioni statiche**: modifica la variabile `$staticExts` (slice di stringhe) in entrambi i file `render-link.html` — quello in `layouts/` e quello in `themes/flavour-pcgenzano/layouts/`.
 
 **Quando va aggiornato l'hook**: solo se cambia la struttura degli URL interni o si vuole modificare la modalità di fallback (es. tooltip, icona, classe CSS). Qualsiasi modifica va applicata **in entrambi i file** (`layouts/_default/_markup/render-link.html` e `themes/flavour-pcgenzano/layouts/_default/_markup/render-link.html`) per coerenza.
 
@@ -1966,6 +1974,26 @@ Il repository ha **8 workflow** attivi che automatizzano deploy, controlli, aggi
 - secret scaduto: aggiornare nei Settings del repo.
 
 **Come usarlo manualmente**: Actions → "🚀 Build e Deploy" → Run workflow. Utile per ripubblicare dopo aver corretto un secret o dopo un rollback DNS.
+
+#### Cartelle protette (escluse dal deploy FTP)
+
+Il workflow usa `SamKirkland/FTP-Deploy-Action` con `dangerous-clean-slate: false` e una lista di **esclusioni esplicite**: i file presenti in queste cartelle sul server Aruba **non vengono toccati** dal deploy (né aggiunti, né aggiornati, né rimossi). Sono aree gestite **direttamente sul server** — tipicamente con contenuto storico, caricamenti manuali via FTP o materiali legacy.
+
+```yaml
+exclude: |
+  **/documenti/**
+  **/cartelli/**
+  **/giochi-bambini/**
+  **/formazionepc/**
+  **/quizpc/**
+```
+
+**Conseguenze operative:**
+
+- Un file messo in `static/documenti/` (o nelle altre cartelle escluse) **non viene caricato su Aruba**: rimane solo nel repository e nella build locale/GitHub Pages. Sembra che "scompaia".
+- Per **nuovi PDF o allegati** da depositare via git, usa le cartelle consentite: `static/allegati/AAAA/`, `static/manuali/`, `static/comunicati/AAAA/`.
+- Se vuoi aggiornare un file in una cartella protetta, devi caricarlo **manualmente via FTP** su Aruba, oppure modificare l'esclusione nel workflow (con cautela: molti contenuti storici potrebbero andare persi se si rimuove l'esclusione senza migrare prima).
+- Vale lo stesso principio per eventuali cartelle aggiunte alla lista in futuro. Quando modifichi `deploy.yml`, aggiorna **anche questa tabella e la Parte 1.10** del manuale.
 
 ### 10.3 — `check-allerta.yml` — Aggiornamento allerta meteo
 
@@ -2872,7 +2900,8 @@ Ogni PDF o documento fornito per un articolo va:
 2. **Salvato** nella cartella appropriata:
    - `static/allegati/AAAA/` per allegati di articoli ordinari.
    - `static/comunicati/AAAA/` per versioni PDF firmate di comunicati stampa (Parte 12.8).
-   - `static/documenti/` per documenti istituzionali permanenti (regolamenti, piani).
+   - `static/manuali/` per manuali tecnici permanenti citati da più articoli (es. manuale FIC, Libro Risparmio Barilla, manuale Caritas-Banco Alimentare).
+   - **Non usare** `static/documenti/`, `static/cartelli/`, `static/giochi-bambini/`, `static/formazionepc/`, `static/quizpc/`: sono cartelle **escluse dal deploy FTP** (vedi Parte 10.2 — Cartelle protette lato server). Un file messo lì non verrebbe mai caricato su Aruba.
 3. **Linkato** nel frontmatter dell'articolo attraverso il campo `allegati:`, con titolo
    leggibile, dimensione del file e tipo. Vedi **Parte 1.10**.
 4. **Verificato**: peso ragionevole (preferibilmente sotto 2 MB), PDF accessibile (testo

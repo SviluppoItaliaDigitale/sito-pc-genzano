@@ -105,6 +105,29 @@ Non usare date di revisione hard-coded nel corpo (tipo "Ultimo aggiornamento: Ma
 ### Regole stampa
 Il file `themes/flavour-pcgenzano/static/css/custom.css` contiene un blocco `@media print` globale che nasconde tutto il chrome del sito (header, navbar, footer, banner, cookie, utility bar, page tools, breadcrumb) e stampa solo il contenuto della pagina su formato A4 con margini standard. Esiste anche un blocco specifico per il piano familiare stampabile (`body.piano-printing`). Non duplicare queste regole; se servono modifiche, lavora sui blocchi esistenti.
 
+### Render-link hook (link Markdown nel corpo)
+Il tema personalizza il rendering dei link Markdown tramite `layouts/_default/_markup/render-link.html` (copia speculare in `themes/flavour-pcgenzano/layouts/_default/_markup/render-link.html`). Comportamento:
+
+- **Link interno `/...` che termina con estensione di file statico** (`.pdf`, `.webp`, `.jpg`, `.jpeg`, `.png`, `.gif`, `.svg`, `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`, `.zip`, `.mp3`, `.mp4`, `.csv`, `.txt`, `.rtf`): reso come `<a>` diretto. Serve per linkare file in `static/manuali/`, `static/allegati/`, `static/images/` senza che il controllo `site.GetPage` li marchi come "non disponibili".
+- **Link interno `/...` verso pagina Hugo esistente**: `<a>` normale.
+- **Link interno `/...` verso pagina non trovata** (e non file statico): `<span class="text-muted" title="Contenuto non ancora disponibile">` — consente di linkare articoli non ancora pubblicati che si attiveranno automaticamente al deploy successivo.
+- **Link esterno `http(s)://`**: `<a target="_blank" rel="noopener noreferrer">`.
+- **`mailto:` / `tel:`**: `<a>` con `safeURL`.
+
+Se estendi la lista di estensioni statiche, modifica la variabile `$staticExts` in **entrambi** i file `render-link.html` per mantenere la coerenza tema/layouts.
+
+### Cartelle `static/` canoniche per file depositati via git
+Per evitare che nuovi file finiscano in cartelle escluse dal deploy FTP (vedi regola `05-github-aruba-deploy.md`), usa queste cartelle:
+
+| Contenuto | Cartella | URL pubblico |
+|---|---|---|
+| Manuali tecnici permanenti citati da più articoli | `static/manuali/` | `/manuali/nome.pdf` |
+| Allegati specifici di un articolo | `static/allegati/AAAA/` | `/allegati/AAAA/nome.pdf` |
+| Comunicati stampa firmati | `static/comunicati/AAAA/` | `/comunicati/AAAA/nome.pdf` |
+| Copertine e foto evento | `static/images/` | `/images/nome.webp` |
+
+**Non** usare `static/documenti/`, `static/cartelli/`, `static/giochi-bambini/`, `static/formazionepc/`, `static/quizpc/` per contenuto nuovo: sono escluse dal deploy.
+
 ### Tema personalizzato
 Il tema `flavour-pcgenzano` è una dipendenza interna, non esterna: modificalo liberamente.
 Si basa su Bootstrap Italia 2.x: usa le classi e i componenti nativi del design system.
