@@ -57,3 +57,17 @@ draft: false
 ---
 
 Scrivi qui il contenuto della comunicazione.
+
+<!--
+Per inserire foto evento nel corpo dell'articolo usa SEMPRE lo shortcode foto
+(click per ingrandire accessibile, figure/figcaption, alt obbligatorio).
+Non usare markdown ![...]() diretto per le foto evento.
+
+Esempio:
+{{< foto src="/images/2026-04-20-descrizione.webp"
+         alt="Descrizione significativa per screen reader"
+         caption="Didascalia opzionale." >}}
+
+Specifiche: MANUALE-SITO.md Parte 3.14
+-->
+

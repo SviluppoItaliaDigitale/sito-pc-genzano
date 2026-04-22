@@ -96,7 +96,7 @@ These JSON/YAML files are the primary way to update dynamic site content without
 ### Content (`content/`)
 
 - `comunicazioni/` — News posts. Use the archetype: `hugo new comunicazioni/YYYY-MM-DD-titolo.md`
-  - Key front matter: `badge` (Allerta | Avviso | Comunicazione | Attività | Formazione | Evento | Volontariato | Radiocomunicazioni | Prevenzione | Esercitazione | Aggiornamento | Informazione | Emergenza — le categorie non in elenco ricevono un colore automatico), `priorita` (normale/urgente), `scadenza` (date), `allegati` (list of PDFs), `draft`
+  - Key front matter: `badge` (Allerta | Avviso | Comunicazione | Attività | Formazione | Evento | Volontariato | Radiocomunicazioni | Prevenzione | Esercitazione | Aggiornamento | Informazione | Emergenza — le categorie non in elenco ricevono un colore automatico), `priorita` (normale/urgente), `scadenza` (date), `allegati` (lista di PDF, ogni voce con `titolo`, `url`, e `dimensione` opzionale ma raccomandata per WCAG 3.3.5), `draft`
   - **Palette categorie** (hex usati per badge e filtri archivio — ogni categoria ha un colore distinto, contrasto WCAG AA ≥ 4.5:1 su bianco): Allerta `#d9364f` · Emergenza `#7f1d1d` · Avviso `#b45309` · Evento `#c026d3` · Comunicazione `#003366` · Radiocomunicazioni `#0369a1` · Informazione `#0284c7` · Prevenzione `#15803d` · Esercitazione `#ea580c` · Aggiornamento `#4338ca` · Formazione `#7c3aed` · Volontariato `#b45309` · Attività `#0891b2`. I filtri dell'archivio (`themes/flavour-pcgenzano/layouts/comunicazioni/list.html`) usano selettori `.filter-pill[data-filter="..."]` per impostare `--pill-color` e `--pill-tint`: modifiche alla palette vanno replicate in `custom.css` sia nelle classi `.notizia-categoria.<cat>` sia nei selettori `.filter-pill[data-filter="<cat>"]`.
   - **IMPORTANTE**: nel frontmatter degli articoli usare sempre il formato data semplice `AAAA-MM-GG` (esempio: `2026-04-06`), MAI il formato con orario e timezone (esempio: `2026-04-06T03:32:00Z`). Il formato con timezone causa problemi di pubblicazione.
 - All other folders are static pages (one `_index.md` per section)
@@ -106,8 +106,25 @@ These JSON/YAML files are the primary way to update dynamic site content without
 Custom theme, not an external dependency — edit freely. Structure:
 - `layouts/partials/` — reusable components (navbar, footer, emergency-banner, allerta-card, etc.)
 - `layouts/_default/` — base, list, single templates
+- `layouts/shortcodes/` — shortcode `foto` per immagini nel corpo degli articoli (click-per-ingrandire, fascia blu, `<figure>`/`<figcaption>` accessibili)
 - `layouts/index.html` — homepage template
-- `static/css/` — custom CSS overrides on top of Bootstrap Italia
+- `static/css/custom.css` — override CSS su Bootstrap Italia, include regole `@media print` globali che nascondono tutto il chrome del sito quando l'utente clicca "Stampa"
+
+### Shortcode `foto` (per immagini nel corpo degli articoli)
+
+Quando si inseriscono **foto evento** (interventi, formazione, attività con foto reali fornite dall'utente) nel corpo di un articolo, usare sempre lo shortcode `foto` — mai markdown `![alt](src)` diretto:
+
+```go-html-template
+{{< foto src="/images/AAAA-MM-GG-descrizione.webp"
+         alt="Descrizione significativa per screen reader"
+         caption="Didascalia opzionale." >}}
+```
+
+Produce `<figure>` con immagine cliccabile (apre a dimensione intera in nuova scheda), `<figcaption>` opzionale, `aria-label` descrittivo, `loading="lazy"`, responsive. Specifiche complete in `MANUALE-SITO.md` Parte 3.14.
+
+**Distinzione copertina vs foto evento**:
+- **Copertina**: generata automaticamente da `scripts/genera-cover.py` (gradiente blu + titolo + badge + fascia istituzionale). Nome file = slug dell'articolo.
+- **Foto evento**: fornita dall'utente. Nome file DIVERSO dallo slug (es. `2026-04-20-incendio-cecchina-casolare.webp` invece del solo slug), così il generatore non la sovrascrive. Deve comunque avere la fascia blu istituzionale.
 
 ### Archetypes (`archetypes/`)
 
@@ -137,7 +154,11 @@ Custom theme, not an external dependency — edit freely. Structure:
 
 7. **IMMAGINI**: ogni immagine di copertina deve avere la fascia blu istituzionale (#003366) con logo e testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari — Genzano di Roma". Formato WebP, 1200px, max 200 KB. Specifiche complete in `MANUALE-SITO.md` Parte 3.
 
-8. **PIANO EDITORIALE**: il file `PIANO-EDITORIALE.md` elenca le fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, Comune) e il calendario redazionale mensile. Usalo per proporre nuovi articoli coerenti con la strategia (2-4 al mese).
+8. **PIANO EDITORIALE**: il file `PIANO-EDITORIALE.md` elenca le fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, Comune) e il calendario redazionale mensile. L'obiettivo è **tendere a un articolo al giorno** (300-365 l'anno) con un minimo sostenibile di **3-4 articoli a settimana** nei periodi di minore attività. Usalo per proporre nuovi articoli coerenti con la strategia.
+
+9. **FOTO FORNITE DALL'UTENTE**: quando l'utente fornisce foto per un articolo, **TUTTE vanno inserite nel corpo** (mai sostituite dalla sola copertina) usando lo shortcode `{{< foto >}}`. Ogni foto deve avere la fascia blu istituzionale e alt text significativo.
+
+10. **STAMPA**: il file `themes/flavour-pcgenzano/static/css/custom.css` contiene regole `@media print` globali che, quando l'utente clicca "Stampa" su una pagina, nascondono header/navbar/footer/banner/cookie/utility bar/page tools e stampano solo il contenuto della pagina (H1 + articolo + allegati) su A4 con margini standard. Non modificare questa sezione senza valutare l'impatto su tutti i layout.
 
 ## Automazioni periodiche (GitHub Actions)
 
