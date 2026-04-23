@@ -86,6 +86,12 @@ Un **corso introduttivo in cinque capitoli** sul rischio incendio, basato sul *M
 
 <a href="/formazione/rischio-incendio/" class="btn btn-primary mt-2"><i class="bi bi-fire me-2" aria-hidden="true"></i>Vai all'area Rischio Incendio</a>
 
+## Area tematica — Radiocomunicazioni di emergenza
+
+Sei capitoli per il volontario TLC, basati sulla **Guida IARU alle Telecomunicazioni di Emergenza** (*IARU Emergency Telecommunications Guide*, ed. 2016) adattati al contesto italiano e al Gruppo Comunale di Genzano: ruolo del radioamatore volontario, tecniche operative di base (fonetica NATO, pro-words, nominativi tattici), reti e canali (telefono, cellulare, VHF, UHF, HF, satellite), gestione dei messaggi e controllo di maglia (Net Control, precedenze, formato messaggio), attivazione ed equipaggiamento (kit 72 ore, antenne NVIS, alimentazione) e sicurezza e sopravvivenza (famiglia prima, nutrizione, stress, traumi psicologici).
+
+<a href="/formazione/radiocomunicazioni-emergenza/" class="btn btn-primary mt-2"><i class="bi bi-broadcast me-2" aria-hidden="true"></i>Vai all'area Radiocomunicazioni</a>
+
 ## Risorse educative online
 
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
