@@ -205,7 +205,7 @@
             </div>
 
             <div class="hud">
-              <span class="hud-pill"><i class="bi bi-flag-fill" aria-hidden="true"></i> Scenario <span id="scenario-num">1</span>/3</span>
+              <span class="hud-pill"><i class="bi bi-flag-fill" aria-hidden="true"></i> Scenario <span id="scenario-num">1</span>/<span id="scenario-tot">6</span></span>
               <span class="hud-pill mosse"><i class="bi bi-arrows-move" aria-hidden="true"></i> Mosse: <span id="mosse">0</span></span>
               <span class="hud-pill errori"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Errori: <span id="errori">0</span></span>
             </div>
@@ -236,7 +236,7 @@
               <div class="app-result-emoji">🏆</div>
               <h2>Evacuazione completata!</h2>
               <p>Hai portato tutti gli alunni al punto di raccolta in sicurezza.</p>
-              <p class="mb-0">Scenari completati: <strong id="end-scenari">3</strong> su 3 &middot; Errori totali: <strong id="end-errori">0</strong></p>
+              <p class="mb-0">Scenari completati: <strong id="end-scenari">6</strong> su 6 &middot; Errori totali: <strong id="end-errori">0</strong></p>
             </div>
             <div class="text-center mt-4">
               <button type="button" id="btn-rigioca" class="btn btn-outline-primary">
@@ -318,11 +318,66 @@
           '#.#.###.#.#',
           '#.#.#.#.#.#',
           '#...#...#.#',
-          '#####.###R#',
+          '#####.###D#',
           '#........E#',
           '###########'
         ],
         max: 16
+      },
+      {
+        titolo: 'Scenario 4 — Uscita con freccia di emergenza',
+        desc: 'Suona l\'allarme in aula. L\'ascensore ⚠️ è in fondo al corridoio: evitalo! Segui la freccia verde ⬇️ che indica l\'uscita e raggiungi il punto di raccolta 🏁.',
+        righe: [
+          '##########',
+          '#S.....A.#',
+          '#.########',
+          '#.......D#',
+          '########.#',
+          '#........#',
+          '#.......E#',
+          '##########'
+        ],
+        max: 14
+      },
+      {
+        titolo: 'Scenario 5 — Freccia verso il punto di raccolta',
+        desc: 'Piccolo incendio 🔥 nel corridoio principale. Trova una strada alternativa e, nell\'ultimo tratto, segui la freccia verde ➡️ che indica l\'uscita sicura.',
+        righe: [
+          '##########',
+          '#S.......#',
+          '#.#######.',
+          '#.#F.....#',
+          '#.#.######',
+          '#.#......#',
+          '#.######.#',
+          '#........#',
+          '#.#######.',
+          '#......RE#',
+          '##########'
+        ],
+        max: 14
+      },
+      {
+        titolo: 'Scenario 6 — Evacuazione completa con freccia finale',
+        desc: 'Evacuazione dall\'aula al primo piano. Attraversa i corridoi, evita l\'ascensore ⚠️, arriva alla freccia verde ⬇️ e scendi fino al punto di raccolta 🏁.',
+        righe: [
+          '############',
+          '#S.........#',
+          '#.##########',
+          '#.#........#',
+          '#.#.########',
+          '#.#.#X.....#',
+          '#.#.########',
+          '#.#........#',
+          '#.##########',
+          '#..........#',
+          '#.........D#',
+          '##########.#',
+          '#..........#',
+          '#.........E#',
+          '############'
+        ],
+        max: 22
       }
     ];
 
