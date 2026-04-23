@@ -56,15 +56,15 @@ Se sei un insegnante e vuoi organizzare un incontro, contattaci a [segreteria@pr
 
 ## Giochi della Sicurezza — Impara giocando
 
-Il Gruppo ha sviluppato una collezione di **26 giochi educativi gratuiti** sulla protezione civile, divisi per fascia di età. Ogni gioco è pensato per trasmettere un messaggio chiaro di autoprotezione e termina con un **attestato di partecipazione** da stampare o conservare.
+Il Gruppo ha sviluppato una collezione di **30 giochi educativi gratuiti** sulla protezione civile, divisi per fascia di età. Ogni gioco è pensato per trasmettere un messaggio chiaro di autoprotezione e termina con un **attestato di partecipazione** da stampare o conservare.
 
 I giochi sono utilizzabili anche dai docenti come attività complementari ai kit didattici, sia in aula sia come compiti a casa. Funzionano da computer, tablet e smartphone, senza registrazione e senza installazione.
 
 | Fascia | Età | Giochi | Esempi |
 |---|---|---|---|
-| [Piccoli Esploratori](/giochi/infanzia/) | 3-6 anni | 7 | La tartaruga saggia, Il numero 112, Suoni dell'emergenza, Memory facile, Vesti Tina, Rifugio di Tina, Cielo oggi |
-| [Scuola Primaria](/giochi/primaria/) | 6-11 anni | 11 | Memory, Caccia al rischio, Zaino dell'emergenza, Cruciverba, Puzzle degli scenari, Labirinto di evacuazione |
-| [Ragazzi e Famiglie](/giochi/ragazzi/) | 11-19 anni | 8 | Simulatore COC, Emergency Responder, Mappa del rischio, Radio di emergenza, Vero o bufala?, Triage S.T.A.R.T., Linea del tempo |
+| [Piccoli Esploratori](/giochi/infanzia/) | 3-6 anni | 8 | La tartaruga saggia, Il numero 112, Suoni dell'emergenza, Memory facile, Vesti Tina, Rifugio di Tina, Cielo oggi, Trova il cartello |
+| [Scuola Primaria](/giochi/primaria/) | 6-11 anni | 13 | Memory, Caccia al rischio, Zaino dell'emergenza, Cruciverba, Puzzle degli scenari, Labirinto di evacuazione, Chiamata al 112, Posiziona i cartelli |
+| [Ragazzi e Famiglie](/giochi/ragazzi/) | 11-19 anni | 9 | Simulatore COC, Emergency Responder, Mappa del rischio, Radio di emergenza, Vero o bufala?, Triage S.T.A.R.T., Linea del tempo, Cartelli di pericolo |
 
 <a href="/giochi/index.html" class="btn btn-primary btn-lg mt-2"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Vai ai Giochi della Sicurezza</a>
 

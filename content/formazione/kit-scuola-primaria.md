@@ -314,7 +314,7 @@ Su una cartina del territorio di Genzano (o su un disegno semplificato):
 
 - [Piano di Emergenza Familiare](/piano-familiare/) — Da stampare e compilare con la famiglia
 - [Quiz di Protezione Civile](/quizpc/index.html) — Quiz interattivo online
-- [Giochi della Sicurezza — Primaria](/giochi/primaria/) — 11 giochi educativi per bambini 6-11 anni
+- [Giochi della Sicurezza — Primaria](/giochi/primaria/) — 13 giochi educativi per bambini 6-11 anni
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
 - [Io non rischio](https://www.iononrischio.it/) — Materiali della campagna nazionale
 
