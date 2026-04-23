@@ -52,8 +52,12 @@ Specifiche complete: `MANUALE-SITO.md`, Parte 3.
             caption="Didascalia opzionale." >}}
    ```
 3. Il **nome del file foto** deve essere **diverso dallo slug dell'articolo** (es. `2026-04-20-incendio-cecchina-casolare.webp`), così lo script `genera-cover.py` non sovrascrive la foto reale con una copertina tipografica.
-4. Ogni foto deve comunque avere la **fascia blu istituzionale** (vedi regola sopra).
-5. Lo shortcode produce `<figure>`/`<figcaption>` accessibili, immagine cliccabile per ingrandire (apre in nuova scheda), `aria-label` descrittivo, `loading="lazy"`.
+4. Ogni foto deve comunque avere la **fascia blu istituzionale** (vedi regola sopra). Per trattare in modo uniforme le foto fornite dall'utente, usa lo script `scripts/applica-fascia-foto.sh`:
+   ```bash
+   bash scripts/applica-fascia-foto.sh <file-sorgente> <nome-output-senza-ext>
+   ```
+   Ridimensiona a 1200 px, sovrappone logo + testo istituzionale, esporta WebP qualità 85 (ricompresso a 75 se >200 KB) in `static/images/<nome>.webp`. Evita passaggi manuali in Canva/GIMP. Dettagli in `MANUALE-SITO.md` Parte 3.8, Metodo 4.
+5. Lo shortcode produce `<figure>`/`<figcaption>` accessibili, immagine cliccabile per ingrandire (apre in nuova scheda), `aria-label` descrittivo, `loading="lazy"`. La tipografia `.article-body` v7.2 (`custom.css`) applica automaticamente cornice con ombra morbida e didascalia in corsivo blu — non serve CSS inline.
 
 Questa regola nasce dopo un incidente in cui una foto fornita dall'utente era stata sostituita dalla sola copertina automatica — comportamento non accettabile.
 

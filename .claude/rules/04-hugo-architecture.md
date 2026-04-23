@@ -42,6 +42,10 @@ sito-pc-genzano/
 ├── scripts/
 │   ├── genera-cover.py              # Genera copertine tipografiche automatiche
 │   ├── aggiorna-image-frontmatter.py # Aggiorna il campo image negli articoli
+│   ├── applica-fascia-foto.sh       # Applica fascia blu istituzionale a una
+│   │                                # foto sorgente fornita dall'utente e la
+│   │                                # converte in WebP 1200px pronta per l'uso
+│   │                                # via shortcode {{< foto >}}
 │   └── export-contesto-ai.sh        # Export di tutta la documentazione in
 │                                    # un unico CONTESTO-AI.md per altra AI
 ├── .claude/rules/           # Regole di governance (questo file)
@@ -104,6 +108,36 @@ Non usare date di revisione hard-coded nel corpo (tipo "Ultimo aggiornamento: Ma
 
 ### Regole stampa
 Il file `themes/flavour-pcgenzano/static/css/custom.css` contiene un blocco `@media print` globale che nasconde tutto il chrome del sito (header, navbar, footer, banner, cookie, utility bar, page tools, breadcrumb) e stampa solo il contenuto della pagina su formato A4 con margini standard. Esiste anche un blocco specifico per il piano familiare stampabile (`body.piano-printing`). Non duplicare queste regole; se servono modifiche, lavora sui blocchi esistenti.
+
+### Tipografia del corpo articolo (`.article-body` v7.2)
+Il template `themes/flavour-pcgenzano/layouts/_default/single.html` avvolge il contenuto in `<article class="article-body">`. Il blocco CSS **v7.2** in `themes/flavour-pcgenzano/static/css/custom.css` applica a questo wrapper una tipografia istituzionale curata scoped — non influisce su homepage, liste, card o widget.
+
+Cosa applica:
+- Base `font-size: 1.05rem`, `line-height: 1.75`, colore testo `#1a1a1a`.
+- **Lede** (primo paragrafo): `1.15rem`, colore `#003366`, peso 500.
+- **Capolettera** sulla prima lettera del primo paragrafo: `3rem`, blu, float left.
+- **`<h2>`**: barra blu `3px` a sinistra, `margin-top: 2.5rem`, colore `#003366`.
+- **`<h3>` / `<h4>`**: colore `#003366`, peso 600, spaziatura ridotta.
+- **`<ul>` / `<ol>`**: `::marker` blu, spaziatura voci `0.4rem`.
+- **`<blockquote>`**: bordo sinistro blu `4px`, sfondo `#f4f7fb`, corsivo.
+- **`<figure>`** (shortcode `foto`): max-width `640px`, ombra morbida, cornice sottile; `<figcaption>` in corsivo blu centrato.
+- **`<a>` non `.btn`**: underline `1px` → `2px` al hover/focus.
+- **`<table>`**: header blu `#003366`, zebra leggera `#f8f9fb`.
+- **`<hr>`**: sfumatura orizzontale blu (decorativa).
+- **`<code>`** inline: sfondo `#f4f7fb`, colore blu.
+
+Override integrati:
+- `@media (max-width: 768px)`: riduce capolettera, spaziature H2 e dimensione lede.
+- `@media (prefers-reduced-motion: reduce)`: disattiva transizioni sui link.
+- `@media print`: azzera capolettera, ombre, gradienti e sfondi; mantiene gerarchia in bianco e nero.
+
+Regole operative:
+- La tipografia si applica automaticamente a qualsiasi articolo in `content/comunicazioni/` e a ogni pagina che usa `_default/single.html`.
+- Non introdurre stili inline nel Markdown (`<span style="color:...">`): il tema li sovrascriverebbe.
+- Non usare `<h1>` nel corpo: il titolo pagina è già `<h1>`, il corpo parte da `<h2>`.
+- Il primo paragrafo deve avere senso compiuto (min. 2 frasi) per sfruttare lede + capolettera.
+- Se serve modificare la tipografia, lavora sul blocco v7.2 esistente in `custom.css` — non duplicare.
+- Dettagli e tabella completa in `MANUALE-SITO.md` Parte 3.15.
 
 ### Render-link hook (link Markdown nel corpo)
 Il tema personalizza il rendering dei link Markdown tramite `layouts/_default/_markup/render-link.html` (copia speculare in `themes/flavour-pcgenzano/layouts/_default/_markup/render-link.html`). Comportamento:

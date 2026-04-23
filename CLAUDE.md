@@ -72,6 +72,13 @@ bash ~/gestione-sito.sh
 bash scripts/export-contesto-ai.sh
 # Produce CONTESTO-AI.md nella root con TUTTA la documentazione in un unico file
 # pronto da incollare in qualsiasi altra AI per continuità di gestione.
+
+# Applica fascia blu istituzionale a una foto fornita dall'utente
+bash scripts/applica-fascia-foto.sh <file-sorgente> <nome-output-senza-ext>
+# Esempio:
+#   bash scripts/applica-fascia-foto.sh /home/utente/Scaricati/Zamberletti.jpg zamberletti-ritratto-istituzionale
+# Produce static/images/<nome>.webp (1200px, fascia blu + logo + testo istituzionale).
+# Dettagli in MANUALE-SITO.md Parte 3.8 Metodo 4.
 ```
 
 ## Architecture
@@ -110,10 +117,12 @@ These JSON/YAML files are the primary way to update dynamic site content without
 
 Custom theme, not an external dependency — edit freely. Structure:
 - `layouts/partials/` — reusable components (navbar, footer, emergency-banner, allerta-card, etc.)
-- `layouts/_default/` — base, list, single templates
+- `layouts/_default/` — base, list, single templates. In `single.html` l'`<article>` usa `class="article-body"` per attivare la tipografia istituzionale curata (v7.2)
 - `layouts/shortcodes/` — shortcode `foto` per immagini nel corpo degli articoli (click-per-ingrandire, fascia blu, `<figure>`/`<figcaption>` accessibili)
 - `layouts/index.html` — homepage template
-- `static/css/custom.css` — override CSS su Bootstrap Italia, include regole `@media print` globali che nascondono tutto il chrome del sito quando l'utente clicca "Stampa"
+- `static/css/custom.css` — override CSS su Bootstrap Italia. Include:
+  - regole `@media print` globali che nascondono tutto il chrome del sito quando l'utente clicca "Stampa"
+  - sezione **v7.2 `.article-body`** che applica solo agli articoli: lede, capolettera, H2 con barra blu a sinistra, `::marker` blu, blockquote rilevati, figure con ombra morbida, tabelle con header blu, link underline che si rafforza al hover. Override integrati per mobile, `prefers-reduced-motion` e stampa. Dettagli in `MANUALE-SITO.md` Parte 3.15.
 
 ### Shortcode `foto` (per immagini nel corpo degli articoli)
 
