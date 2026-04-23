@@ -217,4 +217,5 @@ Questa pagina è progettata per essere **stampata in bianco e nero** su A4 front
 - [Capitolo 2 — Scouting](/formazione/manuale-campo/scouting/)
 - [Capitolo 3 — Funzioni tecniche](/formazione/manuale-campo/funzioni-tecniche/)
 - [Capitolo 4 — Funzioni di servizio](/formazione/manuale-campo/funzioni-servizio/)
+- [Capitolo 6 — Moduli e codici radio](/formazione/manuale-campo/moduli-radio/)
 - [Manuale originale di Imbersago (2010)](http://www.protezionecivile-imbersago.com/files/manuale_da_campo.pdf)

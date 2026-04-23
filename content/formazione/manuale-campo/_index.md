@@ -29,6 +29,7 @@ Il manuale non sostituisce la **formazione di base regionale** del volontario (a
 | [3. Funzioni tecniche](/formazione/manuale-campo/funzioni-tecniche/) | Rete TLC, impiantistica elettrica e idrica, tende e tensostrutture, ristorazione, magazzini, servizi igienici, sicurezza |
 | [4. Funzioni di servizio](/formazione/manuale-campo/funzioni-servizio/) | Direzione (Capo Missione, Capo Campo), segreteria, sanità, supporto psicosociale, infopoint, guardiania, pulizie e disinfezione |
 | [5. Schede tecniche — raccolta rapida](/formazione/manuale-campo/schede-tecniche/) | Tutte le check-list in un unico documento di riferimento rapido, stampabile |
+| [6. Moduli e codici radio](/formazione/manuale-campo/moduli-radio/) | Modulo messaggio, registro di stazione, alfabeto fonetico NATO, codice Q — allegati personalizzati per il Gruppo |
 
 ## Principi guida
 

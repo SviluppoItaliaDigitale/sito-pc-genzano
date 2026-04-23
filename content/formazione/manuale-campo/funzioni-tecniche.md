@@ -59,6 +59,8 @@ Il **ponte radio campale VHF con link UHF** (modulo di base della Colonna Mobile
 6. **Niente dati personali** — nomi, numeri, indirizzi di persone fragili non vanno in chiaro sulla radio
 7. **Disciplina assoluta** — la radio non è un telefono: serve solo per la missione
 
+Per i **moduli operativi** (modulo messaggio, registro di stazione, alfabeto fonetico NATO, codice Q) vedi [Capitolo 6 — Moduli e codici radio](/formazione/manuale-campo/moduli-radio/).
+
 ### ICT e connettività
 
 Ogni campo ha una **rete dati**:

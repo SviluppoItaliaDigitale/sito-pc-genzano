@@ -76,7 +76,7 @@ Il Gruppo ha sviluppato un'**area dedicata al primo soccorso**, con pagine divul
 
 ## Area tematica — Manuale da Campo
 
-Una **guida operativa** per il volontario impegnato in emergenza: struttura organizzativa e catena di comando (aggiornate al D.Lgs. 1/2018 e alla Direttiva PCM 30 aprile 2021), scouting e valutazione iniziale, funzioni tecniche (TLC, impiantistica, tende, ristorazione), funzioni di servizio (direzione, segreteria, infopoint, pulizie) e **11 schede tecniche** di riferimento rapido (kit personale, mezzi, informazioni, idoneità area, standard UNHCR, comunicazioni radio).
+Una **guida operativa** per il volontario impegnato in emergenza: struttura organizzativa e catena di comando (aggiornate al D.Lgs. 1/2018 e alla Direttiva PCM 30 aprile 2021), scouting e valutazione iniziale, funzioni tecniche (TLC, impiantistica, tende, ristorazione), funzioni di servizio (direzione, segreteria, infopoint, pulizie), **11 schede tecniche** di riferimento rapido (kit personale, mezzi, informazioni, idoneità area, standard UNHCR) e i **moduli radio** personalizzati per il Gruppo (modulo messaggio, registro di stazione, alfabeto NATO, codice Q).
 
 <a href="/formazione/manuale-campo/" class="btn btn-primary mt-2"><i class="bi bi-clipboard-check-fill me-2" aria-hidden="true"></i>Vai al Manuale da Campo</a>
 
