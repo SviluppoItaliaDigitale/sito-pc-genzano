@@ -68,6 +68,12 @@ I giochi sono utilizzabili anche dai docenti come attività complementari ai kit
 
 <a href="/giochi/index.html" class="btn btn-primary btn-lg mt-2"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Vai ai Giochi della Sicurezza</a>
 
+## Area tematica — Primo Soccorso e RCP
+
+Il Gruppo ha sviluppato un'**area dedicata al primo soccorso**, con pagine divulgative per il cittadino basate sulle **Linee Guida RCP 2025** dell'Italian Resuscitation Council (IRC): riconoscere un arresto cardiaco, massaggio cardiaco, uso del defibrillatore (DAE), disostruzione da soffocamento, emorragie e ustioni, rianimazione pediatrica.
+
+<a href="/formazione/primo-soccorso/" class="btn btn-primary mt-2"><i class="bi bi-heart-pulse-fill me-2" aria-hidden="true"></i>Vai all'area Primo Soccorso</a>
+
 ## Risorse educative online
 
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
