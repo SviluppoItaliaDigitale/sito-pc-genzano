@@ -37,7 +37,13 @@ Il terremoto del 23 novembre 1980 (magnitudo 6.9) segnò una svolta. **2.914 vit
 
 ### 1982 — Giuseppe Zamberletti
 
-Nel 1982 viene istituito il **Ministro per il coordinamento della Protezione Civile**. Il primo titolare è **Giuseppe Zamberletti**, considerato il **padre della Protezione Civile italiana**. Ne abbiamo parlato [nell'articolo dedicato](/memoria-zamberletti/), presente nella sezione "Memoria" del nostro sito.
+Nel 1982 viene istituito il **Ministro per il coordinamento della Protezione Civile**. Il primo titolare è **Giuseppe Zamberletti**, considerato il **padre della Protezione Civile italiana**.
+
+{{< foto src="/images/zamberletti-ritratto-istituzionale.webp"
+         alt="Giuseppe Zamberletti, primo Ministro per il coordinamento della Protezione Civile, ritratto davanti allo stemma della Repubblica Italiana"
+         caption="Giuseppe Zamberletti (1933–2018), primo Ministro per il coordinamento della Protezione Civile e artefice del Servizio Nazionale istituito nel 1992." >}}
+
+Parlamentare, due volte Commissario straordinario (per il Friuli nel 1976 e per l'Irpinia nel 1980), Zamberletti pose le fondamenta di un sistema basato sul **coordinamento**, sulla **sussidiarietà** e sul **volontariato organizzato**.
 
 ### 1992 — Legge 225 (istitutiva del SNPC)
 
