@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trova il Cartello — Giochi Piccoli Esploratori</title>
+  <meta name="description" content="Tina ti chiede di trovare un cartello: tocca quello giusto tra quattro. Gioco educativo per bambini dai 3 ai 6 anni.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
+  <style>
+    .tina-fumetto {
+      background: #fff; border: 3px solid var(--inf-blu, #003366);
+      border-radius: 22px; padding: 1rem 1.2rem;
+      font-size: 1.2rem; font-weight: 700; color: var(--inf-blu, #003366);
+      text-align: center; margin-bottom: 1rem;
+      position: relative;
+    }
+    .tina-fumetto::after {
+      content: ""; position: absolute; left: 40px; bottom: -18px;
+      border-width: 18px 12px 0 12px; border-style: solid;
+      border-color: var(--inf-blu, #003366) transparent transparent transparent;
+    }
+    .tina-fumetto::before {
+      content: ""; position: absolute; left: 42px; bottom: -12px;
+      border-width: 14px 10px 0 10px; border-style: solid;
+      border-color: #fff transparent transparent transparent;
+      z-index: 1;
+    }
+    .cartelli {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+      max-width: 520px; margin: 0 auto;
+    }
+    .cartello-btn {
+      aspect-ratio: 1; min-height: 120px;
+      border-radius: 20px; border: 4px solid transparent;
+      background: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4.5rem; line-height: 1;
+      box-shadow: 0 6px 0 rgba(0,0,0,.15);
+      cursor: pointer; user-select: none;
+      transition: transform .15s;
+      position: relative;
+    }
+    .cartello-btn:focus { outline: 4px solid var(--inf-blu, #003366); outline-offset: 4px; }
+    .cartello-btn:hover { transform: translateY(-2px); }
+    .cartello-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,.15); }
+    .cartello-btn.sfondo-giallo  { background: #fff3cd; border-color: #b45309; }
+    .cartello-btn.sfondo-rosso   { background: #fff;    border-color: #dc3545; }
+    .cartello-btn.sfondo-blu     { background: #cfe2ff; border-color: #0d6efd; border-radius: 50%; }
+    .cartello-btn.sfondo-verde   { background: #d1e7dd; border-color: #198754; }
+    .cartello-btn.sfondo-uscita  { background: #198754; color: #fff; border-color: #0f5132; }
+    .cartello-btn.sfondo-vvf     { background: #f8d7da; border-color: #dc3545; }
+    .cartello-btn.correct { animation: inf-pulse-green .6s ease; box-shadow: 0 0 0 6px #198754; }
+    .cartello-btn.wrong   { animation: inf-shake .4s ease; box-shadow: 0 0 0 6px #dc3545; }
+    .cartello-btn.dim { opacity: .5; }
+
+    .progress-dots {
+      display: flex; justify-content: center; gap: .4rem; margin-bottom: .8rem;
+    }
+    .progress-dots .dot {
+      width: 14px; height: 14px; border-radius: 50%; background: #cfd6df;
+    }
+    .progress-dots .dot.done { background: var(--inf-verde, #198754); }
+    .progress-dots .dot.now  { background: var(--inf-blu, #003366); }
+
+    @media (max-width: 400px) {
+      .cartello-btn { font-size: 3.4rem; }
+    }
+  </style>
+</head>
+<body class="inf-body">
+  <main id="main-content" tabindex="-1" class="inf-main">
+    <nav aria-label="Percorso">
+      <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
+    </nav>
+
+    <div class="inf-home">
+      <h1>Trova il Cartello</h1>
+      <p>Tina ti dice cosa cercare. Tocca il cartello giusto!</p>
+    </div>
+
+    <div class="inf-card" id="game-card">
+      <div class="progress-dots" id="progress"></div>
+      <div class="tina-fumetto" id="tina-fumetto" aria-live="polite">
+        <span aria-hidden="true">\uD83D\uDC22</span>
+        <span id="domanda">Tina sta pensando…</span>
+      </div>
+      <div class="cartelli" id="cartelli" role="group" aria-label="Quattro cartelli: tocca quello giusto"></div>
+      <div id="feedback" class="text-center mt-3 h5" aria-live="polite" style="min-height: 1.5em"></div>
+    </div>
+
+    <div id="end" class="inf-card inf-end hide">
+      <div class="bravi">Bravissimo!</div>
+      <p class="h5 mb-3">Hai trovato tutti i cartelli!</p>
+      <p class="text-muted small">I cartelli ci dicono cosa fare e a cosa fare attenzione.</p>
+      <div class="attestato-inject my-3"></div>
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button id="restart" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-repeat"></i> Ancora</button>
+        <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left"></i> Altri giochi</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    // Catalogo cartelli: 12 opzioni con forma di base
+    var CATALOGO = {
+      fuoco:    { glyph: '\uD83D\uDD25', sfondo: 'sfondo-giallo', nome: 'il fuoco' },
+      alta:     { glyph: '\u26A1',       sfondo: 'sfondo-giallo', nome: 'l\'alta tensione (la corrente elettrica)' },
+      scivolo:  { glyph: '\u26A0\uFE0F', sfondo: 'sfondo-giallo', nome: 'attenzione: pavimento scivoloso' },
+      fumo:     { glyph: '\uD83D\uDEAD', sfondo: 'sfondo-rosso',  nome: 'vietato fumare' },
+      entrare:  { glyph: '\uD83D\uDEAB', sfondo: 'sfondo-rosso',  nome: 'vietato entrare' },
+      ascensore:{ glyph: '\uD83D\uDEC8', sfondo: 'sfondo-rosso',  nome: 'vietato usare l\'ascensore' },
+      casco:    { glyph: '\u26D1\uFE0F', sfondo: 'sfondo-blu',    nome: 'mettere il casco' },
+      guanti:   { glyph: '\uD83E\uDDE4', sfondo: 'sfondo-blu',    nome: 'mettere i guanti' },
+      croce:    { glyph: '\u2795',       sfondo: 'sfondo-verde',  nome: 'il primo soccorso' },
+      raccolta: { glyph: '\uD83D\uDC65', sfondo: 'sfondo-verde',  nome: 'il punto di raccolta' },
+      uscita:   { glyph: '\uD83D\uDEAA', sfondo: 'sfondo-uscita', nome: 'l\'uscita di emergenza' },
+      estintore:{ glyph: '\uD83E\uDDEF', sfondo: 'sfondo-vvf',    nome: 'l\'estintore per spegnere il fuoco' }
+    };
+
+    var DOMANDE = [
+      { target: 'uscita',    testo: 'Tocca il cartello che indica dove si esce in emergenza.' },
+      { target: 'estintore', testo: 'Tocca il cartello dell\'estintore per spegnere il fuoco.' },
+      { target: 'fuoco',     testo: 'Tocca il cartello che avvisa del pericolo di incendio.' },
+      { target: 'casco',     testo: 'Tocca il cartello che dice di mettere il casco.' },
+      { target: 'fumo',      testo: 'Tocca il cartello dove \u00e8 vietato fumare.' },
+      { target: 'ascensore', testo: 'Tocca il cartello che dice di non prendere l\'ascensore.' },
+      { target: 'croce',     testo: 'Tocca il cartello che indica il primo soccorso.' },
+      { target: 'raccolta',  testo: 'Tocca il cartello del punto dove ci si raduna tutti insieme.' },
+      { target: 'alta',      testo: 'Tocca il cartello che avvisa della corrente elettrica.' },
+      { target: 'scivolo',   testo: 'Tocca il cartello che avvisa di stare attenti perch\u00e9 il pavimento \u00e8 scivoloso.' }
+    ];
+
+    var cartelliEl = document.getElementById('cartelli');
+    var domandaEl = document.getElementById('domanda');
+    var feedbackEl = document.getElementById('feedback');
+    var progressEl = document.getElementById('progress');
+    var endEl = document.getElementById('end');
+    var gameCard = document.getElementById('game-card');
+    var restartBtn = document.getElementById('restart');
+
+    var round = 0;
+    var errors = 0;
+    var domande = [];
+
+    function shuffle(arr) {
+      var a = arr.slice();
+      for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = a[i]; a[i] = a[j]; a[j] = t;
+      }
+      return a;
+    }
+
+    function start() {
+      domande = shuffle(DOMANDE).slice(0, 6);
+      round = 0;
+      errors = 0;
+      endEl.classList.add('hide');
+      gameCard.classList.remove('hide');
+      renderProgress();
+      showRound();
+    }
+
+    function renderProgress() {
+      progressEl.innerHTML = '';
+      for (var i = 0; i < domande.length; i++) {
+        var d = document.createElement('span');
+        d.className = 'dot' + (i < round ? ' done' : (i === round ? ' now' : ''));
+        progressEl.appendChild(d);
+      }
+    }
+
+    function showRound() {
+      if (round >= domande.length) { finish(); return; }
+      renderProgress();
+      var q = domande[round];
+      domandaEl.textContent = q.testo;
+      feedbackEl.textContent = '';
+      cartelliEl.innerHTML = '';
+      // 1 giusto + 3 distrattori
+      var ids = Object.keys(CATALOGO).filter(function (k) { return k !== q.target; });
+      var distrattori = shuffle(ids).slice(0, 3);
+      var opzioni = shuffle([q.target].concat(distrattori));
+      opzioni.forEach(function (id) {
+        var c = CATALOGO[id];
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'cartello-btn ' + c.sfondo;
+        btn.setAttribute('aria-label', 'Cartello ' + c.nome);
+        btn.textContent = c.glyph;
+        btn.addEventListener('click', function () { scegli(id, btn); });
+        cartelliEl.appendChild(btn);
+      });
+      if (window.AudioSintetico) window.AudioSintetico.init();
+    }
+
+    function scegli(id, btn) {
+      var q = domande[round];
+      if (id === q.target) {
+        btn.classList.add('correct');
+        feedbackEl.textContent = 'Giusto! Hai trovato ' + CATALOGO[id].nome + '.';
+        feedbackEl.style.color = '#198754';
+        cartelliEl.querySelectorAll('button').forEach(function (b) { b.disabled = true; if (b !== btn) b.classList.add('dim'); });
+        if (window.AudioSintetico) window.AudioSintetico.tono({ freq: 659, durata: 0.18 });
+        setTimeout(function () {
+          round++;
+          showRound();
+        }, 1100);
+      } else {
+        errors++;
+        btn.classList.add('wrong');
+        feedbackEl.textContent = 'Quasi! Riprova: cerca ' + CATALOGO[q.target].nome + '.';
+        feedbackEl.style.color = '#dc3545';
+        if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
+        setTimeout(function () { btn.classList.remove('wrong'); }, 500);
+      }
+    }
+
+    function finish() {
+      gameCard.classList.add('hide');
+      endEl.classList.remove('hide');
+      if (window.AudioSintetico) {
+        window.AudioSintetico.tono({ freq: 523, durata: 0.2 });
+        setTimeout(function () { window.AudioSintetico.tono({ freq: 659, durata: 0.2 }); }, 200);
+        setTimeout(function () { window.AudioSintetico.tono({ freq: 784, durata: 0.3 }); }, 400);
+      }
+      var punti = Math.max(1, domande.length - errors);
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('trova-cartello', punti, domande.length, '#end');
+    }
+
+    restartBtn.addEventListener('click', start);
+    start();
+  })();
+  </script>
+</body>
+</html>
