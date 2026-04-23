@@ -5,11 +5,16 @@
   {{- if in $path "#" }}{{ $path = index (split $path "#") 0 }}{{ end -}}
   {{- if in $path "?" }}{{ $path = index (split $path "?") 0 }}{{ end -}}
   {{- /* Se il link punta a un file statico (estensione nota), lo rendo direttamente senza lookup di pagina */ -}}
-  {{- $staticExts := slice ".pdf" ".webp" ".jpg" ".jpeg" ".png" ".gif" ".svg" ".doc" ".docx" ".xls" ".xlsx" ".ppt" ".pptx" ".zip" ".mp3" ".mp4" ".csv" ".txt" ".rtf" -}}
+  {{- $staticExts := slice ".pdf" ".webp" ".jpg" ".jpeg" ".png" ".gif" ".svg" ".doc" ".docx" ".xls" ".xlsx" ".ppt" ".pptx" ".zip" ".mp3" ".mp4" ".csv" ".txt" ".rtf" ".html" ".htm" -}}
   {{- $lowerPath := lower $path -}}
   {{- $isStatic := false -}}
   {{- range $staticExts -}}
     {{- if strings.HasSuffix $lowerPath . -}}{{- $isStatic = true -}}{{- end -}}
+  {{- end -}}
+  {{- /* Cartella statica con index.html (es. /giochi/infanzia/, /abili-a-proteggere/) */ -}}
+  {{- if and (not $isStatic) (strings.HasSuffix $path "/") -}}
+    {{- $staticIdx := printf "static%sindex.html" $path -}}
+    {{- if fileExists $staticIdx -}}{{- $isStatic = true -}}{{- end -}}
   {{- end -}}
   {{- if $isStatic -}}
     <a href="{{ $link | relURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>

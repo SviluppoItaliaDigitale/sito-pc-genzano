@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linea del Tempo — Giochi Ragazzi</title>
+  <meta name="description" content="Ordina cronologicamente otto grandi eventi della protezione civile italiana: dal Vajont 1963 al Centro Italia 2016. Gioco didattico di memoria storica.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <style>
+    .intro-card, .gioco-card-wrap { background: #fff; border-radius: 10px; padding: 1.3rem; box-shadow: 0 3px 14px rgba(0,0,0,.06); margin-bottom: 1rem; }
+    .pool-label { font-weight: 700; color: var(--rag-blu); margin-bottom: .5rem; font-size: .95rem; display: flex; align-items: center; gap: .4rem; }
+    .pool-events {
+      min-height: 90px; padding: .6rem;
+      background: #f4f7fb; border: 2px dashed #b6c3d2;
+      border-radius: 10px; display: flex; flex-wrap: wrap; gap: .5rem;
+      margin-bottom: 1rem;
+    }
+    .timeline-strip {
+      position: relative;
+      background: linear-gradient(90deg, #eef4fc 0%, #dbe8f5 100%);
+      border-radius: 10px; padding: 1.3rem .8rem; margin-bottom: 1rem;
+      display: flex; flex-direction: column; gap: .5rem;
+      border: 2px solid var(--rag-blu);
+    }
+    .timeline-slot {
+      min-height: 80px; padding: .5rem .6rem;
+      background: rgba(255,255,255,.9); border-radius: 8px;
+      border: 2px dashed #c7d4e3;
+      display: flex; align-items: center; gap: .7rem;
+      position: relative;
+    }
+    .timeline-slot::before {
+      content: attr(data-n);
+      position: absolute; left: -12px; top: 50%; transform: translateY(-50%);
+      background: var(--rag-blu); color: #fff;
+      width: 26px; height: 26px; border-radius: 50%;
+      font-weight: 800; font-size: .85rem;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    }
+    .timeline-slot.filled { border-style: solid; border-color: var(--rag-blu); background: #fff; }
+    .timeline-slot.correct { border-color: var(--rag-verde); background: #e8f5ee; }
+    .timeline-slot.wrong { border-color: var(--rag-rosso); background: #fde8eb; }
+    .evento-card {
+      background: #fff; border: 2px solid var(--rag-blu);
+      border-radius: 8px; padding: .55rem .8rem;
+      cursor: grab; user-select: none;
+      display: inline-flex; flex-direction: column; gap: .1rem;
+      max-width: 220px; box-shadow: 0 2px 6px rgba(0,0,0,.08);
+      transition: transform .15s, box-shadow .15s;
+      font-size: .9rem;
+    }
+    .evento-card:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,.15); }
+    .evento-card.dragging { opacity: .5; cursor: grabbing; }
+    .evento-card.in-slot { cursor: default; }
+    .evento-card strong { color: var(--rag-blu); }
+    .evento-card small { color: #5b6b7c; }
+    .evento-anno-reveal {
+      font-weight: 800; color: var(--rag-blu);
+      background: #fff3cd; padding: .2em .5em; border-radius: 4px;
+    }
+    .timeline-slot.correct .evento-anno-reveal { background: #d1e7dd; color: #0f5132; }
+    .timeline-slot.wrong .evento-anno-reveal { background: #f8d7da; color: #842029; }
+    .dropzone-over { background: rgba(25,135,84,.15) !important; border-color: var(--rag-verde) !important; border-style: solid !important; }
+    .stat-row { display: flex; justify-content: space-around; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+    .stat-box { background: #eef4fc; border-radius: 8px; padding: .7rem 1rem; text-align: center; min-width: 120px; }
+    .stat-box .num { font-size: 1.5rem; font-weight: 800; color: var(--rag-blu); }
+    .stat-box .lbl { font-size: .78rem; color: #5b6b7c; }
+    .verifica-wrap { display: flex; gap: .5rem; flex-wrap: wrap; }
+  </style>
+</head>
+<body class="rag-body">
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/ragazzi/">Ragazzi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Linea del Tempo</li>
+          </ol>
+        </nav>
+        <h1>Linea del Tempo della Protezione Civile</h1>
+        <p class="lead">Otto eventi che hanno cambiato l'Italia. Trascinali al posto giusto, dal più antico al più recente.</p>
+      </div>
+    </div>
+
+    <div class="container py-4" style="max-width: 860px;">
+
+      <section id="intro" class="intro-card">
+        <h2 class="h4 mb-3">La memoria serve alla prevenzione</h2>
+        <p>La storia italiana è segnata da disastri che hanno costruito, pezzo dopo pezzo, il sistema nazionale di Protezione Civile: dal <strong>Vajont</strong> alla costituzione del Dipartimento, fino alla direttiva Mattarella e al Codice del 2018. Conoscere l'ordine degli eventi aiuta a capire <em>perché</em> oggi abbiamo le regole che abbiamo.</p>
+        <p class="small text-muted"><i class="bi bi-mouse me-1"></i>Trascina col dito o col mouse le <strong>8 tessere evento</strong> nella striscia temporale sotto. Quando tutte sono collocate, premi "Verifica".</p>
+        <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Inizia</button>
+      </section>
+
+      <section id="game" class="hide">
+        <div class="gioco-card-wrap">
+          <div class="pool-label"><i class="bi bi-collection"></i> Tessere da collocare</div>
+          <div id="pool" class="pool-events" aria-label="Eventi da trascinare"></div>
+
+          <div class="pool-label"><i class="bi bi-calendar3"></i> Linea del tempo (dal più antico al più recente)</div>
+          <div id="timeline" class="timeline-strip" aria-label="Slot cronologici"></div>
+
+          <div class="verifica-wrap">
+            <button id="verifica-btn" class="btn btn-primary" disabled><i class="bi bi-check2-circle me-1"></i>Verifica</button>
+            <button id="reset-btn" class="btn btn-outline-secondary"><i class="bi bi-arrow-counterclockwise me-1"></i>Ricomincia</button>
+          </div>
+
+          <div id="esito" class="mt-3 hide" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="end" class="intro-card hide">
+        <h2 class="h3 mb-3"><i class="bi bi-award-fill text-warning me-2"></i>Linea del tempo completata</h2>
+        <div class="stat-row">
+          <div class="stat-box"><div class="num" id="end-score">0</div><div class="lbl">Eventi nella posizione giusta</div></div>
+          <div class="stat-box"><div class="num" id="end-err">0</div><div class="lbl">Fuori posto</div></div>
+        </div>
+        <div id="soluzione" class="mb-3"></div>
+        <div class="attestato-inject my-3"></div>
+        <div class="d-flex flex-wrap gap-2">
+          <button id="restart-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i>Ricomincia</button>
+          <a href="../index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left me-1"></i>Altri giochi</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    var EVENTI = [
+      { id:'vajont', anno:1963, titolo:'Disastro del Vajont', dett:'Frana nel bacino: 1910 vittime.' },
+      { id:'friuli', anno:1976, titolo:'Terremoto del Friuli', dett:'Magnitudo 6.5: nasce la "modalità Friuli" di ricostruzione.' },
+      { id:'irpinia', anno:1980, titolo:'Terremoto Irpinia', dett:'Magnitudo 6.9: spinta decisiva alla creazione del Dipartimento.' },
+      { id:'dpc', anno:1982, titolo:'Nasce il DPC', dett:'Istituito il Ministro per il Coordinamento della PC (Zamberletti).' },
+      { id:'legge225', anno:1992, titolo:'Legge 225/1992', dett:'Istituito il Servizio Nazionale della Protezione Civile.' },
+      { id:'laquila', anno:2009, titolo:"Terremoto de L'Aquila", dett:'Magnitudo 6.3: G8 spostato, processo ai tecnici della Commissione Grandi Rischi.' },
+      { id:'centroitalia', anno:2016, titolo:'Sisma Centro Italia', dett:'Amatrice, Accumoli, Arquata: sequenza sismica prolungata.' },
+      { id:'codice', anno:2018, titolo:'Codice PC (D.lgs 1/2018)', dett:'Riforma organica del sistema nazionale.' }
+    ];
+
+    var intro = document.getElementById('intro'),
+        game = document.getElementById('game'),
+        endScreen = document.getElementById('end'),
+        pool = document.getElementById('pool'),
+        timeline = document.getElementById('timeline'),
+        verificaBtn = document.getElementById('verifica-btn'),
+        resetBtn = document.getElementById('reset-btn'),
+        esito = document.getElementById('esito');
+
+    var draggedEl = null;
+
+    function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+
+    function creaCarta(ev){
+      var c = document.createElement('div');
+      c.className = 'evento-card';
+      c.setAttribute('draggable', 'true');
+      c.setAttribute('tabindex', '0');
+      c.setAttribute('data-id', ev.id);
+      c.innerHTML = '<strong>' + ev.titolo + '</strong><small>' + ev.dett + '</small>';
+      c.addEventListener('dragstart', function(e){
+        draggedEl = c;
+        c.classList.add('dragging');
+        try { e.dataTransfer.setData('text/plain', ev.id); } catch(err){}
+        e.dataTransfer.effectAllowed = 'move';
+      });
+      c.addEventListener('dragend', function(){
+        if (draggedEl) draggedEl.classList.remove('dragging');
+        draggedEl = null;
+        document.querySelectorAll('.dropzone-over').forEach(function(z){ z.classList.remove('dropzone-over'); });
+      });
+      // Fallback tap-to-place con tastiera
+      c.addEventListener('keydown', function(e){
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        e.preventDefault();
+        var slots = timeline.querySelectorAll('.timeline-slot:not(.filled)');
+        if (slots.length === 0) return;
+        collocaInSlot(c, slots[0]);
+      });
+      return c;
+    }
+
+    function creaSlot(n){
+      var s = document.createElement('div');
+      s.className = 'timeline-slot';
+      s.setAttribute('data-n', n);
+      s.setAttribute('aria-label', 'Posizione ' + n);
+      s.addEventListener('dragover', function(e){ e.preventDefault(); s.classList.add('dropzone-over'); });
+      s.addEventListener('dragleave', function(){ s.classList.remove('dropzone-over'); });
+      s.addEventListener('drop', function(e){
+        e.preventDefault();
+        s.classList.remove('dropzone-over');
+        if (!draggedEl) return;
+        collocaInSlot(draggedEl, s);
+      });
+      s.addEventListener('click', function(){
+        // se cliccato uno slot occupato, riporta tessera al pool
+        var card = s.querySelector('.evento-card');
+        if (card) riportaAlPool(card);
+      });
+      return s;
+    }
+
+    function collocaInSlot(card, slot){
+      // se slot già occupato, scambia (riporta inquilino al pool)
+      var inquilino = slot.querySelector('.evento-card');
+      if (inquilino) riportaAlPool(inquilino);
+      slot.appendChild(card);
+      slot.classList.add('filled');
+      card.classList.add('in-slot');
+      card.removeAttribute('draggable');
+      card.setAttribute('draggable', 'true'); // resta drag per riscambio
+      aggiornaVerifica();
+    }
+
+    function riportaAlPool(card){
+      pool.appendChild(card);
+      card.classList.remove('in-slot');
+      var slot = card.parentElement;
+      if (slot && slot.classList.contains('timeline-slot')) slot.classList.remove('filled');
+      // cleanup possibly residual classes
+      document.querySelectorAll('.timeline-slot').forEach(function(s){
+        if (!s.querySelector('.evento-card')) s.classList.remove('filled','correct','wrong');
+      });
+      aggiornaVerifica();
+    }
+
+    function aggiornaVerifica(){
+      var tutti = timeline.querySelectorAll('.timeline-slot.filled').length === EVENTI.length;
+      verificaBtn.disabled = !tutti;
+    }
+
+    function setup(){
+      pool.innerHTML = '';
+      timeline.innerHTML = '';
+      esito.classList.add('hide');
+      esito.innerHTML = '';
+      var mescolati = shuffle(EVENTI.slice());
+      mescolati.forEach(function(ev){ pool.appendChild(creaCarta(ev)); });
+      for (var i = 1; i <= EVENTI.length; i++) timeline.appendChild(creaSlot(i));
+      // pool drop (per riportare indietro)
+      pool.addEventListener('dragover', function(e){ e.preventDefault(); });
+      pool.addEventListener('drop', function(e){
+        e.preventDefault();
+        if (draggedEl) riportaAlPool(draggedEl);
+      });
+      verificaBtn.disabled = true;
+    }
+
+    function verifica(){
+      var slots = timeline.querySelectorAll('.timeline-slot');
+      var ordinati = EVENTI.slice().sort(function(a,b){ return a.anno - b.anno; });
+      var score = 0;
+      slots.forEach(function(s, i){
+        var card = s.querySelector('.evento-card');
+        if (!card) return;
+        var id = card.getAttribute('data-id');
+        var corretto = ordinati[i];
+        s.classList.remove('correct','wrong');
+        var oldReveal = card.querySelector('.evento-anno-reveal');
+        if (oldReveal) oldReveal.remove();
+        var rev = document.createElement('div');
+        rev.className = 'evento-anno-reveal mt-1';
+        if (id === corretto.id){ score++; s.classList.add('correct'); rev.textContent = 'Anno: ' + corretto.anno + ' — Giusto!'; }
+        else { s.classList.add('wrong'); var tuo = EVENTI.filter(function(e){return e.id === id;})[0]; rev.textContent = 'Era: ' + tuo.anno + ' — Qui andava: ' + corretto.titolo + ' (' + corretto.anno + ')'; }
+        card.appendChild(rev);
+      });
+      setTimeout(fine.bind(null, score), 900);
+    }
+
+    function fine(score){
+      game.classList.add('hide');
+      endScreen.classList.remove('hide');
+      document.getElementById('end-score').textContent = score + '/' + EVENTI.length;
+      document.getElementById('end-err').textContent = EVENTI.length - score;
+      var ordinati = EVENTI.slice().sort(function(a,b){ return a.anno - b.anno; });
+      var html = '<p><strong>La linea del tempo corretta:</strong></p><ol class="mb-0 small">';
+      ordinati.forEach(function(e){ html += '<li><strong>' + e.anno + '</strong> — ' + e.titolo + '</li>'; });
+      html += '</ol>';
+      document.getElementById('soluzione').innerHTML = html;
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('linea-tempo-eventi', score, EVENTI.length, '#end');
+    }
+
+    document.getElementById('start-btn').addEventListener('click', function(){
+      intro.classList.add('hide'); endScreen.classList.add('hide'); game.classList.remove('hide');
+      setup();
+    });
+    document.getElementById('restart-btn').addEventListener('click', function(){
+      endScreen.classList.add('hide'); game.classList.remove('hide');
+      setup();
+    });
+    resetBtn.addEventListener('click', setup);
+    verificaBtn.addEventListener('click', verifica);
+  })();
+  </script>
+</body>
+</html>

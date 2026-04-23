@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triage S.T.A.R.T. — Giochi Ragazzi</title>
+  <meta name="description" content="Applica il metodo START per assegnare il codice di triage (rosso, giallo, verde, nero) a 8 feriti in una maxi-emergenza. Strumento didattico per ragazzi.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <style>
+    .intro-card, .paziente-card {
+      background: #fff; border-radius: 10px; padding: 1.3rem;
+      box-shadow: 0 3px 14px rgba(0,0,0,.06); margin-bottom: 1rem;
+    }
+    .flow-box {
+      background: #f4f7fb; border-left: 4px solid var(--rag-blu);
+      padding: .8rem 1rem; border-radius: 6px; margin: .8rem 0;
+      font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .9rem;
+    }
+    .paziente-meta { display: flex; gap: 1rem; flex-wrap: wrap; color: #5b6b7c; font-size: .9rem; margin-bottom: .6rem; }
+    .paziente-meta strong { color: var(--rag-blu); }
+    .sintomi {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: .5rem; margin: .8rem 0;
+    }
+    .sintomo {
+      background: #eef4fc; border-radius: 6px; padding: .5rem .8rem;
+      font-size: .9rem; display: flex; align-items: center; gap: .4rem;
+    }
+    .sintomo i { color: var(--rag-blu); font-size: 1.1rem; }
+    .codici {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; margin-top: .6rem;
+    }
+    @media (min-width: 540px){ .codici { grid-template-columns: repeat(4, 1fr); } }
+    .btn-cod {
+      padding: .7rem .4rem; border-radius: 8px; border: 3px solid transparent;
+      font-weight: 800; cursor: pointer; color: #fff; font-size: .95rem;
+      display: flex; flex-direction: column; align-items: center; gap: .2rem;
+    }
+    .btn-cod:hover, .btn-cod:focus-visible { outline: 3px solid var(--rag-blu); outline-offset: 2px; }
+    .btn-cod:disabled { opacity: .55; cursor: not-allowed; }
+    .btn-cod.rosso { background: #DC3545; }
+    .btn-cod.giallo { background: #F4B700; color: #17324D; }
+    .btn-cod.verde { background: #198754; }
+    .btn-cod.nero { background: #222; }
+    .btn-cod small { font-weight: 600; font-size: .7rem; opacity: .85; }
+    .esito { margin-top: 1rem; padding: .9rem 1rem; border-radius: 8px; line-height: 1.55; }
+    .esito.ok { background: #e8f5ee; border-left: 4px solid var(--rag-verde); }
+    .esito.ko { background: #fde8eb; border-left: 4px solid var(--rag-rosso); }
+    .esito strong { color: var(--rag-blu); }
+    .progress-bar-holder { height: 6px; background: #e9ecef; border-radius: 99px; overflow: hidden; margin-bottom: 1rem; }
+    .progress-bar-holder > div { height: 100%; background: var(--rag-blu); transition: width .3s; }
+    .stat-row { display: flex; justify-content: space-around; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+    .stat-box { background: #eef4fc; border-radius: 8px; padding: .7rem 1rem; text-align: center; min-width: 110px; }
+    .stat-box .num { font-size: 1.5rem; font-weight: 800; color: var(--rag-blu); }
+    .stat-box .lbl { font-size: .78rem; color: #5b6b7c; }
+    .legenda-cod { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0; }
+    .legenda-cod span { padding: .2rem .6rem; border-radius: 4px; color: #fff; font-weight: 700; font-size: .8rem; }
+    .legenda-cod .r { background: #DC3545; }
+    .legenda-cod .g { background: #F4B700; color: #17324D; }
+    .legenda-cod .v { background: #198754; }
+    .legenda-cod .n { background: #222; }
+  </style>
+</head>
+<body class="rag-body">
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/ragazzi/">Ragazzi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Triage S.T.A.R.T.</li>
+          </ol>
+        </nav>
+        <h1>Triage S.T.A.R.T.</h1>
+        <p class="lead">Otto feriti, poche risorse, un minuto per paziente. Assegna il codice corretto con il metodo <abbr title="Simple Triage And Rapid Treatment">S.T.A.R.T.</abbr></p>
+      </div>
+    </div>
+
+    <div class="container py-4" style="max-width: 820px;">
+
+      <section id="intro" class="intro-card">
+        <h2 class="h4 mb-3">Cos'è il triage</h2>
+        <p>Quando i feriti sono molti e i soccorritori pochi, il <strong>triage</strong> stabilisce l'ordine di trattamento. In Italia per le maxi-emergenze extraospedaliere si usa il metodo <strong>S.T.A.R.T.</strong> (Simple Triage And Rapid Treatment), ideato negli anni Ottanta in California.</p>
+
+        <div class="legenda-cod" aria-label="Codici colore del triage">
+          <span class="r">ROSSO — critico</span>
+          <span class="g">GIALLO — differibile</span>
+          <span class="v">VERDE — lieve</span>
+          <span class="n">NERO — deceduto</span>
+        </div>
+
+        <p>Il metodo segue una sequenza semplice di domande:</p>
+        <div class="flow-box">
+1. Il paziente cammina da solo?
+   SÌ → VERDE (lieve, può attendere)
+2. Respira dopo apertura vie aeree?
+   NO → NERO (deceduto)
+3. Frequenza respiratoria &gt; 30/min?
+   SÌ → ROSSO (critico)
+4. Polso radiale assente o refill capillare &gt; 2s?
+   SÌ → ROSSO
+5. Risponde agli ordini semplici?
+   NO → ROSSO · SÌ → GIALLO (differibile)
+        </div>
+
+        <p class="small text-muted mb-3"><i class="bi bi-info-circle me-1"></i>Questo è uno strumento didattico semplificato: il triage vero si fa in 60 secondi per paziente, su campo, da personale addestrato. Non sostituisce la formazione ufficiale.</p>
+
+        <button id="start-btn" class="btn btn-primary btn-lg">
+          <i class="bi bi-play-fill me-1"></i> Inizia la simulazione
+        </button>
+      </section>
+
+      <section id="game" class="hide">
+        <div class="progress-bar-holder"><div id="progress-bar" style="width:0%"></div></div>
+        <div class="d-flex justify-content-between mb-2 small text-muted">
+          <span>Paziente <strong id="idx-cur">1</strong> di <strong id="idx-tot">8</strong></span>
+          <span>Corretti: <strong id="score">0</strong></span>
+        </div>
+
+        <div class="paziente-card">
+          <h2 class="h5 mb-2" id="titolo-paz">Paziente n. 1</h2>
+          <div class="paziente-meta">
+            <span><strong>Età:</strong> <span id="eta">—</span></span>
+            <span><strong>Sesso:</strong> <span id="sesso">—</span></span>
+            <span><strong>Scenario:</strong> <span id="scenario">—</span></span>
+          </div>
+          <p class="mb-1"><strong>Descrizione:</strong></p>
+          <p id="descr" class="mb-2">...</p>
+
+          <div class="sintomi" id="sintomi" aria-label="Parametri clinici"></div>
+
+          <p class="mb-2"><strong>Qual è il codice corretto?</strong></p>
+          <div class="codici">
+            <button class="btn-cod rosso" data-cod="rosso">ROSSO<small>critico</small></button>
+            <button class="btn-cod giallo" data-cod="giallo">GIALLO<small>differibile</small></button>
+            <button class="btn-cod verde" data-cod="verde">VERDE<small>lieve</small></button>
+            <button class="btn-cod nero" data-cod="nero">NERO<small>deceduto</small></button>
+          </div>
+
+          <div id="esito" class="esito hide" aria-live="polite"></div>
+          <div class="mt-3 text-end hide" id="next-wrap">
+            <button id="next-btn" class="btn btn-primary">Prossimo paziente <i class="bi bi-arrow-right ms-1"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="end" class="intro-card hide">
+        <h2 class="h3 mb-3"><i class="bi bi-award-fill text-warning me-2"></i>Fine simulazione</h2>
+        <div class="stat-row">
+          <div class="stat-box"><div class="num" id="end-score">0</div><div class="lbl">Triage corretti</div></div>
+          <div class="stat-box"><div class="num" id="end-rossi">0</div><div class="lbl">Rossi individuati</div></div>
+          <div class="stat-box"><div class="num" id="end-err">0</div><div class="lbl">Errori critici</div></div>
+        </div>
+        <p id="end-msg"></p>
+        <p class="small text-muted">Gli <strong>errori critici</strong> sono quelli in cui un ROSSO è stato sottovalutato (assegnato verde/giallo): sul campo reale, rallentano il soccorso ai pazienti più gravi.</p>
+        <div class="attestato-inject my-3"></div>
+        <div class="d-flex flex-wrap gap-2">
+          <button id="restart-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i>Ricomincia</button>
+          <a href="../index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left me-1"></i>Altri giochi</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    // Ogni paziente: metadati + parametri visibili + codice corretto + spiegazione
+    var PAZIENTI = [
+      { eta: 34, sesso: 'M', scenario: 'Crollo parziale edificio',
+        descr: 'Estratto da pochi minuti, lamenta dolore a un braccio ma cammina autonomamente verso i soccorritori.',
+        sintomi: [
+          ['person-walking', 'Cammina da solo: SÌ']
+        ],
+        cod: 'verde',
+        spiega: 'Regola 1 S.T.A.R.T.: chi cammina da solo è codice VERDE (lieve). Può attendere, non ha lesioni che compromettono la vita.' },
+
+      { eta: 58, sesso: 'F', scenario: 'Incidente autobus',
+        descr: 'A terra, immobile, con evidente trauma cranico. Dopo apertura manuale delle vie aeree non riprende a respirare.',
+        sintomi: [
+          ['x-lg', 'Non cammina'],
+          ['lungs', 'Respiro: assente anche dopo apertura vie aeree']
+        ],
+        cod: 'nero',
+        spiega: 'Regola 2: se non respira dopo apertura delle vie aeree, codice NERO. Doloroso, ma il metodo destina le risorse ai recuperabili.' },
+
+      { eta: 22, sesso: 'M', scenario: 'Esplosione fuga di gas',
+        descr: 'A terra, non cammina, respira con difficoltà. Contato respiro a 36/min. Polso radiale presente.',
+        sintomi: [
+          ['x-lg', 'Non cammina'],
+          ['lungs-fill', 'Frequenza respiratoria: 36/min (alta)'],
+          ['heart-pulse', 'Polso radiale presente']
+        ],
+        cod: 'rosso',
+        spiega: 'Regola 3: frequenza respiratoria > 30/min indica distress respiratorio: codice ROSSO, priorità massima.' },
+
+      { eta: 71, sesso: 'F', scenario: 'Alluvione abitazione',
+        descr: 'Soccorsa dall\'acqua, non cammina per frattura evidente al femore. Respiro 18/min, polso radiale presente, risponde lucidamente alle domande.',
+        sintomi: [
+          ['x-lg', 'Non cammina (frattura femore)'],
+          ['lungs', 'Respiro: 18/min (normale)'],
+          ['heart-pulse', 'Polso radiale: presente'],
+          ['chat-text', 'Risponde lucidamente']
+        ],
+        cod: 'giallo',
+        spiega: 'Regola 5: respira normalmente, perfonde, risponde. La frattura è grave ma il quadro è stabile: codice GIALLO (differibile).' },
+
+      { eta: 8, sesso: 'F', scenario: 'Incidente parco giochi',
+        descr: 'Piange e chiama la mamma. Escoriazione al ginocchio. Cammina.',
+        sintomi: [
+          ['person-walking', 'Cammina'],
+          ['bandaid', 'Escoriazione minore'],
+          ['chat-text', 'Cosciente, piange']
+        ],
+        cod: 'verde',
+        spiega: 'Cammina da sola: codice VERDE. Sta benissimo per i parametri START, la situazione richiede conforto e medicazione non urgente.' },
+
+      { eta: 45, sesso: 'M', scenario: 'Incidente ferroviario',
+        descr: 'A terra, non cammina. Respira 14/min. Polso radiale assente. Non risponde agli ordini.',
+        sintomi: [
+          ['x-lg', 'Non cammina'],
+          ['lungs', 'Respiro: 14/min'],
+          ['heart', 'Polso radiale: assente'],
+          ['x-circle', 'Non risponde ad ordini']
+        ],
+        cod: 'rosso',
+        spiega: 'Regola 4: polso radiale assente (pressione bassa) = ROSSO. La vittima è in shock, necessita intervento immediato.' },
+
+      { eta: 28, sesso: 'F', scenario: 'Terremoto',
+        descr: 'Estratta dalle macerie, non cammina per schiacciamento bacino. Respira 22/min, polso presente, risponde correttamente quando le si chiede come si chiama.',
+        sintomi: [
+          ['x-lg', 'Non cammina'],
+          ['lungs', 'Respiro: 22/min (normale)'],
+          ['heart-pulse', 'Polso radiale: presente'],
+          ['chat-text', 'Risponde ad ordini: SÌ']
+        ],
+        cod: 'giallo',
+        spiega: 'Parametri tutti compensati: la lesione è grave ma il paziente regge. Codice GIALLO, da rivalutare spesso.' },
+
+      { eta: 63, sesso: 'M', scenario: 'Incendio condominio',
+        descr: 'Soccorso da balcone, non cammina, respira 34/min con tosse catarrale, ustione al 15% sup. corporea. Polso presente.',
+        sintomi: [
+          ['x-lg', 'Non cammina'],
+          ['lungs-fill', 'Respiro: 34/min (alto, con tosse)'],
+          ['fire', 'Ustioni ~15%'],
+          ['heart-pulse', 'Polso radiale: presente']
+        ],
+        cod: 'rosso',
+        spiega: 'Respiro > 30/min: ROSSO. L\'ustione e la probabile inalazione fumo aggravano, ma la decisione START si ferma al primo criterio positivo.' }
+    ];
+
+    var intro = document.getElementById('intro'),
+        game = document.getElementById('game'),
+        endScreen = document.getElementById('end');
+    var pazTitolo = document.getElementById('titolo-paz'),
+        etaEl = document.getElementById('eta'),
+        sessoEl = document.getElementById('sesso'),
+        scenarioEl = document.getElementById('scenario'),
+        descrEl = document.getElementById('descr'),
+        sintomiWrap = document.getElementById('sintomi'),
+        esito = document.getElementById('esito'),
+        nextWrap = document.getElementById('next-wrap'),
+        progressBar = document.getElementById('progress-bar'),
+        idxCur = document.getElementById('idx-cur'),
+        idxTot = document.getElementById('idx-tot'),
+        scoreEl = document.getElementById('score');
+    var btnCods = document.querySelectorAll('.btn-cod');
+    var queue = [], idx = 0, score = 0, rossiOk = 0, erroriCritici = 0;
+
+    function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+
+    function start(){
+      intro.classList.add('hide'); endScreen.classList.add('hide'); game.classList.remove('hide');
+      queue = shuffle(PAZIENTI.slice());
+      idx = 0; score = 0; rossiOk = 0; erroriCritici = 0;
+      scoreEl.textContent = '0'; idxTot.textContent = queue.length;
+      mostra();
+    }
+
+    function mostra(){
+      var p = queue[idx];
+      pazTitolo.textContent = 'Paziente n. ' + (idx + 1);
+      etaEl.textContent = p.eta + ' anni';
+      sessoEl.textContent = p.sesso === 'M' ? 'maschile' : 'femminile';
+      scenarioEl.textContent = p.scenario;
+      descrEl.textContent = p.descr;
+      sintomiWrap.innerHTML = '';
+      p.sintomi.forEach(function(s){
+        var div = document.createElement('div');
+        div.className = 'sintomo';
+        div.innerHTML = '<i class="bi bi-' + s[0] + '"></i> ' + s[1];
+        sintomiWrap.appendChild(div);
+      });
+      esito.classList.add('hide'); esito.classList.remove('ok','ko'); esito.innerHTML = '';
+      nextWrap.classList.add('hide');
+      btnCods.forEach(function(b){ b.disabled = false; });
+      idxCur.textContent = idx + 1;
+      progressBar.style.width = ((idx / queue.length) * 100) + '%';
+    }
+
+    function rispondi(cod){
+      var p = queue[idx];
+      btnCods.forEach(function(b){ b.disabled = true; });
+      var CODNAMES = { rosso:'ROSSO', giallo:'GIALLO', verde:'VERDE', nero:'NERO' };
+      if (cod === p.cod){
+        score++; scoreEl.textContent = score;
+        if (p.cod === 'rosso') rossiOk++;
+        esito.classList.remove('ko'); esito.classList.add('ok');
+        esito.innerHTML = '<strong><i class="bi bi-check-circle-fill me-1"></i>Corretto: ' + CODNAMES[p.cod] + '.</strong> ' + p.spiega;
+      } else {
+        if (p.cod === 'rosso' && (cod === 'verde' || cod === 'giallo')) erroriCritici++;
+        esito.classList.remove('ok'); esito.classList.add('ko');
+        esito.innerHTML = '<strong><i class="bi bi-x-circle-fill me-1"></i>Sbagliato.</strong> Tu hai scelto <strong>' + CODNAMES[cod] + '</strong>, il codice corretto era <strong>' + CODNAMES[p.cod] + '</strong>. ' + p.spiega;
+      }
+      esito.classList.remove('hide');
+      nextWrap.classList.remove('hide');
+    }
+
+    function next(){
+      idx++;
+      if (idx >= queue.length) fine();
+      else mostra();
+    }
+
+    function fine(){
+      game.classList.add('hide'); endScreen.classList.remove('hide');
+      progressBar.style.width = '100%';
+      document.getElementById('end-score').textContent = score + '/' + queue.length;
+      document.getElementById('end-rossi').textContent = rossiOk;
+      document.getElementById('end-err').textContent = erroriCritici;
+      var msg;
+      if (erroriCritici === 0 && score >= queue.length - 1) msg = 'Eccellente. Hai riconosciuto tutti i rossi senza sottovalutazioni: su un campo reale avresti dato la priorità giusta.';
+      else if (erroriCritici === 0) msg = 'Bene: nessun errore critico. Qualche classificazione fra giallo e verde può ancora essere affinata.';
+      else if (erroriCritici <= 1) msg = 'Attenzione: un paziente critico è stato sottovalutato. Il metodo START previene proprio questo — ripassa i criteri.';
+      else msg = 'Diversi errori critici. Il triage protegge la vita di chi è più grave: riprova concentrandoti sul respiro (>30/min) e sul polso radiale.';
+      document.getElementById('end-msg').textContent = msg;
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('triage-start', score, queue.length, '#end');
+    }
+
+    document.getElementById('start-btn').addEventListener('click', start);
+    document.getElementById('restart-btn').addEventListener('click', start);
+    document.getElementById('next-btn').addEventListener('click', next);
+    btnCods.forEach(function(b){ b.addEventListener('click', function(){ rispondi(b.getAttribute('data-cod')); }); });
+  })();
+  </script>
+</body>
+</html>
