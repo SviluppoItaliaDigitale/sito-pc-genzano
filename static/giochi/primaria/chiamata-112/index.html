@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chiamata al 112 — Giochi Protezione Civile</title>
+  <meta name="description" content="Simula una chiamata al Numero Unico di Emergenza 112. Rispondi alle domande dell'operatore e impara cosa dire davvero in emergenza.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <style>
+    .screen { display: block; }
+    .screen.hide { display: none !important; }
+
+    .regole-box {
+      background: #e8f0fe; border-left: 4px solid #003366; border-radius: 10px;
+      padding: 1rem 1.2rem; margin-bottom: 1rem;
+    }
+    .regole-box h2 { color: #003366; font-size: 1.1rem; margin-top: 0; margin-bottom: .5rem; }
+    .regole-box ul { margin: 0; padding-left: 1.2rem; }
+    .regole-box li { margin-bottom: .3rem; }
+
+    .scenario-card {
+      background: #fff; border-radius: 12px; padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06); cursor: pointer;
+      border: 2px solid transparent; transition: all .2s;
+      height: 100%;
+    }
+    .scenario-card:hover, .scenario-card:focus {
+      border-color: #003366; transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0,51,102,.18);
+    }
+    .scenario-card h3 { color: #003366; font-size: 1.05rem; margin-top: .5rem; margin-bottom: .3rem; }
+    .scenario-card .sc-icon { font-size: 2.4rem; }
+    .scenario-card p { margin: 0; color: #5b6b7c; font-size: .92rem; }
+
+    .call-top {
+      background: linear-gradient(135deg, #0b2545 0%, #003366 100%);
+      color: #fff; border-radius: 16px 16px 0 0;
+      padding: 1rem 1.2rem; display: flex; align-items: center; gap: .8rem;
+    }
+    .call-top .call-icon {
+      width: 48px; height: 48px; border-radius: 50%; background: #fff;
+      color: #003366; display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; flex-shrink: 0;
+    }
+    .call-top .call-info { flex: 1; min-width: 0; }
+    .call-top .call-label { font-size: .8rem; opacity: .85; margin: 0; }
+    .call-top .call-number { font-size: 1.2rem; font-weight: 700; margin: 0; }
+    .call-top .call-duration {
+      background: rgba(255,255,255,.15); padding: .2rem .6rem;
+      border-radius: 12px; font-size: .85rem; font-variant-numeric: tabular-nums;
+    }
+
+    .dialog {
+      background: #f3f6fa;
+      padding: 1rem; border-radius: 0 0 16px 16px;
+      min-height: 300px;
+    }
+
+    .bubble {
+      max-width: 85%; padding: .7rem 1rem; border-radius: 14px;
+      margin-bottom: .7rem; line-height: 1.45; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    }
+    .bubble-op {
+      background: #fff; color: #1a1a1a; border-top-left-radius: 4px;
+      align-self: flex-start; margin-right: auto;
+    }
+    .bubble-me {
+      background: #cfe2ff; color: #003366; border-top-right-radius: 4px;
+      margin-left: auto; text-align: left;
+    }
+    .bubble-system {
+      background: #fff3cd; color: #664d03; max-width: 100%; text-align: center;
+      font-size: .9rem; font-style: italic; border-radius: 10px;
+    }
+    .bubble small { display: block; opacity: .75; font-size: .75rem; margin-bottom: .2rem; }
+    .bubble-op small { color: #003366; font-weight: 600; }
+    .bubble-me small { color: #003366; text-align: right; font-weight: 600; }
+
+    .dialog-flow { display: flex; flex-direction: column; }
+
+    .options { display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; }
+    .opt-btn {
+      text-align: left; padding: .7rem .9rem; border-radius: 10px;
+      background: #fff; border: 2px solid #cfd6df; color: #1a1a1a;
+      font-size: .95rem; line-height: 1.4;
+      transition: all .15s; cursor: pointer;
+    }
+    .opt-btn:hover, .opt-btn:focus {
+      border-color: #003366; background: #eef4fb;
+      outline: 2px solid #003366; outline-offset: 2px;
+    }
+    .opt-btn:disabled { cursor: default; opacity: .8; }
+    .opt-btn.ok {
+      background: #d1e7dd; border-color: #198754; color: #0f5132;
+    }
+    .opt-btn.ko {
+      background: #f8d7da; border-color: #dc3545; color: #842029;
+    }
+    .opt-btn.meh {
+      background: #fff3cd; border-color: #b45309; color: #664d03;
+    }
+
+    .feedback-box {
+      background: #eef4fb; border-left: 4px solid #003366;
+      padding: .7rem 1rem; border-radius: 0 10px 10px 0;
+      margin-top: .8rem; font-size: .95rem;
+    }
+    .feedback-box.ok { background: #d1e7dd; border-color: #198754; }
+    .feedback-box.ko { background: #f8d7da; border-color: #dc3545; }
+    .feedback-box.meh { background: #fff3cd; border-color: #b45309; }
+    .feedback-box strong { display: block; margin-bottom: .3rem; }
+
+    .hud {
+      display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .hud-pill {
+      background: #fff; border: 2px solid #003366; border-radius: 20px;
+      padding: .3rem .9rem; font-size: .9rem; font-weight: 600; color: #003366;
+    }
+    .hud-pill.punt { border-color: #198754; color: #198754; }
+
+    .end-box {
+      background: #fff; border-radius: 12px; padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08); text-align: center;
+    }
+    .end-box h2 { color: #003366; }
+
+    @media (max-width: 576px) {
+      .call-top .call-duration { display: none; }
+      .bubble { max-width: 95%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scenario-card, .opt-btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content" tabindex="-1" class="giochi-section">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Scuola Primaria</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chiamata al 112</li>
+          </ol>
+        </nav>
+        <h1>Chiamata al 112</h1>
+        <p class="lead">Hai composto il 112. L'operatore risponde. Impara che cosa dire e che cosa chiede davvero chi è al telefono.</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+          <!-- SCHERMATA SCELTA -->
+          <div id="select-screen" class="screen">
+            <div class="regole-box">
+              <h2><i class="bi bi-info-circle-fill me-1" aria-hidden="true"></i>Come funziona il gioco</h2>
+              <ul>
+                <li><strong>112</strong> è il Numero Unico di Emergenza. Si chiama solo quando c'è un vero pericolo.</li>
+                <li>Quando rispondono, prova a essere <strong>calmo</strong>: l'operatore ti aiuta con domande semplici.</li>
+                <li>Scegli tu uno scenario: vivrai la chiamata passo passo e sceglierai la risposta giusta.</li>
+                <li>Se sbagli non succede niente: ti spieghiamo perché un'altra risposta è migliore.</li>
+                <li><strong>Non è una vera chiamata</strong>: è un gioco per imparare. Non comporre il 112 per esercitarti davvero.</li>
+              </ul>
+            </div>
+
+            <h2 class="h5 text-center mt-4 mb-3">Scegli una situazione</h2>
+            <div class="row g-3" id="scenario-list"></div>
+          </div>
+
+          <!-- SCHERMATA GIOCO -->
+          <div id="call-screen" class="screen hide">
+            <div class="hud">
+              <span class="hud-pill" id="hud-scenario">—</span>
+              <span class="hud-pill" id="hud-step">Passo 1 di 1</span>
+              <span class="hud-pill punt" id="hud-score">Punti: 0</span>
+            </div>
+
+            <div class="call-top">
+              <div class="call-icon" aria-hidden="true"><i class="bi bi-telephone-fill"></i></div>
+              <div class="call-info">
+                <p class="call-label">Chiamata in corso</p>
+                <p class="call-number">112 — Numero Unico Emergenze</p>
+              </div>
+              <span class="call-duration" id="call-duration">00:00</span>
+            </div>
+
+            <div class="dialog" aria-live="polite">
+              <div class="dialog-flow" id="dialog-flow"></div>
+              <div id="options" class="options" role="group" aria-label="Come rispondi all'operatore"></div>
+              <div id="feedback" class="feedback-box hide" aria-live="polite"></div>
+              <div class="text-center mt-3">
+                <button id="next-btn" class="btn btn-primary hide">Avanti <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SCHERMATA FINE -->
+          <div id="end-screen" class="screen hide">
+            <div class="end-box">
+              <div class="app-card-icon icon-blue mx-auto mb-3" style="width:70px;height:70px;font-size:2rem;">
+                <i class="bi bi-telephone-inbound-fill" aria-hidden="true"></i>
+              </div>
+              <h2>Chiamata conclusa</h2>
+              <p class="lead" id="end-msg">Ottimo lavoro!</p>
+              <p class="text-muted">Punteggio: <strong><span id="end-score">0</span></strong> su <strong><span id="end-max">0</span></strong></p>
+              <div id="attestato-box" class="my-3"></div>
+              <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                <button id="another-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i>Prova un altro scenario</button>
+                <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Torna ai giochi</a>
+              </div>
+            </div>
+
+            <div class="regole-box mt-4">
+              <h2><i class="bi bi-star-fill me-1" aria-hidden="true"></i>Ricorda sempre</h2>
+              <ul>
+                <li>Nel Lazio il numero da chiamare è <strong>112</strong>: è gratis e funziona anche senza credito.</li>
+                <li>Dì subito <strong>cosa succede</strong>, <strong>dove sei</strong>, <strong>chi ha bisogno</strong>.</li>
+                <li>Parla <strong>calmo e chiaro</strong>. Non chiudere la chiamata: l'operatore ti dice lui quando farlo.</li>
+                <li>Se puoi, chiedi aiuto a un <strong>adulto</strong>. Ma se non c'è, puoi chiamare tu.</li>
+                <li>Non chiamare il 112 per scherzo: <strong>è un reato</strong> e sottrae aiuto a chi ne ha davvero bisogno.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    var SCENARI = [
+      {
+        id: 'incendio-cucina',
+        icon: '\uD83D\uDD25',
+        titolo: 'Fumo dalla cucina',
+        intro: 'Sei a casa con la nonna. Dalla cucina esce fumo nero e si sente un odore forte di bruciato. La nonna ti chiede di chiamare aiuto. Componi il 112.',
+        steps: [
+          {
+            op: 'Numero Unico Emergenze, buongiorno. Cosa sta succedendo?',
+            opCtx: 'Apertura della chiamata',
+            options: [
+              { text: 'C\'\u00e8 del fumo nero che esce dalla cucina di casa mia.', kind: 'ok', fb: 'Perfetto: in una frase hai detto che cosa succede e dove. L\'operatore capisce subito che serve intervenire sul fuoco.' },
+              { text: 'Non lo so, forse qualcosa.', kind: 'meh', fb: 'Troppo vago. L\'operatore non ha informazioni sufficienti per aiutarti. Spiega in modo semplice che cosa vedi: fumo, fiamme, odore.' },
+              { text: 'Niente, volevo solo parlare con qualcuno.', kind: 'ko', fb: 'Il 112 si chiama solo per vere emergenze. Le chiamate scherzose sono un reato e tolgono tempo a chi ha davvero bisogno di aiuto.' }
+            ]
+          },
+          {
+            op: 'Mi dica dove si trova. Via, numero, citt\u00e0.',
+            opCtx: 'Localizzazione',
+            options: [
+              { text: 'Via Roma 12, terzo piano, a Genzano di Roma.', kind: 'ok', fb: 'Perfetto. L\'indirizzo completo (via, numero, piano e comune) permette ai soccorsi di arrivare subito.' },
+              { text: 'A casa mia, vicino alla scuola.', kind: 'meh', fb: 'L\'operatore non pu\u00f2 sapere qual \u00e8 la tua scuola. Servono indirizzo e comune precisi.' },
+              { text: 'Non lo dico, mi hanno detto di non dare il mio indirizzo.', kind: 'ko', fb: 'Al 112 puoi e devi dire dove sei: \u00e8 l\'unico modo per aiutarti. Il 112 non \u00e8 una persona sconosciuta: \u00e8 un servizio pubblico di emergenza.' }
+            ]
+          },
+          {
+            op: 'Ci sono altre persone in casa con lei?',
+            opCtx: 'Persone presenti',
+            options: [
+              { text: 'S\u00ec, c\'\u00e8 mia nonna. \u00c8 spaventata ma sta bene.', kind: 'ok', fb: 'Ottimo: sai dire chi c\'\u00e8 e come sta. Questa informazione aiuta le squadre a sapere quante persone aiutare.' },
+              { text: 'Non saprei.', kind: 'meh', fb: 'Prova a guardarti intorno e a contare chi c\'\u00e8 con te: anche solo "io e la nonna" aiuta molto.' },
+              { text: 'Non \u00e8 una sua domanda, non le rispondo.', kind: 'ko', fb: 'L\'operatore chiede queste cose per mandarti i soccorsi giusti. \u00c8 una domanda normale delle emergenze.' }
+            ]
+          },
+          {
+            op: 'Mi dica il suo nome e quanti anni ha.',
+            opCtx: 'Identit\u00e0 di chi chiama',
+            options: [
+              { text: 'Mi chiamo Marco Rossi, ho 9 anni.', kind: 'ok', fb: 'Perfetto. Nome, cognome ed et\u00e0: l\'operatore sa con chi sta parlando e capisce se sei un bambino.' },
+              { text: 'Chiamami Superman.', kind: 'meh', fb: 'Al 112 si dice il nome vero. Non \u00e8 un gioco: stanno mandando persone ad aiutarti.' },
+              { text: 'Non posso dirlo, non conosco questa persona.', kind: 'ko', fb: 'Il 112 \u00e8 sempre un numero affidabile. Nome ed et\u00e0 servono per mandare gli aiuti giusti.' }
+            ]
+          },
+          {
+            op: 'Restate fuori dalla stanza del fumo. Non torni in cucina per niente. Ha capito?',
+            opCtx: 'Istruzioni di autoprotezione',
+            options: [
+              { text: 'S\u00ec, siamo usciti dalla cucina. Aspettiamo con la nonna vicino alla porta di casa.', kind: 'ok', fb: 'Bravissimo. Allontanarsi dal fumo e restare insieme \u00e8 la cosa pi\u00f9 importante da fare.' },
+              { text: 'Rientro in cucina a prendere il telefono e le mie cose.', kind: 'ko', fb: 'Mai tornare verso il fumo o il fuoco per prendere oggetti. La vita vale pi\u00f9 di qualsiasi cosa.' },
+              { text: 'Apro tutte le finestre cos\u00ec se ne va il fumo.', kind: 'meh', fb: 'Aprire le finestre pu\u00f2 alimentare il fuoco. Meglio chiudere le porte, uscire e aspettare i pompieri.' }
+            ]
+          },
+          {
+            op: 'Rimanga in linea. I Vigili del Fuoco stanno arrivando. Non chiuda la chiamata.',
+            opCtx: 'Chiusura della chiamata',
+            options: [
+              { text: 'Va bene, resto al telefono con lei fino a quando arrivano.', kind: 'ok', fb: 'Esatto. L\'operatore chiude per primo la chiamata solo quando \u00e8 sicuro che la situazione sia sotto controllo.' },
+              { text: 'Ok, chiudo subito cos\u00ec non consumo la batteria.', kind: 'ko', fb: 'Non chiudere mai prima: l\'operatore potrebbe dover aggiornare i soccorsi o darti istruzioni importanti.' },
+              { text: 'Chiamo anche i pompieri cos\u00ec arrivano prima.', kind: 'meh', fb: 'Non serve. Il 112 \u00e8 gi\u00e0 in contatto con i Vigili del Fuoco: altre chiamate rallentano solo l\'intervento.' }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'bimbo-caduto',
+        icon: '\uD83D\uDEB2',
+        titolo: 'Caduta al parco',
+        intro: 'Sei al parco con il tuo amico Luca. Cadendo dalla bicicletta si fa male a una gamba e non riesce a rialzarsi. Non ci sono adulti vicino. Componi il 112.',
+        steps: [
+          {
+            op: 'Numero Unico Emergenze, buongiorno. Mi dica cosa \u00e8 successo.',
+            opCtx: 'Apertura della chiamata',
+            options: [
+              { text: 'Un bambino \u00e8 caduto dalla bicicletta e non riesce a muovere la gamba.', kind: 'ok', fb: 'Chiaro e preciso. L\'operatore capisce subito che serve un\'ambulanza per un possibile infortunio.' },
+              { text: 'Un mio amico \u00e8 stanco.', kind: 'meh', fb: 'Cos\u00ec non sembra un\'emergenza. Descrivi l\'incidente: \u00e8 caduto, si \u00e8 fatto male, non si muove.' },
+              { text: 'Venite subito, siamo in pericolo di morte!', kind: 'meh', fb: 'Evita frasi esagerate. Dire con calma "\u00e8 caduto dalla bici e si \u00e8 fatto male" \u00e8 pi\u00f9 utile per capire che cosa serve.' }
+            ]
+          },
+          {
+            op: 'Mi dica dove siete esattamente.',
+            opCtx: 'Localizzazione',
+            options: [
+              { text: 'Al parco del Castello di Genzano di Roma, vicino al campo da calcio.', kind: 'ok', fb: 'Bene: nome del parco, citt\u00e0 e punto di riferimento. I soccorritori trovano il posto subito.' },
+              { text: 'Siamo al parco.', kind: 'meh', fb: 'I parchi sono tanti. Di\u2019 il nome del parco e la citt\u00e0. Se puoi, aggiungi un punto di riferimento.' },
+              { text: 'Boh, siamo in giro in bici.', kind: 'ko', fb: 'Senza un indirizzo i soccorsi non possono arrivare. Guarda intorno: nome del parco, via, negozi vicini.' }
+            ]
+          },
+          {
+            op: 'Il bambino \u00e8 cosciente? Riesce a parlare?',
+            opCtx: 'Condizioni del ferito',
+            options: [
+              { text: 'S\u00ec, parla e piange, ma non riesce a muovere la gamba destra.', kind: 'ok', fb: 'Perfetto: sai dire che \u00e8 cosciente (parla) e qual \u00e8 il problema (gamba). L\'operatore prepara il tipo di ambulanza giusto.' },
+              { text: 'Non lo so, non gli ho chiesto.', kind: 'meh', fb: 'Chiediglielo a voce mentre parli al telefono: "Luca, mi senti? Ti fa male qui?". Anche una risposta a met\u00e0 \u00e8 un\'informazione.' },
+              { text: 'Lo sto scuotendo per svegliarlo.', kind: 'ko', fb: 'Non muovere e non scuotere mai una persona caduta: potresti peggiorare un infortunio alla schiena. Chiamalo a voce e aspetta i soccorsi.' }
+            ]
+          },
+          {
+            op: 'Qual \u00e8 il suo nome? Quanti anni ha lei?',
+            opCtx: 'Identit\u00e0 di chi chiama',
+            options: [
+              { text: 'Sono Giulia Bianchi, ho 10 anni.', kind: 'ok', fb: 'Perfetto. Nome ed et\u00e0 danno all\'operatore un\'idea di chi \u00e8 al telefono e come dialogare con te.' },
+              { text: 'Non posso dare i miei dati a un numero sconosciuto.', kind: 'ko', fb: 'Il 112 non \u00e8 un numero sconosciuto: \u00e8 un servizio pubblico di emergenza. Al 112 si pu\u00f2 sempre dire il proprio nome.' },
+              { text: 'Gigi la trottola.', kind: 'meh', fb: 'Al 112 si dice il nome vero. Non \u00e8 il momento di scherzare.' }
+            ]
+          },
+          {
+            op: 'Resti vicino al bambino senza spostarlo. Copra la sua gamba ma non la tocchi.',
+            opCtx: 'Istruzioni di primo soccorso',
+            options: [
+              { text: 'Va bene, resto accanto a lui e non lo sposto. Gli dico che l\'ambulanza sta arrivando.', kind: 'ok', fb: 'Bravissima. Stare vicino, parlare con voce calma e non muovere il ferito \u00e8 il comportamento giusto.' },
+              { text: 'Lo prendo in braccio e lo porto a casa sua.', kind: 'ko', fb: 'Mai spostare una persona caduta: potresti peggiorare le ferite. Aspetta sempre i soccorsi.' },
+              { text: 'Lo tiro su per il braccio cos\u00ec vede se riesce a camminare.', kind: 'ko', fb: 'Mai sollevare qualcuno che si \u00e8 fatto male. Un osso rotto o una ferita alla schiena possono peggiorare tanto.' }
+            ]
+          },
+          {
+            op: 'Resti in linea. L\'ambulanza \u00e8 gi\u00e0 in viaggio. Mi avvisa se cambia qualcosa.',
+            opCtx: 'Chiusura della chiamata',
+            options: [
+              { text: 'Va bene, resto al telefono e la avviso se Luca si sente peggio.', kind: 'ok', fb: 'Esatto. Restare in linea permette di aggiornare i soccorsi fino al loro arrivo.' },
+              { text: 'Chiudo, cos\u00ec non consumo la batteria del telefono.', kind: 'ko', fb: 'Non chiudere mai prima dell\'operatore: se Luca peggiora, chi avvisa l\'ambulanza?' },
+              { text: 'Vado a cercare aiuto altrove, tanto l\'ambulanza arriver\u00e0.', kind: 'meh', fb: 'Meglio restare dove sei: i soccorsi cercano te all\'indirizzo che hai dato. Allontanandoti rischi che non ti trovino.' }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'nonno-male',
+        icon: '\u2764\uFE0F',
+        titolo: 'Il nonno sta male',
+        intro: 'Sei a casa con il nonno. All\'improvviso si lamenta di un forte dolore al petto e fatica a respirare. Non riesci a chiamare i tuoi genitori. Componi il 112.',
+        steps: [
+          {
+            op: 'Numero Unico Emergenze, buongiorno. Cosa succede?',
+            opCtx: 'Apertura della chiamata',
+            options: [
+              { text: 'Mio nonno ha un forte dolore al petto e fatica a respirare.', kind: 'ok', fb: 'Ottimo: sintomo principale (dolore al petto) e difficolt\u00e0 di respiro. L\'operatore attiva subito un\'ambulanza con medico.' },
+              { text: 'Il nonno \u00e8 stanco e si \u00e8 seduto.', kind: 'meh', fb: 'Cos\u00ec sembra una stanchezza normale. Descrivi i sintomi veri: dolore, fiato corto, pallore, sudore freddo.' },
+              { text: 'Ha solo un po\' di tosse.', kind: 'ko', fb: 'Non sottovalutare. Se il nonno ha dolore al petto e non riesce a respirare, dillo subito all\'operatore. Ogni minuto conta.' }
+            ]
+          },
+          {
+            op: 'Mi dica l\'indirizzo completo.',
+            opCtx: 'Localizzazione',
+            options: [
+              { text: 'Via Garibaldi 5, interno 3, a Genzano di Roma. Il citofono \u00e8 "Verdi".', kind: 'ok', fb: 'Ottimo: via, numero, interno, citt\u00e0 e citofono. Gli addetti del 112 non devono cercare niente, arrivano dritti da te.' },
+              { text: 'Abitiamo a Genzano.', kind: 'meh', fb: 'Serve l\'indirizzo preciso: via, numero e citt\u00e0. Se hai il campanello o l\'interno, dillo per aiutare l\'ambulanza.' },
+              { text: 'A casa del nonno, lo sapete voi dov\'\u00e8.', kind: 'ko', fb: 'L\'operatore non sa dove abita il nonno: devi dirglielo tu. Cerca l\'indirizzo sulla posta o sul contatore se non lo ricordi.' }
+            ]
+          },
+          {
+            op: 'Quanti anni ha il nonno? Prende delle medicine abituali?',
+            opCtx: 'Stato di salute',
+            options: [
+              { text: 'Ha 78 anni. Prende medicine per la pressione e per il cuore.', kind: 'ok', fb: 'Molto utile. Et\u00e0 e medicine aiutano il medico a capire subito cosa potrebbe essere successo.' },
+              { text: 'Non lo so proprio.', kind: 'meh', fb: 'Se non ricordi, guarda sul tavolo o sul comodino se ci sono medicine: le scatole parlano pi\u00f9 di noi. Almeno di\u2019 un\'et\u00e0 approssimativa.' },
+              { text: 'Ha 30 anni.', kind: 'ko', fb: 'L\'et\u00e0 sbagliata fa partire un\'ambulanza meno attrezzata. Meglio dire "non so di preciso, ma ha pi\u00f9 di 70 anni".' }
+            ]
+          },
+          {
+            op: '\u00c8 cosciente? Riesce a parlare?',
+            opCtx: 'Stato di coscienza',
+            options: [
+              { text: 'S\u00ec, parla ma \u00e8 pallido e suda molto.', kind: 'ok', fb: 'Informazione importantissima: pallore e sudore freddo con dolore al petto fanno pensare a un problema cardiaco. Il medico arriver\u00e0 pronto.' },
+              { text: 'Si \u00e8 addormentato, lo sto tirando per il braccio.', kind: 'ko', fb: 'Non scuotere il nonno. Se sembra addormentato e non risponde, chiamalo a voce e avvisa subito l\'operatore.' },
+              { text: 'Lo sto facendo sdraiare a testa in gi\u00f9.', kind: 'ko', fb: 'Mai far mettere qualcuno a testa in gi\u00f9. Con problemi al cuore o al respiro, \u00e8 pericoloso. Segui le istruzioni dell\'operatore.' }
+            ]
+          },
+          {
+            op: 'Apra la porta di casa cos\u00ec i soccorritori possono entrare subito. Non sposti il nonno.',
+            opCtx: 'Preparazione all\'arrivo',
+            options: [
+              { text: 'Apro la porta di casa e resto vicino al nonno.', kind: 'ok', fb: 'Perfetto. Aprire la porta fa risparmiare minuti preziosi: i soccorritori entrano subito senza dover suonare e aspettare.' },
+              { text: 'Lo carico in macchina per portarlo in ospedale.', kind: 'ko', fb: 'Mai spostare una persona con dolore al petto. L\'ambulanza ha i medici e le medicine giuste: \u00e8 pi\u00f9 veloce e pi\u00f9 sicuro.' },
+              { text: 'Lo faccio bere un bicchiere d\'acqua e due pillole di zucchero.', kind: 'ko', fb: 'Non dare mai acqua, cibo o medicine a una persona che sta male al petto. Aspetta il medico.' }
+            ]
+          },
+          {
+            op: 'Rimanga al telefono con me. L\'ambulanza sta arrivando.',
+            opCtx: 'Attesa dei soccorsi',
+            options: [
+              { text: 'Va bene, resto in linea. Se il nonno peggiora, le dico subito.', kind: 'ok', fb: 'Esatto. Parlare con l\'operatore fino all\'arrivo dei soccorsi \u00e8 la cosa pi\u00f9 utile che puoi fare.' },
+              { text: 'Chiudo la chiamata per non bloccare la linea.', kind: 'ko', fb: 'Il 112 non si "blocca" come il telefono di casa. Non chiudere mai prima dell\'operatore.' },
+              { text: 'Chiamo anche il 118 cos\u00ec arriva un\'altra ambulanza.', kind: 'meh', fb: 'Nel Lazio il numero unico \u00e8 il 112: chiamate sullo stesso caso moltiplicano la confusione e non accelerano i soccorsi.' }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'terremoto-scuola',
+        icon: '\uD83C\uDF0D',
+        titolo: 'Dopo un terremoto',
+        intro: 'Hai appena sentito una forte scossa di terremoto. Sei rimasto a casa con il fratellino. Un mobile \u00e8 caduto sul suo piede. I tuoi genitori sono fuori. Componi il 112.',
+        steps: [
+          {
+            op: 'Numero Unico Emergenze, buongiorno. Mi dica cosa \u00e8 successo.',
+            opCtx: 'Apertura della chiamata',
+            options: [
+              { text: 'C\'\u00e8 stato un terremoto. A mio fratello \u00e8 caduto un mobile sul piede e non riesce a muoverlo.', kind: 'ok', fb: 'Ottimo. Evento (terremoto), conseguenza (mobile caduto) e persona coinvolta (fratello, piede bloccato): l\'operatore capisce subito.' },
+              { text: 'C\'\u00e8 stato un botto grande.', kind: 'meh', fb: 'Spiega meglio: era un terremoto? Una scossa? Un rumore da dentro casa? Aggiungi se ci sono persone ferite.' },
+              { text: 'Niente di grave, sto bene io.', kind: 'ko', fb: 'Se c\'\u00e8 un ferito (tuo fratello), va detto subito. L\'operatore pu\u00f2 aiutarti solo se conosce il problema.' }
+            ]
+          },
+          {
+            op: 'Dove si trova esattamente?',
+            opCtx: 'Localizzazione',
+            options: [
+              { text: 'Via dei Pini 8, primo piano, Genzano di Roma. Citofono "Marini".', kind: 'ok', fb: 'Perfetto. Indirizzo completo e citofono: i soccorsi risparmiano minuti importanti.' },
+              { text: 'In un palazzo di Genzano.', kind: 'meh', fb: 'A Genzano ci sono centinaia di palazzi. Indirizzo, numero civico e piano sono essenziali.' },
+              { text: 'Non so bene, siamo appena arrivati.', kind: 'ko', fb: 'Chiedi ai vicini o guarda una bolletta: il 112 ha bisogno di un indirizzo preciso per mandare aiuto.' }
+            ]
+          },
+          {
+            op: 'Quanti anni hanno lei e suo fratello?',
+            opCtx: 'Identit\u00e0 e soggetti coinvolti',
+            options: [
+              { text: 'Io ho 11 anni. Mio fratello 4.', kind: 'ok', fb: 'Informazione importantissima: un bambino di 4 anni ferito richiede un\'ambulanza con personale pediatrico.' },
+              { text: 'Non mi va di dirlo.', kind: 'ko', fb: 'Al 112 si risponde sempre: et\u00e0 e dati aiutano a mandare i soccorsi giusti.' },
+              { text: 'Abbiamo quella solita et\u00e0 dei bambini.', kind: 'meh', fb: 'Anche un\'et\u00e0 approssimativa aiuta. "Ho pi\u00f9 o meno 10 anni, mio fratello \u00e8 piccolo": meglio di niente.' }
+            ]
+          },
+          {
+            op: '\u00c8 in un luogo sicuro della casa? Ci sono crepe nei muri o vetri rotti?',
+            opCtx: 'Sicurezza del luogo',
+            options: [
+              { text: 'S\u00ec, siamo sotto il tavolo in cucina. Non vedo crepe. Ci sono solo alcuni vasi rotti.', kind: 'ok', fb: 'Ottimo. Sotto un tavolo robusto \u00e8 una delle zone pi\u00f9 sicure dopo un terremoto. Non muoverti se non serve.' },
+              { text: 'Siamo in mezzo alla stanza, sto cercando di aprire la porta.', kind: 'meh', fb: 'Aprire una porta interna va bene, ma prima cerca un riparo sicuro (sotto un tavolo, vicino a un muro portante) in caso di nuove scosse.' },
+              { text: 'Sto uscendo di corsa dalle scale.', kind: 'ko', fb: 'Subito dopo una scossa, le scale possono essere pericolose e l\'ascensore \u00e8 vietato. Meglio aspettare dentro un punto sicuro e uscire con calma quando tutto si ferma.' }
+            ]
+          },
+          {
+            op: 'Non muova suo fratello. Resti con lui e mi tenga aggiornato. Ha il numero dei suoi genitori?',
+            opCtx: 'Istruzioni e contatti',
+            options: [
+              { text: 'S\u00ec, ho il numero di mamma e di pap\u00e0. Sono salvati sul telefono.', kind: 'ok', fb: 'Molto bene. L\'operatore pu\u00f2 consigliarti quando e come chiamarli senza bloccare la linea.' },
+              { text: 'Non serve, tanto arrivano.', kind: 'meh', fb: 'Avvisare i genitori \u00e8 importante. L\'operatore pu\u00f2 aiutarti a dire le cose giuste senza spaventarli troppo.' },
+              { text: 'Li chiamo subito e chiudo con voi.', kind: 'ko', fb: 'Non chiudere con il 112. L\'operatore \u00e8 il tuo primo aiuto: i genitori vanno avvisati dopo o quando ti dice lui.' }
+            ]
+          },
+          {
+            op: 'Resti al telefono. L\'ambulanza e i Vigili del Fuoco stanno arrivando.',
+            opCtx: 'Chiusura della chiamata',
+            options: [
+              { text: 'Va bene. Resto con mio fratello e parlo con lei fino al loro arrivo.', kind: 'ok', fb: 'Perfetto. In emergenze da terremoto, le squadre arrivano pi\u00f9 tardi perch\u00e9 le strade possono essere danneggiate: l\'operatore resta con te tutto il tempo.' },
+              { text: 'Esco di casa a cercare aiuto da solo.', kind: 'ko', fb: 'Dopo un terremoto non uscire se non devi: potresti trovare macerie, vetri o cornicioni pericolosi. Meglio restare al sicuro.' },
+              { text: 'Accendo il gas cos\u00ec mi scaldo mentre aspetto.', kind: 'ko', fb: 'Mai toccare gas, interruttori o fiamme dopo un terremoto. Potrebbero esserci perdite di gas.' }
+            ]
+          }
+        ]
+      }
+    ];
+
+    var selectScreen = document.getElementById('select-screen');
+    var callScreen = document.getElementById('call-screen');
+    var endScreen = document.getElementById('end-screen');
+    var scenarioList = document.getElementById('scenario-list');
+    var dialogFlow = document.getElementById('dialog-flow');
+    var optionsEl = document.getElementById('options');
+    var feedbackEl = document.getElementById('feedback');
+    var nextBtn = document.getElementById('next-btn');
+    var hudScenario = document.getElementById('hud-scenario');
+    var hudStep = document.getElementById('hud-step');
+    var hudScore = document.getElementById('hud-score');
+    var callDuration = document.getElementById('call-duration');
+    var endMsg = document.getElementById('end-msg');
+    var endScore = document.getElementById('end-score');
+    var endMax = document.getElementById('end-max');
+    var anotherBtn = document.getElementById('another-btn');
+
+    var scenario = null;
+    var stepIdx = 0;
+    var score = 0;
+    var maxScore = 0;
+    var timerId = null;
+    var seconds = 0;
+
+    function renderScenarioList() {
+      scenarioList.innerHTML = '';
+      SCENARI.forEach(function (s) {
+        var col = document.createElement('div');
+        col.className = 'col-md-6';
+        var card = document.createElement('div');
+        card.className = 'scenario-card';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.innerHTML =
+          '<span class="sc-icon" aria-hidden="true">' + s.icon + '</span>' +
+          '<h3>' + s.titolo + '</h3>' +
+          '<p>' + s.intro + '</p>';
+        card.addEventListener('click', function () { startScenario(s); });
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startScenario(s); }
+        });
+        col.appendChild(card);
+        scenarioList.appendChild(col);
+      });
+    }
+
+    function startScenario(s) {
+      scenario = s;
+      stepIdx = 0;
+      score = 0;
+      maxScore = s.steps.length;
+      seconds = 0;
+      selectScreen.classList.add('hide');
+      endScreen.classList.add('hide');
+      callScreen.classList.remove('hide');
+      hudScenario.textContent = s.titolo;
+      hudScore.textContent = 'Punti: 0 / ' + maxScore;
+      dialogFlow.innerHTML = '';
+      addBubble('system', 'Chiamata al 112. L\'operatore risponde dopo due squilli.');
+      addBubble('system', s.intro);
+      startTimer();
+      showStep();
+    }
+
+    function startTimer() {
+      stopTimer();
+      updateDuration();
+      timerId = setInterval(function () { seconds++; updateDuration(); }, 1000);
+    }
+    function stopTimer() {
+      if (timerId) { clearInterval(timerId); timerId = null; }
+    }
+    function updateDuration() {
+      var m = Math.floor(seconds / 60);
+      var s = seconds % 60;
+      callDuration.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function addBubble(kind, text, label) {
+      var div = document.createElement('div');
+      div.className = 'bubble bubble-' + kind;
+      if (label) {
+        var small = document.createElement('small');
+        small.textContent = label;
+        div.appendChild(small);
+      }
+      var p = document.createElement('span');
+      p.textContent = text;
+      div.appendChild(p);
+      dialogFlow.appendChild(div);
+      dialogFlow.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
+
+    function showStep() {
+      feedbackEl.classList.add('hide');
+      nextBtn.classList.add('hide');
+      hudStep.textContent = 'Passo ' + (stepIdx + 1) + ' di ' + scenario.steps.length;
+      var step = scenario.steps[stepIdx];
+      addBubble('op', step.op, 'Operatore 112' + (step.opCtx ? ' — ' + step.opCtx : ''));
+      optionsEl.innerHTML = '';
+      var shuffled = step.options.slice().sort(function () { return Math.random() - 0.5; });
+      shuffled.forEach(function (opt) {
+        var btn = document.createElement('button');
+        btn.className = 'opt-btn';
+        btn.type = 'button';
+        btn.textContent = opt.text;
+        btn.addEventListener('click', function () { chooseOption(btn, opt, step, shuffled); });
+        optionsEl.appendChild(btn);
+      });
+    }
+
+    function chooseOption(btn, opt, step, shuffled) {
+      optionsEl.querySelectorAll('button').forEach(function (b) { b.disabled = true; });
+      btn.classList.add(opt.kind);
+      addBubble('me', opt.text, 'La tua risposta');
+      if (opt.kind === 'ok') score++;
+      hudScore.textContent = 'Punti: ' + score + ' / ' + maxScore;
+      feedbackEl.className = 'feedback-box ' + opt.kind;
+      var label = opt.kind === 'ok' ? 'Risposta giusta' : (opt.kind === 'ko' ? 'Risposta sbagliata' : 'Risposta poco utile');
+      feedbackEl.innerHTML = '<strong>' + label + '.</strong>' + opt.fb;
+      feedbackEl.classList.remove('hide');
+      nextBtn.classList.remove('hide');
+      nextBtn.onclick = function () {
+        stepIdx++;
+        if (stepIdx >= scenario.steps.length) finish();
+        else showStep();
+      };
+    }
+
+    function finish() {
+      stopTimer();
+      callScreen.classList.add('hide');
+      endScreen.classList.remove('hide');
+      endScore.textContent = score;
+      endMax.textContent = maxScore;
+      var msg;
+      if (score === maxScore) msg = 'Perfetto! Hai gestito la chiamata al 112 in modo impeccabile.';
+      else if (score >= maxScore - 1) msg = 'Ottimo! Quasi tutto giusto: ricordati come rispondere la prossima volta.';
+      else if (score >= Math.ceil(maxScore / 2)) msg = 'Bravo. Qualche risposta si pu\u00f2 migliorare: rigioca e prova un altro scenario.';
+      else msg = 'Hai fatto pratica: non scoraggiarti. Rileggi i consigli e prova di nuovo.';
+      endMsg.textContent = msg;
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('chiamata-112', score, maxScore, '#end-screen .end-box');
+    }
+
+    anotherBtn.addEventListener('click', function () {
+      endScreen.classList.add('hide');
+      selectScreen.classList.remove('hide');
+    });
+
+    renderScenarioList();
+  })();
+  </script>
+</body>
+</html>
