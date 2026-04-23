@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+# Applica la fascia blu istituzionale a una foto esistente.
+# Input: file sorgente (JPG/PNG/WebP) + nome di output (senza estensione).
+# Output: WebP 1200px in static/images/<nome>.webp con fascia blu in basso,
+# logo, testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari — Genzano di Roma".
+#
+# Uso:
+#   bash scripts/applica-fascia-foto.sh <src.jpg> <nome-output-senza-ext>
+#
+# Esempi:
+#   bash scripts/applica-fascia-foto.sh /home/iu0qvw/Scaricati/Zamberletti.jpg zamberletti-ritratto
+#   bash scripts/applica-fascia-foto.sh /home/iu0qvw/Scaricati/Genzano-alto.jpg 2026-06-23-genzano-infiorata-aerea
+
+set -euo pipefail
+
+SRC="${1:?specifica il file sorgente}"
+NAME="${2:?specifica il nome di output (senza estensione)}"
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+LOGO="$ROOT/static/images/logo-pc-genzano.png"
+OUT="$ROOT/static/images/${NAME}.webp"
+
+W=1200
+BAND_H=100
+PRIMARY="#003366"
+
+if [ ! -f "$SRC" ]; then
+  echo "[error] sorgente non trovata: $SRC" >&2
+  exit 1
+fi
+if [ ! -f "$LOGO" ]; then
+  echo "[error] logo non trovato: $LOGO" >&2
+  exit 1
+fi
+
+# 1) Ridimensiona la foto a larghezza $W (mantieni aspect ratio)
+TMP_PHOTO="$(mktemp --suffix=.png)"
+trap 'rm -f "$TMP_PHOTO"' EXIT
+
+magick "$SRC" -resize "${W}x" -quality 90 "$TMP_PHOTO"
+
+# Altezza effettiva dopo resize
+PH=$(magick identify -format "%h" "$TMP_PHOTO")
+TOTAL_H=$((PH + BAND_H))
+
+# 2) Componi: foto sopra + fascia blu sotto con logo + testo
+magick \
+  -size "${W}x${TOTAL_H}" xc:"$PRIMARY" \
+  \( "$TMP_PHOTO" \) -gravity North -composite \
+  -fill "rgba(255,255,255,0.25)" \
+  -draw "rectangle 0,${PH} ${W},$((PH + 2))" \
+  \( "$LOGO" -resize "72x72" \) -geometry "+90+$((PH + 15))" -composite \
+  -fill "#ffffff" \
+  -font "Liberation-Sans-Bold" -pointsize 26 \
+  -gravity NorthWest \
+  -annotate "+180+$((PH + 22))" "PROTEZIONE CIVILE" \
+  -fill "rgba(255,255,255,0.90)" \
+  -font "Liberation-Sans" -pointsize 16 \
+  -annotate "+180+$((PH + 60))" "Gruppo Comunale Volontari — Genzano di Roma" \
+  -quality 85 \
+  -define webp:method=6 \
+  "$OUT"
+
+# 3) Se > 200 KB, ricomprimi
+SIZE_KB=$(( $(stat -c%s "$OUT") / 1024 ))
+if [ "$SIZE_KB" -gt 200 ]; then
+  magick "$OUT" -quality 75 -define webp:method=6 "$OUT"
+  SIZE_KB=$(( $(stat -c%s "$OUT") / 1024 ))
+fi
+
+echo "[ok] $(basename "$OUT")  (${SIZE_KB} KB, ${W}x${TOTAL_H}px)"

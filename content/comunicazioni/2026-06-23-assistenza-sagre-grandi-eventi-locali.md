@@ -63,7 +63,19 @@ Le attività tipiche dei volontari:
 
 ## La Sagra della Fragola di Genzano
 
-A Genzano la festa tradizionale più importante è la **Infiorata del Corpus Domini** (giugno) con la celebre **tappezzatura floreale** di via Italo Belardi. Altri momenti di grande afflusso:
+A Genzano la festa tradizionale più importante è la **Infiorata del Corpus Domini** (giugno) con la celebre **tappezzatura floreale** di via Italo Belardi.
+
+{{< foto src="/images/2026-06-23-genzano-infiorata-bandiera.webp"
+         alt="Via Italo Belardi a Genzano di Roma durante l'Infiorata del Corpus Domini: il lungo tappeto floreale si estende fino alla chiesa della Santissima Trinità, con la bandiera italiana in primo piano"
+         caption="L'Infiorata di Genzano lungo via Italo Belardi: centinaia di metri di quadri floreali realizzati a mano, richiamano decine di migliaia di visitatori in un solo fine settimana." >}}
+
+L'evento richiama ogni anno decine di migliaia di visitatori che si muovono in una via stretta, chiusa al traffico e delimitata dalle transenne: uno scenario che richiede pianificazione delle vie di fuga, presidi sanitari, monitoraggio meteo e coordinamento costante tra Comune, Polizia Locale, Vigili del Fuoco, ASL e Protezione Civile.
+
+{{< foto src="/images/2026-06-23-genzano-infiorata-aerea.webp"
+         alt="Veduta aerea di Genzano di Roma con il Lago di Nemi sullo sfondo e il tappeto dell'Infiorata che attraversa il centro storico lungo via Italo Belardi"
+         caption="Vista aerea del centro storico di Genzano durante l'Infiorata: il tappeto floreale disegna l'asse urbano principale, dalla Collegiata alla piazza della chiesa di Santa Maria della Cima." >}}
+
+Altri momenti di grande afflusso:
 - **Sagra della Fragola** (giugno).
 - **Festa di Santa Maria della Cima** (agosto).
 - **Eventi culturali** al Palazzo Sforza Cesarini.
