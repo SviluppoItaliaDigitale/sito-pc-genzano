@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Labirinto di Evacuazione — Giochi Protezione Civile</title>
+  <meta name="description" content="Guida l'alunno dalla classe al punto di raccolta seguendo le regole dell'evacuazione scolastica: niente ascensore, niente ritorni, segui le frecce.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <style>
+    .screen { display: block; }
+    .screen.hide { display: none !important; }
+
+    .regole-box {
+      background: #e8f0fe; border-left: 4px solid #003366; border-radius: 10px;
+      padding: 1rem 1.2rem; margin-bottom: 1rem;
+    }
+    .regole-box h2 { color: #003366; font-size: 1.1rem; margin-top: 0; margin-bottom: .5rem; }
+    .regole-box ul { margin: 0; padding-left: 1.2rem; }
+    .regole-box li { margin-bottom: .3rem; }
+    .regole-box strong { color: #003366; }
+
+    .scenario-head {
+      background: #fff; border-radius: 12px; padding: .8rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06); margin-bottom: 1rem;
+    }
+    .scenario-head h2 { color: #003366; font-size: 1.15rem; margin: 0 0 .3rem 0; }
+    .scenario-head p { margin: 0; color: #5b6b7c; font-size: .95rem; }
+
+    .hud {
+      display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .hud-pill {
+      background: #fff; border: 2px solid #003366; border-radius: 20px;
+      padding: .3rem .9rem; font-size: .9rem; font-weight: 600; color: #003366;
+      display: inline-flex; align-items: center; gap: .3rem;
+    }
+    .hud-pill.errori { border-color: #dc3545; color: #dc3545; }
+    .hud-pill.mosse { border-color: #198754; color: #198754; }
+
+    .mappa-wrap {
+      display: flex; justify-content: center; margin-bottom: 1rem;
+      overflow-x: auto;
+    }
+    .mappa {
+      display: grid;
+      gap: 3px;
+      background: #dee2e6;
+      padding: 3px;
+      border-radius: 8px;
+      box-shadow: inset 0 0 0 2px #003366;
+    }
+    .cell {
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; line-height: 1;
+      border-radius: 4px; background: #fff;
+      position: relative;
+      user-select: none;
+    }
+    .cell.wall { background: #495057; }
+    .cell.empty { background: #f8f9fa; }
+    .cell.corridor { background: #e7f1ff; }
+    .cell.start { background: #cfe2ff; }
+    .cell.exit { background: #d1e7dd; font-size: 1.6rem; }
+    .cell.elevator { background: #fff3cd; color: #664d03; }
+    .cell.fire { background: #f8d7da; color: #dc3545; }
+    .cell.stair { background: #cfe2ff; color: #003366; }
+    .cell.arrow-up, .cell.arrow-down, .cell.arrow-left, .cell.arrow-right {
+      background: #d1e7dd; color: #0f5132; font-weight: 700;
+    }
+    .cell.player::after {
+      content: "🧒";
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      animation: pulse 1.2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.12); }
+    }
+    .cell.traccia { background: #b7d9b7 !important; }
+
+    .comandi {
+      display: grid;
+      grid-template-columns: 60px 60px 60px;
+      grid-template-rows: 60px 60px;
+      gap: .4rem;
+      justify-content: center;
+      margin: 1rem auto;
+    }
+    .comandi button {
+      font-size: 1.8rem; line-height: 1;
+      border: 2px solid #003366; background: #fff; color: #003366;
+      border-radius: 10px; cursor: pointer;
+      transition: transform .08s, background .15s;
+    }
+    .comandi button:hover:not(:disabled) { background: #003366; color: #fff; }
+    .comandi button:active:not(:disabled) { transform: scale(.94); }
+    .comandi button:disabled { opacity: .4; cursor: not-allowed; }
+    .comandi .b-up { grid-column: 2; grid-row: 1; }
+    .comandi .b-left { grid-column: 1; grid-row: 2; }
+    .comandi .b-down { grid-column: 2; grid-row: 2; }
+    .comandi .b-right { grid-column: 3; grid-row: 2; }
+
+    .legenda {
+      display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center;
+      font-size: .82rem; color: #5b6b7c; margin-bottom: 1rem;
+    }
+    .legenda-item {
+      background: #fff; border: 1px solid #dee2e6; border-radius: 14px;
+      padding: .2rem .7rem; display: inline-flex; align-items: center; gap: .3rem;
+    }
+
+    .alert-msg {
+      padding: .7rem 1rem; border-radius: 8px; margin: .8rem 0;
+      text-align: center; font-weight: 600; font-size: .95rem;
+    }
+    .alert-msg.ok { background: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
+    .alert-msg.warning { background: #fff3cd; color: #664d03; border: 1px solid #ffecb5; animation: shake .3s; }
+    .alert-msg.danger { background: #f8d7da; color: #842029; border: 1px solid #f5c2c7; animation: shake .3s; }
+    @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+
+    @media (max-width: 575.98px) {
+      .cell { width: 36px; height: 36px; font-size: 1.1rem; }
+      .cell.player::after { font-size: 1.3rem; }
+      .comandi { grid-template-columns: 54px 54px 54px; grid-template-rows: 54px 54px; }
+      .comandi button { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Scuola Primaria</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Labirinto di Evacuazione</li>
+          </ol>
+        </nav>
+        <h1>Labirinto di Evacuazione</h1>
+        <p class="lead">Guida l'alunno dalla classe al punto di raccolta seguendo le regole dell'evacuazione scolastica.</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+          <!-- INTRO -->
+          <div id="intro" class="screen">
+            <div class="regole-box">
+              <h2><i class="bi bi-shield-check" aria-hidden="true"></i> Le regole dell'evacuazione</h2>
+              <ul>
+                <li><strong>Non usare mai l'ascensore</strong> durante l'evacuazione. Usa le <strong>scale</strong>.</li>
+                <li><strong>Segui le frecce verdi</strong> di emergenza: indicano la via di fuga più sicura.</li>
+                <li><strong>Non tornare indietro</strong> a prendere oggetti o amici: prosegui fino al punto di raccolta.</li>
+                <li><strong>Evita fuoco e fumo</strong>: se vedi fiamme o fumo, cerca una strada alternativa.</li>
+                <li><strong>Raggiungi il punto di raccolta 🏁</strong> e resta lì in fila con l'insegnante.</li>
+              </ul>
+            </div>
+
+            <div class="legenda" aria-label="Legenda mappa">
+              <span class="legenda-item">🧒 Alunno (tu)</span>
+              <span class="legenda-item">🚪 Partenza</span>
+              <span class="legenda-item">🏁 Punto di raccolta</span>
+              <span class="legenda-item">🪜 Scala (sì)</span>
+              <span class="legenda-item">⚠️ Ascensore (no)</span>
+              <span class="legenda-item">🔥 Fuoco (no)</span>
+              <span class="legenda-item">➡️ Freccia di emergenza</span>
+            </div>
+
+            <p class="text-center">
+              Affronterai <strong>3 scenari</strong>: piano con ascensore, corridoio con incendio, e un percorso completo con più ostacoli.
+              Muoviti con i pulsanti sotto la mappa o con le <strong>frecce della tastiera</strong>.
+            </p>
+
+            <div class="text-center">
+              <button type="button" id="btn-start" class="btn btn-primary btn-lg">
+                <i class="bi bi-play-fill" aria-hidden="true"></i> Inizia l'evacuazione
+              </button>
+              <div class="mt-2">
+                <a href="../index.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- GAME -->
+          <div id="game" class="screen hide">
+            <div class="scenario-head">
+              <h2 id="scenario-titolo"></h2>
+              <p id="scenario-desc"></p>
+            </div>
+
+            <div class="hud">
+              <span class="hud-pill"><i class="bi bi-flag-fill" aria-hidden="true"></i> Scenario <span id="scenario-num">1</span>/3</span>
+              <span class="hud-pill mosse"><i class="bi bi-arrows-move" aria-hidden="true"></i> Mosse: <span id="mosse">0</span></span>
+              <span class="hud-pill errori"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Errori: <span id="errori">0</span></span>
+            </div>
+
+            <div class="mappa-wrap">
+              <div id="mappa" class="mappa" role="grid" aria-label="Mappa evacuazione"></div>
+            </div>
+
+            <div id="feedback" class="alert-msg hide" aria-live="polite"></div>
+
+            <div class="comandi" aria-label="Comandi di movimento">
+              <button type="button" class="b-up" data-dir="up" aria-label="Vai su">▲</button>
+              <button type="button" class="b-left" data-dir="left" aria-label="Vai a sinistra">◀</button>
+              <button type="button" class="b-down" data-dir="down" aria-label="Vai giù">▼</button>
+              <button type="button" class="b-right" data-dir="right" aria-label="Vai a destra">▶</button>
+            </div>
+
+            <div class="text-center">
+              <button type="button" id="btn-reset" class="btn btn-outline-secondary btn-sm">
+                <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Ricomincia scenario
+              </button>
+            </div>
+          </div>
+
+          <!-- END -->
+          <div id="end" class="screen hide">
+            <div class="app-result-box">
+              <div class="app-result-emoji">🏆</div>
+              <h2>Evacuazione completata!</h2>
+              <p>Hai portato tutti gli alunni al punto di raccolta in sicurezza.</p>
+              <p class="mb-0">Scenari completati: <strong id="end-scenari">3</strong> su 3 &middot; Errori totali: <strong id="end-errori">0</strong></p>
+            </div>
+            <div class="text-center mt-4">
+              <button type="button" id="btn-rigioca" class="btn btn-outline-primary">
+                <i class="bi bi-arrow-clockwise" aria-hidden="true"></i> Rigioca
+              </button>
+              <a href="../index.html" class="btn btn-primary ms-2">Torna ai giochi</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    'use strict';
+
+    // Tipi cella: . corridoio  # muro  S partenza  E uscita (punto raccolta)
+    //             A ascensore  F fuoco  X scala  U/D/L/R frecce direzionali
+    // Legenda celle: # muro  . corridoio  S start  E exit  A ascensore(trappola)
+    //                F fuoco(trappola)  X scala  U/D/L/R frecce emergenza
+    var SCENARI = [
+      {
+        titolo: 'Scenario 1 — Aula al primo piano',
+        desc: 'Suona la campanella di evacuazione. Esci dalla tua aula, evita l\'ascensore e scendi dalle scale 🪜 fino al punto di raccolta in cortile.',
+        righe: [
+          '#########',
+          '#S......#',
+          '#.#######',
+          '#.#A..X.#',
+          '#.#.###.#',
+          '#.#.....#',
+          '#.#######',
+          '#.......#',
+          '#......E#',
+          '#########'
+        ],
+        max: 9
+      },
+      {
+        titolo: 'Scenario 2 — Fuoco nel corridoio',
+        desc: 'Sei al piano terra. Nel corridoio principale si è sviluppato un incendio. Devi trovare una strada alternativa evitando fuoco e fumo.',
+        righe: [
+          '##########',
+          '#S.......#',
+          '#.#######.',
+          '#.#F.....#',
+          '#.#.######',
+          '#.#......#',
+          '#.######.#',
+          '#........#',
+          '#.#######.',
+          '#.......E#',
+          '##########'
+        ],
+        max: 10
+      },
+      {
+        titolo: 'Scenario 3 — Evacuazione completa',
+        desc: 'Allarme generale! Dall\'aula devi scendere le scale, evitare l\'ascensore e il fuoco, e seguire le frecce verdi ➡️ di emergenza fino al cortile.',
+        righe: [
+          '###########',
+          '#S..#.....#',
+          '#.#.#.###.#',
+          '#.#.X.#...#',
+          '#.#.###.#.#',
+          '#.#....A#.#',
+          '#.########.',
+          '#.........#',
+          '#.#######.#',
+          '#.#F....#.#',
+          '#.#.###.#.#',
+          '#.#.#.#.#.#',
+          '#...#...#.#',
+          '#####.###R#',
+          '#........E#',
+          '###########'
+        ],
+        max: 16
+      }
+    ];
+
+    // Stato corrente
+    var scenarioIdx = 0;
+    var mappa = null;       // array 2d di caratteri
+    var playerR = 0, playerC = 0;
+    var mosse = 0;
+    var erroriScenario = 0;
+    var erroriTotali = 0;
+    var scenariOk = 0;
+    var traccia = [];       // celle visitate (per non tornare indietro visivamente)
+    var bloccato = false;
+
+    var intro = document.getElementById('intro');
+    var game = document.getElementById('game');
+    var end = document.getElementById('end');
+    var titoloEl = document.getElementById('scenario-titolo');
+    var descEl = document.getElementById('scenario-desc');
+    var mappaEl = document.getElementById('mappa');
+    var numEl = document.getElementById('scenario-num');
+    var mosseEl = document.getElementById('mosse');
+    var erroriEl = document.getElementById('errori');
+    var fbEl = document.getElementById('feedback');
+    var endScen = document.getElementById('end-scenari');
+    var endErr = document.getElementById('end-errori');
+
+    document.getElementById('btn-start').addEventListener('click', function(){
+      if (window.AudioSintetico) window.AudioSintetico.init();
+      scenarioIdx = 0; erroriTotali = 0; scenariOk = 0;
+      intro.classList.add('hide'); game.classList.remove('hide');
+      caricaScenario();
+    });
+
+    document.getElementById('btn-reset').addEventListener('click', caricaScenario);
+    document.getElementById('btn-rigioca').addEventListener('click', function(){
+      end.classList.add('hide'); intro.classList.remove('hide');
+    });
+
+    function caricaScenario(){
+      var s = SCENARI[scenarioIdx];
+      titoloEl.textContent = s.titolo;
+      descEl.textContent = s.desc;
+      numEl.textContent = (scenarioIdx + 1);
+      mosse = 0; erroriScenario = 0; traccia = []; bloccato = false;
+      mosseEl.textContent = '0'; erroriEl.textContent = '0';
+      fbEl.className = 'alert-msg hide'; fbEl.textContent = '';
+      // converte righe in matrice mutabile
+      mappa = s.righe.map(function(r){ return r.split(''); });
+      // trova start
+      for (var r = 0; r < mappa.length; r++){
+        for (var c = 0; c < mappa[r].length; c++){
+          if (mappa[r][c] === 'S') { playerR = r; playerC = c; }
+        }
+      }
+      disegna();
+    }
+
+    function disegna(){
+      var cols = mappa[0].length;
+      mappaEl.style.gridTemplateColumns = 'repeat(' + cols + ', auto)';
+      mappaEl.innerHTML = '';
+      for (var r = 0; r < mappa.length; r++){
+        for (var c = 0; c < mappa[r].length; c++){
+          var ch = mappa[r][c];
+          var cell = document.createElement('div');
+          cell.className = 'cell ' + classeDa(ch);
+          cell.setAttribute('role', 'gridcell');
+          cell.innerHTML = simboloDa(ch);
+          if (r === playerR && c === playerC){
+            cell.classList.add('player');
+            cell.setAttribute('aria-label', 'Posizione attuale dell\'alunno');
+          }
+          if (traccia.some(function(t){ return t[0] === r && t[1] === c; }) && !(r === playerR && c === playerC)){
+            cell.classList.add('traccia');
+          }
+          mappaEl.appendChild(cell);
+        }
+      }
+    }
+
+    function classeDa(ch){
+      switch(ch){
+        case '#': return 'wall';
+        case 'S': return 'start';
+        case 'E': return 'exit';
+        case 'A': return 'elevator';
+        case 'F': return 'fire';
+        case 'X': return 'stair';
+        case 'U': return 'arrow-up';
+        case 'D': return 'arrow-down';
+        case 'L': return 'arrow-left';
+        case 'R': return 'arrow-right';
+        case '.': return 'corridor';
+        default: return 'empty';
+      }
+    }
+
+    function simboloDa(ch){
+      switch(ch){
+        case 'S': return '🚪';
+        case 'E': return '🏁';
+        case 'A': return '⚠️';
+        case 'F': return '🔥';
+        case 'X': return '🪜';
+        case 'U': return '⬆️';
+        case 'D': return '⬇️';
+        case 'L': return '⬅️';
+        case 'R': return '➡️';
+        default: return '';
+      }
+    }
+
+    function muovi(dir){
+      if (bloccato) return;
+      var dr = 0, dc = 0;
+      if (dir === 'up') dr = -1;
+      else if (dir === 'down') dr = 1;
+      else if (dir === 'left') dc = -1;
+      else if (dir === 'right') dc = 1;
+
+      var nr = playerR + dr, nc = playerC + dc;
+      if (nr < 0 || nr >= mappa.length || nc < 0 || nc >= mappa[nr].length) {
+        return;
+      }
+      var target = mappa[nr][nc];
+
+      // muro
+      if (target === '#') {
+        mostraMessaggio('Lì c\'è un muro, non puoi passare.', 'warning');
+        if (window.AudioSintetico) window.AudioSintetico.tono(200, 0.1);
+        return;
+      }
+      // ascensore
+      if (target === 'A') {
+        erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
+        mostraMessaggio('⚠️ Non si usa mai l\'ascensore durante un\'evacuazione! Cerca le scale 🪜.', 'danger');
+        if (window.AudioSintetico) window.AudioSintetico.tono(180, 0.25);
+        return;
+      }
+      // fuoco
+      if (target === 'F') {
+        erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
+        mostraMessaggio('🔥 Attenzione: fuoco! Non attraversare fiamme e fumo. Cerca una strada alternativa.', 'danger');
+        if (window.AudioSintetico) window.AudioSintetico.tono(160, 0.25);
+        return;
+      }
+      // frecce: verificare direzione congruente
+      if ('UDLR'.indexOf(target) >= 0) {
+        var dirOk = (target === 'U' && dir !== 'down') ||
+                    (target === 'D' && dir !== 'up') ||
+                    (target === 'L' && dir !== 'right') ||
+                    (target === 'R' && dir !== 'left');
+        // consenti l'ingresso sulla freccia; l'USCITA dalla freccia deve seguire la direzione
+      }
+
+      // Se stiamo LASCIANDO una cella freccia, l'uscita deve rispettarla
+      var qui = mappa[playerR][playerC];
+      if ('UDLR'.indexOf(qui) >= 0) {
+        var rotta = (qui === 'U' && dir === 'up') ||
+                    (qui === 'D' && dir === 'down') ||
+                    (qui === 'L' && dir === 'left') ||
+                    (qui === 'R' && dir === 'right');
+        if (!rotta) {
+          erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
+          mostraMessaggio('Le frecce verdi di emergenza indicano la via di fuga: seguile nella direzione giusta!', 'warning');
+          if (window.AudioSintetico) window.AudioSintetico.tono(220, 0.18);
+          return;
+        }
+      }
+
+      // movimento valido
+      traccia.push([playerR, playerC]);
+      playerR = nr; playerC = nc;
+      mosse++; mosseEl.textContent = mosse;
+      nascondiMessaggio();
+      if (window.AudioSintetico) window.AudioSintetico.tono(380, 0.04);
+
+      // arrivo a destinazione
+      if (target === 'E') {
+        disegna();
+        bloccato = true;
+        scenariOk++;
+        var penalita = Math.min(erroriScenario, SCENARI[scenarioIdx].max - 1);
+        mostraMessaggio('🏁 Punto di raccolta raggiunto! Mosse: ' + mosse + ' · Errori: ' + erroriScenario + '.', 'ok');
+        if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
+        setTimeout(function(){
+          scenarioIdx++;
+          if (scenarioIdx < SCENARI.length) {
+            caricaScenario();
+          } else {
+            fineGioco();
+          }
+        }, 2200);
+        return;
+      }
+
+      disegna();
+    }
+
+    function fineGioco(){
+      game.classList.add('hide');
+      end.classList.remove('hide');
+      endScen.textContent = scenariOk;
+      endErr.textContent = erroriTotali;
+      // punteggio: max 10 per scenario, -1 per errore (min 0)
+      var punti = 0, max = SCENARI.length * 10;
+      for (var i = 0; i < SCENARI.length; i++) punti += 10;
+      punti = Math.max(0, punti - erroriTotali);
+      if (window.GiochiUtil) {
+        window.GiochiUtil.salvaEMostraAttestato('labirinto-evacuazione', punti, max, '#end');
+      }
+    }
+
+    function mostraMessaggio(testo, tipo){
+      fbEl.className = 'alert-msg ' + tipo;
+      fbEl.textContent = testo;
+    }
+    function nascondiMessaggio(){
+      fbEl.className = 'alert-msg hide';
+      fbEl.textContent = '';
+    }
+
+    // Controlli
+    document.querySelectorAll('.comandi button').forEach(function(b){
+      b.addEventListener('click', function(){ muovi(b.dataset.dir); });
+    });
+    document.addEventListener('keydown', function(e){
+      if (game.classList.contains('hide')) return;
+      var map = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right' };
+      if (map[e.key]) { e.preventDefault(); muovi(map[e.key]); }
+    });
+  })();
+  </script>
+</body>
+</html>

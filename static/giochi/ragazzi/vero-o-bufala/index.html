@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vero o Bufala? — Giochi Ragazzi</title>
+  <meta name="description" content="Smista 12 notizie di protezione civile fra fonti ufficiali (DPC, Regione Lazio, INGV) e fake news. Impara a riconoscere le bufale che girano sui social.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <style>
+    .notizia-card {
+      background: #fff; border: 2px solid #e9ecef; border-radius: 10px;
+      padding: 1rem 1.2rem; margin-bottom: 1rem;
+      box-shadow: 0 3px 12px rgba(0,0,0,.05);
+    }
+    .notizia-meta {
+      display: flex; flex-wrap: wrap; gap: .5rem .8rem;
+      font-size: .85rem; color: #5b6b7c; margin-bottom: .6rem;
+      padding-bottom: .6rem; border-bottom: 1px dashed #e9ecef;
+    }
+    .notizia-canale {
+      font-weight: 700; color: var(--rag-blu);
+    }
+    .notizia-testo {
+      font-size: 1rem; line-height: 1.55; color: #17324D;
+      margin-bottom: 1rem;
+    }
+    .notizia-testo em { background: #fffbe6; padding: 0 .15em; font-style: normal; font-weight: 600; }
+    .azioni { display: flex; gap: .6rem; flex-wrap: wrap; }
+    .btn-scelta {
+      flex: 1; min-width: 140px;
+      padding: .7rem 1rem; border-radius: 8px; border: 0;
+      font-weight: 700; cursor: pointer; font-size: 1rem;
+      display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
+    }
+    .btn-scelta.ufficiale { background: var(--rag-verde); color: #fff; }
+    .btn-scelta.bufala { background: var(--rag-rosso); color: #fff; }
+    .btn-scelta:hover, .btn-scelta:focus-visible { filter: brightness(1.08); outline: 3px solid var(--rag-blu); outline-offset: 2px; }
+    .btn-scelta:disabled { opacity: .6; cursor: not-allowed; }
+    .esito {
+      margin-top: 1rem; padding: .8rem 1rem; border-radius: 8px;
+      font-size: .95rem; line-height: 1.5;
+    }
+    .esito.corretto { background: #e8f5ee; border-left: 4px solid var(--rag-verde); }
+    .esito.sbagliato { background: #fde8eb; border-left: 4px solid var(--rag-rosso); }
+    .esito strong { color: var(--rag-blu); }
+    .progress-bar-holder {
+      height: 6px; background: #e9ecef; border-radius: 99px; overflow: hidden; margin-bottom: 1rem;
+    }
+    .progress-bar-holder > div {
+      height: 100%; background: var(--rag-blu); transition: width .3s;
+    }
+    .intro-card { background: #fff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 3px 14px rgba(0,0,0,.06); }
+    .segnali-bufala {
+      background: #fffbe6; border-left: 4px solid var(--rag-arancio);
+      padding: .8rem 1rem; border-radius: 6px; margin: 1rem 0;
+    }
+    .segnali-bufala ul { margin: .3rem 0 0; padding-left: 1.2rem; }
+    .stat-row { display: flex; justify-content: space-around; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+    .stat-box { background: #eef4fc; border-radius: 8px; padding: .7rem 1rem; text-align: center; min-width: 120px; }
+    .stat-box .num { font-size: 1.6rem; font-weight: 800; color: var(--rag-blu); }
+    .stat-box .lbl { font-size: .8rem; color: #5b6b7c; }
+  </style>
+</head>
+<body class="rag-body">
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/ragazzi/">Ragazzi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Vero o Bufala?</li>
+          </ol>
+        </nav>
+        <h1>Vero o Bufala?</h1>
+        <p class="lead">Dodici notizie di protezione civile. Tu distingui le <strong>fonti ufficiali</strong> dalle <strong>fake news</strong>.</p>
+      </div>
+    </div>
+
+    <div class="container py-4" style="max-width: 820px;">
+
+      <section id="intro" class="intro-card">
+        <h2 class="h4 mb-3">Perché serve questo gioco</h2>
+        <p>Durante un'emergenza la disinformazione viaggia più veloce dei soccorsi: catene di messaggi, screenshot manipolati, voci attribuite a fonti inesistenti. Saper riconoscere cosa viene davvero da DPC, Regione, INGV o Comune è un gesto di <strong>cittadinanza attiva</strong>.</p>
+        <div class="segnali-bufala">
+          <strong><i class="bi bi-exclamation-triangle-fill me-1" aria-hidden="true"></i>Segnali tipici di una bufala</strong>
+          <ul>
+            <li>Attribuita a "un amico che lavora in…" senza link diretti.</li>
+            <li>Previsioni precise di terremoti (impossibili scientificamente).</li>
+            <li>Tono allarmistico e invito a condividere subito.</li>
+            <li>Errori di ortografia, maiuscole a caso, emoji eccessivi.</li>
+            <li>Foto decontestualizzate o di eventi passati.</li>
+          </ul>
+        </div>
+        <button id="start-btn" class="btn btn-primary btn-lg">
+          <i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia
+        </button>
+      </section>
+
+      <section id="game" class="hide">
+        <div class="progress-bar-holder" aria-hidden="true"><div id="progress-bar" style="width:0%"></div></div>
+        <div class="d-flex justify-content-between mb-2 small text-muted">
+          <span>Notizia <strong id="idx-cur">1</strong> di <strong id="idx-tot">12</strong></span>
+          <span>Corrette: <strong id="score">0</strong></span>
+        </div>
+
+        <div class="notizia-card">
+          <div class="notizia-meta" id="meta">
+            <span class="notizia-canale" id="canale">Canale</span>
+            <span id="data-notizia">01/01/2026</span>
+          </div>
+          <div class="notizia-testo" id="testo">Testo notizia...</div>
+          <div class="azioni">
+            <button class="btn-scelta ufficiale" data-scelta="ufficiale">
+              <i class="bi bi-shield-check" aria-hidden="true"></i> Fonte ufficiale
+            </button>
+            <button class="btn-scelta bufala" data-scelta="bufala">
+              <i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Bufala
+            </button>
+          </div>
+          <div id="esito" class="esito hide" aria-live="polite"></div>
+          <div class="mt-3 text-end hide" id="next-wrap">
+            <button id="next-btn" class="btn btn-primary">Prossima <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="end" class="intro-card hide">
+        <h2 class="h3 mb-3"><i class="bi bi-award-fill text-warning me-2" aria-hidden="true"></i>Fine del gioco</h2>
+        <div class="stat-row">
+          <div class="stat-box"><div class="num" id="end-score">0</div><div class="lbl">Corrette</div></div>
+          <div class="stat-box"><div class="num" id="end-ufficiali">0</div><div class="lbl">Ufficiali riconosciute</div></div>
+          <div class="stat-box"><div class="num" id="end-bufale">0</div><div class="lbl">Bufale smascherate</div></div>
+        </div>
+        <p id="end-msg" class="mb-3">...</p>
+        <div class="segnali-bufala">
+          <strong><i class="bi bi-journal-bookmark-fill me-1" aria-hidden="true"></i>Le fonti da cui leggere davvero</strong>
+          <ul class="mb-0">
+            <li><a href="https://www.protezionecivile.gov.it/" target="_blank" rel="noopener">Dipartimento della Protezione Civile</a> (nazionale)</li>
+            <li><a href="https://www.regione.lazio.it/" target="_blank" rel="noopener">Regione Lazio — Centro Funzionale Regionale</a></li>
+            <li><a href="https://ingv.it/" target="_blank" rel="noopener">INGV</a> (Istituto Nazionale di Geofisica e Vulcanologia)</li>
+            <li>Sito e canali social del tuo Comune e della Prefettura.</li>
+          </ul>
+        </div>
+        <div class="attestato-inject my-3"></div>
+        <div class="d-flex flex-wrap gap-2">
+          <button id="restart-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i>Rigioca</button>
+          <a href="../index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Altri giochi</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function(){
+    var NOTIZIE = [
+      { canale: 'Dipartimento della Protezione Civile', data: 'comunicato stampa — 12 marzo 2026',
+        testo: 'Avviso di condizioni meteorologiche avverse emesso dal DPC: previste precipitazioni intense su Lazio, Abruzzo e Molise nelle prossime 24-36 ore. Il bollettino completo è disponibile su protezionecivile.gov.it.',
+        ufficiale: true,
+        spiega: 'Fonte verificabile: il DPC pubblica avvisi di avverse condizioni meteo firmati e datati. Il testo rimanda al sito istituzionale ed è privo di toni allarmistici.' },
+      { canale: 'Catena WhatsApp da un cugino',
+        data: 'messaggio inoltrato 100+ volte',
+        testo: '🚨🚨 URGENTE! Un mio amico geologo dice che DOMANI ALLE 22 ci sarà una forte scossa di terremoto nel Lazio. ATTENZIONE!! CONDIVIDETE SUBITO PER AVVISARE TUTTI!!! 🙏',
+        ufficiale: false,
+        spiega: 'Bufala classica. I terremoti non sono prevedibili con data e ora: nessuno scienziato serio lo afferma. Segnali di falso: maiuscolo, invito a condividere, fonte anonima ("un mio amico").' },
+      { canale: 'Regione Lazio — Centro Funzionale Regionale',
+        data: 'Bollettino di vigilanza — 15 aprile 2026',
+        testo: 'Per la giornata di domani 16 aprile è prevista allerta GIALLA per rischio idrogeologico sulla zona di allerta B (bacini centrali). Consultare il bollettino su regione.lazio.it.',
+        ufficiale: true,
+        spiega: 'Bollettino conforme al protocollo regionale: zona di allerta identificata con codice, livello colore, rimando al sito ufficiale.' },
+      { canale: 'Pagina Facebook "Meteo Lazio estremo"',
+        data: 'post di 2 ore fa',
+        testo: 'ATTENZIONE! Super tempesta solare distruggerà le linee elettriche del Lazio tra 48 ore. Il governo sta nascondendo la notizia. Staccate tutti gli elettrodomestici ORA!',
+        ufficiale: false,
+        spiega: 'Bufala. I fenomeni solari di impatto tecnologico sono seguiti da INAF e ESA con comunicati pubblici: nessun "complotto" dello Stato. Segnali di falso: tono cospirativo, urgenza, assenza di fonte verificabile.' },
+      { canale: 'INGV — Istituto Nazionale di Geofisica e Vulcanologia',
+        data: 'comunicato tecnico — 3 giugno 2026',
+        testo: 'Registrata alle 04:12 locali scossa di magnitudo ML 3.2 con epicentro nei Castelli Romani, profondità 8 km. Nessun danno segnalato. Dati su terremoti.ingv.it.',
+        ufficiale: true,
+        spiega: 'Comunicato INGV standard: parametri tecnici precisi (magnitudo, profondità, orario), nessun allarme inutile, rimando al sito dei dati.' },
+      { canale: 'Tweet di un account non verificato',
+        data: '@veritaNascoste — 1.400 retweet',
+        testo: 'Gli animali di Genzano stanno scappando dalle case: è il segnale che un GROSSO TERREMOTO è imminente. Le autorità tacciono. #SvegliatiItalia',
+        ufficiale: false,
+        spiega: 'Bufala ricorrente. Il "comportamento strano degli animali" non ha valore predittivo scientifico dei terremoti. Segnali di falso: hashtag complottisti, nessuna fonte, appello emotivo.' },
+      { canale: 'Comune di Genzano di Roma — sito istituzionale',
+        data: 'ordinanza sindacale n. 42 — 18 maggio 2026',
+        testo: 'Con ordinanza del Sindaco è sospesa la circolazione in via Italo Belardi dalle 06:00 del 25 maggio per consentire l\'allestimento dell\'Infiorata. Il testo integrale è disponibile all\'albo pretorio online.',
+        ufficiale: true,
+        spiega: 'Atto amministrativo formale: numero di ordinanza, riferimento all\'albo pretorio (la sezione legale del sito comunale), nessun proclama.' },
+      { canale: 'Messaggio vocale condiviso',
+        data: 'audio di 48 secondi inoltrato',
+        testo: '"Raga, mia zia che lavora in ospedale dice che i reparti a Roma sono al collasso per una malattia sconosciuta, ma lo stanno nascondendo. Fate scorta di medicine e uscite il meno possibile."',
+        ufficiale: false,
+        spiega: 'Bufala tipica. Le autorità sanitarie (ASL, Ministero della Salute, ISS) pubblicano bollettini pubblici; nessuna emergenza sanitaria reale viene "nascosta" da parenti di operatori.' },
+      { canale: 'Comunicato stampa Vigili del Fuoco',
+        data: 'sala stampa regionale — 20 luglio 2026',
+        testo: 'Incendio boschivo nelle campagne di Ariccia spento in 4 ore con il supporto di due Canadair. Nessun ferito, richiesta al personale AIB di restare in allerta per rischio innesco secondario.',
+        ufficiale: true,
+        spiega: 'Comunicazione VVF standard: fatto, tempistica, risorse impiegate, raccomandazione operativa. Nessuna retorica.' },
+      { canale: 'Storia Instagram con foto drammatica',
+        data: 'reshare anonimo',
+        testo: '💥 ADESSO A GENZANO!!! Palazzo crollato in centro, decine di feriti. Evacuate la zona! (la foto mostra un palazzo in rovina con colonne di fumo)',
+        ufficiale: false,
+        spiega: 'Bufala con foto decontestualizzata. Un controllo inverso della foto con Google Images rivela che ritrae un crollo avvenuto in un\'altra città anni fa. Regola: prima di condividere, verifica la foto.' },
+      { canale: 'ARPA Lazio — Agenzia regionale ambiente',
+        data: 'bollettino qualità dell\'aria — 7 agosto 2026',
+        testo: 'Superati oggi nei comuni della fascia costiera i valori soglia di ozono troposferico. Si raccomanda alle categorie fragili di limitare l\'attività fisica all\'aperto nelle ore più calde.',
+        ufficiale: true,
+        spiega: 'ARPA pubblica quotidianamente bollettini ambientali: dato tecnico, raccomandazione proporzionata, nessun allarmismo.' },
+      { canale: 'Email con mittente sospetto',
+        data: 'protezione.civile.italia@gmail.com',
+        testo: 'Gentile cittadino, compili il modulo allegato per ricevere il contributo di 600 € per le emergenze meteo. Il DPC ha stanziato fondi straordinari. Clicchi qui per scaricare.',
+        ufficiale: false,
+        spiega: 'Phishing. Il DPC non eroga contributi diretti ai cittadini via email e non usa @gmail.com. Segnali: mittente non istituzionale (gmail), richiesta di dati/clic, promessa di denaro.' }
+    ];
+
+    var intro = document.getElementById('intro'),
+        game = document.getElementById('game'),
+        endScreen = document.getElementById('end');
+    var canale = document.getElementById('canale'),
+        dataEl = document.getElementById('data-notizia'),
+        testo = document.getElementById('testo'),
+        esito = document.getElementById('esito'),
+        nextWrap = document.getElementById('next-wrap'),
+        progressBar = document.getElementById('progress-bar'),
+        idxCur = document.getElementById('idx-cur'),
+        idxTot = document.getElementById('idx-tot'),
+        scoreEl = document.getElementById('score');
+    var btnUff = document.querySelector('.btn-scelta.ufficiale'),
+        btnBuf = document.querySelector('.btn-scelta.bufala');
+    var queue = [], idx = 0, score = 0, uff = 0, buf = 0;
+
+    function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+
+    function start(){
+      intro.classList.add('hide');
+      endScreen.classList.add('hide');
+      game.classList.remove('hide');
+      queue = shuffle(NOTIZIE.slice());
+      idx = 0; score = 0; uff = 0; buf = 0;
+      scoreEl.textContent = '0';
+      idxTot.textContent = queue.length;
+      mostra();
+    }
+
+    function mostra(){
+      var n = queue[idx];
+      canale.textContent = n.canale;
+      dataEl.textContent = n.data;
+      testo.textContent = n.testo;
+      esito.classList.add('hide');
+      esito.classList.remove('corretto','sbagliato');
+      esito.innerHTML = '';
+      nextWrap.classList.add('hide');
+      btnUff.disabled = false; btnBuf.disabled = false;
+      idxCur.textContent = (idx + 1);
+      progressBar.style.width = ((idx / queue.length) * 100) + '%';
+    }
+
+    function rispondi(scelta){
+      var n = queue[idx];
+      btnUff.disabled = true; btnBuf.disabled = true;
+      var giusto = (scelta === 'ufficiale' && n.ufficiale) || (scelta === 'bufala' && !n.ufficiale);
+      if (giusto){
+        score++;
+        if (n.ufficiale) uff++; else buf++;
+        scoreEl.textContent = score;
+        esito.classList.remove('sbagliato');
+        esito.classList.add('corretto');
+        esito.innerHTML = '<strong><i class="bi bi-check-circle-fill me-1"></i>Corretto.</strong> ' + n.spiega;
+      } else {
+        esito.classList.remove('corretto');
+        esito.classList.add('sbagliato');
+        var eraRisp = n.ufficiale ? 'fonte ufficiale' : 'bufala';
+        esito.innerHTML = '<strong><i class="bi bi-x-circle-fill me-1"></i>Sbagliato.</strong> Era una <strong>' + eraRisp + '</strong>. ' + n.spiega;
+      }
+      esito.classList.remove('hide');
+      nextWrap.classList.remove('hide');
+    }
+
+    function next(){
+      idx++;
+      if (idx >= queue.length) fine();
+      else mostra();
+    }
+
+    function fine(){
+      game.classList.add('hide');
+      endScreen.classList.remove('hide');
+      progressBar.style.width = '100%';
+      document.getElementById('end-score').textContent = score + '/' + queue.length;
+      document.getElementById('end-ufficiali').textContent = uff;
+      document.getElementById('end-bufale').textContent = buf;
+      var msg;
+      if (score >= queue.length - 1) msg = 'Eccellente: riconosci benissimo le fonti affidabili. Aiuta chi ti sta vicino a farlo.';
+      else if (score >= queue.length * 0.66) msg = 'Buon lavoro. Qualche bufala ancora ti inganna: prima di condividere, verifica sempre la fonte.';
+      else msg = 'Occhio: molte fake news sono passate. Regola di base — non condividere ciò che non puoi rintracciare su un sito istituzionale.';
+      document.getElementById('end-msg').textContent = msg;
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('vero-o-bufala', score, queue.length, '#end');
+    }
+
+    document.getElementById('start-btn').addEventListener('click', start);
+    document.getElementById('restart-btn').addEventListener('click', start);
+    document.getElementById('next-btn').addEventListener('click', next);
+    btnUff.addEventListener('click', function(){ rispondi('ufficiale'); });
+    btnBuf.addEventListener('click', function(){ rispondi('bufala'); });
+  })();
+  </script>
+</body>
+</html>

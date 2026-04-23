@@ -56,15 +56,15 @@ Se sei un insegnante e vuoi organizzare un incontro, contattaci a [segreteria@pr
 
 ## Giochi della Sicurezza — Impara giocando
 
-Il Gruppo ha sviluppato una collezione di **19 giochi educativi gratuiti** sulla protezione civile, divisi per fascia di età. Ogni gioco è pensato per trasmettere un messaggio chiaro di autoprotezione e termina con un **attestato di partecipazione** da stampare o conservare.
+Il Gruppo ha sviluppato una collezione di **26 giochi educativi gratuiti** sulla protezione civile, divisi per fascia di età. Ogni gioco è pensato per trasmettere un messaggio chiaro di autoprotezione e termina con un **attestato di partecipazione** da stampare o conservare.
 
 I giochi sono utilizzabili anche dai docenti come attività complementari ai kit didattici, sia in aula sia come compiti a casa. Funzionano da computer, tablet e smartphone, senza registrazione e senza installazione.
 
 | Fascia | Età | Giochi | Esempi |
 |---|---|---|---|
-| [Piccoli Esploratori](/giochi/infanzia/) | 3-6 anni | 4 | La tartaruga saggia, Il numero 112, Suoni dell'emergenza, Memory facile |
-| [Scuola Primaria](/giochi/primaria/) | 6-11 anni | 10 | Memory, Caccia al rischio, Zaino dell'emergenza, Cruciverba, Puzzle degli scenari |
-| [Ragazzi e Famiglie](/giochi/ragazzi/) | 11-19 anni | 5 | Simulatore COC, Emergency Responder, Mappa del rischio, Radio di emergenza, Codice arancione |
+| [Piccoli Esploratori](/giochi/infanzia/) | 3-6 anni | 7 | La tartaruga saggia, Il numero 112, Suoni dell'emergenza, Memory facile, Vesti Tina, Rifugio di Tina, Cielo oggi |
+| [Scuola Primaria](/giochi/primaria/) | 6-11 anni | 11 | Memory, Caccia al rischio, Zaino dell'emergenza, Cruciverba, Puzzle degli scenari, Labirinto di evacuazione |
+| [Ragazzi e Famiglie](/giochi/ragazzi/) | 11-19 anni | 8 | Simulatore COC, Emergency Responder, Mappa del rischio, Radio di emergenza, Vero o bufala?, Triage S.T.A.R.T., Linea del tempo |
 
 <a href="/giochi/index.html" class="btn btn-primary btn-lg mt-2"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Vai ai Giochi della Sicurezza</a>
 
@@ -81,8 +81,7 @@ Letture consigliate per chi si occupa di formazione e scuole:
 
 - Articolo: [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)
 - Articolo: [Corso di formazione base per nuovi volontari](/comunicazioni/2025-03-10-formazione-base/)
-- Articolo: [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/)
-- Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
+- Articolo: [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/)
 - Articolo: [Il Gruppo riceve un defibrillatore dalla Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/)
 
 Tutti gli articoli su formazione e scuole sono filtrabili nell'[archivio delle comunicazioni](/comunicazioni/) con il tag **Formazione**.
