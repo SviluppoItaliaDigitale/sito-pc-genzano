@@ -80,6 +80,12 @@ Una **guida operativa** per il volontario impegnato in emergenza: struttura orga
 
 <a href="/formazione/manuale-campo/" class="btn btn-primary mt-2"><i class="bi bi-clipboard-check-fill me-2" aria-hidden="true"></i>Vai al Manuale da Campo</a>
 
+## Area tematica — Rischio Incendio
+
+Un **corso introduttivo in cinque capitoli** sul rischio incendio, basato sul *Manuale addetti antincendio* del Comando VVF di Biella (Ing. Mauro Malizia): la combustione e le cinque classi di fuoco UNI EN 2:2005, le sostanze estinguenti (acqua, schiuma, polveri, CO₂, clean agent), la protezione passiva (REI, compartimentazione, vie di esodo), la protezione attiva (estintori con metodo PASS, idranti, sprinkler, rilevatori, segnaletica UNI EN ISO 7010) e le procedure di emergenza (piano di emergenza, chiamata al 112 con metodo LUPA, evacuazione, accoglienza dei Vigili del Fuoco).
+
+<a href="/formazione/rischio-incendio/" class="btn btn-primary mt-2"><i class="bi bi-fire me-2" aria-hidden="true"></i>Vai all'area Rischio Incendio</a>
+
 ## Risorse educative online
 
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
