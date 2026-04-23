@@ -49,6 +49,26 @@ window.CRUCIVERBA_PUZZLES = {
         { n: 8, dir: 'A', row: 7, col: 0, answer: 'RADIO', clue: 'Comunica a distanza via onde' },
         { n: 9, dir: 'A', row: 8, col: 0, answer: 'IDEA', clue: 'Pensiero geniale che ti viene in mente' }
       ]
+    },
+
+    // ── Schema F3 ─────────────────────────────────────────────
+    {
+      id: 'facile-3',
+      rows: 9,
+      cols: 6,
+      title: 'Schema "Ambulanza"',
+      words: [
+        { n: 1,  dir: 'A', row: 0, col: 0, answer: 'ACQUA', clue: 'Si beve e spegne gli incendi' },
+        { n: 1,  dir: 'D', row: 0, col: 0, answer: 'AMBULANZA', clue: 'Mezzo sanitario che porta in ospedale' },
+        { n: 2,  dir: 'A', row: 1, col: 0, answer: 'MAPPA', clue: 'Rappresentazione di un territorio' },
+        { n: 3,  dir: 'A', row: 2, col: 0, answer: 'BOSCO', clue: 'Zona coperta di alberi' },
+        { n: 4,  dir: 'A', row: 3, col: 0, answer: 'URLO', clue: 'Grido molto forte per chiedere aiuto' },
+        { n: 5,  dir: 'A', row: 4, col: 0, answer: 'LUCE', clue: 'Illumina quando c\'e corrente' },
+        { n: 6,  dir: 'A', row: 5, col: 0, answer: 'AIUTO', clue: 'Lo chiedi in emergenza' },
+        { n: 7,  dir: 'A', row: 6, col: 0, answer: 'NEVE', clue: 'Fiocchi bianchi d\'inverno' },
+        { n: 8,  dir: 'A', row: 7, col: 0, answer: 'ZAINO', clue: 'Lo prepari prima dell\'emergenza' },
+        { n: 9,  dir: 'A', row: 8, col: 0, answer: 'ALBERO', clue: 'Pianta alta con tronco e rami' }
+      ]
     }
 
   ],
@@ -97,6 +117,27 @@ window.CRUCIVERBA_PUZZLES = {
         { n: 7, dir: 'D', row: 0, col: 6, answer: 'NEVE', clue: 'Copre i monti d\'inverno' },
         { n: 8, dir: 'D', row: 0, col: 7, answer: 'ZAINO', clue: 'Lo prepari per l\'emergenza' },
         { n: 9, dir: 'D', row: 0, col: 8, answer: 'AIUTO', clue: 'Richiesta di soccorso' }
+      ]
+    },
+
+    // ── Schema M3 ─────────────────────────────────────────────
+    {
+      id: 'medio-3',
+      rows: 5,
+      cols: 10,
+      title: 'Schema "Protezione"',
+      words: [
+        { n: 1,  dir: 'A', row: 0, col: 0, answer: 'PROTEZIONE', clue: 'Parola che fa coppia con "civile" nel nome del gruppo' },
+        { n: 1,  dir: 'D', row: 0, col: 0, answer: 'PAURA', clue: 'Reazione di allarme davanti al pericolo' },
+        { n: 2,  dir: 'D', row: 0, col: 1, answer: 'RADIO', clue: 'Mezzo di comunicazione dei volontari' },
+        { n: 3,  dir: 'D', row: 0, col: 2, answer: 'OASI', clue: 'Zona di verde e acqua nel deserto' },
+        { n: 4,  dir: 'D', row: 0, col: 3, answer: 'TORRE', clue: 'Costruzione molto alta di guardia' },
+        { n: 5,  dir: 'D', row: 0, col: 4, answer: 'ERBA', clue: 'Copre i prati' },
+        { n: 6,  dir: 'D', row: 0, col: 5, answer: 'ZAINO', clue: 'Lo prepari per l\'emergenza' },
+        { n: 7,  dir: 'D', row: 0, col: 6, answer: 'IDEA', clue: 'Pensiero che nasce nella mente' },
+        { n: 8,  dir: 'D', row: 0, col: 7, answer: 'OMBRA', clue: 'Si cerca quando fa molto caldo' },
+        { n: 9,  dir: 'D', row: 0, col: 8, answer: 'NEVE', clue: 'Cade dal cielo d\'inverno' },
+        { n: 10, dir: 'D', row: 0, col: 9, answer: 'ELMO', clue: 'Casco antico, protegge il capo' }
       ]
     }
 
@@ -147,6 +188,26 @@ window.CRUCIVERBA_PUZZLES = {
         { n: 7, dir: 'D', row: 0, col: 6, answer: 'ZAINO', clue: 'Contiene tutto il necessario per l\'emergenza' },
         { n: 8, dir: 'D', row: 0, col: 7, answer: 'ZOLLA', clue: 'Pezzo di terra o terreno' },
         { n: 9, dir: 'D', row: 0, col: 8, answer: 'ALLERTA', clue: 'Stato di avviso per un possibile pericolo' }
+      ]
+    },
+
+    // ── Schema D3 ─────────────────────────────────────────────
+    {
+      id: 'difficile-3',
+      rows: 9,
+      cols: 9,
+      title: 'Schema "Volontari"',
+      words: [
+        { n: 1, dir: 'A', row: 0, col: 0, answer: 'VOLONTARI', clue: 'Donano tempo e competenze per aiutare gli altri' },
+        { n: 1, dir: 'D', row: 0, col: 0, answer: 'VIGILANZA', clue: 'Attenzione costante nel prevenire i pericoli' },
+        { n: 2, dir: 'D', row: 0, col: 1, answer: 'OPERATORE', clue: 'Chi lavora in sala radio o in Centro Operativo' },
+        { n: 3, dir: 'D', row: 0, col: 2, answer: 'LOGISTICA', clue: 'Organizzazione di mezzi, materiali e spostamenti' },
+        { n: 4, dir: 'D', row: 0, col: 3, answer: 'OMBRELLO', clue: 'Lo apri quando piove' },
+        { n: 5, dir: 'D', row: 0, col: 4, answer: 'NUMERI', clue: 'Quello unico per le emergenze nel Lazio e il 112' },
+        { n: 6, dir: 'D', row: 0, col: 5, answer: 'TORMENTA', clue: 'Grande tempesta di neve e vento' },
+        { n: 7, dir: 'D', row: 0, col: 6, answer: 'ALLERTA', clue: 'Avviso ufficiale di un pericolo in arrivo' },
+        { n: 8, dir: 'D', row: 0, col: 7, answer: 'RADIO', clue: 'Apparecchio che trasmette voci via onde' },
+        { n: 9, dir: 'D', row: 0, col: 8, answer: 'IDRANTE', clue: 'Fornisce acqua ai pompieri in strada' }
       ]
     }
 

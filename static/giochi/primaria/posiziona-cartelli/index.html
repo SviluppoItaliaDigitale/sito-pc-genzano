@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posiziona i Cartelli — Giochi Protezione Civile</title>
+  <meta name="description" content="Sposta i cartelli di pericolo, divieto e sicurezza nei posti giusti della scena. Si gioca con dita, mouse o frecce della tastiera.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <style>
+    .screen { display: block; }
+    .screen.hide { display: none !important; }
+
+    .regole-box {
+      background: #e8f0fe; border-left: 4px solid #003366; border-radius: 10px;
+      padding: 1rem 1.2rem; margin-bottom: 1rem;
+    }
+    .regole-box h2 { color: #003366; font-size: 1.1rem; margin-top: 0; margin-bottom: .5rem; }
+    .regole-box ul { margin: 0; padding-left: 1.2rem; }
+    .regole-box li { margin-bottom: .3rem; }
+
+    .level-grid { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
+    .level-card {
+      background: #fff; border-radius: 12px; padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      border: 2px solid transparent; cursor: pointer;
+      text-align: center; min-width: 160px; max-width: 200px;
+      transition: all .2s;
+    }
+    .level-card:hover, .level-card:focus {
+      border-color: #003366; transform: translateY(-2px);
+    }
+    .level-card h3 { color: #003366; font-size: 1rem; margin: .5rem 0 .2rem; }
+    .level-card p { font-size: .85rem; color: #5b6b7c; margin: 0; }
+
+    .hud {
+      display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .hud-pill {
+      background: #fff; border: 2px solid #003366; border-radius: 20px;
+      padding: .3rem .9rem; font-size: .9rem; font-weight: 600; color: #003366;
+    }
+    .hud-pill.ok { border-color: #198754; color: #198754; }
+    .hud-pill.ko { border-color: #dc3545; color: #dc3545; }
+
+    .scene-title {
+      background: #fff; border-radius: 12px; padding: .8rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06); margin-bottom: 1rem;
+    }
+    .scene-title h2 { color: #003366; font-size: 1.15rem; margin: 0 0 .3rem 0; }
+    .scene-title p { margin: 0; color: #5b6b7c; font-size: .95rem; }
+
+    .scene {
+      position: relative;
+      background: #f3f6fa;
+      border: 2px dashed #cfd6df;
+      border-radius: 12px;
+      min-height: 340px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .slot {
+      position: absolute;
+      border: 2px dashed #adb5bd;
+      border-radius: 10px;
+      background: rgba(255,255,255,.6);
+      color: #5b6b7c;
+      font-size: .85rem;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: .3rem;
+      width: 90px; height: 90px;
+    }
+    .slot.filled { border-style: solid; }
+    .slot.filled.correct { border-color: #198754; background: #d1e7dd; }
+    .slot.filled.wrong { border-color: #dc3545; background: #f8d7da; }
+    .slot-hint { pointer-events: none; }
+
+    .tray {
+      background: #fff; border-radius: 12px; padding: .8rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      display: flex; flex-wrap: wrap; gap: .6rem;
+      justify-content: center;
+      min-height: 110px;
+    }
+
+    .sign {
+      width: 80px; height: 80px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.2rem;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,.12);
+      cursor: grab;
+      user-select: none;
+      touch-action: none;
+      position: relative;
+      transition: transform .12s, box-shadow .12s;
+    }
+    .sign:focus {
+      outline: 3px solid #003366; outline-offset: 3px;
+    }
+    .sign.selected {
+      transform: scale(1.08);
+      box-shadow: 0 4px 14px rgba(0,51,102,.35);
+      outline: 3px solid #003366; outline-offset: 3px;
+    }
+    .sign.dragging { opacity: .7; }
+    .sign.placed { cursor: default; }
+    .sign.placed.correct { box-shadow: 0 0 0 3px #198754; }
+    .sign.placed.wrong   { box-shadow: 0 0 0 3px #dc3545; }
+
+    /* forme base dei cartelli, stile schematico */
+    .sign.danger    { background: #fff3cd; border: 3px solid #b45309; }
+    .sign.vdf       { background: #f8d7da; border: 3px solid #dc3545; }
+    .sign.ban       { background: #fff; border: 3px solid #dc3545; }
+    .sign.oblig     { background: #cfe2ff; border: 3px solid #0d6efd; border-radius: 50%; }
+    .sign.safe      { background: #d1e7dd; border: 3px solid #198754; }
+    .sign.exit      { background: #198754; color: #fff; border: 3px solid #0f5132; }
+
+    .sign-label {
+      position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%);
+      font-size: .72rem; font-weight: 600; color: #003366;
+      white-space: nowrap; background: rgba(255,255,255,.85);
+      padding: 1px 6px; border-radius: 10px;
+    }
+
+    .sign-wrap { position: relative; padding-bottom: 18px; }
+
+    .drop-highlight { background: rgba(0,51,102,.15); border-color: #003366 !important; }
+
+    .legenda {
+      background: #fff; border-radius: 10px; padding: .6rem 1rem;
+      display: flex; flex-wrap: wrap; gap: 1rem; font-size: .85rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,.05); margin-bottom: 1rem;
+    }
+    .legenda span { display: inline-flex; align-items: center; gap: .4rem; }
+    .legenda .dot { width: 14px; height: 14px; border-radius: 4px; display: inline-block; border: 2px solid; }
+
+    .controls-tip {
+      font-size: .85rem; color: #5b6b7c; margin-top: .4rem; text-align: center;
+    }
+    .controls-tip kbd {
+      background: #003366; color: #fff; border-radius: 4px;
+      padding: 1px 6px; font-family: inherit; font-size: .8rem;
+    }
+
+    .end-box {
+      background: #fff; border-radius: 12px; padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08); text-align: center;
+    }
+    .end-box h2 { color: #003366; }
+
+    @media (max-width: 576px) {
+      .sign { width: 64px; height: 64px; font-size: 1.8rem; }
+      .slot { width: 72px; height: 72px; font-size: .75rem; }
+      .sign-label { font-size: .65rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sign, .level-card { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main id="main-content" tabindex="-1" class="giochi-section">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Scuola Primaria</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Posiziona i Cartelli</li>
+          </ol>
+        </nav>
+        <h1>Posiziona i Cartelli</h1>
+        <p class="lead">Sposta ogni cartello nel punto giusto della scena. Giochi con il dito sullo smartphone, con il mouse o con le frecce della tastiera.</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+          <!-- SCELTA LIVELLO -->
+          <div id="select-screen" class="screen">
+            <div class="regole-box">
+              <h2><i class="bi bi-info-circle-fill me-1" aria-hidden="true"></i>Come funziona</h2>
+              <ul>
+                <li>Ogni scena ha alcuni <strong>posti vuoti</strong>: devi capire quale cartello va in quale posto.</li>
+                <li><strong>Dal cellulare</strong>: tieni premuto il cartello e trascinalo nel posto giusto.</li>
+                <li><strong>Dal computer</strong>: trascina col mouse, oppure seleziona con <kbd>Tab</kbd> e sposta con le <kbd>frecce</kbd>. Premi <kbd>Invio</kbd> per prendere o rilasciare.</li>
+                <li>Dopo aver messo tutti i cartelli, premi <strong>Verifica</strong>: ti diremo dove sono quelli giusti e dove sbagliati.</li>
+              </ul>
+            </div>
+
+            <div class="legenda" aria-hidden="true">
+              <span><span class="dot" style="background:#fff3cd;border-color:#b45309"></span>Pericolo</span>
+              <span><span class="dot" style="background:#fff;border-color:#dc3545"></span>Divieto</span>
+              <span><span class="dot" style="background:#cfe2ff;border-color:#0d6efd;border-radius:50%"></span>Obbligo</span>
+              <span><span class="dot" style="background:#d1e7dd;border-color:#198754"></span>Primo soccorso</span>
+              <span><span class="dot" style="background:#198754;border-color:#0f5132"></span>Uscita</span>
+              <span><span class="dot" style="background:#f8d7da;border-color:#dc3545"></span>Antincendio</span>
+            </div>
+
+            <h2 class="h5 text-center mt-4 mb-3">Scegli una scena</h2>
+            <div class="level-grid" id="level-list"></div>
+          </div>
+
+          <!-- GIOCO -->
+          <div id="game-screen" class="screen hide">
+            <div class="hud">
+              <span class="hud-pill" id="hud-scene">—</span>
+              <span class="hud-pill ok" id="hud-ok">Giusti: 0</span>
+              <span class="hud-pill ko" id="hud-ko">Sbagliati: 0</span>
+            </div>
+
+            <div class="scene-title">
+              <h2 id="scene-title">Scena</h2>
+              <p id="scene-desc">Descrizione</p>
+            </div>
+
+            <div class="scene" id="scene"></div>
+
+            <div class="tray" id="tray" aria-label="Cartelli disponibili"></div>
+
+            <p class="controls-tip">
+              Suggerimento: seleziona un cartello con il dito o con <kbd>Tab</kbd>, poi usa le <kbd>frecce</kbd> per spostarlo e <kbd>Invio</kbd> per confermare.
+            </p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+              <button id="check-btn" class="btn btn-primary"><i class="bi bi-check2-circle me-1" aria-hidden="true"></i>Verifica</button>
+              <button id="reset-btn" class="btn btn-outline-secondary"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i>Ricomincia scena</button>
+              <button id="back-btn" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Altre scene</button>
+            </div>
+
+            <div id="feedback-msg" class="alert alert-info mt-3 hide" role="status" aria-live="polite"></div>
+          </div>
+
+          <!-- FINE -->
+          <div id="end-screen" class="screen hide">
+            <div class="end-box">
+              <div class="app-card-icon icon-blue mx-auto mb-3" style="width:70px;height:70px;font-size:2rem;">
+                <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+              </div>
+              <h2>Scena completata!</h2>
+              <p class="lead" id="end-msg">Ottimo lavoro!</p>
+              <p class="text-muted">Cartelli giusti: <strong><span id="end-score">0</span></strong> su <strong><span id="end-max">0</span></strong></p>
+              <div id="attestato-box" class="my-3"></div>
+              <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                <button id="another-btn" class="btn btn-primary"><i class="bi bi-collection-play-fill me-1" aria-hidden="true"></i>Prova un'altra scena</button>
+                <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Torna ai giochi</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    // Catalogo cartelli riutilizzabile
+    // kind = classe CSS (danger, ban, oblig, safe, exit, vdf)
+    // id univoco usato per il matching slot-cartello
+    var CART = {
+      fuoco:      { id: 'fuoco',      kind: 'danger', glyph: '\uD83D\uDD25', label: 'Pericolo incendio' },
+      elettrico:  { id: 'elettrico',  kind: 'danger', glyph: '\u26A1',       label: 'Alta tensione' },
+      caduta:     { id: 'caduta',     kind: 'danger', glyph: '\u26A0\uFE0F', label: 'Attenzione al piede' },
+      chimico:    { id: 'chimico',    kind: 'danger', glyph: '\u2623\uFE0F', label: 'Sostanze nocive' },
+      vietatofumare: { id: 'vietatofumare', kind: 'ban', glyph: '\uD83D\uDEAD', label: 'Vietato fumare' },
+      vietatoingresso: { id: 'vietatoingresso', kind: 'ban', glyph: '\uD83D\uDEAB', label: 'Vietato entrare' },
+      vietatoascensore: { id: 'vietatoascensore', kind: 'ban', glyph: '\uD83D\uDEC8', label: 'Vietato ascensore' },
+      casco:      { id: 'casco',      kind: 'oblig', glyph: '\u26D1\uFE0F', label: 'Casco obbligatorio' },
+      guanti:     { id: 'guanti',     kind: 'oblig', glyph: '\uD83E\uDDE4', label: 'Guanti' },
+      giubbino:   { id: 'giubbino',   kind: 'oblig', glyph: '\uD83E\uDDA9', label: 'Alta visibilit\u00e0' },
+      primosoccorso: { id: 'primosoccorso', kind: 'safe', glyph: '\u2795', label: 'Primo soccorso' },
+      defibrillatore: { id: 'defibrillatore', kind: 'safe', glyph: '\u2764\uFE0F', label: 'Defibrillatore' },
+      raccolta:   { id: 'raccolta',   kind: 'safe', glyph: '\uD83D\uDC65', label: 'Punto di raccolta' },
+      uscita:     { id: 'uscita',     kind: 'exit', glyph: '\uD83D\uDEAA', label: 'Uscita emergenza' },
+      estintore:  { id: 'estintore',  kind: 'vdf', glyph: '\uD83E\uDDEF', label: 'Estintore' },
+      idrante:    { id: 'idrante',    kind: 'vdf', glyph: '\uD83D\uDEB1', label: 'Idrante' }
+    };
+
+    var SCENE = [
+      {
+        id: 'scuola',
+        titolo: 'A scuola',
+        desc: 'Colloca i cartelli nei punti giusti della scuola: corridoi, laboratorio e uscita di emergenza.',
+        slots: [
+          { id: 'a', x: 5,  y: 8,   hint: 'Porta che porta fuori dall\'edificio', accepts: 'uscita' },
+          { id: 'b', x: 32, y: 8,   hint: 'Armadio di primo soccorso', accepts: 'primosoccorso' },
+          { id: 'c', x: 59, y: 8,   hint: 'Cassetta rossa in corridoio', accepts: 'estintore' },
+          { id: 'd', x: 5,  y: 55,  hint: 'Laboratorio di scienze', accepts: 'chimico' },
+          { id: 'e', x: 32, y: 55,  hint: 'In corridoio vicino alle scale', accepts: 'vietatoascensore' },
+          { id: 'f', x: 59, y: 55,  hint: 'Punto di raccolta in cortile', accepts: 'raccolta' }
+        ],
+        cartelli: ['uscita', 'primosoccorso', 'estintore', 'chimico', 'vietatoascensore', 'raccolta']
+      },
+      {
+        id: 'cantiere',
+        titolo: 'In cantiere',
+        desc: 'Un cantiere edile \u00e8 pieno di cartelli: metti ogni obbligo e ogni pericolo al posto giusto.',
+        slots: [
+          { id: 'a', x: 5,  y: 8,   hint: 'Ingresso del cantiere', accepts: 'casco' },
+          { id: 'b', x: 32, y: 8,   hint: 'Area di scavo profondo', accepts: 'caduta' },
+          { id: 'c', x: 59, y: 8,   hint: 'Quadro elettrico della ruspa', accepts: 'elettrico' },
+          { id: 'd', x: 5,  y: 55,  hint: 'Stoccaggio vernici e solventi', accepts: 'vietatofumare' },
+          { id: 'e', x: 32, y: 55,  hint: 'Movimentazione materiali', accepts: 'guanti' },
+          { id: 'f', x: 59, y: 55,  hint: 'Vicinanze della strada', accepts: 'giubbino' }
+        ],
+        cartelli: ['casco', 'caduta', 'elettrico', 'vietatofumare', 'guanti', 'giubbino']
+      },
+      {
+        id: 'bosco',
+        titolo: 'Nel bosco',
+        desc: 'Un parco pubblico durante la stagione degli incendi. Posiziona i cartelli di pericolo e divieto.',
+        slots: [
+          { id: 'a', x: 5,  y: 8,   hint: 'Ingresso del sentiero', accepts: 'fuoco' },
+          { id: 'b', x: 32, y: 8,   hint: 'Area pic-nic', accepts: 'vietatofumare' },
+          { id: 'c', x: 59, y: 8,   hint: 'Centralina elettrica del rifugio', accepts: 'elettrico' },
+          { id: 'd', x: 5,  y: 55,  hint: 'Cassetta di medicazione', accepts: 'primosoccorso' },
+          { id: 'e', x: 32, y: 55,  hint: 'Radura per l\'elicottero', accepts: 'raccolta' },
+          { id: 'f', x: 59, y: 55,  hint: 'Riserva per pompieri', accepts: 'idrante' }
+        ],
+        cartelli: ['fuoco', 'vietatofumare', 'elettrico', 'primosoccorso', 'raccolta', 'idrante']
+      },
+      {
+        id: 'palestra',
+        titolo: 'In palestra',
+        desc: 'Una palestra pubblica con zona attrezzi. Dove metti i cartelli di obbligo, sicurezza e uscita?',
+        slots: [
+          { id: 'a', x: 5,  y: 8,   hint: 'Porta per la via di fuga', accepts: 'uscita' },
+          { id: 'b', x: 32, y: 8,   hint: 'Custodia con massaggiatore cardiaco', accepts: 'defibrillatore' },
+          { id: 'c', x: 59, y: 8,   hint: 'Area spogliatoi', accepts: 'vietatofumare' },
+          { id: 'd', x: 5,  y: 55,  hint: 'Pareti vicino a una scala da arrampicata', accepts: 'caduta' },
+          { id: 'e', x: 32, y: 55,  hint: 'Pronto soccorso', accepts: 'primosoccorso' },
+          { id: 'f', x: 59, y: 55,  hint: 'Vicino alle attrezzature', accepts: 'estintore' }
+        ],
+        cartelli: ['uscita', 'defibrillatore', 'vietatofumare', 'caduta', 'primosoccorso', 'estintore']
+      }
+    ];
+
+    var selectScreen = document.getElementById('select-screen');
+    var gameScreen = document.getElementById('game-screen');
+    var endScreen = document.getElementById('end-screen');
+    var levelList = document.getElementById('level-list');
+    var sceneEl = document.getElementById('scene');
+    var trayEl = document.getElementById('tray');
+    var sceneTitle = document.getElementById('scene-title');
+    var sceneDesc = document.getElementById('scene-desc');
+    var hudScene = document.getElementById('hud-scene');
+    var hudOk = document.getElementById('hud-ok');
+    var hudKo = document.getElementById('hud-ko');
+    var checkBtn = document.getElementById('check-btn');
+    var resetBtn = document.getElementById('reset-btn');
+    var backBtn = document.getElementById('back-btn');
+    var feedbackMsg = document.getElementById('feedback-msg');
+    var endMsg = document.getElementById('end-msg');
+    var endScore = document.getElementById('end-score');
+    var endMax = document.getElementById('end-max');
+    var anotherBtn = document.getElementById('another-btn');
+
+    var current = null;   // scena corrente
+    var placement = {};   // { segnoId: slotId | null }
+    var selected = null;  // sign selezionato con tastiera
+
+    function renderLevelList() {
+      levelList.innerHTML = '';
+      SCENE.forEach(function (s) {
+        var card = document.createElement('div');
+        card.className = 'level-card';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.innerHTML =
+          '<div style="font-size:2rem" aria-hidden="true"><i class="bi bi-geo-alt-fill"></i></div>' +
+          '<h3>' + s.titolo + '</h3><p>' + s.cartelli.length + ' cartelli</p>';
+        card.addEventListener('click', function () { startScene(s); });
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startScene(s); }
+        });
+        levelList.appendChild(card);
+      });
+    }
+
+    function startScene(s) {
+      current = s;
+      placement = {};
+      selected = null;
+      selectScreen.classList.add('hide');
+      endScreen.classList.add('hide');
+      gameScreen.classList.remove('hide');
+      sceneTitle.textContent = s.titolo;
+      sceneDesc.textContent = s.desc;
+      hudScene.textContent = s.titolo;
+      feedbackMsg.classList.add('hide');
+      buildScene();
+      buildTray();
+      updateHud();
+    }
+
+    function buildScene() {
+      sceneEl.innerHTML = '';
+      current.slots.forEach(function (slot) {
+        var d = document.createElement('div');
+        d.className = 'slot';
+        d.dataset.slot = slot.id;
+        d.style.left = slot.x + '%';
+        d.style.top = slot.y + '%';
+        d.setAttribute('role', 'region');
+        d.setAttribute('aria-label', 'Posto: ' + slot.hint);
+        var label = document.createElement('span');
+        label.className = 'slot-hint';
+        label.textContent = slot.hint;
+        d.appendChild(label);
+        d.addEventListener('dragover', function (e) { e.preventDefault(); d.classList.add('drop-highlight'); });
+        d.addEventListener('dragleave', function () { d.classList.remove('drop-highlight'); });
+        d.addEventListener('drop', function (e) {
+          e.preventDefault();
+          d.classList.remove('drop-highlight');
+          var cid = e.dataTransfer.getData('text/plain');
+          placeSign(cid, slot.id);
+        });
+        sceneEl.appendChild(d);
+      });
+    }
+
+    function buildTray() {
+      trayEl.innerHTML = '';
+      // mescola
+      var ids = current.cartelli.slice().sort(function () { return Math.random() - 0.5; });
+      ids.forEach(function (cid) {
+        var c = CART[cid];
+        var wrap = document.createElement('div');
+        wrap.className = 'sign-wrap';
+        var s = document.createElement('div');
+        s.className = 'sign ' + c.kind;
+        s.textContent = c.glyph;
+        s.setAttribute('tabindex', '0');
+        s.setAttribute('role', 'button');
+        s.setAttribute('aria-label', c.label + ' (premi Invio per prendere, poi sposta con le frecce)');
+        s.setAttribute('draggable', 'true');
+        s.dataset.signId = cid;
+        var lbl = document.createElement('span');
+        lbl.className = 'sign-label';
+        lbl.textContent = c.label;
+        lbl.setAttribute('aria-hidden', 'true');
+        wrap.appendChild(s);
+        wrap.appendChild(lbl);
+        trayEl.appendChild(wrap);
+
+        s.addEventListener('dragstart', function (e) {
+          s.classList.add('dragging');
+          e.dataTransfer.setData('text/plain', cid);
+          e.dataTransfer.effectAllowed = 'move';
+        });
+        s.addEventListener('dragend', function () { s.classList.remove('dragging'); });
+        s.addEventListener('keydown', onSignKeyDown);
+        s.addEventListener('click', function () { selectSign(s); });
+
+        // touch: tieni premuto e muovi sopra uno slot
+        s.addEventListener('pointerdown', onPointerDown);
+      });
+    }
+
+    function selectSign(el) {
+      if (selected) selected.classList.remove('selected');
+      if (selected === el) { selected = null; return; }
+      selected = el;
+      el.classList.add('selected');
+    }
+
+    function onSignKeyDown(e) {
+      var el = e.currentTarget;
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault(); selectSign(el);
+        return;
+      }
+      if (!selected || selected !== el) return;
+      var cid = el.dataset.signId;
+      var idx = current.slots.findIndex(function (s) { return placement[cid] === s.id; });
+      var slots = current.slots;
+      var target;
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        target = idx > 0 ? slots[idx - 1] : slots[slots.length - 1];
+        placeSign(cid, target.id);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        target = (idx >= 0 && idx < slots.length - 1) ? slots[idx + 1] : slots[0];
+        placeSign(cid, target.id);
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        // salta al prossimo slot libero
+        for (var i = 0; i < slots.length; i++) {
+          var si = (idx + 1 + i) % slots.length;
+          if (!slotOccupiedBy(slots[si].id) || slots[si].id === placement[cid]) {
+            placeSign(cid, slots[si].id); break;
+          }
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        for (var j = 0; j < slots.length; j++) {
+          var sj = (idx - 1 - j + slots.length) % slots.length;
+          if (!slotOccupiedBy(slots[sj].id) || slots[sj].id === placement[cid]) {
+            placeSign(cid, slots[sj].id); break;
+          }
+        }
+      } else if (e.key === 'Backspace' || e.key === 'Delete') {
+        e.preventDefault();
+        placeSign(cid, null);
+      }
+    }
+
+    function slotOccupiedBy(slotId) {
+      return Object.keys(placement).find(function (k) { return placement[k] === slotId; }) || null;
+    }
+
+    function placeSign(cid, slotId) {
+      // se lo slot è occupato, scambia o rimuovi l'altro
+      if (slotId) {
+        var other = slotOccupiedBy(slotId);
+        if (other && other !== cid) placement[other] = null;
+      }
+      placement[cid] = slotId;
+      renderPlacement();
+    }
+
+    function renderPlacement() {
+      // ripulisci slot
+      sceneEl.querySelectorAll('.slot').forEach(function (s) {
+        s.classList.remove('filled', 'correct', 'wrong');
+        var hint = s.querySelector('.slot-hint');
+        if (hint) hint.style.display = '';
+        // rimuovi eventuali sign dentro lo slot (ricreiamo)
+        var existing = s.querySelector('.sign');
+        if (existing) existing.remove();
+      });
+      // riporta tutti gli eventuali sign nel tray
+      trayEl.innerHTML = '';
+      current.cartelli.forEach(function (cid) {
+        var slotId = placement[cid];
+        if (slotId) {
+          var slotEl = sceneEl.querySelector('[data-slot="' + slotId + '"]');
+          var hint = slotEl.querySelector('.slot-hint');
+          if (hint) hint.style.display = 'none';
+          slotEl.classList.add('filled');
+          var signEl = buildSignEl(cid);
+          slotEl.appendChild(signEl);
+        } else {
+          var wrap = document.createElement('div');
+          wrap.className = 'sign-wrap';
+          wrap.appendChild(buildSignEl(cid));
+          var c = CART[cid];
+          var lbl = document.createElement('span');
+          lbl.className = 'sign-label';
+          lbl.textContent = c.label;
+          lbl.setAttribute('aria-hidden', 'true');
+          wrap.appendChild(lbl);
+          trayEl.appendChild(wrap);
+        }
+      });
+      // reset selected reference (l'elemento è stato ricreato)
+      if (selected) {
+        var still = document.querySelector('[data-sign-id="' + selected.dataset.signId + '"]');
+        selected = still || null;
+        if (selected) selected.classList.add('selected');
+      }
+    }
+
+    function buildSignEl(cid) {
+      var c = CART[cid];
+      var s = document.createElement('div');
+      s.className = 'sign ' + c.kind;
+      s.textContent = c.glyph;
+      s.setAttribute('tabindex', '0');
+      s.setAttribute('role', 'button');
+      s.setAttribute('aria-label', c.label);
+      s.setAttribute('draggable', 'true');
+      s.dataset.signId = cid;
+      s.addEventListener('dragstart', function (e) {
+        s.classList.add('dragging');
+        e.dataTransfer.setData('text/plain', cid);
+        e.dataTransfer.effectAllowed = 'move';
+      });
+      s.addEventListener('dragend', function () { s.classList.remove('dragging'); });
+      s.addEventListener('keydown', onSignKeyDown);
+      s.addEventListener('click', function () { selectSign(s); });
+      s.addEventListener('pointerdown', onPointerDown);
+      return s;
+    }
+
+    // Pointer drag (touch friendly)
+    var dragState = null;
+    function onPointerDown(e) {
+      // non avviamo il drag custom se è già un click breve: lasciamo tastiera
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      var el = e.currentTarget;
+      var rect = el.getBoundingClientRect();
+      dragState = {
+        el: el, cid: el.dataset.signId,
+        ox: e.clientX - rect.left, oy: e.clientY - rect.top,
+        clone: null
+      };
+      el.setPointerCapture(e.pointerId);
+      el.addEventListener('pointermove', onPointerMove);
+      el.addEventListener('pointerup', onPointerUp);
+      el.addEventListener('pointercancel', onPointerUp);
+    }
+    function onPointerMove(e) {
+      if (!dragState) return;
+      if (!dragState.clone) {
+        // creiamo un ghost fluttuante
+        var c = dragState.el.cloneNode(true);
+        c.style.position = 'fixed';
+        c.style.zIndex = '9999';
+        c.style.pointerEvents = 'none';
+        c.style.opacity = '.85';
+        c.style.width = dragState.el.offsetWidth + 'px';
+        c.style.height = dragState.el.offsetHeight + 'px';
+        document.body.appendChild(c);
+        dragState.clone = c;
+        dragState.el.classList.add('dragging');
+      }
+      dragState.clone.style.left = (e.clientX - dragState.ox) + 'px';
+      dragState.clone.style.top  = (e.clientY - dragState.oy) + 'px';
+      // evidenzia slot sotto al puntatore
+      sceneEl.querySelectorAll('.slot').forEach(function (s) { s.classList.remove('drop-highlight'); });
+      var target = document.elementFromPoint(e.clientX, e.clientY);
+      while (target && !target.classList.contains('slot')) target = target.parentElement;
+      if (target) target.classList.add('drop-highlight');
+    }
+    function onPointerUp(e) {
+      if (!dragState) return;
+      var el = dragState.el;
+      el.removeEventListener('pointermove', onPointerMove);
+      el.removeEventListener('pointerup', onPointerUp);
+      el.removeEventListener('pointercancel', onPointerUp);
+      el.classList.remove('dragging');
+      var moved = false;
+      if (dragState.clone) {
+        var target = document.elementFromPoint(e.clientX, e.clientY);
+        while (target && !target.classList.contains('slot')) target = target.parentElement;
+        if (target) {
+          placeSign(dragState.cid, target.dataset.slot);
+          moved = true;
+        }
+        dragState.clone.remove();
+      }
+      sceneEl.querySelectorAll('.slot').forEach(function (s) { s.classList.remove('drop-highlight'); });
+      dragState = null;
+      // se pointer era breve (tap senza movimento), usato come selezione via tastiera
+      if (!moved) selectSign(el);
+    }
+
+    function verify() {
+      var ok = 0, ko = 0, unplaced = 0;
+      current.cartelli.forEach(function (cid) {
+        var slotId = placement[cid];
+        if (!slotId) { unplaced++; return; }
+        var slot = current.slots.find(function (s) { return s.id === slotId; });
+        var slotEl = sceneEl.querySelector('[data-slot="' + slotId + '"]');
+        var signEl = slotEl.querySelector('.sign');
+        if (slot.accepts === cid) {
+          ok++;
+          slotEl.classList.remove('wrong'); slotEl.classList.add('correct');
+          if (signEl) { signEl.classList.add('placed', 'correct'); signEl.classList.remove('wrong'); }
+        } else {
+          ko++;
+          slotEl.classList.remove('correct'); slotEl.classList.add('wrong');
+          if (signEl) { signEl.classList.add('placed', 'wrong'); signEl.classList.remove('correct'); }
+        }
+      });
+      hudOk.textContent = 'Giusti: ' + ok;
+      hudKo.textContent = 'Sbagliati: ' + ko;
+      if (unplaced > 0) {
+        feedbackMsg.className = 'alert alert-warning mt-3';
+        feedbackMsg.textContent = 'Hai lasciato ' + unplaced + ' cartell' + (unplaced === 1 ? 'o' : 'i') + ' sul ripiano. Prova a posizionarl' + (unplaced === 1 ? 'o' : 'i') + ' prima di verificare.';
+        feedbackMsg.classList.remove('hide');
+        return;
+      }
+      if (ok === current.cartelli.length) {
+        setTimeout(finish, 700);
+      } else {
+        feedbackMsg.className = 'alert alert-warning mt-3';
+        feedbackMsg.textContent = 'Hai ' + ko + ' cartell' + (ko === 1 ? 'o' : 'i') + ' da spostare. Sposta quelli sbagliati e riprova.';
+        feedbackMsg.classList.remove('hide');
+      }
+    }
+
+    function finish() {
+      gameScreen.classList.add('hide');
+      endScreen.classList.remove('hide');
+      endScore.textContent = current.cartelli.length;
+      endMax.textContent = current.cartelli.length;
+      endMsg.textContent = 'Tutti i cartelli sono al posto giusto!';
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('posiziona-cartelli', current.cartelli.length, current.cartelli.length, '#end-screen .end-box');
+    }
+
+    function updateHud() {
+      hudOk.textContent = 'Giusti: 0';
+      hudKo.textContent = 'Sbagliati: 0';
+    }
+
+    checkBtn.addEventListener('click', verify);
+    resetBtn.addEventListener('click', function () {
+      placement = {};
+      feedbackMsg.classList.add('hide');
+      buildScene(); buildTray(); updateHud();
+    });
+    backBtn.addEventListener('click', function () {
+      gameScreen.classList.add('hide');
+      selectScreen.classList.remove('hide');
+    });
+    anotherBtn.addEventListener('click', function () {
+      endScreen.classList.add('hide');
+      selectScreen.classList.remove('hide');
+    });
+
+    renderLevelList();
+  })();
+  </script>
+</body>
+</html>
