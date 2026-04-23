@@ -985,6 +985,54 @@ Se usi DALL-E, Midjourney, Canva AI, Photoshop Generative Fill:
 > (~15 px, font sans-serif regular). L'immagine finale deve essere 1200 px di larghezza
 > proporzionata."
 
+##### Metodo 4 — Script `applica-fascia-foto.sh` (raccomandato per le foto fornite dall'utente)
+
+Per le **foto evento** (interventi, esercitazioni, formazione, ricorrenze) fornite in formato
+grezzo (JPG/PNG/WebP), il repository include uno script riusabile che applica la fascia blu
+in modo automatico e uniforme:
+
+```bash
+bash scripts/applica-fascia-foto.sh <file-sorgente> <nome-output-senza-estensione>
+```
+
+**Esempi reali:**
+
+```bash
+bash scripts/applica-fascia-foto.sh /home/utente/Scaricati/Zamberletti.jpg zamberletti-ritratto-istituzionale
+bash scripts/applica-fascia-foto.sh /home/utente/Scaricati/Genzano-alto.jpg 2026-06-23-genzano-infiorata-aerea
+```
+
+**Cosa fa lo script:**
+
+1. Ridimensiona la foto sorgente a **1200 px di larghezza** mantenendo il rapporto d'aspetto.
+2. Aggiunge sotto la foto una **fascia blu `#003366` alta 100 px**.
+3. Compone il **logo PC Genzano** (72×72) a sinistra e il testo istituzionale a due righe
+   ("PROTEZIONE CIVILE" + "Gruppo Comunale Volontari — Genzano di Roma") a destra del logo.
+4. Esporta come **WebP** qualità 85 (compressione `method=6`) in `static/images/<nome>.webp`.
+5. Se il risultato supera i **200 KB** ricomprime automaticamente a qualità 75.
+
+**Requisiti:**
+
+- ImageMagick installato (`apt install imagemagick`).
+- Il logo `static/images/logo-pc-genzano.png` deve essere presente (lo è già nel repository).
+- I font Liberation (Liberation-Sans, Liberation-Sans-Bold) installati — di default sui sistemi
+  Linux Ubuntu/Debian, normalmente disponibili via `apt install fonts-liberation`.
+
+**Perché è raccomandato:**
+
+- Uniformità grafica con tutte le foto precedenti (stessa fascia, stesso logo, stessa tipografia).
+- Zero passaggi manuali in Canva/GIMP per il trattamento di routine.
+- Nome file di output sotto controllo: passa un nome **diverso dallo slug dell'articolo**
+  (vedi Parte 3.13) per evitare che `genera-cover.py` sovrascriva la foto con una copertina
+  tipografica.
+
+**Differenza con `scripts/genera-cover.py`:**
+
+| Script | Quando usarlo | Input | Output |
+|---|---|---|---|
+| `genera-cover.py` | Copertine automatiche tipografiche (gradiente + titolo + badge) | Solo il file `.md` dell'articolo | `static/images/<slug>.webp` |
+| `applica-fascia-foto.sh` | Foto evento reali fornite dall'utente | Foto sorgente + nome output | `static/images/<nome>.webp` |
+
 ### 3.9 — Convertire in WebP e comprimere
 
 Target: **max 200 KB**.
@@ -1088,7 +1136,8 @@ non sostituiscono la copertina.
 Regole per le foto evento:
 - Nome file: `AAAA-MM-GG-descrizione-specifica.webp`, con descrizione **diversa dallo slug**
   (così `genera-cover.py` non le sovrascrive).
-- Devono comunque avere la **fascia blu istituzionale** (vedi Parte 3.8).
+- Devono comunque avere la **fascia blu istituzionale** (vedi Parte 3.8). Per trattarle in
+  modo uniforme e rapido usa lo script `scripts/applica-fascia-foto.sh` (Parte 3.8, Metodo 4).
 - Si inseriscono con lo shortcode `foto` — mai con markdown `![...]()` diretto.
 
 ### 3.14 — Shortcode `foto` (click per ingrandire)
@@ -1136,6 +1185,60 @@ didascalia opzionale.
   ricorrenze con foto reali). Sempre.
 - **Markdown `![alt](src)`**: solo per icone o immagini puramente decorative inline,
   quando non serve l'ingrandimento.
+
+### 3.15 — Tipografia del corpo articolo (`.article-body` v7.2)
+
+Le pagine `single` degli articoli avvolgono il contenuto in
+`<article class="article-body">` (template `themes/flavour-pcgenzano/layouts/_default/single.html`).
+Il blocco CSS **v7.2** in `themes/flavour-pcgenzano/static/css/custom.css` applica a questo
+wrapper una tipografia istituzionale curata che non influisce su homepage, liste, card o widget.
+
+**Cosa applica automaticamente:**
+
+| Elemento | Trattamento |
+|---|---|
+| Base | `font-size: 1.05rem`, `line-height: 1.75`, colore `#1a1a1a` (contrasto massimo) |
+| Primo paragrafo (`lede`) | `font-size: 1.15rem`, colore `#003366`, `font-weight: 500` |
+| Capolettera | Prima lettera del primo paragrafo: `3rem`, blu `#003366`, float left |
+| `<h2>` | Barra blu `3px` a sinistra, `margin-top: 2.5rem`, colore `#003366`, bold |
+| `<h3>` / `<h4>` | Colore `#003366`, peso 600, spaziatura ridotta |
+| `<ul>` / `<ol>` | `::marker` blu `#003366`, spaziatura voci `0.4rem` |
+| `<blockquote>` | Bordo sinistro blu `4px`, sfondo `#f4f7fb`, corsivo, bordi arrotondati |
+| `<figure>` | Max-width `640px`, ombra morbida `rgba(0,51,102,0.12)`, cornice sottile |
+| `<figcaption>` | Corsivo blu `#003366`, centrato, `0.925rem` |
+| `<a>` (non `.btn`) | Colore blu, `underline` 1 px, 2 px al hover/focus |
+| `<table>` | Header blu `#003366` su bianco, zebra leggera `#f8f9fb`, border-collapse |
+| `<hr>` | Sfumatura orizzontale blu (decorativa, utile prima di "Riferimenti") |
+| `<code>` inline | Sfondo `#f4f7fb`, colore blu, padding 0.1×0.35rem |
+
+**Regole di override integrate:**
+
+- `@media (max-width: 768px)`: riduce il capolettera, comprime le spaziature degli H2, regola
+  la dimensione della `lede`.
+- `@media (prefers-reduced-motion: reduce)`: disattiva la transizione sull'underline dei link.
+- `@media print`: azzera capolettera, ombre, gradienti e sfondi colorati. Mantiene la
+  gerarchia visiva in bianco e nero con bordi grigi e colori neutri — il risultato stampato è
+  leggibile e sobrio.
+
+**Cosa devi fare tu come redattore:**
+
+- **Niente**: la tipografia si applica automaticamente a qualsiasi articolo in `content/comunicazioni/`.
+- **Non introdurre stili inline** nel Markdown (tipo `<span style="color:...">`): il tema li
+  sovrascriverà o li renderà incoerenti con la linea visiva.
+- **Non usare `<h1>` nel corpo**: il titolo pagina è già `<h1>`, il corpo parte da `<h2>`.
+- **Il primo paragrafo conta**: per sfruttare il rendering della *lede* e del capolettera,
+  fai in modo che il primo paragrafo sia un vero incipit di senso compiuto (almeno 2 frasi),
+  non una singola parola o un'immagine.
+- **I `<blockquote>`** sono per **citazioni testuali** (dichiarazioni ufficiali, estratti di
+  norme, slogan istituzionali). Non per qualsiasi paragrafo da evidenziare.
+
+**Compatibilità:**
+
+- Conforme **WCAG 2.2 AA**: tutti i colori testo/sfondo superano il rapporto 4.5:1.
+- Nessuna informazione veicolata solo dal colore.
+- Rispetta `prefers-reduced-motion` e `prefers-contrast` (base Bootstrap Italia).
+- Stampa pulita: header/navbar/footer sono già nascosti dal blocco `@media print` globale
+  (vedi Parte 1.10).
 
 ---
 
