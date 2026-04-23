@@ -32,6 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Peluche gigante', icon: '\uD83E\uDDF8', correct: false, tip: 'Occupa troppo spazio nello zaino' },
         { name: 'Album figurine', icon: '\uD83C\uDCCF', correct: false, tip: 'Non aiuta in emergenza!' },
         { name: 'Ombrellone', icon: '\u26F1\uFE0F', correct: false, tip: 'Troppo grande, non entra nello zaino' },
+        { name: 'Mascherina FFP2', icon: '\uD83D\uDE37', correct: true, tip: 'Utile in caso di polveri, fumo o nube di gas.' },
+        { name: 'Contanti', icon: '\uD83D\uDCB6', correct: true, tip: 'Piccola somma in banconote: se non c\u2019\u00e8 corrente i POS non funzionano.' },
+        { name: 'Penna e blocco', icon: '\u270F\uFE0F', correct: true, tip: 'Per lasciare messaggi o annotare informazioni.' },
+        { name: 'Chiavi di scorta', icon: '\uD83D\uDD11', correct: true, tip: 'Copia delle chiavi di casa e dell\u2019auto.' },
+        { name: 'Occhiali di scorta', icon: '\uD83D\uDC53', correct: true, tip: 'Per chi ne porta abitualmente: un paio di riserva.' },
+        { name: 'Foto di famiglia', icon: '\uD83D\uDDBC\uFE0F', correct: true, tip: 'Serve a ritrovare i propri cari in caso di separazione.' },
+        { name: 'Sacchetti di plastica', icon: '\uD83D\uDED2', correct: true, tip: 'Per proteggere documenti dall\u2019acqua e raccogliere rifiuti.' },
+        { name: 'Console videogiochi', icon: '\uD83D\uDD79\uFE0F', correct: false, tip: 'Scarica la batteria e non serve.' },
+        { name: 'Libri di scuola', icon: '\uD83D\uDCDA', correct: false, tip: 'Troppo pesanti: la scuola aspetta!' },
+        { name: 'Vasetto di fiori', icon: '\uD83C\uDF37', correct: false, tip: 'Fragile e occupa spazio inutilmente.' },
+        { name: 'Bicicletta', icon: '\uD83D\uDEB2', correct: false, tip: 'Non entra nello zaino \u2014 se serve va portata a parte.' },
+        { name: 'Animaletto di peluche', icon: '\uD83D\uDC30', correct: false, tip: 'Uno piccolo pu\u00f2 rassicurare i bambini piccoli, ma qui valuta se c\u2019\u00e8 spazio.' },
+        { name: 'Smalto per unghie', icon: '\uD83D\uDC85', correct: false, tip: 'Non \u00e8 una priorit\u00e0 in emergenza.' },
     ];
 
     let correctTotal, found, errors;
