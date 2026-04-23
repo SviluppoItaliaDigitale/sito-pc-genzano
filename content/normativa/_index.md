@@ -13,6 +13,10 @@ Il riferimento principale è il **Decreto Legislativo 2 gennaio 2018, n. 1** —
 
 [Approfondisci il Codice della Protezione Civile](/normativa/testo-unico-protezione-civile/)
 
+## Approfondimenti normativi
+
+- [Come sono evolute le procedure di emergenza: dal 1996 al 2026](/normativa/evoluzione-procedure-emergenza/) — confronto tra la direttiva Bertolaso 1996, il D.Lgs. 1/2018 e la Direttiva PCM 30 aprile 2021
+
 ## Normativa regionale del Lazio
 
 La **Regione Lazio** ha la competenza primaria su pianificazione, prevenzione e coordinamento delle emergenze non di rilievo nazionale. I riferimenti principali sono:
