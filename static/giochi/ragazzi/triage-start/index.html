@@ -260,7 +260,75 @@
           ['heart-pulse', 'Polso radiale: presente']
         ],
         cod: 'rosso',
-        spiega: 'Respiro > 30/min: ROSSO. L\'ustione e la probabile inalazione fumo aggravano, ma la decisione START si ferma al primo criterio positivo.' }
+        spiega: 'Respiro > 30/min: ROSSO. L\'ustione e la probabile inalazione fumo aggravano, ma la decisione START si ferma al primo criterio positivo.' },
+
+      { eta: 17, sesso: 'M', scenario: 'Incidente stradale scooter',
+        descr: 'Seduto a bordo strada, si tiene un braccio. Ha il casco ancora indossato, cammina se aiutato ma di propria iniziativa. Lucido e collaborante.',
+        sintomi: [
+          ['person-walking', 'Cammina autonomamente'],
+          ['chat-text', 'Cosciente e collaborante']
+        ],
+        cod: 'verde',
+        spiega: 'Cammina da s\u00e9: codice VERDE. Anche con probabile frattura del braccio, i parametri vitali non sono compromessi: pu\u00f2 attendere.' },
+
+      { eta: 80, sesso: 'F', scenario: 'Crollo tetto chiesa',
+        descr: 'A terra, non cammina. Vie aeree ostruite da polvere e sangue. Dopo apertura manuale riprende a respirare, 8/min.',
+        sintomi: [
+          ['x-lg', 'Non cammina'],
+          ['lungs-fill', 'Respiro dopo manovra: 8/min (molto lento)']
+        ],
+        cod: 'rosso',
+        spiega: 'Respiro < 10/min o > 30/min: codice ROSSO. Nonostante la ripresa dopo apertura vie aeree, la frequenza bassissima indica distress grave: priorit\u00e0 massima.' },
+
+      { eta: 12, sesso: 'M', scenario: 'Esercitazione antincendio scuola',
+        descr: 'Evacuazione regolare, nessun sintomo. Chiede solo un sorso d\u2019acqua. Cammina in fila.',
+        sintomi: [
+          ['person-walking', 'Cammina'],
+          ['chat-text', 'Cosciente, nessun sintomo']
+        ],
+        cod: 'verde',
+        spiega: 'Evacuato sano: codice VERDE. Nelle esercitazioni lo scopo del triage \u00e8 verificare il metodo, non inventare pazienti critici.' },
+
+      { eta: 52, sesso: 'M', scenario: 'Alluvione sottopasso',
+        descr: 'Estratto dall\u2019acqua, non cammina. Dopo tre manovre di apertura vie aeree non c\u2019\u00e8 respiro spontaneo.',
+        sintomi: [
+          ['x-lg', 'Non cammina'],
+          ['lungs', 'Respiro: assente anche dopo apertura vie aeree']
+        ],
+        cod: 'nero',
+        spiega: 'Regola 2: respiro assente dopo apertura manuale delle vie aeree = codice NERO. Nel triage di massa si passa oltre: la rianimazione singola bloccherebbe altri soccorsi.' },
+
+      { eta: 26, sesso: 'F', scenario: 'Manifestazione, calca',
+        descr: 'Trasportata fuori dalla folla, non cammina per vertigini. Respiro 22/min, polso presente, risponde a chi le parla.',
+        sintomi: [
+          ['x-lg', 'Non cammina (vertigini)'],
+          ['lungs', 'Respiro: 22/min (normale)'],
+          ['heart-pulse', 'Polso radiale: presente'],
+          ['chat-text', 'Risponde lucidamente']
+        ],
+        cod: 'giallo',
+        spiega: 'Non cammina ma tutti i parametri vitali sono nella norma: codice GIALLO (differibile). Da rivalutare finch\u00e9 stabile.' },
+
+      { eta: 40, sesso: 'M', scenario: 'Terremoto, casa lesionata',
+        descr: 'Non cammina per trauma arto inferiore. Respiro 12/min, polso radiale assente.',
+        sintomi: [
+          ['x-lg', 'Non cammina'],
+          ['lungs', 'Respiro: 12/min'],
+          ['heart', 'Polso radiale: assente']
+        ],
+        cod: 'rosso',
+        spiega: 'Polso radiale assente (pressione sistolica bassa) = ROSSO. Shock circolatorio: priorit\u00e0 massima.' },
+
+      { eta: 5, sesso: 'F', scenario: 'Esplosione bombola GPL',
+        descr: 'Estratta dalle macerie, non cammina. Respira regolare 24/min, polso presente, risponde al nome ma ha occhi chiusi.',
+        sintomi: [
+          ['x-lg', 'Non cammina'],
+          ['lungs', 'Respiro: 24/min'],
+          ['heart-pulse', 'Polso radiale: presente'],
+          ['chat-text', 'Risponde al nome']
+        ],
+        cod: 'giallo',
+        spiega: 'Regola pediatrica attenuata: nei bambini si tende a considerare codici pi\u00f9 elevati, ma con parametri vitali compensati il codice \u00e8 GIALLO con rivalutazione frequente.' }
     ];
 
     var intro = document.getElementById('intro'),

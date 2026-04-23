@@ -820,6 +820,273 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Nella vasca da bagno', correct: false }
             ],
             explanation: 'I fulmini possono colpire gli apparecchi collegati alla corrente e le finestre. Stai al centro della stanza, al sicuro!'
+        },
+        // ═══════════════════════════════════════
+        // DOMANDE AGGIUNTIVE (v2 — 2026)
+        // ═══════════════════════════════════════
+        {
+            category: 'terremoto',
+            question: 'Durante una scossa di terremoto, se sei in classe, cosa devi fare?',
+            answers: [
+                { text: 'Uscire subito correndo per le scale', correct: false },
+                { text: 'Ripararmi sotto il banco con le mani sulla testa', correct: true },
+                { text: 'Affacciarmi alla finestra', correct: false },
+                { text: 'Saltare sulla sedia', correct: false }
+            ],
+            explanation: 'Sotto il banco sei protetto dalla caduta di oggetti. Si esce dall\u2019aula solo dopo la scossa, in fila, senza correre.'
+        },
+        {
+            category: 'terremoto',
+            question: 'Perché dopo un terremoto è meglio non usare l\u2019ascensore?',
+            answers: [
+                { text: 'Perché è più lento delle scale', correct: false },
+                { text: 'Perché può bloccarsi e lasciarti dentro', correct: true },
+                { text: 'Perché costa di più', correct: false },
+                { text: 'Perché fa troppo rumore', correct: false }
+            ],
+            explanation: 'Le scosse possono danneggiare l\u2019impianto elettrico e fermare l\u2019ascensore. Le scale sono sempre la via più sicura.'
+        },
+        {
+            category: 'terremoto',
+            question: 'Cos\u2019è il "triangolo della vita" che insegnano a scuola?',
+            answers: [
+                { text: 'Un gioco di società', correct: false },
+                { text: 'Lo spazio di riparo tra un mobile robusto e il pavimento', correct: true },
+                { text: 'Una figura geometrica in matematica', correct: false },
+                { text: 'Un simbolo sulla pagella', correct: false }
+            ],
+            explanation: 'In caso di crollo, accanto a un mobile robusto si forma uno spazio che può proteggerti. Vicino a un muro portante o sotto un tavolo robusto sei più al sicuro.'
+        },
+        {
+            category: 'incendio',
+            question: 'Se in casa c\u2019è fumo denso, come ti muovi per uscire?',
+            answers: [
+                { text: 'Corro in piedi per fare prima', correct: false },
+                { text: 'Mi abbasso e striscio, l\u2019aria pulita è vicino al pavimento', correct: true },
+                { text: 'Mi metto in piedi sulla sedia', correct: false },
+                { text: 'Mi nascondo sotto il letto', correct: false }
+            ],
+            explanation: 'Il fumo caldo sale verso il soffitto. Vicino al pavimento c\u2019è aria più pulita e più fresca: strisciando respiri meglio.'
+        },
+        {
+            category: 'incendio',
+            question: 'Se si accende una pentola di olio bollente, cosa NON devi fare?',
+            answers: [
+                { text: 'Spegnere il fornello', correct: false },
+                { text: 'Coprire la pentola con un coperchio', correct: false },
+                { text: 'Gettare acqua sull\u2019olio in fiamme', correct: true },
+                { text: 'Chiamare un adulto', correct: false }
+            ],
+            explanation: 'L\u2019acqua sull\u2019olio provoca un\u2019esplosione di vapore bollente. Si spegne il fornello e si copre con un coperchio o con un panno bagnato strizzato.'
+        },
+        {
+            category: 'incendio',
+            question: 'Che colore hanno i cartelli che indicano l\u2019uscita di emergenza?',
+            answers: [
+                { text: 'Rossi', correct: false },
+                { text: 'Verdi con freccia bianca', correct: true },
+                { text: 'Gialli con bordo nero', correct: false },
+                { text: 'Blu rotondi', correct: false }
+            ],
+            explanation: 'Il verde con simboli bianchi indica salvataggio e vie di fuga. Il rosso indica dispositivi antincendio (estintori, idranti).'
+        },
+        {
+            category: 'alluvione',
+            question: 'Durante un\u2019alluvione, dove ti metti in casa?',
+            answers: [
+                { text: 'In cantina o in garage', correct: false },
+                { text: 'Ai piani alti della casa', correct: true },
+                { text: 'Vicino alle finestre per guardare fuori', correct: false },
+                { text: 'Sul balcone', correct: false }
+            ],
+            explanation: 'I piani alti sono più sicuri perché l\u2019acqua sale dal basso. Cantine e garage possono allagarsi rapidamente.'
+        },
+        {
+            category: 'alluvione',
+            question: 'Se vedi un sottopasso allagato e sei in auto con i tuoi, cosa è giusto fare?',
+            answers: [
+                { text: 'Attraversarlo piano', correct: false },
+                { text: 'Tornare indietro e cercare un\u2019altra strada', correct: true },
+                { text: 'Spegnere l\u2019auto e aspettare', correct: false },
+                { text: 'Aprire i finestrini', correct: false }
+            ],
+            explanation: 'Anche 30 cm d\u2019acqua possono far galleggiare un\u2019auto. Nei sottopassi l\u2019acqua si raccoglie in fretta: non attraversare mai.'
+        },
+        {
+            category: 'alluvione',
+            question: 'Cos\u2019è un "kit di emergenza" per l\u2019alluvione?',
+            answers: [
+                { text: 'Una borsa di giochi', correct: false },
+                { text: 'Una borsa con documenti, acqua, torcia, medicine e coperta', correct: true },
+                { text: 'Un pallone e un paio di scarpe', correct: false },
+                { text: 'Una valigia di vestiti eleganti', correct: false }
+            ],
+            explanation: 'Nel kit di emergenza ci sono le cose indispensabili per resistere alcune ore senza aiuto: acqua, torcia, radio, medicine, documenti.'
+        },
+        {
+            category: 'numeri',
+            question: 'Il 112 è il numero di emergenza di quanti Paesi europei?',
+            answers: [
+                { text: 'Solo dell\u2019Italia', correct: false },
+                { text: 'Di tutti i Paesi dell\u2019Unione Europea', correct: true },
+                { text: 'Solo di Italia e Francia', correct: false },
+                { text: 'Di 3 Paesi', correct: false }
+            ],
+            explanation: 'Il 112 è il Numero Unico Europeo di Emergenza: funziona in tutti i Paesi dell\u2019Unione Europea. Se vai in vacanza all\u2019estero puoi chiamarlo allo stesso modo.'
+        },
+        {
+            category: 'numeri',
+            question: 'Quando chiami il 112, cosa ti chiedono per primo?',
+            answers: [
+                { text: 'Il tuo cognome', correct: false },
+                { text: 'Dove ti trovi, cosa è successo e se ci sono feriti', correct: true },
+                { text: 'La tua data di nascita', correct: false },
+                { text: 'Il nome della scuola', correct: false }
+            ],
+            explanation: 'L\u2019operatore del 112 deve capire subito dove mandare i soccorsi e cosa sta succedendo. Parla con calma e rispondi alle domande.'
+        },
+        {
+            category: 'numeri',
+            question: 'È vero che il 112 si può chiamare gratis anche da un cellulare senza credito?',
+            answers: [
+                { text: 'No, serve credito', correct: false },
+                { text: 'Sì, è sempre gratuito anche senza credito', correct: true },
+                { text: 'Solo di giorno', correct: false },
+                { text: 'Solo se lo dici ai genitori', correct: false }
+            ],
+            explanation: 'Il 112 è gratuito e funziona sempre, anche senza credito e anche senza SIM in alcuni casi. È il numero da insegnare a tutti.'
+        },
+        {
+            category: 'zaino',
+            question: 'Nel tuo zaino di emergenza a scuola, cosa NON serve?',
+            answers: [
+                { text: 'Una bottiglietta d\u2019acqua', correct: false },
+                { text: 'Un fischietto', correct: false },
+                { text: 'Un gioco elettronico', correct: true },
+                { text: 'Un biglietto con i numeri dei genitori', correct: false }
+            ],
+            explanation: 'Nello zaino di emergenza servono cose utili: acqua, fischietto, coperta termica, numeri di emergenza, una foto dei genitori. I giochi elettronici non servono.'
+        },
+        {
+            category: 'zaino',
+            question: 'A cosa serve il fischietto nello zaino di emergenza?',
+            answers: [
+                { text: 'A giocare', correct: false },
+                { text: 'A farsi sentire dai soccorritori se resti nascosto', correct: true },
+                { text: 'A chiamare i gatti', correct: false },
+                { text: 'A fare rumore in classe', correct: false }
+            ],
+            explanation: 'Il fischietto fa meno fatica della voce e si sente più lontano. Se sei bloccato o nascosto, soffia a gruppi di tre per farti trovare.'
+        },
+        {
+            category: 'zaino',
+            question: 'Perché nello zaino di emergenza si mette una coperta "termica" dorata?',
+            answers: [
+                { text: 'Perché è bella', correct: false },
+                { text: 'Perché tiene caldo anche se è sottile', correct: true },
+                { text: 'Perché è un regalo', correct: false },
+                { text: 'Perché fa colore', correct: false }
+            ],
+            explanation: 'La coperta termica è leggera e pieghevole ma trattiene il calore del corpo. Utile se resti fuori casa o devi aspettare i soccorsi al freddo.'
+        },
+        {
+            category: 'evacuazione',
+            question: 'Quando suona l\u2019allarme di evacuazione, cosa deve fare il capofila della classe?',
+            answers: [
+                { text: 'Correre avanti', correct: false },
+                { text: 'Guidare i compagni in fila verso l\u2019uscita indicata', correct: true },
+                { text: 'Aspettare la maestra fuori', correct: false },
+                { text: 'Chiudere le finestre', correct: false }
+            ],
+            explanation: 'Il capofila guida la fila con calma, seguendo le frecce verdi. Il chiudifila controlla che nessuno resti indietro.'
+        },
+        {
+            category: 'evacuazione',
+            question: 'Durante l\u2019evacuazione, si possono prendere zaino e giacca?',
+            answers: [
+                { text: 'Sì, sempre', correct: false },
+                { text: 'No, si esce subito senza cercare le proprie cose', correct: true },
+                { text: 'Solo lo zaino', correct: false },
+                { text: 'Solo la giacca', correct: false }
+            ],
+            explanation: 'Ogni secondo conta. Le cose personali si recuperano dopo, quando tutti sono al sicuro al punto di raccolta.'
+        },
+        {
+            category: 'evacuazione',
+            question: 'Cos\u2019è il "punto di raccolta" durante un\u2019evacuazione?',
+            answers: [
+                { text: 'Un luogo per giocare', correct: false },
+                { text: 'Il posto dove ci si ritrova per contarsi', correct: true },
+                { text: 'Un negozio', correct: false },
+                { text: 'Un\u2019aula di riserva', correct: false }
+            ],
+            explanation: 'Al punto di raccolta le maestre fanno l\u2019appello per controllare che tutti siano usciti. Si rimane lì finché non arriva il segnale di fine emergenza.'
+        },
+        {
+            category: 'protezione-civile',
+            question: 'Cosa fanno i volontari di Protezione Civile?',
+            answers: [
+                { text: 'Guidano le ambulanze', correct: false },
+                { text: 'Aiutano le persone durante emergenze e fanno prevenzione', correct: true },
+                { text: 'Vendono biglietti', correct: false },
+                { text: 'Controllano i parcheggi', correct: false }
+            ],
+            explanation: 'I volontari di Protezione Civile aiutano in caso di terremoto, alluvione, incendio boschivo e fanno prevenzione nelle scuole e nei quartieri.'
+        },
+        {
+            category: 'protezione-civile',
+            question: 'Qual è il colore ufficiale della Protezione Civile in Italia?',
+            answers: [
+                { text: 'Rosso', correct: false },
+                { text: 'Blu e arancione (alta visibilità)', correct: true },
+                { text: 'Verde e giallo', correct: false },
+                { text: 'Viola', correct: false }
+            ],
+            explanation: 'La divisa della Protezione Civile è blu con parti arancioni ad alta visibilità, per essere riconoscibili anche di notte o con poca luce.'
+        },
+        {
+            category: 'protezione-civile',
+            question: 'Come puoi aiutare la Protezione Civile anche da bambino?',
+            answers: [
+                { text: 'Scaricando giochi sul telefono', correct: false },
+                { text: 'Imparando i comportamenti giusti e spiegandoli ai parenti', correct: true },
+                { text: 'Mettendo "mi piace" sui social', correct: false },
+                { text: 'Comprando magliette', correct: false }
+            ],
+            explanation: 'La prevenzione parte dai bambini: se impari cosa fare in caso di terremoto, incendio o alluvione, puoi aiutare anche mamma, papà e nonni.'
+        },
+        {
+            category: 'sicurezza',
+            question: 'In casa, qual è il posto più sicuro se senti odore di gas?',
+            answers: [
+                { text: 'In cucina a controllare il fornello', correct: false },
+                { text: 'Fuori casa, dopo aver aperto le finestre e avvisato un adulto', correct: true },
+                { text: 'Accendendo la luce per vedere meglio', correct: false },
+                { text: 'Chiudendo tutte le finestre', correct: false }
+            ],
+            explanation: 'Se senti odore di gas: non accendere luci o fiamme, apri subito le finestre, avverti un adulto e uscite di casa. Poi si chiama il 112.'
+        },
+        {
+            category: 'sicurezza',
+            question: 'Se il campanello suona e sei solo in casa, cosa fai?',
+            answers: [
+                { text: 'Apro subito la porta', correct: false },
+                { text: 'Guardo dallo spioncino e non apro a sconosciuti', correct: true },
+                { text: 'Urlo dalla finestra', correct: false },
+                { text: 'Chiamo il 112 per ogni suono', correct: false }
+            ],
+            explanation: 'Se sei solo, non aprire mai a chi non conosci. Guarda dallo spioncino e, se ti senti in pericolo, chiama i genitori o il 112.'
+        },
+        {
+            category: 'sicurezza',
+            question: 'A cosa serve un rilevatore di fumo in casa?',
+            answers: [
+                { text: 'A rinfrescare l\u2019aria', correct: false },
+                { text: 'A suonare se c\u2019è un inizio di incendio, anche di notte', correct: true },
+                { text: 'A misurare la temperatura', correct: false },
+                { text: 'A controllare il Wi-Fi', correct: false }
+            ],
+            explanation: 'Il rilevatore di fumo è un piccolo apparecchio che suona forte appena sente fumo. Può salvare la vita, soprattutto di notte quando si dorme.'
         }
     ];
 

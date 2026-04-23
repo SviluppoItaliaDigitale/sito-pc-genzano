@@ -54,6 +54,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 { left: 'Documenti (copie)', right: 'Per farsi identificare in emergenza' },
                 { left: 'Acqua (2 litri)', right: 'Per bere se manca l\'acqua potabile' }
             ]
+        },
+        {
+            title: 'Cartelli di sicurezza', icon: '\uD83D\uDEA9',
+            pairs: [
+                { left: '\uD83D\uDFE9 Verde', right: 'Uscita di emergenza e vie di fuga' },
+                { left: '\uD83D\uDFE5 Rosso', right: 'Dispositivi antincendio (estintore, idrante)' },
+                { left: '\u26A0\uFE0F Giallo triangolo', right: 'Avvertimento: pericolo generico' },
+                { left: '\uD83D\uDEAB Rosso con sbarra', right: 'Divieto: vietato fumare, vietato entrare' },
+                { left: '\uD83D\uDD35 Blu rotondo', right: 'Prescrizione: obbligo di DPI (casco, guanti)' },
+                { left: '\uD83C\uDDE8 Cassetta rossa', right: 'Punto di primo soccorso' }
+            ]
+        },
+        {
+            title: 'Classi di fuoco', icon: '\uD83D\uDD25',
+            pairs: [
+                { left: 'Classe A', right: 'Materiali solidi: legno, carta, tessuti' },
+                { left: 'Classe B', right: 'Liquidi infiammabili: benzina, solventi' },
+                { left: 'Classe C', right: 'Gas infiammabili: metano, GPL' },
+                { left: 'Classe D', right: 'Metalli combustibili: magnesio, sodio' },
+                { left: 'Classe F', right: 'Oli e grassi da cucina' },
+                { left: 'Tecnica PASS', right: 'Prendi, Avvicinati, Schiaccia, Spazza' }
+            ]
+        },
+        {
+            title: 'Ruoli in emergenza', icon: '\uD83D\uDC65',
+            pairs: [
+                { left: 'Vigili del Fuoco', right: 'Incendi, soccorso tecnico, sostanze pericolose' },
+                { left: 'Protezione Civile', right: 'Coordina aiuti e volontari in emergenza' },
+                { left: 'Carabinieri / Polizia', right: 'Ordine pubblico e sicurezza' },
+                { left: 'Ambulanza (ARES 118)', right: 'Emergenza sanitaria' },
+                { left: 'Sindaco', right: 'Autorit\u00e0 di PC nel Comune' },
+                { left: 'Volontario', right: 'Cittadino che aiuta gratuitamente' }
+            ]
+        },
+        {
+            title: 'Meteo e allerte', icon: '\uD83C\uDF24\uFE0F',
+            pairs: [
+                { left: 'Temporale', right: 'Pioggia + fulmini + vento forte' },
+                { left: 'Nebbia', right: 'Visibilit\u00e0 ridotta, soprattutto in auto' },
+                { left: 'Grandine', right: 'Ghiaccio in chicchi che cade dal cielo' },
+                { left: 'Ondata di calore', right: 'Temperature molto alte per giorni' },
+                { left: 'Gelo', right: 'Strade scivolose, attenzione al ghiaccio' },
+                { left: 'Vento forte', right: 'Attenzione ad alberi e cartelloni' }
+            ]
         }
     ];
 

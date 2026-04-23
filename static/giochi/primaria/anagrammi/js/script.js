@@ -22,7 +22,17 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'TORCIA',      cat: 'Oggetto dello zaino di emergenza',        hint: 'Fa luce al buio' },
       { w: 'FISCHIO',     cat: 'Strumento di segnalazione',               hint: 'Suono acuto per farsi sentire' },
       { w: 'ALLERTA',     cat: 'Livello di avviso',                       hint: 'Avviso di un possibile pericolo' },
-      { w: 'NUMERI',      cat: 'Emergenza',                               hint: 'Quelli da chiamare sono utili' }
+      { w: 'NUMERI',      cat: 'Emergenza',                               hint: 'Quelli da chiamare sono utili' },
+      { w: 'ELMETTO',     cat: 'Dispositivo di protezione',               hint: 'Copre la testa in cantiere o in zona crollo' },
+      { w: 'USCITA',      cat: 'Via di fuga',                             hint: 'Dove si va quando suona l\u2019allarme' },
+      { w: 'GUANTI',      cat: 'Protezione personale',                    hint: 'Proteggono le mani dei volontari' },
+      { w: 'MAPPA',       cat: 'Strumento di orientamento',               hint: 'Disegno del territorio per non perdersi' },
+      { w: 'BUSSOLA',     cat: 'Strumento di orientamento',               hint: 'Indica sempre il nord' },
+      { w: 'BATTERIA',    cat: 'Oggetto dello zaino di emergenza',        hint: 'Serve a far funzionare radio e torcia' },
+      { w: 'CORDA',       cat: 'Attrezzatura di soccorso',                hint: 'Si usa per legare e calarsi' },
+      { w: 'COPERTA',     cat: 'Oggetto dello zaino',                     hint: 'Tiene caldo se fa freddo fuori' },
+      { w: 'VERDE',       cat: 'Colore allerta',                          hint: 'Nessun rischio previsto' },
+      { w: 'ROSSO',       cat: 'Colore allerta',                          hint: 'Massima attenzione, rischio elevato' }
     ],
     medio: [
       { w: 'VOLONTARIO',     cat: 'Protezione Civile',                    hint: 'Offre tempo e aiuto gratis' },
@@ -38,7 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'RIFUGIO',        cat: 'Luogo sicuro',                         hint: 'Posto dove ripararsi' },
       { w: 'MASCHERINA',     cat: 'Protezione personale',                 hint: 'Copre naso e bocca' },
       { w: 'IDRANTE',        cat: 'Strumento dei pompieri',               hint: 'Da qui esce l’acqua' },
-      { w: 'SOCCORSO',       cat: 'Aiuto in emergenza',                   hint: 'Chi corre ad aiutare' }
+      { w: 'SOCCORSO',       cat: 'Aiuto in emergenza',                   hint: 'Chi corre ad aiutare' },
+      { w: 'ESTINTORE',      cat: 'Strumento antincendio',                hint: 'Serve per spegnere piccole fiamme' },
+      { w: 'ASCENSORE',      cat: 'Da evitare in emergenza',              hint: 'Non si usa mai durante un terremoto' },
+      { w: 'PUNTO DI RACCOLTA', cat: 'Luogo di sicurezza',                hint: 'Dove ci si ritrova dopo l\u2019evacuazione' },
+      { w: 'CAPOFILA',       cat: 'Ruolo in evacuazione',                 hint: 'Guida la fila della classe' },
+      { w: 'FOGLIO NOTE',    cat: 'Oggetto dello zaino',                  hint: 'Per scrivere informazioni o messaggi' },
+      { w: 'DOCUMENTI',      cat: 'Cosa portare in evacuazione',          hint: 'Carta d\u2019identit\u00e0 e tessera sanitaria' },
+      { w: 'VIGILANZA',      cat: 'Attivit\u00e0 di controllo',           hint: 'Osservare per prevenire pericoli' },
+      { w: 'PRESIDIO',       cat: 'Postazione operativa',                 hint: 'Posto dove si presta servizio' },
+      { w: 'CENTRALE',       cat: 'Coordinamento',                        hint: 'Da qui si dirigono gli interventi' },
+      { w: 'BINOCOLO',       cat: 'Strumento di osservazione',            hint: 'Serve a vedere lontano' }
     ],
     difficile: [
       { w: 'EVACUAZIONE',         cat: 'Azione di emergenza',             hint: 'Tutti fuori in fila e con calma' },
@@ -51,7 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'COORDINAMENTO',       cat: 'Organizzazione',                  hint: 'Lavorare insieme senza confusione' },
       { w: 'RADIOCOMUNICAZIONE',  cat: 'Strumento dei volontari',         hint: 'Messaggi via radio tra squadre' },
       { w: 'SORVEGLIANZA',        cat: 'Attività di controllo',           hint: 'Tenere d’occhio una zona' },
-      { w: 'ESONDAZIONE',         cat: 'Rischio del territorio',          hint: 'Il fiume esce dal letto' }
+      { w: 'ESONDAZIONE',         cat: 'Rischio del territorio',          hint: 'Il fiume esce dal letto' },
+      { w: 'AUTOPROTEZIONE',      cat: 'Comportamento',                   hint: 'Difendere se stessi con i gesti giusti' },
+      { w: 'PROTEZIONECIVILE',    cat: 'Sistema nazionale',               hint: 'Tutti gli enti che si occupano di emergenze' },
+      { w: 'VOLONTARIATO',        cat: 'Donare tempo',                    hint: 'Aiuto gratuito alla comunit\u00e0' },
+      { w: 'AUTOMEZZO',           cat: 'Mezzo operativo',                 hint: 'Veicolo dei volontari' },
+      { w: 'PIANOFAMILIARE',      cat: 'Preparazione domestica',          hint: 'Cosa fa ciascuno in caso di emergenza' },
+      { w: 'COMUNICAZIONE',       cat: 'Scambio informazioni',            hint: 'Avvisare e coordinare via radio' },
+      { w: 'CARTOGRAFIA',         cat: 'Scienza delle mappe',             hint: 'Disegno scientifico del territorio' },
+      { w: 'SICUREZZASCOLASTICA', cat: 'Piano d\u2019emergenza',          hint: 'Regole per evacuare le scuole' },
+      { w: 'SISMOGRAFO',          cat: 'Strumento scientifico',           hint: 'Registra i movimenti della terra' },
+      { w: 'METEOROLOGIA',        cat: 'Scienza del tempo',               hint: 'Studia e prevede il tempo atmosferico' }
     ]
   };
 
