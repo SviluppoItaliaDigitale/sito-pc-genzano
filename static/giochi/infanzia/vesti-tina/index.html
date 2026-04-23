@@ -26,9 +26,10 @@
       border: 4px solid #fff;
       border-radius: 18px;
       background: #fff;
-      padding: .6rem;
-      min-height: 120px;
-      display: flex; align-items: center; justify-content: center;
+      padding: .6rem .4rem;
+      min-height: 140px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: .4rem;
       cursor: pointer;
       box-shadow: 0 4px 0 rgba(0,0,0,.15);
       transition: transform .15s;
@@ -39,6 +40,13 @@
       outline: none;
     }
     .oggetto-btn svg { width: 72px; height: 72px; }
+    .oggetto-nome {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--inf-testo);
+      text-align: center;
+      line-height: 1.15;
+    }
     .oggetto-btn.giusto {
       animation: vola-in-zaino .8s ease-out forwards;
       pointer-events: none;
@@ -192,7 +200,7 @@
         btn.className = 'oggetto-btn';
         btn.setAttribute('type','button');
         btn.setAttribute('aria-label', it.nome);
-        btn.innerHTML = SVG[it.id] || '';
+        btn.innerHTML = (SVG[it.id] || '') + '<span class="oggetto-nome">' + it.nome + '</span>';
         btn.addEventListener('click', function(){ scegli(btn, it, r); });
         grid.appendChild(btn);
       });
