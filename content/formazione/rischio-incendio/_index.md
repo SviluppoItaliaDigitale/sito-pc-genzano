@@ -5,7 +5,7 @@ description: "Area didattica sul rischio incendio: teoria della combustione, sos
 
 Quest'area raccoglie i **fondamenti del rischio incendio** utili al volontario di protezione civile, al cittadino informato e al lavoratore incaricato dell'attività antincendio nei luoghi di lavoro (art. 37 c. 9 del D.Lgs. 81/2008).
 
-Il contenuto è adattato dal **Manuale addetti antincendio** del Comando Provinciale Vigili del Fuoco di Biella (a cura dell'Ing. Mauro Malizia, aggiornamento 2010-2019), con integrazione dei riferimenti normativi aggiornati e del contesto del territorio di Genzano di Roma (Castelli Romani).
+Il contenuto è adattato dal **Manuale addetti antincendio** del Corpo Nazionale dei Vigili del Fuoco (aggiornamento 2010-2019), con integrazione dei riferimenti normativi aggiornati e del contesto del territorio di Genzano di Roma (Castelli Romani).
 
 Questa guida **non sostituisce** il corso di formazione antincendio certificato, che resta obbligatorio per gli addetti designati nei luoghi di lavoro. Serve come **riferimento divulgativo** e come base per le attività di sensibilizzazione del Gruppo Comunale.
 
@@ -60,4 +60,4 @@ Non chiamare direttamente il Gruppo Comunale per segnalare un incendio in corso:
 
 ## Fonte
 
-*Manuale addetti antincendio* — Comando Provinciale VVF Biella, a cura dell'Ing. Mauro Malizia (aggiornamento 2010-2019). Disponibile sul portale [vigilfuoco.it](https://www.vigilfuoco.it/sites/default/files/Comando%20Biella/Manuale%20addetti%20antincendio_0.pdf).
+*Manuale addetti antincendio* — Corpo Nazionale dei Vigili del Fuoco (aggiornamento 2010-2019). Disponibile sul [portale vigilfuoco.it](https://www.vigilfuoco.it/).
