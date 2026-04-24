@@ -1,0 +1,722 @@
+{{ define "main" }}
+<div class="page-hero">
+  <div class="container">
+    <nav aria-label="Percorso di navigazione" class="breadcrumb-nav">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ "" | relURL }}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+      </ol>
+    </nav>
+    <h1>{{ .Title }}</h1>
+    <p class="lead">Un assistente guidato per aiutarti a capire cosa fare in alcune situazioni frequenti. Scegli il percorso più vicino alla tua situazione: ti guideremo con domande semplici fino alla risposta.</p>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+
+      <div class="alert alert-danger d-flex align-items-start gap-3 mb-4" role="alert">
+        <i class="bi bi-telephone-fill fs-4 mt-1" aria-hidden="true"></i>
+        <div>
+          <strong>Emergenza in corso?</strong> Chiama subito il <strong>112</strong> (Numero Unico Europeo di Emergenza). Questo assistente non sostituisce la chiamata al 112: fornisce solo indicazioni generali di autoprotezione basate sulle fonti ufficiali.
+        </div>
+      </div>
+
+      <section id="assistente-app" aria-live="polite" aria-atomic="true">
+        <!-- Popolato da JavaScript. Fallback no-JS sotto. -->
+      </section>
+
+      <noscript>
+        <div class="alert alert-warning">
+          <p><strong>Questo assistente richiede JavaScript.</strong> Se non puoi attivarlo, consulta direttamente le pagine del sito:</p>
+          <ul class="mb-0">
+            <li><a href="{{ "faq/" | relURL }}">Domande frequenti</a></li>
+            <li><a href="{{ "cosa-fare-adesso/" | relURL }}">Cosa fare adesso</a></li>
+            <li><a href="{{ "rischi-prevenzione/" | relURL }}">Rischi e prevenzione</a></li>
+            <li><a href="{{ "numeri-utili/" | relURL }}">Numeri utili</a></li>
+            <li><a href="{{ "diventa-volontario/" | relURL }}">Diventa volontario</a></li>
+          </ul>
+        </div>
+      </noscript>
+
+      <div class="mt-5 pt-4 border-top">
+        <h2 class="h5">Avvertenze</h2>
+        <p class="small text-muted mb-2">Le indicazioni di questo assistente sono redatte dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma sulla base delle fonti ufficiali (Dipartimento Nazionale di Protezione Civile, Agenzia di Protezione Civile della Regione Lazio, Comune di Genzano di Roma). Sono indicazioni di carattere generale: in emergenza reale segui sempre le istruzioni delle autorità competenti e, se la situazione è grave, chiama il <strong>112</strong>.</p>
+        <p class="small text-muted mb-0">Ogni risposta rimanda alle pagine istituzionali del sito per l'approfondimento.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  #assistente-app .opt-list { list-style: none; padding: 0; margin: 0; }
+  #assistente-app .opt-btn {
+    display: flex; align-items: center; gap: .75rem;
+    width: 100%; text-align: left;
+    padding: 1rem 1.25rem;
+    margin-bottom: .75rem;
+    background: #fff;
+    border: 2px solid #e5e7eb;
+    border-radius: .5rem;
+    color: #1a1a1a;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: background .15s, border-color .15s, transform .05s;
+  }
+  #assistente-app .opt-btn:hover,
+  #assistente-app .opt-btn:focus-visible {
+    background: #f4f7fb;
+    border-color: #003366;
+    outline: none;
+  }
+  #assistente-app .opt-btn:active { transform: translateY(1px); }
+  #assistente-app .opt-btn .opt-arrow { margin-left: auto; color: #003366; flex-shrink: 0; }
+  #assistente-app .opt-btn.emergency { border-color: #d9364f; }
+  #assistente-app .opt-btn.emergency:hover,
+  #assistente-app .opt-btn.emergency:focus-visible { background: #fef2f3; border-color: #b91c2e; }
+  #assistente-app .opt-btn.emergency .opt-arrow { color: #d9364f; }
+  #assistente-app .q-title { color: #003366; margin-bottom: .5rem; font-size: 1.5rem; }
+  #assistente-app .q-prompt { color: #4b5563; margin-bottom: 1.5rem; }
+  #assistente-app .answer-box {
+    background: #f4f7fb;
+    border-left: 4px solid #003366;
+    padding: 1.25rem 1.5rem;
+    border-radius: .25rem;
+    margin-bottom: 1.5rem;
+  }
+  #assistente-app .answer-box.emergency {
+    background: #fef2f3;
+    border-left-color: #d9364f;
+  }
+  #assistente-app .answer-box h3 { color: #003366; margin-top: 0; font-size: 1.25rem; }
+  #assistente-app .answer-box.emergency h3 { color: #991b1b; }
+  #assistente-app .answer-box ul { margin-bottom: 0; }
+  #assistente-app .answer-box li { margin-bottom: .4rem; }
+  #assistente-app .links-block { margin-top: 1.25rem; }
+  #assistente-app .links-block h4 { font-size: .95rem; color: #003366; font-weight: 600; margin-bottom: .5rem; }
+  #assistente-app .links-block ul { padding-left: 1.25rem; margin-bottom: 0; }
+  #assistente-app .nav-controls { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; }
+  #assistente-app .breadcrumb-trail { font-size: .9rem; color: #4b5563; margin-bottom: 1rem; }
+  #assistente-app .breadcrumb-trail .sep { margin: 0 .4rem; color: #9ca3af; }
+  @media (max-width: 576px) {
+    #assistente-app .opt-btn { padding: .85rem 1rem; font-size: 1rem; }
+    #assistente-app .q-title { font-size: 1.25rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #assistente-app .opt-btn { transition: none; }
+  }
+  @media print {
+    #assistente-app .nav-controls, #assistente-app .opt-list { display: none; }
+  }
+</style>
+
+<script>
+(function () {
+  'use strict';
+
+  // =========================================================================
+  // Albero decisionale. Ogni nodo ha:
+  //   kind: "question" | "answer"
+  //   title: string
+  //   prompt (question): string breve descrittiva
+  //   options (question): array {text, next}
+  //   body (answer): array di stringhe (paragrafi o bullet)
+  //   bullets (answer): array di stringhe (lista)
+  //   emergency (answer): true se situazione operativa
+  //   links (answer): array {text, url} verso pagine del sito
+  // =========================================================================
+  var NODES = {
+    start: {
+      kind: 'question',
+      title: 'Come posso aiutarti?',
+      prompt: 'Scegli il percorso più vicino alla tua situazione.',
+      options: [
+        { text: 'Sento una scossa di terremoto', next: 'terremoto', emergency: true },
+        { text: 'Vedo fumo o un incendio', next: 'incendio', emergency: true },
+        { text: 'Sento odore di gas', next: 'gas', emergency: true },
+        { text: 'C\u2019è un\u2019allerta meteo attiva', next: 'allerta_meteo' },
+        { text: 'C\u2019è un allagamento', next: 'allagamento', emergency: true },
+        { text: 'Voglio diventare volontario', next: 'volontario' },
+        { text: 'Cerco un numero utile', next: 'numeri' },
+        { text: 'Cos\u2019è IT-alert?', next: 'italert' }
+      ]
+    },
+
+    // --------------------------- TERREMOTO -----------------------------------
+    terremoto: {
+      kind: 'question',
+      title: 'Scossa di terremoto',
+      prompt: 'Dove ti trovi in questo momento?',
+      options: [
+        { text: 'In casa o al chiuso', next: 'terremoto_casa' },
+        { text: 'All\u2019aperto, in strada', next: 'terremoto_aperto' },
+        { text: 'In auto o in movimento', next: 'terremoto_auto' },
+        { text: 'In spiaggia o vicino al mare', next: 'terremoto_mare' }
+      ]
+    },
+    terremoto_casa: {
+      kind: 'answer',
+      title: 'Sei in casa o al chiuso',
+      emergency: true,
+      bullets: [
+        'Resta dentro: riparati sotto un tavolo robusto o vicino a un muro portante.',
+        'Non usare l\u2019ascensore, mai.',
+        'Allontanati da finestre, specchi, mobili alti, soprammobili che possono cadere.',
+        'Attendi la fine della scossa prima di muoverti.',
+        'Dopo la scossa, esci con prudenza usando le scale.',
+        'Raggiungi l\u2019area di attesa prevista dal Piano di Emergenza comunale.'
+      ],
+      links: [
+        { text: 'Rischio sismico — comportamenti', url: '/rischi-prevenzione/rischio-sismico/' },
+        { text: 'Aree di emergenza (Cartografia)', url: '/cartografia/' }
+      ]
+    },
+    terremoto_aperto: {
+      kind: 'answer',
+      title: 'Sei all\u2019aperto',
+      emergency: true,
+      bullets: [
+        'Allontanati da edifici, alberi, lampioni, linee elettriche.',
+        'Evita ponti, cornicioni, balconi, vetrate.',
+        'Cerca uno spazio aperto e aspetta la fine della scossa.',
+        'Non rientrare in edifici danneggiati.',
+        'Raggiungi l\u2019area di attesa prevista dal Piano di Emergenza comunale.'
+      ],
+      links: [
+        { text: 'Rischio sismico — comportamenti', url: '/rischi-prevenzione/rischio-sismico/' },
+        { text: 'Aree di emergenza (Cartografia)', url: '/cartografia/' }
+      ]
+    },
+    terremoto_auto: {
+      kind: 'answer',
+      title: 'Sei in auto',
+      emergency: true,
+      bullets: [
+        'Fermati appena possibile lontano da ponti, cavalcavia, sottopassi.',
+        'Evita alberi, pali, cartelli, edifici alti.',
+        'Resta in auto fino alla fine della scossa.',
+        'Non ostacolare i mezzi di soccorso quando riparti.'
+      ],
+      links: [
+        { text: 'Rischio sismico — comportamenti', url: '/rischi-prevenzione/rischio-sismico/' }
+      ]
+    },
+    terremoto_mare: {
+      kind: 'answer',
+      title: 'Sei in spiaggia o vicino al mare',
+      emergency: true,
+      bullets: [
+        'Allontanati subito dalla costa e raggiungi un punto sopraelevato.',
+        'Non aspettare allarmi ufficiali: la scossa forte è il primo segnale di possibile maremoto.',
+        'Non tornare sulla costa fino al cessato allarme da parte delle autorità.'
+      ],
+      links: [
+        { text: 'Rischio sismico e maremoto', url: '/rischi-prevenzione/rischio-sismico/' }
+      ]
+    },
+
+    // --------------------------- INCENDIO ------------------------------------
+    incendio: {
+      kind: 'question',
+      title: 'Incendio o fumo',
+      prompt: 'Dove si sta sviluppando?',
+      options: [
+        { text: 'In casa o in un edificio', next: 'incendio_edificio' },
+        { text: 'In un bosco, campo o area verde', next: 'incendio_bosco' },
+        { text: 'Non so, vedo solo del fumo lontano', next: 'incendio_dubbio' }
+      ]
+    },
+    incendio_edificio: {
+      kind: 'answer',
+      title: 'Incendio in un edificio',
+      emergency: true,
+      bullets: [
+        'Chiama subito il <strong>112</strong>.',
+        'Chiudi la porta della stanza dove c\u2019è il fuoco per limitare la propagazione.',
+        'Allontanati usando le scale, mai l\u2019ascensore.',
+        'Se c\u2019è fumo, cammina chino e copri naso e bocca con un panno bagnato.',
+        'Una volta fuori, non rientrare per recuperare oggetti.',
+        'Segnala ai soccorritori se sai che qualcuno è rimasto dentro.'
+      ],
+      links: [
+        { text: 'Numeri utili', url: '/numeri-utili/' }
+      ]
+    },
+    incendio_bosco: {
+      kind: 'answer',
+      title: 'Incendio boschivo o di vegetazione',
+      emergency: true,
+      bullets: [
+        'Chiama subito il <strong>112</strong> indicando con precisione la zona.',
+        'Allontanati nella direzione opposta al vento: il fuoco avanza dove il vento soffia.',
+        'Evita avvallamenti, forre e zone chiuse: si riempiono di fumo rapidamente.',
+        'Non sostare in luoghi sopraelevati verso cui il fuoco potrebbe salire.',
+        'Non tentare mai di spegnere da solo fiamme alte o estese.',
+        'Segnala la presenza di persone o animali bloccati ai soccorritori.'
+      ],
+      links: [
+        { text: 'Rischio incendi boschivi', url: '/rischi-prevenzione/rischio-incendio/' },
+        { text: 'Numeri utili', url: '/numeri-utili/' }
+      ]
+    },
+    incendio_dubbio: {
+      kind: 'answer',
+      title: 'Vedi del fumo ma non sai cos\u2019è',
+      emergency: true,
+      bullets: [
+        'Chiama subito il <strong>112</strong> e descrivi cosa vedi: colore del fumo, zona, direzione.',
+        'La Centrale Unica smista la segnalazione ai Vigili del Fuoco o alle squadre AIB competenti.',
+        'Allontanati dalla zona se il fumo è denso.',
+        'Non avvicinarti per fotografare o filmare.'
+      ],
+      links: [
+        { text: 'Numeri utili', url: '/numeri-utili/' }
+      ]
+    },
+
+    // --------------------------- GAS -----------------------------------------
+    gas: {
+      kind: 'answer',
+      title: 'Sospetta fuga di gas',
+      emergency: true,
+      body: [
+        'Agisci subito, nell\u2019ordine indicato sotto. Ogni minuto conta.'
+      ],
+      bullets: [
+        '<strong>Non</strong> accendere fiamme, non fumare, non usare accendini.',
+        '<strong>Non</strong> azionare interruttori elettrici (nemmeno per spegnere la luce): una scintilla può innescare l\u2019esplosione.',
+        '<strong>Non</strong> usare il telefono fisso in casa: esci prima.',
+        'Chiudi il contatore generale del gas, se è accessibile in sicurezza.',
+        'Apri porte e finestre per far uscire il gas.',
+        'Esci dall\u2019edificio e avverti vicini e portinaio.',
+        'Una volta fuori, chiama il <strong>112</strong> e il numero del distributore del gas.'
+      ],
+      links: [
+        { text: 'Numeri utili', url: '/numeri-utili/' },
+        { text: 'Piano di emergenza familiare', url: '/piano-familiare/' }
+      ]
+    },
+
+    // --------------------------- ALLERTA METEO -------------------------------
+    allerta_meteo: {
+      kind: 'question',
+      title: 'Allerta meteo attiva',
+      prompt: 'Qual è il livello dell\u2019allerta?',
+      options: [
+        { text: 'Gialla', next: 'allerta_gialla' },
+        { text: 'Arancione', next: 'allerta_arancione' },
+        { text: 'Rossa', next: 'allerta_rossa' },
+        { text: 'Non lo so', next: 'allerta_non_so' }
+      ]
+    },
+    allerta_gialla: {
+      kind: 'answer',
+      title: 'Allerta gialla — attenzione',
+      bullets: [
+        'Presta attenzione: fenomeni di intensità moderata previsti.',
+        'Evita zone a rischio allagamento (sottopassi, garage interrati, argini).',
+        'Non sostare lungo i corsi d\u2019acqua.',
+        'Segui le previsioni e gli aggiornamenti ufficiali.'
+      ],
+      links: [
+        { text: 'Stato allerta meteo (homepage)', url: '/' },
+        { text: 'Codici colore e significato', url: '/allerte-meteo/' }
+      ]
+    },
+    allerta_arancione: {
+      kind: 'answer',
+      title: 'Allerta arancione — elevata',
+      bullets: [
+        'Limita gli spostamenti allo stretto necessario.',
+        'Non sostare in aree allagabili, sotto alberi o strutture pericolanti.',
+        'Metti al sicuro veicoli e oggetti in aree esposte.',
+        'Aggiorna continuamente le informazioni dai canali ufficiali (Comune, Agenzia PC Lazio, Dipartimento Nazionale).'
+      ],
+      links: [
+        { text: 'Stato allerta meteo (homepage)', url: '/' },
+        { text: 'Allerte meteo', url: '/allerte-meteo/' }
+      ]
+    },
+    allerta_rossa: {
+      kind: 'answer',
+      title: 'Allerta rossa — massima',
+      emergency: true,
+      bullets: [
+        'Resta in un luogo sicuro: se possibile a casa, ai piani alti.',
+        'Non metterti in viaggio.',
+        'Evita zone a rischio idrogeologico, corsi d\u2019acqua, sottopassi.',
+        'Segui rigorosamente le istruzioni di autorità e Protezione Civile comunale.',
+        'In caso di pericolo immediato per te o altri, chiama il <strong>112</strong>.'
+      ],
+      links: [
+        { text: 'Stato allerta meteo (homepage)', url: '/' },
+        { text: 'Piano di emergenza comunale', url: '/piano-emergenza/' }
+      ]
+    },
+    allerta_non_so: {
+      kind: 'answer',
+      title: 'Verifica il livello di allerta',
+      bullets: [
+        'Il livello di allerta è sempre indicato in cima alla homepage del sito, con colore e descrizione.',
+        'Il Centro Funzionale Regionale del Lazio emette ogni giorno un bollettino ufficiale.',
+        'Non fare affidamento a voci o previsioni non ufficiali.'
+      ],
+      links: [
+        { text: 'Stato allerta meteo (homepage)', url: '/' },
+        { text: 'Bollettino ufficiale Regione Lazio', url: 'https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti' },
+        { text: 'Allerte meteo — codici colore', url: '/allerte-meteo/' }
+      ]
+    },
+
+    // --------------------------- ALLAGAMENTO ---------------------------------
+    allagamento: {
+      kind: 'question',
+      title: 'Allagamento',
+      prompt: 'Dove si trova l\u2019acqua?',
+      options: [
+        { text: 'In casa, al piano terra o in scantinato', next: 'allagamento_casa' },
+        { text: 'In strada o nel mio quartiere', next: 'allagamento_strada' }
+      ]
+    },
+    allagamento_casa: {
+      kind: 'answer',
+      title: 'Allagamento in casa o scantinato',
+      emergency: true,
+      bullets: [
+        '<strong>Non</strong> scendere nei locali allagati: c\u2019è rischio di elettrocuzione.',
+        'Se puoi farlo <strong>da asciutto</strong>, stacca la corrente dall\u2019interruttore generale.',
+        'Sposta persone e animali ai piani alti.',
+        'Non usare apparecchi elettrici in aree bagnate.',
+        'In caso di pericolo, chiama il <strong>112</strong>.'
+      ],
+      links: [
+        { text: 'Rischio idrogeologico', url: '/rischi-prevenzione/rischio-idrogeologico/' }
+      ]
+    },
+    allagamento_strada: {
+      kind: 'answer',
+      title: 'Allagamento in strada',
+      emergency: true,
+      bullets: [
+        '<strong>Non</strong> attraversare acqua in movimento, né in auto né a piedi: anche pochi centimetri possono trascinarti.',
+        'Evita sottopassi, ponti bassi, argini, garage interrati.',
+        'Se sei in auto e l\u2019acqua sale, abbandona il veicolo e raggiungi una zona sopraelevata.',
+        'Segnala situazioni di pericolo al <strong>112</strong>.'
+      ],
+      links: [
+        { text: 'Rischio idrogeologico', url: '/rischi-prevenzione/rischio-idrogeologico/' },
+        { text: 'Aree di emergenza (Cartografia)', url: '/cartografia/' }
+      ]
+    },
+
+    // --------------------------- VOLONTARIO ----------------------------------
+    volontario: {
+      kind: 'question',
+      title: 'Diventare volontario',
+      prompt: 'Qual è la tua età?',
+      options: [
+        { text: 'Meno di 16 anni', next: 'volontario_minore' },
+        { text: 'Tra 16 e 17 anni', next: 'volontario_16_17' },
+        { text: '18 anni o più', next: 'volontario_maggiore' }
+      ]
+    },
+    volontario_minore: {
+      kind: 'answer',
+      title: 'Hai meno di 16 anni',
+      body: [
+        'Il Gruppo accoglie nuovi volontari a partire dai 16 anni. Nel frattempo puoi seguire le attività di formazione e prevenzione dedicate alle scuole.'
+      ],
+      links: [
+        { text: 'Formazione nelle scuole', url: '/formazione/' },
+        { text: 'Giochi e quiz sulla sicurezza', url: '/giochi/' }
+      ]
+    },
+    volontario_16_17: {
+      kind: 'answer',
+      title: 'Hai tra 16 e 17 anni',
+      body: [
+        'Puoi iscriverti già ora: seguirai il corso di formazione base e potrai partecipare alle attività non operative. La piena operatività si raggiunge al compimento dei 18 anni.'
+      ],
+      bullets: [
+        'Serve il consenso scritto di un genitore o tutore.',
+        'Contatta la segreteria di persona, per telefono o via email per fissare un incontro.',
+        'Dopo l\u2019iscrizione, segui il corso di formazione base obbligatorio.'
+      ],
+      links: [
+        { text: 'Diventa volontario — procedura completa', url: '/diventa-volontario/' },
+        { text: 'Contatti e sede', url: '/contatti/' }
+      ]
+    },
+    volontario_maggiore: {
+      kind: 'answer',
+      title: 'Hai 18 anni o più',
+      body: [
+        'Puoi iscriverti subito. Dopo l\u2019iscrizione seguirai il corso di formazione base obbligatorio, che fornisce le conoscenze sul Sistema di Protezione Civile, sui rischi del territorio e sulle procedure operative.'
+      ],
+      bullets: [
+        'Iscrizione di persona alla sede di Via Sicilia, 13-15.',
+        'Oppure telefonicamente o via email.',
+        'Dopo il corso base potrai scegliere i settori operativi (AIB, radiocomunicazioni, logistica, ecc.).'
+      ],
+      links: [
+        { text: 'Diventa volontario — procedura completa', url: '/diventa-volontario/' },
+        { text: 'Chi siamo — settori operativi', url: '/chi-siamo/' },
+        { text: 'Formazione', url: '/formazione/' }
+      ]
+    },
+
+    // --------------------------- NUMERI --------------------------------------
+    numeri: {
+      kind: 'question',
+      title: 'Numeri utili',
+      prompt: 'Cosa ti serve?',
+      options: [
+        { text: 'Sono in emergenza adesso', next: 'numeri_emergenza' },
+        { text: 'Devo fare una segnalazione non urgente', next: 'numeri_segnalazione' },
+        { text: 'Voglio contattare il Gruppo di Protezione Civile di Genzano', next: 'numeri_gruppo' }
+      ]
+    },
+    numeri_emergenza: {
+      kind: 'answer',
+      title: 'Sei in emergenza adesso',
+      emergency: true,
+      body: [
+        'Chiama subito il <strong>112</strong>, Numero Unico Europeo di Emergenza. Funziona da qualunque telefono, anche senza credito o senza SIM. La Centrale Unica smista l\u2019intervento al servizio competente: Carabinieri, Polizia, Vigili del Fuoco, Emergenza sanitaria, squadre AIB.'
+      ],
+      bullets: [
+        'Non chiamare il 115, il 118 o il 1515: nel Lazio non sono più il riferimento per il cittadino.',
+        'Se non riesci a parlare, mantieni la linea aperta: la posizione viene comunque localizzata.',
+        'Fornisci sempre indirizzo preciso, natura del problema e numero di persone coinvolte.'
+      ],
+      links: [
+        { text: 'Pagina completa Numeri utili', url: '/numeri-utili/' }
+      ]
+    },
+    numeri_segnalazione: {
+      kind: 'answer',
+      title: 'Segnalazione non urgente',
+      body: [
+        'Per segnalazioni non urgenti di protezione civile (alberi caduti, piccoli smottamenti, situazioni che richiedono sopralluogo ma non intervento immediato) puoi usare:'
+      ],
+      bullets: [
+        'Sala Operativa Protezione Civile Regione Lazio: <strong>803 555</strong>.',
+        'Segreteria del Gruppo Comunale (orari d\u2019ufficio).',
+        'Per emergenze in corso resta valido il <strong>112</strong>.'
+      ],
+      links: [
+        { text: 'Numeri utili', url: '/numeri-utili/' },
+        { text: 'Contatti del Gruppo', url: '/contatti/' }
+      ]
+    },
+    numeri_gruppo: {
+      kind: 'answer',
+      title: 'Contattare il Gruppo',
+      body: [
+        'Il Gruppo Comunale non si attiva su chiamata diretta dei cittadini. Per richieste informative, iscrizioni, collaborazioni o organizzazione di eventi formativi puoi contattare la segreteria.'
+      ],
+      links: [
+        { text: 'Contatti (telefono, email, orari)', url: '/contatti/' },
+        { text: 'Diventa volontario', url: '/diventa-volontario/' },
+        { text: 'Formazione nelle scuole', url: '/formazione/' }
+      ]
+    },
+
+    // --------------------------- IT-ALERT ------------------------------------
+    italert: {
+      kind: 'answer',
+      title: 'Cos\u2019è IT-alert',
+      body: [
+        'IT-alert è il <strong>sistema nazionale di allarme pubblico</strong> gestito dal Dipartimento della Protezione Civile. Invia un messaggio direttamente ai telefoni cellulari presenti in un\u2019area colpita da una grave emergenza in corso o imminente.'
+      ],
+      bullets: [
+        'Funziona <strong>senza connessione internet</strong> e <strong>senza app installate</strong>: usa la tecnologia cell broadcast.',
+        'Suona con un segnale acustico distintivo, anche se il telefono è silenziato.',
+        'Arriva a chiunque si trovi nell\u2019area, anche se sta transitando di passaggio.',
+        'Viene usato per: maremoti, collassi di grandi dighe, attività vulcaniche, incidenti nucleari, incidenti industriali rilevanti, precipitazioni intense di tipo eccezionale.',
+        'Non sostituisce il 112: serve per avvisare, non per chiedere aiuto.',
+        'Il Dipartimento conduce periodiche sperimentazioni regionali: quelle sono test, non emergenze reali.'
+      ],
+      links: [
+        { text: 'Sito ufficiale IT-alert', url: 'https://www.it-alert.it/it/' },
+        { text: 'Domande frequenti sul sito', url: '/faq/' }
+      ]
+    }
+  };
+
+  // =========================================================================
+  // Stato e rendering
+  // =========================================================================
+  var trail = ['start'];
+  var app = document.getElementById('assistente-app');
+
+  function scrollIntoView() {
+    if (app && app.scrollIntoView) {
+      app.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // Sposta il focus sul titolo per gli screen reader.
+    var h2 = app.querySelector('.q-title');
+    if (h2) { h2.setAttribute('tabindex', '-1'); h2.focus(); }
+  }
+
+  function buildTrail() {
+    if (trail.length <= 1) return '';
+    var parts = trail.slice(0, -1).map(function (id) {
+      var n = NODES[id];
+      return n ? n.title : '';
+    });
+    var html = '<nav class="breadcrumb-trail" aria-label="Percorso nell\u2019assistente">';
+    html += parts.map(function (t, i) {
+      return '<span>' + escapeHTML(t) + '</span>' + (i < parts.length - 1 ? '<span class="sep" aria-hidden="true">\u203A</span>' : '');
+    }).join('');
+    html += '</nav>';
+    return html;
+  }
+
+  function escapeHTML(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function renderQuestion(node) {
+    var html = '';
+    html += buildTrail();
+    html += '<h2 class="q-title">' + escapeHTML(node.title) + '</h2>';
+    if (node.prompt) html += '<p class="q-prompt">' + escapeHTML(node.prompt) + '</p>';
+    html += '<ul class="opt-list" role="list">';
+    node.options.forEach(function (opt, idx) {
+      var cls = opt.emergency ? ' emergency' : '';
+      html += '<li>'
+        + '<button type="button" class="opt-btn' + cls + '" data-next="' + escapeHTML(opt.next) + '" aria-label="' + escapeHTML(opt.text) + '">'
+        + '<span>' + escapeHTML(opt.text) + '</span>'
+        + '<span class="opt-arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>'
+        + '</button>'
+        + '</li>';
+    });
+    html += '</ul>';
+    html += renderControls();
+    app.innerHTML = html;
+    bindButtons();
+  }
+
+  function renderAnswer(node) {
+    var html = '';
+    html += buildTrail();
+    var boxCls = node.emergency ? ' emergency' : '';
+    html += '<div class="answer-box' + boxCls + '">';
+    html += '<h3>' + escapeHTML(node.title) + '</h3>';
+    if (node.body) {
+      node.body.forEach(function (p) { html += '<p>' + p + '</p>'; }); // <strong> ammesso
+    }
+    if (node.bullets && node.bullets.length) {
+      html += '<ul>';
+      node.bullets.forEach(function (b) { html += '<li>' + b + '</li>'; });
+      html += '</ul>';
+    }
+    html += '</div>';
+    if (node.links && node.links.length) {
+      html += '<div class="links-block">';
+      html += '<h4>Approfondisci sul sito</h4>';
+      html += '<ul>';
+      node.links.forEach(function (l) {
+        var isExternal = /^https?:/.test(l.url);
+        var baseURL = document.querySelector('base') ? document.querySelector('base').href : '/';
+        var href = isExternal ? l.url : (window.SITO_BASEURL || '/') + String(l.url).replace(/^\//, '');
+        var ext = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+        html += '<li><a href="' + escapeHTML(href) + '"' + ext + '>' + escapeHTML(l.text) + (isExternal ? ' (sito esterno)' : '') + '</a></li>';
+      });
+      html += '</ul></div>';
+    }
+    html += renderControls(true);
+    app.innerHTML = html;
+    bindButtons();
+  }
+
+  function renderControls(isAnswer) {
+    var html = '<div class="nav-controls">';
+    if (trail.length > 1) {
+      html += '<button type="button" class="btn btn-outline-primary" data-action="back">'
+        + '<i class="bi bi-arrow-left me-2" aria-hidden="true"></i>Indietro</button>';
+    }
+    if (trail.length > 1 || isAnswer) {
+      html += '<button type="button" class="btn btn-outline-secondary" data-action="reset">'
+        + '<i class="bi bi-arrow-counterclockwise me-2" aria-hidden="true"></i>Ricomincia</button>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function bindButtons() {
+    app.querySelectorAll('.opt-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var next = btn.getAttribute('data-next');
+        if (next && NODES[next]) {
+          trail.push(next);
+          updateHash();
+          render();
+        }
+      });
+    });
+    app.querySelectorAll('[data-action="back"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (trail.length > 1) {
+          trail.pop();
+          updateHash();
+          render();
+        }
+      });
+    });
+    app.querySelectorAll('[data-action="reset"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        trail = ['start'];
+        updateHash();
+        render();
+      });
+    });
+  }
+
+  function render() {
+    var current = trail[trail.length - 1];
+    var node = NODES[current] || NODES.start;
+    if (node.kind === 'question') {
+      renderQuestion(node);
+    } else {
+      renderAnswer(node);
+    }
+    scrollIntoView();
+  }
+
+  function updateHash() {
+    // Deep link leggero: solo se siamo oltre lo start.
+    var current = trail[trail.length - 1];
+    if (current && current !== 'start') {
+      trail.length > 0 && (location.hash = current);
+    } else {
+      if (location.hash) {
+        history.replaceState ? history.replaceState(null, '', location.pathname + location.search) : location.hash = '';
+      }
+    }
+  }
+
+  function restoreFromHash() {
+    var h = (location.hash || '').replace(/^#/, '');
+    if (h && NODES[h]) {
+      // Ripartiamo dallo start con il nodo target come unica tappa visibile.
+      trail = ['start', h];
+    }
+  }
+
+  // Espone il baseURL del sito al JS per comporre correttamente i link interni
+  // (su GitHub Pages il prefisso è "/sito-pc-genzano/", su Aruba è "/").
+  window.SITO_BASEURL = '{{ "" | relURL }}' || '/';
+
+  restoreFromHash();
+  render();
+})();
+</script>
+
+{{ end }}

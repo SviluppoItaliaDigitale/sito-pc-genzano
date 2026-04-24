@@ -48,6 +48,13 @@ cosa_fare:
 
 # Servizi per il cittadino
 servizi:
+  - titolo: "Cosa devo fare?"
+    url: "/assistente/"
+    icona: "bi-question-circle"
+    classe_icona: "si-red"
+    descrizione: "Assistente guidato: ti aiuta a capire cosa fare in caso di emergenza."
+    azione: "Avvia assistente"
+
   - titolo: "Piano Familiare"
     url: "/piano-familiare/"
     icona: "bi-house-heart"

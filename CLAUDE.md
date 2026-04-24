@@ -141,6 +141,19 @@ Produce `<figure>` con immagine cliccabile (apre a dimensione intera in nuova sc
 - **Copertina**: generata automaticamente da `scripts/genera-cover.py` (gradiente blu + titolo + badge + fascia istituzionale). Nome file = slug dell'articolo.
 - **Foto evento**: fornita dall'utente. Nome file DIVERSO dallo slug (es. `2026-04-20-incendio-cecchina-casolare.webp` invece del solo slug), così il generatore non la sovrascrive. Deve comunque avere la fascia blu istituzionale.
 
+### Assistente guidato (`/assistente/`)
+
+Pagina interattiva che guida il cittadino con domande semplici fino a una risposta di autoprotezione. È un **albero decisionale deterministico in JavaScript puro** (nessun LLM, nessuna API runtime), coerente con il vincolo di sito statico Hugo e con la responsabilità istituzionale di non dare indicazioni generate in emergenza.
+
+- Contenuto in `content/assistente/_index.md` (solo frontmatter — `type: "assistente"`, `layout: "list"`).
+- Logica e dati in `themes/flavour-pcgenzano/layouts/assistente/list.html`: oggetto `NODES` con 8 percorsi (terremoto, incendio, gas, allerta meteo, allagamento, volontario, numeri utili, IT-alert) e circa 30 nodi totali (domande e risposte). Struttura nodo: `{ kind: 'question'|'answer', title, prompt?, options?, body?, bullets?, emergency?, links? }`.
+- I link interni usano `window.SITO_BASEURL` (iniettato via `{{ "" | relURL }}`) per essere compatibili sia con Aruba (root) sia con GitHub Pages (subpath `/sito-pc-genzano/`).
+- Accessibilità: `aria-live="polite"` sul contenitore, focus management sul `<h2>` ad ogni render, navigazione tastiera nativa, banner rosso in cima con richiamo al 112, fallback `<noscript>` con link alle pagine istituzionali.
+- Deep link: lo stato è riflesso in `location.hash` (es. `/assistente/#terremoto_casa`) per condividere una risposta.
+- Homepage: card "Cosa devo fare?" in `data/quick_links.yaml` → `servizi[0]`.
+
+Per aggiungere un nuovo percorso: aggiungere un nodo `question` collegato da `start.options`, poi le relative `answer` referenziate da `options[n].next`. Rispettare il criterio `emergency: true` solo per situazioni operative reali (coerenza con regola `06-protezione-civile-scientifica.md` sul tono di comunicazione del rischio).
+
 ### Archetypes (`archetypes/`)
 
 - `comunicazioni.md` — full front matter template for news posts (use this)
