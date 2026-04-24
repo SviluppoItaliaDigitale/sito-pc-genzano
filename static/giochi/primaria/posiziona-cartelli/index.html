@@ -195,7 +195,9 @@
             <div class="regole-box">
               <h2><i class="bi bi-info-circle-fill me-1" aria-hidden="true"></i>Come funziona</h2>
               <ul>
-                <li>Ogni scena ha alcuni <strong>posti vuoti</strong>: devi capire quale cartello va in quale posto.</li>
+                <li>Ogni scena ha alcuni <strong>posti vuoti</strong> con una scritta breve (es. "Primo soccorso").</li>
+                <li>Ogni cartello in basso ha <strong>sotto un'etichetta</strong> che dice cosa significa (es. "Primo soccorso").</li>
+                <li><strong>Abbina</strong> ogni cartello al posto vuoto che ha la stessa scritta o che significa la stessa cosa.</li>
                 <li><strong>Dal cellulare</strong>: tieni premuto il cartello e trascinalo nel posto giusto.</li>
                 <li><strong>Dal computer</strong>: trascina col mouse, oppure seleziona con <kbd>Tab</kbd> e sposta con le <kbd>frecce</kbd>. Premi <kbd>Invio</kbd> per prendere o rilasciare.</li>
                 <li>Dopo aver messo tutti i cartelli, premi <strong>Verifica</strong>: ti diremo dove sono quelli giusti e dove sbagliati.</li>
@@ -282,13 +284,13 @@
     var CART = {
       fuoco:      { id: 'fuoco',      kind: 'danger', glyph: '\uD83D\uDD25', label: 'Pericolo incendio' },
       elettrico:  { id: 'elettrico',  kind: 'danger', glyph: '\u26A1',       label: 'Alta tensione' },
-      caduta:     { id: 'caduta',     kind: 'danger', glyph: '\u26A0\uFE0F', label: 'Attenzione al piede' },
-      chimico:    { id: 'chimico',    kind: 'danger', glyph: '\u2623\uFE0F', label: 'Sostanze nocive' },
+      caduta:     { id: 'caduta',     kind: 'danger', glyph: '\u26A0\uFE0F', label: 'Rischio di caduta' },
+      chimico:    { id: 'chimico',    kind: 'danger', glyph: '\u2623\uFE0F', label: 'Sostanze pericolose' },
       vietatofumare: { id: 'vietatofumare', kind: 'ban', glyph: '\uD83D\uDEAD', label: 'Vietato fumare' },
       vietatoingresso: { id: 'vietatoingresso', kind: 'ban', glyph: '\uD83D\uDEAB', label: 'Vietato entrare' },
       vietatoascensore: { id: 'vietatoascensore', kind: 'ban', glyph: '\uD83D\uDEC8', label: 'Vietato ascensore' },
-      casco:      { id: 'casco',      kind: 'oblig', glyph: '\u26D1\uFE0F', label: 'Casco obbligatorio' },
-      guanti:     { id: 'guanti',     kind: 'oblig', glyph: '\uD83E\uDDE4', label: 'Guanti' },
+      casco:      { id: 'casco',      kind: 'oblig', glyph: '\u26D1\uFE0F', label: 'Obbligo casco' },
+      guanti:     { id: 'guanti',     kind: 'oblig', glyph: '\uD83E\uDDE4', label: 'Obbligo guanti' },
       giubbino:   { id: 'giubbino',   kind: 'oblig', glyph: '\uD83E\uDDA9', label: 'Alta visibilit\u00e0' },
       primosoccorso: { id: 'primosoccorso', kind: 'safe', glyph: '\u2795', label: 'Primo soccorso' },
       defibrillatore: { id: 'defibrillatore', kind: 'safe', glyph: '\u2764\uFE0F', label: 'Defibrillatore' },
@@ -302,56 +304,56 @@
       {
         id: 'scuola',
         titolo: 'A scuola',
-        desc: 'Colloca i cartelli nei punti giusti della scuola: corridoi, laboratorio e uscita di emergenza.',
+        desc: 'Colloca ogni cartello nel posto giusto: leggi la scritta del posto vuoto e abbinala all\'etichetta sotto al cartello.',
         slots: [
-          { id: 'a', x: 5,  y: 8,   hint: 'Porta che porta fuori dall\'edificio', accepts: 'uscita' },
-          { id: 'b', x: 32, y: 8,   hint: 'Armadio di primo soccorso', accepts: 'primosoccorso' },
-          { id: 'c', x: 59, y: 8,   hint: 'Cassetta rossa in corridoio', accepts: 'estintore' },
-          { id: 'd', x: 5,  y: 55,  hint: 'Laboratorio di scienze', accepts: 'chimico' },
-          { id: 'e', x: 32, y: 55,  hint: 'In corridoio vicino alle scale', accepts: 'vietatoascensore' },
-          { id: 'f', x: 59, y: 55,  hint: 'Punto di raccolta in cortile', accepts: 'raccolta' }
+          { id: 'a', x: 5,  y: 8,   hint: 'Uscita emergenza', accepts: 'uscita' },
+          { id: 'b', x: 32, y: 8,   hint: 'Primo soccorso', accepts: 'primosoccorso' },
+          { id: 'c', x: 59, y: 8,   hint: 'Estintore', accepts: 'estintore' },
+          { id: 'd', x: 5,  y: 55,  hint: 'Sostanze pericolose', accepts: 'chimico' },
+          { id: 'e', x: 32, y: 55,  hint: 'Vietato ascensore', accepts: 'vietatoascensore' },
+          { id: 'f', x: 59, y: 55,  hint: 'Punto di raccolta', accepts: 'raccolta' }
         ],
         cartelli: ['uscita', 'primosoccorso', 'estintore', 'chimico', 'vietatoascensore', 'raccolta']
       },
       {
         id: 'cantiere',
         titolo: 'In cantiere',
-        desc: 'Un cantiere edile \u00e8 pieno di cartelli: metti ogni obbligo e ogni pericolo al posto giusto.',
+        desc: 'Un cantiere edile con molti pericoli. Abbina ogni cartello alla scritta uguale del posto vuoto.',
         slots: [
-          { id: 'a', x: 5,  y: 8,   hint: 'Ingresso del cantiere', accepts: 'casco' },
-          { id: 'b', x: 32, y: 8,   hint: 'Area di scavo profondo', accepts: 'caduta' },
-          { id: 'c', x: 59, y: 8,   hint: 'Quadro elettrico della ruspa', accepts: 'elettrico' },
-          { id: 'd', x: 5,  y: 55,  hint: 'Stoccaggio vernici e solventi', accepts: 'vietatofumare' },
-          { id: 'e', x: 32, y: 55,  hint: 'Movimentazione materiali', accepts: 'guanti' },
-          { id: 'f', x: 59, y: 55,  hint: 'Vicinanze della strada', accepts: 'giubbino' }
+          { id: 'a', x: 5,  y: 8,   hint: 'Obbligo casco', accepts: 'casco' },
+          { id: 'b', x: 32, y: 8,   hint: 'Rischio di caduta', accepts: 'caduta' },
+          { id: 'c', x: 59, y: 8,   hint: 'Alta tensione', accepts: 'elettrico' },
+          { id: 'd', x: 5,  y: 55,  hint: 'Vietato fumare', accepts: 'vietatofumare' },
+          { id: 'e', x: 32, y: 55,  hint: 'Obbligo guanti', accepts: 'guanti' },
+          { id: 'f', x: 59, y: 55,  hint: 'Alta visibilit\u00e0', accepts: 'giubbino' }
         ],
         cartelli: ['casco', 'caduta', 'elettrico', 'vietatofumare', 'guanti', 'giubbino']
       },
       {
         id: 'bosco',
         titolo: 'Nel bosco',
-        desc: 'Un parco pubblico durante la stagione degli incendi. Posiziona i cartelli di pericolo e divieto.',
+        desc: 'Un parco pubblico durante la stagione degli incendi. Leggi le scritte dei posti e abbina i cartelli.',
         slots: [
-          { id: 'a', x: 5,  y: 8,   hint: 'Ingresso del sentiero', accepts: 'fuoco' },
-          { id: 'b', x: 32, y: 8,   hint: 'Area pic-nic', accepts: 'vietatofumare' },
-          { id: 'c', x: 59, y: 8,   hint: 'Centralina elettrica del rifugio', accepts: 'elettrico' },
-          { id: 'd', x: 5,  y: 55,  hint: 'Cassetta di medicazione', accepts: 'primosoccorso' },
-          { id: 'e', x: 32, y: 55,  hint: 'Radura per l\'elicottero', accepts: 'raccolta' },
-          { id: 'f', x: 59, y: 55,  hint: 'Riserva per pompieri', accepts: 'idrante' }
+          { id: 'a', x: 5,  y: 8,   hint: 'Pericolo incendio', accepts: 'fuoco' },
+          { id: 'b', x: 32, y: 8,   hint: 'Vietato fumare', accepts: 'vietatofumare' },
+          { id: 'c', x: 59, y: 8,   hint: 'Alta tensione', accepts: 'elettrico' },
+          { id: 'd', x: 5,  y: 55,  hint: 'Primo soccorso', accepts: 'primosoccorso' },
+          { id: 'e', x: 32, y: 55,  hint: 'Punto di raccolta', accepts: 'raccolta' },
+          { id: 'f', x: 59, y: 55,  hint: 'Idrante', accepts: 'idrante' }
         ],
         cartelli: ['fuoco', 'vietatofumare', 'elettrico', 'primosoccorso', 'raccolta', 'idrante']
       },
       {
         id: 'palestra',
         titolo: 'In palestra',
-        desc: 'Una palestra pubblica con zona attrezzi. Dove metti i cartelli di obbligo, sicurezza e uscita?',
+        desc: 'Una palestra pubblica con zona attrezzi. Abbina ogni cartello al posto con la stessa scritta.',
         slots: [
-          { id: 'a', x: 5,  y: 8,   hint: 'Porta per la via di fuga', accepts: 'uscita' },
-          { id: 'b', x: 32, y: 8,   hint: 'Custodia con massaggiatore cardiaco', accepts: 'defibrillatore' },
-          { id: 'c', x: 59, y: 8,   hint: 'Area spogliatoi', accepts: 'vietatofumare' },
-          { id: 'd', x: 5,  y: 55,  hint: 'Pareti vicino a una scala da arrampicata', accepts: 'caduta' },
-          { id: 'e', x: 32, y: 55,  hint: 'Pronto soccorso', accepts: 'primosoccorso' },
-          { id: 'f', x: 59, y: 55,  hint: 'Vicino alle attrezzature', accepts: 'estintore' }
+          { id: 'a', x: 5,  y: 8,   hint: 'Uscita emergenza', accepts: 'uscita' },
+          { id: 'b', x: 32, y: 8,   hint: 'Defibrillatore', accepts: 'defibrillatore' },
+          { id: 'c', x: 59, y: 8,   hint: 'Vietato fumare', accepts: 'vietatofumare' },
+          { id: 'd', x: 5,  y: 55,  hint: 'Rischio di caduta', accepts: 'caduta' },
+          { id: 'e', x: 32, y: 55,  hint: 'Primo soccorso', accepts: 'primosoccorso' },
+          { id: 'f', x: 59, y: 55,  hint: 'Estintore', accepts: 'estintore' }
         ],
         cartelli: ['uscita', 'defibrillatore', 'vietatofumare', 'caduta', 'primosoccorso', 'estintore']
       }
