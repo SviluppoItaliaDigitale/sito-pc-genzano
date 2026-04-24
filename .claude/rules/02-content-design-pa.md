@@ -101,6 +101,8 @@ Ogni articolo deve avere tutti i campi previsti dall'archetipo:
 | Attività | `#0891b2` | Turchese — operatività ordinaria |
 
 Queste tinte sono applicate in `custom.css` in due gruppi coordinati: le classi `.notizia-categoria.<categoria>` (badge nelle card) e i selettori `.filter-pill[data-filter="<categoria>"]` (pulsanti filtro nell'archivio). Qualsiasi modifica alla palette va replicata in **entrambi** i gruppi per mantenere la coerenza visiva.
+
+**Criterio d'uso `Allerta` vs `Emergenza`:** i due badge non sono sinonimi e hanno colori distinti perché coprono fasi diverse del ciclo del rischio (previsione vs evento in corso). I criteri operativi e gli esempi sono definiti in `.claude/rules/06-protezione-civile-scientifica.md`, sezione "Quando usare il badge 'Allerta' e quando 'Emergenza'". Non scegliere tra i due per varietà editoriale: il badge `Emergenza` è intenzionalmente raro.
 - `priorita`: normale | urgente
 - `autore`: "Gruppo Comunale Volontari PC Genzano" (default)
 - `image`: percorso immagine o stringa vuota

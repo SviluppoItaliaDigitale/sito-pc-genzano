@@ -15,7 +15,9 @@ draft: false
 
 **Un incendio non nasce per caso: nasce quando tre elementi si incontrano nello stesso momento.** Questo principio, semplice ma decisivo, è noto come *triangolo del fuoco*. Capirlo aiuta a leggere meglio i rischi quotidiani, a prevenirli e a intervenire con maggiore consapevolezza.
 
-![Diagramma del triangolo del fuoco con i tre elementi combustibile, comburente e calore, pensato come infografica didattica per un articolo di protezione civile.](/images/2026-04-13-triangolo-del-fuoco.webp)
+{{< foto src="/images/2026-04-13-triangolo-del-fuoco.webp"
+         alt="Diagramma del triangolo del fuoco con i tre elementi combustibile, comburente e calore, pensato come infografica didattica per un articolo di protezione civile."
+         caption="Il triangolo del fuoco: combustibile, comburente e calore. Se manca anche un solo lato, la combustione non può avvenire." >}}
 
 Il triangolo del fuoco è una rappresentazione immediata del fenomeno della combustione. Ogni lato indica una condizione indispensabile. Se anche uno solo di questi elementi manca, il fuoco non parte oppure si spegne. Per questo motivo il triangolo del fuoco è uno dei concetti più utili nella prevenzione incendi, nella formazione degli operatori e nell’informazione ai cittadini.
 
