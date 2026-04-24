@@ -1602,12 +1602,17 @@ article .galleria img {
   box-shadow: 0 4px 12px rgba(0, 51, 102, 0.15);
 }
 
+/* Quando l'iframe è caricato, il placeholder diventa trasparente:
+   non serve più sfondo o ombra, e le dimensioni le dà l'iframe stesso.
+   !important serve per vincere la specificità di .card e .bg-primary. */
 .ext-widget-placeholder.ext-widget-loaded {
-  background-image: none;
-  background-color: #fff;
-  box-shadow: none;
-  padding: 0;
-  min-height: 450px;
+  display: block !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
 }
 
 .ext-widget-placeholder-content {
@@ -1646,7 +1651,7 @@ article .galleria img {
 
 .ext-widget-iframe {
   width: 100%;
-  min-height: 450px;
+  min-height: 620px;
   border: 0;
   display: block;
   border-radius: 8px;
@@ -1697,7 +1702,7 @@ article .galleria img {
     min-height: 360px;
   }
   .ext-widget-iframe {
-    min-height: 380px;
+    min-height: 520px;
   }
 }
 

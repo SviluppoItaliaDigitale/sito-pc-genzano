@@ -29,7 +29,7 @@ sitemap:
 </div>
 
 {{< external-widget
-    src="https://embed.windy.com/embed2.html?lat=41.6919&lon=12.6928&detailLat=41.6919&detailLon=12.6928&width=100%25&height=450&zoom=12&level=surface&overlay=radar&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
+    src="https://embed.windy.com/embed2.html?lat=41.6919&lon=12.6928&detailLat=41.6919&detailLon=12.6928&width=100%25&height=600&zoom=12&level=surface&overlay=radar&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
     title="Mappa meteo interattiva Windy centrata su Genzano di Roma"
     placeholderTitle="Mappa meteo interattiva"
     placeholderDesc="Per visualizzare la mappa devi caricare i contenuti forniti da <strong>Windy.com</strong>. Il tuo browser riceverà risorse dal loro server e potrebbe impostare cookie tecnici di terze parti."
@@ -39,6 +39,46 @@ sitemap:
     altLabel="Windy.com centrato su Genzano di Roma"
     fallbackText="Mappa meteo online consultabile su windy.com — Genzano di Roma (41.6919 N, 12.6928 E)"
     widgetId="meteo-windy" >}}
+
+## Radar nazionale precipitazioni — fonte istituzionale
+
+Mosaico radar nazionale del **Dipartimento della Protezione Civile**, aggiornato ogni 10 minuti. A differenza di Windy — che mostra previsioni elaborate da modelli internazionali — il radar DPC mostra la **pioggia realmente misurata** dai radar meteorologici italiani in questo momento.
+
+<div class="alert alert-success" role="note">
+<p class="mb-0"><i class="bi bi-patch-check-fill me-2" aria-hidden="true"></i><strong>Fonte istituzionale italiana:</strong> il radar DPC è lo strumento operativo ufficiale del Dipartimento di Protezione Civile per la sorveglianza meteo-idrologica nazionale.</p>
+</div>
+
+{{< external-widget
+    src="https://mappe.protezionecivile.it/"
+    title="Mosaico radar nazionale precipitazioni — Dipartimento Protezione Civile"
+    placeholderTitle="Radar DPC — precipitazioni in tempo reale"
+    placeholderDesc="Mosaico radar nazionale dal <strong>Dipartimento della Protezione Civile</strong>. Mostra la pioggia misurata in questo momento sul territorio italiano."
+    icon="bi-broadcast-pin"
+    btnLabel="Carica il radar DPC"
+    altUrl="https://mappe.protezionecivile.it/"
+    altLabel="Mappe Protezione Civile"
+    fallbackText="Radar nazionale precipitazioni consultabile su mappe.protezionecivile.it (Dipartimento Protezione Civile)"
+    widgetId="radar-dpc" >}}
+
+## Previsione meteo per Genzano di Roma — Aeronautica Militare
+
+Previsione ufficiale emessa dall'**Aeronautica Militare — Servizio Meteorologico**. È la previsione meteorologica istituzionale italiana: accurata, aggiornata, scientificamente autorevole, pensata per il cittadino.
+
+<div class="alert alert-success" role="note">
+<p class="mb-0"><i class="bi bi-patch-check-fill me-2" aria-hidden="true"></i><strong>Fonte istituzionale italiana:</strong> l'Aeronautica Militare è l'ente ufficiale per il Servizio Meteorologico Nazionale. Le previsioni qui mostrate sono quelle ufficiali italiane.</p>
+</div>
+
+{{< external-widget
+    src="https://www.meteoam.it/it/meteo-citta/genzano-di-roma"
+    title="Previsione meteo ufficiale per Genzano di Roma — Aeronautica Militare"
+    placeholderTitle="Previsione meteo — Aeronautica Militare"
+    placeholderDesc="Previsione ufficiale del <strong>Servizio Meteorologico dell'Aeronautica Militare</strong> per Genzano di Roma."
+    icon="bi-cloud-sun-fill"
+    btnLabel="Carica la previsione AM"
+    altUrl="https://www.meteoam.it/it/meteo-citta/genzano-di-roma"
+    altLabel="meteoam.it — Genzano di Roma"
+    fallbackText="Previsione meteo ufficiale per Genzano di Roma consultabile su meteoam.it (Aeronautica Militare)"
+    widgetId="meteo-aeronautica" >}}
 
 ## Come funziona il sistema di allertamento
 

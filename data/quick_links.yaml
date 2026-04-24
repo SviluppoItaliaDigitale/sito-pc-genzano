@@ -76,6 +76,13 @@ servizi:
     descrizione: "Aree di emergenza del Piano Comunale."
     azione: "Consulta"
 
+  - titolo: "Strumenti in Tempo Reale"
+    url: "/strumenti/"
+    icona: "bi-broadcast-pin"
+    classe_icona: "si-purple"
+    descrizione: "Meteo, terremoti, incendi, qualità aria da fonti ufficiali."
+    azione: "Apri strumenti"
+
   - titolo: "Area Download"
     url: "/area-download/"
     icona: "bi-download"

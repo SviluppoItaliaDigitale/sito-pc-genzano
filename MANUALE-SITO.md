@@ -1442,7 +1442,8 @@ Il template `single.html` del tema mostra questa data come **box evidente** in c
 | `/` | `layouts/index.html` | Homepage dinamica (normale/emergenza) |
 | `/chi-siamo/` | `content/chi-siamo/_index.md` | |
 | `/rischi-prevenzione/` | `content/rischi-prevenzione/_index.md` | Hub + 9 sotto-pagine |
-| `/allerte-meteo/` | `content/allerte-meteo/_index.md` | Include widget Windy (click-to-load) in fondo — vedi 4.9 |
+| `/allerte-meteo/` | `content/allerte-meteo/_index.md` | Widget Windy + Radar DPC (click-to-load) — vedi 4.9 |
+| `/strumenti/` | `content/strumenti/_index.md` | **Hub strumenti consultazione in tempo reale** — vedi 4.10 |
 | `/comunicazioni/` | Generata da Hugo | Elenco articoli |
 | `/formazione/` | `content/formazione/_index.md` | Include 4 kit scuola (vedi 4.8) |
 | `/giochi/` | `static/giochi/index.html` | **Standalone**, non Hugo content |
@@ -1509,8 +1510,11 @@ Il sito incorpora alcuni widget forniti da servizi esterni (mappe meteo, mappe s
 
 | Widget | Fornitore | Pagine | Fonte ufficiale |
 |---|---|---|---|
-| Mappa meteo | **Windy.com** (Windyty, SE) | Home, [Allerte Meteo](/allerte-meteo/) | Strumento di consultazione: fonte ufficiale resta Centro Funzionale Regione Lazio |
-| Mappa sismica | **INGV** (Istituto Nazionale di Geofisica e Vulcanologia, ente pubblico di ricerca italiano) | Home, [Rischio Sismico](/rischi-prevenzione/rischio-sismico/) | INGV è la fonte scientifica ufficiale italiana per la sismologia |
+| Mappa meteo | **Windy.com** (Windyty, SE) | Home, [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | Strumento di consultazione: fonte ufficiale resta Centro Funzionale Regione Lazio |
+| Mappa sismica | **INGV** (Istituto Nazionale di Geofisica e Vulcanologia, ente pubblico di ricerca italiano) | Home, [Rischio Sismico](/rischi-prevenzione/rischio-sismico/), [Strumenti](/strumenti/) | INGV è la fonte scientifica ufficiale italiana per la sismologia |
+| Radar DPC | **Dipartimento della Protezione Civile** (ente pubblico italiano) | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | Fonte istituzionale italiana per la sorveglianza meteo-idrologica |
+| Fulmini | **Blitzortung / Lightning Maps** (rete volontaria internazionale) | [Temporali Intensi](/rischi-prevenzione/temporali-intensi/), [Strumenti](/strumenti/) | Rete scientifica volontaria, non istituzionale |
+| Previsione meteo | **Aeronautica Militare** (Servizio Meteorologico Nazionale, Ministero Difesa) | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | Fonte istituzionale italiana per le previsioni meteo |
 
 #### Architettura del codice (DRY, un'unica fonte di verità)
 
@@ -1571,8 +1575,60 @@ La sezione "Monitoraggio in tempo reale" in home compare **solo in modalità ord
 
 | Widget | Parametri chiave | Note |
 |---|---|---|
-| Windy | `lat=41.6919`, `lon=12.6928`, `zoom=12`, `overlay=radar` | Genzano di Roma stretto, radar meteo di default |
+| Windy | `lat=41.6919`, `lon=12.6928`, `zoom=12`, `overlay=radar`, `height=600` | Genzano di Roma stretto, radar meteo di default |
 | INGV | nessuno (URL fisso `https://terremoti.ingv.it/`) | Mostra tutta Italia; filtri magnitudo/periodo gestiti dall'utente dal menu INGV |
+| Radar DPC | nessuno (URL fisso `https://mappe.protezionecivile.it/`) | Mosaico nazionale; zoom/pan utente |
+| Blitzortung | `#8/41.6919/12.6928` nell'hash URL | Centro mappa su Genzano, zoom 8 (Lazio intero visibile) |
+
+### 4.10 — Hub strumenti di consultazione (`/strumenti/`)
+
+La pagina **Strumenti in tempo reale** è un hub unico che elenca tutti gli strumenti online utili per il monitoraggio del territorio: meteo, sismico, idrogeologico, incendi, qualità dell'aria, viabilità, emergenze. Esiste per dare al cittadino un singolo punto di accesso invece di disperdere i link su molte pagine.
+
+#### Due tipi di strumento
+
+1. **Widget incorporati**: lo strumento è embeddato sul nostro sito con il pattern click-to-load (§4.9). La card nell'hub ha il bottone **"Apri widget sul sito"** e porta all'ancora della pagina dove vive il widget (es. `/allerte-meteo/#meteo-windy`).
+2. **Link esterni**: lo strumento non consente l'iframe (X-Frame-Options blocca) o non ha senso incorporarlo. La card nell'hub ha il bottone **"Apri sito ufficiale"** e apre la pagina del fornitore in una nuova scheda con `rel="noopener noreferrer"`.
+
+#### Come è fatto
+
+- **Markdown**: `content/strumenti/_index.md` — contiene le card raggruppate per categoria.
+- **Shortcode**: `themes/flavour-pcgenzano/layouts/shortcodes/tool-card.html` — rende una singola card.
+- **Parametri dello shortcode** `{{</* tool-card */>}}`: `nome`, `fonte`, `icona` (Bootstrap Icon), `descrizione`, `tipoFonte` (`istituzionale` | `consultazione`), `tipoAccesso` (`widget` | `sito`), `url`.
+- **Badge automatico**: la card mostra un badge verde "Fonte istituzionale" se `tipoFonte=istituzionale`, un badge ambra "Strumento di consultazione" se `tipoFonte=consultazione`.
+- **CTA automatico**: la card mostra "Apri widget sul sito" (stile filled) se `tipoAccesso=widget`, "Apri sito ufficiale" (stile outline) se `tipoAccesso=sito`.
+
+#### Come aggiungere un nuovo strumento
+
+**Caso A — Lo strumento consente l'iframe:**
+1. Verifica con `curl -sI ... | grep -i x-frame` che non sia bloccato.
+2. Aggiungi il widget iframe sulla pagina tematica appropriata con `{{</* external-widget */>}}` (vedi §4.9).
+3. Nella `content/strumenti/_index.md` aggiungi una card nella categoria giusta con `tipoAccesso="widget"` e `url="/pagina-tematica/#anchor-widget"`.
+
+**Caso B — Lo strumento NON consente l'iframe:**
+1. Nella `content/strumenti/_index.md` aggiungi una card nella categoria giusta con `tipoAccesso="sito"` e `url="https://sito-ufficiale.esempio/"`.
+2. Non serve nessun altro file.
+
+**In entrambi i casi**, aggiorna:
+- `content/privacy/_index.md` (tabella Cookie di terze parti o elenco link esterni)
+- `content/accessibilita/_index.md` (sezione Contenuti di terze parti)
+- `dataUltimaRevisione` delle due pagine sopra
+
+#### Verifica X-Frame-Options prima di scegliere iframe
+
+```bash
+curl -sI -L -A "Mozilla/5.0" https://URL/ | grep -iE "x-frame-options|frame-ancestors"
+```
+
+Interpretazione:
+- **Nessuna riga in output** → iframe consentito da terzi → caso A
+- `X-Frame-Options: DENY` → iframe vietato da tutti → caso B
+- `X-Frame-Options: SAMEORIGIN` → solo il sito stesso può iframarsi → caso B
+- `Content-Security-Policy: ... frame-ancestors 'none'` → come DENY → caso B
+- `Content-Security-Policy: ... frame-ancestors 'self' <host>` → iframe consentito solo a `<host>` → caso B se noi non siamo in quella lista
+
+#### CTA in homepage
+
+La sezione **Servizi per il cittadino** in homepage (`data/quick_links.yaml` → `servizi`) include una voce "Strumenti in Tempo Reale" che punta a `/strumenti/`. Quando aggiungi un nuovo strumento all'hub non serve modificare la home: il link è già presente.
 
 ---
 
