@@ -26,6 +26,36 @@ Distingui sempre chiaramente tra:
 
 Non mescolare questi tipi all'interno dello stesso comunicato senza chiarezza esplicita.
 
+## Quando usare il badge "Allerta" e quando "Emergenza"
+
+I badge `Allerta` ed `Emergenza` hanno colori distinti (rosso `#d9364f` vs rosso scuro `#7f1d1d`) perché comunicano due fasi diverse del ciclo del rischio. Non sono sinonimi e non vanno alternati per varietà editoriale.
+
+**Badge `Allerta` — fase di PREVISIONE**
+- Usa questo badge quando l'evento è **previsto** ma non ancora in corso.
+- Il contenuto tipico è un bollettino di allerta meteo regionale, un avviso di criticità idrogeologica, un'allerta incendio boschivo su base previsionale.
+- Deve riportare: livello (`verde`, `giallo`, `arancione`, `rosso`), tipo di rischio, area geografica, finestra temporale di validità, fonte ufficiale (Centro Funzionale Regionale Lazio, DPC, Protezione Civile Lazio).
+- Il tono è prudenziale e informativo: "è previsto", "sono attesi", "si raccomanda di".
+- Viene emesso prima che accada qualcosa, in modo da consentire l'autoprotezione.
+
+**Badge `Emergenza` — fase di EVENTO IN CORSO**
+- Usa questo badge solo quando un evento **è in atto** e impone azioni operative immediate alla popolazione.
+- Il contenuto tipico è una comunicazione durante l'attivazione del Centro Operativo Comunale (COC), un'evacuazione in corso, un intervento attivo su un territorio, un'emergenza sanitaria locale in evoluzione.
+- Deve riportare: cosa sta accadendo adesso, dove, chi sta intervenendo, cosa deve fare il cittadino in quel preciso momento, canale di aggiornamento continuo.
+- Il tono è operativo e direttivo: "è in corso", "allontanarsi da", "raggiungere l'area di raccolta".
+- Il badge `Emergenza` non si usa per raccontare eventi conclusi: in quel caso il badge corretto è `Aggiornamento` (esito operativo) o `Comunicazione` (resoconto istituzionale).
+
+**Criterio sintetico:**
+
+| Fase | Badge | Tono verbale |
+|---|---|---|
+| Prima dell'evento (previsione) | `Allerta` | "è previsto / atteso" |
+| Durante l'evento (azione) | `Emergenza` | "è in corso / in atto" |
+| Dopo l'evento (resoconto) | `Aggiornamento` o `Comunicazione` | "è stato / si è concluso" |
+
+**Regola operativa:** se hai dubbi tra `Allerta` e `Emergenza`, chiediti se l'evento è già iniziato per il cittadino. Se no, è `Allerta`. Se sì e richiede un comportamento immediato, è `Emergenza`.
+
+Il badge `Emergenza` è intenzionalmente raro. Un abuso ne riduce l'impatto comunicativo proprio quando serve davvero.
+
 ## Codici colore allerta meteo (Regione Lazio)
 
 | Colore | Significato |
