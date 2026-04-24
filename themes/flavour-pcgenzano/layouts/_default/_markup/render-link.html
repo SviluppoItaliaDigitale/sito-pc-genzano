@@ -16,13 +16,17 @@
     {{- $staticIdx := printf "static%sindex.html" $path -}}
     {{- if fileExists $staticIdx -}}{{- $isStatic = true -}}{{- end -}}
   {{- end -}}
+  {{- /* Hugo relURL non aggiunge il subpath del baseURL ai path con leading /,
+         quindi togliamo lo slash iniziale: "cerca/" → "/sito-pc-genzano/cerca/"
+         mentre "/cerca/" → "/cerca/" (rotto su GitHub Pages). */ -}}
+  {{- $relLink := strings.TrimPrefix "/" $link -}}
   {{- if $isStatic -}}
-    <a href="{{ $link | relURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+    <a href="{{ $relLink | relURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
   {{- else -}}
     {{- $cleanPath := strings.TrimSuffix "/" (strings.TrimPrefix "/" $path) -}}
     {{- $target := site.GetPage $cleanPath -}}
     {{- if $target -}}
-      <a href="{{ $link | relURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+      <a href="{{ $relLink | relURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
     {{- else -}}
       <span class="text-muted" title="Contenuto non ancora disponibile">{{ .Text | safeHTML }}</span>
     {{- end -}}
