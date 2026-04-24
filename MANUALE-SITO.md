@@ -2088,7 +2088,7 @@ Un `data` rotto blocca `hugo --minify` e il deploy fallisce: il sito resta sulla
 
 ## Parte 10 — GitHub Actions e automazioni
 
-Il repository ha **8 workflow** attivi che automatizzano deploy, controlli, aggiornamenti e audit. Ogni workflow vive in `.github/workflows/*.yml`. Tutti supportano l'esecuzione manuale tramite `workflow_dispatch` dalla tab Actions del repository.
+Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggiornamenti e audit. Ogni workflow vive in `.github/workflows/*.yml`. Tutti supportano l'esecuzione manuale tramite `workflow_dispatch` dalla tab Actions del repository.
 
 ### 10.1 — Panoramica
 
@@ -2097,11 +2097,12 @@ Il repository ha **8 workflow** attivi che automatizzano deploy, controlli, aggi
 | Build e Deploy | `deploy.yml` | push su `main`, manuale | Build Hugo, deploy Aruba (FTP), deploy GitHub Pages |
 | Aggiornamento Allerta Meteo | `check-allerta.yml` | orario (cron `12 * * * *`), manuale | Legge feed DPC, aggiorna `data/allerta.json` |
 | Pubblicazione programmata | `pubblica-programmata.yml` | giornaliero (06:00 UTC), manuale | Riavvia il deploy per pubblicare articoli a data futura |
-| Verifica link normativa | `check-normativa-links.yml` | 1° del mese (08:00 UTC), manuale | Controlla raggiungibilità portali normativi |
+| Verifica link normativa | `check-normativa-links.yml` | lunedì 08:00 UTC, manuale | Controlla raggiungibilità portali normativi |
 | Audit Accessibilità | `lighthouse-audit.yml` | dopo ogni deploy, manuale | Lighthouse su home e 5 pagine chiave |
 | Aggiorna Bootstrap Italia | `update-bootstrap-italia.yml` | lunedì 06:00 UTC, manuale | Verifica nuove release Bootstrap Italia, apre PR |
 | Aggiornamento MANUALE | `aggiorna-manuale.yml` | lunedì 06:00 UTC, manuale | Confronta hash fonti AGID/DI, apre Issue se cambiate |
-| Coerenza documentazione | `coerenza-docs.yml` | 1° del mese (07:00 UTC), manuale | Verifica coerenza tra CLAUDE.md, archetype, regole, badge |
+| Coerenza documentazione | `coerenza-docs.yml` | lunedì 07:00 UTC, manuale | Verifica coerenza tra CLAUDE.md, archetype, regole, badge |
+| Audit settimanale sito | `audit-sito.yml` | lunedì 09:00 UTC, manuale | Audit testi: fatti istituzionali, numeri deprecati, immagini/allegati rotti, badge, frasi AGID |
 
 ### 10.2 — `deploy.yml` — Build e Deploy
 
@@ -2247,7 +2248,32 @@ exclude: |
 
 **Quando intervenire**: sempre che apra una Issue. La coerenza tra questi file è critica per l'affidabilità delle AI che li usano come guida.
 
-### 10.10 — Disabilitare temporaneamente un workflow
+### 10.10 — `audit-sito.yml` — Audit settimanale dei contenuti
+
+**Trigger**: cron settimanale (lunedì 09:00 UTC), manuale.
+
+**Cosa fa:** scansiona i contenuti pubblicati (`content/`, `themes/`, `data/`, `hugo.toml`) per rilevare in modo automatico la stessa classe di errori che emerse nell'audit manuale di aprile 2026 (COI 14°→15°, cartello AR4 mancante, citazioni di 115/118 come numero da chiamare, placeholder residui). Apre una Issue solo se trova deviazioni.
+
+**Controlli effettuati:**
+1. **COI** — tutti i riferimenti al Centro Operativo Intercomunale devono usare il grado `15°`. Qualsiasi altro grado (14°, 16°, ecc.) genera errore.
+2. **NUE 112** — nessun contenuto deve istruire il cittadino a chiamare 115, 118 o 1515 (nel Lazio l'unico numero è il 112). La grep distingue gli usi imperativi ("chiamare il 115") dalle citazioni legittime come nome di organizzazione ("ARES 118").
+3. **Telefono istituzionale coerente** — le cifre del numero in `hugo.toml` (`telefono`) devono coincidere con ogni altra occorrenza del numero di sede. Verifica anche che non esistano attributi `href="tel:..."` hard-coded con spazi (violano RFC 3966 E.164); le righe con template Go `{{ }}` sono escluse.
+4. **Sede e CAP** — l'indirizzo in `hugo.toml` è la fonte di verità; warning se compare un CAP diverso da `00045` accanto a "Genzano".
+5. **Placeholder** — segnala `TODO`, `TBD`, `FIXME`, `XXX`, `lorem ipsum`, `DA COMPLETARE`, `DA VERIFICARE`, template Go non espansi.
+6. **File statici rotti** — ogni `src=/images/...`, `href=/allegati/...`, `url: /cartelli/...` nei contenuti deve puntare a un file realmente presente in `static/`. I riferimenti a `/documenti/` sono filtrati perché quella cartella è gestita manualmente sul server Aruba.
+7. **Badge articoli** — ogni badge usato nel frontmatter deve essere presente nello slice `$known` di `themes/flavour-pcgenzano/layouts/partials/badge.html`. Il confronto è case-insensitive per replicare la logica del template (`$lower := $badge | lower`). I badge non noti ricevono un colore automatico ma vengono segnalati.
+8. **Anno articoli** — anni fuori dall'intervallo `2020..anno_corrente+1` sono tipicamente typo di data; genera errore.
+9. **Allegati senza dimensione** — WCAG 3.3.5: ogni voce nell'array `allegati:` del frontmatter dovrebbe dichiarare `dimensione:`. Warning, non errore bloccante.
+10. **Frasi AGID lunghe** — euristica: articoli con 3 o più frasi oltre 40 parole ricevono warning. Il linguaggio PA raccomanda frasi ≤ 20 parole.
+11. **Pagine `_index.md` in bozza** — nessuna pagina istituzionale dovrebbe avere `draft: true` (sparirebbe dalla build).
+
+**Formato Issue:** la Issue aggregata mostra un report markdown con sezioni numerate 1-11. Gli errori sono marcati `❌` (da correggere prima del prossimo deploy), i warning `⚠️` (valutare se falso positivo o bug reale).
+
+**Quando intervenire:** ogni volta che apre una Issue. Il workflow è tarato per essere conservativo (pochi falsi positivi). Se un warning ricorrente è un falso positivo legittimo (es. una frase lunga è una citazione istituzionale), non basta chiudere la Issue: aggiungi un'eccezione mirata al workflow così la segnalazione non si ripete.
+
+**Perché esiste:** l'audit manuale di aprile 2026 ha trovato errori che convivevano da tempo nel sito senza che nessuno se ne accorgesse (COI 14° nel footer, AR4 404, `href="tel:+39 06 9362600"` con spazi che alcuni browser mobile non onoravano). Questo workflow settimanale evita che errori analoghi si sedimentino di nuovo.
+
+### 10.11 — Disabilitare temporaneamente un workflow
 
 Due modi:
 

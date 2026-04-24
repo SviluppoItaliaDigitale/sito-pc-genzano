@@ -1,0 +1,352 @@
+name: "🕵️ Audit settimanale sito"
+
+# Audit automatico dei contenuti pubblicati:
+# verifica coerenza fatti istituzionali (telefono, COI, indirizzo),
+# numeri di emergenza deprecati, placeholder, immagini/allegati rotti,
+# badge inesistenti, link tel: mal formattati, frasi AGID troppo lunghe.
+# Nasce per rilevare automaticamente il tipo di errori emersi dall'audit
+# manuale di aprile 2026 (COI 14°→15°, cartello AR4 404, 115/118 citati
+# come numero da chiamare, data widget meteo errata, placeholder residui).
+
+on:
+  schedule:
+    # Ogni lunedi alle 09:00 UTC (dopo coerenza-docs e check-normativa-links)
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🧪 Audit contenuti"
+        id: audit
+        shell: bash
+        run: |
+          set -u
+          REPORT="/tmp/audit-report.md"
+          : > "$REPORT"
+          FOUND="false"
+
+          section() { echo "" >> "$REPORT"; echo "### $1" >> "$REPORT"; echo "" >> "$REPORT"; }
+          ok()      { echo "- ✅ $1" >> "$REPORT"; }
+          warn()    { echo "- ⚠️ $1" >> "$REPORT"; FOUND="true"; }
+          err()     { echo "- ❌ $1" >> "$REPORT"; FOUND="true"; }
+
+          # Scope dell'audit: pagine pubblicate (escludendo governance e rules)
+          # Le regole di governance citano deliberatamente i numeri deprecati
+          # (per spiegare il divieto), quindi vanno escluse dalle grep di veridicità.
+          CONTENT_GLOB="content"
+          THEME_GLOB="themes/flavour-pcgenzano"
+
+          echo "# Audit settimanale sito — $(date -u +%Y-%m-%d)" >> "$REPORT"
+
+          # ----------------------------------------------------------------
+          section "1. Coerenza COI (Centro Operativo Intercomunale)"
+          # Il gruppo aderisce al 15° C.O.I. della Provincia di Roma.
+          # Qualsiasi altro grado citato nei contenuti pubblici è un errore storico.
+          BAD_COI=$(grep -rInE '\b(1[0-46-9]|20|21|22)°[[:space:]]*C\.?O\.?I\.?\b' \
+            "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" hugo.toml data/ 2>/dev/null || true)
+          if [ -n "$BAD_COI" ]; then
+            err "Riferimenti al COI con grado diverso da 15° trovati:"
+            echo '```' >> "$REPORT"
+            echo "$BAD_COI" >> "$REPORT"
+            echo '```' >> "$REPORT"
+          else
+            ok "Tutti i riferimenti al COI usano il 15°."
+          fi
+
+          # ----------------------------------------------------------------
+          section "2. Numero unico emergenza NUE 112"
+          # Nel Lazio dal 2017 il cittadino chiama solo il 112. I numeri 115,
+          # 118 e 1515 non devono più apparire come numero da chiamare nei
+          # contenuti del sito. Sono ammessi come "nome organizzazione"
+          # (es. "ARES 118", "Corpo Forestale 1515"), quindi la grep cerca
+          # pattern imperativi: "chiamare il 115", "comporre il 118", "tel: 1515" ecc.
+          DEPRECATED=$(grep -rInE \
+            '(chiama[rt]e?|componi|comporre|numero|tel\.?|contatta[rt]e?)[[:space:]]*(il[[:space:]]*)?(1515|115|118)\b' \
+            "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" data/ 2>/dev/null || true)
+          if [ -n "$DEPRECATED" ]; then
+            err "Numeri deprecati citati come numero da chiamare (usare solo 112):"
+            echo '```' >> "$REPORT"
+            echo "$DEPRECATED" >> "$REPORT"
+            echo '```' >> "$REPORT"
+          else
+            ok "Nessun riferimento imperativo a 115/118/1515: il cittadino è indirizzato al 112."
+          fi
+
+          # ----------------------------------------------------------------
+          section "3. Telefono istituzionale coerente"
+          # hugo.toml è la fonte di verità. Ogni altra occorrenza del numero
+          # di sede deve coincidere: spazi variabili ammessi ma cifre identiche.
+          TEL_DISPLAY=$(grep -oP 'telefono\s*=\s*"\K[^"]+' hugo.toml | head -1 || true)
+          TEL_E164=$(grep -oP 'telefono_tel\s*=\s*"\K[^"]+' hugo.toml | head -1 || true)
+          if [ -z "$TEL_DISPLAY" ] || [ -z "$TEL_E164" ]; then
+            err "hugo.toml: \`telefono\` o \`telefono_tel\` mancante."
+          else
+            ok "hugo.toml: telefono = \`$TEL_DISPLAY\` / telefono_tel = \`$TEL_E164\`"
+            # Cifre pure del numero istituzionale (senza +39 e senza spazi)
+            TEL_DIGITS=$(echo "$TEL_DISPLAY" | tr -d ' +' | sed 's/^39//')
+            # Cerca numeri telefonici "da sede" (06 9362...) con cifre diverse
+            OTHER_TEL=$(grep -rInE '06[[:space:]]*93[[:space:]]*6[[:space:]]*2[0-9]{3}' \
+              "$CONTENT_GLOB/" data/ 2>/dev/null \
+              | grep -vE "$(echo "$TEL_DIGITS" | sed 's/^06//' | sed 's/./&[[:space:]]*/g')" \
+              || true)
+            if [ -n "$OTHER_TEL" ]; then
+              warn "Possibili numeri 06 93 62... con cifre diverse dal numero istituzionale:"
+              echo '```' >> "$REPORT"
+              echo "$OTHER_TEL" | head -20 >> "$REPORT"
+              echo '```' >> "$REPORT"
+            else
+              ok "Nessun numero 06 93 62xxx divergente dalle cifre di hugo.toml."
+            fi
+          fi
+
+          # tel: href malformato (contiene spazi o mancanza di +39).
+          # Le righe con template Go `{{ ... }}` vengono escluse: gli spazi sono
+          # dentro l'espressione di template e vengono rimossi al render.
+          BAD_TEL_HREF=$(grep -rInE 'href="tel:[^"]*( |%20)[^"]*"' \
+            "$THEME_GLOB/" "$CONTENT_GLOB/" 2>/dev/null \
+            | grep -v '{{' || true)
+          if [ -n "$BAD_TEL_HREF" ]; then
+            err "Attributi \`href=\"tel:...\"\` con spazi (violano RFC 3966 E.164):"
+            echo '```' >> "$REPORT"
+            echo "$BAD_TEL_HREF" >> "$REPORT"
+            echo '```' >> "$REPORT"
+          else
+            ok "Tutti i \`href=\"tel:...\"\` sono in formato E.164 senza spazi."
+          fi
+
+          # ----------------------------------------------------------------
+          section "4. Indirizzo sede coerente"
+          # Via Sicilia, 13-15 — 00045 Genzano di Roma (RM). Verifica che
+          # non compaiano varianti numeriche (13, 15 da sole) o CAP diversi.
+          SEDE=$(grep -oP 'sede\s*=\s*"\K[^"]+' hugo.toml | head -1 || true)
+          if [ -z "$SEDE" ]; then
+            err "hugo.toml: \`sede\` mancante."
+          else
+            ok "Sede istituzionale: \`$SEDE\`"
+            BAD_CAP=$(grep -rInE '\b000?[0-9]{2,4}\b.*Genzano' "$CONTENT_GLOB/" 2>/dev/null \
+              | grep -vE '00045' || true)
+            if [ -n "$BAD_CAP" ]; then
+              warn "Occorrenze di CAP diversi da 00045 accanto a 'Genzano':"
+              echo '```' >> "$REPORT"
+              echo "$BAD_CAP" | head -10 >> "$REPORT"
+              echo '```' >> "$REPORT"
+            fi
+          fi
+
+          # ----------------------------------------------------------------
+          section "5. Placeholder, TODO, Lorem ipsum, testi incompleti"
+          PLACEHOLDER=$(grep -rInE '\b(TODO|TBD|FIXME|XXX|lorem ipsum|placeholder|DA COMPLETARE|DA VERIFICARE|\{\{\s*[a-z_]+\s*\}\})\b' \
+            "$CONTENT_GLOB/" 2>/dev/null \
+            | grep -vE '(_index\.md:.*description:[[:space:]]*""|#.*TODO)' \
+            || true)
+          if [ -n "$PLACEHOLDER" ]; then
+            err "Contenuti con placeholder o marker di lavoro in corso:"
+            echo '```' >> "$REPORT"
+            echo "$PLACEHOLDER" | head -30 >> "$REPORT"
+            echo '```' >> "$REPORT"
+          else
+            ok "Nessun placeholder residuo nei contenuti."
+          fi
+
+          # ----------------------------------------------------------------
+          section "6. Immagini e allegati referenziati ma inesistenti"
+          # Estrai tutti i riferimenti a file statici dai contenuti e verifica
+          # che il file corrispondente esista in static/.
+          MISSING_STATIC=""
+          # Pattern: src="/images/...", src="/cartelli/...", src="/manuali/...",
+          # href="/allegati/...", url: "/allegati/..." (frontmatter YAML),
+          # shortcode foto src="/images/..."
+          while IFS= read -r ref; do
+            [ -z "$ref" ] && continue
+            # ref è tipo "/images/foo.webp" — togli la / iniziale e prepend static/
+            path="static${ref}"
+            if [ ! -f "$path" ]; then
+              MISSING_STATIC="$MISSING_STATIC\n- \`$ref\`"
+            fi
+          done < <(grep -rhoE '(src=|href=|url:\s*)"?/(images|cartelli|manuali|allegati|comunicati|documenti)/[^"[:space:]<>)]+' \
+              "$CONTENT_GLOB/" 2>/dev/null \
+            | grep -oE '/(images|cartelli|manuali|allegati|comunicati|documenti)/[^"[:space:]<>)]+' \
+            | sort -u)
+
+          if [ -n "$MISSING_STATIC" ]; then
+            # La cartella /documenti/ è gestita manualmente sul server Aruba: i
+            # file non sono nel repo e quindi risulterebbero sempre mancanti —
+            # li filtriamo per ridurre rumore.
+            MISSING_FILTERED=$(printf "%b" "$MISSING_STATIC" | grep -v '/documenti/' || true)
+            if [ -n "$MISSING_FILTERED" ]; then
+              err "File statici referenziati ma non presenti nel repo:"
+              echo '```' >> "$REPORT"
+              printf "%b\n" "$MISSING_FILTERED" | sort -u | head -40 >> "$REPORT"
+              echo '```' >> "$REPORT"
+            else
+              ok "Nessun file statico mancante (i riferimenti a /documenti/ sono lato server Aruba)."
+            fi
+          else
+            ok "Ogni riferimento a immagine/allegato punta a un file esistente."
+          fi
+
+          # ----------------------------------------------------------------
+          section "7. Badge articoli coerenti con badge.html"
+          BADGE_FILE="$THEME_GLOB/layouts/partials/badge.html"
+          if [ -f "$BADGE_FILE" ]; then
+            # Badge noti nel template (slice $known := slice "..." "..." ...).
+            # Il template fa `$lower := $badge | lower` prima del confronto,
+            # quindi qui normalizziamo tutto in minuscolo per replicare la logica.
+            KNOWN_BADGES=$(grep -oP '\$known := slice \K[^-]+' "$BADGE_FILE" \
+              | head -1 \
+              | grep -oE '"[^"]+"' \
+              | tr -d '"' \
+              | tr '[:upper:]' '[:lower:]' \
+              | sort -u)
+            UNKNOWN_BADGES=""
+            for art in "$CONTENT_GLOB"/comunicazioni/*.md; do
+              [ -f "$art" ] || continue
+              BADGE=$(awk '/^---$/{c++; next} c==1 && /^badge:/ {sub(/^badge:[[:space:]]*"?/,""); sub(/"?[[:space:]]*$/,""); print; exit}' "$art" || true)
+              [ -z "$BADGE" ] && continue
+              BADGE_LC=$(echo "$BADGE" | tr '[:upper:]' '[:lower:]')
+              if ! echo "$KNOWN_BADGES" | grep -qx "$BADGE_LC"; then
+                UNKNOWN_BADGES="$UNKNOWN_BADGES\n- \`$art\` usa badge \`$BADGE\` (non in badge.html)"
+              fi
+            done
+            if [ -n "$UNKNOWN_BADGES" ]; then
+              warn "Articoli con badge non dichiarato in badge.html (ricevono colore automatico):"
+              printf "%b\n" "$UNKNOWN_BADGES" >> "$REPORT"
+            else
+              ok "Tutti i badge usati negli articoli sono dichiarati in badge.html."
+            fi
+          else
+            err "File \`$BADGE_FILE\` non trovato."
+          fi
+
+          # ----------------------------------------------------------------
+          section "8. Date articoli nel range plausibile"
+          # Accetta 2020..anno_corrente+1. Date oltre sono quasi sempre typo.
+          YEAR_MAX=$(( $(date -u +%Y) + 1 ))
+          BAD_YEAR=""
+          for art in "$CONTENT_GLOB"/comunicazioni/*.md; do
+            [ -f "$art" ] || continue
+            D=$(awk '/^---$/{c++; next} c==1 && /^date:/ {sub(/^date:[[:space:]]*"?/,""); sub(/"?[[:space:]]*$/,""); print; exit}' "$art" || true)
+            YEAR=$(echo "$D" | cut -c1-4)
+            case "$YEAR" in
+              ''|*[!0-9]*) continue ;;
+            esac
+            if [ "$YEAR" -lt 2020 ] || [ "$YEAR" -gt "$YEAR_MAX" ]; then
+              BAD_YEAR="$BAD_YEAR\n- \`$art\`: date \`$D\` (anno fuori range 2020..$YEAR_MAX)"
+            fi
+          done
+          if [ -n "$BAD_YEAR" ]; then
+            err "Articoli con anno sospetto nel frontmatter:"
+            printf "%b\n" "$BAD_YEAR" >> "$REPORT"
+          else
+            ok "Tutte le date articolo sono nell'intervallo 2020..$YEAR_MAX."
+          fi
+
+          # ----------------------------------------------------------------
+          section "9. Allegati PDF con dimensione dichiarata (WCAG 3.3.5)"
+          # Il manuale raccomanda di dichiarare la dimensione per ogni allegato.
+          # Qui segnaliamo (warn, non err) gli articoli con allegati senza dimensione.
+          MISSING_SIZE=""
+          for art in "$CONTENT_GLOB"/comunicazioni/*.md; do
+            [ -f "$art" ] || continue
+            fm=$(awk '/^---$/{c++; next} c==1' "$art")
+            if echo "$fm" | grep -qE '^allegati:'; then
+              # Se c'è almeno una voce allegati con "titolo:" ma senza "dimensione:"
+              TITOLI=$(echo "$fm" | grep -cE '^[[:space:]]*-[[:space:]]*titolo:' || echo 0)
+              DIM=$(echo "$fm" | grep -cE '^[[:space:]]*dimensione:' || echo 0)
+              if [ "$TITOLI" -gt 0 ] && [ "$DIM" -lt "$TITOLI" ]; then
+                MISSING_SIZE="$MISSING_SIZE\n- \`$art\`: $TITOLI allegati ma solo $DIM con \`dimensione:\`"
+              fi
+            fi
+          done
+          if [ -n "$MISSING_SIZE" ]; then
+            warn "Articoli con allegati privi di campo \`dimensione:\` (WCAG 3.3.5):"
+            printf "%b\n" "$MISSING_SIZE" | head -30 >> "$REPORT"
+          else
+            ok "Tutti gli allegati dichiarano la dimensione."
+          fi
+
+          # ----------------------------------------------------------------
+          section "10. Frasi AGID molto lunghe (>40 parole)"
+          # Euristica: per ogni articolo, contiamo frasi > 40 parole.
+          # È solo un warn: alcune frasi lunghe sono legittime (es. citazioni,
+          # elenchi narrativi), ma il linguaggio PA tende a frasi ≤ 20 parole.
+          LONG_SENT=""
+          for art in "$CONTENT_GLOB"/comunicazioni/*.md; do
+            [ -f "$art" ] || continue
+            # Rimuovi frontmatter e converti blocchi in righe "frase"
+            BODY=$(awk '/^---$/{c++; next} c>=2' "$art" \
+              | tr '\n' ' ' \
+              | sed 's/\([\.\!\?]\)/\1\n/g')
+            COUNT=$(echo "$BODY" | awk '{ if (NF > 40) c++ } END { print c+0 }')
+            if [ "$COUNT" -ge 3 ]; then
+              LONG_SENT="$LONG_SENT\n- \`$art\`: $COUNT frasi con >40 parole"
+            fi
+          done
+          if [ -n "$LONG_SENT" ]; then
+            warn "Articoli con molte frasi lunghe (linguaggio PA raccomanda ≤ 20 parole per frase):"
+            printf "%b\n" "$LONG_SENT" | head -20 >> "$REPORT"
+          else
+            ok "Nessun articolo con più di 2 frasi lunghe."
+          fi
+
+          # ----------------------------------------------------------------
+          section "11. Pagine pubbliche con campo draft ambiguo"
+          # _index.md delle sezioni statiche non dovrebbe avere draft: true.
+          DRAFT_INDEX=$(grep -rlE '^draft:[[:space:]]*true' "$CONTENT_GLOB"/*/_index.md 2>/dev/null || true)
+          if [ -n "$DRAFT_INDEX" ]; then
+            err "Pagine \`_index.md\` marcate come \`draft: true\` (sparirebbero dal sito):"
+            echo "$DRAFT_INDEX" | sed 's/^/- `/; s/$/`/' >> "$REPORT"
+          else
+            ok "Nessuna pagina istituzionale in bozza."
+          fi
+
+          # ----------------------------------------------------------------
+          # Output
+          echo "found_issues=$FOUND" >> "$GITHUB_OUTPUT"
+          {
+            echo "report<<EOF"
+            cat "$REPORT"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "=== AUDIT REPORT ==="
+          cat "$REPORT"
+
+      - name: "🚨 Apri issue se l'audit rileva problemi"
+        if: steps.audit.outputs.found_issues == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const report = `${{ steps.audit.outputs.report }}`;
+            const body = [
+              report,
+              ``,
+              `---`,
+              ``,
+              `### Come agire`,
+              ``,
+              `- ❌ = errore da correggere prima del prossimo deploy`,
+              `- ⚠️ = warning: valuta se è un falso positivo o se vale la pena sistemare`,
+              ``,
+              `Dopo aver corretto, chiudi la issue citando il commit di fix.`,
+              ``,
+              `*Issue generata automaticamente dal workflow \`audit-sito.yml\` (lun 09:00 UTC).*`
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Automatico] Audit sito — ${today}`,
+              body: body,
+              labels: ['audit', 'qualità-testi', 'manutenzione']
+            });
