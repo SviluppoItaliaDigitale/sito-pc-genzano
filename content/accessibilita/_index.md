@@ -48,7 +48,7 @@ La pagina [Strumenti in tempo reale](/strumenti/) raccoglie l'elenco completo de
 
 **Link esterni consigliati (nessun iframe):**
 
-La pagina [Strumenti](/strumenti/) rimanda inoltre ai seguenti servizi istituzionali e di pubblica utilità: ISPRA IdroGEO, EFFIS (Commissione UE), ARPA Lazio, ANAS, AEGIS Regione Lazio, Copernicus EMS, Windy Webcams. Essendo link esterni in nuova scheda, l'accessibilità dell'interfaccia è gestita direttamente dal fornitore.
+La pagina [Strumenti](/strumenti/) rimanda inoltre ai seguenti servizi istituzionali e di pubblica utilità: ISPRA IdroGEO, EFFIS (Commissione UE), ARPA Lazio, ANAS, AEGIS Regione Lazio, Copernicus EMS, Windy Webcams e meteoblue (confronto multi-modello). Essendo link esterni in nuova scheda, l'accessibilità dell'interfaccia è gestita direttamente dal fornitore.
 
 **Altri contenuti di terzi:**
 
