@@ -18,8 +18,8 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 ## Legenda
 
-- <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle"><i class="bi bi-patch-check-fill me-1" aria-hidden="true"></i>Fonte istituzionale</span> — dato fornito da enti pubblici (DPC, INGV, ISPRA, ARPA, Commissione UE, ecc.)
-- <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle"><i class="bi bi-info-circle-fill me-1" aria-hidden="true"></i>Strumento di consultazione</span> — fornitore privato o rete volontaria, scientificamente affidabile ma non istituzionale
+- <span class="badge bg-success text-white"><i class="bi bi-patch-check-fill me-1" aria-hidden="true"></i>Fonte istituzionale</span> — dato fornito da enti pubblici (DPC, INGV, ISPRA, ARPA, Commissione UE, ecc.)
+- <span class="badge bg-warning text-dark"><i class="bi bi-info-circle-fill me-1" aria-hidden="true"></i>Strumento di consultazione</span> — fornitore privato o rete volontaria, scientificamente affidabile ma non istituzionale
 - **Apri widget sul sito** — lo strumento si apre direttamente sul nostro sito
 - **Apri sito ufficiale** — lo strumento si apre sul sito del fornitore in una nuova scheda
 
