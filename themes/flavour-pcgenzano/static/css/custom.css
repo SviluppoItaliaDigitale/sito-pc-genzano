@@ -1578,6 +1578,27 @@ article .galleria img {
 }
 
 /* ================================================================
+   Badge hub strumenti — contrasto WCAG AA garantito
+   #198754 (verde Designers Italia) + bianco = contrasto 4.84:1
+   #b45309 (ambra palette PC Genzano, stesso di badge Avviso)
+   + bianco = contrasto 4.77:1
+   ================================================================ */
+.badge.badge-fonte-istituzionale {
+  background-color: #198754 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.8rem;
+}
+.badge.badge-fonte-consultazione {
+  background-color: #b45309 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+/* ================================================================
    Widget esterni click-to-load (Windy, INGV, futuri)
    v2 mobile-robust: la base visiva (blu + bianco + card + pulsante)
    usa classi Bootstrap Italia native (.card, .bg-primary, .text-white,
