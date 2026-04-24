@@ -756,6 +756,139 @@ R. Sì, è una delle collaborazioni più naturali. Il Gruppo può partecipare co
 
 ---
 
+## Esempi aggiuntivi per PCTO, Esame di Stato e compiti di realtà
+
+Materiale integrativo per docenti del secondo biennio e quinto anno. Include casi studio approfonditi, tracce per l'Esame di Stato, template per prodotti PCTO verificabili, esempi di dibattiti strutturati e progetti interdisciplinari di livello universitario.
+
+### Casi studio approfonditi con analisi sistemica
+
+Per ogni caso sono indicati: (1) fenomeno fisico, (2) fattori predisponenti, (3) risposta istituzionale, (4) criticità emerse, (5) lezione di sistema. Durata tipica: 3-4 ore di didattica + studio a casa.
+
+**Caso 1 — Sequenza sismica Centro Italia 2016-2017 (Amatrice, Visso, Norcia)**
+
+- *Fenomeno*: sequenza di oltre 70.000 scosse in 12 mesi, con 4 eventi principali M>5.5. Faglia distensiva Appenninica.
+- *Fattori predisponenti*: patrimonio edilizio pre-normativa antisismica, spopolamento rurale, abbandono del territorio.
+- *Risposta istituzionale*: attivazione DICOMAC, colonna mobile regionale, classificazione agibilità con scheda AeDES.
+- *Criticità*: lentezza ricostruzione, frammentazione decisionale tra commissari, fatica a tenere insieme ricostruzione fisica e tessuto sociale.
+- *Lezione*: la resilienza territoriale non si improvvisa al momento dell'evento, si costruisce nei decenni con manutenzione, pianificazione, cultura del rischio.
+
+**Caso 2 — Frana di Ischia 26 novembre 2022**
+- *Fenomeno*: colata rapida di fango e detriti innescata da 126 mm di pioggia in 6 ore. 12 vittime a Casamicciola Terme.
+- *Fattori predisponenti*: abusivismo edilizio diffuso in aree classificate PAI (Piano Assetto Idrogeologico) come pericolosità elevata; 27.000 richieste di condono solo a Ischia; cambiamento climatico con precipitazioni sempre più estreme.
+- *Risposta*: stato di mobilitazione nazionale, commissario straordinario, ricollocazione famiglie.
+- *Criticità*: un condono sanato nel 2017 riguardava proprio un edificio in area a rischio.
+- *Lezione*: rischio idrogeologico + abusivismo + clima = tragedia annunciata. Il cittadino ha il diritto ma anche la **responsabilità** di conoscere la classificazione di rischio della propria area.
+
+**Caso 3 — Vaia ottobre-novembre 2018**
+- *Fenomeno*: tempesta "Vaia" (medicane) con raffiche fino a 200 km/h che ha abbattuto 41.000 ettari di foreste tra Trentino, Veneto e Friuli.
+- *Fattori predisponenti*: monoculture di abete rosso vulnerabili, cambiamento climatico, infrastruttura elettrica aerea.
+- *Risposta*: rimozione 8 milioni di metri cubi di legname, prevenzione bostrico tipografo.
+- *Criticità*: sottovalutata la portata dell'evento nei primi giorni; comunicazione locale carente.
+- *Lezione*: in Italia si vive anche un **rischio forestale** e un **rischio da vento** che stanno crescendo col clima.
+
+**Caso 4 — Terremoto L'Aquila 6 aprile 2009 e processo Grandi Rischi**
+- *Fenomeno*: terremoto M 6.3, 309 vittime.
+- *Caso giudiziario*: condanna in primo grado (poi assolti in appello) di 7 membri della Commissione Grandi Rischi per comunicazione del rischio inadeguata.
+- *Lezione*: il ruolo della scienza nella comunicazione pubblica, limiti della previsione, responsabilità del decisore politico. Caso studio obbligatorio per ogni corso di risk communication.
+
+### Tracce per l'Esame di Stato — 5 esempi per la prima prova
+
+Tracce pronte nello stile della prima prova scritta dell'Esame di Stato (tipologia B — analisi di un testo argomentativo — e tipologia C — tema di attualità).
+
+**Traccia 1 (Tipologia C — attualità)**: «Il 26 novembre 2022 una frana ha colpito Casamicciola Terme provocando 12 vittime. Nei mesi seguenti il dibattito pubblico si è concentrato sul rapporto tra pianificazione urbanistica, abusivismo edilizio e cambiamento climatico. Dopo aver analizzato le principali cause che concorrono al rischio idrogeologico in Italia, esprimi le tue considerazioni sul concetto di *responsabilità condivisa* tra Stato, enti locali e cittadini, anche alla luce dell'art. 18 del D.Lgs. 1/2018 ("doveri del cittadino").»
+
+**Traccia 2 (Tipologia B — argomentativo)**: Testo di partenza: estratto da *La società del rischio* di Ulrich Beck (cap. 1). «Analizza il concetto di *rischio sistemico* proposto da Beck e confrontalo con quanto emerso durante la pandemia COVID-19 e con le recenti crisi climatiche. Il rischio, oggi, è globale, democratico (colpisce anche chi lo produce) o ancora distribuito in modo diseguale?»
+
+**Traccia 3 (Tipologia C)**: «Il sistema IT-alert, sperimentato in Italia nel 2023, è stato il primo caso di allerta diretta ai cellulari della popolazione. Dopo aver descritto funzionamento e base giuridica del sistema, rifletti sul rapporto tra tecnologia e cultura della sicurezza: gli strumenti tecnologici possono sostituire la preparazione individuale, o la presuppongono?»
+
+**Traccia 4 (Tipologia B)**: Testo di partenza: art. 2 del D.Lgs. 1/2018 (attività della protezione civile). «Il sistema italiano distingue quattro attività: **previsione, prevenzione, soccorso, superamento dell'emergenza**. Analizza come questi quattro momenti si integrano in un caso a tua scelta (Amatrice 2016, Ischia 2022, Vaia 2018, alluvione Emilia-Romagna 2023). Quali sono le criticità strutturali emerse?»
+
+**Traccia 5 (Tipologia C)**: «Il volontariato di protezione civile in Italia coinvolge oltre 700.000 persone. È un fenomeno peculiare italiano, radicato nell'art. 118 ultimo comma della Costituzione (principio di sussidiarietà orizzontale). Analizza il ruolo del volontariato nella tua comunità e discuti se oggi possa essere considerato una "forma evoluta di cittadinanza".»
+
+### Template per prodotti PCTO — 5 formati concreti
+
+Ogni template include: obiettivi, competenze attese, durata, struttura del prodotto, criteri di valutazione.
+
+**Template A — Podcast istituzionale "Sicuri Insieme"**
+- *Prodotto*: serie di 6 episodi di 12-15 minuti ciascuno.
+- *Ruoli*: regia, conduzione, ricerca, editing audio, cura del sito di pubblicazione.
+- *Competenze*: comunicazione digitale, public speaking, fact-checking, gestione del tempo.
+- *Durata*: 40-50 ore PCTO.
+- *Valutazione*: correttezza scientifica (pesi 40%), qualità comunicativa (30%), rispetto scadenze (15%), lavoro di squadra (15%).
+- *Output pubblicabile*: Spreaker free, canale YouTube con link sul sito del Gruppo.
+
+**Template B — Campagna social "Io sono pronto"**
+- *Prodotto*: 15 post Instagram + 5 reel di 60 secondi + 1 evento di lancio.
+- *Temi*: zaino d'emergenza, piano familiare, 112, IT-alert, aree di attesa.
+- *Durata*: 30 ore PCTO.
+- *Valutazione*: reach e engagement reali, correttezza informativa, estetica coerente con il design institutionale PA.
+- *Output*: profili social della scuola e del Gruppo.
+
+**Template C — Ricerca "Il rischio nel mio quartiere"**
+- *Prodotto*: dossier di 40-60 pagine con cartografia.
+- *Metodo*: analisi mappe PAI, intervista a volontari e tecnici comunali, sopralluoghi fotografici, confronto con dati storici.
+- *Durata*: 60 ore PCTO distribuite su 3 mesi.
+- *Output*: pubblicazione sul sito del Gruppo, consegna copia al Comune.
+
+**Template D — Evento "Giornata della Prevenzione"**
+- *Prodotto*: organizzazione completa di una giornata aperta alla cittadinanza.
+- *Ruoli*: coordinamento, logistica, comunicazione, accoglienza, documentazione.
+- *Durata*: 30 ore di preparazione + 8 ore l'evento.
+- *Valutazione*: partecipazione effettiva, feedback visitatori (questionario), rendicontazione finale.
+
+**Template E — Documentario video "Volti della protezione"**
+- *Prodotto*: documentario di 20-25 minuti con 6-8 interviste a figure della comunità (volontario anziano, volontario giovane, sindaco, insegnante che ha vissuto un'emergenza, geologo, comandante VVF locale).
+- *Competenze*: regia, intervista, montaggio, narrazione.
+- *Durata*: 50 ore PCTO.
+- *Output*: proiezione pubblica + pubblicazione online.
+
+### Dibattito strutturato — 6 argomenti pronti
+
+Formato debate (regole parlamentari, squadra pro e contro, tempi rigorosi). Durata tipica: 90 minuti con preparazione di 2-3 ore.
+
+1. **"L'autoprotezione dovrebbe essere una materia obbligatoria già dalla scuola primaria"** — pro: cittadinanza responsabile; contro: rischio di ansia in bambini piccoli.
+2. **"Le zone classificate a rischio PAI elevato dovrebbero essere evacuate permanentemente"** — pro: tutela vite umane; contro: diritto alla casa, costi sociali.
+3. **"Il social media è un utile alleato della protezione civile o un moltiplicatore di disinformazione?"** — bilanciamento evidenze.
+4. **"Il volontariato dovrebbe ricevere compensi economici per i servizi prestati?"** — impatto sulla natura sussidiaria dell'istituto.
+5. **"L'IT-alert crea un falso senso di sicurezza tecnologica?"** — tecno-ottimismo vs tecno-scetticismo.
+6. **"Le compagnie di assicurazione sulle case dovrebbero essere obbligatorie in aree a rischio?"** — art. 42 Cost. e interesse pubblico.
+
+### Compiti di realtà — 4 progetti classe
+
+**Progetto Alpha — Audit del Piano di Evacuazione della scuola**
+La classe, formata da un tecnico esterno (RSPP o volontario esperto), realizza un audit del Piano di Evacuazione della propria scuola. Output: report tecnico di 20-30 pagine con analisi criticità e 10 raccomandazioni operative, presentato al Dirigente Scolastico in una seduta formale. Valutazione: documentabilità delle osservazioni, fattibilità delle raccomandazioni, qualità della presentazione.
+
+**Progetto Beta — Dashboard dei rischi territoriali**
+Realizzazione di una dashboard web interattiva (HTML/JS/Leaflet) che aggrega i dati pubblici su Genzano: zone sismiche, PAI, incendi storici, aree di attesa. Deve essere pubblicata con licenza aperta. Richiede competenze informatiche avanzate (adatto a istituti tecnici). Valutazione: qualità del codice, accessibilità WCAG, accuratezza dati, usabilità.
+
+**Progetto Gamma — Indagine sulla percezione del rischio**
+Progettazione e conduzione di un'indagine sociologica sulla percezione del rischio tra i cittadini di Genzano (campione di almeno 200 persone). Include costruzione del questionario, somministrazione sul campo, analisi statistica con strumenti open source (R, Python), restituzione pubblica dei risultati. Collaborazione con università. Valutazione: rigore metodologico, qualità dell'analisi.
+
+**Progetto Delta — Manuale operativo della classe per emergenze sismiche**
+Redazione di un manuale di 15-20 pagine specifico per la propria classe: chi fa cosa in caso di terremoto, come si gestiscono alunni con BES/DSA/disabilità durante evacuazione, chi tiene il registro, chi comunica con le famiglie. Approvato da Dirigente + RSPP + docenti della classe. Diventa allegato al Piano di Emergenza d'istituto.
+
+### Esempi di interviste per PCTO — 3 profili da intervistare
+
+**Profilo 1 — Volontario storico del Gruppo (40+ anni di attività)**
+Domande-chiave:
+- Come è cambiato il volontariato dagli anni '80 ad oggi?
+- Quali sono i 3 eventi che ti hanno segnato di più?
+- Cosa diresti a un sedicenne che oggi si chiede se impegnarsi per la comunità?
+
+**Profilo 2 — Sindaco o Assessore con delega alla PC**
+Domande-chiave:
+- Come si finanzia il sistema comunale di protezione civile?
+- Cosa è il COC e quando si attiva?
+- Quale è la pianificazione in caso di scenario di riferimento (es. terremoto M 6.0 ai Castelli)?
+
+**Profilo 3 — Ricercatore scientifico (geologo / sismologo / meteorologo)**
+Domande-chiave:
+- Come funziona la previsione probabilistica dei terremoti? Perché non si può fare quella deterministica?
+- Quanto è affidabile un bollettino di allerta meteo?
+- Cosa ci dicono i modelli climatici per i Castelli nei prossimi 20 anni?
+
+---
+
 ## Materiale di approfondimento
 
 - [D.Lgs. 1/2018 — Codice della Protezione Civile](https://www.normattiva.it/) — Testo integrale su Normattiva
