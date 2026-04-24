@@ -145,7 +145,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     tipoFonte="istituzionale"
     descrizione="Stato della rete stradale nazionale: chiusure, incidenti, lavori in corso, traffico intenso. Utile per pianificare spostamenti durante eventi meteo avversi o emergenze."
     tipoAccesso="sito"
-    url="https://www.stradeanas.it/it/le-strade/viabilita-italia" >}}
+    url="https://www.stradeanas.it/it/vai-traffico-in-tempo-reale" >}}
 
 </div>
 
