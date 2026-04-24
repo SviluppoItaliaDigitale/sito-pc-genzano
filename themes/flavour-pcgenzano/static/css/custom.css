@@ -1598,7 +1598,7 @@ article .galleria img {
   background-image: linear-gradient(135deg, #003366 0%, #0055a4 60%, #0066cc 100%);
   border-radius: 8px;
   overflow: hidden;
-  min-height: 320px;
+  min-height: 400px;
   box-shadow: 0 4px 12px rgba(0, 51, 102, 0.15);
 }
 
@@ -1666,8 +1666,8 @@ article .galleria img {
 .ext-widget-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .ext-widget-grid .ext-widget-section {
@@ -1677,32 +1677,38 @@ article .galleria img {
 @media (max-width: 991px) {
   .ext-widget-grid {
     grid-template-columns: 1fr;
-    gap: 2rem; /* più respiro tra widget impilati su mobile */
+    gap: 2.5rem; /* respiro generoso tra widget impilati */
   }
   .ext-widget-grid .ext-widget-placeholder {
-    min-height: 380px; /* widget più grandi quando hanno tutta la larghezza */
+    min-height: 460px; /* widget molto visibili quando hanno tutta la larghezza */
   }
   .ext-widget-grid .ext-widget-icon {
-    font-size: 3.25rem;
+    font-size: 3.5rem;
   }
   .ext-widget-grid .ext-widget-placeholder-title {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
   }
   .ext-widget-grid .ext-widget-placeholder-desc {
-    font-size: 1rem;
+    font-size: 1.05rem;
+  }
+  .ext-widget-grid .ext-widget-placeholder-content .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.05rem;
   }
 }
 
 @media (max-width: 576px) {
   .ext-widget-placeholder .card-body {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
   }
   .ext-widget-placeholder {
-    min-height: 360px;
+    min-height: 440px;
   }
   .ext-widget-iframe {
-    min-height: 520px;
+    min-height: 600px;
   }
 }
 

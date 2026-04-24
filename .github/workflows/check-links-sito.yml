@@ -1,0 +1,87 @@
+name: "🔗 Verifica link sito completo"
+
+# Esegue un crawl completo del sito costruito e verifica TUTTI i link
+# (interni ed esterni) per catturare drift, 404, redirect rotti.
+# Complementa check-normativa-links.yml che verifica link normativi
+# specifici con pre-pattern e messaggi dedicati. Qui invece usiamo
+# lychee come catch-all completo.
+#
+# Gira ogni lunedì alle 10:00 UTC (dopo audit-sito delle 09:00).
+# Puo essere avviato manualmente via workflow_dispatch.
+
+on:
+  schedule:
+    - cron: "0 10 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🔧 Setup Hugo"
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.143.1'
+          extended: true
+
+      - name: "🏗️ Build sito produzione"
+        run: hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
+
+      - name: "💾 Restore cache lychee"
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
+
+      - name: "🔍 Lychee link checker"
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # --cache           riutilizza risultati recenti (risparmia richieste a fornitori esterni)
+          # --max-cache-age   risultati validi 1 giorno
+          # --accept          403 incluso (alcuni PA bloccano bot ma link funziona umani)
+          # --timeout         20s per URL (PA sites sono lenti)
+          # --max-retries     3 tentativi prima di dichiarare morto
+          # --retry-wait-time attesa tra retry (gestisce rate-limiting)
+          # --user-agent      identifichiamo chiaramente il nostro checker
+          # --exclude         tel:/mailto:, anchor interni, GitHub Pages (evita self-loop)
+          # --require-https   segnala link http:// (sicurezza)
+          args: >-
+            --cache
+            --max-cache-age 1d
+            --verbose
+            --no-progress
+            --accept 200,201,204,206,301,302,307,308,403,429
+            --timeout 20
+            --max-retries 3
+            --retry-wait-time 5
+            --user-agent "Mozilla/5.0 (compatible; PCGenzanoLinkChecker/1.0; +https://www.protezionecivilegenzano.it/)"
+            --exclude "^tel:"
+            --exclude "^mailto:"
+            --exclude "^#"
+            --exclude "github\.io/sito-pc-genzano"
+            --exclude "localhost"
+            --exclude "127\.0\.0\.1"
+            public/**/*.html
+          output: ./lychee-report.md
+          fail: false
+          format: markdown
+
+      - name: "🚨 Apri issue se link rotti"
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "[Automatico] Link rotti sul sito"
+          content-filepath: ./lychee-report.md
+          labels: |
+            manutenzione
+            link-rotti
+            automatico
