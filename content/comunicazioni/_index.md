@@ -1,6 +1,6 @@
 ---
-title: "Comunicazioni Ufficiali dai Canali Social"
-description: "Segui le comunicazioni ufficiali del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma sui canali social."
+title: "Comunicazioni e Notizie"
+description: "Comunicati, avvisi, aggiornamenti e notizie del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Dall'archivio al web del Gruppo e dai canali social ufficiali."
 aliases:
   - /comunicazioni.html
 sitemap:
@@ -8,7 +8,11 @@ sitemap:
   changefreq: daily
 ---
 
-Rimani aggiornato in tempo reale seguendo le nostre comunicazioni sui canali ufficiali del Gruppo. Se un riquadro non dovesse caricarsi, è probabile che le impostazioni di privacy del tuo browser stiano bloccando i contenuti esterni.
+In questa pagina trovi l'**archivio completo degli articoli** pubblicati dal Gruppo: avvisi, comunicati, resoconti delle attività, materiali di prevenzione e aggiornamenti operativi. L'archivio è filtrabile per categoria e ordinato dal più recente al più datato.
+
+In fondo alla pagina trovi anche i collegamenti ai **canali social ufficiali** del Gruppo, per seguirci anche su Facebook, Instagram, X e Telegram.
+
+## Seguici anche sui canali social
 
 <div class="row mt-4">
 <div class="col-md-6 mb-4">

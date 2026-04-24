@@ -8,23 +8,15 @@ aliases:
 
 <div class="card border-danger mb-4">
 <div class="card-body bg-danger bg-opacity-10 p-4">
-<h2 class="h4 text-danger fw-bold"><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>Numeri di Emergenza</h2>
-<div class="row mt-3">
-<div class="col-md-6 mb-3">
-<p class="mb-0"><span class="fs-2 fw-bold text-danger">112</span></p>
-<p><strong>Numero Unico Emergenze (NUE)</strong><br>Per qualsiasi emergenza: sanitaria, ordine pubblico, incendi.</p>
-</div>
-<div class="col-md-6 mb-3">
-<p class="mb-0"><span class="fs-2 fw-bold text-danger">803 555</span></p>
-<p><strong>Sala Operativa Protezione Civile Lazio</strong><br>Per segnalazioni e informazioni su emergenze regionali.</p>
-</div>
-</div>
+<h2 class="h4 text-danger fw-bold"><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>In emergenza chiama il 112</h2>
+<p class="mb-0 mt-2"><span class="fs-1 fw-bold text-danger">112</span></p>
+<p class="mb-0"><strong>Numero Unico Emergenze (NUE)</strong> — per qualsiasi emergenza: sanitaria, ordine pubblico, incendi, soccorso tecnico.</p>
 </div>
 </div>
 
-## Numeri di Soccorso
+## Numeri di emergenza e soccorso
 
-Nel Lazio, dal 2017, **l'unico numero di emergenza per il cittadino è il 112**. Tutte le chiamate arrivano alla Centrale Unica del NUE, che smista l'intervento all'ente competente (Vigili del Fuoco, emergenza sanitaria, Carabinieri, Polizia, incendi boschivi).
+Nel Lazio, dal 2017, **l'unico numero da chiamare in emergenza è il 112**. Tutte le chiamate arrivano alla Centrale Unica del NUE, che smista l'intervento all'ente competente (Vigili del Fuoco, emergenza sanitaria, Carabinieri, Polizia, incendi boschivi).
 
 | Numero | Servizio | Quando chiamare |
 |---|---|---|
