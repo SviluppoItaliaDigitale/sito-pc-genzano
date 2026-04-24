@@ -223,6 +223,12 @@ Insegnate ai bambini a memorizzare il numero **112**.
 
 ## Schede fotocopiabili per la classe
 
+<div class="alert alert-info" role="note">
+<p class="mb-1"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Come leggere questa sezione:</strong></p>
+<p class="mb-0">Le schede qui descritte sono <strong>spunti operativi</strong> pensati per il docente che vuole realizzarle e fotocopiarle per la classe. <strong>Non</strong> sono file già pronti da scaricare: sono traccia e contenuti con cui costruire la scheda con carta e matite, Word, PowerPoint, Canva o qualsiasi strumento familiare. Per alcune schede potresti voler chiedere aiuto ai colleghi di arte o sostegno. Se hai bisogno di supporto per la realizzazione grafica, scrivici: possiamo valutare insieme produzioni future in versione stampabile.</p>
+</div>
+
+
 Queste schede sono pensate per essere **fotocopiate in bianco e nero** e consegnate ai bambini come attività di rinforzo individuale o di piccolo gruppo. Il disegno è sempre accompagnato da una breve consegna che la maestra legge ad alta voce.
 
 ### Scheda 1 — Colora gli aiutanti

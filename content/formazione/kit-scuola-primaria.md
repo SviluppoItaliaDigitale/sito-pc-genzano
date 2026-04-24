@@ -453,6 +453,12 @@ L'uscita va preventivamente **autorizzata** dal Dirigente Scolastico e comunicat
 
 ## Schede fotocopiabili
 
+<div class="alert alert-info" role="note">
+<p class="mb-1"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Come leggere questa sezione:</strong></p>
+<p class="mb-0">Le schede qui descritte sono <strong>spunti operativi</strong> pensati per il docente che vuole realizzarle e fotocopiarle per la classe. <strong>Non</strong> sono file PDF già pronti da scaricare: sono traccia, domande e attività con cui costruire la scheda in Word, Google Docs, Canva o a mano. Per le schede più grafiche (cruciverba, mappa del rischio) conviene il supporto del docente di arte o informatica. Se il Gruppo riceve richieste frequenti di una scheda specifica, valutiamo la produzione di una versione stampabile ufficiale.</p>
+</div>
+
+
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 
 ### Scheda 1 — La chiamata al 112 (role-play scritto)
