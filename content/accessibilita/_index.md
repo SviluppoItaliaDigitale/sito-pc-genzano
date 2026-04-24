@@ -36,10 +36,22 @@ In caso di risposta insoddisfacente o assente entro 30 giorni, l'utente può ric
 
 Alcune sezioni del sito incorporano contenuti forniti da servizi esterni, sui quali il Titolare **non esercita controllo diretto** per la conformità WCAG. Tutti questi widget adottano il pattern **"click-to-load"**: si attivano solo dopo esplicita azione dell'utente e offrono sempre un'alternativa testuale (link diretto al sito del fornitore e fallback `<noscript>`).
 
-In particolare:
+La pagina [Strumenti in tempo reale](/strumenti/) raccoglie l'elenco completo degli strumenti esterni utilizzati, organizzati per categoria e con distinzione chiara tra widget incorporati sul sito (iframe click-to-load) e link esterni che aprono il sito del fornitore in una nuova scheda.
 
-- **Widget meteo Windy.com** — mappa meteo interattiva fornita da Windyty, SE. Presente nella [Home](/) e in [Allerte Meteo](/allerte-meteo/). Alternativa: [windy.com](https://www.windy.com/?41.691,12.692,12).
-- **Widget terremoti INGV** — mappa e lista terremoti recenti fornita dall'Istituto Nazionale di Geofisica e Vulcanologia (ente pubblico di ricerca italiano). Presente nella [Home](/) e in [Rischio Sismico](/rischi-prevenzione/rischio-sismico/). Alternativa: [terremoti.ingv.it](https://terremoti.ingv.it/).
+**Widget incorporati (iframe):**
+
+- **Windy.com** — mappa meteo. Presente in [Home](/), [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/). Alternativa: [windy.com](https://www.windy.com/?41.691,12.692,12).
+- **INGV Terremoti** — mappa e lista sismica Italia (ente pubblico di ricerca). Presente in [Home](/), [Rischio Sismico](/rischi-prevenzione/rischio-sismico/), [Strumenti](/strumenti/). Alternativa: [terremoti.ingv.it](https://terremoti.ingv.it/).
+- **Radar DPC** — radar nazionale precipitazioni (Dipartimento Protezione Civile, ente pubblico). Presente in [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/). Alternativa: [mappe.protezionecivile.it](https://mappe.protezionecivile.it/).
+- **Blitzortung / Lightning Maps** — fulmini in tempo reale (rete volontaria internazionale). Presente in [Temporali Intensi](/rischi-prevenzione/temporali-intensi/), [Strumenti](/strumenti/). Alternativa: [map.blitzortung.org](https://map.blitzortung.org/).
+- **MeteoAM — Aeronautica Militare** — previsione meteo ufficiale italiana (ente pubblico, Ministero Difesa). Presente in [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/). Alternativa: [meteoam.it](https://www.meteoam.it/it/meteo-citta/genzano-di-roma).
+
+**Link esterni consigliati (nessun iframe):**
+
+La pagina [Strumenti](/strumenti/) rimanda inoltre ai seguenti servizi istituzionali e di pubblica utilità: ISPRA IdroGEO, EFFIS (Commissione UE), ARPA Lazio, ANAS, AEGIS Regione Lazio, Copernicus EMS, Windy Webcams. Essendo link esterni in nuova scheda, l'accessibilità dell'interfaccia è gestita direttamente dal fornitore.
+
+**Altri contenuti di terzi:**
+
 - **Mappe e documenti PDF** delle pagine istituzionali (Regione Lazio, Dipartimento di Protezione Civile, Normattiva) aperte in nuova scheda.
 
 L'accessibilità dei controlli interni dei widget (zoom, layer switcher, slider temporale, filtri) è responsabilità dei fornitori. Per le parti di sito sotto il controllo diretto del Titolare è garantita la conformità WCAG 2.2 livello AA. Le segnalazioni relative a problemi di accessibilità dei contenuti di terzi vengono inoltrate al fornitore e, ove possibile, viene fornita un'alternativa accessibile.

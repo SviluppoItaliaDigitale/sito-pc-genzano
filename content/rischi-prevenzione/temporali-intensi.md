@@ -6,6 +6,26 @@ weight: 5
 
 I temporali intensi sono fenomeni meteorologici caratterizzati da forti piogge, fulmini, grandine e raffiche di vento improvvise. Possono verificarsi rapidamente e con grande violenza, soprattutto nei mesi estivi e durante i cambi di stagione.
 
+## Fulmini in tempo reale
+
+Mappa dei fulmini rilevati in Europa, aggiornata in tempo reale dalla rete volontaria **Blitzortung / Lightning Maps**. Utile quando è in corso un temporale per capire dove si sta muovendo la cella e quanto è distante.
+
+<div class="alert alert-warning" role="note">
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Strumento di consultazione:</strong> Blitzortung è una rete volontaria di rilevatori, scientificamente affidabile ma <strong>non istituzionale</strong>. Per le allerte temporali ufficiali consulta sempre il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio</a>.</p>
+</div>
+
+{{< external-widget
+    src="https://map.blitzortung.org/#8/41.6919/12.6928"
+    title="Mappa dei fulmini in tempo reale — Blitzortung / Lightning Maps"
+    placeholderTitle="Fulmini in tempo reale"
+    placeholderDesc="Mappa dei fulmini rilevati in Europa dalla rete volontaria <strong>Blitzortung</strong>. Utile durante un temporale per capire dove si muove la cella."
+    icon="bi-lightning-charge-fill"
+    btnLabel="Carica la mappa fulmini"
+    altUrl="https://map.blitzortung.org/#8/41.6919/12.6928"
+    altLabel="map.blitzortung.org"
+    fallbackText="Mappa fulmini in tempo reale consultabile su map.blitzortung.org (rete volontaria Blitzortung)"
+    widgetId="fulmini-blitzortung" >}}
+
 ## Perché è rilevante sul nostro territorio
 
 L'area dei Castelli Romani è particolarmente soggetta a temporali convettivi, specialmente nel periodo maggio-ottobre. La conformazione collinare e la vicinanza ai laghi vulcanici favoriscono lo sviluppo di celle temporalesche molto localizzate ma intense, con il rischio di allagamenti lampo nelle zone più basse del territorio.

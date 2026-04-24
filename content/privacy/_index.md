@@ -69,10 +69,19 @@ Il presente sito non incorpora widget, player o strumenti di terze parti che ins
 
 Il sito incorpora, **solo su esplicita richiesta dell'utente**, alcuni widget di consultazione forniti da servizi esterni. Nessuno di questi widget viene caricato automaticamente: l'utente vede un'anteprima ("placeholder") e deve cliccare un pulsante di attivazione. Solo in quel momento il browser riceve risorse dal server esterno e possono essere impostati cookie tecnici o di preferenza dal fornitore, sui quali il Titolare non ha controllo diretto.
 
+**Widget incorporati (iframe click-to-load):**
+
 | Servizio | Fornitore | Finalità | Pagine in cui compare | Informativa |
 |------|------|------|------|------|
-| Windy.com | Windyty, SE (Rep. Ceca) | Mappa meteo interattiva (radar, precipitazioni, vento, temperatura) | [Home](/), [Allerte Meteo](/allerte-meteo/) | [Privacy Windy](https://account.windy.com/privacy-policy) |
-| INGV — Terremoti | Istituto Nazionale di Geofisica e Vulcanologia (Italia, ente pubblico di ricerca) | Mappa e lista dei terremoti recenti in Italia | [Home](/), [Rischio Sismico](/rischi-prevenzione/rischio-sismico/) | [Privacy INGV](https://www.ingv.it/privacy-policy) |
+| Windy.com | Windyty, SE (Rep. Ceca) | Mappa meteo interattiva (radar, precipitazioni, vento, temperatura) | [Home](/), [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | [Privacy Windy](https://account.windy.com/privacy-policy) |
+| INGV — Terremoti | Istituto Nazionale di Geofisica e Vulcanologia (Italia, ente pubblico di ricerca) | Mappa e lista dei terremoti recenti in Italia | [Home](/), [Rischio Sismico](/rischi-prevenzione/rischio-sismico/), [Strumenti](/strumenti/) | [Privacy INGV](https://www.ingv.it/privacy-policy) |
+| Radar DPC | Dipartimento della Protezione Civile (Italia, ente pubblico) | Mosaico radar nazionale precipitazioni | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | [Privacy DPC](https://www.protezionecivile.gov.it/it/privacy-policy) |
+| Blitzortung / Lightning Maps | Rete volontaria internazionale | Mappa dei fulmini in tempo reale | [Temporali Intensi](/rischi-prevenzione/temporali-intensi/), [Strumenti](/strumenti/) | [Informazioni Blitzortung](https://www.blitzortung.org/en/cover_your_area.php) |
+| MeteoAM — Aeronautica Militare | Ministero della Difesa (ente pubblico italiano) | Previsione meteo ufficiale per Genzano di Roma | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | [Privacy Aeronautica Militare](https://www.meteoam.it/it/privacy-policy) |
+
+**Link esterni consigliati nella pagina [Strumenti](/strumenti/):**
+
+La pagina Strumenti rimanda inoltre, come link esterni in nuova scheda (nessun iframe, nessun cookie sul nostro sito), ai seguenti servizi istituzionali e di pubblica utilità: **ISPRA IdroGEO** (rischio frane/alluvioni), **EFFIS** (incendi UE — Commissione Europea), **ARPA Lazio** (qualità dell'aria regionale), **ANAS** (viabilità nazionale), **AEGIS Regione Lazio** (tempo reale Lazio), **Copernicus EMS** (emergenze UE) e **Windy Webcams** (raccolta webcam pubbliche). Cliccando su questi link, la navigazione esce dal nostro dominio e si applicano le rispettive informative privacy dei fornitori, consultabili sui loro siti.
 
 Per non caricare un widget è sufficiente **non cliccare il pulsante** di attivazione. In alternativa è possibile consultare le stesse informazioni direttamente sui siti dei fornitori senza interazione col nostro sito.
 

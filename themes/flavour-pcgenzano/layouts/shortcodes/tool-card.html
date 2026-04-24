@@ -1,0 +1,52 @@
+{{/* Shortcode tool-card: card singola per hub /strumenti/
+     Parametri:
+       nome        (string, obbl.) - nome dello strumento
+       fonte       (string, obbl.) - ente/organizzazione fornitrice
+       icona       (string, obbl.) - classe Bootstrap Icon (es. bi-cloud-rain-heavy)
+       descrizione (string, obbl.) - descrizione breve (1-2 frasi)
+       tipoFonte   (string, obbl.) - "istituzionale" | "consultazione"
+       tipoAccesso (string, obbl.) - "widget" (interno) | "sito" (esterno)
+       url         (string, obbl.) - URL destinazione
+*/}}
+{{ $nome := .Get "nome" }}
+{{ $fonte := .Get "fonte" }}
+{{ $icona := .Get "icona" }}
+{{ $descrizione := .Get "descrizione" }}
+{{ $tipoFonte := .Get "tipoFonte" }}
+{{ $tipoAccesso := .Get "tipoAccesso" }}
+{{ $url := .Get "url" }}
+
+<div class="col-md-6 col-lg-4">
+  <div class="card h-100 shadow-sm tool-card">
+    <div class="card-body d-flex flex-column p-4">
+      <div class="text-center mb-3">
+        <i class="bi {{ $icona }} tool-card-icon text-primary" aria-hidden="true" style="font-size: 2.75rem;"></i>
+      </div>
+      <h3 class="h5 card-title text-center mb-1">{{ $nome }}</h3>
+      <p class="small text-muted text-center mb-2"><i class="bi bi-building me-1" aria-hidden="true"></i>{{ $fonte }}</p>
+      <div class="text-center mb-3">
+        {{ if eq $tipoFonte "istituzionale" }}
+        <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle">
+          <i class="bi bi-patch-check-fill me-1" aria-hidden="true"></i>Fonte istituzionale
+        </span>
+        {{ else }}
+        <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle">
+          <i class="bi bi-info-circle-fill me-1" aria-hidden="true"></i>Strumento di consultazione
+        </span>
+        {{ end }}
+      </div>
+      <p class="card-text small flex-grow-1">{{ $descrizione | safeHTML }}</p>
+      <div class="mt-auto pt-3">
+        {{ if eq $tipoAccesso "widget" }}
+        <a href="{{ $url | relURL }}" class="btn btn-primary w-100">
+          <i class="bi bi-play-circle me-1" aria-hidden="true"></i> Apri widget sul sito
+        </a>
+        {{ else }}
+        <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary w-100">
+          <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Apri sito ufficiale
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
