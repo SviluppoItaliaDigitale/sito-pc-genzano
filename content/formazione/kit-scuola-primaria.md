@@ -12,18 +12,71 @@ I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Ci
 
 ## Guida per il docente
 
-### Obiettivi
+### Riferimenti normativi e curricolari
 
-- Conoscere i principali rischi del territorio (terremoto, alluvione, incendio, eventi meteorologici estremi)
-- Apprendere i comportamenti corretti prima, durante e dopo un'emergenza
-- Imparare il numero unico di emergenza 112 e quando usarlo
-- Comprendere cos'è la Protezione Civile e chi ne fa parte
-- Realizzare un piano di emergenza familiare semplificato
-- Sviluppare consapevolezza e responsabilità, non paura
+Il percorso si inserisce nel quadro dell'**educazione civica** (Legge 20 agosto 2019 n. 92, art. 1 e 3), delle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 35/2020 e aggiornamento 2024) e delle **Indicazioni Nazionali per il Curricolo della Scuola Primaria** (2012) con integrazione dei **Nuovi Scenari per il curricolo** (2018).
 
-### Durata consigliata
+Il riferimento normativo specifico è l'**articolo 18 del D.Lgs. 1/2018** (Codice della Protezione Civile), che prevede la formazione sui rischi come componente strutturale dell'offerta formativa scolastica.
 
-Il percorso completo si articola in **5 o 6 incontri da 45-60 minuti**. Ogni modulo è autonomo e può essere svolto anche singolarmente.
+### Obiettivi di apprendimento formalizzati
+
+**Conoscenze**
+- Conosce la definizione e le quattro attività della Protezione Civile (previsione, prevenzione, gestione, superamento)
+- Sa cos'è il Numero Unico di Emergenza 112 e sa quando usarlo
+- Conosce i principali rischi del territorio (sismico, idrogeologico, incendio, meteorologico)
+- Conosce la scala dei codici colore di allerta meteo (verde, giallo, arancione, rosso)
+- Conosce i comportamenti corretti per terremoto, alluvione, incendio
+
+**Abilità**
+- Assume la posizione di sicurezza durante una scossa sismica simulata
+- Esegue correttamente la procedura di evacuazione della scuola
+- Simula una chiamata al 112 riportando nome, luogo e tipo di emergenza
+- Legge e interpreta un bollettino di allerta meteo semplice
+- Compila con la famiglia una scheda di piano di emergenza familiare
+
+**Competenze** (traguardi trasversali)
+- **Competenza personale, sociale e capacità di imparare a imparare**: riconosce l'importanza della preparazione come forma di cura di sé e degli altri
+- **Competenza in materia di cittadinanza**: comprende il ruolo delle istituzioni e del volontariato nel sistema di protezione civile
+- **Competenza digitale**: consulta in modo guidato fonti ufficiali (siti della Regione, del Dipartimento, dell'INGV)
+- **Competenza in materia di consapevolezza ed espressione culturali**: riconosce il proprio territorio come parte di un sistema geologico, climatico e urbano
+
+### Collegamento con le discipline
+
+| Disciplina | Agganci curricolari |
+|---|---|
+| **Italiano** | Comprensione di testi informativi, produzione di testi regolativi (cosa fare se...), lessico specialistico |
+| **Storia / Cittadinanza** | Ruolo delle istituzioni, Costituzione (art. 32, 117, 118), cittadinanza attiva |
+| **Geografia** | Territorio locale, carte tematiche, rischi naturali, antropizzazione |
+| **Scienze** | Fenomeni geologici, meteorologici, ecosistemi, stati della materia (acqua, fuoco) |
+| **Ed. fisica** | Controllo del corpo, gestione emotiva, evacuazione in sicurezza |
+| **Arte e immagine** | Cartelli di sicurezza, mappe del rischio, simbologia istituzionale |
+| **Tecnologia** | Strumenti di monitoraggio, app IT-alert, radio in emergenza |
+| **Ed. civica** | 33 ore annuali, tema della sicurezza e della cittadinanza digitale |
+
+### Durata consigliata e tabella del percorso
+
+Il percorso completo si articola in **6 moduli da 45-60 minuti**. Ogni modulo è autonomo e può essere svolto anche singolarmente.
+
+| Modulo | Tema | Durata | Classi consigliate | Spazio |
+|---|---|---|---|---|
+| 1 | Cos'è la Protezione Civile | 45' | I-V | Aula |
+| 2 | Il terremoto | 60' | I-V | Aula + corridoio |
+| 3 | L'alluvione e il rischio idrogeologico | 60' | III-V | Aula + LIM |
+| 4 | L'incendio boschivo | 45' | II-V | Aula |
+| 5 | Il piano di emergenza familiare | 60' + casa | III-V | Aula |
+| 6 | I rischi del nostro territorio | 60' | III-V | Aula + uscita |
+
+**Esperimenti e laboratori** (vedi sezione dedicata) aggiungono 30-45 minuti per attività a scelta.
+
+**Valutazione finale** (quiz + rubrica): 30-45 minuti.
+
+**Totale complessivo stimato**: 8-10 ore, distribuibili su 6-12 settimane.
+
+### Prerequisiti
+
+- Saper leggere e scrivere in modo corretto (classi III-V); per le classi I-II usare versioni semplificate
+- Aver svolto almeno una prova di evacuazione della scuola
+- Conoscere il proprio indirizzo di casa e un numero di telefono di un genitore
 
 ### Suggerimenti pratici
 
@@ -31,6 +84,8 @@ Il percorso completo si articola in **5 o 6 incontri da 45-60 minuti**. Ogni mod
 - Usa sempre un approccio rassicurante: l'obiettivo è preparare, non spaventare
 - Alterna spiegazioni, discussioni di gruppo e attività pratiche
 - Se possibile, chiedi ai volontari del Gruppo di intervenire per una dimostrazione pratica
+- Quando possibile, collega il percorso a **eventi reali recenti** raccontati con tono equilibrato (evita video di disastri, preferisci testi giornalistici e dichiarazioni ufficiali)
+- Il **[Piano di Emergenza Familiare](/piano-familiare/)** del Gruppo è il documento di collegamento tra la scuola e la casa: usalo come filo rosso del percorso
 
 ---
 
@@ -310,6 +365,298 @@ Su una cartina del territorio di Genzano (o su un disegno semplificato):
 
 ---
 
+## Esperimenti e laboratori semplici
+
+Gli esperimenti rendono concreto ciò che altrimenti resta astratto. Qui tre proposte realizzabili con materiali di uso quotidiano.
+
+### Esperimento 1 — Il modellino della frana
+
+**Obiettivo**: mostrare come la pioggia possa destabilizzare un pendio.
+
+**Materiali**: un vassoio o un contenitore rettangolare basso, terra da giardino (o sabbia grossa), un annaffiatoio, un mattoncino di lego.
+
+**Procedura**:
+1. Costruisci un pendio inclinato (circa 30°) nel vassoio, usando la terra
+2. Appoggia il mattoncino in cima: rappresenta una casa
+3. Simula una pioggia leggera con l'annaffiatoio: cosa succede?
+4. Aumenta gradualmente l'intensità della pioggia: a un certo punto il pendio cede e la "casa" scivola
+5. Ripeti l'esperimento con un pendio coperto di erba (ciuffi di prato, muschio): confronta i tempi di cedimento
+
+**Discussione**: perché un pendio con vegetazione regge meglio? (le radici trattengono il terreno). Come possiamo applicare questo principio nella gestione del territorio?
+
+### Esperimento 2 — La scossa della gelatina
+
+**Obiettivo**: mostrare come suolo soffice e suolo rigido reagiscono alla scossa sismica.
+
+**Materiali**: due piatti, una porzione di gelatina già solidificata, un pezzo di legno o una mattonella, due cubi di lego (o biscotti) delle stesse dimensioni.
+
+**Procedura**:
+1. Appoggia un cubo sul piatto con la gelatina e un cubo sul piatto con il legno
+2. Scuoti delicatamente entrambi i piatti con la stessa intensità
+3. Osserva: su quale materiale il cubo resta più stabile?
+
+**Discussione**: lo stesso terremoto produce effetti diversi a seconda del **tipo di suolo**. Le costruzioni su terreni morbidi (argilla, terreno alluvionale) subiscono scosse più amplificate rispetto a quelle su roccia compatta. Per questo i geologi studiano il terreno prima di costruire.
+
+### Esperimento 3 — Il triangolo del fuoco
+
+**Obiettivo**: dimostrare che il fuoco ha bisogno di tre elementi per esistere.
+
+**Materiali**: una candela, un bicchiere di vetro capovolto, una ciotola d'acqua, un cucchiaino di bicarbonato e aceto (per generare CO₂).
+
+**Procedura** (solo con l'adulto):
+1. Accendi la candela e copri con il bicchiere: il fuoco si spegne dopo pochi secondi (tolgo l'**ossigeno**)
+2. Riaccendi la candela e bagna lo stoppino con qualche goccia d'acqua: si spegne (tolgo il **calore**)
+3. Mostra come senza stoppino/cera la candela non brucerebbe (tolgo il **combustibile**)
+4. **Esperimento bonus**: in un barattolo crea CO₂ (bicarbonato + aceto) e "versalo" sopra la candela accesa (il gas è più pesante dell'aria): la candela si spegne anche senza coprirla. Questo è il principio degli **estintori a CO₂**
+
+**Discussione**: ogni estintore agisce su uno dei tre lati del triangolo. Ad acqua → sottrae calore. A schiuma → isola dall'ossigeno. A CO₂ → sostituisce l'ossigeno. A polvere → interrompe la reazione chimica.
+
+**Sicurezza**: l'esperimento va eseguito solo dal docente, in uno spazio sgombro, con gli alunni a distanza. Tenere a portata di mano la ciotola d'acqua per ogni evenienza.
+
+---
+
+## Uscita sul territorio
+
+L'uscita sul quartiere è l'attività che **fissa** quanto imparato. Bastano 90 minuti, a piedi, entro un raggio di 500 metri dalla scuola.
+
+### Preparazione
+
+Ogni alunno prepara una **scheda di osservazione** (stampata dal docente) con queste colonne:
+
+| Cosa vedo | Dove | A cosa serve |
+|---|---|---|
+| Esempio: cartello verde con omino che corre | Sulla porta del bar | Indica l'uscita di emergenza del locale |
+| Esempio: tombino | In via... | Raccoglie l'acqua piovana — se ostruito causa allagamenti |
+
+### Obiettivi dell'osservazione
+
+Far individuare agli alunni sul territorio:
+- **Cartelli di uscita di emergenza** (verde con omino bianco)
+- **Cartelli di pericolo** (triangolo giallo con bordo nero)
+- **Cartelli di divieto** (cerchio rosso con barra)
+- **Idranti** rossi sui muri
+- **Tombini** e **caditoie** per l'acqua piovana
+- **Vie di fuga** indicate con frecce
+- **Mezzi di soccorso** eventualmente parcheggiati (vigili del fuoco, ambulanza, polizia locale)
+- **Punto di raccolta** della scuola (se indicato)
+- **Defibrillatore (DAE)** con segnaletica verde
+
+### Al ritorno in classe
+
+Ogni alunno presenta **una** delle cose osservate, spiegando a cosa serve. Il docente disegna alla lavagna una mappa semplificata del percorso e segna i luoghi delle osservazioni.
+
+### Autorizzazioni
+
+L'uscita va preventivamente **autorizzata** dal Dirigente Scolastico e comunicata alle famiglie secondo le procedure della scuola. Rientra nelle **uscite didattiche sul territorio** previste dal PTOF.
+
+---
+
+## Schede fotocopiabili
+
+Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
+
+### Scheda 1 — La chiamata al 112 (role-play scritto)
+
+**Consegna**: *"Immagina di dover chiamare il 112. Scrivi cosa diresti, in ordine, per far arrivare l'aiuto giusto."*
+
+Spazi da compilare:
+1. Il mio nome: ____________________
+2. Dove mi trovo (indirizzo completo): ____________________
+3. Che cosa sta succedendo: ____________________
+4. Quante persone sono coinvolte: ____________________
+5. Ci sono persone ferite o intrappolate? ____________________
+6. Il mio numero di telefono (per essere richiamato): ____________________
+
+**Variante per classi I-II**: il docente legge la scheda, gli alunni rispondono a voce, uno per uno.
+
+### Scheda 2 — Vero o falso
+
+| Affermazione | V | F |
+|---|---|---|
+| 1. Nel Lazio si chiama il 115 per i vigili del fuoco | ○ | ○ |
+| 2. Durante il terremoto l'ascensore è il modo più rapido per uscire | ○ | ○ |
+| 3. Un'allerta arancione è più grave di un'allerta gialla | ○ | ○ |
+| 4. Per trascinare una persona bastano 20 cm di acqua in movimento | ○ | ○ |
+| 5. I mozziconi di sigaretta possono causare incendi boschivi | ○ | ○ |
+| 6. Il sindaco è la prima autorità di protezione civile del comune | ○ | ○ |
+| 7. Durante un'alluvione devo scendere in cantina per mettermi al sicuro | ○ | ○ |
+| 8. Il numero 112 vale solo per emergenze mediche | ○ | ○ |
+
+*Soluzioni per il docente: 1.F (solo 112) · 2.F · 3.V · 4.V · 5.V · 6.V · 7.F · 8.F.*
+
+### Scheda 3 — Completa la scheda del piano familiare
+
+(Da portare a casa e compilare con un genitore.)
+
+**La mia famiglia**
+- Io mi chiamo ____________________
+- Mia mamma si chiama ____________________ · telefono ______________
+- Mio papà si chiama ____________________ · telefono ______________
+- Altri familiari: ____________________
+
+**Punti di incontro**
+- Se siamo a casa e non possiamo restarci, ci troviamo a: ____________________
+- Se siamo lontani, ci sentiamo chiamando: ____________________ (parente fuori zona)
+
+**Numeri utili**
+- Emergenze (tutte): **112**
+- Medico di famiglia: ____________________
+- Un vicino fidato: ____________________
+
+**Lo zaino di emergenza è pronto?** (Spunta ciò che hai già)
+- ○ Acqua (2 bottiglie)   ○ Torcia   ○ Coperta   ○ Medicinali
+- ○ Documenti (copie)   ○ Caricabatterie   ○ Cambio vestiti
+
+### Scheda 4 — Il cruciverba della sicurezza (classi III-V)
+
+Il cruciverba è disponibile anche come gioco online nella sezione [Giochi della Sicurezza — Primaria](/giochi/primaria/#cruciverba). Versione stampabile su richiesta alla segreteria del Gruppo.
+
+### Scheda 5 — La mia mappa del rischio
+
+**Consegna**: *"Disegna una mappa semplice del tuo quartiere (casa, scuola, parco, fiume). Poi:"*
+
+- Colora in **rosso** le zone che ti sembrano a rischio di incendio (boschi, prati secchi)
+- Colora in **blu** le zone che potrebbero allagarsi (zone basse, vicino ai fossi)
+- Segna con un **cerchio verde** dove andresti in caso di emergenza (piazza, campo sportivo, parcheggio grande)
+- Segna con una **stella** la tua scuola e con una **casa** la tua abitazione
+
+---
+
+## Rubrica di valutazione
+
+La rubrica è uno strumento trasparente: il docente lo mostra agli alunni all'inizio del percorso così ognuno sa **cosa si aspetta di imparare**.
+
+### Rubrica per competenze
+
+| Competenza | Livello iniziale (D) | Livello base (C) | Livello intermedio (B) | Livello avanzato (A) |
+|---|---|---|---|---|
+| **Conoscenza del sistema di protezione civile** | Non riconosce le figure di soccorso | Conosce le principali figure e il 112 | Distingue i ruoli (sindaco, volontari, 112) e le quattro attività | Spiega il principio di sussidiarietà con esempi |
+| **Comportamento in emergenza** | Non esegue la procedura | Esegue la procedura solo se guidato | Esegue correttamente la procedura in autonomia | Aiuta i compagni più piccoli o in difficoltà |
+| **Conoscenza dei rischi del territorio** | Nessuna | Conosce 1-2 rischi | Distingue i rischi e ne associa le cause | Collega i rischi al territorio dei Castelli Romani |
+| **Pianificazione familiare** | Non compila la scheda | Compila la scheda con aiuto | Compila correttamente la scheda con la famiglia | Presenta il piano ai compagni motivando le scelte |
+| **Cittadinanza attiva** | Non partecipa | Segue le attività in modo passivo | Partecipa con domande e osservazioni | Propone iniziative di prevenzione in classe o a casa |
+
+### Come compilare la rubrica
+
+- Valuta **su più osservazioni**, non su un singolo momento
+- Coinvolgi l'alunno nell'**autovalutazione**: a fine percorso ogni alunno compila una scheda "io credo di essere a livello..."
+- Confronta la tua valutazione con l'autovalutazione: è uno strumento formativo, non una bocciatura
+
+### Voto in decimi (se richiesto dalla scuola)
+
+Conversione orientativa per l'educazione civica:
+- D → 5-6   ·   C → 6-7   ·   B → 8   ·   A → 9-10
+
+---
+
+## Adattamenti per l'inclusione
+
+### Alunni con DSA
+
+- Fornisci sempre le **mappe concettuali** dei moduli (si possono generare da strumenti come CmapTools)
+- Accetta la **risposta orale** in alternativa a quella scritta
+- Per i quiz a risposta multipla, usa testo ad alta leggibilità (EasyReading, OpenDyslexic) e spaziature ampie
+- Per la scheda del 112, registra un audio della chiamata esemplificativa da far ascoltare
+- Per il cruciverba, fornisci la **prima lettera** di ogni parola
+
+### Alunni con disabilità intellettiva
+
+- Riduci il numero di moduli (concentra sui primi 3)
+- Usa molte immagini e video brevi (max 2 minuti)
+- Ripeti ogni concetto in più forme: racconto, disegno, role-play
+- Coordinati con il docente di sostegno: il PEI indica obiettivi personalizzati
+
+### Alunni con disabilità motoria
+
+- Durante l'esercitazione di evacuazione segui esattamente il **PEI** e le procedure del Piano di Emergenza della scuola (buddy, percorso preferenziale)
+- Per le attività sul campo, verifica l'accessibilità del percorso prima
+
+### Alunni BES (non certificati)
+
+- Offri più tempo per le schede scritte
+- Forma gruppi eterogenei per le attività cooperative: il compagno più sicuro aiuta quello in difficoltà
+- Valuta la **partecipazione e l'impegno**, non solo il prodotto finale
+
+### Alunni stranieri con italiano L2
+
+- Introduci il **lessico specialistico** (terremoto, alluvione, evacuazione, allerta) con l'aiuto di immagini
+- Per la chiamata al 112, esercita la pronuncia dei numeri e dei termini chiave
+- Se in famiglia si parla un'altra lingua, fornisci alla famiglia i materiali del DPC nella propria lingua quando disponibili (il sito [protezionecivile.gov.it](https://www.protezionecivile.gov.it/) ha alcune schede multilingue)
+
+---
+
+## Raccordo con il Piano di Emergenza della Scuola
+
+Il Piano di Emergenza della scuola (obbligatorio ai sensi del **D.M. 26/08/1992** e del **D.Lgs. 81/2008**) è il documento di riferimento per ogni attività di emergenza all'interno dell'edificio. Il kit didattico si integra con il Piano su questi punti:
+
+| Elemento del kit | Elemento del Piano | Come raccordarli |
+|---|---|---|
+| Esercitazione di evacuazione (Modulo 2) | Prove di evacuazione annuali (min. 2/anno) | Coordinarsi con RSPP; il kit può essere svolto nei giorni immediatamente precedenti la prova ufficiale |
+| Punto di raccolta | Punto di raccolta indicato nel Piano | Usa sempre quello ufficiale, non improvvisarne altri |
+| Cartelli di emergenza | Segnaletica conforme D.Lgs. 81/2008 | Usa i cartelli reali della scuola come esempio durante il Modulo 2 |
+| Scheda chiamata 112 | Procedure di chiamata emergenza previste dal Piano | La scheda è pensata per il cittadino; per l'emergenza scolastica interna la chiamata la fa il Dirigente o il DSGA |
+| Alunni con fragilità | Allegato alunni disabili del Piano | Coordina con il docente di sostegno: le procedure del Piano sono prioritarie |
+
+Prima di avviare il kit, **chiedi una copia del Piano di Emergenza della scuola** al Dirigente o al RSPP: è la mappa di cosa può succedere nell'edificio e di cosa è già previsto.
+
+---
+
+## Coinvolgimento delle famiglie
+
+### Lettera di presentazione
+
+A inizio percorso, il docente consegna ai genitori una lettera informativa (A4, mezza pagina) che spiega:
+- Gli obiettivi del percorso
+- I temi trattati (senza toni spaventosi)
+- La richiesta di collaborare alla compilazione del Piano di Emergenza Familiare
+- Il contatto del Gruppo per eventuali domande
+
+### Compito a casa condiviso
+
+Il **Modulo 5 (Piano di emergenza familiare)** prevede che l'alunno compili la scheda **insieme a un genitore**. È un compito progettato per riportare l'apprendimento nel contesto familiare.
+
+### Evento finale di classe aperto ai genitori
+
+A fine percorso, organizza un incontro di 30-45 minuti in cui:
+- Gli alunni espongono la mappa dei rischi del quartiere
+- Il docente (o un volontario) illustra ai genitori il Piano di Emergenza Familiare
+- Si consegna il link al [Piano di Emergenza Familiare](/piano-familiare/) e i contatti del Gruppo
+
+L'evento può essere abbinato a una **visita del mezzo operativo** del Gruppo nel cortile della scuola, da concordare con la segreteria.
+
+---
+
+## FAQ del docente
+
+**D. Ho solo 4-5 ore da dedicare in educazione civica. Quali moduli scelgo?**
+R. I moduli 1 (Protezione Civile), 2 (Terremoto) e 5 (Piano familiare) sono il nucleo indispensabile. Copri circa 3 ore + un'esercitazione.
+
+**D. La mia classe è molto eterogenea (italiano L2, BES). Come adatto il percorso?**
+R. Parti dalla parte motoria e visiva: la tartaruga, i cartelli, i mezzi di soccorso, la simulazione. Poi introduci il lessico. Lavora per piccoli gruppi eterogenei, non in modalità frontale pura.
+
+**D. Gli alunni mi chiedono "ma a Genzano potrebbe succedere un terremoto forte?"**
+R. Risposta onesta e rassicurante: *"Il nostro è un territorio sismico di livello medio. Scosse piccole ci sono ogni tanto, una scossa forte è rara ma non impossibile. Per questo ci prepariamo: non perché stia per succedere, ma perché è così che si fa in ogni zona sismica d'Italia, e anche in molte regioni del mondo."*
+
+**D. Posso usare video di disastri?**
+R. Meglio evitare video di distruzione. Usa piuttosto filmati del DPC o dei volontari **durante le esercitazioni**, dove si vede il sistema che funziona, non il danno.
+
+**D. Rischio di spaventare gli alunni?**
+R. Solo se il tono è sbagliato. Il principio base è: **"Parliamo di cose serie con calma, perché sapere cosa fare toglie la paura, non la crea."** Se un alunno si agita, interrompi, dialoga, poi riprendi.
+
+**D. Cosa faccio se un alunno racconta di un evento traumatico vissuto (terremoto, alluvione in famiglia)?**
+R. Ascolta con rispetto, valorizza la sua esperienza ("tu sai una cosa importante"), non approfondire davanti al gruppo. Coordinati con il docente di sostegno o lo psicologo scolastico secondo le procedure della scuola.
+
+**D. Il sito del Gruppo ha quiz e giochi. Posso usarli in classe con la LIM?**
+R. Sì, i [Giochi della Sicurezza — Primaria](/giochi/primaria/) sono pensati proprio per questo. Funzionano anche in modalità offline se preventivamente aperti con connessione. Il cruciverba, la caccia al rischio e il quiz sono i più versatili.
+
+**D. I volontari vengono gratis a scuola?**
+R. Sì. L'attività di divulgazione nelle scuole è uno dei compiti del Gruppo Comunale. Va concordata con anticipo (almeno 3-4 settimane). Contatto: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+
+**D. Posso portare la classe a vedere la sede del Gruppo?**
+R. Sì, è possibile organizzare una visita con dimostrazione di mezzi e attrezzature. Il percorso dura circa 90 minuti. Rientra nelle uscite didattiche del PTOF.
+
+---
+
 ## Materiale consigliato
 
 - [Piano di Emergenza Familiare](/piano-familiare/) — Da stampare e compilare con la famiglia
@@ -317,6 +664,17 @@ Su una cartina del territorio di Genzano (o su un disegno semplificato):
 - [Giochi della Sicurezza — Primaria](/giochi/primaria/) — 13 giochi educativi per bambini 6-11 anni
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
 - [Io non rischio](https://www.iononrischio.it/) — Materiali della campagna nazionale
+- [Aree di emergenza di Genzano](/cartografia/) — Mappa delle aree di attesa
+- [IdroGEO — ISPRA](https://idrogeo.isprambiente.it/) — Mappa delle frane e delle alluvioni (utile per l'uscita sul territorio)
+
+### Fonti normative e curricolari
+
+- [Legge 20 agosto 2019 n. 92](https://www.normattiva.it/) — Introduzione dell'insegnamento dell'educazione civica
+- **D.M. 35/2020 e aggiornamento 2024** — Linee guida per l'insegnamento dell'educazione civica
+- **Indicazioni Nazionali per il Curricolo della Scuola Primaria** (2012) + **Nuovi Scenari** (2018)
+- [D.Lgs. 2 gennaio 2018 n. 1](/normativa/testo-unico-protezione-civile/) — Codice della Protezione Civile (in particolare art. 18)
+- **D.Lgs. 9 aprile 2008 n. 81** — Testo Unico sulla sicurezza nei luoghi di lavoro
+- **D.M. 26 agosto 1992** — Norme di prevenzione incendi per l'edilizia scolastica
 
 ---
 

@@ -1,7 +1,7 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 2.3
-**Ultimo aggiornamento manuale:** 2026-04-22
+**Versione:** 2.4
+**Ultimo aggiornamento manuale:** 2026-04-24
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
 **Bootstrap Italia:** versione 2.17.3
@@ -14,6 +14,10 @@
 > o nuove versioni di Bootstrap Italia, viene aperta un'Issue sul repository con la checklist
 > dei punti da verificare. Vedi **Parte 7** per dettagli.
 
+> **Changelog 2.4 (2026-04-24)**
+> - **Parte 4.8**: documentata la nuova struttura didattica completa dei **4 kit scuola** (`content/formazione/kit-scuola-*.md`) — ampliati dopo feedback positivi dei docenti che hanno richiesto maggiore chiarezza e completezza. Ogni kit include ora riferimenti normativi espliciti (L. 92/2019, Linee guida 2020/2024, art. 18 D.Lgs. 1/2018), obiettivi formalizzati (conoscenze/abilità/competenze chiave europee), tabelle per disciplina, rubriche di valutazione, schede fotocopiabili, adattamenti per BES/DSA/L2, raccordo con il Piano di Emergenza scolastico, coinvolgimento delle famiglie e FAQ del docente.
+> - Per la secondaria II grado: aggiunto percorso **PCTO strutturato** (30-50h) e tre temi pluridisciplinari per l'**Esame di Stato**.
+>
 > **Changelog 2.3 (2026-04-22)**
 > - **Parte 11**: aggiunto **X (Twitter)** come canale autonomo, completati i template per tutti i canali, generalizzata la checklist, aggiunto il **Referente comunicazione** e le regole contro engagement bait, gestione post con errore, archivio screenshot.
 > - **Parte 12**: introdotto l'**holding statement** nei primi 15 minuti di emergenza, riscritti i template emergenziali in voce attiva, aggiunta la sezione sul ritorno alla normalità comunicativa.
@@ -1440,7 +1444,7 @@ Il template `single.html` del tema mostra questa data come **box evidente** in c
 | `/rischi-prevenzione/` | `content/rischi-prevenzione/_index.md` | Hub + 9 sotto-pagine |
 | `/allerte-meteo/` | `content/allerte-meteo/_index.md` | |
 | `/comunicazioni/` | Generata da Hugo | Elenco articoli |
-| `/formazione/` | `content/formazione/_index.md` | Include 4 kit scuola |
+| `/formazione/` | `content/formazione/_index.md` | Include 4 kit scuola (vedi 4.8) |
 | `/giochi/` | `static/giochi/index.html` | **Standalone**, non Hugo content |
 | `/diventa-volontario/` | `content/diventa-volontario/_index.md` | |
 | `/contatti/` | `content/contatti/_index.md` | |
@@ -1454,6 +1458,48 @@ Il template `single.html` del tema mostra questa data come **box evidente** in c
 | `/privacy/` | `content/privacy/_index.md` | |
 | `/note-legali/` | `content/note-legali/_index.md` | |
 | `/siti-utili/` | `content/siti-utili/_index.md` | |
+
+### 4.8 — Kit didattici per le scuole (`content/formazione/kit-scuola-*.md`)
+
+Il sito pubblica **quattro kit didattici** indirizzati alle scuole del territorio, uno per fascia d'età. Dopo un ciclo di feedback positivi dei docenti, i kit sono stati ampliati (aprile 2026) per rispondere alla richiesta di **maggiore chiarezza e profondità** sui temi di protezione civile.
+
+| File | Fascia | Righe | Contenuti chiave |
+|---|---|---|---|
+| `kit-scuola-infanzia.md` | 3-6 anni | ~410 | Campi di Esperienza, 5 schede fotocopiabili, griglia di osservazione, percorso 4 × 30′ |
+| `kit-scuola-primaria.md` | 6-11 anni | ~685 | Raccordo 9 discipline, 3 esperimenti, uscita sul territorio, rubrica 5 competenze |
+| `kit-scuola-secondaria-primo-grado.md` | 11-14 anni | ~690 | UdA interdisciplinare, compito di realtà sul Piano di evacuazione, 5 metodologie didattiche |
+| `kit-scuola-secondaria-secondo-grado.md` | 14-19 anni | ~800 | PCTO 30-50h, 3 progetti di classe, 3 temi per l'Esame di Stato, rubrica 7×5 livelli |
+
+**Struttura comune a tutti e quattro i kit:**
+
+1. **Riferimenti normativi e curricolari** — Legge 92/2019 (educazione civica), D.M. 35/2020 e Linee guida 2024, art. 18 D.Lgs. 1/2018 (obbligo di informazione e formazione), Indicazioni Nazionali 2012 / Nuovi Scenari 2018 / Nuovi Orientamenti 2024 (infanzia).
+2. **Obiettivi di apprendimento formalizzati** — conoscenze, abilità, competenze chiave europee (Racc. UE 2018/C 189/01).
+3. **Raccordo con le discipline** — tabella che associa a ciascuna disciplina i traguardi di competenza e gli agganci con il curricolo.
+4. **Durata e tabella del percorso** — moduli con obiettivi, attività, materiali, tempi.
+5. **Metodologie didattiche** — age-appropriate: gioco simbolico e routine per l'infanzia, laboratori per la primaria, flipped/cooperative/PBL/debate/service learning per le secondarie.
+6. **Schede fotocopiabili** (infanzia e primaria) **o compiti di realtà / UdA** (secondarie).
+7. **Rubrica di valutazione** — competenze × livelli (4 per infanzia/primaria/secondaria I; 5 livelli D/C/B/A/A+ per secondaria II).
+8. **Adattamenti per l'inclusione** — DSA, BES, disabilità intellettiva/sensoriale/motoria, italiano L2, plusdotati.
+9. **Raccordo con il Piano di Emergenza scolastico** — D.M. 26/08/1992, D.Lgs. 81/2008, DVR (secondaria II).
+10. **Coinvolgimento delle famiglie** — lettere informative, compiti a casa, evento finale.
+11. **FAQ del docente** — 7-9 domande frequenti con risposte operative.
+12. **Fonti normative e bibliografia** — normativa citata + letture consigliate (Beck, Jonas, IPCC AR6 per le secondarie).
+
+**Specifiche aggiuntive per fascia:**
+
+- **Infanzia**: percorso in 4 incontri da 30′ (2h totali), Campi di Esperienza coinvolti (Il sé e l'altro; Il corpo e il movimento; Immagini, suoni, colori; I discorsi e le parole; La conoscenza del mondo), schede con il 112 e la "tartaruga" (posizione di riparo antisismica).
+- **Primaria**: percorso in 6 moduli + laboratorio + valutazione = 8-10h, 3 esperimenti semplici (modellino frana, gelatina per la scossa sismica, triangolo del fuoco), uscita sul territorio nel raggio di 500m.
+- **Secondaria I grado**: 6 moduli da 60′ + UdA "Conoscere il rischio del mio territorio" (12h + 3h lavoro autonomo), approfondimenti cross-disciplinari (Italiano: Buzzati/Calvino; Storia: da Messina 1908 ad Amatrice 2017; Arte: segnaletica D.Lgs. 81/2008; Tecnologia: IT-alert).
+- **Secondaria II grado**: percorso fino a 70h totali, PCTO strutturato in 6 fasi con tutor interno/esterno, tre progetti di classe (A: analisi del Piano di evacuazione scolastico; B: mappatura del rischio di quartiere; C: mini campagna "Io non rischio"), tre temi pluridisciplinari per l'Esame di Stato (Rischio e responsabilità; Cambiamento climatico e territorio; Comunicazione, media e cittadinanza).
+
+**Quando modificare un kit:**
+
+- Se la normativa scolastica cambia (es. nuove Linee guida sull'educazione civica): aggiornare la sezione 1 di tutti e quattro i kit coerentemente.
+- Se cambia il Piano di Emergenza del Comune o della singola scuola: aggiornare il raccordo nella sezione 9.
+- Se un docente segnala un'esperienza d'uso: valutare se aggiungere una "Scheda esperienza" come esempio nella FAQ.
+- Ogni modifica sostanziale ai kit va annotata nel changelog all'inizio del manuale.
+
+**Non usare i kit come articoli di cronaca.** I kit sono pagine operative durevoli: non inserire nei kit date di singole iniziative o riferimenti a eventi specifici, ma linkare gli articoli in `content/comunicazioni/` dove necessario.
 
 ---
 
