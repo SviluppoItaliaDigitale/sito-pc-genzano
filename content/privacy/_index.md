@@ -81,7 +81,7 @@ Il sito incorpora, **solo su esplicita richiesta dell'utente**, alcuni widget di
 
 **Link esterni consigliati nella pagina [Strumenti](/strumenti/):**
 
-La pagina Strumenti rimanda inoltre, come link esterni in nuova scheda (nessun iframe, nessun cookie sul nostro sito), ai seguenti servizi istituzionali e di pubblica utilità: **ISPRA IdroGEO** (rischio frane/alluvioni), **EFFIS** (incendi UE — Commissione Europea), **ARPA Lazio** (qualità dell'aria regionale), **ANAS** (viabilità nazionale), **AEGIS Regione Lazio** (tempo reale Lazio), **Copernicus EMS** (emergenze UE) e **Windy Webcams** (raccolta webcam pubbliche). Cliccando su questi link, la navigazione esce dal nostro dominio e si applicano le rispettive informative privacy dei fornitori, consultabili sui loro siti.
+La pagina Strumenti rimanda inoltre, come link esterni in nuova scheda (nessun iframe, nessun cookie sul nostro sito), ai seguenti servizi istituzionali e di pubblica utilità: **ISPRA IdroGEO** (rischio frane/alluvioni), **EFFIS** (incendi UE — Commissione Europea), **ARPA Lazio** (qualità dell'aria regionale), **ANAS** (viabilità nazionale), **AEGIS Regione Lazio** (tempo reale Lazio), **Copernicus EMS** (emergenze UE), **Windy Webcams** (raccolta webcam pubbliche) e **meteoblue multi-modello** (confronto previsionale tra più modelli numerici, servizio commerciale). Cliccando su questi link, la navigazione esce dal nostro dominio e si applicano le rispettive informative privacy dei fornitori, consultabili sui loro siti.
 
 Per non caricare un widget è sufficiente **non cliccare il pulsante** di attivazione. In alternativa è possibile consultare le stesse informazioni direttamente sui siti dei fornitori senza interazione col nostro sito.
 

@@ -63,6 +63,15 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     tipoAccesso="widget"
     url="/rischi-prevenzione/temporali-intensi/#fulmini-blitzortung" >}}
 
+{{< tool-card
+    nome="Confronto multi-modello"
+    fonte="meteoblue"
+    icona="bi-bar-chart-line-fill"
+    tipoFonte="consultazione"
+    descrizione="Confronto grafico tra più modelli previsionali (ECMWF, GFS, ICON, ecc.) per Genzano di Roma. Utile per valutare l'<strong>affidabilità</strong> di una previsione: se i modelli concordano la previsione è robusta, se divergono c'è incertezza. Prodotto commerciale, non sostituisce le fonti istituzionali."
+    tipoAccesso="sito"
+    url="https://www.meteoblue.com/it/tempo/previsioni/multimodel/genzano-di-roma_italia_3176203" >}}
+
 </div>
 
 ## Sismico
