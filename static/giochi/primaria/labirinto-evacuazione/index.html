@@ -268,116 +268,117 @@
     var SCENARI = [
       {
         titolo: 'Scenario 1 — Aula al primo piano',
-        desc: 'Suona la campanella di evacuazione. Esci dalla tua aula, evita l\'ascensore e scendi dalle scale 🪜 fino al punto di raccolta in cortile.',
+        desc: 'Suona la campanella di evacuazione. Esci dalla tua aula, evita l\'ascensore e scendi dalle scale 🪜 fino al punto di raccolta in cortile. Attenzione: il corridoio centrale è aperto, potresti finire nell\'ascensore se non scegli bene.',
         righe: [
           '#########',
           '#S......#',
-          '#.#######',
-          '#.#A..X.#',
-          '#.#.###.#',
-          '#.#.....#',
-          '#.#######',
           '#.......#',
+          '#.#A..X.#',
+          '#.......#',
+          '#.#...#.#',
+          '#.......#',
+          '#.#.....#',
           '#......E#',
           '#########'
         ],
-        max: 9
+        max: 14
       },
       {
         titolo: 'Scenario 2 — Fuoco nel corridoio',
-        desc: 'Sei al piano terra. Nel corridoio principale si è sviluppato un incendio. Devi trovare una strada alternativa evitando fuoco e fumo.',
+        desc: 'Sei al piano terra. Nel corridoio principale si è sviluppato un incendio. Evita fuoco e fumo e trova una strada alternativa: il fuoco è raggiungibile da più direzioni, scegli con attenzione.',
         righe: [
           '##########',
           '#S.......#',
-          '#.#######.',
-          '#.#F.....#',
-          '#.#.######',
+          '#........#',
+          '#...F....#',
+          '#.########',
           '#.#......#',
+          '#........#',
           '#.######.#',
           '#........#',
-          '#.#######.',
           '#.......E#',
           '##########'
         ],
-        max: 10
+        max: 16
       },
       {
         titolo: 'Scenario 3 — Evacuazione completa',
-        desc: 'Allarme generale! Dall\'aula devi scendere le scale, evitare l\'ascensore e il fuoco, e seguire le frecce verdi ➡️ di emergenza fino al cortile.',
+        desc: 'Allarme generale! Dall\'aula devi scendere le scale, evitare l\'ascensore e il fuoco, e seguire le frecce verdi ➡️ di emergenza fino al cortile. Molti corridoi sono aperti: fai attenzione a non finire sull\'ascensore o sul fuoco.',
         righe: [
           '###########',
           '#S..#.....#',
-          '#.#.#.###.#',
-          '#.#.X.#...#',
+          '#.#.#.....#',
+          '#.#.X...#.#',
           '#.#.###.#.#',
-          '#.#....A#.#',
+          '#.#..A..#.#',
           '#.########.',
           '#.........#',
-          '#.#######.#',
-          '#.#F....#.#',
-          '#.#.###.#.#',
-          '#.#.#.#.#.#',
+          '#..######.#',
+          '#.#F......#',
+          '#.#.###...#',
+          '#...#.#...#',
           '#...#...#.#',
           '#####.###D#',
           '#........E#',
           '###########'
         ],
-        max: 16
+        max: 22
       },
       {
         titolo: 'Scenario 4 — Uscita con freccia di emergenza',
-        desc: 'Suona l\'allarme in aula. L\'ascensore ⚠️ è in fondo al corridoio: evitalo! Segui la freccia verde ⬇️ che indica l\'uscita e raggiungi il punto di raccolta 🏁.',
+        desc: 'Suona l\'allarme in aula. L\'ascensore ⚠️ è in fondo al corridoio: evitalo! Segui la freccia verde ⬇️ che indica l\'uscita e raggiungi il punto di raccolta 🏁. Il corridoio è aperto: puoi finire sull\'ascensore se non scegli bene la rotta.',
         righe: [
           '##########',
           '#S.....A.#',
-          '#.########',
+          '#........#',
+          '#........#',
           '#.......D#',
-          '########.#',
+          '#######..#',
           '#........#',
           '#.......E#',
           '##########'
         ],
-        max: 14
+        max: 16
       },
       {
         titolo: 'Scenario 5 — Freccia verso il punto di raccolta',
-        desc: 'Piccolo incendio 🔥 nel corridoio principale. Trova una strada alternativa e, nell\'ultimo tratto, segui la freccia verde ➡️ che indica l\'uscita sicura.',
+        desc: 'Piccolo incendio 🔥 nel corridoio principale. Trova una strada alternativa e, nell\'ultimo tratto, segui la freccia verde ➡️ che indica l\'uscita sicura. Il fuoco è raggiungibile da più direzioni: fai attenzione.',
         righe: [
           '##########',
           '#S.......#',
-          '#.#######.',
-          '#.#F.....#',
-          '#.#.######',
+          '#........#',
+          '#...F....#',
+          '#.########',
           '#.#......#',
+          '#........#',
           '#.######.#',
           '#........#',
-          '#.#######.',
           '#......RE#',
           '##########'
         ],
-        max: 14
+        max: 16
       },
       {
         titolo: 'Scenario 6 — Evacuazione completa con freccia finale',
-        desc: 'Evacuazione dall\'aula al primo piano. Attraversa i corridoi, evita l\'ascensore ⚠️, arriva alla freccia verde ⬇️ e scendi fino al punto di raccolta 🏁.',
+        desc: 'Evacuazione dall\'aula al primo piano. Attraversa i corridoi aperti, evita l\'ascensore ⚠️, segui le scale 🪜, arriva alla freccia verde ⬇️ e scendi fino al punto di raccolta 🏁.',
         righe: [
           '############',
           '#S.........#',
           '#.##########',
-          '#.#........#',
+          '#.#....A...#',
           '#.#.########',
           '#.#.#X.....#',
           '#.#.########',
           '#.#........#',
-          '#.##########',
+          '#.####.#####',
           '#..........#',
           '#.........D#',
-          '##########.#',
+          '########...#',
           '#..........#',
           '#.........E#',
           '############'
         ],
-        max: 22
+        max: 26
       }
     ];
 
