@@ -1,0 +1,74 @@
+/* Respiro Calmo — Esercizio di respirazione accessibile */
+
+.hide { display: none !important; }
+
+.respiro-info {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  max-width: 520px;
+  margin: 1rem auto 0;
+  font-size: 1rem;
+}
+.respiro-info ul { padding-left: 1.25rem; margin-bottom: 0; }
+.respiro-info li { margin-bottom: 0.35rem; }
+
+.breath-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  padding: 1rem;
+}
+
+.breath-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #42a5f5, #1565c0);
+  box-shadow: 0 0 0 0 rgba(21,101,192,0.35);
+  transition: transform 4s ease-in-out, box-shadow 4s ease-in-out, background 0.4s ease;
+  transform: scale(0.75);
+}
+.breath-circle.inhale {
+  transform: scale(1.4);
+  box-shadow: 0 0 0 36px rgba(21,101,192,0.12);
+  transition: transform 4s ease-in-out, box-shadow 4s ease-in-out;
+}
+.breath-circle.hold {
+  transform: scale(1.4);
+  box-shadow: 0 0 0 24px rgba(21,101,192,0.18);
+  transition: transform 2s ease-in-out, box-shadow 2s ease-in-out;
+}
+.breath-circle.exhale {
+  transform: scale(0.75);
+  box-shadow: 0 0 0 0 rgba(21,101,192,0.35);
+  transition: transform 6s ease-in-out, box-shadow 6s ease-in-out;
+  background: radial-gradient(circle at 30% 30%, #66bb6a, #2e7d32);
+}
+
+.breath-text {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 1.5rem;
+  text-align: center;
+  min-height: 2.5em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breath-circle,
+  .breath-circle.inhale,
+  .breath-circle.hold,
+  .breath-circle.exhale {
+    transition: none !important;
+    transform: scale(1) !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .breath-circle { width: 140px; height: 140px; }
+  .breath-text { font-size: 1.5rem; }
+}

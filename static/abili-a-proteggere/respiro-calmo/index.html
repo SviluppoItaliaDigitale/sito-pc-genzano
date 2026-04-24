@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Respiro Calmo — Abili a Proteggere</title>
+  <meta name="description" content="Esercizio di respirazione guidato per calmarsi in situazioni di paura: attività accessibile.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Abili a Proteggere</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Respiro Calmo</li>
+          </ol>
+        </nav>
+        <h1>Respiro Calmo</h1>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div id="intro-screen">
+            <p class="lead text-center mb-3">Respira insieme al cerchio</p>
+            <p class="text-center text-muted mb-3">Quando hai paura o sei agitato, respirare piano ti aiuta a calmarti. Questo esercizio è semplice: segui il cerchio che si allarga e si restringe.</p>
+            <div class="respiro-info">
+              <p class="mb-2"><i class="bi bi-lungs-fill text-primary me-2" aria-hidden="true"></i><strong>Come funziona:</strong></p>
+              <ul class="mb-0">
+                <li>Il cerchio si <strong>allarga</strong>: inspira dal naso (4 secondi)</li>
+                <li>Il cerchio <strong>resta fermo</strong>: trattieni il respiro (2 secondi)</li>
+                <li>Il cerchio si <strong>restringe</strong>: butta fuori l\u2019aria dalla bocca (6 secondi)</li>
+              </ul>
+            </div>
+            <div class="text-center mt-4">
+              <button id="start-btn" class="btn btn-primary btn-lg px-5 py-3" style="font-size: 1.3rem;"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia l\u2019esercizio</button>
+            </div>
+          </div>
+
+          <div id="breath-screen" class="hide">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="fw-bold" style="font-size: 1.1rem;">Giro <span id="round-n">1</span> di <span id="round-total">4</span></span>
+              <button id="stop-btn" type="button" class="btn btn-sm btn-outline-secondary">
+                <i class="bi bi-pause-fill me-1" aria-hidden="true"></i> Ferma
+              </button>
+            </div>
+
+            <div class="breath-wrap" role="region" aria-label="Esercizio di respirazione">
+              <div id="breath-circle" class="breath-circle" aria-hidden="true"></div>
+              <div id="breath-text" class="breath-text" aria-live="polite">Preparati\u2026</div>
+            </div>
+            <p class="text-center text-muted mt-3 mb-0" style="font-size: 1rem;">Puoi fermare l\u2019esercizio quando vuoi.</p>
+          </div>
+
+          <div id="end-screen" class="hide">
+            <div class="text-center py-4">
+              <div class="mb-3" style="font-size: 4rem; color: #2e7d32;"><i class="bi bi-wind" aria-hidden="true"></i></div>
+              <h2 class="h3 mb-3" style="color: #2e7d32;">Bravo! Hai respirato piano.</h2>
+              <p class="lead mb-2">Quando hai paura puoi rifare questo esercizio.</p>
+              <p class="text-muted mb-4">Bastano pochi minuti per sentirsi meglio. Se stai male davvero, chiedi aiuto a un adulto o chiama il <strong>112</strong>.</p>
+              <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button id="restart-btn" class="btn btn-primary btn-lg px-4 py-3"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i> Rifai</button>
+                <a href="../index.html" class="btn btn-outline-secondary btn-lg px-4 py-3"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna alle attività</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

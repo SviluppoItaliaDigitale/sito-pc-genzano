@@ -1,0 +1,148 @@
+/* Semaforo della Sicurezza — Stile accessibile */
+
+.hide { display: none !important; }
+
+.color-legend {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-width: 520px;
+  margin: 1rem auto 0;
+}
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #17324D;
+}
+.color-chip {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #17324D33;
+  flex: 0 0 24px;
+}
+.cc-verde { background: #2e7d32; }
+.cc-giallo { background: #fbc02d; }
+.cc-arancione { background: #ef6c00; }
+.cc-rosso { background: #c62828; }
+
+.situation-card {
+  background: linear-gradient(135deg, #f8f9fa, #e8f0fe);
+  border: 3px solid #003366;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.sit-emoji {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.sit-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.sit-desc {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.colors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.color-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  border: 3px solid #dee2e6;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 150px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #17324D;
+}
+.color-btn:hover:not(:disabled) {
+  border-color: #003366;
+  transform: translateY(-3px);
+}
+.color-btn:focus-visible {
+  outline: 3px solid #ff6600;
+  outline-offset: 2px;
+}
+.color-btn:disabled { cursor: default; }
+.color-disc {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid #17324D33;
+}
+.color-btn.c-verde .color-disc { background: #2e7d32; }
+.color-btn.c-giallo .color-disc { background: #fbc02d; }
+.color-btn.c-arancione .color-disc { background: #ef6c00; }
+.color-btn.c-rosso .color-disc { background: #c62828; }
+
+.color-btn.correct {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+  animation: semaforoPop 0.5s ease;
+}
+@keyframes semaforoPop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+.color-btn.wrong {
+  border-color: #dc3545;
+  background: #fde8ea;
+  animation: semaforoShake 0.4s ease;
+}
+@keyframes semaforoShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+.feedback-box {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.feedback-box.fb-ok {
+  background: #e8f5e9;
+  border: 2px solid #2e7d32;
+  color: #1b5e20;
+}
+.feedback-box.fb-no {
+  background: #fff3e0;
+  border: 2px solid #e65100;
+  color: #bf360c;
+}
+
+@media (max-width: 480px) {
+  .color-legend { grid-template-columns: 1fr; }
+}
