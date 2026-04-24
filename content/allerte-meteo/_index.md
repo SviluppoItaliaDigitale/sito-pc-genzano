@@ -29,7 +29,7 @@ sitemap:
 </div>
 
 {{< external-widget
-    src="https://embed.windy.com/embed2.html?lat=41.6919&lon=12.6928&detailLat=41.6919&detailLon=12.6928&width=100%25&height=600&zoom=12&level=surface&overlay=radar&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
+    src="https://embed.windy.com/embed2.html?lat=41.6919&lon=12.6928&detailLat=41.6919&detailLon=12.6928&width=100%25&height=780&zoom=12&level=surface&overlay=radar&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
     title="Mappa meteo interattiva Windy centrata su Genzano di Roma"
     placeholderTitle="Mappa meteo interattiva"
     placeholderDesc="Per visualizzare la mappa devi caricare i contenuti forniti da <strong>Windy.com</strong>. Il tuo browser riceverà risorse dal loro server e potrebbe impostare cookie tecnici di terze parti."
