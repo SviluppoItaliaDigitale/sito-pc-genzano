@@ -657,6 +657,148 @@ R. Il Piano d'istituto **non è un documento segreto**: va comunicato alla popol
 
 ---
 
+## Altri casi studio e attività di approfondimento
+
+Materiale integrativo per il docente che vuole offrire esempi **concreti, recenti e italiani** alla classe. Tutti i casi qui elencati sono eventi realmente accaduti, con fonti istituzionali verificabili. Per ogni caso studio sono indicati obiettivo didattico, materiali, domande-guida, durata.
+
+### Caso studio 1 — Amatrice 24 agosto 2016 (terremoto)
+
+**Obiettivo**: capire come si attiva il Sistema Nazionale di Protezione Civile in un evento di magnitudo 6.0, il ruolo di INGV, dei volontari, del Dipartimento.
+
+**Materiali**: rassegna stampa dei primi 5 giorni, report INGV (sito istituzionale), video del DPC sull'attivazione della colonna mobile.
+
+**Svolgimento (2 ore)**:
+1. Introduzione del docente: contesto sismico del Centro Italia, faglie attive. (15 min)
+2. Visione di un video DPC di 10 minuti. (15 min)
+3. Lavoro in gruppi: ogni gruppo analizza un aspetto — (A) soccorso sanitario, (B) ricerca dispersi, (C) allestimento tendopoli, (D) gestione sfollati, (E) ruolo dei volontari. (45 min)
+4. Restituzione in plenaria e discussione. (30 min)
+5. Compito a casa: scrivere un breve articolo di giornale (300-400 parole) dal punto di vista di un giornalista dell'epoca. (autonomo)
+
+**Domande-guida per la discussione**:
+- Perché alcuni edifici sono crollati e altri sono rimasti in piedi?
+- Qual è la differenza tra "soccorso sanitario" (ARES 118) e "soccorso tecnico" (VVF)?
+- Chi decide quando si può tornare a dormire in casa dopo una scossa?
+- Quale è stato il ruolo del volontariato di protezione civile? Dei volontari esperti vs spontanei?
+
+### Caso studio 2 — Alluvione Emilia-Romagna maggio 2023
+
+**Obiettivo**: comprendere la gestione di un evento alluvionale di grande scala e il nesso con il cambiamento climatico.
+
+**Materiali**: report ARPAE Emilia-Romagna, mappe di Copernicus EMS (attivazione EMSR661), articoli scientifici su medicane e eventi compound.
+
+**Domande-guida**:
+- Cos'è un "evento compound"? (siccità → suolo impermeabile → alluvione rapida)
+- Perché 23 fiumi hanno rotto gli argini in 36 ore?
+- Qual è stato il ruolo di [IT-alert](https://www.it-alert.it/) nella prima sperimentazione?
+- I volontari da Lazio sono stati inviati? Come si organizza la colonna mobile regionale?
+
+### Caso studio 3 — Frana di Ischia 26 novembre 2022
+
+**Obiettivo**: analizzare il rapporto tra abusivismo edilizio, dissesto idrogeologico e rischio.
+
+**Materiali**: report ISPRA, articoli giornalistici verificati, mappe PAI.
+
+**Domande-guida**:
+- Perché su Ischia ci sono così tanti edifici in aree classificate a rischio?
+- Cosa significa "condono edilizio" e quale effetto ha sul rischio?
+- Una comunità può tornare a vivere sicura dopo un evento simile? Cosa cambia?
+
+### Caso studio 4 — Incendi estivi Sardegna luglio 2021
+
+**Obiettivo**: capire la prevenzione AIB, il ruolo dei Canadair, la pianificazione regionale.
+
+**Materiali**: dati EFFIS, report Corpo Forestale, piano AIB Sardegna.
+
+**Domande-guida**:
+- Perché il 99% degli incendi boschivi in Italia ha origine dolosa o colposa?
+- Cosa fa un volontario AIB? (non spegne direttamente le fiamme: fa avvistamento, contenimento, supporto logistico)
+- Come si integrano la componente aerea (Canadair, elicotteri) e terrestre?
+
+### Caso studio 5 — Terremoto dei Campi Flegrei (bradisismo in corso)
+
+**Obiettivo**: collegare l'attualità alla vulcanologia, comprendere il **rischio vulcanico quiescente** (rilevante per i Colli Albani, il nostro territorio).
+
+**Materiali**: rapporti INGV-OV (Osservatorio Vesuviano), piano di emergenza Campi Flegrei del DPC.
+
+**Domande-guida**:
+- Cosa significa "bradisismo"?
+- Perché i Campi Flegrei sono considerati tra i vulcani più pericolosi del mondo?
+- Esiste un piano simile per i Colli Albani? Cosa dice?
+- Come comunica l'INGV ai cittadini le sue osservazioni scientifiche?
+
+### Attività: simulazione di comunicazione di crisi
+
+**Scenario**: un temporale intenso sta per colpire Genzano. La Regione Lazio ha emesso allerta arancione. Il Sindaco attiva il COC. Tu sei il responsabile comunicazione del Comune.
+
+**Compito**: redigere in 30 minuti:
+- Un post per Facebook/Instagram (max 80 parole, tono calmo ma chiaro)
+- Un messaggio Telegram di aggiornamento alla popolazione (max 150 parole)
+- Una nota stampa per le testate locali (max 300 parole)
+
+**Valutazione**: chiarezza, correttezza delle informazioni, rispetto dei registri comunicativi diversi, assenza di allarmismo.
+
+**Debriefing in classe (20 minuti)**:
+- Confronto tra i diversi testi prodotti
+- Analisi: quali errori sono stati commessi più spesso? (terrorismo psicologico, uso di tecnicismi, informazioni non verificate)
+- Lettura di comunicazioni ufficiali reali (DPC, Regione Lazio) per confronto.
+
+### Service learning — 4 proposte operative
+
+Attività in cui gli studenti **agiscono concretamente** per la comunità, coniugando apprendimento e cittadinanza attiva.
+
+**Progetto 1 — "Io non rischio Junior"**: gli studenti, formati da un volontario, preparano un banchetto informativo (con brochure, poster, gadget) da allestire in una piazza di Genzano il sabato mattina. Durata: 1 mattinata + 3 incontri preparatori.
+
+**Progetto 2 — Adotta un'area di attesa**: una classe si assume la responsabilità di monitorare nel corso dell'anno lo stato dei cartelli e la segnaletica di una delle 10 aree di attesa del Comune. Segnala al Gruppo eventuali danni o mancanze. Durata: tutto l'anno scolastico.
+
+**Progetto 3 — Nonni sicuri**: gli studenti preparano e conducono un incontro di 90 minuti presso un centro anziani per spiegare il 112, l'IT-alert, le allerte meteo. Include una dispensa cartacea stampata. Durata: 1 incontro + 4 incontri preparatori.
+
+**Progetto 4 — Podcast "Sicuri insieme"**: produzione di una serie di 4-6 podcast di 10 minuti ciascuno sui rischi del territorio, intervistando esperti locali (volontari, geologi, docenti universitari). Pubblicazione su piattaforme aperte (Spreaker free, YouTube). Durata: 2 mesi. Valutabile per competenze digitali + italiano.
+
+### Intervista al volontario — traccia strutturata
+
+Prima che il volontario venga in classe, gli studenti preparano domande in piccoli gruppi. Traccia di **15 domande di qualità** (non banali) da personalizzare:
+
+**Personali**
+1. Quando hai deciso di diventare volontario di protezione civile? Cosa ti ha spinto?
+2. Quanto tempo dedichi al volontariato in una settimana-tipo?
+3. Ricordi la prima attivazione in cui sei stato coinvolto? Com'è andata?
+
+**Tecniche**
+4. Che tipo di formazione serve per diventare operativo?
+5. Cosa c'è nel tuo zaino operativo? Perché proprio quelle cose?
+6. In che consiste una "colonna mobile"?
+
+**Sul nostro territorio**
+7. Qual è il rischio principale per Genzano secondo te?
+8. Quante volte all'anno si attiva il Gruppo per un'emergenza vera?
+9. Cosa può fare un cittadino comune per aiutare il Gruppo?
+
+**Etiche / di cittadinanza**
+10. Cosa pensi dell'autoprotezione come dovere civico?
+11. È capitato di intervenire in un'emergenza che avrebbe potuto essere evitata? Cosa ne pensi?
+12. C'è stato un momento in cui hai avuto paura? Come l'hai gestito?
+
+**Su futuro / tecnologia**
+13. Come sta cambiando il volontariato con le nuove tecnologie (droni, IT-alert, social)?
+14. Pensi che il cambiamento climatico cambierà il vostro lavoro?
+15. Cosa consiglieresti a un ragazzo della nostra età che vuole impegnarsi per la comunità?
+
+### Discussione etica guidata — 4 dilemmi
+
+In plenaria, per 20-30 minuti. Il docente pone il dilemma, la classe discute con la regola del **microfono** (parla solo chi ha la parola). Nessuna risposta "giusta" predefinita — l'obiettivo è far ragionare.
+
+**Dilemma 1**: "Durante un terremoto sei a scuola. Il tuo compagno resta paralizzato sotto il banco e non si alza. Tu hai 12 anni. Lo prendi di forza per portarlo fuori, resti con lui dentro, corri a cercare la maestra? Cosa scegli?"
+
+**Dilemma 2**: "Hai una diretta Instagram mentre c'è un'emergenza in corso nel tuo quartiere. È giusto trasmettere? Aiuta o danneggia la gestione?"
+
+**Dilemma 3**: "Abiti in un'area a rischio frana. Il Comune ha deciso di evacuare il tuo palazzo. Tu non vuoi andare: è casa tua, la ami. Cosa fai? Ha ragione il Comune a obbligarti?"
+
+**Dilemma 4**: "Durante un'alluvione vedi che un negozio ha la saracinesca rotta e c'è merce esposta. Un passante sta prendendo qualcosa. Cosa fai?"
+
+Alla fine si chiede agli studenti di scrivere in 10 righe la propria posizione e giustificarla.
+
+---
+
 ## Materiale consigliato
 
 - [Piano di Emergenza Familiare](/piano-familiare/) — Modello stampabile e compilabile

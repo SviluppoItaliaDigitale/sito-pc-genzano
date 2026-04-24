@@ -657,6 +657,126 @@ R. Sì, è possibile organizzare una visita con dimostrazione di mezzi e attrezz
 
 ---
 
+## Ulteriori attività didattiche e integrazioni
+
+Attività **integrative** da proporre a chi vuole estendere il percorso, differenziare per livelli (classi I-II vs III-IV-V), preparare una Giornata della Sicurezza o coprire il modulo di educazione civica con più profondità.
+
+### Testi narrativi da leggere in classe
+
+La letteratura è un ponte privilegiato verso la comprensione del rischio. Letture consigliate, con spunti di discussione pronti:
+
+**Per classi I-II-III:**
+- *La grande pioggia*, adattamento del diluvio universale in chiave di alluvione → discussione: "cosa avreste fatto se foste stati lì? chi aiuta gli altri?"
+- *Il piccolo mago e il terremoto* (inventato dal docente o costruito in classe collettivamente) → il mago sbaglia un incantesimo e fa tremare la terra. Chi lo aiuta? Cosa fanno gli abitanti?
+- Passaggi tratti da *Cipì* di Mario Lodi: la piccola storia di un uccellino che impara a proteggersi dai pericoli.
+
+**Per classi IV-V:**
+- Brano adattato da *Il giorno della civetta* di Leonardo Sciascia (in versione semplificata): la responsabilità civica di segnalare ciò che non va.
+- Un capitolo di *Terra di sotto* di Luigi Pirandello (adatto per il terremoto di Messina 1908).
+- Articolo di cronaca recente semplificato: un intervento di Protezione Civile in un evento noto (Amatrice 2016, Ischia 2022, alluvione Emilia-Romagna 2023). Il docente può scaricarlo da fonti ufficiali e adattarlo al livello della classe.
+
+Dopo ogni lettura, 10 minuti di discussione guidata con domande aperte:
+1. Cosa è successo nella storia?
+2. Chi è stato aiutato? Chi ha aiutato?
+3. Cosa si poteva fare prima per prevenire il problema?
+4. Questa storia ti fa venire in mente qualcosa di vero?
+
+### Esperimenti aggiuntivi
+
+**Esperimento 4 — Il vulcano di carta** *(classi III-IV-V)*. Materiale: bottiglietta di plastica, bicarbonato, aceto, coloranti alimentari rossi/arancioni, cartapesta. **Procedura**: si costruisce un vulcano in cartapesta attorno alla bottiglia. In classe si versa bicarbonato dentro la bottiglia, poi aceto colorato: la reazione fa "eruttare" schiuma colorata. Spiegazione: la pressione dei gas simula quella del magma. **Collegamento**: i Colli Albani sono un **vulcano quiescente**. Genzano si trova su una caldera vulcanica. Importante far capire che "quiescente" non significa "spento" e che esistono monitoraggi costanti (INGV).
+
+**Esperimento 5 — La spirale dell'acqua** *(classi IV-V)*. Materiale: due bottiglie di plastica, acqua colorata, un connettore (si trova in commercio o si costruisce con nastro adesivo). **Procedura**: si collegano le due bottiglie, si riempie quella superiore d'acqua, si imprime un movimento rotatorio. Si forma un vortice. **Collegamento**: il movimento rotatorio dei cicloni mediterranei (medicane), sempre più frequenti per il cambiamento climatico. Un esempio locale: i temporali intensi dei Castelli Romani in estate.
+
+**Esperimento 6 — Il ponte di carta che regge il terremoto** *(classi III-V)*. Materiale: fogli di carta, cannucce, spilli, scatole di scarpe. **Procedura**: in gruppi di 4, i bambini costruiscono un "ponte" di carta tra due scatole, poi provano a scuotere il tavolo. Chi resiste più a lungo? Perché? **Collegamento**: ingegneria antisismica. I progetti del Dipartimento di Protezione Civile per edifici scolastici sicuri.
+
+### Role-play strutturati con copione
+
+Ideali per 20-30 minuti di didattica attiva. Il docente legge la cornice, i bambini leggono i dialoghi.
+
+**Role-play 1 — La chiamata al 112 (versione avanzata)**
+Scenario: "Sei a casa con la nonna. Senti un forte rumore in cucina. Vai e vedi che la nonna è per terra e non parla."
+- *Tu*: compone 112
+- *Operatore* (compagno): "112, qual è l'emergenza?"
+- *Tu*: "La nonna è caduta e non parla."
+- *Operatore*: "Dove sei?"
+- *Tu*: dice indirizzo e piano
+- *Operatore*: "Lei respira?"
+- *Tu*: "Non lo so, sto controllando… sì, respira."
+- *Operatore*: "Bravissimo. Non spostarla. Arriva l'ambulanza. Stai in linea con me."
+Dopo il role-play, in plenaria: cosa ha fatto bene? Cosa si poteva fare meglio?
+
+**Role-play 2 — L'evacuazione**
+Il docente impersona la voce dell'altoparlante. Un bambino fa il compagno che si nasconde sotto al banco invece di mettersi in fila (errore). La classe deve convincerlo con parole calme a uscire. Discussione: perché c'è chi si spaventa? Come aiutiamo?
+
+**Role-play 3 — Il vicino di casa**
+Scenario: durante un'evacuazione al parco di Piazza Sforza, una signora anziana arriva zoppicando e chiede aiuto. Tu hai 10 anni. Cosa fai? Discussione in coppia, poi in plenaria: si va ad avvisare un volontario o un adulto. Non si cerca di portare via da soli.
+
+### Attività artistiche
+
+**Attività 1 — Il grande cartellone di classe**. La classe, divisa in gruppi, realizza un cartellone murale grande (1×2 metri) intitolato "LA NOSTRA SICUREZZA A SCUOLA". Ogni gruppo si occupa di una sezione: mappa dell'istituto con uscite, numeri di emergenza (112), cosa fare per i quattro rischi (terremoto/alluvione/incendio/temporale), squadra della classe (ruoli: aprifila, chiudifila, compagno-guida). Il cartellone resta in classe tutto l'anno.
+
+**Attività 2 — Il poster del 112**. Ciascuno realizza un poster A3 per casa, da consegnare ai genitori. Vincolo: il 112 deve essere grande, ben visibile, leggibile da 2 metri di distanza. Tecniche libere: pennarelli, collage, disegno digitale con l'app della scuola. I poster possono essere mostrati in una piccola mostra alla fine del percorso.
+
+**Attività 3 — Il fumetto dell'emergenza** *(classi III-V)*. A gruppi di 3-4, realizzare un fumetto di 8 vignette che racconta un evento (a scelta tra quelli studiati) vissuto dal punto di vista di un bambino. Valutazione: correttezza delle informazioni (comportamenti giusti) + qualità espressiva.
+
+### Verifiche aggiuntive pronte all'uso
+
+**Verifica A — Scheda di completamento** *(20 minuti, classi II-III)*
+1. Il numero di emergenza in Italia è ______.
+2. Quando suona l'allarme a scuola usciamo in fila, **tenendoci per mano** / **correndo** (cerchia).
+3. Durante il terremoto mi metto sotto il ________.
+4. Se vedo un incendio chiamo subito il _______.
+5. Disegna qui sotto il cartello dell'uscita di emergenza.
+6. Scrivi tre cose che metteresti nello zainetto di emergenza a casa: _______.
+
+**Verifica B — Domande aperte** *(30 minuti, classi IV-V)*
+1. Cosa significa "rischio idrogeologico"? Fai un esempio.
+2. Perché è sbagliato uscire di casa durante un terremoto se abiti al 3° piano?
+3. Descrivi cosa faresti se fossi a casa da solo e sentissi un forte rumore di acqua dal soffitto.
+4. Qual è il ruolo del volontario di protezione civile? Diverso dai vigili del fuoco? Spiega.
+5. Elenca almeno 3 contenuti del tuo "Piano di Emergenza Familiare".
+
+**Verifica C — Compito di realtà** *(1-2 settimane, classi IV-V)*
+"Realizza una guida illustrata di 6 pagine intitolata *Cosa fa la mia famiglia in caso di emergenza*. Struttura obbligatoria: 1) copertina con titolo e autore; 2) il rischio principale del mio territorio; 3) il piano familiare compilato; 4) il contenuto del kit di emergenza; 5) i numeri utili; 6) un disegno o foto della nostra aree di attesa di quartiere. Consegna in formato A4, rilegato a piacere."
+
+### Giornata della Sicurezza a scuola — programma completo
+
+Evento di una mattinata intera (4 ore), idealmente il **13 ottobre** (Giornata Internazionale per la Riduzione dei Disastri ONU) o in primavera a tema "Io non rischio".
+
+| Orario | Attività | Chi conduce |
+|---|---|---|
+| 09:00-09:20 | Accoglienza e presentazione della giornata | Dirigente / docente coordinatore |
+| 09:20-10:00 | Incontro con i volontari del Gruppo (racconto attività + domande) | Volontari Gruppo PC Genzano |
+| 10:00-10:30 | Visita mezzi in cortile (autopompa, veicolo AIB, attrezzature) | Volontari |
+| 10:30-11:00 | Merenda | Classe |
+| 11:00-11:30 | Esercitazione di evacuazione reale dell'istituto | Tutti, coordinata dal RSPP |
+| 11:30-12:00 | Workshop: quiz a squadre con premi | Docenti |
+| 12:00-12:30 | Restituzione, canzone finale, consegna attestati di "Piccolo volontario di classe" | Dirigente |
+
+Da concordare con almeno **4 settimane di anticipo** con il Gruppo Comunale (segreteria@protezionecivilegenzano.it) e con l'RSPP della scuola.
+
+### Lettera alle famiglie (modello)
+
+Da adattare con intestazione della scuola:
+
+> **Carissime famiglie,**
+>
+> nel corso di questo anno scolastico la classe [NOME] affronterà un percorso di educazione civica dedicato alla **Protezione Civile**. L'obiettivo è formare cittadini consapevoli dei rischi del nostro territorio e capaci di adottare comportamenti di autoprotezione corretti.
+>
+> I temi trattati sono: il sistema nazionale di protezione civile, i rischi principali (terremoto, alluvione, incendio, temporali intensi), i comportamenti di autoprotezione, il piano di emergenza familiare, il volontariato.
+>
+> **Come possiamo collaborare in famiglia:**
+> - Compilate insieme ai bambini il [Piano di Emergenza Familiare](/piano-familiare/) che trovate sul sito del Gruppo Volontari. È un'attività che si fa in mezz'ora, da aggiornare ogni 6 mesi.
+> - Verificate insieme che il vostro telefono abbia il 112 nei numeri rapidi (Italia, dal 2017 **il 112 è il numero unico** per ogni emergenza).
+> - Individuate la **Area di Attesa** più vicina a casa vostra consultando la [Cartografia Operativa](/cartografia/) del Comune.
+> - Preparate un piccolo **zainetto di emergenza** domestico con torcia, acqua, coperta termica, fischietto, copia dei documenti.
+>
+> Se avete esperienze dirette con emergenze (anche minori) che volete condividere, contattateci: possono diventare materiale didattico prezioso.
+>
+> *Il team docenti*
+
+---
+
 ## Materiale consigliato
 
 - [Piano di Emergenza Familiare](/piano-familiare/) — Da stampare e compilare con la famiglia

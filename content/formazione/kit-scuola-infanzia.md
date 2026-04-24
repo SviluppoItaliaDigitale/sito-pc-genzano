@@ -384,6 +384,137 @@ R. Ascolta con calma, non giudicare, non approfondire davanti al gruppo. Segnala
 
 ---
 
+## Esempi pratici aggiuntivi
+
+Materiale operativo pronto all'uso per estendere il percorso base. Le attività qui proposte sono **integrative**, non sostitutive: possono essere usate per prolungare il percorso, ripetere concetti, differenziare per gruppi di età (3 anni vs 4-5 anni) o coprire un'intera settimana tematica.
+
+### Filastrocche e canzoncine
+
+Strumenti mnemonici per fissare i concetti chiave. Si possono cantare su melodie note (es. *Fra' Martino*, *Giro giro tondo*) o semplicemente recitate in cerchio.
+
+**Filastrocca della tartaruga (terremoto)**
+> La tartaruga piccolina / quando trema la cucina / si nasconde piano piano / sotto il tavolo o un divano. / Dentro il guscio sta al sicuro / e non ha proprio paura!
+
+**Filastrocca del 112**
+> Uno, uno, due — il numero è per te! / Se c'è un grande guaio / chiama senza ritardo. / Vigili del fuoco, medici e carabinieri / vengono veloci, gli amici veri.
+
+**Filastrocca dell'allarme**
+> Quando suona din-don-dan / tutti in fila, piano piano. / Prendiamo per mano / un amico vicino / e usciamo tutti sul cammino. / Il cartello verde ci dirà / dov'è l'uscita di qua.
+
+Ripetere ogni giorno per una settimana. A fine settimana i bambini la sanno a memoria.
+
+### Scene di role-play con copione (5 scene pronte)
+
+Il docente legge la scena ad alta voce; i bambini rispondono come indicato. Ogni scena dura 3-5 minuti. Utile per rinforzare dopo ogni incontro.
+
+**Scena 1 — Il telefono rotto**
+> *Docente*: "Bambini, oggi giochiamo a fare una telefonata importante. Chi vuole provare a chiamare il 112?"
+> *Bambino 1 (al "telefono")*: "Uno-uno-due, pronto, chi sei?"
+> *Docente (risponde come operatore)*: "Sono il 112. Cosa è successo?"
+> *Bambino 1*: "La nonna è caduta e non si alza!"
+> *Docente*: "Bravissimo. Dove sei adesso?"
+> *Bambino 1*: "A casa mia in via…"
+
+Obiettivo: il bambino capisce che al 112 bisogna dire **cosa è successo** e **dove**. Il docente può variare con scenari diversi (fumo, gatto sul tetto — no, non si chiama 112 per il gatto; serve a far distinguere).
+
+**Scena 2 — La sirena a scuola**
+> *Docente*: "Driiin! È la sirena! Cosa facciamo?"
+> *Bambini in coro*: "Ci mettiamo in fila!"
+> *Docente*: "E corriamo?"
+> *Bambini*: "Nooo! Andiamo piano piano!"
+> *Docente*: "E se Marco piange?"
+> *Bambini*: "Lo prendiamo per mano!"
+
+**Scena 3 — La tartaruga saggia**
+> *Docente*: "La tartaruga Tartù sente che la terra trema. Cosa fa?"
+> *Bambini*: "Si nasconde sotto il tavolo!"
+> *Docente*: "Esce di corsa?"
+> *Bambini*: "Noooo!"
+> *Docente*: "E quando smette di tremare?"
+> *Bambini*: "Chiama la maestra!"
+
+**Scena 4 — Il temporale alla finestra**
+> *Docente*: "Piove forte e c'è il tuono. Marco vuole andare sul balcone. Cosa gli diciamo?"
+> *Bambini*: "Stai dentro! È pericoloso!"
+> *Docente*: "E se cade un lampo?"
+> *Bambini*: "Non stare sotto l'albero!"
+
+**Scena 5 — Il piccolo fuoco**
+> *Docente*: "A casa la pentola sta fumando forte. Che cosa fa Luca?"
+> *Bambini*: "Chiama la mamma!"
+> *Docente*: "E se non c'è nessuno?"
+> *Bambini*: "Esce di casa e chiama il 112!"
+
+### Schede fotocopiabili aggiuntive
+
+**Scheda 6 — Il labirinto dell'uscita**: disegno di un corridoio di scuola con ostacoli (pallone, borsa, giocattolo) e in fondo il cartello verde dell'uscita. Il bambino con la matita fa il percorso giusto, senza passare sopra gli ostacoli. *Obiettivo*: interiorizzare il "non correre, evita gli ostacoli".
+
+**Scheda 7 — Trova le coppie**: 8 immagini da collegare con una linea — cartello di uscita/direzione uscita, estintore/fuoco, tartaruga/tavolo, mano/altra mano (il compagno), pioggia/ombrello in casa, terremoto/mani sulla testa, telefono/numero 112, maestra/fila. *Obiettivo*: associazione oggetto-azione.
+
+**Scheda 8 — Disegna e incolla lo zainetto d'emergenza**: silhouette di uno zaino con dentro 6 spazi. Il bambino disegna o ritaglia da un foglio a parte: bottiglia d'acqua, torcia, caramelle, coperta, foto di famiglia, numero del genitore. *Obiettivo*: preparare simbolicamente il kit familiare, da portare a casa e completare con i genitori.
+
+**Scheda 9 — Vero o falso con le facce**: 6 affermazioni brevi con emoticon felice/triste da colorare.
+- "Durante il terremoto esco di corsa fuori" → 😟 (falso)
+- "Quando suona la sirena prendo per mano un amico" → 😊 (vero)
+- "Il 112 lo chiamo solo se c'è un'emergenza vera" → 😊 (vero)
+- "Posso usare l'ascensore se suona l'allarme" → 😟 (falso)
+- "Se piove forte sto dentro casa" → 😊 (vero)
+- "Chiamo il 112 per dire che è bello il mio disegno" → 😟 (falso)
+
+**Scheda 10 — Il semaforo delle emozioni**: tre cerchi (rosso, giallo, verde) con sotto uno spazio per disegnare. Rosso = "quando ho molto paura cosa faccio?"; giallo = "quando sono preoccupato cosa dico?"; verde = "quando sono calmo come mi sento?". *Obiettivo*: gestione emotiva — imparare a riconoscere e comunicare la paura è parte integrante dell'autoprotezione.
+
+### Routine quotidiane di 5 minuti
+
+Da incastrare senza stravolgere la giornata. Una volta alla settimana è sufficiente a mantenere vivi i concetti per tutto l'anno.
+
+- **Lunedì del 112** — in cerchio, ogni bambino dice il numero dell'emergenza. Chi lo dimentica, i compagni gli suggeriscono. 2 minuti.
+- **Martedì delle parole magiche** — il docente mostra una parola scritta su un cartello (USCITA, FUOCO, SIRENA, TERREMOTO) e i bambini fanno il gesto corrispondente.
+- **Mercoledì del cartello** — il docente porta in cerchio uno dei cartelli della scuola (uscita di emergenza, estintore, via di fuga) e si chiede cosa indica.
+- **Giovedì della tartaruga** — tutti mimano la tartaruga per 30 secondi (sotto il tavolino o mani sulla testa accucciati).
+- **Venerdì della fila** — si prova a mettersi in fila tenendosi per mano "come se" suonasse la sirena, poi ci si dà il cinque e si torna al gioco.
+
+### "Valigetta della sicurezza" — attività strutturata (30 minuti)
+
+Materiale: una scatola o valigia vuota (decorata dai bambini in una lezione precedente), oggetti misti da classificare. **Come si gioca**: il docente mette in mezzo alla classe una ventina di oggetti vari — alcuni utili in caso di emergenza (torcia, bottiglia d'acqua, fischietto, coperta, telefono giocattolo, fazzoletti, biscotti sigillati, foto di famiglia), altri non utili (giocattoli non essenziali, pezzi di puzzle, pentola, libro scolastico). A turno i bambini scelgono un oggetto e decidono se metterlo nella valigetta (utile) o lasciarlo fuori (non utile), spiegando perché.
+
+*Obiettivo*: imparare cosa serve davvero in emergenza, distinguere tra bisogni reali e giochi. Rinforza la preparazione del piano familiare a casa (da discutere con i genitori).
+
+### "Giornata della Protezione Civile" — mini evento
+
+Una volta nel percorso (meglio a fine percorso), organizzare 90 minuti dedicati. Possibile struttura:
+
+- 15 min — **Accoglienza**: i bambini entrano con un "distintivo" di Piccolo Volontario realizzato in classe.
+- 20 min — **Storia**: lettura animata di un racconto (*La pioggia che non faceva paura*, *Tartù e il terremoto*) con pupazzi o marionette.
+- 20 min — **Prova pratica**: esercitazione di evacuazione guidata con la sirena giocosa.
+- 20 min — **Incontro con un volontario**: se possibile, un volontario del Gruppo viene in visita. I bambini gli pongono tre domande preparate in anticipo ("Come si chiama la tua divisa?", "Cosa c'è nel tuo zaino?", "Hai mai aiutato qualcuno?").
+- 15 min — **Merenda insieme** e consegna di un disegno fatto in classe al volontario, come ringraziamento.
+
+Documentare con foto (con autorizzazioni genitoriali) per condividere con le famiglie e comunicare al Gruppo. Se interessati, scriveteci a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it): il Gruppo valuta disponibilità di volontari per visite gratuite.
+
+### Lettera di comunicazione alle famiglie (modello)
+
+Da adattare con intestazione della scuola e consegnare all'inizio del percorso:
+
+> **Carissimi genitori,**
+>
+> nelle prossime settimane i bambini della sezione [NOME] affronteranno un piccolo percorso educativo dedicato alla **Protezione Civile**. Impareranno, giocando, cosa fare in caso di terremoto, come mettersi in fila quando suona la sirena, quale è il **numero 112** e perché è così importante.
+>
+> Non è un percorso "che fa paura": è un percorso che **rassicura**, perché un bambino che sa cosa fare è un bambino meno spaventato. I concetti saranno presentati con filastrocche, giochi, racconti e schede colorate.
+>
+> **Cosa potete fare a casa:**
+> - Provate a chiedere al bambino cosa ha imparato e fatevi raccontare con parole sue.
+> - Quando torna a casa con una scheda della tartaruga Tartù o del 112, attaccatela al frigorifero: è un promemoria anche per gli adulti.
+> - Preparate insieme, giocando, lo "zainetto di emergenza" di casa (torcia, bottiglia d'acqua, caramelle, foto di famiglia, numero di un parente scritto chiaro). Il bambino si sentirà coinvolto.
+> - Provate a compilare insieme il [Piano di Emergenza Familiare](/piano-familiare/) disponibile sul sito del Gruppo.
+>
+> **Il numero 112** è l'unico numero da chiamare in caso di emergenza (non più 113, 115 o 118). Insegnarlo ai bambini è un gesto di sicurezza concreto.
+>
+> Se avete domande, siamo a disposizione.
+>
+> *Le insegnanti della sezione [NOME]*
+
+---
+
 ## Materiale consigliato
 
 Per approfondire e avere materiale aggiuntivo:
