@@ -122,10 +122,8 @@
 {{/* Strumenti di monitoraggio in tempo reale — widget esterni click-to-load */}}
 <section class="section-padding bg-light" aria-labelledby="monitoraggio-title">
   <div class="container">
-    <div class="text-center mb-4">
-      <h2 id="monitoraggio-title" class="section-title">Monitoraggio in tempo reale</h2>
-      <p class="text-muted">Strumenti di consultazione da fonti scientifiche ufficiali. <strong>Non sostituiscono</strong> i bollettini di allerta della Regione Lazio.</p>
-    </div>
+    <h2 id="monitoraggio-title" class="section-title text-center">Monitoraggio in tempo reale</h2>
+    <p class="text-muted text-center mb-4">Strumenti di consultazione da fonti scientifiche ufficiali. <strong>Non sostituiscono</strong> i bollettini di allerta della Regione Lazio.</p>
     <div class="ext-widget-grid">
       {{ partial "external-widget.html" (dict
         "src"              "https://embed.windy.com/embed2.html?lat=41.6919&lon=12.6928&detailLat=41.6919&detailLon=12.6928&width=100%25&height=780&zoom=12&level=surface&overlay=radar&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
