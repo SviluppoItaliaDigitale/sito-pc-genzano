@@ -9,29 +9,42 @@
   var SOGLIA_BADGE = 80;
 
   // Catalogo ID giochi (per validazione/visualizzazione)
+  // Gli ID devono corrispondere a quelli passati a GiochiUtil.salvaEMostraAttestato
+  // o GiochiPC.salvaRisultato nei singoli giochi.
   var CATALOGO = {
-    // Infanzia 3-6
-    'tartaruga-infanzia':       { nome: 'La Tartaruga Saggia',        fascia: 'infanzia', icona: 'bi-shield-shaded' },
-    'numero-emergenza-infanzia':{ nome: 'Il Numero 112',              fascia: 'infanzia', icona: 'bi-telephone-fill' },
-    'suoni-infanzia':           { nome: 'I Suoni dell\u2019Emergenza',fascia: 'infanzia', icona: 'bi-volume-up-fill' },
-    'memory-facile-infanzia':   { nome: 'Memory Facile',              fascia: 'infanzia', icona: 'bi-grid-3x3-gap-fill' },
-    // Primaria 6-11
-    'quiz-primaria':            { nome: 'Quiz della Sicurezza',       fascia: 'primaria', icona: 'bi-question-circle-fill' },
-    'memory-primaria':          { nome: 'Memory dei Rischi',          fascia: 'primaria', icona: 'bi-grid-3x3-gap-fill' },
-    'caccia-rischio-primaria':  { nome: 'Caccia al Rischio',          fascia: 'primaria', icona: 'bi-search' },
-    'zaino-primaria':           { nome: 'Lo Zaino di Emergenza',      fascia: 'primaria', icona: 'bi-backpack2-fill' },
-    'semaforo-primaria':        { nome: 'Il Semaforo del Rischio',    fascia: 'primaria', icona: 'bi-stoplights-fill' },
-    'cosa-faccio-primaria':     { nome: 'Cosa Faccio Se\u2026',       fascia: 'primaria', icona: 'bi-signpost-split-fill' },
-    'abbina-primaria':          { nome: 'Abbina e Impara',            fascia: 'primaria', icona: 'bi-link-45deg' },
-    'anagrammi-primaria':       { nome: 'Anagrammi della Sicurezza',  fascia: 'primaria', icona: 'bi-shuffle' },
-    'cruciverba-primaria':      { nome: 'Cruciverba della Sicurezza', fascia: 'primaria', icona: 'bi-grid-3x3' },
-    'puzzle-scenari-primaria':  { nome: 'Puzzle degli Scenari',       fascia: 'primaria', icona: 'bi-list-check' },
-    // Ragazzi 11-19
-    'coc-ragazzi':              { nome: 'Simulatore COC',             fascia: 'ragazzi',  icona: 'bi-diagram-3-fill' },
-    'responder-ragazzi':        { nome: 'Emergency Responder',        fascia: 'ragazzi',  icona: 'bi-person-walking' },
-    'mappa-ragazzi':            { nome: 'La Mappa del Rischio',       fascia: 'ragazzi',  icona: 'bi-geo-alt-fill' },
-    'radio-ragazzi':            { nome: 'Radio Emergency',            fascia: 'ragazzi',  icona: 'bi-broadcast' },
-    'campo-ragazzi':            { nome: 'Codice Arancione',           fascia: 'ragazzi',  icona: 'bi-bounding-box' }
+    // Infanzia 3-6 (8 giochi)
+    'tartaruga-saggia':       { nome: 'La Tartaruga Saggia',        fascia: 'infanzia', icona: 'bi-shield-shaded' },
+    'numero-emergenza':       { nome: 'Il Numero 112',              fascia: 'infanzia', icona: 'bi-telephone-fill' },
+    'suoni-emergenza':        { nome: 'I Suoni dell\u2019Emergenza',fascia: 'infanzia', icona: 'bi-volume-up-fill' },
+    'memory-facile':          { nome: 'Memory Facile',              fascia: 'infanzia', icona: 'bi-grid-3x3-gap-fill' },
+    'vesti-tina':             { nome: 'Lo Zaino di Tina',           fascia: 'infanzia', icona: 'bi-backpack-fill' },
+    'rifugio-tina':           { nome: 'Il Rifugio di Tina',         fascia: 'infanzia', icona: 'bi-house-fill' },
+    'cielo-oggi':             { nome: 'Il Cielo di Oggi',           fascia: 'infanzia', icona: 'bi-cloud-sun-fill' },
+    'trova-cartello':         { nome: 'Trova il Cartello',          fascia: 'infanzia', icona: 'bi-sign-turn-right-fill' },
+    // Primaria 6-11 (13 giochi)
+    'quiz-primaria':          { nome: 'Quiz della Sicurezza',       fascia: 'primaria', icona: 'bi-question-circle-fill' },
+    'memory-primaria':        { nome: 'Memory dei Rischi',          fascia: 'primaria', icona: 'bi-grid-3x3-gap-fill' },
+    'caccia-al-rischio':      { nome: 'Caccia al Rischio',          fascia: 'primaria', icona: 'bi-search' },
+    'zaino-emergenza':        { nome: 'Lo Zaino di Emergenza',      fascia: 'primaria', icona: 'bi-backpack2-fill' },
+    'semaforo-rischio':       { nome: 'Il Semaforo del Rischio',    fascia: 'primaria', icona: 'bi-stoplights-fill' },
+    'cosa-faccio-se':         { nome: 'Cosa Faccio Se\u2026',       fascia: 'primaria', icona: 'bi-signpost-split-fill' },
+    'abbina-impara':          { nome: 'Abbina e Impara',            fascia: 'primaria', icona: 'bi-link-45deg' },
+    'anagrammi':              { nome: 'Anagrammi della Sicurezza',  fascia: 'primaria', icona: 'bi-shuffle' },
+    'cruciverba':             { nome: 'Cruciverba della Sicurezza', fascia: 'primaria', icona: 'bi-grid-3x3' },
+    'puzzle-scenari':         { nome: 'Puzzle degli Scenari',       fascia: 'primaria', icona: 'bi-list-check' },
+    'labirinto-evacuazione':  { nome: 'Labirinto di Evacuazione',   fascia: 'primaria', icona: 'bi-signpost-2-fill' },
+    'chiamata-112':           { nome: 'Chiamata al 112',            fascia: 'primaria', icona: 'bi-telephone-fill' },
+    'posiziona-cartelli':     { nome: 'Posiziona i Cartelli',       fascia: 'primaria', icona: 'bi-sign-turn-right-fill' },
+    // Ragazzi 11-19 (9 giochi)
+    'simulatore-coc':         { nome: 'Simulatore COC',             fascia: 'ragazzi',  icona: 'bi-diagram-3-fill' },
+    'emergency-responder':    { nome: 'Emergency Responder',        fascia: 'ragazzi',  icona: 'bi-person-walking' },
+    'mappa-rischio':          { nome: 'La Mappa del Rischio',       fascia: 'ragazzi',  icona: 'bi-geo-alt-fill' },
+    'radio-emergency':        { nome: 'Radio Emergency',            fascia: 'ragazzi',  icona: 'bi-broadcast' },
+    'codice-arancione':       { nome: 'Codice Arancione',           fascia: 'ragazzi',  icona: 'bi-bounding-box' },
+    'vero-o-bufala':          { nome: 'Vero o bufala?',             fascia: 'ragazzi',  icona: 'bi-patch-check-fill' },
+    'triage-start':           { nome: 'Triage S.T.A.R.T.',          fascia: 'ragazzi',  icona: 'bi-heart-pulse-fill' },
+    'linea-tempo-eventi':     { nome: 'Linea del tempo',            fascia: 'ragazzi',  icona: 'bi-calendar-event-fill' },
+    'cartelli-pericolo':      { nome: 'Cartelli di Pericolo',       fascia: 'ragazzi',  icona: 'bi-exclamation-diamond-fill' }
   };
 
   var IDS = Object.keys(CATALOGO);
