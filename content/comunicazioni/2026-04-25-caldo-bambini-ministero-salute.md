@@ -144,7 +144,7 @@ In caso di emergenza, il numero da chiamare resta sempre il **112**.
 
 ## Fonti ufficiali
 
-- [Opuscolo "Estate in salute: come proteggere i vostri bambini"](https://www.salute.gov.it/new/sites/default/files/2025-06/opuscolo_bambini_rev2.pdf) (PDF) — a cura di Paola Michelozzi, Francesca de' Donato, Manuela De Sario (**DEP Lazio — ASL Roma 1**); Laura Reali, Giacomo Toffol, Laura Todesco (**Gruppo Pediatri per un mondo possibile — ACP**); Aurelia Fonda (**Ministero della Salute**)
+- [Opuscolo "Estate in salute: come proteggere i vostri bambini"](https://www.salute.gov.it/new/sites/default/files/2025-06/opuscolo_bambini_rev2.pdf) (PDF) — a cura del **Dipartimento di Epidemiologia del Servizio Sanitario Regionale Lazio (DEP Lazio — ASL Roma 1)**, dell'**Associazione Culturale Pediatri (ACP)** e del **Ministero della Salute**
 - [Tema Ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore/) — portale del Ministero della Salute
 - Progetto **CCM "Sistema Operativo Nazionale per la Prevenzione degli Effetti del Caldo sulla Salute"**
 

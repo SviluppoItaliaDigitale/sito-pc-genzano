@@ -104,7 +104,7 @@ Tutti i piani nazionali ed europei di prevenzione del caldo si inseriscono nel q
 
 ## Fonti ufficiali
 
-- **Linee di indirizzo per la prevenzione. Ondate di calore e inquinamento atmosferico** (luglio 2019) — a cura di Annamaria de Martino (Ministero della Salute) e del gruppo DEP Lazio coordinato da Paola Michelozzi. [PDF sul portale Ministero](https://www.salute.gov.it/new/sites/default/files/imported/C_17_pubblicazioni_2867_allegato.pdf)
+- **Linee di indirizzo per la prevenzione. Ondate di calore e inquinamento atmosferico** (luglio 2019) — a cura del **Ministero della Salute** e del **Dipartimento di Epidemiologia del Servizio Sanitario Regionale Lazio (DEP Lazio)**. [PDF sul portale Ministero](https://www.salute.gov.it/new/sites/default/files/imported/C_17_pubblicazioni_2867_allegato.pdf)
 - **Heat-Health Action Plans: guidance** (2008) — World Health Organization, Regional Office for Europe, ISBN 978-92-890-7191-8. [Scheda e PDF su WHO IRIS](https://www.who.int/publications/i/item/9789289071918)
 - [Tema Ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore/) e [Linee guida e raccomandazioni](https://www.salute.gov.it/new/it/tema/ondate-di-calore/linee-guida-e-raccomandazioni/) — portale del Ministero della Salute
 
