@@ -16,7 +16,7 @@ Il **Ministero dell'Interno** e le sue **Prefetture** producono spesso manuali o
 
 ## Chi ha scritto il Vademecum e perché
 
-Il documento nasce, come dichiara l'autore stesso nelle prime pagine, **su impulso del Prefetto di Isernia dott. Vincenzo Callea**, a cura del **dott. Federico Izzi**, Vice Prefetto Aggiunto del VI° Corso per Consiglieri di Prefettura. Ha due scopi dichiarati:
+Il documento nasce, come dichiarato nelle prime pagine, **su impulso della Prefettura di Isernia**, a cura di un **Vice Prefetto Aggiunto del VI° Corso per Consiglieri di Prefettura**. Ha due scopi dichiarati:
 
 - **formare il personale** impiegato presso il **Centro di Coordinamento dei Soccorsi (CCS)**
 - **predisporre** la **pianificazione di Protezione Civile** a livello provinciale

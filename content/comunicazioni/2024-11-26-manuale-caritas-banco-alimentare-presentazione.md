@@ -24,10 +24,10 @@ Il **Manuale di corrette prassi operative per il recupero, la raccolta e la dist
 
 Il manuale è stato elaborato in collaborazione con:
 
-- **Università degli Studi di Milano** — Dipartimento di Scienze Veterinarie per la Salute, la Produzione Animale e la Sicurezza Alimentare (Dott.ssa Claudia Balzaretti, Dott.ssa Marta Castrica);
-- **Università Cattolica del Sacro Cuore** — sedi di Cremona e Piacenza (Dott.ssa Daniela Bassi, Prof. Pier Sandro Cocconcelli);
-- **Caritas Italiana** (Dott.ssa Beatrice Dall'Olio, Dott. Marzio Mori);
-- **Banco Alimentare** (Dott.ssa Sabrina Granata).
+- **Università degli Studi di Milano** — Dipartimento di Scienze Veterinarie per la Salute, la Produzione Animale e la Sicurezza Alimentare;
+- **Università Cattolica del Sacro Cuore** — sedi di Cremona e Piacenza;
+- **Caritas Italiana**;
+- **Banco Alimentare**.
 
 Il Ministero della Salute ne ha validato i contenuti come **Manuale di Corretta Prassi Operativa**: significa che chi lo applica correttamente ha una presunzione di conformità alla normativa europea sulla sicurezza alimentare.
 

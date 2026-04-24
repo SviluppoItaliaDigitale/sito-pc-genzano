@@ -189,7 +189,6 @@ Belardi per allestimento punto informazioni volontari. Area libera
 fino a ore 18.00. Fine messaggio.
 
 FIRMA:
-Ing. Laura Bianchi
 Coordinatore Gruppo Comunale PC Genzano
 345 123 4567
 ```
