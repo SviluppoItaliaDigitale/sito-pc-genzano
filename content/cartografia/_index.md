@@ -86,13 +86,12 @@ Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che i
 
 ### Aree di Ricovero della Popolazione (AR)
 
-<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 mb-3">
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 mb-4">
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar1.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR1 — Palazzetto dello Sport, Via G. di Vittorio"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR1</p><p class="small text-muted mb-0">Palazzetto Sport</p></div></div></div>
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar2.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR2 — Campo Sportivo Via Piemonte"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR2</p><p class="small text-muted mb-0">Via Piemonte</p></div></div></div>
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar3.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR3 — Campo Sportivo Via Sardegna"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR3</p><p class="small text-muted mb-0">Via Sardegna</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar4.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR4 — Campo Sportivo Salesiani, Via Appia Nuova"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR4</p><p class="small text-muted mb-0">Salesiani</p></div></div></div>
 </div>
-
-<p class="small text-muted mb-4"><i class="bi bi-info-circle me-1" aria-hidden="true"></i>L'**area AR4 — Campo Sportivo Salesiani** è prevista dal Piano Comunale. Il cartello segnaletico fisico è in fase di installazione sul sito; l'area resta operativa e individuabile tramite la cartografia scaricabile.</p>
 
 ## Mappe scaricabili
 

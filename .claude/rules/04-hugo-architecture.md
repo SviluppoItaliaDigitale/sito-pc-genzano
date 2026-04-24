@@ -158,9 +158,11 @@ Per evitare che nuovi file finiscano in cartelle escluse dal deploy FTP (vedi re
 | Manuali tecnici permanenti citati da più articoli | `static/manuali/` | `/manuali/nome.pdf` |
 | Allegati specifici di un articolo | `static/allegati/AAAA/` | `/allegati/AAAA/nome.pdf` |
 | Comunicati stampa firmati | `static/comunicati/AAAA/` | `/comunicati/AAAA/nome.pdf` |
+| Segnaletica aree di emergenza | `static/cartelli/` | `/cartelli/nome.png` |
 | Copertine e foto evento | `static/images/` | `/images/nome.webp` |
+| Archivio storico immagini | `static/images/archivio-storico/` | `/images/archivio-storico/nome.ext` |
 
-**Non** usare `static/documenti/`, `static/cartelli/`, `static/giochi-bambini/`, `static/formazionepc/`, `static/quizpc/` per contenuto nuovo: sono escluse dal deploy.
+**Non** usare `static/documenti/` per contenuto nuovo: resta esclusa dal deploy perché contiene materiale ereditato dal sito precedente gestito direttamente sul server Aruba.
 
 ### Tema personalizzato
 Il tema `flavour-pcgenzano` è una dipendenza interna, non esterna: modificalo liberamente.

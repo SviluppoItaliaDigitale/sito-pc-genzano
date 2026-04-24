@@ -2131,17 +2131,16 @@ Il workflow usa `SamKirkland/FTP-Deploy-Action` con `dangerous-clean-slate: fals
 ```yaml
 exclude: |
   **/documenti/**
-  **/cartelli/**
-  **/giochi-bambini/**
-  **/formazionepc/**
-  **/quizpc/**
 ```
+
+**Storico delle esclusioni (rimosse 24 aprile 2026):** fino al 24 aprile 2026 la lista escludeva anche `**/cartelli/**`, `**/giochi-bambini/**`, `**/formazionepc/**`, `**/quizpc/**`. Dopo l'incidente del cartello AR4 Salesiani — un audit lato utente ha rilevato che il file `ar4.png` era mancante sul server Aruba, ma non c'era modo di accorgersene dal repo perché la cartella era esclusa — queste esclusioni sono state rimosse per eliminare il drift tra repo e server. I cartelli sono stati recuperati dal backup settimanale e ora vivono nel repo come unica fonte di verità.
 
 **Conseguenze operative:**
 
-- Un file messo in `static/documenti/` (o nelle altre cartelle escluse) **non viene caricato su Aruba**: rimane solo nel repository e nella build locale/GitHub Pages. Sembra che "scompaia".
+- Un file messo in `static/documenti/` **non viene caricato su Aruba**: rimane solo nel repository e nella build locale/GitHub Pages. La cartella resta gestita manualmente sul server perché contiene materiale ereditato dal sito precedente (pieghevoli, kit "Io Non Rischio", schede storiche) mai migrato nel repo.
 - Per **nuovi PDF o allegati** da depositare via git, usa le cartelle consentite: `static/allegati/AAAA/`, `static/manuali/`, `static/comunicati/AAAA/`.
-- Se vuoi aggiornare un file in una cartella protetta, devi caricarlo **manualmente via FTP** su Aruba, oppure modificare l'esclusione nel workflow (con cautela: molti contenuti storici potrebbero andare persi se si rimuove l'esclusione senza migrare prima).
+- Per **nuovi cartelli segnaletici** (aree di attesa, aree di ricovero, aree di ammassamento), usa `static/cartelli/`: ora deployano automaticamente.
+- Se vuoi aggiornare un file in `static/documenti/`, devi caricarlo **manualmente via FTP** su Aruba, oppure migrare il contenuto in una cartella del repo e aggiornare i riferimenti.
 - Vale lo stesso principio per eventuali cartelle aggiunte alla lista in futuro. Quando modifichi `deploy.yml`, aggiorna **anche questa tabella e la Parte 1.10** del manuale.
 
 ### 10.3 — `check-allerta.yml` — Aggiornamento allerta meteo

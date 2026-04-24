@@ -45,7 +45,6 @@ jobs:
           log-level: verbose
           exclude: |
             **/documenti/**
-            **/cartelli/**
 
       - name: "🏗️ Build per GitHub Pages"
         run: hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
