@@ -2232,6 +2232,7 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 | Aggiornamento MANUALE | `aggiorna-manuale.yml` | lunedì 06:00 UTC, manuale | Confronta hash fonti AGID/DI, apre Issue se cambiate |
 | Coerenza documentazione | `coerenza-docs.yml` | lunedì 07:00 UTC, manuale | Verifica coerenza tra CLAUDE.md, archetype, regole, badge |
 | Audit settimanale sito | `audit-sito.yml` | lunedì 09:00 UTC, manuale | Audit testi: fatti istituzionali, numeri deprecati, immagini/allegati rotti, badge, frasi AGID |
+| Verifica link sito completo | `check-links-sito.yml` | lunedì 10:00 UTC, manuale | Crawl completo con **lychee**: tutti i link interni + esterni del sito, apre issue automatica su 404/drift |
 
 ### 10.2 — `deploy.yml` — Build e Deploy
 
@@ -2402,7 +2403,37 @@ exclude: |
 
 **Perché esiste:** l'audit manuale di aprile 2026 ha trovato errori che convivevano da tempo nel sito senza che nessuno se ne accorgesse (COI 14° nel footer, AR4 404, `href="tel:+39 06 9362600"` con spazi che alcuni browser mobile non onoravano). Questo workflow settimanale evita che errori analoghi si sedimentino di nuovo.
 
-### 10.11 — Disabilitare temporaneamente un workflow
+### 10.11 — `check-links-sito.yml` — Verifica link sito completo
+
+**Trigger:** lunedì ore 10:00 UTC, esecuzione manuale.
+
+**Cosa fa:**
+1. Build Hugo del sito con baseURL di produzione.
+2. Esegue **lychee** (`lycheeverse/lychee-action@v2`, industry standard per link checking) su tutti i file `public/**/*.html` generati dal build.
+3. Verifica ogni link presente nelle pagine: interni (anchor, path), esterni (widget, card hub, fonti), asset (PDF, immagini).
+4. Con cache di 1 giorno (`--max-cache-age 1d`) per evitare di martellare i fornitori esterni settimana dopo settimana se un link è già stato verificato di recente.
+5. Se trova link rotti, apre **automaticamente** una issue GitHub con label `manutenzione`, `link-rotti`, `automatico` e report markdown dettagliato (link rotto, codice HTTP, pagina che lo contiene).
+
+**Accepted HTTP codes:** 200, 201, 204, 206, 301, 302, 307, 308, 403, 429. I codici 403 e 429 sono considerati OK perché alcuni siti PA bloccano bot di default ma il link funziona per utenti umani, e 429 è rate-limiting non rottura vera.
+
+**Timeout:** 20s per URL, 3 retry con 5s di attesa (gestisce i siti PA italiani che sono spesso lenti).
+
+**User-Agent personalizzato:** `Mozilla/5.0 (compatible; PCGenzanoLinkChecker/1.0; +https://www.protezionecivilegenzano.it/)` — identifica chiaramente il checker ai fornitori.
+
+**Esclusioni:**
+- `^tel:` — link telefonici
+- `^mailto:` — email
+- `^#` — anchor interni
+- `github.io/sito-pc-genzano` — evita self-check verso la preview
+- `localhost`, `127.0.0.1` — dev local
+
+**Quando intervenire:** ogni volta che apre una Issue. La Issue contiene l'elenco esatto dei link rotti con codice HTTP e pagina sorgente. Correggi il link (spesso è un path rinominato dal fornitore) e commit.
+
+**Perché esiste:** catturare drift dei link esterni. Esempio reale: aprile 2026, la hub `/strumenti/` è stata pubblicata con il link ANAS `/it/le-strade/viabilita-italia` che in poche ore è tornato 404 (URL obsoleta). L'utente ha trovato il problema a mano; questo workflow lo avrebbe catturato al primo run settimanale.
+
+**Distinzione con `check-normativa-links.yml`:** quest'ultimo verifica link **specifici** (Normattiva, DPC, Lazio normativi, PDF piano emergenza) con pre-pattern, messaggi dedicati e dominio-specifica. Il check completo con lychee è il **catch-all**: tutto il resto del sito (hub strumenti, widget, card, contenuti degli articoli, link PDF nei documenti). Girano 2 ore di distanza per non sovraccaricare il runner.
+
+### 10.12 — Disabilitare temporaneamente un workflow
 
 Due modi:
 
@@ -2420,7 +2451,7 @@ Due modi:
 
 Preferisci sempre Modo B per tracciabilità, salvo esigenze di emergenza.
 
-### 10.11 — Leggere i log di un workflow
+### 10.13 — Leggere i log di un workflow
 
 1. Actions → workflow interessato → seleziona run specifica.
 2. Espandi il job e lo step che ha fallito.
@@ -2432,7 +2463,7 @@ Preferisci sempre Modo B per tracciabilità, salvo esigenze di emergenza.
 - `ftp: 550 ...` → permessi o path errato su Aruba; controlla secret.
 - `Hash mismatch` → stai aggiornando un file con conflitto; riesegui dopo pull.
 
-### 10.12 — Aggiungere un nuovo workflow
+### 10.14 — Aggiungere un nuovo workflow
 
 Regole:
 - Nome file descrittivo in kebab-case: `nome-azione.yml`.
