@@ -24,13 +24,11 @@ L'azione FTP usa `dangerous-clean-slate: false` e una lista di esclusioni per pr
 ```yaml
 exclude: |
   **/documenti/**
-  **/cartelli/**
-  **/giochi-bambini/**
-  **/formazionepc/**
-  **/quizpc/**
 ```
 
-**Conseguenza operativa fondamentale:** un file depositato via git in `static/documenti/`, `static/cartelli/`, `static/giochi-bambini/`, `static/formazionepc/` o `static/quizpc/` **non arriverà mai su Aruba**. Compare solo nella build locale e su GitHub Pages.
+**Conseguenza operativa:** un file depositato via git in `static/documenti/` **non arriverà mai su Aruba**. Compare solo nella build locale e su GitHub Pages. La cartella `static/documenti/` resta gestita manualmente sul server Aruba perché contiene materiale ereditato dal sito precedente (pieghevoli, kit "Io Non Rischio", schede storiche) mai migrato nel repo.
+
+**Storico delle esclusioni (rimosse aprile 2026):** fino al 24 aprile 2026 la lista escludeva anche `**/cartelli/**`, `**/giochi-bambini/**`, `**/formazionepc/**`, `**/quizpc/**`. Dopo l'incidente del cartello AR4 Salesiani (un audit del sito ha rilevato che l'immagine era mancante sul server, ma non c'era modo di accorgersene dal repo), queste esclusioni sono state rimosse per eliminare il drift tra repo e server. I file vivono ora nel repo come unica fonte di verità e deployano automaticamente.
 
 **Cartelle canoniche per nuovi file statici depositati via git:**
 
@@ -39,7 +37,9 @@ exclude: |
 | Manuali tecnici permanenti citati da più articoli | `static/manuali/` | `/manuali/nome.pdf` |
 | Allegati specifici di un articolo | `static/allegati/AAAA/` | `/allegati/AAAA/nome.pdf` |
 | Comunicati stampa firmati | `static/comunicati/AAAA/` | `/comunicati/AAAA/nome.pdf` |
+| Segnaletica aree di emergenza | `static/cartelli/` | `/cartelli/nome.png` |
 | Immagini di copertina / foto evento | `static/images/` | `/images/nome.webp` |
+| Archivio storico immagini | `static/images/archivio-storico/` | `/images/archivio-storico/nome.ext` |
 
 Se aggiungi nuove esclusioni al workflow, aggiorna anche questa tabella e la **Parte 1.10** e **Parte 10.2** di `MANUALE-SITO.md`.
 
