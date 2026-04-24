@@ -1576,3 +1576,154 @@ article .galleria img {
     border: 1px solid #ccc;
   }
 }
+
+/* ================================================================
+   Widget Windy — pagina /allerte-meteo/ (click-to-load, GDPR-safe)
+   L'iframe terze parti viene caricato solo dopo esplicita azione
+   dell'utente, per rispettare privacy-by-design e non installare
+   cookie di terze parti al primo accesso.
+   ================================================================ */
+.windy-widget-section {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.windy-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 360px;
+  background: linear-gradient(135deg, #003366 0%, #0055a4 60%, #0066cc 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.15);
+}
+
+.windy-placeholder.windy-loaded {
+  background: #fff;
+  box-shadow: none;
+  padding: 0;
+  aspect-ratio: 16 / 10;
+}
+
+.windy-placeholder-content {
+  padding: 2rem 1.5rem;
+  max-width: 560px;
+}
+
+.windy-placeholder-content .bi {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.windy-placeholder-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+}
+
+.windy-placeholder-desc {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.windy-placeholder-content .btn {
+  background: #fff;
+  color: #003366;
+  border-color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+}
+
+.windy-placeholder-content .btn:hover,
+.windy-placeholder-content .btn:focus {
+  background: #f0f4f8;
+  color: #003366;
+  border-color: #f0f4f8;
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+
+.windy-placeholder-alt {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+.windy-placeholder-alt a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.windy-placeholder-alt a:hover,
+.windy-placeholder-alt a:focus {
+  color: #ffbe2e;
+  outline: 2px solid #ffbe2e;
+  outline-offset: 2px;
+}
+
+.windy-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  border: 0;
+  display: block;
+  border-radius: 8px;
+}
+
+.windy-iframe:focus {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .windy-placeholder {
+    aspect-ratio: 4 / 3;
+    min-height: 320px;
+  }
+  .windy-placeholder-title {
+    font-size: 1.25rem;
+  }
+  .windy-placeholder-desc {
+    font-size: 0.95rem;
+  }
+  .windy-iframe {
+    min-height: 380px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .windy-placeholder {
+    background: #003366;
+  }
+}
+
+@media print {
+  .windy-widget-section .windy-placeholder,
+  .windy-widget-section .windy-iframe,
+  .windy-widget-section script {
+    display: none !important;
+  }
+  .windy-widget-section::after {
+    content: "Mappa meteo online consultabile su windy.com — Genzano di Roma (41.6919 N, 12.6928 E)";
+    display: block;
+    padding: 1rem;
+    border: 1px solid #000;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+}

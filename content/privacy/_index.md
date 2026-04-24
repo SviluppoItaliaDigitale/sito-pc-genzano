@@ -2,7 +2,7 @@
 title: "Privacy e Cookie Policy"
 description: "Informativa sulla privacy e utilizzo dei cookie ai sensi del GDPR."
 layout: "single"
-dataUltimaRevisione: "2026-04-22"
+dataUltimaRevisione: "2026-04-24"
 ---
 
 ## Informativa sul trattamento dei dati personali
@@ -65,7 +65,15 @@ Il presente sito, essendo un sito statico, **utilizza esclusivamente cookie tecn
 
 ### Cookie di terze parti
 
-Il presente sito non incorpora widget, player o strumenti di terze parti che installano cookie di profilazione.
+Il presente sito non incorpora widget, player o strumenti di terze parti che installano cookie di profilazione in modo automatico.
+
+Nella sola pagina [Allerte Meteo](/allerte-meteo/) è disponibile, **su esplicita richiesta dell'utente**, il widget meteo fornito da **Windy.com** (Windyty, SE — Rep. Ceca). Il widget non viene caricato automaticamente: l'utente vede un'anteprima e deve cliccare il pulsante "Carica la mappa meteo" per attivarlo. Solo in quel momento il browser riceve risorse dai server di Windy e possono essere impostati cookie tecnici o di preferenza da windy.com, sui quali il Titolare non ha controllo diretto.
+
+| Servizio | Finalità | Informativa |
+|------|------|------|
+| Windy.com | Visualizzazione mappa meteo interattiva (radar, precipitazioni, vento, temperatura) | [Privacy policy di Windy](https://account.windy.com/privacy-policy) |
+
+Per non caricare il widget è sufficiente **non cliccare il pulsante** di attivazione. In alternativa è possibile consultare le stesse informazioni direttamente su windy.com senza interazione col nostro sito.
 
 ### Come disabilitare i cookie
 
