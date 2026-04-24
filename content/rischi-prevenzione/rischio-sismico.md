@@ -6,6 +6,26 @@ weight: 1
 
 Il terremoto è un evento naturale non prevedibile. L'unica difesa possibile è la prevenzione, la conoscenza delle corrette norme di comportamento e la preparazione.
 
+## Terremoti recenti in Italia
+
+Mappa e lista degli eventi sismici recenti rilevati dall'**Istituto Nazionale di Geofisica e Vulcanologia (INGV)** — fonte scientifica ufficiale in Italia. La vista mostra tutti i terremoti localizzati sul territorio nazionale; usa il menu interno per filtrare per magnitudo, profondità e periodo.
+
+<div class="alert alert-info" role="note">
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Nota:</strong> i dati sono forniti da INGV in tempo reale. Un evento sismico registrato non significa necessariamente "scossa avvertita dalla popolazione": molti eventi di bassa magnitudo sono rilevati solo dagli strumenti. In caso di scossa avvertita, segui le indicazioni nella sezione "Cosa fare durante il terremoto" più in basso.</p>
+</div>
+
+{{< external-widget
+    src="https://terremoti.ingv.it/"
+    title="Mappa interattiva dei terremoti recenti in Italia — INGV"
+    placeholderTitle="Terremoti recenti in Italia"
+    placeholderDesc="Per visualizzare la mappa e la lista dei terremoti recenti devi caricare i contenuti forniti da <strong>INGV</strong> (Istituto Nazionale di Geofisica e Vulcanologia)."
+    icon="bi-activity"
+    btnLabel="Carica la mappa INGV"
+    altUrl="https://terremoti.ingv.it/"
+    altLabel="terremoti.ingv.it"
+    fallbackText="Elenco terremoti recenti consultabile su terremoti.ingv.it (Istituto Nazionale di Geofisica e Vulcanologia)"
+    widgetId="sismico-ingv" >}}
+
 ## Perché è rilevante sul nostro territorio
 
 Il Comune di Genzano di Roma è classificato in **zona sismica 2B** (media sismicità). L'area dei Colli Albani, di origine vulcanica, è soggetta a scosse sismiche, generalmente di bassa magnitudo ma talvolta avvertite dalla popolazione. Questo rende essenziale conoscere i comportamenti corretti.

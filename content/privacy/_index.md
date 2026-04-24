@@ -67,13 +67,14 @@ Il presente sito, essendo un sito statico, **utilizza esclusivamente cookie tecn
 
 Il presente sito non incorpora widget, player o strumenti di terze parti che installano cookie di profilazione in modo automatico.
 
-Nella sola pagina [Allerte Meteo](/allerte-meteo/) è disponibile, **su esplicita richiesta dell'utente**, il widget meteo fornito da **Windy.com** (Windyty, SE — Rep. Ceca). Il widget non viene caricato automaticamente: l'utente vede un'anteprima e deve cliccare il pulsante "Carica la mappa meteo" per attivarlo. Solo in quel momento il browser riceve risorse dai server di Windy e possono essere impostati cookie tecnici o di preferenza da windy.com, sui quali il Titolare non ha controllo diretto.
+Il sito incorpora, **solo su esplicita richiesta dell'utente**, alcuni widget di consultazione forniti da servizi esterni. Nessuno di questi widget viene caricato automaticamente: l'utente vede un'anteprima ("placeholder") e deve cliccare un pulsante di attivazione. Solo in quel momento il browser riceve risorse dal server esterno e possono essere impostati cookie tecnici o di preferenza dal fornitore, sui quali il Titolare non ha controllo diretto.
 
-| Servizio | Finalità | Informativa |
-|------|------|------|
-| Windy.com | Visualizzazione mappa meteo interattiva (radar, precipitazioni, vento, temperatura) | [Privacy policy di Windy](https://account.windy.com/privacy-policy) |
+| Servizio | Fornitore | Finalità | Pagine in cui compare | Informativa |
+|------|------|------|------|------|
+| Windy.com | Windyty, SE (Rep. Ceca) | Mappa meteo interattiva (radar, precipitazioni, vento, temperatura) | [Home](/), [Allerte Meteo](/allerte-meteo/) | [Privacy Windy](https://account.windy.com/privacy-policy) |
+| INGV — Terremoti | Istituto Nazionale di Geofisica e Vulcanologia (Italia, ente pubblico di ricerca) | Mappa e lista dei terremoti recenti in Italia | [Home](/), [Rischio Sismico](/rischi-prevenzione/rischio-sismico/) | [Privacy INGV](https://www.ingv.it/privacy-policy) |
 
-Per non caricare il widget è sufficiente **non cliccare il pulsante** di attivazione. In alternativa è possibile consultare le stesse informazioni direttamente su windy.com senza interazione col nostro sito.
+Per non caricare un widget è sufficiente **non cliccare il pulsante** di attivazione. In alternativa è possibile consultare le stesse informazioni direttamente sui siti dei fornitori senza interazione col nostro sito.
 
 ### Come disabilitare i cookie
 
