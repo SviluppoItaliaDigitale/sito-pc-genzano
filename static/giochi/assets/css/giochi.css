@@ -99,6 +99,7 @@
 .fascia-card-infanzia:hover, .fascia-card-infanzia:focus-visible { border-color: #D9364F; }
 .fascia-card-primaria:hover, .fascia-card-primaria:focus-visible { border-color: #008758; }
 .fascia-card-ragazzi:hover,  .fascia-card-ragazzi:focus-visible  { border-color: #0066CC; }
+.fascia-card-abili:hover,    .fascia-card-abili:focus-visible    { border-color: #7A1FA2; }
 
 .fascia-icon-big {
   width: 88px; height: 88px;
@@ -110,6 +111,7 @@
 .fascia-icon-infanzia { background: linear-gradient(135deg, #D9364F, #B01F39); }
 .fascia-icon-primaria { background: linear-gradient(135deg, #008758, #006F47); }
 .fascia-icon-ragazzi  { background: linear-gradient(135deg, #0066CC, #004A96); }
+.fascia-icon-abili    { background: linear-gradient(135deg, #7A1FA2, #4A1266); }
 
 .fascia-card h2 { font-size: 1.4rem; margin: 0 0 0.3rem 0; font-weight: 700; }
 .fascia-card .fascia-eta { color: #5b6b7c; font-size: 0.95rem; margin-bottom: 0.8rem; font-weight: 600; }
