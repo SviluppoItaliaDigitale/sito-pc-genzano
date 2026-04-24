@@ -1579,106 +1579,73 @@ article .galleria img {
 
 /* ================================================================
    Widget esterni click-to-load (Windy, INGV, futuri)
-   Pattern riutilizzabile: iframe di terze parti caricato solo dopo
-   esplicita azione dell'utente (privacy-by-design, no cookie
-   terze parti al primo accesso). Le classi sono generiche per
-   supportare più widget nella stessa pagina o in pagine diverse.
+   v2 mobile-robust: la base visiva (blu + bianco + card + pulsante)
+   usa classi Bootstrap Italia native (.card, .bg-primary, .text-white,
+   .btn-light) già caricate nell'head. Le regole qui sotto sono SOLO
+   rifiniture (gradiente, ombra, dimensioni icona, focus outline)
+   che migliorano l'aspetto ma NON sono necessarie per un rendering
+   corretto. Se il browser è in reader mode / in-app browser e salta
+   questo file, il widget appare comunque come una card blu con
+   testo bianco e pulsante bianco leggibile.
    ================================================================ */
 .ext-widget-section {
   margin-top: 2.5rem;
   margin-bottom: 2rem;
 }
 
+/* Rifinitura gradiente — sovrascrive il solid .bg-primary */
 .ext-widget-placeholder {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  min-height: 360px;
-  background: linear-gradient(135deg, #003366 0%, #0055a4 60%, #0066cc 100%);
+  background-image: linear-gradient(135deg, #003366 0%, #0055a4 60%, #0066cc 100%);
   border-radius: 8px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
+  min-height: 320px;
   box-shadow: 0 4px 12px rgba(0, 51, 102, 0.15);
 }
 
 .ext-widget-placeholder.ext-widget-loaded {
-  background: #fff;
+  background-image: none;
+  background-color: #fff;
   box-shadow: none;
   padding: 0;
-  aspect-ratio: 16 / 10;
+  min-height: 450px;
 }
 
 .ext-widget-placeholder-content {
-  padding: 2rem 1.5rem;
   max-width: 560px;
+  margin: 0 auto;
 }
 
-.ext-widget-placeholder-content .bi {
-  font-size: 3rem;
-  display: block;
-  margin-bottom: 1rem;
+.ext-widget-icon {
+  font-size: 2.75rem;
+  line-height: 1;
   opacity: 0.95;
 }
 
 .ext-widget-placeholder-title {
-  color: #fff;
   font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 0 0.75rem;
   line-height: 1.3;
 }
 
 .ext-widget-placeholder-desc {
-  color: rgba(255, 255, 255, 0.95);
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.25rem;
 }
 
-.ext-widget-placeholder-content .btn {
-  background: #fff;
-  color: #003366;
-  border-color: #fff;
-  font-weight: 600;
-  padding: 0.6rem 1.5rem;
-}
-
-.ext-widget-placeholder-content .btn:hover,
-.ext-widget-placeholder-content .btn:focus {
-  background: #f0f4f8;
-  color: #003366;
-  border-color: #f0f4f8;
+.ext-widget-placeholder-content .btn-light:hover,
+.ext-widget-placeholder-content .btn-light:focus {
   outline: 3px solid #ffbe2e;
   outline-offset: 2px;
 }
 
-.ext-widget-placeholder-alt {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.875rem;
-  margin-top: 1.25rem;
-  margin-bottom: 0;
-}
-
-.ext-widget-placeholder-alt a {
-  color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
 .ext-widget-placeholder-alt a:hover,
 .ext-widget-placeholder-alt a:focus {
-  color: #ffbe2e;
+  color: #ffbe2e !important;
   outline: 2px solid #ffbe2e;
   outline-offset: 2px;
 }
 
 .ext-widget-iframe {
   width: 100%;
-  height: 100%;
   min-height: 450px;
   border: 0;
   display: block;
@@ -1702,32 +1669,32 @@ article .galleria img {
   margin: 0;
 }
 
-.ext-widget-grid .ext-widget-placeholder {
-  aspect-ratio: 4 / 3;
-  min-height: 320px;
-}
-
-.ext-widget-grid .ext-widget-iframe {
-  min-height: 380px;
-}
-
 @media (max-width: 991px) {
   .ext-widget-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 2rem; /* più respiro tra widget impilati su mobile */
+  }
+  .ext-widget-grid .ext-widget-placeholder {
+    min-height: 380px; /* widget più grandi quando hanno tutta la larghezza */
+  }
+  .ext-widget-grid .ext-widget-icon {
+    font-size: 3.25rem;
+  }
+  .ext-widget-grid .ext-widget-placeholder-title {
+    font-size: 1.5rem;
+  }
+  .ext-widget-grid .ext-widget-placeholder-desc {
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+  .ext-widget-placeholder .card-body {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
   .ext-widget-placeholder {
-    aspect-ratio: 4 / 3;
-    min-height: 320px;
-  }
-  .ext-widget-placeholder-title {
-    font-size: 1.25rem;
-  }
-  .ext-widget-placeholder-desc {
-    font-size: 0.95rem;
+    min-height: 360px;
   }
   .ext-widget-iframe {
     min-height: 380px;
@@ -1736,7 +1703,7 @@ article .galleria img {
 
 @media (prefers-reduced-motion: reduce) {
   .ext-widget-placeholder {
-    background: #003366;
+    background-image: none;
   }
 }
 
