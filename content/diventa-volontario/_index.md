@@ -29,7 +29,7 @@ Non servono eroismi. Serve **costanza**, **disponibilità** e la voglia di impar
 
 ## Chi può aderire
 
-Il volontariato di Protezione Civile è **aperto a tutti**. Non servono competenze tecniche preliminari: porterai quelle che hai, ne imparerai di nuove.
+Il volontariato di Protezione Civile è **aperto a ogni cittadino che soddisfi alcuni requisiti essenziali** (elencati qui sotto). Non servono competenze tecniche preliminari: porterai quelle che hai, ne imparerai di nuove.
 
 Tra i nostri volontari ci sono **studenti**, **pensionati**, **professionisti**, **operai**, **insegnanti**, **impiegati**, **artigiani**, **medici**, **elettricisti**, **radioamatori**, **informatici**, **autisti**, **mamme** e **papà**. Ognuno porta qualcosa: una mano, una competenza, un'ora del proprio tempo.
 
@@ -116,10 +116,12 @@ Oltre al valore del servizio reso alla comunità, la partecipazione al Gruppo of
 
 ## Impegno richiesto
 
-Non esiste un impegno fisso obbligatorio nella singola settimana. Ciascun volontario contribuisce secondo la propria disponibilità. Tuttavia, chiediamo:
+L'impegno di base è di **16 ore al mese** destinate ai turni di presidio in sede, concordabili in base alla tua vita personale e lavorativa. Al di là di queste, ciascun volontario contribuisce secondo la propria disponibilità per allerte, esercitazioni ed emergenze.
+
+In sintesi, chiediamo:
 
 - La partecipazione al **corso di accesso base**.
-- Un impegno medio di **16 ore al mese** per coprire i turni di presidio in sede (concordabili).
+- Il monte ore di **16 ore al mese** per i turni di presidio in sede.
 - La disponibilità a essere **reperibile** durante le allerte meteo significative.
 - La partecipazione periodica alle **esercitazioni** e agli **aggiornamenti formativi**.
 - Il rispetto del **Regolamento** del Gruppo e dello **Statuto**.

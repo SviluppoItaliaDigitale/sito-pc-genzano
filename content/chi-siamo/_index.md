@@ -184,7 +184,7 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 </div>
 </div>
 
-## I Gruppi di Lavoro
+## I Settori operativi
 
 <div class="row mb-5">
 <div class="col-md-6 mb-3">
@@ -214,8 +214,8 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 <div class="col-md-6 mb-3">
 <div class="card h-100 shadow-sm border-start border-4" style="border-color:#6f42c1!important;">
 <div class="card-body">
-<h3 class="h5"><i class="bi bi-camera-reels text-purple me-2" aria-hidden="true"></i> Squadra Droni</h3>
-<p>I piloti della Squadra Droni sono volontari abilitati e certificati ENAC per il pilotaggio di aeromobili a pilotaggio remoto (APR). Utilizzano i droni nelle attività di protezione civile per la ricognizione del territorio, il monitoraggio di incendi boschivi, la mappatura di aree colpite da calamità e il supporto alle operazioni di ricerca. I piloti seguono eventi formativi specifici per mantenere le abilitazioni e affinare le competenze operative.</p>
+<h3 class="h5"><i class="bi bi-camera-reels text-purple me-2" aria-hidden="true"></i> Settore Droni</h3>
+<p>I piloti del Settore Droni sono volontari abilitati e certificati ENAC per il pilotaggio di aeromobili a pilotaggio remoto (APR). Utilizzano i droni nelle attività di protezione civile per la ricognizione del territorio, il monitoraggio di incendi boschivi, la mappatura di aree colpite da calamità e il supporto alle operazioni di ricerca. I piloti seguono eventi formativi specifici per mantenere le abilitazioni e affinare le competenze operative.</p>
 </div>
 </div>
 </div>
