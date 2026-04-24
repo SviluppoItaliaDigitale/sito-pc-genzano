@@ -2,7 +2,7 @@
 title: "Dichiarazione di Accessibilità"
 description: "Dichiarazione di accessibilità del sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
-dataUltimaRevisione: "2026-04-22"
+dataUltimaRevisione: "2026-04-24"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
@@ -31,3 +31,12 @@ Cercheremo di rispondere entro 30 giorni dalla segnalazione.
 ### Procedura di attuazione
 
 In caso di risposta insoddisfacente o assente entro 30 giorni, l'utente può ricorrere al Difensore Civico per il digitale, la cui modalità di contatto è reperibile sul sito [AGID](https://www.agid.gov.it/it/design-servizi/accessibilita/difensore-civico-digitale).
+
+### Contenuti di terze parti
+
+Alcune sezioni del sito incorporano contenuti forniti da servizi esterni, sui quali il Titolare **non esercita controllo diretto** per la conformità WCAG. In particolare:
+
+- **Widget meteo Windy.com** nella pagina [Allerte Meteo](/allerte-meteo/) — la mappa interattiva è fornita da Windyty, SE. Il widget si carica solo su esplicita azione dell'utente (pulsante "Carica la mappa meteo") ed è dotato di alternative testuali (link diretto a Windy.com, fallback `<noscript>`). L'accessibilità dei controlli interni del widget (zoom, layer switcher, slider temporale) è responsabilità del fornitore.
+- **Mappe e documenti PDF** delle pagine istituzionali (Regione Lazio, Dipartimento di Protezione Civile, Normattiva) aperte in nuova scheda.
+
+Per le parti di sito sotto il controllo diretto del Titolare è garantita la conformità WCAG 2.2 livello AA. Le segnalazioni relative a problemi di accessibilità dei contenuti di terzi vengono inoltrate al fornitore e, ove possibile, viene fornita un'alternativa accessibile.

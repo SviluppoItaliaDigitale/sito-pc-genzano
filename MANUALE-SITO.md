@@ -1442,7 +1442,7 @@ Il template `single.html` del tema mostra questa data come **box evidente** in c
 | `/` | `layouts/index.html` | Homepage dinamica (normale/emergenza) |
 | `/chi-siamo/` | `content/chi-siamo/_index.md` | |
 | `/rischi-prevenzione/` | `content/rischi-prevenzione/_index.md` | Hub + 9 sotto-pagine |
-| `/allerte-meteo/` | `content/allerte-meteo/_index.md` | |
+| `/allerte-meteo/` | `content/allerte-meteo/_index.md` | Include widget Windy (click-to-load) in fondo — vedi 4.9 |
 | `/comunicazioni/` | Generata da Hugo | Elenco articoli |
 | `/formazione/` | `content/formazione/_index.md` | Include 4 kit scuola (vedi 4.8) |
 | `/giochi/` | `static/giochi/index.html` | **Standalone**, non Hugo content |
@@ -1500,6 +1500,43 @@ Il sito pubblica **quattro kit didattici** indirizzati alle scuole del territori
 - Ogni modifica sostanziale ai kit va annotata nel changelog all'inizio del manuale.
 
 **Non usare i kit come articoli di cronaca.** I kit sono pagine operative durevoli: non inserire nei kit date di singole iniziative o riferimenti a eventi specifici, ma linkare gli articoli in `content/comunicazioni/` dove necessario.
+
+### 4.9 — Widget meteo Windy nella pagina `/allerte-meteo/`
+
+In fondo alla pagina **Allerte Meteo** è incorporato un widget fornito da **Windy.com** che mostra radar, precipitazioni, vento, temperatura e altri parametri meteo centrati su Genzano di Roma. L'utente può cambiare layer, time slider e zoom dal menu nativo di Windy.
+
+**Scelte di implementazione (non modificare senza motivo):**
+
+1. **Click-to-load consensuale.** L'iframe **non** si carica automaticamente. L'utente vede un'anteprima blu istituzionale con CTA "Carica la mappa meteo" e solo dopo il click il browser riceve risorse da windy.com. Questo pattern rispetta privacy-by-design (regola 01), evita cookie di terze parti al primo accesso ed è coerente con il GDPR.
+2. **Nessuna API key o account.** Il widget embed di Windy è pubblico e gratuito: paid e free vedono lo stesso iframe. La versione a pagamento dà vantaggi solo dentro l'app windy.com.
+3. **Disclaimer di fonte.** Sopra al widget è presente un riquadro giallo che ricorda: "Non sostituisce il bollettino ufficiale — fonte ufficiale Centro Funzionale Regione Lazio" (regola 06).
+4. **Coordinate centrate.** Genzano di Roma: `lat=41.6919`, `lon=12.6928`, `zoom=12`, `overlay=radar`. Modificare questi parametri solo in accordo con il referente del Gruppo.
+5. **Accessibilità WCAG 2.2 AA:**
+   - `<iframe>` con `title` descrittivo ("Mappa meteo interattiva Windy centrata su Genzano di Roma")
+   - `loading="lazy"` per performance
+   - Focus trasferito all'iframe dopo il click (annuncio per screen reader)
+   - `<noscript>` con link diretto a windy.com per utenti senza JavaScript
+   - Regola `@media print` che sostituisce l'iframe con una riga testuale ("Mappa meteo online consultabile su windy.com...")
+   - Override `prefers-reduced-motion` che disattiva il gradiente animato del placeholder
+
+**Dove vive il codice:**
+
+- **HTML + JS del widget**: `content/allerte-meteo/_index.md`, in fondo, sezione `## Mappa meteo interattiva`. Script inline minimale (~15 righe).
+- **CSS del placeholder**: `themes/flavour-pcgenzano/static/css/custom.css`, blocco dedicato "Widget Windy" in fondo al file.
+- **Voce privacy**: `content/privacy/_index.md`, sezione "Cookie di terze parti" + tabella con link alla privacy di Windy.
+- **Voce accessibilità**: `content/accessibilita/_index.md`, sezione "Contenuti di terze parti".
+
+**Quando toccare:**
+
+- Se cambi le coordinate o il layer di default → aggiorna sia l'HTML della pagina sia questa sezione del manuale.
+- Se in futuro si vorrà sostituire Windy con un'alternativa (es. mappa custom Leaflet con tile Windy via API key): il blocco HTML è autocontenuto e si può sostituire senza toccare il resto della pagina.
+- Se Windy cambia il formato URL dell'embed: correggere `data-windy-src` nel placeholder.
+
+**Non fare:**
+
+- Caricare l'iframe al primo accesso (romperebbe la logica privacy-by-design).
+- Rimuovere il disclaimer giallo sopra al widget (viola regola 06).
+- Aggiungere Windy al cookie banner automatico: il click-to-load rende esplicito il consenso e non serve un secondo meccanismo.
 
 ---
 
