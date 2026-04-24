@@ -191,6 +191,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Verifica aggiornamenti Bootstrap Italia |
 | `coerenza-docs.yml` | Lunedì 07:00 UTC | Verifica coerenza interna: CLAUDE.md, archetype, regole, badge, shortcode foto, pagine content/ obbligatorie (incluse privacy, note-legali, social-media-policy, accessibilita) |
 | `check-normativa-links.yml` | Lunedì 08:00 UTC | Verifica raggiungibilità link normativi (Lazio, DPC, Normattiva) |
+| `audit-sito.yml` | Lunedì 09:00 UTC | Audit testi: coerenza fatti istituzionali (COI, telefono, sede), numeri di emergenza deprecati, placeholder, immagini/allegati rotti, badge sconosciuti, frasi AGID troppo lunghe |
 
 ## Key operational notes
 
