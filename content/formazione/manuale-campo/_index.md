@@ -5,7 +5,7 @@ description: "Guida operativa per il volontario di protezione civile impegnato i
 
 Il **Manuale da Campo** raccoglie istruzioni pratiche, procedure e **schede tecniche** per i volontari del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** quando operano in un campo di accoglienza, in un'area di emergenza o a supporto di un centro operativo.
 
-Questa versione è stata preparata ispirandosi al **Manuale da Campo** della Protezione Civile Intercomunale di Imbersago (Lombardia, 2010), nato dall'esperienza dell'emergenza Abruzzo 2009. Il testo originale è stato **completamente riscritto** per:
+Questa versione è stata preparata ispirandosi al **Manuale da Campo** di una protezione civile intercomunale lombarda (2010), nato dall'esperienza dell'emergenza Abruzzo 2009. Il testo originale è stato **completamente riscritto** per:
 
 - aggiornare il **quadro normativo** al **Codice della Protezione Civile** (D.Lgs. 1/2018) e alla **Direttiva PCM 30 aprile 2021** sulla pianificazione
 - adattare i riferimenti al **territorio di Genzano di Roma** (Prefettura di Roma, Regione Lazio, Area Metropolitana Roma Capitale)
@@ -43,7 +43,7 @@ Il manuale si fonda su cinque principi operativi, validi in qualsiasi emergenza:
 
 ## Fonti e riferimenti
 
-- **Manuale da Campo** — Protezione Civile Intercomunale di Imbersago, 2010 (ispirazione e impianto originale): [http://www.protezionecivile-imbersago.com/files/manuale_da_campo.pdf](http://www.protezionecivile-imbersago.com/files/manuale_da_campo.pdf)
+- **Manuale da Campo** — protezione civile intercomunale lombarda, 2010 (ispirazione e impianto originale)
 - **Codice della Protezione Civile** — D.Lgs. 2 gennaio 2018, n. 1: vedi [la nostra sintesi](/normativa/testo-unico-protezione-civile/)
 - **Direttiva PCM 30 aprile 2021** — Indirizzi per la predisposizione dei piani di protezione civile ai diversi livelli territoriali
 - **Legge Regionale Lazio 22/2019** — Sistema integrato di protezione civile regionale
@@ -52,7 +52,7 @@ Il manuale si fonda su cinque principi operativi, validi in qualsiasi emergenza:
 
 ## Nota su Colonna Mobile Regionale
 
-Il manuale originale di Imbersago è nato in ambito **Regione Lombardia**, che disponeva della propria **Colonna Mobile Regionale**. La **Regione Lazio** dispone di un sistema analogo coordinato dall'**Agenzia Regionale di Protezione Civile**: i moduli standard (cucina, alloggio, sanità, TLC, servizi) sono sostanzialmente gli stessi su tutto il territorio nazionale, perché derivano dal **progetto Colonna Mobile Nazionale** del Dipartimento.
+Il manuale originale è nato in ambito **Regione Lombardia**, che disponeva della propria **Colonna Mobile Regionale**. La **Regione Lazio** dispone di un sistema analogo coordinato dall'**Agenzia Regionale di Protezione Civile**: i moduli standard (cucina, alloggio, sanità, TLC, servizi) sono sostanzialmente gli stessi su tutto il territorio nazionale, perché derivano dal **progetto Colonna Mobile Nazionale** del Dipartimento.
 
 Per il Gruppo Comunale di Genzano, la cornice è:
 - **prima linea** di intervento nelle emergenze di rilievo locale (Tipo A, art. 7 D.Lgs. 1/2018)
