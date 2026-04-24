@@ -12,29 +12,91 @@ I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Ci
 
 ## Guida per il docente
 
-### Obiettivi
+### Riferimenti normativi e curricolari
 
-- Comprendere le basi scientifiche dei principali rischi naturali
-- Conoscere il quadro normativo italiano della protezione civile
-- Analizzare criticamente la comunicazione del rischio e le fonti informative
-- Comprendere il rapporto tra cambiamenti climatici ed eventi estremi
-- Approfondire il sistema di allertamento e monitoraggio nazionale e regionale
-- Valutare il ruolo del volontariato e della cittadinanza attiva nella riduzione del rischio
+Il percorso è costruito sul quadro normativo dell'**educazione civica** (Legge 20 agosto 2019 n. 92, art. 1, 3 e 6), delle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 35/2020 e aggiornamento 2024), del **D.Lgs. 13 aprile 2017 n. 62** (valutazione e certificazione competenze), del **D.Lgs. 15 aprile 2005 n. 77** (PCTO — Percorsi per le Competenze Trasversali e l'Orientamento).
+
+È coerente con:
+- **Indicazioni Nazionali per i Licei** (D.P.R. 89/2010) e **Linee guida per gli Istituti Tecnici e Professionali** (2010/2018)
+- **Raccomandazione UE 2018/C 189/01** sulle 8 competenze chiave per l'apprendimento permanente
+- **Obiettivi Agenda 2030** n. 11 (città sostenibili), 13 (lotta al cambiamento climatico) e 15 (vita sulla terra)
+- **Articolo 18 del D.Lgs. 1/2018** (Codice della Protezione Civile) su formazione e informazione scolastica
+
+### Obiettivi di apprendimento formalizzati
+
+**Conoscenze**
+- Conosce il quadro normativo della protezione civile italiana e la sua evoluzione storica
+- Conosce le basi scientifiche dei principali rischi naturali (sismologia, idrologia, vulcanologia, meteorologia)
+- Conosce la relazione tra cambiamenti climatici ed eventi estremi
+- Conosce il sistema di monitoraggio e allertamento nazionale e regionale
+- Conosce il principio di sussidiarietà (art. 118 Cost.) e il ruolo del volontariato organizzato
+
+**Abilità**
+- Consulta autonomamente portali scientifici e istituzionali (INGV, ISPRA, DPC, Copernicus EMS)
+- Legge e interpreta dati scientifici complessi (sismogrammi, carte di pericolosità, scenari climatici)
+- Produce analisi critiche della comunicazione del rischio su media tradizionali e social
+- Progetta e realizza una campagna di comunicazione del rischio per un target specifico
+- Valuta criticamente la qualità delle fonti informative
+
+**Competenze chiave europee**
+- **Competenza alfabetica funzionale avanzata**: analizza testi tecnici, giuridici, scientifici e ne produce di propri
+- **Competenza matematica e scientifica**: utilizza metodologie di analisi quantitativa applicate al rischio
+- **Competenza digitale avanzata**: distingue fonti, contrasta disinformazione, usa strumenti di visualizzazione dati
+- **Competenza personale, sociale, imparare a imparare**: gestisce complessità, prende decisioni sotto incertezza
+- **Competenza in materia di cittadinanza**: agisce da cittadino consapevole, partecipa a iniziative collettive
+- **Competenza imprenditoriale**: progetta, pianifica, esegue un compito complesso in autonomia
+- **Competenza in materia di consapevolezza ed espressione culturale**: riconosce la dimensione storica, culturale ed etica del rischio
 
 ### Collegamento con le discipline
 
 | Disciplina | Argomenti collegati |
 |---|---|
-| **Scienze della Terra** | Sismologia, vulcanologia, meteorologia, idrologia, geomorfologia |
-| **Geografia** | Dissesto idrogeologico, pianificazione territoriale, cambiamenti climatici |
-| **Ed. civica / Diritto** | D.Lgs. 1/2018, sussidiarietà, volontariato, diritti in emergenza |
-| **Fisica** | Onde sismiche, propagazione dell'energia, strumenti di misura |
-| **Italiano** | Analisi della comunicazione istituzionale del rischio |
+| **Scienze della Terra / Scienze Naturali** | Sismologia, vulcanologia, meteorologia, idrologia, geomorfologia, cambiamenti climatici |
+| **Geografia** | Dissesto idrogeologico, pianificazione territoriale, antropizzazione |
+| **Ed. civica / Diritto** | D.Lgs. 1/2018, sussidiarietà (art. 5 e 118 Cost.), volontariato, diritti in emergenza |
+| **Fisica** | Onde sismiche, propagazione dell'energia, strumenti di misura, statistica applicata |
+| **Italiano** | Analisi della comunicazione istituzionale, retorica del rischio, testo argomentativo |
+| **Storia** | Eventi catastrofici e risposta istituzionale (Messina 1908, Vajont 1963, Irpinia 1980, Amatrice 2016) |
+| **Filosofia** | Etica della responsabilità (Jonas), principio di precauzione, rischio e scelta pubblica |
+| **Informatica / Tecnologia** | Big data, GIS, Cell Broadcast (IT-alert), machine learning applicato al rischio |
+| **Arte e immagine** | Infografica, data visualization, poster campagne istituzionali |
+| **Lingue straniere** | Analisi di documenti UE, OMS, IPCC in lingua originale; confronto con sistemi di altri Paesi |
 | **PCTO** | Percorsi di volontariato con organizzazioni di protezione civile |
 
-### Durata consigliata
+### Durata consigliata e tabella del percorso
 
 Il percorso completo si articola in **6 moduli da 60-90 minuti**. Ogni modulo è autonomo e può essere approfondito ulteriormente per i percorsi PCTO.
+
+| Modulo | Tema | Durata | Classi consigliate |
+|---|---|---|---|
+| 1 | Quadro normativo | 60' | III-V |
+| 2 | Basi scientifiche del rischio sismico | 90' | III-V |
+| 3 | Rischio idrogeologico e cambiamenti climatici | 90' | III-V |
+| 4 | Sistema di monitoraggio e allertamento | 90' | III-V |
+| 5 | Comunicazione del rischio | 60-90' | III-V |
+| 6 | Volontariato e cittadinanza attiva | 60-90' | III-V |
+
+**Compito di realtà / progetto di classe**: +6-12 ore (vedi sezione dedicata)
+**Percorso PCTO strutturato**: 30-50 ore (vedi sezione dedicata)
+
+**Totale complessivo**: 8-12 ore per il percorso curricolare base, fino a 70+ ore integrando PCTO e Progetto.
+
+### Prerequisiti
+
+- Competenze di studio autonomo (lettura testo tecnico, sintesi, ricerca fonti)
+- Conoscenze di base di fisica (onde, forza, energia) e scienze (geologia, meteorologia)
+- Uso autonomo di strumenti informatici e di ricerca online
+- Capacità di lavorare in gruppo su progetti di medio-lungo periodo
+
+### Metodologie didattiche suggerite
+
+- **Flipped classroom**: materiali di studio consegnati prima della lezione, discussione e analisi critica in aula
+- **Case study**: analisi approfondita di un evento reale (es. Amatrice 2016 + processo Commissione Grandi Rischi; Ischia 2017 frane; Genova 2018 crollo ponte Morandi)
+- **Debate**: dibattito strutturato su temi controversi (art. 118 Cost., responsabilità Stato/cittadino, principio di precauzione)
+- **Project-based learning**: progetto di classe semestrale (vedi sezione dedicata)
+- **Service learning**: il gruppo classe realizza un servizio concreto per la comunità (es. campagna informativa per un quartiere)
+- **EAS (Episodi di Apprendimento Situato)**: micro-attività di 30 minuti che mettono lo studente davanti a un problema reale
+- **Cooperative learning**: gruppi eterogenei per le attività di ricerca e produzione
 
 ---
 
@@ -415,6 +477,285 @@ Ogni gruppo ha 15 minuti per preparare le argomentazioni, poi 5 minuti ciascuno 
 
 ---
 
+## Percorso PCTO strutturato con il Gruppo
+
+I **Percorsi per le Competenze Trasversali e l'Orientamento** (D.Lgs. 77/2005; D.Lgs. 62/2017 art. 13) con il Gruppo Comunale di Protezione Civile di Genzano sono un'opportunità formativa concreta, coerente con gli obiettivi dei licei (90 ore nel triennio) e degli istituti tecnici/professionali (150-210 ore).
+
+### Profilo del PCTO
+
+**Titolo**: *"Cittadino resiliente — formazione e servizio con la Protezione Civile comunale"*
+
+**Monte ore complessivo**: 30-50 ore (adattabile)
+
+**Periodo**: possibile distribuzione in un semestre o in formula intensiva estiva
+
+**Numero studenti**: 2-8 per convenzione (per garantire qualità del tutoraggio)
+
+**Tutor interno**: docente della scuola (preferibilmente di scienze, geografia o ed. civica)
+
+**Tutor esterno**: volontario del Gruppo con esperienza formativa
+
+### Articolazione tipo (35 ore)
+
+| Fase | Attività | Ore |
+|---|---|---|
+| 1. Formazione base | Normativa, sistema PC italiano, rischi del territorio | 6 |
+| 2. Sicurezza | Corso di sicurezza generale (4 ore) + specifica 4 ore (se previsto contatto con mezzi) | 8 |
+| 3. Osservazione | Partecipazione a riunioni di Gruppo, giornate formative interne | 4 |
+| 4. Progetto | Realizzazione di un prodotto di comunicazione/sensibilizzazione | 12 |
+| 5. Presentazione | Evento pubblico (scuola, quartiere, social) con presentazione del prodotto | 3 |
+| 6. Valutazione | Autovalutazione, valutazione tutor interno, valutazione tutor esterno | 2 |
+
+### Attività possibili (proposte modulari)
+
+- **Redazione giornalistica interna**: articoli per il sito del Gruppo su temi di protezione civile (con tutoraggio redazionale)
+- **Grafica e comunicazione**: produzione di infografiche, post social, video brevi per la campagna *Io non rischio*
+- **Cartografia e GIS**: mappatura di elementi di rischio o di interesse (idranti, aree attesa, caditoie) con strumenti QGIS o uMap
+- **Radio e telecomunicazioni**: affiancamento al settore TLC per l'apprendimento delle basi delle radiocomunicazioni di emergenza
+- **Formazione nelle scuole**: supporto ai volontari durante gli interventi nelle scuole primarie (peer education)
+- **Gestione eventi**: supporto organizzativo in esercitazioni ed eventi pubblici del Gruppo
+- **Accessibilità e inclusione**: traduzione/adattamento di materiali per target specifici (anziani, persone con disabilità, stranieri)
+- **Digital storytelling**: produzione di un documentario breve sul volontariato locale
+
+### Competenze acquisibili (output attesi)
+
+- **Competenze tecniche specifiche**: basi di radiocomunicazioni, cartografia, primo soccorso, gestione logistica di un evento
+- **Competenze comunicative**: comunicazione pubblica, comunicazione istituzionale, redazione tecnica
+- **Competenze trasversali**: lavoro di squadra, gestione del tempo, problem solving, resilienza
+- **Competenze civiche**: responsabilità, sussidiarietà, partecipazione attiva
+
+### Valutazione PCTO
+
+La valutazione segue il **D.Lgs. 62/2017** con rubrica condivisa tra tutor interno ed esterno. Le evidenze concorrono al **Curriculum dello studente** e alla valutazione del comportamento.
+
+### Convenzione
+
+La convenzione tra la scuola e il Gruppo va sottoscritta prima dell'avvio delle attività. Contiene: oggetto, durata, obblighi delle parti, copertura assicurativa (già prevista dal Gruppo), modalità di valutazione. Il modello è disponibile su richiesta alla segreteria.
+
+---
+
+## Compito di realtà — Progetto di classe
+
+In alternativa al PCTO (o a integrazione), proponi un **Progetto di classe** come compito di realtà valutabile in Educazione Civica.
+
+### Progetto A — *"Il piano di evacuazione della mia scuola"*
+
+**Consegna**: analizzare criticamente il Piano di Emergenza del proprio istituto e produrre una proposta di miglioramento.
+
+**Fasi**
+1. Richiesta formale al Dirigente Scolastico di accesso al Piano
+2. Lettura e schematizzazione del Piano in classe
+3. Verifica sul campo: percorsi di fuga effettivamente agibili? Cartelli presenti e leggibili? Punto di raccolta sicuro? Alunni informati?
+4. Sondaggio anonimo a campione studenti e personale (chi sa cosa fare?)
+5. Analisi dei dati (statistica descrittiva, grafici)
+6. Redazione di un **report di proposta** al Dirigente e all'RSPP
+7. Presentazione pubblica (Consiglio di Istituto, assemblea studentesca)
+
+**Durata**: 12-15 ore distribuite in 2 mesi
+
+**Prodotti**: report A4 di 15-20 pagine + presentazione + infografica riassuntiva
+
+### Progetto B — *"Rischio e resilienza del mio quartiere"*
+
+**Consegna**: mappare i rischi e le risorse di un quartiere o di una frazione di Genzano (o del territorio di appartenenza se la scuola è diversa) e produrre una guida informativa per i residenti.
+
+**Fasi**
+1. Analisi della cartografia ufficiale (PAI, IdroGEO, Piano di Emergenza Comunale)
+2. Uscita sul territorio: mappatura elementi di rischio e risorse (idranti, aree sicure, servizi)
+3. Intervista a residenti (con consenso documentato) sulla percezione del rischio
+4. Redazione della guida (formato A5 piegato a 3 ante)
+5. Distribuzione in farmacie, parrocchia, centri anziani (in accordo con Gruppo e Comune)
+
+**Durata**: 15-20 ore
+
+**Prodotti**: guida di 6-8 pagine formato pieghevole + mappa + versione digitale
+
+### Progetto C — *"Una campagna come Io non rischio"*
+
+**Consegna**: progettare una mini-campagna di comunicazione del rischio sul modello della campagna nazionale [Io non rischio](https://www.iononrischio.it/) per un target specifico (adolescenti, anziani, famiglie, turisti, stranieri).
+
+**Fasi**
+1. Analisi della campagna esistente (contenuti, messaggi, target)
+2. Definizione del proprio target e dei bisogni informativi specifici
+3. Progettazione dei contenuti (messaggio, canale, formato)
+4. Produzione materiali (video, poster, post social, podcast)
+5. Diffusione (scuola, social della scuola, rete dei familiari)
+6. Valutazione dell'efficacia (sondaggio di retention)
+
+**Durata**: 20-30 ore
+
+**Prodotti**: kit completo di comunicazione + report sull'efficacia
+
+---
+
+## Percorsi pluridisciplinari per l'Esame di Stato
+
+Il percorso si presta bene come **argomento pluridisciplinare** per il colloquio dell'Esame di Stato. Alcuni spunti collaudati.
+
+### Tema "Rischio e responsabilità"
+
+| Disciplina | Contributo |
+|---|---|
+| **Italiano** | Dino Buzzati, "Il deserto dei Tartari" (attesa della catastrofe); Calvino "Le città invisibili" (le città sul rischio) |
+| **Storia** | Il Vajont (1963) come caso di responsabilità politica e scientifica |
+| **Filosofia** | Jonas, "Il principio responsabilità" — l'etica per la civiltà tecnologica |
+| **Scienze della Terra** | Classificazione dei rischi, valutazione della pericolosità |
+| **Diritto** | Il processo Commissione Grandi Rischi dopo il sisma dell'Aquila |
+| **Inglese** | Analisi del concetto di *risk society* (U. Beck) |
+
+### Tema "Cambiamento climatico e territorio"
+
+| Disciplina | Contributo |
+|---|---|
+| **Scienze** | Basi del cambiamento climatico (IPCC), eventi estremi in Italia |
+| **Geografia** | Dissesto idrogeologico, consumo di suolo, urbanistica |
+| **Diritto** | Legge sul consumo di suolo, Piano nazionale adattamento ai cambiamenti climatici |
+| **Economia** | Costi economici dei disastri, assicurazioni, fondi europei (RescEU) |
+| **Italiano** | Saviano "La paranza dei bambini" per gli aspetti di comunità e territorio |
+| **Storia** | Alluvione di Firenze 1966, nascita del volontariato moderno |
+
+### Tema "Comunicazione, media, cittadinanza"
+
+| Disciplina | Contributo |
+|---|---|
+| **Italiano** | Retorica dell'allerta; testo informativo; disinformazione storica |
+| **Storia** | Propaganda, allarmismi storici, panico di massa (Welles "La guerra dei mondi") |
+| **Filosofia** | Filosofia del linguaggio, atti linguistici |
+| **Informatica** | Algoritmi dei social, camera dell'eco |
+| **Diritto** | Diritto all'informazione e limiti; libertà di stampa e responsabilità |
+| **Scienze** | Case study: comunicazione del Covid-19, Ebola, terremoti |
+
+---
+
+## Rubrica di valutazione delle competenze
+
+| Competenza | Iniziale (D) | Base (C) | Intermedio (B) | Avanzato (A) | Eccellenza (A+) |
+|---|---|---|---|---|---|
+| **Analisi critica del quadro normativo** | Superficiale | Riconosce i principali testi di legge | Collega norme e contesto storico | Valuta criticamente il sistema con esempi | Propone miglioramenti motivati e realizzabili |
+| **Comprensione scientifica del rischio** | Frammentaria | Spiega i fenomeni base | Integra fenomeni e dati | Analizza scenari complessi | Formula ipotesi originali fondate su dati |
+| **Ricerca e selezione fonti** | Non distingue le fonti | Usa fonti ufficiali se indicate | Seleziona autonomamente fonti di qualità | Confronta fonti, identifica bias | Costruisce bibliografia tecnica completa |
+| **Comunicazione scritta e orale** | Testo confuso o errato | Testo corretto ma elementare | Testo chiaro e ben argomentato | Testo efficace, adatto al target | Testo con qualità giornalistica o tecnica pubblicabile |
+| **Progettazione e realizzazione** | Non produce | Produce con guida costante | Produce autonomamente un prodotto semplice | Produce un prodotto completo e coerente | Produce un prodotto di qualità pubblica |
+| **Cittadinanza attiva** | Passivo | Segue le iniziative | Partecipa attivamente | Propone iniziative realizzabili | Coordina iniziative coinvolgendo altri |
+| **Lavoro di gruppo** | Ostacola | Contribuisce minimo | Contribuisce in modo costante | Favorisce la cooperazione | Assume ruoli di coordinamento |
+
+**Conversione orientativa in decimi**: D=5, C=6, B=7-8, A=8-9, A+=10.
+
+**Collocazione nella valutazione**: il percorso contribuisce alla valutazione di Educazione Civica (art. 2 Legge 92/2019), e in caso di PCTO contribuisce al voto di comportamento, al Curriculum dello studente e alla certificazione delle competenze.
+
+---
+
+## Adattamenti per l'inclusione
+
+### Alunni con DSA
+
+- Applica le misure compensative e dispensative del PDP
+- Per l'analisi normativa fornisci sintesi ad alta leggibilità
+- Per i dati scientifici fornisci sempre la rappresentazione grafica
+- Valorizza la produzione orale e multimediale come alternativa alla scritta
+- Per il PCTO: tempi distesi, tutoraggio individuale
+
+### Alunni con disabilità intellettiva
+
+- Collaborazione stretta con il docente di sostegno
+- Obiettivi personalizzati in PEI: focus sulla **partecipazione significativa**, non sulla piena equivalenza con la classe
+- Ruoli operativi chiari e definiti nei lavori di gruppo (es. ricerca immagini, registrazione audio, supporto logistico)
+- Nel PCTO: valorizza mansioni adatte al profilo (archiviazione, supporto accoglienza, grafica semplice)
+
+### Alunni con disturbo dello spettro autistico
+
+- Struttura chiara e prevedibile delle attività
+- Evita cambi di programma durante le uscite e le simulazioni
+- Per i Debate, assegna il ruolo e le argomentazioni con anticipo
+- Valorizza competenze specifiche (analisi dati, attenzione al dettaglio)
+
+### Alunni con disabilità motoria
+
+- Accessibilità di tutte le uscite verificata preventivamente
+- Per il PCTO scegli attività fisicamente compatibili (redazione, grafica, comunicazione, archivio)
+
+### Alunni stranieri con italiano L2
+
+- Fornisci versioni semplificate dei testi normativi
+- Valorizza la competenza plurilingue: possono tradurre materiali informativi per le comunità di origine
+- Per il progetto di classe, l'analisi comparativa con il sistema di PC del paese di origine è una risorsa preziosa
+
+### Alunni plusdotati
+
+- Approfondimenti: lettura integrale del D.Lgs. 1/2018, report IPCC, sentenza Grandi Rischi L'Aquila
+- Ruoli di coordinamento nei progetti di classe
+- Pubblicazione dei lavori migliori sul sito del Gruppo (previo accordo)
+
+---
+
+## Raccordo con il Piano di Emergenza della Scuola
+
+Il Piano di Emergenza e di Evacuazione della scuola (obbligatorio ai sensi di **D.M. 26/08/1992** e **D.Lgs. 81/2008**) è il documento istituzionale su cui si innestano molte attività del kit, in particolare:
+
+- **Modulo 4 (Monitoraggio e allertamento)** → esemplifica con il sistema allerta interno alla scuola (allarme, voci di annuncio, SMS staff)
+- **Progetto A (Piano di evacuazione)** → richiede accesso formale al Piano d'istituto
+- **PCTO sezione sicurezza** → le 4-8 ore di formazione sicurezza sono direttamente funzionali al rispetto del **D.Lgs. 81/2008**
+- **Esercitazioni di evacuazione** → integrare il percorso didattico con le prove obbligatorie (min. 2/anno)
+
+**Azione operativa**: prima di avviare il percorso, richiedi un incontro con l'RSPP e il Dirigente Scolastico per concordare:
+- Livello di accesso al Piano consentito agli studenti
+- Coordinamento con la prova di evacuazione
+- Eventuale presenza dell'RSPP come testimone qualificato per una lezione del Modulo 4
+- Inserimento nel **Documento di Valutazione dei Rischi (DVR)** della scuola di eventuali attività che coinvolgono esterni (volontari del Gruppo)
+
+---
+
+## Coinvolgimento della famiglia e della comunità
+
+### Assemblea di classe aperta ai genitori
+
+Una volta l'anno, organizza un'assemblea di classe con i genitori (60-90 minuti) in cui gli studenti presentano il progetto di classe o i prodotti del PCTO. È un'occasione di restituzione alla comunità e di rafforzamento del patto scuola-famiglia.
+
+### Eventi pubblici
+
+I prodotti del progetto di classe (guida al rischio, campagna di comunicazione, report sul Piano scolastico) possono essere presentati in eventi pubblici:
+- Giornata della Protezione Civile (seconda domenica di ottobre, "Io non rischio")
+- Open day della scuola
+- Eventi del Comune di Genzano (Sagra dell'Infiorata, eventi culturali)
+- Assemblee di quartiere promosse dal Comitato di Quartiere
+
+### Stampa locale
+
+Gli elaborati migliori possono essere proposti alla stampa locale (siti e giornali dei Castelli Romani) come contenuti di interesse pubblico. Il Gruppo può fungere da referente per il contatto.
+
+---
+
+## FAQ del docente
+
+**D. Nel mio istituto tecnico/professionale il PCTO è da 150-210 ore: un percorso con la PC copre tutto?**
+R. Un PCTO con il Gruppo copre 30-50 ore. Le ore restanti vanno completate con altri enti. Il PCTO PC è un'ottima **esperienza qualificante** nel piano triennale dello studente, specialmente per indirizzi CAT, chimico-ambientale, elettrotecnico.
+
+**D. Come gestisco uno studente interessato al volontariato "vero"?**
+R. Gli studenti maggiorenni possono iscriversi direttamente al Gruppo. Gli studenti dai 16 anni possono farlo con il consenso dei genitori (articolo 34 D.Lgs. 117/2017 — Codice del Terzo Settore). Il PCTO può essere la porta di ingresso.
+
+**D. Il processo Grandi Rischi dell'Aquila è un tema politicamente sensibile. Come lo affronto?**
+R. Come un **caso di studio di diritto penale e di filosofia della scienza**. Fatti: condanne in primo grado, assoluzioni in appello (eccetto De Bernardinis), dibattito sul ruolo della scienza nella comunicazione del rischio. Il tema è ricchissimo per il colloquio di Esame di Stato perché attraversa diritto, filosofia, scienza, comunicazione.
+
+**D. Come gestisco il negazionismo climatico tra gli studenti?**
+R. Non è più un tema di "dibattito": le posizioni scientifiche sono univoche (IPCC). Il dibattito legittimo è su **come reagire** al cambiamento climatico, non sul fatto che esista. Distinguere fatto e scelta politica è un esercizio di cittadinanza.
+
+**D. Posso usare le immagini di disastri?**
+R. Sì, ma con uso didattico: con contestualizzazione storica, dati, analisi. Evita video spettacolari senza contesto. Mai immagini di corpi o di persone identificabili.
+
+**D. La classe ha studenti reduci da esperienze traumatiche (es. famiglie di L'Aquila, Amatrice, Emilia)**
+R. Coordinati con il docente referente BES/DSA e lo psicologo scolastico. Valorizza la loro esperienza se loro vogliono condividerla. Proteggili da esposizioni pubbliche non desiderate. Usa un tono calmo e rispettoso.
+
+**D. Cosa succede se uno studente del PCTO partecipa a un'attivazione reale del Gruppo?**
+R. Le attivazioni di emergenza **non fanno parte del PCTO** per motivi assicurativi e di ruolo. Lo studente PCTO non è un volontario operativo. L'attivazione reale è riservata ai volontari regolarmente iscritti e formati. Questo limite va spiegato chiaramente all'inizio del percorso.
+
+**D. Le 33 ore di Ed. Civica + 50 ore di PCTO sono troppe per coprire solo protezione civile**
+R. Infatti non coprono solo protezione civile. Il percorso può essere modulato: le 33 ore di Ed. Civica coprono diversi nuclei (cittadinanza digitale, Agenda 2030, Costituzione, protezione civile). Il PCTO è uno dei tanti possibili, da scegliere se coerente con il percorso di studi.
+
+**D. Posso coinvolgere il Gruppo nella preparazione di un'esercitazione della scuola?**
+R. Sì, è una delle collaborazioni più naturali. Il Gruppo può partecipare come **osservatore qualificato** della prova di evacuazione e fornire un debriefing tecnico al Dirigente e all'RSPP.
+
+---
+
 ## Materiale di approfondimento
 
 - [D.Lgs. 1/2018 — Codice della Protezione Civile](https://www.normattiva.it/) — Testo integrale su Normattiva
@@ -425,8 +766,32 @@ Ogni gruppo ha 15 minuti per preparare le argomentazioni, poi 5 minuti ciascuno 
 - [Aree di emergenza di Genzano](/cartografia/) — Mappa delle aree di attesa e accoglienza
 - [Piano di Emergenza Comunale](/piano-emergenza/) — Struttura del piano
 - [Piano di Emergenza Familiare](/piano-familiare/) — Modello compilabile
+- [Giochi della Sicurezza — Ragazzi](/giochi/ragazzi/) — 10 giochi per la fascia 11-14 (ok anche primo biennio)
 - [Chi siamo](/chi-siamo/) — Il Gruppo Comunale di Genzano
 - [Diventa Volontario](/diventa-volontario/) — Informazioni sull'iscrizione
+- [Rapporti IPCC](https://www.ipcc.ch/) — Panel intergovernativo sui cambiamenti climatici
+- [Copernicus Climate Change Service](https://climate.copernicus.eu/) — Dati climatici europei
+
+### Fonti normative e curricolari
+
+- [Legge 20 agosto 2019 n. 92](https://www.normattiva.it/) — Introduzione dell'insegnamento dell'educazione civica
+- **D.M. 35/2020 e aggiornamento 2024** — Linee guida per l'insegnamento dell'educazione civica
+- **D.P.R. 89/2010** — Regolamento dei Licei; **D.P.R. 87-88/2010** — Istituti Tecnici e Professionali
+- **D.Lgs. 15 aprile 2005 n. 77** — Alternanza scuola-lavoro (oggi PCTO)
+- **D.Lgs. 13 aprile 2017 n. 62** — Valutazione e certificazione competenze
+- **Raccomandazione UE 2018/C 189/01** — 8 competenze chiave per l'apprendimento permanente
+- [D.Lgs. 2 gennaio 2018 n. 1](/normativa/testo-unico-protezione-civile/) — Codice della Protezione Civile
+- **D.Lgs. 3 luglio 2017 n. 117** — Codice del Terzo Settore
+- **D.Lgs. 81/2008** — Sicurezza nei luoghi di lavoro
+- **D.M. 26/08/1992** — Norme di prevenzione incendi per l'edilizia scolastica
+
+### Bibliografia minima per il docente
+
+- Ulrich Beck, *La società del rischio* (1986, trad. it. Carocci)
+- Hans Jonas, *Il principio responsabilità* (1979, trad. it. Einaudi)
+- Erri De Luca e altri, *Le parole della protezione civile* (DPC, disponibile online)
+- Carlo Meletti et al., *Terremoti e pericolosità sismica in Italia* (INGV)
+- IPCC, *AR6 — Sixth Assessment Report* (2021-2023) — sintesi per decisori
 
 ---
 
