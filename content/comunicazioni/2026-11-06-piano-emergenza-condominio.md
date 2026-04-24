@@ -58,7 +58,7 @@ Un piano condominiale considera:
 
 ### Procedure base
 - **in caso di incendio**: avvisare gli altri, chiamare 112, uscire dalle scale, non usare ascensore;
-- **in caso di fuga di gas**: chiudere contatore generale, non accendere fiamme, non azionare interruttori, chiamare 115 e distribuzione gas;
+- **in caso di fuga di gas**: chiudere il contatore generale, non accendere fiamme, non azionare interruttori, chiamare il 112 e il distributore del gas;
 - **in caso di allagamento**: chiudere acqua generale, avvisare amministratore;
 - **in caso di black-out**: verificare contatore, avvisare amministratore;
 - **in caso di terremoto**: uscire dopo la scossa sulla scala principale, raggiungere area di attesa.
