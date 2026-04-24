@@ -1,0 +1,15 @@
+{{/* Shortcode external-widget: wrapper del partial external-widget.html
+     per uso diretto dentro file Markdown. Tutti i parametri sono passati
+     al partial come dict. Vedi partial per documentazione completa. */}}
+{{ partial "external-widget.html" (dict
+  "src"              (.Get "src")
+  "title"            (.Get "title")
+  "placeholderTitle" (.Get "placeholderTitle")
+  "placeholderDesc"  (.Get "placeholderDesc")
+  "icon"             (.Get "icon")
+  "btnLabel"         (.Get "btnLabel")
+  "altUrl"           (.Get "altUrl")
+  "altLabel"         (.Get "altLabel")
+  "fallbackText"     (.Get "fallbackText")
+  "widgetId"         (.Get "widgetId")
+) }}

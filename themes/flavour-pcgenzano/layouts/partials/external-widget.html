@@ -1,0 +1,59 @@
+{{/*
+  Partial: external-widget
+  Scopo: incorporare un iframe di terze parti con pattern click-to-load,
+  privacy-by-design e compliance WCAG 2.2 AA. L'iframe viene caricato
+  solo dopo esplicito click dell'utente; nessun cookie di terze parti
+  al primo accesso.
+
+  Parametri (dict):
+    src              (string, obbligatorio) URL dell'iframe da caricare
+    title            (string, obbligatorio) attributo title dell'iframe e dell'h3
+    placeholderTitle (string, obbligatorio) titolo grande sul placeholder
+    placeholderDesc  (string, obbligatorio) descrizione sul placeholder
+    icon             (string, obbligatorio) classe Bootstrap Icon (es. "bi-cloud-rain-heavy")
+    btnLabel         (string, opzionale)    testo del pulsante (default: "Carica il contenuto")
+    altUrl           (string, obbligatorio) URL alternativo per fallback e noscript
+    altLabel         (string, obbligatorio) label del link alternativo
+    fallbackText     (string, obbligatorio) testo mostrato su stampa al posto dell'iframe
+    widgetId         (string, opzionale)    id univoco per eventuali anchor
+*/}}
+
+{{ $src := .src }}
+{{ $title := .title }}
+{{ $placeholderTitle := .placeholderTitle }}
+{{ $placeholderDesc := .placeholderDesc }}
+{{ $icon := .icon }}
+{{ $btnLabel := default "Carica il contenuto" .btnLabel }}
+{{ $altUrl := .altUrl }}
+{{ $altLabel := .altLabel }}
+{{ $fallbackText := .fallbackText }}
+{{ $widgetId := default (printf "ext-widget-%d" now.UnixNano) .widgetId }}
+{{ $headingId := printf "%s-heading" $widgetId }}
+
+<section id="{{ $widgetId }}" class="ext-widget-section" aria-labelledby="{{ $headingId }}">
+  <h3 id="{{ $headingId }}" class="visually-hidden">{{ $title }}</h3>
+
+  <div class="ext-widget-placeholder" data-widget-src="{{ $src }}" data-widget-title="{{ $title }}">
+    <div class="ext-widget-placeholder-content">
+      <i class="bi {{ $icon }}" aria-hidden="true"></i>
+      <p class="ext-widget-placeholder-title">{{ $placeholderTitle }}</p>
+      <p class="ext-widget-placeholder-desc">{{ $placeholderDesc | safeHTML }}</p>
+      <button type="button" class="ext-widget-load-btn btn btn-light btn-lg">
+        <i class="bi bi-play-circle me-1" aria-hidden="true"></i> {{ $btnLabel }}
+      </button>
+      <p class="ext-widget-placeholder-alt">
+        In alternativa apri <a href="{{ $altUrl }}" target="_blank" rel="noopener noreferrer">{{ $altLabel }}</a>.
+      </p>
+    </div>
+  </div>
+
+  <noscript>
+    <div class="alert alert-info mt-3">
+      <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Il contenuto richiede JavaScript abilitato nel browser. Puoi consultare direttamente <a href="{{ $altUrl }}" target="_blank" rel="noopener noreferrer">{{ $altLabel }}</a>.</p>
+    </div>
+  </noscript>
+
+  <div class="ext-widget-print-fallback d-none">
+    {{ $fallbackText }}
+  </div>
+</section>

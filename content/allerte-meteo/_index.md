@@ -28,54 +28,17 @@ sitemap:
 <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Attenzione:</strong> la mappa è un ausilio visivo fornito da <strong>Windy.com</strong> e si basa su modelli previsionali internazionali. <strong>Non sostituisce il bollettino ufficiale</strong>. Per le allerte che valgono sul territorio di Genzano consulta sempre il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale della Regione Lazio</a>.</p>
 </div>
 
-<section id="meteo-windy" class="windy-widget-section" aria-labelledby="windy-widget-heading">
-
-<h3 id="windy-widget-heading" class="visually-hidden">Widget meteo Windy</h3>
-
-<div class="windy-placeholder" id="windy-placeholder" data-windy-src="https://embed.windy.com/embed2.html?lat=41.6919&amp;lon=12.6928&amp;detailLat=41.6919&amp;detailLon=12.6928&amp;width=100%25&amp;height=450&amp;zoom=12&amp;level=surface&amp;overlay=radar&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=true&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1">
-  <div class="windy-placeholder-content">
-    <i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i>
-    <p class="windy-placeholder-title">Mappa meteo interattiva</p>
-    <p class="windy-placeholder-desc">Per visualizzare la mappa devi caricare i contenuti forniti da <strong>Windy.com</strong>. Il tuo browser riceverà risorse dal loro server e potrebbe impostare cookie tecnici di terze parti.</p>
-    <button type="button" id="windy-load-btn" class="btn btn-light btn-lg">
-      <i class="bi bi-play-circle me-1" aria-hidden="true"></i> Carica la mappa meteo
-    </button>
-    <p class="windy-placeholder-alt">
-      In alternativa apri <a href="https://www.windy.com/?41.691,12.692,12" target="_blank" rel="noopener noreferrer">Windy.com centrato su Genzano di Roma</a>.
-    </p>
-  </div>
-</div>
-
-<noscript>
-<div class="alert alert-info mt-3">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>La mappa interattiva richiede JavaScript abilitato nel browser. Puoi consultare Windy.com direttamente da <a href="https://www.windy.com/?41.691,12.692,12" target="_blank" rel="noopener noreferrer">questo link</a>.</p>
-</div>
-</noscript>
-
-</section>
-
-<script>
-(function() {
-  var btn = document.getElementById('windy-load-btn');
-  var ph = document.getElementById('windy-placeholder');
-  if (!btn || !ph) return;
-  btn.addEventListener('click', function() {
-    var src = ph.getAttribute('data-windy-src');
-    var iframe = document.createElement('iframe');
-    iframe.setAttribute('src', src);
-    iframe.setAttribute('title', 'Mappa meteo interattiva Windy centrata su Genzano di Roma');
-    iframe.setAttribute('loading', 'lazy');
-    iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
-    iframe.setAttribute('allow', 'geolocation');
-    iframe.className = 'windy-iframe';
-    ph.innerHTML = '';
-    ph.classList.add('windy-loaded');
-    ph.appendChild(iframe);
-    iframe.setAttribute('tabindex', '0');
-    iframe.focus();
-  });
-})();
-</script>
+{{< external-widget
+    src="https://embed.windy.com/embed2.html?lat=41.6919&lon=12.6928&detailLat=41.6919&detailLon=12.6928&width=100%25&height=450&zoom=12&level=surface&overlay=radar&product=ecmwf&menu=&message=&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
+    title="Mappa meteo interattiva Windy centrata su Genzano di Roma"
+    placeholderTitle="Mappa meteo interattiva"
+    placeholderDesc="Per visualizzare la mappa devi caricare i contenuti forniti da <strong>Windy.com</strong>. Il tuo browser riceverà risorse dal loro server e potrebbe impostare cookie tecnici di terze parti."
+    icon="bi-cloud-rain-heavy"
+    btnLabel="Carica la mappa meteo"
+    altUrl="https://www.windy.com/?41.691,12.692,12"
+    altLabel="Windy.com centrato su Genzano di Roma"
+    fallbackText="Mappa meteo online consultabile su windy.com — Genzano di Roma (41.6919 N, 12.6928 E)"
+    widgetId="meteo-windy" >}}
 
 ## Come funziona il sistema di allertamento
 

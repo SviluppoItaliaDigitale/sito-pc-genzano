@@ -34,9 +34,12 @@ In caso di risposta insoddisfacente o assente entro 30 giorni, l'utente può ric
 
 ### Contenuti di terze parti
 
-Alcune sezioni del sito incorporano contenuti forniti da servizi esterni, sui quali il Titolare **non esercita controllo diretto** per la conformità WCAG. In particolare:
+Alcune sezioni del sito incorporano contenuti forniti da servizi esterni, sui quali il Titolare **non esercita controllo diretto** per la conformità WCAG. Tutti questi widget adottano il pattern **"click-to-load"**: si attivano solo dopo esplicita azione dell'utente e offrono sempre un'alternativa testuale (link diretto al sito del fornitore e fallback `<noscript>`).
 
-- **Widget meteo Windy.com** nella pagina [Allerte Meteo](/allerte-meteo/) — la mappa interattiva è fornita da Windyty, SE. Il widget si carica solo su esplicita azione dell'utente (pulsante "Carica la mappa meteo") ed è dotato di alternative testuali (link diretto a Windy.com, fallback `<noscript>`). L'accessibilità dei controlli interni del widget (zoom, layer switcher, slider temporale) è responsabilità del fornitore.
+In particolare:
+
+- **Widget meteo Windy.com** — mappa meteo interattiva fornita da Windyty, SE. Presente nella [Home](/) e in [Allerte Meteo](/allerte-meteo/). Alternativa: [windy.com](https://www.windy.com/?41.691,12.692,12).
+- **Widget terremoti INGV** — mappa e lista terremoti recenti fornita dall'Istituto Nazionale di Geofisica e Vulcanologia (ente pubblico di ricerca italiano). Presente nella [Home](/) e in [Rischio Sismico](/rischi-prevenzione/rischio-sismico/). Alternativa: [terremoti.ingv.it](https://terremoti.ingv.it/).
 - **Mappe e documenti PDF** delle pagine istituzionali (Regione Lazio, Dipartimento di Protezione Civile, Normattiva) aperte in nuova scheda.
 
-Per le parti di sito sotto il controllo diretto del Titolare è garantita la conformità WCAG 2.2 livello AA. Le segnalazioni relative a problemi di accessibilità dei contenuti di terzi vengono inoltrate al fornitore e, ove possibile, viene fornita un'alternativa accessibile.
+L'accessibilità dei controlli interni dei widget (zoom, layer switcher, slider temporale, filtri) è responsabilità dei fornitori. Per le parti di sito sotto il controllo diretto del Titolare è garantita la conformità WCAG 2.2 livello AA. Le segnalazioni relative a problemi di accessibilità dei contenuti di terzi vengono inoltrate al fornitore e, ove possibile, viene fornita un'alternativa accessibile.
