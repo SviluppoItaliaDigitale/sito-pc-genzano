@@ -20,6 +20,63 @@ sitemap:
 </div>
 </div>
 
+## Mappa meteo interattiva
+
+**Strumento di consultazione** che mostra radar, precipitazioni, vento, temperatura e altri parametri meteo centrati su Genzano di Roma. Dal menu del widget puoi cambiare il tipo di layer e la scala temporale.
+
+<div class="alert alert-warning" role="note">
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Attenzione:</strong> la mappa è un ausilio visivo fornito da <strong>Windy.com</strong> e si basa su modelli previsionali internazionali. <strong>Non sostituisce il bollettino ufficiale</strong>. Per le allerte che valgono sul territorio di Genzano consulta sempre il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale della Regione Lazio</a>.</p>
+</div>
+
+<section id="meteo-windy" class="windy-widget-section" aria-labelledby="windy-widget-heading">
+
+<h3 id="windy-widget-heading" class="visually-hidden">Widget meteo Windy</h3>
+
+<div class="windy-placeholder" id="windy-placeholder" data-windy-src="https://embed.windy.com/embed2.html?lat=41.6919&amp;lon=12.6928&amp;detailLat=41.6919&amp;detailLon=12.6928&amp;width=100%25&amp;height=450&amp;zoom=12&amp;level=surface&amp;overlay=radar&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=true&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1">
+  <div class="windy-placeholder-content">
+    <i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i>
+    <p class="windy-placeholder-title">Mappa meteo interattiva</p>
+    <p class="windy-placeholder-desc">Per visualizzare la mappa devi caricare i contenuti forniti da <strong>Windy.com</strong>. Il tuo browser riceverà risorse dal loro server e potrebbe impostare cookie tecnici di terze parti.</p>
+    <button type="button" id="windy-load-btn" class="btn btn-light btn-lg">
+      <i class="bi bi-play-circle me-1" aria-hidden="true"></i> Carica la mappa meteo
+    </button>
+    <p class="windy-placeholder-alt">
+      In alternativa apri <a href="https://www.windy.com/?41.691,12.692,12" target="_blank" rel="noopener noreferrer">Windy.com centrato su Genzano di Roma</a>.
+    </p>
+  </div>
+</div>
+
+<noscript>
+<div class="alert alert-info mt-3">
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>La mappa interattiva richiede JavaScript abilitato nel browser. Puoi consultare Windy.com direttamente da <a href="https://www.windy.com/?41.691,12.692,12" target="_blank" rel="noopener noreferrer">questo link</a>.</p>
+</div>
+</noscript>
+
+</section>
+
+<script>
+(function() {
+  var btn = document.getElementById('windy-load-btn');
+  var ph = document.getElementById('windy-placeholder');
+  if (!btn || !ph) return;
+  btn.addEventListener('click', function() {
+    var src = ph.getAttribute('data-windy-src');
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('src', src);
+    iframe.setAttribute('title', 'Mappa meteo interattiva Windy centrata su Genzano di Roma');
+    iframe.setAttribute('loading', 'lazy');
+    iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+    iframe.setAttribute('allow', 'geolocation');
+    iframe.className = 'windy-iframe';
+    ph.innerHTML = '';
+    ph.classList.add('windy-loaded');
+    ph.appendChild(iframe);
+    iframe.setAttribute('tabindex', '0');
+    iframe.focus();
+  });
+})();
+</script>
+
 ## Come funziona il sistema di allertamento
 
 Il sistema nazionale di allertamento per il rischio meteo-idrogeologico e idraulico si articola su due livelli:
@@ -107,61 +164,3 @@ Tutti gli articoli sulle allerte meteo sono filtrabili nell'[archivio delle comu
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/)
 - [Radar nazionale precipitazioni](https://mappe.protezionecivile.gov.it/it/mappe-rischi/piattaforma-radar/)
 - [Meteo Aeronautica Militare](https://www.meteoam.it/it/home)
-
-## Mappa meteo interattiva
-
-Di seguito uno **strumento di consultazione** che mostra radar, precipitazioni, vento, temperatura e altri parametri meteo centrati su Genzano di Roma. Dal menu del widget puoi cambiare il tipo di layer e la scala temporale.
-
-<div class="alert alert-warning" role="note">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Attenzione:</strong> la mappa qui sotto è un ausilio visivo fornito da <strong>Windy.com</strong> e si basa su modelli previsionali internazionali. <strong>Non sostituisce il bollettino ufficiale</strong>. Per le allerte che valgono sul territorio di Genzano consulta sempre il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale della Regione Lazio</a>.</p>
-</div>
-
-<section id="meteo-windy" class="windy-widget-section" aria-labelledby="windy-widget-heading">
-
-<h3 id="windy-widget-heading" class="visually-hidden">Widget meteo Windy</h3>
-
-<div class="windy-placeholder" id="windy-placeholder" data-windy-src="https://embed.windy.com/embed2.html?lat=41.6919&amp;lon=12.6928&amp;detailLat=41.6919&amp;detailLon=12.6928&amp;width=100%25&amp;height=450&amp;zoom=12&amp;level=surface&amp;overlay=radar&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=true&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1">
-  <div class="windy-placeholder-content">
-    <i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i>
-    <p class="windy-placeholder-title">Mappa meteo interattiva</p>
-    <p class="windy-placeholder-desc">Per visualizzare la mappa devi caricare i contenuti forniti da <strong>Windy.com</strong>. Il tuo browser riceverà risorse dal loro server e potrebbe impostare cookie tecnici di terze parti.</p>
-    <button type="button" id="windy-load-btn" class="btn btn-light btn-lg">
-      <i class="bi bi-play-circle me-1" aria-hidden="true"></i> Carica la mappa meteo
-    </button>
-    <p class="windy-placeholder-alt">
-      In alternativa apri <a href="https://www.windy.com/?41.691,12.692,12" target="_blank" rel="noopener noreferrer">Windy.com centrato su Genzano di Roma</a>.
-    </p>
-  </div>
-</div>
-
-<noscript>
-<div class="alert alert-info mt-3">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>La mappa interattiva richiede JavaScript abilitato nel browser. Puoi consultare Windy.com direttamente da <a href="https://www.windy.com/?41.691,12.692,12" target="_blank" rel="noopener noreferrer">questo link</a>.</p>
-</div>
-</noscript>
-
-</section>
-
-<script>
-(function() {
-  var btn = document.getElementById('windy-load-btn');
-  var ph = document.getElementById('windy-placeholder');
-  if (!btn || !ph) return;
-  btn.addEventListener('click', function() {
-    var src = ph.getAttribute('data-windy-src');
-    var iframe = document.createElement('iframe');
-    iframe.setAttribute('src', src);
-    iframe.setAttribute('title', 'Mappa meteo interattiva Windy centrata su Genzano di Roma');
-    iframe.setAttribute('loading', 'lazy');
-    iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
-    iframe.setAttribute('allow', 'geolocation');
-    iframe.className = 'windy-iframe';
-    ph.innerHTML = '';
-    ph.classList.add('windy-loaded');
-    ph.appendChild(iframe);
-    // Sposta il focus sull'iframe per lettori schermo
-    iframe.setAttribute('tabindex', '0');
-    iframe.focus();
-  });
-})();
-</script>
