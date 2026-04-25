@@ -1,9 +1,10 @@
 ---
+
 title: "Vento Forte"
 description: "Cosa fare prima, durante e dopo episodi di vento forte e raffiche violente sul territorio di Genzano di Roma."
 weight: 4
+toc: true
 ---
-
 Il vento forte è un fenomeno meteorologico frequente nella zona dei Castelli Romani, soprattutto nei mesi autunnali e invernali. Raffiche violente possono causare la caduta di alberi, rami, tegole e cartelloni, con rischi significativi per le persone e i veicoli.
 
 ## Perché è rilevante sul nostro territorio

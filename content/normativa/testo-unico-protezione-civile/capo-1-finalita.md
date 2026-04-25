@@ -1,8 +1,9 @@
 ---
+
 title: "Capo I — Finalità, attività e composizione del SNPC (articoli 1-13)"
 description: "Il primo Capo del Codice della Protezione Civile definisce cosa fa il Servizio Nazionale, quali sono i tre tipi di emergenza, chi partecipa, quali sono i diritti del cittadino."
+toc: true
 ---
-
 Il **Capo I** del Codice della Protezione Civile (articoli da 1 a 13) è la sezione "fondativa": definisce **che cos'è** il Servizio Nazionale della Protezione Civile, **quali attività** svolge, **chi ne fa parte** e **quali sono i diritti** del cittadino. Senza queste definizioni il resto del Codice non si capirebbe.
 
 ## Articolo 1 — Definizione e finalità

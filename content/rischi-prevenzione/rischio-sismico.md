@@ -1,9 +1,10 @@
 ---
+
 title: "Rischio Sismico: Cosa Fare"
 description: "Cosa fare prima, durante e dopo una scossa di terremoto per la sicurezza della tua famiglia."
 weight: 1
+toc: true
 ---
-
 Il terremoto è un evento naturale non prevedibile. L'unica difesa possibile è la prevenzione, la conoscenza delle corrette norme di comportamento e la preparazione.
 
 ## Terremoti recenti in Italia

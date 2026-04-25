@@ -1,8 +1,9 @@
 ---
+
 title: "Capo VI — Volontariato di protezione civile (articoli 31-42)"
 description: "Il Capo VI del Codice della Protezione Civile disciplina il volontariato organizzato: gruppi comunali, ODV, ONLUS, tutele, assicurazione, rimborsi, elenco territoriale."
+toc: true
 ---
-
 Il **Capo VI** del Codice della Protezione Civile (articoli da 31 a 42) è dedicato al **volontariato organizzato**. È la sezione più rilevante per chi, come il nostro Gruppo Comunale di Genzano di Roma, opera come volontario di protezione civile: definisce **cos'è** un'organizzazione di volontariato, **come si iscrive**, **quali tutele** riceve, **come viene attivata** in emergenza.
 
 Il volontariato è citato come **"componente del Servizio nazionale"** fin dall'articolo 3: il Capo VI traduce quella posizione istituzionale in regole concrete.

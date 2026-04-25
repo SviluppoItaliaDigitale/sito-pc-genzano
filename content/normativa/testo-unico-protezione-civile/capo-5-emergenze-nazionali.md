@@ -1,8 +1,9 @@
 ---
+
 title: "Capo V — Gestione delle emergenze di rilievo nazionale (articoli 24-30)"
 description: "Il quinto Capo del Codice della Protezione Civile disciplina lo stato di emergenza di rilievo nazionale: dichiarazione, ordinanze di Protezione Civile, DI.COMA.C., superamento dell'emergenza."
+toc: true
 ---
-
 Il **Capo V** del Codice della Protezione Civile (articoli 24-30) disciplina le situazioni più gravi: gli **eventi di rilievo nazionale** (Tipo C, secondo la classificazione dell'articolo 7). Sono le emergenze in cui i mezzi e i poteri ordinari non bastano, e lo Stato attiva **strumenti straordinari** per coordinare la risposta e avviare il ritorno alla normalità.
 
 ## Articolo 24 — Dichiarazione dello stato di emergenza di rilievo nazionale

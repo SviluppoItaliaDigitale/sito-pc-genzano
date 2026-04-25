@@ -1,8 +1,9 @@
 ---
+
 title: "Il Codice della Protezione Civile (D.Lgs. 1/2018)"
 description: "Guida completa al Testo Unico della Protezione Civile: struttura, finalità, organizzazione del Servizio Nazionale, volontariato, gestione delle emergenze."
+toc: true
 ---
-
 Il **Decreto Legislativo 2 gennaio 2018, n. 1** — comunemente chiamato **Codice della Protezione Civile** o **Testo Unico della Protezione Civile** — è la legge che disciplina il **Servizio Nazionale della Protezione Civile** (SNPC). Ha sostituito la storica **Legge 225 del 1992**, riordinando venticinque anni di norme e prassi in un unico testo organico.
 
 In questa sezione trovi una **sintesi divulgativa**, articolo per articolo, pensata per cittadini, volontari e amministratori locali. Non sostituisce il testo ufficiale: per un uso professionale consulta sempre il testo aggiornato su [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).

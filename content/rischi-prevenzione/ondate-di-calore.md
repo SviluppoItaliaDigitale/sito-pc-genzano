@@ -1,9 +1,10 @@
 ---
+
 title: "Ondate di Calore"
 description: "Come proteggersi dal caldo estremo: consigli per anziani, bambini e persone fragili."
 weight: 6
+toc: true
 ---
-
 Le ondate di calore sono periodi prolungati di temperature molto elevate, spesso accompagnate da alti livelli di umidità, che possono rappresentare un rischio serio per la salute, soprattutto per le persone più vulnerabili.
 
 ## Perché è rilevante sul nostro territorio

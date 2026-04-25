@@ -1,12 +1,13 @@
 ---
+
 title: "Glossario di Protezione Civile"
 description: "Spiegazione in parole semplici delle sigle e dei termini tecnici della Protezione Civile italiana: COC, DPC, IT-alert, NUE, PAI, AeDES e molti altri."
 layout: "single"
 sitemap:
   priority: 0.7
   changefreq: monthly
+toc: true
 ---
-
 Le sigle e i termini tecnici della Protezione Civile possono sembrare complicati. Questa pagina li spiega in **parole semplici**, con un esempio concreto dove utile. Se cerchi un termine che non trovi, scrivici a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it): lo aggiungiamo.
 
 <div class="alert alert-info" role="note">

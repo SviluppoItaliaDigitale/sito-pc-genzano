@@ -1,8 +1,9 @@
 ---
+
 title: "Come sono evolute le procedure di emergenza: dalla direttiva Bertolaso 1996 alla direttiva 2021"
 description: "Un confronto tra la direttiva del 1996 sull'attività preparatoria e le procedure di intervento e gli indirizzi vigenti previsti dalla direttiva 30 aprile 2021 e dal Codice della Protezione Civile."
+toc: true
 ---
-
 Nel **luglio 1996** il Dipartimento della Protezione Civile, guidato da **Guido Bertolaso** (Capo del Dipartimento), pubblicò la **seconda edizione** della direttiva **"Attività preparatoria e procedure d'intervento in caso di emergenza per protezione civile"** (Pubblicazione n. 42). Era un documento **pionieristico**: per la prima volta il sistema italiano metteva per iscritto, in maniera sistematica, le procedure preparatorie e operative per gestire un'emergenza di protezione civile.
 
 A trent'anni di distanza, il quadro normativo è **profondamente cambiato**. In questa pagina confrontiamo il testo del 1996 con gli **indirizzi vigenti** previsti dalla **Direttiva del Presidente del Consiglio dei Ministri del 30 aprile 2021** e dal **Codice della Protezione Civile (D.Lgs. 1/2018)**.

@@ -1,9 +1,10 @@
 ---
+
 title: "Blackout e Interruzione Servizi"
 description: "Cosa fare in caso di interruzione dell'energia elettrica, dell'acqua o delle telecomunicazioni."
 weight: 7
+toc: true
 ---
-
 Un blackout prolungato può derivare da eventi meteorologici estremi, guasti alla rete o sovraccarichi. L'interruzione dell'energia elettrica può causare disagi significativi e, in alcuni casi, situazioni di pericolo, soprattutto per le persone che dipendono da apparecchiature elettromedicali.
 
 ## Perché è rilevante sul nostro territorio
