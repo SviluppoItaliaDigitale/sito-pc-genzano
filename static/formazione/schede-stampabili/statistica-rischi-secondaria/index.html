@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Statistica dei rischi italiani (Secondaria I)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Primo Grado. Analisi statistica dei rischi naturali in Italia: tabelle, percentuali, grafici da costruire.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .dati-tabella {
+      width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.9rem;
+    }
+    .dati-tabella th, .dati-tabella td {
+      border: 1.5px solid var(--scheda-bordo); padding: 0.4rem 0.6rem; text-align: left;
+    }
+    .dati-tabella th { background: var(--scheda-blu); color: #fff; font-weight: 700; }
+    .dati-tabella td.num { text-align: right; font-family: "Courier New", monospace; font-weight: 600; }
+    .dati-tabella tbody tr:nth-child(even) { background: #f4f7fb; }
+
+    .domanda-card {
+      padding: 0.55rem 0.75rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      margin: 0.4rem 0;
+    }
+    .domanda-card .header {
+      display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.3rem;
+    }
+    .domanda-card .num-q {
+      width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .domanda-card .testo { font-size: 0.9rem; line-height: 1.4; flex: 1; }
+    .domanda-card .testo strong { color: var(--scheda-blu); }
+    .domanda-card .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .domanda-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+    .domanda-card .calcolo {
+      background: #f4f7fb; border-left: 3px solid var(--scheda-blu);
+      padding: 0.4rem 0.6rem; border-radius: 0 4px 4px 0;
+      font-size: 0.82rem; color: #ced4da; font-style: italic;
+      min-height: 3rem;
+      margin: 0.3rem 0 0 2rem;
+    }
+    .domanda-card .calcolo::before { content: "Spazio per il calcolo:"; }
+
+    .grafico-vuoto {
+      background: #f4f7fb; border: 2px dashed var(--scheda-blu);
+      border-radius: 8px; padding: 0.5rem;
+      margin: 0.4rem 0; min-height: 8rem;
+      display: flex; align-items: center; justify-content: center;
+      color: #ced4da; font-style: italic; font-size: 0.9rem;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Statistica dei rischi — Secondaria I</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La statistica dei rischi italiani</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Primo Grado (11-14 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 11-14 anni</span>
+      <span><strong>Obiettivo:</strong> leggere dati statistici sui rischi e farne analisi</span>
+      <span><strong>Discipline:</strong> matematica, geografia, ed. civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      I dati sono lo strumento con cui la <strong>Protezione Civile</strong> capisce
+      dove intervenire e come prevenire. Fonte ufficiale: <strong>Dipartimento di Protezione
+      Civile</strong> (DPC) e <strong>ISPRA</strong>.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>I rischi naturali in Italia (dati DPC)</h2></div>
+
+    <table class="dati-tabella">
+      <thead>
+        <tr><th>Tipo di rischio</th><th>% comuni esposti</th><th>Popolazione esposta (mln)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Rischio sismico</td><td class="num">44%</td><td class="num">22</td></tr>
+        <tr><td>Rischio idrogeologico</td><td class="num">94%</td><td class="num">7,5</td></tr>
+        <tr><td>Rischio alluvioni</td><td class="num">17%</td><td class="num">2,4</td></tr>
+        <tr><td>Rischio vulcanico</td><td class="num">3%</td><td class="num">3</td></tr>
+        <tr><td>Rischio incendi boschivi</td><td class="num">68%</td><td class="num">15</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.82rem; color: var(--scheda-grigio); margin-top: 0.2rem;"><em>Dati indicativi DPC/ISPRA. Italia: ~7.900 comuni, ~59 milioni di abitanti.</em></p>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Domande di analisi</h2></div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">1</span><span class="testo">Qual è il <strong>rischio</strong> che colpisce più comuni in Italia?</span></div>
+      <div class="righe"><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">2</span><span class="testo">Quanti <strong>comuni circa</strong> sono esposti al rischio sismico? <em>(Italia: 7.900 comuni)</em></span></div>
+      <div class="calcolo"></div>
+      <div class="righe"><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">3</span><span class="testo">Quale percentuale della popolazione italiana è esposta al rischio sismico? <em>(Italia: 59 milioni)</em></span></div>
+      <div class="calcolo"></div>
+      <div class="righe"><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">4</span><span class="testo">Il rischio vulcanico colpisce solo il 3% dei comuni, ma quanti milioni di persone sono esposti? Perché un numero così alto in così pochi comuni?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="sez-titolo"><span class="num">3</span><h2>Costruisci il grafico a barre</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0;">
+      Disegna nel riquadro un <strong>istogramma</strong> con le percentuali dei comuni
+      esposti per ogni rischio. Asse X = tipo di rischio. Asse Y = percentuale (0-100).
+    </p>
+    <div class="grafico-vuoto">[ Spazio per il grafico — usa una riga ogni 10% sull'asse Y ]</div>
+
+    <div class="sez-titolo"><span class="num">4</span><h2>Riflessione finale</h2></div>
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">5</span><span class="testo">Sommando le percentuali della tabella si ottiene un valore <strong>maggiore di 100%</strong>. Come è possibile?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>1) Idrogeologico (94%) · 2) 7.900 × 0,44 ≈ <strong>3.476 comuni</strong> · 3) 22÷59 ≈ <strong>37,3%</strong> · 4) ~3 milioni perché i pochi comuni vulcanici (Vesuvio, Etna, Campi Flegrei) sono molto popolosi (Napoli e dintorni) · 5) un comune può essere esposto a <strong>più rischi contemporaneamente</strong> (es. Genzano: idrogeologico + sismico + incendi).</li>
+        <li><strong>Discipline trasversali</strong>: matematica (percentuali, conversioni), geografia (territorio italiano), ed. civica (responsabilità dello Stato nella prevenzione).</li>
+        <li><strong>Approfondimento</strong>: scaricare i dati aggiornati dal portale <a href="https://idrogeo.isprambiente.it/" target="_blank" rel="noopener">IdroGEO ISPRA</a>. Per il sismico, mappa INGV.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Statistica dei rischi" · Secondaria I · matematica · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

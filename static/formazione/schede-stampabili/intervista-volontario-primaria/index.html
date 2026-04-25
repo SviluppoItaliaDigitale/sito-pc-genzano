@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Intervista al volontario PC (Primaria 3ª-5ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. Compito di realtà: prepara 10 domande per intervistare un volontario di Protezione Civile e annota le risposte.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .dati-griglia {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .dato-riga {
+      display: flex; align-items: baseline; gap: 0.5rem;
+      padding: 0.4rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+    }
+    .dato-riga .label {
+      font-weight: 700; color: var(--scheda-blu); font-size: 0.85rem;
+      flex: 0 0 5rem;
+    }
+    .dato-riga .riga {
+      flex: 1; border-bottom: 1.5px dashed var(--scheda-bordo); min-height: 1.4rem;
+    }
+
+    .domanda-card {
+      padding: 0.6rem 0.8rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      margin: 0.4rem 0;
+    }
+    .domanda-card .header-q {
+      display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.3rem;
+      padding-bottom: 0.3rem; border-bottom: 1px solid #e9ecef;
+    }
+    .domanda-card .num-d {
+      width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .domanda-card .testo-d {
+      font-weight: 600; color: var(--scheda-blu); font-size: 0.95rem; flex: 1;
+    }
+    .domanda-card .domanda-vuota {
+      border-bottom: 1.5px dashed var(--scheda-blu); height: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .domanda-card .label-rispo {
+      font-size: 0.78rem; color: var(--scheda-grigio); font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.04em; margin-top: 0.4rem;
+    }
+    .domanda-card .risposta-righe {
+      display: grid; gap: 0.4rem; margin-top: 0.3rem;
+    }
+    .domanda-card .risposta-righe .r {
+      border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+
+    .suggerimenti-box {
+      background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
+      padding: 0.55rem 0.85rem; border-radius: 0 6px 6px 0; margin: 0.4rem 0;
+      font-size: 0.88rem;
+    }
+    .suggerimenti-box ul { margin: 0.3rem 0 0 1rem; padding: 0; }
+    .suggerimenti-box li { margin: 0.15rem 0; line-height: 1.4; }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Intervista al volontario — Primaria 3ª-5ª</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Intervista a un volontario di Protezione Civile</h1>
+        <div class="scheda-sottotitolo">Compito di realtà — Scuola Primaria (classi 3ª-5ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-11 anni</span>
+      <span><strong>Tipo:</strong> compito di realtà — scrittura giornalistica</span>
+      <span><strong>Tempo:</strong> 2 fasi (preparazione + intervista)</span>
+    </div>
+
+    <p class="scheda-intro">
+      Sei un <strong>piccolo giornalista</strong>! Il tuo compito è intervistare un volontario
+      della Protezione Civile (a scuola, durante un incontro, o un parente che lo è).
+      Prima prepara <strong>10 domande</strong>, poi annota le risposte. Alla fine, scrivi
+      un breve testo in classe.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>Dati dell'intervista</h2></div>
+    <div class="dati-griglia">
+      <div class="dato-riga"><span class="label">Mio nome:</span><span class="riga"></span></div>
+      <div class="dato-riga"><span class="label">Classe:</span><span class="riga"></span></div>
+      <div class="dato-riga"><span class="label">Volontario:</span><span class="riga"></span></div>
+      <div class="dato-riga"><span class="label">Data:</span><span class="riga"></span></div>
+    </div>
+
+    <div class="suggerimenti-box">
+      <strong>💡 Suggerimenti per fare buone domande:</strong>
+      <ul>
+        <li>Usa <strong>domande aperte</strong> ("come…", "perché…") — danno risposte più ricche.</li>
+        <li>Niente domande personali (età, soldi, salute).</li>
+        <li>Ascolta la risposta con attenzione, prendi appunti.</li>
+        <li>Ringrazia alla fine!</li>
+      </ul>
+    </div>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Le mie 10 domande</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">
+      Prima scrivi le domande in classe, poi annota le risposte durante l'intervista.
+      Le prime 5 sono già <strong>suggerite</strong>: scegline 5 tu.
+    </p>
+
+    <div class="domanda-card">
+      <div class="header-q"><span class="num-d">1</span><span class="testo-d">Da quanto tempo è volontario?</span></div>
+      <div class="label-rispo">Risposta:</div>
+      <div class="risposta-righe"><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header-q"><span class="num-d">2</span><span class="testo-d">Cosa l'ha spinta a diventare volontario?</span></div>
+      <div class="label-rispo">Risposta:</div>
+      <div class="risposta-righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header-q"><span class="num-d">3</span><span class="testo-d">Quale attività della PC le piace di più?</span></div>
+      <div class="label-rispo">Risposta:</div>
+      <div class="risposta-righe"><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header-q"><span class="num-d">4</span><span class="testo-d">Qual è l'intervento che si ricorda di più?</span></div>
+      <div class="label-rispo">Risposta:</div>
+      <div class="risposta-righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header-q"><span class="num-d">5</span><span class="testo-d">Cosa direbbe a un bambino/una bambina che vuole diventare volontario da grande?</span></div>
+      <div class="label-rispo">Risposta:</div>
+      <div class="risposta-righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header-q"><span class="num-d">6</span><span class="testo-d"><span style="font-style:italic; color:var(--scheda-grigio);">[scrivi tu la 6ª domanda]</span></span></div>
+      <div class="domanda-vuota"></div>
+      <div class="label-rispo">Risposta:</div>
+      <div class="risposta-righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header-q"><span class="num-d">7</span><span class="testo-d"><span style="font-style:italic; color:var(--scheda-grigio);">[scrivi tu la 7ª domanda]</span></span></div>
+      <div class="domanda-vuota"></div>
+      <div class="label-rispo">Risposta:</div>
+      <div class="risposta-righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header-q"><span class="num-d">8</span><span class="testo-d"><span style="font-style:italic; color:var(--scheda-grigio);">[scrivi tu l'8ª domanda]</span></span></div>
+      <div class="domanda-vuota"></div>
+      <div class="label-rispo">Risposta:</div>
+      <div class="risposta-righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header-q"><span class="num-d">9</span><span class="testo-d"><span style="font-style:italic; color:var(--scheda-grigio);">[scrivi tu la 9ª domanda]</span></span></div>
+      <div class="domanda-vuota"></div>
+      <div class="label-rispo">Risposta:</div>
+      <div class="risposta-righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header-q"><span class="num-d">10</span><span class="testo-d"><span style="font-style:italic; color:var(--scheda-grigio);">[scrivi tu la 10ª domanda]</span></span></div>
+      <div class="domanda-vuota"></div>
+      <div class="label-rispo">Risposta:</div>
+      <div class="risposta-righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Fase 1 (in classe, 30 min)</strong>: brainstorming sulle domande, scelta delle 5 personali.</li>
+        <li><strong>Fase 2 (intervista, 30-45 min)</strong>: incontro con il volontario o con un familiare. Per coordinare una visita di un volontario PC Genzano, scrivere a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</li>
+        <li><strong>Fase 3 (post-intervista, 45 min)</strong>: scrittura del testo giornalistico in classe a partire dagli appunti. Lunghezza: 200-300 parole.</li>
+        <li><strong>Valutazione</strong>: qualità delle domande personali, completezza degli appunti, capacità di sintesi nel testo finale.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Intervista al volontario" · Primaria 3ª-5ª · compito di realtà · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

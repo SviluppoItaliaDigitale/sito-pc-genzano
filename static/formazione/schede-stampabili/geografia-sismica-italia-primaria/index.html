@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: La geografia sismica dell'Italia (Primaria 3ª-5ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. La mappa sismica italiana: zone 1-4, regioni più colpite, esercizi di abbinamento e colorazione.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .mappa-italia { width: 100%; max-width: 360px; height: auto; margin: 0.4rem auto; display: block; }
+    .legenda-zone {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 0.8rem;
+      margin: 0.4rem 0; font-size: 0.9rem;
+    }
+    .legenda-zone .voce {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+    }
+    .legenda-zone .colore {
+      width: 1.2rem; height: 1.2rem; border-radius: 4px; flex-shrink: 0;
+      border: 1px solid #444;
+    }
+    .legenda-zone .colore.z1 { background: #c92a2a; }
+    .legenda-zone .colore.z2 { background: #f08c00; }
+    .legenda-zone .colore.z3 { background: #fcc419; }
+    .legenda-zone .colore.z4 { background: #d4f4dd; }
+
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .abbina-griglia {
+      display: grid; grid-template-columns: 1fr 4rem 1fr; gap: 0.4rem;
+      margin: 0.4rem 0; align-items: center;
+    }
+    .abbina-griglia .h {
+      font-weight: 700; color: var(--scheda-blu); text-align: center;
+      font-size: 0.9rem; padding-bottom: 0.3rem;
+      border-bottom: 2px solid var(--scheda-blu);
+    }
+    .abbina-griglia .cella {
+      padding: 0.4rem 0.55rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      text-align: center; font-size: 0.88rem; font-weight: 600;
+    }
+    .abbina-griglia .puntini {
+      text-align: center; color: #ced4da; font-size: 1.4rem;
+      letter-spacing: 0.15em;
+    }
+
+    .domanda-box {
+      background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
+      padding: 0.55rem 0.85rem; border-radius: 0 6px 6px 0; margin: 0.5rem 0;
+    }
+    .domanda-box .testo { font-weight: 600; color: var(--scheda-blu); margin-bottom: 0.3rem; font-size: 0.92rem; }
+    .domanda-box .riga { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.5rem; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Geografia sismica Italia — Primaria 3ª-5ª</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La geografia sismica dell'Italia</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 3ª-5ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-11 anni</span>
+      <span><strong>Obiettivo:</strong> conoscere le zone sismiche italiane</span>
+      <span><strong>Discipline:</strong> geografia, scienze</span>
+    </div>
+
+    <p class="scheda-intro">
+      L'Italia è un Paese <strong>sismico</strong>: il terreno trema perché due grandi
+      "pezzi" della crosta terrestre (le <strong>placche</strong>) si scontrano sotto di noi.
+      Ma non tutta l'Italia trema allo stesso modo: per questo l'INGV ha diviso il
+      territorio in <strong>4 zone</strong>.
+    </p>
+
+    <h2 class="scheda-h2">Le 4 zone sismiche</h2>
+    <div class="legenda-zone">
+      <div class="voce"><span class="colore z1"></span><span><strong>Zona 1</strong> — molto pericolosa</span></div>
+      <div class="voce"><span class="colore z2"></span><span><strong>Zona 2</strong> — pericolosa</span></div>
+      <div class="voce"><span class="colore z3"></span><span><strong>Zona 3</strong> — moderata</span></div>
+      <div class="voce"><span class="colore z4"></span><span><strong>Zona 4</strong> — bassa</span></div>
+    </div>
+
+    <svg class="mappa-italia" viewBox="0 0 240 320" role="img" aria-label="Mappa stilizzata dell'Italia con zone sismiche">
+      <!-- Italia stilizzata: forma a stivale -->
+      <!-- Nord: zona 3-2 -->
+      <path d="M 60 30 L 130 25 L 180 50 L 175 80 L 150 95 L 110 90 L 80 75 Z" fill="#fcc419" stroke="#444" stroke-width="1"/>
+      <text x="120" y="60" text-anchor="middle" font-size="9" font-weight="700" fill="#333">NORD</text>
+
+      <!-- Friuli: zona 1 -->
+      <path d="M 175 50 L 200 55 L 195 85 L 175 80 Z" fill="#c92a2a" stroke="#444" stroke-width="1"/>
+
+      <!-- Centro Italia: zona 2 (Appennini) -->
+      <path d="M 110 90 L 150 95 L 175 100 L 165 145 L 130 155 L 100 145 L 90 110 Z" fill="#f08c00" stroke="#444" stroke-width="1"/>
+      <text x="130" y="125" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">CENTRO</text>
+
+      <!-- Lazio (Genzano): zona 2-3 -->
+      <circle cx="115" cy="135" r="3" fill="#003366"/>
+      <text x="100" y="138" text-anchor="end" font-size="7" font-weight="700" fill="#003366">Genzano</text>
+
+      <!-- Sud Italia: zona 1-2 -->
+      <path d="M 130 155 L 165 145 L 175 175 L 165 215 L 145 225 L 125 215 L 115 195 L 110 170 Z" fill="#c92a2a" stroke="#444" stroke-width="1"/>
+      <text x="140" y="195" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">SUD</text>
+
+      <!-- Sicilia: zona 1-2 -->
+      <ellipse cx="120" cy="245" rx="35" ry="14" fill="#c92a2a" stroke="#444" stroke-width="1"/>
+      <text x="120" y="248" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">SICILIA</text>
+
+      <!-- Sardegna: zona 4 -->
+      <ellipse cx="55" cy="180" rx="14" ry="28" fill="#d4f4dd" stroke="#444" stroke-width="1"/>
+      <text x="55" y="183" text-anchor="middle" font-size="7" font-weight="700" fill="#333">SARD</text>
+
+      <!-- Tacco -->
+      <path d="M 165 215 L 200 230 L 195 245 L 175 240 Z" fill="#f08c00" stroke="#444" stroke-width="1"/>
+    </svg>
+    <p style="text-align: center; font-size: 0.82rem; color: var(--scheda-grigio); margin: 0.2rem 0 0.6rem 0;">
+      <em>Mappa semplificata. Il puntino blu è Genzano (zona 2-3, sismicità media).</em>
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>Abbina ogni regione alla sua zona</h2></div>
+    <div class="abbina-griglia">
+      <span class="h">REGIONE</span><span class="h">collega</span><span class="h">ZONA</span>
+      <span class="cella">Friuli-Venezia Giulia</span>
+      <span class="puntini">· · · ·</span>
+      <span class="cella">Zona 1 (rosso)</span>
+      <span class="cella">Sardegna</span>
+      <span class="puntini">· · · ·</span>
+      <span class="cella">Zona 2 (arancione)</span>
+      <span class="cella">Lazio (Genzano)</span>
+      <span class="puntini">· · · ·</span>
+      <span class="cella">Zona 3 (giallo)</span>
+      <span class="cella">Calabria</span>
+      <span class="puntini">· · · ·</span>
+      <span class="cella">Zona 4 (verde)</span>
+    </div>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Domande sulla mappa</h2></div>
+
+    <div class="domanda-box">
+      <div class="testo">1. Qual è la regione meno sismica d'Italia?</div>
+      <div class="riga"></div>
+    </div>
+
+    <div class="domanda-box">
+      <div class="testo">2. Genzano in quale zona si trova?</div>
+      <div class="riga"></div>
+    </div>
+
+    <div class="domanda-box">
+      <div class="testo">3. Perché secondo te la Sardegna è quasi senza terremoti?</div>
+      <div class="riga"></div>
+      <div class="riga" style="margin-top:0.5rem;"></div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Sez 1</strong>: Friuli-Z1 · Sardegna-Z4 · Lazio-Z3 (Genzano è Z2-3 al confine) · Calabria-Z1.</li>
+        <li><strong>Sez 2 risp 1</strong>: Sardegna · <strong>2</strong>: zona 2-3 (sismicità media) · <strong>3</strong>: la Sardegna sta su una placca diversa, lontana dal "scontro" tra le placche euroasiatica e africana.</li>
+        <li><strong>Approfondimento</strong>: scaricare la mappa ufficiale INGV su <a href="https://emidius.mi.ingv.it/CPTI/" target="_blank" rel="noopener">emidius.mi.ingv.it</a>. Per la 5ª, introdurre i concetti di placca e di faglia.</li>
+        <li>Collegamento con la scheda <a href="/formazione/schede-stampabili/eventi-pc-italiani-primaria/">Eventi PC italiani</a>: notare che gli eventi sismici raccontati sono tutti in zone 1-2.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Geografia sismica Italia" · Primaria 3ª-5ª · geografia · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

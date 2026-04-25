@@ -482,6 +482,15 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Leggi e Rispondi — Marco e il Pompiere**](/formazione/schede-stampabili/leggi-rispondi-pompiere-primaria/) — mini-racconto di una piccola emergenza domestica + 5 domande di comprensione (chi, cosa, dove, numero, scelta multipla). *(comprensione, classi 1ª-2ª)*
 - 👉 [**Riordina le Frasi — Una Giornata di Allerta**](/formazione/schede-stampabili/riordina-frasi-allerta-primaria/) — 6 frasi sulla cronologia di un'allerta arancione (bollettino, COC, IT-alert, volontari) da numerare. *(comprensione, classi 2ª-3ª)*
 
+**6 schede di approfondimento per classi 3ª-5ª** — storia, matematica, geografia, ed. civica, comprensione testo, compito di realtà:
+
+- 👉 [**Eventi che hanno fatto la PC italiana**](/formazione/schede-stampabili/eventi-pc-italiani-primaria/) — 6 eventi storici (Vajont, Friuli, Irpinia, Sarno, L'Aquila, Amatrice) da abbinare all'anno e riordinare. Causa-conseguenza fra evento e legge. *(storia)*
+- 👉 [**Problemi Matematici della PC**](/formazione/schede-stampabili/problemi-matematici-pc-primaria/) — 6 problemi con dati reali: pioggia in mm, evacuazione, kit, divisione volontari, raggio di emergenza, magnitudo. *(matematica)*
+- 👉 [**Geografia Sismica dell'Italia**](/formazione/schede-stampabili/geografia-sismica-italia-primaria/) — mappa SVG con le 4 zone sismiche, abbina regione/zona, riflessione sulla Sardegna. *(geografia)*
+- 👉 [**La Costituzione e la PC**](/formazione/schede-stampabili/costituzione-pc-primaria/) — articoli 32, 117, 118 spiegati in linguaggio semplice. Diritto alla salute, sussidiarietà, volontariato. *(ed. civica, classi 4ª-5ª)*
+- 👉 [**Comprensione Testo — Amatrice 2016**](/formazione/schede-stampabili/comprensione-testo-amatrice-primaria/) — brano semplificato di 4 paragrafi sul terremoto del 24 agosto 2016 + 8 domande di comprensione. *(italiano, classi 4ª-5ª)*
+- 👉 [**Intervista al Volontario PC**](/formazione/schede-stampabili/intervista-volontario-primaria/) — compito di realtà: prepara 10 domande, intervista un volontario, scrivi il testo giornalistico. *(compito di realtà)*
+
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 
 ### Scheda 1 — La chiamata al 112 (role-play scritto) ✅ stampabile

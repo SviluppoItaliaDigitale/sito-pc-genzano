@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Vulcanologia dei Castelli Romani (Secondaria I)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Primo Grado. Il vulcano dei Colli Albani: caldera, fumarole, monitoraggio INGV. Domande di scienze e geografia.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .vulcano-svg { width: 100%; max-width: 480px; margin: 0.5rem auto; display: block; }
+
+    .testo-info {
+      padding: 0.7rem 0.95rem; background: #f4f7fb;
+      border-left: 4px solid var(--scheda-blu); border-radius: 0 8px 8px 0;
+      margin: 0.5rem 0; font-size: 0.93rem; line-height: 1.5;
+    }
+    .testo-info strong { color: var(--scheda-blu); }
+    .testo-info p { margin: 0 0 0.4rem 0; }
+    .testo-info p:last-child { margin-bottom: 0; }
+
+    .glossario {
+      display: grid; grid-template-columns: 1fr 2fr; gap: 0.4rem;
+      margin: 0.4rem 0; font-size: 0.88rem;
+    }
+    .glossario .termine {
+      padding: 0.4rem 0.5rem; background: #d63384; color: #fff;
+      border-radius: 6px; font-weight: 700; text-align: center;
+    }
+    .glossario .definizione {
+      padding: 0.4rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      line-height: 1.4;
+    }
+
+    .domanda-card {
+      padding: 0.55rem 0.75rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      margin: 0.4rem 0;
+    }
+    .domanda-card .header {
+      display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;
+    }
+    .domanda-card .num-q {
+      width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .domanda-card .testo { font-size: 0.92rem; line-height: 1.4; flex: 1; }
+    .domanda-card .testo strong { color: var(--scheda-blu); }
+    .domanda-card .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .domanda-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Vulcanologia Castelli — Secondaria I</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Vulcanologia dei Castelli Romani</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Primo Grado (12-14 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 12-14 anni</span>
+      <span><strong>Obiettivo:</strong> conoscere l'origine vulcanica del nostro territorio</span>
+      <span><strong>Discipline:</strong> scienze, geografia</span>
+    </div>
+
+    <p class="scheda-intro">
+      Sotto i piedi degli abitanti di Genzano c'è un <strong>vulcano</strong>!
+      Si chiama <strong>Vulcano Laziale</strong> (o <strong>Colli Albani</strong>).
+      È un vulcano <strong>quiescente</strong>, cioè dormiente. Vediamo cosa significa.
+    </p>
+
+    <svg class="vulcano-svg" viewBox="0 0 480 220" role="img" aria-label="Schema della caldera dei Colli Albani con i due laghi">
+      <!-- terreno -->
+      <rect x="0" y="180" width="480" height="40" fill="#8b6914"/>
+      <!-- caldera (depressione) -->
+      <path d="M 0,180 L 80,170 L 130,140 L 180,135 L 220,140 L 260,150 L 300,140 L 350,135 L 380,140 L 420,170 L 480,180 Z" fill="#a0522d" stroke="#5d3a08" stroke-width="2"/>
+      <!-- lago Albano -->
+      <ellipse cx="180" cy="155" rx="35" ry="8" fill="#0066cc" stroke="#003366" stroke-width="1.5"/>
+      <text x="180" y="125" text-anchor="middle" font-size="10" font-weight="700" fill="#003366">L. Albano</text>
+      <!-- lago Nemi -->
+      <ellipse cx="320" cy="155" rx="22" ry="6" fill="#0066cc" stroke="#003366" stroke-width="1.5"/>
+      <text x="320" y="128" text-anchor="middle" font-size="10" font-weight="700" fill="#003366">L. Nemi</text>
+      <!-- magma sotterraneo -->
+      <path d="M 100,205 Q 240,260 380,205 L 380,220 L 100,220 Z" fill="#dc3545" stroke="#000" stroke-width="0.5"/>
+      <text x="240" y="230" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">CAMERA MAGMATICA</text>
+      <!-- bordo della caldera -->
+      <text x="60" y="195" font-size="9" font-weight="700" fill="#5d3a08">bordo</text>
+      <text x="420" y="195" font-size="9" font-weight="700" fill="#5d3a08">bordo</text>
+      <!-- Genzano -->
+      <circle cx="280" cy="160" r="3" fill="#fcc419"/>
+      <text x="280" y="155" text-anchor="middle" font-size="9" font-weight="700" fill="#664d03">★ Genzano</text>
+      <!-- emissione gas (fumarola) -->
+      <text x="350" y="115" font-size="14">💨</text>
+      <text x="345" y="105" font-size="8" fill="#888">CO₂</text>
+      <!-- Sole/cielo -->
+      <text x="450" y="30" font-size="20">☀️</text>
+    </svg>
+    <p style="text-align: center; font-size: 0.82rem; color: var(--scheda-grigio); margin: 0.2rem 0 0.5rem 0;">
+      <em>Schema semplificato. La caldera è profonda fino a 100-200 m sotto i bordi (Monte Cavo, Monte Compatri).</em>
+    </p>
+
+    <div class="testo-info">
+      <p><strong>📖 Cosa sono i Colli Albani?</strong></p>
+      <p>I Colli Albani sono una <strong>caldera vulcanica</strong>, cioè la depressione che si forma quando il "tetto" di un vulcano <strong>collassa</strong> dentro la camera magmatica vuota. Le ultime grandi eruzioni risalgono a <strong>36.000 anni fa circa</strong>. I laghi di <strong>Albano</strong> e <strong>Nemi</strong> sono nati dentro crateri secondari, riempiti d'acqua piovana.</p>
+      <p><strong>🌡️ Cosa fa l'INGV oggi?</strong></p>
+      <p>L'<strong>INGV</strong> (Istituto Nazionale di Geofisica e Vulcanologia) <strong>monitora costantemente</strong> il Vulcano Laziale: misura piccole scosse sismiche, deformazioni del suolo, emissioni di gas (specialmente <strong>CO₂</strong> dalle fumarole di Cava dei Selci e altri siti). Per ora la situazione è <strong>tranquilla</strong>, ma il monitoraggio è continuo.</p>
+      <p><strong>📊 Quanto è probabile un'eruzione?</strong></p>
+      <p>Secondo gli scienziati, una nuova attività eruttiva è <strong>possibile su tempi lunghi</strong> (migliaia di anni), ma non imminente. Per questo i Colli Albani non sono nella stessa categoria del Vesuvio o dei Campi Flegrei (vulcani "attivi"), ma in quella dei <strong>quiescenti</strong>.</p>
+    </div>
+
+    <h2 class="scheda-h2">Glossario di vulcanologia</h2>
+    <div class="glossario">
+      <span class="termine">Caldera</span><span class="definizione">Grande depressione (chilometri di diametro) formata dal collasso di un vulcano dentro la camera magmatica.</span>
+      <span class="termine">Quiescente</span><span class="definizione">Vulcano dormiente: non erutta da molto tempo, ma <strong>non è spento</strong>. Si distingue da "attivo" e "estinto".</span>
+      <span class="termine">Fumarola</span><span class="definizione">Apertura nel terreno da cui escono <strong>gas vulcanici</strong>, soprattutto vapore acqueo e anidride carbonica (CO₂).</span>
+      <span class="termine">Camera magmatica</span><span class="definizione">Serbatoio di <strong>magma</strong> (roccia fusa) sotterraneo, da cui partono le eruzioni.</span>
+    </div>
+
+    <h2 class="scheda-h2">Domande</h2>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">1</span><span class="testo">Cosa significa che il Vulcano Laziale è <strong>quiescente</strong> e non "estinto"?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">2</span><span class="testo">I laghi di Albano e Nemi sono nati come?</span></div>
+      <div class="righe"><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">3</span><span class="testo">Quale ente monitora oggi il vulcano e quali parametri misura?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">4</span><span class="testo">Perché vivere in un'area vulcanica quiescente non significa vivere "sull'orlo del disastro"? Spiega usando i dati del testo.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Tracce di soluzione:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>1) Quiescente = dormiente, non erutta da molto tempo, ma il sistema magmatico esiste ancora. "Estinto" significherebbe che il sistema non c'è più: non è il caso del Vulcano Laziale.</li>
+        <li>2) Crateri secondari riempiti d'acqua piovana.</li>
+        <li>3) INGV. Misura: scosse sismiche, deformazioni del suolo, emissioni di gas (CO₂).</li>
+        <li>4) Le ultime eruzioni sono di ~36.000 anni fa, gli scienziati monitorano costantemente, una nuova attività è possibile su tempi lunghi (migliaia di anni). La PC è preparata: la prevenzione si basa su monitoraggio + pianificazione, non su panico.</li>
+        <li><strong>Approfondimento</strong>: la fumarola di <strong>Cava dei Selci</strong> a Marino è il sito più noto per la fuoriuscita di CO₂ dei Colli Albani. È stato luogo di incidenti (asfissia) per chi è entrato senza protezione: il monitoraggio serve anche a questo.</li>
+        <li>Consigliata visita virtuale al portale <a href="https://www.ingv.it/" target="_blank" rel="noopener">INGV</a>.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Vulcanologia Castelli" · Secondaria I · scienze · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

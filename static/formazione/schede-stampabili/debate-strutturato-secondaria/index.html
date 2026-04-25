@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Debate strutturato sui rischi (Secondaria I)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Primo Grado. Debate strutturato a coppie/squadre: tesi e antitesi su un tema di Protezione Civile, con tempi e griglia.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .tema-box {
+      background: #003366; color: #fff;
+      padding: 0.85rem 1.1rem; border-radius: 10px;
+      margin: 0.5rem 0; text-align: center;
+    }
+    .tema-box .label {
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;
+      opacity: 0.85; margin-bottom: 0.3rem;
+    }
+    .tema-box .testo {
+      font-size: 1.1rem; font-weight: 700; line-height: 1.4;
+    }
+
+    .tesi-griglia {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 0.5rem 0;
+    }
+    .tesi-card {
+      padding: 0.7rem 0.85rem; background: #fff;
+      border-radius: 10px; border: 2.5px solid;
+    }
+    .tesi-card.pro { border-color: #198754; }
+    .tesi-card.contro { border-color: #dc3545; }
+    .tesi-card .testata {
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 0.4rem; font-weight: 700;
+    }
+    .tesi-card.pro .testata { color: #198754; }
+    .tesi-card.contro .testata { color: #dc3545; }
+    .tesi-card .testata .icon {
+      width: 2rem; height: 2rem; border-radius: 50%; color: #fff;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .tesi-card.pro .testata .icon { background: #198754; }
+    .tesi-card.contro .testata .icon { background: #dc3545; }
+    .tesi-card .righe { display: grid; gap: 0.45rem; }
+    .tesi-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.5rem; }
+
+    .fasi-tabella {
+      width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.88rem;
+    }
+    .fasi-tabella th, .fasi-tabella td {
+      border: 1.5px solid var(--scheda-bordo); padding: 0.4rem 0.6rem;
+    }
+    .fasi-tabella th { background: var(--scheda-blu); color: #fff; font-weight: 700; }
+    .fasi-tabella td.tempo { text-align: center; font-weight: 700; color: var(--scheda-blu); width: 4rem; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+    .istruzioni-maestra strong { color: #664d03; }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Debate strutturato — Secondaria I</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Debate strutturato — Costruire dove il rischio è alto</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Primo Grado (12-14 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 12-14 anni</span>
+      <span><strong>Obiettivo:</strong> argomentare con dati una tesi su un tema PC</span>
+      <span><strong>Discipline:</strong> italiano, ed. civica, debate</span>
+    </div>
+
+    <p class="scheda-intro">
+      Il <strong>debate</strong> è un confronto strutturato tra due squadre. Una difende
+      una tesi (PRO), l'altra la attacca (CONTRO). Vince chi argomenta meglio, non chi
+      "ha ragione". È un esercizio di <strong>cittadinanza attiva</strong>.
+    </p>
+
+    <div class="tema-box">
+      <div class="label">TEMA DEL DEBATE</div>
+      <div class="testo">«In Italia si dovrebbe vietare di costruire nuove case nelle zone a rischio sismico più alto (Zona 1).»</div>
+    </div>
+
+    <h2 class="scheda-h2">Come si svolge — le 5 fasi</h2>
+    <table class="fasi-tabella">
+      <thead>
+        <tr><th>Fase</th><th>Tempo</th><th>Attività</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1. Preparazione</td><td class="tempo">15'</td><td>Ogni squadra studia il proprio lato e prepara argomenti, dati, esempi.</td></tr>
+        <tr><td>2. Apertura PRO</td><td class="tempo">3'</td><td>La squadra PRO espone i suoi 3 argomenti principali.</td></tr>
+        <tr><td>3. Apertura CONTRO</td><td class="tempo">3'</td><td>La squadra CONTRO espone i suoi 3 argomenti principali.</td></tr>
+        <tr><td>4. Confronto</td><td class="tempo">10'</td><td>Si rispondono a vicenda, citando dati. Una persona alla volta.</td></tr>
+        <tr><td>5. Conclusione</td><td class="tempo">2'×2</td><td>Ogni squadra fa la sintesi finale.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="scheda-h2">Prepara i tuoi argomenti</h2>
+    <p class="scheda-intro" style="margin: 0.2rem 0;">
+      Sei nella squadra <strong>PRO</strong> (sì, vietare) o <strong>CONTRO</strong> (no, non vietare)?
+      Cerchia la tua. Poi scrivi 3 argomenti per il <strong>tuo</strong> lato.
+    </p>
+
+    <div class="tesi-griglia">
+      <div class="tesi-card pro">
+        <div class="testata"><span class="icon">✓</span><span>PRO — Sì, vietare nuove costruzioni</span></div>
+        <p style="font-size: 0.85rem; color: var(--scheda-grigio); margin: 0.2rem 0 0.4rem 0;"><em>Argomenti:</em></p>
+        <div class="righe">
+          <span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span>
+        </div>
+      </div>
+      <div class="tesi-card contro">
+        <div class="testata"><span class="icon">✗</span><span>CONTRO — No, non vietare</span></div>
+        <p style="font-size: 0.85rem; color: var(--scheda-grigio); margin: 0.2rem 0 0.4rem 0;"><em>Argomenti:</em></p>
+        <div class="righe">
+          <span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">Spunti per la riflessione (NON da copiare, da argomentare)</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 0.4rem 0;">
+      <div style="background: #d1e7dd; padding: 0.5rem 0.7rem; border-radius: 6px; font-size: 0.85rem; line-height: 1.4;">
+        <strong style="color:#0a3622;">PRO:</strong> sicurezza vite, costo della ricostruzione, ambiente, esempio di Amatrice.
+      </div>
+      <div style="background: #f8d7da; padding: 0.5rem 0.7rem; border-radius: 6px; font-size: 0.85rem; line-height: 1.4;">
+        <strong style="color:#58151c;">CONTRO:</strong> diritti dei proprietari, costruzioni antisismiche moderne, economia locale, libertà.
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">La mia conclusione personale (oltre la squadra)</h2>
+    <p style="font-size: 0.85rem; color: var(--scheda-grigio); margin: 0.2rem 0;">Dopo aver ascoltato entrambe le squadre, qual è la <strong>tua opinione personale</strong> e perché?</p>
+    <div style="display: grid; gap: 0.5rem; margin: 0.4rem 0;">
+      <span style="border-bottom: 1.5px solid var(--scheda-bordo); height: 1.6rem;"></span>
+      <span style="border-bottom: 1.5px solid var(--scheda-bordo); height: 1.6rem;"></span>
+      <span style="border-bottom: 1.5px solid var(--scheda-bordo); height: 1.6rem;"></span>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Tempo totale</strong>: 50-60 min (1 ora di lezione).</li>
+        <li><strong>Squadre</strong>: dividere la classe in 2 gruppi. <strong>L'assegnazione PRO/CONTRO è casuale</strong> (per imparare ad argomentare anche posizioni non condivise).</li>
+        <li><strong>Griglia valutazione</strong>: chiarezza dell'argomentazione (3 pt), uso di dati e fonti (3 pt), capacità di rispondere all'altro (2 pt), tono rispettoso (2 pt). Massimo 10 pt.</li>
+        <li><strong>Variante topic</strong>: il tema può essere sostituito con altri attinenti — "obbligare l'uso del kit di emergenza in casa", "consentire l'AIB ai non maggiorenni come stagisti", "spostare la centrale del 112 al sud".</li>
+        <li><strong>Risorse</strong>: per la struttura del debate scolastico cfr. Olimpiadi del Debate (Indire).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Debate strutturato" · Secondaria I · ed. civica · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

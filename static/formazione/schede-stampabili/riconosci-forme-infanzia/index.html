@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Riconosci le forme dei cartelli (Infanzia 3-4 anni)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola dell'Infanzia 3-4 anni. Forme geometriche dei cartelli di sicurezza: cerchio, quadrato, triangolo. Riconoscimento e colorazione.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .forme-griglia {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.7rem;
+      margin: 0.5rem 0;
+    }
+    .forma-card {
+      border: 2.5px solid var(--scheda-blu); border-radius: 12px;
+      padding: 0.7rem; background: #fff; text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+    }
+    .forma-card svg { width: 80px; height: 80px; }
+    .forma-card .nome {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-blu); font-size: 1rem;
+    }
+    .forma-card .desc {
+      font-size: 0.78rem; color: #495057; line-height: 1.3;
+    }
+
+    .cerchia-griglia {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.5rem;
+      margin: 0.5rem 0; align-items: center; justify-items: center;
+    }
+    .cerchia-griglia svg { width: 60px; height: 60px; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Riconosci le forme — Infanzia 3-4 anni</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Le forme dei cartelli</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (3-4 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 3-4 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere cerchio, quadrato, triangolo</span>
+      <span><strong>Servono:</strong> matita, pennarelli rosso, verde, giallo</span>
+    </div>
+
+    <p class="scheda-intro">
+      I <strong>cartelli</strong> per strada e a scuola hanno tre forme: il
+      <strong>cerchio</strong>, il <strong>quadrato</strong> e il <strong>triangolo</strong>.
+      Ogni forma ha un colore diverso e dice una cosa diversa.
+    </p>
+
+    <h2 class="scheda-h2">Le 3 forme — guarda e impara</h2>
+    <div class="forme-griglia">
+
+      <div class="forma-card">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Cerchio rosso di divieto">
+          <circle cx="50" cy="50" r="42" fill="#fff" stroke="#dc3545" stroke-width="8"/>
+          <line x1="20" y1="80" x2="80" y2="20" stroke="#dc3545" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <span class="nome">CERCHIO</span>
+        <span class="desc">Rosso — vuol dire <strong>NON SI PUÒ FARE</strong></span>
+      </div>
+
+      <div class="forma-card">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Quadrato verde di uscita">
+          <rect x="10" y="10" width="80" height="80" rx="5" fill="#198754"/>
+          <text x="50" y="62" text-anchor="middle" font-size="42" fill="#fff">🏃</text>
+        </svg>
+        <span class="nome">QUADRATO</span>
+        <span class="desc">Verde — vuol dire <strong>USCITA SICURA</strong></span>
+      </div>
+
+      <div class="forma-card">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Triangolo giallo di pericolo">
+          <polygon points="50,12 92,82 8,82" fill="#ffc107" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+          <text x="50" y="73" text-anchor="middle" font-size="42" font-weight="700" fill="#000">!</text>
+        </svg>
+        <span class="nome">TRIANGOLO</span>
+        <span class="desc">Giallo — vuol dire <strong>ATTENZIONE!</strong></span>
+      </div>
+
+    </div>
+
+    <h2 class="scheda-h2">✏️ Cerchia tutti i cerchi rossi</h2>
+    <div class="cerchia-griglia">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="#fff" stroke="#dc3545" stroke-width="8"/><line x1="20" y1="80" x2="80" y2="20" stroke="#dc3545" stroke-width="8" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 100 100"><polygon points="50,12 92,82 8,82" fill="#ffc107" stroke="#000" stroke-width="4" stroke-linejoin="round"/></svg>
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="#fff" stroke="#dc3545" stroke-width="8"/><line x1="20" y1="80" x2="80" y2="20" stroke="#dc3545" stroke-width="8" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" rx="5" fill="#198754"/></svg>
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="#fff" stroke="#dc3545" stroke-width="8"/><line x1="20" y1="80" x2="80" y2="20" stroke="#dc3545" stroke-width="8" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 100 100"><polygon points="50,12 92,82 8,82" fill="#ffc107" stroke="#000" stroke-width="4" stroke-linejoin="round"/></svg>
+    </div>
+
+    <h2 class="scheda-h2">🎨 Disegna tu i 3 cartelli</h2>
+    <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">
+      Nei tre quadrati sotto disegna un cartello per ognuno: cerchio rosso,
+      quadrato verde, triangolo giallo. Coloraci dentro!
+    </p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin: 0.4rem 0;">
+      <div class="scheda-box-disegno" style="min-height: 5rem;"></div>
+      <div class="scheda-box-disegno" style="min-height: 5rem;"></div>
+      <div class="scheda-box-disegno" style="min-height: 5rem;"></div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Soluzione cerchia</strong>: 4 cerchi rossi su 6 (i triangoli e il quadrato vanno scartati).</li>
+        <li><strong>Tecnica gioco</strong>: dopo la scheda, fare il "gioco delle forme": la maestra chiama una forma e i bambini si dispongono come quella forma sul pavimento (es. "cerchio!" → tutti tenendosi per mano in cerchio).</li>
+        <li><strong>Cartelli reali</strong>: dopo, fare un giro nella scuola per cercare i cartelli reali — sono tutti negli stessi colori e forme!</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Riconosci le forme" · Infanzia 3-4 anni · forme · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Problemi matematici della Protezione Civile (Primaria 3ª-5ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. 6 problemi matematici con dati reali della Protezione Civile: pioggia, evacuazione, kit, magnitudo, raggio di emergenza.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .problema-card {
+      padding: 0.7rem 0.85rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 8px;
+      margin: 0.4rem 0;
+    }
+    .problema-card .titolo {
+      display: flex; align-items: baseline; gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+    .problema-card .titolo .num {
+      width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.95rem; flex-shrink: 0;
+    }
+    .problema-card .titolo .tag {
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em;
+      color: var(--scheda-blu); font-weight: 700;
+    }
+    .problema-card .testo {
+      font-size: 0.92rem; line-height: 1.5; color: #212529;
+      margin-bottom: 0.4rem;
+    }
+    .problema-card .testo strong { color: var(--scheda-blu); }
+    .problema-card .calcolo {
+      background: #f4f7fb; border-left: 3px solid var(--scheda-blu);
+      padding: 0.5rem 0.7rem; border-radius: 0 4px 4px 0;
+      font-size: 0.88rem; min-height: 4rem;
+      display: flex; align-items: center;
+      color: #ced4da; font-style: italic;
+    }
+    .problema-card .calcolo::before { content: "Spazio per il tuo calcolo:"; }
+    .problema-card .risposta-riga {
+      display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;
+    }
+    .problema-card .risposta-riga .label {
+      font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem;
+    }
+    .problema-card .risposta-riga .riga {
+      flex: 1; border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.5rem;
+    }
+    .problema-card .risposta-riga .unita {
+      font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem;
+      flex: 0 0 5rem; padding-left: 0.5rem;
+      border-left: 1.5px solid var(--scheda-bordo);
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Problemi matematici PC — Primaria 3ª-5ª</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">I problemi matematici della Protezione Civile</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 3ª-5ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-11 anni</span>
+      <span><strong>Obiettivo:</strong> applicare il calcolo a situazioni reali di emergenza</span>
+      <span><strong>Servono:</strong> matita, gomma, foglio per i calcoli</span>
+    </div>
+
+    <p class="scheda-intro">
+      La <strong>Protezione Civile</strong> usa la matematica ogni giorno: per misurare la
+      pioggia, contare le persone da evacuare, programmare gli interventi.
+      Risolvi i problemi qui sotto: per ognuno, scrivi il calcolo nello spazio grigio
+      e scrivi la risposta sulla riga.
+    </p>
+
+    <div class="problema-card">
+      <div class="titolo"><span class="num">1</span><span class="tag">PIOGGIA</span></div>
+      <div class="testo">
+        A Genzano oggi è caduta tanta pioggia: <strong>15 mm</strong> al mattino e <strong>22 mm</strong> al pomeriggio.
+        Quanta pioggia è caduta in tutto in un giorno?
+      </div>
+      <div class="calcolo" aria-hidden="true"></div>
+      <div class="risposta-riga">
+        <span class="label">Risposta:</span>
+        <span class="riga"></span>
+        <span class="unita">mm</span>
+      </div>
+    </div>
+
+    <div class="problema-card">
+      <div class="titolo"><span class="num">2</span><span class="tag">EVACUAZIONE</span></div>
+      <div class="testo">
+        In una scuola ci sono <strong>4 classi</strong> di 25 alunni e <strong>3 classi</strong> di 22 alunni.
+        Se suona l'allarme e si fa l'evacuazione, quanti alunni devono raggiungere il punto di raccolta?
+      </div>
+      <div class="calcolo" aria-hidden="true"></div>
+      <div class="risposta-riga">
+        <span class="label">Risposta:</span>
+        <span class="riga"></span>
+        <span class="unita">alunni</span>
+      </div>
+    </div>
+
+    <div class="problema-card">
+      <div class="titolo"><span class="num">3</span><span class="tag">KIT</span></div>
+      <div class="testo">
+        Il kit di emergenza per una famiglia di 4 persone contiene <strong>2 bottiglie d'acqua a testa</strong>.
+        Quante bottiglie servono in totale?
+      </div>
+      <div class="calcolo" aria-hidden="true"></div>
+      <div class="risposta-riga">
+        <span class="label">Risposta:</span>
+        <span class="riga"></span>
+        <span class="unita">bottiglie</span>
+      </div>
+    </div>
+
+    <div class="problema-card">
+      <div class="titolo"><span class="num">4</span><span class="tag">VOLONTARI</span></div>
+      <div class="testo">
+        Il Gruppo Comunale di Genzano ha <strong>40 volontari</strong>. Per un'esercitazione si dividono
+        in 5 squadre uguali. Quanti volontari ci sono in ogni squadra?
+      </div>
+      <div class="calcolo" aria-hidden="true"></div>
+      <div class="risposta-riga">
+        <span class="label">Risposta:</span>
+        <span class="riga"></span>
+        <span class="unita">volontari</span>
+      </div>
+    </div>
+
+    <div class="problema-card">
+      <div class="titolo"><span class="num">5</span><span class="tag">RAGGIO DI EMERGENZA</span></div>
+      <div class="testo">
+        L'area di attesa del quartiere si trova a <strong>800 metri</strong> da casa di Luca.
+        Se Luca cammina a passo veloce facendo <strong>100 metri al minuto</strong>,
+        in quanti minuti arriva all'area di attesa?
+      </div>
+      <div class="calcolo" aria-hidden="true"></div>
+      <div class="risposta-riga">
+        <span class="label">Risposta:</span>
+        <span class="riga"></span>
+        <span class="unita">minuti</span>
+      </div>
+    </div>
+
+    <div class="problema-card">
+      <div class="titolo"><span class="num">6</span><span class="tag">MAGNITUDO</span></div>
+      <div class="testo">
+        Un terremoto di <strong>magnitudo 5</strong> rilascia <strong>32 volte</strong> più energia di uno
+        di magnitudo 4. Se confronti un terremoto di magnitudo 6 con uno di magnitudo 4,
+        quante volte più energia ha quello di magnitudo 6? <em>(Suggerimento: 32 × 32)</em>
+      </div>
+      <div class="calcolo" aria-hidden="true"></div>
+      <div class="risposta-riga">
+        <span class="label">Risposta:</span>
+        <span class="riga"></span>
+        <span class="unita">volte</span>
+      </div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>1) 15+22 = <strong>37 mm</strong> · 2) 4×25 + 3×22 = 100+66 = <strong>166 alunni</strong> · 3) 4×2 = <strong>8 bottiglie</strong> · 4) 40÷5 = <strong>8 volontari</strong> · 5) 800÷100 = <strong>8 minuti</strong> · 6) 32×32 = <strong>1.024 volte</strong>.</li>
+        <li><strong>Differenziazione</strong>: per la 3ª, omettere il problema 6 (magnitudo). Per la 5ª, aggiungere il calcolo della percentuale di rischio (avanzato).</li>
+        <li><strong>Aggancio reale</strong>: il problema 1 può essere fatto con dati veri scaricati dal <a href="/allerte-meteo/">bollettino allerta meteo</a>.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Problemi matematici PC" · Primaria 3ª-5ª · matematica · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

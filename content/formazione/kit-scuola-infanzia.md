@@ -244,7 +244,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Riconosci l'Iniziale**](/formazione/schede-stampabili/riconosci-iniziale-infanzia/) — per ogni immagine il bambino cerchia la lettera con cui inizia la parola, fra tre opzioni. 10 parole-chiave della sicurezza.
 - 👉 [**Collega la Parola all'Immagine**](/formazione/schede-stampabili/collega-parola-immagine-infanzia/) — 8 parole in stampatello da collegare con una linea alle 8 immagini in colonna a destra. Adatta anche per la classe 1ª.
 
-**6 schede curriculari trasversali** a tema Protezione Civile (numeri, scienze, territorio, comprensione):
+**6 schede curriculari trasversali 5-6 anni** a tema Protezione Civile (numeri, scienze, territorio, comprensione):
 
 - 👉 [**I Numeri della Protezione Civile**](/formazione/schede-stampabili/numeri-pc-infanzia/) — numeri da 1 a 5 abbinati agli oggetti PC da contare e ricalcare. Plus il 112 in rosso. *(matematica)*
 - 👉 [**Il Ciclo dell'Acqua**](/formazione/schede-stampabili/ciclo-acqua-infanzia/) — 4 vignette (sole, vapore, nuvola, pioggia) da rimettere in ordine. Capire da dove arriva la pioggia. *(scienze)*
@@ -252,6 +252,15 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**I Cartelli della Sicurezza**](/formazione/schede-stampabili/cartelli-sicurezza-infanzia/) — i 4 cartelli base (uscita, idrante, divieto, pericolo) da riconoscere e colorare. *(territorio)*
 - 👉 [**I Punti Cardinali**](/formazione/schede-stampabili/punti-cardinali-infanzia/) — rosa dei venti semplificata con N, S, E, O. Dove sorge e tramonta il sole. *(territorio)*
 - 👉 [**Riordina l'Evacuazione**](/formazione/schede-stampabili/riordina-vignette-evacuazione-infanzia/) — 4 vignette dell'evacuazione scolastica da rimettere in ordine cronologico. *(comprensione del testo)*
+
+**6 schede per i più piccoli (3-4 anni)** — pregrafismo, conta puntini, riconoscimento forme/colori:
+
+- 👉 [**Pregrafismo — Le linee della PC**](/formazione/schede-stampabili/pregrafismo-linee-infanzia/) — 4 esercizi di pregrafismo (linee dritte, zigzag, ondulate, spirali) ispirati ai mezzi PC. *(coordinazione mano-occhio)*
+- 👉 [**Conta i Puntini 1-3**](/formazione/schede-stampabili/conta-puntini-infanzia/) — 6 quadrati con oggetti PC da contare e cerchiare il numero giusto fra 1, 2, 3. *(numeri base)*
+- 👉 [**Riconosci le Forme dei Cartelli**](/formazione/schede-stampabili/riconosci-forme-infanzia/) — cerchio, quadrato, triangolo dei cartelli di sicurezza con SVG colorati e disegno guidato. *(forme)*
+- 👉 [**I Colori dei Mezzi di Soccorso**](/formazione/schede-stampabili/colori-mezzi-soccorso-infanzia/) — sagome di pompiere, ambulanza, furgone volontari da colorare con il colore giusto. *(colori)*
+- 👉 [**Filastrocca della Tartaruga — illustrata**](/formazione/schede-stampabili/filastrocca-illustrata-infanzia/) — 6 versi della filastrocca con emoji + tartaruga grande da colorare. *(linguaggio)*
+- 👉 [**Disegna il tuo Aiutante**](/formazione/schede-stampabili/disegna-aiutante-infanzia/) — silhouette di volontario PC con casco/giubbotto/radio/scarponi tratteggiati: pregrafismo + colorazione guidata. *(disegno guidato)*
 
 **5 schede da colorare** sui rischi del territorio (linea pulita pensata per matite, pastelli, pennarelli):
 

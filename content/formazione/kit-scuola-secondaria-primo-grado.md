@@ -481,6 +481,15 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Mappa dei rischi del quartiere**](/formazione/schede-stampabili/mappa-rischi-secondaria/) — indagine territoriale: lo studente consulta INGV, ISPRA, DPC, EFFIS e disegna la mappa dei rischi del proprio quartiere. 5 domande di analisi.
 - 👉 [**Audit del Piano di Emergenza Scolastico**](/formazione/schede-stampabili/audit-piano-secondaria/) — compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.
 
+**6 schede curriculari trasversali** (matematica, italiano, ed. civica, scienze):
+
+- 👉 [**Statistica dei Rischi Italiani**](/formazione/schede-stampabili/statistica-rischi-secondaria/) — tabella DPC, calcolo percentuali, costruzione istogramma, riflessione sui dati. *(matematica)*
+- 👉 [**Scrivi un Testo Informativo**](/formazione/schede-stampabili/scrittura-informativa-secondaria/) — produrre un testo di ~300 parole su un rischio del territorio (struttura 5W + fonti). *(italiano)*
+- 👉 [**Debate strutturato sui Rischi**](/formazione/schede-stampabili/debate-strutturato-secondaria/) — debate scolastico in 5 fasi su un tema PC (vietare costruzioni in zona sismica). Griglia di valutazione. *(ed. civica)*
+- 👉 [**Costituzione e PC — Analisi**](/formazione/schede-stampabili/costituzione-pc-secondaria/) — articoli 32, 117, 118 con testo originale + glossario costituzionale + 4 domande di approfondimento. *(ed. civica)*
+- 👉 [**Vulcanologia dei Castelli Romani**](/formazione/schede-stampabili/vulcanologia-castelli-secondaria/) — il Vulcano Laziale: caldera, fumarole, monitoraggio INGV. Schema della caldera con i due laghi. *(scienze)*
+- 👉 [**Cronaca Recente — Ischia 2022**](/formazione/schede-stampabili/cronaca-recente-secondaria/) — articolo di cronaca su frana di Casamicciola. Analisi 5W + 5 domande critiche. *(italiano)*
+
 ---
 
 ## Compito di realtà — Analisi del Piano di Emergenza Scolastico
