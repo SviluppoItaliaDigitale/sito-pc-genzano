@@ -1,9 +1,13 @@
 {{/*
   Selettore lingue (top-right). Click apre un modal di scelta.
-  - IT: lingua principale del sito (curata)
-  - EN: pagina /english/ curata manualmente
-  - Altre lingue: passaggio tramite Google Translate (avviso esplicito
-    che la traduzione è automatica e non istituzionale).
+  Due sezioni:
+  1) "Versioni curate dal Gruppo": pagine sintesi tradotte a mano
+     (IT, EN, FR, DE, ES, PT, RO, EO).
+  2) "Traduzione automatica del sito intero (Google Translate)":
+     bottoni che aprono il proxy *.translate.goog con la pagina
+     corrente tradotta. Disponibili: EN, FR, DE, ES, AR, ZH, JA,
+     RU, EO. EN ed EO sono presenti in entrambe le sezioni: il
+     cittadino sceglie tra sintesi curata e traduzione completa.
 
   Accessibilita': dialog con focus trap, ESC chiude, focus iniziale
   sul primo bottone "Annulla/Italiano".
@@ -86,6 +90,11 @@
       <h3 class="lang-section-title">Traduzione automatica del sito intero (Google Translate)</h3>
       <p class="lang-section-note">Per visualizzare l'intero sito tradotto in queste lingue. Apre Google Translate in una nuova scheda con la pagina corrente.</p>
       <div class="lang-grid">
+        <button type="button" class="lang-card" data-lang="en" lang="en">
+          <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+          <span class="lang-code">EN</span>
+          <span class="lang-name">English (full)</span>
+        </button>
         <button type="button" class="lang-card" data-lang="fr" lang="fr">
           <span class="lang-flag" aria-hidden="true">🇫🇷</span>
           <span class="lang-code">FR</span>
@@ -120,6 +129,11 @@
           <span class="lang-flag" aria-hidden="true">🇷🇺</span>
           <span class="lang-code">RU</span>
           <span class="lang-name">Русский</span>
+        </button>
+        <button type="button" class="lang-card" data-lang="eo" lang="eo">
+          <span class="lang-flag" aria-hidden="true">🟢</span>
+          <span class="lang-code">EO</span>
+          <span class="lang-name">Esperanto (ĉio)</span>
         </button>
       </div>
 
