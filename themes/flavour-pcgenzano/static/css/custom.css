@@ -1747,19 +1747,19 @@ article .galleria img {
   position: fixed;
   top: 0.8rem;
   right: 0.8rem;
-  z-index: 9997;
+  z-index: 9999;
   background: #003366;
   color: #fff;
-  border: 2px solid #fff;
+  border: 2.5px solid #fff;
   border-radius: 22px;
-  padding: 0.4rem 0.85rem;
+  padding: 0.45rem 0.95rem;
   font-weight: 700;
   font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
   cursor: pointer;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255,255,255,0.2);
   transition: transform 0.12s ease, background-color 0.12s ease;
 }
 .lang-toggle:hover, .lang-toggle:focus {
@@ -1936,6 +1936,31 @@ article .galleria img {
 }
 .lang-modal-warning .bi { color: #b45309; margin-right: 0.4rem; }
 .lang-modal-warning a { color: #664d03; font-weight: 700; }
+
+.lang-modal-help {
+  background: #d1ecf1;
+  border-left: 4px solid #0c5460;
+  padding: 0.7rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #0c5460;
+  margin-top: 0.6rem;
+  line-height: 1.5;
+}
+.lang-modal-help ul { margin: 0.3rem 0 0 0; padding-left: 1.3rem; }
+.lang-modal-help li { margin-bottom: 0.25rem; }
+.lang-modal-help kbd {
+  background: #0c5460;
+  color: #fff;
+  padding: 0.05rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-family: inherit;
+}
+.lang-modal-help a {
+  color: #0c5460;
+  font-weight: 700;
+}
 
 /* ================================================================
    Bottone SOS 112 — visibile SOLO su mobile e tablet.
