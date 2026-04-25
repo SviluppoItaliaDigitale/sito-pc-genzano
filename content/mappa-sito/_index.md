@@ -312,6 +312,47 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 </a>
 </div>
 
+<div class="ms-section"><span class="ms-section-icon" style="background:#003366"><i class="bi bi-journals"></i></span><h2>Normativa di Protezione Civile</h2></div>
+
+<div class="ms-grid">
+<a class="ms-card ms-doc" href="/normativa/">
+  <div class="ms-card-icon"><i class="bi bi-bookmark-fill"></i></div>
+  <p class="ms-card-title">Hub Normativa</p>
+  <p class="ms-card-desc">Indice degli approfondimenti normativi: chi fa cosa nel Servizio Nazionale, dal Sindaco al Capo Dipartimento.</p>
+  <span class="ms-card-arrow">Apri →</span>
+</a>
+<a class="ms-card ms-doc" href="/normativa/testo-unico-protezione-civile/">
+  <div class="ms-card-icon"><i class="bi bi-book-fill"></i></div>
+  <p class="ms-card-title">Codice della Protezione Civile</p>
+  <p class="ms-card-desc">D.Lgs. 1/2018 spiegato in 7 Capi: finalità, organizzazione, previsione, pianificazione, emergenze, volontariato.</p>
+  <span class="ms-card-arrow">Apri →</span>
+</a>
+<a class="ms-card ms-doc" href="/normativa/testo-unico-protezione-civile/capo-3-previsione-prevenzione/">
+  <div class="ms-card-icon"><i class="bi bi-eye-fill"></i></div>
+  <p class="ms-card-title">Capo III — Previsione e prevenzione</p>
+  <p class="ms-card-desc">Sistema di allertamento, comunicazione del rischio, formazione: il cuore della cultura di protezione civile.</p>
+  <span class="ms-card-arrow">Leggi →</span>
+</a>
+<a class="ms-card ms-doc" href="/normativa/testo-unico-protezione-civile/capo-4-pianificazione/">
+  <div class="ms-card-icon"><i class="bi bi-clipboard-data-fill"></i></div>
+  <p class="ms-card-title">Capo IV — Pianificazione</p>
+  <p class="ms-card-desc">Piano nazionale, regionale, provinciale e comunale: come si pianifica una emergenza prima che accada.</p>
+  <span class="ms-card-arrow">Leggi →</span>
+</a>
+<a class="ms-card ms-doc" href="/normativa/testo-unico-protezione-civile/capo-6-volontariato/">
+  <div class="ms-card-icon"><i class="bi bi-person-hearts"></i></div>
+  <p class="ms-card-title">Capo VI — Volontariato</p>
+  <p class="ms-card-desc">Diritti e doveri del volontario di Protezione Civile: tutele lavorative, rimborsi, formazione.</p>
+  <span class="ms-card-arrow">Leggi →</span>
+</a>
+<a class="ms-card ms-doc" href="/normativa/evoluzione-procedure-emergenza/">
+  <div class="ms-card-icon"><i class="bi bi-clock-history"></i></div>
+  <p class="ms-card-title">Evoluzione delle procedure di emergenza</p>
+  <p class="ms-card-desc">Come sono cambiate le procedure di Protezione Civile in Italia: da Vajont (1963) al sistema attuale.</p>
+  <span class="ms-card-arrow">Leggi →</span>
+</a>
+</div>
+
 <div class="ms-section"><span class="ms-section-icon" style="background:#0891b2"><i class="bi bi-grid-3x3-gap-fill"></i></span><h2>Strumenti, risorse, download</h2></div>
 
 <div class="ms-grid">

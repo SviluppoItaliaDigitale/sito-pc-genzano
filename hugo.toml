@@ -141,6 +141,12 @@ enableGitInfo = true
   parent = "volontariato"
   weight = 2
 
+[[menus.main]]
+  name = "Normativa"
+  url = "/normativa/"
+  parent = "volontariato"
+  weight = 3
+
 # --- Voci dirette ---
 [[menus.main]]
   name = "Comunicazioni"
