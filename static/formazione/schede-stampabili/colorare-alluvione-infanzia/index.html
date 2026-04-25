@@ -109,24 +109,59 @@
 
       <div class="col-passo">
         <div class="col-num">4</div>
-        <svg viewBox="0 0 160 120" role="img" aria-label="Bambino con un adulto stacca la presa dalla corrente">
-          <!-- Adulto -->
-          <circle cx="55" cy="38" r="10" />
-          <line x1="55" y1="48" x2="55" y2="80" />
-          <line x1="50" y1="78" x2="50" y2="95" />
-          <line x1="60" y1="78" x2="60" y2="95" />
-          <!-- Braccio teso verso presa -->
-          <line x1="55" y1="58" x2="80" y2="65" />
-          <!-- Mano -->
-          <circle cx="83" cy="65" r="3" />
-          <!-- Spina con cavo -->
-          <line x1="86" y1="65" x2="105" y2="65" />
-          <rect x="105" y="60" width="14" height="10" rx="2" />
-          <!-- Presa a muro -->
-          <rect x="125" y="55" width="20" height="20" rx="2" />
-          <circle cx="132" cy="62" r="1.5" class="fill-text" />
-          <circle cx="138" cy="62" r="1.5" class="fill-text" />
-          <line x1="135" y1="68" x2="135" y2="72" />
+        <svg viewBox="0 0 200 130" role="img" aria-label="Adulto con braccio teso che stacca la spina dalla presa elettrica">
+          <!-- ADULTO dettagliato (più alto) -->
+          <!-- Capelli -->
+          <path d="M 38 22 Q 35 14 45 10 Q 60 8 65 18" />
+          <!-- Testa -->
+          <circle cx="50" cy="22" r="13" />
+          <!-- Occhi -->
+          <circle cx="46" cy="20" r="1.5" class="fill-text" />
+          <circle cx="54" cy="20" r="1.5" class="fill-text" />
+          <!-- Sopracciglia attente -->
+          <path d="M 43 16 L 48 17" />
+          <path d="M 52 17 L 57 16" />
+          <!-- Bocca seria -->
+          <line x1="46" y1="27" x2="54" y2="27" />
+          <!-- Collo -->
+          <line x1="50" y1="35" x2="50" y2="42" />
+          <!-- Maglietta -->
+          <path d="M 32 42 L 68 42 L 72 58 L 62 58 L 62 80 L 38 80 L 38 58 L 28 58 Z" />
+          <!-- Braccio teso verso la presa (allungato) -->
+          <line x1="62" y1="55" x2="105" y2="60" stroke-width="3" />
+          <!-- Mano (cerchio + dita stilizzate) -->
+          <circle cx="108" cy="60" r="4" />
+          <line x1="111" y1="58" x2="113" y2="58" />
+          <line x1="111" y1="60" x2="113" y2="60" />
+          <line x1="111" y1="62" x2="113" y2="62" />
+          <!-- Braccio sinistro lungo il corpo -->
+          <line x1="38" y1="55" x2="35" y2="80" />
+          <circle cx="35" cy="82" r="3" />
+          <!-- Pantaloni -->
+          <path d="M 38 80 L 40 110 L 50 110 L 50 80 Z" />
+          <path d="M 50 80 L 50 110 L 60 110 L 62 80 Z" />
+          <!-- Gambe -->
+          <line x1="45" y1="110" x2="43" y2="125" />
+          <line x1="55" y1="110" x2="57" y2="125" />
+          <!-- Scarpe -->
+          <ellipse cx="41" cy="127" rx="6" ry="2.5" />
+          <ellipse cx="59" cy="127" rx="6" ry="2.5" />
+
+          <!-- SPINA con cavo (separata dalla presa = staccata) -->
+          <line x1="113" y1="60" x2="135" y2="60" />
+          <rect x="135" y="55" width="14" height="11" rx="2" />
+          <!-- Lampi spina (movimento) -->
+          <path d="M 130 50 L 132 55 M 130 70 L 132 65" />
+          <!-- PRESA A MURO -->
+          <rect x="160" y="50" width="22" height="22" rx="2" stroke-width="2.5" />
+          <circle cx="167" cy="58" r="1.5" class="fill-text" />
+          <circle cx="175" cy="58" r="1.5" class="fill-text" />
+          <line x1="171" y1="64" x2="171" y2="68" />
+          <!-- Linea muro -->
+          <line x1="155" y1="35" x2="190" y2="35" />
+          <line x1="155" y1="35" x2="155" y2="125" />
+          <!-- Linea pavimento -->
+          <line x1="0" y1="125" x2="200" y2="125" />
         </svg>
         <p class="col-frase">Un adulto <strong>stacca la corrente</strong></p>
       </div>
