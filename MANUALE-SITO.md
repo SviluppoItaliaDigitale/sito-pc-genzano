@@ -1459,6 +1459,12 @@ Il template `single.html` del tema mostra questa data come **box evidente** in c
 | `/privacy/` | `content/privacy/_index.md` | |
 | `/note-legali/` | `content/note-legali/_index.md` | |
 | `/siti-utili/` | `content/siti-utili/_index.md` | |
+| `/glossario/` | `content/glossario/_index.md` | Glossario PC: 50+ termini tecnici A-Z |
+| `/strumenti/` | `content/strumenti/_index.md` | Hub strumenti consultazione (12+ widget/link) |
+| `/mappa-sito/` | `content/mappa-sito/_index.md` | Mappa del sito con card per macro-aree |
+| `/facile-da-leggere/` | `content/facile-da-leggere/_index.md` | Versione cognitiva-friendly (D.Lgs. 62/2024) |
+| `/formazione/schede-stampabili/` | `static/formazione/schede-stampabili/` | 18 schede HTML A4 stampabili (di cui 5 colorabili) |
+| `/english/` ... `/esperanto/` | `content/{lingua}/_index.md` | 7 hub linguistiche curate (vedi §4.11) |
 
 ### 4.8 — Kit didattici per le scuole (`content/formazione/kit-scuola-*.md`)
 
@@ -1631,6 +1637,81 @@ Interpretazione:
 #### CTA in homepage
 
 La sezione **Servizi per il cittadino** in homepage (`data/quick_links.yaml` → `servizi`) include una voce "Strumenti in Tempo Reale" che punta a `/strumenti/`. Quando aggiungi un nuovo strumento all'hub non serve modificare la home: il link è già presente.
+
+### 4.11 — Versioni multilingua (selettore + hub linguistiche)
+
+Il sito è scritto in **italiano**, ma offre **versioni curate dal Gruppo** in 7 lingue per turisti e residenti stranieri. La gestione è in due livelli:
+
+**1. Selettore lingue globale** — partial `themes/flavour-pcgenzano/layouts/partials/language-selector.html`
+
+Bottone fisso in alto a destra (`position: fixed; top: 0.8rem; right: 0.8rem; z-index: 9999`) con icona traduzione e codice lingua. Click apre un modal accessibile (focus trap, ESC chiude) con:
+
+- **Sezione "Versioni curate"**: link diretti alle 8 hub linguistiche (IT + 7 traduzioni)
+- **Sezione "Traduzione automatica"**: passa il sito al proxy Google Translate `*.translate.goog` per FR/DE/ES/AR/ZH/JA/RU. Disclaimer chiaro: traduzioni approssimative, non istituzionali.
+
+**2. Hub linguistiche curate** (`content/{lingua}/_index.md`)
+
+| Lingua | URL | Aliases |
+|---|---|---|
+| English | `/english/` | `/en/`, `/en/index.html` |
+| Français | `/francais/` | `/fr/`, `/fr/index.html` |
+| Deutsch | `/deutsch/` | `/de/`, `/de/index.html` |
+| Español | `/espanol/` | `/es/`, `/es/index.html` |
+| Português | `/portugues/` | `/pt/`, `/pt/index.html` |
+| Română | `/romana/` | `/ro/`, `/ro/index.html` |
+| Esperanto | `/esperanto/` | `/eo/`, `/eo/index.html` |
+
+Ogni hub è una pagina di sintesi con: numero 112, comportamenti per i 5 rischi principali, kit emergenza, IT-alert, mappa aree di attesa, contatti.
+
+**3. Sotto-pagine essenziali tradotte**
+
+In ogni lingua sono presenti 3 sotto-pagine dettagliate:
+
+- `/{lingua}/numeri-utili/` — Numeri di emergenza
+- `/{lingua}/cosa-fare-adesso/` — Comportamenti per ogni tipo di rischio
+- `/{lingua}/piano-familiare/` — Template di piano familiare (mini-guida + checklist)
+
+Slug delle sotto-pagine **mantenuti in italiano** per coerenza URL.
+
+**Limiti dichiarati:**
+
+- Le sotto-pagine tradotte coprono **3 pagine essenziali** per lingua (totale 21 file). Per il resto del sito, l'utente straniero usa il selettore "Traduzione automatica" che apre Google Translate.
+- L'**Esperanto** è dichiarato come "best effort, non revisionato da denaska parolanto".
+- **AR, ZH, JA, RU**: non abbiamo versioni curate, solo Google Translate (limite di competenza linguistica del Gruppo).
+
+**Quando aggiungere una nuova lingua curata:**
+
+1. Crea `content/{slug-lingua}/_index.md` (slug latino: `cinese`, `russo`, ecc. — niente caratteri non-latini).
+2. Frontmatter con `aliases` per il codice ISO breve (`/zh/`, `/ru/`).
+3. Stesso template visivo delle hub esistenti (CSS classes `.en-card`, `.en-tel`, `.en-list`).
+4. Aggiungi al partial `language-selector.html` nella sezione "Versioni curate".
+5. Aggiorna privacy + accessibilità.
+
+### 4.12 — Mappa del Sito (`/mappa-sito/`)
+
+Pagina hub di navigazione che raccoglie tutte le sezioni del sito divise per macro-area (servizi, allerte, rischi, formazione, comunicazioni, gruppo, strumenti, accessibilità, legali). Layout a card colorate (border-left per categoria), icone Bootstrap.
+
+Linkata da:
+- Footer (`hugo.toml` → `[[menus.footer]]`) come 5a voce
+- Homepage `data/quick_links.yaml` → `servizi` come 7a card
+- Aliases `/sitemap.html` e `/mappa/`
+
+**Quando aggiornare la mappa-sito:**
+
+Quando crei una nuova pagina top-level (es. `/glossario/`, `/strumenti/`), aggiungi una card alla sezione tematica corrispondente. Le pagine secondarie (sotto-categorie, articoli) NON vanno nella mappa-sito: quella è solo un indice di alto livello.
+
+### 4.13 — Bottone SOS 112 (`partials/sos-112.html`)
+
+Bottone fisso in basso a destra **solo su mobile e tablet** (su desktop nascosto perché il telefono non chiama). Click apre un modal di conferma (focus iniziale su "Annulla" per evitare chiamate accidentali). Solo dopo la conferma esplicita parte la chiamata `tel:112`.
+
+Caratteristiche tecniche:
+- `position: fixed; bottom: 1.2rem; right: 1.2rem; z-index: 10000`
+- `display: none` di default, `display: flex !important` con media query `(max-width: 991.98px)`
+- Animazione "pulse" ogni 2.5s (disattivata in `prefers-reduced-motion`)
+- Modal accessibile: `role="dialog"`, `aria-modal="true"`, focus trap, ESC chiude
+- Modal ricorda art. 658 CP (chiamate scherzo punibili)
+
+Inserito in `baseof.html` via `{{ partial "sos-112.html" . }}` — appare in tutte le pagine Hugo. NON appare nei giochi/app standalone (che hanno il proprio HTML, non baseof.html).
 
 ---
 
