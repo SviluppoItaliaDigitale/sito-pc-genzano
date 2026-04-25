@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Il Mezzo Giusto — Giochi Piccoli Esploratori</title>
+  <meta name="description" content="Tina ha bisogno di aiuto: sceglie il mezzo giusto per ogni emergenza. Pompiere, ambulanza o volontari? 5 round per i bambini dai 4 ai 6 anni.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
+  <style>
+    .tina-fumetto {
+      background: #fff; border: 3px solid var(--inf-blu, #003366);
+      border-radius: 22px; padding: 1rem 1.2rem;
+      font-size: 1.15rem; font-weight: 700; color: var(--inf-blu, #003366);
+      text-align: center; margin-bottom: 1rem;
+    }
+    .scenario {
+      text-align: center; margin-bottom: 1rem;
+      background: #f4f7fb; border-radius: 18px; padding: 1rem;
+      border: 2px dashed var(--inf-blu, #003366);
+    }
+    .scenario .emo { font-size: 4.5rem; line-height: 1; }
+    .scenario .testo { font-size: 1.05rem; font-weight: 700; color: #495057; margin-top: 0.5rem; }
+    .mezzi-griglia {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem;
+      max-width: 540px; margin: 0 auto;
+    }
+    .mezzo-btn {
+      aspect-ratio: 0.9; padding: 0.8rem 0.4rem;
+      border-radius: 22px; border: 4px solid;
+      background: #fff;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.4rem; font-size: 3.2rem; line-height: 1;
+      box-shadow: 0 6px 0 rgba(0,0,0,.15);
+      cursor: pointer; user-select: none;
+      transition: transform .15s;
+    }
+    .mezzo-btn .nome { font-size: 0.85rem; font-weight: 700; line-height: 1.2; text-transform: uppercase; }
+    .mezzo-btn.pompiere { border-color: #dc3545; background: #fff5f5; }
+    .mezzo-btn.ambulanza { border-color: #6c757d; background: #f8f9fa; }
+    .mezzo-btn.volontari { border-color: #fd7e14; background: #fff8f0; }
+    .mezzo-btn:focus { outline: 4px solid var(--inf-blu, #003366); outline-offset: 4px; }
+    .mezzo-btn:hover { transform: translateY(-2px); }
+    .mezzo-btn.correct { animation: inf-pulse-green .6s ease; box-shadow: 0 0 0 6px #198754; }
+    .mezzo-btn.wrong { animation: inf-shake .4s ease; box-shadow: 0 0 0 6px #dc3545; }
+    .mezzo-btn.dim { opacity: .5; }
+    .progress-dots { display: flex; justify-content: center; gap: .4rem; margin-bottom: .8rem; }
+    .progress-dots .dot { width: 14px; height: 14px; border-radius: 50%; background: #cfd6df; }
+    .progress-dots .dot.done { background: var(--inf-verde, #198754); }
+    .progress-dots .dot.now { background: var(--inf-blu, #003366); }
+    .round-up {
+      text-align: center; padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #fff8d6, #ffe4b5);
+      border: 4px solid #F4B700; border-radius: 22px;
+    }
+    .round-up .stelle { font-size: 2.5rem; line-height: 1; margin-bottom: .5rem; }
+    .round-up .titolo { color: var(--inf-blu); font-weight: 800; font-size: 1.6rem; margin-bottom: .3rem; }
+  </style>
+</head>
+<body class="inf-body">
+  <main id="main-content" tabindex="-1" class="inf-main">
+    <nav aria-label="Percorso">
+      <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
+    </nav>
+
+    <div class="inf-home">
+      <h1>Il Mezzo Giusto</h1>
+      <p>Per ogni emergenza, scegli <strong>il mezzo che serve</strong>!</p>
+    </div>
+
+    <div class="inf-card" id="game-card">
+      <div id="start-screen" class="text-center">
+        <div style="font-size: 5rem;" aria-hidden="true">🚒🚑🚐</div>
+        <p class="h5 mt-2">3 mezzi: <strong>pompiere</strong>, <strong>ambulanza</strong>, <strong>volontari</strong>.</p>
+        <p class="text-muted">5 emergenze, scegli il mezzo giusto!</p>
+        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+          <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia</button>
+          <a href="../index.html" class="btn btn-outline-secondary btn-lg"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
+        </div>
+      </div>
+
+      <div id="game-screen" class="hide">
+        <div class="progress-dots" id="progress" aria-label="Avanzamento gioco"></div>
+        <div class="tina-fumetto">Quale mezzo serve?</div>
+        <div class="scenario" id="scenario">
+          <div class="emo" id="scena-emo" aria-hidden="true">🔥</div>
+          <div class="testo" id="scena-testo">Una casa va a fuoco!</div>
+        </div>
+        <div class="mezzi-griglia" role="group" aria-label="3 mezzi: tocca quello giusto">
+          <button type="button" class="mezzo-btn pompiere" data-tipo="pompiere" aria-label="Pompiere">
+            <span aria-hidden="true">🚒</span><span class="nome">Pompiere</span>
+          </button>
+          <button type="button" class="mezzo-btn ambulanza" data-tipo="ambulanza" aria-label="Ambulanza">
+            <span aria-hidden="true">🚑</span><span class="nome">Ambulanza</span>
+          </button>
+          <button type="button" class="mezzo-btn volontari" data-tipo="volontari" aria-label="Volontari Protezione Civile">
+            <span aria-hidden="true">🚐</span><span class="nome">Volontari PC</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <div class="round-up">
+          <div class="stelle" id="stelle">⭐⭐⭐</div>
+          <div class="titolo">Squadra forte!</div>
+          <p class="mb-3">Hai mandato il mezzo giusto <strong><span id="punti">0</span></strong> volte su 5.</p>
+          <p class="text-muted small mb-3">Ricorda: in ogni caso si chiama il <strong>112</strong>, e loro mandano il mezzo giusto!</p>
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <button id="restart-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Rigioca</button>
+            <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    const ROUNDS = [
+      { emo: '🔥', testo: 'Una casa va a fuoco!', giusto: 'pompiere' },
+      { emo: '🤕', testo: 'Una persona si è fatta male!', giusto: 'ambulanza' },
+      { emo: '🌊', testo: "C'è stata un'alluvione, le persone hanno bisogno di acqua e cibo!", giusto: 'volontari' },
+      { emo: '🚗💥', testo: 'Un incidente in strada con feriti!', giusto: 'ambulanza' },
+      { emo: '🌳', testo: 'Un albero è caduto sulla strada e blocca tutto!', giusto: 'volontari' }
+    ];
+
+    let cur = 0, score = 0, locked = false;
+    const startScr = document.getElementById('start-screen');
+    const gameScr = document.getElementById('game-screen');
+    const endScr = document.getElementById('end-screen');
+    const progEl = document.getElementById('progress');
+    const emoEl = document.getElementById('scena-emo');
+    const testoEl = document.getElementById('scena-testo');
+    const buttons = document.querySelectorAll('.mezzo-btn');
+
+    document.getElementById('start-btn').addEventListener('click', start);
+    document.getElementById('restart-btn').addEventListener('click', start);
+    buttons.forEach(b => b.addEventListener('click', () => onPick(b)));
+
+    function start() {
+      cur = 0; score = 0; locked = false;
+      startScr.classList.add('hide');
+      endScr.classList.add('hide');
+      gameScr.classList.remove('hide');
+      drawProgress();
+      render();
+    }
+
+    function drawProgress() {
+      progEl.innerHTML = '';
+      for (let i = 0; i < ROUNDS.length; i++) {
+        const d = document.createElement('span');
+        d.className = 'dot' + (i < cur ? ' done' : i === cur ? ' now' : '');
+        progEl.appendChild(d);
+      }
+    }
+
+    function render() {
+      const r = ROUNDS[cur];
+      emoEl.textContent = r.emo;
+      testoEl.textContent = r.testo;
+      buttons.forEach(b => { b.classList.remove('correct', 'wrong', 'dim'); });
+      locked = false;
+      drawProgress();
+    }
+
+    function onPick(btn) {
+      if (locked) return;
+      locked = true;
+      const tipo = btn.getAttribute('data-tipo');
+      const giusto = ROUNDS[cur].giusto;
+      if (tipo === giusto) {
+        btn.classList.add('correct');
+        score++;
+      } else {
+        btn.classList.add('wrong');
+        buttons.forEach(b => {
+          if (b.getAttribute('data-tipo') === giusto) b.classList.add('correct');
+          else if (b !== btn) b.classList.add('dim');
+        });
+      }
+      setTimeout(() => {
+        cur++;
+        if (cur >= ROUNDS.length) finish();
+        else render();
+      }, 1300);
+    }
+
+    function finish() {
+      gameScr.classList.add('hide');
+      endScr.classList.remove('hide');
+      document.getElementById('punti').textContent = score;
+      const stars = score >= 5 ? '⭐⭐⭐' : score >= 3 ? '⭐⭐' : score >= 1 ? '⭐' : '👍';
+      document.getElementById('stelle').textContent = stars;
+    }
+  })();
+  </script>
+</body>
+</html>
