@@ -1,0 +1,166 @@
+{{/*
+  Selettore lingue (top-right). Click apre un modal di scelta.
+  - IT: lingua principale del sito (curata)
+  - EN: pagina /english/ curata manualmente
+  - Altre lingue: passaggio tramite Google Translate (avviso esplicito
+    che la traduzione è automatica e non istituzionale).
+
+  Accessibilita': dialog con focus trap, ESC chiude, focus iniziale
+  sul primo bottone "Annulla/Italiano".
+*/}}
+<button type="button" id="lang-toggle" class="lang-toggle"
+        aria-label="Cambia lingua del sito"
+        aria-haspopup="dialog"
+        aria-controls="lang-modal">
+  <i class="bi bi-translate" aria-hidden="true"></i>
+  <span class="lang-toggle-code">IT</span>
+</button>
+
+<div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true"
+     aria-labelledby="lang-modal-title" hidden>
+  <div class="lang-modal-backdrop" data-lang-close="true" aria-hidden="true"></div>
+  <div class="lang-modal-dialog" role="document">
+    <header class="lang-modal-header">
+      <h2 id="lang-modal-title" class="lang-modal-title">
+        <i class="bi bi-translate" aria-hidden="true"></i> Scegli la lingua
+      </h2>
+      <button type="button" class="lang-modal-close" data-lang-close="true" aria-label="Chiudi selettore lingue">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </header>
+    <div class="lang-modal-body">
+      <p class="lang-modal-intro">Il sito è scritto in <strong>italiano</strong>. Per altre lingue puoi passare dal traduttore automatico:</p>
+      <h3 class="lang-section-title">Versioni curate dal Gruppo</h3>
+      <div class="lang-grid">
+        <a class="lang-card lang-curated" href="{{ "" | relURL }}" lang="it">
+          <span class="lang-flag" aria-hidden="true">🇮🇹</span>
+          <span class="lang-code">IT</span>
+          <span class="lang-name">Italiano</span>
+          <span class="lang-tag">originale</span>
+        </a>
+        <a class="lang-card lang-curated" href="{{ "english/" | relURL }}" lang="en">
+          <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+          <span class="lang-code">EN</span>
+          <span class="lang-name">English</span>
+          <span class="lang-tag">curato</span>
+        </a>
+      </div>
+
+      <h3 class="lang-section-title">Traduzione automatica (Google Translate)</h3>
+      <div class="lang-grid">
+        <button type="button" class="lang-card" data-lang="fr" lang="fr">
+          <span class="lang-flag" aria-hidden="true">🇫🇷</span>
+          <span class="lang-code">FR</span>
+          <span class="lang-name">Français</span>
+        </button>
+        <button type="button" class="lang-card" data-lang="de" lang="de">
+          <span class="lang-flag" aria-hidden="true">🇩🇪</span>
+          <span class="lang-code">DE</span>
+          <span class="lang-name">Deutsch</span>
+        </button>
+        <button type="button" class="lang-card" data-lang="es" lang="es">
+          <span class="lang-flag" aria-hidden="true">🇪🇸</span>
+          <span class="lang-code">ES</span>
+          <span class="lang-name">Español</span>
+        </button>
+        <button type="button" class="lang-card" data-lang="pt" lang="pt">
+          <span class="lang-flag" aria-hidden="true">🇵🇹</span>
+          <span class="lang-code">PT</span>
+          <span class="lang-name">Português</span>
+        </button>
+        <button type="button" class="lang-card" data-lang="ro" lang="ro">
+          <span class="lang-flag" aria-hidden="true">🇷🇴</span>
+          <span class="lang-code">RO</span>
+          <span class="lang-name">Română</span>
+        </button>
+        <button type="button" class="lang-card" data-lang="eo" lang="eo">
+          <span class="lang-flag" aria-hidden="true">🟢</span>
+          <span class="lang-code">EO</span>
+          <span class="lang-name">Esperanto</span>
+        </button>
+        <button type="button" class="lang-card" data-lang="ar" lang="ar">
+          <span class="lang-flag" aria-hidden="true">🌍</span>
+          <span class="lang-code">AR</span>
+          <span class="lang-name">العربية</span>
+        </button>
+        <button type="button" class="lang-card" data-lang="zh-CN" lang="zh">
+          <span class="lang-flag" aria-hidden="true">🇨🇳</span>
+          <span class="lang-code">ZH</span>
+          <span class="lang-name">中文 (简体)</span>
+        </button>
+        <button type="button" class="lang-card" data-lang="ja" lang="ja">
+          <span class="lang-flag" aria-hidden="true">🇯🇵</span>
+          <span class="lang-code">JA</span>
+          <span class="lang-name">日本語</span>
+        </button>
+        <button type="button" class="lang-card" data-lang="ru" lang="ru">
+          <span class="lang-flag" aria-hidden="true">🇷🇺</span>
+          <span class="lang-code">RU</span>
+          <span class="lang-name">Русский</span>
+        </button>
+      </div>
+
+      <div class="lang-modal-warning">
+        <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+        <strong>Avviso:</strong> le traduzioni automatiche di Google Translate sono <strong>approssimative</strong> e <strong>non sono curate dal Gruppo Volontari</strong>. Per emergenze e numeri ufficiali fai sempre riferimento alla versione italiana o alla pagina <a href="{{ "english/" | relURL }}">English</a>. La traduzione apre il sito in una <strong>nuova scheda</strong> all'interno del proxy di Google: si applicano i loro termini di servizio e la loro privacy policy.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var btn = document.getElementById('lang-toggle');
+  var modal = document.getElementById('lang-modal');
+  if (!btn || !modal) return;
+
+  var lastFocused = null;
+  var focusableSel = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+  function open() {
+    lastFocused = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    var first = modal.querySelector('.lang-modal-close');
+    if (first) setTimeout(function () { first.focus(); }, 30);
+    document.addEventListener('keydown', onKeyDown);
+  }
+  function close() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKeyDown);
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  }
+  function onKeyDown(e) {
+    if (e.key === 'Escape') { e.preventDefault(); close(); return; }
+    if (e.key === 'Tab') {
+      var f = modal.querySelectorAll(focusableSel);
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+
+  btn.addEventListener('click', open);
+  modal.querySelectorAll('[data-lang-close="true"]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      if (el.classList.contains('lang-modal-backdrop') && e.target !== el) return;
+      close();
+    });
+  });
+
+  // Click su una lingua "automatica": apre Google Translate in nuova scheda
+  modal.querySelectorAll('[data-lang]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var lang = b.getAttribute('data-lang');
+      var here = window.location.href;
+      var url = 'https://translate.google.com/translate?sl=it&tl=' +
+                encodeURIComponent(lang) + '&u=' + encodeURIComponent(here);
+      window.open(url, '_blank', 'noopener,noreferrer');
+      close();
+    });
+  });
+})();
+</script>

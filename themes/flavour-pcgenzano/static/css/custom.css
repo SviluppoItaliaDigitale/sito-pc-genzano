@@ -1739,6 +1739,199 @@ article .galleria img {
 }
 
 /* ================================================================
+   Selettore lingue — bottone fisso in alto a destra.
+   Apre un modal con scelta lingua. IT e EN curate dal Gruppo,
+   altre lingue passate a Google Translate (con disclaimer).
+   ================================================================ */
+.lang-toggle {
+  position: fixed;
+  top: 0.8rem;
+  right: 0.8rem;
+  z-index: 9997;
+  background: #003366;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 22px;
+  padding: 0.4rem 0.85rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.12s ease, background-color 0.12s ease;
+}
+.lang-toggle:hover, .lang-toggle:focus {
+  background: #002244;
+  transform: translateY(-1px);
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.lang-toggle .bi { font-size: 1rem; }
+.lang-toggle-code { letter-spacing: 0.04em; }
+@media (max-width: 480px) {
+  .lang-toggle {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+@media print { .lang-toggle { display: none !important; } }
+
+.lang-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.lang-modal[hidden] { display: none; }
+.lang-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+.lang-modal-dialog {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  max-width: 640px;
+  width: 100%;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: langModalIn 0.18s ease-out;
+}
+@keyframes langModalIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lang-modal-dialog { animation: none; }
+}
+.lang-modal-header {
+  background: #003366;
+  color: #fff;
+  padding: 0.8rem 1.1rem;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.lang-modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.lang-modal-close {
+  background: transparent;
+  color: #fff;
+  border: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.lang-modal-close:hover, .lang-modal-close:focus {
+  background: rgba(255, 255, 255, 0.18);
+  outline: 2px solid #ffbe2e;
+}
+.lang-modal-body {
+  padding: 1.1rem;
+}
+.lang-modal-intro {
+  margin: 0 0 0.8rem 0;
+  font-size: 0.95rem;
+  color: #495057;
+}
+.lang-section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0.8rem 0 0.5rem 0;
+}
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+.lang-card {
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  padding: 0.6rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: transform 0.12s ease, border-color 0.12s ease, background-color 0.12s ease;
+}
+.lang-card:hover, .lang-card:focus {
+  background: #e8f0fe;
+  border-color: #003366;
+  transform: translateY(-2px);
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+  text-decoration: none;
+  color: inherit;
+}
+.lang-card.lang-curated {
+  background: #d1e7dd;
+  border-color: #198754;
+}
+.lang-card.lang-curated:hover, .lang-card.lang-curated:focus {
+  background: #badbcc;
+  border-color: #0f5132;
+}
+.lang-card .lang-flag { font-size: 1.6rem; line-height: 1; margin-bottom: 0.2rem; }
+.lang-card .lang-code { font-weight: 800; color: #003366; font-size: 1rem; }
+.lang-card.lang-curated .lang-code { color: #0f5132; }
+.lang-card .lang-name { font-size: 0.78rem; color: #495057; margin-top: 0.1rem; }
+.lang-card .lang-tag {
+  background: #198754;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.05rem 0.4rem;
+  border-radius: 8px;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.lang-modal-warning {
+  background: #fff3cd;
+  border-left: 4px solid #b45309;
+  padding: 0.7rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #664d03;
+  margin-top: 0.6rem;
+  line-height: 1.5;
+}
+.lang-modal-warning .bi { color: #b45309; margin-right: 0.4rem; }
+.lang-modal-warning a { color: #664d03; font-weight: 700; }
+
+/* ================================================================
    Bottone SOS 112 — visibile SOLO su mobile e tablet.
    Su desktop la chiamata tel: non funziona (i PC non hanno il dialer
    del cellulare), quindi il bottone è inutile e va nascosto.
