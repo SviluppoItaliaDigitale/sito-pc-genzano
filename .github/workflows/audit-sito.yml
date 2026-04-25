@@ -310,6 +310,114 @@ jobs:
           fi
 
           # ----------------------------------------------------------------
+          section "12. Schede stampabili linkate ma file mancante"
+          # I kit didattici linkano schede in /formazione/schede-stampabili/<slug>/.
+          # Ogni link deve corrispondere a un file static/formazione/schede-stampabili/<slug>/index.html.
+          MISSING_SCHEDE=""
+          # Estraggo gli slug linkati dai kit (formato /formazione/schede-stampabili/<slug>/)
+          LINKED_SLUGS=$(grep -rohE '/formazione/schede-stampabili/[a-z0-9-]+/' \
+            content/formazione/ 2>/dev/null \
+            | sed 's|/formazione/schede-stampabili/||; s|/$||' | sort -u || true)
+          for slug in $LINKED_SLUGS; do
+            if [ ! -f "static/formazione/schede-stampabili/${slug}/index.html" ]; then
+              MISSING_SCHEDE="${MISSING_SCHEDE}${slug}\n"
+            fi
+          done
+          if [ -n "$MISSING_SCHEDE" ]; then
+            err "Schede stampabili linkate dai kit ma il file HTML non esiste:"
+            echo '```' >> "$REPORT"
+            printf "%b" "$MISSING_SCHEDE" >> "$REPORT"
+            echo '```' >> "$REPORT"
+          else
+            ok "Tutte le schede stampabili linkate hanno il file corrispondente."
+          fi
+
+          # ----------------------------------------------------------------
+          section "13. Modalità emergenza attiva da troppo tempo"
+          # data/emergenza.json con attiva: true e ultimo_aggiornamento più
+          # vecchio di 14 giorni segnala probabile dimenticanza (l'utente
+          # ha attivato l'emergenza ma non l'ha mai disattivata).
+          EMERG_ACTIVE=$(jq -r '.attiva' data/emergenza.json 2>/dev/null || echo "false")
+          if [ "$EMERG_ACTIVE" = "true" ]; then
+            EMERG_DATE=$(jq -r '.ultimo_aggiornamento // ""' data/emergenza.json 2>/dev/null || true)
+            if [ -n "$EMERG_DATE" ]; then
+              # Calcola differenza in giorni (solo se la data è parsabile come ISO)
+              DIFF_DAYS=$(python3 -c "
+import datetime, sys
+try:
+  d = datetime.datetime.fromisoformat('$EMERG_DATE'.replace('Z', '+00:00'))
+  delta = (datetime.datetime.now(datetime.timezone.utc) - d).days
+  print(delta)
+except Exception:
+  print(-1)
+" 2>/dev/null || echo "-1")
+              if [ "$DIFF_DAYS" -gt 14 ]; then
+                err "data/emergenza.json ha attiva: true da $DIFF_DAYS giorni (ultimo_aggiornamento: $EMERG_DATE). Verificare se l'emergenza è ancora reale o se va disattivata."
+              else
+                ok "Modalità emergenza attiva da $DIFF_DAYS giorni (entro la soglia di 14)."
+              fi
+            else
+              warn "data/emergenza.json è in modalità attiva ma manca il campo ultimo_aggiornamento."
+            fi
+          else
+            ok "Modalità emergenza non attiva (ordinario)."
+          fi
+
+          # ----------------------------------------------------------------
+          section "14. Pagine legali/istituzionali con dataUltimaRevisione vecchia"
+          # Le pagine privacy, note-legali, accessibilita, social-media-policy
+          # hanno il campo dataUltimaRevisione. Se più vecchio di 18 mesi è warning.
+          LEGAL_PAGES="content/privacy/_index.md content/note-legali/_index.md content/accessibilita/_index.md content/social-media-policy/_index.md"
+          OUTDATED_LEGAL=""
+          for f in $LEGAL_PAGES; do
+            [ -f "$f" ] || continue
+            REV=$(grep -E '^dataUltimaRevisione:' "$f" | sed -E 's/^dataUltimaRevisione:[[:space:]]*"?([0-9-]+)"?.*/\1/' | head -1)
+            [ -z "$REV" ] && { OUTDATED_LEGAL="${OUTDATED_LEGAL}- \`$f\`: campo dataUltimaRevisione assente\n"; continue; }
+            DIFF=$(python3 -c "
+import datetime
+try:
+  d = datetime.datetime.strptime('$REV', '%Y-%m-%d').date()
+  delta = (datetime.date.today() - d).days
+  print(delta)
+except Exception:
+  print(-1)
+" 2>/dev/null || echo "-1")
+            if [ "$DIFF" -gt 540 ]; then
+              OUTDATED_LEGAL="${OUTDATED_LEGAL}- \`$f\`: rev $REV ($DIFF giorni fa)\n"
+            fi
+          done
+          if [ -n "$OUTDATED_LEGAL" ]; then
+            warn "Pagine legali con dataUltimaRevisione più vecchia di 18 mesi (rivedere il contenuto):"
+            printf "%b" "$OUTDATED_LEGAL" >> "$REPORT"
+          else
+            ok "Tutte le pagine legali sono state riviste negli ultimi 18 mesi."
+          fi
+
+          # ----------------------------------------------------------------
+          section "15. Coerenza widget esterni: data-widget-src duplicati"
+          # Se due iframe widget nella stessa pagina hanno lo stesso widgetId,
+          # il bottone "Carica" del secondo non funziona. Verifica che ogni
+          # widgetId nel sito sia univoco per pagina costruita.
+          # (Controllo: ogni widgetId compare al massimo 1 volta nello stesso file html prodotto)
+          WIDGETID_DUPS=""
+          if [ -d "public" ]; then
+            for f in $(find public -name "*.html"); do
+              IDS=$(grep -oE 'id="[a-z-]+"[^>]*data-widget-src' "$f" 2>/dev/null | sed -E 's/.*id="([^"]+)".*/\1/' | sort | uniq -d)
+              if [ -n "$IDS" ]; then
+                WIDGETID_DUPS="${WIDGETID_DUPS}${f}: ${IDS}\n"
+              fi
+            done
+          fi
+          if [ -n "$WIDGETID_DUPS" ]; then
+            err "ID widget duplicati nella stessa pagina (rompe il bottone Carica):"
+            echo '```' >> "$REPORT"
+            printf "%b" "$WIDGETID_DUPS" >> "$REPORT"
+            echo '```' >> "$REPORT"
+          else
+            ok "Nessun widget con widgetId duplicato nella stessa pagina."
+          fi
+
+          # ----------------------------------------------------------------
           # Output
           echo "found_issues=$FOUND" >> "$GITHUB_OUTPUT"
           {
