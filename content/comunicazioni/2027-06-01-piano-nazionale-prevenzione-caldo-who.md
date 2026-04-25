@@ -5,7 +5,7 @@ description: "Come funziona il sistema italiano di prevenzione delle ondate di c
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2027-06-01-piano-nazionale-prevenzione-caldo-who.webp"
 image_alt: "Termometro al sole davanti a una città, rappresentazione simbolica di ondata di calore"
 scadenza: ""
 area: "Genzano di Roma"
