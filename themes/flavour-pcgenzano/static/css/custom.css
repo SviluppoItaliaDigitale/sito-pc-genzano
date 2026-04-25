@@ -1730,6 +1730,52 @@ article .galleria img {
   }
 }
 
+/* FAB "Chiudi mappa" — bottone floating fisso visibile sempre quando un
+   iframe widget è aperto. Risolve il problema mobile: l'iframe alto 600px
+   copre la viewport e la toolbar in cima va fuori vista, lasciando
+   l'utente senza un modo per chiudere e tornare a scrollare la pagina. */
+.ext-widget-fab-close {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  z-index: 9998;
+  background: #dc3545;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 28px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.12s ease, background-color 0.12s ease;
+}
+.ext-widget-fab-close:hover,
+.ext-widget-fab-close:focus {
+  background: #b02a37;
+  transform: translateY(-2px);
+  outline: 3px solid #ffbe2e;
+  outline-offset: 3px;
+}
+@media (max-width: 480px) {
+  .ext-widget-fab-close {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.65rem 0.95rem;
+    font-size: 0.9rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ext-widget-fab-close { transition: none; }
+  .ext-widget-fab-close:hover { transform: none; }
+}
+@media print {
+  .ext-widget-fab-close { display: none !important; }
+}
+
 .ext-widget-iframe:focus {
   outline: 3px solid #ffbe2e;
   outline-offset: 2px;
