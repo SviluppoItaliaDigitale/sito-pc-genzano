@@ -1730,7 +1730,9 @@ La pagina `content/cartografia/_index.md` mostra in cima alla sezione una **mapp
 - AS — Ammassamento Soccorritori: arancione `#ea580c`
 - AR — Aree di Ricovero: verde `#198754`
 
-**Coordinate verificate vs stimate**: 14 dei 16 punti sono stati geocodificati via API Nominatim e contrassegnati `verified: true`. I 2 rimanenti (AA8 Zona Industriale, AS1 Via del Lavoro) hanno coordinate stimate sulla base dell'area indicata — il popup mostra un badge "stimata" e il disclaimer in cima alla mappa lo segnala. Per correggere una coordinata: aprire `data/aree_emergenza.yaml`, aggiornare `lat`/`lon` con il valore reale, mettere `verified: true`, commit e push.
+**Coordinate verificate**: tutti i 16 pin sono ora `verified: true` con coordinate fornite e validate dal referente del Gruppo (aprile 2026). La pagina cartografia mostra comunque un avviso visibile "in fase di sviluppo" perché i pin restano oggetto di revisione e l'utente è invitato a riferirsi al PDF del Piano per le indicazioni operative ufficiali. Per correggere una coordinata: aprire `data/aree_emergenza.yaml`, aggiornare `lat`/`lon`, commit e push.
+
+**Nota AR2 — Via Sicilia non Via Piemonte**: il documento ufficiale del Piano riporta il Campo Sportivo AR2 come "Via Piemonte", ma è un errore di redazione del Piano stesso: l'area è in Via Sicilia. Il sito riporta la denominazione corretta verificata sul campo, con una nota esplicita nelle tabelle. Se in futuro il Piano viene revisionato, allineare la nota.
 
 **Accessibilità**:
 - Map div con `role="application"` e `aria-label` esplicito.

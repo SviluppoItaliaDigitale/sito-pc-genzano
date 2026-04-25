@@ -7,6 +7,13 @@ aliases:
   - /mappe/
 ---
 
+<div class="alert alert-warning d-flex align-items-start gap-2" role="alert" style="border-left:6px solid #b45309;">
+<i class="bi bi-cone-striped fs-4 mt-1" aria-hidden="true"></i>
+<div>
+<strong>Mappa interattiva in fase di sviluppo.</strong> L'inserimento e la verifica dei pin sulla cartografia online è ancora in corso e <strong>possono esserci errori di posizionamento</strong>. Per indicazioni operative ufficiali fai sempre riferimento al <a href="/area-download/">PDF del Piano di Emergenza Comunale</a> e alle tabelle elencate qui sotto. Le segnalazioni di errori sono benvenute: <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.
+</div>
+</div>
+
 In questa sezione puoi consultare la **mappa interattiva** e le tabelle riassuntive con tutti i punti strategici individuati dal Piano di Emergenza Comunale. **Conoscere questi luoghi è fondamentale per la sicurezza di tutti i cittadini.**
 
 <div class="card border-primary mb-4">
@@ -23,8 +30,8 @@ Luoghi sicuri all'aperto dove la popolazione deve radunarsi **subito dopo un eve
 
 | ID | Denominazione | Indirizzo |
 |---|---|---|
-| AA1 | Palazzo Sforza | Piazza Tommaso Frasconi |
-| AA2 | Via Piave | Parcheggio in Via Turno Erdonio, adiacente a Viale Piave (lato Ariccia) |
+| AA1 | Palazzo Sforza Cesarini | Piazza Tommaso Frasconi |
+| AA2 | Via Piave | Parcheggio Via Piave |
 | AA3 | Via Toscana | Parcheggio incrocio Via Toscana / Via Lazio |
 | AA4 | Via Enrico Mattei | Parcheggio Via Enrico Mattei |
 | AA5 | Via Napoli | Parcheggio incrocio Via Napoli / Via Emilia Romagna |
@@ -50,7 +57,7 @@ Aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata, dove v
 | ID | Denominazione | Indirizzo |
 |---|---|---|
 | AR1 | Palazzetto dello Sport | Area esterna Palazzetto dello Sport, Via G. di Vittorio |
-| AR2 | Campo Sportivo Via Piemonte | Via Piemonte |
+| AR2 | Campo Sportivo Via Sicilia | Via Sicilia *(il Piano riporta erroneamente "Via Piemonte")* |
 | AR3 | Campo Sportivo Via Sardegna | Via Sardegna |
 | AR4 | Campo Sportivo Don Bosco (Salesiani) | Viale Piave angolo Via Lega Latina |
 
@@ -90,7 +97,7 @@ Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che i
 
 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 mb-4">
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar1.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR1 — Palazzetto dello Sport, Via G. di Vittorio"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR1</p><p class="small text-muted mb-0">Palazzetto Sport</p></div></div></div>
-<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar2.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR2 — Campo Sportivo Via Piemonte"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR2</p><p class="small text-muted mb-0">Via Piemonte</p></div></div></div>
+<div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar2.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR2 — Campo Sportivo Via Sicilia"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR2</p><p class="small text-muted mb-0">Via Sicilia</p></div></div></div>
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar3.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR3 — Campo Sportivo Via Sardegna"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR3</p><p class="small text-muted mb-0">Via Sardegna</p></div></div></div>
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar4.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR4 — Campo Sportivo Don Bosco, Viale Piave angolo Via Lega Latina"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR4</p><p class="small text-muted mb-0">Don Bosco (Salesiani)</p></div></div></div>
 </div>
