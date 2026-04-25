@@ -490,6 +490,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**La Costituzione e la PC**](/formazione/schede-stampabili/costituzione-pc-primaria/) — articoli 32, 117, 118 spiegati in linguaggio semplice. Diritto alla salute, sussidiarietà, volontariato. *(ed. civica, classi 4ª-5ª)*
 - 👉 [**Comprensione Testo — Amatrice 2016**](/formazione/schede-stampabili/comprensione-testo-amatrice-primaria/) — brano semplificato di 4 paragrafi sul terremoto del 24 agosto 2016 + 8 domande di comprensione. *(italiano, classi 4ª-5ª)*
 - 👉 [**Intervista al Volontario PC**](/formazione/schede-stampabili/intervista-volontario-primaria/) — compito di realtà: prepara 10 domande, intervista un volontario, scrivi il testo giornalistico. *(compito di realtà)*
+- 👉 [**Diventa Giornalista della PC**](/formazione/schede-stampabili/diventa-giornalista-primaria/) — anatomia di un articolo (occhiello/titolo/lead/corpo) + esempio modello + scrivi tu un articolo per il giornalino + post Instagram con hashtag. *(giornalismo, classi 4ª-5ª)*
 
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 

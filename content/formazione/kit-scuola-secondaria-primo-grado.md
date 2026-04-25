@@ -489,6 +489,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Costituzione e PC — Analisi**](/formazione/schede-stampabili/costituzione-pc-secondaria/) — articoli 32, 117, 118 con testo originale + glossario costituzionale + 4 domande di approfondimento. *(ed. civica)*
 - 👉 [**Vulcanologia dei Castelli Romani**](/formazione/schede-stampabili/vulcanologia-castelli-secondaria/) — il Vulcano Laziale: caldera, fumarole, monitoraggio INGV. Schema della caldera con i due laghi. *(scienze)*
 - 👉 [**Cronaca Recente — Ischia 2022**](/formazione/schede-stampabili/cronaca-recente-secondaria/) — articolo di cronaca su frana di Casamicciola. Analisi 5W + 5 domande critiche. *(italiano)*
+- 👉 [**Articolo, Comunicato Stampa e Post Social**](/formazione/schede-stampabili/articolo-stampa-social-secondaria/) — piramide rovesciata + 5W+1H. Lo stesso evento PC in 3 formati (articolo, comunicato stampa, post Instagram) con esempio modello e hashtag strategici. *(italiano, giornalismo)*
 
 ---
 
