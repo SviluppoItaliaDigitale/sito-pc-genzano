@@ -143,53 +143,67 @@
 
       <div class="col-passo">
         <div class="col-num">3</div>
-        <svg viewBox="0 0 160 130" role="img" aria-label="Albero alto colpito dal fulmine durante un temporale, con pioggia: vietato stare sotto">
-          <!-- ALBERO BEN DEFINITO -->
-          <!-- Tronco con corteccia -->
-          <path d="M 70 105 L 72 70 L 75 55 L 85 55 L 88 70 L 90 105 Z" />
-          <!-- Texture del tronco (linee verticali) -->
-          <line x1="76" y1="68" x2="78" y2="100" />
-          <line x1="82" y1="68" x2="84" y2="100" />
-          <!-- Chioma (3 cespugli sovrapposti per dare volume) -->
-          <circle cx="80" cy="50" r="20" />
-          <circle cx="65" cy="55" r="14" />
-          <circle cx="95" cy="55" r="14" />
-          <circle cx="80" cy="38" r="16" />
-          <!-- Dettagli foglie/rami visibili -->
-          <path d="M 70 50 Q 74 45 78 48" />
-          <path d="M 85 47 Q 90 43 92 50" />
-          <path d="M 75 60 Q 80 55 85 58" />
-          <!-- Radici visibili -->
-          <line x1="70" y1="105" x2="63" y2="115" />
-          <line x1="80" y1="105" x2="80" y2="115" />
-          <line x1="90" y1="105" x2="97" y2="115" />
-          <!-- Linea terreno -->
-          <line x1="20" y1="115" x2="140" y2="115" />
+        <svg viewBox="0 0 200 160" role="img" aria-label="Nuvola con pioggia e fulmine sopra un albero: vietato stare sotto gli alberi durante il temporale">
 
-          <!-- NUVOLA temporalesca in alto -->
-          <path d="M 105 8 Q 95 5 92 15 Q 82 17 86 27 Q 92 32 105 30 Q 120 32 130 25 Q 135 12 125 8 Q 115 4 105 8 Z" />
+          <!-- ===== NUVOLA TEMPORALESCA in alto (grande, ben visibile) ===== -->
+          <path d="M 50 30 Q 35 20 45 12 Q 60 5 75 12 Q 90 5 105 12 Q 120 8 135 18 Q 150 18 155 30 Q 160 42 145 48 Q 130 52 110 50 Q 90 52 70 50 Q 55 50 45 45 Q 38 38 50 30 Z" stroke-width="2.5" />
+          <!-- Dettaglio "ondine" nella nuvola -->
+          <path d="M 60 40 Q 70 35 80 40" />
+          <path d="M 90 42 Q 100 37 110 42" />
+          <path d="M 120 40 Q 130 35 140 40" />
 
-          <!-- FULMINE grande e visibile dal cielo all'albero -->
-          <path d="M 110 28 L 100 45 L 110 45 L 95 65 L 105 65 L 90 88" stroke-width="3.5" />
+          <!-- ===== PIOGGIA (gocce dalla nuvola verso il basso) ===== -->
+          <path d="M 55 55 L 52 65" stroke-width="2.5" />
+          <path d="M 70 55 L 67 68" stroke-width="2.5" />
+          <path d="M 85 56 L 82 67" stroke-width="2.5" />
+          <path d="M 115 55 L 112 68" stroke-width="2.5" />
+          <path d="M 130 55 L 127 67" stroke-width="2.5" />
+          <path d="M 145 55 L 142 65" stroke-width="2.5" />
+          <!-- Pioggia in basso (livello albero) -->
+          <path d="M 50 75 L 47 85" stroke-width="2.5" />
+          <path d="M 65 78 L 62 88" stroke-width="2.5" />
+          <path d="M 135 78 L 132 88" stroke-width="2.5" />
+          <path d="M 150 75 L 147 85" stroke-width="2.5" />
 
-          <!-- PIOGGIA densa (gocce inclinate) -->
-          <line x1="20" y1="15" x2="17" y2="30" stroke-width="2" />
-          <line x1="30" y1="20" x2="27" y2="35" stroke-width="2" />
-          <line x1="40" y1="15" x2="37" y2="30" stroke-width="2" />
-          <line x1="50" y1="22" x2="47" y2="37" stroke-width="2" />
-          <line x1="20" y1="50" x2="17" y2="65" stroke-width="2" />
-          <line x1="30" y1="55" x2="27" y2="70" stroke-width="2" />
-          <line x1="40" y1="48" x2="37" y2="63" stroke-width="2" />
-          <line x1="20" y1="78" x2="17" y2="93" stroke-width="2" />
-          <line x1="35" y1="80" x2="32" y2="95" stroke-width="2" />
-          <line x1="50" y1="78" x2="47" y2="93" stroke-width="2" />
-          <line x1="135" y1="55" x2="132" y2="70" stroke-width="2" />
-          <line x1="145" y1="50" x2="142" y2="65" stroke-width="2" />
-          <line x1="138" y1="80" x2="135" y2="95" stroke-width="2" />
+          <!-- ===== FULMINE grande e marcato dalla nuvola al cielo dell'albero ===== -->
+          <path d="M 100 50 L 90 70 L 102 70 L 90 90 L 100 90 L 88 105" stroke-width="5" stroke-linejoin="miter" />
+          <!-- Bagliore intorno al fulmine (linee laterali) -->
+          <line x1="84" y1="78" x2="80" y2="78" stroke-width="2" />
+          <line x1="106" y1="78" x2="110" y2="78" stroke-width="2" />
 
-          <!-- DIVIETO: cerchio rosso con sbarra che sovrasta tutto (simbolo "vietato") -->
-          <circle cx="80" cy="60" r="48" class="col-x-red" stroke-width="5" />
-          <line x1="46" y1="26" x2="114" y2="94" class="col-x-red" />
+          <!-- ===== ALBERO al centro-sotto (grande e ben definito) ===== -->
+          <!-- Tronco con base larga -->
+          <path d="M 88 145 L 90 110 L 95 105 L 105 105 L 110 110 L 112 145 Z" stroke-width="2.5" />
+          <!-- Linee corteccia -->
+          <line x1="95" y1="115" x2="96" y2="140" />
+          <line x1="100" y1="115" x2="100" y2="140" />
+          <line x1="105" y1="115" x2="104" y2="140" />
+          <!-- Chioma compatta sopra il tronco (3 cerchi sovrapposti per volume) -->
+          <circle cx="100" cy="105" r="22" stroke-width="2.5" />
+          <circle cx="82" cy="110" r="14" />
+          <circle cx="118" cy="110" r="14" />
+          <circle cx="100" cy="92" r="16" />
+          <!-- Dettagli foglie/rami visibili dentro la chioma -->
+          <path d="M 88 100 Q 94 95 100 99" />
+          <path d="M 100 99 Q 106 95 112 100" />
+          <path d="M 92 110 Q 98 105 104 109" />
+          <path d="M 105 109 Q 110 105 115 110" />
+
+          <!-- Radici e terreno -->
+          <path d="M 88 145 L 80 152" />
+          <path d="M 100 145 L 100 155" />
+          <path d="M 112 145 L 120 152" />
+          <line x1="10" y1="150" x2="190" y2="150" stroke-width="2" />
+          <!-- Erba al suolo -->
+          <line x1="30" y1="150" x2="32" y2="145" />
+          <line x1="50" y1="150" x2="52" y2="145" />
+          <line x1="70" y1="150" x2="72" y2="145" />
+          <line x1="160" y1="150" x2="162" y2="145" />
+          <line x1="170" y1="150" x2="172" y2="145" />
+
+          <!-- ===== DIVIETO ROSSO BARRATO (cerchio con linea diagonale) ===== -->
+          <circle cx="100" cy="105" r="62" class="col-x-red" stroke-width="6" fill="none" />
+          <line x1="56" y1="61" x2="144" y2="149" class="col-x-red" stroke-width="6" />
         </svg>
         <p class="col-frase"><strong>Non sto</strong> sotto un albero</p>
       </div>
