@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     text: 'Sei in classe durante la lezione di italiano. All\'improvviso senti il pavimento tremare e i vetri vibrare. La scossa e forte. Cosa fai?',
                     choices: [
-                        { text: 'Mi alzo e corro verso la porta per uscire', correct: false, tip: 'Durante la scossa non si corre! Le scale e i corridoi possono essere piu pericolosi.' },
+                        { text: 'Mi alzo e corro verso la porta per uscire', correct: false, tip: 'Durante la scossa non si corre! Le scale e i corridoi possono essere più pericolosi.' },
                         { text: 'Mi riparo sotto il banco e mi proteggo la testa con le braccia', correct: true, tip: 'Perfetto! Sotto il banco sei protetto dagli oggetti che possono cadere.' },
                         { text: 'Mi avvicino alla finestra per guardare fuori', correct: false, tip: 'Le finestre possono rompersi durante un terremoto. Stai lontano!' }
                     ]
@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 },
                 {
-                    text: 'Siete in fila nel corridoio. Un compagno vuole prendere l\'ascensore perche ha paura delle scale. Cosa gli dici?',
+                    text: 'Siete in fila nel corridoio. Un compagno vuole prendere l\'ascensore perché ha paura delle scale. Cosa gli dici?',
                     choices: [
-                        { text: '"Hai ragione, l\'ascensore e piu veloce"', correct: false, tip: 'L\'ascensore puo bloccarsi dopo un terremoto. Non si usa mai!' },
-                        { text: '"No, dopo un terremoto si usano solo le scale. Vieni con noi!"', correct: true, tip: 'Bravo! L\'ascensore puo restare bloccato. Le scale sono la via sicura.' }
+                        { text: '"Hai ragione, l\'ascensore e più veloce"', correct: false, tip: 'L\'ascensore può bloccarsi dopo un terremoto. Non si usa mai!' },
+                        { text: '"No, dopo un terremoto si usano solo le scale. Vieni con noi!"', correct: true, tip: 'Bravo! L\'ascensore può restare bloccato. Le scale sono la via sicura.' }
                     ]
                 },
                 {
@@ -57,20 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     choices: [
                         { text: 'Continuo a giocare, e solo un tuono lontano', correct: false, tip: 'I temporali possono arrivare molto in fretta. Meglio non aspettare!' },
                         { text: 'Mi metto sotto il grande albero per ripararmi', correct: false, tip: 'Mai sotto gli alberi durante un temporale! I fulmini colpiscono gli oggetti alti.' },
-                        { text: 'Chiedo ai miei amici di andare subito verso un edificio', correct: true, tip: 'Ottima scelta! Un edificio in muratura e il posto piu sicuro.' }
+                        { text: 'Chiedo ai miei amici di andare subito verso un edificio', correct: true, tip: 'Ottima scelta! Un edificio in muratura e il posto più sicuro.' }
                     ]
                 },
                 {
                     text: 'State correndo verso casa, ma il temporale vi raggiunge. Piove fortissimo, ci sono fulmini. Vedete un gazebo in metallo e un bar con le porte aperte. Dove andate?',
                     choices: [
-                        { text: 'Sotto il gazebo in metallo, e piu vicino', correct: false, tip: 'Le strutture metalliche attirano i fulmini. Meglio un edificio chiuso!' },
+                        { text: 'Sotto il gazebo in metallo, e più vicino', correct: false, tip: 'Le strutture metalliche attirano i fulmini. Meglio un edificio chiuso!' },
                         { text: 'Dentro il bar, al riparo dalle intemperie', correct: true, tip: 'Perfetto! Un edificio chiuso e il riparo migliore durante un temporale.' }
                     ]
                 },
                 {
                     text: 'Siete al sicuro dentro il bar. Un amico vuole chiamare la mamma con il telefono, un altro vuole stare vicino alla vetrina per guardare i fulmini. Cosa consigli?',
                     choices: [
-                        { text: '"Chiamare la mamma va bene, ma restiamo lontani dalle finestre"', correct: true, tip: 'Giusto! Il telefono cellulare si puo usare, ma le finestre possono essere pericolose.' },
+                        { text: '"Chiamare la mamma va bene, ma restiamo lontani dalle finestre"', correct: true, tip: 'Giusto! Il telefono cellulare si può usare, ma le finestre possono essere pericolose.' },
                         { text: '"Andiamo alla vetrina, i fulmini sono bellissimi da guardare!"', correct: false, tip: 'Le finestre possono rompersi con la grandine o il vento. Meglio stare al centro del locale.' }
                     ]
                 },
@@ -97,19 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     text: 'La mamma ti dice di uscire di casa insieme. Il corridoio verso l\'uscita e pieno di fumo. Come ti muovi?',
                     choices: [
-                        { text: 'Corro veloce attraverso il fumo per uscire prima possibile', correct: false, tip: 'Correndo respiri piu fumo. Il fumo tossico e la causa principale dei problemi in un incendio!' },
-                        { text: 'Mi abbasso e cammino vicino al pavimento, coprendo naso e bocca', correct: true, tip: 'Perfetto! Il fumo sale verso l\'alto, vicino al pavimento l\'aria e piu pulita.' }
+                        { text: 'Corro veloce attraverso il fumo per uscire prima possibile', correct: false, tip: 'Correndo respiri più fumo. Il fumo tossico e la causa principale dei problemi in un incendio!' },
+                        { text: 'Mi abbasso e cammino vicino al pavimento, coprendo naso e bocca', correct: true, tip: 'Perfetto! Il fumo sale verso l\'alto, vicino al pavimento l\'aria e più pulita.' }
                     ]
                 },
                 {
                     text: 'Siete usciti dal palazzo. La mamma chiama i soccorsi. Quale numero compone?',
                     choices: [
-                        { text: '118', correct: false, tip: 'Nel Lazio non si chiama piu il 118 per le emergenze. L\'unico numero da chiamare e il 112!' },
+                        { text: '118', correct: false, tip: 'Nel Lazio non si chiama più il 118 per le emergenze. L\'unico numero da chiamare e il 112!' },
                         { text: '112', correct: true, tip: 'Esatto! Il 112 e l\'unico numero di emergenza nel Lazio. La centrale invia subito i Vigili del Fuoco.' }
                     ]
                 },
                 {
-                    text: 'Mentre aspettate i vigili del fuoco, ti viene in mente che hai lasciato il tablet in camera. Un vicino dice che puo rientrare a prenderlo. Cosa dici?',
+                    text: 'Mentre aspettate i vigili del fuoco, ti viene in mente che hai lasciato il tablet in camera. Un vicino dice che può rientrare a prenderlo. Cosa dici?',
                     choices: [
                         { text: '"Si grazie, e nella mia camera a destra!"', correct: false, tip: 'Non si rientra mai in un edificio con un incendio in corso! Nessun oggetto vale il rischio.' },
                         { text: '"No, e pericoloso! Aspettiamo i vigili del fuoco"', correct: true, tip: 'Bravissimo! Nessun oggetto vale la vita. Solo i vigili del fuoco possono rientrare in sicurezza.' }
@@ -129,10 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 },
                 {
-                    text: 'Guardate dalla finestra: l\'acqua in strada sta salendo. Il papa vuole scendere in garage a spostare l\'auto. Cosa gli dici?',
+                    text: 'Guardate dalla finestra: l\'acqua in strada sta salendo. Il papà vuole scendere in garage a spostare l\'auto. Cosa gli dici?',
                     choices: [
-                        { text: '"Vai, pero sbrigati!"', correct: false, tip: 'Il garage e un piano interrato: l\'acqua lo riempie velocemente. E molto pericoloso scendere!' },
-                        { text: '"No papa, non scendere! L\'auto si puo sostituire, tu no!"', correct: true, tip: 'Giusto! Mai scendere in cantina o garage durante un\'alluvione. L\'acqua puo intrappolarti.' }
+                        { text: '"Vai, però sbrigati!"', correct: false, tip: 'Il garage e un piano interrato: l\'acqua lo riempie velocemente. E molto pericoloso scendere!' },
+                        { text: '"No papà, non scendere! L\'auto si può sostituire, tu no!"', correct: true, tip: 'Giusto! Mai scendere in cantina o garage durante un\'alluvione. L\'acqua può intrappolarti.' }
                     ]
                 },
                 {

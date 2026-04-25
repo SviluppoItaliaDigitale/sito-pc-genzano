@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'Stai giocando al parco e fa bel tempo.', answer: 'verde', tip: 'Tutto tranquillo, divertiti!' },
         { text: 'Vedi del fumo uscire da un bosco vicino.', answer: 'rosso', tip: 'Possibile incendio! Allontanati e chiama subito il 112, il numero unico di emergenza.' },
         { text: 'E uscita un\'allerta arancione per rischio alluvione.', answer: 'rosso', tip: 'Allerta arancione: fenomeni intensi, resta al sicuro e segui le indicazioni!' },
-        { text: 'Fa molto caldo, il termometro segna 38 gradi.', answer: 'giallo', tip: 'Ondata di calore: bevi acqua, resta all\'ombra nelle ore piu calde (11-17).' },
+        { text: 'Fa molto caldo, il termometro segna 38 gradi.', answer: 'giallo', tip: 'Ondata di calore: bevi acqua, resta all\'ombra nelle ore più calde (11-17).' },
         { text: 'La terra trema per qualche secondo.', answer: 'rosso', tip: 'Terremoto! Riparati sotto un tavolo, proteggiti la testa. Non uscire durante la scossa.' },
         { text: 'Il meteo prevede neve in montagna domani.', answer: 'verde', tip: 'Neve in montagna: normale in inverno. Attenzione se devi viaggiare.' },
         { text: 'L\'acqua del fosso vicino a casa sta salendo velocemente.', answer: 'rosso', tip: 'Rischio alluvione! Vai ai piani alti e non avvicinarti al fosso.' },
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'La scuola annuncia che domani c\'e un\'esercitazione antincendio.', answer: 'giallo', tip: 'Esercitazione: preparati ad ascoltare bene il segnale e seguire la maestra.' },
         { text: 'Cammini in montagna e senti un rombo come di tuono, ma il cielo e sereno.', answer: 'rosso', tip: 'Potrebbe essere una frana o una valanga in lontananza! Allontanati dai versanti e avvisa un adulto.' },
         { text: 'E appena iniziato l\'autunno e piove per la prima volta dopo l\'estate.', answer: 'giallo', tip: 'Prima pioggia: il terreno asciutto non la assorbe e le strade possono diventare scivolose.' },
-        { text: 'Il papa sta usando la barbecue in giardino con vento forte.', answer: 'rosso', tip: 'Vento forte e fuoco aperto: rischio incendio! Spegnete il barbecue finche non cala il vento.' },
-        { text: 'La sirena di una casa di riposo suona per 30 secondi a mezzogiorno.', answer: 'verde', tip: 'Spesso e una prova settimanale. Se dura piu a lungo o a orari strani, diventa giallo.' },
+        { text: 'Il papà sta usando la barbecue in giardino con vento forte.', answer: 'rosso', tip: 'Vento forte e fuoco aperto: rischio incendio! Spegnete il barbecue finche non cala il vento.' },
+        { text: 'La sirena di una casa di riposo suona per 30 secondi a mezzogiorno.', answer: 'verde', tip: 'Spesso e una prova settimanale. Se dura più a lungo o a orari strani, diventa giallo.' },
         { text: 'Un cavo elettrico e caduto a terra in strada dopo un temporale.', answer: 'rosso', tip: 'Pericolosissimo! Resta lontano almeno 10 metri e chiama subito il 112: potrebbe essere sotto tensione.' },
         { text: 'Il bollettino dice "nebbia fitta in pianura domattina".', answer: 'giallo', tip: 'Nebbia: guida piano se ci sei in auto, usa luci adeguate. Per i pedoni niente panico, ma attenzione alle strade.' },
         { text: 'Un compagno a scuola sbatte la testa e ha un piccolo bernoccolo.', answer: 'giallo', tip: 'Avvisa subito la maestra o la bidella. Se sta male, si chiama il 112.' },
@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'Stai tornando a casa e vedi un vicino di casa stare male per terra.', answer: 'rosso', tip: 'Chiama subito il 112! Descrivi la situazione e non allontanarti fino all\'arrivo dei soccorsi.' },
         { text: 'La neve ha coperto le strade ma mamma deve accompagnarti a scuola.', answer: 'giallo', tip: 'Attenzione: gomme da neve o catene, velocita ridotta. Se c\'e troppo ghiaccio, meglio restare a casa.' },
         { text: 'Allerta meteo gialla per temporali nel pomeriggio.', answer: 'giallo', tip: 'Preparati: evita parchi, stadi, piscine. Se scoppia il temporale, rifugiati in un edificio.' },
-        { text: 'Sei a casa e non hai connessione internet da 5 minuti.', answer: 'verde', tip: 'Internet puo guastarsi per tanti motivi: aspetta, riavvia il router. Non e un\'emergenza.' },
-        { text: 'Vedi un bambino piu piccolo di te che sembra essersi perso al supermercato.', answer: 'giallo', tip: 'Chiedigli come si chiama e portalo da un commesso o alla cassa: loro chiameranno al microfono.' },
+        { text: 'Sei a casa e non hai connessione internet da 5 minuti.', answer: 'verde', tip: 'Internet può guastarsi per tanti motivi: aspetta, riavvia il router. Non è un\'emergenza.' },
+        { text: 'Vedi un bambino più piccolo di te che sembra essersi perso al supermercato.', answer: 'giallo', tip: 'Chiedigli come si chiama e portalo da un commesso o alla cassa: loro chiameranno al microfono.' },
     ];
 
     let queue, index, score, locked;
