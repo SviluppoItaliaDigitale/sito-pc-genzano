@@ -127,6 +127,15 @@
         <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
         <strong>Avviso:</strong> le traduzioni automatiche sono <strong>approssimative</strong>. Per emergenze e numeri ufficiali fai sempre riferimento alla versione italiana o alle pagine sintesi curate. La traduzione automatica apre il sito in una nuova scheda nel proxy di Google: si applicano i loro termini e privacy.
       </div>
+
+      <div class="lang-modal-help">
+        <p class="mb-1"><strong><i class="bi bi-arrow-return-left me-1" aria-hidden="true"></i>Come tornare alla versione italiana:</strong></p>
+        <ul class="mb-0">
+          <li>Sul <strong>cellulare</strong>: chiudi la scheda di Google Translate (icona <i class="bi bi-x-lg"></i> sulla scheda) — torni automaticamente al sito originale.</li>
+          <li>Sul <strong>computer</strong>: chiudi la scheda di Google Translate o premi <kbd>Ctrl+W</kbd> (Mac: <kbd>Cmd+W</kbd>). In alternativa apri <a href="{{ "" | absURL }}">protezionecivilegenzano.it</a>.</li>
+          <li>La barra grigia che vedi in cima durante la traduzione è di Google e <strong>non possiamo rimuoverla</strong>: è il loro servizio.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -175,12 +184,19 @@
   });
 
   // Click su una lingua "automatica": apre Google Translate in nuova scheda
+  // Formato proxy *.translate.goog: barra di Google più sottile e meno invasiva
+  // rispetto al vecchio /translate?u=...
   modal.querySelectorAll('[data-lang]').forEach(function (b) {
     b.addEventListener('click', function () {
       var lang = b.getAttribute('data-lang');
-      var here = window.location.href;
-      var url = 'https://translate.google.com/translate?sl=it&tl=' +
-                encodeURIComponent(lang) + '&u=' + encodeURIComponent(here);
+      var hereURL = new URL(window.location.href);
+      var hostDashed = hereURL.hostname.replace(/-/g, '--').replace(/\./g, '-');
+      var translatedHost = hostDashed + '.translate.goog';
+      var path = hereURL.pathname + hereURL.search;
+      var separator = hereURL.search ? '&' : '?';
+      var url = hereURL.protocol + '//' + translatedHost + path +
+                separator + '_x_tr_sl=it&_x_tr_tl=' + encodeURIComponent(lang) +
+                '&_x_tr_hl=it&_x_tr_pto=wapp';
       window.open(url, '_blank', 'noopener,noreferrer');
       close();
     });
