@@ -2,7 +2,7 @@
 title: "Privacy e Cookie Policy"
 description: "Informativa sulla privacy e utilizzo dei cookie ai sensi del GDPR."
 layout: "single"
-dataUltimaRevisione: "2026-04-24"
+dataUltimaRevisione: "2026-04-25"
 ---
 
 ## Informativa sul trattamento dei dati personali
@@ -78,6 +78,12 @@ Il sito incorpora, **solo su esplicita richiesta dell'utente**, alcuni widget di
 | Radar DPC | Dipartimento della Protezione Civile (Italia, ente pubblico) | Mosaico radar nazionale precipitazioni | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | [Privacy DPC](https://www.protezionecivile.gov.it/it/privacy-policy) |
 | Blitzortung / Lightning Maps | Rete volontaria internazionale | Mappa dei fulmini in tempo reale | [Temporali Intensi](/rischi-prevenzione/temporali-intensi/), [Strumenti](/strumenti/) | [Informazioni Blitzortung](https://www.blitzortung.org/en/cover_your_area.php) |
 | MeteoAM — Aeronautica Militare | Ministero della Difesa (ente pubblico italiano) | Previsione meteo ufficiale per Genzano di Roma | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | [Privacy Aeronautica Militare](https://www.meteoam.it/it/privacy-policy) |
+
+**Cartografia interattiva (Leaflet + OpenStreetMap):**
+
+La pagina [Cartografia](/cartografia/) include una mappa interattiva delle aree di emergenza del Piano Comunale, realizzata con la libreria **Leaflet** (open source, ospitata sul nostro stesso server, nessuna chiamata a CDN esterne) e con tile cartografiche fornite dal progetto **OpenStreetMap** (`tile.openstreetmap.org`). All'apertura della pagina, il browser dell'utente si collega ai server di OpenStreetMap per scaricare le sole tile necessarie a visualizzare la mappa: nessun cookie di profilazione viene impostato, ma l'indirizzo IP e i dettagli minimi della richiesta (zoom, riquadro visibile) sono visibili al fornitore secondo la sua [tile usage policy](https://operations.osmfoundation.org/policies/tiles/) e [informativa privacy](https://wiki.osmfoundation.org/wiki/Privacy_Policy).
+
+La funzione "Centra sulla mia posizione" usa la **Geolocation API** del browser: la posizione GPS viene letta solo dopo esplicita autorizzazione dell'utente al browser, è elaborata localmente per centrare la mappa e **non viene mai trasmessa al nostro server** né a terzi. Il dato viene scartato chiudendo la pagina.
 
 **Link esterni consigliati nella pagina [Strumenti](/strumenti/):**
 

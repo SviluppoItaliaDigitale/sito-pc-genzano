@@ -25,7 +25,7 @@
     {
       operator: 'Come ti chiami?',
       answers: [
-        { text: 'Mi chiamo Mario.', correct: true },
+        { text: 'Mi chiamo Flavio.', correct: true },
         { text: 'Non voglio dirlo.', correct: false }
       ]
     },

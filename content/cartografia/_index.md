@@ -7,13 +7,15 @@ aliases:
   - /mappe/
 ---
 
-In questa sezione è possibile consultare le tabelle riassuntive con tutti i punti strategici individuati dal Piano di Emergenza Comunale. **Conoscere questi luoghi è fondamentale per la sicurezza di tutti i cittadini.**
+In questa sezione puoi consultare la **mappa interattiva** e le tabelle riassuntive con tutti i punti strategici individuati dal Piano di Emergenza Comunale. **Conoscere questi luoghi è fondamentale per la sicurezza di tutti i cittadini.**
 
 <div class="card border-primary mb-4">
 <div class="card-body bg-primary bg-opacity-10 p-3">
 <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Come usare queste informazioni:</strong> individua l'area di attesa più vicina a casa tua e al tuo luogo di lavoro. In caso di terremoto o evacuazione, è lì che dovrai recarti. Comunica questa informazione a tutti i componenti della tua famiglia.</p>
 </div>
 </div>
+
+{{< mappa-aree >}}
 
 ## Aree di Attesa della Popolazione (AA)
 
