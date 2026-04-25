@@ -74,7 +74,7 @@ Emesso solo quando si prevedono fenomeni intensi. È il documento tecnico che fa
 
 È quello che interessa direttamente il cittadino. Suddivide il Lazio in **zone di allerta** e assegna a ciascuna un codice colore per ogni tipo di rischio (idrogeologico, temporali, idraulico).
 
-Genzano di Roma si trova nella **Zona di allerta D — Bacini Costieri Sud (Lazio Meridionale)**. Il bollettino è pubblicato ogni giorno entro le 14:00 con validità per le successive 24-36 ore.
+Genzano di Roma si trova nella **Zona di allerta F — Bacini Costieri Sud** (classificazione DGR Regione Lazio 865/2019). Il bollettino è pubblicato ogni giorno entro le 14:00 con validità per le successive 24-36 ore.
 
 ## 4. Cosa significano i codici colore
 

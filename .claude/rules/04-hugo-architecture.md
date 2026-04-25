@@ -97,6 +97,48 @@ Produce `<figure>` con:
 
 `src` e `alt` sono **obbligatori**: la mancanza causa errore di build Hugo.
 
+### Menu di navigazione principale (mega-menu accorpato)
+
+Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `themes/flavour-pcgenzano/layouts/partials/navbar.html`. Struttura a **6 voci di primo livello**, di cui 3 dropdown:
+
+| Voce | Tipo | Contenuto |
+|---|---|---|
+| Home | diretta | `/` |
+| Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare |
+| Formazione ▾ | dropdown | Corsi e percorsi, Giochi, Glossario, Schede Stampabili |
+| Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
+| Comunicazioni | diretta | `/comunicazioni/` |
+| Contatti | diretta | `/contatti/` |
+
+Razionale: 10 voci flat erano troppe per mobile e per l'utente in emergenza. L'accorpamento mantiene tutte le pagine raggiungibili in 2 click ma riduce il rumore visivo.
+
+**Convenzioni TOML per i dropdown:**
+- Il "padre" ha solo `name`, `identifier` e `weight` (nessun `url`).
+- I "figli" hanno `parent = "<identifier-del-padre>"` e `weight` per l'ordine.
+
+```toml
+[[menus.main]]
+  name = "Per il Cittadino"
+  identifier = "per-il-cittadino"
+  weight = 2
+
+[[menus.main]]
+  name = "Cosa Fare Adesso"
+  url = "/cosa-fare-adesso/"
+  parent = "per-il-cittadino"
+  weight = 1
+```
+
+**Render nel template:** la `partials/navbar.html` itera su `.Site.Menus.main`. Per ogni voce con `.HasChildren` produce il pattern Bootstrap Italia `nav-item dropdown` con `dropdown-toggle` + `dropdown-menu` contenente `link-list`. Il dropdown è marcato `.active` se uno qualsiasi dei figli è la pagina corrente (controllo via `IsMenuCurrent` / `HasMenuCurrent`).
+
+**Aggiungere/spostare una voce:**
+1. Modifica `[[menus.main]]` in `hugo.toml`.
+2. Decidi se è di primo livello (rara: solo se è un'azione fondamentale) o sotto un dropdown esistente.
+3. Niente modifiche al template: rendering automatico.
+4. Verifica con `hugo --quiet --minify` che la build resti pulita.
+
+Non aggiungere voci di primo livello senza valutarne l'impatto sul mobile: il limite di sicurezza è 6-7 voci visibili contemporaneamente.
+
 ### Pagine legali/istituzionali con data di revisione
 Le pagine `privacy`, `note-legali`, `accessibilita`, `social-media-policy` usano il campo frontmatter `dataUltimaRevisione: "AAAA-MM-GG"`.
 

@@ -87,7 +87,7 @@ Il sistema nazionale di allertamento per il rischio meteo-idrogeologico e idraul
 1. **Il Dipartimento della Protezione Civile** emette un avviso di condizioni meteorologiche avverse quando si prevedono fenomeni significativi.
 2. **Il Centro Funzionale Regionale del Lazio** valuta i possibili effetti al suolo e determina il livello di criticità per ciascuna zona di allerta.
 
-Il nostro Comune rientra nella **Zona di allerta D** (Bacini Costieri Sud — Lazio Meridionale). Il bollettino viene emesso ogni giorno, generalmente entro le ore 14:00, con validità per le successive 24-36 ore.
+Il nostro Comune rientra nella **Zona di allerta F — Bacini Costieri Sud**, secondo la classificazione regionale [DGR 865/2019](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf). Il bollettino viene emesso ogni giorno, generalmente entro le ore 14:00, con validità per le successive 24-36 ore.
 
 ### Differenza tra previsione meteo e allerta
 

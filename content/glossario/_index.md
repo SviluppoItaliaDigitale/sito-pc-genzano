@@ -15,8 +15,8 @@ Le sigle e i termini tecnici della Protezione Civile possono sembrare complicati
 
 ## A
 
-### AAB
-**Area di Ammassamento Soccorritori e risorse**. Lo spazio dove si concentrano uomini, mezzi e materiali in arrivo da fuori comune per supportare un'emergenza. A Genzano sono identificate due aree: AS1 (Via del Lavoro, Zona Industriale) e AS2 (Viale Mazzini). Vedi [Cartografia](/cartografia/).
+### AA / Area di Attesa
+Punto sicuro dove la popolazione si raduna nelle prime fasi di un'emergenza, in attesa di indicazioni e in vista di un eventuale trasferimento alle aree di ricovero. A Genzano sono identificate **10 aree di attesa** (AA1-AA10) distribuite nei quartieri. Vedi [Cartografia](/cartografia/).
 
 ### AeDES
 **Agibilità e Danno nell'Emergenza Sismica**. È la **scheda tecnica** usata da tecnici qualificati dopo un terremoto per valutare se un edificio è agibile, parzialmente agibile o inagibile. Si compila con sopralluogo e dà un esito che permette o vieta il rientro in casa.
@@ -34,7 +34,7 @@ Aree dove vengono allestite **tende, container o moduli abitativi** per ospitare
 **Agenzia Regionale per la Protezione dell'Ambiente del Lazio**. Ente pubblico che monitora aria, acqua, rumore, radiazioni. In emergenza fornisce dati ambientali a supporto del DPC e della Regione.
 
 ### AS / Area di Ammassamento Soccorritori
-Vedi *AAB*.
+Spazio dove si concentrano uomini, mezzi e materiali in arrivo da fuori comune per supportare un'emergenza. A Genzano sono identificate **2 aree di ammassamento**: AS1 (Via del Lavoro, Zona Industriale) e AS2 (Viale Mazzini). Vedi [Cartografia](/cartografia/).
 
 ### Attivazione
 Atto formale con cui il **Sindaco** (a livello comunale) o il **Capo Dipartimento** (nazionale) chiede ai volontari di prestare servizio per un'emergenza. Solo durante un'attivazione formale scattano i diritti del volontario al rimborso e alla sospensione del rapporto di lavoro (art. 39-40 D.Lgs. 1/2018).
@@ -50,7 +50,7 @@ Lento sollevamento o abbassamento del suolo dovuto ad attività vulcanica. Esemp
 ## C
 
 ### Centro Funzionale Regionale (CFR)
-Struttura tecnico-scientifica regionale che riceve previsioni meteo dal DPC, valuta gli effetti possibili sul territorio e **emette il bollettino di criticità**. Per il Lazio: Centro Funzionale Regionale dell'Agenzia di Protezione Civile. Genzano rientra nella **Zona di allerta D** (Bacini Costieri Sud — Lazio Meridionale).
+Struttura tecnico-scientifica regionale che riceve previsioni meteo dal DPC, valuta gli effetti possibili sul territorio e **emette il bollettino di criticità**. Per il Lazio: Centro Funzionale Regionale dell'Agenzia di Protezione Civile. Genzano rientra nella **Zona di allerta F — Bacini Costieri Sud** (DGR Regione Lazio 865/2019).
 
 ### COC — Centro Operativo Comunale
 Sala operativa che il **Sindaco** attiva quando c'è un'emergenza sul territorio comunale. Coordina volontari, Polizia Locale, tecnici, sociale, comunicazione. A Genzano viene di norma allestita presso la sede del Gruppo Volontari o presso il Palazzo Comunale. È previsto dal **Piano di Emergenza Comunale**.
@@ -196,7 +196,7 @@ Insieme di organizzazioni senza fini di lucro che svolgono attività di interess
 ## Z
 
 ### Zona di allerta
-Suddivisione del territorio italiano usata per il **bollettino di criticità**. Ogni zona ha caratteristiche idrogeologiche omogenee. Il Lazio ha **5 zone** (A, B, C, D, E). Genzano è in **Zona D — Bacini Costieri Sud / Lazio Meridionale**.
+Suddivisione del territorio regionale usata per il **bollettino di criticità**. Ogni zona ha caratteristiche idrogeologiche omogenee. Il Lazio ha **7 zone** (A: Bacini Costieri Nord, B: Bacino Medio Tevere, C: Appennino di Rieti, D: Bacini di Roma, E: Aniene, F: Bacini Costieri Sud, G: Bacino del Liri). Genzano è in **Zona F — Bacini Costieri Sud** (DGR Regione Lazio 865/2019).
 
 ### Zona sismica
 Classificazione del territorio per pericolosità sismica:

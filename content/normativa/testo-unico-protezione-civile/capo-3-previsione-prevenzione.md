@@ -36,7 +36,7 @@ Il Codice struttura un **sistema di allertamento** su due livelli che devono dia
 
 Per il Lazio il riferimento è il **Centro Funzionale Regionale** dell'Agenzia Regionale di Protezione Civile: produce ogni giorno il **bollettino di criticità** con i codici colore (verde, giallo, arancione, rosso) per ciascuna zona di allerta del territorio.
 
-Genzano di Roma ricade nella **Zona di allerta "D" (Bacini Costieri Sud")** per il rischio idrogeologico e idraulico. Quando il Centro Funzionale emette un avviso, il Comune riceve la comunicazione e attiva le procedure del proprio Piano di emergenza.
+Genzano di Roma ricade nella **Zona di allerta "F — Bacini Costieri Sud"** per il rischio idrogeologico e idraulico (DGR Regione Lazio 865/2019). Quando il Centro Funzionale emette un avviso, il Comune riceve la comunicazione e attiva le procedure del proprio Piano di emergenza.
 
 ## Articolo 20 — Comunicazione del rischio alla popolazione
 

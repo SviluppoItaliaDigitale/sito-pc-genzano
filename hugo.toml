@@ -43,56 +43,114 @@ enableGitInfo = true
   runts = "Iscritta al RUNTS sez. 'Altri Enti del Terzo Settore' con determina n. G14230 del 28/10/2024"
   coordinamento = "FEPIVOL"
 
-# Menu principale di navigazione
+# Menu principale di navigazione (mega-menu accorpato)
+# 6 voci di primo livello: 3 dirette (Home, Comunicazioni, Contatti) e 3
+# dropdown (Per il Cittadino, Formazione, Volontariato).
 [[menus.main]]
   name = "Home"
   url = "/"
   weight = 1
 
+# --- Dropdown: Per il Cittadino ---
 [[menus.main]]
-  name = "Chi Siamo"
-  url = "/chi-siamo/"
+  name = "Per il Cittadino"
+  identifier = "per-il-cittadino"
+  weight = 2
+
+[[menus.main]]
+  name = "Cosa Fare Adesso"
+  url = "/cosa-fare-adesso/"
+  parent = "per-il-cittadino"
+  weight = 1
+
+[[menus.main]]
+  name = "Allerte Meteo"
+  url = "/allerte-meteo/"
+  parent = "per-il-cittadino"
   weight = 2
 
 [[menus.main]]
   name = "Rischi e Prevenzione"
   url = "/rischi-prevenzione/"
+  parent = "per-il-cittadino"
   weight = 3
-
-[[menus.main]]
-  name = "Allerte Meteo"
-  url = "/allerte-meteo/"
-  weight = 4
 
 [[menus.main]]
   name = "Cartografia"
   url = "/cartografia/"
+  parent = "per-il-cittadino"
+  weight = 4
+
+[[menus.main]]
+  name = "Numeri Utili"
+  url = "/numeri-utili/"
+  parent = "per-il-cittadino"
   weight = 5
 
 [[menus.main]]
-  name = "Comunicazioni"
-  url = "/comunicazioni/"
+  name = "Piano Familiare"
+  url = "/piano-familiare/"
+  parent = "per-il-cittadino"
   weight = 6
 
+# --- Dropdown: Formazione ---
 [[menus.main]]
   name = "Formazione"
+  identifier = "formazione"
+  weight = 3
+
+[[menus.main]]
+  name = "Corsi e percorsi"
   url = "/formazione/"
-  weight = 7
+  parent = "formazione"
+  weight = 1
 
 [[menus.main]]
   name = "Giochi"
   url = "/giochi/"
-  weight = 8
+  parent = "formazione"
+  weight = 2
+
+[[menus.main]]
+  name = "Glossario"
+  url = "/glossario/"
+  parent = "formazione"
+  weight = 3
+
+[[menus.main]]
+  name = "Schede Stampabili"
+  url = "/formazione/schede-stampabili/"
+  parent = "formazione"
+  weight = 4
+
+# --- Dropdown: Volontariato ---
+[[menus.main]]
+  name = "Volontariato"
+  identifier = "volontariato"
+  weight = 4
 
 [[menus.main]]
   name = "Diventa Volontario"
   url = "/diventa-volontario/"
-  weight = 9
+  parent = "volontariato"
+  weight = 1
+
+[[menus.main]]
+  name = "Chi Siamo"
+  url = "/chi-siamo/"
+  parent = "volontariato"
+  weight = 2
+
+# --- Voci dirette ---
+[[menus.main]]
+  name = "Comunicazioni"
+  url = "/comunicazioni/"
+  weight = 5
 
 [[menus.main]]
   name = "Contatti"
   url = "/contatti/"
-  weight = 10
+  weight = 6
 
 # Menu footer — Link utili
 [[menus.footer]]

@@ -42,13 +42,47 @@
               </button>
             </div>
             <div class="menu-wrapper">
+              {{ $page := . }}
+              {{ $currentURL := .RelPermalink }}
               <ul class="navbar-nav" role="menubar">
                 {{ range .Site.Menus.main }}
-                <li class="nav-item" role="none">
-                  <a class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL | relURL }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>
-                    <span>{{ .Name }}</span>
-                  </a>
-                </li>
+                  {{ if .HasChildren }}
+                    {{ $isAncestor := false }}
+                    {{ range .Children }}
+                      {{ $childURL := .URL | relURL }}
+                      {{ if or (eq $childURL $currentURL) ($page.IsMenuCurrent "main" .) }}
+                        {{ $isAncestor = true }}
+                      {{ end }}
+                    {{ end }}
+                    {{ $dropdownId := printf "navDropdown-%s" (.Identifier | default (.Name | urlize)) }}
+                    <li class="nav-item dropdown" role="none">
+                      <a class="nav-link dropdown-toggle{{ if $isAncestor }} active{{ end }}" href="#" id="{{ $dropdownId }}" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false"{{ if $isAncestor }} aria-current="true"{{ end }}>
+                        <span>{{ .Name }}</span>
+                        <svg class="icon icon-xs"><use href="{{ "vendor/bootstrap-italia/svg/sprites.svg" | relURL }}#it-expand"></use></svg>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="{{ $dropdownId }}">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list" role="menu">
+                            {{ range .Children }}
+                              {{ $childURL := .URL | relURL }}
+                              {{ $isCurrent := or (eq $childURL $currentURL) ($page.IsMenuCurrent "main" .) }}
+                              <li role="none">
+                                <a class="list-item{{ if $isCurrent }} active{{ end }}" href="{{ $childURL }}" role="menuitem"{{ if $isCurrent }} aria-current="page"{{ end }}>
+                                  <span>{{ .Name }}</span>
+                                </a>
+                              </li>
+                            {{ end }}
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  {{ else }}
+                    <li class="nav-item" role="none">
+                      <a class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL | relURL }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>
+                        <span>{{ .Name }}</span>
+                      </a>
+                    </li>
+                  {{ end }}
                 {{ end }}
               </ul>
             </div>
