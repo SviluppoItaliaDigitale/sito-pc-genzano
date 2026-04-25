@@ -38,7 +38,7 @@
     var title = ph.getAttribute('data-widget-title') || 'Contenuto esterno';
     if (!src) return;
 
-    // Toolbar con bottone "Chiudi mappa"
+    // Toolbar in cima al widget (visibile su desktop e quando si vede la cima del widget)
     var toolbar = document.createElement('div');
     toolbar.className = 'ext-widget-toolbar';
     var titoloSpan = document.createElement('span');
@@ -67,13 +67,24 @@
     ph.appendChild(toolbar);
     ph.appendChild(iframe);
 
+    // FAB "Chiudi mappa" — sempre fisso in basso a destra. Indispensabile su
+    // mobile dove l'iframe occupa tutto lo schermo: la toolbar in cima va
+    // fuori vista e l'utente non saprebbe come uscire.
+    // Allegato al body così resta visibile in qualsiasi posizione di scroll.
+    var fab = creaFabChiusura();
+    document.body.appendChild(fab);
+    // Marker per identificare a quale placeholder è collegato (in caso di più iframe aperti)
+    fab.dataset.targetWidgetId = ph.id || '';
+
     // Sposta il focus sul bottone Chiudi (esce facilmente da tastiera)
     chiudiBtn.focus();
 
-    chiudiBtn.addEventListener('click', function () {
+    function chiudi() {
       // Ripristina lo stato originale
       ph.className = classiOriginali;
       ph.innerHTML = originale;
+      // Rimuovi il FAB collegato
+      if (fab && fab.parentNode) fab.parentNode.removeChild(fab);
       // Ri-collega il listener "Carica"
       bindLoadButton(ph, originale, classiOriginali);
       // Sposta il focus al bottone "Carica" del placeholder ricreato
@@ -81,6 +92,19 @@
       if (btn) btn.focus();
       // Scroll verso il widget per mantenere il contesto
       ph.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    }
+
+    chiudiBtn.addEventListener('click', chiudi);
+    fab.addEventListener('click', chiudi);
   }
+
+  function creaFabChiusura() {
+    var fab = document.createElement('button');
+    fab.type = 'button';
+    fab.className = 'ext-widget-fab-close';
+    fab.setAttribute('aria-label', 'Chiudi la mappa e torna alla pagina');
+    fab.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i> <span class="ext-widget-fab-label">Chiudi mappa</span>';
+    return fab;
+  }
+
 })();
