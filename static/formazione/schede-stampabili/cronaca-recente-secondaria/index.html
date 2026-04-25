@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Analisi di un articolo di cronaca PC (Secondaria I)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Primo Grado. Analisi di un articolo di cronaca su un evento di Protezione Civile: chi/cosa/dove/quando/perché + valutazione critica.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .articolo-box {
+      background: #f4f7fb; border: 1.5px solid var(--scheda-bordo);
+      border-radius: 8px; padding: 0.85rem 1rem;
+      margin: 0.5rem 0;
+    }
+    .articolo-box .testata {
+      border-bottom: 2px solid var(--scheda-blu); padding-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .articolo-box .testata .fonte {
+      font-size: 0.78rem; color: var(--scheda-grigio); text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .articolo-box .testata h3 {
+      margin: 0.2rem 0 0 0; font-size: 1.05rem; color: var(--scheda-blu); line-height: 1.3;
+    }
+    .articolo-box .testata .data {
+      font-size: 0.82rem; color: var(--scheda-grigio); font-style: italic;
+    }
+    .articolo-box .corpo {
+      font-size: 0.92rem; line-height: 1.55; color: #212529;
+    }
+    .articolo-box .corpo p { margin: 0 0 0.5rem 0; }
+
+    .cinque-w {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;
+      margin: 0.4rem 0;
+    }
+    .w-card {
+      padding: 0.5rem 0.7rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+    }
+    .w-card .label {
+      display: inline-block; padding: 0.15rem 0.5rem;
+      background: var(--scheda-blu); color: #fff;
+      border-radius: 4px; font-weight: 700; font-size: 0.82rem;
+      margin-bottom: 0.3rem;
+    }
+    .w-card .righe { display: grid; gap: 0.4rem; }
+    .w-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+
+    .domanda-card {
+      padding: 0.55rem 0.75rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      margin: 0.4rem 0;
+    }
+    .domanda-card .header {
+      display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;
+    }
+    .domanda-card .num-q {
+      width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .domanda-card .testo { font-size: 0.92rem; line-height: 1.4; flex: 1; }
+    .domanda-card .testo strong { color: var(--scheda-blu); }
+    .domanda-card .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .domanda-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Cronaca recente — Secondaria I</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Analisi di un articolo di cronaca — Ischia 2022</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Primo Grado (12-14 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 12-14 anni</span>
+      <span><strong>Obiettivo:</strong> analizzare un testo giornalistico applicando 5W</span>
+      <span><strong>Discipline:</strong> italiano, ed. civica, geografia</span>
+    </div>
+
+    <p class="scheda-intro">
+      Leggi con attenzione il <strong>testo</strong> qui sotto: è una <strong>ricostruzione semplificata</strong>
+      di un articolo di cronaca su un evento reale. Poi analizzalo con il metodo delle <strong>5W</strong>
+      e con domande di valutazione critica.
+    </p>
+
+    <div class="articolo-box">
+      <div class="testata">
+        <span class="fonte">Cronaca · Ricostruzione didattica</span>
+        <h3>Frana a Ischia: 12 vittime, evacuati 230 residenti — il sistema PC mobilitato in poche ore</h3>
+        <span class="data">26 novembre 2022 — Casamicciola Terme (Napoli)</span>
+      </div>
+      <div class="corpo">
+        <p>All'alba di sabato 26 novembre 2022, una <strong>colata di fango e detriti</strong> ha investito il Comune di Casamicciola Terme, sull'isola di Ischia. La frana è stata innescata da <strong>una pioggia eccezionale</strong>: nelle 6 ore precedenti erano caduti circa <strong>120 millimetri d'acqua</strong>, una quantità rara per il periodo.</p>
+
+        <p>Il bilancio è grave: <strong>12 persone hanno perso la vita</strong>. Sono stati <strong>evacuati 230 residenti</strong>, ospitati in alberghi e strutture pubbliche dell'isola. Decine di abitazioni sono inagibili.</p>
+
+        <p>Il sistema di <strong>Protezione Civile</strong> si è attivato in poche ore. Il Comune ha aperto il <strong>Centro Operativo Comunale (COC)</strong>, la Regione Campania ha inviato volontari, vigili del fuoco e tecnici. Il Capo Dipartimento PC ha raggiunto l'isola in giornata.</p>
+
+        <p>L'evento ha riacceso il dibattito sulle <strong>costruzioni abusive</strong> sui versanti del Monte Epomeo: l'area era già nota come a rischio idrogeologico secondo le mappe ISPRA, ma molte case erano state edificate senza autorizzazione.</p>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">1. Le 5W (chi, cosa, dove, quando, perché)</h2>
+    <div class="cinque-w">
+      <div class="w-card">
+        <span class="label">CHI</span>
+        <div class="righe"><span class="r"></span><span class="r"></span></div>
+      </div>
+      <div class="w-card">
+        <span class="label">COSA</span>
+        <div class="righe"><span class="r"></span><span class="r"></span></div>
+      </div>
+      <div class="w-card">
+        <span class="label">DOVE</span>
+        <div class="righe"><span class="r"></span></div>
+      </div>
+      <div class="w-card">
+        <span class="label">QUANDO</span>
+        <div class="righe"><span class="r"></span></div>
+      </div>
+    </div>
+    <div class="w-card" style="margin: 0.4rem 0;">
+      <span class="label">PERCHÉ (cause)</span>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <h2 class="scheda-h2">2. Domande di analisi critica</h2>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">1</span><span class="testo">Quanti <strong>millimetri di pioggia</strong> sono caduti? In quante ore? Cerca a casa: è tanto o poco rispetto alla media autunnale a Ischia?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">2</span><span class="testo">Cosa significa <strong>"Centro Operativo Comunale (COC)"</strong>? Quale autorità lo apre?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">3</span><span class="testo">L'articolo cita le <strong>"costruzioni abusive"</strong>. Spiega il legame tra abusivismo edilizio e rischio idrogeologico.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">4</span><span class="testo">Secondo te, una <strong>frana a Ischia</strong> è un evento naturale "fatale" oppure è stata anche colpa di scelte umane? Argomenta in 4-5 righe.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">5</span><span class="testo">Cerca a casa: <strong>com'è la situazione idrogeologica</strong> a Genzano? Trovi informazioni sulla <a href="/cartografia/">cartografia</a> del nostro sito o sul portale <a href="https://idrogeo.isprambiente.it/" target="_blank">IdroGEO ISPRA</a>.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Tracce:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>5W</strong>: CHI: residenti di Casamicciola, vigili del fuoco, volontari PC · COSA: frana di fango e detriti · DOVE: Casamicciola Terme, Ischia (Napoli) · QUANDO: 26 nov 2022, alba · PERCHÉ: pioggia eccezionale (120 mm/6h) + costruzioni in zona a rischio.</li>
+        <li>1) 120 mm in 6 ore = ~20 mm/ora, valore molto alto (tipico in tempesta intensa). Confrontare con dati locali storici.</li>
+        <li>2) COC: il Centro coordinato dal <strong>Sindaco</strong>, prima autorità PC del Comune (art. 12 Codice). Si attiva quando l'emergenza supera la routine.</li>
+        <li>3) Costruire dove la natura ha bisogno di "sfogare" l'acqua aumenta il rischio: case in zone di frana → vittime quando la frana arriva. Collegamento con il "consumo di suolo".</li>
+        <li>4) Risposta libera: valorizzare la riflessione sulla doppia responsabilità (natura + scelte umane). Evento "naturale" sì, ma <strong>amplificato</strong> da scelte di pianificazione del territorio.</li>
+        <li>5) A Genzano il rischio è soprattutto sui versanti collinari e nei fossi (scheda <a href="/formazione/schede-stampabili/mappa-rischi-secondaria/">Mappa dei Rischi</a> per approfondimento secondaria I).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Cronaca recente Ischia 2022" · Secondaria I · italiano · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

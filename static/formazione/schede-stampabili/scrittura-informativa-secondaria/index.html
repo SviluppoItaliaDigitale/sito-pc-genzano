@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Scrivi un testo informativo (Secondaria I)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Primo Grado. Compito di scrittura: produrre un testo informativo di 300 parole su un rischio del proprio territorio.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .consegna-box {
+      background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
+      padding: 0.7rem 0.95rem; border-radius: 0 8px 8px 0;
+      margin: 0.5rem 0;
+    }
+    .consegna-box .titolo {
+      font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.4rem;
+    }
+    .consegna-box ul { margin: 0.3rem 0 0 1rem; padding: 0; }
+    .consegna-box li { margin: 0.15rem 0; line-height: 1.4; font-size: 0.92rem; }
+
+    .struttura-box {
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      padding: 0.65rem 0.95rem; border-radius: 0 8px 8px 0;
+      margin: 0.5rem 0; font-size: 0.92rem;
+    }
+    .struttura-box .titolo {
+      font-weight: 700; color: #664d03; margin-bottom: 0.3rem;
+    }
+
+    .scelta-rischio {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem;
+      margin: 0.5rem 0;
+    }
+    .scelta-rischio .opz {
+      padding: 0.5rem 0.4rem; background: #fff;
+      border: 2px solid var(--scheda-blu); border-radius: 8px;
+      text-align: center; display: flex; flex-direction: column;
+      align-items: center; gap: 0.3rem;
+    }
+    .scelta-rischio .opz .emo { font-size: 1.6rem; line-height: 1; }
+    .scelta-rischio .opz .nome {
+      font-family: "Trebuchet MS", sans-serif;
+      font-weight: 700; color: var(--scheda-blu); font-size: 0.85rem;
+    }
+    .scelta-rischio .opz .quadro-vuoto {
+      width: 1.2rem; height: 1.2rem; border: 2px solid var(--scheda-blu);
+      border-radius: 4px; background: #fff;
+    }
+
+    .titolo-input {
+      display: flex; align-items: baseline; gap: 0.5rem;
+      padding: 0.5rem 0.7rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      margin: 0.4rem 0;
+    }
+    .titolo-input .label { font-weight: 700; color: var(--scheda-blu); flex-shrink: 0; }
+    .titolo-input .riga { flex: 1; border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.5rem; }
+
+    .righe-scrittura {
+      display: grid; gap: 0.55rem; margin: 0.5rem 0;
+    }
+    .righe-scrittura .r {
+      border-bottom: 1.5px solid var(--scheda-bordo); height: 1.7rem;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Scrittura informativa — Secondaria I</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Scrivi un testo informativo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Primo Grado (11-14 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 11-14 anni</span>
+      <span><strong>Obiettivo:</strong> produrre un testo informativo strutturato</span>
+      <span><strong>Discipline:</strong> italiano, ed. civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      Sei chiamato a scrivere un <strong>testo informativo</strong> di circa <strong>300 parole</strong>
+      su un rischio del tuo territorio. Il testo dovrà essere chiaro, ordinato, basato su fonti
+      ufficiali. Il pubblico è un compagno di terza media che non conosce il tema.
+    </p>
+
+    <div class="consegna-box">
+      <div class="titolo">📋 Consegna</div>
+      <ul>
+        <li>Scegli <strong>uno</strong> dei rischi proposti (cerchia il quadrato).</li>
+        <li>Scrivi un testo di <strong>300 parole circa</strong> (10-15 righe nel quaderno).</li>
+        <li>Cita almeno <strong>una fonte ufficiale</strong> (DPC, INGV, ISPRA, Regione Lazio, Comune).</li>
+        <li>Usa un <strong>linguaggio chiaro</strong>, frasi brevi, voce attiva.</li>
+        <li>Non drammatizzare: tono <strong>istituzionale e rassicurante</strong>.</li>
+      </ul>
+    </div>
+
+    <h2 class="scheda-h2">1. Scegli il rischio</h2>
+    <div class="scelta-rischio">
+      <div class="opz">
+        <span class="emo" aria-hidden="true">⚡</span>
+        <span class="nome">Sismico</span>
+        <span class="quadro-vuoto" aria-hidden="true"></span>
+      </div>
+      <div class="opz">
+        <span class="emo" aria-hidden="true">🌊</span>
+        <span class="nome">Idrogeologico</span>
+        <span class="quadro-vuoto" aria-hidden="true"></span>
+      </div>
+      <div class="opz">
+        <span class="emo" aria-hidden="true">🔥</span>
+        <span class="nome">Incendi boschivi</span>
+        <span class="quadro-vuoto" aria-hidden="true"></span>
+      </div>
+      <div class="opz">
+        <span class="emo" aria-hidden="true">⛈️</span>
+        <span class="nome">Meteo intenso</span>
+        <span class="quadro-vuoto" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">2. Scrivi il titolo</h2>
+    <div class="titolo-input">
+      <span class="label">Titolo:</span>
+      <span class="riga"></span>
+    </div>
+
+    <div class="struttura-box">
+      <div class="titolo">📐 Struttura suggerita (5W + 1 conclusione)</div>
+      <ol style="margin: 0.3rem 0 0 1rem; padding: 0; line-height: 1.5;">
+        <li><strong>Cosa è</strong> il rischio? (definizione)</li>
+        <li><strong>Dove</strong> si presenta sul nostro territorio?</li>
+        <li><strong>Quando</strong> è più probabile (stagionalità, frequenza)?</li>
+        <li><strong>Perché</strong> succede (cause)?</li>
+        <li><strong>Cosa fare</strong> per autoprotezione?</li>
+        <li><strong>Conclusione</strong>: ruolo della Protezione Civile.</li>
+      </ol>
+    </div>
+
+    <h2 class="scheda-h2">3. Il tuo testo</h2>
+    <div class="righe-scrittura">
+      <span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span>
+      <span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span>
+      <span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span>
+    </div>
+
+    <h2 class="scheda-h2">4. Fonti consultate</h2>
+    <p style="font-size: 0.85rem; color: var(--scheda-grigio); margin: 0.2rem 0 0.4rem 0;">
+      Scrivi i siti, libri o documenti che hai usato:
+    </p>
+    <div class="righe-scrittura">
+      <span class="r" style="border-bottom: 1.5px dashed var(--scheda-bordo);"></span>
+      <span class="r" style="border-bottom: 1.5px dashed var(--scheda-bordo);"></span>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Tempo</strong>: 50-60 min in classe (può essere fatto come compito a casa con 30 min di stesura in classe).</li>
+        <li><strong>Griglia di valutazione</strong>: <em>Contenuto</em> (correttezza fattuale, copertura della struttura 5W+1) — <em>Forma</em> (chiarezza, frasi brevi, voce attiva) — <em>Fonti</em> (citazione di almeno una fonte ufficiale verificabile) — <em>Tono</em> (istituzionale, non allarmistico).</li>
+        <li><strong>Fonti suggerite</strong>: <a href="https://www.protezionecivile.gov.it/" target="_blank" rel="noopener">protezionecivile.gov.it</a>, <a href="https://www.ingv.it/" target="_blank" rel="noopener">ingv.it</a>, <a href="https://idrogeo.isprambiente.it/" target="_blank" rel="noopener">IdroGEO</a>, <a href="/normativa/">normativa locale</a>.</li>
+        <li>Collegamento con <a href="/formazione/schede-stampabili/decodifica-bollettino-secondaria/">Decodifica del bollettino</a> per i dati operativi.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Scrittura informativa" · Secondaria I · italiano · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

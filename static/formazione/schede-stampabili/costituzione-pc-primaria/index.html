@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: La Costituzione e la Protezione Civile (Primaria 4ª-5ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. Gli articoli 32, 117 e 118 della Costituzione e il loro legame con la Protezione Civile. Lessico, abbinamento, riflessione.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .articolo-card {
+      padding: 0.7rem 0.85rem; background: #fff;
+      border: 2px solid var(--scheda-blu); border-radius: 10px;
+      margin: 0.4rem 0;
+    }
+    .articolo-card .testata {
+      display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.45rem;
+    }
+    .articolo-card .testata .num {
+      width: 2.5rem; height: 2.5rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+      flex-direction: column; line-height: 1;
+    }
+    .articolo-card .testata .num small { font-size: 0.55rem; opacity: 0.85; margin-top: 1px; }
+    .articolo-card .testata .titolo {
+      font-weight: 700; color: var(--scheda-blu); font-size: 1rem;
+    }
+    .articolo-card .citazione {
+      font-style: italic; padding: 0.5rem 0.8rem;
+      background: #f4f7fb; border-left: 3px solid var(--scheda-blu);
+      border-radius: 0 4px 4px 0;
+      font-size: 0.92rem; line-height: 1.5; color: #333;
+      margin-bottom: 0.45rem;
+    }
+    .articolo-card .spiegazione {
+      font-size: 0.92rem; line-height: 1.5;
+    }
+    .articolo-card .spiegazione strong { color: var(--scheda-blu); }
+
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num-sez { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .abbina-griglia {
+      display: grid; grid-template-columns: 1fr 4rem 1fr; gap: 0.5rem;
+      margin: 0.4rem 0; align-items: center;
+    }
+    .abbina-griglia .h { font-weight: 700; color: var(--scheda-blu); text-align: center; font-size: 0.9rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--scheda-blu); }
+    .abbina-griglia .cella {
+      padding: 0.5rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      font-size: 0.9rem; line-height: 1.4;
+    }
+    .abbina-griglia .puntini { text-align: center; color: #ced4da; font-size: 1.4rem; }
+
+    .riflessione-box {
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      padding: 0.6rem 0.85rem; border-radius: 0 6px 6px 0; margin: 0.4rem 0;
+    }
+    .riflessione-box .domanda { font-weight: 600; color: #664d03; font-size: 0.95rem; margin-bottom: 0.4rem; }
+    .riflessione-box .righe { display: grid; gap: 0.5rem; }
+    .riflessione-box .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.5rem; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Costituzione e PC — Primaria 4ª-5ª</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La Costituzione e la Protezione Civile</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 4ª-5ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 9-11 anni</span>
+      <span><strong>Obiettivo:</strong> capire da dove nasce il dovere della Protezione Civile</span>
+      <span><strong>Discipline:</strong> ed. civica, italiano</span>
+    </div>
+
+    <p class="scheda-intro">
+      La <strong>Costituzione italiana</strong> è la legge più importante del nostro Paese.
+      In tre articoli (<strong>32, 117, 118</strong>) si parla della <strong>salute</strong>
+      e della <strong>protezione civile</strong>. Sono tre articoli che dicono perché lo Stato
+      ha il dovere di proteggerci.
+    </p>
+
+    <div class="articolo-card">
+      <div class="testata">
+        <span class="num" aria-hidden="true">32<small>art.</small></span>
+        <span class="titolo">Il diritto alla salute</span>
+      </div>
+      <div class="citazione">«La Repubblica tutela la salute come fondamentale diritto dell'individuo e interesse della collettività.»</div>
+      <div class="spiegazione">
+        Vuol dire che lo <strong>Stato</strong> deve proteggere la salute di tutti, sia di ogni
+        singola persona sia di tutti insieme. Ecco perché esistono gli ospedali, l'ambulanza,
+        e perché interviene la Protezione Civile in emergenza.
+      </div>
+    </div>
+
+    <div class="articolo-card">
+      <div class="testata">
+        <span class="num" aria-hidden="true">117<small>art.</small></span>
+        <span class="titolo">Chi fa cosa: Stato e Regioni</span>
+      </div>
+      <div class="citazione">«La protezione civile è materia di legislazione concorrente tra Stato e Regioni.»</div>
+      <div class="spiegazione">
+        "Concorrente" vuol dire che lo <strong>Stato</strong> e le <strong>Regioni</strong>
+        lavorano insieme. Lo Stato fa le regole generali, ogni Regione le applica al suo territorio.
+        La Regione Lazio fa il bollettino di allerta per Genzano!
+      </div>
+    </div>
+
+    <div class="articolo-card">
+      <div class="testata">
+        <span class="num" aria-hidden="true">118<small>art.</small></span>
+        <span class="titolo">Il principio di sussidiarietà</span>
+      </div>
+      <div class="citazione">«Stato, Regioni, Comuni favoriscono l'autonoma iniziativa dei cittadini per attività di interesse generale.»</div>
+      <div class="spiegazione">
+        Vuol dire che i cittadini possono <strong>aiutare</strong> a fare cose di interesse di
+        tutti. Per esempio: i <strong>volontari della Protezione Civile</strong>! Sono persone
+        normali che decidono di aiutare la comunità. Lo Stato li sostiene.
+      </div>
+    </div>
+
+    <div class="sez-titolo"><span class="num-sez">1</span><h2>Abbina ogni articolo al suo tema</h2></div>
+    <div class="abbina-griglia">
+      <span class="h">ARTICOLO</span><span class="h">collega</span><span class="h">TEMA</span>
+      <span class="cella">Articolo 32</span>
+      <span class="puntini">· · · ·</span>
+      <span class="cella">Stato e Regioni lavorano insieme</span>
+      <span class="cella">Articolo 117</span>
+      <span class="puntini">· · · ·</span>
+      <span class="cella">Diritto alla salute</span>
+      <span class="cella">Articolo 118</span>
+      <span class="puntini">· · · ·</span>
+      <span class="cella">I volontari aiutano la comunità</span>
+    </div>
+
+    <div class="sez-titolo"><span class="num-sez">2</span><h2>Riflessione personale</h2></div>
+    <div class="riflessione-box">
+      <div class="domanda">Pensa a un volontario di Protezione Civile che hai visto o di cui hai sentito parlare. Cosa fa di importante per la comunità? Scrivi 2-3 frasi.</div>
+      <div class="righe">
+        <span class="r"></span><span class="r"></span><span class="r"></span>
+      </div>
+    </div>
+
+    <div class="riflessione-box">
+      <div class="domanda">Quando sarai grande, ti piacerebbe diventare un volontario? Perché sì o perché no?</div>
+      <div class="righe">
+        <span class="r"></span><span class="r"></span><span class="r"></span>
+      </div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Soluzioni Sez 1</strong>: 32 → diritto alla salute · 117 → Stato e Regioni · 118 → volontari.</li>
+        <li><strong>Tono</strong>: la riflessione personale non si valuta in voti — si valorizza la sincerità della risposta. Eventuali "no, non mi piacerebbe" sono accettabili e legittimi.</li>
+        <li><strong>Approfondimento</strong>: collegare con il <strong>D.Lgs. 1/2018</strong> (Codice della Protezione Civile, art. 18 sulla scuola). Il Codice è la "legge ordinaria" che attua i principi costituzionali.</li>
+        <li><strong>Compito creativo</strong>: dopo la scheda, gli alunni possono scrivere la loro mini-Costituzione di classe (3-5 articoli) sul tema della protezione reciproca.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Costituzione e PC" · Primaria 4ª-5ª · ed. civica · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>
