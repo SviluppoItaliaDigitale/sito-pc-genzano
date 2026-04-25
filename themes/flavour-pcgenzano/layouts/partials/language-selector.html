@@ -31,52 +31,75 @@
     <div class="lang-modal-body">
       <p class="lang-modal-intro">Il sito è scritto in <strong>italiano</strong>. Per altre lingue puoi passare dal traduttore automatico:</p>
       <h3 class="lang-section-title">Versioni curate dal Gruppo</h3>
+      <p class="lang-section-note">Pagina di sintesi tradotta a mano dal Gruppo: numeri di emergenza, comportamenti per i rischi principali, contatti.</p>
       <div class="lang-grid">
         <a class="lang-card lang-curated" href="{{ "" | relURL }}" lang="it">
           <span class="lang-flag" aria-hidden="true">🇮🇹</span>
           <span class="lang-code">IT</span>
           <span class="lang-name">Italiano</span>
-          <span class="lang-tag">originale</span>
+          <span class="lang-tag">completo</span>
         </a>
         <a class="lang-card lang-curated" href="{{ "english/" | relURL }}" lang="en">
           <span class="lang-flag" aria-hidden="true">🇬🇧</span>
           <span class="lang-code">EN</span>
           <span class="lang-name">English</span>
-          <span class="lang-tag">curato</span>
+          <span class="lang-tag">sintesi</span>
+        </a>
+        <a class="lang-card lang-curated" href="{{ "francais/" | relURL }}" lang="fr">
+          <span class="lang-flag" aria-hidden="true">🇫🇷</span>
+          <span class="lang-code">FR</span>
+          <span class="lang-name">Français</span>
+          <span class="lang-tag">sintesi</span>
+        </a>
+        <a class="lang-card lang-curated" href="{{ "deutsch/" | relURL }}" lang="de">
+          <span class="lang-flag" aria-hidden="true">🇩🇪</span>
+          <span class="lang-code">DE</span>
+          <span class="lang-name">Deutsch</span>
+          <span class="lang-tag">sintesi</span>
+        </a>
+        <a class="lang-card lang-curated" href="{{ "espanol/" | relURL }}" lang="es">
+          <span class="lang-flag" aria-hidden="true">🇪🇸</span>
+          <span class="lang-code">ES</span>
+          <span class="lang-name">Español</span>
+          <span class="lang-tag">sintesi</span>
+        </a>
+        <a class="lang-card lang-curated" href="{{ "portugues/" | relURL }}" lang="pt">
+          <span class="lang-flag" aria-hidden="true">🇵🇹</span>
+          <span class="lang-code">PT</span>
+          <span class="lang-name">Português</span>
+          <span class="lang-tag">sintesi</span>
+        </a>
+        <a class="lang-card lang-curated" href="{{ "romana/" | relURL }}" lang="ro">
+          <span class="lang-flag" aria-hidden="true">🇷🇴</span>
+          <span class="lang-code">RO</span>
+          <span class="lang-name">Română</span>
+          <span class="lang-tag">sintesi</span>
+        </a>
+        <a class="lang-card lang-curated" href="{{ "esperanto/" | relURL }}" lang="eo">
+          <span class="lang-flag" aria-hidden="true">🟢</span>
+          <span class="lang-code">EO</span>
+          <span class="lang-name">Esperanto</span>
+          <span class="lang-tag">sintesi</span>
         </a>
       </div>
 
-      <h3 class="lang-section-title">Traduzione automatica (Google Translate)</h3>
+      <h3 class="lang-section-title">Traduzione automatica del sito intero (Google Translate)</h3>
+      <p class="lang-section-note">Per visualizzare l'intero sito tradotto in queste lingue. Apre Google Translate in una nuova scheda con la pagina corrente.</p>
       <div class="lang-grid">
         <button type="button" class="lang-card" data-lang="fr" lang="fr">
           <span class="lang-flag" aria-hidden="true">🇫🇷</span>
           <span class="lang-code">FR</span>
-          <span class="lang-name">Français</span>
+          <span class="lang-name">Français (tutto)</span>
         </button>
         <button type="button" class="lang-card" data-lang="de" lang="de">
           <span class="lang-flag" aria-hidden="true">🇩🇪</span>
           <span class="lang-code">DE</span>
-          <span class="lang-name">Deutsch</span>
+          <span class="lang-name">Deutsch (tutto)</span>
         </button>
         <button type="button" class="lang-card" data-lang="es" lang="es">
           <span class="lang-flag" aria-hidden="true">🇪🇸</span>
           <span class="lang-code">ES</span>
-          <span class="lang-name">Español</span>
-        </button>
-        <button type="button" class="lang-card" data-lang="pt" lang="pt">
-          <span class="lang-flag" aria-hidden="true">🇵🇹</span>
-          <span class="lang-code">PT</span>
-          <span class="lang-name">Português</span>
-        </button>
-        <button type="button" class="lang-card" data-lang="ro" lang="ro">
-          <span class="lang-flag" aria-hidden="true">🇷🇴</span>
-          <span class="lang-code">RO</span>
-          <span class="lang-name">Română</span>
-        </button>
-        <button type="button" class="lang-card" data-lang="eo" lang="eo">
-          <span class="lang-flag" aria-hidden="true">🟢</span>
-          <span class="lang-code">EO</span>
-          <span class="lang-name">Esperanto</span>
+          <span class="lang-name">Español (todo)</span>
         </button>
         <button type="button" class="lang-card" data-lang="ar" lang="ar">
           <span class="lang-flag" aria-hidden="true">🌍</span>
@@ -102,7 +125,7 @@
 
       <div class="lang-modal-warning">
         <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
-        <strong>Avviso:</strong> le traduzioni automatiche di Google Translate sono <strong>approssimative</strong> e <strong>non sono curate dal Gruppo Volontari</strong>. Per emergenze e numeri ufficiali fai sempre riferimento alla versione italiana o alla pagina <a href="{{ "english/" | relURL }}">English</a>. La traduzione apre il sito in una <strong>nuova scheda</strong> all'interno del proxy di Google: si applicano i loro termini di servizio e la loro privacy policy.
+        <strong>Avviso:</strong> le traduzioni automatiche sono <strong>approssimative</strong>. Per emergenze e numeri ufficiali fai sempre riferimento alla versione italiana o alle pagine sintesi curate. La traduzione automatica apre il sito in una nuova scheda nel proxy di Google: si applicano i loro termini e privacy.
       </div>
     </div>
   </div>
