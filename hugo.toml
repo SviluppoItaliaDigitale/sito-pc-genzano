@@ -65,29 +65,34 @@ enableGitInfo = true
   weight = 4
 
 [[menus.main]]
+  name = "Cartografia"
+  url = "/cartografia/"
+  weight = 5
+
+[[menus.main]]
   name = "Comunicazioni"
   url = "/comunicazioni/"
-  weight = 5
+  weight = 6
 
 [[menus.main]]
   name = "Formazione"
   url = "/formazione/"
-  weight = 6
+  weight = 7
 
 [[menus.main]]
   name = "Giochi"
   url = "/giochi/"
-  weight = 7
+  weight = 8
 
 [[menus.main]]
   name = "Diventa Volontario"
   url = "/diventa-volontario/"
-  weight = 8
+  weight = 9
 
 [[menus.main]]
   name = "Contatti"
   url = "/contatti/"
-  weight = 9
+  weight = 10
 
 # Menu footer — Link utili
 [[menus.footer]]
