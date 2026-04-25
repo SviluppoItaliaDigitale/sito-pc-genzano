@@ -349,16 +349,13 @@ jobs:
           if [ "$EMERG_ACTIVE" = "true" ]; then
             EMERG_DATE=$(jq -r '.ultimo_aggiornamento // ""' data/emergenza.json 2>/dev/null || true)
             if [ -n "$EMERG_DATE" ]; then
-              # Calcola differenza in giorni (solo se la data è parsabile come ISO)
-              DIFF_DAYS=$(python3 -c "
-import datetime, sys
-try:
-  d = datetime.datetime.fromisoformat('$EMERG_DATE'.replace('Z', '+00:00'))
-  delta = (datetime.datetime.now(datetime.timezone.utc) - d).days
-  print(delta)
-except Exception:
-  print(-1)
-" 2>/dev/null || echo "-1")
+              # Calcola differenza in giorni (solo se la data e' parsabile)
+              EMERG_TS=$(date -u -d "$EMERG_DATE" +%s 2>/dev/null || echo "")
+              if [ -n "$EMERG_TS" ]; then
+                DIFF_DAYS=$(( ( $(date -u +%s) - EMERG_TS ) / 86400 ))
+              else
+                DIFF_DAYS=-1
+              fi
               if [ "$DIFF_DAYS" -gt 14 ]; then
                 err "data/emergenza.json ha attiva: true da $DIFF_DAYS giorni (ultimo_aggiornamento: $EMERG_DATE). Verificare se l'emergenza è ancora reale o se va disattivata."
               else
@@ -381,15 +378,12 @@ except Exception:
             [ -f "$f" ] || continue
             REV=$(grep -E '^dataUltimaRevisione:' "$f" | sed -E 's/^dataUltimaRevisione:[[:space:]]*"?([0-9-]+)"?.*/\1/' | head -1)
             [ -z "$REV" ] && { OUTDATED_LEGAL="${OUTDATED_LEGAL}- \`$f\`: campo dataUltimaRevisione assente\n"; continue; }
-            DIFF=$(python3 -c "
-import datetime
-try:
-  d = datetime.datetime.strptime('$REV', '%Y-%m-%d').date()
-  delta = (datetime.date.today() - d).days
-  print(delta)
-except Exception:
-  print(-1)
-" 2>/dev/null || echo "-1")
+            REV_TS=$(date -u -d "$REV" +%s 2>/dev/null || echo "")
+            if [ -n "$REV_TS" ]; then
+              DIFF=$(( ( $(date -u +%s) - REV_TS ) / 86400 ))
+            else
+              DIFF=-1
+            fi
             if [ "$DIFF" -gt 540 ]; then
               OUTDATED_LEGAL="${OUTDATED_LEGAL}- \`$f\`: rev $REV ($DIFF giorni fa)\n"
             fi
