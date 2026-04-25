@@ -148,9 +148,13 @@ jobs:
 
           # ----------------------------------------------------------------
           section "5. Placeholder, TODO, Lorem ipsum, testi incompleti"
+          # Esclusioni: descrizione vuota nel frontmatter (legittima),
+          # commenti TODO nei sorgenti, attributi `placeholderTitle` /
+          # `placeholderDesc` dello shortcode external-widget (questi
+          # ATTRIBUTI sono nomi dei parametri, non testi placeholder).
           PLACEHOLDER=$(grep -rInE '\b(TODO|TBD|FIXME|XXX|lorem ipsum|placeholder|DA COMPLETARE|DA VERIFICARE|\{\{\s*[a-z_]+\s*\}\})\b' \
             "$CONTENT_GLOB/" 2>/dev/null \
-            | grep -vE '(_index\.md:.*description:[[:space:]]*""|#.*TODO)' \
+            | grep -vE '(_index\.md:.*description:[[:space:]]*""|#.*TODO|placeholderTitle=|placeholderDesc=)' \
             || true)
           if [ -n "$PLACEHOLDER" ]; then
             err "Contenuti con placeholder o marker di lavoro in corso:"
