@@ -1730,7 +1730,7 @@ La pagina `content/cartografia/_index.md` mostra in cima alla sezione una **mapp
 - AS — Ammassamento Soccorritori: arancione `#ea580c`
 - AR — Aree di Ricovero: verde `#198754`
 
-**Coordinate verificate vs stimate**: 13 dei 16 punti sono stati geocodificati via API Nominatim e contrassegnati `verified: true`. I 3 rimanenti (AA2 Via Piave, AA8 Zona Industriale, AS1 Via del Lavoro) hanno coordinate stimate sulla base dell'area indicata — il popup mostra un badge "stimata" e il disclaimer in cima alla mappa lo segnala. Per correggere una coordinata: aprire `data/aree_emergenza.yaml`, aggiornare `lat`/`lon` con il valore reale, mettere `verified: true`, commit e push.
+**Coordinate verificate vs stimate**: 14 dei 16 punti sono stati geocodificati via API Nominatim e contrassegnati `verified: true`. I 2 rimanenti (AA8 Zona Industriale, AS1 Via del Lavoro) hanno coordinate stimate sulla base dell'area indicata — il popup mostra un badge "stimata" e il disclaimer in cima alla mappa lo segnala. Per correggere una coordinata: aprire `data/aree_emergenza.yaml`, aggiornare `lat`/`lon` con il valore reale, mettere `verified: true`, commit e push.
 
 **Accessibilità**:
 - Map div con `role="application"` e `aria-label` esplicito.

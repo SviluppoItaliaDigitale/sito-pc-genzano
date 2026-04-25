@@ -24,11 +24,10 @@ aree:
   - id: AA2
     tipo: AA
     nome: "Via Piave"
-    indirizzo: "Parcheggio Via Piave"
-    # Stima: quartiere residenziale a ovest del centro
-    lat: 41.6975
-    lon: 12.6880
-    verified: false
+    indirizzo: "Parcheggio in Via Turno Erdonio, adiacente a Viale Piave (lato Ariccia)"
+    lat: 41.7140834
+    lon: 12.6891034
+    verified: true
   - id: AA3
     tipo: AA
     nome: "Via Toscana"
