@@ -152,14 +152,14 @@
     };
 
     var ELEMENTI = [
-      { id: 'area-accoglienza', icon: 'bi-house-heart-fill', label: 'Area accoglienza', zona: 'parco', perche: 'Le aree di accoglienza vanno in spazi aperti, lontani da edifici vulnerabili. Il parco/area scuole è l\'ideale.' },
-      { id: 'punto-raccolta', icon: 'bi-geo-fill', label: 'Punto di raccolta', zona: 'parco', perche: 'I punti di raccolta sono in aree aperte note, come piazze o spazi verdi pubblici.' },
-      { id: 'rischio-frana', icon: 'bi-arrow-down-circle-fill', label: 'Rischio frana', zona: 'lago', perche: 'Le scarpate verso il cratere del lago sono zone a rischio frana, tipiche dei Castelli.' },
-      { id: 'rischio-esondazione', icon: 'bi-water', label: 'Rischio esondazione', zona: 'lago', perche: 'L\'area del lago e dei bacini collinari è più esposta a esondazioni in caso di piogge intense.' },
-      { id: 'magazzino-pc', icon: 'bi-box-seam-fill', label: 'Magazzino PC', zona: 'residenziale', perche: 'I magazzini operativi si collocano dove strade e viabilità permettono l\'accesso ai mezzi.' },
-      { id: 'scuola-sicura', icon: 'bi-mortarboard-fill', label: 'Scuola da tutelare', zona: 'parco', perche: 'Le scuole sono edifici strategici da proteggere. Nella nostra mappa sono nella zona parco/scuole.' },
-      { id: 'centro-storico', icon: 'bi-bank', label: 'Patrimonio storico', zona: 'centro', perche: 'Il centro storico va identificato come zona da tutelare (edifici antichi spesso più fragili).' },
-      { id: 'presidio-sanita', icon: 'bi-hospital-fill', label: 'Presidio sanitario', zona: 'residenziale', perche: 'I presidi sanitari in emergenza si collocano in aree accessibili, non nel centro stretto.' }
+      { id: 'area-accoglienza', icon: 'bi-house-heart-fill', label: 'Area accoglienza', zona: 'parco', motivo: 'Le aree di accoglienza vanno in spazi aperti, lontani da edifici vulnerabili. Il parco/area scuole è l\'ideale.' },
+      { id: 'punto-raccolta', icon: 'bi-geo-fill', label: 'Punto di raccolta', zona: 'parco', motivo: 'I punti di raccolta sono in aree aperte note, come piazze o spazi verdi pubblici.' },
+      { id: 'rischio-frana', icon: 'bi-arrow-down-circle-fill', label: 'Rischio frana', zona: 'lago', motivo: 'Le scarpate verso il cratere del lago sono zone a rischio frana, tipiche dei Castelli.' },
+      { id: 'rischio-esondazione', icon: 'bi-water', label: 'Rischio esondazione', zona: 'lago', motivo: 'L\'area del lago e dei bacini collinari è più esposta a esondazioni in caso di piogge intense.' },
+      { id: 'magazzino-pc', icon: 'bi-box-seam-fill', label: 'Magazzino PC', zona: 'residenziale', motivo: 'I magazzini operativi si collocano dove strade e viabilità permettono l\'accesso ai mezzi.' },
+      { id: 'scuola-sicura', icon: 'bi-mortarboard-fill', label: 'Scuola da tutelare', zona: 'parco', motivo: 'Le scuole sono edifici strategici da proteggere. Nella nostra mappa sono nella zona parco/scuole.' },
+      { id: 'centro-storico', icon: 'bi-bank', label: 'Patrimonio storico', zona: 'centro', motivo: 'Il centro storico va identificato come zona da tutelare (edifici antichi spesso più fragili).' },
+      { id: 'presidio-sanita', icon: 'bi-hospital-fill', label: 'Presidio sanitario', zona: 'residenziale', motivo: 'I presidi sanitari in emergenza si collocano in aree accessibili, non nel centro stretto.' }
     ];
 
     var intro = document.getElementById('intro'),
@@ -236,7 +236,7 @@
         if (!p) return;
         var zonaCorretta = ZONE[el.zona].test(p.x, p.y);
         p.marker.classList.add(zonaCorretta ? 'correct' : 'wrong');
-        details += '<li>' + (zonaCorretta ? '✅' : '❌') + ' <strong>' + el.label + '</strong>: ' + el.perche + '</li>';
+        details += '<li>' + (zonaCorretta ? '✅' : '❌') + ' <strong>' + el.label + '</strong>: ' + el.motivo + '</li>';
         if (zonaCorretta) ok++;
       });
       details += '</ul>';

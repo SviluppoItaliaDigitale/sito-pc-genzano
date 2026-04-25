@@ -48,7 +48,7 @@ Questo vale per adulti e, in modo amplificato, per **bambini autistici**.
 
 - **Preparare una scheda identificativa** con informazioni chiave: nome, contatti, specificità sensoriali, modalità di calma, parole o gesti che tranquillizzano, farmaci.
 - **Familiarizzare** con i suoni e i luoghi dell'emergenza: visite alle caserme, incontri educativi con volontari e vigili.
-- **Spiegare in anticipo** cosa può succedere: video, immagini, racconti personalizzati ("Se suona un allarme, andiamo qui e facciamo questo").
+- **Spiegare in anticipo** cosa può succedere: video, immagini, racconti personalizzati ("Se suona un allarme, andiamo qui è facciamo questo").
 - **Preparare un kit sensoriale** con cuffie antirumore, giocattoli di riferimento, coperta pesante, snack abituali.
 - **Coinvolgere la scuola** nella preparazione: le esercitazioni scolastiche possono essere adattate.
 
