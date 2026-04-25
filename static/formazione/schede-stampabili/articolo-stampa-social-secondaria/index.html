@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Scrivere articolo, comunicato stampa e post social (Secondaria I)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Primo Grado. La piramide rovesciata, le 5W+1H, e tre formati a confronto (articolo, comunicato stampa, post social) per raccontare un evento di Protezione Civile.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .piramide-svg { width: 100%; max-width: 460px; height: auto; margin: 0.4rem auto; display: block; }
+
+    .cinquew {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;
+      margin: 0.4rem 0;
+    }
+    .cinquew .w-card {
+      padding: 0.5rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+    }
+    .cinquew .w-card .label {
+      display: inline-block; padding: 0.15rem 0.5rem;
+      background: var(--scheda-blu); color: #fff;
+      border-radius: 4px; font-weight: 700; font-size: 0.78rem;
+      margin-bottom: 0.3rem;
+    }
+    .cinquew .w-card .desc {
+      font-size: 0.82rem; color: #495057; line-height: 1.35;
+      margin-bottom: 0.3rem;
+    }
+    .cinquew .w-card .esempio {
+      font-style: italic; font-size: 0.78rem; color: var(--scheda-grigio);
+      line-height: 1.3;
+    }
+
+    .scenario-box {
+      background: #003366; color: #fff;
+      padding: 0.7rem 0.95rem; border-radius: 8px;
+      margin: 0.5rem 0;
+    }
+    .scenario-box .label {
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;
+      opacity: 0.85; margin-bottom: 0.3rem;
+    }
+    .scenario-box .testo { font-size: 0.95rem; line-height: 1.5; }
+    .scenario-box .testo strong { color: #ffe5d0; }
+
+    .formati-griglia {
+      display: grid; grid-template-columns: 1fr; gap: 0.55rem;
+      margin: 0.5rem 0;
+    }
+    .formato-card {
+      padding: 0.65rem 0.85rem;
+      border-radius: 8px;
+      border-left: 4px solid;
+    }
+    .formato-card.articolo { background: #f4f7fb; border-left-color: var(--scheda-blu); }
+    .formato-card.comunicato { background: #fff8e6; border-left-color: var(--scheda-oro); }
+    .formato-card.social { background: #fce4ec; border-left-color: #e91e63; }
+    .formato-card .testata {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: 0.4rem; padding-bottom: 0.3rem;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .formato-card .nome { font-weight: 700; font-size: 0.95rem; }
+    .formato-card.articolo .nome { color: var(--scheda-blu); }
+    .formato-card.comunicato .nome { color: #664d03; }
+    .formato-card.social .nome { color: #e91e63; }
+    .formato-card .meta { font-size: 0.75rem; color: var(--scheda-grigio); }
+    .formato-card .corpo {
+      font-size: 0.88rem; line-height: 1.55; color: #212529;
+    }
+    .formato-card .corpo p { margin: 0 0 0.35rem 0; }
+    .formato-card .corpo .titolo-art {
+      font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.3rem;
+    }
+
+    .scrittura-3formati {
+      display: grid; gap: 0.55rem; margin: 0.5rem 0;
+    }
+    .scrittura-card {
+      padding: 0.6rem 0.8rem; background: #fff;
+      border: 2px solid var(--scheda-bordo); border-radius: 8px;
+    }
+    .scrittura-card .titolo {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-weight: 700; margin-bottom: 0.4rem;
+    }
+    .scrittura-card .titolo .pill {
+      padding: 0.15rem 0.6rem; border-radius: 12px;
+      font-size: 0.75rem; color: #fff;
+    }
+    .scrittura-card.t-articolo { border-color: var(--scheda-blu); }
+    .scrittura-card.t-articolo .pill { background: var(--scheda-blu); }
+    .scrittura-card.t-articolo .titolo { color: var(--scheda-blu); }
+    .scrittura-card.t-comunicato { border-color: var(--scheda-oro); }
+    .scrittura-card.t-comunicato .pill { background: var(--scheda-oro); }
+    .scrittura-card.t-comunicato .titolo { color: #664d03; }
+    .scrittura-card.t-social { border-color: #e91e63; }
+    .scrittura-card.t-social .pill { background: #e91e63; }
+    .scrittura-card.t-social .titolo { color: #e91e63; }
+    .scrittura-card .righe { display: grid; gap: 0.5rem; }
+    .scrittura-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.5rem; }
+    .scrittura-card .meta-riga {
+      display: flex; align-items: center; gap: 0.5rem; padding-bottom: 0.4rem;
+      margin-bottom: 0.4rem; border-bottom: 1px dashed var(--scheda-bordo);
+    }
+    .scrittura-card .meta-riga .label {
+      font-size: 0.78rem; font-weight: 700; flex: 0 0 4.5rem;
+    }
+    .scrittura-card .meta-riga .riga { flex: 1; border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+
+    .hashtag-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem;
+      margin: 0.4rem 0;
+    }
+    .hashtag-card {
+      padding: 0.4rem 0.6rem; background: #fff;
+      border: 1.5px solid #e91e63; border-radius: 6px;
+    }
+    .hashtag-card .ht {
+      font-family: "Courier New", monospace; font-weight: 700;
+      color: #e91e63; font-size: 0.85rem; margin-bottom: 0.2rem;
+    }
+    .hashtag-card .uso { font-size: 0.75rem; color: #495057; line-height: 1.3; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+    .istruzioni-maestra strong { color: #664d03; }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Articolo, comunicato, social — Secondaria I</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Scrivere di emergenze: articolo, comunicato stampa, post social</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Primo Grado (12-14 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 12-14 anni</span>
+      <span><strong>Obiettivo:</strong> raccontare lo stesso evento PC in 3 formati diversi</span>
+      <span><strong>Discipline:</strong> italiano, ed. civica, tecnologia</span>
+    </div>
+
+    <p class="scheda-intro">
+      Quando succede un'<strong>emergenza</strong> o si svolge un'<strong>attività</strong>
+      di Protezione Civile, l'informazione va veicolata in modi diversi a seconda del canale:
+      l'<strong>articolo di giornale</strong>, il <strong>comunicato stampa</strong> ufficiale,
+      il <strong>post sui social</strong>. Stesso evento, formati diversi.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>La piramide rovesciata — la regola d'oro</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">
+      Nel giornalismo, l'informazione si organizza dalla più importante alla meno
+      importante. Si chiama <strong>piramide rovesciata</strong>: chi smette di
+      leggere a metà ha comunque le informazioni essenziali.
+    </p>
+
+    <svg class="piramide-svg" viewBox="0 0 460 260" role="img" aria-label="Schema della piramide rovesciata del giornalismo">
+      <!-- Strato 1 (largo, in alto): notizia principale -->
+      <polygon points="20,30 440,30 380,90 80,90" fill="#c92a2a" stroke="#000" stroke-width="1.5"/>
+      <text x="230" y="55" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">NOTIZIA PRINCIPALE</text>
+      <text x="230" y="75" text-anchor="middle" font-size="10" fill="#fff">Cosa è successo, dove, quando, chi (lead)</text>
+
+      <!-- Strato 2: dettagli importanti -->
+      <polygon points="80,95 380,95 340,150 120,150" fill="#fd7e14" stroke="#000" stroke-width="1.5"/>
+      <text x="230" y="118" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">DETTAGLI IMPORTANTI</text>
+      <text x="230" y="138" text-anchor="middle" font-size="10" fill="#fff">Cause, conseguenze, citazioni, dati</text>
+
+      <!-- Strato 3: contesto -->
+      <polygon points="120,155 340,155 295,210 165,210" fill="#fcc419" stroke="#000" stroke-width="1.5"/>
+      <text x="230" y="178" text-anchor="middle" font-size="12" font-weight="700" fill="#664d03">CONTESTO</text>
+      <text x="230" y="195" text-anchor="middle" font-size="10" fill="#664d03">Storia, precedenti, riferimenti</text>
+
+      <!-- Strato 4: dettagli accessori -->
+      <polygon points="165,215 295,215 270,250 190,250" fill="#d4f4dd" stroke="#000" stroke-width="1.5"/>
+      <text x="230" y="235" text-anchor="middle" font-size="11" font-weight="700" fill="#0a3622">ACCESSORI</text>
+
+      <!-- Frecce e label esterne -->
+      <text x="455" y="55" text-anchor="end" font-size="9" font-weight="700" fill="#c92a2a">+ rilievo</text>
+      <text x="455" y="240" text-anchor="end" font-size="9" font-weight="700" fill="#0a3622">– rilievo</text>
+      <line x1="450" y1="65" x2="450" y2="225" stroke="#666" stroke-width="1.5"/>
+      <polygon points="445,222 450,232 455,222" fill="#666"/>
+    </svg>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Le 5 W + 1 H — gli ingredienti del lead</h2></div>
+    <div class="cinquew">
+      <div class="w-card">
+        <span class="label">WHO — Chi</span>
+        <p class="desc">Le persone, gli enti coinvolti.</p>
+        <p class="esempio">Es. Volontari del Gruppo Comunale, Sindaco.</p>
+      </div>
+      <div class="w-card">
+        <span class="label">WHAT — Cosa</span>
+        <p class="desc">L'evento o l'azione.</p>
+        <p class="esempio">Es. Esercitazione di evacuazione.</p>
+      </div>
+      <div class="w-card">
+        <span class="label">WHERE — Dove</span>
+        <p class="desc">Il luogo preciso.</p>
+        <p class="esempio">Es. Scuola Belardi, Genzano di Roma.</p>
+      </div>
+      <div class="w-card">
+        <span class="label">WHEN — Quando</span>
+        <p class="desc">Data e ora.</p>
+        <p class="esempio">Es. Sabato 12 aprile 2026, ore 10.</p>
+      </div>
+      <div class="w-card">
+        <span class="label">WHY — Perché</span>
+        <p class="desc">Le motivazioni / cause.</p>
+        <p class="esempio">Es. Per simulare la risposta a un sisma.</p>
+      </div>
+      <div class="w-card">
+        <span class="label">HOW — Come</span>
+        <p class="desc">Le modalità, il "metodo".</p>
+        <p class="esempio">Es. Con sirena, evacuazione in fila, conta presenze.</p>
+      </div>
+    </div>
+
+    <div class="sez-titolo"><span class="num">3</span><h2>Lo stesso evento in 3 formati — esempi modello</h2></div>
+
+    <div class="scenario-box">
+      <div class="label">Scenario di riferimento</div>
+      <div class="testo">
+        Sabato 12 aprile 2026, alle ore 10:00, la scuola Belardi di Genzano svolge un'<strong>esercitazione
+        di evacuazione</strong> con la collaborazione del Gruppo Volontari di PC Genzano. 350 alunni e
+        25 docenti raggiungono il punto di raccolta in 4 minuti. Tutto regolare.
+      </div>
+    </div>
+
+    <div class="formati-griglia">
+
+      <div class="formato-card articolo">
+        <div class="testata">
+          <span class="nome">📰 Articolo di giornale</span>
+          <span class="meta">~150 parole · pubblico generico</span>
+        </div>
+        <div class="corpo">
+          <div class="titolo-art">Esercitazione alla Belardi: 350 alunni evacuati in quattro minuti</div>
+          <p>Sabato 12 aprile alle ore 10:00 la scuola "Italo Belardi" di Genzano di Roma ha effettuato un'esercitazione di evacuazione coordinata con il Gruppo Volontari di Protezione Civile comunale. In quattro minuti tutti gli alunni e i docenti hanno raggiunto il punto di raccolta nel piazzale antistante.</p>
+          <p>L'iniziativa, prevista dal Piano di Emergenza dell'istituto ai sensi del D.M. 26/08/1992, simulava la risposta a un evento sismico. «Un risultato positivo — ha commentato la Dirigente — ma continueremo ad allenarci».</p>
+        </div>
+      </div>
+
+      <div class="formato-card comunicato">
+        <div class="testata">
+          <span class="nome">📋 Comunicato stampa ufficiale</span>
+          <span class="meta">~80 parole · alle redazioni</span>
+        </div>
+        <div class="corpo">
+          <p style="font-size:0.78rem; color:var(--scheda-grigio); text-transform:uppercase; letter-spacing:0.04em;">Comunicato stampa N. 12/2026 — 12 aprile 2026, h 11:30</p>
+          <p style="font-weight:700;">Esercitazione di evacuazione presso scuola Belardi — esito positivo</p>
+          <p>Si comunica che oggi, sabato 12 aprile 2026 alle ore 10:00, presso la scuola Italo Belardi di Genzano di Roma, si è svolta una prova di evacuazione con la collaborazione del Gruppo Volontari di Protezione Civile. Hanno partecipato 350 alunni e 25 docenti. Tempo di evacuazione: 4 minuti. Esito: regolare.</p>
+          <p style="font-size:0.78rem; color:var(--scheda-grigio); font-style:italic;">Per informazioni: segreteria@protezionecivilegenzano.it</p>
+        </div>
+      </div>
+
+      <div class="formato-card social">
+        <div class="testata">
+          <span class="nome">📱 Post Instagram / Facebook</span>
+          <span class="meta">~30 parole + 4 hashtag</span>
+        </div>
+        <div class="corpo">
+          <p>🚨 Stamattina alla scuola Belardi: <strong>350 ragazzi evacuati in 4 minuti</strong>! Bravissimi tutti — alunni, docenti e nostri volontari. La sicurezza si allena. 💙🧡</p>
+          <p style="margin-top:0.4rem; font-size:0.82rem;">#protezionecivile #genzano #sicurezzascuola #pccgenzano</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sez-titolo"><span class="num">4</span><h2>Scrivi tu — stesso evento, 3 formati</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">
+      <strong>Scenario assegnato</strong>: durante un'allerta meteo arancione, sabato sera, il fosso di
+      Acquasanta si è ostruito a causa di rami caduti. I volontari del Gruppo Comunale sono intervenuti
+      per liberarlo prima della pioggia prevista per la domenica mattina. Operazione conclusa alle 23:00.
+      Nessun ferito. Strada riaperta.
+    </p>
+
+    <div class="scrittura-3formati">
+
+      <div class="scrittura-card t-articolo">
+        <div class="titolo"><span class="pill">A</span><span>Articolo di giornale (~120 parole)</span></div>
+        <div class="meta-riga">
+          <span class="label">Titolo:</span><span class="riga"></span>
+        </div>
+        <div class="righe">
+          <span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span>
+        </div>
+      </div>
+
+      <div class="scrittura-card t-comunicato">
+        <div class="titolo"><span class="pill">B</span><span>Comunicato stampa (~80 parole)</span></div>
+        <div class="meta-riga">
+          <span class="label">Oggetto:</span><span class="riga"></span>
+        </div>
+        <div class="righe">
+          <span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span>
+        </div>
+      </div>
+
+      <div class="scrittura-card t-social">
+        <div class="titolo"><span class="pill">C</span><span>Post Instagram (~30 parole + 4 hashtag)</span></div>
+        <div class="righe">
+          <span class="r"></span><span class="r"></span>
+        </div>
+        <div class="meta-riga" style="margin-top: 0.5rem; padding-top: 0.4rem; border-top: 1px dashed var(--scheda-bordo); border-bottom: 0; padding-bottom: 0; margin-bottom: 0;">
+          <span class="label">Hashtag:</span><span class="riga"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sez-titolo"><span class="num">5</span><h2>Hashtag strategici per la PC</h2></div>
+    <div class="hashtag-grid">
+      <div class="hashtag-card">
+        <div class="ht">#protezionecivile</div>
+        <div class="uso">Sempre, è il tema generale.</div>
+      </div>
+      <div class="hashtag-card">
+        <div class="ht">#genzano</div>
+        <div class="uso">Per geolocalizzare l'evento.</div>
+      </div>
+      <div class="hashtag-card">
+        <div class="ht">#allertameteo</div>
+        <div class="uso">Solo per allerta, non per attività ordinarie.</div>
+      </div>
+      <div class="hashtag-card">
+        <div class="ht">#volontariato</div>
+        <div class="uso">Per attività dei volontari.</div>
+      </div>
+      <div class="hashtag-card">
+        <div class="ht">#iononrischio</div>
+        <div class="uso">Campagna nazionale di prevenzione.</div>
+      </div>
+      <div class="hashtag-card">
+        <div class="ht">#112</div>
+        <div class="uso">Per ricordare il numero unico emergenze.</div>
+      </div>
+    </div>
+
+    <p style="font-size: 0.85rem; color: var(--scheda-grigio); margin-top: 0.4rem;">
+      <strong>Regola</strong>: <strong>3-5 hashtag</strong> per post (più di 5 sembrano spam).
+      Mai inventare hashtag su una singola persona o su informazioni non verificate.
+    </p>
+
+    <div class="istruzioni-maestra">
+      <strong>Per il/la docente:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Tempo</strong>: 60-75 min in classe (può essere diviso in 2 lezioni).</li>
+        <li><strong>Valutazione (10 pt totali)</strong>: rispetto piramide rovesciata (3 pt), copertura 5W+1H (2 pt), correttezza linguistica (2 pt), tono adeguato al canale (2 pt), brevità rispettata su social (1 pt).</li>
+        <li><strong>Differenze chiave da far emergere</strong>: l'<em>articolo</em> ha narrazione e voce dell'autore; il <em>comunicato</em> è impersonale, formale, telegrafico; il <em>post social</em> è breve, emotivo, con elementi visivi.</li>
+        <li><strong>Etica</strong>: introdurre il principio del <strong>"Do No Harm"</strong> — mai pubblicare foto di vittime, mai informazioni non verificate, mai dare nomi senza autorizzazione. Riferimento alla <a href="/social-media-policy/">Social Media Policy del Gruppo</a>.</li>
+        <li><strong>Approfondimento</strong>: collegamento con <a href="/formazione/schede-stampabili/comunicazione-crisi-secondaria2/">Comunicazione di crisi (Secondaria II)</a> per la versione avanzata.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Articolo, comunicato, social" · Secondaria I · italiano · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

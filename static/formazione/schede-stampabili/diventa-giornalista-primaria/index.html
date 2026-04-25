@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Diventa giornalista della PC (Primaria 4ª-5ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. Come si scrive un articolo per il giornalino di classe e un post per i social su un'attività di Protezione Civile.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .anatomia {
+      display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 0.8rem;
+      margin: 0.5rem 0;
+    }
+    .anatomia .label {
+      font-weight: 700; color: #fff; padding: 0.4rem 0.7rem;
+      border-radius: 6px; text-align: center; font-size: 0.85rem;
+      align-self: stretch; display: flex; align-items: center; justify-content: center;
+    }
+    .anatomia .label.titolo { background: #c92a2a; }
+    .anatomia .label.occhiello { background: #b45309; }
+    .anatomia .label.lead { background: #003366; }
+    .anatomia .label.corpo { background: #198754; }
+    .anatomia .descrizione {
+      padding: 0.45rem 0.65rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      font-size: 0.9rem; line-height: 1.4;
+    }
+
+    .esempio-articolo {
+      padding: 0.85rem 1rem; background: #f4f7fb;
+      border: 2px solid var(--scheda-blu); border-radius: 10px;
+      margin: 0.5rem 0;
+    }
+    .esempio-articolo .occhiello {
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;
+      color: #b45309; font-weight: 700;
+    }
+    .esempio-articolo .titolo {
+      font-size: 1.2rem; font-weight: 700; color: #c92a2a;
+      margin: 0.2rem 0 0.4rem 0; line-height: 1.25;
+    }
+    .esempio-articolo .lead {
+      font-weight: 700; color: #003366; font-size: 0.95rem;
+      line-height: 1.5; margin: 0 0 0.5rem 0;
+    }
+    .esempio-articolo .corpo {
+      font-size: 0.92rem; line-height: 1.55; color: #212529;
+    }
+    .esempio-articolo .corpo p { margin: 0 0 0.4rem 0; }
+    .esempio-articolo .firma {
+      text-align: right; font-style: italic; color: var(--scheda-grigio);
+      font-size: 0.82rem; margin-top: 0.4rem;
+    }
+
+    .scrivi-tu {
+      display: grid; gap: 0.5rem; margin: 0.4rem 0;
+    }
+    .scrivi-tu .campo {
+      display: flex; align-items: baseline; gap: 0.5rem;
+      padding: 0.4rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+    }
+    .scrivi-tu .campo .label {
+      font-weight: 700; color: var(--scheda-blu); flex: 0 0 6rem; font-size: 0.88rem;
+    }
+    .scrivi-tu .campo .riga { flex: 1; border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.5rem; }
+    .scrivi-tu .corpo-righe { display: grid; gap: 0.5rem; padding: 0.4rem 0.6rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; }
+    .scrivi-tu .corpo-righe .titolo {
+      font-weight: 700; color: var(--scheda-blu); font-size: 0.88rem; margin-bottom: 0.2rem;
+    }
+    .scrivi-tu .corpo-righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.5rem; }
+
+    .social-card {
+      background: #fff; border: 2px solid #e91e63; border-radius: 12px;
+      padding: 0.7rem 0.85rem; margin: 0.5rem 0;
+      max-width: 380px; margin-left: auto; margin-right: auto;
+    }
+    .social-card .testata-social {
+      display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;
+      padding-bottom: 0.4rem; border-bottom: 1px solid #f5cee2;
+    }
+    .social-card .testata-social .ico {
+      width: 1.8rem; height: 1.8rem; background: linear-gradient(45deg, #e91e63, #ff9800);
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 0.95rem;
+    }
+    .social-card .testata-social .nome {
+      font-weight: 700; color: #495057; font-size: 0.85rem;
+    }
+    .social-card .foto-placeholder {
+      background: #f4f7fb; border: 2px dashed var(--scheda-bordo);
+      border-radius: 6px; min-height: 5rem; display: flex; align-items: center;
+      justify-content: center; color: #ced4da; font-style: italic; font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+    .social-card .caption-righe {
+      display: grid; gap: 0.5rem;
+    }
+    .social-card .caption-righe .r {
+      border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem;
+    }
+    .social-card .hashtag-row {
+      margin-top: 0.5rem; padding-top: 0.4rem; border-top: 1px dashed #f5cee2;
+      display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;
+    }
+    .social-card .hashtag-row .label { font-size: 0.78rem; color: var(--scheda-grigio); font-weight: 700; }
+    .social-card .hashtag-row .ht-vuoto {
+      display: inline-block; min-width: 5rem; padding: 0.15rem 0.5rem;
+      background: #fff; border: 1.5px dashed #e91e63; border-radius: 12px;
+      font-size: 0.82rem; color: #e91e63;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Diventa giornalista PC — Primaria 4ª-5ª</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Diventa giornalista della Protezione Civile</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 4ª-5ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 9-11 anni</span>
+      <span><strong>Obiettivo:</strong> scrivere un articolo e un post social su un evento PC</span>
+      <span><strong>Discipline:</strong> italiano, ed. civica, tecnologia</span>
+    </div>
+
+    <p class="scheda-intro">
+      Quando la Protezione Civile fa qualcosa di importante (un'esercitazione,
+      un intervento, una giornata in piazza), bisogna <strong>raccontarla</strong> ai
+      cittadini. Lo si può fare con un <strong>articolo</strong> per il giornale o
+      con un <strong>post</strong> sui social. Imparerai a fare entrambi.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>L'anatomia di un articolo</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">Ogni articolo è fatto di 4 pezzi, in questo ordine dall'alto verso il basso:</p>
+    <div class="anatomia">
+      <span class="label occhiello">OCCHIELLO</span>
+      <span class="descrizione">Una riga corta sopra il titolo che dice di che argomento si parla. <em>Es. "ESERCITAZIONE — DOMENICA AL PARCO"</em>.</span>
+      <span class="label titolo">TITOLO</span>
+      <span class="descrizione">La frase più importante. Dice cosa è successo in poche parole. <em>Es. "I volontari incontrano i bambini di Genzano"</em>.</span>
+      <span class="label lead">LEAD</span>
+      <span class="descrizione">Le prime 1-2 frasi dell'articolo. Rispondono a <strong>chi · cosa · dove · quando · perché</strong> (le 5 W).</span>
+      <span class="label corpo">CORPO</span>
+      <span class="descrizione">I dettagli, in ordine di importanza: prima le cose più importanti, poi quelle meno importanti.</span>
+    </div>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Esempio modello — leggi attentamente</h2></div>
+
+    <div class="esempio-articolo">
+      <div class="occhiello">ATTIVITÀ DI DIVULGAZIONE — DOMENICA AL PARCO</div>
+      <h3 class="titolo">I volontari della PC incontrano i bambini di Genzano</h3>
+      <p class="lead">
+        Domenica mattina, al Parco Sforza, i volontari del Gruppo Comunale di Protezione
+        Civile hanno organizzato una giornata aperta per le famiglie. Hanno mostrato il
+        camion attrezzato, le radio e il kit di emergenza: lo scopo era far conoscere ai
+        più piccoli chi li aiuta in caso di bisogno.
+      </p>
+      <div class="corpo">
+        <p>Più di cento bambini hanno partecipato. Ognuno ha ricevuto un <strong>cappellino arancione</strong> e ha potuto provare a indossare il casco e a parlare con la radio.</p>
+        <p>Il Sindaco ha ringraziato i volontari: «<em>Senza di loro, non riusciremmo a essere pronti quando arriva un'emergenza</em>». La giornata si è conclusa con la merenda e con la promessa di tornare il prossimo anno.</p>
+      </div>
+      <p class="firma">— Articolo del giornalino di classe</p>
+    </div>
+
+    <div class="sez-titolo"><span class="num">3</span><h2>Scrivi tu un articolo</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">
+      Pensa a un'attività della Protezione Civile che hai visto o di cui hai sentito
+      parlare (anche un'esercitazione di evacuazione a scuola va bene!). Scrivi il tuo articolo:
+    </p>
+    <div class="scrivi-tu">
+      <div class="campo"><span class="label">Occhiello:</span><span class="riga"></span></div>
+      <div class="campo"><span class="label">Titolo:</span><span class="riga"></span></div>
+      <div class="corpo-righe">
+        <div class="titolo">Lead (le 5 W in 2 frasi):</div>
+        <span class="r"></span><span class="r"></span><span class="r"></span>
+      </div>
+      <div class="corpo-righe">
+        <div class="titolo">Corpo (i dettagli):</div>
+        <span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span>
+      </div>
+    </div>
+
+    <div class="sez-titolo"><span class="num">4</span><h2>Anche per i social — scrivi un post</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">
+      Sui social (Instagram, Facebook) lo stesso evento si racconta in modo <strong>più breve</strong>:
+      una foto + 2-3 frasi + qualche hashtag. Niente di più!
+    </p>
+
+    <div class="social-card">
+      <div class="testata-social">
+        <span class="ico" aria-hidden="true"><i class="bi bi-camera-fill" style="display:none;"></i>📷</span>
+        <span class="nome">@protezionecivilegenzano</span>
+      </div>
+      <div class="foto-placeholder">[ Spazio per la foto ]</div>
+      <div class="caption-righe">
+        <span class="r"></span>
+        <span class="r"></span>
+        <span class="r"></span>
+      </div>
+      <div class="hashtag-row">
+        <span class="label">Hashtag:</span>
+        <span class="ht-vuoto">#</span>
+        <span class="ht-vuoto">#</span>
+        <span class="ht-vuoto">#</span>
+      </div>
+    </div>
+
+    <p style="font-size: 0.82rem; color: var(--scheda-grigio); margin-top: 0.4rem;">
+      <strong>Suggerimento</strong>: gli hashtag sono parole-chiave precedute dal cancelletto.
+      Per la PC vanno bene #protezionecivile #genzano #sicurezza. Massimo 3-4 per post!
+    </p>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Tempo</strong>: 50-60 min (2 ore se si fa anche disegno della "foto" del post).</li>
+        <li><strong>Eventi spunto</strong>: prove di evacuazione della scuola, visita di un volontario, esercitazione vista in TV, attività della PC raccontata dai genitori.</li>
+        <li><strong>Tono</strong>: insistere su <strong>frasi brevi e voce attiva</strong>. Evitare burocratese. Le 5 W sono il cuore: chi, cosa, dove, quando, perché.</li>
+        <li><strong>Social — accortezza</strong>: i social vanno usati con moderazione. Per la PC esistono regole precise (cfr. <a href="/social-media-policy/">policy del Gruppo</a>): mai foto di persone in difficoltà, mai informazioni non verificate.</li>
+        <li><strong>Estensione</strong>: gli articoli migliori possono essere raccolti in un giornalino di classe e condivisi con il Gruppo per pubblicazione (con autorizzazione genitori).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Diventa giornalista PC" · Primaria 4ª-5ª · italiano · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>
