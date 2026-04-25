@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Sillabe della Protezione Civile (Primaria 1ª-2ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria (1ª-2ª). Le parole della Protezione Civile divise in sillabe, con esercizi di divisione, ricomposizione e copiatura in stampatello.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sezione-titolo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin: 1rem 0 0.5rem 0;
+    }
+    .sezione-titolo .num {
+      width: 1.8rem;
+      height: 1.8rem;
+      background: var(--scheda-blu);
+      color: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .sezione-titolo h2 {
+      font-size: 1.05rem;
+      color: var(--scheda-blu);
+      margin: 0;
+      flex: 1;
+    }
+
+    /* Tabella delle parole già divise (modello) */
+    .parole-modello {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem 0.9rem;
+      margin: 0.4rem 0 0.5rem 0;
+    }
+    .parola-modello-riga {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 0.7rem;
+      background: #f4f7fb;
+      border-left: 4px solid var(--scheda-blu);
+      border-radius: 0 6px 6px 0;
+    }
+    .parola-modello-riga .emo {
+      font-size: 1.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .parola-modello-riga .testo {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--scheda-blu);
+      font-size: 1.05rem;
+    }
+    .parola-modello-riga .testo .sep {
+      color: var(--scheda-oro);
+      font-weight: 400;
+      margin: 0 0.05em;
+    }
+
+    /* Esercizio: dividi tu */
+    .dividi-tu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55rem 1rem;
+      margin: 0.4rem 0;
+    }
+    .dividi-tu .parola-da-dividere {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 0.7rem;
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 6px;
+      background: #fff;
+    }
+    .dividi-tu .parola-da-dividere .testo {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      color: #212529;
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      min-width: 5.5rem;
+    }
+    .dividi-tu .parola-da-dividere .arrow {
+      color: var(--scheda-grigio);
+    }
+    .dividi-tu .parola-da-dividere .riga-vuota {
+      flex: 1;
+      border-bottom: 1.5px dashed var(--scheda-bordo);
+      min-height: 1.4rem;
+    }
+
+    /* Esercizio: ricomponi le sillabe */
+    .ricomponi {
+      display: grid;
+      gap: 0.5rem;
+      margin: 0.4rem 0;
+    }
+    .ricomponi-riga {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.7rem;
+      background: #fff;
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 6px;
+    }
+    .ricomponi-riga .pezzi {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .ricomponi-riga .pezzo {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      background: var(--scheda-blu);
+      color: #fff;
+      border-radius: 5px;
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+    }
+    .ricomponi-riga .uguale {
+      color: var(--scheda-grigio);
+      font-weight: 700;
+    }
+    .ricomponi-riga .riga-vuota {
+      flex: 1;
+      border-bottom: 1.5px dashed var(--scheda-bordo);
+      min-height: 1.4rem;
+    }
+
+    /* Frase finale da copiare */
+    .frase-copia {
+      margin-top: 0.8rem;
+      padding: 0.65rem 0.9rem;
+      background: #eaf2fb;
+      border-left: 4px solid var(--scheda-blu);
+      border-radius: 0 6px 6px 0;
+    }
+    .frase-modello {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      color: var(--scheda-blu);
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.55rem;
+    }
+    .frase-righe {
+      display: grid;
+      gap: 0.55rem;
+    }
+    .frase-righe .r {
+      border-bottom: 1.5px dashed var(--scheda-bordo);
+      height: 1.6rem;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem;
+      padding: 0.55rem 0.85rem;
+      background: #fff8e6;
+      border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.82rem;
+      color: #664d03;
+      line-height: 1.45;
+    }
+    .istruzioni-maestra strong { color: #664d03; }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Sillabe della Protezione Civile — Primaria</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Sillabe della Protezione Civile</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 1ª-2ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6-7 anni</span>
+      <span><strong>Obiettivo:</strong> dividere e ricomporre parole in sillabe</span>
+      <span><strong>Servono:</strong> matita, gomma</span>
+    </div>
+
+    <p class="scheda-intro">
+      Le parole sono fatte di pezzettini che si chiamano <strong>sillabe</strong>.
+      Ogni sillaba contiene almeno una vocale: si pronunciano in un solo respiro.
+      Leggi le parole della Protezione Civile divise in sillabe, poi prova tu.
+    </p>
+
+    <div class="sezione-titolo">
+      <span class="num">1</span>
+      <h2>Leggi le parole già divise in sillabe</h2>
+    </div>
+    <div class="parole-modello">
+      <div class="parola-modello-riga">
+        <span class="emo" aria-hidden="true">⛑️</span>
+        <span class="testo">CA<span class="sep">·</span>SCO</span>
+      </div>
+      <div class="parola-modello-riga">
+        <span class="emo" aria-hidden="true">📡</span>
+        <span class="testo">RA<span class="sep">·</span>DIO</span>
+      </div>
+      <div class="parola-modello-riga">
+        <span class="emo" aria-hidden="true">🚒</span>
+        <span class="testo">SI<span class="sep">·</span>RE<span class="sep">·</span>NA</span>
+      </div>
+      <div class="parola-modello-riga">
+        <span class="emo" aria-hidden="true">🆘</span>
+        <span class="testo">A<span class="sep">·</span>IU<span class="sep">·</span>TO</span>
+      </div>
+      <div class="parola-modello-riga">
+        <span class="emo" aria-hidden="true">👨‍🚒</span>
+        <span class="testo">POM<span class="sep">·</span>PIE<span class="sep">·</span>RE</span>
+      </div>
+      <div class="parola-modello-riga">
+        <span class="emo" aria-hidden="true">🤝</span>
+        <span class="testo">VO<span class="sep">·</span>LON<span class="sep">·</span>TA<span class="sep">·</span>RIO</span>
+      </div>
+    </div>
+
+    <div class="sezione-titolo">
+      <span class="num">2</span>
+      <h2>Dividi tu in sillabe</h2>
+    </div>
+    <div class="dividi-tu">
+      <div class="parola-da-dividere">
+        <span class="testo">MAPPA</span>
+        <span class="arrow" aria-hidden="true">→</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="parola-da-dividere">
+        <span class="testo">FUOCO</span>
+        <span class="arrow" aria-hidden="true">→</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="parola-da-dividere">
+        <span class="testo">USCITA</span>
+        <span class="arrow" aria-hidden="true">→</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="parola-da-dividere">
+        <span class="testo">TORCIA</span>
+        <span class="arrow" aria-hidden="true">→</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="parola-da-dividere">
+        <span class="testo">ZAINO</span>
+        <span class="arrow" aria-hidden="true">→</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="parola-da-dividere">
+        <span class="testo">SCUOLA</span>
+        <span class="arrow" aria-hidden="true">→</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="sezione-titolo">
+      <span class="num">3</span>
+      <h2>Ricomponi le parole con le sillabe</h2>
+    </div>
+    <div class="ricomponi">
+      <div class="ricomponi-riga">
+        <span class="pezzi">
+          <span class="pezzo">SCO</span>
+          <span class="pezzo">CA</span>
+        </span>
+        <span class="uguale" aria-hidden="true">=</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="ricomponi-riga">
+        <span class="pezzi">
+          <span class="pezzo">RE</span>
+          <span class="pezzo">SI</span>
+          <span class="pezzo">NA</span>
+        </span>
+        <span class="uguale" aria-hidden="true">=</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="ricomponi-riga">
+        <span class="pezzi">
+          <span class="pezzo">PIE</span>
+          <span class="pezzo">RE</span>
+          <span class="pezzo">POM</span>
+        </span>
+        <span class="uguale" aria-hidden="true">=</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="frase-copia">
+      <div class="sezione-titolo" style="margin-top: 0;">
+        <span class="num">4</span>
+        <h2 style="border:0; padding:0;">Ricopia la frase in stampatello</h2>
+      </div>
+      <div class="frase-modello">IL POMPIERE SPEGNE IL FUOCO.</div>
+      <div class="frase-righe">
+        <span class="r" aria-hidden="true"></span>
+        <span class="r" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong> la regola di base presentata qui è
+      "ogni sillaba ha una vocale". È volutamente semplificata per la 1ª: i casi
+      dei dittonghi (IU di AIUTO, IE di POMPIERE) sono affrontati come blocco
+      unico. Le sillabe corrette di riferimento sono: CA-SCO, RA-DIO, SI-RE-NA,
+      A-IU-TO, POM-PIE-RE, VO-LON-TA-RIO, MAP-PA, FUO-CO, U-SCI-TA, TOR-CIA, ZAI-NO, SCUO-LA.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Sillabe della Protezione Civile" · Primaria 1ª-2ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Completa la parola (Primaria 1ª-2ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria (1ª-2ª). Per ogni parola della Protezione Civile l'alunno inserisce le lettere mancanti, con esercizi progressivi.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sezione-titolo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin: 1rem 0 0.5rem 0;
+    }
+    .sezione-titolo .num {
+      width: 1.8rem;
+      height: 1.8rem;
+      background: var(--scheda-blu);
+      color: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .sezione-titolo h2 {
+      font-size: 1.05rem;
+      color: var(--scheda-blu);
+      margin: 0;
+    }
+
+    .cp-banca {
+      background: #eaf2fb;
+      border: 2px dashed var(--scheda-blu);
+      border-radius: 8px;
+      padding: 0.5rem 0.7rem;
+      margin: 0.4rem 0 0.6rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.9rem;
+      align-items: center;
+    }
+    .cp-banca .label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--scheda-blu);
+      margin-right: 0.4rem;
+    }
+    .cp-banca .lettera {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.8rem;
+      height: 1.8rem;
+      padding: 0 0.4rem;
+      background: var(--scheda-blu);
+      color: #fff;
+      border-radius: 5px;
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+    }
+
+    .cp-griglia {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1rem;
+      margin: 0.4rem 0;
+    }
+    .cp-riga {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.45rem 0.7rem;
+      background: #fff;
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 6px;
+    }
+    .cp-riga .emo {
+      font-size: 1.6rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .cp-riga .parola {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: #212529;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+    .cp-riga .parola .gap {
+      display: inline-block;
+      min-width: 1.1rem;
+      border-bottom: 2px solid var(--scheda-blu);
+      margin: 0 0.05em;
+      padding: 0 0.1em;
+      color: transparent;
+    }
+
+    .cp-traduci {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1rem;
+      margin: 0.4rem 0;
+    }
+    .cp-traduci .indizio {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.45rem 0.7rem;
+      background: #fff;
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 6px;
+    }
+    .cp-traduci .indizio .emo { font-size: 1.6rem; line-height: 1; flex-shrink: 0; }
+    .cp-traduci .indizio .testo-indizio {
+      font-size: 0.9rem;
+      color: #495057;
+      flex: 1;
+      line-height: 1.3;
+    }
+    .cp-traduci .indizio .riga-vuota {
+      flex: 0 0 6.5rem;
+      border-bottom: 1.5px dashed var(--scheda-bordo);
+      min-height: 1.4rem;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem;
+      padding: 0.55rem 0.85rem;
+      background: #fff8e6;
+      border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.82rem;
+      color: #664d03;
+      line-height: 1.45;
+    }
+    .istruzioni-maestra strong { color: #664d03; }
+    .istruzioni-maestra ul { margin: 0.3rem 0 0 1rem; padding: 0; }
+    .istruzioni-maestra li { margin: 0.15rem 0; }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Completa la parola — Primaria</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Completa la parola</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 1ª-2ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6-7 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere la lettera mancante in parole della Protezione Civile</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      In ogni parola manca una lettera. Guarda la figura, leggi le lettere intorno
+      e scrivi sulla lineetta la <strong>lettera giusta</strong> per completare la parola.
+    </p>
+
+    <div class="sezione-titolo">
+      <span class="num">1</span>
+      <h2>Manca una lettera — usa la banca delle lettere</h2>
+    </div>
+
+    <div class="cp-banca" role="note" aria-label="Banca delle lettere">
+      <span class="label">Banca:</span>
+      <span class="lettera">A</span>
+      <span class="lettera">C</span>
+      <span class="lettera">F</span>
+      <span class="lettera">I</span>
+      <span class="lettera">M</span>
+      <span class="lettera">O</span>
+      <span class="lettera">R</span>
+      <span class="lettera">S</span>
+      <span class="lettera">U</span>
+      <span class="lettera">Z</span>
+    </div>
+
+    <div class="cp-griglia">
+      <div class="cp-riga">
+        <span class="emo" aria-hidden="true">⛑️</span>
+        <span class="parola">C<span class="gap">·</span>SCO</span>
+      </div>
+      <div class="cp-riga">
+        <span class="emo" aria-hidden="true">🚒</span>
+        <span class="parola">SI<span class="gap">·</span>ENA</span>
+      </div>
+      <div class="cp-riga">
+        <span class="emo" aria-hidden="true">🔥</span>
+        <span class="parola"><span class="gap">·</span>UOCO</span>
+      </div>
+      <div class="cp-riga">
+        <span class="emo" aria-hidden="true">📡</span>
+        <span class="parola">RAD<span class="gap">·</span>O</span>
+      </div>
+      <div class="cp-riga">
+        <span class="emo" aria-hidden="true">🗺️</span>
+        <span class="parola"><span class="gap">·</span>APPA</span>
+      </div>
+      <div class="cp-riga">
+        <span class="emo" aria-hidden="true">🚪</span>
+        <span class="parola"><span class="gap">·</span>SCITA</span>
+      </div>
+      <div class="cp-riga">
+        <span class="emo" aria-hidden="true">🔦</span>
+        <span class="parola">T<span class="gap">·</span>RCIA</span>
+      </div>
+      <div class="cp-riga">
+        <span class="emo" aria-hidden="true">🏥</span>
+        <span class="parola"><span class="gap">·</span>SPEDALE</span>
+      </div>
+      <div class="cp-riga">
+        <span class="emo" aria-hidden="true">🎒</span>
+        <span class="parola"><span class="gap">·</span>AINO</span>
+      </div>
+      <div class="cp-riga">
+        <span class="emo" aria-hidden="true">🤝</span>
+        <span class="parola">A<span class="gap">·</span>UTO</span>
+      </div>
+    </div>
+
+    <div class="sezione-titolo">
+      <span class="num">2</span>
+      <h2>Senza banca — scrivi tu la parola intera</h2>
+    </div>
+
+    <p class="scheda-intro" style="margin-top:0;">
+      Guarda la figura e l'indizio, poi scrivi la parola completa sulla riga.
+    </p>
+
+    <div class="cp-traduci">
+      <div class="indizio">
+        <span class="emo" aria-hidden="true">📞</span>
+        <span class="testo-indizio">Il numero per le emergenze</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="indizio">
+        <span class="emo" aria-hidden="true">👨‍🚒</span>
+        <span class="testo-indizio">Spegne gli incendi</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="indizio">
+        <span class="emo" aria-hidden="true">🤝</span>
+        <span class="testo-indizio">Aiuta gli altri senza essere pagato</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="indizio">
+        <span class="emo" aria-hidden="true">🌧️</span>
+        <span class="testo-indizio">Cade dal cielo quando piove forte</span>
+        <span class="riga-vuota" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul>
+        <li><strong>Sezione 1 — Soluzioni:</strong> CASCO, SIRENA, FUOCO, RADIO, MAPPA, USCITA, TORCIA, OSPEDALE, ZAINO, AIUTO. Le lettere mancanti sono: A, R, F, I, M, U, O, O, Z, I.</li>
+        <li><strong>Sezione 2 — Soluzioni accettabili:</strong> 112, POMPIERE (o VIGILE DEL FUOCO), VOLONTARIO, PIOGGIA (o ACQUA).</li>
+        <li><strong>Estensione orale:</strong> dopo la scheda, ogni alunno legge ad alta voce due parole completate, scandendo bene le sillabe.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Completa la parola" · Primaria 1ª-2ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>
