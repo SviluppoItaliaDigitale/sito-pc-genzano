@@ -51,12 +51,27 @@
   {{ partial "sos-112.html" . }}
   <button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina" title="Torna su">
     <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    <span class="back-to-top-label visually-hidden" data-default="Torna in cima alla pagina" data-toc="Torna all'indice">Torna in cima alla pagina</span>
   </button>
   <script src="{{ "vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js" | relURL }}"></script>
   <script src="{{ "js/ext-widgets.js" | relURL }}" defer></script>
   <script>
-    // Back to top
-    (function(){var b=document.getElementById('backToTop');window.addEventListener('scroll',function(){b.classList.toggle('visible',window.scrollY>300)});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})})();
+    // Back to top — se la pagina ha un indice (#indice), salta direttamente lì,
+    // altrimenti torna in cima. La label aria si adatta al contesto.
+    (function(){
+      var b=document.getElementById('backToTop');
+      if(!b)return;
+      var idx=document.getElementById('indice');
+      if(idx){
+        b.setAttribute('aria-label','Torna all’indice della pagina');
+        b.setAttribute('title','Torna all’indice');
+      }
+      window.addEventListener('scroll',function(){b.classList.toggle('visible',window.scrollY>300)});
+      b.addEventListener('click',function(){
+        if(idx){idx.scrollIntoView({behavior:'smooth',block:'start'});idx.focus({preventScroll:true});}
+        else{window.scrollTo({top:0,behavior:'smooth'});}
+      });
+    })();
     // Scroll animations
     (function(){var e=document.querySelectorAll('.fade-in-up');if(!e.length)return;var o=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});e.forEach(function(el){o.observe(el)})})();
   </script>

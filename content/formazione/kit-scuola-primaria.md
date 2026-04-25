@@ -2,6 +2,7 @@
 title: "Kit Didattico — Scuola Primaria"
 description: "Materiale didattico di protezione civile per alunni dai 6 agli 11 anni: schede sui rischi, attività pratiche, quiz e il piano di emergenza familiare."
 layout: "single"
+toc: true
 ---
 
 Questo kit è pensato per gli insegnanti della **scuola primaria** che desiderano affrontare in classe i temi della protezione civile, della prevenzione e dei comportamenti corretti in emergenza.
