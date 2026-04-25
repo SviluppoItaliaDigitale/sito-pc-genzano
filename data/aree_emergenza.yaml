@@ -1,0 +1,136 @@
+# Aree di emergenza del Piano di Protezione Civile di Genzano di Roma.
+#
+# Coordinate ottenute da Nominatim (OpenStreetMap) e contrassegnate
+# come "verified: true". Per i 4 punti che Nominatim non ha trovato
+# direttamente, ho usato stime ragionevoli basate sull'area indicata
+# negli indirizzi e contrassegnato "verified: false" — il Comune o un
+# volontario può correggere queste 4 coordinate verificandole sul campo
+# o con il GIS comunale.
+#
+# Tipi di area:
+#   AA = Area di Attesa della popolazione (10 punti)
+#   AS = Area di Ammassamento Soccorritori (2 punti)
+#   AR = Area di Ricovero della popolazione (4 punti)
+
+aree:
+  # ────────────── AREE DI ATTESA POPOLAZIONE (AA) ──────────────
+  - id: AA1
+    tipo: AA
+    nome: "Palazzo Sforza"
+    indirizzo: "Piazza Tommaso Frasconi"
+    lat: 41.7070760
+    lon: 12.6885294
+    verified: true
+  - id: AA2
+    tipo: AA
+    nome: "Via Piave"
+    indirizzo: "Parcheggio Via Piave"
+    # Stima: quartiere residenziale a ovest del centro
+    lat: 41.6975
+    lon: 12.6880
+    verified: false
+  - id: AA3
+    tipo: AA
+    nome: "Via Toscana"
+    indirizzo: "Parcheggio incrocio Via Toscana / Via Lazio"
+    lat: 41.6956261
+    lon: 12.6978090
+    verified: true
+  - id: AA4
+    tipo: AA
+    nome: "Via Enrico Mattei"
+    indirizzo: "Parcheggio Via Enrico Mattei"
+    lat: 41.6974780
+    lon: 12.6964705
+    verified: true
+  - id: AA5
+    tipo: AA
+    nome: "Via Napoli"
+    indirizzo: "Parcheggio incrocio Via Napoli / Via Emilia Romagna"
+    lat: 41.7001444
+    lon: 12.6836121
+    verified: true
+  - id: AA6
+    tipo: AA
+    nome: "Palazzetto dello Sport"
+    indirizzo: "Parcheggio Via G. di Vittorio"
+    lat: 41.7057868
+    lon: 12.6888068
+    verified: true
+  - id: AA7
+    tipo: AA
+    nome: "Carlo Alberto dalla Chiesa"
+    indirizzo: "Parcheggio Scuola C. A. dalla Chiesa, Via Appia Vecchia"
+    lat: 41.6916280
+    lon: 12.7019110
+    verified: true
+  - id: AA8
+    tipo: AA
+    nome: "Zona Industriale"
+    indirizzo: "Parcheggio Via del Lavoro"
+    # Stima: zona industriale sud-est di Genzano
+    lat: 41.6850
+    lon: 12.7060
+    verified: false
+  - id: AA9
+    tipo: AA
+    nome: "Colli di Cicerone"
+    indirizzo: "Parcheggio Via Colli di Cicerone"
+    lat: 41.6477973
+    lon: 12.7256662
+    verified: true
+  - id: AA10
+    tipo: AA
+    nome: "Landi"
+    indirizzo: "Piazzale Frazione Landi"
+    lat: 41.6492637
+    lon: 12.7153220
+    verified: true
+
+  # ────────────── AREE DI AMMASSAMENTO SOCCORRITORI (AS) ──────────────
+  - id: AS1
+    tipo: AS
+    nome: "Via del Lavoro"
+    indirizzo: "Via del Lavoro (Zona Industriale)"
+    # Stima: zona industriale, lato opposto di AA8
+    lat: 41.6845
+    lon: 12.7080
+    verified: false
+  - id: AS2
+    tipo: AS
+    nome: "Viale Mazzini"
+    indirizzo: "Viale G. Mazzini"
+    lat: 41.7111658
+    lon: 12.6900366
+    verified: true
+
+  # ────────────── AREE DI RICOVERO POPOLAZIONE (AR) ──────────────
+  - id: AR1
+    tipo: AR
+    nome: "Palazzetto dello Sport"
+    indirizzo: "Area esterna Palazzetto dello Sport, Via G. di Vittorio"
+    lat: 41.7014693
+    lon: 12.6942566
+    verified: true
+  - id: AR2
+    tipo: AR
+    nome: "Campo Sportivo Via Piemonte"
+    indirizzo: "Via Piemonte"
+    lat: 41.7028547
+    lon: 12.6956564
+    verified: true
+  - id: AR3
+    tipo: AR
+    nome: "Campo Sportivo Via Sardegna"
+    indirizzo: "Via Sardegna"
+    lat: 41.6999175
+    lon: 12.6966140
+    verified: true
+  - id: AR4
+    tipo: AR
+    nome: "Campo Sportivo Salesiani"
+    indirizzo: "Via Appia Nuova (Salesiani)"
+    # Stima: Istituto Salesiani su Via Appia Nuova, area est-sud-est
+    lat: 41.6810
+    lon: 12.7110
+    verified: false

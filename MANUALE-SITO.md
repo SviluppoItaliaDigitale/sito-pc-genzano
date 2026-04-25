@@ -1713,6 +1713,48 @@ Caratteristiche tecniche:
 
 Inserito in `baseof.html` via `{{ partial "sos-112.html" . }}` — appare in tutte le pagine Hugo. NON appare nei giochi/app standalone (che hanno il proprio HTML, non baseof.html).
 
+### 4.14 — Mappa interattiva delle aree di emergenza (`/cartografia/`)
+
+La pagina `content/cartografia/_index.md` mostra in cima alla sezione una **mappa interattiva** con i 16 punti del Piano di Emergenza Comunale (10 Aree di Attesa, 2 Ammassamento Soccorritori, 4 Aree di Ricovero). La mappa è costruita su tre componenti:
+
+1. **Dati**: `data/aree_emergenza.yaml` — array di oggetti con `id`, `tipo` (AA/AS/AR), `nome`, `indirizzo`, `lat`, `lon`, `verified`.
+2. **Shortcode**: `{{< mappa-aree >}}` definito in `themes/flavour-pcgenzano/layouts/shortcodes/mappa-aree.html` — incorpora CSS, JS, marker SVG colorati, popup con link a Google Maps + cartello segnaletico, filtri per tipologia, geolocalizzazione "Centra sulla mia posizione".
+3. **Libreria**: Leaflet 1.9.4 self-hosted in `themes/flavour-pcgenzano/static/vendor/leaflet/` (CSS, JS, immagini marker). Nessun CDN esterno: tutto è servito dal nostro stesso dominio.
+
+**Tile cartografiche**: OpenStreetMap (`tile.openstreetmap.org`). Le tile sono caricate al primo accesso alla pagina, senza cookie di profilazione, ma il fornitore vede l'IP dell'utente. Citato esplicitamente nella [Privacy Policy](/privacy/) sezione "Cartografia interattiva".
+
+**Geolocalizzazione**: usa `navigator.geolocation.getCurrentPosition` del browser, dopo esplicito consenso. La posizione è elaborata localmente per centrare la mappa, mai inviata al nostro server. Il bottone è disattivato se il browser non supporta l'API.
+
+**Marker e colori** (riprodotti come pallini nei popup):
+- AA — Aree di Attesa: blu `#0d6efd`
+- AS — Ammassamento Soccorritori: arancione `#ea580c`
+- AR — Aree di Ricovero: verde `#198754`
+
+**Coordinate verificate vs stimate**: 12 dei 16 punti sono stati geocodificati via API Nominatim e contrassegnati `verified: true`. I 4 rimanenti (AA2 Via Piave, AA8 Zona Industriale, AS1 Via del Lavoro, AR4 Salesiani) hanno coordinate stimate sulla base dell'area indicata — il popup mostra un badge "stimata" e il disclaimer in cima alla mappa lo segnala. Per correggere una coordinata: aprire `data/aree_emergenza.yaml`, aggiornare `lat`/`lon` con il valore reale, mettere `verified: true`, commit e push.
+
+**Accessibilità**:
+- Map div con `role="application"` e `aria-label` esplicito.
+- Tabelle complete sotto la mappa restano la fonte accessibile equivalente per chi non può usare il visualizzatore.
+- Filtri tipologia sono `<button>` con `aria-pressed` toggle.
+- Marker hanno `title` e `alt` con ID + nome + tipologia.
+- `<noscript>` rimanda alle tabelle se JavaScript è disattivato.
+- Scroll wheel zoom disabilitato di default (si attiva al focus della mappa) per non bloccare lo scroll della pagina su mobile.
+
+**Aggiungere un nuovo punto**:
+
+```yaml
+# In data/aree_emergenza.yaml
+- id: AA11
+  tipo: AA
+  nome: "Nuova area"
+  indirizzo: "Via Esempio, snc"
+  lat: 41.7000000
+  lon: 12.6900000
+  verified: true
+```
+
+Ricordarsi di aggiungere anche la riga corrispondente nelle tabelle di `content/cartografia/_index.md` (le tabelle restano fonte accessibile e il PDF del Piano va aggiornato manualmente).
+
 ---
 
 ## Parte 5 — Checklist pre-pubblicazione

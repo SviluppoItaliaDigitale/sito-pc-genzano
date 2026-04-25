@@ -1,0 +1,215 @@
+{{/* Shortcode mappa-aree: mappa interattiva Leaflet con i punti del Piano di
+     Emergenza Comunale (Aree di Attesa, Ammassamento Soccorritori, Ricovero).
+     I dati sono letti da data/aree_emergenza.yaml.
+     Tile layer: OpenStreetMap (terze parti — citato in privacy).
+     Leaflet 1.9.4 self-hosted in static/vendor/leaflet/. */}}
+
+{{ $aree := site.Data.aree_emergenza.aree }}
+{{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
+{{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
+
+<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+
+<style>
+.mappa-aree-wrapper{margin:1.5rem 0 2rem 0}
+.mappa-aree-toolbar{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;margin-bottom:0.75rem}
+.mappa-aree-toolbar .btn{font-weight:600}
+.mappa-aree-filter{display:inline-flex;align-items:center;gap:0.4rem;border:2px solid transparent;background:#fff;padding:0.4rem 0.85rem;border-radius:999px;font-size:0.95rem;cursor:pointer;transition:all 0.15s}
+.mappa-aree-filter[aria-pressed="true"]{color:#fff}
+.mappa-aree-filter[aria-pressed="false"]{color:#333;background:#f0f0f0}
+.mappa-aree-filter:focus-visible{outline:3px solid #ffbe2e;outline-offset:2px}
+.mappa-aree-filter .pallino{width:0.85rem;height:0.85rem;border-radius:50%;display:inline-block;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,0.2)}
+.mappa-aree-filter[data-tipo="AA"][aria-pressed="true"]{background:#0d6efd;border-color:#0d6efd}
+.mappa-aree-filter[data-tipo="AS"][aria-pressed="true"]{background:#ea580c;border-color:#ea580c}
+.mappa-aree-filter[data-tipo="AR"][aria-pressed="true"]{background:#198754;border-color:#198754}
+#mappa-aree{height:520px;width:100%;border-radius:8px;border:2px solid #003366;box-shadow:0 4px 12px rgba(0,0,0,0.08);background:#eaeaea}
+@media (max-width: 575px){#mappa-aree{height:440px}}
+.mappa-aree-popup h3{font-size:1.05rem;color:#003366;margin:0 0 0.4rem 0;font-weight:700}
+.mappa-aree-popup .badge-tipo{display:inline-block;color:#fff;padding:0.15rem 0.55rem;border-radius:4px;font-size:0.75rem;font-weight:700;letter-spacing:0.03em;margin-bottom:0.4rem}
+.mappa-aree-popup .indirizzo{margin:0 0 0.6rem 0;font-size:0.9rem;color:#333}
+.mappa-aree-popup .azioni{display:flex;flex-direction:column;gap:0.3rem;margin-top:0.4rem}
+.mappa-aree-popup .azioni a{font-size:0.85rem}
+.mappa-marker-pin{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.78rem;color:#fff;width:32px;height:42px;text-align:center;line-height:1;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.mappa-marker-pin span{transform:translateY(-3px);text-shadow:0 1px 1px rgba(0,0,0,0.6)}
+.mappa-aree-disclaimer{font-size:0.85rem;color:#555;margin-top:0.6rem;padding:0.6rem 0.85rem;background:#fff8e1;border-left:4px solid #f59e0b;border-radius:4px}
+.mappa-aree-disclaimer strong{color:#854d0e}
+.mappa-aree-noscript{padding:1rem;background:#fff3cd;border:1px solid #f0c36d;border-radius:6px;color:#664d03}
+</style>
+
+<div class="mappa-aree-wrapper" aria-labelledby="mappa-aree-titolo">
+  <h2 id="mappa-aree-titolo" class="h3 mt-0 mb-3" style="color:#003366">
+    <i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>Mappa interattiva delle aree
+  </h2>
+
+  <p class="mb-2">Filtra le tipologie di area, clicca un punto per i dettagli, oppure usa la tua posizione per trovare l'area più vicina. Le tabelle complete sono <a href="#aree-di-attesa-della-popolazione-aa">subito sotto la mappa</a>.</p>
+
+  <div class="mappa-aree-toolbar" role="group" aria-label="Filtri tipologia aree">
+    <button type="button" class="mappa-aree-filter" data-tipo="AA" aria-pressed="true">
+      <span class="pallino" style="background:#0d6efd" aria-hidden="true"></span>
+      Aree di Attesa
+    </button>
+    <button type="button" class="mappa-aree-filter" data-tipo="AS" aria-pressed="true">
+      <span class="pallino" style="background:#ea580c" aria-hidden="true"></span>
+      Ammassamento Soccorritori
+    </button>
+    <button type="button" class="mappa-aree-filter" data-tipo="AR" aria-pressed="true">
+      <span class="pallino" style="background:#198754" aria-hidden="true"></span>
+      Aree di Ricovero
+    </button>
+    <button type="button" class="btn btn-outline-primary btn-sm ms-auto" id="btn-mia-posizione">
+      <i class="bi bi-crosshair me-1" aria-hidden="true"></i>Centra sulla mia posizione
+    </button>
+  </div>
+
+  <div id="mappa-aree" role="application" aria-label="Mappa delle aree di emergenza di Genzano di Roma. La lista accessibile delle stesse aree è disponibile nelle tabelle sottostanti."></div>
+
+  <noscript>
+    <div class="mappa-aree-noscript mt-3" role="note">
+      <strong>JavaScript disattivato:</strong> per visualizzare la mappa interattiva è necessario abilitare JavaScript. Le aree sono comunque elencate in modo accessibile nelle tabelle sottostanti.
+    </div>
+  </noscript>
+
+  <p class="mappa-aree-disclaimer mt-3" role="note">
+    <strong>Nota tecnica:</strong> 4 punti su 16 hanno coordinate stimate sulla base dell'indirizzo (AA2 Via Piave, AA8 Zona Industriale, AS1 Via del Lavoro, AR4 Salesiani). Verifiche sul campo sono in corso. Per indicazioni operative ufficiali consulta sempre il <a href="/area-download/">PDF del Piano</a> e le tabelle sottostanti.
+  </p>
+  <p class="small text-muted mt-2 mb-0">Mappa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> — libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 self-hosted.</p>
+</div>
+
+<script src="{{ $leafletJS }}" crossorigin=""></script>
+<script id="dati-aree-emergenza" type="application/json">{{ $aree | jsonify | safeJS }}</script>
+<script>
+(function(){
+  if (typeof L === 'undefined') return;
+  var dati;
+  try {
+    dati = JSON.parse(document.getElementById('dati-aree-emergenza').textContent);
+  } catch(e) { return; }
+  if (!dati || !dati.length) return;
+
+  var COLORI = { AA: '#0d6efd', AS: '#ea580c', AR: '#198754' };
+  var ETICHETTE = {
+    AA: 'Area di Attesa',
+    AS: 'Area di Ammassamento Soccorritori',
+    AR: 'Area di Ricovero'
+  };
+
+  var centro = [41.7045, 12.6890];
+  var mappa = L.map('mappa-aree', {
+    center: centro,
+    zoom: 13,
+    scrollWheelZoom: false
+  });
+  mappa.on('focus', function(){ mappa.scrollWheelZoom.enable(); });
+  mappa.on('blur',  function(){ mappa.scrollWheelZoom.disable(); });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+  }).addTo(mappa);
+
+  function creaIcona(tipo, id){
+    var colore = COLORI[tipo] || '#003366';
+    var html = ''
+      + '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="42" viewBox="0 0 32 42" aria-hidden="true">'
+      + '<path d="M16 0C7.2 0 0 7 0 15.6 0 27.5 16 42 16 42S32 27.5 32 15.6C32 7 24.8 0 16 0z" fill="' + colore + '" stroke="#fff" stroke-width="2"/>'
+      + '<circle cx="16" cy="15" r="9" fill="#fff"/>'
+      + '<text x="16" y="19" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="' + colore + '">' + id + '</text>'
+      + '</svg>';
+    return L.divIcon({
+      className: 'mappa-marker-divicon',
+      html: html,
+      iconSize: [32, 42],
+      iconAnchor: [16, 42],
+      popupAnchor: [0, -38]
+    });
+  }
+
+  function creaPopup(p){
+    var coordsParam = encodeURIComponent(p.lat + ',' + p.lon);
+    var nomeParam = encodeURIComponent(p.nome + ' ' + p.indirizzo + ' Genzano di Roma');
+    var cartelloUrl = '/cartelli/' + p.id + '.png';
+    if (p.tipo === 'AS' || p.tipo === 'AR') cartelloUrl = '/cartelli/' + p.id.toLowerCase() + '.png';
+
+    var verificato = p.verified
+      ? '<span class="badge bg-success-subtle text-success-emphasis" style="background:#d1fae5;color:#065f46;font-size:0.7rem;padding:0.15rem 0.45rem;border-radius:3px;margin-left:0.3rem">verificata</span>'
+      : '<span class="badge bg-warning-subtle text-warning-emphasis" style="background:#fef3c7;color:#854d0e;font-size:0.7rem;padding:0.15rem 0.45rem;border-radius:3px;margin-left:0.3rem" title="Coordinate stimate sulla base dell\'indirizzo">stimata</span>';
+
+    return ''
+      + '<div class="mappa-aree-popup">'
+      + '<span class="badge-tipo" style="background:' + (COLORI[p.tipo] || '#003366') + '">' + p.id + ' · ' + ETICHETTE[p.tipo] + '</span>' + verificato
+      + '<h3>' + p.nome + '</h3>'
+      + '<p class="indirizzo"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>' + p.indirizzo + '</p>'
+      + '<div class="azioni">'
+      +   '<a href="' + cartelloUrl + '" target="_blank" rel="noopener"><i class="bi bi-image me-1" aria-hidden="true"></i>Vedi cartello segnaletico</a>'
+      +   '<a href="https://www.google.com/maps/dir/?api=1&destination=' + coordsParam + '&destination_place_id=' + nomeParam + '" target="_blank" rel="noopener noreferrer"><i class="bi bi-signpost-2 me-1" aria-hidden="true"></i>Indicazioni stradali (Google Maps)</a>'
+      +   '<a href="https://www.openstreetmap.org/?mlat=' + p.lat + '&mlon=' + p.lon + '#map=18/' + p.lat + '/' + p.lon + '" target="_blank" rel="noopener noreferrer"><i class="bi bi-map me-1" aria-hidden="true"></i>Apri su OpenStreetMap</a>'
+      + '</div>'
+      + '</div>';
+  }
+
+  var gruppi = { AA: L.layerGroup(), AS: L.layerGroup(), AR: L.layerGroup() };
+  var bounds = L.latLngBounds([]);
+
+  dati.forEach(function(p){
+    if (typeof p.lat !== 'number' || typeof p.lon !== 'number') return;
+    var marker = L.marker([p.lat, p.lon], {
+      icon: creaIcona(p.tipo, p.id),
+      title: p.id + ' — ' + p.nome,
+      alt: p.id + ' ' + p.nome + ' (' + ETICHETTE[p.tipo] + ')',
+      keyboard: true,
+      riseOnHover: true
+    });
+    marker.bindPopup(creaPopup(p), { maxWidth: 320, minWidth: 240 });
+    if (gruppi[p.tipo]) {
+      marker.addTo(gruppi[p.tipo]);
+      bounds.extend([p.lat, p.lon]);
+    }
+  });
+
+  Object.keys(gruppi).forEach(function(k){ gruppi[k].addTo(mappa); });
+  if (bounds.isValid()) mappa.fitBounds(bounds, { padding: [30, 30] });
+
+  // Filtri
+  document.querySelectorAll('.mappa-aree-filter').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var tipo = btn.dataset.tipo;
+      var attivo = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', attivo ? 'false' : 'true');
+      if (attivo) mappa.removeLayer(gruppi[tipo]);
+      else gruppi[tipo].addTo(mappa);
+    });
+  });
+
+  // Geolocalizzazione
+  var btnPos = document.getElementById('btn-mia-posizione');
+  var marcatorePos = null;
+  if (btnPos && 'geolocation' in navigator) {
+    btnPos.addEventListener('click', function(){
+      btnPos.disabled = true;
+      var testoOrig = btnPos.innerHTML;
+      btnPos.innerHTML = '<i class="bi bi-hourglass-split me-1" aria-hidden="true"></i>Localizzazione…';
+      navigator.geolocation.getCurrentPosition(
+        function(pos){
+          var ll = [pos.coords.latitude, pos.coords.longitude];
+          if (marcatorePos) mappa.removeLayer(marcatorePos);
+          marcatorePos = L.circleMarker(ll, {
+            radius: 9, color: '#fff', weight: 3, fillColor: '#dc3545', fillOpacity: 0.9
+          }).addTo(mappa).bindPopup('La tua posizione attuale').openPopup();
+          mappa.setView(ll, 15);
+          btnPos.innerHTML = testoOrig;
+          btnPos.disabled = false;
+        },
+        function(err){
+          alert('Non riesco a leggere la tua posizione: ' + err.message + '\n\nVerifica di aver autorizzato la geolocalizzazione nel browser.');
+          btnPos.innerHTML = testoOrig;
+          btnPos.disabled = false;
+        },
+        { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+      );
+    });
+  } else if (btnPos) {
+    btnPos.disabled = true;
+    btnPos.title = 'Geolocalizzazione non disponibile in questo browser';
+  }
+})();
+</script>
