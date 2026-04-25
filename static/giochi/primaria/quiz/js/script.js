@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Le scale, con calma e senza correre', correct: true },
                 { text: 'Resto sempre dentro casa', correct: false }
             ],
-            explanation: 'Le scale sono la via di uscita pi\u00f9 sicura. L\'ascensore potrebbe bloccarsi e la fretta pu\u00f2 causare cadute.'
+            explanation: 'Le scale sono la via di uscita più sicura. L\'ascensore potrebbe bloccarsi e la fretta può causare cadute.'
         },
         {
             category: 'terremoto',
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Mi metto vicino alla finestra', correct: false },
                 { text: 'Chiamo i miei genitori al telefono', correct: false }
             ],
-            explanation: 'Sotto il banco sei protetto da quello che pu\u00f2 cadere. Le finestre possono rompersi, stai lontano!'
+            explanation: 'Sotto il banco sei protetto da quello che può cadere. Le finestre possono rompersi, stai lontano!'
         },
         {
             category: 'terremoto',
@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Sotto un albero grande', correct: false },
                 { text: 'Vicino a un muro alto', correct: false },
                 { text: 'In uno spazio aperto, lontano da edifici e alberi', correct: true },
-                { text: 'Dentro il bar pi\u00f9 vicino', correct: false }
+                { text: 'Dentro il bar più vicino', correct: false }
             ],
-            explanation: 'In uno spazio aperto non rischi che ti cadano addosso muri, tegole o rami. Stai lontano da tutto quello che pu\u00f2 crollare!'
+            explanation: 'In uno spazio aperto non rischi che ti cadano addosso muri, tegole o rami. Stai lontano da tutto quello che può crollare!'
         },
         {
             category: 'terremoto',
@@ -87,29 +87,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'La testa e il collo', correct: true },
                 { text: 'Le scarpe', correct: false }
             ],
-            explanation: 'La testa \u00e8 la parte pi\u00f9 importante da proteggere. Usa le braccia, un cuscino o mettiti sotto qualcosa di solido!'
+            explanation: 'La testa è la parte più importante da proteggere. Usa le braccia, un cuscino o mettiti sotto qualcosa di solido!'
         },
         {
             category: 'terremoto',
-            question: 'Dopo un terremoto, perch\u00e9 \u00e8 meglio indossare le scarpe prima di uscire?',
+            question: 'Dopo un terremoto, perché è meglio indossare le scarpe prima di uscire?',
             answers: [
-                { text: 'Per correre pi\u00f9 veloce', correct: false },
-                { text: 'Perch\u00e9 per terra ci possono essere vetri rotti e calcinacci', correct: true },
+                { text: 'Per correre più veloce', correct: false },
+                { text: 'Perché per terra ci possono essere vetri rotti e calcinacci', correct: true },
                 { text: 'Per non prendere freddo ai piedi', correct: false },
-                { text: 'Non serve, si pu\u00f2 uscire scalzi', correct: false }
+                { text: 'Non serve, si può uscire scalzi', correct: false }
             ],
             explanation: 'Dopo una scossa per terra ci possono essere pezzi di vetro, tegole e mattoni. Le scarpe ti proteggono i piedi!'
         },
         {
             category: 'terremoto',
-            question: 'Si pu\u00f2 prevedere quando arriva un terremoto?',
+            question: 'Si può prevedere quando arriva un terremoto?',
             answers: [
-                { text: 'S\u00ec, i meteorologi lo annunciano in TV', correct: false },
-                { text: 'S\u00ec, gli animali lo sentono sempre prima', correct: false },
+                { text: 'Sì, i meteorologi lo annunciano in TV', correct: false },
+                { text: 'Sì, gli animali lo sentono sempre prima', correct: false },
                 { text: 'No, i terremoti non si possono prevedere', correct: true },
-                { text: 'S\u00ec, basta guardare le crepe nei muri', correct: false }
+                { text: 'Sì, basta guardare le crepe nei muri', correct: false }
             ],
-            explanation: 'Nessuno pu\u00f2 sapere in anticipo quando ci sar\u00e0 un terremoto. Per questo bisogna essere sempre preparati!'
+            explanation: 'Nessuno può sapere in anticipo quando ci sarà un terremoto. Per questo bisogna essere sempre preparati!'
         },
         {
             category: 'terremoto',
@@ -120,18 +120,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Accelerare per fuggire', correct: false },
                 { text: 'Suonare il clacson per chiedere aiuto', correct: false }
             ],
-            explanation: 'In auto si \u00e8 abbastanza protetti. Bisogna fermarsi in un posto aperto e aspettare che la scossa finisca.'
+            explanation: 'In auto si è abbastanza protetti. Bisogna fermarsi in un posto aperto e aspettare che la scossa finisca.'
         },
         {
             category: 'terremoto',
             question: 'Dopo il terremoto, puoi rientrare subito in casa?',
             answers: [
-                { text: 'S\u00ec, per prendere i giocattoli', correct: false },
-                { text: 'S\u00ec, se la porta si apre', correct: false },
-                { text: 'No, bisogna aspettare che le autorit\u00e0 dicano che \u00e8 sicuro', correct: true },
-                { text: 'S\u00ec, se non ci sono crepe visibili', correct: false }
+                { text: 'Sì, per prendere i giocattoli', correct: false },
+                { text: 'Sì, se la porta si apre', correct: false },
+                { text: 'No, bisogna aspettare che le autorità dicano che è sicuro', correct: true },
+                { text: 'Sì, se non ci sono crepe visibili', correct: false }
             ],
-            explanation: 'Anche se la casa sembra a posto, potrebbero esserci danni nascosti. Solo i tecnici possono dire se \u00e8 sicura!'
+            explanation: 'Anche se la casa sembra a posto, potrebbero esserci danni nascosti. Solo i tecnici possono dire se è sicura!'
         },
 
         // ═══════════════════════════════════════
@@ -144,42 +144,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Cerco di spegnerlo da solo', correct: false },
                 { text: 'Chiamo subito il 112', correct: true },
                 { text: 'Faccio un video da postare', correct: false },
-                { text: 'Non faccio niente, passer\u00e0 da solo', correct: false }
+                { text: 'Non faccio niente, passerà da solo', correct: false }
             ],
-            explanation: 'Mai provare a spegnere un incendio da solo! Chiama subito il 112 e allontanati dal fuoco. Nel Lazio il 112 \u00e8 l\'unico numero di emergenza da chiamare.'
+            explanation: 'Mai provare a spegnere un incendio da solo! Chiama subito il 112 e allontanati dal fuoco. Nel Lazio il 112 è l\'unico numero di emergenza da chiamare.'
         },
         {
             category: 'incendio',
             question: 'In caso di incendio in un edificio, cosa NON devi fare?',
             answers: [
                 { text: 'Camminare carponi vicino al pavimento', correct: false },
-                { text: 'Usare l\'ascensore per scendere pi\u00f9 veloce', correct: true },
+                { text: 'Usare l\'ascensore per scendere più veloce', correct: true },
                 { text: 'Coprirmi naso e bocca con un panno bagnato', correct: false },
                 { text: 'Seguire le indicazioni dell\'insegnante', correct: false }
             ],
-            explanation: 'L\'ascensore pu\u00f2 bloccarsi e riempirsi di fumo. Usa sempre le scale e copri naso e bocca.'
+            explanation: 'L\'ascensore può bloccarsi e riempirsi di fumo. Usa sempre le scale e copri naso e bocca.'
         },
         {
             category: 'incendio',
-            question: 'Perch\u00e9 durante un incendio bisogna stare bassi vicino al pavimento?',
+            question: 'Perché durante un incendio bisogna stare bassi vicino al pavimento?',
             answers: [
-                { text: 'Perch\u00e9 il pavimento \u00e8 pi\u00f9 fresco', correct: false },
-                { text: 'Perch\u00e9 il fumo caldo sale verso l\'alto e in basso si respira meglio', correct: true },
+                { text: 'Perché il pavimento è più fresco', correct: false },
+                { text: 'Perché il fumo caldo sale verso l\'alto e in basso si respira meglio', correct: true },
                 { text: 'Per non farsi vedere dalle fiamme', correct: false },
-                { text: 'Perch\u00e9 \u00e8 pi\u00f9 facile correre', correct: false }
+                { text: 'Perché è più facile correre', correct: false }
             ],
-            explanation: 'Il fumo tossico sale verso l\'alto. Vicino al pavimento l\'aria \u00e8 pi\u00f9 pulita e puoi respirare meglio.'
+            explanation: 'Il fumo tossico sale verso l\'alto. Vicino al pavimento l\'aria è più pulita e puoi respirare meglio.'
         },
         {
             category: 'incendio',
-            question: 'Cosa pu\u00f2 causare un incendio nel bosco?',
+            question: 'Cosa può causare un incendio nel bosco?',
             answers: [
                 { text: 'La pioggia', correct: false },
                 { text: 'Un mozzicone di sigaretta gettato a terra', correct: true },
                 { text: 'Il vento leggero', correct: false },
                 { text: 'Gli uccelli', correct: false }
             ],
-            explanation: 'Un piccolo mozzicone pu\u00f2 incendiare un intero bosco! Non si getta mai nulla per terra, soprattutto in estate.'
+            explanation: 'Un piccolo mozzicone può incendiare un intero bosco! Non si getta mai nulla per terra, soprattutto in estate.'
         },
         {
             category: 'incendio',
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'incendio',
             question: 'A cosa serve l\'estintore che vedi a scuola?',
             answers: [
-                { text: '\u00c8 un giocattolo rosso per decorare il corridoio', correct: false },
+                { text: 'È un giocattolo rosso per decorare il corridoio', correct: false },
                 { text: 'Serve a spegnere un piccolo fuoco appena iniziato', correct: true },
                 { text: 'Serve a fare il ghiaccio', correct: false },
                 { text: 'Si usa per pulire i pavimenti', correct: false }
@@ -205,12 +205,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'incendio',
-            question: 'In estate, perch\u00e9 \u00e8 vietato accendere fuochi vicino al bosco?',
+            question: 'In estate, perché è vietato accendere fuochi vicino al bosco?',
             answers: [
-                { text: 'Perch\u00e9 fa troppo caldo per il fuoco', correct: false },
-                { text: 'Perch\u00e9 la vegetazione secca prende fuoco facilmente', correct: true },
-                { text: 'Perch\u00e9 si disturbano gli animali', correct: false },
-                { text: 'Non \u00e8 vietato, si pu\u00f2 fare se si sta attenti', correct: false }
+                { text: 'Perché fa troppo caldo per il fuoco', correct: false },
+                { text: 'Perché la vegetazione secca prende fuoco facilmente', correct: true },
+                { text: 'Perché si disturbano gli animali', correct: false },
+                { text: 'Non è vietato, si può fare se si sta attenti', correct: false }
             ],
             explanation: 'In estate piove poco e le foglie secche prendono fuoco con una sola scintilla. Basta pochissimo per un disastro!'
         },
@@ -221,9 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Correre velocissimo', correct: false },
                 { text: 'Fermarmi, buttarmi a terra e rotolarmi', correct: true },
                 { text: 'Togliere i vestiti tirando forte', correct: false },
-                { text: 'Saltare su e gi\u00f9', correct: false }
+                { text: 'Saltare su e giù', correct: false }
             ],
-            explanation: 'Fermati, buttati a terra e rotola: cos\u00ec soffochi le fiamme. Correre fa entrare pi\u00f9 aria e il fuoco aumenta!'
+            explanation: 'Fermati, buttati a terra e rotola: così soffochi le fiamme. Correre fa entrare più aria e il fuoco aumenta!'
         },
         {
             category: 'incendio',
@@ -249,73 +249,73 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Vado ai piani alti e resto lontano dall\'acqua', correct: true },
                 { text: 'Attraverso la strada allagata a piedi', correct: false }
             ],
-            explanation: 'I piani alti sono il posto pi\u00f9 sicuro. L\'acqua pu\u00f2 essere pericolosa anche se sembra bassa!'
+            explanation: 'I piani alti sono il posto più sicuro. L\'acqua può essere pericolosa anche se sembra bassa!'
         },
         {
             category: 'alluvione',
-            question: 'Durante un\'alluvione, perch\u00e9 non bisogna scendere in cantina?',
+            question: 'Durante un\'alluvione, perché non bisogna scendere in cantina?',
             answers: [
-                { text: 'Perch\u00e9 \u00e8 buio', correct: false },
-                { text: 'Perch\u00e9 l\'acqua pu\u00f2 riempirla velocemente e restare intrappolati', correct: true },
-                { text: 'Perch\u00e9 c\'\u00e8 troppo disordine', correct: false },
-                { text: 'Perch\u00e9 fa freddo', correct: false }
+                { text: 'Perché è buio', correct: false },
+                { text: 'Perché l\'acqua può riempirla velocemente e restare intrappolati', correct: true },
+                { text: 'Perché c\'è troppo disordine', correct: false },
+                { text: 'Perché fa freddo', correct: false }
             ],
-            explanation: 'La cantina \u00e8 il primo posto che si riempie d\'acqua. Si rischia di restare intrappolati senza via di uscita.'
+            explanation: 'La cantina è il primo posto che si riempie d\'acqua. Si rischia di restare intrappolati senza via di uscita.'
         },
         {
             category: 'alluvione',
-            question: 'Perch\u00e9 non si deve attraversare una strada allagata a piedi?',
+            question: 'Perché non si deve attraversare una strada allagata a piedi?',
             answers: [
-                { text: 'Perch\u00e9 ci si bagnano le scarpe', correct: false },
-                { text: 'Perch\u00e9 sotto l\'acqua possono esserci buche, tombini aperti o correnti forti', correct: true },
-                { text: 'Perch\u00e9 l\'acqua \u00e8 sporca', correct: false },
-                { text: 'Si pu\u00f2 attraversare se l\'acqua \u00e8 bassa', correct: false }
+                { text: 'Perché ci si bagnano le scarpe', correct: false },
+                { text: 'Perché sotto l\'acqua possono esserci buche, tombini aperti o correnti forti', correct: true },
+                { text: 'Perché l\'acqua è sporca', correct: false },
+                { text: 'Si può attraversare se l\'acqua è bassa', correct: false }
             ],
-            explanation: 'Anche pochi centimetri d\'acqua possono nascondere pericoli. Non sai cosa c\'\u00e8 sotto e la corrente ti pu\u00f2 trascinare!'
+            explanation: 'Anche pochi centimetri d\'acqua possono nascondere pericoli. Non sai cosa c\'è sotto e la corrente ti può trascinare!'
         },
         {
             category: 'alluvione',
             question: 'Se sei in auto e trovi un sottopassaggio pieno d\'acqua, cosa fai?',
             answers: [
-                { text: 'Passo veloce cos\u00ec non mi fermo', correct: false },
+                { text: 'Passo veloce così non mi fermo', correct: false },
                 { text: 'Mi fermo e torno indietro, cerco un\'altra strada', correct: true },
                 { text: 'Aspetto che l\'acqua si abbassi', correct: false },
                 { text: 'Passo piano piano', correct: false }
             ],
-            explanation: 'Nei sottopassaggi l\'acqua pu\u00f2 essere molto pi\u00f9 profonda di quanto sembra. L\'auto si pu\u00f2 bloccare e rimanere sommersa!'
+            explanation: 'Nei sottopassaggi l\'acqua può essere molto più profonda di quanto sembra. L\'auto si può bloccare e rimanere sommersa!'
         },
         {
             category: 'alluvione',
             question: 'Cosa significa allerta arancione per rischio idrogeologico?',
             answers: [
                 { text: 'Che fa caldo', correct: false },
-                { text: 'Che ci sar\u00e0 il sole', correct: false },
+                { text: 'Che ci sarà il sole', correct: false },
                 { text: 'Che sono previste piogge molto forti e bisogna fare attenzione', correct: true },
-                { text: 'Che si pu\u00f2 uscire normalmente', correct: false }
+                { text: 'Che si può uscire normalmente', correct: false }
             ],
             explanation: 'Allerta arancione significa che possono arrivare piogge intense con rischio di allagamenti e frane. Meglio stare al sicuro!'
         },
         {
             category: 'alluvione',
-            question: 'Dopo un\'alluvione, si pu\u00f2 bere l\'acqua del rubinetto?',
+            question: 'Dopo un\'alluvione, si può bere l\'acqua del rubinetto?',
             answers: [
-                { text: 'S\u00ec, sempre', correct: false },
-                { text: 'Solo se \u00e8 calda', correct: false },
-                { text: 'No, finch\u00e9 le autorit\u00e0 non dicono che \u00e8 sicura', correct: true },
-                { text: 'S\u00ec, basta farla bollire', correct: false }
+                { text: 'Sì, sempre', correct: false },
+                { text: 'Solo se è calda', correct: false },
+                { text: 'No, finché le autorità non dicono che è sicura', correct: true },
+                { text: 'Sì, basta farla bollire', correct: false }
             ],
-            explanation: 'L\'acqua del rubinetto potrebbe essere inquinata. Aspetta sempre che le autorit\u00e0 dicano che si pu\u00f2 bere!'
+            explanation: 'L\'acqua del rubinetto potrebbe essere inquinata. Aspetta sempre che le autorità dicano che si può bere!'
         },
         {
             category: 'alluvione',
-            question: 'Cosa \u00e8 una frana?',
+            question: 'Cosa è una frana?',
             answers: [
                 { text: 'Un forte vento che soffia dalla montagna', correct: false },
                 { text: 'Una massa di terra e rocce che scivola lungo un pendio', correct: true },
                 { text: 'Un tipo di terremoto', correct: false },
                 { text: 'Un fiume che straripa', correct: false }
             ],
-            explanation: 'Una frana \u00e8 quando la terra di un pendio si stacca e scende verso il basso, portando con s\u00e9 tutto quello che incontra.'
+            explanation: 'Una frana è quando la terra di un pendio si stacca e scende verso il basso, portando con sé tutto quello che incontra.'
         },
         {
             category: 'alluvione',
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Ai piani alti o in un luogo sicuro indicato dal Comune', correct: true },
                 { text: 'Sul tetto', correct: false }
             ],
-            explanation: 'I piani alti sono pi\u00f9 sicuri. Il Comune indica anche le aree di raccolta dove andare in caso di evacuazione.'
+            explanation: 'I piani alti sono più sicuri. Il Comune indica anche le aree di raccolta dove andare in caso di evacuazione.'
         },
 
         // ═══════════════════════════════════════
@@ -334,25 +334,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // ═══════════════════════════════════════
         {
             category: 'numeri',
-            question: 'Qual \u00e8 il numero unico di emergenza da chiamare in Italia?',
+            question: 'Qual è il numero unico di emergenza da chiamare in Italia?',
             answers: [
                 { text: '118', correct: false },
                 { text: '115', correct: false },
                 { text: '112', correct: true },
                 { text: '113', correct: false }
             ],
-            explanation: 'Il 112 \u00e8 il numero unico di emergenza. Funziona per tutte le emergenze: polizia, ambulanza e vigili del fuoco.'
+            explanation: 'Il 112 è il numero unico di emergenza. Funziona per tutte le emergenze: polizia, ambulanza e vigili del fuoco.'
         },
         {
             category: 'numeri',
             question: 'Quando chiami il 112, cosa devi dire?',
             answers: [
                 { text: 'Solo il mio nome', correct: false },
-                { text: 'Cosa \u00e8 successo, dove mi trovo e quante persone hanno bisogno di aiuto', correct: true },
+                { text: 'Cosa è successo, dove mi trovo e quante persone hanno bisogno di aiuto', correct: true },
                 { text: 'Devo solo urlare "aiuto"', correct: false },
-                { text: 'Non devo dire niente, loro sanno gi\u00e0 tutto', correct: false }
+                { text: 'Non devo dire niente, loro sanno già tutto', correct: false }
             ],
-            explanation: 'Quando chiami il 112, parla con calma e spiega cosa \u00e8 successo, dove ti trovi e se qualcuno ha bisogno di aiuto.'
+            explanation: 'Quando chiami il 112, parla con calma e spiega cosa è successo, dove ti trovi e se qualcuno ha bisogno di aiuto.'
         },
         {
             category: 'numeri',
@@ -363,18 +363,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: '113', correct: false },
                 { text: '117', correct: false }
             ],
-            explanation: 'Nel Lazio il 112 \u00e8 il numero unico di emergenza, anche per gli incendi boschivi. La centrale manda subito i soccorsi giusti: Vigili del Fuoco, Forestale o Protezione Civile.'
+            explanation: 'Nel Lazio il 112 è il numero unico di emergenza, anche per gli incendi boschivi. La centrale manda subito i soccorsi giusti: Vigili del Fuoco, Forestale o Protezione Civile.'
         },
         {
             category: 'numeri',
             question: 'Il 112 funziona anche se non hai credito sul telefono?',
             answers: [
                 { text: 'No, serve credito', correct: false },
-                { text: 'S\u00ec, il 112 \u00e8 sempre gratuito e funziona anche senza credito', correct: true },
+                { text: 'Sì, il 112 è sempre gratuito e funziona anche senza credito', correct: true },
                 { text: 'Solo con i telefoni fissi', correct: false },
                 { text: 'Funziona solo di giorno', correct: false }
             ],
-            explanation: 'Il 112 \u00e8 gratuito e funziona sempre: senza credito, senza SIM e da qualsiasi telefono, anche da quello di un amico!'
+            explanation: 'Il 112 è gratuito e funziona sempre: senza credito, senza SIM e da qualsiasi telefono, anche da quello di un amico!'
         },
         {
             category: 'numeri',
@@ -385,29 +385,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Il 112', correct: true },
                 { text: '1515', correct: false }
             ],
-            explanation: 'Nel Lazio il 112 \u00e8 il numero unico di emergenza, anche per l\'ambulanza. La centrale capisce il tipo di aiuto che serve e invia subito i soccorsi sanitari.'
+            explanation: 'Nel Lazio il 112 è il numero unico di emergenza, anche per l\'ambulanza. La centrale capisce il tipo di aiuto che serve e invia subito i soccorsi sanitari.'
         },
         {
             category: 'numeri',
-            question: '\u00c8 giusto chiamare il 112 per scherzo?',
+            question: 'È giusto chiamare il 112 per scherzo?',
             answers: [
-                { text: 'S\u00ec, tanto non succede niente', correct: false },
-                { text: 'S\u00ec, per fare una prova', correct: false },
-                { text: 'No, perch\u00e9 si occupano le linee e chi ha davvero bisogno potrebbe non riuscire a chiamare', correct: true },
+                { text: 'Sì, tanto non succede niente', correct: false },
+                { text: 'Sì, per fare una prova', correct: false },
+                { text: 'No, perché si occupano le linee e chi ha davvero bisogno potrebbe non riuscire a chiamare', correct: true },
                 { text: 'Solo se lo faccio una volta sola', correct: false }
             ],
-            explanation: 'Chiamare per scherzo \u00e8 un reato! Ogni chiamata falsa toglie tempo e risorse a chi ha davvero bisogno di aiuto.'
+            explanation: 'Chiamare per scherzo è un reato! Ogni chiamata falsa toglie tempo e risorse a chi ha davvero bisogno di aiuto.'
         },
         {
             category: 'numeri',
             question: 'Il numero 112 funziona in tutta Europa?',
             answers: [
                 { text: 'No, solo in Italia', correct: false },
-                { text: 'S\u00ec, \u00e8 il numero di emergenza in tutta Europa', correct: true },
+                { text: 'Sì, è il numero di emergenza in tutta Europa', correct: true },
                 { text: 'Solo in Italia e Francia', correct: false },
                 { text: 'Solo se hai una SIM europea', correct: false }
             ],
-            explanation: 'Il 112 \u00e8 il numero unico europeo. Se sei in vacanza in un altro Paese, puoi sempre chiamare il 112!'
+            explanation: 'Il 112 è il numero unico europeo. Se sei in vacanza in un altro Paese, puoi sempre chiamare il 112!'
         },
         {
             category: 'numeri',
@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Un amico per farmi compagnia al telefono', correct: false },
                 { text: 'Il pizzaiolo', correct: false }
             ],
-            explanation: 'Prima chiama un adulto di fiducia. Se non riesci a raggiungerlo, il 112 pu\u00f2 aiutarti a farti trovare.'
+            explanation: 'Prima chiama un adulto di fiducia. Se non riesci a raggiungerlo, il 112 può aiutarti a farti trovare.'
         },
 
         // ═══════════════════════════════════════
@@ -437,10 +437,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'zaino',
-            question: 'Perch\u00e9 nello zaino di emergenza serve un fischietto?',
+            question: 'Perché nello zaino di emergenza serve un fischietto?',
             answers: [
                 { text: 'Per giocare', correct: false },
-                { text: 'Per farsi sentire dai soccorritori se si \u00e8 bloccati', correct: true },
+                { text: 'Per farsi sentire dai soccorritori se si è bloccati', correct: true },
                 { text: 'Per spaventare gli animali', correct: false },
                 { text: 'Per chiamare gli amici', correct: false }
             ],
@@ -455,11 +455,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Vicino alla porta di casa, facile da prendere', correct: true },
                 { text: 'A scuola', correct: false }
             ],
-            explanation: 'Lo zaino deve essere facile da prendere e pronto: vicino alla porta o in corridoio. In emergenza non c\'\u00e8 tempo di cercarlo!'
+            explanation: 'Lo zaino deve essere facile da prendere e pronto: vicino alla porta o in corridoio. In emergenza non c\'è tempo di cercarlo!'
         },
         {
             category: 'zaino',
-            question: 'Perch\u00e9 nello zaino di emergenza serve una radio a pile?',
+            question: 'Perché nello zaino di emergenza serve una radio a pile?',
             answers: [
                 { text: 'Per ascoltare la musica', correct: false },
                 { text: 'Per ricevere le informazioni ufficiali anche se manca la corrente', correct: true },
@@ -474,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
             answers: [
                 { text: 'Mai, una volta preparato va bene per sempre', correct: false },
                 { text: 'Almeno due volte l\'anno, per verificare scadenze e pile', correct: true },
-                { text: 'Solo quando c\'\u00e8 un\'emergenza', correct: false },
+                { text: 'Solo quando c\'è un\'emergenza', correct: false },
                 { text: 'Ogni giorno', correct: false }
             ],
             explanation: 'L\'acqua scade, le pile si scaricano e i medicinali possono scadere. Controlla tutto almeno due volte l\'anno!'
@@ -484,11 +484,11 @@ document.addEventListener('DOMContentLoaded', () => {
             question: 'Nello zaino di emergenza servono anche i documenti?',
             answers: [
                 { text: 'No, non servono a niente', correct: false },
-                { text: 'S\u00ec, una copia dei documenti della famiglia', correct: true },
+                { text: 'Sì, una copia dei documenti della famiglia', correct: true },
                 { text: 'Solo la tessera della biblioteca', correct: false },
                 { text: 'Solo la tessera del supermercato', correct: false }
             ],
-            explanation: 'Una copia dei documenti \u00e8 importante per farsi identificare, ricevere aiuto e dimostrare chi sei durante l\'emergenza.'
+            explanation: 'Una copia dei documenti è importante per farsi identificare, ricevere aiuto e dimostrare chi sei durante l\'emergenza.'
         },
         {
             category: 'zaino',
@@ -522,7 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
             answers: [
                 { text: 'Prendo tutte le mie cose dallo zaino', correct: false },
                 { text: 'Mi metto in fila e seguo l\'insegnante verso il punto di raccolta', correct: true },
-                { text: 'Corro il pi\u00f9 veloce possibile verso l\'uscita', correct: false },
+                { text: 'Corro il più veloce possibile verso l\'uscita', correct: false },
                 { text: 'Aspetto che i miei genitori vengano a prendermi', correct: false }
             ],
             explanation: 'Segui l\'insegnante in fila ordinata. Non portare le cose e non correre: la calma salva la vita!'
@@ -531,34 +531,34 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'evacuazione',
             question: 'A cosa serve il punto di raccolta della scuola?',
             answers: [
-                { text: '\u00c8 il posto dove si gioca durante l\'intervallo', correct: false },
-                { text: '\u00c8 il luogo sicuro dove ritrovarsi per controllare che ci siano tutti', correct: true },
-                { text: '\u00c8 dove si parcheggia', correct: false },
-                { text: '\u00c8 il posto dove aspettare l\'autobus', correct: false }
+                { text: 'È il posto dove si gioca durante l\'intervallo', correct: false },
+                { text: 'È il luogo sicuro dove ritrovarsi per controllare che ci siano tutti', correct: true },
+                { text: 'È dove si parcheggia', correct: false },
+                { text: 'È il posto dove aspettare l\'autobus', correct: false }
             ],
-            explanation: 'Al punto di raccolta l\'insegnante fa l\'appello per verificare che nessuno manchi. \u00c8 un posto sicuro!'
+            explanation: 'Al punto di raccolta l\'insegnante fa l\'appello per verificare che nessuno manchi. È un posto sicuro!'
         },
         {
             category: 'evacuazione',
             question: 'Chi guida la fila durante l\'evacuazione a scuola?',
             answers: [
-                { text: 'Il pi\u00f9 veloce della classe', correct: false },
+                { text: 'Il più veloce della classe', correct: false },
                 { text: 'L\'aprifila, un compagno scelto dall\'insegnante', correct: true },
                 { text: 'Il rappresentante di classe', correct: false },
                 { text: 'Ognuno va per conto suo', correct: false }
             ],
-            explanation: 'In ogni classe c\'\u00e8 un aprifila che guida i compagni e un chiudifila che si assicura che nessuno resti indietro.'
+            explanation: 'In ogni classe c\'è un aprifila che guida i compagni e un chiudifila che si assicura che nessuno resti indietro.'
         },
         {
             category: 'evacuazione',
-            question: 'Durante l\'evacuazione, perch\u00e9 non devi correre?',
+            question: 'Durante l\'evacuazione, perché non devi correre?',
             answers: [
-                { text: 'Perch\u00e9 l\'insegnante si arrabbia', correct: false },
-                { text: 'Perch\u00e9 correndo si pu\u00f2 cadere, fare cadere gli altri e creare panico', correct: true },
-                { text: 'Perch\u00e9 si suda', correct: false },
-                { text: 'Si pu\u00f2 correre se si ha paura', correct: false }
+                { text: 'Perché l\'insegnante si arrabbia', correct: false },
+                { text: 'Perché correndo si può cadere, fare cadere gli altri e creare panico', correct: true },
+                { text: 'Perché si suda', correct: false },
+                { text: 'Si può correre se si ha paura', correct: false }
             ],
-            explanation: 'Camminare spediti ma senza correre evita cadute e panico. Quando tutti restano calmi, si esce pi\u00f9 in fretta!'
+            explanation: 'Camminare spediti ma senza correre evita cadute e panico. Quando tutti restano calmi, si esce più in fretta!'
         },
         {
             category: 'evacuazione',
@@ -569,18 +569,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Mi fermo e aspetto', correct: false },
                 { text: 'Torno in classe', correct: false }
             ],
-            explanation: 'Aiutare un compagno in difficolt\u00e0 \u00e8 importante, ma senza bloccare la fila. Avvisa subito l\'insegnante!'
+            explanation: 'Aiutare un compagno in difficoltà è importante, ma senza bloccare la fila. Avvisa subito l\'insegnante!'
         },
         {
             category: 'evacuazione',
-            question: 'Perch\u00e9 a scuola si fanno le prove di evacuazione?',
+            question: 'Perché a scuola si fanno le prove di evacuazione?',
             answers: [
                 { text: 'Per perdere un\'ora di lezione', correct: false },
                 { text: 'Per imparare cosa fare in caso di emergenza vera', correct: true },
-                { text: 'Perch\u00e9 il preside lo ordina per divertimento', correct: false },
+                { text: 'Perché il preside lo ordina per divertimento', correct: false },
                 { text: 'Per fare ginnastica', correct: false }
             ],
-            explanation: 'Le prove servono a imparare il percorso e i comportamenti corretti. Cos\u00ec, se succede davvero, sai gi\u00e0 cosa fare!'
+            explanation: 'Le prove servono a imparare il percorso e i comportamenti corretti. Così, se succede davvero, sai già cosa fare!'
         },
         {
             category: 'evacuazione',
@@ -588,10 +588,10 @@ document.addEventListener('DOMContentLoaded', () => {
             answers: [
                 { text: 'Resto in bagno ad aspettare', correct: false },
                 { text: 'Torno in classe a prendere le cose', correct: false },
-                { text: 'Esco subito e raggiungo il punto di raccolta o la classe pi\u00f9 vicina', correct: true },
+                { text: 'Esco subito e raggiungo il punto di raccolta o la classe più vicina', correct: true },
                 { text: 'Chiamo i miei genitori', correct: false }
             ],
-            explanation: 'Se sei fuori dalla classe, raggiungi il punto di raccolta o unisciti alla fila pi\u00f9 vicina. L\'importante \u00e8 farsi trovare!'
+            explanation: 'Se sei fuori dalla classe, raggiungi il punto di raccolta o unisciti alla fila più vicina. L\'importante è farsi trovare!'
         },
         {
             category: 'evacuazione',
@@ -600,7 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Me stesso', correct: false },
                 { text: 'Lo zaino pesante, i libri e gli oggetti ingombranti', correct: true },
                 { text: 'Il giubbotto se fa freddo', correct: false },
-                { text: 'Un compagno in difficolt\u00e0', correct: false }
+                { text: 'Un compagno in difficoltà', correct: false }
             ],
             explanation: 'Zaini e oggetti rallentano la fila e possono far inciampare. Lascia tutto in classe e pensa solo a uscire in sicurezza!'
         },
@@ -612,7 +612,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'protezione-civile',
             question: 'Chi sono i volontari di Protezione Civile?',
             answers: [
-                { text: 'Persone che aiutano la comunit\u00e0 durante le emergenze, senza essere pagate', correct: true },
+                { text: 'Persone che aiutano la comunità durante le emergenze, senza essere pagate', correct: true },
                 { text: 'Soldati dell\'esercito', correct: false },
                 { text: 'Dottori dell\'ospedale', correct: false },
                 { text: 'Vigili urbani', correct: false }
@@ -625,8 +625,8 @@ document.addEventListener('DOMContentLoaded', () => {
             answers: [
                 { text: 'Tutto tranquillo, nessun pericolo', correct: false },
                 { text: 'Fenomeni intensi: bisogna fare molta attenzione', correct: true },
-                { text: 'Si pu\u00f2 uscire a giocare', correct: false },
-                { text: '\u00c8 solo un consiglio, non \u00e8 importante', correct: false }
+                { text: 'Si può uscire a giocare', correct: false },
+                { text: 'È solo un consiglio, non è importante', correct: false }
             ],
             explanation: 'Arancione significa attenzione! Possono arrivare piogge forti o vento. Meglio restare al sicuro.'
         },
@@ -639,18 +639,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Prevedere il futuro', correct: false },
                 { text: 'Costruire muri altissimi', correct: false }
             ],
-            explanation: 'Prevenzione significa prepararsi in anticipo: conoscere i rischi, sapere cosa fare e avere tutto pronto. \u00c8 la cosa pi\u00f9 importante!'
+            explanation: 'Prevenzione significa prepararsi in anticipo: conoscere i rischi, sapere cosa fare e avere tutto pronto. È la cosa più importante!'
         },
         {
             category: 'protezione-civile',
-            question: 'Quale colore di allerta meteo indica il pericolo pi\u00f9 alto?',
+            question: 'Quale colore di allerta meteo indica il pericolo più alto?',
             answers: [
                 { text: 'Giallo', correct: false },
                 { text: 'Verde', correct: false },
                 { text: 'Arancione', correct: false },
                 { text: 'Rosso', correct: true }
             ],
-            explanation: 'Rosso \u00e8 il livello massimo: significa fenomeni molto forti e rischio elevato. Bisogna seguire tutte le indicazioni delle autorit\u00e0!'
+            explanation: 'Rosso è il livello massimo: significa fenomeni molto forti e rischio elevato. Bisogna seguire tutte le indicazioni delle autorità!'
         },
         {
             category: 'protezione-civile',
@@ -669,25 +669,25 @@ document.addEventListener('DOMContentLoaded', () => {
             answers: [
                 { text: 'Bisogna stare a casa', correct: false },
                 { text: 'Non ci sono pericoli particolari, situazione tranquilla', correct: true },
-                { text: 'C\'\u00e8 un pericolo legato alla natura', correct: false },
+                { text: 'C\'è un pericolo legato alla natura', correct: false },
                 { text: 'Si deve andare al punto di raccolta', correct: false }
             ],
-            explanation: 'Verde significa tutto tranquillo: nessuna allerta in corso. Ma ricorda: essere preparati \u00e8 sempre importante!'
+            explanation: 'Verde significa tutto tranquillo: nessuna allerta in corso. Ma ricorda: essere preparati è sempre importante!'
         },
         {
             category: 'protezione-civile',
             question: 'Anche i bambini possono aiutare nella prevenzione?',
             answers: [
-                { text: 'No, la prevenzione \u00e8 solo per gli adulti', correct: false },
-                { text: 'S\u00ec, imparando le regole di sicurezza e aiutando la famiglia a prepararsi', correct: true },
+                { text: 'No, la prevenzione è solo per gli adulti', correct: false },
+                { text: 'Sì, imparando le regole di sicurezza e aiutando la famiglia a prepararsi', correct: true },
                 { text: 'Solo i bambini molto grandi', correct: false },
                 { text: 'Solo se vanno a un corso speciale', correct: false }
             ],
-            explanation: 'Certo che s\u00ec! Imparare i comportamenti corretti, preparare lo zaino di emergenza e conoscere i numeri da chiamare: anche tu fai prevenzione!'
+            explanation: 'Certo che sì! Imparare i comportamenti corretti, preparare lo zaino di emergenza e conoscere i numeri da chiamare: anche tu fai prevenzione!'
         },
         {
             category: 'protezione-civile',
-            question: 'Cos\'\u00e8 il Piano di Emergenza Comunale?',
+            question: 'Cos\'è il Piano di Emergenza Comunale?',
             answers: [
                 { text: 'Un piano per costruire case nuove', correct: false },
                 { text: 'Un documento che spiega cosa fare e dove andare in caso di emergenza nel proprio Comune', correct: true },
@@ -698,36 +698,36 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'protezione-civile',
-            question: 'Genzano di Roma si trova nella zona dei Castelli Romani. Che tipo di territorio \u00e8?',
+            question: 'Genzano di Roma si trova nella zona dei Castelli Romani. Che tipo di territorio è?',
             answers: [
                 { text: 'Una pianura senza colline', correct: false },
                 { text: 'Una zona collinare di origine vulcanica con laghi', correct: true },
                 { text: 'Una zona di montagna con neve tutto l\'anno', correct: false },
                 { text: 'Una zona di mare', correct: false }
             ],
-            explanation: 'I Colli Albani sono un antico complesso vulcanico. I laghi di Nemi e Albano si sono formati nei crateri spenti. Il territorio \u00e8 soggetto a rischio idrogeologico e sismico.'
+            explanation: 'I Colli Albani sono un antico complesso vulcanico. I laghi di Nemi e Albano si sono formati nei crateri spenti. Il territorio è soggetto a rischio idrogeologico e sismico.'
         },
         {
             category: 'protezione-civile',
             question: 'Secondo la classificazione sismica della Regione Lazio, i Colli Albani sono in:',
             answers: [
-                { text: 'Zona 1 (pericolosit\u00e0 massima)', correct: false },
-                { text: 'Zona 2 (pericolosit\u00e0 media)', correct: true },
-                { text: 'Zona 4 (pericolosit\u00e0 bassissima)', correct: false },
-                { text: 'Non \u00e8 zona sismica', correct: false }
+                { text: 'Zona 1 (pericolosità massima)', correct: false },
+                { text: 'Zona 2 (pericolosità media)', correct: true },
+                { text: 'Zona 4 (pericolosità bassissima)', correct: false },
+                { text: 'Non è zona sismica', correct: false }
             ],
-            explanation: 'L\'area dei Castelli Romani \u00e8 classificata come zona sismica 2: possono verificarsi terremoti di media intensit\u00e0. \u00c8 importante conoscere i comportamenti di autoprotezione.'
+            explanation: 'L\'area dei Castelli Romani è classificata come zona sismica 2: possono verificarsi terremoti di media intensità. È importante conoscere i comportamenti di autoprotezione.'
         },
         {
             category: 'protezione-civile',
-            question: 'Nel nostro territorio dei Castelli Romani, quale \u00e8 un rischio tipico dei mesi estivi?',
+            question: 'Nel nostro territorio dei Castelli Romani, quale è un rischio tipico dei mesi estivi?',
             answers: [
                 { text: 'Valanghe', correct: false },
                 { text: 'Maremoti', correct: false },
                 { text: 'Incendi boschivi', correct: true },
                 { text: 'Nevicate intense', correct: false }
             ],
-            explanation: 'Da giugno a settembre la vegetazione dei boschi dei Castelli Romani pu\u00f2 prendere fuoco molto facilmente. Nel Lazio per segnalare un incendio boschivo si chiama il 112, il numero unico di emergenza.'
+            explanation: 'Da giugno a settembre la vegetazione dei boschi dei Castelli Romani può prendere fuoco molto facilmente. Nel Lazio per segnalare un incendio boschivo si chiama il 112, il numero unico di emergenza.'
         },
 
         // ═══════════════════════════════════════
@@ -740,20 +740,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Accendo la luce per vedere meglio', correct: false },
                 { text: 'Apro le finestre, esco e chiamo un adulto', correct: true },
                 { text: 'Cerco da dove viene con un accendino', correct: false },
-                { text: 'Non faccio niente, \u00e8 normale', correct: false }
+                { text: 'Non faccio niente, è normale', correct: false }
             ],
-            explanation: 'Il gas \u00e8 pericoloso! Non toccare interruttori e non usare fiamme. Apri le finestre e chiama subito un adulto.'
+            explanation: 'Il gas è pericoloso! Non toccare interruttori e non usare fiamme. Apri le finestre e chiama subito un adulto.'
         },
         {
             category: 'sicurezza',
-            question: 'Perch\u00e9 \u00e8 importante conoscere le vie di fuga della propria scuola?',
+            question: 'Perché è importante conoscere le vie di fuga della propria scuola?',
             answers: [
-                { text: 'Per correre pi\u00f9 veloci degli altri', correct: false },
+                { text: 'Per correre più veloci degli altri', correct: false },
                 { text: 'Per sapere dove andare in caso di emergenza, senza perdere tempo', correct: true },
                 { text: 'Per uscire prima durante l\'intervallo', correct: false },
-                { text: 'Non \u00e8 importante, ci pensa l\'insegnante', correct: false }
+                { text: 'Non è importante, ci pensa l\'insegnante', correct: false }
             ],
-            explanation: 'Se conosci la via di fuga, in emergenza sai subito dove andare. La preparazione \u00e8 la migliore protezione!'
+            explanation: 'Se conosci la via di fuga, in emergenza sai subito dove andare. La preparazione è la migliore protezione!'
         },
         {
             category: 'sicurezza',
@@ -764,18 +764,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Una torcia elettrica a pile', correct: true },
                 { text: 'Il forno acceso', correct: false }
             ],
-            explanation: 'La torcia \u00e8 sicura perch\u00e9 non ha fiamme. Candele e accendini possono causare incendi, soprattutto al buio!'
+            explanation: 'La torcia è sicura perché non ha fiamme. Candele e accendini possono causare incendi, soprattutto al buio!'
         },
         {
             category: 'sicurezza',
-            question: 'Perch\u00e9 non si devono toccare le prese elettriche con le mani bagnate?',
+            question: 'Perché non si devono toccare le prese elettriche con le mani bagnate?',
             answers: [
-                { text: 'Perch\u00e9 si sporcano le prese', correct: false },
-                { text: 'Perch\u00e9 l\'acqua conduce l\'elettricit\u00e0 e si rischia una scossa', correct: true },
-                { text: 'Perch\u00e9 si rompono', correct: false },
-                { text: 'Si possono toccare, non \u00e8 pericoloso', correct: false }
+                { text: 'Perché si sporcano le prese', correct: false },
+                { text: 'Perché l\'acqua conduce l\'elettricità e si rischia una scossa', correct: true },
+                { text: 'Perché si rompono', correct: false },
+                { text: 'Si possono toccare, non è pericoloso', correct: false }
             ],
-            explanation: 'L\'acqua fa passare la corrente elettrica attraverso il corpo. \u00c8 molto pericoloso! Asciuga sempre bene le mani prima.'
+            explanation: 'L\'acqua fa passare la corrente elettrica attraverso il corpo. È molto pericoloso! Asciuga sempre bene le mani prima.'
         },
         {
             category: 'sicurezza',
@@ -794,25 +794,25 @@ document.addEventListener('DOMContentLoaded', () => {
             answers: [
                 { text: 'Apro subito', correct: false },
                 { text: 'Guardo dallo spioncino e se non conosco la persona non apro', correct: true },
-                { text: 'Apro un po\' per vedere chi \u00e8', correct: false },
-                { text: 'Grido "chi \u00e8?" e poi apro', correct: false }
+                { text: 'Apro un po\' per vedere chi è', correct: false },
+                { text: 'Grido "chi è?" e poi apro', correct: false }
             ],
             explanation: 'Non aprire mai la porta a sconosciuti quando sei solo! Guarda dallo spioncino e, se hai dubbi, chiama un adulto di fiducia.'
         },
         {
             category: 'sicurezza',
-            question: 'Perch\u00e9 \u00e8 importante che tutti in famiglia sappiano dove si chiude il gas?',
+            question: 'Perché è importante che tutti in famiglia sappiano dove si chiude il gas?',
             answers: [
                 { text: 'Per risparmiare sulla bolletta', correct: false },
                 { text: 'Per chiuderlo subito in caso di fuga di gas o terremoto', correct: true },
                 { text: 'Per pulire il tubo del gas', correct: false },
-                { text: 'Non \u00e8 importante, ci pensa il tecnico', correct: false }
+                { text: 'Non è importante, ci pensa il tecnico', correct: false }
             ],
-            explanation: 'Se senti odore di gas o c\'\u00e8 un terremoto, chiudere subito il rubinetto del gas pu\u00f2 evitare esplosioni e incendi.'
+            explanation: 'Se senti odore di gas o c\'è un terremoto, chiudere subito il rubinetto del gas può evitare esplosioni e incendi.'
         },
         {
             category: 'sicurezza',
-            question: 'Qual \u00e8 il posto pi\u00f9 sicuro dove ripararsi in casa durante un temporale con fulmini?',
+            question: 'Qual è il posto più sicuro dove ripararsi in casa durante un temporale con fulmini?',
             answers: [
                 { text: 'Vicino alla finestra per guardare', correct: false },
                 { text: 'In balcone sotto la tettoia', correct: false },
@@ -833,22 +833,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Affacciarmi alla finestra', correct: false },
                 { text: 'Saltare sulla sedia', correct: false }
             ],
-            explanation: 'Sotto il banco sei protetto dalla caduta di oggetti. Si esce dall\u2019aula solo dopo la scossa, in fila, senza correre.'
+            explanation: 'Sotto il banco sei protetto dalla caduta di oggetti. Si esce dall’aula solo dopo la scossa, in fila, senza correre.'
         },
         {
             category: 'terremoto',
-            question: 'Perché dopo un terremoto è meglio non usare l\u2019ascensore?',
+            question: 'Perché dopo un terremoto è meglio non usare l’ascensore?',
             answers: [
                 { text: 'Perché è più lento delle scale', correct: false },
                 { text: 'Perché può bloccarsi e lasciarti dentro', correct: true },
                 { text: 'Perché costa di più', correct: false },
                 { text: 'Perché fa troppo rumore', correct: false }
             ],
-            explanation: 'Le scosse possono danneggiare l\u2019impianto elettrico e fermare l\u2019ascensore. Le scale sono sempre la via più sicura.'
+            explanation: 'Le scosse possono danneggiare l’impianto elettrico e fermare l’ascensore. Le scale sono sempre la via più sicura.'
         },
         {
             category: 'terremoto',
-            question: 'Cos\u2019è il "triangolo della vita" che insegnano a scuola?',
+            question: 'Cos’è il "triangolo della vita" che insegnano a scuola?',
             answers: [
                 { text: 'Un gioco di società', correct: false },
                 { text: 'Lo spazio di riparo tra un mobile robusto e il pavimento', correct: true },
@@ -859,14 +859,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'incendio',
-            question: 'Se in casa c\u2019è fumo denso, come ti muovi per uscire?',
+            question: 'Se in casa c’è fumo denso, come ti muovi per uscire?',
             answers: [
                 { text: 'Corro in piedi per fare prima', correct: false },
-                { text: 'Mi abbasso e striscio, l\u2019aria pulita è vicino al pavimento', correct: true },
+                { text: 'Mi abbasso e striscio, l’aria pulita è vicino al pavimento', correct: true },
                 { text: 'Mi metto in piedi sulla sedia', correct: false },
                 { text: 'Mi nascondo sotto il letto', correct: false }
             ],
-            explanation: 'Il fumo caldo sale verso il soffitto. Vicino al pavimento c\u2019è aria più pulita e più fresca: strisciando respiri meglio.'
+            explanation: 'Il fumo caldo sale verso il soffitto. Vicino al pavimento c’è aria più pulita e più fresca: strisciando respiri meglio.'
         },
         {
             category: 'incendio',
@@ -874,14 +874,14 @@ document.addEventListener('DOMContentLoaded', () => {
             answers: [
                 { text: 'Spegnere il fornello', correct: false },
                 { text: 'Coprire la pentola con un coperchio', correct: false },
-                { text: 'Gettare acqua sull\u2019olio in fiamme', correct: true },
+                { text: 'Gettare acqua sull’olio in fiamme', correct: true },
                 { text: 'Chiamare un adulto', correct: false }
             ],
-            explanation: 'L\u2019acqua sull\u2019olio provoca un\u2019esplosione di vapore bollente. Si spegne il fornello e si copre con un coperchio o con un panno bagnato strizzato.'
+            explanation: 'L’acqua sull’olio provoca un’esplosione di vapore bollente. Si spegne il fornello e si copre con un coperchio o con un panno bagnato strizzato.'
         },
         {
             category: 'incendio',
-            question: 'Che colore hanno i cartelli che indicano l\u2019uscita di emergenza?',
+            question: 'Che colore hanno i cartelli che indicano l’uscita di emergenza?',
             answers: [
                 { text: 'Rossi', correct: false },
                 { text: 'Verdi con freccia bianca', correct: true },
@@ -892,29 +892,29 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'alluvione',
-            question: 'Durante un\u2019alluvione, dove ti metti in casa?',
+            question: 'Durante un’alluvione, dove ti metti in casa?',
             answers: [
                 { text: 'In cantina o in garage', correct: false },
                 { text: 'Ai piani alti della casa', correct: true },
                 { text: 'Vicino alle finestre per guardare fuori', correct: false },
                 { text: 'Sul balcone', correct: false }
             ],
-            explanation: 'I piani alti sono più sicuri perché l\u2019acqua sale dal basso. Cantine e garage possono allagarsi rapidamente.'
+            explanation: 'I piani alti sono più sicuri perché l’acqua sale dal basso. Cantine e garage possono allagarsi rapidamente.'
         },
         {
             category: 'alluvione',
             question: 'Se vedi un sottopasso allagato e sei in auto con i tuoi, cosa è giusto fare?',
             answers: [
                 { text: 'Attraversarlo piano', correct: false },
-                { text: 'Tornare indietro e cercare un\u2019altra strada', correct: true },
-                { text: 'Spegnere l\u2019auto e aspettare', correct: false },
+                { text: 'Tornare indietro e cercare un’altra strada', correct: true },
+                { text: 'Spegnere l’auto e aspettare', correct: false },
                 { text: 'Aprire i finestrini', correct: false }
             ],
-            explanation: 'Anche 30 cm d\u2019acqua possono far galleggiare un\u2019auto. Nei sottopassi l\u2019acqua si raccoglie in fretta: non attraversare mai.'
+            explanation: 'Anche 30 cm d’acqua possono far galleggiare un’auto. Nei sottopassi l’acqua si raccoglie in fretta: non attraversare mai.'
         },
         {
             category: 'alluvione',
-            question: 'Cos\u2019è un "kit di emergenza" per l\u2019alluvione?',
+            question: 'Cos’è un "kit di emergenza" per l’alluvione?',
             answers: [
                 { text: 'Una borsa di giochi', correct: false },
                 { text: 'Una borsa con documenti, acqua, torcia, medicine e coperta', correct: true },
@@ -927,12 +927,12 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'numeri',
             question: 'Il 112 è il numero di emergenza di quanti Paesi europei?',
             answers: [
-                { text: 'Solo dell\u2019Italia', correct: false },
-                { text: 'Di tutti i Paesi dell\u2019Unione Europea', correct: true },
+                { text: 'Solo dell’Italia', correct: false },
+                { text: 'Di tutti i Paesi dell’Unione Europea', correct: true },
                 { text: 'Solo di Italia e Francia', correct: false },
                 { text: 'Di 3 Paesi', correct: false }
             ],
-            explanation: 'Il 112 è il Numero Unico Europeo di Emergenza: funziona in tutti i Paesi dell\u2019Unione Europea. Se vai in vacanza all\u2019estero puoi chiamarlo allo stesso modo.'
+            explanation: 'Il 112 è il Numero Unico Europeo di Emergenza: funziona in tutti i Paesi dell’Unione Europea. Se vai in vacanza all’estero puoi chiamarlo allo stesso modo.'
         },
         {
             category: 'numeri',
@@ -943,7 +943,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'La tua data di nascita', correct: false },
                 { text: 'Il nome della scuola', correct: false }
             ],
-            explanation: 'L\u2019operatore del 112 deve capire subito dove mandare i soccorsi e cosa sta succedendo. Parla con calma e rispondi alle domande.'
+            explanation: 'L’operatore del 112 deve capire subito dove mandare i soccorsi e cosa sta succedendo. Parla con calma e rispondi alle domande.'
         },
         {
             category: 'numeri',
@@ -960,7 +960,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'zaino',
             question: 'Nel tuo zaino di emergenza a scuola, cosa NON serve?',
             answers: [
-                { text: 'Una bottiglietta d\u2019acqua', correct: false },
+                { text: 'Una bottiglietta d’acqua', correct: false },
                 { text: 'Un fischietto', correct: false },
                 { text: 'Un gioco elettronico', correct: true },
                 { text: 'Un biglietto con i numeri dei genitori', correct: false }
@@ -991,10 +991,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'evacuazione',
-            question: 'Quando suona l\u2019allarme di evacuazione, cosa deve fare il capofila della classe?',
+            question: 'Quando suona l’allarme di evacuazione, cosa deve fare il capofila della classe?',
             answers: [
                 { text: 'Correre avanti', correct: false },
-                { text: 'Guidare i compagni in fila verso l\u2019uscita indicata', correct: true },
+                { text: 'Guidare i compagni in fila verso l’uscita indicata', correct: true },
                 { text: 'Aspettare la maestra fuori', correct: false },
                 { text: 'Chiudere le finestre', correct: false }
             ],
@@ -1002,7 +1002,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'evacuazione',
-            question: 'Durante l\u2019evacuazione, si possono prendere zaino e giacca?',
+            question: 'Durante l’evacuazione, si possono prendere zaino e giacca?',
             answers: [
                 { text: 'Sì, sempre', correct: false },
                 { text: 'No, si esce subito senza cercare le proprie cose', correct: true },
@@ -1013,14 +1013,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'evacuazione',
-            question: 'Cos\u2019è il "punto di raccolta" durante un\u2019evacuazione?',
+            question: 'Cos’è il "punto di raccolta" durante un’evacuazione?',
             answers: [
                 { text: 'Un luogo per giocare', correct: false },
                 { text: 'Il posto dove ci si ritrova per contarsi', correct: true },
                 { text: 'Un negozio', correct: false },
-                { text: 'Un\u2019aula di riserva', correct: false }
+                { text: 'Un’aula di riserva', correct: false }
             ],
-            explanation: 'Al punto di raccolta le maestre fanno l\u2019appello per controllare che tutti siano usciti. Si rimane lì finché non arriva il segnale di fine emergenza.'
+            explanation: 'Al punto di raccolta le maestre fanno l’appello per controllare che tutti siano usciti. Si rimane lì finché non arriva il segnale di fine emergenza.'
         },
         {
             category: 'protezione-civile',
@@ -1081,8 +1081,8 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'sicurezza',
             question: 'A cosa serve un rilevatore di fumo in casa?',
             answers: [
-                { text: 'A rinfrescare l\u2019aria', correct: false },
-                { text: 'A suonare se c\u2019è un inizio di incendio, anche di notte', correct: true },
+                { text: 'A rinfrescare l’aria', correct: false },
+                { text: 'A suonare se c’è un inizio di incendio, anche di notte', correct: true },
                 { text: 'A misurare la temperatura', correct: false },
                 { text: 'A controllare il Wi-Fi', correct: false }
             ],
@@ -1244,7 +1244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const percentage = Math.round((score / shuffledQuestions.length) * 100);
         if (percentage >= 90) { feedbackMessageElement.innerText = "Fantastico! Sei un vero esperto di sicurezza!"; }
         else if (percentage >= 70) { feedbackMessageElement.innerText = "Molto bravo! Conosci bene le regole di sicurezza."; }
-        else if (percentage >= 50) { feedbackMessageElement.innerText = "Non male! Riprova per imparare ancora di pi\u00f9."; }
+        else if (percentage >= 50) { feedbackMessageElement.innerText = "Non male! Riprova per imparare ancora di più."; }
         else { feedbackMessageElement.innerText = "Puoi fare di meglio! Rileggi i consigli e riprova il quiz."; }
 
         // Salva progressione e offri attestato
@@ -1258,12 +1258,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const box = document.getElementById('attestato-box');
         if (!box) return;
         if (percentuale < 80) {
-            box.innerHTML = '<p class="text-muted small mb-0"><i class="bi bi-info-circle me-1" aria-hidden="true"></i> Per ottenere l\u2019attestato devi rispondere correttamente almeno all\u201980% delle domande.</p>';
+            box.innerHTML = '<p class="text-muted small mb-0"><i class="bi bi-info-circle me-1" aria-hidden="true"></i> Per ottenere l’attestato devi rispondere correttamente almeno all’80% delle domande.</p>';
             return;
         }
         box.innerHTML = ''
           + '<div class="alert alert-success border-0" style="border-radius:12px;">'
-          + '  <p class="mb-2"><strong><i class="bi bi-award-fill me-1" aria-hidden="true"></i> Hai sbloccato il badge!</strong> Vuoi l\u2019attestato di partecipazione?</p>'
+          + '  <p class="mb-2"><strong><i class="bi bi-award-fill me-1" aria-hidden="true"></i> Hai sbloccato il badge!</strong> Vuoi l’attestato di partecipazione?</p>'
           + '  <div class="mb-2">'
           + '    <label for="nome-attestato" class="form-label small">Scrivi il tuo nome (max 40 caratteri):</label>'
           + '    <input type="text" id="nome-attestato" class="form-control" maxlength="40" placeholder="Il tuo nome">'

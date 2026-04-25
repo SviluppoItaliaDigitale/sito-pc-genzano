@@ -16,11 +16,11 @@
   var situations = [
     {
       emoji: '\uD83D\uDD25',
-      title: 'C\u2019è fumo in corridoio',
+      title: 'C’è fumo in corridoio',
       desc: 'Devi scappare dalla scuola. Quale cartello cerchi sul muro?',
       correct: 'exit',
       wrong: 'info',
-      feedback: 'Il cartello verde con l\u2019uomo che corre indica la via di fuga. Seguilo per uscire in sicurezza.'
+      feedback: 'Il cartello verde con l’uomo che corre indica la via di fuga. Seguilo per uscire in sicurezza.'
     },
     {
       emoji: '\uD83D\uDD29',
@@ -33,18 +33,18 @@
     {
       emoji: '\uD83D\uDEB7',
       title: 'Qui non si passa',
-      desc: 'Vicino a un lavoro in corso c\u2019è un cartello. Quale indica che è vietato entrare?',
+      desc: 'Vicino a un lavoro in corso c’è un cartello. Quale indica che è vietato entrare?',
       correct: 'ban',
       wrong: 'info',
-      feedback: 'Il cerchio rosso con la barra è il segnale di divieto. Rispetta il divieto e cerca un\u2019altra strada.'
+      feedback: 'Il cerchio rosso con la barra è il segnale di divieto. Rispetta il divieto e cerca un’altra strada.'
     },
     {
       emoji: '\uD83D\uDD14',
       title: 'Allarme: bisogna uscire',
-      desc: 'Dopo aver lasciato l\u2019edificio, dove mi fermo con gli altri?',
+      desc: 'Dopo aver lasciato l’edificio, dove mi fermo con gli altri?',
       correct: 'meeting',
       wrong: 'danger',
-      feedback: 'Il cartello verde con le persone indica il punto di raccolta. Aspetta lì l\u2019appello.'
+      feedback: 'Il cartello verde con le persone indica il punto di raccolta. Aspetta lì l’appello.'
     },
     {
       emoji: '\u26A0\uFE0F',
@@ -52,7 +52,7 @@
       desc: 'Un cartello giallo con il punto esclamativo mi avvisa di qualcosa. Cosa significa?',
       correct: 'danger',
       wrong: 'info',
-      feedback: 'Il triangolo giallo-arancione con il punto esclamativo dice: attento, c\u2019è un pericolo. Guarda bene prima di andare avanti.'
+      feedback: 'Il triangolo giallo-arancione con il punto esclamativo dice: attento, c’è un pericolo. Guarda bene prima di andare avanti.'
     },
     {
       emoji: '\uD83D\uDCA7',
@@ -60,7 +60,7 @@
       desc: 'Durante una prova di evacuazione voglio bere. Quale cartello mi guida a una fontanella sicura?',
       correct: 'water',
       wrong: 'fire',
-      feedback: 'Il cartello azzurro con la goccia indica l\u2019acqua potabile. L\u2019acqua è sicura da bere.'
+      feedback: 'Il cartello azzurro con la goccia indica l’acqua potabile. L’acqua è sicura da bere.'
     }
   ];
 

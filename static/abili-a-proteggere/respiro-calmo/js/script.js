@@ -33,10 +33,10 @@
     setPhase('inhale', 'Inspira dal naso');
     timers.push(setTimeout(function () {
       if (stopped) return;
-      setPhase('hold', 'Trattieni\u2026');
+      setPhase('hold', 'Trattieni…');
       timers.push(setTimeout(function () {
         if (stopped) return;
-        setPhase('exhale', 'Butta fuori l\u2019aria');
+        setPhase('exhale', 'Butta fuori l’aria');
         timers.push(setTimeout(function () {
           if (stopped) return;
           if (roundIndex + 1 < TOTAL_ROUNDS) {
@@ -60,7 +60,7 @@
     clearAllTimers();
     document.getElementById('round-total').textContent = TOTAL_ROUNDS;
     document.getElementById('round-n').textContent = 1;
-    setPhase(null, 'Preparati\u2026');
+    setPhase(null, 'Preparati…');
     hide(document.getElementById('intro-screen'));
     hide(document.getElementById('end-screen'));
     show(document.getElementById('breath-screen'));

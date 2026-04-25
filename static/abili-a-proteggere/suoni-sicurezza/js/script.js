@@ -5,13 +5,13 @@
   var situations = [
     {
       emoji: '🔔🏫',
-      title: 'Suona l\u2019allarme a scuola',
-      desc: 'Senti un suono forte e continuo: è l\u2019allarme della scuola!',
+      title: 'Suona l’allarme a scuola',
+      desc: 'Senti un suono forte e continuo: è l’allarme della scuola!',
       actions: [
         { text: 'Mi metto in fila e esco con la maestra', icon: '🚶', correct: true },
         { text: 'Continuo a giocare', icon: '🎮', correct: false }
       ],
-      feedback: 'Quando suona l\u2019allarme, mettiti in fila e segui la maestra verso il punto di raccolta.'
+      feedback: 'Quando suona l’allarme, mettiti in fila e segui la maestra verso il punto di raccolta.'
     },
     {
       emoji: '🚒🔊',
@@ -41,7 +41,7 @@
         { text: 'Resto a casa e chiudo le finestre', icon: '🏠', correct: true },
         { text: 'Esco a fare una passeggiata', icon: '🚶', correct: false }
       ],
-      feedback: 'Con l\u2019allerta arancione è meglio restare a casa, chiudere le finestre e aspettare che passi.'
+      feedback: 'Con l’allerta arancione è meglio restare a casa, chiudere le finestre e aspettare che passi.'
     },
     {
       emoji: '💨🏠',
@@ -49,19 +49,19 @@
       desc: 'Senti la casa che trema e gli oggetti si muovono. È un terremoto!',
       actions: [
         { text: 'Mi riparo sotto il tavolo', icon: '🪑', correct: true },
-        { text: 'Corro verso l\u2019ascensore', icon: '🛗', correct: false }
+        { text: 'Corro verso l’ascensore', icon: '🛗', correct: false }
       ],
-      feedback: 'Riparati sotto un tavolo robusto e proteggiti la testa. Non usare mai l\u2019ascensore!'
+      feedback: 'Riparati sotto un tavolo robusto e proteggiti la testa. Non usare mai l’ascensore!'
     },
     {
       emoji: '🚨🔴',
-      title: 'Suona l\u2019allarme incendio',
-      desc: 'Senti l\u2019allarme incendio del palazzo. C\u2019è un po\u2019 di fumo.',
+      title: 'Suona l’allarme incendio',
+      desc: 'Senti l’allarme incendio del palazzo. C’è un po’ di fumo.',
       actions: [
         { text: 'Esco dalle scale e chiamo il 112', icon: '📞', correct: true },
         { text: 'Apro tutte le porte per cercare il fuoco', icon: '🚪', correct: false }
       ],
-      feedback: 'Esci subito dalle scale (mai dall\u2019ascensore) e chiama il 112. Non aprire porte con fumo!'
+      feedback: 'Esci subito dalle scale (mai dall’ascensore) e chiama il 112. Non aprire porte con fumo!'
     }
   ];
 

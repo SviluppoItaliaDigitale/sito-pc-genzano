@@ -8,12 +8,12 @@
       title: 'Pentola sul fuoco',
       desc: 'Il manico della pentola calda sporge fuori dal fornello.',
       correct: 'danger',
-      feedback: 'Pericoloso. Chi passa può urtare il manico e rovesciarsi addosso la pentola. Gira il manico verso l\u2019interno.'
+      feedback: 'Pericoloso. Chi passa può urtare il manico e rovesciarsi addosso la pentola. Gira il manico verso l’interno.'
     },
     {
       emoji: '\uD83E\uDDEF',
       title: 'Estintore a vista',
-      desc: 'Vicino alla porta c\u2019è un estintore pulito, in vista, facile da prendere.',
+      desc: 'Vicino alla porta c’è un estintore pulito, in vista, facile da prendere.',
       correct: 'safe',
       feedback: 'Sicuro. Un estintore a vista e raggiungibile è una cosa buona. In caso di piccolo incendio si usa subito.'
     },
@@ -27,7 +27,7 @@
     {
       emoji: '\uD83D\uDEAA',
       title: 'Porta non bloccata',
-      desc: 'La porta d\u2019ingresso si chiude bene ma non è bloccata da mobili.',
+      desc: 'La porta d’ingresso si chiude bene ma non è bloccata da mobili.',
       correct: 'safe',
       feedback: 'Sicuro. Se serve uscire in fretta, una porta libera è la cosa giusta. Non mettere mai mobili davanti alla via di fuga.'
     },
@@ -41,7 +41,7 @@
     {
       emoji: '\uD83D\uDCA1',
       title: 'Luce dopo il temporale',
-      desc: 'Dopo il temporale c\u2019è di nuovo corrente. Accendi prima una lampadina e controlli se funziona.',
+      desc: 'Dopo il temporale c’è di nuovo corrente. Accendi prima una lampadina e controlli se funziona.',
       correct: 'safe',
       feedback: 'Sicuro. Accendere una luce normale per provare è corretto. Se senti odore di bruciato, spegni e chiama un adulto.'
     }

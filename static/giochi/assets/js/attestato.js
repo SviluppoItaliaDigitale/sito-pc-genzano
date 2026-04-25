@@ -75,7 +75,7 @@
       // Firma simbolica
       + '<line x1="550" y1="490" x2="762" y2="490" stroke="#003366" stroke-width="1"/>'
       // Footer licenza
-      + '<text x="421" y="555" text-anchor="middle" font-family="Titillium Web, Arial, sans-serif" font-size="10" fill="#5b6b7c">protezionecivilegenzano.it \u2014 CC BY 4.0</text>'
+      + '<text x="421" y="555" text-anchor="middle" font-family="Titillium Web, Arial, sans-serif" font-size="10" fill="#5b6b7c">protezionecivilegenzano.it — CC BY 4.0</text>'
       + '</svg>';
     return svg;
   }

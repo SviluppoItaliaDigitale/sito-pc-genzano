@@ -107,7 +107,7 @@
     if (puoAttestato) {
       html += ''
         + '  <div class="alert alert-success border-0" style="border-radius:12px;">'
-        + '    <p class="mb-2"><strong>Hai sbloccato il badge!</strong> Vuoi l\u2019attestato di partecipazione?</p>'
+        + '    <p class="mb-2"><strong>Hai sbloccato il badge!</strong> Vuoi l’attestato di partecipazione?</p>'
         + '    <div class="mb-2">'
         + '      <label for="nome-attestato" class="form-label small">Scrivi il tuo nome (max 40 caratteri):</label>'
         + '      <input type="text" id="nome-attestato" class="form-control" maxlength="40" placeholder="Il tuo nome">'
@@ -118,7 +118,7 @@
         + '    </div>'
         + '  </div>';
     } else {
-      html += '<p class="text-muted">Per ottenere l\u2019attestato devi rispondere correttamente almeno all\u201880% delle domande.</p>';
+      html += '<p class="text-muted">Per ottenere l’attestato devi rispondere correttamente almeno all‘80% delle domande.</p>';
     }
     html += ''
       + '  <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">'
@@ -171,12 +171,12 @@
       cont.appendChild(box);
     }
     if (perc < 80) {
-      box.innerHTML = '<p class="text-muted small mb-0"><i class="bi bi-info-circle me-1" aria-hidden="true"></i> Per ottenere l\u2019attestato devi ottenere almeno l\u201980%.</p>';
+      box.innerHTML = '<p class="text-muted small mb-0"><i class="bi bi-info-circle me-1" aria-hidden="true"></i> Per ottenere l’attestato devi ottenere almeno l’80%.</p>';
       return;
     }
     box.innerHTML = ''
       + '<div class="alert alert-success border-0 text-start" style="border-radius:12px;max-width:520px;margin:0 auto;">'
-      + '  <p class="mb-2"><strong><i class="bi bi-award-fill me-1" aria-hidden="true"></i> Hai sbloccato il badge!</strong> Vuoi l\u2019attestato?</p>'
+      + '  <p class="mb-2"><strong><i class="bi bi-award-fill me-1" aria-hidden="true"></i> Hai sbloccato il badge!</strong> Vuoi l’attestato?</p>'
       + '  <label for="nome-att-' + idGioco + '" class="form-label small">Scrivi il tuo nome (max 40 caratteri):</label>'
       + '  <input type="text" id="nome-att-' + idGioco + '" class="form-control mb-2" maxlength="40" placeholder="Il tuo nome">'
       + '  <div class="d-flex flex-wrap gap-2 justify-content-center">'

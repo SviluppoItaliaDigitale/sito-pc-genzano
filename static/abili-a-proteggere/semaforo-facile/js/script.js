@@ -21,7 +21,7 @@
     {
       emoji: '\u26C5',
       title: 'Qualche pioggia',
-      desc: 'Oggi piove un po\u2019 e il vento è leggero.',
+      desc: 'Oggi piove un po’ e il vento è leggero.',
       correct: 'giallo',
       wrong: 'verde',
       feedback: 'Giallo: serve attenzione. Fai attenzione a strade bagnate e piccoli allagamenti.'
@@ -29,7 +29,7 @@
     {
       emoji: '\u26C8\uFE0F',
       title: 'Temporale forte',
-      desc: 'C\u2019è un temporale con vento forte e lampi.',
+      desc: 'C’è un temporale con vento forte e lampi.',
       correct: 'arancione',
       wrong: 'giallo',
       feedback: 'Arancione: pericolo. Resta in casa e allontanati dalle finestre.'
@@ -37,7 +37,7 @@
     {
       emoji: '\uD83C\uDF0A',
       title: 'Alluvione',
-      desc: 'L\u2019acqua è salita tanto e ha invaso le strade.',
+      desc: 'L’acqua è salita tanto e ha invaso le strade.',
       correct: 'rosso',
       wrong: 'arancione',
       feedback: 'Rosso: grave. Sali ai piani alti e chiama il 112 se serve aiuto.'

@@ -10,7 +10,7 @@
       choices: [
         { text: 'Sotto il tavolo', icon: '🪑', correct: true },
         { text: 'Vicino alla finestra', icon: '🪟', correct: false },
-        { text: 'Davanti all\u2019ascensore', icon: '🛗', correct: false }
+        { text: 'Davanti all’ascensore', icon: '🛗', correct: false }
       ],
       feedback: 'Sotto il tavolo è il posto più sicuro! Proteggiti la testa e tieni le gambe del tavolo.'
     },
@@ -28,7 +28,7 @@
     {
       icon: '⛈️',
       title: 'Temporale forte',
-      desc: 'C\u2019è un temporale forte con tanti fulmini. Sei fuori. Dove vai?',
+      desc: 'C’è un temporale forte con tanti fulmini. Sei fuori. Dove vai?',
       choices: [
         { text: 'Sotto un albero alto', icon: '🌳', correct: false },
         { text: 'Dentro un edificio', icon: '🏠', correct: true },
@@ -45,18 +45,18 @@
         { text: 'Esco subito e chiamo aiuto', icon: '🚶', correct: true },
         { text: 'Mi nascondo sotto il letto', icon: '🛏️', correct: false }
       ],
-      feedback: 'Giusto! Esci subito e chiama il 112 o un adulto. Non aprire mai la porta dove c\u2019è fumo!'
+      feedback: 'Giusto! Esci subito e chiama il 112 o un adulto. Non aprire mai la porta dove c’è fumo!'
     },
     {
       icon: '🌊',
       title: 'Acqua per strada',
-      desc: 'Piove tantissimo e c\u2019è acqua alta per strada. Dove stai?',
+      desc: 'Piove tantissimo e c’è acqua alta per strada. Dove stai?',
       choices: [
         { text: 'Ai piani alti di casa', icon: '🏠', correct: true },
         { text: 'In cantina', icon: '🪜', correct: false },
-        { text: 'Cammino nell\u2019acqua', icon: '🚶', correct: false }
+        { text: 'Cammino nell’acqua', icon: '🚶', correct: false }
       ],
-      feedback: 'Ai piani alti sei al sicuro! Non scendere mai in cantina quando c\u2019è un\u2019alluvione.'
+      feedback: 'Ai piani alti sei al sicuro! Non scendere mai in cantina quando c’è un’alluvione.'
     }
   ];
 
