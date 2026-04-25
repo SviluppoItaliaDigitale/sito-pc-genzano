@@ -197,23 +197,81 @@
 
       <div class="col-passo">
         <div class="col-num">5</div>
-        <svg viewBox="0 0 160 120" role="img" aria-label="Bambino che vorrebbe tornare indietro, divieto">
-          <!-- Bambino -->
-          <circle cx="50" cy="40" r="9" />
-          <line x1="50" y1="49" x2="50" y2="80" />
-          <line x1="45" y1="75" x2="45" y2="92" />
-          <line x1="55" y1="75" x2="55" y2="92" />
-          <!-- Freccia indietro tratteggiata -->
-          <path d="M 70 60 L 110 60" class="arrow" stroke-dasharray="5,4" />
-          <path d="M 75 55 L 70 60 L 75 65" class="arrow" />
-          <!-- Casa che brucia in fondo -->
-          <path d="M 115 90 L 115 70 L 130 60 L 145 70 L 145 90 Z" />
-          <!-- Fiamme -->
-          <path d="M 122 65 Q 124 58 126 65 Q 128 55 130 65" />
-          <path d="M 132 65 Q 134 58 136 65 Q 138 55 140 65" />
-          <!-- X grande rossa sulla freccia -->
-          <line x1="80" y1="45" x2="100" y2="80" class="col-x-red" />
-          <line x1="100" y1="45" x2="80" y2="80" class="col-x-red" />
+        <svg viewBox="0 0 200 130" role="img" aria-label="Bambino che si allontana dalla casa in fiamme: divieto di tornare indietro a prendere oggetti">
+          <!-- BAMBINO dettagliato (stile figura 1) -->
+          <!-- Capelli -->
+          <path d="M 27 30 Q 25 24 30 20 Q 40 16 50 20 Q 55 24 53 32" />
+          <!-- Testa -->
+          <circle cx="40" cy="34" r="11" />
+          <!-- Occhi (preoccupati) -->
+          <circle cx="36" cy="32" r="1.8" class="fill-text" />
+          <circle cx="44" cy="32" r="1.8" class="fill-text" />
+          <!-- Sopracciglia preoccupate -->
+          <path d="M 33 28 L 38 29" />
+          <path d="M 42 29 L 47 28" />
+          <!-- Bocca seria -->
+          <line x1="36" y1="40" x2="44" y2="40" />
+          <!-- Collo -->
+          <line x1="40" y1="45" x2="40" y2="50" />
+          <!-- Maglietta a "T" -->
+          <path d="M 27 50 L 53 50 L 57 62 L 50 62 L 50 77 L 30 77 L 30 62 L 23 62 Z" />
+          <!-- Numero stilizzato sulla maglietta -->
+          <text x="40" y="70" text-anchor="middle" class="fill-text" style="font-size: 9px; font-weight: 700;">7</text>
+          <!-- Braccio sinistro: alzato a "fermo / no" verso la casa -->
+          <line x1="27" y1="55" x2="55" y2="40" />
+          <circle cx="58" cy="38" r="3" />
+          <!-- Mano aperta (palmo) -->
+          <path d="M 56 35 L 60 33" />
+          <path d="M 58 35 L 62 35" />
+          <path d="M 58 38 L 62 39" />
+          <!-- Braccio destro lungo il corpo -->
+          <line x1="50" y1="55" x2="55" y2="78" />
+          <circle cx="55" cy="80" r="2.5" />
+          <!-- Pantaloncini -->
+          <path d="M 30 77 L 33 95 L 40 95 L 40 77 Z" />
+          <path d="M 40 77 L 40 95 L 47 95 L 50 77 Z" />
+          <!-- Gambe -->
+          <line x1="35" y1="95" x2="33" y2="115" />
+          <line x1="45" y1="95" x2="47" y2="115" />
+          <!-- Scarpe -->
+          <ellipse cx="31" cy="118" rx="5" ry="2.5" />
+          <ellipse cx="49" cy="118" rx="5" ry="2.5" />
+
+          <!-- FRECCIA TRATTEGGIATA che indica "torna indietro" (vietato) -->
+          <path d="M 75 65 L 130 65" class="arrow" stroke-dasharray="6,5" />
+          <path d="M 80 60 L 75 65 L 80 70" class="arrow" />
+
+          <!-- DIVIETO (X rossa) sopra alla freccia -->
+          <line x1="92" y1="50" x2="115" y2="80" class="col-x-red" stroke-width="5" />
+          <line x1="115" y1="50" x2="92" y2="80" class="col-x-red" stroke-width="5" />
+
+          <!-- CASA IN FIAMME ben definita -->
+          <!-- Tetto -->
+          <path d="M 138 72 L 165 50 L 192 72" />
+          <line x1="138" y1="72" x2="192" y2="72" />
+          <!-- Pareti -->
+          <line x1="143" y1="72" x2="143" y2="118" />
+          <line x1="187" y1="72" x2="187" y2="118" />
+          <line x1="143" y1="118" x2="187" y2="118" />
+          <!-- Porta (con maniglia) -->
+          <rect x="155" y="92" width="14" height="26" />
+          <line x1="162" y1="92" x2="162" y2="118" />
+          <circle cx="159" cy="106" r="0.8" class="fill-text" />
+          <!-- Finestre -->
+          <rect x="148" y="80" width="9" height="9" />
+          <line x1="152.5" y1="80" x2="152.5" y2="89" />
+          <line x1="148" y1="84.5" x2="157" y2="84.5" />
+          <rect x="173" y="80" width="9" height="9" />
+          <line x1="177.5" y1="80" x2="177.5" y2="89" />
+          <line x1="173" y1="84.5" x2="182" y2="84.5" />
+          <!-- FIAMME GROSSE che escono dal tetto -->
+          <path d="M 148 50 Q 150 38 153 48 Q 155 32 158 45 Q 162 30 165 42 Q 168 30 171 45 Q 173 32 176 48 Q 180 38 182 50" stroke-width="2.5" />
+          <!-- Fiamme dalle finestre -->
+          <path d="M 152 80 Q 153 73 156 78 Q 158 70 160 76" />
+          <path d="M 175 80 Q 176 73 179 78 Q 181 70 183 76" />
+          <!-- Fumo sopra il tetto -->
+          <path d="M 150 38 Q 145 28 155 22 Q 165 18 170 28 Q 180 25 178 35" />
+          <path d="M 158 30 Q 152 22 162 18 Q 172 16 175 24" />
         </svg>
         <p class="col-frase"><strong>Non torno</strong> indietro</p>
       </div>
