@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: I punti cardinali (Infanzia 5-6 anni)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola dell'Infanzia. La rosa dei venti semplificata: nord, sud, est, ovest. Dove sorge e tramonta il sole.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .rosa-svg { max-width: 320px; height: auto; margin: 0.5rem auto; display: block; }
+    .punti-griglia {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem;
+      margin: 0.5rem 0;
+    }
+    .punto-card {
+      border: 2.5px solid var(--scheda-blu);
+      border-radius: 10px; padding: 0.6rem;
+      background: #fff; display: flex; align-items: center; gap: 0.7rem;
+    }
+    .punto-card .lettera {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-blu); font-size: 2.2rem;
+      width: 2.6rem; text-align: center; flex-shrink: 0;
+    }
+    .punto-card .info { flex: 1; line-height: 1.35; }
+    .punto-card .nome {
+      font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem;
+    }
+    .punto-card .desc {
+      font-size: 0.85rem; color: #495057;
+    }
+
+    .scrivi-rosa {
+      max-width: 320px; height: auto; margin: 0.5rem auto; display: block;
+    }
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Punti cardinali — Infanzia</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">I punti cardinali — Sapere dove andare</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (5-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere i 4 punti cardinali e l'orientamento del sole</span>
+      <span><strong>Servono:</strong> matita, pennarelli</span>
+    </div>
+
+    <p class="scheda-intro">
+      I <strong>volontari della Protezione Civile</strong> devono sapere sempre dov'è il
+      <strong>nord</strong>, dov'è il <strong>sud</strong>, dov'è l'<strong>est</strong>
+      e dov'è l'<strong>ovest</strong>. Si chiamano <strong>punti cardinali</strong>
+      e si disegnano con una stella che ha 4 punte.
+    </p>
+
+    <h2 class="scheda-h2">La rosa dei venti</h2>
+    <svg class="rosa-svg" viewBox="0 0 240 240" role="img" aria-label="Rosa dei venti con N, S, E, O">
+      <!-- stella principale -->
+      <polygon points="120,20 130,110 220,120 130,130 120,220 110,130 20,120 110,110" fill="#003366" stroke="#003366" stroke-width="2"/>
+      <!-- ombra interna chiara -->
+      <polygon points="120,40 125,115 200,120 125,125 120,200 115,125 40,120 115,115" fill="#0066cc"/>
+      <!-- cerchio centrale -->
+      <circle cx="120" cy="120" r="14" fill="#fff" stroke="#003366" stroke-width="2"/>
+      <!-- lettere -->
+      <text x="120" y="14" text-anchor="middle" font-size="18" font-weight="700" fill="#003366">N</text>
+      <text x="120" y="236" text-anchor="middle" font-size="18" font-weight="700" fill="#003366">S</text>
+      <text x="234" y="125" text-anchor="middle" font-size="18" font-weight="700" fill="#003366">E</text>
+      <text x="6" y="125" text-anchor="middle" font-size="18" font-weight="700" fill="#003366">O</text>
+    </svg>
+
+    <div class="punti-griglia">
+      <div class="punto-card">
+        <span class="lettera" aria-hidden="true">N</span>
+        <div class="info">
+          <div class="nome">NORD</div>
+          <div class="desc">In alto. Verso le montagne.</div>
+        </div>
+      </div>
+      <div class="punto-card">
+        <span class="lettera" aria-hidden="true">S</span>
+        <div class="info">
+          <div class="nome">SUD</div>
+          <div class="desc">In basso. Verso il mare (Anzio).</div>
+        </div>
+      </div>
+      <div class="punto-card">
+        <span class="lettera" aria-hidden="true">E</span>
+        <div class="info">
+          <div class="nome">EST</div>
+          <div class="desc">A destra. Da dove sorge il sole 🌅</div>
+        </div>
+      </div>
+      <div class="punto-card">
+        <span class="lettera" aria-hidden="true">O</span>
+        <div class="info">
+          <div class="nome">OVEST</div>
+          <div class="desc">A sinistra. Dove il sole tramonta 🌇</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Scrivi tu le 4 lettere nella rosa dei venti</h2>
+    <p class="scheda-intro" style="margin: 0.2rem 0;">Ricorda: <strong>N</strong> in alto, <strong>S</strong> in basso, <strong>E</strong> a destra, <strong>O</strong> a sinistra.</p>
+    <svg class="scrivi-rosa" viewBox="0 0 240 240" role="img" aria-label="Rosa dei venti vuota da completare">
+      <polygon points="120,20 130,110 220,120 130,130 120,220 110,130 20,120 110,110" fill="#fff" stroke="#003366" stroke-width="2"/>
+      <circle cx="120" cy="120" r="14" fill="#fff" stroke="#003366" stroke-width="2"/>
+      <!-- box vuoti -->
+      <rect x="105" y="0" width="30" height="22" fill="#fff" stroke="#003366" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <rect x="105" y="218" width="30" height="22" fill="#fff" stroke="#003366" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <rect x="218" y="108" width="22" height="30" fill="#fff" stroke="#003366" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <rect x="0" y="108" width="22" height="30" fill="#fff" stroke="#003366" stroke-width="1.5" stroke-dasharray="3,2"/>
+    </svg>
+
+    <h2 class="scheda-h2">🌞 Il sole nel giorno</h2>
+    <p class="scheda-intro">
+      Il sole <strong>sorge a est</strong> la mattina e <strong>tramonta a ovest</strong>
+      la sera. Se sai dov'è il sole quando ti svegli, sai dov'è l'est!
+    </p>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Memo</strong>: <em>"NESO"</em> = Nord-Est-Sud-Ovest in senso orario, partendo dall'alto.</li>
+        <li><strong>Attività concreta</strong>: in cortile al mattino, far indicare ai bambini dov'è il sole. Quello è l'est. Spiegare che a casa dei nonni, in spiaggia, ovunque, il sole sorge sempre dalla stessa parte.</li>
+        <li><strong>Collegamento PC</strong>: i volontari usano la <strong>bussola</strong> e i punti cardinali per orientarsi nei boschi durante le ricerche di persone disperse.</li>
+        <li>A Genzano, il <strong>mare</strong> (Anzio, Lavinio, Nettuno) è a sud-ovest. I <strong>monti</strong> dei Castelli Romani sono attorno a noi.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "I punti cardinali" · Infanzia · territorio · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

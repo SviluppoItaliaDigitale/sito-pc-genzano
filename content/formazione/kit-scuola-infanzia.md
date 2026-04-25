@@ -244,6 +244,15 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Riconosci l'Iniziale**](/formazione/schede-stampabili/riconosci-iniziale-infanzia/) — per ogni immagine il bambino cerchia la lettera con cui inizia la parola, fra tre opzioni. 10 parole-chiave della sicurezza.
 - 👉 [**Collega la Parola all'Immagine**](/formazione/schede-stampabili/collega-parola-immagine-infanzia/) — 8 parole in stampatello da collegare con una linea alle 8 immagini in colonna a destra. Adatta anche per la classe 1ª.
 
+**6 schede curriculari trasversali** a tema Protezione Civile (numeri, scienze, territorio, comprensione):
+
+- 👉 [**I Numeri della Protezione Civile**](/formazione/schede-stampabili/numeri-pc-infanzia/) — numeri da 1 a 5 abbinati agli oggetti PC da contare e ricalcare. Plus il 112 in rosso. *(matematica)*
+- 👉 [**Il Ciclo dell'Acqua**](/formazione/schede-stampabili/ciclo-acqua-infanzia/) — 4 vignette (sole, vapore, nuvola, pioggia) da rimettere in ordine. Capire da dove arriva la pioggia. *(scienze)*
+- 👉 [**Cosa Serve al Fuoco — Il Triangolo**](/formazione/schede-stampabili/triangolo-fuoco-infanzia/) — i 3 elementi del fuoco e cosa fa il pompiere quando spegne con l'acqua. *(scienze)*
+- 👉 [**I Cartelli della Sicurezza**](/formazione/schede-stampabili/cartelli-sicurezza-infanzia/) — i 4 cartelli base (uscita, idrante, divieto, pericolo) da riconoscere e colorare. *(territorio)*
+- 👉 [**I Punti Cardinali**](/formazione/schede-stampabili/punti-cardinali-infanzia/) — rosa dei venti semplificata con N, S, E, O. Dove sorge e tramonta il sole. *(territorio)*
+- 👉 [**Riordina l'Evacuazione**](/formazione/schede-stampabili/riordina-vignette-evacuazione-infanzia/) — 4 vignette dell'evacuazione scolastica da rimettere in ordine cronologico. *(comprensione del testo)*
+
 **5 schede da colorare** sui rischi del territorio (linea pulita pensata per matite, pastelli, pennarelli):
 
 - 👉 [**Colora il Terremoto**](/formazione/schede-stampabili/colorare-terremoto-infanzia/) — sotto il tavolo robusto durante la scossa.

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Riordina le frasi dell'allerta (Primaria 2ª-3ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. 6 frasi su una giornata di allerta meteo da numerare in ordine cronologico. Comprensione del testo + sequenza temporale.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .frasi-griglia { display: grid; gap: 0.45rem; margin: 0.5rem 0; }
+    .frase-card {
+      display: flex; align-items: center; gap: 0.7rem;
+      padding: 0.6rem 0.8rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 8px;
+      font-size: 0.95rem; line-height: 1.4;
+    }
+    .frase-card .num-vuoto {
+      width: 2.4rem; height: 2.4rem;
+      border: 2.5px dashed var(--scheda-blu);
+      border-radius: 8px; flex-shrink: 0;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #f4f7fb;
+      font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+      font-weight: 700; color: #ced4da; font-size: 1.1rem;
+    }
+    .frase-card .lettera {
+      flex-shrink: 0;
+      width: 2rem; text-align: center;
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-blu); font-size: 1.2rem;
+    }
+    .frase-card .testo { flex: 1; }
+    .frase-card .testo strong { color: var(--scheda-blu); }
+
+    .ordine-finale {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.4rem; flex-wrap: wrap;
+      margin: 0.5rem 0;
+      font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+      font-size: 1.3rem; font-weight: 700; color: var(--scheda-blu);
+    }
+    .ordine-finale .lettera-vuota {
+      width: 2.6rem; height: 2.6rem;
+      border: 2.5px solid var(--scheda-blu);
+      border-radius: 8px; display: inline-flex;
+      align-items: center; justify-content: center;
+      background: #fff;
+    }
+    .ordine-finale .freccia { color: var(--scheda-grigio); font-size: 1.2rem; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Riordina le frasi dell'allerta — Primaria</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Riordina le frasi — Una giornata di allerta meteo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 2ª-3ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 7-9 anni</span>
+      <span><strong>Obiettivo:</strong> ricostruire la sequenza temporale di un evento meteo</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Le 6 frasi qui sotto raccontano <strong>cosa succede</strong> quando arriva un'allerta
+      meteo arancione a Genzano. Sono però in <strong>ordine sparso</strong>!
+      Numerale tu da <strong>1</strong> (la prima cosa) a <strong>6</strong> (l'ultima) nel
+      quadrato dietro a ciascuna frase.
+    </p>
+
+    <div class="frasi-griglia">
+      <div class="frase-card">
+        <span class="num-vuoto" aria-hidden="true">?</span>
+        <span class="lettera">A</span>
+        <span class="testo">Il sindaco apre il <strong>Centro Operativo Comunale (COC)</strong> e i volontari si attivano.</span>
+      </div>
+      <div class="frase-card">
+        <span class="num-vuoto" aria-hidden="true">?</span>
+        <span class="lettera">B</span>
+        <span class="testo">Sui telefoni arriva il <strong>messaggio IT-alert</strong> con le istruzioni per la popolazione.</span>
+      </div>
+      <div class="frase-card">
+        <span class="num-vuoto" aria-hidden="true">?</span>
+        <span class="lettera">C</span>
+        <span class="testo">Al mattino il cielo è già coperto e <strong>inizia a piovere</strong> forte.</span>
+      </div>
+      <div class="frase-card">
+        <span class="num-vuoto" aria-hidden="true">?</span>
+        <span class="lettera">D</span>
+        <span class="testo">La <strong>Regione Lazio</strong> emette il bollettino di allerta arancione per la nostra zona.</span>
+      </div>
+      <div class="frase-card">
+        <span class="num-vuoto" aria-hidden="true">?</span>
+        <span class="lettera">E</span>
+        <span class="testo">Smette di piovere, si fa il <strong>punto della situazione</strong> e si chiude il COC.</span>
+      </div>
+      <div class="frase-card">
+        <span class="num-vuoto" aria-hidden="true">?</span>
+        <span class="lettera">F</span>
+        <span class="testo">I volontari vanno a controllare i <strong>fossi e i sottopassi</strong> più a rischio.</span>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Scrivi le lettere nell'ordine giusto</h2>
+    <p class="scheda-intro" style="margin: 0.2rem 0;">Quale frase viene per prima? Quale per ultima? Scrivi le lettere A, B, C, D, E, F nei quadrati:</p>
+    <div class="ordine-finale">
+      <span>1°</span><span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>2°</span><span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>3°</span><span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>4°</span><span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>5°</span><span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>6°</span><span class="lettera-vuota" aria-hidden="true"></span>
+    </div>
+
+    <h2 class="scheda-h2">Domanda extra</h2>
+    <div class="frase-card" style="border-left:4px solid var(--scheda-blu); padding:0.7rem 0.85rem;">
+      <span class="testo">
+        <strong>Chi decide</strong> il colore dell'allerta meteo (verde, giallo, arancione, rosso)?
+      </span>
+    </div>
+    <div style="display: grid; gap: 0.5rem; margin: 0.4rem 0;">
+      <span style="border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.5rem;" aria-hidden="true"></span>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Sequenza corretta</strong>: <strong>D → A → F → C → B → E</strong>.<br>
+        (1: bollettino Regione · 2: apertura COC · 3: volontari controllano · 4: inizia la pioggia · 5: IT-alert · 6: chiusura COC).</li>
+        <li><strong>Variante</strong> ammessa: B (IT-alert) può precedere C (la pioggia) oppure essere contemporaneo. Accettare entrambe le posizioni se motivate.</li>
+        <li><strong>Domanda extra</strong>: il <strong>Centro Funzionale Regionale Lazio</strong> (l'ufficio della Regione che monitora il meteo) decide il colore. Accettare anche risposte tipo "la Regione" o "la Protezione Civile della Regione".</li>
+        <li><strong>Approfondimento</strong>: collegare con la scheda <a href="/formazione/schede-stampabili/codici-allerta-numeri-primaria/">codici-allerta-numeri-primaria</a> e con la pagina <a href="/allerte-meteo/">/allerte-meteo/</a> dove l'allerta attuale è visibile in tempo reale.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Riordina le frasi dell'allerta" · Primaria 2ª-3ª · comprensione · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

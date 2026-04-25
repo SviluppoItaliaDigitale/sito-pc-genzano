@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Mappa cieca del quartiere (Primaria 2ª-4ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. Una mappa di quartiere senza nomi: l'alunno scrive le etichette dei luoghi importanti per la Protezione Civile (scuola, ospedale, area di attesa, idrante).">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .mappa-svg {
+      width: 100%; max-width: 600px;
+      height: auto; margin: 0.4rem auto; display: block;
+      border: 2px solid var(--scheda-blu); border-radius: 8px;
+      background: #f4f7fb;
+    }
+    .legenda {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 0.7rem;
+      margin: 0.5rem 0; font-size: 0.88rem;
+    }
+    .legenda .voce {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+    }
+    .legenda .pin {
+      width: 1.6rem; height: 1.6rem; border-radius: 50%;
+      flex-shrink: 0; display: inline-flex; align-items: center;
+      justify-content: center; color: #fff; font-weight: 700; font-size: 0.85rem;
+    }
+    .legenda .pin.verde { background: #198754; }
+    .legenda .pin.rosso { background: #dc3545; }
+    .legenda .pin.blu { background: #003366; }
+    .legenda .pin.arancio { background: #fd7e14; }
+    .legenda .pin.viola { background: #7c3aed; }
+
+    .domanda-box {
+      background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
+      padding: 0.55rem 0.85rem; border-radius: 0 6px 6px 0; margin: 0.5rem 0;
+    }
+    .domanda-box .testo {
+      font-weight: 600; color: var(--scheda-blu); margin-bottom: 0.3rem;
+    }
+    .domanda-box .riga {
+      border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.6rem;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Mappa cieca del quartiere — Primaria</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La mappa del mio quartiere</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 2ª-4ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 7-9 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere i luoghi importanti per la sicurezza nel proprio quartiere</span>
+      <span><strong>Servono:</strong> matita, pennarelli</span>
+    </div>
+
+    <p class="scheda-intro">
+      Questa è una mappa di un <strong>quartiere immaginario</strong>. Ci sono case,
+      strade e luoghi importanti per la Protezione Civile: la <strong>scuola</strong>,
+      l'<strong>ospedale</strong>, la <strong>farmacia</strong>, il <strong>parco</strong>
+      con l'<strong>area di attesa</strong>, gli <strong>idranti</strong>.
+      Scrivi i nomi sui cartellini vuoti.
+    </p>
+
+    <svg class="mappa-svg" viewBox="0 0 600 400" role="img" aria-label="Mappa stilizzata di quartiere con luoghi numerati">
+      <!-- bussola in alto a destra -->
+      <g transform="translate(550,30)">
+        <circle r="22" fill="#fff" stroke="#003366" stroke-width="1.5"/>
+        <polygon points="0,-18 4,0 0,18 -4,0" fill="#003366"/>
+        <text y="-25" text-anchor="middle" font-size="11" font-weight="700" fill="#003366">N</text>
+      </g>
+
+      <!-- strade -->
+      <rect x="0" y="180" width="600" height="40" fill="#cfd5dd"/>
+      <rect x="280" y="0" width="40" height="400" fill="#cfd5dd"/>
+
+      <text x="20" y="205" font-size="11" font-weight="700" fill="#495057">Via Roma</text>
+      <text x="290" y="395" font-size="11" font-weight="700" fill="#495057">Via Italia</text>
+
+      <!-- edifici e luoghi -->
+
+      <!-- scuola (in alto a sinistra) -->
+      <rect x="50" y="50" width="140" height="100" fill="#fff" stroke="#003366" stroke-width="2.5"/>
+      <text x="120" y="90" text-anchor="middle" font-size="22">🏫</text>
+      <circle cx="50" cy="50" r="16" fill="#003366"/>
+      <text x="50" y="56" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">1</text>
+
+      <!-- ospedale (in alto a destra) -->
+      <rect x="380" y="50" width="160" height="100" fill="#fff" stroke="#dc3545" stroke-width="2.5"/>
+      <text x="460" y="95" text-anchor="middle" font-size="22">🏥</text>
+      <text x="460" y="120" text-anchor="middle" font-size="14" font-weight="700" fill="#dc3545">+</text>
+      <circle cx="380" cy="50" r="16" fill="#dc3545"/>
+      <text x="380" y="56" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">2</text>
+
+      <!-- farmacia (in basso a sinistra) -->
+      <rect x="50" y="260" width="100" height="80" fill="#fff" stroke="#198754" stroke-width="2.5"/>
+      <text x="100" y="295" text-anchor="middle" font-size="20">💊</text>
+      <text x="100" y="318" text-anchor="middle" font-size="13" font-weight="700" fill="#198754">+</text>
+      <circle cx="50" cy="260" r="16" fill="#198754"/>
+      <text x="50" y="266" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">3</text>
+
+      <!-- parco / area di attesa (in basso a destra) -->
+      <rect x="380" y="250" width="180" height="120" fill="#d4edda" stroke="#198754" stroke-width="2.5"/>
+      <text x="470" y="295" text-anchor="middle" font-size="22">🌳</text>
+      <text x="470" y="320" text-anchor="middle" font-size="13" font-weight="700" fill="#198754">AREA DI ATTESA</text>
+      <circle cx="380" cy="250" r="16" fill="#198754"/>
+      <text x="380" y="256" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">4</text>
+
+      <!-- idrante 1 (lungo via Roma) -->
+      <circle cx="220" cy="200" r="10" fill="#dc3545" stroke="#fff" stroke-width="2"/>
+      <text x="220" y="204" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">5</text>
+
+      <!-- piazza centrale (incrocio) -->
+      <rect x="240" y="160" width="80" height="80" fill="#ffe5d0" stroke="#fd7e14" stroke-width="2"/>
+      <text x="280" y="200" text-anchor="middle" font-size="14" font-weight="700" fill="#6f2a00">PIAZZA</text>
+      <circle cx="240" cy="160" r="14" fill="#fd7e14"/>
+      <text x="240" y="166" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">6</text>
+
+      <!-- caselli vuoti per le etichette -->
+      <g>
+        <rect x="50" y="155" width="140" height="20" fill="#fff" stroke="#003366" stroke-width="1.2" stroke-dasharray="3,2"/>
+        <rect x="380" y="155" width="160" height="20" fill="#fff" stroke="#003366" stroke-width="1.2" stroke-dasharray="3,2"/>
+        <rect x="50" y="345" width="100" height="20" fill="#fff" stroke="#003366" stroke-width="1.2" stroke-dasharray="3,2"/>
+        <rect x="380" y="375" width="180" height="20" fill="#fff" stroke="#003366" stroke-width="1.2" stroke-dasharray="3,2"/>
+      </g>
+
+    </svg>
+
+    <h2 class="scheda-h2">✏️ Scrivi i nomi nei cartellini tratteggiati</h2>
+    <p class="scheda-intro" style="margin: 0.2rem 0;">
+      Sotto ogni edificio c'è un cartellino vuoto. Scrivici dentro:
+      <strong>SCUOLA</strong>, <strong>OSPEDALE</strong>, <strong>FARMACIA</strong>, <strong>PARCO</strong>.
+    </p>
+
+    <h2 class="scheda-h2">Legenda dei numeri</h2>
+    <div class="legenda">
+      <div class="voce"><span class="pin blu">1</span><span>Scuola — dove studio</span></div>
+      <div class="voce"><span class="pin rosso">2</span><span>Ospedale — i medici</span></div>
+      <div class="voce"><span class="pin verde">3</span><span>Farmacia — le medicine</span></div>
+      <div class="voce"><span class="pin verde">4</span><span>Area di attesa — punto di raccolta</span></div>
+      <div class="voce"><span class="pin rosso">5</span><span>Idrante — per i pompieri</span></div>
+      <div class="voce"><span class="pin arancio">6</span><span>Piazza — il centro del quartiere</span></div>
+    </div>
+
+    <h2 class="scheda-h2">Domande sulla mappa</h2>
+
+    <div class="domanda-box">
+      <div class="testo">1. Se a scuola suona l'allarme, dove vado al sicuro?</div>
+      <div class="riga" aria-hidden="true"></div>
+    </div>
+
+    <div class="domanda-box">
+      <div class="testo">2. Se la mia mamma sta male, quale luogo cerco prima — l'ospedale o la farmacia?</div>
+      <div class="riga" aria-hidden="true"></div>
+    </div>
+
+    <div class="domanda-box">
+      <div class="testo">3. Se c'è un piccolo incendio in via Roma, da dove prendono l'acqua i pompieri?</div>
+      <div class="riga" aria-hidden="true"></div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Soluzioni domande</strong>: 1) area di attesa nel parco · 2) ospedale per le emergenze gravi, farmacia per le medicine · 3) dall'idrante (numero 5).</li>
+        <li><strong>Estensione di realtà</strong>: dopo questa scheda, far disegnare ai bambini la mappa <strong>vera</strong> del proprio quartiere a Genzano, segnando casa, scuola e l'area di attesa più vicina (verificabile sulla <a href="/cartografia/">cartografia operativa</a> del Comune).</li>
+        <li><strong>La bussola</strong> in alto a destra mostra il nord. Collegare con la scheda <a href="/formazione/schede-stampabili/punti-cardinali-infanzia/">punti-cardinali-infanzia</a>.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Mappa cieca del quartiere" · Primaria 2ª-4ª · territorio · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>
