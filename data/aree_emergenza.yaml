@@ -1,11 +1,12 @@
 # Aree di emergenza del Piano di Protezione Civile di Genzano di Roma.
 #
-# Coordinate ottenute da Nominatim (OpenStreetMap) e contrassegnate
-# come "verified: true". Per i 4 punti che Nominatim non ha trovato
-# direttamente, ho usato stime ragionevoli basate sull'area indicata
-# negli indirizzi e contrassegnato "verified: false" — il Comune o un
-# volontario può correggere queste 4 coordinate verificandole sul campo
-# o con il GIS comunale.
+# Coordinate fornite e verificate dal referente del Gruppo Comunale
+# Volontari di Protezione Civile (aprile 2026). Tutti i 16 punti sono
+# contrassegnati come verified: true.
+#
+# NOTA: AR2 — il documento ufficiale del Piano riporta "Via Piemonte"
+# ma è un errore di redazione del Piano stesso: l'area è in Via Sicilia.
+# Il sito riporta la denominazione corretta verificata sul campo.
 #
 # Tipi di area:
 #   AA = Area di Attesa della popolazione (10 punti)
@@ -16,74 +17,73 @@ aree:
   # ────────────── AREE DI ATTESA POPOLAZIONE (AA) ──────────────
   - id: AA1
     tipo: AA
-    nome: "Palazzo Sforza"
+    nome: "Palazzo Sforza Cesarini"
     indirizzo: "Piazza Tommaso Frasconi"
-    lat: 41.7070760
-    lon: 12.6885294
+    lat: 41.707567
+    lon: 12.692586
     verified: true
   - id: AA2
     tipo: AA
     nome: "Via Piave"
-    indirizzo: "Parcheggio in Via Turno Erdonio, adiacente a Viale Piave (lato Ariccia)"
-    lat: 41.7140834
-    lon: 12.6891034
+    indirizzo: "Parcheggio Via Piave"
+    lat: 41.713063
+    lon: 12.685408
     verified: true
   - id: AA3
     tipo: AA
     nome: "Via Toscana"
     indirizzo: "Parcheggio incrocio Via Toscana / Via Lazio"
-    lat: 41.6956261
-    lon: 12.6978090
+    lat: 41.695774
+    lon: 12.697296
     verified: true
   - id: AA4
     tipo: AA
     nome: "Via Enrico Mattei"
     indirizzo: "Parcheggio Via Enrico Mattei"
-    lat: 41.6974780
-    lon: 12.6964705
+    lat: 41.697400
+    lon: 12.696344
     verified: true
   - id: AA5
     tipo: AA
     nome: "Via Napoli"
     indirizzo: "Parcheggio incrocio Via Napoli / Via Emilia Romagna"
-    lat: 41.7001444
-    lon: 12.6836121
+    lat: 41.702022
+    lon: 12.685094
     verified: true
   - id: AA6
     tipo: AA
     nome: "Palazzetto dello Sport"
     indirizzo: "Parcheggio Via G. di Vittorio"
-    lat: 41.7057868
-    lon: 12.6888068
+    lat: 41.701107
+    lon: 12.693919
     verified: true
   - id: AA7
     tipo: AA
     nome: "Carlo Alberto dalla Chiesa"
     indirizzo: "Parcheggio Scuola C. A. dalla Chiesa, Via Appia Vecchia"
-    lat: 41.6916280
-    lon: 12.7019110
+    lat: 41.710288
+    lon: 12.684850
     verified: true
   - id: AA8
     tipo: AA
     nome: "Zona Industriale"
     indirizzo: "Parcheggio Via del Lavoro"
-    # Stima: zona industriale sud-est di Genzano
-    lat: 41.6850
-    lon: 12.7060
-    verified: false
+    lat: 41.691866
+    lon: 12.695780
+    verified: true
   - id: AA9
     tipo: AA
     nome: "Colli di Cicerone"
     indirizzo: "Parcheggio Via Colli di Cicerone"
-    lat: 41.6477973
-    lon: 12.7256662
+    lat: 41.656804
+    lon: 12.734351
     verified: true
   - id: AA10
     tipo: AA
     nome: "Landi"
     indirizzo: "Piazzale Frazione Landi"
-    lat: 41.6492637
-    lon: 12.7153220
+    lat: 41.649318
+    lon: 12.715690
     verified: true
 
   # ────────────── AREE DI AMMASSAMENTO SOCCORRITORI (AS) ──────────────
@@ -91,16 +91,15 @@ aree:
     tipo: AS
     nome: "Via del Lavoro"
     indirizzo: "Via del Lavoro (Zona Industriale)"
-    # Stima: zona industriale, lato opposto di AA8
-    lat: 41.6845
-    lon: 12.7080
-    verified: false
+    lat: 41.691205
+    lon: 12.693232
+    verified: true
   - id: AS2
     tipo: AS
     nome: "Viale Mazzini"
     indirizzo: "Viale G. Mazzini"
-    lat: 41.7111658
-    lon: 12.6900366
+    lat: 41.710486
+    lon: 12.689520
     verified: true
 
   # ────────────── AREE DI RICOVERO POPOLAZIONE (AR) ──────────────
@@ -108,27 +107,27 @@ aree:
     tipo: AR
     nome: "Palazzetto dello Sport"
     indirizzo: "Area esterna Palazzetto dello Sport, Via G. di Vittorio"
-    lat: 41.7014693
-    lon: 12.6942566
+    lat: 41.701505
+    lon: 12.693323
     verified: true
   - id: AR2
     tipo: AR
-    nome: "Campo Sportivo Via Piemonte"
-    indirizzo: "Via Piemonte"
-    lat: 41.7028547
-    lon: 12.6956564
+    nome: "Campo Sportivo Via Sicilia"
+    indirizzo: "Via Sicilia (il Piano riporta erroneamente Via Piemonte)"
+    lat: 41.701023
+    lon: 12.694646
     verified: true
   - id: AR3
     tipo: AR
     nome: "Campo Sportivo Via Sardegna"
     indirizzo: "Via Sardegna"
-    lat: 41.6999175
-    lon: 12.6966140
+    lat: 41.700808
+    lon: 12.697020
     verified: true
   - id: AR4
     tipo: AR
     nome: "Campo Sportivo Don Bosco (Salesiani)"
     indirizzo: "Viale Piave angolo Via Lega Latina"
-    lat: 41.7124873
-    lon: 12.6878804
+    lat: 41.712941
+    lon: 12.687930
     verified: true
