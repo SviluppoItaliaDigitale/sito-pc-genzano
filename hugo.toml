@@ -110,6 +110,11 @@ enableGitInfo = true
   url = "/siti-utili/"
   weight = 4
 
+[[menus.footer]]
+  name = "Mappa del Sito"
+  url = "/mappa-sito/"
+  weight = 5
+
 # Menu footer — Servizi
 [[menus.servizi]]
   name = "Piano di Emergenza"
