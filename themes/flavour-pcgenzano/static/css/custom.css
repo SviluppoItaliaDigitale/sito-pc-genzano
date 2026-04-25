@@ -884,6 +884,21 @@ article .galleria img {
   outline: 3px solid #ff9900;
   outline-offset: 2px;
 }
+/* Variante "Facile da leggere": tipografia più grande e alto contrasto
+   per essere immediatamente riconoscibile come supporto accessibilità */
+.btn-easy-read {
+  background: #ffd60a;
+  color: #003366;
+  border-color: #ffd60a;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.btn-easy-read:hover,
+.btn-easy-read:focus {
+  background: #ffeb6b;
+  color: #001f3d;
+  border-color: #ffeb6b;
+}
 .slim-header-divider {
   width: 1px;
   height: 16px;
