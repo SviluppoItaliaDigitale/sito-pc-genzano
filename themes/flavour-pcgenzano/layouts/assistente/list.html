@@ -100,17 +100,98 @@
   #assistente-app .links-block h4 { font-size: .95rem; color: #003366; font-weight: 600; margin-bottom: .5rem; }
   #assistente-app .links-block ul { padding-left: 1.25rem; margin-bottom: 0; }
   #assistente-app .nav-controls { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; }
-  #assistente-app .breadcrumb-trail { font-size: .9rem; color: #4b5563; margin-bottom: 1rem; }
+  #assistente-app .breadcrumb-trail {
+    font-size: .85rem; color: #4b5563;
+    margin-bottom: 1rem; padding: .5rem .75rem;
+    background: #f4f7fb; border-radius: 6px;
+    border-left: 3px solid #003366;
+  }
   #assistente-app .breadcrumb-trail .sep { margin: 0 .4rem; color: #9ca3af; }
+
+  /* === CARDS GRID per kind: 'cards' (start, mode_informa) === */
+  #assistente-app .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  #assistente-app .opt-card {
+    display: grid;
+    grid-template-columns: 4rem 1fr 2rem;
+    gap: 1rem; align-items: center;
+    padding: 1.25rem 1.4rem;
+    background: #fff;
+    border: 2px solid #e5e7eb;
+    border-radius: .75rem;
+    color: #1a1a1a;
+    text-align: left;
+    cursor: pointer;
+    transition: background .15s, border-color .15s, transform .1s, box-shadow .15s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    min-height: 110px;
+  }
+  #assistente-app .opt-card:hover,
+  #assistente-app .opt-card:focus-visible {
+    background: #f4f7fb;
+    border-color: #003366;
+    box-shadow: 0 4px 14px rgba(0, 51, 102, 0.12);
+    transform: translateY(-2px);
+    outline: none;
+  }
+  #assistente-app .opt-card.card-emergency { border-color: #d9364f; background: #fff8f8; }
+  #assistente-app .opt-card.card-emergency:hover,
+  #assistente-app .opt-card.card-emergency:focus-visible {
+    background: #fef2f3;
+    border-color: #b91c2e;
+    box-shadow: 0 4px 14px rgba(217, 54, 79, 0.18);
+  }
+  #assistente-app .opt-card .card-icon-wrap {
+    width: 4rem; height: 4rem; border-radius: 50%;
+    background: linear-gradient(135deg, #003366, #0066cc);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; flex-shrink: 0;
+  }
+  #assistente-app .opt-card.card-emergency .card-icon-wrap {
+    background: linear-gradient(135deg, #d9364f, #b91c2e);
+  }
+  #assistente-app .opt-card .card-text { display: flex; flex-direction: column; gap: .25rem; }
+  #assistente-app .opt-card .card-title {
+    font-weight: 700; font-size: 1.1rem; color: #003366;
+    line-height: 1.25;
+  }
+  #assistente-app .opt-card.card-emergency .card-title { color: #991b1b; }
+  #assistente-app .opt-card .card-desc {
+    font-size: .9rem; color: #4b5563; line-height: 1.4;
+  }
+  #assistente-app .opt-card .card-arrow { color: #003366; font-size: 1.2rem; }
+  #assistente-app .opt-card.card-emergency .card-arrow { color: #d9364f; }
+
+  /* === FADE-IN al cambio nodo === */
+  #assistente-app.fade-in {
+    animation: assist-fade .2s ease-out;
+  }
+  @keyframes assist-fade {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   @media (max-width: 576px) {
     #assistente-app .opt-btn { padding: .85rem 1rem; font-size: 1rem; }
     #assistente-app .q-title { font-size: 1.25rem; }
+    #assistente-app .opt-card { grid-template-columns: 3rem 1fr 1.5rem; gap: .75rem; padding: 1rem 1.1rem; min-height: auto; }
+    #assistente-app .opt-card .card-icon-wrap { width: 3rem; height: 3rem; font-size: 1.4rem; }
+    #assistente-app .opt-card .card-title { font-size: 1rem; }
+    #assistente-app .opt-card .card-desc { font-size: .82rem; }
   }
   @media (prefers-reduced-motion: reduce) {
-    #assistente-app .opt-btn { transition: none; }
+    #assistente-app .opt-btn,
+    #assistente-app .opt-card { transition: none; }
+    #assistente-app.fade-in { animation: none; }
   }
   @media print {
-    #assistente-app .nav-controls, #assistente-app .opt-list { display: none; }
+    #assistente-app .nav-controls,
+    #assistente-app .opt-list,
+    #assistente-app .cards-grid { display: none; }
   }
 </style>
 
@@ -130,9 +211,32 @@
   //   links (answer): array {text, url} verso pagine del sito
   // =========================================================================
   var NODES = {
+    // --------------------------- INGRESSO PRINCIPALE -------------------------
     start: {
-      kind: 'question',
+      kind: 'cards',
       title: 'Come posso aiutarti?',
+      prompt: 'Scegli una delle due modalità.',
+      options: [
+        {
+          text: 'Sono in difficoltà ORA',
+          description: 'Ti guido passo passo in una situazione che sta succedendo adesso (terremoto, incendio, gas, allerta meteo, allagamento).',
+          icon: 'bi-exclamation-triangle-fill',
+          next: 'mode_emergenza',
+          emergency: true
+        },
+        {
+          text: 'Voglio informarmi',
+          description: 'Esploro i temi del sito guidato per macro-aree: cittadino, scuole, volontariato, territorio, servizi.',
+          icon: 'bi-book-fill',
+          next: 'mode_informa'
+        }
+      ]
+    },
+
+    // --------------------------- MODALITÀ EMERGENZA --------------------------
+    mode_emergenza: {
+      kind: 'question',
+      title: 'Cosa sta succedendo?',
       prompt: 'Scegli il percorso più vicino alla tua situazione.',
       options: [
         { text: 'Sento una scossa di terremoto', next: 'terremoto', emergency: true },
@@ -144,6 +248,289 @@
         { text: 'Cerco un numero utile', next: 'numeri' },
         { text: 'Cos’è IT-alert?', next: 'italert' }
       ]
+    },
+
+    // --------------------------- MODALITÀ INFORMARMI -------------------------
+    mode_informa: {
+      kind: 'cards',
+      title: 'Cosa vuoi scoprire?',
+      prompt: 'Scegli una delle 5 aree del sito.',
+      options: [
+        { text: 'Per il cittadino', description: 'Allerte, rischi, cartografia, numeri, piano di famiglia.', icon: 'bi-person-fill', next: 'info_cittadino' },
+        { text: 'Per le scuole', description: 'Kit didattici, 68 schede stampabili, 33 giochi, formazione.', icon: 'bi-mortarboard-fill', next: 'info_scuole' },
+        { text: 'Volontariato', description: 'Diventare volontario, chi siamo, contatti del Gruppo.', icon: 'bi-heart-fill', next: 'info_volontariato' },
+        { text: 'Territorio e norme', description: 'Genzano, Castelli, glossario, normativa, piano di emergenza comunale.', icon: 'bi-geo-alt-fill', next: 'info_territorio' },
+        { text: 'Servizi e documenti', description: 'FAQ, area download, comunicazioni, mappa del sito, facile da leggere.', icon: 'bi-files', next: 'info_servizi' }
+      ]
+    },
+
+    // --- Macro 1: Cittadino ---
+    info_cittadino: {
+      kind: 'question',
+      title: 'Per il cittadino',
+      prompt: 'Cosa cerchi?',
+      options: [
+        { text: 'Cosa fare in caso di emergenza', next: 'info_cittadino_cosa_fare' },
+        { text: 'Allerte meteo e codici colore', next: 'info_cittadino_allerte' },
+        { text: 'Rischi del territorio (sismico, idro, incendi)', next: 'info_cittadino_rischi' },
+        { text: 'Cartografia operativa (aree di attesa)', next: 'info_cittadino_cartografia' },
+        { text: 'Numeri utili (112 e altri)', next: 'info_cittadino_numeri' },
+        { text: 'Piano di emergenza familiare', next: 'info_cittadino_piano' }
+      ]
+    },
+    info_cittadino_cosa_fare: {
+      kind: 'answer',
+      title: 'Cosa fare in caso di emergenza',
+      body: ['Le pagine ufficiali del sito ti spiegano i comportamenti corretti per i rischi più comuni a Genzano. Se hai un\'emergenza in corso, torna all\'inizio dell\'assistente e scegli "Sono in difficoltà ORA".'],
+      links: [
+        { text: 'Cosa fare adesso (sintesi rapida)', url: '/cosa-fare-adesso/' },
+        { text: 'Modalità emergenza dell\'assistente', url: '/assistente/#mode_emergenza' }
+      ]
+    },
+    info_cittadino_allerte: {
+      kind: 'answer',
+      title: 'Allerte meteo e codici colore',
+      body: ['La Regione Lazio emette ogni giorno bollettini di allerta con 4 livelli di colore: verde (nessuna), giallo (attenzione), arancione (elevata), rosso (massima). Lo stato attuale per Genzano è sempre visibile in cima alla homepage.'],
+      links: [
+        { text: 'Spiegazione codici colore', url: '/allerte-meteo/' },
+        { text: 'Stato allerta attuale (homepage)', url: '/' },
+        { text: 'Bollettino ufficiale Regione Lazio', url: 'https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti' }
+      ]
+    },
+    info_cittadino_rischi: {
+      kind: 'answer',
+      title: 'Rischi del territorio',
+      body: ['Genzano è esposta a 3 rischi principali: sismico (zona 2-3, sismicità media), idrogeologico (versanti collinari e fossi), incendi boschivi (estate). Il Piano di Emergenza comunale dettaglia tutti gli scenari.'],
+      links: [
+        { text: 'Panoramica rischi e prevenzione', url: '/rischi-prevenzione/' },
+        { text: 'Rischio sismico', url: '/rischi-prevenzione/rischio-sismico/' },
+        { text: 'Rischio idrogeologico', url: '/rischi-prevenzione/rischio-idrogeologico/' },
+        { text: 'Rischio incendi boschivi', url: '/rischi-prevenzione/rischio-incendio/' },
+        { text: 'Piano di Emergenza Comunale', url: '/piano-emergenza/' }
+      ]
+    },
+    info_cittadino_cartografia: {
+      kind: 'answer',
+      title: 'Cartografia operativa',
+      body: ['La cartografia mostra le 16 aree del Piano di Emergenza Comunale (Aree di Attesa, Aree di Accoglienza, Aree di Ricovero) su mappa interattiva. Trova quella più vicina a casa tua: in caso di evacuazione è il punto dove andare.'],
+      links: [
+        { text: 'Mappa interattiva delle aree', url: '/cartografia/' },
+        { text: 'Piano di Emergenza Comunale', url: '/piano-emergenza/' }
+      ]
+    },
+    info_cittadino_numeri: {
+      kind: 'answer',
+      title: 'Numeri utili',
+      body: ['Nel Lazio l\'unico numero per emergenze è il <strong>112</strong> (NUE). Per segnalazioni non urgenti puoi usare la Sala Operativa Regionale (803 555). Tutti gli altri numeri (Comune, ASL, farmacie, ecc.) li trovi nella pagina dedicata.'],
+      links: [
+        { text: 'Pagina Numeri utili (completa)', url: '/numeri-utili/' }
+      ]
+    },
+    info_cittadino_piano: {
+      kind: 'answer',
+      title: 'Piano di emergenza familiare',
+      body: ['Il piano di famiglia è un accordo che fai con i tuoi cari prima dell\'emergenza: dove ci troviamo, chi chiamiamo, cosa portiamo nel kit. Si compila in mezz\'ora e si aggiorna ogni 6 mesi.'],
+      links: [
+        { text: 'Modello stampabile del piano familiare', url: '/piano-familiare/' },
+        { text: 'Scheda primaria "Piano di Emergenza Familiare"', url: '/formazione/schede-stampabili/piano-familiare-primaria/' }
+      ]
+    },
+
+    // --- Macro 2: Scuole ---
+    info_scuole: {
+      kind: 'question',
+      title: 'Per le scuole',
+      prompt: 'Quale fascia ti interessa?',
+      options: [
+        { text: 'Insegnante Scuola dell\'Infanzia (3-6 anni)', next: 'info_scuole_infanzia' },
+        { text: 'Insegnante Scuola Primaria (6-11 anni)', next: 'info_scuole_primaria' },
+        { text: 'Insegnante Secondaria di Primo Grado (11-14)', next: 'info_scuole_sec1' },
+        { text: 'Insegnante Secondaria di Secondo Grado (14-19)', next: 'info_scuole_sec2' },
+        { text: 'Visione d\'insieme della formazione', next: 'info_scuole_panoramica' }
+      ]
+    },
+    info_scuole_infanzia: {
+      kind: 'answer',
+      title: 'Materiali per la Scuola dell\'Infanzia',
+      body: ['Per i bambini di 3-6 anni: kit didattico completo, 24 schede (10 da colorare + 14 attività varie), 10 giochi interattivi con Tina la tartaruga.'],
+      links: [
+        { text: 'Kit didattico Infanzia', url: '/formazione/kit-scuola-infanzia/' },
+        { text: 'Schede stampabili per Infanzia', url: '/formazione/schede-stampabili/' },
+        { text: 'Giochi Piccoli Esploratori (10 giochi)', url: '/giochi/infanzia/' }
+      ]
+    },
+    info_scuole_primaria: {
+      kind: 'answer',
+      title: 'Materiali per la Scuola Primaria',
+      body: ['Per gli alunni di 6-11 anni: kit didattico, 19 schede stampabili (letto-scrittura, matematica, scienze, geografia, storia, ed. civica), 13 giochi educativi.'],
+      links: [
+        { text: 'Kit didattico Primaria', url: '/formazione/kit-scuola-primaria/' },
+        { text: 'Schede stampabili per Primaria', url: '/formazione/schede-stampabili/' },
+        { text: 'Giochi Scuola Primaria (13 giochi)', url: '/giochi/primaria/' }
+      ]
+    },
+    info_scuole_sec1: {
+      kind: 'answer',
+      title: 'Materiali per la Secondaria di Primo Grado',
+      body: ['Per gli alunni di 11-14 anni: kit con UdA da 12 ore, 10 schede curriculari (italiano, matematica, ed. civica, scienze, italiano, statistica, debate, vulcanologia), 10 giochi.'],
+      links: [
+        { text: 'Kit didattico Secondaria I grado', url: '/formazione/kit-scuola-secondaria-primo-grado/' },
+        { text: 'Schede stampabili per Secondaria I', url: '/formazione/schede-stampabili/' },
+        { text: 'Giochi Ragazzi (10 giochi)', url: '/giochi/ragazzi/' }
+      ]
+    },
+    info_scuole_sec2: {
+      kind: 'answer',
+      title: 'Materiali per la Secondaria di Secondo Grado',
+      body: ['Per gli studenti di 14-19 anni: kit didattico con compito di realtà, 10 schede curriculari (diritto, scienze della Terra, climatologia, economia del rischio, etica della comunicazione, inglese, ed. civica), tracce esame di Stato.'],
+      links: [
+        { text: 'Kit didattico Secondaria II grado', url: '/formazione/kit-scuola-secondaria-secondo-grado/' },
+        { text: 'Schede stampabili per Secondaria II', url: '/formazione/schede-stampabili/' }
+      ]
+    },
+    info_scuole_panoramica: {
+      kind: 'answer',
+      title: 'Panoramica formazione',
+      body: ['Pagina di accesso a tutto il materiale formativo del Gruppo: i 4 kit per fascia, le 68 schede stampabili A4, i 33 giochi interattivi, le proposte di percorso annuale.'],
+      links: [
+        { text: 'Formazione (hub principale)', url: '/formazione/' },
+        { text: 'Tutte le schede stampabili (68)', url: '/formazione/schede-stampabili/' },
+        { text: 'Tutti i giochi (33)', url: '/giochi/' }
+      ]
+    },
+
+    // --- Macro 3: Volontariato ---
+    info_volontariato: {
+      kind: 'question',
+      title: 'Volontariato',
+      prompt: 'Cosa vuoi sapere?',
+      options: [
+        { text: 'Voglio diventare volontario', next: 'volontario' },
+        { text: 'Chi siamo: il Gruppo Comunale', next: 'info_volontariato_chi' },
+        { text: 'Le attività in corso del Gruppo', next: 'info_volontariato_attivita' },
+        { text: 'Contattare la segreteria', next: 'info_volontariato_contatti' }
+      ]
+    },
+    info_volontariato_chi: {
+      kind: 'answer',
+      title: 'Chi è il Gruppo Comunale di Genzano',
+      body: ['Il Gruppo Comunale di Volontari di Protezione Civile di Genzano di Roma è iscritto al COI di Roma (15° Centro Operativo Intercomunale) e opera sul territorio dei Castelli Romani con attività di prevenzione, formazione e intervento in emergenza.'],
+      links: [
+        { text: 'Chi siamo (storia, sedi, settori)', url: '/chi-siamo/' },
+        { text: 'Comunicazioni recenti', url: '/comunicazioni/' }
+      ]
+    },
+    info_volontariato_attivita: {
+      kind: 'answer',
+      title: 'Le attività del Gruppo',
+      body: ['Le comunicazioni del Gruppo raccontano interventi, esercitazioni, formazione, partecipazione a campagne nazionali (es. "Io non rischio") e attività nelle scuole.'],
+      links: [
+        { text: 'Tutte le comunicazioni', url: '/comunicazioni/' },
+        { text: 'Formazione nelle scuole', url: '/formazione/' }
+      ]
+    },
+    info_volontariato_contatti: {
+      kind: 'answer',
+      title: 'Contattare la segreteria',
+      body: ['Per richieste informative, iscrizioni, organizzazione di eventi formativi, segnalazioni non urgenti.'],
+      links: [
+        { text: 'Contatti (telefono, email, sede, orari)', url: '/contatti/' }
+      ]
+    },
+
+    // --- Macro 4: Territorio e norme ---
+    info_territorio: {
+      kind: 'question',
+      title: 'Territorio e norme',
+      prompt: 'Cosa cerchi?',
+      options: [
+        { text: 'Conoscere Genzano e i Castelli Romani', next: 'info_territorio_genzano' },
+        { text: 'Glossario dei termini di PC', next: 'info_territorio_glossario' },
+        { text: 'Normativa nazionale e regionale', next: 'info_territorio_normativa' },
+        { text: 'Piano di Emergenza Comunale', next: 'info_territorio_piano' }
+      ]
+    },
+    info_territorio_genzano: {
+      kind: 'answer',
+      title: 'Genzano e i Castelli Romani',
+      body: ['Genzano si trova sui Colli Albani (vulcano quiescente), in un\'area collinare con laghi (Albano e Nemi), boschi del Parco Regionale e versanti soggetti a fenomeni idrogeologici.'],
+      links: [
+        { text: 'Cartografia operativa', url: '/cartografia/' },
+        { text: 'Rischi del territorio', url: '/rischi-prevenzione/' },
+        { text: 'Vulcanologia dei Castelli (scheda secondaria I)', url: '/formazione/schede-stampabili/vulcanologia-castelli-secondaria/' }
+      ]
+    },
+    info_territorio_glossario: {
+      kind: 'answer',
+      title: 'Glossario di Protezione Civile',
+      body: ['Più di 50 termini tecnici della PC spiegati in linguaggio chiaro: COC, PEC, allertamento, magnitudo, NUE, IT-alert, e tutti gli acronimi più frequenti.'],
+      links: [
+        { text: 'Apri il glossario A-Z', url: '/glossario/' }
+      ]
+    },
+    info_territorio_normativa: {
+      kind: 'answer',
+      title: 'Normativa di Protezione Civile',
+      body: ['Il quadro normativo: D.Lgs. 1/2018 (Codice della PC) a livello nazionale, leggi regionali del Lazio, regolamenti comunali. Tutti i riferimenti con link a Normattiva.'],
+      links: [
+        { text: 'Hub normativa', url: '/normativa/' },
+        { text: 'Codice della Protezione Civile (D.Lgs. 1/2018)', url: '/normativa/testo-unico-protezione-civile/' },
+        { text: 'Normativa regionale del Lazio', url: '/normativa/lazio/' },
+        { text: 'Regolamenti comunali di Genzano', url: '/normativa/regolamenti-comunali/' }
+      ]
+    },
+    info_territorio_piano: {
+      kind: 'answer',
+      title: 'Piano di Emergenza Comunale',
+      body: ['Il PEC è il documento operativo del Comune con scenari, aree di emergenza, procedure di attivazione. È pubblico e va conosciuto dai cittadini.'],
+      links: [
+        { text: 'Piano di Emergenza Comunale', url: '/piano-emergenza/' },
+        { text: 'Aree di emergenza su mappa', url: '/cartografia/' }
+      ]
+    },
+
+    // --- Macro 5: Servizi e documenti ---
+    info_servizi: {
+      kind: 'question',
+      title: 'Servizi e documenti',
+      prompt: 'Cosa cerchi?',
+      options: [
+        { text: 'Domande frequenti (FAQ)', next: 'info_servizi_faq' },
+        { text: 'Documenti scaricabili e modulistica', next: 'info_servizi_download' },
+        { text: 'Comunicazioni e news', next: 'info_servizi_comunicazioni' },
+        { text: 'Mappa del sito', next: 'info_servizi_mappa' },
+        { text: 'Versione "Facile da leggere"', next: 'info_servizi_facile' }
+      ]
+    },
+    info_servizi_faq: {
+      kind: 'answer',
+      title: 'Domande frequenti',
+      body: ['Risposte sintetiche alle domande più comuni di cittadini, famiglie e insegnanti.'],
+      links: [{ text: 'Apri le FAQ', url: '/faq/' }]
+    },
+    info_servizi_download: {
+      kind: 'answer',
+      title: 'Documenti e modulistica',
+      body: ['Modulistica del Gruppo (iscrizioni, autorizzazioni, schede tecniche) e documenti pubblici scaricabili in formato PDF.'],
+      links: [{ text: 'Apri area download', url: '/area-download/' }]
+    },
+    info_servizi_comunicazioni: {
+      kind: 'answer',
+      title: 'Comunicazioni e news',
+      body: ['Tutte le comunicazioni del Gruppo: allerte, attività, esercitazioni, formazione, eventi, novità istituzionali. Filtrabili per categoria.'],
+      links: [{ text: 'Apri archivio comunicazioni', url: '/comunicazioni/' }]
+    },
+    info_servizi_mappa: {
+      kind: 'answer',
+      title: 'Mappa del sito',
+      body: ['Vista d\'insieme di tutte le sezioni del sito divise per area tematica. Utile se non sai dove cercare.'],
+      links: [{ text: 'Apri mappa del sito', url: '/mappa-sito/' }]
+    },
+    info_servizi_facile: {
+      kind: 'answer',
+      title: 'Versione "Facile da leggere"',
+      body: ['Versione cognitivamente accessibile (D.Lgs. 62/2024) con frasi brevi, parole comuni, struttura semplice. Pensata per persone con difficoltà di lettura, anziani, italiano L2.'],
+      links: [{ text: 'Apri versione facile da leggere', url: '/facile-da-leggere/' }]
     },
 
     // --------------------------- TERREMOTO -----------------------------------
@@ -600,6 +987,36 @@
     html += '</ul>';
     html += renderControls();
     app.innerHTML = html;
+    app.classList.remove('fade-in');
+    void app.offsetWidth; // force reflow
+    app.classList.add('fade-in');
+    bindButtons();
+  }
+
+  function renderCards(node) {
+    var html = '';
+    html += buildTrail();
+    html += '<h2 class="q-title">' + escapeHTML(node.title) + '</h2>';
+    if (node.prompt) html += '<p class="q-prompt">' + escapeHTML(node.prompt) + '</p>';
+    html += '<div class="cards-grid" role="list">';
+    node.options.forEach(function (opt) {
+      var cls = opt.emergency ? ' card-emergency' : '';
+      var iconClass = opt.icon || 'bi-arrow-right-circle';
+      html += '<button type="button" class="opt-card' + cls + '" data-next="' + escapeHTML(opt.next) + '" aria-label="' + escapeHTML(opt.text) + '" role="listitem">'
+        + '<span class="card-icon-wrap"><i class="bi ' + escapeHTML(iconClass) + '" aria-hidden="true"></i></span>'
+        + '<span class="card-text">'
+        + '<span class="card-title">' + escapeHTML(opt.text) + '</span>'
+        + (opt.description ? '<span class="card-desc">' + escapeHTML(opt.description) + '</span>' : '')
+        + '</span>'
+        + '<span class="card-arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>'
+        + '</button>';
+    });
+    html += '</div>';
+    html += renderControls();
+    app.innerHTML = html;
+    app.classList.remove('fade-in');
+    void app.offsetWidth;
+    app.classList.add('fade-in');
     bindButtons();
   }
 
@@ -622,18 +1039,38 @@
       html += '<div class="links-block">';
       html += '<h4>Approfondisci sul sito</h4>';
       html += '<ul>';
+      var currentNodeId = trail[trail.length - 1] || 'unknown';
       node.links.forEach(function (l) {
         var isExternal = /^https?:/.test(l.url);
-        var baseURL = document.querySelector('base') ? document.querySelector('base').href : '/';
-        var href = isExternal ? l.url : (window.SITO_BASEURL || '/') + String(l.url).replace(/^\//, '');
+        var href;
+        if (isExternal) {
+          href = l.url;
+        } else {
+          // Costruisce link interno + aggiunge UTM-style param per analytics di destinazione
+          var raw = String(l.url).replace(/^\//, '');
+          var sep = raw.indexOf('?') >= 0 ? '&' : '?';
+          var anchor = '';
+          var hashIdx = raw.indexOf('#');
+          if (hashIdx >= 0) {
+            anchor = raw.substring(hashIdx);
+            raw = raw.substring(0, hashIdx);
+          }
+          var finalSep = raw.indexOf('?') >= 0 ? '&' : '?';
+          href = (window.SITO_BASEURL || '/') + raw + finalSep + 'from=assistente&path=' + encodeURIComponent(currentNodeId) + anchor;
+        }
         var ext = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
-        html += '<li><a href="' + escapeHTML(href) + '"' + ext + '>' + escapeHTML(l.text) + (isExternal ? ' (sito esterno)' : '') + '</a></li>';
+        var trackAttr = ' data-link-track="' + escapeHTML(currentNodeId) + '"';
+        html += '<li><a href="' + escapeHTML(href) + '"' + ext + trackAttr + '>' + escapeHTML(l.text) + (isExternal ? ' (sito esterno)' : '') + '</a></li>';
       });
       html += '</ul></div>';
     }
     html += renderControls(true);
     app.innerHTML = html;
+    app.classList.remove('fade-in');
+    void app.offsetWidth;
+    app.classList.add('fade-in');
     bindButtons();
+    bindLinkTracking();
   }
 
   function renderControls(isAnswer) {
@@ -682,12 +1119,55 @@
   function render() {
     var current = trail[trail.length - 1];
     var node = NODES[current] || NODES.start;
-    if (node.kind === 'question') {
+    trackNodeView(current);
+    if (node.kind === 'cards') {
+      renderCards(node);
+    } else if (node.kind === 'question') {
       renderQuestion(node);
     } else {
       renderAnswer(node);
     }
     scrollIntoView();
+  }
+
+  // ===== ANALYTICS LOCALI (privacy-friendly, solo localStorage) ===========
+  var STATS_KEY = 'assistente_stats_v1';
+
+  function loadStats() {
+    try {
+      var raw = localStorage.getItem(STATS_KEY);
+      return raw ? JSON.parse(raw) : { views: {}, links: {}, lastSession: null, total: 0 };
+    } catch (e) {
+      return { views: {}, links: {}, lastSession: null, total: 0 };
+    }
+  }
+
+  function saveStats(s) {
+    try { localStorage.setItem(STATS_KEY, JSON.stringify(s)); } catch (e) { /* ignore quota */ }
+  }
+
+  function trackNodeView(nodeId) {
+    if (!nodeId) return;
+    var s = loadStats();
+    s.views[nodeId] = (s.views[nodeId] || 0) + 1;
+    s.total++;
+    s.lastSession = new Date().toISOString();
+    saveStats(s);
+  }
+
+  function trackLinkClick(fromNodeId) {
+    if (!fromNodeId) return;
+    var s = loadStats();
+    s.links[fromNodeId] = (s.links[fromNodeId] || 0) + 1;
+    saveStats(s);
+  }
+
+  function bindLinkTracking() {
+    app.querySelectorAll('a[data-link-track]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        trackLinkClick(a.getAttribute('data-link-track'));
+      });
+    });
   }
 
   function updateHash() {
