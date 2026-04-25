@@ -67,6 +67,52 @@ git push origin main     # Avvia il redeploy
 ```
 Evita `git reset --hard` su `main` se il commit è già stato pushato.
 
+## Header HTTP — `.htaccess` su Aruba
+
+Il file `themes/flavour-pcgenzano/static/.htaccess` configura gli header di sicurezza che Apache invia su Aruba. Aruba supporta `mod_headers` ma GitHub Pages no, quindi questo file è effettivo **solo in produzione**.
+
+**Permissions-Policy (header sensibile):**
+
+```apache
+Header always set Permissions-Policy "geolocation=(self), microphone=(), camera=()"
+```
+
+- `geolocation=(self)` — il sito può usare la Geolocation API del browser. È necessario per il bottone "Centra sulla mia posizione" sulla mappa `/cartografia/`.
+- `microphone=()` e `camera=()` — negati a tutte le origini (non servono).
+
+**ATTENZIONE:** non sostituire `geolocation=(self)` con `geolocation=()`. La forma `()` (lista vuota di origini) **disabilita la Geolocation API anche per il sito stesso**, e il browser blocca silenziosamente `navigator.geolocation.getCurrentPosition()` mostrando un errore "Geolocation has been disabled in this document by permissions policy". Questo è successo una volta in produzione e ha rotto il bottone della mappa cartografia. Se aggiungi nuove API (es. `payment`, `usb`), aggiungile in coda al valore con `(self)` o `()` esplicito.
+
+## Workflow GitHub Actions — qualità YAML
+
+I file in `.github/workflows/*.yml` sono validati da GitHub al momento del push. Se la validazione fallisce il run viene marcato "completed failure" con 0 job eseguiti, ma **nessuna issue viene aperta** e il problema può passare inosservato per settimane.
+
+**Pattern velenoso da evitare** (causa errore di parsing YAML strict):
+
+```bash
+DIFF=$(python3 -c "
+import datetime
+try:
+  d = datetime.datetime.strptime('$REV', '%Y-%m-%d').date()
+  print((datetime.date.today() - d).days)
+except Exception:
+  print(-1)
+")
+```
+
+Le righe Python (`import…`, `try:`, `print…`) iniziano a colonna 1, e il parser YAML le legge come nuove chiavi top-level rompendo la struttura. **Sostituiscilo con aritmetica bash usando `date`**:
+
+```bash
+TS=$(date -u -d "$REV" +%s 2>/dev/null || echo "")
+[ -n "$TS" ] && DIFF=$(( ($(date -u +%s) - TS) / 86400 )) || DIFF=-1
+```
+
+Per validare un workflow prima del push:
+```bash
+python3 -c "import yaml; yaml.safe_load(open('.github/workflows/<file>.yml'))"
+```
+
+Se python3 yaml lo accetta, GitHub Actions lo accetterà sicuramente.
+
 ## Verifica prima del push
 
 Prima di fare push su `main`, verifica sempre:
@@ -75,6 +121,8 @@ Prima di fare push su `main`, verifica sempre:
 - I percorsi di immagini, PDF e asset statici sono corretti
 - Il frontmatter degli articoli usa il formato data `AAAA-MM-GG`
 - Nessun articolo con `draft: false` ha contenuti incompleti
+- Se hai modificato un file `.github/workflows/*.yml`, validalo con `python3 -c "import yaml; yaml.safe_load(open(...))"` prima del push
+- Se hai modificato `.htaccess`, ricontrolla che `Permissions-Policy: geolocation=(self)` resti integro
 
 ## Divieti
 
