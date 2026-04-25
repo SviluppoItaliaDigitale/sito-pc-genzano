@@ -68,13 +68,46 @@
               '<div class="close-div"><button class="btn close-menu" type="button" aria-label="Chiudi il menu di navigazione"><span class="visually-hidden">Chiudi</span><svg class="icon"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-close-big"></use></svg></button></div>' +
               '<div class="menu-wrapper"><ul class="navbar-nav" role="menubar">' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/" role="menuitem"><span>Home</span></a></li>' +
-                '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/chi-siamo/" role="menuitem"><span>Chi Siamo</span></a></li>' +
-                '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/rischi-prevenzione/" role="menuitem"><span>Rischi e Prevenzione</span></a></li>' +
-                '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/allerte-meteo/" role="menuitem"><span>Allerte Meteo</span></a></li>' +
+                /* Dropdown: Per il Cittadino */
+                '<li class="nav-item dropdown" role="none">' +
+                  '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-per-il-cittadino" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
+                    '<span>Per il Cittadino</span>' +
+                    '<svg class="icon icon-xs"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg>' +
+                  '</a>' +
+                  '<div class="dropdown-menu" aria-labelledby="navDropdown-per-il-cittadino"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/cosa-fare-adesso/" role="menuitem"><span>Cosa Fare Adesso</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/allerte-meteo/" role="menuitem"><span>Allerte Meteo</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/rischi-prevenzione/" role="menuitem"><span>Rischi e Prevenzione</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/cartografia/" role="menuitem"><span>Cartografia</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/numeri-utili/" role="menuitem"><span>Numeri Utili</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" role="menuitem"><span>Piano Familiare</span></a></li>' +
+                  '</ul></div></div>' +
+                '</li>' +
+                /* Dropdown: Formazione */
+                '<li class="nav-item dropdown" role="none">' +
+                  '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-formazione" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
+                    '<span>Formazione</span>' +
+                    '<svg class="icon icon-xs"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg>' +
+                  '</a>' +
+                  '<div class="dropdown-menu" aria-labelledby="navDropdown-formazione"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Corsi e percorsi</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/glossario/" role="menuitem"><span>Glossario</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/schede-stampabili/" role="menuitem"><span>Schede Stampabili</span></a></li>' +
+                  '</ul></div></div>' +
+                '</li>' +
+                /* Dropdown: Volontariato */
+                '<li class="nav-item dropdown" role="none">' +
+                  '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-volontariato" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
+                    '<span>Volontariato</span>' +
+                    '<svg class="icon icon-xs"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg>' +
+                  '</a>' +
+                  '<div class="dropdown-menu" aria-labelledby="navDropdown-volontariato"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/diventa-volontario/" role="menuitem"><span>Diventa Volontario</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/chi-siamo/" role="menuitem"><span>Chi Siamo</span></a></li>' +
+                  '</ul></div></div>' +
+                '</li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/comunicazioni/" role="menuitem"><span>Comunicazioni</span></a></li>' +
-                '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Formazione</span></a></li>' +
-                '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi</span></a></li>' +
-                '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/diventa-volontario/" role="menuitem"><span>Diventa Volontario</span></a></li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/contatti/" role="menuitem"><span>Contatti</span></a></li>' +
               '</ul></div>' +
             '</div>' +
