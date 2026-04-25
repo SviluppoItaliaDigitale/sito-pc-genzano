@@ -51,6 +51,9 @@ Il criterio di confine:
 **25 aprile 2026 — fix Chrome cache `/quizpc/index.html` → `/quizpc/`.**
 Sono stati fatti 4 file con `sed` su `/quizpc/index.html` e `/formazionepc/index.html`, ma è stato lasciato `/abili-a-proteggere/index.html` (stessa categoria di bug) e `/giochi/index.html` (stessa categoria di bug, in 3 punti diversi del repo). I contatori dei giochi nella tabella della pagina Formazione sono rimasti a 8/9/30 anche se la prosa sopra parlava già di 33 giochi. L'utente ha dovuto chiedere a parte la sistemazione e ha detto: "se non te lo avessi chiesto, avremmo avuto un sito con errori". Questa regola nasce da quell'incidente.
 
+**25 aprile 2026 — falso allarme su 8 articoli "non ancora scritti".**
+Subito dopo aver scritto questa regola, durante un sweep proattivo ho trovato 8 link interni che il render-link hook mostrava come "Contenuto non ancora disponibile" e ho proposto all'utente di scriverli. Era falso: tutti e 8 erano già scritti, `draft: false`, ma con `date` futura — Hugo li escludeva correttamente dalla build fino al raggiungimento della data. Lo span grigio era il graceful degradation di design, **non** un bug. Lezione: prima di proporre di scrivere/creare/aggiungere qualunque cosa che sembra mancante, **verificare l'esistenza fisica del file** (`ls content/...`, `find static/...`). Un link rotto in pagina può significare "manca", "futuro", "rinominato", "draft". Sono cose diverse, e l'azione corretta dipende dalla causa.
+
 ## Vincolo correlato
 
 La regola "Aggiornamento automatico docs dopo modifiche strutturali" (CLAUDE.md, MANUALE-SITO, archetype, README) è un **caso particolare** di questa regola più generale. Anche docs, manuale e archetype rientrano nella passata di verifica.
