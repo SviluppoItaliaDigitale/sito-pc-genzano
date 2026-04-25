@@ -1,7 +1,7 @@
 ---
 title: "Le zone di allerta del Lazio: come leggere il bollettino di criticita"
 date: 2026-05-07
-description: "Il Lazio e suddiviso in sei zone di allerta. Sapere in quale zona si trova Genzano e capire il bollettino di criticita significa leggere correttamente un'allerta meteo."
+description: "Il Lazio e suddiviso in sette zone di allerta. Sapere in quale zona si trova Genzano e capire il bollettino di criticita significa leggere correttamente un'allerta meteo."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -23,27 +23,28 @@ Una stessa pioggia non produce gli stessi effetti ovunque. Cento millimetri in p
 
 Il principio: **raggruppare i territori su cui gli stessi fenomeni producono effetti comparabili**.
 
-## Le sei zone di allerta del Lazio
+## Le sette zone di allerta del Lazio
 
-Il Lazio è stato suddiviso in sei zone, numerate A, B, C, D, E, F. Ogni zona raggruppa comuni con caratteristiche simili in termini di:
+Con la **DGR 865 del 26 novembre 2019** la Regione Lazio ha suddiviso il proprio territorio in sette zone di allerta, numerate da A a G. Ogni zona raggruppa comuni con caratteristiche simili in termini di:
 
 - Bacini idrografici di appartenenza
 - Esposizione a eventi marittimi
 - Tipologia di rilievi e versanti
 - Storicità degli eventi
 
-Le sei zone sono (riferimento: [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)):
+Le sette zone, secondo l'[allegato ufficiale alla DGR 865/2019](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf), sono:
 
 | Codice | Nome zona | Caratteristiche |
 |---|---|---|
-| **A** | Bacini Costieri Nord | Area tirrenica settentrionale |
-| **B** | Bacino Medio Tevere | Valle del Tevere centrale |
-| **C** | Appennino di Rieti | Rilievi appenninici del reatino |
-| **D** | Bacini Costieri Sud | Lazio meridionale tirrenico |
-| **E** | Bacino del Liri | Area sud-orientale |
-| **F** | Aniene | Valle dell'Aniene |
+| **A** | Bacini Costieri Nord | Costa tirrenica settentrionale (Viterbese, litorale a nord di Roma) |
+| **B** | Bacino Medio Tevere | Valle del Tevere centrale (Sabina, alto Lazio interno) |
+| **C** | Appennino di Rieti | Rilievi appenninici del Reatino |
+| **D** | Bacini di Roma | Roma e parte dei Castelli Romani (Frascati, Marino, Grottaferrata, Ciampino) |
+| **E** | Aniene | Valle dell'Aniene (Tivoli, Subiaco, monti Prenestini) |
+| **F** | Bacini Costieri Sud | Lazio meridionale tirrenico, Pontino, Castelli Romani meridionali (incluso Genzano) |
+| **G** | Bacino del Liri | Frosinone, Cassinate, valle del Liri-Sacco |
 
-**Genzano di Roma ricade nella Zona D — Bacini Costieri Sud**.
+**Genzano di Roma ricade nella Zona F — Bacini Costieri Sud**, insieme ad Ariccia, Lanuvio, Lariano, Nemi, Velletri e ai comuni della pianura pontina.
 
 > La denominazione e la perimetrazione delle zone può essere aggiornata dalla Regione. Per la fonte ufficiale aggiornata consulta sempre il sito del [Centro Funzionale Regionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
 
@@ -68,7 +69,7 @@ Una stessa zona può avere **colori diversi per rischi diversi**: per esempio Ar
 
 ## Un esempio pratico
 
-Supponiamo un bollettino che indichi, per la **Zona D**:
+Supponiamo un bollettino che indichi, per la **Zona F**:
 
 - Rischio temporali: **Arancione**
 - Rischio idrogeologico: **Giallo**
@@ -88,7 +89,7 @@ In questo caso la situazione da gestire con attenzione è **il temporale**, non 
 - **Sito del Comune di Genzano di Roma**: riprende e rilancia le comunicazioni della Regione.
 - **Sito e social del Gruppo Comunale Volontari**: trovi le allerte nella pagina [Allerte Meteo](/allerte-meteo/).
 
-## Cosa fare in caso di allerta Arancione o Rossa in zona D
+## Cosa fare in caso di allerta Arancione o Rossa in zona F
 
 1. **Limita spostamenti** non necessari nelle ore di previsto evento.
 2. **Porta in sicurezza oggetti** su balconi, terrazze, giardini (vasi, mobili da esterno, teloni).
