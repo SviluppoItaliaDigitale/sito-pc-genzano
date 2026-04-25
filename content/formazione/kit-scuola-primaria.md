@@ -460,6 +460,11 @@ L'uscita va preventivamente **autorizzata** dal Dirigente Scolastico e comunicat
 Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui il docente può costruire la scheda in Word, Google Docs, Canva o a mano. Per le schede più grafiche (cruciverba, mappa del rischio) può servire il supporto del collega di arte o informatica. Se ti serve una scheda specifica già pronta scrivici a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
 </div>
 
+**Schede già pronte per la stampa per la scuola primaria:**
+
+- 👉 [**Chiamo il 112**](/formazione/schede-stampabili/chiamo-112/) — role-play scritto: l'alunno simula una chiamata al numero unico di emergenza con consegna passo-passo.
+- 👉 [**Cruciverba della Sicurezza**](/formazione/schede-stampabili/cruciverba-primaria/) — 14 definizioni sulle parole-chiave della Protezione Civile, con soluzioni per il docente.
+- 👉 [**Piano di Emergenza Familiare**](/formazione/schede-stampabili/piano-familiare-primaria/) — l'alunno compila con la famiglia il piano di casa: contatti, punti di raccolta, kit, percorso di evacuazione.
 
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 
@@ -518,9 +523,11 @@ Spazi da compilare:
 - ○ Acqua (2 bottiglie)   ○ Torcia   ○ Coperta   ○ Medicinali
 - ○ Documenti (copie)   ○ Caricabatterie   ○ Cambio vestiti
 
-### Scheda 4 — Il cruciverba della sicurezza (classi III-V)
+### Scheda 4 — Il cruciverba della sicurezza (classi III-V) ✅ stampabile
 
-Il cruciverba è disponibile anche come gioco online nella sezione [Giochi della Sicurezza — Primaria](/giochi/primaria/#cruciverba). Versione stampabile su richiesta alla segreteria del Gruppo.
+> 👉 [Apri il cruciverba pronto per la stampa](/formazione/schede-stampabili/cruciverba-primaria/)
+
+Il cruciverba è disponibile anche come gioco online nella sezione [Giochi della Sicurezza — Primaria](/giochi/primaria/#cruciverba).
 
 ### Scheda 5 — La mia mappa del rischio
 

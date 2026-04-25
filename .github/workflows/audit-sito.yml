@@ -69,9 +69,13 @@ jobs:
           # contenuti del sito. Sono ammessi come "nome organizzazione"
           # (es. "ARES 118", "Corpo Forestale 1515"), quindi la grep cerca
           # pattern imperativi: "chiamare il 115", "comporre il 118", "tel: 1515" ecc.
+          # Esclude i pattern didattici "Non chiamare il 115/118/1515" che
+          # spiegano al cittadino di NON usarli (es. assistente guidato).
           DEPRECATED=$(grep -rInE \
             '(chiama[rt]e?|componi|comporre|numero|tel\.?|contatta[rt]e?)[[:space:]]*(il[[:space:]]*)?(1515|115|118)\b' \
-            "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" data/ 2>/dev/null || true)
+            "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" data/ 2>/dev/null \
+            | grep -vE 'Non[[:space:]]+chiamare|non[[:space:]]+chiama[rt]e?|invece[[:space:]]+(di|del)|al[[:space:]]+posto[[:space:]]+(di|del)|sostituisce|sostituito' \
+            || true)
           if [ -n "$DEPRECATED" ]; then
             err "Numeri deprecati citati come numero da chiamare (usare solo 112):"
             echo '```' >> "$REPORT"

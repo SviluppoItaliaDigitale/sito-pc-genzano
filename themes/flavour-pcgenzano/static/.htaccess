@@ -52,7 +52,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  # geolocation: consentita al nostro stesso dominio (per "Centra sulla mia
+  # posizione" sulla mappa cartografia). microphone e camera restano negati.
+  Header always set Permissions-Policy "geolocation=(self), microphone=(), camera=()"
   Header always set X-XSS-Protection "1; mode=block"
 </IfModule>
 

@@ -225,10 +225,25 @@ Insegnate ai bambini a memorizzare il numero **112**.
 
 <div class="alert alert-success" role="note">
 <p class="mb-1"><i class="bi bi-printer-fill me-2" aria-hidden="true"></i><strong>Schede pronte da stampare</strong></p>
-<p class="mb-0">Alcune schede sono già pronte: aprile, premi <kbd>Stampa</kbd> del browser e ottieni un foglio A4 perfetto con intestazione istituzionale.
+<p class="mb-0">Alcune schede sono già pronte: apri, premi <kbd>Stampa</kbd> del browser e ottieni un foglio A4 perfetto con intestazione istituzionale.
 👉 <strong><a href="/formazione/schede-stampabili/">Vai all'elenco delle schede stampabili</a></strong> (in continuo arricchimento).
 Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui il docente può costruire la scheda in Word, Canva o a mano. Se ti serve una scheda specifica già pronta scrivici a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>: la realizziamo.</p>
 </div>
+
+**Schede già pronte per la stampa per la scuola dell'infanzia:**
+
+- 👉 [**Vero o Falso con le Faccine**](/formazione/schede-stampabili/vero-falso-infanzia/) — il bambino colora di verde le frasi giuste e di rosso quelle sbagliate.
+- 👉 [**Il Labirinto dell'Uscita**](/formazione/schede-stampabili/labirinto-uscita/) — il bambino traccia con la matita il percorso sicuro evitando gli ostacoli.
+- 👉 [**La Tartaruga Saggia**](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) — Tina spiega 4 comportamenti di autoprotezione, il bambino li ricostruisce.
+- 👉 [**Trova le Coppie**](/formazione/schede-stampabili/trova-coppie-infanzia/) — accoppia oggetti e situazioni della sicurezza.
+
+**5 schede da colorare** sui rischi del territorio (linea pulita pensata per matite, pastelli, pennarelli):
+
+- 👉 [**Colora il Terremoto**](/formazione/schede-stampabili/colorare-terremoto-infanzia/) — sotto il tavolo robusto durante la scossa.
+- 👉 [**Colora l'Alluvione**](/formazione/schede-stampabili/colorare-alluvione-infanzia/) — al sicuro ai piani alti.
+- 👉 [**Colora l'Incendio**](/formazione/schede-stampabili/colorare-incendio-infanzia/) — il pompiere e l'evacuazione in sicurezza.
+- 👉 [**Colora il Temporale**](/formazione/schede-stampabili/colorare-temporale-infanzia/) — in casa, lontano dalle finestre.
+- 👉 [**Colora il Vento**](/formazione/schede-stampabili/colorare-vento-infanzia/) — al riparo dagli oggetti che possono volare via.
 
 
 Queste schede sono pensate per essere **fotocopiate in bianco e nero** e consegnate ai bambini come attività di rinforzo individuale o di piccolo gruppo. Il disegno è sempre accompagnato da una breve consegna che la maestra legge ad alta voce.

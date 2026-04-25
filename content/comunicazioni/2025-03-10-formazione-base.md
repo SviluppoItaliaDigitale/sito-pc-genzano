@@ -7,14 +7,14 @@ priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-03-10-formazione-base.webp"
 scadenza: ""
-area: "Sede operativa, Via Sicilia - Genzano di Roma"
+area: "Sede operativa, Via Sicilia 13-15, Genzano di Roma"
 allegati: []
 draft: false
 ---
 
 Il Gruppo organizza un nuovo **Corso di Formazione Base** per i volontari iscritti di recente.
 
-Le lezioni si tengono nella sede di Via Sicilia.
+Le lezioni si tengono nella sede di Via Sicilia 13-15.
 
 Per informazioni e iscrizioni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
 
