@@ -1506,6 +1506,8 @@ Il sito pubblica **quattro kit didattici** indirizzati alle scuole del territori
 
 Il sito incorpora alcuni widget forniti da servizi esterni (mappe meteo, mappe sismiche) seguendo un pattern unico e riusabile: **click-to-load consensuale**. L'iframe non si carica automaticamente; l'utente vede un placeholder blu istituzionale con pulsante e, solo dopo il click, il browser riceve risorse dal server esterno. Questo approccio garantisce privacy-by-design (nessun cookie di terze parti al primo accesso), rispetta il GDPR e allinea il comportamento di tutti i widget esterni del sito.
 
+Quando l'iframe è caricato, sopra di esso compare una **toolbar blu** con il titolo del widget e un bottone **"Chiudi mappa"** che riporta al placeholder originale. Questo è essenziale su mobile: l'iframe altrimenti cattura il touch (la mappa Windy/INGV interpreta lo swipe come pan) e l'utente non riesce più a scrollare la pagina sotto. Cliccando "Chiudi mappa" l'iframe viene rimosso, il placeholder viene ripristinato e si può tornare a navigare la pagina.
+
 #### Widget attualmente pubblicati
 
 | Widget | Fornitore | Pagine | Fonte ufficiale |
