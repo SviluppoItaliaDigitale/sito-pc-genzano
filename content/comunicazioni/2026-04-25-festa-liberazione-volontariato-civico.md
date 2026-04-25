@@ -41,6 +41,10 @@ Un paese in cui esistono volontari attivi è un paese in cui i cittadini hanno g
 
 Il 25 aprile è festa civile in tutta Italia. A Genzano di Roma, come in molti comuni, si tengono celebrazioni istituzionali. Il volontariato di Protezione Civile partecipa alle manifestazioni pubbliche come parte del sistema civico della città, nel rispetto del proprio ruolo.
 
+{{< foto src="/images/2026-04-25-sindaco-corona-fiori-targa-vittime-guerra.webp"
+         alt="Il sindaco Carlo Zoccolotti depone una corona d'alloro tricolore sulla targa commemorativa delle vittime della Seconda Guerra Mondiale all'ingresso del Comune di Genzano di Roma"
+         caption="Il sindaco Carlo Zoccolotti depone la corona d'alloro tricolore sulla targa commemorativa delle vittime della Seconda Guerra Mondiale, all'ingresso del Municipio di Genzano di Roma — 25 aprile, Festa della Liberazione." >}}
+
 ## Come si entra nel Gruppo Comunale
 
 Il nostro gruppo accoglie nuovi volontari con un percorso strutturato: candidatura, colloquio, periodo di conoscenza, formazione base, formazione specialistica. Non serve avere competenze particolari per iniziare: servono **tempo, serietà e voglia di imparare**.
