@@ -2300,3 +2300,95 @@ article .galleria img {
     margin-top: 1rem;
   }
 }
+
+/* ─────────────────────────────────────────────
+   INDICE PAGINA (.article-toc)
+   Renderizzato da single.html quando frontmatter ha `toc: true`.
+   Hugo produce <nav id="TableOfContents"> con la gerarchia H2/H3.
+   ───────────────────────────────────────────── */
+.article-toc {
+  border: 1px solid #e9ecef;
+  border-left: 4px solid #003366;
+  background: #f4f7fb;
+  border-radius: 8px;
+}
+.article-toc summary.article-toc-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  user-select: none;
+}
+.article-toc summary.article-toc-summary::-webkit-details-marker { display: none; }
+.article-toc summary.article-toc-summary:focus-visible {
+  outline: 3px solid #ffd60a;
+  outline-offset: 2px;
+}
+.article-toc-title {
+  color: #003366;
+  font-size: 0.95rem;
+}
+.article-toc-chevron {
+  transition: transform 0.2s ease;
+  color: #003366;
+}
+.article-toc details[open] > summary .article-toc-chevron {
+  transform: rotate(180deg);
+}
+.article-toc-body {
+  padding: 0 1rem 0.85rem 1rem;
+  border-top: 1px solid #dee2e6;
+  margin-top: 0;
+}
+.article-toc-body #TableOfContents {
+  margin-top: 0.75rem;
+}
+.article-toc-body #TableOfContents > ul,
+.article-toc-body #TableOfContents ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.article-toc-body #TableOfContents > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.15rem 1rem;
+}
+.article-toc-body #TableOfContents li {
+  padding: 0.2rem 0;
+  line-height: 1.4;
+}
+.article-toc-body #TableOfContents ul ul {
+  padding-left: 1rem;
+  margin-top: 0.15rem;
+  display: block;
+}
+.article-toc-body #TableOfContents ul ul li {
+  font-size: 0.9rem;
+  padding: 0.1rem 0;
+}
+.article-toc-body #TableOfContents a {
+  color: #003366;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+.article-toc-body #TableOfContents a:hover,
+.article-toc-body #TableOfContents a:focus {
+  color: #001f3d;
+  border-bottom-color: #003366;
+}
+
+/* Mobile: TOC a colonna singola, tipografia compatta */
+@media (max-width: 768px) {
+  .article-toc-body #TableOfContents > ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Stampa: nascondi l'indice (i titoli del documento bastano) */
+@media print {
+  .article-toc { display: none !important; }
+}

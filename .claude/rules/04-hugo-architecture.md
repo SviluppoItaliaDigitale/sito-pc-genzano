@@ -139,6 +139,26 @@ Razionale: 10 voci flat erano troppe per mobile e per l'utente in emergenza. L'a
 
 Non aggiungere voci di primo livello senza valutarne l'impatto sul mobile: il limite di sicurezza è 6-7 voci visibili contemporaneamente.
 
+### Indice della pagina (TOC) per articoli lunghi
+
+Le pagine con frontmatter `toc: true` mostrano in cima un **indice cliccabile** (Table of Contents) generato automaticamente da Hugo a partire dalle intestazioni H2/H3 del Markdown. Si applica solo a pagine che usano `_default/single.html` (Hugo richiede `layout: "single"` nel frontmatter, già usato dai kit didattici).
+
+Pagine attualmente con TOC attivo: `/formazione/`, `/formazione/kit-scuola-infanzia/`, `/formazione/kit-scuola-primaria/`, `/formazione/kit-scuola-secondaria-primo-grado/`, `/formazione/kit-scuola-secondaria-secondo-grado/`. Sono pagine da 500-950 righe con 15-20 sezioni: navigarle senza un indice è proibitivo.
+
+**Cosa rende:** un `<details open>` Bootstrap-Italia-flavoured con icona elenco, titolo "In questa pagina", chevron animato e una griglia `auto-fill minmax(260px, 1fr)` che su desktop dispone le voci in 2-3 colonne, su mobile (≤768px) in colonna singola. La sezione è dentro un wrapper `<div id="indice">` per consentire il salto diretto.
+
+**Back-to-top contestuale:** il bottone `#backToTop` in `baseof.html` rileva la presenza di `#indice` con `getElementById`. Se presente, lo scroll punta lì invece che a `scrollY=0`, e l'`aria-label` diventa "Torna all'indice della pagina". Backward compatible: senza TOC, comportamento standard.
+
+**Quando attivare `toc: true`:**
+- Pagina con almeno 8-10 H2 OPPURE
+- Pagina molto lunga (>500 righe Markdown) anche con meno H2
+
+**Regole operative:**
+- Non duplicare l'indice nel corpo Markdown.
+- Mantenere intestazioni H2 chiare e brevi: appariranno come voci di indice.
+- L'indice è nascosto in stampa (`@media print { .article-toc { display: none } }`).
+- Non serve aggiungere ID manuali: Hugo li genera dallo slug del titolo.
+
 ### Pagine legali/istituzionali con data di revisione
 Le pagine `privacy`, `note-legali`, `accessibilita`, `social-media-policy` usano il campo frontmatter `dataUltimaRevisione: "AAAA-MM-GG"`.
 

@@ -2,6 +2,7 @@
 title: "Kit Didattico — Scuola dell'Infanzia"
 description: "Materiale didattico di protezione civile per bambini dai 3 ai 6 anni: storie, giochi e attività per imparare i comportamenti corretti in emergenza."
 layout: "single"
+toc: true
 ---
 
 Questo kit è pensato per gli insegnanti della **scuola dell'infanzia** che desiderano introdurre i temi della protezione civile e della sicurezza con i bambini dai 3 ai 6 anni.

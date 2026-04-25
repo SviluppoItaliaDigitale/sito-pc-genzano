@@ -2,6 +2,7 @@
 title: "Formazione e Scuole"
 description: "Corsi di formazione per volontari, attività nelle scuole e risorse educative sulla protezione civile."
 layout: "single"
+toc: true
 ---
 
 La formazione è il pilastro della Protezione Civile. Un volontario preparato e un cittadino informato sono le migliori risorse per affrontare qualsiasi emergenza.
