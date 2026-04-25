@@ -125,52 +125,71 @@
 
       <div class="col-passo">
         <div class="col-num">3</div>
-        <svg viewBox="0 0 160 130" role="img" aria-label="Albero piegato dal vento forte con rami che si spezzano e foglie che volano via: vietato stare sotto">
-          <!-- TRONCO PIEGATO dal vento (curva da terra verso destra) -->
-          <path d="M 65 115 L 67 95 Q 70 75 78 60 Q 85 45 100 35" stroke-width="4" />
-          <path d="M 73 115 L 73 95 Q 76 78 84 65 Q 92 50 105 42" stroke-width="4" />
-          <!-- Linee corteccia -->
-          <line x1="69" y1="108" x2="71" y2="100" />
-          <line x1="69" y1="90" x2="74" y2="78" />
+        <svg viewBox="0 0 200 160" role="img" aria-label="Albero piegato dal vento forte: vietato stare sotto. Tronco curvato con foglie che volano via, ramo spezzato">
 
-          <!-- CHIOMA piegata a destra (forma a "fiamma" tirata dal vento) -->
-          <path d="M 100 35 Q 115 22 125 18 Q 135 18 138 28 Q 138 38 130 45 Q 120 50 108 50 Q 100 48 95 42 Z" />
-          <!-- Foglie staccate che volano via -->
-          <path d="M 130 30 Q 140 28 142 22" />
-          <path d="M 138 25 Q 145 22 148 18" />
-          <ellipse cx="148" cy="20" rx="3" ry="2" transform="rotate(45 148 20)" />
-          <ellipse cx="143" cy="35" rx="3" ry="2" transform="rotate(60 143 35)" />
-          <ellipse cx="138" cy="48" rx="3" ry="2" transform="rotate(30 138 48)" />
+          <!-- ===== TRONCO ALBERO (curvato verso destra dal vento) ===== -->
+          <path d="M 70 150 Q 72 130 78 110 Q 85 88 100 75 Q 115 65 130 60" stroke-width="5" fill="none" />
+          <path d="M 90 150 Q 92 130 98 110 Q 105 88 120 75 Q 135 65 150 62" stroke-width="5" fill="none" />
+          <!-- Connessione tronco (parte bassa) -->
+          <path d="M 70 150 L 90 150" stroke-width="3" />
+          <!-- Linee corteccia (verticali leggere lungo il tronco) -->
+          <path d="M 78 145 Q 80 130 84 115" stroke-width="1.5" />
+          <path d="M 82 145 Q 85 130 90 115" stroke-width="1.5" />
+          <path d="M 86 145 Q 88 132 92 118" stroke-width="1.5" />
 
-          <!-- Ramo SPEZZATO che cade -->
-          <line x1="108" y1="50" x2="120" y2="80" stroke-width="3" />
-          <line x1="115" y1="65" x2="120" y2="62" />
-          <line x1="115" y1="65" x2="120" y2="68" />
-          <!-- Spaccatura del ramo (zigzag) -->
-          <path d="M 108 50 L 110 53 L 107 56 L 110 58 L 108 50 Z" />
+          <!-- ===== CHIOMA grande e CURVATA in direzione del vento ===== -->
+          <!-- Cerchi sovrapposti che disegnano la chioma piegata -->
+          <ellipse cx="140" cy="60" rx="32" ry="22" transform="rotate(15 140 60)" stroke-width="2.5" />
+          <circle cx="125" cy="55" r="16" />
+          <circle cx="155" cy="62" r="16" />
+          <circle cx="140" cy="42" r="14" />
+          <!-- Foglie/dettagli interni alla chioma -->
+          <path d="M 120 55 Q 125 50 130 53" />
+          <path d="M 135 50 Q 142 45 148 50" />
+          <path d="M 145 65 Q 152 60 158 64" />
+          <path d="M 130 65 Q 135 60 140 64" />
 
-          <!-- LINEE DI VENTO FORTE da sinistra -->
-          <path d="M 5 25 Q 25 22 45 26" stroke-width="2" />
-          <path d="M 8 38 Q 30 35 50 38" stroke-width="2" />
-          <path d="M 5 55 Q 30 52 55 56" stroke-width="2" />
-          <path d="M 8 72 Q 30 68 50 72" stroke-width="2" />
-          <path d="M 5 88 Q 25 85 45 88" stroke-width="2" />
-          <!-- Frecce di direzione del vento -->
-          <path d="M 40 26 L 45 26 L 42 23" />
-          <path d="M 45 56 L 50 56 L 47 53" />
-          <path d="M 40 72 L 45 72 L 42 69" />
+          <!-- ===== RAMO SPEZZATO che cade verso il basso ===== -->
+          <line x1="118" y1="68" x2="140" y2="115" stroke-width="3" />
+          <!-- Spaccatura del ramo (a zigzag) -->
+          <path d="M 116 65 L 119 68 L 116 71 L 119 74 Z" stroke-width="2" />
+          <!-- Foglioline sul ramo -->
+          <ellipse cx="130" cy="92" rx="3" ry="2" transform="rotate(40 130 92)" />
+          <ellipse cx="135" cy="105" rx="3" ry="2" transform="rotate(50 135 105)" />
 
-          <!-- TERRENO -->
-          <line x1="0" y1="118" x2="160" y2="118" />
+          <!-- ===== FOGLIE CHE VOLANO VIA (dietro alla chioma, verso destra) ===== -->
+          <ellipse cx="170" cy="35" rx="4" ry="2.5" transform="rotate(45 170 35)" />
+          <ellipse cx="180" cy="50" rx="4" ry="2.5" transform="rotate(60 180 50)" />
+          <ellipse cx="185" cy="68" rx="4" ry="2.5" transform="rotate(30 185 68)" />
+          <ellipse cx="190" cy="40" rx="3" ry="2" transform="rotate(20 190 40)" />
+          <!-- Linee di "movimento" delle foglie -->
+          <path d="M 165 35 L 158 32" />
+          <path d="M 175 50 L 167 48" />
+          <path d="M 180 68 L 172 66" />
+
+          <!-- ===== LINEE DI VENTO FORTE da sinistra ===== -->
+          <path d="M 5 30 Q 25 28 50 32" stroke-width="2.5" fill="none" />
+          <path d="M 5 48 Q 30 45 55 50" stroke-width="2.5" fill="none" />
+          <path d="M 5 68 Q 30 65 55 70" stroke-width="2.5" fill="none" />
+          <path d="M 5 90 Q 25 88 50 92" stroke-width="2.5" fill="none" />
+          <!-- Frecce direzione vento -->
+          <path d="M 45 32 L 50 32 L 47 29" />
+          <path d="M 50 50 L 55 50 L 52 47" />
+          <path d="M 50 70 L 55 70 L 52 67" />
+          <path d="M 45 92 L 50 92 L 47 89" />
+
+          <!-- ===== TERRENO ===== -->
+          <line x1="0" y1="153" x2="200" y2="153" stroke-width="2" />
           <!-- Erba mossa dal vento -->
-          <line x1="20" y1="118" x2="22" y2="113" />
-          <line x1="30" y1="118" x2="33" y2="113" />
-          <line x1="40" y1="118" x2="44" y2="113" />
-          <line x1="55" y1="118" x2="59" y2="113" />
+          <path d="M 15 153 Q 17 148 20 152" />
+          <path d="M 30 153 Q 32 147 36 152" />
+          <path d="M 45 153 Q 47 148 51 152" />
+          <path d="M 165 153 Q 167 148 171 152" />
+          <path d="M 180 153 Q 182 148 186 152" />
 
-          <!-- CERCHIO ROSSO DI DIVIETO sopra all'albero (chiarezza univoca) -->
-          <circle cx="90" cy="60" r="46" class="col-x-red" stroke-width="5" />
-          <line x1="58" y1="28" x2="122" y2="92" class="col-x-red" />
+          <!-- ===== CERCHIO ROSSO BARRATO DI DIVIETO ===== -->
+          <circle cx="110" cy="80" r="68" class="col-x-red" stroke-width="6" fill="none" />
+          <line x1="62" y1="32" x2="158" y2="128" class="col-x-red" stroke-width="6" />
         </svg>
         <p class="col-frase"><strong>Non sto</strong> sotto gli alberi</p>
       </div>
