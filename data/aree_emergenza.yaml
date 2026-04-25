@@ -128,9 +128,8 @@ aree:
     verified: true
   - id: AR4
     tipo: AR
-    nome: "Campo Sportivo Salesiani"
-    indirizzo: "Via Appia Nuova (Salesiani)"
-    # Stima: Istituto Salesiani su Via Appia Nuova, area est-sud-est
-    lat: 41.6810
-    lon: 12.7110
-    verified: false
+    nome: "Campo Sportivo Don Bosco (Salesiani)"
+    indirizzo: "Viale Piave angolo Via Lega Latina"
+    lat: 41.7124873
+    lon: 12.6878804
+    verified: true
