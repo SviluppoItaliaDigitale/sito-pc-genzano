@@ -72,6 +72,7 @@
     .cell.exit { background: #d1e7dd; font-size: 1.6rem; }
     .cell.elevator { background: #fff3cd; color: #664d03; }
     .cell.fire { background: #f8d7da; color: #dc3545; }
+    .cell.obstacle { background: #fff3cd; color: #b45309; }
     .cell.stair { background: #cfe2ff; color: #003366; }
     .cell.arrow-up, .cell.arrow-down, .cell.arrow-left, .cell.arrow-right {
       background: #d1e7dd; color: #0f5132; font-weight: 700;
@@ -179,6 +180,7 @@
               <span class="legenda-item">🪜 Scala (sì)</span>
               <span class="legenda-item">⚠️ Ascensore (no)</span>
               <span class="legenda-item">🔥 Fuoco (no)</span>
+              <span class="legenda-item">📦 Ostacolo (no)</span>
               <span class="legenda-item">➡️ Freccia di emergenza</span>
             </div>
 
@@ -268,117 +270,117 @@
     var SCENARI = [
       {
         titolo: 'Scenario 1 — Aula al primo piano',
-        desc: 'Suona la campanella di evacuazione. Esci dalla tua aula, evita l\'ascensore e scendi dalle scale 🪜 fino al punto di raccolta in cortile. Attenzione: il corridoio centrale è aperto, potresti finire nell\'ascensore se non scegli bene.',
+        desc: 'Suona la campanella di evacuazione. Esci dalla tua aula evitando l\'ascensore ⚠️, gli zaini e i banchi rovesciati 📦. Scendi dalle scale 🪜 fino al punto di raccolta in cortile.',
         righe: [
           '#########',
-          '#S......#',
+          '#S.B....#',
           '#.......#',
           '#.#A..X.#',
-          '#.......#',
+          '#...B...#',
           '#.#...#.#',
-          '#.......#',
+          '#.....B.#',
           '#.#.....#',
           '#......E#',
           '#########'
         ],
-        max: 14
-      },
-      {
-        titolo: 'Scenario 2 — Fuoco nel corridoio',
-        desc: 'Sei al piano terra. Nel corridoio principale si è sviluppato un incendio. Evita fuoco e fumo e trova una strada alternativa: il fuoco è raggiungibile da più direzioni, scegli con attenzione.',
-        righe: [
-          '##########',
-          '#S.......#',
-          '#........#',
-          '#...F....#',
-          '#.########',
-          '#.#......#',
-          '#........#',
-          '#.######.#',
-          '#........#',
-          '#.......E#',
-          '##########'
-        ],
         max: 16
       },
       {
+        titolo: 'Scenario 2 — Fuoco e ostacoli nel corridoio',
+        desc: 'Sei al piano terra. Si è sviluppato un incendio 🔥 e nei corridoi ci sono zaini caduti 📦. Evita il fuoco, salta gli ostacoli scegliendo un\'altra strada e raggiungi l\'uscita.',
+        righe: [
+          '##########',
+          '#S.B.....#',
+          '#........#',
+          '#...F....#',
+          '#.######B#',
+          '#.#......#',
+          '#..B.....#',
+          '#.######.#',
+          '#....F...#',
+          '#.......E#',
+          '##########'
+        ],
+        max: 18
+      },
+      {
         titolo: 'Scenario 3 — Evacuazione completa',
-        desc: 'Allarme generale! Dall\'aula devi scendere le scale, evitare l\'ascensore e il fuoco, e seguire le frecce verdi ➡️ di emergenza fino al cortile. Molti corridoi sono aperti: fai attenzione a non finire sull\'ascensore o sul fuoco.',
+        desc: 'Allarme generale! Dall\'aula devi scendere le scale 🪜, evitare ascensore ⚠️, fuoco 🔥 e ostacoli 📦, seguire le frecce verdi ➡️ di emergenza fino al cortile. Tante scelte: usa la testa.',
         righe: [
           '###########',
           '#S..#.....#',
-          '#.#.#.....#',
+          '#.#.#.B...#',
           '#.#.X...#.#',
           '#.#.###.#.#',
           '#.#..A..#.#',
           '#.########.',
-          '#.........#',
+          '#....B....#',
           '#..######.#',
           '#.#F......#',
           '#.#.###...#',
-          '#...#.#...#',
+          '#.B.#.#.B.#',
           '#...#...#.#',
           '#####.###D#',
           '#........E#',
           '###########'
         ],
-        max: 22
+        max: 24
       },
       {
         titolo: 'Scenario 4 — Uscita con freccia di emergenza',
-        desc: 'Suona l\'allarme in aula. L\'ascensore ⚠️ è in fondo al corridoio: evitalo! Segui la freccia verde ⬇️ che indica l\'uscita e raggiungi il punto di raccolta 🏁. Il corridoio è aperto: puoi finire sull\'ascensore se non scegli bene la rotta.',
+        desc: 'Suona l\'allarme in aula. L\'ascensore ⚠️ è in fondo al corridoio: evitalo! C\'è anche del fuoco 🔥 e degli zaini 📦 sul percorso. Segui la freccia verde ⬇️ fino al punto di raccolta 🏁.',
         righe: [
           '##########',
-          '#S.....A.#',
+          '#S.B...A.#',
           '#........#',
-          '#........#',
+          '#...F.B..#',
           '#.......D#',
           '#######..#',
-          '#........#',
+          '#..B.....#',
           '#.......E#',
           '##########'
         ],
-        max: 16
+        max: 18
       },
       {
         titolo: 'Scenario 5 — Freccia verso il punto di raccolta',
-        desc: 'Piccolo incendio 🔥 nel corridoio principale. Trova una strada alternativa e, nell\'ultimo tratto, segui la freccia verde ➡️ che indica l\'uscita sicura. Il fuoco è raggiungibile da più direzioni: fai attenzione.',
+        desc: 'Due piccoli incendi 🔥 e ostacoli 📦 nei corridoi. Trova una strada alternativa e, nell\'ultimo tratto, segui la freccia verde ➡️ che indica l\'uscita sicura.',
         righe: [
           '##########',
-          '#S.......#',
+          '#S.B.....#',
           '#........#',
-          '#...F....#',
+          '#...F.B..#',
           '#.########',
-          '#.#......#',
-          '#........#',
+          '#.#...F..#',
+          '#..B.....#',
           '#.######.#',
           '#........#',
           '#......RE#',
           '##########'
         ],
-        max: 16
+        max: 18
       },
       {
         titolo: 'Scenario 6 — Evacuazione completa con freccia finale',
-        desc: 'Evacuazione dall\'aula al primo piano. Attraversa i corridoi aperti, evita l\'ascensore ⚠️, segui le scale 🪜, arriva alla freccia verde ⬇️ e scendi fino al punto di raccolta 🏁.',
+        desc: 'Evacuazione dall\'aula al primo piano: attraversa i corridoi, evita ascensore ⚠️, fuoco 🔥 e ostacoli 📦, segui le scale 🪜, arriva alla freccia verde ⬇️ e scendi fino al punto di raccolta 🏁.',
         righe: [
           '############',
-          '#S.........#',
+          '#S.B.......#',
           '#.##########',
           '#.#....A...#',
           '#.#.########',
-          '#.#.#X.....#',
+          '#.#.#X..B..#',
           '#.#.########',
-          '#.#........#',
+          '#.#.B......#',
           '#.####.#####',
-          '#..........#',
+          '#....F.....#',
           '#.........D#',
           '########...#',
-          '#..........#',
+          '#..B.......#',
           '#.........E#',
           '############'
         ],
-        max: 26
+        max: 28
       }
     ];
 
@@ -467,6 +469,7 @@
         case 'E': return 'exit';
         case 'A': return 'elevator';
         case 'F': return 'fire';
+        case 'B': return 'obstacle';
         case 'X': return 'stair';
         case 'U': return 'arrow-up';
         case 'D': return 'arrow-down';
@@ -483,6 +486,7 @@
         case 'E': return '🏁';
         case 'A': return '⚠️';
         case 'F': return '🔥';
+        case 'B': return '📦';
         case 'X': return '🪜';
         case 'U': return '⬆️';
         case 'D': return '⬇️';
@@ -524,6 +528,13 @@
         erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
         mostraMessaggio('🔥 Attenzione: fuoco! Non attraversare fiamme e fumo. Cerca una strada alternativa.', 'danger');
         if (window.AudioSintetico) window.AudioSintetico.tono(160, 0.25);
+        return;
+      }
+      // ostacolo (zaino, banco rovesciato)
+      if (target === 'B') {
+        erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
+        mostraMessaggio('📦 C\'è un ostacolo (zaino o banco rovesciato). Non saltarlo: rallenta. Trova un\'altra strada per non cadere.', 'warning');
+        if (window.AudioSintetico) window.AudioSintetico.tono(220, 0.18);
         return;
       }
       // frecce: verificare direzione congruente
