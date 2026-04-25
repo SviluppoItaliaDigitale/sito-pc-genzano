@@ -12,7 +12,7 @@
   var situations = [
     {
       emoji: '🔥',
-      title: 'C\u2019è un incendio!',
+      title: 'C’è un incendio!',
       desc: 'Vedi delle fiamme che escono da un bosco vicino a casa.',
       correct: 'pompieri',
       wrong: 'ambulanza',
@@ -24,12 +24,12 @@
       desc: 'Il nonno si è sentito male e non riesce ad alzarsi.',
       correct: 'ambulanza',
       wrong: 'pompieri',
-      feedback: 'L\u2019ambulanza porta i medici. Per chiamarla componi il 112: la centrale invia subito i soccorsi sanitari.'
+      feedback: 'L’ambulanza porta i medici. Per chiamarla componi il 112: la centrale invia subito i soccorsi sanitari.'
     },
     {
       emoji: '🏠💨',
       title: 'Terremoto!',
-      desc: 'C\u2019è stato un forte terremoto e un muro è caduto.',
+      desc: 'C’è stato un forte terremoto e un muro è caduto.',
       correct: 'pompieri',
       wrong: 'volontari',
       feedback: 'I Vigili del Fuoco intervengono per i crolli. Chiama il 112!'
@@ -37,7 +37,7 @@
     {
       emoji: '🌊',
       title: 'Alluvione!',
-      desc: 'L\u2019acqua sta salendo e alcune famiglie hanno bisogno di aiuto.',
+      desc: 'L’acqua sta salendo e alcune famiglie hanno bisogno di aiuto.',
       correct: 'volontari',
       wrong: 'ambulanza',
       feedback: 'I volontari della Protezione Civile aiutano le persone durante le alluvioni. Per le emergenze chiama il 112!'
@@ -48,7 +48,7 @@
       desc: 'Due macchine si sono scontrate e una persona è ferita.',
       correct: 'ambulanza',
       wrong: 'volontari',
-      feedback: 'L\u2019ambulanza porta i medici per soccorrere i feriti. Chiama subito il 112!'
+      feedback: 'L’ambulanza porta i medici per soccorrere i feriti. Chiama subito il 112!'
     },
     {
       emoji: '🏠🔒',

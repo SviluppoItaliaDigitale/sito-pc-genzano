@@ -11,7 +11,7 @@
     {
       operator: 'Pronto, 112. Qual è la tua emergenza?',
       answers: [
-        { text: 'C\u2019è un incendio!', correct: true },
+        { text: 'C’è un incendio!', correct: true },
         { text: 'Voglio ordinare una pizza.', correct: false }
       ]
     },

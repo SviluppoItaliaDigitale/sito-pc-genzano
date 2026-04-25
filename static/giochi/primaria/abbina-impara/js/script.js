@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { left: 'Protezione Civile', right: 'Coordina aiuti e volontari in emergenza' },
                 { left: 'Carabinieri / Polizia', right: 'Ordine pubblico e sicurezza' },
                 { left: 'Ambulanza (ARES 118)', right: 'Emergenza sanitaria' },
-                { left: 'Sindaco', right: 'Autorit\u00e0 di PC nel Comune' },
+                { left: 'Sindaco', right: 'Autorità di PC nel Comune' },
                 { left: 'Volontario', right: 'Cittadino che aiuta gratuitamente' }
             ]
         },
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Meteo e allerte', icon: '\uD83C\uDF24\uFE0F',
             pairs: [
                 { left: 'Temporale', right: 'Pioggia + fulmini + vento forte' },
-                { left: 'Nebbia', right: 'Visibilit\u00e0 ridotta, soprattutto in auto' },
+                { left: 'Nebbia', right: 'Visibilità ridotta, soprattutto in auto' },
                 { left: 'Grandine', right: 'Ghiaccio in chicchi che cade dal cielo' },
                 { left: 'Ondata di calore', right: 'Temperature molto alte per giorni' },
                 { left: 'Gelo', right: 'Strade scivolose, attenzione al ghiaccio' },

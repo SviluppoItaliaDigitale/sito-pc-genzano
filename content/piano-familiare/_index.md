@@ -219,7 +219,7 @@ function generaPiano(){
   /* ── Sezione 3: Contatti e Risorse ── */
   h+='<h3 class="piano-section-title">Contatti e Risorse</h3>';
   h+='<table class="piano-table" role="presentation"><tbody>';
-  h+='<tr><td>Riferimento fuori citt\u00e0</td><td><strong>'+contatto+'</strong></td></tr>';
+  h+='<tr><td>Riferimento fuori città</td><td><strong>'+contatto+'</strong></td></tr>';
   h+='<tr><td>Medico di famiglia</td><td><strong>'+medico+'</strong></td></tr>';
   h+='<tr><td>Kit di emergenza</td><td><strong>'+kit+'</strong></td></tr>';
   h+='<tr><td>Rubinetti e quadro elettrico</td><td><strong>'+chiusure+'</strong></td></tr>';

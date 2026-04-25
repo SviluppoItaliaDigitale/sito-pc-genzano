@@ -166,13 +166,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'La maestra chiama il 112. Mentre parla, ti chiede: "In che parte del parco siamo?". Guardi intorno. Cosa le dici?',
                     choices: [
                         { text: '"Non lo so, sei tu l\'adulta!"', correct: false, tip: 'Anche tu puoi aiutare. Osserva i cartelli, il sentiero, i riferimenti del parco.' },
-                        { text: 'Le leggo il cartello del sentiero e le indico dove sta il fumo rispetto a noi', correct: true, tip: 'Perfetto! Le informazioni precise aiutano i soccorsi a trovarvi e a capire dov\u2019è l\u2019incendio.' }
+                        { text: 'Le leggo il cartello del sentiero e le indico dove sta il fumo rispetto a noi', correct: true, tip: 'Perfetto! Le informazioni precise aiutano i soccorsi a trovarvi e a capire dov’è l’incendio.' }
                     ]
                 },
                 {
                     text: 'La maestra dice di allontanarsi dal fumo. Il vento soffia dalla parte del fumo verso di voi. In che direzione vi muovete?',
                     choices: [
-                        { text: 'Contro vento, verso la fonte del fumo', correct: false, tip: 'Mai andare contro il fumo! L\u2019aria calda e i gas sono pericolosi.' },
+                        { text: 'Contro vento, verso la fonte del fumo', correct: false, tip: 'Mai andare contro il fumo! L’aria calda e i gas sono pericolosi.' },
                         { text: 'Ci spostiamo sopravento o di lato, dove il vento ci dà le spalle', correct: true, tip: 'Bravo! Così il vento allontana il fumo da te, e le fiamme non avanzano nella tua direzione.' }
                     ]
                 },
@@ -192,14 +192,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     text: 'È sera e stai facendo i compiti. Improvvisamente si spengono le luci e il Wi-Fi. Tutto il quartiere è al buio. Cosa fai?',
                     choices: [
-                        { text: 'Uso la torcia del telefono per cercare una candela e l\u2019accendo', correct: false, tip: 'Le candele possono provocare incendi! Meglio usare solo torce elettriche o lampade a batteria.' },
+                        { text: 'Uso la torcia del telefono per cercare una candela e l’accendo', correct: false, tip: 'Le candele possono provocare incendi! Meglio usare solo torce elettriche o lampade a batteria.' },
                         { text: 'Accendo la torcia del telefono e chiamo un genitore', correct: true, tip: 'Giusto! Le torce a batteria sono sicure. Durante un blackout le candele sono rischiose.' }
                     ]
                 },
                 {
                     text: 'La mamma dice che il frigorifero non funziona. Vuoi aprirlo per prendere un succo di frutta. Cosa è meglio fare?',
                     choices: [
-                        { text: 'Lo apro, tanto c\u2019è sempre stato freddo', correct: false, tip: 'Ogni volta che apri il frigo senza corrente, il freddo si disperde e il cibo si rovina prima.' },
+                        { text: 'Lo apro, tanto c’è sempre stato freddo', correct: false, tip: 'Ogni volta che apri il frigo senza corrente, il freddo si disperde e il cibo si rovina prima.' },
                         { text: 'Lo apro il meno possibile, solo per lo stretto necessario', correct: true, tip: 'Bravo! Tenere il frigo chiuso aiuta a conservare il cibo più a lungo durante un blackout.' }
                     ]
                 },
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     text: 'La corrente torna dopo 5 ore. Cosa controlli per prima cosa?',
                     choices: [
-                        { text: 'Accendo tutto subito: TV, PC, lavatrice', correct: false, tip: 'Accendere tutto insieme sovraccarica l\u2019impianto. Meglio riaccendere un elettrodomestico alla volta.' },
+                        { text: 'Accendo tutto subito: TV, PC, lavatrice', correct: false, tip: 'Accendere tutto insieme sovraccarica l’impianto. Meglio riaccendere un elettrodomestico alla volta.' },
                         { text: 'Accendo un apparecchio alla volta e controllo che il frigo funzioni', correct: true, tip: 'Bravo! Meno sovraccarico, meno rischio di far scattare di nuovo il contatore.' }
                     ]
                 }
@@ -227,25 +227,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'Al mattino ti alzi e vedi tutto bianco: è nevicato. La mamma deve andare al lavoro in auto. Cosa le suggerisci?',
                     choices: [
                         { text: '"Prendi subito la macchina, vai piano"', correct: false, tip: 'Prima bisogna pulire i vetri, controllare le gomme e vedere se davvero serve uscire. Piano non basta.' },
-                        { text: '"Controlla i vetri, le gomme da neve o le catene, e se proprio devi uscire, parti pulita"', correct: true, tip: 'Bravo! Con la neve l\u2019auto va preparata. Se non serve davvero, meglio rimandare o usare mezzi pubblici.' }
+                        { text: '"Controlla i vetri, le gomme da neve o le catene, e se proprio devi uscire, parti pulita"', correct: true, tip: 'Bravo! Con la neve l’auto va preparata. Se non serve davvero, meglio rimandare o usare mezzi pubblici.' }
                     ]
                 },
                 {
                     text: 'Vai a scuola a piedi. Il marciapiede è ghiacciato. Come cammini?',
                     choices: [
                         { text: 'Cammino normale, con le mani in tasca per non avere freddo', correct: false, tip: 'Con le mani in tasca se scivoli non riesci a proteggerti. Tienile fuori!' },
-                        { text: 'A passi corti, con le mani libere, scarpe con suola ruvida', correct: true, tip: 'Giusto! Passi corti e mani libere ti fanno mantenere l\u2019equilibrio e, se cadi, puoi proteggerti meglio.' }
+                        { text: 'A passi corti, con le mani libere, scarpe con suola ruvida', correct: true, tip: 'Giusto! Passi corti e mani libere ti fanno mantenere l’equilibrio e, se cadi, puoi proteggerti meglio.' }
                     ]
                 },
                 {
-                    text: 'Davanti alla scuola c\u2019è una lastra di ghiaccio nera, quasi invisibile ("ghiaccio nero"). Un compagno corre e sta per scivolarci sopra. Cosa fai?',
+                    text: 'Davanti alla scuola c’è una lastra di ghiaccio nera, quasi invisibile ("ghiaccio nero"). Un compagno corre e sta per scivolarci sopra. Cosa fai?',
                     choices: [
                         { text: 'Lo guardo e rido', correct: false, tip: 'Cadere sul ghiaccio fa male sul serio. Meglio prevenire che curare.' },
                         { text: 'Gli urlo "Attento al ghiaccio!" e gli indico dove passare', correct: true, tip: 'Bravo! Avvisare un amico è fare prevenzione, come un piccolo volontario.' }
                     ]
                 },
                 {
-                    text: 'A scuola vi dicono che la neve continuerà e l\u2019uscita potrebbe essere anticipata. La maestra chiede alla classe cosa è utile fare. Cosa proponi?',
+                    text: 'A scuola vi dicono che la neve continuerà e l’uscita potrebbe essere anticipata. La maestra chiede alla classe cosa è utile fare. Cosa proponi?',
                     choices: [
                         { text: 'Niente, tanto ci pensano i grandi', correct: false, tip: 'Anche tu puoi contribuire, con piccoli gesti utili e responsabili.' },
                         { text: 'Aiuto a tenere pulite le vie di fuga, avviso i compagni e mi vesto pronto', correct: true, tip: 'Perfetto! Ordine, comunicazione e attrezzatura sono i tre pilastri della protezione civile.' }
@@ -258,14 +258,14 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'persona-smarrita', title: 'Un nonno si è perso', icon: '\uD83E\uDDD3',
             steps: [
                 {
-                    text: 'In pizzeria con i genitori vedi un signore anziano da solo, confuso, che chiede "Dov\u2019è casa mia?". Cosa fai?',
+                    text: 'In pizzeria con i genitori vedi un signore anziano da solo, confuso, che chiede "Dov’è casa mia?". Cosa fai?',
                     choices: [
                         { text: 'Lo ignoro, non sono affari miei', correct: false, tip: 'Un anziano confuso può essere in pericolo. Non ignorare mai chi chiede aiuto.' },
                         { text: 'Lo dico subito ai miei genitori e al gestore del locale', correct: true, tip: 'Bravo! La prima cosa è coinvolgere gli adulti. Il gestore può controllare le telecamere e chiamare aiuto.' }
                     ]
                 },
                 {
-                    text: 'Il signore si chiama Luigi ma non ricorda l\u2019indirizzo. I tuoi genitori chiamano il 112. L\u2019operatore chiede una descrizione. Cosa è utile dire?',
+                    text: 'Il signore si chiama Luigi ma non ricorda l’indirizzo. I tuoi genitori chiamano il 112. L’operatore chiede una descrizione. Cosa è utile dire?',
                     choices: [
                         { text: '"È un signore vecchio"', correct: false, tip: 'Serve una descrizione precisa: altezza, capelli, vestiti, se porta occhiali o bastone.' },
                         { text: '"Si chiama Luigi, è alto circa 1,70 m, capelli bianchi, giacca grigia, senza cappello"', correct: true, tip: 'Perfetto! Una descrizione precisa aiuta chi lo sta cercando a riconoscerlo subito.' }
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'Mentre aspettate, Luigi vuole uscire dalla pizzeria e andare "a cercare casa da solo". Cosa fai?',
                     choices: [
                         { text: 'Lo lascio andare, ha detto che conosce la strada', correct: false, tip: 'Se è confuso non deve uscire da solo. In strada potrebbe perdersi ancora di più.' },
-                        { text: 'Gli parlo con calma, gli offro dell\u2019acqua e lo convinco ad aspettare con noi', correct: true, tip: 'Bravo! Parlare con calma ai confusi li rassicura. Offrire acqua o un posto a sedere aiuta a guadagnare tempo.' }
+                        { text: 'Gli parlo con calma, gli offro dell’acqua e lo convinco ad aspettare con noi', correct: true, tip: 'Bravo! Parlare con calma ai confusi li rassicura. Offrire acqua o un posto a sedere aiuta a guadagnare tempo.' }
                     ]
                 },
                 {

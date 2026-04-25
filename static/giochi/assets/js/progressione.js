@@ -15,7 +15,7 @@
     // Infanzia 3-6 (8 giochi)
     'tartaruga-saggia':       { nome: 'La Tartaruga Saggia',        fascia: 'infanzia', icona: 'bi-shield-shaded' },
     'numero-emergenza':       { nome: 'Il Numero 112',              fascia: 'infanzia', icona: 'bi-telephone-fill' },
-    'suoni-emergenza':        { nome: 'I Suoni dell\u2019Emergenza',fascia: 'infanzia', icona: 'bi-volume-up-fill' },
+    'suoni-emergenza':        { nome: 'I Suoni dell’Emergenza',fascia: 'infanzia', icona: 'bi-volume-up-fill' },
     'memory-facile':          { nome: 'Memory Facile',              fascia: 'infanzia', icona: 'bi-grid-3x3-gap-fill' },
     'vesti-tina':             { nome: 'Lo Zaino di Tina',           fascia: 'infanzia', icona: 'bi-backpack-fill' },
     'rifugio-tina':           { nome: 'Il Rifugio di Tina',         fascia: 'infanzia', icona: 'bi-house-fill' },
@@ -27,7 +27,7 @@
     'caccia-al-rischio':      { nome: 'Caccia al Rischio',          fascia: 'primaria', icona: 'bi-search' },
     'zaino-emergenza':        { nome: 'Lo Zaino di Emergenza',      fascia: 'primaria', icona: 'bi-backpack2-fill' },
     'semaforo-rischio':       { nome: 'Il Semaforo del Rischio',    fascia: 'primaria', icona: 'bi-stoplights-fill' },
-    'cosa-faccio-se':         { nome: 'Cosa Faccio Se\u2026',       fascia: 'primaria', icona: 'bi-signpost-split-fill' },
+    'cosa-faccio-se':         { nome: 'Cosa Faccio Se…',       fascia: 'primaria', icona: 'bi-signpost-split-fill' },
     'abbina-impara':          { nome: 'Abbina e Impara',            fascia: 'primaria', icona: 'bi-link-45deg' },
     'anagrammi':              { nome: 'Anagrammi della Sicurezza',  fascia: 'primaria', icona: 'bi-shuffle' },
     'cruciverba':             { nome: 'Cruciverba della Sicurezza', fascia: 'primaria', icona: 'bi-grid-3x3' },

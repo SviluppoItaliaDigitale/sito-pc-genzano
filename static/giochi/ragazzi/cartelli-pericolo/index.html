@@ -262,7 +262,7 @@
           { sym: '\uD83D\uDD25', correct: 'Infiammabile', opts: ['Esplosivo', 'Infiammabile', 'Corrosivo', 'Tossico'], why: 'Fiamma su diamante CLP = GHS02. Si trova su benzina, alcool, solventi, bombolette spray, vernici a base solvente.' },
           { sym: '\uD83D\uDCA5', correct: 'Esplosivo', opts: ['Ossidante', 'Gas compresso', 'Esplosivo', 'Tossico'], why: 'Bomba che esplode = GHS01. Usato su esplosivi, munizioni, fuochi d\'artificio professionali.' },
           { sym: '\u2620\uFE0F', correct: 'Tossico acuto', opts: ['Irritante', 'Tossico acuto', 'Corrosivo', 'Nocivo per l\'ambiente'], why: 'Teschio e tibie incrociate = GHS06. Prodotto molto pericoloso per ingestione, contatto, inalazione anche in piccole dosi.' },
-          { sym: '\u2757', correct: 'Irritante o nocivo', opts: ['Esplosivo', 'Tossico mortale', 'Irritante o nocivo', 'Radioattivo'], why: 'Punto esclamativo = GHS07. Prodotto che pu\u00f2 irritare pelle e occhi, o essere nocivo a dosi elevate. Spesso su detergenti domestici.' },
+          { sym: '\u2757', correct: 'Irritante o nocivo', opts: ['Esplosivo', 'Tossico mortale', 'Irritante o nocivo', 'Radioattivo'], why: 'Punto esclamativo = GHS07. Prodotto che può irritare pelle e occhi, o essere nocivo a dosi elevate. Spesso su detergenti domestici.' },
           { sym: '\uD83E\uDDEA', correct: 'Corrosivo', opts: ['Infiammabile', 'Corrosivo', 'Ossidante', 'Gas compresso'], why: 'Due provette che corrodono mano e metallo = GHS05. Acidi forti, candeggina concentrata, disgorganti: distruggono tessuti e materiali.' },
           { sym: '\u2699\uFE0F', correct: 'Gas sotto pressione', opts: ['Ossidante', 'Gas sotto pressione', 'Esplosivo', 'Infiammabile'], why: 'Bombola cilindrica = GHS04. Bombole di GPL, ossigeno, azoto: possono esplodere se riscaldate.' },
           { sym: '\uD83D\uDD34', correct: 'Ossidante', opts: ['Infiammabile', 'Ossidante', 'Radioattivo', 'Corrosivo'], why: 'Fiamma sopra un cerchio = GHS03. Prodotto che alimenta la combustione: perossido di idrogeno, clorato di potassio.' },
@@ -359,7 +359,7 @@
         var count = c.questions ? c.questions.length : 'tutti';
         card.innerHTML = '<div class="sample" aria-hidden="true">' + c.sample + '</div>' +
                         '<h3>' + c.titolo + '</h3>' +
-                        '<div class="count">' + c.descrizione + ' \u00b7 ' + count + (count === 'tutti' ? '' : ' domande') + '</div>';
+                        '<div class="count">' + c.descrizione + ' · ' + count + (count === 'tutti' ? '' : ' domande') + '</div>';
         card.addEventListener('click', function () { startChapter(key); });
         card.addEventListener('keydown', function (e) {
           if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startChapter(key); }
@@ -460,7 +460,7 @@
       var msg;
       if (pct === 1) msg = 'Perfetto! Riconosci tutti i pittogrammi.';
       else if (pct >= 0.8) msg = 'Ottimo lavoro! Hai una buona conoscenza della segnaletica.';
-      else if (pct >= 0.5) msg = 'Bene. Rigioca per memorizzare i simboli pi\u00f9 difficili.';
+      else if (pct >= 0.5) msg = 'Bene. Rigioca per memorizzare i simboli più difficili.';
       else msg = 'Occhio: questi simboli salvano vite. Riprova per fissarli.';
       endMsg.textContent = msg;
       if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('cartelli-pericolo', score, questions.length, '#end-screen .end-box');

@@ -3,12 +3,12 @@
   'use strict';
 
   var correctItems = [
-    { emoji: '💧', name: 'Acqua', tip: 'L\u2019acqua è la cosa più importante!' },
+    { emoji: '💧', name: 'Acqua', tip: 'L’acqua è la cosa più importante!' },
     { emoji: '🔦', name: 'Torcia', tip: 'La torcia serve se manca la luce.' },
     { emoji: '🧥', name: 'Coperta', tip: 'La coperta ti tiene al caldo.' },
     { emoji: '💊', name: 'Medicinali', tip: 'I medicinali sono importanti per chi li prende.' },
     { emoji: '📱', name: 'Telefono', tip: 'Il telefono serve per chiamare il 112.' },
-    { emoji: '🍞', name: 'Cibo', tip: 'Un po\u2019 di cibo che non si rovina.' }
+    { emoji: '🍞', name: 'Cibo', tip: 'Un po’ di cibo che non si rovina.' }
   ];
 
   var wrongItems = [

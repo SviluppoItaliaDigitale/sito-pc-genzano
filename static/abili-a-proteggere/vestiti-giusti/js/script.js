@@ -24,8 +24,8 @@
     },
     {
       emoji: '\u2744\uFE0F',
-      title: 'C\u2019è la neve',
-      desc: 'Fa molto freddo, c\u2019è neve per terra.',
+      title: 'C’è la neve',
+      desc: 'Fa molto freddo, c’è neve per terra.',
       correct: 'piumino',
       wrong: 'tshirt',
       feedback: 'Piumino e cappello. Il freddo ti può far male: copri bene anche la testa e le mani.'
@@ -33,10 +33,10 @@
     {
       emoji: '\uD83D\uDD25',
       title: 'Fumo in casa',
-      desc: 'C\u2019è fumo e devi attraversare il corridoio per uscire.',
+      desc: 'C’è fumo e devi attraversare il corridoio per uscire.',
       correct: 'antifumo',
       wrong: 'cappello',
-      feedback: 'Straccio bagnato sulla bocca. Filtra il fumo e ti aiuta a respirare meglio. Stai basso e cammina verso l\u2019uscita.'
+      feedback: 'Straccio bagnato sulla bocca. Filtra il fumo e ti aiuta a respirare meglio. Stai basso e cammina verso l’uscita.'
     },
     {
       emoji: '\uD83C\uDF2A\uFE0F',
@@ -49,7 +49,7 @@
     {
       emoji: '\uD83C\uDF1E',
       title: 'Sole molto forte',
-      desc: 'In estate, all\u2019aperto, il sole è forte e fa caldo.',
+      desc: 'In estate, all’aperto, il sole è forte e fa caldo.',
       correct: 'cappello',
       wrong: 'piumino',
       feedback: 'Cappello e crema solare. Ti proteggono dal colpo di sole. Bevi spesso acqua.'

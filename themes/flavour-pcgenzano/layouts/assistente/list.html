@@ -138,11 +138,11 @@
         { text: 'Sento una scossa di terremoto', next: 'terremoto', emergency: true },
         { text: 'Vedo fumo o un incendio', next: 'incendio', emergency: true },
         { text: 'Sento odore di gas', next: 'gas', emergency: true },
-        { text: 'C\u2019è un\u2019allerta meteo attiva', next: 'allerta_meteo' },
-        { text: 'C\u2019è un allagamento', next: 'allagamento', emergency: true },
+        { text: 'C’è un’allerta meteo attiva', next: 'allerta_meteo' },
+        { text: 'C’è un allagamento', next: 'allagamento', emergency: true },
         { text: 'Voglio diventare volontario', next: 'volontario' },
         { text: 'Cerco un numero utile', next: 'numeri' },
-        { text: 'Cos\u2019è IT-alert?', next: 'italert' }
+        { text: 'Cos’è IT-alert?', next: 'italert' }
       ]
     },
 
@@ -153,7 +153,7 @@
       prompt: 'Dove ti trovi in questo momento?',
       options: [
         { text: 'In casa o al chiuso', next: 'terremoto_casa' },
-        { text: 'All\u2019aperto, in strada', next: 'terremoto_aperto' },
+        { text: 'All’aperto, in strada', next: 'terremoto_aperto' },
         { text: 'In auto o in movimento', next: 'terremoto_auto' },
         { text: 'In spiaggia o vicino al mare', next: 'terremoto_mare' }
       ]
@@ -164,11 +164,11 @@
       emergency: true,
       bullets: [
         'Resta dentro: riparati sotto un tavolo robusto o vicino a un muro portante.',
-        'Non usare l\u2019ascensore, mai.',
+        'Non usare l’ascensore, mai.',
         'Allontanati da finestre, specchi, mobili alti, soprammobili che possono cadere.',
         'Attendi la fine della scossa prima di muoverti.',
         'Dopo la scossa, esci con prudenza usando le scale.',
-        'Raggiungi l\u2019area di attesa prevista dal Piano di Emergenza comunale.'
+        'Raggiungi l’area di attesa prevista dal Piano di Emergenza comunale.'
       ],
       links: [
         { text: 'Rischio sismico — comportamenti', url: '/rischi-prevenzione/rischio-sismico/' },
@@ -177,14 +177,14 @@
     },
     terremoto_aperto: {
       kind: 'answer',
-      title: 'Sei all\u2019aperto',
+      title: 'Sei all’aperto',
       emergency: true,
       bullets: [
         'Allontanati da edifici, alberi, lampioni, linee elettriche.',
         'Evita ponti, cornicioni, balconi, vetrate.',
         'Cerca uno spazio aperto e aspetta la fine della scossa.',
         'Non rientrare in edifici danneggiati.',
-        'Raggiungi l\u2019area di attesa prevista dal Piano di Emergenza comunale.'
+        'Raggiungi l’area di attesa prevista dal Piano di Emergenza comunale.'
       ],
       links: [
         { text: 'Rischio sismico — comportamenti', url: '/rischi-prevenzione/rischio-sismico/' },
@@ -236,9 +236,9 @@
       emergency: true,
       bullets: [
         'Chiama subito il <strong>112</strong>.',
-        'Chiudi la porta della stanza dove c\u2019è il fuoco per limitare la propagazione.',
-        'Allontanati usando le scale, mai l\u2019ascensore.',
-        'Se c\u2019è fumo, cammina chino e copri naso e bocca con un panno bagnato.',
+        'Chiudi la porta della stanza dove c’è il fuoco per limitare la propagazione.',
+        'Allontanati usando le scale, mai l’ascensore.',
+        'Se c’è fumo, cammina chino e copri naso e bocca con un panno bagnato.',
         'Una volta fuori, non rientrare per recuperare oggetti.',
         'Segnala ai soccorritori se sai che qualcuno è rimasto dentro.'
       ],
@@ -265,7 +265,7 @@
     },
     incendio_dubbio: {
       kind: 'answer',
-      title: 'Vedi del fumo ma non sai cos\u2019è',
+      title: 'Vedi del fumo ma non sai cos’è',
       emergency: true,
       bullets: [
         'Chiama subito il <strong>112</strong> e descrivi cosa vedi: colore del fumo, zona, direzione.',
@@ -284,15 +284,15 @@
       title: 'Sospetta fuga di gas',
       emergency: true,
       body: [
-        'Agisci subito, nell\u2019ordine indicato sotto. Ogni minuto conta.'
+        'Agisci subito, nell’ordine indicato sotto. Ogni minuto conta.'
       ],
       bullets: [
         '<strong>Non</strong> accendere fiamme, non fumare, non usare accendini.',
-        '<strong>Non</strong> azionare interruttori elettrici (nemmeno per spegnere la luce): una scintilla può innescare l\u2019esplosione.',
+        '<strong>Non</strong> azionare interruttori elettrici (nemmeno per spegnere la luce): una scintilla può innescare l’esplosione.',
         '<strong>Non</strong> usare il telefono fisso in casa: esci prima.',
         'Chiudi il contatore generale del gas, se è accessibile in sicurezza.',
         'Apri porte e finestre per far uscire il gas.',
-        'Esci dall\u2019edificio e avverti vicini e portinaio.',
+        'Esci dall’edificio e avverti vicini e portinaio.',
         'Una volta fuori, chiama il <strong>112</strong> e il numero del distributore del gas.'
       ],
       links: [
@@ -305,7 +305,7 @@
     allerta_meteo: {
       kind: 'question',
       title: 'Allerta meteo attiva',
-      prompt: 'Qual è il livello dell\u2019allerta?',
+      prompt: 'Qual è il livello dell’allerta?',
       options: [
         { text: 'Gialla', next: 'allerta_gialla' },
         { text: 'Arancione', next: 'allerta_arancione' },
@@ -319,7 +319,7 @@
       bullets: [
         'Presta attenzione: fenomeni di intensità moderata previsti.',
         'Evita zone a rischio allagamento (sottopassi, garage interrati, argini).',
-        'Non sostare lungo i corsi d\u2019acqua.',
+        'Non sostare lungo i corsi d’acqua.',
         'Segui le previsioni e gli aggiornamenti ufficiali.'
       ],
       links: [
@@ -348,7 +348,7 @@
       bullets: [
         'Resta in un luogo sicuro: se possibile a casa, ai piani alti.',
         'Non metterti in viaggio.',
-        'Evita zone a rischio idrogeologico, corsi d\u2019acqua, sottopassi.',
+        'Evita zone a rischio idrogeologico, corsi d’acqua, sottopassi.',
         'Segui rigorosamente le istruzioni di autorità e Protezione Civile comunale.',
         'In caso di pericolo immediato per te o altri, chiama il <strong>112</strong>.'
       ],
@@ -376,7 +376,7 @@
     allagamento: {
       kind: 'question',
       title: 'Allagamento',
-      prompt: 'Dove si trova l\u2019acqua?',
+      prompt: 'Dove si trova l’acqua?',
       options: [
         { text: 'In casa, al piano terra o in scantinato', next: 'allagamento_casa' },
         { text: 'In strada o nel mio quartiere', next: 'allagamento_strada' }
@@ -387,8 +387,8 @@
       title: 'Allagamento in casa o scantinato',
       emergency: true,
       bullets: [
-        '<strong>Non</strong> scendere nei locali allagati: c\u2019è rischio di elettrocuzione.',
-        'Se puoi farlo <strong>da asciutto</strong>, stacca la corrente dall\u2019interruttore generale.',
+        '<strong>Non</strong> scendere nei locali allagati: c’è rischio di elettrocuzione.',
+        'Se puoi farlo <strong>da asciutto</strong>, stacca la corrente dall’interruttore generale.',
         'Sposta persone e animali ai piani alti.',
         'Non usare apparecchi elettrici in aree bagnate.',
         'In caso di pericolo, chiama il <strong>112</strong>.'
@@ -404,7 +404,7 @@
       bullets: [
         '<strong>Non</strong> attraversare acqua in movimento, né in auto né a piedi: anche pochi centimetri possono trascinarti.',
         'Evita sottopassi, ponti bassi, argini, garage interrati.',
-        'Se sei in auto e l\u2019acqua sale, abbandona il veicolo e raggiungi una zona sopraelevata.',
+        'Se sei in auto e l’acqua sale, abbandona il veicolo e raggiungi una zona sopraelevata.',
         'Segnala situazioni di pericolo al <strong>112</strong>.'
       ],
       links: [
@@ -444,7 +444,7 @@
       bullets: [
         'Serve il consenso scritto di un genitore o tutore.',
         'Contatta la segreteria di persona, per telefono o via email per fissare un incontro.',
-        'Dopo l\u2019iscrizione, segui il corso di formazione base obbligatorio.'
+        'Dopo l’iscrizione, segui il corso di formazione base obbligatorio.'
       ],
       links: [
         { text: 'Diventa volontario — procedura completa', url: '/diventa-volontario/' },
@@ -455,7 +455,7 @@
       kind: 'answer',
       title: 'Hai 18 anni o più',
       body: [
-        'Puoi iscriverti subito. Dopo l\u2019iscrizione seguirai il corso di formazione base obbligatorio, che fornisce le conoscenze sul Sistema di Protezione Civile, sui rischi del territorio e sulle procedure operative.'
+        'Puoi iscriverti subito. Dopo l’iscrizione seguirai il corso di formazione base obbligatorio, che fornisce le conoscenze sul Sistema di Protezione Civile, sui rischi del territorio e sulle procedure operative.'
       ],
       bullets: [
         'Iscrizione di persona alla sede di Via Sicilia, 13-15.',
@@ -485,7 +485,7 @@
       title: 'Sei in emergenza adesso',
       emergency: true,
       body: [
-        'Chiama subito il <strong>112</strong>, Numero Unico Europeo di Emergenza. Funziona da qualunque telefono, anche senza credito o senza SIM. La Centrale Unica smista l\u2019intervento al servizio competente: Carabinieri, Polizia, Vigili del Fuoco, Emergenza sanitaria, squadre AIB.'
+        'Chiama subito il <strong>112</strong>, Numero Unico Europeo di Emergenza. Funziona da qualunque telefono, anche senza credito o senza SIM. La Centrale Unica smista l’intervento al servizio competente: Carabinieri, Polizia, Vigili del Fuoco, Emergenza sanitaria, squadre AIB.'
       ],
       bullets: [
         'Non chiamare il 115, il 118 o il 1515: nel Lazio non sono più il riferimento per il cittadino.',
@@ -504,7 +504,7 @@
       ],
       bullets: [
         'Sala Operativa Protezione Civile Regione Lazio: <strong>803 555</strong>.',
-        'Segreteria del Gruppo Comunale (orari d\u2019ufficio).',
+        'Segreteria del Gruppo Comunale (orari d’ufficio).',
         'Per emergenze in corso resta valido il <strong>112</strong>.'
       ],
       links: [
@@ -528,14 +528,14 @@
     // --------------------------- IT-ALERT ------------------------------------
     italert: {
       kind: 'answer',
-      title: 'Cos\u2019è IT-alert',
+      title: 'Cos’è IT-alert',
       body: [
-        'IT-alert è il <strong>sistema nazionale di allarme pubblico</strong> gestito dal Dipartimento della Protezione Civile. Invia un messaggio direttamente ai telefoni cellulari presenti in un\u2019area colpita da una grave emergenza in corso o imminente.'
+        'IT-alert è il <strong>sistema nazionale di allarme pubblico</strong> gestito dal Dipartimento della Protezione Civile. Invia un messaggio direttamente ai telefoni cellulari presenti in un’area colpita da una grave emergenza in corso o imminente.'
       ],
       bullets: [
         'Funziona <strong>senza connessione internet</strong> e <strong>senza app installate</strong>: usa la tecnologia cell broadcast.',
         'Suona con un segnale acustico distintivo, anche se il telefono è silenziato.',
-        'Arriva a chiunque si trovi nell\u2019area, anche se sta transitando di passaggio.',
+        'Arriva a chiunque si trovi nell’area, anche se sta transitando di passaggio.',
         'Viene usato per: maremoti, collassi di grandi dighe, attività vulcaniche, incidenti nucleari, incidenti industriali rilevanti, precipitazioni intense di tipo eccezionale.',
         'Non sostituisce il 112: serve per avvisare, non per chiedere aiuto.',
         'Il Dipartimento conduce periodiche sperimentazioni regionali: quelle sono test, non emergenze reali.'
@@ -568,9 +568,9 @@
       var n = NODES[id];
       return n ? n.title : '';
     });
-    var html = '<nav class="breadcrumb-trail" aria-label="Percorso nell\u2019assistente">';
+    var html = '<nav class="breadcrumb-trail" aria-label="Percorso nell’assistente">';
     html += parts.map(function (t, i) {
-      return '<span>' + escapeHTML(t) + '</span>' + (i < parts.length - 1 ? '<span class="sep" aria-hidden="true">\u203A</span>' : '');
+      return '<span>' + escapeHTML(t) + '</span>' + (i < parts.length - 1 ? '<span class="sep" aria-hidden="true">›</span>' : '');
     }).join('');
     html += '</nav>';
     return html;
