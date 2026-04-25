@@ -1862,7 +1862,13 @@ article .galleria img {
   color: #6c757d;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  margin: 0.8rem 0 0.5rem 0;
+  margin: 1rem 0 0.3rem 0;
+}
+.lang-section-note {
+  font-size: 0.82rem;
+  color: #495057;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.45;
 }
 .lang-grid {
   display: grid;
