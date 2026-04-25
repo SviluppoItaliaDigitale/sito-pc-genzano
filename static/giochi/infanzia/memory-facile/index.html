@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Memory Facile — Giochi Piccoli Esploratori</title>
-  <meta name="description" content="Memory con 3 coppie illustrate sulla protezione civile. Gioco semplice per bambini dai 3 ai 6 anni.">
+  <meta name="description" content="Memory con 3 livelli (3, 4, 6 coppie) illustrato sulla protezione civile. Gioco semplice per bambini dai 3 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -14,9 +14,23 @@
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
   <style>
     .mem-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem;
+      display: grid; gap: .75rem;
       max-width: 480px; margin: 0 auto;
     }
+    .mem-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .mem-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .level-badge {
+      display: inline-block; background: var(--inf-blu); color: #fff;
+      padding: .35rem .9rem; border-radius: 999px;
+      font-weight: 800; font-size: 1rem; margin-bottom: .5rem;
+    }
+    .level-up {
+      text-align: center; padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #fff8d6, #ffe4b5);
+      border: 4px solid #F4B700; border-radius: 22px;
+    }
+    .level-up .stelle { font-size: 2.5rem; line-height: 1; margin-bottom: .5rem; }
+    .level-up .titolo { color: var(--inf-blu); font-weight: 800; font-size: 1.6rem; margin-bottom: .3rem; }
     .mem-card {
       aspect-ratio: 1; border-radius: 18px; cursor: pointer;
       perspective: 800px; background: transparent; border: 0; padding: 0;
@@ -53,19 +67,32 @@
     </nav>
     <div class="inf-home">
       <h1>Memory Facile</h1>
-      <p>Trova le 3 coppie uguali!</p>
+      <p>Trova tutte le coppie uguali in <strong>3 livelli</strong>!</p>
     </div>
 
-    <div class="inf-card">
-      <div class="text-center mb-3">
-        <span class="inf-score"><i class="bi bi-heart-fill"></i> Coppie: <span id="count">0</span> / 3</span>
+    <div class="inf-card" id="game-card">
+      <div class="text-center mb-2">
+        <span class="level-badge" id="level-badge">Livello 1 di 3</span>
       </div>
-      <div id="grid" class="mem-grid" role="group" aria-label="Griglia del memory"></div>
+      <div class="text-center mb-3">
+        <span class="inf-score"><i class="bi bi-heart-fill"></i> Coppie: <span id="count">0</span> / <span id="total">3</span></span>
+      </div>
+      <div id="grid" class="mem-grid cols-3" role="group" aria-label="Griglia del memory"></div>
+    </div>
+
+    <div id="level-up" class="inf-card hide">
+      <div class="level-up">
+        <div class="stelle">⭐⭐⭐</div>
+        <div class="titolo" id="level-up-titolo">Livello 1 superato!</div>
+        <p class="mb-3" id="level-up-msg">Pronto per il livello 2?</p>
+        <button id="next-level" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-right"></i> Livello successivo</button>
+      </div>
     </div>
 
     <div id="end" class="inf-card inf-end hide">
       <div class="bravi">Evviva!</div>
-      <p class="h5 mb-3">Hai trovato tutte le coppie!</p>
+      <p class="h5 mb-3">Hai superato tutti i 3 livelli!</p>
+      <p class="text-muted small">Hai trovato 13 coppie in totale. Sei un piccolo campione di memoria!</p>
       <div class="attestato-inject my-3"></div>
       <div class="d-flex flex-wrap justify-content-center gap-2">
         <button id="restart" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-repeat"></i> Ancora</button>
@@ -82,24 +109,54 @@
   <script src="/giochi/assets/js/comune.js"></script>
   <script>
   (function(){
-    var ICONE = [
+    var ICONE_TOTALI = [
       { emo: '🚑', lbl: 'ambulanza' },
       { emo: '🚒', lbl: 'pompieri' },
-      { emo: '⛑️', lbl: 'casco' }
+      { emo: '⛑️', lbl: 'casco' },
+      { emo: '🔦', lbl: 'torcia' },
+      { emo: '🧯', lbl: 'estintore' },
+      { emo: '🚓', lbl: 'polizia' },
+      { emo: '⚠️', lbl: 'attenzione' },
+      { emo: '🚪', lbl: 'uscita' },
+      { emo: '📞', lbl: 'telefono' }
     ];
+    var LIVELLI = [
+      { coppie: 3, cols: 3 },
+      { coppie: 4, cols: 4 },
+      { coppie: 6, cols: 4 }
+    ];
+
     var grid = document.getElementById('grid');
+    var gameCard = document.getElementById('game-card');
+    var levelUpCard = document.getElementById('level-up');
+    var levelUpTitolo = document.getElementById('level-up-titolo');
+    var levelUpMsg = document.getElementById('level-up-msg');
     var endScreen = document.getElementById('end');
     var countEl = document.getElementById('count');
+    var totalEl = document.getElementById('total');
+    var levelBadge = document.getElementById('level-badge');
+    var btnNext = document.getElementById('next-level');
+
     var first = null, lock = false, matched = 0;
+    var livello = 0;
+    var iconeLivello = [];
+    var totaleCoppie = 0;
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
-    function start(){
+    function avviaLivello(){
+      var cfg = LIVELLI[livello];
+      iconeLivello = shuffle(ICONE_TOTALI.slice()).slice(0, cfg.coppie);
+      grid.className = 'mem-grid cols-' + cfg.cols;
       grid.innerHTML = '';
       matched = 0; first = null; lock = false;
       countEl.textContent = '0';
+      totalEl.textContent = cfg.coppie;
+      levelBadge.textContent = 'Livello ' + (livello + 1) + ' di ' + LIVELLI.length;
+      gameCard.classList.remove('hide');
+      levelUpCard.classList.add('hide');
       endScreen.classList.add('hide');
-      var cards = shuffle(ICONE.concat(ICONE));
+      var cards = shuffle(iconeLivello.concat(iconeLivello));
       cards.forEach(function(c){
         var btn = document.createElement('button');
         btn.className = 'mem-card';
@@ -123,10 +180,11 @@
         first.btn.classList.add('matched');
         btn.classList.add('matched');
         matched++;
+        totaleCoppie++;
         countEl.textContent = matched;
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         first = null;
-        if (matched === ICONE.length) setTimeout(finish, 600);
+        if (matched === iconeLivello.length) setTimeout(fineLivello, 700);
       } else {
         lock = true;
         var f = first;
@@ -140,13 +198,47 @@
       }
     }
 
-    function finish(){
-      endScreen.classList.remove('hide');
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('memory-facile', ICONE.length, ICONE.length, '#end');
+    function fineLivello(){
+      if (livello < LIVELLI.length - 1) {
+        gameCard.classList.add('hide');
+        levelUpCard.classList.remove('hide');
+        levelUpTitolo.textContent = 'Livello ' + (livello + 1) + ' superato!';
+        var prossime = LIVELLI[livello + 1].coppie;
+        levelUpMsg.textContent = 'Ora ti aspettano ' + prossime + ' coppie. Pronto per il livello ' + (livello + 2) + '?';
+        if (window.AudioSintetico){
+          window.AudioSintetico.tono({freq:523,durata:.15});
+          setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.15}); },180);
+          setTimeout(function(){ window.AudioSintetico.tono({freq:784,durata:.25}); },360);
+        }
+      } else {
+        finish();
+      }
     }
 
-    document.getElementById('restart').addEventListener('click', start);
-    start();
+    function finish(){
+      gameCard.classList.add('hide');
+      levelUpCard.classList.add('hide');
+      endScreen.classList.remove('hide');
+      if (window.AudioSintetico){
+        window.AudioSintetico.tono({freq:523,durata:.2});
+        setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.2}); },200);
+        setTimeout(function(){ window.AudioSintetico.tono({freq:784,durata:.3}); },400);
+      }
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('memory-facile', totaleCoppie, 13, '#end');
+    }
+
+    btnNext.addEventListener('click', function(){
+      livello++;
+      avviaLivello();
+    });
+
+    document.getElementById('restart').addEventListener('click', function(){
+      livello = 0;
+      totaleCoppie = 0;
+      avviaLivello();
+    });
+
+    avviaLivello();
   })();
   </script>
 </body>

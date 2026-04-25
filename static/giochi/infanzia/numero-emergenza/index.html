@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Il Numero 112 — Giochi Piccoli Esploratori</title>
-  <meta name="description" content="Impara a comporre il 112 con la tastiera del telefono. Gioco educativo per bambini dai 3 ai 6 anni.">
+  <meta name="description" content="Impara a comporre il 112 con la tastiera del telefono in 4 scenari diversi. Gioco educativo per bambini dai 3 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -13,6 +13,19 @@
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
   <style>
+    .scenario-card {
+      background: linear-gradient(135deg, #fff8d6, #ffe4b5);
+      border: 4px solid #F4B700; border-radius: 22px;
+      padding: 1.5rem 1rem; text-align: center;
+    }
+    .scenario-card .emo-grande { font-size: 5rem; line-height: 1; margin-bottom: .5rem; }
+    .scenario-card .titolo { color: var(--inf-blu); font-weight: 800; font-size: 1.4rem; margin-bottom: .5rem; }
+    .scenario-card .desc { font-size: 1.1rem; color: var(--inf-testo); margin-bottom: 1rem; }
+    .level-badge {
+      display: inline-block; background: var(--inf-blu); color: #fff;
+      padding: .35rem .9rem; border-radius: 999px;
+      font-weight: 800; font-size: 1rem; margin-bottom: .8rem;
+    }
     .phone {
       max-width: 360px; margin: 0 auto; padding: 1rem;
       background: #1d2d40; border-radius: 28px;
@@ -55,10 +68,27 @@
     </nav>
     <div class="inf-home">
       <h1>Il Numero 112</h1>
-      <p>Impara a chiamare aiuto. Tocca <strong>1</strong>, poi <strong>1</strong>, poi <strong>2</strong>.</p>
+      <p>4 storie diverse: in ognuna devi chiamare il <strong>112</strong> per chiedere aiuto.</p>
     </div>
 
-    <div class="inf-card">
+    <div id="scenario" class="inf-card hide">
+      <div class="text-center">
+        <span class="level-badge" id="level-badge">Storia 1 di 4</span>
+      </div>
+      <div class="scenario-card">
+        <div class="emo-grande" id="scen-emo">🔥</div>
+        <div class="titolo" id="scen-titolo">Vedi del fuoco!</div>
+        <div class="desc" id="scen-desc">Cosa fai?</div>
+        <button id="scen-go" class="inf-big-btn" style="background:var(--inf-blu);">
+          <i class="bi bi-telephone-fill"></i> Chiamo il 112
+        </button>
+      </div>
+    </div>
+
+    <div id="phone-wrap" class="inf-card hide">
+      <div class="text-center">
+        <span class="level-badge" id="level-badge-2">Storia 1 di 4</span>
+      </div>
       <div class="phone">
         <div class="phone-screen" id="screen" aria-live="polite">---</div>
         <div class="keypad">
@@ -80,9 +110,18 @@
       <div id="message" class="text-center mt-3 h5" aria-live="polite">Tocca il tasto che lampeggia!</div>
     </div>
 
+    <div id="next-story" class="inf-card hide">
+      <div class="scenario-card">
+        <div class="emo-grande">🌟</div>
+        <div class="titolo">Bravissimo!</div>
+        <p id="next-msg" class="desc">Hai chiamato aiuto. Adesso una nuova storia.</p>
+        <button id="btn-next-story" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-right"></i> Prossima storia</button>
+      </div>
+    </div>
+
     <div id="end" class="inf-card inf-end hide">
-      <div class="bravi">Bravissimo!</div>
-      <p class="h5 mb-3">Hai chiamato il <strong>112</strong>, il numero per chiedere aiuto!</p>
+      <div class="bravi">Sei un campione!</div>
+      <p class="h5 mb-3">Hai chiamato il <strong>112</strong> in tutte le 4 storie!</p>
       <p class="text-muted small">Ricorda: chiama sempre insieme a un adulto.</p>
       <div class="attestato-inject my-3"></div>
       <div class="d-flex flex-wrap justify-content-center gap-2">
@@ -101,13 +140,30 @@
   <script>
   (function(){
     var TARGET = ['1','1','2'];
+    var STORIE = [
+      { emo: '🔥', titolo: 'Vedi del fuoco!', desc: 'In cucina la pentola sta facendo fumo. La mamma è in giardino. Chi chiami?', completato: 'Bravissimo! Hai chiamato i pompieri per il fuoco.' },
+      { emo: '🤕', titolo: 'La nonna è caduta', desc: 'La nonna è scivolata e si è fatta male alla gamba. Non riesce ad alzarsi. Chi chiami?', completato: 'Perfetto! Hai chiamato l\'ambulanza per la nonna.' },
+      { emo: '🌊', titolo: 'Tanta acqua per strada!', desc: 'Sta piovendo fortissimo. Per strada c\'è tanta acqua e una macchina è in difficoltà. Chi chiami?', completato: 'Bravissimo! Hai chiamato i soccorsi per la pioggia forte.' },
+      { emo: '🐱', titolo: 'Il gatto sull\'albero', desc: 'Il gatto del vicino è salito troppo in alto sull\'albero e ora ha paura. Chi chiami?', completato: 'Perfetto! Hai chiamato i pompieri per il gatto.' }
+    ];
+
+    var scenario = document.getElementById('scenario');
+    var phoneWrap = document.getElementById('phone-wrap');
+    var nextStory = document.getElementById('next-story');
+    var endScreen = document.getElementById('end');
+    var levelBadge = document.getElementById('level-badge');
+    var levelBadge2 = document.getElementById('level-badge-2');
+    var scenEmo = document.getElementById('scen-emo');
+    var scenTitolo = document.getElementById('scen-titolo');
+    var scenDesc = document.getElementById('scen-desc');
+    var nextMsg = document.getElementById('next-msg');
     var screen = document.getElementById('screen');
     var message = document.getElementById('message');
     var keys = document.querySelectorAll('.key');
-    var endScreen = document.getElementById('end');
     var digits = [];
     var step = 0;
     var errors = 0;
+    var storiaIdx = 0;
 
     function highlightNext() {
       keys.forEach(function(k){ k.classList.remove('active-hint'); });
@@ -123,21 +179,42 @@
       screen.textContent = digits.length ? digits.join(' ') : '---';
     }
 
+    function mostraScenario(){
+      var s = STORIE[storiaIdx];
+      scenEmo.textContent = s.emo;
+      scenTitolo.textContent = s.titolo;
+      scenDesc.textContent = s.desc;
+      var label = 'Storia ' + (storiaIdx + 1) + ' di ' + STORIE.length;
+      levelBadge.textContent = label;
+      levelBadge2.textContent = label;
+      scenario.classList.remove('hide');
+      phoneWrap.classList.add('hide');
+      nextStory.classList.add('hide');
+      endScreen.classList.add('hide');
+    }
+
+    function avviaTelefono(){
+      digits = []; step = 0;
+      refresh();
+      message.textContent = 'Tocca il tasto che lampeggia!';
+      scenario.classList.add('hide');
+      phoneWrap.classList.remove('hide');
+      highlightNext();
+      if (window.AudioSintetico) window.AudioSintetico.init();
+    }
+
     keys.forEach(function(k){
       k.addEventListener('click', function(){
         var n = k.dataset.n;
-        if (window.AudioSintetico) {
-          window.AudioSintetico.init();
-        }
+        if (window.AudioSintetico) window.AudioSintetico.init();
         if (n === 'clear') {
           digits = []; step = 0; refresh(); highlightNext();
           message.textContent = 'Ricomincia: tocca il tasto che lampeggia.';
           return;
         }
         if (n === 'call') {
-          if (digits.join('') === '112') {
-            finish();
-          } else {
+          if (digits.join('') === '112') chiamataRiuscita();
+          else {
             message.textContent = 'Ops! Premi prima 1, 1, 2 e poi Chiama.';
             if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
           }
@@ -145,15 +222,9 @@
         }
         if (step >= TARGET.length) return;
         if (n === TARGET[step]) {
-          digits.push(n);
-          step++;
-          refresh();
+          digits.push(n); step++; refresh();
           if (window.AudioSintetico) window.AudioSintetico.tono({freq: 440 + step*100, durata: 0.15, gain: 0.18});
-          if (step === TARGET.length) {
-            message.textContent = 'Perfetto! Ora tocca il pulsante verde Chiama.';
-          } else {
-            message.textContent = 'Giusto! Continua.';
-          }
+          message.textContent = step === TARGET.length ? 'Perfetto! Ora tocca il pulsante verde Chiama.' : 'Giusto! Continua.';
           highlightNext();
         } else {
           errors++;
@@ -163,25 +234,42 @@
       });
     });
 
-    function finish() {
+    function chiamataRiuscita(){
       if (window.AudioSintetico) {
         window.AudioSintetico.tono({freq: 523, durata: 0.2});
         setTimeout(function(){ window.AudioSintetico.tono({freq: 659, durata: 0.2}); }, 200);
         setTimeout(function(){ window.AudioSintetico.tono({freq: 784, durata: 0.3}); }, 400);
       }
-      endScreen.classList.remove('hide');
-      var punti = Math.max(1, 3 - errors);
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('numero-emergenza', punti, 3, '#end');
+      var s = STORIE[storiaIdx];
+      if (storiaIdx < STORIE.length - 1) {
+        nextMsg.textContent = s.completato;
+        phoneWrap.classList.add('hide');
+        nextStory.classList.remove('hide');
+      } else {
+        finish();
+      }
     }
 
-    document.getElementById('restart').addEventListener('click', function(){
-      digits = []; step = 0; errors = 0;
-      refresh(); highlightNext();
-      endScreen.classList.add('hide');
-      message.textContent = 'Tocca il tasto che lampeggia!';
+    function finish() {
+      phoneWrap.classList.add('hide');
+      nextStory.classList.add('hide');
+      endScreen.classList.remove('hide');
+      var punti = Math.max(1, STORIE.length * 3 - errors);
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('numero-emergenza', punti, STORIE.length * 3, '#end');
+    }
+
+    document.getElementById('scen-go').addEventListener('click', avviaTelefono);
+    document.getElementById('btn-next-story').addEventListener('click', function(){
+      storiaIdx++;
+      mostraScenario();
     });
 
-    highlightNext();
+    document.getElementById('restart').addEventListener('click', function(){
+      storiaIdx = 0; errors = 0;
+      mostraScenario();
+    });
+
+    mostraScenario();
   })();
   </script>
 </body>

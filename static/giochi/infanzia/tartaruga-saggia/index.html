@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Tartaruga Saggia — Giochi Piccoli Esploratori</title>
-  <meta name="description" content="Otto scene quotidiane: scegli SÌ o NO per imparare i comportamenti sicuri. Gioco per bambini dai 3 ai 6 anni.">
+  <meta name="description" content="15 scene in 3 round: scegli SÌ o NO per imparare i comportamenti sicuri. Gioco per bambini dai 3 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -12,6 +12,20 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
+  <style>
+    .level-badge {
+      display: inline-block; background: var(--inf-blu); color: #fff;
+      padding: .35rem .9rem; border-radius: 999px;
+      font-weight: 800; font-size: 1rem; margin-bottom: .8rem;
+    }
+    .round-up {
+      text-align: center; padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #fff8d6, #ffe4b5);
+      border: 4px solid #F4B700; border-radius: 22px;
+    }
+    .round-up .stelle { font-size: 2.5rem; line-height: 1; margin-bottom: .5rem; }
+    .round-up .titolo { color: var(--inf-blu); font-weight: 800; font-size: 1.6rem; margin-bottom: .3rem; }
+  </style>
 </head>
 <body class="inf-body">
   <main id="main-content" tabindex="-1" class="inf-main">
@@ -40,6 +54,9 @@
     </div>
 
     <div id="game" class="inf-card hide">
+      <div class="text-center">
+        <span class="level-badge" id="level-badge">Round 1 di 3</span>
+      </div>
       <div class="text-center mb-2">
         <span class="inf-score"><i class="bi bi-star-fill" aria-hidden="true"></i> Stelle: <span id="stars">0</span></span>
       </div>
@@ -52,6 +69,15 @@
         <button id="btn-no" class="inf-big-btn no m-2"><i class="bi bi-x-lg" aria-hidden="true"></i> NO</button>
       </div>
       <div id="feedback" class="text-center mt-3 h5" aria-live="polite"></div>
+    </div>
+
+    <div id="round-up" class="inf-card hide">
+      <div class="round-up">
+        <div class="stelle">⭐⭐⭐</div>
+        <div class="titolo" id="round-up-titolo">Round 1 superato!</div>
+        <p class="mb-3" id="round-up-msg">Pronto per il round successivo?</p>
+        <button id="next-round" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-right"></i> Round successivo</button>
+      </div>
     </div>
 
     <div id="end" class="inf-card inf-end hide">
@@ -74,16 +100,29 @@
   <script src="/giochi/assets/js/comune.js"></script>
   <script>
   (function(){
-    var SCENES = [
+    // 15 scene divise in 3 round da 5 — difficoltà crescente
+    var ROUND_1 = [
       { emoji: '🔥', q: 'Vedi il fuoco. Tocchi con le mani?', si: false, tip: 'Giusto! Il fuoco scotta, non si tocca.' },
       { emoji: '📞', q: 'Se c\'è pericolo, chiami il 112?', si: true, tip: 'Bravissimo! Il 112 è il numero per chiedere aiuto.' },
       { emoji: '⛑️', q: 'Metti il casco quando vai in bici?', si: true, tip: 'Esatto! Il casco protegge la testa.' },
-      { emoji: '🚨', q: 'Senti un allarme: devi nasconderti senza dirlo a nessuno?', si: false, tip: 'No! Chiama sempre un grande vicino a te.' },
+      { emoji: '🚒', q: 'Arrivano i pompieri. Corri in mezzo alla strada?', si: false, tip: 'No! Lascia passare i soccorritori.' },
+      { emoji: '🐕', q: 'Un cane che non conosci si avvicina. Lo accarezzi senza chiedere?', si: false, tip: 'No! Chiedi sempre prima al padrone.' }
+    ];
+    var ROUND_2 = [
       { emoji: '🌧️', q: 'Piove tanto. Vai a giocare vicino al fiume?', si: false, tip: 'No! Quando piove tanto, stai lontano dai fiumi.' },
       { emoji: '🧯', q: 'Un adulto spegne un piccolo fuoco con l\'estintore. Lo guardi da lontano?', si: true, tip: 'Sì! Restare lontano è la scelta giusta.' },
       { emoji: '🌳', q: 'C\'è un terremoto. Ti metti sotto il tavolo resistente?', si: true, tip: 'Sì! Sotto un tavolo robusto sei più al sicuro.' },
-      { emoji: '🚒', q: 'Arrivano i pompieri. Corri in mezzo alla strada?', si: false, tip: 'No! Lascia passare i soccorritori.' }
+      { emoji: '🚨', q: 'Senti un allarme: devi nasconderti senza dirlo a nessuno?', si: false, tip: 'No! Chiama sempre un grande vicino a te.' },
+      { emoji: '🚪', q: 'C\'è fumo in casa. Esci di corsa per le scale?', si: true, tip: 'Sì! Le scale sono sicure, mai l\'ascensore.' }
     ];
+    var ROUND_3 = [
+      { emoji: '⛈️', q: 'C\'è un temporale forte. Stai sotto un albero alto?', si: false, tip: 'No! L\'albero attira i fulmini. Vai dentro casa.' },
+      { emoji: '💨', q: 'Tira tantissimo vento. Resti vicino alle finestre aperte?', si: false, tip: 'No! Chiudi le finestre e stai lontano dai vetri.' },
+      { emoji: '🦴', q: 'La nonna è caduta. Provi ad alzarla da solo?', si: false, tip: 'No! Chiama un grande e poi chiamate il 112.' },
+      { emoji: '📱', q: 'Senti un suono fortissimo dal telefonino: è IT-alert. Ascolti il messaggio?', si: true, tip: 'Sì! IT-alert avvisa di un pericolo serio.' },
+      { emoji: '🎒', q: 'A scuola facciamo l\'esercitazione. Tu prendi tutto il tuo zaino?', si: false, tip: 'No! Vai subito al punto di raccolta senza fermarti.' }
+    ];
+    var ROUNDS = [ROUND_1, ROUND_2, ROUND_3];
 
     var intro = document.getElementById('intro'),
         game = document.getElementById('game'),
@@ -96,19 +135,30 @@
         endMsg = document.getElementById('end-msg');
     var btnSi = document.getElementById('btn-si'),
         btnNo = document.getElementById('btn-no');
-    var idx = 0, stars = 0, queue = [];
+    var levelBadge = document.getElementById('level-badge');
+    var roundUp = document.getElementById('round-up');
+    var roundUpTitolo = document.getElementById('round-up-titolo');
+    var roundUpMsg = document.getElementById('round-up-msg');
+    var idx = 0, stars = 0, queue = [], roundIdx = 0;
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
-    function start(){
+    function avviaRound(){
       intro.classList.add('hide');
       end.classList.add('hide');
+      roundUp.classList.add('hide');
       game.classList.remove('hide');
-      queue = shuffle(SCENES.slice()).slice(0, 5);
-      idx = 0; stars = 0;
-      starsEl.textContent = '0';
+      queue = shuffle(ROUNDS[roundIdx].slice());
+      idx = 0;
+      levelBadge.textContent = 'Round ' + (roundIdx + 1) + ' di ' + ROUNDS.length;
       show();
       if (window.AudioSintetico) window.AudioSintetico.init();
+    }
+
+    function start(){
+      roundIdx = 0; stars = 0;
+      starsEl.textContent = '0';
+      avviaRound();
     }
 
     function show(){
@@ -141,23 +191,44 @@
       }
       setTimeout(function(){
         idx++;
-        if (idx >= queue.length) finish();
+        if (idx >= queue.length) fineRound();
         else show();
       }, 2200);
     }
 
+    function fineRound(){
+      if (roundIdx < ROUNDS.length - 1) {
+        game.classList.add('hide');
+        roundUp.classList.remove('hide');
+        roundUpTitolo.textContent = 'Round ' + (roundIdx + 1) + ' superato!';
+        roundUpMsg.textContent = 'Tina è contenta. Pronto per il round ' + (roundIdx + 2) + '?';
+        if (window.AudioSintetico){
+          window.AudioSintetico.tono({freq:523,durata:.15});
+          setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.15}); },180);
+        }
+      } else {
+        finish();
+      }
+    }
+
     function finish(){
       game.classList.add('hide');
+      roundUp.classList.add('hide');
       end.classList.remove('hide');
+      var totale = ROUNDS.reduce(function(s, r){ return s + r.length; }, 0);
       var out = '';
-      for (var i=0;i<queue.length;i++) out += (i < stars ? '<span class="on">★</span>' : '<span>★</span>');
+      for (var i=0;i<totale;i++) out += (i < stars ? '<span class="on">★</span>' : '<span>★</span>');
       starsFinal.innerHTML = out;
-      endMsg.textContent = stars >= queue.length - 1 ? 'Tina è fiera di te!' : 'Bravo, continua così!';
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('tartaruga-saggia', stars, queue.length, '#end');
+      endMsg.textContent = stars >= totale - 2 ? 'Tina è fierissima di te!' : 'Bravo, continua così!';
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('tartaruga-saggia', stars, totale, '#end');
     }
 
     document.getElementById('start-btn').addEventListener('click', start);
     document.getElementById('restart').addEventListener('click', start);
+    document.getElementById('next-round').addEventListener('click', function(){
+      roundIdx++;
+      avviaRound();
+    });
     btnSi.addEventListener('click', function(){ answer(true); });
     btnNo.addEventListener('click', function(){ answer(false); });
   })();
