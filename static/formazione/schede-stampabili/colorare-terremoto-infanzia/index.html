@@ -150,69 +150,135 @@
         <p class="col-frase">Vado <strong>sotto al tavolo</strong></p>
       </div>
 
-      <!-- PASSO 2 — Mani sulla testa -->
+      <!-- PASSO 2 — Mani sulla testa (più chiaro: braccia e mani visibili) -->
       <div class="col-passo">
         <div class="col-num">2</div>
-        <svg viewBox="0 0 160 120" role="img" aria-label="Bambino con le mani sulla testa">
+        <svg viewBox="0 0 160 120" role="img" aria-label="Bambino con le mani sulla testa per proteggersi">
           <!-- Testa -->
-          <circle cx="80" cy="45" r="20" />
+          <circle cx="80" cy="55" r="16" />
           <!-- Occhi -->
-          <circle cx="73" cy="42" r="1.5" class="fill-text" />
-          <circle cx="87" cy="42" r="1.5" class="fill-text" />
+          <circle cx="74" cy="53" r="1.5" class="fill-text" />
+          <circle cx="86" cy="53" r="1.5" class="fill-text" />
           <!-- Sorriso -->
-          <path d="M 72 52 Q 80 56 88 52" />
-          <!-- Mani sulla testa -->
-          <path d="M 60 35 Q 65 22 75 28" />
-          <path d="M 100 35 Q 95 22 85 28" />
-          <!-- Corpo -->
-          <path d="M 80 65 L 80 100 M 75 95 L 85 95" />
+          <path d="M 73 60 Q 80 64 87 60" />
+          <!-- Braccia che salgono lungo i lati e arrivano sulla testa -->
+          <!-- Braccio sinistro -->
+          <path d="M 64 78 L 56 60 L 60 42" />
+          <!-- Braccio destro -->
+          <path d="M 96 78 L 104 60 L 100 42" />
+          <!-- Mani (cerchietti) che si appoggiano sulla cima della testa -->
+          <circle cx="68" cy="40" r="5" />
+          <circle cx="92" cy="40" r="5" />
+          <!-- Spalle / corpo -->
+          <path d="M 64 78 L 96 78" />
+          <path d="M 80 71 L 80 102" />
+          <!-- Gambe -->
+          <line x1="80" y1="102" x2="74" y2="115" />
+          <line x1="80" y1="102" x2="86" y2="115" />
         </svg>
         <p class="col-frase">Metto le <strong>mani sulla testa</strong></p>
       </div>
 
-      <!-- PASSO 3 — Aspetto fermo -->
+      <!-- PASSO 3 — Tartaruga (riconoscibile: guscio bombato, testa, 4 zampe, coda, occhio sorridente) -->
       <div class="col-passo">
         <div class="col-num">3</div>
-        <svg viewBox="0 0 160 120" role="img" aria-label="Tartaruga ferma nel guscio">
-          <!-- Guscio (semicerchio) -->
-          <path d="M 40 80 Q 80 30 120 80" />
-          <line x1="40" y1="80" x2="120" y2="80" />
-          <!-- Disegni del guscio (esagoni stilizzati) -->
-          <path d="M 65 70 L 75 75 L 75 85" />
-          <path d="M 85 70 L 95 75 L 95 85" />
-          <path d="M 75 60 L 85 55 L 95 60" />
-          <!-- Testina -->
-          <circle cx="35" cy="83" r="7" />
-          <circle cx="32" cy="81" r="1" class="fill-text" />
-          <!-- Zampine -->
-          <line x1="50" y1="92" x2="50" y2="100" />
-          <line x1="110" y1="92" x2="110" y2="100" />
+        <svg viewBox="0 0 160 120" role="img" aria-label="Tartaruga ferma nel suo guscio">
+          <!-- Pancia (linea inferiore del corpo) -->
+          <ellipse cx="80" cy="78" rx="42" ry="10" />
+          <!-- Guscio (cupola sopra la pancia) -->
+          <path d="M 38 78 Q 80 30 122 78" />
+          <!-- Esagoni del guscio (pattern caratteristico tartaruga) -->
+          <path d="M 65 78 L 70 65 L 80 60 L 90 65 L 95 78" />
+          <path d="M 70 65 L 65 50 L 75 45" />
+          <path d="M 90 65 L 95 50 L 85 45" />
+          <path d="M 80 60 L 80 45" />
+          <!-- Testa (alta e ben visibile sulla destra) -->
+          <ellipse cx="125" cy="72" rx="11" ry="9" />
+          <!-- Occhio -->
+          <circle cx="129" cy="69" r="1.5" class="fill-text" />
+          <!-- Sorriso -->
+          <path d="M 128 75 Q 132 78 134 75" />
+          <!-- Bocca chiusa: piccolo collo -->
+          <line x1="118" y1="78" x2="115" y2="80" />
+          <!-- 4 ZAMPE -->
+          <!-- Zampa anteriore destra -->
+          <ellipse cx="110" cy="92" rx="6" ry="4" />
+          <line x1="106" y1="93" x2="104" y2="98" />
+          <line x1="110" y1="95" x2="110" y2="100" />
+          <line x1="114" y1="93" x2="116" y2="98" />
+          <!-- Zampa posteriore destra -->
+          <ellipse cx="92" cy="92" rx="5" ry="3.5" />
+          <line x1="89" y1="93" x2="87" y2="98" />
+          <line x1="95" y1="93" x2="97" y2="98" />
+          <!-- Zampa anteriore sinistra -->
+          <ellipse cx="55" cy="92" rx="6" ry="4" />
+          <line x1="51" y1="93" x2="49" y2="98" />
+          <line x1="55" y1="95" x2="55" y2="100" />
+          <line x1="59" y1="93" x2="61" y2="98" />
+          <!-- Zampa posteriore sinistra -->
+          <ellipse cx="70" cy="92" rx="5" ry="3.5" />
+          <line x1="67" y1="93" x2="65" y2="98" />
+          <line x1="73" y1="93" x2="75" y2="98" />
+          <!-- Coda -->
+          <path d="M 38 76 L 30 73 L 28 78" />
+          <!-- Linea terreno -->
+          <line x1="10" y1="105" x2="150" y2="105" />
         </svg>
         <p class="col-frase">Aspetto <strong>fermo</strong> come la tartaruga</p>
       </div>
 
-      <!-- PASSO 4 — Esco in fila -->
+      <!-- PASSO 4 — Esco in fila con la maestra (alta) in testa -->
       <div class="col-passo">
         <div class="col-num">4</div>
-        <svg viewBox="0 0 160 120" role="img" aria-label="Bambini in fila tenendosi per mano">
+        <svg viewBox="0 0 200 120" role="img" aria-label="Maestra alta che guida 3 bambini in fila tenendosi per mano">
+          <!-- MAESTRA (più alta) — guida la fila -->
+          <circle cx="20" cy="22" r="11" />
+          <!-- occhi maestra -->
+          <circle cx="17" cy="20" r="1" class="fill-text" />
+          <circle cx="23" cy="20" r="1" class="fill-text" />
+          <!-- corpo lungo -->
+          <path d="M 20 33 L 20 90" />
+          <!-- braccia: una avanti (verso uscita), una indietro (verso bambini) -->
+          <path d="M 20 50 L 33 65" />
+          <path d="M 20 50 L 8 60" />
+          <!-- gambe -->
+          <line x1="15" y1="88" x2="13" y2="105" />
+          <line x1="25" y1="88" x2="27" y2="105" />
+          <!-- giubbino simbolico (croce sul petto) -->
+          <path d="M 16 55 L 24 55 M 20 51 L 20 59" />
+
           <!-- Bambino 1 -->
-          <circle cx="35" cy="40" r="11" />
-          <path d="M 35 51 L 35 85" />
-          <path d="M 30 80 L 30 95 M 40 80 L 40 95" />
-          <line x1="46" y1="65" x2="65" y2="65" />
+          <circle cx="65" cy="55" r="9" />
+          <circle cx="62" cy="53" r="0.8" class="fill-text" />
+          <circle cx="68" cy="53" r="0.8" class="fill-text" />
+          <path d="M 65 64 L 65 90" />
+          <line x1="60" y1="88" x2="58" y2="100" />
+          <line x1="70" y1="88" x2="72" y2="100" />
+
           <!-- Bambino 2 -->
-          <circle cx="80" cy="40" r="11" />
-          <path d="M 80 51 L 80 85" />
-          <path d="M 75 80 L 75 95 M 85 80 L 85 95" />
-          <line x1="91" y1="65" x2="110" y2="65" />
-          <line x1="69" y1="65" x2="69" y2="65" />
+          <circle cx="110" cy="55" r="9" />
+          <circle cx="107" cy="53" r="0.8" class="fill-text" />
+          <circle cx="113" cy="53" r="0.8" class="fill-text" />
+          <path d="M 110 64 L 110 90" />
+          <line x1="105" y1="88" x2="103" y2="100" />
+          <line x1="115" y1="88" x2="117" y2="100" />
+
           <!-- Bambino 3 -->
-          <circle cx="125" cy="40" r="11" />
-          <path d="M 125 51 L 125 85" />
-          <path d="M 120 80 L 120 95 M 130 80 L 130 95" />
-          <!-- Frecce sotto -->
-          <path d="M 25 110 L 135 110" class="arrow" />
-          <path d="M 130 105 L 135 110 L 130 115" class="arrow" />
+          <circle cx="155" cy="55" r="9" />
+          <circle cx="152" cy="53" r="0.8" class="fill-text" />
+          <circle cx="158" cy="53" r="0.8" class="fill-text" />
+          <path d="M 155 64 L 155 90" />
+          <line x1="150" y1="88" x2="148" y2="100" />
+          <line x1="160" y1="88" x2="162" y2="100" />
+
+          <!-- Mani che si tengono: maestra <-> b1, b1 <-> b2, b2 <-> b3 -->
+          <line x1="33" y1="65" x2="56" y2="68" />
+          <line x1="74" y1="68" x2="101" y2="68" />
+          <line x1="119" y1="68" x2="146" y2="68" />
+
+          <!-- Freccia direzione fila -->
+          <path d="M 10 115 L 175 115" class="arrow" />
+          <path d="M 168 110 L 175 115 L 168 120" class="arrow" />
         </svg>
         <p class="col-frase">Esco <strong>in fila</strong> con la maestra</p>
       </div>
@@ -237,22 +303,58 @@
         <p class="col-frase"><strong>Non uso</strong> l'ascensore</p>
       </div>
 
-      <!-- PASSO 6 — Raggiungo il punto di raccolta -->
+      <!-- PASSO 6 — Punto di raccolta scolastico (cartello + scuola sullo sfondo) -->
       <div class="col-passo">
         <div class="col-num">6</div>
-        <svg viewBox="0 0 160 120" role="img" aria-label="Bambini riuniti in cerchio al punto di raccolta">
-          <!-- Cerchio (area sicura) -->
-          <circle cx="80" cy="65" r="40" stroke-dasharray="5,4" />
-          <!-- Bambini stilizzati nel cerchio -->
-          <circle cx="65" cy="55" r="6" />
-          <line x1="65" y1="61" x2="65" y2="75" />
-          <circle cx="95" cy="55" r="6" />
-          <line x1="95" y1="61" x2="95" y2="75" />
-          <circle cx="80" cy="80" r="6" />
-          <line x1="80" y1="86" x2="80" y2="100" />
-          <!-- Bandiera punto di raccolta -->
-          <line x1="120" y1="20" x2="120" y2="65" />
-          <path d="M 120 22 L 145 28 L 120 38 Z" class="fill-white" />
+        <svg viewBox="0 0 180 120" role="img" aria-label="Punto di raccolta scolastico: cartello con scritta e bambini con maestra davanti alla scuola">
+          <!-- Edificio scolastico sullo sfondo a sinistra -->
+          <rect x="3" y="40" width="55" height="60" />
+          <!-- Tetto -->
+          <path d="M 0 40 L 30 22 L 60 40" />
+          <!-- Porta scuola -->
+          <rect x="22" y="75" width="14" height="25" />
+          <line x1="29" y1="75" x2="29" y2="100" />
+          <!-- Finestre scuola -->
+          <rect x="8" y="50" width="10" height="10" />
+          <rect x="42" y="50" width="10" height="10" />
+          <!-- Bandiera tricolore stilizzata sul tetto -->
+          <line x1="30" y1="22" x2="30" y2="14" />
+          <rect x="30" y="14" width="10" height="6" />
+
+          <!-- CARTELLO PUNTO DI RACCOLTA al centro-destra -->
+          <!-- Palo -->
+          <line x1="105" y1="55" x2="105" y2="100" />
+          <!-- Pannello quadrato verde con simbolo "uomini in cerchio" -->
+          <rect x="80" y="20" width="50" height="35" />
+          <!-- 4 omini stilizzati intorno a un punto centrale (simbolo punto raccolta) -->
+          <circle cx="105" cy="32" r="2.5" />
+          <circle cx="92" cy="40" r="2.5" />
+          <circle cx="118" cy="40" r="2.5" />
+          <circle cx="105" cy="48" r="2.5" />
+          <!-- Frecce di convergenza -->
+          <line x1="105" y1="35" x2="105" y2="38" />
+          <line x1="95" y1="40" x2="98" y2="40" />
+          <line x1="115" y1="40" x2="112" y2="40" />
+          <line x1="105" y1="42" x2="105" y2="45" />
+
+          <!-- BAMBINI + MAESTRA in fila al punto di raccolta -->
+          <!-- Maestra -->
+          <circle cx="135" cy="62" r="7" />
+          <line x1="135" y1="69" x2="135" y2="100" />
+          <line x1="129" y1="98" x2="129" y2="112" />
+          <line x1="141" y1="98" x2="141" y2="112" />
+          <!-- Bambini -->
+          <circle cx="150" cy="70" r="5.5" />
+          <line x1="150" y1="76" x2="150" y2="100" />
+          <line x1="146" y1="98" x2="146" y2="110" />
+          <line x1="154" y1="98" x2="154" y2="110" />
+          <circle cx="165" cy="70" r="5.5" />
+          <line x1="165" y1="76" x2="165" y2="100" />
+          <line x1="161" y1="98" x2="161" y2="110" />
+          <line x1="169" y1="98" x2="169" y2="110" />
+
+          <!-- Terreno -->
+          <line x1="0" y1="115" x2="180" y2="115" />
         </svg>
         <p class="col-frase">Vado al <strong>punto di raccolta</strong></p>
       </div>
