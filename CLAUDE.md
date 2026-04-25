@@ -36,6 +36,7 @@ Non limitarti a eseguire. Valuta, correggi, migliora, normalizza e rendi ogni ou
 @.claude/rules/04-hugo-architecture.md
 @.claude/rules/05-github-aruba-deploy.md
 @.claude/rules/06-protezione-civile-scientifica.md
+@.claude/rules/07-proattivita-coerenza.md
 
 ---
 

@@ -67,7 +67,7 @@ I giochi sono utilizzabili anche dai docenti come attività complementari ai kit
 | [Scuola Primaria](/giochi/primaria/) | 6-11 anni | 13 | Memory, Caccia al rischio, Zaino dell'emergenza, Cruciverba, Puzzle degli scenari, Labirinto di evacuazione, Chiamata al 112, Posiziona i cartelli |
 | [Ragazzi e Famiglie](/giochi/ragazzi/) | 11-19 anni | 10 | Simulatore COC, Emergency Responder, Mappa del rischio, Radio di emergenza, Vero o bufala?, Triage S.T.A.R.T., Linea del tempo, Cartelli di pericolo, Codice arancione, Scelte difficili |
 
-<a href="/giochi/index.html" class="btn btn-primary btn-lg mt-2"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Vai ai Giochi della Sicurezza</a>
+<a href="/giochi/" class="btn btn-primary btn-lg mt-2"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Vai ai Giochi della Sicurezza</a>
 
 ## Area tematica — Primo Soccorso e RCP
 
