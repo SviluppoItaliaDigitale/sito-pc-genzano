@@ -83,6 +83,13 @@ servizi:
     descrizione: "Meteo, terremoti, incendi, qualità aria da fonti ufficiali."
     azione: "Apri strumenti"
 
+  - titolo: "Mappa del Sito"
+    url: "/mappa-sito/"
+    icona: "bi-grid-3x3-gap-fill"
+    classe_icona: "si-blue"
+    descrizione: "Tutte le sezioni del sito a colpo d'occhio, divise per area tematica."
+    azione: "Esplora il sito"
+
   - titolo: "Area Download"
     url: "/area-download/"
     icona: "bi-download"

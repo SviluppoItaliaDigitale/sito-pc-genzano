@@ -1754,25 +1754,56 @@ article .galleria img {
   z-index: 10000;
   background: #dc3545;
   color: #fff;
-  border: 3px solid #fff;
+  border: 4px solid #fff;
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
+  width: 5.5rem;
+  height: 5.5rem;
   font-weight: 800;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(220, 53, 69, 0.5);
+  box-shadow: 0 6px 18px rgba(220, 53, 69, 0.55), 0 0 0 2px rgba(0,0,0,0.08);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* Pulsazione leggera per attirare l'attenzione (disattivata in
+     prefers-reduced-motion) */
+  animation: sosPulse 2.5s ease-in-out infinite;
 }
 
-/* Tablet + mobile: bottone visibile (display flex forzato) */
+@keyframes sosPulse {
+  0%, 100% { box-shadow: 0 6px 18px rgba(220, 53, 69, 0.55), 0 0 0 2px rgba(0,0,0,0.08), 0 0 0 0 rgba(220, 53, 69, 0.6); }
+  50% { box-shadow: 0 6px 18px rgba(220, 53, 69, 0.7), 0 0 0 2px rgba(0,0,0,0.08), 0 0 0 14px rgba(220, 53, 69, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sos-button { animation: none; }
+}
+
+/* Tablet + mobile: bottone visibile (display flex forzato) e
+   leggermente più grande per maggiore visibilità su touchscreen */
 @media (max-width: 991.98px) {
   .sos-button {
     display: flex !important;
+    width: 6rem;
+    height: 6rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
   }
+  .sos-button .sos-icon { font-size: 0.95rem; }
+  .sos-button .sos-label { font-size: 1.7rem; }
+}
+
+@media (max-width: 480px) {
+  .sos-button {
+    width: 5.5rem;
+    height: 5.5rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .sos-button .sos-icon { font-size: 0.9rem; }
+  .sos-button .sos-label { font-size: 1.5rem; }
 }
 .sos-button .sos-icon {
   font-size: 0.85rem;
@@ -1790,15 +1821,6 @@ article .galleria img {
   transform: scale(1.05);
   outline: 4px solid #ffbe2e;
   outline-offset: 3px;
-}
-@media (max-width: 480px) {
-  .sos-button {
-    bottom: 1rem;
-    right: 1rem;
-    width: 4.5rem;
-    height: 4.5rem;
-  }
-  .sos-button .sos-label { font-size: 1.35rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sos-button { transition: none; }
