@@ -157,6 +157,16 @@ This page gives you **essential information** in English. The full website is in
 </div>
 
 <div class="en-card">
+<h2>📚 Detailed pages in English</h2>
+<p>Beyond this overview, the following pages are translated in detail:</p>
+<ul class="en-list">
+<li><a href="/english/numeri-utili/"><strong>Useful Numbers</strong></a></li>
+<li><a href="/english/cosa-fare-adesso/"><strong>What To Do Now</strong></a></li>
+<li><a href="/english/piano-familiare/"><strong>Family Emergency Plan</strong></a></li>
+</ul>
+</div>
+
+<div class="en-card">
 <h2>📞 Contacts</h2>
 <p><strong>Civil Protection Volunteers Group of Genzano di Roma</strong></p>
 <ul class="en-list">

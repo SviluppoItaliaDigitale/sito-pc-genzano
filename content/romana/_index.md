@@ -128,6 +128,16 @@ Această pagină vă oferă **informațiile esențiale** în română. Site-ul c
 </div>
 
 <div class="en-card">
+<h2>📚 Pagini detaliate în limba română</h2>
+<p>Pe lângă această prezentare, următoarele pagini sunt traduse detaliat:</p>
+<ul class="en-list">
+<li><a href="/romana/numeri-utili/"><strong>Numere utile</strong></a></li>
+<li><a href="/romana/cosa-fare-adesso/"><strong>Ce să faci acum</strong></a></li>
+<li><a href="/romana/piano-familiare/"><strong>Plan de Urgență Familial</strong></a></li>
+</ul>
+</div>
+
+<div class="en-card">
 <h2>📞 Contacte</h2>
 <p><strong>Grupul Comunal de Voluntari ai Protecției Civile din Genzano di Roma</strong></p>
 <ul class="en-list">
