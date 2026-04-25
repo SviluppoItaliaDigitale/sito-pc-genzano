@@ -467,6 +467,12 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Cruciverba della Sicurezza**](/formazione/schede-stampabili/cruciverba-primaria/) — 14 definizioni sulle parole-chiave della Protezione Civile, con soluzioni per il docente.
 - 👉 [**Piano di Emergenza Familiare**](/formazione/schede-stampabili/piano-familiare-primaria/) — l'alunno compila con la famiglia il piano di casa: contatti, punti di raccolta, kit, percorso di evacuazione.
 
+**3 schede di letto-scrittura** a tema Protezione Civile per le classi 1ª-2ª (6-7 anni):
+
+- 👉 [**Sillabe della Protezione Civile**](/formazione/schede-stampabili/sillabe-protezione-civile-primaria/) — parole-chiave divise in sillabe (CA·SCO, SI·RE·NA, POM·PIE·RE…), esercizio di divisione, ricomposizione di puzzle sillabici e copiatura di una frase. Soluzioni per il docente.
+- 👉 [**Completa la Parola**](/formazione/schede-stampabili/completa-parola-primaria/) — 10 parole con una lettera mancante da completare usando la "banca delle lettere", più 4 parole intere da scrivere a partire dall'indizio. Soluzioni incluse.
+- 👉 [**Copia la Frase — Le parole della sicurezza**](/formazione/schede-stampabili/copia-frase-primaria/) — 5 frasi semplici sulle regole di autoprotezione (chiamata 112, posizione tartaruga, evacuazione, volontariato) da ricopiare in stampatello su righe con linea-guida.
+
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 
 ### Scheda 1 — La chiamata al 112 (role-play scritto) ✅ stampabile

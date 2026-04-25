@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Collega parola e immagine (Infanzia)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola dell'Infanzia. Il bambino collega con una matita le 8 parole della Protezione Civile alle immagini corrispondenti.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .cpi-area {
+      display: grid;
+      grid-template-columns: 1fr 6rem 1fr;
+      gap: 0.6rem 0.4rem;
+      margin: 0.8rem 0;
+      align-items: center;
+    }
+    .cpi-area .col-titolo {
+      grid-column: span 1;
+      font-weight: 700;
+      color: var(--scheda-blu);
+      text-align: center;
+      font-size: 0.95rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--scheda-blu);
+      margin-bottom: 0.2rem;
+    }
+    .cpi-area .col-vuota { grid-column: span 1; }
+
+    .cpi-parola {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--scheda-blu);
+      font-size: 1.4rem;
+      padding: 0.5rem 0.8rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 8px;
+      background: #fff;
+      text-align: center;
+      line-height: 1;
+    }
+    .cpi-pallino {
+      width: 0.9rem;
+      height: 0.9rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 50%;
+      background: #fff;
+      justify-self: center;
+    }
+    .cpi-pallino.sx { justify-self: end; margin-right: 0.4rem; }
+    .cpi-pallino.dx { justify-self: start; margin-left: 0.4rem; }
+    .cpi-spazio-linee {
+      grid-column: 2;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ced4da;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+    .cpi-immagine {
+      font-size: 3rem;
+      text-align: center;
+      line-height: 1;
+      padding: 0.4rem 0.8rem;
+      background: #f4f7fb;
+      border: 2px solid var(--scheda-bordo);
+      border-radius: 8px;
+    }
+
+    /* Layout effettivo: 8 righe da 4 elementi: pallino_sx_riga | parola | linea | immagine | pallino_dx_riga
+       In realtà uso un grid 5 colonne per riga */
+    .cpi-griglia {
+      display: grid;
+      grid-template-columns: 1fr 1.2rem 4rem 1.2rem 5rem;
+      column-gap: 0.4rem;
+      row-gap: 0.55rem;
+      margin: 0.6rem 0;
+      align-items: center;
+    }
+    .cpi-griglia .h {
+      font-weight: 700;
+      color: var(--scheda-blu);
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid var(--scheda-blu);
+    }
+    .cpi-griglia .h.parola { grid-column: 1; }
+    .cpi-griglia .h.collega { grid-column: 2 / span 3; }
+    .cpi-griglia .h.figura { grid-column: 5; }
+
+    .cpi-griglia .parola-cella {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--scheda-blu);
+      font-size: 1.3rem;
+      padding: 0.45rem 0.7rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 8px;
+      background: #fff;
+      text-align: center;
+    }
+    .cpi-griglia .pallino {
+      width: 0.85rem;
+      height: 0.85rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 50%;
+      background: #fff;
+      justify-self: center;
+    }
+    .cpi-griglia .puntini {
+      text-align: center;
+      color: #ced4da;
+      font-size: 1.4rem;
+      letter-spacing: 0.15em;
+      line-height: 1;
+    }
+    .cpi-griglia .figura-cella {
+      font-size: 2.6rem;
+      text-align: center;
+      line-height: 1;
+      padding: 0.35rem 0;
+      background: #f4f7fb;
+      border: 2px solid var(--scheda-bordo);
+      border-radius: 8px;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem;
+      padding: 0.55rem 0.85rem;
+      background: #fff8e6;
+      border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.82rem;
+      color: #664d03;
+      line-height: 1.45;
+    }
+    .istruzioni-maestra strong { color: #664d03; }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Collega parola e immagine — Infanzia</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Collega la parola all'immagine</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia / Primaria 1ª (5-7 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-7 anni</span>
+      <span><strong>Obiettivo:</strong> associare parola scritta e immagine</span>
+      <span><strong>Servono:</strong> matita o riga e matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Leggi le parole nella colonna a sinistra. Per ogni parola, traccia con la matita
+      una linea fino al cerchietto della <strong>figura giusta</strong> a destra.
+      Le immagini sono in ordine sparso!
+    </p>
+
+    <div class="cpi-griglia">
+      <div class="h parola">PAROLA</div>
+      <div class="h collega">collega con una linea</div>
+      <div class="h figura">FIGURA</div>
+
+      <div class="parola-cella">CASCO</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">🚪</div>
+
+      <div class="parola-cella">SIRENA</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">🆘</div>
+
+      <div class="parola-cella">USCITA</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">🔦</div>
+
+      <div class="parola-cella">RADIO</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">⛑️</div>
+
+      <div class="parola-cella">112</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">🚒</div>
+
+      <div class="parola-cella">FUOCO</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">📡</div>
+
+      <div class="parola-cella">TORCIA</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">📞</div>
+
+      <div class="parola-cella">AIUTO</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">🔥</div>
+
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong> i puntini fra parola e figura sono solo
+      una guida visiva: la linea può essere tracciata libera, anche curva o incrociata,
+      purché parta dal cerchietto sinistro e arrivi al cerchietto destro corretto.
+      <br>
+      <strong>Soluzioni:</strong> CASCO→⛑️, SIRENA→🚒, USCITA→🚪, RADIO→📡,
+      112→📞, FUOCO→🔥, TORCIA→🔦, AIUTO→🆘.
+      <br>
+      <strong>Estensione:</strong> dopo aver collegato tutte le parole, il bambino sceglie
+      una parola e prova a scriverla sul retro del foglio o su un quaderno a righe larghe.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Collega parola e immagine" · Infanzia / Primaria 1ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>
