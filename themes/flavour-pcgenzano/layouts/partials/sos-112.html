@@ -1,0 +1,127 @@
+{{/*
+  Partial: sos-112.html
+  Bottone SOS 112 fisso in basso a destra, sempre visibile sul sito.
+  Click apre un modal di conferma per evitare chiamate accidentali.
+  Solo dal modal e' possibile fare partire la chiamata, e il focus
+  iniziale e' su "Annulla" cosi' premendo ENTER non si chiama.
+
+  Accessibilita':
+  - role="dialog" + aria-modal="true" sul modal
+  - aria-labelledby al titolo
+  - Focus trap nel modal
+  - ESC chiude
+  - Bottone SOS sempre raggiungibile (z-index > tutto)
+*/}}
+<button type="button" id="sos-button" class="sos-button" aria-label="Chiama il numero unico di emergenza 112 (con conferma)" aria-haspopup="dialog" aria-controls="sos-modal">
+  <span class="sos-icon" aria-hidden="true">SOS</span>
+  <span class="sos-label">112</span>
+</button>
+
+<div id="sos-modal" class="sos-modal" role="dialog" aria-modal="true" aria-labelledby="sos-modal-title" aria-describedby="sos-modal-desc" hidden>
+  <div class="sos-modal-backdrop" data-sos-close="true" aria-hidden="true"></div>
+  <div class="sos-modal-dialog" role="document">
+    <div class="sos-modal-header">
+      <h2 id="sos-modal-title" class="sos-modal-title">
+        <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+        Stai per chiamare il <strong>112</strong>
+      </h2>
+    </div>
+    <div class="sos-modal-body">
+      <p id="sos-modal-desc" class="sos-modal-desc">
+        Il <strong>112</strong> è il <strong>Numero Unico di Emergenza</strong>: chiamalo
+        <strong>solo se c'è una vera emergenza</strong>
+        (incidente, incendio, ferito grave, evento naturale in corso).
+      </p>
+      <p class="sos-modal-info">
+        Se confermi, parte la chiamata. Una volta connesso, parla con calma:
+        di' <strong>cosa è successo</strong> e <strong>dove sei</strong>.
+        Non riagganciare prima dell'operatore.
+      </p>
+      <div class="sos-modal-warning">
+        <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+        Le chiamate al 112 per scherzo o per motivi non urgenti
+        sono <strong>punite per legge</strong> (art. 658 Codice penale).
+      </div>
+    </div>
+    <div class="sos-modal-footer">
+      <button type="button" id="sos-modal-cancel" class="btn btn-outline-secondary btn-lg sos-modal-btn-cancel" data-sos-close="true">
+        <i class="bi bi-x-lg me-1" aria-hidden="true"></i> Annulla
+      </button>
+      <a href="tel:112" id="sos-modal-call" class="btn btn-danger btn-lg sos-modal-btn-call">
+        <i class="bi bi-telephone-fill me-1" aria-hidden="true"></i> Sì, chiama il 112
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var btn = document.getElementById('sos-button');
+  var modal = document.getElementById('sos-modal');
+  var cancelBtn = document.getElementById('sos-modal-cancel');
+  var callBtn = document.getElementById('sos-modal-call');
+  if (!btn || !modal) return;
+
+  var lastFocused = null;
+  var focusableSel = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+  function openModal() {
+    lastFocused = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    // Focus iniziale sul bottone Annulla: ENTER non lancia la chiamata
+    setTimeout(function () { cancelBtn.focus(); }, 30);
+    document.addEventListener('keydown', onKeyDown);
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKeyDown);
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
+    }
+  }
+
+  function onKeyDown(e) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeModal();
+      return;
+    }
+    if (e.key === 'Tab') {
+      // Focus trap: cycle tra cancel e call
+      var focusables = modal.querySelectorAll(focusableSel);
+      if (!focusables.length) return;
+      var first = focusables[0];
+      var last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  }
+
+  btn.addEventListener('click', openModal);
+
+  // Chiudi via X / Annulla / backdrop
+  modal.querySelectorAll('[data-sos-close="true"]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      // Per il backdrop, chiude solo se cliccato direttamente (non bubbling dal dialog interno)
+      if (el.classList.contains('sos-modal-backdrop') && e.target !== el) return;
+      closeModal();
+    });
+  });
+
+  // Anche dopo il click su "Sì, chiama" il modal si può chiudere (se l'utente
+  // interrompe la chiamata): aggiungiamo un piccolo delay per dare al
+  // browser il tempo di lanciare il tel: link.
+  callBtn.addEventListener('click', function () {
+    setTimeout(closeModal, 800);
+  });
+})();
+</script>
