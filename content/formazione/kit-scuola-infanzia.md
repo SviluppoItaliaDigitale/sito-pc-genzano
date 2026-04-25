@@ -262,13 +262,23 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Filastrocca della Tartaruga — illustrata**](/formazione/schede-stampabili/filastrocca-illustrata-infanzia/) — 6 versi della filastrocca con emoji + tartaruga grande da colorare. *(linguaggio)*
 - 👉 [**Disegna il tuo Aiutante**](/formazione/schede-stampabili/disegna-aiutante-infanzia/) — silhouette di volontario PC con casco/giubbotto/radio/scarponi tratteggiati: pregrafismo + colorazione guidata. *(disegno guidato)*
 
-**5 schede da colorare** sui rischi del territorio (linea pulita pensata per matite, pastelli, pennarelli):
+**10 schede da colorare** sui rischi del territorio e sui soccorritori (linea pulita pensata per matite, pastelli, pennarelli):
+
+*Sui rischi*:
 
 - 👉 [**Colora il Terremoto**](/formazione/schede-stampabili/colorare-terremoto-infanzia/) — sotto il tavolo robusto durante la scossa.
 - 👉 [**Colora l'Alluvione**](/formazione/schede-stampabili/colorare-alluvione-infanzia/) — al sicuro ai piani alti.
 - 👉 [**Colora l'Incendio**](/formazione/schede-stampabili/colorare-incendio-infanzia/) — il pompiere e l'evacuazione in sicurezza.
 - 👉 [**Colora il Temporale**](/formazione/schede-stampabili/colorare-temporale-infanzia/) — in casa, lontano dalle finestre.
 - 👉 [**Colora il Vento**](/formazione/schede-stampabili/colorare-vento-infanzia/) — al riparo dagli oggetti che possono volare via.
+- 👉 [**Colora la Frana**](/formazione/schede-stampabili/colorare-frana-infanzia/) — riconosco i sassi che cadono, mi allontano e avviso un adulto.
+- 👉 [**Colora la Neve abbondante**](/formazione/schede-stampabili/colorare-neve-infanzia/) — vestito caldo, attento al ghiaccio, a casa al sicuro.
+
+*Sui soccorritori e sul 112*:
+
+- 👉 [**Il mio amico pompiere**](/formazione/schede-stampabili/colorare-pompiere-infanzia/) — casco rosso, stivali, giubbino, idrante, il pompiere che salva.
+- 👉 [**Il mio amico volontario**](/formazione/schede-stampabili/colorare-volontario-infanzia/) — giubbino arancione, casco e radio, aiuto agli anziani, tende.
+- 👉 [**Come chiamo il 112**](/formazione/schede-stampabili/colorare-112-infanzia/) — sequenza in 6 passi: vedo l'emergenza, prendo il telefono, faccio 1-1-2, dico nome, dico dove sono, aspetto i soccorsi.
 
 
 Queste schede sono pensate per essere **fotocopiate in bianco e nero** e consegnate ai bambini come attività di rinforzo individuale o di piccolo gruppo. Il disegno è sempre accompagnato da una breve consegna che la maestra legge ad alta voce.
