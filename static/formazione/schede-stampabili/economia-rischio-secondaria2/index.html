@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Economia del rischio — prevenire o ricostruire (Secondaria II)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Secondo Grado. Analisi costi-benefici della prevenzione PC: dati ISPRA su prevenzione vs ricostruzione, rapporto 1:5 fino a 1:10.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .testo-info {
+      padding: 0.7rem 0.95rem; background: #f4f7fb;
+      border-left: 4px solid var(--scheda-blu); border-radius: 0 8px 8px 0;
+      margin: 0.5rem 0; font-size: 0.92rem; line-height: 1.55;
+    }
+    .testo-info strong { color: var(--scheda-blu); }
+    .testo-info p { margin: 0 0 0.4rem 0; }
+
+    .casi-tabella {
+      width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.86rem;
+    }
+    .casi-tabella th, .casi-tabella td {
+      border: 1.5px solid var(--scheda-bordo); padding: 0.4rem 0.55rem; vertical-align: top;
+    }
+    .casi-tabella th { background: var(--scheda-blu); color: #fff; font-weight: 700; }
+    .casi-tabella td.num { text-align: right; font-family: "Courier New", monospace; font-weight: 700; }
+
+    .formula-box {
+      background: #eaf2fb; border: 2px solid var(--scheda-blu);
+      border-radius: 8px; padding: 0.7rem 0.95rem; margin: 0.4rem 0;
+    }
+    .formula-box .titolo { font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.3rem; }
+    .formula-box .formula { font-family: "Courier New", monospace; font-weight: 700; font-size: 1rem; color: var(--scheda-blu); }
+    .formula-box .legenda { font-size: 0.82rem; color: #495057; margin-top: 0.3rem; }
+
+    .domanda-card {
+      padding: 0.55rem 0.75rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      margin: 0.4rem 0;
+    }
+    .domanda-card .header { display: flex; gap: 0.5rem; margin-bottom: 0.3rem; }
+    .domanda-card .num-q {
+      width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .domanda-card .testo { font-size: 0.9rem; line-height: 1.4; flex: 1; }
+    .domanda-card .testo strong { color: var(--scheda-blu); }
+    .domanda-card .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .domanda-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+    .domanda-card .calcolo {
+      background: #f4f7fb; border-left: 3px solid var(--scheda-blu);
+      padding: 0.4rem 0.6rem; border-radius: 0 4px 4px 0;
+      font-size: 0.82rem; color: #ced4da; font-style: italic;
+      min-height: 3rem; margin: 0.3rem 0 0 2rem;
+    }
+    .domanda-card .calcolo::before { content: "Spazio per il calcolo:"; }
+
+    .istruzioni-docente {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Economia del rischio — Secondaria II</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Economia del rischio — Conviene di più prevenire o ricostruire?</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Secondo Grado</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 16-19 anni (triennio)</span>
+      <span><strong>Obiettivo:</strong> analizzare costi-benefici delle politiche di prevenzione</span>
+      <span><strong>Discipline:</strong> economia, statistica, ed. civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      Il dilemma del legislatore: investire in <strong>prevenzione</strong> (oneri certi nel presente, benefici
+      probabili in futuro) o pagare la <strong>ricostruzione</strong> (oneri certi solo dopo il disastro)?
+      I dati italiani danno una risposta chiara, ma la politica spesso predilige la seconda strada.
+      Capiamo perché.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>I numeri italiani della ricostruzione</h2></div>
+    <div class="testo-info">
+      <p>Negli ultimi <strong>50 anni</strong> l'Italia ha speso oltre <strong>290 miliardi di euro</strong>
+      per ricostruire dopo eventi calamitosi (sismi, alluvioni, frane). Fonte: Centro Studi del Consiglio
+      Nazionale Ingegneri (CNI), 2018.</p>
+      <p>Stima ricorrente in letteratura economica internazionale (UNDRR, World Bank, OECD):
+      <strong>1 € speso in prevenzione equivale a 4-7 € risparmiati in ricostruzione</strong>.
+      Per i terremoti il rapporto può arrivare a 1:10.</p>
+    </div>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Casi studio — costi reali</h2></div>
+    <table class="casi-tabella">
+      <thead>
+        <tr><th>Evento</th><th>Anno</th><th>Costi diretti (€ mld)</th><th>Note</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Friuli</td><td>1976</td><td class="num">4,5</td><td>Modello virtuoso di ricostruzione</td></tr>
+        <tr><td>Irpinia</td><td>1980</td><td class="num">52</td><td>Lunga, criticata</td></tr>
+        <tr><td>L'Aquila</td><td>2009</td><td class="num">13,7</td><td>Centro storico ancora in cantiere a 15 anni</td></tr>
+        <tr><td>Centro Italia (Amatrice)</td><td>2016-17</td><td class="num">23,5</td><td>Quattro regioni colpite</td></tr>
+        <tr><td>Alluvione Emilia-Romagna</td><td>2023</td><td class="num">8,8</td><td>Stima preliminare</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.8rem; color: var(--scheda-grigio); margin-top: 0.2rem;">
+      <em>Stime indicative aggregate (fonti: DPC, CNI, MEF, Regioni). Esclusi costi indiretti (PIL perso, vite umane).</em>
+    </p>
+
+    <div class="sez-titolo"><span class="num">3</span><h2>Il rapporto costi-benefici (BCR)</h2></div>
+    <div class="formula-box">
+      <div class="titolo">Benefit-Cost Ratio (BCR)</div>
+      <div class="formula">BCR = Benefici attesi / Costi sostenuti</div>
+      <div class="legenda">
+        Se <strong>BCR &gt; 1</strong> l'investimento è economicamente conveniente.<br>
+        Per la prevenzione PC, il BCR tipico è <strong>4-7</strong> (sismica) e <strong>3-5</strong> (idrogeologica).<br>
+        Il calcolo va aggiustato con il tasso di sconto temporale (i benefici futuri valgono meno dei costi presenti).
+      </div>
+    </div>
+
+    <div class="sez-titolo"><span class="num">4</span><h2>Perché si spende di più in ricostruzione che in prevenzione?</h2></div>
+    <div class="testo-info">
+      <p>Diversi fattori politico-economici:</p>
+      <p>1. <strong>Asimmetria temporale</strong>: la prevenzione ha costi <em>oggi</em> e benefici <em>incerti domani</em>.
+      Politicamente meno "vendibile" della ricostruzione (vittime visibili, pressione mediatica).</p>
+      <p>2. <strong>Discounting</strong>: gli economisti applicano un tasso di sconto temporale ai benefici futuri,
+      che riduce il loro valore attuale netto.</p>
+      <p>3. <strong>Free riding</strong>: ogni Comune può "sperare" che il disastro non capiti a lui (ma capita).</p>
+      <p>4. <strong>Bias cognitivi</strong>: <em>recency bias</em> (si agisce solo dopo l'evento), <em>optimism bias</em>
+      (eventi rari sembrano più rari di quanto siano).</p>
+    </div>
+
+    <div class="sez-titolo"><span class="num">5</span><h2>Domande di analisi</h2></div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">1</span><span class="testo">Se il rapporto prevenzione-ricostruzione è 1:5, e l'Italia ha speso 290 mld in ricostruzione in 50 anni, quanto si sarebbe potuto risparmiare investendo in prevenzione?</span></div>
+      <div class="calcolo"></div>
+      <div class="righe"><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">2</span><span class="testo">Spiega perché la prevenzione è politicamente meno attraente della ricostruzione. Cita almeno 2 dei 4 fattori del paragrafo 4.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">3</span><span class="testo">Il <strong>Sismabonus</strong> introdotto in Italia consente detrazioni fiscali per chi adegua sismicamente la casa. È mitigazione, prevenzione o adattamento? Argomenta.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">4</span><span class="testo">I costi diretti della tabella 2 escludono i <strong>costi indiretti</strong> (PIL perso, vite umane, salute mentale). Spiega perché stimarli è difficile e perché è importante farlo lo stesso.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">5</span><span class="testo"><strong>Quesito etico</strong>: si può davvero "calcolare" il valore di una vita umana per un'analisi costi-benefici? Argomenta, considerando le diverse scuole di pensiero (utilitaristica, kantiana).</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="istruzioni-docente">
+      <strong>Per il/la docente · Tracce:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>1) 290 ÷ 5 = <strong>58 mld</strong> (sufficienti per prevenire pari ricostruzione → risparmio teorico ≈ 232 mld). Va tarato con discounting e disponibilità di tecnologia.</li>
+        <li>2) Asimmetria temporale + bias cognitivi (recency, optimism) sono i più efficaci nella spiegazione politica.</li>
+        <li>3) È <strong>prevenzione strutturale</strong> (riduce vulnerabilità), non mitigazione (che riguarda CO₂) né adattamento (cambia il contesto). Discutibile se sia "incentivo economico" più che "politica di sicurezza".</li>
+        <li>4) Costi indiretti difficili da quantificare (lutti, traumi, mancato sviluppo); senza di loro l'analisi sottostima drammaticamente la convenienza della prevenzione.</li>
+        <li>5) Tema VSL (Value of Statistical Life): in economia esiste, è eticamente discusso. Risposta libera valorizzando ragionamento etico.</li>
+        <li><strong>Lezione di metodo</strong>: economia ≠ "morale del prezzo": è uno strumento. Le decisioni richiedono anche etica e politica.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Economia del rischio" · Secondaria II · economia · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>
