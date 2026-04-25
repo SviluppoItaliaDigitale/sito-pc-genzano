@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Schede stampabili — Protezione Civile Genzano di Roma</title>
-  <meta name="description" content="Schede fotocopiabili pronte per la stampa: chiamata al 112, vero/falso, labirinto evacuazione, piano familiare. Per scuola dell'infanzia e primaria.">
+  <meta name="description" content="13 schede fotocopiabili pronte per la stampa: dall'infanzia al quinto anno secondaria. Stampa direttamente da browser in formato A4 con intestazione istituzionale.">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -29,7 +29,6 @@
     .scheda-card-icon {
       width: 56px;
       height: 56px;
-      background: #003366;
       color: #fff;
       border-radius: 12px;
       display: flex;
@@ -40,35 +39,61 @@
     }
     .scheda-card-icon.infanzia { background: #c026d3; }
     .scheda-card-icon.primaria { background: #0066cc; }
+    .scheda-card-icon.secondaria1 { background: #15803d; }
+    .scheda-card-icon.secondaria2 { background: #b45309; }
     .scheda-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: #003366;
       margin: 0 0 0.4rem 0;
+      line-height: 1.25;
     }
     .scheda-card .scheda-fascia {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
       color: #6c757d;
       text-transform: uppercase;
       letter-spacing: 0.02em;
     }
     .scheda-card .scheda-desc {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #495057;
       flex: 1;
-      margin: 0.5rem 0 1rem 0;
+      margin: 0.5rem 0 0.75rem 0;
+      line-height: 1.5;
     }
     .scheda-card .scheda-meta {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #6c757d;
       margin-bottom: 0.6rem;
       display: flex;
-      gap: 0.8rem;
+      gap: 0.7rem;
       flex-wrap: wrap;
     }
     .scheda-card .btn {
       align-self: flex-start;
     }
+    .fascia-titolo {
+      color: #003366;
+      margin: 1.5rem 0 0.8rem 0;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #003366;
+    }
+    .fascia-titolo .fascia-icona {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 1.05rem;
+      margin-right: 0.5rem;
+      vertical-align: -8px;
+    }
+    .fascia-titolo .fascia-icona.inf { background: #c026d3; }
+    .fascia-titolo .fascia-icona.pri { background: #0066cc; }
+    .fascia-titolo .fascia-icona.s1 { background: #15803d; }
+    .fascia-titolo .fascia-icona.s2 { background: #b45309; }
   </style>
 </head>
 <body>
@@ -83,7 +108,7 @@
           </ol>
         </nav>
         <h1>Schede fotocopiabili pronte per la stampa</h1>
-        <p class="lead">Materiale didattico realmente stampabile per insegnanti di scuola dell'infanzia e primaria. Apri la scheda, premi <kbd>Stampa</kbd> del browser (Ctrl+P), ottieni un foglio A4 perfetto.</p>
+        <p class="lead">13 schede didattiche per insegnanti dalla scuola dell'infanzia al quinto anno della secondaria di secondo grado. Apri la scheda, premi <kbd>Stampa</kbd> del browser (Ctrl+P), ottieni un foglio A4 perfetto.</p>
       </div>
     </div>
 
@@ -98,17 +123,18 @@
         </p>
       </div>
 
-      <h2 class="h4 mb-3" style="color: #003366;">
-        <i class="bi bi-stars me-1" aria-hidden="true"></i> Schede per la Scuola dell'Infanzia (3-6 anni)
+      <h2 class="fascia-titolo h4">
+        <span class="fascia-icona inf"><i class="bi bi-stars" aria-hidden="true"></i></span>
+        Scuola dell'Infanzia (3-6 anni)
       </h2>
-      <div class="row g-3 mb-4">
+      <div class="row g-3 mb-2">
         <div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon infanzia"><i class="bi bi-emoji-smile" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Infanzia · 4-6 anni</span>
             <h3>Vero o Falso con le Faccine</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita o pennarelli</span></div>
-            <p class="scheda-desc">8 affermazioni con due faccine da colorare: 😊 se vero, 😟 se falso. Insegna i comportamenti corretti in caso di terremoto, allarme e quando chiamare il 112.</p>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">8 affermazioni con due faccine da colorare: 😊 se vero, 😟 se falso. Per i comportamenti corretti in caso di terremoto, allarme e quando chiamare il 112.</p>
             <a href="vero-falso-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
@@ -118,16 +144,37 @@
             <span class="scheda-fascia">Infanzia · 4-6 anni</span>
             <h3>Il Labirinto dell'Uscita</h3>
             <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>10-15 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Il bambino traccia con la matita il percorso dal punto di partenza 🧒 al cartello uscita 🚪, evitando muri, zaini e fuoco. Insegna a non correre e a evitare ostacoli.</p>
+            <p class="scheda-desc">Il bambino traccia il percorso dal punto di partenza 🧒 al cartello uscita 🚪, evitando muri, zaini e fuoco. Per imparare a non correre.</p>
             <a href="labirinto-uscita/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-link-45deg" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 4-6 anni</span>
+            <h3>Trova le Coppie</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">8 coppie di immagini da collegare con una linea: oggetto-azione, pericolo-cosa fare. Sviluppa l'associazione visiva.</p>
+            <a href="trova-coppie-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia">🐢</div>
+            <span class="scheda-fascia">Infanzia · 3-6 anni</span>
+            <h3>Le Regole della Tartaruga Saggia</h3>
+            <div class="scheda-meta"><span><i class="bi bi-card-checklist me-1" aria-hidden="true"></i>poster da colorare</span></div>
+            <p class="scheda-desc">Poster con le 4 regole della Tartaruga in caso di terremoto, una filastrocca da memorizzare e cosa NON fare. Da appendere in classe.</p>
+            <a href="tartaruga-saggia-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
       </div>
 
-      <h2 class="h4 mb-3" style="color: #003366;">
-        <i class="bi bi-mortarboard me-1" aria-hidden="true"></i> Schede per la Scuola Primaria (6-11 anni)
+      <h2 class="fascia-titolo h4 mt-5">
+        <span class="fascia-icona pri"><i class="bi bi-mortarboard" aria-hidden="true"></i></span>
+        Scuola Primaria (6-11 anni)
       </h2>
-      <div class="row g-3 mb-4">
+      <div class="row g-3 mb-2">
         <div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-telephone-fill" aria-hidden="true"></i></div>
@@ -138,13 +185,109 @@
             <a href="chiamo-112/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-grid-3x3" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · 8-11 anni · classi III-V</span>
+            <h3>Cruciverba della Sicurezza</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>25-35 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">8 definizioni orizzontali su temi della Protezione Civile (allerta, sisma, scale, radar, emergenza, volontario...). Soluzioni incluse per il docente.</p>
+            <a href="cruciverba-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-house-heart-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · 7-11 anni + famiglia</span>
+            <h3>Piano di Emergenza Familiare</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>30 min</span><span><i class="bi bi-people-fill me-1" aria-hidden="true"></i>con i genitori</span></div>
+            <p class="scheda-desc">Modello da compilare a casa: famiglia, contatti d'emergenza, punti di ritrovo, kit di emergenza. Da attaccare al frigorifero, aggiornare ogni 6 mesi.</p>
+            <a href="piano-familiare-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
       </div>
 
-      <div class="alert alert-warning mt-4">
+      <h2 class="fascia-titolo h4 mt-5">
+        <span class="fascia-icona s1"><i class="bi bi-book-half" aria-hidden="true"></i></span>
+        Scuola Secondaria di Primo Grado (11-14 anni)
+      </h2>
+      <div class="row g-3 mb-2">
+        <div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-cloud-rain-heavy-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I · 11-14 anni</span>
+            <h3>Decodifica del Bollettino di Allerta</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>45 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Geografia, Italiano, Ed. civica</span></div>
+            <p class="scheda-desc">Bollettino realistico del Centro Funzionale Lazio per Genzano: 7 domande di analisi (codici colore, criticità, COC). Soluzioni per il docente.</p>
+            <a href="decodifica-bollettino-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-map-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I · 11-14 anni</span>
+            <h3>Mappa dei Rischi del Mio Territorio</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>90 min + ricerca</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Geografia, Scienze</span></div>
+            <p class="scheda-desc">Indagine territoriale: lo studente consulta INGV, ISPRA, DPC, EFFIS e disegna la mappa dei rischi del proprio quartiere. 5 domande di analisi.</p>
+            <a href="mappa-rischi-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-clipboard-check-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I · 11-14 anni</span>
+            <h3>Audit del Piano di Emergenza Scolastico</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>6-8 ore distribuite</span><span><i class="bi bi-people-fill me-1" aria-hidden="true"></i>gruppi di 4-5</span></div>
+            <p class="scheda-desc">Compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.</p>
+            <a href="audit-piano-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="fascia-titolo h4 mt-5">
+        <span class="fascia-icona s2"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i></span>
+        Scuola Secondaria di Secondo Grado (14-19 anni)
+      </h2>
+      <div class="row g-3 mb-2">
+        <div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-activity" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 14-19 anni</span>
+            <h3>Caso Studio: Amatrice 24 agosto 2016</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>3-4 ore + ricerca</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Ed. civica, Scienze, Storia</span></div>
+            <p class="scheda-desc">Analisi sistemica del terremoto del Centro Italia 2016: dati essenziali, 6 domande approfondite (fenomeno fisico, fattori predisponenti, risposta, criticità, lezione, riflessione personale).</p>
+            <a href="caso-amatrice-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-megaphone-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 14-19 anni</span>
+            <h3>Simulazione: Comunicazione di Crisi</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>90 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Italiano, Ed. civica</span></div>
+            <p class="scheda-desc">Lo studente è il responsabile comunicazione del Comune durante un'allerta arancione. Produce 3 testi: post social, messaggio Telegram, nota stampa. Vincoli e griglia valutazione.</p>
+            <a href="comunicazione-crisi-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-pencil-square" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · quinto anno</span>
+            <h3>5 Tracce per l'Esame di Stato</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>simulazione 6 ore</span><span><i class="bi bi-file-text me-1" aria-hidden="true"></i>Tipologia B + C</span></div>
+            <p class="scheda-desc">Tracce nello stile della prima prova (Beck, Ischia 2022, IT-alert, art. 2 D.Lgs. 1/2018, volontariato). 2 di Tipologia B, 3 di Tipologia C.</p>
+            <a href="traccia-esame-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-info mt-4">
         <p class="mb-0">
-          <i class="bi bi-tools me-2" aria-hidden="true"></i>
-          <strong>Altre schede in arrivo:</strong> Trova le coppie (infanzia), Cruciverba della sicurezza (primaria IV-V), Piano di emergenza familiare versione scuola (primaria), Mappa del rischio territoriale.
-          Se ti serve una scheda specifica per la tua classe, scrivici a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a> e la realizzeremo.
+          <i class="bi bi-envelope me-2" aria-hidden="true"></i>
+          <strong>Ti serve una scheda specifica?</strong> Se la tua classe ha bisogno di una scheda non presente in questa lista
+          (es. quiz su un rischio specifico, modulo di compito di realtà personalizzato), scrivici a
+          <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>:
+          la realizzeremo e la pubblicheremo qui per tutti.
         </p>
       </div>
 

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: La Mappa dei Rischi del Mio Territorio — Scuola Secondaria I grado</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di primo grado. Compito di indagine territoriale: mappare i rischi del proprio quartiere o paese.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .mr-tabella {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+    }
+    .mr-tabella th, .mr-tabella td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+    }
+    .mr-tabella th { background: #f0f4f8; color: var(--scheda-blu); font-weight: 700; }
+    .mr-tabella td { min-height: 2rem; height: 2rem; }
+    .mr-mappa {
+      border: 2px dashed var(--scheda-bordo);
+      border-radius: 8px;
+      min-height: 13rem;
+      padding: 0.5rem;
+      margin: 0.6rem 0;
+      background: #fcfcfc;
+      position: relative;
+    }
+    .mr-mappa::after {
+      content: "Disegna qui la mappa del tuo quartiere con i simboli dei rischi";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ced4da;
+      font-size: 0.95rem;
+      font-style: italic;
+      text-align: center;
+      width: 80%;
+    }
+    .mr-legenda {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      margin: 0.6rem 0;
+    }
+    .mr-leg-item {
+      padding: 0.3rem 0.5rem;
+      background: #f8f9fa;
+      border-radius: 6px;
+      border-left: 3px solid var(--scheda-blu);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Mappa dei Rischi — Secondaria I grado</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La Mappa dei Rischi del Mio Territorio</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Secondaria di Primo Grado (11-14 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 11-14 anni</span>
+      <span><strong>Durata:</strong> 90 min in classe + ricerca a casa</span>
+      <span><strong>Discipline:</strong> Geografia, Scienze, Ed. civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      Ogni territorio ha rischi diversi. Genzano si trova in <strong>area sismica 2B</strong>,
+      ai piedi di un <strong>vulcano quiescente</strong> (i Colli Albani), in una zona <strong>collinare</strong>
+      soggetta a frane superficiali. Il tuo compito è realizzare la <strong>mappa dei rischi del tuo quartiere
+      o del tuo paese</strong> usando le fonti istituzionali italiane.
+    </p>
+
+    <h2 class="scheda-h2">Step 1 — Cerca le fonti ufficiali</h2>
+    <p>Visita questi siti e prendi nota di cosa dicono per il tuo Comune:</p>
+    <table class="mr-tabella">
+      <tr><th style="width: 32%;">Fonte istituzionale</th><th style="width: 30%;">Cosa cercare</th><th>Trovato sì/no e cosa dice</th></tr>
+      <tr><td><strong>INGV — terremoti.ingv.it</strong></td><td>Terremoti recenti nei pressi del tuo Comune (zoom mappa)</td><td></td></tr>
+      <tr><td><strong>ISPRA — IdroGEO</strong> (idrogeo.isprambiente.it)</td><td>Frane (inventario IFFI) e alluvioni (PAI)</td><td></td></tr>
+      <tr><td><strong>DPC</strong> — protezionecivile.gov.it</td><td>Classificazione sismica del Comune</td><td></td></tr>
+      <tr><td><strong>EFFIS</strong> — effis.jrc.ec.europa.eu</td><td>Incendi boschivi degli ultimi 5 anni</td><td></td></tr>
+      <tr><td><strong>Comune di Genzano</strong></td><td>Piano di Emergenza Comunale</td><td></td></tr>
+    </table>
+
+    <h2 class="scheda-h2">Step 2 — Disegna la mappa</h2>
+    <p>Su un foglio bianco (o sulla griglia qui sotto) disegna il tuo quartiere/paese e segna con i simboli i rischi che hai trovato:</p>
+
+    <div class="mr-legenda">
+      <div class="mr-leg-item">⚠️ <strong>Frana</strong>: pendio instabile, smottamento</div>
+      <div class="mr-leg-item">🌊 <strong>Allagamento</strong>: zona dove l'acqua si ferma</div>
+      <div class="mr-leg-item">🔥 <strong>Incendio</strong>: bosco, sterpaglia</div>
+      <div class="mr-leg-item">🌋 <strong>Vulcanico</strong>: area Colli Albani</div>
+      <div class="mr-leg-item">⚡ <strong>Sismico</strong>: edificio non antisismico</div>
+      <div class="mr-leg-item">🚧 <strong>Antropico</strong>: depositi, strada pericolosa</div>
+      <div class="mr-leg-item">🏞️ <strong>Area sicura</strong>: punto di raccolta</div>
+      <div class="mr-leg-item">🚪 <strong>Uscita</strong>: via di fuga del quartiere</div>
+    </div>
+
+    <div class="mr-mappa"></div>
+
+    <h2 class="scheda-h2">Step 3 — Analisi (rispondi)</h2>
+
+    <div class="bol-domanda">
+      <h3>1. Quale è il <strong>rischio principale</strong> del tuo territorio? Perché?</h3>
+      <div class="bol-risposta" style="border: 1.5px solid #adb5bd; border-radius: 6px; padding: 0.4rem 0.6rem; min-height: 2.5rem; background: #fcfcfc; margin-top: 0.3rem;"></div>
+      <div class="bol-risposta" style="border: 1.5px solid #adb5bd; border-radius: 6px; padding: 0.4rem 0.6rem; min-height: 2.5rem; background: #fcfcfc; margin-top: 0.3rem;"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>2. Conoscevi questo rischio prima di fare la ricerca? Cosa ti ha sorpreso?</h3>
+      <div class="bol-risposta" style="border: 1.5px solid #adb5bd; border-radius: 6px; padding: 0.4rem 0.6rem; min-height: 2.5rem; background: #fcfcfc; margin-top: 0.3rem;"></div>
+      <div class="bol-risposta" style="border: 1.5px solid #adb5bd; border-radius: 6px; padding: 0.4rem 0.6rem; min-height: 2.5rem; background: #fcfcfc; margin-top: 0.3rem;"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>3. Hai individuato un <strong>punto critico</strong> (es. un argine, un edificio fragile, una strada in una scarpata)? Qual è?</h3>
+      <div class="bol-risposta" style="border: 1.5px solid #adb5bd; border-radius: 6px; padding: 0.4rem 0.6rem; min-height: 2.5rem; background: #fcfcfc; margin-top: 0.3rem;"></div>
+      <div class="bol-risposta" style="border: 1.5px solid #adb5bd; border-radius: 6px; padding: 0.4rem 0.6rem; min-height: 2.5rem; background: #fcfcfc; margin-top: 0.3rem;"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>4. Quale <strong>area di attesa</strong> del Comune useresti se vivi in quel punto? (Vedi cartografia su protezionecivilegenzano.it/cartografia/)</h3>
+      <div class="bol-risposta" style="border: 1.5px solid #adb5bd; border-radius: 6px; padding: 0.4rem 0.6rem; min-height: 2.5rem; background: #fcfcfc; margin-top: 0.3rem;"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>5. Quali <strong>azioni di prevenzione</strong> potrebbero ridurre il rischio? Pensa sia a livello individuale (cosa puoi fare tu) sia a livello collettivo (cosa dovrebbe fare il Comune).</h3>
+      <div class="bol-risposta" style="border: 1.5px solid #adb5bd; border-radius: 6px; padding: 0.4rem 0.6rem; min-height: 2.5rem; background: #fcfcfc; margin-top: 0.3rem;"></div>
+      <div class="bol-risposta" style="border: 1.5px solid #adb5bd; border-radius: 6px; padding: 0.4rem 0.6rem; min-height: 2.5rem; background: #fcfcfc; margin-top: 0.3rem;"></div>
+      <div class="bol-risposta" style="border: 1.5px solid #adb5bd; border-radius: 6px; padding: 0.4rem 0.6rem; min-height: 2.5rem; background: #fcfcfc; margin-top: 0.3rem;"></div>
+    </div>
+
+    <div style="margin-top: 1rem; padding: 0.8rem; background: #d1e7dd; border-radius: 8px; border-left: 4px solid var(--scheda-verde); font-size: 0.85rem;">
+      <strong style="color: var(--scheda-verde);">Per il docente:</strong> il compito può essere svolto in coppia o gruppi da 3.
+      Tempo stimato: 2 ore in classe + ~3 ore di ricerca a casa.
+      Valutazione consigliata: correttezza informazioni (40%), chiarezza grafica della mappa (25%),
+      qualità dell'analisi critica (25%), originalità delle proposte di prevenzione (10%).
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Mappa dei Rischi" · Secondaria I grado · rev. 2026</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>

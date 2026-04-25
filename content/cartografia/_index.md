@@ -105,5 +105,5 @@ Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che i
 ## Mappe esterne ufficiali
 
 - [AEGIS — Mappa Tempo Reale Regione Lazio](https://temporeale.regione.lazio.it/aegis/map/map2d)
-- [Piattaforma Radar Nazionale](https://mappe.protezionecivile.gov.it/it/mappe-rischi/piattaforma-radar/)
+- [Piattaforma Radar Nazionale](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/)
 - [Copernicus Emergency Management Service](https://mapping.emergency.copernicus.eu/)

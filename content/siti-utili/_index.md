@@ -33,7 +33,7 @@ In caso di emergenza, contatta sempre i numeri ufficiali per garantire un interv
 - [Meteo Aeronautica Militare](https://www.meteoam.it/it/home) — Fonte autorevole per le previsioni e i dati meteo sull'Italia
 - [Windy.com](https://www.windy.com/) — Mappe meteorologiche avanzate con modelli previsionali globali
 - [Meteoblue MeteoTV](https://www.meteoblue.com/en/weather/meteotv/show?slide=fiveDays&code=1bd73d) — Animazione satellitare e delle precipitazioni
-- [Piattaforma Radar Nazionale](https://mappe.protezionecivile.gov.it/it/mappe-rischi/piattaforma-radar/) — Monitoraggio delle precipitazioni in tempo reale
+- [Piattaforma Radar Nazionale](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/) — Monitoraggio delle precipitazioni in tempo reale
 - [AEGIS - Mappa Tempo Reale Regione Lazio](https://temporeale.regione.lazio.it/aegis/map/map2d) — Dati territoriali in tempo reale
 - [EUMETSAT View](https://view.eumetsat.int/) — Immagini satellitari in tempo reale del servizio meteorologico europeo
 - [ARPA Lazio](https://www.arpalazio.it/) — Monitoraggio qualità dell'aria, dell'acqua e altri fattori ambientali

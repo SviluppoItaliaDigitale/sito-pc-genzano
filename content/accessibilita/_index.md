@@ -42,7 +42,7 @@ La pagina [Strumenti in tempo reale](/strumenti/) raccoglie l'elenco completo de
 
 - **Windy.com** — mappa meteo. Presente in [Home](/), [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/). Alternativa: [windy.com](https://www.windy.com/?41.691,12.692,12).
 - **INGV Terremoti** — mappa e lista sismica Italia (ente pubblico di ricerca). Presente in [Home](/), [Rischio Sismico](/rischi-prevenzione/rischio-sismico/), [Strumenti](/strumenti/). Alternativa: [terremoti.ingv.it](https://terremoti.ingv.it/).
-- **Radar DPC** — radar nazionale precipitazioni (Dipartimento Protezione Civile, ente pubblico). Presente in [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/). Alternativa: [mappe.protezionecivile.it](https://mappe.protezionecivile.it/).
+- **Radar DPC** — radar nazionale precipitazioni (Dipartimento Protezione Civile, ente pubblico). Presente in [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/). Alternativa: [mappe.protezionecivile.gov.it/piattaforma-radar](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/).
 - **Blitzortung / Lightning Maps** — fulmini in tempo reale (rete volontaria internazionale). Presente in [Temporali Intensi](/rischi-prevenzione/temporali-intensi/), [Strumenti](/strumenti/). Alternativa: [map.blitzortung.org](https://map.blitzortung.org/).
 - **MeteoAM — Aeronautica Militare** — previsione meteo ufficiale italiana (ente pubblico, Ministero Difesa). Presente in [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/). Alternativa: [meteoam.it](https://www.meteoam.it/it/meteo-citta/genzano-di-roma).
 

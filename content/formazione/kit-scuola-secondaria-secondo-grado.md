@@ -270,7 +270,7 @@ Il territorio laziale è suddiviso in zone di allerta omogenee per caratteristic
 
 | Strumento | URL | Cosa mostra |
 |---|---|---|
-| Piattaforma Radar DPC | [mappe.protezionecivile.gov.it](https://mappe.protezionecivile.gov.it/it/mappe-rischi/piattaforma-radar/) | Precipitazioni in tempo reale |
+| Piattaforma Radar DPC | [mappe.protezionecivile.gov.it](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/) | Precipitazioni in tempo reale |
 | AEGIS Regione Lazio | [temporeale.regione.lazio.it](https://temporeale.regione.lazio.it/aegis/map/map2d) | Idrometri, pluviometri, dati meteo regionali |
 | INGV Terremoti | [terremoti.ingv.it](https://terremoti.ingv.it/) | Sismicità in tempo reale |
 | EUMETSAT | [view.eumetsat.int](https://view.eumetsat.int/) | Immagini satellitari |
