@@ -5,7 +5,7 @@ description: "Un opuscolo del Ministero della Salute, DEP Lazio e ACP spiega com
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-04-25-caldo-bambini-ministero-salute.webp"
 image_alt: "Bambino piccolo all'ombra che beve acqua, con cappellino e vestiti chiari leggeri, in una giornata di caldo estivo"
 scadenza: ""
 area: "Genzano di Roma"

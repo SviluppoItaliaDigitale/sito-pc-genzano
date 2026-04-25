@@ -5,7 +5,7 @@ description: "Un opuscolo del Ministero della Salute e del DEP Lazio spiega come
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2027-05-15-caldo-gravidanza-ministero-salute.webp"
 image_alt: "Donna incinta che beve un bicchiere d'acqua vicino a una finestra con tende abbassate, in una giornata di caldo estivo"
 scadenza: ""
 area: "Genzano di Roma"

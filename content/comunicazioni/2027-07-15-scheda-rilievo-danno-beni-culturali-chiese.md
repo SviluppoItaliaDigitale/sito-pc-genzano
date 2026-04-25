@@ -6,7 +6,7 @@ draft: true
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2027-07-15-scheda-rilievo-danno-beni-culturali-chiese.webp"
 scadenza: ""
 area: ""
 allegati: []
