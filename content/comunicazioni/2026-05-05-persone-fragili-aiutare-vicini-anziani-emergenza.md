@@ -84,7 +84,7 @@ Alcune esperienze di buon vicinato hanno adottato un semplice foglio affisso all
 - Farmaci abituali e allergie note
 - Eventuali disabilità o esigenze particolari
 
-Non è obbligatorio, ma per un soccorritore che entra in casa è un'informazione **preziosissima** in pochi secondi. Sul nostro sito trovi un riferimento alla scheda emergenza personale nel percorso [Abili a Proteggere — La Mia Scheda](/abili-a-proteggere/scheda-emergenza/index.html).
+Non è obbligatorio, ma per un soccorritore che entra in casa è un'informazione **preziosissima** in pochi secondi. Sul nostro sito trovi un riferimento alla scheda emergenza personale nel percorso [Abili a Proteggere — La Mia Scheda](/abili-a-proteggere/scheda-emergenza/).
 
 ## Il ruolo del volontariato
 

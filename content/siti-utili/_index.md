@@ -76,4 +76,4 @@ In caso di emergenza, contatta sempre i numeri ufficiali per garantire un interv
 
 - [Piattaforma E-Learning](/formazionepc/) — Formazione a distanza riservata ai volontari del Gruppo
 - [Quiz di Protezione Civile](/quizpc/) — Metti alla prova le tue conoscenze con il quiz interattivo
-- [Giochi della Sicurezza](/giochi/index.html) — Giochi educativi per infanzia, scuola primaria e ragazzi
+- [Giochi della Sicurezza](/giochi/) — Giochi educativi per infanzia, scuola primaria e ragazzi
