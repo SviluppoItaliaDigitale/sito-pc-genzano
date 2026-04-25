@@ -24,6 +24,23 @@
         </div>
       </div>
 
+      {{/* ── INDICE DELLA PAGINA (frontmatter: toc: true) ── */}}
+      {{ if .Params.toc }}
+      <div id="indice" class="article-toc mb-4" tabindex="-1" aria-label="Indice della pagina">
+        <details open>
+          <summary class="article-toc-summary">
+            <span class="article-toc-title h6 fw-bold mb-0">
+              <i class="bi bi-list-ul me-1" aria-hidden="true"></i>In questa pagina
+            </span>
+            <i class="bi bi-chevron-down article-toc-chevron ms-auto" aria-hidden="true"></i>
+          </summary>
+          <div class="article-toc-body">
+            {{ .TableOfContents }}
+          </div>
+        </details>
+      </div>
+      {{ end }}
+
       <article>{{ .Content }}</article>
 
       {{/* Link correlati prevenzione */}}

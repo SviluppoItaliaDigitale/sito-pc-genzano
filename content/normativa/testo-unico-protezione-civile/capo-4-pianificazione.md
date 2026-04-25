@@ -1,8 +1,9 @@
 ---
+
 title: "Capo IV — Pianificazione di protezione civile (articoli 22-23)"
 description: "Il quarto Capo del Codice della Protezione Civile disciplina la pianificazione di emergenza: piani nazionali, regionali e comunali, funzioni di supporto, linee guida."
+toc: true
 ---
-
 Il **Capo IV** del Codice della Protezione Civile è il più breve — due soli articoli, dal 22 al 23 — ma contiene uno dei concetti **più importanti** del sistema: la **pianificazione di protezione civile**. Un Servizio Nazionale senza piani è un'orchestra senza spartito. I piani sono lo strumento che traduce la pianificazione in azione ripetibile, verificabile, aggiornabile.
 
 ## Articolo 22 — La pianificazione e i suoi livelli

@@ -1,9 +1,10 @@
 ---
+
 title: "Temporali Intensi"
 description: "Norme di comportamento in caso di temporali violenti, fulmini, grandine e piogge intense."
 weight: 5
+toc: true
 ---
-
 I temporali intensi sono fenomeni meteorologici caratterizzati da forti piogge, fulmini, grandine e raffiche di vento improvvise. Possono verificarsi rapidamente e con grande violenza, soprattutto nei mesi estivi e durante i cambi di stagione.
 
 ## Fulmini in tempo reale

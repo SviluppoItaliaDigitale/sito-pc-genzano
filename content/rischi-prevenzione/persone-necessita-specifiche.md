@@ -1,9 +1,10 @@
 ---
+
 title: "Persone con Necessità Specifiche"
 description: "Indicazioni per la sicurezza di anziani, persone con disabilità, bambini e altre persone in condizioni di fragilità durante le emergenze."
 weight: 9
+toc: true
 ---
-
 In ogni emergenza, le persone con necessità specifiche sono le più vulnerabili. Pianificare in anticipo le loro esigenze è fondamentale per garantirne la sicurezza. Questa pagina raccoglie indicazioni pratiche per chi si prende cura di persone fragili e per le persone stesse.
 
 ## Chi sono le persone con necessità specifiche

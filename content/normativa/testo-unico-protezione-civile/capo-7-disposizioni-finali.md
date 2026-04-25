@@ -1,8 +1,9 @@
 ---
+
 title: "Capo VII — Disposizioni transitorie e finali (articoli 43-50)"
 description: "Il settimo e ultimo Capo del Codice della Protezione Civile: abrogazioni, copertura finanziaria, tutela dei lavoratori, transizione dalla Legge 225/1992, entrata in vigore."
+toc: true
 ---
-
 Il **Capo VII** del Codice della Protezione Civile (articoli 43-50) è la sezione **conclusiva** del decreto legislativo. Raccoglie le **disposizioni transitorie, finanziarie e finali**: serve a chiudere il cerchio giuridico, a raccordare il Codice con la normativa preesistente e a garantire che il passaggio dalla **Legge 225/1992** al nuovo Codice avvenga senza vuoti.
 
 Sono articoli meno "narrati" rispetto ai Capi precedenti, ma contengono punti **concreti** che riguardano i volontari, i lavoratori, il finanziamento e l'applicazione effettiva del Codice.

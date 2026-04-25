@@ -1,12 +1,13 @@
 ---
+
 title: "Crea il tuo Piano di Emergenza Familiare"
 description: "Crea e stampa il tuo piano di emergenza familiare personalizzato. Tutti i dati restano solo sul tuo computer."
 layout: "single"
 aliases:
   - /pianofamiliare.html
   - /pianofamiliare/
+toc: true
 ---
-
 La sicurezza parte da te e dalla tua famiglia. Dedica pochi minuti a compilare questo modulo: lo strumento genererà un piano personalizzato che potrai stampare e conservare in un luogo sicuro. **Tutti i dati inseriti restano solo sul tuo computer** — non vengono inviati né salvati da nessuna parte.
 
 ## Perché serve un Piano Familiare

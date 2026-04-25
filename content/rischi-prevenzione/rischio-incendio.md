@@ -1,9 +1,10 @@
 ---
+
 title: "Rischio Incendi Boschivi"
 description: "Cosa fare per prevenire gli incendi boschivi e come comportarsi in caso di emergenza sul territorio di Genzano di Roma."
 weight: 3
+toc: true
 ---
-
 L'incendio boschivo è un fuoco che si sviluppa in aree vegetate (boschi, macchia mediterranea, terreni incolti) propagandosi rapidamente grazie al vento, alla siccità e alla vegetazione secca. La maggior parte degli incendi è causata da comportamenti umani imprudenti o, peggio, dolosi.
 
 ## Perché è rilevante sul nostro territorio
