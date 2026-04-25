@@ -223,9 +223,11 @@ Insegnate ai bambini a memorizzare il numero **112**.
 
 ## Schede fotocopiabili per la classe
 
-<div class="alert alert-info" role="note">
-<p class="mb-1"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Come leggere questa sezione:</strong></p>
-<p class="mb-0">Le schede qui descritte sono <strong>spunti operativi</strong> pensati per il docente che vuole realizzarle e fotocopiarle per la classe. <strong>Non</strong> sono file già pronti da scaricare: sono traccia e contenuti con cui costruire la scheda con carta e matite, Word, PowerPoint, Canva o qualsiasi strumento familiare. Per alcune schede potresti voler chiedere aiuto ai colleghi di arte o sostegno. Se hai bisogno di supporto per la realizzazione grafica, scrivici: possiamo valutare insieme produzioni future in versione stampabile.</p>
+<div class="alert alert-success" role="note">
+<p class="mb-1"><i class="bi bi-printer-fill me-2" aria-hidden="true"></i><strong>Schede pronte da stampare</strong></p>
+<p class="mb-0">Alcune schede sono già pronte: aprile, premi <kbd>Stampa</kbd> del browser e ottieni un foglio A4 perfetto con intestazione istituzionale.
+👉 <strong><a href="/formazione/schede-stampabili/">Vai all'elenco delle schede stampabili</a></strong> (in continuo arricchimento).
+Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui il docente può costruire la scheda in Word, Canva o a mano. Se ti serve una scheda specifica già pronta scrivici a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>: la realizziamo.</p>
 </div>
 
 
@@ -251,7 +253,10 @@ Il foglio contiene le tre cifre **1 1 2** in stampatello maiuscolo grande (carat
 
 Consegna: *"Questa è Tina la tartaruga. Quando trema la terra, Tina si fa piccola piccola e si protegge con il guscio. Colora Tina e disegnala mentre si ripara."*
 
-### Scheda 5 — Vero o falso con i colori
+### Scheda 5 — Vero o falso con i colori ✅ stampabile
+
+> 👉 [Apri la scheda "Vero o Falso con le Faccine" pronta per la stampa](/formazione/schede-stampabili/vero-falso-infanzia/)
+
 
 Consegna: *"Se la frase è giusta, colora di verde. Se è sbagliata, colora di rosso."*
 
@@ -453,7 +458,7 @@ Obiettivo: il bambino capisce che al 112 bisogna dire **cosa è successo** e **d
 
 ### Schede fotocopiabili aggiuntive
 
-**Scheda 6 — Il labirinto dell'uscita**: disegno di un corridoio di scuola con ostacoli (pallone, borsa, giocattolo) e in fondo il cartello verde dell'uscita. Il bambino con la matita fa il percorso giusto, senza passare sopra gli ostacoli. *Obiettivo*: interiorizzare il "non correre, evita gli ostacoli".
+**Scheda 6 — Il labirinto dell'uscita** ✅ **stampabile** ([apri la scheda pronta](/formazione/schede-stampabili/labirinto-uscita/)): disegno di un corridoio di scuola con ostacoli (pallone, borsa, giocattolo) e in fondo il cartello verde dell'uscita. Il bambino con la matita fa il percorso giusto, senza passare sopra gli ostacoli. *Obiettivo*: interiorizzare il "non correre, evita gli ostacoli".
 
 **Scheda 7 — Trova le coppie**: 8 immagini da collegare con una linea — cartello di uscita/direzione uscita, estintore/fuoco, tartaruga/tavolo, mano/altra mano (il compagno), pioggia/ombrello in casa, terremoto/mani sulla testa, telefono/numero 112, maestra/fila. *Obiettivo*: associazione oggetto-azione.
 

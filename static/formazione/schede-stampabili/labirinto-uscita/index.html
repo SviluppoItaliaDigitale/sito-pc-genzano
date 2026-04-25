@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Il Labirinto dell'Uscita — Scuola dell'Infanzia</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola dell'Infanzia. Labirinto dell'evacuazione: il bambino traccia il percorso fino al cartello dell'uscita evitando ostacoli.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .lab-griglia {
+      display: grid;
+      grid-template-columns: repeat(11, 50px);
+      grid-template-rows: repeat(9, 50px);
+      gap: 0;
+      background: #fff;
+      border: 3px solid var(--scheda-blu);
+      border-radius: 6px;
+      margin: 0.8rem auto;
+      width: fit-content;
+    }
+    .lab-cella {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #dee2e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: #fff;
+    }
+    .lab-cella.muro { background: #495057; }
+    .lab-cella.start {
+      background: #cfe2ff;
+      font-size: 1.8rem;
+    }
+    .lab-cella.end {
+      background: #d1e7dd;
+      font-size: 1.8rem;
+    }
+    .lab-cella.ostacolo {
+      background: #fff3cd;
+      font-size: 1.5rem;
+    }
+    .lab-cella.fuoco {
+      background: #f8d7da;
+      font-size: 1.5rem;
+    }
+    .lab-legenda {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .lab-legenda-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.6rem;
+      background: #f8f9fa;
+      border-radius: 12px;
+    }
+    .lab-legenda-icon {
+      font-size: 1.2rem;
+    }
+    @media print {
+      .lab-griglia {
+        grid-template-columns: repeat(11, 1.4cm);
+        grid-template-rows: repeat(9, 1.4cm);
+      }
+      .lab-cella {
+        width: 1.4cm;
+        height: 1.4cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Il Labirinto dell'Uscita — Infanzia</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il Labirinto dell'Uscita</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (4-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 4-6 anni</span>
+      <span><strong>Durata:</strong> 10-15 min</span>
+      <span><strong>Servono:</strong> una matita o un pennarello colorato</span>
+    </div>
+
+    <p class="scheda-intro">
+      <strong>La maestra ti dice:</strong> «Suona la sirena di evacuazione! Il bambino 🧒 deve uscire dalla scuola
+      e raggiungere il <strong>cartello verde dell'uscita</strong> 🚪.»
+      Disegna con la matita il percorso, <strong>senza passare</strong> sopra agli ostacoli (gli zaini 🎒,
+      i banchi rovesciati e il fuoco 🔥). <strong>Non correre</strong>: il percorso giusto è quello che evita gli ostacoli.
+    </p>
+
+    <div class="lab-griglia" role="img" aria-label="Labirinto 11 colonne per 9 righe. Bambino in alto a sinistra, uscita in basso a destra.">
+      <!-- Riga 1 -->
+      <div class="lab-cella start">🧒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 2 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 3 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella fuoco">🔥</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <!-- Riga 4 -->
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 5 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 6 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 7 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 8 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 9 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella end">🚪</div>
+    </div>
+
+    <div class="lab-legenda">
+      <span class="lab-legenda-item"><span class="lab-legenda-icon">🧒</span> Bambino (parti da qui)</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon">🚪</span> Uscita (arriva qui)</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon">🎒</span> Zaino (non passare)</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon">🔥</span> Fuoco (pericolo)</span>
+      <span class="lab-legenda-item">⬛ Muro</span>
+    </div>
+
+    <h2 class="scheda-h2">Quando hai finito il labirinto, ricorda:</h2>
+    <ul style="padding-left: 1.3rem; line-height: 1.7;">
+      <li>Quando suona l'allarme <strong>cammina, non correre</strong>.</li>
+      <li>Tieni per mano un compagno e segui la maestra.</li>
+      <li>Non tornare indietro a prendere lo zaino.</li>
+      <li>Se vedi il fuoco 🔥, <strong>cerca un'altra strada</strong>.</li>
+    </ul>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il Labirinto dell'Uscita" · Infanzia · rev. 2026</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>
