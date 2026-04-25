@@ -7,13 +7,6 @@ aliases:
   - /mappe/
 ---
 
-<div class="alert alert-warning d-flex align-items-start gap-2" role="alert" style="border-left:6px solid #b45309;">
-<i class="bi bi-cone-striped fs-4 mt-1" aria-hidden="true"></i>
-<div>
-<strong>Mappa interattiva in fase di sviluppo.</strong> L'inserimento e la verifica dei pin sulla cartografia online è ancora in corso e <strong>possono esserci errori di posizionamento</strong>. Per indicazioni operative ufficiali fai sempre riferimento al <a href="/area-download/">PDF del Piano di Emergenza Comunale</a> e alle tabelle elencate qui sotto. Le segnalazioni di errori sono benvenute: <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.
-</div>
-</div>
-
 In questa sezione puoi consultare la **mappa interattiva** e le tabelle riassuntive con tutti i punti strategici individuati dal Piano di Emergenza Comunale. **Conoscere questi luoghi è fondamentale per la sicurezza di tutti i cittadini.**
 
 <div class="card border-primary mb-4">
