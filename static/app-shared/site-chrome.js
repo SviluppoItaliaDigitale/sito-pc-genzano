@@ -91,7 +91,7 @@
                     '<svg class="icon icon-xs"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg>' +
                   '</a>' +
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-formazione"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Corsi e percorsi</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Corsi e percorsi scuola</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/glossario/" role="menuitem"><span>Glossario</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/schede-stampabili/" role="menuitem"><span>Schede Stampabili</span></a></li>' +
