@@ -534,6 +534,23 @@ La convenzione tra la scuola e il Gruppo va sottoscritta prima dell'avvio delle 
 
 ---
 
+## Schede fotocopiabili pronte per la stampa
+
+<div class="alert alert-success" role="note">
+<p class="mb-1"><i class="bi bi-printer-fill me-2" aria-hidden="true"></i><strong>Schede già pronte per la stampa</strong></p>
+<p class="mb-0">Tre schede sono già pronte: apri, premi <kbd>Stampa</kbd> del browser (Ctrl+P o Cmd+P) e ottieni un foglio A4 perfetto con intestazione istituzionale. Pensate per la scuola secondaria di secondo grado.
+👉 <strong><a href="/formazione/schede-stampabili/">Vai all'elenco delle schede stampabili</a></strong> (in continuo arricchimento).
+Per richieste specifiche: <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
+</div>
+
+Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado:
+
+- 👉 [**Caso studio Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria2/) — analisi sistemica del terremoto del Centro Italia 2016: dati essenziali, 6 domande approfondite (fenomeno fisico, fattori predisponenti, risposta, criticità, lezione, riflessione personale).
+- 👉 [**Comunicazione di crisi**](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/) — lo studente è il responsabile comunicazione del Comune durante un'allerta arancione. Produce 3 testi: post social, messaggio Telegram, nota stampa. Vincoli e griglia di valutazione.
+- 👉 [**Tracce per la prima prova d'esame**](/formazione/schede-stampabili/traccia-esame-secondaria2/) — tracce nello stile della prima prova di Stato (Beck, Ischia 2022, IT-alert, art. 2 D.Lgs. 1/2018, volontariato). 2 di Tipologia B, 3 di Tipologia C.
+
+---
+
 ## Compito di realtà — Progetto di classe
 
 In alternativa al PCTO (o a integrazione), proponi un **Progetto di classe** come compito di realtà valutabile in Educazione Civica.
