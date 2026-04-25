@@ -550,6 +550,16 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 - 👉 [**Comunicazione di crisi**](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/) — lo studente è il responsabile comunicazione del Comune durante un'allerta arancione. Produce 3 testi: post social, messaggio Telegram, nota stampa. Vincoli e griglia di valutazione.
 - 👉 [**Tracce per la prima prova d'esame**](/formazione/schede-stampabili/traccia-esame-secondaria2/) — tracce nello stile della prima prova di Stato (Beck, Ischia 2022, IT-alert, art. 2 D.Lgs. 1/2018, volontariato). 2 di Tipologia B, 3 di Tipologia C.
 
+**7 schede curriculari trasversali** (diritto, scienze, economia, etica, inglese, ed. civica):
+
+- 👉 [**Il Codice della Protezione Civile (D.Lgs. 1/2018)**](/formazione/schede-stampabili/codice-pc-secondaria2/) — analisi degli articoli chiave (artt. 1, 2, 6, 12, 18, 32-35), tabella delle autorità di PC per livello, 5 domande di applicazione. *(diritto, ed. civica)*
+- 👉 [**Tettonica delle placche e magnitudo**](/formazione/schede-stampabili/placche-tettoniche-secondaria2/) — placche, faglie, magnitudo Mw vs Richter, scala Mercalli, formula del momento sismico, 5 domande di applicazione. *(scienze della Terra, fisica)*
+- 👉 [**Cambiamento climatico e rischi mediterranei**](/formazione/schede-stampabili/climate-change-secondaria2/) — IPCC, dati italiani, 6 eventi recenti, mitigazione vs adattamento, costruzione grafico, 5 domande. *(scienze, geografia)*
+- 👉 [**Economia del rischio: prevenire o ricostruire**](/formazione/schede-stampabili/economia-rischio-secondaria2/) — rapporto 1:5 prevenzione/ricostruzione, costi reali italiani, formula BCR, 5 domande con quesito etico finale. *(economia, statistica)*
+- 👉 [**Il caso L'Aquila 2009 — comunicazione di crisi**](/formazione/schede-stampabili/caso-aquila-secondaria2/) — il processo alla Commissione Grandi Rischi, dilemmi etici, principio di precauzione, 5 domande con dilemma personale. *(diritto, etica)*
+- 👉 [**English for Civil Protection**](/formazione/schede-stampabili/english-civil-protection-secondaria2/) — glossario tecnico inglese, lettura di un articolo internazionale (EU Civil Protection Mechanism), comprehension, role-play emergency call. *(inglese L2)*
+- 👉 [**Diventare volontario di PC**](/formazione/schede-stampabili/percorso-volontariato-secondaria2/) — requisiti, specialità, 7 step del percorso, diritti e doveri (D.Lgs. 1/2018), mini-progetto personale. *(ed. civica, orientamento)*
+
 ---
 
 ## Compito di realtà — Progetto di classe

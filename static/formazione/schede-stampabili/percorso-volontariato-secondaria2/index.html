@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Diventare volontario di Protezione Civile (Secondaria II)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Secondo Grado. Il percorso per diventare volontario adulto di Protezione Civile: requisiti, formazione, specialità, progetto personale.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .testo-info {
+      padding: 0.7rem 0.95rem; background: #f4f7fb;
+      border-left: 4px solid var(--scheda-blu); border-radius: 0 8px 8px 0;
+      margin: 0.5rem 0; font-size: 0.92rem; line-height: 1.55;
+    }
+    .testo-info p { margin: 0 0 0.4rem 0; }
+    .testo-info strong { color: var(--scheda-blu); }
+
+    .requisiti-griglia {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 0.4rem 0;
+    }
+    .req-card {
+      padding: 0.55rem 0.75rem; background: #fff;
+      border: 2px solid var(--scheda-blu); border-radius: 8px;
+    }
+    .req-card .titolo {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.3rem;
+    }
+    .req-card .titolo .ico {
+      width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+    }
+    .req-card .corpo { font-size: 0.88rem; line-height: 1.4; }
+
+    .specialita-tabella {
+      width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.86rem;
+    }
+    .specialita-tabella th, .specialita-tabella td {
+      border: 1.5px solid var(--scheda-bordo); padding: 0.45rem 0.65rem; vertical-align: top;
+    }
+    .specialita-tabella th { background: var(--scheda-blu); color: #fff; font-weight: 700; }
+    .specialita-tabella tbody tr:nth-child(even) { background: #f4f7fb; }
+
+    .timeline {
+      display: grid; gap: 0.45rem; margin: 0.4rem 0;
+    }
+    .timeline-step {
+      display: grid; grid-template-columns: 4rem 1fr; gap: 0.7rem;
+      padding: 0.5rem 0.65rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+    }
+    .timeline-step .step {
+      font-weight: 700; color: #fff; background: var(--scheda-blu);
+      border-radius: 6px; text-align: center; padding: 0.4rem 0;
+      font-size: 0.85rem; align-self: center;
+    }
+    .timeline-step .descrizione { font-size: 0.88rem; line-height: 1.45; }
+    .timeline-step .descrizione strong { color: var(--scheda-blu); }
+
+    .progetto-box {
+      background: #fff8e6; border: 2px solid var(--scheda-oro);
+      border-radius: 10px; padding: 0.7rem 0.95rem;
+      margin: 0.4rem 0;
+    }
+    .progetto-box .titolo { font-weight: 700; color: #664d03; margin-bottom: 0.3rem; }
+    .progetto-box .campo {
+      display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.4rem;
+    }
+    .progetto-box .label { font-weight: 700; color: #664d03; flex: 0 0 8rem; font-size: 0.85rem; }
+    .progetto-box .riga { flex: 1; border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+    .progetto-box .corpo-righe { display: grid; gap: 0.4rem; }
+    .progetto-box .corpo-righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+
+    .istruzioni-docente {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Diventare volontario PC — Secondaria II</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Come diventare volontario di Protezione Civile</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Secondo Grado</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 17-19 anni (triennio, prossimo alla maggiore età)</span>
+      <span><strong>Obiettivo:</strong> conoscere il percorso reale per il volontariato PC adulto</span>
+      <span><strong>Discipline:</strong> ed. civica, orientamento, cittadinanza attiva</span>
+    </div>
+
+    <p class="scheda-intro">
+      Il <strong>volontariato di Protezione Civile</strong> non è un'attività improvvisata: prevede
+      formazione, certificazioni, dispositivi di protezione, attestati. Ma è alla portata di chiunque abbia
+      <strong>più di 18 anni</strong> e voglia dedicare alcune ore al mese alla comunità.
+      Questa scheda ti spiega come.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>I requisiti — chi può diventare volontario</h2></div>
+    <div class="requisiti-griglia">
+      <div class="req-card">
+        <div class="titolo"><span class="ico">1</span><span>Maggiore età</span></div>
+        <div class="corpo"><strong>18 anni compiuti</strong>. Per i minorenni esistono percorsi formativi (es. Junior PC) ma non operativi.</div>
+      </div>
+      <div class="req-card">
+        <div class="titolo"><span class="ico">2</span><span>Idoneità sanitaria</span></div>
+        <div class="corpo">Visita medica con il <strong>medico competente</strong> del Gruppo. Esclusi solo casi specifici (es. malattie gravi non compensate).</div>
+      </div>
+      <div class="req-card">
+        <div class="titolo"><span class="ico">3</span><span>Domanda di iscrizione</span></div>
+        <div class="corpo">Modulo presso il Gruppo Comunale, fotocopia documento, codice fiscale, autorizzazione trattamento dati.</div>
+      </div>
+      <div class="req-card">
+        <div class="titolo"><span class="ico">4</span><span>Formazione di base</span></div>
+        <div class="corpo">Corso di <strong>16-24 ore</strong> sui principi PC, normativa, comunicazione, dispositivi. Gratuito.</div>
+      </div>
+    </div>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Le specialità — cosa puoi fare</h2></div>
+    <table class="specialita-tabella">
+      <thead>
+        <tr><th>Specialità</th><th>Cosa fa</th><th>Formazione richiesta</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Operatore base</td><td>Logistica, accoglienza, distribuzione, supporto</td><td>Corso base 16-24h</td></tr>
+        <tr><td>AIB (antincendio boschivo)</td><td>Spegnimento incendi boschivi, bonifica</td><td>+ Corso AIB 40h, idoneità fisica</td></tr>
+        <tr><td>Radiocomunicazioni</td><td>Gestione radio in emergenza, link COC-squadre</td><td>+ Corso comunicazioni 24h, eventualmente patente OM</td></tr>
+        <tr><td>Sanitario</td><td>Primo soccorso, supporto al 118</td><td>+ BLS-D 8h o brevetto soccorritore 120h</td></tr>
+        <tr><td>Soccorso speleo / fluviale</td><td>Ricerca dispersi, recupero in ambiente specifico</td><td>+ Specializzazioni di alto livello, lunghe</td></tr>
+        <tr><td>Cartografia / GIS</td><td>Mappe operative, supporto pianificazione</td><td>+ Competenze informatiche / topografiche</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sez-titolo"><span class="num">3</span><h2>Il percorso — passo dopo passo</h2></div>
+    <div class="timeline">
+      <div class="timeline-step">
+        <span class="step">1</span>
+        <span class="descrizione"><strong>Contatto iniziale</strong> con il Gruppo Comunale (mail, telefono, sede). Richiesta info.</span>
+      </div>
+      <div class="timeline-step">
+        <span class="step">2</span>
+        <span class="descrizione"><strong>Colloquio conoscitivo</strong> con il Coordinatore: motivazioni, disponibilità, aspettative.</span>
+      </div>
+      <div class="timeline-step">
+        <span class="step">3</span>
+        <span class="descrizione"><strong>Iscrizione formale</strong>: domanda + documenti + visita medica.</span>
+      </div>
+      <div class="timeline-step">
+        <span class="step">4</span>
+        <span class="descrizione"><strong>Corso base</strong> (16-24 ore distribuite in 4-6 weekend). Esame finale.</span>
+      </div>
+      <div class="timeline-step">
+        <span class="step">5</span>
+        <span class="descrizione"><strong>Iscrizione all'elenco regionale</strong> dei volontari PC. Tessera, divisa, DPI assegnati.</span>
+      </div>
+      <div class="timeline-step">
+        <span class="step">6</span>
+        <span class="descrizione"><strong>Servizio operativo</strong>: turni, esercitazioni mensili, eventuali interventi reali. Aggiornamenti annuali obbligatori.</span>
+      </div>
+      <div class="timeline-step">
+        <span class="step">7</span>
+        <span class="descrizione"><strong>Specializzazione</strong> (opzionale): scegli un percorso (AIB, sanitario, radio, ecc.).</span>
+      </div>
+    </div>
+
+    <div class="sez-titolo"><span class="num">4</span><h2>Diritti e doveri del volontario (D.Lgs. 1/2018)</h2></div>
+    <div class="testo-info">
+      <p><strong>Diritti</strong>: copertura assicurativa per attività e infortuni, mantenimento del posto di lavoro
+      durante interventi (con rimborso al datore), formazione gratuita, dispositivi di protezione individuale.</p>
+      <p><strong>Doveri</strong>: rispondere all'attivazione (compatibilmente con la vita personale), aggiornamento
+      formativo, rispetto della catena di comando, riservatezza, comportamento istituzionale.</p>
+      <p><strong>Cosa NON è</strong>: il volontariato PC <strong>non è obbligatorio</strong>, <strong>non è retribuito</strong>,
+      non sostituisce il volontariato di altre associazioni (CRI, scout, ecc.) ma può integrarsi con esse.</p>
+    </div>
+
+    <div class="sez-titolo"><span class="num">5</span><h2>Il tuo progetto — pensaci da subito</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">
+      Dopo la maggiore età, vorresti diventare volontario PC? Compila questo mini-progetto:
+    </p>
+    <div class="progetto-box">
+      <div class="titolo">📝 Mini-progetto personale</div>
+      <div class="campo"><span class="label">Nome:</span><span class="riga"></span></div>
+      <div class="campo"><span class="label">Quando entreresti:</span><span class="riga"></span></div>
+      <div class="campo"><span class="label">Disponibilità (h/mese):</span><span class="riga"></span></div>
+      <div class="campo"><span class="label">Specialità preferita:</span><span class="riga"></span></div>
+      <p style="margin: 0.4rem 0 0.3rem 0; font-weight: 700; color: #664d03; font-size: 0.85rem;">Perché vuoi farlo? (3-4 frasi)</p>
+      <div class="corpo-righe">
+        <span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span>
+      </div>
+      <p style="margin: 0.4rem 0 0.3rem 0; font-weight: 700; color: #664d03; font-size: 0.85rem;">Quali competenze già hai (lingue, sport, scout, primo soccorso…)?</p>
+      <div class="corpo-righe">
+        <span class="r"></span><span class="r"></span>
+      </div>
+    </div>
+
+    <div class="istruzioni-docente">
+      <strong>Per il/la docente:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Tono</strong>: questa scheda non è un "reclutamento" — è informativa. Il volontariato deve nascere da motivazione personale, non da pressione. Valorizzare anche risposte tipo "no, non fa per me ma rispetto chi lo fa".</li>
+        <li><strong>Estensione di realtà</strong>: organizzare un incontro con un volontario del Gruppo PC Genzano. Contatto: <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</li>
+        <li><strong>Differenze territoriali</strong>: i requisiti minimi sono nazionali (D.Lgs. 1/2018), ma ogni Gruppo Comunale può aggiungere requisiti specifici. Verifica sempre con il Gruppo locale.</li>
+        <li><strong>Servizio Civile Universale</strong>: alternativa retribuita di 12 mesi, anche presso enti PC. Cfr. <a href="https://www.scelgoilserviziocivile.gov.it/" target="_blank" rel="noopener">scelgoilserviziocivile.gov.it</a>.</li>
+        <li><strong>Risorse</strong>: <a href="/diventa-volontario/">Pagina "Diventa Volontario"</a> del sito.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Diventare volontario PC" · Secondaria II · ed. civica · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

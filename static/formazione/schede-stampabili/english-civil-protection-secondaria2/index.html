@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: English for Civil Protection (Secondaria II)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Secondo Grado. Lessico tecnico inglese della Protezione Civile, lettura di un articolo internazionale, traduzione e role-play.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .glossario {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin: 0.4rem 0;
+    }
+    .glossario .voce {
+      padding: 0.4rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      font-size: 0.88rem;
+    }
+    .glossario .voce .en { font-weight: 700; color: var(--scheda-blu); }
+    .glossario .voce .it { color: #495057; font-style: italic; }
+    .glossario .voce .ipa { font-size: 0.78rem; color: var(--scheda-grigio); font-family: "Courier New", monospace; }
+
+    .articolo-en {
+      padding: 0.85rem 1rem; background: #f4f7fb;
+      border: 2px solid var(--scheda-blu); border-radius: 10px;
+      margin: 0.5rem 0;
+    }
+    .articolo-en .testata {
+      border-bottom: 2px solid var(--scheda-blu); padding-bottom: 0.3rem; margin-bottom: 0.5rem;
+    }
+    .articolo-en .testata .fonte {
+      font-size: 0.78rem; color: var(--scheda-grigio); text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .articolo-en .testata h3 {
+      margin: 0.2rem 0 0 0; font-size: 1.05rem; color: var(--scheda-blu); line-height: 1.3;
+    }
+    .articolo-en .testata .meta { font-size: 0.78rem; color: var(--scheda-grigio); font-style: italic; }
+    .articolo-en .corpo {
+      font-size: 0.92rem; line-height: 1.6; color: #212529; lang: en;
+    }
+    .articolo-en .corpo p { margin: 0 0 0.5rem 0; }
+    .articolo-en .corpo strong { color: var(--scheda-blu); }
+
+    .domanda-card {
+      padding: 0.55rem 0.75rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      margin: 0.4rem 0;
+    }
+    .domanda-card .header { display: flex; gap: 0.5rem; margin-bottom: 0.3rem; }
+    .domanda-card .num-q {
+      width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .domanda-card .testo { font-size: 0.9rem; line-height: 1.4; flex: 1; }
+    .domanda-card .testo strong { color: var(--scheda-blu); }
+    .domanda-card .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .domanda-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+
+    .role-play-box {
+      background: #fff8e6; border: 2px dashed var(--scheda-oro);
+      border-radius: 10px; padding: 0.7rem 0.95rem;
+      margin: 0.4rem 0;
+    }
+    .role-play-box .titolo { font-weight: 700; color: #664d03; margin-bottom: 0.3rem; }
+    .role-play-box .scenario { font-size: 0.92rem; line-height: 1.5; margin-bottom: 0.4rem; }
+    .role-play-box .scenario strong { color: #664d03; }
+    .role-play-box .ruoli { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+    .role-play-box .ruolo {
+      padding: 0.4rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-oro); border-radius: 6px;
+      font-size: 0.88rem;
+    }
+    .role-play-box .ruolo strong { color: #664d03; }
+
+    .istruzioni-docente {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">English for Civil Protection — Secondaria II</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">English for Civil Protection — il lessico delle emergenze</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Secondo Grado</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 14-19 anni · livello B1-B2</span>
+      <span><strong>Obiettivo:</strong> lessico tecnico PC in inglese, comprensione del testo, role-play</span>
+      <span><strong>Discipline:</strong> inglese L2, ed. civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      In emergenze internazionali, l'<strong>inglese</strong> è la lingua-veicolo per coordinare aiuti
+      tra paesi. Conoscere il lessico essenziale della <em>civil protection</em> è utile per chi sceglie
+      il volontariato internazionale, per leggere fonti scientifiche, per seguire le emergenze nei media
+      anglofoni.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>Glossary — vocabolario tecnico</h2></div>
+    <div class="glossario">
+      <div class="voce"><span class="en">Civil Protection</span><br><span class="it">Protezione Civile</span> <span class="ipa">/ˈsɪv.ɪl prəˈtek.ʃən/</span></div>
+      <div class="voce"><span class="en">Earthquake / Quake</span><br><span class="it">Terremoto / sisma</span> <span class="ipa">/ˈɜː.θ.kweɪk/</span></div>
+      <div class="voce"><span class="en">Aftershock</span><br><span class="it">Replica sismica</span> <span class="ipa">/ˈɑːf.tə.ʃɒk/</span></div>
+      <div class="voce"><span class="en">Magnitude</span><br><span class="it">Magnitudo</span> <span class="ipa">/ˈmæɡ.nɪ.tjuːd/</span></div>
+      <div class="voce"><span class="en">Wildfire</span><br><span class="it">Incendio boschivo</span> <span class="ipa">/ˈwaɪld.faɪ.ər/</span></div>
+      <div class="voce"><span class="en">Flood / Flooding</span><br><span class="it">Alluvione / allagamento</span> <span class="ipa">/flʌd/</span></div>
+      <div class="voce"><span class="en">Landslide</span><br><span class="it">Frana</span> <span class="ipa">/ˈlænd.slaɪd/</span></div>
+      <div class="voce"><span class="en">Evacuation</span><br><span class="it">Evacuazione</span> <span class="ipa">/ɪˌvæk.juˈeɪ.ʃən/</span></div>
+      <div class="voce"><span class="en">Shelter</span><br><span class="it">Rifugio / riparo</span> <span class="ipa">/ˈʃel.tər/</span></div>
+      <div class="voce"><span class="en">First responder</span><br><span class="it">Primo soccorritore</span></div>
+      <div class="voce"><span class="en">Volunteer</span><br><span class="it">Volontario</span> <span class="ipa">/ˌvɒl.ənˈtɪər/</span></div>
+      <div class="voce"><span class="en">Emergency drill</span><br><span class="it">Esercitazione di emergenza</span></div>
+      <div class="voce"><span class="en">Drop, Cover, Hold On</span><br><span class="it">Abbassati, riparati, tieniti (sisma)</span></div>
+      <div class="voce"><span class="en">Early warning</span><br><span class="it">Allerta precoce</span></div>
+    </div>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Reading — international civil protection</h2></div>
+
+    <div class="articolo-en">
+      <div class="testata">
+        <span class="fonte">Educational reconstruction · ECHO style</span>
+        <h3>EU Civil Protection Mechanism activated for floods in Greece</h3>
+        <span class="meta">Brussels, 8 September 2023</span>
+      </div>
+      <div class="corpo" lang="en">
+        <p>Following devastating <strong>flooding</strong> in central Greece caused by Storm Daniel, the European Commission has <strong>activated</strong> the EU Civil Protection Mechanism at the request of the Greek authorities. Several Member States, including <strong>Italy</strong>, France and Germany, are sending <strong>rescue teams</strong>, helicopters and water pumps to support local <strong>first responders</strong>.</p>
+
+        <p>"This is what European solidarity looks like in practice," said the Commissioner for Crisis Management. "When a Member State faces a disaster beyond its national capacity, the Mechanism allows us to coordinate <strong>cross-border assistance</strong> within hours."</p>
+
+        <p>The Mechanism, established in 2001 and expanded after the 2017 Mediterranean <strong>wildfires</strong>, includes a strategic reserve known as <strong>rescEU</strong>: aircraft for fighting fires, medical evacuation planes, field hospitals, and emergency stockpiles.</p>
+
+        <p>In Greece, more than 4,000 residents have been <strong>evacuated</strong>. Italian volunteers from regional <strong>civil protection</strong> services are operating in the Thessaly region, where damages to roads, bridges and farmland are still being assessed.</p>
+      </div>
+    </div>
+
+    <div class="sez-titolo"><span class="num">3</span><h2>Comprehension questions</h2></div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">1</span><span class="testo">What event triggered the activation of the EU Civil Protection Mechanism?</span></div>
+      <div class="righe"><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">2</span><span class="testo">Which countries are sending help, according to the article?</span></div>
+      <div class="righe"><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">3</span><span class="testo">What is <em>rescEU</em>? List 2 of its components mentioned in the text.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">4</span><span class="testo">Translate this sentence into Italian: "When a Member State faces a disaster beyond its national capacity, the Mechanism allows us to coordinate cross-border assistance within hours."</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="sez-titolo"><span class="num">4</span><h2>Role-play — emergency call in English</h2></div>
+
+    <div class="role-play-box">
+      <div class="titolo">🎭 Scenario</div>
+      <div class="scenario">
+        You are a tourist in Italy during a hiking trip in the <strong>Castelli Romani</strong>. A friend
+        twisted his ankle on a steep path and cannot walk. Call <strong>112</strong> in English. The
+        operator (a classmate) will guide you.
+      </div>
+      <div class="ruoli">
+        <div class="ruolo">
+          <strong>You (tourist)</strong>: dial 112, give your name, location (use a landmark!), describe the injury, mention if anyone speaks Italian, follow instructions.
+        </div>
+        <div class="ruolo">
+          <strong>Operator</strong>: ask "<em>What's your emergency? Where are you exactly? Can you give a landmark? Is the patient breathing? Stay on the line.</em>"
+        </div>
+      </div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">5</span><span class="testo"><strong>Reflection</strong>: in some countries, all civil protection vocabulary is in English (e.g. NATO countries). What are the advantages of having a shared international vocabulary in emergency response?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="istruzioni-docente">
+      <strong>Per il/la docente · Tracce:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>1) Storm Daniel / flooding in central Greece. 2) Italy, France, Germany. 3) rescEU = aircraft, medical evac planes, field hospitals, emergency stockpiles. 4) "Quando uno Stato Membro affronta un disastro oltre la sua capacità nazionale, il Meccanismo ci consente di coordinare assistenza transfrontaliera entro poche ore."</li>
+        <li><strong>Role-play</strong>: 8-10 min in coppie. Il docente può registrare e correggere pronuncia/grammatica. Per il 112 vero, ricordare che a Genzano è in italiano (operatori multilingue su richiesta).</li>
+        <li>5) Vantaggi: nessun ritardo dovuto a traduzione, lessico standardizzato evita errori critici (es. "drop" universale per il sisma), interoperabilità con squadre internazionali. Limite: rischio di esclusione di chi non parla inglese.</li>
+        <li><strong>Risorse</strong>: <a href="https://civil-protection-knowledge-network.europa.eu/" target="_blank" rel="noopener">EU CPKN</a>, <a href="https://www.fema.gov/" target="_blank" rel="noopener">FEMA</a>, <a href="https://www.gov.uk/government/organisations/civil-contingencies-secretariat" target="_blank" rel="noopener">UK Cabinet Office</a>.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "English for Civil Protection" · Secondaria II · inglese · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

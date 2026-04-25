@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Tettonica delle placche e magnitudo (Secondaria II)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Secondo Grado. Tettonica delle placche, faglie, magnitudo Mw vs scala Richter, scala Mercalli, applicazione al territorio italiano.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .testo-info {
+      padding: 0.7rem 0.95rem; background: #f4f7fb;
+      border-left: 4px solid var(--scheda-blu); border-radius: 0 8px 8px 0;
+      margin: 0.5rem 0; font-size: 0.92rem; line-height: 1.55;
+    }
+    .testo-info p { margin: 0 0 0.4rem 0; }
+    .testo-info p:last-child { margin-bottom: 0; }
+    .testo-info strong { color: var(--scheda-blu); }
+
+    .scale-tabella {
+      width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.86rem;
+    }
+    .scale-tabella th, .scale-tabella td {
+      border: 1.5px solid var(--scheda-bordo); padding: 0.4rem 0.55rem; vertical-align: top;
+    }
+    .scale-tabella th { background: var(--scheda-blu); color: #fff; font-weight: 700; }
+    .scale-tabella td.num { text-align: center; font-family: "Courier New", monospace; font-weight: 700; }
+
+    .formula {
+      background: #eaf2fb; border: 2px solid var(--scheda-blu);
+      border-radius: 8px; padding: 0.7rem 0.95rem;
+      margin: 0.4rem 0; text-align: center;
+      font-family: "Courier New", monospace;
+      font-size: 1rem; font-weight: 700; color: var(--scheda-blu);
+    }
+    .formula .legenda {
+      font-family: -apple-system, sans-serif; font-weight: 400;
+      color: #495057; font-size: 0.82rem; margin-top: 0.4rem;
+      text-align: left;
+    }
+
+    .domanda-card {
+      padding: 0.55rem 0.75rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      margin: 0.4rem 0;
+    }
+    .domanda-card .header { display: flex; gap: 0.5rem; margin-bottom: 0.3rem; }
+    .domanda-card .num-q {
+      width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .domanda-card .testo { font-size: 0.9rem; line-height: 1.4; flex: 1; }
+    .domanda-card .testo strong { color: var(--scheda-blu); }
+    .domanda-card .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .domanda-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+    .domanda-card .calcolo {
+      background: #f4f7fb; border-left: 3px solid var(--scheda-blu);
+      padding: 0.4rem 0.6rem; border-radius: 0 4px 4px 0;
+      font-size: 0.82rem; color: #ced4da; font-style: italic;
+      min-height: 3rem; margin: 0.3rem 0 0 2rem;
+    }
+    .domanda-card .calcolo::before { content: "Spazio per il calcolo:"; }
+
+    .istruzioni-docente {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Tettonica e magnitudo — Secondaria II</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Tettonica delle placche e magnitudo dei terremoti</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Secondo Grado</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 14-17 anni (biennio + 3°)</span>
+      <span><strong>Obiettivo:</strong> comprendere la sismologia di base applicata al territorio italiano</span>
+      <span><strong>Discipline:</strong> scienze della Terra, fisica, matematica</span>
+    </div>
+
+    <p class="scheda-intro">
+      I terremoti non sono eventi casuali: derivano dal <strong>movimento delle placche tettoniche</strong>
+      che compongono la litosfera. Capire questa dinamica permette di comprendere perché l'Italia è uno
+      dei Paesi sismici d'Europa e perché gli scienziati misurano i sismi con scale diverse.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>Tettonica delle placche — quadro essenziale</h2></div>
+    <div class="testo-info">
+      <p>La <strong>litosfera</strong> (crosta + parte superiore del mantello) è suddivisa in <strong>placche</strong>
+      che si muovono di alcuni centimetri all'anno sopra l'astenosfera plastica. I tipi di margine sono:</p>
+      <p>• <strong>Convergente</strong> (subduzione): una placca scorre sotto l'altra. Esempio: Pacifico (Cintura di Fuoco).<br>
+      • <strong>Divergente</strong> (espansione): le placche si allontanano. Esempio: dorsale medio-atlantica.<br>
+      • <strong>Trasforme</strong> (faglie): scorrimento orizzontale. Esempio: faglia di San Andreas.</p>
+      <p>L'<strong>Italia</strong> si trova al margine convergente tra <strong>placca africana</strong> (che spinge verso
+      nord) e <strong>placca euroasiatica</strong>. Questo collisione genera l'orogenesi appenninica e l'attività
+      sismica diffusa lungo la dorsale appenninica.</p>
+    </div>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Magnitudo Mw vs Richter — formula e differenze</h2></div>
+    <div class="testo-info">
+      <p>La <strong>scala Richter</strong> (M<sub>L</sub>, 1935) misurava l'ampiezza massima delle onde su sismografi
+      Wood-Anderson. Funziona bene per terremoti locali piccoli/medi, ma <strong>satura</strong> sopra magnitudo 7.</p>
+      <p>La <strong>magnitudo momento</strong> (M<sub>w</sub>, 1979) misura il <em>momento sismico scalare</em> M<sub>0</sub>:</p>
+    </div>
+    <div class="formula">
+      M<sub>w</sub> = (2/3) · log₁₀(M<sub>0</sub>) − 10,7
+      <div class="legenda">
+        dove M<sub>0</sub> = μ · A · D · μ = rigidità della roccia (~3·10¹⁰ N/m²) · A = area della faglia · D = scorrimento medio.<br>
+        Mw è preferita oggi perché non satura e ha base fisica solida.
+      </div>
+    </div>
+
+    <div class="testo-info">
+      <p><strong>Regola pratica</strong>: a un aumento di 1 punto di magnitudo corrisponde un aumento di
+      <strong>circa 32 volte l'energia</strong> rilasciata. Quindi un Mw 7 rilascia ~32 × 32 = ~1.024 volte l'energia
+      di un Mw 5.</p>
+    </div>
+
+    <div class="sez-titolo"><span class="num">3</span><h2>Magnitudo (oggettiva) vs Intensità (effetti)</h2></div>
+    <table class="scale-tabella">
+      <thead>
+        <tr><th>Aspetto</th><th>Magnitudo (Mw)</th><th>Intensità (Mercalli MCS, I-XII)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Cosa misura</td><td>Energia totale rilasciata alla sorgente</td><td>Effetti osservati su persone/cose in un luogo</td></tr>
+        <tr><td>Strumento</td><td>Sismometro</td><td>Osservazione diretta + questionari</td></tr>
+        <tr><td>Valore</td><td>Unico per evento</td><td>Diverso da luogo a luogo (mappa di intensità)</td></tr>
+        <tr><td>Scala</td><td>Logaritmica continua (Mw 0-10+)</td><td>Discreta in numeri romani (I = non avvertito, XII = totale distruzione)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sez-titolo"><span class="num">4</span><h2>Domande di applicazione</h2></div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">1</span><span class="testo">Perché l'Italia è sismica? Spiega in 5-6 righe il legame tra movimento delle placche e attività sismica appenninica.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">2</span><span class="testo">Calcola: un terremoto di Mw 6 rilascia quante volte l'energia di uno di Mw 4?</span></div>
+      <div class="calcolo"></div>
+      <div class="righe"><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">3</span><span class="testo">Il terremoto di L'Aquila 2009 ebbe Mw 6.3 e intensità VIII-IX MCS al capoluogo. Spiega perché magnitudo e intensità non coincidono e da cosa dipende l'intensità.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">4</span><span class="testo">La scala Richter è ancora usata? Se sì, quando? Se no, perché è stata sostituita?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">5</span><span class="testo">L'INGV gestisce la rete di monitoraggio nazionale. Visita <a href="https://www.ingv.it/" target="_blank" rel="noopener">ingv.it</a> e annota: quanti sismografi ci sono in Italia? Qual è l'ultima scossa registrata in Lazio?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="istruzioni-docente">
+      <strong>Per il/la docente · Tracce:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>1) Placca africana spinge verso N contro l'euroasiatica. La compressione causa orogenesi appenninica + attivazione di faglie distensive (estensione tirrenica). Le faglie attive lungo la dorsale appenninica generano i sismi più forti.</li>
+        <li>2) ΔM = 2 → 32² ≈ <strong>1.024 volte</strong>.</li>
+        <li>3) Magnitudo è oggettiva (energia in sorgente); Intensità dipende da: distanza dall'epicentro, tipo di suolo, qualità delle costruzioni. L'Aquila era vicina e su terreni di amplificazione.</li>
+        <li>4) Non più usata dagli scienziati per i sismi medio-grandi (satura). Sopravvive nei media perché familiare. ENtv e bollettini scientifici usano Mw.</li>
+        <li>5) ~600 sismografi gestiti da INGV. Risposta variabile.</li>
+        <li><strong>Estensione</strong>: collegamento con <a href="/formazione/schede-stampabili/vulcanologia-castelli-secondaria/">Vulcanologia Castelli</a> (Secondaria I) per la dimensione vulcanologica laziale.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Tettonica e magnitudo" · Secondaria II · scienze · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>
