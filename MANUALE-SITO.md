@@ -1307,31 +1307,61 @@ draft: false
 
 ### 4.4 — Aggiungere la pagina al menu principale
 
-Se la pagina deve apparire nella navbar, modifica `hugo.toml`:
+Il menu principale è organizzato come **mega-menu** (Opzione A) in `hugo.toml`: **6 voci di primo livello**, di cui 3 dropdown. La struttura è documentata in dettaglio in `.claude/rules/04-hugo-architecture.md` ma per l'uso quotidiano basta sapere questo.
+
+**Struttura attuale:**
+
+| Voce | Tipo | Contenuto |
+|---|---|---|
+| Home | diretta | `/` |
+| Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare |
+| Formazione ▾ | dropdown | Corsi e percorsi scuola, Giochi, Glossario, Schede Stampabili |
+| Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo, Normativa |
+| Comunicazioni | diretta | `/comunicazioni/` |
+| Contatti | diretta | `/contatti/` |
+
+**Per aggiungere una voce a un dropdown esistente** (caso più comune):
+
+```toml
+[[menus.main]]
+  name = "Nuova Voce"
+  url = "/nuova-voce/"
+  parent = "per-il-cittadino"   # oppure: formazione, volontariato
+  weight = 7                    # ordine all'interno del dropdown
+```
+
+**Per aggiungere una voce diretta di primo livello** (raro: solo se è un'azione fondamentale):
 
 ```toml
 [[menus.main]]
   name = "Nome nel menu"
   url = "/url-pagina/"
-  weight = 10
+  weight = 5                    # ordine fra le 6 voci di primo livello
 ```
 
-`weight` determina l'ordine (più basso = più a sinistra). Valori attuali:
+**Limite di sicurezza**: non superare 6-7 voci di primo livello per non rompere l'usabilità mobile.
 
-| Peso | Voce |
-|---|---|
-| 1 | Home |
-| 2 | Chi Siamo |
-| 3 | Rischi e Prevenzione |
-| 4 | Allerte Meteo |
-| 5 | Comunicazioni |
-| 6 | Formazione |
-| 7 | Giochi |
-| 8 | Diventa Volontario |
-| 9 | Contatti |
+**Pagine statiche (non Hugo)**: lo stesso menu è iniettato sulle 97 pagine HTML in `static/giochi/`, `static/quizpc/`, `static/formazionepc/`, `static/formazione/schede-stampabili/` tramite `static/app-shared/site-chrome.js`. Se modifichi `hugo.toml` e vuoi che il menu nuovo appaia anche lì, **aggiorna in parallelo `site-chrome.js`** (la struttura è la stessa, è una stringa JavaScript concatenata).
 
-Per inserire una voce tra due esistenti, aumenta il peso di quelle che devono stare a
-destra.
+### 4.4.1 — Aggiungere l'indice della pagina (TOC)
+
+Per pagine lunghe (oltre 8-10 H2 o oltre ~500 righe Markdown) aggiungi nel frontmatter:
+
+```yaml
+toc: true
+```
+
+Hugo genera automaticamente un indice cliccabile con badge numerati `01`, `02`, `03`… che porta alle sezioni `##` e `###`. Il bottone "Torna in cima" si trasforma in "Torna all'indice".
+
+Il TOC funziona sia su `single.html` che su `list.html` (sezioni con `_index.md`). Pagine attualmente con TOC: tutte le 26 elencate in `04-hugo-architecture.md` (Formazione + 4 kit, Glossario, Piani, 9 sotto-rischi, Normativa + 7 Capi).
+
+Non attivare `toc: true` su pagine con meno di 4 H2: l'indice diventa visivamente sproporzionato.
+
+### 4.4.2 — Bottone "Facile da leggere" e slim-header
+
+Lo slim-header in alto a destra contiene un **bottone giallo "Facile da leggere"** che porta a `/facile-da-leggere/` (versione semplificata del sito per persone con difficoltà di lettura). È visibile su ogni pagina, sia Hugo che statica. Il colore giallo (`#ffd60a` su blu `#003366`) è scelto per essere immediatamente riconoscibile come supporto accessibilità — non modificarlo senza valutare l'impatto WCAG.
+
+Sotto il bottone "Area Volontari" sono presenti i social. Il navbar-brand "Comune di Genzano di Roma" a sinistra è stato rimosso (era duplicato dalla prima voce della link-list); il riferimento al Comune resta nella link-list di enti istituzionali (Comune, DPC, Regione Lazio).
 
 Se la pagina deve apparire nel **footer**, usa `[[menus.footer]]` invece di `[[menus.main]]`.
 
