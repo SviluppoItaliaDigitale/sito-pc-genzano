@@ -10,7 +10,7 @@ Il **Capo I** del Codice della Protezione Civile (articoli da 1 a 13) è la sezi
 
 Il **Servizio Nazionale della Protezione Civile** (SNPC) è definito come un **servizio di pubblica utilità** che tutela **la vita, l'integrità fisica, i beni, gli insediamenti, gli animali e l'ambiente** dai danni o dal pericolo di danni derivanti da **eventi calamitosi di origine naturale o derivanti dall'attività dell'uomo**.
 
-L'articolo 1 chiarisce che le disposizioni del Codice costituiscono **principi fondamentali** in una materia di **legislazione concorrente** tra Stato e Regioni. Significa che il quadro statale è il minimo comune, ma le Regioni possono aggiungere norme proprie — come fa la Regione Lazio con la L.R. 22/2019.
+L'articolo 1 chiarisce che le disposizioni del Codice costituiscono **principi fondamentali** in una materia di **legislazione concorrente** tra Stato e Regioni. Significa che il quadro statale è il minimo comune, ma le Regioni possono aggiungere norme proprie — come fa la Regione Lazio con la [L.R. 26 febbraio 2014, n. 2](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9264&sv=vigente) "Sistema integrato regionale di protezione civile".
 
 ## Articolo 2 — Attività di protezione civile
 

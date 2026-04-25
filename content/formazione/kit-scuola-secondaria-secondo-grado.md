@@ -918,6 +918,7 @@ Domande-chiave:
 - [Piano di Emergenza Comunale](/piano-emergenza/) — Struttura del piano
 - [Piano di Emergenza Familiare](/piano-familiare/) — Modello compilabile
 - [Giochi della Sicurezza — Ragazzi](/giochi/ragazzi/) — 10 giochi per la fascia 11-14 (ok anche primo biennio)
+- [Stop Disasters! — Simulatore ONU UNDRR](https://www.stopdisastersgame.org/game/) — Simulazione gratuita in italiano: 5 scenari (terremoto, alluvione, tsunami, uragano, incendio) con budget limitato. Ottimo come attività introduttiva al **Progetto C** (campagna di comunicazione del rischio) o come riflessione sul rapporto fra prevenzione strutturale e non strutturale.
 - [Chi siamo](/chi-siamo/) — Il Gruppo Comunale di Genzano
 - [Diventa Volontario](/diventa-volontario/) — Informazioni sull'iscrizione
 - [Rapporti IPCC](https://www.ipcc.ch/) — Panel intergovernativo sui cambiamenti climatici

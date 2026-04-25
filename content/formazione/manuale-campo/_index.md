@@ -46,7 +46,7 @@ Il manuale si fonda su cinque principi operativi, validi in qualsiasi emergenza:
 - **Manuale da Campo** — protezione civile intercomunale lombarda, 2010 (ispirazione e impianto originale)
 - **Codice della Protezione Civile** — D.Lgs. 2 gennaio 2018, n. 1: vedi [la nostra sintesi](/normativa/testo-unico-protezione-civile/)
 - **Direttiva PCM 30 aprile 2021** — Indirizzi per la predisposizione dei piani di protezione civile ai diversi livelli territoriali
-- **Legge Regionale Lazio 22/2019** — Sistema integrato di protezione civile regionale
+- [**Legge Regionale Lazio 26 febbraio 2014, n. 2**](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9264&sv=vigente) — Sistema integrato regionale di protezione civile
 - **Standard UNHCR** per le aree di accoglienza (ripresi al capitolo 2)
 - **Piano Comunale di Protezione Civile di Genzano di Roma** — vedi [pagina dedicata](/piano-emergenza/)
 
