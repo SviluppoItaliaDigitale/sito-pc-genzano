@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trova il Cartello — Giochi Piccoli Esploratori</title>
-  <meta name="description" content="Tina ti chiede di trovare un cartello: tocca quello giusto tra quattro. Gioco educativo per bambini dai 3 ai 6 anni.">
+  <meta name="description" content="Tina ti chiede di trovare un cartello: tocca quello giusto tra quattro. 12 cartelli in 2 round. Gioco educativo per bambini dai 3 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -13,6 +13,18 @@
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
   <style>
+    .level-badge {
+      display: inline-block; background: var(--inf-blu); color: #fff;
+      padding: .35rem .9rem; border-radius: 999px;
+      font-weight: 800; font-size: 1rem; margin-bottom: .8rem;
+    }
+    .round-up {
+      text-align: center; padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #fff8d6, #ffe4b5);
+      border: 4px solid #F4B700; border-radius: 22px;
+    }
+    .round-up .stelle { font-size: 2.5rem; line-height: 1; margin-bottom: .5rem; }
+    .round-up .titolo { color: var(--inf-blu); font-weight: 800; font-size: 1.6rem; margin-bottom: .3rem; }
     .tina-fumetto {
       background: #fff; border: 3px solid var(--inf-blu, #003366);
       border-radius: 22px; padding: 1rem 1.2rem;
@@ -85,6 +97,9 @@
     </div>
 
     <div class="inf-card" id="game-card">
+      <div class="text-center">
+        <span class="level-badge" id="level-badge">Round 1 di 2</span>
+      </div>
       <div class="progress-dots" id="progress"></div>
       <div class="tina-fumetto" id="tina-fumetto" aria-live="polite">
         <span aria-hidden="true">🐢</span>
@@ -94,9 +109,18 @@
       <div id="feedback" class="text-center mt-3 h5" aria-live="polite" style="min-height: 1.5em"></div>
     </div>
 
+    <div id="round-up" class="inf-card hide">
+      <div class="round-up">
+        <div class="stelle">⭐⭐⭐</div>
+        <div class="titolo" id="round-up-titolo">Round 1 superato!</div>
+        <p class="mb-3">Pronto per altri 6 cartelli più difficili?</p>
+        <button id="next-round" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-right"></i> Round successivo</button>
+      </div>
+    </div>
+
     <div id="end" class="inf-card inf-end hide">
       <div class="bravi">Bravissimo!</div>
-      <p class="h5 mb-3">Hai trovato tutti i cartelli!</p>
+      <p class="h5 mb-3">Hai trovato tutti i 12 cartelli!</p>
       <p class="text-muted small">I cartelli ci dicono cosa fare e a cosa fare attenzione.</p>
       <div class="attestato-inject my-3"></div>
       <div class="d-flex flex-wrap justify-content-center gap-2">
@@ -116,46 +140,61 @@
   (function () {
     'use strict';
 
-    // Catalogo cartelli: 12 opzioni con forma di base
+    // Catalogo cartelli: 16 opzioni (4 nuove)
     var CATALOGO = {
-      fuoco:    { glyph: '\uD83D\uDD25', sfondo: 'sfondo-giallo', nome: 'il fuoco' },
-      alta:     { glyph: '\u26A1',       sfondo: 'sfondo-giallo', nome: 'l\'alta tensione (la corrente elettrica)' },
-      scivolo:  { glyph: '\u26A0\uFE0F', sfondo: 'sfondo-giallo', nome: 'attenzione: pavimento scivoloso' },
-      fumo:     { glyph: '\uD83D\uDEAD', sfondo: 'sfondo-rosso',  nome: 'vietato fumare' },
-      entrare:  { glyph: '\uD83D\uDEAB', sfondo: 'sfondo-rosso',  nome: 'vietato entrare' },
-      ascensore:{ glyph: '\uD83D\uDEC8', sfondo: 'sfondo-rosso',  nome: 'vietato usare l\'ascensore' },
-      casco:    { glyph: '\u26D1\uFE0F', sfondo: 'sfondo-blu',    nome: 'mettere il casco' },
-      guanti:   { glyph: '\uD83E\uDDE4', sfondo: 'sfondo-blu',    nome: 'mettere i guanti' },
-      croce:    { glyph: '\u2795',       sfondo: 'sfondo-verde',  nome: 'il primo soccorso' },
-      raccolta: { glyph: '\uD83D\uDC65', sfondo: 'sfondo-verde',  nome: 'il punto di raccolta' },
-      uscita:   { glyph: '\uD83D\uDEAA', sfondo: 'sfondo-uscita', nome: 'l\'uscita di emergenza' },
-      estintore:{ glyph: '\uD83E\uDDEF', sfondo: 'sfondo-vvf',    nome: 'l\'estintore per spegnere il fuoco' }
+      fuoco:     { glyph: '\uD83D\uDD25', sfondo: 'sfondo-giallo', nome: 'il fuoco' },
+      alta:      { glyph: '\u26A1',         sfondo: 'sfondo-giallo', nome: 'l\'alta tensione (la corrente elettrica)' },
+      scivolo:   { glyph: '\u26A0\uFE0F',   sfondo: 'sfondo-giallo', nome: 'attenzione: pavimento scivoloso' },
+      caduta:    { glyph: '\u2757',         sfondo: 'sfondo-giallo', nome: 'attenzione al rischio di caduta' },
+      fumo:      { glyph: '\uD83D\uDEAD', sfondo: 'sfondo-rosso',  nome: 'vietato fumare' },
+      entrare:   { glyph: '\uD83D\uDEAB', sfondo: 'sfondo-rosso',  nome: 'vietato entrare' },
+      ascensore: { glyph: '\uD83D\uDEC8', sfondo: 'sfondo-rosso',  nome: 'vietato usare l\'ascensore' },
+      mangiare:  { glyph: '\uD83C\uDF54', sfondo: 'sfondo-rosso',  nome: 'vietato mangiare e bere' },
+      casco:     { glyph: '\u26D1\uFE0F', sfondo: 'sfondo-blu',    nome: 'mettere il casco' },
+      guanti:    { glyph: '\uD83E\uDDE4', sfondo: 'sfondo-blu',    nome: 'mettere i guanti' },
+      mascherina:{ glyph: '\uD83D\uDE37', sfondo: 'sfondo-blu',    nome: 'mettere la mascherina' },
+      croce:     { glyph: '\u2795',         sfondo: 'sfondo-verde',  nome: 'il primo soccorso' },
+      raccolta:  { glyph: '\uD83D\uDC65', sfondo: 'sfondo-verde',  nome: 'il punto di raccolta' },
+      uscita:    { glyph: '\uD83D\uDEAA', sfondo: 'sfondo-uscita', nome: 'l\'uscita di emergenza' },
+      estintore: { glyph: '\uD83E\uDDEF', sfondo: 'sfondo-vvf',    nome: 'l\'estintore per spegnere il fuoco' },
+      vvf:       { glyph: '\uD83D\uDE92', sfondo: 'sfondo-vvf',    nome: 'i vigili del fuoco' }
     };
 
-    var DOMANDE = [
+    // 12 domande in 2 round — round 1 piu' facile, round 2 piu' difficile
+    var DOMANDE_ROUND_1 = [
       { target: 'uscita',    testo: 'Tocca il cartello che indica dove si esce in emergenza.' },
-      { target: 'estintore', testo: 'Tocca il cartello dell\'estintore per spegnere il fuoco.' },
       { target: 'fuoco',     testo: 'Tocca il cartello che avvisa del pericolo di incendio.' },
       { target: 'casco',     testo: 'Tocca il cartello che dice di mettere il casco.' },
       { target: 'fumo',      testo: 'Tocca il cartello dove è vietato fumare.' },
-      { target: 'ascensore', testo: 'Tocca il cartello che dice di non prendere l\'ascensore.' },
       { target: 'croce',     testo: 'Tocca il cartello che indica il primo soccorso.' },
+      { target: 'estintore', testo: 'Tocca il cartello dell\'estintore per spegnere il fuoco.' }
+    ];
+    var DOMANDE_ROUND_2 = [
+      { target: 'ascensore', testo: 'Tocca il cartello che dice di non prendere l\'ascensore.' },
       { target: 'raccolta',  testo: 'Tocca il cartello del punto dove ci si raduna tutti insieme.' },
       { target: 'alta',      testo: 'Tocca il cartello che avvisa della corrente elettrica.' },
-      { target: 'scivolo',   testo: 'Tocca il cartello che avvisa di stare attenti perché il pavimento è scivoloso.' }
+      { target: 'scivolo',   testo: 'Tocca il cartello che avvisa di stare attenti perché il pavimento è scivoloso.' },
+      { target: 'mascherina',testo: 'Tocca il cartello che dice di mettere la mascherina.' },
+      { target: 'vvf',       testo: 'Tocca il cartello dei vigili del fuoco.' }
     ];
+    var ROUNDS = [DOMANDE_ROUND_1, DOMANDE_ROUND_2];
 
     var cartelliEl = document.getElementById('cartelli');
     var domandaEl = document.getElementById('domanda');
     var feedbackEl = document.getElementById('feedback');
     var progressEl = document.getElementById('progress');
     var endEl = document.getElementById('end');
+    var roundUpEl = document.getElementById('round-up');
+    var roundUpTitolo = document.getElementById('round-up-titolo');
+    var levelBadge = document.getElementById('level-badge');
     var gameCard = document.getElementById('game-card');
     var restartBtn = document.getElementById('restart');
+    var nextRoundBtn = document.getElementById('next-round');
 
     var round = 0;
     var errors = 0;
     var domande = [];
+    var roundIdx = 0;
 
     function shuffle(arr) {
       var a = arr.slice();
@@ -166,14 +205,21 @@
       return a;
     }
 
-    function start() {
-      domande = shuffle(DOMANDE).slice(0, 6);
+    function avviaRound() {
+      domande = shuffle(ROUNDS[roundIdx]);
       round = 0;
-      errors = 0;
       endEl.classList.add('hide');
+      roundUpEl.classList.add('hide');
       gameCard.classList.remove('hide');
+      levelBadge.textContent = 'Round ' + (roundIdx + 1) + ' di ' + ROUNDS.length;
       renderProgress();
       showRound();
+    }
+
+    function start() {
+      roundIdx = 0;
+      errors = 0;
+      avviaRound();
     }
 
     function renderProgress() {
@@ -186,7 +232,7 @@
     }
 
     function showRound() {
-      if (round >= domande.length) { finish(); return; }
+      if (round >= domande.length) { fineRound(); return; }
       renderProgress();
       var q = domande[round];
       domandaEl.textContent = q.testo;
@@ -231,18 +277,35 @@
       }
     }
 
+    function fineRound() {
+      if (roundIdx < ROUNDS.length - 1) {
+        gameCard.classList.add('hide');
+        roundUpEl.classList.remove('hide');
+        roundUpTitolo.textContent = 'Round ' + (roundIdx + 1) + ' superato!';
+        if (window.AudioSintetico){
+          window.AudioSintetico.tono({freq:523,durata:.15});
+          setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.15}); },180);
+        }
+      } else {
+        finish();
+      }
+    }
+
     function finish() {
       gameCard.classList.add('hide');
+      roundUpEl.classList.add('hide');
       endEl.classList.remove('hide');
       if (window.AudioSintetico) {
         window.AudioSintetico.tono({ freq: 523, durata: 0.2 });
         setTimeout(function () { window.AudioSintetico.tono({ freq: 659, durata: 0.2 }); }, 200);
         setTimeout(function () { window.AudioSintetico.tono({ freq: 784, durata: 0.3 }); }, 400);
       }
-      var punti = Math.max(1, domande.length - errors);
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('trova-cartello', punti, domande.length, '#end');
+      var totale = ROUNDS.reduce(function(s,r){ return s + r.length; }, 0);
+      var punti = Math.max(1, totale - errors);
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('trova-cartello', punti, totale, '#end');
     }
 
+    nextRoundBtn.addEventListener('click', function(){ roundIdx++; avviaRound(); });
     restartBtn.addEventListener('click', start);
     start();
   })();

@@ -113,10 +113,13 @@
     </nav>
     <div class="inf-home">
       <h1>Il Cielo di Oggi</h1>
-      <p>Guarda che tempo fa e tocca la <strong>bandiera giusta</strong>.</p>
+      <p>Guarda che tempo fa e tocca la <strong>bandiera giusta</strong>. 10 scene meteo in 2 round.</p>
     </div>
 
-    <div class="inf-card">
+    <div class="inf-card" id="game-card">
+      <div class="text-center" style="margin-bottom:.5rem">
+        <span style="display:inline-block;background:#003366;color:#fff;padding:.35rem .9rem;border-radius:999px;font-weight:800" id="level-badge">Round 1 di 2</span>
+      </div>
       <div class="progress-bolli" id="progress" aria-label="Scene completate">
         <span class="bollino">1</span>
         <span class="bollino">2</span>
@@ -152,9 +155,18 @@
       <div id="feedback" class="text-center mt-3 h5" aria-live="polite" style="min-height:2rem;"></div>
     </div>
 
+    <div id="round-up" class="inf-card hide">
+      <div style="text-align:center;padding:1.5rem 1rem;background:linear-gradient(135deg,#fff8d6,#ffe4b5);border:4px solid #F4B700;border-radius:22px;">
+        <div style="font-size:2.5rem;line-height:1;margin-bottom:.5rem">⭐⭐⭐</div>
+        <div style="color:#003366;font-weight:800;font-size:1.6rem;margin-bottom:.3rem">Round 1 superato!</div>
+        <p class="mb-3">Pronto per altre 5 scene meteo?</p>
+        <button id="next-round" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-right"></i> Round successivo</button>
+      </div>
+    </div>
+
     <div id="end" class="inf-card inf-end hide">
       <div class="bravi">Bravissimo!</div>
-      <p class="h5 mb-3">Hai imparato i colori dell'allerta meteo!</p>
+      <p class="h5 mb-3">Hai superato 2 round di allerta meteo!</p>
       <p class="small text-muted">Ricorda: più il colore è forte, più bisogna fare attenzione. Chiedi sempre a un grande.</p>
       <div class="attestato-inject my-3"></div>
       <div class="d-flex flex-wrap justify-content-center gap-2">
@@ -259,22 +271,83 @@
         <rect x="0" y="160" width="240" height="20" fill="#fff"/>\
       </svg>';
 
-    var SCENE = [
+    var SVG_SOLE_NUVOLE = '\
+      <svg viewBox="0 0 240 180" role="img" aria-label="Sole con qualche nuvola">\
+        <circle cx="80" cy="60" r="28" fill="#F4B700" stroke="#a67a00" stroke-width="3"/>\
+        <ellipse cx="155" cy="80" rx="48" ry="24" fill="#d5dfec" stroke="#8a99af" stroke-width="2"/>\
+        <ellipse cx="135" cy="72" rx="20" ry="14" fill="#eaf0f6"/>\
+      </svg>';
+
+    var SVG_NEBBIA = '\
+      <svg viewBox="0 0 240 180" role="img" aria-label="Nebbia fitta">\
+        <rect x="0" y="0" width="240" height="180" fill="#dfe6ef"/>\
+        <ellipse cx="60" cy="60" rx="50" ry="14" fill="#fff" opacity="0.8"/>\
+        <ellipse cx="170" cy="80" rx="60" ry="14" fill="#fff" opacity="0.8"/>\
+        <ellipse cx="80" cy="105" rx="55" ry="12" fill="#fff" opacity="0.7"/>\
+        <ellipse cx="180" cy="130" rx="50" ry="12" fill="#fff" opacity="0.7"/>\
+      </svg>';
+
+    var SVG_GRANDINE = '\
+      <svg viewBox="0 0 240 180" role="img" aria-label="Grandine">\
+        <ellipse cx="120" cy="55" rx="80" ry="32" fill="#7a8a9f" stroke="#465568" stroke-width="3"/>\
+        <ellipse cx="80" cy="48" rx="28" ry="22" fill="#8b9bad"/>\
+        <ellipse cx="160" cy="50" rx="32" ry="24" fill="#8b9bad"/>\
+        <g fill="#fff" stroke="#465568" stroke-width="1.5">\
+          <circle class="goccia" cx="70" cy="115" r="6"/>\
+          <circle class="goccia" cx="100" cy="125" r="6"/>\
+          <circle class="goccia" cx="130" cy="115" r="6"/>\
+          <circle class="goccia" cx="160" cy="125" r="6"/>\
+          <circle class="goccia" cx="190" cy="115" r="6"/>\
+        </g>\
+      </svg>';
+
+    var SVG_CALDO = '\
+      <svg viewBox="0 0 240 180" role="img" aria-label="Sole caldissimo">\
+        <circle cx="120" cy="90" r="50" fill="#FF6B35" stroke="#a82c00" stroke-width="3"/>\
+        <g stroke="#FF6B35" stroke-width="8" stroke-linecap="round">\
+          <line x1="120" y1="10" x2="120" y2="32"/>\
+          <line x1="120" y1="148" x2="120" y2="170"/>\
+          <line x1="40" y1="90" x2="62" y2="90"/>\
+          <line x1="178" y1="90" x2="200" y2="90"/>\
+          <line x1="60" y1="32" x2="78" y2="50"/>\
+          <line x1="162" y1="130" x2="180" y2="148"/>\
+          <line x1="180" y1="32" x2="162" y2="50"/>\
+          <line x1="78" y1="130" x2="60" y2="148"/>\
+        </g>\
+        <circle cx="105" cy="80" r="5" fill="#a82c00"/>\
+        <circle cx="135" cy="80" r="5" fill="#a82c00"/>\
+        <path d="M 100 100 Q 120 115 140 100" stroke="#a82c00" stroke-width="3" fill="none" stroke-linecap="round"/>\
+        <text x="200" y="40" font-size="20" font-weight="800" fill="#a82c00">°C</text>\
+      </svg>';
+
+    // 10 scene divise in 2 round
+    var SCENE_ROUND_1 = [
       { svg: SVG_SOLE, nome: 'Sole', col: 'verde', tip: 'Verde! Cielo sereno, tutto bene.' },
+      { svg: SVG_SOLE_NUVOLE, nome: 'Sole con nuvole', col: 'verde', tip: 'Verde! Qualche nuvola, ma non c\'è pericolo.' },
       { svg: SVG_PIOGGIA_LEGGERA, nome: 'Pioggia leggera', col: 'giallo', tip: 'Giallo! Piove un po\', attenzione.' },
-      { svg: SVG_PIOGGIA_FORTE, nome: 'Pioggia forte', col: 'arancione', tip: 'Arancione! Piove tanto, bisogna stare al sicuro.' },
-      { svg: SVG_TEMPORALE, nome: 'Temporale forte', col: 'rosso', tip: 'Rosso! Fulmini e tempesta, si resta in casa.' },
       { svg: SVG_VENTO, nome: 'Vento', col: 'giallo', tip: 'Giallo! Il vento soffia forte, attenzione.' },
-      { svg: SVG_NEVE, nome: 'Neve', col: 'arancione', tip: 'Arancione! Tanta neve, meglio non uscire.' }
+      { svg: SVG_PIOGGIA_FORTE, nome: 'Pioggia forte', col: 'arancione', tip: 'Arancione! Piove tanto, bisogna stare al sicuro.' }
     ];
+    var SCENE_ROUND_2 = [
+      { svg: SVG_NEBBIA, nome: 'Nebbia fitta', col: 'giallo', tip: 'Giallo! Con la nebbia non si vede bene, attenzione.' },
+      { svg: SVG_NEVE, nome: 'Neve', col: 'arancione', tip: 'Arancione! Tanta neve, meglio non uscire.' },
+      { svg: SVG_GRANDINE, nome: 'Grandine', col: 'arancione', tip: 'Arancione! La grandine fa male, stai dentro.' },
+      { svg: SVG_TEMPORALE, nome: 'Temporale forte', col: 'rosso', tip: 'Rosso! Fulmini e tempesta, si resta in casa.' },
+      { svg: SVG_CALDO, nome: 'Caldo estremo', col: 'rosso', tip: 'Rosso! Caldo fortissimo, bevi tanta acqua e stai all\'ombra.' }
+    ];
+    var ROUNDS = [SCENE_ROUND_1, SCENE_ROUND_2];
 
     var scenaSvg = document.getElementById('meteo-svg');
     var scenaNome = document.getElementById('meteo-nome');
     var feedback = document.getElementById('feedback');
     var endScreen = document.getElementById('end');
+    var roundUp = document.getElementById('round-up');
+    var gameCard = document.getElementById('game-card');
+    var levelBadge = document.getElementById('level-badge');
     var bandiere = document.querySelectorAll('.bandiera-btn');
     var progressBolli = document.querySelectorAll('#progress .bollino');
-    var queue = [], idx = 0, errori = 0, locked = false;
+    var queue = [], idx = 0, errori = 0, locked = false, roundIdx = 0;
+    var stelleTotali = 0;
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -304,7 +377,7 @@
         progressBolli[idx].innerHTML = '<i class="bi bi-check-lg"></i>';
         setTimeout(function(){
           idx++;
-          if (idx >= queue.length) fine();
+          if (idx >= queue.length) fineRound();
           else mostra();
         }, 2000);
       } else {
@@ -317,31 +390,60 @@
       }
     }
 
+    function avviaRound(){
+      queue = shuffle(ROUNDS[roundIdx].slice());
+      idx = 0;
+      gameCard.classList.remove('hide');
+      roundUp.classList.add('hide');
+      endScreen.classList.add('hide');
+      levelBadge.textContent = 'Round ' + (roundIdx + 1) + ' di ' + ROUNDS.length;
+      progressBolli.forEach(function(b,i){
+        b.classList.remove('on');
+        b.textContent = (i+1);
+      });
+      mostra();
+    }
+
+    function fineRound(){
+      if (roundIdx < ROUNDS.length - 1) {
+        gameCard.classList.add('hide');
+        roundUp.classList.remove('hide');
+        if (window.AudioSintetico){
+          window.AudioSintetico.tono({freq:523,durata:.15});
+          setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.15}); },180);
+        }
+      } else {
+        fine();
+      }
+    }
+
     function fine(){
       endScreen.classList.remove('hide');
-      document.querySelector('.inf-card:not(.inf-end)').classList.add('hide');
+      gameCard.classList.add('hide');
+      roundUp.classList.add('hide');
       if (window.AudioSintetico){
         window.AudioSintetico.tono({freq:523,durata:.2});
         setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.2}); },200);
         setTimeout(function(){ window.AudioSintetico.tono({freq:784,durata:.3}); },400);
       }
-      var punti = Math.max(1, queue.length - Math.floor(errori/2));
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('cielo-oggi', punti, queue.length, '#end');
+      var totale = ROUNDS.reduce(function(s,r){ return s + r.length; }, 0);
+      var punti = Math.max(1, totale - Math.floor(errori/2));
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('cielo-oggi', punti, totale, '#end');
     }
 
     bandiere.forEach(function(b){ b.addEventListener('click', function(){ scegli(b); }); });
 
-    document.getElementById('restart').addEventListener('click', function(){
-      idx = 0; errori = 0;
-      endScreen.classList.add('hide');
-      document.querySelector('.inf-card.hide')?.classList.remove('hide');
-      progressBolli.forEach(function(b,i){ b.classList.remove('on'); b.textContent = (i+1); });
-      queue = shuffle(SCENE.slice()).slice(0, 5);
-      mostra();
+    document.getElementById('next-round').addEventListener('click', function(){
+      roundIdx++;
+      avviaRound();
     });
 
-    queue = shuffle(SCENE.slice()).slice(0, 5);
-    mostra();
+    document.getElementById('restart').addEventListener('click', function(){
+      roundIdx = 0; errori = 0;
+      avviaRound();
+    });
+
+    avviaRound();
   })();
   </script>
 </body>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lo Zaino di Tina — Giochi Piccoli Esploratori</title>
-  <meta name="description" content="Tocca le cose giuste da mettere nello zaino dell'emergenza. Gioco per bambini dai 3 ai 6 anni.">
+  <meta name="description" content="Tocca le cose giuste da mettere nello zaino dell'emergenza. 10 round in 2 livelli. Gioco per bambini dai 3 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -119,6 +119,9 @@
         </svg>
       </div>
 
+      <div class="text-center" style="margin-bottom:.5rem">
+        <span style="display:inline-block;background:#003366;color:#fff;padding:.35rem .9rem;border-radius:999px;font-weight:800" id="level-badge">Livello 1 di 2</span>
+      </div>
       <div class="progress-bolli" id="progress" aria-label="Oggetti messi nello zaino">
         <span class="bollino">1</span>
         <span class="bollino">2</span>
@@ -134,9 +137,18 @@
       <div id="feedback" class="text-center mt-3 h5" aria-live="polite" style="min-height:2rem;"></div>
     </div>
 
+    <div id="level-up" class="inf-card hide">
+      <div style="text-align:center;padding:1.5rem 1rem;background:linear-gradient(135deg,#fff8d6,#ffe4b5);border:4px solid #F4B700;border-radius:22px;">
+        <div style="font-size:2.5rem;line-height:1;margin-bottom:.5rem">⭐⭐⭐</div>
+        <div style="color:#003366;font-weight:800;font-size:1.6rem;margin-bottom:.3rem">Livello 1 superato!</div>
+        <p class="mb-3">Pronto per altri 5 oggetti più difficili?</p>
+        <button id="next-level" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-right"></i> Livello 2</button>
+      </div>
+    </div>
+
     <div id="end" class="inf-card inf-end hide">
       <div class="bravi">Bravissimo!</div>
-      <p class="h5 mb-3">Lo zaino di Tina è pronto per l'emergenza!</p>
+      <p class="h5 mb-3">Lo zaino di Tina è completo, hai imparato 10 cose!</p>
       <p class="text-muted small">Insieme a un grande, puoi preparare anche il tuo zaino di casa.</p>
       <div class="attestato-inject my-3"></div>
       <div class="d-flex flex-wrap justify-content-center gap-2">
@@ -167,25 +179,63 @@
       tv: '<svg viewBox="0 0 80 80"><rect x="10" y="18" width="60" height="40" rx="4" fill="#333" stroke="#000" stroke-width="3"/><rect x="16" y="24" width="48" height="28" fill="#9ED8FF"/><rect x="30" y="58" width="20" height="4" fill="#555"/><rect x="22" y="62" width="36" height="4" rx="2" fill="#333"/></svg>',
       peluche: '<svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="22" fill="#b48a6e" stroke="#6b4a35" stroke-width="3"/><circle cx="24" cy="24" r="8" fill="#b48a6e" stroke="#6b4a35" stroke-width="2.5"/><circle cx="56" cy="24" r="8" fill="#b48a6e" stroke="#6b4a35" stroke-width="2.5"/><circle cx="33" cy="36" r="3" fill="#17324D"/><circle cx="47" cy="36" r="3" fill="#17324D"/><circle cx="40" cy="44" r="3" fill="#17324D"/><path d="M 34 50 Q 40 56 46 50" stroke="#17324D" stroke-width="2" fill="none" stroke-linecap="round"/></svg>',
       cuscino: '<svg viewBox="0 0 80 80"><rect x="10" y="22" width="60" height="40" rx="10" fill="#c7d9ff" stroke="#17324D" stroke-width="3"/><path d="M 18 30 Q 24 34 30 30 M 40 30 Q 46 34 52 30" stroke="#17324D" stroke-width="1.5" fill="none"/></svg>',
-      pallone: '<svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="24" fill="#fff" stroke="#17324D" stroke-width="3"/><path d="M 40 16 L 48 32 L 40 40 L 32 32 Z M 40 40 L 56 44 L 52 60 L 40 56 Z M 40 40 L 24 44 L 28 60 L 40 56 Z" fill="#17324D"/></svg>'
+      pallone: '<svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="24" fill="#fff" stroke="#17324D" stroke-width="3"/><path d="M 40 16 L 48 32 L 40 40 L 32 32 Z M 40 40 L 56 44 L 52 60 L 40 56 Z M 40 40 L 24 44 L 28 60 L 40 56 Z" fill="#17324D"/></svg>',
+      // ── nuovi oggetti livello 2 ──
+      fischietto: '<svg viewBox="0 0 80 80"><ellipse cx="38" cy="42" rx="20" ry="14" fill="#F4B700" stroke="#a67a00" stroke-width="3"/><rect x="56" y="38" width="18" height="10" rx="2" fill="#F4B700" stroke="#a67a00" stroke-width="3"/><circle cx="34" cy="42" r="3" fill="#a67a00"/><path d="M 18 42 L 6 38 L 6 46 Z" fill="#D9364F" stroke="#8B1F2E" stroke-width="2"/></svg>',
+      mascherina: '<svg viewBox="0 0 80 80"><path d="M 14 28 Q 40 22 66 28 L 66 56 Q 40 64 14 56 Z" fill="#9ED8FF" stroke="#17324D" stroke-width="3"/><path d="M 14 28 L 4 26 L 4 32 M 66 28 L 76 26 L 76 32 M 14 56 L 4 56 L 4 50 M 66 56 L 76 56 L 76 50" stroke="#17324D" stroke-width="2" fill="none"/><path d="M 22 36 Q 40 32 58 36 M 22 44 Q 40 40 58 44 M 22 52 Q 40 48 58 52" stroke="#17324D" stroke-width="1.5" fill="none"/></svg>',
+      caricatore: '<svg viewBox="0 0 80 80"><rect x="20" y="20" width="36" height="50" rx="6" fill="#333" stroke="#000" stroke-width="3"/><rect x="26" y="26" width="24" height="32" fill="#9ED8FF"/><circle cx="38" cy="64" r="4" fill="#fff" stroke="#000" stroke-width="2"/><path d="M 56 30 L 70 30 L 70 26 L 76 26 L 76 38 L 70 38 L 70 34 L 56 34 Z" fill="#3E7BC8" stroke="#17324D" stroke-width="2"/></svg>',
+      documenti: '<svg viewBox="0 0 80 80"><rect x="22" y="14" width="40" height="54" rx="3" fill="#fff" stroke="#17324D" stroke-width="3"/><line x1="28" y1="24" x2="56" y2="24" stroke="#17324D" stroke-width="2"/><line x1="28" y1="32" x2="56" y2="32" stroke="#17324D" stroke-width="2"/><line x1="28" y1="40" x2="48" y2="40" stroke="#17324D" stroke-width="2"/><circle cx="48" cy="56" r="6" fill="#D9364F"/></svg>',
+      biscotti: '<svg viewBox="0 0 80 80"><rect x="14" y="20" width="52" height="42" rx="6" fill="#F4B700" stroke="#a67a00" stroke-width="3"/><circle cx="26" cy="32" r="3" fill="#5a3a1c"/><circle cx="38" cy="38" r="3" fill="#5a3a1c"/><circle cx="50" cy="32" r="3" fill="#5a3a1c"/><circle cx="32" cy="48" r="3" fill="#5a3a1c"/><circle cx="48" cy="50" r="3" fill="#5a3a1c"/><text x="40" y="74" font-size="9" font-weight="800" fill="#5a3a1c" text-anchor="middle">CIBO</text></svg>',
+      // ── distrattori extra livello 2 ──
+      pattini: '<svg viewBox="0 0 80 80"><rect x="18" y="32" width="44" height="14" rx="4" fill="#3E7BC8" stroke="#17324D" stroke-width="3"/><circle cx="26" cy="58" r="6" fill="#333" stroke="#000" stroke-width="2"/><circle cx="40" cy="58" r="6" fill="#333" stroke="#000" stroke-width="2"/><circle cx="54" cy="58" r="6" fill="#333" stroke="#000" stroke-width="2"/></svg>',
+      gelato: '<svg viewBox="0 0 80 80"><path d="M 40 14 Q 28 14 24 30 L 56 30 Q 52 14 40 14 Z" fill="#fff" stroke="#a67a00" stroke-width="3"/><path d="M 24 30 L 40 70 L 56 30" fill="#F4B700" stroke="#a67a00" stroke-width="3"/><circle cx="36" cy="22" r="4" fill="#D9364F"/></svg>',
+      console: '<svg viewBox="0 0 80 80"><rect x="10" y="22" width="60" height="36" rx="6" fill="#198754" stroke="#0f5132" stroke-width="3"/><rect x="22" y="30" width="36" height="20" fill="#cfe9ff"/><circle cx="14" cy="40" r="3" fill="#fff"/><circle cx="66" cy="40" r="3" fill="#fff"/></svg>'
     };
-    var ROUNDS = [
+    var ROUNDS_LIVELLO_1 = [
       { giusto: {id:'casco', nome:'casco'}, sbagliati: [{id:'caramelle',nome:'caramelle'},{id:'tv',nome:'televisore'}], tip: 'Il casco protegge la testa!' },
       { giusto: {id:'torcia', nome:'torcia'}, sbagliati: [{id:'videogioco',nome:'videogioco'},{id:'pallone',nome:'pallone'}], tip: 'La torcia fa luce se va via la corrente!' },
       { giusto: {id:'acqua', nome:"bottiglia d'acqua"}, sbagliati: [{id:'peluche',nome:'peluche'},{id:'caramelle',nome:'caramelle'}], tip: "L'acqua è sempre importante!" },
       { giusto: {id:'giacchetto', nome:'giacchetto giallo'}, sbagliati: [{id:'cuscino',nome:'cuscino'},{id:'tv',nome:'televisore'}], tip: 'Il giacchetto giallo ti rende ben visibile!' },
       { giusto: {id:'coperta', nome:'coperta'}, sbagliati: [{id:'pallone',nome:'pallone'},{id:'videogioco',nome:'videogioco'}], tip: 'La coperta scalda se fa freddo!' }
     ];
+    var ROUNDS_LIVELLO_2 = [
+      { giusto: {id:'fischietto', nome:'fischietto'}, sbagliati: [{id:'pattini',nome:'pattini'},{id:'console',nome:'console'}], tip: 'Il fischietto si sente da lontano se hai bisogno di aiuto!' },
+      { giusto: {id:'mascherina', nome:'mascherina'}, sbagliati: [{id:'gelato',nome:'gelato'},{id:'peluche',nome:'peluche'}], tip: 'La mascherina ti protegge dal fumo e dalla polvere!' },
+      { giusto: {id:'caricatore', nome:'caricatore del telefono'}, sbagliati: [{id:'console',nome:'console'},{id:'pattini',nome:'pattini'}], tip: 'Il caricatore serve per chiamare aiuto col telefono!' },
+      { giusto: {id:'documenti', nome:'documenti'}, sbagliati: [{id:'gelato',nome:'gelato'},{id:'pallone',nome:'pallone'}], tip: 'I documenti dicono chi sei: i grandi devono averli sempre!' },
+      { giusto: {id:'biscotti', nome:'biscotti che durano tanto'}, sbagliati: [{id:'gelato',nome:'gelato'},{id:'caramelle',nome:'caramelle'}], tip: 'I biscotti che durano sono cibo che resta buono a lungo!' }
+    ];
+    var ROUNDS = ROUNDS_LIVELLO_1; // verra' sovrascritto da avviaLivello()
 
     var grid = document.getElementById('grid');
     var roundLabel = document.getElementById('round-label');
     var feedback = document.getElementById('feedback');
     var endScreen = document.getElementById('end');
+    var levelUp = document.getElementById('level-up');
+    var levelBadge = document.getElementById('level-badge');
     var progressBolli = document.querySelectorAll('#progress .bollino');
+    var LIVELLI = [ROUNDS_LIVELLO_1, ROUNDS_LIVELLO_2];
+    var livello = 0;
     var idx = 0;
     var errori = 0;
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+
+    function avviaLivello(){
+      ROUNDS = LIVELLI[livello];
+      idx = 0;
+      levelBadge.textContent = 'Livello ' + (livello + 1) + ' di ' + LIVELLI.length;
+      progressBolli.forEach(function(b,i){
+        b.classList.remove('on');
+        b.textContent = (i+1);
+      });
+      levelUp.classList.add('hide');
+      endScreen.classList.add('hide');
+      document.querySelector('.inf-card.hide')?.classList.remove('hide');
+      var card = document.querySelector('.inf-card:not(#level-up):not(#end)');
+      if (card) card.classList.remove('hide');
+      mostraRound();
+    }
 
     function mostraRound(){
       grid.innerHTML = '';
@@ -217,7 +267,7 @@
         progressBolli[idx].innerHTML = '<i class="bi bi-check-lg"></i>';
         setTimeout(function(){
           idx++;
-          if (idx >= ROUNDS.length) fine();
+          if (idx >= ROUNDS.length) fineLivello();
           else mostraRound();
         }, 1800);
       } else {
@@ -230,27 +280,43 @@
       }
     }
 
+    function fineLivello(){
+      if (livello < LIVELLI.length - 1) {
+        document.querySelectorAll('.inf-card').forEach(function(c){ c.classList.add('hide'); });
+        levelUp.classList.remove('hide');
+        if (window.AudioSintetico){
+          window.AudioSintetico.tono({freq:523,durata:.15});
+          setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.15}); },180);
+        }
+      } else {
+        fine();
+      }
+    }
+
     function fine(){
+      document.querySelectorAll('.inf-card').forEach(function(c){ c.classList.add('hide'); });
       endScreen.classList.remove('hide');
-      document.querySelector('.inf-card:not(.inf-end)').classList.add('hide');
       if (window.AudioSintetico){
         window.AudioSintetico.tono({freq:523,durata:.2});
         setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.2}); },200);
         setTimeout(function(){ window.AudioSintetico.tono({freq:784,durata:.3}); },400);
       }
-      var punti = Math.max(1, ROUNDS.length - Math.floor(errori/2));
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('vesti-tina', punti, ROUNDS.length, '#end');
+      var totale = LIVELLI.reduce(function(s,r){ return s + r.length; }, 0);
+      var punti = Math.max(1, totale - Math.floor(errori/2));
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('vesti-tina', punti, totale, '#end');
     }
 
-    document.getElementById('restart').addEventListener('click', function(){
-      idx = 0; errori = 0;
-      endScreen.classList.add('hide');
-      document.querySelector('.inf-card.hide')?.classList.remove('hide');
-      progressBolli.forEach(function(b,i){ b.classList.remove('on'); b.textContent = (i+1); });
-      mostraRound();
+    document.getElementById('next-level').addEventListener('click', function(){
+      livello++;
+      avviaLivello();
     });
 
-    mostraRound();
+    document.getElementById('restart').addEventListener('click', function(){
+      livello = 0; errori = 0;
+      avviaLivello();
+    });
+
+    avviaLivello();
   })();
   </script>
 </body>
