@@ -832,7 +832,7 @@ Alla fine si chiede agli studenti di scrivere in 10 righe la propria posizione e
 - [Piano di Emergenza Familiare](/piano-familiare/) — Modello stampabile e compilabile
 - [Aree di emergenza di Genzano](/cartografia/) — Mappa delle aree di attesa e accoglienza
 - [Piano di Emergenza Comunale](/piano-emergenza/) — Struttura del piano del Comune
-- [Quiz di Protezione Civile](/quizpc/index.html) — Quiz interattivo
+- [Quiz di Protezione Civile](/quizpc/) — Quiz interattivo
 - [Giochi della Sicurezza — Ragazzi](/giochi/ragazzi/) — 10 giochi per la fascia 11-14
 - [Stop Disasters! — Simulatore ONU UNDRR](https://www.stopdisastersgame.org/game/) — Simulazione gratuita in italiano: 5 scenari (terremoto, alluvione, tsunami, uragano, incendio) per imparare la pianificazione e la prevenzione. Adatto a 11-14 anni come attività di gruppo guidata in classe (durata 10-20 minuti per scenario).
 - [Io non rischio](https://www.iononrischio.it/) — Materiali della campagna nazionale

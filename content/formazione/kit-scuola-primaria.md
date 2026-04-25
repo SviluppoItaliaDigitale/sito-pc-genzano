@@ -824,7 +824,7 @@ Da adattare con intestazione della scuola:
 ## Materiale consigliato
 
 - [Piano di Emergenza Familiare](/piano-familiare/) — Da stampare e compilare con la famiglia
-- [Quiz di Protezione Civile](/quizpc/index.html) — Quiz interattivo online
+- [Quiz di Protezione Civile](/quizpc/) — Quiz interattivo online
 - [Giochi della Sicurezza — Primaria](/giochi/primaria/) — 13 giochi educativi per bambini 6-11 anni (più 10 per l'infanzia 3-6 e 10 per i ragazzi 11-19, totale 33)
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
 - [Io non rischio](https://www.iononrischio.it/) — Materiali della campagna nazionale
