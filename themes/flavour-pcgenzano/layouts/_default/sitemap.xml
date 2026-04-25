@@ -20,20 +20,77 @@
   </url>
   {{- end }}
   {{- end }}
-  {{/* URL statiche extra (giochi, app accessibilità, formazione PC, quiz)
-       dichiarate in data/sitemap_extra.yaml — mantenere allineato quando si
-       aggiungono nuovi giochi/app statiche con robots index,follow. */}}
-  {{- with .Site.Data.sitemap_extra }}
-  {{- range .urls }}
+  {{/* AUTO-DISCOVERY delle URL statiche (vivono in /static/, non note ad Hugo).
+       La convenzione del sito è: TUTTI i contenuti sono indicizzabili di default
+       (robots index,follow). Eventuali esclusioni si fanno a livello di file
+       singolo modificando la meta robots. Le directory iterate qui sotto
+       NON richiedono manutenzione: aggiungendo una nuova sottocartella con
+       index.html, comparirà automaticamente nel sitemap al prossimo build. */}}
+
+  {{- /* 1. Schede stampabili: tutte le sottocartelle di /static/formazione/schede-stampabili/ tranne 'assets' */ -}}
+  {{- with os.ReadDir "static/formazione/schede-stampabili" }}
+    {{- range . }}
+      {{- if and .IsDir (ne .Name "assets") }}
   <url>
-    <loc>{{ printf "%s/%s" (strings.TrimRight "/" $prodBase) (strings.TrimPrefix "/" .path) | safeHTML }}</loc>
-    {{- with .changefreq }}
-    <changefreq>{{ . }}</changefreq>
+    <loc>{{ printf "%s/formazione/schede-stampabili/%s/" (strings.TrimRight "/" $prodBase) .Name | safeHTML }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+      {{- end }}
     {{- end }}
-    {{- with .priority }}
-    <priority>{{ . }}</priority>
+  {{- end }}
+
+  {{- /* 2. Giochi (tre fasce): sottocartelle di /static/giochi/<fascia>/ tranne 'assets' */ -}}
+  {{- range slice "infanzia" "primaria" "ragazzi" }}
+    {{- $fascia := . }}
+    {{- with os.ReadDir (printf "static/giochi/%s" $fascia) }}
+      {{- range . }}
+        {{- if and .IsDir (ne .Name "assets") }}
+  <url>
+    <loc>{{ printf "%s/giochi/%s/%s/" (strings.TrimRight "/" $prodBase) $fascia .Name | safeHTML }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+        {{- end }}
+      {{- end }}
     {{- end }}
+  {{- end }}
+
+  {{- /* 3. Abili a Proteggere: sottocartelle di /static/abili-a-proteggere/ */ -}}
+  {{- with os.ReadDir "static/abili-a-proteggere" }}
+    {{- range . }}
+      {{- if and .IsDir (ne .Name "assets") }}
+  <url>
+    <loc>{{ printf "%s/abili-a-proteggere/%s/" (strings.TrimRight "/" $prodBase) .Name | safeHTML }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+
+  {{- /* 4. Listing pages (hub) — non sono Hugo content, dichiarate qui */ -}}
+  {{- range slice "giochi/" "giochi/infanzia/" "giochi/primaria/" "giochi/ragazzi/" "abili-a-proteggere/" "formazione/schede-stampabili/" "quizpc/" "formazionepc/" }}
+  <url>
+    <loc>{{ printf "%s/%s" (strings.TrimRight "/" $prodBase) . | safeHTML }}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   {{- end }}
+
+  {{- /* 5. Quiz Formativo PC e Formazione PC: file .html (non directory) */ -}}
+  {{- range slice "quizpc" "formazionepc" }}
+    {{- $dir := . }}
+    {{- with os.ReadDir (printf "static/%s" $dir) }}
+      {{- range . }}
+        {{- if and (not .IsDir) (strings.HasSuffix .Name ".html") }}
+  <url>
+    <loc>{{ printf "%s/%s/%s" (strings.TrimRight "/" $prodBase) $dir .Name | safeHTML }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+        {{- end }}
+      {{- end }}
+    {{- end }}
   {{- end }}
 </urlset>
