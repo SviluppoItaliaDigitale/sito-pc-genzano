@@ -97,8 +97,8 @@ Sei capitoli per il volontario TLC, basati sulla **Guida IARU alle Telecomunicaz
 
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
 - [La Protezione Civile in famiglia](https://www.protezionecivilegenzano.it/documenti/download/PC_famiglia.pdf) — Buone pratiche da adottare in famiglia
-- [Quiz di Protezione Civile](/quizpc/index.html) — Metti alla prova le tue conoscenze
-- [Piattaforma E-Learning](/formazionepc/index.html) — Formazione a distanza per volontari
+- [Quiz di Protezione Civile](/quizpc/) — Metti alla prova le tue conoscenze
+- [Piattaforma E-Learning](/formazionepc/) — Formazione a distanza per volontari
 
 ## Approfondimenti dall'archivio
 
