@@ -53,21 +53,52 @@
 
       <div class="col-passo">
         <div class="col-num">1</div>
-        <svg viewBox="0 0 160 120" role="img" aria-label="Bambino dentro casa, fuori c'è vento">
+        <svg viewBox="0 0 200 130" role="img" aria-label="Bambino dettagliato dentro casa al sicuro mentre fuori c'è vento forte">
           <!-- Casa -->
-          <path d="M 20 105 L 20 50 L 80 20 L 140 50 L 140 105 Z" />
-          <!-- Finestra grande -->
-          <rect x="50" y="55" width="60" height="40" />
-          <line x1="80" y1="55" x2="80" y2="95" />
-          <line x1="50" y1="75" x2="110" y2="75" />
-          <!-- Bambino dentro -->
-          <circle cx="80" cy="68" r="6" />
-          <path d="M 76 70 Q 80 73 84 70" />
-          <!-- Vento fuori (linee) -->
-          <path d="M 5 30 Q 15 30 18 35" />
-          <path d="M 5 40 Q 18 40 20 45" />
-          <path d="M 142 30 Q 152 30 155 35" />
-          <path d="M 142 40 Q 155 40 158 45" />
+          <path d="M 10 120 L 10 45 L 100 12 L 190 45 L 190 120 Z" />
+          <!-- Linea pavimento -->
+          <line x1="10" y1="120" x2="190" y2="120" />
+          <!-- Finestra a sinistra (con vetro per inquadrare il bambino) -->
+          <rect x="50" y="40" width="100" height="55" />
+          <line x1="100" y1="40" x2="100" y2="95" />
+          <line x1="50" y1="68" x2="150" y2="68" />
+
+          <!-- BAMBINO DETTAGLIATO dentro alla finestra -->
+          <!-- Capelli -->
+          <path d="M 71 55 Q 70 50 75 47 Q 84 45 89 50" />
+          <!-- Testa -->
+          <circle cx="80" cy="58" r="7" />
+          <!-- Occhi -->
+          <circle cx="77" cy="57" r="1" class="fill-text" />
+          <circle cx="83" cy="57" r="1" class="fill-text" />
+          <!-- Sorriso (sereno) -->
+          <path d="M 77 61 Q 80 63 83 61" />
+          <!-- Collo -->
+          <line x1="80" y1="65" x2="80" y2="68" />
+          <!-- Maglietta visibile sotto la finestra -->
+          <path d="M 71 68 L 89 68 L 91 80 L 87 80 L 87 92 L 73 92 L 73 80 L 69 80 Z" />
+          <text x="80" y="86" text-anchor="middle" class="fill-text" style="font-size: 5px; font-weight: 700;">7</text>
+
+          <!-- BAMBINO DETTAGLIATO a destra della finestra (alternativa: solo finestra centrata,
+               ho già messo bambino dentro la finestra, allora qui aggiungo solo testo "casa") -->
+
+          <!-- VENTO FUORI a sinistra -->
+          <path d="M 0 25 Q 8 25 12 30" stroke-width="2" />
+          <path d="M 0 35 Q 10 35 14 40" stroke-width="2" />
+          <path d="M 0 50 Q 8 50 12 55" stroke-width="2" />
+          <!-- Frecce -->
+          <path d="M 8 30 L 12 30 L 10 28" />
+          <path d="M 8 55 L 12 55 L 10 53" />
+
+          <!-- VENTO FUORI a destra -->
+          <path d="M 188 25 Q 195 25 200 30" stroke-width="2" />
+          <path d="M 188 35 Q 195 35 200 40" stroke-width="2" />
+          <path d="M 188 50 Q 195 50 200 55" stroke-width="2" />
+          <path d="M 195 30 L 200 30 L 198 28" />
+
+          <!-- Foglia che vola via -->
+          <ellipse cx="155" cy="22" rx="3" ry="2" transform="rotate(45 155 22)" />
+          <ellipse cx="40" cy="105" rx="3" ry="2" transform="rotate(-30 40 105)" />
         </svg>
         <p class="col-frase">Sto <strong>dentro casa</strong></p>
       </div>
