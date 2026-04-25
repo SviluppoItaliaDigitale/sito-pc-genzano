@@ -49,15 +49,15 @@ Mosaico radar nazionale del **Dipartimento della Protezione Civile**, aggiornato
 </div>
 
 {{< external-widget
-    src="https://mappe.protezionecivile.it/"
+    src="https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/"
     title="Mosaico radar nazionale precipitazioni — Dipartimento Protezione Civile"
     placeholderTitle="Radar DPC — precipitazioni in tempo reale"
     placeholderDesc="Mosaico radar nazionale dal <strong>Dipartimento della Protezione Civile</strong>. Mostra la pioggia misurata in questo momento sul territorio italiano."
     icon="bi-broadcast-pin"
     btnLabel="Carica il radar DPC"
-    altUrl="https://mappe.protezionecivile.it/"
-    altLabel="Mappe Protezione Civile"
-    fallbackText="Radar nazionale precipitazioni consultabile su mappe.protezionecivile.it (Dipartimento Protezione Civile)"
+    altUrl="https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/"
+    altLabel="Piattaforma radar DPC"
+    fallbackText="Radar nazionale precipitazioni consultabile su mappe.protezionecivile.gov.it (Dipartimento Protezione Civile)"
     widgetId="radar-dpc" >}}
 
 ## Previsione meteo per Genzano di Roma — Aeronautica Militare
@@ -165,5 +165,5 @@ Tutti gli articoli sulle allerte meteo sono filtrabili nell'[archivio delle comu
 
 - [Bollettini e allertamenti — Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/)
-- [Radar nazionale precipitazioni](https://mappe.protezionecivile.gov.it/it/mappe-rischi/piattaforma-radar/)
+- [Radar nazionale precipitazioni](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/)
 - [Meteo Aeronautica Militare](https://www.meteoam.it/it/home)
