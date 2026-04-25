@@ -10,11 +10,13 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "GovernmentOrganization",
+  "@type": ["GovernmentOrganization", "EmergencyService"],
   "name": "{{ .Site.Title }}",
+  "alternateName": "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
   "description": "{{ .Site.Params.description }}",
   "url": "{{ $prodBase }}",
   "logo": "{{ printf "%simages/logo-pc-genzano.png" $prodBase }}",
+  "image": "{{ printf "%simages/og-default.png" $prodBase }}",
   "telephone": "{{ .Site.Params.telefono }}",
   "email": "{{ .Site.Params.email }}",
   "address": {
@@ -25,12 +27,51 @@
     "addressRegion": "RM",
     "addressCountry": "IT"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.6919,
+    "longitude": 12.6928
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Genzano di Roma",
+    "addressRegion": "Lazio",
+    "addressCountry": "IT"
+  },
+  "foundingDate": "1981",
+  "knowsAbout": [
+    "Protezione Civile",
+    "Allerte meteorologiche",
+    "Rischio sismico",
+    "Rischio idrogeologico",
+    "Antincendio boschivo",
+    "Volontariato di protezione civile",
+    "Comunicazione del rischio",
+    "Educazione civica scolastica"
+  ],
   {{- $sameAs := slice -}}
   {{- with .Site.Params.facebook }}{{ $sameAs = $sameAs | append . }}{{ end -}}
   {{- with .Site.Params.instagram }}{{ $sameAs = $sameAs | append . }}{{ end -}}
   {{- with .Site.Params.telegram }}{{ $sameAs = $sameAs | append . }}{{ end -}}
   {{- with .Site.Params.twitter }}{{ $sameAs = $sameAs | append . }}{{ end -}}
   "sameAs": {{ $sameAs | jsonify }}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ $prodBase }}",
+  "inLanguage": "it-IT",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ printf "%scerca/?q={search_term_string}" $prodBase }}"
+    },
+    "query-input": "required name=search_term_string"
+  }
 }
 </script>
 {{ else if eq .Section "comunicazioni" }}
