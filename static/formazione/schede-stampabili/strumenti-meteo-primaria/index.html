@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Gli strumenti del meteo (Primaria 2ª-3ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. I 5 strumenti del meteorologo (termometro, pluviometro, anemometro, barometro, igrometro) con cosa misurano e in quale unità.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .strumenti-tabella {
+      display: grid; grid-template-columns: 4rem 1fr 1.4fr 1fr; gap: 0.4rem;
+      margin: 0.5rem 0; font-size: 0.92rem;
+    }
+    .strumenti-tabella .h {
+      font-weight: 700; color: var(--scheda-blu);
+      padding: 0.3rem 0.4rem; border-bottom: 2px solid var(--scheda-blu);
+    }
+    .strumenti-tabella .c {
+      padding: 0.5rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      display: flex; align-items: center;
+    }
+    .strumenti-tabella .c.icona { font-size: 1.8rem; justify-content: center; background: #f4f7fb; }
+    .strumenti-tabella .c.nome { font-weight: 700; color: var(--scheda-blu); }
+    .strumenti-tabella .c.unita {
+      font-family: "Courier New", monospace;
+      font-weight: 700; color: #495057;
+      justify-content: center;
+    }
+
+    .collega-griglia {
+      display: grid; grid-template-columns: 1fr 4rem 1fr; gap: 0.5rem 0.4rem;
+      margin: 0.4rem 0; align-items: center;
+    }
+    .collega-griglia .h {
+      font-weight: 700; color: var(--scheda-blu);
+      text-align: center; font-size: 0.9rem;
+      padding-bottom: 0.3rem; border-bottom: 2px solid var(--scheda-blu);
+    }
+    .collega-griglia .strumento, .collega-griglia .misura {
+      padding: 0.5rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      text-align: center;
+    }
+    .collega-griglia .strumento { font-weight: 700; color: var(--scheda-blu); }
+    .collega-griglia .puntini {
+      text-align: center; color: #ced4da; font-size: 1.4rem;
+      letter-spacing: 0.15em; line-height: 1;
+    }
+
+    .cruciverbino {
+      display: grid; gap: 0.4rem; margin: 0.4rem 0;
+    }
+    .cruciverbino .indizio {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.5rem 0.7rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    .cruciverbino .indizio .num-q {
+      width: 1.4rem; height: 1.4rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center;
+      justify-content: center; font-weight: 700; font-size: 0.8rem; flex-shrink: 0;
+    }
+    .cruciverbino .indizio .testo { flex: 1; line-height: 1.35; }
+    .cruciverbino .indizio .riga {
+      flex: 0 0 7rem; border-bottom: 1.5px dashed var(--scheda-bordo);
+      min-height: 1.4rem;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Strumenti del meteo — Primaria</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Gli strumenti del meteorologo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 2ª-3ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 7-9 anni</span>
+      <span><strong>Obiettivo:</strong> conoscere gli strumenti che servono per il bollettino meteo</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Per fare il <strong>bollettino meteo</strong> il meteorologo usa tanti strumenti
+      diversi. Ognuno misura una cosa: la pioggia, il vento, la temperatura, la pressione…
+      Senza questi strumenti, la Protezione Civile non saprebbe quando arriva un temporale.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>Leggi la tabella degli strumenti</h2></div>
+    <div class="strumenti-tabella">
+      <span class="h">&nbsp;</span><span class="h">Strumento</span><span class="h">Cosa misura</span><span class="h">Unità</span>
+      <span class="c icona" aria-hidden="true">🌡️</span><span class="c nome">Termometro</span><span class="c">la temperatura dell'aria (caldo/freddo)</span><span class="c unita">°C</span>
+      <span class="c icona" aria-hidden="true">🌧️</span><span class="c nome">Pluviometro</span><span class="c">quanta pioggia è caduta</span><span class="c unita">mm</span>
+      <span class="c icona" aria-hidden="true">💨</span><span class="c nome">Anemometro</span><span class="c">la velocità del vento</span><span class="c unita">km/h</span>
+      <span class="c icona" aria-hidden="true">🧭</span><span class="c nome">Barometro</span><span class="c">la pressione dell'aria (bel tempo o brutto)</span><span class="c unita">hPa</span>
+      <span class="c icona" aria-hidden="true">💧</span><span class="c nome">Igrometro</span><span class="c">l'umidità dell'aria (quanto è "pesante")</span><span class="c unita">%</span>
+    </div>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Collega ogni strumento alla misura</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0;">Disegna una linea da ogni strumento alla cosa che misura:</p>
+    <div class="collega-griglia">
+      <span class="h">STRUMENTO</span><span class="h">collega</span><span class="h">MISURA</span>
+      <span class="strumento">Termometro</span>
+      <span class="puntini" aria-hidden="true">· · · ·</span>
+      <span class="misura">Pioggia</span>
+      <span class="strumento">Pluviometro</span>
+      <span class="puntini" aria-hidden="true">· · · ·</span>
+      <span class="misura">Pressione dell'aria</span>
+      <span class="strumento">Anemometro</span>
+      <span class="puntini" aria-hidden="true">· · · ·</span>
+      <span class="misura">Temperatura</span>
+      <span class="strumento">Barometro</span>
+      <span class="puntini" aria-hidden="true">· · · ·</span>
+      <span class="misura">Velocità del vento</span>
+      <span class="strumento">Igrometro</span>
+      <span class="puntini" aria-hidden="true">· · · ·</span>
+      <span class="misura">Umidità</span>
+    </div>
+
+    <div class="sez-titolo"><span class="num">3</span><h2>Indovina lo strumento — scrivi sulla riga</h2></div>
+    <div class="cruciverbino">
+      <div class="indizio">
+        <span class="num-q">1</span>
+        <span class="testo">A Genzano oggi sono caduti <strong>15 mm di pioggia</strong>. Quale strumento l'ha misurato?</span>
+        <span class="riga" aria-hidden="true"></span>
+      </div>
+      <div class="indizio">
+        <span class="num-q">2</span>
+        <span class="testo">Il vento soffia a <strong>40 km/h</strong>. Quale strumento misura la velocità?</span>
+        <span class="riga" aria-hidden="true"></span>
+      </div>
+      <div class="indizio">
+        <span class="num-q">3</span>
+        <span class="testo">Stamattina la <strong>temperatura</strong> è di 5°C. Con quale strumento si misura?</span>
+        <span class="riga" aria-hidden="true"></span>
+      </div>
+      <div class="indizio">
+        <span class="num-q">4</span>
+        <span class="testo">Quando la <strong>pressione scende</strong>, sta per arrivare il brutto tempo. Quale strumento la misura?</span>
+        <span class="riga" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>Sezione 3: 1) pluviometro · 2) anemometro · 3) termometro · 4) barometro.</li>
+        <li><strong>Esperienza concreta</strong>: costruire un pluviometro casalingo con una bottiglia tagliata e un righello. Misurare la pioggia per una settimana e fare la media. La Protezione Civile della Regione Lazio fa la stessa cosa con strumenti più precisi.</li>
+        <li><strong>Approfondimento</strong>: dove va il dato? Al <strong>Centro Funzionale Regionale Lazio</strong>, che lo confronta con altri rilevamenti e decide il colore del bollettino di allerta meteo.</li>
+        <li>Collegamento con la scheda <a href="/formazione/schede-stampabili/codici-allerta-numeri-primaria/">Codici di allerta meteo</a> per chiudere il cerchio.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Strumenti del meteo" · Primaria 2ª-3ª · scienze · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

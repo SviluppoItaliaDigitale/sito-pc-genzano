@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: I codici colore di allerta meteo (Primaria 2ª-3ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. I 4 codici colore di allerta meteo della Regione Lazio: ordina, collega numero-colore-significato, esempi.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .codici-tabella { display: grid; grid-template-columns: 4rem 5rem 1fr; gap: 0.4rem 0.6rem; margin: 0.5rem 0; font-size: 0.95rem; }
+    .codici-tabella .h { font-weight: 700; color: var(--scheda-blu); padding-bottom: 0.3rem; border-bottom: 2px solid var(--scheda-blu); }
+    .codici-tabella .num-cella, .codici-tabella .col-cella, .codici-tabella .desc-cella {
+      padding: 0.5rem 0.6rem; border-radius: 6px; display: flex; align-items: center;
+    }
+    .codici-tabella .num-cella { font-family: "Trebuchet MS", sans-serif; font-weight: 700; font-size: 1.5rem; justify-content: center; background: #f4f7fb; }
+    .codici-tabella .col-cella { font-weight: 700; color: #fff; justify-content: center; }
+    .codici-tabella .col-cella.verde { background: #198754; }
+    .codici-tabella .col-cella.giallo { background: #ffc107; color: #664d03; }
+    .codici-tabella .col-cella.arancione { background: #fd7e14; }
+    .codici-tabella .col-cella.rosso { background: #dc3545; }
+    .codici-tabella .desc-cella { background: #fff; border: 1.5px solid var(--scheda-bordo); }
+
+    .ordina-griglia { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; margin: 0.4rem 0; }
+    .ordina-cella {
+      display: flex; align-items: center; gap: 0.7rem;
+      padding: 0.5rem 0.7rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+    }
+    .ordina-cella .num-vuoto {
+      width: 2rem; height: 2rem; border: 2px dashed var(--scheda-blu);
+      border-radius: 6px; flex-shrink: 0;
+    }
+    .ordina-cella .testo { font-size: 0.9rem; line-height: 1.35; flex: 1; }
+
+    .collega-griglia {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin: 0.4rem 0;
+    }
+    .collega-cella {
+      padding: 0.5rem 0.6rem; border: 1.5px solid var(--scheda-bordo);
+      border-radius: 6px; background: #fff; text-align: center;
+      font-size: 0.95rem; font-weight: 600;
+    }
+    .collega-cella.col-verde { background: #d1e7dd; color: #0a3622; }
+    .collega-cella.col-giallo { background: #fff3cd; color: #664d03; }
+    .collega-cella.col-arancione { background: #ffe5d0; color: #6f2a00; }
+    .collega-cella.col-rosso { background: #f8d7da; color: #58151c; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+    .istruzioni-maestra strong { color: #664d03; }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Codici di allerta meteo — Primaria</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">I codici colore dell'allerta meteo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 2ª-3ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 7-9 anni</span>
+      <span><strong>Obiettivo:</strong> conoscere i 4 codici di allerta della Regione Lazio</span>
+      <span><strong>Servono:</strong> matita, pennarelli colorati</span>
+    </div>
+
+    <p class="scheda-intro">
+      Quando arriva una <strong>perturbazione</strong> (pioggia forte, neve, vento), la
+      Regione Lazio pubblica un <strong>bollettino di allerta</strong> con un colore.
+      Il colore dice quanto è grave la situazione e cosa fare.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>I 4 codici di allerta — leggi la tabella</h2></div>
+    <div class="codici-tabella">
+      <span class="h">Livello</span><span class="h">Colore</span><span class="h">Cosa significa</span>
+      <span class="num-cella">1</span><span class="col-cella verde">VERDE</span><span class="desc-cella">Tutto tranquillo, nessuna allerta.</span>
+      <span class="num-cella">2</span><span class="col-cella giallo">GIALLO</span><span class="desc-cella">Attenzione: pioggia o vento moderati. Evita zone a rischio.</span>
+      <span class="num-cella">3</span><span class="col-cella arancione">ARANCIONE</span><span class="desc-cella">Allerta elevata: fenomeni intensi. Limita gli spostamenti.</span>
+      <span class="num-cella">4</span><span class="col-cella rosso">ROSSO</span><span class="desc-cella">Allerta massima: situazione grave. Segui le istruzioni del Comune.</span>
+    </div>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Ordina dalla situazione più tranquilla a quella più grave</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">Scrivi nei quadrati il numero da 1 (più tranquillo) a 4 (più grave):</p>
+    <div class="ordina-griglia">
+      <div class="ordina-cella">
+        <span class="num-vuoto" aria-hidden="true"></span>
+        <span class="testo">Piove tantissimo, le strade si stanno allagando.</span>
+      </div>
+      <div class="ordina-cella">
+        <span class="num-vuoto" aria-hidden="true"></span>
+        <span class="testo">Cielo sereno, sole, vento debole.</span>
+      </div>
+      <div class="ordina-cella">
+        <span class="num-vuoto" aria-hidden="true"></span>
+        <span class="testo">Pioggia moderata, qualche tuono lontano.</span>
+      </div>
+      <div class="ordina-cella">
+        <span class="num-vuoto" aria-hidden="true"></span>
+        <span class="testo">Temporali forti su tutta la zona, vento intenso.</span>
+      </div>
+    </div>
+
+    <div class="sez-titolo"><span class="num">3</span><h2>Colora il bollino del colore giusto</h2></div>
+    <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">Per ogni livello, colora il bollino con il pennarello del colore corrispondente:</p>
+    <div class="collega-griglia">
+      <span class="collega-cella">Livello 1<br><span style="display:inline-block; width:1.6rem; height:1.6rem; border:2px solid #444; border-radius:50%; background:#fff; margin-top:0.3rem;"></span></span>
+      <span class="collega-cella">Livello 2<br><span style="display:inline-block; width:1.6rem; height:1.6rem; border:2px solid #444; border-radius:50%; background:#fff; margin-top:0.3rem;"></span></span>
+      <span class="collega-cella">Livello 3<br><span style="display:inline-block; width:1.6rem; height:1.6rem; border:2px solid #444; border-radius:50%; background:#fff; margin-top:0.3rem;"></span></span>
+      <span class="collega-cella">Livello 4<br><span style="display:inline-block; width:1.6rem; height:1.6rem; border:2px solid #444; border-radius:50%; background:#fff; margin-top:0.3rem;"></span></span>
+    </div>
+
+    <div class="sez-titolo"><span class="num">4</span><h2>Vero o falso?</h2></div>
+    <div style="display: grid; gap: 0.4rem; margin: 0.4rem 0;">
+      <div style="display:flex; align-items:center; gap:0.6rem; padding:0.5rem 0.7rem; background:#fff; border:1.5px solid var(--scheda-bordo); border-radius:6px;">
+        <span style="flex:1; font-size:0.9rem;">Il colore rosso è meno grave del giallo.</span>
+        <span style="display:inline-flex; gap:0.4rem;"><span style="display:inline-block; width:1.6rem; height:1.6rem; border:2px solid #198754; border-radius:50%; text-align:center; line-height:1.5rem; font-weight:700; color:#198754;">V</span><span style="display:inline-block; width:1.6rem; height:1.6rem; border:2px solid #dc3545; border-radius:50%; text-align:center; line-height:1.5rem; font-weight:700; color:#dc3545;">F</span></span>
+      </div>
+      <div style="display:flex; align-items:center; gap:0.6rem; padding:0.5rem 0.7rem; background:#fff; border:1.5px solid var(--scheda-bordo); border-radius:6px;">
+        <span style="flex:1; font-size:0.9rem;">Il bollettino lo emette la Regione Lazio.</span>
+        <span style="display:inline-flex; gap:0.4rem;"><span style="display:inline-block; width:1.6rem; height:1.6rem; border:2px solid #198754; border-radius:50%; text-align:center; line-height:1.5rem; font-weight:700; color:#198754;">V</span><span style="display:inline-block; width:1.6rem; height:1.6rem; border:2px solid #dc3545; border-radius:50%; text-align:center; line-height:1.5rem; font-weight:700; color:#dc3545;">F</span></span>
+      </div>
+      <div style="display:flex; align-items:center; gap:0.6rem; padding:0.5rem 0.7rem; background:#fff; border:1.5px solid var(--scheda-bordo); border-radius:6px;">
+        <span style="flex:1; font-size:0.9rem;">Con allerta arancione devo limitare gli spostamenti.</span>
+        <span style="display:inline-flex; gap:0.4rem;"><span style="display:inline-block; width:1.6rem; height:1.6rem; border:2px solid #198754; border-radius:50%; text-align:center; line-height:1.5rem; font-weight:700; color:#198754;">V</span><span style="display:inline-block; width:1.6rem; height:1.6rem; border:2px solid #dc3545; border-radius:50%; text-align:center; line-height:1.5rem; font-weight:700; color:#dc3545;">F</span></span>
+      </div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>Sezione 2: cielo sereno=1 · pioggia moderata=2 · temporali forti=3 · strade allagate=4.</li>
+        <li>Sezione 3: livelli 1=verde, 2=giallo, 3=arancione, 4=rosso.</li>
+        <li>Sezione 4: F · V · V.</li>
+        <li><strong>Approfondimento</strong>: il bollettino reale è pubblicato ogni giorno dal Centro Funzionale Regionale Lazio. La pagina <a href="/allerte-meteo/">/allerte-meteo/</a> mostra il livello attivo per Genzano in tempo reale.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Codici di allerta meteo" · Primaria 2ª-3ª · numeri · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

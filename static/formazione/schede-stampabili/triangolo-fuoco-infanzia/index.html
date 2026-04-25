@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Cosa serve al fuoco — Il triangolo (Infanzia 5-6 anni)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola dell'Infanzia. I 3 elementi del fuoco (combustibile, aria, calore) presentati come un triangolo, con esercizio di abbinamento e cosa fa il pompiere.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .triangolo-svg {
+      max-width: 360px; height: auto; margin: 0.4rem auto; display: block;
+    }
+    .elementi-griglia {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.55rem;
+      margin: 0.6rem 0;
+    }
+    .elemento-card {
+      border: 2.5px solid var(--scheda-rosso);
+      border-radius: 12px; padding: 0.6rem 0.5rem;
+      background: #fff; text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
+    }
+    .elemento-card .emo { font-size: 3rem; line-height: 1; }
+    .elemento-card .nome {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-rosso);
+      font-size: 1rem; letter-spacing: 0.06em;
+    }
+    .elemento-card .desc {
+      font-size: 0.78rem; color: #495057; line-height: 1.3;
+    }
+
+    .togli-elemento {
+      background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
+      padding: 0.55rem 0.85rem; border-radius: 0 6px 6px 0;
+      margin: 0.5rem 0;
+    }
+    .togli-elemento .domanda {
+      font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.4rem;
+    }
+    .togli-opz {
+      display: grid; gap: 0.35rem;
+    }
+    .togli-opz .opz {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    .togli-opz .opz .quadro {
+      width: 1.2rem; height: 1.2rem; border: 2px solid var(--scheda-blu);
+      border-radius: 4px; flex-shrink: 0;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Cosa serve al fuoco — Infanzia</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Cosa serve al fuoco per bruciare?</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (5-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere i 3 elementi del fuoco</span>
+      <span><strong>Servono:</strong> matita, pennarelli rossi e arancioni</span>
+    </div>
+
+    <p class="scheda-intro">
+      Il <strong>fuoco</strong> ha bisogno di <strong>tre cose</strong> per esistere.
+      Se manca anche solo una, il fuoco si spegne!
+      Guarda il triangolo del fuoco e i 3 elementi.
+    </p>
+
+    <svg class="triangolo-svg" viewBox="0 0 360 200" role="img" aria-label="Triangolo del fuoco con i tre elementi">
+      <polygon points="180,20 340,180 20,180" fill="#fff3cd" stroke="#dc3545" stroke-width="4"/>
+      <text x="180" y="105" text-anchor="middle" font-size="48" font-weight="700" fill="#dc3545">🔥</text>
+      <text x="180" y="14" text-anchor="middle" font-size="14" font-weight="700" fill="#dc3545">CALORE</text>
+      <text x="345" y="195" text-anchor="end" font-size="14" font-weight="700" fill="#dc3545">ARIA</text>
+      <text x="15" y="195" text-anchor="start" font-size="14" font-weight="700" fill="#dc3545">LEGNA</text>
+    </svg>
+
+    <h2 class="scheda-h2">I 3 elementi del fuoco</h2>
+    <div class="elementi-griglia">
+      <div class="elemento-card">
+        <span class="emo" aria-hidden="true">🪵</span>
+        <span class="nome">LEGNA</span>
+        <span class="desc">Una cosa che brucia (legna, carta, foglie secche).</span>
+      </div>
+      <div class="elemento-card">
+        <span class="emo" aria-hidden="true">💨</span>
+        <span class="nome">ARIA</span>
+        <span class="desc">Senza aria il fuoco non brucia.</span>
+      </div>
+      <div class="elemento-card">
+        <span class="emo" aria-hidden="true">🌡️</span>
+        <span class="nome">CALORE</span>
+        <span class="desc">La fiamma del fiammifero o la scintilla.</span>
+      </div>
+    </div>
+
+    <div class="togli-elemento">
+      <div class="domanda">✏️ Cosa fa il pompiere quando spegne un fuoco con l'acqua? Cerchia la risposta:</div>
+      <div class="togli-opz">
+        <div class="opz"><span class="quadro" aria-hidden="true"></span><span>Toglie la <strong>legna</strong> al fuoco.</span></div>
+        <div class="opz"><span class="quadro" aria-hidden="true"></span><span>Toglie il <strong>calore</strong> al fuoco (lo raffredda).</span></div>
+        <div class="opz"><span class="quadro" aria-hidden="true"></span><span>Toglie l'<strong>aria</strong> al fuoco.</span></div>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">Disegna o colora 🔥</h2>
+    <p class="scheda-intro">
+      Colora il triangolo con il rosso, e disegna nello spazio sotto un pompiere
+      con il suo <strong>idrante</strong> che spegne il fuoco.
+    </p>
+    <div class="scheda-box-disegno" style="min-height: 6rem;"></div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Soluzione</strong>: il pompiere con l'acqua <strong>toglie il calore</strong>. Per soffocare l'aria si usano coperte o estintori a CO₂.</li>
+        <li><strong>Esperienza concreta</strong>: con una candela e un bicchiere capovolto (mai con bambini direttamente!), mostrare che senza aria la candela si spegne.</li>
+        <li><strong>Regola d'oro</strong>: i bambini non devono mai accendere fuochi né toccare fiammiferi/accendini. Solo gli adulti.</li>
+        <li><strong>Collegamento</strong>: la versione completa per la primaria con esperimenti è la scheda <a href="/formazione/schede-stampabili/triangolo-fuoco-primaria/">triangolo-fuoco-primaria</a> (disponibile a breve).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Cosa serve al fuoco" · Infanzia · scienze · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

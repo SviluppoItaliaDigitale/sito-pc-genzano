@@ -473,6 +473,15 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Completa la Parola**](/formazione/schede-stampabili/completa-parola-primaria/) — 10 parole con una lettera mancante da completare usando la "banca delle lettere", più 4 parole intere da scrivere a partire dall'indizio. Soluzioni incluse.
 - 👉 [**Copia la Frase — Le parole della sicurezza**](/formazione/schede-stampabili/copia-frase-primaria/) — 5 frasi semplici sulle regole di autoprotezione (chiamata 112, posizione tartaruga, evacuazione, volontariato) da ricopiare in stampatello su righe con linea-guida.
 
+**6 schede curriculari trasversali** a tema Protezione Civile (classi 1ª-4ª):
+
+- 👉 [**Il Numero 112 — Tutto sull'emergenza**](/formazione/schede-stampabili/il-numero-112-primaria/) — ricalca le tre cifre, scrivi in lettere, mini-somma 1+1+2, scelta multipla, le 3 cose da dire all'operatore. *(numeri, classi 1ª-2ª)*
+- 👉 [**I Codici di Allerta Meteo**](/formazione/schede-stampabili/codici-allerta-numeri-primaria/) — i 4 codici colore della Regione Lazio (verde 1 → rosso 4). Ordina per gravità, colora i bollini, vero/falso. *(numeri, classi 2ª-3ª)*
+- 👉 [**Gli Strumenti del Meteorologo**](/formazione/schede-stampabili/strumenti-meteo-primaria/) — 5 strumenti (termometro, pluviometro, anemometro, barometro, igrometro) con cosa misurano e unità. *(scienze, classi 2ª-3ª)*
+- 👉 [**La Mappa del Mio Quartiere**](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/) — mappa di quartiere con 6 luoghi numerati (scuola, ospedale, farmacia, area di attesa, idrante, piazza) da etichettare + domande di comprensione. *(territorio, classi 2ª-4ª)*
+- 👉 [**Leggi e Rispondi — Marco e il Pompiere**](/formazione/schede-stampabili/leggi-rispondi-pompiere-primaria/) — mini-racconto di una piccola emergenza domestica + 5 domande di comprensione (chi, cosa, dove, numero, scelta multipla). *(comprensione, classi 1ª-2ª)*
+- 👉 [**Riordina le Frasi — Una Giornata di Allerta**](/formazione/schede-stampabili/riordina-frasi-allerta-primaria/) — 6 frasi sulla cronologia di un'allerta arancione (bollettino, COC, IT-alert, volontari) da numerare. *(comprensione, classi 2ª-3ª)*
+
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 
 ### Scheda 1 — La chiamata al 112 (role-play scritto) ✅ stampabile
