@@ -57,7 +57,7 @@ Se sei un insegnante e vuoi organizzare un incontro, contattaci a [segreteria@pr
 
 ## Giochi della Sicurezza — Impara giocando
 
-Il Gruppo ha sviluppato una collezione di **30 giochi educativi gratuiti** sulla protezione civile, divisi per fascia di età. Ogni gioco è pensato per trasmettere un messaggio chiaro di autoprotezione e termina con un **attestato di partecipazione** da stampare o conservare.
+Il Gruppo ha sviluppato una collezione di **33 giochi educativi gratuiti** sulla protezione civile, divisi per fascia di età. Ogni gioco è pensato per trasmettere un messaggio chiaro di autoprotezione e termina con un **attestato di partecipazione** da stampare o conservare.
 
 I giochi sono utilizzabili anche dai docenti come attività complementari ai kit didattici, sia in aula sia come compiti a casa. Funzionano da computer, tablet e smartphone, senza registrazione e senza installazione.
 

@@ -12,7 +12,7 @@
   // Gli ID devono corrispondere a quelli passati a GiochiUtil.salvaEMostraAttestato
   // o GiochiPC.salvaRisultato nei singoli giochi.
   var CATALOGO = {
-    // Infanzia 3-6 (8 giochi)
+    // Infanzia 3-6 (10 giochi)
     'tartaruga-saggia':       { nome: 'La Tartaruga Saggia',        fascia: 'infanzia', icona: 'bi-shield-shaded' },
     'numero-emergenza':       { nome: 'Il Numero 112',              fascia: 'infanzia', icona: 'bi-telephone-fill' },
     'suoni-emergenza':        { nome: 'I Suoni dell’Emergenza',fascia: 'infanzia', icona: 'bi-volume-up-fill' },
@@ -21,6 +21,8 @@
     'rifugio-tina':           { nome: 'Il Rifugio di Tina',         fascia: 'infanzia', icona: 'bi-house-fill' },
     'cielo-oggi':             { nome: 'Il Cielo di Oggi',           fascia: 'infanzia', icona: 'bi-cloud-sun-fill' },
     'trova-cartello':         { nome: 'Trova il Cartello',          fascia: 'infanzia', icona: 'bi-sign-turn-right-fill' },
+    'acchiappa-pericolo':     { nome: 'Acchiappa il Pericolo',      fascia: 'infanzia', icona: 'bi-hand-index-thumb-fill' },
+    'mezzo-giusto':           { nome: 'Il Mezzo Giusto',            fascia: 'infanzia', icona: 'bi-truck-front-fill' },
     // Primaria 6-11 (13 giochi)
     'quiz-primaria':          { nome: 'Quiz della Sicurezza',       fascia: 'primaria', icona: 'bi-question-circle-fill' },
     'memory-primaria':        { nome: 'Memory dei Rischi',          fascia: 'primaria', icona: 'bi-grid-3x3-gap-fill' },
@@ -35,7 +37,7 @@
     'labirinto-evacuazione':  { nome: 'Labirinto di Evacuazione',   fascia: 'primaria', icona: 'bi-signpost-2-fill' },
     'chiamata-112':           { nome: 'Chiamata al 112',            fascia: 'primaria', icona: 'bi-telephone-fill' },
     'posiziona-cartelli':     { nome: 'Posiziona i Cartelli',       fascia: 'primaria', icona: 'bi-sign-turn-right-fill' },
-    // Ragazzi 11-19 (9 giochi)
+    // Ragazzi 11-19 (10 giochi)
     'simulatore-coc':         { nome: 'Simulatore COC',             fascia: 'ragazzi',  icona: 'bi-diagram-3-fill' },
     'emergency-responder':    { nome: 'Emergency Responder',        fascia: 'ragazzi',  icona: 'bi-person-walking' },
     'mappa-rischio':          { nome: 'La Mappa del Rischio',       fascia: 'ragazzi',  icona: 'bi-geo-alt-fill' },
@@ -44,7 +46,8 @@
     'vero-o-bufala':          { nome: 'Vero o bufala?',             fascia: 'ragazzi',  icona: 'bi-patch-check-fill' },
     'triage-start':           { nome: 'Triage S.T.A.R.T.',          fascia: 'ragazzi',  icona: 'bi-heart-pulse-fill' },
     'linea-tempo-eventi':     { nome: 'Linea del tempo',            fascia: 'ragazzi',  icona: 'bi-calendar-event-fill' },
-    'cartelli-pericolo':      { nome: 'Cartelli di Pericolo',       fascia: 'ragazzi',  icona: 'bi-exclamation-diamond-fill' }
+    'cartelli-pericolo':      { nome: 'Cartelli di Pericolo',       fascia: 'ragazzi',  icona: 'bi-exclamation-diamond-fill' },
+    'scelte-difficili':       { nome: 'Scelte Difficili',           fascia: 'ragazzi',  icona: 'bi-signpost-split-fill' }
   };
 
   var IDS = Object.keys(CATALOGO);

@@ -69,6 +69,13 @@ servizi:
     descrizione: "Conosci i rischi del territorio."
     azione: "Scopri"
 
+  - titolo: "Numeri Utili"
+    url: "/numeri-utili/"
+    icona: "bi-telephone-fill"
+    classe_icona: "si-red"
+    descrizione: "Il 112 e tutti i numeri utili: Comune, ASL, Carabinieri, ARES."
+    azione: "Vedi numeri"
+
   - titolo: "Cartografia Operativa"
     url: "/cartografia/"
     icona: "bi-map"

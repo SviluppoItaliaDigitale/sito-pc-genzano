@@ -135,7 +135,7 @@ Il sito è progettato per rispettare le **WCAG 2.2 livello AA** (Linee guida AGI
 
 ### Avete materiale didattico gratuito?
 
-Sì, abbiamo 4 **kit didattici** (infanzia, primaria, secondaria I e II grado) e **18 schede stampabili** pronte per essere fotocopiate. Tutto su [Formazione](/formazione/) e [Schede Stampabili](/formazione/schede-stampabili/).
+Sì, abbiamo 4 **kit didattici** (infanzia, primaria, secondaria I e II grado), **68 schede stampabili** pronte per essere fotocopiate (di cui 10 da colorare per i più piccoli) e **33 giochi educativi gratuiti**. Tutto su [Formazione](/formazione/), [Schede Stampabili](/formazione/schede-stampabili/) e [Giochi della Sicurezza](/giochi/).
 
 ### I volontari vengono nelle scuole?
 
