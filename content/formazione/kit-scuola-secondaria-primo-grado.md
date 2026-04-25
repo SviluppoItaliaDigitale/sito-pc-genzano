@@ -465,6 +465,23 @@ Per chi vuole strutturare il percorso come UdA valutabile a livello istituzional
 
 ---
 
+## Schede fotocopiabili pronte per la stampa
+
+<div class="alert alert-success" role="note">
+<p class="mb-1"><i class="bi bi-printer-fill me-2" aria-hidden="true"></i><strong>Schede già pronte per la stampa</strong></p>
+<p class="mb-0">Tre schede sono già pronte: apri, premi <kbd>Stampa</kbd> del browser (Ctrl+P o Cmd+P) e ottieni un foglio A4 perfetto con intestazione istituzionale. Pensate per la scuola secondaria di primo grado.
+👉 <strong><a href="/formazione/schede-stampabili/">Vai all'elenco delle schede stampabili</a></strong> (in continuo arricchimento).
+Per richieste specifiche: <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
+</div>
+
+Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
+
+- 👉 [**Decodifica del bollettino di allerta**](/formazione/schede-stampabili/decodifica-bollettino-secondaria/) — bollettino realistico del Centro Funzionale Lazio per Genzano: 7 domande di analisi (codici colore, criticità, COC). Soluzioni per il docente.
+- 👉 [**Mappa dei rischi del quartiere**](/formazione/schede-stampabili/mappa-rischi-secondaria/) — indagine territoriale: lo studente consulta INGV, ISPRA, DPC, EFFIS e disegna la mappa dei rischi del proprio quartiere. 5 domande di analisi.
+- 👉 [**Audit del Piano di Emergenza Scolastico**](/formazione/schede-stampabili/audit-piano-secondaria/) — compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.
+
+---
+
 ## Compito di realtà — Analisi del Piano di Emergenza Scolastico
 
 Un'attività alternativa o complementare all'UdA, più breve (4-6 ore), direttamente ancorata alla scuola.
