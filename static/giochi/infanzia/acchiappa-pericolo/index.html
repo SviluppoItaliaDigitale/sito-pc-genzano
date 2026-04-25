@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acchiappa il Pericolo — Giochi Piccoli Esploratori</title>
+  <meta name="description" content="Tina ti mostra delle scene: tocca solo le cose pericolose. 6 round per imparare a riconoscere i pericoli di tutti i giorni. Per bambini 4-6 anni.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
+  <style>
+    .tina-fumetto {
+      background: #fff; border: 3px solid var(--inf-blu, #003366);
+      border-radius: 22px; padding: 1rem 1.2rem;
+      font-size: 1.2rem; font-weight: 700; color: var(--inf-blu, #003366);
+      text-align: center; margin-bottom: 1rem; position: relative;
+    }
+    .scena-griglia {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+      max-width: 540px; margin: 0 auto;
+    }
+    .item-btn {
+      aspect-ratio: 1; min-height: 130px;
+      border-radius: 22px; border: 4px solid #ced4da;
+      background: #fff;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.4rem; font-size: 4rem; line-height: 1;
+      box-shadow: 0 6px 0 rgba(0,0,0,.15);
+      cursor: pointer; user-select: none;
+      transition: transform .15s;
+    }
+    .item-btn .nome { font-size: 0.95rem; color: #495057; font-weight: 700; line-height: 1.2; text-transform: uppercase; }
+    .item-btn:focus { outline: 4px solid var(--inf-blu, #003366); outline-offset: 4px; }
+    .item-btn:hover { transform: translateY(-2px); }
+    .item-btn.correct { animation: inf-pulse-green .6s ease; box-shadow: 0 0 0 6px #198754; border-color: #198754; }
+    .item-btn.wrong { animation: inf-shake .4s ease; box-shadow: 0 0 0 6px #dc3545; border-color: #dc3545; }
+    .item-btn.dim { opacity: .55; }
+    .progress-dots { display: flex; justify-content: center; gap: .4rem; margin-bottom: .8rem; }
+    .progress-dots .dot { width: 14px; height: 14px; border-radius: 50%; background: #cfd6df; }
+    .progress-dots .dot.done { background: var(--inf-verde, #198754); }
+    .progress-dots .dot.now { background: var(--inf-blu, #003366); }
+    .round-up {
+      text-align: center; padding: 1.5rem 1rem;
+      background: linear-gradient(135deg, #fff8d6, #ffe4b5);
+      border: 4px solid #F4B700; border-radius: 22px;
+    }
+    .round-up .stelle { font-size: 2.5rem; line-height: 1; margin-bottom: .5rem; }
+    .round-up .titolo { color: var(--inf-blu); font-weight: 800; font-size: 1.6rem; margin-bottom: .3rem; }
+  </style>
+</head>
+<body class="inf-body">
+  <main id="main-content" tabindex="-1" class="inf-main">
+    <nav aria-label="Percorso">
+      <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
+    </nav>
+
+    <div class="inf-home">
+      <h1>Acchiappa il Pericolo</h1>
+      <p>Tina ti mostra delle scene: <strong>tocca solo la cosa pericolosa</strong>!</p>
+    </div>
+
+    <div class="inf-card" id="game-card">
+      <div id="start-screen" class="text-center">
+        <div style="font-size: 5rem;" aria-hidden="true">🐢</div>
+        <p class="h5 mt-2">Sei pronto a giocare con Tina?</p>
+        <p class="text-muted">6 round, tante scene, tante stelline da guadagnare!</p>
+        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+          <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia</button>
+          <a href="../index.html" class="btn btn-outline-secondary btn-lg"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
+        </div>
+      </div>
+
+      <div id="game-screen" class="hide">
+        <div class="progress-dots" id="progress" aria-label="Avanzamento gioco"></div>
+        <div class="tina-fumetto" id="prompt">Tocca la cosa pericolosa!</div>
+        <div class="scena-griglia" id="scena" role="group" aria-label="4 oggetti, tocca quello pericoloso"></div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <div class="round-up">
+          <div class="stelle" id="stelle">⭐⭐⭐</div>
+          <div class="titolo">Bravissimo!</div>
+          <p class="mb-3">Hai indovinato <strong><span id="punti">0</span></strong> pericoli su 6.</p>
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <button id="restart-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Rigioca</button>
+            <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    // 6 scene: ogni scena ha 4 oggetti, uno solo è "pericoloso"
+    const SCENE = [
+      {
+        domanda: 'Cosa NON puoi toccare in cucina?',
+        items: [
+          { emo: '🍎', nome: 'Mela', danger: false },
+          { emo: '🍞', nome: 'Pane', danger: false },
+          { emo: '🔥', nome: 'Fiamma', danger: true },
+          { emo: '🥛', nome: 'Latte', danger: false }
+        ]
+      },
+      {
+        domanda: 'Cosa è pericoloso a casa?',
+        items: [
+          { emo: '🧸', nome: 'Orsetto', danger: false },
+          { emo: '⚡', nome: 'Presa elettrica', danger: true },
+          { emo: '📚', nome: 'Libro', danger: false },
+          { emo: '🪀', nome: 'Yo-yo', danger: false }
+        ]
+      },
+      {
+        domanda: 'Cosa NON puoi prendere?',
+        items: [
+          { emo: '✏️', nome: 'Matita', danger: false },
+          { emo: '🪪', nome: 'Tessera', danger: false },
+          { emo: '🧨', nome: 'Petardo', danger: true },
+          { emo: '🎨', nome: 'Pennello', danger: false }
+        ]
+      },
+      {
+        domanda: 'Cosa fa pericolo se cammini?',
+        items: [
+          { emo: '🌳', nome: 'Albero', danger: false },
+          { emo: '🪨', nome: 'Sasso che cade', danger: true },
+          { emo: '🏠', nome: 'Casa', danger: false },
+          { emo: '🌷', nome: 'Fiore', danger: false }
+        ]
+      },
+      {
+        domanda: 'Cosa è pericoloso se piove fortissimo?',
+        items: [
+          { emo: '☔', nome: 'Ombrello', danger: false },
+          { emo: '🌊', nome: 'Acqua per strada', danger: true },
+          { emo: '🧥', nome: 'Giacca', danger: false },
+          { emo: '👢', nome: 'Stivali', danger: false }
+        ]
+      },
+      {
+        domanda: 'Cosa NON tocco MAI?',
+        items: [
+          { emo: '🎈', nome: 'Palloncino', danger: false },
+          { emo: '💊', nome: 'Medicine', danger: true },
+          { emo: '🍓', nome: 'Fragola', danger: false },
+          { emo: '📱', nome: 'Telefono', danger: false }
+        ]
+      }
+    ];
+
+    let cur = 0, score = 0, locked = false;
+    const startScr = document.getElementById('start-screen');
+    const gameScr = document.getElementById('game-screen');
+    const endScr = document.getElementById('end-screen');
+    const promptEl = document.getElementById('prompt');
+    const scenaEl = document.getElementById('scena');
+    const progEl = document.getElementById('progress');
+
+    document.getElementById('start-btn').addEventListener('click', start);
+    document.getElementById('restart-btn').addEventListener('click', start);
+
+    function start() {
+      cur = 0; score = 0; locked = false;
+      startScr.classList.add('hide');
+      endScr.classList.add('hide');
+      gameScr.classList.remove('hide');
+      drawProgress();
+      render();
+    }
+
+    function drawProgress() {
+      progEl.innerHTML = '';
+      for (let i = 0; i < SCENE.length; i++) {
+        const d = document.createElement('span');
+        d.className = 'dot' + (i < cur ? ' done' : i === cur ? ' now' : '');
+        progEl.appendChild(d);
+      }
+    }
+
+    function render() {
+      const scena = SCENE[cur];
+      promptEl.textContent = scena.domanda;
+      scenaEl.innerHTML = '';
+      const items = [...scena.items].sort(() => Math.random() - 0.5);
+      items.forEach(it => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'item-btn';
+        b.setAttribute('aria-label', it.nome + (it.danger ? ' (pericoloso)' : ''));
+        b.innerHTML = '<span aria-hidden="true">' + it.emo + '</span><span class="nome">' + it.nome + '</span>';
+        b.addEventListener('click', () => onPick(b, it));
+        scenaEl.appendChild(b);
+      });
+      locked = false;
+      drawProgress();
+    }
+
+    function onPick(btn, it) {
+      if (locked) return;
+      locked = true;
+      if (it.danger) {
+        btn.classList.add('correct');
+        score++;
+      } else {
+        btn.classList.add('wrong');
+        // mostra anche quello giusto
+        scenaEl.querySelectorAll('.item-btn').forEach(b => {
+          if (b !== btn) b.classList.add('dim');
+        });
+      }
+      setTimeout(() => {
+        cur++;
+        if (cur >= SCENE.length) {
+          finish();
+        } else {
+          render();
+        }
+      }, 1100);
+    }
+
+    function finish() {
+      gameScr.classList.add('hide');
+      endScr.classList.remove('hide');
+      document.getElementById('punti').textContent = score;
+      const stars = score >= 6 ? '⭐⭐⭐' : score >= 4 ? '⭐⭐' : score >= 2 ? '⭐' : '👍';
+      document.getElementById('stelle').textContent = stars;
+    }
+  })();
+  </script>
+</body>
+</html>

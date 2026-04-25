@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scelte Difficili — Giochi Ragazzi</title>
+  <meta name="description" content="3 scenari di emergenza con scelte multiple. Le tue decisioni cambiano la storia. Per ragazzi 11-14 anni: terremoto a scuola, alluvione di notte, incendio nel bosco.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <style>
+    .scenario-card {
+      background: #fff; border: 2px solid #e9ecef; border-radius: 10px;
+      padding: 1.2rem 1.4rem; margin-bottom: 1rem;
+      box-shadow: 0 3px 12px rgba(0,0,0,.05);
+    }
+    .scenario-meta {
+      display: flex; gap: .8rem; align-items: baseline;
+      margin-bottom: .6rem; padding-bottom: .5rem;
+      border-bottom: 1px dashed #e9ecef;
+      font-size: .85rem; color: #5b6b7c;
+    }
+    .scenario-meta .titolo-mini {
+      font-weight: 700; color: var(--rag-blu); font-size: 1rem;
+    }
+    .scenario-testo {
+      font-size: 1rem; line-height: 1.6; color: #17324D;
+      margin-bottom: 1rem;
+    }
+    .scenario-testo strong { color: var(--rag-blu); }
+    .azioni {
+      display: grid; gap: .55rem; margin-top: 1rem;
+    }
+    .btn-azione {
+      padding: .8rem 1rem; border-radius: 8px; border: 2px solid var(--rag-blu);
+      background: #fff; color: var(--rag-blu);
+      font-weight: 600; cursor: pointer; font-size: .95rem;
+      text-align: left; line-height: 1.4;
+      transition: background .2s, color .2s;
+    }
+    .btn-azione:hover, .btn-azione:focus-visible {
+      background: var(--rag-blu); color: #fff; outline: 0;
+    }
+    .btn-azione:disabled { opacity: .55; cursor: not-allowed; }
+    .esito-box {
+      margin-top: 1rem; padding: .9rem 1.1rem; border-radius: 8px;
+      font-size: .95rem; line-height: 1.55;
+    }
+    .esito-box.ottimo { background: #e8f5ee; border-left: 4px solid var(--rag-verde); }
+    .esito-box.medio { background: #fffbe6; border-left: 4px solid var(--rag-arancio); }
+    .esito-box.sbagliato { background: #fde8eb; border-left: 4px solid var(--rag-rosso); }
+    .esito-box .badge-pt {
+      display: inline-block; padding: .15rem .5rem; border-radius: 4px;
+      background: var(--rag-blu); color: #fff; font-weight: 700; font-size: .82rem;
+      margin-right: .4rem;
+    }
+    .progress-info {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: .8rem; font-size: .9rem; color: #5b6b7c;
+    }
+    .progress-info .scena-num { font-weight: 700; color: var(--rag-blu); }
+    .progress-info .punti-tot { font-weight: 700; }
+    .progress-bar-holder {
+      height: 6px; background: #e9ecef; border-radius: 99px; overflow: hidden; margin-bottom: 1rem;
+    }
+    .progress-bar-holder > div {
+      height: 100%; background: var(--rag-blu); transition: width .3s;
+    }
+    .intro-card { background: #fff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 3px 14px rgba(0,0,0,.06); }
+    .stat-row { display: flex; justify-content: space-around; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+    .stat-box { background: #eef4fc; border-radius: 8px; padding: .7rem 1rem; text-align: center; min-width: 130px; }
+    .stat-box .num { font-size: 1.6rem; font-weight: 800; color: var(--rag-blu); }
+    .stat-box .lbl { font-size: .8rem; color: #5b6b7c; }
+    .nota-finale {
+      background: #fffbe6; border-left: 4px solid var(--rag-arancio);
+      padding: .9rem 1.1rem; border-radius: 6px; margin: 1rem 0;
+      font-size: .92rem; line-height: 1.5;
+    }
+  </style>
+</head>
+<body class="rag-body">
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/ragazzi/">Ragazzi</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scelte Difficili</li>
+          </ol>
+        </nav>
+        <h1>Scelte Difficili</h1>
+        <p class="lead">3 scenari di emergenza, le tue decisioni decidono come finisce. Cosa faresti tu?</p>
+      </div>
+    </div>
+
+    <div class="container py-4" style="max-width: 820px;">
+
+      <section id="intro" class="intro-card">
+        <h2 class="h4 mb-3">Come si gioca</h2>
+        <p>Sei al centro di un'emergenza. Ti vengono presentati <strong>3 scenari</strong> (terremoto a scuola, alluvione di notte, incendio nel bosco). In ciascuno fai <strong>3-4 scelte</strong> con conseguenze diverse. Alcune scelte salvano vite, altre le mettono a rischio: i punti riflettono la qualità delle tue decisioni.</p>
+        <p class="text-muted small">Non c'è una risposta sempre "giusta": le emergenze reali sono incerte. L'obiettivo è imparare il <strong>ragionamento</strong> giusto in situazioni di pressione.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Inizia</button>
+          <a href="../index.html" class="btn btn-outline-secondary btn-lg"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
+        </div>
+      </section>
+
+      <section id="game" class="hide">
+        <div class="progress-bar-holder" aria-hidden="true"><div id="progress-bar" style="width:0%"></div></div>
+        <div class="progress-info">
+          <span>Scenario <span class="scena-num" id="scena-cur">1</span> di <span class="scena-num" id="scena-tot">3</span> — Decisione <span id="dec-cur">1</span></span>
+          <span class="punti-tot">Punti: <span id="punti-tot">0</span></span>
+        </div>
+        <div class="scenario-card">
+          <div class="scenario-meta"><span class="titolo-mini" id="scena-titolo">—</span></div>
+          <div class="scenario-testo" id="scena-testo">—</div>
+          <div class="azioni" id="azioni"></div>
+          <div class="esito-box hide" id="esito"></div>
+          <div class="d-flex justify-content-end mt-3 hide" id="next-row">
+            <button id="next-btn" class="btn btn-primary"><span id="next-label">Continua</span> <i class="bi bi-arrow-right ms-1"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="hide">
+        <div class="intro-card">
+          <h2 class="h4 mb-3">Hai finito i 3 scenari!</h2>
+          <div class="stat-row">
+            <div class="stat-box"><div class="num" id="punti-fin">0</div><div class="lbl">Punti totali / max <span id="punti-max">30</span></div></div>
+            <div class="stat-box"><div class="num" id="livello">—</div><div class="lbl">Valutazione</div></div>
+          </div>
+          <div id="debrief"></div>
+          <div class="nota-finale">
+            <strong><i class="bi bi-info-circle me-1"></i>Riflessione finale.</strong> In emergenza non esistono "regole sempre giuste":
+            esistono <strong>principi</strong> (allontanarsi dal pericolo, chiamare il 112 con dati precisi, non improvvisare,
+            seguire le autorità) e <strong>buon senso</strong>. Più ti alleni con scenari come questo,
+            più sarai preparato quando capiterà davvero.
+          </div>
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <button id="restart-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Rigioca</button>
+            <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    // 3 scenari, ognuno 3 decisioni con punti per scelta
+    const SCENARI = [
+      {
+        titolo: '🏫 Terremoto a scuola',
+        decisioni: [
+          {
+            testo: 'Sei in classe in seconda media. La scossa inizia: dura circa 8 secondi. Cosa fai per primo?',
+            scelte: [
+              { txt: 'Mi metto subito sotto il banco e proteggo la testa con le mani', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Drop, Cover, Hold On</strong> è la procedura corretta. Sotto il banco sei al riparo da oggetti che cadono.' },
+              { txt: 'Corro fuori dall\'aula verso le scale', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. <strong>Mai correre durante la scossa.</strong> Le scale e le porte sono fra i punti più pericolosi: vetri, lampadari, calcinacci.' },
+              { txt: 'Resto in piedi in mezzo all\'aula a guardare cosa succede', pt: 1, esito: 'medio', fb: 'INSUFFICIENTE. Sei esposto a oggetti in caduta. Sotto un banco saresti più protetto.' }
+            ]
+          },
+          {
+            testo: 'La scossa è finita. La docente apre la porta e dice di evacuare. Cosa porti con te?',
+            scelte: [
+              { txt: 'Niente, esco subito in fila come ho imparato', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La priorità è uscire. Lo zaino lo recupererai dopo, se possibile.' },
+              { txt: 'Solo il mio zaino', pt: 1, esito: 'medio', fb: 'NON IDEALE. Lo zaino può rallentarti e ostacolare i compagni. Si esce a mani libere.' },
+              { txt: 'Vado al mio armadietto a prendere il telefono', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. <strong>Mai tornare indietro</strong> per oggetti durante un\'evacuazione. Si perde tempo cruciale e si crea confusione.' }
+            ]
+          },
+          {
+            testo: 'Al punto di raccolta, un compagno è scomparso. Cosa fai?',
+            scelte: [
+              { txt: 'Lo cerco da solo nell\'edificio', pt: 0, esito: 'sbagliato', fb: 'PERICOLOSO. Mai rientrare nell\'edificio. Aggiungeresti una persona dispersa al problema.' },
+              { txt: 'Avviso subito la docente o il responsabile dell\'evacuazione', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La gestione di una persona mancante spetta all\'autorità (RSPP, vigili del fuoco). Tu hai segnalato e questo basta.' },
+              { txt: 'Lo cerco con altri compagni', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. Si moltiplicano le persone disperse. La ricerca la fanno gli operatori formati.' }
+            ]
+          }
+        ]
+      },
+      {
+        titolo: '🌊 Alluvione di notte',
+        decisioni: [
+          {
+            testo: 'È mezzanotte. Tua madre ti sveglia: sta entrando acqua dalla porta del piano terra. La pioggia è violenta, c\'è allerta arancione. Cosa fate per prima cosa?',
+            scelte: [
+              { txt: 'Chiudo la porta e cerco di tappare con asciugamani', pt: 1, esito: 'medio', fb: 'BUONA INTENZIONE. Può aiutare a rallentare, ma se l\'acqua sta già entrando, la priorità è salire. Non perdere tempo.' },
+              { txt: 'Saliamo subito al piano alto con telefoni, documenti, medicine', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>L\'acqua sale rapidamente.</strong> Salire subito è prioritario; portare telefoni (per chiamare aiuto) e documenti è la scelta giusta.' },
+              { txt: 'Apriamo la porta principale per far defluire l\'acqua fuori', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. Non sai cosa c\'è fuori. Aprendo la porta entra <strong>più</strong> acqua, e potresti uscire in una corrente forte. Mai aprire.' }
+            ]
+          },
+          {
+            testo: 'Sei al primo piano. Senti delle persone chiedere aiuto fuori. La strada è allagata. Cosa fai?',
+            scelte: [
+              { txt: 'Esco a fare il volontario, so nuotare bene', pt: 0, esito: 'sbagliato', fb: 'PERICOLOSISSIMO. <strong>20 cm di acqua in movimento trascinano una persona.</strong> Ci sono rischi nascosti: tombini aperti, fili elettrici, detriti. Mai improvvisare il soccorso in acqua.' },
+              { txt: 'Chiamo il 112 e segnalo la posizione delle persone', pt: 3, esito: 'ottimo', fb: 'PERFETTO. Sei più utile <strong>al telefono</strong> che in acqua. Fornisci coordinate precise: indirizzo, piano, numero di persone, condizioni.' },
+              { txt: 'Lancio una corda o una boa dalla finestra', pt: 1, esito: 'medio', fb: 'PUÒ AIUTARE solo se le persone sono <strong>vicinissime</strong> e tu sei al sicuro. Prima però chiama il 112: i soccorritori organizzati arrivano e fanno il lavoro.' }
+            ]
+          },
+          {
+            testo: 'L\'allerta IT-alert sul telefono dice di salire ai piani alti e attendere. Stai aspettando, ma su WhatsApp un compagno scrive che "i Vigili del Fuoco hanno detto di evacuare a piedi verso il municipio". Cosa fai?',
+            scelte: [
+              { txt: 'Esco subito, va seguito il consiglio dei Vigili', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. Sui social girano <strong>fake news</strong>, soprattutto in emergenza. Le indicazioni ufficiali sono IT-alert, sito Comune, Sindaco. Mai uscire in alluvione senza conferma.' },
+              { txt: 'Resto al piano alto come dice IT-alert e cerco verifica sul sito del Comune', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Le fonti ufficiali</strong> (IT-alert, Comune, DPC) prevalgono. WhatsApp non è una fonte autorizzata. Verifica prima di agire.' },
+              { txt: 'Inoltro il messaggio anche a tutti i miei contatti', pt: 0, esito: 'sbagliato', fb: 'CATASTROFICO. Hai amplificato una possibile fake news. <strong>Non condividere informazioni non verificate</strong> in emergenza: rischi di mandare persone in pericolo.' }
+            ]
+          }
+        ]
+      },
+      {
+        titolo: '🔥 Incendio nel bosco',
+        decisioni: [
+          {
+            testo: 'Sei in escursione con la classe sui Castelli Romani. Vedi una colonna di fumo nero a circa 200 metri sul versante. Cosa fai?',
+            scelte: [
+              { txt: 'Avviso subito i docenti e chiamo il 112 con la posizione precisa', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Il 112 si chiama subito.</strong> La posizione precisa (coordinate GPS dal telefono, o luogo + sentiero) salva minuti preziosi.' },
+              { txt: 'Vado a vedere quanto è grande prima di chiamare', pt: 0, esito: 'sbagliato', fb: 'PERICOLOSISSIMO. Un incendio boschivo si propaga in pochi minuti, soprattutto con vento. <strong>Non avvicinarti mai.</strong>' },
+              { txt: 'Cerco di soffocarlo con la giacca prima che si allarghi', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATISSIMO. Per un incendio boschivo gli interventi sono dei vigili del fuoco e dell\'AIB. <strong>Mai improvvisare.</strong>' }
+            ]
+          },
+          {
+            testo: 'Il fumo si avvicina. Il vento spinge le fiamme verso la zona dove siete. Cosa fa la classe?',
+            scelte: [
+              { txt: 'Ci allontaniamo in direzione opposta al vento e al fumo, in modo ordinato', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La regola d\'oro è <strong>allontanarsi controvento</strong>. Ordinato perché correre disperde la classe.' },
+              { txt: 'Saliamo più in alto sul versante per vedere meglio', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. Il fuoco <strong>sale di pendio velocemente</strong>: l\'aria calda risale, e il fronte si propaga in salita. Bisogna scendere o muoversi in piano controvento.' },
+              { txt: 'Ci stendiamo a terra per evitare il fumo', pt: 1, esito: 'medio', fb: 'PARZIALMENTE GIUSTO. Stare in basso aiuta a evitare il fumo se non si può uscire, ma <strong>se si può fuggire, si fugge</strong> in direzione sicura. Stendersi serve solo se intrappolati.' }
+            ]
+          },
+          {
+            testo: 'Siete in salvo, lontani dal fuoco. Le sirene si avvicinano. Vedi che un compagno usa il telefono per fare un video da pubblicare su Instagram. Cosa pensi/dici?',
+            scelte: [
+              { txt: 'Va bene, è importante documentare', pt: 0, esito: 'sbagliato', fb: 'NON IDEALE. Filmare un\'emergenza per i social spesso espone chi è in difficoltà, alimenta speculazioni, e <strong>distoglie dall\'aiuto reale</strong>. La cronaca è dei giornalisti.' },
+              { txt: 'Gli dico di smettere e di mettere via il telefono finché non sono arrivati i soccorsi', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La <strong>priorità</strong> è la sicurezza, non i social. Il telefono serve per il 112 o per essere reperibili dai soccorsi. Le foto si fanno dopo, se proprio.' },
+              { txt: 'Chiedo di poter comparire nel video per la mia popolarità', pt: 0, esito: 'sbagliato', fb: 'GRAVE. Hai banalizzato un\'emergenza per cercare visibilità. È esattamente il comportamento che la <strong>Social Media Policy</strong> della PC condanna.' }
+            ]
+          }
+        ]
+      }
+    ];
+
+    let scenarioIdx = 0, decisioneIdx = 0, totale = 0, sceltaCorrente = null;
+    let storia = []; // {scenario, decisione, esito, pt}
+
+    const intro = document.getElementById('intro');
+    const game = document.getElementById('game');
+    const results = document.getElementById('results');
+
+    document.getElementById('start-btn').addEventListener('click', start);
+    document.getElementById('restart-btn').addEventListener('click', start);
+    document.getElementById('next-btn').addEventListener('click', avanti);
+
+    function start() {
+      scenarioIdx = 0; decisioneIdx = 0; totale = 0; sceltaCorrente = null;
+      storia = [];
+      intro.classList.add('hide');
+      results.classList.add('hide');
+      game.classList.remove('hide');
+      document.getElementById('scena-tot').textContent = SCENARI.length;
+      render();
+    }
+
+    function render() {
+      const sc = SCENARI[scenarioIdx];
+      const dec = sc.decisioni[decisioneIdx];
+      document.getElementById('scena-cur').textContent = scenarioIdx + 1;
+      document.getElementById('dec-cur').textContent = decisioneIdx + 1;
+      document.getElementById('scena-titolo').textContent = sc.titolo;
+      document.getElementById('scena-testo').textContent = dec.testo;
+      document.getElementById('punti-tot').textContent = totale;
+      // progress
+      const totDec = SCENARI.reduce((a, s) => a + s.decisioni.length, 0);
+      let done = 0;
+      for (let i = 0; i < scenarioIdx; i++) done += SCENARI[i].decisioni.length;
+      done += decisioneIdx;
+      document.getElementById('progress-bar').style.width = (100 * done / totDec) + '%';
+      // azioni
+      const az = document.getElementById('azioni');
+      az.innerHTML = '';
+      dec.scelte.forEach((sc2, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'btn-azione';
+        b.textContent = sc2.txt;
+        b.addEventListener('click', () => onScelta(b, sc2));
+        az.appendChild(b);
+      });
+      document.getElementById('esito').classList.add('hide');
+      document.getElementById('next-row').classList.add('hide');
+    }
+
+    function onScelta(btn, scelta) {
+      // Disable all buttons
+      document.querySelectorAll('.btn-azione').forEach(b => b.disabled = true);
+      btn.style.background = scelta.esito === 'ottimo' ? '#15803d' : scelta.esito === 'medio' ? '#b45309' : '#c92a2a';
+      btn.style.color = '#fff';
+      btn.style.borderColor = btn.style.background;
+      totale += scelta.pt;
+      storia.push({ scenario: SCENARI[scenarioIdx].titolo, esito: scelta.esito, pt: scelta.pt });
+      const e = document.getElementById('esito');
+      e.className = 'esito-box ' + scelta.esito;
+      e.innerHTML = '<span class="badge-pt">+' + scelta.pt + ' pt</span>' + scelta.fb;
+      e.classList.remove('hide');
+      document.getElementById('punti-tot').textContent = totale;
+      // Last decision of last scenario? Otherwise show next btn
+      const isLastDec = (scenarioIdx === SCENARI.length - 1) &&
+                       (decisioneIdx === SCENARI[scenarioIdx].decisioni.length - 1);
+      document.getElementById('next-label').textContent = isLastDec ? 'Vedi risultati' : 'Continua';
+      document.getElementById('next-row').classList.remove('hide');
+    }
+
+    function avanti() {
+      // Avanza alla prossima decisione/scenario
+      if (decisioneIdx + 1 < SCENARI[scenarioIdx].decisioni.length) {
+        decisioneIdx++;
+      } else if (scenarioIdx + 1 < SCENARI.length) {
+        scenarioIdx++;
+        decisioneIdx = 0;
+      } else {
+        // fine
+        showResults();
+        return;
+      }
+      render();
+    }
+
+    function showResults() {
+      game.classList.add('hide');
+      results.classList.remove('hide');
+      const totDec = SCENARI.reduce((a, s) => a + s.decisioni.length, 0);
+      const max = totDec * 3;
+      document.getElementById('punti-fin').textContent = totale;
+      document.getElementById('punti-max').textContent = max;
+      let liv;
+      if (totale >= max * 0.85) liv = 'Eccellente';
+      else if (totale >= max * 0.65) liv = 'Buono';
+      else if (totale >= max * 0.4) liv = 'Migliorabile';
+      else liv = 'Da rivedere';
+      document.getElementById('livello').textContent = liv;
+      // debrief
+      const ottimi = storia.filter(s => s.esito === 'ottimo').length;
+      const sbagli = storia.filter(s => s.esito === 'sbagliato').length;
+      const debrief = document.getElementById('debrief');
+      debrief.innerHTML =
+        '<p><strong>Decisioni ottime</strong>: ' + ottimi + ' su ' + storia.length + '. <strong>Errori gravi</strong>: ' + sbagli + '.</p>' +
+        '<p>Le scelte migliori erano quelle che (1) <strong>privilegiano la sicurezza</strong> rispetto alla curiosità, (2) <strong>chiamano il 112</strong> con dati precisi anziché improvvisare, (3) <strong>seguono le fonti ufficiali</strong> (IT-alert, Comune) anziché WhatsApp, (4) <strong>aiutano comunicando</strong> ai professionisti anziché fare azioni rischiose in autonomia.</p>';
+    }
+  })();
+  </script>
+</body>
+</html>
