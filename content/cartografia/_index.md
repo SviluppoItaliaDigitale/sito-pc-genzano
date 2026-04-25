@@ -24,7 +24,7 @@ Luoghi sicuri all'aperto dove la popolazione deve radunarsi **subito dopo un eve
 | ID | Denominazione | Indirizzo |
 |---|---|---|
 | AA1 | Palazzo Sforza | Piazza Tommaso Frasconi |
-| AA2 | Via Piave | Parcheggio Via Piave |
+| AA2 | Via Piave | Parcheggio in Via Turno Erdonio, adiacente a Viale Piave (lato Ariccia) |
 | AA3 | Via Toscana | Parcheggio incrocio Via Toscana / Via Lazio |
 | AA4 | Via Enrico Mattei | Parcheggio Via Enrico Mattei |
 | AA5 | Via Napoli | Parcheggio incrocio Via Napoli / Via Emilia Romagna |
