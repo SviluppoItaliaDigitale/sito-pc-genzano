@@ -30,7 +30,12 @@
       font-size: 1.5rem;
       background: #fff;
     }
-    .lab-cella.muro { background: #495057; }
+    .lab-cella.muro {
+      background: #495057;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      color-adjust: exact;
+    }
     .lab-cella.start {
       background: #cfe2ff;
       font-size: 1.8rem;
@@ -74,6 +79,22 @@
       .lab-cella {
         width: 1.4cm;
         height: 1.4cm;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+      }
+      .lab-cella.muro {
+        background: #495057 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        /* Fallback: pattern visibile anche se la stampante elimina lo sfondo */
+        background-image: repeating-linear-gradient(45deg, #000 0, #000 2px, transparent 2px, transparent 6px) !important;
+      }
+      .lab-cella.start, .lab-cella.end, .lab-cella.ostacolo, .lab-cella.fuoco {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
       }
     }
   </style>
