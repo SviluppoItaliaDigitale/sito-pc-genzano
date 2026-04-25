@@ -193,6 +193,81 @@
     });
   }
 
+  // Inietta automaticamente un bottone "Torna al menu" in ogni pagina di gioco.
+  // Permette al bambino (o all'adulto che lo accompagna) di abbandonare il gioco
+  // in qualsiasi momento senza dover finire la sessione. Determina il link
+  // di destinazione dal breadcrumb della pagina (penultimo link, di solito
+  // "Scuola Primaria" / "Infanzia" / "Ragazzi" / "Giochi della Sicurezza").
+  function aggiungiPulsanteEsciGioco() {
+    // Esci se è una pagina hub (lista giochi della fascia) — per loro c'è già il breadcrumb.
+    // Una pagina di gioco specifica ha sempre uno di questi marker:
+    var marker = document.querySelector(
+      '#intro, #game, #end, #select-screen, #game-screen, #end-screen, #game-card, .gioco-fine, .scena-corrente, [data-gioco], .giochi-section main .game-container'
+    );
+    if (!marker) return;
+
+    // Trova il link al menu della fascia: ultimo <a> nel breadcrumb prima dell'item active
+    var crumbLinks = document.querySelectorAll('.breadcrumb a, nav[aria-label="Percorso"] a');
+    var menuHref = '../index.html';
+    if (crumbLinks.length > 0) {
+      menuHref = crumbLinks[crumbLinks.length - 1].getAttribute('href') || menuHref;
+    }
+
+    // Il bottone è già presente? Non duplicare.
+    if (document.getElementById('gioco-esci-btn')) return;
+
+    var btn = document.createElement('a');
+    btn.id = 'gioco-esci-btn';
+    btn.href = menuHref;
+    btn.setAttribute('aria-label', 'Esci dal gioco e torna al menu');
+    btn.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i> <span class="gioco-esci-label">Torna al menu</span>';
+    btn.style.cssText = [
+      'position: fixed',
+      'top: 1rem',
+      'right: 1rem',
+      'z-index: 9999',
+      'background: #003366',
+      'color: #ffffff',
+      'text-decoration: none',
+      'padding: 0.55rem 1rem',
+      'border-radius: 24px',
+      'font-weight: 600',
+      'font-size: 0.95rem',
+      'box-shadow: 0 3px 10px rgba(0,0,0,0.25)',
+      'display: inline-flex',
+      'align-items: center',
+      'gap: 0.5rem',
+      'border: 2px solid #ffffff'
+    ].join(';');
+
+    // Su schermi molto stretti, mostra solo l'icona (la label resta come aria-label)
+    var stile = document.createElement('style');
+    stile.textContent = ''
+      + '#gioco-esci-btn:hover, #gioco-esci-btn:focus {'
+      + '  background: #002244 !important;'
+      + '  outline: 3px solid #ffbe2e;'
+      + '  outline-offset: 2px;'
+      + '}'
+      + '#gioco-esci-btn .gioco-esci-label {'
+      + '  white-space: nowrap;'
+      + '}'
+      + '@media (max-width: 480px) {'
+      + '  #gioco-esci-btn .gioco-esci-label { display: none; }'
+      + '  #gioco-esci-btn { padding: 0.55rem 0.7rem !important; }'
+      + '}'
+      + '@media print {'
+      + '  #gioco-esci-btn { display: none !important; }'
+      + '}';
+    document.head.appendChild(stile);
+    document.body.appendChild(btn);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', aggiungiPulsanteEsciGioco);
+  } else {
+    aggiungiPulsanteEsciGioco();
+  }
+
   global.GiochiUtil = {
     qs: qs,
     qsa: qsa,
@@ -203,6 +278,7 @@
     creaPulsanteVolume: creaPulsanteVolume,
     pannelloFineGioco: pannelloFineGioco,
     badgeMigliorRisultato: badgeMigliorRisultato,
-    salvaEMostraAttestato: salvaEMostraAttestato
+    salvaEMostraAttestato: salvaEMostraAttestato,
+    aggiungiPulsanteEsciGioco: aggiungiPulsanteEsciGioco
   };
 })(typeof window !== 'undefined' ? window : this);
