@@ -128,6 +128,16 @@ Esta página oferece-lhe as **informações essenciais** em português. O site c
 </div>
 
 <div class="en-card">
+<h2>📚 Páginas detalhadas em português</h2>
+<p>Para além desta visão geral, as seguintes páginas estão traduzidas em detalhe:</p>
+<ul class="en-list">
+<li><a href="/portugues/numeri-utili/"><strong>Números úteis</strong></a></li>
+<li><a href="/portugues/cosa-fare-adesso/"><strong>O que fazer agora</strong></a></li>
+<li><a href="/portugues/piano-familiare/"><strong>Plano de Emergência Familiar</strong></a></li>
+</ul>
+</div>
+
+<div class="en-card">
 <h2>📞 Contactos</h2>
 <p><strong>Grupo Comunal de Voluntários de Proteção Civil de Genzano di Roma</strong></p>
 <ul class="en-list">

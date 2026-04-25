@@ -128,6 +128,16 @@ Esta página le ofrece la **información esencial** en español. La web completa
 </div>
 
 <div class="en-card">
+<h2>📚 Páginas detalladas en español</h2>
+<p>Más allá de esta descripción general, las siguientes páginas están traducidas en detalle:</p>
+<ul class="en-list">
+<li><a href="/espanol/numeri-utili/"><strong>Números útiles</strong></a></li>
+<li><a href="/espanol/cosa-fare-adesso/"><strong>Qué hacer ahora</strong></a></li>
+<li><a href="/espanol/piano-familiare/"><strong>Plan de Emergencia Familiar</strong></a></li>
+</ul>
+</div>
+
+<div class="en-card">
 <h2>📞 Contactos</h2>
 <p><strong>Grupo Comunal de Voluntarios de Protección Civil de Genzano di Roma</strong></p>
 <ul class="en-list">

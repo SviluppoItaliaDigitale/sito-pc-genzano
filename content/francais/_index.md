@@ -128,6 +128,16 @@ Cette page vous donne les **informations essentielles** en français. Le site co
 </div>
 
 <div class="en-card">
+<h2>📚 Pages détaillées en français</h2>
+<p>Au-delà de cette vue d'ensemble, les pages suivantes sont traduites en détail :</p>
+<ul class="en-list">
+<li><a href="/francais/numeri-utili/"><strong>Numéros utiles</strong></a></li>
+<li><a href="/francais/cosa-fare-adesso/"><strong>Que faire maintenant</strong></a></li>
+<li><a href="/francais/piano-familiare/"><strong>Plan d'Urgence Familial</strong></a></li>
+</ul>
+</div>
+
+<div class="en-card">
 <h2>📞 Contacts</h2>
 <p><strong>Groupe Communal des Volontaires de la Protection Civile de Genzano di Roma</strong></p>
 <ul class="en-list">

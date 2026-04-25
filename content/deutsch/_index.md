@@ -128,6 +128,16 @@ Diese Seite gibt Ihnen die **wesentlichen Informationen** auf Deutsch. Die volls
 </div>
 
 <div class="en-card">
+<h2>📚 Detaillierte Seiten auf Deutsch</h2>
+<p>Über diese Übersicht hinaus sind die folgenden Seiten ausführlich übersetzt:</p>
+<ul class="en-list">
+<li><a href="/deutsch/numeri-utili/"><strong>Nützliche Nummern</strong></a></li>
+<li><a href="/deutsch/cosa-fare-adesso/"><strong>Was jetzt tun</strong></a></li>
+<li><a href="/deutsch/piano-familiare/"><strong>Familien-Notfallplan</strong></a></li>
+</ul>
+</div>
+
+<div class="en-card">
 <h2>📞 Kontakte</h2>
 <p><strong>Kommunale Freiwilligengruppe Zivilschutz Genzano di Roma</strong></p>
 <ul class="en-list">

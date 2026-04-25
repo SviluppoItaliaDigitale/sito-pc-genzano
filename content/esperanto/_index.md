@@ -128,6 +128,16 @@ Tiu ĉi paĝo donas al vi la **esencajn informojn** en Esperanto. La kompleta re
 </div>
 
 <div class="en-card">
+<h2>📚 Detalaj paĝoj en Esperanto</h2>
+<p>Krom ĉi tiu resumo, la sekvaj paĝoj estas detale tradukitaj:</p>
+<ul class="en-list">
+<li><a href="/esperanto/numeri-utili/"><strong>Utilaj numeroj</strong></a></li>
+<li><a href="/esperanto/cosa-fare-adesso/"><strong>Kion fari nun</strong></a></li>
+<li><a href="/esperanto/piano-familiare/"><strong>Familia Urĝa Plano</strong></a></li>
+</ul>
+</div>
+
+<div class="en-card">
 <h2>📞 Kontaktoj</h2>
 <p><strong>Komunuma Grupo de Volontuloj de Civila Protekto de Genzano di Roma</strong></p>
 <ul class="en-list">
