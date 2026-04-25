@@ -233,7 +233,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-edu" href="/formazione/schede-stampabili/">
   <div class="ms-card-icon"><i class="bi bi-printer-fill"></i></div>
   <p class="ms-card-title">Schede stampabili</p>
-  <p class="ms-card-desc">18 schede A4 pronte per la stampa: chiamata 112, vero/falso, labirinto, schede da colorare.</p>
+  <p class="ms-card-desc">68 schede A4 pronte per la stampa: 10 colorabili, letto-scrittura, matematica, scienze, ed. civica e altre discipline curriculari.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/kit-scuola-infanzia/">
   <div class="ms-card-icon"><i class="bi bi-stars"></i></div>
