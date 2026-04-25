@@ -188,6 +188,21 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 </div>
 
+## Educazione e simulazione
+
+<div class="row g-4 mb-5">
+
+{{< tool-card
+    nome="Stop Disasters! — Simulatore ONU"
+    fonte="UNDRR (UN Office for Disaster Risk Reduction)"
+    icona="bi-shield-fill-exclamation"
+    tipoFonte="istituzionale"
+    descrizione="Gioco-simulazione gratuito dell'Agenzia ONU per la Riduzione del Rischio di Disastri. Cinque scenari (terremoto, alluvione, tsunami, uragano, incendio boschivo) per imparare a costruire villaggi e città più sicuri. Disponibile in italiano, adatto a 9-17 anni e a contesti educativi."
+    tipoAccesso="sito"
+    url="https://www.stopdisastersgame.org/game/" >}}
+
+</div>
+
 ## Fonti ufficiali primarie
 
 Per completezza, ricordiamo le **fonti di riferimento istituzionali** per Genzano di Roma, che restano sempre prevalenti rispetto a qualunque strumento di consultazione:

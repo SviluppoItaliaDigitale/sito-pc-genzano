@@ -12,8 +12,7 @@ Per un volontario del Gruppo Comunale di Genzano di Roma, capire la catena di co
 Il riferimento principale è il **Decreto Legislativo 2 gennaio 2018, n. 1** — il **Codice della Protezione Civile**, che ha sostituito la storica Legge 225 del 1992. A esso si affiancano:
 
 - **Direttiva PCM 30 aprile 2021** — "Indirizzi per la predisposizione dei piani di protezione civile ai diversi livelli territoriali"
-- **Legge Regionale Lazio 22/2019** — Sistema integrato di protezione civile regionale
-- **Legge Regionale Lazio 2/2014** — Sistema Integrato di Sicurezza Urbana
+- [**Legge Regionale Lazio 26 febbraio 2014, n. 2**](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9264&sv=vigente) — Sistema integrato regionale di protezione civile
 - **Piano Comunale di Protezione Civile di Genzano di Roma** (atto del Consiglio comunale, art. 12 Codice)
 - **Modifiche al Titolo V della Costituzione** (L. cost. 3/2001) — rendono la protezione civile materia di **legislazione concorrente** tra Stato e Regioni
 

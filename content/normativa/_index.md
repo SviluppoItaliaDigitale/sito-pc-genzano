@@ -22,9 +22,11 @@ Il riferimento principale è il **Decreto Legislativo 2 gennaio 2018, n. 1** —
 
 La **Regione Lazio** ha la competenza primaria su pianificazione, prevenzione e coordinamento delle emergenze non di rilievo nazionale. I riferimenti principali sono:
 
-- **L.R. 2/2014** — Sistema Integrato di Sicurezza Urbana
-- **L.R. 22/2019** — Sistema integrato di protezione civile regionale
-- **Delibere ed avvisi** del Centro Funzionale Regionale e dell'Agenzia Regionale di Protezione Civile
+- [**Direzione Protezione Civile Lazio — Normative**](https://protezionecivile.regione.lazio.it/direzione/normative) — Pagina aggregatrice ufficiale della Direzione regionale, con sezioni dedicate a normativa nazionale e regionale, regolamenti, DGR, circolari del DPC, protocolli di intesa, accordi quadro, convenzioni, determinazioni regionali e direttive RUNTS. **È il punto d'ingresso istituzionale per tutta la normativa di PC del Lazio.**
+- [**L.R. 26 febbraio 2014, n. 2** — Sistema integrato regionale di protezione civile](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9264&sv=vigente) — è la legge organica regionale: disciplina il riordino delle funzioni in materia di PC e istituisce il Sistema integrato regionale.
+- [**DGR 26 novembre 2019, n. 865**](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf) — Suddivisione del territorio regionale in 7 zone di allerta meteo-idrogeologica. **Genzano di Roma rientra nella Zona F — Bacini Costieri Sud**.
+- [**Bollettini di criticità e avvisi**](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) del Centro Funzionale Regionale.
+- [**Portale dell'Agenzia Regionale di Protezione Civile**](https://protezionecivile.regione.lazio.it/) — Sito istituzionale con direttive, bandi, piani e modulistica.
 
 ## Il Piano Comunale di Protezione Civile
 
@@ -46,4 +48,5 @@ Ogni Comune italiano ha l'obbligo di dotarsi di un **Piano di Protezione Civile*
 - [Normattiva](https://www.normattiva.it/) — Banca dati delle leggi italiane, testo aggiornato
 - [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/) — Pubblicazione ufficiale
 - [Dipartimento di Protezione Civile — sezione normativa](https://www.protezionecivile.gov.it/it/normativa/)
-- [Regione Lazio — Agenzia Regionale di Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile)
+- [Regione Lazio — Agenzia Regionale di Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Consiglio Regionale del Lazio — Banca dati delle leggi regionali](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionali)
