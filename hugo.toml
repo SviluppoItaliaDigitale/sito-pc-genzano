@@ -100,7 +100,7 @@ enableGitInfo = true
   weight = 3
 
 [[menus.main]]
-  name = "Corsi e percorsi"
+  name = "Corsi e percorsi scuola"
   url = "/formazione/"
   parent = "formazione"
   weight = 1
