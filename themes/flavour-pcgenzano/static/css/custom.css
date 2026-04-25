@@ -26,6 +26,44 @@
 body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 ::selection { background: var(--pc-primary); color: #fff; }
 
+/* ── HEADER STACKING — il navbar deve stare SOPRA al contenuto pagina
+   per non far finire i dropdown del mega-menu sotto banner/allerta/hero ── */
+.it-header-slim-wrapper,
+.it-header-center-wrapper,
+.it-header-navbar-wrapper { position: relative; z-index: 1040; }
+
+/* Mega-menu dropdown: sfondo opaco bianco, ombra netta, in cima a tutto */
+.navbar .dropdown-menu {
+  z-index: 1050;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 0.5rem 0;
+  min-width: 240px;
+}
+.navbar .dropdown-menu .link-list-wrapper { padding: 0; }
+.navbar .dropdown-menu .link-list { margin: 0; padding: 0; list-style: none; }
+.navbar .dropdown-menu .list-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #003366;
+  text-decoration: none;
+  white-space: normal;
+}
+.navbar .dropdown-menu .list-item:hover,
+.navbar .dropdown-menu .list-item:focus {
+  background: #f4f7fb;
+  color: #001f3d;
+  text-decoration: none;
+}
+.navbar .dropdown-menu .list-item.active {
+  background: #003366;
+  color: #fff;
+  font-weight: 600;
+}
+.navbar .nav-link.dropdown-toggle .icon { vertical-align: middle; transition: transform 0.2s; }
+.navbar .nav-link.dropdown-toggle[aria-expanded="true"] .icon { transform: rotate(180deg); }
+
 /* ── EMERGENCY BANNER ── */
 .emergency-banner {
   background: var(--pc-danger);
