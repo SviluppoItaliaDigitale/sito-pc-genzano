@@ -20,24 +20,20 @@
   </url>
   {{- end }}
   {{- end }}
-  {{- $staticPaths := slice
-    "giochi/" "giochi/infanzia/" "giochi/primaria/" "giochi/ragazzi/"
-    "giochi/infanzia/tartaruga-saggia/" "giochi/infanzia/numero-emergenza/"
-    "giochi/infanzia/suoni-emergenza/" "giochi/infanzia/memory-facile/"
-    "giochi/primaria/memory/" "giochi/primaria/quiz/"
-    "giochi/primaria/caccia-al-rischio/" "giochi/primaria/zaino-emergenza/"
-    "giochi/primaria/semaforo-rischio/" "giochi/primaria/abbina-impara/"
-    "giochi/primaria/cosa-faccio-se/" "giochi/primaria/anagrammi/"
-    "giochi/primaria/cruciverba/" "giochi/primaria/puzzle-scenari/"
-    "giochi/ragazzi/simulatore-coc/" "giochi/ragazzi/emergency-responder/"
-    "giochi/ragazzi/mappa-rischio/" "giochi/ragazzi/radio-emergency/"
-    "giochi/ragazzi/codice-arancione/"
-  -}}
-  {{- range $staticPaths }}
+  {{/* URL statiche extra (giochi, app accessibilità, formazione PC, quiz)
+       dichiarate in data/sitemap_extra.yaml — mantenere allineato quando si
+       aggiungono nuovi giochi/app statiche con robots index,follow. */}}
+  {{- with .Site.Data.sitemap_extra }}
+  {{- range .urls }}
   <url>
-    <loc>{{ printf "%s/%s" (strings.TrimRight "/" $prodBase) . | safeHTML }}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>{{ printf "%s/%s" (strings.TrimRight "/" $prodBase) (strings.TrimPrefix "/" .path) | safeHTML }}</loc>
+    {{- with .changefreq }}
+    <changefreq>{{ . }}</changefreq>
+    {{- end }}
+    {{- with .priority }}
+    <priority>{{ . }}</priority>
+    {{- end }}
   </url>
+  {{- end }}
   {{- end }}
 </urlset>

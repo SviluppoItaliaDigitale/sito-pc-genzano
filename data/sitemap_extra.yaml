@@ -1,0 +1,88 @@
+# URL statici da aggiungere al sitemap.xml di Hugo
+# Hugo non include automaticamente file in /static/, quindi vanno dichiarati qui.
+#
+# REGOLA: ogni nuovo gioco / app statica con `<meta name="robots" content="index, follow">`
+# va aggiunto a questo elenco per essere dichiarato esplicitamente nel sitemap
+# (Google li trova comunque via crawl dei link interni, ma il sitemap accelera la scoperta).
+#
+# Schema voci:
+#   - path: percorso relativo dalla root (deve iniziare con /)
+#     priority: priorità SEO 0.0-1.0 (default Hugo: 0.5)
+#     changefreq: hourly | daily | weekly | monthly | yearly | never
+#
+# Vedi MANUALE-SITO §4.7 e .claude/rules/05-github-aruba-deploy.md per il deploy.
+
+urls:
+  # ─── HUB GIOCHI (listing pages) ──────────────────────────────────────────
+  - { path: "/giochi/", priority: 0.8, changefreq: "monthly" }
+  - { path: "/giochi/infanzia/", priority: 0.7, changefreq: "monthly" }
+  - { path: "/giochi/primaria/", priority: 0.7, changefreq: "monthly" }
+  - { path: "/giochi/ragazzi/", priority: 0.7, changefreq: "monthly" }
+
+  # ─── GIOCHI INFANZIA (Piccoli Esploratori, 10 giochi) ────────────────────
+  - { path: "/giochi/infanzia/tartaruga-saggia/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/infanzia/numero-emergenza/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/infanzia/suoni-emergenza/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/infanzia/memory-facile/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/infanzia/vesti-tina/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/infanzia/rifugio-tina/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/infanzia/cielo-oggi/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/infanzia/trova-cartello/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/infanzia/acchiappa-pericolo/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/infanzia/mezzo-giusto/", priority: 0.6, changefreq: "monthly" }
+
+  # ─── GIOCHI PRIMARIA (13 giochi) ─────────────────────────────────────────
+  - { path: "/giochi/primaria/anagrammi/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/cruciverba/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/quiz/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/abbina-impara/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/caccia-al-rischio/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/chiamata-112/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/cosa-faccio-se/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/labirinto-evacuazione/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/memory/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/posiziona-cartelli/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/puzzle-scenari/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/semaforo-rischio/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/primaria/zaino-emergenza/", priority: 0.6, changefreq: "monthly" }
+
+  # ─── GIOCHI RAGAZZI (10 giochi) ──────────────────────────────────────────
+  - { path: "/giochi/ragazzi/simulatore-coc/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/ragazzi/emergency-responder/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/ragazzi/mappa-rischio/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/ragazzi/radio-emergency/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/ragazzi/codice-arancione/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/ragazzi/vero-o-bufala/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/ragazzi/triage-start/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/ragazzi/linea-tempo-eventi/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/ragazzi/cartelli-pericolo/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/giochi/ragazzi/scelte-difficili/", priority: 0.6, changefreq: "monthly" }
+
+  # ─── ABILI A PROTEGGERE (app accessibilità per persone fragili) ──────────
+  - { path: "/abili-a-proteggere/", priority: 0.7, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/al-sicuro-a-casa/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/cartelli-amici/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/cassetta-soccorso/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/chi-mi-aiuta/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/chiama-112/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/dove-mi-riparo/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/respiro-calmo/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/scheda-emergenza/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/semaforo-facile/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/suoni-sicurezza/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/vestiti-giusti/", priority: 0.6, changefreq: "monthly" }
+  - { path: "/abili-a-proteggere/zaino-facile/", priority: 0.6, changefreq: "monthly" }
+
+  # ─── QUIZ FORMATIVO PC ───────────────────────────────────────────────────
+  - { path: "/quizpc/", priority: 0.7, changefreq: "monthly" }
+  - { path: "/quizpc/start_quiz.html", priority: 0.5, changefreq: "monthly" }
+  - { path: "/quizpc/start_training.html", priority: 0.5, changefreq: "monthly" }
+
+  # ─── FORMAZIONE PC (volontari) — hub e moduli principali ─────────────────
+  - { path: "/formazionepc/", priority: 0.7, changefreq: "monthly" }
+  - { path: "/formazionepc/aib.html", priority: 0.6, changefreq: "monthly" }
+  - { path: "/formazionepc/ricerca.html", priority: 0.6, changefreq: "monthly" }
+  - { path: "/formazionepc/terremoto.html", priority: 0.6, changefreq: "monthly" }
+  - { path: "/formazionepc/idrogeologico.html", priority: 0.6, changefreq: "monthly" }
+  - { path: "/formazionepc/meteo.html", priority: 0.6, changefreq: "monthly" }
+  - { path: "/formazionepc/assistenza.html", priority: 0.6, changefreq: "monthly" }
