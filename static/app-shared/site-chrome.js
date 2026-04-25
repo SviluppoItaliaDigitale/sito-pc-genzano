@@ -211,6 +211,73 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
+
+    // Bottone "Torna al menu" — abbandono rapido nei giochi/quiz/app interattive.
+    // Si attiva SOLO se la pagina ha marker tipici di un'app interattiva
+    // (schermate intro/game/end). Esclude pagine hub e statiche.
+    aggiungiPulsanteEsciGioco();
+  }
+
+  function aggiungiPulsanteEsciGioco() {
+    if (document.getElementById('gioco-esci-btn')) return;
+
+    var marker = document.querySelector(
+      '#intro, #intro-screen, #game, #game-screen, #end, #end-screen, ' +
+      '#select-screen, #game-card, #scenario-box, .gioco-fine, ' +
+      '.scena-corrente, [data-gioco], .game-container'
+    );
+    if (!marker) return;
+
+    var crumbLinks = document.querySelectorAll(
+      '.breadcrumb a, nav[aria-label="Percorso"] a'
+    );
+    var menuHref = '../index.html';
+    if (crumbLinks.length > 0) {
+      menuHref = crumbLinks[crumbLinks.length - 1].getAttribute('href') || menuHref;
+    }
+
+    var esci = document.createElement('a');
+    esci.id = 'gioco-esci-btn';
+    esci.href = menuHref;
+    esci.setAttribute('aria-label', 'Esci dal gioco e torna al menu');
+    esci.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i> <span class="gioco-esci-label">Torna al menu</span>';
+    esci.style.cssText = [
+      'position: fixed',
+      'top: 1rem',
+      'right: 1rem',
+      'z-index: 9999',
+      'background: #003366',
+      'color: #ffffff',
+      'text-decoration: none',
+      'padding: 0.55rem 1rem',
+      'border-radius: 24px',
+      'font-weight: 600',
+      'font-size: 0.95rem',
+      'box-shadow: 0 3px 10px rgba(0,0,0,0.25)',
+      'display: inline-flex',
+      'align-items: center',
+      'gap: 0.5rem',
+      'border: 2px solid #ffffff'
+    ].join(';');
+
+    if (!document.getElementById('gioco-esci-btn-styles')) {
+      var stile = document.createElement('style');
+      stile.id = 'gioco-esci-btn-styles';
+      stile.textContent = ''
+        + '#gioco-esci-btn:hover, #gioco-esci-btn:focus {'
+        + '  background: #002244 !important;'
+        + '  outline: 3px solid #ffbe2e;'
+        + '  outline-offset: 2px;'
+        + '}'
+        + '#gioco-esci-btn .gioco-esci-label { white-space: nowrap; }'
+        + '@media (max-width: 480px) {'
+        + '  #gioco-esci-btn .gioco-esci-label { display: none; }'
+        + '  #gioco-esci-btn { padding: 0.55rem 0.7rem !important; }'
+        + '}'
+        + '@media print { #gioco-esci-btn { display: none !important; } }';
+      document.head.appendChild(stile);
+    }
+    document.body.appendChild(esci);
   }
 
   if (document.readyState === 'loading') {
