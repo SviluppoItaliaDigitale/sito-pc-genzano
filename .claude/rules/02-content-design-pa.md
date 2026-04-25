@@ -129,3 +129,27 @@ Il template `themes/flavour-pcgenzano/layouts/_default/single.html` mostra quest
 - Aggiorna `dataUltimaRevisione` ogni volta che modifichi contenuto sostanziale (non refusi o link morti).
 - Non scrivere date di revisione nel corpo del testo (stringhe tipo "Marzo 2026", "Ultimo aggiornamento: …"): il riferimento è unico e nel frontmatter.
 - Il workflow `coerenza-docs.yml` verifica settimanalmente che le 4 pagine legali abbiano il campo impostato.
+
+## Coerenza kit didattici ↔ schede stampabili
+
+I 4 kit didattici per le scuole (`content/formazione/kit-scuola-{infanzia,primaria,secondaria-primo-grado,secondaria-secondo-grado}.md`) devono **tutti** rimandare alle schede stampabili della loro fascia in `static/formazione/schede-stampabili/`. La regola è simmetrica: ogni scheda fisica deve essere linkata almeno una volta dal kit del proprio livello.
+
+**Convenzione di naming delle schede stampabili:**
+
+| Kit | Suffisso scheda |
+|---|---|
+| Infanzia | `-infanzia` (es. `tartaruga-saggia-infanzia`, `colorare-terremoto-infanzia`) o nome generico (`labirinto-uscita`, `chiamo-112`) |
+| Primaria | `-primaria` (es. `cruciverba-primaria`, `piano-familiare-primaria`) o generico |
+| Secondaria 1° grado | `-secondaria` (es. `decodifica-bollettino-secondaria`, `mappa-rischi-secondaria`) |
+| Secondaria 2° grado | `-secondaria2` (es. `caso-amatrice-secondaria2`, `traccia-esame-secondaria2`) |
+
+**Cosa deve avere ogni kit:** un blocco "Schede già pronte per la stampa" che elenca con bullet point e link diretto **tutte** le schede del proprio livello, prima della sezione "Compito di realtà" o "Schede fotocopiabili".
+
+**Verifica rapida:**
+```bash
+for f in content/formazione/kit-scuola-*.md; do
+  echo "$(basename "$f"): $(grep -oE 'schede-stampabili/[a-z0-9-]+' "$f" | sort -u | wc -l) schede linkate"
+done
+```
+
+Ogni kit deve linkarne almeno tante quante ne contiene la cartella per il suo livello. Un kit con zero link verso le schede del proprio livello è un bug — è successo una volta a entrambi i kit secondaria, scoperto solo quando un docente ha segnalato che non trovava le schede dal proprio kit.
