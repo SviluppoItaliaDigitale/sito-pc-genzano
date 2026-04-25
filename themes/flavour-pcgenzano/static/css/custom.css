@@ -2322,43 +2322,56 @@ article .galleria img {
    Hugo produce <nav id="TableOfContents"> con la gerarchia H2/H3.
    ───────────────────────────────────────────── */
 .article-toc {
-  border: 1px solid #e9ecef;
-  border-left: 4px solid #003366;
-  background: #f4f7fb;
-  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #dde4ec;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 51, 102, 0.06);
+  overflow: hidden;
 }
+
+/* Header del TOC: striscia istituzionale blu, sempre visibile */
 .article-toc summary.article-toc-summary {
   list-style: none;
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 0.85rem 1rem;
+  padding: 0.9rem 1.25rem;
+  background: #003366;
+  color: #fff;
   user-select: none;
+  transition: background 0.15s ease;
+}
+.article-toc summary.article-toc-summary:hover {
+  background: #002952;
 }
 .article-toc summary.article-toc-summary::-webkit-details-marker { display: none; }
+.article-toc summary.article-toc-summary::marker { display: none; }
 .article-toc summary.article-toc-summary:focus-visible {
   outline: 3px solid #ffd60a;
-  outline-offset: 2px;
+  outline-offset: -3px;
 }
 .article-toc-title {
-  color: #003366;
+  color: #fff;
   font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
+.article-toc-title .bi { font-size: 1rem; }
 .article-toc-chevron {
-  transition: transform 0.2s ease;
-  color: #003366;
+  transition: transform 0.25s ease;
+  color: #fff;
+  font-size: 0.9rem;
 }
 .article-toc details[open] > summary .article-toc-chevron {
   transform: rotate(180deg);
 }
+
+/* Corpo dell'indice: griglia 2-3 colonne adattive */
 .article-toc-body {
-  padding: 0 1rem 0.85rem 1rem;
-  border-top: 1px solid #dee2e6;
-  margin-top: 0;
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: linear-gradient(180deg, #f8fafd 0%, #fff 60%);
 }
-.article-toc-body #TableOfContents {
-  margin-top: 0.75rem;
-}
+.article-toc-body #TableOfContents { margin: 0; }
 .article-toc-body #TableOfContents > ul,
 .article-toc-body #TableOfContents ul {
   margin: 0;
@@ -2366,41 +2379,119 @@ article .galleria img {
   list-style: none;
 }
 .article-toc-body #TableOfContents > ul {
+  counter-reset: toc-section;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 0.15rem 1rem;
-}
-.article-toc-body #TableOfContents li {
-  padding: 0.2rem 0;
-  line-height: 1.4;
-}
-.article-toc-body #TableOfContents ul ul {
-  padding-left: 1rem;
-  margin-top: 0.15rem;
-  display: block;
-}
-.article-toc-body #TableOfContents ul ul li {
-  font-size: 0.9rem;
-  padding: 0.1rem 0;
-}
-.article-toc-body #TableOfContents a {
-  color: #003366;
-  text-decoration: none;
-  display: inline-block;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s, color 0.15s;
-}
-.article-toc-body #TableOfContents a:hover,
-.article-toc-body #TableOfContents a:focus {
-  color: #001f3d;
-  border-bottom-color: #003366;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.6rem 1.5rem;
 }
 
-/* Mobile: TOC a colonna singola, tipografia compatta */
+/* Voce H2 (sezione principale): badge numerato + titolo bold */
+.article-toc-body #TableOfContents > ul > li {
+  counter-increment: toc-section;
+  padding: 0.5rem 0.6rem 0.5rem 2.6rem;
+  border-radius: 8px;
+  position: relative;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.article-toc-body #TableOfContents > ul > li::before {
+  content: counter(toc-section, decimal-leading-zero);
+  position: absolute;
+  left: 0.5rem;
+  top: 0.55rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: #003366;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.article-toc-body #TableOfContents > ul > li:hover {
+  background: #eef3f9;
+  transform: translateX(2px);
+}
+.article-toc-body #TableOfContents > ul > li:hover::before {
+  background: #ffd60a;
+  color: #003366;
+  transform: scale(1.05);
+}
+.article-toc-body #TableOfContents > ul > li > a {
+  color: #003366;
+  font-weight: 600;
+  font-size: 0.97rem;
+  line-height: 1.35;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.15s ease;
+}
+.article-toc-body #TableOfContents > ul > li > a:hover,
+.article-toc-body #TableOfContents > ul > li > a:focus {
+  color: #001f3d;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* Voci H3 (sotto-sezioni): più piccole, indentate con bullet sottile */
+.article-toc-body #TableOfContents ul ul {
+  padding-left: 0.25rem;
+  margin-top: 0.4rem;
+  display: block;
+  border-left: 2px solid #dde4ec;
+  padding-left: 0.85rem;
+}
+.article-toc-body #TableOfContents ul ul li {
+  font-size: 0.85rem;
+  padding: 0.18rem 0;
+  line-height: 1.4;
+  position: relative;
+}
+.article-toc-body #TableOfContents ul ul li::before {
+  content: "›";
+  color: #003366;
+  margin-right: 0.4rem;
+  font-weight: 700;
+  opacity: 0.55;
+}
+.article-toc-body #TableOfContents ul ul a {
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.article-toc-body #TableOfContents ul ul a:hover,
+.article-toc-body #TableOfContents ul ul a:focus {
+  color: #003366;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.article-toc-body #TableOfContents ul ul li:hover::before { opacity: 1; }
+
+/* Mobile: TOC a colonna singola, tipografia leggermente compatta */
 @media (max-width: 768px) {
+  .article-toc-body { padding: 1rem 1rem 1.25rem; }
   .article-toc-body #TableOfContents > ul {
     grid-template-columns: 1fr;
+    gap: 0.4rem;
   }
+  .article-toc-body #TableOfContents > ul > li {
+    padding-left: 2.4rem;
+  }
+}
+
+/* Reduced motion: niente animazioni */
+@media (prefers-reduced-motion: reduce) {
+  .article-toc summary.article-toc-summary,
+  .article-toc-chevron,
+  .article-toc-body #TableOfContents > ul > li,
+  .article-toc-body #TableOfContents > ul > li::before,
+  .article-toc-body #TableOfContents a { transition: none; }
 }
 
 /* Stampa: nascondi l'indice (i titoli del documento bastano) */
