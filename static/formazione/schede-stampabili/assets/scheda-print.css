@@ -311,6 +311,17 @@ p.scheda-intro {
   body {
     background: #fff;
   }
+  /* Forza la stampa fedele dei colori (sfondi, riempimenti, pattern):
+     i browser di default li eliminano per risparmiare inchiostro, ma
+     nelle schede didattiche servono per distinguere muri, ostacoli,
+     box colorati. */
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
   .scheda-toolbar,
   .no-print {
     display: none !important;
