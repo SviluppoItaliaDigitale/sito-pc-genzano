@@ -46,7 +46,7 @@ A loro il nostro **pensiero** più forte. E ai volontari, alle associazioni, agl
 Oggi tanti lavorano nella silente macchina che permette alla vita di continuare:
 
 - **medici**, **infermieri**, **OSS** di ospedali e case di cura;
-- **118**, **112**, **115**: operatori di emergenza;
+- **operatori delle centrali uniche di emergenza** (NUE 112);
 - **carabinieri**, **polizia**, **finanza**, **vigili urbani**, **vigili del fuoco**;
 - **protezione civile** in reperibilità (anche noi);
 - **operatori** di trasporti pubblici;

@@ -145,6 +145,6 @@ Nei prossimi giorni pubblicheremo:
 
 - [Vigilia di Natale auguri](/comunicazioni/2026-12-24-vigilia-natale-auguri/)
 - [Presidio ponte Immacolata](/comunicazioni/2026-12-05-presidio-ponte-immacolata/)
-- [Gruppo Comunale PC](/gruppo/)
+- [Gruppo Comunale PC](/chi-siamo/)
 
 In emergenza sempre: **112**.

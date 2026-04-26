@@ -4,7 +4,6 @@ description: "Informații esențiale în limba română pentru turiști și rezi
 layout: "single"
 aliases:
   - /ro/
-  - /ro/index.html
 sitemap:
   priority: 0.6
   changefreq: yearly

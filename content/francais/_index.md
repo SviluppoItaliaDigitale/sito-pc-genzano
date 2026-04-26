@@ -4,7 +4,6 @@ description: "Informations essentielles en français pour les touristes et rési
 layout: "single"
 aliases:
   - /fr/
-  - /fr/index.html
 sitemap:
   priority: 0.6
   changefreq: yearly

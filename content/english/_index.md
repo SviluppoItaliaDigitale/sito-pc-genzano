@@ -4,7 +4,6 @@ description: "Essential information in English for tourists and foreign resident
 layout: "single"
 aliases:
   - /en/
-  - /en/index.html
 sitemap:
   priority: 0.6
   changefreq: yearly

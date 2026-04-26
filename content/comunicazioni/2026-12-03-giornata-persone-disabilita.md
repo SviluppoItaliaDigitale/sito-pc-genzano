@@ -178,7 +178,7 @@ La PC di Genzano, in occasione di questa giornata, rinnova il proprio impegno pe
 
 ## Per approfondire
 
-- [Gruppo Comunale PC](/gruppo/)
+- [Gruppo Comunale PC](/chi-siamo/)
 - [Accessibilità del sito](/accessibilita/)
 - [Comportamenti corretti](/rischi/)
 

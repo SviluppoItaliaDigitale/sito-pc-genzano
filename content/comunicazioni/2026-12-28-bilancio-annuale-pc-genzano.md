@@ -239,6 +239,6 @@ Se oggi pensi "potrei contribuire anch'io", **contattaci**. Nel **2027** ci sara
 
 - [Chiusura novembre](/comunicazioni/2026-11-30-chiusura-novembre-bilancio-dicembre/)
 - [Esame corso base](/comunicazioni/2026-12-11-esame-corso-base/)
-- [Gruppo Comunale PC](/gruppo/)
+- [Gruppo Comunale PC](/chi-siamo/)
 
 In emergenza: **112**.
