@@ -50,14 +50,17 @@ Gemini, Claude web, Mistral, altre sessioni di Claude Code, ecc.).
 
 **Copertura di questo file:**
 - Istruzioni generali (\`CLAUDE.md\`)
-- 6 regole di governance (\`.claude/rules/\`)
+- 7 regole di governance (\`.claude/rules/\` — incluse 07-proattivita-coerenza)
 - Manuale operativo completo (\`MANUALE-SITO.md\`)
 - Piano editoriale con fonti e calendario (\`PIANO-EDITORIALE.md\`)
 - README del progetto
 - Template articoli (\`archetypes/comunicazioni.md\`)
 - Configurazione Hugo (\`hugo.toml\`)
 - Shortcode custom (\`foto.html\`)
-- Memorie utente (feedback durevoli)
+- Data files chiave (\`numeri_utili.yaml\`, \`emergenza.json\`, \`allerta.json\`)
+- Workflow GitHub Actions principali (deploy, audit-sito 38 sezioni, smoke-test)
+- Script di automazione (\`smoke-test-live.sh\`, \`applica-fascia-foto.sh\`)
+- Memorie utente (feedback + project — durevoli)
 
 ---
 
@@ -65,19 +68,23 @@ Gemini, Claude web, Mistral, altre sessioni di Claude Code, ecc.).
 
 1. [README — Panoramica del progetto](#1-readme--panoramica-del-progetto)
 2. [CLAUDE.md — Istruzioni principali](#2-claudemd--istruzioni-principali)
-3. [Regole di governance (6 file)](#3-regole-di-governance-6-file)
+3. [Regole di governance (7 file)](#3-regole-di-governance-7-file)
    - 3.1 [Governance PA](#31-01-governance-pamd)
    - 3.2 [Content Design PA](#32-02-content-design-pamd)
    - 3.3 [Accessibilità](#33-03-accessibilitymd)
    - 3.4 [Hugo Architecture](#34-04-hugo-architecturemd)
    - 3.5 [GitHub + Aruba Deploy](#35-05-github-aruba-deploymd)
    - 3.6 [Protezione Civile scientifica](#36-06-protezione-civile-scientificamd)
+   - 3.7 [Proattività e coerenza](#37-07-proattivita-coerenzamd)
 4. [MANUALE-SITO — Manuale operativo completo](#4-manuale-sito--manuale-operativo-completo)
 5. [PIANO-EDITORIALE — Fonti e calendario](#5-piano-editoriale--fonti-e-calendario)
 6. [Archetype articoli (\`archetypes/comunicazioni.md\`)](#6-archetype-articoli)
 7. [Configurazione Hugo (\`hugo.toml\`)](#7-configurazione-hugo)
 8. [Shortcode \`foto\` (\`themes/.../shortcodes/foto.html\`)](#8-shortcode-foto)
-9. [Memorie utente (feedback durevoli)](#9-memorie-utente-feedback-durevoli)
+9. [Data files chiave (\`numeri_utili.yaml\`, \`emergenza.json\`)](#9-data-files-chiave)
+10. [Workflow GitHub Actions principali](#10-workflow-github-actions-principali)
+11. [Script di automazione](#11-script-di-automazione)
+12. [Memorie utente (feedback + project)](#12-memorie-utente-feedback--project)
 
 ---
 
@@ -124,7 +131,7 @@ include_file "README.md" "1. README — Panoramica del progetto"
 include_file "CLAUDE.md" "2. CLAUDE.md — Istruzioni principali"
 
 # ── 3. Regole di governance ─────────────────────────────────────────────────
-echo -e "\n## 3. Regole di governance (6 file)\n\nQuesti 6 file sono importati automaticamente da CLAUDE.md e definiscono le regole operative per dominio.\n\n---\n" >> "$OUTPUT"
+echo -e "\n## 3. Regole di governance (7 file)\n\nQuesti 7 file sono importati automaticamente da CLAUDE.md e definiscono le regole operative per dominio.\n\n---\n" >> "$OUTPUT"
 
 include_file ".claude/rules/01-governance-pa.md" "3.1 01-governance-pa.md"
 include_file ".claude/rules/02-content-design-pa.md" "3.2 02-content-design-pa.md"
@@ -132,6 +139,7 @@ include_file ".claude/rules/03-accessibility.md" "3.3 03-accessibility.md"
 include_file ".claude/rules/04-hugo-architecture.md" "3.4 04-hugo-architecture.md"
 include_file ".claude/rules/05-github-aruba-deploy.md" "3.5 05-github-aruba-deploy.md"
 include_file ".claude/rules/06-protezione-civile-scientifica.md" "3.6 06-protezione-civile-scientifica.md"
+include_file ".claude/rules/07-proattivita-coerenza.md" "3.7 07-proattivita-coerenza.md"
 
 # ── 4. MANUALE-SITO ──────────────────────────────────────────────────────────
 include_file "MANUALE-SITO.md" "4. MANUALE-SITO — Manuale operativo completo"
@@ -148,13 +156,32 @@ include_file "hugo.toml" "7. Configurazione Hugo" "toml"
 # ── 8. Shortcode foto ────────────────────────────────────────────────────────
 include_file "themes/flavour-pcgenzano/layouts/shortcodes/foto.html" "8. Shortcode foto" "go-html-template"
 
-# ── 9. Memorie utente (feedback durevoli) ────────────────────────────────────
+# ── 9. Data files chiave ─────────────────────────────────────────────────────
+echo -e "\n## 9. Data files chiave\n\nFile sotto \`data/\` che alimentano il rendering. Le modifiche qui sono il modo principale per aggiornare contenuti dinamici senza toccare i template.\n\n---\n" >> "$OUTPUT"
+include_file "data/numeri_utili.yaml" "9.1 numeri_utili.yaml" "yaml"
+include_file "data/emergenza.json" "9.2 emergenza.json" "json"
+include_file "data/allerta.json" "9.3 allerta.json (esempio struttura)" "json"
+
+# ── 10. Workflow GitHub Actions ──────────────────────────────────────────────
+echo -e "\n## 10. Workflow GitHub Actions principali\n\nIl sito ha 9 workflow attivi. Includiamo i 3 più importanti per dare contesto all'AI: deploy, audit completo (38 sezioni), smoke test post-deploy. Gli altri 6 sono descritti in CLAUDE.md sezione 'Automazioni periodiche'.\n\n---\n" >> "$OUTPUT"
+include_file ".github/workflows/deploy.yml" "10.1 deploy.yml — build + Aruba + GitHub Pages" "yaml"
+include_file ".github/workflows/audit-sito.yml" "10.2 audit-sito.yml — 38 sezioni di audit completo (lun 09:00)" "yaml"
+include_file ".github/workflows/smoke-test-post-deploy.yml" "10.3 smoke-test-post-deploy.yml — verifica live post-deploy" "yaml"
+
+# ── 11. Script di automazione ────────────────────────────────────────────────
+echo -e "\n## 11. Script di automazione\n\nScript in \`scripts/\` che l'AI può consigliare all'utente di lanciare in caso di bisogno.\n\n---\n" >> "$OUTPUT"
+include_file "scripts/smoke-test-live.sh" "11.1 smoke-test-live.sh — smoke test del sito live (50+ controlli)" "bash"
+include_file "scripts/applica-fascia-foto.sh" "11.2 applica-fascia-foto.sh — fascia blu istituzionale per foto utente" "bash"
+
+# ── 12. Memorie utente (feedback durevoli + project) ─────────────────────────
 MEMORY_DIR="$HOME/.claude/projects/-home-iu0qvw-sito-pc-genzano/memory"
 {
     echo ""
-    echo "## 9. Memorie utente (feedback durevoli)"
+    echo "## 12. Memorie utente (feedback + project)"
     echo ""
-    echo "Queste sono le regole che l'utente ha esplicitamente chiesto di ricordare tra sessioni. Ogni altra AI deve rispettarle come parte del contratto operativo."
+    echo "Queste sono le regole che l'utente ha esplicitamente chiesto di ricordare tra sessioni. Ogni altra AI deve rispettarle come parte del contratto operativo. Sono divise in:"
+    echo "- **feedback_*.md** — guidance comportamentale (cosa fare/non fare)"
+    echo "- **project_*.md** — fatti specifici sul progetto (es. COI 15°, IRC solo link)"
     echo ""
     echo "**Percorso originale (solo su macchina dell'utente):** \`$MEMORY_DIR\`"
     echo ""
@@ -166,7 +193,7 @@ if [ -d "$MEMORY_DIR" ]; then
     # Includi MEMORY.md (indice)
     if [ -f "$MEMORY_DIR/MEMORY.md" ]; then
         {
-            echo "### 9.0 Indice memorie (MEMORY.md)"
+            echo "### 12.0 Indice memorie (MEMORY.md)"
             echo ""
             cat "$MEMORY_DIR/MEMORY.md"
             echo ""
@@ -175,13 +202,13 @@ if [ -d "$MEMORY_DIR" ]; then
         } >> "$OUTPUT"
     fi
 
-    # Includi ogni feedback_*.md
+    # Includi ogni feedback_*.md e project_*.md (ordinati alfabeticamente)
     idx=1
-    for mem_file in "$MEMORY_DIR"/feedback_*.md; do
+    for mem_file in $(ls "$MEMORY_DIR"/feedback_*.md "$MEMORY_DIR"/project_*.md 2>/dev/null | sort); do
         [ -f "$mem_file" ] || continue
         mem_name="$(basename "$mem_file")"
         {
-            echo "### 9.$idx $mem_name"
+            echo "### 12.$idx $mem_name"
             echo ""
             echo "\`\`\`markdown"
             cat "$mem_file"
