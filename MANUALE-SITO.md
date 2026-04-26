@@ -2385,6 +2385,7 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 | Pubblicazione programmata | `pubblica-programmata.yml` | giornaliero (06:00 UTC), manuale | Riavvia il deploy per pubblicare articoli a data futura |
 | Verifica link normativa | `check-normativa-links.yml` | lunedì 08:00 UTC, manuale | Controlla raggiungibilità portali normativi |
 | Audit Accessibilità | `lighthouse-audit.yml` | dopo ogni deploy, manuale | Lighthouse su home e 5 pagine chiave |
+| Smoke test post-deploy | `smoke-test-post-deploy.yml` | dopo ogni deploy, manuale | Verifica live di 20 pagine + 7 lingue + 6 mini-app + 11 marker JS + 2 header sicurezza. Logica in `scripts/smoke-test-live.sh` |
 | Aggiorna Bootstrap Italia | `update-bootstrap-italia.yml` | lunedì 06:00 UTC, manuale | Verifica nuove release Bootstrap Italia, apre PR |
 | Aggiornamento MANUALE | `aggiorna-manuale.yml` | lunedì 06:00 UTC, manuale | Confronta hash fonti AGID/DI, apre Issue se cambiate |
 | **Audit completo sito** | `audit-sito.yml` | lunedì 09:00 UTC, manuale | **37 sezioni**: contenuti (1-15) + codice/template (16-22) + governance docs (23-32) + audit aggiuntivo (33-37). Fuso da `coerenza-docs.yml` il 26 aprile 2026 |

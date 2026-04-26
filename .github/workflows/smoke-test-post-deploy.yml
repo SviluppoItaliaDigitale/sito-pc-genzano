@@ -1,0 +1,92 @@
+name: "🚦 Smoke test post-deploy"
+
+# Lancia un giro di smoke test sul sito live (Aruba) dopo ogni deploy
+# riuscito. Verifica che 20 pagine principali rispondano 200, le 7
+# traduzioni siano accessibili, le mini-app statiche funzionino, i
+# marker chiave (assistente, cartografia, numeri-utili, quiz, formazione,
+# abili-a-proteggere) siano nel rendering e gli header di sicurezza
+# (Permissions-Policy, X-Content-Type-Options) siano presenti.
+#
+# Apre una issue se trova errori. Log completo in Actions in ogni caso.
+#
+# Lo script `scripts/smoke-test-live.sh` è la fonte unica della logica:
+# può essere lanciato anche in locale (`bash scripts/smoke-test-live.sh`)
+# o contro un altro host (`bash scripts/smoke-test-live.sh --base URL`).
+
+on:
+  workflow_run:
+    workflows: ["🚀 Build e Deploy"]
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  smoke-test:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "⏳ Attendi propagazione FTP Aruba"
+        # Il deploy.yml termina dopo l'upload FTP, ma Aruba può servire
+        # ancora la versione precedente per qualche secondo. Aspetto 60s
+        # per essere sicuro che il sito live abbia il nuovo contenuto.
+        run: sleep 60
+
+      - name: "🚦 Smoke test live"
+        id: smoke
+        shell: bash
+        run: |
+          set +e
+          OUTPUT=$(bash scripts/smoke-test-live.sh 2>&1)
+          EXIT=$?
+          echo "$OUTPUT"
+          echo "exit_code=$EXIT" >> "$GITHUB_OUTPUT"
+          {
+            echo "report<<EOF"
+            echo "$OUTPUT"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          exit $EXIT
+
+      - name: "🚨 Apri issue se smoke test fallisce"
+        if: failure() && steps.smoke.outputs.exit_code != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const report = `${{ steps.smoke.outputs.report }}`;
+            const body = [
+              `# Smoke test post-deploy fallito — ${today}`,
+              ``,
+              `Il sito è stato appena deployato ma alcune pagine critiche non rispondono come atteso.`,
+              `Verifica immediatamente: il deploy potrebbe aver introdotto un regresso o l'FTP non aver completato.`,
+              ``,
+              `## Risultati`,
+              ``,
+              '```',
+              report,
+              '```',
+              ``,
+              `## Cosa fare`,
+              ``,
+              `1. Apri il sito live e verifica le pagine segnalate come ❌`,
+              `2. Se il problema è temporaneo (FTP non propagato), rilancia questo workflow manualmente`,
+              `3. Se il problema persiste, identifica l'ultimo commit problematico con \`git log\` e considera \`git revert\``,
+              ``,
+              `---`,
+              `*Issue generata automaticamente dal workflow \`smoke-test-post-deploy.yml\`.*`
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Automatico] Smoke test post-deploy FALLITO — ${today}`,
+              body: body,
+              labels: ['smoke-test', 'manutenzione', 'urgente']
+            });
