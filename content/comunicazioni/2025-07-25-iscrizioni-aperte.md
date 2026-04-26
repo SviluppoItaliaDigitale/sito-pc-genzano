@@ -6,6 +6,7 @@ badge: "Avviso"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-07-25-iscrizioni-aperte.webp"
+image_alt: "Copertina dell'articolo: Iscrizioni al Gruppo"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

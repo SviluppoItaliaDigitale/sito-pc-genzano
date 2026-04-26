@@ -6,6 +6,7 @@ badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-03-10-formazione-base.webp"
+image_alt: "Copertina dell'articolo: Corso di Formazione Base per nuovi volontari"
 scadenza: ""
 area: "Sede operativa, Via Sicilia 13-15, Genzano di Roma"
 allegati: []

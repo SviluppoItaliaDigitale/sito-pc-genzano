@@ -6,6 +6,7 @@ badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-10-14-io-non-rischio.webp"
+image_alt: "Copertina dell'articolo: Io Non Rischio 2025 - Genzano in piazza"
 scadenza: ""
 area: "Piazza Tommaso Frasconi, Genzano di Roma"
 allegati: []

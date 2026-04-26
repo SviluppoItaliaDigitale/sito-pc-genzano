@@ -6,6 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-10-calendario-dipartimento-protezione-civile-2026.webp"
+image_alt: "Copertina dell'articolo: Calendario del Dipartimento della Protezione Civile 2026: le emergenze internazionali"
 scadenza: ""
 area: ""
 allegati:

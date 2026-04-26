@@ -2387,7 +2387,7 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 | Audit Accessibilità | `lighthouse-audit.yml` | dopo ogni deploy, manuale | Lighthouse su home e 5 pagine chiave |
 | Aggiorna Bootstrap Italia | `update-bootstrap-italia.yml` | lunedì 06:00 UTC, manuale | Verifica nuove release Bootstrap Italia, apre PR |
 | Aggiornamento MANUALE | `aggiorna-manuale.yml` | lunedì 06:00 UTC, manuale | Confronta hash fonti AGID/DI, apre Issue se cambiate |
-| **Audit completo sito** | `audit-sito.yml` | lunedì 09:00 UTC, manuale | **32 sezioni**: contenuti (1-15) + codice/template (16-22) + governance docs (23-32). Fuso da `coerenza-docs.yml` il 26 aprile 2026 |
+| **Audit completo sito** | `audit-sito.yml` | lunedì 09:00 UTC, manuale | **37 sezioni**: contenuti (1-15) + codice/template (16-22) + governance docs (23-32) + audit aggiuntivo (33-37). Fuso da `coerenza-docs.yml` il 26 aprile 2026 |
 | Verifica link sito completo | `check-links-sito.yml` | lunedì 10:00 UTC, manuale | Crawl completo con **lychee**: tutti i link interni + esterni del sito, apre issue automatica su 404/drift |
 
 ### 10.2 — `deploy.yml` — Build e Deploy
@@ -2523,11 +2523,11 @@ exclude: |
 4. Aggiorna il campo "Ultimo check linee guida AGID" in testa al manuale.
 5. Commit + push, chiudi la Issue con un commento che cita il commit.
 
-### 10.9 — `audit-sito.yml` — Audit completo settimanale (32 sezioni)
+### 10.9 — `audit-sito.yml` — Audit completo settimanale (37 sezioni)
 
 **Trigger**: cron settimanale (lunedì 09:00 UTC), manuale.
 
-**Storia**: nato ad aprile 2026 con 15 controlli sui contenuti, esteso il 26 aprile 2026 a 32 controlli inglobando il workflow `coerenza-docs.yml` (precedentemente lun 07:00) per consolidare in un'unica issue settimanale tutta la qualità del sito (testi, codice, governance docs).
+**Storia**: nato ad aprile 2026 con 15 controlli sui contenuti, esteso il 26 aprile 2026 a 32 controlli inglobando il workflow `coerenza-docs.yml` (precedentemente lun 07:00) per consolidare in un'unica issue settimanale tutta la qualità del sito (testi, codice, governance docs). Lo stesso giorno esteso a 37 sezioni con il blocco "audit aggiuntivo" (mixed content, accessibility alt, coerenza traduzioni, hugo.toml ↔ data files, smoke test rendering).
 
 **Cosa fa:** scansiona il sito completo per rilevare automaticamente la stessa classe di errori che emerse dagli audit manuali di aprile 2026 — COI 14°→15°, cartello AR4 mancante, citazioni di 115/118 come numero da chiamare, duplicate target paths sulle 7 lingue, articoli `draft:true` dimenticati con data passata, link interni a slug typo, residui di refactoring (CCV-MB, manuale lombardo), `/index.html` reintrodotti dopo il fix Chrome cache. Apre **una sola issue settimanale** se trova deviazioni.
 
@@ -2571,7 +2571,14 @@ exclude: |
 31. **Script `scripts/export-contesto-ai.sh`** presente ed eseguibile (`chmod +x`).
 32. **`dataUltimaRevisione`** sulle 4 pagine legali in formato `AAAA-MM-GG` tra virgolette.
 
-**Formato Issue:** report markdown con 32 sezioni numerate. `❌` = errore (da correggere prima del prossimo deploy), `⚠️` = warning (valutare se falso positivo). Label issue: `audit`, `qualità-testi`, `manutenzione`.
+#### Audit aggiuntivo (sezioni 33-37)
+33. **Mixed content** — link `http://` esterni nelle pagine HTTPS (warning per browser moderni). Eccezioni note: `parcocastelliromani.it`, `idrografico.roma.it`, `zonesismiche.mi.ingv.it` (siti senza HTTPS lato fornitore).
+34. **`image_alt` accessibility** (WCAG 1.1.1) — articoli con `image:` ma `image_alt` vuoto o mancante. Screen reader leggerebbero il filename.
+35. **Coerenza dati istituzionali nelle 7 traduzioni** — pagine `content/{english,deutsch,espanol,francais,portugues,romana,esperanto}/numeri-utili/_index.md` devono contenere sede ("Sicilia"), CAP "00045", numero "112". Se uno manca = traduzione non aggiornata.
+36. **Coerenza `hugo.toml` ↔ `data/numeri_utili.yaml`** — il telefono di sede in `hugo.toml` deve essere presente nel record "locale" del yaml (alimenta la card Numeri Utili).
+37. **Smoke test rendering** — verifica che le 12 pagine critiche generate (`public/index.html`, `cosa-fare-adesso`, `numeri-utili`, `contatti`, `cartografia`, `assistente`, `comunicazioni`, `formazione`, `rischi-prevenzione`, `diventa-volontario`, `area-download`, `faq`) abbiano un `<h1>` (cattura rendering rotto / frontmatter sbagliato che Hugo non sempre segnala).
+
+**Formato Issue:** report markdown con 37 sezioni numerate. `❌` = errore (da correggere prima del prossimo deploy), `⚠️` = warning (valutare se falso positivo). Label issue: `audit`, `qualità-testi`, `manutenzione`.
 
 **Quando intervenire:** ogni volta che apre una Issue. Il workflow è tarato per essere conservativo (pochi falsi positivi). Se un warning ricorrente è un falso positivo legittimo (es. una citazione lunga, un articolo intenzionalmente con anno fuori range), aggiungi un'eccezione mirata al workflow così la segnalazione non si ripete.
 

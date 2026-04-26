@@ -7,6 +7,7 @@ badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-13-triangolo-del-fuoco-prevenzione-incendi.webp"
+image_alt: "Copertina dell'articolo: Triangolo del fuoco: capire come nasce un incendio per prevenirlo in tempo"
 scadenza: ""
 area: "Comune di Genzano di Roma"
 allegati: []

@@ -6,6 +6,7 @@ badge: "Allerta"
 priorita: "urgente"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-08-16-volontari-in-allerta.webp"
+image_alt: "Copertina dell'articolo: Volontari in allerta"
 scadenza: ""
 area: "Territorio comunale di Genzano di Roma"
 allegati: []

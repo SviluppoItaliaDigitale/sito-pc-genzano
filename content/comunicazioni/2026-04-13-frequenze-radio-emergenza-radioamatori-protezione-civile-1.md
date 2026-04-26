@@ -7,6 +7,7 @@ badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1.webp"
+image_alt: "Copertina dell'articolo: Le frequenze radio della Rete Zamberletti: i radioamatori al servizio della Protezione Civile nelle prove di sintonia tra le Prefetture d'Italia"
 scadenza: ""
 area: "Territorio nazionale"
 allegati: []

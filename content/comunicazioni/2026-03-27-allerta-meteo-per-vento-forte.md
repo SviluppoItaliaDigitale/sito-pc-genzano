@@ -6,6 +6,7 @@ badge: "Allerta"
 priorita: "urgente"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-27-allerta-meteo-per-vento-forte.webp"
+image_alt: "Copertina dell'articolo: Allerta meteo per vento forte"
 scadenza: ""
 area: "Territorio comunale di Genzano di Roma"
 allegati: []
