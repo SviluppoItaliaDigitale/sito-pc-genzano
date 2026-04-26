@@ -30,7 +30,7 @@ La maggior parte consente di **inserire un indirizzo**, **zoomare** su un'area, 
 ## I geoportali più utili
 
 ### Geoportale Nazionale
-- sito: [www.pcn.minambiente.it](http://www.pcn.minambiente.it/)
+- sito: [www.pcn.minambiente.it](https://www.pcn.minambiente.it/)
 - gestito dal **Ministero dell'Ambiente**;
 - contiene dati ambientali, naturalistici, di rischio.
 
