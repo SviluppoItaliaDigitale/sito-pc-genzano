@@ -1,12 +1,12 @@
 ---
-title: "Cosa non fare con la radio in protezione civile: dieci errori che fanno perdere tempo e informazioni"
+title: "Dieci errori da evitare alla radio in protezione civile"
 date: 2026-04-14
-description: "Una sintesi pratica del corso CCV Monza-Brianza sui comportamenti corretti alla radio in emergenza: regole, errori comuni e il metodo delle 5W."
+description: "Le abitudini sbagliate che fanno perdere tempo e informazioni in emergenza: privacy, formalismi, codice Q, sequenza di chiamata, conferme. Sintesi pratica per il volontario."
 
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-04-14-cosa-non-fare-radio-protezione-civile-ccv-monza-brianza.webp"
+image: "/images/2026-04-14-radio-protezione-civile-dieci-errori-volontario.webp"
 image_alt: "Radio ricetrasmittente portatile con cuffia e microfono, simbolo delle comunicazioni di emergenza."
 scadenza: ""
 area: "Formazione interna del Gruppo Comunale"
@@ -14,15 +14,15 @@ allegati: []
 draft: false
 ---
 
-**La radio è uno strumento semplice, ma usarla male può costare minuti preziosi in emergenza.** Il Coordinamento del Volontariato di Protezione Civile della Provincia di Monza e Brianza ha pubblicato nel 2021 una formazione dedicata ai comportamenti corretti all'uso delle radio nei gruppi comunali. Il titolo parla chiaro: *"Cosa non fare con la radio PC"*. Abbiamo sintetizzato in questo articolo i dieci errori più frequenti e le regole d'oro da seguire quando si preme il tasto PTT.
+**La radio è uno strumento semplice, ma usarla male può costare minuti preziosi in emergenza.** Quando i ripetitori cellulari saturano, le linee telefoniche cadono o un'area resta isolata, la rete VHF/UHF diventa l'unico canale di coordinamento tra il Centro Operativo Comunale e le squadre sul territorio. Per questo il volontario di protezione civile non si limita ad accendere l'apparato: padroneggia le **regole di esercizio** che rendono il messaggio comprensibile a chi ascolta.
+
+In questo articolo riassumiamo dieci errori frequenti e le regole d'oro corrispondenti, coerenti con la **Guida IARU alle Telecomunicazioni di Emergenza** (ed. 2016), documento internazionale di riferimento adottato e adattato dal Gruppo nella nostra area formativa [Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/).
 
 ---
 
 ## Perché la radio resta insostituibile
 
-Il cellulare cade, la fibra si spezza, i ripetitori GSM saturano. La radio VHF/UHF continua a funzionare anche quando tutto il resto si ferma. Per questo il volontario di protezione civile deve saperla usare bene: non basta avere un apparato, bisogna padroneggiare le **regole di esercizio** che rendono il messaggio comprensibile a chi ascolta.
-
-La formazione CCV-MB distingue tre livelli di utilità della radio in emergenza:
+Il cellulare cade, la fibra si spezza, i ripetitori GSM saturano. La radio VHF/UHF continua a funzionare anche quando tutto il resto si ferma. La Guida IARU distingue tre livelli di utilità della radio in emergenza:
 
 - **Utile**, quando le reti ordinarie funzionano ancora: consente di coordinare le squadre senza occupare le linee telefoniche del 112.
 - **Necessaria**, quando le reti ordinarie sono parzialmente compromesse: diventa l'unico canale affidabile tra il COC e le squadre operative sul territorio.
@@ -34,13 +34,13 @@ Nel terzo caso non ci sono alternative: una comunicazione mal gestita significa 
 
 ## Il quadro normativo: perché possiamo trasmettere
 
-L'uso di apparati radio per il volontariato di protezione civile è regolato dal **Decreto Legislativo 1° agosto 2003 n. 259** (Codice delle comunicazioni elettroniche). Le organizzazioni di volontariato iscritte all'albo regionale e che operano in convenzione con enti pubblici godono di **esenzione dal canone** per le frequenze assegnate dal Ministero dello Sviluppo Economico (oggi Ministero delle Imprese e del Made in Italy), a condizione che:
+L'uso di apparati radio per il volontariato di protezione civile è regolato dal **Decreto Legislativo 1° agosto 2003 n. 259** (Codice delle comunicazioni elettroniche). Le organizzazioni di volontariato iscritte all'albo regionale e che operano in convenzione con enti pubblici godono di **esenzione dal canone** per le frequenze assegnate dal Ministero delle Imprese e del Made in Italy (MIMIT, ex MISE), a condizione che:
 
 - gli apparati siano **certificati e omologati** per l'uso civile
 - le frequenze siano **assegnate con concessione** al Comune o alla convenzione operativa
 - gli operatori siano **formati** e inseriti nell'elenco del gruppo
 
-Chi trasmette senza questi requisiti commette un illecito amministrativo (articoli 98 e seguenti del Codice), oltre a creare confusione sulle frequenze istituzionali. Ogni volontario che sale per la prima volta sul canale deve sapere quale frequenza sta usando e con quale autorizzazione.
+Chi trasmette senza questi requisiti commette un illecito amministrativo (articoli 98 e seguenti del Codice), oltre a creare confusione sulle frequenze istituzionali.
 
 ---
 
@@ -64,7 +64,7 @@ Nel nostro Gruppo Comunale, il canale principale è la rete VHF comunale assegna
 
 ### 1. Trasmettere dati personali
 
-È vietato comunicare via radio cognomi, indirizzi, numeri di documento, informazioni sanitarie. La radio non è un canale riservato: chiunque con un ricevitore può ascoltare. I dati personali lediamo la privacy delle persone coinvolte e rischiamo sanzioni del Garante.
+È vietato comunicare via radio cognomi, indirizzi, numeri di documento, informazioni sanitarie. La radio non è un canale riservato: chiunque con un ricevitore può ascoltare. Trasmettere dati personali viola la privacy delle persone coinvolte e può comportare sanzioni del Garante.
 
 **Regola d'oro**: si usano **nominativi tattici** (BRAVO 1, DELTA 2, BASE OPERATIVA), mai nomi propri dei volontari né dei cittadini assistiti.
 
@@ -81,7 +81,7 @@ Esempio corretto: *"Ricevo molto disturbo, passo sul canale 2"*.
 
 ### 4. Non pensare prima di premere il PTT
 
-Prima di premere il pulsante di trasmissione (**PTT – Push to Talk**), si pensa a quello che si deve dire. Il canale è una risorsa condivisa: ogni secondo in cui si esita al microfono è un secondo in cui nessun altro può parlare. Il metodo CCV-MB raccomanda di strutturare il messaggio secondo la regola delle **5 W**:
+Prima di premere il pulsante di trasmissione (**PTT – Push to Talk**), si pensa a quello che si deve dire. Il canale è una risorsa condivisa: ogni secondo in cui si esita al microfono è un secondo in cui nessun altro può parlare. Per i messaggi di servizio è utile strutturare l'informazione secondo la regola delle **5 W**:
 
 | W | Significato | Esempio |
 |---|---|---|
@@ -135,7 +135,7 @@ Il tono di voce trasmette stato d'animo anche quando non vogliamo. Un volontario
 - **Tono neutro e calmo**, anche quando la situazione è critica
 - **Scandire bene le parole**, soprattutto nomi di luogo e numeri
 
-La qualità del messaggio dipende da questo: se il tono è teso, il contenuto rischia di arrivare distorto o di **allarmare chi non ha bisogno di essere allarmato** (altri volontari, cittadini con ricevitori, stampa che monitora).
+Se il tono è teso, il contenuto rischia di arrivare distorto o di **allarmare chi non ha bisogno di essere allarmato** (altri volontari, cittadini con ricevitori, stampa che monitora).
 
 ### 10. Non curare l'attrezzatura
 
@@ -153,7 +153,7 @@ Al cambio turno, la radio passa già **carica e funzionante** al volontario succ
 
 ## Le quattro qualità di una buona comunicazione
 
-Il CCV-MB riassume in quattro aggettivi la comunicazione radio corretta:
+La Guida IARU riassume in quattro aggettivi la comunicazione radio corretta:
 
 - **Pertinente** — legata all'attività in corso, non alle chiacchiere
 - **Chiara** — comprensibile da chi ascolta, senza doppi sensi
@@ -189,7 +189,7 @@ Un esempio completo: la targa **AB 745 XY** diventa *"Alfa Bravo sette quattro c
 
 ## Un ultimo consiglio: prova la radio prima dell'emergenza
 
-Le prove radio (*"BASE OPERATIVA DA BRAVO 1, PER PROVA RADIO"*) non sono una perdita di tempo: sono l'unico modo per scoprire in tranquillità che la batteria è scarica, che l'antenna è allentata o che il nostro volume è troppo basso. **La radio si impara usandola**, e il momento per imparare non è durante un'emergenza.
+Le prove radio (*"BASE OPERATIVA DA BRAVO 1, PER PROVA RADIO"*) non sono una perdita di tempo: sono l'unico modo per scoprire in tranquillità che la batteria è scarica, che l'antenna è allentata o che il volume è troppo basso. **La radio si impara usandola**, e il momento per imparare non è durante un'emergenza.
 
 Il Gruppo Comunale organizza prove radio periodiche con tutti i volontari iscritti, coordinate con il referente comunicazioni. Chi non partecipa regolarmente alle prove rischia di trovarsi impreparato quando la radio diventa davvero *fondamentale*.
 
@@ -197,7 +197,7 @@ Il Gruppo Comunale organizza prove radio periodiche con tutti i volontari iscrit
 
 ## Approfondimenti
 
-La guida CCV Monza-Brianza è un ottimo punto di partenza, ma il volontario che vuole approfondire trova nell'area formativa del nostro sito **sei capitoli completi** sulle radiocomunicazioni di emergenza, basati sulla guida internazionale IARU adattata al contesto italiano:
+Il volontario che vuole approfondire trova nell'area formativa del Gruppo **sei capitoli completi** sulle radiocomunicazioni di emergenza, basati sulla Guida IARU adattata al contesto italiano:
 
 - [Area tematica: Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/) — sei capitoli sul ruolo del volontario TLC, tecniche operative, reti e canali, gestione dei messaggi, attivazione ed equipaggiamento, sicurezza e sopravvivenza
 - [Le frequenze della Rete Zamberletti](/comunicazioni/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1/) — il sistema nazionale dei radioamatori al servizio della protezione civile
@@ -205,4 +205,4 @@ La guida CCV Monza-Brianza è un ottimo punto di partenza, ma il volontario che 
 
 ---
 
-*Fonte: Coordinamento del Volontariato di Protezione Civile della Provincia di Monza e Brianza (CCV-MB), serata formativa 2021 "Radiocomunicazioni in emergenza — Comportamenti corretti per l'uso delle radio". Sintesi e adattamento al contesto del Gruppo Comunale Volontari di Genzano di Roma.*
+*Fonte: [IARU Emergency Telecommunications Guide, Rev. 1 September 2016](https://www.iaru.org/reference/resources-for-member-societies/iaru-emergency-telecommunications-guide/) — International Amateur Radio Union; [Codice delle comunicazioni elettroniche (D.Lgs. 1° agosto 2003 n. 259)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2003-08-01;259); procedure operative interne del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.*

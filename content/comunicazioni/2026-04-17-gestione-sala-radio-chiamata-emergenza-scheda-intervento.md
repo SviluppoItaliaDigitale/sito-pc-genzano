@@ -258,7 +258,7 @@ Il Gruppo forma costantemente nuovi operatori di sala radio, perché è una funz
 ## Per approfondire
 
 - [Area tematica: Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/) — sei capitoli completi
-- [Cosa non fare con la radio in protezione civile](/comunicazioni/2026-04-14-cosa-non-fare-radio-protezione-civile-ccv-monza-brianza/)
+- [Dieci errori da evitare alla radio in protezione civile](/comunicazioni/2026-04-14-radio-protezione-civile-dieci-errori-volontario/)
 - [La catena delle comunicazioni in protezione civile](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/)
 - [Manuale da Campo](/formazione/manuale-campo/) — modulo messaggio, registro di stazione, alfabeto NATO personalizzati del Gruppo
 
