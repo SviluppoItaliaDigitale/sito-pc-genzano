@@ -23,6 +23,10 @@ Sarno non fu solo una tragedia umana. Fu l'evento che obbligò l'Italia a guarda
 
 ## Cosa è successo davvero quella sera
 
+{{< foto src="/images/2026-05-05-sarno-colate-rapide-pizzo-alvano.webp"
+         alt="Vista panoramica del Pizzo d'Alvano, in Campania, con i lunghi ventagli di detrito delle colate rapide del 5 maggio 1998 che si allungano dal fianco della montagna fino all'abitato di Sarno in pianura. Si vedono almeno otto canaloni di erosione che hanno trascinato fango e materiale piroclastico verso valle."
+         caption="I versanti del Pizzo d'Alvano, in Campania, mostrano ancora oggi le tracce delle colate rapide del 5 maggio 1998. I ventagli di detrito partono dalla quota di mille metri e arrivano fino all'abitato di Sarno in pianura: ciascuno di quei \"canaloni\" è il segno di una colata di fango, acqua e rocce piroclastiche scesa a oltre trenta chilometri orari." >}}
+
 Le **colate rapide** — in inglese *debris flows* — sono fra i fenomeni più letali della famiglia delle frane. Si formano quando, durante una pioggia intensa e prolungata, i terreni superficiali di un versante perdono la coesione e cominciano a scorrere verso valle, mescolandosi all'acqua e alle macerie del sottobosco. La miscela acquisisce densità e velocità: invece di "cadere" come una frana classica, **scorre** come un fluido pesante.
 
 A Sarno l'innesco fu una pioggia eccezionale ma non senza precedenti: oltre **duecento millimetri di acqua** in poche ore, su versanti già saturi dalle piogge dei giorni precedenti. Le **rocce piroclastiche** che ricoprono i monti del Pizzo d'Alvano — depositi di vecchie eruzioni vesuviane — si trasformarono in fango pesantissimo. La velocità, l'orario serale, l'esiguità dei tempi di reazione: tutto si combinò nel modo peggiore possibile.

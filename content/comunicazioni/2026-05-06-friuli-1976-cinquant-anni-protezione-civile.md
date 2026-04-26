@@ -25,11 +25,27 @@ Cinquant'anni dopo, il Friuli è il caso di studio internazionale di **come si f
 
 La scossa principale colpì il Friuli con epicentro vicino a **Gemona**, a una **profondità di circa 6 chilometri**. La superficialità dell'ipocentro spiega perché lo scuotimento fu così violento sul terreno: le onde sismiche arrivarono in superficie con poca dispersione di energia.
 
+{{< foto src="/images/2026-05-06-friuli-soccorritori-vigili-fuoco-macerie.webp"
+         alt="Immagine in bianco e nero del 1976: tre soccorritori, uno con elmetto da Vigile del Fuoco e altri in tenuta operativa, lavorano fra le macerie di un edificio crollato in Friuli. Sullo sfondo si vede una porta ancora in piedi che dà su un interno parzialmente collassato."
+         caption="I primi soccorsi sui paesi colpiti dal sisma del 6 maggio 1976: Vigili del Fuoco e soccorritori scavavano a mano fra le macerie. Erano le ore immediatamente successive alla scossa, quando ogni minuto faceva la differenza." >}}
+
 I crolli più gravi avvennero nei centri storici, dove le costruzioni in muratura — molte vecchie di secoli — non avevano alcuna armatura sismica. Gemona perse circa metà del suo abitato. **Venzone**, un gioiello medievale circondato da mura, fu rasa al suolo: il duomo trecentesco, simbolo della città, crollò.
+
+{{< foto src="/images/2026-05-06-friuli-duomo-macerie.webp"
+         alt="Immagine in bianco e nero del 1976: la facciata di un duomo medievale del Friuli (probabilmente il duomo di Venzone o di Gemona) gravemente lesionata, con un grande cumulo di pietre e macerie davanti all'ingresso. Due figure umane, in scala minuscola rispetto all'edificio, camminano davanti al portale."
+         caption="I duomi medievali di Venzone e Gemona furono gravemente lesionati. Il duomo di Venzone, simbolo della città, fu poi smontato pietra per pietra, ogni pezzo numerato e siglato, e ricostruito identico negli anni successivi: oggi è uno dei simboli della ricostruzione italiana." >}}
 
 Alla scossa principale seguirono **centinaia di repliche**. La più grave fu quella del **15 settembre 1976**, di magnitudo **5.9**, che colpì un territorio già provato e fece crollare gran parte degli edifici lesionati ma rimasti in piedi a maggio. È un dettaglio che ancora oggi i tecnici antisismici insegnano: **dopo un grande terremoto le strutture lesionate non sono affidabili**, e una replica più piccola può finire ciò che la prima ha cominciato.
 
+{{< foto src="/images/2026-05-06-friuli-centro-storico-edifici-lesionati.webp"
+         alt="Immagine in bianco e nero del 1976: gruppo di Carabinieri e civili in dialogo nel centro storico di un paese friulano colpito dal terremoto. Sullo sfondo, due edifici con gravi lesioni alle facciate e un'insegna pubblicitaria d'epoca \"DREHER\" su una bottega chiusa."
+         caption="Il centro storico di un paese friulano nei giorni successivi al sisma: Carabinieri e civili coordinano i primi rilievi di agibilità. Le crepe sulle facciate e i distacchi di intonaco sono gli elementi che i tecnici osservavano per decidere quali edifici erano accessibili e quali no." >}}
+
 I primi soccorsi arrivarono dai **vicini, dai paesi limitrofi, dai Vigili del fuoco e dall'Esercito**. Erano gli anni della guerra fredda e in Friuli era schierata una larga parte delle forze armate italiane, che potettero intervenire in poche ore con uomini e mezzi. La presenza dell'Esercito fu decisiva nei primi giorni, ma rese anche evidente un problema: **mancava una catena di comando civile** capace di coordinare il soccorso fra istituzioni diverse.
+
+{{< foto src="/images/2026-05-06-friuli-soccorsi-mezzo-militare.webp"
+         alt="Immagine in bianco e nero del 1976: due persone — un militare in piedi e una persona in tenuta da lavoro inginocchiata — operano vicino a un grande mezzo militare della Protezione Civile o del Genio in un'area di intervento. Si vedono pneumatici di grandi dimensioni e un quadro di comando aperto."
+         caption="Mezzi militari del Genio in supporto alle operazioni di soccorso nei paesi friulani. La presenza dell'Esercito fu decisiva per i primi giorni, ma rese anche evidente la necessità di una catena di comando civile coordinata: una delle lezioni operative che, qualche anno dopo, avrebbero portato all'istituzione del Servizio Nazionale della Protezione Civile." >}}
 
 ## Zamberletti, il Friuli e l'invenzione della protezione civile italiana
 

@@ -23,6 +23,10 @@ Per il sistema della **protezione civile**, il caso Moro non è "solo" memoria. 
 
 ## Cosa è successo: dal 16 marzo al 9 maggio
 
+{{< foto src="/images/2026-05-09-aldo-moro-ritratto.webp"
+         alt="Ritratto fotografico di Aldo Moro, statista italiano, presidente della Democrazia Cristiana, in giacca scura e cravatta blu su sfondo neutro. Foto a colori, anni Settanta."
+         caption="Aldo Moro (1916–1978), presidente del Consiglio Nazionale della Democrazia Cristiana, fu rapito il 16 marzo 1978 e ucciso il 9 maggio dello stesso anno. Era stato cinque volte Presidente del Consiglio dei ministri ed era considerato l'artefice del compromesso storico fra DC e PCI." >}}
+
 Il **16 marzo 1978**, alle 9 del mattino, in **via Mario Fani** nel quartiere Monte Mario di Roma, un commando delle Brigate Rosse blocca l'auto che porta Aldo Moro a Montecitorio. In meno di due minuti, oltre **novanta colpi di arma automatica** vengono sparati. Quaranta vanno a segno. Cadono i cinque uomini della scorta:
 
 - **Oreste Leonardi**, maresciallo dei Carabinieri
