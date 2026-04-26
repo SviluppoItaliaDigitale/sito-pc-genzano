@@ -6,7 +6,7 @@ description: "Lo psicologo dell'emergenza nella Protezione Civile italiana: ruol
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-10-10-psicologi-emergenza-trauma.webp"
 image_alt: "Copertina dell'articolo: Il supporto psicologico nelle emergenze: per chi le subisce e per chi soccorre"
 scadenza: ""
 area: "Italia · sistema nazionale"
