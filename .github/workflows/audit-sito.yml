@@ -1,16 +1,33 @@
 name: "🕵️ Audit settimanale sito"
 
-# Audit automatico dei contenuti pubblicati:
-# verifica coerenza fatti istituzionali (telefono, COI, indirizzo),
-# numeri di emergenza deprecati, placeholder, immagini/allegati rotti,
-# badge inesistenti, link tel: mal formattati, frasi AGID troppo lunghe.
-# Nasce per rilevare automaticamente il tipo di errori emersi dall'audit
-# manuale di aprile 2026 (COI 14°→15°, cartello AR4 404, 115/118 citati
-# come numero da chiamare, data widget meteo errata, placeholder residui).
+# Audit completo automatico (32 sezioni) di contenuti, codice, governance:
+# - 1-15  contenuti pubblicati: COI, numeri emergenza, telefono, sede, CAP,
+#         placeholder, asset rotti, badge, date, allegati, frasi AGID,
+#         pagine draft, schede stampabili, modalità emergenza, dataRevisione,
+#         widget duplicati
+# - 16-22 codice/template: build Hugo pulito, articoli draft:true, link
+#         interni a slug inesistenti, sintassi JS, validità YAML workflow,
+#         path assoluti template, residui refactoring (CCV-MB, lombardo,
+#         /index.html)
+# - 23-32 governance docs: file presenti, import CLAUDE.md, badge list
+#         coerente fra badge.html/CLAUDE/rule02/archetype, formato date,
+#         frontmatter completo, riferimenti incrociati, pagine obbligatorie,
+#         shortcode foto, script export, formato dataUltimaRevisione
+#
+# Nasce dall'audit manuale di aprile 2026 (COI 14°→15°, cartello AR4 404,
+# 115/118 come numero da chiamare, data widget meteo errata, placeholder
+# residui) e dal checkup completo di fine aprile 2026 (duplicate target
+# paths, slug typo nei link interni, draft:true dimenticati, manuale
+# lombardo residuo, /index.html residui post-Chrome-cache fix).
+#
+# Storia merge: il 26 aprile 2026 il workflow `coerenza-docs.yml` (che
+# girava lun 07:00) è stato fuso qui dentro come sezioni 23-32 per non
+# avere 2 issue separate il lunedì mattina con la stessa filosofia.
 
 on:
   schedule:
-    # Ogni lunedi alle 09:00 UTC (dopo coerenza-docs e check-normativa-links)
+    # Ogni lunedi alle 09:00 UTC (dopo check-normativa-links delle 08:00,
+    # prima di check-links-sito delle 10:00)
     - cron: "0 9 * * 1"
   workflow_dispatch:
 
@@ -417,6 +434,314 @@ jobs:
             echo '```' >> "$REPORT"
           else
             ok "Nessun widget con widgetId duplicato nella stessa pagina."
+          fi
+
+          # ----------------------------------------------------------------
+          section "16. Hugo build pulito (warning su duplicate target / template inutilizzati)"
+          # Build con --printPathWarnings per catturare alias che collidono.
+          # Esempio storico: 7 lingue avevano alias /en/index.html oltre /en/
+          # che producevano duplicate target path su en/index.html.
+          if command -v hugo >/dev/null 2>&1; then
+            HUGO_OUT=$(hugo --minify --printPathWarnings 2>&1 || true)
+            HUGO_WARN=$(echo "$HUGO_OUT" | grep -iE "warn|error|duplicate" | grep -vE "emergency-actions\.html is unused" || true)
+            if [ -n "$HUGO_WARN" ]; then
+              err "Hugo build emette warning di rilievo:"
+              echo '```' >> "$REPORT"
+              echo "$HUGO_WARN" | head -20 >> "$REPORT"
+              echo '```' >> "$REPORT"
+            else
+              ok "Build Hugo pulito (warning conditionali esclusi)."
+            fi
+          else
+            warn "Hugo non installato sul runner — sezione skippata."
+          fi
+
+          # ----------------------------------------------------------------
+          section "17. Articoli con draft: true (regola: nessun articolo in revisione)"
+          # Regola del progetto: gli articoli si pubblicano subito o si
+          # calendarizzano. Mai "in bozza" — Hugo esclude i draft a prescindere
+          # dalla data e nessun workflow flippa draft:true → false.
+          DRAFT_ART=$(grep -rl '^draft: true$' "$CONTENT_GLOB"/comunicazioni/ 2>/dev/null || true)
+          if [ -n "$DRAFT_ART" ]; then
+            err "Articoli con \`draft: true\` (vanno pubblicati subito o calendarizzati con \`draft: false\` + data futura):"
+            echo "$DRAFT_ART" | sed 's/^/- `/; s/$/`/' >> "$REPORT"
+          else
+            ok "Nessun articolo in stato draft (regola coerente)."
+          fi
+
+          # ----------------------------------------------------------------
+          section "18. Link interni a slug inesistenti (typo o slug aggiornati)"
+          # Scansiona i link [titolo](/comunicazioni/<slug>/) e verifica
+          # che esista content/comunicazioni/<slug>.md. Rileva typo o slug
+          # rinominati post-creazione, che vengono mostrati graceful dal
+          # render-link hook ma rappresentano comunque un'intenzione persa.
+          # Tutto in bash per evitare il pattern velenoso heredoc-python (la
+          # validazione YAML strict si rompe con righe Python a colonna 1).
+          BROKEN_INTERNAL=""
+          LINKED_SLUGS=$(grep -rohE '/comunicazioni/[a-zA-Z0-9_-]+' "$CONTENT_GLOB"/ 2>/dev/null \
+            | sed 's|/comunicazioni/||' | sort -u || true)
+          for slug in $LINKED_SLUGS; do
+            [ -f "$CONTENT_GLOB/comunicazioni/${slug}.md" ] || BROKEN_INTERNAL="${BROKEN_INTERNAL}- \`/comunicazioni/${slug}/\`\n"
+          done
+          if [ -n "$BROKEN_INTERNAL" ]; then
+            err "Slug inesistenti citati nei link interni (verificare typo o aggiornamenti slug):"
+            printf "%b" "$BROKEN_INTERNAL" | head -30 >> "$REPORT"
+          else
+            ok "Tutti i link \`/comunicazioni/<slug>/\` puntano a articoli esistenti."
+          fi
+
+          # ----------------------------------------------------------------
+          section "19. Sintassi JavaScript dei file standalone"
+          # Verifica con `node --check` tutti i .js in static/ (giochi, quiz,
+          # scenari, mappa, abili-a-proteggere) per intercettare errori che
+          # passerebbero il build Hugo ma romperebbero in browser.
+          JS_ERRORS=""
+          if command -v node >/dev/null 2>&1; then
+            while IFS= read -r js; do
+              [ -z "$js" ] && continue
+              ERR=$(node --check "$js" 2>&1 || true)
+              if [ -n "$ERR" ]; then
+                JS_ERRORS="${JS_ERRORS}- \`$js\`: $(echo "$ERR" | head -1)\n"
+              fi
+            done < <(find static/ -name "*.js" -type f -not -path "*/node_modules/*" 2>/dev/null)
+            if [ -n "$JS_ERRORS" ]; then
+              err "Errori sintassi JavaScript:"
+              printf "%b" "$JS_ERRORS" >> "$REPORT"
+            else
+              ok "Sintassi JavaScript pulita su tutti i file .js standalone."
+            fi
+          else
+            warn "Node non installato — sezione skippata."
+          fi
+
+          # ----------------------------------------------------------------
+          section "20. Validazione YAML dei workflow GitHub Actions"
+          # I workflow vengono validati da GitHub al push, ma se il YAML è
+          # invalido il run completa con failure senza aprire issue: il
+          # problema può passare inosservato per settimane.
+          # Pattern velenoso noto: heredoc python con istruzioni a colonna 1
+          # dentro uno step bash → il parser legge quelle righe come chiavi
+          # top-level rompendo la struttura.
+          YAML_BAD=""
+          for wf in .github/workflows/*.yml; do
+            ERR=$(python3 -c "import yaml; yaml.safe_load(open('$wf'))" 2>&1 || true)
+            if [ -n "$ERR" ]; then
+              YAML_BAD="${YAML_BAD}- \`$wf\`: $(echo "$ERR" | head -1)\n"
+            fi
+          done
+          if [ -n "$YAML_BAD" ]; then
+            err "Workflow YAML non validi:"
+            printf "%b" "$YAML_BAD" >> "$REPORT"
+          else
+            ok "Tutti i workflow YAML validano."
+          fi
+
+          # ----------------------------------------------------------------
+          section "21. Path interni assoluti nei template (subpath GitHub Pages)"
+          # I template che usano href assoluti tipo href="/foo/" funzionano
+          # su Aruba (baseURL root) ma sono rotti su GitHub Pages dove il
+          # baseURL ha il subpath /sito-pc-genzano/. Tutti i path interni nei
+          # template Hugo devono usare relURL o absURL.
+          ABS_HREF=$(grep -rnE 'href="/[a-z][^"]*"' "$THEME_GLOB/layouts/" 2>/dev/null \
+            | grep -vE 'absURL|relURL|window\.SITO|class="skip-link"|href="/#"|href="/sito-pc-genzano' \
+            | head -10 || true)
+          if [ -n "$ABS_HREF" ]; then
+            err "Template con \`href=\"/...\"\` hardcoded (rotto su GitHub Pages):"
+            echo '```' >> "$REPORT"
+            echo "$ABS_HREF" >> "$REPORT"
+            echo '```' >> "$REPORT"
+          else
+            ok "Tutti i path interni nei template usano relURL/absURL."
+          fi
+
+          # ----------------------------------------------------------------
+          section "22. Residui di refactoring (sweep dei pattern già fixati)"
+          # Verifica l'assenza di residui dei refactoring storici, secondo
+          # la regola di proattività .claude/rules/07-proattivita-coerenza.md.
+          # Pattern noti da non lasciare reintrodurre:
+          # - /quizpc/index.html, /formazionepc/index.html, /giochi/index.html
+          #   (path canonico è senza /index.html)
+          # - "intercomunale lombarda", "manuale originale", "Imbersago"
+          #   (riferimenti al manuale lombardo, da citare solo come link)
+          # - "CCV-MB", "Monza-Brianza" come fonte di articoli
+          #   (regola: niente nomi di enti locali non pertinenti nel testo)
+          RESIDUI=""
+          PAT_INDEX=$(grep -rn '/index\.html"' "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" 2>/dev/null | head -5 || true)
+          [ -n "$PAT_INDEX" ] && RESIDUI="${RESIDUI}**/index.html nei contenuti/template:**\n\`\`\`\n$PAT_INDEX\n\`\`\`\n"
+          PAT_LOMB=$(grep -rin "intercomunale lombard\|manuale originale\|imbersago" "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" 2>/dev/null || true)
+          [ -n "$PAT_LOMB" ] && RESIDUI="${RESIDUI}**Riferimenti al manuale lombardo:**\n\`\`\`\n$PAT_LOMB\n\`\`\`\n"
+          PAT_CCV=$(grep -rin "ccv[-. ]mb\|monza.brianza" "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" 2>/dev/null || true)
+          [ -n "$PAT_CCV" ] && RESIDUI="${RESIDUI}**Riferimenti CCV-MB:**\n\`\`\`\n$PAT_CCV\n\`\`\`\n"
+          if [ -n "$RESIDUI" ]; then
+            err "Trovati residui di refactoring già completati:"
+            printf "%b" "$RESIDUI" >> "$REPORT"
+          else
+            ok "Nessun residuo dei refactoring storici (CCV-MB, manuale lombardo, /index.html)."
+          fi
+
+          # ============================================================
+          # Sezioni 23-32 — Coerenza documentazione di governance
+          # (originariamente in coerenza-docs.yml, fuse qui per non avere
+          # 2 issue separate il lunedì mattina con la stessa filosofia)
+          # ============================================================
+
+          # ----------------------------------------------------------------
+          section "23. File di governance esistenti"
+          GOV_MISSING=""
+          for f in CLAUDE.md MANUALE-SITO.md PIANO-EDITORIALE.md archetypes/comunicazioni.md archetypes/default.md \
+                   .claude/rules/01-governance-pa.md .claude/rules/02-content-design-pa.md \
+                   .claude/rules/03-accessibility.md .claude/rules/04-hugo-architecture.md \
+                   .claude/rules/05-github-aruba-deploy.md .claude/rules/06-protezione-civile-scientifica.md \
+                   .claude/rules/07-proattivita-coerenza.md; do
+            [ -f "$f" ] || GOV_MISSING="${GOV_MISSING}- \`$f\`\n"
+          done
+          if [ -n "$GOV_MISSING" ]; then
+            err "File di governance mancanti:"
+            printf "%b" "$GOV_MISSING" >> "$REPORT"
+          else
+            ok "Tutti i 12 file di governance presenti."
+          fi
+
+          # ----------------------------------------------------------------
+          section "24. Import @.claude/rules/*.md dichiarati in CLAUDE.md"
+          BAD_IMPORT=""
+          while IFS= read -r imp; do
+            path="${imp#@}"
+            [ -f "$path" ] || BAD_IMPORT="${BAD_IMPORT}- \`$imp\`\n"
+          done < <(grep -oE '^@\.claude/rules/[a-z0-9-]+\.md' CLAUDE.md || true)
+          if [ -n "$BAD_IMPORT" ]; then
+            err "Import rotti in CLAUDE.md:"
+            printf "%b" "$BAD_IMPORT" >> "$REPORT"
+          else
+            ok "Tutti gli import \`@.claude/rules/*.md\` in CLAUDE.md sono validi."
+          fi
+
+          # ----------------------------------------------------------------
+          section "25. Coerenza badge list (badge.html ↔ CLAUDE.md / rule 02 / archetype)"
+          BADGE_FILE_GOV="$THEME_GLOB/layouts/partials/badge.html"
+          BADGE_DOC_DIVERG=""
+          if [ -f "$BADGE_FILE_GOV" ]; then
+            KNOWN_GOV=$(grep -oP '\$known := slice \K[^-]+' "$BADGE_FILE_GOV" | head -1 | tr -d '"' | tr -s ' ' '\n' | sort -u | grep -v '^$' || true)
+            for b in $KNOWN_GOV; do
+              grep -qi "$b" .claude/rules/02-content-design-pa.md || BADGE_DOC_DIVERG="${BADGE_DOC_DIVERG}- Badge \`$b\` mancante in \`02-content-design-pa.md\`\n"
+              grep -qi "$b" CLAUDE.md || BADGE_DOC_DIVERG="${BADGE_DOC_DIVERG}- Badge \`$b\` mancante in \`CLAUDE.md\`\n"
+              grep -qi "$b" archetypes/comunicazioni.md || BADGE_DOC_DIVERG="${BADGE_DOC_DIVERG}- Badge \`$b\` mancante in \`archetypes/comunicazioni.md\`\n"
+            done
+            if [ -n "$BADGE_DOC_DIVERG" ]; then
+              err "Badge dichiarati in badge.html ma non documentati altrove:"
+              printf "%b" "$BADGE_DOC_DIVERG" >> "$REPORT"
+            else
+              ok "Badge list coerente fra badge.html, CLAUDE.md, rule 02 e archetype."
+            fi
+          else
+            err "File \`$BADGE_FILE_GOV\` non trovato."
+          fi
+
+          # ----------------------------------------------------------------
+          section "26. Formato data articoli (no T/timezone)"
+          # NB: la sezione 8 verifica il range dell'anno; questa verifica il formato.
+          BAD_DATE_FORMAT=$(grep -lrE '^date: [0-9]{4}-[0-9]{2}-[0-9]{2}T' content/comunicazioni/ 2>/dev/null || true)
+          if [ -n "$BAD_DATE_FORMAT" ]; then
+            err "Articoli con data in formato AAAA-MM-DDTHH:MM:SSZ (Hugo li esclude dal build):"
+            echo "$BAD_DATE_FORMAT" | sed 's/^/- `/; s/$/`/' >> "$REPORT"
+          else
+            ok "Tutte le date articolo nel formato \`AAAA-MM-GG\`."
+          fi
+
+          # ----------------------------------------------------------------
+          section "27. Frontmatter completo articoli"
+          REQUIRED_FIELDS="title date description badge priorita autore draft"
+          MISSING_FM=""
+          for art in "$CONTENT_GLOB"/comunicazioni/*.md; do
+            [ -f "$art" ] || continue
+            fm=$(awk '/^---$/{c++; next} c==1' "$art")
+            for field in $REQUIRED_FIELDS; do
+              echo "$fm" | grep -qE "^$field:" || MISSING_FM="${MISSING_FM}- \`$art\`: manca campo \`$field\`\n"
+            done
+          done
+          if [ -n "$MISSING_FM" ]; then
+            err "Articoli con frontmatter incompleto:"
+            printf "%b" "$MISSING_FM" | head -30 >> "$REPORT"
+          else
+            ok "Frontmatter completo in tutti gli articoli."
+          fi
+
+          # ----------------------------------------------------------------
+          section "28. Riferimenti incrociati CLAUDE.md ↔ docs"
+          CROSS_MISS=""
+          grep -q "MANUALE-SITO.md" CLAUDE.md || CROSS_MISS="${CROSS_MISS}- CLAUDE.md non cita \`MANUALE-SITO.md\`\n"
+          grep -q "aggiorna-manuale" CLAUDE.md || CROSS_MISS="${CROSS_MISS}- CLAUDE.md non cita workflow \`aggiorna-manuale.yml\`\n"
+          grep -q "PIANO-EDITORIALE.md" CLAUDE.md || CROSS_MISS="${CROSS_MISS}- CLAUDE.md non cita \`PIANO-EDITORIALE.md\`\n"
+          if [ -n "$CROSS_MISS" ]; then
+            err "Riferimenti incrociati mancanti:"
+            printf "%b" "$CROSS_MISS" >> "$REPORT"
+          else
+            ok "CLAUDE.md cita correttamente MANUALE, PIANO e workflow di manutenzione."
+          fi
+
+          # ----------------------------------------------------------------
+          section "29. Pagine content/ istituzionali obbligatorie"
+          PAGES="content/_index.md content/accessibilita/_index.md content/allerte-meteo/_index.md \
+                 content/area-download/_index.md content/cartografia/_index.md content/chi-siamo/_index.md \
+                 content/contatti/_index.md content/cosa-fare-adesso/_index.md content/diventa-volontario/_index.md \
+                 content/faq/_index.md content/formazione/_index.md content/note-legali/_index.md \
+                 content/numeri-utili/_index.md content/piano-emergenza/_index.md content/piano-familiare/_index.md \
+                 content/privacy/_index.md content/rischi-prevenzione/_index.md content/siti-utili/_index.md \
+                 content/social-media-policy/_index.md"
+          PAGE_MISS=""
+          for p in $PAGES; do
+            [ -f "$p" ] || PAGE_MISS="${PAGE_MISS}- \`$p\`\n"
+          done
+          if [ -n "$PAGE_MISS" ]; then
+            err "Pagine istituzionali mancanti:"
+            printf "%b" "$PAGE_MISS" >> "$REPORT"
+          else
+            ok "Tutte le 19 pagine content/ istituzionali presenti."
+          fi
+
+          # ----------------------------------------------------------------
+          section "30. Shortcode foto presente e documentato"
+          SHORTCODE_FOTO="$THEME_GLOB/layouts/shortcodes/foto.html"
+          SC_ISSUES=""
+          if [ ! -f "$SHORTCODE_FOTO" ]; then
+            SC_ISSUES="${SC_ISSUES}- Shortcode mancante: \`$SHORTCODE_FOTO\`\n"
+          else
+            grep -q "foto" MANUALE-SITO.md || SC_ISSUES="${SC_ISSUES}- Shortcode \`foto\` non citato in MANUALE-SITO.md\n"
+            grep -q "foto" .claude/rules/02-content-design-pa.md || SC_ISSUES="${SC_ISSUES}- Shortcode \`foto\` non citato in rule 02\n"
+          fi
+          if [ -n "$SC_ISSUES" ]; then
+            err "Shortcode foto: problemi documentazione:"
+            printf "%b" "$SC_ISSUES" >> "$REPORT"
+          else
+            ok "Shortcode \`foto\` presente e documentato."
+          fi
+
+          # ----------------------------------------------------------------
+          section "31. Script export-contesto-ai presente ed eseguibile"
+          EXPORT_SCRIPT="scripts/export-contesto-ai.sh"
+          if [ ! -f "$EXPORT_SCRIPT" ]; then
+            err "Script \`$EXPORT_SCRIPT\` mancante."
+          elif [ ! -x "$EXPORT_SCRIPT" ]; then
+            err "Script \`$EXPORT_SCRIPT\` non eseguibile (manca chmod +x)."
+          else
+            ok "Script export-contesto-ai presente e eseguibile."
+          fi
+
+          # ----------------------------------------------------------------
+          section "32. dataUltimaRevisione formato corretto sulle pagine legali"
+          # NB: sezione 14 controlla anche la "vecchiezza"; qui solo il formato.
+          REV_BAD=""
+          for f in content/privacy/_index.md content/note-legali/_index.md content/accessibilita/_index.md content/social-media-policy/_index.md; do
+            [ -f "$f" ] || { REV_BAD="${REV_BAD}- Pagina mancante: \`$f\`\n"; continue; }
+            fm=$(awk '/^---$/{c++; next} c==1' "$f")
+            echo "$fm" | grep -qE '^dataUltimaRevisione:[[:space:]]*"[0-9]{4}-[0-9]{2}-[0-9]{2}"' \
+              || REV_BAD="${REV_BAD}- \`$f\`: \`dataUltimaRevisione\` mancante o non in formato \"AAAA-MM-GG\"\n"
+          done
+          if [ -n "$REV_BAD" ]; then
+            err "Problemi sul campo dataUltimaRevisione:"
+            printf "%b" "$REV_BAD" >> "$REPORT"
+          else
+            ok "Tutte le 4 pagine legali hanno \`dataUltimaRevisione\` ben formato."
           fi
 
           # ----------------------------------------------------------------

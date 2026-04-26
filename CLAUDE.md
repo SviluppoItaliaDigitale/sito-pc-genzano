@@ -199,14 +199,15 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 |---|---|---|
 | `deploy.yml` | Ogni push su `main` | Build Hugo + deploy Aruba (FTP) + GitHub Pages |
 | `check-allerta.yml` | Orario (min 12) | Verifica stato allerta meteo Regione Lazio |
-| `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Pubblica articoli programmati con `draft: true` + data futura |
+| `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Rilancia il deploy ogni mattina: gli articoli `draft: false` con `date` futura entrano nel sito al passaggio del giorno (Hugo li escludeva finché la data era oltre `now()`). NB: `draft: true` non viene flippato — gli articoli devono essere `draft: false` (regola: niente articoli in revisione) |
 | `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO (si attiva dopo ogni deploy riuscito) |
 | `aggiorna-manuale.yml` | Lunedì 06:00 UTC | Confronta hash fonti AGID/Designers Italia, apre issue se cambiano |
 | `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Verifica aggiornamenti Bootstrap Italia |
-| `coerenza-docs.yml` | Lunedì 07:00 UTC | Verifica coerenza interna: CLAUDE.md, archetype, regole, badge, shortcode foto, pagine content/ obbligatorie (incluse privacy, note-legali, social-media-policy, accessibilita) |
 | `check-normativa-links.yml` | Lunedì 08:00 UTC | Verifica raggiungibilità link normativi specifici (Lazio, DPC, Normattiva) con messaggi dedicati |
-| `audit-sito.yml` | Lunedì 09:00 UTC | Audit testi: coerenza fatti istituzionali (COI, telefono, sede), numeri di emergenza deprecati, placeholder, immagini/allegati rotti, badge sconosciuti, frasi AGID troppo lunghe |
+| `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (32 sezioni)**: contenuti pubblicati (COI, NUE 112, telefono, sede, CAP, placeholder, asset, badge, date, allegati, frasi AGID, draft `_index`, schede stampabili, modalità emergenza, pagine legali, widget) + codice/template (build Hugo, articoli `draft:true`, link a slug inesistenti, sintassi JS, validità YAML workflow, path assoluti template, residui CCV-MB/lombardo/`/index.html`) + governance docs (file presenti, import CLAUDE, badge list coerente, formato date, frontmatter, riferimenti incrociati, pagine obbligatorie, shortcode foto, script export, `dataUltimaRevisione`). Apre 1 issue settimanale con tutti i findings |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo del sito con **lychee**: verifica TUTTI i link (interni + esterni, tutte le pagine), apre issue automatica su 404/drift. Catch-all per mantenere aggiornati hub Strumenti, widget, Area Download, link esterni nei contenuti |
+
+> **Storia merge**: il 26 aprile 2026 il workflow `coerenza-docs.yml` (lun 07:00) è stato fuso dentro `audit-sito.yml` come sezioni 23-32. Stessa filosofia (audit di coerenza interna), stesso output (1 issue settimanale), niente duplicazione di lavoro per il maintainer.
 
 ## Key operational notes
 
