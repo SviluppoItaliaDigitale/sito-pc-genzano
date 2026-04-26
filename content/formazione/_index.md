@@ -44,7 +44,7 @@ Il Gruppo ha sviluppato kit didattici completi per ogni grado di istruzione, con
 
 ### Abili a proteggere
 
-Il Gruppo ha sviluppato [attività educative accessibili](/abili-a-proteggere/) per persone con difficoltà cognitive o motorie, anziani e bambini fragili, nell'ambito del programma nazionale **Abili a proteggere**. Le attività hanno pulsanti grandi, testi semplici, nessun limite di tempo e possono essere svolte con l'aiuto di un familiare o un operatore.
+Il Gruppo ha sviluppato **20 [attività educative accessibili](/abili-a-proteggere/)** per persone con difficoltà cognitive o motorie, anziani e bambini fragili, nell'ambito del programma nazionale **Abili a proteggere**. Le attività hanno pulsanti grandi, testi semplici, nessun limite di tempo e possono essere svolte con l'aiuto di un familiare o un operatore. I temi spaziano dalla chiamata al 112 all'evacuazione, dal punto sicuro durante un terremoto al riconoscimento delle proprie emozioni, fino alla rete dei vicini di casa.
 
 Il Gruppo promuove la cultura della prevenzione fin dalla giovane età anche attraverso:
 
