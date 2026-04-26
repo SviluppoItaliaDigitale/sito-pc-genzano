@@ -7,7 +7,7 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: ""
-image_alt: ""
+image_alt: "Copertina dell'articolo: Il supporto psicologico nelle emergenze: per chi le subisce e per chi soccorre"
 scadenza: ""
 area: "Italia · sistema nazionale"
 allegati: []

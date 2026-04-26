@@ -6,6 +6,7 @@ badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-16-defibrillatori-regione-lazio-protezione-civile.webp"
+image_alt: "Copertina dell'articolo: Il nostro Gruppo riceve un defibrillatore dalla Regione Lazio"
 scadenza: ""
 area: "Sede della Regione Lazio, Roma"
 allegati: []

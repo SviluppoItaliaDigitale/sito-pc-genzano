@@ -50,7 +50,7 @@ In caso di emergenza, contatta sempre i numeri ufficiali per garantire un interv
 
 ## Enti Operativi e di Ricerca
 
-- [Corpo Nazionale dei Vigili del Fuoco](http://www.vigilfuoco.it/) — Componente fondamentale del sistema di soccorso pubblico
+- [Corpo Nazionale dei Vigili del Fuoco](https://www.vigilfuoco.it/) — Componente fondamentale del sistema di soccorso pubblico
 - [Istituto Nazionale di Geofisica e Vulcanologia (INGV)](https://www.ingv.it/) — Monitoraggio sismico e vulcanico
 - [Istituto Superiore per la Protezione e la Ricerca Ambientale (ISPRA)](https://www.isprambiente.gov.it/it) — Ricerca ambientale sotto il Ministero dell'Ambiente
 

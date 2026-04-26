@@ -7,6 +7,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere.webp"
+image_alt: "Copertina dell'articolo: Il nostro Piano di Emergenza Familiare citato da Abili a proteggere, il portale del Dipartimento della Protezione Civile"
 scadenza: ""
 area: "Comune di Genzano di Roma"
 allegati: []

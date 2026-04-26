@@ -6,6 +6,7 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-30-vademecum-protezione-civile-prefettura-isernia.webp"
+image_alt: "Copertina dell'articolo: Il Vademecum di Protezione Civile della Prefettura di Isernia: uno strumento utile anche per i cittadini"
 scadenza: ""
 area: ""
 allegati: []

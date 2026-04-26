@@ -6,6 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano.webp"
+image_alt: "Copertina dell'articolo: Nuovo logo della Protezione Civile: cosa cambia per i volontari di Genzano"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

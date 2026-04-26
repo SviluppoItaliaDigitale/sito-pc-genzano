@@ -7,6 +7,7 @@ badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa.webp"
+image_alt: "Copertina dell'articolo: Diciassette anni fa il terremoto dell'Aquila: quando i volontari di Genzano portarono la speranza a Fossa"
 scadenza: ""
 area: "Comune di Fossa (AQ)"
 allegati: []

@@ -7,7 +7,7 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: ""
-image_alt: ""
+image_alt: "Copertina dell'articolo: Cani della Protezione Civile: gli amici a quattro zampe che salvano vite"
 scadenza: ""
 area: "Italia · territorio nazionale"
 allegati: []

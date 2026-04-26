@@ -7,6 +7,7 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-07-15-scheda-rilievo-danno-beni-culturali-chiese.webp"
+image_alt: "Copertina dell'articolo: Come si rileva il danno sismico a una chiesa: la scheda Modello A-DC del Dipartimento di Protezione Civile"
 scadenza: ""
 area: ""
 allegati: []

@@ -1,6 +1,6 @@
 name: "🕵️ Audit settimanale sito"
 
-# Audit completo automatico (32 sezioni) di contenuti, codice, governance:
+# Audit completo automatico (37 sezioni) di contenuti, codice, governance:
 # - 1-15  contenuti pubblicati: COI, numeri emergenza, telefono, sede, CAP,
 #         placeholder, asset rotti, badge, date, allegati, frasi AGID,
 #         pagine draft, schede stampabili, modalità emergenza, dataRevisione,
@@ -13,6 +13,10 @@ name: "🕵️ Audit settimanale sito"
 #         coerente fra badge.html/CLAUDE/rule02/archetype, formato date,
 #         frontmatter completo, riferimenti incrociati, pagine obbligatorie,
 #         shortcode foto, script export, formato dataUltimaRevisione
+# - 33-37 audit aggiuntivo: mixed content (http://), image_alt accessibility,
+#         coerenza dati istituzionali nelle 7 traduzioni, divergenze
+#         hugo.toml ↔ data/numeri_utili.yaml, smoke test rendering H1
+#         delle pagine critiche
 #
 # Nasce dall'audit manuale di aprile 2026 (COI 14°→15°, cartello AR4 404,
 # 115/118 come numero da chiamare, data widget meteo errata, placeholder
@@ -41,6 +45,15 @@ jobs:
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v4
+
+      - name: "🔧 Setup Hugo"
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: "🏗️ Build sito (per smoke test rendering)"
+        run: hugo --minify
 
       - name: "🧪 Audit contenuti"
         id: audit
@@ -742,6 +755,135 @@ jobs:
             printf "%b" "$REV_BAD" >> "$REPORT"
           else
             ok "Tutte le 4 pagine legali hanno \`dataUltimaRevisione\` ben formato."
+          fi
+
+          # ============================================================
+          # Sezioni 33-37 — Audit aggiuntivo automatizzato
+          # (aggiunte il 26 aprile 2026 dopo verifica manuale che ha
+          # rilevato mixed content, traduzioni incoerenti, image_alt
+          # mancanti, divergenze hugo.toml ↔ data files)
+          # ============================================================
+
+          # ----------------------------------------------------------------
+          section "33. Mixed content: link http:// esterni nelle pagine HTTPS"
+          # Il sito gira su HTTPS (Aruba + GitHub Pages). I link http://
+          # generano warning di "mixed content" sui browser moderni e
+          # alcune risorse vengono bloccate. Eccezioni note (siti senza
+          # HTTPS lato fornitore): parcocastelliromani.it, idrografico.roma.it,
+          # zonesismiche.mi.ingv.it. Tutti gli altri http:// vanno aggiornati.
+          MIXED=$(grep -rn 'http://[a-zA-Z]' "$CONTENT_GLOB"/ 2>/dev/null \
+            | grep -vE 'parcocastelliromani\.it|idrografico\.roma\.it|zonesismiche\.mi\.ingv\.it|protezionecivile-imbersago|schema\.org|w3\.org|<!--' \
+            | head -10 || true)
+          if [ -n "$MIXED" ]; then
+            err "Link \`http://\` su siti che potrebbero supportare HTTPS (verifica con curl HEAD e aggiorna):"
+            echo '```' >> "$REPORT"
+            echo "$MIXED" >> "$REPORT"
+            echo '```' >> "$REPORT"
+          else
+            ok "Nessun link http:// problematico (escluse 3 eccezioni note)."
+          fi
+
+          # ----------------------------------------------------------------
+          section "34. Image alt text degli articoli (accessibility WCAG 1.1.1)"
+          # Ogni articolo dovrebbe avere image_alt non vuoto nel frontmatter.
+          # Hugo lo usa come alt= della copertina e dei thumbnail card.
+          MISSING_ALT=""
+          for art in "$CONTENT_GLOB"/comunicazioni/*.md; do
+            [ -f "$art" ] || continue
+            fm=$(awk '/^---$/{c++; next} c==1' "$art")
+            # Skip articoli senza image: (non hanno copertina nel frontmatter)
+            echo "$fm" | grep -qE '^image:[[:space:]]*"' || continue
+            # Verifica image_alt presente e non vuoto
+            ALT=$(echo "$fm" | grep -E '^image_alt:' | sed -E 's/^image_alt:[[:space:]]*"?([^"]*)"?.*/\1/' | head -1)
+            if [ -z "$ALT" ]; then
+              MISSING_ALT="${MISSING_ALT}- \`$art\`\n"
+            fi
+          done
+          if [ -n "$MISSING_ALT" ]; then
+            warn "Articoli con \`image:\` ma senza \`image_alt\` significativo (screen reader leggono il filename):"
+            printf "%b" "$MISSING_ALT" | head -20 >> "$REPORT"
+          else
+            ok "Tutti gli articoli con copertina hanno \`image_alt\` valorizzato."
+          fi
+
+          # ----------------------------------------------------------------
+          section "35. Coerenza dati istituzionali nelle 7 traduzioni"
+          # Le pagine in content/{english,deutsch,...}/_index.md e
+          # /numeri-utili/_index.md devono contenere i dati istituzionali
+          # essenziali: sede (Via Sicilia 13-15), CAP 00045, riferimento al 112.
+          # È un check minimale: se manca uno di questi 3, è probabile
+          # che la traduzione sia stata aggiornata in italiano ma non
+          # propagata nelle altre lingue.
+          LANG_INCOH=""
+          for lang in english deutsch espanol francais portugues romana esperanto; do
+            f="content/$lang/numeri-utili/_index.md"
+            [ -f "$f" ] || { LANG_INCOH="${LANG_INCOH}- \`$f\`: pagina mancante\n"; continue; }
+            grep -q "Sicilia" "$f" || LANG_INCOH="${LANG_INCOH}- \`$f\`: indirizzo \"Via Sicilia\" mancante\n"
+            grep -q "00045" "$f" || LANG_INCOH="${LANG_INCOH}- \`$f\`: CAP 00045 mancante\n"
+            grep -q "112" "$f" || LANG_INCOH="${LANG_INCOH}- \`$f\`: numero NUE 112 mancante\n"
+          done
+          if [ -n "$LANG_INCOH" ]; then
+            err "Traduzioni con dati istituzionali mancanti:"
+            printf "%b" "$LANG_INCOH" >> "$REPORT"
+          else
+            ok "Le 7 traduzioni contengono tutte sede, CAP e NUE 112."
+          fi
+
+          # ----------------------------------------------------------------
+          section "36. Coerenza telefono hugo.toml ↔ data/numeri_utili.yaml"
+          # hugo.toml ha `telefono` come fonte di verità del numero di sede.
+          # data/numeri_utili.yaml ha il record "locale" che dovrebbe
+          # contenere lo stesso numero (alimenta la card Numeri Utili).
+          # NB: l'email NON è nel yaml dei numeri (yaml è solo numeri di
+          # telefono), quindi qui controlliamo solo il telefono.
+          # Uso grep -F per evitare che il "+" di "+39..." venga
+          # interpretato come metachar regex.
+          DIVERG=""
+          if [ -f data/numeri_utili.yaml ] && [ -f hugo.toml ]; then
+            HUGO_TEL=$(grep -oP 'telefono\s*=\s*"\K[^"]+' hugo.toml | head -1 | tr -d ' ')
+            YAML_TELS=$(grep -oP 'numero:\s*"?\K[+0-9 ]+' data/numeri_utili.yaml | tr -d ' ' || true)
+            if [ -n "$HUGO_TEL" ] && ! echo "$YAML_TELS" | grep -qF "$HUGO_TEL"; then
+              DIVERG="${DIVERG}- Telefono di sede in hugo.toml (\`$HUGO_TEL\`) non presente in data/numeri_utili.yaml\n"
+            fi
+          else
+            DIVERG="${DIVERG}- File hugo.toml o data/numeri_utili.yaml mancante\n"
+          fi
+          if [ -n "$DIVERG" ]; then
+            err "Divergenze fra hugo.toml e data/numeri_utili.yaml:"
+            printf "%b" "$DIVERG" >> "$REPORT"
+          else
+            ok "Telefono di sede coincide fra hugo.toml e data/numeri_utili.yaml."
+          fi
+
+          # ----------------------------------------------------------------
+          section "37. Smoke test rendering: pagine critiche hanno H1"
+          # Dopo build Hugo, verifica che le pagine critiche abbiano
+          # contenuto reale (almeno un <h1>). Se una pagina ha rendering
+          # rotto o frontmatter sbagliato, può venire generata vuota:
+          # Hugo non sempre lo segnala come errore.
+          MISSING_H1=""
+          if [ -d public ]; then
+            CRITICAL_PAGES="public/index.html public/cosa-fare-adesso/index.html \
+                            public/numeri-utili/index.html public/contatti/index.html \
+                            public/cartografia/index.html public/assistente/index.html \
+                            public/comunicazioni/index.html public/formazione/index.html \
+                            public/rischi-prevenzione/index.html public/diventa-volontario/index.html \
+                            public/area-download/index.html public/faq/index.html"
+            for p in $CRITICAL_PAGES; do
+              if [ ! -f "$p" ]; then
+                MISSING_H1="${MISSING_H1}- \`$p\`: file non generato\n"
+              elif ! grep -q '<h1' "$p"; then
+                MISSING_H1="${MISSING_H1}- \`$p\`: nessun \`<h1>\` nel rendering\n"
+              fi
+            done
+          else
+            MISSING_H1="${MISSING_H1}- cartella \`public/\` non presente (skip rendering test)\n"
+          fi
+          if [ -n "$MISSING_H1" ]; then
+            err "Pagine critiche con problemi di rendering:"
+            printf "%b" "$MISSING_H1" >> "$REPORT"
+          else
+            ok "Tutte le 12 pagine critiche hanno H1 nel rendering."
           fi
 
           # ----------------------------------------------------------------

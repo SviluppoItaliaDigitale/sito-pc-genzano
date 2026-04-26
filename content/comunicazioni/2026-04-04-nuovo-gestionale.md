@@ -6,6 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-04-nuovo-gestionale.webp"
+image_alt: "Copertina dell'articolo: Adozione nuovo gestionale"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
