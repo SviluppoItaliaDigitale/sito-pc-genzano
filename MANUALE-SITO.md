@@ -2267,7 +2267,7 @@ Regola d'oro: **prima di creare un nuovo partial o template, verifica se la stes
 
 **Aggiornamento automatico**: il workflow `check-allerta.yml` (vedi Parte 10) interroga il feed ufficiale DPC **ogni ora** e aggiorna `allerta.json` se il livello è cambiato. Nella maggior parte dei casi **non serve intervenire manualmente**.
 
-**Aggiornamento manuale**: serve solo se l'automazione fallisce o se si vuole forzare un messaggio istituzionale specifico. Modifica il file, commit, push. **Nota**: al successivo ciclo orario il workflow sovrascriverà il tuo intervento con il valore letto dal feed DPC. Per evitarlo, disabilita temporaneamente il workflow (vedi 10.10).
+**Aggiornamento manuale**: serve solo se l'automazione fallisce o se si vuole forzare un messaggio istituzionale specifico. Modifica il file, commit, push. **Nota**: al successivo ciclo orario il workflow sovrascriverà il tuo intervento con il valore letto dal feed DPC. Per evitarlo, disabilita temporaneamente il workflow (vedi 10.9).
 
 **Fonte dati ufficiale**: CSV pubblicato dal Dipartimento Protezione Civile, mirror mantenuto da opendatasicilia: `https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/bollettino-oggi-comuni-latest.csv`.
 
@@ -2383,12 +2383,11 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 | Build e Deploy | `deploy.yml` | push su `main`, manuale | Build Hugo, deploy Aruba (FTP), deploy GitHub Pages |
 | Aggiornamento Allerta Meteo | `check-allerta.yml` | orario (cron `12 * * * *`), manuale | Legge feed DPC, aggiorna `data/allerta.json` |
 | Pubblicazione programmata | `pubblica-programmata.yml` | giornaliero (06:00 UTC), manuale | Riavvia il deploy per pubblicare articoli a data futura |
-| Verifica link normativa | `check-normativa-links.yml` | lunedì 08:00 UTC, manuale | Controlla raggiungibilità portali normativi |
 | Audit Accessibilità | `lighthouse-audit.yml` | dopo ogni deploy, manuale | Lighthouse su home e 5 pagine chiave |
 | Smoke test post-deploy | `smoke-test-post-deploy.yml` | dopo ogni deploy, manuale | Verifica live di 20 pagine + 7 lingue + 6 mini-app + 11 marker JS + 2 header sicurezza. Logica in `scripts/smoke-test-live.sh` |
 | Aggiorna Bootstrap Italia | `update-bootstrap-italia.yml` | lunedì 06:00 UTC, manuale | Verifica nuove release Bootstrap Italia, apre PR |
 | Aggiornamento MANUALE | `aggiorna-manuale.yml` | lunedì 06:00 UTC, manuale | Confronta hash fonti AGID/DI, apre Issue se cambiate |
-| **Audit completo sito** | `audit-sito.yml` | lunedì 09:00 UTC, manuale | **37 sezioni**: contenuti (1-15) + codice/template (16-22) + governance docs (23-32) + audit aggiuntivo (33-37). Fuso da `coerenza-docs.yml` il 26 aprile 2026 |
+| **Audit completo sito** | `audit-sito.yml` | lunedì 09:00 UTC, manuale | **38 sezioni**: contenuti (1-15) + codice/template (16-22) + governance docs (23-32) + audit aggiuntivo (33-37) + link critici normativa (38). Fuso da `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026 |
 | Verifica link sito completo | `check-links-sito.yml` | lunedì 10:00 UTC, manuale | Crawl completo con **lychee**: tutti i link interni + esterni del sito, apre issue automatica su 404/drift |
 
 ### 10.2 — `deploy.yml` — Build e Deploy
@@ -2460,17 +2459,7 @@ exclude: |
 
 **Nota operativa**: se vuoi pubblicare un articolo **a un'ora specifica** diversa dalle 08:00, lancia manualmente `deploy.yml` dall'interfaccia Actions.
 
-### 10.5 — `check-normativa-links.yml` — Verifica link normativa
-
-**Trigger**: cron mensile (`0 8 1 * *` = 1° del mese alle 08:00 UTC), esecuzione manuale.
-
-**Cosa fa:**
-1. Verifica raggiungibilità (HTTP 2xx/3xx) di una lista curata di URL normativi (normattiva.it, agid.gov.it, designers.italia.it, protezionecivile.gov.it, regione.lazio.it, ecc.).
-2. Se uno o più URL falliscono, apre una Issue con la lista dei link rotti.
-
-**Quando guardarlo**: solo se arriva una Issue dal bot. La Issue conterrà i link da aggiornare nel sito (tipicamente su `riferimenti-normativi.md` o su pagine di servizio).
-
-### 10.6 — `lighthouse-audit.yml` — Audit Accessibilità e Performance
+### 10.5 — `lighthouse-audit.yml` — Audit Accessibilità e Performance
 
 **Trigger**: `workflow_run` dopo il successo di `deploy.yml`, esecuzione manuale.
 
@@ -2482,7 +2471,7 @@ exclude: |
 
 **Quando guardarlo**: quando un deploy produce una Issue di regressione. Le cause più frequenti sono immagini non ottimizzate, nuovi script bloccanti, contrasti troppo bassi.
 
-### 10.7 — `update-bootstrap-italia.yml` — Aggiornamento Bootstrap Italia
+### 10.6 — `update-bootstrap-italia.yml` — Aggiornamento Bootstrap Italia
 
 **Trigger**: cron settimanale (lunedì 06:00 UTC), manuale.
 
@@ -2502,7 +2491,7 @@ exclude: |
 
 **Quando rifiutare una PR**: major version bump (es. da 2.x a 3.x) richiede review completa del tema — non approvare automaticamente.
 
-### 10.8 — `aggiorna-manuale.yml` — Verifica fonti AGID/Designers Italia
+### 10.7 — `aggiorna-manuale.yml` — Verifica fonti AGID/Designers Italia
 
 **Trigger**: cron settimanale (lunedì 06:00 UTC), manuale.
 
@@ -2524,11 +2513,11 @@ exclude: |
 4. Aggiorna il campo "Ultimo check linee guida AGID" in testa al manuale.
 5. Commit + push, chiudi la Issue con un commento che cita il commit.
 
-### 10.9 — `audit-sito.yml` — Audit completo settimanale (37 sezioni)
+### 10.8 — `audit-sito.yml` — Audit completo settimanale (38 sezioni)
 
 **Trigger**: cron settimanale (lunedì 09:00 UTC), manuale.
 
-**Storia**: nato ad aprile 2026 con 15 controlli sui contenuti, esteso il 26 aprile 2026 a 32 controlli inglobando il workflow `coerenza-docs.yml` (precedentemente lun 07:00) per consolidare in un'unica issue settimanale tutta la qualità del sito (testi, codice, governance docs). Lo stesso giorno esteso a 37 sezioni con il blocco "audit aggiuntivo" (mixed content, accessibility alt, coerenza traduzioni, hugo.toml ↔ data files, smoke test rendering).
+**Storia**: nato ad aprile 2026 con 15 controlli sui contenuti, esteso il 26 aprile 2026 a 32 controlli inglobando `coerenza-docs.yml` (lun 07:00). Lo stesso giorno esteso a 37 con il blocco "audit aggiuntivo" (mixed content, accessibility alt, coerenza traduzioni, hugo.toml ↔ data files, smoke test rendering) e a 38 inglobando anche `check-normativa-links.yml` (lun 08:00) come sezione 38 dedicata ai link critici con messaggi specifici. **Risultato: -2 workflow, 1 issue settimanale invece di 3, stessa copertura.**
 
 **Cosa fa:** scansiona il sito completo per rilevare automaticamente la stessa classe di errori che emerse dagli audit manuali di aprile 2026 — COI 14°→15°, cartello AR4 mancante, citazioni di 115/118 come numero da chiamare, duplicate target paths sulle 7 lingue, articoli `draft:true` dimenticati con data passata, link interni a slug typo, residui di refactoring (CCV-MB, manuale lombardo), `/index.html` reintrodotti dopo il fix Chrome cache. Apre **una sola issue settimanale** se trova deviazioni.
 
@@ -2578,14 +2567,15 @@ exclude: |
 35. **Coerenza dati istituzionali nelle 7 traduzioni** — pagine `content/{english,deutsch,espanol,francais,portugues,romana,esperanto}/numeri-utili/_index.md` devono contenere sede ("Sicilia"), CAP "00045", numero "112". Se uno manca = traduzione non aggiornata.
 36. **Coerenza `hugo.toml` ↔ `data/numeri_utili.yaml`** — il telefono di sede in `hugo.toml` deve essere presente nel record "locale" del yaml (alimenta la card Numeri Utili).
 37. **Smoke test rendering** — verifica che le 12 pagine critiche generate (`public/index.html`, `cosa-fare-adesso`, `numeri-utili`, `contatti`, `cartografia`, `assistente`, `comunicazioni`, `formazione`, `rischi-prevenzione`, `diventa-volontario`, `area-download`, `faq`) abbiano un `<h1>` (cattura rendering rotto / frontmatter sbagliato che Hugo non sempre segnala).
+38. **Link critici (normativa, PDF locali, Normattiva)** — sentinella veloce con messaggi specifici sugli 8 link che, se cadono, vanno individuati subito perché compaiono in più pagine: 2 portali ufficiali (Lazio Agenzia PC, DPC normativa nazionale), 4 PDF locali sul server Aruba (Piano Emergenza Comunale, Ordinanza AIB 2025, Piano AIB Lazio, Piano Triennale Lazio) gestiti manualmente in `/documenti/`, 2 link Normattiva (D.Lgs. 1/2018 Codice PC, L. 353/2000 incendi boschivi). Lychee farà comunque il crawl completo lun 10:00 ma con output generico; questa sezione apre l'issue settimanale dell'audit con il nome del documento rotto. Sostituisce il workflow `check-normativa-links.yml` precedente (lun 08:00).
 
-**Formato Issue:** report markdown con 37 sezioni numerate. `❌` = errore (da correggere prima del prossimo deploy), `⚠️` = warning (valutare se falso positivo). Label issue: `audit`, `qualità-testi`, `manutenzione`.
+**Formato Issue:** report markdown con 38 sezioni numerate. `❌` = errore (da correggere prima del prossimo deploy), `⚠️` = warning (valutare se falso positivo). Label issue: `audit`, `qualità-testi`, `manutenzione`.
 
 **Quando intervenire:** ogni volta che apre una Issue. Il workflow è tarato per essere conservativo (pochi falsi positivi). Se un warning ricorrente è un falso positivo legittimo (es. una citazione lunga, un articolo intenzionalmente con anno fuori range), aggiungi un'eccezione mirata al workflow così la segnalazione non si ripete.
 
 **Perché esiste:** gli audit manuali di aprile 2026 hanno trovato errori che convivevano da tempo nel sito senza che nessuno se ne accorgesse (COI 14° nel footer, AR4 404, `href="tel:+39 06 9362600"` con spazi che alcuni browser mobile non onoravano, duplicate target paths sulle 7 lingue, link interni a slug typo che il render-link hook nascondeva graceful, `draft:true` con data passata mai pubblicato). Questo workflow evita che errori analoghi si sedimentino di nuovo.
 
-### 10.10 — `check-links-sito.yml` — Verifica link sito completo
+### 10.9 — `check-links-sito.yml` — Verifica link sito completo
 
 **Trigger:** lunedì ore 10:00 UTC, esecuzione manuale.
 
@@ -2613,9 +2603,9 @@ exclude: |
 
 **Perché esiste:** catturare drift dei link esterni. Esempio reale: aprile 2026, la hub `/strumenti/` è stata pubblicata con il link ANAS `/it/le-strade/viabilita-italia` che in poche ore è tornato 404 (URL obsoleta). L'utente ha trovato il problema a mano; questo workflow lo avrebbe catturato al primo run settimanale.
 
-**Distinzione con `check-normativa-links.yml`:** quest'ultimo verifica link **specifici** (Normattiva, DPC, Lazio normativi, PDF piano emergenza) con pre-pattern, messaggi dedicati e dominio-specifica. Il check completo con lychee è il **catch-all**: tutto il resto del sito (hub strumenti, widget, card, contenuti degli articoli, link PDF nei documenti). Girano 2 ore di distanza per non sovraccaricare il runner.
+**Distinzione con `audit-sito.yml` sezione 38:** quest'ultima verifica gli **8 link critici** (Normattiva, DPC, Lazio normativi, PDF locali) con pre-pattern e messaggi dedicati alle 09:00 — sentinella veloce. Il check completo con lychee alle 10:00 è il **catch-all**: tutto il resto del sito (hub strumenti, widget, card, contenuti degli articoli, link PDF nei documenti). Girano 1 ora di distanza per non sovraccaricare il runner.
 
-### 10.11 — Disabilitare temporaneamente un workflow
+### 10.10 — Disabilitare temporaneamente un workflow
 
 Due modi:
 
@@ -2633,7 +2623,7 @@ Due modi:
 
 Preferisci sempre Modo B per tracciabilità, salvo esigenze di emergenza.
 
-### 10.13 — Leggere i log di un workflow
+### 10.11 — Leggere i log di un workflow
 
 1. Actions → workflow interessato → seleziona run specifica.
 2. Espandi il job e lo step che ha fallito.
@@ -2645,7 +2635,7 @@ Preferisci sempre Modo B per tracciabilità, salvo esigenze di emergenza.
 - `ftp: 550 ...` → permessi o path errato su Aruba; controlla secret.
 - `Hash mismatch` → stai aggiornando un file con conflitto; riesegui dopo pull.
 
-### 10.14 — Aggiungere un nuovo workflow
+### 10.12 — Aggiungere un nuovo workflow
 
 Regole:
 - Nome file descrittivo in kebab-case: `nome-azione.yml`.

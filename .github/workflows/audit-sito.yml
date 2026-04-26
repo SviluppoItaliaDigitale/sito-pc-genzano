@@ -1,6 +1,6 @@
 name: "🕵️ Audit settimanale sito"
 
-# Audit completo automatico (37 sezioni) di contenuti, codice, governance:
+# Audit completo automatico (38 sezioni) di contenuti, codice, governance:
 # - 1-15  contenuti pubblicati: COI, numeri emergenza, telefono, sede, CAP,
 #         placeholder, asset rotti, badge, date, allegati, frasi AGID,
 #         pagine draft, schede stampabili, modalità emergenza, dataRevisione,
@@ -13,10 +13,10 @@ name: "🕵️ Audit settimanale sito"
 #         coerente fra badge.html/CLAUDE/rule02/archetype, formato date,
 #         frontmatter completo, riferimenti incrociati, pagine obbligatorie,
 #         shortcode foto, script export, formato dataUltimaRevisione
-# - 33-37 audit aggiuntivo: mixed content (http://), image_alt accessibility,
+# - 33-38 audit aggiuntivo: mixed content (http://), image_alt accessibility,
 #         coerenza dati istituzionali nelle 7 traduzioni, divergenze
 #         hugo.toml ↔ data/numeri_utili.yaml, smoke test rendering H1
-#         delle pagine critiche
+#         delle pagine critiche, link critici normativa/PDF locali
 #
 # Nasce dall'audit manuale di aprile 2026 (COI 14°→15°, cartello AR4 404,
 # 115/118 come numero da chiamare, data widget meteo errata, placeholder
@@ -884,6 +884,57 @@ jobs:
             printf "%b" "$MISSING_H1" >> "$REPORT"
           else
             ok "Tutte le 12 pagine critiche hanno H1 nel rendering."
+          fi
+
+          # ----------------------------------------------------------------
+          section "38. Link critici (normativa, PDF locali, Normattiva)"
+          # Sentinella veloce con messaggi specifici sui link che, se
+          # cadono, vanno individuati subito perché compaiono in più
+          # pagine: portali ufficiali, PDF nostri locali, Normattiva.
+          # Lychee (check-links-sito.yml lun 10:00) farà comunque il
+          # crawl completo ma ha output generico; questa sezione apre
+          # subito l'issue settimanale con il nome del documento rotto.
+          # Storia merge: il 26 aprile 2026 il workflow
+          # check-normativa-links.yml (lun 08:00) è stato fuso qui.
+          CRITICAL_LINKS_FAILED=""
+          check_critical() {
+            local url="$1"
+            local label="$2"
+            local code
+            code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 15 \
+                   --user-agent "Mozilla/5.0 (compatible; PCGenzanoAuditBot/1.0)" "$url" 2>/dev/null)
+            if [ "$code" -lt 200 ] || [ "$code" -ge 400 ]; then
+              CRITICAL_LINKS_FAILED="${CRITICAL_LINKS_FAILED}- **$label** ($code): \`$url\`\n"
+            fi
+          }
+
+          # Portali normativi (citati in /area-download/, articoli normativa)
+          check_critical "https://protezionecivile.regione.lazio.it/agenzia/normative/regolamenti-regionali-dgr" \
+            "Normativa regionale Lazio (Agenzia PC Lazio)"
+          check_critical "https://www.protezionecivile.gov.it/it/dipartimento/amministrazione-trasparente/provvedimenti-normativi/" \
+            "Normativa nazionale (Dipartimento PC)"
+
+          # PDF locali sul server Aruba (gestiti manualmente in /documenti/, esclusi dal deploy FTP)
+          check_critical "https://www.protezionecivilegenzano.it/documenti/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf" \
+            "Piano di Emergenza Comunale"
+          check_critical "https://www.protezionecivilegenzano.it/documenti/normativa/Ordinanza_Sindacale_AIB_2025.pdf" \
+            "Ordinanza Sindacale AIB 2025"
+          check_critical "https://www.protezionecivilegenzano.it/documenti/normativa/Piano_AIB_Lazio.pdf" \
+            "Piano AIB Lazio"
+          check_critical "https://www.protezionecivilegenzano.it/documenti/normativa/Piano_Triennale_PC_Lazio.pdf" \
+            "Piano Triennale PC Lazio"
+
+          # Normattiva (citata in /normativa/ e in vari articoli)
+          check_critical "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018;1~art25!vig=" \
+            "D.Lgs. 1/2018 — Codice della Protezione Civile"
+          check_critical "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2000;353" \
+            "L. 353/2000 — Legge-quadro incendi boschivi"
+
+          if [ -n "$CRITICAL_LINKS_FAILED" ]; then
+            err "Link normativi/PDF critici non raggiungibili — verificare urgentemente:"
+            printf "%b" "$CRITICAL_LINKS_FAILED" >> "$REPORT"
+          else
+            ok "Tutti gli 8 link critici (normativa Lazio, DPC, PDF locali, Normattiva) raggiungibili."
           fi
 
           # ----------------------------------------------------------------

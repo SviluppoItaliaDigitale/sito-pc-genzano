@@ -2,7 +2,7 @@ name: "🔗 Verifica link sito completo"
 
 # Esegue un crawl completo del sito costruito e verifica TUTTI i link
 # (interni ed esterni) per catturare drift, 404, redirect rotti.
-# Complementa check-normativa-links.yml che verifica link normativi
+# Complementa audit-sito.yml sezione 38 che verifica link critici normativa
 # specifici con pre-pattern e messaggi dedicati. Qui invece usiamo
 # lychee come catch-all completo.
 #
