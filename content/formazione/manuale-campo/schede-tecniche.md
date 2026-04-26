@@ -218,4 +218,3 @@ Questa pagina è progettata per essere **stampata in bianco e nero** su A4 front
 - [Capitolo 3 — Funzioni tecniche](/formazione/manuale-campo/funzioni-tecniche/)
 - [Capitolo 4 — Funzioni di servizio](/formazione/manuale-campo/funzioni-servizio/)
 - [Capitolo 6 — Moduli e codici radio](/formazione/manuale-campo/moduli-radio/)
-- Manuale originale (protezione civile intercomunale lombarda, 2010)

@@ -213,6 +213,6 @@ La **solidarietà** è **universale**.
 
 - [Giornata Persone con Disabilità](/comunicazioni/2026-12-03-giornata-persone-disabilita/)
 - [Violenza sulle donne](/comunicazioni/2026-11-25-violenza-donne-numeri-emergenza/)
-- [Gruppo Comunale PC](/gruppo/)
+- [Gruppo Comunale PC](/chi-siamo/)
 
 In emergenza: **112**.

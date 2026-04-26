@@ -241,6 +241,6 @@ Non sappiamo **cosa** porterà il 2027. Sappiamo solo che saremo **pronti** per 
 
 - [Bilancio 2026](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/)
 - [Settimana tra feste](/comunicazioni/2026-12-27-settimana-tra-feste-riflessione/)
-- [Gruppo Comunale PC](/gruppo/)
+- [Gruppo Comunale PC](/chi-siamo/)
 
 In emergenza: **112**.

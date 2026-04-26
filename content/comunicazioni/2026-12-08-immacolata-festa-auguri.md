@@ -126,6 +126,6 @@ Continueremo a seguire la settimana con articoli informativi e di servizio.
 
 - [Vigilia Immacolata](/comunicazioni/2026-12-07-vigilia-immacolata-servizio-sicurezza/)
 - [Presidio PC ponte](/comunicazioni/2026-12-05-presidio-ponte-immacolata/)
-- [Gruppo Comunale PC](/gruppo/)
+- [Gruppo Comunale PC](/chi-siamo/)
 
 In emergenza sempre: **112**.

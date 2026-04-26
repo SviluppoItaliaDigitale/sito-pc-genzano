@@ -4,7 +4,6 @@ description: "Wesentliche Informationen auf Deutsch für Touristen und ausländi
 layout: "single"
 aliases:
   - /de/
-  - /de/index.html
 sitemap:
   priority: 0.6
   changefreq: yearly

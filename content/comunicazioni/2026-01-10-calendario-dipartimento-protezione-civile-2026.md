@@ -11,6 +11,7 @@ area: ""
 allegati:
   - titolo: "Calendario DPC 2026 (PDF sfogliabile)"
     url: "https://www.protezionecivile.gov.it/static/3a648059e712d45f14a8a4379cc110dc/calendario-dpc-2026-sfogliabile.pdf"
+    dimensione: "40 MB"
 draft: false
 ---
 

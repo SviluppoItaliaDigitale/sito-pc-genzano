@@ -178,7 +178,7 @@ Queste attività sono **urgenti** e richiedono squadre **reattive**.
 - Articolo: [Temporali estivi Castelli](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)
 - Articolo: [Allerte meteo codici colore](/comunicazioni/2026-04-05-come-si-legge-allerta-meteo-codici-colore/)
 - Articolo: [Rischio idrogeologico estivo](/comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge/)
-- Pagina: [Rischio meteo](/rischi-prevenzione/rischio-meteo/)
+- Pagina: [Temporali intensi](/rischi-prevenzione/temporali-intensi/)
 - [Protezione Civile — Temporali](https://www.protezionecivile.gov.it/it/rischi/rischio-meteo-idro)
 - [ARPA Lazio](https://www.arpalazio.it/)
 

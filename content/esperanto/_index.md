@@ -4,7 +4,6 @@ description: "Esencaj informoj en Esperanto pri civila protekto en Genzano di Ro
 layout: "single"
 aliases:
   - /eo/
-  - /eo/index.html
 sitemap:
   priority: 0.5
   changefreq: yearly
