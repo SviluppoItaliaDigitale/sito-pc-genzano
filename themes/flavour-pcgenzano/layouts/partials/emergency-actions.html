@@ -1,6 +1,9 @@
 {{/* Blocco azioni di emergenza — compare quando emergenza è attiva
-     Usato in: homepage (modalità emergenza), pagina "cosa-fare-adesso"
-     Mostra: cosa fare, numeri, link rapidi critici */}}
+     Usato in: homepage (modalità emergenza, controllata da data/emergenza.json)
+     Mostra: cosa fare, numeri, link rapidi critici
+     NB: la pagina /cosa-fare-adesso/ NON usa questo partial — ha
+     contenuto markdown statico e funziona indipendentemente dallo
+     stato di emergenza */}}
 {{ $emergenza := .Site.Data.emergenza }}
 {{ $numeri := .Site.Data.numeri_utili }}
 <section class="emergency-actions-section py-4" aria-labelledby="emergency-actions-heading">
