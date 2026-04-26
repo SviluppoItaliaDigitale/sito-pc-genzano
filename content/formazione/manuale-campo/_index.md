@@ -5,11 +5,11 @@ description: "Guida operativa per il volontario di protezione civile impegnato i
 
 Il **Manuale da Campo** raccoglie istruzioni pratiche, procedure e **schede tecniche** per i volontari del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** quando operano in un campo di accoglienza, in un'area di emergenza o a supporto di un centro operativo.
 
-Questa versione è stata preparata ispirandosi al **Manuale da Campo** di una protezione civile intercomunale lombarda (2010), nato dall'esperienza dell'emergenza Abruzzo 2009. Il testo originale è stato **completamente riscritto** per:
+Questo manuale è stato redatto per il **Gruppo Comunale Volontari di Genzano di Roma**, con:
 
-- aggiornare il **quadro normativo** al **Codice della Protezione Civile** (D.Lgs. 1/2018) e alla **Direttiva PCM 30 aprile 2021** sulla pianificazione
-- adattare i riferimenti al **territorio di Genzano di Roma** (Prefettura di Roma, Regione Lazio, Area Metropolitana Roma Capitale)
-- conservare le **schede tecniche** originali (check-list kit personale, area accoglienza, progettazione, informazioni di scouting), ancora oggi valide nell'impianto operativo
+- **quadro normativo** aggiornato al **Codice della Protezione Civile** (D.Lgs. 1/2018) e alla **Direttiva PCM 30 aprile 2021** sulla pianificazione
+- **riferimenti territoriali** al contesto di Genzano di Roma (Prefettura di Roma, Regione Lazio, Area Metropolitana Roma Capitale)
+- **schede tecniche operative** (check-list kit personale, area accoglienza, progettazione, informazioni di scouting) come strumenti pratici per il volontario in missione
 
 Il manuale non sostituisce la **formazione di base regionale** del volontario (art. 37 D.Lgs. 1/2018), né il **Piano Comunale di Protezione Civile** di Genzano (art. 12 D.Lgs. 1/2018). Serve come **supporto rapido sul campo** e come traccia per esercitazioni e addestramento.
 
@@ -43,7 +43,6 @@ Il manuale si fonda su cinque principi operativi, validi in qualsiasi emergenza:
 
 ## Fonti e riferimenti
 
-- **Manuale da Campo** — protezione civile intercomunale lombarda, 2010 (ispirazione e impianto originale)
 - **Codice della Protezione Civile** — D.Lgs. 2 gennaio 2018, n. 1: vedi [la nostra sintesi](/normativa/testo-unico-protezione-civile/)
 - **Direttiva PCM 30 aprile 2021** — Indirizzi per la predisposizione dei piani di protezione civile ai diversi livelli territoriali
 - [**Legge Regionale Lazio 26 febbraio 2014, n. 2**](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9264&sv=vigente) — Sistema integrato regionale di protezione civile
@@ -52,7 +51,7 @@ Il manuale si fonda su cinque principi operativi, validi in qualsiasi emergenza:
 
 ## Nota su Colonna Mobile Regionale
 
-Il manuale originale è nato in ambito **Regione Lombardia**, che disponeva della propria **Colonna Mobile Regionale**. La **Regione Lazio** dispone di un sistema analogo coordinato dall'**Agenzia Regionale di Protezione Civile**: i moduli standard (cucina, alloggio, sanità, TLC, servizi) sono sostanzialmente gli stessi su tutto il territorio nazionale, perché derivano dal **progetto Colonna Mobile Nazionale** del Dipartimento.
+La **Regione Lazio** dispone di una **Colonna Mobile Regionale** coordinata dall'**Agenzia Regionale di Protezione Civile**: i moduli standard (cucina, alloggio, sanità, TLC, servizi) sono sostanzialmente gli stessi su tutto il territorio nazionale, perché derivano dal **progetto Colonna Mobile Nazionale** del Dipartimento.
 
 Per il Gruppo Comunale di Genzano, la cornice è:
 - **prima linea** di intervento nelle emergenze di rilievo locale (Tipo A, art. 7 D.Lgs. 1/2018)
