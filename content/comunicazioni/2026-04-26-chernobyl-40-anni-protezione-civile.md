@@ -35,6 +35,8 @@ Le **conseguenze documentate** in Italia furono soprattutto:
 - divieti temporanei di consumo di **vegetali a foglia larga, latte fresco e selvaggina** in alcune regioni;
 - **confusione comunicativa** fra ministeri, regioni, comunicazioni istituzionali e stampa.
 
+Un dettaglio che molti adulti di oggi ricordano: per diversi mesi, **gli alimenti già scaduti — purché prodotti e confezionati prima del 26 aprile 1986 — venivano preferiti** a quelli freschi del periodo successivo. Latte UHT con la data di consumo già passata, conserve, surgelati, prodotti a lunga conservazione: quello che oggi butteremmo senza pensarci, allora era considerato il consumo più sicuro. Era un comportamento dettato più dalla paura che dalla scienza, non sempre corretto dal punto di vista igienico-alimentare, ma racconta bene quanto fosse difficile — in assenza di un sistema unico di rilevamento e di una voce istituzionale chiara — distinguere il rischio reale da quello percepito.
+
 Quel disordine non si è ripetuto. La **legge 24 febbraio 1992, n. 225** — la legge madre del Servizio Nazionale della Protezione Civile — fu approvata anche grazie alla lezione di Chernobyl, prima ancora che a quella di terremoti come Irpinia o Friuli. La protezione civile italiana, per come la conosciamo oggi, esiste anche per merito di quella tragedia.
 
 ## Cosa abbiamo costruito da allora
