@@ -145,8 +145,8 @@ Per richieste: attraverso i contatti del Gruppo.
 
 ## Per approfondire
 
-- [Piano di emergenza familiare](/comunicazioni/2026-10-10-piano-emergenza-famiglia/)
-- [Incendi domestici](/comunicazioni/2026-09-23-incendi-domestici-prevenzione/)
-- [Prove evacuazione scuole](/comunicazioni/2026-09-06-prove-evacuazione-scuole/)
+- [Piano di emergenza familiare](/comunicazioni/2026-10-10-piano-famiglia-emergenza-come-fare/)
+- [Incendi domestici](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/)
+- [Prove evacuazione scuole](/comunicazioni/2026-09-06-rientro-scuola-prove-evacuazione/)
 
 In emergenza: **112**.

@@ -114,7 +114,7 @@ I dati di queste stazioni sono rappresentativi anche del territorio genzanese.
 ## Per approfondire
 
 - Articolo: [Solstizio d'estate](/comunicazioni/2026-06-20-solstizio-estate-massima-attenzione-incendi/)
-- Articolo: [Come si legge un'allerta meteo](/comunicazioni/2026-04-05-come-si-legge-allerta-meteo-codici-colore/)
+- Articolo: [Come si legge un'allerta meteo](/allerte-meteo/)
 - [Aeronautica Militare — Meteo](https://www.meteoam.it/)
 - [ISPRA — Clima](https://www.isprambiente.gov.it/)
 - [Copernicus Climate Change Service](https://climate.copernicus.eu/)

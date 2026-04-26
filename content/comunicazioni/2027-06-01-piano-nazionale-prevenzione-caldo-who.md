@@ -10,7 +10,7 @@ image_alt: "Termometro al sole davanti a una città, rappresentazione simbolica 
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
-draft: true
+draft: false
 ---
 
 Ogni estate, in Italia, migliaia di persone sono colpite da malori legati al caldo. Le **ondate di calore** sono, dal punto di vista sanitario, **il rischio meteorologico con l'impatto più alto** sulla mortalità. Ma, diversamente da un terremoto, i loro effetti sono **largamente prevedibili** — e quindi prevenibili.

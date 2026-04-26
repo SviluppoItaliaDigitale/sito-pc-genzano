@@ -123,6 +123,6 @@ Molti concetti del Testo Unico possono essere **tradotti** in casa:
 
 - [INAIL](https://www.inail.it/)
 - [Primo soccorso in famiglia](/comunicazioni/2026-10-14-primo-soccorso-base-famiglie/)
-- [Incendi domestici](/comunicazioni/2026-09-23-incendi-domestici-prevenzione/)
+- [Incendi domestici](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/)
 
 In emergenza: **112**.

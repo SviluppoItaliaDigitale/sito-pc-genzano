@@ -100,8 +100,8 @@ Formare i cittadini **dall'infanzia** significa costruire una **cultura del risc
 
 ## Per approfondire
 
-- [Piano di emergenza familiare](/comunicazioni/2026-10-10-piano-emergenza-famiglia/)
-- [Prove di evacuazione nelle scuole](/comunicazioni/2026-09-06-prove-evacuazione-scuole/)
-- [Io Non Rischio in piazza](/comunicazioni/2026-10-11-io-non-rischio-piazza-annuncio/)
+- [Piano di emergenza familiare](/comunicazioni/2026-10-10-piano-famiglia-emergenza-come-fare/)
+- [Prove di evacuazione nelle scuole](/comunicazioni/2026-09-06-rientro-scuola-prove-evacuazione/)
+- [Io Non Rischio in piazza](/comunicazioni/2026-10-11-io-non-rischio-giornata-piazza/)
 
 In emergenza: **112**.

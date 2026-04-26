@@ -248,7 +248,7 @@ Il **fattore umano** è centrale nella gestione.
 ## Per approfondire
 
 - Articolo: [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
-- Articolo: [Piano Comunale Protezione Civile](/comunicazioni/2026-05-20-piano-comunale-protezione-civile-genzano/)
+- Articolo: [Piano Comunale Protezione Civile](/piano-emergenza/)
 - Articolo: [Protezione Civile sconfinamenti provinciali](/comunicazioni/2026-07-07-protezione-civile-sconfinamenti-provinciali/)
 - [DPC — Codice Protezione Civile](https://www.protezionecivile.gov.it/)
 - [Comune di Genzano](https://www.comune.genzanodiroma.roma.it/)

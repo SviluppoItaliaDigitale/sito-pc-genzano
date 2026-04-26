@@ -91,7 +91,7 @@ Le **buone pratiche** per l'inverno:
 ## Per approfondire
 
 - [Preparazione kit 72 ore](/comunicazioni/2026-09-02-kit-emergenza-famiglia-72-ore/)
-- [Monossido di carbonio](/comunicazioni/2026-10-02-monossido-carbonio-prevenzione/)
-- [Chiamare correttamente il 112](/comunicazioni/2026-10-08-chiamare-112-correttamente/)
+- [Monossido di carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
+- [Chiamare correttamente il 112](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/)
 
 In emergenza: **112**.

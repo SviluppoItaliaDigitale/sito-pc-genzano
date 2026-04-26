@@ -10,7 +10,7 @@ image_alt: "Bambino piccolo all'ombra che beve acqua, con cappellino e vestiti c
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
-draft: true
+draft: false
 ---
 
 I **bambini piccoli** e i **neonati** sono tra le categorie più vulnerabili al caldo estivo, ma non solo: in estate aumentano anche i rischi legati all'**esposizione ai raggi solari (UV)**, all'**ozono** nelle aree urbane, agli **incendi boschivi** e alla **contaminazione degli alimenti**. Il loro sistema di termoregolazione non è ancora maturo, la pelle è più delicata, l'apparato respiratorio è in sviluppo.

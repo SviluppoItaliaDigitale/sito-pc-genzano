@@ -96,7 +96,7 @@ Se avvistate fumata o fuoco:
 ## Per approfondire
 
 - [Bilancio campagna AIB 2026](/comunicazioni/2026-08-30-bilancio-campagna-aib-2026/)
-- [Chiusura campagna AIB](/comunicazioni/2026-09-28-chiusura-campagna-aib-2026/)
-- [Chiamare il 112](/comunicazioni/2026-10-08-chiamare-112-correttamente/)
+- [Chiusura campagna AIB](/comunicazioni/2026-09-28-chiusura-stagione-aib-lazio/)
+- [Chiamare il 112](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/)
 
 In emergenza: **112**.

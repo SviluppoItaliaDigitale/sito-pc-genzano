@@ -112,7 +112,7 @@ A chi si impegna nel servizio pubblico per prevenire future tragedie: **grazie**
 ## Per approfondire
 
 - [Centro Italia 2016 — memoria](/comunicazioni/2026-10-28-centro-italia-2016-memoria/)
-- [Vajont 1963](/comunicazioni/2026-10-09-vajont-1963-memoria-lezione/)
+- [Vajont 1963](/comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/)
 - [Ognissanti — viabilità](/comunicazioni/2026-11-01-ognissanti-cimiteri-viabilita/)
 
 In emergenza: **112**.

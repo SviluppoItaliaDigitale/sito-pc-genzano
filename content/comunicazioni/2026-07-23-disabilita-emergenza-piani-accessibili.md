@@ -233,7 +233,7 @@ L'Italia sta **progressivamente** implementando.
 
 - Articolo: [Anziani e caldo](/comunicazioni/2026-07-14-anziani-caldo-come-aiutare-vicini/)
 - Articolo: [Rete di vicinato](/comunicazioni/2026-06-28-rete-vicinato-attivo-resilienza-quartiere/)
-- Articolo: [Piano famiglia di emergenza](/comunicazioni/2026-06-26-piano-famiglia-emergenza-preparazione-casalinga/)
+- Articolo: [Piano famiglia di emergenza](/comunicazioni/2026-06-26-piano-famiglia-estate-emergenze/)
 - [Osservatorio Nazionale Disabilità](https://www.disabilitanelmondo.it/)
 - [Convenzione ONU Disabilità](https://www.un.org/)
 - [112 Sordi — istruzioni](https://www.112.gov.it/)

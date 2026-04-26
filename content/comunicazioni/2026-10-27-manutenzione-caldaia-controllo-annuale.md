@@ -117,8 +117,8 @@ Per chi sta per accendere:
 
 ## Per approfondire
 
-- [Monossido di carbonio](/comunicazioni/2026-10-02-monossido-carbonio-prevenzione/)
-- [Incendi domestici](/comunicazioni/2026-09-23-incendi-domestici-prevenzione/)
+- [Monossido di carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
+- [Incendi domestici](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/)
 - [Regione Lazio — CRITER](https://www.regione.lazio.it/)
 
 In emergenza: **112**.

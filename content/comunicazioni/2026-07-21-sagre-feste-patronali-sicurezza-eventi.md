@@ -221,7 +221,7 @@ Molti volontari sono passati da sagre a grandi attivazioni nazionali.
 
 ## Per approfondire
 
-- Articolo: [Infiorata di Genzano 2026](/comunicazioni/2026-06-08-infiorata-genzano-pc-presente/)
+- Articolo: [Infiorata di Genzano 2026](/comunicazioni/2026-06-23-assistenza-sagre-grandi-eventi-locali/)
 - Articolo: [Esercitazioni PC a cosa servono](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/)
 - Articolo: [Chi siamo](/chi-siamo/)
 - [Ministero Interno — Circolare Gabrielli](https://www.interno.gov.it/)

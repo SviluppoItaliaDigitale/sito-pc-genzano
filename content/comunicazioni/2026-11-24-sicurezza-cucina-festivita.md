@@ -192,8 +192,8 @@ Nelle due feste storiche, in aggiunta:
 
 ## Per approfondire
 
-- [Incendi domestici](/comunicazioni/2026-09-23-incendi-domestici-prevenzione/)
+- [Incendi domestici](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/)
 - [Primo soccorso in famiglia](/comunicazioni/2026-10-14-primo-soccorso-base-famiglie/)
-- [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-prevenzione/)
+- [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
 
 In emergenza: **112**. Centro Antiveleni: **800 883 300**.

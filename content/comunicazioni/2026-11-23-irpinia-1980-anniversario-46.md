@@ -164,7 +164,7 @@ La **memoria** non è nostalgia: è **strumento di prevenzione**.
 
 ## Per approfondire
 
-- [Sismicità di Genzano](/comunicazioni/2026-10-06-sismicita-genzano-zona-2b/)
+- [Sismicità di Genzano](/comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/)
 - [Centro Italia 2016](/comunicazioni/2026-10-28-centro-italia-2016-memoria/)
 - [INGV](https://www.ingv.it/)
 

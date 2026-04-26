@@ -107,8 +107,8 @@ Ricordare Amatrice, Norcia, Arquata non è retorica. È un investimento di **cul
 
 ## Per approfondire
 
-- [Sismicità di Genzano](/comunicazioni/2026-10-06-sismicita-genzano-zona-2b/)
-- [Vajont 1963](/comunicazioni/2026-10-09-vajont-1963-memoria-lezione/)
+- [Sismicità di Genzano](/comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/)
+- [Vajont 1963](/comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/)
 - [INGV — Centro Italia 2016](https://www.ingv.it/)
 
 In emergenza: **112**.

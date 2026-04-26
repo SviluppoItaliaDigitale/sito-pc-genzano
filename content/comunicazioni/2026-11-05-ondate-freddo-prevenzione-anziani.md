@@ -144,7 +144,7 @@ Se vedete persona senza dimora in difficoltà, **chiamare il 112**: non è distu
 ## Per approfondire
 
 - [Manutenzione caldaia](/comunicazioni/2026-10-27-manutenzione-caldaia-controllo-annuale/)
-- [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-prevenzione/)
+- [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
 - [Preparazione inverno](/comunicazioni/2026-10-17-preparazione-inverno-mezzi-antineve/)
 
 In emergenza: **112**.

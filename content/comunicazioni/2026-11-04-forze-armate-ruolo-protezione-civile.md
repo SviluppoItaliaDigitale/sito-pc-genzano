@@ -114,6 +114,6 @@ Oggi il pensiero va:
 
 - [Ministero della Difesa](https://www.difesa.it/)
 - [Dipartimento PC — Forze Armate](https://www.protezionecivile.gov.it/)
-- [Componenti del SNPC](/comunicazioni/2026-09-18-convenzioni-istituzionali/)
+- [Componenti del SNPC](/comunicazioni/2026-09-18-convenzioni-associazioni-cooperazione-pc/)
 
 In emergenza: **112**.

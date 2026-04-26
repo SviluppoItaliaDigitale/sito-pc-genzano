@@ -12,7 +12,7 @@ scadenza: ""
 area: "Italia · territorio nazionale"
 allegati: []
 
-draft: true
+draft: false
 ---
 
 In Italia operano alcune **migliaia di unità cinofile** specializzate in soccorso, suddivise tra Vigili del Fuoco, Croce Rossa Italiana, Soccorso Alpino e numerose associazioni di volontariato di Protezione Civile. Sono le squadre dei "**cani da ricerca**": un binomio inseparabile fatto da un **conduttore** umano e un **cane** addestrato, che insieme cercano persone disperse in scenari diversi e spesso estremi.

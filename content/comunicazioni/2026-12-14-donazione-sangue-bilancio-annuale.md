@@ -187,7 +187,7 @@ Se hai amici o familiari idonei che non donano, **parlane** con loro. Una nuova 
 ## Per approfondire
 
 - [AVIS Italia](https://www.avis.it/)
-- [Diventare volontari PC](/comunicazioni/2026-09-09-diventare-volontario-protezione-civile/)
+- [Diventare volontari PC](/diventa-volontario/)
 - [CRI e BLSD](/comunicazioni/2026-10-14-primo-soccorso-base-famiglie/)
 
 In emergenza: **112**.

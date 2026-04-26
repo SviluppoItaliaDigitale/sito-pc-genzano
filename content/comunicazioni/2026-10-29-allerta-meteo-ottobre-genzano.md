@@ -108,7 +108,7 @@ Non è il caso di allarmarsi, ma **nemmeno** di ignorare. L'informazione serve p
 ## Per approfondire
 
 - [Differenza allerta vs emergenza](/comunicazioni/2026-09-09-differenza-allerta-emergenza-linguaggio/)
-- [Temporali — autoprotezione](/comunicazioni/2026-09-03-temporali-autoprotezione/)
+- [Temporali — autoprotezione](/comunicazioni/2026-09-03-temporali-settembre-prevenzione/)
 - [Centro Funzionale Regione Lazio](https://www.regione.lazio.it/)
 
 In emergenza: **112**.

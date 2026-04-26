@@ -119,7 +119,7 @@ Contattaci per informazioni.
 ## Per approfondire
 
 - [Avvio corso base](/comunicazioni/2026-10-23-avvio-corso-base-prima-lezione/)
-- [Diventare volontari](/comunicazioni/2026-09-09-diventare-volontario-protezione-civile/)
-- [Formazione continua](/comunicazioni/2026-09-30-formazione-continua-volontari/)
+- [Diventare volontari](/diventa-volontario/)
+- [Formazione continua](/formazione/)
 
 In emergenza: **112**.

@@ -160,7 +160,7 @@ Queste attività richiedono **formazione specifica** e DPI adeguati.
 
 - Articolo: [Rischio idrogeologico estivo](/comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge/)
 - Articolo: [Temporali estivi Castelli](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)
-- Articolo: [Come si legge un'allerta meteo](/comunicazioni/2026-04-05-come-si-legge-allerta-meteo-codici-colore/)
+- Articolo: [Come si legge un'allerta meteo](/allerte-meteo/)
 - Pagina: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
 - [DPC — Rischio idrogeologico](https://www.protezionecivile.gov.it/it/rischi/rischio-idrogeologico)
 - [ISPRA — Alluvioni](https://www.isprambiente.gov.it/)
