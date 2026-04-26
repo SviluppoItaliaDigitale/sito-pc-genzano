@@ -1246,6 +1246,80 @@ wrapper una tipografia istituzionale curata che non influisce su homepage, liste
 
 ---
 
+### 3.16 — Pittogrammi standardizzati ISO 7010 e ARASAAC
+
+**A cosa servono.** I pittogrammi standardizzati aiutano i contenuti del sito a essere comprensibili anche da:
+- **Bambini** che non hanno ancora pieno controllo della lettura.
+- **Persone straniere** che non parlano bene l'italiano.
+- **Persone con disabilità cognitive** o difficoltà di lettura.
+- **Anziani** con calo della vista o della capacità di concentrazione.
+
+Sono **standard internazionali**: la stessa icona si trova nei luoghi pubblici, sulle uscite di emergenza, sulle attrezzature antincendio. Vederli sul sito e nella realtà rinforza l'apprendimento del cittadino.
+
+**Due librerie disponibili:**
+
+| Libreria | Quando usarla | Licenza | Cartella |
+|---|---|---|---|
+| **ISO 7010** | Sicurezza, vie di fuga, divieti, obblighi, antincendio. Per articoli "rischio + comportamento". | PD-self / CC0 | `static/pittogrammi/iso7010/` |
+| **ARASAAC** | Comunicazione AAC (Aumentativa Alternativa). Per la pagina `/facile-da-leggere/` e per chi ha disabilità cognitive. | CC BY-NC-SA 4.0 (attribuzione obbligatoria) | `static/pittogrammi/arasaac/` |
+
+**Come si inserisce un pittogramma.** Usa lo shortcode `{{</* pittogramma */>}}` in qualsiasi file Markdown:
+
+```markdown
+{{</* pittogramma codice="W001" alt="Attenzione: pericolo generale" */>}}
+
+{{</* pittogramma codice="E002" alt="Uscita di emergenza" label="Uscita →" size="96" */>}}
+
+{{</* pittogramma codice="2453" set="arasaac" alt="Bambino che corre via" */>}}
+```
+
+**Parametri:**
+- `codice` — obbligatorio. Codice ISO 7010 (W001, E002, F001, M001, P001, ecc.) o ID ARASAAC.
+- `alt` — testo alternativo per screen reader (sempre obbligatorio).
+- `label` — opzionale, etichetta visibile sotto il pittogramma.
+- `size` — opzionale, dimensione lato in pixel (default 64).
+- `set` — opzionale, "iso7010" (default) o "arasaac".
+
+**Per più pittogrammi affiancati**, usa la galleria:
+
+```markdown
+<div class="pittogrammi-galleria">
+
+{{</* pittogramma codice="W001" alt="..." label="Pericolo" size="80" */>}}
+{{</* pittogramma codice="E002" alt="..." label="Uscita" size="80" */>}}
+{{</* pittogramma codice="E004" alt="..." label="Telefono" size="80" */>}}
+
+</div>
+```
+
+**Regole d'uso (linee editoriali):**
+
+1. **Mai sostituire il testo**: il pittogramma è un *complemento*, non un sostituto. L'`alt` deve essere sempre testuale ed equivalente.
+2. **Massimo 3-4 pittogrammi per pagina**: evitare il sovraccarico visivo.
+3. **Coerenza tematica**: usa pittogrammi che corrispondono al contenuto vicino, non come decorazione.
+4. **Toolbar di accessibilità**: i pittogrammi sono **funzionali** e restano visibili anche con "Nascondi immagini" attivo (è gestito dal CSS dedicato).
+5. **Stampa**: si stampano correttamente anche in B/N (i pittogrammi ISO 7010 usano contrasto interno netto).
+
+**Catalogo dei pittogrammi disponibili:** vedi la pagina `/pittogrammi/` (visibile sul sito), che elenca tutti gli SVG e PNG attualmente disponibili nella libreria, con anteprima.
+
+**Per scaricare nuovi pittogrammi:**
+
+```bash
+# ISO 7010 da Wikimedia Commons (PD)
+bash scripts/scarica-pittogrammi-iso7010.sh
+
+# ARASAAC AAC da arasaac.org (CC BY-NC-SA, attribuzione obbligatoria)
+bash scripts/scarica-pittogrammi-arasaac.sh
+```
+
+> **Nota tecnica.** Gli script vanno eseguiti sulla **macchina locale**: la sandbox di Claude Code blocca i domini esterni come Wikimedia Commons e arasaac.org. Una volta scaricati i file, lo shortcode li trova automaticamente.
+
+**Attribuzione ARASAAC** (obbligatoria su ogni pagina che usa pittogrammi ARASAAC):
+
+> Pittogrammi: Sergio Palao — ARASAAC ([arasaac.org](https://arasaac.org)) — CC BY-NC-SA — Government of Aragón (Spagna).
+
+---
+
 ## Parte 4 — Scrivere una pagina (diverso da articolo)
 
 Una **pagina** è un contenuto permanente (es. "Chi siamo", "Piano di Emergenza", "Numeri

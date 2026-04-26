@@ -56,6 +56,14 @@ Il rischio di un incidente nucleare in Europa esiste ancora. Le centrali in funz
 
 In caso di **emergenza radiologica reale**, il comportamento corretto è semplice e si riassume in **tre azioni**:
 
+<div class="pittogrammi-galleria">
+
+{{< pittogramma codice="M001" alt="Obbligo: comportamento da seguire" label="1. Restare al chiuso" size="80" >}}
+{{< pittogramma codice="W026" alt="Pericolo radiazioni" label="2. Ascoltare i canali ufficiali" size="80" >}}
+{{< pittogramma codice="E003" alt="Pronto soccorso e iodoprofilassi" label="3. Iodoprofilassi solo se attivata" size="80" >}}
+
+</div>
+
 1. **Restare al chiuso**, in casa o nell'edificio in cui ci si trova. Chiudere porte e finestre, spegnere ventilazione e condizionatori. Le pareti riducono in modo significativo l'esposizione alle radiazioni esterne.
 2. **Ascoltare i canali ufficiali**: Dipartimento di Protezione Civile, Prefettura, Comune. In futuro anche **IT-alert**, il sistema di allertamento pubblico nazionale, sarà uno dei canali primari.
 3. **Seguire le istruzioni di iodoprofilassi**, se attivata dalle autorità sanitarie. Lo iodio stabile (in compresse) **non è un farmaco da prendere di propria iniziativa**: si assume solo se e quando le autorità lo dispongono, e nelle dosi indicate, perché ha controindicazioni.

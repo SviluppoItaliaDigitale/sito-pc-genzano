@@ -62,6 +62,24 @@ Bootstrap Italia è conforme a WCAG 2.1 AA. Usa i componenti nativi senza altera
 Non sovrascrivere CSS che gestiscono focus, contrasto o visibilità per screen reader.
 Segui i pattern ufficiali del design system .italia per card, hero, alert, accordion, form.
 
+## Pittogrammi standardizzati ISO 7010 e ARASAAC
+
+Il sito ha una **libreria di pittogrammi standardizzati** disponibile via shortcode `{{< pittogramma >}}` per affiancare i testi e renderli comprensibili anche a bambini, persone straniere, persone con disabilità cognitive, anziani.
+
+**Due librerie:**
+- **ISO 7010** — pittogrammi internazionali di sicurezza (PD/CC0). In `static/pittogrammi/iso7010/`. Codici W (warning), P (prohibition), M (mandatory), E (escape/safe condition), F (fire).
+- **ARASAAC** — pittogrammi AAC per disabilità cognitive (CC BY-NC-SA 4.0, attribuzione obbligatoria). In `static/pittogrammi/arasaac/`. Si usano principalmente nella pagina `/facile-da-leggere/`.
+
+**Catalogo pubblico:** `/pittogrammi/`. **Download script:** `scripts/scarica-pittogrammi-iso7010.sh` e `scripts/scarica-pittogrammi-arasaac.sh` (esecuzione locale).
+
+**Regole operative:**
+- Il pittogramma **non sostituisce mai il testo**: è un complemento. L'attributo `alt` deve sempre essere testuale e equivalente (WCAG 1.1.1).
+- I pittogrammi sono marcati **funzionali**, non decorativi: restano visibili anche con la preferenza "Nascondi immagini" del toolbar di accessibilità.
+- Massimo 3-4 pittogrammi per pagina (evitare sovraccarico visivo).
+- Per ARASAAC è obbligatoria l'attribuzione su ogni pagina che li usa.
+
+Documentazione completa: `MANUALE-SITO.md` Parte 3.16.
+
 ## Strumenti di Accessibilità (toolbar utente)
 
 Il sito ha un **toolbar di accessibilità** nativo, presente su tutte le pagine come bottone rotondo blu (FAB) in basso a sinistra. Apre un dialog con preferenze di lettura: dimensione testo (4 livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande. Le preferenze sono salvate in `localStorage` e applicate come classi `html.a11y-*`.
