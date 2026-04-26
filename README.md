@@ -150,6 +150,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `check-allerta.yml` | Orario (min 12) | Verifica stato allerta meteo Regione Lazio |
 | `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Pubblica articoli programmati |
 | `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO |
+| `smoke-test-post-deploy.yml` | Post-deploy | Smoke test live: status HTTP, marker JS, header sicurezza |
 | `aggiorna-manuale.yml` | Lunedì 06:00 UTC | Hash fonti AGID/Designers Italia → issue se cambiano |
 | `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Aggiornamenti Bootstrap Italia |
 | `check-normativa-links.yml` | Lunedì 08:00 UTC | Raggiungibilità link normativi (Lazio, DPC, Normattiva) |
