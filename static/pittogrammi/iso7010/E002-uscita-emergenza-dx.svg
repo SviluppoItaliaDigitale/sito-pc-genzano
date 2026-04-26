@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Uscita di emergenza a destra">
-  <title>ISO 7010 E002 — Uscita di emergenza (destra)</title>
-  <rect x="4" y="4" width="92" height="92" rx="4" fill="#009E60"/>
-  <path d="M72 50 L54 36 L54 44 L38 44 L38 56 L54 56 L54 64 Z" fill="#FFFFFF"/>
-  <path d="M30 16 L12 16 L12 84 L30 84 Z" fill="none" stroke="#FFFFFF" stroke-width="3"/>
-  <circle cx="45" cy="22" r="6" fill="#FFFFFF"/>
-  <path d="M38 32 L52 32 L50 56 L46 56 L46 76 L42 76 L40 56 L38 32 Z" fill="#FFFFFF"/>
-</svg>

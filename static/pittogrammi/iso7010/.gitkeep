@@ -1,0 +1,16 @@
+# Cartella per pittogrammi ISO 7010 ufficiali
+
+Questa cartella è intenzionalmente vuota nel repository.
+
+I pittogrammi ISO 7010 vanno scaricati dalla **macchina locale** lanciando:
+
+    bash scripts/scarica-pittogrammi-iso7010.sh
+
+Lo script scarica gli SVG ufficiali da Wikimedia Commons (PD/CC0) garantendo
+fedeltà grafica alla norma ISO 7010. I file scaricati restano in questa
+cartella e vanno commitati.
+
+NON inserire pittogrammi disegnati a mano: solo gli SVG ufficiali Wikimedia
+hanno le geometrie e le proporzioni esatte richieste dalla norma.
+
+Documentazione completa: MANUALE-SITO.md Parte 3.16.
