@@ -265,4 +265,4 @@ Ogni volontario AIB del Gruppo passa attraverso corsi di formazione regionali, e
 - [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/) — i mezzi AIB nel tempo
 - [Diventa Volontario](/diventa-volontario/) — come entrare nel Gruppo
 
-*Fonti: procedure operative interne del Gruppo Comunale, Manuale AIB della Regione Lazio, linee guida del Dipartimento della Protezione Civile sul rischio incendi boschivi.*
+*Fonti: procedure operative interne del Gruppo Comunale, [Piano AIB della Regione Lazio](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_AIB_Lazio.pdf) (PDF, dalla nostra Area Download), [pagina ufficiale del Dipartimento della Protezione Civile sul rischio incendi boschivi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/).*
