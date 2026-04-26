@@ -1,0 +1,463 @@
+/* ============================================================
+   STRUMENTI DI ACCESSIBILITÀ — Toolbar utente
+   FAB in basso a sinistra + dialog modale con preferenze.
+   Le classi `.a11y-*-on-html` vengono applicate da JS su <html>
+   per attivare le varie preferenze di lettura.
+   ============================================================ */
+
+/* ── FAB (Floating Action Button) ── */
+.a11y-fab {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--pc-primary, #003366);
+  color: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  cursor: pointer;
+  z-index: 1040;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.a11y-fab:hover,
+.a11y-fab:focus-visible {
+  background: var(--pc-primary-dark, #00244d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+.a11y-fab:focus-visible {
+  outline: 3px solid #ff6600;
+  outline-offset: 3px;
+}
+
+/* Su mobile riduco un po' e abbasso da terra */
+@media (max-width: 575.98px) {
+  .a11y-fab {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+/* ── Backdrop ── */
+.a11y-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1050;
+  animation: a11yFade 0.2s ease;
+}
+@keyframes a11yFade { from { opacity: 0; } to { opacity: 1; } }
+
+/* ── Dialog ── */
+.a11y-dialog {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 90vh;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.25);
+  z-index: 1060;
+  display: flex;
+  flex-direction: column;
+  animation: a11ySlideUp 0.25s ease;
+  color: #1a1a1a;
+}
+@keyframes a11ySlideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+
+@media (min-width: 576px) {
+  .a11y-dialog {
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: auto;
+    max-width: 460px;
+    border-radius: 16px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+  }
+}
+
+/* ── Header del dialog ── */
+.a11y-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, var(--pc-primary, #003366), var(--pc-primary-dark, #00244d));
+  color: #fff;
+  border-radius: 16px 16px 0 0;
+  flex-shrink: 0;
+}
+.a11y-dialog-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.a11y-close {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.a11y-close:hover { background: rgba(255, 255, 255, 0.28); }
+.a11y-close:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+/* ── Body scrollable ── */
+.a11y-dialog-body {
+  padding: 1rem 1.25rem 0.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.a11y-intro {
+  font-size: 0.88rem;
+  color: #555;
+  background: #f4f7fb;
+  border-left: 3px solid var(--pc-primary, #003366);
+  padding: 0.6rem 0.85rem;
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+/* ── Sezione (fieldset) ── */
+.a11y-section {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+.a11y-section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #555;
+  padding: 0;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Controllo con label + segmented buttons ── */
+.a11y-control {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.6rem;
+}
+.a11y-control-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.55rem;
+}
+.a11y-segments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 4px;
+  background: #e9ecef;
+  border-radius: 8px;
+  padding: 4px;
+}
+.a11y-seg {
+  background: transparent;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  min-height: 38px;
+}
+.a11y-seg:hover { background: #fff; }
+.a11y-seg:focus-visible { outline: 2px solid var(--pc-primary, #003366); outline-offset: 1px; }
+.a11y-seg[aria-pressed="true"] {
+  background: var(--pc-primary, #003366);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Toggle a riga intera ── */
+.a11y-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 0.9rem;
+  background: #f8f9fa;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.15s, border-color 0.15s;
+  text-align: left;
+}
+.a11y-toggle:hover { background: #eef2f7; }
+.a11y-toggle:focus-visible { outline: 3px solid #ff6600; outline-offset: 2px; }
+.a11y-toggle .a11y-toggle-text { flex: 1; }
+.a11y-toggle .a11y-toggle-state {
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: #e9ecef;
+  color: #6c757d;
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  letter-spacing: 0.04em;
+}
+.a11y-toggle[aria-pressed="true"] {
+  background: #e8f5e9;
+  border-color: #2e7d32;
+  color: #1b5e20;
+}
+.a11y-toggle[aria-pressed="true"] .a11y-toggle-state {
+  background: #2e7d32;
+  color: #fff;
+}
+
+/* ── Link alla pagina /accessibilita/ ── */
+.a11y-link-page {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  background: #fff;
+  border: 2px solid var(--pc-primary, #003366);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--pc-primary, #003366);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-top: 0.5rem;
+  transition: background 0.15s;
+}
+.a11y-link-page:hover { background: #e8f0fe; color: var(--pc-primary, #003366); }
+.a11y-link-page:focus-visible { outline: 3px solid #ff6600; outline-offset: 2px; }
+
+/* ── Status (annunci aria-live) ── */
+.a11y-status {
+  font-size: 0.85rem;
+  color: #2e7d32;
+  min-height: 1.2em;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+/* ── Footer dialog ── */
+.a11y-dialog-footer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  border-radius: 0 0 16px 16px;
+  flex-shrink: 0;
+}
+@media (max-width: 575.98px) {
+  .a11y-dialog-footer { border-radius: 0; }
+}
+.a11y-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+.a11y-btn:focus-visible { outline: 3px solid #ff6600; outline-offset: 2px; }
+.a11y-btn-primary { background: var(--pc-primary, #003366); color: #fff; }
+.a11y-btn-primary:hover { background: var(--pc-primary-dark, #00244d); }
+.a11y-btn-secondary { background: #fff; color: var(--pc-primary, #003366); border-color: var(--pc-primary, #003366); }
+.a11y-btn-secondary:hover { background: #f4f7fb; }
+
+/* ── Stampa: nascondi tutto ── */
+@media print {
+  .a11y-fab, .a11y-backdrop, .a11y-dialog { display: none !important; }
+}
+
+/* ============================================================
+   PREFERENZE APPLICATE A <html>
+   Le classi sotto sono attivate da JS quando l'utente sceglie
+   una preferenza. Sono tutte scoped a `html.a11y-*` per non
+   sovrascrivere niente in modo accidentale.
+   ============================================================ */
+
+/* ── Dimensione testo (incrementa font-size base) ── */
+html.a11y-text-1 { font-size: 110%; }
+html.a11y-text-2 { font-size: 125%; }
+html.a11y-text-3 { font-size: 150%; }
+
+/* ── Allineamento testo nel corpo articoli + paragrafi ── */
+html.a11y-align-left .article-body p,
+html.a11y-align-left .article-body li,
+html.a11y-align-left main p,
+html.a11y-align-left main li { text-align: left !important; }
+html.a11y-align-justify .article-body p,
+html.a11y-align-justify .article-body li,
+html.a11y-align-justify main p,
+html.a11y-align-justify main li { text-align: justify !important; hyphens: auto; }
+
+/* ── Carattere ad alta leggibilità (system font, no dipendenze) ── */
+html.a11y-readable-font,
+html.a11y-readable-font body,
+html.a11y-readable-font p,
+html.a11y-readable-font li,
+html.a11y-readable-font h1,
+html.a11y-readable-font h2,
+html.a11y-readable-font h3,
+html.a11y-readable-font h4,
+html.a11y-readable-font h5,
+html.a11y-readable-font h6,
+html.a11y-readable-font a,
+html.a11y-readable-font button,
+html.a11y-readable-font input,
+html.a11y-readable-font textarea,
+html.a11y-readable-font select {
+  font-family: Verdana, Tahoma, "Trebuchet MS", "DejaVu Sans", sans-serif !important;
+}
+
+/* ── Spaziatura ampia (WCAG 1.4.12 Text Spacing) ── */
+html.a11y-spacing main,
+html.a11y-spacing .article-body { line-height: 2 !important; letter-spacing: 0.12em !important; word-spacing: 0.16em !important; }
+html.a11y-spacing main p,
+html.a11y-spacing .article-body p { margin-bottom: 2em !important; }
+
+/* ── Contrasto alto ── */
+html.a11y-contrast-high body,
+html.a11y-contrast-high main { background: #fff !important; color: #000 !important; }
+html.a11y-contrast-high a,
+html.a11y-contrast-high a:visited { color: #003a78 !important; text-decoration: underline !important; }
+html.a11y-contrast-high p,
+html.a11y-contrast-high li,
+html.a11y-contrast-high td,
+html.a11y-contrast-high th,
+html.a11y-contrast-high h1,
+html.a11y-contrast-high h2,
+html.a11y-contrast-high h3,
+html.a11y-contrast-high h4,
+html.a11y-contrast-high h5,
+html.a11y-contrast-high h6 { color: #000 !important; }
+html.a11y-contrast-high .text-muted,
+html.a11y-contrast-high .text-secondary { color: #333 !important; }
+html.a11y-contrast-high .card,
+html.a11y-contrast-high .alert { border: 2px solid #000 !important; }
+
+/* ── Contrasto invertito (sfondo nero, testo bianco) ── */
+html.a11y-contrast-invert,
+html.a11y-contrast-invert body,
+html.a11y-contrast-invert main { background: #000 !important; color: #fff !important; }
+html.a11y-contrast-invert h1,
+html.a11y-contrast-invert h2,
+html.a11y-contrast-invert h3,
+html.a11y-contrast-invert h4,
+html.a11y-contrast-invert h5,
+html.a11y-contrast-invert h6,
+html.a11y-contrast-invert p,
+html.a11y-contrast-invert li,
+html.a11y-contrast-invert td,
+html.a11y-contrast-invert th { color: #fff !important; }
+html.a11y-contrast-invert a,
+html.a11y-contrast-invert a:visited { color: #ffd54f !important; text-decoration: underline !important; }
+html.a11y-contrast-invert .card,
+html.a11y-contrast-invert .alert,
+html.a11y-contrast-invert .article-body figure,
+html.a11y-contrast-invert .article-body blockquote {
+  background: #1a1a1a !important; color: #fff !important; border-color: #555 !important;
+}
+html.a11y-contrast-invert section,
+html.a11y-contrast-invert .container { background: transparent !important; }
+/* Lascia inalterati FAB e dialog di accessibilità: sono già contrastati */
+html.a11y-contrast-invert .a11y-fab,
+html.a11y-contrast-invert .a11y-dialog,
+html.a11y-contrast-invert .a11y-dialog * { /* niente override aggressivo */ }
+
+/* ── Scala di grigi ── */
+html.a11y-grayscale { filter: grayscale(1); }
+/* Eccezione: il dialog di accessibilità deve restare in colori vivi
+   (è uno strumento di controllo, deve essere identificabile). */
+html.a11y-grayscale .a11y-dialog,
+html.a11y-grayscale .a11y-fab { filter: none; }
+
+/* ── Nascondi immagini (decorative; mantiene <img> con alt non vuoto leggibile) ── */
+html.a11y-hide-images img,
+html.a11y-hide-images picture,
+html.a11y-hide-images svg:not(.bi):not([role]),
+html.a11y-hide-images video,
+html.a11y-hide-images iframe { visibility: hidden !important; }
+/* Ma lascia visibili icone Bootstrap Icons e icone funzionali */
+html.a11y-hide-images .bi,
+html.a11y-hide-images .a11y-fab svg,
+html.a11y-hide-images .a11y-dialog svg { visibility: visible !important; }
+
+/* ── Pausa animazioni (forza prefers-reduced-motion) ── */
+html.a11y-pause-animations *,
+html.a11y-pause-animations *::before,
+html.a11y-pause-animations *::after {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+  scroll-behavior: auto !important;
+}
+
+/* ── Evidenzia link (sottolinea + box leggero) ── */
+html.a11y-highlight-links main a,
+html.a11y-highlight-links main a:visited {
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  text-decoration-thickness: 2px !important;
+  background: rgba(255, 235, 59, 0.25) !important;
+  padding: 1px 2px !important;
+  border-radius: 3px !important;
+}
+
+/* ── Cursore grande ── */
+/* Cursore SVG inline, scuro con bordo bianco — visibile su entrambi i fondi */
+html.a11y-big-cursor,
+html.a11y-big-cursor body {
+  cursor: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M4 2 L4 26 L11 19 L15 28 L19 26 L15 17 L24 17 Z' fill='%23000' stroke='%23fff' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto !important;
+}
+html.a11y-big-cursor a,
+html.a11y-big-cursor button,
+html.a11y-big-cursor input[type="button"],
+html.a11y-big-cursor input[type="submit"],
+html.a11y-big-cursor [role="button"] {
+  cursor: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M11 4 L11 18 L7 18 L13 26 L19 18 L15 18 L15 4 Z' fill='%23000' stroke='%23fff' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 13 4, pointer !important;
+}

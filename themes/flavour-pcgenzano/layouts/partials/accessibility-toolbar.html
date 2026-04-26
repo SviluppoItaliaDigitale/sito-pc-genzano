@@ -1,0 +1,153 @@
+{{/* Strumenti di Accessibilità — toolbar utente
+     Bottone FAB in basso a sinistra che apre un dialog modale con
+     preferenze di lettura (testo, contrasto, layout). Le preferenze
+     sono salvate in localStorage e applicate come classi su <html>.
+     Il toolbar è uno strumento di preferenze utente: non sostituisce
+     l'accessibilità nativa del sito (WCAG 2.2 AA), la integra.
+     Vedi /accessibilita/ per la dichiarazione di accessibilità completa. */}}
+
+<button type="button" id="a11yToolbarOpen" class="a11y-fab"
+        aria-label="Apri strumenti di accessibilità"
+        aria-haspopup="dialog"
+        aria-controls="a11yDialog"
+        title="Strumenti di accessibilità">
+  <i class="bi bi-universal-access" aria-hidden="true"></i>
+  <span class="visually-hidden">Strumenti di accessibilità</span>
+</button>
+
+<div class="a11y-backdrop" id="a11yBackdrop" hidden></div>
+
+<div class="a11y-dialog" id="a11yDialog"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="a11yDialogTitle"
+     hidden>
+
+  <header class="a11y-dialog-header">
+    <h2 id="a11yDialogTitle" class="a11y-dialog-title">
+      <i class="bi bi-universal-access me-2" aria-hidden="true"></i>
+      Strumenti di accessibilità
+    </h2>
+    <button type="button" id="a11yDialogClose" class="a11y-close" aria-label="Chiudi strumenti di accessibilità">
+      <i class="bi bi-x-lg" aria-hidden="true"></i>
+    </button>
+  </header>
+
+  <div class="a11y-dialog-body">
+
+    <p class="a11y-intro">
+      Personalizza la lettura del sito. Le tue scelte vengono ricordate sul tuo dispositivo. Il sito è già conforme alle linee guida AGID e WCAG 2.2 AA: questi strumenti sono un aiuto in più.
+    </p>
+
+    {{/* ─────────── SEZIONE TESTO ─────────── */}}
+    <fieldset class="a11y-section">
+      <legend class="a11y-section-title">
+        <i class="bi bi-fonts me-2" aria-hidden="true"></i>Testo
+      </legend>
+
+      <div class="a11y-control">
+        <span class="a11y-control-label" id="a11yLblTextSize">Dimensione del testo</span>
+        <div class="a11y-segments" role="radiogroup" aria-labelledby="a11yLblTextSize">
+          <button type="button" class="a11y-seg" data-pref="textSize" data-value="0" aria-pressed="true">100%</button>
+          <button type="button" class="a11y-seg" data-pref="textSize" data-value="1" aria-pressed="false">110%</button>
+          <button type="button" class="a11y-seg" data-pref="textSize" data-value="2" aria-pressed="false">125%</button>
+          <button type="button" class="a11y-seg" data-pref="textSize" data-value="3" aria-pressed="false">150%</button>
+        </div>
+      </div>
+
+      <div class="a11y-control">
+        <span class="a11y-control-label" id="a11yLblTextAlign">Allineamento del testo</span>
+        <div class="a11y-segments" role="radiogroup" aria-labelledby="a11yLblTextAlign">
+          <button type="button" class="a11y-seg" data-pref="textAlign" data-value="default" aria-pressed="true">Predefinito</button>
+          <button type="button" class="a11y-seg" data-pref="textAlign" data-value="left" aria-pressed="false">A sinistra</button>
+          <button type="button" class="a11y-seg" data-pref="textAlign" data-value="justify" aria-pressed="false">Giustificato</button>
+        </div>
+      </div>
+
+      <button type="button" class="a11y-toggle" data-pref="readableFont" aria-pressed="false">
+        <i class="bi bi-type me-2" aria-hidden="true"></i>
+        <span class="a11y-toggle-text">Carattere ad alta leggibilità</span>
+        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
+      </button>
+
+      <button type="button" class="a11y-toggle" data-pref="spacing" aria-pressed="false">
+        <i class="bi bi-distribute-vertical me-2" aria-hidden="true"></i>
+        <span class="a11y-toggle-text">Spaziatura ampia (righe e lettere)</span>
+        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
+      </button>
+    </fieldset>
+
+    {{/* ─────────── SEZIONE VISIVO ─────────── */}}
+    <fieldset class="a11y-section">
+      <legend class="a11y-section-title">
+        <i class="bi bi-eye-fill me-2" aria-hidden="true"></i>Visivo
+      </legend>
+
+      <div class="a11y-control">
+        <span class="a11y-control-label" id="a11yLblContrast">Contrasto</span>
+        <div class="a11y-segments" role="radiogroup" aria-labelledby="a11yLblContrast">
+          <button type="button" class="a11y-seg" data-pref="contrast" data-value="default" aria-pressed="true">Predefinito</button>
+          <button type="button" class="a11y-seg" data-pref="contrast" data-value="high" aria-pressed="false">Alto</button>
+          <button type="button" class="a11y-seg" data-pref="contrast" data-value="invert" aria-pressed="false">Invertito</button>
+        </div>
+      </div>
+
+      <button type="button" class="a11y-toggle" data-pref="grayscale" aria-pressed="false">
+        <i class="bi bi-circle-half me-2" aria-hidden="true"></i>
+        <span class="a11y-toggle-text">Scala di grigi</span>
+        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
+      </button>
+
+      <button type="button" class="a11y-toggle" data-pref="hideImages" aria-pressed="false">
+        <i class="bi bi-image me-2" aria-hidden="true"></i>
+        <span class="a11y-toggle-text">Nascondi immagini decorative</span>
+        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
+      </button>
+
+      <button type="button" class="a11y-toggle" data-pref="pauseAnimations" aria-pressed="false">
+        <i class="bi bi-pause-circle me-2" aria-hidden="true"></i>
+        <span class="a11y-toggle-text">Pausa animazioni</span>
+        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
+      </button>
+    </fieldset>
+
+    {{/* ─────────── SEZIONE ORIENTAMENTO ─────────── */}}
+    <fieldset class="a11y-section">
+      <legend class="a11y-section-title">
+        <i class="bi bi-compass me-2" aria-hidden="true"></i>Orientamento
+      </legend>
+
+      <button type="button" class="a11y-toggle" data-pref="highlightLinks" aria-pressed="false">
+        <i class="bi bi-link-45deg me-2" aria-hidden="true"></i>
+        <span class="a11y-toggle-text">Evidenzia tutti i link</span>
+        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
+      </button>
+
+      <button type="button" class="a11y-toggle" data-pref="bigCursor" aria-pressed="false">
+        <i class="bi bi-cursor-fill me-2" aria-hidden="true"></i>
+        <span class="a11y-toggle-text">Cursore grande</span>
+        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
+      </button>
+
+      <a class="a11y-link-page" href="{{ "accessibilita/" | relURL }}">
+        <i class="bi bi-info-circle me-2" aria-hidden="true"></i>
+        Vai alla pagina Accessibilità del sito
+        <i class="bi bi-arrow-right ms-auto" aria-hidden="true"></i>
+      </a>
+    </fieldset>
+
+    <div class="a11y-status" role="status" aria-live="polite" id="a11yStatus"></div>
+
+  </div>
+
+  <footer class="a11y-dialog-footer">
+    <button type="button" id="a11yReset" class="a11y-btn a11y-btn-secondary">
+      <i class="bi bi-arrow-counterclockwise me-1" aria-hidden="true"></i>
+      Reimposta tutto
+    </button>
+    <button type="button" id="a11yDialogCloseFooter" class="a11y-btn a11y-btn-primary">
+      <i class="bi bi-check-lg me-1" aria-hidden="true"></i>
+      Chiudi
+    </button>
+  </footer>
+</div>
