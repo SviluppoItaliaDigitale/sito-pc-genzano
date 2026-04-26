@@ -2,7 +2,7 @@
 title: "Dichiarazione di Accessibilità"
 description: "Dichiarazione di accessibilità del sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
-dataUltimaRevisione: "2026-04-24"
+dataUltimaRevisione: "2026-04-26"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
@@ -18,6 +18,63 @@ La presente dichiarazione si applica al sito web **www.protezionecivilegenzano.i
 Questo sito web è stato progettato seguendo le **Linee Guida WCAG 2.2 livello AA** e utilizza il framework Bootstrap Italia 2.x del design system della Pubblica Amministrazione italiana.
 
 La dichiarazione di accessibilità ufficiale, compilata secondo quanto previsto dalla Decisione di esecuzione (UE) 2018/1523, sarà pubblicata su [form.agid.gov.it](https://form.agid.gov.it/) e il relativo link verrà inserito in questa pagina.
+
+## Strumenti di Accessibilità del sito
+
+In ogni pagina, in basso a sinistra, trovi un pulsante rotondo blu con l'icona di accessibilità (la persona stilizzata cerchiata: <i class="bi bi-universal-access" aria-hidden="true"></i>). Toccandolo si apre il pannello **Strumenti di Accessibilità** con cui puoi:
+
+- **Ingrandire il testo** fino al 150 % (mantenendo l'impaginazione leggibile)
+- Cambiare l'**allineamento** dei paragrafi (a sinistra o giustificato)
+- Attivare un **carattere ad alta leggibilità** (Verdana, di sistema)
+- Aumentare la **spaziatura** di righe e lettere (conforme al criterio WCAG 1.4.12)
+- Attivare il **contrasto alto** o **invertito** (sfondo nero, testo bianco)
+- Visualizzare il sito in **scala di grigi**
+- **Nascondere le immagini** decorative e mettere in **pausa le animazioni**
+- **Evidenziare tutti i link** con sfondo giallo
+- Attivare un **cursore grande** del mouse
+
+Le scelte vengono **ricordate sul tuo dispositivo** (tramite `localStorage`): chiudendo e riaprendo il sito le ritrovi attive. Il pulsante "Reimposta tutto" del pannello cancella le preferenze e riporta il sito alle impostazioni standard.
+
+Il pannello stesso è interamente accessibile da tastiera: si apre con `Invio`, si naviga con `Tab`, si chiude con `Esc` o cliccando fuori. Tutti i comandi hanno descrizioni per gli screen reader.
+
+> **Nota importante.** Questi strumenti sono un **aiuto in più** sopra a un sito che è già conforme WCAG 2.2 AA. Non sostituiscono gli strumenti di accessibilità del tuo sistema operativo o del tuo browser, che restano la soluzione più potente e completa: vedi la sezione successiva.
+
+## Strumenti di sistema (browser e sistema operativo)
+
+Per esigenze più avanzate (lettore di schermo, ingrandimento estremo, riconoscimento vocale, contrasto a livello di sistema), gli strumenti del tuo dispositivo sono più completi del nostro pannello. Ecco le scorciatoie principali:
+
+### Ingrandimento e zoom della pagina (browser)
+
+- **Windows / Linux:** premi `Ctrl` `+` per ingrandire, `Ctrl` `-` per ridurre, `Ctrl` `0` per tornare al 100 %.
+- **macOS:** premi `Cmd` `+`, `Cmd` `-`, `Cmd` `0`.
+- **Tablet e smartphone:** allarga con due dita (pinch-to-zoom). Su Android e iOS lo zoom della pagina è abilitato di default su questo sito.
+
+### Lettore di schermo (screen reader)
+
+- **Windows:** [NVDA](https://www.nvaccess.org/) (gratuito) oppure JAWS. Si attiva con `Insert` + `Spazio`.
+- **macOS / iPhone / iPad:** **VoiceOver** già integrato. Su Mac: `Cmd` + `F5`. Su iPhone: `Impostazioni` → `Accessibilità` → `VoiceOver`.
+- **Android:** **TalkBack** già integrato. `Impostazioni` → `Accessibilità` → `TalkBack`.
+
+### Contrasto elevato e tema scuro a livello di sistema
+
+- **Windows 11:** `Impostazioni` → `Accessibilità` → `Temi a contrasto`.
+- **macOS:** `Impostazioni di Sistema` → `Accessibilità` → `Schermo` → `Aumenta contrasto`.
+- **Android:** `Impostazioni` → `Accessibilità` → `Testo e visualizzazione` → `Contrasto elevato`.
+- **iOS:** `Impostazioni` → `Accessibilità` → `Schermo e dimensioni testo` → `Aumenta contrasto`.
+
+Questo sito rispetta le preferenze di sistema (`prefers-reduced-motion`, `prefers-color-scheme`) dove pertinenti.
+
+### Riconoscimento vocale
+
+- **Windows:** **Accesso vocale** (`Win` + `Ctrl` + `S`) o Cortana.
+- **macOS:** **Comandi vocali** in `Accessibilità`.
+- **Android / iOS:** già integrati nelle impostazioni di accessibilità.
+
+### Risorse ufficiali
+
+- [Designers Italia — Accessibilità](https://designers.italia.it/) — linee guida del Dipartimento per la trasformazione digitale.
+- [W3C Web Accessibility Initiative — Strumenti per utenti](https://www.w3.org/WAI/users/) — guide ufficiali (in inglese).
+- [Difensore Civico per il digitale (AGID)](https://www.agid.gov.it/it/design-servizi/accessibilita/difensore-civico-digitale).
 
 ### Meccanismo di feedback
 
