@@ -1088,7 +1088,7 @@
   }
 
   function bindButtons() {
-    app.querySelectorAll('.opt-btn').forEach(function (btn) {
+    app.querySelectorAll('.opt-btn, .opt-card').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var next = btn.getAttribute('data-next');
         if (next && NODES[next]) {
