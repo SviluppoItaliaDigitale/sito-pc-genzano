@@ -109,7 +109,7 @@ Qualche indicazione pratica:
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 - [Centro Funzionale Regionale Lazio — Bollettini](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
 - [Servizio Meteorologico dell'Aeronautica Militare](https://www.meteoam.it/)
-- [Istituto di Scienze dell'Atmosfera e del Clima — CNR (ISAC)](http://www.isac.cnr.it/)
+- [Istituto di Scienze dell'Atmosfera e del Clima — CNR (ISAC)](https://www.isac.cnr.it/)
 
 ## Per approfondire
 
