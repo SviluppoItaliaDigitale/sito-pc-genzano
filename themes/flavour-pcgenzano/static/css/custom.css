@@ -2499,67 +2499,96 @@ article .galleria img {
   .article-toc { display: none !important; }
 }
 
-/* ── PITTOGRAMMI ISO 7010 e ARASAAC ──
-   Componente: shortcode {{< pittogramma >}}.
-   Inline per default (figure dentro paragrafi), a blocco se label presente.
-   Compatibile con le preferenze del toolbar di accessibilità (scala di
-   grigi conserva contorno; "nascondi immagini" mantiene il pittogramma
-   perché è funzionale, non decorativo). */
+/* ============================================================
+   PITTOGRAMMI (ISO 7010 + ARASAAC) — v1.0
+   Shortcode {{< pittogramma >}}: supporto comprensione per
+   bambini, anziani, persone con disabilita' cognitive,
+   parlanti italiano L2.
+   ============================================================ */
 .pittogramma {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
+  display: inline-block;
   vertical-align: middle;
-  margin: 0 0.4rem;
-  gap: 0.2rem;
-}
-.pittogramma img {
-  display: block;
   height: auto;
   max-width: 100%;
 }
-.pittogramma-label {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: #555;
-  text-align: center;
-  line-height: 1.1;
-  max-width: 8rem;
+.pittogramma-inline {
+  height: 1.4em;
+  width: auto;
+  margin: 0 0.2em;
+  vertical-align: -0.25em;
 }
-.pittogramma-mancante {
+.pittogramma-small  { width: 48px;  }
+.pittogramma-medium { width: 96px;  }
+.pittogramma-large  { width: 160px; }
+.pittogramma-xlarge { width: 240px; }
+
+.pittogramma-figure {
+  background: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
   display: inline-block;
-  padding: 0 6px;
-  background: #fff3cd;
-  border: 1px dashed #b45309;
-  color: #92400e;
-  font-size: 0.85em;
-  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
 }
-/* Scala di grigi del toolbar a11y: lascia leggibili i pittogrammi tramite
-   contrasto interno. Eccezione esplicita su .pittogramma img per non
-   filtrarli due volte (l'html.a11y-grayscale già applica il filtro globale). */
-html.a11y-grayscale .pittogramma img { filter: contrast(1.2); }
-/* Nascondi immagini (toolbar a11y): i pittogrammi sono FUNZIONALI, restano
-   visibili. Override esplicito che vince su .a11y-hide-images img. */
-html.a11y-hide-images .pittogramma img { visibility: visible !important; }
-/* Stampa: i pittogrammi sono utili anche su carta (vie di fuga, regole). */
-@media print {
-  .pittogramma img { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.pittogramma-figure .figure-caption {
+  font-size: 0.9rem;
+  color: #475569;
+  font-style: italic;
+  margin-top: 0.5rem;
 }
 
-/* Galleria pittogrammi (pagina /pittogrammi/) */
+/* Compatibilita' con il toolbar di accessibilita':
+   i pittogrammi sono FUNZIONALI, non decorativi.
+   Restano visibili anche con la preferenza "Nascondi immagini"
+   e leggibili in scala di grigi. */
+html.a11y-hide-images img.pittogramma { visibility: visible !important; }
+html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
+
+/* In stampa mantenere i colori dei pittogrammi (essenziali alla
+   comprensione del segnale di sicurezza). */
+@media print {
+  .pittogramma {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .pittogramma-figure {
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+}
+
+/* Su mobile: pittogrammi un poco piu' piccoli per non rompere il layout. */
+@media (max-width: 576px) {
+  .pittogramma-large  { width: 128px; }
+  .pittogramma-xlarge { width: 180px; }
+}
+
+/* Galleria pittogrammi (pagina /pittogrammi/ — catalogo). */
 .pittogrammi-galleria {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 1rem;
-  align-items: flex-start;
-  margin: 1rem 0 2rem;
+  align-items: stretch;
+  margin: 1.5rem 0 2.5rem;
   padding: 1rem;
   background: #f8f9fa;
   border-radius: 8px;
   border-left: 3px solid var(--pc-primary, #003366);
 }
-.pittogrammi-galleria .pittogramma {
+.pittogrammi-galleria .pittogramma-figure {
   margin: 0;
-  flex: 0 0 auto;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  text-align: center;
+  height: 100%;
+}
+.pittogrammi-galleria .figure-caption {
+  font-size: 0.78rem;
+  color: #475569;
+  margin-top: 0.4rem;
+  font-style: normal;
+  line-height: 1.25;
 }

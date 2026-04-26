@@ -70,7 +70,7 @@ Il sito ha una **libreria di pittogrammi standardizzati** disponibile via shortc
 - **ISO 7010** — pittogrammi internazionali di sicurezza (PD/CC0). In `static/pittogrammi/iso7010/`. Codici W (warning), P (prohibition), M (mandatory), E (escape/safe condition), F (fire).
 - **ARASAAC** — pittogrammi AAC per disabilità cognitive (CC BY-NC-SA 4.0, attribuzione obbligatoria). In `static/pittogrammi/arasaac/`. Si usano principalmente nella pagina `/facile-da-leggere/`.
 
-**Catalogo pubblico:** `/pittogrammi/`. **Download script:** `scripts/scarica-pittogrammi-iso7010.sh` e `scripts/scarica-pittogrammi-arasaac.sh` (esecuzione locale).
+**Catalogo pubblico:** `/pittogrammi/`. **Download script:** `scripts/scarica-pittogrammi.sh` (idempotente, scarica solo i mancanti; usa `--force` per ri-scaricare tutto).
 
 **Regole operative:**
 - Il pittogramma **non sostituisce mai il testo**: è un complemento. L'attributo `alt` deve sempre essere testuale e equivalente (WCAG 1.1.1).

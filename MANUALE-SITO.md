@@ -1244,79 +1244,72 @@ wrapper una tipografia istituzionale curata che non influisce su homepage, liste
 - Stampa pulita: header/navbar/footer sono già nascosti dal blocco `@media print` globale
   (vedi Parte 1.10).
 
----
+### 3.16 — Pittogrammi (ISO 7010 + ARASAAC)
 
-### 3.16 — Pittogrammi standardizzati ISO 7010 e ARASAAC
+Il sito ha una **libreria di 171 pittogrammi standardizzati** per supportare la comprensione del testo a **bambini, anziani, persone con disabilità cognitive e parlanti italiano L2** (regola di accessibilità cognitiva, WCAG 2.2 — sezione 1.4 Distinguishable + 3.1 Readable).
 
-**A cosa servono.** I pittogrammi standardizzati aiutano i contenuti del sito a essere comprensibili anche da:
-- **Bambini** che non hanno ancora pieno controllo della lettura.
-- **Persone straniere** che non parlano bene l'italiano.
-- **Persone con disabilità cognitive** o difficoltà di lettura.
-- **Anziani** con calo della vista o della capacità di concentrazione.
+**Cosa contiene la libreria:**
 
-Sono **standard internazionali**: la stessa icona si trova nei luoghi pubblici, sulle uscite di emergenza, sulle attrezzature antincendio. Vederli sul sito e nella realtà rinforza l'apprendimento del cittadino.
+| Tipo | Cartella | Numero | Formato | Fonte / licenza |
+|---|---|---|---|---|
+| ISO 7010 (sicurezza standard) | `static/pittogrammi/iso7010/` | 46 | SVG vettoriale | Wikimedia Commons (PD-shape / CC0) |
+| ARASAAC (comprensione cognitiva) | `static/pittogrammi/arasaac/` | 125 | PNG 500 px | ARASAAC, autore Sergio Palao, CC BY-NC-SA 4.0 |
 
-**Due librerie disponibili:**
+ISO 7010 copre evacuazione (E*), antincendio (F*), avvertimento (W*), obbligo (M*), divieto (P*).
+ARASAAC copre eventi e rischi naturali, azioni di autoprotezione, oggetti del kit di emergenza, persone, luoghi, segnali, veicoli e numeri utili.
 
-| Libreria | Quando usarla | Licenza | Cartella |
-|---|---|---|---|
-| **ISO 7010** | Sicurezza, vie di fuga, divieti, obblighi, antincendio. Per articoli "rischio + comportamento". | PD-self / CC0 | `static/pittogrammi/iso7010/` |
-| **ARASAAC** | Comunicazione AAC (Aumentativa Alternativa). Per la pagina `/facile-da-leggere/` e per chi ha disabilità cognitive. | CC BY-NC-SA 4.0 (attribuzione obbligatoria) | `static/pittogrammi/arasaac/` |
-
-**Come si inserisce un pittogramma.** Usa lo shortcode `{{</* pittogramma */>}}` in qualsiasi file Markdown:
-
-```markdown
-{{</* pittogramma codice="W001" alt="Attenzione: pericolo generale" */>}}
-
-{{</* pittogramma codice="E002" alt="Uscita di emergenza" label="Uscita →" size="96" */>}}
-
-{{</* pittogramma codice="2453" set="arasaac" alt="Bambino che corre via" */>}}
-```
-
-**Parametri:**
-- `codice` — obbligatorio. Codice ISO 7010 (W001, E002, F001, M001, P001, ecc.) o ID ARASAAC.
-- `alt` — testo alternativo per screen reader (sempre obbligatorio).
-- `label` — opzionale, etichetta visibile sotto il pittogramma.
-- `size` — opzionale, dimensione lato in pixel (default 64).
-- `set` — opzionale, "iso7010" (default) o "arasaac".
-
-**Per più pittogrammi affiancati**, usa la galleria:
-
-```markdown
-<div class="pittogrammi-galleria">
-
-{{</* pittogramma codice="W001" alt="..." label="Pericolo" size="80" */>}}
-{{</* pittogramma codice="E002" alt="..." label="Uscita" size="80" */>}}
-{{</* pittogramma codice="E004" alt="..." label="Telefono" size="80" */>}}
-
-</div>
-```
-
-**Regole d'uso (linee editoriali):**
-
-1. **Mai sostituire il testo**: il pittogramma è un *complemento*, non un sostituto. L'`alt` deve essere sempre testuale ed equivalente.
-2. **Massimo 3-4 pittogrammi per pagina**: evitare il sovraccarico visivo.
-3. **Coerenza tematica**: usa pittogrammi che corrispondono al contenuto vicino, non come decorazione.
-4. **Toolbar di accessibilità**: i pittogrammi sono **funzionali** e restano visibili anche con "Nascondi immagini" attivo (è gestito dal CSS dedicato).
-5. **Stampa**: si stampano correttamente anche in B/N (i pittogrammi ISO 7010 usano contrasto interno netto).
-
-**Catalogo dei pittogrammi disponibili:** vedi la pagina `/pittogrammi/` (visibile sul sito), che elenca tutti gli SVG e PNG attualmente disponibili nella libreria, con anteprima.
-
-**Per scaricare nuovi pittogrammi:**
+**Re-download della libreria** (idempotente, scarica solo i mancanti):
 
 ```bash
-# ISO 7010 da Wikimedia Commons (PD)
-bash scripts/scarica-pittogrammi-iso7010.sh
-
-# ARASAAC AAC da arasaac.org (CC BY-NC-SA, attribuzione obbligatoria)
-bash scripts/scarica-pittogrammi-arasaac.sh
+bash scripts/scarica-pittogrammi.sh           # solo i mancanti
+bash scripts/scarica-pittogrammi.sh --force   # ri-scarica tutto
 ```
 
-> **Nota tecnica.** Gli script vanno eseguiti sulla **macchina locale**: la sandbox di Claude Code blocca i domini esterni come Wikimedia Commons e arasaac.org. Una volta scaricati i file, lo shortcode li trova automaticamente.
+Lo script ha un rate-limit di 1 secondo tra le richieste a Wikimedia per evitare ban temporanei.
+Per aggiungere nuovi pittogrammi alla libreria, modifica gli array `ISO7010` e `ARASAAC` in cima allo script (formato `codice|nome-file|descrizione`).
 
-**Attribuzione ARASAAC** (obbligatoria su ogni pagina che usa pittogrammi ARASAAC):
+**Uso negli articoli e nelle pagine — shortcode `pittogramma`:**
 
-> Pittogrammi: Sergio Palao — ARASAAC ([arasaac.org](https://arasaac.org)) — CC BY-NC-SA — Government of Aragón (Spagna).
+Uso block (figure centrata, con didascalia opzionale):
+
+```go-html-template
+{{< pittogramma src="/pittogrammi/arasaac/terremoto.png"
+                alt="Pittogramma: terremoto"
+                caption="Cosa fare in caso di terremoto"
+                size="large" >}}
+```
+
+Uso inline (dentro una frase, dimensione adattata al testo):
+
+```go-html-template
+Chiama subito il {{< pittogramma src="/pittogrammi/arasaac/112.png" alt="numero 112" inline="true" >}} 112.
+```
+
+Parametri:
+- `src` (**obbligatorio**) — percorso del pittogramma in `/pittogrammi/iso7010/...` o `/pittogrammi/arasaac/...`
+- `alt` (**obbligatorio**) — testo alternativo significativo per screen reader. **Mai stringa vuota**: il pittogramma è esplicativo, non decorativo
+- `caption` (opzionale, solo modalità block) — didascalia visibile sotto
+- `inline="true"` — inserimento inline dentro una frase (default: block)
+- `size` — `small` (48 px), `medium` (96 px, default), `large` (160 px), `xlarge` (240 px)
+
+**Regole editoriali per l'uso dei pittogrammi:**
+
+1. **Mai sostituire il testo con il solo pittogramma**: il pittogramma è di **supporto** alla comprensione, mai sostituto. WCAG 1.4.5 (Images of Text) e principio di leggibilità per L2.
+2. **Un pittogramma per concetto chiave**, non come decorazione visiva continua. La sovrabbondanza riduce l'efficacia comunicativa per gli utenti che ne hanno davvero bisogno.
+3. **Per segnali di sicurezza** (obblighi, divieti, avvertimenti formali): preferire i simboli **ISO 7010** (riconoscibili a livello internazionale).
+4. **Per situazioni narrative o didattiche** rivolte a bambini: preferire **ARASAAC** (colore e tratto più immediati).
+5. **Alt text sempre descrittivo**: mai "Immagine di...", "Pittogramma di..." in modo generico. Esempio buono: `alt="Persona che si nasconde sotto al tavolo in caso di terremoto"`.
+
+**Attribuzioni — obbligatorie:**
+
+- Il footer di tutte le pagine linka alla pagina **`/attribuzioni-pittogrammi/`** che riporta autori, licenze e fonti.
+- ARASAAC è **CC BY-NC-SA 4.0**: le opere derivate (in particolare le **schede stampabili PDF** dei kit didattici) che includono pittogrammi ARASAAC ereditano automaticamente la stessa licenza CC BY-NC-SA 4.0.
+- Quando produci una scheda stampabile che usa pittogrammi ARASAAC, indica nel piè di pagina della scheda: *"Pittogrammi: ARASAAC — Sergio Palao (CC BY-NC-SA 4.0). Distribuita con la stessa licenza."*
+
+**Tecnica e accessibilità:**
+
+- Lo shortcode emette `<img>` con `role="img"` e `loading="lazy"`, oppure `<figure>` con `<figcaption>` opzionale.
+- CSS scoped in `themes/flavour-pcgenzano/static/css/custom.css` (sezione **PITTOGRAMMI v1.0**): dimensioni fisse, override mobile (large/xlarge ridotti su <576 px), mantenimento dei colori in stampa (i colori dei segnali ISO 7010 sono parte dell'informazione di sicurezza e non devono essere convertiti in scala di grigi).
 
 ---
 

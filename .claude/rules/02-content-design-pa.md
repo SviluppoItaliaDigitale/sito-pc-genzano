@@ -61,6 +61,33 @@ Specifiche complete: `MANUALE-SITO.md`, Parte 3.
 
 Questa regola nasce dopo un incidente in cui una foto fornita dall'utente era stata sostituita dalla sola copertina automatica — comportamento non accettabile.
 
+## Regola pittogrammi — supporto comprensione (bambini, anziani, L2)
+
+Il sito ha una libreria di **171 pittogrammi standardizzati** (46 ISO 7010 + 125 ARASAAC) in `static/pittogrammi/` per supportare la comprensione del testo a bambini, anziani, persone con disabilità cognitive e parlanti italiano L2 (regola di accessibilità cognitiva).
+
+Si usano con lo shortcode `pittogramma`:
+
+```go-html-template
+{{< pittogramma src="/pittogrammi/arasaac/terremoto.png"
+                alt="Pittogramma: terremoto"
+                caption="Cosa fare in caso di terremoto" >}}
+```
+
+Per uso inline dentro una frase: `inline="true"`. Per dimensione: `size="small|medium|large|xlarge"` (default: medium).
+
+**Regole d'uso editoriale:**
+1. Il pittogramma è **supporto** alla comprensione, mai sostituto del testo (WCAG 1.4.5).
+2. Un pittogramma per concetto chiave, non come decorazione visiva continua.
+3. Per segnali di sicurezza formali (obblighi, divieti, avvertimenti): preferire **ISO 7010**.
+4. Per situazioni narrative/didattiche per bambini: preferire **ARASAAC**.
+5. **`alt` sempre descrittivo**, mai stringa vuota o "Immagine di...". Esempio: `alt="Persona che si nasconde sotto al tavolo in caso di terremoto"`.
+
+**Attribuzioni — obbligatorie:**
+- Pagina `/attribuzioni-pittogrammi/` linkata dal footer di tutte le pagine.
+- ARASAAC è CC BY-NC-SA 4.0: ogni opera derivata (in particolare le **schede stampabili PDF** dei kit didattici) che include pittogrammi ARASAAC eredita la stessa licenza CC BY-NC-SA 4.0. Indica esplicitamente la licenza nel piè di pagina della scheda.
+
+Specifiche complete in `MANUALE-SITO.md` Parte 3.16.
+
 ## Regola critica — formato data nel frontmatter Hugo
 
 Nel frontmatter degli articoli usa SEMPRE il formato `AAAA-MM-GG` (esempio: `2026-04-06`).

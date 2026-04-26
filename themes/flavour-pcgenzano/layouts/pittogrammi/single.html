@@ -1,0 +1,67 @@
+{{- define "main" -}}
+<main id="main-content" tabindex="-1">
+  <div class="container my-4">
+    {{- partial "breadcrumb.html" . -}}
+
+    <article class="article-body">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.dataUltimaRevisione }}
+      <div class="alert alert-light border" role="note" aria-label="Data ultima revisione della pagina">
+        <i class="bi bi-calendar-check me-2" aria-hidden="true"></i>
+        Pagina rivista il <strong><time datetime="{{ . }}">{{ dateFormat "2 January 2006" . }}</time></strong>.
+      </div>
+      {{ end }}
+
+      {{ .Content }}
+
+      {{- /* Catalogo automatico: legge static/pittogrammi/iso7010/ e arasaac/ */ -}}
+      {{- $isoDir := "static/pittogrammi/iso7010" -}}
+      {{- $araDir := "static/pittogrammi/arasaac" -}}
+
+      <h2 id="catalogo-iso7010">Segnali ISO 7010 ({{ sub (len (readDir $isoDir)) 1 }} simboli)</h2>
+      <p>Segnali grafici di sicurezza standardizzati a livello internazionale. Forme geometriche e colori sono definiti dalla norma ISO 7010 e riconoscibili in oltre 160 Paesi.</p>
+      <p><strong>Codici colore:</strong> 🟡 giallo + triangolo = avvertimento (W*) · 🔴 rosso + cerchio sbarrato = divieto (P*) · 🔵 blu + cerchio pieno = obbligo (M*) · 🟢 verde + rettangolo = soccorso ed evacuazione (E*) · 🔴 rosso + rettangolo = antincendio (F*).</p>
+
+      <div class="pittogrammi-galleria" role="list" aria-label="Catalogo pittogrammi ISO 7010">
+      {{- range (readDir $isoDir) -}}
+        {{- if and (not .IsDir) (hasSuffix .Name ".svg") -}}
+        {{- $name := strings.TrimSuffix ".svg" .Name -}}
+        {{- $alt := replace $name "-" " " | humanize -}}
+        <figure class="pittogramma pittogramma-figure" role="listitem">
+          <img src="{{ printf "pittogrammi/iso7010/%s" .Name | relURL }}"
+               alt="Pittogramma ISO 7010: {{ $alt }}"
+               class="pittogramma pittogramma-medium"
+               role="img"
+               loading="lazy">
+          <figcaption class="figure-caption">{{ $alt }}<br><code>{{ .Name }}</code></figcaption>
+        </figure>
+        {{- end -}}
+      {{- end -}}
+      </div>
+
+      <h2 id="catalogo-arasaac">Pittogrammi ARASAAC ({{ sub (len (readDir $araDir)) 1 }} simboli)</h2>
+      <p>Pittogrammi della Comunicazione Aumentativa Alternativa (CAA). Aiutano la comprensione a bambini, persone con disabilità cognitive e parlanti italiano L2.</p>
+      <p class="small text-muted"><strong>Attribuzione obbligatoria</strong> (CC BY-NC-SA 4.0): pittogrammi di Sergio Palao, ARASAAC, Governo di Aragona (Spagna). Vedi <a href="{{ "attribuzioni-pittogrammi/" | relURL }}">Attribuzioni dei pittogrammi</a>.</p>
+
+      <div class="pittogrammi-galleria" role="list" aria-label="Catalogo pittogrammi ARASAAC">
+      {{- range (readDir $araDir) -}}
+        {{- if and (not .IsDir) (hasSuffix .Name ".png") -}}
+        {{- $name := strings.TrimSuffix ".png" .Name -}}
+        {{- $alt := replace $name "-" " " | humanize -}}
+        <figure class="pittogramma pittogramma-figure" role="listitem">
+          <img src="{{ printf "pittogrammi/arasaac/%s" .Name | relURL }}"
+               alt="Pittogramma ARASAAC: {{ $alt }}"
+               class="pittogramma pittogramma-medium"
+               role="img"
+               loading="lazy">
+          <figcaption class="figure-caption">{{ $alt }}<br><code>{{ .Name }}</code></figcaption>
+        </figure>
+        {{- end -}}
+      {{- end -}}
+      </div>
+    </article>
+
+    {{ partial "page-tools.html" . }}
+  </div>
+</main>
+{{- end -}}
