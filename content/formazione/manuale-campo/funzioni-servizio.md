@@ -198,7 +198,7 @@ In caso di **sospetto caso infettivo** (gastroenterite, influenza, COVID-19 o eq
 
 In base al tipo di emergenza possono attivarsi funzioni specifiche:
 
-- **tutela beni culturali** (emergenze sismiche — vedi [manuale DPC rilievo danno BBCC](/comunicazioni/2027-07-15-scheda-rilievo-danno-beni-culturali-chiese/))
+- **tutela beni culturali** (emergenze sismiche — vedi [manuale DPC rilievo danno BBCC](/comunicazioni/2026-10-28-scheda-rilievo-danno-beni-culturali-chiese/))
 - **gestione animali** (animali domestici degli sfollati, animali di reddito)
 - **assistenza a persone con disabilità** (funzione trasversale, sempre presente)
 - **mediazione interculturale** (sfollati di diverse nazionalità)

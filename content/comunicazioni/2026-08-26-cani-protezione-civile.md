@@ -6,7 +6,7 @@ description: "Il ruolo delle unità cinofile nella Protezione Civile italiana: r
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-08-26-cani-protezione-civile.webp"
 image_alt: "Copertina dell'articolo: Cani della Protezione Civile: gli amici a quattro zampe che salvano vite"
 scadenza: ""
 area: "Italia · territorio nazionale"

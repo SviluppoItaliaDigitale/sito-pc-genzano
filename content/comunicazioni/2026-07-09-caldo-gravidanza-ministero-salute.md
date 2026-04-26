@@ -1,11 +1,11 @@
 ---
 title: "Caldo in gravidanza: consigli per future mamme e loro bambini"
-date: 2027-05-15
+date: 2026-07-09
 description: "Un opuscolo del Ministero della Salute e del DEP Lazio spiega come affrontare il caldo in gravidanza: disidratazione, rischi di parto prematuro, alimentazione e microclima domestico."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2027-05-15-caldo-gravidanza-ministero-salute.webp"
+image: "/images/2026-07-09-caldo-gravidanza-ministero-salute.webp"
 image_alt: "Donna incinta che beve un bicchiere d'acqua vicino a una finestra con tende abbassate, in una giornata di caldo estivo"
 scadenza: ""
 area: "Genzano di Roma"

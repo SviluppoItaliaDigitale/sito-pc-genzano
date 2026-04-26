@@ -1,11 +1,11 @@
 ---
 title: "Il Piano nazionale di prevenzione degli effetti del caldo sulla salute"
-date: 2027-06-01
+date: 2026-05-25
 description: "Come funziona il sistema italiano di prevenzione delle ondate di calore: allerta HHWWS, numero 1500, anagrafi dei fragili, sorveglianza attiva. Un quadro basato sulle linee guida del Ministero della Salute e sulla guidance OMS Europa."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2027-06-01-piano-nazionale-prevenzione-caldo-who.webp"
+image: "/images/2026-05-25-piano-nazionale-prevenzione-caldo-who.webp"
 image_alt: "Termometro al sole davanti a una città, rappresentazione simbolica di ondata di calore"
 scadenza: ""
 area: "Genzano di Roma"
@@ -112,6 +112,6 @@ Tutti i piani nazionali ed europei di prevenzione del caldo si inseriscono nel q
 
 - [Ondate di calore: prepararsi ora, prima che arrivi l'estate](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
 - [Estate in salute: come proteggere i bambini dal caldo](/comunicazioni/2026-04-25-caldo-bambini-ministero-salute/)
-- [Caldo in gravidanza: consigli per future mamme](/comunicazioni/2027-05-15-caldo-gravidanza-ministero-salute/)
+- [Caldo in gravidanza: consigli per future mamme](/comunicazioni/2026-07-09-caldo-gravidanza-ministero-salute/)
 - [Ondate di calore, anziani e fragili: come proteggerli](/comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere/)
 - [Persone fragili: come aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
