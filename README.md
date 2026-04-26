@@ -152,8 +152,9 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO |
 | `aggiorna-manuale.yml` | Lunedì 06:00 UTC | Hash fonti AGID/Designers Italia → issue se cambiano |
 | `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Aggiornamenti Bootstrap Italia |
-| `coerenza-docs.yml` | Lunedì 07:00 UTC | Coerenza documentazione: CLAUDE.md, archetype, regole, badge, shortcode foto, pagine content/ (incluse privacy, note-legali, social-media-policy, accessibilita) |
 | `check-normativa-links.yml` | Lunedì 08:00 UTC | Raggiungibilità link normativi (Lazio, DPC, Normattiva) |
+| `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (32 sezioni)**: contenuti, codice/template, governance docs (fuso da `coerenza-docs.yml` il 26 aprile 2026) |
+| `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo lychee: tutti i link (interni + esterni) |
 
 Le issue generate automaticamente compaiono nella [tab Issues](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/issues) con label `manutenzione`, `documentazione`, `link-rotti`, ecc.
 

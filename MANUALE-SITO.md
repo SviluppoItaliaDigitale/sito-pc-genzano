@@ -1460,7 +1460,7 @@ Il template `single.html` del tema mostra questa data come **box evidente** in c
 
 - Aggiorna `dataUltimaRevisione` **ogni volta** che cambi contenuto sostanziale (non per refusi o link morti).
 - **Non scrivere** date di revisione nel corpo del testo (tipo "Ultimo aggiornamento: Marzo 2026"): il riferimento è unico e vive nel frontmatter.
-- Il workflow `coerenza-docs.yml` verifica ogni lunedì che le 4 pagine abbiano il campo impostato.
+- Il workflow `audit-sito.yml` (sezione 32, lun 09:00 UTC) verifica ogni lunedì che le 4 pagine abbiano il campo impostato e in formato corretto.
 - La `.Lastmod` automatica di Hugo (git-based) viene **omessa** sulle pagine che hanno `dataUltimaRevisione`: lo controlla il partial `page-tools.html`.
 
 **Perché non usare la data automatica da git?** Le pagine legali cambiano raramente e la data di revisione ha valore giuridico-istituzionale: deve essere sotto controllo editoriale esplicito, non dipendere da un commit git che può riguardare anche modifiche minime (refusi, link aggiornati).
@@ -2267,7 +2267,7 @@ Regola d'oro: **prima di creare un nuovo partial o template, verifica se la stes
 
 **Aggiornamento automatico**: il workflow `check-allerta.yml` (vedi Parte 10) interroga il feed ufficiale DPC **ogni ora** e aggiorna `allerta.json` se il livello è cambiato. Nella maggior parte dei casi **non serve intervenire manualmente**.
 
-**Aggiornamento manuale**: serve solo se l'automazione fallisce o se si vuole forzare un messaggio istituzionale specifico. Modifica il file, commit, push. **Nota**: al successivo ciclo orario il workflow sovrascriverà il tuo intervento con il valore letto dal feed DPC. Per evitarlo, disabilita temporaneamente il workflow (vedi 10.9).
+**Aggiornamento manuale**: serve solo se l'automazione fallisce o se si vuole forzare un messaggio istituzionale specifico. Modifica il file, commit, push. **Nota**: al successivo ciclo orario il workflow sovrascriverà il tuo intervento con il valore letto dal feed DPC. Per evitarlo, disabilita temporaneamente il workflow (vedi 10.10).
 
 **Fonte dati ufficiale**: CSV pubblicato dal Dipartimento Protezione Civile, mirror mantenuto da opendatasicilia: `https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/bollettino-oggi-comuni-latest.csv`.
 
@@ -2387,8 +2387,7 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 | Audit Accessibilità | `lighthouse-audit.yml` | dopo ogni deploy, manuale | Lighthouse su home e 5 pagine chiave |
 | Aggiorna Bootstrap Italia | `update-bootstrap-italia.yml` | lunedì 06:00 UTC, manuale | Verifica nuove release Bootstrap Italia, apre PR |
 | Aggiornamento MANUALE | `aggiorna-manuale.yml` | lunedì 06:00 UTC, manuale | Confronta hash fonti AGID/DI, apre Issue se cambiate |
-| Coerenza documentazione | `coerenza-docs.yml` | lunedì 07:00 UTC, manuale | Verifica coerenza tra CLAUDE.md, archetype, regole, badge |
-| Audit settimanale sito | `audit-sito.yml` | lunedì 09:00 UTC, manuale | Audit testi: fatti istituzionali, numeri deprecati, immagini/allegati rotti, badge, frasi AGID |
+| **Audit completo sito** | `audit-sito.yml` | lunedì 09:00 UTC, manuale | **32 sezioni**: contenuti (1-15) + codice/template (16-22) + governance docs (23-32). Fuso da `coerenza-docs.yml` il 26 aprile 2026 |
 | Verifica link sito completo | `check-links-sito.yml` | lunedì 10:00 UTC, manuale | Crawl completo con **lychee**: tutti i link interni + esterni del sito, apre issue automatica su 404/drift |
 
 ### 10.2 — `deploy.yml` — Build e Deploy
@@ -2524,43 +2523,61 @@ exclude: |
 4. Aggiorna il campo "Ultimo check linee guida AGID" in testa al manuale.
 5. Commit + push, chiudi la Issue con un commento che cita il commit.
 
-### 10.9 — `coerenza-docs.yml` — Coerenza documentazione interna
-
-**Trigger**: cron mensile (1° del mese 07:00 UTC), manuale.
-
-**Cosa fa:**
-1. Legge `CLAUDE.md`, `archetypes/comunicazioni.md`, `.claude/rules/*.md`, `MANUALE-SITO.md`, `PIANO-EDITORIALE.md`, `themes/flavour-pcgenzano/layouts/partials/badge.html`.
-2. Verifica coerenza interna: le categorie badge elencate in `CLAUDE.md` combaciano con quelle dell'archetype? La palette hex combacia con `custom.css`? I riferimenti tra file non sono rotti?
-3. Se trova deviazioni, apre una Issue con la lista puntuale.
-
-**Quando intervenire**: sempre che apra una Issue. La coerenza tra questi file è critica per l'affidabilità delle AI che li usano come guida.
-
-### 10.10 — `audit-sito.yml` — Audit settimanale dei contenuti
+### 10.9 — `audit-sito.yml` — Audit completo settimanale (32 sezioni)
 
 **Trigger**: cron settimanale (lunedì 09:00 UTC), manuale.
 
-**Cosa fa:** scansiona i contenuti pubblicati (`content/`, `themes/`, `data/`, `hugo.toml`) per rilevare in modo automatico la stessa classe di errori che emerse nell'audit manuale di aprile 2026 (COI 14°→15°, cartello AR4 mancante, citazioni di 115/118 come numero da chiamare, placeholder residui). Apre una Issue solo se trova deviazioni.
+**Storia**: nato ad aprile 2026 con 15 controlli sui contenuti, esteso il 26 aprile 2026 a 32 controlli inglobando il workflow `coerenza-docs.yml` (precedentemente lun 07:00) per consolidare in un'unica issue settimanale tutta la qualità del sito (testi, codice, governance docs).
 
-**Controlli effettuati:**
-1. **COI** — tutti i riferimenti al Centro Operativo Intercomunale devono usare il grado `15°`. Qualsiasi altro grado (14°, 16°, ecc.) genera errore.
-2. **NUE 112** — nessun contenuto deve istruire il cittadino a chiamare 115, 118 o 1515 (nel Lazio l'unico numero è il 112). La grep distingue gli usi imperativi ("chiamare il 115") dalle citazioni legittime come nome di organizzazione ("ARES 118").
-3. **Telefono istituzionale coerente** — le cifre del numero in `hugo.toml` (`telefono`) devono coincidere con ogni altra occorrenza del numero di sede. Verifica anche che non esistano attributi `href="tel:..."` hard-coded con spazi (violano RFC 3966 E.164); le righe con template Go `{{ }}` sono escluse.
-4. **Sede e CAP** — l'indirizzo in `hugo.toml` è la fonte di verità; warning se compare un CAP diverso da `00045` accanto a "Genzano".
-5. **Placeholder** — segnala `TODO`, `TBD`, `FIXME`, `XXX`, `lorem ipsum`, `DA COMPLETARE`, `DA VERIFICARE`, template Go non espansi.
-6. **File statici rotti** — ogni `src=/images/...`, `href=/allegati/...`, `url: /cartelli/...` nei contenuti deve puntare a un file realmente presente in `static/`. I riferimenti a `/documenti/` sono filtrati perché quella cartella è gestita manualmente sul server Aruba.
-7. **Badge articoli** — ogni badge usato nel frontmatter deve essere presente nello slice `$known` di `themes/flavour-pcgenzano/layouts/partials/badge.html`. Il confronto è case-insensitive per replicare la logica del template (`$lower := $badge | lower`). I badge non noti ricevono un colore automatico ma vengono segnalati.
-8. **Anno articoli** — anni fuori dall'intervallo `2020..anno_corrente+1` sono tipicamente typo di data; genera errore.
-9. **Allegati senza dimensione** — WCAG 3.3.5: ogni voce nell'array `allegati:` del frontmatter dovrebbe dichiarare `dimensione:`. Warning, non errore bloccante.
-10. **Frasi AGID lunghe** — euristica: articoli con 3 o più frasi oltre 40 parole ricevono warning. Il linguaggio PA raccomanda frasi ≤ 20 parole.
-11. **Pagine `_index.md` in bozza** — nessuna pagina istituzionale dovrebbe avere `draft: true` (sparirebbe dalla build).
+**Cosa fa:** scansiona il sito completo per rilevare automaticamente la stessa classe di errori che emerse dagli audit manuali di aprile 2026 — COI 14°→15°, cartello AR4 mancante, citazioni di 115/118 come numero da chiamare, duplicate target paths sulle 7 lingue, articoli `draft:true` dimenticati con data passata, link interni a slug typo, residui di refactoring (CCV-MB, manuale lombardo), `/index.html` reintrodotti dopo il fix Chrome cache. Apre **una sola issue settimanale** se trova deviazioni.
 
-**Formato Issue:** la Issue aggregata mostra un report markdown con sezioni numerate 1-11. Gli errori sono marcati `❌` (da correggere prima del prossimo deploy), i warning `⚠️` (valutare se falso positivo o bug reale).
+**32 controlli effettuati** — divisi in 3 macro-aree:
 
-**Quando intervenire:** ogni volta che apre una Issue. Il workflow è tarato per essere conservativo (pochi falsi positivi). Se un warning ricorrente è un falso positivo legittimo (es. una frase lunga è una citazione istituzionale), non basta chiudere la Issue: aggiungi un'eccezione mirata al workflow così la segnalazione non si ripete.
+#### Contenuti pubblicati (sezioni 1-15)
+1. **COI** — riferimenti al 15° Centro Operativo Intercomunale (errore se grado diverso).
+2. **NUE 112** — nessuna istruzione a chiamare 115/118/1515 (esclude usi legittimi tipo "ARES 118" come nome organizzazione, "Non chiamare il 115" didattico).
+3. **Telefono istituzionale coerente** — cifre da `hugo.toml` confrontate con tutto il sito; `href="tel:"` senza spazi (RFC 3966 E.164).
+4. **Sede e CAP** — warning su CAP ≠ `00045` accanto a "Genzano".
+5. **Placeholder** — `TODO`, `TBD`, `FIXME`, `XXX`, `lorem ipsum`, `DA COMPLETARE`, template Go non espansi.
+6. **File statici** — `src`, `href`, `url:` puntano a file esistenti in `static/`.
+7. **Badge** — usati negli articoli devono essere in `badge.html` (case-insensitive).
+8. **Anno articoli** — fuori `2020..anno_corrente+1` = typo.
+9. **Allegati senza dimensione** (WCAG 3.3.5).
+10. **Frasi AGID** — euristica: ≥3 frasi >40 parole = warning.
+11. **Pagine `_index.md` con `draft:true`** (sparirebbero dal sito).
+12. **Schede stampabili linkate** ma file HTML mancante.
+13. **Modalità emergenza** attiva da troppo tempo (>14 giorni senza aggiornamento = probabile dimenticanza).
+14. **Pagine legali con `dataUltimaRevisione` >18 mesi** (rivedere il contenuto).
+15. **ID widget duplicati** nella stessa pagina (rompono il bottone "Carica").
 
-**Perché esiste:** l'audit manuale di aprile 2026 ha trovato errori che convivevano da tempo nel sito senza che nessuno se ne accorgesse (COI 14° nel footer, AR4 404, `href="tel:+39 06 9362600"` con spazi che alcuni browser mobile non onoravano). Questo workflow settimanale evita che errori analoghi si sedimentino di nuovo.
+#### Codice e template (sezioni 16-22)
+16. **Hugo build pulito** — `hugo --minify --printPathWarnings` non emette warning di rilievo (es. duplicate target paths sulle 7 lingue come è successo ad aprile 2026).
+17. **Articoli `draft:true`** — regola del progetto: nessun articolo in revisione, solo immediato o calendarizzato (`draft:false` + data futura).
+18. **Link interni a slug inesistenti** — rileva typo o slug rinominati post-creazione (es. `chiamare-112-correttamente` vs `segnalare-emergenze-112-come-fare`).
+19. **Sintassi JavaScript** — `node --check` su tutti i `.js` standalone in `static/` (giochi, quiz, scenari, mappa, abili-a-proteggere).
+20. **Validità YAML workflow** — `python3 yaml.safe_load` su ogni `.github/workflows/*.yml` per intercettare il pattern velenoso heredoc-Python (vedi `.claude/rules/05-github-aruba-deploy.md` § "qualità YAML").
+21. **Path assoluti nei template** — `href="/..."` hardcoded che funziona su Aruba ma è rotto su GitHub Pages (subpath). Tutti i path interni devono usare `relURL` / `absURL`.
+22. **Residui di refactoring** — `/index.html`, `intercomunale lombarda`, `Imbersago`, `CCV-MB`, `Monza-Brianza`. Implementa la regola `.claude/rules/07-proattivita-coerenza.md`: dopo un fix di pattern, sweep continuo per evitare reintroduzioni.
 
-### 10.11 — `check-links-sito.yml` — Verifica link sito completo
+#### Governance docs (sezioni 23-32)
+23. **File di governance** esistenti (`CLAUDE.md`, `MANUALE-SITO.md`, `PIANO-EDITORIALE.md`, archetypes, 7 rule files).
+24. **Import `@.claude/rules/*.md`** in `CLAUDE.md` puntano a file esistenti.
+25. **Badge list coerente** fra `badge.html`, `CLAUDE.md`, `rule 02`, `archetypes/comunicazioni.md` (la fonte di verità è `badge.html`, le altre devono allinearsi).
+26. **Formato data articoli** — solo `AAAA-MM-GG`, mai `AAAA-MM-DDTHH:MM:SSZ` (Hugo escluderebbe l'articolo dal build).
+27. **Frontmatter completo** — campi obbligatori `title date description badge priorita autore draft` presenti in ogni articolo.
+28. **Riferimenti incrociati** in `CLAUDE.md` verso `MANUALE-SITO.md`, `PIANO-EDITORIALE.md`, workflow `aggiorna-manuale.yml`.
+29. **Pagine `_index.md` istituzionali** (19 pagine obbligatorie: privacy, note-legali, accessibilità, social-media-policy, contatti, ecc.).
+30. **Shortcode `foto`** presente in `themes/.../shortcodes/` e documentato in `MANUALE-SITO.md` e `rule 02`.
+31. **Script `scripts/export-contesto-ai.sh`** presente ed eseguibile (`chmod +x`).
+32. **`dataUltimaRevisione`** sulle 4 pagine legali in formato `AAAA-MM-GG` tra virgolette.
+
+**Formato Issue:** report markdown con 32 sezioni numerate. `❌` = errore (da correggere prima del prossimo deploy), `⚠️` = warning (valutare se falso positivo). Label issue: `audit`, `qualità-testi`, `manutenzione`.
+
+**Quando intervenire:** ogni volta che apre una Issue. Il workflow è tarato per essere conservativo (pochi falsi positivi). Se un warning ricorrente è un falso positivo legittimo (es. una citazione lunga, un articolo intenzionalmente con anno fuori range), aggiungi un'eccezione mirata al workflow così la segnalazione non si ripete.
+
+**Perché esiste:** gli audit manuali di aprile 2026 hanno trovato errori che convivevano da tempo nel sito senza che nessuno se ne accorgesse (COI 14° nel footer, AR4 404, `href="tel:+39 06 9362600"` con spazi che alcuni browser mobile non onoravano, duplicate target paths sulle 7 lingue, link interni a slug typo che il render-link hook nascondeva graceful, `draft:true` con data passata mai pubblicato). Questo workflow evita che errori analoghi si sedimentino di nuovo.
+
+### 10.10 — `check-links-sito.yml` — Verifica link sito completo
 
 **Trigger:** lunedì ore 10:00 UTC, esecuzione manuale.
 
@@ -2590,7 +2607,7 @@ exclude: |
 
 **Distinzione con `check-normativa-links.yml`:** quest'ultimo verifica link **specifici** (Normattiva, DPC, Lazio normativi, PDF piano emergenza) con pre-pattern, messaggi dedicati e dominio-specifica. Il check completo con lychee è il **catch-all**: tutto il resto del sito (hub strumenti, widget, card, contenuti degli articoli, link PDF nei documenti). Girano 2 ore di distanza per non sovraccaricare il runner.
 
-### 10.12 — Disabilitare temporaneamente un workflow
+### 10.11 — Disabilitare temporaneamente un workflow
 
 Due modi:
 
