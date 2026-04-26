@@ -1,0 +1,66 @@
+{{/*
+  Shortcode: pittogramma
+  Inserisce un pittogramma standardizzato (ISO 7010 o ARASAAC) accanto al testo
+  per migliorare la comprensione anche di bambini, stranieri e persone con
+  difficoltà cognitive.
+
+  Parametri (named):
+    codice  — codice pittogramma. Per ISO 7010 usare il codice ufficiale
+              (W001 = pericolo generale, E002 = uscita emergenza dx, F001 =
+              estintore, M001 = obbligo, P001 = divieto, ecc.).
+              Per ARASAAC usare prefisso "aac:<id>" (es. "aac:2453").
+    alt     — testo alternativo per screen reader e fallback (obbligatorio
+              se non si vuole usare il default del file SVG).
+    label   — etichetta visibile sotto il pittogramma (opzionale).
+    size    — dimensione lato in pixel (default 64).
+    set     — "iso7010" (default) | "arasaac".
+
+  Esempi:
+    {{< pittogramma codice="W001" alt="Attenzione: pericolo generale" >}}
+    {{< pittogramma codice="E002" alt="Uscita di emergenza" label="Uscita" size="96" >}}
+    {{< pittogramma codice="2453" set="arasaac" alt="Bambino che corre via" >}}
+
+  Output: <figure class="pittogramma"> con <img> SVG, alt accessibile, eventuale
+  <figcaption>. Stampa-friendly: si stampa anche in B/N grazie ai contorni neri
+  dei pittogrammi ISO 7010.
+*/}}
+
+{{- $codice := .Get "codice" -}}
+{{- $alt := .Get "alt" -}}
+{{- $label := .Get "label" -}}
+{{- $size := .Get "size" | default "64" -}}
+{{- $set := .Get "set" | default "iso7010" -}}
+
+{{- if not $codice -}}
+  {{ errorf "shortcode pittogramma: parametro 'codice' obbligatorio in %s" .Page.File.Path }}
+{{- end -}}
+
+{{- /* Risoluzione del filename: per ISO 7010 cerco il primo file che inizia con il codice */ -}}
+{{- $filename := "" -}}
+{{- if eq $set "iso7010" -}}
+  {{- $dir := "static/pittogrammi/iso7010" -}}
+  {{- range (readDir $dir) -}}
+    {{- if and (not .IsDir) (hasPrefix .Name (printf "%s-" $codice)) -}}
+      {{- $filename = printf "/pittogrammi/iso7010/%s" .Name -}}
+    {{- end -}}
+  {{- end -}}
+{{- else if eq $set "arasaac" -}}
+  {{- $filename = printf "/pittogrammi/arasaac/%s.png" $codice -}}
+{{- end -}}
+
+{{- if not $filename -}}
+  <span class="pittogramma-mancante" role="img" aria-label="{{ $alt | default (printf "Pittogramma %s non trovato" $codice) }}">
+    [{{ $codice }}{{ with $alt }} — {{ . }}{{ end }}]
+  </span>
+{{- else -}}
+<figure class="pittogramma pittogramma-{{ $set }}" role="img" aria-label="{{ $alt }}">
+  <img src="{{ $filename | relURL }}"
+       alt="{{ $alt }}"
+       width="{{ $size }}"
+       height="{{ $size }}"
+       loading="lazy">
+  {{- with $label -}}
+  <figcaption class="pittogramma-label">{{ . }}</figcaption>
+  {{- end -}}
+</figure>
+{{- end -}}

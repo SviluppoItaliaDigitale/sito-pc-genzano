@@ -142,6 +142,20 @@ Produce `<figure>` con immagine cliccabile (apre a dimensione intera in nuova sc
 - **Copertina**: generata automaticamente da `scripts/genera-cover.py` (gradiente blu + titolo + badge + fascia istituzionale). Nome file = slug dell'articolo.
 - **Foto evento**: fornita dall'utente. Nome file DIVERSO dallo slug (es. `2026-04-20-incendio-cecchina-casolare.webp` invece del solo slug), così il generatore non la sovrascrive. Deve comunque avere la fascia blu istituzionale.
 
+### Shortcode `pittogramma` (ISO 7010 + ARASAAC)
+
+Per affiancare un testo a un **pittogramma standardizzato** (sicurezza ISO 7010 oppure CAA/AAC ARASAAC) — utile a bambini, stranieri, persone con disabilità cognitive — usare lo shortcode `pittogramma`:
+
+```go-html-template
+{{< pittogramma codice="W001" alt="Pericolo generale" >}}
+{{< pittogramma codice="E002" alt="Uscita di emergenza" label="Uscita →" size="96" >}}
+{{< pittogramma codice="2453" set="arasaac" alt="Bambino che corre" >}}
+```
+
+Librerie in `static/pittogrammi/iso7010/` (PD/CC0) e `static/pittogrammi/arasaac/` (CC BY-NC-SA, attribuzione obbligatoria). Catalogo pubblico: `/pittogrammi/`. Download massivo via `scripts/scarica-pittogrammi-iso7010.sh` e `scripts/scarica-pittogrammi-arasaac.sh` (esecuzione locale). Documentazione completa in `MANUALE-SITO.md` Parte 3.16.
+
+**Regola**: il pittogramma è complemento, non sostituto del testo. `alt` sempre obbligatorio. Massimo 3-4 per pagina.
+
 ### Assistente guidato (`/assistente/`)
 
 Pagina interattiva che guida il cittadino con domande semplici fino a una risposta di autoprotezione. È un **albero decisionale deterministico in JavaScript puro** (nessun LLM, nessuna API runtime), coerente con il vincolo di sito statico Hugo e con la responsabilità istituzionale di non dare indicazioni generate in emergenza.

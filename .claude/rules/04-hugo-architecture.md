@@ -221,6 +221,30 @@ Il tema personalizza il rendering dei link Markdown tramite `layouts/_default/_m
 
 Se estendi la lista di estensioni statiche o modifichi il comportamento di `relURL`, aggiorna **entrambi** i file `render-link.html` (progetto e tema) per mantenere la coerenza.
 
+### Pittogrammi standardizzati (shortcode `pittogramma`)
+
+Il tema definisce un secondo shortcode oltre a `foto`: **`pittogramma`**, usato per inserire pittogrammi standardizzati ISO 7010 (sicurezza) o ARASAAC (CAA/AAC) accanto al testo.
+
+```go-html-template
+{{< pittogramma codice="W001" alt="Pericolo generale" >}}
+{{< pittogramma codice="E002" alt="Uscita di emergenza" label="Uscita →" size="96" >}}
+{{< pittogramma codice="2453" set="arasaac" alt="Bambino che corre" >}}
+```
+
+**File coinvolti:**
+- `themes/flavour-pcgenzano/layouts/shortcodes/pittogramma.html` — shortcode con risoluzione automatica del filename (`<codice>-*.svg`).
+- `static/pittogrammi/iso7010/` — SVG ISO 7010 (PD/CC0). Naming: `<CODICE>-<descrizione>.svg`.
+- `static/pittogrammi/arasaac/` — PNG ARASAAC (CC BY-NC-SA, attribuzione obbligatoria). Naming: `<id>.png`.
+- CSS in `themes/flavour-pcgenzano/static/css/custom.css` — sezione "PITTOGRAMMI ISO 7010 e ARASAAC" + "Galleria pittogrammi".
+- `scripts/scarica-pittogrammi-iso7010.sh` e `scripts/scarica-pittogrammi-arasaac.sh` — download massivo da Wikimedia Commons / arasaac.org (esecuzione locale, sandbox blocca host esterni).
+- Pagina pubblica catalogo: `content/pittogrammi/_index.md` → `/pittogrammi/`.
+
+**Regole operative:**
+- Pittogrammi marcati funzionali: il CSS `html.a11y-hide-images .pittogramma img { visibility: visible !important }` li mantiene visibili anche con preferenza "Nascondi immagini" del toolbar.
+- L'attributo `alt` è **obbligatorio**: il pittogramma è complemento al testo, non sostituto (WCAG 1.1.1).
+- Massimo 3-4 pittogrammi per pagina.
+- Documentazione editoriale completa in `MANUALE-SITO.md` Parte 3.16.
+
 ### Strumenti di Accessibilità (toolbar utente)
 
 In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo blu istituzionale** (FAB) con icona `bi-universal-access` che apre un **dialog modale** con preferenze di lettura: dimensione testo (4 livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (default/alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande.

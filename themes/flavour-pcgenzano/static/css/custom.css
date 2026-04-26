@@ -2498,3 +2498,68 @@ article .galleria img {
 @media print {
   .article-toc { display: none !important; }
 }
+
+/* ── PITTOGRAMMI ISO 7010 e ARASAAC ──
+   Componente: shortcode {{< pittogramma >}}.
+   Inline per default (figure dentro paragrafi), a blocco se label presente.
+   Compatibile con le preferenze del toolbar di accessibilità (scala di
+   grigi conserva contorno; "nascondi immagini" mantiene il pittogramma
+   perché è funzionale, non decorativo). */
+.pittogramma {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 0.4rem;
+  gap: 0.2rem;
+}
+.pittogramma img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.pittogramma-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #555;
+  text-align: center;
+  line-height: 1.1;
+  max-width: 8rem;
+}
+.pittogramma-mancante {
+  display: inline-block;
+  padding: 0 6px;
+  background: #fff3cd;
+  border: 1px dashed #b45309;
+  color: #92400e;
+  font-size: 0.85em;
+  border-radius: 4px;
+}
+/* Scala di grigi del toolbar a11y: lascia leggibili i pittogrammi tramite
+   contrasto interno. Eccezione esplicita su .pittogramma img per non
+   filtrarli due volte (l'html.a11y-grayscale già applica il filtro globale). */
+html.a11y-grayscale .pittogramma img { filter: contrast(1.2); }
+/* Nascondi immagini (toolbar a11y): i pittogrammi sono FUNZIONALI, restano
+   visibili. Override esplicito che vince su .a11y-hide-images img. */
+html.a11y-hide-images .pittogramma img { visibility: visible !important; }
+/* Stampa: i pittogrammi sono utili anche su carta (vie di fuga, regole). */
+@media print {
+  .pittogramma img { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+/* Galleria pittogrammi (pagina /pittogrammi/) */
+.pittogrammi-galleria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 1rem 0 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid var(--pc-primary, #003366);
+}
+.pittogrammi-galleria .pittogramma {
+  margin: 0;
+  flex: 0 0 auto;
+}
