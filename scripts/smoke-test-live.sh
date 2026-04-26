@@ -26,13 +26,41 @@ echo "=== Smoke test live: $BASE ==="
 echo ""
 
 # 1. HTTP 200 sulle pagine principali
-echo "## 1. Status HTTP pagine principali"
-for path in "/" "/cartografia/" "/quizpc/" "/giochi/" "/assistente/" \
-            "/comunicazioni/" "/cosa-fare-adesso/" "/numeri-utili/" \
-            "/contatti/" "/formazionepc/" "/abili-a-proteggere/" \
-            "/cerca/" "/area-download/" "/formazione/" "/faq/" \
-            "/rischi-prevenzione/" "/diventa-volontario/" \
-            "/piano-emergenza/" "/piano-familiare/" "/glossario/"; do
+echo "## 1. Status HTTP pagine principali (scoperte dinamicamente da content/)"
+# Scopre dinamicamente tutte le pagine di primo livello (_index.md in
+# content/<sezione>/) escludendo le directory di lingua, articoli e
+# materiali interni che non sono pagine pubbliche da verificare con
+# uno smoke test (kit didattici, schede, articoli singoli).
+EXCLUDED_DIRS="english deutsch espanol francais portugues romana esperanto comunicazioni archivio-storico"
+PAGES_DYNAMIC=""
+if [ -d content ]; then
+  for idx in content/*/_index.md; do
+    [ -f "$idx" ] || continue
+    sezione=$(basename "$(dirname "$idx")")
+    skip=false
+    for ex in $EXCLUDED_DIRS; do
+      [ "$sezione" = "$ex" ] && { skip=true; break; }
+    done
+    [ "$skip" = "true" ] && continue
+    PAGES_DYNAMIC="$PAGES_DYNAMIC /$sezione/"
+  done
+  # Aggiungi anche la home e le mini-app statiche con index.html
+  PAGES_DYNAMIC="/ /comunicazioni/ $PAGES_DYNAMIC"
+  for d in static/*/index.html; do
+    sezione=$(basename "$(dirname "$d")")
+    PAGES_DYNAMIC="$PAGES_DYNAMIC /$sezione/"
+  done
+fi
+# Fallback se eseguito fuori dal repo
+if [ -z "$PAGES_DYNAMIC" ]; then
+  PAGES_DYNAMIC="/ /cartografia/ /quizpc/ /giochi/ /assistente/ \
+                 /comunicazioni/ /cosa-fare-adesso/ /numeri-utili/ \
+                 /contatti/ /formazionepc/ /abili-a-proteggere/ \
+                 /cerca/ /area-download/ /formazione/ /faq/ \
+                 /rischi-prevenzione/ /diventa-volontario/ \
+                 /piano-emergenza/ /piano-familiare/ /glossario/"
+fi
+for path in $PAGES_DYNAMIC; do
   s=$(status "$BASE$path")
   if [ "$s" = "200" ]; then
     ok "$path → $s"
@@ -40,6 +68,28 @@ for path in "/" "/cartografia/" "/quizpc/" "/giochi/" "/assistente/" \
     err "$path → $s"
   fi
 done
+
+# 1b. Articoli con data ≤ oggi (verifica i 5 più recenti pubblicati)
+echo ""
+echo "## 1b. Articoli pubblicati più recenti (5)"
+if [ -d content/comunicazioni ]; then
+  TODAY=$(date -u +%Y-%m-%d)
+  RECENT=$(for art in content/comunicazioni/*.md; do
+    D=$(awk '/^---$/{c++; next} c==1 && /^date:/ {sub(/^date:[[:space:]]*"?/,""); sub(/"?[[:space:]]*$/,""); print; exit}' "$art" 2>/dev/null)
+    DRAFT=$(awk '/^---$/{c++; next} c==1 && /^draft:/ {sub(/^draft:[[:space:]]*/,""); print; exit}' "$art" 2>/dev/null)
+    [ -z "$D" ] && continue
+    [ "$DRAFT" = "true" ] && continue
+    [ "$D" \> "$TODAY" ] && continue
+    slug=$(basename "$art" .md)
+    echo "$D $slug"
+  done | sort -r | head -5)
+  while IFS= read -r line; do
+    [ -z "$line" ] && continue
+    slug=$(echo "$line" | cut -d' ' -f2)
+    s=$(status "$BASE/comunicazioni/$slug/")
+    [ "$s" = "200" ] && ok "/comunicazioni/$slug/ → $s" || err "/comunicazioni/$slug/ → $s"
+  done <<< "$RECENT"
+fi
 
 # 2. Lingue (7 traduzioni)
 echo ""
