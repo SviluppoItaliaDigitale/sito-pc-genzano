@@ -139,7 +139,7 @@ In eventi estesi collaborano:
 
 ## Per approfondire
 
-- Articolo: [Piano Comunale di PC](/comunicazioni/2026-04-15-piano-comunale-protezione-civile-cosa-contiene/)
+- Articolo: [Piano Comunale di PC](/piano-emergenza/)
 - Articolo: [Cartografia operativa del Piano](/comunicazioni/2026-06-25-cartografia-operativa-piano-comunale/)
 - [DPC — Sistema PC](https://www.protezionecivile.gov.it/it/sistema-nazionale)
 - [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)

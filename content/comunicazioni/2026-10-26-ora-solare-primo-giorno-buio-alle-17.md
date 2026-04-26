@@ -112,7 +112,7 @@ L'ora solare coincide con **clima tipicamente più piovoso**:
 ## Per approfondire
 
 - [Cambio ora solare — preparazione](/comunicazioni/2026-10-25-cambio-ora-solare-preparazione-sera/)
-- [Prima pioggia autunnale](/comunicazioni/2026-09-22-prima-pioggia-autunnale-rischi/)
+- [Prima pioggia autunnale](/comunicazioni/2026-09-22-prima-pioggia-intensa-autunno/)
 - [Preparazione inverno](/comunicazioni/2026-10-17-preparazione-inverno-mezzi-antineve/)
 
 In emergenza: **112**.

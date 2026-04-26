@@ -151,7 +151,7 @@ L'animale domestico vive con noi e **dipende da noi**. In emergenza la sua sopra
 
 ## Per approfondire
 
-- [Piano di emergenza familiare](/comunicazioni/2026-10-10-piano-emergenza-famiglia/)
+- [Piano di emergenza familiare](/comunicazioni/2026-10-10-piano-famiglia-emergenza-come-fare/)
 - [Kit emergenza famiglia](/comunicazioni/2026-09-02-kit-emergenza-famiglia-72-ore/)
 - [Ministero della Salute — Animali](https://www.salute.gov.it/)
 

@@ -215,7 +215,7 @@ A Genzano:
 
 ## Per approfondire
 
-- [Monossido di carbonio](/comunicazioni/2026-10-02-monossido-carbonio-prevenzione/)
+- [Monossido di carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
 - [Manutenzione caldaia](/comunicazioni/2026-10-27-manutenzione-caldaia-controllo-annuale/)
 - [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/)
 

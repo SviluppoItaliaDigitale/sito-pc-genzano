@@ -2,7 +2,7 @@
 title: "Come si rileva il danno sismico a una chiesa: la scheda Modello A-DC del Dipartimento di Protezione Civile"
 description: "Dopo un terremoto, tecnici specializzati rilevano il danno alle chiese con una scheda standardizzata — Modello A-DC — che individua 28 meccanismi di collasso tipici. Guida alla lettura del manuale DPC."
 date: 2027-07-15
-draft: true
+draft: false
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

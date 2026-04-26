@@ -185,6 +185,6 @@ Le buone pratiche valgono tutto l'anno:
 
 - [Polizia Postale](https://www.commissariatodips.it/)
 - [Garante Privacy](https://www.garanteprivacy.it/)
-- [App ufficiali PC](/comunicazioni/2026-09-14-app-ufficiali-protezione-civile/)
+- [App ufficiali PC](/comunicazioni/2026-09-14-app-protezione-civile-fonti-ufficiali/)
 
 In emergenza: **112**.

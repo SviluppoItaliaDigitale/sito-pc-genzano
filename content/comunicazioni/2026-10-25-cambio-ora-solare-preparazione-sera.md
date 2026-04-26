@@ -104,6 +104,6 @@ Il tema del **cambio** tra ora legale e ora solare è oggetto di discussione a l
 ## Per approfondire
 
 - [Preparazione inverno](/comunicazioni/2026-10-17-preparazione-inverno-mezzi-antineve/)
-- [Incidenti domestici e sicurezza](/comunicazioni/2026-09-23-incendi-domestici-prevenzione/)
+- [Incidenti domestici e sicurezza](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/)
 
 In emergenza: **112**.

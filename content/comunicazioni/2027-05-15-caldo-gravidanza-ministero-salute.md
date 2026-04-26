@@ -10,7 +10,7 @@ image_alt: "Donna incinta che beve un bicchiere d'acqua vicino a una finestra co
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
-draft: true
+draft: false
 ---
 
 In estate il **caldo** può rappresentare un rischio per la **donna in gravidanza**: l'aumento del volume del sangue materno richiede un'idratazione adeguata, la disidratazione può favorire infezioni urinarie e, nei casi più delicati, aumentare il rischio di **parto prematuro**. Alcune semplici precauzioni permettono di vivere l'estate serenamente, tutelando la salute della futura mamma e del suo bambino.

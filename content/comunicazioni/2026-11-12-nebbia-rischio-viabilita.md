@@ -148,6 +148,6 @@ In caso di nebbia intensa con ripercussioni:
 
 - [Ora solare — buio precoce](/comunicazioni/2026-10-26-ora-solare-primo-giorno-buio-alle-17/)
 - [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/)
-- [Chiamare il 112](/comunicazioni/2026-10-08-chiamare-112-correttamente/)
+- [Chiamare il 112](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/)
 
 In emergenza: **112**.

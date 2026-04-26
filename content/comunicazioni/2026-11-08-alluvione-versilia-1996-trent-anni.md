@@ -124,8 +124,8 @@ Un pensiero alle **14 persone** che persero la vita in quella notte, alle loro f
 
 ## Per approfondire
 
-- [Rischio idrogeologico](/comunicazioni/2026-10-01-rischio-idrogeologico-ottobre/)
-- [Prima pioggia autunnale](/comunicazioni/2026-09-22-prima-pioggia-autunnale-rischi/)
+- [Rischio idrogeologico](/comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico/)
+- [Prima pioggia autunnale](/comunicazioni/2026-09-22-prima-pioggia-intensa-autunno/)
 - [Cambiamento climatico e PC](/comunicazioni/2026-09-24-cambiamento-climatico-protezione-civile/)
 
 In emergenza: **112**.

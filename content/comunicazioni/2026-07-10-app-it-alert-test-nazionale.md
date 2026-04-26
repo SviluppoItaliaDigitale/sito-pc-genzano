@@ -152,7 +152,7 @@ Il sistema sta evolvendo verso:
 ## Per approfondire
 
 - Articolo: [IT-alert: come funziona](/comunicazioni/2026-06-11-it-alert-come-funziona-reagire/)
-- Articolo: [Come si legge un'allerta meteo](/comunicazioni/2026-04-05-come-si-legge-allerta-meteo-codici-colore/)
+- Articolo: [Come si legge un'allerta meteo](/allerte-meteo/)
 - [IT-alert — sito ufficiale](https://www.it-alert.gov.it/)
 - [DPC — Allertamento](https://www.protezionecivile.gov.it/)
 - [Polizia Postale](https://www.commissariatodips.it/)

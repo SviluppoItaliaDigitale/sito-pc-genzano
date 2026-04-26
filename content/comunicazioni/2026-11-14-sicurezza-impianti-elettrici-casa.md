@@ -163,7 +163,7 @@ Verificare con commercialista o consulente tecnico.
 
 ## Per approfondire
 
-- [Incendi domestici](/comunicazioni/2026-09-23-incendi-domestici-prevenzione/)
+- [Incendi domestici](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/)
 - [Manutenzione caldaia](/comunicazioni/2026-10-27-manutenzione-caldaia-controllo-annuale/)
 - [CEI — Comitato Elettrotecnico Italiano](https://www.ceinorme.it/)
 

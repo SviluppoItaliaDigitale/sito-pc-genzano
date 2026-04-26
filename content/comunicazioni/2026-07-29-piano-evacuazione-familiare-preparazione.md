@@ -292,8 +292,8 @@ Ogni 6-12 mesi:
 
 ## Per approfondire
 
-- Articolo: [Piano famiglia di emergenza](/comunicazioni/2026-06-26-piano-famiglia-emergenza-preparazione-casalinga/)
-- Articolo: [Kit emergenza casalingo](/comunicazioni/2026-06-18-kit-emergenza-domestico-72-ore/)
+- Articolo: [Piano famiglia di emergenza](/comunicazioni/2026-06-26-piano-famiglia-estate-emergenze/)
+- Articolo: [Kit emergenza casalingo](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
 - Articolo: [Disabilità in emergenza](/comunicazioni/2026-07-23-disabilita-emergenza-piani-accessibili/)
 - [DPC — Io non rischio](https://iononrischio.protezionecivile.it/)
 - [Ministero Interno — Protezione Civile](https://www.interno.gov.it/)

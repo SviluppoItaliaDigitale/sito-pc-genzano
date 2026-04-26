@@ -129,6 +129,6 @@ Se rimani bloccato per neve o ghiaccio:
 
 - [Preparazione inverno](/comunicazioni/2026-10-17-preparazione-inverno-mezzi-antineve/)
 - [Codice della Strada — ACI](https://www.aci.it/)
-- [Chiamare il 112](/comunicazioni/2026-10-08-chiamare-112-correttamente/)
+- [Chiamare il 112](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/)
 
 In emergenza: **112**.

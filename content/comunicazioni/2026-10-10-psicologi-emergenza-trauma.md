@@ -12,7 +12,7 @@ scadenza: ""
 area: "Italia · sistema nazionale"
 allegati: []
 
-draft: true
+draft: false
 ---
 
 Quando si parla di emergenze e calamità, la prima immagine è quella dei mezzi di soccorso, dei vigili del fuoco, dei volontari in arancione. Ma esiste un altro tipo di intervento meno visibile e altrettanto necessario: il **supporto psicologico**. Si rivolge alle persone colpite — e, importante, anche a chi le soccorre.

@@ -279,7 +279,7 @@ L'Italia sta **migliorando** nella gestione.
 ## Per approfondire
 
 - Articolo: [IT-alert test nazionale](/comunicazioni/2026-07-10-app-it-alert-test-nazionale/)
-- Articolo: [Allerte meteo codici colore](/comunicazioni/2026-04-05-come-si-legge-allerta-meteo-codici-colore/)
+- Articolo: [Allerte meteo codici colore](/allerte-meteo/)
 - [DPC — Comunicazione](https://www.protezionecivile.gov.it/)
 - [Fact-checking — NewsGuard](https://www.newsguardtech.com/)
 - [Commissione Europea — EU vs Disinfo](https://euvsdisinfo.eu/)

@@ -176,8 +176,8 @@ Non sono solo "estetica": sono **infrastruttura ambientale**.
 
 ## Per approfondire
 
-- [Rischio idrogeologico](/comunicazioni/2026-10-01-rischio-idrogeologico-ottobre/)
+- [Rischio idrogeologico](/comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico/)
 - [Cambiamento climatico](/comunicazioni/2026-09-24-cambiamento-climatico-protezione-civile/)
-- [Parco Regionale Castelli Romani](/comunicazioni/2026-09-29-parco-castelli-romani/)
+- [Parco Regionale Castelli Romani](/comunicazioni/2026-09-29-parco-castelli-romani-collaborazione/)
 
 In emergenza: **112**.

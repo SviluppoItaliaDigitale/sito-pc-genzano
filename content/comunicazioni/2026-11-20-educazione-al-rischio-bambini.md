@@ -174,7 +174,7 @@ Non è solo responsabilità dei singoli genitori: è responsabilità **istituzio
 ## Per approfondire
 
 - [Settimana PC nelle scuole](/comunicazioni/2026-10-18-settimana-protezione-civile-scuole/)
-- [Prove evacuazione scuole](/comunicazioni/2026-09-06-prove-evacuazione-scuole/)
+- [Prove evacuazione scuole](/comunicazioni/2026-09-06-rientro-scuola-prove-evacuazione/)
 - [UNICEF — Diritti dei bambini](https://www.unicef.it/)
 
 In emergenza: **112**.

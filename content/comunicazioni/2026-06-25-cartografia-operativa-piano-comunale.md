@@ -130,7 +130,7 @@ Alcuni elementi chiave da riconoscere:
 
 ## Per approfondire
 
-- Articolo: [Piano Comunale di Protezione Civile](/comunicazioni/2026-04-15-piano-comunale-protezione-civile-cosa-contiene/)
+- Articolo: [Piano Comunale di Protezione Civile](/piano-emergenza/)
 - Articolo: [Microzonazione sismica nei Castelli](/comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/)
 - Pagina: [Aree di emergenza](/aree-emergenza/)
 - [ISPRA — Portale Cartografico](https://www.isprambiente.gov.it/)

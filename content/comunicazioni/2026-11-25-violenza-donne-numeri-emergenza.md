@@ -213,6 +213,6 @@ Contro la violenza sulle donne non basta una giornata l'anno. Serve **impegno qu
 
 - [1522 — Numero antiviolenza](https://www.1522.eu/)
 - [App YouPol](https://www.commissariatodips.it/)
-- [Chiamare il 112](/comunicazioni/2026-10-08-chiamare-112-correttamente/)
+- [Chiamare il 112](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/)
 
 In emergenza: **112**. Antiviolenza: **1522**.

@@ -155,6 +155,6 @@ Quando vedrete il logo della PC Genzano in giro, ricordate che dietro c'è un **
 
 - [Avvio corso base](/comunicazioni/2026-10-23-avvio-corso-base-prima-lezione/)
 - [Ultima settimana corso](/comunicazioni/2026-11-27-corso-base-ultima-settimana-esame/)
-- [Diventare volontario](/comunicazioni/2026-09-09-diventare-volontario-protezione-civile/)
+- [Diventare volontario](/diventa-volontario/)
 
 In emergenza: **112**.

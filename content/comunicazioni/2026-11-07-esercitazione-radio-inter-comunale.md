@@ -147,7 +147,7 @@ L'esercitazione non è solo un **esercizio tecnico**. È un **momento** di:
 ## Per approfondire
 
 - [Aggiornamento mezzo ottobre](/comunicazioni/2026-10-15-aggiornamento-operativo-meta-ottobre/)
-- [App ufficiali PC](/comunicazioni/2026-09-14-app-ufficiali-protezione-civile/)
+- [App ufficiali PC](/comunicazioni/2026-09-14-app-protezione-civile-fonti-ufficiali/)
 - [ARI Roma](https://www.ariroma.it/)
 
 In emergenza: **112**.

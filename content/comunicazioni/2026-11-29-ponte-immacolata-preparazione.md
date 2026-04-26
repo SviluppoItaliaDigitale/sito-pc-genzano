@@ -184,6 +184,6 @@ Martedì 9 dicembre riprende:
 
 - [Viabilità invernale](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/)
 - [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/)
-- [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-prevenzione/)
+- [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
 
 In emergenza: **112**.

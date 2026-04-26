@@ -124,7 +124,7 @@ La segnalazione precoce può prevenire danni.
 ## Per approfondire
 
 - Articolo: [Temporali estivi nei Castelli Romani](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)
-- Articolo: [Come si legge un'allerta meteo](/comunicazioni/2026-04-05-come-si-legge-allerta-meteo-codici-colore/)
+- Articolo: [Come si legge un'allerta meteo](/allerte-meteo/)
 - Pagina: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
 - [DPC — Rischio idrogeologico](https://www.protezionecivile.gov.it/it/rischi/rischio-idrogeologico)
 - [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/)
