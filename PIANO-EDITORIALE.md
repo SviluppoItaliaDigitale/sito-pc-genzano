@@ -170,6 +170,87 @@ Ogni data fissa si ripete ogni anno con aggiornamenti minimi. Preparare le bozze
 
 ---
 
+## 2-bis. Linea editoriale: anniversari di rilevanza protezione civile
+
+Una **linea editoriale ricorrente** del sito è quella degli **anniversari di eventi storici di interesse per la protezione civile italiana e internazionale**: terremoti, alluvioni, incidenti industriali e nucleari, sequenze sismiche, frane, tempeste, tsunami che hanno cambiato il sistema italiano (norme antisismiche, classificazione sismica, direttive europee, sistemi di allerta, codice della protezione civile).
+
+**Criterio per scegliere se aggiungere un anniversario:** l'evento deve aver **prodotto una conseguenza normativa, organizzativa o culturale** verificabile sul sistema italiano di protezione civile. Non si pubblica un articolo solo per il numero di vittime, ma per la **lezione operativa** che porta ancora oggi al cittadino.
+
+**Struttura standard dell'articolo anniversario** (da seguire per uniformità):
+
+1. **Lede** — quando, dove, cosa è successo, in 2-3 frasi.
+2. **Cosa è successo davvero** — dettaglio tecnico-narrativo (cause, dinamica, vittime, soccorsi).
+3. **Foto storica** — con shortcode `{{< foto >}}`, fascia istituzionale obbligatoria, alt esteso WCAG, didascalia in corsivo.
+4. **La lezione** — cosa ha cambiato in Italia (legge, sistema, sigle).
+5. **Cosa abbiamo costruito da allora** — sistema attuale (rete monitoraggio, autorità, protocolli).
+6. **Cosa deve sapere il cittadino oggi** — comportamenti operativi.
+7. **Genzano e il rischio** — collegamento al territorio dei Castelli Romani.
+8. **In ricordo** — sobrio, istituzionale, no enfasi.
+9. **Per approfondire (fonti istituzionali)** — DPC, INGV, ISPRA, IAEA, Normattiva, ecc.
+10. **Approfondimenti dal nostro archivio** — link interni a 3-5 articoli correlati.
+
+Lunghezza: **1300-1500 parole**. Badge: `Informazione`. Formato data nel frontmatter: `AAAA-MM-GG`.
+
+**Calendario degli anniversari** (selezione, non esaustiva — il calendario è in continua espansione e nuove ricorrenze vanno aggiunte ogni volta che l'evento incontra i criteri sopra):
+
+| Data | Evento | Anno | Rilevanza PC |
+|---|---|---|---|
+| 11 mar | Tōhoku-Fukushima | 2011 | sistema globale allerta tsunami, rischio nucleare multiplo |
+| 26 apr | Chernobyl | 1986 | nascita rete RESORAD, ISIN, piano emergenze nucleari |
+| 5 mag | Sarno e Quindici | 1998 | Legge Sarno, PAI, classificazione rischio idrogeologico |
+| 6 mag | Friuli (prima scossa) | 1976 | nascita modello Zamberletti, COC, Servizio Nazionale PC |
+| 9 mag | Memoria vittime terrorismo / Moro | 1978 | Unità di crisi, comunicazione di crisi single-voice |
+| 17 mag | Emilia-Romagna alluvione | 2023 | rischio "concatenato" pianura, PGRA, IT-alert |
+| 20 mag + 29 mag | Emilia 2012 (due scosse) | 2012 | ricostruzione partecipata, riedizione CTR/CRO |
+| 23 mag | Strage di Capaci | 1992 | legalità e servizio pubblico |
+| 10 giu | Vermicino / Alfredino Rampi | 1981 | accelerazione PC, nuclei SAF VVF, Centro Rampi |
+| 10 lug | Seveso ICMESA | 1976 | direttive europee Seveso I/II/III, D.Lgs. 105/2015 |
+| 19 lug | Val di Stava | 1985 | sicurezza dighe minerarie, Direttive PC, ICOLD |
+| 28 lug | Val Pola Valtellina | 1987 | evacuazione preventiva, IFFI ISPRA, monitoraggio versanti |
+| 14 ago | Ponte Morandi Genova | 2018 | AINOP, ANSFISA, cultura manutenzione infrastrutture |
+| 23 ago | Pizzo Cengalo Bondo | 2017 | rischio permafrost, frane alpine cambiamento climatico |
+| 24 ago | Amatrice (Centro Italia 1) | 2016 | sequenza Centro Italia, SAE, microzonazione |
+| 11 set | 11 settembre 2001 | 2001 | comunicazione di crisi, USAR INSARAG |
+| 20 set | Livorno alluvione | 2017 | rischio bombe d'acqua tirreno |
+| 9 ott | Vajont | 1963 | studio frane catastrofiche, prima vera presa coscienza |
+| 20 ott | Rischio Seveso (campagna) | — | direttiva industriale UE |
+| 26 ott | Visso/Camerino (Centro Italia 2) | 2016 | sequenza marchigiana, Sismabonus |
+| 28 ott | Norcia / Centro Italia memoria | 2016 | ricostruzione lunga, tutela patrimonio storico |
+| 29 ott | Tempesta Vaia | 2018 | rischio vento estremo, gestione foreste |
+| 31 ott | San Giuliano di Puglia | 2002 | OPCM 3274, classificazione sismica nazionale, scuole sicure |
+| 8 nov | Versilia alluvione | 1996 | rischio idrogeologico costiero |
+| 23 nov | Irpinia | 1980 | ricostruzione, Cossiga commissario, antesignano L. 225/1992 |
+| 26 nov | Friuli memoria | 1976 | replica seconda scossa, ricostruzione |
+| 26 dic | Tsunami Oceano Indiano | 2004 | sistema globale UNESCO-IOC, NEAMTWS, SiAM |
+| 28 dic | Messina-Reggio Calabria | 1908 | RD 193/1909 prima legge antisismica, soccorso pubblico moderno |
+
+**Eventi candidati a futura inclusione** (esempi non esaustivi — chiunque tenga viva questa linea editoriale aggiunge ciò che ritiene rilevante):
+
+- Frana di Agrigento, Campania 1998 e altre frane storiche italiane
+- Alluvione del Polesine 1951 (ricorrenza 14 novembre)
+- Alluvione di Firenze 1966 (4 novembre — già ricorrenza nazionale)
+- Vajont anniversari decennali (9 ottobre, già a calendario)
+- Belice 1968 (15 gennaio, terremoto Sicilia)
+- Eventi recenti dell'ultimo decennio non ancora coperti (Marche 2024, Toscana e Emilia 2025, ecc.)
+- Eventi internazionali con impatto su sistema italiano (Haiti 2010, terremoti Turchia-Siria 2023, alluvioni storiche europee)
+- **Ogni nuovo grande evento** che produce in Italia o nell'UE una norma, una sigla, un sistema (per inclusione strutturale, non a caldo: si aspetta che si depositi un effetto verificabile).
+
+**Come aggiungere un nuovo anniversario:**
+
+1. Verifica che la data sia documentata su almeno 2 fonti istituzionali italiane indipendenti (DPC, INGV, ISPRA, INAIL, Vigili del Fuoco, Ministeri).
+2. Verifica il **collegamento operativo** alla PC italiana (norma, sistema, sigla che esiste oggi grazie a quell'evento).
+3. Crea il file in `content/comunicazioni/AAAA-MM-GG-slug-evento.md` (data dell'anniversario nell'anno corrente o nell'anno successivo — coerente con la regola "niente articoli oltre il 2027" se aggiornata).
+4. Segui la **struttura standard** sopra; lunghezza ~1500 parole.
+5. Per la foto: `bash scripts/applica-fascia-foto.sh <foto-sorgente> AAAA-MM-GG-slug-foto-evento`. Le foto da sito DPC o Wikimedia Commons sono preferibili (licenze libere). Lo script `scripts/foto-da-wikipedia.sh` automatizza il download con verifica di licenza (richiede esecuzione locale, perché la sandbox di Claude Code blocca l'accesso alle API esterne).
+6. Genera la copertina automatica: `python3 scripts/genera-cover.py content/comunicazioni/<file>.md`.
+7. Sincronizza il frontmatter `image:`: `python3 scripts/aggiorna-image-frontmatter.py`.
+8. Aggiungi 3-5 link interni ad altri articoli del calendario (preferibilmente dello stesso ambito di rischio).
+9. Aggiorna la tabella sopra con la nuova ricorrenza.
+
+**Nessun limite quantitativo**: il calendario può crescere indefinitamente. L'unico vincolo è la **rilevanza operativa** del singolo evento per il sistema PC italiano e la **disponibilità di fonti istituzionali** verificabili. Eventi puramente di cronaca o senza connessione strutturale alla PC non vanno trattati come "anniversari" ma eventualmente come articoli di **memoria civile** in altre categorie (es. "Comunicazione").
+
+---
+
 ## 3. Biblioteca di contenuti evergreen
 
 Questi articoli non dipendono da eventi e possono essere scritti in anticipo. Organizzati per tema. Ogni voce è un titolo di articolo pubblicabile.
