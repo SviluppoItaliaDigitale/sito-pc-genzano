@@ -43,16 +43,16 @@ magick "$SRC" -resize "${W}x" -quality 90 "$TMP_PHOTO"
 PH=$(magick identify -format "%h" "$TMP_PHOTO")
 TOTAL_H=$((PH + BAND_H))
 
-# 2) Componi: foto sopra + fascia blu sotto con logo + testo
+# 2) Componi: foto sopra + fascia blu sotto con logo a SINISTRA + testo a destra del logo
 magick \
   -size "${W}x${TOTAL_H}" xc:"$PRIMARY" \
   \( "$TMP_PHOTO" \) -gravity North -composite \
   -fill "rgba(255,255,255,0.25)" \
   -draw "rectangle 0,${PH} ${W},$((PH + 2))" \
+  -gravity NorthWest \
   \( "$LOGO" -resize "72x72" \) -geometry "+90+$((PH + 15))" -composite \
   -fill "#ffffff" \
   -font "Liberation-Sans-Bold" -pointsize 26 \
-  -gravity NorthWest \
   -annotate "+180+$((PH + 22))" "PROTEZIONE CIVILE" \
   -fill "rgba(255,255,255,0.90)" \
   -font "Liberation-Sans" -pointsize 16 \
