@@ -21,16 +21,29 @@ I pittogrammi della norma **ISO 7010** sono lo **standard mondiale** per la segn
 - 🟢 **Verde + rettangolo** = soccorso e vie di fuga (E001-E099): condizione sicura.
 - 🔴 **Rosso + rettangolo** = antincendio (F001-F099): attrezzature antincendio.
 
+> **Stato della libreria.** La libreria parte vuota nel repository. Per garantire la **fedeltà grafica alla norma**, i pittogrammi ufficiali vanno scaricati da Wikimedia Commons (PD/CC0) eseguendo dalla macchina locale:
+>
+> ```bash
+> bash scripts/scarica-pittogrammi-iso7010.sh
+> git add static/pittogrammi/iso7010/
+> git commit -m "Pittogrammi ISO 7010: download ufficiale Wikimedia"
+> git push
+> ```
+>
+> Una volta scaricati, le anteprime sotto saranno popolate automaticamente. **Non inserire pittogrammi disegnati a mano**: solo gli SVG Wikimedia hanno le geometrie e le proporzioni esatte della norma.
+
 ### Avvertimenti (giallo)
 
 <div class="pittogrammi-galleria">
 
 {{< pittogramma codice="W001" alt="Pericolo generale" label="W001 — Pericolo generale" size="80" >}}
-{{< pittogramma codice="W021" alt="Materiali infiammabili" label="W021 — Infiammabile" size="80" >}}
+{{< pittogramma codice="W002" alt="Esplosivo" label="W002 — Esplosivo" size="80" >}}
+{{< pittogramma codice="W003" alt="Radioattivo" label="W003 — Radioattivo" size="80" >}}
+{{< pittogramma codice="W009" alt="Rischio biologico" label="W009 — Biologico" size="80" >}}
+{{< pittogramma codice="W012" alt="Tensione elettrica pericolosa" label="W012 — Tensione" size="80" >}}
 {{< pittogramma codice="W016" alt="Sostanza tossica" label="W016 — Tossico" size="80" >}}
-{{< pittogramma codice="W026" alt="Radiazioni ionizzanti" label="W026 — Radiazioni" size="80" >}}
-{{< pittogramma codice="W005" alt="Rischio biologico" label="W005 — Biologico" size="80" >}}
-{{< pittogramma codice="W037" alt="Rumore forte" label="W037 — Rumore forte" size="80" >}}
+{{< pittogramma codice="W021" alt="Materiali infiammabili" label="W021 — Infiammabile" size="80" >}}
+{{< pittogramma codice="W038" alt="Frana" label="W038 — Frana" size="80" >}}
 
 </div>
 
@@ -43,6 +56,8 @@ I pittogrammi della norma **ISO 7010** sono lo **standard mondiale** per la segn
 {{< pittogramma codice="E003" alt="Pronto soccorso" label="E003 — Pronto soccorso" size="80" >}}
 {{< pittogramma codice="E004" alt="Telefono di emergenza" label="E004 — Telefono emergenza" size="80" >}}
 {{< pittogramma codice="E007" alt="Punto di raccolta evacuazione" label="E007 — Punto raccolta" size="80" >}}
+{{< pittogramma codice="E009" alt="Medico" label="E009 — Medico" size="80" >}}
+{{< pittogramma codice="E011" alt="Acqua potabile" label="E011 — Acqua potabile" size="80" >}}
 
 </div>
 
@@ -51,6 +66,9 @@ I pittogrammi della norma **ISO 7010** sono lo **standard mondiale** per la segn
 <div class="pittogrammi-galleria">
 
 {{< pittogramma codice="F001" alt="Estintore" label="F001 — Estintore" size="80" >}}
+{{< pittogramma codice="F002" alt="Idrante" label="F002 — Idrante" size="80" >}}
+{{< pittogramma codice="F004" alt="Presidi antincendio" label="F004 — Presidi" size="80" >}}
+{{< pittogramma codice="F005" alt="Allarme antincendio" label="F005 — Allarme incendio" size="80" >}}
 
 </div>
 
@@ -59,7 +77,9 @@ I pittogrammi della norma **ISO 7010** sono lo **standard mondiale** per la segn
 <div class="pittogrammi-galleria">
 
 {{< pittogramma codice="M001" alt="Obbligo generale" label="M001 — Obbligo" size="80" >}}
+{{< pittogramma codice="M002" alt="Leggere le istruzioni" label="M002 — Leggi istruzioni" size="80" >}}
 {{< pittogramma codice="P001" alt="Divieto generale" label="P001 — Divieto" size="80" >}}
+{{< pittogramma codice="P002" alt="Vietato fumare" label="P002 — Vietato fumare" size="80" >}}
 
 </div>
 

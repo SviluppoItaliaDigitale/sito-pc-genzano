@@ -1,0 +1,12 @@
+# Cartella per pittogrammi ARASAAC AAC
+
+Questa cartella è intenzionalmente vuota nel repository.
+
+I pittogrammi ARASAAC vanno scaricati dalla **macchina locale** lanciando:
+
+    bash scripts/scarica-pittogrammi-arasaac.sh
+
+Licenza CC BY-NC-SA 4.0. Attribuzione obbligatoria su ogni pagina che li
+usa: Sergio Palao — ARASAAC (https://arasaac.org) — Government of Aragón.
+
+Documentazione completa: MANUALE-SITO.md Parte 3.16.

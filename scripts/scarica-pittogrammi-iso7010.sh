@@ -6,8 +6,17 @@
 # I file finiscono in static/pittogrammi/iso7010/ con nome
 # "<CODICE>-<descrizione-breve>.svg".
 #
+# IMPORTANTE: la libreria parte VUOTA nel repository (i file SVG ufficiali
+# vanno scaricati con questo script). I pittogrammi non vengono inseriti a
+# mano perché solo gli SVG ufficiali Wikimedia (PD/CC0) garantiscono fedeltà
+# alla norma ISO 7010 — geometrie, proporzioni e colori standardizzati che il
+# cittadino riconosce dai cartelli reali.
+#
 # Uso:
 #   bash scripts/scarica-pittogrammi-iso7010.sh
+#
+# Per ri-scaricare e SOVRASCRIVERE file esistenti (utile se sono cambiati):
+#   FORCE=1 bash scripts/scarica-pittogrammi-iso7010.sh
 #
 # Per aggiungere altri pittogrammi: copia una riga della tabella sotto e
 # cambia codice/nome/url. La fonte ufficiale è la pagina Wikimedia Commons
