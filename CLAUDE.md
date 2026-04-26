@@ -155,6 +155,18 @@ Pagina interattiva che guida il cittadino con domande semplici fino a una rispos
 
 Per aggiungere un nuovo percorso: aggiungere un nodo `question` collegato da `start.options`, poi le relative `answer` referenziate da `options[n].next`. Rispettare il criterio `emergency: true` solo per situazioni operative reali (coerenza con regola `06-protezione-civile-scientifica.md` sul tono di comunicazione del rischio).
 
+### Strumenti di Accessibilità (toolbar utente)
+
+Bottone rotondo blu (FAB) in basso a sinistra su ogni pagina, apre un dialog modale con preferenze di lettura (dimensione testo, contrasto, scala di grigi, spaziatura, carattere ad alta leggibilità, evidenzia link, cursore grande, ecc.). Persistenza in `localStorage`. Inline early script in `<head>` per evitare il flash visivo al caricamento.
+
+File:
+- `themes/flavour-pcgenzano/layouts/partials/accessibility-toolbar.html` (markup)
+- `themes/flavour-pcgenzano/static/css/a11y-toolbar.css` (FAB + dialog + classi `html.a11y-*` di preferenze)
+- `themes/flavour-pcgenzano/static/js/a11y-toolbar.js` (logica)
+- Pagina pubblica correlata: `content/accessibilita/_index.md`.
+
+Regole estese in `.claude/rules/04-hugo-architecture.md` e `.claude/rules/03-accessibility.md`. **Mai sostituire** con widget commerciali tipo AccessiBe / UserWay (sconsigliati da W3C-WAI). Quando modifichi un componente del sito, verifica che funzioni anche con contrasto invertito, scala di grigi, immagini nascoste, pausa animazioni.
+
 ### Archetypes (`archetypes/`)
 
 - `comunicazioni.md` — full front matter template for news posts (use this)

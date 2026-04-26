@@ -28,13 +28,19 @@ sito-pc-genzano/
 │   │   ├── 404.html         # Pagina errore 404
 │   │   ├── _default/        # baseof.html, list.html, single.html
 │   │   ├── partials/        # navbar, footer, emergency-banner, allerta-card,
-│   │   │                    # cookie-banner, breadcrumb, page-tools, ecc.
+│   │   │                    # cookie-banner, breadcrumb, page-tools,
+│   │   │                    # accessibility-toolbar.html (FAB strumenti a11y), ecc.
 │   │   ├── shortcodes/      # foto.html (click-per-ingrandire accessibile)
 │   │   ├── comunicazioni/   # list.html con filtri per badge
 │   │   └── cerca/           # list.html con motore di ricerca JS
 │   └── static/
 │       ├── css/custom.css   # Override CSS su Bootstrap Italia + regole
 │       │                    # @media print globali (stampa solo l'articolo)
+│       ├── css/a11y-toolbar.css  # Stili FAB + dialog Strumenti di Accessibilità
+│       │                         # + classi html.a11y-* per le preferenze utente
+│       ├── js/a11y-toolbar.js    # Logica del toolbar di accessibilità
+│       │                         # (apri/chiudi, focus trap, persistenza
+│       │                         # localStorage, applicazione classi su <html>)
 │       └── images/          # Asset statici
 ├── archetypes/
 │   ├── comunicazioni.md     # Archetype completo per news
@@ -214,6 +220,34 @@ Il tema personalizza il rendering dei link Markdown tramite `layouts/_default/_m
 **Subpath GitHub Pages e `relURL`**: il hook strippa il leading `/` dal link prima di passarlo a `relURL`. Hugo `relURL` **non** aggiunge il subpath del baseURL ai path che iniziano con `/`: `relURL "/foo"` resta `/foo`, mentre `relURL "foo"` diventa `/sito-pc-genzano/foo`. Senza questo strip, tutti i link interni del markdown (che per convenzione scriviamo con leading `/`) funzionerebbero su Aruba (baseURL root) ma sarebbero rotti su GitHub Pages (baseURL con subpath `/sito-pc-genzano/`). Se modifichi il hook, mantieni la riga `$relLink := strings.TrimPrefix "/" $link` e usa `$relLink | relURL` in tutti i branch interni.
 
 Se estendi la lista di estensioni statiche o modifichi il comportamento di `relURL`, aggiorna **entrambi** i file `render-link.html` (progetto e tema) per mantenere la coerenza.
+
+### Strumenti di Accessibilità (toolbar utente)
+
+In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo blu istituzionale** (FAB) con icona `bi-universal-access` che apre un **dialog modale** con preferenze di lettura: dimensione testo (4 livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (default/alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande.
+
+**File coinvolti** (tutti nel tema, modificabili liberamente):
+
+- `themes/flavour-pcgenzano/layouts/partials/accessibility-toolbar.html` — markup del FAB + dialog (~150 righe).
+- `themes/flavour-pcgenzano/static/css/a11y-toolbar.css` — stili del FAB + dialog + le classi `html.a11y-*` che applicano le preferenze al sito.
+- `themes/flavour-pcgenzano/static/js/a11y-toolbar.js` — logica (apri/chiudi, focus trap, Esc, persistenza localStorage, sync UI ↔ stato).
+- `themes/flavour-pcgenzano/layouts/_default/baseof.html` — include il partial e linka CSS+JS. Contiene anche un **inline early script** nel `<head>` che applica le preferenze salvate **prima del rendering**, evitando il flash visivo (FOUC) quando l'utente ha contrasto invertito o testo grande.
+
+**Persistenza:** chiave `pcgenzano-a11y-prefs` in `localStorage`. Il bottone "Reimposta tutto" del dialog ripulisce stato e storage.
+
+**Cosa va NON fatto:**
+
+- Non sostituirlo con widget commerciali tipo AccessiBe / UserWay / Equally AI: il W3C-WAI e le associazioni delle persone con disabilità sconsigliano questi "overlay" che mascherano problemi di accessibilità invece di risolverli.
+- Non rimuovere l'inline early script in `<head>`: senza quello, ogni ricarica produce un flash di testo non scalato o sfondo non invertito.
+- Non spostare il FAB in basso a destra: c'è già il `back-to-top` (e su mobile anche il SOS-112), si crea sovrapposizione.
+- Non aggiungere preferenze complesse "alla overlay" (modalità autismo, modalità ADHD, ecc.): sono pseudo-scientifiche. Se vuoi estendere, aggiungi solo controlli di **preferenza di lettura** misurabili (font, contrasto, spaziatura, animazioni).
+
+**Cosa si può estendere senza problemi:**
+
+- Aggiungere nuovi livelli di dimensione testo (oggi 100/110/125/150%).
+- Aggiungere nuove palette di contrasto.
+- Aggiungere link nel dialog verso risorse interne (es. Glossario, FAQ).
+
+**Pagina pubblica correlata:** `content/accessibilita/_index.md` descrive il toolbar al cittadino e dà istruzioni complementari sugli strumenti di sistema (zoom OS, screen reader NVDA/VoiceOver/TalkBack, contrasto OS, riconoscimento vocale). Mantenere allineate le due descrizioni se modifichi le funzioni del toolbar.
 
 ### Cartelle `static/` canoniche per file depositati via git
 Per evitare che nuovi file finiscano in cartelle escluse dal deploy FTP (vedi regola `05-github-aruba-deploy.md`), usa queste cartelle:
