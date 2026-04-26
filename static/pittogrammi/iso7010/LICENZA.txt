@@ -1,0 +1,14 @@
+Pittogrammi ISO 7010 — Wikimedia Commons
+=========================================
+
+Fonte: https://commons.wikimedia.org/wiki/Category:ISO_7010_safety_signs
+
+I segni grafici della norma ISO 7010 sono di pubblico dominio in quanto
+forme geometriche standardizzate (PD-shape). Le specifiche rappresentazioni
+SVG presenti su Wikimedia Commons sono pubblicate prevalentemente in pubblico
+dominio o con licenza CC0.
+
+La norma ISO 7010 stessa è proprietà ISO; questa libreria contiene solo le
+rappresentazioni grafiche pubblicamente diffuse, non il documento normativo.
+
+Attribuzione completa: https://www.protezionecivilegenzano.it/attribuzioni-pittogrammi/

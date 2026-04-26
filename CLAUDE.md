@@ -80,6 +80,12 @@ bash scripts/applica-fascia-foto.sh <file-sorgente> <nome-output-senza-ext>
 #   bash scripts/applica-fascia-foto.sh /home/utente/Scaricati/Zamberletti.jpg zamberletti-ritratto-istituzionale
 # Produce static/images/<nome>.webp (1200px, fascia blu + logo + testo istituzionale).
 # Dettagli in MANUALE-SITO.md Parte 3.8 Metodo 4.
+
+# Scarica/aggiorna la libreria di pittogrammi (ISO 7010 + ARASAAC)
+bash scripts/scarica-pittogrammi.sh           # solo i mancanti
+bash scripts/scarica-pittogrammi.sh --force   # ri-scarica tutto
+# Output: static/pittogrammi/iso7010/*.svg + static/pittogrammi/arasaac/*.png
+# Attribuzioni obbligatorie su /attribuzioni-pittogrammi/ (linkata dal footer).
 ```
 
 ## Architecture
@@ -120,7 +126,7 @@ These JSON/YAML files are the primary way to update dynamic site content without
 Custom theme, not an external dependency — edit freely. Structure:
 - `layouts/partials/` — reusable components (navbar, footer, emergency-banner, allerta-card, etc.)
 - `layouts/_default/` — base, list, single templates. In `single.html` l'`<article>` usa `class="article-body"` per attivare la tipografia istituzionale curata (v7.2)
-- `layouts/shortcodes/` — shortcode `foto` per immagini nel corpo degli articoli (click-per-ingrandire, fascia blu, `<figure>`/`<figcaption>` accessibili)
+- `layouts/shortcodes/` — shortcode `foto` per immagini nel corpo degli articoli (click-per-ingrandire, fascia blu, `<figure>`/`<figcaption>` accessibili) e shortcode `pittogramma` per inserire simboli ISO 7010 / ARASAAC (supporto comprensione bambini, anziani, parlanti L2)
 - `layouts/index.html` — homepage template
 - `static/css/custom.css` — override CSS su Bootstrap Italia. Include:
   - regole `@media print` globali che nascondono tutto il chrome del sito quando l'utente clicca "Stampa"
@@ -142,19 +148,34 @@ Produce `<figure>` con immagine cliccabile (apre a dimensione intera in nuova sc
 - **Copertina**: generata automaticamente da `scripts/genera-cover.py` (gradiente blu + titolo + badge + fascia istituzionale). Nome file = slug dell'articolo.
 - **Foto evento**: fornita dall'utente. Nome file DIVERSO dallo slug (es. `2026-04-20-incendio-cecchina-casolare.webp` invece del solo slug), così il generatore non la sovrascrive. Deve comunque avere la fascia blu istituzionale.
 
-### Shortcode `pittogramma` (ISO 7010 + ARASAAC)
+### Shortcode `pittogramma` (per supporto comprensione)
 
-Per affiancare un testo a un **pittogramma standardizzato** (sicurezza ISO 7010 oppure CAA/AAC ARASAAC) — utile a bambini, stranieri, persone con disabilità cognitive — usare lo shortcode `pittogramma`:
+Per migliorare l'accessibilità cognitiva dei contenuti (bambini, anziani, persone con disabilità cognitive, parlanti italiano L2) si usa lo shortcode `pittogramma`, che inserisce simboli ISO 7010 (sicurezza standard) o ARASAAC (CC BY-NC-SA, comprensione cognitiva).
 
 ```go-html-template
-{{< pittogramma codice="W001" alt="Pericolo generale" >}}
-{{< pittogramma codice="E002" alt="Uscita di emergenza" label="Uscita →" size="96" >}}
-{{< pittogramma codice="2453" set="arasaac" alt="Bambino che corre" >}}
+{{< pittogramma src="/pittogrammi/arasaac/terremoto.png"
+                alt="Pittogramma: terremoto"
+                caption="Cosa fare in caso di terremoto" >}}
 ```
 
-Librerie in `static/pittogrammi/iso7010/` (PD/CC0) e `static/pittogrammi/arasaac/` (CC BY-NC-SA, attribuzione obbligatoria). Catalogo pubblico: `/pittogrammi/`. Download massivo via `scripts/scarica-pittogrammi-iso7010.sh` e `scripts/scarica-pittogrammi-arasaac.sh` (esecuzione locale). Documentazione completa in `MANUALE-SITO.md` Parte 3.16.
+Uso inline (dentro una frase):
+```go-html-template
+Chiama il {{< pittogramma src="/pittogrammi/arasaac/112.png" alt="numero 112" inline="true" >}} 112.
+```
 
-**Regola**: il pittogramma è complemento, non sostituto del testo. `alt` sempre obbligatorio. Massimo 3-4 per pagina.
+Parametri: `src` (obbligatorio), `alt` (obbligatorio), `caption` (opzionale solo block), `inline="true"` per inserimento inline, `size` (small/medium/large/xlarge, default medium).
+
+Produce `<img>` con `role="img"`, `loading="lazy"`, oppure `<figure>` con caption opzionale. CSS scoped in `custom.css` (sezione **PITTOGRAMMI v1.0**) con dimensioni fisse, override mobile, mantenimento colori in stampa (essenziale per i segnali di sicurezza). Compatibile con il toolbar di accessibilità: i pittogrammi sono marcati funzionali e restano visibili anche con preferenza "Nascondi immagini" attiva (selettori `html.a11y-hide-images img.pittogramma` e `html.a11y-grayscale img.pittogramma`).
+
+**Libreria disponibile** (172 simboli, 3.3 MB):
+- `static/pittogrammi/iso7010/*.svg` — 46 segnali standard (evacuazione, antincendio, divieto, obbligo, avvertimento). Fonte: Wikimedia Commons (PD-shape/CC0).
+- `static/pittogrammi/arasaac/*.png` — 126 simboli (eventi, azioni autoprotezione, oggetti kit, persone, luoghi, segnali, veicoli). Fonte: ARASAAC (CC BY-NC-SA, autore Sergio Palao).
+
+**Re-download della libreria**: `bash scripts/scarica-pittogrammi.sh` (idempotente, scarica solo i mancanti; `--force` ri-scarica tutto).
+
+**Catalogo pubblico**: `/pittogrammi/` mostra l'intera libreria con anteprima, codice e licenza.
+
+**Attribuzioni obbligatorie**: pagina `/attribuzioni-pittogrammi/` linkata dal footer. Le opere derivate (schede stampabili che includono ARASAAC) ereditano CC BY-NC-SA 4.0.
 
 ### Assistente guidato (`/assistente/`)
 

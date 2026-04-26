@@ -1,66 +1,46 @@
-{{/*
+{{- /*
   Shortcode: pittogramma
-  Inserisce un pittogramma standardizzato (ISO 7010 o ARASAAC) accanto al testo
-  per migliorare la comprensione anche di bambini, stranieri e persone con
-  difficoltà cognitive.
+  Inserisce un pittogramma (ISO 7010 o ARASAAC) per supportare la
+  comprensione del testo a bambini, anziani, persone con disabilita'
+  cognitive e parlanti italiano L2.
 
-  Parametri (named):
-    codice  — codice pittogramma. Per ISO 7010 usare il codice ufficiale
-              (W001 = pericolo generale, E002 = uscita emergenza dx, F001 =
-              estintore, M001 = obbligo, P001 = divieto, ecc.).
-              Per ARASAAC usare prefisso "aac:<id>" (es. "aac:2453").
-    alt     — testo alternativo per screen reader e fallback (obbligatorio
-              se non si vuole usare il default del file SVG).
-    label   — etichetta visibile sotto il pittogramma (opzionale).
-    size    — dimensione lato in pixel (default 64).
-    set     — "iso7010" (default) | "arasaac".
+  Uso block (default — figure centrata con caption opzionale):
+    {{< pittogramma src="/pittogrammi/arasaac/terremoto.png"
+                    alt="Pittogramma: terremoto"
+                    caption="Cosa fare in caso di terremoto" >}}
 
-  Esempi:
-    {{< pittogramma codice="W001" alt="Attenzione: pericolo generale" >}}
-    {{< pittogramma codice="E002" alt="Uscita di emergenza" label="Uscita" size="96" >}}
-    {{< pittogramma codice="2453" set="arasaac" alt="Bambino che corre via" >}}
+  Uso inline (dentro una frase, dimensione adattata al testo):
+    Chiama il {{< pittogramma src="/pittogrammi/arasaac/112.png" alt="numero 112" inline="true" >}} 112.
 
-  Output: <figure class="pittogramma"> con <img> SVG, alt accessibile, eventuale
-  <figcaption>. Stampa-friendly: si stampa anche in B/N grazie ai contorni neri
-  dei pittogrammi ISO 7010.
-*/}}
+  Parametri:
+    src      (obbligatorio)  percorso pittogramma (in /pittogrammi/...)
+    alt      (obbligatorio)  testo alternativo significativo per screen reader
+    caption  (opzionale)     didascalia visibile sotto (solo block)
+    inline   (opzionale)     "true" per inserimento dentro il testo. Default: false
+    size     (opzionale)     small | medium | large | xlarge. Default: medium
 
-{{- $codice := .Get "codice" -}}
+  Nota a11y: l'elemento <figure> riceve anche class="pittogramma" per essere
+  riconosciuto dal toolbar di accessibilita' come immagine FUNZIONALE
+  (resta visibile anche con preferenza "Nascondi immagini").
+*/ -}}
+{{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
-{{- $label := .Get "label" -}}
-{{- $size := .Get "size" | default "64" -}}
-{{- $set := .Get "set" | default "iso7010" -}}
-
-{{- if not $codice -}}
-  {{ errorf "shortcode pittogramma: parametro 'codice' obbligatorio in %s" .Page.File.Path }}
+{{- $caption := .Get "caption" -}}
+{{- $inline := eq (.Get "inline" | default "false") "true" -}}
+{{- $size := .Get "size" | default "medium" -}}
+{{- if or (not $src) (not $alt) -}}
+  {{- errorf "shortcode pittogramma: parametri 'src' e 'alt' sono obbligatori (chiamato in %s)" .Page.File.Path -}}
 {{- end -}}
-
-{{- /* Risoluzione del filename: per ISO 7010 cerco il primo file che inizia con il codice */ -}}
-{{- $filename := "" -}}
-{{- if eq $set "iso7010" -}}
-  {{- $dir := "static/pittogrammi/iso7010" -}}
-  {{- range (readDir $dir) -}}
-    {{- if and (not .IsDir) (hasPrefix .Name (printf "%s-" $codice)) -}}
-      {{- $filename = printf "/pittogrammi/iso7010/%s" .Name -}}
-    {{- end -}}
-  {{- end -}}
-{{- else if eq $set "arasaac" -}}
-  {{- $filename = printf "/pittogrammi/arasaac/%s.png" $codice -}}
-{{- end -}}
-
-{{- if not $filename -}}
-  <span class="pittogramma-mancante" role="img" aria-label="{{ $alt | default (printf "Pittogramma %s non trovato" $codice) }}">
-    [{{ $codice }}{{ with $alt }} — {{ . }}{{ end }}]
-  </span>
+{{- $sizeClass := printf "pittogramma-%s" $size -}}
+{{- /* Strippa leading '/' per compatibilita' subpath GitHub Pages: relURL non aggiunge il subpath ai path che iniziano con '/' (vedi regola 04 — render-link hook). */ -}}
+{{- $relSrc := strings.TrimPrefix "/" $src -}}
+{{- if $inline -}}
+<img src="{{ $relSrc | relURL }}" alt="{{ $alt }}" class="pittogramma pittogramma-inline" role="img" loading="lazy">
 {{- else -}}
-<figure class="pittogramma pittogramma-{{ $set }}" role="img" aria-label="{{ $alt }}">
-  <img src="{{ $filename | relURL }}"
-       alt="{{ $alt }}"
-       width="{{ $size }}"
-       height="{{ $size }}"
-       loading="lazy">
-  {{- with $label -}}
-  <figcaption class="pittogramma-label">{{ . }}</figcaption>
-  {{- end -}}
+<figure class="pittogramma pittogramma-figure my-3 text-center" role="group">
+  <img src="{{ $relSrc | relURL }}" alt="{{ $alt }}" class="pittogramma {{ $sizeClass }}" role="img" loading="lazy">
+  {{- with $caption }}
+  <figcaption class="figure-caption text-center mt-2">{{ . | markdownify }}</figcaption>
+  {{- end }}
 </figure>
 {{- end -}}

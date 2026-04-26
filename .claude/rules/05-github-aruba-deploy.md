@@ -40,6 +40,8 @@ exclude: |
 | Segnaletica aree di emergenza | `static/cartelli/` | `/cartelli/nome.png` |
 | Immagini di copertina / foto evento | `static/images/` | `/images/nome.webp` |
 | Archivio storico immagini | `static/images/archivio-storico/` | `/images/archivio-storico/nome.ext` |
+| Pittogrammi ISO 7010 (sicurezza standard) | `static/pittogrammi/iso7010/` | `/pittogrammi/iso7010/nome.svg` |
+| Pittogrammi ARASAAC (comprensione cognitiva) | `static/pittogrammi/arasaac/` | `/pittogrammi/arasaac/nome.png` |
 
 Se aggiungi nuove esclusioni al workflow, aggiorna anche questa tabella e la **Parte 1.10** e **Parte 10.2** di `MANUALE-SITO.md`.
 

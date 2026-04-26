@@ -31,6 +31,7 @@ sito-pc-genzano/
 │   │   │                    # cookie-banner, breadcrumb, page-tools,
 │   │   │                    # accessibility-toolbar.html (FAB strumenti a11y), ecc.
 │   │   ├── shortcodes/      # foto.html (click-per-ingrandire accessibile)
+│   │   │                    # pittogramma.html (ISO 7010 + ARASAAC)
 │   │   ├── comunicazioni/   # list.html con filtri per badge
 │   │   └── cerca/           # list.html con motore di ricerca JS
 │   └── static/
@@ -52,6 +53,9 @@ sito-pc-genzano/
 │   │                                # foto sorgente fornita dall'utente e la
 │   │                                # converte in WebP 1200px pronta per l'uso
 │   │                                # via shortcode {{< foto >}}
+│   ├── scarica-pittogrammi.sh       # Scarica/aggiorna libreria pittogrammi
+│   │                                # ISO 7010 (Wikimedia) + ARASAAC.
+│   │                                # Output: static/pittogrammi/...
 │   └── export-contesto-ai.sh        # Export di tutta la documentazione in
 │                                    # un unico CONTESTO-AI.md per altra AI
 ├── .claude/rules/           # Regole di governance (questo file)
@@ -86,7 +90,7 @@ Aggiorna i data files al posto di modificare i template quando possibile.
 - `draft: true` esclude dalla build di produzione, visibile solo con `hugo server -D`
 
 ### Shortcode `foto` (immagini nel corpo degli articoli)
-Il tema definisce un unico shortcode: `foto`, usato per inserire foto evento nel corpo degli articoli.
+Il tema definisce due shortcode: `foto` (foto evento) e `pittogramma` (simboli).
 
 ```go-html-template
 {{< foto src="/images/AAAA-MM-GG-descrizione.webp"
@@ -102,6 +106,49 @@ Produce `<figure>` con:
 - Funziona senza JavaScript (progressive enhancement)
 
 `src` e `alt` sono **obbligatori**: la mancanza causa errore di build Hugo.
+
+### Shortcode `pittogramma` (simboli ISO 7010 e ARASAAC)
+
+Inserisce pittogrammi standardizzati per supportare la comprensione del testo a bambini, anziani, persone con disabilità cognitive e parlanti italiano L2 (regola 03 — accessibilità cognitiva).
+
+Uso block (figure centrata con caption opzionale):
+```go-html-template
+{{< pittogramma src="/pittogrammi/arasaac/terremoto.png"
+                alt="Pittogramma: terremoto"
+                caption="Cosa fare in caso di terremoto"
+                size="large" >}}
+```
+
+Uso inline (dentro una frase):
+```go-html-template
+Chiama il {{< pittogramma src="/pittogrammi/arasaac/112.png" alt="numero 112" inline="true" >}} 112.
+```
+
+Parametri:
+- `src` (obbligatorio) — percorso pittogramma in `/pittogrammi/iso7010/` o `/pittogrammi/arasaac/`
+- `alt` (obbligatorio) — testo alternativo significativo per screen reader (mai stringa vuota: il pittogramma non è decorativo, è esplicativo)
+- `caption` (opzionale, solo block) — didascalia visibile sotto
+- `inline="true"` — inserimento inline dentro una frase (default: block)
+- `size` — `small` (48px) | `medium` (96px, default) | `large` (160px) | `xlarge` (240px)
+
+Produce `<img>` con `role="img"` e `loading="lazy"`, oppure `<figure>` con caption opzionale. CSS scoped in `custom.css` (sezione **PITTOGRAMMI v1.0**) con dimensioni fisse, override mobile (large/xlarge ridotti su <576px), mantenimento colori in stampa (i colori dei segnali ISO 7010 sono parte dell'informazione di sicurezza e non devono essere convertiti in scala di grigi).
+
+**Libreria disponibile** (171 simboli, 3.3 MB):
+- `static/pittogrammi/iso7010/*.svg` — 46 segnali standard (E* evacuazione, F* antincendio, W* avvertimento, M* obbligo, P* divieto). Vettoriali, scalabili senza perdita.
+- `static/pittogrammi/arasaac/*.png` — 125 simboli (eventi/rischi, azioni autoprotezione, oggetti kit emergenza, persone, luoghi, segnali, veicoli, numeri utili). Bitmap 500px.
+
+**Re-download della libreria**: `bash scripts/scarica-pittogrammi.sh` (idempotente, scarica solo i mancanti; `--force` ri-scarica tutto). Lo script ha rate-limit 1s tra le richieste Wikimedia per evitare ban temporaneo.
+
+**Regole di attribuzione (obbligatorie):**
+- Pagina `/attribuzioni-pittogrammi/` linkata dal footer di tutte le pagine.
+- ARASAAC è CC BY-NC-SA 4.0: le opere derivate (ad esempio le **schede stampabili PDF** dei kit didattici) che includono pittogrammi ARASAAC ereditano la stessa licenza CC BY-NC-SA 4.0.
+- ISO 7010 da Wikimedia: prevalentemente PD-shape/CC0, attribuzione di cortesia su pagina dedicata.
+
+**Regole di uso editoriale:**
+- Non sostituire il testo con il solo pittogramma: il pittogramma è di **supporto** alla comprensione, mai sostituto. WCAG 1.4.5 (Images of Text) e principio di leggibilità per L2.
+- Usare un pittogramma per concetto chiave, non come "decorazione visiva" continua: la sovrabbondanza riduce l'efficacia comunicativa per gli utenti che ne hanno davvero bisogno.
+- Per segnali di sicurezza (ISO 7010 di tipo P/W/M/F): preferire i simboli standard a quelli ARASAAC quando si comunica un obbligo o un divieto formale.
+- Per situazioni narrative o didattiche destinate a bambini: preferire ARASAAC per il colore e il tratto più riconoscibile.
 
 ### Menu di navigazione principale (mega-menu accorpato)
 
@@ -221,30 +268,6 @@ Il tema personalizza il rendering dei link Markdown tramite `layouts/_default/_m
 
 Se estendi la lista di estensioni statiche o modifichi il comportamento di `relURL`, aggiorna **entrambi** i file `render-link.html` (progetto e tema) per mantenere la coerenza.
 
-### Pittogrammi standardizzati (shortcode `pittogramma`)
-
-Il tema definisce un secondo shortcode oltre a `foto`: **`pittogramma`**, usato per inserire pittogrammi standardizzati ISO 7010 (sicurezza) o ARASAAC (CAA/AAC) accanto al testo.
-
-```go-html-template
-{{< pittogramma codice="W001" alt="Pericolo generale" >}}
-{{< pittogramma codice="E002" alt="Uscita di emergenza" label="Uscita →" size="96" >}}
-{{< pittogramma codice="2453" set="arasaac" alt="Bambino che corre" >}}
-```
-
-**File coinvolti:**
-- `themes/flavour-pcgenzano/layouts/shortcodes/pittogramma.html` — shortcode con risoluzione automatica del filename (`<codice>-*.svg`).
-- `static/pittogrammi/iso7010/` — SVG ISO 7010 (PD/CC0). Naming: `<CODICE>-<descrizione>.svg`.
-- `static/pittogrammi/arasaac/` — PNG ARASAAC (CC BY-NC-SA, attribuzione obbligatoria). Naming: `<id>.png`.
-- CSS in `themes/flavour-pcgenzano/static/css/custom.css` — sezione "PITTOGRAMMI ISO 7010 e ARASAAC" + "Galleria pittogrammi".
-- `scripts/scarica-pittogrammi-iso7010.sh` e `scripts/scarica-pittogrammi-arasaac.sh` — download massivo da Wikimedia Commons / arasaac.org (esecuzione locale, sandbox blocca host esterni).
-- Pagina pubblica catalogo: `content/pittogrammi/_index.md` → `/pittogrammi/`.
-
-**Regole operative:**
-- Pittogrammi marcati funzionali: il CSS `html.a11y-hide-images .pittogramma img { visibility: visible !important }` li mantiene visibili anche con preferenza "Nascondi immagini" del toolbar.
-- L'attributo `alt` è **obbligatorio**: il pittogramma è complemento al testo, non sostituto (WCAG 1.1.1).
-- Massimo 3-4 pittogrammi per pagina.
-- Documentazione editoriale completa in `MANUALE-SITO.md` Parte 3.16.
-
 ### Strumenti di Accessibilità (toolbar utente)
 
 In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo blu istituzionale** (FAB) con icona `bi-universal-access` che apre un **dialog modale** con preferenze di lettura: dimensione testo (4 livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (default/alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande.
@@ -284,6 +307,8 @@ Per evitare che nuovi file finiscano in cartelle escluse dal deploy FTP (vedi re
 | Segnaletica aree di emergenza | `static/cartelli/` | `/cartelli/nome.png` |
 | Copertine e foto evento | `static/images/` | `/images/nome.webp` |
 | Archivio storico immagini | `static/images/archivio-storico/` | `/images/archivio-storico/nome.ext` |
+| Pittogrammi ISO 7010 | `static/pittogrammi/iso7010/` | `/pittogrammi/iso7010/nome.svg` |
+| Pittogrammi ARASAAC | `static/pittogrammi/arasaac/` | `/pittogrammi/arasaac/nome.png` |
 
 **Non** usare `static/documenti/` per contenuto nuovo: resta esclusa dal deploy perché contiene materiale ereditato dal sito precedente gestito direttamente sul server Aruba.
 
