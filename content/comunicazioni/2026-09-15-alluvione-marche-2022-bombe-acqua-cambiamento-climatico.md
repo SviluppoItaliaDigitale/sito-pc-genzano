@@ -23,6 +23,10 @@ Il bilancio finale fu di **13 vittime**, tra cui un bambino di otto anni travolt
 
 ## Cosa è successo davvero quella notte
 
+{{< foto src="/images/2026-09-15-marche-alluvione-piazza-allagata-auto.webp"
+         alt="Foto a colori del settembre 2022: piazza di un paese marchigiano completamente allagata da acqua di colore marrone-fango. Sullo sfondo la facciata di una chiesa con campanile in pietra e un palazzo storico in stile umbertino con intonaco arancione. In primo piano cinque automobili parzialmente sommerse fino al cofano. Sulla sinistra, in controluce, un uomo con ombrello rosso osserva la scena. Sopra, il cielo è grigio plumbeo per il temporale ancora in corso."
+         caption="La piazza centrale di un paese marchigiano nelle ore dell'alluvione del 15-16 settembre 2022. L'acqua arriva al cofano delle automobili in sosta. Il colore marrone è dovuto al fango trascinato dai versanti collinari sovrastanti durante il rovescio temporalesco autorigenerante." >}}
+
 L'alluvione del 15 settembre 2022 è il prototipo del fenomeno meteorologico che gli scienziati chiamano in modo sempre più frequente "**bomba d'acqua**" o, più correttamente, **rovescio temporalesco autorigenerante**: un sistema di temporali che, alimentato da convergenza di umidità e calore, **resta fermo** per diverse ore sopra la stessa zona, scaricando quantità di pioggia che normalmente sarebbero distribuite su giorni o settimane.
 
 Le condizioni di quel 15 settembre erano:
