@@ -9,7 +9,7 @@ sitemap:
   priority: 0.9
   changefreq: weekly
 ---
-Un cittadino informato è un cittadino preparato. In questa sezione puoi approfondire la conoscenza dei principali rischi che interessano il nostro territorio e scoprire le norme di comportamento da adottare per proteggere te stesso e la tua famiglia.
+Sapere cosa fare prima, durante e dopo un'emergenza riduce il rischio per te, per la tua famiglia e per chi ti soccorre. In questa sezione trovi i principali rischi del territorio di Genzano di Roma e i comportamenti corretti per proteggere te stesso e chi è vicino a te.
 
 <!--more-->
 

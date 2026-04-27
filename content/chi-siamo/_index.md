@@ -226,7 +226,7 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 Di seguito alcuni eventi e calamità significative dove il nostro gruppo ha partecipato attivamente, dalla fondazione al giorno d'oggi.
 
 <div class="timeline-wrapper mt-4">
-<div class="timeline-item"><strong>1981</strong> — Fondazione del Comitato di Protezione Civile di Genzano Di Roma</div>
+<div class="timeline-item"><strong>1981</strong> — Fondazione del Comitato di Protezione Civile di Genzano di Roma</div>
 <div class="timeline-item"><strong>1991</strong> — Fondazione del Gruppo Comunale di Protezione Civile</div>
 <div class="timeline-item"><strong>1997</strong> — Terremoto Umbria - Marche</div>
 <div class="timeline-item"><strong>1998</strong> — Frana Sarno (SA)</div>

@@ -12,7 +12,7 @@ Ai sensi degli artt. 13 e 14 del Regolamento (UE) 2016/679 (GDPR), il Gruppo Com
 ### Titolare del Trattamento
 
 **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**
-Via Sicilia, 13-15 — 00045 Genzano Di Roma (RM)
+Via Sicilia, 13-15 — 00045 Genzano di Roma (RM)
 C.F. 92011880588
 Email: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
 

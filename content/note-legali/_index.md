@@ -7,7 +7,7 @@ dataUltimaRevisione: "2026-04-22"
 
 ## Titolarità del sito
 
-Il presente sito web è di proprietà del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, con sede in Via Sicilia 13-15, 00045 Genzano Di Roma (RM) — C.F. 92011880588.
+Il presente sito web è di proprietà del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, con sede in Via Sicilia 13-15, 00045 Genzano di Roma (RM) — C.F. 92011880588.
 
 Iscritto al RUNTS, sezione "Altri Enti del Terzo Settore", con determina n. G14230 del 28/10/2024.
 
