@@ -92,6 +92,8 @@ Il percorso completo si articola in **6 moduli da 45-60 minuti**. Ogni modulo è
 
 ## Modulo 1 — Cos'è la Protezione Civile
 
+{{< pittogramma src="/pittogrammi/arasaac/volontario.png" alt="Pittogramma: volontario di protezione civile" size="medium" >}}
+
 ### Spiegazione
 
 La Protezione Civile non è solo un ufficio o un gruppo di persone. È un **sistema** formato da tanti soggetti diversi che lavorano insieme per proteggere le persone, gli animali, l'ambiente e i beni dai pericoli.
@@ -125,6 +127,8 @@ Leggi le situazioni e chiedi alla classe chi bisogna chiamare:
 ---
 
 ## Modulo 2 — Il terremoto
+
+{{< pittogramma src="/pittogrammi/arasaac/terremoto.png" alt="Pittogramma: terremoto" size="medium" >}}
 
 ### Spiegazione
 
@@ -169,6 +173,8 @@ Simulate un terremoto in classe:
 ---
 
 ## Modulo 3 — L'alluvione e il rischio idrogeologico
+
+{{< pittogramma src="/pittogrammi/arasaac/alluvione.png" alt="Pittogramma: alluvione" size="medium" >}}
 
 ### Spiegazione
 
@@ -217,6 +223,8 @@ Portate in classe un esempio di bollettino di allerta meteo (scaricabile dal sit
 ---
 
 ## Modulo 4 — L'incendio boschivo
+
+{{< pittogramma src="/pittogrammi/arasaac/incendio.png" alt="Pittogramma: incendio boschivo" size="medium" >}}
 
 ### Spiegazione
 
@@ -267,6 +275,8 @@ Se togli uno dei tre elementi, il fuoco si spegne. Questo è il principio con cu
 ---
 
 ## Modulo 5 — Il piano di emergenza familiare
+
+{{< pittogramma src="/pittogrammi/arasaac/famiglia.png" alt="Pittogramma: famiglia" size="medium" >}}
 
 ### Spiegazione
 

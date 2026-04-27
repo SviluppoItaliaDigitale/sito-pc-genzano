@@ -220,6 +220,8 @@ Scaricate un bollettino di allerta reale dal sito dell'[Agenzia di Protezione Ci
 
 ## Modulo 4 — Comportamenti di autoprotezione
 
+{{< pittogramma src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Cartello del punto di raccolta" size="medium" >}}
+
 ### Terremoto
 
 **Prima**: individua i punti più sicuri della casa (sotto tavoli robusti, vicino a muri portanti, lontano da finestre e mobili pesanti). Fissa scaffali e librerie al muro.
@@ -331,6 +333,8 @@ Nella lezione successiva, confrontate i piani in classe (senza condividere dati 
 ---
 
 ## Modulo 6 — Cittadinanza attiva e volontariato
+
+{{< pittogramma src="/pittogrammi/arasaac/volontario.png" alt="Pittogramma: volontario di protezione civile" size="medium" >}}
 
 ### Il volontariato di protezione civile
 
