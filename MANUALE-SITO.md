@@ -2405,7 +2405,8 @@ Regola d'oro: **prima di creare un nuovo partial o template, verifica se la stes
   "livello": "verde",
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
-  "ultimo_aggiornamento": "2026-04-21"
+  "ultimo_aggiornamento": "2026-04-23T16:07:32+02:00",
+  "ultimo_controllo": "2026-04-27T11:00:00+02:00"
 }
 ```
 
@@ -2413,9 +2414,10 @@ Regola d'oro: **prima di creare un nuovo partial o template, verifica se la stes
 - `livello` *(string, obbligatorio)*: `verde` | `gialla` | `arancione` | `rossa`. Pilota colore della barra allerta in cima a ogni pagina.
 - `titolo` *(string)*: es. "ALLERTA GIALLA SUI CASTELLI ROMANI".
 - `descrizione` *(string)*: una frase sintetica.
-- `ultimo_aggiornamento` *(string)*: data in formato `AAAA-MM-GG`.
+- `ultimo_aggiornamento` *(string ISO 8601)*: timestamp dell'**ultimo cambio di livello**. Cambia solo quando il livello reale passa da uno stato all'altro (es. verde → gialla).
+- `ultimo_controllo` *(string ISO 8601)*: timestamp dell'**ultima verifica del bollettino DPC**. Aggiornato dal workflow ogni 6 ore (anche se il livello è invariato), così la barra mostra al cittadino una data sempre fresca con il testo "Verificato: …". Sulla homepage il JS lato browser aggiorna ulteriormente questo testo all'ora locale ad ogni visita.
 
-**Aggiornamento automatico**: il workflow `check-allerta.yml` (vedi Parte 10) interroga il feed ufficiale DPC **ogni ora** e aggiorna `allerta.json` se il livello è cambiato. Nella maggior parte dei casi **non serve intervenire manualmente**.
+**Aggiornamento automatico**: il workflow `check-allerta.yml` (vedi Parte 10) interroga il feed ufficiale DPC **ogni ora** e aggiorna `allerta.json` quando il livello cambia OPPURE quando sono passate ≥6 ore dall'ultimo controllo. Limita i commit a max 4/giorno + cambi di livello. Nella maggior parte dei casi **non serve intervenire manualmente**.
 
 **Aggiornamento manuale**: serve solo se l'automazione fallisce o se si vuole forzare un messaggio istituzionale specifico. Modifica il file, commit, push. **Nota**: al successivo ciclo orario il workflow sovrascriverà il tuo intervento con il valore letto dal feed DPC. Per evitarlo, disabilita temporaneamente il workflow (vedi 10.9).
 

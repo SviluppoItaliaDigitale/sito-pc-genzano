@@ -18,18 +18,28 @@
 {{/* ── BARRA ALLERTA METEO ── */}}
 {{ $allerta := .Site.Data.allerta }}
 {{ if $allerta }}
-<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $allerta.livello }} allerta-bar-loading" role="alert" aria-label="Stato allerta meteo" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}">
+{{ $controllo := or $allerta.ultimo_controllo $allerta.ultimo_aggiornamento }}
+<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $allerta.livello }} allerta-bar-loading" role="alert" aria-label="Stato allerta meteo" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}" data-controllo="{{ $controllo }}">
 <noscript><style>.allerta-bar-loading{opacity:1!important}</style></noscript>
-  <div class="container d-flex flex-wrap justify-content-between align-items-center">
-    <div>
-      {{ if eq $allerta.livello "verde" }}<i id="allerta-icon" class="bi bi-shield-check me-2" aria-hidden="true"></i>
-      {{ else }}<i id="allerta-icon" class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i>{{ end }}
-      <strong id="allerta-titolo">{{ $allerta.titolo }}</strong>
-      <span id="allerta-desc" class="d-none d-md-inline ms-2">— {{ $allerta.descrizione }}</span>
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      <div>
+        {{ if eq $allerta.livello "verde" }}<i id="allerta-icon" class="bi bi-shield-check me-2" aria-hidden="true"></i>
+        {{ else }}<i id="allerta-icon" class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i>{{ end }}
+        <strong id="allerta-titolo">{{ $allerta.titolo }}</strong>
+        <span id="allerta-desc" class="d-none d-md-inline ms-2">— {{ $allerta.descrizione }}</span>
+      </div>
+      <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm allerta-bar-btn ms-2 mt-1 mt-md-0">
+        Bollettino Ufficiale <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
+      </a>
     </div>
-    <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm allerta-bar-btn ms-2 mt-1 mt-md-0">
-      Bollettino Ufficiale <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
-    </a>
+    {{ $t := time.AsTime $controllo }}
+    {{ $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" }}
+    <div class="allerta-bar-meta">
+      <i class="bi bi-clock-history me-1" aria-hidden="true"></i>
+      Verificato: <span id="allerta-controllo">{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</span>
+      <span class="text-nowrap">· Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a></span>
+    </div>
   </div>
 </div>
 {{ end }}
@@ -278,6 +288,15 @@ function checkAllertaDPC(){
         d.textContent=testo;
       }
       if(ic)ic.className=maxLiv==='verde'?'bi bi-shield-check me-2':'bi bi-exclamation-triangle-fill me-2';
+
+      // Aggiorna "Verificato: <ora>" con l'ora locale del client (max freschezza)
+      var ck=document.getElementById('allerta-controllo');
+      if(ck){
+        var n=new Date();
+        var pad=function(x){return x<10?'0'+x:''+x};
+        var mesi=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+        ck.textContent=n.getDate()+' '+mesi[n.getMonth()]+' '+n.getFullYear()+', '+pad(n.getHours())+':'+pad(n.getMinutes());
+      }
       bar.classList.remove('allerta-bar-loading');
     })
     .catch(function(){ bar.classList.remove('allerta-bar-loading'); });
