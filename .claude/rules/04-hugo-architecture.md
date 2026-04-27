@@ -61,6 +61,10 @@ sito-pc-genzano/
 │   │                                # (sicuro: mai sovrascrive foto utente).
 │   │                                # Chiama genera-cover.py + aggiorna
 │   │                                # frontmatter solo se vuoto.
+│   ├── proponi-marker-foto.py       # Scansiona articoli con image:"" e
+│   │                                # propone marker TODO-foto-wikipedia da
+│   │                                # incollare manualmente. Output testuale
+│   │                                # o CSV. Sicuro: non modifica file.
 │   └── export-contesto-ai.sh        # Export di tutta la documentazione in
 │                                    # un unico CONTESTO-AI.md per altra AI
 ├── .claude/rules/           # Regole di governance (questo file)
