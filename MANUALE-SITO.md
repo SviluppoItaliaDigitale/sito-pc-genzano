@@ -4725,18 +4725,30 @@ Se hai già committato un articolo con marker e vuoi forzare l'esecuzione del wo
 
 1. La **cover** dell'articolo (mostrata nelle anteprime e nelle card) è **sempre tipografica**: gradiente blu istituzionale + titolo articolo + fascia con logo. Generata da `scripts/genera-cover.py`. File: `static/images/<slug>.webp`.
 
-2. La **foto reale** (Wikipedia/NASA/USGS/NOAA), se presente, va **nel corpo dell'articolo**, non nella cover. File: `static/images/<slug>-fonte-wikipedia.webp` (nome diverso dallo slug, così `genera-cover.py` non la sovrascrive).
+2. Le **foto reali** (Wikipedia/NASA/USGS/NOAA), se presenti, vanno **nel corpo dell'articolo**, non nella cover. File: `static/images/<slug>-<descrittore>.webp` (nome diverso dallo slug, così `genera-cover.py` non la sovrascrive). Esempi di descrittore: `-fonte-wikipedia`, `-conza-campania-ricostruita`, `-zamberletti-padre-pc`.
 
-3. **Posizione della foto nel corpo**: dentro la **prima sezione H2**, **dopo il primo paragrafo di contenuto**. Questa collocazione lega visivamente la foto al primo blocco di approfondimento, dove è più rilevante. Mai "buttata" subito dopo l'intro.
+3. **Posizione delle foto nel corpo** (convenzione adottata aprile 2026 dopo arricchimento di 35 foto su 30+ articoli storici):
 
-4. **Cornice e didascalia**: applicate via CSS scoped (`custom.css` sezione "Figure dallo shortcode foto"). Cornice istituzionale bianca con padding 8px, ombra `0 10px 28px rgba(0,51,102,0.18)`, didascalia centrata con border-top blu trasparente. Il caption deve sempre includere autore + licenza + link "Fonte originale".
+   | Foto | Posizione | Razionale |
+   |---|---|---|
+   | **1ª foto** | Dopo il **1° H2**, dopo il primo paragrafo di contenuto | Lega la foto al primo blocco di approfondimento (introduzione contestuale) |
+   | **2ª foto** | Dopo il **2° H2**, dopo il primo paragrafo | Apre una seconda dimensione narrativa (ricostruzione, contesto secondario, conseguenze) |
+   | **3ª, 4ª foto…** | Dopo l'H2 dell'evento storico citato | Una foto per ogni evento storico specifico (es. articoli che raccontano sequenze di terremoti — Irpinia 1980, L'Aquila 2009, Centro Italia 2016) |
 
-5. **Markup**: solo via shortcode `{{< foto src="..." alt="..." caption="..." >}}` (mai markdown `![...]()` diretto).
+   **Mai a casaccio**: ogni foto deve avere un legame tematico con la sezione che la precede. Mai "una foto subito dopo l'intro": l'intro non ha ancora un H2 a cui ancorarla.
+
+4. **Filtro automatico bandiere comunali**: lo script `foto-da-wikipedia.sh` scarta automaticamente i risultati che corrispondono a bandiere/stemmi (pattern: `*Bandiera.svg`, `Flag_of_*`, `*-Stemma.svg`, `*Coat_of_arms*`, `*Stemma_di_*`). Sono SVG decorativi che non aggiungono valore narrativo. Quando capita, lo script ritorna exit code `4` e suggerisce di provare un titolo più specifico (un monumento, una piazza, una veduta). Esempio operativo: per "Cardoso 1996" non usare *"Stazzema"* (restituirebbe la bandiera); usare *"Cardoso (Stazzema)"* o *"Alpi Apuane"*.
+
+5. **Cornice e didascalia**: applicate via CSS scoped (`custom.css` sezione "Figure dallo shortcode foto"). Cornice istituzionale bianca con padding 8px, ombra `0 10px 28px rgba(0,51,102,0.18)`, didascalia centrata con border-top blu trasparente. Il caption deve sempre includere autore + licenza + link "Fonte originale".
+
+6. **Markup**: solo via shortcode `{{< foto src="..." alt="..." caption="..." >}}` (mai markdown `![...]()` diretto).
 
 **Esempio caption ben fatto**:
 ```
 caption="Foto: USGS — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:...)."
 ```
+
+**Quando aggiungere una seconda/terza foto a un articolo esistente**: criterio operativo — un articolo merita foto multiple se (a) ha **almeno 5 sezioni H2**, (b) racconta **eventi storici specifici** (anniversari, memoria, ricostruzioni, sequenze sismiche), (c) le foto trovate hanno **valore narrativo** (luoghi, persone, mappe, satellite — non bandiere o stemmi). Non aggiungere foto a articoli di servizio quotidiano (preparazione casa, salute mentale, ecc.) o a articoli dottrinali (colonne mobili, normativa). Vale la regola del progetto: "non elemosinare le immagini, ma senza esagerare".
 
 ---
 

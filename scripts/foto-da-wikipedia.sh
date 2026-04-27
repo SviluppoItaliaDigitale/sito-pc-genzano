@@ -64,6 +64,18 @@ if [ -z "$THUMB_URL" ] || [ -z "$PAGE_IMG_NAME" ]; then
   exit 2
 fi
 
+# Filtro automatico: scarta bandiere comunali e stemmi (SVG decorativi non
+# pertinenti). Pattern tipici Wikipedia: "<Comune>-Bandiera.svg",
+# "Flag_of_<Comune>.svg", "<Comune>-Stemma.svg".
+case "$PAGE_IMG_NAME" in
+  *Bandiera.svg|Flag_of_*|*-Stemma.svg|*Coat_of_arms*|*Stemma_di_*)
+    echo "[error] Immagine principale e' una bandiera/stemma comunale: '${PAGE_IMG_NAME}'." >&2
+    echo "        Scartata automaticamente (non aggiunge valore narrativo all'articolo)." >&2
+    echo "        Prova con un titolo piu' specifico (un monumento, una piazza, una vista)." >&2
+    exit 4
+    ;;
+esac
+
 # 2) Ottieni metadata di licenza/autore via imageinfo
 META_JSON=$(curl -sS -A "$UA" --get \
   --data-urlencode "action=query" \

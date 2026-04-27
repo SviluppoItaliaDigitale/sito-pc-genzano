@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 """
-Aggiorna l'articolo dopo il download di una foto da Wikipedia/NASA/USGS/NOAA:
+Aggiorna l'articolo dopo il download di una foto da Wikipedia/NASA/USGS/NOAA.
 
-Flusso (corretto, no piu' foto-in-cover):
+Convenzione di posizionamento foto (MANUALE-SITO.md Parte 14.9):
+  - Cover articolo = sempre tipografica (gradiente blu + titolo + fascia)
+  - 1ª foto reale = nel corpo, dopo il 1° H2 + primo paragrafo
+  - 2ª, 3ª foto (per arricchimenti successivi manuali) = dopo H2 successivi,
+    una per ogni evento storico citato (mai foto a casaccio)
+
+Flusso (eseguito qui per la 1ª foto soltanto):
   1. Rinomina static/images/<slug>.webp -> static/images/<slug>-fonte-wikipedia.webp
      (la foto scaricata diventa "foto del corpo")
   2. Lancia genera-cover.py per produrre una cover tipografica istituzionale
@@ -12,7 +18,7 @@ Flusso (corretto, no piu' foto-in-cover):
      - image_alt popolato con titolo se vuoto
      - rimuove la riga marker TODO-foto-*
   4. Inserisce nel corpo articolo lo shortcode {{< foto >}} con foto Wikipedia
-     dopo la prima H2 + primo paragrafo (collocazione sensata).
+     dopo la 1ª H2 + primo paragrafo.
      Caption: "Foto: <autore> — <licenza> — via Wikimedia Commons.
      [Fonte originale](<url>)."
 

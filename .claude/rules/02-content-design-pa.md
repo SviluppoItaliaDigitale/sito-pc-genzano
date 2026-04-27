@@ -59,7 +59,15 @@ Specifiche complete: `MANUALE-SITO.md`, Parte 3.
    Ridimensiona a 1200 px, sovrappone logo + testo istituzionale, esporta WebP qualità 85 (ricompresso a 75 se >200 KB) in `static/images/<nome>.webp`. Evita passaggi manuali in Canva/GIMP. Dettagli in `MANUALE-SITO.md` Parte 3.8, Metodo 4.
 5. Lo shortcode produce `<figure>`/`<figcaption>` accessibili, immagine cliccabile per ingrandire (apre in nuova scheda), `aria-label` descrittivo, `loading="lazy"`. La tipografia `.article-body` v7.2 (`custom.css`) applica automaticamente cornice con ombra morbida e didascalia in corsivo blu — non serve CSS inline.
 
-Questa regola nasce dopo un incidente in cui una foto fornita dall'utente era stata sostituita dalla sola copertina automatica — comportamento non accettabile.
+6. **Posizionamento di foto multiple in articoli storici** (convenzione adottata aprile 2026 dopo arricchimento di 35 foto su 30+ articoli memoria/anniversario):
+   - **1ª foto**: dopo il **1° H2** dell'articolo, dopo il primo paragrafo di contenuto.
+   - **2ª foto**: dopo il **2° H2**, per aprire una seconda dimensione narrativa (ricostruzione, contesto, conseguenze).
+   - **3ª foto e oltre**: una per ogni H2 di **evento storico specifico citato** (es. articoli che raccontano sequenze di terremoti — Irpinia 1980, L'Aquila 2009, Centro Italia 2016).
+   - **Mai foto a casaccio**: ogni foto va legata tematicamente alla sezione che la precede.
+   - **Quando aggiungere foto multiple**: l'articolo deve avere ≥5 H2, raccontare eventi storici specifici, e le foto candidate devono avere valore narrativo (luoghi, persone, mappe, satellite — non bandiere o stemmi). Non per articoli di servizio quotidiano o dottrinali.
+   - **Filtro automatico bandiere/stemmi comunali**: lo script `scripts/foto-da-wikipedia.sh` scarta i risultati con pattern `*Bandiera.svg`, `Flag_of_*`, `*-Stemma.svg`, `*Coat_of_arms*`, `*Stemma_di_*` (exit code `4`). Se capita, provare un titolo più specifico (un monumento, una piazza, una veduta).
+
+Specifiche complete in `MANUALE-SITO.md` Parte 14.9. Questa regola nasce dopo un incidente in cui una foto fornita dall'utente era stata sostituita dalla sola copertina automatica — comportamento non accettabile.
 
 ## Regola pittogrammi — supporto comprensione (bambini, anziani, L2)
 
