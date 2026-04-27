@@ -156,7 +156,9 @@ Al successivo push su `main`, il workflow `.github/workflows/scarica-foto-automa
 2. Il primo binario chiamato deve essere uno script in whitelist (`foto-da-wikipedia.sh`, `foto-da-nasa.sh`, `foto-da-usgs.sh`).
 3. Tutti i parametri sono passati come argomenti dello script, non come codice eseguibile.
 
-**Aggiungere una nuova fonte** (es. NOAA, Copernicus): (a) creare `scripts/foto-da-NUOVA.sh` con stesso pattern di output (stampa Origine/Autore/Licenza); (b) aggiungere `foto-da-NUOVA.sh` alla `ALLOWED_SCRIPTS` del workflow; (c) aggiungere `nuova` alla regex del marker; (d) aggiornare archetype + doc.
+**Aggiungere una nuova fonte** (es. Copernicus): (a) creare `scripts/foto-da-NUOVA.sh` con stesso pattern di output (stampa Origine/Autore/Licenza); (b) aggiungere `foto-da-NUOVA.sh` alla `ALLOWED_SCRIPTS` del workflow + nuovo `case` nello switch FONTE; (c) aggiungere `nuova` alla regex del marker; (d) aggiornare archetype + doc.
+
+**Caso particolare: NOAA.** A differenza di Wikipedia/NASA (API JSON ricche) e USGS (API earthquake), NOAA non ha un'API unificata di ricerca immagini. Lo script `foto-da-noaa.sh` accetta direttamente l'**URL diretto dell'immagine** (l'utente lo trova manualmente su `photolib.noaa.gov`, `weather.gov`, `nhc.noaa.gov`, `nesdis.noaa.gov`) + una stringa descrittiva del contesto + slug. Whitelist di sicurezza: solo URL `*.noaa.gov` o `weather.gov` (NWS). Esempio marker: `# TODO-foto-noaa: bash scripts/foto-da-noaa.sh "https://www.nhc.noaa.gov/.../katrina.png" "Traccia uragano Katrina (NHC)" 2026-08-29-katrina`.
 
 ### Cover tipografiche automatiche (`auto-cover-mancanti.py`)
 

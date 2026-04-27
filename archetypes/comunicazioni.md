@@ -32,14 +32,16 @@ image: ""
 # la foto, applica la fascia blu, popola image: + image_credit: +
 # image_source_url:, rimuove la riga marker. Fonti supportate:
 #
-#   # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Wikipedia" slug-articolo [lang]
-#   # TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "search query"     slug-articolo
-#   # TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap <eventid> slug-articolo
+#   # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Wikipedia"   slug-articolo [lang]
+#   # TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "search query"       slug-articolo
+#   # TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap <eventid>   slug-articolo
+#   # TODO-foto-noaa:      bash scripts/foto-da-noaa.sh      "URL diretto NOAA"   "Descrizione" slug-articolo
 #
 # Esempi:
 #   # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
 #   # TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "Etna eruption"                  2026-08-12-etna
 #   # TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap us10006g7d              2026-08-24-amatrice-shakemap
+#   # TODO-foto-noaa:      bash scripts/foto-da-noaa.sh      "https://www.nhc.noaa.gov/.../katrina.png" "Traccia uragano Katrina (NHC)" 2026-08-29-katrina
 
 # ── TESTO ALTERNATIVO IMMAGINE (a11y) ──
 # Descrive cosa si vede nell'immagine per chi usa screen reader.
