@@ -55,9 +55,9 @@ L'area dei Castelli Romani è particolarmente soggetta a temporali convettivi, s
 - Verifica lo stato delle strade prima di metterti in viaggio
 - Segnala situazioni di pericolo al **112**
 
-## Errori da evitare
-
-- Non ripararti sotto alberi isolati: sono bersagli naturali per i fulmini
-- Non attraversare mai strade allagate a piedi o in auto
-- Non scendere in cantine o garage durante forti piogge
-- Non sottovalutare la grandine: può causare danni a persone e veicoli
+{{< cosa-non-fare titolo="Cosa NON fare durante un temporale intenso" >}}
+- **Non ripararti sotto alberi isolati**: sono bersagli naturali per i fulmini
+- **Non attraversare mai strade allagate** a piedi o in auto
+- **Non scendere in cantine o garage** durante forti piogge
+- **Non sottovalutare la grandine**: può causare danni a persone e veicoli
+{{< /cosa-non-fare >}}

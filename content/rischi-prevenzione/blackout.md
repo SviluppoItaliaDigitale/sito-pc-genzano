@@ -42,9 +42,9 @@ Il territorio di Genzano, con la sua rete di distribuzione che attraversa aree b
 - Non usare l'acqua del rubinetto dopo il ripristino finché non sei certo che sia tornata limpida
 - Segui le comunicazioni del gestore idrico
 
-## Errori da evitare
-
-- Non usare mai candele incustodite come illuminazione di emergenza
-- Non usare barbecue, fornelli da campeggio o generatori in locali chiusi
-- Non forzare le porte dell'ascensore se sei bloccato
-- Non dare per scontato che il blackout sia breve: preparati sempre al peggio
+{{< cosa-non-fare titolo="Cosa NON fare durante un blackout" >}}
+- **Non usare mai candele incustodite** come illuminazione di emergenza
+- **Non usare barbecue, fornelli da campeggio o generatori in locali chiusi** (rischio monossido di carbonio)
+- **Non forzare le porte dell'ascensore** se sei bloccato: aspetta i soccorsi
+- **Non dare per scontato che il blackout sia breve**: preparati sempre al peggio
+{{< /cosa-non-fare >}}
