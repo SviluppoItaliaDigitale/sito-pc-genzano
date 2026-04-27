@@ -159,6 +159,32 @@ Produce `<img>` con `role="img"` e `loading="lazy"`, oppure `<figure>` con capti
 - Per segnali di sicurezza (ISO 7010 di tipo P/W/M/F): preferire i simboli standard a quelli ARASAAC quando si comunica un obbligo o un divieto formale.
 - Per situazioni narrative o didattiche destinate a bambini: preferire ARASAAC per il colore e il tratto più riconoscibile.
 
+### Shortcode `cosa-non-fare` (box divieti per pagine rischio)
+
+Box rosso bordato (`#c1121f`) con icona divieto che evidenzia visivamente i comportamenti DA EVITARE. Aumenta l'efficacia della comunicazione del rischio rispetto ai "non" dispersi nel testo. Usato sulle 7 pagine `/rischi-prevenzione/*`.
+
+```go-html-template
+{{< cosa-non-fare titolo="Cosa NON fare in caso di terremoto" >}}
+- **Non correre fuori durante la scossa**
+- **Non usare gli ascensori**
+- **Non usare il telefono per curiosità**
+{{< /cosa-non-fare >}}
+```
+
+Parametro `titolo` opzionale (default: "Cosa NON fare"). Contenuto Markdown standard. Output: `<div role="region" aria-label="...">` con header colorato + body in lista. Contrasto WCAG AA: testo `#7f1d1d` su `#fff5f5` = 7.7:1. CSS scoped sezione **COSA NON FARE v1.0** in `custom.css`. In stampa diventa nero su bianco mantenendo gerarchia visiva con `page-break-inside: avoid`.
+
+### Shortcode `pagina-emergenza-lite`
+
+Contiene tutto il rendering della pagina `/emergenza/` (pagina ultra-leggera per banda debole). Usa `data/allerta.json` e `data/emergenza.json` letti al build. Zero widget esterni, CSS inline minimale (~3KB), niente Bootstrap né JS aggiuntivo. Usato solo dalla pagina `content/emergenza/_index.md`. Aliases pagina: `/lite/`, `/emergenza-essenziale/`. Linkata dal footer di tutte le pagine.
+
+### Partial `leggi-ad-alta-voce` (TTS Web Speech API)
+
+Vedi regola `03-accessibility.md` sezione TTS per dettagli. Sintesi: opt-in via frontmatter `tts: true`, attivo su 12 pagine essenziali, voce italiana di default, fallback graceful, accessibile da tastiera. Componente in `partials/leggi-ad-alta-voce.html`, CSS in `custom.css` sezione **TTS v1.0**.
+
+### Partial `article-cover` (copertina con didascalia credit)
+
+Vedi sezione "Copertina articolo con didascalia di credit" più sotto. Sintesi: gestisce `<figure>` + `<img>` + `<figcaption>` con `image_credit` e `image_source_url` quando presenti nel frontmatter (popolati dal workflow `scarica-foto-automatica.yml` per articoli con marker `# TODO-foto-*`).
+
 ### Menu di navigazione principale (mega-menu accorpato)
 
 Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `themes/flavour-pcgenzano/layouts/partials/navbar.html`. Struttura a **6 voci di primo livello**, di cui 3 dropdown:

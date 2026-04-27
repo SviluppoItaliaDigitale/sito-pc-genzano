@@ -95,6 +95,26 @@ Per la struttura dei file, le regole di estensione e i divieti operativi vedi `0
 - Il FAB ha posizione **bottom-left** per non collidere con `back-to-top` (right) né con `sos-112` (right su mobile). Mantenere questa convenzione.
 - La pagina pubblica `/accessibilita/` descrive il toolbar al cittadino e va tenuta allineata se si aggiungono o tolgono funzioni.
 
+## TTS "Leggi ad alta voce" (Web Speech API)
+
+Pulsante che usa `window.speechSynthesis` per leggere il contenuto della pagina in italiano. Componente in `themes/flavour-pcgenzano/layouts/partials/leggi-ad-alta-voce.html`. Opt-in via frontmatter `tts: true`. Attivo su 12 pagine essenziali (cosa-fare-adesso, numeri-utili, facile-da-leggere, allerte-meteo, piano-familiare + 7 sotto-pagine rischi-prevenzione).
+
+**Caratteristiche accessibilità:**
+- ARIA: `role=button`, `aria-pressed` dinamico, `aria-label` che cambia con lo stato (idle/reading/paused), `aria-live=polite` per stato annunciato a screen reader
+- Tastiera: bottone nativo, attivabile con Enter/Space, focus visibile (`outline 3px #ffbe2e`)
+- Voce italiana: priorità `it-IT`, fallback qualsiasi voce italiana, fallback voce default browser
+- Velocità: 0.95x default per chiarezza (più lento del default)
+- Stati visivi distinti: idle (outline blu), reading (riempito blu + animazione pulse rispettosa di `prefers-reduced-motion`), paused (outline blu + icona play)
+- Esclude da lettura: script, style, code blocks, elementi `aria-hidden`, pittogrammi (sostituiti dalla `caption`)
+- Fallback graceful: se browser senza Web Speech API, bottone nascosto via JS
+
+**Caso d'uso target:** anziani con vista debole, persone in stress/emergenza, parlanti italiano L2, bambini che leggono lentamente, utenti con dislessia.
+
+**Regole operative:**
+- Per attivare TTS su una nuova pagina: aggiungere `tts: true` nel frontmatter (opt-in esplicito, non automatico)
+- Non attivare TTS su pagine legali (privacy, note legali, accessibilità) o tecniche (mappa sito, attribuzioni) — non utili da leggere ad alta voce
+- Non aggiungere altri TTS provider (es. Google Cloud TTS, AWS Polly) che richiedono API key/costo: Web Speech API browser è gratuita e sufficiente
+
 ## Divieti
 
 - Non eliminare il focus outline senza fornire un'alternativa visibile equivalente.

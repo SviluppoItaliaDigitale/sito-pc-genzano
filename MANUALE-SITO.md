@@ -1891,6 +1891,52 @@ La pagina `content/cartografia/_index.md` mostra in cima alla sezione una **mapp
 
 Ricordarsi di aggiungere anche la riga corrispondente nelle tabelle di `content/cartografia/_index.md` (le tabelle restano fonte accessibile e il PDF del Piano va aggiornato manualmente).
 
+### 4.10 — Pulsante "Leggi ad alta voce" (TTS) sulle pagine essenziali
+
+Le pagine essenziali per il cittadino possono attivare un pulsante **"Leggi ad alta voce"** che usa la sintesi vocale del browser per leggere il contenuto in italiano.
+
+**Per attivarlo su una pagina nuova:**
+- Aggiungere `tts: true` nel frontmatter dell'articolo o `_index.md`.
+
+**Quando attivarlo:**
+- ✅ Pagine operative consultate in emergenza (cosa fare, numeri utili, allerte)
+- ✅ Pagine per fragili (facile da leggere, kit didattici)
+- ❌ Pagine legali (privacy, note legali, accessibilità) — non utili da leggere
+- ❌ Pagine tecniche (mappa sito, attribuzioni) — solo elenchi di link
+
+Già attivo su 12 pagine: `/cosa-fare-adesso/`, `/numeri-utili/`, `/facile-da-leggere/`, `/allerte-meteo/`, `/piano-familiare/` + 7 sotto-pagine `/rischi-prevenzione/*`.
+
+**Caso d'uso:** anziani con vista debole, persone in stress, parlanti italiano L2, bambini, utenti con dislessia.
+
+### 4.11 — Box "Cosa NON fare" per pagine rischio
+
+Per evidenziare i comportamenti DA EVITARE (più efficace di "non" sparsi nel testo), usare lo shortcode:
+
+```markdown
+{{</* cosa-non-fare titolo="Cosa NON fare in caso di terremoto" */>}}
+- **Non correre fuori durante la scossa**: la maggior parte delle vittime è colpita da calcinacci
+- **Non usare gli ascensori**: possono bloccarsi
+- **Non rientrare in edifici danneggiati** per recuperare oggetti
+{{</* /cosa-non-fare */>}}
+```
+
+Parametro `titolo` opzionale (default: "Cosa NON fare"). Output: box rosso bordato con icona divieto, contrasto WCAG AA. In stampa diventa nero su bianco. Già attivo nelle 7 pagine `/rischi-prevenzione/*`.
+
+**Quando aggiungerlo:**
+- ✅ Pagine rischi specifici (sismico, alluvione, incendio, ecc.)
+- ✅ Articoli su autoprotezione che includono divieti chiari
+- ❌ Articoli generici / di servizio
+
+### 4.12 — Pagina `/emergenza/` ultra-leggera per banda debole
+
+Esiste una pagina dedicata `/emergenza/` (44 KB vs 64 KB della homepage) per consultazione rapida quando la rete è satura. Aliases: `/lite/`, `/emergenza-essenziale/`. Linkata dal footer.
+
+Contenuto in ordine di priorità: banner emergenza (se attivo), 112 grande, stato allerta meteo dinamico colorato, 4 numeri essenziali, 6 azioni "cosa fare ora", 7 link rapidi.
+
+**Manutenzione:** la pagina è statica e si aggiorna automaticamente con i dati di `data/allerta.json` e `data/emergenza.json`. Per modificare i numeri o le azioni: editare lo shortcode `themes/flavour-pcgenzano/layouts/shortcodes/pagina-emergenza-lite.html`.
+
+**Quando segnalarla:** in fase di emergenza dichiarata, è la pagina da diffondere via canali social/SMS perché si carica anche con rete debolissima.
+
 ---
 
 ## Parte 5 — Checklist pre-pubblicazione
