@@ -214,7 +214,7 @@ ARASAAC=(
   "pericolo|pericolo|segnale"
   "stop|stop|segnale"
   "allarme|allarme|segnale"
-  "sirena|sirena|segnale"
+  "allarme incendio|sirena|segnale"
   "sì|si|segnale"
   "no|no|segnale"
   "aiuto|aiuto|segnale"
