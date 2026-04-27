@@ -1,6 +1,6 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 2.5
+**Versione:** 2.6
 **Ultimo aggiornamento manuale:** 2026-04-27
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
@@ -14,6 +14,20 @@
 > o nuove versioni di Bootstrap Italia, viene aperta un'Issue sul repository con la checklist
 > dei punti da verificare. Vedi **Parte 7** per dettagli.
 
+> **Changelog 2.6 (2026-04-27)**
+> - Nuova cartella **`riferimenti-interni/`** alla root del repo per documentazione di
+>   lavoro NON deployata: norme tecniche copyrighted, draft di consultazione, materiale a
+>   uso interno della redazione. Indice in `riferimenti-interni/README.md`.
+> - Archiviati in `static/manuali/` (pubblici, linkati da `siti-utili/`):
+>   `cna-best-practices-social-media-crisis-2023.pdf` (US Govt public release) e
+>   `fema-saver-innovative-uses-social-media-emergency-management.pdf` (US Govt public release).
+> - Archiviati in `riferimenti-interni/comunicazione-emergenze/` (uso interno):
+>   `iso-22329-2021-social-media-emergencies.pdf` (ISO copyright) e
+>   `cwa-cen-cenelec-draft-social-media-messages.pdf` (CWA in fase di consultazione).
+> - **Parte 13.9** estesa con la nota sulla cartella `riferimenti-interni/`.
+> - **`siti-utili/_index.md`** estesa con etichette di accessibilità per ogni fonte
+>   (🟢 gratuita / ⚠️ parzialmente pubblica / 💶 a pagamento / 🔒 membership).
+>
 > **Changelog 2.5 (2026-04-27)**
 > - **Parte 9.3** (`allerta.json`): aggiunto il campo `ultimo_controllo` separato da
 >   `ultimo_aggiornamento`. Il workflow `check-allerta.yml` ora committa quando il livello
@@ -4515,6 +4529,15 @@ CNR garantisce la **correttezza scientifica** dei contenuti, DPC la **correttezz
 | 5 | Normativa orizzontale | DL 25/2025, GDPR, L. 4/2004, CAD |
 
 Il livello inferiore si applica **quando** il livello superiore non dispone diversamente.
+
+#### 13.9.7 — Archivio dei documenti di riferimento
+
+I documenti tecnici delle fonti sopra elencate sono archiviati nel repo per garantire la **continuità di consultazione** indipendentemente dalla disponibilità degli originali sul web:
+
+- **Pubblici** (linkati da `content/siti-utili/_index.md`): cartella `static/manuali/`, deployati sul sito.
+- **A uso interno della redazione** (copyrighted, draft, riservati): cartella `riferimenti-interni/`, NON deployata. Indice e stato di accessibilità di ogni documento in `riferimenti-interni/README.md`.
+
+I contenuti operativi delle fonti (struttura messaggi, hashtag, accessibilità, monitoraggio disinformazione) sono comunque **già recepiti** in questo manuale (Parte 13.7) e nelle regole `.claude/rules/02-content-design-pa.md`, `03-accessibility.md`, `06-protezione-civile-scientifica.md`. Il volontario o redattore non ha bisogno di consultare gli originali per il lavoro quotidiano.
 
 ---
 

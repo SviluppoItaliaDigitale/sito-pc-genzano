@@ -370,6 +370,35 @@ Per evitare che nuovi file finiscano in cartelle escluse dal deploy FTP (vedi re
 
 **Non** usare `static/documenti/` per contenuto nuovo: resta esclusa dal deploy perché contiene materiale ereditato dal sito precedente gestito direttamente sul server Aruba.
 
+### Cartella `riferimenti-interni/` — documentazione di lavoro NON deployata
+
+Per la **documentazione di lavoro** che il Gruppo deve poter consultare ma **non può/non vuole pubblicare** (norme tecniche copyrighted, draft di consultazione, materiale a uso interno) il repo ha una cartella di livello root:
+
+```
+riferimenti-interni/
+├── README.md                              ← elenco documenti + stato accessibilità
+├── comunicazione-emergenze/
+│   ├── iso-22329-2021-social-media-emergencies.pdf       (copyrighted ISO)
+│   └── cwa-cen-cenelec-draft-social-media-messages.pdf   (draft consultazione)
+└── ...                                    ← futura espansione tematica
+```
+
+**Caratteristiche:**
+- **Resta nel repo git**, sincronizzata fra maintainer e visibile alle AI di supporto (Claude Code).
+- **Non viene deployata**: Hugo costruisce solo da `content/`, `static/`, `themes/`, `data/`, `assets/`, `layouts/`. Una cartella estranea a queste rimane fuori dal sito.
+- **Nessun link** dal contenuto pubblico (`content/`, `static/`, `themes/`) verso questa cartella.
+
+**Quando aggiungere un documento qui invece che in `static/manuali/`:**
+
+| Status del documento | Destinazione |
+|---|---|
+| Pubblico dominio / *approved for public release* / Creative Commons | `static/manuali/` (link pubblico) |
+| Copyrighted con copia legittima del Gruppo | `riferimenti-interni/<categoria>/` |
+| Draft in fase di consultazione pubblica con scadenza | `riferimenti-interni/<categoria>/` |
+| Verbali interni, note di redazione, riferimenti normativi pre-pubblicazione | `riferimenti-interni/<categoria>/` |
+
+**Verifica che non sia esposta**: il workflow `audit-sito.yml` non include `riferimenti-interni/` perché Hugo non la legge. Se in futuro il workflow viene esteso, escluderla esplicitamente. La directory `static/documenti/` è esclusa dal deploy FTP per ragioni storiche (vedi regola 05); `riferimenti-interni/` invece non rientra proprio nelle cartelle Hugo, quindi non serve esclusione FTP.
+
 ### Tema personalizzato
 Il tema `flavour-pcgenzano` è una dipendenza interna, non esterna: modificalo liberamente.
 Si basa su Bootstrap Italia 2.x: usa le classi e i componenti nativi del design system.
