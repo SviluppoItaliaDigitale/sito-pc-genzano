@@ -60,14 +60,37 @@ In caso di emergenza, contatta sempre i numeri ufficiali per garantire un interv
 
 ## Linee guida e standard di riferimento per la comunicazione
 
-Le fonti istituzionali e tecniche su cui si basano la nostra Social Media Policy e le nostre pratiche di comunicazione del rischio:
+Le fonti istituzionali e tecniche su cui si basano la nostra Social Media Policy e le nostre pratiche di comunicazione del rischio. Per ogni voce indichiamo il livello di accessibilità: 🟢 gratuita pubblica · ⚠️ parzialmente pubblica · 💶 a pagamento · 🔒 riservata ai membri.
 
-- [AGID — Linee guida design siti PA](https://www.agid.gov.it/it/design-servizi/linee-guida-design-pa) e [Designers Italia](https://designers.italia.it/) — Riferimento orizzontale per la comunicazione digitale della PA
-- [DPC — Comunicazione del rischio](https://www.protezionecivile.gov.it/it/approfondimento/la-comunicazione/) — Linee guida e campagne nazionali del Dipartimento
-- [DPC — Io non rischio](https://www.iononrischio.it/) — Manuali operativi sui rischi sismico, vulcanico, maremoto, alluvione, incendio
-- [EENA — Documenti e linee guida](https://eena.org/knowledge-hub/) — Best practice europee su 112 e social media in emergenza
-- [ISO 22329:2021](https://www.iso.org/standard/50064.html) — *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies* (norma a pagamento)
-- [WCAG 2.2 (W3C)](https://www.w3.org/TR/WCAG22/) — Web Content Accessibility Guidelines, livello AA
+### Italiane vincolanti
+
+- 🟢 [AGID — Linee guida design siti PA](https://www.agid.gov.it/it/design-servizi/linee-guida-design-pa) e [Designers Italia](https://designers.italia.it/) — Riferimento orizzontale per la comunicazione digitale della PA
+- 🟢 [DPC — Comunicazione del rischio](https://www.protezionecivile.gov.it/it/approfondimento/la-comunicazione/) — Linee guida e campagne nazionali del Dipartimento
+- 🟢 [DPC — Io non rischio](https://www.iononrischio.it/) — Manuali operativi sui rischi sismico, vulcanico, maremoto, alluvione, incendio
+- 🟢 [D.Lgs. 1/2018 — Codice della Protezione Civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1) — Testo normativo aggiornato
+
+### Scientifiche italiane
+
+- ⚠️ [CNR-IRPI — Pubblicazioni](https://www.irpi.cnr.it/) — Frane, alluvioni, dissesti (alcune pubblicazioni open access, altre su riviste accademiche)
+- 🟢 [ISPRA — IdroGEO](https://idrogeo.isprambiente.it/) — Cartografia frane e alluvioni
+- 🟢 [INGV — Terremoti](https://terremoti.ingv.it/) — Eventi sismici in tempo reale
+
+### Tecnico-operative europee
+
+- ⚠️ [EENA — Knowledge Hub](https://eena.org/knowledge-hub/) — Best practice europee su 112 e social media in emergenza (alcuni documenti gratuiti, altri membership-only)
+- 🟢 [CEN-CENELEC Workshop Agreements](https://www.cencenelec.eu/european-standardization/cen-cenelec-workshop-agreements/) — Documenti CWA, accessibili in fase di consultazione pubblica
+
+### Standard internazionali
+
+- 🟢 [WCAG 2.2 (W3C)](https://www.w3.org/TR/WCAG22/) — Web Content Accessibility Guidelines, livello AA — completo e gratuito
+- 💶 [ISO 22329:2021](https://www.iso.org/standard/50064.html) — *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies* — norma a pagamento, in Italia acquistabile tramite UNI
+
+### Documenti operativi a libera distribuzione (archiviati sul nostro sito)
+
+Pubblicazioni rilasciate con licenza di pubblico dominio o *approved for public release*, conservate in archivio sul nostro sito per consultazione del Gruppo, dei volontari e di altre PC interessate:
+
+- 🟢 [CNA — Best Practices in Social Media Crisis Communications for State and Local Emergency Management Agencies (2023)](/manuali/cna-best-practices-social-media-crisis-2023.pdf) (PDF, 637 KB) — White paper basato su interviste a 17 agenzie di emergency management. *Approved for public release. Unlimited distribution.*
+- 🟢 [DHS / FEMA SAVER — Innovative Uses of Social Media in Emergency Management](/manuali/fema-saver-innovative-uses-social-media-emergency-management.pdf) (PDF, 1.6 MB) — Programma SAVER del Department of Homeland Security USA, casi studio su uso innovativo dei social in emergenza. Pubblico dominio US Govt.
 
 ## Agenzie di Stampa e Media
 
