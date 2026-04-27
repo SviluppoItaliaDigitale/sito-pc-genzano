@@ -19,6 +19,11 @@ L'**11 settembre 2001** è una data che ha ridisegnato il concetto di **emergenz
 
 Dopo l'11 settembre, le agenzie di PC di molti Paesi hanno rivisto:
 
+{{< foto src="/images/2026-09-11-anniversario-11-settembre-comunicazione-crisi-wtc-attacchi-2001.webp"
+         alt="Le Twin Towers del World Trade Center prima degli attacchi dell'11 settembre 2001"
+         caption="Le Twin Towers del World Trade Center: l'11 settembre 2001 quattro aerei dirottati causarono 2.977 vittime. L'evento ha cambiato la dottrina mondiale sulla comunicazione di crisi. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:World_Trade_Center,_New_York_City_-_aerial_view_(March_2001).jpg)." >}}
+
+
 - la **comunicazione inter-agenzia** (più condivisione, meno gelosie di competenza);
 - la **comunicazione pubblica in tempo reale** (una conferenza stampa ogni ora, portavoce unico e riconoscibile);
 - la **pianificazione di scenari multi-rischio** (attentato, calamità, incidente tecnologico, pandemie);

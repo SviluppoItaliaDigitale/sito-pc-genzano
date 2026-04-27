@@ -24,6 +24,11 @@ Nella notte del **9-10 settembre 2017**, un violento temporale scaricò sulla ci
 - **reti di servizi** (elettricità, acqua, telefonia) interrotte;
 - **soccorsi** difficili per la contemporaneità di decine di chiamate in più punti.
 
+{{< foto src="/images/2026-09-20-alluvione-livorno-2017-memoria-livorno-mascagni.webp"
+         alt="La Terrazza Mascagni a Livorno, simbolo della città"
+         caption="La Terrazza Mascagni a Livorno: la città fu colpita dall'alluvione del 9-10 settembre 2017 con esondazione dei rii Maggiore, Ardenza e Banditella. 9 vittime. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Terrazza_Mascagni_-_panoramio.jpg)." >}}
+
+
 ## Le lezioni
 
 L'alluvione di Livorno ha rafforzato nella PC italiana la consapevolezza su:
