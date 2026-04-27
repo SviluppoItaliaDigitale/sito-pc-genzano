@@ -66,15 +66,23 @@ Seguici per ricevere aggiornamenti, allerte e comunicazioni:
 
 ## Quando contattarci
 
-| Situazione | Cosa fare |
-|---|---|
-| **Emergenza in corso** (incendio, alluvione, terremoto) | Chiama il **112** |
-| **Segnalazione di pericolo** (albero caduto, smottamento) | Chiama il **112** |
-| **Informazioni sul Gruppo** | Chiama o scrivi ai recapiti ordinari |
-| **Diventare volontario** | Vieni in sede, chiama o [scrivi un'email](mailto:segreteria@protezionecivilegenzano.it) |
-| **Collaborazione con scuole** | Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) |
-| **Segnalazione problema sul sito** | Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) |
-| **Media e giornalisti** (richiesta interviste, dichiarazioni, immagini) | Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) |
+<div class="table-responsive">
+<table>
+<caption>Quando contattare il 112 e quando contattare il Gruppo: situazioni e canali corretti</caption>
+<thead>
+<tr><th scope="col">Situazione</th><th scope="col">Cosa fare</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Emergenza in corso</strong> (incendio, alluvione, terremoto)</td><td>Chiama il <strong>112</strong></td></tr>
+<tr><td><strong>Segnalazione di pericolo</strong> (albero caduto, smottamento)</td><td>Chiama il <strong>112</strong></td></tr>
+<tr><td><strong>Informazioni sul Gruppo</strong></td><td>Chiama o scrivi ai recapiti ordinari</td></tr>
+<tr><td><strong>Diventare volontario</strong></td><td>Vieni in sede, chiama o <a href="mailto:segreteria@protezionecivilegenzano.it">scrivi un'email</a></td></tr>
+<tr><td><strong>Collaborazione con scuole</strong></td><td>Scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></td></tr>
+<tr><td><strong>Segnalazione problema sul sito</strong></td><td>Scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></td></tr>
+<tr><td><strong>Media e giornalisti</strong> (richiesta interviste, dichiarazioni, immagini)</td><td>Scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></td></tr>
+</tbody>
+</table>
+</div>
 
 ## Mappa della Sede
 

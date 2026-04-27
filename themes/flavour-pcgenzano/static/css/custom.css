@@ -2953,3 +2953,70 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
 @media print {
   .kit-pittogrammi-row { background: #fff !important; border: 1px solid #000; page-break-inside: avoid; }
 }
+
+/* ─────────────────────────────────────────────────────────
+   TABLE CAPTION v1.0
+   Stile per <caption> (titolo descrittivo della tabella).
+   Visibile sopra la tabella, allineato a sinistra, italico
+   blu istituzionale. Le caption marcate .visually-hidden
+   restano nascoste visualmente ma lette dagli screen reader.
+   ───────────────────────────────────────────────────────── */
+table > caption {
+  caption-side: top;
+  text-align: left;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #003366;
+  padding: 0.5rem 0 0.6rem;
+  font-weight: 500;
+}
+table > caption.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media print {
+  table > caption {
+    color: #000 !important;
+    font-style: italic;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   CHI CHIAMARE BOX (.chi-chiamare-box) v1.0
+   Sezione finale standard delle pagine /rischi-prevenzione/*
+   con tabella accessibile e nota su attivazione del Gruppo.
+   ───────────────────────────────────────────────────────── */
+.chi-chiamare-box {
+  margin: 2rem 0 1rem;
+}
+.chi-chiamare-table th,
+.chi-chiamare-table td {
+  vertical-align: middle;
+}
+.chi-chiamare-call {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #d9364f;
+  text-decoration: none;
+  font-weight: 800;
+}
+.chi-chiamare-call:hover,
+.chi-chiamare-call:focus {
+  color: #b02a37;
+  text-decoration: underline;
+}
+.chi-chiamare-call:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+@media print {
+  .chi-chiamare-call { color: #000 !important; text-decoration: underline; }
+}

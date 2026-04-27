@@ -261,4 +261,7 @@ home = ["HTML", "RSS", "JSON", "BUILDINFO"]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.parser.attribute]
+      block = true
+      title = true
 

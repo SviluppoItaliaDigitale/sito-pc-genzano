@@ -1,0 +1,62 @@
+{{- /*
+  Render hook tabelle — aggiunge accessibilita' WCAG senza toccare il
+  Markdown sorgente:
+
+  - <th scope="col"> automatico per ogni cella di intestazione (riga
+    in <thead>). Migliora il riconoscimento da parte di screen reader
+    e rispetta WCAG 1.3.1 (Info and Relationships) in modo esplicito.
+  - <caption> opzionale, aggiunto SOLO se il blocco Markdown e' preceduto
+    dalla sintassi attributi block: {caption="Testo descrittivo"} oppure
+    {title="Testo descrittivo"}. Il caption e' utile a screen reader,
+    crawler e stampa.
+  - Allineamento colonne preservato via attributo style (left/center/right).
+  - Wrapper .table-responsive Bootstrap Italia per scroll orizzontale su
+    mobile su tabelle larghe.
+*/ -}}
+{{- $caption := "" -}}
+{{- with .Attributes -}}
+  {{- with .caption }}{{ $caption = . }}{{ end -}}
+  {{- with .title }}{{ if not $caption }}{{ $caption = . }}{{ end }}{{ end -}}
+{{- end -}}
+
+<div class="table-responsive">
+<table>
+{{- with $caption }}
+  <caption>{{ . | safeHTML }}</caption>
+{{- end }}
+{{- with .THead }}
+  <thead>
+  {{- range . }}
+    <tr>
+    {{- range . }}
+      {{- $style := "" -}}
+      {{- with .Alignment -}}
+        {{- if ne . "left" -}}
+          {{- $style = printf " style=\"text-align: %s;\"" . -}}
+        {{- end -}}
+      {{- end }}
+      <th scope="col"{{ $style | safeHTMLAttr }}>{{ .Text | safeHTML }}</th>
+    {{- end }}
+    </tr>
+  {{- end }}
+  </thead>
+{{- end }}
+{{- with .TBody }}
+  <tbody>
+  {{- range . }}
+    <tr>
+    {{- range . }}
+      {{- $style := "" -}}
+      {{- with .Alignment -}}
+        {{- if ne . "left" -}}
+          {{- $style = printf " style=\"text-align: %s;\"" . -}}
+        {{- end -}}
+      {{- end }}
+      <td{{ $style | safeHTMLAttr }}>{{ .Text | safeHTML }}</td>
+    {{- end }}
+    </tr>
+  {{- end }}
+  </tbody>
+{{- end }}
+</table>
+</div>
