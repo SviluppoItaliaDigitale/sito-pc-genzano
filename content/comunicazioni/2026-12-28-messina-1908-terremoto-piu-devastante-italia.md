@@ -32,6 +32,11 @@ Il governo italiano dichiarò lo **stato d'emergenza nazionale**, ma la macchina
 
 Messina 1908 fu il primo grande evento che spinse il Regno d'Italia a riflettere sulla **prevenzione strutturale**. Già nel 1909 fu emanata una prima **normativa antisismica nazionale** (R.D. 18 aprile 1909 n. 193) che imponeva criteri costruttivi semplificati nelle aree colpite. Era il primo embrione di quello che, oltre un secolo dopo, sarebbero diventate le **NTC** (Norme Tecniche per le Costruzioni).
 
+{{< foto src="/images/2026-12-28-messina-1908-terremoto-piu-devastante-italia-cartolina-deposito.webp"
+         alt="Cartolina d'epoca con i danni a Messina dopo il terremoto del 1908"
+         caption="Cartolina d'epoca con il deposito ferroviario di Messina dopo il terremoto del 28 dicembre 1908. Foto: Wikimedia Commons — Public domain. [Fonte originale](https://commons.wikimedia.org/wiki/File:Terremoto_del_1908_-_Antica_cartolina_con_l%27indicazione_di_Reggio_e_di_Messina.jpg)." >}}
+
+
 Da quella catastrofe nacquero anche le prime forme organizzate di **soccorso sanitario d'emergenza**. La Croce Rossa Italiana e l'Esercito svilupparono protocolli che diventeranno la base del soccorso militare e civile contemporaneo.
 
 ## Cosa ci insegna oggi

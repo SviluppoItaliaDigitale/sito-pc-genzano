@@ -34,6 +34,11 @@ Tre fattori si combinarono:
 
 Ischia 2017 è il caso scuola del **rischio sismico medio-basso che diventa catastrofe locale**. Tre lezioni:
 
+{{< foto src="/images/2026-08-21-ischia-2017-terremoto-isolano-casamicciola-terme.webp"
+         alt="Veduta di Casamicciola Terme sull'isola d'Ischia"
+         caption="Casamicciola Terme: il centro storico dell'isola d'Ischia colpito dal terremoto del 21 agosto 2017 e, in passato, dal devastante sisma del 1883. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Y_sul_mare.jpg)." >}}
+
+
 1. **La magnitudo non basta.** Il rischio sismico dipende da pericolosità (la scossa attesa), esposizione (cosa c'è in quel punto) e vulnerabilità (quanto è fragile). Solo la combinazione delle tre genera il rischio reale.
 
 2. **L'abusivismo edilizio è un moltiplicatore di rischio.** Sopraelevazioni e ampliamenti realizzati senza progetto sismico trasformano una scossa moderata in una catastrofe. Il problema esiste in molte aree italiane.

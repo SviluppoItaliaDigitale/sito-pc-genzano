@@ -30,6 +30,11 @@ Il sistema di allertamento tsunami **esisteva** dal 1965 nel Pacifico (PTWC, Pac
 
 Nei mesi successivi al 2004:
 
+{{< foto src="/images/2026-12-26-tsunami-indonesia-2004-allertamento-globale-banda-aceh.webp"
+         alt="Veduta di Banda Aceh, capoluogo di Sumatra colpito dallo tsunami del 2004"
+         caption="Banda Aceh (Indonesia): la città di Sumatra fu colpita dall'onda dello tsunami in 15-30 minuti dall'epicentro, troppo poco per qualunque sistema di allertamento. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Meuseujid_Raya_Baiturrahman,_Aceh.jpg)." >}}
+
+
 - L'**ONU** coordinò la più grande operazione di soccorso internazionale della storia, con oltre 60 Paesi donatori
 - Fu istituito l'**Indian Ocean Tsunami Warning System (IOTWS)** sotto egida UNESCO/IOC
 - Furono potenziati i sistemi di allertamento di tutti gli oceani del mondo

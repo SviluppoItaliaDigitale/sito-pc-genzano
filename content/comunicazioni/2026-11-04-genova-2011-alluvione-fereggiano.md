@@ -30,6 +30,11 @@ Il **rio Fereggiano** è uno dei tanti rii tombati di Genova. Il 4 novembre 2011
 
 Genova 2011 ha aperto una stagione di interventi strutturali sui **rii tombati italiani**:
 
+{{< foto src="/images/2026-11-04-genova-2011-alluvione-fereggiano-lanterna-genova.webp"
+         alt="La Lanterna di Genova, faro storico simbolo della città"
+         caption="La Lanterna di Genova, faro del 1543 e simbolo della città: dopo le alluvioni del 1970 e del 2011 sono partiti grandi lavori sui rii tombati e sugli scolmatori. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Genova,_A_Lanterna.jpg)." >}}
+
+
 - **Mappatura sistematica** dei rii tombati nelle principali città italiane
 - **Ispezioni regolari** dello stato dei tombini, con monitoraggio idraulico in tempo reale dove possibile
 - **Sistemi di allerta locale** per piogge intense con notifica immediata alla popolazione (sirene, app, SMS)

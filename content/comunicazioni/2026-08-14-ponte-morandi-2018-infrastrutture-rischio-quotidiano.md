@@ -30,6 +30,11 @@ La **Protezione Civile** fu attivata immediatamente: Vigili del Fuoco, Soccorso 
 
 Il Ponte Morandi ha aperto una stagione di riflessione sul **rischio strutturale "lento"**, quello che non arriva con un terremoto o un'alluvione ma matura nel tempo per mancata manutenzione. Tre lezioni operative:
 
+{{< foto src="/images/2026-08-14-ponte-morandi-2018-infrastrutture-rischio-quotidiano-valle-polcevera-genova.webp"
+         alt="La valle del Polcevera, attraversata dal Ponte Morandi (poi Ponte San Giorgio)"
+         caption="La valle del Polcevera a Genova: attraversata prima dal Ponte Morandi crollato il 14 agosto 2018, poi dal nuovo Ponte San Giorgio inaugurato nel 2020. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Panorama_Valpolcevera_da_Murta.jpg)." >}}
+
+
 1. **La manutenzione è prevenzione.** Le infrastrutture critiche (ponti, viadotti, dighe, gallerie) richiedono ispezioni regolari, monitoraggio strumentale continuo, programmazione di interventi prima che il degrado diventi pericoloso. Dopo il 2018 sono nate le **Linee guida ANSFISA** per l'osservazione delle opere d'arte stradali e ferroviarie.
 
 2. **La trasparenza è sicurezza.** I dati sullo stato di salute delle infrastrutture pubbliche dovrebbero essere pubblici e accessibili. Il cittadino ha diritto di sapere se il viadotto sotto cui passa o sopra cui transita è stato controllato di recente.

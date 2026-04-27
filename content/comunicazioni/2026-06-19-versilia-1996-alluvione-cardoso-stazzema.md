@@ -32,6 +32,11 @@ I soccorsi raggiunsero Cardoso solo nelle ore successive, via elicottero. Per gi
 
 L'evento del 1996 cadde in un periodo di **trasformazione del Servizio Nazionale di Protezione Civile** (legge 225/1992 da pochi anni). La gestione dell'emergenza dimostrò sia la **maggiore efficacia rispetto agli anni '70** sia i **limiti ancora presenti** nella prevenzione e nella comunicazione del rischio.
 
+{{< foto src="/images/2026-06-19-versilia-1996-alluvione-cardoso-stazzema-alpi-apuane-versilia.webp"
+         alt="Veduta delle Alpi Apuane sopra la Versilia toscana"
+         caption="Le Alpi Apuane: i versanti scoscesi sopra la Versilia furono il fronte da cui scese l'onda di fango e detriti che cancellò Cardoso nel giugno 1996. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Veduta_panoramica_delle_Alpi_Apuane_al_tramonto.JPG)." >}}
+
+
 Da Versilia 1996 nacque un nuovo impegno per:
 - I **Piani di Bacino** delle autorità di bacino regionali e nazionali
 - Le **carte di pericolosità da frana** del Progetto AVI (Aree Vulnerate Italiane) e successivamente del **PAI** (Piano di Assetto Idrogeologico)

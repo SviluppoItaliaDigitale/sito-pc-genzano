@@ -39,6 +39,11 @@ Tutto questo verrà costruito nei decenni successivi, dopo altre tragedie (Friul
 
 Il Belice è memoria scomoda ma essenziale:
 
+{{< foto src="/images/2027-01-14-belice-1968-terremoto-ricostruzione-lunga-cretto-burri-gibellina.webp"
+         alt="Cretto di Alberto Burri sul sito dell'antica Gibellina distrutta nel 1968"
+         caption="Il Cretto di Alberto Burri (1985-2015) ricopre il sito dell'antica Gibellina rasa al suolo dal terremoto del Belice. È una delle più grandi opere di land art al mondo. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Ruderi_di_Gibellina.jpg)." >}}
+
+
 1. **L'emergenza non finisce con le prime 72 ore.** La gestione di un sisma include il post-emergenza, l'assistenza prolungata agli sfollati, la ricostruzione fisica e sociale. Un Piano di Protezione Civile maturo prevede esplicitamente queste fasi.
 
 2. **Il volontariato organizzato è risposta alla disorganizzazione istituzionale del 1968.** Quando lo Stato arriva tardi, sono i volontari del territorio a fare la differenza nelle prime ore. Per questo nei decenni successivi sono nati i gruppi comunali come il nostro.
