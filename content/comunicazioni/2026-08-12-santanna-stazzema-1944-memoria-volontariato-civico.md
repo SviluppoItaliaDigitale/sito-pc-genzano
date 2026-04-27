@@ -5,13 +5,14 @@ description: "Nella mattina del 12 agosto 1944 le SS naziste massacrarono 560 ci
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Eccidio di Sant'Anna di Stazzema" 2026-08-12-santanna-stazzema-1944-memoria-volontariato-civico
+image: "/images/2026-08-12-santanna-stazzema-1944-memoria-volontariato-civico.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "HpSchaefer Hans Peter Schaefer http://www.reserv-a-rt.de — CC BY-SA 3.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Santanna_mahnmal.JPG"
 ---
 
 Nella mattina del **12 agosto 1944**, le SS naziste della **16ª Divisione Panzergrenadier Reichsführer-SS** entrarono nel piccolo borgo montano di **Sant'Anna di Stazzema**, in Versilia (Toscana). In poche ore uccisero **560 civili**, fra cui **130 bambini**. La maggior parte delle vittime furono donne, anziani, persone fragili rifugiate in montagna per sfuggire ai bombardamenti delle città. **Anna Pardini**, la più piccola, aveva 20 giorni.

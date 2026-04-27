@@ -5,13 +5,14 @@ description: "Una bomba d'acqua di 500 mm in 6 ore colpì Genova: il rio Fereggi
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Alluvione di Genova del 4 novembre 2011" 2026-11-04-genova-2011-alluvione-fereggiano
+image: "/images/2026-11-04-genova-2011-alluvione-fereggiano.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "MODIS Rapid Response Team at NASA GSFC. — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Rolf_2011-11-08_1030Z.jpg"
 ---
 
 Il **4 novembre 2011** — esattamente **45 anni dopo l'alluvione di Firenze** — Genova fu colpita da un evento meteo eccezionale. **Oltre 500 millimetri di pioggia in 6 ore** sull'area urbana. Il **rio Fereggiano**, un piccolo torrente tombato sotto la città a fine Ottocento, esplose letteralmente dalla sede stradale di **via Fereggiano** trasformando le strade in fiumi.

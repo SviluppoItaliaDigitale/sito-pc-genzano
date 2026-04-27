@@ -5,13 +5,14 @@ description: "Alle 22:39 del 9 ottobre 1963, quasi 270 milioni di metri cubi di 
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Disastro del Vajont" 2026-10-09-vajont-1963-tragedia-prevista
+image: "/images/2026-10-09-vajont-1963-tragedia-prevista.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Ispettorato Vigili del Fuoco — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Vajont1963_5.jpg"
 ---
 
 Alle **22:39 del 9 ottobre 1963** una frana di circa **270 milioni di metri cubi** di roccia si staccò dal versante nord del Monte Toc e precipitò nel bacino artificiale della diga del Vajont, in Friuli. L'onda di sfollamento superò i 250 metri di altezza, scavalcò la diga (che resse) e si rovesciò sui paesi a valle. **Quasi 2.000 persone** persero la vita in pochi minuti, soprattutto a **Longarone**.

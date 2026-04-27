@@ -5,13 +5,14 @@ description: "Alle 5:21 del 28 dicembre 1908 una scossa di magnitudo 7.1 distrus
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto di Messina del 1908" 2026-12-28-messina-1908-terremoto-piu-devastante-italia
+image: "/images/2026-12-28-messina-1908-terremoto-piu-devastante-italia.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "SconosciutoUnknown author — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Terremoto_del_1908_-_Antica_cartolina_con_l%27indicazione_di_Reggio_e_di_Messina.jpg"
 ---
 
 Alle **5:21 del 28 dicembre 1908** una scossa sismica di **magnitudo stimata 7.1** colpì lo Stretto di Messina. La rottura di una faglia sottomarina lunga circa **40 chilometri** generò pochi minuti dopo uno **tsunami con onde fino a 12 metri** che si abbatté sulle coste della Sicilia orientale e della Calabria meridionale.

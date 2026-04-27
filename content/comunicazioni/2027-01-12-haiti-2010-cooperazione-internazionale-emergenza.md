@@ -5,13 +5,14 @@ description: "Il terremoto di Haiti del 2010 (M 7.0) causò oltre 220.000 morti.
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto di Haiti del 2010" 2027-01-12-haiti-2010-cooperazione-internazionale-emergenza
+image: "/images/2027-01-12-haiti-2010-cooperazione-internazionale-emergenza.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "USGS/Dancraggs — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Haiti_Jan2010_ShakeMap.png"
 ---
 
 Alle **16:53 del 12 gennaio 2010** (ora locale di Port-au-Prince) un terremoto di **magnitudo 7.0** colpì Haiti. L'epicentro era a soli **25 chilometri** dalla capitale, l'ipocentro a **13 chilometri** di profondità. La maggior parte di Port-au-Prince **collassò in pochi secondi**: il **Palazzo Presidenziale**, la **Cattedrale**, l'**Ospedale Generale**, la **scuola elementare di Pétion-Ville**, **migliaia di abitazioni** in cemento armato non sismico.

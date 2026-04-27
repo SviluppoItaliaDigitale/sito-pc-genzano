@@ -5,13 +5,14 @@ description: "Il 23 novembre 1980 il terremoto dell'Irpinia uccise quasi 3.000 p
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto dell'Irpinia del 1980" 2026-11-23-irpinia-1980-quarantacinque-anni-nascita-protezione-civile
+image: "/images/2026-11-23-irpinia-1980-quarantacinque-anni-nascita-protezione-civile.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "USGS — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:19801123_183453_irpinia_quake_intensity.jpg"
 ---
 
 Alle **19:34 del 23 novembre 1980** la terra dell'Appennino campano-lucano si spaccò per oltre quaranta secondi. Magnitudo 6.9, intensità Mercalli stimata fino al X grado, una faglia normale lunga circa quaranta chilometri tra Conza della Campania, Laviano e Castelnuovo di Conza. Quando l'oscillazione finì, **migliaia di paesi non esistevano più**.
