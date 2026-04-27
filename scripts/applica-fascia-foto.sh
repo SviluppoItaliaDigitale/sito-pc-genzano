@@ -53,12 +53,10 @@ trap 'rm -f "$TMP_PHOTO"' EXIT
 magick "$SRC" -resize "${W}x" -quality 90 "$TMP_PHOTO"
 
 # Altezza effettiva dopo resize
-# (con magick v7: 'magick identify ...'; con v6 alias: 'identify ...')
-if command -v magick >/dev/null 2>&1 && [ "$(type -t magick)" = "file" ]; then
-  PH=$(magick identify -format "%h" "$TMP_PHOTO")
-else
-  PH=$(identify -format "%h" "$TMP_PHOTO")
-fi
+# Uso sempre 'identify' standalone: e' disponibile sia in v6 sia in v7.
+# Evito 'magick identify' perche' su v6 il fallback diventa
+# 'convert identify' che fallisce con "no decode delegate".
+PH=$(identify -format "%h" "$TMP_PHOTO")
 TOTAL_H=$((PH + BAND_H))
 
 # 2) Componi: foto sopra + fascia blu sotto con logo a SINISTRA + testo a destra del logo

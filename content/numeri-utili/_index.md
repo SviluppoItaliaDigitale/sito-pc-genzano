@@ -47,6 +47,15 @@ Compete su viabilità, ordinanze, edilizia, controlli stradali e amministrativi.
 - **Email:** [munipol@comune.genzanodiroma.roma.it](mailto:munipol@comune.genzanodiroma.roma.it)
 - **PEC:** [polizia_locale@comunegenzanodiromapec.it](mailto:polizia_locale@comunegenzanodiromapec.it)
 
+## ASL Roma 6 — distretto di Genzano di Roma
+
+Per informazioni sanitarie ordinarie, prenotazioni, certificazioni, ufficio relazioni con il pubblico (URP). Per **emergenze sanitarie chiama sempre il 112**, non l'URP.
+
+- **Sede URP:** Via Achille Grandi — Genzano di Roma
+- **Telefono:** [+39 06 9327 3947](tel:+390693273947)
+- **Email:** [relazioni.pubbliche@aslroma6.it](mailto:relazioni.pubbliche@aslroma6.it)
+- **Sito:** [aslroma6.it](https://www.aslroma6.it/)
+
 ## App utili
 
 - **IT-alert** — Sistema nazionale di allarme pubblico: [it-alert.it](https://www.it-alert.it/it/)
