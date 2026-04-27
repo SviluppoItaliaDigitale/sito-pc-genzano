@@ -14,20 +14,54 @@
 
       {{ .Content }}
 
-      {{- /* Catalogo automatico: legge static/pittogrammi/iso7010/ e arasaac/ */ -}}
       {{- $isoDir := "static/pittogrammi/iso7010" -}}
       {{- $araDir := "static/pittogrammi/arasaac" -}}
 
+      {{- /* Barra di ricerca + filtri categoria + counter */ -}}
+      <div class="catalogo-toolbar mb-4 p-3" role="region" aria-label="Strumenti di ricerca catalogo">
+        <label for="catalogo-search" class="form-label small fw-bold mb-1">
+          <i class="bi bi-search me-1" aria-hidden="true"></i>
+          Cerca un pittogramma per nome
+        </label>
+        <input type="search"
+               id="catalogo-search"
+               class="form-control"
+               placeholder="Es. terremoto, 112, uscita, allarme..."
+               aria-controls="catalogo-iso7010-grid catalogo-arasaac-grid"
+               autocomplete="off">
+
+        <div class="catalogo-filtri mt-3" role="group" aria-label="Filtri per categoria ISO 7010">
+          <span class="small fw-bold me-2">ISO 7010:</span>
+          <button type="button" class="btn btn-sm btn-outline-secondary catalogo-filtro" data-filtro="iso-all">Tutti</button>
+          <button type="button" class="btn btn-sm btn-outline-success catalogo-filtro" data-filtro="iso-evacuazione" title="Evacuazione e primo soccorso">Evacuazione (E)</button>
+          <button type="button" class="btn btn-sm btn-outline-danger catalogo-filtro" data-filtro="iso-antincendio" title="Antincendio">Antincendio (F)</button>
+          <button type="button" class="btn btn-sm btn-outline-warning catalogo-filtro" data-filtro="iso-avvertimento" title="Avvertimento di pericolo">Avvertimento (W)</button>
+          <button type="button" class="btn btn-sm btn-outline-primary catalogo-filtro" data-filtro="iso-obbligo" title="Obbligo">Obbligo (M)</button>
+          <button type="button" class="btn btn-sm btn-outline-danger catalogo-filtro" data-filtro="iso-divieto" title="Divieto">Divieto (P)</button>
+        </div>
+
+        <div class="catalogo-counter mt-2 small text-muted" aria-live="polite" aria-atomic="true">
+          <span id="counter-iso">0</span> simboli ISO 7010 ·
+          <span id="counter-ara">0</span> simboli ARASAAC mostrati
+        </div>
+      </div>
+
       <h2 id="catalogo-iso7010">Segnali ISO 7010 ({{ sub (len (readDir $isoDir)) 1 }} simboli)</h2>
       <p>Segnali grafici di sicurezza standardizzati a livello internazionale. Forme geometriche e colori sono definiti dalla norma ISO 7010 e riconoscibili in oltre 160 Paesi.</p>
-      <p><strong>Codici colore:</strong> 🟡 giallo + triangolo = avvertimento (W*) · 🔴 rosso + cerchio sbarrato = divieto (P*) · 🔵 blu + cerchio pieno = obbligo (M*) · 🟢 verde + rettangolo = soccorso ed evacuazione (E*) · 🔴 rosso + rettangolo = antincendio (F*).</p>
+      <p><strong>Codici colore:</strong> 🟡 giallo + triangolo = avvertimento (W) · 🔴 rosso + cerchio sbarrato = divieto (P) · 🔵 blu + cerchio pieno = obbligo (M) · 🟢 verde + rettangolo = soccorso ed evacuazione (E) · 🔴 rosso + rettangolo = antincendio (F).</p>
 
-      <div class="pittogrammi-galleria" role="list" aria-label="Catalogo pittogrammi ISO 7010">
+      <div id="catalogo-iso7010-grid" class="pittogrammi-galleria" role="list" aria-label="Catalogo pittogrammi ISO 7010">
       {{- range (readDir $isoDir) -}}
         {{- if and (not .IsDir) (hasSuffix .Name ".svg") -}}
         {{- $name := strings.TrimSuffix ".svg" .Name -}}
         {{- $alt := replace $name "-" " " | humanize -}}
-        <figure class="pittogramma pittogramma-figure" role="listitem">
+        {{- /* Categoria ISO dedotta dal nome */ -}}
+        {{- $cat := "iso-evacuazione" -}}
+        {{- if or (in $name "estintore") (in $name "idrante") (in $name "antincendio") (in $name "scala-antincendio") (in $name "infiammabile") -}}{{- $cat = "iso-antincendio" -}}{{- end -}}
+        {{- if or (in $name "pericolo-") (in $name "superficie-calda") (in $name "caduta-massi") (in $name "pavimento-scivoloso") -}}{{- $cat = "iso-avvertimento" -}}{{- end -}}
+        {{- if or (in $name "obbligo-") (in $name "protezione-") (in $name "scarpe-protettive") (in $name "guanti-") (in $name "abito-") (in $name "casco-") (in $name "alta-visibilita") (in $name "maschera-") (in $name "consultare-") -}}{{- $cat = "iso-obbligo" -}}{{- end -}}
+        {{- if or (in $name "vietato-") (in $name "divieto-") -}}{{- $cat = "iso-divieto" -}}{{- end -}}
+        <figure class="pittogramma pittogramma-figure catalogo-card" role="listitem" data-name="{{ $name }}" data-cat="{{ $cat }}">
           <img src="{{ printf "pittogrammi/iso7010/%s" .Name | relURL }}"
                alt="Pittogramma ISO 7010: {{ $alt }}"
                class="pittogramma pittogramma-medium"
@@ -43,12 +77,12 @@
       <p>Pittogrammi della Comunicazione Aumentativa Alternativa (CAA). Aiutano la comprensione a bambini, persone con disabilità cognitive e parlanti italiano L2.</p>
       <p class="small text-muted"><strong>Attribuzione obbligatoria</strong> (CC BY-NC-SA 4.0): pittogrammi di Sergio Palao, ARASAAC, Governo di Aragona (Spagna). Vedi <a href="{{ "attribuzioni-pittogrammi/" | relURL }}">Attribuzioni dei pittogrammi</a>.</p>
 
-      <div class="pittogrammi-galleria" role="list" aria-label="Catalogo pittogrammi ARASAAC">
+      <div id="catalogo-arasaac-grid" class="pittogrammi-galleria" role="list" aria-label="Catalogo pittogrammi ARASAAC">
       {{- range (readDir $araDir) -}}
         {{- if and (not .IsDir) (hasSuffix .Name ".png") -}}
         {{- $name := strings.TrimSuffix ".png" .Name -}}
         {{- $alt := replace $name "-" " " | humanize -}}
-        <figure class="pittogramma pittogramma-figure" role="listitem">
+        <figure class="pittogramma pittogramma-figure catalogo-card" role="listitem" data-name="{{ $name }}" data-cat="ara">
           <img src="{{ printf "pittogrammi/arasaac/%s" .Name | relURL }}"
                alt="Pittogramma ARASAAC: {{ $alt }}"
                class="pittogramma pittogramma-medium"
@@ -59,9 +93,60 @@
         {{- end -}}
       {{- end -}}
       </div>
+
+      <p class="text-muted mt-3"><em>Suggerimento: usa la barra di ricerca per trovare un pittogramma per parola chiave (es. "fuoco", "112", "evacuazione"). I filtri per categoria si applicano solo ai segnali ISO 7010.</em></p>
     </article>
 
     {{ partial "page-tools.html" . }}
   </div>
 </main>
+
+<script>
+(function(){
+  var input = document.getElementById('catalogo-search');
+  var filtri = document.querySelectorAll('.catalogo-filtro');
+  var isoCards = document.querySelectorAll('#catalogo-iso7010-grid .catalogo-card');
+  var araCards = document.querySelectorAll('#catalogo-arasaac-grid .catalogo-card');
+  var counterIso = document.getElementById('counter-iso');
+  var counterAra = document.getElementById('counter-ara');
+  var activeFilter = 'iso-all';
+
+  function applyFilters(){
+    var q = (input.value || '').toLowerCase().trim();
+    var visIso = 0, visAra = 0;
+    isoCards.forEach(function(card){
+      var name = card.getAttribute('data-name') || '';
+      var cat = card.getAttribute('data-cat') || '';
+      var matchText = !q || name.indexOf(q) >= 0;
+      var matchCat = activeFilter === 'iso-all' || cat === activeFilter;
+      var show = matchText && matchCat;
+      card.style.display = show ? '' : 'none';
+      if (show) visIso++;
+    });
+    araCards.forEach(function(card){
+      var name = card.getAttribute('data-name') || '';
+      // I filtri ISO non si applicano agli ARASAAC: se filtro non e' "iso-all", nascondi tutti gli ARASAAC
+      var matchText = !q || name.indexOf(q) >= 0;
+      var matchCat = activeFilter === 'iso-all';
+      var show = matchText && matchCat;
+      card.style.display = show ? '' : 'none';
+      if (show) visAra++;
+    });
+    counterIso.textContent = visIso;
+    counterAra.textContent = visAra;
+  }
+
+  input.addEventListener('input', applyFilters);
+  filtri.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      activeFilter = btn.getAttribute('data-filtro');
+      filtri.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  applyFilters();
+})();
+</script>
 {{- end -}}
