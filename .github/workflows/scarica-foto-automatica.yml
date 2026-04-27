@@ -44,10 +44,10 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "🔧 Installa dipendenze (ImageMagick)"
+      - name: "🔧 Installa dipendenze (ImageMagick + font Liberation)"
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq imagemagick
+          sudo apt-get install -y -qq imagemagick fonts-liberation
 
       - name: "🔍 Cerca articoli con marker TODO-foto-*"
         id: scan
@@ -144,28 +144,50 @@ jobs:
             } >> "$GITHUB_OUTPUT"
           fi
 
-      - name: "💾 Commit e push"
-        if: steps.download.outputs.processed != '0' && steps.download.outputs.processed != ''
+      - name: "🎨 Genera cover tipografiche per articoli senza foto"
+        id: cover
+        run: |
+          set +e
+          # Genera cover istituzionali (gradiente blu + titolo + fascia) per
+          # articoli con image: "" e SENZA marker TODO-foto-* (sicuro: non
+          # sovrascrive image: gia' valorizzato come foto utente custom).
+          OUT=$(python3 scripts/auto-cover-mancanti.py 2>&1) || true
+          echo "$OUT"
+          GENERATED=$(echo "$OUT" | grep -oE 'Cover generate: [0-9]+' | grep -oE '[0-9]+' | head -1)
+          GENERATED="${GENERATED:-0}"
+          echo "generated=$GENERATED" >> "$GITHUB_OUTPUT"
+
+      - name: "💾 Commit e push (foto + cover)"
+        id: commit
+        if: |
+          (steps.download.outputs.processed != '0' && steps.download.outputs.processed != '') ||
+          (steps.cover.outputs.generated != '0' && steps.cover.outputs.generated != '')
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add static/images/ content/comunicazioni/
           if git diff --staged --quiet; then
             echo "[info] nessuna modifica da committare"
+            echo "did_commit=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git commit -m "[skip-foto-wiki] Foto automatiche da fonti libere (${{ steps.download.outputs.processed }} articoli)
+          PHOTO_COUNT="${{ steps.download.outputs.processed }}"
+          COVER_COUNT="${{ steps.cover.outputs.generated }}"
+          git commit -m "[skip-foto-wiki] Cover automatiche: ${PHOTO_COUNT:-0} foto + ${COVER_COUNT:-0} cover tipografiche
 
           Workflow: scarica-foto-automatica.yml
-          Articoli processati: ${{ steps.download.outputs.processed }}
-          Articoli falliti:    ${{ steps.download.outputs.failed }}
+          - Foto scaricate (Wikipedia/NASA/USGS, licenze libere): ${PHOTO_COUNT:-0}
+          - Cover tipografiche generate (gradiente blu + titolo): ${COVER_COUNT:-0}
 
-          Foto scaricate da Wikipedia/NASA/USGS (licenze libere PD/CC0/CC-BY/CC-BY-SA),
-          fascia blu istituzionale applicata, frontmatter aggiornato (image + image_credit)."
+          Per foto: fascia blu istituzionale applicata, frontmatter aggiornato
+          (image + image_credit + image_source_url).
+          Per cover tipografiche: applicata solo dove image: era vuoto e senza
+          marker TODO-foto-* (mai sovrascritte foto utente custom)."
           git push
+          echo "did_commit=true" >> "$GITHUB_OUTPUT"
 
       - name: "🚀 Triggera deploy"
-        if: steps.download.outputs.processed != '0' && steps.download.outputs.processed != ''
+        if: steps.commit.outputs.did_commit == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

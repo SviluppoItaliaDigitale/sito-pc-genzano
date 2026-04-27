@@ -56,6 +56,11 @@ sito-pc-genzano/
 │   ├── scarica-pittogrammi.sh       # Scarica/aggiorna libreria pittogrammi
 │   │                                # ISO 7010 (Wikimedia) + ARASAAC.
 │   │                                # Output: static/pittogrammi/...
+│   ├── auto-cover-mancanti.py       # Genera cover tipografiche per articoli
+│   │                                # con image:"" e senza marker TODO-foto-*
+│   │                                # (sicuro: mai sovrascrive foto utente).
+│   │                                # Chiama genera-cover.py + aggiorna
+│   │                                # frontmatter solo se vuoto.
 │   └── export-contesto-ai.sh        # Export di tutta la documentazione in
 │                                    # un unico CONTESTO-AI.md per altra AI
 ├── .claude/rules/           # Regole di governance (questo file)
