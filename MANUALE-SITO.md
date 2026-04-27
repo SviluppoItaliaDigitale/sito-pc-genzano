@@ -428,20 +428,35 @@ Leggi tutta la **Parte 3**. In sintesi:
 5. Salva in `static/images/AAAA-MM-GG-descrizione.webp`.
 6. Aggiorna il campo `image:` nel frontmatter.
 
-**Scorciatoia: foto da Wikipedia automatica (anche da mobile).** Se l'argomento dell'articolo ha una pagina Wikipedia, puoi delegare il download della foto:
+**Scorciatoia: foto automatica da fonti libere (anche da mobile).** Tre fonti supportate, tutte con licenze libere e attribuzione gestita automaticamente.
 
-- **Da PC:** esegui direttamente
-  ```bash
-  bash scripts/foto-da-wikipedia.sh "Titolo della pagina Wikipedia" slug-articolo [lang]
-  # es: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
-  ```
-  Lo script verifica che la licenza sia libera (PD/CC0/CC-BY/CC-BY-SA), scarica l'immagine principale, applica la fascia blu, salva `static/images/<slug>.webp` e stampa autore + licenza + URL origine da citare in didascalia.
+| Fonte | Quando usarla | Esempio |
+|---|---|---|
+| **Wikipedia** | Eventi storici, persone, opere, organizzazioni | Terremoti famosi, alluvioni, ritratti istituzionali |
+| **NASA** | Fenomeni globali visti dallo spazio | Uragani, eruzioni vulcaniche, ondata calore |
+| **USGS** | ShakeMap di un terremoto specifico | Mappa intensità Mercalli per articoli sismici |
 
-- **Da mobile / app cloud:** la sandbox Claude blocca i domini esterni (Wikipedia compresa). In questo caso lascia `image: ""` e aggiungi nel frontmatter dell'articolo un marker:
-  ```
-  # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
-  ```
-  Al successivo push, il workflow `.github/workflows/scarica-foto-wikipedia.yml` rileva il marker, esegue il download, popola `image:` e `image_credit:`, rimuove il marker e ri-triggera il deploy. **Tutto automatico.** Se la foto non viene trovata (titolo errato, lingua sbagliata, licenza non compatibile), il workflow apre un'issue di follow-up.
+**Da PC:** esegui direttamente lo script che ti serve:
+```bash
+bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
+bash scripts/foto-da-nasa.sh      "Etna eruption"                  2026-08-12-etna
+bash scripts/foto-da-usgs.sh      shakemap us10006g7d              2026-08-24-amatrice-shakemap
+```
+
+Tutti gli script: scaricano in alta risoluzione, applicano la fascia blu istituzionale, salvano in `static/images/<slug>.webp` (max ~200 KB), stampano autore + licenza + URL origine da citare in didascalia.
+
+**Da mobile / app cloud:** la sandbox blocca i domini esterni. Lascia `image: ""` e aggiungi UN marker nel frontmatter:
+```
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
+# oppure
+# TODO-foto-nasa: bash scripts/foto-da-nasa.sh "Vesuvius volcano" 2026-10-01-vesuvio-spazio
+# oppure
+# TODO-foto-usgs: bash scripts/foto-da-usgs.sh shakemap us10006g7d 2026-08-24-amatrice-shakemap
+```
+
+Al successivo push, il workflow `.github/workflows/scarica-foto-automatica.yml` rileva il marker (whitelist di sicurezza: solo i 3 script noti), esegue il download, popola `image:` + `image_credit:` + `image_source_url:`, rimuove il marker e ri-triggera il deploy. **Tutto automatico.** Se la foto non viene trovata, il workflow apre un'issue di follow-up.
+
+**Per trovare un eventid USGS** (terremoti): cerca su `https://earthquake.usgs.gov/earthquakes/search/` per data/luogo, l'ID compare nell'URL della pagina evento.
 
 ### Passo 1.12 — Test locale con Hugo
 

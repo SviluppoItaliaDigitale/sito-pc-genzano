@@ -86,6 +86,13 @@ bash scripts/scarica-pittogrammi.sh           # solo i mancanti
 bash scripts/scarica-pittogrammi.sh --force   # ri-scarica tutto
 # Output: static/pittogrammi/iso7010/*.svg + static/pittogrammi/arasaac/*.png
 # Attribuzioni obbligatorie su /attribuzioni-pittogrammi/ (linkata dal footer).
+
+# Scarica foto per articoli da fonti libere (con fascia blu istituzionale)
+bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [lang]
+bash scripts/foto-da-nasa.sh      "search query"            slug-articolo
+bash scripts/foto-da-usgs.sh      shakemap <eventid>        slug-articolo
+# Output: static/images/<slug>.webp (1200px, fascia blu, max ~200 KB)
+# Da mobile/cloud: vedi workflow scarica-foto-automatica.yml + marker frontmatter.
 ```
 
 ## Architecture
@@ -253,7 +260,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Verifica aggiornamenti Bootstrap Italia |
 | `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (38 sezioni)**: contenuti pubblicati (COI, NUE 112, telefono, sede, CAP, placeholder, asset, badge, date, allegati, frasi AGID, draft `_index`, schede stampabili, modalità emergenza, pagine legali, widget) + codice/template (build Hugo, articoli `draft:true`, link a slug inesistenti, sintassi JS, validità YAML workflow, path assoluti template, residui CCV-MB/lombardo/`/index.html`) + governance docs (file presenti, import CLAUDE, badge list coerente, formato date, frontmatter, riferimenti incrociati, pagine obbligatorie, shortcode foto, script export, `dataUltimaRevisione`) + audit aggiuntivo (mixed content `http://`, `image_alt` accessibility WCAG 1.1.1, coerenza dati istituzionali nelle 7 traduzioni, divergenze `hugo.toml` ↔ `data/numeri_utili.yaml`, smoke test rendering H1 pagine critiche, **8 link critici normativa/PDF locali con messaggi dedicati**). Apre 1 issue settimanale con tutti i findings |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo del sito con **lychee**: verifica TUTTI i link (interni + esterni, tutte le pagine), apre issue automatica su 404/drift. Catch-all per mantenere aggiornati hub Strumenti, widget, Area Download, link esterni nei contenuti |
-| `scarica-foto-wikipedia.yml` | Ogni push su `main` | Scansiona articoli con marker `# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "..." slug` (usato quando si scrive da mobile/cloud, dove la sandbox blocca Wikipedia). Per ogni articolo: scarica foto, applica fascia blu, aggiorna `image:` + `image_credit:` nel frontmatter, rimuove il marker, committa, ri-triggera `deploy.yml`. Se fallisce per uno o più articoli (titolo Wikipedia non trovato, licenza non compatibile), apre issue. Skip-loop: i propri commit hanno `[skip-foto-wiki]` |
+| `scarica-foto-automatica.yml` | Ogni push su `main` | Scansiona articoli con marker `# TODO-foto-{wikipedia,nasa,usgs}: bash scripts/foto-da-XXX.sh "..." slug` (usato quando si scrive da mobile/cloud, dove la sandbox blocca i domini esterni). Fonti supportate (whitelist): **Wikipedia/Wikimedia** (PD/CC0/CC-BY/CC-BY-SA), **NASA Image Library** (Public Domain), **USGS Earthquake Hazards** (ShakeMap, Public Domain). Per ogni articolo: esegue lo script, scarica foto, applica fascia blu, aggiorna `image:` + `image_credit:` + `image_source_url:` nel frontmatter, rimuove il marker, committa, ri-triggera `deploy.yml`. Apre issue se uno o più articoli falliscono. Skip-loop: i propri commit hanno `[skip-foto-wiki]` |
 
 > **Storia merge**: il 26 aprile 2026 sono stati fusi 2 workflow dentro `audit-sito.yml` per consolidare le issue settimanali:
 > - `coerenza-docs.yml` (lun 07:00) → sezioni 23-32 (governance docs)
