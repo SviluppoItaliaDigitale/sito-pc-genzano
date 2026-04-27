@@ -83,6 +83,8 @@ Nessun prerequisito cognitivo particolare. È utile aver svolto in precedenza:
 
 ## Incontro 1 — Chi ci aiuta quando c'è un pericolo?
 
+{{< pittogramma src="/pittogrammi/arasaac/volontario.png" alt="Pittogramma: volontario di protezione civile" size="large" >}}
+
 ### Racconto introduttivo
 
 *"Sapete che nel nostro paese, qui a Genzano, ci sono delle persone speciali che, quando qualcuno ha bisogno di aiuto, arrivano subito? Indossano una divisa arancione e hanno dei mezzi grandi con le luci. Sono i volontari della Protezione Civile! Insieme ai vigili del fuoco, ai medici e ai carabinieri, formano una squadra che ci protegge."*
@@ -105,6 +107,8 @@ Ogni bambino disegna la figura di soccorso che lo ha colpito di più. Appendete 
 ---
 
 ## Incontro 2 — Se la terra trema
+
+{{< pittogramma src="/pittogrammi/arasaac/nascondersi-tavolo.png" alt="Pittogramma: bambino che si nasconde sotto un tavolo durante il terremoto" size="large" >}}
 
 ### Racconto
 
@@ -141,6 +145,8 @@ Spiega con semplicità:
 
 ## Incontro 3 — Se suona l'allarme: usciamo insieme
 
+{{< pittogramma src="/pittogrammi/arasaac/sirena.png" alt="Pittogramma: sirena di allarme" size="large" >}}
+
 ### Racconto
 
 *"A scuola ogni tanto sentiamo un suono forte: è l'allarme. Può suonare per un terremoto, per un incendio o per un'esercitazione. Quando suona, dobbiamo uscire tutti insieme, in fila, piano piano, senza correre e senza spingere. La maestra ci guida fuori."*
@@ -172,6 +178,8 @@ Preparate una piantina semplificata della scuola. I bambini colorano il percorso
 ---
 
 ## Incontro 4 — Il temporale e il fuoco
+
+{{< pittogramma src="/pittogrammi/arasaac/temporale.png" alt="Pittogramma: temporale con fulmini" size="large" >}}
 
 ### Il temporale forte
 
@@ -209,6 +217,8 @@ Preparate tre cerchi grandi: verde, giallo, rosso. Leggete delle situazioni e i 
 ---
 
 ## Il numero magico: 112
+
+{{< pittogramma src="/pittogrammi/arasaac/112.png" alt="Pittogramma del numero 112" size="xlarge" >}}
 
 Insegnate ai bambini a memorizzare il numero **112**.
 

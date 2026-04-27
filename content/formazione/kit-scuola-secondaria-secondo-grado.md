@@ -347,6 +347,8 @@ Selezionate 3-4 post o articoli online relativi a un evento meteorologico o sism
 
 ## Modulo 6 — Volontariato e cittadinanza attiva
 
+{{< pittogramma src="/pittogrammi/arasaac/volontario.png" alt="Pittogramma: volontario di protezione civile" size="medium" >}}
+
 ### Il volontariato nel Codice della Protezione Civile
 
 Il D.Lgs. 1/2018 riconosce il volontariato organizzato come **componente fondamentale** del Servizio Nazionale di Protezione Civile (art. 31-42).
