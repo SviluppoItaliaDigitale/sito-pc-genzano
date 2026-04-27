@@ -4672,6 +4672,72 @@ Lo sblocco della sandbox serve quando:
 
 In tutti gli altri casi, il marker + workflow è sufficiente.
 
+### 14.8 — Pubblicare un articolo da cellulare: tre modi
+
+Il flusso editoriale è progettato per funzionare **anche senza un PC**: dal cellulare puoi pubblicare un articolo completo (testo + foto reale + cover tipografica + deploy automatico) senza toccare un terminale.
+
+**Modo 1 — App Claude Code mobile (la più comoda)**
+
+Apri l'app Claude Code sul cellulare e chiedi all'AI: *"Crea un articolo su [argomento] con marker foto Wikipedia"*. L'AI:
+
+1. Crea il file `.md` in `content/comunicazioni/AAAA-MM-GG-slug.md` con frontmatter completo + marker `# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Wiki" slug`
+2. Fa `git add` + `git commit` + `git push` (l'app cloud può sempre fare git, anche senza accesso ai siti esterni)
+3. Il workflow GitHub `scarica-foto-automatica.yml` parte automaticamente al push, scarica la foto, applica fascia blu, popola il frontmatter, committa, ri-triggera il deploy
+4. Tra 2-3 minuti l'articolo è online con foto reale
+
+Tu non hai fatto nulla di tecnico: solo dialogo con l'AI.
+
+**Modo 2 — Browser su github.com (anche da cellulare)**
+
+Se non vuoi usare l'AI, puoi creare l'articolo direttamente da `https://github.com/SviluppoItaliaDigitale/sito-pc-genzano`:
+
+1. Tab **Code**, cartella `content/comunicazioni/`
+2. **"Add file" → "Create new file"**
+3. Nome file: `AAAA-MM-GG-slug.md` (rispetta il formato data — vedi Parte 1.3)
+4. Contenuto: frontmatter + corpo articolo + marker `# TODO-foto-wikipedia: ...` (se vuoi foto reale)
+5. Tasto verde **"Commit changes"**
+6. Aspetta 2-3 minuti → workflow processa → foto online
+
+**Modo 3 — Trigger manuale del workflow**
+
+Se hai già committato un articolo con marker e vuoi forzare l'esecuzione del workflow:
+
+1. `https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions`
+2. Workflow **"📷 Scarica foto da fonti libere"**
+3. **"Run workflow"** → branch `main` → tasto verde **"Run workflow"**
+4. Il workflow scansiona, processa, pubblica
+
+**Riassunto: cosa fa cosa**
+
+| Componente | Dove gira | Funzione |
+|---|---|---|
+| App Claude Code mobile / web | cloud Anthropic | Scrive l'articolo, fa git push |
+| Editor github.com | cloud GitHub | Scrive l'articolo, fa commit |
+| Workflow `scarica-foto-automatica.yml` | runner GitHub Actions | Scarica foto, applica fascia, popola frontmatter |
+| Workflow `deploy.yml` | runner GitHub Actions | Build Hugo + deploy FTP Aruba + GitHub Pages |
+| Sandbox locale di Claude Code (PC) | il tuo PC | Solo per editing/testing locale, **non serve dal cellulare** |
+
+**Punto chiave:** il `.claude/settings.local.json` e la sandbox locale **non hanno effetto** sull'app cloud / mobile / browser — quelle non leggono il filesystem del tuo PC. Tutto il lavoro lato cloud è gestito dai workflow GitHub Actions, che hanno rete libera.
+
+### 14.9 — Foto Wikipedia nel corpo articolo: convenzione di posizionamento
+
+**Regola del progetto** (rispettata dallo script `sposta-foto-wikipedia-nel-corpo.py` e dal workflow di download):
+
+1. La **cover** dell'articolo (mostrata nelle anteprime e nelle card) è **sempre tipografica**: gradiente blu istituzionale + titolo articolo + fascia con logo. Generata da `scripts/genera-cover.py`. File: `static/images/<slug>.webp`.
+
+2. La **foto reale** (Wikipedia/NASA/USGS/NOAA), se presente, va **nel corpo dell'articolo**, non nella cover. File: `static/images/<slug>-fonte-wikipedia.webp` (nome diverso dallo slug, così `genera-cover.py` non la sovrascrive).
+
+3. **Posizione della foto nel corpo**: dentro la **prima sezione H2**, **dopo il primo paragrafo di contenuto**. Questa collocazione lega visivamente la foto al primo blocco di approfondimento, dove è più rilevante. Mai "buttata" subito dopo l'intro.
+
+4. **Cornice e didascalia**: applicate via CSS scoped (`custom.css` sezione "Figure dallo shortcode foto"). Cornice istituzionale bianca con padding 8px, ombra `0 10px 28px rgba(0,51,102,0.18)`, didascalia centrata con border-top blu trasparente. Il caption deve sempre includere autore + licenza + link "Fonte originale".
+
+5. **Markup**: solo via shortcode `{{< foto src="..." alt="..." caption="..." >}}` (mai markdown `![...]()` diretto).
+
+**Esempio caption ben fatto**:
+```
+caption="Foto: USGS — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:...)."
+```
+
 ---
 
 ## Appendici

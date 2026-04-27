@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "Alfredo D'Ambrosio — CC BY 3.0 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Vette_del_Pollino.JPG"
 ---
 
-Tra il **2010 e il 2014** una sequenza sismica eccezionale interessò il massiccio del **Pollino**, al confine fra Calabria e Basilicata. Oltre **4.000 scosse strumentali** registrate dalla rete INGV, magnitudo massima **5.0** (registrata il 25 ottobre 2012, vicino a Mormanno).
-
-A differenza di altre sequenze italiane, il Pollino **non ha causato vittime dirette**. Ma è stato un **caso scuola** per il monitoraggio sismico, la comunicazione del rischio e la gestione di una crisi prolungata.
+Tra il **2010 e il 2014** una sequenza sismica eccezionale interessò il massiccio del **Pollino**, al confine fra Calabria e Basilicata. Oltre **4.000 scosse strumentali** registrate dalla rete INGV, magnitudo massima **5.0** (registrata il 25 ottobre 2012, vicino a Mormanno).A differenza di altre sequenze italiane, il Pollino **non ha causato vittime dirette**. Ma è stato un **caso scuola** per il monitoraggio sismico, la comunicazione del rischio e la gestione di una crisi prolungata.
 
 ## Una sequenza lunga, di magnitudo media
 
 Il Pollino è una zona sismicamente attiva ma con storia recente di scosse di magnitudo moderata. La sequenza 2010-2014 si manifestò con uno **sciame** di scosse di magnitudo prevalentemente bassa (M 2-3), con alcuni picchi superiori a M 4 e l'unico evento di rilievo a **M 5.0** del 25 ottobre 2012.
+
+{{< foto src="/images/2026-10-26-pollino-2010-2014-sequenza-sismica-monitoraggio-fonte-wikipedia.webp"
+         alt="Foto storica: Pollino 2010-2014: la sequenza sismica che ha cambiato il monitoraggio italiano"
+         caption="Foto: Alfredo D'Ambrosio — CC BY 3.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Vette_del_Pollino.JPG)." >}}
+
 
 Le caratteristiche peculiari:
 - **Durata anomala**: oltre **4 anni** di attività sismica continua

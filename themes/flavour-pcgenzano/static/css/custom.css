@@ -1489,27 +1489,44 @@ article .galleria img {
   margin-bottom: 0;
 }
 
-/* Figure dallo shortcode foto: cornice con ombra morbida e didascalia in corsivo blu */
+/* Figure dallo shortcode foto: cornice istituzionale + ombra evidente + didascalia */
 .article-body figure {
-  margin: 2rem auto;
-  max-width: 640px;
+  margin: 2.5rem auto;
+  max-width: 680px;
+  background: #ffffff;
+  padding: 8px 8px 0 8px;
+  border-radius: 10px;
+  box-shadow:
+    0 10px 28px rgba(0, 51, 102, 0.18),
+    0 3px 8px rgba(0, 51, 102, 0.10);
+  border: 1px solid rgba(0, 51, 102, 0.12);
 }
 .article-body figure img {
   max-width: 100%;
   width: 100%;
   height: auto;
   margin: 0;
-  border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0, 51, 102, 0.12);
-  border: 1px solid rgba(0, 51, 102, 0.08);
+  border-radius: 6px;
+  box-shadow: none;
+  border: none;
+  display: block;
 }
 .article-body figcaption {
   font-style: italic;
   color: #003366;
   text-align: center;
   font-size: 0.925rem;
-  margin-top: 0.6rem;
+  margin: 0.7rem 0.4rem 0.6rem;
+  padding: 0.4rem 0;
   line-height: 1.5;
+  border-top: 1px solid rgba(0, 51, 102, 0.10);
+}
+@media print {
+  .article-body figure {
+    box-shadow: none;
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 }
 
 /* Link nel corpo: underline discreto che si rafforza sull'hover */

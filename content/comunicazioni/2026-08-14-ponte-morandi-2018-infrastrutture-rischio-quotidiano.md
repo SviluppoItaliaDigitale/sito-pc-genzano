@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "Dirsmith1 — CC BY-SA 4.0 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:AAR_Morandi.jpg"
 ---
 
-Alle **11:36 del 14 agosto 2018** una porzione del **viadotto Polcevera** sull'autostrada A10 di Genova, conosciuto come **Ponte Morandi**, crollò improvvisamente. Cedette la pila numero 9, e con essa una sezione di impalcato lunga circa **210 metri**. Le auto e i camion che transitavano in quel momento precipitarono per oltre **45 metri**.
-
-**43 morti**. **566 sfollati** dalle case sotto il ponte. Il porto di Genova interrotto, l'asse autostradale del Nord-Ovest spezzato per mesi.
+Alle **11:36 del 14 agosto 2018** una porzione del **viadotto Polcevera** sull'autostrada A10 di Genova, conosciuto come **Ponte Morandi**, crollò improvvisamente. Cedette la pila numero 9, e con essa una sezione di impalcato lunga circa **210 metri**. Le auto e i camion che transitavano in quel momento precipitarono per oltre **45 metri**.**43 morti**. **566 sfollati** dalle case sotto il ponte. Il porto di Genova interrotto, l'asse autostradale del Nord-Ovest spezzato per mesi.
 
 ## Una tragedia tecnica e civile
 
 Il Ponte Morandi era un'infrastruttura strategica costruita tra il 1963 e il 1967 con tecniche pionieristiche per l'epoca (cassonetto in cemento armato precompresso). Aveva avuto una storia di **manutenzioni complesse**, segnalazioni di degrado dei tiranti, perizie tecniche su cui si è poi sviluppato il processo penale ancora in corso.
+
+{{< foto src="/images/2026-08-14-ponte-morandi-2018-infrastrutture-rischio-quotidiano-fonte-wikipedia.webp"
+         alt="Foto storica: Ponte Morandi, 14 agosto 2018: il rischio quotidiano delle infrastrutture critiche"
+         caption="Foto: Dirsmith1 — CC BY-SA 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:AAR_Morandi.jpg)." >}}
+
 
 La **Protezione Civile** fu attivata immediatamente: Vigili del Fuoco, Soccorso Alpino, **volontariato organizzato** locale e regionale, sanitari del 118, Carabinieri, Polizia. La risposta operativa fu efficace nei primi minuti decisivi. Il problema strategico era a monte: **come si era arrivati al crollo di un'infrastruttura critica nazionale?**
 

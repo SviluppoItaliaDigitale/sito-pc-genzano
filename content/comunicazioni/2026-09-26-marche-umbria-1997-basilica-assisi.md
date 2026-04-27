@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "USGS — Public domain — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:19970926_094026_umbria-marche_shakemap.jpg"
 ---
 
-Alle **2:33 della notte del 26 settembre 1997**, una scossa di **magnitudo 5.7** colpì il confine tra Umbria e Marche. Era solo il preludio. Alle **11:40 della mattina successiva**, mentre tecnici e religiosi ispezionavano i danni della Basilica Superiore di San Francesco ad Assisi, una nuova scossa di **magnitudo 6.0** fece **crollare la volta della Basilica**, schiacciando **quattro persone**.
-
-Le immagini del crollo, riprese in diretta da una troupe RAI presente per documentare i danni, sono entrate nella memoria collettiva italiana. Il bilancio totale del terremoto Umbria-Marche fu di **11 morti**, **circa 100 feriti**, **80.000 sfollati**.
+Alle **2:33 della notte del 26 settembre 1997**, una scossa di **magnitudo 5.7** colpì il confine tra Umbria e Marche. Era solo il preludio. Alle **11:40 della mattina successiva**, mentre tecnici e religiosi ispezionavano i danni della Basilica Superiore di San Francesco ad Assisi, una nuova scossa di **magnitudo 6.0** fece **crollare la volta della Basilica**, schiacciando **quattro persone**.Le immagini del crollo, riprese in diretta da una troupe RAI presente per documentare i danni, sono entrate nella memoria collettiva italiana. Il bilancio totale del terremoto Umbria-Marche fu di **11 morti**, **circa 100 feriti**, **80.000 sfollati**.
 
 ## Una sequenza lunga e diffusa
 
 La sequenza sismica del 1997 fu una delle più studiate della storia italiana. Le scosse si susseguirono per mesi, con epicentri spostati lungo l'Appennino umbro-marchigiano. Furono colpiti **300 comuni** in due regioni, con danni gravi a centri storici di valore monumentale altissimo: Foligno, Nocera Umbra, Camerino, Fabriano, e ovviamente **Assisi**.
+
+{{< foto src="/images/2026-09-26-marche-umbria-1997-basilica-assisi-fonte-wikipedia.webp"
+         alt="Foto storica: Marche-Umbria, 26 settembre 1997: il terremoto che fece crollare la volta della Basilica di Assisi"
+         caption="Foto: USGS — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:19970926_094026_umbria-marche_shakemap.jpg)." >}}
+
 
 Gli affreschi della Basilica Superiore — opere di Cimabue, Giotto, Pietro Lorenzetti, Simone Martini — furono in larga parte danneggiati. Migliaia di frammenti furono raccolti e archiviati per il restauro, durato anni.
 

@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "HpSchaefer Hans Peter Schaefer http://www.reserv-a-rt.de — CC BY-SA 3.0 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Santanna_mahnmal.JPG"
 ---
 
-Nella mattina del **12 agosto 1944**, le SS naziste della **16ª Divisione Panzergrenadier Reichsführer-SS** entrarono nel piccolo borgo montano di **Sant'Anna di Stazzema**, in Versilia (Toscana). In poche ore uccisero **560 civili**, fra cui **130 bambini**. La maggior parte delle vittime furono donne, anziani, persone fragili rifugiate in montagna per sfuggire ai bombardamenti delle città. **Anna Pardini**, la più piccola, aveva 20 giorni.
-
-Sant'Anna di Stazzema è uno dei luoghi simbolo della Resistenza italiana e della memoria civile europea. Il suo museo è oggi un riferimento internazionale per l'educazione al rispetto dei diritti umani.
+Nella mattina del **12 agosto 1944**, le SS naziste della **16ª Divisione Panzergrenadier Reichsführer-SS** entrarono nel piccolo borgo montano di **Sant'Anna di Stazzema**, in Versilia (Toscana). In poche ore uccisero **560 civili**, fra cui **130 bambini**. La maggior parte delle vittime furono donne, anziani, persone fragili rifugiate in montagna per sfuggire ai bombardamenti delle città. **Anna Pardini**, la più piccola, aveva 20 giorni.Sant'Anna di Stazzema è uno dei luoghi simbolo della Resistenza italiana e della memoria civile europea. Il suo museo è oggi un riferimento internazionale per l'educazione al rispetto dei diritti umani.
 
 ## Perché parlarne nella Protezione Civile
 
 A prima vista Sant'Anna sembra un evento "estraneo" all'attività di Protezione Civile contemporanea. Non è un terremoto, non è un'alluvione. Ma il legame con il **volontariato civico** è profondo:
+
+{{< foto src="/images/2026-08-12-santanna-stazzema-1944-memoria-volontariato-civico-fonte-wikipedia.webp"
+         alt="Foto storica: Sant'Anna di Stazzema, 12 agosto 1944: la memoria che fonda il volontariato civico"
+         caption="Foto: HpSchaefer Hans Peter Schaefer http://www.reserv-a-rt.de — CC BY-SA 3.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Santanna_mahnmal.JPG)." >}}
+
 
 - Gli abitanti dei comuni circostanti, **a rischio della propria vita**, accolsero centinaia di feriti, recuperarono i corpi, ricostruirono il paese
 - Negli anni della Repubblica, Sant'Anna è diventata un riferimento per la **memoria civile europea** della resistenza al nazifascismo

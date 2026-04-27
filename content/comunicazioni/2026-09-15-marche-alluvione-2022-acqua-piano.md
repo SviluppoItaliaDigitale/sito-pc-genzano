@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "NASA — Public domain — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:2022_Italy_flood.jpg"
 ---
 
-Nella notte tra il **15 e il 16 settembre 2022** il bacino dei fiumi **Misa, Sentino e Burano** nelle Marche fu colpito da un evento meteorologico estremo. In alcune stazioni furono registrati **oltre 400 millimetri di pioggia in tre ore** — più di quanto cade normalmente in cinque mesi. Il fiume **Misa** straripò a Senigallia. Il torrente **Burano** a Cantiano spazzò via case, auto, ponti.
-
-Bilancio: **13 morti**, **2 dispersi**, oltre **50 feriti**, migliaia di sfollati, danni stimati in oltre **2 miliardi di euro**.
+Nella notte tra il **15 e il 16 settembre 2022** il bacino dei fiumi **Misa, Sentino e Burano** nelle Marche fu colpito da un evento meteorologico estremo. In alcune stazioni furono registrati **oltre 400 millimetri di pioggia in tre ore** — più di quanto cade normalmente in cinque mesi. Il fiume **Misa** straripò a Senigallia. Il torrente **Burano** a Cantiano spazzò via case, auto, ponti.Bilancio: **13 morti**, **2 dispersi**, oltre **50 feriti**, migliaia di sfollati, danni stimati in oltre **2 miliardi di euro**.
 
 ## Una "bomba d'acqua" in zona collinare
 
 L'evento aveva caratteristiche tipiche di quella che il linguaggio comune chiama "bomba d'acqua": un sistema temporalesco molto intenso, stazionario, che scarica enormi quantità di pioggia su un'area ristretta in poche ore. Nella zona delle Marche colpita, i bacini idrografici sono **piccoli e a forte pendenza**: significa che il tempo di concentrazione dell'acqua è breve (poche ore) e il fiume risponde rapidamente alla pioggia.
+
+{{< foto src="/images/2026-09-15-marche-alluvione-2022-acqua-piano-fonte-wikipedia.webp"
+         alt="Foto storica: Marche, 15 settembre 2022: una pioggia da 400 millimetri in tre ore, 13 morti"
+         caption="Foto: NASA — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:2022_Italy_flood.jpg)." >}}
+
 
 L'allerta meteo regionale per la giornata del 15 settembre era **gialla** per il rischio temporali sulla zona, **non arancione**. La portata effettiva delle precipitazioni superò ogni modello previsionale disponibile.
 

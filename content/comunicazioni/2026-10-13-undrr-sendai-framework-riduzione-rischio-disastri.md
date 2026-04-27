@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "Joowwww — Public domain — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Emblem_of_the_United_Nations.svg"
 ---
 
-Il **13 ottobre** di ogni anno le Nazioni Unite celebrano la **Giornata Internazionale per la Riduzione del Rischio di Disastri** (*International Day for Disaster Risk Reduction*). Una ricorrenza istituita nel **1989** dall'Assemblea Generale ONU, oggi inserita nel quadro del **Sendai Framework 2015-2030**, il principale documento internazionale di indirizzo per la prevenzione dei disastri naturali e antropici.
-
-In questo articolo guardiamo cosa significa **prevenire i disastri a livello globale** e come si collega al lavoro che facciamo a Genzano.
+Il **13 ottobre** di ogni anno le Nazioni Unite celebrano la **Giornata Internazionale per la Riduzione del Rischio di Disastri** (*International Day for Disaster Risk Reduction*). Una ricorrenza istituita nel **1989** dall'Assemblea Generale ONU, oggi inserita nel quadro del **Sendai Framework 2015-2030**, il principale documento internazionale di indirizzo per la prevenzione dei disastri naturali e antropici.In questo articolo guardiamo cosa significa **prevenire i disastri a livello globale** e come si collega al lavoro che facciamo a Genzano.
 
 ## I Sette Obiettivi del Sendai Framework
 
 Il **Sendai Framework**, adottato il 18 marzo 2015 dalla Terza Conferenza Mondiale ONU sulla Riduzione del Rischio di Disastri, fissa **sette obiettivi globali** misurabili da raggiungere entro il **2030**:
+
+{{< foto src="/images/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri-fonte-wikipedia.webp"
+         alt="Foto storica: Sendai Framework e ONU: che cosa fa il mondo per la riduzione del rischio"
+         caption="Foto: Joowwww — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Emblem_of_the_United_Nations.svg)." >}}
+
 
 1. Ridurre la **mortalità globale** per disastri (target: -50% rispetto al periodo 2005-2015)
 2. Ridurre il **numero di persone colpite**

@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "Istituto Nazionale di Geofisica e Vulcanologia and Centro Nazionale Terremoti — CC BY 4.0 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:2016_central_italy_earthquake.jpg"
 ---
 
-Alle **3:36 del 24 agosto 2016** una scossa di **magnitudo 6.0** colpì l'Appennino centrale, al confine tra Lazio, Umbria, Marche e Abruzzo. L'epicentro tra Accumoli e Amatrice. **299 morti**. Tre paesi cancellati: **Amatrice**, **Accumoli**, **Arquata del Tronto**.
-
-Era l'inizio della **sequenza sismica del Centro Italia**, la più lunga registrata in Italia in tempi recenti: oltre 70.000 scosse strumentali nei 12 mesi successivi, due eventi successivi di magnitudo superiore a 5.5 (26 ottobre e 30 ottobre, [Norcia](#)), 41.000 sfollati, danni stimati in oltre 23 miliardi di euro.
+Alle **3:36 del 24 agosto 2016** una scossa di **magnitudo 6.0** colpì l'Appennino centrale, al confine tra Lazio, Umbria, Marche e Abruzzo. L'epicentro tra Accumoli e Amatrice. **299 morti**. Tre paesi cancellati: **Amatrice**, **Accumoli**, **Arquata del Tronto**.Era l'inizio della **sequenza sismica del Centro Italia**, la più lunga registrata in Italia in tempi recenti: oltre 70.000 scosse strumentali nei 12 mesi successivi, due eventi successivi di magnitudo superiore a 5.5 (26 ottobre e 30 ottobre, [Norcia](#)), 41.000 sfollati, danni stimati in oltre 23 miliardi di euro.
 
 ## La cronologia di quella notte
 
 Quella notte di fine agosto, in piena stagione turistica, la zona era affollata di residenti tornati per le ferie e di visitatori. Amatrice si stava preparando alla **Sagra dell'Amatriciana** del fine settimana successivo. La scossa sorprese tutti nel sonno.
+
+{{< foto src="/images/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario-fonte-wikipedia.webp"
+         alt="Foto storica: Amatrice, 24 agosto 2016: dieci anni dalla notte del Centro Italia"
+         caption="Foto: Istituto Nazionale di Geofisica e Vulcanologia and Centro Nazionale Terremoti — CC BY 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:2016_central_italy_earthquake.jpg)." >}}
+
 
 I primi soccorsi arrivarono nel giro di un'ora dal Comando provinciale dei Vigili del Fuoco di Rieti e dalle colonne mobili regionali. La **rete del volontariato di Protezione Civile** fu attivata in poche ore, con il sistema delle colonne mobili regionali coordinate dal Dipartimento. Anche il nostro **Gruppo del Lazio** fece parte della macchina dei soccorsi.
 

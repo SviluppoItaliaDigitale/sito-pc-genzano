@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "Dipartimento Protezione Civile from Italia — CC BY 2.0 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Terremoto_Ischia_2017_(26495643417).jpg"
 ---
 
-Alle **20:57 del 21 agosto 2017** una scossa di **magnitudo 4.0** colpì l'isola d'Ischia. Epicentro a **Casamicciola Terme**, ipocentro estremamente superficiale (circa 2 chilometri di profondità). Una scossa che, in altre zone d'Italia, sarebbe stata avvertita come fastidiosa ma non distruttiva.
-
-A Ischia provocò **2 morti**, **42 feriti**, **2.600 sfollati**, decine di edifici crollati o gravemente danneggiati nel centro storico di Casamicciola.
+Alle **20:57 del 21 agosto 2017** una scossa di **magnitudo 4.0** colpì l'isola d'Ischia. Epicentro a **Casamicciola Terme**, ipocentro estremamente superficiale (circa 2 chilometri di profondità). Una scossa che, in altre zone d'Italia, sarebbe stata avvertita come fastidiosa ma non distruttiva.A Ischia provocò **2 morti**, **42 feriti**, **2.600 sfollati**, decine di edifici crollati o gravemente danneggiati nel centro storico di Casamicciola.
 
 ## Magnitudo bassa, danni gravi: perché
 
 Tre fattori si combinarono:
+
+{{< foto src="/images/2026-08-21-ischia-2017-terremoto-isolano-fonte-wikipedia.webp"
+         alt="Foto storica: Ischia, 21 agosto 2017: il terremoto su un'isola, le case di tufo e la lezione del Casamicciola"
+         caption="Foto: Dipartimento Protezione Civile from Italia — CC BY 2.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Terremoto_Ischia_2017_(26495643417).jpg)." >}}
+
 
 1. **Profondità dell'ipocentro estremamente bassa.** Una scossa M 4 a 2 km di profondità arriva in superficie con energia molto vicina a quella della sorgente. Una M 4 a 30 km di profondità si attenua nel tragitto.
 

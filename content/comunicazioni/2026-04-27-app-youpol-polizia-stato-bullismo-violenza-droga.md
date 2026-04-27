@@ -5,8 +5,8 @@ description: "YouPol è l'app ufficiale della Polizia di Stato per segnalare in 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-27-app-youpol-polizia-stato-bullismo-violenza-droga.webp"
+image_alt: "Cover dell'articolo: YouPol: l'app della Polizia di Stato per segnalare bullismo, droga e violenza domestica"
 scadenza: ""
 area: "Italia"
 allegati:

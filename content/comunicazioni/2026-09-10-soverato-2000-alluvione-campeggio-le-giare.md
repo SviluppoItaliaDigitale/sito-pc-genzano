@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "DucadiFraconalto3942 — CC BY-SA 4.0 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Soverato-Bandiera.svg"
 ---
 
-Nella notte tra il **9 e il 10 settembre 2000**, una piena improvvisa del torrente **Beltrame** travolse il **campeggio Le Giare** a Soverato (Catanzaro), in Calabria. Il campeggio ospitava un gruppo di **persone con disabilità**, in vacanza con familiari e accompagnatori dell'associazione **AISM** (Associazione Italiana Sclerosi Multipla).
-
-Bilancio: **13 morti**, di cui molti ragazzi disabili che non riuscirono a fuggire dalle tende invase dall'acqua e dal fango.
+Nella notte tra il **9 e il 10 settembre 2000**, una piena improvvisa del torrente **Beltrame** travolse il **campeggio Le Giare** a Soverato (Catanzaro), in Calabria. Il campeggio ospitava un gruppo di **persone con disabilità**, in vacanza con familiari e accompagnatori dell'associazione **AISM** (Associazione Italiana Sclerosi Multipla).Bilancio: **13 morti**, di cui molti ragazzi disabili che non riuscirono a fuggire dalle tende invase dall'acqua e dal fango.
 
 ## La cronologia
 
 Le piogge intense iniziarono nelle ore precedenti la mezzanotte del 9 settembre. Il torrente Beltrame, normalmente quasi asciutto in estate, si gonfiò rapidamente. Il campeggio era stato realizzato **a meno di 100 metri dall'asta del torrente**, in un'area che le carte di pericolosità idraulica classificavano già come **zona di esondazione storica**.
+
+{{< foto src="/images/2026-09-10-soverato-2000-alluvione-campeggio-le-giare-fonte-wikipedia.webp"
+         alt="Foto storica: Soverato, 10 settembre 2000: l'alluvione del campeggio Le Giare"
+         caption="Foto: DucadiFraconalto3942 — CC BY-SA 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Soverato-Bandiera.svg)." >}}
+
 
 Tra le **2 e le 3 del mattino**, l'onda di piena raggiunse il campeggio. Le tende montate vicino al letto del torrente furono spazzate via in pochi minuti. Le persone con disabilità motoria, impossibilitate a fuggire da sole, furono le prime vittime.
 

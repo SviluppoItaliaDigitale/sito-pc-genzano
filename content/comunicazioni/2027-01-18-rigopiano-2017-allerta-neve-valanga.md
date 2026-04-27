@@ -11,13 +11,9 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "ignoto — Public domain — via Wikimedia Commons"
-image_source_url: "https://it.wikipedia.org/wiki/File:Rigo6005_MGZOOM.jpg"
 ---
 
-Alle **16:48 del 18 gennaio 2017** una valanga di neve, fango e detriti scese dal versante del **Monte Siella**, sul Gran Sasso, e investì l'**Hotel Rigopiano** nel comune di Farindola. **29 morti**, 11 superstiti tirati fuori dalle macerie nei giorni successivi. È stato il più grave evento valanghivo italiano degli ultimi cinquant'anni.
-
-## Il contesto: una giornata già difficile
+Alle **16:48 del 18 gennaio 2017** una valanga di neve, fango e detriti scese dal versante del **Monte Siella**, sul Gran Sasso, e investì l'**Hotel Rigopiano** nel comune di Farindola. **29 morti**, 11 superstiti tirati fuori dalle macerie nei giorni successivi. È stato il più grave evento valanghivo italiano degli ultimi cinquant'anni.## Il contesto: una giornata già difficile
 
 Quella mattina sull'Italia centrale erano in corso più emergenze contemporaneamente:
 
@@ -30,6 +26,11 @@ L'hotel ospitava in quel momento clienti che, dopo le scosse del mattino, **stav
 ## Cosa è successo dopo
 
 I soccorsi furono complicatissimi: la struttura era a 1.200 metri di quota, su un fianco di montagna, con la strada bloccata. Vigili del Fuoco, Corpo Nazionale Soccorso Alpino e Speleologico, Carabinieri Forestali, **volontari di Protezione Civile** e mezzi della Guardia di Finanza lavorarono per oltre **100 ore consecutive** per estrarre i superstiti dal cono di valanga, sotto neve continua e nuove scosse.
+
+{{< foto src="/images/2027-01-18-rigopiano-2017-allerta-neve-valanga-fonte-wikipedia.webp"
+         alt="Foto storica: Rigopiano, 18 gennaio 2017: la valanga sull'hotel e il limite dell'allerta meteo"
+         caption="Foto: ignoto — Public domain — via Wikimedia Commons. [Fonte originale](https://it.wikipedia.org/wiki/File:Rigo6005_MGZOOM.jpg)." >}}
+
 
 L'inchiesta giudiziaria, durata anni, ha individuato responsabilità organizzative a vari livelli: dalla mancata pianificazione del rischio valanghivo del sito alla gestione delle comunicazioni di allerta tra Comuni, Provincia e Regione.
 
