@@ -2,6 +2,7 @@
 
 title: "Temporali Intensi"
 description: "Norme di comportamento in caso di temporali violenti, fulmini, grandine e piogge intense."
+tts: true
 weight: 5
 toc: true
 ---

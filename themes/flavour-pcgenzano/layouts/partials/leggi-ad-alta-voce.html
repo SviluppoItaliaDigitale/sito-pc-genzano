@@ -1,0 +1,134 @@
+{{- /*
+  Partial: leggi-ad-alta-voce
+  Bottone "Leggi ad alta voce" che usa Web Speech API (window.speechSynthesis).
+  Cross-browser, voce italiana di default, pause/stop accessibili da tastiera.
+
+  Uso (in qualsiasi template):
+    {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".article-body") }}
+
+  Parametri:
+    selector  CSS selector dell'elemento da leggere. Default: ".article-body"
+
+  Accessibilita':
+    - Bottone con role=button, aria-pressed, aria-label dinamico
+    - Stato "in lettura" annunciato a screen reader (aria-live)
+    - Funziona con tastiera (Enter/Space)
+    - Fallback graceful se Web Speech API non supportata (bottone nascosto)
+
+  Pagine target consigliate: cosa-fare-adesso, numeri-utili, facile-da-leggere,
+  rischi-prevenzione/*, allerte-meteo, comunicazioni con priorita urgente.
+*/ -}}
+{{- $selector := .selector | default ".article-body" -}}
+<div class="tts-wrapper" role="region" aria-label="Strumenti di lettura ad alta voce">
+  <button type="button"
+          class="tts-button btn btn-outline-primary btn-sm"
+          data-tts-target="{{ $selector }}"
+          aria-pressed="false"
+          aria-label="Leggi ad alta voce il contenuto della pagina">
+    <i class="bi bi-volume-up-fill me-2" aria-hidden="true"></i>
+    <span class="tts-label">Leggi ad alta voce</span>
+  </button>
+  <span class="tts-status visually-hidden" aria-live="polite" aria-atomic="true"></span>
+</div>
+
+<script>
+(function(){
+  if (!('speechSynthesis' in window)) {
+    // Browser senza supporto: nasconde il bottone
+    document.querySelectorAll('.tts-wrapper').forEach(function(w){ w.style.display = 'none'; });
+    return;
+  }
+
+  var synth = window.speechSynthesis;
+
+  function findItalianVoice() {
+    var voices = synth.getVoices();
+    // Priorita: it-IT, poi qualsiasi voce italiana, poi default
+    return voices.find(function(v){ return v.lang === 'it-IT'; })
+        || voices.find(function(v){ return v.lang && v.lang.startsWith('it'); })
+        || voices.find(function(v){ return v.default; })
+        || voices[0]
+        || null;
+  }
+
+  function extractText(el) {
+    if (!el) return '';
+    // Clona e rimuove elementi non parlabili (script, style, code blocks, link icone, pittogrammi)
+    var clone = el.cloneNode(true);
+    clone.querySelectorAll('script, style, .visually-hidden, [aria-hidden="true"], pre, code.language-, .pittogramma, .pittogramma-figure').forEach(function(n){ n.remove(); });
+    // Sostituisce <br> con newline per pause naturali
+    clone.querySelectorAll('br').forEach(function(n){ n.replaceWith('\n'); });
+    var text = clone.innerText || clone.textContent || '';
+    // Compatta whitespace, preserva paragrafi
+    return text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
+  }
+
+  function setButtonState(btn, state) {
+    var label = btn.querySelector('.tts-label');
+    var icon = btn.querySelector('i');
+    var status = btn.parentElement.querySelector('.tts-status');
+    btn.setAttribute('aria-pressed', state === 'reading' ? 'true' : 'false');
+    if (state === 'reading') {
+      label.textContent = 'Pausa lettura';
+      icon.className = 'bi bi-pause-circle-fill me-2';
+      btn.setAttribute('aria-label', 'In lettura, premi per mettere in pausa');
+      btn.classList.remove('btn-outline-primary');
+      btn.classList.add('btn-primary');
+      status.textContent = 'Lettura in corso';
+    } else if (state === 'paused') {
+      label.textContent = 'Riprendi lettura';
+      icon.className = 'bi bi-play-circle-fill me-2';
+      btn.setAttribute('aria-label', 'Lettura in pausa, premi per riprendere');
+      status.textContent = 'Lettura in pausa';
+    } else {
+      label.textContent = 'Leggi ad alta voce';
+      icon.className = 'bi bi-volume-up-fill me-2';
+      btn.setAttribute('aria-label', 'Leggi ad alta voce il contenuto della pagina');
+      btn.classList.remove('btn-primary');
+      btn.classList.add('btn-outline-primary');
+      status.textContent = '';
+    }
+  }
+
+  document.querySelectorAll('.tts-button').forEach(function(btn){
+    var state = 'idle';
+    var utterance = null;
+
+    btn.addEventListener('click', function(){
+      var target = document.querySelector(btn.getAttribute('data-tts-target'));
+      if (state === 'idle') {
+        var text = extractText(target);
+        if (!text) {
+          alert('Nessun testo da leggere su questa pagina.');
+          return;
+        }
+        // Cancella eventuale lettura precedente
+        synth.cancel();
+        utterance = new SpeechSynthesisUtterance(text);
+        var voice = findItalianVoice();
+        if (voice) utterance.voice = voice;
+        utterance.lang = 'it-IT';
+        utterance.rate = 0.95;   // poco piu' lento del default per chiarezza
+        utterance.pitch = 1;
+        utterance.volume = 1;
+        utterance.onend = function(){ state = 'idle'; setButtonState(btn, 'idle'); };
+        utterance.onerror = function(){ state = 'idle'; setButtonState(btn, 'idle'); };
+        synth.speak(utterance);
+        state = 'reading';
+        setButtonState(btn, 'reading');
+      } else if (state === 'reading') {
+        synth.pause();
+        state = 'paused';
+        setButtonState(btn, 'paused');
+      } else if (state === 'paused') {
+        synth.resume();
+        state = 'reading';
+        setButtonState(btn, 'reading');
+      }
+    });
+  });
+
+  // Stop globale quando si cambia pagina (evita lettura "fantasma" su SPA)
+  window.addEventListener('beforeunload', function(){ synth.cancel(); });
+})();
+</script>

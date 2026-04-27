@@ -1,0 +1,33 @@
+{{- /*
+  Shortcode: cosa-non-fare
+  Box rosso bordato che evidenzia visivamente i comportamenti DA EVITARE
+  in caso di emergenza. Aumenta l'efficacia della comunicazione del rischio
+  rispetto al "non" disperso nei testi.
+
+  Uso (markdown nel corpo dell'articolo):
+
+    {{< cosa-non-fare >}}
+    - Non usare l'ascensore
+    - Non rientrare nell'edificio
+    - Non accendere fiamme
+    {{< /cosa-non-fare >}}
+
+  Oppure con titolo personalizzato:
+
+    {{< cosa-non-fare titolo="Da evitare assolutamente" >}}
+    - ...
+    {{< /cosa-non-fare >}}
+
+  Accessibilita': role=region + aria-label, icona con aria-hidden,
+  contrasto WCAG AA garantito (rosso #c1121f su sfondo #fff5f5).
+*/ -}}
+{{- $titolo := .Get "titolo" | default "Cosa NON fare" -}}
+<div class="cosa-non-fare" role="region" aria-label="{{ $titolo }}">
+  <div class="cosa-non-fare-header">
+    <i class="bi bi-x-octagon-fill" aria-hidden="true"></i>
+    <strong>{{ $titolo }}</strong>
+  </div>
+  <div class="cosa-non-fare-body">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

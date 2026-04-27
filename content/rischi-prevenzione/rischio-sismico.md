@@ -2,6 +2,7 @@
 
 title: "Rischio Sismico: Cosa Fare"
 description: "Cosa fare prima, durante e dopo una scossa di terremoto per la sicurezza della tua famiglia."
+tts: true
 weight: 1
 toc: true
 ---

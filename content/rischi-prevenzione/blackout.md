@@ -2,6 +2,7 @@
 
 title: "Blackout e Interruzione Servizi"
 description: "Cosa fare in caso di interruzione dell'energia elettrica, dell'acqua o delle telecomunicazioni."
+tts: true
 weight: 7
 toc: true
 ---
