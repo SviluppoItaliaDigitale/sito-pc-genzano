@@ -5,13 +5,14 @@ description: "Il terremoto del Molise del 2002 distrusse la scuola elementare 'J
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Molise del 2002" 2026-10-31-san-giuliano-puglia-2002-scuola-crollata-zonazione-sismica
+image: "/images/2026-10-31-san-giuliano-puglia-2002-scuola-crollata-zonazione-sismica.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "USGS — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:2002_molise_earthquake.jpg"
 ---
 
 Alle **11:32 del 31 ottobre 2002** una scossa di **magnitudo 5.7** colpì il Molise. L'epicentro era tra i comuni di San Giuliano di Puglia e Colletorto. La scossa principale, da sola, non sarebbe stata catastrofica per la zona. Ma a San Giuliano accadde qualcosa di inaccettabile: **crollò la scuola elementare "Francesco Jovine"**, con dentro un'intera classe.

@@ -5,13 +5,14 @@ description: "Il terremoto Umbria-Marche del 1997: 11 vittime, fra cui 4 persone
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto di Umbria e Marche del 1997" 2026-09-26-marche-umbria-1997-basilica-assisi
+image: "/images/2026-09-26-marche-umbria-1997-basilica-assisi.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "USGS — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:19970926_094026_umbria-marche_shakemap.jpg"
 ---
 
 Alle **2:33 della notte del 26 settembre 1997**, una scossa di **magnitudo 5.7** colpì il confine tra Umbria e Marche. Era solo il preludio. Alle **11:40 della mattina successiva**, mentre tecnici e religiosi ispezionavano i danni della Basilica Superiore di San Francesco ad Assisi, una nuova scossa di **magnitudo 6.0** fece **crollare la volta della Basilica**, schiacciando **quattro persone**.
