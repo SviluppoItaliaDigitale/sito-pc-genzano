@@ -1054,7 +1054,7 @@ bash scripts/applica-fascia-foto.sh /home/utente/Scaricati/Genzano-alto.jpg 2026
 
 **Requisiti:**
 
-- ImageMagick installato (`apt install imagemagick`).
+- **Python 3 con Pillow** installato (`apt install python3-pil` su Ubuntu/Debian; `pip install Pillow` altrove). Lo script di composizione è scritto in Python+Pillow per essere cross-platform e indipendente da ImageMagick (motivazioni in `.claude/rules/05-github-aruba-deploy.md`).
 - Il logo `static/images/logo-pc-genzano.png` deve essere presente (lo è già nel repository).
 - I font Liberation (Liberation-Sans, Liberation-Sans-Bold) installati — di default sui sistemi
   Linux Ubuntu/Debian, normalmente disponibili via `apt install fonts-liberation`.
