@@ -157,6 +157,14 @@ Produce `<figure>` con immagine cliccabile (apre a dimensione intera in nuova sc
 - **Copertina**: generata automaticamente da `scripts/genera-cover.py` (gradiente blu + titolo + badge + fascia istituzionale). Nome file = slug dell'articolo.
 - **Foto evento**: fornita dall'utente. Nome file DIVERSO dallo slug (es. `2026-04-20-incendio-cecchina-casolare.webp` invece del solo slug), così il generatore non la sovrascrive. Deve comunque avere la fascia blu istituzionale.
 
+**Convenzione posizionamento foto multiple negli articoli storici** (introdotta aprile 2026):
+- **1ª foto**: dopo il **1° H2** dell'articolo, dopo il primo paragrafo di contenuto.
+- **2ª foto**: dopo il **2° H2**, per aprire una seconda dimensione narrativa (ricostruzione, contesto, conseguenze).
+- **3ª foto e oltre**: una per ogni H2 di **evento storico specifico citato** (es. negli articoli che raccontano sequenze di terremoti — Irpinia 1980, L'Aquila 2009, Centro Italia 2016, Emilia-Romagna 2023).
+- **Mai a casaccio**: ogni foto va legata tematicamente alla sezione che la precede.
+
+Lo script `scripts/foto-da-wikipedia.sh` filtra automaticamente bandiere/stemmi comunali (pattern `*Bandiera.svg`, `Flag_of_*`, `*-Stemma.svg`, `*Coat_of_arms*`) — exit code `4`. Non aggiungono valore narrativo; provare un titolo più specifico (un monumento, una piazza, una veduta). Specifiche complete in `MANUALE-SITO.md` Parte 14.9.
+
 ### Shortcode `pittogramma` (per supporto comprensione)
 
 Per migliorare l'accessibilità cognitiva dei contenuti (bambini, anziani, persone con disabilità cognitive, parlanti italiano L2) si usa lo shortcode `pittogramma`, che inserisce simboli ISO 7010 (sicurezza standard) o ARASAAC (CC BY-NC-SA, comprensione cognitiva).
@@ -257,7 +265,7 @@ Regole estese in `.claude/rules/04-hugo-architecture.md` e `.claude/rules/03-acc
 
 8. **PIANO EDITORIALE**: il file `PIANO-EDITORIALE.md` elenca le fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, Comune) e il calendario redazionale mensile. L'obiettivo è **tendere a un articolo al giorno** (300-365 l'anno) con un minimo sostenibile di **3-4 articoli a settimana** nei periodi di minore attività. Usalo per proporre nuovi articoli coerenti con la strategia.
 
-9. **FOTO FORNITE DALL'UTENTE**: quando l'utente fornisce foto per un articolo, **TUTTE vanno inserite nel corpo** (mai sostituite dalla sola copertina) usando lo shortcode `{{< foto >}}`. Ogni foto deve avere la fascia blu istituzionale e alt text significativo.
+9. **FOTO FORNITE DALL'UTENTE**: quando l'utente fornisce foto per un articolo, **TUTTE vanno inserite nel corpo** (mai sostituite dalla sola copertina) usando lo shortcode `{{< foto >}}`. Ogni foto deve avere la fascia blu istituzionale e alt text significativo. Per il **posizionamento di foto multiple** in articoli storici (anniversari, memoria, eventi multipli), seguire la convenzione descritta nella sezione *"Shortcode foto"* qui sopra: 1ª foto dopo 1° H2, 2ª dopo 2° H2, foto successive sull'H2 di ogni evento storico specifico citato. Mai foto a casaccio.
 
 10. **STAMPA**: il file `themes/flavour-pcgenzano/static/css/custom.css` contiene regole `@media print` globali che, quando l'utente clicca "Stampa" su una pagina, nascondono header/navbar/footer/banner/cookie/utility bar/page tools e stampano solo il contenuto della pagina (H1 + articolo + allegati) su A4 con margini standard. Non modificare questa sezione senza valutare l'impatto su tutti i layout.
 

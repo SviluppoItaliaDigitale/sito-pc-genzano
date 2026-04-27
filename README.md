@@ -168,7 +168,7 @@ Le issue generate automaticamente compaiono nella [tab Issues](https://github.co
 4. Compila il frontmatter (vedi Parte 1.5 del manuale).
 5. Scrivi il corpo seguendo le regole AGID (Parte 2 del manuale).
 6. Prepara l'immagine di copertina con fascia blu (Parte 3 del manuale).
-7. Se hai foto evento, inseriscile nel corpo con lo shortcode `{{< foto >}}` (Parte 3.14 del manuale) — nome file diverso dallo slug così non vengono sovrascritte dal generatore di copertine.
+7. Se hai foto evento, inseriscile nel corpo con lo shortcode `{{< foto >}}` (Parte 3.14 del manuale) — nome file diverso dallo slug così non vengono sovrascritte dal generatore di copertine. Per articoli storici con eventi multipli (anniversari, memoria, sequenze sismiche), segui la convenzione di posizionamento foto multiple: 1ª dopo 1° H2, 2ª dopo 2° H2, foto successive sull'H2 di ogni evento specifico (Parte 14.9).
 8. Verifica con `hugo server` in locale.
 9. Esegui la checklist pre-pubblicazione (Parte 5).
 10. `git add . && git commit -m "Nuovo articolo: titolo" && git push`.
