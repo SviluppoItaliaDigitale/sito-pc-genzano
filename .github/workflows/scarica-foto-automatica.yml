@@ -53,7 +53,7 @@ jobs:
         id: scan
         run: |
           set -e
-          MATCHES=$(grep -rlE "^# TODO-foto-(wikipedia|nasa|usgs):" content/comunicazioni/ 2>/dev/null || true)
+          MATCHES=$(grep -rlE "^# TODO-foto-(wikipedia|nasa|usgs|noaa):" content/comunicazioni/ 2>/dev/null || true)
           if [ -z "$MATCHES" ]; then
             echo "[info] Nessun articolo con marker TODO-foto-* trovato."
             echo "found=0" >> "$GITHUB_OUTPUT"
@@ -74,15 +74,15 @@ jobs:
           FAILED=0
           declare -a FAILED_ITEMS
 
-          ALLOWED_SCRIPTS="foto-da-wikipedia.sh foto-da-nasa.sh foto-da-usgs.sh"
+          ALLOWED_SCRIPTS="foto-da-wikipedia.sh foto-da-nasa.sh foto-da-usgs.sh foto-da-noaa.sh"
 
           while IFS= read -r ARTICLE; do
             [ -z "$ARTICLE" ] && continue
             echo "─────────────────────────────────────────────"
             echo "Articolo: $ARTICLE"
 
-            MARKER_LINE=$(grep -m1 -E "^# TODO-foto-(wikipedia|nasa|usgs):" "$ARTICLE")
-            FONTE=$(echo "$MARKER_LINE" | sed -nE 's/^# TODO-foto-(wikipedia|nasa|usgs):.*$/\1/p')
+            MARKER_LINE=$(grep -m1 -E "^# TODO-foto-(wikipedia|nasa|usgs|noaa):" "$ARTICLE")
+            FONTE=$(echo "$MARKER_LINE" | sed -nE 's/^# TODO-foto-(wikipedia|nasa|usgs|noaa):.*$/\1/p')
             CMD=$(echo "$MARKER_LINE" | sed -E "s/^# TODO-foto-${FONTE}:[[:space:]]*//")
 
             if [ -z "$FONTE" ] || [ -z "$CMD" ]; then
@@ -137,6 +137,21 @@ jobs:
                   continue
                 fi
                 OUTPUT=$(bash scripts/foto-da-usgs.sh "$MODE" "$EVENTID" "$SLUG" 2>&1)
+                EXIT=$?
+                ;;
+              noaa)
+                # Pattern: bash scripts/foto-da-noaa.sh "URL diretto NOAA" "Descrizione" <slug>
+                # Estraggo i due valori tra virgolette + slug (3 parametri quotati)
+                URL=$(echo "$CMD" | grep -oE '"[^"]+"' | sed -n '1p' | sed 's/^"\(.*\)"$/\1/')
+                DESC=$(echo "$CMD" | grep -oE '"[^"]+"' | sed -n '2p' | sed 's/^"\(.*\)"$/\1/')
+                SLUG=$(echo "$CMD" | awk '{print $NF}')
+                if [ -z "$URL" ] || [ -z "$DESC" ] || [ -z "$SLUG" ]; then
+                  echo "[error] parametri NOAA non estraibili: $CMD"
+                  FAILED=$((FAILED+1))
+                  FAILED_ITEMS+=("$ARTICLE (noaa): parametri non estraibili")
+                  continue
+                fi
+                OUTPUT=$(bash scripts/foto-da-noaa.sh "$URL" "$DESC" "$SLUG" 2>&1)
                 EXIT=$?
                 ;;
               *)
