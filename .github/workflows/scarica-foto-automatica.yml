@@ -100,21 +100,65 @@ jobs:
               continue
             fi
 
-            OUTPUT=$(bash -c "$CMD" 2>&1) || {
-              EXIT=$?
+            # NON usare 'bash -c "$CMD"': i titoli Wikipedia/NASA contengono
+            # apostrofi (es. "dell'Irpinia") che rompono il parsing della shell.
+            # Estraggo titolo + parametri e invoco lo script direttamente con
+            # quoting corretto (eseguibile come array di argomenti).
+            case "$FONTE" in
+              wikipedia|nasa)
+                # Pattern: bash scripts/foto-da-XXX.sh "Titolo o query" slug [lang]
+                TITLE=$(echo "$CMD" | grep -oE '"[^"]+"' | head -1 | sed 's/^"\(.*\)"$/\1/')
+                REST=$(echo "$CMD" | sed -E 's/.*"[^"]+"\s*//')
+                SLUG=$(echo "$REST" | awk '{print $1}')
+                EXTRA=$(echo "$REST" | awk '{print $2}')
+                if [ -z "$TITLE" ] || [ -z "$SLUG" ]; then
+                  echo "[error] parametri non estraibili dal marker $FONTE: $CMD"
+                  FAILED=$((FAILED+1))
+                  FAILED_ITEMS+=("$ARTICLE ($FONTE): parametri non estraibili")
+                  continue
+                fi
+                if [ -n "$EXTRA" ]; then
+                  OUTPUT=$(bash "scripts/$SCRIPT_NAME" "$TITLE" "$SLUG" "$EXTRA" 2>&1)
+                else
+                  OUTPUT=$(bash "scripts/$SCRIPT_NAME" "$TITLE" "$SLUG" 2>&1)
+                fi
+                EXIT=$?
+                ;;
+              usgs)
+                # Pattern: bash scripts/foto-da-usgs.sh shakemap <eventid> <slug>
+                TOKENS=$(echo "$CMD" | sed -E 's|^bash\s+scripts/foto-da-usgs\.sh\s+||')
+                MODE=$(echo "$TOKENS" | awk '{print $1}')
+                EVENTID=$(echo "$TOKENS" | awk '{print $2}')
+                SLUG=$(echo "$TOKENS" | awk '{print $3}')
+                if [ -z "$MODE" ] || [ -z "$EVENTID" ] || [ -z "$SLUG" ]; then
+                  echo "[error] parametri USGS non estraibili: $CMD"
+                  FAILED=$((FAILED+1))
+                  FAILED_ITEMS+=("$ARTICLE (usgs): parametri non estraibili")
+                  continue
+                fi
+                OUTPUT=$(bash scripts/foto-da-usgs.sh "$MODE" "$EVENTID" "$SLUG" 2>&1)
+                EXIT=$?
+                ;;
+              *)
+                echo "[error] fonte non gestita: $FONTE"
+                FAILED=$((FAILED+1))
+                FAILED_ITEMS+=("$ARTICLE: fonte non gestita '$FONTE'")
+                continue
+                ;;
+            esac
+
+            if [ "$EXIT" -ne 0 ]; then
               echo "[error] script $SCRIPT_NAME fallito (exit $EXIT):"
               echo "$OUTPUT"
               FAILED=$((FAILED+1))
-              FAILED_ITEMS+=("$ARTICLE ($FONTE): script fallito")
+              FAILED_ITEMS+=("$ARTICLE ($FONTE): script fallito (exit $EXIT)")
               continue
-            }
+            fi
             echo "$OUTPUT"
 
             ORIGIN=$(echo "$OUTPUT" | grep -oE 'Origine:\s*https?://\S+' | sed 's/^Origine:\s*//')
             AUTHOR=$(echo "$OUTPUT" | sed -nE 's/^\s*Autore:\s*(.*)$/\1/p' | head -1)
             LICENSE_=$(echo "$OUTPUT" | sed -nE 's/^\s*Licenza:\s*(.*)$/\1/p' | head -1)
-
-            SLUG=$(echo "$CMD" | awk '{print $NF}')
 
             python3 scripts/aggiorna-frontmatter-foto.py \
               "$ARTICLE" \

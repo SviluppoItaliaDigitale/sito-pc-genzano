@@ -32,6 +32,21 @@ Questi recapiti sono **per informazioni e richieste non urgenti**. In caso di em
 - **Telefono:** [+39 06 9362600](tel:+39069362600)
 - **Email:** [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
 
+## Comune di Genzano di Roma
+
+Per informazioni amministrative, ufficio anagrafe, servizi al cittadino. Per **emergenze chiama il 112**, non il centralino comunale.
+
+- **Centralino:** [+39 06 937111](tel:+390693711)
+- **Sito istituzionale:** [comune.genzanodiroma.roma.it](https://www.comune.genzanodiroma.roma.it/)
+
+## Polizia Locale di Genzano di Roma
+
+Compete su viabilità, ordinanze, edilizia, controlli stradali e amministrativi. Per **emergenze in atto chiama il 112**, non i numeri del comando.
+
+- **Telefono:** [+39 06 9364687](tel:+390693646879) · [+39 06 9397994](tel:+390693979940)
+- **Email:** [munipol@comune.genzanodiroma.roma.it](mailto:munipol@comune.genzanodiroma.roma.it)
+- **PEC:** [polizia_locale@comunegenzanodiromapec.it](mailto:polizia_locale@comunegenzanodiromapec.it)
+
 ## App utili
 
 - **IT-alert** — Sistema nazionale di allarme pubblico: [it-alert.it](https://www.it-alert.it/it/)
