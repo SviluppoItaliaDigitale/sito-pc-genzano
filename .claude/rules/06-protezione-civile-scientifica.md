@@ -105,18 +105,46 @@ Non citare numeri di emergenza non verificati. Non presentare più 115/118/1515 
 - Per i comportamenti di autoprotezione, cita sempre fonti ufficiali (DPC, Regione, Comune).
 - Non pubblicare contenuti meteo o di rischio basati su fonti non istituzionali.
 
-## Standard tecnici di riferimento per la comunicazione di emergenza
+## Gerarchia delle fonti per la comunicazione del rischio e dell'emergenza
 
-Oltre ai riferimenti istituzionali italiani (AGID, DPC, Centro Funzionale Regionale Lazio), il Gruppo adotta in modo **complementare** queste norme tecniche internazionali per la comunicazione di emergenza, in particolare sui canali digitali e social:
+Il Gruppo si attiene a un quadro di fonti **gerarchico**: in caso di conflitto teorico, prevale la fonte di livello superiore. Specifiche complete in `MANUALE-SITO.md` Parte 13.9.
 
-- **ISO 22329:2021** — *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies*. Quadro di riferimento per: monitoraggio dei canali, disseminazione delle informazioni, interazione con il pubblico, gestione della disinformazione, pianificazione della comunicazione di crisi.
-- **CEN/CENELEC Workshop Agreement (CWA) draft** — *Guidelines for effective social media messages in crisis and emergency situations*. Riferimento per: struttura standard del messaggio di allerta sui social, hashtag specifici e localizzati, accessibilità dei post, scelta delle icone.
+### Livello 1 — italiano vincolante (AGID + DPC)
 
-Sono **complementari** al manuale AGID, non sostitutivi: in caso di conflitto, **vince AGID**. Esempi di adozione e di non-adozione (con motivazione) sono in `MANUALE-SITO.md` Parte 13.7.
+- **AGID — Linee guida per la comunicazione digitale della PA**: stile, accessibilità, linguaggio chiaro, design system. Riferimento orizzontale per ogni contenuto digitale della PA.
+- **DPC — Dipartimento della Protezione Civile**, riferimento settoriale italiano per la comunicazione del rischio:
+  - **D.Lgs. 1/2018** (Codice della Protezione Civile);
+  - **Direttiva PCM 30 aprile 2021** sul Servizio nazionale di Protezione Civile;
+  - **Linee guida DPC sulla comunicazione del rischio e dell'emergenza**;
+  - **Campagne nazionali "Io non rischio"** — manuali operativi per rischio sismico, vulcanico, maremoto, alluvione, incendio boschivo;
+  - **Bollettini di criticità nazionale** e **codici colore ufficiali** (verde, giallo, arancione, rosso).
 
-**Non adottiamo:**
-- Il CWA suggerisce di "evitare il colore verde" perché ambiguo. In Italia il **codice colore verde = nessuna criticità** è ufficiale e standardizzato dal Centro Funzionale Regionale: cambiarlo creerebbe confusione, quindi resta verde.
-- L'ISO 22329 raccomanda un Social Media Manager dedicato 24/7. Non sostenibile per un Gruppo di volontari: manteniamo gli orari di presìdio dichiarati onestamente nella Social Media Policy.
+In caso di conflitto tra AGID e DPC su un contenuto di Protezione Civile, **vince DPC**: siamo un Gruppo Comunale del Sistema Nazionale di PC ai sensi del D.Lgs. 1/2018.
+
+### Livello 2 — scientifico italiano (CNR, ISPRA)
+
+- **CNR — Consiglio Nazionale delle Ricerche**, autorità scientifica per i rischi naturali:
+  - **CNR-IRPI** (Istituto di Ricerca per la Protezione Idrogeologica) — frane, alluvioni, dissesti.
+  - **CNR-INGV** (con l'Istituto Nazionale di Geofisica e Vulcanologia) — sismologia, vulcanologia.
+  - **CNR-IGAG** (Geologia Ambientale e Geoingegneria) — territori e infrastrutture.
+- **ISPRA** — dati territoriali nazionali (idrogeologico, costiero, sismico).
+
+CNR/ISPRA garantiscono la **correttezza scientifica** dei contenuti; DPC garantisce la **correttezza operativa** della comunicazione. Su un dato scientifico vince CNR/ISPRA; sul *come* comunicarlo al cittadino vince DPC.
+
+### Livello 3 — tecnico-operativo europeo (EENA, CWA)
+
+- **EENA — European Emergency Number Association**: riferimento europeo per il **Numero Unico 112** e per l'**app Where Are U**, sviluppata con il loro coinvolgimento. Pubblicazioni rilevanti: *Social Media in Emergency Services*, linee guida sull'accessibilità del 112 per persone con disabilità.
+- **CWA CEN/CENELEC draft** *Guidelines for effective social media messages in crisis and emergency situations*: struttura messaggi di allerta, hashtag, accessibilità dei post.
+
+### Livello 4 — standard internazionali (ISO, WCAG)
+
+- **ISO 22329:2021** *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies*: monitoraggio, disseminazione, interazione, gestione della disinformazione.
+- **WCAG 2.2 AA** (W3C): accessibilità tecnica.
+
+### Cosa NON adottiamo (con motivazione esplicita)
+
+- **CWA: "evitare il colore verde"** — in Italia il codice colore verde = nessuna criticità è ufficiale e standardizzato dal Centro Funzionale Regionale. Cambiarlo creerebbe confusione, quindi **resta verde** (prevale livello 1, DPC).
+- **ISO 22329: "Social Media Manager dedicato 24/7"** — non sostenibile per un Gruppo di volontari. Manteniamo gli orari di presìdio dichiarati onestamente nella Social Media Policy (compatibile con AGID).
 
 ## Esperti da attivare in base al tema
 

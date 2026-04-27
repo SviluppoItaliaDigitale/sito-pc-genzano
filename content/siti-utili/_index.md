@@ -53,6 +53,21 @@ In caso di emergenza, contatta sempre i numeri ufficiali per garantire un interv
 - [Corpo Nazionale dei Vigili del Fuoco](https://www.vigilfuoco.it/) — Componente fondamentale del sistema di soccorso pubblico
 - [Istituto Nazionale di Geofisica e Vulcanologia (INGV)](https://www.ingv.it/) — Monitoraggio sismico e vulcanico
 - [Istituto Superiore per la Protezione e la Ricerca Ambientale (ISPRA)](https://www.isprambiente.gov.it/it) — Ricerca ambientale sotto il Ministero dell'Ambiente
+- [Consiglio Nazionale delle Ricerche (CNR)](https://www.cnr.it/) — Ente pubblico di ricerca italiano
+- [CNR-IRPI — Istituto di Ricerca per la Protezione Idrogeologica](https://www.irpi.cnr.it/) — Studi e dati su frane, alluvioni e dissesti
+- [CNR-IGAG — Istituto di Geologia Ambientale e Geoingegneria](https://www.igag.cnr.it/) — Geologia, microzonazione sismica, geoingegneria
+- [EENA — European Emergency Number Association](https://eena.org/) — Associazione europea che supporta lo sviluppo del Numero Unico 112 (è dietro lo sviluppo dell'app Where Are U)
+
+## Linee guida e standard di riferimento per la comunicazione
+
+Le fonti istituzionali e tecniche su cui si basano la nostra Social Media Policy e le nostre pratiche di comunicazione del rischio:
+
+- [AGID — Linee guida design siti PA](https://www.agid.gov.it/it/design-servizi/linee-guida-design-pa) e [Designers Italia](https://designers.italia.it/) — Riferimento orizzontale per la comunicazione digitale della PA
+- [DPC — Comunicazione del rischio](https://www.protezionecivile.gov.it/it/approfondimento/la-comunicazione/) — Linee guida e campagne nazionali del Dipartimento
+- [DPC — Io non rischio](https://www.iononrischio.it/) — Manuali operativi sui rischi sismico, vulcanico, maremoto, alluvione, incendio
+- [EENA — Documenti e linee guida](https://eena.org/knowledge-hub/) — Best practice europee su 112 e social media in emergenza
+- [ISO 22329:2021](https://www.iso.org/standard/50064.html) — *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies* (norma a pagamento)
+- [WCAG 2.2 (W3C)](https://www.w3.org/TR/WCAG22/) — Web Content Accessibility Guidelines, livello AA
 
 ## Agenzie di Stampa e Media
 
