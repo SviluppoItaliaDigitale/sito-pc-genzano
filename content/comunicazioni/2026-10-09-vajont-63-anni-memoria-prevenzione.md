@@ -19,6 +19,11 @@ Alle **22:39 del 9 ottobre 1963**, una frana di circa **260 milioni di metri cub
 
 La diga del Vajont era, all'epoca, un'**opera ingegneristica straordinaria**: 261,60 metri di altezza, la più alta al mondo nella sua tipologia. Ma il **versante del Monte Toc**, sul lato sinistro del bacino, dava segni di instabilità da mesi. Fenomeni ormai chiari, all'epoca interpretati con troppa fiducia nei modelli disponibili.
 
+{{< foto src="/images/2026-10-09-vajont-63-anni-memoria-prevenzione-diga-vajont.webp"
+         alt="La diga del Vajont oggi, simbolo del disastro del 9 ottobre 1963"
+         caption="La diga del Vajont, integra ancora oggi: alle 22:39 del 9 ottobre 1963 una frana di 270 milioni di metri cubi precipitò nel bacino, generando un'onda di 250 metri che distrusse Longarone. 1917 vittime. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Diga_del_Vajont_.jpg)." >}}
+
+
 La sera del 9 ottobre, dopo giorni di piogge intense e svasi tecnici del bacino, un'**enorme massa rocciosa** crollò nel lago. Il volume spostato generò un'onda gigantesca che **scavalcò** la diga (**intatta**) e devastò la valle sottostante.
 
 ## La diga che resistette

@@ -24,6 +24,11 @@ Il **23 novembre 1980**, alle **19:34**, un terremoto di **magnitudo 6.9** colp�
 - **durata**: circa 90 secondi;
 - **intensità**: fino a X grado Mercalli in alcuni comuni.
 
+{{< foto src="/images/2026-11-23-irpinia-1980-anniversario-46-conza-campania-ricostruita.webp"
+         alt="Conza della Campania, comune ricostruito dopo il terremoto dell'Irpinia del 1980"
+         caption="Conza della Campania (Avellino): l'antico borgo distrutto dal sisma del 23 novembre 1980 fu ricostruito a valle. Il sito originario è oggi parco archeologico. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Conza_della_campania-panorama.jpg)." >}}
+
+
 ### L'area colpita
 - **Irpinia** e **Alta Irpinia**;
 - **Valle dell'Ofanto**;

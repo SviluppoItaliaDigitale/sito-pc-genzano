@@ -21,6 +21,11 @@ Il Parlamento italiano ha scelto questa data perché il **27 gennaio 1945** le t
 
 Può sembrare distante dal nostro lavoro quotidiano. Ma la **Protezione Civile** italiana nasce, nella sua forma moderna, su **fondamenti costituzionali precisi**: **solidarietà**, **sussidiarietà**, **partecipazione civile**. Sono gli stessi valori che la Costituzione del 1948 ha scritto proprio come **risposta** agli anni bui del fascismo e della guerra.
 
+{{< foto src="/images/2026-01-27-giorno-memoria-dovere-civile-ricordare-auschwitz-memoriale.webp"
+         alt="Auschwitz-Birkenau, oggi memoriale e sito UNESCO"
+         caption="Il campo di Auschwitz-Birkenau: oggi memoriale e sito UNESCO. Il 27 gennaio 1945 l'Armata Rossa liberò il campo. Foto: Wikimedia Commons — Public domain. [Fonte originale](https://commons.wikimedia.org/wiki/File:Auschwitz-Birkenau-2007.jpg)." >}}
+
+
 Il servizio di volontariato di Protezione Civile è, nel suo piccolo, una forma di **presidio democratico**: cittadini liberi che, senza obbligo, scelgono di prendersi cura della comunità. Senza distinzioni di origine, religione, opinione politica.
 
 ## La memoria non è solo ricordo

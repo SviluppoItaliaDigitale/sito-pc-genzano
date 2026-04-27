@@ -22,6 +22,11 @@ Il **30 ottobre 2016** una **scossa di magnitudo 6.5** colpiva il Centro Italia,
 - **30 ottobre 2016** — magnitudo 6.5, la più forte dell'intera sequenza, crolla la Basilica di San Benedetto a Norcia, fortunatamente zero vittime dirette;
 - **18 gennaio 2017** — quattro scosse di magnitudo tra 5.1 e 5.5, unita a nevicate record, valanga a Rigopiano (29 vittime).
 
+{{< foto src="/images/2026-10-28-centro-italia-2016-memoria-accumoli-borgo.webp"
+         alt="Accumoli (Rieti), comune colpito dal terremoto del 24 agosto 2016"
+         caption="Accumoli (Rieti): uno dei tre comuni epicentrali — con Amatrice e Arquata del Tronto — del terremoto del 24 agosto 2016 (M 6.0). Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Terracino.jpg)." >}}
+
+
 ## Un territorio stravolto
 
 L'area interessata comprendeva:

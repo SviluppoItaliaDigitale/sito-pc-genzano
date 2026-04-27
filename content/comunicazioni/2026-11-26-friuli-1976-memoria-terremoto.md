@@ -24,6 +24,11 @@ Nel **1976** il **Friuli** fu colpito da una sequenza sismica devastante che pro
 - **interi paesi** distrutti (Gemona, Venzone, Osoppo);
 - **80.000** edifici danneggiati.
 
+{{< foto src="/images/2026-11-26-friuli-1976-memoria-terremoto-gemona-friuli-ricostruita.webp"
+         alt="Gemona del Friuli oggi: comune simbolo della ricostruzione dopo il terremoto del 1976"
+         caption="Gemona del Friuli oggi: la città distrutta dal terremoto del 6 maggio 1976 fu ricostruita 'dov'era e com'era', divenendo modello internazionale di ricostruzione partecipata. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Duomo_Gemona.jpg)." >}}
+
+
 ### 15 settembre 1976 — Le "repliche"
 - **due scosse** di magnitudo 5.9 e 6.0;
 - **nuovi crolli** su edifici già lesionati;
