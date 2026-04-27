@@ -1,6 +1,6 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 2.6
+**Versione:** 2.7
 **Ultimo aggiornamento manuale:** 2026-04-27
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
@@ -14,6 +14,14 @@
 > o nuove versioni di Bootstrap Italia, viene aperta un'Issue sul repository con la checklist
 > dei punti da verificare. Vedi **Parte 7** per dettagli.
 
+> **Changelog 2.7 (2026-04-27)**
+> - Nuova **Parte 14** — *Configurazione ambiente di sviluppo (Claude Code)*: documenta lo
+>   schema di `.claude/settings.local.json` (in `.gitignore`) per sbloccare la sandbox
+>   verso le 9 fonti foto libere (Wikipedia, Wikimedia, NASA, USGS) usate dagli script
+>   `foto-da-*.sh`. Procedura iniziale, troubleshooting, quando lo sblocco serve e quando no.
+> - Nuova regola `.claude/rules/08-claude-code-setup.md` con la versione operativa per AI
+>   helper. CLAUDE.md regola 14 con sintesi e import della nuova regola nel @-list.
+>
 > **Changelog 2.6 (2026-04-27)**
 > - Nuova cartella **`riferimenti-interni/`** alla root del repo per documentazione di
 >   lavoro NON deployata: norme tecniche copyrighted, draft di consultazione, materiale a
@@ -4538,6 +4546,131 @@ I documenti tecnici delle fonti sopra elencate sono archiviati nel repo per gara
 - **A uso interno della redazione** (copyrighted, draft, riservati): cartella `riferimenti-interni/`, NON deployata. Indice e stato di accessibilità di ogni documento in `riferimenti-interni/README.md`.
 
 I contenuti operativi delle fonti (struttura messaggi, hashtag, accessibilità, monitoraggio disinformazione) sono comunque **già recepiti** in questo manuale (Parte 13.7) e nelle regole `.claude/rules/02-content-design-pa.md`, `03-accessibility.md`, `06-protezione-civile-scientifica.md`. Il volontario o redattore non ha bisogno di consultare gli originali per il lavoro quotidiano.
+
+---
+
+## Parte 14 — Configurazione ambiente di sviluppo (Claude Code)
+
+Questa parte è **per chi gestisce il sito con Claude Code** (l'assistente AI di Anthropic). Spiega come predisporre l'ambiente la prima volta perché Claude possa scaricare immagini da fonti libere (Wikipedia, Wikimedia, NASA, USGS) senza essere bloccato dalla sandbox di sicurezza.
+
+### 14.1 — Cos'è la sandbox di Claude Code
+
+Claude Code esegue in una **sandbox di sicurezza** che, di default, blocca:
+
+- chiamate di rete verso domini non autorizzati (Wikipedia, NASA, ecc.);
+- scrittura file fuori dalla working directory;
+- comandi considerati rischiosi.
+
+È una protezione importante: senza, un errore o un suggerimento sbagliato potrebbe causare danni. Ma per il nostro flusso di lavoro — in cui scarichiamo regolarmente foto da Wikipedia e altre fonti pubbliche per illustrare gli articoli — la sandbox va **configurata** la prima volta con un'allowlist mirata.
+
+### 14.2 — Il file `.claude/settings.local.json`
+
+Le impostazioni della sandbox per questo repo sono in `.claude/settings.local.json` (il file è in `.gitignore` perché è una preferenza locale, non una scelta del Gruppo).
+
+**Schema base usato da noi:**
+
+```json
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:*.wikipedia.org)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:upload.wikimedia.org)",
+      "WebFetch(domain:*.nasa.gov)",
+      "WebFetch(domain:earthquake.usgs.gov)",
+      "WebFetch(domain:*.usgs.gov)",
+      "Bash(curl:*.wikipedia.org/*)",
+      "Bash(curl:commons.wikimedia.org/*)",
+      "Bash(curl:upload.wikimedia.org/*)",
+      "Bash(curl:images-api.nasa.gov/*)",
+      "Bash(curl:images-assets.nasa.gov/*)",
+      "Bash(curl:earthquake.usgs.gov/*)"
+    ]
+  },
+  "sandbox": {
+    "network": {
+      "allowedDomains": [
+        "*.wikipedia.org",
+        "commons.wikimedia.org",
+        "upload.wikimedia.org",
+        "*.wikimedia.org",
+        "images-api.nasa.gov",
+        "images-assets.nasa.gov",
+        "*.nasa.gov",
+        "earthquake.usgs.gov",
+        "*.usgs.gov"
+      ]
+    }
+  }
+}
+```
+
+**Due sezioni distinte, entrambe necessarie:**
+
+- `permissions.allow` autorizza i tool (`WebFetch`, `Bash curl`) a essere chiamati senza chiederti il permesso ogni volta.
+- `sandbox.network.allowedDomains` sblocca a livello di rete le connessioni verso quei domini.
+
+Senza la prima, Claude ti chiede conferma a ogni chiamata. Senza la seconda, la rete è bloccata anche se il tool è autorizzato. **Servono entrambe.**
+
+### 14.3 — Domini autorizzati e perché
+
+Sono **gli stessi domini** già whitelisted nello script `scripts/foto-da-*.sh` e nei workflow `.github/workflows/scarica-foto-automatica.yml`:
+
+| Dominio | Uso | Script collegato |
+|---|---|---|
+| `*.wikipedia.org` | Pagine Wikipedia per estrarre l'immagine principale | `foto-da-wikipedia.sh` |
+| `commons.wikimedia.org` | API Commons per ricerche immagini | `foto-da-wikipedia.sh` |
+| `upload.wikimedia.org` | Download dei file immagine veri e propri | `foto-da-wikipedia.sh` |
+| `*.wikimedia.org` | Altri sottodomini Wikimedia (es. file specifici) | `foto-da-wikipedia.sh` |
+| `images-api.nasa.gov` | API NASA Image Library | `foto-da-nasa.sh` |
+| `images-assets.nasa.gov` | CDN NASA per i file scaricabili | `foto-da-nasa.sh` |
+| `*.nasa.gov` | Altri sottodomini NASA | `foto-da-nasa.sh` |
+| `earthquake.usgs.gov` | API USGS per ShakeMap e dati sismici | `foto-da-usgs.sh` |
+| `*.usgs.gov` | Altri sottodomini USGS | `foto-da-usgs.sh` |
+
+Tutti sono **fonti libere** (pubblico dominio o CC) usate dal Gruppo per illustrare gli articoli con la fascia blu istituzionale (vedi **Parte 3.8 Metodo 4**).
+
+### 14.4 — Procedura iniziale (una volta sola)
+
+Quando inizi a usare Claude Code su questo repo:
+
+1. **Verifica** se `.claude/settings.local.json` esiste:
+   ```bash
+   cat .claude/settings.local.json 2>/dev/null || echo "non esiste"
+   ```
+2. **Se non esiste**: crealo con il contenuto della **14.2**.
+3. **Se esiste già con altri contenuti**: aggiungi i due blocchi `permissions.allow` e `sandbox.network.allowedDomains` ai blocchi esistenti, non sovrascrivere.
+4. **Riavvia Claude Code**: la sandbox legge il file **all'avvio della sessione**, non dinamicamente. Senza riavvio le modifiche non hanno effetto.
+
+Una volta fatto, dura **per sempre** in questo repo. Non serve ripeterlo a ogni sessione.
+
+### 14.5 — Aggiungere un nuovo dominio
+
+Se in futuro aggiungiamo uno script `foto-da-NUOVA.sh` (es. Copernicus, NOAA, EUMETSAT — vedi regola `05-github-aruba-deploy.md` "Aggiungere una nuova fonte"):
+
+1. Aggiungi i domini necessari sia in `permissions.allow` (per `WebFetch` + `Bash curl`) sia in `sandbox.network.allowedDomains`.
+2. Aggiorna la tabella della **14.3** con il nuovo dominio.
+3. Riavvia Claude Code.
+4. Aggiorna anche la `ALLOWED_SCRIPTS` del workflow `scarica-foto-automatica.yml` se aggiungi un nuovo script di download.
+
+### 14.6 — Cosa NON mettere in `settings.local.json`
+
+- **Niente token, niente credenziali, niente API key**: il file è in `.gitignore` ma per disciplina non ci mettiamo segreti. Se servono, vanno in variabili d'ambiente OS o in GitHub secrets.
+- **Niente domini privati** (intranet, sistemi gestionali del Comune, ecc.): la sandbox è uno strato di difesa, non si "apre tutto" perché conviene.
+- **Niente `*` come allowlist**: meglio aggiungere domini specifici man mano che servono.
+
+### 14.7 — Quando NON serve sbloccare la sandbox
+
+Il workflow `.github/workflows/scarica-foto-automatica.yml` gira su un **runner GitHub Actions con rete libera**: scarica le foto, applica la fascia blu, committa. Quindi se un articolo nuovo include il **marker** `# TODO-foto-wikipedia: ...` nel frontmatter, **non serve** scaricare l'immagine localmente con Claude Code: basta committare l'articolo, il workflow fa il resto al push.
+
+Lo sblocco della sandbox serve quando:
+
+- vuoi vedere l'immagine **prima del push** per verificare che la fascia blu venga bene;
+- vuoi inserire **più immagini nel corpo** dell'articolo (il workflow gestisce solo la copertina);
+- stai facendo una **passata di revisione** di articoli precedenti per arricchirli.
+
+In tutti gli altri casi, il marker + workflow è sufficiente.
 
 ---
 

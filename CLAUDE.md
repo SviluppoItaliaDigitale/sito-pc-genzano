@@ -37,6 +37,7 @@ Non limitarti a eseguire. Valuta, correggi, migliora, normalizza e rendi ogni ou
 @.claude/rules/05-github-aruba-deploy.md
 @.claude/rules/06-protezione-civile-scientifica.md
 @.claude/rules/07-proattivita-coerenza.md
+@.claude/rules/08-claude-code-setup.md
 
 ---
 
@@ -272,6 +273,8 @@ Regole estese in `.claude/rules/04-hugo-architecture.md` e `.claude/rules/03-acc
     Applicazione operativa nei post di allerta/emergenza: struttura standard del messaggio in 6 punti (tipo / livello-colore / area+tempo / cosa fare / fonte / prossimo aggiornamento), hashtag specifici e localizzati, monitoraggio della disinformazione (mai amplificare per smentire), accessibilità post (alt text, max 2 emoji, niente Unicode decorativi, non solo-colore per allerte). Specifiche complete in `MANUALE-SITO.md` Parte 13.7 e 13.9, e nelle regole `02-content-design-pa.md`, `03-accessibility.md`, `06-protezione-civile-scientifica.md`. La pagina pubblica `/social-media-policy/` espone questi principi al cittadino.
 
 13. **CARTELLA `riferimenti-interni/`** (root del repo, NON deployata): contiene documentazione di lavoro per maintainer/AI di supporto che non va pubblicata sul sito (norme copyrighted, draft di consultazione, materiale interno). Hugo non la legge perché non rientra nelle cartelle native (`content/`, `static/`, `themes/`, `data/`, `assets/`, `layouts/`). Convenzione: 🟢 documenti pubblici → `static/manuali/`, 💶 copyrighted o riservati → `riferimenti-interni/<categoria>/`. Indice + stato accessibilità in `riferimenti-interni/README.md`. Specifiche complete nella regola `04-hugo-architecture.md`.
+
+14. **SANDBOX CLAUDE CODE — sblocco per fonti immagini libere**: per scaricare foto da Wikipedia / Wikimedia / NASA / USGS senza essere bloccato dalla sandbox di sicurezza, il repo ha una configurazione predefinita in `.claude/settings.local.json` (in `.gitignore`, locale). Lo schema completo (allowlist `permissions` + `sandbox.network.allowedDomains` per i 9 domini delle nostre fonti foto) è in `MANUALE-SITO.md` Parte 14. Procedura: creare il file una volta sola, riavviare Claude Code (la sandbox legge il file all'avvio, non dinamicamente). Senza questo sblocco, le fonti immagini sono comunque accessibili al workflow `scarica-foto-automatica.yml` su GitHub Actions (rete libera): basta usare il marker `# TODO-foto-wikipedia` nel frontmatter dell'articolo. Specifiche in `MANUALE-SITO.md` Parte 14 e nella regola `08-claude-code-setup.md`.
 
 14. **DATI ALLERTA METEO `data/allerta.json`**: due campi temporali distinti. `ultimo_aggiornamento` cambia **solo** quando il livello DPC cambia. `ultimo_controllo` cambia ogni volta che il workflow `check-allerta.yml` verifica il bollettino e committa (ogni ≥6 ore o cambio livello). Limite: max 4 commit/giorno + cambi di livello. Sia la barra allerta della homepage sia la pagina `/emergenza/` lite mostrano "Verificato: ..." sempre fresco. Il JS lato browser sulla homepage aggiorna ulteriormente il timestamp all'ora locale del client. Schema completo in `MANUALE-SITO.md` Parte 9.3.
 
