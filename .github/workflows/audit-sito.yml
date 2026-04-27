@@ -937,6 +937,26 @@ jobs:
             ok "Tutti gli 8 link critici (normativa Lazio, DPC, PDF locali, Normattiva) raggiungibili."
           fi
 
+          section "39. Cartella riferimenti-interni/ NON deve essere linkata dal sito pubblico"
+          # La cartella `riferimenti-interni/` contiene documentazione di lavoro
+          # (norme copyrighted, draft) che NON deve mai finire sul sito pubblico.
+          # Hugo non la legge perché non rientra nelle cartelle native, ma se
+          # qualcuno per errore la linka da content/, static/ o themes/ il file
+          # NON viene servito (Hugo non lo conosce) e il link sarebbe rotto. Qui
+          # cerchiamo riferimenti testuali "riferimenti-interni/" nel contenuto
+          # destinato al sito pubblico, escludendo MANUALE-SITO, CLAUDE.md e
+          # le regole .claude/rules/ che possono citarla legittimamente.
+          INTERNAL_LEAKS=$(grep -rln 'riferimenti-interni' content/ static/ themes/ 2>/dev/null | grep -v 'static/manuali/' | head -5)
+          if [ -n "$INTERNAL_LEAKS" ]; then
+            err "Riferimento alla cartella interna riferimenti-interni/ trovato in contenuto pubblico:"
+            for f in $INTERNAL_LEAKS; do
+              echo "- \`$f\`" >> "$REPORT"
+            done
+            echo "I documenti copyrighted in riferimenti-interni/ non devono essere esposti pubblicamente. Sposta i link verso static/manuali/ o rimuovili." >> "$REPORT"
+          else
+            ok "Cartella riferimenti-interni/ correttamente isolata dal contenuto pubblico."
+          fi
+
           # ----------------------------------------------------------------
           # Output
           echo "found_issues=$FOUND" >> "$GITHUB_OUTPUT"
