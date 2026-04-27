@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **tre anni**. Fra il **16 e il 18 maggio 2023**, l'**Emilia-Romagna** fu colpita da un'alluvione di estensione senza precedenti nella storia regionale. In **36 ore** caddero, sui rilievi appenninici delle province di **Bologna, Ravenna, Forlì-Cesena**, oltre **350 millimetri di pioggia** — il quantitativo medio di **sei mesi** concentrato in poco più di un giorno. Il terreno, già saturo per una **prima alluvione** del 2-3 maggio (la "**alluvione gemella**" di poche settimane prima), non riuscì ad assorbire l'acqua.
 
+{{< foto src="/images/2026-evento-emilia-romagna-2023-faenza.webp"
+         alt="Faenza durante l'alluvione del maggio 2023: strade trasformate in fiumi"
+         caption="Emilia-Romagna, maggio 2023. Due ondate alluvionali a distanza di 15 giorni: 17 morti, 50.000 sfollati, 23 fiumi esondati. AGESCI Emilia-Romagna attiva la Segreteria Avanzata di Emergenza a Forlì con oltre 1.000 volontari formati col Corso Emergenza Alluvione." >}}
+
 In poche ore esondarono **23 fra fiumi e torrenti**: il **Lamone**, il **Senio**, il **Santerno**, il **Sillaro**, il **Savio**, il **Montone**, il **Ronco**, il **Lavino**, il **Reno**, e tanti minori. Si verificarono **oltre 400 frane** sui versanti appenninici, alcune delle quali isolarono interi paesi. Comuni della Romagna come **Faenza, Forlì, Cesena, Conselice, Lugo, Castel Bolognese** furono allagati per giorni; metri di acqua sporca entrarono nelle case, nei magazzini, nelle fabbriche, negli ospedali.
 
 Il bilancio finale fu di **17 vittime**, oltre **36.000 sfollati**, danni economici stimati in **8,5 miliardi di euro**. È la **più costosa alluvione della storia italiana** del XXI secolo, e una delle più gravi del Paese in termini di estensione territoriale colpita. Ma è anche un evento che ha **mostrato il sistema di protezione civile italiano al lavoro nelle migliori condizioni operative**: nessuna catastrofe avrebbe potuto evitare il danno, ma il dispositivo nazionale e regionale ha funzionato.

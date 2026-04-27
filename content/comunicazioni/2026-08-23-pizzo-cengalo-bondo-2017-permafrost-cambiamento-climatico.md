@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **nove anni** da quel 23 agosto 2017. Alle prime luci del mattino, dalla parete nordorientale del **Pizzo Cengalo** — vetta granitica a **3.369 metri** di quota nelle **Alpi Retiche svizzere**, al confine con l'Italia — si staccarono **tre milioni di metri cubi di roccia**, precipitando sul ghiacciaio sottostante e mescolandosi con il ghiaccio. La miscela — circa **quattro milioni di metri cubi totali** — si trasformò in una **colata di detrito** che corse lungo la **Val Bondasca** verso il villaggio svizzero di **Bondo**, in **Val Bregaglia**, raggiungendo i **250 chilometri orari**.
 
+{{< foto src="/images/2026-evento-pizzo-cengalo-2017-bondo.webp"
+         alt="Il villaggio di Bondo dopo la frana del Pizzo Cengalo del 23 agosto 2017"
+         caption="Bondo (Svizzera), 23 agosto 2017. Una frana di 3 milioni di metri cubi dal Pizzo Cengalo travolge il villaggio: 8 escursionisti dispersi, mai ritrovati. Lo scioglimento del permafrost diventa un fattore di rischio nuovo nelle Alpi." >}}
+
 Il bilancio fu di **otto vittime**: escursionisti che stavano risalendo i sentieri della Val Bondasca verso le capanne alpine. Il villaggio di Bondo, sebbene parzialmente protetto da un'opera di contenimento costruita anni prima (un **bacino di laminazione**), fu raggiunto dal fango e dai detriti: distrutti **14 edifici** in Val Bondasca, danneggiati **quattro edifici** a Bondo, sommerso il **ponte cantonale**. I danni furono stimati **oltre 50 milioni di franchi**.
 
 La frana del Pizzo Cengalo non è "italiana" in senso stretto — è in territorio svizzero — ma la lezione che porta riguarda direttamente anche la **protezione civile italiana** dell'arco alpino: il **cambiamento climatico** sta scongelando il **permafrost** di alta quota, e questo sta innescando una nuova generazione di **frane catastrofiche** in zone storicamente considerate stabili.

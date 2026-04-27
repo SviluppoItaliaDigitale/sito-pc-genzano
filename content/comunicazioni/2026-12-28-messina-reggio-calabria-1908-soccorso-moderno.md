@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **centodiciotto anni** dall'evento più devastante della storia naturale italiana. Erano le **5:21 del mattino del 28 dicembre 1908**. Le città di **Messina** e **Reggio Calabria**, sulle due sponde dello Stretto, dormivano. In **trentasette secondi** una scossa sismica di **magnitudo 7.1** della scala Richter — con epicentro nello Stretto, a circa 10 chilometri di profondità — rase al suolo entrambe le città. Circa **dieci minuti dopo**, uno **tsunami** generato dal sisma colpì le coste con onde alte fino a **dodici metri**, completando ciò che il terremoto aveva iniziato.
 
+{{< foto src="/images/2026-evento-messina-1908-rovine.webp"
+         alt="Le rovine di Messina dopo il terremoto e maremoto del 28 dicembre 1908"
+         caption="Messina, 28 dicembre 1908. Il terremoto e lo tsunami uccidono oltre 80.000 persone. È il primo evento in cui lo Stato italiano organizza un soccorso strutturato — l'antenato lontano della Protezione Civile." >}}
+
 Il bilancio finale **non si conoscerà mai con precisione**. Le stime credibili oscillano fra **80.000 e 120.000 vittime**: a Messina morì circa **metà della popolazione** (60.000 abitanti su 140.000); a Reggio Calabria morirono **15.000-25.000** persone su 45.000; a Bagnara, Scilla, Villa San Giovanni, Bova Marina, Pellaro, decine di altri Comuni costieri furono distrutti per intero. È il **più grave disastro naturale della storia europea** moderna.
 
 Centodiciotto anni dopo, il **terremoto di Messina e Reggio** è il punto da cui parte tutta la lunga storia che porterà — ottantaquattro anni dopo, nel 1992 — alla nascita del **Servizio Nazionale della Protezione Civile**. Non è esagerato dire che quella mattina di dicembre, sui due lati dello Stretto, è cominciata la **moderna idea italiana di soccorso pubblico**.

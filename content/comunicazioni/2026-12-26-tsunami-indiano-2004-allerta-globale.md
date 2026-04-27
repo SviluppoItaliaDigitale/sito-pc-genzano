@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **ventidue anni** da quel 26 dicembre 2004, e la **mattina di Santo Stefano** resta una delle date scolpite nella memoria mondiale dei disastri naturali. Alle **7:58 ora locale** (le **2:58** del mattino in Italia), al largo della costa nord-occidentale di **Sumatra**, in Indonesia, una scossa sismica di **magnitudo 9.1** — fra le più potenti mai registrate — scosse il fondo dell'**Oceano Indiano** per **oltre otto minuti**.
 
+{{< foto src="/images/2026-evento-tsunami-2004-onda.webp"
+         alt="L'onda di tsunami che colpisce le coste dell'Oceano Indiano il 26 dicembre 2004"
+         caption="Oceano Indiano, 26 dicembre 2004. Un terremoto di magnitudo 9,1 al largo di Sumatra genera un maremoto: oltre 230.000 morti in 14 paesi. Da quell'evento nasce il sistema globale di allerta tsunami." >}}
+
 Il sisma sollevò un tratto di fondale lungo **1.200 chilometri** generando uno **tsunami** che si propagò in tutte le direzioni alla velocità di un aereo di linea, **800 chilometri orari**. Le onde raggiunsero le coste in tempi diversi: **15 minuti** ad Aceh (Sumatra), **2 ore** in Sri Lanka e Thailandia, **4 ore** in India e Maldive, **7 ore** in Africa orientale.
 
 In totale, **14 Paesi** affacciati sull'Oceano Indiano furono colpiti. Il bilancio finale fu spaventoso: **oltre 230.000 vittime**, di cui **170.000 nella sola Indonesia** (la provincia di Aceh fu devastata fino a 5 chilometri dall'acqua), **35.000 in Sri Lanka**, **18.000 in India**, **8.000 in Thailandia**. Più di **1.700.000 sfollati**. **Centinaia di migliaia di turisti europei** in vacanza nelle località costiere asiatiche furono colpiti: morirono **543 italiani**, **552 svedesi**, **544 tedeschi**, oltre 100 cittadini di numerosi altri Paesi.

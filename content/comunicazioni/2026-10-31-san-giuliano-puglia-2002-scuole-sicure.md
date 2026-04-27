@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **ventiquattro anni**. Erano le **11:32 del 31 ottobre 2002**, vigilia di Ognissanti, ultimo giorno di scuola della settimana per i bambini di **San Giuliano di Puglia**, piccolo Comune di **mille abitanti** della provincia di Campobasso, in **Molise**. Una scossa di **magnitudo 5.8** della scala Richter, con epicentro fra le province di Campobasso e Foggia, scosse il paese per circa venti secondi.
 
+{{< foto src="/images/2026-evento-san-giuliano-2002-scuola.webp"
+         alt="La scuola Francesco Jovine di San Giuliano di Puglia crollata sotto il sisma del 31 ottobre 2002"
+         caption="San Giuliano di Puglia, 31 ottobre 2002. Sotto le macerie della scuola Jovine muoiono 27 bambini e una maestra. La tragedia porta in Italia all'aggiornamento della classificazione sismica e al piano nazionale per la sicurezza delle scuole." >}}
+
 In quei venti secondi, la **scuola elementare "Francesco Jovine"** di San Giuliano collassò sopra una sola classe: la **prima elementare**. Sotto le macerie morirono **27 bambini** — tutti i bambini della classe — e la loro maestra, **Carmela Ciniglio**. Sei alunni nati nel 1996 e venti compagni di classe nati nel 1996, una generazione intera di un piccolo paese, persi in pochi secondi. La scuola era stata costruita negli anni Cinquanta e poi sopraelevata di un piano negli anni Settanta, con tecniche e materiali che non avrebbero superato alcun controllo sismico moderno.
 
 San Giuliano non era una zona "ufficialmente" sismica. Nel **catalogo sismico italiano del 2002**, il Molise era classificato come zona **non sismica** — ovvero senza obbligo di costruzioni antisismiche. La scuola non aveva alcun motivo, secondo le norme dell'epoca, di essere progettata per resistere a un terremoto. Eppure il terremoto arrivò, e la scuola crollò.
