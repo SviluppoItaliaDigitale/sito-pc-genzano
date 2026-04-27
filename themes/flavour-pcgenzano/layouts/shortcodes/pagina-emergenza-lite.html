@@ -1,0 +1,110 @@
+{{- /*
+  Shortcode: pagina-emergenza-lite
+  Tutto il contenuto della pagina /emergenza/ lite. Niente widget esterni,
+  niente immagini pesanti, niente JS oltre quello essenziale per leggere
+  data/allerta.json. Caricabile anche con rete satura/debolissima.
+
+  Contenuto in ordine di priorita' decrescente:
+  1. 112 grande, immediato
+  2. Stato allerta meteo dinamico (da data/allerta.json)
+  3. Numeri utili essenziali (NUE, sala op, guardia costiera, gruppo)
+  4. Cosa fare ora (lista breve)
+  5. Link essenziali (cosa-fare-adesso, piano-familiare, allerte)
+*/ -}}
+{{- $allerta := .Site.Data.allerta -}}
+{{- $emergenza := .Site.Data.emergenza -}}
+<style>
+.lite-pagina { font-family: -apple-system, system-ui, "Segoe UI", Arial, sans-serif; line-height: 1.55; max-width: 720px; margin: 0 auto; }
+.lite-112 { background: #c1121f; color: #fff; text-align: center; padding: 1.4rem 1rem; border-radius: 12px; margin: 1rem 0 1.5rem; }
+.lite-112 .num { font-size: 4rem; font-weight: 900; display: block; line-height: 1; margin: 0.4rem 0; }
+.lite-112 a { color: #fff; text-decoration: none; }
+.lite-112 .call { display: inline-block; background: #fff; color: #c1121f; padding: 0.6rem 1.4rem; border-radius: 8px; font-weight: 700; font-size: 1.1rem; text-decoration: none; margin-top: 0.6rem; }
+.lite-allerta { padding: 1rem 1.2rem; border-radius: 10px; margin: 1.2rem 0; border-left: 6px solid; }
+.lite-allerta-verde { background: #e8f5e9; border-color: #2e7d32; color: #1b5e20; }
+.lite-allerta-giallo { background: #fff8e1; border-color: #f9a825; color: #6d4c00; }
+.lite-allerta-arancione { background: #ffe0b2; border-color: #ef6c00; color: #6f2c00; }
+.lite-allerta-rosso { background: #ffebee; border-color: #c62828; color: #7f1414; }
+.lite-allerta strong { font-size: 1.1rem; }
+.lite-emergenza-on { background: #c1121f; color: #fff; padding: 1rem 1.2rem; border-radius: 10px; margin: 1rem 0; font-size: 1.05rem; }
+.lite-numeri { list-style: none; padding: 0; margin: 1rem 0; }
+.lite-numeri li { padding: 0.7rem 0.9rem; border: 2px solid #003366; border-radius: 8px; margin: 0.5rem 0; font-size: 1rem; }
+.lite-numeri li strong { display: block; color: #003366; font-size: 1.1rem; }
+.lite-numeri a { color: #003366; font-weight: 700; text-decoration: underline; }
+.lite-azioni { background: #f4f7fb; border-radius: 10px; padding: 1rem 1.2rem; margin: 1rem 0; }
+.lite-azioni h2 { color: #003366; font-size: 1.2rem; margin: 0 0 0.6rem; }
+.lite-azioni ol { padding-left: 1.4rem; margin: 0; }
+.lite-azioni li { padding: 0.25rem 0; }
+.lite-link-essenziali { margin: 1.5rem 0; padding: 1rem; border-top: 2px solid #003366; }
+.lite-link-essenziali a { display: block; padding: 0.7rem 0; color: #003366; text-decoration: none; border-bottom: 1px solid #ddd; font-size: 1.05rem; }
+.lite-link-essenziali a::before { content: "› "; color: #c1121f; font-weight: 700; }
+.lite-footer { text-align: center; color: #6c757d; font-size: 0.85rem; margin: 2rem 0 1rem; padding-top: 1rem; border-top: 1px solid #ddd; }
+@media print {
+  .lite-112 { background: #000 !important; color: #fff !important; }
+  .lite-allerta { border-left-width: 6px !important; }
+}
+</style>
+
+<div class="lite-pagina">
+
+<p class="text-muted small" style="margin: 0.5rem 0;">
+  ℹ️ <strong>Pagina ultra-leggera</strong> per emergenze e rete debole. Per il sito completo: <a href="/">homepage</a>. Per accessibilità cognitiva: <a href="/facile-da-leggere/">facile da leggere</a>.
+</p>
+
+{{- if and $emergenza $emergenza.attiva }}
+<div class="lite-emergenza-on" role="alert">
+  <strong>⚠️ EMERGENZA IN CORSO:</strong> {{ $emergenza.titolo }}<br>
+  {{ $emergenza.descrizione }}
+</div>
+{{- end }}
+
+<div class="lite-112" role="region" aria-label="Numero unico di emergenza 112">
+  <div>In emergenza chiama subito</div>
+  <a href="tel:112"><span class="num">112</span></a>
+  <div>Numero Unico Emergenze (NUE)</div>
+  <a href="tel:112" class="call">📞 Chiama ora</a>
+</div>
+
+{{- with $allerta }}
+<div class="lite-allerta lite-allerta-{{ .livello }}" role="region" aria-label="Stato allerta meteo">
+  <strong>Stato allerta meteo: {{ .titolo }}</strong>
+  <p style="margin: 0.4rem 0 0;">{{ .descrizione }}</p>
+  <p style="margin: 0.4rem 0 0; font-size: 0.85rem;">Aggiornato: {{ dateFormat "2 January 2006, 15:04" .ultimo_aggiornamento }}</p>
+</div>
+{{- end }}
+
+<h2 style="color: #003366; font-size: 1.3rem; margin: 1.5rem 0 0.5rem;">Numeri essenziali</h2>
+<ul class="lite-numeri">
+  <li><strong>112</strong> Numero Unico Emergenze — <a href="tel:112">chiama</a></li>
+  <li><strong>803 555</strong> Sala Op. PC Lazio (segnalazioni non urgenti) — <a href="tel:803555">chiama</a></li>
+  <li><strong>1530</strong> Guardia Costiera (mare/laghi) — <a href="tel:1530">chiama</a></li>
+  <li><strong>06 9362600</strong> Gruppo PC Genzano (info, non emergenze) — <a href="tel:+39069362600">chiama</a></li>
+</ul>
+
+<div class="lite-azioni">
+  <h2>Cosa fare ora</h2>
+  <ol>
+    <li><strong>Mantieni la calma.</strong> Pensa con lucidità prima di agire.</li>
+    <li><strong>Chiama il 112</strong> se c'è un pericolo per te o per altri.</li>
+    <li><strong>Non intralciare i soccorsi.</strong> Non recarti sui luoghi dell'emergenza per curiosità.</li>
+    <li><strong>Segui solo fonti ufficiali</strong> (questo sito, Comune, Regione, DPC).</li>
+    <li><strong>Aiuta chi è in difficoltà</strong> se puoi farlo in sicurezza (anziani, bambini, disabili).</li>
+    <li><strong>Tieni il telefono carico</strong> e usalo solo per comunicazioni necessarie.</li>
+  </ol>
+</div>
+
+<div class="lite-link-essenziali">
+  <a href="/cosa-fare-adesso/">Cosa fare adesso (per tipo di emergenza)</a>
+  <a href="/numeri-utili/">Tutti i numeri utili</a>
+  <a href="/allerte-meteo/">Sistema di allertamento meteo</a>
+  <a href="/piano-familiare/">Crea/consulta il tuo Piano Familiare</a>
+  <a href="/cartografia/">Aree di attesa di Genzano</a>
+  <a href="/facile-da-leggere/">Facile da leggere (testo semplificato)</a>
+  <a href="/">Sito completo</a>
+</div>
+
+<p class="lite-footer">
+  Gruppo Comunale Volontari Protezione Civile — Genzano di Roma<br>
+  Versione lite per banda debole o emergenze.
+</p>
+
+</div>
