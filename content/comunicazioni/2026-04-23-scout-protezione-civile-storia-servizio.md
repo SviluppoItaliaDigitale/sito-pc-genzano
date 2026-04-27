@@ -152,11 +152,13 @@ I temi: primo soccorso, orientamento, educazione civica, sostenibilità ambienta
 
 ## Cosa significa per Genzano di Roma
 
-Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è un'associazione di volontariato OdV ai sensi del D.Lgs. 117/2017, autonoma rispetto alle associazioni scout. Ma molti dei nostri volontari attivi sono **ex scout** o **scout adulti** in servizio: l'esperienza scout — la disciplina, l'autonomia, il lavoro di squadra, il senso del servizio — è una **base solida** da cui parte chi sceglie di unirsi a noi.
+Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è un'associazione di volontariato OdV ai sensi del D.Lgs. 117/2017, autonoma rispetto alle associazioni scout. Ma **una parte significativa dei nostri volontari attivi proviene dal mondo scout locale**: in particolare dai gruppi **AGESCI Genzano 1** e **AGESCI Genzano 2**, che sono presenti sul territorio da decenni e hanno formato generazioni di ragazzi e ragazze del nostro Comune. L'esperienza scout — la disciplina, l'autonomia, il lavoro di squadra, il senso del servizio — è una **base solida** da cui parte chi sceglie di unirsi a noi.
 
-Sul territorio dei Castelli Romani sono presenti **gruppi AGESCI** attivi: la collaborazione fra Gruppo PC e gruppi scout, in caso di emergenza locale (un'ondata di calore, un incendio boschivo, un evento meteo estremo), è un canale di **prossimità reale** che il Piano di Emergenza Comunale può attivare.
+Non è un caso: chi è cresciuto con la **squadriglia**, la **route**, il **campo estivo**, l'idea che servire la comunità sia parte naturale dell'essere cittadini, ritrova nel volontariato di Protezione Civile una continuità coerente del proprio percorso. Più che un cambio, è un passaggio di testimone: dalla formazione personale alla **responsabilità operativa** verso il territorio in cui si vive.
 
-Se sei uno scout — o un capo, o un adulto del gruppo — e vuoi sapere come mettere le tue competenze al servizio del territorio anche oltre il movimento, scrivici a **segreteria@protezionecivilegenzano.it**.
+La collaborazione fra il Gruppo PC e i gruppi AGESCI Genzano 1 e Genzano 2, in caso di emergenza locale (un'ondata di calore, un incendio boschivo, un evento meteo estremo), è un canale di **prossimità reale** che il Piano di Emergenza Comunale può attivare con poco preavviso.
+
+Se sei uno scout di Genzano — del Genzano 1, del Genzano 2 o di un altro gruppo — o un capo, o un adulto del movimento, e vuoi sapere come mettere le tue competenze al servizio del territorio anche oltre lo scoutismo, scrivici a **segreteria@protezionecivilegenzano.it**. Spesso è il prossimo passo naturale.
 
 ## Una storia che non finisce
 
