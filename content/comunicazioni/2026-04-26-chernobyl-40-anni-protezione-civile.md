@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **quarant'anni esatti** da quella notte. Alle **01:23 del 26 aprile 1986**, durante un test di sicurezza condotto in modo improprio, il **reattore numero 4** della centrale nucleare di Chernobyl, in Ucraina, esplose. Il nocciolo del reattore si scoperchiò, l'incendio della grafite divampò per dieci giorni e una nube di radionuclidi cominciò a salire nell'atmosfera per spostarsi sull'Europa.
 
+{{< foto src="/images/2026-evento-chernobyl-1986-reattore-4.webp"
+         alt="Il reattore numero 4 della centrale nucleare di Chernobyl dopo l'incidente del 26 aprile 1986"
+         caption="Chernobyl, 26 aprile 1986. L'esplosione del reattore 4 rilascia in atmosfera una nube radioattiva che raggiunge anche l'Italia. Il primo grande test del sistema di Protezione Civile europeo." >}}
+
 A Genzano di Roma, come nel resto d'Italia, le tracce di quel rilascio arrivarono **fra il 30 aprile e il 4 maggio 1986**, portate dai venti da nord-est. La popolazione italiana si trovò improvvisamente esposta a contaminazioni invisibili, inodori, insapori e — per molti — incomprensibili. Il Paese non era pronto.
 
 Quarant'anni dopo, nel ricordare quel disastro non rendiamo solo omaggio alle vittime — i lavoratori della centrale, i pompieri intervenuti senza protezioni adeguate, i "**liquidatori**" che bonificarono l'area pagando con la salute, le persone evacuate dalla città di **Pripyat**. Ricordiamo anche il momento esatto in cui in Italia è diventato chiaro che **serviva un sistema di protezione civile diverso**, capace di affrontare emergenze che non si vedono e non si sentono.

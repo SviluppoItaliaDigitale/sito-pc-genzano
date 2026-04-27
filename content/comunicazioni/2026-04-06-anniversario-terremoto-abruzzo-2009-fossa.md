@@ -16,6 +16,10 @@ draft: false
 
 **Erano le 3:32 di notte del 6 aprile 2009** quando una scossa di magnitudo 6.3 svegliò di colpo l'intera regione Abruzzo. L'epicentro era a pochi chilometri dall'Aquila. In pochi secondi, interi quartieri della città crollarono, borghi antichi si sbriciolarono, 309 persone persero la vita. Era uno dei terremoti più devastanti che l'Italia avesse vissuto negli ultimi decenni.
 
+{{< foto src="/images/2026-evento-aquila-2009-centro-storico.webp"
+         alt="L'Aquila dopo il terremoto del 6 aprile 2009: edifici lesionati e centro storico inaccessibile"
+         caption="L'Aquila, 6 aprile 2009. Magnitudo 6,3 alle 03:33 del mattino. 308 vittime, 1.600 feriti, 49.000 senzatetto. La ricostruzione durerà più di un decennio." >}}
+
 Tra i Comuni che subirono danni gravissimi c'era **Fossa**, un piccolo borgo medievale adagiato ai piedi del Gran Sasso, a pochi chilometri dall'Aquila. Le sue case in pietra, alcune risalenti al Medioevo, non ressero alla violenza del sisma. La popolazione si ritrovò in strada, senza un tetto, con il freddo della notte abruzzese ancora addosso.
 
 ---

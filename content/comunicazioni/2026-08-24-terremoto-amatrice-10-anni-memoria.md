@@ -15,6 +15,10 @@ draft: false
 
 Alle **3:36 del 24 agosto 2016**, un terremoto di magnitudo 6.0 colpì il Centro Italia. Le macerie di **Amatrice**, **Accumoli**, **Arquata del Tronto**, **Pescara del Tronto** segnarono il Paese. Nelle settimane successive altre scosse, fino al 30 ottobre, estesero il perimetro del danno a un'area vasta fra Lazio, Marche, Umbria, Abruzzo. Il bilancio finale fu di **299 vittime** e decine di migliaia di sfollati.
 
+{{< foto src="/images/2026-evento-amatrice-2016-prima-scossa.webp"
+         alt="Amatrice dopo il terremoto del 24 agosto 2016: il centro storico ridotto in macerie"
+         caption="Amatrice, 24 agosto 2016, ore 03:36. Magnitudo 6,0: il borgo viene cancellato. Inizia la sequenza sismica del Centro Italia che si protrarrà fino a gennaio 2017 con altre scosse violente a Norcia e Visso." >}}
+
 ## La Protezione Civile in campo
 
 Nei giorni successivi al sisma, il sistema di Protezione Civile italiano mobilitò decine di migliaia di operatori. Il Dipartimento nazionale coordinò **Vigili del Fuoco**, **volontari di tutte le Regioni**, **Forze dell'Ordine**, **Forze Armate**, **sanitari del SSN**, **personale del CNR e dell'INGV**. Dal Lazio partirono colonne mobili di volontari per supportare le operazioni di ricerca e soccorso, il censimento agibilità, le tendopoli.

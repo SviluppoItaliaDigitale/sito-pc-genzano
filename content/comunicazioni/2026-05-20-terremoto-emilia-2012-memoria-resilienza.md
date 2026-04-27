@@ -15,6 +15,10 @@ draft: false
 
 Alle **4:03 del mattino del 20 maggio 2012**, una scossa di magnitudo 5.9 colpì la Pianura Padana tra le province di Modena, Ferrara, Bologna, Rovigo, Mantova, Reggio Emilia. Nove giorni dopo, il **29 maggio**, una seconda scossa di magnitudo 5.8 colpì le stesse aree e ne allargò l'impatto. Furono **27 le vittime**, migliaia i feriti, decine di migliaia le persone sfollate. Il patrimonio artistico, la produzione agroalimentare, il tessuto sociale emiliani furono pesantemente colpiti.
 
+{{< foto src="/images/2026-evento-emilia-2012-mirandola.webp"
+         alt="Capannone industriale crollato a Mirandola dopo il terremoto dell'Emilia del 2012"
+         caption="Emilia, maggio 2012. Due scosse a distanza di 9 giorni (M 5,9 e M 5,8) colpiscono la pianura padana: 27 morti, 14.000 sfollati. La fragilità sismica dei capannoni industriali diventa un tema nazionale." >}}
+
 Quattordici anni dopo, il **ricordo diventa prevenzione**: cosa abbiamo imparato da quel terremoto.
 
 ## Un sisma "inaspettato"?

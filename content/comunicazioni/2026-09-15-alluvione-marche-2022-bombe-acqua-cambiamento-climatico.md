@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **quattro anni**. Nella notte fra **giovedì 15 e venerdì 16 settembre 2022**, una **perturbazione di intensità eccezionale** colpì il versante adriatico delle **Marche centro-settentrionali**. Sui **Monti del Catria** e del **Nerone**, in provincia di Pesaro e Urbino, caddero in poche ore quantitativi di pioggia che normalmente cadono in un anno intero: oltre **400 millimetri**, alcuni pluviometri arrivarono a quasi **420 mm**.
 
+{{< foto src="/images/2026-evento-marche-2022-senigallia-acqua.webp"
+         alt="Inondazioni nel territorio marchigiano dopo le piogge del 15 settembre 2022"
+         caption="Marche, 15 settembre 2022. In poche ore cadono 420 mm di pioggia nelle vallate del Misa e del Nevola: 13 morti. La 'bomba d'acqua' diventa un'espressione meteorologica entrata nel linguaggio comune." >}}
+
 L'acqua corse a valle attraverso i piccoli **fossi appenninici** che alimentano il **torrente Misa** e i suoi affluenti. Strutture idrauliche dimensionate per piene "ordinarie" non ressero. Nel pieno della notte, mentre molte persone dormivano, l'acqua entrò nelle case di **Pianello di Ostra**, **Bettolelle**, **Trecastelli**, **Senigallia**, **Cantiano**, **Sassoferrato**.
 
 Il bilancio finale fu di **13 vittime**, tra cui un bambino di otto anni travolto in auto con la madre. Centinaia gli **sfollati**, migliaia gli **edifici allagati**, decine di milioni di euro i **danni economici**. L'evento del 15-16 settembre 2022 è entrato di diritto fra le grandi alluvioni della storia recente italiana, in una sequenza che è ormai una **costante annuale**: Sardegna 2013, Genova 2014, Piemonte 2016, Sicilia 2018, Veneto-Lombardia (Vaia) 2018, Emilia-Romagna 2023.

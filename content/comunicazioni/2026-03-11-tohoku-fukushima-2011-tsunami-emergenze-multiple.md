@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **quindici anni**. Erano le **14:46 di venerdì 11 marzo 2011** ora locale giapponese (le **6:46** del mattino in Italia). Al largo della costa nord-orientale del Giappone, nella regione del **Tōhoku**, una scossa sismica di **magnitudo momento 9.0** — una delle più potenti mai registrate nella storia degli strumenti — scosse l'arcipelago. Era la **quinta scossa più forte** della storia sismologica mondiale.
 
+{{< foto src="/images/2026-evento-tohoku-2011-fukushima.webp"
+         alt="La centrale nucleare di Fukushima Daiichi colpita dal maremoto dell'11 marzo 2011"
+         caption="Tōhoku, 11 marzo 2011. Magnitudo 9,1 e onda fino a 40 metri: 19.747 morti. La centrale di Fukushima Daiichi va in fusione. Una catena di emergenze multiple che ridefinisce il concetto di rischio composito." >}}
+
 Ma il terremoto, da solo, non sarebbe stato l'evento decisivo. Mezz'ora dopo, lo **tsunami** generato dal sisma raggiunse la costa con onde alte **fino a 40 metri** in alcuni punti. Travolse città, porti, autostrade, treni, scuole. Penetrò per **chilometri** nell'entroterra. La **Centrale nucleare di Fukushima Daiichi** — situata a 250 chilometri a nord-est di Tokyo — fu colpita da onde di **14 metri**, tre volte più alte della barriera di protezione progettata.
 
 L'**evento tripla** — terremoto, tsunami, incidente nucleare — provocò **18.500 vittime**, oltre **2.500 dispersi mai ritrovati**, mezzo milione di sfollati, danni economici stimati in **300 miliardi di dollari**. È il **disastro più costoso della storia**. La centrale di Fukushima perse il controllo di tre reattori, che andarono in **fusione del nocciolo (meltdown)**. La nube radioattiva fu fortunatamente molto più contenuta di quella di Chernobyl, ma l'impatto psicologico, ambientale ed energetico globale fu enorme.

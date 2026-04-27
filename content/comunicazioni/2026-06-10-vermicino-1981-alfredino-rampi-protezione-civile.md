@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **quarantacinque anni** da quei tre giorni. La sera del **10 giugno 1981**, in via Sant'Ireneo, **località Selvotta** lungo la **via di Vermicino** — territorio del Comune di **Frascati**, a pochi chilometri da Genzano — un bambino di **sei anni**, **Alfredo "Alfredino" Rampi**, scivolò in un **pozzo artesiano** lasciato aperto e profondo circa **80 metri**. Si fermò in un restringimento a circa **60 metri** di profondità.
 
+{{< foto src="/images/2026-evento-vermicino-1981-pozzo.webp"
+         alt="Il pozzo artesiano di Vermicino dove il 10 giugno 1981 precipitò il piccolo Alfredino Rampi"
+         caption="Vermicino (Frascati), giugno 1981. La diretta TV del soccorso ad Alfredino Rampi cambia per sempre il rapporto degli italiani con la macchina del soccorso. Da lì nasce, due anni dopo, il Ministero per la Protezione Civile." >}}
+
 Quello che seguì furono **tre giorni e tre notti** in cui l'Italia intera si fermò davanti al televisore. La RAI andò in **diretta unificata** per le ultime diciotto ore, una scelta editoriale che segnò la storia della televisione italiana. I soccorsi tentarono di tutto: scavi paralleli, sostegno con cinghie, calata di un sub-speleologo. Ma **Alfredino non si poteva raggiungere**.
 
 Il bambino morì nel pozzo, probabilmente nella notte fra il 12 e il 13 giugno 1981. La salma fu recuperata solo il **mese successivo**, l'11 luglio, dopo lavori di scavo che durarono settimane. Aveva sei anni e due mesi.

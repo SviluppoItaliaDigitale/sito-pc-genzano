@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **cinquant'anni esatti**. Alle **ore 21:00 del 6 maggio 1976**, per cinquantanove interminabili secondi, una scossa di **magnitudo 6.4 della scala Richter** investì la media valle del Tagliamento. Il Friuli — un territorio fatto di paesi medievali, campanili in pietra, case di sasso a due piani — venne sconvolto in modo brutale. Quando alle 21:01 le luci si spensero per la rottura della rete elettrica, sotto le macerie c'erano già **989 morti** e oltre **45.000 senza tetto**.
 
+{{< foto src="/images/2026-evento-friuli-1976-gemona-macerie.webp"
+         alt="Macerie a Gemona del Friuli dopo il terremoto del 6 maggio 1976"
+         caption="Gemona del Friuli, maggio 1976. Magnitudo 6,5: mille morti, centomila senzatetto. Il commissario Zamberletti coordina la prima vera Protezione Civile italiana moderna." >}}
+
 I Comuni più colpiti furono quelli della media valle: **Gemona del Friuli, Venzone, Trasaghis, Bordano, Forgaria nel Friuli, Buja, Majano, Osoppo, Montenars**. Per molti di loro l'intensità Mercalli arrivò al **grado X**, distruzione quasi totale degli edifici. La gente del posto, che parla un suo dialetto antico, chiamò subito il sisma con un nome che faceva paura ai bambini: ***Orcolat***, l'orco delle leggende.
 
 Cinquant'anni dopo, il Friuli è il caso di studio internazionale di **come si fa una ricostruzione bene**. E il modo in cui l'Italia gestì quei mesi gettò le basi per qualcosa che ancora non aveva un nome ma sarebbe diventato il **Servizio Nazionale della Protezione Civile**.

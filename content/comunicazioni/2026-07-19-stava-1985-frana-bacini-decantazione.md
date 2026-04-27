@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **quarantun anni**. Erano le **12:22 di venerdì 19 luglio 1985**. Una bella giornata estiva. La **Val di Stava**, in Trentino-Alto Adige, frazione del Comune di **Tesero** in provincia di Trento, era piena di villeggianti: alberghi al completo, campeggi, gente alle finestre.
 
+{{< foto src="/images/2026-evento-stava-1985-bacini-decantazione.webp"
+         alt="I bacini di decantazione di Prestavel sopra Stava prima del cedimento del 19 luglio 1985"
+         caption="Val di Stava, 19 luglio 1985. I bacini di decantazione della miniera di Prestavel cedono: 268 morti. Il disastro porta a una nuova normativa sulla sicurezza degli impianti minerari." >}}
+
 A monte dell'abitato, a circa due chilometri di distanza e quasi cinquecento metri più in alto, c'erano due **bacini di decantazione** della miniera di **Prestavel**: vasche artificiali nelle quali da decenni si depositavano i **fanghi di lavorazione della fluorite**, un minerale usato in siderurgia e nella produzione dell'alluminio. Le vasche erano costruite con argini in **terra ed acqua compattata**, una soluzione tecnica già nota per essere fragile.
 
 Alle 12:22 il bacino superiore cedette in modo improvviso. Il fango che conteneva — **180.000 metri cubi** di una miscela di acqua, sabbia, limo e detriti di lavorazione — si riversò sul bacino inferiore, che a sua volta cedette. La massa fangosa, ora di volume enorme, scese a valle a una **velocità superiore a 90 chilometri orari**.

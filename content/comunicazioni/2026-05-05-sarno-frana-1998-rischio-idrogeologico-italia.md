@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **ventotto anni** da quella sera. Il **5 maggio 1998**, dopo giorni di pioggia, dai monti che circondano la piana di Sarno — i monti del **Pizzo d'Alvano** in Campania — si staccarono **colate rapide di fango** così veloci da non lasciare alle persone il tempo di alzarsi dalla tavola della cena. Il fronte del fango raggiungeva i **trenta chilometri orari**, una velocità impossibile da contrastare a piedi.
 
+{{< foto src="/images/2026-evento-sarno-1998-frana-paese.webp"
+         alt="Sarno dopo la frana del 5 maggio 1998: case sommerse dal fango"
+         caption="Sarno, 5 maggio 1998. Una colata di fango travolge il paese: 161 morti. Da quel disastro nasce in Italia la cultura moderna del rischio idrogeologico." >}}
+
 I Comuni colpiti furono soprattutto quattro: **Sarno** in provincia di Salerno, **Quindici** in provincia di Avellino, **Bracigliano** e **Siano** sempre in provincia di Salerno. Il bilancio definitivo, dopo giorni di scavi, fu di **161 vittime**, di cui 137 nella sola Sarno. Trecentocinquanta i feriti, tremila gli sfollati, centosettantotto le case completamente distrutte.
 
 Sarno non fu solo una tragedia umana. Fu l'evento che obbligò l'Italia a guardarsi allo specchio e ad ammettere una verità scomoda: **il territorio nazionale era in larga parte sconosciuto** dal punto di vista del rischio idrogeologico. Mancava la mappa di chi viveva sopra una frana, di chi aveva la casa in un alveo coperto, di chi era esposto alle colate rapide. Da Sarno è cominciato il lungo lavoro per cambiare questa cosa.

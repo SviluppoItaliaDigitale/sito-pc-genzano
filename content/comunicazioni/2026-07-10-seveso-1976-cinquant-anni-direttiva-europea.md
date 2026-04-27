@@ -17,6 +17,10 @@ draft: false
 
 Cinquant'anni fa, alle **12:37 di sabato 10 luglio 1976**, in uno stabilimento chimico apparentemente come tanti altri della Brianza — l'**ICMESA** di Meda, in provincia di Milano — una **reazione fuori controllo** in un reattore portò all'apertura di una valvola di sicurezza. Una nube di vapore acqueo si sprigionò verso l'alto, ricadendo sul territorio circostante. In pochi minuti coprì un'area di circa **18 chilometri quadrati**, che comprendeva i Comuni di **Meda, Seveso, Cesano Maderno, Desio, Barlassina, Bovisio-Masciago**.
 
+{{< foto src="/images/2026-evento-seveso-1976-icmesa-fabbrica.webp"
+         alt="L'impianto ICMESA di Meda da cui partì la nube di diossina del 10 luglio 1976"
+         caption="Seveso, 10 luglio 1976. Una nube di diossina TCDD si diffonde dall'ICMESA. La risposta europea sarà la Direttiva Seveso (1982), che ancora oggi regola gli stabilimenti a rischio di incidente rilevante." >}}
+
 Quel vapore conteneva, fra le altre sostanze, **fra i 15 e i 30 chilogrammi di TCDD**, una delle forme più tossiche della famiglia delle **diossine**. Sostanza cancerogena, persistente nell'ambiente, capace di passare dalla pelle al sangue e dal sangue ai tessuti — con una **emivita biologica di anni**. Il vento la depose sulle case, sui campi, sui giardini, sui giochi dei bambini, sui panni stesi al sole di un sabato d'estate.
 
 Cinquant'anni dopo, **Seveso** non è più solo il nome di un Comune della Brianza: è il nome di **tre direttive europee** che disciplinano oggi tutti gli stabilimenti industriali a "rischio di incidente rilevante" in Europa. È, in altre parole, il **prototipo internazionale** di come l'Europa ha imparato a proteggere il cittadino dal rischio chimico industriale.

@@ -17,6 +17,10 @@ draft: false
 
 Sono passati **dieci anni esatti**. Erano le **21:18 del 26 ottobre 2016**, quando una scossa di **magnitudo 5.9** della scala Richter scosse il **Maceratese**, in **Marche**. Esattamente **due mesi dopo Amatrice** (24 agosto 2016, magnitudo 6.0, oltre 300 vittime), la sequenza sismica del **Centro Italia** tornava attiva con grande violenza, spostandosi più a nord rispetto all'epicentro originario laziale-abruzzese.
 
+{{< foto src="/images/2026-evento-norcia-2016-basilica-crollata.webp"
+         alt="La basilica di San Benedetto a Norcia crollata dopo il terremoto del 30 ottobre 2016"
+         caption="Norcia, 30 ottobre 2016. La scossa di magnitudo 6,5 — la più forte registrata in Italia dal 1980 — fa crollare la basilica di San Benedetto. Visso, Camerino, Castelsantangelo sul Nera devastate." >}}
+
 L'epicentro fu fra **Visso, Castelsantangelo sul Nera** e **Ussita** in provincia di Macerata. Pochi minuti prima — alle **19:11** — una **scossa precorritrice di magnitudo 5.4** aveva già allertato la popolazione, salvando moltissime vite: la maggior parte delle persone era **fuori casa** quando arrivò la scossa principale di 5.9. Il bilancio fu di **un solo morto** in modo diretto, ma migliaia di edifici crollarono o furono lesionati, e decine di paesi del Maceratese e dell'Umbria orientale rimasero **inagibili**.
 
 Quattro giorni dopo, la sequenza tornò a colpire con violenza ancora maggiore: il **30 ottobre 2016** alle 7:40 una scossa di **magnitudo 6.5** — la più forte registrata in Italia dal 1980 — distrusse **Norcia** (Umbria), già lesionata, e completò la devastazione di un'area di circa **8.000 chilometri quadrati** distribuita fra **Lazio, Abruzzo, Marche, Umbria**. L'evento del 26 ottobre 2016 è la "**porta di ingresso**" delle Marche nella memoria sismica italiana del Centro Italia.
