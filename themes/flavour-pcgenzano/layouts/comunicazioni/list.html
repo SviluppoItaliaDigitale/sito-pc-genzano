@@ -58,13 +58,13 @@
           {{- $badgeLower := .Params.badge | lower -}}
           <article class="card card-notizia mb-3" data-badge="{{ $badgeLower }}">
             <div class="row g-0">
-              <div class="col-md-4 d-none d-md-block">
+              <div class="col-12 col-md-4">
                 <div class="notizia-img-wrapper">
                   {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ with $.Params.image_alt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" loading="lazy">
                   {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
                 </div>
               </div>
-              <div class="col-md-8">
+              <div class="col-12 col-md-8">
                 <div class="card-body">
                   <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
                     {{ with .Params.badge }}{{ partial "badge.html" . }}{{ end }}

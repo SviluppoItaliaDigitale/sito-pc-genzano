@@ -1278,6 +1278,17 @@ article .galleria img {
   display: block;
 }
 
+/* Mobile: immagine sopra il testo, altezza fissa, angoli superiori */
+@media (max-width: 767.98px) {
+  .comunicazioni-archivio .notizia-img-wrapper {
+    min-height: 0;
+    height: 180px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+}
+
 .comunicazioni-archivio .notizia-reading-time {
   font-size: 0.85rem;
   color: #6c757d;
