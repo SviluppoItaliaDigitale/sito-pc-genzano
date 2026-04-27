@@ -58,10 +58,10 @@ Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani
 - Non tentare di bonificare da solo l'area incendiata
 - Se la tua abitazione è stata interessata, fai verificare la stabilità della struttura prima di rientrare
 
-## Errori da evitare
-
-- Non tentare mai di spegnere un incendio da solo con mezzi di fortuna
-- Non gettare acqua su fiamme alimentate dal vento: il fuoco può cambiare direzione improvvisamente
-- Non fuggire in salita davanti a un fronte di fuoco: le fiamme salgono più velocemente di quanto tu possa correre
-- Non sottovalutare il fumo: l'inalazione è la prima causa di morte negli incendi
-- Non lasciare rifiuti o materiali infiammabili nelle aree boschive
+{{< cosa-non-fare titolo="Cosa NON fare in caso di incendio boschivo" >}}
+- **Non tentare mai di spegnere un incendio da solo** con mezzi di fortuna
+- **Non gettare acqua su fiamme alimentate dal vento**: il fuoco può cambiare direzione improvvisamente
+- **Non fuggire in salita davanti a un fronte di fuoco**: le fiamme salgono più velocemente di quanto tu possa correre
+- **Non sottovalutare il fumo**: l'inalazione è la prima causa di morte negli incendi
+- **Non lasciare rifiuti o materiali infiammabili** nelle aree boschive
+{{< /cosa-non-fare >}}

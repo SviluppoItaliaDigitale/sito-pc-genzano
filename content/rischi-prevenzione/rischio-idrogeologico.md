@@ -61,10 +61,10 @@ Genzano di Roma si trova su un territorio collinare di origine vulcanica, con ve
 - Segnala al **112** situazioni di pericolo (smottamenti, strade interrotte, persone in difficoltà)
 - Documenta i danni con foto per le eventuali richieste di risarcimento
 
-## Errori da evitare
-
-- Non scendere mai in cantina o al piano interrato durante un allagamento: è la causa di morte più frequente
-- Non attraversare mai strade allagate, né a piedi né in auto
-- Non avvicinarti a fiumi, fossi o canali in piena
-- Non sottovalutare le allerte gialle: anche piogge moderate possono causare allagamenti localizzati
-- Non ostruire tombini e caditoie con rifiuti o foglie
+{{< cosa-non-fare titolo="Cosa NON fare in caso di alluvione/allagamento" >}}
+- **Non scendere mai in cantina o al piano interrato** durante un allagamento: è la causa di morte più frequente
+- **Non attraversare mai strade allagate**, né a piedi né in auto (anche pochi cm di acqua corrente possono trascinarti via)
+- **Non avvicinarti a fiumi, fossi o canali in piena**
+- **Non sottovalutare le allerte gialle**: anche piogge moderate possono causare allagamenti localizzati
+- **Non ostruire tombini e caditoie** con rifiuti o foglie
+{{< /cosa-non-fare >}}

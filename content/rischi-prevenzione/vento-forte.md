@@ -34,9 +34,9 @@ Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare d
 - Verifica eventuali danni al tetto, alle grondaie e alle strutture esterne della tua abitazione
 - Segui gli aggiornamenti sui canali ufficiali
 
-## Errori da evitare
-
-- Non uscire "solo per curiosità" durante le raffiche più intense
-- Non parcheggiare sotto alberi durante l'allerta
-- Non tentare di riparare antenne o tetti durante il vento forte
-- Non ignorare le allerte meteo: il vento può essere più pericoloso di quanto sembri
+{{< cosa-non-fare titolo="Cosa NON fare con vento forte" >}}
+- **Non uscire "solo per curiosità"** durante le raffiche più intense
+- **Non parcheggiare sotto alberi** durante l'allerta
+- **Non tentare di riparare antenne o tetti** durante il vento forte
+- **Non ignorare le allerte meteo**: il vento può essere più pericoloso di quanto sembri
+{{< /cosa-non-fare >}}

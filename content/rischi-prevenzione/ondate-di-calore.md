@@ -41,12 +41,12 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 - In attesa dei soccorsi: porta la persona in un luogo fresco, falla sdraiare con le gambe sollevate, applicale panni umidi su fronte e collo
 - Continua a idratarti anche quando la temperatura scende
 
-## Errori da evitare
-
-- Non sottovalutare i primi sintomi di malessere da calore
-- Non fare sforzi fisici intensi nelle ore più calde
-- Non bere bevande ghiacciate che possono causare congestione
-- Non lasciare farmaci esposti al calore (alterano la loro efficacia)
+{{< cosa-non-fare titolo="Cosa NON fare durante un'ondata di calore" >}}
+- **Non sottovalutare i primi sintomi** di malessere da calore (sete intensa, stanchezza, mal di testa)
+- **Non fare sforzi fisici intensi** nelle ore più calde (11-18)
+- **Non bere bevande ghiacciate** che possono causare congestione: meglio acqua a temperatura ambiente
+- **Non lasciare farmaci esposti al calore** (alterano la loro efficacia)
+{{< /cosa-non-fare >}}
 
 ## Categorie più a rischio
 

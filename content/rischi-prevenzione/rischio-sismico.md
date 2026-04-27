@@ -78,10 +78,10 @@ I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. D
 - Stai lontano da costruzioni danneggiate
 - Ascolta le notizie fornite dalle autorità tramite radio o canali ufficiali
 
-## Errori da evitare
-
-- Non correre fuori durante la scossa: la maggior parte delle vittime è colpita da calcinacci e oggetti in caduta
-- Non usare gli ascensori: possono bloccarsi
-- Non usare il telefono per curiosità: lascia le linee libere per le emergenze
-- Non rientrare in edifici danneggiati per recuperare oggetti
-- Non diffondere notizie non verificate: segui solo le fonti ufficiali
+{{< cosa-non-fare titolo="Cosa NON fare in caso di terremoto" >}}
+- **Non correre fuori durante la scossa**: la maggior parte delle vittime è colpita da calcinacci e oggetti in caduta
+- **Non usare gli ascensori**: possono bloccarsi e lasciarti intrappolato
+- **Non usare il telefono per curiosità**: lascia le linee libere per le emergenze reali
+- **Non rientrare in edifici danneggiati** per recuperare oggetti
+- **Non diffondere notizie non verificate**: segui solo le fonti ufficiali
+{{< /cosa-non-fare >}}
