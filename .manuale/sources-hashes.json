@@ -1,59 +1,59 @@
 {
   "_meta": {
     "descrizione": "Hash SHA-256 delle fonti AGID / Designers Italia monitorate settimanalmente dal workflow .github/workflows/aggiorna-manuale.yml. Se un hash cambia, il workflow apre una issue con la checklist di revisione del MANUALE-SITO.md.",
-    "ultimo_aggiornamento": "2026-04-20T07:51:20Z",
+    "ultimo_aggiornamento": "2026-04-27T08:04:53Z",
     "note": "Aggiornato automaticamente dal workflow. Non modificare manualmente."
   },
   "fonti": {
     "accessibilita_agid": {
       "url": "https://www.agid.gov.it/it/design-servizi/accessibilita",
-      "hash": "a73e5227aa7fff1bde2d5b1b9036bd7b00021361fd4f00f61ba71885b1d23ad8",
-      "verificato": "2026-04-20T07:51:21Z"
+      "hash": "c278b3fd2a2cebc8eb97a22bbcc93a42d0e3b3828d14718038ab2acba0a0b682",
+      "verificato": "2026-04-27T08:04:54Z"
     },
     "bootstrap_italia_docs": {
       "url": "https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/",
-      "hash": "a9524f7786b9fc41940bf4801b2ec2ba875d37f85a5aa0ac53cabc5b45cb7ac7",
-      "verificato": "2026-04-20T07:51:21Z"
+      "hash": "72fde44728c5aded92f18af691a1e14d348452a68809afa6b18c3efe7255a224",
+      "verificato": "2026-04-27T08:04:54Z"
     },
     "ui_kit": {
       "url": "https://designers.italia.it/kit/ui-kit/",
       "hash": "0dcc1d5b60c1773dbe6623255200c06d8ac7e37a0b5450b57a05cb439b04c3d3",
-      "verificato": "2026-04-20T07:51:21Z"
+      "verificato": "2026-04-27T08:04:54Z"
     },
     "linee_guida_design_pa": {
       "url": "https://www.agid.gov.it/it/design-servizi/linee-guida-design-servizi-web-pa",
-      "hash": "e6d74b66aee55a6e3cc969f42d79d525ac20ad0b3e0575e09f3d444107a2de56",
-      "verificato": "2026-04-20T07:51:24Z"
+      "hash": "fbad533ab861eecb29518648f8fd3e60d56b31352a6d9c05a83ce2bc6a53219e",
+      "verificato": "2026-04-27T08:04:56Z"
     },
     "dichiarazione_accessibilita": {
       "url": "https://form.agid.gov.it/",
-      "hash": "5ad69257f2e888796f6d0456d53ff36e6b74cd95a63b458f99f591578f23223a",
-      "verificato": "2026-04-20T07:51:24Z"
+      "hash": "5d2b55171e2903004db3de02d9dd7d5ee1cfa964749101dd0ba28276bbd8ec54",
+      "verificato": "2026-04-27T08:04:57Z"
     },
     "writing_toolkit": {
       "url": "https://designers.italia.it/risorse-per-progettare/content-design/writing-toolkit/",
-      "hash": "a61a44f1b4bf1ad1924e76e9cb2b71aa27e5f5199252a92916678e1143153beb",
-      "verificato": "2026-04-20T07:51:24Z"
+      "hash": "a9148d23dd9b5f21172ee282f63a331184c97bce8662a6c4946a889a607dff15",
+      "verificato": "2026-04-27T08:04:58Z"
     },
     "content_toolkit": {
       "url": "https://designers.italia.it/risorse-per-progettare/content-design/",
-      "hash": "a61a44f1b4bf1ad1924e76e9cb2b71aa27e5f5199252a92916678e1143153beb",
-      "verificato": "2026-04-20T07:51:25Z"
+      "hash": "a9148d23dd9b5f21172ee282f63a331184c97bce8662a6c4946a889a607dff15",
+      "verificato": "2026-04-27T08:04:58Z"
     },
     "designers_italia_home": {
       "url": "https://designers.italia.it/",
-      "hash": "6b3017e6af80e5e5670625a43d68edb132e1ec8e8f8b753213cde88a8b2b9870",
-      "verificato": "2026-04-20T07:51:25Z"
+      "hash": "5ed625ba617db0d1e00abe42ad718be03234ad47a6c054a2715110f4b634bcd9",
+      "verificato": "2026-04-27T08:04:58Z"
     },
     "dipartimento_pc": {
       "url": "https://www.protezionecivile.gov.it/",
       "hash": "116218b89a3155005188b66475dbc77e4cb7fd95c8f89b4c5a74c8ae303c03ff",
-      "verificato": "2026-04-20T07:51:25Z"
+      "verificato": "2026-04-27T08:04:59Z"
     },
     "designers_italia_guide": {
       "url": "https://designers.italia.it/risorse-per-progettare/",
-      "hash": "0b6787fe7db5aa5b058a0d4d1490d4371e9fec411be3080e9cccf36696ba16b4",
-      "verificato": "2026-04-20T07:51:26Z"
+      "hash": "5b6c9a5ecb6695698f537f7dc5d1018acf5b385cb757c2d64dbbed574135378c",
+      "verificato": "2026-04-27T08:04:59Z"
     }
   }
 }
