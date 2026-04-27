@@ -173,6 +173,107 @@ Box rosso bordato (`#c1121f`) con icona divieto che evidenzia visivamente i comp
 
 Parametro `titolo` opzionale (default: "Cosa NON fare"). Contenuto Markdown standard. Output: `<div role="region" aria-label="...">` con header colorato + body in lista. Contrasto WCAG AA: testo `#7f1d1d` su `#fff5f5` = 7.7:1. CSS scoped sezione **COSA NON FARE v1.0** in `custom.css`. In stampa diventa nero su bianco mantenendo gerarchia visiva con `page-break-inside: avoid`.
 
+### Shortcode `chi-chiamare` (chiusura standard pagine rischio)
+
+Sezione finale uniforme delle 7 pagine `/rischi-prevenzione/*`: tabella accessibile (`<caption>` + `<th scope="col">`) con i numeri da chiamare per livello di gravità + nota istituzionale che chiarisce la modalità di attivazione del Gruppo.
+
+```go-html-template
+{{< chi-chiamare >}}
+```
+
+Nessun parametro. Produce un `<section aria-labelledby>` con:
+- `<h2>` "Chi chiamare"
+- Tabella `caption + thead + tbody`: 3 righe (vita in pericolo → 112, pericolo concreto → 112, segnalazione non urgente → 803 555 Sala Operativa PC Lazio)
+- `<a href="tel:112">` su ogni occorrenza del 112 con stile `.chi-chiamare-call` rosso istituzionale + focus visibile (WCAG 2.4.7)
+- Alert role=note che chiarisce: *"Il Gruppo Comunale Volontari di PC Genzano non può essere attivato direttamente dai cittadini"* — coerente con regola `06-protezione-civile-scientifica.md` e con le pagine `/contatti/` e `/numeri-utili/`.
+
+CSS scoped sezione **CHI CHIAMARE BOX v1.0** in `custom.css`. In stampa il numero 112 resta nero con underline.
+
+**Struttura uniforme finale delle pagine rischio**: dopo l'introduzione "Perché è rilevante sul nostro territorio" e gli eventuali "Segnali e situazioni tipiche", ogni pagina ha l'ordine fisso **Cosa fare PRIMA → Cosa fare DURANTE → Cosa fare DOPO → `cosa-non-fare` → `chi-chiamare`**. Modello di riferimento per nuovi rischi che dovessero essere aggiunti in futuro.
+
+### Render hook tabelle (`_markup/render-table.html`)
+
+Tutte le tabelle Markdown del sito sono rese dal hook `themes/flavour-pcgenzano/layouts/_default/_markup/render-table.html`. Comportamento:
+
+- **`<th scope="col">` automatico** su ogni cella di intestazione (riga in `<thead>`). Migliora il riconoscimento da screen reader e rispetta WCAG 1.3.1 (Info and Relationships). Nessun editing manuale per pagina: si applica a tutte le tabelle Markdown del sito (oltre 400 `<th>` gestiti automaticamente).
+- **Wrapping automatico in `.table-responsive`** Bootstrap Italia per scroll orizzontale su mobile sulle tabelle larghe.
+- **Allineamento colonne** preservato dal Markdown (`:---`, `---:`, `:---:`) → reso come `style="text-align: ..."` sulle celle.
+- **`<caption>` opzionale** via `Attributes.caption` o `Attributes.title`. **Importante**: la sintassi attribute block di Goldmark `{caption="..."}` **non si applica** alle tabelle Markdown in Hugo (limitazione del parser). Per aggiungere una caption a una tabella specifica, **convertire la tabella in HTML diretto** dentro Markdown:
+
+```html
+<div class="table-responsive">
+<table>
+<caption>Testo descrittivo della tabella</caption>
+<thead>
+<tr><th scope="col">Colonna A</th><th scope="col">Colonna B</th></tr>
+</thead>
+<tbody>
+<tr><td>...</td><td>...</td></tr>
+</tbody>
+</table>
+</div>
+```
+
+Tabelle landing già convertite con caption: `/contatti/` ("Quando contattarci"), `/numeri-utili/` (numeri emergenza), `/chi-siamo/` (consiglio direttivo, con `caption.visually-hidden` perché c'è già un card-header sopra). Per le altre 50+ tabelle Markdown del sito la caption non è necessaria: il `<th scope="col">` automatico è sufficiente per la conformità WCAG, perché ogni tabella è preceduta da un `<h2>` o `<h3>` che ne descrive il contenuto.
+
+CSS scoped sezione **TABLE CAPTION v1.0** in `custom.css`: italico blu istituzionale, allineato a sinistra; helper `.visually-hidden` per caption screen reader-only (nasconde visivamente ma resta accessibile).
+
+**Aggiornamento `hugo.toml`**: il render hook richiede Hugo ≥ 0.142.0. Il file `hugo.toml` ora ha `[markup.goldmark.parser.attribute]` con `block = true` e `title = true` abilitati per uso futuro su altri block element (le tabelle non li usano).
+
+### FAQ accordion (`.faq-item` su `<details>`)
+
+Per ridurre muri di testo in pagine con molte domande/risposte (es. `/allerte-meteo/`, `/faq/`), il sito ha una classe `.faq-item` che stilizza l'elemento HTML nativo `<details>`/`<summary>` come accordion accessibile.
+
+```html
+<details class="faq-item">
+<summary><strong>Domanda concisa</strong></summary>
+
+Risposta in Markdown standard. Bullet, link, **enfasi**.
+
+</details>
+```
+
+Caratteristiche:
+- **Semantica nativa**: zero JS, zero ARIA hand-rolled. Lettura corretta da screen reader, navigazione tastiera nativa (Enter/Space su `<summary>`).
+- **Chevron CSS-only** (border + transform): nessuna icona da caricare, nessun JS di animazione.
+- **Focus visibile WCAG 2.4.7** (outline `#ffbe2e` 3px su `<summary>`).
+- **Override stampa**: tutti i `<details>` aperti automaticamente con `display: block !important`, niente icona chevron — il documento stampato include sempre tutto il contenuto.
+- **Override mobile** (≤576px): padding ridotto.
+
+CSS scoped sezione **FAQ ACCORDION v1.0** in `custom.css`. Quando si introduce un nuovo accordion FAQ, riutilizzare questa classe: non servono varianti nuove.
+
+### Striscia pittogrammi (`.kit-pittogrammi-row`)
+
+Riga visiva di pittogrammi inline ARASAAC per dare un colpo d'occhio immediato a una pagina lista (es. `/rischi-prevenzione/kit-emergenza/`). Layout flex centrato, gap responsive, sfondo azzurrino istituzionale.
+
+```html
+<div class="kit-pittogrammi-row" role="img" aria-label="Componenti essenziali del kit di emergenza: zaino, acqua, cibo, torcia, radio, medicine, documenti, fischietto">
+{{< pittogramma src="/pittogrammi/arasaac/zaino.png" alt="Zaino" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/acqua.png" alt="Acqua" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/cibo.png" alt="Cibo" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/torcia.png" alt="Torcia" size="small" inline="true" >}}
+</div>
+```
+
+Regole:
+- **`role="img"` + `aria-label` complessivo** sul wrapper: gli screen reader leggono la striscia come **una sola immagine descrittiva** invece di leggere ogni `alt` singolo. WCAG 1.1.1 conforme.
+- Pittogrammi all'interno con `size="small"` (48px) e `inline="true"` per evitare il layout `<figure>` block default.
+- Su mobile (≤576px) gap ridotto + padding ridotto.
+- In stampa lo sfondo diventa bianco e il bordo nero, `page-break-inside: avoid`.
+
+CSS scoped sezione **STRISCIA PITTOGRAMMI v1.0** in `custom.css`.
+
+### Modal SOS-112 esteso (`partials/sos-112.html`)
+
+Vedi `CLAUDE.md` sezione "Modal SOS-112" per la sintesi. Il modal di conferma chiamata 112 ha **3 azioni**: Annulla (focus iniziale, ENTER sicuro), "Cosa devo fare?" (link a `/assistente/`, bottone outline blu istituzionale), "Sì, chiama il 112" (bottone rosso primario, `<a href="tel:112">`).
+
+Note operative:
+- L'href dell'assistente passa per `{{ "assistente/" | relURL }}` per compatibilità Aruba/GitHub Pages.
+- Il focus trap JS rileva tutti i `[href]` e bottoni: il nuovo `<a id="sos-modal-guide">` viene incluso automaticamente nel ciclo Tab/Shift+Tab.
+- CSS scoped: `.sos-modal-btn-guide` (outline blu) + `.sos-modal-alt` (nota informativa azzurra prima dei bottoni). Sezione esistente del modal in `custom.css`.
+
+Se un domani serve aggiungere una **quarta azione** (ipotesi: "Numeri utili"), aggiungere prima del bottone "Cosa devo fare?" — non distruggere l'ordine: sequenza visiva column-reverse su mobile (Call → Cosa fare → Annulla dall'alto al basso) e row su desktop (Annulla → Cosa fare → Call da sinistra a destra), che è la gerarchia di azione corretta.
+
 ### Shortcode `pagina-emergenza-lite`
 
 Contiene tutto il rendering della pagina `/emergenza/` (pagina ultra-leggera per banda debole). Usa `data/allerta.json` e `data/emergenza.json` letti al build. Zero widget esterni, CSS inline minimale (~3KB), niente Bootstrap né JS aggiuntivo. Usato solo dalla pagina `content/emergenza/_index.md`. Aliases pagina: `/lite/`, `/emergenza-essenziale/`. Linkata dal footer di tutte le pagine.

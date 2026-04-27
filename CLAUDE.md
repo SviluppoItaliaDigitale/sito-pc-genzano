@@ -134,7 +134,8 @@ These JSON/YAML files are the primary way to update dynamic site content without
 Custom theme, not an external dependency — edit freely. Structure:
 - `layouts/partials/` — reusable components (navbar, footer, emergency-banner, allerta-card, etc.)
 - `layouts/_default/` — base, list, single templates. In `single.html` l'`<article>` usa `class="article-body"` per attivare la tipografia istituzionale curata (v7.2)
-- `layouts/shortcodes/` — shortcode disponibili: `foto` (immagini articolo con click-per-ingrandire), `pittogramma` (ISO 7010/ARASAAC), `cosa-non-fare` (box rosso divieti per pagine rischio), `pagina-emergenza-lite` (contenuto pagina /emergenza/ ultra-leggera)
+- `layouts/shortcodes/` — shortcode disponibili: `foto` (immagini articolo con click-per-ingrandire), `pittogramma` (ISO 7010/ARASAAC), `cosa-non-fare` (box rosso divieti per pagine rischio), `chi-chiamare` (tabella accessibile "chi chiamare" + chiarimento attivazione Gruppo, in coda alle pagine /rischi-prevenzione/*), `pagina-emergenza-lite` (contenuto pagina /emergenza/ ultra-leggera)
+- `layouts/_default/_markup/` — render hook Markdown: `render-link.html` (link interni vs statici vs esterni) e `render-table.html` (tabelle accessibili: aggiunge `<th scope="col">` automatico a TUTTE le tabelle Markdown del sito + wrapping `.table-responsive` Bootstrap Italia + supporto `<caption>` per le tabelle convertite in HTML diretto). Hook universale: nessun editing manuale per pagina.
 - `layouts/partials/` — include `article-cover.html` (copertina articolo con didascalia image_credit), `leggi-ad-alta-voce.html` (TTS Web Speech API per pagine essenziali), `accessibility-toolbar.html` (FAB strumenti a11y), `structured-data.html` (JSON-LD Organization NGO + ContactPoint + Article + Event + FAQPage + WebSite + BreadcrumbList)
 - `layouts/index.html` — homepage template
 - `static/css/custom.css` — override CSS su Bootstrap Italia. Include:
@@ -218,6 +219,33 @@ Pulsante che usa `window.speechSynthesis` browser nativo per leggere il contenut
 ### Box "Cosa NON fare" (shortcode `cosa-non-fare`)
 
 Box rosso bordato con icona divieto che evidenzia visivamente i comportamenti DA EVITARE in caso di emergenza. Aumenta l'efficacia della comunicazione del rischio rispetto ai "non" dispersi nel testo. Attivo nelle 7 pagine `/rischi-prevenzione/*` (sismico, incendio, idrogeologico, vento, temporali, blackout, ondate calore). Contrasto WCAG AA garantito (testo `#7f1d1d` su `#fff5f5` = 7.7:1). Compatibile con toolbar a11y (contrasto invertito + scala grigi).
+
+### Box "Chi chiamare" (shortcode `chi-chiamare`)
+
+Sezione finale standardizzata delle 7 pagine `/rischi-prevenzione/*`: tabella accessibile (`<caption>` + `<th scope="col">`) con 3 livelli di gravità (vita in pericolo → 112; pericolo concreto → 112; segnalazione non urgente → 803 555) + nota istituzionale che chiarisce che il **Gruppo Comunale non è attivabile direttamente dai cittadini** (l'attivazione passa da Comune, Centro Funzionale Lazio, Prefettura). Coerente con `06-protezione-civile-scientifica.md` e con la pagina `/contatti/`. Uso senza parametri: `{{< chi-chiamare >}}`. Insieme al box `cosa-non-fare` chiude la struttura uniforme **Prima → Durante → Dopo → NON fare → Chi chiamare** delle pagine rischio.
+
+### Tabelle accessibili (render hook `render-table.html`)
+
+Tutte le tabelle Markdown del sito sono renderizzate con `<th scope="col">` automatico (WCAG 1.3.1 Info and Relationships) + wrapping in `.table-responsive` Bootstrap Italia + supporto allineamento colonne (left/center/right) preservato dal Markdown. **Nessun editing manuale per pagina**: il fix è sistemico (oltre 400 `<th>` gestiti dall'hook).
+
+Il file è `themes/flavour-pcgenzano/layouts/_default/_markup/render-table.html`. Per le tabelle con `<caption>` esplicito (consigliato per tabelle landing critiche tipo `/contatti/`, `/numeri-utili/`, `/chi-siamo/`) si usa **HTML diretto** dentro Markdown — l'attribute syntax di Goldmark non si applica alle tabelle in Hugo. Esempio: `<table><caption>...</caption><thead><tr><th scope="col">...</th></tr></thead>...</table>` — vedi `content/contatti/_index.md` per il pattern di riferimento. CSS coordinato in `custom.css` sezione **TABLE CAPTION v1.0** (italico blu istituzionale, `.visually-hidden` helper per caption per screen reader-only).
+
+### FAQ accordion (CSS `.faq-item`)
+
+Per ridurre muri di testo in pagine informative con molte domande/risposte (es. `/allerte-meteo/`, `/faq/`), il sito ha una classe `.faq-item` che stilizza l'elemento HTML nativo `<details>`/`<summary>` come accordion accessibile. Vantaggi: semantica nativa (zero JS, zero ARIA hand-rolled), navigabile da tastiera, letta correttamente dagli screen reader, override stampa che apre tutti i `<details>` automaticamente. Esempio: `<details class="faq-item"><summary><strong>Domanda</strong></summary>Risposta…</details>`. Sezione **FAQ ACCORDION v1.0** in `custom.css`.
+
+### Striscia pittogrammi (CSS `.kit-pittogrammi-row`)
+
+Riga visiva di pittogrammi ARASAAC inline per dare un colpo d'occhio immediato a una pagina di lista (es. `/rischi-prevenzione/kit-emergenza/`). Layout flex centrato, sfondo azzurrino istituzionale, gap responsive. Pattern: `<div class="kit-pittogrammi-row" role="img" aria-label="...">{{< pittogramma inline="true" >}} ...</div>`. Sezione **STRISCIA PITTOGRAMMI v1.0** in `custom.css`.
+
+### Modal SOS-112 (`partials/sos-112.html`)
+
+Bottone fisso "SOS 112" in basso a destra (FAB), apre un modal di conferma con **3 azioni**:
+1. **Annulla** (focus iniziale, ENTER non chiama).
+2. **Cosa devo fare?** → `/assistente/` (albero decisionale guidato): per chi non è sicuro che sia un'emergenza vera. Bottone outline blu istituzionale.
+3. **Sì, chiama il 112** (`tel:112`): bottone rosso primario.
+
+Il modal include nota informativa azzurra (`.sos-modal-alt`) che spiega l'alternativa "assistente guidato" prima dei pulsanti, e mantiene il warning legale (art. 658 c.p.). Focus trap JS riconosce automaticamente i 3 elementi via selettore `[href]`. Link verso assistente passa per `relURL` per essere compatibile sia con Aruba (root) sia con GitHub Pages (subpath).
 
 ### Dati strutturati JSON-LD (`partials/structured-data.html`)
 

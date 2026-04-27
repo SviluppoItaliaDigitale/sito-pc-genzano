@@ -24,7 +24,7 @@ principali:
 cosa_fare:
   - titolo: "Terremoto"
     url: "/rischi-prevenzione/rischio-sismico/"
-    icona: "bi-tsunami"
+    icona: "bi-activity"
     classe_icona: "icon-warning"
     descrizione: "Scopri come proteggerti"
 
