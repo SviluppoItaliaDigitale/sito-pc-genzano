@@ -45,6 +45,11 @@ La mattina del **9 maggio**, dopo un comunicato delle BR, viene ritrovato il cor
 
 Il rapimento Moro mise in evidenza **lacune profonde** nella capacità dello Stato italiano di gestire una **crisi prolungata**. Nei cinquantacinque giorni si videro:
 
+{{< foto src="/images/2026-05-09-giorno-memoria-vittime-terrorismo-comunicazione-crisi-stazione-bologna.webp"
+         alt="La stazione di Bologna Centrale: 2 agosto 1980, strage di matrice terroristica"
+         caption="La stazione di Bologna Centrale: il 2 agosto 1980 una bomba uccise 85 persone, l'attentato più sanguinoso d'Italia. Oggi una targa e l'orologio fermo alle 10:25 ricordano le vittime. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Bologna_Centrale_(26070305273).jpg)." >}}
+
+
 - Una **frammentazione** dei comandi: Polizia, Carabinieri, servizi segreti civili e militari operavano spesso senza condivisione di informazioni.
 - Una **comunicazione disordinata** con il pubblico: ministeri, Capo dello Stato, partiti, stampa parlavano in modo non coordinato.
 - L'assenza di **protocolli operativi specifici** per gestire un sequestro di personalità politica di massimo livello.

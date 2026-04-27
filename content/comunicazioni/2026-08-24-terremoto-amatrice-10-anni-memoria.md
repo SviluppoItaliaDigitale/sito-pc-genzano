@@ -27,6 +27,11 @@ Nei giorni successivi al sisma, il sistema di Protezione Civile italiano mobilit
 
 Il terremoto del Centro Italia ha lasciato una scia di insegnamenti che vanno ben oltre la cronaca:
 
+{{< foto src="/images/2026-08-24-terremoto-amatrice-10-anni-memoria-arquata-tronto-borgo.webp"
+         alt="Arquata del Tronto, comune colpito dalla sequenza sismica del Centro Italia 2016"
+         caption="Arquata del Tronto (Ascoli Piceno): uno dei tre comuni epicentrali — con Amatrice e Accumoli — del terremoto del 24 agosto 2016 (M 6.0). Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Rocca_di_Arquata_del_Tronto_-_panorama.jpg)." >}}
+
+
 - la necessità di **edifici pubblici antisismici** (scuole, ospedali, municipi);
 - l'importanza delle **verifiche sismiche preventive** degli edifici privati;
 - il valore della **pianificazione di emergenza comunale**;

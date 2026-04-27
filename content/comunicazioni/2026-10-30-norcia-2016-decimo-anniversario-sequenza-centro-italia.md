@@ -43,6 +43,11 @@ E ha lasciato in eredità il **Sismabonus**, il Fondo per la ricostruzione, e l'
 
 L'evento del 30 ottobre 2016 dimostra che **prevenzione, evacuazione precauzionale e fiducia nella scienza** possono trasformare una catastrofe attesa in un evento gestibile.
 
+{{< foto src="/images/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia-visso-borgo-marche.webp"
+         alt="Visso (Macerata), comune colpito dalla sequenza sismica del Centro Italia 2016"
+         caption="Visso (Macerata): il borgo medievale fu danneggiato dalle scosse di ottobre 2016 (M 5.9 e 6.5), con il centro storico ancora oggi in fase di ricostruzione. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Sibillinische_berge_visso_2.jpg)." >}}
+
+
 Le tre lezioni:
 
 1. **Prima della scossa: pianificazione.** Sapere dove sono i punti di raccolta, le strutture sicure, le aree di attesa. A Genzano questa informazione è raccolta nella sezione [Piano di Emergenza](/piano-emergenza/).
