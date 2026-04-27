@@ -13,6 +13,19 @@
 
 set -euo pipefail
 
+# Fallback ImageMagick: usa 'magick' (v7) se disponibile, altrimenti
+# 'convert' (v6) — utile per i runner GitHub Actions che hanno solo v6.
+if ! command -v magick >/dev/null 2>&1; then
+  if command -v convert >/dev/null 2>&1; then
+    magick() { convert "$@"; }
+    identify() { command identify "$@"; }
+    export -f magick
+  else
+    echo "[error] manca ImageMagick (ne' 'magick' v7 ne' 'convert' v6)" >&2
+    exit 1
+  fi
+fi
+
 SRC="${1:?specifica il file sorgente}"
 NAME="${2:?specifica il nome di output (senza estensione)}"
 
@@ -40,7 +53,12 @@ trap 'rm -f "$TMP_PHOTO"' EXIT
 magick "$SRC" -resize "${W}x" -quality 90 "$TMP_PHOTO"
 
 # Altezza effettiva dopo resize
-PH=$(magick identify -format "%h" "$TMP_PHOTO")
+# (con magick v7: 'magick identify ...'; con v6 alias: 'identify ...')
+if command -v magick >/dev/null 2>&1 && [ "$(type -t magick)" = "file" ]; then
+  PH=$(magick identify -format "%h" "$TMP_PHOTO")
+else
+  PH=$(identify -format "%h" "$TMP_PHOTO")
+fi
 TOTAL_H=$((PH + BAND_H))
 
 # 2) Componi: foto sopra + fascia blu sotto con logo a SINISTRA + testo a destra del logo

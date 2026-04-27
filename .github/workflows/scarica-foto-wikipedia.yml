@@ -1,0 +1,191 @@
+name: "📷 Scarica foto Wikipedia (articoli con marker TODO)"
+
+# Quando l'utente scrive un articolo da mobile/cloud (dove la sandbox blocca
+# i domini esterni), inserisce nel frontmatter un marker:
+#
+#   # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Wikipedia" slug-articolo [lang]
+#
+# Questo workflow scansiona tutti gli articoli, esegue i comandi indicati,
+# scarica le foto da Wikipedia/Wikimedia, applica la fascia blu istituzionale,
+# aggiorna il frontmatter (image + image_credit) e committa il risultato.
+# Poi triggera esplicitamente il deploy.
+#
+# Skip: i commit del workflow stesso contengono "[skip-foto-wiki]" nel
+# messaggio, quindi non si auto-triggera in loop.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: "foto-wikipedia"
+  cancel-in-progress: false
+
+jobs:
+  scarica-foto:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip-foto-wiki]')"
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "🔧 Installa dipendenze (ImageMagick)"
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq imagemagick
+
+      - name: "🔍 Cerca articoli con marker TODO-foto-wikipedia"
+        id: scan
+        run: |
+          set -e
+          # Cerca tutti i file con il marker. Output: lista di path.
+          MATCHES=$(grep -rl "^# TODO-foto-wikipedia:" content/comunicazioni/ 2>/dev/null || true)
+          if [ -z "$MATCHES" ]; then
+            echo "[info] Nessun articolo con marker TODO-foto-wikipedia trovato."
+            echo "found=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "[info] Articoli trovati:"
+          echo "$MATCHES"
+          # Salva la lista per il prossimo step
+          echo "$MATCHES" > /tmp/articoli-da-processare.txt
+          NUM=$(echo "$MATCHES" | wc -l)
+          echo "found=$NUM" >> "$GITHUB_OUTPUT"
+
+      - name: "📷 Scarica foto e aggiorna frontmatter"
+        if: steps.scan.outputs.found != '0'
+        id: download
+        run: |
+          set +e   # continua anche se uno script fallisce, registra l'errore
+          PROCESSED=0
+          FAILED=0
+          declare -a FAILED_ITEMS
+          while IFS= read -r ARTICLE; do
+            [ -z "$ARTICLE" ] && continue
+            echo "─────────────────────────────────────────────"
+            echo "Articolo: $ARTICLE"
+            # Estrai il comando dal marker (riga che inizia con "# TODO-foto-wikipedia:")
+            CMD=$(grep -m1 "^# TODO-foto-wikipedia:" "$ARTICLE" | sed -E 's/^# TODO-foto-wikipedia:\s*//')
+            if [ -z "$CMD" ]; then
+              echo "[warn] marker presente ma comando vuoto, skip"
+              continue
+            fi
+            echo "Comando: $CMD"
+
+            # Estrai i parametri: titolo, slug, lang opzionale.
+            # Il comando atteso e':
+            #   bash scripts/foto-da-wikipedia.sh "Titolo" slug [lang]
+            # Estraggo il TITOLO (tra virgolette) e SLUG (parametro successivo).
+            TITLE=$(echo "$CMD" | grep -oE '"[^"]+"' | head -1 | sed 's/^"\(.*\)"$/\1/')
+            REST=$(echo "$CMD" | sed -E 's/.*"[^"]+"\s*//')
+            SLUG=$(echo "$REST" | awk '{print $1}')
+            LANG=$(echo "$REST" | awk '{print $2}')
+            LANG="${LANG:-it}"
+
+            if [ -z "$TITLE" ] || [ -z "$SLUG" ]; then
+              echo "[error] impossibile estrarre titolo/slug dal comando: $CMD"
+              FAILED=$((FAILED+1))
+              FAILED_ITEMS+=("$ARTICLE: parametri non estraibili")
+              continue
+            fi
+
+            # Esegue lo script di download (cattura stdout per estrarre metadata)
+            OUTPUT=$(bash scripts/foto-da-wikipedia.sh "$TITLE" "$SLUG" "$LANG" 2>&1) || {
+              EXIT=$?
+              echo "[error] foto-da-wikipedia.sh fallito (exit $EXIT):"
+              echo "$OUTPUT"
+              FAILED=$((FAILED+1))
+              FAILED_ITEMS+=("$ARTICLE: download fallito ($TITLE)")
+              continue
+            }
+            echo "$OUTPUT"
+
+            # Estrai metadata dall'output dello script
+            ORIGIN=$(echo "$OUTPUT" | grep -oE 'Origine:\s*https?://\S+' | sed 's/^Origine:\s*//')
+            AUTHOR=$(echo "$OUTPUT" | sed -nE 's/^\s*Autore:\s*(.*)$/\1/p' | head -1)
+            LICENSE_=$(echo "$OUTPUT" | sed -nE 's/^\s*Licenza:\s*(.*)$/\1/p' | head -1)
+
+            # Aggiorna il frontmatter
+            python3 scripts/aggiorna-frontmatter-foto.py \
+              "$ARTICLE" \
+              "$SLUG" \
+              "${AUTHOR:-Sconosciuto}" \
+              "${LICENSE_:-Sconosciuta}" \
+              "${ORIGIN:-}" || {
+              echo "[error] aggiorna-frontmatter-foto.py fallito"
+              FAILED=$((FAILED+1))
+              FAILED_ITEMS+=("$ARTICLE: aggiornamento frontmatter fallito")
+              continue
+            }
+
+            PROCESSED=$((PROCESSED+1))
+          done < /tmp/articoli-da-processare.txt
+
+          echo "─────────────────────────────────────────────"
+          echo "[summary] Processati: $PROCESSED, Falliti: $FAILED"
+          echo "processed=$PROCESSED" >> "$GITHUB_OUTPUT"
+          echo "failed=$FAILED" >> "$GITHUB_OUTPUT"
+
+          if [ "$FAILED" -gt 0 ]; then
+            {
+              echo "items<<EOF_ITEMS"
+              for it in "${FAILED_ITEMS[@]}"; do echo "- $it"; done
+              echo "EOF_ITEMS"
+            } >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: "💾 Commit e push"
+        if: steps.download.outputs.processed != '0' && steps.download.outputs.processed != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add static/images/ content/comunicazioni/
+          if git diff --staged --quiet; then
+            echo "[info] nessuna modifica da committare"
+            exit 0
+          fi
+          git commit -m "[skip-foto-wiki] Foto Wikipedia automatiche (${{ steps.download.outputs.processed }} articoli)
+
+          Workflow: scarica-foto-wikipedia.yml
+          Articoli processati: ${{ steps.download.outputs.processed }}
+          Articoli falliti:    ${{ steps.download.outputs.failed }}
+
+          Foto scaricate da Wikipedia/Wikimedia (licenze libere PD/CC0/CC-BY/CC-BY-SA),
+          fascia blu istituzionale applicata, frontmatter aggiornato (image + image_credit)."
+          git push
+
+      - name: "🚀 Triggera deploy"
+        if: steps.download.outputs.processed != '0' && steps.download.outputs.processed != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run deploy.yml --ref main
+          echo "[ok] deploy.yml triggerato"
+
+      - name: "🚨 Apri issue se ci sono fallimenti"
+        if: steps.download.outputs.failed != '0' && steps.download.outputs.failed != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="📷 Foto Wikipedia non scaricate ($(date +%Y-%m-%d))"
+          BODY=$(cat <<EOF
+          Il workflow \`scarica-foto-wikipedia.yml\` non e' riuscito a scaricare le foto per ${{ steps.download.outputs.failed }} articoli.
+
+          Articoli da gestire manualmente (verifica titolo Wikipedia, lingua, esistenza pagina, licenza):
+
+          ${{ steps.download.outputs.items }}
+
+          Per riprovare: modifica il marker \`# TODO-foto-wikipedia:\` con un titolo Wikipedia diverso o una lingua diversa (\`it\` -> \`en\`, \`fr\`, \`de\`), poi committa.
+
+          Il workflow ri-girera' automaticamente al prossimo push su \`main\`.
+          EOF
+          )
+          gh issue create --title "$TITLE" --body "$BODY" --label "automazione" || echo "[warn] gh issue create fallito (ok se manca label 'automazione')"
