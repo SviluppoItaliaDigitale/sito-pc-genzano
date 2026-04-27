@@ -79,11 +79,20 @@ magick \
   -define webp:method=6 \
   "$OUT"
 
-# 3) Se > 200 KB, ricomprimi
+# 3) Se > 200 KB, ricomprimi progressivamente (per immagini molto grandi
+#    una sola riduzione di qualita' non basta — riduco qualita' a step)
 SIZE_KB=$(( $(stat -c%s "$OUT") / 1024 ))
-if [ "$SIZE_KB" -gt 200 ]; then
-  magick "$OUT" -quality 75 -define webp:method=6 "$OUT"
+for Q in 75 60 50 40 30; do
+  [ "$SIZE_KB" -le 200 ] && break
+  magick "$OUT" -quality "$Q" -define webp:method=6 "$OUT"
   SIZE_KB=$(( $(stat -c%s "$OUT") / 1024 ))
-fi
+done
+# Se ancora troppo grande (immagine altissima risoluzione), riduci larghezza
+# in modo progressivo: 1000 -> 900 -> 800 -> 700 px
+for NEW_W in 1000 900 800 700; do
+  [ "$SIZE_KB" -le 200 ] && break
+  magick "$OUT" -resize "${NEW_W}x" -quality 75 -define webp:method=6 "$OUT"
+  SIZE_KB=$(( $(stat -c%s "$OUT") / 1024 ))
+done
 
 echo "[ok] $(basename "$OUT")  (${SIZE_KB} KB, ${W}x${TOTAL_H}px)"

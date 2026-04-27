@@ -115,31 +115,48 @@ python3 -c "import yaml; yaml.safe_load(open('.github/workflows/<file>.yml'))"
 
 Se python3 yaml lo accetta, GitHub Actions lo accetterà sicuramente.
 
-## Workflow `scarica-foto-wikipedia.yml` — supporto editing da mobile
+## Workflow `scarica-foto-automatica.yml` — supporto editing da mobile
 
-Quando l'utente scrive un articolo da app mobile / Claude Code cloud, la sandbox blocca i domini esterni (Wikipedia compresa) e lo script `scripts/foto-da-wikipedia.sh` non può girare in quel contesto.
+Quando l'utente scrive un articolo da app mobile / Claude Code cloud, la sandbox blocca i domini esterni e gli script `foto-da-*.sh` non possono girare in quel contesto.
 
-**Soluzione**: l'articolo si pubblica con `image: ""` e include nel frontmatter un marker di servizio:
+**Soluzione**: l'articolo si pubblica con `image: ""` e include nel frontmatter **un solo** marker di servizio (uno tra i seguenti, in base alla fonte da cui prendere la foto):
 
 ```
 # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [lang]
+# TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "search query"            slug-articolo
+# TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap <eventid>        slug-articolo
 ```
 
-Al successivo push su `main`, il workflow `.github/workflows/scarica-foto-wikipedia.yml` (runner Ubuntu, rete libera):
-1. Scansiona `content/comunicazioni/*.md` cercando il marker.
-2. Per ogni articolo trovato esegue il comando indicato → scarica da Wikipedia → applica fascia blu (`scripts/applica-fascia-foto.sh`).
-3. Aggiorna il frontmatter con `scripts/aggiorna-frontmatter-foto.py`: popola `image:` + `image_credit:` (autore + licenza + sorgente Wikimedia), rimuove la riga TODO.
-4. Committa i cambi con messaggio `[skip-foto-wiki] Foto Wikipedia automatiche (...)` per evitare loop di ri-trigger del workflow stesso.
-5. Triggera esplicitamente `deploy.yml` via `gh workflow run deploy.yml` (i push fatti dal `GITHUB_TOKEN` non auto-triggerano i workflow `push`, quindi serve trigger manuale per ri-deployare con la foto).
-6. Se uno o più articoli falliscono (titolo Wikipedia non trovato, licenza non compatibile), apre **issue di follow-up** con la lista — coerente con il pattern di `audit-sito.yml`.
+**Quando usare quale fonte:**
 
-**Permissions richiesti dal workflow**: `contents: write` (per il commit) + `actions: write` (per `gh workflow run`).
+| Tipo di articolo | Fonte consigliata |
+|---|---|
+| Anniversario evento storico (terremoti famosi, alluvioni, eruzioni) | Wikipedia (it/en) |
+| Fenomeno globale visto dallo spazio (uragani, eruzioni, ondata calore) | NASA |
+| ShakeMap di un terremoto specifico | USGS (serve eventid da `https://earthquake.usgs.gov/earthquakes/search/`) |
+| Personaggio storico, opera, libro, organizzazione | Wikipedia |
 
-**Compatibilità ImageMagick**: `applica-fascia-foto.sh` ha un fallback runtime: usa `magick` (v7) se disponibile, altrimenti `convert` (v6) — necessario perché `apt install imagemagick` su `ubuntu-latest` installa v6.
+Al successivo push su `main`, il workflow `.github/workflows/scarica-foto-automatica.yml` (runner Ubuntu, rete libera):
+1. Scansiona `content/comunicazioni/*.md` cercando i marker `TODO-foto-(wikipedia|nasa|usgs)`.
+2. Per ogni articolo trovato: estrae il marker, verifica che lo script chiamato sia in **whitelist** (`foto-da-wikipedia.sh`, `foto-da-nasa.sh`, `foto-da-usgs.sh`) — qualunque altro nome viene rigettato per sicurezza.
+3. Esegue il comando con `bash -c "$CMD"` dopo la verifica whitelist.
+4. Aggiorna il frontmatter con `scripts/aggiorna-frontmatter-foto.py`: popola `image:` + `image_credit:` + `image_source_url:`, rimuove la riga TODO.
+5. Committa con messaggio `[skip-foto-wiki] Foto automatiche da fonti libere (...)` per evitare loop.
+6. Triggera esplicitamente `deploy.yml` via `gh workflow run deploy.yml` (i push fatti dal `GITHUB_TOKEN` non auto-triggerano i workflow `push`).
+7. Se uno o più articoli falliscono, apre **issue di follow-up** con la lista.
+
+**Permissions richiesti dal workflow**: `contents: write` (per il commit) + `actions: write` (per `gh workflow run`) + `issues: write` (per l'issue di fallback).
+
+**Compatibilità ImageMagick**: `applica-fascia-foto.sh` ha un fallback runtime: usa `magick` (v7) se disponibile, altrimenti `convert` (v6) — necessario perché `apt install imagemagick` su `ubuntu-latest` installa v6. Inoltre comprime progressivamente (qualità 75→30, poi riduzione larghezza 1000→700px) finché `output ≤ 200 KB`.
 
 **Idempotenza**: `aggiorna-frontmatter-foto.py` non sovrascrive `image:` se già popolato. Riesecuzione del workflow su articoli senza marker non fa nulla.
 
-**Sicurezza**: il workflow esegue **eval implicito** del comando trovato nel marker (via `bash -c ...`). Per evitare iniezioni, il workflow estrae solo il **titolo** (tra virgolette) e lo **slug** (parametro alfanumerico) — non esegue il comando grezzo. Il template è hardcoded: `bash scripts/foto-da-wikipedia.sh "<titolo>" <slug> <lang>`.
+**Sicurezza**: il workflow esegue il comando trovato nel marker via `bash -c`. Per evitare iniezioni di script arbitrari:
+1. Il marker deve corrispondere alla regex `^# TODO-foto-(wikipedia|nasa|usgs):` (solo i 3 marker noti).
+2. Il primo binario chiamato deve essere uno script in whitelist (`foto-da-wikipedia.sh`, `foto-da-nasa.sh`, `foto-da-usgs.sh`).
+3. Tutti i parametri sono passati come argomenti dello script, non come codice eseguibile.
+
+**Aggiungere una nuova fonte** (es. NOAA, Copernicus): (a) creare `scripts/foto-da-NUOVA.sh` con stesso pattern di output (stampa Origine/Autore/Licenza); (b) aggiungere `foto-da-NUOVA.sh` alla `ALLOWED_SCRIPTS` del workflow; (c) aggiungere `nuova` alla regex del marker; (d) aggiornare archetype + doc.
 
 ## Verifica prima del push
 

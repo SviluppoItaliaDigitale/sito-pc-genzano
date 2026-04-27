@@ -25,15 +25,21 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 # Es: /images/2026-04-20-titolo.webp
 image: ""
 
-# ── DOWNLOAD AUTOMATICO FOTO DA WIKIPEDIA (opzionale) ──
-# Se scrivi l'articolo da mobile / app cloud (sandbox blocca Wikipedia), lascia
-# `image: ""` e aggiungi qui sotto un marker TODO. Al prossimo push su main, il
-# workflow GitHub `scarica-foto-wikipedia.yml` esegue il comando, scarica la foto,
-# applica la fascia blu, popola `image:` e `image_credit:`, rimuove questa riga.
-# Es:
-# # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
-# Sintassi:
-# # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [lang]
+# ── DOWNLOAD AUTOMATICO FOTO DA FONTI LIBERE (opzionale) ──
+# Se scrivi l'articolo da mobile / app cloud (sandbox blocca i domini esterni),
+# lascia `image: ""` e aggiungi qui sotto UN marker TODO. Al prossimo push su
+# main, il workflow `scarica-foto-automatica.yml` esegue il comando, scarica
+# la foto, applica la fascia blu, popola image: + image_credit: +
+# image_source_url:, rimuove la riga marker. Fonti supportate:
+#
+#   # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Wikipedia" slug-articolo [lang]
+#   # TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "search query"     slug-articolo
+#   # TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap <eventid> slug-articolo
+#
+# Esempi:
+#   # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
+#   # TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "Etna eruption"                  2026-08-12-etna
+#   # TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap us10006g7d              2026-08-24-amatrice-shakemap
 
 # ── TESTO ALTERNATIVO IMMAGINE (a11y) ──
 # Descrive cosa si vede nell'immagine per chi usa screen reader.
