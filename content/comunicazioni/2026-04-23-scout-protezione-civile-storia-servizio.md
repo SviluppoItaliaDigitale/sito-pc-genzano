@@ -17,9 +17,13 @@ draft: false
 
 Il **23 aprile** è la festa di **San Giorgio**, patrono dello scoutismo. Robert Baden-Powell, fondatore del movimento, lo scelse per le sue virtù di cavaliere protettore degli indifesi: il santo che affronta il drago è da oltre un secolo il modello del volontario in servizio. In tutto il mondo, oggi, milioni di scout rinnovano la loro Promessa. È la giornata giusta per raccontare il filo lungo che lega il movimento scout italiano alla **Protezione Civile**, dal **fango di Firenze del 1966** alle alluvioni di oggi.
 
+{{< foto src="/images/2026-04-23-scout-protezione-civile-storia-servizio-san-giorgio-raffaello.webp"
+         alt="San Giorgio e il drago, dipinto di Raffaello Sanzio del 1506"
+         caption="San Giorgio e il drago di Raffaello Sanzio (1506), National Gallery of Art, Washington. Il santo cavaliere che protegge gli indifesi è patrono dei movimenti scout di tutto il mondo. Foto: Wikimedia Commons — Public domain. [Fonte originale](https://commons.wikimedia.org/wiki/File:Saint_George_and_the_Dragon_(Raphael)_-_Mauritshuis_843.jpg)." >}}
+
 {{< foto src="/images/2026-04-23-baden-powell-fondatore-scout.webp"
          alt="Ritratto di Robert Baden-Powell, fondatore del movimento scout, in uniforme da capo scout"
-         caption="Robert Baden-Powell (1857-1941), fondatore dello scoutismo. Nel 1907 organizza il primo campo scout sull'isola di Brownsea: nasce il movimento che oggi conta oltre 50 milioni di membri nel mondo." >}}
+         caption="Robert Baden-Powell (1857-1941), fondatore dello scoutismo. Nel 1907 organizza il primo campo scout sull'isola di Brownsea: nasce il movimento che oggi conta oltre 50 milioni di membri nel mondo. Foto: Bain News Service — Public domain — via Wikimedia Commons." >}}
 
 ## Estote Parati: una pedagogia del "essere pronti"
 
