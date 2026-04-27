@@ -550,6 +550,8 @@
       kind: 'answer',
       title: 'Sei in casa o al chiuso',
       emergency: true,
+      pittogramma: 'arasaac/nascondersi-tavolo.png',
+      pittogrammaAlt: 'Pittogramma: persona si nasconde sotto un tavolo durante il terremoto',
       bullets: [
         'Resta dentro: riparati sotto un tavolo robusto o vicino a un muro portante.',
         'Non usare l’ascensore, mai.',
@@ -622,6 +624,8 @@
       kind: 'answer',
       title: 'Incendio in un edificio',
       emergency: true,
+      pittogramma: 'arasaac/incendio.png',
+      pittogrammaAlt: 'Pittogramma: incendio',
       bullets: [
         'Chiama subito il <strong>112</strong>.',
         'Chiudi la porta della stanza dove c’è il fuoco per limitare la propagazione.',
@@ -671,6 +675,8 @@
       kind: 'answer',
       title: 'Sospetta fuga di gas',
       emergency: true,
+      pittogramma: 'arasaac/fuga-gas.png',
+      pittogrammaAlt: 'Pittogramma: fuga di gas',
       body: [
         'Agisci subito, nell’ordine indicato sotto. Ogni minuto conta.'
       ],
@@ -704,6 +710,8 @@
     allerta_gialla: {
       kind: 'answer',
       title: 'Allerta gialla — attenzione',
+      pittogramma: 'arasaac/temporale.png',
+      pittogrammaAlt: 'Pittogramma: temporale con fulmini',
       bullets: [
         'Presta attenzione: fenomeni di intensità moderata previsti.',
         'Evita zone a rischio allagamento (sottopassi, garage interrati, argini).',
@@ -774,6 +782,8 @@
       kind: 'answer',
       title: 'Allagamento in casa o scantinato',
       emergency: true,
+      pittogramma: 'arasaac/alluvione.png',
+      pittogrammaAlt: 'Pittogramma: alluvione con acqua alta',
       bullets: [
         '<strong>Non</strong> scendere nei locali allagati: c’è rischio di elettrocuzione.',
         'Se puoi farlo <strong>da asciutto</strong>, stacca la corrente dall’interruttore generale.',
@@ -870,6 +880,8 @@
     },
     numeri_emergenza: {
       kind: 'answer',
+      pittogramma: 'arasaac/112.png',
+      pittogrammaAlt: 'Pittogramma del numero 112',
       title: 'Sei in emergenza adesso',
       emergency: true,
       body: [
@@ -1027,6 +1039,18 @@
     var boxCls = node.emergency ? ' emergency' : '';
     html += '<div class="answer-box' + boxCls + '">';
     html += '<h3>' + escapeHTML(node.title) + '</h3>';
+    if (node.pittogramma) {
+      // Supporto pittogramma ARASAAC/ISO 7010 in cima alla risposta:
+      // "arasaac/terremoto.png" oppure "iso7010/punto-raccolta.svg".
+      // Compatibile con toolbar a11y (classe "pittogramma" -> regola
+      // html.a11y-hide-images img.pittogramma { visibility: visible }).
+      var pSrc = (window.SITO_BASEURL || '/') + 'pittogrammi/' + node.pittogramma;
+      var pAlt = node.pittogrammaAlt || ('Pittogramma: ' + node.title);
+      html += '<figure class="assistente-pittogramma pittogramma pittogramma-figure" role="group">';
+      html += '<img src="' + escapeHTML(pSrc) + '" alt="' + escapeHTML(pAlt) +
+              '" class="pittogramma pittogramma-large" role="img" loading="lazy">';
+      html += '</figure>';
+    }
     if (node.body) {
       node.body.forEach(function (p) { html += '<p>' + p + '</p>'; }); // <strong> ammesso
     }
