@@ -33,6 +33,11 @@ Genova è città di torrenti e versanti scoscesi. La sua urbanizzazione storica 
 
 L'alluvione del 1970 e quella del **4 novembre 2011** (vedi [articolo](/comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano/)) hanno colpito Genova nello stesso modo, a 41 anni di distanza. Cosa è cambiato e cosa no:
 
+{{< foto src="/images/2026-10-07-genova-1970-alluvione-storica-piu-grave-bisagno-fiume.webp"
+         alt="Il torrente Bisagno a Genova"
+         caption="Il torrente Bisagno attraversa Genova in gran parte tombato sotto la città. La sua esondazione del 1970 fece 44 morti e segnò la storia urbanistica genovese. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Torrente_Bisagno_Genova_01.jpg)." >}}
+
+
 **Cosa è cambiato (in meglio):**
 - Esistenza del Servizio Nazionale di Protezione Civile (legge 225/1992, codice 2018)
 - Allerta meteo regionale strutturata, comunicazione tempestiva tramite TV, app, SMS

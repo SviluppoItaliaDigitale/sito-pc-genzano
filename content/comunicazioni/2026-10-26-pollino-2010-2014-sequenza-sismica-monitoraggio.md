@@ -34,6 +34,11 @@ Le caratteristiche peculiari:
 
 Il Pollino è stato un **banco di prova del sistema di monitoraggio italiano**:
 
+{{< foto src="/images/2026-10-26-pollino-2010-2014-sequenza-sismica-monitoraggio-mormanno-paese.webp"
+         alt="Veduta di Mormanno (Cosenza), uno dei comuni più colpiti dalla sequenza sismica del Pollino"
+         caption="Mormanno (Cosenza) fu uno dei comuni più colpiti dalla scossa M 5.0 del 25 ottobre 2012, durante la sequenza sismica del Pollino 2010-2014. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Mormanno_(IMG_20240309_124827).jpg)." >}}
+
+
 - **INGV** ha potenziato la rete sismica locale con stazioni temporanee, monitoraggio in tempo reale, comunicazione settimanale al Dipartimento di Protezione Civile
 - **Comuni colpiti** (Mormanno, Laino Borgo, San Lorenzo Bellizzi, Cerchiara di Calabria) hanno aggiornato i Piani di Emergenza Comunali
 - **Volontari di Protezione Civile** locali e regionali hanno presidiato le aree colpite per mesi

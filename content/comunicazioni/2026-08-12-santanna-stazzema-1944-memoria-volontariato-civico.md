@@ -37,6 +37,11 @@ Negli anni della Resistenza nacquero le prime forme organizzate di **soccorso ci
 - I **comitati di liberazione locali** organizzarono i primi servizi essenziali (acqua, cibo, sanità) nelle aree liberate
 - Le **parrocchie** e le **associazioni laiche** si trasformarono in centri di accoglienza per profughi
 
+{{< foto src="/images/2026-08-12-santanna-stazzema-1944-memoria-volontariato-civico-eccidio-santanna-stazzema.webp"
+         alt="Memoriale dell'Eccidio di Sant'Anna di Stazzema"
+         caption="Il Memoriale dell'Eccidio di Sant'Anna di Stazzema: 560 civili massacrati il 12 agosto 1944 dalle SS. Oggi il borgo è Parco Nazionale della Pace. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Santanna_mahnmal.JPG)." >}}
+
+
 Tutto questo, nel dopoguerra, sarebbe confluito nel sistema di **assistenza pubblica** (legge ENPAS 1944, riforma sanitaria), nei servizi sociali comunali, e infine — molti decenni dopo — nel **Servizio Nazionale di Protezione Civile** (legge 225/1992, oggi Codice 2018).
 
 ## Cosa ci insegna oggi

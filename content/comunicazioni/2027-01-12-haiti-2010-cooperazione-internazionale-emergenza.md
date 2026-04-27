@@ -32,6 +32,11 @@ L'**Italia** rispose con il dispiegamento più grande mai realizzato dal Servizi
 
 Haiti 2010 ha consolidato due principi della Protezione Civile internazionale:
 
+{{< foto src="/images/2027-01-12-haiti-2010-cooperazione-internazionale-emergenza-port-au-prince.webp"
+         alt="Veduta di Port-au-Prince, capitale di Haiti"
+         caption="Port-au-Prince (Haiti): la capitale fu praticamente paralizzata dal terremoto del 12 gennaio 2010, con il Palazzo Presidenziale, la Cattedrale e la sede ONU distrutti. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Local_Flag_of_Port_Au_Prince.jpg)." >}}
+
+
 1. **La cooperazione internazionale ha protocolli, non improvvisazione.** Le squadre USAR (Urban Search and Rescue) sono accreditate INSARAG (International Search and Rescue Advisory Group, ONU/OCHA). Hanno standard operativi comuni, equipaggiamento certificato, formazione internazionale. L'Italia partecipa con i Vigili del Fuoco e con le componenti del Sistema Nazionale.
 
 2. **La resilienza pre-evento conta più del soccorso post-evento.** Una società povera, con edifici fragili e istituzioni deboli, paga un prezzo molto più alto a parità di scossa. La **prevenzione strutturale** (codici sismici, manutenzione, formazione) è l'investimento più efficace. Il *Sendai Framework for Disaster Risk Reduction 2015-2030* delle Nazioni Unite traduce questo principio in linee guida vincolanti per gli Stati firmatari.

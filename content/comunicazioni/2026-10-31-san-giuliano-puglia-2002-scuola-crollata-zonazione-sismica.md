@@ -30,6 +30,11 @@ L'inchiesta accertò responsabilità precise: la sopraelevazione era stata proge
 
 San Giuliano fu uno spartiacque. Pochi mesi dopo:
 
+{{< foto src="/images/2026-10-31-san-giuliano-puglia-2002-scuola-crollata-zonazione-sismica-san-giuliano-paese.webp"
+         alt="Comune di San Giuliano di Puglia (Campobasso) oggi"
+         caption="San Giuliano di Puglia oggi: la nuova scuola 'Francesco Jovine' è stata ricostruita con criteri antisismici aggiornati e un memoriale ricorda i 27 bambini e la maestra Carmela Ciniglio. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Panorama_S.Giuliano_di_P.(CB).JPG)." >}}
+
+
 - L'**Ordinanza PCM 3274/2003** introdusse una **nuova classificazione sismica del territorio italiano**, riconoscendo che **tutto il territorio nazionale** è interessato da pericolosità sismica, in misura diversa.
 - Furono aggiornate le **norme tecniche per le costruzioni** (NTC 2008, poi 2018), con criteri vincolanti per gli edifici nuovi e per le sopraelevazioni.
 - Fu avviata la **valutazione del rischio sismico delle scuole** italiane: una mappatura sistematica degli edifici scolastici che continua ancora oggi.

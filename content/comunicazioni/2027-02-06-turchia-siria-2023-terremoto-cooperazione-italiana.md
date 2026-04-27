@@ -30,6 +30,11 @@ Le aree colpite erano densamente abitate. Molti edifici erano relativamente rece
 
 Per le dimensioni dell'evento e la vicinanza al Mediterraneo, l'**Italia rispose con il dispiegamento di Protezione Civile più grande dopo Haiti 2010**. In particolare:
 
+{{< foto src="/images/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana-antakya-hatay.webp"
+         alt="Veduta di Antakya (antica Antiochia) prima del terremoto del 2023"
+         caption="Antakya (l'antica Antiochia): la città medievale fu in gran parte distrutta dalla sequenza sismica del 6 febbraio 2023. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Antakya_Views_from_hill_at_SE_in_1990%27s_05.jpg)." >}}
+
+
 - **Vigili del Fuoco**: oltre 50 unità del Corpo Nazionale, con squadre USAR (Urban Search and Rescue), cinofili da macerie, medici, mezzi mobili.
 - **Volontariato organizzato**: colonna mobile nazionale del Dipartimento di Protezione Civile, con presidi sanitari, cucine da campo, moduli di accoglienza, **centinaia di volontari** delle organizzazioni nazionali.
 - **Sanitari**: ospedali da campo dell'**Esercito Italiano** e di **EMERGENCY**, equipe del **118**.

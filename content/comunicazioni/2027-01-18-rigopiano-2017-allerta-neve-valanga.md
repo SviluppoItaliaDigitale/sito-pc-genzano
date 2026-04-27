@@ -38,6 +38,11 @@ L'inchiesta giudiziaria, durata anni, ha individuato responsabilità organizzati
 
 Rigopiano è la dimostrazione che **i rischi naturali si combinano**. Non basta gestire l'allerta meteo isolata, o il rischio sismico isolato. Bisogna **leggere il sistema** nel suo insieme.
 
+{{< foto src="/images/2027-01-18-rigopiano-2017-allerta-neve-valanga-corno-grande-gran-sasso.webp"
+         alt="Il Corno Grande, vetta principale del Gran Sasso d'Italia"
+         caption="Il Corno Grande, vetta del Gran Sasso d'Italia (2912 m): dal Monte Siella, in questo massiccio, scese il 18 gennaio 2017 la valanga che investì l'Hotel Rigopiano. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Corno_grande_da_campo_imperatore.jpg)." >}}
+
+
 Tre lezioni per la Protezione Civile contemporanea:
 
 1. **La cumulazione dei rischi è la vera sfida.** Neve abbondante + scosse sismiche + isolamento viario = scenario nuovo che può non rientrare nei piani di emergenza standard. La Protezione Civile italiana ha rivisto dopo il 2017 i protocolli per gli eventi multi-rischio.
