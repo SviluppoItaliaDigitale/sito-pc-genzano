@@ -130,6 +130,59 @@ Quando il Gruppo pubblica sui canali social istituzionali (Instagram, Facebook, 
 
 Le specifiche complete sono in `MANUALE-SITO.md` Parte 13.7.5. La pagina pubblica `/social-media-policy/` espone questi principi al cittadino.
 
+## Tabelle accessibili (render hook automatico)
+
+Tutte le tabelle Markdown del sito sono rese dal hook `themes/flavour-pcgenzano/layouts/_default/_markup/render-table.html` che applica automaticamente:
+
+- **`<th scope="col">`** su ogni cella di intestazione (riga `<thead>`) — WCAG 1.3.1 (Info and Relationships).
+- **Wrapping in `.table-responsive`** Bootstrap Italia per scroll orizzontale su mobile.
+- **Allineamento colonne** preservato dal Markdown (`:---`, `---:`, `:---:`).
+
+**Niente da fare manualmente per ogni tabella**: oltre 400 `<th>` del sito sono gestiti automaticamente. Quando si scrive una nuova tabella in Markdown si usa la sintassi standard:
+
+```markdown
+| Numero | Servizio | Quando chiamare |
+|---|---|---|
+| 112 | NUE | Qualsiasi emergenza |
+```
+
+### Quando aggiungere `<caption>` esplicito
+
+Per le **tabelle landing critiche** (`/contatti/`, `/numeri-utili/`, `/chi-siamo/`, eventuali nuove `/cartografia/`) è raccomandato un `<caption>` esplicito che descriva lo scopo della tabella (WCAG 2.4.6 Headings and Labels).
+
+L'attribute syntax di Goldmark `{caption="..."}` **non funziona** sulle tabelle Markdown in Hugo (limitazione del parser). Soluzione: convertire la tabella in **HTML diretto** dentro il file Markdown:
+
+```html
+<div class="table-responsive">
+<table>
+<caption>Numeri di emergenza validi nel Lazio: quale chiamare e in quali casi</caption>
+<thead>
+<tr><th scope="col">Numero</th><th scope="col">Servizio</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>112</strong></td><td>Numero Unico Emergenze</td></tr>
+</tbody>
+</table>
+</div>
+```
+
+Per tabelle in cui il `<caption>` sarebbe ridondante visivamente (es. c'è già un card-header sopra che dice la stessa cosa), usare `class="visually-hidden"` sul caption: nasconde visivamente ma resta accessibile a screen reader e crawler.
+
+CSS scoped sezione **TABLE CAPTION v1.0** in `custom.css` con helper `.visually-hidden` integrato.
+
+### Struttura uniforme delle pagine rischio
+
+Le 7 pagine `/rischi-prevenzione/*` (sismico, idrogeologico, incendio, vento, temporali, blackout, ondate calore) hanno **struttura uniforme** rilevante per accessibilità cognitiva:
+
+1. **Perché è rilevante sul nostro territorio** (contesto)
+2. **Cosa fare PRIMA** (preparazione, voce attiva, bullet)
+3. **Cosa fare DURANTE** (azione immediata, bullet)
+4. **Cosa fare DOPO** (recupero, bullet)
+5. **Cosa NON fare** (shortcode `cosa-non-fare`, box rosso)
+6. **Chi chiamare** (shortcode `chi-chiamare`, tabella accessibile)
+
+L'ordine fisso permette al cittadino in stress (e allo screen reader user) di **navigare prevedibilmente** tra le 7 pagine: trova sempre le stesse sezioni nello stesso ordine. Coerenza WCAG 3.2.3 (Consistent Navigation) e 3.2.4 (Consistent Identification) applicate al contenuto.
+
 ## Divieti
 
 - Non eliminare il focus outline senza fornire un'alternativa visibile equivalente.

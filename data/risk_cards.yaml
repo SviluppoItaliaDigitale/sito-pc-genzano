@@ -4,7 +4,7 @@
 rischi:
   - id: "rischio-sismico"
     titolo: "Rischio Sismico"
-    icona: "bi-tsunami"
+    icona: "bi-activity"
     colore: "warning"
     classe_icona: "si-orange"
     descrizione_breve: "Cosa fare prima, durante e dopo un terremoto."

@@ -34,7 +34,7 @@ Seleziona la situazione che stai vivendo per ricevere le indicazioni operative c
 <div class="col-md-6 mb-3">
 <a href="/rischi-prevenzione/rischio-sismico/" class="card h-100 shadow-sm text-decoration-none">
 <div class="card-body d-flex align-items-center">
-<i class="bi bi-tsunami fs-2 text-warning me-3" aria-hidden="true"></i>
+<i class="bi bi-activity fs-2 text-warning me-3" aria-hidden="true"></i>
 <div>
 <strong class="text-dark">Terremoto</strong>
 <small class="d-block text-muted">Scossa sismica avvertita</small>

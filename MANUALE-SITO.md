@@ -1388,6 +1388,127 @@ Parametri:
 - Lo shortcode emette `<img>` con `role="img"` e `loading="lazy"`, oppure `<figure>` con `<figcaption>` opzionale.
 - CSS scoped in `themes/flavour-pcgenzano/static/css/custom.css` (sezione **PITTOGRAMMI v1.0**): dimensioni fisse, override mobile (large/xlarge ridotti su <576 px), mantenimento dei colori in stampa (i colori dei segnali ISO 7010 sono parte dell'informazione di sicurezza e non devono essere convertiti in scala di grigi).
 
+### 3.17 — Shortcode `chi-chiamare` (chiusura pagine rischio)
+
+Sezione finale standardizzata delle 7 pagine `/rischi-prevenzione/*` con tabella accessibile dei numeri da chiamare per livello di gravità + nota istituzionale.
+
+**Uso:**
+
+```go-html-template
+{{< chi-chiamare >}}
+```
+
+Nessun parametro. Va aggiunto **sempre alla fine** della pagina, dopo `{{< cosa-non-fare >}}`.
+
+**Cosa produce:**
+
+- `<h2>` "Chi chiamare"
+- Tabella accessibile: 3 righe (vita in pericolo → 112, pericolo concreto → 112, segnalazione non urgente → 803 555 Sala Operativa PC Lazio) con `<caption>` + `<th scope="col">`.
+- Numero 112 cliccabile via `<a href="tel:112">` (mobile).
+- Alert role=note con il chiarimento: *"Il Gruppo Comunale non può essere attivato direttamente dai cittadini"*.
+
+**Quando usarlo:** **sempre** sulle pagine rischio operative (le 7 attuali + eventuali nuove). **Non** sulle pagine di supporto (`kit-emergenza.md`, `persone-necessita-specifiche.md`).
+
+**Struttura uniforme finale di ogni pagina rischio (ordine non negoziabile):**
+
+1. Perché è rilevante sul nostro territorio
+2. Segnali e situazioni tipiche (opzionale)
+3. Cosa fare PRIMA
+4. Cosa fare DURANTE
+5. Cosa fare DOPO
+6. `{{< cosa-non-fare >}}`
+7. `{{< chi-chiamare >}}`  ← chiusura standard
+
+CSS scoped in `custom.css` sezione **CHI CHIAMARE BOX v1.0**.
+
+### 3.18 — Tabelle accessibili (render hook automatico)
+
+Tutte le tabelle Markdown del sito sono rese dal **render hook universale** `themes/flavour-pcgenzano/layouts/_default/_markup/render-table.html`. Comportamento automatico:
+
+- **`<th scope="col">`** su ogni cella di intestazione (riga `<thead>`) — WCAG 1.3.1 (Info and Relationships).
+- **Wrapping in `.table-responsive`** Bootstrap Italia per scroll orizzontale su mobile.
+- **Allineamento colonne** preservato dal Markdown (`:---`, `---:`, `:---:`).
+
+**Quando scrivi una nuova tabella in Markdown** non devi fare nulla di particolare: la sintassi standard è sufficiente.
+
+```markdown
+| Numero | Servizio | Quando chiamare |
+|---|---|---|
+| 112 | NUE | Qualsiasi emergenza |
+```
+
+Il render hook genera automaticamente:
+
+```html
+<div class="table-responsive">
+<table>
+<thead>
+<tr><th scope="col">Numero</th><th scope="col">Servizio</th>...</tr>
+</thead>
+...
+```
+
+#### Quando aggiungere `<caption>` esplicito
+
+Per le **tabelle landing critiche** (`/contatti/`, `/numeri-utili/`, `/chi-siamo/` e in futuro `/cartografia/`) è raccomandato un `<caption>` che descriva lo scopo della tabella (WCAG 2.4.6).
+
+**Limitazione tecnica:** la sintassi attribute block di Goldmark `{caption="..."}` **non funziona** sulle tabelle Markdown in Hugo. Soluzione: convertire la tabella in **HTML diretto** dentro Markdown:
+
+```html
+<div class="table-responsive">
+<table>
+<caption>Numeri di emergenza validi nel Lazio: quale chiamare e in quali casi</caption>
+<thead>
+<tr><th scope="col">Numero</th><th scope="col">Servizio</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>112</strong></td><td>Numero Unico Emergenze</td></tr>
+</tbody>
+</table>
+</div>
+```
+
+Per tabelle in cui il `<caption>` sarebbe ridondante visivamente (c'è già un card-header sopra), usare `class="visually-hidden"` sul caption: nasconde visivamente ma resta accessibile.
+
+CSS scoped in `custom.css` sezione **TABLE CAPTION v1.0**.
+
+### 3.19 — FAQ accordion (`.faq-item`)
+
+Per ridurre muri di testo in pagine con molte domande/risposte (es. `/allerte-meteo/`, `/faq/`), il sito ha una classe `.faq-item` che stilizza l'elemento HTML nativo `<details>`/`<summary>` come accordion accessibile.
+
+```html
+<details class="faq-item">
+<summary><strong>Domanda concisa</strong></summary>
+
+Risposta in **Markdown** standard. Bullet, link, enfasi.
+
+</details>
+```
+
+Vantaggi:
+- **Semantica nativa**: zero JS, zero ARIA hand-rolled.
+- **Tastiera**: Enter/Space su `<summary>` apre/chiude.
+- **Stampa**: tutti i `<details>` aperti automaticamente, niente chevron.
+- **Mobile**: padding ridotto su <576 px.
+
+CSS scoped in `custom.css` sezione **FAQ ACCORDION v1.0**.
+
+### 3.20 — Striscia pittogrammi (`.kit-pittogrammi-row`)
+
+Riga visiva di pittogrammi inline ARASAAC per dare un colpo d'occhio immediato a una pagina lista (es. `/rischi-prevenzione/kit-emergenza/`).
+
+```html
+<div class="kit-pittogrammi-row" role="img" aria-label="Componenti essenziali del kit di emergenza: zaino, acqua, cibo, torcia, radio, medicine">
+{{< pittogramma src="/pittogrammi/arasaac/zaino.png" alt="Zaino" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/acqua.png" alt="Acqua" size="small" inline="true" >}}
+...
+</div>
+```
+
+**Regola accessibilità:** `role="img"` + `aria-label` complessivo sul wrapper (gli screen reader leggono la striscia come **una sola immagine descrittiva** invece di leggere ogni `alt` singolo). I pittogrammi all'interno sono `size="small"` (48 px) e `inline="true"` per evitare il layout `<figure>` block.
+
+CSS scoped in `custom.css` sezione **STRISCIA PITTOGRAMMI v1.0**.
+
 ---
 
 ## Parte 4 — Scrivere una pagina (diverso da articolo)

@@ -68,6 +68,26 @@ Il badge `Emergenza` è intenzionalmente raro. Un abuso ne riduce l'impatto comu
 Il codice colore va sempre associato al tipo di rischio (idrogeologico, temporali, vento, neve, ecc.) e all'area geografica interessata.
 Non usare "massima allerta" o "allerta rossa" in modo improprio per fenomeni ordinari.
 
+## Struttura uniforme delle pagine `/rischi-prevenzione/*`
+
+Le 7 pagine operative dei rischi (sismico, idrogeologico, incendio, vento, temporali, blackout, ondate calore) hanno una **struttura fissa**, in quest'ordine:
+
+1. **Perché è rilevante sul nostro territorio** (contesto Genzano/Castelli Romani: dati territoriali, eventi storici, fattori di rischio specifici).
+2. **Segnali e situazioni tipiche** (opzionale, dove serve preavviso percepibile dal cittadino).
+3. **Cosa fare PRIMA** — preparazione: bullet, voce attiva, frasi brevi.
+4. **Cosa fare DURANTE** — azione immediata: bullet con verbi all'imperativo.
+5. **Cosa fare DOPO** — recupero e segnalazione danni: bullet, riferimento al 112 per pericoli concreti.
+6. **`{{< cosa-non-fare >}}`** — box rosso con i 4-6 errori comportamentali tipici di quel rischio.
+7. **`{{< chi-chiamare >}}`** — chiusura standard con la tabella accessibile dei numeri (112 / 112 / 803 555) + nota istituzionale che chiarisce che il **Gruppo Comunale non è attivabile direttamente dai cittadini**.
+
+**Regole operative:**
+- L'ordine è **fisso e non negoziabile**: il cittadino in stress (e lo screen reader user) deve trovare le stesse sezioni nello stesso posto in ogni pagina rischio. Coerenza WCAG 3.2.3 / 3.2.4.
+- Lo shortcode `{{< chi-chiamare >}}` chiude **sempre** la pagina: se aggiungi nuove sezioni, vanno **prima** del chi-chiamare, mai dopo.
+- Il numero 112 nel testo è un'occorrenza editoriale; nella tabella `chi-chiamare` è un `<a href="tel:112">` cliccabile (mobile). Non duplicare la stessa logica con altri "Chi chiamare" hand-rolled: usare sempre lo shortcode per garantire coerenza.
+- Se in futuro si aggiunge un nuovo rischio operativo (es. ondate di freddo, neve, eruzioni), creare la nuova pagina `content/rischi-prevenzione/<nuovo>.md` rispettando lo stesso schema.
+
+Le **2 pagine di supporto** (`kit-emergenza.md`, `persone-necessita-specifiche.md`) sono pagine di servizio, non di rischio: non rientrano nello schema sopra. Hanno strutture proprie (bullet di componenti, raccomandazioni per categorie). Nessun `chi-chiamare` né `cosa-non-fare` obbligatorio.
+
 ## Rischi specifici del territorio
 
 ### Rischio idrogeologico
