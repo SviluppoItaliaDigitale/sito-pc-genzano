@@ -1,0 +1,41 @@
+{{- /*
+  Partial: article-cover
+  Renderizza la copertina di un articolo con didascalia (credit + link fonte)
+  quando il frontmatter espone image_credit / image_source_url.
+
+  Uso:
+    {{ partial "article-cover.html" . }}
+
+  Frontmatter atteso:
+    image:             percorso immagine (obbligatorio per mostrare la cover; senza, fallback)
+    image_alt:         alt-text (opzionale; default = titolo)
+    image_credit:      "Autore — Licenza — via Wikimedia Commons" (opzionale)
+    image_source_url:  URL sorgente originale (opzionale)
+
+  Comportamento:
+    - Se image presente: <figure> con immagine + (eventuale) <figcaption>
+    - Se image assente: fallback default SVG (no caption)
+    - WCAG: alt obbligatorio, link sorgente con target=_blank rel=noopener
+*/ -}}
+{{- $img := .Params.image -}}
+{{- $alt := .Params.image_alt | default .Title -}}
+{{- $credit := .Params.image_credit -}}
+{{- $sourceUrl := .Params.image_source_url -}}
+{{- if $img -}}
+<figure class="article-cover mb-4">
+  <div class="notizia-img-wrapper" style="height:250px;border-radius:8px;">
+    <img src="{{ $img | relURL }}" alt="{{ $alt }}" loading="lazy">
+  </div>
+  {{- if or $credit $sourceUrl }}
+  <figcaption class="article-cover-credit">
+    <i class="bi bi-camera me-1" aria-hidden="true"></i>
+    {{- if $credit }}<span>Foto: {{ $credit }}</span>{{ end -}}
+    {{- if $sourceUrl }}{{ if $credit }} — {{ end }}<a href="{{ $sourceUrl }}" target="_blank" rel="noopener noreferrer" class="article-cover-source" aria-label="Vedi la pagina originale dell'immagine (si apre in una nuova scheda)">Fonte originale</a>{{ end -}}
+  </figcaption>
+  {{- end }}
+</figure>
+{{- else -}}
+<div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;">
+  <img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">
+</div>
+{{- end -}}

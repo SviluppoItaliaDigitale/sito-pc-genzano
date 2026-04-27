@@ -50,13 +50,8 @@
         {{ with .Params.area }}<span class="notizia-data"><i class="bi bi-geo-alt" aria-hidden="true"></i> {{ . }}</span>{{ end }}
       </div>
 
-      {{/* Immagine */}}
-      {{ with .Params.image }}
-      {{ $alt := $.Params.image_alt | default $.Title }}
-      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ . | relURL }}" alt="{{ $alt }}" loading="lazy"></div>
-      {{ else }}
-      <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;"><img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy"></div>
-      {{ end }}
+      {{/* Copertina + eventuale didascalia con credit/fonte (image_credit, image_source_url) */}}
+      {{ partial "article-cover.html" . }}
 
       {{ else }}
       {{/* Pagine non-comunicazione: solo data e badge */}}

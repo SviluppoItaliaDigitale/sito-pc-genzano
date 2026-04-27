@@ -2592,3 +2592,66 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   font-style: normal;
   line-height: 1.25;
 }
+
+/* ============================================================
+   ARTICLE COVER — didascalia con credit immagine (v1.0)
+   Reso da partials/article-cover.html.
+   Mostra "Foto: <autore — licenza — via Wikimedia> — Fonte originale"
+   sotto la copertina quando il frontmatter espone image_credit /
+   image_source_url. Stile sobrio, secondario, accessibile.
+   ============================================================ */
+.article-cover {
+  margin: 0 0 1.5rem 0;
+}
+.article-cover .notizia-img-wrapper {
+  /* Wrapper esistente non viene toccato */
+}
+.article-cover-credit {
+  font-size: 0.82rem;
+  color: #5a6268;
+  margin-top: 0.45rem;
+  text-align: right;
+  font-style: italic;
+  padding: 0 0.25rem;
+  line-height: 1.4;
+}
+.article-cover-credit .bi {
+  color: #6c757d;
+  font-style: normal;
+}
+.article-cover-credit a.article-cover-source {
+  color: #003366;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-style: normal;
+  font-weight: 500;
+}
+.article-cover-credit a.article-cover-source:hover,
+.article-cover-credit a.article-cover-source:focus {
+  text-decoration-thickness: 2px;
+  outline-offset: 2px;
+}
+
+/* Mobile: lascia ariosa la didascalia */
+@media (max-width: 576px) {
+  .article-cover-credit {
+    text-align: left;
+    font-size: 0.78rem;
+  }
+}
+
+/* Stampa: la didascalia con credit resta visibile (e' attribuzione obbligatoria) */
+@media print {
+  .article-cover-credit {
+    color: #000 !important;
+    font-style: italic;
+  }
+  .article-cover-credit a.article-cover-source {
+    color: #000 !important;
+  }
+  .article-cover-credit a.article-cover-source::after {
+    content: " (" attr(href) ")";
+    font-size: 0.7rem;
+    word-break: break-all;
+  }
+}
