@@ -115,6 +115,32 @@ python3 -c "import yaml; yaml.safe_load(open('.github/workflows/<file>.yml'))"
 
 Se python3 yaml lo accetta, GitHub Actions lo accetterà sicuramente.
 
+## Workflow `scarica-foto-wikipedia.yml` — supporto editing da mobile
+
+Quando l'utente scrive un articolo da app mobile / Claude Code cloud, la sandbox blocca i domini esterni (Wikipedia compresa) e lo script `scripts/foto-da-wikipedia.sh` non può girare in quel contesto.
+
+**Soluzione**: l'articolo si pubblica con `image: ""` e include nel frontmatter un marker di servizio:
+
+```
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [lang]
+```
+
+Al successivo push su `main`, il workflow `.github/workflows/scarica-foto-wikipedia.yml` (runner Ubuntu, rete libera):
+1. Scansiona `content/comunicazioni/*.md` cercando il marker.
+2. Per ogni articolo trovato esegue il comando indicato → scarica da Wikipedia → applica fascia blu (`scripts/applica-fascia-foto.sh`).
+3. Aggiorna il frontmatter con `scripts/aggiorna-frontmatter-foto.py`: popola `image:` + `image_credit:` (autore + licenza + sorgente Wikimedia), rimuove la riga TODO.
+4. Committa i cambi con messaggio `[skip-foto-wiki] Foto Wikipedia automatiche (...)` per evitare loop di ri-trigger del workflow stesso.
+5. Triggera esplicitamente `deploy.yml` via `gh workflow run deploy.yml` (i push fatti dal `GITHUB_TOKEN` non auto-triggerano i workflow `push`, quindi serve trigger manuale per ri-deployare con la foto).
+6. Se uno o più articoli falliscono (titolo Wikipedia non trovato, licenza non compatibile), apre **issue di follow-up** con la lista — coerente con il pattern di `audit-sito.yml`.
+
+**Permissions richiesti dal workflow**: `contents: write` (per il commit) + `actions: write` (per `gh workflow run`).
+
+**Compatibilità ImageMagick**: `applica-fascia-foto.sh` ha un fallback runtime: usa `magick` (v7) se disponibile, altrimenti `convert` (v6) — necessario perché `apt install imagemagick` su `ubuntu-latest` installa v6.
+
+**Idempotenza**: `aggiorna-frontmatter-foto.py` non sovrascrive `image:` se già popolato. Riesecuzione del workflow su articoli senza marker non fa nulla.
+
+**Sicurezza**: il workflow esegue **eval implicito** del comando trovato nel marker (via `bash -c ...`). Per evitare iniezioni, il workflow estrae solo il **titolo** (tra virgolette) e lo **slug** (parametro alfanumerico) — non esegue il comando grezzo. Il template è hardcoded: `bash scripts/foto-da-wikipedia.sh "<titolo>" <slug> <lang>`.
+
 ## Verifica prima del push
 
 Prima di fare push su `main`, verifica sempre:

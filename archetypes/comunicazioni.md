@@ -25,6 +25,16 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 # Es: /images/2026-04-20-titolo.webp
 image: ""
 
+# ── DOWNLOAD AUTOMATICO FOTO DA WIKIPEDIA (opzionale) ──
+# Se scrivi l'articolo da mobile / app cloud (sandbox blocca Wikipedia), lascia
+# `image: ""` e aggiungi qui sotto un marker TODO. Al prossimo push su main, il
+# workflow GitHub `scarica-foto-wikipedia.yml` esegue il comando, scarica la foto,
+# applica la fascia blu, popola `image:` e `image_credit:`, rimuove questa riga.
+# Es:
+# # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
+# Sintassi:
+# # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [lang]
+
 # ── TESTO ALTERNATIVO IMMAGINE (a11y) ──
 # Descrive cosa si vede nell'immagine per chi usa screen reader.
 # Non ripetere il titolo: descrivi il contenuto visivo.

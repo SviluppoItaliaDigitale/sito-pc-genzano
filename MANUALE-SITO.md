@@ -428,6 +428,21 @@ Leggi tutta la **Parte 3**. In sintesi:
 5. Salva in `static/images/AAAA-MM-GG-descrizione.webp`.
 6. Aggiorna il campo `image:` nel frontmatter.
 
+**Scorciatoia: foto da Wikipedia automatica (anche da mobile).** Se l'argomento dell'articolo ha una pagina Wikipedia, puoi delegare il download della foto:
+
+- **Da PC:** esegui direttamente
+  ```bash
+  bash scripts/foto-da-wikipedia.sh "Titolo della pagina Wikipedia" slug-articolo [lang]
+  # es: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
+  ```
+  Lo script verifica che la licenza sia libera (PD/CC0/CC-BY/CC-BY-SA), scarica l'immagine principale, applica la fascia blu, salva `static/images/<slug>.webp` e stampa autore + licenza + URL origine da citare in didascalia.
+
+- **Da mobile / app cloud:** la sandbox Claude blocca i domini esterni (Wikipedia compresa). In questo caso lascia `image: ""` e aggiungi nel frontmatter dell'articolo un marker:
+  ```
+  # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
+  ```
+  Al successivo push, il workflow `.github/workflows/scarica-foto-wikipedia.yml` rileva il marker, esegue il download, popola `image:` e `image_credit:`, rimuove il marker e ri-triggera il deploy. **Tutto automatico.** Se la foto non viene trovata (titolo errato, lingua sbagliata, licenza non compatibile), il workflow apre un'issue di follow-up.
+
 ### Passo 1.12 — Test locale con Hugo
 
 Prima di pubblicare, testa in locale:
