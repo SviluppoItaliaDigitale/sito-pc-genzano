@@ -74,8 +74,9 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 <div class="card-body p-0">
 <div class="table-responsive">
 <table class="mb-0">
+<caption class="visually-hidden">Composizione del Consiglio Direttivo del Gruppo Comunale Volontari di Protezione Civile, eletto il 14 ottobre 2023 per il quinquennio 2023-2028</caption>
 <thead>
-<tr><th>Ruolo</th><th>Nome</th></tr>
+<tr><th scope="col">Ruolo</th><th scope="col">Nome</th></tr>
 </thead>
 <tbody>
 <tr><td><strong><i class="bi bi-star-fill text-warning me-1" aria-hidden="true"></i> Coordinatore</strong></td><td>Dario Iacoangeli</td></tr>

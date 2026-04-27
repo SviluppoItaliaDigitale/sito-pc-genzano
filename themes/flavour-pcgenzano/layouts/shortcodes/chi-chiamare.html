@@ -1,0 +1,42 @@
+{{- /*
+  Shortcode chi-chiamare — chiusura standard delle pagine /rischi-prevenzione/*.
+  Mostra in modo uniforme i numeri da chiamare in base alla gravità,
+  con il principio cardine NUE 112 e il chiarimento che il Gruppo Comunale
+  non e' attivabile direttamente dal cittadino.
+
+  Uso: {{< chi-chiamare >}}      (versione standard)
+  Uso: {{< chi-chiamare contesto="incendio" >}}  (futuro: variante per rischio)
+
+  WCAG: tabella con caption + th scope="col"; alert role=note per il
+  chiarimento finale; contrasto WCAG AA.
+*/ -}}
+<section class="chi-chiamare-box" aria-labelledby="chi-chiamare-titolo">
+<h2 id="chi-chiamare-titolo">Chi chiamare</h2>
+
+<div class="table-responsive">
+<table class="chi-chiamare-table">
+<caption>Numero da chiamare in base alla gravità della situazione</caption>
+<thead>
+<tr><th scope="col">Situazione</th><th scope="col">Numero</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vita in pericolo</strong> (ferito grave, persona dispersa, incendio attivo, esplosione, evento in corso)</td>
+<td><a href="tel:112" class="chi-chiamare-call"><strong>112</strong></a><br><span class="text-muted small">Numero Unico Emergenze (NUE)</span></td>
+</tr>
+<tr>
+<td><strong>Pericolo concreto</strong> (albero pericolante, smottamento, allagamento di strade, tetto a rischio crollo)</td>
+<td><a href="tel:112" class="chi-chiamare-call"><strong>112</strong></a><br><span class="text-muted small">Smista a Vigili del Fuoco / Polizia Locale</span></td>
+</tr>
+<tr>
+<td><strong>Segnalazione non urgente</strong> (informazione, evento previsto, situazione da monitorare)</td>
+<td><strong>803 555</strong><br><span class="text-muted small">Sala Operativa PC Lazio</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="alert alert-light border-start border-primary border-3 mt-3" role="note">
+<p class="mb-0"><i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Il <strong>Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma non può essere attivato direttamente dai cittadini</strong>. In caso di emergenza chiama il <strong>112</strong>: saranno le autorità competenti (Comune, Centro Funzionale Lazio, Prefettura) ad allertare e attivare le nostre squadre.</p>
+</div>
+</section>

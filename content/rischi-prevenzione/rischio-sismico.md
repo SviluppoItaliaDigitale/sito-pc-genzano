@@ -85,3 +85,5 @@ I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. D
 - **Non rientrare in edifici danneggiati** per recuperare oggetti
 - **Non diffondere notizie non verificate**: segui solo le fonti ufficiali
 {{< /cosa-non-fare >}}
+
+{{< chi-chiamare >}}

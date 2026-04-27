@@ -48,3 +48,5 @@ Il territorio di Genzano, con la sua rete di distribuzione che attraversa aree b
 - **Non forzare le porte dell'ascensore** se sei bloccato: aspetta i soccorsi
 - **Non dare per scontato che il blackout sia breve**: preparati sempre al peggio
 {{< /cosa-non-fare >}}
+
+{{< chi-chiamare >}}
