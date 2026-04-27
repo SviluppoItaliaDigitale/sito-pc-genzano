@@ -81,6 +81,10 @@ Sarà lo stesso Zamberletti a riconoscere pubblicamente, alla fine dell'emergenz
 
 Ancora una volta gli scout sono in prima linea. Ma dopo l'Irpinia il movimento prende una decisione storica: l'intervento spontaneo non basta più. Serve un'organizzazione interna **stabile**, addestrata, coordinata.
 
+{{< foto src="/images/2026-04-23-irpinia-1980-terremoto-scout.webp"
+         alt="Mappa USGS dell'intensità sismica del terremoto dell'Irpinia del 23 novembre 1980"
+         caption="Mappa dell'intensità sismica del terremoto dell'Irpinia del 23 novembre 1980: 6,9 di magnitudo, quasi tremila morti, 280.000 senzatetto. Dopo questa catastrofe nasce il Settore Protezione Civile AGESCI. Foto: USGS — Public domain — via Wikimedia Commons." >}}
+
 Nel **1982**, il Consiglio Generale dell'AGESCI istituisce il **Settore Protezione Civile**. Da allora il Settore PC AGESCI è:
 
 - **iscritto nell'elenco nazionale** delle organizzazioni di volontariato di Protezione Civile presso il Dipartimento;
@@ -125,6 +129,10 @@ Dopo il terremoto del **24 agosto 2016** che ha distrutto Amatrice, Accumoli e A
 
 Tra il **17 giugno e il 10 settembre 2017** organizzano **cinque route di strada e servizio** in Valnerina: settimane di cammino e lavoro che attraversano i territori colpiti, con attività con bambini, anziani, disabili, e attività di recupero materiale. È una formula nuova: l'emergenza è passata, ma la **comunità ferita** ha bisogno di compagnia, di vita, di mani che lavorino accanto.
 
+{{< foto src="/images/2026-04-23-centro-italia-2016-scout.webp"
+         alt="Centro Italia 2016: la sequenza sismica che ha colpito Amatrice, Norcia, Visso e Camerino"
+         caption="Centro Italia 2016: la sequenza sismica che ha distrutto Amatrice, Accumoli, Arquata del Tronto e poi Visso, Norcia, Camerino. Gli scout dell'AGESCI Umbria hanno organizzato cinque route di servizio in Valnerina nel 2017. Foto: INGV / Centro Nazionale Terremoti — CC BY 4.0 — via Wikimedia Commons." >}}
+
 ## Emilia-Romagna 2023: la SAE attivata a Forlì
 
 **Maggio 2023**. L'**alluvione dell'Emilia-Romagna**: 17 vittime, 50.000 sfollati, danni per oltre 8 miliardi di euro. L'Agenzia Regionale di Protezione Civile attiva l'**AGESCI Emilia-Romagna**.
@@ -134,6 +142,10 @@ Da **giovedì 25 maggio**, il Settore Protezione Civile apre a **Forlì** la **S
 In sole **due serate di formazione su YouTube**, il **23 e 25 maggio**, oltre **mille volontari scout** seguono il **Corso Emergenza Alluvione (CEA)** che li abilita a operare. Le squadre lavorano nel quartiere Romiti e alla palestra Campostrino: 10 volontari il venerdì 26 maggio, 19 il sabato 27, **75 volontari** la sola domenica 28 maggio.
 
 In sei settimane, AGESCI Emilia-Romagna raccoglie **42.700 euro** di donazioni a sostegno dei gruppi scout direttamente colpiti dall'alluvione.
+
+{{< foto src="/images/2026-04-23-emilia-romagna-2023-scout.webp"
+         alt="Immagine satellitare NASA dell'alluvione dell'Emilia-Romagna del maggio 2023"
+         caption="Maggio 2023: l'alluvione dell'Emilia-Romagna vista dal satellite Minerva (NASA). 17 vittime, 50.000 sfollati, oltre 8 miliardi di danni. AGESCI ha attivato la Segreteria Avanzata di Emergenza a Forlì, formando oltre mille volontari in due serate su YouTube. Foto: NASA — Public domain — via Wikimedia Commons." >}}
 
 ## Formazione: il Corso Sicurezza e i percorsi specifici
 
