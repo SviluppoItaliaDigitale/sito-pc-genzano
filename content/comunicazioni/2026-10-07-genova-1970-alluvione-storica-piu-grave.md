@@ -5,13 +5,14 @@ description: "Tra il 7 e l'8 ottobre 1970 una bomba d'acqua eccezionale colpì G
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Alluvione di Genova del 1970" 2026-10-07-genova-1970-alluvione-storica-piu-grave
+image: "/images/2026-10-07-genova-1970-alluvione-storica-piu-grave.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "(non specificato) — CC BY 2.5 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Ponte_di_Sant%27Agata_5.jpg"
 ---
 
 Tra il **7 e l'8 ottobre 1970** una pioggia di intensità eccezionale si abbatté sulla Liguria centrale. A Genova furono registrati **oltre 900 millimetri di pioggia in 24 ore** in alcune stazioni del bacino del Bisagno — più di quanto cade normalmente in mezzo anno. Il **torrente Bisagno**, che attraversa Genova in gran parte tombato sotto la città, esondò violentemente.

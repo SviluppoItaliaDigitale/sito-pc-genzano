@@ -5,13 +5,14 @@ description: "Alle 7:53 del 13 gennaio 1915 una scossa di magnitudo 7.0 distruss
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto della Marsica" 2027-01-13-avezzano-1915-terremoto-marsica
+image: "/images/2027-01-13-avezzano-1915-terremoto-marsica.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "John Lansing Callan — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Avezzano_aerea_1915.jpg"
 ---
 
 Alle **7:53 del 13 gennaio 1915** una scossa sismica di **magnitudo 7.0** colpì la conca del Fucino, in Abruzzo. **Avezzano** e altri 15 comuni della Marsica furono **rasi al suolo**. Bilancio: **oltre 30.000 morti** (su una popolazione locale di circa 35.000), migliaia di feriti, centri storici cancellati per sempre.

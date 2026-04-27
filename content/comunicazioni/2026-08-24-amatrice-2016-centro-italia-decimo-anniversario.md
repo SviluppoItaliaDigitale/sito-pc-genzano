@@ -5,13 +5,14 @@ description: "Alle 3:36 del 24 agosto 2016 una scossa di magnitudo 6.0 distrusse
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Centro Italia del 2016 e 2017" 2026-08-24-amatrice-2016-centro-italia-decimo-anniversario
+image: "/images/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Istituto Nazionale di Geofisica e Vulcanologia and Centro Nazionale Terremoti — CC BY 4.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:2016_central_italy_earthquake.jpg"
 ---
 
 Alle **3:36 del 24 agosto 2016** una scossa di **magnitudo 6.0** colpì l'Appennino centrale, al confine tra Lazio, Umbria, Marche e Abruzzo. L'epicentro tra Accumoli e Amatrice. **299 morti**. Tre paesi cancellati: **Amatrice**, **Accumoli**, **Arquata del Tronto**.

@@ -5,13 +5,14 @@ description: "Nella notte tra il 15 e il 16 settembre 2022 il bacino del Misa fu
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Alluvione delle Marche del settembre 2022" 2026-09-15-marche-alluvione-2022-acqua-piano
+image: "/images/2026-09-15-marche-alluvione-2022-acqua-piano.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "NASA — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:2022_Italy_flood.jpg"
 ---
 
 Nella notte tra il **15 e il 16 settembre 2022** il bacino dei fiumi **Misa, Sentino e Burano** nelle Marche fu colpito da un evento meteorologico estremo. In alcune stazioni furono registrati **oltre 400 millimetri di pioggia in tre ore** — più di quanto cade normalmente in cinque mesi. Il fiume **Misa** straripò a Senigallia. Il torrente **Burano** a Cantiano spazzò via case, auto, ponti.
