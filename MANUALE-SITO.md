@@ -25,8 +25,12 @@
 >   decorativi, non solo-colore per allerte). Adozione **complementare al manuale AGID**
 >   delle linee guida **ISO 22329:2021** e del **CWA CEN/CENELEC** sui messaggi social in
 >   emergenza.
-> - **Parte 13.9** — riferimenti normativi estesi a ISO 22329:2021, CWA CEN/CENELEC e WCAG
->   2.2 AA come complemento ad AGID.
+> - **Parte 13.9** — gerarchia delle fonti normative riorganizzata in 6 livelli con prevalenza
+>   esplicita: italiano vincolante (AGID + DPC) → scientifico italiano (CNR, ISPRA) →
+>   tecnico-operativo europeo (EENA, CWA) → standard internazionali (ISO, WCAG) → normativa
+>   orizzontale. **DPC** elevato a riferimento principale (era citato solo come D.Lgs. 1/2018).
+>   Aggiunti **CNR-IRPI/INGV/IGAG** (autorità scientifica) e **EENA** (riferimento europeo,
+>   coerente con l'articolo Where Are U pubblicato).
 >
 > **Changelog 2.4 (2026-04-24)**
 > - **Parte 4.8**: documentata la nuova struttura didattica completa dei **4 kit scuola** (`content/formazione/kit-scuola-*.md`) — ampliati dopo feedback positivi dei docenti che hanno richiesto maggiore chiarezza e completezza. Ogni kit include ora riferimenti normativi espliciti (L. 92/2019, Linee guida 2020/2024, art. 18 D.Lgs. 1/2018), obiettivi formalizzati (conoscenze/abilità/competenze chiave europee), tabelle per disciplina, rubriche di valutazione, schede fotocopiabili, adattamenti per BES/DSA/L2, raccordo con il Piano di Emergenza scolastico, coinvolgimento delle famiglie e FAQ del docente.
@@ -4454,29 +4458,63 @@ di questo manuale (v. workflow `.github/workflows/aggiorna-manuale.yml`). Ogni r
 viene annotata nel changelog in cima al manuale e nella pagina pubblica con la formula
 *"Versione aggiornata al DD/MM/AAAA"*.
 
-### 13.9 — Coerenza con la normativa
+### 13.9 — Coerenza con la normativa e gerarchia delle fonti
 
-La presente policy è redatta in coerenza con:
+La presente policy è redatta in coerenza con un quadro di fonti **gerarchico**: in caso di conflitto teorico, prevale la fonte di livello superiore.
 
-- **Linee guida per la comunicazione digitale della PA** (AGID / Dipartimento per la
-  Trasformazione digitale) — riferimento principale.
-- **Decreto-legge 14 marzo 2025 n. 25**, convertito con modificazioni dalla **Legge 9 maggio
-  2025 n. 69**, che disciplina il ruolo del *Social Media Manager* e del *Digital Manager*
-  nella PA (vedi **11.10 — Ruoli e flusso di approvazione**).
-- **Regolamento UE 2016/679 (GDPR)** per la gestione dei dati personali eventualmente emersi
-  dai commenti.
-- **Legge 4/2004 (Stanca)** e **Direttiva UE 2016/2102** sull'accessibilità dei contenuti
-  digitali della PA.
+#### 13.9.1 — Livello principale (italiano, vincolante)
+
+- **AGID — Linee guida per la comunicazione digitale della PA** (Dipartimento per la Trasformazione digitale). Riferimento orizzontale per ogni contenuto digitale della PA: stile, accessibilità, linguaggio chiaro, design system. Aggiornate periodicamente su designers.italia.it.
+- **DPC — Dipartimento della Protezione Civile**, riferimento settoriale italiano per la comunicazione del rischio e dell'emergenza. Comprende:
+  - **D.Lgs. 1/2018** (Codice della Protezione Civile);
+  - **Direttiva PCM 30 aprile 2021** sulla gestione del Servizio nazionale di Protezione Civile e delle relative comunicazioni;
+  - **Linee guida DPC sulla comunicazione del rischio e dell'emergenza** (varie pubblicazioni e direttive);
+  - **Campagne nazionali "Io non rischio"** — manuali operativi sui rischi sismico, vulcanico, maremoto, alluvione, incendio boschivo;
+  - **Bollettini di criticità nazionale** e **codici colore ufficiali** (la nostra terminologia su livelli verde/giallo/arancione/rosso deriva da qui).
+
+In caso di conflitto tra AGID e DPC su un contenuto di Protezione Civile, **vince DPC** perché siamo un Gruppo Comunale del Sistema Nazionale di PC ai sensi del D.Lgs. 1/2018.
+
+#### 13.9.2 — Livello scientifico (italiano)
+
+- **CNR — Consiglio Nazionale delle Ricerche**: autorità scientifica per il merito dei contenuti sui rischi naturali. Istituti di riferimento:
+  - **CNR-IRPI** (Istituto di Ricerca per la Protezione Idrogeologica) — frane, alluvioni, dissesti.
+  - **CNR-INGV** (con l'INGV, Istituto Nazionale di Geofisica e Vulcanologia) — sismologia, vulcanologia.
+  - **CNR-IGAG** (Istituto di Geologia Ambientale e Geoingegneria) — territori e infrastrutture.
+- **ISPRA** (Istituto Superiore per la Protezione e la Ricerca Ambientale) per dati territoriali nazionali.
+
+CNR garantisce la **correttezza scientifica** dei contenuti, DPC la **correttezza operativa** della comunicazione. In conflitto su un dato scientifico vince CNR; sul *come* comunicarlo al cittadino vince DPC.
+
+#### 13.9.3 — Livello tecnico-operativo (europeo)
+
+- **EENA — European Emergency Number Association**: riferimento europeo per le chiamate di emergenza e l'uso operativo dei social. Pubblicazioni utili:
+  - *Social Media in Emergency Services* (best practice europee);
+  - documentazione sul **Numero Unico Europeo 112** e sull'**app Where Are U** (sviluppata con il loro coinvolgimento, vedi articolo `2026-04-27-app-where-are-u-112-localizzazione-emergenza.md`);
+  - linee guida sull'accessibilità del 112 per persone con disabilità.
+- **CWA CEN/CENELEC draft** *Guidelines for effective social media messages in crisis and emergency situations* — adottato per la struttura dei messaggi di allerta e per l'accessibilità dei post (vedi **13.7**).
+
+#### 13.9.4 — Livello standard (internazionali)
+
+- **ISO 22329:2021** *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies* — quadro di riferimento per monitoraggio, disseminazione, interazione e gestione della disinformazione (vedi **13.7**).
 - **WCAG 2.2 AA** (W3C) per l'accessibilità tecnica dei contenuti.
+
+#### 13.9.5 — Riferimenti normativi orizzontali
+
+- **Decreto-legge 14 marzo 2025 n. 25**, convertito con modificazioni dalla **Legge 9 maggio 2025 n. 69**, che disciplina il ruolo del *Social Media Manager* e del *Digital Manager* nella PA (vedi **11.10 — Ruoli e flusso di approvazione**).
+- **Regolamento UE 2016/679 (GDPR)** per la gestione dei dati personali eventualmente emersi dai commenti.
+- **Legge 4/2004 (Stanca)** e **Direttiva UE 2016/2102** sull'accessibilità dei contenuti digitali della PA.
 - **Codice dell'amministrazione digitale** (D.Lgs. 82/2005 e successive modificazioni).
-- **D.Lgs. 1/2018** (Codice della Protezione Civile) per il quadro di riferimento operativo.
-- **ISO 22329:2021** *Security and resilience — Emergency management — Guidelines for the use
-  of social media in emergencies* — adozione complementare al manuale AGID per le buone
-  pratiche operative su monitoraggio, disseminazione e interazione con il pubblico durante le
-  emergenze (vedi **13.7**).
-- **CEN/CENELEC Workshop Agreement (CWA) draft** *Guidelines for effective social media
-  messages in crisis and emergency situations* — adottato per la struttura dei messaggi di
-  allerta e per l'accessibilità dei post (vedi **13.7**).
+
+#### 13.9.6 — Gerarchia di prevalenza in caso di conflitto
+
+| Priorità | Livello | Fonti |
+|---|---|---|
+| 1 | Italiano vincolante | AGID + DPC (DPC prevale su AGID per la PC) |
+| 2 | Scientifico italiano | CNR (IRPI, INGV, IGAG), ISPRA |
+| 3 | Tecnico-operativo europeo | EENA, CWA CEN/CENELEC |
+| 4 | Standard internazionali | ISO 22329:2021, WCAG 2.2 AA |
+| 5 | Normativa orizzontale | DL 25/2025, GDPR, L. 4/2004, CAD |
+
+Il livello inferiore si applica **quando** il livello superiore non dispone diversamente.
 
 ---
 

@@ -163,17 +163,41 @@ Per chiarezza verso il cittadino, esplicitiamo anche i comportamenti che non rie
 
 ## Riferimenti normativi e tecnici
 
-Questa Social Media Policy è coerente con:
+Questa Social Media Policy è coerente con un quadro di fonti **gerarchico**: in caso di conflitto, prevale la fonte di livello superiore.
 
-- Linee guida per la comunicazione digitale della PA (AGID / Dipartimento per la Trasformazione digitale) — riferimento principale;
+### Livello principale — italiano vincolante
+
+- **AGID — Linee guida per la comunicazione digitale della PA** (Dipartimento per la Trasformazione digitale): riferimento orizzontale per stile, accessibilità, linguaggio chiaro, design system.
+- **DPC — Dipartimento della Protezione Civile**, riferimento settoriale italiano per la comunicazione del rischio e dell'emergenza:
+  - **D.Lgs. 1/2018** (Codice della Protezione Civile);
+  - **Direttiva PCM 30 aprile 2021** sul Servizio nazionale di Protezione Civile;
+  - **Linee guida DPC sulla comunicazione del rischio** e relative direttive operative;
+  - **Campagne nazionali "Io non rischio"** (rischio sismico, vulcanico, maremoto, alluvione, incendio boschivo);
+  - **Bollettini di criticità nazionale** e **codici colore** ufficiali (verde, giallo, arancione, rosso).
+
+In caso di conflitto tra AGID e DPC su un contenuto di Protezione Civile, prevale **DPC** perché siamo un Gruppo Comunale del Sistema Nazionale di PC (D.Lgs. 1/2018).
+
+### Livello scientifico — italiano
+
+- **CNR — Consiglio Nazionale delle Ricerche** (CNR-IRPI per idrogeologico, CNR-INGV con INGV per sismologico-vulcanologico, CNR-IGAG per geologico): riferimento per il merito scientifico dei contenuti sui rischi naturali.
+- **ISPRA — Istituto Superiore per la Protezione e la Ricerca Ambientale**: dati territoriali nazionali.
+
+### Livello tecnico-operativo — europeo
+
+- **EENA — European Emergency Number Association**: riferimento europeo del Numero Unico 112 e dell'app *Where Are U*. Pubblicazioni operative *Social Media in Emergency Services* e linee guida sull'accessibilità del 112.
+- **CWA CEN/CENELEC draft** *Guidelines for effective social media messages in crisis and emergency situations*: struttura dei messaggi di allerta e accessibilità dei post.
+
+### Livello standard — internazionale
+
+- **ISO 22329:2021** *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies*: monitoraggio, disseminazione, interazione, gestione della disinformazione.
+- **WCAG 2.2 AA** (W3C): accessibilità tecnica.
+
+### Normativa orizzontale
+
 - Decreto-legge 14 marzo 2025 n. 25, convertito con modificazioni dalla Legge 9 maggio 2025 n. 69 (*Social Media Manager* e *Digital Manager* nella PA);
 - Regolamento UE 2016/679 (GDPR) per la tutela dei dati personali;
 - Legge 9 gennaio 2004 n. 4 (Stanca) e Direttiva UE 2016/2102 sull'accessibilità dei contenuti digitali;
-- Web Content Accessibility Guidelines 2.2 del W3C, livello AA;
-- Codice dell'amministrazione digitale (D.Lgs. 82/2005 e successive modificazioni);
-- D.Lgs. 2 gennaio 2018 n. 1 (Codice della Protezione Civile);
-- **ISO 22329:2021** *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies* — adozione complementare al manuale AGID per le buone pratiche operative su monitoraggio, disseminazione e interazione con il pubblico durante le emergenze;
-- **CEN/CENELEC Workshop Agreement (CWA) draft** *Guidelines for effective social media messages in crisis and emergency situations* — adottato per la struttura dei messaggi di allerta e per l'accessibilità dei post.
+- Codice dell'amministrazione digitale (D.Lgs. 82/2005 e successive modificazioni).
 
 ## Contatti
 
@@ -183,4 +207,4 @@ Per segnalazioni sulla policy, richieste di chiarimento o ricorsi sulla moderazi
 
 Versione pubblicata il **22 aprile 2026**, aggiornata il **27 aprile 2026**. La policy viene rivista almeno una volta all'anno. Le modifiche significative sono annotate in fondo alla pagina con data e sintesi.
 
-**27 aprile 2026** — aggiunta la sezione *"Comunicazione di crisi sui social"* con struttura standard del messaggio di allerta, policy degli hashtag, monitoraggio della disinformazione, ridondanza tra canali e accessibilità dei post. Riferimenti normativi estesi a ISO 22329:2021 e al CWA CEN/CENELEC sui messaggi social in emergenza, in coerenza complementare al manuale AGID.
+**27 aprile 2026** — aggiunta la sezione *"Comunicazione di crisi sui social"* con struttura standard del messaggio di allerta, policy degli hashtag, monitoraggio della disinformazione, ridondanza tra canali e accessibilità dei post. Riferimenti normativi riorganizzati in 5 livelli con gerarchia di prevalenza esplicita: italiano vincolante (AGID + DPC) → scientifico italiano (CNR, ISPRA) → tecnico-operativo europeo (EENA, CWA CEN/CENELEC) → standard internazionali (ISO 22329:2021, WCAG 2.2 AA) → normativa orizzontale. **DPC** elevato a riferimento principale insieme ad AGID.
