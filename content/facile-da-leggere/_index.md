@@ -107,6 +107,9 @@ sitemap:
 <div class="facile-blocco">
 <h2><span class="icona">📞</span> Numero di emergenza</h2>
 <p>Per ogni emergenza chiama il <strong>112</strong>.</p>
+
+{{< pittogramma src="/pittogrammi/arasaac/112.png" alt="Pittogramma del numero 112" size="large" >}}
+
 <p>È <strong>gratis</strong>. Funziona anche senza credito.</p>
 <a class="tel-grande" href="tel:112">📞 Chiama il 112</a>
 <p>Quando rispondono, dì:</p>
@@ -121,6 +124,9 @@ sitemap:
 <div class="facile-blocco">
 <h2><span class="icona">🌍</span> Se trema la terra</h2>
 <p>Se senti tremare la terra:</p>
+
+{{< pittogramma src="/pittogrammi/arasaac/nascondersi-tavolo.png" alt="Pittogramma: persona che si nasconde sotto un tavolo durante il terremoto" size="large" >}}
+
 <ul class="facile-elenco">
 <li>Vai sotto un tavolo</li>
 <li>Metti le mani sulla testa</li>
@@ -138,6 +144,9 @@ sitemap:
 <div class="facile-blocco">
 <h2><span class="icona">🌧️</span> Se piove molto forte</h2>
 <p>Se piove tanto e c'è il fango:</p>
+
+{{< pittogramma src="/pittogrammi/arasaac/alluvione.png" alt="Pittogramma: alluvione con acqua alta" size="large" >}}
+
 <ul class="facile-elenco">
 <li>Resta in casa</li>
 <li>Vai al piano alto</li>
@@ -154,6 +163,9 @@ sitemap:
 <div class="facile-blocco">
 <h2><span class="icona">🔥</span> Se vedi del fumo</h2>
 <p>Se vedi fumo grande in casa:</p>
+
+{{< pittogramma src="/pittogrammi/arasaac/incendio.png" alt="Pittogramma: incendio" size="large" >}}
+
 <ul class="facile-elenco">
 <li>Avvisa subito un adulto</li>
 <li>Esci di casa</li>
@@ -170,6 +182,9 @@ sitemap:
 <div class="facile-blocco">
 <h2><span class="icona">⛈️</span> Se c'è un temporale</h2>
 <p>Se ci sono fulmini e vento forte:</p>
+
+{{< pittogramma src="/pittogrammi/arasaac/temporale.png" alt="Pittogramma: temporale con fulmini e pioggia" size="large" >}}
+
 <ul class="facile-elenco">
 <li>Resta in casa</li>
 <li>Chiudi le finestre</li>
@@ -186,6 +201,9 @@ sitemap:
 <div class="facile-blocco">
 <h2><span class="icona">🎒</span> Cosa metto nello zaino di emergenza</h2>
 <p>Tieni in casa uno zaino con:</p>
+
+{{< pittogramma src="/pittogrammi/arasaac/zaino.png" alt="Pittogramma: zaino di emergenza" size="large" >}}
+
 <ul class="facile-elenco">
 <li>Acqua</li>
 <li>Cibo a lunga conservazione</li>
@@ -201,6 +219,9 @@ sitemap:
 <h2><span class="icona">📍</span> Dove andare</h2>
 <p>A Genzano ci sono <strong>posti sicuri</strong>.</p>
 <p>Si chiamano <strong>aree di attesa</strong>.</p>
+
+{{< pittogramma src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Cartello del punto di raccolta" size="large" >}}
+
 <p>Sono in posti aperti e larghi.</p>
 <p>Tu vai lì se la tua casa non è sicura.</p>
 <p>👉 <a href="/cartografia/" style="display: inline-block; background: #003366; color: #fff; padding: 0.8rem 1.2rem; border-radius: 8px; text-decoration: none; margin-top: 0.5rem;">Vedi i posti sicuri di Genzano</a></p>
@@ -209,6 +230,9 @@ sitemap:
 <div class="facile-blocco">
 <h2><span class="icona">🆘</span> Chi ti aiuta</h2>
 <p>In Italia ci sono persone che ti aiutano in emergenza.</p>
+
+{{< pittogramma src="/pittogrammi/arasaac/volontario.png" alt="Pittogramma: volontario di protezione civile" size="large" >}}
+
 <p>Sono:</p>
 <ul class="facile-elenco">
 <li><strong>I Vigili del Fuoco</strong> — spengono il fuoco</li>
