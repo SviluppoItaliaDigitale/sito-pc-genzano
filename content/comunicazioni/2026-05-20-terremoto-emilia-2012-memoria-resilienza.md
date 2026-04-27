@@ -31,6 +31,11 @@ La Pianura Padana era considerata, nell'immaginario collettivo, una zona **a ris
 
 Una delle immagini più drammatiche del sisma 2012 furono i **capannoni industriali collassati**, con pesanti conseguenze per chi era al lavoro. I capannoni prefabbricati degli anni '70-'80, diffusi in tutta Italia, avevano una caratteristica costruttiva comune: pilastri e travi tenuti insieme per **semplice appoggio**, non per collegamento strutturale.
 
+{{< foto src="/images/2026-05-20-terremoto-emilia-2012-memoria-resilienza-mirandola-emilia-2012.webp"
+         alt="Castello dei Pico a Mirandola, gravemente danneggiato dal terremoto del 2012"
+         caption="Il Castello dei Pico a Mirandola (Modena): simbolo del comune, fu gravemente danneggiato dal terremoto dell'Emilia del 20 e 29 maggio 2012. Riaperto al pubblico nel 2018 dopo i lavori di consolidamento. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Castello_di_Mirandola.JPG)." >}}
+
+
 Durante la scossa, le travi "saltarono via" dai pilastri e i tetti caddero. Il contesto lavorativo — operai e macchinari all'interno — rese la tragedia particolarmente grave.
 
 **Seconda lezione**: la **sismica degli edifici industriali** è diventata un'area di attenzione normativa e di intervento con incentivi fiscali. Non solo le case: tutti gli edifici dove si vive o si lavora devono essere valutati.

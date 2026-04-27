@@ -30,6 +30,11 @@ I primi soccorsi arrivarono nel giro di un'ora dal Comando provinciale dei Vigil
 
 Il sisma del Centro Italia ha consolidato alcune lezioni della Protezione Civile italiana:
 
+{{< foto src="/images/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario-norcia-borgo-umbro.webp"
+         alt="Norcia (Perugia), comune colpito dalla sequenza sismica del Centro Italia 2016"
+         caption="Norcia (Perugia): il borgo umbro, patria di San Benedetto, fu colpito dalla scossa M 6.5 del 30 ottobre 2016, una delle più forti registrate in Italia dal 1980. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:NorciaMar292024_02.jpg)." >}}
+
+
 1. **La normativa antisismica funziona, dove è applicata.** Edifici recenti progettati con criteri sismici hanno retto. Edifici storici **mai adeguati** sono crollati. Da qui la spinta al **Sismabonus**, alle linee guida sulla classificazione sismica degli edifici, e alla pianificazione della ricostruzione che impone standard più severi.
 
 2. **L'efficacia dei Centri Operativi.** I Centri Operativi Comunali (COC), Misti (COM) e Coordinati (DICOMAC) hanno permesso di gestire migliaia di soccorritori e decine di migliaia di sfollati in modo coordinato. La pianificazione comunale che chiediamo di sviluppare a Genzano (vedi [Piano di Emergenza](/piano-emergenza/)) si basa sugli stessi principi.

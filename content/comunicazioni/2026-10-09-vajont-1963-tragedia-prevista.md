@@ -35,6 +35,11 @@ Le segnalazioni furono **minimizzate o ignorate**. Le decisioni operative furono
 - Oltre 350 famiglie scomparse interamente
 - Il primo grande processo italiano per "disastro colposo" e omicidio plurimo
 
+{{< foto src="/images/2026-10-09-vajont-1963-tragedia-prevista-longarone-paese.webp"
+         alt="Longarone (Belluno), oggi: il paese fu cancellato dall'onda del Vajont nel 1963"
+         caption="Longarone oggi: il paese ricostruito dopo la notte del 9 ottobre 1963, quando l'onda del Vajont arrivata in 4 minuti distrusse l'abitato uccidendo oltre 1900 persone. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Longarone_panoramica.jpg)." >}}
+
+
 ## Cosa ci insegna oggi
 
 Il Vajont è il caso scuola della **comunicazione del rischio mancata**. Tre lezioni che orientano ancora oggi il lavoro della Protezione Civile:

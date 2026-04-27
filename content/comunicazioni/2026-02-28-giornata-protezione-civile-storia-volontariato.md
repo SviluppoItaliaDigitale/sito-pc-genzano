@@ -64,6 +64,11 @@ Il **Decreto Legislativo 2 gennaio 2018, n. 1** — il **Codice della Protezione
 
 Il **Servizio Nazionale della Protezione Civile** è organizzato su **più livelli**:
 
+{{< foto src="/images/2026-02-28-giornata-protezione-civile-storia-volontariato-zamberletti-padre-pc.webp"
+         alt="Giuseppe Zamberletti, padre della Protezione Civile italiana"
+         caption="Giuseppe Zamberletti (Varese 1933 — Roma 2018): primo Commissario straordinario nel terremoto del Friuli 1976, fu nominato ministro per il coordinamento della Protezione Civile dopo l'Irpinia 1980. La legge 225/1992 portò la sua firma. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Giuseppe_Zamberletti.jpg)." >}}
+
+
 ### Livello nazionale
 
 - **Dipartimento della Protezione Civile** (Presidenza del Consiglio).
