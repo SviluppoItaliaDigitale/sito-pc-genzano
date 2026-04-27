@@ -147,7 +147,7 @@ Al successivo push su `main`, il workflow `.github/workflows/scarica-foto-automa
 
 **Permissions richiesti dal workflow**: `contents: write` (per il commit) + `actions: write` (per `gh workflow run`) + `issues: write` (per l'issue di fallback).
 
-**Compatibilità ImageMagick**: `applica-fascia-foto.sh` ha un fallback runtime: usa `magick` (v7) se disponibile, altrimenti `convert` (v6) — necessario perché `apt install imagemagick` su `ubuntu-latest` installa v6. Inoltre comprime progressivamente (qualità 75→30, poi riduzione larghezza 1000→700px) finché `output ≤ 200 KB`.
+**Cross-platform via Pillow**: `applica-fascia-foto.py` è la logica reale di composizione (foto + fascia blu + logo + testo Liberation Sans). Usa Python+Pillow al posto di ImageMagick per evitare problemi cronici (delegate WebP, policy.xml, font discovery, sintassi v6 vs v7). `applica-fascia-foto.sh` è solo un wrapper di compatibilità che invoca lo script Python. Dipendenze runner: `python3-pil` + `fonts-liberation` (apt install). Compressione progressiva: qualità 85→30, poi riduzione larghezza 1000→700px finché `output ≤ 200 KB`.
 
 **Idempotenza**: `aggiorna-frontmatter-foto.py` non sovrascrive `image:` se già popolato. Riesecuzione del workflow su articoli senza marker non fa nulla.
 
