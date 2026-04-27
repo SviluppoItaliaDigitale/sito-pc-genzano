@@ -2692,3 +2692,28 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
 @media print {
   .catalogo-toolbar { display: none !important; }
 }
+
+/* ============================================================
+   ASSISTENTE GUIDATO — pittogramma in cima alle risposte (v1.0)
+   Per nodi answer con pittogramma: opzionale, ARASAAC/ISO 7010
+   centrato sotto il titolo, prima del corpo.
+   ============================================================ */
+.assistente-pittogramma {
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.5rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+.assistente-pittogramma img {
+  max-width: 180px;
+  width: auto;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .assistente-pittogramma img {
+    max-width: 140px;
+  }
+}
