@@ -1,22 +1,23 @@
 ---
 title: "Sciami d'api in estate: cosa fare, chi chiamare, perché non hanno bisogno della nostra paura"
 date: 2026-05-20
-description: "Il 20 maggio è la Giornata Mondiale delle Api. In estate il Gruppo viene spesso chiamato per recuperare sciami: il servizio è svolto dai nostri volontari apicoltori o, in alternativa, dai Vigili del Fuoco e dagli apicoltori di zona. Ecco la guida per il cittadino."
+description: "Il 20 maggio è la Giornata Mondiale delle Api. In estate il recupero degli sciami è un servizio svolto dai Vigili del Fuoco e dagli apicoltori professionisti del territorio: ecco la guida per il cittadino."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-05-20-sciami-api-estate-recupero-genzano.webp"
 image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Sciamatura" 2026-05-20-sciami-api-estate-recupero-genzano it
+image_credit: "John Severns (Severnjc) — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:European_honey_bee_extracts_nectar.jpg"
 ---
 
 Maggio o giugno, una mattina qualunque a Genzano. Ti affacci al balcone e vedi, attaccata a un ramo di un albero del giardino, una **massa scura grande quanto un pallone da rugby**. Si muove. Vibra. Decine di migliaia di api si muovono in coordinazione attorno a un cuore comune. È uno **sciame**: una delle scene più ordinarie e meno comprese della primavera italiana.
 
-Negli ultimi anni il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** riceve regolarmente chiamate per **recupero sciami d'api** — soprattutto fra **maggio e luglio**, nel periodo di sciamatura naturale. Questa pagina spiega che cos'è uno sciame, perché non devi spaventarti, **chi chiamare** e cosa facciamo noi quando ci coinvolgi.
+Negli ultimi anni il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** riceve regolarmente chiamate dei cittadini per il **recupero di sciami d'api** — soprattutto fra **maggio e luglio**, nel periodo di sciamatura naturale. Il servizio operativo non lo svolgiamo noi: in Italia il recupero sciami è di competenza dei **Vigili del Fuoco** e degli **apicoltori professionisti** convenzionati o iscritti all'Albo Apicoltori Regionale. Questa pagina spiega che cos'è uno sciame, perché non devi spaventarti e **chi devi chiamare** in base alla situazione.
 
 ## Il 20 maggio: Giornata Mondiale delle Api
 
@@ -56,30 +57,32 @@ In ordine di importanza:
 2. **Tieni lontani bambini e animali** dalla zona. Non per terrore, per prudenza: un cane che abbaia o un bambino che corre sotto lo sciame può innervosire le api.
 3. **Chiudi finestre e porte** della zona se lo sciame è vicino a casa.
 4. **Non spruzzare insetticida**, non gettare acqua, non avvicinare fiamme. Oltre a essere **illegale** (le api sono protette), peggiori la situazione: lo sciame diventa difensivo.
-5. **Chiama il 112** — se la situazione è critica (sciame in luogo molto frequentato, scuola, ospedale, area allergici nota) — oppure direttamente noi se la situazione è gestibile (vedi sotto).
+5. **Chiama il 112** se la situazione è critica (sciame in luogo molto frequentato, scuola, ospedale, area allergici nota): la Centrale smista ai Vigili del Fuoco. Se la situazione è gestibile (sciame in giardino, in basso, lontano da affollamento) contatta direttamente un **apicoltore professionista** di zona (vedi sotto).
 6. **Aspetta**. Spesso lo sciame **se ne va da solo** entro qualche ora. Se hai pazienza, è la soluzione più naturale.
 
-## Chi recupera uno sciame: la gerarchia operativa
+## Chi recupera uno sciame: i due interlocutori giusti
 
-A Genzano di Roma il sistema funziona così:
+A Genzano di Roma — e in generale in Italia — il recupero sciami è competenza di **due soggetti professionisti**, mai del volontariato di Protezione Civile:
 
-### Prima opzione — apicoltori volontari del nostro Gruppo
+### Prima opzione — Vigili del Fuoco (chiama il 112)
 
-**Alcuni dei nostri volontari sono apicoltori** con esperienza diretta. Quando uno sciame viene segnalato sul territorio comunale e c'è un volontario apicoltore disponibile, **il Gruppo Comunale interviene direttamente** con l'attrezzatura del caso (tute, casse esca, fumigatori, cassetta di trasporto). Lo sciame viene catturato, trasferito in una **arnia** e portato in un apiario di destinazione, dove diventerà una nuova colonia produttiva.
+Il **Corpo Nazionale dei Vigili del Fuoco** è il riferimento istituzionale per il recupero sciami in Italia. Interviene soprattutto quando la situazione richiede **strumenti di accesso** (autoscala, posizioni in altezza, sciami su tetti, cornicioni, antenne, alberi alti) o quando c'è un'urgenza per la sicurezza pubblica. La chiamata si fa al **112** (NUE), che smista al comando VVF competente. I VVF lavorano spesso in collaborazione con apicoltori di zona convenzionati, ai quali consegnano lo sciame catturato.
 
-Il servizio è **gratuito** per il cittadino. L'unico costo è il tuo tempo: aspettare che il volontario arrivi, indicare con precisione il punto, lasciare libera l'area.
+### Seconda opzione — apicoltori professionisti di zona
 
-Per attivarci: **segreteria@protezionecivilegenzano.it** — meglio con foto della scena e indirizzo preciso.
+Per situazioni non urgenti (sciame in giardino, in basso su un ramo, su una recinzione), la via più rapida ed efficace è contattare direttamente un **apicoltore professionista** del territorio. A Genzano di Roma e nei Castelli Romani esistono diversi apicoltori iscritti all'**Albo Apicoltori Regionale del Lazio** (ai sensi della *L.R. 23/2014*). Un apicoltore di zona di solito recupera lo sciame **gratuitamente** o con un piccolo rimborso spese: non è un disturbo, è un **alveare in più** per la sua produzione.
 
-### Seconda opzione — Vigili del Fuoco
+Trovi gli apicoltori della zona nell'**Albo Regionale del Lazio** (link in fondo all'articolo) o tramite le associazioni di categoria locali.
 
-Se nessun apicoltore del Gruppo è disponibile (estate, sovrapposizioni con altre attività, volontari fuori sede), oppure se la situazione richiede strumenti di accesso (autoscala, posizioni in altezza, sciami su tetti), il riferimento è il **115 / 112** dei **Vigili del Fuoco**. I VVF sono **attrezzati per questo servizio** in Italia, in collaborazione con apicoltori di zona convenzionati. La chiamata si fa al **112** (NUE), che smista al comando VVF competente.
+### E il Gruppo Comunale Volontari?
 
-### Terza opzione — apicoltori privati di zona
+**Il nostro Gruppo non svolge il servizio di recupero sciami**. Riceviamo regolarmente segnalazioni di cittadini perché siamo l'unico riferimento di Protezione Civile visibile sul territorio, ma il **servizio operativo** spetta ai professionisti (VVF e apicoltori). Quando ci scrivi possiamo solo:
 
-Se la situazione non è urgente e vuoi una via diretta, puoi contattare un **apicoltore privato** del territorio. A Genzano di Roma e nei Castelli Romani esistono diversi apicoltori, alcuni iscritti all'**Albo Apicoltori Regionale del Lazio** (ai sensi della *L.R. 23/2014*). Un apicoltore di zona di solito recupera lo sciame **gratuitamente** o con un piccolo rimborso spese: non è un dispiacere, è un **alveare in più** per la sua produzione.
+- **Confermarti la specie** (sciame d'api vs nido di calabroni/vespe — distinzione importante, vedi sezione dedicata)
+- **Orientarti** verso il numero giusto da chiamare (112 per i VVF) o verso un apicoltore di zona
+- **Ricordarti i comportamenti corretti** in attesa dell'intervento
 
-Se non conosci nessuno, scrivici e ti mettiamo in contatto.
+Per qualunque richiesta di orientamento: **segreteria@protezionecivilegenzano.it** (allega foto della scena e indirizzo). Non aspettarti che intervenga un nostro volontario sul posto: questo non è un servizio che il Gruppo svolge.
 
 ## Perché le api sono un tema di Protezione Civile
 
@@ -114,10 +117,10 @@ Riassumendo per chiarezza:
 
 ## In sintesi: chi chiamare e in che ordine
 
-1. **Situazione gestibile** (sciame fuori, lontano da affollamento) → scrivi a **segreteria@protezionecivilegenzano.it** allegando foto e indirizzo. Se c'è un nostro volontario apicoltore disponibile, interveniamo noi.
-2. **Situazione urgente** (sciame in luogo affollato, scuola, ospedale, persone allergiche presenti) → chiama il **112**. La Centrale smista a Vigili del Fuoco.
-3. **Conosci già un apicoltore di zona** → contattalo direttamente. Se non lo conosci, scrivici e ti mettiamo in contatto.
-4. **Hai dubbi sulla specie** (sciame vero o nido di calabroni?) → mandaci una foto prima di chiamare. Risparmiamo tempo a tutti.
+1. **Situazione urgente** (sciame in luogo affollato, scuola, ospedale, persone allergiche presenti, sciame in altezza) → chiama subito il **112**. La Centrale smista ai **Vigili del Fuoco**.
+2. **Situazione gestibile** (sciame fuori, in basso, lontano da affollamento) → contatta un **apicoltore professionista** di zona iscritto all'Albo Regionale (link in fondo). Recupera lo sciame gratuitamente o con piccolo rimborso spese.
+3. **Hai dubbi sulla specie** (sciame d'api o nido di calabroni/vespe?) → manda una foto a **segreteria@protezionecivilegenzano.it**. Ti rispondiamo con la specie e ti orientiamo al servizio giusto.
+4. **Vuoi solo orientamento** su chi chiamare → scrivici una mail con foto e indirizzo: ti diamo le indicazioni, ma il servizio operativo lo svolgono VVF o apicoltori professionisti.
 
 ## Per approfondire
 

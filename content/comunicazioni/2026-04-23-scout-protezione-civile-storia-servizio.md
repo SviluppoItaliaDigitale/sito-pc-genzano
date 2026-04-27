@@ -5,7 +5,7 @@ description: "Dal fango di Firenze 1966 all'alluvione dell'Emilia-Romagna 2023, 
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
+image: "/images/2026-04-23-scout-protezione-civile-storia-servizio.webp"
 image_alt: ""
 image_credit: ""
 image_source_url: ""
@@ -13,7 +13,6 @@ scadenza: ""
 area: "Italia"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Saint George and the Dragon (Raphael)" 2026-04-23-scout-protezione-civile-storia-servizio en
 ---
 
 Il **23 aprile** è la festa di **San Giorgio**, patrono dello scoutismo. Robert Baden-Powell, fondatore del movimento, lo scelse per le sue virtù di cavaliere protettore degli indifesi: il santo che affronta il drago è da oltre un secolo il modello del volontario in servizio. In tutto il mondo, oggi, milioni di scout rinnovano la loro Promessa. È la giornata giusta per raccontare il filo lungo che lega il movimento scout italiano alla **Protezione Civile**, dal **fango di Firenze del 1966** alle alluvioni di oggi.
