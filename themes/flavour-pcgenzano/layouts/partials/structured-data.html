@@ -1,5 +1,13 @@
 {{/* Dati strutturati JSON-LD — SEO
-     Organization per homepage, Article per comunicazioni, FAQPage per FAQ, WebPage per il resto */}}
+     Organization+NGO per homepage (gruppo volontariato OdV, NON ente governativo),
+     Article per comunicazioni (con Event aggiuntivo se badge=Evento),
+     FAQPage per FAQ, WebPage per il resto.
+
+     IMPORTANTE: NON usare "GovernmentOrganization" (il Gruppo non rappresenta
+     il Comune o lo Stato — e' associazione di volontariato, OdV) ne'
+     "EmergencyService" (indurrebbe motori di ricerca/assistenti vocali a
+     presentare il Gruppo come servizio di emergenza chiamabile direttamente,
+     contraddicendo la regola fondamentale "in emergenza chiama il 112"). */}}
 {{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
 {{- $basePath := (urls.Parse .Site.BaseURL).Path | default "/" -}}
 {{- $pagePath := strings.TrimPrefix $basePath .RelPermalink -}}
@@ -10,7 +18,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["GovernmentOrganization", "EmergencyService"],
+  "@type": ["Organization", "NGO"],
   "name": "{{ .Site.Title }}",
   "alternateName": "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
   "description": "{{ .Site.Params.description }}",
@@ -39,6 +47,20 @@
     "addressCountry": "IT"
   },
   "foundingDate": "1981",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "{{ .Site.Params.telefono_tel }}",
+      "email": "{{ .Site.Params.email }}",
+      "availableLanguage": ["it", "en"],
+      "areaServed": {
+        "@type": "City",
+        "name": "Genzano di Roma"
+      },
+      "description": "Informazioni non urgenti, richieste organizzative, iscrizioni volontariato. Per emergenze chiamare il 112 (NUE)."
+    }
+  ],
   "knowsAbout": [
     "Protezione Civile",
     "Allerte meteorologiche",
@@ -100,6 +122,42 @@
   "mainEntityOfPage": "{{ $prodURL }}"
 }
 </script>
+{{/* Event aggiuntivo per articoli con badge "Evento" (sagre, esercitazioni,
+     "Io non rischio", giornate dedicate) — aiuta Google Search a mostrare
+     box evento nei risultati. */}}
+{{ if eq .Params.badge "Evento" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "{{ .Title }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}",
+  "startDate": "{{ .Date.Format "2006-01-02" }}",
+  {{ with .Params.scadenza }}"endDate": "{{ . }}",
+  {{ end }}{{ with .Params.image }}"image": "{{ . | absURL }}",
+  {{ end }}"eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "{{ with .Params.area }}{{ . }}{{ else }}Genzano di Roma{{ end }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Genzano di Roma",
+      "postalCode": "00045",
+      "addressRegion": "RM",
+      "addressCountry": "IT"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ $prodBase }}"
+  },
+  "url": "{{ $prodURL }}",
+  "isAccessibleForFree": true
+}
+</script>
+{{ end }}
 {{ end }}
 {{ else if $isFAQ }}
 <script type="application/ld+json">
