@@ -212,6 +212,29 @@ Pagine attualmente con TOC attivo: `/formazione/`, `/formazione/kit-scuola-infan
 - L'indice è nascosto in stampa (`@media print { .article-toc { display: none } }`).
 - Non serve aggiungere ID manuali: Hugo li genera dallo slug del titolo.
 
+### Copertina articolo con didascalia di credit (`partials/article-cover.html`)
+
+Le copertine degli articoli sono renderizzate dal partial `themes/flavour-pcgenzano/layouts/partials/article-cover.html`, chiamato da `_default/single.html` per `content/comunicazioni/*.md`.
+
+Comportamento del partial:
+- Se `.Params.image` presente: produce un `<figure>` con `<img>` e (opzionale) `<figcaption>`.
+- Se `.Params.image` assente: fallback su `images/notizia-default.svg` (no caption, `aria-hidden="true"`).
+- Se `.Params.image_credit` o `.Params.image_source_url` presenti: aggiunge la `<figcaption class="article-cover-credit">` con icona camera, testo credit e link "Fonte originale" (target=_blank, rel=noopener, aria-label esplicito).
+
+Stile in `custom.css` sezione **ARTICLE COVER v1.0**: testo piccolo (0.82rem), italic, allineato a destra, link blu istituzionale. Su mobile: text-align left, font 0.78rem. In stampa: colori convertiti in nero, link che si espande con URL completo (per la riproducibilità del documento stampato).
+
+**Quando viene popolato `image_credit`**: il workflow `scarica-foto-automatica.yml` lo popola automaticamente per gli articoli con marker `# TODO-foto-wikipedia` (e analoghi NASA/USGS). Per articoli con foto utente o foto evento personali, il campo si compila manualmente nel frontmatter.
+
+Esempio frontmatter completo:
+```yaml
+image: "/images/2026-11-23-irpinia-1980.webp"
+image_alt: "ShakeMap del terremoto dell'Irpinia 1980"
+image_credit: "USGS — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:USGS_..."
+```
+
+Compatibilità retroattiva: gli articoli pre-esistenti senza `image_credit` continuano a funzionare normalmente (il `<figcaption>` non viene reso).
+
 ### Pagine legali/istituzionali con data di revisione
 Le pagine `privacy`, `note-legali`, `accessibilita`, `social-media-policy` usano il campo frontmatter `dataUltimaRevisione: "AAAA-MM-GG"`.
 
