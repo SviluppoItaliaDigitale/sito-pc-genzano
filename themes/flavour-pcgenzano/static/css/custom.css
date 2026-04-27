@@ -2655,3 +2655,40 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
     word-break: break-all;
   }
 }
+
+/* ============================================================
+   CATALOGO PITTOGRAMMI — toolbar di ricerca + filtri (v1.0)
+   Pagina /pittogrammi/ con barra ricerca testuale e filtri
+   ISO 7010 per categoria (E/F/W/M/P).
+   ============================================================ */
+.catalogo-toolbar {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  border-left: 4px solid #003366;
+}
+.catalogo-toolbar input[type="search"] {
+  font-size: 1rem;
+}
+.catalogo-filtri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+.catalogo-filtri .catalogo-filtro {
+  font-size: 0.82rem;
+  padding: 0.25rem 0.6rem;
+}
+.catalogo-filtri .catalogo-filtro.active {
+  font-weight: 700;
+  border-width: 2px;
+}
+.catalogo-counter {
+  font-style: italic;
+}
+
+/* Stampa: nascondi la toolbar (i pittogrammi stessi sono visibili) */
+@media print {
+  .catalogo-toolbar { display: none !important; }
+}
