@@ -98,7 +98,7 @@ Memorizzare il 112 — e non altri numeri nazionali — è un atto di **sicurezz
 
 Il 112 è pensato anche per **persone sorde o con difficoltà linguistiche**. Esistono:
 
-- App **Where ARE U** (Regione Lombardia, disponibile in altre regioni): chiamate silenziose con dati di localizzazione precisi.
+- App **[Where Are U](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/)** (sviluppata da AREU Lombardia, attiva anche nel Lazio): chiamate silenziose con dati di localizzazione precisi.
 - SMS dedicati in alcune regioni.
 - Operatori in grado di supportare **lingue straniere principali**.
 

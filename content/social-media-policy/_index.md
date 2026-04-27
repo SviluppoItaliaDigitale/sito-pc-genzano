@@ -2,7 +2,7 @@
 title: "Social Media Policy"
 description: "Come il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma comunica sui social. Canali ufficiali, orari di presìdio, netiquette, moderazione, licenza dei contenuti."
 layout: "single"
-dataUltimaRevisione: "2026-04-22"
+dataUltimaRevisione: "2026-04-27"
 ---
 
 Questa pagina spiega come il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** utilizza i propri canali social: cosa pubblichiamo, in quali orari rispondiamo, cosa chiediamo a chi commenta, come gestiamo gli errori e con quale licenza distribuiamo i contenuti.
@@ -100,6 +100,56 @@ Se pubblichiamo un contenuto che si rivela errato o impreciso, **non lo cancelli
 
 La trasparenza vale più della pulizia. Preferiamo ammettere pubblicamente un errore piuttosto che nasconderlo.
 
+## Comunicazione di crisi sui social
+
+Durante un'allerta o un'emergenza, la qualità del messaggio sociale può fare la differenza tra un cittadino informato e un cittadino in panico. Adottiamo le seguenti regole, allineate alla **norma ISO 22329:2021** *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies* e al **CWA draft CEN/CENELEC** sui messaggi di allerta sui social.
+
+### Struttura standard del messaggio di allerta
+
+Ogni messaggio di allerta o emergenza pubblicato sui nostri canali contiene, nell'ordine:
+
+1. **Tipo di evento** — es. *"Allerta meteo idrogeologica"*, *"Vento forte"*, *"Temporali in arrivo"*.
+2. **Livello e codice colore** — es. *"Allerta gialla"*, *"Codice arancione"*. Mai inventato: solo dal bollettino del Centro Funzionale Regionale del Lazio.
+3. **Area interessata e finestra temporale** — *"Castelli Romani — dalle 12 di sabato alle 18 di domenica"*.
+4. **Cosa fare** — istruzioni di autoprotezione in due o tre punti, in linguaggio chiaro.
+5. **Fonte ufficiale** — link al bollettino del Centro Funzionale Regionale o al sito DPC, sempre verificabile.
+6. **Aggiornamenti** — quando arriverà il prossimo aggiornamento e su quale canale.
+
+### Hashtag
+
+Usiamo hashtag **specifici e localizzati**, non generici. Il principio è: un hashtag = un evento, riconoscibile e univoco, da usare in modo coerente su tutti i canali.
+
+- **#PCGenzano** — identificativo del Gruppo, sempre presente.
+- **#Genzano** — territoriale.
+- **#AllertaLazio** — riferimento regionale, da affiancare allo hashtag DPC quando attivo.
+- Hashtag tematici stabili: **#NUE112**, **#PianoFamiliare**, **#RischioSismico**, **#RischioIncendio**.
+- Per un evento specifico in corso, usiamo un hashtag dedicato e univoco, coordinato con Comune e Regione (es. **#AllagamentiGenzano2026**), evitando di moltiplicare varianti.
+
+Non usiamo hashtag emozionali, virali o ironici durante eventi seri.
+
+### Disinformazione: monitoraggio e risposta
+
+Sui social circolano regolarmente notizie false su rischi, allerte ed emergenze. Le combattiamo con tre strumenti:
+
+- **Monitoraggio attivo** dei canali del territorio (gruppi locali, account istituzionali e cittadini di Genzano e Castelli Romani) durante le finestre di allerta.
+- **Risposta breve, citazione della fonte ufficiale**: quando vediamo circolare una notizia non verificata, rispondiamo con un commento o un post che cita la **fonte ufficiale corretta**, senza polemica e senza nominare l'autore della disinformazione.
+- **Mai amplificare per smentire**: non condividiamo (nemmeno per ironia o critica) post chiaramente falsi, perché ogni condivisione aumenta la loro visibilità. Citiamo il contenuto a parole, mai con screenshot leggibili.
+
+### Ridondanza tra canali
+
+Per ridurre il rischio che un singolo canale fallisca (down, cambio di policy della piattaforma, account compromesso), ogni messaggio importante è pubblicato in **almeno due canali** simultaneamente. La **fonte unica di verità resta il sito istituzionale**, citato in tutti i post social con link diretto.
+
+### Accessibilità dei post
+
+Allineamento al CWA draft *Guidelines for effective social media messages in crisis*:
+
+- **alt text** obbligatorio per ogni immagine, infografica, mappa pubblicata;
+- **massimo due emoji** per post, e mai con funzione informativa critica (lo screen reader può leggerle in modo confuso);
+- **niente testo dentro l'immagine come unica fonte**: ogni informazione importante è anche nel testo del post;
+- **caratteri leggibili**: scrivere in italiano standard, evitare maiuscole continue (lette come URLA dagli screen reader), evitare grassetti unicode decorativi (😀 𝐁𝐎𝐋𝐃 𝐔𝐍𝐈𝐂𝐎𝐃𝐄 non è leggibile dagli screen reader);
+- **colori**: non affidarsi al solo codice colore per il livello di allerta (il rosso e l'arancione non sono distinguibili da daltonici), aggiungere sempre il livello scritto;
+- **lingua chiara**: frasi brevi, voce attiva, niente burocratese — coerentemente con il manuale di stile AGID.
+
 ## Cosa NON facciamo
 
 Per chiarezza verso il cittadino, esplicitiamo anche i comportamenti che non rientrano nella nostra policy:
@@ -111,16 +161,19 @@ Per chiarezza verso il cittadino, esplicitiamo anche i comportamenti che non rie
 - Non rispondiamo in privato a richieste relative a emergenze in corso: in quel caso il canale unico è il **112**.
 - Non siamo un servizio di emergenza. Il servizio è il **112**.
 
-## Riferimenti normativi
+## Riferimenti normativi e tecnici
 
 Questa Social Media Policy è coerente con:
 
-- Linee guida per la comunicazione digitale della PA (AGID / Dipartimento per la Trasformazione digitale);
+- Linee guida per la comunicazione digitale della PA (AGID / Dipartimento per la Trasformazione digitale) — riferimento principale;
 - Decreto-legge 14 marzo 2025 n. 25, convertito con modificazioni dalla Legge 9 maggio 2025 n. 69 (*Social Media Manager* e *Digital Manager* nella PA);
 - Regolamento UE 2016/679 (GDPR) per la tutela dei dati personali;
 - Legge 9 gennaio 2004 n. 4 (Stanca) e Direttiva UE 2016/2102 sull'accessibilità dei contenuti digitali;
+- Web Content Accessibility Guidelines 2.2 del W3C, livello AA;
 - Codice dell'amministrazione digitale (D.Lgs. 82/2005 e successive modificazioni);
-- D.Lgs. 2 gennaio 2018 n. 1 (Codice della Protezione Civile).
+- D.Lgs. 2 gennaio 2018 n. 1 (Codice della Protezione Civile);
+- **ISO 22329:2021** *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies* — adozione complementare al manuale AGID per le buone pratiche operative su monitoraggio, disseminazione e interazione con il pubblico durante le emergenze;
+- **CEN/CENELEC Workshop Agreement (CWA) draft** *Guidelines for effective social media messages in crisis and emergency situations* — adottato per la struttura dei messaggi di allerta e per l'accessibilità dei post.
 
 ## Contatti
 
@@ -128,4 +181,6 @@ Per segnalazioni sulla policy, richieste di chiarimento o ricorsi sulla moderazi
 
 ## Versione e aggiornamenti
 
-Versione pubblicata il **22 aprile 2026**. La policy viene rivista almeno una volta all'anno. Le modifiche significative sono annotate in fondo alla pagina con data e sintesi.
+Versione pubblicata il **22 aprile 2026**, aggiornata il **27 aprile 2026**. La policy viene rivista almeno una volta all'anno. Le modifiche significative sono annotate in fondo alla pagina con data e sintesi.
+
+**27 aprile 2026** — aggiunta la sezione *"Comunicazione di crisi sui social"* con struttura standard del messaggio di allerta, policy degli hashtag, monitoraggio della disinformazione, ridondanza tra canali e accessibilità dei post. Riferimenti normativi estesi a ISO 22329:2021 e al CWA CEN/CENELEC sui messaggi social in emergenza, in coerenza complementare al manuale AGID.

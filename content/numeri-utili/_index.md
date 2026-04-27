@@ -62,7 +62,7 @@ Per informazioni sanitarie ordinarie, prenotazioni, certificazioni, ufficio rela
 ## App utili
 
 - **IT-alert** — Sistema nazionale di allarme pubblico: [it-alert.it](https://www.it-alert.it/it/)
-- **Where ARE U** — App per chiamate di emergenza al 112 con invio automatico della posizione: [scarica l'app](https://where.areu.lombardia.it/)
+- **Where Are U** — App ufficiale del 112 con invio automatico della posizione e chiamata silenziosa: [come funziona](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/) · [scarica l'app](https://where.areu.lombardia.it/)
 
 ## In caso di emergenza
 
