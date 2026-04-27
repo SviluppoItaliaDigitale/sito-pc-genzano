@@ -115,6 +115,21 @@ Pulsante che usa `window.speechSynthesis` per leggere il contenuto della pagina 
 - Non attivare TTS su pagine legali (privacy, note legali, accessibilità) o tecniche (mappa sito, attribuzioni) — non utili da leggere ad alta voce
 - Non aggiungere altri TTS provider (es. Google Cloud TTS, AWS Polly) che richiedono API key/costo: Web Speech API browser è gratuita e sufficiente
 
+## Accessibilità dei post sui social media
+
+Quando il Gruppo pubblica sui canali social istituzionali (Instagram, Facebook, X, Telegram), valgono regole di accessibilità specifiche allineate al **CWA draft CEN/CENELEC** *Guidelines for effective social media messages in crisis and emergency situations* e alla norma **ISO 22329:2021**, complementari al manuale AGID:
+
+- **Alt text obbligatorio** per ogni immagine, infografica, mappa pubblicata. Mai stringa vuota, mai *"Immagine di…"*, mai testo decorativo. L'alt text deve essere equivalente al contenuto informativo dell'immagine (WCAG 1.1.1).
+- **Massimo due emoji per post**, e mai con funzione informativa critica. Gli screen reader leggono le emoji come stringhe lunghe e talvolta confuse (*"Faccia che sorride con cuore"*) e non sono universalmente comprensibili.
+- **Niente testo dentro l'immagine come unica fonte**: ogni informazione importante è anche nel **testo del post**. L'immagine è ridondanza grafica, non veicolo unico (WCAG 1.4.5 — *Images of Text*).
+- **Niente caratteri Unicode decorativi** (`𝐁𝐎𝐋𝐃`, `𝓢𝓬𝓻𝓲𝓹𝓽`, `🅢🅢🅒`, ecc.). Gli screen reader li leggono come *"matematica grassetto B, matematica grassetto O…"* — illeggibili. Usa solo italiano standard. Per enfasi: maiuscole iniziali e parole-chiave, non Unicode.
+- **Niente maiuscole continue** in titoli o frasi intere: gli screen reader le leggono come URLA. Usa **Maiuscole iniziali** o **grassetto** dove disponibile.
+- **Non solo colore** per il livello di allerta. Il rosso e l'arancione non sono distinguibili da utenti con daltonismo (deuteranopia, protanopia): aggiungere sempre il livello scritto in chiaro nel testo (*"Allerta arancione"*, non solo cerchio arancione nell'immagine).
+- **Lingua chiara**: frasi brevi, voce attiva, niente burocratese — coerentemente con il manuale di stile AGID.
+- **Lingua dichiarata**: i post in lingua diversa dall'italiano (es. testo bilingue per turisti, eventi internazionali) devono dichiararlo esplicitamente all'inizio (*"In English below"*).
+
+Le specifiche complete sono in `MANUALE-SITO.md` Parte 13.7.5. La pagina pubblica `/social-media-policy/` espone questi principi al cittadino.
+
 ## Divieti
 
 - Non eliminare il focus outline senza fornire un'alternativa visibile equivalente.

@@ -105,6 +105,19 @@ Non citare numeri di emergenza non verificati. Non presentare più 115/118/1515 
 - Per i comportamenti di autoprotezione, cita sempre fonti ufficiali (DPC, Regione, Comune).
 - Non pubblicare contenuti meteo o di rischio basati su fonti non istituzionali.
 
+## Standard tecnici di riferimento per la comunicazione di emergenza
+
+Oltre ai riferimenti istituzionali italiani (AGID, DPC, Centro Funzionale Regionale Lazio), il Gruppo adotta in modo **complementare** queste norme tecniche internazionali per la comunicazione di emergenza, in particolare sui canali digitali e social:
+
+- **ISO 22329:2021** — *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies*. Quadro di riferimento per: monitoraggio dei canali, disseminazione delle informazioni, interazione con il pubblico, gestione della disinformazione, pianificazione della comunicazione di crisi.
+- **CEN/CENELEC Workshop Agreement (CWA) draft** — *Guidelines for effective social media messages in crisis and emergency situations*. Riferimento per: struttura standard del messaggio di allerta sui social, hashtag specifici e localizzati, accessibilità dei post, scelta delle icone.
+
+Sono **complementari** al manuale AGID, non sostitutivi: in caso di conflitto, **vince AGID**. Esempi di adozione e di non-adozione (con motivazione) sono in `MANUALE-SITO.md` Parte 13.7.
+
+**Non adottiamo:**
+- Il CWA suggerisce di "evitare il colore verde" perché ambiguo. In Italia il **codice colore verde = nessuna criticità** è ufficiale e standardizzato dal Centro Funzionale Regionale: cambiarlo creerebbe confusione, quindi resta verde.
+- L'ISO 22329 raccomanda un Social Media Manager dedicato 24/7. Non sostenibile per un Gruppo di volontari: manteniamo gli orari di presìdio dichiarati onestamente nella Social Media Policy.
+
 ## Esperti da attivare in base al tema
 
 Quando produci contenuti su questi temi, ragiona come se stessi consultando:

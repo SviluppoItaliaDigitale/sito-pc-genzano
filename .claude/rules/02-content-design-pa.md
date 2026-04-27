@@ -144,6 +144,34 @@ Queste tinte sono applicate in `custom.css` in due gruppi coordinati: le classi 
   ```
 - `draft`: false (per articoli pubblicati)
 
+## Comunicazione di crisi sui social — struttura standard
+
+Per i post di **allerta** o **emergenza** sui canali social istituzionali (Instagram, Facebook, X, Telegram), il messaggio deve avere — **in quest'ordine** — tutti i sei elementi della struttura ISO 22329 + CWA CEN/CENELEC:
+
+1. **Tipo di evento** (allerta meteo, vento forte, temporali, evacuazione, ecc.) — concreto, non vago.
+2. **Livello e codice colore** (giallo/arancione/rosso) — solo dal Centro Funzionale Regionale Lazio, mai inventato.
+3. **Area geografica + finestra temporale** in chiaro.
+4. **Cosa fare** — 2-3 azioni di autoprotezione, voce attiva, frasi brevi.
+5. **Fonte ufficiale** con link verificabile (CFR, DPC, Comune).
+6. **Prossimo aggiornamento**: quando e su quale canale.
+
+Mai mescolare allerta, prevenzione e attività ordinaria nello stesso post in fase di rischio in corso.
+
+### Hashtag — policy del Gruppo
+
+- Uno per evento, **specifico e localizzato**, coerente fra tutti i canali.
+- Stabili: `#PCGenzano`, `#Genzano`, `#AllertaLazio`, `#NUE112`.
+- Mai hashtag virali, ironici, politici o generici svuotati (`#italia`, `#news`).
+- Per evento specifico in corso: hashtag dedicato univoco, coordinato con Comune e Regione (es. `#AllagamentiGenzano2026`), mai più varianti per lo stesso evento.
+
+### Disinformazione — risposta
+
+- **Mai amplificare per smentire**: non condividere il post falso (nemmeno in critica). Niente screenshot leggibili.
+- Risposta breve **citando la fonte ufficiale** (CFR, DPC, Comune). Senza polemica, senza nominare l'autore della fake news.
+- La **fonte unica di verità** è il sito istituzionale: ogni post social rilevante linka un articolo del sito.
+
+Le specifiche complete sono in `MANUALE-SITO.md` Parte 13.7. La pagina pubblica `/social-media-policy/` espone questi principi al cittadino.
+
 ## Frontmatter per le pagine legali / istituzionali
 
 Le pagine `content/privacy/_index.md`, `content/note-legali/_index.md`, `content/accessibilita/_index.md` e `content/social-media-policy/_index.md` devono avere il campo:
