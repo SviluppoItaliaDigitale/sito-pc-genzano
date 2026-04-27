@@ -137,6 +137,8 @@ Un piano familiare efficace risponde a tre domande:
 
 ## Consigli per famiglie con bambini
 
+{{< pittogramma src="/pittogrammi/arasaac/bambino.png" alt="Pittogramma: bambino" size="medium" >}}
+
 - Spiega ai bambini cosa potrebbe succedere, con parole semplici e senza spaventarli
 - Assicurati che sappiano il loro **nome completo**, **indirizzo** e almeno **un numero di telefono** da chiamare
 - Insegna loro a riconoscere il suono di un allarme
@@ -144,6 +146,8 @@ Un piano familiare efficace risponde a tre domande:
 - Metti un documento identificativo nel loro zainetto
 
 ## Consigli per famiglie con anziani
+
+{{< pittogramma src="/pittogrammi/arasaac/anziano.png" alt="Pittogramma: persona anziana" size="medium" >}}
 
 - Verifica che le vie di fuga dalla casa siano accessibili e senza ostacoli
 - Tieni una lista scritta dei farmaci e dei dosaggi sempre aggiornata
