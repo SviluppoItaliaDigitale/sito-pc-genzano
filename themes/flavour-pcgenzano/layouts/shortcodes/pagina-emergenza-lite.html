@@ -65,10 +65,13 @@
 </div>
 
 {{- with $allerta }}
+{{- $controllo := or .ultimo_controllo .ultimo_aggiornamento -}}
+{{- $t := time.AsTime $controllo -}}
+{{- $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" -}}
 <div class="lite-allerta lite-allerta-{{ .livello }}" role="region" aria-label="Stato allerta meteo">
   <strong>Stato allerta meteo: {{ .titolo }}</strong>
   <p style="margin: 0.4rem 0 0;">{{ .descrizione }}</p>
-  <p style="margin: 0.4rem 0 0; font-size: 0.85rem;">Aggiornato: {{ dateFormat "2 January 2006, 15:04" .ultimo_aggiornamento }}</p>
+  <p style="margin: 0.4rem 0 0; font-size: 0.85rem;">Verificato: {{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }} · Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti">Centro Funzionale Lazio</a></p>
 </div>
 {{- end }}
 

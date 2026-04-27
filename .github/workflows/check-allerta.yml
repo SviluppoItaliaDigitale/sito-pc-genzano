@@ -116,14 +116,36 @@ jobs:
               descrizione = f"Criticità per {rischi_str}. {BASE_DESCS[livello]}"
 
           # ── 5. Confronta con allerta.json attuale ──────────────────
+          from datetime import datetime, timezone, timedelta
+
+          rome_tz = timezone(timedelta(hours=2))
+          now = datetime.now(rome_tz)
+          timestamp_now = now.strftime("%Y-%m-%dT%H:%M:%S+02:00")
+
           try:
               with open(ALLERTA_PATH, "r", encoding="utf-8") as f:
                   current = json.load(f)
           except Exception:
               current = {}
 
-          if current.get("livello") == livello:
-              print(f"✅ Livello invariato: {livello}")
+          old_level = current.get("livello", "sconosciuto")
+          level_changed = current.get("livello") != livello
+
+          # Calcola se sono passate ≥6 ore dall'ultimo controllo committato.
+          # Soglia: 5h45min, così il cron orario centra sicuramente la finestra
+          # delle 6h senza saltare un giro per pochi secondi di drift.
+          stale_check = True
+          last_check_str = current.get("ultimo_controllo") or current.get("ultimo_aggiornamento")
+          if last_check_str:
+              try:
+                  last_check = datetime.fromisoformat(last_check_str)
+                  if (now - last_check) < timedelta(hours=5, minutes=45):
+                      stale_check = False
+              except Exception:
+                  pass
+
+          if not level_changed and not stale_check:
+              print(f"✅ Livello invariato ({livello}) e ultimo controllo recente: skip commit")
               gh_out = os.environ.get("GITHUB_OUTPUT", "")
               if gh_out:
                   with open(gh_out, "a") as f:
@@ -131,25 +153,28 @@ jobs:
               sys.exit(0)
 
           # ── 6. Aggiorna allerta.json ───────────────────────────────
-          from datetime import datetime, timezone, timedelta
-
-          rome_tz = timezone(timedelta(hours=2))
-          now = datetime.now(rome_tz)
-          timestamp = now.strftime("%Y-%m-%dT%H:%M:%S+02:00")
+          # ultimo_aggiornamento: cambia SOLO quando il livello cambia
+          # ultimo_controllo:    cambia ogni volta che committiamo (≥6h o cambio livello)
+          if level_changed:
+              ultimo_aggiornamento = timestamp_now
+              motivo = f"livello {old_level} → {livello}"
+          else:
+              ultimo_aggiornamento = current.get("ultimo_aggiornamento", timestamp_now)
+              motivo = f"controllo periodico (livello invariato: {livello})"
 
           new_data = {
               "livello": livello,
               "titolo": titolo,
               "descrizione": descrizione,
-              "ultimo_aggiornamento": timestamp,
+              "ultimo_aggiornamento": ultimo_aggiornamento,
+              "ultimo_controllo": timestamp_now,
           }
 
           with open(ALLERTA_PATH, "w", encoding="utf-8") as f:
               json.dump(new_data, f, indent=2, ensure_ascii=False)
               f.write("\n")
 
-          old_level = current.get("livello", "sconosciuto")
-          print(f"⚠️ Livello aggiornato: {old_level} → {livello}")
+          print(f"⚠️ Aggiornamento: {motivo}")
 
           gh_out = os.environ.get("GITHUB_OUTPUT", "")
           if gh_out:
@@ -158,6 +183,8 @@ jobs:
                   f.write(f"old_level={old_level}\n")
                   f.write(f"new_level={livello}\n")
                   f.write(f"descrizione={descrizione}\n")
+                  f.write(f"motivo={motivo}\n")
+                  f.write(f"level_changed={'true' if level_changed else 'false'}\n")
           PYEOF
 
       - name: "📝 Commit e push"
@@ -168,7 +195,7 @@ jobs:
           git add data/allerta.json
           git diff --cached --quiet && exit 0
           git commit -m "$(cat <<EOF
-          Allerta meteo: ${{ steps.check.outputs.old_level }} → ${{ steps.check.outputs.new_level }}
+          Allerta meteo: ${{ steps.check.outputs.motivo }}
 
           Aggiornamento automatico da bollettino DPC (opendatasicilia).
           ${{ steps.check.outputs.descrizione }}
