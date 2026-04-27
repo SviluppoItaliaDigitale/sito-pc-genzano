@@ -458,6 +458,13 @@ Al successivo push, il workflow `.github/workflows/scarica-foto-automatica.yml` 
 
 **Per trovare un eventid USGS** (terremoti): cerca su `https://earthquake.usgs.gov/earthquakes/search/` per data/luogo, l'ID compare nell'URL della pagina evento.
 
+**Cover tipografica automatica come fallback**. Se non aggiungi né foto né marker, il workflow `scarica-foto-automatica.yml` esegue come secondo step `auto-cover-mancanti.py`, che genera automaticamente una **cover tipografica istituzionale** (gradiente blu, titolo dell'articolo, fascia con logo) in `static/images/<slug>.webp` e popola il frontmatter. Lo script è sicuro: **non sovrascrive mai** una foto utente custom (es. `image: "/images/foto-evento-mio.webp"`). Risultato: nessun articolo finisce mai online senza copertina.
+
+**Tre livelli di fallback in cascata**:
+1. **Foto vera** — utente o Wikipedia/NASA/USGS via marker
+2. **Cover tipografica istituzionale** — gradiente blu generato automaticamente
+3. **Default SVG generico** — fallback estremo (`images/notizia-default.svg`)
+
 ### Passo 1.12 — Test locale con Hugo
 
 Prima di pubblicare, testa in locale:

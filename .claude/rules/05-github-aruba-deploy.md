@@ -158,6 +158,27 @@ Al successivo push su `main`, il workflow `.github/workflows/scarica-foto-automa
 
 **Aggiungere una nuova fonte** (es. NOAA, Copernicus): (a) creare `scripts/foto-da-NUOVA.sh` con stesso pattern di output (stampa Origine/Autore/Licenza); (b) aggiungere `foto-da-NUOVA.sh` alla `ALLOWED_SCRIPTS` del workflow; (c) aggiungere `nuova` alla regex del marker; (d) aggiornare archetype + doc.
 
+### Cover tipografiche automatiche (`auto-cover-mancanti.py`)
+
+Lo stesso workflow `scarica-foto-automatica.yml` ha un **secondo step** che, dopo il download foto, genera **cover tipografiche istituzionali** (gradiente blu + titolo + badge + fascia con logo) per gli articoli rimasti senza copertina. Garantisce che nessun articolo venga pubblicato senza immagine.
+
+Lo script `scripts/auto-cover-mancanti.py` agisce così:
+1. Itera tutti gli articoli in `content/comunicazioni/*.md`
+2. Seleziona quelli con `image: ""` (vuoto) **E** senza marker `# TODO-foto-*` (in attesa di download da fonti esterne)
+3. Per ciascuno: lancia `python3 scripts/genera-cover.py <file>` → produce `static/images/<slug>.webp`
+4. Aggiorna `image: ""` → `image: "/images/<slug>.webp"` e `image_alt: ""` → `image_alt: "Cover dell'articolo: <title>"` **solo se vuoti** (mai sovrascrive)
+
+**Sicurezza editoriale**: lo script **non sovrascrive mai** una foto utente custom. Se l'articolo ha già `image: "/images/foto-evento-utente.webp"`, viene saltato.
+
+**Dipendenze runner**: `fonts-liberation` (font Liberation Sans usato dallo script di generazione cover) — installato dal workflow nello step `apt install`.
+
+**Esecuzione locale**: `python3 scripts/auto-cover-mancanti.py` (oppure `--dry-run` per vedere cosa farebbe senza modificare).
+
+**Risultato editoriale**: il sito non avrà mai articoli pubblicati con copertina mancante. Tre livelli di fallback in cascata:
+1. **Foto vera** (utente / Wikipedia / NASA / USGS via marker)
+2. **Cover tipografica istituzionale** (gradiente blu + titolo, generata automaticamente)
+3. **Default SVG** (`images/notizia-default.svg`) — solo come fallback estremo se anche cover tipografica fallisce
+
 ## Verifica prima del push
 
 Prima di fare push su `main`, verifica sempre:
