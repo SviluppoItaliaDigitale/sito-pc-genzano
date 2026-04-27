@@ -1,6 +1,7 @@
 ---
 title: "Numeri Utili"
 description: "Tutti i numeri di emergenza e i recapiti utili per i cittadini di Genzano di Roma."
+tts: true
 layout: "single"
 aliases:
   - /numeri-utili/

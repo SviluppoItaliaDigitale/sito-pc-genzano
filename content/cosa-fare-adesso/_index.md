@@ -1,6 +1,7 @@
 ---
 title: "Cosa Fare Adesso"
 description: "Azioni immediate in caso di emergenza a Genzano di Roma: numeri da chiamare, comportamenti da adottare e link utili."
+tts: true
 layout: "single"
 aliases:
   - /cosa-fare/

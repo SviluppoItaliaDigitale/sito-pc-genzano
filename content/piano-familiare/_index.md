@@ -2,6 +2,7 @@
 
 title: "Crea il tuo Piano di Emergenza Familiare"
 description: "Crea e stampa il tuo piano di emergenza familiare personalizzato. Tutti i dati restano solo sul tuo computer."
+tts: true
 layout: "single"
 aliases:
   - /pianofamiliare.html

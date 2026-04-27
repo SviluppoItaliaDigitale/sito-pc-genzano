@@ -2,6 +2,7 @@
 
 title: "Ondate di Calore"
 description: "Come proteggersi dal caldo estremo: consigli per anziani, bambini e persone fragili."
+tts: true
 weight: 6
 toc: true
 ---

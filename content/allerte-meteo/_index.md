@@ -1,6 +1,7 @@
 ---
 title: "Il Sistema di Allertamento Meteo"
 description: "Consulta le allerte meteo in tempo reale per il territorio di Genzano di Roma e comprendi il significato dei codici colore."
+tts: true
 layout: "single"
 aliases:
   - /allertameteo.html

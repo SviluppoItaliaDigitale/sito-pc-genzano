@@ -1,6 +1,7 @@
 ---
 title: "Facile da leggere"
 description: "Le informazioni più importanti di Protezione Civile in versione semplice. Frasi corte. Parole facili. Per tutti."
+tts: true
 layout: "single"
 aliases:
   - /easy/

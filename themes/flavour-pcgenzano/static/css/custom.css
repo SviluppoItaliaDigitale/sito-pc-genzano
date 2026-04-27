@@ -2717,3 +2717,99 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
     max-width: 140px;
   }
 }
+
+/* ============================================================
+   TTS — Pulsante "Leggi ad alta voce" (Web Speech API) v1.0
+   Per pagine con frontmatter tts:true. Posizionato in alto al
+   contenuto, accessibile da tastiera, stati visivi distinti
+   (idle / reading / paused).
+   ============================================================ */
+.tts-wrapper {
+  margin: 0 0 1rem 0;
+  text-align: right;
+}
+.tts-button {
+  font-size: 0.92rem;
+  padding: 0.4rem 0.85rem;
+  transition: all 0.2s ease;
+}
+.tts-button:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 3px;
+}
+.tts-button.btn-primary i {
+  animation: tts-pulse 1.4s ease-in-out infinite;
+}
+@keyframes tts-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+@media print {
+  .tts-wrapper { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tts-button.btn-primary i { animation: none; }
+}
+
+/* ============================================================
+   COSA NON FARE — Box di divieti evidenziato (v1.0)
+   Shortcode {{< cosa-non-fare >}}: divieti operativi in box
+   rosso bordato per massima visibilita' nelle pagine rischi.
+   Contrasto WCAG AA: testo #7f1d1d su sfondo #fff5f5 = 7.7:1.
+   ============================================================ */
+.cosa-non-fare {
+  margin: 1.5rem 0;
+  border: 2px solid #c1121f;
+  border-left-width: 6px;
+  border-radius: 8px;
+  background: #fff5f5;
+  overflow: hidden;
+}
+.cosa-non-fare-header {
+  background: #c1121f;
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.05rem;
+}
+.cosa-non-fare-header i { font-size: 1.3rem; }
+.cosa-non-fare-body {
+  padding: 0.85rem 1.15rem;
+  color: #7f1d1d;
+}
+.cosa-non-fare-body ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.cosa-non-fare-body li {
+  padding: 0.18rem 0;
+  font-weight: 500;
+}
+.cosa-non-fare-body li::marker {
+  color: #c1121f;
+  font-weight: 800;
+}
+.cosa-non-fare-body p { margin-bottom: 0.5rem; }
+.cosa-non-fare-body p:last-child { margin-bottom: 0; }
+
+/* Stampa: il box "NON fare" e' essenziale, restano colori per gerarchia visiva */
+@media print {
+  .cosa-non-fare {
+    border-color: #000 !important;
+    background: #fff !important;
+    page-break-inside: avoid;
+  }
+  .cosa-non-fare-header {
+    background: #000 !important;
+    color: #fff !important;
+  }
+  .cosa-non-fare-body { color: #000 !important; }
+}
+
+/* Mobile: header un po' piu' compatto */
+@media (max-width: 576px) {
+  .cosa-non-fare-header { font-size: 0.95rem; padding: 0.5rem 0.75rem; }
+  .cosa-non-fare-body { padding: 0.7rem 0.9rem; }
+}

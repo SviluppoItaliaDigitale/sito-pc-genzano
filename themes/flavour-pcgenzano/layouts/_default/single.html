@@ -80,6 +80,12 @@
       </div>
       {{ end }}
 
+      {{/* ── PULSANTE LEGGI AD ALTA VOCE (TTS Web Speech API) ── */}}
+      {{/* Opt-in: solo pagine con tts:true nel frontmatter (essenziali emergenza) */}}
+      {{ if .Params.tts }}
+      {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".article-body") }}
+      {{ end }}
+
       {{/* ── CONTENUTO ── */}}
       <article class="article-body">{{ .Content }}</article>
 
