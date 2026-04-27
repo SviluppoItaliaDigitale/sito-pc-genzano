@@ -505,8 +505,12 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
 .emergenza-rosso { background: #CC334D; color: #fff; }
 .emergenza-viola { background: #7B2D8E; color: #fff; }
 
-/* ── IMMAGINI ARTICOLI: sempre centrate e responsive ── */
-article img {
+/* ── IMMAGINI ARTICOLI: sempre centrate e responsive ──
+   Escluso article.card (card-notizia di liste/archivi/homepage):
+   le anteprime hanno il proprio sistema di sizing via .notizia-img-wrapper,
+   .card-notizia-small-img, .card-notizia-hero-img e non vanno toccate da
+   queste regole pensate per il corpo articolo. */
+article:not(.card) img {
   display: block;
   margin: 1.5rem auto;
   max-width: 400px;
@@ -516,25 +520,25 @@ article img {
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 @media (max-width: 768px) {
-  article img {
+  article:not(.card) img {
     max-width: 280px;
   }
 }
 
 /* ── GALLERIA AUTOMATICA: 2+ immagini consecutive ── */
-article p:has(img) + p:has(img) {
+article:not(.card) p:has(img) + p:has(img) {
   display: inline-block;
   width: 48%;
   vertical-align: top;
   margin-right: 2%;
 }
-article .galleria {
+article:not(.card) .galleria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin: 1.5rem 0;
 }
-article .galleria img {
+article:not(.card) .galleria img {
   margin: 0;
   max-width: 100%;
   width: 100%;
@@ -542,10 +546,10 @@ article .galleria img {
   object-fit: cover;
 }
 @media (max-width: 768px) {
-  article .galleria {
+  article:not(.card) .galleria {
     grid-template-columns: repeat(2, 1fr);
   }
-  article .galleria img {
+  article:not(.card) .galleria img {
     height: 150px;
   }
 }
