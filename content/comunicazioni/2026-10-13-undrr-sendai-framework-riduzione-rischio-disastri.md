@@ -5,13 +5,14 @@ description: "Nella Giornata Internazionale ONU per la Riduzione del Rischio di 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Sendai Framework for Disaster Risk Reduction" 2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri en
+image: "/images/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Joowwww — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Emblem_of_the_United_Nations.svg"
 ---
 
 Il **13 ottobre** di ogni anno le Nazioni Unite celebrano la **Giornata Internazionale per la Riduzione del Rischio di Disastri** (*International Day for Disaster Risk Reduction*). Una ricorrenza istituita nel **1989** dall'Assemblea Generale ONU, oggi inserita nel quadro del **Sendai Framework 2015-2030**, il principale documento internazionale di indirizzo per la prevenzione dei disastri naturali e antropici.

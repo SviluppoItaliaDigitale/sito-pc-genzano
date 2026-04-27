@@ -5,13 +5,14 @@ description: "Un nubifragio di intensità mai registrata in Versilia: 470 mm di 
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Alluvione della Versilia del 1996" 2026-06-19-versilia-1996-alluvione-cardoso-stazzema
+image: "/images/2026-06-19-versilia-1996-alluvione-cardoso-stazzema.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Sailko — CC BY 3.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Cardoso,_veduta_01.JPG"
 ---
 
 Tra il **18 e il 19 giugno 1996** un sistema temporalesco di intensità eccezionale si scaricò sui versanti delle Alpi Apuane, sopra la **Versilia toscana**. Furono registrati **fino a 470 millimetri di pioggia in poche ore** sulla zona di **Cardoso di Stazzema**, **Pietrasanta**, **Forte dei Marmi** e dintorni.

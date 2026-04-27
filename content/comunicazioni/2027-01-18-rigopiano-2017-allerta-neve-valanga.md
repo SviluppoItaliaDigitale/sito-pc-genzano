@@ -5,13 +5,14 @@ description: "Una valanga distrusse l'hotel Rigopiano sul Gran Sasso: 29 morti. 
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Disastro di Rigopiano" 2027-01-18-rigopiano-2017-allerta-neve-valanga
+image: "/images/2027-01-18-rigopiano-2017-allerta-neve-valanga.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "ignoto — Public domain — via Wikimedia Commons"
+image_source_url: "https://it.wikipedia.org/wiki/File:Rigo6005_MGZOOM.jpg"
 ---
 
 Alle **16:48 del 18 gennaio 2017** una valanga di neve, fango e detriti scese dal versante del **Monte Siella**, sul Gran Sasso, e investì l'**Hotel Rigopiano** nel comune di Farindola. **29 morti**, 11 superstiti tirati fuori dalle macerie nei giorni successivi. È stato il più grave evento valanghivo italiano degli ultimi cinquant'anni.

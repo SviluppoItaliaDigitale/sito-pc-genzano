@@ -5,13 +5,14 @@ description: "Sessant'anni fa Firenze fu sommersa dall'Arno. Da quella catastrof
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Alluvione di Firenze del 1966" 2026-11-04-alluvione-firenze-1966-angeli-fango
+image: "/images/2026-11-04-alluvione-firenze-1966-angeli-fango.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "(non specificato) — Public domain — via Wikimedia Commons"
+image_source_url: "https://it.wikipedia.org/wiki/File:Alluvione_di_Firenze_07.jpg"
 ---
 
 All'alba del **4 novembre 1966** l'Arno ruppe gli argini ed entrò a Firenze. L'acqua, mista a fango e nafta, raggiunse i sei metri in alcuni quartieri. **35 morti** in città, 17 in tutta la regione, oltre **5.000 famiglie** senza casa, **decine di migliaia** di opere d'arte, libri antichi e archivi danneggiati o distrutti.

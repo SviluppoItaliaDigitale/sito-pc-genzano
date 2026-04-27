@@ -5,13 +5,14 @@ description: "Alle 7:40 del 30 ottobre 2016 una scossa di magnitudo 6.5 colpì N
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto di Norcia del 30 ottobre 2016" 2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia
+image: "/images/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Istituto Nazionale di Geofisica e Vulcanologia and Centro Nazionale Terremoti — CC BY-SA 4.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:30-10-2016_central_italy_ShakeMap.jpg"
 ---
 
 Alle **7:40 del 30 ottobre 2016** la scossa più forte registrata in Italia dopo l'Irpinia 1980 colpì la valle del Nera. **Magnitudo 6.5**, ipocentro a 9 chilometri di profondità, epicentro pochi chilometri a nord di Norcia. Crollò gran parte del centro storico, compresa la **Basilica di San Benedetto**, simbolo della città.

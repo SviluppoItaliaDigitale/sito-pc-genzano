@@ -5,13 +5,14 @@ description: "Alle 4:17 del 6 febbraio 2023 una scossa di magnitudo 7.8 colpì l
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto della Turchia e della Siria del 2023" 2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana
+image: "/images/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Adem — CC BY-SA 4.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Collage_of_2023_Turkey%E2%80%93Syria_earthquake.jpg"
 ---
 
 Alle **4:17 ora locale del 6 febbraio 2023** una scossa di **magnitudo 7.8** colpì la Turchia sud-orientale, al confine con la Siria settentrionale. Nove ore dopo, alle **13:24**, una seconda scossa di **magnitudo 7.5** colpì la stessa regione, a 90 chilometri di distanza dall'epicentro precedente. Era la sequenza sismica più devastante della storia recente del Mediterraneo orientale.

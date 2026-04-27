@@ -5,13 +5,14 @@ description: "Ogni 1° marzo l'Organizzazione Internazionale di Protezione Civil
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "International Civil Defence Organisation" 2026-03-01-giornata-mondiale-protezione-civile en
+image: "/images/2026-03-01-giornata-mondiale-protezione-civile.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Davide Laruccia — CC BY-SA 4.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Logo_Internazionale_Protezione_Civile.png"
 ---
 
 Il **1° marzo** di ogni anno si celebra la **Giornata Mondiale della Protezione Civile** (*World Civil Defence Day*), istituita dall'**Organizzazione Internazionale di Protezione Civile** (ICDO/OIPC) nel **1990**. La data ricorda l'anniversario dell'**entrata in vigore della Costituzione dell'OIPC**, avvenuta il 1° marzo 1972, dopo la trasformazione dell'organizzazione internazionale di soccorso fondata negli anni Trenta.

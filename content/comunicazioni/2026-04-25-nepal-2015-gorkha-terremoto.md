@@ -5,13 +5,14 @@ description: "Una scossa di magnitudo 7.8 colpì la valle di Kathmandu uccidendo
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Nepal del 2015" 2026-04-25-nepal-2015-gorkha-terremoto
+image: "/images/2026-04-25-nepal-2015-gorkha-terremoto.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Hilmi Hacaloğlu — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:2015_Nepal_depremi_(7).jpg"
 ---
 
 Alle **11:56 ora locale del 25 aprile 2015** una scossa di **magnitudo 7.8** colpì la valle di Kathmandu, in Nepal. L'epicentro era nel distretto di **Gorkha**, a circa 80 chilometri dalla capitale. Profondità ipocentrale: 8 chilometri, molto superficiale.

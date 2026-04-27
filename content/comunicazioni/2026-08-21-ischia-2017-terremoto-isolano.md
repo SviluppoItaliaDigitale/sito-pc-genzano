@@ -5,13 +5,14 @@ description: "Una scossa di magnitudo 4.0 a Casamicciola Terme provocò 2 morti 
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto di Ischia del 2017" 2026-08-21-ischia-2017-terremoto-isolano
+image: "/images/2026-08-21-ischia-2017-terremoto-isolano.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Dipartimento Protezione Civile from Italia — CC BY 2.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Terremoto_Ischia_2017_(26495643417).jpg"
 ---
 
 Alle **20:57 del 21 agosto 2017** una scossa di **magnitudo 4.0** colpì l'isola d'Ischia. Epicentro a **Casamicciola Terme**, ipocentro estremamente superficiale (circa 2 chilometri di profondità). Una scossa che, in altre zone d'Italia, sarebbe stata avvertita come fastidiosa ma non distruttiva.

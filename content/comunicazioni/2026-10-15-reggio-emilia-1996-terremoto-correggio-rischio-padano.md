@@ -5,13 +5,14 @@ description: "Una scossa di magnitudo 4.9 colpì la zona di Correggio (Reggio Em
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto di Reggio Emilia del 1996" 2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano
+image: "/images/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Ketipmaig — CC BY-SA 4.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Flag_of_Reggio_Emilia.svg"
 ---
 
 Alle **11:56 del 15 ottobre 1996** una scossa di **magnitudo 4.9** colpì la pianura tra **Correggio**, **Carpi** e **Reggio Emilia**. Profondità ipocentrale **27 chilometri**. Nessun morto, alcuni feriti lievi, **circa 100 edifici** dichiarati inagibili (soprattutto chiese e edifici storici).

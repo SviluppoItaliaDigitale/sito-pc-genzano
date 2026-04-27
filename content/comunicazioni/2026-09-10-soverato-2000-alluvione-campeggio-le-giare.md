@@ -5,13 +5,14 @@ description: "Nella notte tra il 9 e il 10 settembre 2000 una piena improvvisa d
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Alluvione di Soverato del 2000" 2026-09-10-soverato-2000-alluvione-campeggio-le-giare
+image: "/images/2026-09-10-soverato-2000-alluvione-campeggio-le-giare.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "DucadiFraconalto3942 — CC BY-SA 4.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Soverato-Bandiera.svg"
 ---
 
 Nella notte tra il **9 e il 10 settembre 2000**, una piena improvvisa del torrente **Beltrame** travolse il **campeggio Le Giare** a Soverato (Catanzaro), in Calabria. Il campeggio ospitava un gruppo di **persone con disabilità**, in vacanza con familiari e accompagnatori dell'associazione **AISM** (Associazione Italiana Sclerosi Multipla).

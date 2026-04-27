@@ -5,13 +5,14 @@ description: "Tra il 2010 e il 2014 una sequenza sismica di oltre 4.000 scosse c
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Sequenza sismica del Pollino" 2026-10-26-pollino-2010-2014-sequenza-sismica-monitoraggio
+image: "/images/2026-10-26-pollino-2010-2014-sequenza-sismica-monitoraggio.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Alfredo D'Ambrosio — CC BY 3.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Vette_del_Pollino.JPG"
 ---
 
 Tra il **2010 e il 2014** una sequenza sismica eccezionale interessò il massiccio del **Pollino**, al confine fra Calabria e Basilicata. Oltre **4.000 scosse strumentali** registrate dalla rete INGV, magnitudo massima **5.0** (registrata il 25 ottobre 2012, vicino a Mormanno).

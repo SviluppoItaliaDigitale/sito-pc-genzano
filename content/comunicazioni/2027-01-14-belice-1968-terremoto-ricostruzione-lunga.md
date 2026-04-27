@@ -5,13 +5,14 @@ description: "Il terremoto della Valle del Belice fu il primo evento sismico del
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Belice" 2027-01-14-belice-1968-terremoto-ricostruzione-lunga
+image: "/images/2027-01-14-belice-1968-terremoto-ricostruzione-lunga.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Nessun autore leggibile automaticamente. Sfata~commonswiki presunto (secondo quanto affermano i diritti d'autore). — Public domain — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Poggioreale_2007.jpg"
 ---
 
 Tra il **14 e il 15 gennaio 1968** una sequenza di scosse sismiche colpì la **Valle del Belice**, in Sicilia occidentale. La scossa principale, di **magnitudo 6.4**, distrusse paesi interi: **Gibellina**, **Salaparuta**, **Poggioreale**, **Montevago** furono cancellati. Bilancio: **231 morti**, **623 feriti**, **circa 70.000 sfollati**.

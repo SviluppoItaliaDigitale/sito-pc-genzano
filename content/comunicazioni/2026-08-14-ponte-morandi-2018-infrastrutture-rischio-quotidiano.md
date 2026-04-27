@@ -5,13 +5,14 @@ description: "Il crollo del ponte Morandi a Genova causò 43 morti. Una tragedia
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Crollo del ponte Morandi" 2026-08-14-ponte-morandi-2018-infrastrutture-rischio-quotidiano
+image: "/images/2026-08-14-ponte-morandi-2018-infrastrutture-rischio-quotidiano.webp"
 image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
+image_credit: "Dirsmith1 — CC BY-SA 4.0 — via Wikimedia Commons"
+image_source_url: "https://commons.wikimedia.org/wiki/File:AAR_Morandi.jpg"
 ---
 
 Alle **11:36 del 14 agosto 2018** una porzione del **viadotto Polcevera** sull'autostrada A10 di Genova, conosciuto come **Ponte Morandi**, crollò improvvisamente. Cedette la pila numero 9, e con essa una sezione di impalcato lunga circa **210 metri**. Le auto e i camion che transitavano in quel momento precipitarono per oltre **45 metri**.
