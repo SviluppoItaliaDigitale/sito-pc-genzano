@@ -7,6 +7,17 @@ toc: true
 ---
 Il kit di emergenza è uno zaino o una borsa sempre pronta, conservata in un luogo facilmente raggiungibile, che contiene tutto il necessario per affrontare le prime ore dopo un'evacuazione. Preparalo con calma quando non c'è emergenza: in un momento di crisi non avrai il tempo di pensare a cosa portare.
 
+<div class="kit-pittogrammi-row" role="img" aria-label="Componenti essenziali del kit di emergenza: zaino, acqua, cibo, torcia, radio, medicine">
+{{< pittogramma src="/pittogrammi/arasaac/zaino.png" alt="Zaino" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/acqua.png" alt="Acqua" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/cibo.png" alt="Cibo" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/torcia.png" alt="Torcia" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/radio.png" alt="Radio" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/medicina.png" alt="Medicine" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/documenti.png" alt="Documenti" size="small" inline="true" >}}
+{{< pittogramma src="/pittogrammi/arasaac/fischietto.png" alt="Fischietto" size="small" inline="true" >}}
+</div>
+
 ## Dove tenerlo
 
 - In un luogo **facilmente raggiungibile** (ingresso, corridoio)

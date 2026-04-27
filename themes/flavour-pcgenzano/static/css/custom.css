@@ -2849,3 +2849,107 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   .cosa-non-fare-header { font-size: 0.95rem; padding: 0.5rem 0.75rem; }
   .cosa-non-fare-body { padding: 0.7rem 0.9rem; }
 }
+
+/* ─────────────────────────────────────────────────────────
+   FAQ ACCORDION (.faq-item) v1.0
+   Accordion <details> per Domande Frequenti — riduce muri
+   di testo nelle pagine informative, mantiene leggibilità
+   da tastiera e screen reader (semantica nativa). Usato in
+   /allerte-meteo/, /faq/, e ovunque serva nascondere prose
+   secondaria mantenendola accessibile.
+   ───────────────────────────────────────────────────────── */
+.faq-item {
+  border: 1px solid #d4dae4;
+  border-radius: 8px;
+  background: #fff;
+  margin: 0.6rem 0;
+  padding: 0;
+  transition: box-shadow 0.2s ease;
+}
+.faq-item[open] {
+  box-shadow: 0 1px 4px rgba(0, 51, 102, 0.08);
+  border-color: #b6c5db;
+}
+.faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  color: #003366;
+  position: relative;
+  padding-right: 2.5rem;
+  border-radius: 8px;
+}
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item > summary::marker { display: none; }
+.faq-item > summary:hover {
+  background: #f4f7fb;
+}
+.faq-item > summary:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.faq-item > summary::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid #003366;
+  border-bottom: 2px solid #003366;
+  transform: translateY(-65%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] > summary::after {
+  transform: translateY(-25%) rotate(-135deg);
+}
+.faq-item > *:not(summary) {
+  padding: 0 1rem 0.9rem;
+}
+.faq-item > p:not(:first-of-type),
+.faq-item > ul {
+  margin-top: 0.4rem;
+}
+
+/* Stampa: tutti i dettagli aperti, niente icona chevron */
+@media print {
+  .faq-item { border: 1px solid #999; page-break-inside: avoid; }
+  .faq-item > summary { padding-right: 1rem; }
+  .faq-item > summary::after { display: none; }
+  .faq-item > *:not(summary) { display: block !important; }
+}
+
+/* Mobile: padding leggermente ridotto */
+@media (max-width: 576px) {
+  .faq-item > summary { padding: 0.7rem 0.85rem; padding-right: 2.2rem; font-size: 0.95rem; }
+  .faq-item > *:not(summary) { padding: 0 0.85rem 0.75rem; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   STRISCIA PITTOGRAMMI (.kit-pittogrammi-row) v1.0
+   Riga visiva di pittogrammi inline per dare un colpo d'occhio
+   immediato a una pagina lista (es. /rischi-prevenzione/kit-emergenza/).
+   Centrata, gap respirabile, wrap su mobile.
+   ───────────────────────────────────────────────────────── */
+.kit-pittogrammi-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.4rem 0 1.8rem;
+  padding: 1rem;
+  background: #f4f7fb;
+  border: 1px solid #d4dae4;
+  border-radius: 10px;
+}
+.kit-pittogrammi-row .pittogramma-inline {
+  margin: 0;
+}
+@media (max-width: 576px) {
+  .kit-pittogrammi-row { gap: 0.5rem; padding: 0.7rem; }
+}
+@media print {
+  .kit-pittogrammi-row { background: #fff !important; border: 1px solid #000; page-break-inside: avoid; }
+}

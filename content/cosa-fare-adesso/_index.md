@@ -108,6 +108,14 @@ Seleziona la situazione che stai vivendo per ricevere le indicazioni operative c
 5. **Aiuta chi è in difficoltà** se puoi farlo in sicurezza (anziani, bambini, persone con disabilità).
 6. **Tieni il telefono carico** e usalo solo per comunicazioni necessarie.
 
+{{< cosa-non-fare titolo="Cosa NON fare in qualunque emergenza" >}}
+- **Non chiamare il 112 per curiosità o per chiedere informazioni**: tieni la linea libera per chi sta davvero male.
+- **Non recarti sui luoghi dell'evento** per vedere cosa è successo: rallenti i soccorsi e ti metti in pericolo.
+- **Non condividere notizie non verificate** sui social: rilancia solo fonti ufficiali (Protezione Civile, Comune, Centro Funzionale Lazio).
+- **Non bloccare le strade di accesso** ai mezzi di soccorso con la tua auto.
+- **Non rientrare in un edificio danneggiato** prima del nullaosta dei Vigili del Fuoco.
+{{< /cosa-non-fare >}}
+
 ## Risorse
 
 - [Stato allerta meteo attuale](/allerte-meteo/)

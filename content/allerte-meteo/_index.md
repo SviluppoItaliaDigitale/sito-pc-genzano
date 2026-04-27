@@ -99,27 +99,45 @@ Il nostro Comune rientra nella **Zona di allerta F — Bacini Costieri Sud**, se
 
 ### <span class="badge badge-allerta-verde">VERDE</span> — Nessuna Allerta
 
-Assenza di fenomeni significativi prevedibili. La situazione è sotto controllo.
+{{< pittogramma src="/pittogrammi/arasaac/calma.png" alt="Pittogramma: situazione di calma" size="small" inline="true" >}} Assenza di fenomeni significativi prevedibili. La situazione è sotto controllo.
 
-**Cosa fare:** nessuna azione richiesta. Resta informato seguendo i canali ufficiali.
+**Cosa fare:**
+
+- Nessuna azione richiesta.
+- Resta informato seguendo i canali ufficiali.
 
 ### <span class="badge badge-allerta-gialla">GIALLA</span> — Livello di Attenzione
 
-Criticità ordinaria. Sono possibili fenomeni meteorologici localizzati e di intensità moderata.
+{{< pittogramma src="/pittogrammi/arasaac/attenzione.png" alt="Pittogramma: attenzione" size="small" inline="true" >}} Criticità ordinaria. Sono possibili fenomeni meteorologici localizzati e di intensità moderata.
 
-**Cosa fare:** presta attenzione ai bollettini. Evita zone a rischio allagamento. Non sostare lungo i corsi d'acqua o sotto alberi isolati.
+**Cosa fare:**
+
+- Presta attenzione ai bollettini ufficiali.
+- Evita zone a rischio allagamento.
+- Non sostare lungo i corsi d'acqua né sotto alberi isolati.
 
 ### <span class="badge badge-allerta-arancione">ARANCIONE</span> — Livello di Preallarme
 
-Criticità moderata. I fenomeni previsti possono essere diffusi e potenzialmente pericolosi.
+{{< pittogramma src="/pittogrammi/arasaac/allarme.png" alt="Pittogramma: allarme" size="small" inline="true" >}} Criticità moderata. I fenomeni previsti possono essere diffusi e potenzialmente pericolosi.
 
-**Cosa fare:** limita gli spostamenti allo stretto necessario. Metti in sicurezza beni in locali interrati. Tieni pronto il kit di emergenza. Segui le indicazioni delle autorità.
+**Cosa fare:**
+
+- Limita gli spostamenti allo stretto necessario.
+- Metti in sicurezza i beni che si trovano in locali interrati o seminterrati.
+- Tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/).
+- Segui le indicazioni delle autorità.
 
 ### <span class="badge badge-allerta-rossa">ROSSA</span> — Livello di Allarme
 
-Criticità elevata. I fenomeni previsti sono molto intensi e con elevata probabilità di causare danni gravi.
+{{< pittogramma src="/pittogrammi/arasaac/emergenza.png" alt="Pittogramma: emergenza" size="small" inline="true" >}} Criticità elevata. I fenomeni previsti sono molto intensi e con elevata probabilità di causare danni gravi.
 
-**Cosa fare:** non uscire di casa se non strettamente necessario. Allontanati dai piani interrati. Non attraversare strade allagate o sottopassaggi. Segui esclusivamente le indicazioni delle autorità. Tieni il telefono carico.
+**Cosa fare:**
+
+- Non uscire di casa se non è strettamente necessario.
+- Allontanati dai piani interrati e seminterrati.
+- Non attraversare strade allagate né sottopassaggi.
+- Segui esclusivamente le indicazioni delle autorità.
+- Tieni il telefono carico e in carica.
 
 ## Tipi di rischio monitorati
 
@@ -134,21 +152,38 @@ Il livello di allerta mostrato nella barra del nostro sito corrisponde al **valo
 
 ## Domande frequenti
 
-### Chi emette le allerte?
+<details class="faq-item">
+<summary><strong>Chi emette le allerte?</strong></summary>
 
-Le allerte sono emesse dal Centro Funzionale Regionale dell'Agenzia di Protezione Civile del Lazio. Non vengono emesse dal nostro Gruppo né dal Comune.
+Le allerte sono emesse dal **Centro Funzionale Regionale** dell'Agenzia di Protezione Civile del Lazio. Non vengono emesse dal nostro Gruppo né dal Comune.
 
-### Allerta gialla: devo stare a casa?
+</details>
 
-Non necessariamente, ma devi prestare attenzione. Evita zone a rischio e tieni monitorata la situazione. In caso di allerta arancione o rossa, limita gli spostamenti.
+<details class="faq-item">
+<summary><strong>Allerta gialla: devo stare a casa?</strong></summary>
 
-### Perché piove forte ma non c'è allerta?
+Non necessariamente, ma devi **prestare attenzione**.
 
-L'allerta si basa su previsioni emesse in anticipo. A volte fenomeni localizzati e improvvisi non sono previsti dal bollettino. Per questo è importante adottare sempre comportamenti prudenti durante eventi meteo intensi.
+- Evita zone a rischio.
+- Tieni monitorata la situazione.
+- Con allerta arancione o rossa, limita gli spostamenti.
 
-### Come ricevo le notifiche?
+</details>
 
-Iscriviti al nostro [canale Telegram](https://t.me/pcalfagenzano) per ricevere aggiornamenti in tempo reale. Per emergenze gravi, il sistema nazionale [IT-alert](https://www.it-alert.it/it/) invia messaggi direttamente ai telefoni cellulari nell'area interessata.
+<details class="faq-item">
+<summary><strong>Perché piove forte ma non c'è allerta?</strong></summary>
+
+L'allerta si basa su **previsioni emesse in anticipo**. A volte fenomeni localizzati e improvvisi non sono previsti dal bollettino. Per questo è importante adottare sempre comportamenti prudenti durante eventi meteo intensi.
+
+</details>
+
+<details class="faq-item">
+<summary><strong>Come ricevo le notifiche?</strong></summary>
+
+- **Canale Telegram del Gruppo:** [@pcalfagenzano](https://t.me/pcalfagenzano) per aggiornamenti in tempo reale.
+- **IT-alert nazionale:** il sistema [IT-alert](https://www.it-alert.it/it/) invia messaggi direttamente ai telefoni cellulari nell'area interessata, in caso di emergenze gravi.
+
+</details>
 
 ## Approfondimenti dall'archivio
 
