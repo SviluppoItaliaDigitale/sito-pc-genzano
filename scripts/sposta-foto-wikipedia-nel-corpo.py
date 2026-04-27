@@ -146,11 +146,41 @@ def main():
     if args.file:
         targets = [Path(args.file)]
     else:
-        # Tutti gli articoli con image_credit
-        targets = sorted([
-            md for md in CONTENT.glob("*.md")
-            if "image_credit:" in md.read_text(encoding="utf-8")
-        ])
+        # Articolo affetto = ha image: che punta a /images/<slug>.webp E
+        # il file webp esiste E NON e' una cover tipografica (1200x630).
+        # Una cover tipografica generata da genera-cover.py e' sempre
+        # 1200x630; tutto cio' che ha aspect ratio diverso e' una foto
+        # (Wikipedia/utente) usata erroneamente come cover.
+        try:
+            from PIL import Image
+        except ImportError:
+            print("[warn] Pillow non disponibile, fallback solo image_credit", file=sys.stderr)
+            targets = sorted([
+                md for md in CONTENT.glob("*.md")
+                if "image_credit:" in md.read_text(encoding="utf-8")
+            ])
+        else:
+            targets = []
+            for md in sorted(CONTENT.glob("*.md")):
+                slug = md.stem
+                cover_path = ROOT / "static" / "images" / f"{slug}.webp"
+                if not cover_path.is_file():
+                    continue
+                try:
+                    with Image.open(cover_path) as img:
+                        w, h = img.size
+                except Exception:
+                    continue
+                # Cover tipografica = 1200x630 (rapporto 1.905). Tolleranza ±2px.
+                is_typographic = (1198 <= w <= 1202) and (628 <= h <= 632)
+                if is_typographic:
+                    continue
+                # Sospetto: foto in cover. Verifica anche che il file
+                # -fonte-wikipedia non esista gia' (= articolo gia' fixato)
+                foto_path = ROOT / "static" / "images" / f"{slug}-fonte-wikipedia.webp"
+                if foto_path.is_file():
+                    continue
+                targets.append(md)
 
     print(f"[info] {len(targets)} articoli candidati")
     ok = 0

@@ -1,87 +1,169 @@
 #!/usr/bin/env python3
 """
-Aggiorna il frontmatter di un articolo dopo il download foto Wikipedia:
-  - popola `image: "/images/<nome>.webp"` se vuoto
-  - popola `image_credit: "..."` (autore + licenza + fonte)
-  - rimuove la riga `# TODO-foto-wikipedia: ...` dal frontmatter
+Aggiorna l'articolo dopo il download di una foto da Wikipedia/NASA/USGS/NOAA:
 
-Idempotente: se eseguito due volte senza marker, non modifica nulla.
+Flusso (corretto, no piu' foto-in-cover):
+  1. Rinomina static/images/<slug>.webp -> static/images/<slug>-fonte-wikipedia.webp
+     (la foto scaricata diventa "foto del corpo")
+  2. Lancia genera-cover.py per produrre una cover tipografica istituzionale
+     (gradiente blu + titolo articolo + fascia con logo) come <slug>.webp
+  3. Aggiorna frontmatter:
+     - image: "/images/<slug>.webp" (cover tipografica)
+     - image_alt popolato con titolo se vuoto
+     - rimuove la riga marker TODO-foto-*
+  4. Inserisce nel corpo articolo lo shortcode {{< foto >}} con foto Wikipedia
+     dopo la prima H2 + primo paragrafo (collocazione sensata).
+     Caption: "Foto: <autore> — <licenza> — via Wikimedia Commons.
+     [Fonte originale](<url>)."
+
+Idempotente: se eseguito su articolo gia' processato (slug-fonte-wikipedia.webp
+gia' presente), non duplica.
 
 Uso:
   python3 scripts/aggiorna-frontmatter-foto.py \\
-    <path-articolo.md> <nome-immagine-senza-ext> \\
-    "<autore>" "<licenza>" "<url-origine>"
-
-Esempio:
-  python3 scripts/aggiorna-frontmatter-foto.py \\
-    content/comunicazioni/2026-05-06-friuli-1976.md \\
-    2026-05-06-friuli-1976 \\
-    "USGS" "Public domain" \\
-    "https://commons.wikimedia.org/wiki/File:USGS_Shakemap.jpg"
+    <path-articolo.md> <slug> "<autore>" "<licenza>" "<url-origine>"
 """
-import sys
 import re
+import shutil
+import subprocess
+import sys
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent.parent
+IMAGES = ROOT / "static" / "images"
+GENERA_COVER = ROOT / "scripts" / "genera-cover.py"
 
-def update_article(article_path: Path, img_name: str, author: str, license_: str, source_url: str) -> bool:
-    """Ritorna True se ha modificato il file."""
-    if not article_path.is_file():
-        print(f"[error] articolo non trovato: {article_path}", file=sys.stderr)
-        return False
 
-    text = article_path.read_text(encoding="utf-8")
-
-    # Separa frontmatter e corpo
+def parse_frontmatter(text: str):
     m = re.match(r"^---\n(.*?\n)---\n(.*)$", text, flags=re.DOTALL)
     if not m:
-        print(f"[error] frontmatter YAML non trovato in {article_path}", file=sys.stderr)
+        return None, None
+    return m.group(1), m.group(2)
+
+
+def get_field(fm: str, name: str) -> str:
+    m = re.search(rf'^{name}:\s*"?(.*?)"?\s*$', fm, flags=re.MULTILINE)
+    return m.group(1).strip() if m else ""
+
+
+def insert_foto_in_body(body: str, foto_url: str, alt: str, caption: str) -> str:
+    """Inserisce {{< foto >}} dopo la prima H2 + primo paragrafo di contenuto."""
+    if foto_url in body:
+        return body  # gia' presente
+    shortcode = (
+        f'\n\n{{{{< foto src="{foto_url}"\n'
+        f'         alt="{alt}"\n'
+        f'         caption="{caption}" >}}}}\n'
+    )
+    h2 = re.search(r'^## [^#].*$', body, flags=re.MULTILINE)
+    if h2:
+        rest = body[h2.end():]
+        para = re.search(r'\n\n([^\n].*?)(\n\n|\Z)', rest, flags=re.DOTALL)
+        if para:
+            ins = h2.end() + para.end(1)
+            return body[:ins] + shortcode + body[ins:]
+    # Fallback: dopo primo paragrafo
+    m = re.search(r'(.+?\n)(\n)', body, flags=re.DOTALL)
+    if m:
+        return body[:m.end(1)] + shortcode + body[m.end(2):]
+    return shortcode.lstrip() + body
+
+
+def update_article(article: Path, slug: str, author: str, license_: str, source_url: str) -> bool:
+    if not article.is_file():
+        print(f"[error] articolo non trovato: {article}", file=sys.stderr)
         return False
 
-    fm, body = m.group(1), m.group(2)
-    new_fm = fm
+    text = article.read_text(encoding="utf-8")
+    fm, body = parse_frontmatter(text)
+    if fm is None:
+        print(f"[error] frontmatter YAML non trovato in {article}", file=sys.stderr)
+        return False
 
-    # 1) Rimuove la riga del marker TODO-foto-wikipedia
-    new_fm, n_todo = re.subn(
-        r"^# *TODO-foto-wikipedia:.*\n",
+    cover_path = IMAGES / f"{slug}.webp"
+    foto_path = IMAGES / f"{slug}-fonte-wikipedia.webp"
+    cover_url = f"/images/{slug}.webp"
+    foto_url = f"/images/{slug}-fonte-wikipedia.webp"
+
+    # 1. Rinomina foto Wikipedia -> -fonte-wikipedia (se non gia' fatto)
+    if cover_path.is_file() and not foto_path.is_file():
+        shutil.move(str(cover_path), str(foto_path))
+        print(f"[ok] foto rinominata: {cover_path.name} -> {foto_path.name}")
+    elif foto_path.is_file():
+        print(f"[info] foto Wikipedia gia' rinominata: {foto_path.name}")
+    else:
+        print(f"[error] nessun file foto trovato per slug {slug}", file=sys.stderr)
+        return False
+
+    # 2. Genera cover tipografica come <slug>.webp
+    if not cover_path.is_file():
+        try:
+            subprocess.run(
+                ["python3", str(GENERA_COVER), str(article)],
+                check=True, capture_output=True, text=True,
+            )
+            print(f"[ok] cover tipografica generata: {cover_path.name}")
+        except subprocess.CalledProcessError as e:
+            print(f"[error] genera-cover.py fallito: {e.stderr}", file=sys.stderr)
+            # Rollback rename foto
+            shutil.move(str(foto_path), str(cover_path))
+            return False
+
+    # 3. Aggiorna frontmatter
+    new_fm = fm
+    # Rimuove marker TODO-foto-*
+    new_fm, _ = re.subn(
+        r"^# *TODO-foto-(?:wikipedia|nasa|usgs|noaa):.*\n",
         "",
         new_fm,
         flags=re.MULTILINE,
     )
-
-    # 2) Popola image se vuoto (image: "" oppure image: '')
-    img_path = f'/images/{img_name}.webp'
-    if re.search(r'^image:\s*["\']{2}\s*$', new_fm, flags=re.MULTILINE):
+    # image: -> cover tipografica (sovrascrivi sempre, anche se vuoto o foto)
+    if re.search(r'^image:\s*.*$', new_fm, flags=re.MULTILINE):
         new_fm = re.sub(
-            r'^image:\s*["\']{2}\s*$',
-            f'image: "{img_path}"',
+            r'^image:\s*.*$',
+            f'image: "{cover_url}"',
             new_fm,
             count=1,
             flags=re.MULTILINE,
         )
-    elif not re.search(r'^image:', new_fm, flags=re.MULTILINE):
-        new_fm = new_fm.rstrip("\n") + f'\nimage: "{img_path}"\n'
+    else:
+        new_fm = new_fm.rstrip("\n") + f'\nimage: "{cover_url}"\n'
+    # image_alt: popola se vuoto
+    title = get_field(fm, "title")
+    alt_cover = f"Cover dell'articolo: {title}" if title else "Cover articolo"
+    new_fm = re.sub(
+        r'^image_alt:\s*["\']{2}\s*$',
+        f'image_alt: "{alt_cover}"',
+        new_fm,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    # Rimuovi image_credit / image_source_url se presenti (ora sono nel caption)
+    new_fm = re.sub(r'^image_credit:.*\n', '', new_fm, flags=re.MULTILINE)
+    new_fm = re.sub(r'^image_source_url:.*\n', '', new_fm, flags=re.MULTILINE)
 
-    # 3) Popola image_credit se non c'è (Hugo lo gestira' come campo libero,
-    #    il template lo puo' mostrare in didascalia copertina).
-    credit = f'{author} — {license_} — via Wikimedia Commons'
-    credit_escaped = credit.replace('"', '\\"')
-    if not re.search(r'^image_credit:', new_fm, flags=re.MULTILINE):
-        new_fm = new_fm.rstrip("\n") + f'\nimage_credit: "{credit_escaped}"\nimage_source_url: "{source_url}"\n'
+    # 4. Inserisci shortcode foto nel corpo (idempotente)
+    foto_alt = f"Foto storica: {title}" if title else "Foto"
+    cred = author or "Sconosciuto"
+    lic = license_ or "Sconosciuta"
+    via = "via Wikimedia Commons" if "wikimedia" in (source_url or "").lower() else "via fonte libera"
+    caption_parts = [f"Foto: {cred} — {lic} — {via}"]
+    if source_url:
+        caption_parts.append(f"[Fonte originale]({source_url})")
+    caption = ". ".join(caption_parts) + "."
+    # Escape virgolette nel caption
+    caption_safe = caption.replace('"', "'")
 
-    new_text = f"---\n{new_fm}---\n{body}"
+    new_body = insert_foto_in_body(body, foto_url, foto_alt, caption_safe)
 
+    new_text = f"---\n{new_fm}---\n{new_body}"
     if new_text == text:
-        print(f"[skip] nessuna modifica per {article_path.name}")
+        print(f"[skip] {article.name}: nessuna modifica")
         return False
 
-    article_path.write_text(new_text, encoding="utf-8")
-    actions = []
-    if n_todo:
-        actions.append("rimosso TODO")
-    actions.append(f"image={img_path}")
-    actions.append("image_credit aggiunto")
-    print(f"[ok] {article_path.name}: {', '.join(actions)}")
+    article.write_text(new_text, encoding="utf-8")
+    print(f"[ok] {article.name}: cover tipografica + foto {foto_path.name} + shortcode nel corpo")
     return True
 
 
@@ -90,13 +172,13 @@ def main():
         print(__doc__, file=sys.stderr)
         sys.exit(1)
     article = Path(sys.argv[1])
-    img_name = sys.argv[2]
+    slug = sys.argv[2]
     author = sys.argv[3] or "Sconosciuto"
     license_ = sys.argv[4] or "Sconosciuta"
     source_url = sys.argv[5] or ""
-    changed = update_article(article, img_name, author, license_, source_url)
-    sys.exit(0 if changed else 0)
+    update_article(article, slug, author, license_, source_url)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
