@@ -1,7 +1,7 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 2.4
-**Ultimo aggiornamento manuale:** 2026-04-24
+**Versione:** 2.5
+**Ultimo aggiornamento manuale:** 2026-04-27
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
 **Bootstrap Italia:** versione 2.17.3
@@ -14,6 +14,20 @@
 > o nuove versioni di Bootstrap Italia, viene aperta un'Issue sul repository con la checklist
 > dei punti da verificare. Vedi **Parte 7** per dettagli.
 
+> **Changelog 2.5 (2026-04-27)**
+> - **Parte 9.3** (`allerta.json`): aggiunto il campo `ultimo_controllo` separato da
+>   `ultimo_aggiornamento`. Il workflow `check-allerta.yml` ora committa quando il livello
+>   DPC cambia OPPURE ogni ≥6 ore (max 4 commit/giorno + cambi). Barra allerta homepage e
+>   pagina `/emergenza/` lite mostrano *"Verificato: ..."* sempre fresco.
+> - **Parte 13.7** — nuova sezione *"Comunicazione di crisi sui social"*: struttura standard
+>   messaggi allerta, policy hashtag specifici e localizzati, monitoraggio disinformazione,
+>   ridondanza tra canali, accessibilità post (alt text, max 2 emoji, niente Unicode
+>   decorativi, non solo-colore per allerte). Adozione **complementare al manuale AGID**
+>   delle linee guida **ISO 22329:2021** e del **CWA CEN/CENELEC** sui messaggi social in
+>   emergenza.
+> - **Parte 13.9** — riferimenti normativi estesi a ISO 22329:2021, CWA CEN/CENELEC e WCAG
+>   2.2 AA come complemento ad AGID.
+>
 > **Changelog 2.4 (2026-04-24)**
 > - **Parte 4.8**: documentata la nuova struttura didattica completa dei **4 kit scuola** (`content/formazione/kit-scuola-*.md`) — ampliati dopo feedback positivi dei docenti che hanno richiesto maggiore chiarezza e completezza. Ogni kit include ora riferimenti normativi espliciti (L. 92/2019, Linee guida 2020/2024, art. 18 D.Lgs. 1/2018), obiettivi formalizzati (conoscenze/abilità/competenze chiave europee), tabelle per disciplina, rubriche di valutazione, schede fotocopiabili, adattamenti per BES/DSA/L2, raccordo con il Piano di Emergenza scolastico, coinvolgimento delle famiglie e FAQ del docente.
 > - Per la secondaria II grado: aggiunto percorso **PCTO strutturato** (30-50h) e tre temi pluridisciplinari per l'**Esame di Stato**.
@@ -4345,7 +4359,94 @@ propri canali:
 - Non rispondiamo in privato su emergenze in corso: in quel caso il canale unico è il 112.
 - Non siamo un servizio di emergenza: il servizio è il 112.
 
-### 13.7 — Aggiornamenti della policy
+### 13.7 — Comunicazione di crisi sui social (ISO 22329 + CWA CEN/CENELEC)
+
+In emergenza la qualità del messaggio sui social fa la differenza tra un cittadino informato
+e un cittadino in panico. Adottiamo in modo **complementare al manuale AGID** (mai in
+sostituzione) la **norma ISO 22329:2021** *Security and resilience — Emergency management —
+Guidelines for the use of social media in emergencies* e il **CWA draft CEN/CENELEC**
+*Guidelines for effective social media messages in crisis and emergency situations*.
+
+#### 13.7.1 — Struttura standard del messaggio di allerta
+
+Ogni messaggio di allerta o emergenza pubblicato sui canali del Gruppo contiene, **in
+quest'ordine**:
+
+1. **Tipo di evento** — *"Allerta meteo idrogeologica"*, *"Vento forte"*, *"Temporali in
+   arrivo"*. Mai vago, mai sensazionalistico.
+2. **Livello e codice colore** — *"Allerta gialla"*, *"Codice arancione"*, *"Allerta rossa"*.
+   Solo dal bollettino del **Centro Funzionale Regionale del Lazio**: mai inventato, mai
+   estrapolato.
+3. **Area interessata e finestra temporale** — *"Castelli Romani — dalle 12 di sabato alle 18
+   di domenica"*. Geografia + cronologia in chiaro, non in sigle.
+4. **Cosa fare** — istruzioni di autoprotezione in due o tre punti, in linguaggio chiaro,
+   voce attiva, frasi brevi.
+5. **Fonte ufficiale** — link al bollettino Centro Funzionale Regionale o DPC, sempre
+   verificabile dal cittadino.
+6. **Aggiornamenti** — quando arriverà il prossimo aggiornamento e su quale canale.
+
+#### 13.7.2 — Policy hashtag
+
+Hashtag **specifici e localizzati**, non generici. Un hashtag = un evento, riconoscibile e
+univoco, da usare in modo coerente su tutti i canali.
+
+- **Stabili (sempre presenti quando pertinenti)**: `#PCGenzano`, `#Genzano`, `#AllertaLazio`,
+  `#NUE112`, `#PianoFamiliare`, `#RischioSismico`, `#RischioIncendio`.
+- **Per evento specifico**: hashtag dedicato e univoco, coordinato con Comune e Regione (es.
+  `#AllagamentiGenzano2026`), evitando di moltiplicare varianti.
+- **Mai**: hashtag emozionali, virali o ironici durante eventi seri; hashtag generici
+  svuotati (`#italia`, `#news`, `#amazing`); hashtag politici o divisivi.
+
+#### 13.7.3 — Disinformazione: monitoraggio e risposta
+
+Sui social circolano regolarmente notizie false su rischi, allerte ed emergenze. Le
+combattiamo con tre strumenti:
+
+- **Monitoraggio attivo** dei canali del territorio (gruppi locali, account istituzionali e
+  cittadini di Genzano e Castelli Romani) durante le finestre di allerta.
+- **Risposta breve, citando la fonte ufficiale**: quando vediamo circolare una notizia non
+  verificata, rispondiamo con un commento o un post che cita la fonte ufficiale corretta,
+  senza polemica e senza nominare l'autore della disinformazione.
+- **Mai amplificare per smentire**: non condividiamo (nemmeno per ironia o critica) post
+  chiaramente falsi: ogni condivisione aumenta la loro visibilità. Citiamo il contenuto a
+  parole, mai con screenshot leggibili.
+
+#### 13.7.4 — Ridondanza tra canali
+
+Ogni messaggio importante è pubblicato in **almeno due canali** simultaneamente, per ridurre
+il rischio che un singolo canale fallisca (down della piattaforma, cambio di policy, account
+compromesso). La **fonte unica di verità resta il sito istituzionale**, citato in tutti i
+post social con link diretto. Se un post social contraddice il sito, vince il sito: il post
+va corretto secondo **11.9 bis**.
+
+#### 13.7.5 — Accessibilità dei post social
+
+Allineamento al CWA draft *Guidelines for effective social media messages in crisis*:
+
+- **alt text obbligatorio** per ogni immagine, infografica, mappa pubblicata;
+- **massimo due emoji per post**, e mai con funzione informativa critica (lo screen reader le
+  legge in modo confuso, e non tutti i cittadini italiani sono bilingue emoji);
+- **niente testo dentro l'immagine come unica fonte**: ogni informazione importante è anche
+  nel testo del post (l'immagine è ridondanza, non veicolo unico);
+- **caratteri leggibili**: italiano standard, niente maiuscole continue (lette come URLA dagli
+  screen reader), niente grassetti Unicode decorativi (𝐁𝐎𝐋𝐃 𝐔𝐍𝐈𝐂𝐎𝐃𝐄, 𝓢𝓬𝓻𝓲𝓹𝓽, ecc.: gli screen
+  reader li leggono "matematica grassetto B, matematica grassetto O…");
+- **non solo colore** per il livello di allerta (rosso e arancione non sono distinguibili da
+  daltonici): aggiungere sempre il livello scritto;
+- **lingua chiara**: frasi brevi, voce attiva, niente burocratese — coerentemente con il
+  manuale di stile AGID.
+
+#### 13.7.6 — Cosa NON adottiamo dei due standard
+
+Per coerenza con il contesto italiano e con il vincolo di sostenibilità di un Gruppo di
+volontari, **non adottiamo** queste raccomandazioni dei due standard:
+
+- **CWA: "evitare il colore verde"**: in Italia il codice colore verde = nessuna criticità è
+  ufficiale e standardizzato dal Centro Funzionale Regionale. Cambiarlo creerebbe confusione.
+- **ISO 22329: "Social Media Manager dedicato 24/7"**: non sostenibile per un Gruppo di
+  volontari. Manteniamo gli orari di presìdio dichiarati onestamente nella **13.3**.
+
+### 13.8 — Aggiornamenti della policy
 
 La Social Media Policy pubblica viene rivista almeno una volta l'anno, in corrispondenza
 della verifica periodica delle linee guida AGID / Designers Italia descritta nella Parte 13
@@ -4353,12 +4454,12 @@ di questo manuale (v. workflow `.github/workflows/aggiorna-manuale.yml`). Ogni r
 viene annotata nel changelog in cima al manuale e nella pagina pubblica con la formula
 *"Versione aggiornata al DD/MM/AAAA"*.
 
-### 13.8 — Coerenza con la normativa
+### 13.9 — Coerenza con la normativa
 
 La presente policy è redatta in coerenza con:
 
 - **Linee guida per la comunicazione digitale della PA** (AGID / Dipartimento per la
-  Trasformazione digitale).
+  Trasformazione digitale) — riferimento principale.
 - **Decreto-legge 14 marzo 2025 n. 25**, convertito con modificazioni dalla **Legge 9 maggio
   2025 n. 69**, che disciplina il ruolo del *Social Media Manager* e del *Digital Manager*
   nella PA (vedi **11.10 — Ruoli e flusso di approvazione**).
@@ -4366,8 +4467,16 @@ La presente policy è redatta in coerenza con:
   dai commenti.
 - **Legge 4/2004 (Stanca)** e **Direttiva UE 2016/2102** sull'accessibilità dei contenuti
   digitali della PA.
+- **WCAG 2.2 AA** (W3C) per l'accessibilità tecnica dei contenuti.
 - **Codice dell'amministrazione digitale** (D.Lgs. 82/2005 e successive modificazioni).
 - **D.Lgs. 1/2018** (Codice della Protezione Civile) per il quadro di riferimento operativo.
+- **ISO 22329:2021** *Security and resilience — Emergency management — Guidelines for the use
+  of social media in emergencies* — adozione complementare al manuale AGID per le buone
+  pratiche operative su monitoraggio, disseminazione e interazione con il pubblico durante le
+  emergenze (vedi **13.7**).
+- **CEN/CENELEC Workshop Agreement (CWA) draft** *Guidelines for effective social media
+  messages in crisis and emergency situations* — adottato per la struttura dei messaggi di
+  allerta e per l'accessibilità dei post (vedi **13.7**).
 
 ---
 
