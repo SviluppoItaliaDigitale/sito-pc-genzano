@@ -45,7 +45,7 @@ In caso di emergenza, contatta sempre i numeri ufficiali per garantire un interv
 
 - [IT-alert](https://www.it-alert.it/it/) — Sistema nazionale di allarme pubblico per gravi emergenze
 - [App IO](https://io.italia.it/) — L'app dei servizi pubblici per interagire con le PA
-- [App Where ARE U](https://where.areu.lombardia.it/) — App ufficiale per le chiamate di emergenza al 112 con invio automatico della posizione
+- [App Where Are U](https://where.areu.lombardia.it/) — App ufficiale del 112 con invio automatico della posizione e chiamata silenziosa ([guida sul nostro sito](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/))
 - [App YouPol](https://www.poliziadistato.it/statics/40/presentazione_youpol_-esserci.pdf) — App della Polizia di Stato per segnalare bullismo e spaccio
 
 ## Enti Operativi e di Ricerca

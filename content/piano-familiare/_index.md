@@ -180,7 +180,7 @@ Verifica di aver fatto tutto:
 - ☐ Concordato i punti di ritrovo con tutti i familiari
 - ☐ Comunicato il piano al contatto di riferimento fuori città
 - ☐ Verificato dove sono i rubinetti del gas/acqua e il quadro elettrico
-- ☐ Scaricato l'app [Where ARE U](https://where.areu.lombardia.it/) per le chiamate al 112
+- ☐ Scaricato l'app [Where Are U](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/) per le chiamate al 112 con localizzazione automatica
 
 </div>
 

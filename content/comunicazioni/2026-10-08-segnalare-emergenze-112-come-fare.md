@@ -60,11 +60,13 @@ Non sostituisce una buona descrizione del luogo, ma la integra.
 
 ## App "Where Are U"
 
-Esiste un'**app ufficiale** dal nome "**Where Are U**" (EENA) che:
+Esiste un'**app ufficiale** dal nome "**Where Are U**" (EENA / AREU Lombardia) che:
 
 - invia la **posizione** al 112 anche se il chiamante non può parlare;
 - consente **chat testuale** con la Centrale (utile per persone con disabilità uditive);
 - è gratuita e validata dal Ministero dell'Interno.
+
+Per istruzioni dettagliate vedi l'articolo [Where Are U: l'app del 112 che ti localizza in emergenza](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/).
 
 ## Chi chiama il 112 per primo?
 
