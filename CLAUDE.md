@@ -133,7 +133,8 @@ These JSON/YAML files are the primary way to update dynamic site content without
 Custom theme, not an external dependency — edit freely. Structure:
 - `layouts/partials/` — reusable components (navbar, footer, emergency-banner, allerta-card, etc.)
 - `layouts/_default/` — base, list, single templates. In `single.html` l'`<article>` usa `class="article-body"` per attivare la tipografia istituzionale curata (v7.2)
-- `layouts/shortcodes/` — shortcode `foto` per immagini nel corpo degli articoli (click-per-ingrandire, fascia blu, `<figure>`/`<figcaption>` accessibili) e shortcode `pittogramma` per inserire simboli ISO 7010 / ARASAAC (supporto comprensione bambini, anziani, parlanti L2)
+- `layouts/shortcodes/` — shortcode disponibili: `foto` (immagini articolo con click-per-ingrandire), `pittogramma` (ISO 7010/ARASAAC), `cosa-non-fare` (box rosso divieti per pagine rischio), `pagina-emergenza-lite` (contenuto pagina /emergenza/ ultra-leggera)
+- `layouts/partials/` — include `article-cover.html` (copertina articolo con didascalia image_credit), `leggi-ad-alta-voce.html` (TTS Web Speech API per pagine essenziali), `accessibility-toolbar.html` (FAB strumenti a11y), `structured-data.html` (JSON-LD Organization NGO + ContactPoint + Article + Event + FAQPage + WebSite + BreadcrumbList)
 - `layouts/index.html` — homepage template
 - `static/css/custom.css` — override CSS su Bootstrap Italia. Include:
   - regole `@media print` globali che nascondono tutto il chrome del sito quando l'utente clicca "Stampa"
@@ -195,7 +196,23 @@ Pagina interattiva che guida il cittadino con domande semplici fino a una rispos
 - Deep link: lo stato è riflesso in `location.hash` (es. `/assistente/#terremoto_casa`) per condividere una risposta.
 - Homepage: card "Cosa devo fare?" in `data/quick_links.yaml` → `servizi[0]`.
 
-Per aggiungere un nuovo percorso: aggiungere un nodo `question` collegato da `start.options`, poi le relative `answer` referenziate da `options[n].next`. Rispettare il criterio `emergency: true` solo per situazioni operative reali (coerenza con regola `06-protezione-civile-scientifica.md` sul tono di comunicazione del rischio).
+Per aggiungere un nuovo percorso: aggiungere un nodo `question` collegato da `start.options`, poi le relative `answer` referenziate da `options[n].next`. Rispettare il criterio `emergency: true` solo per situazioni operative reali (coerenza con regola `06-protezione-civile-scientifica.md` sul tono di comunicazione del rischio). Ogni nodo `answer` può avere un `pittogramma` opzionale (es. `'arasaac/terremoto.png'`) renderizzato come `<figure>` accessibile sopra il corpo della risposta (vedi sezione pittogrammi).
+
+### Pagina `/emergenza/` lite (per banda debole o emergenze)
+
+Pagina ultra-leggera (44 KB vs 64 KB della homepage) per consultazione rapida quando la rete è satura/lenta. Aliases attivi: `/lite/`, `/emergenza-essenziale/`. Contenuto in ordine di priorità: banner emergenza dinamico (se `data/emergenza.json` attiva), 112 grande con call-to-action, stato allerta meteo dinamico colorato (legge `data/allerta.json` al build), 4 numeri essenziali, 6 azioni "cosa fare ora", 7 link rapidi al sito completo. Zero widget esterni (Windy/Meteoam/IT-alert), CSS inline nello shortcode `pagina-emergenza-lite.html`. Linkata dal footer di tutte le pagine.
+
+### TTS "Leggi ad alta voce" (Web Speech API)
+
+Pulsante che usa `window.speechSynthesis` browser nativo per leggere il contenuto delle pagine essenziali in italiano. Voce `it-IT` preferita, rate 0.95 per chiarezza, stati idle/reading/paused, fallback graceful (bottone nascosto) se browser senza Web Speech API. Esclude script/pittogrammi/code blocks dal testo letto. Componente in `partials/leggi-ad-alta-voce.html`. Opt-in via frontmatter `tts: true`. Attivo su 12 pagine: cosa-fare-adesso, numeri-utili, facile-da-leggere, allerte-meteo, piano-familiare + 7 sotto-pagine rischi-prevenzione. Caso d'uso: anziani con vista debole, persone in stress/emergenza, parlanti italiano L2, bambini.
+
+### Box "Cosa NON fare" (shortcode `cosa-non-fare`)
+
+Box rosso bordato con icona divieto che evidenzia visivamente i comportamenti DA EVITARE in caso di emergenza. Aumenta l'efficacia della comunicazione del rischio rispetto ai "non" dispersi nel testo. Attivo nelle 7 pagine `/rischi-prevenzione/*` (sismico, incendio, idrogeologico, vento, temporali, blackout, ondate calore). Contrasto WCAG AA garantito (testo `#7f1d1d` su `#fff5f5` = 7.7:1). Compatibile con toolbar a11y (contrasto invertito + scala grigi).
+
+### Dati strutturati JSON-LD (`partials/structured-data.html`)
+
+**Importante**: l'Organization è marcata come `["Organization", "NGO"]`, **NON** `GovernmentOrganization` né `EmergencyService`. Il Gruppo è associazione di volontariato OdV, non ente pubblico né servizio di emergenza chiamabile direttamente — usare quei tipi indurrebbe Google/assistenti vocali a presentare il Gruppo come servizio chiamabile, contraddicendo la regola "in emergenza chiama il 112". Schema attivi: Organization+NGO, ContactPoint dedicato, WebSite (con SearchAction), BreadcrumbList, Article (per `/comunicazioni/`), Event (aggiuntivo per `badge: Evento` con location Place + organizer), FAQPage (per `/faq/`), WebPage (default), Question/Answer, ImageObject, PostalAddress, GeoCoordinates, City. Quando si aggiungono schema nuovi, prudenza su tipi che inducano confusione tra associazione di volontariato e ente pubblico/servizio di emergenza.
 
 ### Strumenti di Accessibilità (toolbar utente)
 
