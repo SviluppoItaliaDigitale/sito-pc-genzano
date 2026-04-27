@@ -18,6 +18,10 @@ draft: false
 
 Il **23 aprile** è la festa di **San Giorgio**, patrono dello scoutismo. Robert Baden-Powell, fondatore del movimento, lo scelse per le sue virtù di cavaliere protettore degli indifesi: il santo che affronta il drago è da oltre un secolo il modello del volontario in servizio. In tutto il mondo, oggi, milioni di scout rinnovano la loro Promessa. È la giornata giusta per raccontare il filo lungo che lega il movimento scout italiano alla **Protezione Civile**, dal **fango di Firenze del 1966** alle alluvioni di oggi.
 
+{{< foto src="/images/2026-04-23-baden-powell-fondatore-scout.webp"
+         alt="Ritratto di Robert Baden-Powell, fondatore del movimento scout, in uniforme da capo scout"
+         caption="Robert Baden-Powell (1857-1941), fondatore dello scoutismo. Nel 1907 organizza il primo campo scout sull'isola di Brownsea: nasce il movimento che oggi conta oltre 50 milioni di membri nel mondo." >}}
+
 ## Estote Parati: una pedagogia del "essere pronti"
 
 Il motto degli scout — *"Estote parati"*, "Siate pronti" — non è uno slogan. Baden-Powell lo definiva una **triplice preparazione**: di mente, perché il volontario sappia **decidere bene** in pochi secondi; di corpo, perché abbia la **resistenza fisica** di reggere giorni di servizio; e morale, perché sia **disposto** a fare la cosa giusta nel momento giusto, anche quando costa.
@@ -48,6 +52,10 @@ Diventeranno gli **"angeli del fango"** — espressione coniata dalla cronaca de
 
 Tra le strutture che organizzarono l'accoglienza dei volontari accorsi spontaneamente ci furono **gli scout fiorentini**, coordinati da **Luca Uzzielli, Giannozzo Pucci e Marco Cellai**, incaricati direttamente dal sindaco **Piero Bargellini**. Un'amministrazione comunale che si appoggia, in piena emergenza, all'autonomia logistica di un gruppo di volontari giovani.
 
+{{< foto src="/images/2026-04-23-firenze-alluvione-1966-angeli-fango.webp"
+         alt="Firenze sommersa dal fango dopo l'esondazione dell'Arno del 4 novembre 1966"
+         caption="Firenze, 4 novembre 1966: l'Arno tracima e la città è sommersa dal fango. Migliaia di giovani da tutta Italia e dal mondo accorrono a salvare libri, opere d'arte e abitazioni — passeranno alla storia come gli «angeli del fango»." >}}
+
 È un'idea che, allora, non era ancora codificata in nessuna legge. Mancavano dieci anni alla **Legge 996/1970** (la prima legge italiana sulla Protezione Civile) e quindici alla **Legge 225/1992** che istituisce il Servizio Nazionale. Ma a Firenze, sul fango, si sta inventando un metodo che diventerà sistema.
 
 ## Friuli 1976: la nascita di un servizio strutturato
@@ -59,6 +67,10 @@ In quell'estate del 1976, **7.500 scout dell'AGESCI** raggiungono il Friuli. Pi�
 Il loro lavoro: assistere le persone, montare e gestire le tendopoli, fare servizio mensa, gestire i magazzini, distribuire i materiali. Soprattutto, **animare i bambini e i ragazzi** sopravvissuti al sisma, restituendo loro un pezzo di normalità nel mezzo della catastrofe.
 
 Sarà lo stesso Zamberletti a riconoscere pubblicamente, alla fine dell'emergenza, l'**autonomia logistica** degli scout e il loro contributo educativo nei confronti dei più piccoli. Da quel riconoscimento nasce un'idea: il volontariato organizzato non è una riserva da chiamare in extremis. È una **componente strutturale** del sistema di Protezione Civile.
+
+{{< foto src="/images/2026-04-23-friuli-1976-terremoto-gemona.webp"
+         alt="Macerie a Gemona del Friuli dopo il terremoto del 6 maggio 1976"
+         caption="Friuli, maggio 1976: i comuni di Gemona, Venzone e Osoppo sono devastati dal sisma di magnitudo 6,5. Mille morti, centomila senzatetto. Nell'estate successiva 7.500 scout dell'AGESCI raggiungono i luoghi del terremoto, organizzando dalla base operativa di Udine i servizi nelle aree più remote." >}}
 
 ## Irpinia 1980: nasce il Settore Protezione Civile AGESCI
 
@@ -99,6 +111,10 @@ In ognuna di queste situazioni gli scout hanno fatto **gli stessi servizi**: ten
 ## L'Aquila 2009: turni in tendopoli
 
 **6 aprile 2009**, ore 03:33. L'Aquila trema. Magnitudo 6,3. Trecentootto morti, 1.600 feriti, 49.000 senzatetto nella prima settimana. Già nella prima settimana, i volontari del **Settore Protezione Civile AGESCI** sono in turno principalmente nell'**allestimento delle tendopoli**, in un'emergenza che si protrarrà per anni.
+
+{{< foto src="/images/2026-04-23-aquila-2009-terremoto.webp"
+         alt="L'Aquila dopo il terremoto del 6 aprile 2009: edifici lesionati e centro storico inaccessibile"
+         caption="L'Aquila, 6 aprile 2009. Il sisma di magnitudo 6,3 colpisce nel cuore della notte. I volontari del Settore PC AGESCI sono in tendopoli già nella prima settimana, e resteranno per anni a sostegno della popolazione e della ricostruzione." >}}
 
 ## Centro Italia 2016: cinque "route" di servizio
 
