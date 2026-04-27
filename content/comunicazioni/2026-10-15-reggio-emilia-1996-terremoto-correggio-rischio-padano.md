@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "Ketipmaig — CC BY-SA 4.0 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Flag_of_Reggio_Emilia.svg"
 ---
 
-Alle **11:56 del 15 ottobre 1996** una scossa di **magnitudo 4.9** colpì la pianura tra **Correggio**, **Carpi** e **Reggio Emilia**. Profondità ipocentrale **27 chilometri**. Nessun morto, alcuni feriti lievi, **circa 100 edifici** dichiarati inagibili (soprattutto chiese e edifici storici).
-
-Per i parametri di magnitudo, fu un evento **di rilievo medio** nella scala dei terremoti italiani. Per la **Pianura Padana**, fu un campanello d'allarme: ricordò che **anche la pianura è zona sismica**, contro la percezione diffusa di "tranquillità sismica" che caratterizzava la valle del Po.
+Alle **11:56 del 15 ottobre 1996** una scossa di **magnitudo 4.9** colpì la pianura tra **Correggio**, **Carpi** e **Reggio Emilia**. Profondità ipocentrale **27 chilometri**. Nessun morto, alcuni feriti lievi, **circa 100 edifici** dichiarati inagibili (soprattutto chiese e edifici storici).Per i parametri di magnitudo, fu un evento **di rilievo medio** nella scala dei terremoti italiani. Per la **Pianura Padana**, fu un campanello d'allarme: ricordò che **anche la pianura è zona sismica**, contro la percezione diffusa di "tranquillità sismica" che caratterizzava la valle del Po.
 
 ## La sismicità "dimenticata" della Pianura Padana
 
 Fino agli anni Novanta, la Pianura Padana era considerata una **zona sismicamente tranquilla**. Le mappe di pericolosità del territorio italiano la classificavano in fascia bassa o non classificavano affatto. Le **norme antisismiche** non erano applicate alla maggior parte del costruito padano.
+
+{{< foto src="/images/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano-fonte-wikipedia.webp"
+         alt="Foto storica: Reggio Emilia, 15 ottobre 1996: il terremoto che ha riportato la Pianura Padana sulla mappa sismica"
+         caption="Foto: Ketipmaig — CC BY-SA 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Flag_of_Reggio_Emilia.svg)." >}}
+
 
 Il terremoto del 1996 ricordò che esiste una **fascia sismica padana** legata alle pieghe sepolte dell'Appennino settentrionale (il cosiddetto **fronte appenninico sepolto**). I dati storici lo confermavano (terremoti del 1547, 1671, 1796, 1810 nella stessa zona), ma la **memoria collettiva** li aveva dimenticati.
 

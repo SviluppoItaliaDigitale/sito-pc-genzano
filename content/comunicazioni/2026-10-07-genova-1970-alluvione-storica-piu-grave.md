@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "(non specificato) — CC BY 2.5 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Ponte_di_Sant%27Agata_5.jpg"
 ---
 
-Tra il **7 e l'8 ottobre 1970** una pioggia di intensità eccezionale si abbatté sulla Liguria centrale. A Genova furono registrati **oltre 900 millimetri di pioggia in 24 ore** in alcune stazioni del bacino del Bisagno — più di quanto cade normalmente in mezzo anno. Il **torrente Bisagno**, che attraversa Genova in gran parte tombato sotto la città, esondò violentemente.
-
-Bilancio: **44 morti** in città, **22 dispersi**, **2.000 senzatetto**, **8.000 vittime indirette di danni** secondo i registri comunali dell'epoca. È stata la **più grave alluvione del Novecento ligure**.
+Tra il **7 e l'8 ottobre 1970** una pioggia di intensità eccezionale si abbatté sulla Liguria centrale. A Genova furono registrati **oltre 900 millimetri di pioggia in 24 ore** in alcune stazioni del bacino del Bisagno — più di quanto cade normalmente in mezzo anno. Il **torrente Bisagno**, che attraversa Genova in gran parte tombato sotto la città, esondò violentemente.Bilancio: **44 morti** in città, **22 dispersi**, **2.000 senzatetto**, **8.000 vittime indirette di danni** secondo i registri comunali dell'epoca. È stata la **più grave alluvione del Novecento ligure**.
 
 ## Una città pianificata sul rischio
 
 Genova è città di torrenti e versanti scoscesi. La sua urbanizzazione storica si è sviluppata **a contatto con i corsi d'acqua**, in molti casi tombandoli sotto strade e piazze. Nel 1970 questa **vulnerabilità strutturale** si manifestò in tutta la sua portata:
+
+{{< foto src="/images/2026-10-07-genova-1970-alluvione-storica-piu-grave-fonte-wikipedia.webp"
+         alt="Foto storica: Genova, 7 ottobre 1970: l'alluvione storica più grave del Novecento ligure"
+         caption="Foto: (non specificato) — CC BY 2.5 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Ponte_di_Sant%27Agata_5.jpg)." >}}
+
 
 - Il **Bisagno**, principale torrente della città, si gonfiò di acqua e detriti dai versanti deforestati a monte
 - Le **tombinature** non riuscirono a smaltire la portata, l'acqua esplose dalle griglie stradali

@@ -5,8 +5,8 @@ description: "Where Are U è l'app ufficiale del Numero Unico Europeo 112: invia
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-27-app-where-are-u-112-localizzazione-emergenza.webp"
+image_alt: "Cover dell'articolo: Where Are U: l'app del 112 che ti localizza in emergenza"
 scadenza: ""
 area: "Lazio"
 allegati: []

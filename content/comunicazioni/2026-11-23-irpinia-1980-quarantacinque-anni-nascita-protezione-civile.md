@@ -11,19 +11,20 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "USGS — Public domain — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:19801123_183453_irpinia_quake_intensity.jpg"
 ---
 
-Alle **19:34 del 23 novembre 1980** la terra dell'Appennino campano-lucano si spaccò per oltre quaranta secondi. Magnitudo 6.9, intensità Mercalli stimata fino al X grado, una faglia normale lunga circa quaranta chilometri tra Conza della Campania, Laviano e Castelnuovo di Conza. Quando l'oscillazione finì, **migliaia di paesi non esistevano più**.
-
-{{< foto src="/images/2026-evento-irpinia-1980-conza-distruzione.webp"
+Alle **19:34 del 23 novembre 1980** la terra dell'Appennino campano-lucano si spaccò per oltre quaranta secondi. Magnitudo 6.9, intensità Mercalli stimata fino al X grado, una faglia normale lunga circa quaranta chilometri tra Conza della Campania, Laviano e Castelnuovo di Conza. Quando l'oscillazione finì, **migliaia di paesi non esistevano più**.{{< foto src="/images/2026-evento-irpinia-1980-conza-distruzione.webp"
          alt="Macerie di Conza della Campania dopo il terremoto dell'Irpinia del 23 novembre 1980"
          caption="Conza della Campania, novembre 1980. Il sisma di magnitudo 6,9 colpisce Campania e Basilicata: 2.914 morti, 280.000 senzatetto. Da questa tragedia nasce, con la legge 225/1992, la Protezione Civile italiana come sistema strutturato." >}}
 
 ## La cronologia
 
 Il bilancio definitivo, anni dopo, fu di **quasi 3.000 morti, oltre 8.800 feriti, circa 280.000 sfollati**. Distrutti o gravemente danneggiati 687 comuni in Campania, Basilicata e Puglia. La scossa principale fu seguita da repliche per mesi.
+
+{{< foto src="/images/2026-11-23-irpinia-1980-quarantacinque-anni-nascita-protezione-civile-fonte-wikipedia.webp"
+         alt="Foto storica: Irpinia 1980, 46 anni dopo: quando l'Italia decise di costruire la Protezione Civile"
+         caption="Foto: USGS — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:19801123_183453_irpinia_quake_intensity.jpg)." >}}
+
 
 Il primo soccorso arrivò in ritardo. Il presidente Pertini, in visita ai paesi colpiti, parlò in televisione di "una colpa che non si può perdonare" riferendosi alla disorganizzazione della macchina dello Stato. Per giorni i superstiti scavarono a mani nude tra le macerie, mentre l'aiuto istituzionale tardava a coordinarsi.
 

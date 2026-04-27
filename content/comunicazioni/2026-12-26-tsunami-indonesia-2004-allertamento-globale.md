@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "U.S. Navy photo by Photographer's Mate 2nd Class Philip A. McDaniel — Public domain — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:US_Navy_050102-N-9593M-040_A_village_near_the_coast_of_Sumatra_lays_in_ruin_after_the_Tsunami_that_struck_South_East_Asia.jpg"
 ---
 
-Alle **00:58 UTC del 26 dicembre 2004** (le 7:58 ora locale a Sumatra), un terremoto di **magnitudo 9.1** ruppe una faglia di subduzione lunga circa **1.300 chilometri** nell'Oceano Indiano. La rottura sollevò il fondo marino di alcuni metri e generò uno **tsunami** che, in poche ore, raggiunse **14 Paesi** dall'Indonesia all'Africa orientale.
-
-**Oltre 230.000 morti** (alcune fonti arrivano a 280.000). **1,7 milioni di sfollati**. È stato il terremoto più potente del XXI secolo e una delle peggiori catastrofi naturali della storia umana documentata.
+Alle **00:58 UTC del 26 dicembre 2004** (le 7:58 ora locale a Sumatra), un terremoto di **magnitudo 9.1** ruppe una faglia di subduzione lunga circa **1.300 chilometri** nell'Oceano Indiano. La rottura sollevò il fondo marino di alcuni metri e generò uno **tsunami** che, in poche ore, raggiunse **14 Paesi** dall'Indonesia all'Africa orientale.**Oltre 230.000 morti** (alcune fonti arrivano a 280.000). **1,7 milioni di sfollati**. È stato il terremoto più potente del XXI secolo e una delle peggiori catastrofi naturali della storia umana documentata.
 
 ## Una catastrofe che si poteva mitigare
 
 Il dato più tragico del 2004 è che **non esisteva un sistema di allertamento tsunami** per l'Oceano Indiano. Le aree vicine all'epicentro (costa di Aceh, Indonesia) furono colpite in **15-30 minuti**: troppo poco per qualunque sistema di allerta. Ma le coste di **Sri Lanka, India meridionale, Thailandia, Maldive, Africa orientale** furono raggiunte dopo **ore**. Un sistema di allerta funzionante avrebbe potuto salvare **decine di migliaia di vite**.
+
+{{< foto src="/images/2026-12-26-tsunami-indonesia-2004-allertamento-globale-fonte-wikipedia.webp"
+         alt="Foto storica: Tsunami dell'Oceano Indiano, 26 dicembre 2004: la più grande operazione di soccorso internazionale"
+         caption="Foto: U.S. Navy photo by Photographer's Mate 2nd Class Philip A. McDaniel — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:US_Navy_050102-N-9593M-040_A_village_near_the_coast_of_Sumatra_lays_in_ruin_after_the_Tsunami_that_struck_South_East_Asia.jpg)." >}}
+
 
 Il sistema di allertamento tsunami **esisteva** dal 1965 nel Pacifico (PTWC, Pacific Tsunami Warning Center). Non era stato esteso all'Oceano Indiano perché ritenuto a basso rischio.
 

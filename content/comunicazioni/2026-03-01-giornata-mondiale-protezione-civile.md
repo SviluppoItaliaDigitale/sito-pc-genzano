@@ -11,13 +11,9 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "Davide Laruccia — CC BY-SA 4.0 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Logo_Internazionale_Protezione_Civile.png"
 ---
 
-Il **1° marzo** di ogni anno si celebra la **Giornata Mondiale della Protezione Civile** (*World Civil Defence Day*), istituita dall'**Organizzazione Internazionale di Protezione Civile** (ICDO/OIPC) nel **1990**. La data ricorda l'anniversario dell'**entrata in vigore della Costituzione dell'OIPC**, avvenuta il 1° marzo 1972, dopo la trasformazione dell'organizzazione internazionale di soccorso fondata negli anni Trenta.
-
-## Cos'è l'OIPC
+Il **1° marzo** di ogni anno si celebra la **Giornata Mondiale della Protezione Civile** (*World Civil Defence Day*), istituita dall'**Organizzazione Internazionale di Protezione Civile** (ICDO/OIPC) nel **1990**. La data ricorda l'anniversario dell'**entrata in vigore della Costituzione dell'OIPC**, avvenuta il 1° marzo 1972, dopo la trasformazione dell'organizzazione internazionale di soccorso fondata negli anni Trenta.## Cos'è l'OIPC
 
 L'**Organizzazione Internazionale di Protezione Civile** è un'agenzia intergovernativa con sede a Ginevra che riunisce le autorità nazionali di Protezione Civile di **circa 60 Paesi membri** e oltre 20 osservatori. Il suo scopo è promuovere la **cooperazione internazionale** nel campo della prevenzione e gestione dei disastri, attraverso:
 
@@ -31,6 +27,11 @@ L'**Italia** è Paese membro dell'OIPC dal 1972 e contribuisce attivamente con i
 ## Il tema annuale
 
 Ogni anno la Giornata Mondiale ha un **tema specifico** scelto dall'OIPC per orientare le campagne di sensibilizzazione. Negli ultimi anni i temi hanno riguardato:
+
+{{< foto src="/images/2026-03-01-giornata-mondiale-protezione-civile-fonte-wikipedia.webp"
+         alt="Foto storica: 1° marzo, Giornata Mondiale della Protezione Civile"
+         caption="Foto: Davide Laruccia — CC BY-SA 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Logo_Internazionale_Protezione_Civile.png)." >}}
+
 
 - I bambini e l'educazione al rischio
 - Il volontariato come pilastro della Protezione Civile

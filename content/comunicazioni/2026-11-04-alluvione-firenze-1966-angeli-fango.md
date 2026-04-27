@@ -11,19 +11,20 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "(non specificato) — Public domain — via Wikimedia Commons"
-image_source_url: "https://it.wikipedia.org/wiki/File:Alluvione_di_Firenze_07.jpg"
 ---
 
-All'alba del **4 novembre 1966** l'Arno ruppe gli argini ed entrò a Firenze. L'acqua, mista a fango e nafta, raggiunse i sei metri in alcuni quartieri. **35 morti** in città, 17 in tutta la regione, oltre **5.000 famiglie** senza casa, **decine di migliaia** di opere d'arte, libri antichi e archivi danneggiati o distrutti.
-
-{{< foto src="/images/2026-evento-firenze-1966-piazza-santa-croce.webp"
+All'alba del **4 novembre 1966** l'Arno ruppe gli argini ed entrò a Firenze. L'acqua, mista a fango e nafta, raggiunse i sei metri in alcuni quartieri. **35 morti** in città, 17 in tutta la regione, oltre **5.000 famiglie** senza casa, **decine di migliaia** di opere d'arte, libri antichi e archivi danneggiati o distrutti.{{< foto src="/images/2026-evento-firenze-1966-piazza-santa-croce.webp"
          alt="Piazza Santa Croce a Firenze sommersa dal fango il 4 novembre 1966"
          caption="Firenze, 4 novembre 1966. L'Arno tracima e sommerge la città. Migliaia di giovani — gli «angeli del fango» — accorrono da tutta Italia e dal mondo per salvare libri, opere d'arte e abitazioni. Tra gli organizzatori, gli scout fiorentini incaricati dal sindaco Bargellini." >}}
 
 ## Una città sotto acqua e fango
 
 L'Arno aveva esondato già altre volte, ma mai con quell'intensità. Le piogge eccezionali dei giorni precedenti avevano saturato il bacino. Quando la diga di Levane scaricò massicciamente l'acqua, il fiume non resse. Alle sei del mattino il **rione di Santa Croce** era già allagato. Alle nove l'acqua aveva raggiunto **piazza del Duomo**.
+
+{{< foto src="/images/2026-11-04-alluvione-firenze-1966-angeli-fango-fonte-wikipedia.webp"
+         alt="Foto storica: 4 novembre 1966: l'alluvione di Firenze e la nascita degli Angeli del fango"
+         caption="Foto: (non specificato) — Public domain — via Wikimedia Commons. [Fonte originale](https://it.wikipedia.org/wiki/File:Alluvione_di_Firenze_07.jpg)." >}}
+
 
 I monumenti della culla del Rinascimento furono in pericolo: il **Crocifisso di Cimabue** in Santa Croce, le porte del Battistero del Ghiberti, gli **Uffizi**, la **Biblioteca Nazionale Centrale** con migliaia di volumi sommersi.
 

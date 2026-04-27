@@ -11,13 +11,9 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "Istituto Nazionale di Geofisica e Vulcanologia and Centro Nazionale Terremoti — CC BY-SA 4.0 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:30-10-2016_central_italy_ShakeMap.jpg"
 ---
 
-Alle **7:40 del 30 ottobre 2016** la scossa più forte registrata in Italia dopo l'Irpinia 1980 colpì la valle del Nera. **Magnitudo 6.5**, ipocentro a 9 chilometri di profondità, epicentro pochi chilometri a nord di Norcia. Crollò gran parte del centro storico, compresa la **Basilica di San Benedetto**, simbolo della città.
-
-## Una scossa attesa, paesi evacuati
+Alle **7:40 del 30 ottobre 2016** la scossa più forte registrata in Italia dopo l'Irpinia 1980 colpì la valle del Nera. **Magnitudo 6.5**, ipocentro a 9 chilometri di profondità, epicentro pochi chilometri a nord di Norcia. Crollò gran parte del centro storico, compresa la **Basilica di San Benedetto**, simbolo della città.## Una scossa attesa, paesi evacuati
 
 A differenza del 24 agosto, questa volta il bilancio umano fu **straordinariamente contenuto**: nessuna vittima diretta nell'abitato di Norcia, due deceduti per cause indirette nelle ore successive, alcune centinaia di feriti.
 
@@ -35,6 +31,11 @@ La sequenza del Centro Italia (24 agosto 2016 — 18 gennaio 2017) ha colpito co
 - **41.000 sfollati** al picco
 - Oltre **70.000 scosse strumentali** registrate
 - Danni stimati in **oltre 23 miliardi di euro**
+
+{{< foto src="/images/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia-fonte-wikipedia.webp"
+         alt="Foto storica: Norcia, 30 ottobre 2016: la scossa più forte d'Italia degli ultimi 30 anni"
+         caption="Foto: Istituto Nazionale di Geofisica e Vulcanologia and Centro Nazionale Terremoti — CC BY-SA 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:30-10-2016_central_italy_ShakeMap.jpg)." >}}
+
 
 E ha lasciato in eredità il **Sismabonus**, il Fondo per la ricostruzione, e l'esperienza più recente di gestione di emergenze sismiche complesse.
 

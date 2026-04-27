@@ -11,17 +11,18 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-image_credit: "John Severns (Severnjc) — Public domain — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:European_honey_bee_extracts_nectar.jpg"
 ---
 
-Maggio o giugno, una mattina qualunque a Genzano. Ti affacci al balcone e vedi, attaccata a un ramo di un albero del giardino, una **massa scura grande quanto un pallone da rugby**. Si muove. Vibra. Decine di migliaia di api si muovono in coordinazione attorno a un cuore comune. È uno **sciame**: una delle scene più ordinarie e meno comprese della primavera italiana.
-
-Negli ultimi anni il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** riceve regolarmente chiamate dei cittadini per il **recupero di sciami d'api** — soprattutto fra **maggio e luglio**, nel periodo di sciamatura naturale. Il servizio operativo non lo svolgiamo noi: in Italia il recupero sciami è di competenza dei **Vigili del Fuoco** e degli **apicoltori professionisti** convenzionati o iscritti all'Albo Apicoltori Regionale. Questa pagina spiega che cos'è uno sciame, perché non devi spaventarti e **chi devi chiamare** in base alla situazione.
+Maggio o giugno, una mattina qualunque a Genzano. Ti affacci al balcone e vedi, attaccata a un ramo di un albero del giardino, una **massa scura grande quanto un pallone da rugby**. Si muove. Vibra. Decine di migliaia di api si muovono in coordinazione attorno a un cuore comune. È uno **sciame**: una delle scene più ordinarie e meno comprese della primavera italiana.Negli ultimi anni il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** riceve regolarmente chiamate dei cittadini per il **recupero di sciami d'api** — soprattutto fra **maggio e luglio**, nel periodo di sciamatura naturale. Il servizio operativo non lo svolgiamo noi: in Italia il recupero sciami è di competenza dei **Vigili del Fuoco** e degli **apicoltori professionisti** convenzionati o iscritti all'Albo Apicoltori Regionale. Questa pagina spiega che cos'è uno sciame, perché non devi spaventarti e **chi devi chiamare** in base alla situazione.
 
 ## Il 20 maggio: Giornata Mondiale delle Api
 
 Il **20 maggio** è stato proclamato dalle Nazioni Unite, nel **2017**, **Giornata Mondiale delle Api** (*World Bee Day*). La data ricorda la nascita di **Anton Janša** (1734), apicoltore sloveno considerato il padre dell'apicoltura moderna. Lo scopo della giornata è semplice: ricordare che **un terzo del cibo che mangiamo dipende, direttamente o indirettamente, dall'impollinazione delle api**.
+
+{{< foto src="/images/2026-05-20-sciami-api-estate-recupero-genzano-fonte-wikipedia.webp"
+         alt="Foto storica: Sciami d'api in estate: cosa fare, chi chiamare, perché non hanno bisogno della nostra paura"
+         caption="Foto: John Severns (Severnjc) — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:European_honey_bee_extracts_nectar.jpg)." >}}
+
 
 Senza api, non solo niente miele: niente mele, ciliegie, mandorle, fragole, zucche, mandorle, girasoli. La FAO stima che il valore economico globale dell'impollinazione operata dagli insetti — di cui le api sono i principali agenti — sia tra **235 e 577 miliardi di dollari l'anno**.
 

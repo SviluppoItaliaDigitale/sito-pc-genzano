@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "John Lansing Callan — Public domain — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Avezzano_aerea_1915.jpg"
 ---
 
-Alle **7:53 del 13 gennaio 1915** una scossa sismica di **magnitudo 7.0** colpì la conca del Fucino, in Abruzzo. **Avezzano** e altri 15 comuni della Marsica furono **rasi al suolo**. Bilancio: **oltre 30.000 morti** (su una popolazione locale di circa 35.000), migliaia di feriti, centri storici cancellati per sempre.
-
-È la **seconda catastrofe sismica più grave** della storia italiana documentata, dopo Messina 1908. Eppure è meno conosciuta nella memoria collettiva.
+Alle **7:53 del 13 gennaio 1915** una scossa sismica di **magnitudo 7.0** colpì la conca del Fucino, in Abruzzo. **Avezzano** e altri 15 comuni della Marsica furono **rasi al suolo**. Bilancio: **oltre 30.000 morti** (su una popolazione locale di circa 35.000), migliaia di feriti, centri storici cancellati per sempre.È la **seconda catastrofe sismica più grave** della storia italiana documentata, dopo Messina 1908. Eppure è meno conosciuta nella memoria collettiva.
 
 ## Il contesto storico
 
 Il terremoto della Marsica colpì un'area rurale dell'Abruzzo nel pieno della Prima Guerra Mondiale. L'Italia non era ancora entrata in guerra (entrerà a maggio 1915), ma l'attenzione politica e mediatica era assorbita dagli eventi internazionali. La risposta dello Stato fu **molto più tardiva e modesta** rispetto a Messina.
+
+{{< foto src="/images/2027-01-13-avezzano-1915-terremoto-marsica-fonte-wikipedia.webp"
+         alt="Foto storica: Avezzano, 13 gennaio 1915: il terremoto della Marsica e la sua eredità"
+         caption="Foto: John Lansing Callan — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Avezzano_aerea_1915.jpg)." >}}
+
 
 Per le popolazioni della Marsica iniziò un periodo di **decenni di precarietà**: baracche di emergenza che durarono fino al secondo dopoguerra, ricostruzioni lente, emigrazione forzata. Avezzano fu **completamente ricostruita** in posizione spostata rispetto al sito originale, perché il vecchio centro era considerato "maledetto" dalla popolazione superstite.
 

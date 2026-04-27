@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "Adem — CC BY-SA 4.0 — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Collage_of_2023_Turkey%E2%80%93Syria_earthquake.jpg"
 ---
 
-Alle **4:17 ora locale del 6 febbraio 2023** una scossa di **magnitudo 7.8** colpì la Turchia sud-orientale, al confine con la Siria settentrionale. Nove ore dopo, alle **13:24**, una seconda scossa di **magnitudo 7.5** colpì la stessa regione, a 90 chilometri di distanza dall'epicentro precedente. Era la sequenza sismica più devastante della storia recente del Mediterraneo orientale.
-
-Bilancio finale: **oltre 55.000 morti** (di cui circa 50.000 in Turchia e 6.000 in Siria), **120.000 feriti**, **circa 1,5 milioni di sfollati**. Centinaia di migliaia di edifici crollati, intere città medievali (Antiochia/Hatay) distrutte.
+Alle **4:17 ora locale del 6 febbraio 2023** una scossa di **magnitudo 7.8** colpì la Turchia sud-orientale, al confine con la Siria settentrionale. Nove ore dopo, alle **13:24**, una seconda scossa di **magnitudo 7.5** colpì la stessa regione, a 90 chilometri di distanza dall'epicentro precedente. Era la sequenza sismica più devastante della storia recente del Mediterraneo orientale.Bilancio finale: **oltre 55.000 morti** (di cui circa 50.000 in Turchia e 6.000 in Siria), **120.000 feriti**, **circa 1,5 milioni di sfollati**. Centinaia di migliaia di edifici crollati, intere città medievali (Antiochia/Hatay) distrutte.
 
 ## Una catastrofe di scala continentale
 
 L'evento del 2023 fu generato dalla rottura simultanea di **due segmenti della faglia est-anatolica**, uno dei principali sistemi sismotettonici del Mediterraneo. La sequenza durò ore: oltre **150 scosse superiori a M 4** nei primi tre giorni, decine sopra M 5.
+
+{{< foto src="/images/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana-fonte-wikipedia.webp"
+         alt="Foto storica: Turchia-Siria, 6 febbraio 2023: il più grande dispiegamento internazionale italiano dopo Haiti"
+         caption="Foto: Adem — CC BY-SA 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Collage_of_2023_Turkey%E2%80%93Syria_earthquake.jpg)." >}}
+
 
 Le aree colpite erano densamente abitate. Molti edifici erano relativamente recenti ma costruiti **senza rispettare i criteri antisismici** previsti dalla normativa turca, frutto di pratiche di abusivismo o di indulgenze edilizie politiche. Il numero di edifici crollati fu **straordinariamente elevato** rispetto a quanto ci si sarebbe atteso da scosse di quella magnitudo in un Paese a normativa antisismica matura.
 

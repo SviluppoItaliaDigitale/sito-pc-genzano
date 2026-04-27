@@ -11,13 +11,9 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "Nessun autore leggibile automaticamente. Sfata~commonswiki presunto (secondo quanto affermano i diritti d'autore). — Public domain — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Poggioreale_2007.jpg"
 ---
 
-Tra il **14 e il 15 gennaio 1968** una sequenza di scosse sismiche colpì la **Valle del Belice**, in Sicilia occidentale. La scossa principale, di **magnitudo 6.4**, distrusse paesi interi: **Gibellina**, **Salaparuta**, **Poggioreale**, **Montevago** furono cancellati. Bilancio: **231 morti**, **623 feriti**, **circa 70.000 sfollati**.
-
-## Il primo grande terremoto del dopoguerra
+Tra il **14 e il 15 gennaio 1968** una sequenza di scosse sismiche colpì la **Valle del Belice**, in Sicilia occidentale. La scossa principale, di **magnitudo 6.4**, distrusse paesi interi: **Gibellina**, **Salaparuta**, **Poggioreale**, **Montevago** furono cancellati. Bilancio: **231 morti**, **623 feriti**, **circa 70.000 sfollati**.## Il primo grande terremoto del dopoguerra
 
 Il Belice fu il primo evento sismico maggiore dell'Italia repubblicana. La macchina dei soccorsi era impreparata. Per giorni i sopravvissuti dormirono all'aperto sotto la pioggia di gennaio. L'esercito intervenne in ritardo. I primi prefabbricati arrivarono settimane dopo. Le baraccopoli temporanee divennero permanenti per **decenni**.
 
@@ -26,6 +22,11 @@ La ricostruzione del Belice, ufficialmente conclusa solo negli anni 2000 (oltre 
 ## La lezione del Belice
 
 Il terremoto del 1968 mostrò che l'Italia non aveva:
+
+{{< foto src="/images/2027-01-14-belice-1968-terremoto-ricostruzione-lunga-fonte-wikipedia.webp"
+         alt="Foto storica: Belice, 14-15 gennaio 1968: il terremoto che durò un giorno e una notte"
+         caption="Foto: Nessun autore leggibile automaticamente. Sfata~commonswiki presunto (secondo quanto affermano i diritti d'autore). — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Poggioreale_2007.jpg)." >}}
+
 
 - Una **catena di comando unica** per la gestione dell'emergenza
 - Un sistema di **prima accoglienza** per migliaia di sfollati

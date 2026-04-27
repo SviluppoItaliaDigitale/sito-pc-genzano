@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "USGS — Public domain — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:2002_molise_earthquake.jpg"
 ---
 
-Alle **11:32 del 31 ottobre 2002** una scossa di **magnitudo 5.7** colpì il Molise. L'epicentro era tra i comuni di San Giuliano di Puglia e Colletorto. La scossa principale, da sola, non sarebbe stata catastrofica per la zona. Ma a San Giuliano accadde qualcosa di inaccettabile: **crollò la scuola elementare "Francesco Jovine"**, con dentro un'intera classe.
-
-**27 bambini** della prima elementare e la loro maestra, **Carmela Ciniglio**, persero la vita. Era la **vigilia di Ognissanti**, il giorno prima della festa.
+Alle **11:32 del 31 ottobre 2002** una scossa di **magnitudo 5.7** colpì il Molise. L'epicentro era tra i comuni di San Giuliano di Puglia e Colletorto. La scossa principale, da sola, non sarebbe stata catastrofica per la zona. Ma a San Giuliano accadde qualcosa di inaccettabile: **crollò la scuola elementare "Francesco Jovine"**, con dentro un'intera classe.**27 bambini** della prima elementare e la loro maestra, **Carmela Ciniglio**, persero la vita. Era la **vigilia di Ognissanti**, il giorno prima della festa.
 
 ## Perché crollò solo la scuola
 
 Il terremoto colpì un'area dove gli edifici tradizionali, in muratura non rinforzata, subirono lesioni ma generalmente ressero. La **scuola Jovine**, invece, era stata sopraelevata di un piano negli anni '90 con tecniche e materiali inadeguati al contesto sismico. Il piano superiore aggiunto, più pesante e con meno collegamenti strutturali, **collassò sul piano sottostante** schiacciando la classe della prima elementare.
+
+{{< foto src="/images/2026-10-31-san-giuliano-puglia-2002-scuola-crollata-zonazione-sismica-fonte-wikipedia.webp"
+         alt="Foto storica: San Giuliano di Puglia, 31 ottobre 2002: la scuola crollata che ha cambiato l'Italia"
+         caption="Foto: USGS — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:2002_molise_earthquake.jpg)." >}}
+
 
 L'inchiesta accertò responsabilità precise: la sopraelevazione era stata progettata e realizzata **senza tenere conto della pericolosità sismica del sito**. Il Molise, infatti, fino ad allora **non era classificato come zona sismica** nella mappa nazionale.
 

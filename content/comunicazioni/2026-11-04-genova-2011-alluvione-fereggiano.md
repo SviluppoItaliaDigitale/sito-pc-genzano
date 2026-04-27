@@ -11,17 +11,18 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-image_credit: "MODIS Rapid Response Team at NASA GSFC. — Public domain — via Wikimedia Commons"
-image_source_url: "https://commons.wikimedia.org/wiki/File:Rolf_2011-11-08_1030Z.jpg"
 ---
 
-Il **4 novembre 2011** — esattamente **45 anni dopo l'alluvione di Firenze** — Genova fu colpita da un evento meteo eccezionale. **Oltre 500 millimetri di pioggia in 6 ore** sull'area urbana. Il **rio Fereggiano**, un piccolo torrente tombato sotto la città a fine Ottocento, esplose letteralmente dalla sede stradale di **via Fereggiano** trasformando le strade in fiumi.
-
-Bilancio: **6 morti**, di cui **quattro bambini** in via Fereggiano, due donne adulte. Centinaia di esercizi commerciali devastati, automobili portate via dal flusso, danni stimati in centinaia di milioni di euro.
+Il **4 novembre 2011** — esattamente **45 anni dopo l'alluvione di Firenze** — Genova fu colpita da un evento meteo eccezionale. **Oltre 500 millimetri di pioggia in 6 ore** sull'area urbana. Il **rio Fereggiano**, un piccolo torrente tombato sotto la città a fine Ottocento, esplose letteralmente dalla sede stradale di **via Fereggiano** trasformando le strade in fiumi.Bilancio: **6 morti**, di cui **quattro bambini** in via Fereggiano, due donne adulte. Centinaia di esercizi commerciali devastati, automobili portate via dal flusso, danni stimati in centinaia di milioni di euro.
 
 ## I rii tombati: una bomba a orologeria urbana
 
 Genova, come molte città italiane (Roma, Napoli, Firenze, Torino), si è sviluppata nel corso dei secoli **coprendo torrenti e fossi** con tombinature, per ricavare strade, piazze, edifici. I rii continuano a esistere sotto l'asfalto, e in caso di **piogge intense** la loro **portata supera la capacità del tombamento**: l'acqua esce con violenza, allagando strade in pochi minuti.
+
+{{< foto src="/images/2026-11-04-genova-2011-alluvione-fereggiano-fonte-wikipedia.webp"
+         alt="Foto storica: Genova, 4 novembre 2011: l'alluvione del Fereggiano e la lezione dei rii tombati"
+         caption="Foto: MODIS Rapid Response Team at NASA GSFC. — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Rolf_2011-11-08_1030Z.jpg)." >}}
+
 
 Il **rio Fereggiano** è uno dei tanti rii tombati di Genova. Il 4 novembre 2011 la combinazione di pioggia eccezionale e di **manutenzione insufficiente** dei tombini fece sì che la portata in arrivo superasse la capacità del condotto. L'acqua esplose dai tombini in via Fereggiano e travolse le persone che camminavano sul marciapiede.
 
