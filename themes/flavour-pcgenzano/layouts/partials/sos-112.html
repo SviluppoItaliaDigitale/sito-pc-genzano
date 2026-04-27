@@ -42,11 +42,20 @@
         Le chiamate al 112 per scherzo o per motivi non urgenti
         sono <strong>punite per legge</strong> (art. 658 Codice penale).
       </div>
+      <p class="sos-modal-alt">
+        <i class="bi bi-question-circle-fill" aria-hidden="true"></i>
+        <strong>Non sei sicuro che sia un'emergenza?</strong>
+        Usa l'<strong>assistente guidato</strong>: ti accompagna con domande
+        semplici fino alla risposta giusta.
+      </p>
     </div>
     <div class="sos-modal-footer">
       <button type="button" id="sos-modal-cancel" class="btn btn-outline-secondary btn-lg sos-modal-btn-cancel" data-sos-close="true">
         <i class="bi bi-x-lg me-1" aria-hidden="true"></i> Annulla
       </button>
+      <a href="{{ "assistente/" | relURL }}" id="sos-modal-guide" class="btn btn-outline-primary btn-lg sos-modal-btn-guide">
+        <i class="bi bi-question-circle-fill me-1" aria-hidden="true"></i> Cosa devo fare?
+      </a>
       <a href="tel:112" id="sos-modal-call" class="btn btn-danger btn-lg sos-modal-btn-call">
         <i class="bi bi-telephone-fill me-1" aria-hidden="true"></i> Sì, chiama il 112
       </a>
