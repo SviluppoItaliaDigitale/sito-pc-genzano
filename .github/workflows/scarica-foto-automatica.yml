@@ -44,33 +44,25 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "🔧 Installa dipendenze (ImageMagick + WebP delegate + font Liberation)"
+      - name: "🔧 Installa dipendenze (Python Pillow + font Liberation)"
         run: |
           sudo apt-get update -qq
-          # imagemagick: il binario base
-          # webp + libwebp7: WebP read/write delegate per ImageMagick v6 su Ubuntu
-          # fonts-liberation: font Liberation Sans usato da genera-cover.py
-          sudo apt-get install -y -qq imagemagick webp libwebp7 fonts-liberation
-          fc-cache -f -v 2>/dev/null | tail -3 || true
+          # python3-pil: Pillow (gestione immagini cross-platform, WebP nativo)
+          # python3-pil.imagetk: per Image.fromarray ecc (sicurezza extra)
+          # fonts-liberation: Liberation Sans Bold/Regular usati per la fascia
+          sudo apt-get install -y -qq python3-pil fonts-liberation
+          fc-cache -f 2>/dev/null | tail -1 || true
 
-      - name: "🩺 Diagnostica ambiente ImageMagick"
+      - name: "🩺 Diagnostica ambiente Python+Pillow"
         run: |
-          echo "=== convert (v6) version ==="
-          convert -version | head -3
-          echo ""
-          echo "=== Delegates supportati (cerca WEBP, PNG, JPEG) ==="
-          convert -list delegate 2>&1 | grep -iE "webp|png|jpeg" | head -10
+          echo "=== Python + Pillow ==="
+          python3 -c "from PIL import Image, features; print('Pillow:', Image.__version__); print('WebP:', features.check('webp'))"
           echo ""
           echo "=== Font Liberation disponibili ==="
-          convert -list font 2>&1 | grep -iE "liberation" | head -10
+          ls /usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf /usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf 2>&1
           echo ""
-          echo "=== Test rapido: scrivere un WebP minimo ==="
-          convert -size 10x10 xc:red /tmp/test-webp.webp && echo "[ok] WebP write OK ($(stat -c%s /tmp/test-webp.webp) bytes)" || echo "[FAIL] WebP write KO"
-          rm -f /tmp/test-webp.webp
-          echo ""
-          echo "=== Test annotate con Liberation-Sans-Bold ==="
-          convert -size 200x50 xc:white -font Liberation-Sans-Bold -pointsize 20 -annotate +10+30 "Test" /tmp/test-font.png && echo "[ok] font annotate OK" || echo "[FAIL] font annotate KO"
-          rm -f /tmp/test-font.png
+          echo "=== Test rapido scrittura WebP via Pillow ==="
+          python3 -c "from PIL import Image; import os; Image.new('RGB',(100,100),(0,51,102)).save('/tmp/test.webp','WEBP',quality=85); print('[ok] WebP scritto:', os.path.getsize('/tmp/test.webp'), 'bytes')" || echo "[FAIL] WebP scrittura"
 
       - name: "🔍 Cerca articoli con marker TODO-foto-*"
         id: scan
