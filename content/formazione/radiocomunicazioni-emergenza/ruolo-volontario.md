@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 1 — Il radioamatore volontario in emergenza"
 description: "Cosa sei e cosa non sei come operatore TLC di protezione civile: relazione con l'ente servito, limiti di responsabilità, differenza tra attività ordinaria e operatività in emergenza, quadro italiano (D.Lgs. 1/2018, ARI-RE)."
+layout: "single"
+toc: true
 ---
 
 Quando un evento colpisce un territorio e le reti pubbliche si saturano o cadono — telefonia fissa, mobile, Internet — chi resta in grado di far arrivare un messaggio da un punto all'altro è spesso un **radioamatore volontario**. Non per magia, ma perché:

@@ -3149,3 +3149,142 @@ table > caption.visually-hidden {
 @media print {
   .chi-chiamare-call { color: #000 !important; text-decoration: underline; }
 }
+
+/* ================================================================
+   ARTICOLO PREV/NEXT v1.0
+   Navigazione cronologica fra articoli /comunicazioni/.
+   Renderizzata da partials/articolo-navigazione.html.
+   ================================================================ */
+.articolo-prev-next {
+  border-top: 2px solid #dee2e6;
+  padding-top: 1.5rem;
+  margin-top: 2.5rem !important;
+}
+.articolo-nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 1.2rem;
+  background: #f8f9fa;
+  border: 1.5px solid #dee2e6;
+  border-radius: 10px;
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.15s ease;
+  height: 100%;
+}
+.articolo-nav-card:hover, .articolo-nav-card:focus-visible {
+  border-color: #003366;
+  background: #e7f1ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,51,102,0.12);
+  color: inherit;
+}
+.articolo-nav-card:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.articolo-nav-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #003366;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.articolo-nav-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #17324D;
+}
+.articolo-nav-next { text-align: right; }
+.articolo-nav-next .articolo-nav-label { display: block; }
+@media print { .articolo-prev-next { display: none; } }
+
+/* ================================================================
+   ARTICOLI CORRELATI v1.0
+   3 card "Leggi anche" con stesso badge dell'articolo corrente.
+   Renderizzato da partials/articoli-correlati.html.
+   ================================================================ */
+.articoli-correlati {
+  border-top: 2px solid #dee2e6;
+  padding-top: 1.5rem;
+}
+.articoli-correlati-title {
+  font-size: 1.2rem;
+  color: #003366;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.articoli-correlati-badge {
+  font-size: 0.75rem;
+  background: #003366;
+  color: #fff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.articolo-correlato-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1.5px solid #dee2e6;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.15s ease;
+}
+.articolo-correlato-card:hover, .articolo-correlato-card:focus-visible {
+  border-color: #003366;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,51,102,0.12);
+  color: inherit;
+}
+.articolo-correlato-card:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.articolo-correlato-img {
+  aspect-ratio: 16 / 9;
+  background: #f0f4f8;
+  overflow: hidden;
+}
+.articolo-correlato-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.articolo-correlato-body {
+  padding: 0.85rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+.articolo-correlato-data {
+  font-size: 0.78rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+.articolo-correlato-titolo {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #003366;
+  margin: 0;
+}
+.articolo-correlato-excerpt {
+  font-size: 0.85rem;
+  color: #495057;
+  line-height: 1.4;
+  margin: 0;
+}
+@media print { .articoli-correlati { display: none; } }

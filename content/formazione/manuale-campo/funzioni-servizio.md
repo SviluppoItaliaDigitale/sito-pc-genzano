@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 4 — Funzioni di servizio"
 description: "Direzione, segreteria, sanità, supporto psicosociale, infopoint, guardiania e pulizie: come si organizza il personale di un campo di emergenza."
+layout: "single"
+toc: true
 ---
 
 Un campo di accoglienza non è solo **strutture**: è soprattutto **persone che lavorano**. Le **funzioni di servizio** organizzano il personale e gli utenti. Se funzionano male, il campo diventa caotico anche quando tutti gli impianti funzionano.

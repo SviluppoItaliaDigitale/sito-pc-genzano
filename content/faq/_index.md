@@ -7,6 +7,7 @@ aliases:
 sitemap:
   priority: 0.7
   changefreq: monthly
+toc: true
 ---
 
 ## Allerte Meteo

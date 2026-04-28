@@ -1,0 +1,51 @@
+{{/* Articoli correlati: 3 card di articoli con lo STESSO badge di
+     quello corrente, escluso quello attuale. Ordinati per data
+     decrescente (più recenti prima).
+
+     Riusabile su qualsiasi articolo della sezione /comunicazioni/.
+     Niente parametri: legge .Params.badge dal contesto.
+
+     Output: blocco <section> con 3 card affiancate, vuoto se la
+     sezione non contiene altri articoli con lo stesso badge.
+*/}}
+{{- $badgeAttuale := .Params.badge -}}
+{{- $self := .RelPermalink -}}
+{{- $correlati := slice -}}
+{{- if $badgeAttuale -}}
+  {{- range where (where .Site.RegularPages "Section" "comunicazioni") "Params.badge" "==" $badgeAttuale -}}
+    {{- if ne .RelPermalink $self -}}
+      {{- $correlati = $correlati | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $correlati = first 3 $correlati -}}
+{{- if $correlati -}}
+<section class="articoli-correlati mt-5" aria-labelledby="correlati-title">
+  <h2 class="articoli-correlati-title" id="correlati-title">
+    <i class="bi bi-collection" aria-hidden="true"></i>
+    Leggi anche
+    {{- with $badgeAttuale }} <span class="articoli-correlati-badge">{{ . }}</span>{{ end -}}
+  </h2>
+  <div class="row g-3">
+    {{ range $correlati }}
+    <div class="col-md-4">
+      <a class="articolo-correlato-card" href="{{ .RelPermalink }}"
+         aria-label="Leggi l'articolo: {{ .Title }}">
+        {{ with .Params.image }}
+        <div class="articolo-correlato-img">
+          <img src="{{ . | relURL }}" alt="" aria-hidden="true" loading="lazy">
+        </div>
+        {{ end }}
+        <div class="articolo-correlato-body">
+          {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
+          <span class="articolo-correlato-data"><i class="bi bi-calendar3" aria-hidden="true"></i> {{ .Date.Format "02/01/2006" }}</span>
+          {{ end }}
+          <h3 class="articolo-correlato-titolo">{{ .Title }}</h3>
+          {{ with .Description }}<p class="articolo-correlato-excerpt">{{ . | truncate 120 }}</p>{{ end }}
+        </div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{- end -}}

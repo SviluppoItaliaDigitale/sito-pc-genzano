@@ -124,8 +124,10 @@
       {{/* ── STRUMENTI PAGINA ── */}}
       {{ partial "page-tools.html" . }}
 
-      {{/* ── NAVIGAZIONE COMUNICAZIONI ── */}}
+      {{/* ── ARTICOLI CORRELATI E NAVIGAZIONE (solo /comunicazioni/) ── */}}
       {{ if eq .Section "comunicazioni" }}
+      {{ partial "articoli-correlati.html" . }}
+      {{ partial "articolo-navigazione.html" . }}
       <hr class="mt-4">
       <a href="{{ "comunicazioni/" | relURL }}" class="notizia-link"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna a tutte le comunicazioni</a>
       {{ end }}

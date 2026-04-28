@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 2 — Scouting e valutazione iniziale"
 description: "Il nucleo di valutazione è la prima squadra che raggiunge l'area colpita: procedure, azioni prima/durante/dopo l'evento e sette check-list operative per il campo."
+layout: "single"
+toc: true
 ---
 
 La **valutazione della situazione** immediatamente successiva a un evento — termine tecnico: **scouting** — è la prima componente da attivare. Non serve a "fare" qualcosa: serve a **vedere**, a **capire** e a **trasmettere** informazioni corrette a chi deciderà come intervenire.

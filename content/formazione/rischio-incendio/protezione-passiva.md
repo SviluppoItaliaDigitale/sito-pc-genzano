@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 3 — Misure di protezione passiva"
 description: "Barriere antincendio, distanze di sicurezza, muri tagliafuoco, resistenza al fuoco (REI), reazione al fuoco dei materiali, vie di esodo e ventilazione."
+layout: "single"
+toc: true
 ---
 
 La **protezione passiva** è l'insieme delle misure che non richiedono l'azione di un operatore o l'azionamento di un impianto. Agiscono in modo **permanente**, strutturale: limitano lo sviluppo e la propagazione dell'incendio nello spazio e nel tempo, tutelando l'incolumità delle persone, riducendo gli effetti nocivi dei prodotti della combustione e contenendo i danni a strutture e beni.
