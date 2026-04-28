@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-14-ponte-morandi-2018-infrastrutture-rischio-quotidiano.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Ponte Morandi, 14 agosto 2018: il rischio quotidiano delle infrastrutture critiche"
 scadenza: ""
 area: ""
 allegati: []

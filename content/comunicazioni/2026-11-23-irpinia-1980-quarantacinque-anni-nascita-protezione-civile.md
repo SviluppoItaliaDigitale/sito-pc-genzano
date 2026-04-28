@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-23-irpinia-1980-quarantacinque-anni-nascita-protezione-civile.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Irpinia 1980, 46 anni dopo: quando l'Italia decise di costruire la Protezione Civile"
 scadenza: ""
 area: ""
 allegati: []

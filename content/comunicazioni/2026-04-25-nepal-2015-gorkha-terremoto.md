@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-25-nepal-2015-gorkha-terremoto.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Nepal, 25 aprile 2015: il terremoto del Gorkha e la fragilità dei Paesi a rischio"
 scadenza: ""
 area: ""
 allegati: []

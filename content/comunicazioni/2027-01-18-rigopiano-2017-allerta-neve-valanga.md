@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-18-rigopiano-2017-allerta-neve-valanga.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Rigopiano, 18 gennaio 2017: la valanga sull'hotel e il limite dell'allerta meteo"
 scadenza: ""
 area: ""
 allegati: []

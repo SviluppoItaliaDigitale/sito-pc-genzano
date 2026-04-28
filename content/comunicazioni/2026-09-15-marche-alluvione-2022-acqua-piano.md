@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-15-marche-alluvione-2022-acqua-piano.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Marche, 15 settembre 2022: una pioggia da 400 millimetri in tre ore, 13 morti"
 scadenza: ""
 area: ""
 allegati: []

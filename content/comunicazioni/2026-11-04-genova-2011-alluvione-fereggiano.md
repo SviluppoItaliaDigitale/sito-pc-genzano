@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-04-genova-2011-alluvione-fereggiano.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Genova, 4 novembre 2011: l'alluvione del Fereggiano e la lezione dei rii tombati"
 scadenza: ""
 area: ""
 allegati: []

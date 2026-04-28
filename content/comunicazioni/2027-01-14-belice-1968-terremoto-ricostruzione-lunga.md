@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-14-belice-1968-terremoto-ricostruzione-lunga.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Belice, 14-15 gennaio 1968: il terremoto che durò un giorno e una notte"
 scadenza: ""
 area: ""
 allegati: []

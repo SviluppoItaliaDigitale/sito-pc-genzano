@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-07-genova-1970-alluvione-storica-piu-grave.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Genova, 7 ottobre 1970: l'alluvione storica più grave del Novecento ligure"
 scadenza: ""
 area: ""
 allegati: []

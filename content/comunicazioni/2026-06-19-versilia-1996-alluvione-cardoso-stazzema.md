@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-19-versilia-1996-alluvione-cardoso-stazzema.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Versilia, 19 giugno 1996: la notte che cancellò Cardoso"
 scadenza: ""
 area: ""
 allegati: []

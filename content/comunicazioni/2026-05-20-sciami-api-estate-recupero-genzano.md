@@ -6,7 +6,7 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-20-sciami-api-estate-recupero-genzano.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Sciami d'api in estate: cosa fare, chi chiamare, perché non hanno bisogno della nostra paura"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

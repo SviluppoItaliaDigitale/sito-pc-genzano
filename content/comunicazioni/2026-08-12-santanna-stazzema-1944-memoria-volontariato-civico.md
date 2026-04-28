@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-12-santanna-stazzema-1944-memoria-volontariato-civico.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Sant'Anna di Stazzema, 12 agosto 1944: la memoria che fonda il volontariato civico"
 scadenza: ""
 area: ""
 allegati: []

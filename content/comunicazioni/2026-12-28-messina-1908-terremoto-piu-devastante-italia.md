@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-28-messina-1908-terremoto-piu-devastante-italia.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Messina, 28 dicembre 1908: il terremoto più devastante della storia italiana"
 scadenza: ""
 area: ""
 allegati: []
