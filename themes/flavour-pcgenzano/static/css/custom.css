@@ -615,6 +615,76 @@ article:not(.card) .galleria img {
   padding: 0.3rem 1rem;
 }
 
+/* ── SHARE BUTTONS v1.0 ──
+   Bottoni di condivisione social in fondo a ogni articolo/pagina.
+   Solo link "share intent" HTML standard + Web Share API + Clipboard API.
+   Nessun JS di terze parti, nessun tracker. Conforme AGID + GDPR. */
+.page-tools-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.page-tools-share-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #495057;
+  margin-right: 0.4rem;
+}
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #d4d8dc;
+  background: #fff;
+  color: #495057;
+  font-size: 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+  padding: 0;
+}
+.share-btn:hover, .share-btn:focus {
+  text-decoration: none;
+  transform: translateY(-2px);
+  border-color: var(--pc-primary, #003366);
+  color: #fff;
+  background: var(--pc-primary, #003366);
+}
+.share-btn:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+/* Colori brand al hover (non al normale, per sobrietà PA) */
+.share-btn.share-whatsapp:hover, .share-btn.share-whatsapp:focus { background: #25d366; border-color: #25d366; }
+.share-btn.share-telegram:hover, .share-btn.share-telegram:focus { background: #229ed9; border-color: #229ed9; }
+.share-btn.share-facebook:hover, .share-btn.share-facebook:focus { background: #1877f2; border-color: #1877f2; }
+.share-btn.share-x:hover, .share-btn.share-x:focus { background: #000; border-color: #000; }
+.share-btn.share-linkedin:hover, .share-btn.share-linkedin:focus { background: #0a66c2; border-color: #0a66c2; }
+.share-btn.share-copy.copied {
+  background: #15803d;
+  border-color: #15803d;
+  color: #fff;
+}
+/* Mobile: bottoni più stretti */
+@media (max-width: 575.98px) {
+  .share-btn { width: 36px; height: 36px; font-size: 1rem; }
+  .page-tools-share { gap: 0.4rem; }
+  .page-tools-share-label { width: 100%; margin-bottom: 0.3rem; }
+}
+/* Stampa: nascondi tutta la riga share (già coperta da @media print globale, ma esplicito) */
+@media print {
+  .page-tools-share { display: none !important; }
+}
+/* Accessibilità: rispetta prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .share-btn { transition: none; }
+  .share-btn:hover { transform: none; }
+}
+
 /* ── BREADCRUMB NAV ── */
 .breadcrumb-nav {
   margin-bottom: 0.5rem;

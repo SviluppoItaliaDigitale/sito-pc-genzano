@@ -234,6 +234,10 @@ Il file è `themes/flavour-pcgenzano/layouts/_default/_markup/render-table.html`
 
 Per ridurre muri di testo in pagine informative con molte domande/risposte (es. `/allerte-meteo/`, `/faq/`), il sito ha una classe `.faq-item` che stilizza l'elemento HTML nativo `<details>`/`<summary>` come accordion accessibile. Vantaggi: semantica nativa (zero JS, zero ARIA hand-rolled), navigabile da tastiera, letta correttamente dagli screen reader, override stampa che apre tutti i `<details>` automaticamente. Esempio: `<details class="faq-item"><summary><strong>Domanda</strong></summary>Risposta…</details>`. Sezione **FAQ ACCORDION v1.0** in `custom.css`.
 
+### Share buttons (`partials/page-tools.html` + `js/share.js`)
+
+In fondo a ogni articolo e a tutte le pagine che includono `page-tools.html` c'è una riga di icone per **condividere il contenuto** su WhatsApp, Telegram, Facebook, X, LinkedIn, Email, oppure **copiare il link**, oppure usare la **condivisione nativa** del sistema operativo (Web Share API). Privacy-first: **solo link "share intent" HTML standard + Clipboard API + Web Share API**, nessuno script di terze parti, nessun tracker. Conforme AGID + GDPR senza necessità di consent banner. Bootstrap Italia ha un'utility `share` analoga ([italia.github.io/bootstrap-italia/docs/utilities/share/](https://italia.github.io/bootstrap-italia/docs/utilities/share/)). Il bottone "condividi nativo" si auto-nasconde se `navigator.share` non è supportato (desktop). Specifiche complete in regola `04-hugo-architecture.md` sezione "Share buttons".
+
 ### Striscia pittogrammi (CSS `.kit-pittogrammi-row`)
 
 Riga visiva di pittogrammi ARASAAC inline per dare un colpo d'occhio immediato a una pagina di lista (es. `/rischi-prevenzione/kit-emergenza/`). Layout flex centrato, sfondo azzurrino istituzionale, gap responsive. Pattern: `<div class="kit-pittogrammi-row" role="img" aria-label="...">{{< pittogramma inline="true" >}} ...</div>`. Sezione **STRISCIA PITTOGRAMMI v1.0** in `custom.css`.
