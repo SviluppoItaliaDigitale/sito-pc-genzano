@@ -1,0 +1,70 @@
+{{/* Meta tag Open Graph + Twitter Card per anteprime ricche dei link
+     condivisi. Le piattaforme social (WhatsApp, Telegram, Facebook, X,
+     LinkedIn, Slack, ecc.) leggono questi tag dall'<head> della pagina
+     per generare la "card" con titolo, descrizione, immagine.
+
+     Riferimenti standard:
+     - https://ogp.me/ (Open Graph Protocol)
+     - https://developer.x.com/en/docs/twitter-for-websites/cards
+     - https://developers.facebook.com/docs/sharing/webmasters
+
+     Best practice 2026:
+     - immagine 1200x630px (rapporto 1.91:1) o multipli
+     - dichiarare width/height esplicito = nessuna richiesta extra dal social
+     - og:image:alt per accessibilita' (screen reader durante condivisione)
+     - article:published_time per articoli (mostra data nella card)
+     - twitter:card=summary_large_image per immagine grande
+*/}}
+{{- $title := .Title -}}
+{{- $desc := with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end -}}
+{{- $imgPath := .Params.image | default "images/og-default.png" -}}
+{{- $imgPath = strings.TrimPrefix "/" $imgPath -}}
+{{- $imgURL := $imgPath | absURL -}}
+{{- $imgAlt := .Params.image_alt | default $title -}}
+{{- $ext := lower (path.Ext $imgPath) -}}
+{{- $imgType := "image/jpeg" -}}
+{{- if eq $ext ".webp" }}{{ $imgType = "image/webp" }}{{ end -}}
+{{- if eq $ext ".png" }}{{ $imgType = "image/png" }}{{ end -}}
+{{- if eq $ext ".svg" }}{{ $imgType = "image/svg+xml" }}{{ end -}}
+{{- if eq $ext ".gif" }}{{ $imgType = "image/gif" }}{{ end -}}
+
+  <!-- Open Graph (Facebook, WhatsApp, Telegram, LinkedIn, Slack, ecc.) -->
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ $.Scratch.Get "canonicalURL" | default .Permalink }}">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:image" content="{{ $imgURL }}">
+  <meta property="og:image:secure_url" content="{{ $imgURL }}">
+  <meta property="og:image:type" content="{{ $imgType }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ $imgAlt }}">
+
+  {{- if .IsPage }}
+  <!-- Article-specific (mostra data e autore nella card) -->
+  {{- if and .Date (not (eq (.Date.Format "2006") "0001")) }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{- end }}
+  {{- if and .Lastmod (not (eq (.Lastmod.Format "2006") "0001")) }}
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{- end }}
+  <meta property="article:author" content="{{ with .Params.autore }}{{ . }}{{ else }}{{ .Site.Params.author }}{{ end }}">
+  {{- with .Params.badge }}
+  <meta property="article:section" content="{{ . }}">
+  {{- end }}
+  {{- range .Params.tags }}
+  <meta property="article:tag" content="{{ . }}">
+  {{- end }}
+  {{- end }}
+
+  <!-- Twitter Card (X / Twitter) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $desc }}">
+  <meta name="twitter:image" content="{{ $imgURL }}">
+  <meta name="twitter:image:alt" content="{{ $imgAlt }}">
+  {{- with .Site.Params.twitterSite }}
+  <meta name="twitter:site" content="{{ . }}">
+  {{- end }}

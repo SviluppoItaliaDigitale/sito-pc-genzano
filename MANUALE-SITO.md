@@ -1,7 +1,7 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 2.8
-**Ultimo aggiornamento manuale:** 2026-04-27
+**Versione:** 2.9
+**Ultimo aggiornamento manuale:** 2026-04-28
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
 **Bootstrap Italia:** versione 2.17.3
@@ -14,6 +14,27 @@
 > o nuove versioni di Bootstrap Italia, viene aperta un'Issue sul repository con la checklist
 > dei punti da verificare. Vedi **Parte 7** per dettagli.
 
+> **Changelog 2.9 (2026-04-28)**
+> - **Anteprime link condivisi**: estratti i meta tag Open Graph + Twitter
+>   Card da `baseof.html` in un partial dedicato `meta-social.html`, e
+>   completati con tutti i campi raccomandati 2026.
+> - **Open Graph image avanzato**: aggiunti `og:image:secure_url`,
+>   `og:image:type` (calcolato da estensione: webp/png/svg/gif/jpg),
+>   `og:image:width=1200`, `og:image:height=630`, `og:image:alt`. Le
+>   piattaforme social (WhatsApp, Telegram, FB, ecc.) generano l'anteprima
+>   senza dover scaricare prima l'immagine — preview piu' veloce e affidabile.
+> - **Article-specific OG** (solo articoli): `article:published_time`,
+>   `article:modified_time`, `article:author`, `article:section` (dal badge),
+>   `article:tag`. Le card mostrano data e categoria.
+> - **Twitter Card**: aggiunto `twitter:image:alt` per accessibilita',
+>   supporto opzionale a `twitter:site` (configurabile in `hugo.toml`
+>   come `[params] twitterSite = "@PCGenzano"`).
+> - Documentazione in `CLAUDE.md` sezione "Anteprime link condivisi" con
+>   istruzioni per refresh cache Facebook/X dopo modifica copertina.
+> - **Share buttons v1.1**: bottoni 44x44 (WCAG 2.5.5 AAA), gap 0.85-1rem
+>   per evitare tocchi accidentali su mobile, sfondo grigio chiaro a
+>   riposo, ombre cubic-bezier, hover con colore brand.
+>
 > **Changelog 2.8 (2026-04-27)**
 > - **Share buttons in `partials/page-tools.html`**: aggiunta riga di icone per
 >   condivisione social a fondo di ogni articolo e di tutte le pagine che
