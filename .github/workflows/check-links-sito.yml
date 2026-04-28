@@ -54,6 +54,9 @@ jobs:
           # --user-agent      identifichiamo chiaramente il nostro checker
           # --exclude         tel:/mailto:, anchor interni, GitHub Pages (evita self-loop)
           # --require-https   segnala link http:// (sicurezza)
+          # --base       risolve i path assoluti (/foo/bar/) contro la root del sito buildato.
+          #              Senza questo flag lychee non sa contro cosa risolvere /css/, /images/, ecc.
+          #              e produce migliaia di falsi positivi "Cannot convert path to URI".
           args: >-
             --cache
             --max-cache-age 1d
@@ -64,12 +67,15 @@ jobs:
             --max-retries 3
             --retry-wait-time 5
             --user-agent "Mozilla/5.0 (compatible; PCGenzanoLinkChecker/1.0; +https://www.protezionecivilegenzano.it/)"
+            --base public
             --exclude "^tel:"
             --exclude "^mailto:"
             --exclude "^#"
             --exclude "github\.io/sito-pc-genzano"
             --exclude "localhost"
             --exclude "127\.0\.0\.1"
+            --exclude-path "public/vendor"
+            --exclude-path "public/app-shared"
             public/**/*.html
           output: ./lychee-report.md
           fail: false
