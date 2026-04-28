@@ -6,11 +6,13 @@
    - Osserva quando una "schermata di fine" diventa visibile e vi
      inietta dentro un riquadro verde con: titolo, input nome,
      bottone Scarica e bottone Stampa.
-   - Selettori cercati (in ordine): #end-screen, #card-screen, #esito,
-     .schermata-fine, .gioco-fine, [data-fine].
-   - Se nessuno di questi viene mai mostrato durante la sessione, dopo
-     20 secondi mostra un bottone fluttuante in basso "Ho finito! Voglio
-     l'attestato" come fallback.
+   - Selettori cercati (in ordine): #end-screen, #card-screen,
+     #results-screen, #esito, #end, .schermata-fine, .gioco-fine,
+     [data-fine].
+   - Nessun bottone "Ho finito" fluttuante durante il gioco: il riquadro
+     compare solo quando si entra nella schermata fine, condizione
+     semantica corretta. Tutti i 53 giochi del sito hanno una schermata
+     fine fra i selettori monitorati (verificato).
    - Riusa AttestatoPC.genera/stampa (script: attestato.js) per produrre
      il file SVG istituzionale identico agli altri giochi.
 
@@ -35,7 +37,6 @@
     '[data-fine]'
   ];
 
-  var FALLBACK_TIMEOUT_MS = 20000;
   var iniettato = false;
 
   function idGiocoDaUrl() {
@@ -204,32 +205,13 @@
       });
     }
 
-    // Fallback: dopo 20s, se non è ancora stata mostrata una schermata fine,
-    // aggiungi un bottone fisso "Ho finito" in basso a destra.
-    setTimeout(function () {
-      if (iniettato) return;
-      var fab = document.createElement('button');
-      fab.type = 'button';
-      fab.textContent = '🏅 Ho finito! Voglio l’attestato';
-      fab.setAttribute('aria-label', 'Ho finito il gioco, voglio il mio attestato');
-      fab.style.cssText = ''
-        + 'position:fixed;bottom:18px;left:50%;transform:translateX(-50%);'
-        + 'z-index:9000;background:#198754;color:#fff;border:0;'
-        + 'border-radius:30px;padding:0.8rem 1.4rem;font-size:1rem;font-weight:600;'
-        + 'box-shadow:0 4px 12px rgba(0,0,0,0.18);cursor:pointer;min-height:48px;';
-      fab.addEventListener('click', function () {
-        // Crea un contenitore al volo e iniettalo nel main
-        var main = document.querySelector('main') || document.body;
-        var wrap = document.createElement('div');
-        wrap.className = 'gioco-fine';
-        wrap.style.cssText = 'max-width:600px;margin:1.5rem auto;padding:0 1rem;';
-        main.appendChild(wrap);
-        inietta(wrap);
-        fab.remove();
-        wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-      document.body.appendChild(fab);
-    }, FALLBACK_TIMEOUT_MS);
+    // Niente piu' fallback FAB: la presenza di un bottone "Ho finito"
+    // fluttuante durante il gioco era percepita come invadente, perche'
+    // appariva dopo 20s anche se il gioco era ancora in corso.
+    // L'attestato compare ora SOLO quando il MutationObserver rileva
+    // che e' diventata visibile una schermata di fine: e' la condizione
+    // semantica giusta. Tutti i 53 giochi del sito (verificati) hanno
+    // una schermata fine fra i selettori monitorati.
   }
 
   if (document.readyState === 'loading') {
