@@ -9,6 +9,7 @@ aliases:
 sitemap:
   priority: 0.9
   changefreq: daily
+toc: true
 ---
 
 <div class="card border-warning mb-4">

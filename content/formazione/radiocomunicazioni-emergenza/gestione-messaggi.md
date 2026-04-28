@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 4 — Gestione dei messaggi e controllo di maglia"
 description: "Net Control Station, Net Manager, maglie dirette e libere, precedenze, formato del messaggio radioamatoriale (intestazione, testo, firma), collegamento con l'Incident Command System (ICS) e il Metodo Augustus."
+layout: "single"
+toc: true
 ---
 
 Una volta padroneggiate le tecniche di base (Cap. 2) e conosciuti i canali (Cap. 3), il volontario TLC entra nel cuore del suo mestiere: **far funzionare una maglia** in cui molti operatori passano molti messaggi, tutti con tempi e priorità diverse, senza caos. La disciplina di maglia è ciò che distingue un gruppo pronto da un coro stonato.

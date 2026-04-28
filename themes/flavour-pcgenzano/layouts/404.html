@@ -6,23 +6,116 @@
 </div>
 <div class="container py-5">
   <div class="row">
-    <div class="col-lg-8 mx-auto text-center">
-      <p class="display-1 fw-bold text-primary" style="opacity:0.3;">404</p>
-      <h2 class="h4 mb-3">La pagina che cerchi non esiste più</h2>
-      <p class="text-muted mb-4">Il nostro sito web è stato completamente rinnovato. La pagina che cercavi potrebbe essere stata spostata o rinominata.</p>
-      <div class="d-flex flex-wrap justify-content-center gap-2">
-        <a href="{{ "/" | relURL }}" class="btn btn-primary">Vai alla Home</a>
-        <a href="{{ "/chi-siamo/" | relURL }}" class="btn btn-outline-primary">Chi Siamo</a>
-        <a href="{{ "/comunicazioni/" | relURL }}" class="btn btn-outline-primary">Comunicazioni</a>
-        <a href="{{ "/contatti/" | relURL }}" class="btn btn-outline-primary">Contatti</a>
-        <a href="{{ "/cerca/" | relURL }}" class="btn btn-outline-primary">Cerca nel sito</a>
+    <div class="col-lg-10 mx-auto">
+      <div class="text-center mb-5">
+        <p class="display-1 fw-bold text-primary" style="opacity:0.25; line-height: 1;">404</p>
+        <h2 class="h4 mb-3">La pagina che cerchi non esiste o è stata spostata</h2>
+        <p class="text-muted mb-4">
+          Il sito è stato rinnovato: la URL che hai cercato potrebbe essere cambiata.
+          Da qui sotto puoi raggiungere le sezioni più consultate, oppure usare la <strong>ricerca interna</strong> per trovare quello che ti serve.
+        </p>
+        <form action="{{ "cerca/" | relURL }}" method="get" role="search" style="max-width: 480px; margin: 0 auto 2rem auto;">
+          <div class="input-group">
+            <span class="input-group-text bg-primary text-white"><i class="bi bi-search" aria-hidden="true"></i></span>
+            <input type="search" name="q" class="form-control form-control-lg"
+                   placeholder="Cerca: numeri utili, terremoto, volontariato..."
+                   aria-label="Cerca nel sito">
+            <button type="submit" class="btn btn-primary px-4">Cerca</button>
+          </div>
+        </form>
+      </div>
+
+      <h3 class="h5 mb-3 text-center"><i class="bi bi-compass me-2" aria-hidden="true"></i>Pagine più consultate</h3>
+      <div class="row g-3 mb-4">
+        <div class="col-md-6 col-lg-3">
+          <a href="{{ "numeri-utili/" | relURL }}" class="card h-100 text-decoration-none border-danger">
+            <div class="card-body text-center">
+              <i class="bi bi-telephone-fill text-danger" style="font-size: 2.2rem;" aria-hidden="true"></i>
+              <p class="mt-2 mb-0 fw-bold">Numeri Utili</p>
+              <p class="small text-muted mb-0">112 e tutti gli altri</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="{{ "allerte-meteo/" | relURL }}" class="card h-100 text-decoration-none border-warning">
+            <div class="card-body text-center">
+              <i class="bi bi-cloud-rain-heavy-fill text-warning" style="font-size: 2.2rem;" aria-hidden="true"></i>
+              <p class="mt-2 mb-0 fw-bold">Allerte Meteo</p>
+              <p class="small text-muted mb-0">Stato e codici colore</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="{{ "cosa-fare-adesso/" | relURL }}" class="card h-100 text-decoration-none border-primary">
+            <div class="card-body text-center">
+              <i class="bi bi-list-check text-primary" style="font-size: 2.2rem;" aria-hidden="true"></i>
+              <p class="mt-2 mb-0 fw-bold">Cosa fare adesso</p>
+              <p class="small text-muted mb-0">In emergenza</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="{{ "assistente/" | relURL }}" class="card h-100 text-decoration-none border-success">
+            <div class="card-body text-center">
+              <i class="bi bi-question-circle-fill text-success" style="font-size: 2.2rem;" aria-hidden="true"></i>
+              <p class="mt-2 mb-0 fw-bold">Assistente</p>
+              <p class="small text-muted mb-0">Cosa devo fare?</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="{{ "diventa-volontario/" | relURL }}" class="card h-100 text-decoration-none">
+            <div class="card-body text-center">
+              <i class="bi bi-heart-fill" style="font-size: 2.2rem; color: #b45309;" aria-hidden="true"></i>
+              <p class="mt-2 mb-0 fw-bold">Diventa Volontario</p>
+              <p class="small text-muted mb-0">Unisciti al Gruppo</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="{{ "comunicazioni/" | relURL }}" class="card h-100 text-decoration-none">
+            <div class="card-body text-center">
+              <i class="bi bi-megaphone-fill" style="font-size: 2.2rem; color: #003366;" aria-hidden="true"></i>
+              <p class="mt-2 mb-0 fw-bold">Comunicazioni</p>
+              <p class="small text-muted mb-0">Notizie e avvisi</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="{{ "cartografia/" | relURL }}" class="card h-100 text-decoration-none">
+            <div class="card-body text-center">
+              <i class="bi bi-map-fill" style="font-size: 2.2rem; color: #0891b2;" aria-hidden="true"></i>
+              <p class="mt-2 mb-0 fw-bold">Cartografia</p>
+              <p class="small text-muted mb-0">Aree di emergenza</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="{{ "mappa-sito/" | relURL }}" class="card h-100 text-decoration-none">
+            <div class="card-body text-center">
+              <i class="bi bi-grid-3x3-gap-fill" style="font-size: 2.2rem; color: #6c757d;" aria-hidden="true"></i>
+              <p class="mt-2 mb-0 fw-bold">Mappa del Sito</p>
+              <p class="small text-muted mb-0">Tutte le sezioni</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="alert alert-warning text-center" role="note">
+        <p class="mb-0"><i class="bi bi-exclamation-triangle me-2" aria-hidden="true"></i>
+          <strong>In caso di emergenza in corso:</strong> chiama il <a href="tel:112" class="alert-link">112</a> (Numero Unico Europeo).
+        </p>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-// Redirect automatici dal vecchio sito al nuovo
+// Redirect automatici dal vecchio sito al nuovo. Si attivano quando il
+// browser arriva a una URL legacy che non ha trovato corrispondenza
+// server-side (es. su GitHub Pages preview, dove non c'è il .htaccess).
+// Il deploy Aruba usa già Redirect 301 dal .htaccess: lì questo script
+// non si attiva mai perché la pagina 404 non viene servita per quelle URL.
 var redirects = {
   'chisiamo.html': '/chi-siamo/',
   'contatti.html': '/contatti/',

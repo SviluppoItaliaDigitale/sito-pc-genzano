@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 6 — Moduli e codici radio (allegati operativi)"
 description: "Modulo messaggio, registro di stazione, alfabeto fonetico NATO e codice Q personalizzati per il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma."
+layout: "single"
+toc: true
 ---
 
 Questo capitolo raccoglie i **moduli e le tabelle di riferimento** per la squadra radiocomunicazioni del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Sono adattati dagli allegati del manuale *"Comunicazioni Radio in emergenza"* del Sistema di Protezione Civile, con i riferimenti di Genzano (COC, Ufficio Comunale PC, canali Regione Lazio).

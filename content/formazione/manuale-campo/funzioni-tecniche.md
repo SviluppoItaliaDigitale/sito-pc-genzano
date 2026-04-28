@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 3 — Funzioni tecniche"
 description: "Gli impianti e le strutture di emergenza: rete radio, elettrico, idrico e fognario, tende e tensostrutture, ristorazione, magazzini, servizi igienici e sicurezza."
+layout: "single"
+toc: true
 ---
 
 Un campo di accoglienza è una **piccola città temporanea**: deve funzionare giorno e notte, in qualsiasi stagione, con risorse portate dall'esterno. Le **funzioni tecniche** sono le infrastrutture invisibili che lo rendono abitabile.

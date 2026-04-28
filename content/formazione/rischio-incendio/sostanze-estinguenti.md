@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 2 — Sostanze estinguenti"
 description: "Acqua, schiuma, polveri, CO₂, gas inerti e sostituti degli halon: proprietà, azione estinguente, classi di fuoco compatibili e divieti di impiego su apparecchiature in tensione."
+layout: "single"
+toc: true
 ---
 
 L'estinzione di un incendio si ottiene per **raffreddamento**, **sottrazione del combustibile**, **soffocamento** o **azione chimica**. Le sostanze estinguenti combinano una o più di queste azioni e vanno scelte in funzione della **natura del combustibile** (classe di fuoco), delle **dimensioni del focolaio** e della **possibilità di impiego su apparecchiature sotto tensione**.

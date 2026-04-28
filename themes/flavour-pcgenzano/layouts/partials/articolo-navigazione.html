@@ -1,0 +1,46 @@
+{{/* Navigazione Articolo precedente / successivo.
+
+     Si attiva su qualsiasi pagina .IsPage con .Section ne genera
+     automaticamente i link in base all'ordine cronologico inverso
+     (più recente in alto). Riusabile da qualunque list/section.
+
+     Convenzione: chiamato dal layout single.html dei comunicati e
+     pagine articolo. Niente parametri, lavora su .Page corrente.
+
+     Output: blocco <nav> con due card (prima/dopo) o una sola se
+     l'articolo è il primo o l'ultimo della sezione. Niente output
+     se la sezione ha meno di 2 articoli.
+*/}}
+{{- $prev := .PrevInSection -}}
+{{- $next := .NextInSection -}}
+{{- if or $prev $next -}}
+<nav class="articolo-prev-next mt-5" aria-label="Naviga tra gli articoli">
+  <div class="row g-3">
+    {{ if $next }}
+    {{/* "Successivo" in Hugo = pubblicato DOPO (più recente). Per l'utente
+         che legge cronologicamente in archivio, scorrere "verso il futuro"
+         equivale a "articolo più recente". */}}
+    <div class="col-md-6">
+      <a class="articolo-nav-card articolo-nav-prev" href="{{ $next.RelPermalink }}"
+         aria-label="Articolo più recente: {{ $next.Title }}">
+        <span class="articolo-nav-label">
+          <i class="bi bi-arrow-left" aria-hidden="true"></i> Articolo più recente
+        </span>
+        <span class="articolo-nav-title">{{ $next.Title }}</span>
+      </a>
+    </div>
+    {{ end }}
+    {{ if $prev }}
+    <div class="col-md-6 ms-md-auto">
+      <a class="articolo-nav-card articolo-nav-next" href="{{ $prev.RelPermalink }}"
+         aria-label="Articolo precedente: {{ $prev.Title }}">
+        <span class="articolo-nav-label">
+          Articolo precedente <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </span>
+        <span class="articolo-nav-title">{{ $prev.Title }}</span>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+</nav>
+{{- end -}}

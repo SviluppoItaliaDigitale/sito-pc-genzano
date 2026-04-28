@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 5 — Attivazione, equipaggiamento e impianto di stazione"
 description: "Kit personale e di stazione, scelta degli apparati VHF/UHF/HF, antenne portatili, autonomie batteria, procedura di attivazione, messa in onda, gestione operazioni prolungate, chiusura e rientro."
+layout: "single"
+toc: true
 ---
 
 Una buona preparazione vale metà del lavoro. Il volontario che in 20 minuti ha caricato lo zaino, raggiunto il punto, alzato un'antenna e chiamato Net Control è una risorsa concreta. Chi arriva dopo due ore senza cavi adeguati è un problema. La Guida IARU dedica cinque capitoli (15-19) al "come allestirsi": li sintetizziamo qui in una checklist pratica.

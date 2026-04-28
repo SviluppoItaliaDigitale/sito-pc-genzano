@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 4 — Misure di protezione attiva"
 description: "Estintori portatili e carrellati, rete idrica antincendio, idranti e naspi, impianti sprinkler, rilevatori di fumo e calore, sistemi di allarme, segnaletica di sicurezza."
+layout: "single"
+toc: true
 ---
 
 La **protezione attiva** è l'insieme delle misure che richiedono l'**azione di un operatore** (estintore, idrante) o l'**azionamento di un impianto** (sprinkler, rilevatore, allarme). È finalizzata a:

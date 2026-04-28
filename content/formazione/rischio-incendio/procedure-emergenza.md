@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 5 — Procedure di emergenza"
 description: "Il piano di emergenza, l'allarme, l'evacuazione, la chiamata al 112, la collaborazione con i Vigili del Fuoco e il primo intervento con estintore."
+layout: "single"
+toc: true
 ---
 
 Il **piano di emergenza** è il documento che stabilisce, prima che accada l'incendio, **chi fa cosa e in quanto tempo**. È obbligatorio in tutti i luoghi di lavoro con oltre 9 lavoratori o classificati a rischio elevato (art. 46 D.Lgs. 81/2008; D.M. 2 settembre 2021).

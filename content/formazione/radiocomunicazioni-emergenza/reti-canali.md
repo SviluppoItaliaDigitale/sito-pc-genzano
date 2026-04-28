@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 3 — Reti, maglie e canali"
 description: "Network theory: scegliere il canale giusto in base al messaggio. Telefono fisso, cellulare, VHF/UHF, HF, satellite, digitali. Caratteristiche, limiti, scenari d'uso per la protezione civile."
+layout: "single"
+toc: true
 ---
 
 Quando hai un messaggio da far passare, non tutti i canali vanno bene. Lo studio di questa scelta si chiama **network theory** — trovare il **percorso di comunicazione più efficiente** in base al contenuto, all'urgenza, alla precisione richiesta, al numero di destinatari, e alle risorse disponibili.

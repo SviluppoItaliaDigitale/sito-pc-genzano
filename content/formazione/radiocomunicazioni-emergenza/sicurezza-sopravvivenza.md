@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 6 — Sicurezza e sopravvivenza in emergenza"
 description: "Famiglia e casa prima della missione, nutrizione, idratazione, riposo, igiene, gestione dello stress, rischi ambientali, traumi psicologici. Chiude la serie IARU adattata al Gruppo Comunale di Genzano."
+layout: "single"
+toc: true
 ---
 
 Un volontario ammalato, disidratato, esausto o preoccupato per la sua famiglia **non è una risorsa**: è un peso per il gruppo e un potenziale infortunato. La Guida IARU dedica il suo penultimo capitolo — non a caso — alla **sicurezza del volontario** stesso. Rispetto ai manuali tecnici, il messaggio è netto: *"Home and Family First. You First — the Mission Second."*

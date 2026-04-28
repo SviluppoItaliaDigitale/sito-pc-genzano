@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 1 — Struttura organizzativa e catena di comando"
 description: "Dalla struttura nazionale al Centro Operativo Comunale di Genzano: chi fa cosa in emergenza secondo il Codice della Protezione Civile e il metodo Augustus aggiornato."
+layout: "single"
+toc: true
 ---
 
 Il **Servizio Nazionale della Protezione Civile** (SNPC) è un sistema a più livelli, disegnato per attivarsi in modo **sussidiario**: il livello più vicino al cittadino — il Comune — interviene per primo. Se l'evento supera le sue forze, si attivano Prefettura, Regione e, per eventi di grande portata, lo Stato.

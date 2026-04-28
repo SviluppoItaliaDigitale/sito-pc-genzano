@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 2 — Tecniche operative di base"
 description: "Ascolto, uso del microfono, brevità, linguaggio piano, fonetica NATO, pro-words, nominativi tattici, identificazione di stazione. Le abitudini da evitare in emergenza."
+layout: "single"
+toc: true
 ---
 
 Tutta la teoria sul sistema di protezione civile non serve a niente se al microfono sei scoordinato. La capacità di **parlare alla radio in modo professionale, breve e comprensibile** è la prima competenza operativa del volontario TLC. Si allena: con l'esercizio quotidiano, con le esercitazioni, con le simulazioni di maglia.

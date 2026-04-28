@@ -1,6 +1,8 @@
 ---
 title: "Capitolo 1 — La combustione"
 description: "I fondamenti della combustione: triangolo del fuoco, combustibili solidi, liquidi e gassosi, sorgenti di innesco, prodotti della combustione e le cinque classi di fuoco UNI EN 2:2005."
+layout: "single"
+toc: true
 ---
 
 Conoscere la **combustione** è il primo passo per prevenire e combattere un incendio. Il fuoco non è un fenomeno casuale: obbedisce a **leggi fisico-chimiche precise** che, una volta comprese, permettono di agire con efficacia.
