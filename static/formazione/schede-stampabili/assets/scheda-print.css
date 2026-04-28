@@ -449,6 +449,90 @@ table.scheda-tabella th {
   .scheda-semaforo { grid-template-columns: 1fr; }
 }
 
+/* ----------------------------------------------------------------
+   Schede CASO STUDIO (Vajont, Friuli, Vermicino, Sarno, Stava,
+   Versilia, Rigopiano, Genova/Fereggiano, Amatrice, L'Aquila):
+   stesso layout per tutte. Le classi sotto sono standard, niente
+   <style> inline nelle schede.
+   ---------------------------------------------------------------- */
+
+/* Box dati ("Il terremoto", "Il bilancio", ecc.) */
+.scheda-fact-box {
+  background: #f0f4f8;
+  border-left: 4px solid var(--scheda-blu);
+  padding: 0.7rem 0.9rem;
+  margin: 0.6rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+}
+.scheda-fact-box h3 {
+  margin: 0 0 0.3rem 0;
+  color: var(--scheda-blu);
+  font-size: 0.95rem;
+}
+.scheda-fact-box dl { margin: 0; }
+.scheda-fact-box dt { font-weight: 700; }
+.scheda-fact-box dd { margin: 0 0 0.3rem 0; }
+
+/* Box "domanda di analisi" (riquadro grigio bordo + righe per la risposta) */
+.scheda-cs-domanda {
+  margin: 0.6rem 0;
+  padding: 0.55rem 0.85rem;
+  border: 1.5px solid var(--scheda-bordo);
+  border-radius: 6px;
+  background: #fcfcfc;
+}
+.scheda-cs-domanda strong { color: var(--scheda-blu); }
+.scheda-cs-domanda p { margin: 0 0 0.4rem 0; }
+
+/* Riga per scrivere a mano la risposta */
+.scheda-righe {
+  border-bottom: 1.5px solid var(--scheda-bordo);
+  min-height: 1.6rem;
+  margin: 0.4rem 0;
+}
+
+/* Box "Per il docente" — sfondo verde chiaro */
+.scheda-docente {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: #d1e7dd;
+  border-radius: 8px;
+  border-left: 4px solid var(--scheda-verde);
+  font-size: 0.85rem;
+}
+.scheda-docente strong { color: var(--scheda-verde); }
+
+/* Box "Pro / Contro / Lezioni" delle schede caso studio (3 colonne) */
+.scheda-pro-contro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.7rem;
+  margin: 0.6rem 0 1rem 0;
+}
+.scheda-pro-contro .scheda-pc-card {
+  border: 1.5px solid var(--scheda-bordo);
+  border-radius: 8px;
+  padding: 0.7rem 0.85rem;
+  background: #fcfcfc;
+  font-size: 0.88rem;
+}
+.scheda-pro-contro .scheda-pc-card h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.95rem;
+}
+.scheda-pro-contro .scheda-pc-pro h3   { color: #0f5132; }
+.scheda-pro-contro .scheda-pc-pro      { background: #e7f5ec; border-color: #198754; }
+.scheda-pro-contro .scheda-pc-contro h3{ color: #842029; }
+.scheda-pro-contro .scheda-pc-contro   { background: #fbeaeb; border-color: #b02a37; }
+.scheda-pro-contro .scheda-pc-lezione h3 { color: #664d03; }
+.scheda-pro-contro .scheda-pc-lezione    { background: #fff8e1; border-color: #d4a72c; }
+.scheda-pro-contro ul { margin: 0; padding-left: 1.1rem; }
+.scheda-pro-contro li { margin: 0.2rem 0; }
+@media (max-width: 700px) {
+  .scheda-pro-contro { grid-template-columns: 1fr; }
+}
+
 /* ================================================================
    REGOLE STAMPA A4
    ================================================================ */

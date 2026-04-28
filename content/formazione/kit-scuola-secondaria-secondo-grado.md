@@ -567,6 +567,21 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 - 👉 [**English for Civil Protection**](/formazione/schede-stampabili/english-civil-protection-secondaria2/) — glossario tecnico inglese, lettura di un articolo internazionale (EU Civil Protection Mechanism), comprehension, role-play emergency call. *(inglese L2)*
 - 👉 [**Diventare volontario di PC**](/formazione/schede-stampabili/percorso-volontariato-secondaria2/) — requisiti, specialità, 7 step del percorso, diritti e doveri (D.Lgs. 1/2018), mini-progetto personale. *(ed. civica, orientamento)*
 
+**12 nuovi case study** delle maxi-emergenze italiane (analisi sistemica con format «Cosa non andava / Cosa è cambiato / Lezioni apprese» + 6 domande di analisi + box per il docente):
+
+- 👉 [**Caso Messina-Reggio Calabria 1908**](/formazione/schede-stampabili/caso-messina-reggio-secondaria2/) — terremoto + tsunami, 80.000-120.000 vittime: la più grande catastrofe naturale d'Europa moderna, prima legge antisismica italiana. *(storia, scienze della Terra, italiano)*
+- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria2/) — «Fate presto»: 2.914 vittime, soccorsi tardivi, nascita del Ministero della Protezione Civile, percorso verso la legge 225/1992. *(storia, diritto, ed. civica)*
+- 👉 [**Caso San Giuliano di Puglia 2002**](/formazione/schede-stampabili/caso-san-giuliano-secondaria2/) — la scuola Jovine crollata: 27 bambini + maestra, OPCM 3274/2003, classificazione sismica obbligatoria di tutto il territorio. *(diritto, scienze della Terra, ed. civica, etica)*
+- 👉 [**Caso Vajont 1963**](/formazione/schede-stampabili/caso-vajont-secondaria2/) — la "tragedia annunciata": frana del Toc, 1.917 vittime, ruolo della responsabilità tecnica e della comunicazione del rischio. *(geologia, diritto, filosofia, italiano)*
+- 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria2/) — «Là dov'era, com'era»: 989 vittime, ricostruzione modello, nascita della PC italiana moderna. *(storia, diritto, ed. civica)*
+- 👉 [**Caso Vermicino 1981**](/formazione/schede-stampabili/caso-vermicino-secondaria2/) — Alfredino Rampi, 18 ore di diretta TV, l'opinione pubblica scopre la PC: nasce il Ministero. *(storia, diritto, comunicazione, etica)*
+- 👉 [**Caso Stava 1985**](/formazione/schede-stampabili/caso-stava-secondaria2/) — frana dei bacini di decantazione minerari, 268 vittime: il rischio industriale e la responsabilità penale. *(diritto, geologia, etica industriale)*
+- 👉 [**Caso Versilia 1996**](/formazione/schede-stampabili/caso-versilia-secondaria2/) — alluvione di Cardoso, 14 vittime: bombe d'acqua, bacini montani, cambiamento climatico. *(geografia, geologia, ed. civica)*
+- 👉 [**Caso Sarno 1998**](/formazione/schede-stampabili/caso-sarno-secondaria2/) — frana di fango, 161 vittime: urbanizzazione fragile e nascita dei PAI. *(geologia, diritto, geografia)*
+- 👉 [**Caso Rigopiano 2017**](/formazione/schede-stampabili/caso-rigopiano-secondaria2/) — valanga sull'hotel, 29 vittime: comunicazione del rischio fallita, catena decisionale frammentata. *(diritto, ed. civica, comunicazione)*
+- 👉 [**I vulcani attivi italiani**](/formazione/schede-stampabili/caso-vulcani-italia-secondaria2/) — Vesuvio, Campi Flegrei, Etna, Stromboli, Vulcano, Marsili, Ischia: pericolosità, monitoraggio INGV, piani di emergenza. *(scienze della Terra, geografia, diritto)*
+- 👉 [**Bradisismo dei Campi Flegrei**](/formazione/schede-stampabili/caso-campi-flegrei-secondaria2/) — caso in evoluzione: sciami sismici, livello giallo INGV, decreto Campi Flegrei 2023, esercitazione EXE Flegrei. Da aggiornare con i bollettini settimanali INGV. *(scienze della Terra, comunicazione, diritto)*
+
 ---
 
 ## Compito di realtà — Progetto di classe
