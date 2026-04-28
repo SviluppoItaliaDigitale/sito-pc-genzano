@@ -486,6 +486,9 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Audit del Piano di Emergenza Scolastico**](/formazione/schede-stampabili/audit-piano-secondaria/) — compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.
 - 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. 4 box "Prima/Durante/Comunicazioni/Quando chiamare", 3 attività domestiche, mini quiz. *(ed. civica, tecnologia)*
 - 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — rischio sanitario del caldo: persone vulnerabili, comportamenti corretti, semaforo del caldo (verde/giallo/rosso) e mini quiz. *(scienze, ed. civica, valida anche per Primaria 4-5)*
+- 👉 [**Monossido di carbonio**](/formazione/schede-stampabili/monossido-carbonio-secondaria/) — il pericolo invisibile in case, garage e locali chiusi: prevenzione, usi vietati di barbecue/bracieri, segnali sospetti e azione sicura. Caccia al rischio in casa e mini quiz. *(scienze, tecnologia)*
+- 👉 [**IT-alert e comunicazioni ufficiali**](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — capire il sistema nazionale di allarme pubblico: anatomia di un messaggio (rischio/area/tempo/azione/fonte), esempio realistico, risposta in 140 caratteri, mini quiz. *(ed. civica, cittadinanza digitale, italiano)*
+- 👉 [**Fake news in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — riconoscere e fermare la disinformazione: regola dei 3 controlli (fonte/data/conferma), checklist "prima di condividere", classifica delle notizie a gruppi e mini quiz. *(ed. civica digitale, italiano)*
 
 **6 schede curriculari trasversali** (matematica, italiano, ed. civica, scienze):
 
