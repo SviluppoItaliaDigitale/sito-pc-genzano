@@ -20,6 +20,14 @@ jobs:
       - name: "Checkout repository"
         uses: actions/checkout@v4
 
+      - name: "Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: "Installa dipendenze"
+        run: pip install --quiet beautifulsoup4
+
       - name: "Verifica fonti ufficiali e calcola hash"
         id: check
         shell: bash
@@ -28,6 +36,11 @@ jobs:
           STATE_FILE=".manuale/sources-hashes.json"
           CHANGES_FILE="/tmp/manuale-changes.md"
           : > "$CHANGES_FILE"
+
+          # Versione dell'algoritmo di hashing. Se diversa da quella nel manifesto
+          # esistente, è in corso una migrazione (es. v1 sed → v2 BeautifulSoup):
+          # NON segnaliamo cambiamenti, solo re-baseline silenziosa.
+          ALGORITMO="v2-text-only"
 
           declare -A FONTI=(
             ["linee_guida_design_pa"]="https://www.agid.gov.it/it/design-servizi/linee-guida-design-servizi-web-pa"
@@ -42,39 +55,47 @@ jobs:
             ["dipartimento_pc"]="https://www.protezionecivile.gov.it/"
           )
 
+          PREV_ALGO=$(jq -r '._meta.algoritmo // ""' "$STATE_FILE" 2>/dev/null || echo "")
+          if [ "$PREV_ALGO" != "$ALGORITMO" ]; then
+            echo "::notice ::Migrazione algoritmo hashing: $PREV_ALGO -> $ALGORITMO. Nessuna issue verrà aperta in questo run (re-baseline silenziosa)."
+            BASELINE="true"
+          else
+            BASELINE="false"
+          fi
+
           HAS_CHANGES="false"
-          NEW_JSON=$(jq -n --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" '{
-            "_meta": {
-              "descrizione": "Hash SHA-256 delle fonti AGID / Designers Italia monitorate settimanalmente dal workflow .github/workflows/aggiorna-manuale.yml. Se un hash cambia, il workflow apre una issue con la checklist di revisione del MANUALE-SITO.md.",
-              "ultimo_aggiornamento": $ts,
-              "note": "Aggiornato automaticamente dal workflow. Non modificare manualmente."
-            },
-            "fonti": {}
-          }')
+          NEW_JSON=$(jq -n \
+            --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --arg algo "$ALGORITMO" \
+            '{
+              "_meta": {
+                "descrizione": "Hash SHA-256 del solo testo visibile (main/body) delle fonti AGID / Designers Italia monitorate settimanalmente dal workflow .github/workflows/aggiorna-manuale.yml. Lo script scripts/hash-fonte-agid.py rimuove script, style, header, footer, cookie banner e pattern volatili (timestamp, fingerprint asset) prima dell hashing, così le modifiche puramente cosmetiche non scattano falsi positivi.",
+                "algoritmo": $algo,
+                "ultimo_aggiornamento": $ts,
+                "note": "Aggiornato automaticamente dal workflow. Non modificare manualmente."
+              },
+              "fonti": {}
+            }')
 
           for key in "${!FONTI[@]}"; do
             url="${FONTI[$key]}"
             echo "Verifica: $key -> $url"
 
-            content=$(curl -sSL --max-time 30 \
-              --user-agent "Mozilla/5.0 (compatible; PCGenzanoBot/1.0; +https://www.protezionecivilegenzano.it/)" \
-              "$url" || echo "")
-
-            if [ -z "$content" ]; then
-              echo "  ATTENZIONE: impossibile scaricare $url"
-              hash="errore-download"
+            # Lo script Python gestisce internamente download, parsing, normalizzazione
+            # e hashing. Stampa l'hash su stdout o scrive errore su stderr ed esce 2.
+            if hash=$(python3 scripts/hash-fonte-agid.py "$url" 2>/dev/null); then
+              :
             else
-              # Rimuove elementi volatili (csrf token, timestamp, numeri cache) prima dell'hash
-              hash=$(echo "$content" \
-                | sed -E 's/[a-f0-9]{32,}//g' \
-                | sed -E 's/[0-9]{10,}//g' \
-                | sed -E 's/<script[^>]*>.*?<\/script>//g' \
-                | sha256sum | awk '{print $1}')
+              echo "  ATTENZIONE: impossibile elaborare $url"
+              hash="errore-download"
             fi
 
             prev_hash=$(jq -r --arg k "$key" '.fonti[$k].hash // ""' "$STATE_FILE" 2>/dev/null || echo "")
 
-            if [ -n "$prev_hash" ] && [ "$prev_hash" != "$hash" ] && [ "$hash" != "errore-download" ]; then
+            if [ "$BASELINE" = "false" ] \
+               && [ -n "$prev_hash" ] \
+               && [ "$prev_hash" != "$hash" ] \
+               && [ "$hash" != "errore-download" ]; then
               HAS_CHANGES="true"
               echo "- **$key** — [$url]($url)" >> "$CHANGES_FILE"
             fi
