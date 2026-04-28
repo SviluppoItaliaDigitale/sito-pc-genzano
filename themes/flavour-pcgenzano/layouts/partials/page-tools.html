@@ -13,7 +13,21 @@
 {{- $url := .Permalink -}}
 {{- $urlEnc := .Permalink | urlquery -}}
 {{- $titleEnc := .Title | urlquery -}}
+{{- $descEnc := default .Site.Params.description .Description | urlquery -}}
+{{- $sourceEnc := .Site.Params.productionBaseURL | default .Site.BaseURL | urlquery -}}
 {{- $bodyEmail := printf "%s%%0A%%0A%s" .Title .Permalink | urlquery -}}
+
+{{/* Le URL di share vanno costruite con printf + safeURL: senza safeURL,
+     Hugo applica un secondo URL-escape ai valori dentro href="..." e
+     produce %252F invece di %2F (doppio encoding). Era questo a far
+     fallire X (Twitter): l'URL-encoded due volte non veniva
+     riconosciuta dal parser di intent/post e si apriva X vuoto. */}}
+{{- $urlWhatsapp := printf "https://wa.me/?text=%s%%20%s" $titleEnc $urlEnc -}}
+{{- $urlTelegram := printf "https://t.me/share/url?url=%s&text=%s" $urlEnc $titleEnc -}}
+{{- $urlFacebook := printf "https://www.facebook.com/sharer/sharer.php?u=%s" $urlEnc -}}
+{{- $urlX        := printf "https://x.com/intent/post?text=%s&url=%s" $titleEnc $urlEnc -}}
+{{- $urlLinkedIn := printf "https://www.linkedin.com/sharing/share-offsite/?url=%s&title=%s&summary=%s&source=%s" $urlEnc $titleEnc $descEnc $sourceEnc -}}
+{{- $urlEmail    := printf "mailto:?subject=%s&body=%s" $titleEnc $bodyEmail -}}
 <div class="page-tools mt-4 pt-3 border-top">
   <div class="d-flex flex-wrap justify-content-between align-items-center">
     <div class="small text-muted">
@@ -31,42 +45,42 @@
     <span class="page-tools-share-label">
       <i class="bi bi-share-fill me-1" aria-hidden="true"></i> Condividi:
     </span>
-    <a href="https://wa.me/?text={{ $titleEnc }}%20{{ $urlEnc }}"
+    <a href="{{ $urlWhatsapp | safeURL }}"
        target="_blank" rel="noopener noreferrer"
        class="share-btn share-whatsapp"
        aria-label="Condividi su WhatsApp">
       <i class="bi bi-whatsapp" aria-hidden="true"></i>
       <span class="visually-hidden">WhatsApp</span>
     </a>
-    <a href="https://t.me/share/url?url={{ $urlEnc }}&text={{ $titleEnc }}"
+    <a href="{{ $urlTelegram | safeURL }}"
        target="_blank" rel="noopener noreferrer"
        class="share-btn share-telegram"
        aria-label="Condividi su Telegram">
       <i class="bi bi-telegram" aria-hidden="true"></i>
       <span class="visually-hidden">Telegram</span>
     </a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ $urlEnc }}"
+    <a href="{{ $urlFacebook | safeURL }}"
        target="_blank" rel="noopener noreferrer"
        class="share-btn share-facebook"
        aria-label="Condividi su Facebook">
       <i class="bi bi-facebook" aria-hidden="true"></i>
       <span class="visually-hidden">Facebook</span>
     </a>
-    <a href="https://twitter.com/intent/tweet?text={{ $titleEnc }}%20{{ $urlEnc }}"
+    <a href="{{ $urlX | safeURL }}"
        target="_blank" rel="noopener noreferrer"
        class="share-btn share-x"
        aria-label="Condividi su X (Twitter)">
       <i class="bi bi-twitter-x" aria-hidden="true"></i>
       <span class="visually-hidden">X (Twitter)</span>
     </a>
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ $urlEnc }}"
+    <a href="{{ $urlLinkedIn | safeURL }}"
        target="_blank" rel="noopener noreferrer"
        class="share-btn share-linkedin"
        aria-label="Condividi su LinkedIn">
       <i class="bi bi-linkedin" aria-hidden="true"></i>
       <span class="visually-hidden">LinkedIn</span>
     </a>
-    <a href="mailto:?subject={{ $titleEnc }}&body={{ $bodyEmail }}"
+    <a href="{{ $urlEmail | safeURL }}"
        class="share-btn share-email"
        aria-label="Condividi per email">
       <i class="bi bi-envelope-fill" aria-hidden="true"></i>
