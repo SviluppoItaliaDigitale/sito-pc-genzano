@@ -476,6 +476,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Chiamo il 112**](/formazione/schede-stampabili/chiamo-112/) — role-play scritto: l'alunno simula una chiamata al numero unico di emergenza con consegna passo-passo.
 - 👉 [**Cruciverba della Sicurezza**](/formazione/schede-stampabili/cruciverba-primaria/) — 14 definizioni sulle parole-chiave della Protezione Civile, con soluzioni per il docente.
 - 👉 [**Piano di Emergenza Familiare**](/formazione/schede-stampabili/piano-familiare-primaria/) — l'alunno compila con la famiglia il piano di casa: contatti, punti di raccolta, kit, percorso di evacuazione.
+- 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — proteggere bambini, anziani, lavoratori all'aperto e animali domestici: 4 box "Ore calde / Acqua e alimenti / Casa / Mai in auto", semaforo del caldo, mini-rubrica delle persone fragili e mini quiz. *(classi 4-5, valida anche per Secondaria I grado)*
 
 **3 schede di letto-scrittura** a tema Protezione Civile per le classi 1ª-2ª (6-7 anni):
 

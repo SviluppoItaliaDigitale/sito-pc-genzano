@@ -551,6 +551,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 - 👉 [**Caso studio Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria2/) — analisi sistemica del terremoto del Centro Italia 2016: dati essenziali, 6 domande approfondite (fenomeno fisico, fattori predisponenti, risposta, criticità, lezione, riflessione personale).
 - 👉 [**Comunicazione di crisi**](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/) — lo studente è il responsabile comunicazione del Comune durante un'allerta arancione. Produce 3 testi: post social, messaggio Telegram, nota stampa. Vincoli e griglia di valutazione.
 - 👉 [**Tracce per la prima prova d'esame**](/formazione/schede-stampabili/traccia-esame-secondaria2/) — tracce nello stile della prima prova di Stato (Beck, Ischia 2022, IT-alert, art. 2 D.Lgs. 1/2018, volontariato). 2 di Tipologia B, 3 di Tipologia C.
+- 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. 4 box "Prima/Durante/Comunicazioni/Quando chiamare", 3 attività domestiche, mini quiz. Adatta anche al secondo grado per il taglio cittadinanza/resilienza. *(ed. civica, tecnologia)*
 
 **7 schede curriculari trasversali** (diritto, scienze, economia, etica, inglese, ed. civica):
 

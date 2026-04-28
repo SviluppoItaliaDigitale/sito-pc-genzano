@@ -484,6 +484,8 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Decodifica del bollettino di allerta**](/formazione/schede-stampabili/decodifica-bollettino-secondaria/) — bollettino realistico del Centro Funzionale Lazio per Genzano: 7 domande di analisi (codici colore, criticità, COC). Soluzioni per il docente.
 - 👉 [**Mappa dei rischi del quartiere**](/formazione/schede-stampabili/mappa-rischi-secondaria/) — indagine territoriale: lo studente consulta INGV, ISPRA, DPC, EFFIS e disegna la mappa dei rischi del proprio quartiere. 5 domande di analisi.
 - 👉 [**Audit del Piano di Emergenza Scolastico**](/formazione/schede-stampabili/audit-piano-secondaria/) — compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.
+- 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. 4 box "Prima/Durante/Comunicazioni/Quando chiamare", 3 attività domestiche, mini quiz. *(ed. civica, tecnologia)*
+- 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — rischio sanitario del caldo: persone vulnerabili, comportamenti corretti, semaforo del caldo (verde/giallo/rosso) e mini quiz. *(scienze, ed. civica, valida anche per Primaria 4-5)*
 
 **6 schede curriculari trasversali** (matematica, italiano, ed. civica, scienze):
 
