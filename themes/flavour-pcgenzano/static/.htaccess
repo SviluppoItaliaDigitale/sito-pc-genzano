@@ -36,6 +36,38 @@ Redirect 301 /sitovecchio/ /
 # /documenti/download/ NON reindirizzato — i PDF sono serviti direttamente
 RedirectMatch 301 ^/documenti/normativa/(.*)$ /area-download/normativa/$1
 
+# PDF storici del Piano serviti dalla root /documenti/ — Google Search
+# Console segnala come "scansionati ma non indicizzati". Reindirizziamo
+# alla cartella nuova del Piano.
+RedirectMatch 301 ^/documenti/(Carta_di_.*\.pdf|Piano_di_.*\.pdf|Piano_Emergenza.*\.pdf|Aree_Emergenza.*\.pdf|Inquadramento_.*\.pdf|Rischio_.*\.pdf|Cartina_.*\.pdf)$ /area-download/normativa/$1
+
+# URL Joomla "file_pii_*" del vecchio CMS (plugin Phoca o simile) —
+# nessuna corrispondenza nel nuovo sito. Restituiamo 410 Gone per dire
+# a Google che la pagina e' definitivamente rimossa, cosi' la elimina
+# dall'indice subito invece di tenerla in coda.
+RedirectMatch 410 ^/file_pii_.*$
+RedirectMatch 410 ^/component/.*$
+RedirectMatch 410 ^/option/.*$
+RedirectMatch 410 ^/index\.php$
+RedirectMatch 410 ^/joomla.*$
+
+# Vecchi articoli /comunicazioni/AAAA/...html (CMS precedente). Il nuovo
+# sito usa /comunicazioni/AAAA-MM-GG-slug/ senza estensione e senza anno
+# come segmento. Reindirizziamo all'archivio /comunicazioni/.
+RedirectMatch 301 ^/comunicazioni/[0-9]{4}/.*\.html?$ /comunicazioni/
+
+# Vecchi nomi micro-siti standalone — il nuovo sito li chiama diversamente.
+RedirectMatch 301 ^/giochi_protezione_civile/?(.*)$ /giochi/$1
+RedirectMatch 301 ^/giochi-protezione-civile/?(.*)$ /giochi/$1
+RedirectMatch 301 ^/formazione_pc/?(.*)$ /formazionepc/$1
+RedirectMatch 301 ^/quiz_pc/?(.*)$ /quizpc/$1
+
+# Pagine HTML standalone del vecchio sito senza corrispondenza diretta —
+# 410 Gone (rimossa) cosi' Google le toglie subito.
+RedirectMatch 410 ^/galleria\.html$
+RedirectMatch 410 ^/cookies-policy\.html$
+RedirectMatch 410 ^/areefiltrate\.html$
+
 # Le cartelle seguenti contengono risorse standalone sul server FTP
 # e NON devono essere reindirizzate — i file sono serviti direttamente
 # /cartelli/        — segnaletica aree di emergenza

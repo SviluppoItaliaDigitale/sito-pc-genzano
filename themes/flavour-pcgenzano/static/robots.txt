@@ -2,36 +2,17 @@ User-agent: *
 Allow: /
 Sitemap: https://www.protezionecivilegenzano.it/sitemap.xml
 
-# Blocca le pagine redirect del vecchio sito
-Disallow: /allertameteo.html
-Disallow: /areadownload.html
-Disallow: /areerischio.html
-Disallow: /cerca.html
-Disallow: /chisiamo.html
-Disallow: /comunicazioni.html
-Disallow: /contatti.html
-Disallow: /cosafacciamo.html
-Disallow: /dichiarazione-accessibilita.html
-Disallow: /diventavolontario.html
-Disallow: /emergenza.html
-Disallow: /mappe.html
-Disallow: /notelegali.html
-Disallow: /pianodiemergenza.html
-Disallow: /pianofamiliare.html
-Disallow: /privacy.html
-Disallow: /rischio-idrogeologico.html
-Disallow: /rischio-incendio.html
-Disallow: /rischio-sismico.html
-Disallow: /simulatore.html
-Disallow: /sitiutili.html
-Disallow: /search.js
-Disallow: /style.css
+# Nota: le URL legacy del vecchio sito (*.html, /documenti/*, ecc.) NON
+# sono piu' bloccate da robots.txt. Il blocco impediva a Googlebot di
+# scansionare la pagina e quindi di seguire il Redirect 301 del .htaccess
+# o il meta refresh dell'alias HTML, lasciandole indefinitamente nello
+# stato "Esclusa per noindex" o "Bloccata da robots.txt" in Search Console.
+# Lasciandole accessibili al crawler, Google segue il 301 server-side e
+# aggiorna l'indice in 1-2 cicli di scansione.
 
-# Cartelle del vecchio sito (redirect a nuove sezioni)
-Disallow: /assets/
+# Cartelle infrastrutturali del vecchio CMS Joomla — non contengono
+# contenuto editoriale e non hanno corrispondenza nel nuovo sito.
+# Vere e proprie cartelle vuote o di sistema, blocco preventivo.
 Disallow: /cache/
-Disallow: /documenti/
-Disallow: /immagini_web/
-Disallow: /piano_protezione_civile/
 Disallow: /sito_pc/
 Disallow: /sitovecchio/
