@@ -299,6 +299,155 @@ p.scheda-intro {
   color: #212529;
   margin-bottom: 1rem;
 }
+ul.scheda-elenco,
+ol.scheda-elenco {
+  margin: 0.3rem 0 0.8rem 0;
+  padding-left: 1.4rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+ul.scheda-elenco li,
+ol.scheda-elenco li {
+  margin: 0.2rem 0;
+}
+
+/* Box messaggio chiave (apertura scheda) */
+.scheda-messaggio-chiave {
+  background: #e7f1ff;
+  border: 1.5px solid var(--scheda-blu);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin: 0.6rem 0 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.scheda-messaggio-chiave strong:first-child {
+  color: var(--scheda-blu);
+}
+
+/* Griglia "comportamenti corretti" 2x2 (Prima / Durante / Comunicazioni / Chiamare) */
+.scheda-comportamenti {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin: 0.6rem 0 1rem 0;
+}
+.scheda-comportamenti .scheda-card {
+  border: 1.5px solid var(--scheda-bordo);
+  border-radius: 8px;
+  padding: 0.7rem 0.85rem;
+  background: #fcfcfc;
+}
+.scheda-comportamenti .scheda-card h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1rem;
+  color: var(--scheda-blu);
+}
+.scheda-comportamenti .scheda-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+/* Mini quiz a scelta multipla (uniforma tutti gli "1A/B/C") */
+.scheda-quiz {
+  border: 1.5px solid var(--scheda-bordo);
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  margin: 0.5rem 0;
+  background: #fcfcfc;
+}
+.scheda-quiz h3 {
+  margin: 0 0 0.35rem 0;
+  font-size: 0.95rem;
+  color: var(--scheda-blu);
+}
+.scheda-quiz ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.scheda-quiz ul li {
+  margin: 0.15rem 0;
+}
+
+/* Box soluzioni quiz (verde, breve) */
+.scheda-soluzioni {
+  background: #d1e7dd;
+  border-left: 4px solid var(--scheda-verde);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+.scheda-soluzioni strong {
+  color: var(--scheda-verde);
+}
+
+/* Box nota locale "Approfondimenti per Genzano" */
+.scheda-nota-locale {
+  background: #e7f1ff;
+  border-left: 4px solid var(--scheda-blu);
+  padding: 0.55rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin: 0.6rem 0;
+}
+.scheda-nota-locale strong {
+  color: var(--scheda-blu);
+}
+
+/* Semaforo a 3 colori (verde/giallo/rosso) */
+.scheda-semaforo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem 0;
+}
+.scheda-semaforo .scheda-sem {
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  text-align: center;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+.scheda-semaforo .scheda-sem strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.04em;
+}
+.scheda-semaforo .scheda-sem-verde   { background: #d1e7dd; border-color: #198754; color: #0f5132; }
+.scheda-semaforo .scheda-sem-giallo  { background: #fff3cd; border-color: #d4a72c; color: #664d03; }
+.scheda-semaforo .scheda-sem-rosso   { background: #f8d7da; border-color: #b02a37; color: #842029; }
+
+/* Tabella standard (riferimenti, codici colore, regole) */
+table.scheda-tabella {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem 0;
+}
+table.scheda-tabella th,
+table.scheda-tabella td {
+  border: 1.5px solid var(--scheda-bordo);
+  padding: 0.4rem 0.6rem;
+  vertical-align: top;
+}
+table.scheda-tabella th {
+  background: #f0f4f8;
+  color: var(--scheda-blu);
+  text-align: left;
+}
+
+/* Mobile: griglia comportamenti e semaforo a colonna unica */
+@media (max-width: 600px) {
+  .scheda-comportamenti { grid-template-columns: 1fr; }
+  .scheda-semaforo { grid-template-columns: 1fr; }
+}
 
 /* ================================================================
    REGOLE STAMPA A4
