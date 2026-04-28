@@ -322,18 +322,25 @@ Vedi sezione "Copertina articolo con didascalia di credit" più sotto. Sintesi: 
 
 ### Menu di navigazione principale (mega-menu accorpato)
 
-Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `themes/flavour-pcgenzano/layouts/partials/navbar.html`. Struttura a **6 voci di primo livello**, di cui 3 dropdown:
+Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `themes/flavour-pcgenzano/layouts/partials/navbar.html`. Struttura a **7 voci di primo livello**, di cui 4 dropdown:
 
 | Voce | Tipo | Contenuto |
 |---|---|---|
 | Home | diretta | `/` |
 | Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare |
-| Formazione ▾ | dropdown | Corsi e percorsi, Giochi, Glossario, Schede Stampabili |
+| Educazione e Inclusione ▾ | dropdown | Kit per le scuole, Schede Stampabili, Giochi della Sicurezza, **Abili a Proteggere**, **Facile da Leggere**, Glossario |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
+| Risorse ▾ | dropdown | FAQ, Strumenti in Tempo Reale, Area Download, Normativa, Mappa del Sito |
 | Comunicazioni | diretta | `/comunicazioni/` |
 | Contatti | diretta | `/contatti/` |
 
-Razionale: 10 voci flat erano troppe per mobile e per l'utente in emergenza. L'accorpamento mantiene tutte le pagine raggiungibili in 2 click ma riduce il rumore visivo.
+Razionale: 10 voci flat erano troppe per mobile e per l'utente in emergenza. L'accorpamento mantiene tutte le pagine raggiungibili in ≤ 2 click ma riduce il rumore visivo.
+
+**Storia del riordino (aprile 2026):** dopo audit di usabilità, la prima versione "6 voci con Formazione" lasciava 4 buchi gravi:
+- `/abili-a-proteggere/` e `/facile-da-leggere/` raggiungibili solo in 3+ click — paradosso, visto che servono a chi ha più difficoltà;
+- `/strumenti/`, `/area-download/`, `/normativa/`, `/faq/` visibili solo in homepage o footer, perse da chi entra dal motore di ricerca.
+
+Il dropdown "Formazione" è stato rinominato **"Educazione e Inclusione"** e ha accolto le 2 pagine accessibili. È stato aggiunto un nuovo dropdown **"Risorse"** per le 5 pagine di servizio. Il numero totale di voci di primo livello è salito da 6 a 7, ancora dentro il limite Miller 7±2.
 
 **Convenzioni TOML per i dropdown:**
 - Il "padre" ha solo `name`, `identifier` e `weight` (nessun `url`).
