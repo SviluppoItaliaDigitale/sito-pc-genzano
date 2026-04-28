@@ -15,12 +15,40 @@
      - article:published_time per articoli (mostra data nella card)
      - twitter:card=summary_large_image per immagine grande
 */}}
-{{- $title := .Title -}}
+{{/* Titolo: in home usiamo il site title (altrimenti l'OG mostrerebbe
+     "Home"); altrove "Titolo pagina — Site title", come fa il <title> HTML. */}}
+{{- $title := "" -}}
+{{- if .IsHome -}}
+  {{- $title = .Site.Title -}}
+{{- else -}}
+  {{- $title = printf "%s — %s" .Title .Site.Title -}}
+{{- end -}}
 {{- $desc := default .Site.Params.description .Description -}}
+
+{{/* Immagine: forziamo il dominio di produzione (Aruba) anche se la build
+     locale o GitHub Pages usa un baseURL diverso. Le piattaforme social
+     cachano l'URL dell'immagine: se il primo crawl la prende da GitHub
+     Pages, lo scrape successivo da Aruba richiede un re-fetch. Meglio
+     dare sempre lo stesso URL canonico. */}}
+{{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
+{{- $prodBase = strings.TrimRight "/" $prodBase -}}
 {{- $imgPath := .Params.image | default "images/og-default.png" -}}
 {{- $imgPath = strings.TrimPrefix "/" $imgPath -}}
-{{- $imgURL := $imgPath | absURL -}}
-{{- $imgAlt := .Params.image_alt | default $title -}}
+{{- $imgURL := printf "%s/%s" $prodBase $imgPath -}}
+{{- $isDefaultImg := eq $imgPath "images/og-default.png" -}}
+
+{{/* Alt dell'immagine: se è il logo di default, alt descrittivo fisso.
+     Altrimenti usiamo l'image_alt del frontmatter o, in fallback, il
+     titolo della pagina. Mai stringa vuota: WCAG 1.1.1. */}}
+{{- $imgAlt := "" -}}
+{{- if $isDefaultImg -}}
+  {{- $imgAlt = "Logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" -}}
+{{- else if .Params.image_alt -}}
+  {{- $imgAlt = .Params.image_alt -}}
+{{- else -}}
+  {{- $imgAlt = .Title -}}
+{{- end -}}
+
 {{- $ext := lower (path.Ext $imgPath) -}}
 {{- $imgType := "image/jpeg" -}}
 {{- if eq $ext ".webp" }}{{ $imgType = "image/webp" }}{{ end -}}
