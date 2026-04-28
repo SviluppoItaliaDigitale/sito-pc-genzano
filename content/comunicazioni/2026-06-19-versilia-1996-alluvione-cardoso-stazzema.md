@@ -50,7 +50,7 @@ Versilia 1996 è il caso scuola dei **rischi idrogeologici legati a piogge inten
 
 2. **L'urbanizzazione in zone a rischio amplifica le conseguenze.** Cardoso era sviluppato lungo l'asta del torrente Vezza, in posizione strutturalmente esposta. La pianificazione urbanistica post-1996 ha incorporato il **vincolo idrogeologico** come elemento decisivo per le nuove edificazioni.
 
-3. **Il cambiamento climatico moltiplica gli eventi estremi.** Quello che nel 1996 era considerato evento "millenario", oggi può ripetersi in pochi anni. Eventi recenti (Senigallia 2014, [Marche 2022](/comunicazioni/2026-09-15-marche-alluvione-2022-acqua-piano/), Romagna 2023) confermano il trend.
+3. **Il cambiamento climatico moltiplica gli eventi estremi.** Quello che nel 1996 era considerato evento "millenario", oggi può ripetersi in pochi anni. Eventi recenti (Senigallia 2014, [Marche 2022](/comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/), Romagna 2023) confermano il trend.
 
 ## A Genzano
 

@@ -49,7 +49,7 @@ Il 1996 reggiano è caso scuola di **come la conoscenza scientifica anticipi la 
 
 ## La spinta normativa
 
-Dopo il 1996, e ancor più dopo San Giuliano di Puglia 2002 (vedi [articolo](/comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuola-crollata-zonazione-sismica/)), l'Italia ha sistematicamente **riclassificato il territorio** sismicamente:
+Dopo il 1996, e ancor più dopo San Giuliano di Puglia 2002 (vedi [articolo](/comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure/)), l'Italia ha sistematicamente **riclassificato il territorio** sismicamente:
 
 - **2003**: Ordinanza PCM 3274 introduce la classificazione sismica nazionale aggiornata
 - **2008**: NTC obbligatorie per ogni nuova costruzione
