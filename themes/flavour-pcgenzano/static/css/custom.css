@@ -1320,6 +1320,10 @@ article:not(.card) .galleria img {
 .comunicazioni-archivio .filter-pill[data-filter="volontariato"]     { --pill-color: #b45309; --pill-tint: #fef3e2; }
 .comunicazioni-archivio .filter-pill[data-filter="attività"]         { --pill-color: #0891b2; --pill-tint: #def5f9; }
 
+/* Filtri "Anno" — palette grigio-blu istituzionale, distinta dalle categorie */
+.comunicazioni-archivio .filter-pill-anno                            { --pill-color: #475569; --pill-tint: #e2e8f0; }
+.comunicazioni-archivio .filter-pills-anno                           { margin-top: 0.5rem; }
+
 .comunicazioni-archivio .filter-count {
   display: inline-block;
   margin-left: 0.4rem;

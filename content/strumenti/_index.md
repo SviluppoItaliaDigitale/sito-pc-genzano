@@ -23,9 +23,48 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 - **Apri widget sul sito** — lo strumento si apre direttamente sul nostro sito
 - **Apri sito ufficiale** — lo strumento si apre sul sito del fornitore in una nuova scheda
 
-## Meteo, radar e fulmini
+<style>
+.strumenti-filtri{position:sticky;top:0;z-index:50;background:#fff;border-radius:12px;padding:1rem 1.2rem;margin:1.5rem 0 2rem 0;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid #dee2e6}
+.strumenti-filtri-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.strumenti-cerca{flex:1 1 280px;min-width:200px;padding:.55rem .9rem;font-size:1rem;border:1.5px solid #ced4da;border-radius:8px}
+.strumenti-cerca:focus{outline:2px solid #ffbe2e;outline-offset:1px;border-color:#003366}
+.strumenti-pill{background:#fff;border:1.5px solid #003366;color:#003366;border-radius:22px;padding:.4rem .9rem;font-size:.9rem;font-weight:600;cursor:pointer;min-height:40px;transition:all .15s}
+.strumenti-pill:hover,.strumenti-pill:focus{background:#e7f1ff;outline:2px solid #ffbe2e;outline-offset:1px}
+.strumenti-pill.attivo{background:#003366;color:#fff}
+.strumenti-counter{font-size:.85rem;color:#6c757d;margin-left:auto;padding-left:.6rem}
+.strumenti-counter strong{color:#003366}
+.strumenti-no-results{display:none;padding:1.5rem;text-align:center;background:#fff3cd;border:2px solid #d4a72c;border-radius:10px;color:#664d03;margin:1rem 0}
+.strumenti-hidden{display:none!important}
+@media print{.strumenti-filtri,.strumenti-no-results{display:none!important}.strumenti-hidden{display:block!important}}
+</style>
 
-<div class="row g-4 mb-5">
+<div class="strumenti-filtri" role="region" aria-label="Filtri ricerca strumenti">
+  <div class="strumenti-filtri-row">
+    <label class="visually-hidden" for="strumenti-cerca">Cerca tra gli strumenti</label>
+    <input id="strumenti-cerca" type="search" class="strumenti-cerca" placeholder="Cerca: Windy, INGV, EFFIS, radar, terremoti..." autocomplete="off" aria-label="Cerca tra gli strumenti">
+  </div>
+  <div class="strumenti-filtri-row mt-2">
+    <button type="button" class="strumenti-pill attivo" data-categoria="" aria-pressed="true">Tutti</button>
+    <button type="button" class="strumenti-pill" data-categoria="meteo" aria-pressed="false">🌦️ Meteo</button>
+    <button type="button" class="strumenti-pill" data-categoria="sismico" aria-pressed="false">🌐 Sismico</button>
+    <button type="button" class="strumenti-pill" data-categoria="idrogeologico" aria-pressed="false">💧 Idrogeologico</button>
+    <button type="button" class="strumenti-pill" data-categoria="incendi" aria-pressed="false">🔥 Incendi</button>
+    <button type="button" class="strumenti-pill" data-categoria="aria" aria-pressed="false">🌬️ Aria</button>
+    <button type="button" class="strumenti-pill" data-categoria="viabilita" aria-pressed="false">🚗 Viabilità</button>
+    <button type="button" class="strumenti-pill" data-categoria="emergenze" aria-pressed="false">🚨 Emergenze</button>
+    <button type="button" class="strumenti-pill" data-categoria="webcam" aria-pressed="false">📷 Webcam</button>
+    <button type="button" class="strumenti-pill" data-categoria="educazione" aria-pressed="false">📚 Educazione</button>
+    <span class="strumenti-counter" id="strumenti-counter" aria-live="polite"></span>
+  </div>
+</div>
+
+<div id="strumenti-no-results" class="strumenti-no-results" role="status">
+  <p class="mb-0"><strong>Nessuno strumento trovato.</strong> Prova a cambiare il filtro o il termine cercato.</p>
+</div>
+
+<h2 data-categoria="meteo">Meteo, radar e fulmini</h2>
+
+<div class="row g-4 mb-5" data-categoria="meteo">
 
 {{< tool-card
     nome="Mappa meteo interattiva"
@@ -74,9 +113,9 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 </div>
 
-## Sismico
+<h2 data-categoria="sismico">Sismico</h2>
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-5" data-categoria="sismico">
 
 {{< tool-card
     nome="Terremoti recenti in Italia"
@@ -89,9 +128,9 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 </div>
 
-## Rischio idrogeologico
+<h2 data-categoria="idrogeologico">Rischio idrogeologico</h2>
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-5" data-categoria="idrogeologico">
 
 {{< tool-card
     nome="IdroGEO — Rischio frane e alluvioni"
@@ -104,9 +143,9 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 </div>
 
-## Incendi boschivi
+<h2 data-categoria="incendi">Incendi boschivi</h2>
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-5" data-categoria="incendi">
 
 {{< tool-card
     nome="EFFIS — Situazione incendi in Europa"
@@ -119,9 +158,9 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 </div>
 
-## Qualità dell'aria e ambiente
+<h2 data-categoria="aria">Qualità dell'aria e ambiente</h2>
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-5" data-categoria="aria">
 
 {{< tool-card
     nome="Qualità dell'aria in provincia di Roma"
@@ -134,9 +173,9 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 </div>
 
-## Viabilità
+<h2 data-categoria="viabilita">Viabilità</h2>
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-5" data-categoria="viabilita">
 
 {{< tool-card
     nome="Viabilità in tempo reale"
@@ -149,9 +188,9 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 </div>
 
-## Emergenze e cartografia operativa
+<h2 data-categoria="emergenze">Emergenze e cartografia operativa</h2>
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-5" data-categoria="emergenze">
 
 {{< tool-card
     nome="AEGIS — Tempo reale Regione Lazio"
@@ -173,9 +212,9 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 </div>
 
-## Webcam del territorio
+<h2 data-categoria="webcam">Webcam del territorio</h2>
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-5" data-categoria="webcam">
 
 {{< tool-card
     nome="Webcam nei dintorni di Genzano"
@@ -188,9 +227,9 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 </div>
 
-## Educazione e simulazione
+<h2 data-categoria="educazione">Educazione e simulazione</h2>
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-5" data-categoria="educazione">
 
 {{< tool-card
     nome="Stop Disasters! — Simulatore ONU"
@@ -213,3 +252,81 @@ Per completezza, ricordiamo le **fonti di riferimento istituzionali** per Genzan
 - [IT-alert](https://www.it-alert.it/) — sistema nazionale di allarme pubblico
 
 Per emergenze in corso comporre sempre il **[112](tel:112)** — Numero Unico Europeo.
+
+<script>
+(function(){
+  var input = document.getElementById('strumenti-cerca');
+  var pills = document.querySelectorAll('.strumenti-pill');
+  var counter = document.getElementById('strumenti-counter');
+  var noRes = document.getElementById('strumenti-no-results');
+  var rows = document.querySelectorAll('.row.g-4[data-categoria]');
+  var h2s = document.querySelectorAll('h2[data-categoria]');
+  var stato = {cat:'', q:''};
+
+  // Conta totale strumenti
+  var totale = 0;
+  rows.forEach(function(r){ totale += r.querySelectorAll('.tool-card').length; });
+
+  function filtra(){
+    var q = stato.q.trim().toLowerCase();
+    var cat = stato.cat;
+    var visibili = 0;
+
+    rows.forEach(function(row){
+      var rowCat = row.getAttribute('data-categoria');
+      var rowVisibili = 0;
+      row.querySelectorAll('.tool-card').forEach(function(card){
+        var col = card.closest('.col-md-6, .col-lg-4');
+        if (!col) col = card.parentElement;
+        var okCat = !cat || rowCat === cat;
+        var okQ = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+        var ok = okCat && okQ;
+        col.classList.toggle('strumenti-hidden', !ok);
+        if (ok) rowVisibili++;
+      });
+      row.classList.toggle('strumenti-hidden', rowVisibili === 0);
+      visibili += rowVisibili;
+    });
+
+    // Nascondi h2 se la sua row è nascosta
+    h2s.forEach(function(h){
+      var hCat = h.getAttribute('data-categoria');
+      // Trova la prossima row.row con stessa categoria
+      var sib = h.nextElementSibling;
+      while (sib && !(sib.classList && sib.classList.contains('row') && sib.getAttribute('data-categoria') === hCat)) {
+        sib = sib.nextElementSibling;
+      }
+      var hide = (cat && hCat !== cat) || (sib && sib.classList.contains('strumenti-hidden'));
+      h.classList.toggle('strumenti-hidden', hide);
+    });
+
+    counter.innerHTML = '<strong>' + visibili + '</strong> di ' + totale + ' strumenti';
+    noRes.style.display = visibili === 0 ? 'block' : 'none';
+  }
+
+  pills.forEach(function(p){
+    p.addEventListener('click', function(){
+      pills.forEach(function(x){x.classList.remove('attivo'); x.setAttribute('aria-pressed','false');});
+      p.classList.add('attivo');
+      p.setAttribute('aria-pressed','true');
+      stato.cat = p.getAttribute('data-categoria');
+      filtra();
+    });
+  });
+
+  var t;
+  if (input) input.addEventListener('input', function(){
+    clearTimeout(t);
+    t = setTimeout(function(){ stato.q = input.value; filtra(); }, 150);
+  });
+
+  // Hash deep-link: #cat=meteo
+  var m = (location.hash||'').match(/cat=([a-z]+)/);
+  if (m) {
+    var pt = document.querySelector('.strumenti-pill[data-categoria="'+m[1]+'"]');
+    if (pt) pt.click();
+  } else {
+    filtra();
+  }
+})();
+</script>
