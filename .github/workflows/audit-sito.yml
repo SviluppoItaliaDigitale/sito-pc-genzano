@@ -298,8 +298,13 @@ jobs:
             fm=$(awk '/^---$/{c++; next} c==1' "$art")
             if echo "$fm" | grep -qE '^allegati:'; then
               # Se c'è almeno una voce allegati con "titolo:" ma senza "dimensione:"
-              TITOLI=$(echo "$fm" | grep -cE '^[[:space:]]*-[[:space:]]*titolo:' || echo 0)
-              DIM=$(echo "$fm" | grep -cE '^[[:space:]]*dimensione:' || echo 0)
+              # NB: `grep -c` esce con code 1 quando il count è 0 e stampa già "0".
+              # Il vecchio `|| echo 0` aggiungeva un secondo "0" creando una stringa
+              # multiriga e rompendo i confronti `-gt`/`-lt` con "integer expression expected".
+              TITOLI=$(echo "$fm" | grep -cE '^[[:space:]]*-[[:space:]]*titolo:' || true)
+              DIM=$(echo "$fm" | grep -cE '^[[:space:]]*dimensione:' || true)
+              TITOLI=${TITOLI:-0}
+              DIM=${DIM:-0}
               if [ "$TITOLI" -gt 0 ] && [ "$DIM" -lt "$TITOLI" ]; then
                 MISSING_SIZE="$MISSING_SIZE\n- \`$art\`: $TITOLI allegati ma solo $DIM con \`dimensione:\`"
               fi
