@@ -642,7 +642,9 @@
       else if (score >= Math.ceil(maxScore / 2)) msg = 'Bravo. Qualche risposta si può migliorare: rigioca e prova un altro scenario.';
       else msg = 'Hai fatto pratica: non scoraggiarti. Rileggi i consigli e prova di nuovo.';
       endMsg.textContent = msg;
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('chiamata-112', score, maxScore, '#end-screen .end-box');
+      // Form attestato gestito da /giochi/assets/js/attestato-inclusivo.js
+      // (box verde "Hai partecipato!" senza soglia di punteggio).
+      if (window.GiochiPC) window.GiochiPC.salvaRisultato('chiamata-112', score, maxScore);
     }
 
     anotherBtn.addEventListener('click', function () {

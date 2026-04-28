@@ -716,7 +716,9 @@
       endScore.textContent = current.cartelli.length;
       endMax.textContent = current.cartelli.length;
       endMsg.textContent = 'Tutti i cartelli sono al posto giusto!';
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('posiziona-cartelli', current.cartelli.length, current.cartelli.length, '#end-screen .end-box');
+      // Form attestato gestito da /giochi/assets/js/attestato-inclusivo.js
+      // (box verde "Hai partecipato!" senza soglia di punteggio).
+      if (window.GiochiPC) window.GiochiPC.salvaRisultato('posiziona-cartelli', current.cartelli.length, current.cartelli.length);
     }
 
     function updateHud() {

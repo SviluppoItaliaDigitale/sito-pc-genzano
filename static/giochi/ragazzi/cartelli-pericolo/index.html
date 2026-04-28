@@ -463,7 +463,9 @@
       else if (pct >= 0.5) msg = 'Bene. Rigioca per memorizzare i simboli più difficili.';
       else msg = 'Occhio: questi simboli salvano vite. Riprova per fissarli.';
       endMsg.textContent = msg;
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('cartelli-pericolo', score, questions.length, '#end-screen .end-box');
+      // Form attestato gestito da /giochi/assets/js/attestato-inclusivo.js
+      // (box verde "Hai partecipato!" senza soglia di punteggio).
+      if (window.GiochiPC) window.GiochiPC.salvaRisultato('cartelli-pericolo', score, questions.length);
     }
 
     anotherBtn.addEventListener('click', function () {

@@ -599,9 +599,9 @@
       var punti = 0, max = SCENARI.length * 10;
       for (var i = 0; i < SCENARI.length; i++) punti += 10;
       punti = Math.max(0, punti - erroriTotali);
-      if (window.GiochiUtil) {
-        window.GiochiUtil.salvaEMostraAttestato('labirinto-evacuazione', punti, max, '#end');
-      }
+      // Form attestato gestito da /giochi/assets/js/attestato-inclusivo.js
+      // (box verde "Hai partecipato!" senza soglia di punteggio).
+      if (window.GiochiPC) window.GiochiPC.salvaRisultato('labirinto-evacuazione', punti, max);
     }
 
     function mostraMessaggio(testo, tipo){
