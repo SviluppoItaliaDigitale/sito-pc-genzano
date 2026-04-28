@@ -16,7 +16,7 @@
      - twitter:card=summary_large_image per immagine grande
 */}}
 {{- $title := .Title -}}
-{{- $desc := with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end -}}
+{{- $desc := default .Site.Params.description .Description -}}
 {{- $imgPath := .Params.image | default "images/og-default.png" -}}
 {{- $imgPath = strings.TrimPrefix "/" $imgPath -}}
 {{- $imgURL := $imgPath | absURL -}}
