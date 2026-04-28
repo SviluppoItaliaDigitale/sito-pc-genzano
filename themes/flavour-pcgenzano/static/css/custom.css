@@ -615,74 +615,114 @@ article:not(.card) .galleria img {
   padding: 0.3rem 1rem;
 }
 
-/* ── SHARE BUTTONS v1.0 ──
+/* ── SHARE BUTTONS v1.1 ──
    Bottoni di condivisione social in fondo a ogni articolo/pagina.
    Solo link "share intent" HTML standard + Web Share API + Clipboard API.
-   Nessun JS di terze parti, nessun tracker. Conforme AGID + GDPR. */
+   Nessun JS di terze parti, nessun tracker. Conforme AGID + GDPR.
+
+   v1.1 (2026-04-28): bottoni 44x44px (WCAG 2.5.5 target di tocco AAA),
+   gap 0.85rem fra le icone per evitare tocchi accidentali su mobile,
+   ombra morbida + sfondo grigio chiaro a riposo, transizione cubic
+   per un feel più curato. */
 .page-tools-share {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.85rem;
+  padding: 0.6rem 0;
 }
 .page-tools-share-label {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #495057;
   margin-right: 0.4rem;
+  display: inline-flex;
+  align-items: center;
 }
 .share-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 2px solid #d4d8dc;
-  background: #fff;
+  border: 1px solid #dee2e6;
+  background: #f8f9fa;
   color: #495057;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0;
+  line-height: 1;
 }
 .share-btn:hover, .share-btn:focus {
   text-decoration: none;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: var(--pc-primary, #003366);
   color: #fff;
   background: var(--pc-primary, #003366);
+  box-shadow: 0 6px 14px rgba(0, 51, 102, 0.22);
+}
+.share-btn:active {
+  transform: translateY(-1px) scale(0.96);
+  box-shadow: 0 2px 6px rgba(0, 51, 102, 0.15);
 }
 .share-btn:focus-visible {
   outline: 3px solid #ffbe2e;
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 /* Colori brand al hover (non al normale, per sobrietà PA) */
-.share-btn.share-whatsapp:hover, .share-btn.share-whatsapp:focus { background: #25d366; border-color: #25d366; }
-.share-btn.share-telegram:hover, .share-btn.share-telegram:focus { background: #229ed9; border-color: #229ed9; }
-.share-btn.share-facebook:hover, .share-btn.share-facebook:focus { background: #1877f2; border-color: #1877f2; }
-.share-btn.share-x:hover, .share-btn.share-x:focus { background: #000; border-color: #000; }
-.share-btn.share-linkedin:hover, .share-btn.share-linkedin:focus { background: #0a66c2; border-color: #0a66c2; }
+.share-btn.share-whatsapp:hover, .share-btn.share-whatsapp:focus {
+  background: #25d366; border-color: #25d366;
+  box-shadow: 0 6px 14px rgba(37, 211, 102, 0.32);
+}
+.share-btn.share-telegram:hover, .share-btn.share-telegram:focus {
+  background: #229ed9; border-color: #229ed9;
+  box-shadow: 0 6px 14px rgba(34, 158, 217, 0.32);
+}
+.share-btn.share-facebook:hover, .share-btn.share-facebook:focus {
+  background: #1877f2; border-color: #1877f2;
+  box-shadow: 0 6px 14px rgba(24, 119, 242, 0.32);
+}
+.share-btn.share-x:hover, .share-btn.share-x:focus {
+  background: #000; border-color: #000;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.32);
+}
+.share-btn.share-linkedin:hover, .share-btn.share-linkedin:focus {
+  background: #0a66c2; border-color: #0a66c2;
+  box-shadow: 0 6px 14px rgba(10, 102, 194, 0.32);
+}
+.share-btn.share-email:hover, .share-btn.share-email:focus {
+  background: #b45309; border-color: #b45309;
+  box-shadow: 0 6px 14px rgba(180, 83, 9, 0.32);
+}
 .share-btn.share-copy.copied {
   background: #15803d;
   border-color: #15803d;
   color: #fff;
+  box-shadow: 0 4px 12px rgba(21, 128, 61, 0.32);
 }
-/* Mobile: bottoni più stretti */
+/* Mobile: target ancora 44px (mai più piccoli), gap leggermente maggiore
+   per dita più grandi e per evitare tocchi accidentali */
 @media (max-width: 575.98px) {
-  .share-btn { width: 36px; height: 36px; font-size: 1rem; }
-  .page-tools-share { gap: 0.4rem; }
-  .page-tools-share-label { width: 100%; margin-bottom: 0.3rem; }
+  .share-btn { width: 44px; height: 44px; font-size: 1.25rem; }
+  .page-tools-share { gap: 1rem; padding: 0.8rem 0; }
+  .page-tools-share-label { width: 100%; margin-bottom: 0.2rem; }
 }
-/* Stampa: nascondi tutta la riga share (già coperta da @media print globale, ma esplicito) */
+/* Stampa: nascondi tutta la riga share */
 @media print {
   .page-tools-share { display: none !important; }
 }
 /* Accessibilità: rispetta prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
-  .share-btn { transition: none; }
-  .share-btn:hover { transform: none; }
+  .share-btn { transition: background 0.15s, border-color 0.15s, color 0.15s; }
+  .share-btn:hover, .share-btn:active { transform: none; }
 }
 
 /* ── BREADCRUMB NAV ── */
