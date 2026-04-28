@@ -136,9 +136,9 @@
       var nome = leggiNome();
       if (!nome) { feedback('Per favore scrivi prima il tuo nome.'); return; }
       if (global.AttestatoPC) {
-        // 100% perché in modalità inclusiva non c'è una soglia: chi partecipa
-        // ottiene l'attestato pieno
-        global.AttestatoPC.genera(nome, idGioco, 100);
+        // tipo "incluso": giochi senza scoring, l'SVG mostra "ha partecipato"
+        // + "Grazie per aver giocato con noi", senza percentuale.
+        global.AttestatoPC.genera(nome, idGioco, 100, 'incluso');
         feedback('Attestato scaricato! Trovi il file nella cartella Download.');
       } else {
         feedback('Non posso creare l’attestato in questo momento.');
@@ -149,7 +149,7 @@
       var nome = leggiNome();
       if (!nome) { feedback('Per favore scrivi prima il tuo nome.'); return; }
       if (global.AttestatoPC) {
-        global.AttestatoPC.stampa(nome, idGioco, 100);
+        global.AttestatoPC.stampa(nome, idGioco, 100, 'incluso');
         feedback('Si apre la finestra di stampa.');
       } else {
         feedback('Non posso aprire la stampa in questo momento.');

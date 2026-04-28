@@ -158,6 +158,11 @@
 
   // Salva risultato + mostra box attestato nel container indicato.
   // Funzione comoda per integrare l'attestato nei giochi esistenti.
+  // Tutti ricevono l'attestato, ma cambia la dicitura:
+  //   >= 80%  -> "Hai completato con successo" (tipo "completato")
+  //   < 80%   -> "Hai partecipato + continua a esercitarti" (tipo "partecipazione")
+  // Estetica unificata con attestato-inclusivo.js: stesso box verde,
+  // stesso pattern bottoni, stesso linguaggio incoraggiante.
   function salvaEMostraAttestato(idGioco, score, max, containerSelOrEl) {
     if (!idGioco || typeof score !== 'number' || typeof max !== 'number' || max <= 0) return;
     if (global.GiochiPC) global.GiochiPC.salvaRisultato(idGioco, score, max);
@@ -170,26 +175,78 @@
       box.className = 'attestato-inject my-3';
       cont.appendChild(box);
     }
-    if (perc < 80) {
-      box.innerHTML = '<p class="text-muted small mb-0"><i class="bi bi-info-circle me-1" aria-hidden="true"></i> Per ottenere l’attestato devi ottenere almeno l’80%.</p>';
-      return;
+
+    var sopraSoglia = perc >= 80;
+    var tipo = sopraSoglia ? 'completato' : 'partecipazione';
+
+    var titoloHTML, sottoHTML;
+    if (sopraSoglia) {
+      titoloHTML = '<span aria-hidden="true" style="font-size:1.6rem;">🏆</span>'
+                 + ' Hai sbloccato il badge!';
+      sottoHTML  = 'Hai ottenuto <strong>' + perc + '%</strong>. Vuoi il tuo attestato di completamento?';
+    } else {
+      titoloHTML = '<span aria-hidden="true" style="font-size:1.6rem;">🏅</span>'
+                 + ' Hai partecipato!';
+      sottoHTML  = 'Hai ottenuto <strong>' + perc + '%</strong>. Continua a esercitarti per arrivare al badge completo. Intanto puoi salvare il tuo <strong>attestato di partecipazione</strong>.';
     }
+
+    box.style.cssText = ''
+      + 'background:#e7f5ec;'
+      + 'border:2px solid #198754;'
+      + 'border-radius:14px;'
+      + 'padding:1.1rem 1.2rem;'
+      + 'margin:1.2rem auto 0 auto;'
+      + 'max-width:560px;'
+      + 'text-align:center;'
+      + 'font-size:1.05rem;'
+      + 'line-height:1.5;';
+
     box.innerHTML = ''
-      + '<div class="alert alert-success border-0 text-start" style="border-radius:12px;max-width:520px;margin:0 auto;">'
-      + '  <p class="mb-2"><strong><i class="bi bi-award-fill me-1" aria-hidden="true"></i> Hai sbloccato il badge!</strong> Vuoi l’attestato?</p>'
-      + '  <label for="nome-att-' + idGioco + '" class="form-label small">Scrivi il tuo nome (max 40 caratteri):</label>'
-      + '  <input type="text" id="nome-att-' + idGioco + '" class="form-control mb-2" maxlength="40" placeholder="Il tuo nome">'
-      + '  <div class="d-flex flex-wrap gap-2 justify-content-center">'
-      + '    <button type="button" class="btn btn-success" data-azione="scarica"><i class="bi bi-download me-1" aria-hidden="true"></i> Scarica</button>'
-      + '    <button type="button" class="btn btn-outline-success" data-azione="stampa"><i class="bi bi-printer me-1" aria-hidden="true"></i> Stampa</button>'
-      + '  </div>'
-      + '</div>';
+      + '<p style="margin:0 0 0.6rem 0;font-size:1.15rem;font-weight:700;color:#0f5132;">'
+      +   titoloHTML
+      + '</p>'
+      + '<p style="margin:0 0 0.8rem 0;color:#1f5235;">' + sottoHTML + '</p>'
+      + '<label for="nome-att-' + idGioco + '" class="form-label" style="font-weight:600;">Il tuo nome</label>'
+      + '<input id="nome-att-' + idGioco + '" type="text" maxlength="40" autocomplete="name" '
+      + '       placeholder="Scrivi qui il tuo nome" '
+      + '       style="width:100%;max-width:360px;padding:0.6rem 0.8rem;font-size:1.1rem;'
+      + '              border:2px solid #198754;border-radius:8px;margin-bottom:0.8rem;">'
+      + '<div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;">'
+      + '  <button type="button" data-azione="scarica" '
+      + '          style="background:#198754;color:#fff;border:0;border-radius:8px;'
+      + '                 padding:0.7rem 1.4rem;font-size:1.05rem;font-weight:600;cursor:pointer;'
+      + '                 min-height:48px;min-width:140px;">'
+      + '    <span aria-hidden="true">⬇</span> Scarica'
+      + '  </button>'
+      + '  <button type="button" data-azione="stampa" '
+      + '          style="background:#fff;color:#198754;border:2px solid #198754;border-radius:8px;'
+      + '                 padding:0.7rem 1.4rem;font-size:1.05rem;font-weight:600;cursor:pointer;'
+      + '                 min-height:48px;min-width:140px;">'
+      + '    <span aria-hidden="true">🖨</span> Stampa'
+      + '  </button>'
+      + '</div>'
+      + '<p data-msg style="margin:0.6rem 0 0 0;font-size:0.9rem;color:#0f5132;" '
+      + '   role="status" aria-live="polite"></p>';
+
     var inp = box.querySelector('input');
+    var msg = box.querySelector('[data-msg]');
+    function feedback(t) { if (msg) msg.textContent = t; }
+
     box.querySelector('[data-azione="scarica"]').addEventListener('click', function () {
-      if (global.AttestatoPC) global.AttestatoPC.genera(inp.value, idGioco, perc);
+      var nome = (inp.value || '').trim();
+      if (!nome) { feedback('Per favore scrivi prima il tuo nome.'); return; }
+      if (global.AttestatoPC) {
+        global.AttestatoPC.genera(nome, idGioco, perc, tipo);
+        feedback('Attestato scaricato! Trovi il file nella cartella Download.');
+      }
     });
     box.querySelector('[data-azione="stampa"]').addEventListener('click', function () {
-      if (global.AttestatoPC) global.AttestatoPC.stampa(inp.value, idGioco, perc);
+      var nome = (inp.value || '').trim();
+      if (!nome) { feedback('Per favore scrivi prima il tuo nome.'); return; }
+      if (global.AttestatoPC) {
+        global.AttestatoPC.stampa(nome, idGioco, perc, tipo);
+        feedback('Si apre la finestra di stampa.');
+      }
     });
   }
 
