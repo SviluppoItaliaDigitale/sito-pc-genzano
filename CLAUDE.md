@@ -255,6 +255,19 @@ Il modal include nota informativa azzurra (`.sos-modal-alt`) che spiega l'altern
 
 **Importante**: l'Organization è marcata come `["Organization", "NGO"]`, **NON** `GovernmentOrganization` né `EmergencyService`. Il Gruppo è associazione di volontariato OdV, non ente pubblico né servizio di emergenza chiamabile direttamente — usare quei tipi indurrebbe Google/assistenti vocali a presentare il Gruppo come servizio chiamabile, contraddicendo la regola "in emergenza chiama il 112". Schema attivi: Organization+NGO, ContactPoint dedicato, WebSite (con SearchAction), BreadcrumbList, Article (per `/comunicazioni/`), Event (aggiuntivo per `badge: Evento` con location Place + organizer), FAQPage (per `/faq/`), WebPage (default), Question/Answer, ImageObject, PostalAddress, GeoCoordinates, City. Quando si aggiungono schema nuovi, prudenza su tipi che inducano confusione tra associazione di volontariato e ente pubblico/servizio di emergenza.
 
+### Anteprime link condivisi — Open Graph + Twitter Card (`partials/meta-social.html`)
+
+Tutti i meta tag che controllano l'**anteprima** dei link quando vengono condivisi su WhatsApp, Telegram, Facebook, X, LinkedIn, Slack, ecc. sono in `partials/meta-social.html` (chiamato da `baseof.html`). Include:
+
+- **Open Graph base**: `og:title`, `og:description`, `og:type` (`article` per `.IsPage`, `website` per liste e pagine), `og:url`, `og:locale=it_IT`, `og:site_name`.
+- **Open Graph image avanzato**: `og:image`, `og:image:secure_url`, `og:image:type` (calcolato da estensione: `.webp`/`.png`/`.svg`/`.gif`/default `.jpg`), `og:image:width=1200`, `og:image:height=630`, `og:image:alt` (da `image_alt` o titolo).
+- **Article-specific** (solo `.IsPage`): `article:published_time` (ISO 8601), `article:modified_time`, `article:author`, `article:section` (dal badge), `article:tag` (range sui tags).
+- **Twitter Card**: `twitter:card=summary_large_image`, `twitter:title`, `twitter:description`, `twitter:image`, `twitter:image:alt`. Opzionale `twitter:site` se in `[params] twitterSite = "@..."` di `hugo.toml`.
+
+Default per pagine senza copertina: `static/images/og-default.png` 1200×630 nel tema.
+
+Le anteprime usano questi tag — non i `<meta name="description">` standard. Se modifichi la copertina di un articolo, l'anteprima social si aggiorna **solo dopo che la piattaforma ricontrolla** (cache lato Facebook/X può durare ore o giorni). Per forzare il refresh: [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) e [Twitter Card Validator](https://cards-dev.twitter.com/validator).
+
 ### Strumenti di Accessibilità (toolbar utente)
 
 Bottone rotondo blu (FAB) in basso a sinistra su ogni pagina, apre un dialog modale con preferenze di lettura (dimensione testo, contrasto, scala di grigi, spaziatura, carattere ad alta leggibilità, evidenzia link, cursore grande, ecc.). Persistenza in `localStorage`. Inline early script in `<head>` per evitare il flash visivo al caricamento.
