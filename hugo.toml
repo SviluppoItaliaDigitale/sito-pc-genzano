@@ -47,8 +47,14 @@ enableGitInfo = true
   coordinamento = "FEPIVOL"
 
 # Menu principale di navigazione (mega-menu accorpato)
-# 6 voci di primo livello: 3 dirette (Home, Comunicazioni, Contatti) e 3
-# dropdown (Per il Cittadino, Formazione, Volontariato).
+# 7 voci di primo livello: 3 dirette (Home, Comunicazioni, Contatti) e 4
+# dropdown (Per il Cittadino, Educazione e Inclusione, Volontariato, Risorse).
+# Razionale del riordino di aprile 2026: dopo audit di usabilità, le pagine
+# di accessibilità inclusiva (Abili a Proteggere, Facile da Leggere) erano
+# raggiungibili solo in 3+ click — paradosso, visto che servono a chi ha
+# più difficoltà. Spostate sotto "Educazione e Inclusione". Le pagine di
+# servizio (FAQ, Strumenti, Area Download, Normativa) erano solo in homepage
+# o footer: raccolte sotto un nuovo dropdown "Risorse" sempre disponibile.
 [[menus.main]]
   name = "Home"
   url = "/"
@@ -96,35 +102,49 @@ enableGitInfo = true
   parent = "per-il-cittadino"
   weight = 6
 
-# --- Dropdown: Formazione ---
+# --- Dropdown: Educazione e Inclusione ---
+# (era "Formazione" fino ad aprile 2026; rinominata per dare visibilità
+# alle attività accessibili — prima nascoste in fondo a /formazione/)
 [[menus.main]]
-  name = "Formazione"
-  identifier = "formazione"
+  name = "Educazione e Inclusione"
+  identifier = "educazione-inclusione"
   weight = 3
 
 [[menus.main]]
-  name = "Corsi e percorsi scuola"
+  name = "Kit per le scuole"
   url = "/formazione/"
-  parent = "formazione"
+  parent = "educazione-inclusione"
   weight = 1
-
-[[menus.main]]
-  name = "Giochi"
-  url = "/giochi/"
-  parent = "formazione"
-  weight = 2
-
-[[menus.main]]
-  name = "Glossario"
-  url = "/glossario/"
-  parent = "formazione"
-  weight = 3
 
 [[menus.main]]
   name = "Schede Stampabili"
   url = "/formazione/schede-stampabili/"
-  parent = "formazione"
+  parent = "educazione-inclusione"
+  weight = 2
+
+[[menus.main]]
+  name = "Giochi della Sicurezza"
+  url = "/giochi/"
+  parent = "educazione-inclusione"
+  weight = 3
+
+[[menus.main]]
+  name = "Abili a Proteggere"
+  url = "/abili-a-proteggere/"
+  parent = "educazione-inclusione"
   weight = 4
+
+[[menus.main]]
+  name = "Facile da Leggere"
+  url = "/facile-da-leggere/"
+  parent = "educazione-inclusione"
+  weight = 5
+
+[[menus.main]]
+  name = "Glossario"
+  url = "/glossario/"
+  parent = "educazione-inclusione"
+  weight = 6
 
 # --- Dropdown: Volontariato ---
 [[menus.main]]
@@ -144,22 +164,55 @@ enableGitInfo = true
   parent = "volontariato"
   weight = 2
 
+# --- Dropdown: Risorse (nuovo aprile 2026) ---
+# Raccoglie pagine di servizio prima visibili solo dalla homepage o dal
+# footer. Pensate per chi entra dal motore di ricerca o da un articolo
+# specifico e vuole comunque trovare FAQ, strumenti, normativa.
+[[menus.main]]
+  name = "Risorse"
+  identifier = "risorse"
+  weight = 5
+
+[[menus.main]]
+  name = "FAQ"
+  url = "/faq/"
+  parent = "risorse"
+  weight = 1
+
+[[menus.main]]
+  name = "Strumenti in Tempo Reale"
+  url = "/strumenti/"
+  parent = "risorse"
+  weight = 2
+
+[[menus.main]]
+  name = "Area Download"
+  url = "/area-download/"
+  parent = "risorse"
+  weight = 3
+
 [[menus.main]]
   name = "Normativa"
   url = "/normativa/"
-  parent = "volontariato"
-  weight = 3
+  parent = "risorse"
+  weight = 4
+
+[[menus.main]]
+  name = "Mappa del Sito"
+  url = "/mappa-sito/"
+  parent = "risorse"
+  weight = 5
 
 # --- Voci dirette ---
 [[menus.main]]
   name = "Comunicazioni"
   url = "/comunicazioni/"
-  weight = 5
+  weight = 6
 
 [[menus.main]]
   name = "Contatti"
   url = "/contatti/"
-  weight = 6
+  weight = 7
 
 # Menu footer — Link utili
 [[menus.footer]]
