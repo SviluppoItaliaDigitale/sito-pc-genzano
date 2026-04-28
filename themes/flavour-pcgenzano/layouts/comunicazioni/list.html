@@ -1,12 +1,18 @@
 {{ define "main" }}
 {{- $pages := .Pages -}}
 {{- $badges := slice -}}
+{{- $anni := slice -}}
 {{- range $pages -}}
   {{- with .Params.badge -}}
     {{- $badges = $badges | append . -}}
   {{- end -}}
+  {{- if .Date -}}
+    {{- $anni = $anni | append (.Date.Format "2006") -}}
+  {{- end -}}
 {{- end -}}
 {{- $uniqueBadges := $badges | uniq | sort -}}
+{{- $uniqueAnni := $anni | uniq | sort -}}
+{{- $uniqueAnni = collections.Reverse $uniqueAnni -}}
 {{- $grouped := $pages.GroupByDate "2006-01" -}}
 {{- $monthNames := dict
   "01" "Gennaio" "02" "Febbraio" "03" "Marzo" "04" "Aprile"
@@ -40,6 +46,22 @@
           </button>
           {{ end }}
         </div>
+        {{ if gt (len $uniqueAnni) 1 }}
+        <p class="filter-label mb-2 mt-3"><i class="bi bi-calendar3" aria-hidden="true"></i> Filtra per anno:</p>
+        <div class="filter-pills filter-pills-anno d-flex flex-wrap gap-2" role="group" aria-label="Anno">
+          <button type="button" class="filter-pill filter-pill-anno active" data-anno="all" aria-pressed="true">
+            Tutti <span class="filter-count">({{ len $pages }})</span>
+          </button>
+          {{ range $uniqueAnni }}
+          {{- $anno := . -}}
+          {{- $count := 0 -}}
+          {{- range $pages }}{{- if eq (.Date.Format "2006") $anno }}{{ $count = add $count 1 }}{{ end }}{{ end -}}
+          <button type="button" class="filter-pill filter-pill-anno" data-anno="{{ $anno }}" aria-pressed="false">
+            {{ $anno }} <span class="filter-count">({{ $count }})</span>
+          </button>
+          {{ end }}
+        </div>
+        {{ end }}
       </div>
 
       <div id="archivio-articoli">
@@ -56,7 +78,8 @@
           <div class="archivio-lista">
           {{ range .Pages }}
           {{- $badgeLower := .Params.badge | lower -}}
-          <article class="card card-notizia mb-3" data-badge="{{ $badgeLower }}">
+          {{- $annoArt := "" -}}{{ if .Date }}{{ $annoArt = .Date.Format "2006" }}{{ end -}}
+          <article class="card card-notizia mb-3" data-badge="{{ $badgeLower }}" data-anno="{{ $annoArt }}">
             <div class="row g-0">
               <div class="col-12 col-md-4">
                 <div class="notizia-img-wrapper">
@@ -139,15 +162,21 @@
 {{ define "scripts" }}
 <script>
 (function(){
-  const pills = document.querySelectorAll('[data-filter]');
+  const pillsCat = document.querySelectorAll('[data-filter]');
+  const pillsAnno = document.querySelectorAll('[data-anno]');
   const cards = document.querySelectorAll('[data-badge]');
   const monthSections = document.querySelectorAll('.archivio-mese');
   const noResults = document.getElementById('filter-no-results');
 
-  function apply(filter){
+  // Stato filtri combinato (categoria AND anno)
+  const stato = { categoria: 'all', anno: 'all' };
+
+  function apply(){
     let visible = 0;
     cards.forEach(function(c){
-      const match = filter === 'all' || c.dataset.badge === filter;
+      const matchCat = stato.categoria === 'all' || c.dataset.badge === stato.categoria;
+      const matchAnno = stato.anno === 'all' || c.dataset.anno === stato.anno;
+      const match = matchCat && matchAnno;
       c.style.display = match ? '' : 'none';
       if(match) visible++;
     });
@@ -157,19 +186,39 @@
       s.style.display = visibleInSection.length ? '' : 'none';
     });
     noResults.classList.toggle('d-none', visible > 0);
-    // Sync pill state (both top and sidebar)
-    document.querySelectorAll('.filter-pill').forEach(function(p){
-      const active = p.dataset.filter === filter;
+    // Sync pill stato (sia top sia sidebar)
+    document.querySelectorAll('.filter-pill:not(.filter-pill-anno)').forEach(function(p){
+      const active = p.dataset.filter === stato.categoria;
+      p.classList.toggle('active', active);
+      p.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    document.querySelectorAll('.filter-pill-anno').forEach(function(p){
+      const active = p.dataset.anno === stato.anno;
       p.classList.toggle('active', active);
       p.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
   }
 
-  pills.forEach(function(p){
+  pillsCat.forEach(function(p){
     p.addEventListener('click', function(){
-      apply(p.dataset.filter);
+      stato.categoria = p.dataset.filter;
+      apply();
     });
   });
+  pillsAnno.forEach(function(p){
+    p.addEventListener('click', function(){
+      stato.anno = p.dataset.anno;
+      apply();
+    });
+  });
+
+  // Hash deep-link: #cat=allerta o #anno=2026 o entrambi
+  const hash = location.hash || '';
+  const mCat = hash.match(/cat=([a-z]+)/);
+  const mAnno = hash.match(/anno=(\d{4}|all)/);
+  if (mCat) stato.categoria = mCat[1];
+  if (mAnno) stato.anno = mAnno[1];
+  if (mCat || mAnno) apply();
 })();
 </script>
 {{ end }}

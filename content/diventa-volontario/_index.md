@@ -2,6 +2,7 @@
 title: "Diventa Volontario"
 description: "Unisciti al Gruppo Comunale di Protezione Civile di Genzano di Roma: formazione gratuita, percorsi di specializzazione, un ruolo attivo per il tuo territorio."
 layout: "single"
+toc: true
 aliases:
   - /diventavolontario.html
   - /diventavolontario/
