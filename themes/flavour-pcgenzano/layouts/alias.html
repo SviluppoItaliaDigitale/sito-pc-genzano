@@ -2,10 +2,24 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex, nofollow">
+  {{/*
+    Override del template alias di Hugo. Il default Hugo include
+    <meta name="robots" content="noindex"> che, in assenza di redirect
+    server-side, lascia queste URL legacy nell'indice di Google come
+    "Escluse per tag noindex": Google le tiene in coda e ripete la
+    scansione settimanale.
+
+    Eliminando il noindex e mantenendo solo canonical + meta refresh,
+    Google segue il refresh come soft-301 (riconosciuto da Search dal
+    2011) e aggiorna l'indice puntando alla URL nuova in 1-2 cicli.
+
+    Su Aruba c'e' anche la regola Redirect 301 nel .htaccess che vince
+    sul file fisico. Su GitHub Pages, senza .htaccess, e' questo file
+    a gestire la redirezione.
+  */}}
   <link rel="canonical" href="{{ .Permalink }}">
   <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
-  <title>Reindirizzamento</title>
+  <title>Reindirizzamento — {{ .Permalink }}</title>
 </head>
 <body>
   <p>Questa pagina è stata spostata. Se il reindirizzamento non avviene automaticamente, <a href="{{ .Permalink }}">vai alla nuova pagina</a>.</p>
