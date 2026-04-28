@@ -1,6 +1,6 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 2.7
+**Versione:** 2.8
 **Ultimo aggiornamento manuale:** 2026-04-27
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
@@ -14,6 +14,24 @@
 > o nuove versioni di Bootstrap Italia, viene aperta un'Issue sul repository con la checklist
 > dei punti da verificare. Vedi **Parte 7** per dettagli.
 
+> **Changelog 2.8 (2026-04-27)**
+> - **Share buttons in `partials/page-tools.html`**: aggiunta riga di icone per
+>   condivisione social a fondo di ogni articolo e di tutte le pagine che
+>   includono il partial (`_default/single.html`, `rischi-prevenzione/single.html`,
+>   `pittogrammi/single.html`). Piattaforme: **WhatsApp, Telegram, Facebook,
+>   X (Twitter), LinkedIn, Email, Copia link, Condividi nativo** (Web Share API).
+> - Architettura **privacy-first**: solo link "share intent" HTML standard +
+>   Clipboard API + Web Share API native. Nessun JavaScript SDK delle piattaforme,
+>   nessun tracker, **nessun cookie banner aggiuntivo richiesto**. Conforme AGID
+>   + GDPR. Bootstrap Italia ha un'utility share analoga.
+> - Nuovo CSS sezione **SHARE BUTTONS v1.0** in `custom.css` con bottoni rotondi
+>   38px (36px mobile), hover con colore brand di ogni piattaforma, focus visibile
+>   3px giallo PA, override `prefers-reduced-motion` e `@media print`.
+> - Nuovo file `static/js/share.js` (~70 righe) con Copy Link (Clipboard API +
+>   fallback `execCommand`) e Web Share API (auto-nasconde il bottone se non
+>   supportato). Caricato `defer` da `baseof.html`. Specifiche in regola
+>   `04-hugo-architecture.md` sezione "Share buttons".
+>
 > **Changelog 2.7 (2026-04-27)**
 > - Nuova **Parte 14** — *Configurazione ambiente di sviluppo (Claude Code)*: documenta lo
 >   schema di `.claude/settings.local.json` (in `.gitignore`) per sbloccare la sandbox

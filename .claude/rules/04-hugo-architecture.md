@@ -242,6 +242,40 @@ Caratteristiche:
 
 CSS scoped sezione **FAQ ACCORDION v1.0** in `custom.css`. Quando si introduce un nuovo accordion FAQ, riutilizzare questa classe: non servono varianti nuove.
 
+### Share buttons (`partials/page-tools.html` + `js/share.js`)
+
+Riga di icone in fondo a ogni articolo e a tutte le pagine che includono il partial `page-tools.html` (cioè: `_default/single.html`, `rischi-prevenzione/single.html`, `pittogrammi/single.html`). Permette al cittadino di condividere il contenuto su WhatsApp, Telegram, Facebook, X (Twitter), LinkedIn, Email, oppure di copiare il link, oppure di usare la condivisione nativa del sistema operativo (Web Share API).
+
+**Architettura privacy-first:**
+
+- **Solo link "share intent" HTML standard** (`https://wa.me/?text=...`, `https://t.me/share/url?url=...`, ecc.): nessun JavaScript SDK delle piattaforme social. Niente tracker, niente cookie di terze parti. Conforme **AGID** + **GDPR** senza necessità di consent banner aggiuntivo.
+- **Web Share API nativa** (`navigator.share()`) per il bottone "Altre app": apre il selettore di app del sistema operativo. Il bottone si auto-nasconde via JS se l'API non è disponibile (desktop senza supporto).
+- **Clipboard API** (`navigator.clipboard.writeText()`) per "Copia link", con fallback a `document.execCommand('copy')` per vecchi browser. Feedback visivo: classe `.copied` + icona check + aria-label "Link copiato negli appunti" per 2 secondi.
+
+**Bottoni in ordine** (HTML in `page-tools.html`):
+
+1. WhatsApp — `bi-whatsapp` — colore brand al hover (`#25d366`)
+2. Telegram — `bi-telegram` — colore brand al hover (`#229ed9`)
+3. Facebook — `bi-facebook` — colore brand al hover (`#1877f2`)
+4. X (Twitter) — `bi-twitter-x` — nero al hover (`#000`)
+5. LinkedIn — `bi-linkedin` — colore brand al hover (`#0a66c2`)
+6. Email — `bi-envelope` — `mailto:?subject=...&body=...`
+7. Copia link — `bi-link-45deg` — Clipboard API + feedback verde
+8. Condividi nativo — `bi-three-dots` — Web Share API mobile (auto-nascosto su desktop)
+
+**Accessibilità:**
+- Ogni `<a>` o `<button>` ha `aria-label` descrittivo (es. "Condividi su WhatsApp").
+- Testo nascosto per screen reader (`<span class="visually-hidden">WhatsApp</span>`) accanto all'icona — gli screen reader leggono entrambi.
+- `target="_blank" rel="noopener noreferrer"` sui link esterni.
+- Focus visibile con outline `#ffbe2e` (giallo PA) di 3px.
+- `prefers-reduced-motion`: disattiva l'animazione `translateY(-2px)` al hover.
+
+**Stampa:** la riga share è nascosta automaticamente da `@media print` (sia globale sia locale per ridondanza).
+
+**Mobile:** bottoni rimpiccioliti a 36px e label "Condividi:" su riga propria. Il bottone "Condividi nativo" è particolarmente utile su mobile.
+
+CSS scoped sezione **SHARE BUTTONS v1.0** in `custom.css`. JS in `static/js/share.js` (caricato `defer` da `baseof.html`). Quando si modifica la lista delle piattaforme, aggiornare entrambi i blocchi (HTML + CSS hover colors).
+
 ### Striscia pittogrammi (`.kit-pittogrammi-row`)
 
 Riga visiva di pittogrammi inline ARASAAC per dare un colpo d'occhio immediato a una pagina lista (es. `/rischi-prevenzione/kit-emergenza/`). Layout flex centrato, gap responsive, sfondo azzurrino istituzionale.
