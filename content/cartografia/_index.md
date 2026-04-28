@@ -17,6 +17,11 @@ In questa sezione puoi consultare la **mappa interattiva** e le tabelle riassunt
 
 {{< mappa-aree >}}
 
+<div class="alert alert-light border" role="note">
+<p class="mb-1"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Quando il documento e il territorio differiscono</strong></p>
+<p class="mb-0 small">In alcuni punti il testo del Piano di Emergenza Comunale può riportare denominazioni viarie diverse da quelle attualmente in uso, perché aggiornate successivamente alla redazione del documento. Per orientarti in caso di emergenza fai riferimento alla <strong>mappa interattiva</strong> qui sopra, all'<strong>indirizzo</strong> riportato nelle tabelle che seguono e al <strong>cartello installato sul posto</strong>: tutti e tre indicano la posizione reale dell'area sul territorio.</p>
+</div>
+
 ## Aree di Attesa della Popolazione (AA)
 
 Luoghi sicuri all'aperto dove la popolazione deve radunarsi **subito dopo un evento sismico** o in caso di evacuazione. Qui verrai censito e riceverai le prime informazioni.
@@ -50,7 +55,7 @@ Aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata, dove v
 | ID | Denominazione | Indirizzo |
 |---|---|---|
 | AR1 | Palazzetto dello Sport | Area esterna Palazzetto dello Sport, Via G. di Vittorio |
-| AR2 | Campo Sportivo Via Sicilia | Via Sicilia *(il Piano riporta erroneamente "Via Piemonte")* |
+| AR2 | Campo Sportivo Via Sicilia | Via Sicilia *(nel testo del Piano è indicata come "Via Piemonte"; sul territorio l'accesso reale è in Via Sicilia, dove è installata la segnaletica)* |
 | AR3 | Campo Sportivo Via Sardegna | Via Sardegna |
 | AR4 | Campo Sportivo Don Bosco (Salesiani) | Viale Piave angolo Via Lega Latina |
 
