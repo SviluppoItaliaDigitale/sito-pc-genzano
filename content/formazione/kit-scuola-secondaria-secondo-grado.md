@@ -541,7 +541,7 @@ La convenzione tra la scuola e il Gruppo va sottoscritta prima dell'avvio delle 
 
 <div class="alert alert-success" role="note">
 <p class="mb-1"><i class="bi bi-printer-fill me-2" aria-hidden="true"></i><strong>Schede già pronte per la stampa</strong></p>
-<p class="mb-0">Tre schede sono già pronte: apri, premi <kbd>Stampa</kbd> del browser (Ctrl+P o Cmd+P) e ottieni un foglio A4 perfetto con intestazione istituzionale. Pensate per la scuola secondaria di secondo grado.
+<p class="mb-0">Diverse schede sono già pronte: apri, premi <kbd>Stampa</kbd> del browser (Ctrl+P o Cmd+P) e ottieni un foglio A4 perfetto con intestazione istituzionale. Pensate per la scuola secondaria di secondo grado.
 👉 <strong><a href="/formazione/schede-stampabili/">Vai all'elenco delle schede stampabili</a></strong> (in continuo arricchimento).
 Per richieste specifiche: <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
 </div>
