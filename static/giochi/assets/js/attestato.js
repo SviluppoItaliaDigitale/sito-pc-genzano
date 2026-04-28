@@ -25,11 +25,33 @@
   }
 
   // A4 landscape a 72 dpi: 842 x 595 pt
-  function costruisciSVG(nome, idGioco, percentuale) {
+  // tipo: "completato" (>=80%) | "partecipazione" (<80%) | "incluso" (giochi
+  //        accessibili senza scoring: chi partecipa riceve l'attestato pieno)
+  function costruisciSVG(nome, idGioco, percentuale, tipo) {
     var n = sanitizzaNome(nome) || 'Partecipante';
     var gioco = nomeGioco(idGioco);
     var data = dataOggi();
     var perc = Math.max(0, Math.min(100, Math.round(percentuale || 0)));
+    tipo = tipo || 'completato';
+
+    // Testo del corpo: cambia in funzione del tipo. Per partecipazione il
+    // tono e' incentivante ("ha partecipato + continua ad esercitarti"),
+    // mai svalutativo del bambino o del giocatore.
+    var rigaAzione, rigaPercentuale, coloreAccento;
+    if (tipo === 'partecipazione') {
+      rigaAzione = 'ha partecipato al gioco educativo';
+      rigaPercentuale = 'Continua a esercitarti: con un po’ di pratica raggiungerai il punteggio completo.';
+      coloreAccento = '#b45309'; // ambra istituzionale per "in corso d'opera"
+    } else if (tipo === 'incluso') {
+      rigaAzione = 'ha partecipato al gioco educativo';
+      rigaPercentuale = 'Grazie per aver giocato con noi!';
+      coloreAccento = '#008758';
+    } else {
+      rigaAzione = 'ha completato con successo il gioco educativo';
+      rigaPercentuale = 'con il ' + perc + '% di risposte corrette';
+      coloreAccento = '#008758';
+    }
+
     var svg = ''
       + '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 595" width="842" height="595">'
       + '<defs>'
@@ -45,11 +67,11 @@
       // Cornice decorativa
       + '<rect x="22" y="22" width="798" height="551" fill="none" stroke="#003366" stroke-width="3"/>'
       + '<rect x="32" y="32" width="778" height="531" fill="none" stroke="#0066CC" stroke-width="1"/>'
-      // Decorazioni angoli
-      + '<circle cx="60" cy="60" r="6" fill="#008758"/>'
-      + '<circle cx="782" cy="60" r="6" fill="#008758"/>'
-      + '<circle cx="60" cy="535" r="6" fill="#008758"/>'
-      + '<circle cx="782" cy="535" r="6" fill="#008758"/>'
+      // Decorazioni angoli (colore che cambia leggermente in modalita' partecipazione)
+      + '<circle cx="60" cy="60" r="6" fill="' + coloreAccento + '"/>'
+      + '<circle cx="782" cy="60" r="6" fill="' + coloreAccento + '"/>'
+      + '<circle cx="60" cy="535" r="6" fill="' + coloreAccento + '"/>'
+      + '<circle cx="782" cy="535" r="6" fill="' + coloreAccento + '"/>'
       // Fascia titolo
       + '<rect x="32" y="70" width="778" height="70" fill="url(#fascia)"/>'
       + '<text x="421" y="115" text-anchor="middle" font-family="Titillium Web, Arial, sans-serif" font-size="32" font-weight="700" fill="#fff">ATTESTATO DI PARTECIPAZIONE</text>'
@@ -62,13 +84,17 @@
       + escapeXml(n)
       + '</text>'
       + '<line x1="240" y1="310" x2="602" y2="310" stroke="#003366" stroke-width="1"/>'
-      // Ha completato
-      + '<text x="421" y="355" text-anchor="middle" font-family="Titillium Web, Arial, sans-serif" font-size="16" fill="#17324D">ha completato con successo il gioco educativo</text>'
+      // Riga azione (cambia in funzione del tipo)
+      + '<text x="421" y="355" text-anchor="middle" font-family="Titillium Web, Arial, sans-serif" font-size="16" fill="#17324D">'
+      + escapeXml(rigaAzione)
+      + '</text>'
       + '<text x="421" y="395" text-anchor="middle" font-family="Titillium Web, Arial, sans-serif" font-size="24" font-weight="700" fill="#003366">'
       + escapeXml(gioco)
       + '</text>'
-      // Percentuale
-      + '<text x="421" y="440" text-anchor="middle" font-family="Titillium Web, Arial, sans-serif" font-size="18" fill="#008758" font-weight="700">con il ' + perc + '% di risposte corrette</text>'
+      // Riga percentuale o messaggio incentivante
+      + '<text x="421" y="440" text-anchor="middle" font-family="Titillium Web, Arial, sans-serif" font-size="' + (tipo === 'partecipazione' ? '15' : '18') + '" fill="' + coloreAccento + '" font-weight="' + (tipo === 'partecipazione' ? '600' : '700') + '">'
+      + escapeXml(rigaPercentuale)
+      + '</text>'
       // Data
       + '<text x="80" y="520" font-family="Titillium Web, Arial, sans-serif" font-size="13" fill="#17324D">Rilasciato il ' + escapeXml(data) + '</text>'
       + '<text x="762" y="520" text-anchor="end" font-family="Titillium Web, Arial, sans-serif" font-size="13" fill="#17324D" font-style="italic">Gruppo Comunale Volontari PC Genzano</text>'
@@ -86,8 +112,8 @@
     });
   }
 
-  function generaAttestato(nome, idGioco, percentuale) {
-    var svg = costruisciSVG(nome, idGioco, percentuale);
+  function generaAttestato(nome, idGioco, percentuale, tipo) {
+    var svg = costruisciSVG(nome, idGioco, percentuale, tipo);
     try {
       var blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
       var url = URL.createObjectURL(blob);
@@ -106,12 +132,12 @@
     }
   }
 
-  function anteprimaAttestato(nome, idGioco, percentuale) {
-    return costruisciSVG(nome, idGioco, percentuale);
+  function anteprimaAttestato(nome, idGioco, percentuale, tipo) {
+    return costruisciSVG(nome, idGioco, percentuale, tipo);
   }
 
-  function stampaAttestato(nome, idGioco, percentuale) {
-    var svg = costruisciSVG(nome, idGioco, percentuale);
+  function stampaAttestato(nome, idGioco, percentuale, tipo) {
+    var svg = costruisciSVG(nome, idGioco, percentuale, tipo);
     var w = window.open('', '_blank');
     if (!w) return false;
     w.document.write('<!doctype html><html lang="it"><head><meta charset="utf-8"><title>Attestato</title>'
