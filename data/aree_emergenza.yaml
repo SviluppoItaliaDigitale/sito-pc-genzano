@@ -4,9 +4,10 @@
 # Volontari di Protezione Civile (aprile 2026). Tutti i 16 punti sono
 # contrassegnati come verified: true.
 #
-# NOTA: AR2 — il documento ufficiale del Piano riporta "Via Piemonte"
-# ma è un errore di redazione del Piano stesso: l'area è in Via Sicilia.
-# Il sito riporta la denominazione corretta verificata sul campo.
+# NOTA: AR2 — nel testo del Piano l'area è indicata come "Via Piemonte",
+# mentre l'accesso reale sul territorio è in Via Sicilia (dove è
+# installata la segnaletica del Comune). Il sito riporta l'indirizzo
+# verificato sul campo, allineato alla mappa interattiva e ai cartelli.
 #
 # Tipi di area:
 #   AA = Area di Attesa della popolazione (10 punti)
@@ -113,7 +114,7 @@ aree:
   - id: AR2
     tipo: AR
     nome: "Campo Sportivo Via Sicilia"
-    indirizzo: "Via Sicilia (il Piano riporta erroneamente Via Piemonte)"
+    indirizzo: "Via Sicilia (nel testo del Piano è indicata come Via Piemonte; sul territorio l'accesso reale è in Via Sicilia, dove è installata la segnaletica)"
     lat: 41.701023
     lon: 12.694646
     verified: true
