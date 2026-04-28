@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Turchia-Siria, 6 febbraio 2023: il più grande dispiegamento internazionale italiano dopo Haiti"
 scadenza: ""
 area: ""
 allegati: []

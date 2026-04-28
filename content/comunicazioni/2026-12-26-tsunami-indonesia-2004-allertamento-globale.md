@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-26-tsunami-indonesia-2004-allertamento-globale.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Tsunami dell'Oceano Indiano, 26 dicembre 2004: la più grande operazione di soccorso internazionale"
 scadenza: ""
 area: ""
 allegati: []

@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Amatrice, 24 agosto 2016: dieci anni dalla notte del Centro Italia"
 scadenza: ""
 area: ""
 allegati: []

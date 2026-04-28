@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-26-pollino-2010-2014-sequenza-sismica-monitoraggio.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Pollino 2010-2014: la sequenza sismica che ha cambiato il monitoraggio italiano"
 scadenza: ""
 area: ""
 allegati: []

@@ -21,6 +21,9 @@ enableGitInfo = true
   productionBaseURL = "https://www.protezionecivilegenzano.it/"
   description = "Sito ufficiale del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
   author = "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+  # Handle X (Twitter) del Gruppo, usato come twitter:site nelle Twitter Card
+  # delle anteprime quando un articolo viene condiviso su X.
+  twitterSite = "@alfagenzano"
   cf = "92011880588"
   sede = "Via Sicilia, 13-15 - 00045 Genzano di Roma (RM)"
   telefono = "+39 06 9362600"

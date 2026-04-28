@@ -6,7 +6,7 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-01-giornata-mondiale-protezione-civile.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: 1° marzo, Giornata Mondiale della Protezione Civile"
 scadenza: ""
 area: ""
 allegati: []

@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Reggio Emilia, 15 ottobre 1996: il terremoto che ha riportato la Pianura Padana sulla mappa sismica"
 scadenza: ""
 area: ""
 allegati: []

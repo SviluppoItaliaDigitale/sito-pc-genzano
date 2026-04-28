@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-21-ischia-2017-terremoto-isolano.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Ischia, 21 agosto 2017: il terremoto su un'isola, le case di tufo e la lezione del Casamicciola"
 scadenza: ""
 area: ""
 allegati: []

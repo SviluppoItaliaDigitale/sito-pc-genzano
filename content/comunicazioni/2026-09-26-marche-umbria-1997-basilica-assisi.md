@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-26-marche-umbria-1997-basilica-assisi.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Marche-Umbria, 26 settembre 1997: il terremoto che fece crollare la volta della Basilica di Assisi"
 scadenza: ""
 area: ""
 allegati: []

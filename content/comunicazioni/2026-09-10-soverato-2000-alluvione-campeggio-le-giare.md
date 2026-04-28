@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-10-soverato-2000-alluvione-campeggio-le-giare.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Soverato, 10 settembre 2000: l'alluvione del campeggio Le Giare"
 scadenza: ""
 area: ""
 allegati: []

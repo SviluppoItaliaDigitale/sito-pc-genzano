@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-12-haiti-2010-cooperazione-internazionale-emergenza.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Haiti, 12 gennaio 2010: la più grande operazione internazionale di cui pochi parlano ancora"
 scadenza: ""
 area: ""
 allegati: []

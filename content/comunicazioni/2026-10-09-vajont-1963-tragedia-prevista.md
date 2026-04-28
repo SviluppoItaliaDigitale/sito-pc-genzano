@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-09-vajont-1963-tragedia-prevista.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Vajont, 9 ottobre 1963: la tragedia che la scienza aveva previsto"
 scadenza: ""
 area: ""
 allegati: []

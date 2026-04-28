@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-13-avezzano-1915-terremoto-marsica.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Avezzano, 13 gennaio 1915: il terremoto della Marsica e la sua eredità"
 scadenza: ""
 area: ""
 allegati: []

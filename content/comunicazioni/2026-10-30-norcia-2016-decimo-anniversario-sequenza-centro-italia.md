@@ -6,7 +6,7 @@ badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Norcia, 30 ottobre 2016: la scossa più forte d'Italia degli ultimi 30 anni"
 scadenza: ""
 area: ""
 allegati: []

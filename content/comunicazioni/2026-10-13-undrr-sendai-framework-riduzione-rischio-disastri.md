@@ -6,7 +6,7 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri.webp"
-image_alt: ""
+image_alt: "Cover dell'articolo: Sendai Framework e ONU: che cosa fa il mondo per la riduzione del rischio"
 scadenza: ""
 area: ""
 allegati: []
