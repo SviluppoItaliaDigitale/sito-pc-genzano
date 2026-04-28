@@ -94,6 +94,96 @@
     .fascia-titolo .fascia-icona.pri { background: #0066cc; }
     .fascia-titolo .fascia-icona.s1 { background: #15803d; }
     .fascia-titolo .fascia-icona.s2 { background: #b45309; }
+
+    /* Barra filtri sticky */
+    .schede-filtri {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0 2rem 0;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid #dee2e6;
+    }
+    .schede-filtri-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+    }
+    .schede-filtri-label {
+      font-weight: 600;
+      color: #003366;
+      font-size: 0.95rem;
+      margin-right: 0.3rem;
+    }
+    .schede-filtri-cerca {
+      flex: 1 1 280px;
+      min-width: 200px;
+      padding: 0.55rem 0.9rem;
+      font-size: 1rem;
+      border: 1.5px solid #ced4da;
+      border-radius: 8px;
+    }
+    .schede-filtri-cerca:focus {
+      outline: 2px solid #ffbe2e;
+      outline-offset: 1px;
+      border-color: #003366;
+    }
+    .schede-pill {
+      background: #fff;
+      border: 1.5px solid #003366;
+      color: #003366;
+      border-radius: 22px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      min-height: 40px;
+    }
+    .schede-pill:hover, .schede-pill:focus {
+      background: #e7f1ff;
+      outline: 2px solid #ffbe2e;
+      outline-offset: 1px;
+    }
+    .schede-pill.attivo {
+      background: #003366;
+      color: #fff;
+    }
+    .schede-pill[data-fascia="infanzia"]   { border-color: #c026d3; color: #c026d3; }
+    .schede-pill[data-fascia="infanzia"].attivo   { background: #c026d3; color: #fff; }
+    .schede-pill[data-fascia="primaria"]   { border-color: #0066cc; color: #0066cc; }
+    .schede-pill[data-fascia="primaria"].attivo   { background: #0066cc; color: #fff; }
+    .schede-pill[data-fascia="secondaria1"]{ border-color: #15803d; color: #15803d; }
+    .schede-pill[data-fascia="secondaria1"].attivo{ background: #15803d; color: #fff; }
+    .schede-pill[data-fascia="secondaria2"]{ border-color: #b45309; color: #b45309; }
+    .schede-pill[data-fascia="secondaria2"].attivo{ background: #b45309; color: #fff; }
+    .schede-counter {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin-left: auto;
+      padding-left: 0.6rem;
+    }
+    .schede-counter strong { color: #003366; }
+    .schede-no-results {
+      display: none;
+      padding: 1.5rem;
+      text-align: center;
+      background: #fff3cd;
+      border: 2px solid #d4a72c;
+      border-radius: 10px;
+      color: #664d03;
+      margin: 1rem 0;
+    }
+    /* Card / sezioni nascoste dal filtro */
+    .schede-hidden { display: none !important; }
+    @media print {
+      .schede-filtri, .schede-no-results { display: none !important; }
+      .schede-hidden { display: block !important; }
+    }
   </style>
 </head>
 <body>
@@ -123,7 +213,30 @@
         </p>
       </div>
 
-      <h2 class="fascia-titolo h4">
+      <!-- Barra filtri (sticky) — appare in cima durante lo scroll -->
+      <div class="schede-filtri" role="region" aria-label="Filtri ricerca schede">
+        <div class="schede-filtri-row">
+          <label class="visually-hidden" for="schede-cerca">Cerca tra le schede</label>
+          <input id="schede-cerca" type="search" class="schede-filtri-cerca"
+                 placeholder="Cerca per parola: terremoto, matematica, Vajont, colorare..."
+                 autocomplete="off" aria-label="Cerca tra le schede">
+        </div>
+        <div class="schede-filtri-row mt-2">
+          <span class="schede-filtri-label" id="lbl-fascia">Fascia:</span>
+          <button type="button" class="schede-pill attivo" data-fascia="" aria-pressed="true">Tutte</button>
+          <button type="button" class="schede-pill" data-fascia="infanzia" aria-pressed="false">Infanzia 3-6</button>
+          <button type="button" class="schede-pill" data-fascia="primaria" aria-pressed="false">Primaria 6-11</button>
+          <button type="button" class="schede-pill" data-fascia="secondaria1" aria-pressed="false">Secondaria I (11-14)</button>
+          <button type="button" class="schede-pill" data-fascia="secondaria2" aria-pressed="false">Secondaria II (14-19)</button>
+          <span class="schede-counter" id="schede-counter" aria-live="polite"><strong>86</strong> schede</span>
+        </div>
+      </div>
+
+      <div id="schede-no-results" class="schede-no-results" role="status">
+        <p class="mb-0"><strong>Nessuna scheda trovata.</strong> Prova a togliere il filtro fascia o a cambiare il termine cercato.</p>
+      </div>
+
+      <h2 class="fascia-titolo h4" data-fascia="infanzia">
         <span class="fascia-icona inf"><i class="bi bi-palette" aria-hidden="true"></i></span>
         Schede da colorare — "Cosa faccio se…?" e "I miei amici della PC" (Infanzia 4-6 anni)
       </h2>
@@ -131,7 +244,7 @@
         10 schede in stampatello con illustrazioni line-art da colorare con matite o pennarelli.
         Ognuna copre un rischio o un soccorritore in 6 passi facili e termina con una nota per il docente o la famiglia.
       </p>
-      <div class="row g-3 mb-2">
+      <div class="row g-3 mb-2" data-fascia="infanzia">
         <div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon infanzia">🐢</div>
@@ -234,11 +347,11 @@
         </div>
       </div>
 
-      <h2 class="fascia-titolo h4 mt-5">
+      <h2 class="fascia-titolo h4 mt-5" data-fascia="infanzia">
         <span class="fascia-icona inf"><i class="bi bi-stars" aria-hidden="true"></i></span>
         Scuola dell'Infanzia (3-6 anni) — Altre attività
       </h2>
-      <div class="row g-3 mb-2">
+      <div class="row g-3 mb-2" data-fascia="infanzia">
         <div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon infanzia"><i class="bi bi-emoji-smile" aria-hidden="true"></i></div>
@@ -431,11 +544,11 @@
         </div>
       </div>
 
-      <h2 class="fascia-titolo h4 mt-5">
+      <h2 class="fascia-titolo h4 mt-5" data-fascia="primaria">
         <span class="fascia-icona pri"><i class="bi bi-mortarboard" aria-hidden="true"></i></span>
         Scuola Primaria (6-11 anni)
       </h2>
-      <div class="row g-3 mb-2">
+      <div class="row g-3 mb-2" data-fascia="primaria">
         <div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-telephone-fill" aria-hidden="true"></i></div>
@@ -638,11 +751,11 @@
         </div>
       </div>
 
-      <h2 class="fascia-titolo h4 mt-5">
+      <h2 class="fascia-titolo h4 mt-5" data-fascia="secondaria1">
         <span class="fascia-icona s1"><i class="bi bi-book-half" aria-hidden="true"></i></span>
         Scuola Secondaria di Primo Grado (11-14 anni)
       </h2>
-      <div class="row g-3 mb-2">
+      <div class="row g-3 mb-2" data-fascia="secondaria1">
         <div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1"><i class="bi bi-cloud-rain-heavy-fill" aria-hidden="true"></i></div>
@@ -785,11 +898,11 @@
         </div>
       </div>
 
-      <h2 class="fascia-titolo h4 mt-5">
+      <h2 class="fascia-titolo h4 mt-5" data-fascia="secondaria2">
         <span class="fascia-icona s2"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i></span>
         Scuola Secondaria di Secondo Grado (14-19 anni)
       </h2>
-      <div class="row g-3 mb-2">
+      <div class="row g-3 mb-2" data-fascia="secondaria2">
         <div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-activity" aria-hidden="true"></i></div>
@@ -904,7 +1017,7 @@
 
       <h3 class="h5 mt-5 mb-3" style="color:var(--scheda-blu);"><i class="bi bi-clipboard-data me-1" aria-hidden="true"></i> Case study delle maxi-emergenze italiane</h3>
       <p class="mb-3 text-muted small">12 schede di analisi sistemica per la Secondaria II grado. Per ogni evento: dati essenziali, box «Cosa non andava / Cosa è cambiato / Lezioni apprese», 6 domande di analisi e box per il docente.</p>
-      <div class="row g-3 mb-2">
+      <div class="row g-3 mb-2" data-fascia="secondaria2">
         <div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-tsunami" aria-hidden="true"></i></div>
@@ -1047,5 +1160,101 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script>
+  // Filtri schede stampabili: cerca testuale + pill fascia.
+  // Funziona senza dipendenze: vanilla JS, accessibile, niente framework.
+  (function () {
+    var inputCerca = document.getElementById('schede-cerca');
+    var pills = document.querySelectorAll('.schede-pill');
+    var counter = document.getElementById('schede-counter');
+    var noResults = document.getElementById('schede-no-results');
+    var cards = document.querySelectorAll('.scheda-card');
+    var totale = cards.length;
+
+    var stato = { fascia: '', cerca: '' };
+
+    function filtra() {
+      var q = stato.cerca.trim().toLowerCase();
+      var fasciaSel = stato.fascia;
+      var visibili = 0;
+
+      // Filtra le card una a una in base a fascia + testo
+      cards.forEach(function (card) {
+        var col = card.parentElement; // .col-md-6 col-lg-4
+        var sezione = col.closest('[data-fascia]'); // il row.row.g-3.mb-2 con data-fascia
+        var fasciaCard = sezione ? sezione.getAttribute('data-fascia') : '';
+
+        var okFascia = !fasciaSel || fasciaCard === fasciaSel;
+        var okCerca = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+        var visibile = okFascia && okCerca;
+
+        col.classList.toggle('schede-hidden', !visibile);
+        if (visibile) visibili++;
+      });
+
+      // Nascondi gli h2/h3 di sezione che non hanno card visibili
+      document.querySelectorAll('h2[data-fascia], h3[data-fascia]').forEach(function (h) {
+        var fasciaH = h.getAttribute('data-fascia');
+        // Trova il primo row.row data-fascia successivo
+        var prossimoRow = h.nextElementSibling;
+        while (prossimoRow && !(prossimoRow.classList && prossimoRow.classList.contains('row'))) {
+          prossimoRow = prossimoRow.nextElementSibling;
+        }
+        var rowVisibile = prossimoRow && Array.prototype.some.call(
+          prossimoRow.querySelectorAll('.col-md-6, .col-md-12, [class*="col-"]'),
+          function (col) { return !col.classList.contains('schede-hidden'); }
+        );
+        var nascondi = (fasciaSel && fasciaH !== fasciaSel) || !rowVisibile;
+        h.classList.toggle('schede-hidden', nascondi);
+        if (prossimoRow) prossimoRow.classList.toggle('schede-hidden', !rowVisibile);
+      });
+
+      // Nascondi il <p> didascalia della sotto-sezione case study se rispettivo row è nascosto
+      var paraCase = document.querySelector('h3[data-fascia] + p');
+      if (paraCase) {
+        var hCase = paraCase.previousElementSibling;
+        paraCase.classList.toggle('schede-hidden',
+          hCase && hCase.classList.contains('schede-hidden'));
+      }
+
+      // Aggiorna counter e messaggio "no results"
+      counter.innerHTML = '<strong>' + visibili + '</strong> di ' + totale + ' schede';
+      noResults.style.display = visibili === 0 ? 'block' : 'none';
+    }
+
+    // Eventi pill fascia
+    pills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        pills.forEach(function (p) {
+          p.classList.remove('attivo');
+          p.setAttribute('aria-pressed', 'false');
+        });
+        pill.classList.add('attivo');
+        pill.setAttribute('aria-pressed', 'true');
+        stato.fascia = pill.getAttribute('data-fascia');
+        filtra();
+      });
+    });
+
+    // Evento cerca testuale (debounced)
+    var debounceTimer;
+    if (inputCerca) {
+      inputCerca.addEventListener('input', function () {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(function () {
+          stato.cerca = inputCerca.value;
+          filtra();
+        }, 150);
+      });
+    }
+
+    // Hash di partenza: #fascia=primaria attiva il filtro corrispondente
+    var hashMatch = (location.hash || '').match(/fascia=([a-z0-9]+)/);
+    if (hashMatch) {
+      var pillTarget = document.querySelector('.schede-pill[data-fascia="' + hashMatch[1] + '"]');
+      if (pillTarget) pillTarget.click();
+    }
+  })();
+  </script>
 </body>
 </html>
