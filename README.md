@@ -37,7 +37,7 @@ Questi 8 file sono importati automaticamente da `CLAUDE.md` e definiscono le reg
 | [`05-github-aruba-deploy.md`](.claude/rules/05-github-aruba-deploy.md) | Deploy CI/CD su Aruba e GitHub Pages, rollback, header HTTP, workflow scarica-foto-automatica, divieti. |
 | [`06-protezione-civile-scientifica.md`](.claude/rules/06-protezione-civile-scientifica.md) | Codici colore allerte, rischi territoriali, numeri emergenza (NUE 112), comunicazione del rischio, gerarchia fonti. |
 | [`07-proattivita-coerenza.md`](.claude/rules/07-proattivita-coerenza.md) | Verifica proattiva di pattern simili dopo ogni fix: completare il fix sul tutto, non solo dove richiesto. |
-| [`08-claude-code-setup.md`](.claude/rules/08-claude-code-setup.md) | Setup ambiente Claude Code: sandbox `.claude/settings.local.json` per sblocco domini foto (Wikipedia/NASA/USGS/NOAA). |
+| [`08-claude-code-setup.md`](.claude/rules/08-claude-code-setup.md) | Setup ambiente Claude Code: sandbox `.claude/settings.local.json` per sblocco domini foto (7 fonti: Wikipedia, NASA, USGS, NOAA + Pexels, Pixabay, Unsplash). |
 
 ### File in `archetypes/` (template Hugo)
 
@@ -276,7 +276,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (40 sezioni)**: contenuti, codice/template, governance docs, audit aggiuntivo, link critici normativa, **audit grammaticale italiano** (apostrofi finti, accenti mancanti, errori italiani tipici via `audit-grammatica-italiana.py`). Fusi `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026, sezione 40 grammaticale aggiunta il 29 aprile 2026. |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo lychee: tutti i link (interni + esterni) |
 | `genera-social-bozze.yml` | Push su `content/comunicazioni/**.md` o `.claude/rules/**.md` (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini Instagram (post 1080x1080 + carosello + story 1080x1920). Output in `social-bozze/<slug>/` e `static/images-social/`. Tier gratuito Gemini, costo zero. |
-| `scarica-foto-automatica.yml` | Push su `content/comunicazioni/**` o sui suoi script foto | Per articoli con marker `# TODO-foto-*`: scarica foto da Wikipedia/NASA/USGS/NOAA, applica fascia blu istituzionale, popola `image:` + credit. Plus step 2: cover tipografica auto col titolo per articoli con `image:""` (`auto-cover-mancanti.py`). Filtro `paths` aggiunto il 29 aprile 2026 per evitare run inutili su CSS/docs. |
+| `scarica-foto-automatica.yml` | Push su `content/comunicazioni/**` o sui suoi script foto | Per articoli con marker `# TODO-foto-*`: scarica foto da **7 fonti supportate** (Wikipedia, NASA, USGS, NOAA — senza API key + Pexels, Pixabay, Unsplash — con API key via GitHub Secrets), applica fascia blu istituzionale, popola `image:` + credit. Plus step 2: cover tipografica auto col titolo per articoli con `image:""` (`auto-cover-mancanti.py`). Filtro `paths` aggiunto il 29 aprile 2026 per evitare run inutili su CSS/docs. |
 
 Le issue generate automaticamente compaiono nella [tab Issues](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/issues) con label `manutenzione`, `documentazione`, `link-rotti`, ecc.
 

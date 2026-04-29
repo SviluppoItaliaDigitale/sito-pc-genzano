@@ -17,6 +17,11 @@ Dietro ogni bollettino meteo ufficiale c'è una rete fitta di **stazioni di osse
 
 Le stazioni amatoriali, ben gestite, contribuiscono in modo significativo alla **conoscenza del clima locale**. E nei territori complessi come i **Castelli Romani** — dove l'altitudine, i versanti, l'influenza dei laghi creano **microclimi** molto diversi anche a pochi chilometri — questa granularità è preziosa.
 
+
+{{< foto src="/images/2026-03-03-sentinelle-meteo-osservazione-amatoriale-corpo.webp"
+         alt="Cielo con nuvole — illustrazione della previsione meteo"
+         caption="I bollettini meteo sono lo strumento di prevenzione quotidiana del rischio idrogeologico." >}}
+
 ## Perché serve una rete densa di osservazione
 
 Il tempo meteorologico **cambia rapidamente** anche su piccola scala. Tra Genzano (435 m), Lanuvio (300 m), Albano (420 m) e Rocca di Papa (680 m) le temperature, le precipitazioni e l'esposizione al vento possono differire molto.

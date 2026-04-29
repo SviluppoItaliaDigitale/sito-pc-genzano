@@ -18,6 +18,11 @@ draft: false
 
 Chiudiamo la serie sul [manuale Caritas-Banco Alimentare](/comunicazioni/2024-11-26-manuale-caritas-banco-alimentare-presentazione/) con il capitolo 9, lo strumento operativo più utile per chi recupera alimenti a fini di solidarietà: il **semaforo di attenzione**.
 
+
+{{< foto src="/images/2026-03-18-semaforo-attenzione-alimenti-recupero-solidarieta-corpo.webp"
+         alt="Cucina in operazione con preparazione di pasti"
+         caption="L'alimentazione in emergenza richiede protocolli specifici di sicurezza." >}}
+
 ## Tre categorie, tre colori
 
 Non tutti gli alimenti si recuperano allo stesso modo. Un pacco di pasta secca e un primo piatto cotto in catering hanno rischi completamente diversi. Il manuale li classifica in **tre macrocategorie** contrassegnate da una mano colorata, come un semaforo:

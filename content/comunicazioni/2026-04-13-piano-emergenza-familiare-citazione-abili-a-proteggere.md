@@ -20,6 +20,11 @@ Per un gruppo di volontari comunali, vedersi riconosciuti da una delle voci più
 
 ---
 
+
+{{< foto src="/images/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Che cos'è Abili a proteggere
 
 Abili a proteggere è il progetto promosso dal Dipartimento della Protezione Civile dedicato alle persone con disabilità e alle fasce vulnerabili della popolazione in situazioni di emergenza. Il portale rappresenta un punto di riferimento nazionale per chi lavora sull'inclusione nel sistema di protezione civile: raccoglie buone pratiche, interviste, strumenti operativi e segnala le iniziative più significative su tutto il territorio italiano.

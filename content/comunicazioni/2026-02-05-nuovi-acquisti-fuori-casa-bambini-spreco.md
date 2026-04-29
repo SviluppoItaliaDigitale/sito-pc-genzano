@@ -18,6 +18,11 @@ draft: false
 
 Il **5 febbraio** è la Giornata nazionale di prevenzione dello spreco alimentare. Chiudiamo oggi la serie dedicata al [Libro del Risparmio](/comunicazioni/2025-02-05-libro-risparmio-fondazione-barilla-presentazione/) di Fondazione Barilla con gli ultimi due capitoli — **nuovi acquisti** (capitolo 4) e **fuori casa** (capitolo 5) — dove il manuale esce dalla cucina domestica e affronta la spesa, il pranzo in ufficio, i pasti al ristorante, i bambini e le grandi feste. Il testo completo è in allegato.
 
+
+{{< foto src="/images/2026-02-05-nuovi-acquisti-fuori-casa-bambini-spreco-corpo.webp"
+         alt="Cucina in operazione con preparazione di pasti"
+         caption="L'alimentazione in emergenza richiede protocolli specifici di sicurezza." >}}
+
 ## Pianificare la spesa prima di comprare
 
 La maggior parte dello spreco domestico nasce da acquisti non pianificati: compriamo più del necessario, ci dimentichiamo di consumarlo, e finisce nella pattumiera. Il manuale suggerisce una procedura semplice:

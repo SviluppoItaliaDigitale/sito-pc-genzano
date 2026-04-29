@@ -17,6 +17,11 @@ Da alcuni giorni il vento forte interessa tutto il territorio comunale. Le autor
 
 **Si raccomanda la massima attenzione** per limitare i disagi e ridurre i rischi.
 
+
+{{< foto src="/images/2026-03-27-allerta-meteo-per-vento-forte-corpo.webp"
+         alt="Alberi piegati dal vento durante una tempesta"
+         caption="Il vento forte è uno dei fenomeni più sottostimati a livello di rischio." >}}
+
 ## Per approfondire
 
 - Articolo: [Vento forte: cosa fare prima, durante e dopo](/comunicazioni/2026-05-16-vento-forte-prima-durante-dopo/)

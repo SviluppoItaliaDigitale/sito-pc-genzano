@@ -18,6 +18,11 @@ draft: false
 
 ---
 
+
+{{< foto src="/images/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni-corpo.webp"
+         alt="Operatore radio in azione con apparato ricetrasmittente"
+         caption="La radio resta una delle infrastrutture critiche della Protezione Civile." >}}
+
 ## Gli anni Ottanta: dalla banda cittadina al volontariato organizzato
 
 La scintilla iniziale scocca tra la fine degli anni Settanta e l'inizio degli Ottanta. Un gruppo di cittadini di Genzano, appassionati di radiocomunicazioni in banda cittadina (CB), si ritrova per costituire una prima associazione di volontari. In quegli anni la radio CB è uno strumento popolare, accessibile, e durante le emergenze sul territorio si rivela spesso l'unico modo per coordinare persone e mezzi quando il telefono fisso non basta o non arriva.

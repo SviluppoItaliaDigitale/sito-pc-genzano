@@ -17,6 +17,11 @@ Il **18 aprile** è la **Giornata internazionale dei monumenti e dei siti** (*Wo
 
 In Italia, dove la **densità di patrimonio culturale** è tra le più alte al mondo, la tutela dei beni storici e artistici **nelle emergenze** è un tema molto concreto. I terremoti in Centro Italia (2009, 2016), le alluvioni di Firenze (1966) e del Polesine (1951), gli incendi estivi che lambiscono beni monumentali sono esempi di quanto la Protezione Civile debba operare **anche per il patrimonio**.
 
+
+{{< foto src="/images/2026-04-18-giornata-monumenti-patrimonio-emergenze-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Protezione Civile e beni culturali
 
 Il **Servizio Nazionale della Protezione Civile** italiano include, tra le sue componenti, la **tutela del patrimonio culturale** in emergenza. La legge 225/1992 e il Codice 2018 riconoscono esplicitamente il ruolo di:
