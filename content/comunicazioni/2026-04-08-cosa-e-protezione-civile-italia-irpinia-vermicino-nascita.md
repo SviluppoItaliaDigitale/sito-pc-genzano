@@ -18,6 +18,11 @@ draft: false
 
 ---
 
+
+{{< foto src="/images/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Cosa vuol dire "protezione civile" in Italia
 
 Il **Servizio Nazionale della Protezione Civile** è l'insieme delle competenze e delle attività pubbliche e private che tutelano la popolazione italiana dai rischi. Non è un singolo ente: è una **rete coordinata** di soggetti diversi che, ciascuno con il proprio ruolo, concorrono alla prevenzione, al soccorso e al superamento delle emergenze.

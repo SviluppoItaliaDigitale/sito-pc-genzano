@@ -15,6 +15,11 @@ draft: false
 
 Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma compie un importante passo nel percorso di digitalizzazione. Per migliorare gli interventi sul territorio e la comunicazione interna, il Gruppo ha adottato **ActivePager**, una piattaforma per il coordinamento digitale delle emergenze.
 
+
+{{< foto src="/images/2026-04-04-nuovo-gestionale-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Una gestione centralizzata
 
 Il sistema sostituisce i registri cartacei con una piattaforma digitale organizzata in aree tematiche:

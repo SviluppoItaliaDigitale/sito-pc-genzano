@@ -19,6 +19,11 @@ L'incontro serve a fare il punto sull'andamento operativo e organizzativo del Gr
 
 La partecipazione è aperta a tutti i volontari iscritti.
 
+
+{{< foto src="/images/2026-04-01-assemblea-dei-volontari-corpo.webp"
+         alt="Squadra di volontari in tenuta operativa al lavoro"
+         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
+
 ## Per approfondire
 
 - Articolo: [Attivazione squadre primavera: calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/)

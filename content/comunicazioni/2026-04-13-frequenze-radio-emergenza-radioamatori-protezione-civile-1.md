@@ -18,6 +18,11 @@ draft: false
 
 ---
 
+
+{{< foto src="/images/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1-corpo.webp"
+         alt="Operatore radio in azione con apparato ricetrasmittente"
+         caption="La radio resta una delle infrastrutture critiche della Protezione Civile." >}}
+
 ## Le frequenze della Rete Zamberletti
 
 La Rete Zamberletti opera su due frequenze HF in banda laterale inferiore (LSB), scelte per garantire la copertura dell'intero territorio nazionale sfruttando la propagazione ionosferica. Le frequenze, riportate sulla modulistica ufficiale delle prove di sintonia, sono:
