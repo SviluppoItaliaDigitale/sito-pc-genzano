@@ -17,6 +17,11 @@ Il **22 maggio** è la [Giornata internazionale della Biodiversità](https://www
 
 In questo articolo vediamo il legame concreto tra **natura sana** e **rischio ridotto**.
 
+
+{{< foto src="/images/2026-05-22-giornata-biodiversita-territori-resilienti-corpo.webp"
+         alt="Paesaggio naturale italiano — territorio e ambiente"
+         caption="La conoscenza del territorio è il primo strumento di prevenzione." >}}
+
 ## Cosa significa "biodiversità"
 
 La biodiversità è la **varietà della vita sulla Terra**: specie, geni, ecosistemi. Un bosco con 30 specie di alberi è più ricco di biodiversità di un bosco con una specie sola. Un fiume con molte specie di pesci e piante è più ricco di un fiume canalizzato e ripulito di tutto.

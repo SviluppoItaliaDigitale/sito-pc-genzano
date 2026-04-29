@@ -17,6 +17,11 @@ Il **17 maggio** è la [Giornata mondiale delle telecomunicazioni e della societ
 
 Per il sistema di Protezione Civile, le telecomunicazioni sono **infrastruttura critica**: se cadono, l'emergenza diventa più difficile da gestire.
 
+
+{{< foto src="/images/2026-05-17-giornata-mondiale-telecomunicazioni-corpo.webp"
+         alt="Operatore radio in azione con apparato ricetrasmittente"
+         caption="La radio resta una delle infrastrutture critiche della Protezione Civile." >}}
+
 ## Un'infrastruttura che diamo per scontata
 
 Quando facciamo una videochiamata, mandiamo un messaggio, consultiamo una mappa, **migliaia di componenti** lavorano insieme:

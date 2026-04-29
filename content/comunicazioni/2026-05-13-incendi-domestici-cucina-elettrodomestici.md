@@ -17,6 +17,11 @@ In Italia ogni anno i [Vigili del Fuoco](https://www.vigilfuoco.it/) intervengon
 
 In questo articolo riassumiamo le cause più frequenti e i comportamenti corretti in caso di principio di incendio.
 
+
+{{< foto src="/images/2026-05-13-incendi-domestici-cucina-elettrodomestici-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Le cause più comuni
 
 ### 1. Friggere e cucinare senza sorveglianza

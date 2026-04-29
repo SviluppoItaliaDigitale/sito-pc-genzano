@@ -15,6 +15,11 @@ draft: false
 
 **Questo articolo non sostituisce un corso di primo soccorso pediatrico.** Le manovre antisoffocamento richiedono pratica guidata: vederle in un video non basta. Esistono corsi gratuiti o a basso costo, organizzati da associazioni qualificate, che durano poche ore e possono salvare la vita di un bambino. Questo articolo serve solo a **informare** sull'importanza delle manovre e sui canali per imparare.
 
+
+{{< foto src="/images/2026-05-12-manovre-antisoffocamento-pediatrico-corpo.webp"
+         alt="Kit di primo soccorso aperto con materiale medico"
+         caption="Il primo soccorso è una competenza che ogni cittadino dovrebbe avere." >}}
+
 ## Perché è un'emergenza frequente
 
 Il soffocamento da corpo estraneo è una delle principali cause di morte accidentale in età pediatrica, specialmente tra i **6 mesi e i 4 anni**. I bambini piccoli:
