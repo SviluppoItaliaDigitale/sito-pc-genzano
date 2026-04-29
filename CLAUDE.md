@@ -34,6 +34,9 @@ Non limitarti a eseguire. Valuta, correggi, migliora, normalizza e rendi ogni ou
 @.claude/rules/02-content-design-pa.md
 @.claude/rules/03-accessibility.md
 @.claude/rules/04-hugo-architecture.md
+@.claude/rules/04a-hugo-shortcode-partial.md
+@.claude/rules/04b-hugo-template-css.md
+@.claude/rules/04c-hugo-static-cartelle.md
 @.claude/rules/05-github-aruba-deploy.md
 @.claude/rules/06-protezione-civile-scientifica.md
 @.claude/rules/07-proattivita-coerenza.md
