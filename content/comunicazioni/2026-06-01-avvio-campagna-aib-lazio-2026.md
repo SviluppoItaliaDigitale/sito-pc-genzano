@@ -15,6 +15,11 @@ draft: false
 
 Dal **1 giugno** è attiva nel Lazio la **campagna antincendio boschivo** (AIB). La data segna l'inizio del periodo di massima attenzione sugli incendi nei boschi, che si chiude il **30 settembre**. In questi quattro mesi cambiano le regole per chi vive e frequenta le aree boschive — e anche per chi abita vicino ai boschi dei Castelli Romani.
 
+
+{{< foto src="/images/2026-06-01-avvio-campagna-aib-lazio-2026-corpo.webp"
+         alt="Squadra di vigili del fuoco impegnata in un fronte di incendio boschivo"
+         caption="L'incendio boschivo è uno dei rischi prioritari sui Castelli Romani." >}}
+
 ## Perché questa campagna
 
 Il Lazio concentra in estate oltre l'**80% degli incendi boschivi** dell'intero anno. I Castelli Romani, con la loro alternanza di versanti boscati, abitato sparso e viabilità stretta, sono un contesto particolarmente delicato. La **Regione Lazio** coordina operativamente la campagna attraverso la [Sala Operativa Unificata Permanente (SOUP)](https://protezionecivile.regione.lazio.it/).

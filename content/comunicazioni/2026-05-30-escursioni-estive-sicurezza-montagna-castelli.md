@@ -17,6 +17,11 @@ L'estate è la stagione delle **escursioni**: sentieri dei Castelli Romani, camm
 
 Questo articolo integra quello su [perdersi nei boschi](/comunicazioni/2026-05-21-perdersi-nei-boschi-castelli-romani/): lì parlavamo specificamente di orientamento, qui dell'escursione nel suo insieme.
 
+
+{{< foto src="/images/2026-05-30-escursioni-estive-sicurezza-montagna-castelli-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## Le cause più frequenti di incidenti in montagna
 
 Le statistiche del **Soccorso Alpino** mostrano che la maggior parte degli incidenti gravi è dovuta a:

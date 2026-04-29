@@ -15,6 +15,11 @@ draft: false
 
 Il **3 giugno** è la [Giornata mondiale della bicicletta](https://www.un.org/en/observances/bicycle-day) delle **Nazioni Unite**, istituita nel 2018. È una giornata che celebra un mezzo di trasporto semplice, economico e a basso impatto. Ma è anche un'occasione per parlare di **sicurezza stradale** e di un aspetto meno noto: la **resilienza della mobilità ciclabile in emergenza**.
 
+
+{{< foto src="/images/2026-06-03-giornata-bicicletta-sicurezza-emergenza-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## La bici nei Castelli: il contesto
 
 Genzano di Roma è un territorio collinare, con dislivelli importanti e strade strette. La bicicletta è un mezzo diffuso per mobilità sportiva e, sempre di più, per spostamenti brevi grazie anche alle **e-bike**. Il tema della sicurezza riguarda quindi ciclisti esperti, turisti, bambini e pendolari.

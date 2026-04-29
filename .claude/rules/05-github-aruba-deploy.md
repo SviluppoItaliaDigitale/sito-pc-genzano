@@ -127,20 +127,29 @@ Quando l'utente scrive un articolo da app mobile / Claude Code cloud, la sandbox
 # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [lang]
 # TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "search query"            slug-articolo
 # TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap <eventid>        slug-articolo
+# TODO-foto-noaa:      bash scripts/foto-da-noaa.sh      "URL diretto NOAA"        "Descrizione" slug
+# TODO-foto-pexels:    bash scripts/foto-da-pexels.sh    "search query"            slug-articolo
+# TODO-foto-pixabay:   bash scripts/foto-da-pixabay.sh   "search query"            slug-articolo
+# TODO-foto-unsplash:  bash scripts/foto-da-unsplash.sh  "search query"            slug-articolo
 ```
 
 **Quando usare quale fonte:**
 
-| Tipo di articolo | Fonte consigliata |
-|---|---|
-| Anniversario evento storico (terremoti famosi, alluvioni, eruzioni) | Wikipedia (it/en) |
-| Fenomeno globale visto dallo spazio (uragani, eruzioni, ondata calore) | NASA |
-| ShakeMap di un terremoto specifico | USGS (serve eventid da `https://earthquake.usgs.gov/earthquakes/search/`) |
-| Personaggio storico, opera, libro, organizzazione | Wikipedia |
+| Tipo di articolo | Fonte consigliata | Crediti | API key |
+|---|---|---|---|
+| Anniversario evento storico (terremoti famosi, alluvioni, eruzioni) | Wikipedia (it/en) | sì (CC) | no |
+| Fenomeno globale visto dallo spazio (uragani, eruzioni, ondata calore) | NASA | no (PD) | no |
+| ShakeMap di un terremoto specifico | USGS (serve eventid da `earthquake.usgs.gov/earthquakes/search/`) | no (PD) | no |
+| Uragani, NHC tracks, foto storiche meteo | NOAA (URL diretto) | no (PD) | no |
+| Personaggio storico, opera, libro, organizzazione | Wikipedia | sì (CC) | no |
+| Foto stock generica (atmosfera, persone in azione) | Pexels o Unsplash | no (cortesia) | sì (gratuita) |
+| Foto stock alta qualità (illustrazioni, oggetti, paesaggi) | Pixabay | no | sì (gratuita) |
+
+**Le 3 fonti stock (Pexels, Pixabay, Unsplash)** richiedono API key gratuita configurata come **GitHub Secret** (`PEXELS_API_KEY`, `PIXABAY_API_KEY`, `UNSPLASH_ACCESS_KEY`). Se mancanti, il workflow apre issue automatica con messaggio chiaro e l'articolo va riprovato con un'altra fonte. Le 4 fonti istituzionali (Wikipedia/NASA/USGS/NOAA) funzionano sempre senza API key.
 
 Al successivo push su `main`, il workflow `.github/workflows/scarica-foto-automatica.yml` (runner Ubuntu, rete libera):
-1. Scansiona `content/comunicazioni/*.md` cercando i marker `TODO-foto-(wikipedia|nasa|usgs)`.
-2. Per ogni articolo trovato: estrae il marker, verifica che lo script chiamato sia in **whitelist** (`foto-da-wikipedia.sh`, `foto-da-nasa.sh`, `foto-da-usgs.sh`) — qualunque altro nome viene rigettato per sicurezza.
+1. Scansiona `content/comunicazioni/*.md` cercando i marker `TODO-foto-(wikipedia|nasa|usgs|noaa|pexels|pixabay|unsplash)`.
+2. Per ogni articolo trovato: estrae il marker, verifica che lo script chiamato sia in **whitelist** (`foto-da-wikipedia.sh`, `foto-da-nasa.sh`, `foto-da-usgs.sh`, `foto-da-noaa.sh`, `foto-da-pexels.sh`, `foto-da-pixabay.sh`, `foto-da-unsplash.sh`) — qualunque altro nome viene rigettato per sicurezza.
 3. Esegue il comando con `bash -c "$CMD"` dopo la verifica whitelist.
 4. Aggiorna il frontmatter con `scripts/aggiorna-frontmatter-foto.py`: popola `image:` + `image_credit:` + `image_source_url:`, rimuove la riga TODO.
 5. Committa con messaggio `[skip-foto-wiki] Foto automatiche da fonti libere (...)` per evitare loop.
@@ -154,8 +163,8 @@ Al successivo push su `main`, il workflow `.github/workflows/scarica-foto-automa
 **Idempotenza**: `aggiorna-frontmatter-foto.py` non sovrascrive `image:` se già popolato. Riesecuzione del workflow su articoli senza marker non fa nulla.
 
 **Sicurezza**: il workflow esegue il comando trovato nel marker via `bash -c`. Per evitare iniezioni di script arbitrari:
-1. Il marker deve corrispondere alla regex `^# TODO-foto-(wikipedia|nasa|usgs):` (solo i 3 marker noti).
-2. Il primo binario chiamato deve essere uno script in whitelist (`foto-da-wikipedia.sh`, `foto-da-nasa.sh`, `foto-da-usgs.sh`).
+1. Il marker deve corrispondere alla regex `^# TODO-foto-(wikipedia|nasa|usgs|noaa|pexels|pixabay|unsplash):` (solo i 7 marker noti).
+2. Il primo binario chiamato deve essere uno script in whitelist (i 7 `foto-da-*.sh`).
 3. Tutti i parametri sono passati come argomenti dello script, non come codice eseguibile.
 
 **Aggiungere una nuova fonte** (es. Copernicus): (a) creare `scripts/foto-da-NUOVA.sh` con stesso pattern di output (stampa Origine/Autore/Licenza); (b) aggiungere `foto-da-NUOVA.sh` alla `ALLOWED_SCRIPTS` del workflow + nuovo `case` nello switch FONTE; (c) aggiungere `nuova` alla regex del marker; (d) aggiornare archetype + doc.

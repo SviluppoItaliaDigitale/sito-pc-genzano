@@ -15,6 +15,11 @@ draft: false
 
 La **qualità dell'aria** cambia con le stagioni. D'inverno dominano le **polveri sottili** (PM10, PM2.5) legate a traffico e riscaldamento domestico. In estate compaiono altri inquinanti: l'**ozono troposferico** e i **pollini** delle graminacee. Per chi soffre di asma, allergie respiratorie, patologie cardiache, è un periodo a cui prestare attenzione.
 
+
+{{< foto src="/images/2026-06-10-qualita-aria-estate-ozono-pm10-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Perché parliamo di qualità dell'aria
 
 La Protezione Civile non è l'ente che gestisce l'aria: sono **ARPA Lazio**, il **Ministero dell'Ambiente**, le ASL. Ma tre ragioni ci interessano:
