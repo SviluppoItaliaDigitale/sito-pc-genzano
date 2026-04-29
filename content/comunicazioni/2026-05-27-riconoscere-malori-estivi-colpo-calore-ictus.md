@@ -1,7 +1,7 @@
 ---
 title: "Malori estivi: come riconoscere colpo di calore, ictus, infarto"
 date: 2026-05-27
-description: "D'estate i malori sono piu frequenti. Distinguere colpo di calore, ictus e infarto e chiamare il 112 con le giuste informazioni puo salvare vite."
+description: "D'estate i malori sono più frequenti. Distinguere colpo di calore, ictus e infarto e chiamare il 112 con le giuste informazioni può salvare vite."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

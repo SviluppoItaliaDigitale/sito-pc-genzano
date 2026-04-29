@@ -1,12 +1,12 @@
 ---
-title: "Incendi domestici: cause piu comuni e come prevenirli"
+title: "Incendi domestici: cause più comuni e come prevenirli"
 date: 2026-05-13
 description: "La maggior parte degli incendi in Italia parte dalla cucina. Friggitrici, fornelli, elettrodomestici: cause e comportamenti corretti in caso di fiamma in casa."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-13-incendi-domestici-cucina-elettrodomestici.webp"
-image_alt: "Cover dell'articolo: Incendi domestici: cause piu comuni e come prevenirli"
+image_alt: "Cover dell'articolo: Incendi domestici: cause più comuni e come prevenirli"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

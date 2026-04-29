@@ -42,13 +42,13 @@
                 {{ $social := .Site.Data.social_links }}
                 {{ if $social }}
                 {{ range $social.canali }}
-                <li class="list-inline-item" role="listitem"><a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="{{ .aria_label }}"><i class="bi {{ .icona }} fs-4" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item" role="listitem"><a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="{{ .aria_label }}"><i class="bi {{ .icona }} fs-4" aria-hidden="true"></i><span class="visually-hidden">{{ .aria_label }}</span></a></li>
                 {{ end }}
                 {{ else }}
-                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Facebook"><i class="bi bi-facebook fs-4" aria-hidden="true"></i></a></li>
-                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Instagram"><i class="bi bi-instagram fs-4" aria-hidden="true"></i></a></li>
-                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="X Twitter"><i class="bi bi-twitter-x fs-4" aria-hidden="true"></i></a></li>
-                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.telegram }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Telegram"><i class="bi bi-telegram fs-4" aria-hidden="true"></i></a></li>
+                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Facebook"><i class="bi bi-facebook fs-4" aria-hidden="true"></i><span class="visually-hidden">Facebook</span></a></li>
+                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Instagram"><i class="bi bi-instagram fs-4" aria-hidden="true"></i><span class="visually-hidden">Instagram</span></a></li>
+                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="X Twitter"><i class="bi bi-twitter-x fs-4" aria-hidden="true"></i><span class="visually-hidden">X Twitter</span></a></li>
+                <li class="list-inline-item" role="listitem"><a href="{{ .Site.Params.telegram }}" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Telegram"><i class="bi bi-telegram fs-4" aria-hidden="true"></i><span class="visually-hidden">Telegram</span></a></li>
                 {{ end }}
               </ul>
             </div>

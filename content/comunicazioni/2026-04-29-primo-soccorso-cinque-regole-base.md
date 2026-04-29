@@ -1,7 +1,7 @@
 ---
 title: "Primo soccorso: le cinque regole di base che tutti dovrebbero sapere"
 date: 2026-04-29
-description: "Non sostituisce un corso, ma conoscere poche regole essenziali puo salvare una vita nei minuti che precedono l'arrivo del 112."
+description: "Non sostituisce un corso, ma conoscere poche regole essenziali può salvare una vita nei minuti che precedono l'arrivo del 112."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

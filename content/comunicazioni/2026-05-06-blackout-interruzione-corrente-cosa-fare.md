@@ -1,7 +1,7 @@
 ---
 title: "Blackout: cosa fare quando salta la corrente (anche per ore o giorni)"
 date: 2026-05-06
-description: "Un'interruzione di corrente puo durare minuti, ore o giorni. Come prepararsi, cosa fare durante, cosa verificare quando l'energia torna."
+description: "Un'interruzione di corrente può durare minuti, ore o giorni. Come prepararsi, cosa fare durante, cosa verificare quando l'energia torna."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
