@@ -15,6 +15,11 @@ draft: false
 
 Le **ondate di calore** sono, da un punto di vista sanitario, il rischio meteorologico più grave del nostro Paese. Più delle alluvioni, più dei terremoti, più degli incendi. Ogni estate, quando le temperature restano sopra le medie per giorni, la mortalità aumenta in modo misurabile — soprattutto tra anziani, bambini piccoli e persone con patologie croniche. Prepararsi **ora**, all'inizio di maggio, significa arrivare alla prima ondata estiva con risposte già pronte.
 
+
+{{< foto src="/images/2026-05-04-ondate-di-calore-preparare-estate-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## Cos'è un'ondata di calore
 
 Non è una "giornata calda". È una **sequenza di più giorni consecutivi** (tipicamente tre o più) in cui le temperature superano significativamente i valori medi stagionali, **anche di notte**. Il mancato raffrescamento notturno è il fattore più pericoloso: il corpo non riesce a recuperare, lo stress termico si accumula.

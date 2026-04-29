@@ -15,6 +15,11 @@ draft: false
 
 In un'epoca in cui tutti comunicano con lo smartphone, può sembrare anacronistico parlare di **radio**. Ma in emergenza, quando le reti mobili sono sature o interrotte, quando il collegamento dati non funziona, quando persino la rete elettrica è fuori uso, **le radio continuano a funzionare**. Per questo il sistema di Protezione Civile mantiene e sviluppa le proprie reti radio e si avvale di **volontari radioamatori** con competenze specifiche.
 
+
+{{< foto src="/images/2026-05-03-radiocomunicazioni-emergenza-volontari-corpo.webp"
+         alt="Operatore radio in azione con apparato ricetrasmittente"
+         caption="La radio resta una delle infrastrutture critiche della Protezione Civile." >}}
+
 ## Perché le reti mobili non bastano
 
 Durante un'emergenza, la rete mobile entra in sofferenza per tre motivi concomitanti:

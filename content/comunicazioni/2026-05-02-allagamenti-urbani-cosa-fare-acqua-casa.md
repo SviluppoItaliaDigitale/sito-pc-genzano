@@ -17,6 +17,11 @@ Con l'intensificarsi di **piogge concentrate in poche ore**, anche i centri abit
 
 Le indicazioni qui riportate derivano dalla [Campagna "Io Non Rischio" del Dipartimento di Protezione Civile](https://iononrischio.protezionecivile.it/) e dai protocolli ufficiali.
 
+
+{{< foto src="/images/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa-corpo.webp"
+         alt="Strada urbana allagata dopo un evento di pioggia intensa"
+         caption="Le alluvioni urbane sono in aumento per effetto dei cambiamenti climatici." >}}
+
 ## Prima: la prevenzione ordinaria
 
 La miglior gestione di un allagamento è **non farlo accadere**. Alcuni gesti preventivi importanti:

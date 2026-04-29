@@ -322,7 +322,7 @@ Workflow completo in [`MANUALE-MOBILE.md`](MANUALE-MOBILE.md): app **Claude Andr
 
 In sintesi:
 - L'articolo si scrive direttamente su GitHub web (modifica un file in `content/comunicazioni/` o crearne uno nuovo).
-- Per la foto: usare il **marker `# TODO-foto-*`** nel frontmatter — il workflow `scarica-foto-automatica.yml` scaricherà la foto dalla fonte ufficiale (Wikipedia/NASA/USGS/NOAA) durante il deploy CI.
+- Per la foto: usare il **marker `# TODO-foto-*`** nel frontmatter — il workflow `scarica-foto-automatica.yml` scaricherà la foto dalla fonte scelta tra le **7 supportate** (Wikipedia, NASA, USGS, NOAA, Pexels, Pixabay, Unsplash) durante il deploy CI.
 - Bozze social e immagini Instagram vengono generate automaticamente al push.
 
 ---

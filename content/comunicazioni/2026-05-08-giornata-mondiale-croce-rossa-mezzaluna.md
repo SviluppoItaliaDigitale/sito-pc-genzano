@@ -15,6 +15,11 @@ draft: false
 
 L'**8 maggio** è la [Giornata mondiale della Croce Rossa e della Mezzaluna Rossa](https://www.cri.it/), nel giorno della nascita di **Henry Dunant**, fondatore del movimento. Nato nel 1863 dopo la battaglia di Solferino, il movimento oggi riunisce 192 società nazionali e 16 milioni di volontari nel mondo, uniti da sette principi universali: **umanità, imparzialità, neutralità, indipendenza, volontariato, unità, universalità**.
 
+
+{{< foto src="/images/2026-05-08-giornata-mondiale-croce-rossa-mezzaluna-corpo.webp"
+         alt="Volontari di un'associazione umanitaria al lavoro"
+         caption="Il volontariato organizzato è una componente strutturale del Sistema." >}}
+
 ## Un movimento nato dall'orrore
 
 Nel 1859 Dunant, imprenditore svizzero di passaggio, assisté alla battaglia di Solferino. Vide 40.000 uomini feriti o morenti, abbandonati senza cure su un campo di battaglia. Organizzò soccorsi con i civili del luogo e scrisse *Un souvenir de Solferino*, il libro che pose le basi del diritto umanitario moderno e del movimento internazionale.

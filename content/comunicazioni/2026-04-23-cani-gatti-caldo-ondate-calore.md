@@ -17,6 +17,11 @@ Con **l'avvicinarsi della stagione calda**, anche nei Castelli Romani le tempera
 
 Il **Ministero della Salute** pubblica ogni anno una guida sintetica con dieci regole pratiche per proteggere gli animali domestici dal caldo estivo. Le condividiamo in questo articolo, adattate al nostro territorio.
 
+
+{{< foto src="/images/2026-04-23-cani-gatti-caldo-ondate-calore-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## Perché il caldo è pericoloso per cani e gatti
 
 A differenza dell'uomo, **cani e gatti non sudano** (se non attraverso i polpastrelli). La loro **termoregolazione** avviene soprattutto attraverso il respiro: piccoli e frequenti atti respiratori fanno passare rapidamente l'aria sulle superfici umide del cavo orale, disperdendo il calore.

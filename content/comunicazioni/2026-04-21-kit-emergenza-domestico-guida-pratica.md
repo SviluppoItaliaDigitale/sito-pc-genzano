@@ -17,6 +17,11 @@ Un terremoto, un'alluvione, una lunga interruzione di corrente o di acqua: in qu
 
 In questo articolo trovi la lista degli oggetti utili, le quantità per persona, dove tenere lo zaino e ogni quanto controllarlo.
 
+
+{{< foto src="/images/2026-04-21-kit-emergenza-domestico-guida-pratica-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Perché 72 ore
 
 Le prime 72 ore dopo un evento grave sono le più critiche. In quella finestra i servizi pubblici possono essere rallentati o interrotti, le strade bloccate, i negozi chiusi. Il kit serve a rendere la famiglia **autosufficiente** per questo periodo, senza dipendere da forniture esterne.

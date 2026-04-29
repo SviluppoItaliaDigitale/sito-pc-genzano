@@ -15,6 +15,11 @@ draft: false
 
 Il **primo maggio** è la Festa dei Lavoratori. Una data che ricorda i diritti conquistati dal lavoro dipendente e autonomo — tra tutti, il diritto alla **sicurezza**. Tre giorni dopo la Giornata mondiale sulla sicurezza sul lavoro, è un'occasione per parlare ancora di un tema che attraversa anche il volontariato di Protezione Civile: **tutti hanno diritto di tornare a casa**, dopo un'attività.
 
+
+{{< foto src="/images/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## Un principio costituzionale
 
 L'articolo 1 della [Costituzione italiana](https://www.senato.it/istituzione/la-costituzione) afferma che "l'Italia è una Repubblica democratica, fondata sul lavoro". Gli articoli 35, 36, 37 e 41 tutelano il diritto al lavoro dignitoso, equamente retribuito e sicuro. Il [Testo Unico sulla sicurezza sul lavoro](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/sg) (D.Lgs. 81/2008) è lo strumento operativo che traduce questi principi in obblighi precisi.

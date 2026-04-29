@@ -17,6 +17,11 @@ Un terremoto alle tre di notte. Un'alluvione quando i figli sono a scuola. Un bl
 
 In questo articolo vediamo i cinque passi per scriverlo.
 
+
+{{< foto src="/images/2026-04-26-piano-emergenza-familiare-5-passi-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Passo 1 — Conoscere i rischi del territorio
 
 Il primo passo è sapere a cosa siamo esposti. Non tutti i comuni hanno gli stessi rischi. Per Genzano di Roma e i Castelli Romani i principali sono:
