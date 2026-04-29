@@ -15,6 +15,11 @@ draft: false
 
 Il **cambiamento climatico** non è un tema astratto per la Protezione Civile: è, da anni, **la principale forza** che ridefinisce scenari, mappe di rischio, frequenza di attivazioni, investimenti in prevenzione. Capire come impatta aiuta i cittadini a leggere meglio le scelte degli enti pubblici e a partecipare alla **resilienza** del proprio territorio.
 
+
+{{< foto src="/images/2026-09-24-cambiamento-climatico-protezione-civile-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## Cosa osservano gli scienziati
 
 Secondo **IPCC**, **CNR-ISAC**, **ISPRA**, **CMCC**, sull'Italia e sul Mediterraneo si osserva:

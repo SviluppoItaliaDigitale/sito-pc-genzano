@@ -15,6 +15,11 @@ draft: false
 
 Il **22 settembre 2026** segna l'**equinozio d'autunno** astronomico. Dopo questa data, nell'emisfero nord, le giornate diventano più brevi delle notti. È un passaggio che, oltre al valore culturale, ha conseguenze pratiche anche nella vita quotidiana e nella sicurezza domestica.
 
+
+{{< foto src="/images/2026-09-21-equinozio-autunno-rischi-stagionali-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Cosa cambia
 
 ### Riduzione delle ore di luce

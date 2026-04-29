@@ -15,6 +15,11 @@ draft: false
 
 In un'emergenza idraulica, quando strade, scantinati, garage si allagano, il tempo di intervento fa la differenza. Uno degli strumenti più usati dalla Protezione Civile e dai Vigili del Fuoco in questi casi è l'**idrovora**: una pompa studiata per spostare rapidamente grandi quantità d'acqua. Conoscere come funziona e quando si interviene aiuta i cittadini a capire le operazioni di soccorso.
 
+
+{{< foto src="/images/2026-10-03-idrovore-pompe-emergenza-idraulica-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Cosa è un'idrovora
 
 Un'**idrovora** è una **pompa ad alta portata**, progettata per:

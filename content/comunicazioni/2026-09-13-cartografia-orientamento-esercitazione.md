@@ -15,6 +15,11 @@ draft: false
 
 In un'epoca in cui ognuno ha il GPS sul telefono, **saper leggere una mappa** può sembrare anacronistico. In realtà, per un volontario di Protezione Civile, la **cartografia** e l'**orientamento con carta e bussola** restano competenze di base irrinunciabili: le reti cellulari cadono, le batterie si scaricano, i satelliti possono essere oscurati, un paese terremotato non ha più riferimenti visivi usuali.
 
+
+{{< foto src="/images/2026-09-13-cartografia-orientamento-esercitazione-corpo.webp"
+         alt="Mappa cartografica con indicazioni territoriali"
+         caption="La cartografia è uno strumento operativo essenziale." >}}
+
 ## Perché serve la cartografia
 
 Un volontario preparato deve saper:

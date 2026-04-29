@@ -15,6 +15,11 @@ draft: false
 
 Il **Parco Regionale dei Castelli Romani** è un'area protetta di circa **15.000 ettari** che tutela uno dei paesaggi più significativi del Lazio: i **Colli Albani**, i **due laghi vulcanici di Albano e Nemi**, i boschi e le aree agricole tradizionali. Il Parco non è solo natura: è un **soggetto attivo** nella Protezione Civile del territorio, fondamentale per il Gruppo di Genzano.
 
+
+{{< foto src="/images/2026-09-29-parco-castelli-romani-collaborazione-corpo.webp"
+         alt="Paesaggio naturale italiano — territorio e ambiente"
+         caption="La conoscenza del territorio è il primo strumento di prevenzione." >}}
+
 ## Le funzioni di Protezione Civile del Parco
 
 Un Parco Regionale svolge funzioni dirette e indirette di PC:

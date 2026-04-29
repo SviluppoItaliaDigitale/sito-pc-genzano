@@ -15,6 +15,11 @@ draft: false
 
 Ogni autunno, **centinaia di piazze italiane** si riempiono di gazebo colorati e di volontari con la maglia blu: è la **campagna nazionale "Io Non Rischio"**, promossa dal **Dipartimento della Protezione Civile**, **ANPAS**, **INGV** e **ReLUIS**, con il supporto delle Regioni e del volontariato organizzato. Il Gruppo di Genzano partecipa, come ogni anno, all'edizione 2026.
 
+
+{{< foto src="/images/2026-09-25-io-non-rischio-campagna-autunno-corpo.webp"
+         alt="Squadra di volontari in tenuta operativa al lavoro"
+         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
+
 ## Cosa è "Io Non Rischio"
 
 "Io Non Rischio" è una **campagna nazionale di sensibilizzazione** sui rischi naturali e sulle buone pratiche di **autoprotezione**. Nata nel 2011, è cresciuta fino a coinvolgere **migliaia di volontari** formati, che ogni anno incontrano la cittadinanza in **piazze, scuole, fiere**.

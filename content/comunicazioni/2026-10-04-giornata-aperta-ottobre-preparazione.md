@@ -15,6 +15,11 @@ draft: false
 
 Entra nel vivo la preparazione della **Giornata Aperta** del Gruppo Comunale Volontari di Protezione Civile di Genzano, annunciata nelle scorse settimane. La data precisa, definita in coordinamento con il Comune, viene comunicata puntualmente sul sito e sui canali ufficiali. Ecco gli ultimi aggiornamenti su come partecipare utilmente.
 
+
+{{< foto src="/images/2026-10-04-giornata-aperta-ottobre-preparazione-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Programma di massima
 
 - **apertura** della sede con visite guidate;

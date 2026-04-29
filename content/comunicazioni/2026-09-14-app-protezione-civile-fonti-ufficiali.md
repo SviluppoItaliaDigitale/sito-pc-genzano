@@ -15,6 +15,11 @@ draft: false
 
 In un mondo saturo di informazioni, **conoscere le fonti ufficiali** è essenziale. Le bufale sui rischi naturali e le emergenze circolano velocemente: la migliore difesa è avere nel telefono una manciata di **riferimenti istituzionali** da consultare prima di condividere o reagire.
 
+
+{{< foto src="/images/2026-09-14-app-protezione-civile-fonti-ufficiali-corpo.webp"
+         alt="Volontari di un'associazione umanitaria al lavoro"
+         caption="Il volontariato organizzato è una componente strutturale del Sistema." >}}
+
 ## I riferimenti da avere — nazionale
 
 ### Dipartimento della Protezione Civile
