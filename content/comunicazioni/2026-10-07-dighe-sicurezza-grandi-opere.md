@@ -15,6 +15,11 @@ draft: false
 
 L'Italia gestisce circa **500 grandi dighe** (superiori ai 15 metri o con invaso oltre 1.000.000 m³) e oltre **10.000 piccoli invasi**. Dopo la tragedia del **Vajont** del 9 ottobre 1963, il sistema di sicurezza è stato profondamente rinnovato. Anche se nel Lazio non ci sono grandi dighe nei Castelli Romani, conoscere il sistema è parte della cultura nazionale di protezione civile.
 
+
+{{< foto src="/images/2026-10-07-dighe-sicurezza-grandi-opere-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## Il quadro italiano
 
 La sicurezza delle grandi dighe è affidata alla **Direzione Generale per le Dighe e le Infrastrutture Idriche** del Ministero delle Infrastrutture. Le competenze sono:

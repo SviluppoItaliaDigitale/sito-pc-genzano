@@ -15,6 +15,11 @@ draft: false
 
 Il **risparmio energetico** non è solo una questione di bollette o di ambiente. Una famiglia che consuma **meno energia** è una famiglia **più autonoma** — e quindi **più resiliente** a black-out, ondate di freddo, crisi di approvvigionamento. Anche la Protezione Civile può parlare di energia.
 
+
+{{< foto src="/images/2026-10-24-giornata-onu-risparmio-energetico-emergenze-corpo.webp"
+         alt="Infrastruttura tecnologica — illustrazione"
+         caption="Le infrastrutture critiche sono al centro della pianificazione di emergenza." >}}
+
 ## Perché l'energia è un tema di PC
 
 In caso di emergenza:

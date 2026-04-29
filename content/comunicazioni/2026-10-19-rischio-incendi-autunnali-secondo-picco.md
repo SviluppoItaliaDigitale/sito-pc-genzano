@@ -15,6 +15,11 @@ draft: false
 
 La **campagna AIB** estiva si è chiusa, ma il rischio di **incendi boschivi** non si azzera. In autunno può verificarsi un **secondo picco**, legato a sterpaglie secche, residui di potature e **bruciature abusive** da parte di privati. Una lettura corretta del rischio aiuta a tenere alta l'attenzione.
 
+
+{{< foto src="/images/2026-10-19-rischio-incendi-autunnali-secondo-picco-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Perché anche in autunno
 
 L'autunno può favorire incendi per diversi motivi:

@@ -15,6 +15,11 @@ draft: false
 
 Non tutti i rischi riguardano la natura. In Italia sono presenti diversi **stabilimenti industriali a rischio di incidente rilevante** regolati dalla **Direttiva Seveso** (oggi Seveso-III, D.Lgs. 105/2015). Conoscerne l'esistenza e i piani di emergenza fa parte della **cultura della sicurezza** del territorio.
 
+
+{{< foto src="/images/2026-10-20-rischio-industriale-seveso-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Cos'è la direttiva Seveso
 
 La **Direttiva Seveso** (dal nome del comune lombardo colpito nel 1976 dall'incidente dell'ICMESA) è una direttiva europea che:

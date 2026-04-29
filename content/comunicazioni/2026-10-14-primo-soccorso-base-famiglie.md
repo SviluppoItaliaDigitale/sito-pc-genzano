@@ -15,6 +15,11 @@ draft: false
 
 La maggior parte degli incidenti domestici non sono gravi, ma richiedono un **primo intervento** immediato. Conoscere i gesti base di primo soccorso — quelli utili nei **primi 3-5 minuti**, in attesa di soccorsi se necessario — è una competenza civica che ogni adulto dovrebbe avere.
 
+
+{{< foto src="/images/2026-10-14-primo-soccorso-base-famiglie-corpo.webp"
+         alt="Kit di primo soccorso aperto con materiale medico"
+         caption="Il primo soccorso è una competenza che ogni cittadino dovrebbe avere." >}}
+
 ## La regola d'oro
 
 Prima di ogni azione:
