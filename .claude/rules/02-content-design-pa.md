@@ -69,6 +69,23 @@ Specifiche complete: `MANUALE-SITO.md`, Parte 3.
 
 Specifiche complete in `MANUALE-SITO.md` Parte 14.9. Questa regola nasce dopo un incidente in cui una foto fornita dall'utente era stata sostituita dalla sola copertina automatica — comportamento non accettabile.
 
+### Foto utente — banner pulito (sito) vs carosello (social)
+
+Le foto fornite dall'utente **non vanno mai nel banner/copertina** del sito (campo `image:` del frontmatter). Il banner deve restare pulito col solo titolo dell'articolo e il page-hero blu istituzionale: è una scelta di design istituzionale che non si tocca.
+
+**Regola sito (web):**
+- `image:` resta `""` o viene popolato solo dalla **cover tipografica** automatica (gradiente blu + titolo, generata dal workflow `auto-cover-mancanti.py`) oppure dalle **foto da fonti ufficiali** (Wikipedia/NASA/USGS via marker `# TODO-foto-*`).
+- Le foto utente vanno **tutte dentro il corpo articolo** come `{{< foto >}}`:
+  - 1 foto → punto narrativamente sensato (dopo l'apertura o sotto un H2 pertinente).
+  - 2-3 foto → 1ª dopo 1° H2, 2ª dopo 2° H2, ecc. (convenzione articoli storici).
+  - **≥4 foto → galleria/carosello dentro l'articolo** (CSS scoped, immagini cliccabili, riga responsive o slider accessibile).
+
+**Regola social (Instagram/Facebook/X/Telegram):**
+- Stesse foto che stanno nel corpo articolo diventano automaticamente **carosello Instagram**: lo script `genera-immagini-social.py` rileva i blocchi `{{< foto src="..." >}}` nel body e li combina con la cover tipografica (max 10 immagini). Story sempre 1 sola.
+- **Niente da configurare**: stessa fonte (foto nel corpo), due usi distinti.
+
+**Riassunto pratico:** quando l'utente dice "ecco una foto" o "queste foto", `image:` resta vuoto, le foto vanno tutte nel corpo, e i social pescano da lì in automatico al prossimo workflow.
+
 ## Regola pittogrammi — supporto comprensione (bambini, anziani, L2)
 
 Il sito ha una libreria di **171 pittogrammi standardizzati** (46 ISO 7010 + 125 ARASAAC) in `static/pittogrammi/` per supportare la comprensione del testo a bambini, anziani, persone con disabilità cognitive e parlanti italiano L2 (regola di accessibilità cognitiva).
