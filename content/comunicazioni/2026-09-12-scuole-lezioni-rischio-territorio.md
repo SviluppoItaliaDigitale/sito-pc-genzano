@@ -15,6 +15,11 @@ draft: false
 
 Da settembre il Gruppo Comunale Volontari di PC riprende l'attività di **formazione nelle scuole** di Genzano: lezioni in classe, visite al gruppo, giornate di esercitazione con studenti. Un lavoro che si inserisce nei programmi scolastici di **educazione civica** e che prepara alla **cittadinanza consapevole**.
 
+
+{{< foto src="/images/2026-09-12-scuole-lezioni-rischio-territorio-corpo.webp"
+         alt="Sessione di formazione con docente e partecipanti"
+         caption="La formazione continua è il pilastro dell'operatività del volontariato." >}}
+
 ## Perché andare nelle scuole
 
 La **cultura del rischio** si costruisce da bambini. Un adulto che da piccolo ha imparato a **riconoscere una scossa**, a **chiudere il gas**, a **chiamare il 112**, è un cittadino più preparato e meno vulnerabile. La scuola è il luogo naturale per questa alfabetizzazione.

@@ -15,6 +15,11 @@ draft: false
 
 Non tutte le piogge sono uguali. Le **prime piogge intense d'autunno**, dopo mesi di estate secca, producono effetti più gravi rispetto a eventi simili in periodi piovosi. La ragione è semplice ma poco nota: il **terreno secco** funziona, per le prime ore, più come cemento che come spugna. Sapere questo cambia il modo di leggere le allerte di fine estate.
 
+
+{{< foto src="/images/2026-09-22-prima-pioggia-intensa-autunno-corpo.webp"
+         alt="Strada urbana con pioggia battente"
+         caption="Le precipitazioni intense sono in aumento per intensità e frequenza." >}}
+
 ## Perché il terreno secco è un problema
 
 Un suolo sottoposto a siccità prolungata **perde temporaneamente** la capacità di assorbire acqua rapidamente. Questo fenomeno, studiato in agronomia e geomorfologia, si chiama **idrofobia del suolo**. In pratica, l'acqua:

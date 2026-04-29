@@ -15,6 +15,11 @@ draft: false
 
 Il Gruppo Comunale Volontari di Protezione Civile di Genzano organizza una **giornata di porte aperte** per la cittadinanza. Un'occasione per visitare la sede, vedere mezzi e attrezzature, parlare con i volontari, scoprire come funziona la Protezione Civile a livello locale. Data precisa, orari e programma saranno comunicati in modo puntuale nei prossimi giorni.
 
+
+{{< foto src="/images/2026-09-27-giornata-aperta-gruppo-cittadinanza-corpo.webp"
+         alt="Veduta panoramica dei Castelli Romani"
+         caption="Il territorio di Genzano e dei Castelli Romani è il contesto di intervento del Gruppo." >}}
+
 ## Cosa si vedrà
 
 ### I mezzi
