@@ -15,6 +15,11 @@ draft: false
 
 **31 dicembre 2026**. **San Silvestro**. L'**ultimo giorno** del **2026**. Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** invia a tutti i **cittadini**, alle **istituzioni**, ai **colleghi volontari** un **augurio sincero** di **fine anno**.
 
+
+{{< foto src="/images/2026-12-31-san-silvestro-auguri-fine-anno-corpo.webp"
+         alt="Veduta panoramica dei Castelli Romani"
+         caption="Il territorio di Genzano e dei Castelli Romani è il contesto di intervento del Gruppo." >}}
+
 ## Un augurio a Genzano
 
 A **tutta Genzano**, dal **centro storico** al **Buonriposo**, dalle **Fontane** alle **Due Santini**, da **Villa Sforza** alla **Cecchina** e **Landi**, e a ogni **cittadino** sparso nel mondo:

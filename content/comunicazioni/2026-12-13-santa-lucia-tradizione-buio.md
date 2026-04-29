@@ -15,6 +15,11 @@ draft: false
 
 Il **13 dicembre** è la festa di **Santa Lucia**, martire siciliana vissuta tra il III e IV secolo. Nel detto popolare, "**Santa Lucia, il giorno più corto che ci sia**" (in realtà il solstizio d'inverno cade il 21 dicembre, ma astronomicamente il tramonto è già al suo minimo questi giorni).
 
+
+{{< foto src="/images/2026-12-13-santa-lucia-tradizione-buio-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Chi era Santa Lucia
 
 ### Storia

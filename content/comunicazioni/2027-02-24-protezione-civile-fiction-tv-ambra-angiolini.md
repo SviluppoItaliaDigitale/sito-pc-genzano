@@ -19,6 +19,11 @@ draft: false
 
 Una fiction Rai con **Ambra Angiolini** come protagonista ha portato in prima serata il mondo della **Protezione Civile italiana**: i volontari, i Centri Operativi, le emergenze sul campo, le notti in colonna mobile. È un'occasione di visibilità che la **Protezione Civile** raramente ha avuto fuori dai notiziari, e per noi del Gruppo è giusto parlarne — con qualche distinzione.
 
+
+{{< foto src="/images/2027-02-24-protezione-civile-fiction-tv-ambra-angiolini-corpo.webp"
+         alt="Squadra di volontari in tenuta operativa al lavoro"
+         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
+
 ## Perché ci interessa
 
 La rappresentazione televisiva conta. Il pubblico italiano si è formato un'idea della **medicina** dai medical drama, del **diritto** dai legal drama, della **polizia** dalle serie poliziesche. La **Protezione Civile**, invece, era quasi assente dalla narrazione di intrattenimento. Per la prima volta una **fiction in prima serata** mette al centro le persone che fanno il nostro lavoro: chi parte di notte con la chiamata di attivazione, chi monta il campo, chi tira su una tenda alle tre di mattina sotto la pioggia, chi ascolta uno sfollato che non sa più dove andrà a dormire.

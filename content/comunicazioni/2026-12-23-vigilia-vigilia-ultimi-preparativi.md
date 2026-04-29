@@ -15,6 +15,11 @@ draft: false
 
 Il **23 dicembre** è giornata tradizionalmente dedicata agli **ultimi preparativi** per il Natale. Spesa finale, pulizie veloci, organizzazione logistica. Qualche consiglio pratico per arrivare **sereni** alla vigilia.
 
+
+{{< foto src="/images/2026-12-23-vigilia-vigilia-ultimi-preparativi-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Supermercati affollati
 
 ### Oggi e domani mattina

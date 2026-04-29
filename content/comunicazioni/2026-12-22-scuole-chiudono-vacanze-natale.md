@@ -15,6 +15,11 @@ draft: false
 
 Oggi **martedì 22 dicembre 2026** è tipicamente l'**ultimo giorno** di scuola prima delle **vacanze di Natale** nella Regione Lazio (calendario variabile per singolo istituto). Qualche nota per famiglie, bambini e adolescenti.
 
+
+{{< foto src="/images/2026-12-22-scuole-chiudono-vacanze-natale-corpo.webp"
+         alt="Famiglia che prepara un kit di emergenza domestico"
+         caption="Il piano familiare di emergenza è il primo strumento di autoprotezione." >}}
+
 ## Il calendario scolastico 2026-2027 nel Lazio
 
 ### Vacanze di Natale

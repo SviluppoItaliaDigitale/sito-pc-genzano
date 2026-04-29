@@ -15,6 +15,11 @@ draft: false
 
 **25 dicembre 2026**. Buon **Natale** a tutta **Genzano**. Dal **Gruppo Comunale Volontari di Protezione Civile** un pensiero **sincero** a ogni famiglia, ogni persona, ogni volto della nostra città.
 
+
+{{< foto src="/images/2026-12-25-natale-auguri-genzano-corpo.webp"
+         alt="Veduta panoramica dei Castelli Romani"
+         caption="Il territorio di Genzano e dei Castelli Romani è il contesto di intervento del Gruppo." >}}
+
 ## Buon Natale
 
 A **ogni casa** di Genzano, da Via del Corso al Buonriposo, dalle Fontane alle Due Santini, da Villa Sforza alla Cecchina e Landi, e fuori di qui a tutti i **genzanesi** sparsi nel mondo:
