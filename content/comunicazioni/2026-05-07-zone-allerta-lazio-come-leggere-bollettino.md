@@ -17,6 +17,11 @@ Quando la Regione Lazio emette un'allerta meteo, il bollettino non parla dell'in
 
 In questo articolo spieghiamo come funziona il sistema a zone.
 
+
+{{< foto src="/images/2026-05-07-zone-allerta-lazio-come-leggere-bollettino-corpo.webp"
+         alt="Cielo con nuvole — illustrazione della previsione meteo"
+         caption="I bollettini meteo sono lo strumento di prevenzione quotidiana del rischio idrogeologico." >}}
+
 ## Perché dividere la regione in zone
 
 Una stessa pioggia non produce gli stessi effetti ovunque. Cento millimetri in pianura non sono come cento millimetri in montagna. Un temporale sulla costa ha effetti diversi da un temporale nell'entroterra. Per questo il sistema di allertamento italiano ha diviso l'intera penisola in **zone omogenee**, ciascuna con caratteristiche geomorfologiche e idrografiche simili.

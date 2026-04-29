@@ -17,6 +17,11 @@ Il Lazio è una regione a **sismicità media**. Non è un territorio a rischio e
 
 In questo articolo riassumiamo le indicazioni ufficiali del [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
 
+
+{{< foto src="/images/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa-corpo.webp"
+         alt="Macerie e edifici danneggiati dopo una scossa sismica"
+         caption="Il rischio sismico è una caratteristica strutturale del territorio italiano." >}}
+
 ## Durante la scossa
 
 Un terremoto dura pochi secondi, al massimo qualche decina. La regola d'oro è **non correre**: i movimenti improvvisi sono la causa principale degli infortuni.

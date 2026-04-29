@@ -17,6 +17,11 @@ Durante un'emergenza, prima che arrivino le istituzioni, sono spesso i **vicini*
 
 In questo articolo raccontiamo come organizzare, nella propria scala o nel proprio palazzo, una piccola rete informale di assistenza. Niente di complesso: poche regole, applicate con continuità.
 
+
+{{< foto src="/images/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza-corpo.webp"
+         alt="Volontario che assiste una persona anziana"
+         caption="Le persone fragili sono una priorità della pianificazione di emergenza." >}}
+
 ## Chi è una "persona fragile"
 
 Il termine è volutamente ampio. In un'emergenza può trovarsi in difficoltà:

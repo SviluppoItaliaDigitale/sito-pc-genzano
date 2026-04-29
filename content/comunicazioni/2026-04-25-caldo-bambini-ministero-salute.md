@@ -17,6 +17,11 @@ I **bambini piccoli** e i **neonati** sono tra le categorie più vulnerabili al 
 
 Il [Ministero della Salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore/), insieme al **Dipartimento di Epidemiologia (DEP) Lazio — ASL Roma 1** e al **Gruppo Pediatri per un mondo possibile (ACP)**, ha pubblicato l'opuscolo **"Estate in salute: come proteggere i vostri bambini"**. Ne riassumiamo in questa pagina le raccomandazioni principali, fedeli al documento originale.
 
+
+{{< foto src="/images/2026-04-25-caldo-bambini-ministero-salute-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## Perché i bambini sono più a rischio
 
 Rispetto all'adulto, il bambino piccolo:
