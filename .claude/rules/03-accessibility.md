@@ -84,7 +84,7 @@ Documentazione completa: `MANUALE-SITO.md` Parte 3.16.
 
 Il sito ha un **toolbar di accessibilità** nativo, presente su tutte le pagine come bottone rotondo blu (FAB) in basso a sinistra. Apre un dialog con preferenze di lettura: dimensione testo (4 livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande. Le preferenze sono salvate in `localStorage` e applicate come classi `html.a11y-*`.
 
-Per la struttura dei file, le regole di estensione e i divieti operativi vedi `04-hugo-architecture.md` sezione "Strumenti di Accessibilità".
+Per la struttura dei file, le regole di estensione e i divieti operativi vedi `04b-hugo-template-css.md` sezione "Strumenti di Accessibilità".
 
 **Principio:** il toolbar è uno strumento di **preferenze utente** sopra a un sito **già conforme WCAG 2.2 AA**. Non sostituisce l'accessibilità nativa: la integra. **Non è un overlay commerciale** (tipo AccessiBe, UserWay, Equally AI), che il W3C-WAI e le associazioni delle persone con disabilità sconsigliano perché mascherano problemi invece di risolverli.
 

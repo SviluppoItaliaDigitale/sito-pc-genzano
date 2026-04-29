@@ -51,7 +51,7 @@
 > - Nuovo file `static/js/share.js` (~70 righe) con Copy Link (Clipboard API +
 >   fallback `execCommand`) e Web Share API (auto-nasconde il bottone se non
 >   supportato). Caricato `defer` da `baseof.html`. Specifiche in regola
->   `04-hugo-architecture.md` sezione "Share buttons".
+>   `04a-hugo-shortcode-partial.md` sezione "Share buttons".
 >
 > **Changelog 2.7 (2026-04-27)**
 > - Nuova **Parte 14** — *Configurazione ambiente di sviluppo (Claude Code)*: documenta lo
@@ -1611,7 +1611,7 @@ draft: false
 
 ### 4.4 — Aggiungere la pagina al menu principale
 
-Il menu principale è organizzato come **mega-menu** (Opzione A) in `hugo.toml`: **6 voci di primo livello**, di cui 3 dropdown. La struttura è documentata in dettaglio in `.claude/rules/04-hugo-architecture.md` ma per l'uso quotidiano basta sapere questo.
+Il menu principale è organizzato come **mega-menu** (Opzione A) in `hugo.toml`: **7 voci di primo livello**, di cui 4 dropdown. La struttura è documentata in dettaglio in `.claude/rules/04b-hugo-template-css.md` ma per l'uso quotidiano basta sapere questo.
 
 **Struttura attuale:**
 
@@ -1657,7 +1657,7 @@ toc: true
 
 Hugo genera automaticamente un indice cliccabile con badge numerati `01`, `02`, `03`… che porta alle sezioni `##` e `###`. Il bottone "Torna in cima" si trasforma in "Torna all'indice".
 
-Il TOC funziona sia su `single.html` che su `list.html` (sezioni con `_index.md`). Pagine attualmente con TOC: tutte le 26 elencate in `04-hugo-architecture.md` (Formazione + 4 kit, Glossario, Piani, 9 sotto-rischi, Normativa + 7 Capi).
+Il TOC funziona sia su `single.html` che su `list.html` (sezioni con `_index.md`). Pagine attualmente con TOC: tutte le 26 elencate in `04b-hugo-template-css.md` (Formazione + 4 kit, Glossario, Piani, 9 sotto-rischi, Normativa + 7 Capi).
 
 Non attivare `toc: true` su pagine con meno di 4 H2: l'indice diventa visivamente sproporzionato.
 

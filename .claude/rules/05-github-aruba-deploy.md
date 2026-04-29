@@ -45,7 +45,7 @@ exclude: |
 
 Se aggiungi nuove esclusioni al workflow, aggiorna anche questa tabella e la **Parte 1.10** e **Parte 10.2** di `MANUALE-SITO.md`.
 
-**Cartella `riferimenti-interni/` (NON deployata):** la cartella di livello root `riferimenti-interni/` contiene documentazione di lavoro per maintainer/AI di supporto (norme tecniche copyrighted, draft di consultazione, materiale interno). **Non viene deployata** perché Hugo costruisce solo da `content/`, `static/`, `themes/`, `data/`, `assets/`, `layouts/`: una cartella di livello root estranea a queste resta fuori dal sito pubblico, sia su Aruba che su GitHub Pages. Niente esclusione FTP esplicita serve perché Hugo non genera alcun output da quella cartella. Specifiche complete in regola `04-hugo-architecture.md` e in `riferimenti-interni/README.md`.
+**Cartella `riferimenti-interni/` (NON deployata):** la cartella di livello root `riferimenti-interni/` contiene documentazione di lavoro per maintainer/AI di supporto (norme tecniche copyrighted, draft di consultazione, materiale interno). **Non viene deployata** perché Hugo costruisce solo da `content/`, `static/`, `themes/`, `data/`, `assets/`, `layouts/`: una cartella di livello root estranea a queste resta fuori dal sito pubblico, sia su Aruba che su GitHub Pages. Niente esclusione FTP esplicita serve perché Hugo non genera alcun output da quella cartella. Specifiche complete in regola `04c-hugo-static-cartelle.md` e in `riferimenti-interni/README.md`.
 
 ## Regole operative
 
