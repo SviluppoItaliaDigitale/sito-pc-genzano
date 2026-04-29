@@ -18,6 +18,11 @@ draft: false
 
 Il **16 ottobre** è la Giornata mondiale dell'alimentazione istituita dalla FAO. È un'occasione per tornare sul [Libro del Risparmio](/comunicazioni/2025-02-05-libro-risparmio-fondazione-barilla-presentazione/) di Fondazione Barilla e sintetizzare due capitoli che insieme contengono la parte più pratica del manuale: **cucina a zero spreco** (capitolo 2) e **avanzi** (capitolo 3). Il testo completo è in allegato.
 
+
+{{< foto src="/images/2025-10-16-cucina-zero-spreco-avanzi-recupero-corpo.webp"
+         alt="Cucina in operazione con preparazione di pasti"
+         caption="L'alimentazione in emergenza richiede protocolli specifici di sicurezza." >}}
+
 ## Cosa sembra scarto e invece è ingrediente
 
 Il primo messaggio del capitolo 2 è disarmante: **tante parti che buttiamo sono commestibili**, spesso più saporite della parte che consumiamo abitualmente. Alcuni esempi dal manuale:

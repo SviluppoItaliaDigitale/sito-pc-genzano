@@ -18,6 +18,11 @@ draft: false
 
 Proseguiamo l'approfondimento sul [manuale Caritas-Banco Alimentare](/comunicazioni/2024-11-26-manuale-caritas-banco-alimentare-presentazione/) validato dal Ministero della Salute, focalizzandoci sui capitoli 7 e 8: **prassi igieniche** e **sistema HACCP**. Il testo completo è allegato.
 
+
+{{< foto src="/images/2025-09-15-organizzazioni-caritative-haccp-buone-prassi-igieniche-corpo.webp"
+         alt="Squadra di volontari in tenuta operativa al lavoro"
+         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
+
 ## Il principio di base
 
 Chi recupera e distribuisce cibo a fini di solidarietà **è a tutti gli effetti un operatore del settore alimentare**. Anche se non vende nulla, anche se non trasforma gli alimenti, ha **la responsabilità della sicurezza** degli alimenti che gestisce sotto il proprio controllo — Reg. (CE) 178/2002 art. 17.

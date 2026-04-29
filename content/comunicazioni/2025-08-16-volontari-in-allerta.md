@@ -19,6 +19,11 @@ Al termine delle operazioni, il Gruppo mantiene un alto livello di allerta per e
 
 Per informazioni, contatta la sede del Gruppo.
 
+
+{{< foto src="/images/2025-08-16-volontari-in-allerta-corpo.webp"
+         alt="Squadra di volontari in tenuta operativa al lavoro"
+         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
+
 ## Per approfondire
 
 - Articolo: [Campagna AIB 2025: avvio stagione](/comunicazioni/2025-06-15-campagna-aib/)

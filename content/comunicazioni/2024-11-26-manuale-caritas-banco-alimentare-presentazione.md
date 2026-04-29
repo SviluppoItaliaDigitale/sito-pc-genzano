@@ -18,6 +18,11 @@ draft: false
 
 Il **Manuale di corrette prassi operative per il recupero, la raccolta e la distribuzione di cibo ai fini di solidarietà sociale**, edito da **Caritas Italiana** e **Fondazione Banco Alimentare Onlus**, è stato **validato dal Ministero della Salute** ai sensi dell'**articolo 8 del Regolamento CE 852/2004**. La prima edizione è dell'ottobre 2015. Il testo completo è allegato a questo articolo.
 
+
+{{< foto src="/images/2024-11-26-manuale-caritas-banco-alimentare-presentazione-corpo.webp"
+         alt="Cucina in operazione con preparazione di pasti"
+         caption="L'alimentazione in emergenza richiede protocolli specifici di sicurezza." >}}
+
 ## Cos'è e a chi serve
 
 È il **manuale di riferimento nazionale** per tutte le **Organizzazioni Caritative (OC)** — associazioni, parrocchie, enti del Terzo Settore — che si occupano di recuperare alimenti e distribuirli gratuitamente agli indigenti. Nasce per colmare un vuoto: le OC non sono aziende della ristorazione, ma svolgono comunque attività di manipolazione alimentare e devono garantire la **sicurezza igienica** dei prodotti distribuiti.

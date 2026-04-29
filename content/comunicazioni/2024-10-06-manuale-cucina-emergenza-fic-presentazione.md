@@ -18,6 +18,11 @@ draft: false
 
 Domenica 6 ottobre 2024, all'Auditorium del Dipartimento della Protezione Civile di Roma, la Federazione Italiana Cuochi ha presentato il **Manuale di Cucina in Emergenza**, curato dal DSEFIC — Dipartimento Solidarietà Emergenze. È il primo testo organico dedicato a chi gestisce la ristorazione nei campi di accoglienza, nei centri operativi e nelle strutture di assistenza alla popolazione durante un'emergenza.
 
+
+{{< foto src="/images/2024-10-06-manuale-cucina-emergenza-fic-presentazione-corpo.webp"
+         alt="Cucina in operazione con preparazione di pasti"
+         caption="L'alimentazione in emergenza richiede protocolli specifici di sicurezza." >}}
+
 ## Di cosa si tratta
 
 Il manuale nasce dall'esperienza sul campo dei cuochi volontari della FIC, impiegati dalla Protezione Civile nelle emergenze degli ultimi anni. Raccoglie in 88 pagine protocolli, procedure e buone pratiche per garantire pasti sicuri, equilibrati e rispettosi delle diverse esigenze nutrizionali anche nelle situazioni più difficili.

@@ -19,6 +19,11 @@ Le lezioni si tengono nella sede di Via Sicilia 13-15.
 
 Per informazioni e iscrizioni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
 
+
+{{< foto src="/images/2025-03-10-formazione-base-corpo.webp"
+         alt="Squadra di volontari in tenuta operativa al lavoro"
+         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
+
 ## Per approfondire
 
 - Articolo: [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)

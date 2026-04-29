@@ -18,6 +18,11 @@ draft: false
 
 In occasione della **Giornata nazionale di prevenzione dello spreco alimentare** (5 febbraio) la Fondazione Barilla ha presentato a Milano il **Libro del Risparmio — 120 azioni contro lo spreco alimentare per risparmiare dentro e fuori casa**. Il volume è disponibile gratuitamente ed è allegato a questo articolo.
 
+
+{{< foto src="/images/2025-02-05-libro-risparmio-fondazione-barilla-presentazione-corpo.webp"
+         alt="Cucina in operazione con preparazione di pasti"
+         caption="L'alimentazione in emergenza richiede protocolli specifici di sicurezza." >}}
+
 ## Perché parlarne anche su un sito di Protezione Civile
 
 La prevenzione non riguarda solo il rischio sismico, idrogeologico o incendi. Riguarda anche i comportamenti quotidiani che rendono la popolazione più resiliente: sapere conservare il cibo, pianificare la spesa, ridurre gli scarti è parte di una **cultura della preparazione** che in emergenza fa la differenza. La stessa logica che guida l'uso consapevole dell'acqua o dell'energia.
