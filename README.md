@@ -79,7 +79,11 @@ sito-pc-genzano/
 │   ├── social_links.yaml       ← link social
 │   └── codici_colore.yaml      ← descrizioni codici allerta
 ├── scripts/                    ← script Python di automazione (genera-cover,
-│                                  aggiorna-image-frontmatter)
+│                                  auto-cover-mancanti, applica-fascia-foto,
+│                                  audit-grammatica-italiana,
+│                                  fix-grammatica-italiana,
+│                                  genera-social, genera-immagini-social,
+│                                  foto-da-{wikipedia,nasa,usgs,noaa})
 ├── static/                     ← asset statici (immagini, PDF, JS condivisi)
 └── themes/flavour-pcgenzano/   ← tema custom (Bootstrap Italia 2.x)
     ├── layouts/shortcodes/     ← shortcode {{< foto >}} (click-per-ingrandire)
@@ -154,7 +158,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `smoke-test-post-deploy.yml` | Post-deploy | Smoke test live: status HTTP, marker JS, header sicurezza |
 | `aggiorna-manuale.yml` | Lunedì 06:00 UTC | Hash fonti AGID/Designers Italia → issue se cambiano |
 | `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Aggiornamenti Bootstrap Italia |
-| `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (38 sezioni)**: contenuti, codice/template, governance docs, audit aggiuntivo, link critici normativa (fuso `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026) |
+| `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (40 sezioni)**: contenuti, codice/template, governance docs, audit aggiuntivo, link critici normativa, **audit grammaticale italiano** (apostrofi finti, accenti mancanti, errori italiani tipici via `audit-grammatica-italiana.py`). Fusi `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026, sezione 40 grammaticale aggiunta il 29 aprile 2026. |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo lychee: tutti i link (interni + esterni) |
 | `genera-social-bozze.yml` | Ogni push articolo (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini Instagram (post 1080x1080 + carosello + story 1080x1920). Output in `social-bozze/<slug>/` e `static/images-social/`. Tier gratuito Gemini, costo zero. |
 | `scarica-foto-automatica.yml` | Ogni push con marker `# TODO-foto-*` | Scarica foto da Wikipedia/NASA/USGS/NOAA, applica fascia blu istituzionale, popola `image:` + credit. Plus: cover tipografica auto per articoli senza foto. |
