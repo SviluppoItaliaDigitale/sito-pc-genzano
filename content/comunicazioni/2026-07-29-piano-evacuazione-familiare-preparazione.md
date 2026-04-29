@@ -15,6 +15,11 @@ draft: false
 
 In caso di **emergenza** — un incendio, un terremoto, una fuga di gas, un'alluvione — pochi minuti possono fare la differenza tra salvezza e tragedia. Ogni famiglia dovrebbe avere un **piano di evacuazione** chiaro, condiviso con tutti i membri e praticato regolarmente. Non è un esercizio ansiogeno: è un atto di cura verso chi si ama.
 
+
+{{< foto src="/images/2026-07-29-piano-evacuazione-familiare-preparazione-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Perché serve un piano
 
 Senza un piano chiaro:

@@ -15,6 +15,11 @@ draft: false
 
 La campagna regionale **Anti Incendi Boschivi (AIB)** del Lazio prevede il periodo di **massima pericolosità dal 15 giugno al 30 settembre**, ma il picco statistico cade in agosto: temperature alte, vegetazione secca, venti occidentali e presenza turistica elevata si combinano in una miscela di fattori che richiede attenzione da parte di tutti.
 
+
+{{< foto src="/images/2026-08-03-rischio-incendi-agosto-picco-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Le cause più frequenti
 
 Secondo i dati pluriennali del [Corpo Nazionale dei Vigili del Fuoco](https://www.vigilfuoco.it/), oltre l'**80% degli incendi** boschivi in Italia è di **origine antropica**, colposa o dolosa:

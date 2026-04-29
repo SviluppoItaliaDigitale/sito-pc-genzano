@@ -15,6 +15,11 @@ draft: false
 
 Nei paesi dei Castelli Romani agosto coincide con il **calendario delle sagre e delle feste patronali**. Sono occasioni di aggregazione, di promozione del territorio, di recupero di tradizioni locali. Dietro a ogni evento aperto al pubblico c'è una **filiera di sicurezza** che molti cittadini non conoscono e che vale la pena raccontare.
 
+
+{{< foto src="/images/2026-08-11-sagre-feste-patronali-agosto-piani-sicurezza-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## La normativa di riferimento
 
 Gli eventi pubblici con pubblico concentrato in spazi aperti o chiusi sono regolati da:

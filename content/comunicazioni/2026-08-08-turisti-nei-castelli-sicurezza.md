@@ -15,6 +15,11 @@ draft: false
 
 Ad agosto i **Castelli Romani** registrano il picco annuale di presenze turistiche: italiani in gita fuori porta da Roma, stranieri in tour della regione, famiglie che frequentano il lago di Nemi o quello di Albano. La convivenza fra residenti e ospiti si gestisce meglio se le informazioni essenziali circolano da subito.
 
+
+{{< foto src="/images/2026-08-08-turisti-nei-castelli-sicurezza-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## Informazioni utili per chi ospita
 
 Chi ospita amici o parenti a Genzano — o gestisce una struttura ricettiva, anche non professionale — può dare ai propri ospiti alcune indicazioni base:

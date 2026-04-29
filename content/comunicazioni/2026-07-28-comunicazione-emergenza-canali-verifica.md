@@ -15,6 +15,11 @@ draft: false
 
 In **emergenza** circolano molte informazioni, non tutte affidabili. Notizie rapide, messaggi WhatsApp, post social, titoli sensazionalistici: chi deve decidere cosa fare per la propria famiglia rischia di essere confuso. Sapere quali sono i **canali ufficiali** e come **verificare le fonti** è un gesto di **autoprotezione** tanto concreto quanto avere un kit di emergenza.
 
+
+{{< foto src="/images/2026-07-28-comunicazione-emergenza-canali-verifica-corpo.webp"
+         alt="Volontari di un'associazione umanitaria al lavoro"
+         caption="Il volontariato organizzato è una componente strutturale del Sistema." >}}
+
 ## Il rumore informativo
 
 Durante un'emergenza tipicamente accade che:

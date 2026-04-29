@@ -15,6 +15,11 @@ draft: false
 
 In estate l'organismo perde acqua attraverso sudorazione, respirazione e urine. Se la perdita non è compensata, si arriva prima alla **disidratazione** e poi, nei casi più gravi, al **colpo di calore**, che è un'emergenza medica. Conoscere i segnali precoci permette di intervenire prima.
 
+
+{{< foto src="/images/2026-08-04-idratazione-colpo-calore-sintomi-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## Quanto bere
 
 Le indicazioni dell'**Istituto Superiore di Sanità** per un adulto sono di circa **2 litri al giorno** in condizioni normali, che salgono a **2,5-3 litri** nei giorni di caldo intenso o in caso di attività fisica. Per gli **anziani**, che spesso non avvertono la sete, il bere va distribuito lungo la giornata **anche senza stimolo**. Per i **bambini**, il riferimento è il pediatra.
