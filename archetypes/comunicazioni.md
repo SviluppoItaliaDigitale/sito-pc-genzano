@@ -36,12 +36,30 @@ image: ""
 #   # TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "search query"       slug-articolo
 #   # TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap <eventid>   slug-articolo
 #   # TODO-foto-noaa:      bash scripts/foto-da-noaa.sh      "URL diretto NOAA"   "Descrizione" slug-articolo
+#   # TODO-foto-pexels:    bash scripts/foto-da-pexels.sh    "search query"       slug-articolo
+#   # TODO-foto-pixabay:   bash scripts/foto-da-pixabay.sh   "search query"       slug-articolo
+#   # TODO-foto-unsplash:  bash scripts/foto-da-unsplash.sh  "search query"       slug-articolo
+#
+# Quale fonte scegliere:
+#   - Wikipedia → eventi storici, personaggi, opere, organizzazioni
+#   - NASA → fenomeni globali visti dallo spazio (uragani, eruzioni)
+#   - USGS → ShakeMap di un terremoto specifico (serve l'eventid USGS)
+#   - NOAA → uragani, NHC tracks, foto storiche meteo (URL diretto)
+#   - Pexels/Unsplash → foto stock generiche (atmosfera, persone, attività)
+#   - Pixabay → foto stock alta qualità, illustrazioni, oggetti, paesaggi
 #
 # Esempi:
 #   # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
 #   # TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "Etna eruption"                  2026-08-12-etna
 #   # TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap us10006g7d              2026-08-24-amatrice-shakemap
 #   # TODO-foto-noaa:      bash scripts/foto-da-noaa.sh      "https://www.nhc.noaa.gov/.../katrina.png" "Traccia uragano Katrina (NHC)" 2026-08-29-katrina
+#   # TODO-foto-pexels:    bash scripts/foto-da-pexels.sh    "rescue volunteer"               2026-09-15-volontariato
+#   # TODO-foto-pixabay:   bash scripts/foto-da-pixabay.sh   "first aid kit"                  2026-09-20-primo-soccorso
+#   # TODO-foto-unsplash:  bash scripts/foto-da-unsplash.sh  "fire firefighter"               2026-08-15-aib
+#
+# NOTA: Pexels/Pixabay/Unsplash richiedono API key configurate come GitHub
+# Secrets (PEXELS_API_KEY, PIXABAY_API_KEY, UNSPLASH_ACCESS_KEY). Le altre
+# 4 fonti (Wikipedia/NASA/USGS/NOAA) funzionano sempre senza API key.
 
 # ── TESTO ALTERNATIVO IMMAGINE (a11y) ──
 # Descrive cosa si vede nell'immagine per chi usa screen reader.
