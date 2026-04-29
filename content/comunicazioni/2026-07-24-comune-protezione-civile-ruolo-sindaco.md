@@ -15,6 +15,11 @@ draft: false
 
 Nel sistema italiano di **Protezione Civile** il **Sindaco** è l'**autorità comunale**. Non è un ruolo simbolico: significa responsabilità operativa, poteri specifici, doveri che la legge definisce con precisione. Conoscere questo ruolo aiuta i cittadini a capire come funziona il sistema locale e a collaborare in modo consapevole.
 
+
+{{< foto src="/images/2026-07-24-comune-protezione-civile-ruolo-sindaco-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Il quadro normativo
 
 Il ruolo del Sindaco è definito da:

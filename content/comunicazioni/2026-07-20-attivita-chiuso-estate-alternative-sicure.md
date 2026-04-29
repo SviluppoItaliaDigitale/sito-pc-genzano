@@ -15,6 +15,11 @@ draft: false
 
 Nelle **ore più calde** della giornata estiva — tipicamente tra le 12 e le 17 — la miglior protezione è restare **al riparo** in luoghi freschi. Non tutti hanno climatizzazione a casa. Per questo i **luoghi pubblici climatizzati** diventano risorsa preziosa, soprattutto per anziani e famiglie con bambini. E offrono anche occasioni di **vita comunitaria** contro l'isolamento estivo.
 
+
+{{< foto src="/images/2026-07-20-attivita-chiuso-estate-alternative-sicure-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## I rifugi climatici urbani
 
 Molte città hanno attivato mappe dei **rifugi climatici urbani** — luoghi pubblici accessibili dove ripararsi gratuitamente dal caldo:

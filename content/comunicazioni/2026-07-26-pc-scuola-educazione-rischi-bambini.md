@@ -15,6 +15,11 @@ draft: false
 
 Una **cultura della prevenzione** non si improvvisa: si costruisce **fin dall'infanzia**. Per questo da anni la Protezione Civile italiana investe nell'**educazione scolastica**. Progetti nazionali, regionali e locali portano nelle aule i concetti base di rischio, autoprotezione, solidarietà. Il bambino che oggi impara a riconoscere un'allerta sarà **il cittadino più consapevole** domani.
 
+
+{{< foto src="/images/2026-07-26-pc-scuola-educazione-rischi-bambini-corpo.webp"
+         alt="Aula scolastica con bambini durante una lezione"
+         caption="L'educazione al rischio inizia a scuola." >}}
+
 ## Perché insegnare alla scuola
 
 L'educazione scolastica alla PC ha diversi obiettivi:

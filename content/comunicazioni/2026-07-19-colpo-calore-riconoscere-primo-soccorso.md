@@ -15,6 +15,11 @@ draft: false
 
 Il **colpo di calore** è un'**emergenza medica** che può avere conseguenze gravi, anche fatali. Si manifesta quando il corpo non riesce più a raffreddarsi e la temperatura interna sale oltre **i 40 °C**. Riconoscerlo tempestivamente e intervenire nel modo giusto può salvare una vita. Ogni cittadino dovrebbe conoscerne le basi.
 
+
+{{< foto src="/images/2026-07-19-colpo-calore-riconoscere-primo-soccorso-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## Cosa è un colpo di calore
 
 Il **colpo di calore** (heat stroke) è il risultato del fallimento della termoregolazione corporea in ambiente caldo. Differisce dall'**insolazione** (colpo di sole) che è legato all'esposizione diretta alla radiazione solare.

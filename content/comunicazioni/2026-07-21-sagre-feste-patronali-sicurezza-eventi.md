@@ -15,6 +15,11 @@ draft: false
 
 L'estate dei **Castelli Romani** è fatta anche di **sagre, feste patronali, eventi enogastronomici e religiosi**. Ogni weekend un Comune dei Castelli ospita un evento che attira migliaia di persone. Dietro a ogni manifestazione c'è un lavoro di **pianificazione della sicurezza** che include anche la **Protezione Civile**. Vale la pena conoscerlo come cittadini.
 
+
+{{< foto src="/images/2026-07-21-sagre-feste-patronali-sicurezza-eventi-corpo.webp"
+         alt="Alberi piegati dal vento durante una tempesta"
+         caption="Il vento forte è uno dei fenomeni più sottostimati a livello di rischio." >}}
+
 ## Gli eventi tradizionali
 
 Alcuni appuntamenti iconici della nostra zona:

@@ -15,6 +15,11 @@ draft: false
 
 Le **alluvioni lampo** — in inglese *flash flood* — sono eventi idrologici improvvisi in cui **grandi quantità d'acqua** si concentrano in **poco tempo** in **aree ristrette**. In estate sono particolarmente pericolose perché si verificano durante temporali brevi ma intensi, su terreni indeboliti dalla siccità. Sono un rischio **sottovalutato** dal grande pubblico.
 
+
+{{< foto src="/images/2026-07-11-alluvioni-lampo-cosa-sono-come-proteggersi-corpo.webp"
+         alt="Strada urbana allagata dopo un evento di pioggia intensa"
+         caption="Le alluvioni urbane sono in aumento per effetto dei cambiamenti climatici." >}}
+
 ## La meccanica del flash flood
 
 Perché si verifichi un'alluvione lampo servono:

@@ -15,6 +15,11 @@ draft: false
 
 Le **esercitazioni di Protezione Civile** possono apparire, a chi le guarda da fuori, come "rappresentazioni": squadre che simulano interventi, evacuazioni controllate, attivazione di sale operative. In realtà sono **momenti tecnici** con obiettivi precisi: **verificare piani**, **formare personale**, **integrare sistemi**, **identificare criticità**.
 
+
+{{< foto src="/images/2026-07-09-esercitazioni-pc-a-cosa-servono-corpo.webp"
+         alt="Sessione di formazione con docente e partecipanti"
+         caption="La formazione continua è il pilastro dell'operatività del volontariato." >}}
+
 ## Perché si fanno esercitazioni
 
 I motivi principali:

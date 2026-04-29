@@ -15,6 +15,11 @@ draft: false
 
 La **grandine** è tra i fenomeni meteo estivi più **impressionanti e dannosi**. In pochi minuti può distruggere raccolti, danneggiare veicoli, ferire persone, rompere finestre e coperture. Il 2026 vede eventi grandinigeni in aumento. Vale la pena conoscere il fenomeno e sapere come reagire.
 
+
+{{< foto src="/images/2026-07-17-grandine-estiva-danni-protezione-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Come si forma la grandine
 
 La grandine si genera nei **cumulonembi** (nubi temporalesche) quando:
