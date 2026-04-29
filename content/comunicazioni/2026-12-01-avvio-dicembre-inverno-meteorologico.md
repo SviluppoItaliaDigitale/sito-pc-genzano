@@ -15,6 +15,11 @@ draft: false
 
 Il **1° dicembre** segna l'**avvio** dell'**inverno meteorologico** (che per convenzione copre dicembre, gennaio, febbraio). Un mese intenso tra **feste**, **meteo invernale rigoroso**, **allerte** possibili, **prevenzione** da completare. Cosa aspettarsi.
 
+
+{{< foto src="/images/2026-12-01-avvio-dicembre-inverno-meteorologico-corpo.webp"
+         alt="Cielo con nuvole — illustrazione della previsione meteo"
+         caption="I bollettini meteo sono lo strumento di prevenzione quotidiana del rischio idrogeologico." >}}
+
 ## Inverno meteorologico vs astronomico
 
 ### Definizioni

@@ -15,6 +15,11 @@ draft: false
 
 Il **20 novembre** è la **Giornata Internazionale dei Diritti dell'Infanzia e dell'Adolescenza**, ricorrenza istituita nel 1989 per l'approvazione della **Convenzione ONU** sui diritti dei bambini. Un'occasione per riflettere su un tema importante: come **insegnare il rischio** ai bambini senza **spaventarli** o generare **ansia**.
 
+
+{{< foto src="/images/2026-11-20-educazione-al-rischio-bambini-corpo.webp"
+         alt="Aula scolastica con bambini durante una lezione"
+         caption="L'educazione al rischio inizia a scuola." >}}
+
 ## I diritti dei bambini
 
 La Convenzione ONU sancisce per ogni bambino il diritto a:

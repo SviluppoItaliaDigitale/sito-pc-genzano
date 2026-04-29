@@ -15,6 +15,11 @@ draft: false
 
 A **dicembre** il **riscaldamento** funziona a pieno regime. È anche il mese di picco per **incidenti domestici** legati a stufe, camini, caldaie. Un ripasso delle regole di **sicurezza** è sempre utile.
 
+
+{{< foto src="/images/2026-12-04-riscaldamento-sicuro-dicembre-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## I rischi principali
 
 ### Monossido di carbonio (CO)
