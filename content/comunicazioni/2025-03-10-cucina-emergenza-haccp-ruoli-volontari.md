@@ -18,6 +18,11 @@ draft: false
 
 Quando la Protezione Civile apre un campo di accoglienza o un centro operativo, la **cucina** è una delle prime strutture a essere allestita. Non si tratta solo di preparare pasti: è un'area che deve rispettare gli stessi standard igienico-sanitari di una mensa permanente. Il Manuale DSEFIC della Federazione Italiana Cuochi — che abbiamo aggiunto alla nostra [Area Download](/area-download/) — dedica il primo capitolo proprio a questo tema.
 
+
+{{< foto src="/images/2025-03-10-cucina-emergenza-haccp-ruoli-volontari-corpo.webp"
+         alt="Sessione di formazione con docente e partecipanti"
+         caption="La formazione continua è il pilastro dell'operatività del volontariato." >}}
+
 ## La sorveglianza sanitaria
 
 Tutti i volontari che operano in cucina, a qualsiasi titolo, devono avere una formazione adeguata secondo la normativa vigente. In particolare:

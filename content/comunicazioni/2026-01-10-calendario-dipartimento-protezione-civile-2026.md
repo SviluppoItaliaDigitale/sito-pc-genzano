@@ -22,6 +22,11 @@ Puoi sfogliarlo online oppure scaricarlo in PDF tramite il link in fondo a quest
 
 ---
 
+
+{{< foto src="/images/2026-01-10-calendario-dipartimento-protezione-civile-2026-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Il tema dell'edizione 2026
 
 Il calendario racconta l'**impegno della protezione civile italiana all'estero**: un percorso fatto di solidarietà, competenza e presenza nei momenti più difficili per le popolazioni colpite da calamità in tutto il mondo.
