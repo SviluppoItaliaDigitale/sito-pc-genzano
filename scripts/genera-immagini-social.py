@@ -22,6 +22,7 @@ Dipendenze: Pillow (pip install Pillow), font-liberation (apt: fonts-liberation)
 import argparse
 import datetime
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -248,12 +249,46 @@ def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
     return out_path
 
 
+def estrai_foto_inline(body: str) -> list[Path]:
+    """Estrae tutti i path delle foto inline dallo shortcode {{< foto src="..." >}}.
+    Ritorna lista di Path assoluti (relativi a static/).
+    Supporta sia {{< foto >}} che {{% foto %}}."""
+    pattern = re.compile(
+        r'\{\{[<%]\s*foto\s+(?:[^>%]*?\s+)?src=["\']([^"\']+)["\']',
+        re.IGNORECASE,
+    )
+    risultati = []
+    for src in pattern.findall(body):
+        # Path relativi (/images/...) -> static/images/...
+        risultati.append(ROOT / "static" / src.lstrip("/"))
+    return risultati
+
+
+def crea_cover_tipografica(art_path: Path) -> Path | None:
+    """Se la cover dell'articolo non esiste, genera una cover tipografica
+    auto chiamando scripts/genera-cover.py. Ritorna il path della cover
+    creata o None se la generazione fallisce."""
+    cover_script = ROOT / "scripts" / "genera-cover.py"
+    if not cover_script.exists():
+        return None
+    try:
+        subprocess.run(
+            ["python3", str(cover_script), str(art_path)],
+            check=True, capture_output=True, text=True,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"  ERRORE genera-cover.py: {e.stderr[:300]}", file=sys.stderr)
+        return None
+    # genera-cover.py salva in static/images/<slug>.webp
+    return IMAGES_DIR / f"{art_path.stem}.webp"
+
+
 def estrai_articolo(path: Path) -> dict | None:
     try:
         testo = path.read_text(encoding="utf-8")
     except OSError:
         return None
-    fm, _ = parse_frontmatter(testo)
+    fm, body = parse_frontmatter(testo)
     if fm.get("draft", "").lower() in ("true", "yes", "1"):
         return None
     m = re.match(r"(\d{4}-\d{2}-\d{2})", fm.get("date", ""))
@@ -261,15 +296,45 @@ def estrai_articolo(path: Path) -> dict | None:
         return None
     if datetime.date.fromisoformat(m.group(1)) > datetime.date.today():
         return None
+
+    # Cover principale dal frontmatter
     cover_rel = fm.get("image", "")
-    if not cover_rel:
-        return None
-    cover_path = ROOT / "static" / cover_rel.lstrip("/")
+    cover_path = None
+    if cover_rel:
+        cover_path = ROOT / "static" / cover_rel.lstrip("/")
+        if not cover_path.exists():
+            cover_path = None  # path nel frontmatter ma file mancante
+
+    # Se cover assente, prova a generare quella tipografica al volo
+    if cover_path is None:
+        cover_path = crea_cover_tipografica(path)
+        if cover_path is None or not cover_path.exists():
+            return None
+
+    # Foto inline dal corpo (per il carosello Instagram)
+    foto_inline = estrai_foto_inline(body)
+
+    # Carosello = cover + inline (deduplicato, mantenendo ordine)
+    carousel = [cover_path] + foto_inline
+    seen = set()
+    carousel_unique = []
+    for p in carousel:
+        if not p.exists():
+            continue
+        chiave = str(p.resolve())
+        if chiave in seen:
+            continue
+        seen.add(chiave)
+        carousel_unique.append(p)
+    # Limite Instagram: 10 immagini per carosello
+    carousel_unique = carousel_unique[:10]
+
     return {
         "slug": path.stem,
         "title": fm.get("title", ""),
         "description": fm.get("description", ""),
         "cover": cover_path,
+        "carousel": carousel_unique,
     }
 
 
@@ -317,20 +382,55 @@ def main() -> int:
             saltati += 1
             continue
 
-        post_path = SOCIAL_DIR / f"{art['slug']}-instagram-post.webp"
-        story_path = SOCIAL_DIR / f"{art['slug']}-instagram-story.webp"
+        n_foto = len(art["carousel"])
 
-        if not args.force and post_path.exists() and story_path.exists():
-            print(f"  GIÀ PRESENTI (--force per ri-generare): {art['slug']}",
-                  file=sys.stderr)
-            saltati += 1
-            continue
+        # Pulisci eventuali immagini precedenti se --force (potrebbero essere
+        # rimaste numerate da un run con piu' carousel)
+        if args.force:
+            for old in SOCIAL_DIR.glob(f"{art['slug']}-instagram-post*.webp"):
+                old.unlink()
+
+        # Naming:
+        #   1 sola foto -> <slug>-instagram-post.webp (compat. retro)
+        #   2+ foto    -> <slug>-instagram-post-1.webp, -2.webp, ...
+        if n_foto == 1:
+            target = SOCIAL_DIR / f"{art['slug']}-instagram-post.webp"
+            if not args.force and target.exists() and \
+                    (SOCIAL_DIR / f"{art['slug']}-instagram-story.webp").exists():
+                print(f"  GIÀ PRESENTE (--force per ri-generare): {art['slug']}",
+                      file=sys.stderr)
+                saltati += 1
+                continue
+        else:
+            target_1 = SOCIAL_DIR / f"{art['slug']}-instagram-post-1.webp"
+            if not args.force and target_1.exists() and \
+                    (SOCIAL_DIR / f"{art['slug']}-instagram-story.webp").exists():
+                print(f"  GIÀ PRESENTE carosello (--force per ri-generare): {art['slug']}",
+                      file=sys.stderr)
+                saltati += 1
+                continue
 
         try:
-            crea_post_quadrato(art["cover"], art["title"], art["slug"])
+            if n_foto == 1:
+                # Singolo post: usa il nome senza suffisso numerico
+                crea_post_quadrato(art["carousel"][0], art["title"], art["slug"])
+            else:
+                # Carosello: <slug>-instagram-post-1.webp, -2.webp, ...
+                for idx, foto in enumerate(art["carousel"], 1):
+                    slug_num = f"{art['slug']}-{idx}"
+                    crea_post_quadrato(foto, art["title"], slug_num)
+                    # Rinomino: crea_post_quadrato salva come <slug>-instagram-post.webp
+                    src = SOCIAL_DIR / f"{slug_num}-instagram-post.webp"
+                    dst = SOCIAL_DIR / f"{art['slug']}-instagram-post-{idx}.webp"
+                    if src.exists():
+                        src.rename(dst)
+
+            # Story: sempre 1 sola, usa la cover principale
             crea_story_verticale(art["cover"], art["title"], art["description"],
                                  art["slug"])
-            print(f"  ✓ {art['slug']}", file=sys.stderr)
+
+            tipo = "singolo" if n_foto == 1 else f"carosello x{n_foto}"
+            print(f"  ✓ {art['slug']} ({tipo})", file=sys.stderr)
             ok += 1
         except Exception as e:
             print(f"  ERRORE {art['slug']}: {e}", file=sys.stderr)
