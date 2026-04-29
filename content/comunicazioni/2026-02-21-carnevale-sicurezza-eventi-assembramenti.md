@@ -17,6 +17,11 @@ Il **Carnevale** è un appuntamento amato in molti paesi dei Castelli Romani. Sf
 
 Come ogni evento pubblico con **grande afflusso di persone**, richiede però **una buona organizzazione** della sicurezza. Il volontariato di Protezione Civile è spesso presente, a supporto del Comune e delle forze dell'ordine, per garantire che la festa si svolga in serenità.
 
+
+{{< foto src="/images/2026-02-21-carnevale-corpo.webp"
+         alt="Particolare di un volto truccato da clown, con sfondo sfocato di una folla in festa"
+         caption="Gli eventi di Carnevale richiamano migliaia di persone in spazi ristretti: la gestione della sicurezza è un capitolo serio della pianificazione comunale. _Foto: Anton Volnuhin — Unsplash License._" >}}
+
 ## Cosa può succedere a un evento pubblico
 
 Gli scenari di rischio in un evento carnevalesco — anche se raramente si concretizzano — sono noti:

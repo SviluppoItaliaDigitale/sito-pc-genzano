@@ -17,6 +17,11 @@ Il **22 marzo** è la **Giornata mondiale dell'acqua** (*World Water Day*), isti
 
 Per la **Protezione Civile**, l'acqua è **risorsa** e allo stesso tempo **rischio**. La gestione del rischio idrico — siccità, contaminazioni, alluvioni, rotture di rete — è parte integrante della pianificazione di emergenza.
 
+
+{{< foto src="/images/2026-03-22-acqua-corpo.webp"
+         alt="Goccia d'acqua che cade da un rubinetto domestico, primo piano"
+         caption="L'acqua potabile in casa è un bene scontato finché non manca. La rete idrica è una delle infrastrutture critiche presidiate dalla Protezione Civile. _Foto: photim — Pixabay Content License._" >}}
+
 ## La rete idrica italiana
 
 In Italia oltre il **90% della popolazione** ha accesso all'acqua potabile da rubinetto. Un risultato frutto di **decenni di investimenti** in acquedotti, depuratori, reti di distribuzione. Ma il sistema soffre:

@@ -17,6 +17,11 @@ L'**8 marzo**, **Giornata internazionale della donna**, non è solo una ricorren
 
 Nel Gruppo Comunale di Genzano, come in tutto il sistema italiano, le donne sono **volontarie, formatrici, responsabili, coordinatrici, tecniche**. Non come eccezione, ma come **parte normale** di una realtà che funziona solo se tutti danno il proprio contributo.
 
+
+{{< foto src="/images/2026-03-08-donne-corpo.webp"
+         alt="Squadra di operatori di Protezione Civile in addestramento di soccorso su superficie ghiacciata"
+         caption="Donne e uomini lavorano fianco a fianco in tutte le squadre operative del Sistema. _Foto: Roman Biernacki — Pexels License._" >}}
+
 ## Uno sguardo al passato
 
 Il volontariato italiano ha avuto, storicamente, una componente femminile molto forte. Dalle **crocerossine** dei conflitti mondiali alle **angele del fango** di Firenze 1966, le donne sono sempre state presenti nelle emergenze italiane.
