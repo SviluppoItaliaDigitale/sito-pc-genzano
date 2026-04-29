@@ -5,14 +5,14 @@ description: "Il 22 aprile si celebra la Giornata della Terra. Per la Protezione
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani.webp"
-image_alt: "Cover dell'articolo: Giornata della Terra: il clima che cambia e i rischi sul nostro territorio"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-nasa: bash scripts/foto-da-nasa.sh "Earth from space blue marble" 2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani
+
 Il 22 aprile si celebra la [Giornata della Terra](https://www.un.org/en/observances/earth-day), istituita dalle Nazioni Unite nel 1970. Non è una festa ambientalista generica: per il sistema di Protezione Civile è un'occasione per ricordare quanto **la salute del pianeta influenzi direttamente la sicurezza dei territori**. Ogni grado in più nelle medie climatiche ha conseguenze concrete sulle comunità, sugli edifici, sui servizi.
 
 In questo articolo proviamo a raccontare il legame tra crisi climatica ed eventi estremi con uno sguardo al nostro territorio: i **Castelli Romani** e Genzano di Roma.

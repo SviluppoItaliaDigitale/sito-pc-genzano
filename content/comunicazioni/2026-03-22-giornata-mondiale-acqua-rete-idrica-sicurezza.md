@@ -5,14 +5,14 @@ description: "Il 22 marzo è la Giornata mondiale dell'acqua. Una risorsa prezio
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-03-22-giornata-mondiale-acqua-rete-idrica-sicurezza.webp"
-image_alt: "Cover dell'articolo: Giornata mondiale dell'acqua: rete idrica e sicurezza"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Lago di Nemi" 2026-03-22-giornata-mondiale-acqua-rete-idrica-sicurezza it
+
 Il **22 marzo** è la **Giornata mondiale dell'acqua** (*World Water Day*), istituita dalle Nazioni Unite nel 1993. Ogni anno un tema specifico richiama l'attenzione su un aspetto della gestione idrica globale: dall'accesso universale all'acqua potabile ai cambiamenti climatici, dall'inquinamento alla cooperazione transfrontaliera.
 
 Per la **Protezione Civile**, l'acqua è **risorsa** e allo stesso tempo **rischio**. La gestione del rischio idrico — siccità, contaminazioni, alluvioni, rotture di rete — è parte integrante della pianificazione di emergenza.

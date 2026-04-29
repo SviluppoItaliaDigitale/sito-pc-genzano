@@ -5,14 +5,14 @@ description: "Il movimento nato da Henry Dunant unisce 192 Paesi nel soccorso e 
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-08-giornata-mondiale-croce-rossa-mezzaluna.webp"
-image_alt: "Cover dell'articolo: 8 maggio: Giornata mondiale della Croce Rossa e della Mezzaluna Rossa"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Henry Dunant" 2026-05-08-giornata-mondiale-croce-rossa-mezzaluna it
+
 L'**8 maggio** è la [Giornata mondiale della Croce Rossa e della Mezzaluna Rossa](https://www.cri.it/), nel giorno della nascita di **Henry Dunant**, fondatore del movimento. Nato nel 1863 dopo la battaglia di Solferino, il movimento oggi riunisce 192 società nazionali e 16 milioni di volontari nel mondo, uniti da sette principi universali: **umanità, imparzialità, neutralità, indipendenza, volontariato, unità, universalità**.
 
 

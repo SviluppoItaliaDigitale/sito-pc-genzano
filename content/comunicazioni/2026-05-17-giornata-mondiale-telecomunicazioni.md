@@ -5,14 +5,14 @@ description: "La Giornata mondiale delle telecomunicazioni ricorda quanto la con
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-17-giornata-mondiale-telecomunicazioni.webp"
-image_alt: "Cover dell'articolo: 17 maggio: Giornata mondiale delle telecomunicazioni e il ruolo in emergenza"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Radioamatore" 2026-05-17-giornata-mondiale-telecomunicazioni it
+
 Il **17 maggio** è la [Giornata mondiale delle telecomunicazioni e della società dell'informazione](https://www.itu.int/en/wtisd), istituita dall'Unione Internazionale delle Telecomunicazioni (ITU). Ricorda il giorno del 1865 in cui fu fondata la ITU a Parigi, per standardizzare la telegrafia internazionale. Oggi quella stessa organizzazione coordina gli standard globali della telefonia, di internet, delle comunicazioni satellitari.
 
 Per il sistema di Protezione Civile, le telecomunicazioni sono **infrastruttura critica**: se cadono, l'emergenza diventa più difficile da gestire.

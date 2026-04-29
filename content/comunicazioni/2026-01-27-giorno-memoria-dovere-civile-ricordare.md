@@ -5,14 +5,14 @@ description: "Il 27 gennaio è il Giorno della Memoria. Per la Protezione Civile
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-01-27-giorno-memoria-dovere-civile-ricordare.webp"
-image_alt: "Cover dell'articolo: Giorno della Memoria: il dovere civile di ricordare"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Giorno della Memoria" 2026-01-27-giorno-memoria-dovere-civile-ricordare it
+
 Il **27 gennaio** è il **Giorno della Memoria**, istituito in Italia con la legge 211/2000 per ricordare la **Shoah** — lo sterminio degli ebrei europei — e tutte le vittime della persecuzione nazista e fascista, compresi i deportati militari e politici italiani.
 
 Il Parlamento italiano ha scelto questa data perché il **27 gennaio 1945** le truppe dell'Armata Rossa entrarono ad Auschwitz, liberando i pochi prigionieri rimasti in vita. Una liberazione che ha mostrato al mondo, in modo incontrovertibile, l'orrore di quel sistema.

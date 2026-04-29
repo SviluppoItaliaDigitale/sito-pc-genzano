@@ -5,8 +5,8 @@ description: "Chi distribuisce alimenti per solidarietà non è un ristoratore, 
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2025-09-15-organizzazioni-caritative-haccp-buone-prassi-igieniche.webp"
-image_alt: "Cover dell'articolo: Sicurezza alimentare nelle organizzazioni di volontariato — HACCP semplificato e prassi igieniche"
+image: ""
+image_alt: ""
 scadenza: ""
 area: ""
 allegati:
@@ -14,8 +14,8 @@ allegati:
     url: "/manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf"
     dimensione: "4,1 MB"
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Igiene degli alimenti" 2025-09-15-organizzazioni-caritative-haccp-buone-prassi-igieniche it
+
 Proseguiamo l'approfondimento sul [manuale Caritas-Banco Alimentare](/comunicazioni/2024-11-26-manuale-caritas-banco-alimentare-presentazione/) validato dal Ministero della Salute, focalizzandoci sui capitoli 7 e 8: **prassi igieniche** e **sistema HACCP**. Il testo completo è allegato.
 
 
