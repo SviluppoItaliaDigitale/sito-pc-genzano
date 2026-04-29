@@ -15,6 +15,11 @@ draft: false
 
 In estate, quando un incendio boschivo raggiunge dimensioni rilevanti, la differenza tra **contenimento** e **disastro** può essere un Canadair. I **mezzi aerei** del sistema antincendio italiano sono un patrimonio operativo cruciale. Vale la pena conoscere come funzionano, chi li coordina, quando entrano in azione.
 
+
+{{< foto src="/images/2026-07-13-mezzi-aerei-aib-canadair-elicotteri-corpo.webp"
+         alt="Squadra di vigili del fuoco impegnata in un fronte di incendio boschivo"
+         caption="L'incendio boschivo è uno dei rischi prioritari sui Castelli Romani." >}}
+
 ## La flotta italiana
 
 L'Italia dispone della **più grande flotta antincendio boschivo del Mediterraneo**:

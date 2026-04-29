@@ -15,6 +15,11 @@ draft: false
 
 I **droni** — tecnicamente **Aeromobili a Pilotaggio Remoto (APR)** — stanno cambiando molte attività della Protezione Civile italiana. Da strumento di nicchia a sistema integrato: ricerche di persone scomparse, avvistamento incendi, monitoraggio danni, cartografia di emergenza. Un quadro su come li usiamo e sui limiti operativi.
 
+
+{{< foto src="/images/2026-07-22-droni-protezione-civile-uso-operativo-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Il drone come strumento
 
 Il drone nella Protezione Civile permette:

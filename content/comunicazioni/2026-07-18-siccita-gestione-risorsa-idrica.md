@@ -15,6 +15,11 @@ draft: false
 
 La **siccità** è una delle manifestazioni più evidenti del cambiamento climatico in Italia. Gli ultimi anni hanno visto **estati sempre più asciutte**, con conseguenze su agricoltura, approvvigionamento idrico, ecosistemi, rischio incendi. Ma il cittadino non è spettatore: ha un ruolo concreto nella **gestione della risorsa idrica**.
 
+
+{{< foto src="/images/2026-07-18-siccita-gestione-risorsa-idrica-corpo.webp"
+         alt="Corso d'acqua naturale con vegetazione"
+         caption="L'acqua è una risorsa critica e un fattore di rischio idrogeologico." >}}
+
 ## Il fenomeno siccità
 
 La siccità si manifesta come:

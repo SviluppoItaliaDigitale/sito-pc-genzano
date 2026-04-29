@@ -15,6 +15,11 @@ draft: false
 
 In estate i **bambini** cambiano routine. Scuole chiuse, campi estivi, vacanze, piscine, sagre, parchi gioco affollati. Il loro mondo si allarga. Con più opportunità vengono più **rischi**. Alcune attenzioni aumentano molto la sicurezza senza trasformare l'estate in un incubo di divieti.
 
+
+{{< foto src="/images/2026-07-08-bambini-in-estate-sicurezza-sorveglianza-corpo.webp"
+         alt="Aula scolastica con bambini durante una lezione"
+         caption="L'educazione al rischio inizia a scuola." >}}
+
 ## Prima degli 1-2 anni
 
 ### Calore

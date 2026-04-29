@@ -15,6 +15,11 @@ draft: false
 
 Quando parliamo di caldo estremo pensiamo spesso solo alle persone fragili. Ma gli **animali domestici** — cani, gatti, conigli, uccelli, rettili — sono altrettanto **vulnerabili**, a volte di più. Ogni estate in Italia si registrano decessi evitabili di animali lasciati in auto, al sole, in gabbie senza riparo. Conoscere i rischi e i comportamenti corretti è parte della **responsabilità** di chi vive con un animale.
 
+
+{{< foto src="/images/2026-07-16-animali-domestici-caldo-proteggere-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## Perché gli animali soffrono il caldo
 
 Gli animali domestici hanno **meccanismi di termoregolazione diversi** dai nostri:
