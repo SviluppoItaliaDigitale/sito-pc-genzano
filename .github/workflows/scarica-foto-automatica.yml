@@ -22,6 +22,17 @@ name: "📷 Scarica foto da fonti libere (articoli con marker)"
 on:
   push:
     branches: [main]
+    # Trigger SOLO quando vengono modificati contenuti articoli o gli
+    # script che il workflow usa. Evita run inutili su CSS, docs, layout
+    # del tema, regole di governance, ecc.
+    paths:
+      - 'content/comunicazioni/**'
+      - 'scripts/foto-da-*.sh'
+      - 'scripts/applica-fascia-foto.py'
+      - 'scripts/aggiorna-frontmatter-foto.py'
+      - 'scripts/auto-cover-mancanti.py'
+      - 'scripts/genera-cover.py'
+      - '.github/workflows/scarica-foto-automatica.yml'
   workflow_dispatch:
 
 permissions:
