@@ -5,14 +5,14 @@ description: "Un'interruzione di corrente può durare minuti, ore o giorni. Come
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-06-blackout-interruzione-corrente-cosa-fare.webp"
+image_alt: "Cover dell'articolo: Blackout: cosa fare quando salta la corrente (anche per ore o giorni)"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Blackout in Italia del 2003" 2026-05-06-blackout-interruzione-corrente-cosa-fare it
-
+---
+
 La corrente che salta per qualche minuto è un fastidio quotidiano. Un blackout che dura **ore o giorni** è una vera emergenza: si blocca il riscaldamento o la climatizzazione, si fermano frigo e congelatori, cellulari si scaricano, ascensori restano bloccati, semafori si spengono. Negli ultimi anni, con eventi meteo più intensi e reti sempre più sollecitate, gli episodi di lunga durata sono diventati più frequenti anche in Italia.
 
 Vediamo come prepararsi, cosa fare durante l'evento e cosa controllare al ripristino.

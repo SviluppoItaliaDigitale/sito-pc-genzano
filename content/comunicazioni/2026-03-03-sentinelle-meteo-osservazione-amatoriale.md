@@ -5,14 +5,14 @@ description: "Reti di osservatori meteo amatoriali contribuiscono alla conoscenz
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-03-03-sentinelle-meteo-osservazione-amatoriale.webp"
+image_alt: "Cover dell'articolo: Sentinelle del tempo: l'osservazione meteo amatoriale come risorsa"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Stazione meteorologica" 2026-03-03-sentinelle-meteo-osservazione-amatoriale it
-
+---
+
 Dietro ogni bollettino meteo ufficiale c'è una rete fitta di **stazioni di osservazione**: da quelle professionali dell'Aeronautica Militare e del Centro Funzionale Regionale, fino a quelle amatoriali installate da appassionati e associazioni.
 
 Le stazioni amatoriali, ben gestite, contribuiscono in modo significativo alla **conoscenza del clima locale**. E nei territori complessi come i **Castelli Romani** — dove l'altitudine, i versanti, l'influenza dei laghi creano **microclimi** molto diversi anche a pochi chilometri — questa granularità è preziosa.

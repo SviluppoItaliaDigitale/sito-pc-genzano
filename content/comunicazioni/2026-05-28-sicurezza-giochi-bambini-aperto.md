@@ -5,14 +5,14 @@ description: "Parchi, biciclette, piscine gonfiabili, scalate, giochi in strada:
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-28-sicurezza-giochi-bambini-aperto.webp"
+image_alt: "Cover dell'articolo: Bambini all'aperto: sicurezza nei giochi e nel tempo libero"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Parco giochi" 2026-05-28-sicurezza-giochi-bambini-aperto it
-
+---
+
 L'estate e la fine della scuola portano i bambini **all'aperto**: parchi, cortili, strade, piscine gonfiabili, biciclette, giochi in campagna. È una benedizione per la loro salute fisica e mentale. Ma è anche la stagione in cui **aumentano gli incidenti domestici e del tempo libero**: cadute, ferite, annegamenti, punture, colpi di calore.
 
 Parlare di sicurezza dei bambini non significa **renderli ansiosi** o tenerli in casa. Significa dare loro **libertà guidata** con adulti presenti.

@@ -5,8 +5,8 @@ description: "Nei campi di Protezione Civile ci sono persone allergiche, celiach
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2025-07-14-alimentazioni-speciali-campo-accoglienza.webp"
+image_alt: "Cover dell'articolo: Alimentazioni speciali nei campi di accoglienza: allergie, celiachia e semaforo alimentare"
 scadenza: ""
 area: ""
 allegati:
@@ -14,8 +14,8 @@ allegati:
     url: "/manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf"
     dimensione: "3,8 MB"
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Celiachia" 2025-07-14-alimentazioni-speciali-campo-accoglienza it
-
+---
+
 In un campo di accoglienza convivono persone con esigenze alimentari molto diverse: chi ha una **allergia grave**, chi è **celiaco**, chi segue una dieta **vegetariana o vegana** per scelta, chi non può mangiare carne di maiale o manzo per motivi **religiosi**. Il Manuale di Cucina in Emergenza del DSEFIC-FIC dedica un intero capitolo a questo tema, perché — come scrive la curatrice Rossanina Del Santo — "chi sta in cucina non deve solo nutrire, ma far sentire amato chi sta vivendo un momento di grande criticità".
 
 Abbiamo allegato il manuale completo a questo articolo e alla pagina [Area Download](/area-download/). Qui riassumiamo le regole operative principali.

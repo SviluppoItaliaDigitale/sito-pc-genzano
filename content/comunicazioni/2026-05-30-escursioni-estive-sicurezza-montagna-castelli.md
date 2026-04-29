@@ -5,14 +5,14 @@ description: "Estate e stagione di escursioni. Preparazione, equipaggiamento, co
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-30-escursioni-estive-sicurezza-montagna-castelli.webp"
+image_alt: "Cover dell'articolo: Escursioni estive: sicurezza in montagna e nei sentieri"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Escursionismo" 2026-05-30-escursioni-estive-sicurezza-montagna-castelli it
-
+---
+
 L'estate è la stagione delle **escursioni**: sentieri dei Castelli Romani, camminate sui monti dei Simbruini, ferie in montagna o in aree protette. È un'attività salutare, gratuita, formativa. Ma ogni anno in Italia **decine di escursionisti** finiscono in situazioni di emergenza, spesso per **sottovalutazione**. Poche regole, applicate con costanza, riducono enormemente i rischi.
 
 Questo articolo integra quello su [perdersi nei boschi](/comunicazioni/2026-05-21-perdersi-nei-boschi-castelli-romani/): lì parlavamo specificamente di orientamento, qui dell'escursione nel suo insieme.

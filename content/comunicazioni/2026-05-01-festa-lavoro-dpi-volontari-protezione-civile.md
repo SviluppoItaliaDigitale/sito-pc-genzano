@@ -5,14 +5,14 @@ description: "La Festa dei Lavoratori ricorda il diritto al lavoro dignitoso e s
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile.webp"
+image_alt: "Cover dell'articolo: Primo maggio: dignita del lavoro e sicurezza anche in emergenza"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Festa dei lavoratori" 2026-05-01-festa-lavoro-dpi-volontari-protezione-civile it
-
+---
+
 Il **primo maggio** è la Festa dei Lavoratori. Una data che ricorda i diritti conquistati dal lavoro dipendente e autonomo — tra tutti, il diritto alla **sicurezza**. Tre giorni dopo la Giornata mondiale sulla sicurezza sul lavoro, è un'occasione per parlare ancora di un tema che attraversa anche il volontariato di Protezione Civile: **tutti hanno diritto di tornare a casa**, dopo un'attività.
 
 

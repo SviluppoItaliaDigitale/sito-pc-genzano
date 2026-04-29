@@ -5,14 +5,14 @@ description: "La primavera porta i primi temporali forti della stagione. Fulmini
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-09-temporali-intensi-comportamenti-corretti.webp"
+image_alt: "Cover dell'articolo: Temporali intensi: come riconoscerli e cosa fare"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Cumulonembo" 2026-05-09-temporali-intensi-comportamenti-corretti it
-
+---
+
 I **temporali intensi** sono un fenomeno meteorologico che in primavera e in estate può svilupparsi molto rapidamente: dal sereno a un nubifragio in una quindicina di minuti. Fulmini, grandine, raffiche di vento, rovesci intensi: ciascuno di questi elementi può essere pericoloso. Conoscere i comportamenti corretti è fondamentale.
 
 

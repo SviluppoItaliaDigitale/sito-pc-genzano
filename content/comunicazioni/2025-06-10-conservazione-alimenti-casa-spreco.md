@@ -5,8 +5,8 @@ description: "Il primo capitolo del Libro del Risparmio di Fondazione Barilla è
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2025-06-10-conservazione-alimenti-casa-spreco.webp"
+image_alt: "Cover dell'articolo: Conservare bene per sprecare meno"
 scadenza: ""
 area: ""
 allegati:
@@ -14,8 +14,8 @@ allegati:
     url: "/manuali/FondazioneBarilla_Libro_del_Risparmio.pdf"
     dimensione: "27,3 MB"
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Frigorifero" 2025-06-10-conservazione-alimenti-casa-spreco it
-
+---
+
 Il primo capitolo del [Libro del Risparmio](/comunicazioni/2025-02-05-libro-risparmio-fondazione-barilla-presentazione/) di Fondazione Barilla è dedicato alla **conservazione**: la fase in cui si decide, spesso senza rendersene conto, se un alimento finirà nel piatto o nella pattumiera. Riassumiamo le regole pratiche del manuale. Il testo completo è in allegato a questo articolo.
 
 

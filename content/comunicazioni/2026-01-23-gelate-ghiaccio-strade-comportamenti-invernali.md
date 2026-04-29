@@ -5,14 +5,14 @@ description: "Il periodo delle gelate è il più insidioso per circolare a piedi
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-23-gelate-ghiaccio-strade-comportamenti-invernali.webp"
+image_alt: "Cover dell'articolo: Gelate e ghiaccio sulle strade: come comportarsi in inverno"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Galaverna" 2026-01-23-gelate-ghiaccio-strade-comportamenti-invernali it
-
+---
+
 Nei Castelli Romani, tra fine gennaio e inizio febbraio, le **gelate notturne** sono frequenti. Le temperature scendono sotto zero durante la notte e risalgono lentamente al mattino. In queste ore il **ghiaccio sulle strade** — anche poco visibile — è una delle prime cause di incidenti stradali e cadute.
 
 Qui trovi un riepilogo pratico per muoverti in sicurezza, a piedi e in auto, quando arrivano le giornate fredde.

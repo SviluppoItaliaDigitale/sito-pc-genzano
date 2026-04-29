@@ -5,14 +5,14 @@ description: "I laghi dei Castelli Romani sono un patrimonio naturale da rispett
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-19-sicurezza-laghi-nemi-albano.webp"
+image_alt: "Cover dell'articolo: Laghi di Nemi e Albano: sicurezza in acqua e sulle sponde"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Lago Albano" 2026-05-19-sicurezza-laghi-nemi-albano it
-
+---
+
 I **laghi di Nemi** e di **Albano** sono un patrimonio naturale unico dei Castelli Romani. Conche vulcaniche profonde, con acque fredde anche d'estate, sponde ricche di vegetazione. Con l'arrivo del caldo cresce la frequentazione e, con essa, la necessità di conoscere **le regole di sicurezza** specifiche di questi ambienti.
 
 

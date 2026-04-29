@@ -5,14 +5,14 @@ description: "La primavera è il momento per mettere in sicurezza terreni, giard
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera.webp"
+image_alt: "Cover dell'articolo: Prevenzione incendi: pulire i terreni prima dell'estate è una responsabilità di tutti"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Incendio boschivo" 2026-04-23-prevenzione-incendi-pulizia-terreni-primavera it
-
+---
+
 La stagione degli incendi boschivi, nel Lazio, si concentra tra **giugno e settembre**. Ma la prevenzione non comincia a giugno: comincia adesso, in primavera, quando le sterpaglie sono ancora verdi e i terreni si possono pulire senza rischio. Ogni proprietario di un terreno che confina con boschi, strade o case ha una **responsabilità civile e penale** sulla sicurezza del proprio fondo.
 
 In questo articolo riassumiamo cosa prevede la legge, cosa si deve fare e come farlo correttamente.

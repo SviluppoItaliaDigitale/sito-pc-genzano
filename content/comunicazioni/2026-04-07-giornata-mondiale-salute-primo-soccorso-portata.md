@@ -5,14 +5,14 @@ description: "Il 7 aprile è la Giornata mondiale della salute. Conoscere almeno
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata.webp"
+image_alt: "Cover dell'articolo: Giornata mondiale della salute: primo soccorso a portata di tutti"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Rianimazione cardiopolmonare" 2026-04-07-giornata-mondiale-salute-primo-soccorso-portata it
-
+---
+
 Il **7 aprile** è la **Giornata mondiale della salute** (*World Health Day*), promossa dall'**Organizzazione Mondiale della Sanità** nel giorno dell'anniversario della sua fondazione (1948). Ogni anno si focalizza un tema specifico di salute pubblica globale.
 
 Per la Protezione Civile è un'occasione per ricordare quanto conoscere il **primo soccorso**, anche nelle sue **basi minime**, sia un atto civile importante. Non serve essere medici. Serve sapere **cosa fare nei primi minuti**: quelli in cui le ambulanze non sono ancora arrivate.

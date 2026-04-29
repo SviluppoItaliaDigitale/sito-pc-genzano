@@ -5,14 +5,14 @@ description: "Quando l'emergenza arriva, il Sindaco attiva il COC. Cos'e, come f
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-14-centro-operativo-comunale-coc.webp"
+image_alt: "Cover dell'articolo: Il Centro Operativo Comunale (COC): il cuore della Protezione Civile locale"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Sala operativa" 2026-05-14-centro-operativo-comunale-coc it
-
+---
+
 In caso di emergenza sul territorio comunale, il [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/) (D.Lgs. 1/2018) assegna al **Sindaco** il ruolo di **Autorità di Protezione Civile a livello locale**. Lo strumento operativo con cui il Sindaco coordina le risposte è il **Centro Operativo Comunale (COC)**. Conoscerlo è utile a ogni cittadino: è lì che si decide, in emergenza, chi fa cosa.
 
 

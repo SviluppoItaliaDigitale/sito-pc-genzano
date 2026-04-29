@@ -5,14 +5,14 @@ description: "Terremoti, alluvioni, incendi: anche il patrimonio artistico e cul
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-18-giornata-musei-patrimonio-culturale-emergenze.webp"
+image_alt: "Cover dell'articolo: 18 maggio: Giornata dei Musei e tutela del patrimonio in emergenza"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Galleria degli Uffizi" 2026-05-18-giornata-musei-patrimonio-culturale-emergenze it
-
+---
+
 Il **18 maggio** è la [Giornata internazionale dei Musei](https://icom.museum/en/our-actions/events/international-museum-day/) istituita dall'ICOM (Consiglio Internazionale dei Musei). In Italia è un'occasione per ricordare che il nostro Paese possiede una **parte enorme del patrimonio culturale mondiale** — e che questo patrimonio è **esposto ai rischi naturali** come qualunque altro bene.
 
 La tutela dei beni culturali in emergenza è un capitolo importante della Protezione Civile.

@@ -5,14 +5,14 @@ description: "Il 28 febbraio ricorre la Giornata nazionale della Protezione Civi
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-02-28-giornata-protezione-civile-storia-volontariato.webp"
+image_alt: "Cover dell'articolo: Giornata della Protezione Civile: storia e ruolo del volontariato"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Giuseppe Zamberletti" 2026-02-28-giornata-protezione-civile-storia-volontariato it
-
+---
+
 Il **28 febbraio** ricorre la **Giornata nazionale della Protezione Civile**, istituita nel 2017 con la Direttiva del Presidente del Consiglio. È un'occasione per ricordare la **storia** del sistema italiano di protezione civile, oggi tra i più strutturati d'Europa, e soprattutto il ruolo insostituibile del **volontariato**.
 
 La Protezione Civile, come la conosciamo oggi, non è nata improvvisamente. È il risultato di **decenni di lezioni tragiche** e di riforme legislative che hanno costruito, passo dopo passo, un sistema nazionale integrato.

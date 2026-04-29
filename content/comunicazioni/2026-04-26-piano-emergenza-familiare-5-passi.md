@@ -5,14 +5,14 @@ description: "Un'ora di tempo, un foglio di carta, una conversazione con la fami
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-26-piano-emergenza-familiare-5-passi.webp"
+image_alt: "Cover dell'articolo: Il piano di emergenza familiare in 5 passi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Piano di emergenza" 2026-04-26-piano-emergenza-familiare-5-passi it
-
+---
+
 Un terremoto alle tre di notte. Un'alluvione quando i figli sono a scuola. Un blackout di un intero quartiere. In questi momenti, sapere **cosa fare** e **dove ritrovarsi** cambia tutto. Il **piano di emergenza familiare** è un documento semplice che ogni famiglia può scrivere in un'ora e aggiornare una volta all'anno.
 
 In questo articolo vediamo i cinque passi per scriverlo.

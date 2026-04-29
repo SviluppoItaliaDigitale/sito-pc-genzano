@@ -5,14 +5,14 @@ description: "La Giornata mondiale della bicicletta ricorda che la mobilita dolc
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-30-sicurezza-bicicletta-citta-emergenza.webp"
+image_alt: "Cover dell'articolo: Andare in bicicletta in sicurezza: anche la mobilita e prevenzione"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Casco da bicicletta" 2026-04-30-sicurezza-bicicletta-citta-emergenza it
-
+---
+
 La primavera è la stagione in cui più persone riprendono la bicicletta. Il 3 giugno è la [Giornata mondiale della bicicletta](https://www.un.org/en/observances/bicycle-day) proclamata dalle Nazioni Unite, ma in tanti paesi europei la fine di aprile e l'inizio di maggio sono le settimane dedicate alla promozione della mobilità dolce. Per la Protezione Civile la bicicletta è un tema di **salute pubblica, sicurezza e resilienza** delle città.
 
 

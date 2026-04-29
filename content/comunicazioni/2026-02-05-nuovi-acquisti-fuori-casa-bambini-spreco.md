@@ -5,8 +5,8 @@ description: "L'ultimo capitolo del Libro del Risparmio di Fondazione Barilla ri
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-02-05-nuovi-acquisti-fuori-casa-bambini-spreco.webp"
+image_alt: "Cover dell'articolo: Spesa consapevole, ristorante, bambini — come evitare lo spreco fuori casa"
 scadenza: ""
 area: ""
 allegati:
@@ -14,8 +14,8 @@ allegati:
     url: "/manuali/FondazioneBarilla_Libro_del_Risparmio.pdf"
     dimensione: "27,3 MB"
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Mensa scolastica" 2026-02-05-nuovi-acquisti-fuori-casa-bambini-spreco it
-
+---
+
 Il **5 febbraio** è la Giornata nazionale di prevenzione dello spreco alimentare. Chiudiamo oggi la serie dedicata al [Libro del Risparmio](/comunicazioni/2025-02-05-libro-risparmio-fondazione-barilla-presentazione/) di Fondazione Barilla con gli ultimi due capitoli — **nuovi acquisti** (capitolo 4) e **fuori casa** (capitolo 5) — dove il manuale esce dalla cucina domestica e affronta la spesa, il pranzo in ufficio, i pasti al ristorante, i bambini e le grandi feste. Il testo completo è in allegato.
 
 
