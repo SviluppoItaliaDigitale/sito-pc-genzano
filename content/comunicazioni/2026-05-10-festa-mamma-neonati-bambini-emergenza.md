@@ -17,6 +17,11 @@ La **Festa della Mamma** è un'occasione per pensare alla cura delle persone a c
 
 Questo articolo raccoglie alcune indicazioni pratiche per chi ha figli piccoli in casa.
 
+
+{{< foto src="/images/2026-05-10-festa-mamma-neonati-bambini-emergenza-corpo.webp"
+         alt="Aula scolastica con bambini durante una lezione"
+         caption="L'educazione al rischio inizia a scuola." >}}
+
 ## Il kit aggiuntivo per bambini
 
 Oltre al [kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/) standard, per una famiglia con bambini piccoli è utile avere:

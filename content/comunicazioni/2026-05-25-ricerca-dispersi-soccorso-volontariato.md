@@ -17,6 +17,11 @@ Un anziano che non torna dal solito giro. Un escursionista che non arriva all'or
 
 In questo articolo raccontiamo come funziona il sistema, chi lo coordina e cosa può fare una famiglia.
 
+
+{{< foto src="/images/2026-05-25-ricerca-dispersi-soccorso-volontariato-corpo.webp"
+         alt="Cane da soccorso al lavoro con conduttore"
+         caption="I cani da ricerca sono una risorsa preziosa nelle operazioni di soccorso." >}}
+
 ## Cosa si intende per "disperso"
 
 Una persona è considerata "dispersa" quando:

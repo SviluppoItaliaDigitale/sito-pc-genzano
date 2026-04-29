@@ -17,6 +17,11 @@ L'estate porta rischi specifici per la casa: **ondate di calore**, **blackout**,
 
 Qui un elenco pratico da seguire un pomeriggio, con la famiglia.
 
+
+{{< foto src="/images/2026-05-26-check-casa-prima-estate-prevenzione-corpo.webp"
+         alt="Volontari di un'associazione umanitaria al lavoro"
+         caption="Il volontariato organizzato è una componente strutturale del Sistema." >}}
+
 ## Impianto elettrico
 
 - **Controlla il salvavita**: premi il tasto test, deve scattare. Se non scatta o scatta di continuo, chiama un elettricista.

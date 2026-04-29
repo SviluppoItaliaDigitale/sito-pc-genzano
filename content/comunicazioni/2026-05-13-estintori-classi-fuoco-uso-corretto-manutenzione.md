@@ -18,6 +18,11 @@ L'estintore portatile è lo strumento antincendio di prima difesa più diffuso i
 
 Questo articolo riassume quello che ogni volontario di protezione civile deve sapere: le classi di fuoco, i tipi di estintore, la tecnica corretta di utilizzo e le regole di manutenzione. Quando poi il fuoco è grande, in progressione rapida, su sostanze pericolose o in uno spazio chiuso, **la risposta giusta resta una sola: chiamare il 112 e lasciare il luogo**. L'estintore portatile è utile solo su un principio di incendio.
 
+
+{{< foto src="/images/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione-corpo.webp"
+         alt="Squadra di vigili del fuoco impegnata in un fronte di incendio boschivo"
+         caption="L'incendio boschivo è uno dei rischi prioritari sui Castelli Romani." >}}
+
 ## Le cinque classi di fuoco — UNI EN 2:2005
 
 La norma UNI EN 2:2005 classifica i fuochi in base al combustibile che alimenta la fiamma. La lettera sulla targhetta dell'estintore dice su quale classe può essere usato.

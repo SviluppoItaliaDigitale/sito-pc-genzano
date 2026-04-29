@@ -15,6 +15,11 @@ draft: false
 
 I **temporali intensi** sono un fenomeno meteorologico che in primavera e in estate può svilupparsi molto rapidamente: dal sereno a un nubifragio in una quindicina di minuti. Fulmini, grandine, raffiche di vento, rovesci intensi: ciascuno di questi elementi può essere pericoloso. Conoscere i comportamenti corretti è fondamentale.
 
+
+{{< foto src="/images/2026-05-09-temporali-intensi-comportamenti-corretti-corpo.webp"
+         alt="Cielo tempestoso con fulmini durante un temporale forte"
+         caption="I temporali forti possono produrre danni anche su territori limitati." >}}
+
 ## Come si forma un temporale
 
 Un temporale è una **cella di aria calda e umida** che sale rapidamente verso gli strati alti dell'atmosfera, incontra aria fredda, produce condensazione violenta. Il risultato: pioggia intensa, fulmini, spesso grandine, a volte downburst (raffiche discendenti molto forti).

@@ -15,6 +15,11 @@ draft: false
 
 In caso di emergenza sul territorio comunale, il [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/) (D.Lgs. 1/2018) assegna al **Sindaco** il ruolo di **Autorità di Protezione Civile a livello locale**. Lo strumento operativo con cui il Sindaco coordina le risposte è il **Centro Operativo Comunale (COC)**. Conoscerlo è utile a ogni cittadino: è lì che si decide, in emergenza, chi fa cosa.
 
+
+{{< foto src="/images/2026-05-14-centro-operativo-comunale-coc-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Cos'è il COC
 
 Il **Centro Operativo Comunale** è una struttura temporanea e modulare, prevista nel **Piano comunale di Protezione Civile**, che il Sindaco attiva quando un evento richiede coordinamento oltre l'ordinario.

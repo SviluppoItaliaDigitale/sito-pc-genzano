@@ -17,6 +17,11 @@ Il **15 maggio** è la [Giornata internazionale delle famiglie](https://www.un.o
 
 Questo articolo propone cinque conversazioni semplici da fare in famiglia **oggi**.
 
+
+{{< foto src="/images/2026-05-15-giornata-famiglie-piano-emergenza-insieme-corpo.webp"
+         alt="Famiglia che prepara un kit di emergenza domestico"
+         caption="Il piano familiare di emergenza è il primo strumento di autoprotezione." >}}
+
 ## Uno: "Dove ci vediamo se non riusciamo a chiamarci?"
 
 Durante un'emergenza, le reti mobili possono essere sovraccariche. Chi è a scuola, chi è al lavoro, chi è a fare la spesa: dove ci ritroviamo?

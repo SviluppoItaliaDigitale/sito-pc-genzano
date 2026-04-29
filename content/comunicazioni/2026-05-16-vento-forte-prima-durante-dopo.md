@@ -17,6 +17,11 @@ Il vento non è solo il "fastidioso soffio" delle giornate di scirocco o tramont
 
 In questo articolo vediamo come prepararsi, cosa fare durante un'allerta vento e cosa controllare dopo.
 
+
+{{< foto src="/images/2026-05-16-vento-forte-prima-durante-dopo-corpo.webp"
+         alt="Alberi piegati dal vento durante una tempesta"
+         caption="Il vento forte è uno dei fenomeni più sottostimati a livello di rischio." >}}
+
 ## Quando il vento diventa pericoloso
 
 La scala Beaufort descrive il vento in 13 gradi. Le soglie di attenzione:
