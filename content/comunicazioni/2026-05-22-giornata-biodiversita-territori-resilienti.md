@@ -1,12 +1,12 @@
 ---
-title: "22 maggio: Giornata della Biodiversita e territori piu resilienti"
+title: "22 maggio: Giornata della Biodiversità e territori più resilienti"
 date: 2026-05-22
 description: "La biodiversita non e' solo tutela della natura: e' infrastruttura di Protezione Civile. Boschi sani, fiumi curati, suoli fertili riducono il rischio."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-22-giornata-biodiversita-territori-resilienti.webp"
-image_alt: "Cover dell'articolo: 22 maggio: Giornata della Biodiversita e territori piu resilienti"
+image_alt: "Cover dell'articolo: 22 maggio: Giornata della Biodiversità e territori più resilienti"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

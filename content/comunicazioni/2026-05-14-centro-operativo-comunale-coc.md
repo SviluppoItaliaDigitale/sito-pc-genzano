@@ -1,7 +1,7 @@
 ---
 title: "Il Centro Operativo Comunale (COC): il cuore della Protezione Civile locale"
 date: 2026-05-14
-description: "Quando l'emergenza arriva, il Sindaco attiva il COC. Cos'e, come funziona, chi ne fa parte, perche e' il riferimento del cittadino."
+description: "Quando l'emergenza arriva, il Sindaco attiva il COC. Cos'e, come funziona, chi ne fa parte, perché e' il riferimento del cittadino."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

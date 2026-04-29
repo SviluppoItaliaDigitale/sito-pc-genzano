@@ -1,12 +1,12 @@
 ---
-title: "Radio in emergenza: perche sono ancora fondamentali per la Protezione Civile"
+title: "Radio in emergenza: perché sono ancora fondamentali per la Protezione Civile"
 date: 2026-05-03
 description: "Quando telefono e internet cadono, restano le radio. Il ruolo delle radiocomunicazioni e dei volontari radioamatori nel sistema di Protezione Civile."
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-03-radiocomunicazioni-emergenza-volontari.webp"
-image_alt: "Cover dell'articolo: Radio in emergenza: perche sono ancora fondamentali per la Protezione Civile"
+image_alt: "Cover dell'articolo: Radio in emergenza: perché sono ancora fondamentali per la Protezione Civile"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
