@@ -1487,6 +1487,94 @@ article:not(.card) .galleria img {
   box-shadow: 0 1px 3px rgba(0, 51, 102, 0.2);
 }
 
+/* ARCHIVIO MENSILE — accordion per anno (collapsible) */
+.archivio-mensile-anni .archivio-anno-group {
+  border-bottom: 1px solid #e5e7eb;
+}
+.archivio-mensile-anni .archivio-anno-group:last-child {
+  border-bottom: none;
+}
+.archivio-mensile-anni .archivio-anno-group[open] {
+  padding-bottom: 0.5rem;
+}
+.archivio-mensile-anni .archivio-anno-summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.25rem;
+  font-weight: 600;
+  color: #003366;
+  transition: background-color 0.15s ease;
+  border-radius: 4px;
+}
+.archivio-mensile-anni .archivio-anno-summary:hover,
+.archivio-mensile-anni .archivio-anno-summary:focus-visible {
+  background-color: #f4f7fb;
+  outline: none;
+}
+.archivio-mensile-anni .archivio-anno-summary:focus-visible {
+  outline: 2px solid #ffbe2e;
+  outline-offset: 1px;
+}
+.archivio-mensile-anni .archivio-anno-summary::-webkit-details-marker {
+  display: none;
+}
+.archivio-mensile-anni .archivio-anno-summary::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid #003366;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.archivio-mensile-anni .archivio-anno-group[open] .archivio-anno-summary::before {
+  transform: rotate(90deg);
+}
+.archivio-mensile-anni .archivio-anno-label {
+  flex: 1;
+}
+.archivio-mensile-anni .archivio-anno-label .bi {
+  margin-right: 0.35rem;
+  color: #003366;
+}
+.archivio-mensile-anni .archivio-mensile-lista {
+  padding-left: 0.75rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .archivio-mensile-anni .archivio-anno-summary::before {
+    transition: none;
+  }
+}
+@media print {
+  .archivio-mensile-anni .archivio-anno-group {
+    /* In stampa apre tutti gli accordion */
+  }
+  .archivio-mensile-anni .archivio-anno-group[open],
+  .archivio-mensile-anni .archivio-anno-group {
+    display: block !important;
+  }
+  .archivio-mensile-anni .archivio-anno-summary::before {
+    display: none;
+  }
+}
+/* CANALI SOCIAL BLOCK — fondo /comunicazioni/ */
+.canali-social-block {
+  border-top: 1px solid #e5e7eb;
+}
+.canali-social-block h2 {
+  color: #003366;
+}
+.canali-social-block h2 .bi {
+  color: #003366;
+  margin-right: 0.35rem;
+}
+
 @media (max-width: 991.98px) {
   .sidebar-archivio {
     margin-top: 2rem;
