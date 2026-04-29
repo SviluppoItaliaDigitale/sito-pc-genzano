@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-In emergenza, **dove sei** è la prima domanda che fa l'operatore del 112. Quando non si conosce l'indirizzo esatto, quando si è in mezzo alla campagna, quando si è in stato di shock, la risposta diventa difficile. L'app **Where Are U** risolve questo problema: una volta installata e attivata, **invia automaticamente la posizione precisa** alla Centrale Unica di Risposta NUE 112 nel momento in cui chiami. È **gratuita**, **ufficiale**, e in alcune situazioni **può salvare la vita**.
+In emergenza, **dove sei** è la prima domanda che fa l'operatore del 112. Quando non si conosce l'indirizzo esatto, quando si è in mezzo alla campagna, quando si è in stato di shock, la risposta diventa difficile. L'app **Where Are U** risolve questo problema: una volta installata e attivata, **invia automaticamente la posizione precisa** alla Centrale Unica di Risposta NUE 112 nel momento in cui chiami. È **gratuita**, **ufficiale**, e può facilitare la localizzazione del chiamante per rendere più rapido l'intervento dei soccorsi.
 
 {{< foto src="/images/where-are-u/where-are-u-112-sos-logo.webp"
          alt="Si chiama 112, si legge SOS — slogan grafico ufficiale del Numero Unico Europeo per l'Emergenza"

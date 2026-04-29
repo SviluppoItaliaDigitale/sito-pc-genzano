@@ -37,7 +37,7 @@ Le scelte vengono **ricordate sul tuo dispositivo** (tramite `localStorage`): ch
 
 Il pannello stesso è interamente accessibile da tastiera: si apre con `Invio`, si naviga con `Tab`, si chiude con `Esc` o cliccando fuori. Tutti i comandi hanno descrizioni per gli screen reader.
 
-> **Nota importante.** Questi strumenti sono un **aiuto in più** sopra a un sito che è già conforme WCAG 2.2 AA. Non sostituiscono gli strumenti di accessibilità del tuo sistema operativo o del tuo browser, che restano la soluzione più potente e completa: vedi la sezione successiva.
+> **Nota importante.** Questi strumenti sono un **aiuto in più** sopra a un sito **progettato secondo i principi delle Linee guida AGID sull'accessibilità e delle WCAG 2.2 livello AA**. Sono in corso verifiche periodiche per migliorare continuamente l'esperienza di utilizzo. Questi strumenti non sostituiscono gli strumenti di accessibilità del tuo sistema operativo o del tuo browser, che restano la soluzione più potente e completa: vedi la sezione successiva.
 
 ## Strumenti di sistema (browser e sistema operativo)
 
