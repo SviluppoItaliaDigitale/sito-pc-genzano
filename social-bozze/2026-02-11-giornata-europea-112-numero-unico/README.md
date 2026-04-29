@@ -1,0 +1,26 @@
+# Bozze social per «11 febbraio: Giornata Europea del 112, un solo numero per ogni emergenza»
+
+Generate automaticamente da `scripts/genera-social.py` (motore: Gemini API).
+
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-02-11-giornata-europea-112-numero-unico/
+- **Data**: 2026-02-11
+- **Badge**: Informazione
+
+## Come usarle
+
+Apri il file della piattaforma desiderata, copia il testo, incollalo nel
+post composer del social. Per Instagram ricorda di caricare anche
+l'immagine generata (post 1080x1080 e story 1080x1920) in
+`static/images-social/`.
+
+## File
+
+| Piattaforma | File | Note |
+|---|---|---|
+| X (Twitter) | `x.txt` | Max 280 caratteri |
+| Facebook | `facebook.txt` | Anteprima OG da URL |
+| Instagram | `instagram.txt` | + immagine in `static/images-social/` |
+| Telegram | `telegram.txt` | Usa Markdown |
+
+> **Nota**: queste sono BOZZE. Rileggi sempre prima di pubblicare.
+> La AI può commettere errori.
