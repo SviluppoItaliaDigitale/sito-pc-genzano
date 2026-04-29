@@ -5,14 +5,14 @@ description: "Il Lazio e suddiviso in sette zone di allerta. Sapere in quale zon
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-07-zone-allerta-lazio-come-leggere-bollettino.webp"
-image_alt: "Cover dell'articolo: Le zone di allerta del Lazio: come leggere il bollettino di criticita"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Bollettino meteorologico" 2026-05-07-zone-allerta-lazio-come-leggere-bollettino it
+
 Quando la Regione Lazio emette un'allerta meteo, il bollettino non parla dell'intera regione in modo uniforme: la divide in **zone di allerta**, ognuna con le proprie caratteristiche di territorio e di rischio. Sapere **in quale zona si trova Genzano** e **come leggere il bollettino** è la competenza minima per capire cosa sta succedendo e cosa fare.
 
 In questo articolo spieghiamo come funziona il sistema a zone.

@@ -5,14 +5,14 @@ description: "La Giornata mondiale sulla sicurezza del lavoro ricorda il diritto
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari.webp"
-image_alt: "Cover dell'articolo: 28 aprile: la sicurezza sul lavoro riguarda anche i volontari"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Dispositivi di protezione individuale" 2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari it
+
 Il 28 aprile è la [Giornata mondiale per la salute e la sicurezza sul lavoro](https://www.ilo.org/global/topics/safety-and-health-at-work/events-training/events-meetings/world-day-for-safety/lang--en/index.htm) istituita dall'Organizzazione Internazionale del Lavoro (ILO). Ricorda che lavorare in sicurezza è un diritto fondamentale. Un principio che vale per tutti — **anche per i volontari di Protezione Civile**, che in emergenza operano in contesti rischiosi.
 
 

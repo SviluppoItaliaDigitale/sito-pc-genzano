@@ -5,8 +5,8 @@ description: "Alto, medio o basso livello di attenzione: il manuale Caritas-Banc
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-03-18-semaforo-attenzione-alimenti-recupero-solidarieta.webp"
-image_alt: "Cover dell'articolo: Il semaforo di attenzione degli alimenti — come classificare ciò che si recupera per solidarietà"
+image: ""
+image_alt: ""
 scadenza: ""
 area: ""
 allegati:
@@ -14,8 +14,8 @@ allegati:
     url: "/manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf"
     dimensione: "4,1 MB"
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Etichettatura degli alimenti" 2026-03-18-semaforo-attenzione-alimenti-recupero-solidarieta it
+
 Chiudiamo la serie sul [manuale Caritas-Banco Alimentare](/comunicazioni/2024-11-26-manuale-caritas-banco-alimentare-presentazione/) con il capitolo 9, lo strumento operativo più utile per chi recupera alimenti a fini di solidarietà: il **semaforo di attenzione**.
 
 

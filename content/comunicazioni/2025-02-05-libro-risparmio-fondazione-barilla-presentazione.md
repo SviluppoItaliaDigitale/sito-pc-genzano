@@ -5,8 +5,8 @@ description: "120 azioni pratiche contro lo spreco di cibo, per risparmiare fino
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2025-02-05-libro-risparmio-fondazione-barilla-presentazione.webp"
-image_alt: "Cover dell'articolo: Giornata nazionale contro lo spreco alimentare — Fondazione Barilla presenta Il Libro del Risparmio"
+image: ""
+image_alt: ""
 scadenza: ""
 area: ""
 allegati:
@@ -14,8 +14,8 @@ allegati:
     url: "/manuali/FondazioneBarilla_Libro_del_Risparmio.pdf"
     dimensione: "27,3 MB"
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Centro studi Fondazione Barilla" 2025-02-05-libro-risparmio-fondazione-barilla-presentazione it
+
 In occasione della **Giornata nazionale di prevenzione dello spreco alimentare** (5 febbraio) la Fondazione Barilla ha presentato a Milano il **Libro del Risparmio — 120 azioni contro lo spreco alimentare per risparmiare dentro e fuori casa**. Il volume è disponibile gratuitamente ed è allegato a questo articolo.
 
 

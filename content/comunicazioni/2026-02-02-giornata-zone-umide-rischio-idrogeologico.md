@@ -5,14 +5,14 @@ description: "Il 2 febbraio si celebra la Giornata mondiale delle zone umide. Un
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-02-02-giornata-zone-umide-rischio-idrogeologico.webp"
-image_alt: "Cover dell'articolo: Giornata mondiale zone umide: rischio idrogeologico e territorio"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Convenzione di Ramsar" 2026-02-02-giornata-zone-umide-rischio-idrogeologico it
+
 Il **2 febbraio** è la **Giornata mondiale delle zone umide** (*World Wetlands Day*), istituita nel 1971 quando fu firmata la **Convenzione di Ramsar** — il primo trattato internazionale per la tutela di paludi, stagni, laghi, fiumi e coste.
 
 Può sembrare un tema lontano dal nostro lavoro quotidiano. Non lo è. Le **zone umide** sono un **presidio naturale contro il rischio idrogeologico** — alluvioni, frane, siccità. Proteggerle significa **proteggere le città** a valle.

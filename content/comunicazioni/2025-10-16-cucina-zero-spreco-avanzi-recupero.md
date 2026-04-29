@@ -5,8 +5,8 @@ description: "Bucce, gambi, foglie esterne, acqua di cottura, pane raffermo: cos
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2025-10-16-cucina-zero-spreco-avanzi-recupero.webp"
-image_alt: "Cover dell'articolo: Cucina a zero spreco e recupero degli avanzi"
+image: ""
+image_alt: ""
 scadenza: ""
 area: ""
 allegati:
@@ -14,8 +14,8 @@ allegati:
     url: "/manuali/FondazioneBarilla_Libro_del_Risparmio.pdf"
     dimensione: "27,3 MB"
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Spreco alimentare" 2025-10-16-cucina-zero-spreco-avanzi-recupero it
+
 Il **16 ottobre** è la Giornata mondiale dell'alimentazione istituita dalla FAO. È un'occasione per tornare sul [Libro del Risparmio](/comunicazioni/2025-02-05-libro-risparmio-fondazione-barilla-presentazione/) di Fondazione Barilla e sintetizzare due capitoli che insieme contengono la parte più pratica del manuale: **cucina a zero spreco** (capitolo 2) e **avanzi** (capitolo 3). Il testo completo è in allegato.
 
 

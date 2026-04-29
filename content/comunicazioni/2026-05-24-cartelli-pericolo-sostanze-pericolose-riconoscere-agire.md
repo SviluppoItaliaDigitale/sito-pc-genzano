@@ -6,14 +6,14 @@ description: "Pittogrammi CLP, etichette ADR e segnaletica di sicurezza: guida a
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-24-cartelli-pericolo-sostanze-pericolose-riconoscere-agire.webp"
-image_alt: "Cover dell'articolo: Cartelli di pericolo delle sostanze pericolose: come riconoscerli e come comportarsi"
+image: ""
+image_alt: ""
 scadenza: ""
 area: ""
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Pittogramma GHS" 2026-05-24-cartelli-pericolo-sostanze-pericolose-riconoscere-agire it
+
 Durante un intervento — un incidente stradale, un incendio in capannone, un allagamento in un'azienda — il volontario di protezione civile può trovarsi davanti a contenitori, fusti, serbatoi o veicoli che riportano simboli di pericolo. Riconoscere questi cartelli non è un esercizio accademico: è il primo passo per non mettere a rischio se stessi, la squadra e la popolazione.
 
 Non è compito del volontario intervenire direttamente sulla sostanza pericolosa — quello spetta ai Vigili del Fuoco e, nei casi più gravi, al nucleo NBCR (nucleare, biologico, chimico, radiologico). Il compito del volontario è **riconoscere, segnalare con precisione, tenere lontane le persone, supportare l'ente competente**.

@@ -5,14 +5,14 @@ description: "La Giornata internazionale delle famiglie, istituita dall'ONU, inv
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-15-giornata-famiglie-piano-emergenza-insieme.webp"
-image_alt: "Cover dell'articolo: 15 maggio: Giornata delle Famiglie, un'occasione per un piano condiviso"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Giornata internazionale delle famiglie" 2026-05-15-giornata-famiglie-piano-emergenza-insieme it
+
 Il **15 maggio** è la [Giornata internazionale delle famiglie](https://www.un.org/en/observances/international-day-of-families) proclamata dall'ONU nel 1993. È una ricorrenza che invita a riflettere sul ruolo delle famiglie come "**unità fondamentale della società**", sostegno, educazione, protezione. Tra i temi che ogni famiglia può affrontare insieme c'è anche la **preparazione all'emergenza**: non è un tema triste, è un tema di responsabilità.
 
 Questo articolo propone cinque conversazioni semplici da fare in famiglia **oggi**.

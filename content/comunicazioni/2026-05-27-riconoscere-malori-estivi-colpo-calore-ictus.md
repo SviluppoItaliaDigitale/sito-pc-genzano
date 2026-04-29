@@ -5,14 +5,14 @@ description: "D'estate i malori sono più frequenti. Distinguere colpo di calore
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus.webp"
-image_alt: "Cover dell'articolo: Malori estivi: come riconoscere colpo di calore, ictus, infarto"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Colpo di calore" 2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus it
+
 L'estate non è solo vacanze: è anche una stagione in cui **aumentano alcuni malori gravi**. Il caldo mette sotto stress il sistema cardiocircolatorio, accentua la disidratazione, peggiora le condizioni di chi ha patologie croniche. Un cittadino non è un medico, ma può **riconoscere rapidamente i segnali d'allarme** e chiamare i soccorsi.
 
 Questo articolo è un promemoria pratico — non sostituisce la formazione di primo soccorso, ma aiuta a prepararsi.

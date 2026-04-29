@@ -5,14 +5,14 @@ description: "Quando suona l'attivazione, non c'è tempo di preparare tutto. Lo 
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-11-zaino-volontario-attivazione.webp"
-image_alt: "Cover dell'articolo: Lo zaino del volontario: cosa portare in attivazione"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Zaino da trekking" 2026-05-11-zaino-volontario-attivazione it
+
 Quando arriva la chiamata di attivazione — un'esercitazione, un servizio di vigilanza, un'emergenza — il volontario ha poco tempo per uscire di casa. Lo **zaino del volontario** è preparato **prima**, lasciato pronto in un posto conosciuto, e si prende con la stessa rapidità con cui si prende una borsa da lavoro la mattina.
 
 In questo articolo proponiamo una lista pratica di cosa contiene, organizzata per aree.

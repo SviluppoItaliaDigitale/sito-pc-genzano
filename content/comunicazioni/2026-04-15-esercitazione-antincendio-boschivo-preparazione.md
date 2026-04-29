@@ -5,14 +5,14 @@ description: "Ogni anno in primavera il Gruppo partecipa a esercitazioni AIB. Un
 badge: "Esercitazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-04-15-esercitazione-antincendio-boschivo-preparazione.webp"
-image_alt: "Cover dell'articolo: Esercitazione antincendio boschivo: come ci prepariamo"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Canadair" 2026-04-15-esercitazione-antincendio-boschivo-preparazione it
+
 La **primavera** è tradizionalmente il periodo in cui i gruppi di Protezione Civile partecipano alle **esercitazioni AIB** (Antincendio Boschivo). Prima dell'inizio della **campagna estiva** — giugno-settembre — i volontari mettono in pratica procedure, mezzi e coordinamento in **scenari realistici**.
 
 L'esercitazione è uno strumento insostituibile: non è sufficiente **leggere un manuale** o **ripassare le radio**. Serve mettere le mani sulle cose, vedere come funziona la squadra, capire chi fa cosa in condizioni reali.

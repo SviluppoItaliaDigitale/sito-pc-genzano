@@ -5,14 +5,14 @@ description: "La biodiversita non è solo tutela della natura: è infrastruttura
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-22-giornata-biodiversita-territori-resilienti.webp"
-image_alt: "Cover dell'articolo: 22 maggio: Giornata della Biodiversità e territori più resilienti"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Parco regionale dei Castelli Romani" 2026-05-22-giornata-biodiversita-territori-resilienti it
+
 Il **22 maggio** è la [Giornata internazionale della Biodiversità](https://www.un.org/en/observances/biological-diversity-day) proclamata dalle Nazioni Unite. Può sembrare una ricorrenza distante dal lavoro di Protezione Civile. In realtà, la **biodiversità è una delle infrastrutture più importanti** per la sicurezza dei territori: boschi sani trattengono terreno, fiumi liberi assorbono piene, suoli vivi riducono dissesto e siccità.
 
 In questo articolo vediamo il legame concreto tra **natura sana** e **rischio ridotto**.

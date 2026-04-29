@@ -5,14 +5,14 @@ description: "La Festa della Liberazione ricorda i valori della Costituzione: so
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-04-25-festa-liberazione-volontariato-civico.webp"
-image_alt: "Cover dell'articolo: 25 aprile: il volontariato di Protezione Civile come impegno civico"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Festa della Liberazione" 2026-04-25-festa-liberazione-volontariato-civico it
+
 Il 25 aprile è la [Festa della Liberazione](https://www.quirinale.it/). Non è solo una data storica: è un giorno che ricorda i valori fondativi della [Costituzione italiana](https://www.senato.it/istituzione/la-costituzione) — democrazia, solidarietà, partecipazione, cura della comunità. Sono gli stessi valori su cui si fonda il servizio di volontariato di Protezione Civile.
 
 ## Un impegno che nasce dalla Costituzione

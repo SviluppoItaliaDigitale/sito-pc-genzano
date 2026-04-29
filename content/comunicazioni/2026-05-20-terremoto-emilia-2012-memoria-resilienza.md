@@ -5,14 +5,14 @@ description: "Quattordici anni dal sisma emiliano. Cosa abbiamo imparato sulla v
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-20-terremoto-emilia-2012-memoria-resilienza.webp"
-image_alt: "Cover dell'articolo: 20 maggio 2012: il terremoto in Emilia e la memoria che diventa prevenzione"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
----
-
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto dell'Emilia del 2012" 2026-05-20-terremoto-emilia-2012-memoria-resilienza it
+
 Alle **4:03 del mattino del 20 maggio 2012**, una scossa di magnitudo 5.9 colpì la Pianura Padana tra le province di Modena, Ferrara, Bologna, Rovigo, Mantova, Reggio Emilia. Nove giorni dopo, il **29 maggio**, una seconda scossa di magnitudo 5.8 colpì le stesse aree e ne allargò l'impatto. Furono **27 le vittime**, migliaia i feriti, decine di migliaia le persone sfollate. Il patrimonio artistico, la produzione agroalimentare, il tessuto sociale emiliani furono pesantemente colpiti.
 
 {{< foto src="/images/2026-evento-emilia-2012-mirandola.webp"
