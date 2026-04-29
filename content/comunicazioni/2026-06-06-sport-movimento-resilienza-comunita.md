@@ -15,6 +15,11 @@ draft: false
 
 Il **6 giugno** è la [Giornata internazionale dello sport per lo sviluppo e la pace](https://www.un.org/en/observances/sport-day) delle **Nazioni Unite**. Una ricorrenza che sembra lontana dal mondo della Protezione Civile. In realtà è vicinissima: sport, movimento, attività all'aperto sono **elementi di resilienza** sia individuale sia collettiva.
 
+
+{{< foto src="/images/2026-06-06-sport-movimento-resilienza-comunita-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Perché uno parla di sport in un sito di PC
 
 Un volontario di Protezione Civile deve saper affrontare situazioni fisiche impegnative: camminate prolungate in pendenza, carico di attrezzature, interventi in condizioni climatiche estreme. Ma anche un cittadino, nelle emergenze, viene messo alla prova fisicamente: evacuare senza ascensore, camminare per chilometri, trasportare un bagaglio e un bambino.

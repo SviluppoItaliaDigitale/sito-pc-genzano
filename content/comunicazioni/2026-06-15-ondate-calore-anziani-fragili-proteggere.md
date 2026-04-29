@@ -15,6 +15,11 @@ draft: false
 
 Con il **15 giugno** entriamo nel cuore della stagione delle **ondate di calore**. Il dato statistico è netto: in Italia, in estate, le **morti in eccesso** durante ondate prolungate di caldo superano quelle dei terremoti in anni non sismici. Sono decessi spesso invisibili, concentrati tra **anziani soli, persone con patologie croniche, bambini piccolissimi**. Molti sarebbero evitabili con un po' di attenzione di rete.
 
+
+{{< foto src="/images/2026-06-15-ondate-calore-anziani-fragili-proteggere-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## Il ruolo del 15 giugno
 
 Il **Ministero della Salute** pubblica dal 15 giugno al 15 settembre i **bollettini di ondate di calore** per 27 città italiane (Roma inclusa). Ogni giorno, alle 10:00, vengono aggiornati tre livelli di rischio:

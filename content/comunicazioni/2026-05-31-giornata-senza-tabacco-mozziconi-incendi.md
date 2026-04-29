@@ -17,6 +17,11 @@ Il **31 maggio** è la [Giornata mondiale senza tabacco](https://www.who.int/cam
 
 Questo articolo non vuole essere un'omelia contro i fumatori. Vuole parlare di **responsabilità condivisa** nella prevenzione degli incendi, che in estate 2026 sarà ancora più importante.
 
+
+{{< foto src="/images/2026-05-31-giornata-senza-tabacco-mozziconi-incendi-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Un dato che sorprende
 
 Secondo i rapporti del **Corpo dei Carabinieri Forestali** e del **Dipartimento della Protezione Civile**, ogni anno in Italia **circa il 7-10% degli incendi boschivi** è direttamente attribuibile a **mozziconi di sigaretta**. A questo si aggiungono i casi indiretti (fiammiferi, accendini buttati, braci di barbecue mal spenti) che portano la quota complessiva delle "cause da comportamento incauto" al **15-20%** degli incendi totali.

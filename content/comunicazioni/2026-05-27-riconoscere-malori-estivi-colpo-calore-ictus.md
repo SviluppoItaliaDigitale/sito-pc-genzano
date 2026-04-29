@@ -17,6 +17,11 @@ L'estate non è solo vacanze: è anche una stagione in cui **aumentano alcuni ma
 
 Questo articolo è un promemoria pratico — non sostituisce la formazione di primo soccorso, ma aiuta a prepararsi.
 
+
+{{< foto src="/images/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## Il principio di base
 
 Davanti a una persona che sta male, **tre domande** guidano la valutazione:

@@ -15,6 +15,11 @@ draft: false
 
 **IT-alert** è il sistema pubblico di **allarme nazionale** del Dipartimento della Protezione Civile. Invia messaggi a tutti i telefoni cellulari presenti in un'area geografica a rischio, in caso di emergenze gravi e imminenti. Il sistema è operativo a pieno regime dal **2024** dopo una lunga fase di test.
 
+
+{{< foto src="/images/2026-06-11-it-alert-come-funziona-reagire-corpo.webp"
+         alt="Smartphone con notifica di allerta in primo piano"
+         caption="IT-alert è il sistema italiano di allerta pubblica multicanale." >}}
+
 ## Perché esiste
 
 In emergenze molto rapide (terremoti, eventi nucleari, crolli di dighe, attacchi terroristici, incendi vicino ad abitato) il tempo tra il rilevamento del rischio e l'azione necessaria è di **minuti**. I canali tradizionali — TV, radio, social, sito comunale — possono non raggiungere chi è in macchina, al cinema, in passeggiata.

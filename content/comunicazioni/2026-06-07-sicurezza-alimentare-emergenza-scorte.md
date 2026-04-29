@@ -15,6 +15,11 @@ draft: false
 
 Il **7 giugno** è la [Giornata mondiale della sicurezza alimentare](https://www.who.int/campaigns/world-food-safety-day) di **OMS** e **FAO**. In condizioni ordinarie il tema riguarda filiere e controlli sanitari. Dal punto di vista della Protezione Civile tocca un aspetto **pratico e domestico**: come conservare e gestire il cibo quando l'emergenza cambia le regole del gioco.
 
+
+{{< foto src="/images/2026-06-07-sicurezza-alimentare-emergenza-scorte-corpo.webp"
+         alt="Cucina in operazione con preparazione di pasti"
+         caption="L'alimentazione in emergenza richiede protocolli specifici di sicurezza." >}}
+
 ## Cosa succede al cibo in emergenza
 
 Immagina uno scenario: **blackout di 48 ore** dopo un evento meteo. Frigorifero e congelatore spenti, impossibile uscire a fare la spesa, acqua potabile razionata. Non è uno scenario fantascientifico: è successo in diverse città italiane dopo gelate, alluvioni, trombe d'aria.

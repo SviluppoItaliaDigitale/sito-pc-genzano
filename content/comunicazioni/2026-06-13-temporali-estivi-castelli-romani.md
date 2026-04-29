@@ -15,6 +15,11 @@ draft: false
 
 I **temporali estivi** dei Castelli Romani sono un fenomeno tipico del periodo **giugno-settembre**. Sono spesso violenti, rapidi, localizzati: nel giro di un'ora possono scaricare **50-80 mm di pioggia**, più dell'intera media mensile di molte località. Conoscerli e sapersi comportare è un'assicurazione per la sicurezza personale e familiare.
 
+
+{{< foto src="/images/2026-06-13-temporali-estivi-castelli-romani-corpo.webp"
+         alt="Cielo tempestoso con fulmini durante un temporale forte"
+         caption="I temporali forti possono produrre danni anche su territori limitati." >}}
+
 ## Cosa sono i temporali convettivi estivi
 
 I **temporali convettivi** nascono dal riscaldamento del suolo durante la giornata. L'aria umida che si solleva rapidamente si condensa in **cumulonembi**, nuvole molto alte e scure a sviluppo verticale. Caratteristiche:
