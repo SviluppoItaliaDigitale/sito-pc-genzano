@@ -15,6 +15,11 @@ draft: false
 
 Con l'arrivo dell'inverno si registra un **peggioramento** della qualità dell'aria. L'**inversione termica**, i **riscaldamenti** a pieno regime e il **traffico** contribuiscono ad accumulare **polveri sottili**. Il PM10 è uno degli indicatori più monitorati — e più sottovalutati come rischio per la salute.
 
+
+{{< foto src="/images/2026-11-09-qualita-aria-pm10-inverno-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Cos'è il PM10
 
 Il **PM10** è l'insieme di **particolati** sospesi nell'aria con **diametro inferiore a 10 micrometri** (una frazione di millimetro). Origina da:

@@ -15,6 +15,11 @@ draft: false
 
 Ogni anno in Italia circa **il 30% degli incendi domestici** ha **origine elettrica**: cortocircuiti, sovraccarichi, fili logorati, prese sovraccariche. Un tema che richiede **attenzione costante**, non solo quando ci si trasferisce in una nuova casa.
 
+
+{{< foto src="/images/2026-11-14-sicurezza-impianti-elettrici-casa-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## La normativa di base
 
 Gli impianti elettrici in abitazione devono rispettare:

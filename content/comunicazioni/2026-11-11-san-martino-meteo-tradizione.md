@@ -15,6 +15,11 @@ draft: false
 
 Oggi **11 novembre** è **San Martino**, ricorrenza nota in tutta Italia per la sua **connessione con il clima** e le **tradizioni agricole**. Un'occasione per riflettere su come, nei secoli, le comunità abbiano **letto** il territorio, e su come la **conoscenza empirica** si affianca oggi a quella scientifica.
 
+
+{{< foto src="/images/2026-11-11-san-martino-meteo-tradizione-corpo.webp"
+         alt="Cielo con nuvole — illustrazione della previsione meteo"
+         caption="I bollettini meteo sono lo strumento di prevenzione quotidiana del rischio idrogeologico." >}}
+
 ## San Martino nella tradizione
 
 Nella cultura popolare italiana:
