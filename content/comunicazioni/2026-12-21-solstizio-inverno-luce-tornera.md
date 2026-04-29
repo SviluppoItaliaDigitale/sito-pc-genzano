@@ -15,11 +15,6 @@ draft: false
 
 Oggi, **21 dicembre 2026**, è il **solstizio d'inverno**. Il **giorno più corto dell'anno** nell'emisfero nord. Da domani, impercettibilmente, la **luce** tornerà a crescere. Un momento astronomico che ha sempre avuto un forte significato culturale e spirituale.
 
-
-{{< foto src="/images/2026-12-21-solstizio-inverno-luce-tornera-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Cos'è il solstizio
 
 ### Astronomia

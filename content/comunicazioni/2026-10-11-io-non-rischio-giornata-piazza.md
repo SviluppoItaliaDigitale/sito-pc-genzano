@@ -15,11 +15,6 @@ draft: false
 
 Nell'ambito della campagna nazionale **Io Non Rischio**, promossa dal **Dipartimento della Protezione Civile** in collaborazione con **ANPAS**, **INGV**, **ReLUIS** e il volontariato organizzato, il Gruppo Comunale Volontari di PC di Genzano ha incontrato, o incontrerà secondo calendario regionale, i cittadini in una giornata pubblica in piazza. Date e luoghi puntuali sono comunicati sui canali ufficiali.
 
-
-{{< foto src="/images/2026-10-11-io-non-rischio-giornata-piazza-corpo.webp"
-         alt="Veduta panoramica dei Castelli Romani"
-         caption="Il territorio di Genzano e dei Castelli Romani è il contesto di intervento del Gruppo." >}}
-
 ## Il senso della giornata
 
 "Io Non Rischio" si basa su un principio semplice e ambizioso: **la conoscenza del rischio è un diritto e una responsabilità**. Una popolazione informata si difende meglio. Per questo ogni autunno, in centinaia di piazze italiane, volontari formati incontrano cittadini per parlare di:

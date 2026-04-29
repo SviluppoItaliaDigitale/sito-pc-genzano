@@ -17,11 +17,6 @@ L'**11 febbraio** si celebra in tutti i paesi dell'Unione Europea la **Giornata 
 
 Nel Lazio, dal 2017, il 112 è **l'unico numero da chiamare** in qualsiasi situazione di emergenza: medica, di sicurezza, di incendio, di soccorso tecnico.
 
-
-{{< foto src="/images/2026-02-11-112-corpo.webp"
-         alt="Cabina telefonica pubblica con apparato di emergenza"
-         caption="Il 112 è il punto di accesso unico al sistema di emergenza europeo: gratuito, senza credito, da fisso e da mobile. _Foto: fuji01 — Pixabay Content License._" >}}
-
 ## Cos'è il 112
 
 Il **112** è il **Numero Unico Europeo di Emergenza** (NUE), istituito con una Direttiva UE del 1991. È:

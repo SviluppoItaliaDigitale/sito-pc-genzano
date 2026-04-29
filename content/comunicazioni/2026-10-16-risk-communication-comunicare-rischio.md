@@ -15,11 +15,6 @@ draft: false
 
 Comunicare un **rischio** non è "annunciare un pericolo". È una disciplina scientifica, con regole precise. La **risk communication** nasce negli anni '80 e oggi è **parte integrante** della Protezione Civile moderna: senza comunicazione corretta, anche il miglior sistema di allerta fallisce.
 
-
-{{< foto src="/images/2026-10-16-risk-communication-comunicare-rischio-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## I principi fondamentali
 
 ### Accuratezza

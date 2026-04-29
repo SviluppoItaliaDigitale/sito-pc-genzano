@@ -15,11 +15,6 @@ draft: false
 
 I **boschi dei Castelli Romani** — querceti, castagneti, faggete in quota — sono uno dei tesori naturali della nostra area, tutelati dal [Parco Regionale dei Castelli Romani](http://www.parcocastelliromani.it/). Sono anche meta di tantissime persone: escursionisti, famiglie, fungaioli, ciclisti. Ogni anno, in Italia, i **Vigili del Fuoco** e il **Soccorso Alpino** attivano ricerche per persone che si perdono nei boschi. La maggior parte si risolve bene, ma una preparazione minima riduce enormemente i rischi.
 
-
-{{< foto src="/images/2026-05-21-perdersi-nei-boschi-castelli-romani-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Perché ci si perde
 
 Le cause più comuni sono:

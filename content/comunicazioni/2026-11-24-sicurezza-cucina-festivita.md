@@ -15,11 +15,6 @@ draft: false
 
 La **cucina** è il luogo **più pericoloso** della casa. Durante le feste — **Natale**, **Capodanno**, pranzi di famiglia allargata — il rischio aumenta per **quantità** di pietanze cucinate, **fornelli accesi a lungo**, **bambini** attorno, **stress** del cuoco. Qualche pratica semplice fa la differenza.
 
-
-{{< foto src="/images/2026-11-24-sicurezza-cucina-festivita-corpo.webp"
-         alt="Cucina in operazione con preparazione di pasti"
-         caption="L'alimentazione in emergenza richiede protocolli specifici di sicurezza." >}}
-
 ## I rischi principali
 
 ### Incendio

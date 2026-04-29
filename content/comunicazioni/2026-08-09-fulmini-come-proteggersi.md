@@ -15,11 +15,6 @@ draft: false
 
 Un fulmine è una scarica elettrica che può raggiungere i **30.000 gradi** e **30.000 ampere**. In Italia cade in media un fulmine ogni pochi secondi durante i temporali estivi, e alcuni provocano vittime. I Castelli Romani, per la loro altitudine e morfologia, sono area di frequente attività temporalesca. Conoscere le regole base aiuta a ridurre il rischio.
 
-
-{{< foto src="/images/2026-08-09-fulmini-come-proteggersi-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## La regola del 30/30
 
 Una regola semplice, adottata dalla **Protezione Civile nazionale** e da molti servizi meteo:

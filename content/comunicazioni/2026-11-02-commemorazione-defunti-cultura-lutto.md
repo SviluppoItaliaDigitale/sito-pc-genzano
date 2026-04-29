@@ -15,11 +15,6 @@ draft: false
 
 Il **2 novembre** è, nel calendario civile e religioso italiano, la **commemorazione dei defunti**. Una giornata in cui famiglie, comunità e istituzioni si **fermano** a ricordare chi non c'è più. Anche il sistema di Protezione Civile, che opera quotidianamente a **tutela della vita**, riconosce il valore di questa ricorrenza.
 
-
-{{< foto src="/images/2026-11-02-commemorazione-defunti-cultura-lutto-corpo.webp"
-         alt="Archivio storico — illustrazione"
-         caption="La memoria storica è uno strumento di prevenzione." >}}
-
 ## Il significato della giornata
 
 La commemorazione:

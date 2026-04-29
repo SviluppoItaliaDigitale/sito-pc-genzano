@@ -15,11 +15,6 @@ draft: false
 
 I laghi di **Nemi** e **Albano** sono fra gli specchi d'acqua vulcanici più noti del Lazio. Meta estiva di romani e turisti stranieri, accolgono ogni anno migliaia di bagnanti. La balneazione è consentita in alcune zone e in condizioni precise: conoscerle aiuta a vivere la giornata in sicurezza.
 
-
-{{< foto src="/images/2026-08-12-balneazione-laghi-nemi-albano-sicurezza-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Le zone di balneazione
 
 La **Regione Lazio** aggiorna ogni anno le **zone autorizzate** sulla base dei controlli di qualità delle acque effettuati dall'**ARPA Lazio**. Le informazioni ufficiali sono pubblicate su:

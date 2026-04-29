@@ -17,11 +17,6 @@ Il **23 maggio 1992**, sull'autostrada A29 all'altezza dello svincolo di Capaci,
 
 Oggi il 23 maggio è **Giornata della Legalità** in Italia: un anniversario civile che parla a tutti coloro che, in modi diversi, **servono lo Stato e la comunità** — magistrati, forze dell'ordine, insegnanti, medici, funzionari pubblici, e anche volontari di Protezione Civile.
 
-
-{{< foto src="/images/2026-05-23-strage-capaci-legalita-servizio-pubblico-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Servire la comunità: cosa significa davvero
 
 "Servizio pubblico" è un'espressione che oggi rischia di suonare burocratica. Eppure descrive una scelta quotidiana: **mettere la propria competenza e il proprio tempo a disposizione degli altri**, nel rispetto di regole, procedure, responsabilità.

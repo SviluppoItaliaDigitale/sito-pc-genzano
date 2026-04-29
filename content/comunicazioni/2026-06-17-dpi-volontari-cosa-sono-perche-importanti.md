@@ -15,11 +15,6 @@ draft: false
 
 Ogni volontario di Protezione Civile indossa in servizio una serie di **Dispositivi di Protezione Individuale** (DPI). Non sono un'uniforme per "sembrare volontari": sono **strumenti di sicurezza** certificati, adeguati al rischio specifico di ogni attività. La loro scelta e il loro uso corretto sono frutto di normativa, formazione e disciplina operativa.
 
-
-{{< foto src="/images/2026-06-17-dpi-volontari-cosa-sono-perche-importanti-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## La cornice normativa
 
 I DPI sono regolati dal **D.Lgs 81/2008** (Testo Unico sulla Sicurezza sul Lavoro), applicabile anche al volontariato di Protezione Civile in servizio attivo. Il Codice della PC (D.Lgs 1/2018) ribadisce l'obbligo per l'ente pubblico di fornirli e garantirne la manutenzione.

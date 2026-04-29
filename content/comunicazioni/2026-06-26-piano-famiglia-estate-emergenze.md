@@ -15,11 +15,6 @@ draft: false
 
 L'estate non è solo una vacanza: è una stagione con **rischi specifici** (incendi, temporali, ondate di calore) e **cambiamenti di ritmo** (viaggi, bambini a casa, giornate fuori). Un **piano familiare di emergenza** adeguato all'estate è semplice da preparare e **molto utile** quando serve.
 
-
-{{< foto src="/images/2026-06-26-piano-famiglia-estate-emergenze-corpo.webp"
-         alt="Famiglia che prepara un kit di emergenza domestico"
-         caption="Il piano familiare di emergenza è il primo strumento di autoprotezione." >}}
-
 ## Cos'è un piano di famiglia
 
 È un insieme di **decisioni e accordi** presi in famiglia sulle emergenze possibili:

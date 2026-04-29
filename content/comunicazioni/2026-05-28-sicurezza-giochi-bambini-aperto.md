@@ -17,11 +17,6 @@ L'estate e la fine della scuola portano i bambini **all'aperto**: parchi, cortil
 
 Parlare di sicurezza dei bambini non significa **renderli ansiosi** o tenerli in casa. Significa dare loro **libertà guidata** con adulti presenti.
 
-
-{{< foto src="/images/2026-05-28-sicurezza-giochi-bambini-aperto-corpo.webp"
-         alt="Aula scolastica con bambini durante una lezione"
-         caption="L'educazione al rischio inizia a scuola." >}}
-
 ## Il principio: supervisione, non controllo
 
 I bambini crescono **correndo, cadendo, sbagliando**. Un bambino troppo protetto è un bambino fragile. La Protezione Civile della famiglia consiste nel **prevenire l'incidente grave**, non eliminare ogni piccolo rischio.

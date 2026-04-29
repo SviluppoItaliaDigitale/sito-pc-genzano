@@ -15,11 +15,6 @@ draft: false
 
 Ogni anno, in date diverse, il **Dipartimento della Protezione Civile** organizza **esercitazioni nazionali** che coinvolgono più Regioni, migliaia di volontari, Vigili del Fuoco, Forze Armate, sanità, enti gestori di infrastrutture. Non sono eventi di rappresentanza: sono il **banco di prova** del sistema italiano di PC, in cui si testa tutto ciò che, in un'emergenza vera, non avrebbe una seconda chance.
 
-
-{{< foto src="/images/2026-09-16-esercitazione-nazionale-pc-settembre-corpo.webp"
-         alt="Sessione di formazione con docente e partecipanti"
-         caption="La formazione continua è il pilastro dell'operatività del volontariato." >}}
-
 ## Perché si fanno
 
 Un'esercitazione nazionale serve a:

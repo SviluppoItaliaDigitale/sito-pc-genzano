@@ -17,11 +17,6 @@ L'**ultima domenica di marzo** scattano **le lancette in avanti**: si passa dall
 
 Per la Protezione Civile è un **buon momento** per avviare le attività stagionali tipiche della bella stagione: preparazione agli incendi boschivi, pulizia delle aree, esercitazioni, controlli sui mezzi, manutenzione dei kit.
 
-
-{{< foto src="/images/2026-03-29-ora-legale-cambi-stagionali-preparazione-primavera-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Il cambio ora: note pratiche
 
 Nella notte tra **sabato e domenica** le lancette avanzano da 2:00 a 3:00. Si dorme **un'ora in meno** — fatto che molte ricerche indicano come possibile **causa di disturbi transitori** (affaticamento, difficoltà di concentrazione, piccolo aumento di incidenti stradali nei giorni successivi).

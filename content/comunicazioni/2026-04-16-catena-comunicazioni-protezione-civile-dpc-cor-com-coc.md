@@ -18,11 +18,6 @@ draft: false
 
 ---
 
-
-{{< foto src="/images/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Perché serve una catena strutturata
 
 Durante un'emergenza, le informazioni arrivano da decine di fonti simultanee: cittadini che chiamano il 112, stazioni sismiche dell'INGV, satelliti meteo, sensori idrometrici, squadre di volontari sul campo. Senza una catena organizzata, queste informazioni si accumulerebbero in modo caotico, con il rischio di:

@@ -15,11 +15,6 @@ draft: false
 
 Il **26 giugno** è la **Giornata internazionale contro l'abuso e il traffico illecito di stupefacenti**, istituita dall'**ONU** nel 1987. Può sembrare un tema distante dalla Protezione Civile, ma non lo è: **fragilità sociale** e **capacità di risposta alle emergenze** sono due facce della stessa medaglia.
 
-
-{{< foto src="/images/2026-06-21-giornata-contro-droga-resilienza-comunita-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Perché la PC si occupa di fragilità
 
 In ogni emergenza — terremoti, alluvioni, evacuazioni — le persone più colpite sono quelle in condizioni di vulnerabilità preesistente: anziani soli, persone con dipendenze, senza dimora, con disagio psichico, minori in famiglie disgregate.

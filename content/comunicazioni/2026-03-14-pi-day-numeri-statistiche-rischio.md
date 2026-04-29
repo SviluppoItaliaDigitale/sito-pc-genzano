@@ -17,11 +17,6 @@ Il **14 marzo** (3/14, nella notazione anglosassone) è il **Pi Day**, la giorna
 
 Può sembrare un tema lontano dalla Protezione Civile. In realtà la gestione del rischio **è matematica applicata**: probabilità, statistica, geometria delle mappe, modelli di calcolo. Dietro ogni bollettino meteo, ogni mappa di pericolosità sismica, ogni previsione di piena c'è un **corpo di dati e formule** enorme.
 
-
-{{< foto src="/images/2026-03-14-pi-day-numeri-statistiche-rischio-corpo.webp"
-         alt="Paesaggio naturale italiano — territorio e ambiente"
-         caption="La conoscenza del territorio è il primo strumento di prevenzione." >}}
-
 ## La Protezione Civile è scienza dei numeri
 
 ### Probabilità

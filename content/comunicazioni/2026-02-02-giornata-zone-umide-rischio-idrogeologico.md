@@ -17,11 +17,6 @@ Il **2 febbraio** è la **Giornata mondiale delle zone umide** (*World Wetlands 
 
 Può sembrare un tema lontano dal nostro lavoro quotidiano. Non lo è. Le **zone umide** sono un **presidio naturale contro il rischio idrogeologico** — alluvioni, frane, siccità. Proteggerle significa **proteggere le città** a valle.
 
-
-{{< foto src="/images/2026-02-02-giornata-zone-umide-rischio-idrogeologico-corpo.webp"
-         alt="Strada urbana allagata dopo un evento di pioggia intensa"
-         caption="Le alluvioni urbane sono in aumento per effetto dei cambiamenti climatici." >}}
-
 ## Cosa sono le zone umide
 
 Le zone umide sono ambienti in cui **l'acqua è l'elemento caratterizzante** e modella il paesaggio:

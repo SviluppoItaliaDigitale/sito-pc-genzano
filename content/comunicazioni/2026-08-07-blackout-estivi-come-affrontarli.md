@@ -15,11 +15,6 @@ draft: false
 
 Nei mesi estivi, soprattutto nelle ore pomeridiane, può accadere che la rete elettrica locale ceda. Si tratta di **blackout** che in genere durano pochi minuti, ma che in casi gravi possono protrarsi per ore. I Castelli Romani, per densità di popolazione e picchi di consumo dovuti al turismo, sono zona sensibile.
 
-
-{{< foto src="/images/2026-08-07-blackout-estivi-come-affrontarli-corpo.webp"
-         alt="Infrastruttura tecnologica — illustrazione"
-         caption="Le infrastrutture critiche sono al centro della pianificazione di emergenza." >}}
-
 ## Perché accadono d'estate
 
 - **Picco di consumo** dovuto ai condizionatori.

@@ -15,11 +15,6 @@ draft: false
 
 In Italia ogni anno si verificano oltre **60.000 arresti cardiaci extra-ospedalieri**. La **sopravvivenza** di una persona colpita da arresto dipende dai **primi 3-5 minuti**. Un **massaggio cardiaco precoce** e l'uso di un **defibrillatore semiautomatico esterno (DAE)** possono **triplicare** le probabilità di sopravvivere. Imparare **BLS-D** è una delle competenze civiche più utili in assoluto.
 
-
-{{< foto src="/images/2026-09-26-bls-d-defibrillatore-formazione-corpo.webp"
-         alt="Kit di primo soccorso aperto con materiale medico"
-         caption="Il primo soccorso è una competenza che ogni cittadino dovrebbe avere." >}}
-
 ## Cosa significa BLS-D
 
 BLS-D è acronimo di **Basic Life Support - Defibrillation**: "supporto delle funzioni vitali di base con defibrillazione". È una tecnica semplice, insegnata in corsi di 4-5 ore, che chiunque può apprendere.

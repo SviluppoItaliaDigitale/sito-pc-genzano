@@ -15,11 +15,6 @@ draft: false
 
 Il **26 dicembre** è **Santo Stefano**, protomartire (primo martire cristiano). Festa nazionale in Italia. Un giorno di **pausa** tra il **Natale** appena celebrato e il **nuovo anno** che si avvicina. Un'occasione per riposare, riflettere, rallentare.
 
-
-{{< foto src="/images/2026-12-26-santo-stefano-protomartire-corpo.webp"
-         alt="Folla durante un evento pubblico"
-         caption="I grandi eventi richiedono pianificazione di sicurezza preventiva." >}}
-
 ## Chi era Santo Stefano
 
 ### Storicità

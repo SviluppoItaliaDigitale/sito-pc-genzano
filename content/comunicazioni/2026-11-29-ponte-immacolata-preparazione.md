@@ -15,11 +15,6 @@ draft: false
 
 L'**8 dicembre 2026** cade di **martedì**. Molti sfrutteranno il **5-8 dicembre** (venerdì-lunedì-martedì) come lungo ponte. Il **ponte dell'Immacolata** segna l'avvio informale della **stagione natalizia**: mercatini, luminarie, prime nevicate in montagna, traffico in aumento. Qualche nota utile.
 
-
-{{< foto src="/images/2026-11-29-ponte-immacolata-preparazione-corpo.webp"
-         alt="Cielo con nuvole — illustrazione della previsione meteo"
-         caption="I bollettini meteo sono lo strumento di prevenzione quotidiana del rischio idrogeologico." >}}
-
 ## Il contesto
 
 ### Date

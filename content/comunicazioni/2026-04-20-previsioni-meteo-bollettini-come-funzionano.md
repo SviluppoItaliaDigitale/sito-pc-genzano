@@ -17,11 +17,6 @@ Ogni mattina apriamo il telefono per sapere se prendere l'ombrello. Durante un'e
 
 In questo articolo spieghiamo il percorso completo: dall'osservazione del cielo al bollettino che leggi sulla pagina [Allerte Meteo](/allerte-meteo/) del nostro sito.
 
-
-{{< foto src="/images/2026-04-20-previsioni-meteo-bollettini-come-funzionano-corpo.webp"
-         alt="Cielo con nuvole — illustrazione della previsione meteo"
-         caption="I bollettini meteo sono lo strumento di prevenzione quotidiana del rischio idrogeologico." >}}
-
 ## 1. Come si fanno le previsioni meteo
 
 Una previsione è il risultato di tre fasi: osservare, simulare, interpretare.

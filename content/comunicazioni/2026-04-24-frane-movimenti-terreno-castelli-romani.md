@@ -17,11 +17,6 @@ Il territorio dei [Castelli Romani](https://it.wikipedia.org/wiki/Castelli_Roman
 
 In questo articolo raccontiamo, in modo chiaro e non allarmistico, di cosa si tratta e cosa può fare ogni cittadino.
 
-
-{{< foto src="/images/2026-04-24-frane-movimenti-terreno-castelli-romani-corpo.webp"
-         alt="Strada urbana allagata dopo un evento di pioggia intensa"
-         caption="Le alluvioni urbane sono in aumento per effetto dei cambiamenti climatici." >}}
-
 ## Cosa significa frana
 
 Il termine "frana" comprende fenomeni molto diversi tra loro. I più comuni sul nostro territorio sono:

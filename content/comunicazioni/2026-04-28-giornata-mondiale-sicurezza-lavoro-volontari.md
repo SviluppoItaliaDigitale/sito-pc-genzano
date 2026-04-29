@@ -15,11 +15,6 @@ draft: false
 
 Il 28 aprile è la [Giornata mondiale per la salute e la sicurezza sul lavoro](https://www.ilo.org/global/topics/safety-and-health-at-work/events-training/events-meetings/world-day-for-safety/lang--en/index.htm) istituita dall'Organizzazione Internazionale del Lavoro (ILO). Ricorda che lavorare in sicurezza è un diritto fondamentale. Un principio che vale per tutti — **anche per i volontari di Protezione Civile**, che in emergenza operano in contesti rischiosi.
 
-
-{{< foto src="/images/2026-04-28-sicurezza-lavoro-corpo.webp"
-         alt="Operatore industriale con casco di sicurezza giallo e gilet alta visibilità in un cantiere notturno"
-         caption="I dispositivi di protezione individuale sono lo strumento di base per tornare a casa interi al termine del turno. Vale per i lavoratori, vale per i volontari di Protezione Civile. _Foto: abdo alshreef — Pexels License._" >}}
-
 ## La sicurezza dei volontari è una responsabilità del sistema
 
 Il volontariato di Protezione Civile non è "lavoro" in senso contrattuale: è un servizio gratuito. Ma in emergenza i volontari svolgono attività che, nel mondo del lavoro, richiedono formazione specialistica e **dispositivi di protezione individuale (DPI)**. Per questo il [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/) (D.Lgs. 1/2018) e le disposizioni regionali prevedono standard precisi:

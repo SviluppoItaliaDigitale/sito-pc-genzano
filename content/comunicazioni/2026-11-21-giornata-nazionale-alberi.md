@@ -15,11 +15,6 @@ draft: false
 
 Il **21 novembre** si celebra in Italia la **Giornata nazionale degli alberi**, istituita dalla **Legge 10/2013**. Un'occasione per riflettere sul **ruolo strutturale** che i **boschi** e gli **alberi** giocano nella prevenzione del **rischio idrogeologico**, nella tutela del **clima** e nella qualità della vita urbana.
 
-
-{{< foto src="/images/2026-11-21-giornata-nazionale-alberi-corpo.webp"
-         alt="Strada urbana allagata dopo un evento di pioggia intensa"
-         caption="Le alluvioni urbane sono in aumento per effetto dei cambiamenti climatici." >}}
-
 ## Il patrimonio italiano
 
 L'Italia ha:

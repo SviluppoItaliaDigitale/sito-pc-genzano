@@ -17,11 +17,6 @@ Il **29 maggio 2012**, alle **9:00 del mattino**, una scossa di magnitudo **5.8*
 
 Ne abbiamo parlato il [20 maggio](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/) per l'anniversario della prima scossa. Il 29 maggio è un'occasione per riflettere su un aspetto meno raccontato: la **resilienza delle comunità** di fronte a emergenze **prolungate**, non a un singolo evento.
 
-
-{{< foto src="/images/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria-corpo.webp"
-         alt="Macerie e edifici danneggiati dopo una scossa sismica"
-         caption="Il rischio sismico è una caratteristica strutturale del territorio italiano." >}}
-
 ## Sequenze sismiche, non scosse isolate
 
 Un terremoto raramente è un evento unico. In zone sismicamente attive si verificano **sequenze sismiche**: una scossa principale, seguita da decine, a volte migliaia, di **repliche** (aftershocks) che possono durare settimane o mesi. Alcune repliche possono essere **forti come la scossa principale**, o persino di più.

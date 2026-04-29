@@ -15,11 +15,6 @@ draft: false
 
 Il **6 dicembre** è la festa di **San Nicola**, patrono dei bambini nella tradizione cattolica ed europea. Una figura popolare in **Bari** (dove si conservano le reliquie) e in **Paesi dell'est**. Cogliamo l'occasione per parlare di **sicurezza** e **tutela** dei più piccoli.
 
-
-{{< foto src="/images/2026-12-06-san-nicola-tradizione-bambini-corpo.webp"
-         alt="Aula scolastica con bambini durante una lezione"
-         caption="L'educazione al rischio inizia a scuola." >}}
-
 ## Chi è San Nicola
 
 - **vescovo** di Myra (nell'attuale Turchia), vissuto nel IV secolo;

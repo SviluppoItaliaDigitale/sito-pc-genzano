@@ -15,11 +15,6 @@ draft: false
 
 Essere **volontario di Protezione Civile** significa esporsi a esperienze che possono lasciare **impronte psicologiche** profonde: incidenti, persone in difficoltà, scene di sofferenza, operazioni in condizioni estreme. La **salute mentale del volontario** non è un tema secondario: è parte integrante della preparazione professionale. Ignorarla significa compromettere persone preziose.
 
-
-{{< foto src="/images/2026-07-27-salute-mentale-volontari-stress-emergenze-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## Il peso emotivo del volontariato
 
 Un volontario può affrontare:

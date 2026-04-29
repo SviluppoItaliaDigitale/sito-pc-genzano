@@ -15,11 +15,6 @@ draft: false
 
 **Chiamare il 112** è, nel Lazio, l'unico modo per attivare soccorsi di emergenza. Tutte le chiamate arrivano alla **Centrale Unica di Risposta del NUE** (Numero Unico Europeo), che smista all'ente competente: Vigili del Fuoco, emergenza sanitaria, Forze dell'Ordine, squadre AIB. Una chiamata ben fatta velocizza l'intervento. Una chiamata confusa lo rallenta. Ecco come fare.
 
-
-{{< foto src="/images/2026-10-08-segnalare-emergenze-112-come-fare-corpo.webp"
-         alt="Smartphone con chiamata di emergenza in corso"
-         caption="Il 112 è il punto di accesso unico al sistema italiano di emergenza." >}}
-
 ## Cosa dire
 
 Le informazioni **essenziali** che l'operatore chiede sempre:

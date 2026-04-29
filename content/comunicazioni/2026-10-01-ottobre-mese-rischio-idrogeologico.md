@@ -15,11 +15,6 @@ draft: false
 
 Con l'ingresso di ottobre si apre, nel Lazio, il **periodo di maggiore attenzione per il rischio idrogeologico**. Le prime piogge intense, i venti atlantici, le prime situazioni di saturazione dei terreni richiedono attenzione costante da parte di cittadini, enti e volontari di Protezione Civile.
 
-
-{{< foto src="/images/2026-10-01-ottobre-mese-rischio-idrogeologico-corpo.webp"
-         alt="Strada urbana allagata dopo un evento di pioggia intensa"
-         caption="Le alluvioni urbane sono in aumento per effetto dei cambiamenti climatici." >}}
-
 ## Il quadro di rischio
 
 Il territorio di Genzano e dei Castelli Romani presenta vulnerabilità specifiche:

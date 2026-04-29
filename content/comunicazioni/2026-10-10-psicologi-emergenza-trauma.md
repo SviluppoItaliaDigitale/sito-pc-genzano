@@ -17,11 +17,6 @@ draft: false
 
 Quando si parla di emergenze e calamità, la prima immagine è quella dei mezzi di soccorso, dei vigili del fuoco, dei volontari in arancione. Ma esiste un altro tipo di intervento meno visibile e altrettanto necessario: il **supporto psicologico**. Si rivolge alle persone colpite — e, importante, anche a chi le soccorre.
 
-
-{{< foto src="/images/2026-10-10-psicologi-emergenza-trauma-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Cos'è la "psicologia dell'emergenza"
 
 La **psicologia dell'emergenza** è una disciplina specifica della psicologia clinica che si occupa di:

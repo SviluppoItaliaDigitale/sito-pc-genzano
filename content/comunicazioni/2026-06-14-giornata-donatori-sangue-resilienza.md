@@ -15,11 +15,6 @@ draft: false
 
 Il **14 giugno** è la [Giornata mondiale del donatore di sangue](https://www.who.int/campaigns/world-blood-donor-day) di **OMS** e **Federazione internazionale della Croce Rossa**. Una ricorrenza che ogni anno ricorda quanto sia essenziale — per la sanità pubblica e per le emergenze — una rete capillare di **donatori volontari di sangue**.
 
-
-{{< foto src="/images/2026-06-14-giornata-donatori-sangue-resilienza-corpo.webp"
-         alt="Volontario durante una donazione di sangue"
-         caption="La donazione di sangue è un atto di responsabilità civica." >}}
-
 ## Un pilastro spesso invisibile
 
 In Italia ogni anno si effettuano oltre **3 milioni di donazioni** di sangue e emocomponenti. Sono donazioni **volontarie, anonime, non retribuite**, realizzate attraverso associazioni come **AVIS**, **FRATRES**, **Croce Rossa Italiana** e molte altre organizzazioni regionali.

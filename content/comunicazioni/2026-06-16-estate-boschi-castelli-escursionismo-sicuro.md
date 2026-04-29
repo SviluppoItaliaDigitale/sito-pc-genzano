@@ -15,11 +15,6 @@ draft: false
 
 I boschi dei **Colli Albani** sono un patrimonio naturalistico tra i più apprezzati del Lazio. Faggi, castagni, lecci, querce coprono gran parte del **Parco Regionale dei Castelli Romani**. Ma un bosco estivo non è mai solo un "luogo di fresco": è un ambiente con regole, rischi, tempi specifici.
 
-
-{{< foto src="/images/2026-06-16-estate-boschi-castelli-escursionismo-sicuro-corpo.webp"
-         alt="Veduta panoramica dei Castelli Romani"
-         caption="Il territorio di Genzano e dei Castelli Romani è il contesto di intervento del Gruppo." >}}
-
 ## Prima di partire
 
 - **Pianifica il percorso**: consulta mappe ufficiali (Parco, CAI) e verifica lunghezza, dislivello, tempi.

@@ -15,11 +15,6 @@ draft: false
 
 Il **Ministero dell'Interno** e le sue **Prefetture** producono spesso manuali operativi pensati per la formazione del personale interno. Alcuni di questi documenti, però, sono così chiari e ben organizzati da diventare **utili anche al cittadino** che voglia capire come funziona davvero la protezione civile italiana. È il caso del **Vademecum di Protezione Civile** pubblicato nel 2024 dalla **Prefettura di Isernia** e disponibile in forma integrale sul sito del Ministero dell'Interno.
 
-
-{{< foto src="/images/2026-04-30-vademecum-protezione-civile-prefettura-isernia-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Chi ha scritto il Vademecum e perché
 
 Il documento nasce, come dichiarato nelle prime pagine, **su impulso della Prefettura di Isernia**, a cura di un **Vice Prefetto Aggiunto del VI° Corso per Consiglieri di Prefettura**. Ha due scopi dichiarati:

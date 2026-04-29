@@ -15,11 +15,6 @@ draft: false
 
 Il **corso base di Protezione Civile** avviato il **23 ottobre** si avvia verso la conclusione. Gli ultimi incontri sono dedicati al **ripasso**, all'**approfondimento** dei temi più complessi e alla **preparazione** dell'esame finale. Un momento importante per i volontari che stanno per entrare in servizio attivo.
 
-
-{{< foto src="/images/2026-11-27-corso-base-ultima-settimana-esame-corpo.webp"
-         alt="Sessione di formazione con docente e partecipanti"
-         caption="La formazione continua è il pilastro dell'operatività del volontariato." >}}
-
 ## Il percorso svolto
 
 In 5 settimane di corso sono stati affrontati:

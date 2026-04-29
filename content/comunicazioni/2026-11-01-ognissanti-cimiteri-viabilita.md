@@ -15,11 +15,6 @@ draft: false
 
 Oggi **1° novembre**, **Ognissanti**, e domani **2 novembre**, **commemorazione dei defunti**, sono giornate in cui l'afflusso ai **cimiteri** è significativo. A Genzano, come in altri comuni dei Castelli, si registrano maggior traffico e raduni di persone. Qualche indicazione per viverle in **serenità** e **sicurezza**.
 
-
-{{< foto src="/images/2026-11-01-ognissanti-cimiteri-viabilita-corpo.webp"
-         alt="Strada urbana con segnaletica e traffico"
-         caption="La sicurezza stradale è una componente trasversale della Protezione Civile." >}}
-
 ## La viabilità nei pressi dei cimiteri
 
 Tra le **9:00 e le 13:00** e tra le **15:00 e le 18:00** si registra maggior afflusso. In questi orari:

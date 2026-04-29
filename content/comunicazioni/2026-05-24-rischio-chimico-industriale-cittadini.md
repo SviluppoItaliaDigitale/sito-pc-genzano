@@ -17,11 +17,6 @@ Il **rischio chimico e industriale** è uno dei capitoli della Protezione Civile
 
 Questo articolo spiega cosa significa "rischio chimico", come è normato e come i cittadini possono informarsi.
 
-
-{{< foto src="/images/2026-05-24-rischio-chimico-industriale-cittadini-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Cos'è un incidente chimico-industriale
 
 Un incidente industriale può produrre:

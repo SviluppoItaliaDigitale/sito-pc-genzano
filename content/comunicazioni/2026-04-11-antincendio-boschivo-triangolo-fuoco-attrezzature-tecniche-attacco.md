@@ -18,11 +18,6 @@ draft: false
 
 ---
 
-
-{{< foto src="/images/2026-04-11-antincendio-boschivo-corpo.webp"
-         alt="Squadra di vigili del fuoco impegnata su un fronte di incendio boschivo in azione di spegnimento"
-         caption="Gli incendi boschivi richiedono squadre coordinate, formate, equipaggiate. _Foto: RDNE Stock project — Pexels License._" >}}
-
 ## Cos'è un incendio boschivo
 
 Con il termine **incendio boschivo** si intende una **combustione che interessa materiale vegetale**: erba, cespugli, sterpaglia, arbusti, alberi. È un fenomeno governato da tre variabili principali:

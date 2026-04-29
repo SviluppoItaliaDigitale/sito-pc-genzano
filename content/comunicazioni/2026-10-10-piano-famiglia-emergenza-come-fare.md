@@ -15,11 +15,6 @@ draft: false
 
 La **Protezione Civile non è solo** un apparato pubblico. È anche ciò che ogni famiglia fa **a casa propria** per essere preparata a un'emergenza. Lo strumento principe, semplice e sottovalutato, è il **Piano di Emergenza Familiare**: un foglio scritto insieme una volta, che può fare la differenza in momenti critici.
 
-
-{{< foto src="/images/2026-10-10-piano-famiglia-emergenza-come-fare-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Cosa è
 
 Un **Piano di Emergenza Familiare** è un documento domestico che elenca:

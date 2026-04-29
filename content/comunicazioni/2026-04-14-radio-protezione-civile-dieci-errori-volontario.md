@@ -20,11 +20,6 @@ In questo articolo riassumiamo dieci errori frequenti e le regole d'oro corrispo
 
 ---
 
-
-{{< foto src="/images/2026-04-14-radio-corpo.webp"
-         alt="Operatore radio in uniforme con apparato ricetrasmittente palmare in mano"
-         caption="Una buona disciplina alla radio è il primo strumento operativo del volontario. _Foto: Heber Vazquez — Pexels License._" >}}
-
 ## Perché la radio resta insostituibile
 
 Il cellulare cade, la fibra si spezza, i ripetitori GSM saturano. La radio VHF/UHF continua a funzionare anche quando tutto il resto si ferma. La Guida IARU distingue tre livelli di utilità della radio in emergenza:

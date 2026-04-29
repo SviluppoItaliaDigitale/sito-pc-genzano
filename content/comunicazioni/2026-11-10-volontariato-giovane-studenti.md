@@ -15,11 +15,6 @@ draft: false
 
 Il **volontariato di Protezione Civile** non è riservato a chi ha raggiunto una certa età o maturità professionale. Anzi, **iniziare da giovane** porta benefici **formativi**, **civici** e **personali** che durano tutta la vita. Il Gruppo Comunale di Genzano accoglie con favore **studenti** e **giovani adulti** dai **18 anni**.
 
-
-{{< foto src="/images/2026-11-10-volontariato-giovane-studenti-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## Perché iniziare da giovane
 
 ### Crescita personale

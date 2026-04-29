@@ -15,11 +15,6 @@ draft: false
 
 I **laghi di Nemi** e di **Albano** sono un patrimonio naturale unico dei Castelli Romani. Conche vulcaniche profonde, con acque fredde anche d'estate, sponde ricche di vegetazione. Con l'arrivo del caldo cresce la frequentazione e, con essa, la necessità di conoscere **le regole di sicurezza** specifiche di questi ambienti.
 
-
-{{< foto src="/images/2026-05-19-sicurezza-laghi-nemi-albano-corpo.webp"
-         alt="Corso d'acqua naturale con vegetazione"
-         caption="L'acqua è una risorsa critica e un fattore di rischio idrogeologico." >}}
-
 ## Caratteristiche dei due laghi
 
 ### Lago di Nemi

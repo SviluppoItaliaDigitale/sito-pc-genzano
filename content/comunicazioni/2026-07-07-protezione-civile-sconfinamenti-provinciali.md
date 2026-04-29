@@ -15,11 +15,6 @@ draft: false
 
 Un'**alluvione** in un torrente che attraversa tre Comuni. Un **incendio** che dal Parco dei Castelli arriva a tre aree comunali. Un **terremoto** che colpisce un'intera area. Molte **emergenze** di Protezione Civile superano i confini amministrativi. La legge italiana prevede un sistema di coordinamento ben definito per queste situazioni.
 
-
-{{< foto src="/images/2026-07-07-protezione-civile-sconfinamenti-provinciali-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Il principio di sussidiarietà
 
 Il Codice della Protezione Civile (D.Lgs. 1/2018) si basa sul principio di **sussidiarietà**:

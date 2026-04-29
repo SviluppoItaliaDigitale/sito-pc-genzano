@@ -15,11 +15,6 @@ draft: false
 
 Quando una rete cellulare cade — per sovraccarico, blackout, guasto alle antenne — la **radiocomunicazione** diventa l'unico canale affidabile fra sale operative, squadre sul campo e strutture di emergenza. Il Gruppo Comunale Volontari di Protezione Civile di Genzano dispone di **operatori radio qualificati** e di una dotazione di apparati che rappresenta un pilastro della propria operatività.
 
-
-{{< foto src="/images/2026-08-22-radiocomunicazioni-emergenza-hf-vhf-corpo.webp"
-         alt="Operatore radio in azione con apparato ricetrasmittente"
-         caption="La radio resta una delle infrastrutture critiche della Protezione Civile." >}}
-
 ## Perché le radio restano indispensabili
 
 Il **terremoto de L'Aquila (2009)**, **l'alluvione di Genova (2011)**, il **terremoto di Amatrice (2016)** hanno mostrato che, in emergenza, le reti cellulari possono saturare o cadere. In quei casi:

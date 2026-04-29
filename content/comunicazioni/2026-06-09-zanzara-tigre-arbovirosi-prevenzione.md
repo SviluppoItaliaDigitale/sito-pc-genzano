@@ -15,11 +15,6 @@ draft: false
 
 La **zanzara tigre** (Aedes albopictus) è ormai una presenza stabile in tutta Italia e nel Lazio. A differenza delle zanzare "nostrane" (Culex), la tigre è **attiva di giorno** e mostra una particolare aggressività nel cercare il sangue umano. Non è solo un fastidio estivo: è un **vettore** di virus che in alcuni casi creano emergenze sanitarie pubbliche.
 
-
-{{< foto src="/images/2026-06-09-zanzara-tigre-arbovirosi-prevenzione-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Le arbovirosi: di cosa parliamo
 
 Per **arbovirosi** si intendono malattie virali trasmesse da **artropodi** (in questo caso zanzare). In Italia e nel Lazio il monitoraggio dell'**Istituto Superiore di Sanità** segue soprattutto:

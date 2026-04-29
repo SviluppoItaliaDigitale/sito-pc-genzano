@@ -15,11 +15,6 @@ draft: false
 
 Oggi **martedì 9 dicembre** è giorno di **rientri** dal ponte dell'Immacolata e **ripresa** della normalità. Traffico in aumento sulle autostrade, scuole e uffici riaperti. Attenzione alla **stanchezza** e alle **condizioni stradali** invernali.
 
-
-{{< foto src="/images/2026-12-09-rientro-post-ponte-sicurezza-stradale-corpo.webp"
-         alt="Strada urbana con segnaletica e traffico"
-         caption="La sicurezza stradale è una componente trasversale della Protezione Civile." >}}
-
 ## Il contesto
 
 ### Traffico atteso

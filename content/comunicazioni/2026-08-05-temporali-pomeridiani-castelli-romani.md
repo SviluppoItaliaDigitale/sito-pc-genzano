@@ -15,11 +15,6 @@ draft: false
 
 L'estate nei **Castelli Romani** porta con sé, accanto al caldo persistente, il rischio di **temporali pomeridiani improvvisi**. Sono fenomeni tipici delle zone collinari: l'aria calda risale lungo i versanti, condensa in cumulonembi e può scaricare in poche decine di minuti piogge violente, grandine, raffiche di vento e fulmini. Riconoscerli in anticipo aiuta a proteggersi.
 
-
-{{< foto src="/images/2026-08-05-temporali-pomeridiani-castelli-romani-corpo.webp"
-         alt="Cielo tempestoso con fulmini durante un temporale forte"
-         caption="I temporali forti possono produrre danni anche su territori limitati." >}}
-
 ## Perché i Castelli sono esposti
 
 La morfologia del territorio — un complesso vulcanico con rilievi che toccano i 950 metri (Monte Cavo) — favorisce la formazione di celle temporalesche in presenza di aria umida e calda al mattino. Le aree maggiormente interessate sono i versanti esposti a ovest e le zone di raccordo con la pianura romana.

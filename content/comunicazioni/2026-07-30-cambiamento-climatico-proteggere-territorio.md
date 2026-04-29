@@ -15,11 +15,6 @@ draft: false
 
 Il **cambiamento climatico** non è un tema per ecologisti o scienziati: è una **realtà operativa** per chi si occupa di Protezione Civile. Gli eventi estremi sono più frequenti, gli scenari di rischio cambiano, la popolazione deve essere preparata a sfide nuove. Non è catastrofismo: è pianificazione. Vale la pena guardare ai dati con sguardo realistico.
 
-
-{{< foto src="/images/2026-07-30-cambiamento-climatico-proteggere-territorio-corpo.webp"
-         alt="Paesaggio naturale italiano — territorio e ambiente"
-         caption="La conoscenza del territorio è il primo strumento di prevenzione." >}}
-
 ## I segnali nel nostro territorio
 
 Nei **Castelli Romani** e nel Lazio possiamo osservare:

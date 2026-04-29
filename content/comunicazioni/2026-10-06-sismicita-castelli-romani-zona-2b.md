@@ -15,11 +15,6 @@ draft: false
 
 Molti cittadini non sanno che **Genzano di Roma**, come la maggior parte dei Castelli Romani, è classificata in **zona sismica 2B**. Non è la classe più alta del territorio italiano (quella è la 1), ma nemmeno una zona a sismicità trascurabile. Capire la classificazione sismica aiuta a leggere correttamente le normative edilizie e le scelte di prevenzione.
 
-
-{{< foto src="/images/2026-10-06-sismicita-castelli-romani-zona-2b-corpo.webp"
-         alt="Macerie e edifici danneggiati dopo una scossa sismica"
-         caption="Il rischio sismico è una caratteristica strutturale del territorio italiano." >}}
-
 ## La classificazione sismica italiana
 
 Dopo il **DM 14 gennaio 2008** e il successivo **Decreto Norme Tecniche per le Costruzioni (NTC 2018)**, il territorio italiano è suddiviso in **zone sismiche**:

@@ -15,11 +15,6 @@ draft: false
 
 L'estate porta attività all'aperto e rischi sanitari specifici: **colpi di calore**, **traumi** da sport, **annegamenti** sfiorati, **punture di insetti**, **reazioni allergiche**. Il **primo soccorso** nei primi minuti può fare la differenza. Ecco una guida essenziale: utile in casa, in vacanza e come richiamo per chi ha già seguito corsi BLSD o simili.
 
-
-{{< foto src="/images/2026-06-29-primo-soccorso-estivo-caldo-traumi-corpo.webp"
-         alt="Cielo limpido e sole intenso durante un'ondata di calore"
-         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
-
 ## Premessa importante
 
 Queste **non sono istruzioni mediche esaustive**. Servono come richiamo di concetti. La **formazione vera** richiede un corso (BLSD, BLS-D laico, primo soccorso pediatrico) con pratica su manichini. Il Gruppo di PC e varie associazioni (Croce Rossa Italiana, Anpas) organizzano corsi aperti ai cittadini.

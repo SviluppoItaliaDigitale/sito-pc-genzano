@@ -15,11 +15,6 @@ draft: false
 
 Quando si pensa al **rischio idrogeologico** si immaginano piogge autunnali e inverni umidi. In realtà **l'estate** è una stagione altrettanto critica, e per ragioni diverse da quelle dell'inverno. Due fattori combinati — **siccità prolungata** e **temporali violenti localizzati** — creano condizioni specifiche di rischio.
 
-
-{{< foto src="/images/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge-corpo.webp"
-         alt="Strada urbana allagata dopo un evento di pioggia intensa"
-         caption="Le alluvioni urbane sono in aumento per effetto dei cambiamenti climatici." >}}
-
 ## L'estate idrogeologica "atipica"
 
 Nei Castelli Romani e nel Lazio centrale le estati degli ultimi anni hanno mostrato:

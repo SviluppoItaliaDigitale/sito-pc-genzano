@@ -18,11 +18,6 @@ draft: false
 
 ---
 
-
-{{< foto src="/images/2026-04-17-gestione-sala-radio-chiamata-emergenza-scheda-intervento-corpo.webp"
-         alt="Alberi piegati dal vento durante una tempesta"
-         caption="Il vento forte è uno dei fenomeni più sottostimati a livello di rischio." >}}
-
 ## Perché la sala radio è una funzione critica
 
 Durante un'emergenza i telefoni della protezione civile possono squillare in continuazione. Un operatore impreparato rischia di:

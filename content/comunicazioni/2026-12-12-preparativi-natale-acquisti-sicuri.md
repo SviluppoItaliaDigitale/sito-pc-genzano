@@ -15,11 +15,6 @@ draft: false
 
 **Dodici giorni** al Natale. Acquisti, addobbi, pranzi da organizzare: un periodo **intenso** che se **non gestito** diventa fonte di **stress**, **errori** e talvolta **incidenti**. Qualche suggerimento pratico.
 
-
-{{< foto src="/images/2026-12-12-preparativi-natale-acquisti-sicuri-corpo.webp"
-         alt="Folla durante un evento pubblico"
-         caption="I grandi eventi richiedono pianificazione di sicurezza preventiva." >}}
-
 ## Lo stress natalizio
 
 ### Perché esiste

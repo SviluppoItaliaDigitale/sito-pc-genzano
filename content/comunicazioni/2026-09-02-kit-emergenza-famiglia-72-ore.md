@@ -15,11 +15,6 @@ draft: false
 
 Il **Dipartimento della Protezione Civile** consiglia a ogni famiglia di tenere pronto un **kit di emergenza** in grado di coprire autonomamente le **prime 72 ore**, quando i soccorsi potrebbero non essere ancora arrivati in modo capillare. Non è una raccomandazione allarmistica, è **buona educazione civile**: come lo zaino di primo soccorso in auto.
 
-
-{{< foto src="/images/2026-09-02-kit-emergenza-famiglia-72-ore-corpo.webp"
-         alt="Famiglia che prepara un kit di emergenza domestico"
-         caption="Il piano familiare di emergenza è il primo strumento di autoprotezione." >}}
-
 ## Perché 72 ore
 
 Gli studi sulle emergenze mostrano che, nei primi giorni dopo un evento di grande impatto (terremoto, alluvione, black-out esteso, crisi idrica), le reti di servizio possono essere parzialmente interrotte. Avere autonomia per 72 ore consente di:

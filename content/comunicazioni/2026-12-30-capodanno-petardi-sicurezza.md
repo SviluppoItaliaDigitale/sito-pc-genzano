@@ -15,11 +15,6 @@ draft: false
 
 **30 dicembre 2026**. **Domani** è **Capodanno**. I **petardi** e i **fuochi d'artificio** fanno parte della tradizione italiana, ma ogni anno causano **infortuni**, **incendi**, **feriti** tra persone e **danni** agli animali. Le **regole** e il **buon senso** devono essere **guida**.
 
-
-{{< foto src="/images/2026-12-30-capodanno-petardi-sicurezza-corpo.webp"
-         alt="Cane e gatto a casa — gli animali domestici nel piano di emergenza"
-         caption="Anche gli animali da compagnia vanno inclusi nel piano familiare di emergenza." >}}
-
 ## I numeri del problema
 
 ### Incidenti italiani

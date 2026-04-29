@@ -15,11 +15,6 @@ draft: false
 
 Nella notte tra **sabato 25 e domenica 26 ottobre** torna l'**ora solare**: alle 3:00 si tornerà alle 2:00. Guadagniamo un'ora di sonno, ma **cala prima la luce** a fine giornata. Un passaggio stagionale che incide su **sicurezza personale**, **mobilità**, **abitudini** quotidiane.
 
-
-{{< foto src="/images/2026-10-25-cambio-ora-solare-preparazione-sera-corpo.webp"
-         alt="Operatori con dispositivi di protezione individuale"
-         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
-
 ## Cosa cambia sul piano pratico
 
 - **un'ora in più di sonno** la notte del cambio;

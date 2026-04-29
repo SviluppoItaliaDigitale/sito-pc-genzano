@@ -17,11 +17,6 @@ Quando arriva la chiamata di attivazione — un'esercitazione, un servizio di vi
 
 In questo articolo proponiamo una lista pratica di cosa contiene, organizzata per aree.
 
-
-{{< foto src="/images/2026-05-11-zaino-volontario-attivazione-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## Le caratteristiche dello zaino
 
 Prima di parlare dei contenuti, un po' di contenitore:

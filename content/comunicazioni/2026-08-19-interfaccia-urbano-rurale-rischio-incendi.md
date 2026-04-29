@@ -15,11 +15,6 @@ draft: false
 
 Con l'espressione **"zona di interfaccia urbano-rurale"** si intendono le aree dove il costruito si trova a contatto diretto con formazioni vegetali (bosco, macchia, sterpaglia). Sono tra le aree **più esposte** agli incendi di vegetazione in estate, perché il fuoco può propagarsi rapidamente dalle aree verdi a ville, case coloniche, piccoli borghi. Nei Castelli Romani questa situazione è frequente.
 
-
-{{< foto src="/images/2026-08-19-interfaccia-urbano-rurale-rischio-incendi-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Perché il rischio è alto
 
 - Le **case isolate** con giardino confinante su bosco non hanno la barriera dell'abitato.

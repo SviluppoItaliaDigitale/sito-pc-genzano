@@ -15,11 +15,6 @@ draft: false
 
 Il **12 giugno** è la [Giornata mondiale contro il lavoro minorile](https://www.ilo.org/resource/world-day-against-child-labour) dell'**Organizzazione Internazionale del Lavoro**. Ogni anno nel mondo oltre **160 milioni di bambini** sono impiegati in forme di lavoro che ne compromettono salute, istruzione, sviluppo. Un problema che appare distante, ma che tocca anche le emergenze umanitarie in cui la Protezione Civile italiana interviene come parte di operazioni internazionali.
 
-
-{{< foto src="/images/2026-06-12-contrasto-sfruttamento-minorile-emergenza-umanitaria-corpo.webp"
-         alt="Operatori con dispositivi di protezione individuale"
-         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
-
 ## Perché è un tema di Protezione Civile
 
 Il lavoro minorile non è un problema "solo" dei Paesi in via di sviluppo. Si intensifica nelle **emergenze**:

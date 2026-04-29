@@ -15,11 +15,6 @@ draft: false
 
 Oggi **4 novembre**, **Giorno dell'Unità Nazionale e delle Forze Armate**, ricorrenza istituita per ricordare la conclusione della Prima Guerra Mondiale (1918). Una data che ci dà l'occasione per riflettere sul **ruolo** che le **Forze Armate** italiane svolgono anche nel **sistema di Protezione Civile**.
 
-
-{{< foto src="/images/2026-11-04-forze-armate-ruolo-protezione-civile-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Le Forze Armate nella PC italiana
 
 Il **Codice della Protezione Civile** (D.Lgs. 1/2018) riconosce come **componente** del Servizio Nazionale della Protezione Civile le **Forze Armate**:

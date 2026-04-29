@@ -15,11 +15,6 @@ draft: false
 
 **8 dicembre 2026**: festa dell'**Immacolata Concezione**. Un augurio alla cittadinanza di Genzano di Roma dalla **Protezione Civile**.
 
-
-{{< foto src="/images/2026-12-08-immacolata-festa-auguri-corpo.webp"
-         alt="Folla durante un evento pubblico"
-         caption="I grandi eventi richiedono pianificazione di sicurezza preventiva." >}}
-
 ## Un giorno di festa
 
 L'Immacolata è **festività nazionale** in Italia dal 1933. È giornata di:

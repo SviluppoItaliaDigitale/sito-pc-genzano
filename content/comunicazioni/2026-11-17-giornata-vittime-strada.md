@@ -15,11 +15,6 @@ draft: false
 
 Ogni anno la **terza domenica di novembre** si celebra la **Giornata Mondiale in ricordo delle Vittime della Strada**. Un'occasione istituita dall'ONU nel 2005 per **ricordare** chi è morto in incidenti stradali e **sensibilizzare** sul tema della sicurezza sulla viabilità.
 
-
-{{< foto src="/images/2026-11-17-giornata-vittime-strada-corpo.webp"
-         alt="Strada urbana con segnaletica e traffico"
-         caption="La sicurezza stradale è una componente trasversale della Protezione Civile." >}}
-
 ## I numeri italiani
 
 Secondo **ISTAT** e **ACI**, nel 2024 in Italia:

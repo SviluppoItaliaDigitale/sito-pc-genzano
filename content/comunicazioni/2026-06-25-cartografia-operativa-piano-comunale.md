@@ -15,11 +15,6 @@ draft: false
 
 Il **Piano Comunale di Protezione Civile** non è solo un documento testuale. Il suo cuore operativo è costituito da **carte tematiche** che visualizzano i rischi, le aree di emergenza, le vie di accesso. Senza questa **cartografia**, un piano è astratto. Con essa, diventa uno strumento effettivamente utilizzabile.
 
-
-{{< foto src="/images/2026-06-25-cartografia-operativa-piano-comunale-corpo.webp"
-         alt="Mappa cartografica con indicazioni territoriali"
-         caption="La cartografia è uno strumento operativo essenziale." >}}
-
 ## Cos'è la cartografia di PC
 
 La cartografia di Protezione Civile è un insieme di **mappe tematiche** ad uso operativo che rappresentano:

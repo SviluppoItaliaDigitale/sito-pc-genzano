@@ -17,11 +17,6 @@ Sono aperte le iscrizioni al Gruppo Comunale Volontari di Protezione Civile di G
 
 Vuoi unirti a noi? [Contattaci](/contatti/) oppure visita la sezione [Diventa Volontario](/diventa-volontario/).
 
-
-{{< foto src="/images/2025-07-25-iscrizioni-aperte-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## Per approfondire
 
 - Articolo: [Corso di formazione base](/comunicazioni/2025-03-10-formazione-base/)

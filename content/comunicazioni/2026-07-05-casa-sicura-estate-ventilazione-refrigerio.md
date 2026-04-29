@@ -15,11 +15,6 @@ draft: false
 
 In estate la **casa** dovrebbe essere il primo rifugio dal caldo. Per molte persone — anziani soli, persone con patologie, bambini piccoli — trascorrere ore in un ambiente troppo caldo è **un rischio sanitario reale**. Alcune buone abitudini, spesso semplici, rendono la casa più fresca senza aumenti di spesa elettrica fuori controllo.
 
-
-{{< foto src="/images/2026-07-05-casa-sicura-estate-ventilazione-refrigerio-corpo.webp"
-         alt="Alberi piegati dal vento durante una tempesta"
-         caption="Il vento forte è uno dei fenomeni più sottostimati a livello di rischio." >}}
-
 ## Il comportamento solare dell'edificio
 
 Un edificio riceve calore in estate da:
