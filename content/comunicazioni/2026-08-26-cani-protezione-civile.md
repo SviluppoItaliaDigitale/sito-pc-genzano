@@ -17,6 +17,11 @@ draft: false
 
 In Italia operano alcune **migliaia di unità cinofile** specializzate in soccorso, suddivise tra Vigili del Fuoco, Croce Rossa Italiana, Soccorso Alpino e numerose associazioni di volontariato di Protezione Civile. Sono le squadre dei "**cani da ricerca**": un binomio inseparabile fatto da un **conduttore** umano e un **cane** addestrato, che insieme cercano persone disperse in scenari diversi e spesso estremi.
 
+
+{{< foto src="/images/2026-08-26-cani-protezione-civile-corpo.webp"
+         alt="Cane e gatto a casa — gli animali domestici nel piano di emergenza"
+         caption="Anche gli animali da compagnia vanno inclusi nel piano familiare di emergenza." >}}
+
 ## Cosa fanno le unità cinofile
 
 A seconda della specializzazione, un'unità cinofila può intervenire su quattro scenari principali:

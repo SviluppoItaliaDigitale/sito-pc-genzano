@@ -15,6 +15,11 @@ draft: false
 
 Quando arrivano le prime piogge intense d'autunno, ogni **fosso intasato**, **caditoia ostruita**, **grondaia bloccata** diventa un problema. L'acqua che non trova sfogo scorre dove non dovrebbe: invade cantine, cortili, garage, strade. Gran parte degli allagamenti urbani — anche nei Castelli Romani — dipende non da piogge eccezionali, ma da **sistemi di drenaggio non manutenuti**.
 
+
+{{< foto src="/images/2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno-corpo.webp"
+         alt="Strada urbana allagata dopo un evento di pioggia intensa"
+         caption="Le alluvioni urbane sono in aumento per effetto dei cambiamenti climatici." >}}
+
 ## Perché la manutenzione è fondamentale
 
 Il sistema di smaltimento delle acque piovane è pensato per funzionare in condizioni **pulite ed efficienti**. Foglie, ramaglie, rifiuti, sedimenti riducono la capacità di deflusso di un fosso o di una caditoia anche dell'80%.

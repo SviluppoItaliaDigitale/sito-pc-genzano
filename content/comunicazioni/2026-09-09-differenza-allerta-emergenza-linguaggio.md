@@ -15,6 +15,11 @@ draft: false
 
 Nel linguaggio ordinario, **allerta**, **avviso** ed **emergenza** sembrano sinonimi. Nella Protezione Civile non lo sono: ciascuna parola indica un momento preciso e chiede risposte diverse. Distinguerle aiuta cittadini, media e istituzioni a parlare la stessa lingua.
 
+
+{{< foto src="/images/2026-09-09-differenza-allerta-emergenza-linguaggio-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Avviso
 
 È una **comunicazione preventiva** emessa quando ci sono indicazioni di fenomeni meteo significativi, ma non ancora un livello operativo di allerta. L'avviso è **informativo**: segnala qualcosa da monitorare.

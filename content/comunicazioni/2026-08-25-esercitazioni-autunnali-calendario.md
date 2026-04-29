@@ -15,6 +15,11 @@ draft: false
 
 Un sistema di Protezione Civile vale **quanto è allenato**. Procedure, mezzi, radiocomunicazioni, coordinamento fra enti si consolidano solo con **esercitazioni periodiche** che ricreano, in condizioni controllate, scenari realistici di emergenza. Con la ripresa autunnale, il Gruppo Comunale Volontari di Protezione Civile di Genzano torna al calendario esercitativo.
 
+
+{{< foto src="/images/2026-08-25-esercitazioni-autunnali-calendario-corpo.webp"
+         alt="Sessione di formazione con docente e partecipanti"
+         caption="La formazione continua è il pilastro dell'operatività del volontariato." >}}
+
 ## Perché si fanno esercitazioni
 
 Le esercitazioni rispondono a precise finalità:

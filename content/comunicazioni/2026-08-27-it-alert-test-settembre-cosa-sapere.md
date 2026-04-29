@@ -15,6 +15,11 @@ draft: false
 
 **IT-Alert** è il sistema nazionale di allarme pubblico che invia, tramite cellulari, messaggi di allerta immediata alla popolazione presente in una specifica area geografica. Sviluppato dal **Dipartimento della Protezione Civile** e testato a partire dal 2023, è oggi operativo per diversi scenari di emergenza. A settembre sono previsti nuovi test regionali: vale la pena sapere cosa è e come comportarsi.
 
+
+{{< foto src="/images/2026-08-27-it-alert-test-settembre-cosa-sapere-corpo.webp"
+         alt="Smartphone con notifica di allerta in primo piano"
+         caption="IT-alert è il sistema italiano di allerta pubblica multicanale." >}}
+
 ## Come funziona
 
 IT-Alert utilizza la tecnologia **cell broadcast**: un messaggio viene inviato a **tutti i telefoni cellulari agganciati alle celle di una specifica area**, senza bisogno di iscrizioni, contatti salvati o app da scaricare. Il sistema è:

@@ -15,6 +15,11 @@ draft: false
 
 Nella comunicazione istituzionale, **allerta gialla** è il livello più frequente. Molti cittadini si chiedono: va presa sul serio o è routine? La risposta è netta: è un'**attenzione**, non un falso allarme, e richiede comportamenti specifici.
 
+
+{{< foto src="/images/2026-09-08-allerta-gialla-cosa-significa-corpo.webp"
+         alt="Volontari di un'associazione umanitaria al lavoro"
+         caption="Il volontariato organizzato è una componente strutturale del Sistema." >}}
+
 ## Il sistema di allerta
 
 Il sistema nazionale distingue tre livelli operativi:

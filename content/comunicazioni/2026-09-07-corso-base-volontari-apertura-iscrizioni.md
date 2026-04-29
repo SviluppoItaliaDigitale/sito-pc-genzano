@@ -15,6 +15,11 @@ draft: false
 
 Sono aperte le **iscrizioni al nuovo corso base** per diventare **Volontario di Protezione Civile** nel Gruppo Comunale di Genzano. Il percorso, obbligatorio per chi vuole entrare a far parte del Gruppo, è gratuito, si svolge in orario serale e prefestivo e culmina in un'abilitazione operativa riconosciuta dalla Regione Lazio.
 
+
+{{< foto src="/images/2026-09-07-corso-base-volontari-apertura-iscrizioni-corpo.webp"
+         alt="Squadra di volontari in tenuta operativa al lavoro"
+         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
+
 ## A chi è rivolto
 
 Il corso è aperto a tutti i cittadini che:
