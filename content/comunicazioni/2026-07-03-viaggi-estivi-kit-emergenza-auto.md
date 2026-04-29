@@ -15,6 +15,11 @@ draft: false
 
 Luglio e agosto sono i mesi del **grande esodo estivo**. Milioni di famiglie italiane si spostano per vacanze. Parallelamente crescono le **emergenze da viaggio**: panne in autostrada, incidenti, colpi di calore nei veicoli. Un **kit di emergenza** ben preparato e qualche **controllo preventivo** risolvono gran parte delle situazioni.
 
+
+{{< foto src="/images/2026-07-03-viaggi-estivi-kit-emergenza-auto-corpo.webp"
+         alt="Strada urbana con segnaletica e traffico"
+         caption="La sicurezza stradale è una componente trasversale della Protezione Civile." >}}
+
 ## I dati dell'estate
 
 Secondo **ACI-ISTAT**, in luglio e agosto:

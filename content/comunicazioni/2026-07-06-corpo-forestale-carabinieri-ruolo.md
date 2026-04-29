@@ -15,6 +15,11 @@ draft: false
 
 Fino al **2016** in Italia esisteva il **Corpo Forestale dello Stato** come corpo di polizia autonomo. Nel **2017**, con la legge 177/2016, il CFS è stato **assorbito nell'Arma dei Carabinieri** diventando il **Comando Unità per la Tutela Forestale, Ambientale e Agroalimentare**. Oggi questo comando svolge un ruolo centrale nella protezione del territorio e nelle indagini su incendi boschivi, molto rilevante per i Castelli Romani.
 
+
+{{< foto src="/images/2026-07-06-corpo-forestale-carabinieri-ruolo-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## La riforma del 2017
 
 La riforma Madia (D.Lgs. 177/2016) ha previsto la fusione del Corpo Forestale nei Carabinieri:
