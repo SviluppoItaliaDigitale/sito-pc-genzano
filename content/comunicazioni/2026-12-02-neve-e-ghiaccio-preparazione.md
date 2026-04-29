@@ -15,6 +15,11 @@ draft: false
 
 A **Genzano di Roma**, **430 metri** slm, la **neve** in inverno è **rara** ma non impossibile. Negli ultimi decenni ricordiamo febbraio 2012 e febbraio 2018 con nevicate significative. Il **ghiaccio** notturno è invece **più frequente**. Come prepararsi e cosa fare.
 
+
+{{< foto src="/images/2026-12-02-neve-e-ghiaccio-preparazione-corpo.webp"
+         alt="Strada innevata in un paesaggio invernale"
+         caption="Le condizioni invernali richiedono attenzione operativa anche sui Castelli Romani." >}}
+
 ## Il contesto climatologico
 
 ### Genzano e neve
