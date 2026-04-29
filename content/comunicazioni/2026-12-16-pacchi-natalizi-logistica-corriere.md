@@ -15,6 +15,11 @@ draft: false
 
 Nei **giorni precedenti al Natale** arriva il **picco delle consegne** di pacchi. Corrieri sotto pressione, destinatari spesso assenti, truffe approfittatrici del periodo. Qualche consiglio.
 
+
+{{< foto src="/images/2026-12-16-pacchi-natalizi-logistica-corriere-corpo.webp"
+         alt="Folla durante un evento pubblico"
+         caption="I grandi eventi richiedono pianificazione di sicurezza preventiva." >}}
+
 ## Il fenomeno
 
 ### Volumi

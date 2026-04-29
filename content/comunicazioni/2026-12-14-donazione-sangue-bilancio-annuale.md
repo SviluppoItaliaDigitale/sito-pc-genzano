@@ -15,6 +15,11 @@ draft: false
 
 Nel **periodo natalizio** e nei **giorni festivi** aumentano gli **incidenti stradali** e si riduce la **disponibilità** di sangue e plasma. È un momento in cui la **donazione** è particolarmente preziosa. Qualche nota sulla donazione a Genzano e dintorni.
 
+
+{{< foto src="/images/2026-12-14-donazione-sangue-bilancio-annuale-corpo.webp"
+         alt="Volontario durante una donazione di sangue"
+         caption="La donazione di sangue è un atto di responsabilità civica." >}}
+
 ## La situazione italiana
 
 ### Dati

@@ -15,6 +15,11 @@ draft: false
 
 **24 dicembre 2026**, **vigilia di Natale**. Un giorno che racchiude **attesa**, **raccoglimento**, **famiglia**. Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** invia i propri **auguri sinceri**.
 
+
+{{< foto src="/images/2026-12-24-vigilia-natale-auguri-corpo.webp"
+         alt="Folla durante un evento pubblico"
+         caption="I grandi eventi richiedono pianificazione di sicurezza preventiva." >}}
+
 ## Un augurio
 
 A tutti i cittadini di **Genzano di Roma** e a chi ci legge:

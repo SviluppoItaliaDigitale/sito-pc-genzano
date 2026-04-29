@@ -15,6 +15,11 @@ draft: false
 
 Il **weekend 19-21 dicembre 2026** rappresenta il **picco dell'esodo natalizio**. Milioni di italiani si spostano verso le **famiglie d'origine** (spesso al sud) o verso **località di vacanza** (montagna per sciare, mare in paesi caldi). Attenzione alla guida.
 
+
+{{< foto src="/images/2026-12-19-esodo-natalizio-traffico-autostrade-corpo.webp"
+         alt="Strada urbana con segnaletica e traffico"
+         caption="La sicurezza stradale è una componente trasversale della Protezione Civile." >}}
+
 ## Il contesto
 
 ### Il fenomeno

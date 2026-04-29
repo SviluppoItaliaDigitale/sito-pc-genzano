@@ -15,6 +15,11 @@ draft: false
 
 Il **Natale** è tempo di **famiglia**, **tavole imbandite**, **calore**. Ma per molti **anziani soli** è anche il momento in cui la **solitudine** si fa più pesante. Come **riconoscere** e **aiutare**.
 
+
+{{< foto src="/images/2026-12-17-anziani-soli-feste-attenzione-corpo.webp"
+         alt="Volontario che assiste una persona anziana"
+         caption="Le persone fragili sono una priorità della pianificazione di emergenza." >}}
+
 ## Il fenomeno
 
 ### Dati

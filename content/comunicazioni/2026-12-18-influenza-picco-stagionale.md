@@ -15,6 +15,11 @@ draft: false
 
 Tra **dicembre e gennaio** si registra in Italia il **picco** dell'**influenza stagionale**. Ogni anno interessa **5-10 milioni** di italiani, con **picchi** fino al 15% della popolazione in alcune stagioni. Prevenzione e gestione corretta.
 
+
+{{< foto src="/images/2026-12-18-influenza-picco-stagionale-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Il contesto
 
 ### I numeri attesi 2026-2027
