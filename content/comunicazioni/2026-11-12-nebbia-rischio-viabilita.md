@@ -15,6 +15,11 @@ draft: false
 
 La **nebbia** è uno dei rischi **più sottovalutati** sulla viabilità autunnale e invernale. Nonostante non sia un evento catastrofico, le **statistiche degli incidenti** mostrano che sotto nebbia densa avvengono **tamponamenti a catena** gravi e **feriti**. Qualche regola pratica e qualche comportamento corretto possono **salvare vite**.
 
+
+{{< foto src="/images/2026-11-12-nebbia-rischio-viabilita-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## Cosa è la nebbia
 
 La nebbia è una **nuvola al suolo**:

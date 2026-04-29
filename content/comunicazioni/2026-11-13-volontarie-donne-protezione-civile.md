@@ -15,6 +15,11 @@ draft: false
 
 Il **volontariato di Protezione Civile** è storicamente percepito come una realtà a forte **presenza maschile**. I dati più recenti raccontano una storia diversa: le **donne volontarie** sono in crescita costante e occupano **ogni ruolo**, compresi quelli tecnici e di responsabilità. Dedichiamo oggi un articolo a questa trasformazione.
 
+
+{{< foto src="/images/2026-11-13-volontarie-donne-protezione-civile-corpo.webp"
+         alt="Squadra di volontari in tenuta operativa al lavoro"
+         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
+
 ## Dati in crescita
 
 Secondo le rilevazioni del **Dipartimento di Protezione Civile** e delle associazioni di volontariato:

@@ -19,6 +19,11 @@ Per farlo in modo **standard, veloce e affidabile**, il Dipartimento della Prote
 
 Il manuale — [pubblicato dal DPC nel 2013 e rivisto nel 2016 e nel 2024](https://www.protezionecivile.gov.it/static/60cbe9606bcae1903c3c1b94c0f9c198/manuale-compilazione-scheda-rilievo-danno-bbcc-e-chiese.pdf) — è un documento tecnico di **116 pagine**. In questa pagina ne offriamo una sintesi divulgativa per chi vuole capire **come funziona** il lavoro dei tecnici dopo un sisma.
 
+
+{{< foto src="/images/2026-10-28-scheda-rilievo-danno-beni-culturali-chiese-corpo.webp"
+         alt="Macerie e edifici danneggiati dopo una scossa sismica"
+         caption="Il rischio sismico è una caratteristica strutturale del territorio italiano." >}}
+
 ## Perché serve una scheda dedicata alle chiese
 
 Le chiese sono edifici **diversi** dagli edifici ordinari. Hanno:

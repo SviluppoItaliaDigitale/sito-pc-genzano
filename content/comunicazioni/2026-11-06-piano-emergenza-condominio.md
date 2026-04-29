@@ -15,6 +15,11 @@ draft: false
 
 Il **piano di emergenza familiare** è ormai un concetto noto. Ma un altro livello spesso trascurato è quello **condominiale**: il palazzo, come sistema abitato da più famiglie, è un'entità **complessa** in caso di emergenza. Un **piano condominiale**, anche sobrio, può fare la differenza.
 
+
+{{< foto src="/images/2026-11-06-piano-emergenza-condominio-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Perché il condominio è complesso
 
 Un palazzo tipico presenta:
