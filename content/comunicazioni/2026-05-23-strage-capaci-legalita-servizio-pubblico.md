@@ -1,7 +1,7 @@
 ---
 title: "23 maggio: Capaci e il servizio pubblico come scelta quotidiana"
 date: 2026-05-23
-description: "L'anniversario della strage di Capaci ricorda che il servizio allo Stato e alla comunita e' un impegno quotidiano, fatto di regole, integrita, trasparenza."
+description: "L'anniversario della strage di Capaci ricorda che il servizio allo Stato e alla comunità è un impegno quotidiano, fatto di regole, integrita, trasparenza."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

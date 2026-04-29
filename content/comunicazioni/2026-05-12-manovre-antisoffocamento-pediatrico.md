@@ -1,7 +1,7 @@
 ---
 title: "Manovre antisoffocamento: cosa sapere per i bambini"
 date: 2026-05-12
-description: "Il soffocamento da corpo estraneo e' una delle emergenze piu' frequenti nella prima infanzia. Cosa fare, cosa evitare, dove imparare le manovre."
+description: "Il soffocamento da corpo estraneo è una delle emergenze più frequenti nella prima infanzia. Cosa fare, cosa evitare, dove imparare le manovre."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

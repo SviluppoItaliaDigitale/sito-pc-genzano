@@ -121,7 +121,7 @@ def apply_band(src_path: Path, out_name: str) -> Path:
 
 def save_webp(img: Image.Image, out_path: Path):
     """Salva in WebP comprimendo fino a <= 200 KB. Loop progressivo:
-    qualita' 85 -> 75 -> 60 -> 50 -> 40 -> 30, poi resize 1000/900/800/700px."""
+    qualità 85 -> 75 -> 60 -> 50 -> 40 -> 30, poi resize 1000/900/800/700px."""
     img.save(out_path, "WEBP", quality=85, method=6)
     size_kb = out_path.stat().st_size // 1024
     if size_kb <= MAX_KB_TARGET:

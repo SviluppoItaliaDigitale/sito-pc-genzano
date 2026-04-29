@@ -224,7 +224,7 @@ jobs:
           set +e
           # Genera cover istituzionali (gradiente blu + titolo + fascia) per
           # articoli con image: "" e SENZA marker TODO-foto-* (sicuro: non
-          # sovrascrive image: gia' valorizzato come foto utente custom).
+          # sovrascrive image: già valorizzato come foto utente custom).
           OUT=$(python3 scripts/auto-cover-mancanti.py 2>&1) || true
           echo "$OUT"
           GENERATED=$(echo "$OUT" | grep -oE 'Cover generate: [0-9]+' | grep -oE '[0-9]+' | head -1)

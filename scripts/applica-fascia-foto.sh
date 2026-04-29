@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Wrapper di compatibilita' che invoca scripts/applica-fascia-foto.py.
-# La logica di composizione e' stata riscritta in Python+Pillow per essere
+# La logica di composizione è stata riscritta in Python+Pillow per essere
 # cross-platform (no dipendenza fragile da ImageMagick v6/v7 + delegate WebP
 # + policy.xml + font discovery).
 #

@@ -46,7 +46,7 @@ fi
 
 echo "[info] Trovato: ${TITLE} (id ${NASA_ID})"
 
-# Recupera la lista degli asset (immagini in piu' formati)
+# Recupera la lista degli asset (immagini in più formati)
 ASSETS=$(curl -sS -A "$UA" "https://images-api.nasa.gov/asset/${NASA_ID}")
 # Preferisci ~orig.jpg > ~large.jpg > qualunque .jpg
 IMG_URL=$(echo "$ASSETS" | jq -r '

@@ -53,7 +53,7 @@ if [ -z "$TITLE" ]; then
 fi
 echo "[info] Evento: ${TITLE}"
 
-# Cerca la ShakeMap intensity image (graceful: se non c'e' shakemap, esce pulito)
+# Cerca la ShakeMap intensity image (graceful: se non c'è shakemap, esce pulito)
 SHAKEMAP_URL=$(echo "$EVENT_JSON" | jq -r '
   if (.properties.products.shakemap // empty) | length > 0 then
     .properties.products.shakemap[0].contents

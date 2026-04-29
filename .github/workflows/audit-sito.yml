@@ -384,7 +384,7 @@ jobs:
           if [ "$EMERG_ACTIVE" = "true" ]; then
             EMERG_DATE=$(jq -r '.ultimo_aggiornamento // ""' data/emergenza.json 2>/dev/null || true)
             if [ -n "$EMERG_DATE" ]; then
-              # Calcola differenza in giorni (solo se la data e' parsabile)
+              # Calcola differenza in giorni (solo se la data è parsabile)
               EMERG_TS=$(date -u -d "$EMERG_DATE" +%s 2>/dev/null || echo "")
               if [ -n "$EMERG_TS" ]; then
                 DIFF_DAYS=$(( ( $(date -u +%s) - EMERG_TS ) / 86400 ))
@@ -965,8 +965,8 @@ jobs:
           # ----------------------------------------------------------------
           section "40. Audit grammaticale italiano (refusi, accenti, apostrofi)"
           # Esegue scripts/audit-grammatica-italiana.py che cerca nei contenuti:
-          # - apostrofi finti usati al posto degli accenti (e' invece di è, ne'
-          #   invece di né, sara' invece di sarà)
+          # - apostrofi finti usati al posto degli accenti (è invece di è, né
+          #   invece di né, sarà invece di sarà)
           # - accenti mancanti su congiunzioni e sostantivi tronchi NON ambigui
           #   (perche, poiche, piu, puo, gia, cosi, citta, universita, lunedi…)
           # - "qual'è", "un'altro", "una emergenza" e altri errori italiani

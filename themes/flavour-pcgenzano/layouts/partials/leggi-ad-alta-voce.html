@@ -9,7 +9,7 @@
   Parametri:
     selector  CSS selector dell'elemento da leggere. Default: ".article-body"
 
-  Accessibilita':
+  Accessibilità:
     - Bottone con role=button, aria-pressed, aria-label dinamico
     - Stato "in lettura" annunciato a screen reader (aria-live)
     - Funziona con tastiera (Enter/Space)
@@ -108,7 +108,7 @@
         var voice = findItalianVoice();
         if (voice) utterance.voice = voice;
         utterance.lang = 'it-IT';
-        utterance.rate = 0.95;   // poco piu' lento del default per chiarezza
+        utterance.rate = 0.95;   // poco più lento del default per chiarezza
         utterance.pitch = 1;
         utterance.volume = 1;
         utterance.onend = function(){ state = 'idle'; setButtonState(btn, 'idle'); };

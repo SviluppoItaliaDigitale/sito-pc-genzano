@@ -43,7 +43,7 @@ RedirectMatch 301 ^/documenti/(Carta_di_.*\.pdf|Piano_di_.*\.pdf|Piano_Emergenza
 
 # URL Joomla "file_pii_*" del vecchio CMS (plugin Phoca o simile) —
 # nessuna corrispondenza nel nuovo sito. Restituiamo 410 Gone per dire
-# a Google che la pagina e' definitivamente rimossa, cosi' la elimina
+# a Google che la pagina è definitivamente rimossa, così la elimina
 # dall'indice subito invece di tenerla in coda.
 RedirectMatch 410 ^/file_pii_.*$
 RedirectMatch 410 ^/component/.*$
@@ -63,7 +63,7 @@ RedirectMatch 301 ^/formazione_pc/?(.*)$ /formazionepc/$1
 RedirectMatch 301 ^/quiz_pc/?(.*)$ /quizpc/$1
 
 # Pagine HTML standalone del vecchio sito senza corrispondenza diretta —
-# 410 Gone (rimossa) cosi' Google le toglie subito.
+# 410 Gone (rimossa) così Google le toglie subito.
 RedirectMatch 410 ^/galleria\.html$
 RedirectMatch 410 ^/cookies-policy\.html$
 RedirectMatch 410 ^/areefiltrate\.html$

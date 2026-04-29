@@ -12,7 +12,7 @@ card di anteprima). Questo script:
    alt="..." caption="Foto: <credit>. Fonte originale." >}} subito dopo
    il primo paragrafo del corpo articolo
 4. image_credit + image_source_url RESTANO nel frontmatter (mostrati come
-   didascalia copertina, ora vuota perché la cover e' tipografica) e nel
+   didascalia copertina, ora vuota perché la cover è tipografica) e nel
    caption della foto nel corpo
 
 Uso:
@@ -75,7 +75,7 @@ def process_article(md_path: Path, dry_run: bool = False) -> bool:
     credit = get_field(fm, "image_credit")
     source_url = get_field(fm, "image_source_url")
     if not credit:
-        print(f"[skip] {md_path.name}: nessun image_credit (non e' un articolo affetto)")
+        print(f"[skip] {md_path.name}: nessun image_credit (non è un articolo affetto)")
         return False
 
     slug = md_path.stem
@@ -95,7 +95,7 @@ def process_article(md_path: Path, dry_run: bool = False) -> bool:
     caption = ". ".join(caption_parts) + "."
 
     if has_foto_shortcode_already(body, f"{slug}-fonte-wikipedia.webp"):
-        print(f"[skip] {md_path.name}: shortcode foto gia' presente")
+        print(f"[skip] {md_path.name}: shortcode foto già presente")
         return False
 
     if dry_run:
@@ -147,9 +147,9 @@ def main():
         targets = [Path(args.file)]
     else:
         # Articolo affetto = ha image: che punta a /images/<slug>.webp E
-        # il file webp esiste E NON e' una cover tipografica (1200x630).
-        # Una cover tipografica generata da genera-cover.py e' sempre
-        # 1200x630; tutto cio' che ha aspect ratio diverso e' una foto
+        # il file webp esiste E NON è una cover tipografica (1200x630).
+        # Una cover tipografica generata da genera-cover.py è sempre
+        # 1200x630; tutto ciò che ha aspect ratio diverso è una foto
         # (Wikipedia/utente) usata erroneamente come cover.
         try:
             from PIL import Image
@@ -176,7 +176,7 @@ def main():
                 if is_typographic:
                     continue
                 # Sospetto: foto in cover. Verifica anche che il file
-                # -fonte-wikipedia non esista gia' (= articolo gia' fixato)
+                # -fonte-wikipedia non esista già (= articolo già fixato)
                 foto_path = ROOT / "static" / "images" / f"{slug}-fonte-wikipedia.webp"
                 if foto_path.is_file():
                     continue

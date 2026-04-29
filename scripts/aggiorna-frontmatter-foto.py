@@ -22,8 +22,8 @@ Flusso (eseguito qui per la 1ª foto soltanto):
      Caption: "Foto: <autore> — <licenza> — via Wikimedia Commons.
      [Fonte originale](<url>)."
 
-Idempotente: se eseguito su articolo gia' processato (slug-fonte-wikipedia.webp
-gia' presente), non duplica.
+Idempotente: se eseguito su articolo già processato (slug-fonte-wikipedia.webp
+già presente), non duplica.
 
 Uso:
   python3 scripts/aggiorna-frontmatter-foto.py \\
@@ -55,7 +55,7 @@ def get_field(fm: str, name: str) -> str:
 def insert_foto_in_body(body: str, foto_url: str, alt: str, caption: str) -> str:
     """Inserisce {{< foto >}} dopo la prima H2 + primo paragrafo di contenuto."""
     if foto_url in body:
-        return body  # gia' presente
+        return body  # già presente
     shortcode = (
         f'\n\n{{{{< foto src="{foto_url}"\n'
         f'         alt="{alt}"\n'
@@ -91,12 +91,12 @@ def update_article(article: Path, slug: str, author: str, license_: str, source_
     cover_url = f"/images/{slug}.webp"
     foto_url = f"/images/{slug}-fonte-wikipedia.webp"
 
-    # 1. Rinomina foto Wikipedia -> -fonte-wikipedia (se non gia' fatto)
+    # 1. Rinomina foto Wikipedia -> -fonte-wikipedia (se non già fatto)
     if cover_path.is_file() and not foto_path.is_file():
         shutil.move(str(cover_path), str(foto_path))
         print(f"[ok] foto rinominata: {cover_path.name} -> {foto_path.name}")
     elif foto_path.is_file():
-        print(f"[info] foto Wikipedia gia' rinominata: {foto_path.name}")
+        print(f"[info] foto Wikipedia già rinominata: {foto_path.name}")
     else:
         print(f"[error] nessun file foto trovato per slug {slug}", file=sys.stderr)
         return False

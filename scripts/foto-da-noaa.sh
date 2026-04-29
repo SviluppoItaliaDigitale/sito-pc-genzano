@@ -70,7 +70,7 @@ fi
 
 # Verifica che il file scaricato sia un'immagine valida
 if ! file "$TMP_IMG" | grep -qE 'image data|JPEG|PNG|GIF|WebP'; then
-  echo "[error] Il file scaricato non e' un'immagine valida (forse pagina HTML?)" >&2
+  echo "[error] Il file scaricato non è un'immagine valida (forse pagina HTML?)" >&2
   echo "        Verifica l'URL diretto dell'immagine, non della pagina che la contiene." >&2
   exit 4
 fi

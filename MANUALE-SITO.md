@@ -22,11 +22,11 @@
 >   `og:image:type` (calcolato da estensione: webp/png/svg/gif/jpg),
 >   `og:image:width=1200`, `og:image:height=630`, `og:image:alt`. Le
 >   piattaforme social (WhatsApp, Telegram, FB, ecc.) generano l'anteprima
->   senza dover scaricare prima l'immagine — preview piu' veloce e affidabile.
+>   senza dover scaricare prima l'immagine — preview più veloce e affidabile.
 > - **Article-specific OG** (solo articoli): `article:published_time`,
 >   `article:modified_time`, `article:author`, `article:section` (dal badge),
 >   `article:tag`. Le card mostrano data e categoria.
-> - **Twitter Card**: aggiunto `twitter:image:alt` per accessibilita',
+> - **Twitter Card**: aggiunto `twitter:image:alt` per accessibilità,
 >   supporto opzionale a `twitter:site` (configurabile in `hugo.toml`
 >   come `[params] twitterSite = "@PCGenzano"`).
 > - Documentazione in `CLAUDE.md` sezione "Anteprime link condivisi" con
