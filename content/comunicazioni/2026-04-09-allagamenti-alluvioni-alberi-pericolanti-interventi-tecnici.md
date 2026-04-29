@@ -18,11 +18,6 @@ draft: false
 
 ---
 
-
-{{< foto src="/images/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici-corpo.webp"
-         alt="Strada urbana allagata dopo un evento di pioggia intensa"
-         caption="Le alluvioni urbane sono in aumento per effetto dei cambiamenti climatici." >}}
-
 ## Allagamento e alluvione: due cose diverse
 
 Le parole contano. Chi segnala un intervento al **112** o al numero del Gruppo deve sapere distinguere tra i due fenomeni, perché le risposte operative sono profondamente diverse.

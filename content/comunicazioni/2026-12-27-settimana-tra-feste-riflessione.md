@@ -15,11 +15,6 @@ draft: false
 
 Siamo nella **settimana tra le feste**. Dal **27 al 31 dicembre**. Giorni tradizionalmente **sospesi**: alcuni al lavoro, altri ancora in ferie, la vita che riparte a metà. Un tempo utile per **riflessione**, **riordino**, **prospettive**.
 
-
-{{< foto src="/images/2026-12-27-settimana-tra-feste-riflessione-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Una settimana "di mezzo"
 
 ### Caratteristiche

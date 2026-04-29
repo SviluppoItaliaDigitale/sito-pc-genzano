@@ -15,11 +15,6 @@ draft: false
 
 Dopo ogni grande emergenza — terremoti, alluvioni, incendi — gli studi concordano: i **primi soccorsi** nelle prime ore arrivano quasi sempre da **vicini di casa e passanti**, non dalle squadre ufficiali. Questo significa che la **rete sociale di quartiere** è uno dei più potenti strumenti di Protezione Civile. Crearla e mantenerla è una forma di prevenzione concreta.
 
-
-{{< foto src="/images/2026-06-28-rete-vicinato-attivo-resilienza-quartiere-corpo.webp"
-         alt="Infrastruttura tecnologica — illustrazione"
-         caption="Le infrastrutture critiche sono al centro della pianificazione di emergenza." >}}
-
 ## Il dato scientifico
 
 Ricerche condotte dopo il terremoto del **Belice** (1968), del **Friuli** (1976), dell'**Irpinia** (1980), dell'**Aquila** (2009) e **Amatrice** (2016) hanno mostrato:

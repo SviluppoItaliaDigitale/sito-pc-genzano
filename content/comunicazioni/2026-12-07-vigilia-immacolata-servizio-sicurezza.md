@@ -15,11 +15,6 @@ draft: false
 
 La **sera del 7 dicembre**, **vigilia dell'Immacolata**, è tradizionalmente occasione di **manifestazioni religiose** e **accensioni** di luminarie. In molte città italiane, l'8 dicembre segna l'avvio formale del **periodo natalizio**. Qualche nota sulla sera di oggi.
 
-
-{{< foto src="/images/2026-12-07-vigilia-immacolata-servizio-sicurezza-corpo.webp"
-         alt="Operatori con dispositivi di protezione individuale"
-         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
-
 ## Tradizioni del 7-8 dicembre
 
 ### Manifestazioni religiose

@@ -17,11 +17,6 @@ draft: false
 
 Le indicazioni seguite sono le più semplici e sicure da applicare per un cittadino non formato, coerenti con le [linee guida IRC](https://www.ircouncil.it/) del Consiglio Italiano per la Rianimazione.
 
-
-{{< foto src="/images/2026-04-29-primo-soccorso-cinque-regole-base-corpo.webp"
-         alt="Kit di primo soccorso aperto con materiale medico"
-         caption="Il primo soccorso è una competenza che ogni cittadino dovrebbe avere." >}}
-
 ## Regola 1 — Mettersi in sicurezza prima di avvicinarsi
 
 Prima di soccorrere, controlla la scena:

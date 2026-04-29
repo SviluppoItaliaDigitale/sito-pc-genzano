@@ -15,11 +15,6 @@ draft: false
 
 Il **25 novembre** è la **Giornata Internazionale per l'eliminazione della violenza contro le donne**, istituita dall'ONU nel 1999. Un fenomeno che in Italia colpisce **decine di migliaia** di donne ogni anno e che richiede **consapevolezza**, **supporto** e **strumenti** pratici. Anche la Protezione Civile dedica uno spazio a questo tema.
 
-
-{{< foto src="/images/2026-11-25-violenza-donne-numeri-emergenza-corpo.webp"
-         alt="Squadra di operatrici di Protezione Civile in addestramento"
-         caption="Donne e uomini lavorano fianco a fianco nelle squadre operative." >}}
-
 ## I numeri in Italia
 
 Secondo **ISTAT** e **Ministero degli Interni**:

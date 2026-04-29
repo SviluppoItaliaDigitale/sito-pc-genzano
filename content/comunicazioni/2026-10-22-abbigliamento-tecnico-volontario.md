@@ -15,11 +15,6 @@ draft: false
 
 La **divisa** del volontario di Protezione Civile non è un'uniforme scelta per estetica. È un insieme di **Dispositivi di Protezione Individuale** (DPI) normati, che garantiscono **sicurezza**, **visibilità**, **identificazione**. Un volontario correttamente vestito è un volontario **protetto** e **riconoscibile**.
 
-
-{{< foto src="/images/2026-10-22-abbigliamento-tecnico-volontario-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## I colori della PC italiana
 
 - **giallo alta visibilità** con bande catarifrangenti argento: divisa operativa del volontariato;

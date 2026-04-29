@@ -15,11 +15,6 @@ draft: false
 
 Il **14 agosto** apre il fine settimana più impegnativo dell'estate. Movimento di persone verso i laghi, verso le coste, verso i paesi di origine, verso le sagre dei Castelli. In contemporanea, temperature tipicamente elevate, sole di pieno agosto, rischio temporali nel pomeriggio, massima pericolosità per gli incendi. Il sistema di Protezione Civile locale e regionale alza il livello di attenzione.
 
-
-{{< foto src="/images/2026-08-14-vigilia-ferragosto-stato-allerta-corpo.webp"
-         alt="Paesaggio naturale italiano — territorio e ambiente"
-         caption="La conoscenza del territorio è il primo strumento di prevenzione." >}}
-
 ## Il quadro operativo
 
 Nei giorni di **Ferragosto** sono tipicamente attivi su Genzano e nei Castelli:

@@ -15,11 +15,6 @@ draft: false
 
 È il **primo giorno** di ora solare. Oggi il sole tramonta intorno alle **17:00** e alle **17:30** è già buio. Un cambiamento **stagionale** normale, ma che richiede qualche adattamento pratico, specialmente per chi torna dal lavoro, dalla scuola o dall'attività fisica all'aperto.
 
-
-{{< foto src="/images/2026-10-26-ora-solare-primo-giorno-buio-alle-17-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Cambiamenti della giornata
 
 Oggi e nei giorni a venire, a Genzano:

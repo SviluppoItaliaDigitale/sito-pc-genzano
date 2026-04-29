@@ -17,11 +17,6 @@ Ogni estate, in Italia, migliaia di persone sono colpite da malori legati al cal
 
 Dal 2004 il **Ministero della Salute**, con il **Dipartimento di Epidemiologia (DEP) Lazio — ASL Roma 1**, coordina il **Piano nazionale di prevenzione degli effetti del caldo sulla salute**. Il piano si inserisce in un quadro europeo delineato dalla guidance **OMS Europa** sui Heat-Health Action Plans. In questa pagina spieghiamo come funziona il sistema e perché coinvolge anche il volontariato di protezione civile.
 
-
-{{< foto src="/images/2026-05-25-piano-nazionale-prevenzione-caldo-who-corpo.webp"
-         alt="Cielo limpido e sole intenso durante un'ondata di calore"
-         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
-
 ## Un quadro europeo: la guidance OMS
 
 Nel **2008**, l'**Organizzazione Mondiale della Sanità — Ufficio Regionale per l'Europa** ha pubblicato il documento **"Heat-Health Action Plans: guidance"**, nato dal progetto **EuroHEAT** in collaborazione con la Commissione Europea. La guidance indica che gli effetti sanitari del caldo e delle ondate di calore sono **in larga misura prevenibili** attraverso un insieme coordinato di azioni:

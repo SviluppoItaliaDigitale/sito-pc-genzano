@@ -17,11 +17,6 @@ Con l'arrivo dell'estate aumenta il rischio di incendi boschivi. Dal 15 giugno a
 
 Se avvisti un incendio, chiama subito il **112**.
 
-
-{{< foto src="/images/2025-06-15-campagna-aib-corpo.webp"
-         alt="Squadra di vigili del fuoco impegnata in un fronte di incendio boschivo"
-         caption="L'incendio boschivo è uno dei rischi prioritari sui Castelli Romani." >}}
-
 ## Per approfondire
 
 - Articolo: [Triangolo del fuoco: capire come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)

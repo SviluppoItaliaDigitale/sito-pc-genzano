@@ -17,11 +17,6 @@ Il 22 aprile si celebra la [Giornata della Terra](https://www.un.org/en/observan
 
 In questo articolo proviamo a raccontare il legame tra crisi climatica ed eventi estremi con uno sguardo al nostro territorio: i **Castelli Romani** e Genzano di Roma.
 
-
-{{< foto src="/images/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani-corpo.webp"
-         alt="Paesaggio naturale italiano — territorio e ambiente"
-         caption="La conoscenza del territorio è il primo strumento di prevenzione." >}}
-
 ## Il clima che cambia in numeri
 
 Secondo il [Servizio Copernicus dell'Unione Europea](https://climate.copernicus.eu/) l'Europa è il continente che si sta riscaldando più rapidamente al mondo. Negli ultimi trent'anni la temperatura media è salita di circa due gradi. In Italia le conseguenze sono già misurabili:

@@ -15,11 +15,6 @@ draft: false
 
 Il **5 giugno** è la [Giornata mondiale dell'ambiente](https://www.worldenvironmentday.global/) delle **Nazioni Unite**, istituita nel 1972 e celebrata da oltre 150 Paesi. È una data simbolica e operativa insieme: coincide con l'avvio ufficiale dell'estate meteorologica e cade nei primi giorni della **campagna antincendio** nel Lazio.
 
-
-{{< foto src="/images/2026-06-05-giornata-ambiente-incendi-territorio-corpo.webp"
-         alt="Paesaggio naturale italiano — territorio e ambiente"
-         caption="La conoscenza del territorio è il primo strumento di prevenzione." >}}
-
 ## Ambiente e Protezione Civile: un legame stretto
 
 La Protezione Civile non è un'attività "ambientale" in senso stretto, ma i due mondi sono intrecciati. La qualità del territorio — boschi, suoli, corsi d'acqua — influenza direttamente la frequenza e la gravità di molti rischi:

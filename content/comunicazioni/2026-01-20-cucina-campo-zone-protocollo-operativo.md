@@ -20,11 +20,6 @@ Una cucina da campo non si improvvisa. Il Manuale DSEFIC della Federazione Itali
 
 Il **manuale completo** è in allegato a questo articolo e nella pagina [Area Download](/area-download/).
 
-
-{{< foto src="/images/2026-01-20-cucina-campo-zone-protocollo-operativo-corpo.webp"
-         alt="Cucina in operazione con preparazione di pasti"
-         caption="L'alimentazione in emergenza richiede protocolli specifici di sicurezza." >}}
-
 ## Le quattro zone di una cucina da campo
 
 Fin dai primi momenti l'area destinata all'alimentazione si suddivide in quattro zone, ciascuna con funzioni e requisiti specifici.

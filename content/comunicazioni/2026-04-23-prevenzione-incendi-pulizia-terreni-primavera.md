@@ -17,11 +17,6 @@ La stagione degli incendi boschivi, nel Lazio, si concentra tra **giugno e sette
 
 In questo articolo riassumiamo cosa prevede la legge, cosa si deve fare e come farlo correttamente.
 
-
-{{< foto src="/images/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Perché la primavera è il momento giusto
 
 I mesi da marzo a maggio hanno tre caratteristiche ideali per intervenire:

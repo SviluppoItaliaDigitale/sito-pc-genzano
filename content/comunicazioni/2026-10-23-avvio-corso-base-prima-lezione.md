@@ -15,11 +15,6 @@ draft: false
 
 Questa sera parte il **corso base per nuovi volontari** del Gruppo Comunale di Protezione Civile di Genzano. Le **iscrizioni sono ancora aperte** fino al 31 ottobre per chi volesse unirsi alle prime lezioni. Un benvenuto a tutte le persone che hanno scelto di dedicare una parte del proprio tempo al **servizio pubblico** e alla **comunità**.
 
-
-{{< foto src="/images/2026-10-23-avvio-corso-base-prima-lezione-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## La prima lezione
 
 La **lezione di apertura** (di 2 ore) ha carattere **introduttivo**:

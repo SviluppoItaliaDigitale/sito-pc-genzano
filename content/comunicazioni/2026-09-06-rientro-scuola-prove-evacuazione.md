@@ -15,11 +15,6 @@ draft: false
 
 Con la ripresa delle attività scolastiche, molte scuole del territorio effettuano, nei primi giorni o entro ottobre, la **prima prova di evacuazione** dell'anno. Non è una formalità: è un momento fondamentale per la sicurezza di bambini, ragazzi e personale. Ecco cosa devono sapere alunni, insegnanti e famiglie.
 
-
-{{< foto src="/images/2026-09-06-rientro-scuola-prove-evacuazione-corpo.webp"
-         alt="Aula scolastica con bambini durante una lezione"
-         caption="L'educazione al rischio inizia a scuola." >}}
-
 ## Perché si fa
 
 La prova di evacuazione è prevista dal **D.Lgs. 81/2008** e dal **DM 26 agosto 1992** (antincendio scolastico). Serve a:

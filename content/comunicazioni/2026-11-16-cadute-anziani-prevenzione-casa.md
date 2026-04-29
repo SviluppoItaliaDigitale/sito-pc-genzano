@@ -15,11 +15,6 @@ draft: false
 
 Le **cadute** sono la **prima causa di infortunio** per le persone **over 65** in Italia. Secondo l'**ISS**, oltre 3.000 anziani muoiono ogni anno per conseguenze di cadute domestiche; molti di più subiscono **fratture del femore**, **traumi cranici**, **ricoveri prolungati** con perdita di autonomia.
 
-
-{{< foto src="/images/2026-11-16-cadute-anziani-prevenzione-casa-corpo.webp"
-         alt="Volontario che assiste una persona anziana"
-         caption="Le persone fragili sono una priorità della pianificazione di emergenza." >}}
-
 ## Perché si cade
 
 Nell'anziano convergono più fattori:

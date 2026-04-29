@@ -15,11 +15,6 @@ draft: false
 
 L'**8 giugno** è la [Giornata mondiale degli oceani](https://www.un.org/en/observances/oceans-day) delle **Nazioni Unite**. Genzano è un paese collinare, lontano dal mare. Ma i Castelli Romani hanno due **laghi vulcanici** — Nemi e Albano — che condividono con i grandi bacini marini molte problematiche: inquinamento, cambio climatico, biodiversità minacciata, sicurezza dei fruitori.
 
-
-{{< foto src="/images/2026-06-08-giornata-oceani-laghi-castelli-corpo.webp"
-         alt="Sessione di formazione con docente e partecipanti"
-         caption="La formazione continua è il pilastro dell'operatività del volontariato." >}}
-
 ## I laghi come micro-oceani
 
 I laghi sono ecosistemi completi ma **chiusi**: ogni insulto al loro equilibrio resta e si accumula. Plastiche, nutrienti agricoli, reflui civili, invasioni di specie aliene incidono velocemente.

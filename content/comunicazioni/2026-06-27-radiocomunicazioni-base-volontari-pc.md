@@ -15,11 +15,6 @@ draft: false
 
 Nel **sistema di Protezione Civile** le **radiocomunicazioni** sono ancora oggi uno strumento fondamentale. In emergenza — terremoti, alluvioni, blackout — la **rete cellulare** può saturarsi o interrompersi. La **radio** resta funzionante perché indipendente da infrastrutture vulnerabili. Ogni volontario dovrebbe conoscerne almeno le basi.
 
-
-{{< foto src="/images/2026-06-27-radiocomunicazioni-base-volontari-pc-corpo.webp"
-         alt="Operatore radio in azione con apparato ricetrasmittente"
-         caption="La radio resta una delle infrastrutture critiche della Protezione Civile." >}}
-
 ## Perché la radio resta insostituibile
 
 La rete cellulare dipende da:

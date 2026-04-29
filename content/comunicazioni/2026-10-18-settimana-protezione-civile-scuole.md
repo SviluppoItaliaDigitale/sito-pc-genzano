@@ -15,11 +15,6 @@ draft: false
 
 Nel corso delle prossime settimane, il **Gruppo Comunale Volontari di Protezione Civile di Genzano** sarà presente in diverse **scuole del territorio** per attività di **sensibilizzazione** e **formazione** degli studenti. Si tratta della partecipazione alla Settimana nazionale della Protezione Civile promossa dal Dipartimento e da **Io Non Rischio Scuola**.
 
-
-{{< foto src="/images/2026-10-18-settimana-protezione-civile-scuole-corpo.webp"
-         alt="Aula scolastica con bambini durante una lezione"
-         caption="L'educazione al rischio inizia a scuola." >}}
-
 ## Le scuole coinvolte
 
 Per l'edizione 2026 il programma riguarda:

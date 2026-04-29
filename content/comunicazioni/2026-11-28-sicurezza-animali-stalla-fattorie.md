@@ -15,11 +15,6 @@ draft: false
 
 Il territorio dei **Castelli Romani** mantiene una significativa **attività agricola** e zootecnica: **aziende agricole**, **fattorie didattiche**, **allevamenti** di bovini, ovini, equini, suini, avicoli. In situazioni di **emergenza** (incendio, alluvione, terremoto, black-out), la sicurezza di **animali** e **persone** richiede preparazione specifica.
 
-
-{{< foto src="/images/2026-11-28-sicurezza-animali-stalla-fattorie-corpo.webp"
-         alt="Cane e gatto a casa — gli animali domestici nel piano di emergenza"
-         caption="Anche gli animali da compagnia vanno inclusi nel piano familiare di emergenza." >}}
-
 ## Tipologie di azienda nel territorio
 
 ### Piccole aziende familiari

@@ -20,11 +20,6 @@ In un campo di accoglienza convivono persone con esigenze alimentari molto diver
 
 Abbiamo allegato il manuale completo a questo articolo e alla pagina [Area Download](/area-download/). Qui riassumiamo le regole operative principali.
 
-
-{{< foto src="/images/2025-07-14-alimentazioni-speciali-campo-accoglienza-corpo.webp"
-         alt="Cucina in operazione con preparazione di pasti"
-         caption="L'alimentazione in emergenza richiede protocolli specifici di sicurezza." >}}
-
 ## Comunicare gli allergeni: un obbligo di legge
 
 Il Regolamento UE 1169/2011 elenca **14 allergeni** che devono essere indicati in **forma scritta**, in modo chiaro, **prima** che il pasto venga servito. Le informazioni possono essere riportate:

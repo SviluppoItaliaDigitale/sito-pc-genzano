@@ -17,11 +17,6 @@ Nei Castelli Romani, tra fine gennaio e inizio febbraio, le **gelate notturne** 
 
 Qui trovi un riepilogo pratico per muoverti in sicurezza, a piedi e in auto, quando arrivano le giornate fredde.
 
-
-{{< foto src="/images/2026-01-23-gelate-ghiaccio-strade-comportamenti-invernali-corpo.webp"
-         alt="Strada innevata in un paesaggio invernale"
-         caption="Le condizioni invernali richiedono attenzione operativa anche sui Castelli Romani." >}}
-
 ## Quando si forma il ghiaccio
 
 Le condizioni più favorevoli alla formazione di ghiaccio sono:

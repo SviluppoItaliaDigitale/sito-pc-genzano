@@ -15,11 +15,6 @@ draft: false
 
 L'esperienza di un mese di agosto a pieno regime operativo conferma una verità semplice: **il sistema di Protezione Civile italiano si regge sul volontariato**. In autunno il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma apre le iscrizioni al corso base. Un'occasione per chi vuole mettere a servizio del proprio territorio competenze, tempo, buona volontà.
 
-
-{{< foto src="/images/2026-08-20-volontariato-pc-reclutamento-autunno-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## Chi può diventare volontario
 
 Per iscriversi al corso base occorre:

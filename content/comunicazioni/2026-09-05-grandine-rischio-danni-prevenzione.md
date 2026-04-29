@@ -15,11 +15,6 @@ draft: false
 
 Negli ultimi anni, **anche nel Lazio**, si registrano episodi di **grandinate intense** con chicchi di dimensioni anche superiori a 5 centimetri. Non è un fenomeno puramente alpino: è una realtà dei temporali di fine estate e inizio autunno anche nell'Italia centrale. Il Gruppo di PC di Genzano raccoglie in questo articolo le regole base per riconoscere, proteggersi e limitare i danni.
 
-
-{{< foto src="/images/2026-09-05-grandine-rischio-danni-prevenzione-corpo.webp"
-         alt="Veduta panoramica dei Castelli Romani"
-         caption="Il territorio di Genzano e dei Castelli Romani è il contesto di intervento del Gruppo." >}}
-
 ## Come si forma la grandine
 
 La grandine nasce all'interno dei **cumulonembi** (grandi nubi temporalesche) per effetto delle **correnti ascensionali**. Un embrione di ghiaccio viene spinto più volte su e giù nella nube: ad ogni ciclo aggiunge strati di ghiaccio. Quando la corrente non regge più il peso, il chicco cade al suolo.

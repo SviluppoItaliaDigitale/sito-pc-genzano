@@ -15,11 +15,6 @@ draft: false
 
 Chi è già volontario di PC non smette mai di formarsi. Oltre al **corso base** iniziale, la normativa prevede **aggiornamenti periodici** per mantenere le abilitazioni operative. Il Gruppo Comunale Volontari di PC di Genzano ripropone, con la ripresa autunnale, i principali **moduli di aggiornamento**.
 
-
-{{< foto src="/images/2026-09-19-giornata-aggiornamento-volontari-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## Perché aggiornarsi
 
 Le ragioni sono concrete:

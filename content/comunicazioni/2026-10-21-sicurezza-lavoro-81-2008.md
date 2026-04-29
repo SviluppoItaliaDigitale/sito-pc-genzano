@@ -15,11 +15,6 @@ draft: false
 
 Ogni anno in Italia muoiono sul lavoro **oltre 1.000 persone**. Un dato che non accenna a diminuire e che richiede una **cultura della sicurezza** diffusa. Il principale riferimento normativo è il **D.Lgs. 81/2008** (Testo Unico sulla sicurezza sul lavoro): una legge che riguarda tutti, lavoratori e datori, dipendenti e autonomi.
 
-
-{{< foto src="/images/2026-10-21-sicurezza-lavoro-81-2008-corpo.webp"
-         alt="Operatori con dispositivi di protezione individuale"
-         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
-
 ## Cosa dice in sintesi
 
 Il **Testo Unico** disciplina:

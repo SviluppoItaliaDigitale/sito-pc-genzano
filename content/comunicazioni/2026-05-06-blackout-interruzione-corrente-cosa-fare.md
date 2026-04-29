@@ -17,11 +17,6 @@ La corrente che salta per qualche minuto è un fastidio quotidiano. Un blackout 
 
 Vediamo come prepararsi, cosa fare durante l'evento e cosa controllare al ripristino.
 
-
-{{< foto src="/images/2026-05-06-blackout-interruzione-corrente-cosa-fare-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Perché salta la corrente
 
 Le cause più comuni di un blackout esteso sono:

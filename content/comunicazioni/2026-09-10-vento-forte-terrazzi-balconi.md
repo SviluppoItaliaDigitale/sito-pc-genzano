@@ -15,11 +15,6 @@ draft: false
 
 Le **raffiche di vento forte**, tipiche dell'autunno, causano ogni anno danni e, in alcuni casi, feriscono persone. Molti di questi episodi si possono **prevenire** con poche attenzioni domestiche: vasi, mobili leggeri, ombrelloni, panni stesi, cartelli, teloni pubblicitari possono trasformarsi in **oggetti in volo** pericolosi.
 
-
-{{< foto src="/images/2026-09-10-vento-forte-terrazzi-balconi-corpo.webp"
-         alt="Alberi piegati dal vento durante una tempesta"
-         caption="Il vento forte è uno dei fenomeni più sottostimati a livello di rischio." >}}
-
 ## Quanto vento è "forte"?
 
 Nella **scala Beaufort**, utile per visualizzare la forza del vento:

@@ -17,11 +17,6 @@ Il **18 maggio** è la [Giornata internazionale dei Musei](https://icom.museum/e
 
 La tutela dei beni culturali in emergenza è un capitolo importante della Protezione Civile.
 
-
-{{< foto src="/images/2026-05-18-giornata-musei-patrimonio-culturale-emergenze-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Un patrimonio fragile e diffuso
 
 L'Italia ha:

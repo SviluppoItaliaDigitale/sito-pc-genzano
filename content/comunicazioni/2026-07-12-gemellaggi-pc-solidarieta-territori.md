@@ -15,11 +15,6 @@ draft: false
 
 Un Gruppo di **Protezione Civile** non esiste come isola. Fa parte di un sistema nazionale che opera attraverso **collaborazione tra territori**: gemellaggi, colonne mobili, scambi di esperienze. Dopo ogni grande evento — terremoto, alluvione, incendio — il sistema si attiva in solidarietà: Gruppi di altre regioni arrivano a supporto di quelli colpiti. È una dimensione importante e poco conosciuta del volontariato di Protezione Civile.
 
-
-{{< foto src="/images/2026-07-12-gemellaggi-pc-solidarieta-territori-corpo.webp"
-         alt="Paesaggio naturale italiano — territorio e ambiente"
-         caption="La conoscenza del territorio è il primo strumento di prevenzione." >}}
-
 ## La solidarietà come pilastro
 
 Il **Codice della Protezione Civile** (D.Lgs. 1/2018) enuncia espressamente il principio di **solidarietà**:

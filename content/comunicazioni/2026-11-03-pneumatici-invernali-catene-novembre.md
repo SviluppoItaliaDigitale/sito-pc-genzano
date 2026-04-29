@@ -15,11 +15,6 @@ draft: false
 
 Dal **15 novembre al 15 aprile** scattano in Italia gli **obblighi invernali** sui pneumatici o sulle catene a bordo. Una normativa che riguarda **milioni di automobilisti** e che ha un ruolo **cruciale** nella sicurezza stradale invernale.
 
-
-{{< foto src="/images/2026-11-03-pneumatici-invernali-catene-novembre-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Cosa prevede la norma
 
 Il **Codice della Strada** (art. 6) e le **ordinanze prefettizie** regionali:

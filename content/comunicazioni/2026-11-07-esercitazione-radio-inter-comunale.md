@@ -15,11 +15,6 @@ draft: false
 
 Oggi, **sabato 7 novembre**, si svolge un'importante **esercitazione radio** che coinvolge i Gruppi Comunali di Protezione Civile dei **Castelli Romani**. Una prova congiunta che **testa** la capacità di comunicazione in scenari di emergenza, anche in assenza delle infrastrutture ordinarie.
 
-
-{{< foto src="/images/2026-11-07-esercitazione-radio-inter-comunale-corpo.webp"
-         alt="Operatore radio in azione con apparato ricetrasmittente"
-         caption="La radio resta una delle infrastrutture critiche della Protezione Civile." >}}
-
 ## Obiettivi dell'esercitazione
 
 L'esercitazione ha come obiettivi:

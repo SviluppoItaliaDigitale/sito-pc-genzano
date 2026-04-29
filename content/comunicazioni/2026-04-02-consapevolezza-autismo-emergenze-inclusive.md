@@ -17,11 +17,6 @@ Il **2 aprile** è la **Giornata mondiale per la consapevolezza dell'autismo**, 
 
 Una Protezione Civile autenticamente **inclusiva** non può limitarsi a una soluzione standard che va bene per "la maggioranza". Deve pensare anche alle **persone neurodivergenti** — autismo, ADHD, DSA, altre condizioni del neurosviluppo — e alle loro famiglie.
 
-
-{{< foto src="/images/2026-04-02-consapevolezza-autismo-emergenze-inclusive-corpo.webp"
-         alt="Volontario che assiste una persona anziana"
-         caption="Le persone fragili sono una priorità della pianificazione di emergenza." >}}
-
 ## Cosa significa autismo
 
 L'**autismo** — più propriamente **spettro autistico** — è una condizione neurodivergente che si manifesta con caratteristiche molto variabili da persona a persona:

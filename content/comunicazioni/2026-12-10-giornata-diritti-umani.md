@@ -15,11 +15,6 @@ draft: false
 
 Il **10 dicembre 1948**, a Parigi, l'Assemblea Generale delle **Nazioni Unite** approvava la **Dichiarazione Universale dei Diritti dell'Uomo**. Da allora, ogni **10 dicembre** è **Giornata Internazionale dei Diritti Umani**. Cosa c'entra con la Protezione Civile? Molto.
 
-
-{{< foto src="/images/2026-12-10-giornata-diritti-umani-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## La Dichiarazione del 1948
 
 ### Il contesto

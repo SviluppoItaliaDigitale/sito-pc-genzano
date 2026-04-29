@@ -15,11 +15,6 @@ draft: false
 
 **IT-alert** è il sistema italiano di allarme pubblico che invia messaggi di allerta agli smartphone presenti in una zona specifica. Attivato nel 2023, è progressivamente entrato nell'uso operativo del **Dipartimento della Protezione Civile**. I **test** regionali e nazionali servono a rodare il sistema e a far abituare la popolazione al suono e al contenuto dei messaggi.
 
-
-{{< foto src="/images/2026-07-10-app-it-alert-test-nazionale-corpo.webp"
-         alt="Smartphone con notifica di allerta in primo piano"
-         caption="IT-alert è il sistema italiano di allerta pubblica multicanale." >}}
-
 ## Come funziona IT-alert
 
 Il sistema si basa sulla tecnologia **cell broadcast**:

@@ -15,11 +15,6 @@ draft: false
 
 In emergenza le **persone con disabilità** affrontano **ostacoli aggiuntivi** che possono trasformare un evento gestibile in una tragedia. Evacuazioni complesse, informazioni non accessibili, strutture non adeguate, supporti mancanti: sono problemi da affrontare in anticipo, non durante la crisi. La **pianificazione inclusiva** è elemento essenziale della Protezione Civile moderna.
 
-
-{{< foto src="/images/2026-07-23-disabilita-emergenza-piani-accessibili-corpo.webp"
-         alt="Volontario che assiste una persona anziana"
-         caption="Le persone fragili sono una priorità della pianificazione di emergenza." >}}
-
 ## Il principio dell'inclusività
 
 La **Convenzione ONU sui Diritti delle Persone con Disabilità** (2006) e la legislazione italiana sanciscono il diritto di ogni persona a **uguale protezione** in emergenza.

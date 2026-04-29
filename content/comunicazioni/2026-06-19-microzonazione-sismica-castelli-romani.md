@@ -15,11 +15,6 @@ draft: false
 
 I **Castelli Romani** sono un'area di **sismicità moderata**, con episodi storici documentati. Il rischio sismico non è uniforme su tutto il territorio: **cambia strada per strada** in base al tipo di terreno, alla pendenza, alla presenza di cavità. Lo strumento che mette in evidenza queste differenze si chiama **microzonazione sismica**.
 
-
-{{< foto src="/images/2026-06-19-microzonazione-sismica-castelli-romani-corpo.webp"
-         alt="Macerie e edifici danneggiati dopo una scossa sismica"
-         caption="Il rischio sismico è una caratteristica strutturale del territorio italiano." >}}
-
 ## Cosa è la microzonazione sismica
 
 La **microzonazione sismica** (MS) è uno studio tecnico-scientifico che descrive, a scala di dettaglio, come un terreno risponde a una sollecitazione sismica. L'obiettivo è:

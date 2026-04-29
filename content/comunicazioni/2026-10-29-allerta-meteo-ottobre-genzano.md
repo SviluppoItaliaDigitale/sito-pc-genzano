@@ -15,11 +15,6 @@ draft: false
 
 Il **Centro Funzionale Regionale del Lazio** ha emesso **allerta gialla** per **temporali** sul territorio dei **Castelli Romani**, con durata prevista dalle prossime ore fino a **giovedì 30 ottobre** sera. Il Gruppo Comunale Volontari di PC di Genzano segue l'evoluzione e coordina con il Comune.
 
-
-{{< foto src="/images/2026-10-29-allerta-meteo-ottobre-genzano-corpo.webp"
-         alt="Cielo tempestoso con fulmini durante un temporale forte"
-         caption="I temporali forti possono produrre danni anche su territori limitati." >}}
-
 ## Cosa prevede il bollettino
 
 - **temporali** di intensità moderata;

@@ -15,11 +15,6 @@ draft: false
 
 In emergenza, gli **animali domestici** sono parte della famiglia, non "beni da lasciare". I piani di emergenza familiari devono **includerli** esplicitamente: dalla preparazione del **kit**, alla gestione durante l'evacuazione, fino all'accoglienza nei centri.
 
-
-{{< foto src="/images/2026-11-19-animali-domestici-emergenze-corpo.webp"
-         alt="Cane e gatto a casa — gli animali domestici nel piano di emergenza"
-         caption="Anche gli animali da compagnia vanno inclusi nel piano familiare di emergenza." >}}
-
 ## I numeri in Italia
 
 - **oltre 16 milioni** di cani e gatti domestici in Italia;

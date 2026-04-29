@@ -17,11 +17,6 @@ Con l'arrivo della **primavera** e delle giornate più lunghe, il **Gruppo Comun
 
 Vediamo cosa aspetta il Gruppo nelle prossime settimane.
 
-
-{{< foto src="/images/2026-04-10-attivazione-squadre-primavera-calendario-operativo-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## La logica della preparazione
 
 La Protezione Civile non è un'attività di "pronto intervento" improvvisato. Ogni emergenza gestita con efficacia è il risultato di **mesi** (anni) di preparazione:

@@ -15,11 +15,6 @@ draft: false
 
 Ogni estate in Italia si registrano **decessi** per complicazioni da caldo estremo in anziani soli. Spesso si tratta di persone che abitano **accanto a noi**: alla porta di fronte, al piano di sotto, nell'appartamento con le persiane sempre chiuse. Un piccolo gesto di cura di vicinato può davvero fare la differenza. E non serve essere operatori sanitari.
 
-
-{{< foto src="/images/2026-07-14-anziani-caldo-come-aiutare-vicini-corpo.webp"
-         alt="Cielo limpido e sole intenso durante un'ondata di calore"
-         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
-
 ## Il problema in numeri
 
 Secondo dati **Istituto Superiore di Sanità** (ISS):

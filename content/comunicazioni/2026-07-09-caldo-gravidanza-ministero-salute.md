@@ -17,11 +17,6 @@ In estate il **caldo** può rappresentare un rischio per la **donna in gravidanz
 
 Il [Ministero della Salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore/), insieme al **Dipartimento di Epidemiologia (DEP) Lazio — ASL Roma 1**, ha pubblicato l'opuscolo **"Estate sicura. Come vincere il caldo in gravidanza"**. Ne riassumiamo in questa pagina i contenuti principali.
 
-
-{{< foto src="/images/2026-07-09-caldo-gravidanza-ministero-salute-corpo.webp"
-         alt="Cielo limpido e sole intenso durante un'ondata di calore"
-         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
-
 ## Il corpo sta cambiando
 
 In gravidanza, il corpo va incontro a una serie di **cambiamenti fisiologici**: aumenta il **volume del sangue materno**, per garantire un adeguato flusso sanguigno alla placenta. Questo richiede una **idratazione sufficiente**.

@@ -15,11 +15,6 @@ draft: false
 
 Ogni anno in Italia **decine di persone** muoiono per **intossicazione da monossido di carbonio (CO)** in casa. Centinaia vengono ospedalizzate. Il CO è particolarmente insidioso perché è **inodore**, **incolore**, **insapore** e **invisibile**: si accumula in un ambiente senza dare segnali percepibili prima dei sintomi clinici. L'autunno e l'inverno, con il riaccendersi di stufe, caldaie, camini, sono i mesi più pericolosi.
 
-
-{{< foto src="/images/2026-10-02-monossido-carbonio-intossicazioni-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Cosa è il CO
 
 Il monossido di carbonio è un gas prodotto dalla **combustione incompleta** di combustibili contenenti carbonio: legna, carbone, pellet, gas metano, GPL, gasolio, benzina. Una combustione che avviene in presenza di **ossigeno sufficiente** produce CO₂ (anidride carbonica, meno tossica); se l'ossigeno è insufficiente, si produce CO.

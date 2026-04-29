@@ -15,11 +15,6 @@ draft: false
 
 Il **1° settembre** è, in convenzione meteorologica, il **primo giorno dell'autunno**. Un passaggio simbolico che coincide quest'anno con l'avvio di una fase operativa importante per la Protezione Civile comunale: chiusura della stagione AIB, ripresa delle scuole, avvio delle attività formative, preparazione del territorio alla stagione delle piogge.
 
-
-{{< foto src="/images/2026-09-01-autunno-meteorologico-riapre-scuola-corpo.webp"
-         alt="Cielo con nuvole — illustrazione della previsione meteo"
-         caption="I bollettini meteo sono lo strumento di prevenzione quotidiana del rischio idrogeologico." >}}
-
 ## Cosa cambia, in pratica
 
 Dal punto di vista climatologico:

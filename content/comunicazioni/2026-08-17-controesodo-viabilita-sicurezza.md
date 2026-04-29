@@ -15,11 +15,6 @@ draft: false
 
 Il **controesodo** è il fenomeno dei rientri dalle vacanze estive. I primi flussi iniziano nelle giornate successive al Ferragosto, con picchi nell'ultima settimana di agosto e nei primi giorni di settembre. Per chi parte e per chi percorre strade regionali e autostradali nel periodo, alcune regole di base riducono il rischio di incidenti.
 
-
-{{< foto src="/images/2026-08-17-controesodo-viabilita-sicurezza-corpo.webp"
-         alt="Strada urbana con segnaletica e traffico"
-         caption="La sicurezza stradale è una componente trasversale della Protezione Civile." >}}
-
 ## Pianificare il viaggio
 
 - Controllare le **previsioni di traffico** su [Viabilità Italia](https://www.poliziadistato.it/articolo/viabilita-italia) e sui bollettini Autostrade.

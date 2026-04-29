@@ -15,11 +15,6 @@ draft: false
 
 Le **ondate di freddo** non sono solo un disagio climatico: sono un **rischio concreto** per la salute pubblica, specialmente per **anziani**, **persone fragili** e **senza dimora**. Secondo l'**ISS**, ogni anno in Italia l'ondata di freddo contribuisce a migliaia di decessi "in eccesso" tra la popolazione più vulnerabile.
 
-
-{{< foto src="/images/2026-11-05-ondate-freddo-prevenzione-anziani-corpo.webp"
-         alt="Cielo limpido e sole intenso durante un'ondata di calore"
-         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
-
 ## Cosa si intende per ondata di freddo
 
 Un'**ondata di freddo** è definita come:

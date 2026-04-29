@@ -15,11 +15,6 @@ draft: false
 
 In Italia, secondo stime del **Servizio Meteorologico dell'Aeronautica** e del **CNR-ISAC**, si registrano ogni anno oltre **un milione di fulmini nuvola-terra**. Molti colpiscono aree remote o infrastrutture, ma alcuni feriscono persone. Il rischio **non va drammatizzato**, ma nemmeno sottovalutato.
 
-
-{{< foto src="/images/2026-09-04-fulmini-protezione-civile-autoprotezione-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Come "funziona" un fulmine
 
 Il fulmine è una **scarica elettrica** fra nube e terra (o fra nubi). Può scaricare **centinaia di migliaia di ampere** in pochi millisecondi. La corrente attraversa il percorso di minor resistenza: aria ionizzata, metalli, acqua, esseri viventi alti rispetto al contesto.

@@ -20,11 +20,6 @@ Non è compito del volontario intervenire direttamente sulla sostanza pericolosa
 
 Questo articolo raccoglie i tre sistemi di segnaletica che il volontario incontra più spesso: i **pittogrammi CLP** sulle confezioni, le **etichette ADR** sui trasporti e la **segnaletica di sicurezza sul lavoro** nei luoghi di lavoro.
 
-
-{{< foto src="/images/2026-05-24-cartelli-pericolo-sostanze-pericolose-riconoscere-agire-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## 1. Pittogrammi CLP — etichette sulle confezioni
 
 Il Regolamento europeo CLP (Classification, Labelling and Packaging — Regolamento CE 1272/2008) ha armonizzato a livello mondiale l'etichettatura delle sostanze chimiche seguendo il sistema GHS delle Nazioni Unite. Lo si riconosce perché i pittogrammi sono **rombi rossi su sfondo bianco** con un simbolo nero al centro.

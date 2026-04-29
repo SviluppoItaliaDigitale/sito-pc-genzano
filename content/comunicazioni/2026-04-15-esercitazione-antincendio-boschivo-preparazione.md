@@ -17,11 +17,6 @@ La **primavera** è tradizionalmente il periodo in cui i gruppi di Protezione Ci
 
 L'esercitazione è uno strumento insostituibile: non è sufficiente **leggere un manuale** o **ripassare le radio**. Serve mettere le mani sulle cose, vedere come funziona la squadra, capire chi fa cosa in condizioni reali.
 
-
-{{< foto src="/images/2026-04-15-esercitazione-antincendio-boschivo-preparazione-corpo.webp"
-         alt="Squadra di vigili del fuoco impegnata in un fronte di incendio boschivo"
-         caption="L'incendio boschivo è uno dei rischi prioritari sui Castelli Romani." >}}
-
 ## Perché si esercita
 
 L'obiettivo di un'esercitazione AIB è **duplice**:

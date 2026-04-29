@@ -15,11 +15,6 @@ draft: false
 
 Il **3 dicembre** è la **Giornata internazionale delle persone con disabilità**, istituita dall'**ONU** nel 1992. Un'occasione per riflettere su come **inclusione** e **accessibilità** siano centrali anche per la **Protezione Civile**.
 
-
-{{< foto src="/images/2026-12-03-giornata-persone-disabilita-corpo.webp"
-         alt="Volontario che assiste una persona anziana"
-         caption="Le persone fragili sono una priorità della pianificazione di emergenza." >}}
-
 ## Il contesto
 
 ### Dati in Italia

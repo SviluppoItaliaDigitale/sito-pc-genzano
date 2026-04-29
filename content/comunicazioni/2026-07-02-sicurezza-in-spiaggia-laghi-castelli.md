@@ -15,11 +15,6 @@ draft: false
 
 Ogni estate i **laghi di Nemi e Albano** attraggono migliaia di visitatori. Acque fresche, paesaggi suggestivi, relax a due passi da Roma. Ma l'acqua — mare, lago o piscina — è uno degli ambienti in cui si concentra il maggior numero di **incidenti estivi**. Alcune regole di base rendono più sicura la giornata.
 
-
-{{< foto src="/images/2026-07-02-sicurezza-in-spiaggia-laghi-castelli-corpo.webp"
-         alt="Operatori con dispositivi di protezione individuale"
-         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
-
 ## L'annegamento: numeri e cause
 
 Secondo dati **ISTAT** e **Federazione Italiana Nuoto**:

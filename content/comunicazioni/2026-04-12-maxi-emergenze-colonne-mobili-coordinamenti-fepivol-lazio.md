@@ -18,11 +18,6 @@ draft: false
 
 ---
 
-
-{{< foto src="/images/2026-04-12-maxi-emergenze-colonne-mobili-coordinamenti-fepivol-lazio-corpo.webp"
-         alt="Alberi piegati dal vento durante una tempesta"
-         caption="Il vento forte è uno dei fenomeni più sottostimati a livello di rischio." >}}
-
 ## Cosa sono le maxi emergenze
 
 Con l'espressione **maxi emergenza** si intendono gli **scenari con impatto rilevante sul territorio e sulla popolazione**, che richiedono un'ingente mobilitazione di personale e attrezzature specializzate. Sono eventi che il singolo Comune non può affrontare con le proprie forze: richiedono l'attivazione del livello regionale e, nei casi più gravi, del livello nazionale.

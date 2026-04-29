@@ -15,11 +15,6 @@ draft: false
 
 Si svolge oggi l'**esame finale** del **corso base di Protezione Civile** avviato il **23 ottobre 2026**. Un momento importante per chi ha dedicato sette settimane di studio e formazione e si prepara a entrare nel gruppo operativo del volontariato comunale.
 
-
-{{< foto src="/images/2026-12-11-esame-corso-base-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## Il percorso
 
 ### Durata e struttura

@@ -15,11 +15,6 @@ draft: false
 
 Quando un volontario di Protezione Civile viene **attivato** per un'emergenza o un'esercitazione ufficiale, la legge italiana gli riconosce **precisi diritti** nei confronti del datore di lavoro: assenza giustificata, mantenimento della retribuzione, copertura assicurativa. Conoscerli è importante sia per i volontari sia per i datori di lavoro.
 
-
-{{< foto src="/images/2026-10-12-volontariato-diritto-lavoratore-assenza-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## Il quadro normativo
 
 Il principale riferimento è il **D.Lgs. 1/2018** (Codice della Protezione Civile), in particolare gli articoli dedicati al **volontariato organizzato**. Disciplinano:

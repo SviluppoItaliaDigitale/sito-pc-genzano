@@ -15,11 +15,6 @@ draft: false
 
 Le mappe di **rischio idrogeologico**, **sismico**, **AIB** del territorio italiano non sono documenti riservati: sono pubblici e consultabili da chiunque sui **geoportali istituzionali**. Conoscere e usare questi strumenti è un atto di cittadinanza consapevole: chi compra casa, chi valuta investimenti, chi vuole solo capire meglio dove vive può trovare qui informazioni affidabili.
 
-
-{{< foto src="/images/2026-10-05-geoportali-strumenti-digitali-rischio-corpo.webp"
-         alt="Paesaggio naturale italiano — territorio e ambiente"
-         caption="La conoscenza del territorio è il primo strumento di prevenzione." >}}
-
 ## Cosa è un geoportale
 
 Un **geoportale** è un sito web che mette a disposizione **mappe geografiche** e **dati territoriali** in formato interattivo. Sui geoportali pubblici italiani si possono consultare:

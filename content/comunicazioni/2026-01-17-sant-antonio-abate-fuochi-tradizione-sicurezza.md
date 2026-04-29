@@ -17,11 +17,6 @@ Il **17 gennaio**, festa di **Sant'Antonio Abate**, in molte comunità italiane 
 
 Come ogni tradizione che prevede **fuoco all'aperto**, richiede però **precauzioni serie**. Gennaio, pur essendo freddo, è un mese in cui vegetazione secca, vento e umidità bassa possono trasformare un falò in un incendio esteso.
 
-
-{{< foto src="/images/2026-01-17-sant-antonio-abate-fuochi-tradizione-sicurezza-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Perché prestare attenzione
 
 Il falò di Sant'Antonio Abate non è un incendio boschivo estivo. Ma i fattori di rischio ci sono:

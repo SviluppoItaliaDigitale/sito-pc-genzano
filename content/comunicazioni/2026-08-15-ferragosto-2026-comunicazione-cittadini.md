@@ -15,11 +15,6 @@ draft: false
 
 Nel giorno di **Ferragosto**, il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma desidera rivolgere un pensiero a tutta la cittadinanza: a chi trascorre la giornata con la famiglia, a chi presta servizio in ospedali, caserme, corpi di soccorso, a chi è lontano da casa, a chi è rimasto solo.
 
-
-{{< foto src="/images/2026-08-15-ferragosto-2026-comunicazione-cittadini-corpo.webp"
-         alt="Folla durante un evento pubblico"
-         caption="I grandi eventi richiedono pianificazione di sicurezza preventiva." >}}
-
 ## Il senso della festa
 
 **Ferragosto** è festa antica, nata come *Feriae Augusti* di riposo per i lavoratori agricoli e divenuta nel corso dei secoli sintesi di cultura popolare e di spiritualità cristiana. Oggi, accanto al significato religioso, conserva il carattere di festa collettiva e di pausa estiva. In una società che cambia rapidamente, è anche momento di riflessione sul senso della comunità, della solidarietà, del reciproco sostegno.

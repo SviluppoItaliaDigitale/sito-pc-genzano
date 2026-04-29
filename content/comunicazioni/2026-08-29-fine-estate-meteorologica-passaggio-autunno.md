@@ -15,11 +15,6 @@ draft: false
 
 Il **31 agosto** si chiude, per convenzione meteorologica, la **stagione estiva**. Dal **1° settembre** inizia l'autunno meteorologico (che in termini astronomici arriverà invece intorno al 22-23 settembre). Il cambio di stagione non è solo un dato di calendario: è una **modifica concreta degli scenari di rischio** che interessano il territorio di Genzano e dei Castelli Romani.
 
-
-{{< foto src="/images/2026-08-29-fine-estate-meteorologica-passaggio-autunno-corpo.webp"
-         alt="Cielo con nuvole — illustrazione della previsione meteo"
-         caption="I bollettini meteo sono lo strumento di prevenzione quotidiana del rischio idrogeologico." >}}
-
 ## Estate meteorologica vs. estate astronomica
 
 - **Estate meteorologica**: 1° giugno — 31 agosto. È la convenzione usata dai servizi meteo per le statistiche climatiche.

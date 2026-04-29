@@ -15,11 +15,6 @@ draft: false
 
 Il **Natale** è tempo di famiglia, regali, tavole imbandite. Ma per **molti** a Genzano e ovunque è anche tempo di **difficoltà**: perdita di lavoro, povertà nascosta, senza dimora, famiglie in crisi. La **solidarietà** concreta non è un lusso ma una necessità.
 
-
-{{< foto src="/images/2026-12-20-solidarieta-natalizia-caritas-mense-corpo.webp"
-         alt="Volontario che assiste una persona anziana"
-         caption="Le persone fragili sono una priorità della pianificazione di emergenza." >}}
-
 ## Povertà in Italia oggi
 
 ### Dati (ISTAT 2024)

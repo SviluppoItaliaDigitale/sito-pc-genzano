@@ -15,11 +15,6 @@ draft: false
 
 Dal **venerdì 5 all'martedì 8 dicembre 2026** il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** attiva un **presidio territoriale** in occasione del **ponte dell'Immacolata**. Reperibilità, monitoraggio e supporto ai servizi comunali.
 
-
-{{< foto src="/images/2026-12-05-presidio-ponte-immacolata-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Perché un presidio
 
 Il ponte dell'Immacolata coincide con:

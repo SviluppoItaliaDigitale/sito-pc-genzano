@@ -15,11 +15,6 @@ draft: false
 
 Il **2 giugno** si celebra la **Festa della Repubblica Italiana**, nell'anniversario del referendum del **1946** con cui gli italiani scelsero la forma repubblicana. È una data che richiama i principi della **Costituzione** — tra cui uno particolarmente vicino al mondo della Protezione Civile: l'articolo 2, sulla **solidarietà politica, economica e sociale**.
 
-
-{{< foto src="/images/2026-06-02-festa-repubblica-volontariato-civico-corpo.webp"
-         alt="Squadra di volontari in tenuta operativa al lavoro"
-         caption="Il volontariato di Protezione Civile è una componente del Sistema nazionale." >}}
-
 ## Volontariato e Costituzione
 
 La Costituzione non nomina esplicitamente la Protezione Civile, ma ne costruisce le fondamenta. Tre articoli in particolare ne delineano lo spirito:

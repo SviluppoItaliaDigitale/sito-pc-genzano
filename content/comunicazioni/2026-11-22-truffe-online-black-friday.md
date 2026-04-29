@@ -15,11 +15,6 @@ draft: false
 
 **Black Friday**, **Cyber Monday**, **Natale**: per 30 giorni circa, l'Italia passa attraverso il picco degli **acquisti online** dell'anno. Un periodo di opportunità ma anche di **rischi**: le truffe online aumentano del **40-60%** secondo la **Polizia Postale**.
 
-
-{{< foto src="/images/2026-11-22-truffe-online-black-friday-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Il fenomeno
 
 Nel periodo novembre-dicembre in Italia si concentrano:

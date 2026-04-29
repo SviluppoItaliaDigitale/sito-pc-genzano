@@ -15,11 +15,6 @@ draft: false
 
 Gli **incendi domestici** in Italia causano ogni anno centinaia di vittime. I mesi più a rischio sono quelli del riscaldamento. Settembre è il momento giusto per fare i **controlli** che, a novembre, sarà troppo tardi rimpiangere di non aver fatto.
 
-
-{{< foto src="/images/2026-09-23-prevenzione-incendi-domestici-autunno-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## Le cause più frequenti
 
 Secondo dati dei **Vigili del Fuoco** e del **Ministero dell'Interno**, gli incendi domestici sono causati principalmente da:

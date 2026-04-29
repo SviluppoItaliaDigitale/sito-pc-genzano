@@ -15,11 +15,6 @@ draft: false
 
 Con l'avvicinarsi dell'inverno e l'accensione degli impianti termici, ricordiamo che la **manutenzione** della **caldaia** e del **circuito di riscaldamento** non è una scelta: è un **obbligo normativo** e, soprattutto, una questione di **sicurezza**.
 
-
-{{< foto src="/images/2026-10-27-manutenzione-caldaia-controllo-annuale-corpo.webp"
-         alt="Volontari di Protezione Civile al lavoro"
-         caption="Il sistema italiano di Protezione Civile in azione." >}}
-
 ## La normativa
 
 Il riferimento è il **D.P.R. 74/2013**, che disciplina:
