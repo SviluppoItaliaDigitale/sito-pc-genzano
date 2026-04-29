@@ -15,6 +15,11 @@ draft: false
 
 **Agosto** è, nel calendario operativo della Protezione Civile italiana, il mese più impegnativo. Caldo estremo, siccità, incendi boschivi, temporali violenti, ondate turistiche, eventi di massa, personale istituzionale ridotto per ferie: tutti i fattori di rischio convergono nello stesso periodo. Conoscere questo quadro aiuta ogni cittadino a collaborare.
 
+
+{{< foto src="/images/2026-08-01-agosto-mese-critico-pc-preparazione-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Perché agosto
 
 A differenza degli altri mesi, agosto concentra in quattro settimane:

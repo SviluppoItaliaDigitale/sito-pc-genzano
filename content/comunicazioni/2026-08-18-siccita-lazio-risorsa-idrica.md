@@ -15,6 +15,11 @@ draft: false
 
 L'estate 2026 conferma una tendenza ormai strutturale per il Lazio: **ridotta disponibilità idrica**, **siccità prolungata**, **pressione sul sistema acquedottistico**. Se da un lato la gestione della risorsa è competenza di gestori e autorità, dall'altro ogni famiglia può fare molto con comportamenti semplici.
 
+
+{{< foto src="/images/2026-08-18-siccita-lazio-risorsa-idrica-corpo.webp"
+         alt="Veduta panoramica dei Castelli Romani"
+         caption="Il territorio di Genzano e dei Castelli Romani è il contesto di intervento del Gruppo." >}}
+
 ## Chi gestisce l'acqua nel Lazio
 
 - **Autorità di Bacino del Distretto dell'Appennino Centrale** per la pianificazione di bacino.

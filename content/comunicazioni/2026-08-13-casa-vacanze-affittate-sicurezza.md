@@ -15,6 +15,11 @@ draft: false
 
 Il mercato degli **affitti brevi** — case vacanze, B&B, affitti fra privati — è cresciuto molto negli anni. Non tutte le strutture sono equiparabili agli alberghi in termini di dotazioni di sicurezza. Alcune verifiche rapide, al momento dell'arrivo, riducono i rischi durante il soggiorno.
 
+
+{{< foto src="/images/2026-08-13-casa-vacanze-affittate-sicurezza-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Le prime cinque cose da verificare
 
 1. **Rilevatori** di fumo e, se c'è una caldaia a gas in appartamento, **rilevatori di monossido di carbonio**: se non ci sono, tenerne conto nelle abitudini notturne (porte socchiuse, ventilazione).

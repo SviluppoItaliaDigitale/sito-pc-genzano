@@ -15,6 +15,11 @@ draft: false
 
 Partire per le vacanze è un'occasione per pensare alla **propria preparazione agli imprevisti**. Un piccolo **kit di emergenza**, da tenere in casa o da portare con sé, permette di affrontare meglio blackout, allagamenti, evacuazioni improvvise, traumi di piccola entità. Non serve essere survivalisti: bastano poche cose ben scelte.
 
+
+{{< foto src="/images/2026-08-06-kit-emergenza-vacanze-come-prepararlo-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Il kit di base in auto
 
 Per chi parte in auto, un kit in bagagliaio dovrebbe contenere:

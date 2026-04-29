@@ -15,6 +15,11 @@ draft: false
 
 La **notte di San Lorenzo**, 10 agosto, è per tradizione la notte delle **Perseidi**, sciame meteorico che in realtà ha il suo picco fra il 12 e il 13 agosto. Molte persone escono a osservare il cielo, spesso in aree di campagna o nel Parco dei Castelli Romani. Alcune semplici attenzioni permettono di godersi lo spettacolo senza creare rischi.
 
+
+{{< foto src="/images/2026-08-10-san-lorenzo-notte-stelle-cadenti-sicurezza-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## Dove andare (e dove non andare)
 
 Per osservare le Perseidi servono **cieli bui** con poca luce artificiale. Nei Castelli sono zone indicate:
