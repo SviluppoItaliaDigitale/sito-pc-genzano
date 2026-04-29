@@ -15,6 +15,11 @@ draft: false
 
 A settembre, con il Mediterraneo ancora caldo e le prime correnti fredde in quota, si sviluppano frequentemente **temporali intensi** sul Lazio e sui Castelli Romani. Fulmini, grandine, raffiche di vento, precipitazioni concentrate possono causare danni significativi. Riconoscerli per tempo e sapere come comportarsi è la prima difesa.
 
+
+{{< foto src="/images/2026-09-03-temporali-settembre-prevenzione-corpo.webp"
+         alt="Cielo tempestoso con fulmini durante un temporale forte"
+         caption="I temporali forti possono produrre danni anche su territori limitati." >}}
+
 ## Come si forma un temporale di settembre
 
 La combinazione di:

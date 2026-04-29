@@ -15,6 +15,11 @@ draft: false
 
 Ogni estate, in Italia, decine di persone anziane muoiono per cause evitabili: disidratazione, caduta non soccorsa in tempo, peggioramento di patologie croniche, colpo di calore. I dati dell'**Istituto Superiore di Sanità** e del **Ministero della Salute** mostrano che la mortalità nei mesi più caldi è **più alta fra chi vive solo**. Ad agosto, quando molti familiari e vicini sono in vacanza, il rischio aumenta. La **rete di vicinato** resta, in queste settimane, il primo presidio reale di Protezione Civile.
 
+
+{{< foto src="/images/2026-08-23-persone-sole-vigilanza-solidarieta-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Il quadro
 
 A Genzano, come in molti Comuni italiani, una fetta significativa della popolazione anziana vive sola. Le cause sono diverse: vedovanza, figli emigrati al Nord o all'estero, fragilità familiari, povertà. In molti casi la solitudine non è scelta: è condizione. E in agosto, con uffici ridotti, servizi sociali a regime estivo, vicini in ferie, le reti di prossimità si riducono proprio quando servono di più.

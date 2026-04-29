@@ -15,6 +15,11 @@ draft: false
 
 A settembre ogni scuola del territorio riapre le sue porte a migliaia di bambini e ragazzi. È il momento giusto per ricordare che **ogni istituto scolastico è tenuto ad avere un Piano di Emergenza** aggiornato, prove periodiche di evacuazione, personale formato, planimetrie visibili. Un promemoria utile per famiglie, insegnanti, dirigenti e personale ATA.
 
+
+{{< foto src="/images/2026-08-26-scuole-ripresa-settembre-prepararsi-corpo.webp"
+         alt="Aula scolastica con bambini durante una lezione"
+         caption="L'educazione al rischio inizia a scuola." >}}
+
 ## Cosa prevede la normativa
 
 Il **D.Lgs. 81/2008** (Testo Unico Sicurezza sul Lavoro) impone a ogni scuola:

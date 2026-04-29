@@ -15,6 +15,11 @@ draft: false
 
 In agosto gli animali domestici sono esposti agli stessi rischi da caldo che colpiscono le persone, ma con meccanismi di termoregolazione diversi. Cani e gatti, in particolare, dissipano calore quasi esclusivamente attraverso la respirazione e poche zone cutanee glabre. Le strategie di protezione vanno adattate.
 
+
+{{< foto src="/images/2026-08-21-animali-domestici-caldo-proteggerli-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## Riconoscere un animale in difficoltà
 
 Segnali precoci di disagio da caldo in **cani**:
