@@ -1,0 +1,153 @@
+name: "📱 Genera bozze social automatiche"
+
+# Per ogni nuovo articolo committato in content/comunicazioni/, genera
+# le bozze social (X, Facebook, Instagram, Telegram) via Gemini API +
+# le immagini Instagram (post 1080x1080 + story 1080x1920) via Pillow.
+#
+# Le bozze finiscono in social-bozze/<slug>/ — committate dal workflow
+# con marker [skip-social-bozze] per evitare loop, e visibili da GitHub
+# web (utile da mobile).
+#
+# Le immagini finiscono in static/images-social/ — deployate sul sito.
+#
+# La cartella social-bozze/ NON viene servita da Hugo (non è una
+# cartella riconosciuta come content/, static/, themes/, data/, layouts/),
+# quindi resta solo nel repo come archivio di lavoro.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/comunicazioni/**.md"
+      - ".claude/rules/**.md"  # se cambiano le rules, ri-genera
+  workflow_dispatch:
+    inputs:
+      articolo:
+        description: "Path .md da processare (vuoto = tutti gli articoli pubblicati senza bozze)"
+        required: false
+      force:
+        description: "Sovrascrivi bozze esistenti (true/false)"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+# Skip se il commit precedente è del bot stesso (evita loop).
+# Skip se il messaggio del commit ha [skip-social].
+jobs:
+  bozze-social:
+    if: "!contains(github.event.head_commit.message, '[skip-social]')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: "🐍 Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: "📦 Installa dipendenze"
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-liberation
+          pip install --quiet Pillow
+
+      - name: "📝 Articoli da processare"
+        id: lista
+        run: |
+          if [ -n "${{ github.event.inputs.articolo }}" ]; then
+            echo "modalita=singolo" >> "$GITHUB_OUTPUT"
+            echo "articolo=${{ github.event.inputs.articolo }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "push" ]; then
+            # Articoli aggiunti/modificati nell'ultimo push
+            CHANGED=$(git diff --name-only --diff-filter=AM \
+              "${{ github.event.before }}" "${{ github.sha }}" \
+              | grep -E '^content/comunicazioni/[0-9].+\.md$' || true)
+            if [ -z "$CHANGED" ]; then
+              echo "modalita=nessuno" >> "$GITHUB_OUTPUT"
+            else
+              echo "modalita=changed" >> "$GITHUB_OUTPUT"
+              echo "files<<EOF" >> "$GITHUB_OUTPUT"
+              echo "$CHANGED" >> "$GITHUB_OUTPUT"
+              echo "EOF" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "modalita=batch" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: "🤖 Genera bozze (Gemini)"
+        if: steps.lista.outputs.modalita != 'nessuno'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::warning::GEMINI_API_KEY non configurata. Salto generazione bozze."
+            echo "Aggiungi GEMINI_API_KEY come Secret in Settings -> Secrets and variables -> Actions"
+            exit 0
+          fi
+
+          FORCE=""
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            FORCE="--force"
+          fi
+
+          case "${{ steps.lista.outputs.modalita }}" in
+            singolo)
+              python3 scripts/genera-social.py $FORCE "${{ steps.lista.outputs.articolo }}"
+              ;;
+            batch)
+              python3 scripts/genera-social.py --all $FORCE
+              ;;
+            changed)
+              while IFS= read -r f; do
+                [ -z "$f" ] && continue
+                echo "=== $f ==="
+                python3 scripts/genera-social.py $FORCE "$f" || echo "  (errore non-fatale, continuo)"
+              done <<< "${{ steps.lista.outputs.files }}"
+              ;;
+          esac
+
+      - name: "🖼️ Genera immagini Instagram (Pillow)"
+        if: steps.lista.outputs.modalita != 'nessuno'
+        run: |
+          FORCE=""
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            FORCE="--force"
+          fi
+
+          case "${{ steps.lista.outputs.modalita }}" in
+            singolo)
+              python3 scripts/genera-immagini-social.py $FORCE "${{ steps.lista.outputs.articolo }}"
+              ;;
+            batch)
+              python3 scripts/genera-immagini-social.py --all $FORCE
+              ;;
+            changed)
+              while IFS= read -r f; do
+                [ -z "$f" ] && continue
+                python3 scripts/genera-immagini-social.py $FORCE "$f" || echo "  (errore non-fatale)"
+              done <<< "${{ steps.lista.outputs.files }}"
+              ;;
+          esac
+
+      - name: "💾 Commit risultati"
+        if: steps.lista.outputs.modalita != 'nessuno'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Aggiungi solo se ci sono nuovi file
+          git add social-bozze/ static/images-social/ 2>/dev/null || true
+
+          if git diff --staged --quiet; then
+            echo "Nessuna nuova bozza/immagine da committare."
+          else
+            COUNT_BOZZE=$(git diff --staged --name-only | grep -c '^social-bozze/' || echo 0)
+            COUNT_IMG=$(git diff --staged --name-only | grep -c '^static/images-social/' || echo 0)
+            git commit -m "[skip-social] Bozze social: $COUNT_BOZZE testi + $COUNT_IMG immagini"
+            git push
+          fi

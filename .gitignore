@@ -23,3 +23,4 @@ package-lock.json
 
 # Contesto AI generato on-demand (rigenerabile con scripts/export-contesto-ai.sh)
 CONTESTO-AI.md
+__pycache__/
