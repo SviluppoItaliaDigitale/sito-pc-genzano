@@ -282,7 +282,10 @@ def chiama_gemini(api_key: str, system_prompt: str, user_prompt: str,
             "responseMimeType": "application/json",
             "responseSchema": RESPONSE_SCHEMA,
             "temperature": 0.7,
-            "maxOutputTokens": 2048,
+            # 8192 = limite Gemini 2.5 Flash. I 4 testi insieme stanno
+            # sotto i ~3500 token in pratica, ma teniamo margine perché
+            # l'instagram caption può arrivare a 2200 caratteri da sola.
+            "maxOutputTokens": 8192,
         },
     }
     body = json.dumps(payload).encode("utf-8")
@@ -314,11 +317,17 @@ def chiama_gemini(api_key: str, system_prompt: str, user_prompt: str,
             return None
 
         try:
-            testo = risposta["candidates"][0]["content"]["parts"][0]["text"]
+            cand = risposta["candidates"][0]
+            finish = cand.get("finishReason", "")
+            testo = cand["content"]["parts"][0]["text"]
+            if finish == "MAX_TOKENS":
+                stampa_err("Risposta troncata da limite token (MAX_TOKENS). "
+                           "Aumenta maxOutputTokens nel generationConfig.")
+                return None
             return json.loads(testo)
         except (KeyError, IndexError, json.JSONDecodeError) as e:
             stampa_err(f"Struttura risposta inattesa: {e}")
-            stampa_err(f"Raw: {raw[:500]}")
+            stampa_err(f"Raw: {raw[:800]}")
             return None
     return None
 
