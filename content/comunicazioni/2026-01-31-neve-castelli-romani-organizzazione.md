@@ -17,6 +17,11 @@ Nei **Castelli Romani** la neve non è la regola, ma nemmeno un'eccezione. L'alt
 
 Vediamo come il territorio si prepara e cosa può fare ogni famiglia per affrontare una nevicata in serenità.
 
+
+{{< foto src="/images/2026-01-31-neve-corpo.webp"
+         alt="Strada di campagna innevata con alberi ai lati, vista in prospettiva centrale"
+         caption="Quando la neve arriva sui Castelli Romani, le strade diventano il primo punto di attenzione operativa. _Foto: MARTINOPHUC — Pixabay Content License._" >}}
+
 ## Perché la neve qui è "particolare"
 
 I Castelli Romani non hanno la cultura operativa di Roccaraso o delle Alpi. Questo significa che:

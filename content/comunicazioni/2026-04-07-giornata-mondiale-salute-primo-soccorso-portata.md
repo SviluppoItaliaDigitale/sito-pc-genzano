@@ -17,6 +17,11 @@ Il **7 aprile** è la **Giornata mondiale della salute** (*World Health Day*), p
 
 Per la Protezione Civile è un'occasione per ricordare quanto conoscere il **primo soccorso**, anche nelle sue **basi minime**, sia un atto civile importante. Non serve essere medici. Serve sapere **cosa fare nei primi minuti**: quelli in cui le ambulanze non sono ancora arrivate.
 
+
+{{< foto src="/images/2026-04-07-primo-soccorso-corpo.webp"
+         alt="Kit di primo soccorso aperto con bende, garze e materiale medico essenziale"
+         caption="Un kit di primo soccorso ben organizzato è il primo strumento utile a chi sta vicino. _Foto: Navy Medicine — Unsplash License._" >}}
+
 ## La "catena della sopravvivenza"
 
 La medicina dell'emergenza ha formalizzato un concetto semplice: la **catena della sopravvivenza**. I suoi anelli sono:
