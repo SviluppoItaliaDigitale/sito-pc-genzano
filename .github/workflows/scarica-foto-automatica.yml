@@ -79,7 +79,7 @@ jobs:
         id: scan
         run: |
           set -e
-          MATCHES=$(grep -rlE "^# TODO-foto-(wikipedia|nasa|usgs|noaa):" content/comunicazioni/ 2>/dev/null || true)
+          MATCHES=$(grep -rlE "^# TODO-foto-(wikipedia|nasa|usgs|noaa|pexels|pixabay|unsplash):" content/comunicazioni/ 2>/dev/null || true)
           if [ -z "$MATCHES" ]; then
             echo "[info] Nessun articolo con marker TODO-foto-* trovato."
             echo "found=0" >> "$GITHUB_OUTPUT"
@@ -94,21 +94,28 @@ jobs:
       - name: "📷 Scarica foto e aggiorna frontmatter"
         if: steps.scan.outputs.found != '0'
         id: download
+        env:
+          # API key per fonti immagini stock (configurare come GitHub Secrets).
+          # Se mancanti, gli articoli con marker pexels/pixabay/unsplash
+          # falliranno con errore esplicito ma le altre fonti continuano.
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
           set +e
           PROCESSED=0
           FAILED=0
           declare -a FAILED_ITEMS
 
-          ALLOWED_SCRIPTS="foto-da-wikipedia.sh foto-da-nasa.sh foto-da-usgs.sh foto-da-noaa.sh"
+          ALLOWED_SCRIPTS="foto-da-wikipedia.sh foto-da-nasa.sh foto-da-usgs.sh foto-da-noaa.sh foto-da-pexels.sh foto-da-pixabay.sh foto-da-unsplash.sh"
 
           while IFS= read -r ARTICLE; do
             [ -z "$ARTICLE" ] && continue
             echo "─────────────────────────────────────────────"
             echo "Articolo: $ARTICLE"
 
-            MARKER_LINE=$(grep -m1 -E "^# TODO-foto-(wikipedia|nasa|usgs|noaa):" "$ARTICLE")
-            FONTE=$(echo "$MARKER_LINE" | sed -nE 's/^# TODO-foto-(wikipedia|nasa|usgs|noaa):.*$/\1/p')
+            MARKER_LINE=$(grep -m1 -E "^# TODO-foto-(wikipedia|nasa|usgs|noaa|pexels|pixabay|unsplash):" "$ARTICLE")
+            FONTE=$(echo "$MARKER_LINE" | sed -nE 's/^# TODO-foto-(wikipedia|nasa|usgs|noaa|pexels|pixabay|unsplash):.*$/\1/p')
             CMD=$(echo "$MARKER_LINE" | sed -E "s/^# TODO-foto-${FONTE}:[[:space:]]*//")
 
             if [ -z "$FONTE" ] || [ -z "$CMD" ]; then
@@ -131,8 +138,9 @@ jobs:
             # Estraggo titolo + parametri e invoco lo script direttamente con
             # quoting corretto (eseguibile come array di argomenti).
             case "$FONTE" in
-              wikipedia|nasa)
+              wikipedia|nasa|pexels|pixabay|unsplash)
                 # Pattern: bash scripts/foto-da-XXX.sh "Titolo o query" slug [lang]
+                # (le 5 fonti hanno la stessa firma: query tra virgolette + slug)
                 TITLE=$(echo "$CMD" | grep -oE '"[^"]+"' | head -1 | sed 's/^"\(.*\)"$/\1/')
                 REST=$(echo "$CMD" | sed -E 's/.*"[^"]+"\s*//')
                 SLUG=$(echo "$REST" | awk '{print $1}')
@@ -143,6 +151,33 @@ jobs:
                   FAILED_ITEMS+=("$ARTICLE ($FONTE): parametri non estraibili")
                   continue
                 fi
+                # Verifica API key disponibile per le fonti che la richiedono
+                case "$FONTE" in
+                  pexels)
+                    [ -z "${PEXELS_API_KEY:-}" ] && {
+                      echo "[error] PEXELS_API_KEY mancante (configurare GitHub Secret)"
+                      FAILED=$((FAILED+1))
+                      FAILED_ITEMS+=("$ARTICLE (pexels): PEXELS_API_KEY mancante")
+                      continue
+                    }
+                    ;;
+                  pixabay)
+                    [ -z "${PIXABAY_API_KEY:-}" ] && {
+                      echo "[error] PIXABAY_API_KEY mancante (configurare GitHub Secret)"
+                      FAILED=$((FAILED+1))
+                      FAILED_ITEMS+=("$ARTICLE (pixabay): PIXABAY_API_KEY mancante")
+                      continue
+                    }
+                    ;;
+                  unsplash)
+                    [ -z "${UNSPLASH_ACCESS_KEY:-}" ] && {
+                      echo "[error] UNSPLASH_ACCESS_KEY mancante (configurare GitHub Secret)"
+                      FAILED=$((FAILED+1))
+                      FAILED_ITEMS+=("$ARTICLE (unsplash): UNSPLASH_ACCESS_KEY mancante")
+                      continue
+                    }
+                    ;;
+                esac
                 if [ -n "$EXTRA" ]; then
                   OUTPUT=$(bash "scripts/$SCRIPT_NAME" "$TITLE" "$SLUG" "$EXTRA" 2>&1)
                 else
