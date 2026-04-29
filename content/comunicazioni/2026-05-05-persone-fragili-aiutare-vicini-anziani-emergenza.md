@@ -5,14 +5,14 @@ description: "Anziani soli, persone con disabilita, famiglie in difficolta: in e
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza.webp"
+image_alt: "Cover dell'articolo: Aiutare i vicini fragili in emergenza: un gesto di comunita che salva vite"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terza età" 2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza it
-
+---
+
 Durante un'emergenza, prima che arrivino le istituzioni, sono spesso i **vicini** a fare la differenza. Un familiare lontano, un figlio all'estero, un figlio in viaggio non possono intervenire: il vicino sì. Per questo il sistema di Protezione Civile moderno riconosce grande valore alla **rete di prossimità**: parenti, amici, vicini che conoscono le persone fragili e sanno come aiutarle.
 
 In questo articolo raccontiamo come organizzare, nella propria scala o nel proprio palazzo, una piccola rete informale di assistenza. Niente di complesso: poche regole, applicate con continuità.

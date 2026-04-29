@@ -5,8 +5,8 @@ description: "Nei campi di accoglienza la cucina è un'area a rischio regolata p
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2025-03-10-cucina-emergenza-haccp-ruoli-volontari.webp"
+image_alt: "Cover dell'articolo: Cucina in emergenza: chi fa cosa e perché la formazione HACCP è obbligatoria"
 scadenza: ""
 area: ""
 allegati:
@@ -14,8 +14,8 @@ allegati:
     url: "/manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf"
     dimensione: "3,8 MB"
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "HACCP" 2025-03-10-cucina-emergenza-haccp-ruoli-volontari it
-
+---
+
 Quando la Protezione Civile apre un campo di accoglienza o un centro operativo, la **cucina** è una delle prime strutture a essere allestita. Non si tratta solo di preparare pasti: è un'area che deve rispettare gli stessi standard igienico-sanitari di una mensa permanente. Il Manuale DSEFIC della Federazione Italiana Cuochi — che abbiamo aggiunto alla nostra [Area Download](/area-download/) — dedica il primo capitolo proprio a questo tema.
 
 

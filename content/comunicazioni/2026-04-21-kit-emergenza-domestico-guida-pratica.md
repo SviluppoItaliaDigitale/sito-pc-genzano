@@ -5,14 +5,14 @@ description: "Una guida pratica per preparare lo zaino di emergenza per la famig
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-21-kit-emergenza-domestico-guida-pratica.webp"
+image_alt: "Cover dell'articolo: Il kit di emergenza domestico: cosa mettere e dove tenerlo"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Kit di sopravvivenza" 2026-04-21-kit-emergenza-domestico-guida-pratica it
-
+---
+
 Un terremoto, un'alluvione, una lunga interruzione di corrente o di acqua: in queste situazioni avere in casa un kit già pronto può fare la differenza nelle prime ore, quando i soccorsi sono concentrati sulle persone in pericolo immediato. La Protezione Civile raccomanda a ogni famiglia di preparare uno **zaino di emergenza**: un contenitore unico, leggero, con l'essenziale per 72 ore.
 
 In questo articolo trovi la lista degli oggetti utili, le quantità per persona, dove tenere lo zaino e ogni quanto controllarlo.

@@ -5,8 +5,8 @@ description: "Al Dipartimento della Protezione Civile il DSEFIC-FIC ha presentat
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2024-10-06-manuale-cucina-emergenza-fic-presentazione.webp"
+image_alt: "Cover dell'articolo: La Federazione Italiana Cuochi presenta il Manuale di Cucina in Emergenza"
 scadenza: ""
 area: ""
 allegati:
@@ -14,8 +14,8 @@ allegati:
     url: "/manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf"
     dimensione: "3,8 MB"
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Federazione Italiana Cuochi" 2024-10-06-manuale-cucina-emergenza-fic-presentazione it
-
+---
+
 Domenica 6 ottobre 2024, all'Auditorium del Dipartimento della Protezione Civile di Roma, la Federazione Italiana Cuochi ha presentato il **Manuale di Cucina in Emergenza**, curato dal DSEFIC — Dipartimento Solidarietà Emergenze. È il primo testo organico dedicato a chi gestisce la ristorazione nei campi di accoglienza, nei centri operativi e nelle strutture di assistenza alla popolazione durante un'emergenza.
 
 

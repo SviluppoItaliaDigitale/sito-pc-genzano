@@ -5,14 +5,14 @@ description: "Non sostituisce un corso, ma conoscere poche regole essenziali pu�
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-29-primo-soccorso-cinque-regole-base.webp"
+image_alt: "Cover dell'articolo: Primo soccorso: le cinque regole di base che tutti dovrebbero sapere"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Primo soccorso" 2026-04-29-primo-soccorso-cinque-regole-base it
-
+---
+
 **Questo articolo non sostituisce un corso di primo soccorso.** Per assistere correttamente una persona in emergenza servono formazione, pratica e aggiornamento periodico. Quello che possiamo fare tutti, però, è conoscere **cinque regole di base** da applicare nei minuti che precedono l'arrivo del 112 e del soccorso sanitario. A volte questi minuti sono decisivi.
 
 Le indicazioni seguite sono le più semplici e sicure da applicare per un cittadino non formato, coerenti con le [linee guida IRC](https://www.ircouncil.it/) del Consiglio Italiano per la Rianimazione.

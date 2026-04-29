@@ -5,14 +5,14 @@ description: "Un anziano che non rientra, un escursionista non arrivato, un bamb
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-25-ricerca-dispersi-soccorso-volontariato.webp"
+image_alt: "Cover dell'articolo: La ricerca dispersi: come funziona e chi la coordina"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Soccorso alpino e speleologico" 2026-05-25-ricerca-dispersi-soccorso-volontariato it
-
+---
+
 Un anziano che non torna dal solito giro. Un escursionista che non arriva all'orario previsto. Un bambino che si allontana in un centro commerciale. Una persona con disabilità cognitiva che esce di casa sola. La **ricerca dispersi** è una delle attività più delicate e tecniche della Protezione Civile, regolata in Italia da **protocolli nazionali precisi**.
 
 In questo articolo raccontiamo come funziona il sistema, chi lo coordina e cosa può fare una famiglia.

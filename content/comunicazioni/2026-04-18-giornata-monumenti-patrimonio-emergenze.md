@@ -5,14 +5,14 @@ description: "Il 18 aprile è la Giornata internazionale dei monumenti e dei sit
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-18-giornata-monumenti-patrimonio-emergenze.webp"
+image_alt: "Cover dell'articolo: Giornata mondiale dei monumenti: tutela del patrimonio nelle emergenze"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Basilica di San Benedetto da Norcia" 2026-04-18-giornata-monumenti-patrimonio-emergenze it
-
+---
+
 Il **18 aprile** è la **Giornata internazionale dei monumenti e dei siti** (*World Heritage Day*), promossa dall'**ICOMOS** (Consiglio Internazionale dei Monumenti e dei Siti) dal 1983 e riconosciuta dall'**UNESCO**.
 
 In Italia, dove la **densità di patrimonio culturale** è tra le più alte al mondo, la tutela dei beni storici e artistici **nelle emergenze** è un tema molto concreto. I terremoti in Centro Italia (2009, 2016), le alluvioni di Firenze (1966) e del Polesine (1951), gli incendi estivi che lambiscono beni monumentali sono esempi di quanto la Protezione Civile debba operare **anche per il patrimonio**.

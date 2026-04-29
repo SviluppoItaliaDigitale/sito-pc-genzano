@@ -5,14 +5,14 @@ description: "A 14 anni dalla seconda forte scossa che colpi l'Emilia il 29 magg
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria.webp"
+image_alt: "Cover dell'articolo: 29 maggio 2012: la seconda scossa in Emilia e la resilienza comunitaria"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Mirandola" 2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria it
-
+---
+
 Il **29 maggio 2012**, alle **9:00 del mattino**, una scossa di magnitudo **5.8** colpì la Pianura Padana, nove giorni dopo la prima scossa del 20 maggio (5.9). Questa seconda scossa causò **17 vittime**, tra cui molti operai rientrati nelle fabbriche dopo la prima emergenza, e devastò un territorio che stava appena provando a rialzarsi.
 
 Ne abbiamo parlato il [20 maggio](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/) per l'anniversario della prima scossa. Il 29 maggio è un'occasione per riflettere su un aspetto meno raccontato: la **resilienza delle comunità** di fronte a emergenze **prolungate**, non a un singolo evento.

@@ -5,14 +5,14 @@ description: "La maggior parte degli incendi in Italia parte dalla cucina. Frigg
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-13-incendi-domestici-cucina-elettrodomestici.webp"
+image_alt: "Cover dell'articolo: Incendi domestici: cause più comuni e come prevenirli"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Incendio" 2026-05-13-incendi-domestici-cucina-elettrodomestici it
-
+---
+
 In Italia ogni anno i [Vigili del Fuoco](https://www.vigilfuoco.it/) intervengono per migliaia di **incendi domestici**. La maggior parte parte da due luoghi: la **cucina** e gli **impianti elettrici**. La buona notizia: con poche attenzioni, quasi tutti si possono evitare.
 
 In questo articolo riassumiamo le cause più frequenti e i comportamenti corretti in caso di principio di incendio.

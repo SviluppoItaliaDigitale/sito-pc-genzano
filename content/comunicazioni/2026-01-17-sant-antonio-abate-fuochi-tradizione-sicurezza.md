@@ -5,14 +5,14 @@ description: "Il 17 gennaio molte comunità accendono i fuochi di Sant'Antonio A
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-17-sant-antonio-abate-fuochi-tradizione-sicurezza.webp"
+image_alt: "Cover dell'articolo: Sant'Antonio Abate: tradizione dei fuochi e rischio incendi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Sant'Antonio abate" 2026-01-17-sant-antonio-abate-fuochi-tradizione-sicurezza it
-
+---
+
 Il **17 gennaio**, festa di **Sant'Antonio Abate**, in molte comunità italiane si accendono i **falò rituali**. Una tradizione antica, spesso legata alla benedizione degli animali e alla fine del periodo più freddo dell'inverno. Anche nei Castelli Romani, in paesi e frazioni, il fuoco di Sant'Antonio è parte viva della cultura popolare.
 
 Come ogni tradizione che prevede **fuoco all'aperto**, richiede però **precauzioni serie**. Gennaio, pur essendo freddo, è un mese in cui vegetazione secca, vento e umidità bassa possono trasformare un falò in un incendio esteso.

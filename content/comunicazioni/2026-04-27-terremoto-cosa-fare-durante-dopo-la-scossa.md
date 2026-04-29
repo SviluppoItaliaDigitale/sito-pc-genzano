@@ -5,14 +5,14 @@ description: "Poche regole chiare dal Dipartimento di Protezione Civile su come 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa.webp"
+image_alt: "Cover dell'articolo: Terremoto: cosa fare durante la scossa e nei minuti successivi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Sismografo" 2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa it
-
+---
+
 Il Lazio è una regione a **sismicità media**. Non è un territorio a rischio estremo come l'Appennino centrale, ma eventi percepibili avvengono regolarmente e in passato il territorio ha vissuto scosse significative. Conoscere i comportamenti corretti **prima** della scossa è fondamentale: quando il terremoto arriva, non c'è tempo per pensarci.
 
 In questo articolo riassumiamo le indicazioni ufficiali del [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).

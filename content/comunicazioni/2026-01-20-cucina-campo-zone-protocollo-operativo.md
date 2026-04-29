@@ -5,8 +5,8 @@ description: "Dalla ricezione merci alla somministrazione: come si suddivide una
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-20-cucina-campo-zone-protocollo-operativo.webp"
+image_alt: "Cover dell'articolo: Come si organizza una cucina da campo: zone, temperature e protocollo operativo"
 scadenza: ""
 area: ""
 allegati:
@@ -14,8 +14,8 @@ allegati:
     url: "/manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf"
     dimensione: "3,8 MB"
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Cucina da campo" 2026-01-20-cucina-campo-zone-protocollo-operativo it
-
+---
+
 Una cucina da campo non si improvvisa. Il Manuale DSEFIC della Federazione Italiana Cuochi dedica due capitoli — "Le zone" e "Protocollo operativo" — a spiegare in modo pratico come si allestisce e come si gestisce. Qui riassumiamo le regole che ogni volontario impiegato nel supporto alla ristorazione dovrebbe conoscere.
 
 Il **manuale completo** è in allegato a questo articolo e nella pagina [Area Download](/area-download/).

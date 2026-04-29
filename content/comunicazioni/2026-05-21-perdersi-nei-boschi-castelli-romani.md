@@ -5,14 +5,14 @@ description: "I boschi dei Castelli Romani sono splendidi e frequentati. Come pi
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-21-perdersi-nei-boschi-castelli-romani.webp"
+image_alt: "Cover dell'articolo: Perdersi in bosco: come evitarlo e cosa fare se succede"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Parco regionale dell'Appia Antica" 2026-05-21-perdersi-nei-boschi-castelli-romani it
-
+---
+
 I **boschi dei Castelli Romani** — querceti, castagneti, faggete in quota — sono uno dei tesori naturali della nostra area, tutelati dal [Parco Regionale dei Castelli Romani](http://www.parcocastelliromani.it/). Sono anche meta di tantissime persone: escursionisti, famiglie, fungaioli, ciclisti. Ogni anno, in Italia, i **Vigili del Fuoco** e il **Soccorso Alpino** attivano ricerche per persone che si perdono nei boschi. La maggior parte si risolve bene, ma una preparazione minima riduce enormemente i rischi.
 
 

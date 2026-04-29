@@ -5,14 +5,14 @@ description: "Il Carnevale porta nei nostri paesi feste, cortei, assembramenti. 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-02-21-carnevale-sicurezza-eventi-assembramenti.webp"
+image_alt: "Cover dell'articolo: Carnevale in sicurezza: eventi pubblici, assembramenti, comportamenti"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Carnevale di Venezia" 2026-02-21-carnevale-sicurezza-eventi-assembramenti it
-
+---
+
 Il **Carnevale** è un appuntamento amato in molti paesi dei Castelli Romani. Sfilate di carri allegorici, maschere, musica, banchetti di dolci, coriandoli. Un momento di comunità che coinvolge bambini, famiglie, associazioni, scuole.
 
 Come ogni evento pubblico con **grande afflusso di persone**, richiede però **una buona organizzazione** della sicurezza. Il volontariato di Protezione Civile è spesso presente, a supporto del Comune e delle forze dell'ordine, per garantire che la festa si svolga in serenità.

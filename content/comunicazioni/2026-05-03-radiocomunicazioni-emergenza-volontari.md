@@ -5,14 +5,14 @@ description: "Quando telefono e internet cadono, restano le radio. Il ruolo dell
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-03-radiocomunicazioni-emergenza-volontari.webp"
+image_alt: "Cover dell'articolo: Radio in emergenza: perché sono ancora fondamentali per la Protezione Civile"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Stazione radio" 2026-05-03-radiocomunicazioni-emergenza-volontari it
-
+---
+
 In un'epoca in cui tutti comunicano con lo smartphone, può sembrare anacronistico parlare di **radio**. Ma in emergenza, quando le reti mobili sono sature o interrotte, quando il collegamento dati non funziona, quando persino la rete elettrica è fuori uso, **le radio continuano a funzionare**. Per questo il sistema di Protezione Civile mantiene e sviluppa le proprie reti radio e si avvale di **volontari radioamatori** con competenze specifiche.
 
 

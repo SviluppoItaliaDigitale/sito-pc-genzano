@@ -5,14 +5,14 @@ description: "La Giornata mondiale senza tabacco tocca un tema di Protezione Civ
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-31-giornata-senza-tabacco-mozziconi-incendi.webp"
+image_alt: "Cover dell'articolo: 31 maggio: Giornata senza tabacco, mozziconi e rischio incendi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Giornata mondiale senza tabacco" 2026-05-31-giornata-senza-tabacco-mozziconi-incendi it
-
+---
+
 Il **31 maggio** è la [Giornata mondiale senza tabacco](https://www.who.int/campaigns/world-no-tobacco-day) dell'**OMS**. La ricorrenza è nota soprattutto per il suo aspetto sanitario — gli effetti del fumo sulla salute. Ma tocca anche un tema di **Protezione Civile** poco discusso: i **mozziconi di sigaretta mal smaltiti** sono una delle cause principali di **incendi boschivi** in Italia e in tutto il Mediterraneo.
 
 Questo articolo non vuole essere un'omelia contro i fumatori. Vuole parlare di **responsabilità condivisa** nella prevenzione degli incendi, che in estate 2026 sarà ancora più importante.

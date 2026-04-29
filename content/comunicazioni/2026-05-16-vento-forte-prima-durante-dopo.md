@@ -5,14 +5,14 @@ description: "Raffiche improvvise possono causare danni anche seri: alberi cadut
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-16-vento-forte-prima-durante-dopo.webp"
+image_alt: "Cover dell'articolo: Vento forte: cosa fare prima, durante e dopo"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Tempesta Vaia" 2026-05-16-vento-forte-prima-durante-dopo it
-
+---
+
 Il vento non è solo il "fastidioso soffio" delle giornate di scirocco o tramontana. Quando raggiunge intensità elevate — raffiche superiori a **60-80 km/h** — diventa un **rischio serio** per persone e cose. Ogni anno, in Italia, si registrano incidenti anche mortali per alberi caduti, cornicioni staccati, tegole scagliate, auto investite da oggetti volanti.
 
 In questo articolo vediamo come prepararsi, cosa fare durante un'allerta vento e cosa controllare dopo.

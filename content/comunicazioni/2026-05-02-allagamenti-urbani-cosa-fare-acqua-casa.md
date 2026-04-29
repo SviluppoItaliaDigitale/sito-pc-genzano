@@ -5,14 +5,14 @@ description: "Bombe d'acqua e piogge intense possono causare allagamenti anche i
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa.webp"
+image_alt: "Cover dell'articolo: Allagamenti urbani: cosa fare se l'acqua entra in casa"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Alluvione di Roma del 2008" 2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa it
-
+---
+
 Con l'intensificarsi di **piogge concentrate in poche ore**, anche i centri abitati più lontani da fiumi possono sperimentare allagamenti. Tombini saturi, canali di scolo ostruiti, strade trasformate in torrenti sono scenari sempre più frequenti in tutta Italia, Castelli Romani inclusi. Conoscere i comportamenti corretti può ridurre molto i danni e soprattutto i rischi per le persone.
 
 Le indicazioni qui riportate derivano dalla [Campagna "Io Non Rischio" del Dipartimento di Protezione Civile](https://iononrischio.protezionecivile.it/) e dai protocolli ufficiali.
