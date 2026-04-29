@@ -5,9 +5,8 @@ description: "La Giunta regionale del Lazio ha approvato il regolamento della Sc
 badge: "Informazione"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-04-19-toscani-docenza-sala-operativa-lazio.webp"
-image_alt: "Daniele Toscani durante una docenza alla Sala Operativa della Protezione Civile Lazio"
-image_credit: "Foto del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+image: ""
+image_alt: ""
 scadenza: ""
 area: "Lazio"
 allegati: []
@@ -16,6 +15,10 @@ toc: true
 ---
 
 La Giunta regionale del Lazio ha approvato il regolamento attuativo della **Scuola di Alta Formazione di Protezione Civile**. Si tratta di uno strumento previsto dalla **legge regionale 2 del 2014** sul sistema integrato regionale di Protezione Civile, ma rimasto sulla carta per **dodici anni**. Con l'approvazione del regolamento la Scuola diventa operativa e potrà avviare i percorsi formativi destinati a volontari, operatori e personale tecnico del sistema regionale.
+
+{{< foto src="/images/2026-04-19-toscani-docenza-sala-operativa-lazio.webp"
+         alt="Aula formativa con docente in primo piano e schermo proiettato della Sala Operativa Regionale del Lazio sullo sfondo"
+         caption="La formazione regionale in atto: una sessione recente nella Sala Operativa della Protezione Civile Lazio. La nuova Scuola di Alta Formazione strutturerà su base permanente i percorsi finora organizzati su base puntuale." >}}
 
 ## Cosa cambia con il nuovo regolamento
 

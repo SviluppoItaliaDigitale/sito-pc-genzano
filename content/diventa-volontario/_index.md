@@ -16,6 +16,23 @@ aliases:
 </div>
 </div>
 
+<div class="row align-items-center mb-4 g-3">
+<div class="col-md-5 text-center">
+<a href="/manuali/locandine/locandina-diventa-volontario.pdf" target="_blank" rel="noopener" aria-label="Apri la locandina 'Diventa Volontario' in formato PDF (a tutta dimensione)">
+<img src="/images/locandina-diventa-volontario.webp" alt="Locandina del Gruppo Comunale Volontari di Protezione Civile di Genzano: 'Aiutaci ad aiutare — Diventa volontario'. Sede in Via Sicilia 13/15, telefono 06 9362600, email segreteria@protezionecivilegenzano.it" loading="lazy" class="img-fluid border shadow-sm" style="max-width: 320px;">
+</a>
+</div>
+<div class="col-md-7">
+<h3 class="h5 mb-2"><i class="bi bi-megaphone me-2 text-primary" aria-hidden="true"></i> Aiutaci ad aiutare</h3>
+<p>Scarica la locandina ufficiale di reclutamento e affiggila in negozi, scuole, parrocchie, palestre, condomini: ci aiuti a far conoscere il Gruppo e a raggiungere chi ha voglia di mettersi al servizio della comunità.</p>
+<p class="mb-0">
+<a href="/manuali/locandine/locandina-diventa-volontario.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+<i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> Scarica la locandina (PDF, 109 KB)
+</a>
+</p>
+</div>
+</div>
+
 ## Perché diventare volontario
 
 Non lo si fa per un premio. Lo si fa perché:
