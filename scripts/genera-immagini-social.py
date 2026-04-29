@@ -126,16 +126,21 @@ def crea_post_quadrato(cover_path: Path, titolo: str, slug: str) -> Path:
     cover_area_h = H - HEADER_H - FOOTER_H  # 660
     if cover_path.exists():
         cover = Image.open(cover_path).convert("RGB")
-        # Crop al rapporto necessario (W/cover_area_h ≈ 1080/660 = 1.636)
+        # Crop al rapporto necessario (W/cover_area_h ≈ 1080/660 = 1.636).
+        # IMPORTANTE: le cover tipografiche del sito hanno il titolo
+        # allineato a SINISTRA. Un crop centrato taglierebbe le prime
+        # lettere. Usiamo offset=0 (preserve-left) per mantenere intatto
+        # il bordo sinistro. Per le foto evento il soggetto è di solito
+        # nei 2/3 sinistri, quindi anche per quelle preserve-left
+        # funziona meglio del crop centrato.
         target_ratio = W / cover_area_h
         src_ratio = cover.width / cover.height
         if src_ratio > target_ratio:
-            # cover troppo larga: crop sui lati
+            # cover troppo larga: tieni il bordo sinistro, taglia da destra
             new_w = int(cover.height * target_ratio)
-            offset = (cover.width - new_w) // 2
-            cover = cover.crop((offset, 0, offset + new_w, cover.height))
+            cover = cover.crop((0, 0, new_w, cover.height))
         else:
-            # cover troppo alta: crop sopra/sotto
+            # cover troppo alta: crop centrato verticalmente
             new_h = int(cover.width / target_ratio)
             offset = (cover.height - new_h) // 2
             cover = cover.crop((0, offset, cover.width, offset + new_h))
@@ -190,7 +195,9 @@ def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
     draw.text((220, 130), "Gruppo Comunale Volontari", font=font_brand_sm, fill=WHITE)
     draw.text((220, 165), "Genzano di Roma", font=font_brand_sm, fill=WHITE)
 
-    # Cover articolo (rapporto 16:9 originale, ridimensionata 1080 di larghezza)
+    # Cover articolo (rapporto 16:9 originale, ridimensionata 1080 di larghezza).
+    # Stesso preserve-left del template post per mantenere intatto il titolo
+    # allineato a sinistra delle cover tipografiche.
     cover_y = HEADER_H + 40
     cover_h = 600
     if cover_path.exists():
@@ -199,8 +206,7 @@ def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
         src_ratio = cover.width / cover.height
         if src_ratio > target_ratio:
             new_w = int(cover.height * target_ratio)
-            offset = (cover.width - new_w) // 2
-            cover = cover.crop((offset, 0, offset + new_w, cover.height))
+            cover = cover.crop((0, 0, new_w, cover.height))
         else:
             new_h = int(cover.width / target_ratio)
             offset = (cover.height - new_h) // 2
