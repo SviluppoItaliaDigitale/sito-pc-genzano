@@ -141,10 +141,24 @@ fascia blu istituzionale. Da mobile **non** puoi farlo direttamente:
 serve l'opzione B (Wikipedia/NASA/USGS automatico) oppure devi
 prima caricarle su un PC con `bash scripts/applica-fascia-foto.sh`.
 
-### Caso B — Vuoi una foto automatica da Wikipedia/NASA/USGS
+### Caso B — Vuoi una foto automatica da fonti libere (7 fonti supportate)
 
-Nel frontmatter dell'articolo, aggiungi UNA riga di **marker**
-(scegli la fonte che ti serve):
+Nel frontmatter dell'articolo, aggiungi UNA riga di **marker**.
+Sono supportate **7 fonti**, ognuna pensata per un tipo di articolo diverso.
+
+#### 🗺️ Tabella decisionale: quale fonte per quale articolo
+
+| Tipo di articolo | Fonte consigliata | Esempio marker |
+|---|---|---|
+| Anniversario evento storico (terremoti famosi, alluvioni, eruzioni) | **Wikipedia** | `# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto dell'Irpinia del 1980" slug` |
+| Personaggio storico, opera, libro, organizzazione | **Wikipedia** | `# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Giuseppe Zamberletti" slug` |
+| Fenomeno globale visto dallo spazio (uragani, eruzioni, ondata calore) | **NASA** | `# TODO-foto-nasa: bash scripts/foto-da-nasa.sh "Etna eruption" slug` |
+| ShakeMap di un terremoto specifico | **USGS** | `# TODO-foto-usgs: bash scripts/foto-da-usgs.sh shakemap us6000abcd slug` |
+| Uragani, traccia tropicale (NHC), foto storica meteo | **NOAA** | `# TODO-foto-noaa: bash scripts/foto-da-noaa.sh "URL diretto" "Descrizione" slug` |
+| **Foto stock generica** (volontari, atmosfera, persone, attività) | **Pexels** o **Unsplash** | `# TODO-foto-pexels: bash scripts/foto-da-pexels.sh "rescue volunteer" slug` |
+| **Foto stock alta qualità** (illustrazioni, oggetti, paesaggi) | **Pixabay** | `# TODO-foto-pixabay: bash scripts/foto-da-pixabay.sh "ambulance" slug` |
+
+#### Esempio completo
 
 ```yaml
 ---
@@ -155,17 +169,36 @@ image: ""
 ---
 ```
 
-Altri marker:
-- `# TODO-foto-nasa: bash scripts/foto-da-nasa.sh "search query" slug`
-- `# TODO-foto-usgs: bash scripts/foto-da-usgs.sh shakemap <eventid> slug`
+#### Lista completa marker
 
-Al commit, il workflow `scarica-foto-automatica.yml` scarica la foto,
-le applica la fascia blu istituzionale, popola `image:` +
-`image_credit:` + `image_source_url:` nel frontmatter e rimuove il
-marker. Poi triggera il deploy.
+```yaml
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Wikipedia" slug [it|en]
+# TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "search query"     slug
+# TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap <eventid> slug
+# TODO-foto-noaa:      bash scripts/foto-da-noaa.sh      "URL noaa.gov"     "Contesto" slug
+# TODO-foto-pexels:    bash scripts/foto-da-pexels.sh    "search query"     slug
+# TODO-foto-pixabay:   bash scripts/foto-da-pixabay.sh   "search query"     slug
+# TODO-foto-unsplash:  bash scripts/foto-da-unsplash.sh  "search query"     slug
+```
 
-> Da PC puoi farlo localmente con uno dei tre script. Da mobile usi
-> SOLO il marker.
+#### Cosa succede al commit
+
+Il workflow `scarica-foto-automatica.yml` (CI):
+1. Scansiona gli articoli con marker
+2. Scarica la foto dalla fonte scelta (rete libera del runner GitHub)
+3. Applica la fascia blu istituzionale
+4. Popola `image:` + `image_credit:` + `image_source_url:` nel frontmatter
+5. Rimuove il marker
+6. Committa e ri-triggera il deploy
+
+> ⚠️ **Pexels/Pixabay/Unsplash richiedono API key** (gratuite). Devono essere configurate **una sola volta** come GitHub Secrets:
+> - `PEXELS_API_KEY` (https://www.pexels.com/api/)
+> - `PIXABAY_API_KEY` (https://pixabay.com/api/docs/)
+> - `UNSPLASH_ACCESS_KEY` (https://unsplash.com/developers)
+>
+> Se mancano, l'articolo con quel marker fallirà con messaggio chiaro nella issue automatica. Le altre 4 fonti (Wikipedia/NASA/USGS/NOAA) non richiedono API key e funzionano sempre.
+
+> Da PC puoi farlo localmente con uno dei sette script (richiede le API key in `~/.bashrc` per le 3 stock). Da mobile usi **SOLO il marker**: il workflow CI fa tutto.
 
 ---
 
