@@ -5,8 +5,8 @@ description: "Dalla notte dell'Irpinia al Codice del 2018: come l'Italia ha cost
 badge: "Informazione"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-29-nascita-dipartimento-protezione-civile-italia.webp"
+image_alt: "Cover dell'articolo: La nascita del Dipartimento della Protezione Civile: una storia italiana che parte dalle macerie"
 scadenza: ""
 area: "Italia"
 allegati: []

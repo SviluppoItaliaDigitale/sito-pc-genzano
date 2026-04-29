@@ -5,8 +5,8 @@ description: "Una fiction Rai con Ambra Angiolini ha portato il mondo della Prot
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2027-02-24-protezione-civile-fiction-tv-ambra-angiolini.webp"
+image_alt: "Cover dell'articolo: La Protezione Civile in TV: la fiction con Ambra Angiolini e la fatica di raccontare il volontariato"
 scadenza: ""
 area: ""
 allegati: []
