@@ -3376,3 +3376,32 @@ table > caption.visually-hidden {
   margin: 0;
 }
 @media print { .articoli-correlati { display: none; } }
+
+/* ============================================================
+   HEADER LOGO — respiro tra logo circolare e testo brand v1.0
+   ------------------------------------------------------------
+   Aggiunge un piccolo spazio orizzontale (gap) tra l'immagine
+   del logo (logo-pc-genzano.png) e il blocco testo
+   "Protezione Civile / Gruppo Comunale Volontari di Genzano".
+   Si applica a tutte le pagine perché navbar.html è in baseof.
+   ============================================================ */
+.it-brand-wrapper a {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+.it-brand-wrapper a img {
+  flex-shrink: 0;
+}
+.it-brand-wrapper .it-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 575.98px) {
+  /* su mobile riduciamo lo spazio per non sprecare px sull'header */
+  .it-brand-wrapper a {
+    gap: 0.55rem;
+  }
+}

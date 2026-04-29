@@ -963,6 +963,36 @@ jobs:
           fi
 
           # ----------------------------------------------------------------
+          section "40. Audit grammaticale italiano (refusi, accenti, apostrofi)"
+          # Esegue scripts/audit-grammatica-italiana.py che cerca nei contenuti:
+          # - apostrofi finti usati al posto degli accenti (e' invece di è, ne'
+          #   invece di né, sara' invece di sarà)
+          # - accenti mancanti su congiunzioni e sostantivi tronchi NON ambigui
+          #   (perche, poiche, piu, puo, gia, cosi, citta, universita, lunedi…)
+          # - "qual'è", "un'altro", "una emergenza" e altri errori italiani
+          #   tipici
+          # - "po" senza apostrofo
+          # - doppi spazi, spazi prima della punteggiatura
+          # - uso di "...", trattini brevi, ecc. (info)
+          # Lo script è conservativo: NON segnala parole ambigue (sostantivo
+          # legittimo + verbo al passato remoto, es. "arrivo/arrivò").
+          GRAMM_OUT=$(python3 scripts/audit-grammatica-italiana.py 2>&1)
+          GRAMM_ERR=$(echo "$GRAMM_OUT" | grep -oE '[0-9]+ errori' | head -1 | grep -oE '[0-9]+' || echo "0")
+          GRAMM_WARN=$(echo "$GRAMM_OUT" | grep -oE '[0-9]+ warning' | head -1 | grep -oE '[0-9]+' || echo "0")
+          if [ "$GRAMM_ERR" -gt 0 ] || [ "$GRAMM_WARN" -gt 0 ]; then
+            warn "Audit grammaticale: $GRAMM_ERR errori, $GRAMM_WARN warning. Dettaglio in fondo al report."
+            echo "" >> "$REPORT"
+            echo "<details><summary>📖 Dettaglio audit grammaticale (clicca per espandere)</summary>" >> "$REPORT"
+            echo "" >> "$REPORT"
+            # Saltiamo l'header dello script (#) e prendiamo dal totale in poi
+            echo "$GRAMM_OUT" | tail -n +3 >> "$REPORT"
+            echo "" >> "$REPORT"
+            echo "</details>" >> "$REPORT"
+          else
+            ok "Nessun errore grammaticale italiano rilevato dallo script."
+          fi
+
+          # ----------------------------------------------------------------
           # Output
           echo "found_issues=$FOUND" >> "$GITHUB_OUTPUT"
           {
