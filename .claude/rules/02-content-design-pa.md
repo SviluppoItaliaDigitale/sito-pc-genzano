@@ -69,6 +69,19 @@ Specifiche complete: `MANUALE-SITO.md`, Parte 3.
 
 Specifiche complete in `MANUALE-SITO.md` Parte 14.9. Questa regola nasce dopo un incidente in cui una foto fornita dall'utente era stata sostituita dalla sola copertina automatica — comportamento non accettabile.
 
+### Divieto: foto stock generiche ripetute per macro-tema
+
+**Mai** generare batch di foto inline che assegnano la **stessa foto stock** (Pexels/Pixabay/Unsplash) a gruppi di articoli accomunati solo da un macro-tema (es. "tutti gli articoli sul volontariato" → stessa foto di volontari generici, "tutti gli articoli sul calore" → stessa foto di sole). Mai usare query generiche tipo `"italian civil defense"`, `"volunteers"`, `"heat wave"` per popolare automaticamente decine di articoli: le API stock restituiscono sempre la stessa prima immagine, e il sito si riempie di foto duplicate non pertinenti.
+
+**Why:** ad aprile 2026 un batch automatico ha aggiunto 289 foto inline a 278 articoli usando solo 43 immagini distinte (74 articoli avevano la stessa foto della Croce Rossa con la stessa caption *"Il sistema italiano di Protezione Civile in azione"*). Ripetizione massiccia di foto stock generiche danneggia l'autorità istituzionale del sito e contraddice il principio AGID di sobrietà ("no foto è meglio di foto sbagliata"). I 14 commit batch sono stati ripuliti.
+
+**How to apply:**
+- Foto inline `{{< foto >}}` solo se realmente pertinente al **singolo** articolo, mai per macro-tema.
+- Fonti accettabili per la foto inline: foto fornita dall'utente, foto Wikipedia/NASA/USGS/NOAA con query specifica all'evento o al soggetto dell'articolo (es. `"Terremoto dell'Aquila 2009"`, non `"earthquake italy"`), foto stock **solo** se l'articolo lo richiede in modo non sostituibile e con query specifica al contenuto.
+- **Mai** scrivere script o workflow che iterano su un elenco di articoli e cercano una foto stock con la stessa query categoriale.
+- Caption e alt text vanno scritti **per ogni singola foto**, mai riusati su più articoli.
+- Se un articolo non ha una foto evidente da inserire, lasciarlo senza foto inline: la sola cover tipografica con titolo è sufficiente.
+
 ### Foto utente — banner pulito (sito) vs carosello (social)
 
 Le foto fornite dall'utente **non vanno mai nel banner/copertina** del sito (campo `image:` del frontmatter). Il banner deve restare pulito col solo titolo dell'articolo e il page-hero blu istituzionale: è una scelta di design istituzionale che non si tocca.
