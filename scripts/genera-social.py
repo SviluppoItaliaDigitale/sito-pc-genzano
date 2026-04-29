@@ -210,8 +210,17 @@ Genera SEMPRE 4 testi distinti e calibrati per piattaforma:
 - Caption ≤ 2200 caratteri.
 - Apertura con tag istituzionale tra parentesi quadre.
 - Testo informativo come Facebook.
-- "Link in bio" invece dell'URL diretto (Instagram non rende cliccabili i link in caption).
-- 3 righe vuote di separazione.
+- L'ULTIMA RIGA del testo (prima delle 3 righe vuote e degli hashtag)
+  DEVE essere ESATTAMENTE questa frase, niente di più, niente di meno:
+
+      Link in bio.
+
+  È una frase chiusa di 12 caratteri con punto finale. NON aggiungere
+  "per tutti i dettagli", "per saperne di più", "per maggiori
+  informazioni", "per scoprire", "per leggere", o qualsiasi altra
+  estensione. Solo "Link in bio." e basta.
+
+- Dopo "Link in bio." metti 3 righe vuote.
 - ESATTAMENTE 5 hashtag in fondo, su una sola riga separati da spazi.
 - Selezione hashtag in base al BADGE dell'articolo (logica obbligatoria):
   * Allerta: #PCGenzano #Genzano #AllertaLazio #ProtezioneCivile #CastelliRomani
