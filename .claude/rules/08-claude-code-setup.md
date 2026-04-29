@@ -27,12 +27,28 @@ In `.gitignore` (preferenza locale, non di repo). Schema completo:
       "WebFetch(domain:*.nasa.gov)",
       "WebFetch(domain:earthquake.usgs.gov)",
       "WebFetch(domain:*.usgs.gov)",
+      "WebFetch(domain:*.noaa.gov)",
+      "WebFetch(domain:weather.gov)",
+      "WebFetch(domain:api.pexels.com)",
+      "WebFetch(domain:images.pexels.com)",
+      "WebFetch(domain:pixabay.com)",
+      "WebFetch(domain:cdn.pixabay.com)",
+      "WebFetch(domain:api.unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
       "Bash(curl:*.wikipedia.org/*)",
       "Bash(curl:commons.wikimedia.org/*)",
       "Bash(curl:upload.wikimedia.org/*)",
       "Bash(curl:images-api.nasa.gov/*)",
       "Bash(curl:images-assets.nasa.gov/*)",
-      "Bash(curl:earthquake.usgs.gov/*)"
+      "Bash(curl:earthquake.usgs.gov/*)",
+      "Bash(curl:*.noaa.gov/*)",
+      "Bash(curl:weather.gov/*)",
+      "Bash(curl:api.pexels.com/*)",
+      "Bash(curl:images.pexels.com/*)",
+      "Bash(curl:pixabay.com/*)",
+      "Bash(curl:cdn.pixabay.com/*)",
+      "Bash(curl:api.unsplash.com/*)",
+      "Bash(curl:images.unsplash.com/*)"
     ]
   },
   "sandbox": {
@@ -46,12 +62,32 @@ In `.gitignore` (preferenza locale, non di repo). Schema completo:
         "images-assets.nasa.gov",
         "*.nasa.gov",
         "earthquake.usgs.gov",
-        "*.usgs.gov"
+        "*.usgs.gov",
+        "*.noaa.gov",
+        "weather.gov",
+        "api.pexels.com",
+        "images.pexels.com",
+        "pixabay.com",
+        "cdn.pixabay.com",
+        "api.unsplash.com",
+        "images.unsplash.com"
       ]
     }
   }
 }
 ```
+
+**Domini delle 7 fonti foto:**
+
+| Fonte | Domini necessari | API key |
+|---|---|---|
+| Wikipedia/Wikimedia | `*.wikipedia.org`, `commons.wikimedia.org`, `upload.wikimedia.org` | no |
+| NASA | `images-api.nasa.gov`, `images-assets.nasa.gov`, `*.nasa.gov` | no |
+| USGS | `earthquake.usgs.gov`, `*.usgs.gov` | no |
+| NOAA | `*.noaa.gov`, `weather.gov` | no |
+| Pexels | `api.pexels.com`, `images.pexels.com` | sì (gratuita) |
+| Pixabay | `pixabay.com`, `cdn.pixabay.com` | sì (gratuita) |
+| Unsplash | `api.unsplash.com`, `images.unsplash.com` | sì (gratuita) |
 
 **Servono entrambe le sezioni.** `permissions.allow` autorizza il tool, `sandbox.network.allowedDomains` autorizza la connessione di rete sottostante.
 
@@ -101,5 +137,5 @@ Quando si introduce uno script `foto-da-NUOVA.sh` (es. Copernicus, NOAA, EUMETSA
 
 - `MANUALE-SITO.md` Parte 14 — versione lunga della stessa documentazione, in italiano operativo.
 - `CLAUDE.md` regola 14 — sintesi.
-- `scripts/foto-da-wikipedia.sh`, `foto-da-nasa.sh`, `foto-da-usgs.sh`, `foto-da-noaa.sh` — gli script che usano questi domini.
+- `scripts/foto-da-wikipedia.sh`, `foto-da-nasa.sh`, `foto-da-usgs.sh`, `foto-da-noaa.sh`, `foto-da-pexels.sh`, `foto-da-pixabay.sh`, `foto-da-unsplash.sh` — gli script che usano questi domini (7 fonti totali).
 - `.github/workflows/scarica-foto-automatica.yml` — il workflow CI che fa lo stesso lavoro su GitHub Actions (rete libera, niente sandbox).

@@ -15,6 +15,11 @@ draft: false
 
 Una parte importante dell'estate del volontariato di Protezione Civile nel Lazio è dedicata ai **turni di avvistamento** per il **rischio incendi boschivi** (AIB). Sono attività che richiedono organizzazione, formazione e disponibilità di tempo. Ma producono un risultato chiaro: **rilevare** un principio d'incendio **prima che diventi inarrestabile**.
 
+
+{{< foto src="/images/2026-07-04-turni-avvistamento-aib-come-funzionano-corpo.webp"
+         alt="Squadra di vigili del fuoco impegnata in un fronte di incendio boschivo"
+         caption="L'incendio boschivo è uno dei rischi prioritari sui Castelli Romani." >}}
+
 ## Perché l'avvistamento è critico
 
 Un incendio boschivo segue curve molto rapide:

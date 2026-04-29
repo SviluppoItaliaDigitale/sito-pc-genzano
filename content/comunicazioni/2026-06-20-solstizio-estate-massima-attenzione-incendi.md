@@ -15,6 +15,11 @@ draft: false
 
 Il **20-21 giugno** segna il **solstizio d'estate**: il momento dell'anno con il giorno più lungo e l'angolazione solare più alta. Astronomicamente è l'inizio della stagione estiva, ma in Protezione Civile coincide con qualcosa di più concreto: la **fase di massima attenzione** sugli incendi boschivi.
 
+
+{{< foto src="/images/2026-06-20-solstizio-estate-massima-attenzione-incendi-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Perché il solstizio segna un punto di svolta
 
 Le condizioni che favoriscono gli incendi si accumulano nelle settimane precedenti. Al solstizio molti parametri raggiungono il picco:

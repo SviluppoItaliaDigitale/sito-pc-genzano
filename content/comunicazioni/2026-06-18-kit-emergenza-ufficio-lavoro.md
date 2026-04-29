@@ -15,6 +15,11 @@ draft: false
 
 Parliamo sempre di **kit di emergenza domestico**. Ma molte persone passano al **lavoro** 8-10 ore al giorno, talvolta più che a casa. Un kit di emergenza specifico per l'**ufficio** è una misura di sicurezza personale e per i colleghi, poco costosa e ad alto impatto.
 
+
+{{< foto src="/images/2026-06-18-kit-emergenza-ufficio-lavoro-corpo.webp"
+         alt="Operatori con dispositivi di protezione individuale"
+         caption="I DPI sono lo strumento base della sicurezza operativa." >}}
+
 ## Perché serve
 
 Scenari reali in cui un kit in ufficio è decisivo:

@@ -15,6 +15,11 @@ draft: false
 
 Quando si parla di **stagioni** esiste un doppio calendario: quello **astronomico** (solstizi ed equinozi) e quello **meteorologico** (trimestri fissi). Dal **1° giugno** è iniziata ufficialmente l'**estate meteorologica**, che dura fino al **31 agosto**. Questa convenzione facilita i confronti tra anni e la costruzione di serie storiche climatiche.
 
+
+{{< foto src="/images/2026-06-24-inizio-estate-meteorologica-bilancio-primavera-corpo.webp"
+         alt="Cielo con nuvole — illustrazione della previsione meteo"
+         caption="I bollettini meteo sono lo strumento di prevenzione quotidiana del rischio idrogeologico." >}}
+
 ## Le due stagioni
 
 ### Stagione astronomica

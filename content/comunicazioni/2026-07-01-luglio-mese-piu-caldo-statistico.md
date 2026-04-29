@@ -15,6 +15,11 @@ draft: false
 
 Luglio entra nelle case con la sua reputazione: **il mese più caldo dell'anno** nel Lazio centrale. I dati storici raccolti dalle stazioni meteo di Ciampino, Velletri, Rocca di Papa confermano la tendenza. L'estate entra nella sua fase più intensa e i sistemi di Protezione Civile, sanitario e antincendio lavorano a pieno regime.
 
+
+{{< foto src="/images/2026-07-01-luglio-mese-piu-caldo-statistico-corpo.webp"
+         alt="Cielo limpido e sole intenso durante un'ondata di calore"
+         caption="Le ondate di calore sono un'emergenza sanitaria oltre che climatica." >}}
+
 ## I numeri di luglio nel Lazio
 
 Dai dati del **Servizio Meteorologico Aeronautica Militare** e **ARPA Lazio**, luglio nel Lazio centrale presenta in media:
