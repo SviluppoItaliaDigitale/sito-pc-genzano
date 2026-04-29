@@ -62,15 +62,22 @@ def rule(code, severity, pattern, desc, suggest=None, exclude=None, ignore_case=
 # Parole con accento che vanno scritte con accento: chi le scrive senza è
 # un refuso. Per evitare falsi positivi, controlliamo solo se la parola è
 # una "word" intera (delimitata) e seguita da spazio/punteggiatura/EOL.
+# Dizionario CONSERVATIVO: solo parole NON ambigue (cioè parole che senza
+# accento NON hanno significato corretto in italiano, mai). Esclude verbi
+# al passato remoto 3a singolare che sono omografi di sostantivi/verbi
+# all'indicativo presente: arrivo, porto, passo, faro, ando, comincio, ecc.
+# (es. "l'arrivo della merce" è giusto, "l'arrivò" è errore).
 ACCENTI_OBBLIGATORI = {
-    # Verbi e parole tronche con accento finale obbligatorio
+    # Congiunzioni e avverbi tronchi (sempre con accento obbligatorio)
     "perche": "perché",
     "poiche": "poiché",
     "benche": "benché",
     "anziche": "anziché",
     "finche": "finché",
     "affinche": "affinché",
-    "giacche": "giacché",
+    # NOTA: "giacche" è ESCLUSO dal dizionario perché è il plurale legittimo
+    # del sostantivo "giacca" (capo di abbigliamento). Per la congiunzione
+    # corretta "giacché" ci affidiamo ad altre regole (es. "e' " errore).
     "sicche": "sicché",
     "nonche": "nonché",
     "piu": "più",
@@ -78,26 +85,9 @@ ACCENTI_OBBLIGATORI = {
     "gia": "già",
     "cosi": "così",
     "pero": "però",
-    "perciò": "perciò",  # già corretta, ignorata
     "cio": "ciò",
-    "sara": "sarà",
-    "saranno": "saranno",  # già corretta
-    "sarebbe": "sarebbe",  # già corretta
-    "sara'": "sarà",  # finto accento
-    "andra": "andrà",
-    "andro": "andrò",
-    "verra": "verrà",
-    "verro": "verrò",
-    "fara": "farà",
-    "faro": "farò",
-    "stara": "starà",
-    "staro": "starò",
-    "dovra": "dovrà",
-    "dovro": "dovrò",
-    "potra": "potrà",
-    "potro": "potrò",
-    "vorra": "vorrà",
-    "vorro": "vorrò",
+    # Sostantivi tronchi italiani con accento finale obbligatorio
+    # (queste parole NON esistono senza accento)
     "citta": "città",
     "liberta": "libertà",
     "qualita": "qualità",
@@ -112,34 +102,35 @@ ACCENTI_OBBLIGATORI = {
     "dignita": "dignità",
     "civilta": "civiltà",
     "pieta": "pietà",
+    "tribu": "tribù",
+    "virtu": "virtù",
+    "gioventu": "gioventù",
+    "schiavitu": "schiavitù",
+    "servitu": "servitù",
+    # Giorni della settimana (lunedi senza accento è errore certo)
     "lunedi": "lunedì",
     "martedi": "martedì",
     "mercoledi": "mercoledì",
     "giovedi": "giovedì",
     "venerdi": "venerdì",
-    "sabato": "sabato",  # già corretta
-    "domenica": "domenica",  # già corretta
+    # Apostrofi finti usati al posto dell'accento (errore certo)
+    "e'": "è",
     "ne'": "né",
     "se'": "sé",
     "te'": "tè",
-    "tre'": "tre",  # già corretta
-    "e'": "è",
-    "o'": "ò",  # raro
-    # Verbi al passato remoto 3a persona singolare
-    "ando": "andò",
-    "porto": "portò",
-    "arrivo": "arrivò",
-    "tornò": "tornò",  # già corretta
-    "comincio": "cominciò",
-    "passo": "passò",
-    "posso": "posso",  # già corretta (presente)
+    "po'": "po'",  # corretta, NON nel dizionario
+    "sara'": "sarà",
+    "andra'": "andrà",
+    "andro'": "andrò",
+    "verra'": "verrà",
+    "fara'": "farà",
+    "stara'": "starà",
+    "dovra'": "dovrà",
+    "potra'": "potrà",
+    "vorra'": "vorrà",
 }
-
-# Solo le voci minuscole che mappano a una versione DIVERSA da sé.
-# Filtriamo le voci self-mapping (quando già giuste).
-ACCENTI_OBBLIGATORI = {
-    k: v for k, v in ACCENTI_OBBLIGATORI.items() if k != v
-}
+# Filtra voci self-mapping
+ACCENTI_OBBLIGATORI = {k: v for k, v in ACCENTI_OBBLIGATORI.items() if k != v}
 
 
 def make_accenti_pattern() -> re.Pattern:
@@ -241,10 +232,10 @@ RULES = [
         ignore_case=True,
     ),
     rule(
-        "FAMIGLI",
-        "ERR",
-        r"\bfamigli[ae]\b",
-        "« famiglia » → controllare: il plurale corretto è « famiglie », il singolare « famiglia ».",
+        "FAMIGLI_ERRATO",
+        "WARN",
+        r"\bfamigli\b(?!e|a)",
+        "« famigli » senza desinenza è errore: deve essere « famiglia » (singolare) o « famiglie » (plurale).",
         ignore_case=True,
     ),
     rule(
