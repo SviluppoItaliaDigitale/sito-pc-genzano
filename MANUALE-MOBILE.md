@@ -158,6 +158,8 @@ Sono supportate **7 fonti**, ognuna pensata per un tipo di articolo diverso.
 | **Foto stock generica** (volontari, atmosfera, persone, attività) | **Pexels** o **Unsplash** | `# TODO-foto-pexels: bash scripts/foto-da-pexels.sh "rescue volunteer" slug` |
 | **Foto stock alta qualità** (illustrazioni, oggetti, paesaggi) | **Pixabay** | `# TODO-foto-pixabay: bash scripts/foto-da-pixabay.sh "ambulance" slug` |
 
+> ⚠️ **Mai usare i marker `pexels`/`pixabay`/`unsplash` per popolare batch di articoli con la stessa query categoriale.** Le API stock restituiscono sempre la stessa prima immagine: il risultato è decine di articoli con foto identica e caption duplicata. Esempio reale evitato (ad aprile 2026 un batch ha messo la stessa foto della Croce Rossa su 74 articoli, è stato ripulito interamente). Regola formale in `.claude/rules/02-content-design-pa.md` sezione "Divieto: foto stock generiche ripetute per macro-tema". Usare i marker stock **solo** per articoli singoli con query specifica al contenuto, e preferire sempre Wikipedia/NASA/USGS/NOAA quando la materia lo permette.
+
 #### Esempio completo
 
 ```yaml
