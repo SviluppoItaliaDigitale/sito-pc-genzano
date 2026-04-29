@@ -26,16 +26,18 @@ Questo repository contiene diversi file Markdown con ruoli diversi. Non vanno el
 
 ### File in `.claude/rules/` (governance di dettaglio)
 
-Questi 6 file sono importati automaticamente da `CLAUDE.md` e definiscono le regole operative per dominio. Non vanno eliminati.
+Questi 8 file sono importati automaticamente da `CLAUDE.md` e definiscono le regole operative per dominio. Non vanno eliminati.
 
 | File | Dominio |
 |---|---|
 | [`01-governance-pa.md`](.claude/rules/01-governance-pa.md) | Riferimenti AGID, priorità, divieti assoluti. |
-| [`02-content-design-pa.md`](.claude/rules/02-content-design-pa.md) | Scrittura PA, frontmatter articoli, fascia blu immagini, 13 categorie badge. |
-| [`03-accessibility.md`](.claude/rules/03-accessibility.md) | Checklist WCAG 2.2 AA: HTML semantico, focus, alt text, contrasto. |
-| [`04-hugo-architecture.md`](.claude/rules/04-hugo-architecture.md) | Struttura Hugo, data files, archetypes, homepage dual-mode. |
-| [`05-github-aruba-deploy.md`](.claude/rules/05-github-aruba-deploy.md) | Deploy CI/CD su Aruba e GitHub Pages, rollback, divieti. |
-| [`06-protezione-civile-scientifica.md`](.claude/rules/06-protezione-civile-scientifica.md) | Codici colore allerte, rischi territoriali, numeri emergenza, comunicazione del rischio. |
+| [`02-content-design-pa.md`](.claude/rules/02-content-design-pa.md) | Scrittura PA, frontmatter articoli, fascia blu immagini, 13 categorie badge, regola foto utente (banner cover col titolo, foto nel corpo). |
+| [`03-accessibility.md`](.claude/rules/03-accessibility.md) | Checklist WCAG 2.2 AA: HTML semantico, focus, alt text, contrasto, toolbar a11y, TTS, social media accessibility. |
+| [`04-hugo-architecture.md`](.claude/rules/04-hugo-architecture.md) | Struttura Hugo, data files, archetypes, homepage dual-mode, shortcode, render hook, partial, sistema bozze social automatiche. |
+| [`05-github-aruba-deploy.md`](.claude/rules/05-github-aruba-deploy.md) | Deploy CI/CD su Aruba e GitHub Pages, rollback, header HTTP, workflow scarica-foto-automatica, divieti. |
+| [`06-protezione-civile-scientifica.md`](.claude/rules/06-protezione-civile-scientifica.md) | Codici colore allerte, rischi territoriali, numeri emergenza (NUE 112), comunicazione del rischio, gerarchia fonti. |
+| [`07-proattivita-coerenza.md`](.claude/rules/07-proattivita-coerenza.md) | Verifica proattiva di pattern simili dopo ogni fix: completare il fix sul tutto, non solo dove richiesto. |
+| [`08-claude-code-setup.md`](.claude/rules/08-claude-code-setup.md) | Setup ambiente Claude Code: sandbox `.claude/settings.local.json` per sblocco domini foto (Wikipedia/NASA/USGS/NOAA). |
 
 ### File in `archetypes/` (template Hugo)
 
@@ -56,20 +58,27 @@ Questi 6 file sono importati automaticamente da `CLAUDE.md` e definiscono le reg
 ```
 sito-pc-genzano/
 ├── README.md                   ← sei qui
-├── MANUALE-SITO.md             ← manuale di stile v2.0
+├── MANUALE-SITO.md             ← manuale di stile v2.0 redattori
+├── MANUALE-MOBILE.md           ← workflow mobile-first (app + GitHub web)
 ├── PIANO-EDITORIALE.md         ← fonti e calendario redazionale
 ├── CLAUDE.md                   ← istruzioni per AI (importa .claude/rules/)
 ├── hugo.toml                   ← configurazione Hugo
 │
-├── .claude/rules/              ← 6 regole di governance (01-06)
-├── .github/workflows/          ← automazioni CI/CD e controlli periodici
+├── .claude/rules/              ← 8 regole di governance (01-08)
+├── .github/workflows/          ← 11 workflow CI/CD e controlli periodici
 ├── .manuale/sources-hashes.json ← stato hash fonti AGID (gestito dal workflow)
 │
 ├── archetypes/                 ← template per nuovi contenuti
-├── content/                    ← contenuti del sito
-│   ├── comunicazioni/          ← articoli/news
+│   ├── comunicazioni.md        ← frontmatter articoli completo
+│   └── default.md              ← template minimale pagine
+│
+├── content/                    ← contenuti del sito (Markdown + frontmatter)
+│   ├── comunicazioni/          ← articoli/news (uno per file)
 │   └── <altre-sezioni>/        ← pagine statiche (chi-siamo, contatti, faq,
-│                                  rischi-prevenzione, cosa-fare-adesso, ecc.)
+│                                  rischi-prevenzione, cosa-fare-adesso,
+│                                  formazione, area-download, allerte-meteo,
+│                                  diventa-volontario, accessibilita, ecc.)
+│
 ├── data/                       ← file dati (JSON/YAML) per contenuti dinamici
 │   ├── emergenza.json          ← modalità emergenza on/off
 │   ├── allerta.json            ← livello allerta meteo
@@ -78,41 +87,147 @@ sito-pc-genzano/
 │   ├── quick_links.yaml        ← CTA homepage
 │   ├── social_links.yaml       ← link social
 │   └── codici_colore.yaml      ← descrizioni codici allerta
-├── scripts/                    ← script Python di automazione (genera-cover,
-│                                  auto-cover-mancanti, applica-fascia-foto,
-│                                  audit-grammatica-italiana,
-│                                  fix-grammatica-italiana,
-│                                  genera-social, genera-immagini-social,
-│                                  foto-da-{wikipedia,nasa,usgs,noaa})
-├── static/                     ← asset statici (immagini, PDF, JS condivisi)
+│
+├── scripts/                    ← script Python/bash di automazione
+│   ├── genera-cover.py             ← cover tipografica con titolo (gradiente blu)
+│   ├── auto-cover-mancanti.py      ← genera cover per articoli con image:""
+│   ├── applica-fascia-foto.{py,sh} ← applica fascia blu istituzionale a foto
+│   ├── audit-grammatica-italiana.py ← audit testuale italiano (40 sez. workflow)
+│   ├── fix-grammatica-italiana.py  ← fix automatici sicuri (apostrofi, accenti)
+│   ├── genera-social.{py,sh}       ← bozze X/FB/IG/Telegram via Gemini API
+│   ├── genera-immagini-social.py   ← immagini Instagram (post + carosello + story)
+│   ├── foto-da-wikipedia.sh        ← download foto da Wikipedia + fascia blu
+│   ├── foto-da-nasa.sh             ← idem da NASA Image Library
+│   ├── foto-da-usgs.sh             ← idem da USGS (ShakeMap eventid)
+│   ├── foto-da-noaa.sh             ← idem da NOAA (URL diretto)
+│   ├── aggiorna-frontmatter-foto.py ← popola image:/credit:/source_url:
+│   ├── scarica-pittogrammi.sh      ← libreria 171 pittogrammi ISO 7010+ARASAAC
+│   ├── smoke-test-live.sh          ← smoke test post-deploy (chiamato da CI)
+│   ├── hash-fonte-agid.py          ← hashing testuale fonti AGID per drift detection
+│   └── export-contesto-ai.sh       ← genera CONTESTO-AI.md per altre AI
+│
+├── static/                     ← asset statici (deployati al pubblico)
+│   ├── images/                 ← copertine articoli + foto evento
+│   ├── images-social/          ← immagini Instagram generate (post/carosello/story)
+│   ├── manuali/                ← PDF, manuali tecnici, loghi e locandine ufficiali
+│   │   ├── loghi/              ← stemmi/loghi del Gruppo per personalizzazioni
+│   │   └── locandine/          ← locandine ufficiali (es. Diventa Volontario)
+│   ├── pittogrammi/            ← 171 pittogrammi ISO 7010 + ARASAAC
+│   ├── cartelli/               ← segnaletica aree di emergenza
+│   ├── giochi/, quizpc/, formazionepc/, abili-a-proteggere/, giochi-bambini/
+│   │                              ← micro-siti HTML autonomi educativi/didattici
+│   ├── allegati/               ← PDF allegati specifici di articoli
+│   ├── comunicati/             ← comunicati stampa firmati
+│   ├── formazione/             ← schede stampabili, kit didattici
+│   ├── .htaccess               ← redirect 301/410 + header sicurezza Aruba
+│   └── robots.txt              ← regole indicizzazione (sincronizzato col tema)
+│
+├── social-bozze/               ← bozze testuali AI per i social (NON deployata)
+│   └── <slug>/                 ← per ogni articolo: x.txt, facebook.txt,
+│                                  instagram.txt, telegram.txt + README
+│
+├── riferimenti-interni/        ← documentazione di lavoro (NON deployata,
+│                                  visibile solo nel repo: norme copyrighted,
+│                                  draft consultazioni, materiale interno)
+│
 └── themes/flavour-pcgenzano/   ← tema custom (Bootstrap Italia 2.x)
-    ├── layouts/shortcodes/     ← shortcode {{< foto >}} (click-per-ingrandire)
-    └── static/css/custom.css   ← override CSS + regole @media print globali
+    ├── layouts/                ← template Hugo
+    │   ├── _default/           ← baseof, list, single, 404, _markup hooks
+    │   ├── partials/           ← navbar, footer, banner, sos-112, share, ecc.
+    │   ├── shortcodes/         ← {{< foto >}}, {{< pittogramma >}},
+    │   │                          {{< cosa-non-fare >}}, {{< chi-chiamare >}},
+    │   │                          {{< pagina-emergenza-lite >}}
+    │   ├── comunicazioni/      ← list.html (archivio + filtri + accordion anni)
+    │   ├── assistente/         ← albero decisionale autoprotezione
+    │   └── pittogrammi/        ← catalogo pubblico libreria
+    └── static/                 ← asset deployati col tema
+        ├── css/custom.css      ← override CSS + @media print + tipografia v7.2
+        ├── css/a11y-toolbar.css ← FAB strumenti accessibilità
+        ├── js/                 ← share.js, a11y-toolbar.js, ecc.
+        ├── .htaccess           ← regole Apache (replicato in static/ root)
+        └── robots.txt          ← (sincronizzato con static/robots.txt)
 ```
 
 ---
 
 ## Comandi principali
 
+### Dev server e build
+
 ```bash
-# Dev server locale
 hugo server              # solo contenuti pubblicati
 hugo server -D           # anche bozze (draft: true)
-
-# Build
 hugo --minify            # build per GitHub Pages
 hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"  # build Aruba
+```
 
-# Nuovo articolo (usa l'archetype)
+### Nuovo articolo
+
+```bash
+# Crea articolo dall'archetype
 hugo new comunicazioni/AAAA-MM-GG-titolo-articolo.md
 
-# Pubblicazione (triggera deploy automatico)
-git add . && git commit -m "..." && git push
+# Genera cover tipografica con titolo grande (per articoli con image:"")
+python3 scripts/auto-cover-mancanti.py
 
-# Script interattivo di gestione (se installato)
+# Pubblica
+git add . && git commit -m "..." && git push
+```
+
+### Foto
+
+```bash
+# Applica fascia blu istituzionale a una foto utente (output WebP 1200px)
+bash scripts/applica-fascia-foto.sh /path/foto.jpg nome-output-senza-ext
+
+# Scarica foto da Wikipedia (con licenza libera) + fascia blu automatica
+bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [it|en]
+
+# Idem da NASA / USGS / NOAA
+bash scripts/foto-da-nasa.sh   "search query"     slug-articolo
+bash scripts/foto-da-usgs.sh   shakemap eventid   slug-articolo
+bash scripts/foto-da-noaa.sh   "https://...noaa.gov/foto.png" "Contesto" slug
+
+# In alternativa, da mobile/cloud: aggiungi nel frontmatter
+# # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo" slug
+# Il workflow CI scaricherà al prossimo push.
+```
+
+### Bozze social
+
+```bash
+# Genera bozze X/Facebook/Instagram/Telegram + immagini IG per UN articolo
+bash scripts/genera-social.sh content/comunicazioni/<file>.md
+
+# Tutti gli articoli pubblicati senza bozze
+bash scripts/genera-social.sh --all
+
+# Solo articoli da una data in poi
+bash scripts/genera-social.sh --since 2026-04-01
+
+# Solo anteprima senza salvare
+bash scripts/genera-social.sh --dry-run <file>.md
+# Richiede GEMINI_API_KEY in env (gratuita: aistudio.google.com/apikey).
+```
+
+### Audit grammaticale italiano
+
+```bash
+# Rileva errori ortografici/grammaticali (apostrofi finti, accenti mancanti, refusi)
+python3 scripts/audit-grammatica-italiana.py
+
+# Applica fix automatici sicuri (e' → è, piu' → più, città', perché, ecc.)
+python3 scripts/fix-grammatica-italiana.py            # dry-run (default)
+python3 scripts/fix-grammatica-italiana.py --apply    # applica
+```
+
+### Gestione e contesto
+
+```bash
+# Script interattivo di gestione (menu per articoli, emergenza, allerta)
 bash ~/gestione-sito.sh
 
-# Export contesto completo per altra AI (ChatGPT, Gemini, Claude web, ecc.)
+# Export contesto completo per altra AI (ChatGPT, Gemini, Claude web)
 bash scripts/export-contesto-ai.sh
 # → Genera CONTESTO-AI.md nella root con TUTTA la documentazione del sito
 #   in un unico file, pronto da copia-incollare in qualsiasi altra AI per
@@ -131,11 +246,11 @@ nuova sessione dove non si ha accesso automatico ai file del repo, esiste uno
 bash scripts/export-contesto-ai.sh
 ```
 
-Produce `CONTESTO-AI.md` (~275 KB) contenente:
-- README, CLAUDE.md, 6 regole di governance
-- Manuale operativo completo (MANUALE-SITO.md)
+Produce `CONTESTO-AI.md` (~300 KB) contenente:
+- README, CLAUDE.md, 8 regole di governance
+- Manuali operativi completi (MANUALE-SITO.md + MANUALE-MOBILE.md)
 - Piano editoriale (fonti + calendario + biblioteca evergreen)
-- Archetype articoli, configurazione Hugo, shortcode `foto`
+- Archetype articoli, configurazione Hugo, shortcode (`foto`, `pittogramma`, `cosa-non-fare`, `chi-chiamare`)
 - Memorie utente (feedback durevoli salvati da Claude Code)
 
 Basta copiare il contenuto di `CONTESTO-AI.md` e incollarlo come primo messaggio
@@ -160,26 +275,55 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Aggiornamenti Bootstrap Italia |
 | `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (40 sezioni)**: contenuti, codice/template, governance docs, audit aggiuntivo, link critici normativa, **audit grammaticale italiano** (apostrofi finti, accenti mancanti, errori italiani tipici via `audit-grammatica-italiana.py`). Fusi `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026, sezione 40 grammaticale aggiunta il 29 aprile 2026. |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo lychee: tutti i link (interni + esterni) |
-| `genera-social-bozze.yml` | Ogni push articolo (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini Instagram (post 1080x1080 + carosello + story 1080x1920). Output in `social-bozze/<slug>/` e `static/images-social/`. Tier gratuito Gemini, costo zero. |
-| `scarica-foto-automatica.yml` | Ogni push con marker `# TODO-foto-*` | Scarica foto da Wikipedia/NASA/USGS/NOAA, applica fascia blu istituzionale, popola `image:` + credit. Plus: cover tipografica auto per articoli senza foto. |
+| `genera-social-bozze.yml` | Push su `content/comunicazioni/**.md` o `.claude/rules/**.md` (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini Instagram (post 1080x1080 + carosello + story 1080x1920). Output in `social-bozze/<slug>/` e `static/images-social/`. Tier gratuito Gemini, costo zero. |
+| `scarica-foto-automatica.yml` | Push su `content/comunicazioni/**` o sui suoi script foto | Per articoli con marker `# TODO-foto-*`: scarica foto da Wikipedia/NASA/USGS/NOAA, applica fascia blu istituzionale, popola `image:` + credit. Plus step 2: cover tipografica auto col titolo per articoli con `image:""` (`auto-cover-mancanti.py`). Filtro `paths` aggiunto il 29 aprile 2026 per evitare run inutili su CSS/docs. |
 
 Le issue generate automaticamente compaiono nella [tab Issues](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/issues) con label `manutenzione`, `documentazione`, `link-rotti`, ecc.
 
 ---
 
+## Regole permanenti chiave
+
+Il progetto ha alcune regole non negoziabili da avere a portata di vista:
+
+- **Banner articoli** = **sempre cover tipografica con titolo grande** (gradiente blu + badge categoria + titolo articolo + fascia istituzionale). Generata da `scripts/auto-cover-mancanti.py`. Mai vuota in produzione, mai una foto utente.
+- **Foto fornite dall'utente** = sempre nel **corpo dell'articolo** come `{{< foto >}}` (mai nel campo `image:` del frontmatter). ≥4 foto → galleria nel corpo. Sui social diventano automaticamente carosello Instagram.
+- **NUE 112** è l'unico numero di emergenza nel Lazio: 115/118/1515 non vanno mai citati come numeri da chiamare al cittadino.
+- **15° C.O.I.** della Provincia di Roma (non 14°) è il riferimento del Gruppo.
+- **Formato data nel frontmatter**: sempre `AAAA-MM-GG`. Mai con timezone (`AAAA-MM-DDTHH:MM:SSZ` causa esclusione dell'articolo dalla build).
+- **Nessun articolo `draft: true`** — solo pubblicazione immediata (data passata) o programmata (data futura).
+- **Lingua AGID**: frasi brevi (max ~20 parole), voce attiva, niente burocratese, linguaggio inclusivo.
+
+Specifiche complete in [CLAUDE.md](CLAUDE.md) e nelle 8 regole `.claude/rules/`.
+
+---
+
 ## Flusso di lavoro tipico per pubblicare un articolo
 
-1. Apri `MANUALE-SITO.md` (manuale operativo).
+1. Apri [`MANUALE-SITO.md`](MANUALE-SITO.md) (manuale operativo).
 2. Identifica lo slug: `AAAA-MM-GG-titolo-breve`.
 3. Esegui `hugo new comunicazioni/AAAA-MM-GG-titolo-breve.md`.
-4. Compila il frontmatter (vedi Parte 1.5 del manuale).
+4. Compila il frontmatter (vedi Parte 1.5 del manuale): `image: ""` (cover tipografica generata dopo).
 5. Scrivi il corpo seguendo le regole AGID (Parte 2 del manuale).
-6. Prepara l'immagine di copertina con fascia blu (Parte 3 del manuale).
-7. Se hai foto evento, inseriscile nel corpo con lo shortcode `{{< foto >}}` (Parte 3.14 del manuale) — nome file diverso dallo slug così non vengono sovrascritte dal generatore di copertine. Per articoli storici con eventi multipli (anniversari, memoria, sequenze sismiche), segui la convenzione di posizionamento foto multiple: 1ª dopo 1° H2, 2ª dopo 2° H2, foto successive sull'H2 di ogni evento specifico (Parte 14.9).
-8. Verifica con `hugo server` in locale.
-9. Esegui la checklist pre-pubblicazione (Parte 5).
-10. `git add . && git commit -m "Nuovo articolo: titolo" && git push`.
-11. Controlla il deploy nella tab Actions.
+6. Foto evento: inseriscile **nel corpo** con `{{< foto >}}` (Parte 3.14) — nome file diverso dallo slug. Per articoli storici con eventi multipli (anniversari, memoria, sequenze sismiche): 1ª foto dopo 1° H2, 2ª dopo 2° H2, ecc. (Parte 14.9). Mai foto nel banner `image:`.
+7. Genera la cover tipografica col titolo: `python3 scripts/auto-cover-mancanti.py` (popola automaticamente `image:` con la cover).
+8. (Opzionale) Verifica audit grammaticale: `python3 scripts/audit-grammatica-italiana.py` → se restituisce findings, lancia `python3 scripts/fix-grammatica-italiana.py --apply`.
+9. Verifica con `hugo server` in locale.
+10. Esegui la checklist pre-pubblicazione (Parte 5).
+11. `git add . && git commit -m "Nuovo articolo: titolo" && git push`.
+12. Al push automaticamente: deploy + bozze social generate (Gemini API) + immagini Instagram. Risultato in `social-bozze/<slug>/` e `static/images-social/<slug>-instagram-*.webp` entro 5–10 minuti.
+13. Controlla il deploy nella tab Actions.
+
+---
+
+## Pubblicare da mobile (senza PC)
+
+Workflow completo in [`MANUALE-MOBILE.md`](MANUALE-MOBILE.md): app **Claude Android** + **GitHub web mobile**. Niente PC, niente git clone.
+
+In sintesi:
+- L'articolo si scrive direttamente su GitHub web (modifica un file in `content/comunicazioni/` o crearne uno nuovo).
+- Per la foto: usare il **marker `# TODO-foto-*`** nel frontmatter — il workflow `scarica-foto-automatica.yml` scaricherà la foto dalla fonte ufficiale (Wikipedia/NASA/USGS/NOAA) durante il deploy CI.
+- Bozze social e immagini Instagram vengono generate automaticamente al push.
 
 ---
 
