@@ -384,14 +384,24 @@ def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Pat
         contenuto = bozze.get(piattaforma, "")
         if not contenuto:
             continue
-        # Aggiungi riferimento immagine Instagram se generata
+        # Aggiungi riferimento immagini Instagram se generate
         suffix = ""
         if piattaforma == "instagram":
-            img_post = ROOT / "static" / "images-social" / f"{slug}-instagram-post.webp"
-            img_story = ROOT / "static" / "images-social" / f"{slug}-instagram-story.webp"
+            social_dir = ROOT / "static" / "images-social"
+            # Caso 1: singola immagine <slug>-instagram-post.webp
+            img_post_singola = social_dir / f"{slug}-instagram-post.webp"
+            # Caso 2: carosello <slug>-instagram-post-1.webp, -2.webp, ...
+            carousel = sorted(social_dir.glob(f"{slug}-instagram-post-*.webp"))
+            img_story = social_dir / f"{slug}-instagram-story.webp"
+
             righe_img = []
-            if img_post.exists():
-                righe_img.append(f"📷 Post 1080x1080: {img_post}")
+            if img_post_singola.exists():
+                righe_img.append(f"📷 Post 1080x1080: {img_post_singola}")
+            elif carousel:
+                righe_img.append(f"📷 CAROSELLO Instagram ({len(carousel)} immagini, "
+                                 f"caricale in questo ordine):")
+                for i, c in enumerate(carousel, 1):
+                    righe_img.append(f"   {i}. {c}")
             if img_story.exists():
                 righe_img.append(f"📷 Story 1080x1920: {img_story}")
             if righe_img:
