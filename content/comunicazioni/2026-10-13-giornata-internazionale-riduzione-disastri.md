@@ -15,6 +15,11 @@ draft: false
 
 Il **13 ottobre** le Nazioni Unite hanno proclamato **Giornata Internazionale per la Riduzione dei Disastri** (*International Day for Disaster Risk Reduction*). Non è una ricorrenza simbolica: è un momento annuale in cui tutti gli Stati membri dell'ONU sono chiamati a **riflettere**, **comunicare** e **agire** per ridurre gli effetti dei disastri sulla popolazione mondiale.
 
+
+{{< foto src="/images/2026-10-13-giornata-internazionale-riduzione-disastri-corpo.webp"
+         alt="Volontari di Protezione Civile al lavoro"
+         caption="Il sistema italiano di Protezione Civile in azione." >}}
+
 ## Perché esiste questa giornata
 
 I **disastri naturali e tecnologici** causano, a livello globale, danni enormi ogni anno:
