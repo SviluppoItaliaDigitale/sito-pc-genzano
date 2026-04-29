@@ -391,7 +391,7 @@ def main() -> int:
         n_foto = len(art["carousel"])
 
         # Pulisci eventuali immagini precedenti se --force (potrebbero essere
-        # rimaste numerate da un run con piu' carousel)
+        # rimaste numerate da un run con più carousel)
         if args.force:
             for old in SOCIAL_DIR.glob(f"{art['slug']}-instagram-post*.webp"):
                 old.unlink()

@@ -125,7 +125,7 @@
     });
     araCards.forEach(function(card){
       var name = card.getAttribute('data-name') || '';
-      // I filtri ISO non si applicano agli ARASAAC: se filtro non e' "iso-all", nascondi tutti gli ARASAAC
+      // I filtri ISO non si applicano agli ARASAAC: se filtro non è "iso-all", nascondi tutti gli ARASAAC
       var matchText = !q || name.indexOf(q) >= 0;
       var matchCat = activeFilter === 'iso-all';
       var show = matchText && matchCat;

@@ -3,7 +3,7 @@ Allow: /
 Sitemap: https://www.protezionecivilegenzano.it/sitemap.xml
 
 # Nota: le URL legacy del vecchio sito (*.html, /documenti/*, ecc.) NON
-# sono piu' bloccate da robots.txt. Il blocco impediva a Googlebot di
+# sono più bloccate da robots.txt. Il blocco impediva a Googlebot di
 # scansionare la pagina e quindi di seguire il Redirect 301 del .htaccess
 # o il meta refresh dell'alias HTML, lasciandole indefinitamente nello
 # stato "Esclusa per noindex" o "Bloccata da robots.txt" in Search Console.

@@ -3,7 +3,7 @@
 Genera cover tipografiche istituzionali per gli articoli che NON hanno foto:
   - articoli con `image: ""` (vuoto)
   - E senza marker `# TODO-foto-*` (in attesa di download da fonti esterne)
-  - E senza file static/images/<slug>.webp gia' presente
+  - E senza file static/images/<slug>.webp già presente
 
 Per ogni articolo selezionato:
   1. Lancia scripts/genera-cover.py <file.md>     (genera <slug>.webp)
@@ -11,9 +11,9 @@ Per ogni articolo selezionato:
   3. Aggiorna image_alt: "" -> image_alt: "Cover dell'articolo: <title>"
 
 Sicurezza:
-  - Non sovrascrive image: gia' valorizzato (es. foto utente in static/images/foto-evento.webp)
+  - Non sovrascrive image: già valorizzato (es. foto utente in static/images/foto-evento.webp)
   - Non tocca articoli con marker TODO-foto-* (verranno gestiti dal download)
-  - Non tocca image_alt gia' valorizzato
+  - Non tocca image_alt già valorizzato
 
 Uso:
   python3 scripts/auto-cover-mancanti.py        # processa tutti gli articoli candidati
@@ -37,7 +37,7 @@ def has_empty_image(text: str) -> bool:
 
 
 def has_todo_marker(text: str) -> bool:
-    """True se l'articolo ha un marker TODO-foto-* (verra' processato altrove)."""
+    """True se l'articolo ha un marker TODO-foto-* (verrà processato altrove)."""
     return bool(re.search(r'^# TODO-foto-(wikipedia|nasa|usgs):', text, flags=re.MULTILINE))
 
 
@@ -88,7 +88,7 @@ def main():
             continue
         slug = md.stem
         if (IMAGES / f"{slug}.webp").exists():
-            # cover gia' presente, basta aggiornare il frontmatter
+            # cover già presente, basta aggiornare il frontmatter
             candidates.append((md, slug, "frontmatter-only"))
         else:
             candidates.append((md, slug, "generate"))

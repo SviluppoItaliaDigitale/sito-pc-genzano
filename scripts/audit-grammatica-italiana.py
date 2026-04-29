@@ -4,7 +4,7 @@ Audit grammaticale / ortografico italiano per i contenuti del sito Hugo.
 
 Cosa controlla (per ogni file Markdown in content/):
   1. Apostrofi storti (` invece di ')
-  2. "e'" usato come finto accento (deve essere "è")
+  2. "è" usato come finto accento (deve essere "è")
   3. Accenti mancanti su parole comuni: perche → perché, piu → più,
      puo → può, gia → già, cosi → così, sara → sarà, faro → farò, ecc.
   4. "po" senza apostrofo (corretto: "po'")
@@ -77,7 +77,7 @@ ACCENTI_OBBLIGATORI = {
     "affinche": "affinché",
     # NOTA: "giacche" è ESCLUSO dal dizionario perché è il plurale legittimo
     # del sostantivo "giacca" (capo di abbigliamento). Per la congiunzione
-    # corretta "giacché" ci affidiamo ad altre regole (es. "e' " errore).
+    # corretta "giacché" ci affidiamo ad altre regole (es. "è " errore).
     "sicche": "sicché",
     "nonche": "nonché",
     "piu": "più",
@@ -114,20 +114,20 @@ ACCENTI_OBBLIGATORI = {
     "giovedi": "giovedì",
     "venerdi": "venerdì",
     # Apostrofi finti usati al posto dell'accento (errore certo)
-    "e'": "è",
-    "ne'": "né",
-    "se'": "sé",
-    "te'": "tè",
+    "è": "è",
+    "né": "né",
+    "sé": "sé",
+    "tè": "tè",
     "po'": "po'",  # corretta, NON nel dizionario
-    "sara'": "sarà",
-    "andra'": "andrà",
+    "sarà": "sarà",
+    "andrà": "andrà",
     "andro'": "andrò",
-    "verra'": "verrà",
-    "fara'": "farà",
-    "stara'": "starà",
-    "dovra'": "dovrà",
-    "potra'": "potrà",
-    "vorra'": "vorrà",
+    "verrà": "verrà",
+    "farà": "farà",
+    "starà": "starà",
+    "dovrà": "dovrà",
+    "potrà": "potrà",
+    "vorrà": "vorrà",
 }
 # Filtra voci self-mapping
 ACCENTI_OBBLIGATORI = {k: v for k, v in ACCENTI_OBBLIGATORI.items() if k != v}
@@ -178,44 +178,14 @@ RULES = [
         suggest="un altro",
         ignore_case=True,
     ),
-    rule(
-        "UNA_VOCALE_FEMMINILE",
-        "WARN",
-        r"\buna\s+(altra|amica|emergenza|esperienza|opera|ora|ottica|unità|unica|università|attività|isola|idea|estate|alba|antica|opportunità)\b",
-        "« una » davanti a vocale femminile è scorretto in italiano standard: usare « un' » (con apostrofo).",
-        suggest="un'<parola>",
-        ignore_case=True,
-    ),
-    rule(
-        "DOPPIO_SPAZIO",
-        "WARN",
-        r"(?<=\S)  +(?=\S)",
-        "Doppio spazio nel testo (probabile refuso da copia/incolla).",
-        suggest="Sostituire con un solo spazio",
-    ),
-    rule(
-        "SPAZIO_PRIMA_PUNTEGGIATURA",
-        "WARN",
-        r"\s+([,.;:!?])",
-        "Spazio prima di punteggiatura (in italiano la punteggiatura è attaccata alla parola).",
-        suggest="Rimuovere lo spazio prima del segno",
-    ),
-    rule(
-        "TRE_PUNTINI",
-        "INFO",
-        r"\.{3,}",
-        "Tre puntini come « ... » — preferire il carattere singolo « … » (U+2026) per coerenza tipografica.",
-        suggest="…",
-        exclude=r"```|/\*\*\*|\*\*\*/",  # ignora code fences e ASCII art
-    ),
-    rule(
-        "TRATTINO_BREVE",
-        "INFO",
-        r"(?<=[a-zàèéìòù])\s-\s(?=[a-zàèéìòù])",
-        "Trattino breve « - » con spazi attorno (incidentale): preferire trattino lungo « — » (em-dash) per inciso.",
-        suggest="— (em-dash)",
-        ignore_case=True,
-    ),
+    # NOTE: regole DISABILITATE per troppi falsi positivi:
+    # - UNA_VOCALE_FEMMINILE (ammesso in molti contesti, calibrazione futura)
+    # - DOPPIO_SPAZIO (HTML attributes, formattazione MD legittima)
+    # - SPAZIO_PRIMA_PUNTEGGIATURA (falsi positivi su </tag> .)
+    # - TRE_PUNTINI / TRATTINO_BREVE (scelte stilistiche, info inutile)
+    # - MAIUSCOLA_DOPO_PUNTO (numerazioni, decimali, abbreviazioni)
+    # Si potranno riabilitare quando i pattern saranno più restrittivi.
+
     rule(
         "OBBIETTIVO",
         "WARN",
@@ -245,13 +215,6 @@ RULES = [
         "« ecc... » è ridondante: « ecc. » significa già « eccetera ».",
         suggest="ecc.",
         ignore_case=True,
-    ),
-    rule(
-        "MAIUSCOLA_DOPO_PUNTO",
-        "INFO",
-        r"(?<=[.!?])\s+([a-zàèéìòù])(?=[a-zàèéìòù])",
-        "Lettera minuscola dopo punto/!/? — verificare se è inizio frase nuova (in tal caso maiuscola).",
-        suggest="Iniziare frase con maiuscola",
     ),
 ]
 

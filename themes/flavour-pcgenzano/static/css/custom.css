@@ -2791,7 +2791,7 @@ article:not(.card) .galleria img {
   margin-top: 0.5rem;
 }
 
-/* Compatibilita' con il toolbar di accessibilita':
+/* Compatibilita' con il toolbar di accessibilità:
    i pittogrammi sono FUNZIONALI, non decorativi.
    Restano visibili anche con la preferenza "Nascondi immagini"
    e leggibili in scala di grigi. */
@@ -2812,7 +2812,7 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   }
 }
 
-/* Su mobile: pittogrammi un poco piu' piccoli per non rompere il layout. */
+/* Su mobile: pittogrammi un poco più piccoli per non rompere il layout. */
 @media (max-width: 576px) {
   .pittogramma-large  { width: 128px; }
   .pittogramma-xlarge { width: 180px; }
@@ -2893,7 +2893,7 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   }
 }
 
-/* Stampa: la didascalia con credit resta visibile (e' attribuzione obbligatoria) */
+/* Stampa: la didascalia con credit resta visibile (è attribuzione obbligatoria) */
 @media print {
   .article-cover-credit {
     color: #000 !important;
@@ -3047,7 +3047,7 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
 .cosa-non-fare-body p { margin-bottom: 0.5rem; }
 .cosa-non-fare-body p:last-child { margin-bottom: 0; }
 
-/* Stampa: il box "NON fare" e' essenziale, restano colori per gerarchia visiva */
+/* Stampa: il box "NON fare" è essenziale, restano colori per gerarchia visiva */
 @media print {
   .cosa-non-fare {
     border-color: #000 !important;
@@ -3061,7 +3061,7 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   .cosa-non-fare-body { color: #000 !important; }
 }
 
-/* Mobile: header un po' piu' compatto */
+/* Mobile: header un po' più compatto */
 @media (max-width: 576px) {
   .cosa-non-fare-header { font-size: 0.95rem; padding: 0.5rem 0.75rem; }
   .cosa-non-fare-body { padding: 0.7rem 0.9rem; }
