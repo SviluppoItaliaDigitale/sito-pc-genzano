@@ -5,8 +5,8 @@ description: "La Giunta regionale del Lazio ha approvato il regolamento della Sc
 badge: "Informazione"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-29-regione-lazio-scuola-alta-formazione-protezione-civile.webp"
+image_alt: "Cover dell'articolo: Regione Lazio: dopo 12 anni nasce la Scuola di Alta Formazione di Protezione Civile"
 scadenza: ""
 area: "Lazio"
 allegati: []
