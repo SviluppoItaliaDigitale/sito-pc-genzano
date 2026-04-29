@@ -496,6 +496,66 @@ In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo b
 
 **Pagina pubblica correlata:** `content/accessibilita/_index.md` descrive il toolbar al cittadino e dà istruzioni complementari sugli strumenti di sistema (zoom OS, screen reader NVDA/VoiceOver/TalkBack, contrasto OS, riconoscimento vocale). Mantenere allineate le due descrizioni se modifichi le funzioni del toolbar.
 
+### Articoli prev/next + correlati (partials)
+
+Due partial standardizzati che `_default/single.html` chiama automaticamente per ogni articolo della sezione `/comunicazioni/`:
+
+1. **`partials/articolo-navigazione.html`** — riga «Articolo più recente / Articolo precedente» basata su `.PrevInSection` / `.NextInSection`. Niente parametri: si attiva su qualsiasi pagina `.IsPage` con un `.Section` >= 2 articoli. Riusabile su nuove sezioni archivio future.
+
+2. **`partials/articoli-correlati.html`** — sezione «Leggi anche» con 3 card di articoli con stesso `badge` dell'articolo corrente, ordinate per data decrescente. Esclude l'articolo corrente. Mostra immagine cover + data + titolo + descrizione.
+
+CSS in `custom.css` (sezioni "ARTICOLO PREV/NEXT v1.0" e "ARTICOLI CORRELATI v1.0"):
+- Hover lift `translateY(-2px)`, ombra blu istituzionale
+- Focus visibile `outline: 3px solid #ffbe2e` (WCAG 2.4.7)
+- Nascosti in stampa via `@media print`
+
+Quando aggiungi una nuova sezione paginata (es. `/news-tecniche/`), nel suo `single.html` (o aggiornando la condizione in `_default/single.html`) basta chiamare i 2 partial — funzionano automaticamente.
+
+### Bozze social automatiche (Gemini API + Pillow)
+
+Sistema completo per generare bozze post social (X, Facebook, Instagram, Telegram) e immagini Instagram (post 1080×1080 + carosello + story 1080×1920) a partire dagli articoli del sito. Usa il **tier gratuito Gemini 2.5 Flash** (1500 req/giorno = costo zero).
+
+**Componenti operativi:**
+- `scripts/genera-social.py` — motore Python: legge le rules `.claude/rules/02|03|06.md` e le inietta nel system prompt di Gemini, ottiene 4 testi via JSON strutturato, salva in `social-bozze/<slug>/`.
+- `scripts/genera-immagini-social.py` — Pillow: template istituzionale per Instagram con auto-rilevamento carosello (estrae le foto inline `{{< foto >}}` dal body).
+- `scripts/genera-social.sh` — wrapper bash sequenziale.
+- `.github/workflows/genera-social-bozze.yml` — automazione CI a ogni push articolo.
+
+**Cartelle:**
+- `social-bozze/<slug>/` — fuori da Hugo (non deployata sul sito), visibile solo nel repo per copia/incolla.
+- `static/images-social/<slug>-instagram-{post,post-N,story}.webp` — deployata sul sito (URL pubblico Aruba).
+
+**Setup chiave:**
+- Locale: `export GEMINI_API_KEY="..."` in `~/.bashrc` (chiave gratuita da `aistudio.google.com/apikey`).
+- CI: GitHub Secret `GEMINI_API_KEY`.
+
+**3 scenari auto-rilevati** (zero configurazione frontmatter aggiuntiva):
+
+| Scenario | `image:` | Foto inline `{{< foto >}}` | Output IG |
+|---|---|---|---|
+| A | vuoto | assenti | cover tipografica + story |
+| B | path | assenti | post + story |
+| C | path | 2-9 nel body | carosello (max 10) + story |
+
+**Regole della scrittura sociale**: caricate dinamicamente dalle rules `02-content-design-pa.md` (linguaggio AGID, hashtag stabili, struttura post crisi), `03-accessibility.md` (a11y social: alt text, max 2 emoji, no Unicode decorativi), `06-protezione-civile-scientifica.md` (codici colore, struttura 6 punti per allerte).
+
+**Cosa NON fa** (intenzionalmente):
+- Non pubblica automaticamente sui social (le bozze sono per copia/incolla manuale).
+- Non aggiunge informazioni che non sono nell'articolo.
+- Non sostituisce la rilettura umana.
+
+**Documentazione operativa completa** in `scripts/README-social.md`. **Workflow mobile-first** in `MANUALE-MOBILE.md` (root).
+
+### Pagina 404 istituzionale
+
+`themes/flavour-pcgenzano/layouts/404.html` è una **pagina di atterraggio del recupero**, non un vicolo cieco. Contiene:
+- Form ricerca interna integrato (action su `/cerca/`)
+- 8 card di link rapidi alle pagine più consultate (Numeri Utili, Allerte Meteo, Cosa fare, Assistente, Diventa Volontario, Comunicazioni, Cartografia, Mappa Sito)
+- Alert «in caso di emergenza chiama il 112»
+- Script JS di redirect URL legacy (Joomla `*.html`) che si attiva solo se nessuna regola `.htaccess` server-side ha già intercettato l'URL
+
+**Importante**: NON c'è un override `layouts/404.html` nella root del progetto (è stato rimosso aprile 2026). Vince quello del tema. Se in futuro qualcuno crea `layouts/404.html`, scavalca il template del tema e l'utente non vede più questa pagina.
+
 ### Cartelle `static/` canoniche per file depositati via git
 Per evitare che nuovi file finiscano in cartelle escluse dal deploy FTP (vedi regola `05-github-aruba-deploy.md`), usa queste cartelle:
 

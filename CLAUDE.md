@@ -94,6 +94,18 @@ bash scripts/foto-da-nasa.sh      "search query"            slug-articolo
 bash scripts/foto-da-usgs.sh      shakemap <eventid>        slug-articolo
 # Output: static/images/<slug>.webp (1200px, fascia blu, max ~200 KB)
 # Da mobile/cloud: vedi workflow scarica-foto-automatica.yml + marker frontmatter.
+
+# Genera bozze social (X, Facebook, Instagram, Telegram) + immagini IG
+bash scripts/genera-social.sh content/comunicazioni/<file>.md  # singolo
+bash scripts/genera-social.sh --all                            # tutti pubblicati
+bash scripts/genera-social.sh --since 2026-04-01               # da una data
+bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
+# Richiede: GEMINI_API_KEY in env (gratis: aistudio.google.com/apikey).
+# Output: 4 .txt in social-bozze/<slug>/ + 1-N immagini Instagram in
+#         static/images-social/<slug>-instagram-{post,post-N,story}.webp.
+# Carosello automatico: se l'articolo ha foto inline {{< foto >}} nel body,
+# vengono usate per il carosello Instagram (cover + foto, max 10).
+# Da mobile/cloud: il workflow genera-social-bozze.yml fa lo stesso lavoro.
 ```
 
 ## Architecture
@@ -267,6 +279,55 @@ Tutti i meta tag che controllano l'**anteprima** dei link quando vengono condivi
 Default per pagine senza copertina: `static/images/og-default.png` 1200×630 nel tema.
 
 Le anteprime usano questi tag — non i `<meta name="description">` standard. Se modifichi la copertina di un articolo, l'anteprima social si aggiorna **solo dopo che la piattaforma ricontrolla** (cache lato Facebook/X può durare ore o giorni). Per forzare il refresh: [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) e [Twitter Card Validator](https://cards-dev.twitter.com/validator).
+
+### Bozze social automatiche (Gemini API + immagini Instagram)
+
+Sistema completo per generare automaticamente bozze di post social per X, Facebook, Instagram, Telegram + immagini Instagram (post 1080×1080 + carosello + story 1080×1920) a partire dagli articoli del sito. Niente AI a pagamento: usa il **tier gratuito Gemini 2.5 Flash** (1500 req/giorno, costo zero a regime).
+
+**Componenti:**
+
+- `scripts/genera-social.py` — motore Python. Carica le rules istituzionali da `.claude/rules/02`, `03`, `06`, le inietta nel system prompt di Gemini, ottiene 4 testi calibrati per piattaforma in JSON strutturato, salva 4 `.txt` + README in `social-bozze/<slug>/`. Modalità: singolo articolo, `--all`, `--since YYYY-MM-DD`, `--dry-run`, `--force`.
+- `scripts/genera-immagini-social.py` — generazione immagini Pillow. Template istituzionale (header blu con logo + brand, cover articolo, footer con titolo + URL). **Auto-rilevamento carosello**: estrae le foto inline `{{< foto src="..." >}}` dal body dell'articolo e le combina con la cover principale (max 10 immagini) per produrre un carosello Instagram. Story sempre 1 sola.
+- `scripts/genera-social.sh` — wrapper bash che chiama in sequenza i 2 script Python.
+- `.github/workflows/genera-social-bozze.yml` — automazione CI: a ogni push su `main` che modifica `content/comunicazioni/*.md`, identifica gli articoli toccati e genera le bozze + immagini, committa con marker `[skip-social]` per evitare loop.
+- `scripts/README-social.md` — documentazione setup + uso.
+
+**3 scenari gestiti automaticamente:**
+
+| Scenario | `image:` frontmatter | Foto inline `{{< foto >}}` | Output Instagram |
+|---|---|---|---|
+| A — Nessuna foto | `""` (vuoto) | (assenti) | 1 cover tipografica generata al volo + story |
+| B — Una foto | `/path.webp` | (assenti) | 1 post + 1 story (entrambi con la cover) |
+| C — Più foto | `/path.webp` | 2-9 foto nel body | Carosello (cover + inline, max 10) + 1 story |
+
+**Setup richiesto (una sola volta):**
+1. Creare API key gratuita su `aistudio.google.com/apikey`.
+2. In locale: `export GEMINI_API_KEY="..."` in `~/.bashrc`.
+3. Su GitHub: Secret del repo `GEMINI_API_KEY`.
+
+**Output:**
+- `social-bozze/<slug>/` — bozze testuali (cartella **fuori da Hugo**, non deployata sul sito; visibile solo nel repo per copia/incolla manuale).
+- `static/images-social/<slug>-instagram-{post,post-N,story}.webp` — immagini Instagram (deployate sul sito, accessibili via URL pubblico Aruba).
+
+**Regole rispettate** (caricate dinamicamente dalle rules):
+- `02-content-design-pa.md` — linguaggio AGID, hashtag stabili, struttura post crisi
+- `03-accessibility.md` — alt text, max 2 emoji, no Unicode decorativi
+- `06-protezione-civile-scientifica.md` — codici colore, struttura 6 punti per allerte, gerarchia fonti DPC
+
+Quando modifichi una rule, le bozze future seguiranno la nuova policy senza modifiche al codice.
+
+### Articoli prev/next + correlati (`partials/articolo-navigazione.html`, `partials/articoli-correlati.html`)
+
+In fondo a ogni articolo `/comunicazioni/`, `_default/single.html` include automaticamente:
+
+1. **Articoli correlati**: 3 card "Leggi anche" con stesso `badge` dell'articolo corrente, ordinate per data decrescente (più recenti prima). Esclude l'articolo corrente. Render hook su `.Site.RegularPages | where "Section" "comunicazioni" | where "Params.badge" "==" $badgeAttuale`.
+2. **Navigazione cronologica**: «← Articolo più recente» / «Articolo precedente →» auto-generata da `.PrevInSection` / `.NextInSection`. Attiva su qualsiasi pagina `.IsPage` con un `.Section` >= 2 articoli.
+
+CSS in `custom.css` sezioni "ARTICOLO PREV/NEXT v1.0" e "ARTICOLI CORRELATI v1.0" — entrambe nascoste in stampa.
+
+### Pagina 404 istituzionale (atterraggio del recupero)
+
+`themes/flavour-pcgenzano/layouts/404.html` non è una pagina di errore generica: è una **pagina di atterraggio del recupero** con form ricerca interna integrato + 8 card di link rapidi alle pagine più consultate (Numeri Utili, Allerte Meteo, Cosa fare adesso, Assistente, Diventa Volontario, Comunicazioni, Cartografia, Mappa Sito) + alert «in caso di emergenza chiama il 112» + script di redirect URL legacy. Su Aruba i 301 server-side dal `.htaccess` arrivano prima della 404 (per le URL legacy mappate); la pagina 404 si attiva solo per URL mai esistite.
 
 ### Strumenti di Accessibilità (toolbar utente)
 

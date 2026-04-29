@@ -20,6 +20,7 @@ Questo repository contiene diversi file Markdown con ruoli diversi. Non vanno el
 |---|---|---|
 | [`README.md`](README.md) | Panoramica del progetto, guida ai file, comandi principali. | Primo file da leggere. |
 | [`MANUALE-SITO.md`](MANUALE-SITO.md) | **Manuale di stile v2.0** — guida passo-passo per scrivere articoli e pagine secondo AGID, specifiche immagini (fascia blu), checklist pre-pubblicazione. | Quando devi scrivere un articolo, una pagina o preparare un'immagine. |
+| [`MANUALE-MOBILE.md`](MANUALE-MOBILE.md) | **Workflow mobile-first** — guida per pubblicare articoli, modificare il sito, attivare emergenza, pubblicare sui social usando solo app Claude Android + GitHub web mobile. Niente PC. | Quando gestisci il sito dal telefono. |
 | [`PIANO-EDITORIALE.md`](PIANO-EDITORIALE.md) | Fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, ASL, Parco Castelli), calendario redazionale mensile e biblioteca di 250+ titoli evergreen. Obiettivo: tendere a un articolo al giorno (300-365/anno), minimo sostenibile 3-4 a settimana. | Quando devi proporre nuovi contenuti o cerchi ispirazione sulle fonti. |
 | [`CLAUDE.md`](CLAUDE.md) | Istruzioni operative per Claude Code (o altra AI) — mandato, priorità, regole di qualità e sicurezza. Importa automaticamente le 6 regole in `.claude/rules/`. | Lettura automatica per ogni sessione AI. Va aggiornato solo se cambia la governance. |
 
@@ -155,6 +156,8 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Aggiornamenti Bootstrap Italia |
 | `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (38 sezioni)**: contenuti, codice/template, governance docs, audit aggiuntivo, link critici normativa (fuso `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026) |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo lychee: tutti i link (interni + esterni) |
+| `genera-social-bozze.yml` | Ogni push articolo (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini Instagram (post 1080x1080 + carosello + story 1080x1920). Output in `social-bozze/<slug>/` e `static/images-social/`. Tier gratuito Gemini, costo zero. |
+| `scarica-foto-automatica.yml` | Ogni push con marker `# TODO-foto-*` | Scarica foto da Wikipedia/NASA/USGS/NOAA, applica fascia blu istituzionale, popola `image:` + credit. Plus: cover tipografica auto per articoli senza foto. |
 
 Le issue generate automaticamente compaiono nella [tab Issues](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/issues) con label `manutenzione`, `documentazione`, `link-rotti`, ecc.
 
