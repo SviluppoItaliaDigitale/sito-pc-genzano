@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Le due vie di fuga della scuola — Primaria</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. Disegna sulla planimetria della scuola le DUE vie di fuga e segna l'uscita più sicura.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .scuola-mappa {
+      border: 2.5px solid var(--scheda-blu); border-radius: 8px;
+      padding: 0.6rem; margin: 0.5rem 0;
+      background: #f8fafc;
+    }
+    .scuola-pianta { width: 100%; max-width: 100%; height: auto; }
+    .legend-row {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem;
+      margin: 0.5rem 0; font-size: 0.88rem;
+    }
+    .legend-row .item { display: flex; align-items: center; gap: 0.35rem; }
+    .legend-row .icon-l {
+      width: 1.3rem; height: 1.3rem; display: inline-flex; align-items: center; justify-content: center;
+      font-size: 0.95rem; border-radius: 4px;
+    }
+    .legend-row .icon-l.uscita { background: #2e7d32; color: #fff; }
+    .legend-row .icon-l.via { background: #f9a825; color: #000; }
+    .legend-row .icon-l.raccolta { background: #1565c0; color: #fff; }
+    .legend-row .icon-l.pericolo { background: #c1121f; color: #fff; }
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+    .pf-checkbox { display: inline-block; width: 1.1rem; height: 1.1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin-right: 0.35rem; }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Le due vie di fuga della scuola — Primaria</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Le due vie di fuga della scuola</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 4ª-5ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 9-11 anni</span>
+      <span><strong>Obiettivo:</strong> conoscere e disegnare le vie di fuga della propria scuola</span>
+      <span><strong>Discipline:</strong> educazione civica, geografia</span>
+    </div>
+
+    <p class="scheda-intro">
+      Ogni scuola ha <strong>almeno due vie di fuga</strong>: una principale (ingresso) e una di emergenza. Sapere quali sono ti aiuta a uscire in sicurezza in caso di incendio o terremoto. In questa scheda disegnerai con la maestra le vie di fuga della tua aula.
+    </p>
+
+    <h2 class="scheda-h2">🗺️ Disegna la pianta della tua aula e del corridoio</h2>
+
+    <p style="margin-bottom: 0.4rem; font-size: 0.9rem;">Usa questi simboli (colora con i pennarelli):</p>
+    <div class="legend-row">
+      <div class="item"><span class="icon-l uscita">🚪</span>Uscita di emergenza</div>
+      <div class="item"><span class="icon-l via">→</span>Via di fuga (frecce)</div>
+      <div class="item"><span class="icon-l raccolta">⚪</span>Punto di raccolta esterno</div>
+      <div class="item"><span class="icon-l pericolo">🔥</span>Pericolo (cucina, gas, ecc.)</div>
+    </div>
+
+    <div class="scuola-mappa">
+      <svg class="scuola-pianta" viewBox="0 0 600 380" role="img" aria-label="Pianta semplificata della scuola con corridoio e aule, da completare">
+        <!-- Cornice esterna scuola -->
+        <rect x="20" y="20" width="560" height="340" fill="#fff" stroke="#003366" stroke-width="3"/>
+
+        <!-- Aula 1 (in alto a sinistra) -->
+        <rect x="40" y="40" width="160" height="110" fill="#fff" stroke="#666" stroke-width="1.5"/>
+        <text x="120" y="100" font-size="16" text-anchor="middle" font-weight="bold">AULA 1</text>
+
+        <!-- Aula 2 (alto centro) -->
+        <rect x="220" y="40" width="160" height="110" fill="#fff" stroke="#666" stroke-width="1.5"/>
+        <text x="300" y="100" font-size="16" text-anchor="middle" font-weight="bold">LA TUA AULA</text>
+        <text x="300" y="120" font-size="12" text-anchor="middle">(disegnami!)</text>
+
+        <!-- Aula 3 (in alto a destra) -->
+        <rect x="400" y="40" width="160" height="110" fill="#fff" stroke="#666" stroke-width="1.5"/>
+        <text x="480" y="100" font-size="16" text-anchor="middle" font-weight="bold">AULA 3</text>
+
+        <!-- Corridoio orizzontale -->
+        <rect x="40" y="170" width="520" height="60" fill="#f0f4f8" stroke="#666" stroke-width="1.5"/>
+        <text x="300" y="205" font-size="14" text-anchor="middle" fill="#003366" font-weight="bold">CORRIDOIO</text>
+
+        <!-- Aula 4 -->
+        <rect x="40" y="250" width="160" height="90" fill="#fff" stroke="#666" stroke-width="1.5"/>
+        <text x="120" y="295" font-size="14" text-anchor="middle">AULA 4</text>
+
+        <!-- Bagni -->
+        <rect x="220" y="250" width="80" height="90" fill="#fff" stroke="#666" stroke-width="1.5"/>
+        <text x="260" y="295" font-size="13" text-anchor="middle">BAGNI</text>
+
+        <!-- Mensa con cucina -->
+        <rect x="320" y="250" width="160" height="90" fill="#fff" stroke="#666" stroke-width="1.5"/>
+        <text x="400" y="290" font-size="14" text-anchor="middle">MENSA</text>
+        <text x="400" y="305" font-size="11" text-anchor="middle" fill="#c1121f">(cucina = pericolo)</text>
+
+        <!-- Uscita principale (sotto a sinistra) -->
+        <rect x="40" y="345" width="40" height="15" fill="#2e7d32"/>
+        <text x="60" y="357" font-size="9" text-anchor="middle" fill="#fff" font-weight="bold">USC. 1</text>
+
+        <!-- Uscita di emergenza (alto destra) -->
+        <rect x="540" y="20" width="40" height="15" fill="#2e7d32"/>
+        <text x="560" y="32" font-size="9" text-anchor="middle" fill="#fff" font-weight="bold">USC. 2</text>
+
+        <!-- Punto di raccolta esterno -->
+        <circle cx="585" cy="370" r="13" fill="#1565c0"/>
+        <text x="585" y="375" font-size="11" text-anchor="middle" fill="#fff" font-weight="bold">⚐</text>
+      </svg>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Compila</h2>
+    <ol style="font-size: 0.92rem; line-height: 1.6; padding-left: 1.4rem;">
+      <li>Disegna nella mappa il <strong>tuo banco</strong> nella tua aula (un quadrato).</li>
+      <li>Traccia con un pennarello <strong>verde</strong> la via di fuga PRINCIPALE (quella che usi tutti i giorni per uscire da scuola).</li>
+      <li>Traccia con un pennarello <strong>arancione</strong> la via di fuga di EMERGENZA (quella che usi se la principale è bloccata).</li>
+      <li>Segna con un cerchio blu il <strong>punto di raccolta</strong> fuori dalla scuola dove la tua classe si ferma.</li>
+      <li>Disegna un'icona di <strong>pericolo</strong> 🔥 nella cucina della mensa.</li>
+    </ol>
+
+    <h2 class="scheda-h2">📋 Verifica con la maestra</h2>
+    <div style="font-size: 0.9rem; line-height: 1.65;">
+      <div><span class="pf-checkbox"></span>Ho disegnato il mio banco</div>
+      <div><span class="pf-checkbox"></span>Ho colorato 2 vie di fuga (verde e arancione)</div>
+      <div><span class="pf-checkbox"></span>Ho segnato il punto di raccolta</div>
+      <div><span class="pf-checkbox"></span>So <strong>il nome del compagno</strong> a cui dare la mano in fila</div>
+      <div><span class="pf-checkbox"></span>So che <strong>NON si usa l'ascensore</strong> per uscire</div>
+      <div><span class="pf-checkbox"></span>So che dopo l'uscita <strong>resto in fila al punto di raccolta</strong> finché la maestra fa l'appello</div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Note operative:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>Idealmente, fare l'attività dopo aver percorso fisicamente le due vie di fuga della scuola con la classe (es. dopo la prova evacuazione semestrale prevista dal D.M. 26 agosto 1992).</li>
+        <li>Se possibile, sostituire la pianta-tipo della scheda con la <strong>planimetria reale</strong> della scuola fornita dal Responsabile del Servizio di Prevenzione e Protezione (RSPP).</li>
+        <li>Far disegnare il punto di raccolta REALE della propria scuola (di solito un cortile, un parcheggio, una piazza adiacente).</li>
+        <li><strong>Estensione</strong>: collegare con la versione <a href="/formazione/schede-stampabili/labirinto-evacuazione-secondaria/">Calcolo tempi (Sec I)</a> e con la <a href="/formazione/schede-stampabili/labirinto-uscita/">Labirinto uscita (Infanzia)</a>.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Vie di fuga scuola" · Primaria · educazione civica · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

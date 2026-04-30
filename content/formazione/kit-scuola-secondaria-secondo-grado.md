@@ -582,6 +582,15 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 - 👉 [**I vulcani attivi italiani**](/formazione/schede-stampabili/caso-vulcani-italia-secondaria2/) — Vesuvio, Campi Flegrei, Etna, Stromboli, Vulcano, Marsili, Ischia: pericolosità, monitoraggio INGV, piani di emergenza. *(scienze della Terra, geografia, diritto)*
 - 👉 [**Bradisismo dei Campi Flegrei**](/formazione/schede-stampabili/caso-campi-flegrei-secondaria2/) — caso in evoluzione: sciami sismici, livello giallo INGV, decreto Campi Flegrei 2023, esercitazione EXE Flegrei. Da aggiornare con i bollettini settimanali INGV. *(scienze della Terra, comunicazione, diritto)*
 
+**Schede del curricolo a spirale 6-19 anni — versione Secondaria II** (stessi temi disponibili anche per Primaria e Secondaria I, per scelta del docente):
+
+- 👉 [**Analisi critica di tre bollettini**](/formazione/schede-stampabili/decodifica-bollettino-secondaria2/) — tre bollettini reali (giallo/arancione/rosso) della Regione Lazio: analisi linguistica, calcoli quantitativi, critica costruttiva, riformulazione come post Instagram in 280 caratteri. *(italiano, scienze della Terra, ed. civica)*
+- 👉 [**Mappa rischi GIS + proposta mitigazione**](/formazione/schede-stampabili/mappa-rischi-secondaria2/) — approccio GIS semplificato: formula R = P × V × E, costruzione mappa, identificazione popolazione fragile, mitigazione strutturale e organizzativa, segnalazione formale al Comune. *(geografia, scienze, tecnologia)*
+- 👉 [**Piano emergenza condominio o scuola**](/formazione/schede-stampabili/piano-familiare-secondaria2/) — progetto completo per un edificio reale: ruoli, vie di fuga, scenari (incendio/sisma/allagamento), persone con mobilità ridotta, vademecum A4. *(tecnologia, ed. civica)*
+- 👉 [**Glossario commentato del lessico PC**](/formazione/schede-stampabili/cruciverba-secondaria2/) — 11 termini tecnici (allerta vs emergenza, magnitudo vs intensità, frana vs smottamento) con uso corretto + riformulazione di frasi giornalistiche errate. *(italiano, ed. civica)*
+- 👉 [**Progetto piano di evacuazione di un edificio**](/formazione/schede-stampabili/labirinto-evacuazione-secondaria2/) — quadro normativo (D.Lgs. 81/2008, DM 3/8/2015), pianta in scala, calcoli dimensionamento, squadre emergenza, procedure scenari, scheda esercitazione. *(tecnologia, sicurezza)*
+- 👉 [**Chiamata 112 — Analisi linguistica + protocollo**](/formazione/schede-stampabili/chiamo-112-secondaria2/) — modello SBAR ai 6 elementi, analisi 3 casi reali, sistema AML e implicazioni etiche, protocollo A4 per studenti delle scuole superiori. *(italiano, sicurezza, ed. civica)*
+
 ---
 
 ## Compito di realtà — Progetto di classe

@@ -1812,7 +1812,7 @@ Il template `single.html` del tema mostra questa data come **box evidente** in c
 | `/strumenti/` | `content/strumenti/_index.md` | Hub strumenti consultazione (12+ widget/link) |
 | `/mappa-sito/` | `content/mappa-sito/_index.md` | Mappa del sito con card per macro-aree |
 | `/facile-da-leggere/` | `content/facile-da-leggere/_index.md` | Versione cognitiva-friendly (D.Lgs. 62/2024) |
-| `/formazione/schede-stampabili/` | `static/formazione/schede-stampabili/` | 68 schede HTML A4 stampabili (di cui 10 colorabili) suddivise per fascia (infanzia/primaria/secondaria I/secondaria II) e disciplina (italiano, matematica, scienze, geografia, storia, ed. civica, giornalismo, diritto, economia, inglese) |
+| `/formazione/schede-stampabili/` | `static/formazione/schede-stampabili/` | 100 schede HTML A4 stampabili (di cui 10 colorabili e 14 col curricolo a spirale 6-19 anni — stesso tema in più fasce) suddivise per fascia (infanzia/primaria/secondaria I/secondaria II) e disciplina (italiano, matematica, scienze, geografia, storia, ed. civica, giornalismo, diritto, economia, inglese) |
 | `/english/` ... `/esperanto/` | `content/{lingua}/_index.md` | 7 hub linguistiche curate (vedi §4.11) |
 
 ### 4.8 — Kit didattici per le scuole (`content/formazione/kit-scuola-*.md`)

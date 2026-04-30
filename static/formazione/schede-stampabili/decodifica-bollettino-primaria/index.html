@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Codici colore allerta — Scuola Primaria</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. Abbina ogni codice colore (verde, giallo, arancione, rosso) al comportamento giusto.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .quattro-colori { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.5rem 0; }
+    .col-card {
+      padding: 0.85rem 1rem; border-radius: 10px;
+      border: 2.5px solid; text-align: center; font-weight: 700;
+    }
+    .col-verde { background: #e8f5e9; border-color: #2e7d32; color: #1b5e20; }
+    .col-giallo { background: #fff8e1; border-color: #f9a825; color: #6d4c00; }
+    .col-arancione { background: #fff3e0; border-color: #e65100; color: #bf360c; }
+    .col-rosso { background: #fde8ea; border-color: #c1121f; color: #842029; }
+    .col-card .colore-nome { font-size: 1.15rem; margin-bottom: 0.3rem; }
+    .col-card .colore-significato { font-weight: 400; font-size: 0.92rem; line-height: 1.4; }
+    .abbina-tabella { width: 100%; border-collapse: collapse; margin: 0.5rem 0; }
+    .abbina-tabella td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.55rem 0.7rem;
+      font-size: 0.95rem;
+      vertical-align: middle;
+    }
+    .abbina-tabella td:first-child { width: 6%; text-align: center; font-weight: 700; }
+    .abbina-tabella td:last-child { width: 12%; text-align: center; }
+    .abbina-tabella .casella-risposta {
+      display: inline-block; width: 2rem; height: 1.6rem;
+      border: 2px solid var(--scheda-bordo); border-radius: 4px;
+      background: #fff;
+    }
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+    @media (max-width: 580px) { .quattro-colori { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Codici colore allerta — Primaria</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">I colori dell'allerta meteo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 3ª-5ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-11 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere i codici colore + comportamento corretto</span>
+      <span><strong>Discipline:</strong> scienze, educazione civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      Quando il tempo sta per peggiorare, la <strong>Regione Lazio</strong> usa <strong>4 colori</strong> per dirti quanto fare attenzione. Impara a riconoscerli! Sono come i semafori: ognuno dice una cosa diversa.
+    </p>
+
+    <h2 class="scheda-h2">🌈 I quattro colori</h2>
+
+    <div class="quattro-colori">
+      <div class="col-card col-verde">
+        <div class="colore-nome">🟢 VERDE</div>
+        <div class="colore-significato">Tutto a posto. Tempo normale.</div>
+      </div>
+      <div class="col-card col-giallo">
+        <div class="colore-nome">🟡 GIALLO</div>
+        <div class="colore-significato">Attenzione: piove forte.</div>
+      </div>
+      <div class="col-card col-arancione">
+        <div class="colore-nome">🟠 ARANCIONE</div>
+        <div class="colore-significato">Pericolo: temporali forti.</div>
+      </div>
+      <div class="col-card col-rosso">
+        <div class="colore-nome">🔴 ROSSO</div>
+        <div class="colore-significato">Pericolo molto grande.</div>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Abbina ogni situazione al colore giusto</h2>
+    <p style="margin-bottom: 0.4rem; font-size: 0.92rem;">Scrivi nella casella la lettera del colore: <strong>V</strong> (verde), <strong>G</strong> (giallo), <strong>A</strong> (arancione), <strong>R</strong> (rosso).</p>
+
+    <table class="abbina-tabella">
+      <tr><td>1</td><td>Sole splendente. Vado al parco con gli amici.</td><td><span class="casella-risposta"></span></td></tr>
+      <tr><td>2</td><td>Pioggia intensa per ore. Strade allagate. Frane sulle colline.</td><td><span class="casella-risposta"></span></td></tr>
+      <tr><td>3</td><td>Sta per arrivare un temporale. Posso giocare ma sto attento al cielo.</td><td><span class="casella-risposta"></span></td></tr>
+      <tr><td>4</td><td>Tantissimi fulmini, vento forte. La scuola è chiusa per sicurezza.</td><td><span class="casella-risposta"></span></td></tr>
+      <tr><td>5</td><td>Un po' di pioggia, niente di grave.</td><td><span class="casella-risposta"></span></td></tr>
+      <tr><td>6</td><td>Grandine grossa come palline da ping pong. Sto in casa.</td><td><span class="casella-risposta"></span></td></tr>
+    </table>
+
+    <h2 class="scheda-h2">✏️ Per ogni colore, scrivi cosa fai</h2>
+
+    <table class="abbina-tabella">
+      <tr><td style="background: #e8f5e9; color: #1b5e20;"><strong>🟢</strong></td><td colspan="2">Cosa fai col verde? _______________________________________</td></tr>
+      <tr><td style="background: #fff8e1; color: #6d4c00;"><strong>🟡</strong></td><td colspan="2">Cosa fai col giallo? _______________________________________</td></tr>
+      <tr><td style="background: #fff3e0; color: #bf360c;"><strong>🟠</strong></td><td colspan="2">Cosa fai con l'arancione? _______________________________________</td></tr>
+      <tr><td style="background: #fde8ea; color: #842029;"><strong>🔴</strong></td><td colspan="2">Cosa fai col rosso? _______________________________________</td></tr>
+    </table>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>Abbinamenti: 1=V, 2=R, 3=G, 4=R, 5=V, 6=A.</li>
+        <li>Risposte attese ai colori: 🟢 attività normali; 🟡 attento al cielo, sentire le previsioni; 🟠 limitare le uscite, niente attività all'aperto; 🔴 stare in casa, seguire le indicazioni del Comune.</li>
+        <li><strong>Estensione</strong>: collegare con la scheda <a href="/formazione/schede-stampabili/decodifica-bollettino-secondaria/">Decodifica bollettino (Secondaria I)</a> per la lettura di un bollettino reale.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Codici colore allerta" · Primaria · scienze/educazione civica · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>
