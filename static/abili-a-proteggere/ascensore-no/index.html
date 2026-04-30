@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L'Ascensore NO! — Abili a Proteggere</title>
+  <meta name="description" content="Quando NON usare l'ascensore in caso di emergenza: attività accessibile.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Abili a Proteggere</a></li>
+            <li class="breadcrumb-item active" aria-current="page">L'Ascensore NO!</li>
+          </ol>
+        </nav>
+        <h1>L'Ascensore NO!</h1>
+      </div>
+    </div>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div id="intro-screen">
+            <p class="lead text-center mb-3">Quando l'ascensore è vietato?</p>
+            <p class="text-center text-muted mb-4">In tante emergenze l'ascensore è la scelta sbagliata. Può bloccarsi, spegnersi, o portarti dove c'è il pericolo. Impara a riconoscere quando devi usare le scale.</p>
+            <div class="text-center">
+              <button id="start-btn" class="btn btn-primary btn-lg px-5 py-3" style="font-size: 1.3rem;"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia</button>
+            </div>
+          </div>
+
+          <div id="game-screen" class="hide">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="fw-bold" style="font-size: 1.1rem;">Domanda <span id="current-q">1</span> di <span id="total-q">5</span></span>
+              <span class="text-muted">Risposte giuste: <span id="score" class="fw-bold text-success">0</span></span>
+            </div>
+            <div id="scenario-box" class="scenario-box" role="region" aria-label="Scenario emergenza">
+              <div id="scenario-icon" class="scenario-icon" aria-hidden="true"></div>
+              <h2 id="scenario-title" class="scenario-title"></h2>
+              <p id="scenario-desc" class="scenario-desc"></p>
+            </div>
+            <p class="text-center fw-bold mt-3 mb-2" style="font-size: 1.1rem;">Posso usare l'ascensore?</p>
+            <div id="choices" class="choices-grid" role="group" aria-label="Scelte disponibili"></div>
+            <div id="feedback-box" class="feedback-box hide" role="alert" aria-live="assertive"></div>
+          </div>
+
+          <div id="end-screen" class="hide">
+            <div class="text-center py-4">
+              <div class="mb-3" style="font-size: 4rem; color: #2e7d32;"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+              <h2 class="h3 mb-3" style="color: #2e7d32;">Attività completata!</h2>
+              <p class="lead mb-2">Hai risposto a tutte le domande.</p>
+              <p class="mb-1">Risposte giuste: <strong id="final-score">0</strong> su <strong id="final-total">5</strong></p>
+              <p class="text-muted mb-4">Ricorda la regola: in emergenza usa sempre le scale, mai l'ascensore.</p>
+              <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button id="restart-btn" class="btn btn-primary btn-lg px-4 py-3"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i> Rifai</button>
+                <a href="../index.html" class="btn btn-outline-secondary btn-lg px-4 py-3"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna alle attività</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/attestato-inclusivo.js"></script>
+
+</body>
+</html>
