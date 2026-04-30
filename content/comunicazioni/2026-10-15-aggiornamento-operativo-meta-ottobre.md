@@ -1,6 +1,6 @@
 ---
 title: "Metà ottobre: aggiornamento operativo del Gruppo"
-date: 2026-10-15
+date: 2026-10-15T00:01:00+02:00
 description: "A metà ottobre, un aggiornamento sulle attività in corso: corso base avviato, giornata aperta, esercitazioni, rischio idrogeologico."
 badge: "Aggiornamento"
 priorita: "normale"

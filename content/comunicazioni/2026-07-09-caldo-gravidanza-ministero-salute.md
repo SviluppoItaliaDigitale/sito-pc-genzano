@@ -1,6 +1,6 @@
 ---
 title: "Caldo in gravidanza: consigli per future mamme e loro bambini"
-date: 2026-07-09
+date: 2026-07-09T00:02:00+02:00
 description: "Un opuscolo del Ministero della Salute e del DEP Lazio spiega come affrontare il caldo in gravidanza: disidratazione, rischi di parto prematuro, alimentazione e microclima domestico."
 badge: "Prevenzione"
 priorita: "normale"

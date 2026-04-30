@@ -1,6 +1,6 @@
 ---
 title: "Qualità dell'aria in estate: ozono, PM10 e pollini"
-date: 2026-06-10
+date: 2026-06-10T00:01:00+02:00
 description: "Con l'arrivo del caldo cambiano gli inquinanti atmosferici. Cosa monitorare, come proteggersi e quando consultare i bollettini regionali."
 badge: "Informazione"
 priorita: "normale"

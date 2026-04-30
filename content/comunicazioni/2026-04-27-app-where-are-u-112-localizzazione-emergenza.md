@@ -1,6 +1,6 @@
 ---
 title: "Where Are U: l'app del 112 che ti localizza in emergenza"
-date: 2026-04-27
+date: 2026-04-27T00:02:00+02:00
 description: "Where Are U è l'app ufficiale del Numero Unico Europeo 112: invia automaticamente la tua posizione precisa alla Centrale Unica e consente la chiamata silenziosa per chi non può parlare."
 badge: "Informazione"
 priorita: "normale"

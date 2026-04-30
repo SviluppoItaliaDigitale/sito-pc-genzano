@@ -1,6 +1,6 @@
 ---
 title: "Comunicazione in emergenza: canali ufficiali e verifica delle fonti"
-date: 2026-07-28
+date: 2026-07-28T00:01:00+02:00
 description: "In emergenza circolano molte informazioni, non tutte affidabili. Sapere quali canali consultare e come verificare le fonti è un gesto di autoprotezione."
 badge: "Informazione"
 priorita: "normale"

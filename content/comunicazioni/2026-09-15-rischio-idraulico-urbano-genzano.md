@@ -1,6 +1,6 @@
 ---
 title: "Rischio idraulico urbano a Genzano: conoscere i punti critici"
-date: 2026-09-15
+date: 2026-09-15T00:01:00+02:00
 description: "Anche a Genzano, come in molti centri dei Castelli Romani, esistono punti critici di rischio idraulico urbano. Cosa significa, quali sono, come si interviene."
 badge: "Informazione"
 priorita: "normale"

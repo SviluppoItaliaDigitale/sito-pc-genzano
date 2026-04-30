@@ -299,12 +299,27 @@ draft: false
 ✅ `"Calendario del Dipartimento della Protezione Civile 2026"`
 ❌ `"Scopri l'incredibile calendario 2026 del Dipartimento! 🎉"`
 
-**`date`** — formato `AAAA-MM-GG`, **senza virgolette**, **senza orario**, **senza timezone**.
+**`date`** — schema dipendente dal numero di articoli/giorno.
+
+**Caso A (default, 1 articolo/giorno)**: formato semplice `AAAA-MM-GG`, **senza virgolette**, **senza orario**.
 
 - ✅ `date: 2026-05-15`
 - ❌ `date: "2026-05-15"` (stringa invece di data)
-- ❌ `date: 2026-05-15T10:30:00Z` (formato con timezone — **causa esclusione dalla build Hugo**)
 - ❌ `date: 15/05/2026` (formato europeo non supportato)
+
+**Caso B (2+ articoli nello stesso giorno)**: formato ISO 8601 con orario crescente per ogni articolo, in ordine di pubblicazione (l'ultimo scritto ha l'orario maggiore e finisce in cima all'archivio).
+
+- ✅ 1° articolo del giorno: `date: 2026-05-15T00:01:00+02:00`
+- ✅ 2° articolo: `date: 2026-05-15T00:02:00+02:00`
+- ✅ 3° articolo: `date: 2026-05-15T00:03:00+02:00`
+- ❌ `date: 2026-05-15T10:30:00Z` (timezone UTC `Z`: usa sempre `+02:00`)
+- ❌ `date: 2026-05-15T16:00:00+02:00` (orario "alto": se è il giorno corrente e Hugo gira prima delle 14:00 UTC, l'articolo è "futuro" e non appare nel build fino al rebuild successivo)
+
+**Perché orari "minimi" (00:01, 00:02, …):**
+L'orario non viene mostrato all'utente (il template renderizza solo "15 maggio 2026"). Serve esclusivamente come tie-break per l'ordering Hugo Date desc. Orari piccoli garantiscono che gli articoli del giorno corrente non risultino "futuri".
+
+**Fix retroattivo automatico:**
+Se ti accorgi a posteriori di aver pubblicato 2 articoli stessa giornata con `date` solo-data, lancia `python3 scripts/fix-ordering-articoli-stesso-giorno.py` — è idempotente, legge l'ordine git first-commit di ciascun file e assegna orari `00:01, 00:02, …` rispettando l'ordine reale di pubblicazione.
 
 **`description`** — sommario, **massimo 160 caratteri** (incluse spaziature).
 
@@ -563,7 +578,7 @@ Apri `http://localhost:1313` nel browser:
 
 **Errori frequenti:**
 
-- L'articolo non appare → controlla `draft: false` e formato data (`AAAA-MM-GG` senza timezone).
+- L'articolo non appare → controlla `draft: false` e formato data (`AAAA-MM-GG` per giornata singola, oppure `AAAA-MM-GGT00:0N:00+02:00` se ci sono 2+ articoli stessa giornata; mai `Z` come timezone).
 - L'immagine non si carica → controlla percorso e nome file (case-sensitive).
 - I link interni non funzionano → usa URL relativi (`/contatti/` non `contatti/`).
 

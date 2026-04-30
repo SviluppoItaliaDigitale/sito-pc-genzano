@@ -1,6 +1,6 @@
 ---
 title: "IT-alert: come si preparano i test e cosa fare al ricevimento"
-date: 2026-07-10
+date: 2026-07-10T00:01:00+02:00
 description: "Il sistema IT-alert ha cambiato il modo di comunicare con la popolazione in emergenza. Come funzionano i test, come reagire al messaggio."
 badge: "Comunicazione"
 priorita: "normale"

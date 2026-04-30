@@ -1,6 +1,6 @@
 ---
 title: "Sciami d'api in estate: cosa fare, chi chiamare, perché non hanno bisogno della nostra paura"
-date: 2026-05-20
+date: 2026-05-20T00:02:00+02:00
 description: "Il 20 maggio è la Giornata Mondiale delle Api. In estate il recupero degli sciami è un servizio svolto dai Vigili del Fuoco e dagli apicoltori professionisti del territorio: ecco la guida per il cittadino."
 badge: "Informazione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Terremoto delle Marche, 26 ottobre 2016: la scossa di Visso che riportò il sisma del Centro Italia su nuove regioni"
-date: 2026-10-26
+date: 2026-10-26T00:02:00+02:00
 description: "Alle 21:18 del 26 ottobre 2016 una scossa di magnitudo 5.9 colpì il Maceratese, esattamente due mesi dopo Amatrice. Visso, Castelsantangelo sul Nera, Ussita gravemente danneggiati. Quattro giorni dopo il sisma di magnitudo 6.5 di Norcia: la sequenza Centro Italia 2016-2017 entrava nella fase più distruttiva."
 
 badge: "Informazione"

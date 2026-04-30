@@ -1,6 +1,6 @@
 ---
 title: "Dighe e grandi opere: la sicurezza del sistema italiano"
-date: 2026-10-07
+date: 2026-10-07T00:01:00+02:00
 description: "L'Italia gestisce centinaia di grandi dighe. Sicurezza, monitoraggio, Piano di Emergenza: come funziona il sistema dopo il Vajont."
 badge: "Informazione"
 priorita: "normale"

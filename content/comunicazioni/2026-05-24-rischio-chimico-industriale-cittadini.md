@@ -1,6 +1,6 @@
 ---
 title: "Rischio chimico e industriale: cosa deve sapere un cittadino"
-date: 2026-05-24
+date: 2026-05-24T00:01:00+02:00
 description: "Incidenti in impianti, fughe di sostanze, trasporto di materiali pericolosi: capire di cosa si parla e come ci si protegge se vive vicino a un sito a rischio."
 badge: "Informazione"
 priorita: "normale"

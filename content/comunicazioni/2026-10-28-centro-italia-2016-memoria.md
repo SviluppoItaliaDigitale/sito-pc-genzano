@@ -1,6 +1,6 @@
 ---
 title: "Dieci anni dal sisma del Centro Italia: la memoria come prevenzione"
-date: 2026-10-28
+date: 2026-10-28T00:01:00+02:00
 description: "Dieci anni fa il sisma del Centro Italia devastava Amatrice, Norcia, Arquata del Tronto. Un anniversario per ricordare e imparare."
 badge: "Informazione"
 priorita: "normale"

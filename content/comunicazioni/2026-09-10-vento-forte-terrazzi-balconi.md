@@ -1,6 +1,6 @@
 ---
 title: "Vento forte: proteggere balconi, terrazzi, oggetti esterni"
-date: 2026-09-10
+date: 2026-09-10T00:01:00+02:00
 description: "Le raffiche di vento autunnali possono trasformare vasi e ombrelloni in proiettili. Regole semplici per mettere in sicurezza l'esterno di casa."
 badge: "Prevenzione"
 priorita: "normale"

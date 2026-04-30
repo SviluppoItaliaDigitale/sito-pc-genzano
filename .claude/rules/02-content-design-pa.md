@@ -128,8 +128,36 @@ Specifiche complete in `MANUALE-SITO.md` Parte 3.16.
 
 ## Regola critica — formato data nel frontmatter Hugo
 
-Nel frontmatter degli articoli usa SEMPRE il formato `AAAA-MM-GG` (esempio: `2026-04-06`).
-NON usare MAI il formato con timezone (esempio: `2026-04-06T03:32:00Z`): causa l'esclusione dell'articolo dalla build Hugo.
+Lo schema dipende da quanti articoli condividono la giornata.
+
+**Caso A — un solo articolo nella giornata** (default, ~85% dei casi)
+Usa il formato semplice `AAAA-MM-GG` (esempio: `date: 2026-04-06`). Hugo lo interpreta automaticamente come mezzanotte ora italiana grazie alla `timeZone = "Europe/Rome"` configurata in `hugo.toml`.
+
+**Caso B — due o più articoli nella stessa giornata**
+Usa il formato ISO 8601 con orario crescente per ogni articolo, in ordine di pubblicazione (ultimo scritto = orario maggiore = finisce in cima all'archivio).
+
+```yaml
+# 1° articolo del giorno:
+date: 2026-04-30T00:01:00+02:00
+
+# 2° articolo (ultimo scritto, in cima):
+date: 2026-04-30T00:02:00+02:00
+```
+
+**Perché orari minimi (00:01, 00:02, …) e non semantici (08:00, 14:00, 18:00):**
+L'orario non viene mai mostrato all'utente (il template formatta solo la data lunga "30 aprile 2026"). Serve esclusivamente come tie-break per l'ordering Hugo `Date desc`. Orari minimi garantiscono che gli articoli del **giorno corrente** non risultino "futuri" per Hugo (cosa che li escluderebbe dal build fino al rebuild successivo del workflow `pubblica-programmata.yml`, alle 06:00 UTC).
+
+**Perché esiste questa regola:**
+Ad aprile 2026 si è scoperto che Hugo, con due articoli a `date: AAAA-MM-GG` identico, applica come tie-break l'ordine alfabetico del filename, non l'ordine di pubblicazione: 47 giornate del sito avevano articoli renderizzati in ordine arbitrario rispetto a quando erano stati scritti. Aggiungere orario crescente risolve.
+
+**Cosa NON usare:**
+- `date: 2026-04-06T03:32:00Z` (timezone UTC esplicita in fondo): comportamento meno chiaro, rischio di "articolo futuro" se l'utente è in Europa pre-tz-fix. Usa sempre `+02:00` (italiana).
+- `date: "2026-04-06"` (con virgolette): tecnicamente accettato da Hugo ma sconsigliato per coerenza con tutti gli articoli del sito.
+
+**Workflow operativo per l'utente:**
+- Quando scrivi un articolo nuovo con `hugo new comunicazioni/AAAA-MM-GG-titolo.md`, l'archetype produce `date: {{ .Date }}` che si espande automaticamente al timestamp completo. Va bene per il caso B.
+- Per il caso A (singolo articolo giorno) lo riduci a `date: AAAA-MM-GG` semplice.
+- Se ti accorgi a posteriori di aver pubblicato 2 articoli nello stesso giorno con `date` solo-data, lancia `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente, riassegna orari `00:01, 00:02, ...` basati su git first-commit asc).
 
 ## Regole editoriali
 

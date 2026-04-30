@@ -1,6 +1,6 @@
 ---
 title: "BLS-D e defibrillatore: ogni cittadino può imparare a salvare una vita"
-date: 2026-09-26
+date: 2026-09-26T00:01:00+02:00
 description: "La formazione BLS-D è una competenza civica fondamentale. Come funziona, dove impararla, perché il defibrillatore non è solo per medici."
 badge: "Formazione"
 priorita: "normale"

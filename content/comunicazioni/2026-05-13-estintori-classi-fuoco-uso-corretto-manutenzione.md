@@ -1,6 +1,6 @@
 ---
 title: "Estintori: classi di fuoco, uso corretto e manutenzione"
-date: 2026-05-13
+date: 2026-05-13T00:02:00+02:00
 description: "Classi di fuoco A, B, C, D, F secondo UNI EN 2, tipi di estintore (polvere, CO2, schiuma, acqua), tecnica PASS di utilizzo e regole di manutenzione UNI 9994."
 
 badge: "Formazione"

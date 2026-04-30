@@ -1,6 +1,6 @@
 ---
 title: "La sala radio di protezione civile: come si gestisce una chiamata e come si compila la scheda di intervento"
-date: 2026-04-17
+date: 2026-04-17T00:01:00+02:00
 description: "Dal primo squillo alla firma sulla scheda: la procedura completa per l'operatore di sala radio che raccoglie una richiesta di intervento e coordina la squadra sul territorio."
 
 badge: "Radiocomunicazioni"

@@ -1,6 +1,6 @@
 ---
 title: "4 novembre 1966: l'alluvione di Firenze e la nascita degli Angeli del fango"
-date: 2026-11-04
+date: 2026-11-04T00:02:00+02:00
 description: "Sessant'anni fa Firenze fu sommersa dall'Arno. Da quella catastrofe nacque il volontariato moderno italiano: gli Angeli del fango, giovani arrivati spontaneamente da tutto il mondo per salvare la città."
 badge: "Comunicazione"
 priorita: "normale"

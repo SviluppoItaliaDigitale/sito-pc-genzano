@@ -1,6 +1,6 @@
 ---
 title: "9 maggio, Giorno della memoria delle vittime del terrorismo: il caso Moro e la nascita della comunicazione di crisi in Italia"
-date: 2026-05-09
+date: 2026-05-09T00:02:00+02:00
 description: "Il 9 maggio 1978 viene ritrovato il corpo di Aldo Moro in via Caetani a Roma. Da quei 55 giorni di rapimento nasce in Italia la consapevolezza di cosa significhi gestire una crisi nazionale dal punto di vista della comunicazione e della catena istituzionale. Il 9 maggio è oggi ricorrenza ufficiale (legge 56/2007)."
 
 badge: "Informazione"

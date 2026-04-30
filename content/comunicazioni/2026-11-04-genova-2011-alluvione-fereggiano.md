@@ -1,6 +1,6 @@
 ---
 title: "Genova, 4 novembre 2011: l'alluvione del Fereggiano e la lezione dei rii tombati"
-date: 2026-11-04
+date: 2026-11-04T00:03:00+02:00
 description: "Una bomba d'acqua di 500 mm in 6 ore colpì Genova: il rio Fereggiano, tombato sotto la città, esplose dalla sede stradale. 6 morti, di cui 4 bambini. Una tragedia che ha cambiato il modo italiano di gestire i rii urbani."
 badge: "Comunicazione"
 priorita: "normale"

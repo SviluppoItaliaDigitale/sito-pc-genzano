@@ -1,6 +1,6 @@
 ---
 title: "Scout e Protezione Civile: una storia di servizio che parte da Firenze"
-date: 2026-04-23
+date: 2026-04-23T00:03:00+02:00
 description: "Dal fango di Firenze 1966 all'alluvione dell'Emilia-Romagna 2023, il rapporto tra scoutismo italiano e Protezione Civile. Una storia di volontariato lunga sessant'anni nel giorno di San Giorgio, patrono degli scout."
 badge: "Volontariato"
 priorita: "normale"

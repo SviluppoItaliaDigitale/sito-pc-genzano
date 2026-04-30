@@ -1,6 +1,6 @@
 ---
 title: "Cartelli di pericolo delle sostanze pericolose: come riconoscerli e come comportarsi"
-date: 2026-05-24
+date: 2026-05-24T00:02:00+02:00
 description: "Pittogrammi CLP, etichette ADR e segnaletica di sicurezza: guida ai simboli che il volontario di protezione civile può incontrare sul campo, con i comportamenti corretti da tenere."
 
 badge: "Formazione"
