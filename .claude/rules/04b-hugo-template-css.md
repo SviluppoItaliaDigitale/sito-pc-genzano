@@ -188,3 +188,23 @@ Sistema completo per generare bozze post social (X, Facebook, Instagram, Telegra
 - Script JS di redirect URL legacy (Joomla `*.html`) che si attiva solo se nessuna regola `.htaccess` server-side ha già intercettato l'URL
 
 **Importante**: NON c'è un override `layouts/404.html` nella root del progetto (è stato rimosso aprile 2026). Vince quello del tema. Se in futuro qualcuno crea `layouts/404.html`, scavalca il template del tema e l'utente non vede più questa pagina.
+
+## Homepage enhancements v1.0 (aprile 2026)
+
+Quattro micro-miglioramenti grafici applicati alla **sola homepage** (scoped via `body.home-page`), tutti AGID-compliant, tutti con copertura `prefers-reduced-motion` + `@media print` + toolbar a11y "pausa animazioni" + supporto mobile (nessuna `@media (hover: hover)` o esclusione touch — funzionano identico su iOS/Android).
+
+1. **Live dot pulse** (`.live-dot` + `@keyframes livePulse`) — cerchio blu istituzionale `#003366` accanto al titolo "Notizie in Evidenza", animazione box-shadow espansiva 2.5s. Ricalca il pattern `sosPulse` del bottone SOS-112 in chiave informativa anziché di emergenza. Markup: `<span class="live-dot" aria-hidden="true"></span>` davanti al testo del titolo, in `partials/latest-news.html`.
+
+2. **Reveal-on-scroll** (`.reveal-on-scroll.is-revealed` + `js/homepage-reveal.js`) — IntersectionObserver puro stdlib applicato ai selettori `.quick-action-card`, `.card-servizio`, `.card-notizia-hero`, `section .card.border-danger`, `.stat-hero-item`, `.card-numero-utile`. Le card appaiono con `opacity 0→1 + translateY(15px→0)` quando entrano nel viewport (threshold 0.15, rootMargin -50px). Auto-disable se reduced-motion o IntersectionObserver assente. Script caricato `defer` solo per `.IsHome`.
+
+3. **Hero pattern + gradiente animato** (`@keyframes heroGradientShift` + `body.home-page .hero-section::after`) — pattern di linee oblique sottili (`opacity: 0.045`) via `repeating-linear-gradient` (zero data:URL) sovrapposto al gradiente blu esistente. Il gradiente shifta cromaticamente in 35s loop con `background-size: 180%`. Il movimento è quasi impercettibile ma dà profondità.
+
+4. **Hover lift card + freccia CTA** — `translateY(-3px)` + ombra blu istituzionale al `:hover` o `:focus-within`. La `bi-arrow-right` delle CTA scivola di 4px a destra. Stessa estetica già usata in articoli prev/next + correlati. Su mobile si attiva al `:focus-within` (touch).
+
+CSS scoped sezione **HOMEPAGE ENHANCEMENTS v1.0** in `custom.css` (~150 righe). Body class `home-page` aggiunta condizionalmente in `baseof.html`: `<body{{ if .IsHome }} class="home-page"{{ end }}>` — necessaria per scope CSS, evita leak su altre pagine.
+
+**Per disattivare tutto** (homepage piatta come pre-v1.0): rimuovi la condizione `.IsHome` dal body class in `baseof.html` — niente regole CSS si applicheranno (sono tutte scoped).
+
+**Per estendere a un'altra pagina** (es. archivio comunicazioni): cambia la condizione in `baseof.html` o aggiungi una nuova body class, poi modifica i selettori CSS coerentemente.
+
+Specifiche operative complete in `MANUALE-SITO.md` Parte 15.
