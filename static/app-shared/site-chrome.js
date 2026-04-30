@@ -68,6 +68,12 @@
               '<div class="overlay" style="display:none;"></div>' +
               '<div class="close-div"><button class="btn close-menu" type="button" aria-label="Chiudi il menu di navigazione"><span class="visually-hidden">Chiudi</span><svg class="icon"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-close-big"></use></svg></button></div>' +
               '<div class="menu-wrapper"><ul class="navbar-nav" role="menubar">' +
+                /*
+                 * IMPORTANTE: questo menu deve restare SEMPRE allineato a hugo.toml
+                 * sezione [[menus.main]] e a themes/flavour-pcgenzano/layouts/partials/navbar.html.
+                 * Il workflow audit-sito.yml § "Coerenza menu Hugo ↔ site-chrome.js"
+                 * apre un'issue settimanale se trova drift.
+                 */
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/" role="menuitem"><span>Home</span></a></li>' +
                 /* Dropdown: Per il Cittadino */
                 '<li class="nav-item dropdown" role="none">' +
@@ -84,17 +90,19 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" role="menuitem"><span>Piano Familiare</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
-                /* Dropdown: Formazione */
+                /* Dropdown: Educazione e Inclusione */
                 '<li class="nav-item dropdown" role="none">' +
-                  '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-formazione" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
-                    '<span>Formazione</span>' +
+                  '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-educazione-inclusione" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
+                    '<span>Educazione e Inclusione</span>' +
                     '<svg class="icon icon-xs"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg>' +
                   '</a>' +
-                  '<div class="dropdown-menu" aria-labelledby="navDropdown-formazione"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Corsi e percorsi scuola</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/glossario/" role="menuitem"><span>Glossario</span></a></li>' +
+                  '<div class="dropdown-menu" aria-labelledby="navDropdown-educazione-inclusione"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Kit per le scuole</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/schede-stampabili/" role="menuitem"><span>Schede Stampabili</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi della Sicurezza</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/abili-a-proteggere/" role="menuitem"><span>Abili a Proteggere</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/facile-da-leggere/" role="menuitem"><span>Facile da Leggere</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/glossario/" role="menuitem"><span>Glossario</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 /* Dropdown: Volontariato */
@@ -106,7 +114,20 @@
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-volontariato"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/diventa-volontario/" role="menuitem"><span>Diventa Volontario</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/chi-siamo/" role="menuitem"><span>Chi Siamo</span></a></li>' +
+                  '</ul></div></div>' +
+                '</li>' +
+                /* Dropdown: Risorse */
+                '<li class="nav-item dropdown" role="none">' +
+                  '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-risorse" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
+                    '<span>Risorse</span>' +
+                    '<svg class="icon icon-xs"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg>' +
+                  '</a>' +
+                  '<div class="dropdown-menu" aria-labelledby="navDropdown-risorse"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/faq/" role="menuitem"><span>FAQ</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/strumenti/" role="menuitem"><span>Strumenti in Tempo Reale</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/area-download/" role="menuitem"><span>Area Download</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/normativa/" role="menuitem"><span>Normativa</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/mappa-sito/" role="menuitem"><span>Mappa del Sito</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/comunicazioni/" role="menuitem"><span>Comunicazioni</span></a></li>' +
