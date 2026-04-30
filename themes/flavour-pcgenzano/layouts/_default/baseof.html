@@ -44,7 +44,7 @@
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
   {{ partial "structured-data.html" . }}
 </head>
-<body>
+<body{{ if .IsHome }} class="home-page"{{ end }}>
   <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
   {{ partial "slim-header.html" . }}
   {{ partial "navbar.html" . }}
@@ -65,6 +65,7 @@
   <script src="{{ "js/ext-widgets.js" | relURL }}" defer></script>
   <script src="{{ "js/a11y-toolbar.js" | relURL }}" defer></script>
   <script src="{{ "js/share.js" | relURL }}" defer></script>
+  {{ if .IsHome }}<script src="{{ "js/homepage-reveal.js" | relURL }}" defer></script>{{ end }}
   <script>
     // Back to top — se la pagina ha un indice (#indice), salta direttamente lì,
     // altrimenti torna in cima. La label aria si adatta al contesto.
