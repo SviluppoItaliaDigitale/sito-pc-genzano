@@ -228,9 +228,19 @@ Note operative:
 
 Se un domani serve aggiungere una **quarta azione** (ipotesi: "Numeri utili"), aggiungere prima del bottone "Cosa devo fare?" — non distruggere l'ordine: sequenza visiva column-reverse su mobile (Call → Cosa fare → Annulla dall'alto al basso) e row su desktop (Annulla → Cosa fare → Call da sinistra a destra), che è la gerarchia di azione corretta.
 
-## Shortcode `pagina-emergenza-lite`
+## Shortcode `pagina-emergenza-lite` (pagina `/emergenza/`)
 
-Contiene tutto il rendering della pagina `/emergenza/` (pagina ultra-leggera per banda debole). Usa `data/allerta.json` e `data/emergenza.json` letti al build. Zero widget esterni, CSS inline minimale (~3KB), niente Bootstrap né JS aggiuntivo. Usato solo dalla pagina `content/emergenza/_index.md`. Aliases pagina: `/lite/`, `/emergenza-essenziale/`. Linkata dal footer di tutte le pagine.
+Contiene tutto il rendering della pagina `/emergenza/` (pagina **ultra-leggera** per banda debole o emergenze: 44 KB vs 64 KB della homepage). Usa `data/allerta.json` e `data/emergenza.json` letti al build. Zero widget esterni (Windy/Meteoam/IT-alert), CSS inline minimale (~3KB), niente Bootstrap né JS aggiuntivo. Usato solo dalla pagina `content/emergenza/_index.md`.
+
+**Contenuto in ordine di priorità:**
+1. Banner emergenza dinamico (se `data/emergenza.json` attiva).
+2. 112 grande con call-to-action `tel:112`.
+3. Stato allerta meteo dinamico colorato (legge `data/allerta.json` al build).
+4. 4 numeri essenziali.
+5. 6 azioni "cosa fare ora".
+6. 7 link rapidi al sito completo.
+
+Aliases pagina: `/lite/`, `/emergenza-essenziale/`. Linkata dal footer di tutte le pagine. Caso d'uso: rete satura/lenta durante un'emergenza, dispositivi vecchi, consultazione rapida da mobile.
 
 ## Partial `leggi-ad-alta-voce` (TTS Web Speech API)
 
@@ -273,3 +283,39 @@ CSS in `custom.css` (sezioni "ARTICOLO PREV/NEXT v1.0" e "ARTICOLI CORRELATI v1.
 - Nascosti in stampa via `@media print`
 
 Quando aggiungi una nuova sezione paginata (es. `/news-tecniche/`), nel suo `single.html` (o aggiornando la condizione in `_default/single.html`) basta chiamare i 2 partial — funzionano automaticamente.
+
+## Assistente guidato (`/assistente/`)
+
+Pagina interattiva che guida il cittadino con domande semplici fino a una risposta di autoprotezione. È un **albero decisionale deterministico in JavaScript puro** (nessun LLM, nessuna API runtime), coerente con il vincolo di sito statico Hugo e con la responsabilità istituzionale di non dare indicazioni generate in emergenza.
+
+- **Contenuto**: `content/assistente/_index.md` (solo frontmatter — `type: "assistente"`, `layout: "list"`).
+- **Logica e dati**: `themes/flavour-pcgenzano/layouts/assistente/list.html`. Oggetto `NODES` con 8 percorsi (terremoto, incendio, gas, allerta meteo, allagamento, volontario, numeri utili, IT-alert) e circa 30 nodi totali. Struttura nodo: `{ kind: 'question'|'answer', title, prompt?, options?, body?, bullets?, emergency?, links? }`.
+- **Compatibilità subpath**: i link interni usano `window.SITO_BASEURL` (iniettato via `{{ "" | relURL }}`) per essere compatibili sia con Aruba (root) sia con GitHub Pages (subpath `/sito-pc-genzano/`).
+- **Accessibilità**: `aria-live="polite"` sul contenitore, focus management sul `<h2>` ad ogni render, navigazione tastiera nativa, banner rosso in cima con richiamo al 112, fallback `<noscript>` con link alle pagine istituzionali.
+- **Deep link**: lo stato è riflesso in `location.hash` (es. `/assistente/#terremoto_casa`) per condividere una risposta.
+- **Homepage**: card "Cosa devo fare?" in `data/quick_links.yaml` → `servizi[0]`.
+
+**Per aggiungere un nuovo percorso**: aggiungere un nodo `question` collegato da `start.options`, poi le relative `answer` referenziate da `options[n].next`. Rispettare il criterio `emergency: true` solo per situazioni operative reali (coerenza con regola `06-protezione-civile-scientifica.md` sul tono di comunicazione del rischio). Ogni nodo `answer` può avere un `pittogramma` opzionale (es. `'arasaac/terremoto.png'`) renderizzato come `<figure>` accessibile sopra il corpo della risposta.
+
+## Partial `structured-data` (JSON-LD Schema.org)
+
+`themes/flavour-pcgenzano/layouts/partials/structured-data.html` inietta il blocco `<script type="application/ld+json">` con i dati strutturati Schema.org per i motori di ricerca e gli assistenti vocali.
+
+**Schema attivi:** Organization+NGO, ContactPoint, WebSite (con SearchAction), BreadcrumbList, Article (per `/comunicazioni/`), Event (aggiuntivo per `badge: Evento` con location Place + organizer), FAQPage (per `/faq/`), WebPage (default), Question/Answer, ImageObject, PostalAddress, GeoCoordinates, City.
+
+**Importante — vincolo di tipo Organization:** l'Organization è marcata come `["Organization", "NGO"]`, **NON** `GovernmentOrganization` né `EmergencyService`. Il Gruppo è associazione di volontariato OdV, non ente pubblico né servizio di emergenza chiamabile direttamente — usare quei tipi indurrebbe Google/assistenti vocali a presentare il Gruppo come servizio chiamabile, contraddicendo la regola "in emergenza chiama il 112".
+
+**Quando estendi gli schema**: prudenza su tipi che inducano confusione tra associazione di volontariato e ente pubblico/servizio di emergenza. Verifica con [Google Rich Results Test](https://search.google.com/test/rich-results) e [Schema.org validator](https://validator.schema.org/).
+
+## Partial `meta-social` (Open Graph + Twitter Card)
+
+Tutti i meta tag che controllano l'**anteprima** dei link quando vengono condivisi su WhatsApp, Telegram, Facebook, X, LinkedIn, Slack, ecc. sono in `themes/flavour-pcgenzano/layouts/partials/meta-social.html` (chiamato da `baseof.html`). Include:
+
+- **Open Graph base**: `og:title`, `og:description`, `og:type` (`article` per `.IsPage`, `website` per liste e pagine), `og:url`, `og:locale=it_IT`, `og:site_name`.
+- **Open Graph image avanzato**: `og:image`, `og:image:secure_url`, `og:image:type` (calcolato da estensione: `.webp`/`.png`/`.svg`/`.gif`/default `.jpg`), `og:image:width=1200`, `og:image:height=630`, `og:image:alt` (da `image_alt` o titolo).
+- **Article-specific** (solo `.IsPage`): `article:published_time` (ISO 8601), `article:modified_time`, `article:author`, `article:section` (dal badge), `article:tag` (range sui tags).
+- **Twitter Card**: `twitter:card=summary_large_image`, `twitter:title`, `twitter:description`, `twitter:image`, `twitter:image:alt`. Opzionale `twitter:site` se in `[params] twitterSite = "@..."` di `hugo.toml`.
+
+Default per pagine senza copertina: `static/images/og-default.png` 1200×630 nel tema.
+
+**Cache delle anteprime**: le piattaforme social cachano le anteprime (Facebook/X possono cachare per ore o giorni). Se modifichi la copertina di un articolo, l'anteprima si aggiorna **solo dopo che la piattaforma ricontrolla**. Per forzare il refresh: [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) e [Twitter Card Validator](https://cards-dev.twitter.com/validator).

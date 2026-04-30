@@ -60,6 +60,15 @@ Deployed to two targets on every push to `main` via GitHub Actions:
 - **Aruba hosting**: `https://www.protezionecivilegenzano.it/`
 - **GitHub Pages**: `https://sviluppoitaliadigitale.github.io/sito-pc-genzano/`
 
+**Architettura, struttura del progetto, regole Hugo:** vedi `.claude/rules/04-hugo-architecture.md` (mappa generale), `04a-hugo-shortcode-partial.md` (shortcode/partial/render hook), `04b-hugo-template-css.md` (template, menu, CSS, UX), `04c-hugo-static-cartelle.md` (cartelle statiche).
+
+**Manuali operativi nella root del repo:**
+- `MANUALE-SITO.md` — manuale operativo completo (procedura articoli, immagini fascia blu, checklist pre-pubblicazione)
+- `MANUALE-MOBILE.md` — workflow editoriale da mobile/cloud
+- `PIANO-EDITORIALE.md` — fonti ufficiali e calendario redazionale
+- `README.md` — overview pubblica del repo
+- `CONTESTO-AI.md` — export auto-generato per altre AI
+
 ## Common commands
 
 ```bash
@@ -88,22 +97,17 @@ bash scripts/export-contesto-ai.sh
 
 # Applica fascia blu istituzionale a una foto fornita dall'utente
 bash scripts/applica-fascia-foto.sh <file-sorgente> <nome-output-senza-ext>
-# Esempio:
-#   bash scripts/applica-fascia-foto.sh /home/utente/Scaricati/Zamberletti.jpg zamberletti-ritratto-istituzionale
 # Produce static/images/<nome>.webp (1200px, fascia blu + logo + testo istituzionale).
 # Dettagli in MANUALE-SITO.md Parte 3.8 Metodo 4.
 
 # Scarica/aggiorna la libreria di pittogrammi (ISO 7010 + ARASAAC)
 bash scripts/scarica-pittogrammi.sh           # solo i mancanti
 bash scripts/scarica-pittogrammi.sh --force   # ri-scarica tutto
-# Output: static/pittogrammi/iso7010/*.svg + static/pittogrammi/arasaac/*.png
-# Attribuzioni obbligatorie su /attribuzioni-pittogrammi/ (linkata dal footer).
 
 # Scarica foto per articoli da fonti libere (con fascia blu istituzionale)
 bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [lang]
 bash scripts/foto-da-nasa.sh      "search query"            slug-articolo
 bash scripts/foto-da-usgs.sh      shakemap <eventid>        slug-articolo
-# Output: static/images/<slug>.webp (1200px, fascia blu, max ~200 KB)
 # Da mobile/cloud: vedi workflow scarica-foto-automatica.yml + marker frontmatter.
 
 # Genera bozze social (X, Facebook, Instagram, Telegram) + immagini IG
@@ -112,250 +116,25 @@ bash scripts/genera-social.sh --all                            # tutti pubblicat
 bash scripts/genera-social.sh --since 2026-04-01               # da una data
 bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
 # Richiede: GEMINI_API_KEY in env (gratis: aistudio.google.com/apikey).
-# Output: 4 .txt in social-bozze/<slug>/ + 1-N immagini Instagram in
-#         static/images-social/<slug>-instagram-{post,post-N,story}.webp.
-# Carosello automatico: se l'articolo ha foto inline {{< foto >}} nel body,
-# vengono usate per il carosello Instagram (cover + foto, max 10).
 # Da mobile/cloud: il workflow genera-social-bozze.yml fa lo stesso lavoro.
 ```
 
-## Architecture
+## Architettura — riferimenti rapidi
 
-### Dual-mode homepage
-
-The homepage (`themes/flavour-pcgenzano/layouts/index.html`) has two distinct layouts controlled by `data/emergenza.json`:
-- **Normal mode**: hero section → services → news → risk cards → quick links
-- **Emergency mode**: emergency banner + actions first, compact hero, news pushed down
-
-The `data/allerta.json` file drives the color-coded weather alert bar shown on all pages.
-
-### Data files (`data/`)
-
-These JSON/YAML files are the primary way to update dynamic site content without editing templates:
-
-| File | Purpose |
+| Cosa | Dove |
 |---|---|
-| `emergenza.json` | Emergency mode on/off, type (`blu/giallo/arancione/rosso`), title, description |
-| `allerta.json` | Weather alert level (`verde/giallo/arancione/rosso`), title, description |
-| `risk_cards.yaml` | Cards shown on the Rischi e Prevenzione page (9 risk types) |
-| `numeri_utili.yaml` | Emergency phone numbers |
-| `quick_links.yaml` | CTA buttons on the homepage hero |
-| `social_links.yaml` | Social channel links |
-| `codici_colore.yaml` | Color code descriptions for the Allerte Meteo page |
-
-### Content (`content/`)
-
-- `comunicazioni/` — News posts. Use the archetype: `hugo new comunicazioni/YYYY-MM-DD-titolo.md`
-  - Key front matter: `badge` (Allerta | Avviso | Comunicazione | Attività | Formazione | Evento | Volontariato | Radiocomunicazioni | Prevenzione | Esercitazione | Aggiornamento | Informazione | Emergenza — le categorie non in elenco ricevono un colore automatico), `priorita` (normale/urgente), `scadenza` (date), `allegati` (lista di PDF, ogni voce con `titolo`, `url`, e `dimensione` opzionale ma raccomandata per WCAG 3.3.5), `draft`
-  - **Palette categorie** (hex usati per badge e filtri archivio — ogni categoria ha un colore distinto, contrasto WCAG AA ≥ 4.5:1 su bianco): Allerta `#d9364f` · Emergenza `#7f1d1d` · Avviso `#b45309` · Evento `#c026d3` · Comunicazione `#003366` · Radiocomunicazioni `#0369a1` · Informazione `#0284c7` · Prevenzione `#15803d` · Esercitazione `#ea580c` · Aggiornamento `#4338ca` · Formazione `#7c3aed` · Volontariato `#b45309` · Attività `#0891b2`. I filtri dell'archivio (`themes/flavour-pcgenzano/layouts/comunicazioni/list.html`) usano selettori `.filter-pill[data-filter="..."]` per impostare `--pill-color` e `--pill-tint`: modifiche alla palette vanno replicate in `custom.css` sia nelle classi `.notizia-categoria.<cat>` sia nei selettori `.filter-pill[data-filter="<cat>"]`.
-  - **Scelta `Allerta` vs `Emergenza`**: i due badge non sono sinonimi. `Allerta` = evento **previsto** (bollettino, codice colore, finestra temporale). `Emergenza` = evento **in corso** che impone azioni immediate al cittadino. Dopo la chiusura dell'evento si passa ad `Aggiornamento` o `Comunicazione`. Criteri operativi e tono verbale in `.claude/rules/06-protezione-civile-scientifica.md` sezione "Quando usare il badge 'Allerta' e quando 'Emergenza'".
-  - **IMPORTANTE**: il formato data nel frontmatter dipende da quanti articoli condividono la giornata. **1 articolo/giorno**: usa `AAAA-MM-GG` semplice (es. `date: 2026-04-06`). **2+ articoli/giorno**: usa il formato ISO con orario crescente per ogni articolo, partendo da `00:01` con step 1 minuto (es. 1° articolo `date: 2026-04-30T00:01:00+02:00`, 2° articolo `date: 2026-04-30T00:02:00+02:00`, ecc.). L'orario serve solo come tie-break per l'ordering Hugo Date desc (l'ultimo scritto = orario maggiore = in cima); non viene mostrato all'utente. Mai usare `Z` come timezone (UTC) — usa sempre `+02:00`. Specifiche complete in `.claude/rules/02-content-design-pa.md` § "Regola critica formato data". Per fix retroattivo: `python3 scripts/fix-ordering-articoli-stesso-giorno.py`.
-- All other folders are static pages (one `_index.md` per section)
-
-### Theme (`themes/flavour-pcgenzano/`)
-
-Custom theme, not an external dependency — edit freely. Structure:
-- `layouts/partials/` — reusable components (navbar, footer, emergency-banner, allerta-card, etc.)
-- `layouts/_default/` — base, list, single templates. In `single.html` l'`<article>` usa `class="article-body"` per attivare la tipografia istituzionale curata (v7.2)
-- `layouts/shortcodes/` — shortcode disponibili: `foto` (immagini articolo con click-per-ingrandire), `pittogramma` (ISO 7010/ARASAAC), `cosa-non-fare` (box rosso divieti per pagine rischio), `chi-chiamare` (tabella accessibile "chi chiamare" + chiarimento attivazione Gruppo, in coda alle pagine /rischi-prevenzione/*), `pagina-emergenza-lite` (contenuto pagina /emergenza/ ultra-leggera)
-- `layouts/_default/_markup/` — render hook Markdown: `render-link.html` (link interni vs statici vs esterni) e `render-table.html` (tabelle accessibili: aggiunge `<th scope="col">` automatico a TUTTE le tabelle Markdown del sito + wrapping `.table-responsive` Bootstrap Italia + supporto `<caption>` per le tabelle convertite in HTML diretto). Hook universale: nessun editing manuale per pagina.
-- `layouts/partials/` — include `article-cover.html` (copertina articolo con didascalia image_credit), `leggi-ad-alta-voce.html` (TTS Web Speech API per pagine essenziali), `accessibility-toolbar.html` (FAB strumenti a11y), `structured-data.html` (JSON-LD Organization NGO + ContactPoint + Article + Event + FAQPage + WebSite + BreadcrumbList)
-- `layouts/index.html` — homepage template
-- `static/css/custom.css` — override CSS su Bootstrap Italia. Include:
-  - regole `@media print` globali che nascondono tutto il chrome del sito quando l'utente clicca "Stampa"
-  - sezione **v7.2 `.article-body`** che applica solo agli articoli: lede, capolettera, H2 con barra blu a sinistra, `::marker` blu, blockquote rilevati, figure con ombra morbida, tabelle con header blu, link underline che si rafforza al hover. Override integrati per mobile, `prefers-reduced-motion` e stampa. Dettagli in `MANUALE-SITO.md` Parte 3.15.
-
-### Shortcode `foto` (per immagini nel corpo degli articoli)
-
-Quando si inseriscono **foto evento** (interventi, formazione, attività con foto reali fornite dall'utente) nel corpo di un articolo, usare sempre lo shortcode `foto` — mai markdown `![alt](src)` diretto:
-
-```go-html-template
-{{< foto src="/images/AAAA-MM-GG-descrizione.webp"
-         alt="Descrizione significativa per screen reader"
-         caption="Didascalia opzionale." >}}
-```
-
-Produce `<figure>` con immagine cliccabile (apre a dimensione intera in nuova scheda), `<figcaption>` opzionale, `aria-label` descrittivo, `loading="lazy"`, responsive. Specifiche complete in `MANUALE-SITO.md` Parte 3.14.
-
-**Distinzione copertina vs foto evento**:
-- **Copertina**: generata automaticamente da `scripts/genera-cover.py` (gradiente blu + titolo + badge + fascia istituzionale). Nome file = slug dell'articolo.
-- **Foto evento**: fornita dall'utente. Nome file DIVERSO dallo slug (es. `2026-04-20-incendio-cecchina-casolare.webp` invece del solo slug), così il generatore non la sovrascrive. Deve comunque avere la fascia blu istituzionale.
-
-**Convenzione posizionamento foto multiple negli articoli storici** (introdotta aprile 2026):
-- **1ª foto**: dopo il **1° H2** dell'articolo, dopo il primo paragrafo di contenuto.
-- **2ª foto**: dopo il **2° H2**, per aprire una seconda dimensione narrativa (ricostruzione, contesto, conseguenze).
-- **3ª foto e oltre**: una per ogni H2 di **evento storico specifico citato** (es. negli articoli che raccontano sequenze di terremoti — Irpinia 1980, L'Aquila 2009, Centro Italia 2016, Emilia-Romagna 2023).
-- **Mai a casaccio**: ogni foto va legata tematicamente alla sezione che la precede.
-
-Lo script `scripts/foto-da-wikipedia.sh` filtra automaticamente bandiere/stemmi comunali (pattern `*Bandiera.svg`, `Flag_of_*`, `*-Stemma.svg`, `*Coat_of_arms*`) — exit code `4`. Non aggiungono valore narrativo; provare un titolo più specifico (un monumento, una piazza, una veduta). Specifiche complete in `MANUALE-SITO.md` Parte 14.9.
-
-### Shortcode `pittogramma` (per supporto comprensione)
-
-Per migliorare l'accessibilità cognitiva dei contenuti (bambini, anziani, persone con disabilità cognitive, parlanti italiano L2) si usa lo shortcode `pittogramma`, che inserisce simboli ISO 7010 (sicurezza standard) o ARASAAC (CC BY-NC-SA, comprensione cognitiva).
-
-```go-html-template
-{{< pittogramma src="/pittogrammi/arasaac/terremoto.png"
-                alt="Pittogramma: terremoto"
-                caption="Cosa fare in caso di terremoto" >}}
-```
-
-Uso inline (dentro una frase):
-```go-html-template
-Chiama il {{< pittogramma src="/pittogrammi/arasaac/112.png" alt="numero 112" inline="true" >}} 112.
-```
-
-Parametri: `src` (obbligatorio), `alt` (obbligatorio), `caption` (opzionale solo block), `inline="true"` per inserimento inline, `size` (small/medium/large/xlarge, default medium).
-
-Produce `<img>` con `role="img"`, `loading="lazy"`, oppure `<figure>` con caption opzionale. CSS scoped in `custom.css` (sezione **PITTOGRAMMI v1.0**) con dimensioni fisse, override mobile, mantenimento colori in stampa (essenziale per i segnali di sicurezza). Compatibile con il toolbar di accessibilità: i pittogrammi sono marcati funzionali e restano visibili anche con preferenza "Nascondi immagini" attiva (selettori `html.a11y-hide-images img.pittogramma` e `html.a11y-grayscale img.pittogramma`).
-
-**Libreria disponibile** (172 simboli, 3.3 MB):
-- `static/pittogrammi/iso7010/*.svg` — 46 segnali standard (evacuazione, antincendio, divieto, obbligo, avvertimento). Fonte: Wikimedia Commons (PD-shape/CC0).
-- `static/pittogrammi/arasaac/*.png` — 126 simboli (eventi, azioni autoprotezione, oggetti kit, persone, luoghi, segnali, veicoli). Fonte: ARASAAC (CC BY-NC-SA, autore Sergio Palao).
-
-**Re-download della libreria**: `bash scripts/scarica-pittogrammi.sh` (idempotente, scarica solo i mancanti; `--force` ri-scarica tutto).
-
-**Catalogo pubblico**: `/pittogrammi/` mostra l'intera libreria con anteprima, codice e licenza.
-
-**Attribuzioni obbligatorie**: pagina `/attribuzioni-pittogrammi/` linkata dal footer. Le opere derivate (schede stampabili che includono ARASAAC) ereditano CC BY-NC-SA 4.0.
-
-### Assistente guidato (`/assistente/`)
-
-Pagina interattiva che guida il cittadino con domande semplici fino a una risposta di autoprotezione. È un **albero decisionale deterministico in JavaScript puro** (nessun LLM, nessuna API runtime), coerente con il vincolo di sito statico Hugo e con la responsabilità istituzionale di non dare indicazioni generate in emergenza.
-
-- Contenuto in `content/assistente/_index.md` (solo frontmatter — `type: "assistente"`, `layout: "list"`).
-- Logica e dati in `themes/flavour-pcgenzano/layouts/assistente/list.html`: oggetto `NODES` con 8 percorsi (terremoto, incendio, gas, allerta meteo, allagamento, volontario, numeri utili, IT-alert) e circa 30 nodi totali (domande e risposte). Struttura nodo: `{ kind: 'question'|'answer', title, prompt?, options?, body?, bullets?, emergency?, links? }`.
-- I link interni usano `window.SITO_BASEURL` (iniettato via `{{ "" | relURL }}`) per essere compatibili sia con Aruba (root) sia con GitHub Pages (subpath `/sito-pc-genzano/`).
-- Accessibilità: `aria-live="polite"` sul contenitore, focus management sul `<h2>` ad ogni render, navigazione tastiera nativa, banner rosso in cima con richiamo al 112, fallback `<noscript>` con link alle pagine istituzionali.
-- Deep link: lo stato è riflesso in `location.hash` (es. `/assistente/#terremoto_casa`) per condividere una risposta.
-- Homepage: card "Cosa devo fare?" in `data/quick_links.yaml` → `servizi[0]`.
-
-Per aggiungere un nuovo percorso: aggiungere un nodo `question` collegato da `start.options`, poi le relative `answer` referenziate da `options[n].next`. Rispettare il criterio `emergency: true` solo per situazioni operative reali (coerenza con regola `06-protezione-civile-scientifica.md` sul tono di comunicazione del rischio). Ogni nodo `answer` può avere un `pittogramma` opzionale (es. `'arasaac/terremoto.png'`) renderizzato come `<figure>` accessibile sopra il corpo della risposta (vedi sezione pittogrammi).
-
-### Pagina `/emergenza/` lite (per banda debole o emergenze)
-
-Pagina ultra-leggera (44 KB vs 64 KB della homepage) per consultazione rapida quando la rete è satura/lenta. Aliases attivi: `/lite/`, `/emergenza-essenziale/`. Contenuto in ordine di priorità: banner emergenza dinamico (se `data/emergenza.json` attiva), 112 grande con call-to-action, stato allerta meteo dinamico colorato (legge `data/allerta.json` al build), 4 numeri essenziali, 6 azioni "cosa fare ora", 7 link rapidi al sito completo. Zero widget esterni (Windy/Meteoam/IT-alert), CSS inline nello shortcode `pagina-emergenza-lite.html`. Linkata dal footer di tutte le pagine.
-
-### TTS "Leggi ad alta voce" (Web Speech API)
-
-Pulsante che usa `window.speechSynthesis` browser nativo per leggere il contenuto delle pagine essenziali in italiano. Voce `it-IT` preferita, rate 0.95 per chiarezza, stati idle/reading/paused, fallback graceful (bottone nascosto) se browser senza Web Speech API. Esclude script/pittogrammi/code blocks dal testo letto. Componente in `partials/leggi-ad-alta-voce.html`. Opt-in via frontmatter `tts: true`. Attivo su 12 pagine: cosa-fare-adesso, numeri-utili, facile-da-leggere, allerte-meteo, piano-familiare + 7 sotto-pagine rischi-prevenzione. Caso d'uso: anziani con vista debole, persone in stress/emergenza, parlanti italiano L2, bambini.
-
-### Box "Cosa NON fare" (shortcode `cosa-non-fare`)
-
-Box rosso bordato con icona divieto che evidenzia visivamente i comportamenti DA EVITARE in caso di emergenza. Aumenta l'efficacia della comunicazione del rischio rispetto ai "non" dispersi nel testo. Attivo nelle 7 pagine `/rischi-prevenzione/*` (sismico, incendio, idrogeologico, vento, temporali, blackout, ondate calore). Contrasto WCAG AA garantito (testo `#7f1d1d` su `#fff5f5` = 7.7:1). Compatibile con toolbar a11y (contrasto invertito + scala grigi).
-
-### Box "Chi chiamare" (shortcode `chi-chiamare`)
-
-Sezione finale standardizzata delle 7 pagine `/rischi-prevenzione/*`: tabella accessibile (`<caption>` + `<th scope="col">`) con 3 livelli di gravità (vita in pericolo → 112; pericolo concreto → 112; segnalazione non urgente → 803 555) + nota istituzionale che chiarisce che il **Gruppo Comunale non è attivabile direttamente dai cittadini** (l'attivazione passa da Comune, Centro Funzionale Lazio, Prefettura). Coerente con `06-protezione-civile-scientifica.md` e con la pagina `/contatti/`. Uso senza parametri: `{{< chi-chiamare >}}`. Insieme al box `cosa-non-fare` chiude la struttura uniforme **Prima → Durante → Dopo → NON fare → Chi chiamare** delle pagine rischio.
-
-### Tabelle accessibili (render hook `render-table.html`)
-
-Tutte le tabelle Markdown del sito sono renderizzate con `<th scope="col">` automatico (WCAG 1.3.1 Info and Relationships) + wrapping in `.table-responsive` Bootstrap Italia + supporto allineamento colonne (left/center/right) preservato dal Markdown. **Nessun editing manuale per pagina**: il fix è sistemico (oltre 400 `<th>` gestiti dall'hook).
-
-Il file è `themes/flavour-pcgenzano/layouts/_default/_markup/render-table.html`. Per le tabelle con `<caption>` esplicito (consigliato per tabelle landing critiche tipo `/contatti/`, `/numeri-utili/`, `/chi-siamo/`) si usa **HTML diretto** dentro Markdown — l'attribute syntax di Goldmark non si applica alle tabelle in Hugo. Esempio: `<table><caption>...</caption><thead><tr><th scope="col">...</th></tr></thead>...</table>` — vedi `content/contatti/_index.md` per il pattern di riferimento. CSS coordinato in `custom.css` sezione **TABLE CAPTION v1.0** (italico blu istituzionale, `.visually-hidden` helper per caption per screen reader-only).
-
-### FAQ accordion (CSS `.faq-item`)
-
-Per ridurre muri di testo in pagine informative con molte domande/risposte (es. `/allerte-meteo/`, `/faq/`), il sito ha una classe `.faq-item` che stilizza l'elemento HTML nativo `<details>`/`<summary>` come accordion accessibile. Vantaggi: semantica nativa (zero JS, zero ARIA hand-rolled), navigabile da tastiera, letta correttamente dagli screen reader, override stampa che apre tutti i `<details>` automaticamente. Esempio: `<details class="faq-item"><summary><strong>Domanda</strong></summary>Risposta…</details>`. Sezione **FAQ ACCORDION v1.0** in `custom.css`.
-
-### Share buttons (`partials/page-tools.html` + `js/share.js`)
-
-In fondo a ogni articolo e a tutte le pagine che includono `page-tools.html` c'è una riga di icone per **condividere il contenuto** su WhatsApp, Telegram, Facebook, X, LinkedIn, Email, oppure **copiare il link**, oppure usare la **condivisione nativa** del sistema operativo (Web Share API). Privacy-first: **solo link "share intent" HTML standard + Clipboard API + Web Share API**, nessuno script di terze parti, nessun tracker. Conforme AGID + GDPR senza necessità di consent banner. Bootstrap Italia ha un'utility `share` analoga ([italia.github.io/bootstrap-italia/docs/utilities/share/](https://italia.github.io/bootstrap-italia/docs/utilities/share/)). Il bottone "condividi nativo" si auto-nasconde se `navigator.share` non è supportato (desktop). Specifiche complete in regola `04a-hugo-shortcode-partial.md` sezione "Share buttons".
-
-### Striscia pittogrammi (CSS `.kit-pittogrammi-row`)
-
-Riga visiva di pittogrammi ARASAAC inline per dare un colpo d'occhio immediato a una pagina di lista (es. `/rischi-prevenzione/kit-emergenza/`). Layout flex centrato, sfondo azzurrino istituzionale, gap responsive. Pattern: `<div class="kit-pittogrammi-row" role="img" aria-label="...">{{< pittogramma inline="true" >}} ...</div>`. Sezione **STRISCIA PITTOGRAMMI v1.0** in `custom.css`.
-
-### Modal SOS-112 (`partials/sos-112.html`)
-
-Bottone fisso "SOS 112" in basso a destra (FAB), apre un modal di conferma con **3 azioni**:
-1. **Annulla** (focus iniziale, ENTER non chiama).
-2. **Cosa devo fare?** → `/assistente/` (albero decisionale guidato): per chi non è sicuro che sia un'emergenza vera. Bottone outline blu istituzionale.
-3. **Sì, chiama il 112** (`tel:112`): bottone rosso primario.
-
-Il modal include nota informativa azzurra (`.sos-modal-alt`) che spiega l'alternativa "assistente guidato" prima dei pulsanti, e mantiene il warning legale (art. 658 c.p.). Focus trap JS riconosce automaticamente i 3 elementi via selettore `[href]`. Link verso assistente passa per `relURL` per essere compatibile sia con Aruba (root) sia con GitHub Pages (subpath).
-
-### Dati strutturati JSON-LD (`partials/structured-data.html`)
-
-**Importante**: l'Organization è marcata come `["Organization", "NGO"]`, **NON** `GovernmentOrganization` né `EmergencyService`. Il Gruppo è associazione di volontariato OdV, non ente pubblico né servizio di emergenza chiamabile direttamente — usare quei tipi indurrebbe Google/assistenti vocali a presentare il Gruppo come servizio chiamabile, contraddicendo la regola "in emergenza chiama il 112". Schema attivi: Organization+NGO, ContactPoint dedicato, WebSite (con SearchAction), BreadcrumbList, Article (per `/comunicazioni/`), Event (aggiuntivo per `badge: Evento` con location Place + organizer), FAQPage (per `/faq/`), WebPage (default), Question/Answer, ImageObject, PostalAddress, GeoCoordinates, City. Quando si aggiungono schema nuovi, prudenza su tipi che inducano confusione tra associazione di volontariato e ente pubblico/servizio di emergenza.
-
-### Anteprime link condivisi — Open Graph + Twitter Card (`partials/meta-social.html`)
-
-Tutti i meta tag che controllano l'**anteprima** dei link quando vengono condivisi su WhatsApp, Telegram, Facebook, X, LinkedIn, Slack, ecc. sono in `partials/meta-social.html` (chiamato da `baseof.html`). Include:
-
-- **Open Graph base**: `og:title`, `og:description`, `og:type` (`article` per `.IsPage`, `website` per liste e pagine), `og:url`, `og:locale=it_IT`, `og:site_name`.
-- **Open Graph image avanzato**: `og:image`, `og:image:secure_url`, `og:image:type` (calcolato da estensione: `.webp`/`.png`/`.svg`/`.gif`/default `.jpg`), `og:image:width=1200`, `og:image:height=630`, `og:image:alt` (da `image_alt` o titolo).
-- **Article-specific** (solo `.IsPage`): `article:published_time` (ISO 8601), `article:modified_time`, `article:author`, `article:section` (dal badge), `article:tag` (range sui tags).
-- **Twitter Card**: `twitter:card=summary_large_image`, `twitter:title`, `twitter:description`, `twitter:image`, `twitter:image:alt`. Opzionale `twitter:site` se in `[params] twitterSite = "@..."` di `hugo.toml`.
-
-Default per pagine senza copertina: `static/images/og-default.png` 1200×630 nel tema.
-
-Le anteprime usano questi tag — non i `<meta name="description">` standard. Se modifichi la copertina di un articolo, l'anteprima social si aggiorna **solo dopo che la piattaforma ricontrolla** (cache lato Facebook/X può durare ore o giorni). Per forzare il refresh: [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) e [Twitter Card Validator](https://cards-dev.twitter.com/validator).
-
-### Bozze social automatiche (Gemini API + immagini Instagram)
-
-Sistema completo per generare automaticamente bozze di post social per X, Facebook, Instagram, Telegram + immagini Instagram (post 1080×1080 + carosello + story 1080×1920) a partire dagli articoli del sito. Niente AI a pagamento: usa il **tier gratuito Gemini 2.5 Flash** (1500 req/giorno, costo zero a regime).
-
-**Componenti:**
-
-- `scripts/genera-social.py` — motore Python. Carica le rules istituzionali da `.claude/rules/02`, `03`, `06`, le inietta nel system prompt di Gemini, ottiene 4 testi calibrati per piattaforma in JSON strutturato, salva 4 `.txt` + README in `social-bozze/<slug>/`. Modalità: singolo articolo, `--all`, `--since YYYY-MM-DD`, `--dry-run`, `--force`.
-- `scripts/genera-immagini-social.py` — generazione immagini Pillow. Template istituzionale (header blu con logo + brand, cover articolo, footer con titolo + URL). **Auto-rilevamento carosello**: estrae le foto inline `{{< foto src="..." >}}` dal body dell'articolo e le combina con la cover principale (max 10 immagini) per produrre un carosello Instagram. Story sempre 1 sola.
-- `scripts/genera-social.sh` — wrapper bash che chiama in sequenza i 2 script Python.
-- `.github/workflows/genera-social-bozze.yml` — automazione CI: a ogni push su `main` che modifica `content/comunicazioni/*.md`, identifica gli articoli toccati e genera le bozze + immagini, committa con marker `[skip-social]` per evitare loop.
-- `scripts/README-social.md` — documentazione setup + uso.
-
-**3 scenari gestiti automaticamente:**
-
-| Scenario | `image:` frontmatter | Foto inline `{{< foto >}}` | Output Instagram |
-|---|---|---|---|
-| A — Nessuna foto | `""` (vuoto) | (assenti) | 1 cover tipografica generata al volo + story |
-| B — Una foto | `/path.webp` | (assenti) | 1 post + 1 story (entrambi con la cover) |
-| C — Più foto | `/path.webp` | 2-9 foto nel body | Carosello (cover + inline, max 10) + 1 story |
-
-**Setup richiesto (una sola volta):**
-1. Creare API key gratuita su `aistudio.google.com/apikey`.
-2. In locale: `export GEMINI_API_KEY="..."` in `~/.bashrc`.
-3. Su GitHub: Secret del repo `GEMINI_API_KEY`.
-
-**Output:**
-- `social-bozze/<slug>/` — bozze testuali (cartella **fuori da Hugo**, non deployata sul sito; visibile solo nel repo per copia/incolla manuale).
-- `static/images-social/<slug>-instagram-{post,post-N,story}.webp` — immagini Instagram (deployate sul sito, accessibili via URL pubblico Aruba).
-
-**Regole rispettate** (caricate dinamicamente dalle rules):
-- `02-content-design-pa.md` — linguaggio AGID, hashtag stabili, struttura post crisi
-- `03-accessibility.md` — alt text, max 2 emoji, no Unicode decorativi
-- `06-protezione-civile-scientifica.md` — codici colore, struttura 6 punti per allerte, gerarchia fonti DPC
-
-Quando modifichi una rule, le bozze future seguiranno la nuova policy senza modifiche al codice.
-
-### Articoli prev/next + correlati (`partials/articolo-navigazione.html`, `partials/articoli-correlati.html`)
-
-In fondo a ogni articolo `/comunicazioni/`, `_default/single.html` include automaticamente:
-
-1. **Articoli correlati**: 3 card "Leggi anche" con stesso `badge` dell'articolo corrente, ordinate per data decrescente (più recenti prima). Esclude l'articolo corrente. Render hook su `.Site.RegularPages | where "Section" "comunicazioni" | where "Params.badge" "==" $badgeAttuale`.
-2. **Navigazione cronologica**: «← Articolo più recente» / «Articolo precedente →» auto-generata da `.PrevInSection` / `.NextInSection`. Attiva su qualsiasi pagina `.IsPage` con un `.Section` >= 2 articoli.
-
-CSS in `custom.css` sezioni "ARTICOLO PREV/NEXT v1.0" e "ARTICOLI CORRELATI v1.0" — entrambe nascoste in stampa.
-
-### Pagina 404 istituzionale (atterraggio del recupero)
-
-`themes/flavour-pcgenzano/layouts/404.html` non è una pagina di errore generica: è una **pagina di atterraggio del recupero** con form ricerca interna integrato + 8 card di link rapidi alle pagine più consultate (Numeri Utili, Allerte Meteo, Cosa fare adesso, Assistente, Diventa Volontario, Comunicazioni, Cartografia, Mappa Sito) + alert «in caso di emergenza chiama il 112» + script di redirect URL legacy. Su Aruba i 301 server-side dal `.htaccess` arrivano prima della 404 (per le URL legacy mappate); la pagina 404 si attiva solo per URL mai esistite.
-
-### Strumenti di Accessibilità (toolbar utente)
-
-Bottone rotondo blu (FAB) in basso a sinistra su ogni pagina, apre un dialog modale con preferenze di lettura (dimensione testo, contrasto, scala di grigi, spaziatura, carattere ad alta leggibilità, evidenzia link, cursore grande, ecc.). Persistenza in `localStorage`. Inline early script in `<head>` per evitare il flash visivo al caricamento.
-
-File:
-- `themes/flavour-pcgenzano/layouts/partials/accessibility-toolbar.html` (markup)
-- `themes/flavour-pcgenzano/static/css/a11y-toolbar.css` (FAB + dialog + classi `html.a11y-*` di preferenze)
-- `themes/flavour-pcgenzano/static/js/a11y-toolbar.js` (logica)
-- Pagina pubblica correlata: `content/accessibilita/_index.md`.
-
-Regole estese in `.claude/rules/04b-hugo-template-css.md` e `.claude/rules/03-accessibility.md`. **Mai sostituire** con widget commerciali tipo AccessiBe / UserWay (sconsigliati da W3C-WAI). Quando modifichi un componente del sito, verifica che funzioni anche con contrasto invertito, scala di grigi, immagini nascoste, pausa animazioni.
-
-### Archetypes (`archetypes/`)
-
-- `comunicazioni.md` — full front matter template for news posts (use this)
-- `default.md` — minimal template for other pages
+| Homepage dual-mode (normale / emergenza) | `themes/flavour-pcgenzano/layouts/index.html` + `data/emergenza.json`. Dettagli in `04-hugo-architecture.md` § "Homepage dual-mode" |
+| Data files (`emergenza.json`, `allerta.json`, `risk_cards.yaml`, `numeri_utili.yaml`, `quick_links.yaml`, `social_links.yaml`, `codici_colore.yaml`) | `data/` — vedi `04-hugo-architecture.md` § "Contenuti dinamici via data files" |
+| Articoli `comunicazioni/` (frontmatter, badge, palette categorie, formato data) | `02-content-design-pa.md` |
+| Badge categorie articoli (dichiarati in `themes/flavour-pcgenzano/layouts/partials/badge.html`): **Allerta · Avviso · Comunicazione · Attività · Formazione · Evento · Volontariato · Radiocomunicazioni · Prevenzione · Esercitazione · Aggiornamento · Informazione · Emergenza** — palette completa con hex e contrasto WCAG in `02-content-design-pa.md` § "Frontmatter obbligatorio" | `02-content-design-pa.md` |
+| Tema custom `flavour-pcgenzano` (layouts, partials, shortcodes, render hook, CSS custom) | `04a-hugo-shortcode-partial.md` + `04b-hugo-template-css.md` |
+| Shortcode disponibili: `foto`, `pittogramma`, `cosa-non-fare`, `chi-chiamare`, `pagina-emergenza-lite` | `04a-hugo-shortcode-partial.md` |
+| Render hook Markdown: `render-link.html`, `render-table.html` | `04a-hugo-shortcode-partial.md` |
+| Partial: `article-cover`, `leggi-ad-alta-voce` (TTS), `accessibility-toolbar`, `structured-data` (JSON-LD), `meta-social` (Open Graph), `articolo-navigazione`, `articoli-correlati`, `page-tools`, `sos-112` | `04a-hugo-shortcode-partial.md` |
+| Menu navbar mega-menu, TOC pagine lunghe, tipografia `.article-body` v7.2, regole stampa, toolbar a11y, bozze social Gemini, pagina 404, homepage enhancements v1.0 | `04b-hugo-template-css.md` |
+| Cartelle `static/` canoniche e cartella `riferimenti-interni/` non deployata | `04c-hugo-static-cartelle.md` |
+| Assistente guidato `/assistente/` (albero decisionale JS) | `04a-hugo-shortcode-partial.md` § "Assistente guidato" |
+| Pagina lite `/emergenza/` (44 KB) | `04a-hugo-shortcode-partial.md` § "Shortcode pagina-emergenza-lite" |
 
 ## Regole contenuti e qualità
 
@@ -401,7 +180,7 @@ Regole estese in `.claude/rules/04b-hugo-template-css.md` e `.claude/rules/03-ac
 
 14. **SANDBOX CLAUDE CODE — sblocco per fonti immagini libere**: per scaricare foto dalle **7 fonti supportate** (Wikipedia, Wikimedia, NASA, USGS, NOAA + Pexels, Pixabay, Unsplash) senza essere bloccato dalla sandbox di sicurezza, il repo ha una configurazione predefinita in `.claude/settings.local.json` (in `.gitignore`, locale). Lo schema completo (allowlist `permissions` + `sandbox.network.allowedDomains` per i ~17 domini delle nostre fonti foto) è in `.claude/rules/08-claude-code-setup.md`. Procedura: creare il file una volta sola, riavviare Claude Code (la sandbox legge il file all'avvio, non dinamicamente). Senza questo sblocco, le fonti immagini sono comunque accessibili al workflow `scarica-foto-automatica.yml` su GitHub Actions (rete libera): basta usare il marker `# TODO-foto-{wikipedia,nasa,usgs,noaa,pexels,pixabay,unsplash}` nel frontmatter dell'articolo. **API keys** richieste solo per Pexels/Pixabay/Unsplash (gratuite): in locale via `~/.bashrc`, in CI via GitHub Secrets. Specifiche in `MANUALE-SITO.md` Parte 14 e nella regola `08-claude-code-setup.md`.
 
-14. **DATI ALLERTA METEO `data/allerta.json`**: due campi temporali distinti. `ultimo_aggiornamento` cambia **solo** quando il livello DPC cambia. `ultimo_controllo` cambia ogni volta che il workflow `check-allerta.yml` verifica il bollettino e committa (ogni ≥6 ore o cambio livello). Limite: max 4 commit/giorno + cambi di livello. Sia la barra allerta della homepage sia la pagina `/emergenza/` lite mostrano "Verificato: ..." sempre fresco. Il JS lato browser sulla homepage aggiorna ulteriormente il timestamp all'ora locale del client. Schema completo in `MANUALE-SITO.md` Parte 9.3.
+15. **DATI ALLERTA METEO `data/allerta.json`**: due campi temporali distinti. `ultimo_aggiornamento` cambia **solo** quando il livello DPC cambia. `ultimo_controllo` cambia ogni volta che il workflow `check-allerta.yml` verifica il bollettino e committa (ogni ≥6 ore o cambio livello). Limite: max 4 commit/giorno + cambi di livello. Sia la barra allerta della homepage sia la pagina `/emergenza/` lite mostrano "Verificato: ..." sempre fresco. Il JS lato browser sulla homepage aggiorna ulteriormente il timestamp all'ora locale del client. Schema completo in `MANUALE-SITO.md` Parte 9.3.
 
 ## Automazioni periodiche (GitHub Actions)
 
@@ -419,6 +198,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (38 sezioni)**: contenuti pubblicati (COI, NUE 112, telefono, sede, CAP, placeholder, asset, badge, date, allegati, frasi AGID, draft `_index`, schede stampabili, modalità emergenza, pagine legali, widget) + codice/template (build Hugo, articoli `draft:true`, link a slug inesistenti, sintassi JS, validità YAML workflow, path assoluti template, residui CCV-MB/lombardo/`/index.html`) + governance docs (file presenti, import CLAUDE, badge list coerente, formato date, frontmatter, riferimenti incrociati, pagine obbligatorie, shortcode foto, script export, `dataUltimaRevisione`) + audit aggiuntivo (mixed content `http://`, `image_alt` accessibility WCAG 1.1.1, coerenza dati istituzionali nelle 7 traduzioni, divergenze `hugo.toml` ↔ `data/numeri_utili.yaml`, smoke test rendering H1 pagine critiche, **8 link critici normativa/PDF locali con messaggi dedicati**). Apre 1 issue settimanale con tutti i findings |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo del sito con **lychee**: verifica TUTTI i link (interni + esterni, tutte le pagine), apre issue automatica su 404/drift. Catch-all per mantenere aggiornati hub Strumenti, widget, Area Download, link esterni nei contenuti |
 | `scarica-foto-automatica.yml` | Ogni push su `main` | **Step 1** — Scansiona articoli con marker `# TODO-foto-{wikipedia,nasa,usgs}: bash scripts/foto-da-XXX.sh "..." slug` (usato quando si scrive da mobile/cloud, dove la sandbox blocca i domini esterni). Fonti supportate (whitelist): **Wikipedia/Wikimedia** (PD/CC0/CC-BY/CC-BY-SA), **NASA Image Library** (Public Domain), **USGS Earthquake Hazards** (ShakeMap, Public Domain). Per ogni articolo: esegue lo script, scarica foto, applica fascia blu, aggiorna `image:` + `image_credit:` + `image_source_url:` nel frontmatter, rimuove il marker. **Step 2** — Genera cover tipografiche istituzionali (gradiente blu + titolo + fascia) per articoli rimasti con `image: ""` e SENZA marker (via `scripts/auto-cover-mancanti.py`, che chiama `genera-cover.py` + popola frontmatter solo se vuoto, mai sovrascrive foto utente). **Step 3** — Commit unico delle modifiche, ri-triggera `deploy.yml`. Apre issue se uno o più download foto falliscono. Skip-loop: i propri commit hanno `[skip-foto-wiki]` |
+| `genera-social-bozze.yml` | Ogni push articolo | Genera bozze social (X/Facebook/Instagram/Telegram) + immagini Instagram (post + carosello + story) via Gemini API + Pillow. Skip-loop con `[skip-social]`. Dettagli in `04b-hugo-template-css.md` § "Bozze social automatiche" |
 
 > **Storia merge**: il 26 aprile 2026 sono stati fusi 2 workflow dentro `audit-sito.yml` per consolidare le issue settimanali:
 > - `coerenza-docs.yml` (lun 07:00) → sezioni 23-32 (governance docs)
@@ -430,6 +210,6 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 
 - **To activate emergency mode**: set `"attiva": true` in `data/emergenza.json` and fill `tipo`, `titolo`, `descrizione`. Reset to `false` when done.
 - **To set weather alert**: edit `data/allerta.json` — change `livello` to `verde/giallo/arancione/rosso`.
-- **Draft posts**: set `draft: true` in front matter. They appear locally with `hugo server -D` but are not published.
+- **Draft posts**: set `draft: true` in front matter. They appear locally with `hugo server -D` but are not published. **Regola progetto**: niente articoli in `draft: true` — solo immediato (`date` passata) o calendarizzato (`date` futura).
 - **CI deploy**: pushing to `main` triggers `.github/workflows/deploy.yml` which builds twice (once per baseURL) and deploys via FTP to Aruba and via GitHub Pages API. Monitor at the Actions tab.
 - **FTP credentials** are stored as GitHub secrets (`FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`).
