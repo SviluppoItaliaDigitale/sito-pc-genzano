@@ -444,8 +444,23 @@ Tu non devi fare nulla, succede in background.
 | Audit accessibilità Lighthouse | Dopo ogni deploy | Report accessibilità |
 | Cover automatica articoli | Push articolo senza foto | Genera cover tipografica blu+titolo |
 | Foto da Wikipedia/NASA/USGS | Push con marker `# TODO-foto-*` | Scarica + applica fascia blu |
-| **Bozze social X/FB/IG/TG** | Push articolo | Crea `social-bozze/<slug>/` |
-| **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `static/images-social/` |
+| **Bozze social X/FB/IG/TG** | Push articolo | Crea `social-bozze/<slug>/` (richiede quota Gemini disponibile) |
+| **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `static/images-social/` (Pillow, no rate limit) |
+
+> **Nota Gemini API gratuita**: il tier free ha ~50 richieste/giorno. Una rigenerazione massiva di tutte le bozze testuali si esaurisce dopo ~50 articoli con HTTP 429 — si riprende il giorno dopo (reset a mezzanotte UTC). Il workflow normale (1 articolo/push) gira sempre. Specifiche in `MANUALE-SITO.md` Parte 16.
+
+---
+
+## Note grafiche homepage (visibili anche da mobile)
+
+Da aprile 2026 la homepage ha 4 micro-animazioni discrete (non commerciali):
+
+1. **Dot blu pulsante** accanto al titolo "Notizie in Evidenza" — segnala visivamente la freschezza delle notizie. Stesso pattern del bottone SOS-112 ma blu.
+2. **Card che appaiono dolcemente** quando scrolli (fade-in + leggero traslate verso l'alto).
+3. **Banner blu** con pattern di linee oblique sottili e gradiente che si muove lentissimo (35s di loop, quasi impercettibile).
+4. **Effetto "lift" delle card** quando le tocchi: salgono di 3px e la freccia "Leggi" si sposta di 4px a destra.
+
+Tutte funzionano identico su Android e iOS. Tutte si disattivano se hai `Riduci animazioni` attivo nelle impostazioni del telefono o se usi il toolbar di accessibilità del sito ("Pausa animazioni"). Specifiche in `MANUALE-SITO.md` Parte 15.
 
 ---
 
