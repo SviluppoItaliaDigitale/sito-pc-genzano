@@ -1,0 +1,76 @@
+/* indirizzo-veloce — Stile accessibile */
+
+.hide { display: none !important; }
+
+.scenario-box {
+  background: #f0f4f8;
+  border: 3px solid #003366;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.scenario-icon { font-size: 4rem; margin-bottom: 0.5rem; }
+.scenario-title { font-size: 1.5rem; font-weight: 700; color: #003366; margin-bottom: 0.5rem; }
+.scenario-desc { font-size: 1.15rem; color: #444; margin-bottom: 0; }
+
+.choices-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 0.5rem; }
+
+.choice-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  border: 3px solid #dee2e6;
+  border-radius: 16px;
+  background: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+.choice-btn:hover:not(:disabled) { border-color: #003366; background: #e8f0fe; }
+.choice-btn:focus-visible { outline: 3px solid #ff6600; outline-offset: 2px; }
+.choice-btn:disabled { cursor: default; }
+
+.choice-icon { font-size: 2rem; flex-shrink: 0; width: 50px; text-align: center; }
+
+.choice-btn.correct {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+  color: #1b5e20;
+  animation: correctPop 0.4s ease;
+}
+@keyframes correctPop {
+  0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); }
+}
+
+.choice-btn.wrong {
+  border-color: #dc3545;
+  background: #fde8ea;
+  color: #842029;
+  animation: wrongShake 0.4s ease;
+}
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); } 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); }
+}
+
+.feedback-box {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.feedback-box.feedback-correct { background: #e8f5e9; border: 2px solid #2e7d32; color: #1b5e20; }
+.feedback-box.feedback-wrong { background: #fff3e0; border: 2px solid #e65100; color: #bf360c; }
+
+@media (min-width: 576px) { .choices-grid { grid-template-columns: 1fr 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .choice-btn { transition: none; }
+  .choice-btn.correct, .choice-btn.wrong { animation: none; }
+}

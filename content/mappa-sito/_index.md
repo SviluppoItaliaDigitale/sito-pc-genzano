@@ -263,7 +263,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-edu" href="/abili-a-proteggere/">
   <div class="ms-card-icon"><i class="bi bi-heart-fill"></i></div>
   <p class="ms-card-title">Abili a Proteggere</p>
-  <p class="ms-card-desc">20 attività accessibili per persone con difficoltà cognitive o motorie, anziani e bambini fragili: pulsanti grandi, testi semplici, nessun timer.</p>
+  <p class="ms-card-desc">32 attività accessibili per persone con difficoltà cognitive o motorie, anziani e bambini fragili: pulsanti grandi, testi semplici, nessun timer.</p>
 </a>
 <a class="ms-card ms-edu" href="/glossario/">
   <div class="ms-card-icon"><i class="bi bi-book"></i></div>

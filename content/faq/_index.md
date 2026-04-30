@@ -136,7 +136,7 @@ Il sito è progettato per rispettare le **WCAG 2.2 livello AA** (Linee guida AGI
 
 ### Avete materiale didattico gratuito?
 
-Sì, abbiamo 4 **kit didattici** (infanzia, primaria, secondaria I e II grado), **86 schede stampabili** pronte per essere fotocopiate (di cui 10 da colorare per i più piccoli), **33 giochi educativi gratuiti** e **20 attività accessibili** ispirate al programma nazionale *[Abili a proteggere](https://www.abiliaproteggere.net/)* del Dipartimento della Protezione Civile, pensate per persone con difficoltà cognitive o motorie, anziani e bambini fragili. Tutto su [Formazione](/formazione/), [Schede Stampabili](/formazione/schede-stampabili/), [Giochi della Sicurezza](/giochi/) e [Abili a Proteggere](/abili-a-proteggere/).
+Sì, abbiamo 4 **kit didattici** (infanzia, primaria, secondaria I e II grado), **86 schede stampabili** pronte per essere fotocopiate (di cui 10 da colorare per i più piccoli), **33 giochi educativi gratuiti** e **32 attività accessibili** ispirate al programma nazionale *[Abili a proteggere](https://www.abiliaproteggere.net/)* del Dipartimento della Protezione Civile, pensate per persone con difficoltà cognitive o motorie, anziani e bambini fragili. Tutto su [Formazione](/formazione/), [Schede Stampabili](/formazione/schede-stampabili/), [Giochi della Sicurezza](/giochi/) e [Abili a Proteggere](/abili-a-proteggere/).
 
 ### I volontari vengono nelle scuole?
 
