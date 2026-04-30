@@ -503,6 +503,12 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Intervista al Volontario PC**](/formazione/schede-stampabili/intervista-volontario-primaria/) — compito di realtà: prepara 10 domande, intervista un volontario, scrivi il testo giornalistico. *(compito di realtà)*
 - 👉 [**Diventa Giornalista della PC**](/formazione/schede-stampabili/diventa-giornalista-primaria/) — anatomia di un articolo (occhiello/titolo/lead/corpo) + esempio modello + scrivi tu un articolo per il giornalino + post Instagram con hashtag. *(giornalismo, classi 4ª-5ª)*
 
+**Schede del curricolo a spirale 6-19 anni — versione Primaria** (stessi temi disponibili anche per Secondaria I e II, per scelta del docente):
+
+- 👉 [**Chiamo il 112 — Role-play scritto**](/formazione/schede-stampabili/chiamo-112-primaria/) — due dialoghi guidati da completare (caduta nonna, fumo dal vicino) + le 4 cose da ricordare quando si chiama il 112. *(italiano/ed. civica, classi 3ª-5ª)*
+- 👉 [**I colori dell'allerta meteo**](/formazione/schede-stampabili/decodifica-bollettino-primaria/) — abbinamento codice colore (verde/giallo/arancione/rosso) → comportamento giusto, con cosa fare per ognuno. *(scienze/ed. civica, classi 3ª-5ª)*
+- 👉 [**Le due vie di fuga della scuola**](/formazione/schede-stampabili/labirinto-evacuazione-primaria/) — pianta-tipo da colorare con vie di fuga, punto di raccolta, pericoli. Versione introduzione al piano di evacuazione. *(ed. civica, classi 4ª-5ª)*
+
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 
 ### Scheda 1 — La chiamata al 112 (role-play scritto) ✅ stampabile

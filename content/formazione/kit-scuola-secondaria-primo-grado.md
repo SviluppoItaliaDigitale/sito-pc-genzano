@@ -500,6 +500,14 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Cronaca Recente — Ischia 2022**](/formazione/schede-stampabili/cronaca-recente-secondaria/) — articolo di cronaca su frana di Casamicciola. Analisi 5W + 5 domande critiche. *(italiano)*
 - 👉 [**Articolo, Comunicato Stampa e Post Social**](/formazione/schede-stampabili/articolo-stampa-social-secondaria/) — piramide rovesciata + 5W+1H. Lo stesso evento PC in 3 formati (articolo, comunicato stampa, post Instagram) con esempio modello e hashtag strategici. *(italiano, giornalismo)*
 
+**Schede del curricolo a spirale 6-19 anni — versione Secondaria I** (stessi temi disponibili anche per Primaria e Secondaria II, per scelta del docente):
+
+- 👉 [**Caso Amatrice — cronologia e analisi**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — terremoto Centro Italia 2016 con timeline (24 agosto, 30 ottobre, Rigopiano gennaio 2017) + analisi cosa ha funzionato/non ha funzionato + 6 domande. *(storia, scienze, ed. civica)*
+- 👉 [**Piano di Emergenza Familiare — esteso**](/formazione/schede-stampabili/piano-familiare-secondaria/) — versione approfondita del piano: scorte 72 ore, contatto fuori comune, animali domestici, persone fragili, ruoli di tutti. *(ed. civica, da completare con la famiglia)*
+- 👉 [**Cruciverba PC — definizioni tecniche**](/formazione/schede-stampabili/cruciverba-secondaria/) — 20 definizioni tecniche (sigle istituzionali, fenomeni, ruoli) collegabile al glossario online del sito. *(italiano, scienze)*
+- 👉 [**Calcolo dei tempi di evacuazione**](/formazione/schede-stampabili/labirinto-evacuazione-secondaria/) — pianta scuola di esempio + dati di norma (DM 3/8/2015): calcolo capacità uscite, tempo evacuazione totale, verifica conformità. 7 problemi matematici. *(matematica, tecnologia)*
+- 👉 [**Chiamare il 112 — Cosa NON dire**](/formazione/schede-stampabili/chiamo-112-secondaria/) — 3 scenari realistici (incidente bici, bambino al parco, anziano svenuto) con riformulazione di chiamate inefficaci, sistema AML, art. 658 c.p. *(italiano, ed. civica)*
+
 ---
 
 ## Compito di realtà — Analisi del Piano di Emergenza Scolastico

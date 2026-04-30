@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Progetto piano di evacuazione — Secondaria II</title>
+  <meta name="description" content="Scheda fotocopiabile per la Secondaria II. Progetto completo di un piano di evacuazione per un edificio noto, con riferimenti normativi.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .pe-tabella { width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.88rem; }
+    .pe-tabella th, .pe-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.45rem 0.6rem; text-align: left; vertical-align: top; }
+    .pe-tabella th { background: #f0f4f8; color: var(--scheda-blu); font-weight: 700; }
+    .area-disegno {
+      border: 2px solid var(--scheda-blu); border-radius: 8px;
+      height: 8.5rem; background: repeating-linear-gradient(0deg, #fff, #fff 19px, #f0f4f8 20px), repeating-linear-gradient(90deg, #fff, #fff 19px, #f0f4f8 20px);
+      margin: 0.4rem 0;
+    }
+    .domanda-card {
+      padding: 0.5rem 0.7rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      margin-bottom: 0.4rem; font-size: 0.92rem; line-height: 1.45;
+    }
+    .domanda-card .num-q {
+      width: 1.5rem; height: 1.5rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.78rem; margin-right: 0.4rem;
+    }
+    .righe { display: grid; gap: 0.35rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.3rem; }
+    .normativa-box {
+      background: #f4f7fb; border-left: 4px solid var(--scheda-blu);
+      padding: 0.6rem 0.85rem; margin: 0.5rem 0; font-size: 0.85rem; line-height: 1.55;
+    }
+    .istruzioni-prof {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Progetto piano evacuazione — Secondaria II</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Progetto piano di evacuazione di un edificio</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di secondo grado (14-19 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 14-19 anni</span>
+      <span><strong>Obiettivo:</strong> redigere un piano di evacuazione completo e conforme</span>
+      <span><strong>Discipline:</strong> tecnologia, sicurezza, educazione civica, italiano</span>
+    </div>
+
+    <p class="scheda-intro">
+      In Italia ogni edificio pubblico (scuola, ospedale, museo, biblioteca) deve avere un <strong>piano di evacuazione</strong> redatto dal Responsabile del Servizio di Prevenzione e Protezione (RSPP). In questa scheda lo simulerai per un edificio reale che conosci (es. la tua scuola, la palestra, l'oratorio). Il prodotto finale è un mini-piano di 1-2 pagine.
+    </p>
+
+    <h2 class="scheda-h2">📜 Quadro normativo (riferimenti)</h2>
+    <div class="normativa-box">
+      <strong>Norme principali:</strong>
+      <ul style="margin: 0.3rem 0 0 1.2rem; padding: 0;">
+        <li><strong>D.Lgs. 81/2008</strong> — Testo Unico Sicurezza Lavoro (art. 18, 36, 43-46): obbligo del datore di lavoro di redigere piano emergenza, designare addetti, formare lavoratori.</li>
+        <li><strong>D.M. 26 agosto 1992</strong> — Norme prevenzione incendi nelle scuole.</li>
+        <li><strong>D.M. 3 agosto 2015</strong> — Codice di prevenzione incendi (regola tecnica orizzontale).</li>
+        <li><strong>D.M. 10 marzo 1998</strong> — Criteri sicurezza antincendio + gestione emergenza.</li>
+        <li><strong>D.P.R. 151/2011</strong> — Procedimento Certificato Prevenzione Incendi (CPI).</li>
+      </ul>
+    </div>
+
+    <h2 class="scheda-h2">1. Anagrafica edificio</h2>
+    <table class="pe-tabella">
+      <tr><th style="width: 28%;">Denominazione</th><td colspan="3"></td></tr>
+      <tr><th>Indirizzo</th><td colspan="3"></td></tr>
+      <tr><th>Tipo attività (DPR 151/2011)</th><td colspan="3"></td></tr>
+      <tr><th>Anno costruzione</th><td></td><th>Numero piani</th><td></td></tr>
+      <tr><th>Persone normalmente presenti (max)</th><td></td><th>Di cui mobilità ridotta</th><td></td></tr>
+      <tr><th>RSPP / Datore lavoro</th><td colspan="3"></td></tr>
+      <tr><th>Ultima esercitazione (data)</th><td colspan="3"></td></tr>
+    </table>
+
+    <h2 class="scheda-h2">2. Pianta con vie di fuga (1 piano significativo)</h2>
+    <p style="font-size: 0.88rem; margin-bottom: 0.3rem;">Disegna in scala 1:200 circa. Indicare: vie di fuga primaria/secondaria, scale di sicurezza, luogo sicuro temporaneo per persone con mobilità ridotta (ZONA RIFUGIO), presidi antincendio, segnaletica.</p>
+    <div class="area-disegno" aria-label="Area disegno pianta"></div>
+
+    <h2 class="scheda-h2">3. Calcoli di dimensionamento (DM 3/8/2015)</h2>
+    <table class="pe-tabella">
+      <tr><th>Affollamento massimo (persone)</th><td></td></tr>
+      <tr><th>Larghezza minima richiesta uscite (mod. 0.60m × N pers / 50)</th><td></td></tr>
+      <tr><th>Larghezza reale uscite (m)</th><td></td></tr>
+      <tr><th>Verifica: dimensionamento adeguato? (Sì/No)</th><td></td></tr>
+      <tr><th>Tempo stimato evacuazione totale (min)</th><td></td></tr>
+    </table>
+
+    <h2 class="scheda-h2">4. Squadre di emergenza e ruoli</h2>
+    <table class="pe-tabella">
+      <tr><th>Ruolo</th><th>Persona designata</th><th>Formazione (corso A/B/C)</th></tr>
+      <tr><td>Coordinatore emergenza</td><td></td><td></td></tr>
+      <tr><td>Addetto antincendio</td><td></td><td></td></tr>
+      <tr><td>Addetto primo soccorso</td><td></td><td></td></tr>
+      <tr><td>Responsabili evacuazione piani</td><td></td><td></td></tr>
+      <tr><td>Assistenza disabili</td><td></td><td></td></tr>
+    </table>
+
+    <h2 class="scheda-h2">5. Procedure operative</h2>
+
+    <div class="domanda-card">
+      <span class="num-q">1</span><strong>Procedura INCENDIO</strong>: descrivi in 8 passi cronologici (dal rilevamento alla raccolta esterna), citando segnale d'allarme, ruolo del coordinatore e dell'addetto antincendio.
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">2</span><strong>Procedura TERREMOTO</strong>: cosa fanno i presenti durante la scossa? Quando si esce? Chi dà l'ordine? Come si gestiscono le persone in zona rifugio?
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">3</span><strong>Persone con disabilità</strong>: descrivi tre modalità di evacuazione (zona rifugio + comunicazione preventiva ai VVF, sedia da evacuazione, accompagnatore designato). Quale scegli per il tuo edificio e perché?
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <h2 class="scheda-h2">6. Formazione e verifica</h2>
+
+    <div class="domanda-card">
+      <span class="num-q">4</span><strong>Quante esercitazioni/anno?</strong> Cita la frequenza richiesta dalla normativa per scuole (D.M. 26/8/1992) e luoghi di lavoro (D.Lgs 81/2008). Cosa va registrato dopo ogni prova?
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">5</span><strong>Compito autentico</strong>: redigi la <strong>scheda di registrazione esercitazione</strong> (1 pagina A4) da compilare dopo ogni prova: data, scenario, durata, criticità rilevate, azioni correttive.
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="istruzioni-prof">
+      <strong>Per il/la prof · Note didattiche:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Prerequisiti</strong>: aver studiato D.Lgs. 81/2008 e DM 3/8/2015. Idealmente l'attività si svolge dopo un incontro con l'RSPP della scuola.</li>
+        <li><strong>Affollamento di riferimento</strong> (DM 3/8/2015 G.2.6.2): scuole 0.4 pers/m² aule, 0.7 corridoi, 1.0 mensa.</li>
+        <li><strong>Larghezza moduli</strong>: 0.60 m base, capacità di deflusso 50 pers/min/modulo. La larghezza minima per attività >100 pers è 1.20 m (2 moduli).</li>
+        <li><strong>Estensione</strong>: invitare l'RSPP della scuola a una lezione, oppure intervistare un Vigile del Fuoco. Confrontare i piani prodotti dagli studenti col piano reale dell'edificio.</li>
+        <li><strong>Compito interdisciplinare</strong>: collegare con italiano (registro tecnico), tecnologia (CAD per la pianta), educazione civica (responsabilità del datore di lavoro).</li>
+        <li><strong>Versioni semplici</strong>: <a href="/formazione/schede-stampabili/labirinto-evacuazione-primaria/">Primaria</a> e <a href="/formazione/schede-stampabili/labirinto-evacuazione-secondaria/">Calcolo tempi (Sec I)</a>.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Progetto piano evacuazione" · Secondaria II · tecnologia/sicurezza · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

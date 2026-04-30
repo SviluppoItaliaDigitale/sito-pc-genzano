@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Mappa rischi e mitigazione GIS — Secondaria II</title>
+  <meta name="description" content="Scheda fotocopiabile per la Secondaria II. Costruzione mappa rischi del territorio + proposta di mitigazione con approccio GIS semplificato.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .legend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 0.4rem 0; }
+    .legend-item {
+      padding: 0.4rem 0.7rem; border-radius: 6px;
+      font-size: 0.88rem; line-height: 1.45; border: 1.5px solid;
+    }
+    .legend-item.risk-1 { background: #fff8e1; border-color: #f9a825; color: #6d4c00; }
+    .legend-item.risk-2 { background: #fff3e0; border-color: #e65100; color: #bf360c; }
+    .legend-item.risk-3 { background: #fde8ea; border-color: #c1121f; color: #842029; }
+    .legend-item.risk-4 { background: #e3f2fd; border-color: #1565c0; color: #0d47a1; }
+    .area-disegno {
+      border: 2px solid var(--scheda-blu); border-radius: 8px;
+      height: 8.5rem; background: repeating-linear-gradient(0deg, #fff, #fff 19px, #f0f4f8 20px), repeating-linear-gradient(90deg, #fff, #fff 19px, #f0f4f8 20px);
+      margin: 0.4rem 0;
+    }
+    .domanda-card {
+      padding: 0.5rem 0.7rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      margin-bottom: 0.4rem; font-size: 0.92rem; line-height: 1.45;
+    }
+    .domanda-card .num-q {
+      width: 1.5rem; height: 1.5rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.78rem; margin-right: 0.4rem;
+    }
+    .righe { display: grid; gap: 0.35rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.3rem; }
+    .istruzioni-prof {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+    @media (max-width: 580px) { .legend-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Mappa rischi GIS — Secondaria II</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Mappa rischi del territorio + proposta di mitigazione</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di secondo grado (14-19 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 14-19 anni</span>
+      <span><strong>Obiettivo:</strong> uso del pensiero GIS + valutazione vulnerabilità + proposta operativa</span>
+      <span><strong>Discipline:</strong> geografia, scienze della terra, tecnologia, educazione civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      Un sistema GIS (Geographic Information System) sovrappone <strong>strati di informazione</strong> su una mappa per analizzare rischi, vulnerabilità ed esposizione. In questa scheda lavorerai come un mini-GIS analyst: scegli un'area di Genzano (o del tuo Comune), costruisci la mappa rischi su carta, e proponi una misura di mitigazione concreta.
+    </p>
+
+    <h2 class="scheda-h2">📚 Concetti chiave</h2>
+    <p style="font-size: 0.9rem; line-height: 1.55; margin-bottom: 0.5rem;">Il rischio in Protezione Civile è il prodotto di tre fattori:</p>
+    <p style="font-size: 0.95rem; text-align: center; padding: 0.5rem; background: #f4f7fb; border-radius: 6px; font-family: Georgia, serif; margin-bottom: 0.5rem;">
+      <strong>Rischio (R) = Pericolosità (P) × Vulnerabilità (V) × Esposizione (E)</strong>
+    </p>
+    <ul style="font-size: 0.88rem; line-height: 1.55; padding-left: 1.3rem; margin-bottom: 0.6rem;">
+      <li><strong>Pericolosità</strong>: probabilità che un evento accada in quell'area (es. probabilità di frana).</li>
+      <li><strong>Vulnerabilità</strong>: quanto un edificio/infrastruttura subirebbe danni se l'evento accadesse.</li>
+      <li><strong>Esposizione</strong>: quante persone, edifici, beni si trovano nell'area pericolosa.</li>
+    </ul>
+
+    <h2 class="scheda-h2">🗺️ Costruisci la mappa rischi della tua area</h2>
+    <p style="font-size: 0.92rem; margin-bottom: 0.4rem;">Disegna l'area scelta (un quartiere, una via, una piazza). Aggiungi i simboli della legenda dove individui un rischio. Poi rispondi alle domande sotto.</p>
+
+    <div class="legend-grid">
+      <div class="legend-item risk-1">⚠️ <strong>Frana / dissesto</strong> — versante in pendenza, scarpata visibile, smottamenti precedenti.</div>
+      <div class="legend-item risk-2">🔥 <strong>Incendio interfaccia</strong> — bosco vicino a edifici, vegetazione secca incolta.</div>
+      <div class="legend-item risk-3">🌊 <strong>Allagamento</strong> — sottopasso, fosso tombato, area depressa, tombino sottodimensionato.</div>
+      <div class="legend-item risk-4">🏚️ <strong>Edificio vulnerabile</strong> — casa storica non adeguata, scuola, RSA, ospedale.</div>
+    </div>
+
+    <p style="font-size: 0.85rem; margin: 0.4rem 0; color: #6c757d;">Disegna nella griglia qui sotto. Aggiungi nord, scala approssimativa e legenda.</p>
+    <div class="area-disegno" aria-label="Area di disegno della mappa"></div>
+
+    <h2 class="scheda-h2">✏️ Analisi e mitigazione</h2>
+
+    <div class="domanda-card">
+      <span class="num-q">1</span><strong>Identifica e descrivi il rischio principale della tua area. Indica fattori di pericolosità, vulnerabilità ed esposizione (chi/cosa è a rischio?).</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">2</span><strong>Quali fonti di dati ufficiali consulteresti per validare l'analisi? (almeno 3)</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">3</span><strong>Quale popolazione "fragile" è presente nell'area? (anziani, bambini, persone con disabilità, turisti, ecc.) Come questo modifica la valutazione del rischio?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">4</span><strong>Proposta di MITIGAZIONE strutturale (modifica fisica): suggerisci 1 intervento concreto e fattibile (es. rete paramassi, pulizia fosso, taglio vegetazione, adeguamento sismico). Stima i costi grossolanamente (basso/medio/alto).</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">5</span><strong>Proposta di MITIGAZIONE non strutturale (organizzativa): suggerisci 1 intervento di prevenzione che NON modifica fisicamente l'area (es. piano di evacuazione, formazione cittadini, sistema di allerta).</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">6</span><strong>Quale soggetto istituzionale ha la competenza per realizzare la tua proposta? (Comune, Regione, ANAS, Consorzio bonifica, Genio Civile, Protezione Civile) Motiva.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">7</span><strong>Compito autentico: redigi una segnalazione formale al Comune con la tua proposta. Massimo 200 parole, tono istituzionale, riferimento alla competenza, dati e prove.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="istruzioni-prof">
+      <strong>Per il/la prof · Note didattiche:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Fonti dati ufficiali (rif. domanda 2):</strong> ISPRA-IdroGEO (frane), PAI dell'Autorità di Bacino (idrogeologico), ISPRA per inventario IFFI, Inventario Nazionale Frane, mappe SISBA, Comune (Piano di Emergenza Comunale e Cartografia), Regione Lazio (zone allerta, IT-alert).</li>
+        <li><strong>Differenza strutturale/non strutturale:</strong> strutturali = opere fisiche (paratie, briglie, muri); non strutturali = pianificazione, formazione, sistemi di allerta. Le seconde costano meno e si attuano prima.</li>
+        <li><strong>Compito autentico (rif. 7):</strong> richiede uso registro formale, riferimento a normativa (D.Lgs. 1/2018), dati misurabili, autoresponsabilità del cittadino. Valutare con rubrica argomentativa.</li>
+        <li><strong>Estensione</strong>: collegare con la scheda <a href="/formazione/schede-stampabili/mappa-rischi-secondaria/">Mappa rischi (Secondaria I)</a> per la versione base e con <a href="/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/">Mappa cieca quartiere (Primaria)</a>.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Mappa rischi GIS + mitigazione" · Secondaria II · geografia/scienze della terra/educazione civica · rev. 2026</span>
+    </footer>
+  </article>
+</body>
+</html>
