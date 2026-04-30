@@ -1,5 +1,39 @@
 # Proattività e Coerenza — Verifica di Pattern Simili
 
+## Checkpoint pre-operazione batch (precede tutto il resto)
+
+**Prima di iniziare** qualsiasi operazione che tocca **≥5 articoli o ≥5 file in una singola passata** (batch foto, batch frontmatter, mass-rename, sweep editoriale, riscrittura di sezione su molti file, ecc.) **fermati e fai un check visibile all'utente** in 3 righe:
+
+1. **Cosa stai per fare** (il pattern dell'operazione: "modificare il campo X su N file Y").
+2. **Quali rules si applicano** (cita per nome i file `.claude/rules/0*.md` pertinenti e la sezione/divieto specifico — non basta dire "le rules", devi citarli).
+3. **Perché stai per rispettarle** (collegamento esplicito tra l'operazione e ogni rule citata).
+
+Poi **chiedi conferma** all'utente con un messaggio del tipo *"Confermi questi parametri prima che proceda?"* e **aspetta l'OK esplicito**. Non far partire l'operazione di propria iniziativa.
+
+### Esempio corretto
+
+> Sto per scaricare una foto inline su 60 articoli usando il marker `# TODO-foto-pexels`.
+> Rules pertinenti:
+> - `02-content-design-pa.md` sezione **"Divieto: foto stock generiche ripetute per macro-tema"** → vieta di assegnare la stessa foto stock a articoli accomunati solo da macro-tema.
+> - `02-content-design-pa.md` sezione **"Foto utente — banner pulito vs carosello"** → la foto inline va nel corpo, mai nel campo `image:` del frontmatter.
+>
+> Per rispettarle proporrei: query specifica per ogni singolo articolo (non query categoriale), preferenza per Wikipedia/NASA/USGS dove possibile. Confermi?
+
+### Esempio errato (proibito)
+
+> Procedo a scaricare le foto sui 60 articoli...
+> *(senza checkpoint, senza citare rules, senza conferma — è il pattern che ha generato l'incidente di aprile 2026)*
+
+### Quando il checkpoint NON serve
+
+- Operazione singola (1 articolo, 1 file, 1 fix mirato).
+- Operazione esplicitamente già autorizzata in dettaglio dall'utente nel turno precedente con parametri concreti ("modifica i frontmatter di questi 8 articoli specifici e basta").
+- Build, test, hugo --quiet, audit read-only.
+
+### Perché esiste questa regola
+
+Ad aprile 2026 un batch di 14 commit ha messo la stessa foto stock (Croce Rossa) su 74 articoli con caption identica. L'incidente è nato perché l'agent ha categorizzato gli articoli per macro-tema e ha lanciato il batch **senza fermarsi a citare le rules**. Il checkpoint pre-batch è il safety-net che impedisce il riprodursi del pattern: rendere il ragionamento sull'applicabilità delle rules **visibile all'utente prima dell'azione**, non dopo.
+
 ## Principio
 
 Quando completi un fix, una correzione o un cambio strutturale, **prima di concludere il lavoro** esegui sempre una passata di verifica per cercare lo stesso pattern in altre parti del sito e proponi i fix correlati senza aspettare che l'utente li chieda.

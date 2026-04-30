@@ -17,6 +17,7 @@ PC, usando solo:
 
 ## Indice
 
+0. [Prima di iniziare a lavorare da mobile (CHECK SESSIONE)](#0-prima-di-iniziare-a-lavorare-da-mobile-check-sessione)
 1. [Setup iniziale (una sola volta)](#1-setup-iniziale-una-sola-volta)
 2. [Pubblicare un articolo nuovo da mobile](#2-pubblicare-un-articolo-nuovo-da-mobile)
 3. [Aggiungere foto a un articolo](#3-aggiungere-foto-a-un-articolo)
@@ -27,6 +28,39 @@ PC, usando solo:
 8. [Aggiornare l'allerta meteo](#8-aggiornare-lallerta-meteo)
 9. [Cose che il sito fa DA SOLO (non devi farle tu)](#9-cose-che-il-sito-fa-da-solo-non-devi-farle-tu)
 10. [Risoluzione problemi mobile](#10-risoluzione-problemi-mobile)
+
+---
+
+## 0. Prima di iniziare a lavorare da mobile (CHECK SESSIONE)
+
+**Quando le rules vengono modificate da PC, la sessione mobile aperta in precedenza non lo sa.** Il context iniziale (CLAUDE.md + 8 rules in `.claude/rules/`) viene caricato **una sola volta all'avvio sessione** e resta fissato. Una sessione vecchia continua a ragionare con le rules vecchie finché non viene chiusa e riaperta.
+
+### Quando archiviare la sessione mobile in corso e aprirne una nuova
+
+| Cosa è stato modificato di recente nel repo | Devo ricominciare? |
+|---|---|
+| `CLAUDE.md`, `.claude/rules/*.md`, archetype | **SÌ, sempre** |
+| `MANUALE-SITO.md`, `MANUALE-MOBILE.md`, `PIANO-EDITORIALE.md` (sezioni operative o nuove regole) | **SÌ** |
+| Articoli `content/`, dati `data/`, template/CSS, script | No, va bene |
+| Workflow CI (`.github/workflows/`) | No (girano su GitHub Actions, non in chat) |
+
+### Procedura
+
+1. **Chiudo / archivio** la sessione mobile in corso.
+2. **Apro una sessione nuova** sul repo.
+3. **Primo messaggio** alla nuova sessione: il prompt-test seguente.
+
+### Prompt-test di verifica (consigliato)
+
+Incolla questo come primo messaggio nella nuova sessione:
+
+> "Prima di lavorare, riassumi in 3 righe: (a) le rules che stai applicando in questa sessione (file in `.claude/rules/`), (b) la regola più recente sul tema 'foto inline / foto stock / foto utente', (c) qualsiasi nuovo divieto o checkpoint pre-batch che dovresti rispettare. Non fare azioni operative finché non confermo."
+
+Se la risposta cita correttamente la regola **"Divieto: foto stock generiche ripetute per macro-tema"** in `02-content-design-pa.md` e parla di **checkpoint pre-batch** (regola 07), la sessione è aggiornata. Se invece risponde con regole vecchie, sta usando un context obsoleto: chiudila e riapri (o forza un `git pull` se l'app lo permette).
+
+### Cosa fa l'agent in autonomia (regola 07-proattivita-coerenza.md)
+
+Da maggio 2026 la rule `07` formalizza un **checkpoint pre-operazione batch**: prima di toccare ≥5 articoli o ≥5 file in una singola operazione, l'agent deve **fermarsi**, riassumere in 2-3 righe le rules pertinenti, e chiedere conferma. Questo è il safety-net introdotto dopo l'incidente del batch foto stock di aprile 2026 (74 articoli con la stessa foto della Croce Rossa). Una sessione mobile aggiornata rispetterà questo checkpoint da sola; una sessione vecchia no.
 
 ---
 

@@ -28,6 +28,14 @@ Non limitarti a eseguire. Valuta, correggi, migliora, normalizza e rendi ogni ou
 
 ---
 
+## Checkpoint pre-operazione batch
+
+**Prima di toccare ≥5 articoli o ≥5 file in una singola passata** (batch foto, batch frontmatter, mass-rename, sweep editoriale, riscrittura di sezione su molti file) **fermati e fai un check visibile all'utente in 3 righe**: (1) cosa stai per fare, (2) quali rules `.claude/rules/0*.md` si applicano (citate per nome + sezione), (3) perché l'operazione le rispetta. Poi **aspetta conferma esplicita** prima di procedere.
+
+Specifiche complete e esempi in `.claude/rules/07-proattivita-coerenza.md` sezione "Checkpoint pre-operazione batch". Esiste perché ad aprile 2026 un batch ha messo la stessa foto stock su 74 articoli senza prima verificare le rules pertinenti — il checkpoint impedisce il ripetersi del pattern.
+
+---
+
 ## Regole di dettaglio (file separati)
 
 @.claude/rules/01-governance-pa.md
