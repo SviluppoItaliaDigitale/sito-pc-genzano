@@ -46,10 +46,29 @@ Il dropdown "Formazione" è stato rinominato **"Educazione e Inclusione"** e ha 
 **Aggiungere/spostare una voce:**
 1. Modifica `[[menus.main]]` in `hugo.toml`.
 2. Decidi se è di primo livello (rara: solo se è un'azione fondamentale) o sotto un dropdown esistente.
-3. Niente modifiche al template: rendering automatico.
-4. Verifica con `hugo --quiet --minify` che la build resti pulita.
+3. Niente modifiche al template Hugo: rendering automatico per le pagine generate da Hugo.
+4. **Aggiorna anche `static/app-shared/site-chrome.js`** (vedi sezione successiva): il menu è hardcoded lì per le pagine statiche fuori da Hugo (giochi, schede stampabili, abili-a-proteggere, ecc.).
+5. Verifica con `hugo --quiet --minify` che la build resti pulita.
 
 Non aggiungere voci di primo livello senza valutarne l'impatto sul mobile: il limite di sicurezza è 6-7 voci visibili contemporaneamente.
+
+### Sincronizzazione obbligatoria `hugo.toml` ↔ `site-chrome.js`
+
+Il menu Hugo (`hugo.toml [[menus.main]]` + `themes/flavour-pcgenzano/layouts/partials/navbar.html`) renderizza la navigazione **solo per le pagine generate da Hugo**. Tutte le pagine HTML statiche fuori da Hugo (`static/formazione/schede-stampabili/`, `static/abili-a-proteggere/`, `static/giochi/`, `static/quizpc/`, `static/formazionepc/`, `static/giochi-bambini/`, ecc. — circa 50+ pagine) iniettano header e footer da `static/app-shared/site-chrome.js`, che ha il menu **hardcoded in JavaScript** e **non si auto-sincronizza** con `hugo.toml`.
+
+**Ogni modifica al menu Hugo richiede un aggiornamento speculare in `site-chrome.js`.** Sezioni da tenere allineate:
+- Voci di primo livello (Home + 4 dropdown + Comunicazioni + Contatti).
+- Identificatori dei dropdown: `navDropdown-per-il-cittadino`, `navDropdown-educazione-inclusione`, `navDropdown-volontariato`, `navDropdown-risorse`.
+- Sotto-voci di ogni dropdown e relativi URL.
+
+**Why**: ad aprile 2026 il menu è stato riordinato (6 voci flat → 7 voci con dropdown, "Formazione" → "Educazione e Inclusione", nuovo dropdown "Risorse"). L'aggiornamento Hugo è stato fatto, ma `site-chrome.js` è rimasto col menu vecchio per giorni: la home aveva 7 voci con dropdown, le pagine statiche 6 voci flat. L'utente ha scoperto il drift confrontando due screenshot.
+
+**Check automatico**: il workflow `audit-sito.yml` § 41 "Coerenza menu Hugo ↔ site-chrome.js" verifica ogni lunedì:
+- Tutti i dropdown dichiarati in `hugo.toml` (`identifier = "..."`) hanno l'`navDropdown-<id>` corrispondente in `site-chrome.js`.
+- Le 3 voci dirette (Home, Comunicazioni, Contatti) sono presenti.
+- Nessun residuo obsoleto (es. `navDropdown-formazione` dopo il rename).
+
+Se trova drift, apre un'issue di manutenzione. Ma **non aspettare l'issue**: allinea al momento della modifica al menu.
 
 ## Indice della pagina (TOC) per articoli lunghi
 
