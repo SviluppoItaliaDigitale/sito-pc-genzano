@@ -1,6 +1,6 @@
 ---
 title: "Microzonazione sismica dei Castelli Romani: cos'è e perché conta"
-date: 2026-06-19
+date: 2026-06-19T00:01:00+02:00
 description: "Non tutti i terreni rispondono allo stesso modo a un sisma. La microzonazione aiuta amministratori e cittadini a capire il rischio strada per strada."
 badge: "Informazione"
 priorita: "normale"

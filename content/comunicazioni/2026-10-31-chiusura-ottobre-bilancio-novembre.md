@@ -1,6 +1,6 @@
 ---
 title: "Chiusura di ottobre: bilancio del mese e prospettive novembre"
-date: 2026-10-31
+date: 2026-10-31T00:01:00+02:00
 description: "Si chiude ottobre con un bilancio delle attività del Gruppo: iscrizioni chiuse al corso base, Io Non Rischio, lezioni nelle scuole."
 badge: "Aggiornamento"
 priorita: "normale"

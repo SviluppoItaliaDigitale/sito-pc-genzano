@@ -1,6 +1,6 @@
 ---
 title: "9 ottobre 1963: il Vajont, 63 anni dopo, insegna ancora"
-date: 2026-10-09
+date: 2026-10-09T00:01:00+02:00
 description: "A 63 anni dalla tragedia del Vajont, la memoria delle 1.910 vittime impegna il sistema italiano di Protezione Civile a non smettere di prevenire."
 badge: "Informazione"
 priorita: "normale"

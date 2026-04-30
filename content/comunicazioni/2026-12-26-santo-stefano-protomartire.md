@@ -1,6 +1,6 @@
 ---
 title: "Santo Stefano: riflessione tra Natale e nuovo anno"
-date: 2026-12-26
+date: 2026-12-26T00:01:00+02:00
 description: "Il 26 dicembre è Santo Stefano. Un giorno di pausa tra Natale e nuovo anno, per riposo e riflessione."
 badge: "Informazione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "17 maggio: Giornata mondiale delle telecomunicazioni e il ruolo in emergenza"
-date: 2026-05-17
+date: 2026-05-17T00:01:00+02:00
 description: "La Giornata mondiale delle telecomunicazioni ricorda quanto la connettivita sia fondamentale per la sicurezza. Reti, antenne, resilienza digitale."
 badge: "Radiocomunicazioni"
 priorita: "normale"

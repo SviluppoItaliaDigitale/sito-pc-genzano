@@ -1,6 +1,6 @@
 ---
 title: "13 ottobre: Giornata Internazionale per la Riduzione dei Disastri"
-date: 2026-10-13
+date: 2026-10-13T00:01:00+02:00
 description: "L'ONU ha proclamato il 13 ottobre Giornata Internazionale per la Riduzione dei Disastri. Cosa significa, cosa si fa, perché ci riguarda tutti."
 badge: "Informazione"
 priorita: "normale"

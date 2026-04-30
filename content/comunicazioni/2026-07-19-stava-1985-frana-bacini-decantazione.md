@@ -1,6 +1,6 @@
 ---
 title: "Val di Stava, 19 luglio 1985: la tragedia industriale dimenticata che fece 268 vittime in cinque minuti"
-date: 2026-07-19
+date: 2026-07-19T00:02:00+02:00
 description: "Alle 12:22 del 19 luglio 1985 i bacini di decantazione della miniera di Prestavel cedettero, riversando 180.000 metri cubi di fango sull'abitato di Stava in Trentino. 268 vittime in cinque minuti. Una delle più gravi tragedie industriali italiane, oggi monito su sicurezza mineraria e responsabilità."
 
 badge: "Informazione"

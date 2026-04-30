@@ -1,6 +1,6 @@
 ---
 title: "Allerta gialla per temporali: il Gruppo segue l'evoluzione"
-date: 2026-10-29
+date: 2026-10-29T00:01:00+02:00
 description: "Il Centro Funzionale Regionale Lazio ha emesso allerta gialla per temporali. Il Gruppo monitora il territorio di Genzano."
 badge: "Allerta"
 priorita: "normale"

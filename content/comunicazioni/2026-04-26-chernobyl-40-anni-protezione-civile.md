@@ -1,6 +1,6 @@
 ---
 title: "Chernobyl, 40 anni dopo: cosa ha insegnato alla protezione civile italiana"
-date: 2026-04-26
+date: 2026-04-26T00:02:00+02:00
 description: "Il 26 aprile 1986 esplodeva il reattore 4 della centrale nucleare di Chernobyl. Quel disastro ha cambiato per sempre il modo in cui l'Italia organizza la protezione civile, il monitoraggio radiologico e la comunicazione del rischio."
 
 badge: "Informazione"

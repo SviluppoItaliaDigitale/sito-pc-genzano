@@ -1,6 +1,6 @@
 ---
 title: "Scuole di Genzano: riprendere a settembre con un Piano di Emergenza aggiornato"
-date: 2026-08-26
+date: 2026-08-26T00:01:00+02:00
 description: "A settembre riaprono le scuole. È il momento giusto per verificare Piani di Emergenza, prove di evacuazione, referenti di sicurezza."
 badge: "Prevenzione"
 priorita: "normale"

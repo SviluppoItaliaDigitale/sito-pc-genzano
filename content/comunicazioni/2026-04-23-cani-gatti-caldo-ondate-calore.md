@@ -1,6 +1,6 @@
 ---
 title: "Proteggere cani e gatti dal caldo: le 10 regole del Ministero della Salute"
-date: 2026-04-23
+date: 2026-04-23T00:02:00+02:00
 description: "Con l'avvicinarsi della stagione calda, il Ministero della Salute ricorda le regole per tutelare cani e gatti dal colpo di calore: cosa fare, cosa evitare, come riconoscere i sintomi."
 badge: "Prevenzione"
 priorita: "normale"

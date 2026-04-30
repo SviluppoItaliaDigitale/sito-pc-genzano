@@ -1,6 +1,6 @@
 ---
 title: "Bilancio 2026: un anno al servizio della comunità"
-date: 2026-12-28
+date: 2026-12-28T00:01:00+02:00
 description: "Bilancio delle attività 2026 del Gruppo Comunale Volontari di PC di Genzano: formazione, presidi, informazione, prevenzione."
 badge: "Aggiornamento"
 priorita: "normale"

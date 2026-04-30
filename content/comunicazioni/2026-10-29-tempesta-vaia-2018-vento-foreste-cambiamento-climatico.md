@@ -1,6 +1,6 @@
 ---
 title: "Tempesta Vaia, 29 ottobre 2018: il vento che ha cambiato il volto delle Dolomiti"
-date: 2026-10-29
+date: 2026-10-29T00:02:00+02:00
 description: "Fra il 27 e il 30 ottobre 2018 una tempesta atlantica di intensità eccezionale colpì il nord-est italiano con raffiche fino a 200 km/h. 14 milioni di alberi abbattuti su 42.500 ettari di foresta in tre giorni. La più grande catastrofe forestale della storia europea recente, simbolo del cambiamento climatico in atto."
 
 badge: "Informazione"

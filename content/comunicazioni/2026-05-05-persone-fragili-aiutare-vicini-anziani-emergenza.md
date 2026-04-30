@@ -1,6 +1,6 @@
 ---
 title: "Aiutare i vicini fragili in emergenza: un gesto di comunità che salva vite"
-date: 2026-05-05
+date: 2026-05-05T00:01:00+02:00
 description: "Anziani soli, persone con disabilita, famiglie in difficolta: in emergenza la rete di prossimita e spesso la prima a fare la differenza. Come prepararsi."
 badge: "Prevenzione"
 priorita: "normale"

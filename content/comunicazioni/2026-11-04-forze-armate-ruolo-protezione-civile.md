@@ -1,6 +1,6 @@
 ---
 title: "4 novembre: le Forze Armate e il loro ruolo nella Protezione Civile"
-date: 2026-11-04
+date: 2026-11-04T00:01:00+02:00
 description: "Il 4 novembre si celebra il Giorno dell'Unità Nazionale e delle Forze Armate. Qual è il ruolo dei militari nelle emergenze di Protezione Civile."
 badge: "Informazione"
 priorita: "normale"

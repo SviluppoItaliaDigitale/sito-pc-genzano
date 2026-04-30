@@ -1,6 +1,6 @@
 ---
 title: "Andare in bicicletta in sicurezza: anche la mobilita e prevenzione"
-date: 2026-04-30
+date: 2026-04-30T00:01:00+02:00
 description: "La Giornata mondiale della bicicletta ricorda che la mobilita dolce e un tema di sicurezza e salute. Poche regole, in città e sulle strade dei Castelli Romani."
 badge: "Prevenzione"
 priorita: "normale"

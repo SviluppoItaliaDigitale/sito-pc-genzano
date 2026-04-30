@@ -1,6 +1,6 @@
 ---
 title: "Da oggi il buio alle 17: il primo giorno di ora solare"
-date: 2026-10-26
+date: 2026-10-26T00:01:00+02:00
 description: "Entra in vigore l'ora solare. Il sole tramonta prima. Come adattare la giornata e mantenere sicurezza ed efficienza."
 badge: "Informazione"
 priorita: "normale"

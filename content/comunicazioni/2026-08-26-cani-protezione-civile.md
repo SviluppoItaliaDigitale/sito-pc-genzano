@@ -1,6 +1,6 @@
 ---
 title: "Cani della Protezione Civile: gli amici a quattro zampe che salvano vite"
-date: 2026-08-26
+date: 2026-08-26T00:02:00+02:00
 description: "Il ruolo delle unità cinofile nella Protezione Civile italiana: ricerca dispersi in superficie, in macerie, sotto valanga. Come si formano cani e conduttori, quante unità operano in Italia."
 
 badge: "Informazione"

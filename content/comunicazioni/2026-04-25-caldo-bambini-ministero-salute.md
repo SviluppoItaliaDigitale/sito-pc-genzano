@@ -1,6 +1,6 @@
 ---
 title: "Estate in salute: come proteggere i bambini dal caldo, dai raggi UV, dagli incendi"
-date: 2026-04-25
+date: 2026-04-25T00:02:00+02:00
 description: "Un opuscolo del Ministero della Salute, DEP Lazio e ACP spiega come riconoscere i sintomi e cosa fare per proteggere i bambini da ondate di calore, raggi UV, ozono, incendi boschivi e contaminazione alimentare."
 badge: "Prevenzione"
 priorita: "normale"

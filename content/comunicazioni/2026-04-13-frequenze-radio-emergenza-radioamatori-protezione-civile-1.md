@@ -1,6 +1,6 @@
 ---
 title: "Le frequenze radio della Rete Zamberletti: i radioamatori al servizio della Protezione Civile nelle prove di sintonia tra le Prefetture d'Italia"
-date: 2026-04-13
+date: 2026-04-13T00:01:00+02:00
 description: "La Rete Zamberletti: frequenze HF e VHF dei radioamatori per le emergenze, le prove di sintonia mensili tra le Prefetture e il ruolo nella protezione civile."
 
 badge: "Radiocomunicazioni"

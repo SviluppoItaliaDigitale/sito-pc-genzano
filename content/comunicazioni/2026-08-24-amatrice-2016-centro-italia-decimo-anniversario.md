@@ -1,6 +1,6 @@
 ---
 title: "Amatrice, 24 agosto 2016: dieci anni dalla notte del Centro Italia"
-date: 2026-08-24
+date: 2026-08-24T00:02:00+02:00
 description: "Alle 3:36 del 24 agosto 2016 una scossa di magnitudo 6.0 distrusse Amatrice, Accumoli e Arquata del Tronto. 299 morti. L'inizio della sequenza sismica più lunga della storia recente d'Italia."
 badge: "Comunicazione"
 priorita: "normale"

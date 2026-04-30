@@ -1,6 +1,6 @@
 ---
 title: "Sendai Framework e ONU: che cosa fa il mondo per la riduzione del rischio"
-date: 2026-10-13
+date: 2026-10-13T00:02:00+02:00
 description: "Nella Giornata Internazionale ONU per la Riduzione del Rischio di Disastri, ripercorriamo il Sendai Framework, i suoi sette obiettivi e il legame con la Protezione Civile italiana."
 badge: "Informazione"
 priorita: "normale"

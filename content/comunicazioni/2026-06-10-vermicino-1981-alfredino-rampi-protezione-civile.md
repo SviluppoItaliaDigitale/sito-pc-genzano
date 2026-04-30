@@ -1,6 +1,6 @@
 ---
 title: "Vermicino, 10 giugno 1981: la tragedia di Alfredino Rampi che ha spinto l'Italia a costruire la protezione civile"
-date: 2026-06-10
+date: 2026-06-10T00:02:00+02:00
 description: "Quarantacinque anni fa il piccolo Alfredo Rampi, sei anni, cadeva in un pozzo artesiano lungo la via di Vermicino, nei Castelli Romani. La diretta televisiva di tre giorni e tre notti cambiò per sempre il rapporto tra Italia, soccorsi e protezione civile."
 
 badge: "Informazione"

@@ -1,6 +1,6 @@
 ---
 title: "Versilia, 19 giugno 1996: la notte che cancellò Cardoso"
-date: 2026-06-19
+date: 2026-06-19T00:02:00+02:00
 description: "Un nubifragio di intensità mai registrata in Versilia: 470 mm di pioggia in poche ore tra Stazzema, Cardoso e Pietrasanta. 13 morti, decine di dispersi mai ritrovati. La frana che ha cambiato la cultura del rischio idrogeologico italiano."
 badge: "Comunicazione"
 priorita: "normale"

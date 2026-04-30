@@ -1,6 +1,6 @@
 ---
 title: "24 agosto 2016: dieci anni dal terremoto di Amatrice, la memoria che impegna"
-date: 2026-08-24
+date: 2026-08-24T00:01:00+02:00
 description: "A dieci anni dal sisma di Amatrice, Accumoli, Arquata, la memoria delle vittime e l'impegno per una Protezione Civile sempre più preparata."
 badge: "Informazione"
 priorita: "normale"

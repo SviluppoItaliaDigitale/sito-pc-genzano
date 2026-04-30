@@ -1,6 +1,6 @@
 ---
 title: "25 aprile: il volontariato di Protezione Civile come impegno civico"
-date: 2026-04-25
+date: 2026-04-25T00:01:00+02:00
 description: "La Festa della Liberazione ricorda i valori della Costituzione: solidarieta, partecipazione, cura della comunità. Il volontariato di Protezione Civile nasce da qui."
 badge: "Informazione"
 priorita: "normale"

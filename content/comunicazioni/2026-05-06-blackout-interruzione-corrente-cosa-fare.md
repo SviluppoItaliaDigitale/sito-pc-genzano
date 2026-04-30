@@ -1,6 +1,6 @@
 ---
 title: "Blackout: cosa fare quando salta la corrente (anche per ore o giorni)"
-date: 2026-05-06
+date: 2026-05-06T00:01:00+02:00
 description: "Un'interruzione di corrente può durare minuti, ore o giorni. Come prepararsi, cosa fare durante, cosa verificare quando l'energia torna."
 badge: "Prevenzione"
 priorita: "normale"

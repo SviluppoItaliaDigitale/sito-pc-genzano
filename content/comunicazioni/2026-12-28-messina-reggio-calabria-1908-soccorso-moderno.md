@@ -1,6 +1,6 @@
 ---
 title: "Messina e Reggio Calabria, 28 dicembre 1908: il terremoto che fece 100.000 vittime e fondò l'idea moderna di soccorso"
-date: 2026-12-28
+date: 2026-12-28T00:02:00+02:00
 description: "Alle 5:21 del 28 dicembre 1908 una scossa di magnitudo 7.1 distrusse Messina e Reggio Calabria. Lo tsunami che seguì spazzò via le coste dello Stretto. Almeno 80.000 vittime, forse oltre 120.000: la più grande catastrofe naturale della storia europea moderna. Da quel giorno cominciò la lunga marcia che porterà, oltre ottant'anni dopo, alla nascita del Servizio Nazionale di Protezione Civile."
 
 badge: "Informazione"

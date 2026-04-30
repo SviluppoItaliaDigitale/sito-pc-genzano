@@ -1,6 +1,6 @@
 ---
 title: "Incendi domestici: cause più comuni e come prevenirli"
-date: 2026-05-13
+date: 2026-05-13T00:01:00+02:00
 description: "La maggior parte degli incendi in Italia parte dalla cucina. Friggitrici, fornelli, elettrodomestici: cause e comportamenti corretti in caso di fiamma in casa."
 badge: "Prevenzione"
 priorita: "normale"

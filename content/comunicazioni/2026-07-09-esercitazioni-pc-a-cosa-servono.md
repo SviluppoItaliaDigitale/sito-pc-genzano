@@ -1,6 +1,6 @@
 ---
 title: "Le esercitazioni di Protezione Civile: a cosa servono davvero"
-date: 2026-07-09
+date: 2026-07-09T00:01:00+02:00
 description: "Dietro ogni esercitazione ci sono mesi di pianificazione e obiettivi precisi di verifica. Non sono teatro: sono il modo in cui il sistema si migliora."
 badge: "Esercitazione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Persone sole in estate: come la comunità fa da Protezione Civile"
-date: 2026-08-23
+date: 2026-08-23T00:01:00+02:00
 description: "Agosto è un mese difficile per chi vive solo. La rete di vicinato è il primo presidio invisibile di Protezione Civile."
 badge: "Informazione"
 priorita: "normale"

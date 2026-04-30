@@ -1,6 +1,6 @@
 ---
 title: "Corso di Formazione Base per nuovi volontari"
-date: 2025-03-10
+date: 2025-03-10T00:01:00+02:00
 description: "A marzo parte il nuovo ciclo di formazione per i volontari appena iscritti al Gruppo."
 badge: "Formazione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Regione Lazio: dopo 12 anni nasce la Scuola di Alta Formazione di Protezione Civile"
-date: 2026-04-29
+date: 2026-04-29T00:02:00+02:00
 description: "La Giunta regionale del Lazio ha approvato il regolamento della Scuola di Alta Formazione di Protezione Civile, prevista dalla legge regionale 2/2014 e finora inattuata. Cosa cambia per i volontari del Gruppo di Genzano e per il sistema regionale."
 badge: "Informazione"
 priorita: normale

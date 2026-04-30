@@ -485,6 +485,14 @@ Controlla la `date:` nel frontmatter:
   `pubblica-programmata.yml`).
 - Se è `≤` di oggi e l'articolo non c'è → potrebbe essere `draft: true`
   per errore. Apri il file, cambia in `draft: false`, commit.
+- Se hai pubblicato 2 articoli nella stessa giornata e uno appare
+  in cima all'archivio invece del più recente → manca l'orario nel
+  `date:`. Il formato deve essere `AAAA-MM-GGT00:01:00+02:00` per
+  il primo, `T00:02:00+02:00` per il secondo, ecc. (orari minimi
+  crescenti). Da PC: `python3 scripts/fix-ordering-articoli-stesso-giorno.py`
+  fa tutto in un colpo. Da mobile: modifica i 2 articoli a mano via
+  GitHub web editor. Specifiche in `MANUALE-SITO.md` § frontmatter
+  `date`.
 
 ### «Voglio cancellare un articolo»
 
