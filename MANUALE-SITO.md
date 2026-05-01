@@ -1821,10 +1821,10 @@ Il sito pubblica **quattro kit didattici** indirizzati alle scuole del territori
 
 | File | Fascia | Righe | Contenuti chiave |
 |---|---|---|---|
-| `kit-scuola-infanzia.md` | 3-6 anni | ~410 | Campi di Esperienza, 5 schede fotocopiabili, griglia di osservazione, percorso 4 × 30′ |
-| `kit-scuola-primaria.md` | 6-11 anni | ~685 | Raccordo 9 discipline, 3 esperimenti, uscita sul territorio, rubrica 5 competenze |
-| `kit-scuola-secondaria-primo-grado.md` | 11-14 anni | ~690 | UdA interdisciplinare, compito di realtà sul Piano di evacuazione, 5 metodologie didattiche |
-| `kit-scuola-secondaria-secondo-grado.md` | 14-19 anni | ~800 | PCTO 30-50h, 3 progetti di classe, 3 temi per l'Esame di Stato, rubrica 7×5 livelli |
+| `kit-scuola-infanzia.md` | 3-6 anni | ~410 | Campi di Esperienza, 28 schede fotocopiabili dedicate (10 da colorare + 18 attività), griglia di osservazione, percorso 4 × 30′ |
+| `kit-scuola-primaria.md` | 6-11 anni | ~685 | Raccordo 9 discipline, 22 schede fotocopiabili dedicate, 3 esperimenti, uscita sul territorio, rubrica 5 competenze |
+| `kit-scuola-secondaria-primo-grado.md` | 11-14 anni | ~690 | UdA interdisciplinare, 19 schede fotocopiabili dedicate, compito di realtà sul Piano di evacuazione, 5 metodologie didattiche |
+| `kit-scuola-secondaria-secondo-grado.md` | 14-19 anni | ~800 | PCTO 30-50h, 29 schede fotocopiabili dedicate (15 curriculari + 14 case study), 3 progetti di classe, 3 temi per l'Esame di Stato, rubrica 7×5 livelli |
 
 **Struttura comune a tutti e quattro i kit:**
 
