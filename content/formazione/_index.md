@@ -79,6 +79,12 @@ I giochi sono utilizzabili anche dai docenti come attività complementari ai kit
 
 <a href="/giochi/" class="btn btn-primary btn-lg mt-2"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Vai ai Giochi della Sicurezza</a>
 
+## Area tematica — Psicologia dell'emergenza
+
+Un evento di emergenza (terremoto, alluvione, lutto, evacuazione) lascia tracce **emotive** oltre che fisiche. La pagina [Psicologia dell'emergenza — gestire ansia e paura](/formazione/psicologia-emergenza/) offre al cittadino e al docente: quadro su reazioni emotive normali e segnali di attenzione professionale, modello del **Primo Soccorso Psicologico (OMS)** in 3 azioni (Look, Listen, Link), indicazioni specifiche per i bambini per fascia d'età, principi operativi per affrontare un evento avverso a scuola, prassi di **defusing** e **debriefing** che il Gruppo applica al rientro da interventi pesanti.
+
+<a href="/formazione/psicologia-emergenza/" class="btn btn-primary mt-2"><i class="bi bi-heart-fill me-2" aria-hidden="true"></i>Vai all'area Psicologia dell'emergenza</a>
+
 ## Area tematica — Primo Soccorso e RCP
 
 Il Gruppo ha sviluppato un'**area dedicata al primo soccorso**, con pagine divulgative per il cittadino basate sulle **Linee Guida RCP 2025** dell'Italian Resuscitation Council (IRC): riconoscere un arresto cardiaco, massaggio cardiaco, uso del defibrillatore (DAE), disostruzione da soffocamento, emorragie e ustioni, rianimazione pediatrica.

@@ -135,6 +135,18 @@ Il Gruppo aderisce ai principi del **D.Lgs. 66/2017** sull'inclusione scolastica
 
 I nostri pittogrammi seguono lo standard **ISO 7010** e usano la libreria **ARASAAC** (CC BY-NC-SA), supportando bambini con DSA, BES e parlanti italiano L2.
 
+## Psicologia dell'emergenza — la dimensione emotiva del rischio
+
+Un evento avverso lascia tracce **emotive** oltre che fisiche, e la scuola è spesso il luogo in cui queste tracce si manifestano (con bambini ansiosi, regressioni, difficoltà di concentrazione). La pagina dedicata [Psicologia dell'emergenza — gestire ansia e paura](/formazione/psicologia-emergenza/) fornisce ai docenti:
+
+- un quadro su **reazioni emotive normali vs patologiche**,
+- il modello **Primo Soccorso Psicologico (PFA) dell'OMS** in 3 azioni (Look, Listen, Link),
+- segnali d'attenzione **per fascia d'età** (0-5, 6-12, adolescenti),
+- 6 principi operativi su **come affrontare in classe** un evento avverso,
+- riferimenti istituzionali (PSIC della Protezione Civile, ASL Roma 6, SIPEM SoS).
+
+La pagina è esplicitamente **divulgativa**: non sostituisce lo psicologo scolastico né i servizi specialistici della ASL, ma offre al docente strumenti di base per non lasciare la classe da sola davanti a un evento.
+
 ## Disponibilità del Gruppo per le scuole
 
 - **Incontri in classe** del Gruppo Comunale Volontari (gratuiti). I volontari portano divisa, mezzi (se possibile), pittogrammi, kit emergenza dimostrativo.
