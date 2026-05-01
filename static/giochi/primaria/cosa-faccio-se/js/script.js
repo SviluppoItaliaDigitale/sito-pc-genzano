@@ -325,6 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
         storyCard.style.animation = '';
         storyFeedback.classList.add('hide');
         choicesContainer.innerHTML = '';
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
         step.choices.forEach(ch => {
             const btn = document.createElement('button');
             btn.className = 'choice-btn';
@@ -334,6 +335,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Mappa scenario → pagina teoria del sito
+    const TEORIA_SCENARIO = {
+        'terremoto':       { url: '/rischi-prevenzione/rischio-sismico/',       titolo: 'rischio sismico' },
+        'temporale':       { url: '/rischi-prevenzione/temporali-intensi/',     titolo: 'temporali intensi' },
+        'fumo':            { url: '/rischi-prevenzione/rischio-incendio/',      titolo: 'rischio incendio' },
+        'alluvione':       { url: '/rischi-prevenzione/rischio-idrogeologico/', titolo: 'rischio idrogeologico' },
+        'incendio-bosco':  { url: '/rischi-prevenzione/rischio-incendio/',      titolo: 'rischio incendio' },
+        'blackout':        { url: '/rischi-prevenzione/blackout/',              titolo: 'blackout' },
+        'neve-ghiaccio':   { url: '/rischi-prevenzione/',                       titolo: 'rischi e prevenzione' },
+        'persona-smarrita':{ url: '/numeri-utili/',                             titolo: 'numeri di emergenza' }
+    };
+
     function handleChoice(btn, choice, step) {
         const allBtns = choicesContainer.querySelectorAll('.choice-btn');
         allBtns.forEach(b => { b.disabled = true; });
@@ -342,6 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
             storyFeedback.className = 'story-feedback correct';
             storyFeedback.innerHTML = '<strong><i class="bi bi-check-circle-fill me-1"></i> Giusto!</strong> ' + choice.tip;
             storyFeedback.classList.remove('hide');
+            if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
             setTimeout(() => {
                 stepIndex++;
                 if (stepIndex < currentScenario.steps.length) { showStep(); }
@@ -353,6 +367,11 @@ document.addEventListener('DOMContentLoaded', () => {
             storyFeedback.className = 'story-feedback wrong';
             storyFeedback.innerHTML = '<strong><i class="bi bi-x-circle-fill me-1"></i> Non proprio...</strong> ' + choice.tip;
             storyFeedback.classList.remove('hide');
+            // Layer 3: hint contestuale con link teoria in base allo scenario
+            if (window.GameCoach && window.GameCoach.hint) {
+                const t = TEORIA_SCENARIO[currentScenario.id] || { url: '/rischi-prevenzione/', titolo: 'rischi e prevenzione' };
+                window.GameCoach.hint('Vuoi capire il perché? Leggi la pagina ' + t.titolo + ' del sito.', t.url);
+            }
             setTimeout(() => {
                 allBtns.forEach(b => {
                     if (!b.classList.contains('wrong-choice')) { b.disabled = false; }
