@@ -11,9 +11,9 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Notte di San Lorenzo" 2026-08-10-san-lorenzo-notte-stelle-cadenti-sicurezza it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Notte di San Lorenzo" 2026-08-10-san-lorenzo-notte-stelle-cadenti-sicurezza it
 La **notte di San Lorenzo**, 10 agosto, è per tradizione la notte delle **Perseidi**, sciame meteorico che in realtà ha il suo picco fra il 12 e il 13 agosto. Molte persone escono a osservare il cielo, spesso in aree di campagna o nel Parco dei Castelli Romani. Alcune semplici attenzioni permettono di godersi lo spettacolo senza creare rischi.
 
 ## Dove andare (e dove non andare)

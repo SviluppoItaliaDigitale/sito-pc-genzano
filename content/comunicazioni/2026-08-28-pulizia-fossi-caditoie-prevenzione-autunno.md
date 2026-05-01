@@ -11,9 +11,9 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Tombino" 2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Tombino" 2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno it
 Quando arrivano le prime piogge intense d'autunno, ogni **fosso intasato**, **caditoia ostruita**, **grondaia bloccata** diventa un problema. L'acqua che non trova sfogo scorre dove non dovrebbe: invade cantine, cortili, garage, strade. Gran parte degli allagamenti urbani — anche nei Castelli Romani — dipende non da piogge eccezionali, ma da **sistemi di drenaggio non manutenuti**.
 
 ## Perché la manutenzione è fondamentale

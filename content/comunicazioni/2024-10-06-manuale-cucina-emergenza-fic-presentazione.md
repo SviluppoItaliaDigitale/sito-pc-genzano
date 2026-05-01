@@ -14,9 +14,9 @@ allegati:
     url: "/manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf"
     dimensione: "3,8 MB"
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Cucina da campo" 2024-10-06-manuale-cucina-emergenza-fic-presentazione it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Cucina da campo" 2024-10-06-manuale-cucina-emergenza-fic-presentazione it
 Domenica 6 ottobre 2024, all'Auditorium del Dipartimento della Protezione Civile di Roma, la Federazione Italiana Cuochi ha presentato il **Manuale di Cucina in Emergenza**, curato dal DSEFIC — Dipartimento Solidarietà Emergenze. È il primo testo organico dedicato a chi gestisce la ristorazione nei campi di accoglienza, nei centri operativi e nelle strutture di assistenza alla popolazione durante un'emergenza.
 
 ## Di cosa si tratta

@@ -12,9 +12,9 @@ scadenza: ""
 area: "Territorio nazionale"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Giuseppe Zamberletti" 2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1 it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Giuseppe Zamberletti" 2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1 it
 **Quando le reti telefoniche crollano, quando i ripetitori cellulari restano senza energia e la fibra ottica si spezza sotto le macerie**, c'è un sistema di comunicazione che continua a funzionare. Un sistema che non dipende da infrastrutture esterne, che non ha bisogno di centrali operative alimentate dalla rete elettrica, che può attraversare l'intera penisola italiana con un segnale generato da poche decine di watt. Sono le comunicazioni in onde corte dei radioamatori, una risorsa che l'Italia ha imparato a valorizzare dopo le tragedie sismiche che ne hanno segnato la storia recente.
 
 ---

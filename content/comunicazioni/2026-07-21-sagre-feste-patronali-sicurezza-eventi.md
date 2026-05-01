@@ -11,9 +11,9 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Sagra" 2026-07-21-sagre-feste-patronali-sicurezza-eventi it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Sagra" 2026-07-21-sagre-feste-patronali-sicurezza-eventi it
 L'estate dei **Castelli Romani** è fatta anche di **sagre, feste patronali, eventi enogastronomici e religiosi**. Ogni weekend un Comune dei Castelli ospita un evento che attira migliaia di persone. Dietro a ogni manifestazione c'è un lavoro di **pianificazione della sicurezza** che include anche la **Protezione Civile**. Vale la pena conoscerlo come cittadini.
 
 ## Gli eventi tradizionali

@@ -11,9 +11,9 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Alluvione lampo" 2026-07-11-alluvioni-lampo-cosa-sono-come-proteggersi it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Alluvione lampo" 2026-07-11-alluvioni-lampo-cosa-sono-come-proteggersi it
 Le **alluvioni lampo** — in inglese *flash flood* — sono eventi idrologici improvvisi in cui **grandi quantità d'acqua** si concentrano in **poco tempo** in **aree ristrette**. In estate sono particolarmente pericolose perché si verificano durante temporali brevi ma intensi, su terreni indeboliti dalla siccità. Sono un rischio **sottovalutato** dal grande pubblico.
 
 ## La meccanica del flash flood

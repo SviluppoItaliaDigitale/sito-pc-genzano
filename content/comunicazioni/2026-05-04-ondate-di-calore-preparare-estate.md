@@ -11,9 +11,9 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Ondata di calore" 2026-05-04-ondate-di-calore-preparare-estate it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Ondata di calore" 2026-05-04-ondate-di-calore-preparare-estate it
 Le **ondate di calore** sono, da un punto di vista sanitario, il rischio meteorologico più grave del nostro Paese. Più delle alluvioni, più dei terremoti, più degli incendi. Ogni estate, quando le temperature restano sopra le medie per giorni, la mortalità aumenta in modo misurabile — soprattutto tra anziani, bambini piccoli e persone con patologie croniche. Prepararsi **ora**, all'inizio di maggio, significa arrivare alla prima ondata estiva con risposte già pronte.
 
 ## Cos'è un'ondata di calore

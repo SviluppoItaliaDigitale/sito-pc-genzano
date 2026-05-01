@@ -11,9 +11,9 @@ scadenza: ""
 area: "Lazio"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Giorno dell unità nazionale" 2026-11-04-forze-armate-ruolo-protezione-civile it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Giorno dell unità nazionale" 2026-11-04-forze-armate-ruolo-protezione-civile it
 Oggi **4 novembre**, **Giorno dell'Unità Nazionale e delle Forze Armate**, ricorrenza istituita per ricordare la conclusione della Prima Guerra Mondiale (1918). Una data che ci dà l'occasione per riflettere sul **ruolo** che le **Forze Armate** italiane svolgono anche nel **sistema di Protezione Civile**.
 
 ## Le Forze Armate nella PC italiana

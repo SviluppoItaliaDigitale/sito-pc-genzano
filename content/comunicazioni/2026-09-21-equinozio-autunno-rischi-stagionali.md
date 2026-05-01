@@ -11,9 +11,9 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Equinozio" 2026-09-21-equinozio-autunno-rischi-stagionali it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Equinozio" 2026-09-21-equinozio-autunno-rischi-stagionali it
 Il **22 settembre 2026** segna l'**equinozio d'autunno** astronomico. Dopo questa data, nell'emisfero nord, le giornate diventano più brevi delle notti. È un passaggio che, oltre al valore culturale, ha conseguenze pratiche anche nella vita quotidiana e nella sicurezza domestica.
 
 ## Cosa cambia

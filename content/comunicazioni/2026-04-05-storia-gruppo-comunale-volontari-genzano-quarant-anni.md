@@ -12,9 +12,9 @@ scadenza: ""
 area: "Territorio comunale di Genzano di Roma"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Volontariato in Italia" 2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Volontariato in Italia" 2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni it
 **Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma non è nato in un ufficio.** È nato in cucina, tra un caffè e una mappa sul tavolo, quando un gruppo di appassionati di radio CB ha deciso che una ricetrasmittente poteva servire a qualcosa di più che parlare di antenne. Era la prima metà degli anni Ottanta, in Italia la legge quadro sulla protezione civile non esisteva ancora, e chi voleva rendersi utile durante un'emergenza si organizzava come poteva. Quarant'anni dopo, quella piccola associazione di radioamatori è diventata uno dei gruppi comunali più strutturati dei Castelli Romani. Questa è la sua storia.
 
 ---

@@ -11,9 +11,9 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Idrovora" 2026-10-03-idrovore-pompe-emergenza-idraulica it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Idrovora" 2026-10-03-idrovore-pompe-emergenza-idraulica it
 In un'emergenza idraulica, quando strade, scantinati, garage si allagano, il tempo di intervento fa la differenza. Uno degli strumenti più usati dalla Protezione Civile e dai Vigili del Fuoco in questi casi è l'**idrovora**: una pompa studiata per spostare rapidamente grandi quantità d'acqua. Conoscere come funziona e quando si interviene aiuta i cittadini a capire le operazioni di soccorso.
 
 ## Cosa è un'idrovora

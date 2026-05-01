@@ -11,9 +11,9 @@ scadenza: "2027-01-02"
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Capodanno" 2026-12-30-capodanno-petardi-sicurezza it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Capodanno" 2026-12-30-capodanno-petardi-sicurezza it
 **30 dicembre 2026**. **Domani** è **Capodanno**. I **petardi** e i **fuochi d'artificio** fanno parte della tradizione italiana, ma ogni anno causano **infortuni**, **incendi**, **feriti** tra persone e **danni** agli animali. Le **regole** e il **buon senso** devono essere **guida**.
 
 ## I numeri del problema
