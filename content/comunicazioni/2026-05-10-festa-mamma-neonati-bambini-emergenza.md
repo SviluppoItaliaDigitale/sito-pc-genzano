@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Festa della mamma" 2026-05-10-festa-mamma-neonati-bambini-emergenza it
 La **Festa della Mamma** è un'occasione per pensare alla cura delle persone a cui vogliamo più bene. In un piano di emergenza familiare, **neonati e bambini piccoli** richiedono attenzioni particolari: hanno bisogni specifici, non possono spiegare cosa stanno sentendo, dipendono completamente dagli adulti.
 
 Questo articolo raccoglie alcune indicazioni pratiche per chi ha figli piccoli in casa.

@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "San Martino" 2026-11-11-san-martino-meteo-tradizione it
 Oggi **11 novembre** è **San Martino**, ricorrenza nota in tutta Italia per la sua **connessione con il clima** e le **tradizioni agricole**. Un'occasione per riflettere su come, nei secoli, le comunità abbiano **letto** il territorio, e su come la **conoscenza empirica** si affianca oggi a quella scientifica.
 
 ## San Martino nella tradizione

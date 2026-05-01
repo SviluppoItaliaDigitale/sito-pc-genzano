@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Manovra di Heimlich" 2026-05-12-manovre-antisoffocamento-pediatrico it
 **Questo articolo non sostituisce un corso di primo soccorso pediatrico.** Le manovre antisoffocamento richiedono pratica guidata: vederle in un video non basta. Esistono corsi gratuiti o a basso costo, organizzati da associazioni qualificate, che durano poche ore e possono salvare la vita di un bambino. Questo articolo serve solo a **informare** sull'importanza delle manovre e sui canali per imparare.
 
 ## Perché è un'emergenza frequente

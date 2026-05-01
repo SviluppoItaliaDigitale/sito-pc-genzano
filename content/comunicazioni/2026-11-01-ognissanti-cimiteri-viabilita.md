@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Ognissanti" 2026-11-01-ognissanti-cimiteri-viabilita it
 Oggi **1° novembre**, **Ognissanti**, e domani **2 novembre**, **commemorazione dei defunti**, sono giornate in cui l'afflusso ai **cimiteri** è significativo. A Genzano, come in altri comuni dei Castelli, si registrano maggior traffico e raduni di persone. Qualche indicazione per viverle in **serenità** e **sicurezza**.
 
 ## La viabilità nei pressi dei cimiteri
