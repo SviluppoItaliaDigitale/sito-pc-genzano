@@ -91,12 +91,16 @@ Il sistema nazionale di allertamento per il rischio meteo-idrogeologico e idraul
 
 Il nostro Comune rientra nella **Zona di allerta F — Bacini Costieri Sud**, secondo la classificazione regionale [DGR 865/2019](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf). Il bollettino viene emesso ogni giorno, generalmente entro le ore 14:00, con validità per le successive 24-36 ore.
 
+L'architettura italiana — Dipartimento della Protezione Civile → Centro Funzionale Regionale → Sindaco → cittadini — recepisce i principi della norma internazionale **ISO 22322:2022** *Public warning systems*. La fonte istituzionale operativa per il cittadino resta il bollettino del Centro Funzionale Regionale del Lazio.
+
 ### Differenza tra previsione meteo e allerta
 
 - **Previsione meteo:** indica il tempo atmosferico previsto (pioggia, vento, temperature).
 - **Allerta di criticità:** indica gli effetti attesi al suolo (allagamenti, frane, piene). È la criticità — non la meteo — che determina il codice colore.
 
 ## Significato dei codici colore
+
+I quattro livelli — **verde** (nessuna allerta), **giallo** (attenzione), **arancione** (preallarme), **rosso** (allarme) — sono lo standard italiano definito dal Dipartimento della Protezione Civile e applicato dal Centro Funzionale Regionale del Lazio. Il principio del codice-colore graduato è recepito anche nella norma internazionale **ISO 22324:2015** *Guidelines for color-coded alerts*, che lo identifica come metodo riconosciuto per la comunicazione del rischio alla popolazione. In Italia prevale lo schema DPC: il verde è incluso volutamente per dichiarare anche l'assenza di criticità.
 
 ### <span class="badge badge-allerta-verde">VERDE</span> — Nessuna Allerta
 
