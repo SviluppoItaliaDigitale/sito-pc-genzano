@@ -233,7 +233,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-edu" href="/formazione/schede-stampabili/">
   <div class="ms-card-icon"><i class="bi bi-printer-fill"></i></div>
   <p class="ms-card-title">Schede stampabili</p>
-  <p class="ms-card-desc">100 schede A4 pronte per la stampa: 10 colorabili, letto-scrittura, matematica, scienze, ed. civica, sicurezza domestica, allertamento, inclusione e altre discipline curriculari.</p>
+  <p class="ms-card-desc">105 schede A4 pronte per la stampa: 10 colorabili, letto-scrittura, matematica, scienze, ed. civica, sicurezza domestica, allertamento, inclusione e altre discipline curriculari.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/storie-e-racconti/">
   <div class="ms-card-icon"><i class="bi bi-book-half"></i></div>
