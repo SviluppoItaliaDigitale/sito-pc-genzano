@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
     .intro-card, .gioco-card-wrap { background: #fff; border-radius: 10px; padding: 1.3rem; box-shadow: 0 3px 14px rgba(0,0,0,.06); margin-bottom: 1rem; }
     .pool-label { font-weight: 700; color: var(--rag-blu); margin-bottom: .5rem; font-size: .95rem; display: flex; align-items: center; gap: .4rem; }
@@ -76,7 +77,7 @@
     .verifica-wrap { display: flex; gap: .5rem; flex-wrap: wrap; }
   </style>
 </head>
-<body class="rag-body">
+<body class="rag-body" data-coach-game="linea-tempo-eventi">
   <main id="main-content" tabindex="-1">
     <div class="app-page-hero">
       <div class="container">
@@ -312,5 +313,6 @@
     verificaBtn.addEventListener('click', verifica);
   })();
   </script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>
