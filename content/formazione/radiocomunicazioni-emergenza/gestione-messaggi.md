@@ -151,7 +151,7 @@ Informazioni di controllo del messaggio:
 
 A chi va consegnato:
 
-- **Nome** e **qualifica** (es.: Sindaco, Prefetto, Mario Rossi, COC Genzano)
+- **Nome** e **qualifica** (es.: Sindaco, Prefetto, Flavio Rossi, COC Genzano)
 - **Indirizzo** fisico o logistico
 - **Telefono** se disponibile
 

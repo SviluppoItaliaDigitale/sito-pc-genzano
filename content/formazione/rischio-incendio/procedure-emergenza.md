@@ -107,7 +107,7 @@ Nel Lazio **si chiama il 112** (NUE — Numero Unico di Emergenza). L'operatore 
 
 **Esempio di chiamata**:
 
-> *"112, incendio. Via Italo Belardi 30, Genzano di Roma. Primo piano, aula scolastica. Nessun ferito al momento, 25 persone evacuate. Presenza di bombole gas in cucina al piano terra. Mi chiamo Mario Rossi, sono l'addetto antincendio."*
+> *"112, incendio. Via Italo Belardi 30, Genzano di Roma. Primo piano, aula scolastica. Nessun ferito al momento, 25 persone evacuate. Presenza di bombole gas in cucina al piano terra. Mi chiamo Flavio Rossi, sono l'addetto antincendio."*
 
 **Non riagganciare** finché l'operatore non lo dice.
 
