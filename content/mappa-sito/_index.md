@@ -235,6 +235,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
   <p class="ms-card-title">Hub Formazione</p>
   <p class="ms-card-desc">Punto centrale della formazione: kit didattici, schede, giochi, primo soccorso.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/scuole-da-dove-cominciare/">
+  <div class="ms-card-icon"><i class="bi bi-compass-fill"></i></div>
+  <p class="ms-card-title">Scuole: da dove cominciare</p>
+  <p class="ms-card-desc">Cruscotto unico per ogni ruolo: scegli se sei docente di infanzia/primaria/sec I/sec II, di sostegno/BES, Dirigente/DSGA/RSPP, oppure genitore — e in 2 click arrivi ai materiali giusti.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/percorsi-didattici/">
   <div class="ms-card-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
   <p class="ms-card-title">Percorsi didattici pronti</p>
@@ -244,6 +249,16 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
   <div class="ms-card-icon"><i class="bi bi-folder-fill"></i></div>
   <p class="ms-card-title">Strumenti per le scuole (moduli)</p>
   <p class="ms-card-desc">7 fac-simile editabili e stampabili in A4: Pacchetto A (ingaggio generico — richiesta, liberatoria minori GDPR, circolare, attestato) e Pacchetto B (PCTO formale — convenzione, progetto formativo, registro+valutazione+certificazione). Per Dirigenti, DSGA, DPO, tutor scolastici.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/dirigenti-e-rspp/">
+  <div class="ms-card-icon"><i class="bi bi-building-fill-check"></i></div>
+  <p class="ms-card-title">Dirigenti scolastici e RSPP</p>
+  <p class="ms-card-desc">Pagina dedicata DS, DSGA, RSPP, ASPP: ruoli del Gruppo, cosa può/non può fare, coordinamento con il piano di emergenza, gestione alunni con disabilità in evacuazione, PCTO con copertura INAIL, casi specifici.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/quadro-normativo-scuola/">
+  <div class="ms-card-icon"><i class="bi bi-journals"></i></div>
+  <p class="ms-card-title">Quadro normativo per la scuola</p>
+  <p class="ms-card-desc">Riepilogo unico delle 14+ norme che regolano l'uso dei materiali del Gruppo nelle scuole: Educazione Civica, PCTO, sicurezza, inclusione, privacy, accessibilità. Una pagina, una fonte unica di verità.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/educazione-civica/">
   <div class="ms-card-icon"><i class="bi bi-mortarboard-fill"></i></div>
