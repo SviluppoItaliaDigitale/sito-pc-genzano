@@ -18,6 +18,7 @@ Sapere cosa fare prima, durante e dopo un'emergenza riduce il rischio per te, pe
 Letture consigliate per chi vuole conoscere meglio i rischi del nostro territorio:
 
 - Articolo: [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/)
+- Pagina: [Rischio vulcanico (Colli Albani)](/rischi-prevenzione/rischio-vulcanico/) — Vulcano Laziale quiescente, sismicità di bassa magnitudo, emissioni di CO₂ in spazi confinati
 - Articolo: [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
 - Articolo: [Frane e movimenti del terreno: Castelli Romani](/comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani/)
 - Articolo: [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
