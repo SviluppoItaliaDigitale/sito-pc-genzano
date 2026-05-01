@@ -99,6 +99,7 @@
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-educazione-inclusione"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Kit per le scuole</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/schede-stampabili/" role="menuitem"><span>Schede Stampabili</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/storie-e-racconti/" role="menuitem"><span>Storie e Racconti</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi della Sicurezza</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/abili-a-proteggere/" role="menuitem"><span>Abili a Proteggere</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/facile-da-leggere/" role="menuitem"><span>Facile da Leggere</span></a></li>' +

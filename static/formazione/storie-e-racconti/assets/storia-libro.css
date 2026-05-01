@@ -1,0 +1,301 @@
+/* Storie e Racconti — stile "libro" leggibile e stampabile.
+   Coerente con scheda-print.css (variabili PC blu) ma tipografia
+   più calda, dedicata alla lettura narrativa. */
+
+:root {
+  --storia-blu: #003366;
+  --storia-oro: #b8860b;
+  --storia-bordo: #d6dde4;
+  --storia-fondo: #fbf9f4;
+  --storia-card: #ffffff;
+  --storia-corpo: #2a2a2a;
+  --storia-tenue: #5e6470;
+}
+
+html, body {
+  background: var(--storia-fondo);
+  color: var(--storia-corpo);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.75;
+}
+
+.storia-toolbar {
+  background: var(--storia-blu);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.92rem;
+}
+.storia-toolbar a, .storia-toolbar button {
+  color: #fff;
+  text-decoration: none;
+  background: transparent;
+  border: 1.5px solid #fff;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+.storia-toolbar a:hover, .storia-toolbar button:hover,
+.storia-toolbar a:focus, .storia-toolbar button:focus {
+  background: rgba(255, 255, 255, 0.15);
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.storia-toolbar .storia-titolo-mini {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.storia-page {
+  max-width: 720px;
+  margin: 2rem auto;
+  background: var(--storia-card);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 51, 102, 0.08);
+  border-radius: 4px;
+}
+
+.storia-header {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--storia-bordo);
+}
+.storia-eyebrow {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--storia-tenue);
+  margin-bottom: 0.5rem;
+}
+.storia-titolo-principale {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: var(--storia-blu);
+  margin: 0.4rem 0 0.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.storia-sottotitolo {
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: var(--storia-tenue);
+  font-size: 1.05rem;
+}
+.storia-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.82rem;
+  color: var(--storia-tenue);
+}
+.storia-meta strong { color: var(--storia-blu); font-weight: 600; }
+
+.storia-illustrazione {
+  display: block;
+  margin: 1.5rem auto 2rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.storia-corpo p {
+  font-size: 1.08rem;
+  margin: 0 0 1.1rem;
+  text-align: justify;
+  hyphens: auto;
+}
+.storia-corpo p:first-child::first-letter {
+  font-family: Georgia, serif;
+  font-size: 3.4rem;
+  line-height: 0.9;
+  float: left;
+  padding: 0.4rem 0.55rem 0 0;
+  color: var(--storia-blu);
+  font-weight: 700;
+}
+.storia-corpo p:first-child::first-line {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  color: var(--storia-blu);
+}
+.storia-corpo em { color: var(--storia-blu); font-style: italic; }
+
+.storia-separatore {
+  text-align: center;
+  margin: 1.8rem 0;
+  color: var(--storia-oro);
+  letter-spacing: 0.4em;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.storia-imparato {
+  margin-top: 2rem;
+  background: #f0f4f8;
+  border-left: 5px solid var(--storia-blu);
+  padding: 1.25rem 1.4rem;
+  border-radius: 0 8px 8px 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.storia-imparato h2 {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--storia-blu);
+  margin: 0 0 0.6rem;
+}
+.storia-imparato ul {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+.storia-imparato li {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 0.45rem;
+}
+.storia-imparato strong { color: var(--storia-blu); }
+
+.storia-domande {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1.5px dashed var(--storia-oro);
+  border-radius: 8px;
+  background: #fffaf0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.storia-domande h2 {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  color: #6d4c00;
+  margin: 0 0 0.5rem;
+}
+.storia-domande ol {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+.storia-domande li {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #4a3a00;
+}
+
+.storia-pedagogia {
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.4rem;
+  background: #f3eef9;
+  border-left: 5px solid #6b3fa0;
+  border-radius: 0 8px 8px 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: #2a1a52;
+}
+.storia-pedagogia h2 {
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  color: #4a2876;
+  margin: 0 0 0.6rem;
+}
+.storia-pedagogia h3 {
+  font-family: Georgia, serif;
+  font-size: 0.98rem;
+  color: #4a2876;
+  margin: 0.7rem 0 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.storia-pedagogia ul {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+.storia-pedagogia li { margin-bottom: 0.3rem; }
+.storia-pedagogia strong { color: #4a2876; }
+.storia-pedagogia .ped-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin: 0.4rem 0 0.6rem;
+  font-size: 0.86rem;
+}
+.storia-pedagogia .ped-meta span {
+  background: #fff;
+  border: 1px solid #d4c5e8;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  color: #4a2876;
+}
+
+.storia-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--storia-bordo);
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.82rem;
+  color: var(--storia-tenue);
+}
+.storia-footer a {
+  color: var(--storia-blu);
+  text-decoration: none;
+  font-weight: 600;
+}
+.storia-footer a:hover, .storia-footer a:focus {
+  text-decoration: underline;
+}
+
+.storia-navigazione {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.storia-navigazione a {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--storia-blu);
+  color: #fff;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.storia-navigazione a:hover, .storia-navigazione a:focus {
+  background: #002244;
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .storia-page { margin: 1rem; padding: 1.5rem 1.2rem; }
+  .storia-titolo-principale { font-size: 1.7rem; }
+  .storia-corpo p { font-size: 1rem; text-align: left; }
+  .storia-corpo p:first-child::first-letter { font-size: 2.7rem; }
+}
+
+@media print {
+  body { background: #fff; }
+  .storia-toolbar, .storia-navigazione { display: none; }
+  .storia-page {
+    box-shadow: none;
+    margin: 0;
+    padding: 1cm 1.5cm;
+    max-width: none;
+  }
+  .storia-corpo p { font-size: 11pt; }
+  .storia-imparato { page-break-inside: avoid; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

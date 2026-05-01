@@ -293,6 +293,15 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 Queste schede sono pensate per essere **fotocopiate in bianco e nero** e consegnate ai bambini come attività di rinforzo individuale o di piccolo gruppo. Il disegno è sempre accompagnato da una breve consegna che la maestra legge ad alta voce.
 
+**Storie e racconti per leggere insieme — sezione 3-5 anni:** sei fiabe brevi (200-400 parole) con la mascotte Tina la Tartaruga, ognuna su un tema PC e con sezione "Per il/la docente" (obiettivi, competenze chiave europee, attività di circle time, riferimenti curricolari). Da leggere ad alta voce, drammatizzare, illustrare.
+
+- 👉 [**Tina e il temporale gentile**](/formazione/storie-e-racconti/tina-temporale-gentile/) — autoprotezione durante un temporale, riparo al chiuso.
+- 👉 [**Il fischietto magico di Tina**](/formazione/storie-e-racconti/tina-fischietto-magico/) — tre fischi = aiuto, kit emergenza.
+- 👉 [**La nuvola arrabbiata**](/formazione/storie-e-racconti/nuvola-arrabbiata/) — i quattro codici colore dell'allerta meteo.
+- 👉 [**Tina e l'amico in difficoltà**](/formazione/storie-e-racconti/tina-amico-difficolta/) — chiamare un adulto, NUE 112.
+- 👉 [**I tre pompieri amici**](/formazione/storie-e-racconti/tre-pompieri-amici/) — fiducia nei Vigili del Fuoco, segnalare il fumo.
+- 👉 [**Quando la terra fa solletico**](/formazione/storie-e-racconti/terra-fa-solletico/) — terremoto, posizione della tartaruga.
+
 ### Scheda 1 — Colora gli aiutanti
 
 Consegna: *"Colora il vigile del fuoco di rosso, l'ambulanza di bianco con la croce rossa, il volontario della Protezione Civile con la divisa arancione."*

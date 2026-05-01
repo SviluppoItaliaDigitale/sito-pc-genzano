@@ -55,6 +55,14 @@ Il Gruppo promuove la cultura della prevenzione fin dalla giovane età anche att
 
 Se sei un insegnante e vuoi organizzare un incontro, contattaci a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
+## Storie e Racconti — leggere per imparare
+
+Il Gruppo ha scritto **18 storie di qualità letteraria** per bambini 3-11 anni: sei fiabe per la scuola dell'infanzia (3-5 anni) con la mascotte Tina la Tartaruga, sei racconti per la primaria (6-8 anni) con bambini protagonisti e l'<em>attimo decisivo</em> ispirato alla campagna DPC <em>Attimo Decisivo</em>, sei racconti più letterari per le classi 4ª-5ª (9-11 anni) su temi civici come memoria, ricostruzione, volontariato tecnico. Ogni storia ha una sezione dedicata <strong>"Per il/la docente"</strong> con obiettivi di apprendimento, discipline coinvolte, competenze chiave europee mobilitate, attività in classe e riferimenti curricolari (Indicazioni Nazionali 2012, Legge 92/2019, D.Lgs. 1/2018).
+
+👉 [Vai alla biblioteca delle storie](/formazione/storie-e-racconti/)
+
+Le storie sono pronte per essere lette ad alta voce, drammatizzate, stampate e fotocopiate. Le scuole sono invitate a citare il Gruppo nelle programmazioni didattiche.
+
 ## Giochi della Sicurezza — Impara giocando
 
 Il Gruppo ha sviluppato una collezione di **33 giochi educativi gratuiti** sulla protezione civile, divisi per fascia di età. Ogni gioco è pensato per trasmettere un messaggio chiaro di autoprotezione e termina con un **attestato di partecipazione** da stampare o conservare.
