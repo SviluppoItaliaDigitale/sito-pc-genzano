@@ -253,9 +253,9 @@ Rubrica fascia, indicatori 2 (comunicazione del rischio), 6 (cittadinanza attiva
 | 5 (PCTO) | Testimonianza diretta di un volontario PC su un infortunio reale evitato grazie alla formazione | Visita al Gruppo o intervento di un volontario in classe |
 | 6 (PCTO) | Stesura di una **Procedura Operativa Standard** sintetica per un'attività della propria scuola | Lavoro di gruppo, restituzione in plenaria |
 
-### Connessione con il PCTO (D.Lgs. 77/2005)
+### Connessione con il PCTO (D.Lgs. 77/2005, L. 145/2018, D.M. 774/2019)
 
-Il percorso può essere riconosciuto come parte delle ore di sicurezza obbligatorie nei PCTO. Il Gruppo Comunale è disponibile a **ospitare studenti** per percorsi PCTO sui temi di **mappatura del territorio, comunicazione del rischio, supporto a esercitazioni**. Procedura e condizioni nella [pagina docenti — sezione PCTO](/formazione/educazione-civica/#disponibilita-pcto).
+Il percorso può essere riconosciuto come parte delle ore di sicurezza obbligatorie nei PCTO, all'interno del **monte ore minimo triennale** previsto dall'art. 1 comma 785 della **L. 145/2018**: almeno **90 ore nei Licei**, **150 nei Tecnici**, **210 nei Professionali**. Il Gruppo Comunale è disponibile a **ospitare studenti** per moduli da 30-50 ore sui temi di **mappatura del territorio, comunicazione del rischio, supporto a esercitazioni**. Procedura, sicurezza e condizioni nella [pagina docenti — sezione PCTO](/formazione/educazione-civica/#disponibilita-pcto).
 
 ### Competenze chiave europee mobilitate
 
@@ -300,4 +300,4 @@ Scrivere a **[segreteria@protezionecivilegenzano.it](mailto:segreteria@protezion
 ---
 
 **Ultimo aggiornamento**: 1 maggio 2026.
-**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h e h-ter) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 81/2008 · D.Lgs. 77/2005 (PCTO) · D.M. 26/08/1992 (prevenzione incendi nelle scuole) · Raccomandazione UE 22 maggio 2018.
+**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h e h-ter) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 81/2008 · D.Lgs. 77/2005 (PCTO) · L. 145/2018 (art. 1 c. 785 monte ore PCTO) · D.M. 774/2019 (Linee guida PCTO) · D.Lgs. 62/2017 · D.M. 26/08/1992 (prevenzione incendi nelle scuole) · Raccomandazione UE 22 maggio 2018.
