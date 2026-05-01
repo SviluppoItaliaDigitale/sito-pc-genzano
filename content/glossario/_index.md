@@ -23,7 +23,7 @@ Punto sicuro dove la popolazione si raduna nelle prime fasi di un'emergenza, in 
 **Agibilità e Danno nell'Emergenza Sismica**. È la **scheda tecnica** usata da tecnici qualificati dopo un terremoto per valutare se un edificio è agibile, parzialmente agibile o inagibile. Si compila con sopralluogo e dà un esito che permette o vieta il rientro in casa.
 
 ### AIB
-**Antincendio Boschivo**. Tutte le attività di prevenzione, avvistamento, contenimento e spegnimento degli incendi nei boschi e nelle aree naturali. Coinvolge Vigili del Fuoco, Carabinieri Forestali, Regioni e volontari specializzati. La stagione AIB in Lazio è da **giugno a settembre**.
+**Antincendio Boschivo**. Tutte le attività di prevenzione, avvistamento, contenimento e spegnimento degli incendi nei boschi e nelle aree naturali. Coinvolge Vigili del Fuoco, Carabinieri Forestali, Regioni e volontari specializzati. La stagione AIB nel Lazio è da **giugno a settembre**.
 
 ### Allerta
 Stato di attenzione comunicato dalle autorità (Centro Funzionale Regionale) **prima** che un evento si verifichi, sulla base di previsioni meteo. Ha 4 livelli: **verde** (nessuna), **gialla** (ordinaria), **arancione** (moderata), **rossa** (elevata). Diversa da **emergenza** (che indica un evento già in corso).
