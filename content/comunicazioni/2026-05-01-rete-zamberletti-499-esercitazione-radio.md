@@ -5,8 +5,8 @@ description: "Il 30 aprile 2026 si è svolta la 499ª esercitazione della Rete Z
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-01-rete-zamberletti-499-esercitazione-radio.webp"
+image_alt: "Cover dell'articolo: Rete Zamberletti: svolta la 499ª esercitazione radio nazionale"
 scadenza: ""
 area: ""
 allegati: []
