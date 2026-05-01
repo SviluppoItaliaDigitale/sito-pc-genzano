@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Colpo di calore" 2026-07-19-colpo-calore-riconoscere-primo-soccorso it
 Il **colpo di calore** è un'**emergenza medica** che può avere conseguenze gravi, anche fatali. Si manifesta quando il corpo non riesce più a raffreddarsi e la temperatura interna sale oltre **i 40 °C**. Riconoscerlo tempestivamente e intervenire nel modo giusto può salvare una vita. Ogni cittadino dovrebbe conoscerne le basi.
 
 ## Cosa è un colpo di calore

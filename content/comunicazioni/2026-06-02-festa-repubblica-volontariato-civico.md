@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Festa della Repubblica Italiana" 2026-06-02-festa-repubblica-volontariato-civico it
 Il **2 giugno** si celebra la **Festa della Repubblica Italiana**, nell'anniversario del referendum del **1946** con cui gli italiani scelsero la forma repubblicana. È una data che richiama i principi della **Costituzione** — tra cui uno particolarmente vicino al mondo della Protezione Civile: l'articolo 2, sulla **solidarietà politica, economica e sociale**.
 
 ## Volontariato e Costituzione
