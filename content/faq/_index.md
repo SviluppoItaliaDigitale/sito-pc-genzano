@@ -8,6 +8,7 @@ sitemap:
   priority: 0.7
   changefreq: monthly
 toc: true
+tts: true
 ---
 
 ## Allerte Meteo

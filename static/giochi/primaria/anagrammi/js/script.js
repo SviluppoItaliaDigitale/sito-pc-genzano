@@ -340,6 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
         feedbackBox.classList.remove('hide', 'wrong');
         feedbackBox.classList.add('correct');
         feedbackBox.innerHTML = `<i class="bi bi-check-circle-fill" aria-hidden="true"></i> Bravissimo! +${earned} punti`;
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
         nextBtn.classList.remove('hide');
         nextBtn.focus();
       } else {
@@ -347,6 +348,9 @@ document.addEventListener('DOMContentLoaded', () => {
         feedbackBox.classList.remove('hide', 'correct');
         feedbackBox.classList.add('wrong');
         feedbackBox.innerHTML = '<i class="bi bi-x-circle-fill" aria-hidden="true"></i> Non è corretto. Riprova!';
+        if (window.GameCoach && window.GameCoach.hint) {
+          window.GameCoach.hint('Le parole sono tutte legate alla Protezione Civile. Conta le lettere e pensa alla definizione: il glossario del sito ha quasi tutte le parole.', '/glossario/');
+        }
         // sblocca le tile per farle riposizionare
         setTimeout(() => {
           resetWord();

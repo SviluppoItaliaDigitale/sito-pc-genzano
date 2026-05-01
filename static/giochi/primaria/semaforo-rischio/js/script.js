@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         progressBar.style.width = ((index / queue.length) * 100) + '%';
         situationText.textContent = queue[index].text;
         buttons.forEach(b => { b.disabled = false; });
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
     }
 
     function handleAnswer(chosen) {
@@ -106,6 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
             feedback.className = 'feedback-box wrong';
             const colorLabel = { verde: 'Verde', giallo: 'Giallo', rosso: 'Rosso' };
             feedback.innerHTML = '<i class="bi bi-x-circle-fill me-1"></i> La risposta era <strong>' + colorLabel[sit.answer] + '</strong>. ' + sit.tip;
+            if (window.GameCoach && window.GameCoach.hint) {
+                window.GameCoach.hint('Verde = sicuro (lo puoi fare). Giallo = attenzione (rischio basso). Rosso = pericoloso o vietato. Stessa logica dell\'allerta meteo.', '/allerte-meteo/');
+            }
         }
         feedback.classList.remove('hide');
         setTimeout(() => {

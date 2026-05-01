@@ -10,6 +10,7 @@ sitemap:
   priority: 0.8
   changefreq: monthly
 toc: true
+tts: true
 ---
 Il Piano di Emergenza Comunale è lo strumento fondamentale che stabilisce le procedure operative per affrontare qualsiasi calamità in modo organizzato ed efficace. È un documento predisposto dal Comune per la tutela della popolazione e del territorio.
 

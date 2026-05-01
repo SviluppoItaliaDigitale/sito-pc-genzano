@@ -623,6 +623,11 @@
       var label = opt.kind === 'ok' ? 'Risposta giusta' : (opt.kind === 'ko' ? 'Risposta sbagliata' : 'Risposta poco utile');
       feedbackEl.innerHTML = '<strong>' + label + '.</strong>' + opt.fb;
       feedbackEl.classList.remove('hide');
+      if (opt.kind === 'ok') {
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
+      } else if (window.GameCoach && window.GameCoach.hint) {
+        window.GameCoach.hint('Al 112 dici sempre tre cose: COSA succede, DOVE sei, QUANTI siete. Resta calmo, non riagganciare per primo.', '/numeri-utili/');
+      }
       nextBtn.classList.remove('hide');
       nextBtn.onclick = function () {
         stepIdx++;

@@ -163,11 +163,15 @@
         feedback.style.color = '#0f5132';
         feedback.innerHTML = '✅ Bravo! Era il ' + target.lbl.toLowerCase() + '.';
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         btn.classList.add('wrong');
         feedback.style.color = '#8B1F2E';
         feedback.innerHTML = '🐢 Era il ' + target.lbl.toLowerCase() + '. Continua!';
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
+        if (window.GameCoach && window.GameCoach.hint) {
+          window.GameCoach.hint('Sirena ambulanza = 3 toni veloci. Tuono = boom dopo il fulmine. Allarme scuola = suono lungo. IT-Alert = il telefono squilla forte.', '/allerte-meteo/');
+        }
       }
       setTimeout(function(){
         idx++;

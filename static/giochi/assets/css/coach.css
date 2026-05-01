@@ -250,11 +250,93 @@ body.rag-body .coach-trigger:focus-visible {
   .coach-trigger:hover { transform: none; }
 }
 
+/* ── Bottone TTS "Ascolta" (Web Speech API) ─────────────── */
+.coach-speak-row {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 .8rem;
+}
+.coach-speak-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .55rem 1rem;
+  border: 2px solid #0066CC;
+  background: #fff;
+  color: #003366;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .15s, color .15s, transform .12s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+}
+.coach-speak-btn:hover,
+.coach-speak-btn:focus-visible {
+  background: #0066CC;
+  color: #fff;
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.coach-speak-btn .coach-speak-icon { font-size: 1.2rem; line-height: 1; }
+.coach-speak-btn.speaking {
+  background: #198754;
+  color: #fff;
+  border-color: #198754;
+  animation: coach-speak-pulse 1.4s ease-in-out infinite;
+}
+@keyframes coach-speak-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(25, 135, 84, .4); }
+  50%      { box-shadow: 0 0 0 8px rgba(25, 135, 84, 0); }
+}
+
+/* Variante mini per i hint contestuali */
+.coach-speak-btn-mini {
+  padding: .3rem .7rem;
+  font-size: .85rem;
+  margin-top: .4rem;
+}
+.coach-hint {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.coach-hint-text { flex: 1; }
+
+/* Variante visiva per fascia */
+body.inf-body .coach-speak-btn {
+  border-color: #F4B700;
+  color: #17324D;
+  font-size: 1.05rem;
+}
+body.inf-body .coach-speak-btn:hover,
+body.inf-body .coach-speak-btn:focus-visible {
+  background: #F4B700;
+  color: #17324D;
+}
+body.rag-body .coach-speak-btn {
+  background: rgba(255, 255, 255, .12);
+  border-color: #ffbe2e;
+  color: #fff;
+}
+body.rag-body .coach-speak-btn:hover,
+body.rag-body .coach-speak-btn:focus-visible {
+  background: #ffbe2e;
+  color: #17324D;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .coach-speak-btn,
+  .coach-speak-btn.speaking { animation: none !important; transition: none !important; }
+}
+
 /* Stampa: nascondi tutto il coach */
 @media print {
   .coach-trigger,
   .coach-backdrop,
-  .coach-hint {
+  .coach-hint,
+  .coach-speak-btn {
     display: none !important;
   }
 }

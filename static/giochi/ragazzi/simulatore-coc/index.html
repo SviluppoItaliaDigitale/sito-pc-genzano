@@ -253,9 +253,13 @@
       if (corretto){
         ok++; corretteEl.textContent = ok;
         feedback.innerHTML = '<div class="alert alert-success py-2 mb-0 small"><i class="bi bi-check-circle-fill me-1"></i> Corretto! ' + ev.spiega + '</div>';
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         ko++; errateEl.textContent = ko;
         feedback.innerHTML = '<div class="alert alert-warning py-2 mb-0 small"><i class="bi bi-exclamation-triangle-fill me-1"></i> Era <strong>F' + ev.corretta + '</strong>. ' + ev.spiega + '</div>';
+        if (window.GameCoach && window.GameCoach.hint) {
+          window.GameCoach.hint('Le 9 funzioni del Metodo Augustus: F1=tecnica/cartografia, F2=sanità, F3=volontariato, F4=materiali/mezzi, F5=servizi essenziali, F6=danni, F7=strutture/viabilità, F8=telecomunicazioni, F9=accoglienza popolazione.', '/normativa/');
+        }
       }
       kpiFill.style.width = Math.round(((idx+1) / EVENTI.length) * 100) + '%';
       assegnaBtn.disabled = true;

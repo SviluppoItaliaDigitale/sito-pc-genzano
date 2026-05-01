@@ -101,7 +101,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    let selectedLeft = null, matched = 0, total = 0, errors = 0;
+    let selectedLeft = null, matched = 0, total = 0, errors = 0, currentCat = null;
+
+    // Mappa titolo categoria → pagina teoria del sito
+    const TEORIA_CAT = {
+        'Numeri di emergenza':    { url: '/numeri-utili/',                       titolo: 'numeri utili' },
+        'Codici colore allerta':  { url: '/allerte-meteo/',                      titolo: 'allerte meteo' },
+        'Rischi e comportamenti': { url: '/rischi-prevenzione/',                 titolo: 'rischi e prevenzione' },
+        'Oggetti dello zaino':    { url: '/rischi-prevenzione/kit-emergenza/',   titolo: 'kit di emergenza' },
+        'Cartelli di sicurezza':  { url: '/pittogrammi/',                        titolo: 'pittogrammi' },
+        'Classi di fuoco':        { url: '/rischi-prevenzione/rischio-incendio/',titolo: 'rischio incendio' },
+        'Ruoli in emergenza':     { url: '/chi-siamo/',                          titolo: 'chi siamo' },
+        'Meteo e allerte':        { url: '/allerte-meteo/',                      titolo: 'allerte meteo' }
+    };
 
     function shuffle(arr) {
         for (let i = arr.length - 1; i > 0; i--) {
@@ -129,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selectScreen.classList.add('hide');
         gameScreen.classList.remove('hide');
         catTitle.textContent = cat.title;
+        currentCat = cat;
         matched = 0; errors = 0; selectedLeft = null;
         total = cat.pairs.length;
         matchedCount.textContent = 0;
@@ -180,6 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gameFeedback.className = 'game-feedback correct';
                 gameFeedback.textContent = 'Giusto!';
                 gameFeedback.classList.remove('hide');
+                if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
                 selectedLeft = null;
                 if (matched === total) {
                     setTimeout(showEnd, 800);
@@ -191,6 +205,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 gameFeedback.className = 'game-feedback wrong';
                 gameFeedback.textContent = 'Non corrispondono, riprova!';
                 gameFeedback.classList.remove('hide');
+                if (window.GameCoach && window.GameCoach.hint && currentCat) {
+                    const t = TEORIA_CAT[currentCat.title] || { url: '/rischi-prevenzione/', titolo: 'rischi e prevenzione' };
+                    window.GameCoach.hint('Pensa al collegamento più diretto. La pagina ' + t.titolo + ' del sito ti dà gli abbinamenti giusti.', t.url);
+                }
                 setTimeout(() => {
                     el.classList.remove('wrong-flash');
                     if (selectedLeft) selectedLeft.classList.remove('wrong-flash', 'selected');

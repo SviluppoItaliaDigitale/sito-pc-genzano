@@ -4,6 +4,7 @@ description: "Recapiti, mappa e modalità di attivazione in emergenza."
 layout: "single"
 aliases:
   - /contatti.html
+tts: true
 ---
 
 <div class="card border-danger mb-4">
