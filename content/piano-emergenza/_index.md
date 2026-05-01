@@ -18,6 +18,8 @@ Il Piano di Emergenza Comunale è lo strumento fondamentale che stabilisce le pr
 
 Il suo scopo principale è **salvare vite umane**. Definisce chi fa cosa, quali risorse utilizzare e come coordinare i soccorsi. Identifica le "Aree di Emergenza", luoghi sicuri destinati ad accogliere la popolazione in caso di evacuazione.
 
+L'impianto del Piano segue il **D.Lgs. 1/2018** (Codice della Protezione Civile) e le **direttive del Dipartimento della Protezione Civile**. La parte sull'evacuazione di massa, la pianificazione dei punti di raccolta e l'attenzione alle persone con esigenze specifiche recepisce inoltre i principi della norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*.
+
 ## Come leggere il Piano
 
 Il Piano di Emergenza è un documento tecnico, ma i concetti chiave che ogni cittadino deve conoscere sono semplici:
