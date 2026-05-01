@@ -39,6 +39,8 @@ Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione C
 - Conosce la relazione tra cambiamenti climatici ed eventi estremi
 - Conosce il sistema di monitoraggio e allertamento nazionale e regionale
 - Conosce il principio di sussidiarietà (art. 118 Cost.) e il ruolo del volontariato organizzato
+- Conosce le **figure del D.Lgs. 81/2008** (datore di lavoro, RSPP, RLS, medico competente, preposto, lavoratore) e i **principi generali di prevenzione** (Modulo 7, L. 21/2025)
+- Conosce le 5 categorie di **segnaletica ISO 7010** (divieto, avvertimento, obbligo, salvataggio, antincendio) e i criteri di scelta dei DPI
 
 **Abilità**
 - Consulta autonomamente portali scientifici e istituzionali (INGV, ISPRA, DPC, Copernicus EMS)
@@ -46,6 +48,7 @@ Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione C
 - Produce analisi critiche della comunicazione del rischio su media tradizionali e social
 - Progetta e realizza una campagna di comunicazione del rischio per un target specifico
 - Valuta criticamente la qualità delle fonti informative
+- Conduce un **audit di sicurezza** semplificato sull'aula/laboratorio della propria scuola (verifica cartelli, vie di fuga, estintori, DPI) e sa redigere una **Procedura Operativa Standard** sintetica
 
 **Competenze chiave europee**
 - **Competenza alfabetica funzionale avanzata**: analizza testi tecnici, giuridici, scientifici e ne produce di propri
@@ -74,7 +77,7 @@ Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione C
 
 ### Durata consigliata e tabella del percorso
 
-Il percorso completo si articola in **6 moduli da 60-90 minuti**. Ogni modulo è autonomo e può essere approfondito ulteriormente per i percorsi PCTO.
+Il percorso completo si articola in **7 moduli da 60-90 minuti**. Ogni modulo è autonomo e può essere approfondito ulteriormente per i percorsi PCTO.
 
 | Modulo | Tema | Durata | Classi consigliate |
 |---|---|---|---|
@@ -84,11 +87,12 @@ Il percorso completo si articola in **6 moduli da 60-90 minuti**. Ogni modulo è
 | 4 | Sistema di monitoraggio e allertamento | 90' | III-V |
 | 5 | Comunicazione del rischio | 60-90' | III-V |
 | 6 | Volontariato e cittadinanza attiva | 60-90' | III-V |
+| 7 | [Sicurezza nei luoghi di lavoro (L. 21/2025)](#modulo-sicurezza-lavoro) | 4-6 ore | III-V |
 
 **Compito di realtà / progetto di classe**: +6-12 ore (vedi sezione dedicata)
 **Percorso PCTO strutturato**: 30-50 ore (vedi sezione dedicata)
 
-**Totale complessivo**: 8-12 ore per il percorso curricolare base, fino a 70+ ore integrando PCTO e Progetto.
+**Totale complessivo**: 12-18 ore per il percorso curricolare base, fino a 75+ ore integrando PCTO e Progetto.
 
 ### Prerequisiti
 
@@ -485,6 +489,152 @@ Ogni gruppo ha 15 minuti per preparare le argomentazioni, poi 5 minuti ciascuno 
 - a) Solo competenze tecniche
 - b) Competenze trasversali come lavoro di squadra, problem solving e responsabilità civica ✔
 - c) Solo conoscenze teoriche sul diritto delle emergenze
+
+---
+
+## Modulo 7 — Sicurezza nei luoghi di lavoro (L. 21/2025) {#modulo-sicurezza-lavoro}
+
+{{< pittogramma src="/pittogrammi/iso7010/casco-protettivo.svg" alt="Pittogramma ISO 7010 — Obbligo di indossare il casco protettivo" size="medium" >}}
+
+### Quadro normativo specifico
+
+La **Legge 17 febbraio 2025, n. 21** (in vigore dal 19 marzo 2025) ha aggiunto la **lettera h-ter)** all'art. 3 della Legge 92/2019. L'articolo include ora tra i temi obbligatori dell'Educazione Civica le *"conoscenze di base in materia di sicurezza nei luoghi di lavoro"*. L'insegnamento rientra nelle 33 ore annuali e interessa in modo particolare la Secondaria di II grado e i percorsi PCTO.
+
+Il riferimento sostanziale resta il **D.Lgs. 9 aprile 2008, n. 81** — *Testo Unico sulla salute e sicurezza nei luoghi di lavoro*, che disciplina obblighi, figure, valutazione del rischio, formazione e DPI.
+
+Il modulo si raccorda esplicitamente con i [Percorsi didattici pronti — Percorso 6 «Sicurezza nei luoghi di lavoro e PCTO»](/formazione/percorsi-didattici/#percorso-6).
+
+### Perché un modulo dedicato in un kit di Protezione Civile
+
+Sicurezza nei luoghi di lavoro e Protezione Civile condividono una stessa **logica di gestione del rischio**: identificazione del pericolo, valutazione, eliminazione alla fonte, protezione collettiva, protezione individuale, formazione, sorveglianza. Un volontario in attivazione di emergenza opera in condizioni operative complesse (cantiere allagato, area sismica, fronte di incendio): la cultura della sicurezza è il presupposto della cultura dell'autoprotezione.
+
+### Le figure del D.Lgs. 81/2008
+
+| Figura | Compito principale |
+|---|---|
+| **Datore di lavoro** | Titolare del rapporto, responsabile ultimo della sicurezza |
+| **RSPP** (Responsabile del Servizio di Prevenzione e Protezione) | Coordina la valutazione dei rischi, supporta il datore di lavoro |
+| **RLS** (Rappresentante dei Lavoratori per la Sicurezza) | Eletto dai lavoratori, vigila e propone migliorie |
+| **Medico competente** | Sorveglianza sanitaria sui rischi specifici |
+| **Preposto** | Sovrintende, controlla l'osservanza degli obblighi sui lavoratori |
+| **Lavoratore** | Si prende cura della propria salute e di quella altrui (art. 20) |
+
+Nella **scuola** il datore di lavoro è il **Dirigente Scolastico**; gli studenti sono equiparati a lavoratori quando svolgono attività di laboratorio, officina, palestra (D.M. 382/1998 + chiarimenti).
+
+### I principi generali di prevenzione (art. 15 D.Lgs. 81/2008)
+
+In ordine di priorità:
+
+1. **Eliminazione del rischio alla fonte** (rimuovere il pericolo).
+2. **Sostituzione** di ciò che è pericoloso con ciò che non lo è o lo è meno.
+3. **Riduzione del rischio** alla fonte (es. miglior progettazione).
+4. **Protezione collettiva** (barriere, schermi, aspirazione) prima di quella individuale.
+5. **Dispositivi di Protezione Individuale (DPI)** come ultima linea.
+6. **Formazione, informazione, addestramento** dei lavoratori.
+7. **Sorveglianza sanitaria** quando necessaria.
+
+> ⚠️ Il DPI non è la prima soluzione: è l'ultima. Una scuola di pensiero del lavoro che mette il DPI al posto della rimozione del rischio sta facendo prevenzione **al ribasso**.
+
+### Dispositivi di Protezione Individuale (DPI)
+
+I DPI si dividono in **3 categorie** (Reg. UE 2016/425):
+- **Categoria I** — rischi minori (es. guanti per pulizia, occhiali da sole).
+- **Categoria II** — rischi medi (es. caschi da cantiere, scarpe antinfortunistiche).
+- **Categoria III** — rischi gravi o mortali (es. autorespiratori, imbracature anti-caduta, DPI per agenti chimici).
+
+I DPI di Cat. III richiedono **formazione specifica obbligatoria** prima dell'uso.
+
+### I principali rischi nei contesti di tirocinio/PCTO
+
+| Rischio | Dove si incontra | Misure tipiche |
+|---|---|---|
+| **Caduta dall'alto** | Cantieri, manutenzione, palchi | Linee vita, parapetti, imbracature (Cat. III) |
+| **Elettrico** | Officine, laboratori, cantieri | Verifiche periodiche, isolamento, cartelli W012 |
+| **Chimico** | Laboratori, parrucchieri, agricoltura | Schede dati di sicurezza, aspirazione, DPI |
+| **Biologico** | Sanitario, veterinario, agricoltura | Vaccinazioni, DPI, igiene rigorosa |
+| **Movimentazione manuale carichi** | Logistica, sanità, ristorazione | Formazione tecnica di sollevamento, attrezzature |
+| **Videoterminali** | Uffici, programmazione | Pause, postura, sorveglianza visiva |
+| **Rumore** | Officine, cantieri, musica | DPI udito, valutazione esposizione |
+| **Stress lavoro-correlato** | Ovunque | Valutazione, organizzazione del lavoro |
+
+Per i **PCTO**, la scuola e l'ente ospitante devono identificare in convenzione i rischi specifici e la formazione necessaria **prima** dell'avvio dello studente.
+
+### Infortuni e malattie professionali
+
+- **Infortunio sul lavoro**: evento traumatico avvenuto per causa violenta in occasione di lavoro, da cui deriva inabilità temporanea o permanente. Va denunciato all'**INAIL** entro 2 giorni.
+- **Malattia professionale**: alterazione dello stato di salute connessa all'esposizione lavorativa nel tempo (es. silicosi, ipoacusia da rumore). Riconoscimento INAIL su tabella o caso per caso.
+
+### La segnaletica di sicurezza (Titolo V D.Lgs. 81/2008 + ISO 7010)
+
+I cartelli di sicurezza adottano la norma **ISO 7010** anche in Italia (recepita via D.Lgs. 81/2008 — Titolo V allegato XXV). Le **5 categorie** si distinguono per **forma e colore** (non solo colore: criterio di accessibilità):
+
+| Categoria | Forma | Colore | Esempi |
+|---|---|---|---|
+| **Divieto** (P-prohibition) | Cerchio con barra | Rosso | Divieto di fumare, vietato l'accesso |
+| **Avvertimento** (W-warning) | Triangolo | Giallo | Pericolo elettrico, pericolo caduta |
+| **Obbligo** (M-mandatory) | Cerchio | Blu | Obbligo casco, obbligo guanti |
+| **Salvataggio** (E-emergency) | Quadrato/rettangolo | Verde | Uscita di emergenza, punto di raccolta |
+| **Antincendio** (F-fire) | Quadrato/rettangolo | Rosso | Estintore, idrante |
+
+Nel sito sono disponibili 46 pittogrammi ISO 7010: vedi [/pittogrammi/](/pittogrammi/).
+
+### Connessione con la Protezione Civile
+
+I volontari del Gruppo, quando attivati in emergenza, applicano le stesse logiche del D.Lgs. 81/2008:
+- DPI di Cat. III per attività AIB (tute Nomex, elmetti, occhiali, guanti).
+- Linea di comando e principio della **catena di comando unica** (analogo al ruolo del preposto).
+- Procedura di **briefing e debriefing** per ogni intervento (analogo alla formazione operativa).
+- **Valutazione del rischio sul posto** prima di entrare in scena.
+
+Il volontariato di Protezione Civile è un **laboratorio civico di cultura della sicurezza**: chi vi partecipa porta nel resto della propria vita lavorativa l'attitudine alla prevenzione.
+
+### Attività in classe
+
+**Attività 1 — Audit di sicurezza della propria aula/laboratorio (1 ora)**
+Gli studenti, in gruppi di 3, percorrono fisicamente la propria aula o un laboratorio dell'istituto e producono una **scheda di audit** semplificata che identifica: cartelli presenti/assenti rispetto agli obblighi; presenza/assenza di DPI; vie di fuga libere o ostruite; estintori in posizione e in scadenza. Confronto in plenaria con i rilievi del **RSPP** dell'istituto.
+
+**Attività 2 — Caso studio "chi è responsabile?" (45 min)**
+Si presentano 3 brevi casi (un infortunio in officina scolastica, una caduta in palestra, una contaminazione chimica in laboratorio) e si chiede agli studenti di **mappare le responsabilità** secondo il D.Lgs. 81/2008 (datore di lavoro/dirigente, RSPP, preposto, lavoratore/studente). Discussione: la responsabilità è **distribuita**, non concentrata.
+
+**Attività 3 — Procedura Operativa Standard (compito di realtà, 2 ore)**
+Gli studenti producono una **POS** sintetica per un'attività della propria scuola (es. uso del torchio in laboratorio di stampa, sollevamento attrezzi in palestra, uso del bunsen in chimica). La POS deve includere: scopo, campo di applicazione, riferimenti normativi, sequenza operativa, DPI obbligatori, riferimenti di emergenza. Restituzione al RSPP per validazione formale (può alimentare la **documentazione di sicurezza** dell'istituto, con valore concreto oltre la valutazione scolastica).
+
+**Attività 4 — Testimonianza diretta (1 ora, opzionale)**
+La L. 21/2025 incoraggia esplicitamente l'uso di **testimonianze dirette di vittime di infortuni** sul lavoro. È possibile invitare un volontario del Gruppo che racconti un infortunio reale (proprio o altrui) accaduto in attivazione di emergenza e analizzato a posteriori per le lezioni apprese — modalità coerente con la cultura del **debriefing** della Protezione Civile.
+
+### Obiettivi di valutazione del modulo (rubrica)
+
+Indicatori della [Rubrica Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/):
+- **Indicatore 1** (autoprotezione): conoscenza dei DPI e delle regole base.
+- **Indicatore 5** (ruolo delle istituzioni): conoscenza delle figure D.Lgs. 81/2008 e dell'INAIL.
+- **Indicatore 6** (cittadinanza attiva): capacità di produrre una POS o un audit utile alla scuola.
+
+### Verifica del modulo (5 quesiti integrativi)
+
+**M7-1.** *Tra i principi generali di prevenzione, qual è la priorità più alta?*
+- a) Fornire DPI a tutti i lavoratori
+- b) Eliminare il rischio alla fonte ✔
+- c) Sorvegliare la salute dei lavoratori
+
+**M7-2.** *Qual è la differenza fra protezione collettiva e DPI?*
+- a) Nessuna, sono sinonimi
+- b) La protezione collettiva agisce sull'ambiente per tutti, il DPI sul singolo lavoratore ✔
+- c) La protezione collettiva è obbligatoria, il DPI è facoltativo
+
+**M7-3.** *Nella scuola, chi è equiparabile al "datore di lavoro" del D.Lgs. 81/2008?*
+- a) Il consiglio di classe
+- b) Il dirigente scolastico ✔
+- c) Lo studente maggiorenne
+
+**M7-4.** *Cosa introduce la Legge 21/2025?*
+- a) Un nuovo numero di emergenza
+- b) Le conoscenze di base in materia di sicurezza nei luoghi di lavoro nell'Educazione Civica ✔
+- c) Una rubrica valutativa nazionale unica
+
+**M7-5.** *Un cartello triangolare giallo con il simbolo della folgore segnala:*
+- a) L'obbligo di indossare guanti dielettrici
+- b) Un avvertimento di pericolo elettrico ✔
+- c) Un divieto di accesso
 
 ---
 
