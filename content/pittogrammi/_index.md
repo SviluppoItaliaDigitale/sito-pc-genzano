@@ -39,6 +39,6 @@ Chiama subito il {{</* pittogramma src="/pittogrammi/arasaac/112.png" alt="numer
 4. Per situazioni narrative o didattiche per bambini: preferire **ARASAAC**.
 5. **`alt` sempre descrittivo**, mai stringa vuota o "Immagine di...".
 
-Per istruzioni complete sull'uso, regole editoriali, attribuzioni e procedura di download, vedi `MANUALE-SITO.md` Parte 3.16.
+Per istruzioni complete sull'uso, regole editoriali, attribuzioni e procedura di download, vedi `manuale/parte-03-immagini-per-gli-articoli.md` § 3.16 (sezione pittogrammi).
 
 ## Catalogo completo

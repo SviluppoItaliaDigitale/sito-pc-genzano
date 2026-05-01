@@ -607,19 +607,28 @@ jobs:
           section "23. File di governance esistenti"
           GOV_MISSING=""
           for f in CLAUDE.md MANUALE-SITO.md PIANO-EDITORIALE.md archetypes/comunicazioni.md archetypes/default.md \
+                   manuale/README.md \
                    .claude/rules/01-governance-pa.md .claude/rules/02-content-design-pa.md \
                    .claude/rules/03-accessibility.md .claude/rules/04-hugo-architecture.md \
                    .claude/rules/04a-hugo-shortcode-partial.md .claude/rules/04b-hugo-template-css.md \
                    .claude/rules/04c-hugo-static-cartelle.md \
                    .claude/rules/05-github-aruba-deploy.md .claude/rules/06-protezione-civile-scientifica.md \
-                   .claude/rules/07-proattivita-coerenza.md; do
+                   .claude/rules/07-proattivita-coerenza.md \
+                   .claude/rules/08-claude-code-setup.md; do
             [ -f "$f" ] || GOV_MISSING="${GOV_MISSING}- \`$f\`\n"
           done
-          if [ -n "$GOV_MISSING" ]; then
-            err "File di governance mancanti:"
-            printf "%b" "$GOV_MISSING" >> "$REPORT"
+          # Verifica anche che le 18 parti del manuale esistano (parte-00 a parte-17)
+          MANUALE_PARTS_MISSING=""
+          for n in 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17; do
+            if ! ls manuale/parte-${n}-*.md >/dev/null 2>&1; then
+              MANUALE_PARTS_MISSING="${MANUALE_PARTS_MISSING}- \`manuale/parte-${n}-*.md\` (mancante)\n"
+            fi
+          done
+          if [ -n "$GOV_MISSING" ] || [ -n "$MANUALE_PARTS_MISSING" ]; then
+            err "File di governance/manuale mancanti:"
+            printf "%b" "$GOV_MISSING$MANUALE_PARTS_MISSING" >> "$REPORT"
           else
-            ok "Tutti i 12 file di governance presenti."
+            ok "Tutti i file di governance presenti (15 file root + 18 parti del manuale)."
           fi
 
           # ----------------------------------------------------------------
@@ -726,7 +735,9 @@ jobs:
           if [ ! -f "$SHORTCODE_FOTO" ]; then
             SC_ISSUES="${SC_ISSUES}- Shortcode mancante: \`$SHORTCODE_FOTO\`\n"
           else
-            grep -q "foto" MANUALE-SITO.md || SC_ISSUES="${SC_ISSUES}- Shortcode \`foto\` non citato in MANUALE-SITO.md\n"
+            # Cerca "foto" in MANUALE-SITO.md (indice) o in qualsiasi parte del manuale
+            (grep -q "foto" MANUALE-SITO.md || grep -q "foto" manuale/parte-03-*.md 2>/dev/null) \
+              || SC_ISSUES="${SC_ISSUES}- Shortcode \`foto\` non citato in MANUALE-SITO.md o manuale/parte-03-*.md\n"
             grep -q "foto" .claude/rules/02-content-design-pa.md || SC_ISSUES="${SC_ISSUES}- Shortcode \`foto\` non citato in rule 02\n"
           fi
           if [ -n "$SC_ISSUES" ]; then
@@ -951,7 +962,7 @@ jobs:
           # qualcuno per errore la linka da content/, static/ o themes/ il file
           # NON viene servito (Hugo non lo conosce) e il link sarebbe rotto. Qui
           # cerchiamo riferimenti testuali "riferimenti-interni/" nel contenuto
-          # destinato al sito pubblico, escludendo MANUALE-SITO, CLAUDE.md e
+          # destinato al sito pubblico, escludendo MANUALE-SITO/manuale/, CLAUDE.md e
           # le regole .claude/rules/ che possono citarla legittimamente.
           INTERNAL_LEAKS=$(grep -rln 'riferimenti-interni' content/ static/ themes/ 2>/dev/null | grep -v 'static/manuali/' | head -5)
           if [ -n "$INTERNAL_LEAKS" ]; then
@@ -1043,7 +1054,7 @@ jobs:
           if [ -x scripts/verifica-conteggi.sh ]; then
             CONT_OUT=$(bash scripts/verifica-conteggi.sh 2>&1) || true
             if echo "$CONT_OUT" | grep -q "DRIFT"; then
-              err "Conteggi dichiarati ↔ reali NON allineati. Aggiornare contatori (assistente, FAQ, mappa-sito, formazione, games-cta, catalogo, MANUALE-SITO):"
+              err "Conteggi dichiarati ↔ reali NON allineati. Aggiornare contatori (assistente, FAQ, mappa-sito, formazione, games-cta, catalogo, manuale/parte-04 kit scuola):"
               echo "$CONT_OUT" | grep -E "DRIFT|Conta REALE|^ " >> "$REPORT"
             else
               ok "Conteggi schede/giochi/attività coerenti col reale."

@@ -140,24 +140,26 @@ jobs:
             const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
             const changes = `${{ steps.check.outputs.changes }}`;
             const body = [
-              `## Revisione settimanale MANUALE-SITO.md — ${today}`,
+              `## Revisione settimanale del manuale operativo — ${today}`,
               ``,
               `Il controllo automatico ha rilevato modifiche nelle fonti ufficiali AGID / Designers Italia.`,
               `Le pagine seguenti sono cambiate dall'ultima verifica:`,
               ``,
               changes,
               ``,
+              `> **Nota struttura (da maggio 2026):** il manuale e' diviso in 18 file separati nella cartella \`manuale/\` (1 file per Parte). \`MANUALE-SITO.md\` nella root resta come indice. Le modifiche vanno fatte sul file specifico della Parte interessata.`,
+              ``,
               `### Checklist di revisione`,
               ``,
               `- [ ] Aprire ogni URL e annotare le modifiche rilevanti`,
-              `- [ ] Valutare l'impatto sulle sezioni di MANUALE-SITO.md (Parti 1-12)`,
-              `- [ ] Aggiornare le regole AGID nella Parte 2 se il Writing Toolkit e cambiato`,
-              `- [ ] Aggiornare le specifiche immagini nella Parte 3 se il UI Kit e cambiato`,
+              `- [ ] Valutare l'impatto sulle Parti del manuale (vedi \`manuale/README.md\` per indice)`,
+              `- [ ] Aggiornare regole AGID in \`manuale/parte-02-le-regole-agid-in-dettaglio.md\` se il Writing Toolkit e' cambiato`,
+              `- [ ] Aggiornare specifiche immagini in \`manuale/parte-03-immagini-per-gli-articoli.md\` se il UI Kit e' cambiato`,
               `- [ ] Verificare che gli esempi di codice Bootstrap Italia siano ancora validi`,
               `- [ ] Verificare la dichiarazione di accessibilita`,
-              `- [ ] Rivedere la Parte 11 (social) se cambiano le linee guida PA sulla comunicazione digitale`,
-              `- [ ] Rivedere la Parte 12 (comunicati stampa) se cambia la normativa su trasparenza o comunicazione pubblica`,
-              `- [ ] Aggiornare il changelog in cima al manuale con la data e le modifiche`,
+              `- [ ] Rivedere \`manuale/parte-11-testi-per-i-social-instagram-facebook-x-telegram.md\` se cambiano le linee guida PA sulla comunicazione digitale`,
+              `- [ ] Rivedere \`manuale/parte-12-comunicati-stampa-tempo-ordinario-e-tempo-emergenziale.md\` se cambia la normativa su trasparenza o comunicazione pubblica`,
+              `- [ ] Aggiornare il changelog in \`MANUALE-SITO.md\` (indice) con la data e le modifiche`,
               `- [ ] Chiudere questa issue con il riferimento al commit di aggiornamento`,
               ``,
               `---`,
@@ -167,7 +169,7 @@ jobs:
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `[Automatico] Revisione MANUALE-SITO.md — ${today}`,
+              title: `[Automatico] Revisione manuale operativo — ${today}`,
               body: body,
               labels: ['manuale', 'documentazione', 'revisione']
             });
