@@ -1,6 +1,6 @@
 ---
 title: "Primo maggio: dignità del lavoro e sicurezza anche in emergenza"
-date: 2026-05-01
+date: 2026-05-01T00:01:00+02:00
 description: "La Festa dei Lavoratori ricorda il diritto al lavoro dignitoso e sicuro. Nel volontariato di Protezione Civile la cultura della sicurezza vale per tutti."
 badge: "Informazione"
 priorita: "normale"
