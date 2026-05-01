@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attestato di partecipazione — fac-simile editabile</title>
+  <meta name="description" content="Fac-simile editabile di attestato di partecipazione all'attività di Protezione Civile organizzata in collaborazione con il Gruppo Comunale Volontari di Genzano.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    @page { size: A4 landscape; margin: 1.5cm; }
+    body { background: #fff; }
+    .attestato {
+      max-width: 27cm; margin: 1rem auto; padding: 1.5rem 2rem;
+      border: 6px double var(--scheda-blu); border-radius: 8px;
+      background: #fff; min-height: 18cm;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .attestato-head { text-align: center; padding-bottom: 0.8rem; border-bottom: 2px solid var(--scheda-blu); }
+    .attestato-head .ente { font-size: 0.95rem; color: #555; letter-spacing: 0.04em; }
+    .attestato-head h1 { color: var(--scheda-blu); font-size: 2.4rem; margin: 0.4rem 0; letter-spacing: 0.05em; text-transform: uppercase; }
+    .attestato-head .sub { font-size: 1.1rem; color: var(--scheda-blu); font-style: italic; margin: 0; }
+    .attestato-body { font-size: 1.1rem; line-height: 1.85; text-align: center; padding: 1.5rem 1rem; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .editabile-att { display: inline-block; min-width: 8rem; border-bottom: 2px solid var(--scheda-blu); padding: 0 0.4rem; font-weight: 600; color: var(--scheda-blu); }
+    .editabile-att.lg { min-width: 16rem; }
+    .editabile-att.xl { min-width: 22rem; }
+    .nome-studente { font-size: 1.8rem; font-weight: 700; color: var(--scheda-blu); margin: 1rem 0; padding: 0 1rem; border-bottom: 2px solid var(--scheda-blu); display: inline-block; min-width: 18rem; }
+    .firma-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; padding: 0 2rem; }
+    .firma-box { border-top: 1.4px solid var(--scheda-blu); padding-top: 0.4rem; text-align: center; font-size: 0.95rem; color: var(--scheda-blu); }
+    .firma-box .ruolo { font-weight: 700; }
+    .firma-box .ente { font-size: 0.78rem; color: #555; font-style: italic; }
+    .meta-disclaimer { font-size: 0.78rem; color: #555; font-style: italic; margin-top: 1rem; padding: 0.5rem 0.7rem; border-left: 3px solid var(--scheda-oro); background: #fff8e6; max-width: 27cm; margin-left: auto; margin-right: auto; }
+    .nav-back { font-size: 0.85rem; margin: 1rem; max-width: 27cm; margin-left: auto; margin-right: auto; }
+    .nav-back a { color: var(--scheda-blu); text-decoration: underline; }
+    @media print {
+      .nav-back { display: none; }
+      .meta-disclaimer { display: none; }
+      .attestato { margin: 0; border-radius: 0; min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-back">
+    <a href="/formazione/scuole-strumenti/">← Torna agli Strumenti per le scuole</a>
+  </div>
+
+  <div class="attestato">
+    <div class="attestato-head">
+      <p class="ente">Comune di Genzano di Roma</p>
+      <h1>Attestato di partecipazione</h1>
+      <p class="sub">Gruppo Comunale Volontari di Protezione Civile</p>
+    </div>
+
+    <div class="attestato-body">
+      <p>Si attesta che lo studente / la studentessa</p>
+
+      <p><span class="nome-studente"></span></p>
+
+      <p>frequentante la classe <span class="editabile-att"></span> sez. <span class="editabile-att"></span><br>
+      dell'Istituto <span class="editabile-att xl"></span>,</p>
+
+      <p>in data <span class="editabile-att"></span> ha partecipato all'attività di educazione alla cittadinanza e alla Protezione Civile</p>
+
+      <p style="font-size: 1.25rem; font-weight: 600; color: var(--scheda-blu); margin-top: 0.6rem;">«<span class="editabile-att xl"></span>»</p>
+
+      <p style="font-size: 0.95rem; margin-top: 0.6rem;">della durata di <span class="editabile-att"></span> ore, organizzata dall'Istituto in collaborazione con il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, nell'ambito delle 33 ore annuali di Educazione Civica (L. 92/2019, D.M. 183/2024).</p>
+    </div>
+
+    <div class="firma-grid">
+      <div class="firma-box">
+        <div class="ruolo">Il Dirigente Scolastico</div>
+        <div class="ente">Istituto scolastico</div>
+      </div>
+      <div class="firma-box">
+        <div class="ruolo">Il Coordinatore</div>
+        <div class="ente">Gruppo Comunale Volontari PC Genzano</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="meta-disclaimer">
+    <strong>Fac-simile editabile.</strong> Stampabile in <strong>A4 orizzontale</strong> (la pagina è già impostata in landscape per la stampa). Personalizzabile inserendo i dati nel browser prima di stamparlo, oppure stampando in bianco e compilando a penna. L'attestato non sostituisce la valutazione di Educazione Civica, che resta in capo al consiglio di classe; può tuttavia essere allegato al fascicolo personale dello studente come elemento documentale per il <strong>Curriculum dello studente</strong> (art. 1 c. 28 L. 107/2015 e D.Lgs. 62/2017). Per i percorsi PCTO si usa invece la <a href="/scuole/pcto/registro-valutazione-certificazione/" style="color: var(--scheda-blu);">certificazione delle competenze</a> del Pacchetto B.
+  </div>
+
+</body>
+</html>
