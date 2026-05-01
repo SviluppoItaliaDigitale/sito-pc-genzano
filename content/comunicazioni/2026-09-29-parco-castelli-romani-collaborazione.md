@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Parco dei Castelli Romani" 2026-09-29-parco-castelli-romani-collaborazione it
 Il **Parco Regionale dei Castelli Romani** è un'area protetta di circa **15.000 ettari** che tutela uno dei paesaggi più significativi del Lazio: i **Colli Albani**, i **due laghi vulcanici di Albano e Nemi**, i boschi e le aree agricole tradizionali. Il Parco non è solo natura: è un **soggetto attivo** nella Protezione Civile del territorio, fondamentale per il Gruppo di Genzano.
 
 ## Le funzioni di Protezione Civile del Parco
