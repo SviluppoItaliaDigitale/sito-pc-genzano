@@ -152,6 +152,8 @@ Il Gruppo è disponibile a **ospitare studenti delle scuole superiori** per perc
 
 **Procedura**: contattare la segreteria del Gruppo per l'avvio della convenzione attuativa con l'Istituto. La convenzione viene formalizzata con il Dirigente scolastico, validata dall'Ufficio Scolastico Regionale, e prevede tutoraggio interno + esterno.
 
+> ⚠️ **L'ammissione al programma PCTO è soggetta all'incondizionabile giudizio del Coordinatore e del Consiglio Direttivo del Gruppo Comunale**, che valutano caso per caso la coerenza del percorso con la disponibilità operativa del Gruppo, le esigenze formative dello studente e le necessità del territorio. Il giudizio è insindacabile e non rilascia alcun automatismo all'attivazione della convenzione.
+
 ---
 
 **Ultimo aggiornamento**: 1 maggio 2026.
