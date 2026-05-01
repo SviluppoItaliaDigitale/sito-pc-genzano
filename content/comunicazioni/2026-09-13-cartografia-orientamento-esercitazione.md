@@ -11,9 +11,9 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Cartografia" 2026-09-13-cartografia-orientamento-esercitazione it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Cartografia" 2026-09-13-cartografia-orientamento-esercitazione it
 In un'epoca in cui ognuno ha il GPS sul telefono, **saper leggere una mappa** può sembrare anacronistico. In realtà, per un volontario di Protezione Civile, la **cartografia** e l'**orientamento con carta e bussola** restano competenze di base irrinunciabili: le reti cellulari cadono, le batterie si scaricano, i satelliti possono essere oscurati, un paese terremotato non ha più riferimenti visivi usuali.
 
 ## Perché serve la cartografia

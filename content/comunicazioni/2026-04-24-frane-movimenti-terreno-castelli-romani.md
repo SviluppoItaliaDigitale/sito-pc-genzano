@@ -11,9 +11,9 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Frana" 2026-04-24-frane-movimenti-terreno-castelli-romani it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Frana" 2026-04-24-frane-movimenti-terreno-castelli-romani it
 Il territorio dei [Castelli Romani](https://it.wikipedia.org/wiki/Castelli_Romani) è un ex apparato vulcanico spento da decine di migliaia di anni. Le rocce sono prevalentemente di origine piroclastica, leggere, porose, facili da erodere. Questa stessa caratteristica che rende il paesaggio unico può, in condizioni particolari, favorire fenomeni di **dissesto e frane**.
 
 In questo articolo raccontiamo, in modo chiaro e non allarmistico, di cosa si tratta e cosa può fare ogni cittadino.

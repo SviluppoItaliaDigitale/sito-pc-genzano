@@ -11,9 +11,9 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Zanzara tigre" 2026-06-09-zanzara-tigre-arbovirosi-prevenzione it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Zanzara tigre" 2026-06-09-zanzara-tigre-arbovirosi-prevenzione it
 La **zanzara tigre** (Aedes albopictus) è ormai una presenza stabile in tutta Italia e nel Lazio. A differenza delle zanzare "nostrane" (Culex), la tigre è **attiva di giorno** e mostra una particolare aggressività nel cercare il sangue umano. Non è solo un fastidio estivo: è un **vettore** di virus che in alcuni casi creano emergenze sanitarie pubbliche.
 
 ## Le arbovirosi: di cosa parliamo

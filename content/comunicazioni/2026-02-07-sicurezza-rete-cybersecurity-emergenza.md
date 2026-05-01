@@ -11,9 +11,9 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Sicurezza informatica" 2026-02-07-sicurezza-rete-cybersecurity-emergenza it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Sicurezza informatica" 2026-02-07-sicurezza-rete-cybersecurity-emergenza it
 Il **7 febbraio** si celebra la **Giornata nazionale Sicurezza in Rete** (*Safer Internet Day*, a livello europeo). Una ricorrenza promossa da scuole, istituzioni e Polizia Postale, dedicata all'uso responsabile del web da parte di bambini, ragazzi e adulti.
 
 Può sembrare un tema distante dalla Protezione Civile. Eppure oggi, in un mondo sempre più **interconnesso**, un attacco informatico a un ospedale, a un acquedotto, a un sistema ferroviario può diventare un'**emergenza reale** per cittadini e famiglie.

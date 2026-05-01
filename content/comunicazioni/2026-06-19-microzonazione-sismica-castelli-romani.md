@@ -11,9 +11,9 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Vulcano Laziale" 2026-06-19-microzonazione-sismica-castelli-romani it
 ---
 
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Vulcano Laziale" 2026-06-19-microzonazione-sismica-castelli-romani it
 I **Castelli Romani** sono un'area di **sismicità moderata**, con episodi storici documentati. Il rischio sismico non è uniforme su tutto il territorio: **cambia strada per strada** in base al tipo di terreno, alla pendenza, alla presenza di cavità. Lo strumento che mette in evidenza queste differenze si chiama **microzonazione sismica**.
 
 ## Cosa è la microzonazione sismica
