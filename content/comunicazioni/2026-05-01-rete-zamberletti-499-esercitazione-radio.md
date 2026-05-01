@@ -38,6 +38,10 @@ In rete sono stati collegati:
 
 L'occasione ha segnato anche l'ingresso ufficiale nella rete del **Centro TLC Sicilia 2 dei Vigili del Fuoco di Catania**, accompagnato in radio dai radioamatori dell'**ARI Sezione di Catania** (Associazione Radioamatori Italiani).
 
+{{< foto src="/images/2026-04-30-ari-catania-vvf-tlc-rete-zamberletti.webp"
+         alt="Cinque persone in una sala radio: tre radioamatori in abito civile e due Vigili del Fuoco in uniforme operativa, con apparato radio HF in primo piano e microfono in mano. Loghi ARI Associazione Radioamatori Italiani e Vigili del Fuoco Servizio TLC visibili."
+         caption="Foto: ARI Sezione di Catania. I radioamatori di ARI Catania insieme ai colleghi del Centro TLC Sicilia 2 dei Vigili del Fuoco durante la 499ª esercitazione della Rete Zamberletti." >}}
+
 ## Perché è importante per i cittadini
 
 Le radiocomunicazioni di emergenza sono una **infrastruttura silenziosa ma essenziale**. Quando un terremoto, un'alluvione o un blackout interrompono le comunicazioni ordinarie, la possibilità di mantenere i collegamenti fra Prefetture, Sale Operative e soccorritori dipende proprio da reti come la Zamberletti.
