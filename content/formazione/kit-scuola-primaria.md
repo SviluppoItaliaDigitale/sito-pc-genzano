@@ -517,6 +517,21 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 
+**Case study — le maxi-emergenze italiane raccontate ai bambini (classi 4ª-5ª):** dodici schede narrative su 12 eventi storici della Protezione Civile italiana. Ogni scheda ha cronologia in 4 box, "Cosa abbiamo imparato" in 3 punti, 5 domande di comprensione, soluzioni e note didattiche per il/la docente. Sono state escluse Vermicino e San Giuliano per sensibilità pedagogica (presenti solo nella fascia Sec II).
+
+- 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-primaria/) — "là dov'era, com'era": ricostruzione esemplare e nascita della PC italiana moderna. *(storia/geografia)*
+- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-primaria/) — Zamberletti, "Fate presto" di Pertini, nascita del Servizio Nazionale di Protezione Civile. *(storia/ed. civica)*
+- 👉 [**Caso L'Aquila 2009**](/formazione/schede-stampabili/caso-aquila-primaria/) — solidarietà nazionale, Case C.A.S.E., comunicazione del rischio. *(storia/geografia)*
+- 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-primaria/) — la pasta all'amatriciana per la ricostruzione: solidarietà fra cuochi e ristoranti. *(storia/geografia)*
+- 👉 [**Caso Vajont 1963**](/formazione/schede-stampabili/caso-vajont-primaria/) — ascoltare gli scienziati: Tina Merlin e il principio della voce critica. *(storia/scienze)*
+- 👉 [**Caso Rigopiano 2017**](/formazione/schede-stampabili/caso-rigopiano-primaria/) — il coraggio dei soccorritori: 5 giorni nella neve per salvare 11 persone. *(scienze/ed. civica)*
+- 👉 [**Caso Messina-Reggio 1908**](/formazione/schede-stampabili/caso-messina-primaria/) — solidarietà internazionale: navi russe, britanniche, americane. *(storia/geografia)*
+- 👉 [**Caso Stava 1985**](/formazione/schede-stampabili/caso-stava-primaria/) — il valore dei controlli ambientali: cosa significa "responsabilità d'impresa". *(scienze/ed. civica)*
+- 👉 [**Caso Sarno 1998**](/formazione/schede-stampabili/caso-sarno-primaria/) — rispettare la fragilità del territorio: i boschi salvano i pendii. *(scienze/geografia)*
+- 👉 [**Caso Versilia 1996**](/formazione/schede-stampabili/caso-versilia-primaria/) — alluvione lampo, codici colore allerta meteo, autoprotezione. *(scienze/geografia)*
+- 👉 [**I vulcani d'Italia**](/formazione/schede-stampabili/caso-vulcani-italia-primaria/) — Etna, Stromboli, Vesuvio: i vulcani come bellezza e oggetti di studio. *(scienze/geografia)*
+- 👉 [**I Campi Flegrei**](/formazione/schede-stampabili/caso-campi-flegrei-primaria/) — il vulcano nascosto: monitoraggio scientifico e fiducia nelle istituzioni. *(scienze/geografia)*
+
 **Storie e racconti per leggere insieme — sezione 6-11 anni:** dodici racconti di qualità letteraria (sei per la fascia 6-8 anni, sei per la fascia 9-11 anni) ispirati alla campagna DPC <em>Attimo Decisivo</em>: ogni storia ha un attimo in cui il protagonista sceglie e l'esito si rovescia. Sezione "Per il/la docente" su ogni storia con obiettivi di apprendimento, discipline coinvolte, competenze chiave europee, attività in classe, riferimenti curricolari (Indicazioni Nazionali 2012, L. 92/2019, D.Lgs. 1/2018).
 
 Per la fascia **6-8 anni** (lettura autonoma o accompagnata, 400-700 parole):
