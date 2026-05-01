@@ -255,6 +255,10 @@ sitemap:
 <li><a href="/numeri-utili/">Numeri di telefono utili</a></li>
 <li><a href="/faq/">Domande frequenti</a></li>
 </ul>
+<p>Per le maestre e i maestri:</p>
+<ul class="facile-elenco">
+<li><a href="/formazione/easy-to-read-scuola/">Easy-to-Read per le scuole</a> — schede semplificate da stampare in classe</li>
+</ul>
 <p>Se hai bisogno di aiuto a leggere, chiedi a un familiare o a un amico.</p>
 </div>
 

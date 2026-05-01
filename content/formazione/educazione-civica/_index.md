@@ -125,12 +125,13 @@ Tutti i materiali prodotti dal Gruppo Comunale Volontari di Protezione Civile di
 
 Questo rende i nostri materiali **immediatamente utilizzabili** senza necessità di rielaborazione da parte del docente.
 
-## Inclusione e accessibilità
+## Inclusione e accessibilità {#inclusione-e-accessibilita}
 
 Il Gruppo aderisce ai principi del **D.Lgs. 66/2017** sull'inclusione scolastica:
 
+- 📖 [**Easy-to-Read per le scuole**](/formazione/easy-to-read-scuola/) — versioni semplificate (frasi corte + pittogrammi ARASAAC) delle 4 schede chiave per alunni con disabilità intellettiva, BES/DSA e parlanti italiano L2
 - ♿ [Abili a Proteggere](/abili-a-proteggere/) — 32 attività interattive accessibili per studenti con disabilità cognitive o motorie
-- 📖 [Facile da Leggere](/facile-da-leggere/) — versione del sito in CAA (Comunicazione Aumentativa Alternativa) per studenti con difficoltà di lettura
+- 📖 [Facile da Leggere](/facile-da-leggere/) — versione del sito in linguaggio facile per il cittadino, utilizzabile anche dai docenti come riferimento di stile
 
 I nostri pittogrammi seguono lo standard **ISO 7010** e usano la libreria **ARASAAC** (CC BY-NC-SA), supportando bambini con DSA, BES e parlanti italiano L2.
 
