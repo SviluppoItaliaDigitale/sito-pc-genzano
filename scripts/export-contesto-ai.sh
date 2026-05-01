@@ -50,8 +50,8 @@ Gemini, Claude web, Mistral, altre sessioni di Claude Code, ecc.).
 
 **Copertura di questo file:**
 - Istruzioni generali (\`CLAUDE.md\`)
-- 7 regole di governance (\`.claude/rules/\` — incluse 07-proattivita-coerenza)
-- Manuale operativo completo (\`MANUALE-SITO.md\`)
+- 11 regole di governance (\`.claude/rules/\` — 01-08 incluse 04a/b/c)
+- Manuale operativo completo (\`MANUALE-SITO.md\` indice + 18 file \`manuale/parte-NN.md\`)
 - Piano editoriale con fonti e calendario (\`PIANO-EDITORIALE.md\`)
 - README del progetto
 - Template articoli (\`archetypes/comunicazioni.md\`)
@@ -68,15 +68,8 @@ Gemini, Claude web, Mistral, altre sessioni di Claude Code, ecc.).
 
 1. [README — Panoramica del progetto](#1-readme--panoramica-del-progetto)
 2. [CLAUDE.md — Istruzioni principali](#2-claudemd--istruzioni-principali)
-3. [Regole di governance (7 file)](#3-regole-di-governance-7-file)
-   - 3.1 [Governance PA](#31-01-governance-pamd)
-   - 3.2 [Content Design PA](#32-02-content-design-pamd)
-   - 3.3 [Accessibilità](#33-03-accessibilitymd)
-   - 3.4 [Hugo Architecture](#34-04-hugo-architecturemd)
-   - 3.5 [GitHub + Aruba Deploy](#35-05-github-aruba-deploymd)
-   - 3.6 [Protezione Civile scientifica](#36-06-protezione-civile-scientificamd)
-   - 3.7 [Proattività e coerenza](#37-07-proattivita-coerenzamd)
-4. [MANUALE-SITO — Manuale operativo completo](#4-manuale-sito--manuale-operativo-completo)
+3. [Regole di governance (11 file in \`.claude/rules/\`)](#3-regole-di-governance)
+4. [MANUALE-SITO — Manuale operativo completo (split in 18 file)](#4-manuale-sito--manuale-operativo-completo-split-in-18-file)
 5. [PIANO-EDITORIALE — Fonti e calendario](#5-piano-editoriale--fonti-e-calendario)
 6. [Archetype articoli (\`archetypes/comunicazioni.md\`)](#6-archetype-articoli)
 7. [Configurazione Hugo (\`hugo.toml\`)](#7-configurazione-hugo)
@@ -131,18 +124,31 @@ include_file "README.md" "1. README — Panoramica del progetto"
 include_file "CLAUDE.md" "2. CLAUDE.md — Istruzioni principali"
 
 # ── 3. Regole di governance ─────────────────────────────────────────────────
-echo -e "\n## 3. Regole di governance (7 file)\n\nQuesti 7 file sono importati automaticamente da CLAUDE.md e definiscono le regole operative per dominio.\n\n---\n" >> "$OUTPUT"
+echo -e "\n## 3. Regole di governance\n\nQuesti file sono importati automaticamente da CLAUDE.md e definiscono le regole operative per dominio.\n\n---\n" >> "$OUTPUT"
 
 include_file ".claude/rules/01-governance-pa.md" "3.1 01-governance-pa.md"
 include_file ".claude/rules/02-content-design-pa.md" "3.2 02-content-design-pa.md"
 include_file ".claude/rules/03-accessibility.md" "3.3 03-accessibility.md"
 include_file ".claude/rules/04-hugo-architecture.md" "3.4 04-hugo-architecture.md"
-include_file ".claude/rules/05-github-aruba-deploy.md" "3.5 05-github-aruba-deploy.md"
-include_file ".claude/rules/06-protezione-civile-scientifica.md" "3.6 06-protezione-civile-scientifica.md"
-include_file ".claude/rules/07-proattivita-coerenza.md" "3.7 07-proattivita-coerenza.md"
+include_file ".claude/rules/04a-hugo-shortcode-partial.md" "3.5 04a-hugo-shortcode-partial.md"
+include_file ".claude/rules/04b-hugo-template-css.md" "3.6 04b-hugo-template-css.md"
+include_file ".claude/rules/04c-hugo-static-cartelle.md" "3.7 04c-hugo-static-cartelle.md"
+include_file ".claude/rules/05-github-aruba-deploy.md" "3.8 05-github-aruba-deploy.md"
+include_file ".claude/rules/06-protezione-civile-scientifica.md" "3.9 06-protezione-civile-scientifica.md"
+include_file ".claude/rules/07-proattivita-coerenza.md" "3.10 07-proattivita-coerenza.md"
+include_file ".claude/rules/08-claude-code-setup.md" "3.11 08-claude-code-setup.md"
 
-# ── 4. MANUALE-SITO ──────────────────────────────────────────────────────────
-include_file "MANUALE-SITO.md" "4. MANUALE-SITO — Manuale operativo completo"
+# ── 4. MANUALE-SITO (indice + 18 parti) ──────────────────────────────────────
+echo -e "\n## 4. MANUALE-SITO — Manuale operativo completo (split in 18 file)\n\nIl manuale operativo è stato spezzato a maggio 2026 in 18 file separati nella cartella \`manuale/\` (1 file per Parte) per facilitare manutenzione e revisioni puntuali. \`MANUALE-SITO.md\` nella root resta come indice/redirect.\n\n---\n" >> "$OUTPUT"
+include_file "MANUALE-SITO.md" "4.0 MANUALE-SITO.md (indice)"
+include_file "manuale/README.md" "4.1 manuale/README.md (indice navigabile)"
+# Includi tutte le 18 parti nell'ordine
+sub_idx=2
+for parte_file in $(ls manuale/parte-*.md 2>/dev/null | sort); do
+    parte_name="$(basename "$parte_file" .md)"
+    include_file "$parte_file" "4.$sub_idx ${parte_name}"
+    sub_idx=$((sub_idx + 1))
+done
 
 # ── 5. PIANO-EDITORIALE ──────────────────────────────────────────────────────
 include_file "PIANO-EDITORIALE.md" "5. PIANO-EDITORIALE — Fonti e calendario"

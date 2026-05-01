@@ -19,10 +19,11 @@ Questo repository contiene diversi file Markdown con ruoli diversi. Non vanno el
 | File | A cosa serve | Quando aprirlo |
 |---|---|---|
 | [`README.md`](README.md) | Panoramica del progetto, guida ai file, comandi principali. | Primo file da leggere. |
-| [`MANUALE-SITO.md`](MANUALE-SITO.md) | **Manuale di stile v2.0** — guida passo-passo per scrivere articoli e pagine secondo AGID, specifiche immagini (fascia blu), checklist pre-pubblicazione. | Quando devi scrivere un articolo, una pagina o preparare un'immagine. |
+| [`MANUALE-SITO.md`](MANUALE-SITO.md) | **Indice del manuale operativo** (v3.0). Da maggio 2026 il manuale è split in 18 file nella cartella [`manuale/`](manuale/) (1 file = 1 Parte). Questo file resta come indice/redirect. | Per orientarti tra le 18 Parti. La singola Parte è poi in `manuale/parte-NN-*.md`. |
+| [`manuale/`](manuale/) | **Manuale operativo split** (18 file da Parte 0 a Parte 17): procedura articoli, regole AGID, immagini fascia blu, social, comunicati stampa, configurazione Claude Code, coach giochi + TTS. | Quando devi scrivere un articolo, gestire emergenza, configurare workflow ecc. Apri il file della Parte specifica. |
 | [`MANUALE-MOBILE.md`](MANUALE-MOBILE.md) | **Workflow mobile-first** — guida per pubblicare articoli, modificare il sito, attivare emergenza, pubblicare sui social usando solo app Claude Android + GitHub web mobile. Niente PC. | Quando gestisci il sito dal telefono. |
 | [`PIANO-EDITORIALE.md`](PIANO-EDITORIALE.md) | Fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, ASL, Parco Castelli), calendario redazionale mensile e biblioteca di 250+ titoli evergreen. Obiettivo: tendere a un articolo al giorno (300-365/anno), minimo sostenibile 3-4 a settimana. | Quando devi proporre nuovi contenuti o cerchi ispirazione sulle fonti. |
-| [`CLAUDE.md`](CLAUDE.md) | Istruzioni operative per Claude Code (o altra AI) — mandato, priorità, regole di qualità e sicurezza. Importa automaticamente le 6 regole in `.claude/rules/`. | Lettura automatica per ogni sessione AI. Va aggiornato solo se cambia la governance. |
+| [`CLAUDE.md`](CLAUDE.md) | Istruzioni operative per Claude Code (o altra AI) — mandato, priorità, regole di qualità e sicurezza. Importa automaticamente le 11 regole in `.claude/rules/`. | Lettura automatica per ogni sessione AI. Va aggiornato solo se cambia la governance. |
 
 ### File in `.claude/rules/` (governance di dettaglio)
 
@@ -87,13 +88,17 @@ Pattern ispirato a campagna DPC "Io non rischio" e linee guida AGID per accessib
 ```
 sito-pc-genzano/
 ├── README.md                   ← sei qui
-├── MANUALE-SITO.md             ← manuale di stile v2.0 redattori
+├── MANUALE-SITO.md             ← indice del manuale (v3.0) — split in manuale/
+├── manuale/                    ← 18 file Parte 0-17 (split da maggio 2026)
+│   ├── README.md               ← indice navigabile
+│   └── parte-NN-*.md           ← 1 file per Parte (redazione articoli, AGID,
+│                                 immagini, social, comunicati, deploy, ecc.)
 ├── MANUALE-MOBILE.md           ← workflow mobile-first (app + GitHub web)
 ├── PIANO-EDITORIALE.md         ← fonti e calendario redazionale
 ├── CLAUDE.md                   ← istruzioni per AI (importa .claude/rules/)
 ├── hugo.toml                   ← configurazione Hugo
 │
-├── .claude/rules/              ← 8 regole di governance (01-08)
+├── .claude/rules/              ← 11 regole di governance (01-08, 04 split a/b/c)
 ├── .github/workflows/          ← 11 workflow CI/CD e controlli periodici
 ├── .manuale/sources-hashes.json ← stato hash fonti AGID (gestito dal workflow)
 │
@@ -276,8 +281,8 @@ bash scripts/export-contesto-ai.sh
 ```
 
 Produce `CONTESTO-AI.md` (~300 KB) contenente:
-- README, CLAUDE.md, 8 regole di governance
-- Manuali operativi completi (MANUALE-SITO.md + MANUALE-MOBILE.md)
+- README, CLAUDE.md, 11 regole di governance (`.claude/rules/01-08` con 04a/b/c)
+- Manuale operativo completo (indice `MANUALE-SITO.md` + 18 file `manuale/parte-NN.md`) + `MANUALE-MOBILE.md`
 - Piano editoriale (fonti + calendario + biblioteca evergreen)
 - Archetype articoli, configurazione Hugo, shortcode (`foto`, `pittogramma`, `cosa-non-fare`, `chi-chiamare`)
 - Memorie utente (feedback durevoli salvati da Claude Code)
@@ -323,13 +328,13 @@ Il progetto ha alcune regole non negoziabili da avere a portata di vista:
 - **Nessun articolo `draft: true`** — solo pubblicazione immediata (data passata) o programmata (data futura).
 - **Lingua AGID**: frasi brevi (max ~20 parole), voce attiva, niente burocratese, linguaggio inclusivo.
 
-Specifiche complete in [CLAUDE.md](CLAUDE.md) e nelle 8 regole `.claude/rules/`.
+Specifiche complete in [CLAUDE.md](CLAUDE.md) e nelle 11 regole `.claude/rules/`.
 
 ---
 
 ## Flusso di lavoro tipico per pubblicare un articolo
 
-1. Apri [`MANUALE-SITO.md`](MANUALE-SITO.md) (manuale operativo).
+1. Apri [`manuale/parte-01-scrivere-un-articolo-passo-per-passo.md`](manuale/parte-01-scrivere-un-articolo-passo-per-passo.md) (procedura completa) o [`MANUALE-SITO.md`](MANUALE-SITO.md) (indice).
 2. Identifica lo slug: `AAAA-MM-GG-titolo-breve`.
 3. Esegui `hugo new comunicazioni/AAAA-MM-GG-titolo-breve.md`.
 4. Compila il frontmatter (vedi Parte 1.5 del manuale): `image: ""` (cover tipografica generata dopo).

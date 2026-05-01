@@ -40,7 +40,7 @@ PC, usando solo:
 | Cosa è stato modificato di recente nel repo | Devo ricominciare? |
 |---|---|
 | `CLAUDE.md`, `.claude/rules/*.md`, archetype | **SÌ, sempre** |
-| `MANUALE-SITO.md`, `MANUALE-MOBILE.md`, `PIANO-EDITORIALE.md` (sezioni operative o nuove regole) | **SÌ** |
+| `MANUALE-SITO.md` (indice) o `manuale/parte-NN-*.md`, `MANUALE-MOBILE.md`, `PIANO-EDITORIALE.md` (sezioni operative o nuove regole) | **SÌ** |
 | Articoli `content/`, dati `data/`, template/CSS, script | No, va bene |
 | Workflow CI (`.github/workflows/`) | No (girano su GitHub Actions, non in chat) |
 
@@ -447,7 +447,7 @@ Tu non devi fare nulla, succede in background.
 | **Bozze social X/FB/IG/TG** | Push articolo | Crea `social-bozze/<slug>/` (richiede quota Gemini disponibile) |
 | **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `static/images-social/` (Pillow, no rate limit) |
 
-> **Nota Gemini API gratuita**: il tier free ha ~50 richieste/giorno. Una rigenerazione massiva di tutte le bozze testuali si esaurisce dopo ~50 articoli con HTTP 429 — si riprende il giorno dopo (reset a mezzanotte UTC). Il workflow normale (1 articolo/push) gira sempre. Specifiche in `MANUALE-SITO.md` Parte 16.
+> **Nota Gemini API gratuita**: il tier free ha ~50 richieste/giorno. Una rigenerazione massiva di tutte le bozze testuali si esaurisce dopo ~50 articoli con HTTP 429 — si riprende il giorno dopo (reset a mezzanotte UTC). Il workflow normale (1 articolo/push) gira sempre. Specifiche in [`manuale/parte-16-bozze-social-gestione-quota-gemini-api.md`](manuale/parte-16-bozze-social-gestione-quota-gemini-api.md).
 
 ---
 
@@ -460,7 +460,7 @@ Da aprile 2026 la homepage ha 4 micro-animazioni discrete (non commerciali):
 3. **Banner blu** con pattern di linee oblique sottili e gradiente che si muove lentissimo (35s di loop, quasi impercettibile).
 4. **Effetto "lift" delle card** quando le tocchi: salgono di 3px e la freccia "Leggi" si sposta di 4px a destra.
 
-Tutte funzionano identico su Android e iOS. Tutte si disattivano se hai `Riduci animazioni` attivo nelle impostazioni del telefono o se usi il toolbar di accessibilità del sito ("Pausa animazioni"). Specifiche in `MANUALE-SITO.md` Parte 15.
+Tutte funzionano identico su Android e iOS. Tutte si disattivano se hai `Riduci animazioni` attivo nelle impostazioni del telefono o se usi il toolbar di accessibilità del sito ("Pausa animazioni"). Specifiche in [`manuale/parte-15-homepage-enhancements-v1-0-aprile-2026.md`](manuale/parte-15-homepage-enhancements-v1-0-aprile-2026.md).
 
 ---
 
@@ -506,7 +506,7 @@ Controlla la `date:` nel frontmatter:
   il primo, `T00:02:00+02:00` per il secondo, ecc. (orari minimi
   crescenti). Da PC: `python3 scripts/fix-ordering-articoli-stesso-giorno.py`
   fa tutto in un colpo. Da mobile: modifica i 2 articoli a mano via
-  GitHub web editor. Specifiche in `MANUALE-SITO.md` § frontmatter
+  GitHub web editor. Specifiche in [`manuale/parte-01-scrivere-un-articolo-passo-per-passo.md`](manuale/parte-01-scrivere-un-articolo-passo-per-passo.md) § frontmatter
   `date`.
 
 ### «Voglio cancellare un articolo»
