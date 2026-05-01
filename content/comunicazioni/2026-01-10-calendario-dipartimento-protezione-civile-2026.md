@@ -16,6 +16,7 @@ allegati:
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Dipartimento della Protezione Civile" 2026-01-10-calendario-dipartimento-protezione-civile-2026 it
 È disponibile l'edizione 2026 del **Calendario del Dipartimento della Protezione Civile**, dedicata quest'anno alle emergenze internazionali.
 
 Puoi sfogliarlo online oppure scaricarlo in PDF tramite il link in fondo a questa pagina.
