@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "_comment": "Settings condivisi del repo (committati). Per settings personali usa .claude/settings.local.json (gitignored). Vedi rule 08-claude-code-setup.md.",
+
+  "hooks": {
+    "_comment": "Hook attivo: dopo ogni Write/Edit/MultiEdit Claude esegue scripts/verifica-conteggi.sh in modalità silenziosa. Lo script segnala SOLO se trova drift fra conteggi dichiarati nel sito (es. '100 schede stampabili') e numero reale di cartelle. Nasce dal feedback dell'utente del 1 maggio 2026: dopo aver aggiunto schede/giochi i contatori per fascia non erano stati aggiornati e l'utente ha dovuto accorgersene da solo. Specifiche: scripts/verifica-conteggi.sh + memory/feedback_conteggi_per_fascia.md. Gira solo locale, ~50ms.",
+
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash scripts/verifica-conteggi.sh --quiet 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}
