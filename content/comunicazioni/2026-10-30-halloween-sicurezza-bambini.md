@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Halloween" 2026-10-30-halloween-sicurezza-bambini it
 La sera di **Halloween** molti bambini girano di casa in casa con i genitori, travestiti. Una festa popolare che porta **gioia** e **socialità**, ma che richiede anche qualche **accorgimento di sicurezza**, specialmente considerando che è già **buio** e che si muovono gruppi di persone per strada.
 
 ## Prima di uscire

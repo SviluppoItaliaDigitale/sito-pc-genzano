@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Natale" 2026-12-25-natale-auguri-genzano it
 **25 dicembre 2026**. Buon **Natale** a tutta **Genzano**. Dal **Gruppo Comunale Volontari di Protezione Civile** un pensiero **sincero** a ogni famiglia, ogni persona, ogni volto della nostra città.
 
 ## Buon Natale

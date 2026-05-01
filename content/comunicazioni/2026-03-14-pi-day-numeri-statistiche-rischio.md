@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Pi greco" 2026-03-14-pi-day-numeri-statistiche-rischio it
 Il **14 marzo** (3/14, nella notazione anglosassone) è il **Pi Day**, la giornata internazionale del numero π e della matematica in generale. Dal 2019 è anche riconosciuta dall'**UNESCO** come *International Day of Mathematics*.
 
 Può sembrare un tema lontano dalla Protezione Civile. In realtà la gestione del rischio **è matematica applicata**: probabilità, statistica, geometria delle mappe, modelli di calcolo. Dietro ogni bollettino meteo, ogni mappa di pericolosità sismica, ogni previsione di piena c'è un **corpo di dati e formule** enorme.

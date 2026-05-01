@@ -16,6 +16,7 @@ allegati:
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Spreco alimentare" 2025-02-05-libro-risparmio-fondazione-barilla-presentazione it
 In occasione della **Giornata nazionale di prevenzione dello spreco alimentare** (5 febbraio) la Fondazione Barilla ha presentato a Milano il **Libro del Risparmio — 120 azioni contro lo spreco alimentare per risparmiare dentro e fuori casa**. Il volume è disponibile gratuitamente ed è allegato a questo articolo.
 
 ## Perché parlarne anche su un sito di Protezione Civile

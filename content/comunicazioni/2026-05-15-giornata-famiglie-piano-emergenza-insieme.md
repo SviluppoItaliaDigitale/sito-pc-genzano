@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Famiglia" 2026-05-15-giornata-famiglie-piano-emergenza-insieme it
 Il **15 maggio** è la [Giornata internazionale delle famiglie](https://www.un.org/en/observances/international-day-of-families) proclamata dall'ONU nel 1993. È una ricorrenza che invita a riflettere sul ruolo delle famiglie come "**unità fondamentale della società**", sostegno, educazione, protezione. Tra i temi che ogni famiglia può affrontare insieme c'è anche la **preparazione all'emergenza**: non è un tema triste, è un tema di responsabilità.
 
 Questo articolo propone cinque conversazioni semplici da fare in famiglia **oggi**.

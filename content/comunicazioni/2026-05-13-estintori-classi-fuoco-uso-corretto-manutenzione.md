@@ -14,6 +14,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Estintore" 2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione it
 L'estintore portatile è lo strumento antincendio di prima difesa più diffuso in Italia. Lo si trova nelle sedi di protezione civile, nei mezzi operativi, nelle abitazioni, negli uffici, nei capannoni. Ma un estintore non è un oggetto universale: ognuno è progettato per spegnere un certo tipo di fuoco e può essere **inefficace o pericoloso** se usato su un fuoco della classe sbagliata.
 
 Questo articolo riassume quello che ogni volontario di protezione civile deve sapere: le classi di fuoco, i tipi di estintore, la tecnica corretta di utilizzo e le regole di manutenzione. Quando poi il fuoco è grande, in progressione rapida, su sostanze pericolose o in uno spazio chiuso, **la risposta giusta resta una sola: chiamare il 112 e lasciare il luogo**. L'estintore portatile è utile solo su un principio di incendio.
