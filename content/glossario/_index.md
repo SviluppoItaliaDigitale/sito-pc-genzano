@@ -7,6 +7,7 @@ sitemap:
   priority: 0.7
   changefreq: monthly
 toc: true
+tts: true
 ---
 Le sigle e i termini tecnici della Protezione Civile possono sembrare complicati. Questa pagina li spiega in **parole semplici**, con un esempio concreto dove utile. Se cerchi un termine che non trovi, scrivici a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it): lo aggiungiamo.
 

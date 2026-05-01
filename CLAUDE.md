@@ -135,6 +135,8 @@ bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
 | Cartelle `static/` canoniche e cartella `riferimenti-interni/` non deployata | `04c-hugo-static-cartelle.md` |
 | Assistente guidato `/assistente/` (albero decisionale JS) | `04a-hugo-shortcode-partial.md` § "Assistente guidato" |
 | Pagina lite `/emergenza/` (44 KB) | `04a-hugo-shortcode-partial.md` § "Shortcode pagina-emergenza-lite" |
+| Coach dei giochi (bottone "Consigli per giocare" + hint contestuale + TTS) su 33 giochi statici | `03-accessibility.md` § "Coach dei giochi" + `04b-hugo-template-css.md` § "Coach + TTS sui giochi" |
+| TTS Web Speech API: 21 pagine Hugo (`tts: true`), coach giochi, 18 fiabe `storie-e-racconti/` | `03-accessibility.md` § "TTS Leggi ad alta voce" |
 
 ## Regole contenuti e qualità
 

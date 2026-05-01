@@ -54,8 +54,19 @@ Ogni storia ha:
 - **Box "Cosa abbiamo imparato"** con 2-3 consigli pratici
 - **"Per parlarne insieme"** (domande di comprensione)
 - **"Per il/la docente — valore pedagogico"**: obiettivi di apprendimento, discipline coinvolte, competenze chiave europee, attività in classe, riferimenti curricolari (Indicazioni Nazionali 2012, L. 92/2019, D.Lgs. 1/2018, campagne DPC *Io non rischio* / *Attimo Decisivo*)
+- **Bottone "🔊 Ascolta la storia"** che legge la fiaba ad alta voce in italiano via Web Speech API (browser-native, gratis, niente file MP3). Fondamentale per bambini che non leggono ancora bene, anziani che leggono con un nipote, persone con dislessia.
 
 Le storie sono usabili come materiale didattico per l'educazione civica nelle scuole; il Gruppo apprezza la citazione nelle programmazioni.
+
+### Coach didattico nei giochi (`/giochi/`)
+
+Tutti i 33 giochi della sezione **Giochi della Sicurezza** hanno un sistema di onboarding e teoria di rinforzo:
+
+- **Bottone "💡 Consigli per giocare"** sotto il titolo: apre un dialog con la regola del gioco, "Come si gioca" e link alle pagine teoria del sito (rischi-prevenzione, numeri-utili, pittogrammi, ecc.).
+- **Bottone "🔊 Ascolta i consigli"** dentro il dialog (Web Speech API).
+- **Suggerimento contestuale su errore**: quando un bambino sbaglia, appare un riquadro con un suggerimento mirato e un link "Scopri perché →" alla teoria pertinente.
+
+Pattern ispirato a campagna DPC "Io non rischio" e linee guida AGID per accessibilità cognitiva. Riduce l'abbandono dei bambini che giocano senza nozioni di base.
 
 ### File in `archetypes/` (template Hugo)
 

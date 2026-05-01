@@ -267,10 +267,14 @@
               b.classList.add('correct');
               punti++; puntiEl.textContent = punti;
               feedback.innerHTML = '<div class="alert alert-success py-2 mb-0"><i class="bi bi-check-circle-fill me-1"></i> ' + q.spiega + '</div>';
+              if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
             } else {
               b.classList.add('wrong');
               opzioni.querySelectorAll('.opt-btn')[q.corretta].classList.add('correct');
               feedback.innerHTML = '<div class="alert alert-warning py-2 mb-0"><i class="bi bi-x-circle-fill me-1"></i> ' + q.spiega + '</div>';
+              if (window.GameCoach && window.GameCoach.hint) {
+                window.GameCoach.hint('Alfabeto NATO: A=Alfa, B=Bravo, C=Charlie, D=Delta, E=Echo… Numeri cifra-per-cifra: 112 = "uno-uno-due". Termini: "passo"=aspetto risposta, "chiudo"=fine comunicazione.', '/comunicazioni/?categoria=Radiocomunicazioni');
+              }
             }
             setTimeout(function(){ idx++; show(); }, 1700);
           });
@@ -292,8 +296,12 @@
       if (v === q.risposta.toUpperCase()){
         punti++; puntiEl.textContent = punti;
         feedback.innerHTML = '<div class="alert alert-success py-2 mb-0"><i class="bi bi-check-circle-fill me-1"></i> Perfetto! ' + q.spiega + '</div>';
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         feedback.innerHTML = '<div class="alert alert-warning py-2 mb-0"><i class="bi bi-x-circle-fill me-1"></i> Hai scritto "' + inputLibero.value + '". ' + q.spiega + '</div>';
+        if (window.GameCoach && window.GameCoach.hint) {
+          window.GameCoach.hint('Decodifica NATO: ogni parola corrisponde a una lettera. Esempio: Alfa=A, Bravo=B, Charlie=C. La parola finale è la sequenza delle lettere iniziali.', '/comunicazioni/?categoria=Radiocomunicazioni');
+        }
       }
       setTimeout(function(){ idx++; show(); }, 1800);
     });

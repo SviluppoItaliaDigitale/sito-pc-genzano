@@ -170,6 +170,7 @@
       btnSi.disabled = false; btnNo.disabled = false;
       btnSi.classList.remove('correct','wrong');
       btnNo.classList.remove('correct','wrong');
+      if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
     }
 
     function answer(val){
@@ -189,6 +190,9 @@
         feedback.style.color = '#8B1F2E';
         feedback.innerHTML = '🐢 ' + s.tip;
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
+        if (window.GameCoach && window.GameCoach.hint) {
+          window.GameCoach.hint('In emergenza: stai calmo, scegli il posto più sicuro, chiedi aiuto a un adulto. Se serve, chiama il 1-1-2.', '/cosa-fare-adesso/');
+        }
       }
       setTimeout(function(){
         idx++;

@@ -454,6 +454,18 @@
       feedbackEl.className = 'feedback-box ' + (isOk ? 'ok' : 'ko');
       feedbackEl.innerHTML = '<strong>' + (isOk ? 'Giusto' : 'Sbagliato') + '.</strong>' + q.why;
       feedbackEl.classList.remove('hide');
+      if (window.GameCoach) {
+        if (isOk && window.GameCoach.clearHint) {
+          window.GameCoach.clearHint();
+        } else if (!isOk && window.GameCoach.hint) {
+          var TIPS_CHAPTER = {
+            CLP: 'CLP: diamante bianco con bordo rosso. Pittogramma centrale identifica il pericolo (fiamma, teschio, punto esclamativo, ecc.).',
+            ADR: 'ADR: diamante colorato con numero in basso (1=esplosivo, 2=gas, 3=liquido infiammabile, 6=tossico, 7=radioattivo, 8=corrosivo).',
+            UNI: 'UNI EN ISO 7010: triangolo giallo=pericolo, cerchio rosso=divieto, cerchio blu=obbligo, quadrato verde=salvataggio, quadrato rosso=antincendio.'
+          };
+          window.GameCoach.hint(TIPS_CHAPTER[currentChapter] || 'Guarda forma e colore prima del simbolo: ti danno la categoria.', '/pittogrammi/');
+        }
+      }
       nextBtn.classList.remove('hide');
       nextBtn.onclick = function () { idx++; showQuestion(); };
     }

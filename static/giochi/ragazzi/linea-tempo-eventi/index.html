@@ -285,6 +285,13 @@
         else { s.classList.add('wrong'); var tuo = EVENTI.filter(function(e){return e.id === id;})[0]; rev.textContent = 'Era: ' + tuo.anno + ' — Qui andava: ' + corretto.titolo + ' (' + corretto.anno + ')'; }
         card.appendChild(rev);
       });
+      if (window.GameCoach) {
+        if (score === EVENTI.length && window.GameCoach.clearHint) {
+          window.GameCoach.clearHint();
+        } else if (score < EVENTI.length && window.GameCoach.hint) {
+          window.GameCoach.hint('Cronologia chiave: Vajont 1963, Friuli 1976, Irpinia 1980 (nascita PC moderna), L\'Aquila 2009 (valutazione rischio sismico), Centro Italia 2016 (sistema COC/COM consolidato).', '/normativa/');
+        }
+      }
       setTimeout(fine.bind(null, score), 900);
     }
 

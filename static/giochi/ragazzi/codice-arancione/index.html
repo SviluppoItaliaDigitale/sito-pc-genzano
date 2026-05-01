@@ -248,6 +248,10 @@
       else msg = 'Allestimento insufficiente: ripassa i requisiti base dell\'accoglienza.';
       document.getElementById('final-msg').textContent = msg;
 
+      if (window.GameCoach && window.GameCoach.hint && score < 70) {
+        window.GameCoach.hint('Le priorità in un\'area di accoglienza: posti letto + bagni + pasti + copertura sanitaria. Senza questi quattro pilastri non si parte. Accessibilità e sicurezza sono obbligatori per legge.', '/rischi-prevenzione/persone-necessita-specifiche/');
+      }
+
       if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('codice-arancione', score, 100, '#end');
     }
 

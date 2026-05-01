@@ -315,6 +315,13 @@
       e.innerHTML = '<span class="badge-pt">+' + scelta.pt + ' pt</span>' + scelta.fb;
       e.classList.remove('hide');
       document.getElementById('punti-tot').textContent = totale;
+      if (window.GameCoach) {
+        if (scelta.esito === 'ottimo' && window.GameCoach.clearHint) {
+          window.GameCoach.clearHint();
+        } else if (scelta.esito !== 'ottimo' && window.GameCoach.hint) {
+          window.GameCoach.hint('Priorità in emergenza: 1) sicurezza personale, 2) salvare vite, 3) comunicare alla Sala Operativa, 4) coordinarsi (mai eroi solitari). Le scelte sotto stress vanno in questa scala.', '/cosa-fare-adesso/');
+        }
+      }
       // Last decision of last scenario? Otherwise show next btn
       const isLastDec = (scenarioIdx === SCENARI.length - 1) &&
                        (decisioneIdx === SCENARI[scenarioIdx].decisioni.length - 1);
