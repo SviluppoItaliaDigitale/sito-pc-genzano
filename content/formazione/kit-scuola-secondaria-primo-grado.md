@@ -514,6 +514,21 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Calcolo dei tempi di evacuazione**](/formazione/schede-stampabili/labirinto-evacuazione-secondaria/) — pianta scuola di esempio + dati di norma (DM 3/8/2015): calcolo capacità uscite, tempo evacuazione totale, verifica conformità. 7 problemi matematici. *(matematica, tecnologia)*
 - 👉 [**Chiamare il 112 — Cosa NON dire**](/formazione/schede-stampabili/chiamo-112-secondaria/) — 3 scenari realistici (incidente bici, bambino al parco, anziano svenuto) con riformulazione di chiamate inefficaci, sistema AML, art. 658 c.p. *(italiano, ed. civica)*
 
+**Case study — le maxi-emergenze italiane con analisi argomentativa (11-13 anni):** dodici schede di analisi storica con cronologia evento, box "Cosa ha funzionato / Cosa NON ha funzionato", 6 domande argomentative e note per il docente con riferimenti normativi (D.Lgs. 1/2018, L. 92/2019, D.M. 183/2024). Stesso evento disponibile in 3 fasce per il curricolo a spirale (Primaria 9-11 → Sec I 11-13 → Sec II 14-19).
+
+- 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — cronologia 24 agosto/30 ottobre 2016, IT-alert, evacuazioni preventive, ricostruzione lenta. *(storia/scienze/ed. civica)*
+- 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria/) — "dov'era e com'era": modello internazionale di ricostruzione + Legge 225/1992. *(storia/geografia)*
+- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria/) — "Fate presto": Pertini in tv, Zamberletti, nascita Servizio Nazionale PC. *(storia/ed. civica)*
+- 👉 [**Caso L'Aquila 2009**](/formazione/schede-stampabili/caso-aquila-secondaria/) — sciame sismico, Commissione Grandi Rischi, Case C.A.S.E., riforma comunicazione del rischio. *(storia/scienze)*
+- 👉 [**Caso Vajont 1963**](/formazione/schede-stampabili/caso-vajont-secondaria/) — disastro annunciato: ascolto della scienza, responsabilità tecnica e politica, Tina Merlin. *(storia/scienze/ed. civica)*
+- 👉 [**Caso Messina-Reggio 1908**](/formazione/schede-stampabili/caso-messina-secondaria/) — tsunami, prima legge antisismica al mondo (R.D.L. 193/1909), cooperazione internazionale. *(storia/scienze)*
+- 👉 [**Caso Stava 1985**](/formazione/schede-stampabili/caso-stava-secondaria/) — responsabilità d'impresa, riforma controlli ambientali, Direttiva Seveso II. *(scienze/ed. civica)*
+- 👉 [**Caso Sarno 1998**](/formazione/schede-stampabili/caso-sarno-secondaria/) — colata detritica, Legge 267/1998, Piani di Assetto Idrogeologico (PAI). *(scienze/geografia)*
+- 👉 [**Caso Versilia 1996**](/formazione/schede-stampabili/caso-versilia-secondaria/) — flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, IT-alert. *(scienze/geografia)*
+- 👉 [**Caso Rigopiano 2017**](/formazione/schede-stampabili/caso-rigopiano-secondaria/) — rischio multiplo concomitante: sisma + neve + viabilità chiusa, responsabilità del Sindaco. *(scienze/ed. civica)*
+- 👉 [**I vulcani d'Italia**](/formazione/schede-stampabili/caso-vulcani-italia-secondaria/) — Etna, Stromboli, Vesuvio, Campi Flegrei, Vulcano: monitoraggio INGV, piani di evacuazione. *(scienze/geografia)*
+- 👉 [**I Campi Flegrei**](/formazione/schede-stampabili/caso-campi-flegrei-secondaria/) — caldera, bradisismo, monitoraggio INGV-OV, piano di evacuazione 500.000 persone. *(scienze/geografia/ed. civica)*
+
 ---
 
 ## Compito di realtà — Analisi del Piano di Emergenza Scolastico
