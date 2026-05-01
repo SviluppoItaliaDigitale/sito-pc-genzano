@@ -493,7 +493,7 @@ Obiettivo: il bambino capisce che al 112 bisogna dire **cosa è successo** e **d
 > *Bambini in coro*: "Ci mettiamo in fila!"
 > *Docente*: "E corriamo?"
 > *Bambini*: "Nooo! Andiamo piano piano!"
-> *Docente*: "E se Marco piange?"
+> *Docente*: "E se Flavio piange?"
 > *Bambini*: "Lo prendiamo per mano!"
 
 **Scena 3 — La tartaruga saggia**
@@ -505,7 +505,7 @@ Obiettivo: il bambino capisce che al 112 bisogna dire **cosa è successo** e **d
 > *Bambini*: "Chiama la maestra!"
 
 **Scena 4 — Il temporale alla finestra**
-> *Docente*: "Piove forte e c'è il tuono. Marco vuole andare sul balcone. Cosa gli diciamo?"
+> *Docente*: "Piove forte e c'è il tuono. Flavio vuole andare sul balcone. Cosa gli diciamo?"
 > *Bambini*: "Stai dentro! È pericoloso!"
 > *Docente*: "E se cade un lampo?"
 > *Bambini*: "Non stare sotto l'albero!"

@@ -490,7 +490,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**I Codici di Allerta Meteo**](/formazione/schede-stampabili/codici-allerta-numeri-primaria/) — i 4 codici colore della Regione Lazio (verde 1 → rosso 4). Ordina per gravità, colora i bollini, vero/falso. *(numeri, classi 2ª-3ª)*
 - 👉 [**Gli Strumenti del Meteorologo**](/formazione/schede-stampabili/strumenti-meteo-primaria/) — 5 strumenti (termometro, pluviometro, anemometro, barometro, igrometro) con cosa misurano e unità. *(scienze, classi 2ª-3ª)*
 - 👉 [**La Mappa del Mio Quartiere**](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/) — mappa di quartiere con 6 luoghi numerati (scuola, ospedale, farmacia, area di attesa, idrante, piazza) da etichettare + domande di comprensione. *(territorio, classi 2ª-4ª)*
-- 👉 [**Leggi e Rispondi — Marco e il Pompiere**](/formazione/schede-stampabili/leggi-rispondi-pompiere-primaria/) — mini-racconto di una piccola emergenza domestica + 5 domande di comprensione (chi, cosa, dove, numero, scelta multipla). *(comprensione, classi 1ª-2ª)*
+- 👉 [**Leggi e Rispondi — Flavio e il Pompiere**](/formazione/schede-stampabili/leggi-rispondi-pompiere-primaria/) — mini-racconto di una piccola emergenza domestica + 5 domande di comprensione (chi, cosa, dove, numero, scelta multipla). *(comprensione, classi 1ª-2ª)*
 - 👉 [**Riordina le Frasi — Una Giornata di Allerta**](/formazione/schede-stampabili/riordina-frasi-allerta-primaria/) — 6 frasi sulla cronologia di un'allerta arancione (bollettino, COC, IT-alert, volontari) da numerare. *(comprensione, classi 2ª-3ª)*
 
 **6 schede di approfondimento per classi 3ª-5ª** — storia, matematica, geografia, ed. civica, comprensione testo, compito di realtà:
