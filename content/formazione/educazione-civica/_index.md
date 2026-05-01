@@ -11,6 +11,8 @@ dataUltimaRevisione: "2026-05-01"
 
 Questa pagina è dedicata a **dirigenti, docenti coordinatori di Educazione Civica e insegnanti** che cercano materiali di Protezione Civile **già allineati alla normativa scolastica vigente**. Tutti i contenuti del Gruppo sono utilizzabili gratuitamente nelle scuole; la citazione del Gruppo nelle programmazioni è gradita.
 
+> 🚀 **Hai poco tempo per preparare?** I [Percorsi didattici pronti](/formazione/percorsi-didattici/) sono **sei pacchetti già strutturati** (PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO) con destinatari, durata, obiettivi, materiali linkati e modalità di valutazione: si possono usare direttamente in classe.
+
 ## Quadro normativo di riferimento
 
 L'insegnamento dell'Educazione Civica nelle scuole italiane è regolato da:
