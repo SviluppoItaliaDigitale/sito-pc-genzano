@@ -380,6 +380,7 @@
       esito.classList.add('hide'); esito.classList.remove('ok','ko'); esito.innerHTML = '';
       nextWrap.classList.add('hide');
       btnCods.forEach(function(b){ b.disabled = false; });
+      if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       idxCur.textContent = idx + 1;
       progressBar.style.width = ((idx / queue.length) * 100) + '%';
     }
@@ -393,10 +394,21 @@
         if (p.cod === 'rosso') rossiOk++;
         esito.classList.remove('ko'); esito.classList.add('ok');
         esito.innerHTML = '<strong><i class="bi bi-check-circle-fill me-1"></i>Corretto: ' + CODNAMES[p.cod] + '.</strong> ' + p.spiega;
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         if (p.cod === 'rosso' && (cod === 'verde' || cod === 'giallo')) erroriCritici++;
         esito.classList.remove('ok'); esito.classList.add('ko');
         esito.innerHTML = '<strong><i class="bi bi-x-circle-fill me-1"></i>Sbagliato.</strong> Tu hai scelto <strong>' + CODNAMES[cod] + '</strong>, il codice corretto era <strong>' + CODNAMES[p.cod] + '</strong>. ' + p.spiega;
+        // Layer 3: hint contestuale con criterio START
+        if (window.GameCoach && window.GameCoach.hint) {
+          var TIPS = {
+            'rosso':  'ROSSO = pericolo di vita immediato (respira male, polso radiale assente, non risponde). Sul campo si tratta per primo.',
+            'giallo': 'GIALLO = grave ma stabile, può aspettare 30-60 minuti. Parametri compensati ma lesione importante.',
+            'verde':  'VERDE = lieve, cammina e parla. Può aspettare ore, ma va comunque registrato.',
+            'nero':   'NERO = deceduto o non recuperabile sul campo. Si annota e si passa al prossimo paziente.'
+          };
+          window.GameCoach.hint(TIPS[p.cod] || 'Rivedi il metodo START sui Consigli (bottone sopra).', '/cosa-fare-adesso/');
+        }
       }
       esito.classList.remove('hide');
       nextWrap.classList.remove('hide');

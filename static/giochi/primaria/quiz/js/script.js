@@ -1219,9 +1219,25 @@ document.addEventListener('DOMContentLoaded', () => {
         if (correct) {
             feedbackBox.classList.add('correct');
             feedbackBox.innerHTML = '<div class="feedback-title">Risposta esatta!</div>' + currentQ.explanation;
+            if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
         } else {
             feedbackBox.classList.add('wrong');
             feedbackBox.innerHTML = '<div class="feedback-title">Risposta sbagliata</div>' + currentQ.explanation;
+            // Layer 3: hint contestuale con link teoria in base alla categoria della domanda
+            if (window.GameCoach && window.GameCoach.hint) {
+                const TEORIA = {
+                    'terremoto': { url: '/rischi-prevenzione/rischio-sismico/', titolo: 'rischio sismico' },
+                    'incendio': { url: '/rischi-prevenzione/rischio-incendio/', titolo: 'rischio incendio' },
+                    'alluvione': { url: '/rischi-prevenzione/rischio-idrogeologico/', titolo: 'rischio idrogeologico' },
+                    'numeri': { url: '/numeri-utili/', titolo: 'numeri di emergenza' },
+                    'zaino': { url: '/rischi-prevenzione/kit-emergenza/', titolo: 'kit di emergenza' },
+                    'evacuazione': { url: '/piano-familiare/', titolo: 'piano familiare' },
+                    'protezione-civile': { url: '/chi-siamo/', titolo: 'chi siamo' },
+                    'sicurezza': { url: '/cosa-fare-adesso/', titolo: 'cosa fare in emergenza' }
+                };
+                const t = TEORIA[currentQ.category] || { url: '/rischi-prevenzione/', titolo: 'rischi e prevenzione' };
+                window.GameCoach.hint('Vuoi capire il perché? Leggi la pagina ' + t.titolo + ' del sito.', t.url);
+            }
         }
 
         scoreLive.textContent = score + ' corrette';
@@ -1285,6 +1301,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetState() {
         feedbackBox.classList.add('hide');
         while (answerButtonsElement.firstChild) { answerButtonsElement.removeChild(answerButtonsElement.firstChild); }
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
     }
 
     function setStatusClass(element, correct) {
