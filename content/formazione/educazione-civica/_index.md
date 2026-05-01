@@ -11,7 +11,13 @@ dataUltimaRevisione: "2026-05-01"
 
 Questa pagina è dedicata a **dirigenti, docenti coordinatori di Educazione Civica e insegnanti** che cercano materiali di Protezione Civile **già allineati alla normativa scolastica vigente**. Tutti i contenuti del Gruppo sono utilizzabili gratuitamente nelle scuole; la citazione del Gruppo nelle programmazioni è gradita.
 
+> 🧭 **Non sai da dove cominciare?** Vai a [Scuole: da dove cominciare — il cruscotto per ogni ruolo](/formazione/scuole-da-dove-cominciare/): scegli il tuo ruolo (DS, infanzia, primaria, sec I, sec II, sostegno, genitore) e arrivi in due click ai materiali giusti.
+
 > 🚀 **Hai poco tempo per preparare?** I [Percorsi didattici pronti](/formazione/percorsi-didattici/) sono **sei pacchetti già strutturati** (PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO) con destinatari, durata, obiettivi, materiali linkati e modalità di valutazione: si possono usare direttamente in classe.
+
+> 🏛️ **Sei Dirigente Scolastico, DSGA o RSPP?** Vai alla [pagina dedicata Dirigenti e RSPP](/formazione/dirigenti-e-rspp/): ruoli, limiti di responsabilità del Gruppo, coordinamento con il piano di emergenza, gestione PCTO, casi specifici (alunno con disabilità in evacuazione, evento avverso recente).
+
+> ⚖️ **Cerchi le norme di riferimento?** [Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/) — riepilogo unico delle 14+ norme con cosa stabiliscono e a chi si applicano.
 
 ## Quadro normativo di riferimento
 
