@@ -9,6 +9,8 @@ Questo kit è pensato per gli insegnanti della **scuola primaria** che desideran
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e sono adatti a bambini dai 6 agli 11 anni, con attività differenziate per le classi iniziali (I-II) e per le classi finali (III-IV-V).
 
+> ⚠️ **Avvertenza pedagogica — proporzionare l'argomento all'età.** Le attività di questo kit affrontano rischi reali (terremoto, alluvione, incendio, blackout, eventi storici) ma **non devono generare paura o ansia**. Il docente è chiamato a presentare i fenomeni in modo **concreto, rassicurante, agentivo**: l'attenzione è sui *comportamenti corretti che il bambino può fare* (preparare lo zaino, conoscere il punto di raccolta, chiamare il 112), non sull'enfasi del danno. Le case study delle maxi-emergenze italiane sono adattate per la fascia 9-11 anni con focus su lieto fine, ricostruzione, solidarietà — **mai con immagini di vittime o cronaca cruda**. Se nella classe ci sono bambini reduci da eventi traumatici familiari (lutti, evacuazioni, terremoti recenti), valutare con cautela e raccordarsi con il dirigente scolastico, lo psicologo scolastico e con la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
+
 ---
 
 ## Guida per il docente
