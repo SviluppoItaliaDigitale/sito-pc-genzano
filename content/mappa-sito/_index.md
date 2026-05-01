@@ -180,6 +180,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
   <p class="ms-card-title">Terremoto</p>
   <p class="ms-card-desc">Comportamenti prima/durante/dopo, mappa terremoti recenti INGV, Genzano in zona sismica 2B.</p>
 </a>
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/rischio-vulcanico/">
+  <div class="ms-card-icon"><i class="bi bi-droplet-half"></i></div>
+  <p class="ms-card-title">Rischio vulcanico (Colli Albani)</p>
+  <p class="ms-card-desc">Vulcano Laziale quiescente, sismicità di bassa magnitudo, emissioni di CO₂ in spazi confinati (cantine, pozzi, scantinati). Fonti INGV e ISPRA.</p>
+</a>
 <a class="ms-card ms-emerg" href="/rischi-prevenzione/rischio-idrogeologico/">
   <div class="ms-card-icon"><i class="bi bi-water"></i></div>
   <p class="ms-card-title">Frane e alluvioni</p>
@@ -230,6 +235,16 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
   <p class="ms-card-title">Hub Formazione</p>
   <p class="ms-card-desc">Punto centrale della formazione: kit didattici, schede, giochi, primo soccorso.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/percorsi-didattici/">
+  <div class="ms-card-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
+  <p class="ms-card-title">Percorsi didattici pronti</p>
+  <p class="ms-card-desc">6 percorsi pronti all'uso per docenti con poco tempo: PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO. Ognuno con destinatari, durata, obiettivi e materiali linkati.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/educazione-civica/">
+  <div class="ms-card-icon"><i class="bi bi-mortarboard-fill"></i></div>
+  <p class="ms-card-title">Per i docenti — Ed. Civica</p>
+  <p class="ms-card-desc">Mappa dei materiali sui 3 Nuclei Concettuali del D.M. 183/2024 (a.s. 2024/2025), Goal Agenda 2030, calendario delle 33 ore, rubriche di valutazione, sezione PCTO e disponibilità del Gruppo nelle scuole.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/schede-stampabili/">
   <div class="ms-card-icon"><i class="bi bi-printer-fill"></i></div>
   <p class="ms-card-title">Schede stampabili</p>
@@ -269,6 +284,16 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
   <div class="ms-card-icon"><i class="bi bi-heart-fill"></i></div>
   <p class="ms-card-title">Abili a Proteggere</p>
   <p class="ms-card-desc">32 attività accessibili per persone con difficoltà cognitive o motorie, anziani e bambini fragili: pulsanti grandi, testi semplici, nessun timer.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/easy-to-read-scuola/">
+  <div class="ms-card-icon"><i class="bi bi-bookmark-heart-fill"></i></div>
+  <p class="ms-card-title">Easy-to-Read per le scuole</p>
+  <p class="ms-card-desc">4 schede semplificate (112, terremoto, evacuazione, zaino) con frasi corte e pittogrammi ARASAAC. Per alunni con disabilità intellettiva, BES/DSA, italiano L2.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/psicologia-emergenza/">
+  <div class="ms-card-icon"><i class="bi bi-emoji-smile"></i></div>
+  <p class="ms-card-title">Psicologia dell'emergenza</p>
+  <p class="ms-card-desc">Reazioni emotive normali e segnali di attenzione, modello OMS Psychological First Aid (Look · Listen · Link), indicazioni per fascia d'età e per la scuola dopo un evento avverso. Pagina divulgativa: non sostituisce lo psicologo.</p>
 </a>
 <a class="ms-card ms-edu" href="/glossario/">
   <div class="ms-card-icon"><i class="bi bi-book"></i></div>

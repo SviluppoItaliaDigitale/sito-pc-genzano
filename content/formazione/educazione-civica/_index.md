@@ -157,7 +157,13 @@ Per organizzare un incontro: scrivere a **[segreteria@protezionecivilegenzano.it
 
 ## Disponibilità PCTO {#disponibilita-pcto}
 
-Il Gruppo è disponibile a **ospitare studenti delle scuole superiori** per percorsi PCTO (Percorsi per le Competenze Trasversali e l'Orientamento) — minimo 30 ore per i licei, fino a 150 per i tecnici.
+Il Gruppo è disponibile a **ospitare studenti delle scuole superiori** per percorsi PCTO (Percorsi per le Competenze Trasversali e l'Orientamento) con **moduli da 30 a 50 ore**, adattabili all'indirizzo e **riconoscibili all'interno del monte ore PCTO complessivo previsto dall'Istituto**:
+
+- almeno **90 ore** nei Licei,
+- almeno **150 ore** negli Istituti Tecnici,
+- almeno **210 ore** negli Istituti Professionali
+
+(monte ore minimo triennale ridefinito dall'**art. 1, comma 785 della L. 145/2018** e specificato dal **D.M. 774/2019** sulle linee guida PCTO).
 
 **Aree possibili**:
 - Mappatura del territorio e cartografia operativa
@@ -166,11 +172,31 @@ Il Gruppo è disponibile a **ospitare studenti delle scuole superiori** per perc
 - Documentazione fotografica e video di eventi formativi
 - Manutenzione mezzi e attrezzature (sotto supervisione)
 
-**Procedura**: contattare la segreteria del Gruppo per l'avvio della convenzione attuativa con l'Istituto. La convenzione viene formalizzata con il Dirigente scolastico, validata dall'Ufficio Scolastico Regionale, e prevede tutoraggio interno + esterno.
+**Sicurezza degli studenti in PCTO**: prima dell'avvio è prevista la **formazione generale sulla sicurezza** (almeno 4 ore, art. 37 D.Lgs. 81/2008 e Accordo Stato-Regioni 21/12/2011) e, quando l'attività lo richiede, una **formazione specifica** sui rischi del contesto. La copertura assicurativa, la valutazione dei rischi e l'individuazione delle misure di prevenzione restano in capo all'Istituto scolastico (datore di lavoro di fatto degli studenti in PCTO).
+
+**Procedura**: contattare la segreteria del Gruppo per la stipula di una **convenzione attuativa** con il Dirigente scolastico, secondo le procedure interne dell'Istituto. La convenzione regola tutoraggio interno + esterno, monte ore, copertura assicurativa, modalità di valutazione.
 
 > ⚠️ **L'ammissione al programma PCTO è soggetta all'incondizionabile giudizio del Coordinatore e del Consiglio Direttivo del Gruppo Comunale**, che valutano caso per caso la coerenza del percorso con la disponibilità operativa del Gruppo, le esigenze formative dello studente e le necessità del territorio. Il giudizio è insindacabile e non rilascia alcun automatismo all'attivazione della convenzione.
 
 ---
 
+## Stato dei materiali — coerenza con la normativa scolastica {#stato-materiali}
+
+I materiali del Gruppo sono **prodotti volontariamente** dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e sono **liberamente utilizzabili dalle scuole**. La citazione del Gruppo nelle programmazioni è gradita.
+
+**Cosa NON sono i nostri materiali:**
+
+- Non sono **approvati**, **validati**, **adottati** o **certificati** da Ministero dell'Istruzione e del Merito (MIM), Ufficio Scolastico Regionale (USR) del Lazio, Ufficio Scolastico Provinciale, Comune di Genzano di Roma, ASL Roma 6, Dipartimento Nazionale di Protezione Civile.
+- Non costituiscono **testi scolastici** ai sensi del D.Lgs. 297/1994 né rientrano in elenchi ministeriali di materiali ufficialmente validati.
+- Non sostituiscono i **libri di testo** adottati dal collegio dei docenti né i materiali del **piano dell'offerta formativa** dell'Istituto.
+
+**Cosa sono i nostri materiali:**
+
+I materiali sono **progettati per tendere agli obiettivi formativi definiti dalla normativa scolastica vigente** — Indicazioni Nazionali per il Curricolo, Linee Guida del D.M. 183/2024 sull'Educazione Civica (3 Nuclei Concettuali: Costituzione, Sostenibilità, Cittadinanza Digitale), competenze chiave europee per l'apprendimento permanente (Raccomandazione UE 22 maggio 2018), Goal dell'Agenda 2030 ONU. La coerenza con questi riferimenti è dichiarata in modo trasparente nelle sezioni "Per il/la docente" e nei riferimenti normativi a piè di pagina.
+
+La **valutazione finale** di idoneità all'uso in classe e di adeguatezza al gruppo classe specifico spetta al **docente**, in autonomia professionale e in coerenza con la programmazione del consiglio di classe e con il piano dell'offerta formativa dell'Istituto.
+
+---
+
 **Ultimo aggiornamento**: 1 maggio 2026.
-**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h sulla protezione civile, lett. h-ter sulla sicurezza nei luoghi di lavoro come modificata dalla L. 21/2025) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 66/2017 · D.Lgs. 81/2008 · Raccomandazione UE 22 maggio 2018 sulle competenze chiave per l'apprendimento permanente · Agenda 2030 ONU.
+**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h sulla protezione civile, lett. h-ter sulla sicurezza nei luoghi di lavoro come modificata dalla L. 21/2025) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 66/2017 · D.Lgs. 81/2008 · L. 145/2018 (art. 1 c. 785 sul monte ore PCTO) · D.M. 774/2019 (Linee guida PCTO) · D.Lgs. 77/2005 · D.Lgs. 62/2017 · Raccomandazione UE 22 maggio 2018 sulle competenze chiave per l'apprendimento permanente · Agenda 2030 ONU.

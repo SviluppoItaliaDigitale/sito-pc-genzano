@@ -9,6 +9,8 @@ Questo kit è pensato per gli insegnanti della **scuola dell'infanzia** che desi
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma per le attività di divulgazione nelle scuole del territorio.
 
+> ⚠️ **Avvertenza pedagogica — non spaventare i bambini.** Le attività di questo kit **non devono mai generare paura**. I bambini di 3-6 anni hanno una percezione del rischio molto diversa da quella dell'adulto: parlare di terremoti, incendi o allagamenti in modo enfatico o con immagini drammatiche può produrre **ansia, incubi, regressioni**. La regola è opposta: presentare i comportamenti corretti come **un gioco rassicurante** (la tartaruga che si ripara, il numero 112 come "amico che arriva"), proporzionato all'età, sempre concluso con la rassicurazione che **gli adulti sono lì per proteggerli**. Niente video reali di disastri, niente cronaca, niente racconto di vittime. Per la dimensione emotiva si rimanda alla pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
+
 ---
 
 ## Guida per il docente
