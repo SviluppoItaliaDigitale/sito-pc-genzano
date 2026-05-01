@@ -117,13 +117,25 @@
     .sign.placed.correct { box-shadow: 0 0 0 3px #198754; }
     .sign.placed.wrong   { box-shadow: 0 0 0 3px #dc3545; }
 
-    /* forme base dei cartelli, stile schematico */
-    .sign.danger    { background: #fff3cd; border: 3px solid #b45309; }
-    .sign.vdf       { background: #f8d7da; border: 3px solid #dc3545; }
-    .sign.ban       { background: #fff; border: 3px solid #dc3545; }
-    .sign.oblig     { background: #cfe2ff; border: 3px solid #0d6efd; border-radius: 50%; }
-    .sign.safe      { background: #d1e7dd; border: 3px solid #198754; }
-    .sign.exit      { background: #198754; color: #fff; border: 3px solid #0f5132; }
+    /* Le sign ospitano pittogrammi ISO 7010 (sfondo del pittogramma già
+       conforme alla norma). Il bordo colorato della classe è solo etichetta
+       visiva di categoria: giallo=W avvertimento, rosso=P/F divieto/antincendio,
+       blu=M obbligo, verde=E sicurezza/uscita. */
+    .sign            { padding: 4px; background: #fff; }
+    .sign.danger     { border: 3px solid #b45309; }
+    .sign.vdf        { border: 3px solid #dc3545; }
+    .sign.ban        { border: 3px solid #dc3545; }
+    .sign.oblig      { border: 3px solid #0d6efd; }
+    .sign.safe       { border: 3px solid #198754; }
+    .sign.exit       { border: 3px solid #0f5132; }
+
+    .sign img.sign-iso {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+    }
 
     .sign-label {
       position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%);
@@ -208,13 +220,13 @@
               </ul>
             </div>
 
-            <div class="legenda" aria-hidden="true">
-              <span><span class="dot" style="background:#fff3cd;border-color:#b45309"></span>Pericolo</span>
-              <span><span class="dot" style="background:#fff;border-color:#dc3545"></span>Divieto</span>
-              <span><span class="dot" style="background:#cfe2ff;border-color:#0d6efd;border-radius:50%"></span>Obbligo</span>
-              <span><span class="dot" style="background:#d1e7dd;border-color:#198754"></span>Primo soccorso</span>
-              <span><span class="dot" style="background:#198754;border-color:#0f5132"></span>Uscita</span>
-              <span><span class="dot" style="background:#f8d7da;border-color:#dc3545"></span>Antincendio</span>
+            <p class="text-muted small mb-2" style="text-align:center;">Tutti i cartelli usati nel gioco sono pittogrammi <strong>ISO 7010</strong> ufficiali, gli stessi che vedi nelle scuole, nei luoghi di lavoro e nei centri commerciali.</p>
+            <div class="legenda" aria-label="Legenda colori ISO 7010">
+              <span><span class="dot" style="background:#FFD600;border-color:#000"></span><strong>Giallo, triangolo</strong> = pericolo (W)</span>
+              <span><span class="dot" style="background:#C8232C;border-color:#7f1d1d;border-radius:50%"></span><strong>Rosso, cerchio barrato</strong> = divieto (P)</span>
+              <span><span class="dot" style="background:#0072CE;border-color:#003366;border-radius:50%"></span><strong>Blu, cerchio</strong> = obbligo (M)</span>
+              <span><span class="dot" style="background:#237F52;border-color:#0f5132"></span><strong>Verde, quadrato</strong> = sicurezza, uscita, primo soccorso (E)</span>
+              <span><span class="dot" style="background:#C8232C;border-color:#7f1d1d"></span><strong>Rosso, quadrato</strong> = antincendio (F)</span>
             </div>
 
             <h2 class="h5 text-center mt-4 mb-3">Scegli una scena</h2>
@@ -282,26 +294,34 @@
   (function () {
     'use strict';
 
-    // Catalogo cartelli riutilizzabile
-    // kind = classe CSS (danger, ban, oblig, safe, exit, vdf)
-    // id univoco usato per il matching slot-cartello
+    // Catalogo cartelli — pittogrammi ISO 7010 ufficiali della libreria del sito
+    // (static/pittogrammi/iso7010/, sotto licenza PD-shape/CC0 da Wikimedia).
+    // Convenzioni colore ISO 7010:
+    //  - W (giallo, triangolo) = avvertimento/pericolo
+    //  - P (rosso, cerchio barrato) = divieto
+    //  - M (blu, cerchio) = obbligo
+    //  - E (verde, quadrato) = condizioni di sicurezza / vie di fuga / primo soccorso
+    //  - F (rosso, quadrato) = attrezzature antincendio
+    // Le classi CSS .danger/.ban/.oblig/.safe/.exit/.vdf sono ora un sottile
+    // bordo categoriale: lo sfondo principale è quello del pittogramma ISO ufficiale.
+    var ISO_BASE = '/pittogrammi/iso7010/';
     var CART = {
-      fuoco:      { id: 'fuoco',      kind: 'danger', glyph: '\uD83D\uDD25', label: 'Pericolo incendio' },
-      elettrico:  { id: 'elettrico',  kind: 'danger', glyph: '\u26A1',       label: 'Alta tensione' },
-      caduta:     { id: 'caduta',     kind: 'danger', glyph: '\u26A0\uFE0F', label: 'Rischio di caduta' },
-      chimico:    { id: 'chimico',    kind: 'danger', glyph: '\u2623\uFE0F', label: 'Sostanze pericolose' },
-      vietatofumare: { id: 'vietatofumare', kind: 'ban', glyph: '\uD83D\uDEAD', label: 'Vietato fumare' },
-      vietatoingresso: { id: 'vietatoingresso', kind: 'ban', glyph: '\uD83D\uDEAB', label: 'Vietato entrare' },
-      vietatoascensore: { id: 'vietatoascensore', kind: 'ban', glyph: '\uD83D\uDEC8', label: 'Vietato ascensore' },
-      casco:      { id: 'casco',      kind: 'oblig', glyph: '\u26D1\uFE0F', label: 'Obbligo casco' },
-      guanti:     { id: 'guanti',     kind: 'oblig', glyph: '\uD83E\uDDE4', label: 'Obbligo guanti' },
-      giubbino:   { id: 'giubbino',   kind: 'oblig', glyph: '\uD83E\uDDA9', label: 'Alta visibilità' },
-      primosoccorso: { id: 'primosoccorso', kind: 'safe', glyph: '\u2795', label: 'Primo soccorso' },
-      defibrillatore: { id: 'defibrillatore', kind: 'safe', glyph: '\u2764\uFE0F', label: 'Defibrillatore' },
-      raccolta:   { id: 'raccolta',   kind: 'safe', glyph: '\uD83D\uDC65', label: 'Punto di raccolta' },
-      uscita:     { id: 'uscita',     kind: 'exit', glyph: '\uD83D\uDEAA', label: 'Uscita emergenza' },
-      estintore:  { id: 'estintore',  kind: 'vdf', glyph: '\uD83E\uDDEF', label: 'Estintore' },
-      idrante:    { id: 'idrante',    kind: 'vdf', glyph: '\uD83D\uDEB1', label: 'Idrante' }
+      fuoco:      { id: 'fuoco',      kind: 'danger', iso: ISO_BASE + 'materiale-infiammabile.svg', label: 'Pericolo incendio' },
+      elettrico:  { id: 'elettrico',  kind: 'danger', iso: ISO_BASE + 'pericolo-elettrico.svg',     label: 'Alta tensione' },
+      caduta:     { id: 'caduta',     kind: 'danger', iso: ISO_BASE + 'pericolo-generico.svg',      label: 'Rischio di caduta' },
+      chimico:    { id: 'chimico',    kind: 'danger', iso: ISO_BASE + 'pericolo-tossico.svg',       label: 'Sostanze pericolose' },
+      vietatofumare:    { id: 'vietatofumare',    kind: 'ban', iso: ISO_BASE + 'vietato-fumare.svg',    label: 'Vietato fumare' },
+      vietatoingresso:  { id: 'vietatoingresso',  kind: 'ban', iso: ISO_BASE + 'vietato-pedoni.svg',    label: 'Vietato entrare' },
+      vietatoascensore: { id: 'vietatoascensore', kind: 'ban', iso: ISO_BASE + 'divieto-generico.svg',  label: 'Vietato ascensore' },
+      casco:      { id: 'casco',      kind: 'oblig', iso: ISO_BASE + 'casco-protettivo.svg',    label: 'Obbligo casco' },
+      guanti:     { id: 'guanti',     kind: 'oblig', iso: ISO_BASE + 'guanti-protettivi.svg',   label: 'Obbligo guanti' },
+      giubbino:   { id: 'giubbino',   kind: 'oblig', iso: ISO_BASE + 'alta-visibilita.svg',     label: 'Alta visibilità' },
+      primosoccorso:  { id: 'primosoccorso',  kind: 'safe', iso: ISO_BASE + 'cassetta-primo-soccorso.svg', label: 'Primo soccorso' },
+      defibrillatore: { id: 'defibrillatore', kind: 'safe', iso: ISO_BASE + 'defibrillatore-dae.svg',     label: 'Defibrillatore' },
+      raccolta:       { id: 'raccolta',       kind: 'safe', iso: ISO_BASE + 'punto-raccolta.svg',        label: 'Punto di raccolta' },
+      uscita:     { id: 'uscita',     kind: 'exit', iso: ISO_BASE + 'uscita-emergenza-destra.svg', label: 'Uscita emergenza' },
+      estintore:  { id: 'estintore',  kind: 'vdf', iso: ISO_BASE + 'estintore.svg',     label: 'Estintore' },
+      idrante:    { id: 'idrante',    kind: 'vdf', iso: ISO_BASE + 'idrante-muro.svg', label: 'Idrante' }
     };
 
     var SCENE = [
@@ -457,7 +477,7 @@
         wrap.className = 'sign-wrap';
         var s = document.createElement('div');
         s.className = 'sign ' + c.kind;
-        s.textContent = c.glyph;
+        s.innerHTML = '<img src="' + c.iso + '" alt="' + c.label + '" class="sign-iso" draggable="false">';
         s.setAttribute('tabindex', '0');
         s.setAttribute('role', 'button');
         s.setAttribute('aria-label', c.label + ' (premi Invio per prendere, poi sposta con le frecce)');
@@ -594,7 +614,7 @@
       var c = CART[cid];
       var s = document.createElement('div');
       s.className = 'sign ' + c.kind;
-      s.textContent = c.glyph;
+      s.innerHTML = '<img src="' + c.iso + '" alt="' + c.label + '" class="sign-iso" draggable="false">';
       s.setAttribute('tabindex', '0');
       s.setAttribute('role', 'button');
       s.setAttribute('aria-label', c.label);
