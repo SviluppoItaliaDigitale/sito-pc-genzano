@@ -47,20 +47,32 @@
 
     .mappa-wrap {
       display: flex; justify-content: center; margin-bottom: 1rem;
-      overflow-x: auto;
+      padding: 0 .25rem;
     }
     .mappa {
+      --mappa-cols: 10;
+      --mappa-gap: 3px;
+      --mappa-pad: 3px;
+      --mappa-max-cell: 44px;
+      --mappa-min-cell: 22px;
+      --mappa-max-w: min(560px, calc(100vw - 1.5rem));
+      --mappa-cell: clamp(
+        var(--mappa-min-cell),
+        calc((var(--mappa-max-w) - 2 * var(--mappa-pad) - (var(--mappa-cols) - 1) * var(--mappa-gap)) / var(--mappa-cols)),
+        var(--mappa-max-cell)
+      );
       display: grid;
-      gap: 3px;
+      grid-template-columns: repeat(var(--mappa-cols), var(--mappa-cell));
+      gap: var(--mappa-gap);
       background: #dee2e6;
-      padding: 3px;
+      padding: var(--mappa-pad);
       border-radius: 8px;
       box-shadow: inset 0 0 0 2px #003366;
     }
     .cell {
-      width: 44px; height: 44px;
+      width: var(--mappa-cell); height: var(--mappa-cell);
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; line-height: 1;
+      font-size: calc(var(--mappa-cell) * 0.6); line-height: 1;
       border-radius: 4px; background: #fff;
       position: relative;
       user-select: none;
@@ -69,7 +81,7 @@
     .cell.empty { background: #f8f9fa; }
     .cell.corridor { background: #e7f1ff; }
     .cell.start { background: #cfe2ff; }
-    .cell.exit { background: #d1e7dd; font-size: 1.6rem; }
+    .cell.exit { background: #d1e7dd; font-size: calc(var(--mappa-cell) * 0.7); }
     .cell.elevator { background: #fff3cd; color: #664d03; }
     .cell.fire { background: #f8d7da; color: #dc3545; }
     .cell.obstacle { background: #fff3cd; color: #b45309; }
@@ -81,7 +93,7 @@
       content: "🧒";
       position: absolute; inset: 0;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem;
+      font-size: calc(var(--mappa-cell) * 0.7);
       animation: pulse 1.2s ease-in-out infinite;
     }
     @keyframes pulse {
@@ -92,14 +104,15 @@
 
     .comandi {
       display: grid;
-      grid-template-columns: 60px 60px 60px;
-      grid-template-rows: 60px 60px;
+      --cmd-size: clamp(48px, 14vw, 60px);
+      grid-template-columns: repeat(3, var(--cmd-size));
+      grid-template-rows: repeat(2, var(--cmd-size));
       gap: .4rem;
       justify-content: center;
       margin: 1rem auto;
     }
     .comandi button {
-      font-size: 1.8rem; line-height: 1;
+      font-size: clamp(1.4rem, 5vw, 1.8rem); line-height: 1;
       border: 2px solid #003366; background: #fff; color: #003366;
       border-radius: 10px; cursor: pointer;
       transition: transform .08s, background .15s;
@@ -130,12 +143,7 @@
     .alert-msg.danger { background: #f8d7da; color: #842029; border: 1px solid #f5c2c7; animation: shake .3s; }
     @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 
-    @media (max-width: 575.98px) {
-      .cell { width: 36px; height: 36px; font-size: 1.1rem; }
-      .cell.player::after { font-size: 1.3rem; }
-      .comandi { grid-template-columns: 54px 54px 54px; grid-template-rows: 54px 54px; }
-      .comandi button { font-size: 1.6rem; }
-    }
+    /* Sizing su mobile gestito direttamente da clamp() su .cell e .comandi */
   </style>
 </head>
 <body>
@@ -441,7 +449,7 @@
 
     function disegna(){
       var cols = mappa[0].length;
-      mappaEl.style.gridTemplateColumns = 'repeat(' + cols + ', auto)';
+      mappaEl.style.setProperty('--mappa-cols', cols);
       mappaEl.innerHTML = '';
       for (var r = 0; r < mappa.length; r++){
         for (var c = 0; c < mappa[r].length; c++){

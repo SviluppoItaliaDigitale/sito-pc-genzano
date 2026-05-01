@@ -240,3 +240,51 @@
   body { background: #fff; }
   .gioco-fine { break-inside: avoid; }
 }
+
+/* ── Guardrail responsive globale per i giochi ─────────────── */
+/* Evita overflow orizzontale su mobile <360px e su tutte le pagine
+   gioco statiche (fuori da Hugo): immagini, video, canvas e svg
+   non superano mai la larghezza del contenitore. */
+.giochi-section img,
+.giochi-section svg,
+.giochi-section video,
+.giochi-section canvas,
+.giochi-section iframe {
+  max-width: 100%;
+  height: auto;
+}
+.giochi-section .container,
+.giochi-section .container-fluid {
+  overflow-x: clip;
+}
+/* Tabelle non native si reflowano automaticamente */
+.giochi-section table {
+  width: 100%;
+  table-layout: auto;
+}
+/* Pulsanti non eccedono mai il viewport */
+.giochi-section .btn {
+  max-width: 100%;
+  white-space: normal;
+}
+/* Focus visibile minimo */
+.giochi-section button:focus-visible,
+.giochi-section [role="button"]:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+
+/* Stat-box flessibili: su mobile <360px non eccedono il viewport.
+   Il valore min-width definito nei singoli giochi era 110-140px:
+   con clamp() scala fino a 88px su tiny phones senza perdere leggibilità. */
+.stat-box,
+.stat-row > * {
+  min-width: clamp(88px, 28vw, 140px) !important;
+}
+/* Stat-row: gestisce wrapping pulito su tutti i viewport */
+.stat-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: .5rem;
+}
