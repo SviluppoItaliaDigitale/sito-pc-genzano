@@ -1,6 +1,6 @@
 ---
 title: "Per i docenti — La Protezione Civile per l'Educazione Civica"
-description: "Mappa operativa dei materiali del Gruppo (kit, schede, storie, giochi, attività accessibili) sui 3 Nuclei Concettuali del DM 183/2024 e sull'Agenda 2030. Strumento per i docenti di scuola dell'infanzia, primaria e secondaria."
+description: "Mappa operativa dei materiali del Gruppo (kit, schede, storie, giochi, attività accessibili) sui 3 Nuclei Concettuali del D.M. 183/2024 (applicabile dall'a.s. 2024/2025) e sull'Agenda 2030. Strumento per i docenti di scuola dell'infanzia, primaria e secondaria."
 date: 2026-05-01
 draft: false
 type: "page"
@@ -15,14 +15,15 @@ Questa pagina è dedicata a **dirigenti, docenti coordinatori di Educazione Civi
 
 L'insegnamento dell'Educazione Civica nelle scuole italiane è regolato da:
 
-- **Legge 20 agosto 2019, n. 92** — Introduzione dell'insegnamento scolastico dell'Educazione Civica. **Articolo 3, lettera h** prevede esplicitamente la *"formazione di base in materia di protezione civile"*.
-- **D.M. 7 settembre 2024 n. 183** — *Linee Guida nazionali per l'insegnamento dell'Educazione Civica*, pienamente operative dall'anno scolastico 2025/2026. Organizzano la disciplina in **3 Nuclei Concettuali**.
+- **Legge 20 agosto 2019, n. 92** — Introduzione dell'insegnamento scolastico dell'Educazione Civica. **Articolo 3, lettera h)** prevede esplicitamente la *"formazione di base in materia di protezione civile"*: è il riferimento normativo primario che lega le scuole al Sistema nazionale di Protezione Civile. Il **D.Lgs. 1/2018** (Codice della Protezione Civile) resta la cornice generale che descrive attività, organizzazione, pianificazione e ruolo del Servizio nazionale.
+- **D.M. 7 settembre 2024, n. 183** — *Linee Guida nazionali per l'insegnamento dell'Educazione Civica*, adottate con il decreto e **applicabili a decorrere dall'anno scolastico 2024/2025**. Organizzano la disciplina in **3 Nuclei Concettuali**.
+- **Legge 17 febbraio 2025, n. 21** — Modifica l'articolo 3 della L. 92/2019 introducendo la **lettera h-ter)**: «conoscenze di base in materia di sicurezza nei luoghi di lavoro». L'insegnamento rientra nelle 33 ore annuali di Educazione Civica e interessa in particolare la Secondaria di II grado e i percorsi PCTO.
 - **Obbligo di 33 ore annuali** di Educazione Civica con voto autonomo in pagella (numerico in decimi alla secondaria, giudizio descrittivo alla primaria).
 - **Trasversalità e contitolarità**: l'Educazione Civica è insegnata **da più docenti del consiglio di classe**, ognuno per la propria parte di competenza.
 
 I nostri materiali sono progettati come **moduli di Educazione Civica pronti all'uso**, coerenti con questo quadro.
 
-## I 3 Nuclei Concettuali del DM 183/2024 — mappatura dei nostri materiali
+## I 3 Nuclei Concettuali del D.M. 183/2024 — mappatura dei nostri materiali
 
 ### Nucleo 1 — Costituzione, diritto, legalità e solidarietà
 
@@ -116,9 +117,9 @@ Esempio di **calendario annuale** che integra i nostri materiali nelle 33 ore ob
 
 **Totale: 33 ore** — coerenti con l'obbligo di legge.
 
-## Materiali coerenti con il DM 183/2024
+## Materiali coerenti con il D.M. 183/2024
 
-Tutti i materiali prodotti dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma riportano nelle sezioni "Per il/la docente" il **riferimento esplicito al DM 183/2024**, alle **competenze chiave europee per l'apprendimento permanente** (Raccomandazione del Consiglio UE 22 maggio 2018) e ai **Goal Agenda 2030 ONU** pertinenti.
+Tutti i materiali prodotti dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma riportano nelle sezioni "Per il/la docente" il **riferimento esplicito al D.M. 183/2024**, alle **competenze chiave europee per l'apprendimento permanente** (Raccomandazione del Consiglio UE 22 maggio 2018) e ai **Goal Agenda 2030 ONU** pertinenti.
 
 Questo rende i nostri materiali **immediatamente utilizzabili** senza necessità di rielaborazione da parte del docente.
 
@@ -157,4 +158,4 @@ Il Gruppo è disponibile a **ospitare studenti delle scuole superiori** per perc
 ---
 
 **Ultimo aggiornamento**: 1 maggio 2026.
-**Riferimenti normativi**: L. 92/2019 · D.M. 7 settembre 2024 n. 183 · D.Lgs. 1/2018 · D.Lgs. 66/2017 · Raccomandazione UE 22 maggio 2018 sulle competenze chiave per l'apprendimento permanente · Agenda 2030 ONU.
+**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h sulla protezione civile, lett. h-ter sulla sicurezza nei luoghi di lavoro come modificata dalla L. 21/2025) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 66/2017 · D.Lgs. 81/2008 · Raccomandazione UE 22 maggio 2018 sulle competenze chiave per l'apprendimento permanente · Agenda 2030 ONU.
