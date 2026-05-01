@@ -8,6 +8,8 @@ tts: true
 ---
 In ogni emergenza, le persone con necessità specifiche sono le più vulnerabili. Pianificare in anticipo le loro esigenze è fondamentale per garantirne la sicurezza. Questa pagina raccoglie indicazioni pratiche per chi si prende cura di persone fragili e per le persone stesse.
 
+Il principio dell'attenzione prioritaria alle persone con esigenze specifiche durante l'evacuazione è recepito dalla norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*, che riconosce queste categorie come la priorità nella pianificazione dei soccorsi. La normativa italiana (Codice della Protezione Civile, **D.Lgs. 1/2018**) e le linee guida del **Dipartimento della Protezione Civile** ne definiscono l'applicazione operativa nei piani comunali di emergenza.
+
 ## Chi sono le persone con necessità specifiche
 
 - **Anziani**, soprattutto se soli o con difficoltà motorie

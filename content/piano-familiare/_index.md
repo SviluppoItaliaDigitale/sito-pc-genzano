@@ -21,6 +21,8 @@ Un piano familiare efficace risponde a tre domande:
 2. **Chi chiamiamo?** — Il contatto di riferimento fuori città
 3. **Cosa portiamo?** — Dove si trova il kit di emergenza
 
+Il modello che proponiamo qui segue le **campagne nazionali del Dipartimento della Protezione Civile** ("Io non rischio"). Lo schema dei punti di ritrovo, del contatto fuori area e dell'attenzione ai familiari fragili recepisce anche i principi della norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*, che tratta proprio la preparazione dell'unità famiglia all'evacuazione.
+
 ## Compila il tuo Piano
 
 <div class="card shadow-sm p-4 mb-4">
