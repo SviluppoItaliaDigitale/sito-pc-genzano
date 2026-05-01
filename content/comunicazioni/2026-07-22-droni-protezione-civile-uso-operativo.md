@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Drone" 2026-07-22-droni-protezione-civile-uso-operativo it
 I **droni** — tecnicamente **Aeromobili a Pilotaggio Remoto (APR)** — stanno cambiando molte attività della Protezione Civile italiana. Da strumento di nicchia a sistema integrato: ricerche di persone scomparse, avvistamento incendi, monitoraggio danni, cartografia di emergenza. Un quadro su come li usiamo e sui limiti operativi.
 
 ## Il drone come strumento

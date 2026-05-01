@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Esodo estivo" 2026-08-17-controesodo-viabilita-sicurezza it
 Il **controesodo** è il fenomeno dei rientri dalle vacanze estive. I primi flussi iniziano nelle giornate successive al Ferragosto, con picchi nell'ultima settimana di agosto e nei primi giorni di settembre. Per chi parte e per chi percorre strade regionali e autostradali nel periodo, alcune regole di base riducono il rischio di incidenti.
 
 ## Pianificare il viaggio
