@@ -15,11 +15,13 @@ I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Ci
 
 ### Riferimenti normativi e curricolari
 
-Il percorso si inserisce pienamente nelle **33 ore annuali di Educazione Civica** previste dalla **Legge 20 agosto 2019 n. 92** (art. 1, 2 e 3) e dalle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 7 settembre 2024 n. 183), che individuano nella **sicurezza stradale, salute e benessere, Agenda 2030, cittadinanza digitale, conoscenza del territorio** i nuclei tematici da sviluppare.
+Il percorso si inserisce pienamente nelle **33 ore annuali di Educazione Civica** previste dalla **Legge 20 agosto 2019 n. 92** (art. 1, 2 e 3) e dalle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 7 settembre 2024 n. 183, **applicabili a decorrere dall'anno scolastico 2024/2025**), che individuano nella **sicurezza stradale, salute e benessere, Agenda 2030, cittadinanza digitale, conoscenza del territorio** i nuclei tematici da sviluppare.
 
 Il percorso risponde inoltre alle **Indicazioni Nazionali per il Curricolo della Scuola Secondaria di Primo Grado** (2012) e ai **Nuovi Scenari** (2018), in particolare ai traguardi delle discipline Scienze, Geografia, Tecnologia e al profilo di cittadinanza di fine primo ciclo.
 
-Riferimento normativo tecnico: **articolo 18 del D.Lgs. 1/2018** (Codice della Protezione Civile), che prevede formazione e informazione sui rischi come parte dell'offerta formativa scolastica.
+Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione Civile è l'**articolo 3, lettera h) della Legge 92/2019**, che include esplicitamente la *"formazione di base in materia di protezione civile"* tra i temi dell'Educazione Civica. Il **D.Lgs. 1/2018** (Codice della Protezione Civile) costituisce la cornice generale che descrive attività, organizzazione, pianificazione e ruolo del Servizio nazionale.
+
+La **Legge 17 febbraio 2025, n. 21** ha introdotto la **lettera h-ter)** all'art. 3 della L. 92/2019, aggiungendo le *"conoscenze di base in materia di sicurezza nei luoghi di lavoro"* tra i temi dell'Educazione Civica: sebbene il fuoco principale sia sulla Secondaria di II grado, è opportuno introdurre già in Secondaria di I grado i concetti di base (DPI, segnaletica, comportamenti sicuri) come ponte verso il triennio.
 
 > 📚 **Per i docenti — risorse coordinate**
 >
@@ -880,11 +882,12 @@ Alla fine si chiede agli studenti di scrivere in 10 righe la propria posizione e
 
 ### Fonti normative e curricolari
 
-- [Legge 20 agosto 2019 n. 92](https://www.normattiva.it/) — Introduzione dell'insegnamento dell'educazione civica
-- **D.M. 7 settembre 2024 n. 183 (Linee Guida nazionali per l'Ed. Civica, in vigore dal 2025/2026)** — Linee guida per l'insegnamento dell'educazione civica
+- [Legge 20 agosto 2019 n. 92](https://www.normattiva.it/) — Introduzione dell'insegnamento dell'educazione civica (art. 3 lett. h *protezione civile*; lett. h-ter *sicurezza nei luoghi di lavoro* introdotta dalla L. 21/2025)
+- **D.M. 7 settembre 2024 n. 183 (Linee Guida nazionali per l'Educazione Civica, applicabili a decorrere dall'anno scolastico 2024/2025)** — Linee guida per l'insegnamento dell'educazione civica
+- **Legge 17 febbraio 2025, n. 21** — Conoscenze di base in materia di sicurezza nei luoghi di lavoro nell'Educazione Civica
 - **Indicazioni Nazionali per il Curricolo** (2012) + **Nuovi Scenari** (2018) — Scuola Secondaria di Primo Grado
 - **Raccomandazione UE 2018/C 189/01** — Competenze chiave per l'apprendimento permanente
-- [D.Lgs. 2 gennaio 2018 n. 1](/normativa/testo-unico-protezione-civile/) — Codice della Protezione Civile (art. 18)
+- [D.Lgs. 2 gennaio 2018 n. 1](/normativa/testo-unico-protezione-civile/) — Codice della Protezione Civile (cornice generale del Servizio nazionale)
 - **D.M. 742/2017** — Certificazione delle competenze di fine primo ciclo
 - **D.Lgs. 81/2008** — Sicurezza nei luoghi di lavoro
 - **D.M. 26/08/1992** — Norme prevenzione incendi scuole

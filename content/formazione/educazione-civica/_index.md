@@ -1,6 +1,6 @@
 ---
 title: "Per i docenti — La Protezione Civile per l'Educazione Civica"
-description: "Mappa operativa dei materiali del Gruppo (kit, schede, storie, giochi, attività accessibili) sui 3 Nuclei Concettuali del DM 183/2024 e sull'Agenda 2030. Strumento per i docenti di scuola dell'infanzia, primaria e secondaria."
+description: "Mappa operativa dei materiali del Gruppo (kit, schede, storie, giochi, attività accessibili) sui 3 Nuclei Concettuali del D.M. 183/2024 (applicabile dall'a.s. 2024/2025) e sull'Agenda 2030. Strumento per i docenti di scuola dell'infanzia, primaria e secondaria."
 date: 2026-05-01
 draft: false
 type: "page"
@@ -11,18 +11,21 @@ dataUltimaRevisione: "2026-05-01"
 
 Questa pagina è dedicata a **dirigenti, docenti coordinatori di Educazione Civica e insegnanti** che cercano materiali di Protezione Civile **già allineati alla normativa scolastica vigente**. Tutti i contenuti del Gruppo sono utilizzabili gratuitamente nelle scuole; la citazione del Gruppo nelle programmazioni è gradita.
 
+> 🚀 **Hai poco tempo per preparare?** I [Percorsi didattici pronti](/formazione/percorsi-didattici/) sono **sei pacchetti già strutturati** (PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO) con destinatari, durata, obiettivi, materiali linkati e modalità di valutazione: si possono usare direttamente in classe.
+
 ## Quadro normativo di riferimento
 
 L'insegnamento dell'Educazione Civica nelle scuole italiane è regolato da:
 
-- **Legge 20 agosto 2019, n. 92** — Introduzione dell'insegnamento scolastico dell'Educazione Civica. **Articolo 3, lettera h** prevede esplicitamente la *"formazione di base in materia di protezione civile"*.
-- **D.M. 7 settembre 2024 n. 183** — *Linee Guida nazionali per l'insegnamento dell'Educazione Civica*, pienamente operative dall'anno scolastico 2025/2026. Organizzano la disciplina in **3 Nuclei Concettuali**.
+- **Legge 20 agosto 2019, n. 92** — Introduzione dell'insegnamento scolastico dell'Educazione Civica. **Articolo 3, lettera h)** prevede esplicitamente la *"formazione di base in materia di protezione civile"*: è il riferimento normativo primario che lega le scuole al Sistema nazionale di Protezione Civile. Il **D.Lgs. 1/2018** (Codice della Protezione Civile) resta la cornice generale che descrive attività, organizzazione, pianificazione e ruolo del Servizio nazionale.
+- **D.M. 7 settembre 2024, n. 183** — *Linee Guida nazionali per l'insegnamento dell'Educazione Civica*, adottate con il decreto e **applicabili a decorrere dall'anno scolastico 2024/2025**. Organizzano la disciplina in **3 Nuclei Concettuali**.
+- **Legge 17 febbraio 2025, n. 21** — Modifica l'articolo 3 della L. 92/2019 introducendo la **lettera h-ter)**: «conoscenze di base in materia di sicurezza nei luoghi di lavoro». L'insegnamento rientra nelle 33 ore annuali di Educazione Civica e interessa in particolare la Secondaria di II grado e i percorsi PCTO.
 - **Obbligo di 33 ore annuali** di Educazione Civica con voto autonomo in pagella (numerico in decimi alla secondaria, giudizio descrittivo alla primaria).
 - **Trasversalità e contitolarità**: l'Educazione Civica è insegnata **da più docenti del consiglio di classe**, ognuno per la propria parte di competenza.
 
 I nostri materiali sono progettati come **moduli di Educazione Civica pronti all'uso**, coerenti con questo quadro.
 
-## I 3 Nuclei Concettuali del DM 183/2024 — mappatura dei nostri materiali
+## I 3 Nuclei Concettuali del D.M. 183/2024 — mappatura dei nostri materiali
 
 ### Nucleo 1 — Costituzione, diritto, legalità e solidarietà
 
@@ -116,20 +119,33 @@ Esempio di **calendario annuale** che integra i nostri materiali nelle 33 ore ob
 
 **Totale: 33 ore** — coerenti con l'obbligo di legge.
 
-## Materiali coerenti con il DM 183/2024
+## Materiali coerenti con il D.M. 183/2024
 
-Tutti i materiali prodotti dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma riportano nelle sezioni "Per il/la docente" il **riferimento esplicito al DM 183/2024**, alle **competenze chiave europee per l'apprendimento permanente** (Raccomandazione del Consiglio UE 22 maggio 2018) e ai **Goal Agenda 2030 ONU** pertinenti.
+Tutti i materiali prodotti dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma riportano nelle sezioni "Per il/la docente" il **riferimento esplicito al D.M. 183/2024**, alle **competenze chiave europee per l'apprendimento permanente** (Raccomandazione del Consiglio UE 22 maggio 2018) e ai **Goal Agenda 2030 ONU** pertinenti.
 
 Questo rende i nostri materiali **immediatamente utilizzabili** senza necessità di rielaborazione da parte del docente.
 
-## Inclusione e accessibilità
+## Inclusione e accessibilità {#inclusione-e-accessibilita}
 
 Il Gruppo aderisce ai principi del **D.Lgs. 66/2017** sull'inclusione scolastica:
 
+- 📖 [**Easy-to-Read per le scuole**](/formazione/easy-to-read-scuola/) — versioni semplificate (frasi corte + pittogrammi ARASAAC) delle 4 schede chiave per alunni con disabilità intellettiva, BES/DSA e parlanti italiano L2
 - ♿ [Abili a Proteggere](/abili-a-proteggere/) — 32 attività interattive accessibili per studenti con disabilità cognitive o motorie
-- 📖 [Facile da Leggere](/facile-da-leggere/) — versione del sito in CAA (Comunicazione Aumentativa Alternativa) per studenti con difficoltà di lettura
+- 📖 [Facile da Leggere](/facile-da-leggere/) — versione del sito in linguaggio facile per il cittadino, utilizzabile anche dai docenti come riferimento di stile
 
 I nostri pittogrammi seguono lo standard **ISO 7010** e usano la libreria **ARASAAC** (CC BY-NC-SA), supportando bambini con DSA, BES e parlanti italiano L2.
+
+## Psicologia dell'emergenza — la dimensione emotiva del rischio
+
+Un evento avverso lascia tracce **emotive** oltre che fisiche, e la scuola è spesso il luogo in cui queste tracce si manifestano (con bambini ansiosi, regressioni, difficoltà di concentrazione). La pagina dedicata [Psicologia dell'emergenza — gestire ansia e paura](/formazione/psicologia-emergenza/) fornisce ai docenti:
+
+- un quadro su **reazioni emotive normali vs patologiche**,
+- il modello **Primo Soccorso Psicologico (PFA) dell'OMS** in 3 azioni (Look, Listen, Link),
+- segnali d'attenzione **per fascia d'età** (0-5, 6-12, adolescenti),
+- 6 principi operativi su **come affrontare in classe** un evento avverso,
+- riferimenti istituzionali (PSIC della Protezione Civile, ASL Roma 6, SIPEM SoS).
+
+La pagina è esplicitamente **divulgativa**: non sostituisce lo psicologo scolastico né i servizi specialistici della ASL, ma offre al docente strumenti di base per non lasciare la classe da sola davanti a un evento.
 
 ## Disponibilità del Gruppo per le scuole
 
@@ -157,4 +173,4 @@ Il Gruppo è disponibile a **ospitare studenti delle scuole superiori** per perc
 ---
 
 **Ultimo aggiornamento**: 1 maggio 2026.
-**Riferimenti normativi**: L. 92/2019 · D.M. 7 settembre 2024 n. 183 · D.Lgs. 1/2018 · D.Lgs. 66/2017 · Raccomandazione UE 22 maggio 2018 sulle competenze chiave per l'apprendimento permanente · Agenda 2030 ONU.
+**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h sulla protezione civile, lett. h-ter sulla sicurezza nei luoghi di lavoro come modificata dalla L. 21/2025) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 66/2017 · D.Lgs. 81/2008 · Raccomandazione UE 22 maggio 2018 sulle competenze chiave per l'apprendimento permanente · Agenda 2030 ONU.
