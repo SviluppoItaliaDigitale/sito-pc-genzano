@@ -240,6 +240,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
   <p class="ms-card-title">Percorsi didattici pronti</p>
   <p class="ms-card-desc">6 percorsi pronti all'uso per docenti con poco tempo: PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO. Ognuno con destinatari, durata, obiettivi e materiali linkati.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/scuole-strumenti/">
+  <div class="ms-card-icon"><i class="bi bi-folder-fill"></i></div>
+  <p class="ms-card-title">Strumenti per le scuole (moduli)</p>
+  <p class="ms-card-desc">7 fac-simile editabili e stampabili in A4: Pacchetto A (ingaggio generico — richiesta, liberatoria minori GDPR, circolare, attestato) e Pacchetto B (PCTO formale — convenzione, progetto formativo, registro+valutazione+certificazione). Per Dirigenti, DSGA, DPO, tutor scolastici.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/educazione-civica/">
   <div class="ms-card-icon"><i class="bi bi-mortarboard-fill"></i></div>
   <p class="ms-card-title">Per i docenti — Ed. Civica</p>
