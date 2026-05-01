@@ -55,6 +55,9 @@ GIOCHI_TOT=$((GIOCHI_INF + GIOCHI_PRI + GIOCHI_RAG))
 
 ABILI_TOT=$(find "$ABILI_DIR" -mindepth 1 -maxdepth 1 -type d 2>/dev/null | wc -l)
 
+STORIE_DIR="static/formazione/storie-e-racconti"
+STORIE_TOT=$(find "$STORIE_DIR" -mindepth 1 -maxdepth 1 -type d ! -name assets 2>/dev/null | wc -l)
+
 # ---------- Funzione check ----------
 # check_count <expected_real> <pattern_regex> <file> <descrizione>
 check_count() {
@@ -107,6 +110,14 @@ check_count "$ABILI_TOT" "[0-9]+ attività accessibili" \
 check_count "$ABILI_TOT" "[0-9]+ attività disponibili" \
   "static/giochi/index.html" "(hub giochi card Abili a Proteggere)"
 
+# Storie e racconti
+check_count "$STORIE_TOT" "[0-9]+ storie e racconti" \
+  "content/faq/_index.md" "(faq storie e racconti)"
+check_count "$STORIE_TOT" "[0-9]+ fiabe e racconti" \
+  "content/mappa-sito/_index.md" "(card storie e racconti)"
+check_count "$STORIE_TOT" "[0-9]+ storie di qualità letteraria" \
+  "content/formazione/_index.md" "(formazione storie)"
+
 # ---------- Check per fascia (assistente) ----------
 ASSIST="themes/flavour-pcgenzano/layouts/assistente/list.html"
 if [ -f "$ASSIST" ]; then
@@ -155,13 +166,14 @@ if [ "$DRIFT" -gt 0 ]; then
   echo "  - Schede stampabili: $SCHEDE_TOT (Inf=$REAL_INF, Pri=$REAL_PRI, S1=$REAL_S1, S2=$REAL_S2 [di cui $REAL_S2_CASO case study], Gen=$REAL_GEN)"
   echo "  - Giochi educativi:  $GIOCHI_TOT (Inf=$GIOCHI_INF, Pri=$GIOCHI_PRI, Rag=$GIOCHI_RAG)"
   echo "  - Abili a Proteggere: $ABILI_TOT"
+  echo "  - Storie e Racconti: $STORIE_TOT"
   echo ""
   echo "Aggiornare i contatori con i numeri reali sopra. Memory rule:"
   echo "  ~/.claude/projects/-home-iu0qvw-sito-pc-genzano/memory/feedback_conteggi_per_fascia.md"
   echo ""
   exit 1
 elif [ "$QUIET" -eq 0 ]; then
-  echo "✅ Conteggi schede/giochi/attività coerenti col reale: schede=$SCHEDE_TOT, giochi=$GIOCHI_TOT, abili=$ABILI_TOT"
+  echo "✅ Conteggi schede/giochi/attività/storie coerenti col reale: schede=$SCHEDE_TOT, giochi=$GIOCHI_TOT, abili=$ABILI_TOT, storie=$STORIE_TOT"
 fi
 
 exit 0

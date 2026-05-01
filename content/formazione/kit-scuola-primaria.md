@@ -511,6 +511,26 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 
+**Storie e racconti per leggere insieme — sezione 6-11 anni:** dodici racconti di qualità letteraria (sei per la fascia 6-8 anni, sei per la fascia 9-11 anni) ispirati alla campagna DPC <em>Attimo Decisivo</em>: ogni storia ha un attimo in cui il protagonista sceglie e l'esito si rovescia. Sezione "Per il/la docente" su ogni storia con obiettivi di apprendimento, discipline coinvolte, competenze chiave europee, attività in classe, riferimenti curricolari (Indicazioni Nazionali 2012, L. 92/2019, D.Lgs. 1/2018).
+
+Per la fascia **6-8 anni** (lettura autonoma o accompagnata, 400-700 parole):
+
+- 👉 [**La casa che ballava**](/formazione/storie-e-racconti/casa-che-balla/) — terremoto, l'attimo decisivo di Flavia.
+- 👉 [**La pioggia che voleva conoscere il mare**](/formazione/storie-e-racconti/pioggia-mare/) — alluvione, salire ai piani alti.
+- 👉 [**Il bosco che parlava**](/formazione/storie-e-racconti/bosco-parlava/) — incendi boschivi, segnalazione.
+- 👉 [**Notturno e il blackout**](/formazione/storie-e-racconti/notturno-blackout/) — sicurezza domestica, torcia sì candela no.
+- 👉 [**L'amica venuta dal cielo**](/formazione/storie-e-racconti/amica-cielo/) — volontariato, paura ed empatia.
+- 👉 [**Il muschio dispettoso**](/formazione/storie-e-racconti/muschio-dispettoso/) — orientamento, smarrimento, fischietto.
+
+Per la fascia **9-11 anni** (classi 4ª-5ª, 800-1200 parole, struttura narrativa più complessa):
+
+- 👉 [**Il cuore della montagna**](/formazione/storie-e-racconti/cuore-della-montagna/) — rischio idrogeologico, ascolto del territorio, memoria del Vajont.
+- 👉 [**Il ragazzo che ascoltava il vento**](/formazione/storie-e-racconti/ragazzo-vento/) — allerta meteo, osservazione naturale e dati.
+- 👉 [**Le sette sirene del paese**](/formazione/storie-e-racconti/sette-sirene-paese/) — evacuazione, kit emergenza, comunità.
+- 👉 [**Polvere d'angelo**](/formazione/storie-e-racconti/polvere-angelo/) — ricostruzione post-sisma, ispirata al Centro Italia 2016.
+- 👉 [**La piccola radio dimenticata**](/formazione/storie-e-racconti/radio-dimenticata/) — radioamatori, comunicazione in emergenza.
+- 👉 [**Il giardino delle parole sicure**](/formazione/storie-e-racconti/giardino-parole-sicure/) — lessico tecnico PC come fiaba.
+
 ### Scheda 1 — La chiamata al 112 (role-play scritto) ✅ stampabile
 
 > 👉 [Apri la scheda "Chiamo il 112" pronta per la stampa](/formazione/schede-stampabili/chiamo-112/)

@@ -42,6 +42,21 @@ Questi 8 file sono importati automaticamente da `CLAUDE.md` e definiscono le reg
 | [`07-proattivita-coerenza.md`](.claude/rules/07-proattivita-coerenza.md) | Verifica proattiva di pattern simili dopo ogni fix: completare il fix sul tutto, non solo dove richiesto. |
 | [`08-claude-code-setup.md`](.claude/rules/08-claude-code-setup.md) | Setup ambiente Claude Code: sandbox `.claude/settings.local.json` per sblocco domini foto (7 fonti: Wikipedia, NASA, USGS, NOAA + Pexels, Pixabay, Unsplash). |
 
+### Storie e Racconti per le scuole (`/formazione/storie-e-racconti/`)
+
+**18 storie di qualità letteraria** per bambini 3-11 anni, distribuite per fascia d'età:
+
+- **3-5 anni** (6 fiabe brevi, mascotte Tina la Tartaruga): autoprotezione di base con linguaggio semplice
+- **6-8 anni** (6 racconti, protagonista Flavio o Flavia, attimo decisivo ispirato a campagna DPC *Attimo Decisivo*)
+- **9-11 anni** (6 racconti più letterari su memoria, ricostruzione, volontariato tecnico, lessico PC)
+
+Ogni storia ha:
+- **Box "Cosa abbiamo imparato"** con 2-3 consigli pratici
+- **"Per parlarne insieme"** (domande di comprensione)
+- **"Per il/la docente — valore pedagogico"**: obiettivi di apprendimento, discipline coinvolte, competenze chiave europee, attività in classe, riferimenti curricolari (Indicazioni Nazionali 2012, L. 92/2019, D.Lgs. 1/2018, campagne DPC *Io non rischio* / *Attimo Decisivo*)
+
+Le storie sono usabili come materiale didattico per l'educazione civica nelle scuole; il Gruppo apprezza la citazione nelle programmazioni.
+
 ### File in `archetypes/` (template Hugo)
 
 | File | A cosa serve |

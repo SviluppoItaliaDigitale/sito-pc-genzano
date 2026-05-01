@@ -123,28 +123,34 @@ enableGitInfo = true
   weight = 2
 
 [[menus.main]]
+  name = "Storie e Racconti"
+  url = "/formazione/storie-e-racconti/"
+  parent = "educazione-inclusione"
+  weight = 3
+
+[[menus.main]]
   name = "Giochi della Sicurezza"
   url = "/giochi/"
   parent = "educazione-inclusione"
-  weight = 3
+  weight = 4
 
 [[menus.main]]
   name = "Abili a Proteggere"
   url = "/abili-a-proteggere/"
   parent = "educazione-inclusione"
-  weight = 4
+  weight = 5
 
 [[menus.main]]
   name = "Facile da Leggere"
   url = "/facile-da-leggere/"
   parent = "educazione-inclusione"
-  weight = 5
+  weight = 6
 
 [[menus.main]]
   name = "Glossario"
   url = "/glossario/"
   parent = "educazione-inclusione"
-  weight = 6
+  weight = 7
 
 # --- Dropdown: Volontariato ---
 [[menus.main]]
