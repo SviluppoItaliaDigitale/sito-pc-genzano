@@ -24,11 +24,17 @@
     .regole-box h2 { color: #003366; font-size: 1.05rem; margin-top: 0; margin-bottom: .5rem; }
     .regole-box ul { margin: 0; padding-left: 1.2rem; }
 
-    .chapter-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+      gap: 1rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
     .chapter-card {
       background: #fff; border-radius: 14px; padding: 1.2rem; text-align: center;
       box-shadow: 0 2px 10px rgba(0,0,0,.08); border: 3px solid transparent;
-      cursor: pointer; width: 240px; transition: all .2s;
+      cursor: pointer; width: 100%; transition: all .2s;
     }
     .chapter-card:hover, .chapter-card:focus {
       border-color: #003366; transform: translateY(-3px);
@@ -58,31 +64,31 @@
 
     /* Pittogrammi CLP — diamante bianco con bordo rosso */
     .clp {
-      width: 130px; height: 130px;
+      width: clamp(96px, 32vw, 130px); height: clamp(96px, 32vw, 130px);
       position: relative; margin: 0 auto 1rem;
       transform: rotate(45deg);
       background: #fff; border: 5px solid #d91e18;
       display: flex; align-items: center; justify-content: center;
     }
     .clp-inner {
-      transform: rotate(-45deg); font-size: 3rem; color: #000;
+      transform: rotate(-45deg); font-size: clamp(2rem, 8vw, 3rem); color: #000;
       display: flex; align-items: center; justify-content: center;
     }
 
     /* ADR — diamante colorato con numero in basso */
     .adr {
-      width: 130px; height: 130px;
+      width: clamp(96px, 32vw, 130px); height: clamp(96px, 32vw, 130px);
       position: relative; margin: 0 auto 1rem;
       transform: rotate(45deg);
       border: 3px solid #000;
       display: flex; align-items: center; justify-content: center;
     }
     .adr-inner {
-      transform: rotate(-45deg); font-size: 2.6rem; color: #000;
+      transform: rotate(-45deg); font-size: clamp(1.6rem, 6vw, 2.6rem); color: #000;
       display: flex; flex-direction: column; align-items: center;
       line-height: 1;
     }
-    .adr-inner .sym { font-size: 2.6rem; }
+    .adr-inner .sym { font-size: clamp(1.6rem, 6vw, 2.6rem); }
     .adr-inner .cls { font-size: 1rem; font-weight: 800; border-top: 2px solid currentColor; padding-top: 4px; margin-top: 4px; min-width: 20px; }
     /* Colori ADR per classe */
     .adr-1 { background: #ff9900; } /* esplosivi */
@@ -104,13 +110,13 @@
 
     /* UNI EN ISO 7010 — forme/colori */
     .uni7010 {
-      width: 120px; height: 120px; margin: 0 auto 1rem;
+      width: clamp(88px, 30vw, 120px); height: clamp(88px, 30vw, 120px); margin: 0 auto 1rem;
       display: flex; align-items: center; justify-content: center;
-      font-size: 3.5rem; line-height: 1;
+      font-size: clamp(2.4rem, 9vw, 3.5rem); line-height: 1;
     }
     .uni7010.pericolo { background: #ffcc00; border: 5px solid #000; color: #000;
       clip-path: polygon(50% 0, 100% 100%, 0 100%); padding-top: 30px; align-items: flex-end;
-      width: 140px; height: 130px; font-size: 3rem;
+      width: clamp(100px, 34vw, 140px); height: clamp(92px, 31vw, 130px); font-size: clamp(2rem, 8vw, 3rem);
     }
     .uni7010.divieto { background: #fff; border: 8px solid #cc0000; border-radius: 50%; color: #000;
       position: relative;

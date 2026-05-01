@@ -44,28 +44,35 @@
       z-index: 1;
     }
     .cartelli {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
-      max-width: 520px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.6rem, 3vw, 1rem);
+      width: 100%; max-width: 520px; margin: 0 auto;
     }
     .cartello-btn {
-      aspect-ratio: 1; min-height: 120px;
+      aspect-ratio: 1; width: 100%;
       border-radius: 20px; border: 4px solid transparent;
       background: #fff;
       display: flex; align-items: center; justify-content: center;
-      font-size: 4.5rem; line-height: 1;
+      padding: clamp(.5rem, 3vw, 1rem);
       box-shadow: 0 6px 0 rgba(0,0,0,.15);
       cursor: pointer; user-select: none;
       transition: transform .15s;
       position: relative;
+    }
+    .cartello-btn img.cartello-img {
+      width: 100%; height: 100%;
+      max-width: 140px; max-height: 140px;
+      object-fit: contain;
+      pointer-events: none;
+      display: block;
     }
     .cartello-btn:focus { outline: 4px solid var(--inf-blu, #003366); outline-offset: 4px; }
     .cartello-btn:hover { transform: translateY(-2px); }
     .cartello-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0,0,0,.15); }
     .cartello-btn.sfondo-giallo  { background: #fff3cd; border-color: #b45309; }
     .cartello-btn.sfondo-rosso   { background: #fff;    border-color: #dc3545; }
-    .cartello-btn.sfondo-blu     { background: #cfe2ff; border-color: #0d6efd; border-radius: 50%; }
+    .cartello-btn.sfondo-blu     { background: #cfe2ff; border-color: #0d6efd; }
     .cartello-btn.sfondo-verde   { background: #d1e7dd; border-color: #198754; }
-    .cartello-btn.sfondo-uscita  { background: #198754; color: #fff; border-color: #0f5132; }
+    .cartello-btn.sfondo-uscita  { background: #d1e7dd; border-color: #0f5132; }
     .cartello-btn.sfondo-vvf     { background: #f8d7da; border-color: #dc3545; }
     .cartello-btn.correct { animation: inf-pulse-green .6s ease; box-shadow: 0 0 0 6px #198754; }
     .cartello-btn.wrong   { animation: inf-shake .4s ease; box-shadow: 0 0 0 6px #dc3545; }
@@ -73,16 +80,13 @@
 
     .progress-dots {
       display: flex; justify-content: center; gap: .4rem; margin-bottom: .8rem;
+      flex-wrap: wrap;
     }
     .progress-dots .dot {
       width: 14px; height: 14px; border-radius: 50%; background: #cfd6df;
     }
     .progress-dots .dot.done { background: var(--inf-verde, #198754); }
     .progress-dots .dot.now  { background: var(--inf-blu, #003366); }
-
-    @media (max-width: 400px) {
-      .cartello-btn { font-size: 3.4rem; }
-    }
   </style>
 </head>
 <body class="inf-body">
@@ -140,24 +144,28 @@
   (function () {
     'use strict';
 
-    // Catalogo cartelli: 16 opzioni (4 nuove)
+    // Catalogo cartelli: 16 opzioni con pittogrammi ISO 7010 ufficiali
+    // (static/pittogrammi/iso7010/, PD-shape/CC0 da Wikimedia) e ARASAAC
+    // (CC BY-NC-SA 4.0) per i concetti che ISO non copre direttamente.
+    var ISO  = '/pittogrammi/iso7010/';
+    var ARAS = '/pittogrammi/arasaac/';
     var CATALOGO = {
-      fuoco:     { glyph: '\uD83D\uDD25', sfondo: 'sfondo-giallo', nome: 'il fuoco' },
-      alta:      { glyph: '\u26A1',         sfondo: 'sfondo-giallo', nome: 'l\'alta tensione (la corrente elettrica)' },
-      scivolo:   { glyph: '\u26A0\uFE0F',   sfondo: 'sfondo-giallo', nome: 'attenzione: pavimento scivoloso' },
-      caduta:    { glyph: '\u2757',         sfondo: 'sfondo-giallo', nome: 'attenzione al rischio di caduta' },
-      fumo:      { glyph: '\uD83D\uDEAD', sfondo: 'sfondo-rosso',  nome: 'vietato fumare' },
-      entrare:   { glyph: '\uD83D\uDEAB', sfondo: 'sfondo-rosso',  nome: 'vietato entrare' },
-      ascensore: { glyph: '\uD83D\uDEC8', sfondo: 'sfondo-rosso',  nome: 'vietato usare l\'ascensore' },
-      mangiare:  { glyph: '\uD83C\uDF54', sfondo: 'sfondo-rosso',  nome: 'vietato mangiare e bere' },
-      casco:     { glyph: '\u26D1\uFE0F', sfondo: 'sfondo-blu',    nome: 'mettere il casco' },
-      guanti:    { glyph: '\uD83E\uDDE4', sfondo: 'sfondo-blu',    nome: 'mettere i guanti' },
-      mascherina:{ glyph: '\uD83D\uDE37', sfondo: 'sfondo-blu',    nome: 'mettere la mascherina' },
-      croce:     { glyph: '\u2795',         sfondo: 'sfondo-verde',  nome: 'il primo soccorso' },
-      raccolta:  { glyph: '\uD83D\uDC65', sfondo: 'sfondo-verde',  nome: 'il punto di raccolta' },
-      uscita:    { glyph: '\uD83D\uDEAA', sfondo: 'sfondo-uscita', nome: 'l\'uscita di emergenza' },
-      estintore: { glyph: '\uD83E\uDDEF', sfondo: 'sfondo-vvf',    nome: 'l\'estintore per spegnere il fuoco' },
-      vvf:       { glyph: '\uD83D\uDE92', sfondo: 'sfondo-vvf',    nome: 'i vigili del fuoco' }
+      fuoco:     { img: ISO  + 'materiale-infiammabile.svg',  sfondo: 'sfondo-giallo', nome: 'il fuoco' },
+      alta:      { img: ISO  + 'pericolo-elettrico.svg',      sfondo: 'sfondo-giallo', nome: 'l\'alta tensione (la corrente elettrica)' },
+      scivolo:   { img: ISO  + 'pavimento-scivoloso.svg',     sfondo: 'sfondo-giallo', nome: 'attenzione: pavimento scivoloso' },
+      caduta:    { img: ISO  + 'pericolo-generico.svg',       sfondo: 'sfondo-giallo', nome: 'attenzione al rischio di caduta' },
+      fumo:      { img: ISO  + 'vietato-fumare.svg',          sfondo: 'sfondo-rosso',  nome: 'vietato fumare' },
+      entrare:   { img: ISO  + 'vietato-pedoni.svg',          sfondo: 'sfondo-rosso',  nome: 'vietato entrare' },
+      ascensore: { img: ARAS + 'ascensore.png',               sfondo: 'sfondo-rosso',  nome: 'vietato usare l\'ascensore' },
+      mangiare:  { img: ARAS + 'cibo.png',                    sfondo: 'sfondo-rosso',  nome: 'vietato mangiare e bere' },
+      casco:     { img: ISO  + 'casco-protettivo.svg',        sfondo: 'sfondo-blu',    nome: 'mettere il casco' },
+      guanti:    { img: ISO  + 'guanti-protettivi.svg',       sfondo: 'sfondo-blu',    nome: 'mettere i guanti' },
+      mascherina:{ img: ISO  + 'maschera-protettiva.svg',     sfondo: 'sfondo-blu',    nome: 'mettere la mascherina' },
+      croce:     { img: ISO  + 'cassetta-primo-soccorso.svg', sfondo: 'sfondo-verde',  nome: 'il primo soccorso' },
+      raccolta:  { img: ISO  + 'punto-raccolta.svg',          sfondo: 'sfondo-verde',  nome: 'il punto di raccolta' },
+      uscita:    { img: ISO  + 'uscita-emergenza-destra.svg', sfondo: 'sfondo-uscita', nome: 'l\'uscita di emergenza' },
+      estintore: { img: ISO  + 'estintore.svg',               sfondo: 'sfondo-vvf',    nome: 'l\'estintore per spegnere il fuoco' },
+      vvf:       { img: ISO  + 'telefono-antincendio.svg',    sfondo: 'sfondo-vvf',    nome: 'i vigili del fuoco' }
     };
 
     // 12 domande in 2 round — round 1 piu' facile, round 2 piu' difficile
@@ -248,7 +256,13 @@
         btn.type = 'button';
         btn.className = 'cartello-btn ' + c.sfondo;
         btn.setAttribute('aria-label', 'Cartello ' + c.nome);
-        btn.textContent = c.glyph;
+        var img = document.createElement('img');
+        img.src = c.img;
+        img.alt = '';
+        img.setAttribute('aria-hidden', 'true');
+        img.className = 'cartello-img';
+        img.loading = 'lazy';
+        btn.appendChild(img);
         btn.addEventListener('click', function () { scegli(id, btn); });
         cartelliEl.appendChild(btn);
       });

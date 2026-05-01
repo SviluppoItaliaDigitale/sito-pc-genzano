@@ -56,11 +56,11 @@
   width: fit-content;
 }
 
-/* ogni cella */
+/* ogni cella — la dimensione si adatta al viewport */
 .cell {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: clamp(24px, 7.5vw, 40px);
+  height: clamp(24px, 7.5vw, 40px);
   background: #fff;
   display: flex;
   align-items: center;
@@ -75,7 +75,7 @@
   height: 100%;
   border: 0;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: clamp(.85rem, 3vw, 1.1rem);
   font-weight: 700;
   color: #003366;
   text-transform: uppercase;
@@ -192,8 +192,5 @@
   border: 1px solid #ffe69c;
 }
 
-@media (max-width: 520px) {
-  .cell { width: 32px; height: 32px; }
-  .cell input { font-size: .95rem; }
-  .cell-number { font-size: .52rem; }
-}
+/* Sizing su mobile gestito direttamente da clamp() su .cell e .cell input */
+.cell-number { font-size: clamp(.5rem, 1.7vw, .6rem); }
