@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Onda elettromagnetica" 2026-08-22-radiocomunicazioni-emergenza-hf-vhf it
 Quando una rete cellulare cade — per sovraccarico, blackout, guasto alle antenne — la **radiocomunicazione** diventa l'unico canale affidabile fra sale operative, squadre sul campo e strutture di emergenza. Il Gruppo Comunale Volontari di Protezione Civile di Genzano dispone di **operatori radio qualificati** e di una dotazione di apparati che rappresenta un pilastro della propria operatività.
 
 ## Perché le radio restano indispensabili

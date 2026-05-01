@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Disabilità" 2026-07-23-disabilita-emergenza-piani-accessibili it
 In emergenza le **persone con disabilità** affrontano **ostacoli aggiuntivi** che possono trasformare un evento gestibile in una tragedia. Evacuazioni complesse, informazioni non accessibili, strutture non adeguate, supporti mancanti: sono problemi da affrontare in anticipo, non durante la crisi. La **pianificazione inclusiva** è elemento essenziale della Protezione Civile moderna.
 
 ## Il principio dell'inclusività

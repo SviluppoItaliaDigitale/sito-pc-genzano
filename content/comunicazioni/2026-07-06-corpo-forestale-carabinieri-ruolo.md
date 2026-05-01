@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Comando Unità Forestali Carabinieri" 2026-07-06-corpo-forestale-carabinieri-ruolo it
 Fino al **2016** in Italia esisteva il **Corpo Forestale dello Stato** come corpo di polizia autonomo. Nel **2017**, con la legge 177/2016, il CFS è stato **assorbito nell'Arma dei Carabinieri** diventando il **Comando Unità per la Tutela Forestale, Ambientale e Agroalimentare**. Oggi questo comando svolge un ruolo centrale nella protezione del territorio e nelle indagini su incendi boschivi, molto rilevante per i Castelli Romani.
 
 ## La riforma del 2017

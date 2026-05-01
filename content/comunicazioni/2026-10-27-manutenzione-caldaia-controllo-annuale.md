@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Caldaia" 2026-10-27-manutenzione-caldaia-controllo-annuale it
 Con l'avvicinarsi dell'inverno e l'accensione degli impianti termici, ricordiamo che la **manutenzione** della **caldaia** e del **circuito di riscaldamento** non è una scelta: è un **obbligo normativo** e, soprattutto, una questione di **sicurezza**.
 
 ## La normativa

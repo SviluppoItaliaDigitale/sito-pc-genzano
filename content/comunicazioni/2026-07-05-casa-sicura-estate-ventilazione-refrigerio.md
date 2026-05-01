@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Edilizia antisismica" 2026-07-05-casa-sicura-estate-ventilazione-refrigerio it
 In estate la **casa** dovrebbe essere il primo rifugio dal caldo. Per molte persone — anziani soli, persone con patologie, bambini piccoli — trascorrere ore in un ambiente troppo caldo è **un rischio sanitario reale**. Alcune buone abitudini, spesso semplici, rendono la casa più fresca senza aumenti di spesa elettrica fuori controllo.
 
 ## Il comportamento solare dell'edificio
