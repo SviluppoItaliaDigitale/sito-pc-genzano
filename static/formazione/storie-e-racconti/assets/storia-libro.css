@@ -299,3 +299,48 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* ── Bottone TTS "Ascolta la storia" (Web Speech API) ─────── */
+.tts-storia-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #003366;
+  background: #fff;
+  color: #003366;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .15s, color .15s, transform .12s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: inherit;
+}
+.tts-storia-btn:hover,
+.tts-storia-btn:focus-visible {
+  background: #003366;
+  color: #fff;
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.tts-storia-btn .tts-storia-icon { font-size: 1.1rem; line-height: 1; }
+.tts-storia-btn.speaking {
+  background: #198754;
+  color: #fff;
+  border-color: #198754;
+  animation: tts-storia-pulse 1.4s ease-in-out infinite;
+}
+@keyframes tts-storia-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(25, 135, 84, .4); }
+  50%      { box-shadow: 0 0 0 8px rgba(25, 135, 84, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tts-storia-btn,
+  .tts-storia-btn.speaking { animation: none !important; transition: none !important; }
+}
+
+@media print {
+  .tts-storia-btn { display: none !important; }
+}

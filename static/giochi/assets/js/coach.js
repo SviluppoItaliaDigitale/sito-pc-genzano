@@ -518,11 +518,97 @@
   var dialogEl = null;
   var lastFocus = null;
   var hintEl = null;
+  var currentUtterance = null;
+  var currentSpeakBtn = null;
 
   function escHtml(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
+  }
+
+  // ──────────────────────────────────────────────────────────
+  // Text-to-speech via Web Speech API (browser-native, niente file MP3)
+  // ──────────────────────────────────────────────────────────
+  function ttsSupported() {
+    return typeof window.speechSynthesis !== 'undefined' &&
+           typeof window.SpeechSynthesisUtterance !== 'undefined';
+  }
+
+  function pickItalianVoice() {
+    if (!ttsSupported()) return null;
+    var voices = window.speechSynthesis.getVoices() || [];
+    return voices.find(function(v){ return v.lang === 'it-IT'; }) ||
+           voices.find(function(v){ return v.lang && v.lang.indexOf('it') === 0; }) ||
+           null;
+  }
+
+  function stopSpeaking() {
+    if (!ttsSupported()) return;
+    try { window.speechSynthesis.cancel(); } catch (e) { /* noop */ }
+    if (currentSpeakBtn) {
+      currentSpeakBtn.classList.remove('speaking');
+      currentSpeakBtn.setAttribute('aria-label', currentSpeakBtn.dataset.labelPlay || 'Ascolta');
+      currentSpeakBtn.querySelector('.coach-speak-text').textContent = currentSpeakBtn.dataset.textPlay || 'Ascolta';
+    }
+    currentUtterance = null;
+    currentSpeakBtn = null;
+  }
+
+  function speak(text, btn) {
+    if (!ttsSupported() || !text) return false;
+    // Se sta già parlando lo stesso bottone: stop (toggle)
+    if (currentSpeakBtn === btn && window.speechSynthesis.speaking) {
+      stopSpeaking();
+      return true;
+    }
+    stopSpeaking();
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = 'it-IT';
+    u.rate = 0.9;
+    u.pitch = 1;
+    var voice = pickItalianVoice();
+    if (voice) u.voice = voice;
+    u.onend = function () {
+      if (currentSpeakBtn === btn) stopSpeaking();
+    };
+    u.onerror = function () {
+      if (currentSpeakBtn === btn) stopSpeaking();
+    };
+    currentUtterance = u;
+    currentSpeakBtn = btn;
+    if (btn) {
+      btn.classList.add('speaking');
+      btn.setAttribute('aria-label', btn.dataset.labelStop || 'Ferma lettura');
+      btn.querySelector('.coach-speak-text').textContent = btn.dataset.textStop || 'Ferma';
+    }
+    window.speechSynthesis.speak(u);
+    return true;
+  }
+
+  function makeSpeakButton(text, labelPlay, textPlay) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'coach-speak-btn';
+    btn.dataset.labelPlay = labelPlay || 'Ascolta';
+    btn.dataset.labelStop = 'Ferma lettura';
+    btn.dataset.textPlay = textPlay || 'Ascolta';
+    btn.dataset.textStop = 'Ferma';
+    btn.setAttribute('aria-label', btn.dataset.labelPlay);
+    btn.innerHTML = '<span class="coach-speak-icon" aria-hidden="true">🔊</span><span class="coach-speak-text">' + escHtml(btn.dataset.textPlay) + '</span>';
+    btn.addEventListener('click', function () { speak(text, btn); });
+    return btn;
+  }
+
+  function buildSpeechText(c) {
+    var parts = [];
+    if (c.titolo) parts.push(c.titolo + '.');
+    if (c.regola) parts.push(c.regola);
+    if (c.come && c.come.length) {
+      parts.push('Come si gioca.');
+      c.come.forEach(function (item) { parts.push(item); });
+    }
+    return parts.join(' ');
   }
 
   function trapFocus(container, e) {
@@ -572,6 +658,7 @@
     var html = '';
     html += '<button type="button" class="coach-btn-x" aria-label="Chiudi consigli">&times;</button>';
     html += '<h2 id="coach-title"><span aria-hidden="true">💡</span> ' + escHtml(c.titolo) + '</h2>';
+    html += '<div class="coach-speak-row" data-coach-tts-anchor></div>';
     html += '<div class="coach-regola">' + escHtml(c.regola) + '</div>';
     if (c.come && c.come.length) {
       html += '<h3>Come si gioca</h3>';
@@ -600,6 +687,14 @@
     document.body.appendChild(backdrop);
     dialogEl = backdrop;
 
+    // Bottone TTS "Ascolta i consigli" — solo se la Web Speech API è supportata
+    if (ttsSupported()) {
+      var anchor = dialog.querySelector('[data-coach-tts-anchor]');
+      var speechText = buildSpeechText(c);
+      var speakBtn = makeSpeakButton(speechText, 'Ascolta i consigli ad alta voce', 'Ascolta i consigli');
+      anchor.appendChild(speakBtn);
+    }
+
     dialog.querySelector('.coach-btn-x').addEventListener('click', close);
     dialog.querySelector('.coach-btn-close').addEventListener('click', close);
     document.addEventListener('keydown', onKeydown);
@@ -609,6 +704,7 @@
 
   function close() {
     if (!dialogEl) return;
+    stopSpeaking();
     dialogEl.remove();
     dialogEl = null;
     document.removeEventListener('keydown', onKeydown);
@@ -639,16 +735,28 @@
     hintEl.className = 'coach-hint';
     hintEl.setAttribute('role', 'status');
     hintEl.setAttribute('aria-live', 'polite');
-    var html = '<strong>Suggerimento:</strong> ' + escHtml(testo);
+    var inner = document.createElement('div');
+    inner.className = 'coach-hint-text';
+    var introHtml = '<strong>Suggerimento:</strong> ' + escHtml(testo);
     if (urlOpz) {
-      html += '<br><a href="' + escHtml(urlOpz) + '">Scopri perché →</a>';
+      introHtml += '<br><a href="' + escHtml(urlOpz) + '">Scopri perché →</a>';
     }
-    hintEl.innerHTML = html;
+    inner.innerHTML = introHtml;
+    hintEl.appendChild(inner);
+    if (ttsSupported()) {
+      var speakBtn = makeSpeakButton(testo, 'Ascolta il suggerimento ad alta voce', 'Ascolta');
+      speakBtn.classList.add('coach-speak-btn-mini');
+      hintEl.appendChild(speakBtn);
+    }
     trigger.parentNode.insertBefore(hintEl, trigger.nextSibling);
   }
 
   function clearHint() {
     if (hintEl && hintEl.parentNode) {
+      // Se sta leggendo l'hint corrente, ferma la voce
+      if (currentSpeakBtn && hintEl.contains(currentSpeakBtn)) {
+        stopSpeaking();
+      }
       hintEl.parentNode.removeChild(hintEl);
     }
     hintEl = null;
@@ -695,12 +803,21 @@
     autoInit();
   }
 
+  // Stop speech quando l'utente lascia la pagina o passa in background
+  if (typeof window !== 'undefined' && window.addEventListener) {
+    window.addEventListener('pagehide', stopSpeaking);
+    window.addEventListener('beforeunload', stopSpeaking);
+  }
+
   // Esporta API pubblica
   window.GameCoach = {
     open: open,
     close: close,
     hint: hint,
     clearHint: clearHint,
+    speak: speak,
+    stopSpeaking: stopSpeaking,
+    ttsSupported: ttsSupported,
     /* ammesso solo a fini di test/debug */
     _manifest: CONTENUTI
   };

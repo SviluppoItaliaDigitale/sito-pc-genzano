@@ -172,6 +172,7 @@
       buttons.forEach(b => { b.classList.remove('correct', 'wrong', 'dim'); });
       locked = false;
       drawProgress();
+      if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
     }
 
     function onPick(btn) {
@@ -188,6 +189,14 @@
           if (b.getAttribute('data-tipo') === giusto) b.classList.add('correct');
           else if (b !== btn) b.classList.add('dim');
         });
+        if (window.GameCoach && window.GameCoach.hint) {
+          var TIPS = {
+            pompiere: 'Pompieri = fuoco, gas, persone bloccate.',
+            ambulanza: 'Ambulanza = qualcuno è ferito o sta male.',
+            volontari: 'Volontari = aiuti dopo l\'emergenza (acqua, cibo, alberi caduti).'
+          };
+          window.GameCoach.hint(TIPS[giusto] || 'In Italia chiami sempre il 1-1-2.', '/numeri-utili/');
+        }
       }
       setTimeout(() => {
         cur++;

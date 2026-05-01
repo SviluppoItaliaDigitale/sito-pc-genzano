@@ -278,6 +278,7 @@
         feedbackEl.style.color = '#198754';
         cartelliEl.querySelectorAll('button').forEach(function (b) { b.disabled = true; if (b !== btn) b.classList.add('dim'); });
         if (window.AudioSintetico) window.AudioSintetico.tono({ freq: 659, durata: 0.18 });
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
         setTimeout(function () {
           round++;
           showRound();
@@ -289,6 +290,9 @@
         feedbackEl.style.color = '#dc3545';
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         setTimeout(function () { btn.classList.remove('wrong'); }, 500);
+        if (window.GameCoach && window.GameCoach.hint) {
+          window.GameCoach.hint('Verde = sicurezza (uscita, primo soccorso). Rosso = divieto. Giallo = attenzione. Blu = obbligo (casco, guanti).', '/pittogrammi/');
+        }
       }
     }
 

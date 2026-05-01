@@ -212,12 +212,16 @@
       if (it.danger) {
         btn.classList.add('correct');
         score++;
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         btn.classList.add('wrong');
         // mostra anche quello giusto
         scenaEl.querySelectorAll('.item-btn').forEach(b => {
           if (b !== btn) b.classList.add('dim');
         });
+        if (window.GameCoach && window.GameCoach.hint) {
+          window.GameCoach.hint('Pericolose: fuoco, prese, coltelli, sostanze. Sicure: peluche, libri, acqua da bere.', '/cosa-fare-adesso/');
+        }
       }
       setTimeout(() => {
         cur++;

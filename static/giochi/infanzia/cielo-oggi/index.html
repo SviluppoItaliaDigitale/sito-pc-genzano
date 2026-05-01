@@ -360,6 +360,7 @@
       feedback.textContent = 'Quale bandiera?';
       feedback.style.color = 'var(--inf-testo)';
       bandiere.forEach(function(b){ b.classList.remove('correct','wrong'); b.disabled = false; });
+      if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
     }
 
     function scegli(btn){
@@ -388,6 +389,9 @@
         errori++;
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         setTimeout(function(){ btn.classList.remove('wrong'); }, 500);
+        if (window.GameCoach && window.GameCoach.hint) {
+          window.GameCoach.hint('Verde = bel tempo. Giallo = vento o nuvole. Arancione = pioggia forte. Rosso = pericolo.', '/allerte-meteo/');
+        }
       }
     }
 

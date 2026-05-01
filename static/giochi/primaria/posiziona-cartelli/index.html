@@ -724,10 +724,14 @@
       }
       if (ok === current.cartelli.length) {
         setTimeout(finish, 700);
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         feedbackMsg.className = 'alert alert-warning mt-3';
         feedbackMsg.textContent = 'Hai ' + ko + ' cartell' + (ko === 1 ? 'o' : 'i') + ' da spostare. Sposta quelli sbagliati e riprova.';
         feedbackMsg.classList.remove('hide');
+        if (window.GameCoach && window.GameCoach.hint) {
+          window.GameCoach.hint('Forme e colori aiutano: triangolo giallo = pericolo, cerchio rosso = divieto, cerchio blu = obbligo, quadrato verde = sicurezza, quadrato rosso = antincendio.', '/pittogrammi/');
+        }
       }
     }
 
