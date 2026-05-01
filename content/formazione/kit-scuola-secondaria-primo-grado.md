@@ -15,11 +15,17 @@ I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Ci
 
 ### Riferimenti normativi e curricolari
 
-Il percorso si inserisce pienamente nelle **33 ore annuali di Educazione Civica** previste dalla **Legge 20 agosto 2019 n. 92** (art. 1, 2 e 3) e dalle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 35/2020, aggiornamento 2024), che individuano nella **sicurezza stradale, salute e benessere, Agenda 2030, cittadinanza digitale, conoscenza del territorio** i nuclei tematici da sviluppare.
+Il percorso si inserisce pienamente nelle **33 ore annuali di Educazione Civica** previste dalla **Legge 20 agosto 2019 n. 92** (art. 1, 2 e 3) e dalle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 7 settembre 2024 n. 183), che individuano nella **sicurezza stradale, salute e benessere, Agenda 2030, cittadinanza digitale, conoscenza del territorio** i nuclei tematici da sviluppare.
 
 Il percorso risponde inoltre alle **Indicazioni Nazionali per il Curricolo della Scuola Secondaria di Primo Grado** (2012) e ai **Nuovi Scenari** (2018), in particolare ai traguardi delle discipline Scienze, Geografia, Tecnologia e al profilo di cittadinanza di fine primo ciclo.
 
 Riferimento normativo tecnico: **articolo 18 del D.Lgs. 1/2018** (Codice della Protezione Civile), che prevede formazione e informazione sui rischi come parte dell'offerta formativa scolastica.
+
+> 📚 **Per i docenti — risorse coordinate**
+>
+> - **Pagina hub** [La Protezione Civile per l'Educazione Civica](/formazione/educazione-civica/) — mappatura completa dei nostri contenuti sui **3 Nuclei Concettuali del D.M. 183/2024** (Costituzione, Sostenibilità, Cittadinanza Digitale) + **Goal Agenda 2030 ONU** + tabella interdisciplinare + calendario delle 33 ore.
+> - **Rubrica valutativa** pronta per la fascia: [Rubrica Ed. Civica — Secondaria di primo grado](/formazione/schede-stampabili/rubrica-valutativa-secondaria/) — 6 indicatori × 4 livelli, con esempi di giudizio descrittivo / motivazione del voto.
+
 
 ### Obiettivi di apprendimento formalizzati
 
@@ -860,7 +866,7 @@ Alla fine si chiede agli studenti di scrivere in 10 righe la propria posizione e
 ### Fonti normative e curricolari
 
 - [Legge 20 agosto 2019 n. 92](https://www.normattiva.it/) — Introduzione dell'insegnamento dell'educazione civica
-- **D.M. 35/2020 e aggiornamento 2024** — Linee guida per l'insegnamento dell'educazione civica
+- **D.M. 7 settembre 2024 n. 183 (Linee Guida nazionali per l'Ed. Civica, in vigore dal 2025/2026)** — Linee guida per l'insegnamento dell'educazione civica
 - **Indicazioni Nazionali per il Curricolo** (2012) + **Nuovi Scenari** (2018) — Scuola Secondaria di Primo Grado
 - **Raccomandazione UE 2018/C 189/01** — Competenze chiave per l'apprendimento permanente
 - [D.Lgs. 2 gennaio 2018 n. 1](/normativa/testo-unico-protezione-civile/) — Codice della Protezione Civile (art. 18)

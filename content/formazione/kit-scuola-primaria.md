@@ -15,9 +15,15 @@ I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Ci
 
 ### Riferimenti normativi e curricolari
 
-Il percorso si inserisce nel quadro dell'**educazione civica** (Legge 20 agosto 2019 n. 92, art. 1 e 3), delle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 35/2020 e aggiornamento 2024) e delle **Indicazioni Nazionali per il Curricolo della Scuola Primaria** (2012) con integrazione dei **Nuovi Scenari per il curricolo** (2018).
+Il percorso si inserisce nel quadro dell'**educazione civica** (Legge 20 agosto 2019 n. 92, art. 1 e 3), delle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 7 settembre 2024 n. 183, in vigore dal 2025/2026) e delle **Indicazioni Nazionali per il Curricolo della Scuola Primaria** (2012) con integrazione dei **Nuovi Scenari per il curricolo** (2018).
 
 Il riferimento normativo specifico è l'**articolo 18 del D.Lgs. 1/2018** (Codice della Protezione Civile), che prevede la formazione sui rischi come componente strutturale dell'offerta formativa scolastica.
+
+> 📚 **Per i docenti — risorse coordinate**
+>
+> - **Pagina hub** [La Protezione Civile per l'Educazione Civica](/formazione/educazione-civica/) — mappatura completa dei nostri contenuti sui **3 Nuclei Concettuali del D.M. 183/2024** (Costituzione, Sostenibilità, Cittadinanza Digitale) + **Goal Agenda 2030 ONU** + tabella interdisciplinare + calendario delle 33 ore.
+> - **Rubrica valutativa** pronta per la fascia: [Rubrica Ed. Civica — Scuola Primaria](/formazione/schede-stampabili/rubrica-valutativa-primaria/) — 6 indicatori × 4 livelli, con esempi di giudizio descrittivo / motivazione del voto.
+
 
 ### Obiettivi di apprendimento formalizzati
 
@@ -871,7 +877,7 @@ Da adattare con intestazione della scuola:
 ### Fonti normative e curricolari
 
 - [Legge 20 agosto 2019 n. 92](https://www.normattiva.it/) — Introduzione dell'insegnamento dell'educazione civica
-- **D.M. 35/2020 e aggiornamento 2024** — Linee guida per l'insegnamento dell'educazione civica
+- **D.M. 7 settembre 2024 n. 183 (Linee Guida nazionali per l'Ed. Civica, in vigore dal 2025/2026)** — Linee guida per l'insegnamento dell'educazione civica
 - **Indicazioni Nazionali per il Curricolo della Scuola Primaria** (2012) + **Nuovi Scenari** (2018)
 - [D.Lgs. 2 gennaio 2018 n. 1](/normativa/testo-unico-protezione-civile/) — Codice della Protezione Civile (in particolare art. 18)
 - **D.Lgs. 9 aprile 2008 n. 81** — Testo Unico sulla sicurezza nei luoghi di lavoro
