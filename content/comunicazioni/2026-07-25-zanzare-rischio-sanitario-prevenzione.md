@@ -61,7 +61,7 @@ Le specie **invasive** hanno alterato il quadro epidemiologico.
 Dati **ISS** recenti:
 - **West Nile 2022**: oltre 600 casi in Italia.
 - **Dengue autoctono 2023-2024**: focolai documentati.
-- **Chikungunya 2017**: 379 casi in Lazio.
+- **Chikungunya 2017**: 379 casi nel Lazio.
 - **Zika**: casi importati in crescita.
 
 Il **Lazio** è tra le regioni colpite.

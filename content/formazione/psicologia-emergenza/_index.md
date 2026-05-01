@@ -39,7 +39,7 @@ Le reazioni descritte sopra sono normali se sono **transitorie**. Devono allerta
 - **persistono** oltre 4 settimane senza miglioramento,
 - sono di **intensità tale** da bloccare il funzionamento quotidiano (lavoro, scuola, relazioni),
 - compaiono **flashback** ricorrenti, incubi, evitamento sistematico di luoghi o situazioni,
-- compaiono pensieri di **autolesionismo o suicidio** — in questo caso il riferimento è immediato: **chiamare il 112**, oppure il **Telefono Amico** (02 23 27 23 27) o, in Lazio, il numero unico **TOL — Telefono Online** (1500 per il 118 sanitario, 02 22 22 22 22 per Telefono Azzurro 19696 dedicato ai bambini).
+- compaiono pensieri di **autolesionismo o suicidio** — in questo caso il riferimento è immediato: **chiamare il 112**. Per un ascolto telefonico anonimo sono attivi a livello nazionale: **Telefono Amico Italia** (02 23 27 23 27, tutti i giorni 10:00-24:00), **Samaritans Onlus — Speranza contro il Suicidio** (06 77 20 89 77, tutti i giorni 13:00-22:00) e, per minori, **Telefono Azzurro** (19696, gratuito 24/7). Anche la **ASL Roma 6 — Dipartimento di Salute Mentale** può essere contattata in continuità con il medico di famiglia.
 
 Il **Disturbo da Stress Post-Traumatico (DPTS / PTSD)** è una condizione clinica diagnosticabile da uno psichiatra/psicologo clinico, non un'etichetta da auto-applicarsi. Il consenso scientifico è che **la maggior parte delle persone esposte a eventi traumatici NON sviluppa un DPTS**: parlare in modo eccessivo di "tutti traumatizzati" è di per sé una forma di danno comunicativo.
 
