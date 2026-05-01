@@ -63,7 +63,8 @@ Deployed to two targets on every push to `main` via GitHub Actions:
 **Architettura, struttura del progetto, regole Hugo:** vedi `.claude/rules/04-hugo-architecture.md` (mappa generale), `04a-hugo-shortcode-partial.md` (shortcode/partial/render hook), `04b-hugo-template-css.md` (template, menu, CSS, UX), `04c-hugo-static-cartelle.md` (cartelle statiche).
 
 **Manuali operativi nella root del repo:**
-- `MANUALE-SITO.md` — manuale operativo completo (procedura articoli, immagini fascia blu, checklist pre-pubblicazione)
+- `MANUALE-SITO.md` — indice del manuale operativo (split a maggio 2026 in 18 file `manuale/parte-NN-*.md`)
+- `manuale/` — manuale operativo split: 18 file Parte (procedura articoli, immagini fascia blu, social, comunicati, deploy, ecc.). Indice navigabile in `manuale/README.md`.
 - `MANUALE-MOBILE.md` — workflow editoriale da mobile/cloud
 - `PIANO-EDITORIALE.md` — fonti ufficiali e calendario redazionale
 - `README.md` — overview pubblica del repo
@@ -98,7 +99,7 @@ bash scripts/export-contesto-ai.sh
 # Applica fascia blu istituzionale a una foto fornita dall'utente
 bash scripts/applica-fascia-foto.sh <file-sorgente> <nome-output-senza-ext>
 # Produce static/images/<nome>.webp (1200px, fascia blu + logo + testo istituzionale).
-# Dettagli in MANUALE-SITO.md Parte 3.8 Metodo 4.
+# Dettagli in manuale/parte-03-immagini-per-gli-articoli.md § 3.8 Metodo 4.
 
 # Scarica/aggiorna la libreria di pittogrammi (ISO 7010 + ARASAAC)
 bash scripts/scarica-pittogrammi.sh           # solo i mancanti
@@ -157,9 +158,9 @@ bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
 
 5. **AGGIORNAMENTO**: le linee guida AGID sono in continuo aggiornamento. Verificare periodicamente il manuale su designers.italia.it per eventuali novità.
 
-6. **MANUALE DI STILE**: il file `MANUALE-SITO.md` nella root del progetto contiene il manuale operativo completo (v2.0) con: procedura passo-passo per articoli, regole AGID integrate, specifiche immagini (fascia blu), procedura pagine, checklist pre-pubblicazione e procedura di aggiornamento automatico settimanale. È il riferimento unico per la redazione dei contenuti, anche da parte di AI esterne.
+6. **MANUALE DI STILE**: il manuale operativo (v3.0, split a maggio 2026) ha l'indice in `MANUALE-SITO.md` nella root e i contenuti completi in `manuale/parte-{00..17}-*.md` (18 file). Copre: procedura passo-passo per articoli (Parte 1), regole AGID integrate (Parte 2), specifiche immagini fascia blu (Parte 3), procedura pagine (Parte 4), checklist pre-pubblicazione (Parte 5), aggiornamento automatico settimanale (Parte 7). È il riferimento unico per la redazione dei contenuti, anche da parte di AI esterne.
 
-7. **IMMAGINI**: ogni immagine di copertina deve avere la fascia blu istituzionale (#003366) con logo e testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari — Genzano di Roma". Formato WebP, 1200px, max 200 KB. Specifiche complete in `MANUALE-SITO.md` Parte 3.
+7. **IMMAGINI**: ogni immagine di copertina deve avere la fascia blu istituzionale (#003366) con logo e testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari — Genzano di Roma". Formato WebP, 1200px, max 200 KB. Specifiche complete in `manuale/parte-03-immagini-per-gli-articoli.md`.
 
 8. **PIANO EDITORIALE**: il file `PIANO-EDITORIALE.md` elenca le fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, Comune) e il calendario redazionale mensile. L'obiettivo è **tendere a un articolo al giorno** (300-365 l'anno) con un minimo sostenibile di **3-4 articoli a settimana** nei periodi di minore attività. Usalo per proporre nuovi articoli coerenti con la strategia.
 
@@ -176,13 +177,13 @@ bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
     4. **Standard internazionali**: ISO 22329:2021 (uso social media in emergenza) + WCAG 2.2 AA (accessibilità tecnica).
     5. **Normativa orizzontale**: DL 25/2025 (SMM PA), GDPR, L. 4/2004 (Stanca), CAD.
 
-    Applicazione operativa nei post di allerta/emergenza: struttura standard del messaggio in 6 punti (tipo / livello-colore / area+tempo / cosa fare / fonte / prossimo aggiornamento), hashtag specifici e localizzati, monitoraggio della disinformazione (mai amplificare per smentire), accessibilità post (alt text, max 2 emoji, niente Unicode decorativi, non solo-colore per allerte). Specifiche complete in `MANUALE-SITO.md` Parte 13.7 e 13.9, e nelle regole `02-content-design-pa.md`, `03-accessibility.md`, `06-protezione-civile-scientifica.md`. La pagina pubblica `/social-media-policy/` espone questi principi al cittadino.
+    Applicazione operativa nei post di allerta/emergenza: struttura standard del messaggio in 6 punti (tipo / livello-colore / area+tempo / cosa fare / fonte / prossimo aggiornamento), hashtag specifici e localizzati, monitoraggio della disinformazione (mai amplificare per smentire), accessibilità post (alt text, max 2 emoji, niente Unicode decorativi, non solo-colore per allerte). Specifiche complete in `manuale/parte-13-social-media-policy-pubblica.md` § 13.7 e 13.9, e nelle regole `02-content-design-pa.md`, `03-accessibility.md`, `06-protezione-civile-scientifica.md`. La pagina pubblica `/social-media-policy/` espone questi principi al cittadino.
 
 13. **CARTELLA `riferimenti-interni/`** (root del repo, NON deployata): contiene documentazione di lavoro per maintainer/AI di supporto che non va pubblicata sul sito (norme copyrighted, draft di consultazione, materiale interno). Hugo non la legge perché non rientra nelle cartelle native (`content/`, `static/`, `themes/`, `data/`, `assets/`, `layouts/`). Convenzione: 🟢 documenti pubblici → `static/manuali/`, 💶 copyrighted o riservati → `riferimenti-interni/<categoria>/`. Indice + stato accessibilità in `riferimenti-interni/README.md`. Specifiche complete nella regola `04c-hugo-static-cartelle.md`.
 
-14. **SANDBOX CLAUDE CODE — sblocco per fonti immagini libere**: per scaricare foto dalle **7 fonti supportate** (Wikipedia, Wikimedia, NASA, USGS, NOAA + Pexels, Pixabay, Unsplash) senza essere bloccato dalla sandbox di sicurezza, il repo ha una configurazione predefinita in `.claude/settings.local.json` (in `.gitignore`, locale). Lo schema completo (allowlist `permissions` + `sandbox.network.allowedDomains` per i ~17 domini delle nostre fonti foto) è in `.claude/rules/08-claude-code-setup.md`. Procedura: creare il file una volta sola, riavviare Claude Code (la sandbox legge il file all'avvio, non dinamicamente). Senza questo sblocco, le fonti immagini sono comunque accessibili al workflow `scarica-foto-automatica.yml` su GitHub Actions (rete libera): basta usare il marker `# TODO-foto-{wikipedia,nasa,usgs,noaa,pexels,pixabay,unsplash}` nel frontmatter dell'articolo. **API keys** richieste solo per Pexels/Pixabay/Unsplash (gratuite): in locale via `~/.bashrc`, in CI via GitHub Secrets. Specifiche in `MANUALE-SITO.md` Parte 14 e nella regola `08-claude-code-setup.md`.
+14. **SANDBOX CLAUDE CODE — sblocco per fonti immagini libere**: per scaricare foto dalle **7 fonti supportate** (Wikipedia, Wikimedia, NASA, USGS, NOAA + Pexels, Pixabay, Unsplash) senza essere bloccato dalla sandbox di sicurezza, il repo ha una configurazione predefinita in `.claude/settings.local.json` (in `.gitignore`, locale). Lo schema completo (allowlist `permissions` + `sandbox.network.allowedDomains` per i ~17 domini delle nostre fonti foto) è in `.claude/rules/08-claude-code-setup.md`. Procedura: creare il file una volta sola, riavviare Claude Code (la sandbox legge il file all'avvio, non dinamicamente). Senza questo sblocco, le fonti immagini sono comunque accessibili al workflow `scarica-foto-automatica.yml` su GitHub Actions (rete libera): basta usare il marker `# TODO-foto-{wikipedia,nasa,usgs,noaa,pexels,pixabay,unsplash}` nel frontmatter dell'articolo. **API keys** richieste solo per Pexels/Pixabay/Unsplash (gratuite): in locale via `~/.bashrc`, in CI via GitHub Secrets. Specifiche in `manuale/parte-14-configurazione-ambiente-di-sviluppo-claude-code.md` e nella regola `08-claude-code-setup.md`.
 
-15. **DATI ALLERTA METEO `data/allerta.json`**: due campi temporali distinti. `ultimo_aggiornamento` cambia **solo** quando il livello DPC cambia. `ultimo_controllo` cambia ogni volta che il workflow `check-allerta.yml` verifica il bollettino e committa (ogni ≥6 ore o cambio livello). Limite: max 4 commit/giorno + cambi di livello. Sia la barra allerta della homepage sia la pagina `/emergenza/` lite mostrano "Verificato: ..." sempre fresco. Il JS lato browser sulla homepage aggiorna ulteriormente il timestamp all'ora locale del client. Schema completo in `MANUALE-SITO.md` Parte 9.3.
+15. **DATI ALLERTA METEO `data/allerta.json`**: due campi temporali distinti. `ultimo_aggiornamento` cambia **solo** quando il livello DPC cambia. `ultimo_controllo` cambia ogni volta che il workflow `check-allerta.yml` verifica il bollettino e committa (ogni ≥6 ore o cambio livello). Limite: max 4 commit/giorno + cambi di livello. Sia la barra allerta della homepage sia la pagina `/emergenza/` lite mostrano "Verificato: ..." sempre fresco. Il JS lato browser sulla homepage aggiorna ulteriormente il timestamp all'ora locale del client. Schema completo in `manuale/parte-09-file-dati-data-e-stati-del-sito.md` § 9.3.
 
 ## Automazioni periodiche (GitHub Actions)
 

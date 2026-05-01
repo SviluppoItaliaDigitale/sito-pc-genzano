@@ -540,7 +540,7 @@ oppure chiedere a Claude Code di redigerlo. L'articolo deve rispettare:
 - Frontmatter completo (`archetypes/comunicazioni.md`)
 - Data in formato `AAAA-MM-GG`
 - Badge coerente con il tipo di contenuto
-- Immagine con fascia blu (`MANUALE-SITO.md` Parte 3) o fallback `notizia-default.svg`
+- Immagine con fascia blu ([`manuale/parte-03-immagini-per-gli-articoli.md`](manuale/parte-03-immagini-per-gli-articoli.md)) o fallback `notizia-default.svg`
 - Alt text significativo
 - Link interni relativi (`/rischi-prevenzione/`, non percorsi assoluti)
 
@@ -594,7 +594,7 @@ Per un sito equilibrato, nella media settimanale evitare di concentrarsi su un s
 
 ## 8. Controllo qualità prima di pubblicare
 
-Checklist rapida (vedi `MANUALE-SITO.md` per quella estesa):
+Checklist rapida (vedi [`manuale/parte-05-checklist-pre-pubblicazione.md`](manuale/parte-05-checklist-pre-pubblicazione.md) per quella estesa):
 - [ ] Frontmatter completo e data in formato `AAAA-MM-GG`
 - [ ] Linguaggio AGID: frasi brevi, voce attiva, niente burocratese
 - [ ] Numeri di emergenza corretti: nel Lazio **solo 112** per il cittadino
