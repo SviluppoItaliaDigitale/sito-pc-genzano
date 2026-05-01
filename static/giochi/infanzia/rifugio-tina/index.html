@@ -413,6 +413,7 @@
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         progressBolli[idx].classList.add('on');
         progressBolli[idx].innerHTML = '<i class="bi bi-check-lg"></i>';
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
         setTimeout(function(){
           idx++;
           if (idx >= SCENE.length) fine();
@@ -425,6 +426,9 @@
         errori++;
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         setTimeout(function(){ spot.classList.remove('wrong-flash'); }, 900);
+        if (window.GameCoach && window.GameCoach.hint) {
+          window.GameCoach.hint('Cerca un riparo robusto: muri spessi, sotto al tavolo, in una stanza interna. Lontano da finestre e oggetti che cadono.', '/rischi-prevenzione/');
+        }
       }
     }
 

@@ -4,6 +4,7 @@ title: "Kit di Emergenza"
 description: "Cosa mettere nello zaino di emergenza per la tua famiglia: la lista completa degli oggetti essenziali."
 weight: 8
 toc: true
+tts: true
 ---
 Il kit di emergenza è uno zaino o una borsa sempre pronta, conservata in un luogo facilmente raggiungibile, che contiene tutto il necessario per affrontare le prime ore dopo un'evacuazione. Preparalo con calma quando non c'è emergenza: in un momento di crisi non avrai il tempo di pensare a cosa portare.
 

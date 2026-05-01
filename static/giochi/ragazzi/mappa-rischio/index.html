@@ -242,6 +242,13 @@
       });
       details += '</ul>';
       feedback.innerHTML = '<div class="alert alert-info">' + details + '</div>';
+      if (window.GameCoach) {
+        if (ok === ELEMENTI.length && window.GameCoach.clearHint) {
+          window.GameCoach.clearHint();
+        } else if (ok < ELEMENTI.length && window.GameCoach.hint) {
+          window.GameCoach.hint('Castelli Romani: rischio idrogeologico (versanti) e sismico. Costa: mareggiate. Aree industriali: rischio chimico (Seveso). Boschi: incendio (giugno-settembre). Centro storico: sismico amplificato.', '/rischi-prevenzione/');
+        }
+      }
       setTimeout(function(){ finish(ok); }, 1000);
     });
 
