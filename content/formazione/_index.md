@@ -35,6 +35,8 @@ I volontari già operativi partecipano periodicamente a:
 
 Il Gruppo ha sviluppato kit didattici completi per ogni grado di istruzione, con guide per i docenti, schede per gli alunni, attività pratiche e quiz di verifica.
 
+> 🚀 **Per i docenti con poco tempo**: i [Percorsi didattici pronti](/formazione/percorsi-didattici/) riorganizzano i materiali in **sei pacchetti** già strutturati (PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO) con destinatari, durata, obiettivi e modalità di valutazione. La [pagina docenti dedicata all'Educazione Civica](/formazione/educazione-civica/) mappa l'intero patrimonio del Gruppo sui 3 Nuclei Concettuali del D.M. 183/2024.
+
 | Kit | Età | Contenuti principali |
 |---|---|---|
 | [Scuola dell'Infanzia](kit-scuola-infanzia/) | 3-6 anni | Storie, giochi, la regola della tartaruga, il numero 112 |
