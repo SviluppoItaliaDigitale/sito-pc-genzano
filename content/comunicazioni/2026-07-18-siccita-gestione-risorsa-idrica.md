@@ -13,6 +13,7 @@ allegati: []
 draft: false
 ---
 
+# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Siccità" 2026-07-18-siccita-gestione-risorsa-idrica it
 La **siccità** è una delle manifestazioni più evidenti del cambiamento climatico in Italia. Gli ultimi anni hanno visto **estati sempre più asciutte**, con conseguenze su agricoltura, approvvigionamento idrico, ecosistemi, rischio incendi. Ma il cittadino non è spettatore: ha un ruolo concreto nella **gestione della risorsa idrica**.
 
 ## Il fenomeno siccità
