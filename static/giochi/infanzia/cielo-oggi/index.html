@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
     .meteo-box {
       background: linear-gradient(180deg, #cfe9ff 0%, #e8f4ff 100%);
@@ -106,7 +107,7 @@
     }
   </style>
 </head>
-<body class="inf-body">
+<body class="inf-body" data-coach-game="cielo-oggi">
   <main id="main-content" tabindex="-1" class="inf-main">
     <nav aria-label="Percorso">
       <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
@@ -446,5 +447,6 @@
     avviaRound();
   })();
   </script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

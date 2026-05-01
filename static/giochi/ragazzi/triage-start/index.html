@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
     .intro-card, .paziente-card {
       background: #fff; border-radius: 10px; padding: 1.3rem;
@@ -68,7 +69,7 @@
     .legenda-cod .n { background: #222; }
   </style>
 </head>
-<body class="rag-body">
+<body class="rag-body" data-coach-game="triage-start">
   <main id="main-content" tabindex="-1">
     <div class="app-page-hero">
       <div class="container">
@@ -428,5 +429,6 @@
     btnCods.forEach(function(b){ b.addEventListener('click', function(){ rispondi(b.getAttribute('data-cod')); }); });
   })();
   </script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

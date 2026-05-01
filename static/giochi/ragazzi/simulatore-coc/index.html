@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
     .coc-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem; }
     @media (max-width: 900px) { .coc-layout { grid-template-columns: 1fr; } }
@@ -54,7 +55,7 @@
     .kpi-bar > div { height: 100%; background: var(--rag-verde); transition: width .3s; }
   </style>
 </head>
-<body class="rag-body">
+<body class="rag-body" data-coach-game="simulatore-coc">
   <main id="main-content" tabindex="-1">
     <div class="app-page-hero">
       <div class="container">
@@ -282,5 +283,6 @@
     document.getElementById('restart').addEventListener('click', start);
   })();
   </script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

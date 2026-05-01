@@ -1,0 +1,260 @@
+/* ============================================================
+   Coach — Consigli e teoria di rinforzo per i giochi
+   Bottone trigger inline + dialog accessibile
+   Caricato da TUTTI i giochi tramite data-coach-game
+   ============================================================ */
+
+/* Trigger inline (sotto il titolo del gioco) */
+.coach-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .55rem 1rem;
+  margin: .5rem 0 1rem;
+  border: 2px solid #0066CC;
+  background: #fff;
+  color: #003366;
+  font-weight: 700;
+  font-size: .95rem;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .15s, color .15s, transform .15s;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, .15);
+}
+.coach-trigger:hover,
+.coach-trigger:focus-visible {
+  background: #0066CC;
+  color: #fff;
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+  transform: translateY(-1px);
+}
+.coach-trigger .coach-trigger-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Variante per body infanzia (più grande, tono caldo) */
+body.inf-body .coach-trigger {
+  font-size: 1.05rem;
+  padding: .7rem 1.2rem;
+  border-color: #F4B700;
+  color: #17324D;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, .12);
+}
+body.inf-body .coach-trigger:hover,
+body.inf-body .coach-trigger:focus-visible {
+  background: #F4B700;
+  color: #17324D;
+}
+
+/* Variante per body ragazzi (tono blu scuro) */
+body.rag-body .coach-trigger {
+  background: rgba(255, 255, 255, .08);
+  border-color: #ffbe2e;
+  color: #fff;
+}
+body.rag-body .coach-trigger:hover,
+body.rag-body .coach-trigger:focus-visible {
+  background: #ffbe2e;
+  color: #17324D;
+}
+
+/* Backdrop e dialog */
+.coach-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 26, 47, .55);
+  z-index: 9000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(.5rem, 3vw, 2rem);
+  overflow-y: auto;
+  animation: coach-fade-in .2s ease;
+}
+@keyframes coach-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.coach-dialog {
+  background: #fff;
+  border-radius: 16px;
+  padding: clamp(1rem, 4vw, 1.6rem);
+  width: 100%;
+  max-width: 560px;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+  border-top: 6px solid #0066CC;
+  margin-top: 5vh;
+  position: relative;
+  animation: coach-pop-in .25s ease;
+}
+@keyframes coach-pop-in {
+  from { opacity: 0; transform: translateY(-12px) scale(.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Variante visiva per fascia (bordo superiore) */
+.coach-dialog[data-fascia="infanzia"] { border-top-color: #D9364F; }
+.coach-dialog[data-fascia="primaria"] { border-top-color: #008758; }
+.coach-dialog[data-fascia="ragazzi"]  { border-top-color: #0066CC; }
+
+.coach-dialog h2 {
+  margin: 0 0 .5rem;
+  color: #003366;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.coach-dialog h3 {
+  color: #003366;
+  font-size: 1rem;
+  margin: 1rem 0 .35rem;
+  font-weight: 700;
+}
+
+.coach-regola {
+  background: #eef4fb;
+  border-left: 4px solid #0066CC;
+  padding: .7rem .9rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #17324D;
+  margin: .4rem 0 .8rem;
+}
+
+.coach-come {
+  margin: 0 0 .8rem;
+  padding-left: 1.2rem;
+}
+.coach-come li {
+  margin-bottom: .35rem;
+  line-height: 1.45;
+  color: #17324D;
+}
+
+.coach-teoria {
+  background: #fff8d6;
+  border-radius: 10px;
+  padding: .8rem .9rem;
+  margin-top: .8rem;
+}
+.coach-teoria h3 {
+  margin: 0 0 .5rem;
+  color: #6c3e00;
+}
+.coach-teoria ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: "→ ";
+}
+.coach-teoria li {
+  margin-bottom: .3rem;
+  line-height: 1.4;
+}
+.coach-teoria a {
+  color: #003366;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.coach-teoria a:hover,
+.coach-teoria a:focus-visible {
+  color: #0066CC;
+  text-decoration-thickness: 2px;
+}
+
+.coach-actions {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+.coach-btn-close {
+  background: #003366;
+  color: #fff;
+  border: 0;
+  padding: .6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.coach-btn-close:hover,
+.coach-btn-close:focus-visible {
+  background: #0066CC;
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+
+/* X in alto a destra */
+.coach-btn-x {
+  position: absolute;
+  top: .5rem;
+  right: .7rem;
+  background: transparent;
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #5b6b7c;
+  cursor: pointer;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+}
+.coach-btn-x:hover,
+.coach-btn-x:focus-visible {
+  background: #f0f3f7;
+  color: #003366;
+  outline: 2px solid #0066CC;
+}
+
+/* Suggerimento contestuale (mostrato dopo errore) */
+.coach-hint {
+  background: #fff8d6;
+  border-left: 4px solid #b45309;
+  border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem;
+  margin: .6rem 0;
+  font-size: .95rem;
+  line-height: 1.45;
+  color: #6c3e00;
+  animation: coach-slide-in .25s ease;
+}
+.coach-hint strong { color: #6c3e00; }
+.coach-hint a {
+  display: inline-block;
+  margin-top: .3rem;
+  color: #003366;
+  font-weight: 700;
+  text-decoration: underline;
+}
+@keyframes coach-slide-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .coach-backdrop,
+  .coach-dialog,
+  .coach-hint,
+  .coach-trigger {
+    animation: none !important;
+    transition: none !important;
+  }
+  .coach-trigger:hover { transform: none; }
+}
+
+/* Stampa: nascondi tutto il coach */
+@media print {
+  .coach-trigger,
+  .coach-backdrop,
+  .coach-hint {
+    display: none !important;
+  }
+}

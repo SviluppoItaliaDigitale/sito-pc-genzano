@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
     .level-badge {
       display: inline-block; background: var(--inf-blu); color: #fff;
@@ -39,7 +40,7 @@
     .wave { display:inline-block; width: 80px; }
   </style>
 </head>
-<body class="inf-body">
+<body class="inf-body" data-coach-game="suoni-emergenza">
   <main id="main-content" tabindex="-1" class="inf-main">
     <nav aria-label="Percorso">
       <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left"></i> Torna ai giochi</a>
@@ -191,5 +192,6 @@
     });
   })();
   </script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
     .level-badge {
       display: inline-block; background: var(--inf-blu); color: #fff;
@@ -89,7 +90,7 @@
     .progress-dots .dot.now  { background: var(--inf-blu, #003366); }
   </style>
 </head>
-<body class="inf-body">
+<body class="inf-body" data-coach-game="trova-cartello">
   <main id="main-content" tabindex="-1" class="inf-main">
     <nav aria-label="Percorso">
       <a href="../index.html" class="inf-back"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
@@ -324,5 +325,6 @@
     start();
   })();
   </script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

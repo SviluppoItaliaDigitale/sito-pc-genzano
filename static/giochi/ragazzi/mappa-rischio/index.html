@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
     .map-container {
       position: relative; width: 100%; aspect-ratio: 4 / 3;
@@ -48,7 +49,7 @@
     }
   </style>
 </head>
-<body class="rag-body">
+<body class="rag-body" data-coach-game="mappa-rischio">
   <main id="main-content" tabindex="-1">
     <div class="app-page-hero">
       <div class="container">
@@ -263,5 +264,6 @@
     }
   })();
   </script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>
