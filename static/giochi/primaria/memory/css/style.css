@@ -1,6 +1,7 @@
 /* Memory dei Rischi — stili specifici (il grosso è in /app-shared/app-common.css) */
 :root {
-    --card-size: 120px;
+    --card-size: clamp(64px, 21vw, 120px);
+    --card-gap: clamp(6px, 2vw, 15px);
 }
 .game-container {
     max-width: 800px;
@@ -10,7 +11,7 @@
 .memory-grid {
     display: grid;
     grid-template-columns: repeat(4, var(--card-size));
-    gap: 15px;
+    gap: var(--card-gap);
     justify-content: center;
     perspective: 1000px;
 }
@@ -132,11 +133,4 @@
     0%   { opacity: 1; transform: translateX(-50%) translateY(0); }
     100% { opacity: 0; transform: translateX(-50%) translateY(-40px); }
 }
-@media (max-width: 600px) {
-    :root {
-        --card-size: 75px;
-    }
-    .memory-grid {
-        gap: 8px;
-    }
-}
+/* Sizing su mobile gestito direttamente da clamp() su --card-size e --card-gap */
