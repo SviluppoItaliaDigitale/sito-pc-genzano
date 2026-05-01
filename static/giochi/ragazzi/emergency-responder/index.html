@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
     body.rag-body { background: linear-gradient(180deg, #0a1a2f 0%, #1a2e4a 100%); color: #dce5f0; min-height: 100vh; }
     .scene-box {
@@ -47,7 +48,7 @@
     .app-page-hero h1, .app-page-hero .lead { color: #fff; }
   </style>
 </head>
-<body class="rag-body">
+<body class="rag-body" data-coach-game="emergency-responder">
   <main id="main-content" tabindex="-1">
     <div class="app-page-hero">
       <div class="container">
@@ -290,5 +291,6 @@
     document.getElementById('restart').addEventListener('click', start);
   })();
   </script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

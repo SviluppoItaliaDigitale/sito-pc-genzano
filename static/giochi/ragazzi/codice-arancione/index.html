@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
     .coa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     @media (max-width: 800px) { .coa-grid { grid-template-columns: 1fr; } }
@@ -43,7 +44,7 @@
     .check-item.ko .icon { color: var(--rag-rosso); }
   </style>
 </head>
-<body class="rag-body">
+<body class="rag-body" data-coach-game="codice-arancione">
   <main id="main-content" tabindex="-1">
     <div class="app-page-hero">
       <div class="container">
@@ -254,5 +255,6 @@
     document.getElementById('restart').addEventListener('click', start);
   })();
   </script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>
