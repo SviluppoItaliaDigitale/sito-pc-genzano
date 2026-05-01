@@ -216,6 +216,29 @@ Sistema completo per generare bozze post social (X, Facebook, Instagram, Telegra
 
 **Documentazione operativa completa** in `scripts/README-social.md`. **Workflow mobile-first** in `MANUALE-MOBILE.md` (root).
 
+## Coach + TTS sui giochi statici (`giochi/assets/`)
+
+I giochi statici della sezione Giochi della Sicurezza vivono in `static/giochi/{infanzia,primaria,ragazzi}/` (33 giochi totali) e usano un sistema condiviso di onboarding e teoria di rinforzo.
+
+**Asset condivisi** in `static/giochi/assets/`:
+- `css/giochi.css` — palette, card hub, badge, focus visibile, guardrail responsive globale.
+- `css/coach.css` — bottone trigger inline, dialog modale, hint contestuale, bottone TTS. Tre varianti per fascia (rosso/verde/blu).
+- `js/coach.js` — modulo IIFE: manifest dei 33 giochi, dialog accessibile (`role=dialog`, focus trap, ESC), hint contestuale, TTS via Web Speech API. Auto-init via `data-coach-game="<id>"` sul `<body>` di ogni gioco.
+- `js/progressione.js`, `js/attestato.js`, `js/audio-sintetico.js`, `js/comune.js`, `js/attestato-inclusivo.js` — utilities di gameplay condivise.
+
+**Per ogni nuovo gioco** servono 3 righe HTML:
+1. `<link rel="stylesheet" href="/giochi/assets/css/coach.css">` in `<head>` (dopo `giochi.css`).
+2. `<body data-coach-game="<id-univoco>">` (l'attributo aggiunto al tag esistente).
+3. `<script src="/giochi/assets/js/coach.js" defer></script>` prima di `</body>`.
+
+E **una voce nel manifest `CONTENUTI`** dentro `coach.js` con titolo, regola, come si gioca, link teoria. Specifiche di accessibilità e contenuto in `03-accessibility.md` § "Coach dei giochi".
+
+## TTS sulle storie e fiabe (`storie-e-racconti/assets/tts-storia.js`)
+
+Le 18 fiabe in `static/formazione/storie-e-racconti/*/` hanno un bottone "🔊 Ascolta" via Web Speech API. Modulo standalone in `static/formazione/storie-e-racconti/assets/tts-storia.js`, auto-init via `DOMContentLoaded`, inietta il bottone nella `.storia-toolbar` di ogni storia. Legge `.storia-titolo-principale` + `.storia-corpo` spezzando in chunk di ~200 caratteri per fiabe lunghe.
+
+**Per nuove storie:** includere il `<script src="/formazione/storie-e-racconti/assets/tts-storia.js" defer></script>` prima di `</body>`. Il bottone si aggiunge automaticamente. Stile in `assets/storia-libro.css` sezione "Bottone TTS".
+
 ## Pagina 404 istituzionale
 
 `themes/flavour-pcgenzano/layouts/404.html` è una **pagina di atterraggio del recupero**, non un vicolo cieco. Contiene:

@@ -97,23 +97,70 @@ Per la struttura dei file, le regole di estensione e i divieti operativi vedi `0
 
 ## TTS "Leggi ad alta voce" (Web Speech API)
 
-Pulsante che usa `window.speechSynthesis` per leggere il contenuto della pagina in italiano. Componente in `themes/flavour-pcgenzano/layouts/partials/leggi-ad-alta-voce.html`. Opt-in via frontmatter `tts: true`. Attivo su 12 pagine essenziali (cosa-fare-adesso, numeri-utili, facile-da-leggere, allerte-meteo, piano-familiare + 7 sotto-pagine rischi-prevenzione).
+Il sito usa la **Web Speech API browser-native** in tre contesti distinti, tutti basati sullo stesso paradigma (`window.speechSynthesis` + `SpeechSynthesisUtterance`, voce italiana, niente file MP3, niente API key esterne, niente costi). Il W3C-WAI raccomanda questa scelta per la PA al posto degli overlay commerciali (AccessiBe, UserWay, Equally AI), che mascherano problemi invece di risolverli.
 
-**Caratteristiche accessibilità:**
-- ARIA: `role=button`, `aria-pressed` dinamico, `aria-label` che cambia con lo stato (idle/reading/paused), `aria-live=polite` per stato annunciato a screen reader
-- Tastiera: bottone nativo, attivabile con Enter/Space, focus visibile (`outline 3px #ffbe2e`)
-- Voce italiana: priorità `it-IT`, fallback qualsiasi voce italiana, fallback voce default browser
-- Velocità: 0.95x default per chiarezza (più lento del default)
-- Stati visivi distinti: idle (outline blu), reading (riempito blu + animazione pulse rispettosa di `prefers-reduced-motion`), paused (outline blu + icona play)
-- Esclude da lettura: script, style, code blocks, elementi `aria-hidden`, pittogrammi (sostituiti dalla `caption`)
-- Fallback graceful: se browser senza Web Speech API, bottone nascosto via JS
+### 1. TTS pagine Hugo (partial `leggi-ad-alta-voce.html`)
+
+Pulsante grande "Leggi ad alta voce" inserito automaticamente all'inizio del corpo articolo nelle pagine con frontmatter `tts: true`. Componente in `themes/flavour-pcgenzano/layouts/partials/leggi-ad-alta-voce.html`.
+
+**Pagine attive (21):**
+- 12 pagine storiche: cosa-fare-adesso, numeri-utili, facile-da-leggere, allerte-meteo, piano-familiare + 7 sotto-pagine rischi-prevenzione (sismico, idrogeologico, incendio, vento, temporali, blackout, ondate-calore).
+- 9 pagine aggiunte (PR coach + TTS): assistente, faq, piano-emergenza, contatti, chi-siamo, diventa-volontario, glossario, rischi-prevenzione/{kit-emergenza, persone-necessita-specifiche}.
+
+### 2. TTS dentro il "Coach" dei giochi (`giochi/assets/js/coach.js`)
+
+Bottone "🔊 Ascolta i consigli" dentro il dialog del bottone "Consigli per giocare" (presente su tutti i 33 giochi statici di `static/giochi/`). Legge ad alta voce: titolo dialog + regola del gioco + bullet "Come si gioca". Variante mini "🔊 Ascolta" anche nei suggerimenti contestuali sull'errore (Layer 3). API esposta: `window.GameCoach.{speak, stopSpeaking, ttsSupported}`.
+
+### 3. TTS sulle fiabe e storie (`formazione/storie-e-racconti/assets/tts-storia.js`)
+
+Bottone "🔊 Ascolta" nella `.storia-toolbar` di tutte le 18 fiabe in `static/formazione/storie-e-racconti/`. Modulo standalone auto-iniettato (basta includere il `<script>` nell'index.html della storia). Legge `.storia-titolo-principale` + `.storia-corpo`, spezzando il testo in chunk di ~200 caratteri per evitare cut-off su fiabe lunghe (lettura ~4 minuti).
+
+### Caratteristiche accessibilità (comuni ai tre contesti)
+
+- ARIA: `role=button` o `<button>` nativo, `aria-pressed` o `aria-label` dinamico (idle/speaking), `aria-live=polite` per stato annunciato a screen reader.
+- Tastiera: bottone nativo, attivabile con Enter/Space, focus visibile (`outline 3px #ffbe2e`).
+- Voce italiana: priorità `it-IT`, fallback qualsiasi voce con `lang.startsWith("it")`, fallback voce default browser.
+- Velocità: 0.9-0.95x default per chiarezza (più lento del default).
+- Stati visivi distinti: idle (outline), speaking (riempito + animazione pulse, rispetta `prefers-reduced-motion`).
+- Stop automatico su: page unload, dialog close, ESC, click su altro bottone TTS.
+- Fallback graceful: se browser senza Web Speech API, bottone nascosto via `ttsSupported()`.
 
 **Caso d'uso target:** anziani con vista debole, persone in stress/emergenza, parlanti italiano L2, bambini che leggono lentamente, utenti con dislessia.
 
 **Regole operative:**
-- Per attivare TTS su una nuova pagina: aggiungere `tts: true` nel frontmatter (opt-in esplicito, non automatico)
-- Non attivare TTS su pagine legali (privacy, note legali, accessibilità) o tecniche (mappa sito, attribuzioni) — non utili da leggere ad alta voce
-- Non aggiungere altri TTS provider (es. Google Cloud TTS, AWS Polly) che richiedono API key/costo: Web Speech API browser è gratuita e sufficiente
+- Per attivare TTS su una **nuova pagina Hugo**: aggiungere `tts: true` nel frontmatter (opt-in esplicito, non automatico).
+- Per **giochi statici**: il TTS dentro il coach è già attivo via `coach.js` su tutti i giochi con `data-coach-game` sul `<body>` — niente da fare manualmente.
+- Per **nuove storie/racconti**: includere `<script src="/formazione/storie-e-racconti/assets/tts-storia.js" defer></script>` prima di `</body>` nell'index.html della storia. Il modulo trova `.storia-toolbar` e inietta il bottone.
+- **Non attivare TTS** su pagine legali (privacy, note legali, accessibilità, social-media-policy) o tecniche (mappa sito, attribuzioni-pittogrammi) — non utili da leggere ad alta voce.
+- **Non aggiungere altri TTS provider** (es. Google Cloud TTS, AWS Polly) che richiedono API key/costo: Web Speech API browser è gratuita, sempre aggiornata col testo, e raccomandata da W3C-WAI per PA.
+
+## Coach dei giochi — onboarding e teoria di rinforzo
+
+Tutti i 33 giochi statici in `static/giochi/{infanzia,primaria,ragazzi}/` hanno un sistema condiviso di **onboarding** + **teoria di rinforzo** che riduce l'abbandono dei bambini che non hanno nozioni di base e rispondono a caso. Ispirato a "Io non rischio" del DPC e alla regola AGID di accessibilità cognitiva.
+
+**Architettura:**
+- `static/giochi/assets/css/coach.css` — styling (bottone trigger inline, dialog modale accessibile, suggerimento contestuale, bottone TTS).
+- `static/giochi/assets/js/coach.js` — modulo IIFE con manifest dei 33 giochi + dialog accessibile (`role=dialog`, `aria-modal`, focus trap, ESC, click-outside) + hint contestuale + TTS Web Speech API. Auto-init via attributo `data-coach-game="<id>"` sul `<body>` di ogni gioco.
+
+**Tre layer:**
+
+1. **Bottone "💡 Consigli per giocare"** sotto il titolo di ogni gioco. Click → dialog con: regola in 1 frase, "Come si gioca" in bullet, link "Approfondisci sul sito" alla teoria. Tre varianti visive per fascia (rosso infanzia, verde primaria, blu ragazzi).
+2. **TTS audio** nel dialog ("🔊 Ascolta i consigli") — vedi sezione TTS sopra.
+3. **Hint contestuale su errore**: quando il bambino sbaglia, accanto al bottone "Consigli" appare un riquadro giallo con suggerimento mirato + link "Scopri perché →". API: `window.GameCoach.hint(testo, urlOpz)` chiamata dai singoli giochi nel callback wrong-answer; `clearHint()` su risposta corretta o passaggio a domanda successiva.
+
+**Manifest dei contenuti** in `coach.js` (~33 voci, 1 per gioco). Ogni voce ha:
+- `fascia: 'infanzia' | 'primaria' | 'ragazzi'`
+- `titolo`, `regola` (1 frase, italiano AGID)
+- `come` (3-6 bullet operativi, voce attiva, frasi <20 parole)
+- `teoria` (array di `{titolo, url}` che puntano a pagine già pubblicate sul sito — niente nuova teoria scritta)
+
+**Regole operative:**
+- Per **aggiungere un nuovo gioco**: includere `<link rel="stylesheet" href="/giochi/assets/css/coach.css">` + `<script src="/giochi/assets/js/coach.js" defer></script>` + `<body data-coach-game="<id-univoco>">` + voce nel manifest `CONTENUTI` di `coach.js`.
+- Per **modificare i consigli** di un gioco esistente: editare la voce nel manifest. Niente cambi al gioco.
+- Per **agganciare hint contestuale Layer 3** in un gioco: nel callback wrong-answer, chiamare `if (window.GameCoach && window.GameCoach.hint) { window.GameCoach.hint('testo breve', '/url-teoria/'); }`. Su risposta corretta o nuovo turno, chiamare `clearHint()`.
+- I link teoria devono **sempre** puntare a pagine già pubblicate (`content/<slug>/_index.md` o `content/<slug>.md` esistente) — verificato pre-commit.
+
+Specifiche complete di implementazione e mapping per fascia in `MANUALE-SITO.md` Parte 16.
 
 ## Accessibilità dei post sui social media
 
