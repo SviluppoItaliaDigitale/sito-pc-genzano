@@ -52,6 +52,24 @@ Il dropdown "Formazione" è stato rinominato **"Educazione e Inclusione"** e ha 
 
 Non aggiungere voci di primo livello senza valutarne l'impatto sul mobile: il limite di sicurezza è 6-7 voci visibili contemporaneamente.
 
+### Verifica automatica conteggi schede / giochi / attività
+
+Il sito mostra in più punti i conteggi totali e per fascia (es. "100 schede stampabili", "33 giochi", "32 attività accessibili", "28 schede infanzia", "14 case study Sec II"). Esiste **`scripts/verifica-conteggi.sh`** che fa la conta reale (cartelle in `static/formazione/schede-stampabili/`, `static/giochi/`, `static/abili-a-proteggere/`) e la confronta con i numeri dichiarati nei file:
+
+- `themes/flavour-pcgenzano/layouts/assistente/list.html` (4 dropdown info_*)
+- `themes/flavour-pcgenzano/layouts/partials/games-cta.html`
+- `static/formazione/schede-stampabili/index.html` (meta + lead + sotto-sezione case study)
+- `static/giochi/index.html` (4 card)
+- `content/faq/_index.md`, `content/mappa-sito/_index.md`, `content/formazione/_index.md`
+- `MANUALE-SITO.md` tabella kit
+
+**Esecuzione automatica** in due punti:
+
+1. **Hook locale `PostToolUse`** in `.claude/settings.json`: dopo ogni `Write`/`Edit`/`MultiEdit` di Claude Code, lo script gira con `--quiet` e segnala SOLO se trova drift. Costo: ~50ms. Risolve il caso d'uso "ho aggiunto una scheda/gioco e mi sono dimenticato di aggiornare il contatore in qualche posto".
+2. **Workflow `audit-sito.yml § 42`**: catch-all settimanale (ogni lunedì 09:00 UTC). Necessario perché modifiche fatte da web GitHub o da mobile non passano dall'hook locale.
+
+**Quando aggiungi un nuovo tipo di numerazione** (es. una nuova pagina che cita "X documenti", "Y mappe"), aggiorna `verifica-conteggi.sh` aggiungendo una nuova riga `check_count` con: numero reale, regex del pattern (es. `"[0-9]+ documenti"`), file da controllare, descrizione. Test rapido: `bash scripts/verifica-conteggi.sh`.
+
 ### Sincronizzazione obbligatoria `hugo.toml` ↔ `site-chrome.js`
 
 Il menu Hugo (`hugo.toml [[menus.main]]` + `themes/flavour-pcgenzano/layouts/partials/navbar.html`) renderizza la navigazione **solo per le pagine generate da Hugo**. Tutte le pagine HTML statiche fuori da Hugo (`static/formazione/schede-stampabili/`, `static/abili-a-proteggere/`, `static/giochi/`, `static/quizpc/`, `static/formazionepc/`, `static/giochi-bambini/`, ecc. — circa 50+ pagine) iniettano header e footer da `static/app-shared/site-chrome.js`, che ha il menu **hardcoded in JavaScript** e **non si auto-sincronizza** con `hugo.toml`.
