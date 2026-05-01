@@ -20,7 +20,7 @@ La **zanzara tigre** (Aedes albopictus) è ormai una presenza stabile in tutta I
 
 Per **arbovirosi** si intendono malattie virali trasmesse da **artropodi** (in questo caso zanzare). In Italia e nel Lazio il monitoraggio dell'**Istituto Superiore di Sanità** segue soprattutto:
 
-- **West Nile virus** — trasmesso dalla zanzara Culex ordinaria. Casi ricorrenti nel Nord Italia, crescenti nel Centro e in Lazio. Forma febbrile nei casi lievi, ma può causare encefaliti gravi.
+- **West Nile virus** — trasmesso dalla zanzara Culex ordinaria. Casi ricorrenti nel Nord Italia, crescenti nel Centro e nel Lazio. Forma febbrile nei casi lievi, ma può causare encefaliti gravi.
 - **Dengue** — trasmessa dalla zanzara tigre. Focolai autoctoni dal 2020 in poi, in aumento.
 - **Chikungunya** — trasmessa dalla zanzara tigre. Febbre alta e dolori articolari intensi.
 - **Zika** — casi in Italia rari, attenzione per le donne in gravidanza.
