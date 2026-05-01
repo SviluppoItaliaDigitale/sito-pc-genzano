@@ -309,6 +309,7 @@
       btnUff.disabled = false; btnBuf.disabled = false;
       idxCur.textContent = (idx + 1);
       progressBar.style.width = ((idx / queue.length) * 100) + '%';
+      if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
     }
 
     function rispondi(scelta){
@@ -322,11 +323,19 @@
         esito.classList.remove('sbagliato');
         esito.classList.add('corretto');
         esito.innerHTML = '<strong><i class="bi bi-check-circle-fill me-1"></i>Corretto.</strong> ' + n.spiega;
+        if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         esito.classList.remove('corretto');
         esito.classList.add('sbagliato');
         var eraRisp = n.ufficiale ? 'fonte ufficiale' : 'bufala';
         esito.innerHTML = '<strong><i class="bi bi-x-circle-fill me-1"></i>Sbagliato.</strong> Era una <strong>' + eraRisp + '</strong>. ' + n.spiega;
+        // Layer 3: hint con criteri per riconoscere fonti
+        if (window.GameCoach && window.GameCoach.hint) {
+          var tip = n.ufficiale
+            ? 'Le fonti ufficiali (DPC, Regione, Comune, INGV, ARPA, ISS, EENA) hanno: dato preciso, periodo definito, rimando al sito istituzionale, nessun appello emotivo.'
+            : 'Le bufale hanno: appelli urgenti a "condividere", "fonti interne anonime", numeri allarmanti senza fonte, link abbreviati o mittente non istituzionale (gmail, gruppi anonimi, video virali).';
+          window.GameCoach.hint(tip, '/social-media-policy/');
+        }
       }
       esito.classList.remove('hide');
       nextWrap.classList.remove('hide');
