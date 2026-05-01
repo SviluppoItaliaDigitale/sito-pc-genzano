@@ -1,7 +1,7 @@
 {
-  "livello": "gialla",
-  "titolo": "ALLERTA GIALLA",
-  "descrizione": "Criticità per temporali. Prestare attenzione.",
-  "ultimo_aggiornamento": "2026-04-30T16:21:42+02:00",
-  "ultimo_controllo": "2026-05-01T13:20:00+02:00"
+  "livello": "verde",
+  "titolo": "NESSUNA ALLERTA",
+  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
+  "ultimo_aggiornamento": "2026-05-01T15:50:29+02:00",
+  "ultimo_controllo": "2026-05-01T15:50:29+02:00"
 }
