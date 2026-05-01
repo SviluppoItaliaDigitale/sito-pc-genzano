@@ -15,13 +15,15 @@ I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Ci
 
 ### Riferimenti normativi e curricolari
 
-Il percorso è costruito sul quadro normativo dell'**educazione civica** (Legge 20 agosto 2019 n. 92, art. 1, 3 e 6), delle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 7 settembre 2024 n. 183, in vigore dal 2025/2026), del **D.Lgs. 13 aprile 2017 n. 62** (valutazione e certificazione competenze), del **D.Lgs. 15 aprile 2005 n. 77** (PCTO — Percorsi per le Competenze Trasversali e l'Orientamento).
+Il percorso è costruito sul quadro normativo dell'**educazione civica** (Legge 20 agosto 2019 n. 92, art. 1, 3 e 6), delle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 7 settembre 2024 n. 183, **applicabili a decorrere dall'anno scolastico 2024/2025**), della **Legge 17 febbraio 2025, n. 21** (conoscenze di base in materia di sicurezza nei luoghi di lavoro nell'Educazione Civica — art. 3 lett. h-ter L. 92/2019), del **D.Lgs. 13 aprile 2017 n. 62** (valutazione e certificazione competenze), del **D.Lgs. 15 aprile 2005 n. 77** (PCTO — Percorsi per le Competenze Trasversali e l'Orientamento).
+
+Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione Civile è l'**articolo 3, lettera h) della Legge 92/2019**, che include esplicitamente la *"formazione di base in materia di protezione civile"* tra i temi dell'Educazione Civica. Il **D.Lgs. 1/2018** (Codice della Protezione Civile) costituisce la cornice generale che descrive attività, organizzazione, pianificazione e ruolo del Servizio nazionale.
 
 È coerente con:
 - **Indicazioni Nazionali per i Licei** (D.P.R. 89/2010) e **Linee guida per gli Istituti Tecnici e Professionali** (2010/2018)
 - **Raccomandazione UE 2018/C 189/01** sulle 8 competenze chiave per l'apprendimento permanente
-- **Obiettivi Agenda 2030** n. 11 (città sostenibili), 13 (lotta al cambiamento climatico) e 15 (vita sulla terra)
-- **Articolo 18 del D.Lgs. 1/2018** (Codice della Protezione Civile) su formazione e informazione scolastica
+- **Obiettivi Agenda 2030** n. 8 (lavoro dignitoso), 11 (città sostenibili), 13 (lotta al cambiamento climatico) e 15 (vita sulla terra)
+- **D.Lgs. 9 aprile 2008, n. 81** — Testo Unico sulla salute e sicurezza nei luoghi di lavoro, riferimento sostanziale per il modulo introdotto dalla L. 21/2025
 
 > 📚 **Per i docenti — risorse coordinate**
 >
@@ -973,15 +975,16 @@ Domande-chiave:
 
 ### Fonti normative e curricolari
 
-- [Legge 20 agosto 2019 n. 92](https://www.normattiva.it/) — Introduzione dell'insegnamento dell'educazione civica
-- **D.M. 7 settembre 2024 n. 183 (Linee Guida nazionali per l'Ed. Civica, in vigore dal 2025/2026)** — Linee guida per l'insegnamento dell'educazione civica
+- [Legge 20 agosto 2019 n. 92](https://www.normattiva.it/) — Introduzione dell'insegnamento dell'educazione civica (art. 3 lett. h *protezione civile*; lett. h-ter *sicurezza nei luoghi di lavoro* introdotta dalla L. 21/2025)
+- **D.M. 7 settembre 2024 n. 183 (Linee Guida nazionali per l'Educazione Civica, applicabili a decorrere dall'anno scolastico 2024/2025)** — Linee guida per l'insegnamento dell'educazione civica
+- **Legge 17 febbraio 2025, n. 21** — Conoscenze di base in materia di sicurezza nei luoghi di lavoro nell'Educazione Civica (in vigore dal 19 marzo 2025)
 - **D.P.R. 89/2010** — Regolamento dei Licei; **D.P.R. 87-88/2010** — Istituti Tecnici e Professionali
 - **D.Lgs. 15 aprile 2005 n. 77** — Alternanza scuola-lavoro (oggi PCTO)
 - **D.Lgs. 13 aprile 2017 n. 62** — Valutazione e certificazione competenze
 - **Raccomandazione UE 2018/C 189/01** — 8 competenze chiave per l'apprendimento permanente
 - [D.Lgs. 2 gennaio 2018 n. 1](/normativa/testo-unico-protezione-civile/) — Codice della Protezione Civile
 - **D.Lgs. 3 luglio 2017 n. 117** — Codice del Terzo Settore
-- **D.Lgs. 81/2008** — Sicurezza nei luoghi di lavoro
+- **D.Lgs. 9 aprile 2008, n. 81** — Testo Unico sulla salute e sicurezza nei luoghi di lavoro
 - **D.M. 26/08/1992** — Norme di prevenzione incendi per l'edilizia scolastica
 
 ### Bibliografia minima per il docente
