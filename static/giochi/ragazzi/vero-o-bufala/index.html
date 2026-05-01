@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
     .notizia-card {
       background: #fff; border: 2px solid #e9ecef; border-radius: 10px;
@@ -68,7 +69,7 @@
     .stat-box .lbl { font-size: .8rem; color: #5b6b7c; }
   </style>
 </head>
-<body class="rag-body">
+<body class="rag-body" data-coach-game="vero-o-bufala">
   <main id="main-content" tabindex="-1">
     <div class="app-page-hero">
       <div class="container">
@@ -359,5 +360,6 @@
     btnBuf.addEventListener('click', function(){ rispondi('bufala'); });
   })();
   </script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>
