@@ -155,6 +155,17 @@ La pagina è esplicitamente **divulgativa**: non sostituisce lo psicologo scolas
 
 Per organizzare un incontro: scrivere a **[segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)** indicando classe, scuola, periodo richiesto, tema preferito.
 
+## Strumenti operativi pronti per le scuole {#strumenti-scuole}
+
+Il Gruppo mette a disposizione **moduli e fac-simile editabili** per le scuole che vogliono lavorare con noi, divisi in due pacchetti distinti per finalità:
+
+- 📁 **Pacchetto A — Strumenti generici di ingaggio scolastico** — modulo richiesta intervento, liberatoria immagini minori (GDPR), circolare per le famiglie, attestato di partecipazione;
+- 📁 **Pacchetto B — Strumenti formali PCTO** — schema di convenzione attuativa, progetto formativo individuale, registro presenze + valutazione + certificazione.
+
+Vedi la pagina dedicata: [Strumenti per le scuole — moduli e fac-simile editabili](/formazione/scuole-strumenti/).
+
+> ⚠️ **Sono fac-simile, non testi vincolanti.** La scuola, attraverso Dirigente Scolastico, DSGA e DPO, adatta i modelli al proprio piano dell'offerta formativa e ai propri regolamenti interni. Il Gruppo li mette a disposizione come orientamento operativo.
+
 ## Disponibilità PCTO {#disponibilita-pcto}
 
 Il Gruppo è disponibile a **ospitare studenti delle scuole superiori** per percorsi PCTO (Percorsi per le Competenze Trasversali e l'Orientamento) con **moduli da 30 a 50 ore**, adattabili all'indirizzo e **riconoscibili all'interno del monte ore PCTO complessivo previsto dall'Istituto**:
