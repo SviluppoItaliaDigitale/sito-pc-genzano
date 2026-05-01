@@ -229,8 +229,14 @@ CNR garantisce la **correttezza scientifica** dei contenuti, DPC la **correttezz
 
 #### 13.9.4 — Livello standard (internazionali)
 
-- **ISO 22329:2021** *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies* — quadro di riferimento per monitoraggio, disseminazione, interazione e gestione della disinformazione (vedi **13.7**).
-- **WCAG 2.2 AA** (W3C) per l'accessibilità tecnica dei contenuti.
+Le norme ISO che riguardano la nostra attività sono **citate come principio recepito**, mai come certificazione: il Gruppo non è ente certificatore e non sostiene di essere conforme certificato a una norma. Le norme ISO sono pubblicazioni a pagamento di proprietà ISO/UNI: non vengono mai redistribuite dal sito; ne facciamo solo riferimento testuale nei contenuti pubblici.
+
+- **ISO 22329:2021** *Security and resilience — Emergency management — Guidelines for the use of social media in emergencies* — quadro per monitoraggio, disseminazione, interazione e gestione della disinformazione sui social. Recepita nei contenuti del **13.7** e citata esplicitamente nella pagina pubblica `/social-media-policy/`.
+- **ISO 22322:2022** *Public warning systems* — quadro per i sistemi di allerta pubblici. Recepita dall'architettura italiana DPC → Centro Funzionale Regionale → Sindaco → cittadini. Citata in `/allerte-meteo/`.
+- **ISO 22324:2015** *Guidelines for color-coded alerts* — codici colore graduati per l'allerta pubblica. Recepita dallo schema italiano verde/giallo/arancione/rosso del DPC. Citata in `/allerte-meteo/`.
+- **ISO 22315:2014** *Mass evacuation — Guidelines for planning* — pianificazione delle evacuazioni di massa, punti di raccolta, attenzione prioritaria alle persone con esigenze specifiche. Recepita dai piani comunali italiani. Citata in `/piano-emergenza/`, `/piano-familiare/`, `/rischi-prevenzione/persone-necessita-specifiche/`.
+- **ISO 7010:2019** *Graphical symbols — Safety colours and safety signs* — pittogrammi standardizzati di sicurezza. Adottata operativamente in `static/pittogrammi/iso7010/` (46 simboli) e usata via shortcode `pittogramma`.
+- **ISO/IEC 40500** (= **WCAG 2.0** / aggiornato a **WCAG 2.2 AA**) per l'accessibilità tecnica dei contenuti, recepita in Italia tramite la **Direttiva UE 2016/2102** e lo standard europeo **EN 301 549**. Citata in `/accessibilita/`.
 
 #### 13.9.5 — Riferimenti normativi orizzontali
 
@@ -246,7 +252,7 @@ CNR garantisce la **correttezza scientifica** dei contenuti, DPC la **correttezz
 | 1 | Italiano vincolante | AGID + DPC (DPC prevale su AGID per la PC) |
 | 2 | Scientifico italiano | CNR (IRPI, INGV, IGAG), ISPRA |
 | 3 | Tecnico-operativo europeo | EENA, CWA CEN/CENELEC |
-| 4 | Standard internazionali | ISO 22329:2021, WCAG 2.2 AA |
+| 4 | Standard internazionali | ISO 22329:2021, ISO 22322:2022, ISO 22324:2015, ISO 22315:2014, ISO 7010:2019, ISO/IEC 40500 (WCAG 2.2 AA), EN 301 549 |
 | 5 | Normativa orizzontale | DL 25/2025, GDPR, L. 4/2004, CAD |
 
 Il livello inferiore si applica **quando** il livello superiore non dispone diversamente.
