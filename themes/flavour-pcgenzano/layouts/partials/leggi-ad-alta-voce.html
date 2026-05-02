@@ -1,49 +1,93 @@
 {{- /*
-  Partial: leggi-ad-alta-voce
-  Bottone "Leggi ad alta voce" che usa Web Speech API (window.speechSynthesis).
-  Cross-browser, voce italiana di default, pause/stop accessibili da tastiera.
+  Partial: leggi-ad-alta-voce (v2.1)
+  Bottone "Leggi ad alta voce" con Web Speech API.
+  - Velocità regolabile (lento 0.75x / normale 0.95x / veloce 1.15x)
+  - Highlight della parola in lettura (toggle, default OFF)
+  Preferenze persistite in localStorage:
+    pcgenzano-tts-rate    (0.75 | 0.95 | 1.15)
+    pcgenzano-tts-follow  ("1" se attivo highlight, default "")
 
-  Uso (in qualsiasi template):
+  Uso:
     {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".article-body") }}
-
-  Parametri:
-    selector  CSS selector dell'elemento da leggere. Default: ".article-body"
 
   Accessibilità:
     - Bottone con role=button, aria-pressed, aria-label dinamico
-    - Stato "in lettura" annunciato a screen reader (aria-live)
-    - Funziona con tastiera (Enter/Space)
-    - Fallback graceful se Web Speech API non supportata (bottone nascosto)
+    - aria-live=polite per stato lettura
+    - Tastiera: bottoni e radio nativi
+    - Highlight rispetta prefers-reduced-motion (rimosse animazioni morbide)
+    - Highlight ha varianti CSS per contrasto invertito + scala grigi (toolbar a11y)
+    - Fallback graceful: se onboundary non spara entro 2s, highlight si auto-disattiva
 
-  Pagine target consigliate: cosa-fare-adesso, numeri-utili, facile-da-leggere,
-  rischi-prevenzione/*, allerte-meteo, comunicazioni con priorita urgente.
+  Default attivo su tutte le pagine (single.html + list.html), opt-out via
+  frontmatter `tts: false` o blacklist hard-coded (legali, tecniche).
 */ -}}
 {{- $selector := .selector | default ".article-body" -}}
-<div class="tts-wrapper" role="region" aria-label="Strumenti di lettura ad alta voce">
-  <button type="button"
-          class="tts-button btn btn-outline-primary btn-sm"
-          data-tts-target="{{ $selector }}"
-          aria-pressed="false"
-          aria-label="Leggi ad alta voce il contenuto della pagina">
-    <i class="bi bi-volume-up-fill me-2" aria-hidden="true"></i>
-    <span class="tts-label">Leggi ad alta voce</span>
-  </button>
+<div class="tts-wrapper" role="region" aria-label="Strumenti di lettura ad alta voce" data-tts-target="{{ $selector }}">
+  <div class="tts-controls">
+    <button type="button"
+            class="tts-button btn btn-outline-primary btn-sm"
+            data-tts-target="{{ $selector }}"
+            aria-pressed="false"
+            aria-label="Leggi ad alta voce il contenuto della pagina">
+      <i class="bi bi-volume-up-fill me-2" aria-hidden="true"></i>
+      <span class="tts-label">Leggi ad alta voce</span>
+    </button>
+    <fieldset class="tts-rate" aria-label="Velocità di lettura">
+      <legend class="visually-hidden">Velocità di lettura</legend>
+      <label class="tts-rate-option" title="Lento — utile per anziani, bambini, italiano L2">
+        <input type="radio" name="tts-rate" value="0.75">
+        <span aria-hidden="true">Lento</span>
+        <span class="visually-hidden">Velocità lenta</span>
+      </label>
+      <label class="tts-rate-option" title="Normale">
+        <input type="radio" name="tts-rate" value="0.95" checked>
+        <span aria-hidden="true">Normale</span>
+        <span class="visually-hidden">Velocità normale</span>
+      </label>
+      <label class="tts-rate-option" title="Veloce — per chi conosce bene il testo">
+        <input type="radio" name="tts-rate" value="1.15">
+        <span aria-hidden="true">Veloce</span>
+        <span class="visually-hidden">Velocità veloce</span>
+      </label>
+    </fieldset>
+    <label class="tts-follow-toggle" title="Evidenzia la parola che la voce sta leggendo. Aiuta dislessici e parlanti italiano L2.">
+      <input type="checkbox" class="tts-follow-input">
+      <span class="tts-follow-label">
+        <i class="bi bi-cursor-text me-1" aria-hidden="true"></i>
+        Segui parole
+      </span>
+    </label>
+  </div>
   <span class="tts-status visually-hidden" aria-live="polite" aria-atomic="true"></span>
 </div>
 
 <script>
 (function(){
   if (!('speechSynthesis' in window)) {
-    // Browser senza supporto: nasconde il bottone
     document.querySelectorAll('.tts-wrapper').forEach(function(w){ w.style.display = 'none'; });
     return;
   }
 
   var synth = window.speechSynthesis;
+  var RATE_KEY = 'pcgenzano-tts-rate';
+  var FOLLOW_KEY = 'pcgenzano-tts-follow';
+
+  function getSavedRate() {
+    try {
+      var v = parseFloat(localStorage.getItem(RATE_KEY) || '');
+      if (v === 0.75 || v === 0.95 || v === 1.15) return v;
+    } catch (e) {}
+    return 0.95;
+  }
+  function saveRate(v) { try { localStorage.setItem(RATE_KEY, String(v)); } catch (e) {} }
+
+  function getSavedFollow() {
+    try { return localStorage.getItem(FOLLOW_KEY) === '1'; } catch (e) { return false; }
+  }
+  function saveFollow(v) { try { localStorage.setItem(FOLLOW_KEY, v ? '1' : ''); } catch (e) {} }
 
   function findItalianVoice() {
     var voices = synth.getVoices();
-    // Priorita: it-IT, poi qualsiasi voce italiana, poi default
     return voices.find(function(v){ return v.lang === 'it-IT'; })
         || voices.find(function(v){ return v.lang && v.lang.startsWith('it'); })
         || voices.find(function(v){ return v.default; })
@@ -53,20 +97,124 @@
 
   function extractText(el) {
     if (!el) return '';
-    // Clona e rimuove elementi non parlabili (script, style, code blocks, link icone, pittogrammi)
     var clone = el.cloneNode(true);
-    clone.querySelectorAll('script, style, .visually-hidden, [aria-hidden="true"], pre, code.language-, .pittogramma, .pittogramma-figure').forEach(function(n){ n.remove(); });
-    // Sostituisce <br> con newline per pause naturali
+    clone.querySelectorAll('script, style, .visually-hidden, [aria-hidden="true"], pre, code.language-, .pittogramma, .pittogramma-figure, .tts-wrapper, .gloss-popover, .gloss-icon').forEach(function(n){ n.remove(); });
     clone.querySelectorAll('br').forEach(function(n){ n.replaceWith('\n'); });
     var text = clone.innerText || clone.textContent || '';
-    // Compatta whitespace, preserva paragrafi
     return text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
+  }
+
+  /*
+   * Highlight follow: pre-mappa le parole del DOM target ai loro indici nel
+   * testo passato a SpeechSynthesisUtterance. Quando arriva onboundary
+   * (charIndex), trova il TextNode che contiene quel carattere e avvolge
+   * solo la parola corrente in <mark class="tts-word-mark">.
+   *
+   * Strategia: passa una sola volta sui TextNode discendenti del target,
+   * ignorando script/style/pre/code/.visually-hidden/[aria-hidden=true]/
+   * .pittogramma/.pittogramma-figure/.tts-wrapper. Costruisce un array
+   * di "chunk" {node, start, end} corrispondenti al testo estratto.
+   */
+  function buildTextMap(targetEl) {
+    if (!targetEl) return { fullText: '', chunks: [] };
+    var SKIP = ['SCRIPT', 'STYLE', 'PRE', 'CODE'];
+    var SKIP_CLASS = ['visually-hidden', 'pittogramma', 'pittogramma-figure', 'tts-wrapper', 'gloss-popover', 'gloss-icon'];
+    var fullText = '';
+    var chunks = [];
+    function shouldSkip(node) {
+      if (!node) return true;
+      if (node.nodeType !== 1) return false;
+      if (SKIP.indexOf(node.tagName) !== -1) return true;
+      if (node.getAttribute && node.getAttribute('aria-hidden') === 'true') return true;
+      if (node.classList) {
+        for (var i = 0; i < SKIP_CLASS.length; i++) {
+          if (node.classList.contains(SKIP_CLASS[i])) return true;
+        }
+      }
+      return false;
+    }
+    function walk(node) {
+      if (shouldSkip(node)) return;
+      if (node.nodeType === 3) { // TEXT_NODE
+        var t = node.nodeValue;
+        if (t && t.length) {
+          // Stessa normalizzazione approssimativa di extractText (compatta whitespace)
+          chunks.push({ node: node, start: fullText.length, end: fullText.length + t.length });
+          fullText += t;
+        }
+        return;
+      }
+      if (node.nodeType === 1) {
+        // Aggiungi spazio ai blocchi tipici per imitare innerText
+        var isBlock = /^(P|DIV|LI|UL|OL|H[1-6]|TABLE|TR|TD|TH|SECTION|ARTICLE|HEADER|FOOTER|ASIDE|FIGURE|FIGCAPTION|BLOCKQUOTE|HR|BR)$/.test(node.tagName);
+        var children = node.childNodes;
+        for (var i = 0; i < children.length; i++) walk(children[i]);
+        if (isBlock && fullText.length && fullText.charAt(fullText.length - 1) !== '\n') {
+          fullText += '\n';
+          // chunk fittizio per il newline (no node)
+          chunks.push({ node: null, start: fullText.length - 1, end: fullText.length });
+        }
+      }
+    }
+    walk(targetEl);
+    return { fullText: fullText, chunks: chunks };
+  }
+
+  // Trova il TextNode + offset per un dato charIndex nel fullText della mappa
+  function findNodeAt(map, charIndex) {
+    for (var i = 0; i < map.chunks.length; i++) {
+      var c = map.chunks[i];
+      if (c.node && charIndex >= c.start && charIndex < c.end) {
+        return { node: c.node, offset: charIndex - c.start };
+      }
+    }
+    return null;
+  }
+
+  // Avvolge una parola (da charIndex per charLength) in un <mark>.
+  // Ritorna il <mark> creato (per eventuale unwrap successivo).
+  function highlightWord(map, charIndex, charLength) {
+    if (!charLength || charLength < 1) return null;
+    var startInfo = findNodeAt(map, charIndex);
+    if (!startInfo) return null;
+    var node = startInfo.node;
+    var startOff = startInfo.offset;
+    var endOff = startOff + charLength;
+    // Se la parola supera il TextNode (raro, succede solo se il target ha markup molto frammentato), troncala al nodo.
+    if (endOff > node.nodeValue.length) endOff = node.nodeValue.length;
+    if (endOff <= startOff) return null;
+    try {
+      var range = document.createRange();
+      range.setStart(node, startOff);
+      range.setEnd(node, endOff);
+      var mark = document.createElement('mark');
+      mark.className = 'tts-word-mark';
+      mark.setAttribute('aria-hidden', 'true');
+      range.surroundContents(mark);
+      // Scroll progressivo (centra la parola, rispetta reduced-motion)
+      var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      try {
+        mark.scrollIntoView({ block: 'center', inline: 'nearest', behavior: prefersReduced ? 'auto' : 'smooth' });
+      } catch (e) { /* Safari iOS old */ }
+      return mark;
+    } catch (e) {
+      // surroundContents fallisce se il range attraversa nodi diversi
+      return null;
+    }
+  }
+
+  function unhighlight(mark) {
+    if (!mark || !mark.parentNode) return;
+    var parent = mark.parentNode;
+    while (mark.firstChild) parent.insertBefore(mark.firstChild, mark);
+    parent.removeChild(mark);
+    parent.normalize(); // ricuce TextNode adiacenti
   }
 
   function setButtonState(btn, state) {
     var label = btn.querySelector('.tts-label');
     var icon = btn.querySelector('i');
-    var status = btn.parentElement.querySelector('.tts-status');
+    var status = btn.closest('.tts-wrapper').querySelector('.tts-status');
     btn.setAttribute('aria-pressed', state === 'reading' ? 'true' : 'false');
     if (state === 'reading') {
       label.textContent = 'Pausa lettura';
@@ -90,29 +238,121 @@
     }
   }
 
+  // Sincronizza i radio della velocità con la preferenza salvata
+  var savedRate = getSavedRate();
+  document.querySelectorAll('.tts-wrapper input[name="tts-rate"]').forEach(function(input){
+    input.checked = (parseFloat(input.value) === savedRate);
+    input.addEventListener('change', function(){
+      if (this.checked) {
+        var newRate = parseFloat(this.value);
+        saveRate(newRate);
+        if (synth.speaking || synth.paused) {
+          var btn = this.closest('.tts-wrapper').querySelector('.tts-button');
+          synth.cancel();
+          setButtonState(btn, 'idle');
+          btn.dispatchEvent(new Event('click'));
+        }
+        document.querySelectorAll('.tts-wrapper input[name="tts-rate"][value="' + this.value + '"]').forEach(function(other){
+          if (other !== this) other.checked = true;
+        }, this);
+      }
+    });
+  });
+
+  // Sincronizza il toggle "Segui parole" con la preferenza salvata
+  var followEnabled = getSavedFollow();
+  document.querySelectorAll('.tts-wrapper .tts-follow-input').forEach(function(input){
+    input.checked = followEnabled;
+    input.addEventListener('change', function(){
+      followEnabled = this.checked;
+      saveFollow(followEnabled);
+      // Sincronizza eventuali altri toggle sulla pagina
+      document.querySelectorAll('.tts-wrapper .tts-follow-input').forEach(function(other){
+        if (other !== this) other.checked = followEnabled;
+      }, this);
+    });
+  });
+
   document.querySelectorAll('.tts-button').forEach(function(btn){
     var state = 'idle';
     var utterance = null;
+    var currentMark = null;
+    var textMap = null;
+    var boundaryHeard = false;
+    var fallbackTimer = null;
+
+    function clearMark() {
+      if (currentMark) {
+        unhighlight(currentMark);
+        currentMark = null;
+      }
+    }
 
     btn.addEventListener('click', function(){
+      var wrapper = btn.closest('.tts-wrapper');
       var target = document.querySelector(btn.getAttribute('data-tts-target'));
       if (state === 'idle') {
-        var text = extractText(target);
-        if (!text) {
+        if (followEnabled && target) {
+          // Costruisci la mappa testo↔nodi prima di passare il testo al sintetizzatore.
+          // Importante: il testo passato al SpeechSynthesisUtterance deve corrispondere
+          // ESATTAMENTE al fullText della mappa, altrimenti i charIndex di onboundary
+          // non puntano alla parola giusta.
+          textMap = buildTextMap(target);
+          if (!textMap.fullText.trim()) { textMap = null; }
+        } else {
+          textMap = null;
+        }
+
+        var text = textMap ? textMap.fullText : extractText(target);
+        if (!text || !text.trim()) {
           alert('Nessun testo da leggere su questa pagina.');
           return;
         }
-        // Cancella eventuale lettura precedente
         synth.cancel();
         utterance = new SpeechSynthesisUtterance(text);
         var voice = findItalianVoice();
         if (voice) utterance.voice = voice;
         utterance.lang = 'it-IT';
-        utterance.rate = 0.95;   // poco più lento del default per chiarezza
+        utterance.rate = getSavedRate();
         utterance.pitch = 1;
         utterance.volume = 1;
-        utterance.onend = function(){ state = 'idle'; setButtonState(btn, 'idle'); };
-        utterance.onerror = function(){ state = 'idle'; setButtonState(btn, 'idle'); };
+
+        boundaryHeard = false;
+        if (textMap) {
+          utterance.onboundary = function(ev){
+            if (ev.name && ev.name !== 'word') return;
+            boundaryHeard = true;
+            clearMark();
+            var len = ev.charLength;
+            if (!len) {
+              // Alcuni browser non forniscono charLength: stima fino allo spazio successivo
+              var slice = textMap.fullText.substr(ev.charIndex);
+              var m = slice.match(/^\S+/);
+              len = m ? m[0].length : 0;
+            }
+            currentMark = highlightWord(textMap, ev.charIndex, len);
+          };
+          // Fallback: se in 2.5s nessun evento word arriva, disattiva l'highlight
+          // per questa sessione (Safari iOS bug noto). Il TTS continua a leggere.
+          fallbackTimer = setTimeout(function(){
+            if (!boundaryHeard) {
+              clearMark();
+              textMap = null;
+            }
+          }, 2500);
+        }
+        utterance.onend = function(){
+          state = 'idle';
+          setButtonState(btn, 'idle');
+          clearMark();
+          if (fallbackTimer) { clearTimeout(fallbackTimer); fallbackTimer = null; }
+        };
+        utterance.onerror = function(){
+          state = 'idle';
+          setButtonState(btn, 'idle');
+          clearMark();
+          if (fallbackTimer) { clearTimeout(fallbackTimer); fallbackTimer = null; }
+        };
         synth.speak(utterance);
         state = 'reading';
         setButtonState(btn, 'reading');
@@ -128,7 +368,6 @@
     });
   });
 
-  // Stop globale quando si cambia pagina (evita lettura "fantasma" su SPA)
   window.addEventListener('beforeunload', function(){ synth.cancel(); });
 })();
 </script>

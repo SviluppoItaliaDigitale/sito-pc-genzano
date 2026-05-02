@@ -99,13 +99,19 @@ Per la struttura dei file, le regole di estensione e i divieti operativi vedi `0
 
 Il sito usa la **Web Speech API browser-native** in tre contesti distinti, tutti basati sullo stesso paradigma (`window.speechSynthesis` + `SpeechSynthesisUtterance`, voce italiana, niente file MP3, niente API key esterne, niente costi). Il W3C-WAI raccomanda questa scelta per la PA al posto degli overlay commerciali (AccessiBe, UserWay, Equally AI), che mascherano problemi invece di risolverli.
 
-### 1. TTS pagine Hugo (partial `leggi-ad-alta-voce.html`)
+### 1. TTS pagine Hugo (partial `leggi-ad-alta-voce.html`) — default ON con blacklist
 
-Pulsante grande "Leggi ad alta voce" inserito automaticamente all'inizio del corpo articolo nelle pagine con frontmatter `tts: true`. Componente in `themes/flavour-pcgenzano/layouts/partials/leggi-ad-alta-voce.html`.
+Pulsante "Leggi ad alta voce" inserito automaticamente in cima al contenuto di **tutte le pagine** del sito (single + list page con contenuto editoriale > 30 parole). Include un **selettore di velocità** (lento 0.75x / normale 0.95x / veloce 1.15x) persistito in `localStorage` (chiave `pcgenzano-tts-rate`). Componente in `themes/flavour-pcgenzano/layouts/partials/leggi-ad-alta-voce.html` (v2.0).
 
-**Pagine attive (21):**
-- 12 pagine storiche: cosa-fare-adesso, numeri-utili, facile-da-leggere, allerte-meteo, piano-familiare + 7 sotto-pagine rischi-prevenzione (sismico, idrogeologico, incendio, vento, temporali, blackout, ondate-calore).
-- 9 pagine aggiunte (PR coach + TTS): assistente, faq, piano-emergenza, contatti, chi-siamo, diventa-volontario, glossario, rischi-prevenzione/{kit-emergenza, persone-necessita-specifiche}.
+**Default ON** — la logica è invertita rispetto alla v1 (era opt-in via `tts: true`). Da maggio 2026 il bottone appare **ovunque** tranne dove esplicitamente escluso da:
+
+1. **Blacklist hard-coded nel template** (`single.html` + `list.html`):
+   - `/privacy/`, `/note-legali/`, `/accessibilita/`, `/social-media-policy/` — pagine legali
+   - `/mappa-sito/`, `/attribuzioni-pittogrammi/`, `/cerca/` — pagine tecniche/funzionali
+2. **Frontmatter opt-out**: aggiungere `tts: false` a una pagina specifica.
+3. **Soglia minima**: pagine con `WordCount ≤ 30` non mostrano il bottone (titolo o pagina ponte priva di contenuto).
+
+Why: il TTS è uno strumento di accessibilità trasversale per anziani, dislessici, italiano L2, bambini in lettura lenta, persone in stress da emergenza. Lasciarlo opt-in significava averlo solo sul ~20% delle pagine (22 pagine su 100+). La blacklist mantiene comunque escluse pagine dove la lettura ad alta voce non è utile (cookie/privacy notice, mappa-sito tecnica, motore di ricerca).
 
 ### 2. TTS dentro il "Coach" dei giochi (`giochi/assets/js/coach.js`)
 
@@ -118,9 +124,14 @@ Bottone "🔊 Ascolta" nella `.storia-toolbar` di tutte le fiabe in `static/form
 ### Caratteristiche accessibilità (comuni ai tre contesti)
 
 - ARIA: `role=button` o `<button>` nativo, `aria-pressed` o `aria-label` dinamico (idle/speaking), `aria-live=polite` per stato annunciato a screen reader.
-- Tastiera: bottone nativo, attivabile con Enter/Space, focus visibile (`outline 3px #ffbe2e`).
+- Tastiera: bottone nativo, attivabile con Enter/Space, focus visibile (`outline 3px #ffbe2e`). Anche i radio del selettore velocità e il toggle "Segui parole" sono tastiera-navigabili.
 - Voce italiana: priorità `it-IT`, fallback qualsiasi voce con `lang.startsWith("it")`, fallback voce default browser.
-- Velocità: 0.9-0.95x default per chiarezza (più lento del default).
+- Velocità: tre opzioni (**0.75x lento / 0.95x normale / 1.15x veloce**) selezionabili dall'utente accanto al bottone. Persistite in `localStorage` (chiave `pcgenzano-tts-rate`) — la scelta vale per tutte le pagine. Default normale.
+- **"Segui parole" (highlight della parola in lettura)**: toggle accanto al selettore velocità. Quando attivo, la parola attualmente pronunciata dal TTS si evidenzia con `<mark class="tts-word-mark">` (sfondo `#fff3cd`, sottolineatura `#ffbe2e`). Sincronizzazione audio-visiva via evento `SpeechSynthesisUtterance.onboundary` (`event.name === 'word'`). Persistito in `localStorage` (chiave `pcgenzano-tts-follow`). Default OFF (alcuni utenti lo trovano "rumoroso" su pagine lunghe). Beneficio principale: dislessia, italiano L2, anziani che si distraggono, bambini in lettura lenta — gli occhi seguono l'orecchio. Letteratura: Sumner et al. 2013-2018, principio dei software didattici ClaroRead/Read&Write.
+  - **Fallback graceful**: se l'evento `word` non arriva entro 2.5s dall'avvio (Safari iOS ha bug noti), l'highlight si auto-disattiva per la sessione e il TTS continua puro. Niente regressione.
+  - **Varianti CSS** per la toolbar a11y: contrasto invertito (`html.a11y-contrast-invert`), scala grigi (`html.a11y-grayscale`), alto contrasto (`html.a11y-contrast-high`) → palette dedicate per non perdere leggibilità.
+  - **Auto-scroll** centrato sulla parola (`scrollIntoView({ block: 'center' })` con `behavior: smooth`, override `auto` se `prefers-reduced-motion`).
+  - **Override stampa**: il `<mark>` viene resettato in `@media print` per evitare che una stampa avviata durante la lettura mostri evidenziazione gialla casuale.
 - Stati visivi distinti: idle (outline), speaking (riempito + animazione pulse, rispetta `prefers-reduced-motion`).
 - Stop automatico su: page unload, dialog close, ESC, click su altro bottone TTS.
 - Fallback graceful: se browser senza Web Speech API, bottone nascosto via `ttsSupported()`.
@@ -128,11 +139,61 @@ Bottone "🔊 Ascolta" nella `.storia-toolbar` di tutte le fiabe in `static/form
 **Caso d'uso target:** anziani con vista debole, persone in stress/emergenza, parlanti italiano L2, bambini che leggono lentamente, utenti con dislessia.
 
 **Regole operative:**
-- Per attivare TTS su una **nuova pagina Hugo**: aggiungere `tts: true` nel frontmatter (opt-in esplicito, non automatico).
+- Per le **pagine Hugo**: niente da fare. Il TTS è ON di default. Per **disattivarlo** su una pagina specifica aggiungere `tts: false` nel frontmatter. Per **escludere una nuova categoria** (es. nuove pagine legali future) aggiungere il path alla blacklist `$ttsBlacklist` in `single.html` e `list.html`.
 - Per **giochi statici**: il TTS dentro il coach è già attivo via `coach.js` su tutti i giochi con `data-coach-game` sul `<body>` — niente da fare manualmente.
 - Per **nuove storie/racconti**: includere `<script src="/formazione/storie-e-racconti/assets/tts-storia.js" defer></script>` prima di `</body>` nell'index.html della storia. Il modulo trova `.storia-toolbar` e inietta il bottone.
-- **Non attivare TTS** su pagine legali (privacy, note legali, accessibilità, social-media-policy) o tecniche (mappa sito, attribuzioni-pittogrammi) — non utili da leggere ad alta voce.
 - **Non aggiungere altri TTS provider** (es. Google Cloud TTS, AWS Polly) che richiedono API key/costo: Web Speech API browser è gratuita, sempre aggiornata col testo, e raccomandata da W3C-WAI per PA.
+
+## Tempo di lettura stimato (`reading-time`)
+
+In cima a ogni pagina con `WordCount > 30` (e non in blacklist TTS) compare un'etichetta discreta del tipo *"Lettura: ~3 minuti"*, calcolata da Hugo con `.ReadingTime` (200 parole/min). Riduce l'ansia da "muro di testo" per anziani, dislessici, italiano L2 e persone che leggono lentamente — chi guarda la pagina sa subito quanto tempo gli serve.
+
+Implementata in `_default/single.html` e `_default/list.html` con la stessa condizione del TTS. CSS scoped sezione **TEMPO DI LETTURA v1.0** in `custom.css`: pill arrotondata azzurro istituzionale, font 0.88rem, nascosta in stampa.
+
+Niente da configurare per pagina: è automatica. Per disattivarla su un caso specifico, condivide la condizione del TTS — `tts: false` la nasconde insieme al bottone.
+
+## Sillabazione automatica (`hyphens: auto`)
+
+Il corpo articolo (`.article-body` su single.html, `.list-intro-content` su list.html) ha sillabazione automatica attivata via CSS `hyphens: auto` con regole italiane (lingua dichiarata in `<html lang="it">`). Beneficio cognitivo per **dislessici e parlanti italiano L2**: meno parole lunghe spezzate brutalmente a fine riga, ritmo di lettura più uniforme.
+
+CSS scoped sezione **SILLABAZIONE AUTOMATICA v1.0** in `custom.css`. Esclusioni tecniche automatiche: `<pre>`, `<code>`, `<table>`, classe utility `.no-hyphens` per casi speciali (toponimi, marchi).
+
+Compatibilità: Chrome 88+, Firefox 43+, Safari 5.1+ (tutti i browser moderni). Su browser senza supporto, il fallback è il rendering standard senza sillabazione (zero regressione).
+
+## Glossario inline con popover
+
+Il sito ha una libreria di voci di glossario (sigle e termini specialistici PC) che il browser **sostituisce automaticamente** alla **prima occorrenza** in ogni pagina con un bottone cliccabile + popover accessibile (definizione breve di 1-2 frasi + link al glossario completo). Aiuta cittadini non tecnici, anziani, italiano L2 e persone in stress da emergenza che incontrano sigle come **DPC**, **COC**, **AeDES**, **IT-alert**, **CFR** senza sapere cosa significhino.
+
+**Architettura:**
+- `data/glossario.yaml` — fonte unica delle voci. Ogni voce: `id`, `termine`, `varianti` (lista di forme da matchare), `definizione` (1-2 frasi AGID, max ~200 caratteri), `link` (URL della voce completa nel `/glossario/`).
+- `static/js/glossario-inline.js` — al `DOMContentLoaded` scansiona `.article-body` e `.list-intro-content`, costruisce una mega-regex con tutte le varianti (ordinata per lunghezza decrescente per priorità), sostituisce la **prima occorrenza** di ogni termine con `<button class="gloss-term">termine ⓘ</button>` + `<span class="gloss-popover" role="tooltip" hidden>`. Scansione O(N) sulla lunghezza del testo.
+- `themes/flavour-pcgenzano/layouts/partials/glossario-inline.html` — inietta `window.PCGENZANO_GLOSSARIO` come JSON statico al build (passa i `link` per `relURL` per compatibilità subpath GitHub Pages) e carica il JS con `defer`.
+- CSS scoped sezione **GLOSSARIO INLINE v1.0** in `custom.css`: termine sottolineato tratteggiato blu istituzionale + icona `ⓘ`, popover con triangolino, varianti per toolbar a11y (contrasto invertito, alto contrasto), nascosto in stampa.
+
+**Vincoli di copyright:** le definizioni sono **parafrasi originali** del Gruppo Comunale, basate sul glossario interno `content/glossario/_index.md` (già di sua penna) e sul glossario DPC pubblico (opera della PA italiana → libera, art. 5 L. 633/1941). **Mai copiare da Treccani** o altre opere protette: solo definizioni nostre, anche quando consultate come riferimento. Cf. policy concordata maggio 2026.
+
+**Esclusioni dal match:** il JS salta i nodi dentro `<a>`, `<button>`, `<code>`, `<pre>`, `<h1>`, `<kbd>`, `[aria-hidden="true"]`, `.no-gloss`, `.tts-wrapper`, `.gloss-term`. Così non si sovrappone a link esistenti, codice, intestazioni di pagina, o altri bottoni. Inoltre solo la **prima occorrenza** di ogni termine viene sostituita: niente rumore visivo se "DPC" appare 10 volte in un articolo.
+
+**Pagine escluse (blacklist nel template, identica a TTS):** `/privacy/`, `/note-legali/`, `/accessibilita/`, `/social-media-policy/`, `/mappa-sito/`, `/attribuzioni-pittogrammi/`, `/cerca/`, `/comunicazioni/` (list), `/glossario/` (auto-esclusa per non popolare popover sui termini del glossario stesso). Per disattivare su una singola pagina: `tts: false` nel frontmatter (la condizione è la stessa del TTS).
+
+**Accessibilità del popover:**
+- Tastiera: bottone nativo, **Enter/Space** apre, **ESC** chiude (con focus che torna al button), **Tab** esce normalmente (non c'è focus trap, è un popover non-modal).
+- ARIA: `aria-expanded` sul button, `aria-describedby` che punta al popover, `role="tooltip"` sul popover, `aria-label` esplicito sul link "Scopri di più nel glossario".
+- Mouse: hover su desktop con `pointer:fine` (no hover su touch), click ovunque chiude (delegato).
+- Scroll: chiude i popover quando l'utente scrolla, perché la posizione assoluta non li segue.
+- Stampa: il bottone torna a testo normale, il popover sparisce.
+
+**Quando aggiungere voci al glossario:**
+- Sigle PC ricorrenti che il cittadino non riconosce (DPC, COC, COI, AeDES, AIB, IT-alert, NUE, CFR…).
+- Termini tecnici che cambiano significato fra linguaggio comune e tecnico (allerta vs emergenza, magnitudo vs intensità, vulnerabilità vs pericolosità).
+- Sigle giuridiche e normative (D.Lgs. 1/2018, OdV, ETS, DPCM, TUSL).
+
+**Regole operative:**
+- Aggiungere una voce: editare `data/glossario.yaml` con id univoco, varianti complete (sigla + espansione + plurali), definizione AGID. Niente più nulla — il prossimo build la prende automaticamente.
+- Disattivare il glossario su una pagina specifica (es. articolo poetico, schede di servizio): `tts: false` nel frontmatter (esclude TTS + glossario insieme — sono accoppiati intenzionalmente, hanno la stessa logica di blacklist).
+- **Evitare definizioni-pubblicità** (mai *"il nostro Gruppo è esperto di X"*): la definizione deve essere **didattica** e **istituzionale**, lo stesso principio del glossario `content/glossario/_index.md`.
+
+Specifiche complete in `MANUALE-SITO.md` (futura parte) e nella regola `02-content-design-pa.md` § "Vocabolario PA".
 
 ## Coach dei giochi — onboarding e teoria di rinforzo
 
