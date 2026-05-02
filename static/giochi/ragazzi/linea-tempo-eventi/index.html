@@ -99,8 +99,9 @@
 
       <section id="intro" class="intro-card">
         <h2 class="h4 mb-3">La memoria serve alla prevenzione</h2>
-        <p>La storia italiana è segnata da disastri che hanno costruito, pezzo dopo pezzo, il sistema nazionale di Protezione Civile: dal <strong>Vajont</strong> alla costituzione del Dipartimento, fino alla direttiva Mattarella e al Codice del 2018. Conoscere l'ordine degli eventi aiuta a capire <em>perché</em> oggi abbiamo le regole che abbiamo.</p>
-        <p class="small text-muted"><i class="bi bi-mouse me-1"></i>Trascina col dito o col mouse le <strong>8 tessere evento</strong> nella striscia temporale sotto. Quando tutte sono collocate, premi "Verifica".</p>
+        <p>La storia italiana è segnata da disastri-evento che, pezzo dopo pezzo, hanno costruito il sistema nazionale di Protezione Civile: dal <strong>Vajont 1963</strong> al sistema <strong>IT-alert 2024</strong>. Ogni grande catastrofe ha portato a una norma o a una riforma: Sarno → PAI, L'Aquila → direttiva Mattarella, Centro Italia → consolidamento COC.</p>
+        <p class="small text-muted"><i class="bi bi-mouse me-1"></i>Trascina le <strong>8 tessere evento</strong> nella striscia temporale, dal più antico al più recente. Quando tutte sono collocate, premi "Verifica".</p>
+        <p class="small"><i class="bi bi-shuffle me-1"></i> <strong>Pool di 16 eventi</strong>: ad ogni partita ne pesca 8 random, la sequenza è diversa ogni volta.</p>
         <div class="d-flex flex-wrap gap-2">
           <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Inizia</button>
           <a href="../index.html" class="btn btn-outline-secondary btn-lg"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
@@ -147,16 +148,42 @@
   <script src="/giochi/assets/js/comune.js"></script>
   <script>
   (function(){
-    var EVENTI = [
-      { id:'vajont', anno:1963, titolo:'Disastro del Vajont', dett:'Frana nel bacino: 1910 vittime.' },
-      { id:'friuli', anno:1976, titolo:'Terremoto del Friuli', dett:'Magnitudo 6.5: nasce la "modalità Friuli" di ricostruzione.' },
-      { id:'irpinia', anno:1980, titolo:'Terremoto Irpinia', dett:'Magnitudo 6.9: spinta decisiva alla creazione del Dipartimento.' },
-      { id:'dpc', anno:1982, titolo:'Nasce il DPC', dett:'Istituito il Ministro per il Coordinamento della PC (Zamberletti).' },
-      { id:'legge225', anno:1992, titolo:'Legge 225/1992', dett:'Istituito il Servizio Nazionale della Protezione Civile.' },
-      { id:'laquila', anno:2009, titolo:"Terremoto de L'Aquila", dett:'Magnitudo 6.3: G8 spostato, processo ai tecnici della Commissione Grandi Rischi.' },
-      { id:'centroitalia', anno:2016, titolo:'Sisma Centro Italia', dett:'Amatrice, Accumoli, Arquata: sequenza sismica prolungata.' },
-      { id:'codice', anno:2018, titolo:'Codice PC (D.lgs 1/2018)', dett:'Riforma organica del sistema nazionale.' }
+    /* Pool ampliato (16 eventi) per rigiocabilita': la linea del tempo del
+       Servizio Nazionale di Protezione Civile italiano va dal Vajont 1963 al
+       sistema IT-alert 2024. Include disastri-evento E norme che ne sono
+       conseguenza: il giocatore vede il legame causa-effetto tra eventi e
+       legislazione (spinta del Vajont -> riforme dighe; Sarno -> PAI; L'Aquila
+       -> direttiva Mattarella; Centro Italia -> consolidamento COC). */
+    var POOL_EVENTI = [
+      { id:'vajont', anno:1963, titolo:'Disastro del Vajont', dett:'Frana nel bacino: 1910 vittime. Spinge la legislazione su sicurezza dighe e bacini.' },
+      { id:'friuli', anno:1976, titolo:'Terremoto del Friuli', dett:'Magnitudo 6.5, 990 vittime. Nasce la "modalita\' Friuli" di ricostruzione decentrata.' },
+      { id:'irpinia', anno:1980, titolo:'Terremoto Irpinia', dett:'Magnitudo 6.9, 2914 vittime. Spinta decisiva alla creazione del Dipartimento PC.' },
+      { id:'dpc', anno:1982, titolo:'Nasce il DPC', dett:'Decreto Zamberletti: Ministro per il Coordinamento della Protezione Civile.' },
+      { id:'seveso', anno:1982, titolo:'Direttiva Seveso CEE', dett:'Quadro europeo per il rischio industriale dopo l\'incidente di Seveso (1976).' },
+      { id:'legge225', anno:1992, titolo:'Legge 225/1992', dett:'Istituisce il Servizio Nazionale della Protezione Civile (architettura ancora vigente).' },
+      { id:'sarno', anno:1998, titolo:'Frana di Sarno', dett:'161 vittime. Conduce alla Legge 267/1998 e ai Piani di Assetto Idrogeologico (PAI).' },
+      { id:'mattarella', anno:2008, titolo:'Direttiva Mattarella', dett:'Indirizzi nazionali su comunicazione del rischio in emergenza.' },
+      { id:'laquila', anno:2009, titolo:'Terremoto de L\'Aquila', dett:'Magnitudo 6.3, 309 vittime. Caso "Commissione Grandi Rischi": riforma comunicazione del rischio.' },
+      { id:'centroitalia', anno:2016, titolo:'Sisma Centro Italia', dett:'Amatrice, Norcia, Arquata: sequenza prolungata. Consolida il sistema COC/COM.' },
+      { id:'codice', anno:2018, titolo:'Codice PC (D.Lgs 1/2018)', dett:'Riforma organica del Servizio Nazionale: razionalizza componenti e strutture operative.' },
+      { id:'morandi', anno:2018, titolo:'Crollo Ponte Morandi', dett:'Genova, 43 vittime. Spinta a riforma manutenzione infrastrutture e norme di vigilanza.' },
+      { id:'vaia', anno:2018, titolo:'Tempesta Vaia', dett:'Vento estremo nel Triveneto: 8,5 milioni di alberi caduti, 14 vittime. Caso simbolo del clima estremo.' },
+      { id:'direttiva-pcm', anno:2021, titolo:'Direttiva PCM 30/4/2021', dett:'Linee guida sulla comunicazione del rischio e dell\'emergenza per il sistema PC.' },
+      { id:'emilia', anno:2023, titolo:'Alluvione Emilia-Romagna', dett:'17 vittime, 23 fiumi esondati. Riforma protezione territoriale e gestione invasi.' },
+      { id:'italert', anno:2024, titolo:'IT-alert operativo', dett:'Avvio del sistema nazionale di allarme pubblico via cell broadcast (segue sperimentazione 2023).' }
     ];
+
+    /* Per partita: 8 eventi estratti random dal pool di 16 */
+    var EVENTI;
+    function estraiEventi(){
+      var arr = POOL_EVENTI.slice();
+      for (var i = arr.length - 1; i > 0; i--){
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+      }
+      return arr.slice(0, 8);
+    }
+    EVENTI = estraiEventi();
 
     var intro = document.getElementById('intro'),
         game = document.getElementById('game'),
@@ -251,6 +278,8 @@
     }
 
     function setup(){
+      // Estrae nuovi 8 eventi a ogni partita: pool di 16 totali per rigiocabilita'
+      EVENTI = estraiEventi();
       pool.innerHTML = '';
       timeline.innerHTML = '';
       esito.classList.add('hide');
