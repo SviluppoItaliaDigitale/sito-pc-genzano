@@ -59,7 +59,7 @@ ISO7010=(
   # Pericolo / Avvertimento (W)
   "W001|pericolo-generico|Pericolo generico"
   "W002|pericolo-esplosivo|Pericolo materiale esplosivo"
-  "W008|pericolo-corrosivo|Pericolo sostanze corrosive"
+  "W008|pericolo-corrosivo|Pericolo sostanze corrosive (W008 vecchia ed., conferma visiva)"
   "W009|pericolo-biologico|Pericolo biologico"
   "W010|pericolo-bassa-temperatura|Pericolo bassa temperatura"
   "W011|pavimento-scivoloso|Pavimento scivoloso"
@@ -68,7 +68,13 @@ ISO7010=(
   "W017|superficie-calda|Superficie calda"
   "W018|allarme-antincendio-automatico|Allarme antincendio automatico"
   "W021|materiale-infiammabile|Materiale infiammabile"
-  "W023|caduta-massi|Caduta di massi (frana)"
+  # NOTA: la voce "W023|caduta-massi" e' stata rimossa il 2 maggio 2026:
+  # ISO 7010 W023 = Sostanza corrosiva (NON caduta massi). Lo script
+  # scaricava il file corrosivo e lo salvava col nome sbagliato
+  # "caduta-massi.svg", inducendo il Memory primaria ad abbinare un
+  # pittogramma corrosivo alla voce "Attento alle frane" (bug segnalato
+  # dall'utente). Per il concetto "frana" usare arasaac/frana.png
+  # (gia' nella libreria, semantica chiara).
   "W024|pericolo-schiacciamento|Pericolo schiacciamento"
 
   # Obbligo (M)
