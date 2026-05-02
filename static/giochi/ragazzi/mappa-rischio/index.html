@@ -73,12 +73,14 @@
 
           <div id="intro" class="rag-panel">
             <h2>Come si gioca</h2>
-            <p>Sulla mappa vedi tre zone schematiche di Genzano di Roma: il <strong>centro storico</strong>, l'<strong>area del lago</strong> (Lago di Nemi nel cratere vulcanico), e la <strong>zona residenziale nuova</strong>.</p>
+            <p>Sulla mappa vedi quattro zone schematiche di Genzano di Roma: <strong>centro storico</strong>, <strong>area del lago</strong> (Lago di Nemi nel cratere vulcanico), <strong>zona residenziale</strong>, <strong>parco/scuole</strong>.</p>
             <ol class="small">
               <li>Seleziona un elemento dalla lista in basso.</li>
               <li>Clicca sulla mappa dove va posizionato.</li>
               <li>Alla fine verifichi tutti i piazzamenti insieme.</li>
             </ol>
+            <p class="small">⚠️ <strong>Attenzione</strong>: tra gli 8 elementi possono comparire <strong>distrattori</strong> (concetti che non si applicano a Genzano, es. porto marittimo, centrale nucleare). Se li riconosci, sai che il piano comunale non li include.</p>
+            <p class="small">Pool di 24 elementi: ogni partita ne pesca 8 random — la mappa è diversa ogni volta.</p>
             <p class="small text-muted"><em>Nota didattica: la mappa è una rappresentazione stilizzata. Per il piano reale consulta il Piano di Emergenza Comunale.</em></p>
             <button id="start" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Inizia</button>
           </div>
@@ -152,16 +154,60 @@
       lago:         { test: function(x,y){ var dx=x-310, dy=y-215; return (dx*dx)/(70*70) + (dy*dy)/(55*55) <= 1; } }
     };
 
-    var ELEMENTI = [
+    /* Pool ampliato (20 zone + 4 distrattori) per rigiocabilita': ogni partita
+       estrae 6 elementi zone-corretti + 2 distrattori, totale 8 da posizionare.
+       I distrattori (zona: 'nessuna') sono concetti che NON si applicano a
+       Genzano (es. centrale nucleare, porto): il giocatore impara a riconoscerli
+       e che non vanno piazzati, oppure capisce dal feedback perche' sbagliano. */
+    var POOL_ZONE = [
       { id: 'area-accoglienza', icon: 'bi-house-heart-fill', label: 'Area accoglienza', zona: 'parco', motivo: 'Le aree di accoglienza vanno in spazi aperti, lontani da edifici vulnerabili. Il parco/area scuole è l\'ideale.' },
       { id: 'punto-raccolta', icon: 'bi-geo-fill', label: 'Punto di raccolta', zona: 'parco', motivo: 'I punti di raccolta sono in aree aperte note, come piazze o spazi verdi pubblici.' },
-      { id: 'rischio-frana', icon: 'bi-arrow-down-circle-fill', label: 'Rischio frana', zona: 'lago', motivo: 'Le scarpate verso il cratere del lago sono zone a rischio frana, tipiche dei Castelli.' },
+      { id: 'rischio-frana', icon: 'bi-arrow-down-circle-fill', label: 'Rischio frana', zona: 'lago', motivo: 'Le scarpate verso il cratere del lago sono zone a rischio frana, tipiche dei Castelli Romani.' },
       { id: 'rischio-esondazione', icon: 'bi-water', label: 'Rischio esondazione', zona: 'lago', motivo: 'L\'area del lago e dei bacini collinari è più esposta a esondazioni in caso di piogge intense.' },
       { id: 'magazzino-pc', icon: 'bi-box-seam-fill', label: 'Magazzino PC', zona: 'residenziale', motivo: 'I magazzini operativi si collocano dove strade e viabilità permettono l\'accesso ai mezzi.' },
       { id: 'scuola-sicura', icon: 'bi-mortarboard-fill', label: 'Scuola da tutelare', zona: 'parco', motivo: 'Le scuole sono edifici strategici da proteggere. Nella nostra mappa sono nella zona parco/scuole.' },
-      { id: 'centro-storico', icon: 'bi-bank', label: 'Patrimonio storico', zona: 'centro', motivo: 'Il centro storico va identificato come zona da tutelare (edifici antichi spesso più fragili).' },
-      { id: 'presidio-sanita', icon: 'bi-hospital-fill', label: 'Presidio sanitario', zona: 'residenziale', motivo: 'I presidi sanitari in emergenza si collocano in aree accessibili, non nel centro stretto.' }
+      { id: 'centro-storico', icon: 'bi-bank', label: 'Patrimonio storico', zona: 'centro', motivo: 'Il centro storico va identificato come zona da tutelare: edifici antichi spesso più fragili al sisma.' },
+      { id: 'presidio-sanita', icon: 'bi-hospital-fill', label: 'Presidio sanitario', zona: 'residenziale', motivo: 'I presidi sanitari in emergenza si collocano in aree accessibili, non nel centro stretto.' },
+      { id: 'rifugio-sismico', icon: 'bi-shield-fill', label: 'Tendopoli post-sisma', zona: 'parco', motivo: 'Le tendopoli si montano in spazi aperti pianeggianti, lontani da edifici che potrebbero crollare.' },
+      { id: 'eliporto', icon: 'bi-broadcast-pin', label: 'Eliporto di emergenza', zona: 'residenziale', motivo: 'Gli eliporti richiedono ampio spazio aperto, lontano da cavi elettrici e edifici alti.' },
+      { id: 'coc', icon: 'bi-gear-fill', label: 'COC (Centro Operativo Comunale)', zona: 'residenziale', motivo: 'Il COC si attiva di solito presso il Comune o sede attigua: deve essere raggiungibile e operativa anche durante l\'evento.' },
+      { id: 'cisterna-acqua', icon: 'bi-droplet-fill', label: 'Cisterna acqua potabile', zona: 'parco', motivo: 'In emergenza idrica le cisterne mobili si dispiegano in spazi aperti per la distribuzione ai cittadini.' },
+      { id: 'caserma-vvff', icon: 'bi-fire', label: 'Caserma Vigili del Fuoco', zona: 'residenziale', motivo: 'Le caserme operative si collocano vicino a strade primarie per uscite rapide.' },
+      { id: 'rischio-incendio-bosco', icon: 'bi-tree-fill', label: 'Rischio incendio bosco', zona: 'parco', motivo: 'Le aree verdi periurbane sono a rischio AIB nei mesi giugno-settembre nel Lazio.' },
+      { id: 'rischio-vento', icon: 'bi-wind', label: 'Rischio caduta alberi (vento)', zona: 'parco', motivo: 'In allerta vento gli alberi alti dei parchi possono cadere su strade e marciapiedi.' },
+      { id: 'edificio-storico-fragile', icon: 'bi-building-exclamation', label: 'Edificio storico fragile', zona: 'centro', motivo: 'Nel centro storico molti edifici antichi richiedono interventi di consolidamento anti-sismico.' },
+      { id: 'via-fuga-principale', icon: 'bi-signpost-2-fill', label: 'Via di fuga principale', zona: 'centro', motivo: 'Le vie di fuga del centro storico portano verso spazi aperti (piazze, parco).' },
+      { id: 'zona-sicura-attesa', icon: 'bi-flag-fill', label: 'Zona di attesa quartiere', zona: 'parco', motivo: 'Per ogni quartiere serve una zona di attesa raggiungibile a piedi in pochi minuti.' },
+      { id: 'pma', icon: 'bi-bandaid-fill', label: 'Posto Medico Avanzato (PMA)', zona: 'residenziale', motivo: 'Il PMA è un\'unità sanitaria mobile che si dispiega vicino al sito dell\'emergenza con accesso ambulanze.' },
+      { id: 'pendio-instabile', icon: 'bi-triangle-fill', label: 'Pendio instabile', zona: 'lago', motivo: 'I versanti del cratere e dei colli circostanti hanno punti di instabilità geologica monitorati dal CNR-IRPI.' }
     ];
+
+    /* Distrattori: concetti che NON si applicano al territorio di Genzano.
+       Quando piazzati, sono sempre sbagliati (zona: 'nessuna') e il feedback
+       spiega perche' non c'entrano. Educa alla pianificazione contestuale. */
+    var POOL_DISTRATTORI = [
+      { id: 'centrale-nucleare', icon: 'bi-radioactive', label: 'Centrale nucleare', zona: 'nessuna', motivo: 'In Italia non ci sono centrali nucleari attive dal 1990. Genzano non rientra in nessun piano nucleare: questo elemento non si piazza qui.' },
+      { id: 'porto-marittimo', icon: 'bi-water', label: 'Porto marittimo', zona: 'nessuna', motivo: 'Genzano è sui Castelli Romani, lontano dal mare. Il rischio mareggiate non si applica: questo elemento non si piazza qui.' },
+      { id: 'stazione-metro', icon: 'bi-train-front-fill', label: 'Stazione metropolitana', zona: 'nessuna', motivo: 'Genzano non ha una linea metropolitana. La rete trasporti è basata su autobus e treni regionali Roma-Velletri: questo elemento non si piazza qui.' },
+      { id: 'fabbrica-seveso', icon: 'bi-building-fill-exclamation', label: 'Stabilimento Seveso (chimico)', zona: 'nessuna', motivo: 'Il rischio chimico-industriale (Direttiva Seveso) riguarda aree con grandi stabilimenti. Genzano non ne ha: questo elemento non si piazza qui.' }
+    ];
+
+    /* Estrae casualmente N elementi zone-corretti + M distrattori. */
+    function shuffle(arr){
+      arr = arr.slice();
+      for (var i = arr.length - 1; i > 0; i--){
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+      }
+      return arr;
+    }
+    function estraiElementi(){
+      var zone = shuffle(POOL_ZONE).slice(0, 6);
+      var distr = shuffle(POOL_DISTRATTORI).slice(0, 2);
+      return shuffle(zone.concat(distr));
+    }
+
+    var ELEMENTI = estraiElementi();
 
     var intro = document.getElementById('intro'),
         game = document.getElementById('game'),
@@ -179,6 +225,8 @@
     function start(){
       intro.classList.add('hide'); end.classList.add('hide');
       game.classList.remove('hide');
+      // Estrae nuovi elementi a ogni nuova partita: pool 24 totali, 8 estratti
+      ELEMENTI = estraiElementi();
       piazzamenti = {};
       active = null;
       feedback.innerHTML = '';
@@ -235,9 +283,13 @@
       ELEMENTI.forEach(function(el){
         var p = piazzamenti[el.id];
         if (!p) return;
-        var zonaCorretta = ZONE[el.zona].test(p.x, p.y);
+        // Distrattori: zona 'nessuna' = sempre sbagliato (non si piazza in nessuna
+        // parte di Genzano). Lo studente deve riconoscerli, non e' un errore di
+        // posizionamento ma di contesto territoriale.
+        var zonaCorretta = (el.zona !== 'nessuna') && ZONE[el.zona] && ZONE[el.zona].test(p.x, p.y);
         p.marker.classList.add(zonaCorretta ? 'correct' : 'wrong');
-        details += '<li>' + (zonaCorretta ? '✅' : '❌') + ' <strong>' + el.label + '</strong>: ' + el.motivo + '</li>';
+        var simbolo = zonaCorretta ? '✅' : (el.zona === 'nessuna' ? '⚠️' : '❌');
+        details += '<li>' + simbolo + ' <strong>' + el.label + '</strong>: ' + el.motivo + '</li>';
         if (zonaCorretta) ok++;
       });
       details += '</ul>';
@@ -259,15 +311,23 @@
     function finish(ok){
       game.classList.add('hide');
       end.classList.remove('hide');
+      // Conta solo elementi zone-corretti come massimo possibile: i distrattori
+      // (zona 'nessuna') sono per definizione sbagliati se piazzati. Fanno parte
+      // del gameplay didattico, non penalizzano il punteggio.
+      var totZone = ELEMENTI.filter(function(el){ return el.zona !== 'nessuna'; }).length;
+      var totDistr = ELEMENTI.length - totZone;
       document.getElementById('final-ok').textContent = ok;
-      document.getElementById('final-tot').textContent = ELEMENTI.length;
+      document.getElementById('final-tot').textContent = totZone;
       var msg;
-      var perc = (ok / ELEMENTI.length) * 100;
+      var perc = totZone > 0 ? (ok / totZone) * 100 : 0;
       if (perc >= 90) msg = 'Eccellente! Hai una solida intuizione della pianificazione territoriale.';
       else if (perc >= 70) msg = 'Buon risultato. Ripassa le logiche di aree di accoglienza e vulnerabilità.';
       else msg = 'Rivedi il Piano di Emergenza Comunale e il principio delle aree di attesa/accoglienza.';
+      if (totDistr > 0) {
+        msg += ' Tra gli elementi c\'erano ' + totDistr + ' distrattori (concetti che non si applicano a Genzano: leggi le note ⚠️ qui sopra).';
+      }
       document.getElementById('final-msg').textContent = msg;
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('mappa-rischio', ok, ELEMENTI.length, '#end');
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('mappa-rischio', ok, totZone, '#end');
     }
   })();
   </script>
