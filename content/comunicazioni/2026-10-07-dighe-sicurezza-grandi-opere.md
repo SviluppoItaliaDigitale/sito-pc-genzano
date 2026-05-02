@@ -11,7 +11,6 @@ scadenza: ""
 area: "Lazio"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Diga" 2026-10-07-dighe-sicurezza-grandi-opere it
 ---
 
 L'Italia gestisce circa **500 grandi dighe** (superiori ai 15 metri o con invaso oltre 1.000.000 m³) e oltre **10.000 piccoli invasi**. Dopo la tragedia del **Vajont** del 9 ottobre 1963, il sistema di sicurezza è stato profondamente rinnovato. Anche se nel Lazio non ci sono grandi dighe nei Castelli Romani, conoscere il sistema è parte della cultura nazionale di protezione civile.

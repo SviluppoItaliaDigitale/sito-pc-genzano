@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Nevicata" 2026-01-31-neve-castelli-romani-organizzazione it
 ---
 
 Nei **Castelli Romani** la neve non è la regola, ma nemmeno un'eccezione. L'altitudine di Genzano (circa 435 m s.l.m.) e quella dei comuni vicini, unita alle correnti fredde da nord, rende possibili nevicate **tra gennaio e inizio marzo**. Quando arrivano, spesso inattese, possono causare **disagi seri**: strade bloccate, scuole chiuse, difficoltà per persone fragili e servizi essenziali.

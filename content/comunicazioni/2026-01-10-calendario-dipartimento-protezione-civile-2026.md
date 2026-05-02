@@ -14,7 +14,6 @@ allegati:
     url: "https://www.protezionecivile.gov.it/static/3a648059e712d45f14a8a4379cc110dc/calendario-dpc-2026-sfogliabile.pdf"
     dimensione: "40 MB"
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Dipartimento della Protezione Civile" 2026-01-10-calendario-dipartimento-protezione-civile-2026 it
 ---
 
 È disponibile l'edizione 2026 del **Calendario del Dipartimento della Protezione Civile**, dedicata quest'anno alle emergenze internazionali.

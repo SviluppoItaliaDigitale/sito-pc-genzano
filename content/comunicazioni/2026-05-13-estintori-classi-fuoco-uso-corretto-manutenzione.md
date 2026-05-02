@@ -12,7 +12,6 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Estintore" 2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione it
 ---
 
 L'estintore portatile è lo strumento antincendio di prima difesa più diffuso in Italia. Lo si trova nelle sedi di protezione civile, nei mezzi operativi, nelle abitazioni, negli uffici, nei capannoni. Ma un estintore non è un oggetto universale: ognuno è progettato per spegnere un certo tipo di fuoco e può essere **inefficace o pericoloso** se usato su un fuoco della classe sbagliata.

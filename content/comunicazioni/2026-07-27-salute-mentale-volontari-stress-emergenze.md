@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Salute mentale" 2026-07-27-salute-mentale-volontari-stress-emergenze it
 ---
 
 Essere **volontario di Protezione Civile** significa esporsi a esperienze che possono lasciare **impronte psicologiche** profonde: incidenti, persone in difficoltà, scene di sofferenza, operazioni in condizioni estreme. La **salute mentale del volontario** non è un tema secondario: è parte integrante della preparazione professionale. Ignorarla significa compromettere persone preziose.

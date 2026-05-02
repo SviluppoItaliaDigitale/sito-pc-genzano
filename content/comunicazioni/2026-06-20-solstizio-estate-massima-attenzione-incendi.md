@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Solstizio" 2026-06-20-solstizio-estate-massima-attenzione-incendi it
 ---
 
 Il **20-21 giugno** segna il **solstizio d'estate**: il momento dell'anno con il giorno più lungo e l'angolazione solare più alta. Astronomicamente è l'inizio della stagione estiva, ma in Protezione Civile coincide con qualcosa di più concreto: la **fase di massima attenzione** sugli incendi boschivi.

@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Numero unico di emergenza europeo" 2026-02-11-giornata-europea-112-numero-unico it
 ---
 
 L'**11 febbraio** si celebra in tutti i paesi dell'Unione Europea la **Giornata Europea del 112** (*European Emergency Number Day*). La data non è casuale: ricorda la numerazione stessa (11/2) e sottolinea il ruolo del **112** come **Numero Unico di Emergenza** per tutto il continente.

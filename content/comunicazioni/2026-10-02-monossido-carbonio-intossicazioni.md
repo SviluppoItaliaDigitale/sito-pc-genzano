@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Monossido di carbonio" 2026-10-02-monossido-carbonio-intossicazioni it
 ---
 
 Ogni anno in Italia **decine di persone** muoiono per **intossicazione da monossido di carbonio (CO)** in casa. Centinaia vengono ospedalizzate. Il CO è particolarmente insidioso perché è **inodore**, **incolore**, **insapore** e **invisibile**: si accumula in un ambiente senza dare segnali percepibili prima dei sintomi clinici. L'autunno e l'inverno, con il riaccendersi di stufe, caldaie, camini, sono i mesi più pericolosi.

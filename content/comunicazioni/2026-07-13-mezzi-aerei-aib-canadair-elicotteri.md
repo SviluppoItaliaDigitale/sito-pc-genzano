@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Canadair CL-415" 2026-07-13-mezzi-aerei-aib-canadair-elicotteri it
 ---
 
 In estate, quando un incendio boschivo raggiunge dimensioni rilevanti, la differenza tra **contenimento** e **disastro** può essere un Canadair. I **mezzi aerei** del sistema antincendio italiano sono un patrimonio operativo cruciale. Vale la pena conoscere come funzionano, chi li coordina, quando entrano in azione.
