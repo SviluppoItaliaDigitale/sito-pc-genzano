@@ -1,7 +1,7 @@
 # MANUALE-SITO — Manuale operativo (split)
 
 Manuale operativo completo del sito Protezione Civile Genzano di Roma.
-Diviso in 18 parti (0-17) per facilità di manutenzione e revisione.
+Diviso in 19 parti (0-18) per facilità di manutenzione e revisione.
 
 ## Indice delle Parti
 
@@ -25,6 +25,7 @@ Diviso in 18 parti (0-17) per facilità di manutenzione e revisione.
 | Parte 15 | Homepage enhancements v1.0 (aprile 2026) | [`parte-15-homepage-enhancements-v1-0-aprile-2026.md`](parte-15-homepage-enhancements-v1-0-aprile-2026.md) |
 | Parte 16 | Bozze social: gestione quota Gemini API | [`parte-16-bozze-social-gestione-quota-gemini-api.md`](parte-16-bozze-social-gestione-quota-gemini-api.md) |
 | Parte 17 | Coach didattico nei giochi e TTS esteso (maggio 2026) | [`parte-17-coach-didattico-nei-giochi-e-tts-esteso-maggio-2026.md`](parte-17-coach-didattico-nei-giochi-e-tts-esteso-maggio-2026.md) |
+| Parte 18 | Lettura accessibile per fasce deboli: TTS dappertutto, glossario inline, tempo lettura, sillabazione (maggio 2026) | [`parte-18-lettura-accessibile-maggio-2026.md`](parte-18-lettura-accessibile-maggio-2026.md) |
 
 ---
 

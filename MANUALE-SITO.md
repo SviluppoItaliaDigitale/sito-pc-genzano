@@ -1,15 +1,15 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 3.0
-**Ultimo aggiornamento manuale:** 2026-05-01
+**Versione:** 3.1
+**Ultimo aggiornamento manuale:** 2026-05-02
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
 **Bootstrap Italia:** versione 2.17.3
 **WCAG di riferimento:** 2.2 livello AA
 **Hugo di riferimento:** 0.143.x extended
 
-> **🗂️ Manuale spezzato in 18 file (maggio 2026)** — A maggio 2026 il manuale è stato
-> diviso in 18 file separati nella cartella [`manuale/`](manuale/) (1 file per Parte) per
+> **🗂️ Manuale spezzato in 19 file (maggio 2026)** — A maggio 2026 il manuale è stato
+> diviso in file separati nella cartella [`manuale/`](manuale/) (1 file per Parte) per
 > facilitare manutenzione, revisioni puntuali e diff PR più leggibili. Questo file resta
 > come **indice/redirect** per i riferimenti esterni che citano "MANUALE-SITO.md Parte N".
 
@@ -37,6 +37,7 @@
 | Parte 15 | Homepage enhancements v1.0 (aprile 2026) | [`manuale/parte-15-homepage-enhancements-v1-0-aprile-2026.md`](manuale/parte-15-homepage-enhancements-v1-0-aprile-2026.md) |
 | Parte 16 | Bozze social: gestione quota Gemini API | [`manuale/parte-16-bozze-social-gestione-quota-gemini-api.md`](manuale/parte-16-bozze-social-gestione-quota-gemini-api.md) |
 | Parte 17 | Coach didattico nei giochi e TTS esteso (maggio 2026) | [`manuale/parte-17-coach-didattico-nei-giochi-e-tts-esteso-maggio-2026.md`](manuale/parte-17-coach-didattico-nei-giochi-e-tts-esteso-maggio-2026.md) |
+| Parte 18 | Lettura accessibile per fasce deboli: TTS dappertutto, glossario inline, tempo lettura, sillabazione (maggio 2026) | [`manuale/parte-18-lettura-accessibile-maggio-2026.md`](manuale/parte-18-lettura-accessibile-maggio-2026.md) |
 
 > 👉 **[Vai all'indice completo del manuale (`manuale/README.md`)](manuale/README.md)**
 
@@ -60,10 +61,29 @@ Se non sai in quale Parte cercare:
 | Gerarchia fonti DPC/CNR/EENA per crisi sui social | [Parte 13](manuale/parte-13-social-media-policy-pubblica.md) § 13.7 + 13.9 |
 | Configurare Claude Code (sandbox, API keys) | [Parte 14](manuale/parte-14-configurazione-ambiente-di-sviluppo-claude-code.md) |
 | Coach dei giochi + TTS audio + fiabe | [Parte 17](manuale/parte-17-coach-didattico-nei-giochi-e-tts-esteso-maggio-2026.md) |
+| TTS dappertutto + glossario inline + tempo lettura + sillabazione | [Parte 18](manuale/parte-18-lettura-accessibile-maggio-2026.md) |
+| Aggiungere voce al glossario inline (popover sui termini PC) | [Parte 18](manuale/parte-18-lettura-accessibile-maggio-2026.md) § 18.9 |
+| Vincoli copyright sulle definizioni del glossario (Treccani NO) | [Parte 18](manuale/parte-18-lettura-accessibile-maggio-2026.md) § 18.10 |
 
 ---
 
 ## 📜 Changelog
+
+> **3.1 (2026-05-02) — Lettura accessibile per fasce deboli**
+> Cinque strumenti integrati per anziani, dislessici, italiano L2, bambini in
+> lettura lenta, persone in stress da emergenza:
+> - TTS "Leggi ad alta voce" **default ON su tutto il sito** (logica invertita
+>   da opt-in a opt-out — blacklist legali/tecniche)
+> - Selettore velocità (Lento 0.75x / Normale 0.95x / Veloce 1.15x), persistito
+>   in localStorage
+> - Toggle "Segui parole" che evidenzia la parola in lettura via
+>   `SpeechSynthesisUtterance.onboundary` (default OFF, fallback Safari iOS)
+> - Tempo di lettura stimato sopra ogni articolo (`Lettura: ~N minuti`)
+> - Sillabazione automatica `hyphens: auto` con regole italiane
+> - Glossario inline con popover sui termini PC alla prima occorrenza (61 voci
+>   in `data/glossario.yaml`, definizioni nostre AGID — vincolo copyright:
+>   nessuna copia da Treccani)
+> Specifiche complete in nuova **Parte 18**.
 
 > **3.0 (2026-05-01) — Manuale spezzato in 18 file**
 > - Il manuale era diventato un singolo file di ~5500 righe / 290 KB (troppo grande
