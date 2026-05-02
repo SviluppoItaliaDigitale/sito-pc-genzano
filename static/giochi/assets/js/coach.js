@@ -421,17 +421,18 @@
     'mappa-rischio': {
       fascia: 'ragazzi',
       titolo: 'Consigli per Mappa del Rischio',
-      regola: 'Ogni territorio ha rischi specifici: clima, geologia, urbanizzazione e attività umane li determinano.',
+      regola: 'Ogni territorio ha rischi specifici. Il Piano comunale di emergenza colloca aree di accoglienza, vie di fuga e presidi in funzione di geologia, urbanizzazione e accessibilità.',
       come: [
-        'Castelli Romani: rischio idrogeologico (versanti collinari) e sismico (faglie laziali).',
-        'Costa: rischio costiero, mareggiate, talvolta tsunami.',
-        'Aree industriali: rischio chimico (Seveso) e incidenti rilevanti.',
-        'Aree boschive: rischio incendio (giugno-settembre).',
-        'Centro storico: rischio sismico amplificato e infrastrutture vetuste.'
+        'Aree di accoglienza, tendopoli, eliporti: spazi aperti pianeggianti (parco, area scuole).',
+        'Versanti collinari del cratere: rischio frana e dissesto idrogeologico.',
+        'Centro storico di Genzano: edifici antichi, sismico amplificato, vie di fuga strette.',
+        'Caserme VVF e PMA: lungo strade primarie per accesso rapido dei mezzi.',
+        'Distrattori (porto, centrale nucleare, metro): non si applicano a Genzano. Riconoscili.'
       ],
       teoria: [
         { titolo: 'Rischi e prevenzione', url: '/rischi-prevenzione/' },
-        { titolo: 'Cartografia del territorio', url: '/cartografia/' }
+        { titolo: 'Cartografia del territorio', url: '/cartografia/' },
+        { titolo: 'Piano di emergenza', url: '/piano-emergenza/' }
       ]
     },
     'radio-emergency': {
