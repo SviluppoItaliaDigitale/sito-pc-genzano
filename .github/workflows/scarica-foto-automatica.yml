@@ -102,7 +102,13 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
+          # set +e perché vogliamo continuare il loop anche se un singolo
+          # download fallisce (lo script fallito viene tracciato in
+          # FAILED_ITEMS e l'articolo successivo viene processato). Ma
+          # aggiungiamo pipefail per catturare errori intermedi nei
+          # pipeline bash | grep | sed.
           set +e
+          set -o pipefail
           PROCESSED=0
           FAILED=0
           declare -a FAILED_ITEMS

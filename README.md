@@ -19,8 +19,8 @@ Questo repository contiene diversi file Markdown con ruoli diversi. Non vanno el
 | File | A cosa serve | Quando aprirlo |
 |---|---|---|
 | [`README.md`](README.md) | Panoramica del progetto, guida ai file, comandi principali. | Primo file da leggere. |
-| [`MANUALE-SITO.md`](MANUALE-SITO.md) | **Indice del manuale operativo** (v3.0). Da maggio 2026 il manuale è split in 18 file nella cartella [`manuale/`](manuale/) (1 file = 1 Parte). Questo file resta come indice/redirect. | Per orientarti tra le 18 Parti. La singola Parte è poi in `manuale/parte-NN-*.md`. |
-| [`manuale/`](manuale/) | **Manuale operativo split** (18 file da Parte 0 a Parte 17): procedura articoli, regole AGID, immagini fascia blu, social, comunicati stampa, configurazione Claude Code, coach giochi + TTS. | Quando devi scrivere un articolo, gestire emergenza, configurare workflow ecc. Apri il file della Parte specifica. |
+| [`MANUALE-SITO.md`](MANUALE-SITO.md) | **Indice del manuale operativo** (v3.0). Da maggio 2026 il manuale è split per Parti nella cartella [`manuale/`](manuale/) (1 file = 1 Parte). Questo file resta come indice/redirect. | Per orientarti fra le Parti. La singola Parte è poi in `manuale/parte-NN-*.md`. |
+| [`manuale/`](manuale/) | **Manuale operativo split** (1 file per Parte): procedura articoli, regole AGID, immagini fascia blu, social, comunicati stampa, configurazione Claude Code, coach giochi + TTS, lettura accessibile. | Quando devi scrivere un articolo, gestire emergenza, configurare workflow ecc. Apri il file della Parte specifica. |
 | [`MANUALE-MOBILE.md`](MANUALE-MOBILE.md) | **Workflow mobile-first** — guida per pubblicare articoli, modificare il sito, attivare emergenza, pubblicare sui social usando solo app Claude Android + GitHub web mobile. Niente PC. | Quando gestisci il sito dal telefono. |
 | [`PIANO-EDITORIALE.md`](PIANO-EDITORIALE.md) | Fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, ASL, Parco Castelli), calendario redazionale mensile e biblioteca di 250+ titoli evergreen. Obiettivo: tendere a un articolo al giorno (300-365/anno), minimo sostenibile 3-4 a settimana. | Quando devi proporre nuovi contenuti o cerchi ispirazione sulle fonti. |
 | [`CLAUDE.md`](CLAUDE.md) | Istruzioni operative per Claude Code (o altra AI) — mandato, priorità, regole di qualità e sicurezza. Importa automaticamente le 11 regole in `.claude/rules/`. | Lettura automatica per ogni sessione AI. Va aggiornato solo se cambia la governance. |
@@ -61,7 +61,7 @@ Le storie sono usabili come materiale didattico per l'educazione civica nelle sc
 
 ### Coach didattico nei giochi (`/giochi/`)
 
-Tutti i 33 giochi della sezione **Giochi della Sicurezza** hanno un sistema di onboarding e teoria di rinforzo:
+Tutti i giochi della sezione **Giochi della Sicurezza** hanno un sistema di onboarding e teoria di rinforzo:
 
 - **Bottone "💡 Consigli per giocare"** sotto il titolo: apre un dialog con la regola del gioco, "Come si gioca" e link alle pagine teoria del sito (rischi-prevenzione, numeri-utili, pittogrammi, ecc.).
 - **Bottone "🔊 Ascolta i consigli"** dentro il dialog (Web Speech API).
@@ -89,7 +89,7 @@ Pattern ispirato a campagna DPC "Io non rischio" e linee guida AGID per accessib
 sito-pc-genzano/
 ├── README.md                   ← sei qui
 ├── MANUALE-SITO.md             ← indice del manuale (v3.0) — split in manuale/
-├── manuale/                    ← 18 file Parte 0-17 (split da maggio 2026)
+├── manuale/                    ← file Parte (split da maggio 2026, 1 file = 1 Parte)
 │   ├── README.md               ← indice navigabile
 │   └── parte-NN-*.md           ← 1 file per Parte (redazione articoli, AGID,
 │                                 immagini, social, comunicati, deploy, ecc.)
@@ -135,7 +135,7 @@ sito-pc-genzano/
 │   ├── foto-da-usgs.sh             ← idem da USGS (ShakeMap eventid)
 │   ├── foto-da-noaa.sh             ← idem da NOAA (URL diretto)
 │   ├── aggiorna-frontmatter-foto.py ← popola image:/credit:/source_url:
-│   ├── scarica-pittogrammi.sh      ← libreria 171 pittogrammi ISO 7010+ARASAAC
+│   ├── scarica-pittogrammi.sh      ← libreria pittogrammi ISO 7010+ARASAAC
 │   ├── smoke-test-live.sh          ← smoke test post-deploy (chiamato da CI)
 │   ├── hash-fonte-agid.py          ← hashing testuale fonti AGID per drift detection
 │   └── export-contesto-ai.sh       ← genera CONTESTO-AI.md per altre AI
@@ -145,7 +145,7 @@ sito-pc-genzano/
 │   ├── manuali/                ← PDF, manuali tecnici, loghi e locandine ufficiali
 │   │   ├── loghi/              ← stemmi/loghi del Gruppo per personalizzazioni
 │   │   └── locandine/          ← locandine ufficiali (es. Diventa Volontario)
-│   ├── pittogrammi/            ← 171 pittogrammi ISO 7010 + ARASAAC
+│   ├── pittogrammi/            ← pittogrammi ISO 7010 + ARASAAC
 │   ├── cartelli/               ← segnaletica aree di emergenza
 │   ├── giochi/, quizpc/, formazionepc/, abili-a-proteggere/, giochi-bambini/
 │   │                              ← micro-siti HTML autonomi educativi/didattici
@@ -281,7 +281,7 @@ bash scripts/export-contesto-ai.sh
 
 Produce `CONTESTO-AI.md` (~300 KB) contenente:
 - README, CLAUDE.md, 11 regole di governance (`.claude/rules/01-08` con 04a/b/c)
-- Manuale operativo completo (indice `MANUALE-SITO.md` + 18 file `manuale/parte-NN.md`) + `MANUALE-MOBILE.md`
+- Manuale operativo completo (indice `MANUALE-SITO.md` + file `manuale/parte-NN.md`) + `MANUALE-MOBILE.md`
 - Piano editoriale (fonti + calendario + biblioteca evergreen)
 - Archetype articoli, configurazione Hugo, shortcode (`foto`, `pittogramma`, `cosa-non-fare`, `chi-chiamare`)
 - Memorie utente (feedback durevoli salvati da Claude Code)
