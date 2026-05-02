@@ -37,8 +37,13 @@ def has_empty_image(text: str) -> bool:
 
 
 def has_todo_marker(text: str) -> bool:
-    """True se l'articolo ha un marker TODO-foto-* (verrà processato altrove)."""
-    return bool(re.search(r'^# TODO-foto-(wikipedia|nasa|usgs):', text, flags=re.MULTILINE))
+    """True se l'articolo ha un marker TODO-foto-* (verrà processato altrove).
+    Allineato alla whitelist del workflow scarica-foto-automatica.yml (7 fonti)."""
+    return bool(re.search(
+        r'^# TODO-foto-(wikipedia|nasa|usgs|noaa|pexels|pixabay|unsplash):',
+        text,
+        flags=re.MULTILINE,
+    ))
 
 
 def update_frontmatter(md: Path, slug: str, title: str) -> bool:

@@ -5,8 +5,8 @@ description: "Il 2 maggio nel pomeriggio i volontari, su richiesta della Polizia
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-02-albero-pericolante-rimozione-volontari-genzano.webp"
+image_alt: "Cover dell'articolo: Albero pericolante a Genzano: rimozione e messa in sicurezza dell'area da parte dei volontari"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
