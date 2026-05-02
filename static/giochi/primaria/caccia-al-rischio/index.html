@@ -46,8 +46,9 @@
           <div class="col-lg-4 mb-3">
             <div class="card shadow-sm">
               <div class="card-body">
-                <h2 id="scenario-title" class="h5 mb-3">Caccia al Rischio</h2>
-                <p class="small text-muted">Osserva la scena e clicca sui pericoli. Ne devi trovare <strong><span id="total-risks">0</span></strong>!</p>
+                <h2 id="scenario-title" class="h5 mb-2">Caccia al Rischio</h2>
+                <p id="scenario-intro" class="small text-muted mb-2"></p>
+                <p class="small text-muted">Osserva la scena e clicca sui pericoli. Ne devi trovare <strong><span id="total-risks">0</span></strong>! Per ogni pericolo trovato leggi la spiegazione PC.</p>
                 <ul id="risks-list" class="list-group list-group-flush small"></ul>
                 <a href="#" id="back-to-selection" class="app-back-link mt-3 d-inline-block"><i class="bi bi-arrow-left" aria-hidden="true"></i> Cambia scenario</a>
               </div>
@@ -56,6 +57,10 @@
           <div class="col-lg-8">
             <div id="scene-container" class="scene-container">
               <img src="" alt="Scena da analizzare" id="scene-image">
+            </div>
+            <div id="explain-box" class="explain-box hide" aria-live="polite">
+              <h3 id="explain-title"></h3>
+              <p id="explain-body"></p>
             </div>
           </div>
         </div>

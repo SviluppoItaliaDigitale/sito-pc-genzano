@@ -66,6 +66,34 @@
     color: #28a745;
     font-weight: 700;
 }
+/* Box spiegazione del rischio quando trovato */
+.explain-box {
+    background: #cfe2ff;
+    border: 1px solid #9ec5fe;
+    border-radius: 10px;
+    padding: .8rem 1rem;
+    margin-top: .8rem;
+    animation: slideUp .35s ease;
+}
+.explain-box h3 {
+    margin: 0 0 .35rem;
+    color: #003366;
+    font-size: 1rem;
+}
+.explain-box p {
+    margin: 0;
+    color: #003366;
+    font-size: .92rem;
+    line-height: 1.5;
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .explain-box { animation: none; }
+}
+
 /* Win screen */
 .win-screen-container {
     position: fixed;
