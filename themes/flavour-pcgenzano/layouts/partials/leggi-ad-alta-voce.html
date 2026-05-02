@@ -289,17 +289,32 @@
     });
   });
 
-  // Sincronizza il toggle "Segui parole" con la preferenza salvata
+  // Sincronizza il toggle "Segui parole" con la preferenza salvata.
+  // Il colore del pillola viene applicato via classe `is-active` aggiunta dal JS
+  // sul label genitore, NON via `:has(.tts-follow-input:checked)`. Motivo: in
+  // alcuni casi `:has()` non si aggiorna su Chrome quando il checked viene
+  // cambiato programmaticamente o tramite click sul label wrappante. La classe
+  // JS è universale.
   var followEnabled = getSavedFollow();
+  function syncFollowVisual(input) {
+    var wrap = input.closest('.tts-follow-toggle');
+    if (wrap) wrap.classList.toggle('is-active', input.checked);
+  }
   document.querySelectorAll('.tts-wrapper .tts-follow-input').forEach(function(input){
     input.checked = followEnabled;
+    syncFollowVisual(input);
     input.addEventListener('change', function(){
       followEnabled = this.checked;
       saveFollow(followEnabled);
+      syncFollowVisual(this);
       // Sincronizza eventuali altri toggle sulla pagina
+      var self = this;
       document.querySelectorAll('.tts-wrapper .tts-follow-input').forEach(function(other){
-        if (other !== this) other.checked = followEnabled;
-      }, this);
+        if (other !== self) {
+          other.checked = followEnabled;
+          syncFollowVisual(other);
+        }
+      });
     });
   });
 
