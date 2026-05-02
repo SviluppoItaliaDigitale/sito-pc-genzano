@@ -126,11 +126,15 @@
     .mod-opt small { display: block; color: #5b6b7c; font-weight: 400; margin-top: .15rem; }
 
     .tray {
-      background: #fff; border-radius: 12px; padding: .8rem;
+      background: #fff; border-radius: 12px; padding: 1rem .8rem;
       box-shadow: 0 2px 8px rgba(0,0,0,.06);
-      display: flex; flex-wrap: wrap; gap: .6rem;
+      display: flex; flex-wrap: wrap;
+      /* Gap verticale piu' grande del orizzontale: la label sotto ogni
+         pittogramma ha bisogno di respiro verticale per evitare
+         sovrapposizione fra una riga e l'altra. */
+      gap: 1.8rem 1rem;
       justify-content: center;
-      min-height: 110px;
+      min-height: 130px;
     }
 
     .sign {
@@ -180,14 +184,20 @@
     }
 
     .sign-label {
-      position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%);
-      font-size: .72rem; font-weight: 600; color: #003366;
-      white-space: nowrap; background: rgba(255,255,255,.85);
-      padding: 1px 6px; border-radius: 10px;
-      max-width: 140px; overflow: hidden; text-overflow: ellipsis;
+      position: absolute; bottom: -28px; left: 50%; transform: translateX(-50%);
+      font-size: .75rem; font-weight: 600; color: #003366;
+      background: rgba(255,255,255,.92);
+      padding: 2px 8px; border-radius: 10px;
+      /* Permetto wrapping su 2 righe e larghezza maggiore: prima la label
+         "Primo soccorso" veniva troncata a "Primo soccors" perche' non
+         entrava in 140px nowrap. Ora si adatta al testo. */
+      max-width: 130px; min-width: 70px;
+      white-space: normal;
+      text-align: center;
+      line-height: 1.2;
     }
 
-    .sign-wrap { position: relative; padding-bottom: 18px; }
+    .sign-wrap { position: relative; padding-bottom: 36px; }
 
     .drop-highlight { background: rgba(0,51,102,.15); border-color: #003366 !important; }
 
@@ -216,10 +226,16 @@
     @media (max-width: 576px) {
       .sign { width: 64px; height: 64px; font-size: 1.8rem; }
       .slot { width: 72px; height: 72px; font-size: .75rem; }
-      .sign-label { font-size: .65rem; max-width: 110px; }
-      /* Più spazio fra le sign per evitare sovrapposizione delle label */
-      .tray { gap: 1.4rem 1rem; padding: 1rem .5rem; }
-      .sign-wrap { padding-bottom: 22px; }
+      .sign-label {
+        font-size: .68rem;
+        max-width: 100px;
+        line-height: 1.15;
+        padding: 1px 5px;
+      }
+      /* Più spazio verticale fra le righe di sign su mobile: la label
+         "Primo soccorso" o "Punto di raccolta" puo' andare su 2 righe. */
+      .tray { gap: 2.4rem 1rem; padding: 1rem .5rem; }
+      .sign-wrap { padding-bottom: 36px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .sign, .level-card { transition: none; }
