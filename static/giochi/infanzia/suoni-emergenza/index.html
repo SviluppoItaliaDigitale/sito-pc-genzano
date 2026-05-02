@@ -38,6 +38,19 @@
     }
     .ascolta:hover { transform: translateY(-2px); }
     .wave { display:inline-block; width: 80px; }
+    /* Tip didattico: cosa fare quando si sente quel suono. */
+    .azione-tip {
+      display: block;
+      margin-top: .4rem;
+      padding: .5rem .7rem;
+      background: rgba(0, 51, 102, .08);
+      border-left: 3px solid #003366;
+      border-radius: 6px;
+      font-size: .92rem;
+      font-weight: 500;
+      color: #003366;
+      text-align: left;
+    }
   </style>
 </head>
 <body class="inf-body" data-coach-game="suoni-emergenza">
@@ -90,22 +103,32 @@
   <script src="/giochi/assets/js/comune.js"></script>
   <script>
   (function(){
+    // Per ogni suono, il campo `azione` dice CHE FARE quando lo si sente:
+    // crea il legame "suono -> reazione corretta", non solo riconoscimento.
     var SUONI = [
-      { id: 'ambulanza', emo: '🚑', lbl: 'Ambulanza', play: function(){ window.AudioSintetico.sirenaAmbulanza(1.5); } },
-      { id: 'tuono', emo: '⛈️', lbl: 'Tuono', play: function(){ window.AudioSintetico.tuono(); } },
-      { id: 'allarme', emo: '🔔', lbl: 'Allarme', play: function(){ window.AudioSintetico.allarmeIncendio(1.2); } },
-      { id: 'campanello', emo: '🛎️', lbl: 'Campanello', play: function(){ window.AudioSintetico.campanello(); } },
-      { id: 'italert', emo: '📱', lbl: 'IT-alert', play: function(){ window.AudioSintetico.itAlert(); } },
+      { id: 'ambulanza', emo: '🚑', lbl: 'Ambulanza', play: function(){ window.AudioSintetico.sirenaAmbulanza(1.5); },
+        azione: 'Quando la senti: stai lontano dalla strada, lascia passare l\'ambulanza, non correre.' },
+      { id: 'tuono', emo: '⛈️', lbl: 'Tuono', play: function(){ window.AudioSintetico.tuono(); },
+        azione: 'Quando lo senti: torna in casa, stai lontano da finestre e oggetti elettrici.' },
+      { id: 'allarme', emo: '🔔', lbl: 'Allarme', play: function(){ window.AudioSintetico.allarmeIncendio(1.2); },
+        azione: 'Quando suona a scuola: ti metti in fila col capofila e segui la maestra al punto di raccolta.' },
+      { id: 'campanello', emo: '🛎️', lbl: 'Campanello', play: function(){ window.AudioSintetico.campanello(); },
+        azione: 'Quando suona alla porta: chiama un grande prima di aprire. Mai aprire da solo a sconosciuti.' },
+      { id: 'italert', emo: '📱', lbl: 'IT-alert', play: function(){ window.AudioSintetico.itAlert(); },
+        azione: 'Quando senti questo suono fortissimo dal cellulare: leggi il messaggio. Il Governo ti sta avvisando di un pericolo.' },
       { id: 'pioggia', emo: '🌧️', lbl: 'Pioggia', play: function(){
           window.AudioSintetico.rumoreBianco({durata: 1.6, gain: 0.18});
-        } },
+        },
+        azione: 'Quando piove tantissimo: stai in casa, niente parchi, mai vicino a fiumi o sottopassi.' },
       { id: 'vento', emo: '💨', lbl: 'Vento', play: function(){
           window.AudioSintetico.rumoreBianco({durata: 1.4, gain: 0.22, freq: 350});
-        } },
+        },
+        azione: 'Quando soffia forte: chiudi le finestre, stai lontano da alberi, cartelloni, balconi.' },
       { id: 'radio', emo: '📻', lbl: 'Radio PC', play: function(){
           window.AudioSintetico.pipRadio();
           setTimeout(function(){ window.AudioSintetico.pipRadio(); }, 350);
-        } }
+        },
+        azione: 'Quando senti la radio della PC: ascolta bene, sta comunicando informazioni utili agli adulti.' }
     ];
 
     var intro = document.getElementById('intro'),
@@ -161,13 +184,16 @@
         stars++;
         starsEl.textContent = stars;
         feedback.style.color = '#0f5132';
-        feedback.innerHTML = '✅ Bravo! Era il ' + target.lbl.toLowerCase() + '.';
+        // Feedback con riconoscimento + azione corretta da fare quando si
+        // sente quel suono. Crea il legame "suono -> reazione" (livello 2
+        // implicito: non solo identifica, ma sai cosa fare).
+        feedback.innerHTML = '✅ Bravo! Era il ' + target.lbl.toLowerCase() + '.<br><span class="azione-tip">💡 ' + target.azione + '</span>';
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         btn.classList.add('wrong');
         feedback.style.color = '#8B1F2E';
-        feedback.innerHTML = '🐢 Era il ' + target.lbl.toLowerCase() + '. Continua!';
+        feedback.innerHTML = '🐢 Era il ' + target.lbl.toLowerCase() + '.<br><span class="azione-tip">💡 ' + target.azione + '</span>';
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         if (window.GameCoach && window.GameCoach.hint) {
           window.GameCoach.hint('Sirena ambulanza = 3 toni veloci. Tuono = boom dopo il fulmine. Allarme scuola = suono lungo. IT-Alert = il telefono squilla forte.', '/allerte-meteo/');
