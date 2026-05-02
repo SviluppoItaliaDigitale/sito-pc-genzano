@@ -36,12 +36,38 @@
     return parts.join(' ');
   }
 
-  // Spezza il testo in frasi per evitare cut-off su utterance lunghe
+  // Spezza il testo in frasi per evitare cut-off su utterance lunghe.
+  // Niente regex con lookbehind (?<=...) perché Safari ≤16/iOS la rifiuta
+  // silenziosamente: la fiaba diventerebbe 1 sola utterance gigante e
+  // Chrome la taglia oltre 32KB. Approccio cross-browser: scorriamo il
+  // testo carattere per carattere, spezziamo dopo .!? + spazio.
+  function splitIntoSentences(text) {
+    if (!text) return [];
+    var sentences = [];
+    var buf = '';
+    for (var i = 0; i < text.length; i++) {
+      var ch = text.charAt(i);
+      buf += ch;
+      // Fine frase: punto/esclamativo/interrogativo seguito da spazio o newline
+      if ((ch === '.' || ch === '!' || ch === '?') && i + 1 < text.length) {
+        var next = text.charAt(i + 1);
+        if (next === ' ' || next === '\n' || next === '\t') {
+          sentences.push(buf);
+          buf = '';
+          // Salta lo spazio successivo per non includerlo nella frase nuova
+          while (i + 1 < text.length && /\s/.test(text.charAt(i + 1))) i++;
+        }
+      }
+    }
+    if (buf.trim()) sentences.push(buf);
+    return sentences;
+  }
+
   function splitIntoChunks(text, maxLen) {
     if (!text) return [];
     var max = maxLen || 200;
     var result = [];
-    var sentences = text.split(/(?<=[.!?])\s+/);
+    var sentences = splitIntoSentences(text);
     var buf = '';
     sentences.forEach(function (s) {
       if ((buf + ' ' + s).length > max && buf) {

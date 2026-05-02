@@ -108,6 +108,12 @@
     var statusEl = document.getElementById('a11yStatus');
 
     if (!fab || !dialog) return;
+    // Guard idempotente: in caso di re-init (SPA navigation, chiamata
+    // multipla), evitiamo di moltiplicare gli event listener su FAB,
+    // bottoni segmentati, toggle e reset. Una volta wireup-ato, la
+    // funzione esce subito.
+    if (dialog.dataset.a11yWired === '1') return;
+    dialog.dataset.a11yWired = '1';
 
     // Update UI controls per riflettere lo state corrente
     function syncUI() {
