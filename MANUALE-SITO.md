@@ -87,10 +87,10 @@ Se non sai in quale Parte cercare:
 >   nessuna copia da Treccani)
 > Specifiche complete in nuova **Parte 18**.
 
-> **3.0 (2026-05-01) — Manuale spezzato in 18 file**
+> **3.0 (2026-05-01) — Manuale spezzato per Parti**
 > - Il manuale era diventato un singolo file di ~5500 righe / 290 KB (troppo grande
 >   per editing comodo). È stato spezzato per Parte in `manuale/parte-{NN}-{slug}.md`
->   (1 file = 1 Parte, 18 file totali).
+>   (1 file = 1 Parte).
 > - `manuale/README.md` è il nuovo indice navigabile della documentazione.
 > - Questo file `MANUALE-SITO.md` resta come indice/redirect per i riferimenti
 >   esterni che citano "MANUALE-SITO.md Parte N".

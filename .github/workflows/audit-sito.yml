@@ -542,7 +542,10 @@ jobs:
           # top-level rompendo la struttura.
           YAML_BAD=""
           for wf in .github/workflows/*.yml; do
-            ERR=$(python3 -c "import yaml; yaml.safe_load(open('$wf'))" 2>&1 || true)
+            # Passo il filename via sys.argv invece di interpolarlo nella
+            # stringa Python, così i filename con apici/spazi non rompono
+            # il parser silenziosamente facendo passare il check come "OK".
+            ERR=$(python3 -c "import yaml, sys; yaml.safe_load(open(sys.argv[1]))" "$wf" 2>&1 || true)
             if [ -n "$ERR" ]; then
               YAML_BAD="${YAML_BAD}- \`$wf\`: $(echo "$ERR" | head -1)\n"
             fi

@@ -82,8 +82,8 @@ Deployed to two targets on every push to `main` via GitHub Actions:
 **Architettura, struttura del progetto, regole Hugo:** vedi `.claude/rules/04-hugo-architecture.md` (mappa generale), `04a-hugo-shortcode-partial.md` (shortcode/partial/render hook), `04b-hugo-template-css.md` (template, menu, CSS, UX), `04c-hugo-static-cartelle.md` (cartelle statiche).
 
 **Manuali operativi nella root del repo:**
-- `MANUALE-SITO.md` — indice del manuale operativo (split a maggio 2026 in 18 file `manuale/parte-NN-*.md`)
-- `manuale/` — manuale operativo split: 18 file Parte (procedura articoli, immagini fascia blu, social, comunicati, deploy, ecc.). Indice navigabile in `manuale/README.md`.
+- `MANUALE-SITO.md` — indice del manuale operativo (split a maggio 2026 in file `manuale/parte-NN-*.md`)
+- `manuale/` — manuale operativo split per Parti (procedura articoli, immagini fascia blu, social, comunicati, deploy, ecc.). Indice navigabile in `manuale/README.md`.
 - `MANUALE-MOBILE.md` — workflow editoriale da mobile/cloud
 - `PIANO-EDITORIALE.md` — fonti ufficiali e calendario redazionale
 - `README.md` — overview pubblica del repo
@@ -177,7 +177,7 @@ bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
 
 5. **AGGIORNAMENTO**: le linee guida AGID sono in continuo aggiornamento. Verificare periodicamente il manuale su designers.italia.it per eventuali novità.
 
-6. **MANUALE DI STILE**: il manuale operativo (v3.0, split a maggio 2026) ha l'indice in `MANUALE-SITO.md` nella root e i contenuti completi in `manuale/parte-{00..17}-*.md` (18 file). Copre: procedura passo-passo per articoli (Parte 1), regole AGID integrate (Parte 2), specifiche immagini fascia blu (Parte 3), procedura pagine (Parte 4), checklist pre-pubblicazione (Parte 5), aggiornamento automatico settimanale (Parte 7). È il riferimento unico per la redazione dei contenuti, anche da parte di AI esterne.
+6. **MANUALE DI STILE**: il manuale operativo (v3.0, split a maggio 2026) ha l'indice in `MANUALE-SITO.md` nella root e i contenuti completi in `manuale/parte-NN-*.md`. Copre: procedura passo-passo per articoli (Parte 1), regole AGID integrate (Parte 2), specifiche immagini fascia blu (Parte 3), procedura pagine (Parte 4), checklist pre-pubblicazione (Parte 5), aggiornamento automatico settimanale (Parte 7). È il riferimento unico per la redazione dei contenuti, anche da parte di AI esterne.
 
 7. **IMMAGINI**: ogni immagine di copertina deve avere la fascia blu istituzionale (#003366) con logo e testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari — Genzano di Roma". Formato WebP, 1200px, max 200 KB. Specifiche complete in `manuale/parte-03-immagini-per-gli-articoli.md`.
 
