@@ -266,7 +266,11 @@
       }
       recountSolved();
       refreshCluesList();
-      showFeedback('Bravo! ' + w.answer + ' completata.', true);
+      // Feedback con spiegazione didattica (quando presente nel puzzle):
+      // permette di fissare la nozione invece di limitarsi a "Bravo!".
+      var msg = '<strong>' + w.answer + '</strong> completata!';
+      if (w.explain) msg += '<br><small>' + w.explain + '</small>';
+      showFeedback(msg, true);
       if (solvedCount === puzzle.words.length) finishPuzzle();
     }
   }
