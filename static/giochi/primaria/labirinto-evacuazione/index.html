@@ -438,9 +438,9 @@
       },
       {
         titolo: 'Scenario 6 — Evacuazione completa con fumo',
-        desc: 'Allarme generale: dall\'aula al primo piano fino al cortile. Due incendi 🔥 propagano fumo 💨, l\'ascensore ⚠️ è una trappola, segui scale 🪜 e freccia verde ⬇️. Pensa prima di muoverti.',
+        desc: 'Allarme generale: dall\'aula al primo piano fino al cortile. Due incendi 🔥 propagano fumo 💨 lentamente, l\'ascensore ⚠️ è una trappola, segui scale 🪜 e freccia verde ⬇️. Pensa prima di muoverti.',
         fumo: true,
-        passiFumo: 5,
+        passiFumo: 7,
         righe: [
           '############',
           '#S.B.......#',
@@ -476,8 +476,8 @@
     var traccia = [];       // celle visitate (per non tornare indietro visivamente)
     var bloccato = false;
     var passiDaFumo = 0;    // contatore mosse per propagazione fumo
-    var spreadFuoco = null; // map "r,c" -> volte che il fuoco ha propagato (cap 3)
-    var MAX_SPREAD_PER_F = 3;
+    var spreadFuoco = null; // map "r,c" -> volte che il fuoco ha propagato (cap)
+    var MAX_SPREAD_PER_F = 2;
 
     var intro = document.getElementById('intro');
     var game = document.getElementById('game');
@@ -616,10 +616,45 @@
       }
     }
 
+    // BFS dal giocatore a E rispettando muri, trappole (A/F/B/M) e direzione
+    // delle frecce U/D/L/R in uscita. Usata come safeguard: prima di posare
+    // fumo verifichiamo che il giocatore possa ancora raggiungere l'uscita.
+    function esistePercorso(){
+      var righe = mappa.length;
+      var cols = mappa[0].length;
+      var visited = new Array(righe);
+      for (var i = 0; i < righe; i++) visited[i] = new Array(cols).fill(false);
+      var arrows = {U:'up', D:'down', L:'left', R:'right'};
+      var ddir = [['up',-1,0], ['down',1,0], ['left',0,-1], ['right',0,1]];
+      var queue = [[playerR, playerC]];
+      visited[playerR][playerC] = true;
+      while (queue.length){
+        var head = queue.shift();
+        var r = head[0], c = head[1];
+        if (mappa[r][c] === 'E') return true;
+        var here = mappa[r][c];
+        for (var k = 0; k < 4; k++){
+          var dname = ddir[k][0];
+          if (arrows[here] && arrows[here] !== dname) continue;
+          var nr = r + ddir[k][1], nc = c + ddir[k][2];
+          if (nr < 0 || nr >= righe || nc < 0 || nc >= cols) continue;
+          if (visited[nr][nc]) continue;
+          var ch = mappa[nr][nc];
+          if (ch === '#' || ch === 'A' || ch === 'F' || ch === 'B' || ch === 'M') continue;
+          visited[nr][nc] = true;
+          queue.push([nr, nc]);
+        }
+      }
+      return false;
+    }
+
     // Propaga fumo dalle celle F: ogni fuoco prova a riempire una cella corridoio
-    // adiacente con M. Limite di MAX_SPREAD_PER_F per fuoco per scenario, per non
-    // chiudere completamente il labirinto. Restituisce true se almeno una cella
-    // si e' propagata (per feedback).
+    // adiacente con M. Limite di MAX_SPREAD_PER_F per fuoco per scenario.
+    // Safeguard: se la cella scelta blocca completamente la strada per E, ne
+    // prova un'altra; se nessuna candidata e' sicura, salta la propagazione di
+    // quel fuoco questa volta. Garantisce che il labirinto resti sempre
+    // risolvibile (motivo del fix: scenario 6 era diventato ingiocabile per
+    // sfortuna nella propagazione).
     function propagaFumo(){
       var righe = mappa.length;
       var cols = mappa[0].length;
@@ -630,22 +665,37 @@
           var key = r + ',' + c;
           var n = spreadFuoco[key] || 0;
           if (n >= MAX_SPREAD_PER_F) continue;
-          // candidate adiacenti (su, giu, sx, dx) che siano corridoi puri
           var cand = [];
           var ddir = [[-1,0],[1,0],[0,-1],[0,1]];
           for (var i = 0; i < ddir.length; i++){
             var nr = r + ddir[i][0], nc = c + ddir[i][1];
             if (nr <= 0 || nr >= righe - 1 || nc <= 0 || nc >= cols - 1) continue;
             if (mappa[nr][nc] !== '.') continue;
-            // non bloccare il giocatore stesso (lasciamo via di fuga immediata)
             if (nr === playerR && nc === playerC) continue;
             cand.push([nr, nc]);
           }
-          if (cand.length === 0) continue;
-          var pick = cand[Math.floor(Math.random() * cand.length)];
-          mappa[pick[0]][pick[1]] = 'M';
-          spreadFuoco[key] = n + 1;
-          nuove.push(pick);
+          // Mescola le candidate per evitare bias direzionale, poi prova una
+          // alla volta finche' una non rompe la giocabilita.
+          for (var s = cand.length - 1; s > 0; s--){
+            var j = Math.floor(Math.random() * (s + 1));
+            var tmp = cand[s]; cand[s] = cand[j]; cand[j] = tmp;
+          }
+          var posato = false;
+          for (var p = 0; p < cand.length; p++){
+            var pick = cand[p];
+            mappa[pick[0]][pick[1]] = 'M';
+            if (esistePercorso()){
+              spreadFuoco[key] = n + 1;
+              nuove.push(pick);
+              posato = true;
+              break;
+            } else {
+              // rollback: rimetti corridoio, prova prossimo
+              mappa[pick[0]][pick[1]] = '.';
+            }
+          }
+          // se nessuna candidata era sicura, il fuoco non propaga questo turno
+          // (provera al prossimo ciclo, eventualmente con candidate diverse)
         }
       }
       return nuove.length > 0;
