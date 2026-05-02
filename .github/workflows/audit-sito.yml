@@ -1043,25 +1043,12 @@ jobs:
           fi
 
           # ----------------------------------------------------------------
-          section "42. Coerenza conteggi dichiarati ↔ schede/giochi/attività reali"
-          # Lo script verifica-conteggi.sh confronta i numeri dichiarati nel sito
-          # ("100 schede stampabili", "33 giochi", "32 attività" e i contatori
-          # per fascia) con il numero reale di cartelle in static/formazione/
-          # schede-stampabili/, static/giochi/, static/abili-a-proteggere/.
-          # Localmente è invocato anche da .claude/settings.json hook PostToolUse
-          # (dopo ogni Write/Edit). Questo § 42 è il catch-all settimanale per
-          # le modifiche fatte da web GitHub o mobile dove l'hook non scatta.
-          if [ -x scripts/verifica-conteggi.sh ]; then
-            CONT_OUT=$(bash scripts/verifica-conteggi.sh 2>&1) || true
-            if echo "$CONT_OUT" | grep -q "DRIFT"; then
-              err "Conteggi dichiarati ↔ reali NON allineati. Aggiornare contatori (assistente, FAQ, mappa-sito, formazione, games-cta, catalogo, manuale/parte-04 kit scuola):"
-              echo "$CONT_OUT" | grep -E "DRIFT|Conta REALE|^ " >> "$REPORT"
-            else
-              ok "Conteggi schede/giochi/attività coerenti col reale."
-            fi
-          else
-            warn "\`scripts/verifica-conteggi.sh\` non trovato o non eseguibile: check saltato."
-          fi
+          # 42. (RIMOSSO maggio 2026) — La sezione verificava che i conteggi
+          # dichiarati sul sito ("127 schede", "33 giochi", ecc.) corrispondessero
+          # al numero reale di cartelle. Decisione editoriale di maggio 2026:
+          # tutti i conteggi inventario sono stati rimossi dal sito e sostituiti
+          # con descrizioni qualitative. Non c'è più drift da inseguire perché
+          # non ci sono più numeri da allineare.
 
           # ----------------------------------------------------------------
           # Output

@@ -13,11 +13,11 @@ Questa pagina è dedicata a **dirigenti, docenti coordinatori di Educazione Civi
 
 > 🧭 **Non sai da dove cominciare?** Vai a [Scuole: da dove cominciare — il cruscotto per ogni ruolo](/formazione/scuole-da-dove-cominciare/): scegli il tuo ruolo (DS, infanzia, primaria, sec I, sec II, sostegno, genitore) e arrivi in due click ai materiali giusti.
 
-> 🚀 **Hai poco tempo per preparare?** I [Percorsi didattici pronti](/formazione/percorsi-didattici/) sono **sei pacchetti già strutturati** (PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO) con destinatari, durata, obiettivi, materiali linkati e modalità di valutazione: si possono usare direttamente in classe.
+> 🚀 **Hai poco tempo per preparare?** I [Percorsi didattici pronti](/formazione/percorsi-didattici/) sono **Pacchetti già strutturati** (PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO) con destinatari, durata, obiettivi, materiali linkati e modalità di valutazione: si possono usare direttamente in classe.
 
 > 🏛️ **Sei Dirigente Scolastico, DSGA o RSPP?** Vai alla [pagina dedicata Dirigenti e RSPP](/formazione/dirigenti-e-rspp/): ruoli, limiti di responsabilità del Gruppo, coordinamento con il piano di emergenza, gestione PCTO, casi specifici (alunno con disabilità in evacuazione, evento avverso recente).
 
-> ⚖️ **Cerchi le norme di riferimento?** [Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/) — riepilogo unico delle 14+ norme con cosa stabiliscono e a chi si applicano.
+> ⚖️ **Cerchi le norme di riferimento?** [Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/) — riepilogo unico delle norme con cosa stabiliscono e a chi si applicano.
 
 ## Quadro normativo di riferimento
 
@@ -62,8 +62,8 @@ Il Nucleo 2 include la **cultura della Protezione Civile**, la sicurezza, la tut
 - 📜 **Schede stampabili** *Decodifica bollettino allerta* ([Primaria](/formazione/schede-stampabili/decodifica-bollettino-primaria/) · [Secondaria I](/formazione/schede-stampabili/decodifica-bollettino-secondaria/) · [Secondaria II](/formazione/schede-stampabili/decodifica-bollettino-secondaria2/))
 - 📜 **Schede stampabili** *Piano di Emergenza Familiare* ([Primaria](/formazione/schede-stampabili/piano-familiare-primaria/) · [Secondaria I](/formazione/schede-stampabili/piano-familiare-secondaria/) · [Secondaria II](/formazione/schede-stampabili/piano-familiare-secondaria2/))
 - 📚 **Storie**: tutta la collezione, in particolare [Il cuore della montagna](/formazione/storie-e-racconti/cuore-della-montagna/) (rischio idrogeologico) · [Il ragazzo che ascoltava il vento](/formazione/storie-e-racconti/ragazzo-vento/) (allerta meteo) · [Polvere d'angelo](/formazione/storie-e-racconti/polvere-angelo/) (cambiamento climatico e ricostruzione).
-- 🎮 **Giochi**: tutti i 33 giochi della Sicurezza, in particolare *Caccia al rischio*, *Mappa del rischio*, *Posiziona i cartelli*.
-- ♿ **Abili a Proteggere**: 32 attività accessibili con focus su autoprotezione e resilienza.
+- 🎮 **Giochi**: tutti i giochi della Sicurezza, in particolare *Caccia al rischio*, *Mappa del rischio*, *Posiziona i cartelli*.
+- ♿ **Abili a Proteggere**: attività accessibili con focus su autoprotezione e resilienza.
 
 ### Nucleo 3 — Cittadinanza digitale
 
@@ -84,7 +84,7 @@ L'Educazione Civica si insegna in **contitolarità**: ogni docente del consiglio
 | Materia | Argomenti PC | Materiali consigliati |
 |---|---|---|
 | **Italiano** | Lettura testi storici, analisi messaggi di crisi, scrittura informativa, comprensione bollettini | Storie e racconti, schede *Comprensione testo Amatrice*, *Decodifica bollettino*, *Fake news* |
-| **Storia** | Eventi storici (Vajont, Friuli, Irpinia, Amatrice), evoluzione del sistema PC italiano | Case study Sec II (12 schede), schede *Eventi PC italiani* (Primaria), storia [Il cuore della montagna](/formazione/storie-e-racconti/cuore-della-montagna/) |
+| **Storia** | Eventi storici (Vajont, Friuli, Irpinia, Amatrice), evoluzione del sistema PC italiano | Case study Sec II, schede *Eventi PC italiani* (Primaria), storia [Il cuore della montagna](/formazione/storie-e-racconti/cuore-della-montagna/) |
 | **Geografia** | Rischio idrogeologico, sismico, vulcanico del proprio territorio, mappe di rischio | Schede *Mappa rischi*, *Geografia sismica Italia*, *Vulcanologia Castelli Romani* |
 | **Scienze** | Fenomeni geologici, atmosferici, climatici. Triangolo del fuoco. Magnitudo vs intensità | Schede *Sismica*, *Vulcani*, *Triangolo fuoco*, *Glossario commentato* (Sec II) |
 | **Matematica** | Statistiche dei rischi, calcolo tempi evacuazione, percentuali, problemi reali | Schede *Statistica rischi*, *Problemi matematici PC*, *Calcolo tempi evacuazione* |
@@ -99,12 +99,12 @@ L'Educazione Civica si insegna in **contitolarità**: ogni docente del consiglio
 
 La normativa obbliga i docenti a esprimere un voto autonomo (decimi nella secondaria, giudizio descrittivo nella primaria) per l'Educazione Civica. Per facilitare il lavoro, abbiamo predisposto **rubriche valutative pronte all'uso**:
 
-- 📋 [Rubrica valutativa — Scuola dell'Infanzia](/formazione/schede-stampabili/rubrica-valutativa-infanzia/) (giudizio descrittivo, 4 livelli)
-- 📋 [Rubrica valutativa — Scuola Primaria](/formazione/schede-stampabili/rubrica-valutativa-primaria/) (giudizio descrittivo, 4 livelli)
-- 📋 [Rubrica valutativa — Secondaria I grado](/formazione/schede-stampabili/rubrica-valutativa-secondaria/) (decimi, 4 livelli)
-- 📋 [Rubrica valutativa — Secondaria II grado](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/) (decimi, 4 livelli)
+- 📋 [Rubrica valutativa — Scuola dell'Infanzia](/formazione/schede-stampabili/rubrica-valutativa-infanzia/) (giudizio descrittivo per livelli)
+- 📋 [Rubrica valutativa — Scuola Primaria](/formazione/schede-stampabili/rubrica-valutativa-primaria/) (giudizio descrittivo per livelli)
+- 📋 [Rubrica valutativa — Secondaria I grado](/formazione/schede-stampabili/rubrica-valutativa-secondaria/) (valutazione in decimi per livelli)
+- 📋 [Rubrica valutativa — Secondaria II grado](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/) (valutazione in decimi per livelli)
 
-Ogni rubrica copre **6 indicatori** (autoprotezione, comunicazione del rischio, conoscenza del territorio, comportamento in emergenza, ruolo delle istituzioni, cittadinanza attiva) ed è collegata alle competenze chiave europee per l'apprendimento permanente.
+Ogni rubrica copre **indicatori specifici** (autoprotezione, comunicazione del rischio, conoscenza del territorio, comportamento in emergenza, ruolo delle istituzioni, cittadinanza attiva) ed è collegata alle competenze chiave europee per l'apprendimento permanente.
 
 ## Proposta di articolazione delle 33 ore di Educazione Civica con argomenti PC
 
@@ -112,7 +112,7 @@ Esempio di **calendario annuale** che integra i nostri materiali nelle 33 ore ob
 
 | Mese | Ore | Tema | Materiali consigliati |
 |---|---|---|---|
-| Settembre | 3 h | Introduzione: cos'è la PC, le 4 attività (previsione, prevenzione, soccorso, superamento) | Kit didattico fascia + scheda *Chiamo il 112* |
+| Settembre | 3 h | Introduzione: cos'è la PC, le attività (previsione, prevenzione, soccorso, superamento) | Kit didattico fascia + scheda *Chiamo il 112* |
 | Ottobre | 4 h | Rischio idrogeologico (Castelli Romani) — Goal 11, 13 Agenda 2030 | Schede *Mappa rischi*, storia [Il cuore della montagna](/formazione/storie-e-racconti/cuore-della-montagna/) |
 | Novembre | 3 h | Costituzione e PC: art. 2 (solidarietà), art. 32 (salute), art. 118 (sussidiarietà) | Scheda *Costituzione PC* fascia |
 | Dicembre | 2 h | Sistema di allertamento: codici colore, IT-alert, app ufficiali | Schede *Decodifica bollettino*, *IT-alert* |
@@ -135,8 +135,8 @@ Questo rende i nostri materiali **immediatamente utilizzabili** senza necessità
 
 Il Gruppo aderisce ai principi del **D.Lgs. 66/2017** sull'inclusione scolastica:
 
-- 📖 [**Easy-to-Read per le scuole**](/formazione/easy-to-read-scuola/) — versioni semplificate (frasi corte + pittogrammi ARASAAC) delle 4 schede chiave per alunni con disabilità intellettiva, BES/DSA e parlanti italiano L2
-- ♿ [Abili a Proteggere](/abili-a-proteggere/) — 32 attività interattive accessibili per studenti con disabilità cognitive o motorie
+- 📖 [**Easy-to-Read per le scuole**](/formazione/easy-to-read-scuola/) — versioni semplificate (frasi corte + pittogrammi ARASAAC) delle schede chiave per alunni con disabilità intellettiva, BES/DSA e parlanti italiano L2
+- ♿ [Abili a Proteggere](/abili-a-proteggere/) — attività interattive accessibili per studenti con disabilità cognitive o motorie
 - 📖 [Facile da Leggere](/facile-da-leggere/) — versione del sito in linguaggio facile per il cittadino, utilizzabile anche dai docenti come riferimento di stile
 
 I nostri pittogrammi seguono lo standard **ISO 7010** e usano la libreria **ARASAAC** (CC BY-NC-SA), supportando bambini con DSA, BES e parlanti italiano L2.
@@ -163,7 +163,7 @@ Per organizzare un incontro: scrivere a **[segreteria@protezionecivilegenzano.it
 
 ## Strumenti operativi pronti per le scuole {#strumenti-scuole}
 
-Il Gruppo mette a disposizione **moduli e fac-simile editabili** per le scuole che vogliono lavorare con noi, divisi in due pacchetti distinti per finalità:
+Il Gruppo mette a disposizione **moduli e fac-simile editabili** per le scuole che vogliono lavorare con noi, divisi in pacchetti distinti per finalità:
 
 - 📁 **Pacchetto A — Strumenti generici di ingaggio scolastico** — modulo richiesta intervento, liberatoria immagini minori (GDPR), circolare per le famiglie, attestato di partecipazione;
 - 📁 **Pacchetto B — Strumenti formali PCTO** — schema di convenzione attuativa, progetto formativo individuale, registro presenze + valutazione + certificazione.

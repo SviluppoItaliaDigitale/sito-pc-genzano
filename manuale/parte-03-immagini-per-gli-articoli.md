@@ -468,7 +468,7 @@ wrapper una tipografia istituzionale curata che non influisce su homepage, liste
 
 ### 3.16 — Pittogrammi (ISO 7010 + ARASAAC)
 
-Il sito ha una **libreria di 171 pittogrammi standardizzati** per supportare la comprensione del testo a **bambini, anziani, persone con disabilità cognitive e parlanti italiano L2** (regola di accessibilità cognitiva, WCAG 2.2 — sezione 1.4 Distinguishable + 3.1 Readable).
+Il sito ha una **libreria di pittogrammi standardizzati** per supportare la comprensione del testo a **bambini, anziani, persone con disabilità cognitive e parlanti italiano L2** (regola di accessibilità cognitiva, WCAG 2.2 — sezione 1.4 Distinguishable + 3.1 Readable).
 
 **Cosa contiene la libreria:**
 

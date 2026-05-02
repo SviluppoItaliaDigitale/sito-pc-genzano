@@ -162,7 +162,7 @@ Riunione strutturata (1-2 ore) condotta da un **professionista formato** (psicol
 - 📖 [Cosa fare adesso](/cosa-fare-adesso/) — guida operativa per i primi minuti.
 - 📖 [Piano di Emergenza Familiare](/piano-familiare/) — strumento concreto di preparazione che riduce l'ansia (la pianificazione **fa sentire meno impotenti**).
 - 🎓 [Per i docenti — Educazione Civica](/formazione/educazione-civica/) — quadro generale per l'integrazione di temi PC nei curricoli.
-- 🚀 [Percorsi didattici pronti](/formazione/percorsi-didattici/) — i 6 percorsi tematici, in particolare il [Percorso 3 «Terremoto e piano scuola»](/formazione/percorsi-didattici/#percorso-3) che integra naturalmente la dimensione emotiva.
+- 🚀 [Percorsi didattici pronti](/formazione/percorsi-didattici/) — i percorsi tematici, in particolare il [Percorso «Terremoto e piano scuola»](/formazione/percorsi-didattici/#percorso-3) che integra naturalmente la dimensione emotiva.
 - 📖 [Easy-to-Read per le scuole](/formazione/easy-to-read-scuola/) — materiali semplificati che riducono il sovraccarico cognitivo per alunni con BES/DSA.
 
 ---

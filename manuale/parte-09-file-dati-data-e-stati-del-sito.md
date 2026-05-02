@@ -10,7 +10,7 @@ I file nella cartella `data/` pilotano comportamenti dinamici del sito **senza t
 |---|---|---|
 | `emergenza.json` | JSON | Attiva/disattiva modalità emergenza sulla home |
 | `allerta.json` | JSON | Livello allerta meteo corrente (verde / giallo / arancione / rossa) |
-| `risk_cards.yaml` | YAML | 9 card della pagina Rischi e Prevenzione |
+| `risk_cards.yaml` | YAML | card della pagina Rischi e Prevenzione |
 | `numeri_utili.yaml` | YAML | Numeri di emergenza mostrati in home, contatti, footer |
 | `quick_links.yaml` | YAML | CTA del hero + "Cosa fare in caso di..." + servizi |
 | `social_links.yaml` | YAML | Canali social + linktree |
@@ -111,7 +111,7 @@ Regola d'oro: **prima di creare un nuovo partial o template, verifica se la stes
 
 ### 9.4 — `risk_cards.yaml` (Rischi e Prevenzione)
 
-Contiene le 9 card mostrate nella pagina hub "Rischi e Prevenzione" e nella homepage. Ogni card rimanda a una sottopagina di `content/rischi-prevenzione/`.
+Contiene le card mostrate nella pagina hub "Rischi e Prevenzione" e nella homepage. Ogni card rimanda a una sottopagina di `content/rischi-prevenzione/`.
 
 **Schema di ogni card:**
 
@@ -175,7 +175,7 @@ locale:         # Numeri del Gruppo (MAI per emergenze)
 
 ### 9.6 — `quick_links.yaml` (CTA hero + servizi)
 
-Tre sezioni distinte:
+sezioni distinte:
 - `principali`: pulsanti del hero homepage (tipicamente 3).
 - `cosa_fare`: card "Cosa fare in caso di..." in homepage.
 - `servizi`: card "Servizi per il cittadino".

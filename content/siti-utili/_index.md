@@ -77,8 +77,8 @@ Le fonti istituzionali e tecniche su cui si basano la nostra Social Media Policy
 
 ### Tecnico-operative europee
 
-- ⚠️ [EENA — Knowledge Hub](https://eena.org/knowledge-hub/) — Best practice europee su 112 e social media in emergenza (alcuni documenti gratuiti, altri membership-only)
-- 🟢 [CEN-CENELEC Workshop Agreements](https://www.cencenelec.eu/european-standardization/cen-cenelec-workshop-agreements/) — Documenti CWA, accessibili in fase di consultazione pubblica
+- ⚠️ [EENA — European Emergency Number Association](https://eena.org/) — Best practice europee su 112 e social media in emergenza (sezione "Knowledge Hub" / "Resources" nel menu del sito; alcuni documenti gratuiti, altri membership-only)
+- 🟢 [CEN-CENELEC](https://www.cencenelec.eu/) — Ente europeo di standardizzazione: i Workshop Agreements (CWA) si consultano dalla sezione "Standardization" del sito ufficiale, accessibili in fase di consultazione pubblica
 
 ### Standard internazionali
 

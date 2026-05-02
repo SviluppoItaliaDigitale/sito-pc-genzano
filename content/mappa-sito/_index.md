@@ -132,13 +132,13 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card" href="/cartografia/">
   <div class="ms-card-icon"><i class="bi bi-map-fill"></i></div>
   <p class="ms-card-title">Cartografia Operativa</p>
-  <p class="ms-card-desc">Le 16 aree di emergenza del Piano Comunale: aree di attesa, ricovero e ammassamento.</p>
+  <p class="ms-card-desc">Le aree di emergenza del Piano Comunale: aree di attesa, ricovero e ammassamento.</p>
   <span class="ms-card-arrow">Consulta →</span>
 </a>
 <a class="ms-card ms-tool" href="/strumenti/">
   <div class="ms-card-icon"><i class="bi bi-broadcast-pin"></i></div>
   <p class="ms-card-title">Strumenti in Tempo Reale</p>
-  <p class="ms-card-desc">12+ strumenti istituzionali: Windy, INGV, Radar DPC, MeteoAM, ISPRA, EFFIS, ARPA, ANAS.</p>
+  <p class="ms-card-desc">strumenti istituzionali: Windy, INGV, Radar DPC, MeteoAM, ISPRA, EFFIS, ARPA, ANAS.</p>
   <span class="ms-card-arrow">Apri hub →</span>
 </a>
 </div>
@@ -243,12 +243,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-edu" href="/formazione/percorsi-didattici/">
   <div class="ms-card-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
   <p class="ms-card-title">Percorsi didattici pronti</p>
-  <p class="ms-card-desc">6 percorsi pronti all'uso per docenti con poco tempo: PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO. Ognuno con destinatari, durata, obiettivi e materiali linkati.</p>
+  <p class="ms-card-desc">Percorsi pronti all'uso per docenti con poco tempo: PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO. Ognuno con destinatari, durata, obiettivi e materiali linkati.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/scuole-strumenti/">
   <div class="ms-card-icon"><i class="bi bi-folder-fill"></i></div>
   <p class="ms-card-title">Strumenti per le scuole (moduli)</p>
-  <p class="ms-card-desc">7 fac-simile editabili e stampabili in A4: Pacchetto A (ingaggio generico — richiesta, liberatoria minori GDPR, circolare, attestato) e Pacchetto B (PCTO formale — convenzione, progetto formativo, registro+valutazione+certificazione). Per Dirigenti, DSGA, DPO, tutor scolastici.</p>
+  <p class="ms-card-desc">Fac-simile editabili e stampabili in A4: Pacchetto A (ingaggio generico — richiesta, liberatoria minori GDPR, circolare, attestato) e Pacchetto B (PCTO formale — convenzione, progetto formativo, registro+valutazione+certificazione). Per Dirigenti, DSGA, DPO, tutor scolastici.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/dirigenti-e-rspp/">
   <div class="ms-card-icon"><i class="bi bi-building-fill-check"></i></div>
@@ -258,7 +258,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-edu" href="/formazione/quadro-normativo-scuola/">
   <div class="ms-card-icon"><i class="bi bi-journals"></i></div>
   <p class="ms-card-title">Quadro normativo per la scuola</p>
-  <p class="ms-card-desc">Riepilogo unico delle 14+ norme che regolano l'uso dei materiali del Gruppo nelle scuole: Educazione Civica, PCTO, sicurezza, inclusione, privacy, accessibilità. Una pagina, una fonte unica di verità.</p>
+  <p class="ms-card-desc">Riepilogo delle norme che regolano l'uso dei materiali del Gruppo nelle scuole: Educazione Civica, PCTO, sicurezza, inclusione, privacy, accessibilità. Una pagina, una fonte unica di verità.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/educazione-civica/">
   <div class="ms-card-icon"><i class="bi bi-mortarboard-fill"></i></div>
@@ -268,12 +268,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-edu" href="/formazione/schede-stampabili/">
   <div class="ms-card-icon"><i class="bi bi-printer-fill"></i></div>
   <p class="ms-card-title">Schede stampabili</p>
-  <p class="ms-card-desc">127 schede A4 pronte per la stampa: 10 colorabili, 38 case study delle maxi-emergenze italiane (12 Primaria + 12 Sec I + 14 Sec II), discipline curriculari, ed. civica, allertamento, rubriche valutative.</p>
+  <p class="ms-card-desc">Schede A4 pronte per la stampa: schede colorabili, case study delle maxi-emergenze italiane (Primaria, Sec I, Sec II), discipline curriculari, ed. civica, allertamento, rubriche valutative.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/storie-e-racconti/">
   <div class="ms-card-icon"><i class="bi bi-book-half"></i></div>
   <p class="ms-card-title">Storie e Racconti</p>
-  <p class="ms-card-desc">18 fiabe e racconti per bambini 3-11 anni con valore pedagogico per la scuola: ogni storia ha un attimo decisivo + sezione "Per il/la docente" con obiettivi, competenze chiave europee, attività in classe e riferimenti curricolari.</p>
+  <p class="ms-card-desc">Fiabe e racconti per bambini 3-11 anni con valore pedagogico per la scuola: ogni storia ha un attimo decisivo + sezione "Per il/la docente" con obiettivi, competenze chiave europee, attività in classe e riferimenti curricolari.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/kit-scuola-infanzia/">
   <div class="ms-card-icon"><i class="bi bi-stars"></i></div>
@@ -283,7 +283,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-edu" href="/formazione/kit-scuola-primaria/">
   <div class="ms-card-icon"><i class="bi bi-pencil-fill"></i></div>
   <p class="ms-card-title">Kit Scuola Primaria</p>
-  <p class="ms-card-desc">Materiale didattico per insegnanti 6-11 anni: 6 moduli, esperimenti, role-play, verifiche.</p>
+  <p class="ms-card-desc">Materiale didattico per insegnanti 6-11 anni: percorso modulare, esperimenti, role-play, verifiche.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/kit-scuola-secondaria-primo-grado/">
   <div class="ms-card-icon"><i class="bi bi-bookmark-fill"></i></div>
@@ -298,17 +298,17 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-edu" href="/giochi/">
   <div class="ms-card-icon"><i class="bi bi-controller"></i></div>
   <p class="ms-card-title">Giochi della Sicurezza</p>
-  <p class="ms-card-desc">33 giochi educativi gratuiti per bambini 3-19 anni: terremoto, evacuazione, 112.</p>
+  <p class="ms-card-desc">Giochi educativi gratuiti per bambini 3-19 anni: terremoto, evacuazione, 112.</p>
 </a>
 <a class="ms-card ms-edu" href="/abili-a-proteggere/">
   <div class="ms-card-icon"><i class="bi bi-heart-fill"></i></div>
   <p class="ms-card-title">Abili a Proteggere</p>
-  <p class="ms-card-desc">32 attività accessibili per persone con difficoltà cognitive o motorie, anziani e bambini fragili: pulsanti grandi, testi semplici, nessun timer.</p>
+  <p class="ms-card-desc">Attività accessibili per persone con difficoltà cognitive o motorie, anziani e bambini fragili: pulsanti grandi, testi semplici, nessun timer.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/easy-to-read-scuola/">
   <div class="ms-card-icon"><i class="bi bi-bookmark-heart-fill"></i></div>
   <p class="ms-card-title">Easy-to-Read per le scuole</p>
-  <p class="ms-card-desc">4 schede semplificate (112, terremoto, evacuazione, zaino) con frasi corte e pittogrammi ARASAAC. Per alunni con disabilità intellettiva, BES/DSA, italiano L2.</p>
+  <p class="ms-card-desc">Schede semplificate (112, terremoto, evacuazione, zaino) con frasi corte e pittogrammi ARASAAC. Per alunni con disabilità intellettiva, BES/DSA, italiano L2.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/psicologia-emergenza/">
   <div class="ms-card-icon"><i class="bi bi-emoji-smile"></i></div>
@@ -323,7 +323,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-edu" href="/faq/">
   <div class="ms-card-icon"><i class="bi bi-patch-question-fill"></i></div>
   <p class="ms-card-title">Domande frequenti</p>
-  <p class="ms-card-desc">30+ domande con risposta su allerte, emergenze, prevenzione, volontariato e numeri.</p>
+  <p class="ms-card-desc">domande con risposta su allerte, emergenze, prevenzione, volontariato e numeri.</p>
 </a>
 </div>
 
@@ -414,7 +414,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-tool" href="/strumenti/">
   <div class="ms-card-icon"><i class="bi bi-broadcast-pin"></i></div>
   <p class="ms-card-title">Strumenti in Tempo Reale</p>
-  <p class="ms-card-desc">Hub dei 12+ strumenti online: meteo, terremoti, idrogeologico, incendi, qualità aria.</p>
+  <p class="ms-card-desc">Hub dei strumenti online: meteo, terremoti, idrogeologico, incendi, qualità aria.</p>
 </a>
 <a class="ms-card ms-tool" href="/cartografia/">
   <div class="ms-card-icon"><i class="bi bi-geo-alt-fill"></i></div>

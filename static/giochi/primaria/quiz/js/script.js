@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const questions = [
         // ═══════════════════════════════════════
-        // TERREMOTO (9 domande)
+        // TERREMOTO (domande)
         // ═══════════════════════════════════════
         {
             category: 'terremoto',
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // ═══════════════════════════════════════
-        // INCENDIO (9 domande)
+        // INCENDIO (domande)
         // ═══════════════════════════════════════
         {
             category: 'incendio',
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // ═══════════════════════════════════════
-        // ALLUVIONE (8 domande)
+        // ALLUVIONE (domande)
         // ═══════════════════════════════════════
         {
             category: 'alluvione',
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // ═══════════════════════════════════════
-        // NUMERI DI EMERGENZA (8 domande)
+        // NUMERI DI EMERGENZA (domande)
         // ═══════════════════════════════════════
         {
             category: 'numeri',
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // ═══════════════════════════════════════
-        // ZAINO DI EMERGENZA (8 domande)
+        // ZAINO DI EMERGENZA (domande)
         // ═══════════════════════════════════════
         {
             category: 'zaino',
@@ -515,7 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // ═══════════════════════════════════════
-        // EVACUAZIONE SCUOLA (8 domande)
+        // EVACUAZIONE SCUOLA (domande)
         // ═══════════════════════════════════════
         {
             category: 'evacuazione',
@@ -607,7 +607,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // ═══════════════════════════════════════
-        // PROTEZIONE CIVILE (8 domande)
+        // PROTEZIONE CIVILE (domande)
         // ═══════════════════════════════════════
         {
             category: 'protezione-civile',
@@ -732,7 +732,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // ═══════════════════════════════════════
-        // SICUREZZA IN CASA (8 domande)
+        // SICUREZZA IN CASA (domande)
         // ═══════════════════════════════════════
         {
             category: 'sicurezza',
@@ -1091,7 +1091,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // ═══════════════════════════════════════════════════════════════
-        // CATEGORIA 9: FONTI UFFICIALI E IT-ALERT (8 domande)
+        // CATEGORIA 9: FONTI UFFICIALI E IT-ALERT (domande)
         // ═══════════════════════════════════════════════════════════════
         {
             category: 'comunicazione',

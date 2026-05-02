@@ -61,7 +61,7 @@ draft: false
 
 ### 4.4 — Aggiungere la pagina al menu principale
 
-Il menu principale è organizzato come **mega-menu** (Opzione A) in `hugo.toml`: **7 voci di primo livello**, di cui 4 dropdown. La struttura è documentata in dettaglio in `.claude/rules/04b-hugo-template-css.md` ma per l'uso quotidiano basta sapere questo.
+Il menu principale è organizzato come **mega-menu** (Opzione A) in `hugo.toml`: **Voci di primo livello**, di cui 4 dropdown. La struttura è documentata in dettaglio in `.claude/rules/04b-hugo-template-css.md` ma per l'uso quotidiano basta sapere questo.
 
 **Struttura attuale:**
 
@@ -90,7 +90,7 @@ Il menu principale è organizzato come **mega-menu** (Opzione A) in `hugo.toml`:
 [[menus.main]]
   name = "Nome nel menu"
   url = "/url-pagina/"
-  weight = 5                    # ordine fra le 6 voci di primo livello
+  weight = 5                    # ordine fra le voci di primo livello
 ```
 
 **Limite di sicurezza**: non superare 6-7 voci di primo livello per non rompere l'usabilità mobile.
@@ -107,7 +107,7 @@ toc: true
 
 Hugo genera automaticamente un indice cliccabile con badge numerati `01`, `02`, `03`… che porta alle sezioni `##` e `###`. Il bottone "Torna in cima" si trasforma in "Torna all'indice".
 
-Il TOC funziona sia su `single.html` che su `list.html` (sezioni con `_index.md`). Pagine attualmente con TOC: tutte le 26 elencate in `04b-hugo-template-css.md` (Formazione + 4 kit, Glossario, Piani, 9 sotto-rischi, Normativa + 7 Capi).
+Il TOC funziona sia su `single.html` che su `list.html` (sezioni con `_index.md`). Pagine attualmente con TOC: tutte le 26 elencate in `04b-hugo-template-css.md` (Formazione + kit, Glossario, Piani, 9 sotto-rischi, Normativa + 7 Capi).
 
 Non attivare `toc: true` su pagine con meno di 4 H2: l'indice diventa visivamente sproporzionato.
 
@@ -229,7 +229,7 @@ Il template `single.html` del tema mostra questa data come **box evidente** in c
 | `/allerte-meteo/` | `content/allerte-meteo/_index.md` | Widget Windy + Radar DPC (click-to-load) — vedi 4.9 |
 | `/strumenti/` | `content/strumenti/_index.md` | **Hub strumenti consultazione in tempo reale** — vedi 4.10 |
 | `/comunicazioni/` | Generata da Hugo | Elenco articoli |
-| `/formazione/` | `content/formazione/_index.md` | Include 4 kit scuola (vedi 4.8) |
+| `/formazione/` | `content/formazione/_index.md` | Include kit scuola (vedi 4.8) |
 | `/giochi/` | `static/giochi/index.html` | **Standalone**, non Hugo content |
 | `/diventa-volontario/` | `content/diventa-volontario/_index.md` | |
 | `/contatti/` | `content/contatti/_index.md` | |
@@ -247,20 +247,20 @@ Il template `single.html` del tema mostra questa data come **box evidente** in c
 | `/strumenti/` | `content/strumenti/_index.md` | Hub strumenti consultazione (12+ widget/link) |
 | `/mappa-sito/` | `content/mappa-sito/_index.md` | Mappa del sito con card per macro-aree |
 | `/facile-da-leggere/` | `content/facile-da-leggere/_index.md` | Versione cognitiva-friendly (D.Lgs. 62/2024) |
-| `/formazione/schede-stampabili/` | `static/formazione/schede-stampabili/` | 127 schede HTML A4 stampabili (di cui 10 colorabili, 14 col curricolo a spirale 6-19 anni, 38 case study delle maxi-emergenze italiane in 12 Primaria + 12 Sec I + 14 Sec II, e 4 rubriche valutative ed. civica) suddivise per fascia (infanzia/primaria/secondaria I/secondaria II) e disciplina (italiano, matematica, scienze, geografia, storia, ed. civica, giornalismo, diritto, economia, inglese) |
-| `/formazione/storie-e-racconti/` | `static/formazione/storie-e-racconti/` | 18 storie e racconti di qualità letteraria per bambini 3-11 anni (6 per fascia infanzia con Tina la Tartaruga + 6 per primaria 6-8 con Flavio/Flavia protagonisti e attimo decisivo + 6 per primaria 9-11 più letterarie). Ogni storia ha box "Cosa abbiamo imparato", domande per parlarne insieme e sezione "Per il/la docente" con obiettivi, competenze chiave europee, attività in classe e riferimenti curricolari (IN 2012, L. 92/2019, D.Lgs. 1/2018, DPC). |
+| `/formazione/schede-stampabili/` | `static/formazione/schede-stampabili/` | schede HTML A4 stampabili (di cui 10 colorabili, 14 col curricolo a spirale 6-19 anni, case study delle maxi-emergenze italiane in 12 Primaria + 12 Sec I + 14 Sec II, e 4 rubriche valutative ed. civica) suddivise per fascia (infanzia/primaria/secondaria I/secondaria II) e disciplina (italiano, matematica, scienze, geografia, storia, ed. civica, giornalismo, diritto, economia, inglese) |
+| `/formazione/storie-e-racconti/` | `static/formazione/storie-e-racconti/` | storie e racconti di qualità letteraria per bambini 3-11 anni (6 per fascia infanzia con Tina la Tartaruga + 6 per primaria 6-8 con Flavio/Flavia protagonisti e attimo decisivo + 6 per primaria 9-11 più letterarie). Ogni storia ha box "Cosa abbiamo imparato", domande per parlarne insieme e sezione "Per il/la docente" con obiettivi, competenze chiave europee, attività in classe e riferimenti curricolari (IN 2012, L. 92/2019, D.Lgs. 1/2018, DPC). |
 | `/english/` ... `/esperanto/` | `content/{lingua}/_index.md` | 7 hub linguistiche curate (vedi §4.11) |
 
 ### 4.8 — Kit didattici per le scuole (`content/formazione/kit-scuola-*.md`)
 
-Il sito pubblica **quattro kit didattici** indirizzati alle scuole del territorio, uno per fascia d'età. Dopo un ciclo di feedback positivi dei docenti, i kit sono stati ampliati (aprile 2026) per rispondere alla richiesta di **maggiore chiarezza e profondità** sui temi di protezione civile.
+Il sito pubblica **Kit didattici** indirizzati alle scuole del territorio, uno per fascia d'età. Dopo un ciclo di feedback positivi dei docenti, i kit sono stati ampliati (aprile 2026) per rispondere alla richiesta di **maggiore chiarezza e profondità** sui temi di protezione civile.
 
 | File | Fascia | Righe | Contenuti chiave |
 |---|---|---|---|
-| `kit-scuola-infanzia.md` | 3-6 anni | ~410 | Campi di Esperienza, 28 schede fotocopiabili dedicate (10 da colorare + 18 attività), griglia di osservazione, percorso 4 × 30′ |
-| `kit-scuola-primaria.md` | 6-11 anni | ~685 | Raccordo 9 discipline, 22 schede fotocopiabili dedicate, 3 esperimenti, uscita sul territorio, rubrica 5 competenze |
-| `kit-scuola-secondaria-primo-grado.md` | 11-14 anni | ~690 | UdA interdisciplinare, 19 schede fotocopiabili dedicate, compito di realtà sul Piano di evacuazione, 5 metodologie didattiche |
-| `kit-scuola-secondaria-secondo-grado.md` | 14-19 anni | ~800 | PCTO 30-50h, 29 schede fotocopiabili dedicate (15 curriculari + 14 case study), 3 progetti di classe, 3 temi per l'Esame di Stato, rubrica 7×5 livelli |
+| `kit-scuola-infanzia.md` | 3-6 anni | ~410 | Campi di Esperienza, schede fotocopiabili dedicate (10 da colorare + attività), griglia di osservazione, percorso 4 × 30′ |
+| `kit-scuola-primaria.md` | 6-11 anni | ~685 | Raccordo 9 discipline, schede fotocopiabili dedicate, esperimenti, uscita sul territorio, rubrica 5 competenze |
+| `kit-scuola-secondaria-primo-grado.md` | 11-14 anni | ~690 | UdA interdisciplinare, schede fotocopiabili dedicate, compito di realtà sul Piano di evacuazione, 5 metodologie didattiche |
+| `kit-scuola-secondaria-secondo-grado.md` | 14-19 anni | ~800 | PCTO 30-50h, schede fotocopiabili dedicate (15 curriculari + case study), 3 progetti di classe, temi per l'Esame di Stato, rubrica 7×livelli |
 
 **Struttura comune a tutti e quattro i kit:**
 
@@ -270,7 +270,7 @@ Il sito pubblica **quattro kit didattici** indirizzati alle scuole del territori
 4. **Durata e tabella del percorso** — moduli con obiettivi, attività, materiali, tempi.
 5. **Metodologie didattiche** — age-appropriate: gioco simbolico e routine per l'infanzia, laboratori per la primaria, flipped/cooperative/PBL/debate/service learning per le secondarie.
 6. **Schede fotocopiabili** (infanzia e primaria) **o compiti di realtà / UdA** (secondarie).
-7. **Rubrica di valutazione** — competenze × livelli (4 per infanzia/primaria/secondaria I; 5 livelli D/C/B/A/A+ per secondaria II).
+7. **Rubrica di valutazione** — competenze × livelli (4 per infanzia/primaria/secondaria I; livelli D/C/B/A/A+ per secondaria II).
 8. **Adattamenti per l'inclusione** — DSA, BES, disabilità intellettiva/sensoriale/motoria, italiano L2, plusdotati.
 9. **Raccordo con il Piano di Emergenza scolastico** — D.M. 26/08/1992, D.Lgs. 81/2008, DVR (secondaria II).
 10. **Coinvolgimento delle famiglie** — lettere informative, compiti a casa, evento finale.
@@ -280,9 +280,9 @@ Il sito pubblica **quattro kit didattici** indirizzati alle scuole del territori
 **Specifiche aggiuntive per fascia:**
 
 - **Infanzia**: percorso in 4 incontri da 30′ (2h totali), Campi di Esperienza coinvolti (Il sé e l'altro; Il corpo e il movimento; Immagini, suoni, colori; I discorsi e le parole; La conoscenza del mondo), schede con il 112 e la "tartaruga" (posizione di riparo antisismica).
-- **Primaria**: percorso in 6 moduli + laboratorio + valutazione = 8-10h, 3 esperimenti semplici (modellino frana, gelatina per la scossa sismica, triangolo del fuoco), uscita sul territorio nel raggio di 500m.
-- **Secondaria I grado**: 6 moduli da 60′ + UdA "Conoscere il rischio del mio territorio" (12h + 3h lavoro autonomo), approfondimenti cross-disciplinari (Italiano: Buzzati/Calvino; Storia: da Messina 1908 ad Amatrice 2017; Arte: segnaletica D.Lgs. 81/2008; Tecnologia: IT-alert).
-- **Secondaria II grado**: percorso fino a 70h totali, PCTO strutturato in 6 fasi con tutor interno/esterno, tre progetti di classe (A: analisi del Piano di evacuazione scolastico; B: mappatura del rischio di quartiere; C: mini campagna "Io non rischio"), tre temi pluridisciplinari per l'Esame di Stato (Rischio e responsabilità; Cambiamento climatico e territorio; Comunicazione, media e cittadinanza).
+- **Primaria**: percorso in moduli + laboratorio + valutazione = 8-10h, esperimenti semplici (modellino frana, gelatina per la scossa sismica, triangolo del fuoco), uscita sul territorio nel raggio di 500m.
+- **Secondaria I grado**: moduli da 60′ + UdA "Conoscere il rischio del mio territorio" (12h + 3h lavoro autonomo), approfondimenti cross-disciplinari (Italiano: Buzzati/Calvino; Storia: da Messina 1908 ad Amatrice 2017; Arte: segnaletica D.Lgs. 81/2008; Tecnologia: IT-alert).
+- **Secondaria II grado**: percorso fino a 70h totali, PCTO strutturato in 6 fasi con tutor interno/esterno, tre progetti di classe (A: analisi del Piano di evacuazione scolastico; B: mappatura del rischio di quartiere; C: mini campagna "Io non rischio"), temi pluridisciplinari per l'Esame di Stato (Rischio e responsabilità; Cambiamento climatico e territorio; Comunicazione, media e cittadinanza).
 
 **Quando modificare un kit:**
 
@@ -425,7 +425,7 @@ La sezione **Servizi per il cittadino** in homepage (`data/quick_links.yaml` →
 
 ### 4.11 — Versioni multilingua (selettore + hub linguistiche)
 
-Il sito è scritto in **italiano**, ma offre **versioni curate dal Gruppo** in 7 lingue per turisti e residenti stranieri. La gestione è in due livelli:
+Il sito è scritto in **italiano**, ma offre **versioni curate dal Gruppo** in 7 lingue per turisti e residenti stranieri. La gestione è in livelli:
 
 **1. Selettore lingue globale** — partial `themes/flavour-pcgenzano/layouts/partials/language-selector.html`
 
@@ -500,7 +500,7 @@ Inserito in `baseof.html` via `{{ partial "sos-112.html" . }}` — appare in tut
 
 ### 4.14 — Mappa interattiva delle aree di emergenza (`/cartografia/`)
 
-La pagina `content/cartografia/_index.md` mostra in cima alla sezione una **mappa interattiva** con i 16 punti del Piano di Emergenza Comunale (10 Aree di Attesa, 2 Ammassamento Soccorritori, 4 Aree di Ricovero). La mappa è costruita su tre componenti:
+La pagina `content/cartografia/_index.md` mostra in cima alla sezione una **mappa interattiva** con i 16 punti del Piano di Emergenza Comunale (Aree di Attesa, 2 Ammassamento Soccorritori, Aree di Ricovero). La mappa è costruita su tre componenti:
 
 1. **Dati**: `data/aree_emergenza.yaml` — array di oggetti con `id`, `tipo` (AA/AS/AR), `nome`, `indirizzo`, `lat`, `lon`, `verified`.
 2. **Shortcode**: `{{< mappa-aree >}}` definito in `themes/flavour-pcgenzano/layouts/shortcodes/mappa-aree.html` — incorpora CSS, JS, marker SVG colorati, popup con link a Google Maps + cartello segnaletico, filtri per tipologia, geolocalizzazione "Centra sulla mia posizione".

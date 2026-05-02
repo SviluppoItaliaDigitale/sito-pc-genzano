@@ -18,7 +18,7 @@ Le sigle e i termini tecnici della Protezione Civile possono sembrare complicati
 ## A
 
 ### AA / Area di Attesa
-Punto sicuro dove la popolazione si raduna nelle prime fasi di un'emergenza, in attesa di indicazioni e in vista di un eventuale trasferimento alle aree di ricovero. A Genzano sono identificate **10 aree di attesa** (AA1-AA10) distribuite nei quartieri. Vedi [Cartografia](/cartografia/).
+Punto sicuro dove la popolazione si raduna nelle prime fasi di un'emergenza, in attesa di indicazioni e in vista di un eventuale trasferimento alle aree di ricovero. A Genzano sono identificate **aree di attesa numerate AA** distribuite nei quartieri. Vedi [Cartografia](/cartografia/).
 
 ### AeDES
 **Agibilità e Danno nell'Emergenza Sismica**. È la **scheda tecnica** usata da tecnici qualificati dopo un terremoto per valutare se un edificio è agibile, parzialmente agibile o inagibile. Si compila con sopralluogo e dà un esito che permette o vieta il rientro in casa.
@@ -30,13 +30,13 @@ Punto sicuro dove la popolazione si raduna nelle prime fasi di un'emergenza, in 
 Stato di attenzione comunicato dalle autorità (Centro Funzionale Regionale) **prima** che un evento si verifichi, sulla base di previsioni meteo. Ha 4 livelli: **verde** (nessuna), **gialla** (ordinaria), **arancione** (moderata), **rossa** (elevata). Diversa da **emergenza** (che indica un evento già in corso).
 
 ### AR / Area di Ricovero
-Aree dove vengono allestite **tende, container o moduli abitativi** per ospitare la popolazione evacuata. Possono restare attive per settimane o mesi. A Genzano: 4 aree (AR1-AR4) presso Palazzetto dello Sport, Campi sportivi di Via Piemonte, Via Sardegna e Salesiani.
+Aree dove vengono allestite **tende, container o moduli abitativi** per ospitare la popolazione evacuata. Possono restare attive per settimane o mesi. A Genzano sono identificate aree di ricovero numerate AR presso Palazzetto dello Sport, Campi sportivi di Via Piemonte, Via Sardegna e Salesiani.
 
 ### ARPA Lazio
 **Agenzia Regionale per la Protezione dell'Ambiente del Lazio**. Ente pubblico che monitora aria, acqua, rumore, radiazioni. In emergenza fornisce dati ambientali a supporto del DPC e della Regione.
 
 ### AS / Area di Ammassamento Soccorritori
-Spazio dove si concentrano uomini, mezzi e materiali in arrivo da fuori comune per supportare un'emergenza. A Genzano sono identificate **2 aree di ammassamento**: AS1 (Via del Lavoro, Zona Industriale) e AS2 (Viale Mazzini). Vedi [Cartografia](/cartografia/).
+Spazio dove si concentrano uomini, mezzi e materiali in arrivo da fuori comune per supportare un'emergenza. A Genzano sono identificate **aree di ammassamento AS**: AS1 (Via del Lavoro, Zona Industriale) e AS2 (Viale Mazzini). Vedi [Cartografia](/cartografia/).
 
 ### Attivazione
 Atto formale con cui il **Sindaco** (a livello comunale) o il **Capo Dipartimento** (nazionale) chiede ai volontari di prestare servizio per un'emergenza. Solo durante un'attivazione formale scattano i diritti del volontario al rimborso e alla sospensione del rapporto di lavoro (art. 39-40 D.Lgs. 1/2018).

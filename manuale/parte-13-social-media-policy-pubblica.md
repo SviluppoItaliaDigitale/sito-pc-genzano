@@ -139,7 +139,7 @@ univoco, da usare in modo coerente su tutti i canali.
 #### 13.7.3 — Disinformazione: monitoraggio e risposta
 
 Sui social circolano regolarmente notizie false su rischi, allerte ed emergenze. Le
-combattiamo con tre strumenti:
+combattiamo con strumenti:
 
 - **Monitoraggio attivo** dei canali del territorio (gruppi locali, account istituzionali e
   cittadini di Genzano e Castelli Romani) durante le finestre di allerta.
@@ -235,7 +235,7 @@ Le norme ISO che riguardano la nostra attività sono **citate come principio rec
 - **ISO 22322:2022** *Public warning systems* — quadro per i sistemi di allerta pubblici. Recepita dall'architettura italiana DPC → Centro Funzionale Regionale → Sindaco → cittadini. Citata in `/allerte-meteo/`.
 - **ISO 22324:2015** *Guidelines for color-coded alerts* — codici colore graduati per l'allerta pubblica. Recepita dallo schema italiano verde/giallo/arancione/rosso del DPC. Citata in `/allerte-meteo/`.
 - **ISO 22315:2014** *Mass evacuation — Guidelines for planning* — pianificazione delle evacuazioni di massa, punti di raccolta, attenzione prioritaria alle persone con esigenze specifiche. Recepita dai piani comunali italiani. Citata in `/piano-emergenza/`, `/piano-familiare/`, `/rischi-prevenzione/persone-necessita-specifiche/`.
-- **ISO 7010:2019** *Graphical symbols — Safety colours and safety signs* — pittogrammi standardizzati di sicurezza. Adottata operativamente in `static/pittogrammi/iso7010/` (46 simboli) e usata via shortcode `pittogramma`.
+- **ISO 7010:2019** *Graphical symbols — Safety colours and safety signs* — pittogrammi standardizzati di sicurezza. Adottata operativamente in `static/pittogrammi/iso7010/` (simboli) e usata via shortcode `pittogramma`.
 - **ISO/IEC 40500** (= **WCAG 2.0** / aggiornato a **WCAG 2.2 AA**) per l'accessibilità tecnica dei contenuti, recepita in Italia tramite la **Direttiva UE 2016/2102** e lo standard europeo **EN 301 549**. Citata in `/accessibilita/`.
 
 #### 13.9.5 — Riferimenti normativi orizzontali

@@ -187,7 +187,7 @@ Lo script `scripts/auto-cover-mancanti.py` agisce così:
 
 **Esecuzione locale**: `python3 scripts/auto-cover-mancanti.py` (oppure `--dry-run` per vedere cosa farebbe senza modificare).
 
-**Risultato editoriale**: il sito non avrà mai articoli pubblicati con copertina mancante. Tre livelli di fallback in cascata:
+**Risultato editoriale**: il sito non avrà mai articoli pubblicati con copertina mancante. livelli di fallback in cascata:
 1. **Foto vera** (utente / Wikipedia / NASA / USGS via marker)
 2. **Cover tipografica istituzionale** (gradiente blu + titolo, generata automaticamente)
 3. **Default SVG** (`images/notizia-default.svg`) — solo come fallback estremo se anche cover tipografica fallisce

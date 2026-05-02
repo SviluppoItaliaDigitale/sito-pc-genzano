@@ -36,7 +36,7 @@ Ogni comunicato ordinario contiene, in quest'ordine:
 3. **Occhiello** (opzionale, una riga) — inquadra il tema. Es.: *"Protezione civile e territorio"*.
 4. **Titolo** — informativo, non promozionale. Max 80 caratteri. Es.: *"Il Gruppo Comunale Volontari
    apre le iscrizioni al corso base 2026"*.
-5. **Sottotitolo** (opzionale, una riga) — aggiunge un'informazione concreta. Es.: *"Dodici lezioni
+5. **Sottotitolo** (opzionale, una riga) — aggiunge un'informazione concreta. Es.: *"lezioni
    serali da maggio a luglio, iscrizioni entro il 30 aprile."*
 6. **Lead (primo paragrafo)** — risponde alle 5W classiche: chi, cosa, dove, quando, perché.
    Max 60 parole.
@@ -256,12 +256,12 @@ Protezione civile e formazione
 
 Il Gruppo Comunale Volontari apre le iscrizioni al corso base 2026
 
-Dodici lezioni serali da maggio a luglio, iscrizioni entro il 30 aprile.
+lezioni serali da maggio a luglio, iscrizioni entro il 30 aprile.
 
 Da lunedì 5 maggio prende il via il corso base per nuove volontarie e nuovi
 volontari del Gruppo Comunale di Protezione Civile di Genzano di Roma. Il
 percorso formativo, gratuito e aperto a residenti maggiorenni, si svolge nella
-sede comunale di via […] e dura dodici lezioni serali, fino al 24 luglio.
+sede comunale di via […] e dura lezioni serali, fino al 24 luglio.
 
 Il corso affronta i fondamenti del sistema nazionale di protezione civile, i
 principali rischi del territorio dei Castelli Romani (idrogeologico, incendi

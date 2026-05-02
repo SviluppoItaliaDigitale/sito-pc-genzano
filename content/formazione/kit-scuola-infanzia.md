@@ -24,7 +24,7 @@ Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione C
 > 📚 **Per i docenti — risorse coordinate**
 >
 > - **Pagina hub** [La Protezione Civile per l'Educazione Civica](/formazione/educazione-civica/) — mappatura completa dei nostri contenuti sui **3 Nuclei Concettuali del D.M. 183/2024** (Costituzione, Sostenibilità, Cittadinanza Digitale) + **Goal Agenda 2030 ONU** + tabella interdisciplinare + calendario delle 33 ore.
-> - **Rubrica valutativa** pronta per la fascia: [Rubrica Ed. Civica — Scuola dell'Infanzia](/formazione/schede-stampabili/rubrica-valutativa-infanzia/) — 6 indicatori × 4 livelli, con esempi di giudizio descrittivo / motivazione del voto.
+> - **Rubrica valutativa** pronta per la fascia: [Rubrica Ed. Civica — Scuola dell'Infanzia](/formazione/schede-stampabili/rubrica-valutativa-infanzia/) — indicatori × livelli, con esempi di giudizio descrittivo / motivazione del voto.
 
 
 ### Campi di Esperienza coinvolti
@@ -256,13 +256,13 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**La Tartaruga Saggia**](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) — Tina spiega 4 comportamenti di autoprotezione, il bambino li ricostruisce.
 - 👉 [**Trova le Coppie**](/formazione/schede-stampabili/trova-coppie-infanzia/) — accoppia oggetti e situazioni della sicurezza.
 
-**3 schede di letto-scrittura** a tema Protezione Civile per il pre-grafismo e il riconoscimento delle prime parole (5-6 anni):
+**Schede di letto-scrittura** a tema Protezione Civile per il pre-grafismo e il riconoscimento delle prime parole (5-6 anni):
 
 - 👉 [**ABC delle Vocali — Le parole che salvano**](/formazione/schede-stampabili/abc-vocali-infanzia/) — le 5 vocali abbinate a parole della Protezione Civile (A→AIUTO, E→ELMETTO, I→IDRANTE, O→OSPEDALE, U→USCITA), lettera da ricalcare e parola da ricopiare.
 - 👉 [**Riconosci l'Iniziale**](/formazione/schede-stampabili/riconosci-iniziale-infanzia/) — per ogni immagine il bambino cerchia la lettera con cui inizia la parola, fra tre opzioni. 10 parole-chiave della sicurezza.
 - 👉 [**Collega la Parola all'Immagine**](/formazione/schede-stampabili/collega-parola-immagine-infanzia/) — 8 parole in stampatello da collegare con una linea alle 8 immagini in colonna a destra. Adatta anche per la classe 1ª.
 
-**6 schede curriculari trasversali 5-6 anni** a tema Protezione Civile (numeri, scienze, territorio, comprensione):
+**Schede curriculari trasversali 5-6 anni** a tema Protezione Civile (numeri, scienze, territorio, comprensione):
 
 - 👉 [**I Numeri della Protezione Civile**](/formazione/schede-stampabili/numeri-pc-infanzia/) — numeri da 1 a 5 abbinati agli oggetti PC da contare e ricalcare. Plus il 112 in rosso. *(matematica)*
 - 👉 [**Il Ciclo dell'Acqua**](/formazione/schede-stampabili/ciclo-acqua-infanzia/) — 4 vignette (sole, vapore, nuvola, pioggia) da rimettere in ordine. Capire da dove arriva la pioggia. *(scienze)*
@@ -271,7 +271,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**I Punti Cardinali**](/formazione/schede-stampabili/punti-cardinali-infanzia/) — rosa dei venti semplificata con N, S, E, O. Dove sorge e tramonta il sole. *(territorio)*
 - 👉 [**Riordina l'Evacuazione**](/formazione/schede-stampabili/riordina-vignette-evacuazione-infanzia/) — 4 vignette dell'evacuazione scolastica da rimettere in ordine cronologico. *(comprensione del testo)*
 
-**6 schede per i più piccoli (3-4 anni)** — pregrafismo, conta puntini, riconoscimento forme/colori:
+**Schede per i più piccoli (3-4 anni)** — pregrafismo, conta puntini, riconoscimento forme/colori:
 
 - 👉 [**Pregrafismo — Le linee della PC**](/formazione/schede-stampabili/pregrafismo-linee-infanzia/) — 4 esercizi di pregrafismo (linee dritte, zigzag, ondulate, spirali) ispirati ai mezzi PC. *(coordinazione mano-occhio)*
 - 👉 [**Conta i Puntini 1-3**](/formazione/schede-stampabili/conta-puntini-infanzia/) — 6 quadrati con oggetti PC da contare e cerchiare il numero giusto fra 1, 2, 3. *(numeri base)*
@@ -280,7 +280,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Filastrocca della Tartaruga — illustrata**](/formazione/schede-stampabili/filastrocca-illustrata-infanzia/) — 6 versi della filastrocca con emoji + tartaruga grande da colorare. *(linguaggio)*
 - 👉 [**Disegna il tuo Aiutante**](/formazione/schede-stampabili/disegna-aiutante-infanzia/) — silhouette di volontario PC con casco/giubbotto/radio/scarponi tratteggiati: pregrafismo + colorazione guidata. *(disegno guidato)*
 
-**10 schede da colorare** sui rischi del territorio e sui soccorritori (linea pulita pensata per matite, pastelli, pennarelli):
+**Schede da colorare** sui rischi del territorio e sui soccorritori (linea pulita pensata per matite, pastelli, pennarelli):
 
 *Sui rischi*:
 
@@ -301,7 +301,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 Queste schede sono pensate per essere **fotocopiate in bianco e nero** e consegnate ai bambini come attività di rinforzo individuale o di piccolo gruppo. Il disegno è sempre accompagnato da una breve consegna che la maestra legge ad alta voce.
 
-**Storie e racconti per leggere insieme — sezione 3-5 anni:** sei fiabe brevi (200-400 parole) con la mascotte Tina la Tartaruga, ognuna su un tema PC e con sezione "Per il/la docente" (obiettivi, competenze chiave europee, attività di circle time, riferimenti curricolari). Da leggere ad alta voce, drammatizzare, illustrare.
+**Storie e racconti per leggere insieme — sezione 3-5 anni:** fiabe brevi (200-400 parole) con la mascotte Tina la Tartaruga, ognuna su un tema PC e con sezione "Per il/la docente" (obiettivi, competenze chiave europee, attività di circle time, riferimenti curricolari). Da leggere ad alta voce, drammatizzare, illustrare.
 
 - 👉 [**Tina e il temporale gentile**](/formazione/storie-e-racconti/tina-temporale-gentile/) — autoprotezione durante un temporale, riparo al chiuso.
 - 👉 [**Il fischietto magico di Tina**](/formazione/storie-e-racconti/tina-fischietto-magico/) — tre fischi = aiuto, kit emergenza.
@@ -574,7 +574,7 @@ Una volta nel percorso (meglio a fine percorso), organizzare 90 minuti dedicati.
 - 15 min — **Accoglienza**: i bambini entrano con un "distintivo" di Piccolo Volontario realizzato in classe.
 - 20 min — **Storia**: lettura animata di un racconto (*La pioggia che non faceva paura*, *Tartù e il terremoto*) con pupazzi o marionette.
 - 20 min — **Prova pratica**: esercitazione di evacuazione guidata con la sirena giocosa.
-- 20 min — **Incontro con un volontario**: se possibile, un volontario del Gruppo viene in visita. I bambini gli pongono tre domande preparate in anticipo ("Come si chiama la tua divisa?", "Cosa c'è nel tuo zaino?", "Hai mai aiutato qualcuno?").
+- 20 min — **Incontro con un volontario**: se possibile, un volontario del Gruppo viene in visita. I bambini gli pongono domande preparate in anticipo ("Come si chiama la tua divisa?", "Cosa c'è nel tuo zaino?", "Hai mai aiutato qualcuno?").
 - 15 min — **Merenda insieme** e consegna di un disegno fatto in classe al volontario, come ringraziamento.
 
 Documentare con foto (con autorizzazioni genitoriali) per condividere con le famiglie e comunicare al Gruppo. Se interessati, scriveteci a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it): il Gruppo valuta disponibilità di volontari per visite gratuite.

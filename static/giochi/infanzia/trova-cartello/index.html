@@ -223,7 +223,7 @@
                    perche: 'Il telefono rosso ricorda di chiamare i pompieri: in Italia il numero è 1-1-2.' }
     };
 
-    // Pool di 16 domande: ogni partita ne pesca 12 random, divise in 2 round
+    // Pool di domande: ogni partita ne pesca 12 random, divise in 2 round
     // da 6 (no overlap fra round). I round sono comunque in ordine random
     // per non essere prevedibili dopo la prima partita. Copre tutti e 16 i
     // cartelli del CATALOGO (prima 4 erano inutilizzati: caduta, entrare,
@@ -286,7 +286,7 @@
     }
 
     function start() {
-      // Ricostruisce ROUNDS pescando 12 domande random dal POOL di 16,
+      // Ricostruisce ROUNDS pescando domande random dal POOL di 16,
       // divise in 2 round da 6 senza overlap.
       var pool = shuffle(POOL_DOMANDE);
       ROUNDS = [pool.slice(0, 6), pool.slice(6, 12)];

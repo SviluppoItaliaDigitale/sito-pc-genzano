@@ -97,7 +97,7 @@ Se non sai in quale Parte cercare:
 > **2.5 (2026-04-27) — Allerta + comunicazione di crisi**
 > Campo `ultimo_controllo` separato in `allerta.json` (max 4 commit/giorno). Nuova
 > Parte 13.7 "Comunicazione di crisi sui social" allineata a ISO 22329:2021 + CWA
-> CEN/CENELEC. Gerarchia fonti normative riorganizzata in 6 livelli (Parte 13.9).
+> CEN/CENELEC. Gerarchia fonti normative riorganizzata in livelli (Parte 13.9).
 
 > **2.4 (2026-04-24) — Kit scuola** (Parte 4.8) — struttura didattica completa.
 > **2.3 (2026-04-22) — Holding statement** + Parte 13 Social Media Policy pubblica.

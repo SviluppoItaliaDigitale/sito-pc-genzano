@@ -12,10 +12,10 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 | Aggiornamento Allerta Meteo | `check-allerta.yml` | orario (cron `12 * * * *`), manuale | Legge feed DPC, aggiorna `data/allerta.json` |
 | Pubblicazione programmata | `pubblica-programmata.yml` | giornaliero (06:00 UTC), manuale | Riavvia il deploy per pubblicare articoli a data futura |
 | Audit Accessibilità | `lighthouse-audit.yml` | dopo ogni deploy, manuale | Lighthouse su home e 5 pagine chiave |
-| Smoke test post-deploy | `smoke-test-post-deploy.yml` | dopo ogni deploy, manuale | Verifica live di 20 pagine + 7 lingue + 6 mini-app + 11 marker JS + 2 header sicurezza. Logica in `scripts/smoke-test-live.sh` |
+| Smoke test post-deploy | `smoke-test-post-deploy.yml` | dopo ogni deploy, manuale | Verifica live di 20 pagine + 7 lingue + mini-app + 11 marker JS + 2 header sicurezza. Logica in `scripts/smoke-test-live.sh` |
 | Aggiorna Bootstrap Italia | `update-bootstrap-italia.yml` | lunedì 06:00 UTC, manuale | Verifica nuove release Bootstrap Italia, apre PR |
 | Aggiornamento MANUALE | `aggiorna-manuale.yml` | lunedì 06:00 UTC, manuale | Confronta hash fonti AGID/DI, apre Issue se cambiate |
-| **Audit completo sito** | `audit-sito.yml` | lunedì 09:00 UTC, manuale | **38 sezioni**: contenuti (1-15) + codice/template (16-22) + governance docs (23-32) + audit aggiuntivo (33-37) + link critici normativa (38). Fuso da `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026 |
+| **Audit completo sito** | `audit-sito.yml` | lunedì 09:00 UTC, manuale | **Sezioni**: contenuti (1-15) + codice/template (16-22) + governance docs (23-32) + audit aggiuntivo (33-37) + link critici normativa (38). Fuso da `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026 |
 | Verifica link sito completo | `check-links-sito.yml` | lunedì 10:00 UTC, manuale | Crawl completo con **lychee**: tutti i link interni + esterni del sito, apre issue automatica su 404/drift |
 
 ### 10.2 — `deploy.yml` — Build e Deploy
@@ -141,7 +141,7 @@ exclude: |
 4. Aggiorna il campo "Ultimo check linee guida AGID" in testa al manuale.
 5. Commit + push, chiudi la Issue con un commento che cita il commit.
 
-### 10.8 — `audit-sito.yml` — Audit completo settimanale (38 sezioni)
+### 10.8 — `audit-sito.yml` — Audit completo settimanale (sezioni)
 
 **Trigger**: cron settimanale (lunedì 09:00 UTC), manuale.
 
@@ -197,7 +197,7 @@ exclude: |
 37. **Smoke test rendering** — verifica che le 12 pagine critiche generate (`public/index.html`, `cosa-fare-adesso`, `numeri-utili`, `contatti`, `cartografia`, `assistente`, `comunicazioni`, `formazione`, `rischi-prevenzione`, `diventa-volontario`, `area-download`, `faq`) abbiano un `<h1>` (cattura rendering rotto / frontmatter sbagliato che Hugo non sempre segnala).
 38. **Link critici (normativa, PDF locali, Normattiva)** — sentinella veloce con messaggi specifici sugli 8 link che, se cadono, vanno individuati subito perché compaiono in più pagine: 2 portali ufficiali (Lazio Agenzia PC, DPC normativa nazionale), 4 PDF locali sul server Aruba (Piano Emergenza Comunale, Ordinanza AIB 2025, Piano AIB Lazio, Piano Triennale Lazio) gestiti manualmente in `/documenti/`, 2 link Normattiva (D.Lgs. 1/2018 Codice PC, L. 353/2000 incendi boschivi). Lychee farà comunque il crawl completo lun 10:00 ma con output generico; questa sezione apre l'issue settimanale dell'audit con il nome del documento rotto. Sostituisce il workflow `check-normativa-links.yml` precedente (lun 08:00).
 
-**Formato Issue:** report markdown con 38 sezioni numerate. `❌` = errore (da correggere prima del prossimo deploy), `⚠️` = warning (valutare se falso positivo). Label issue: `audit`, `qualità-testi`, `manutenzione`.
+**Formato Issue:** report markdown con sezioni numerate. `❌` = errore (da correggere prima del prossimo deploy), `⚠️` = warning (valutare se falso positivo). Label issue: `audit`, `qualità-testi`, `manutenzione`.
 
 **Quando intervenire:** ogni volta che apre una Issue. Il workflow è tarato per essere conservativo (pochi falsi positivi). Se un warning ricorrente è un falso positivo legittimo (es. una citazione lunga, un articolo intenzionalmente con anno fuori range), aggiungi un'eccezione mirata al workflow così la segnalazione non si ripete.
 

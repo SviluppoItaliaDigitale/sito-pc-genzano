@@ -259,7 +259,7 @@
       intro.classList.add('hide'); end.classList.add('hide'); game.classList.remove('hide');
       punti = 0; punteggioMax = 0;
       puntiEl.textContent = 0;
-      // Prepara 5 domande alfabeto, 3 formato, 3 dettato
+      // Prepara domande alfabeto, 3 formato, 3 dettato
       modeQueues.alfabeto = shuffle(NATO.slice()).slice(0, 5).map(function(p){
         var opts = shuffle([p[1]].concat(shuffle(NATO.filter(function(q){ return q[0] !== p[0]; })).slice(0, 3).map(function(q){ return q[1]; })));
         return { tipo:'mc', testo: 'Come si dice in NATO la lettera <strong>' + p[0] + '</strong>?', opzioni: opts, corretta: opts.indexOf(p[1]), spiega: p[0] + ' = ' + p[1] };
