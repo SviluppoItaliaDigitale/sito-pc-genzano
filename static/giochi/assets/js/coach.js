@@ -406,12 +406,13 @@
     'linea-tempo-eventi': {
       fascia: 'ragazzi',
       titolo: 'Consigli per la Linea del Tempo',
-      regola: 'Otto eventi che hanno cambiato la Protezione Civile italiana. Ognuno ha modificato leggi, organizzazione o tecnologie.',
+      regola: 'Pool di 16 eventi che hanno costruito la Protezione Civile italiana. Ogni partita ne pesca 8 random.',
       come: [
         'Parti dai più antichi: Vajont 1963, Friuli 1976, Irpinia 1980 sono i fondativi.',
-        'L\'Aquila 2009 ha portato la valutazione del rischio sismico moderna.',
-        'Centro Italia 2016 ha consolidato il sistema di gestione COC e COM.',
-        'Se non sai un anno, ragiona sul contesto storico (TV in bianco e nero? smartphone già diffusi?).'
+        'Cerca il legame causa-effetto: Sarno 1998 → Legge 267 (PAI). L\'Aquila 2009 → direttiva comunicazione rischio.',
+        'Centro Italia 2016 → consolidamento sistema COC/COM. Codice PC 2018 → riforma organica.',
+        'Eventi recenti: Vaia 2018 (vento), Emilia-Romagna 2023 (alluvione), IT-alert 2024.',
+        'Se non sai un anno, ragiona sul contesto storico (smartphone diffusi? UE già esistente?).'
       ],
       teoria: [
         { titolo: 'Storia della Protezione Civile', url: '/chi-siamo/' },
