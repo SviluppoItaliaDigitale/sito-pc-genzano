@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Memory dei Rischi — Giochi Protezione Civile</title>
-  <meta name="description" content="Memory con mezzi, attrezzature e simboli della protezione civile. Gioco per bambini dai 6 agli 11 anni.">
+  <title>Memory dei Segnali — Giochi Protezione Civile</title>
+  <meta name="description" content="Memory educativo: abbina i pittogrammi ISO 7010 di sicurezza al comportamento corretto. Tre livelli per scuola primaria.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
@@ -25,33 +25,81 @@
             <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
             <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
             <li class="breadcrumb-item"><a href="../index.html">Scuola Primaria</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Memory dei Rischi</li>
+            <li class="breadcrumb-item active" aria-current="page">Memory dei Segnali</li>
           </ol>
         </nav>
-        <h1>Memory dei Rischi</h1>
+        <h1>Memory dei Segnali</h1>
+        <p class="lead mb-0">Abbina ogni segnale di sicurezza ISO 7010 al comportamento giusto. Più segnali impari, più sai come reagire in emergenza.</p>
       </div>
     </div>
     <div class="container py-4">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="game-container">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <p class="mb-0 fw-bold">Mosse: <span id="moves-count">0</span> &middot; Coppie: <span id="pairs-count">0</span>/<span id="pairs-total">8</span></p>
-              <a href="../index.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
+
+          <!-- INTRO -->
+          <div id="intro-screen" class="game-container">
+            <div class="intro-box">
+              <h2>Come si gioca</h2>
+              <p>Ogni coppia è formata da <strong>un pittogramma</strong> di sicurezza (i cartelli ISO 7010 che vedi nei luoghi pubblici) e dal <strong>comportamento corretto</strong> da tenere quando lo incontri.</p>
+              <p>Gira due carte alla volta: se una è il segnale e l'altra è il comportamento giusto, fanno coppia. Per ogni coppia trovata leggi una breve spiegazione.</p>
+              <h2 class="mt-4">Scegli il livello</h2>
+              <div class="livelli-grid">
+                <button type="button" class="btn-livello" data-livello="facile">
+                  <span class="livello-num">1</span>
+                  <span class="livello-nome">Facile</span>
+                  <span class="livello-info">4 coppie · 8 carte</span>
+                </button>
+                <button type="button" class="btn-livello" data-livello="medio">
+                  <span class="livello-num">2</span>
+                  <span class="livello-nome">Medio</span>
+                  <span class="livello-info">6 coppie · 12 carte</span>
+                </button>
+                <button type="button" class="btn-livello" data-livello="esperto">
+                  <span class="livello-num">3</span>
+                  <span class="livello-nome">Esperto</span>
+                  <span class="livello-info">8 coppie · 16 carte</span>
+                </button>
+              </div>
+              <div class="text-center mt-3">
+                <a href="../index.html" class="app-back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
+              </div>
             </div>
-            <div class="memory-grid" role="group" aria-label="Griglia del memory"></div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div id="win-screen" class="win-screen-container hide" role="dialog" aria-labelledby="win-title" aria-modal="true">
-      <div class="win-box">
-        <h2 id="win-title">Complimenti!</h2>
-        <p>Hai trovato tutte le coppie!</p>
-        <div class="attestato-inject my-3"></div>
-        <div class="d-flex flex-wrap justify-content-center gap-2">
-          <button id="restart-button" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i> Gioca Ancora</button>
-          <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
+
+          <!-- GAME -->
+          <div id="game-screen" class="game-container hide">
+            <div class="hud-row">
+              <span class="hud-pill"><i class="bi bi-flag" aria-hidden="true"></i> Livello: <strong id="livello-corrente">Facile</strong></span>
+              <span class="hud-pill"><i class="bi bi-arrows-move" aria-hidden="true"></i> Mosse: <strong id="moves-count">0</strong></span>
+              <span class="hud-pill"><i class="bi bi-check2-circle" aria-hidden="true"></i> Coppie: <strong id="pairs-count">0</strong>/<strong id="pairs-total">8</strong></span>
+              <button type="button" id="reset-level-btn" class="btn btn-sm btn-outline-secondary">
+                <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Cambia livello
+              </button>
+            </div>
+
+            <div class="memory-grid" role="group" aria-label="Griglia del memory"></div>
+
+            <div id="explain-box" class="explain-box hide" aria-live="polite">
+              <h3 id="explain-title"></h3>
+              <p id="explain-body"></p>
+            </div>
+          </div>
+
+          <!-- WIN -->
+          <div id="win-screen" class="win-screen-container hide" role="dialog" aria-labelledby="win-title" aria-modal="true">
+            <div class="win-box">
+              <h2 id="win-title">Complimenti!</h2>
+              <p>Hai abbinato tutti i segnali al loro comportamento.</p>
+              <p id="win-stats" class="win-stats"></p>
+              <div class="attestato-inject my-3"></div>
+              <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button id="restart-button" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i> Stesso livello</button>
+                <button type="button" class="btn btn-outline-primary" data-cambia-livello><i class="bi bi-bar-chart-steps me-1" aria-hidden="true"></i> Cambia livello</button>
+                <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
