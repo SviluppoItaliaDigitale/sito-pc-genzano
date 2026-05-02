@@ -1,0 +1,108 @@
+/* ============================================================
+   TTS Bambini — stili del bottone "🔊 Ascolta" per i giochi
+   della scuola infanzia (3-6 anni che non sanno ancora leggere).
+   Usa Web Speech API: vedi /giochi/assets/js/tts-bambini.js
+   ============================================================ */
+
+.tts-bambini-btn {
+  /* Bottone tondo grande, ben visibile, touch-friendly (56px > 24x24
+     minimo WCAG). Tipicamente posizionato accanto al testo della
+     domanda o al fumetto di Tina. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  min-width: 56px;
+  min-height: 56px;
+  padding: .55rem 1rem;
+  border: 0;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #003366 0%, #002244 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #001a33, 0 6px 12px rgba(0, 51, 102, .25);
+  transition: transform .12s, box-shadow .15s;
+  user-select: none;
+  /* Icona altoparlante via emoji: niente font extra da caricare */
+}
+
+.tts-bambini-btn::before {
+  content: "🔊";
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* Versione "icona sola" senza testo: imposta data-only-icon o omette
+   il contenuto testuale. Per default ha "Ascolta" come testo. */
+.tts-bambini-btn[data-icon-only="true"] {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 0;
+}
+.tts-bambini-btn[data-icon-only="true"]::before { font-size: 1.6rem; }
+
+.tts-bambini-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #001a33, 0 8px 16px rgba(0, 51, 102, .35);
+}
+.tts-bambini-btn:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #001a33, 0 3px 6px rgba(0, 51, 102, .25);
+}
+.tts-bambini-btn:focus-visible {
+  outline: 4px solid #ffbe2e;
+  outline-offset: 3px;
+}
+
+/* Stato "sta leggendo" — pulse animato in giallo ambra come segnale che
+   audio e' in corso. Cliccare di nuovo lo stesso bottone ferma l'audio. */
+.tts-bambini-btn.parlando {
+  background: linear-gradient(180deg, #ffbe2e 0%, #e6a015 100%);
+  color: #003366;
+  box-shadow: 0 4px 0 #b87f10, 0 6px 12px rgba(255, 190, 46, .4);
+  animation: tts-bambini-pulse 1.5s ease-in-out infinite;
+}
+.tts-bambini-btn.parlando::before {
+  content: "🔊";
+  /* Icona uguale, ma cambia il colore dello sfondo */
+}
+
+@keyframes tts-bambini-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tts-bambini-btn { transition: none; }
+  .tts-bambini-btn:hover, .tts-bambini-btn:active { transform: none; }
+  .tts-bambini-btn.parlando { animation: none; }
+}
+
+/* Browser senza supporto Web Speech API: nasconde i bottoni TTS
+   per non confondere l'utente con un bottone non funzionante. */
+.no-tts-bambini .tts-bambini-btn { display: none !important; }
+
+/* Container utility per centrare il bottone TTS sopra/sotto la domanda */
+.tts-bambini-wrap {
+  display: flex;
+  justify-content: center;
+  margin: .6rem 0;
+}
+
+/* Su mobile, leggermente piu' piccolo per non rubare spazio al gioco */
+@media (max-width: 480px) {
+  .tts-bambini-btn {
+    min-width: 50px;
+    min-height: 50px;
+    padding: .5rem .9rem;
+    font-size: 1rem;
+  }
+  .tts-bambini-btn[data-icon-only="true"] {
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
   <link rel="stylesheet" href="/giochi/assets/css/coach.css">
+  <link rel="stylesheet" href="/giochi/assets/css/tts-bambini.css">
   <style>
     .level-badge {
       display: inline-block; background: var(--inf-blu); color: #fff;
@@ -78,7 +79,10 @@
       <div class="text-center mb-3">
         <button id="ascolta" class="ascolta"><i class="bi bi-volume-up-fill"></i> Ascolta il suono</button>
       </div>
-      <p class="text-center mb-2">Che suono è?</p>
+      <p class="text-center mb-2" id="domanda-suoni">Che suono è?</p>
+      <div class="tts-bambini-wrap">
+        <button type="button" class="tts-bambini-btn" data-tts-target="#domanda-suoni" aria-label="Ascolta la domanda">Ascolta la domanda</button>
+      </div>
       <div id="scelta" class="scelta" role="group" aria-label="Scegli il suono"></div>
       <div id="feedback" class="text-center mt-3 h5" aria-live="polite"></div>
     </div>
@@ -222,6 +226,7 @@
     });
   })();
   </script>
+  <script src="/giochi/assets/js/tts-bambini.js" defer></script>
   <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>
