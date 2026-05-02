@@ -8,9 +8,14 @@ Template istituzionale:
   - Footer con titolo articolo + URL del sito
 
 Output (accanto ai testi delle bozze, comodo da scaricare insieme via mobile):
-  social-bozze/<slug>/instagram-post.webp        (1080x1080, 1 sola foto)
-  social-bozze/<slug>/instagram-post-N.webp      (carosello, 2-10 foto)
-  social-bozze/<slug>/instagram-story.webp       (1080x1920, sempre 1)
+  social-bozze/<slug>/instagram-post.jpg         (1080x1080, 1 sola foto)
+  social-bozze/<slug>/instagram-post-N.jpg       (carosello, 2-10 foto)
+  social-bozze/<slug>/instagram-story.jpg        (1080x1920, sempre 1)
+
+Formato: JPEG quality 90. Universalmente accettato da Instagram, Facebook,
+X, Telegram, LinkedIn. WebP non funziona per upload su Instagram (web e
+app mobile lo rifiutano). PNG sarebbe accettato ma 3-5x più pesante senza
+benefici visibili sul nostro template (sfondi piatti + testo).
 
 Uso:
   python3 scripts/genera-immagini-social.py content/comunicazioni/2026-04-20-articolo.md
@@ -173,7 +178,7 @@ def crea_post_quadrato(cover_path: Path, titolo: str, out_path: Path) -> Path:
               font=font_url, fill=TEXT_DARK)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "WEBP", quality=85, method=6)
+    img.save(out_path, "JPEG", quality=90, optimize=True, progressive=True)
     return out_path
 
 
@@ -257,7 +262,7 @@ def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
               font=font_url2, fill=WHITE)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "WEBP", quality=85, method=6)
+    img.save(out_path, "JPEG", quality=90, optimize=True, progressive=True)
     return out_path
 
 
@@ -396,40 +401,42 @@ def main() -> int:
 
         n_foto = len(art["carousel"])
         out_dir = slug_dir(art["slug"])
-        story_path = out_dir / "instagram-story.webp"
+        story_path = out_dir / "instagram-story.jpg"
 
         # Naming:
-        #   1 sola foto -> instagram-post.webp
-        #   2+ foto    -> instagram-post-1.webp, instagram-post-2.webp, ...
+        #   1 sola foto -> instagram-post.jpg
+        #   2+ foto    -> instagram-post-1.jpg, instagram-post-2.jpg, ...
         if n_foto == 1:
-            target = out_dir / "instagram-post.webp"
+            target = out_dir / "instagram-post.jpg"
             if not args.force and target.exists() and story_path.exists():
                 print(f"  GIÀ PRESENTE (--force per ri-generare): {art['slug']}",
                       file=sys.stderr)
                 saltati += 1
                 continue
         else:
-            target_1 = out_dir / "instagram-post-1.webp"
+            target_1 = out_dir / "instagram-post-1.jpg"
             if not args.force and target_1.exists() and story_path.exists():
                 print(f"  GIÀ PRESENTE carosello (--force per ri-generare): {art['slug']}",
                       file=sys.stderr)
                 saltati += 1
                 continue
 
-        # --force: pulisci eventuali immagini precedenti (numero foto può variare
-        # tra un run e l'altro se l'utente aggiunge/toglie {{< foto >}} inline)
+        # --force: pulisci eventuali immagini precedenti (incluse vecchie .webp
+        # da prima del 2 maggio 2026 quando IG non accettava il formato)
         if args.force:
             for old in out_dir.glob("instagram-post*.webp"):
+                old.unlink()
+            for old in out_dir.glob("instagram-post*.jpg"):
                 old.unlink()
 
         try:
             if n_foto == 1:
                 crea_post_quadrato(art["carousel"][0], art["title"],
-                                   out_dir / "instagram-post.webp")
+                                   out_dir / "instagram-post.jpg")
             else:
                 for idx, foto in enumerate(art["carousel"], 1):
                     crea_post_quadrato(foto, art["title"],
-                                       out_dir / f"instagram-post-{idx}.webp")
+                                       out_dir / f"instagram-post-{idx}.jpg")
 
             # Story: sempre 1 sola, usa la cover principale
             crea_story_verticale(art["cover"], art["title"], art["description"],

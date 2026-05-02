@@ -344,7 +344,7 @@ Specifiche complete in [CLAUDE.md](CLAUDE.md) e nelle 11 regole `.claude/rules/`
 9. Verifica con `hugo server` in locale.
 10. Esegui la checklist pre-pubblicazione (Parte 5).
 11. `git add . && git commit -m "Nuovo articolo: titolo" && git push`.
-12. Al push automaticamente: deploy + bozze social generate (Gemini API) + immagini Instagram. Risultato **tutto insieme** in `social-bozze/<slug>/` (4 .txt + `instagram-post*.webp` + `instagram-story.webp`) entro 5–10 minuti.
+12. Al push automaticamente: deploy + bozze social generate (Gemini API) + immagini Instagram. Risultato **tutto insieme** in `social-bozze/<slug>/` (4 .txt + `instagram-post*.jpg` + `instagram-story.jpg`) entro 5–10 minuti.
 13. Controlla il deploy nella tab Actions.
 
 ---
