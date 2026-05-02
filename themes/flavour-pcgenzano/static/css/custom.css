@@ -3186,44 +3186,67 @@ html.a11y-contrast-high .list-intro-content mark.tts-word-mark {
   white-space: normal;
 }
 .gloss-term {
-  /* Reset bottone → look "termine sottolineato tratteggiato" */
+  /* Reset aggressivo del <button> nativo: niente sfondo grigio, niente
+     bordo, niente shadow, niente styling browser-default. Il termine
+     deve apparire come testo arricchito (sottolineatura tratteggiata
+     blu istituzionale), NON come widget interattivo. */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   display: inline;
-  background: transparent;
+  background: none;
+  background-color: transparent;
   border: 0;
-  padding: 0 1px;
+  border-radius: 0;
+  padding: 0;
   margin: 0;
   font: inherit;
-  color: #003366;
+  color: inherit;
+  text-align: inherit;
+  line-height: inherit;
+  box-shadow: none;
+  outline: none;
   cursor: help;
+  /* Signal visivo: sottolineatura tratteggiata blu istituzionale */
   text-decoration: underline dotted #003366;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
-  border-radius: 2px;
-  transition: background-color 0.15s ease;
+  /* Stato di transizione lieve, mai sfondo solido di default */
+  transition: text-decoration-thickness 0.15s ease, text-decoration-style 0.15s ease;
 }
+/* Hover desktop e stato aperto: sottolineatura solida (più decisa) +
+   un velo azzurrino tenue dietro al termine, MAI un riquadro chiuso. */
 .gloss-term:hover,
 .gloss-term[aria-expanded="true"] {
-  background: #eaf1fb;
-  text-decoration-style: solid;
+  text-decoration: underline solid #003366;
   text-decoration-thickness: 2px;
+  background: linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(0, 51, 102, 0.08) 70%, rgba(0, 51, 102, 0.08) 100%);
 }
+/* Focus tastiera: alone giallo PA, mantiene il senso di interattività */
 .gloss-term:focus-visible {
-  outline: 3px solid #ffbe2e;
+  outline: 2px solid #ffbe2e;
   outline-offset: 2px;
-  background: #eaf1fb;
+  border-radius: 2px;
 }
+/* Icona "ⓘ" piccola e discreta, eredita il colore del testo */
 .gloss-icon {
-  display: inline-block;
-  font-size: 0.78em;
-  color: #003366;
+  display: inline;
+  font-size: 0.7em;
   margin-left: 1px;
   vertical-align: super;
-  line-height: 1;
-  opacity: 0.75;
+  line-height: 0;
+  color: #0a4275;
+  opacity: 0.55;
+  font-style: normal;
+  font-weight: normal;
+  /* Il glifo ⓘ può essere reso "tondo" anche su font che lo trattano da emoji
+     colorato — forziamo monocromia */
+  font-variant-emoji: text;
 }
 .gloss-term:hover .gloss-icon,
-.gloss-term[aria-expanded="true"] .gloss-icon {
-  opacity: 1;
+.gloss-term[aria-expanded="true"] .gloss-icon,
+.gloss-term:focus-visible .gloss-icon {
+  opacity: 0.9;
 }
 
 /* Popover: sotto al button by default, flip sopra se overflow */
@@ -3237,20 +3260,26 @@ html.a11y-contrast-high .list-intro-content mark.tts-word-mark {
   gap: 0.4rem;
   min-width: 240px;
   max-width: min(360px, 90vw);
-  padding: 0.7rem 0.85rem;
-  background: #fff;
-  border: 1px solid #c9d3e3;
+  padding: 0.75rem 0.9rem;
+  /* Sfondo azzurrino istituzionale tenue: distingue chiaramente il popover
+     dal corpo articolo (bianco) senza diventare invasivo. La banda blu
+     a sinistra rinforza il riconoscimento. */
+  background: #eef4fb;
+  border: 1px solid #b3c6dd;
   border-left: 4px solid #003366;
   border-radius: 6px;
-  box-shadow: 0 6px 24px rgba(0, 51, 102, 0.18);
+  /* Ombra più marcata per "staccare" il popover dalla pagina */
+  box-shadow: 0 8px 28px rgba(0, 51, 102, 0.22), 0 2px 6px rgba(0, 51, 102, 0.12);
   font-size: 0.92rem;
-  line-height: 1.45;
+  line-height: 1.5;
   color: #1a1a1a;
   /* L'elemento è inline-flex content all'interno: serve normalize */
   white-space: normal;
   text-align: left;
   text-decoration: none;
-  /* Triangolo che punta al termine */
+  /* Anti-eredità: il popover NON deve ereditare la sottolineatura blu
+     del .gloss-term che lo precede */
+  text-decoration-line: none;
 }
 .gloss-popover::before {
   content: "";
@@ -3259,9 +3288,9 @@ html.a11y-contrast-high .list-intro-content mark.tts-word-mark {
   left: 14px;
   width: 12px;
   height: 12px;
-  background: #fff;
-  border-left: 1px solid #c9d3e3;
-  border-top: 1px solid #c9d3e3;
+  background: #eef4fb;
+  border-left: 1px solid #b3c6dd;
+  border-top: 1px solid #b3c6dd;
   transform: rotate(45deg);
 }
 .gloss-popover.is-flipped-up {
@@ -3273,8 +3302,8 @@ html.a11y-contrast-high .list-intro-content mark.tts-word-mark {
   bottom: -7px;
   border-left: 0;
   border-top: 0;
-  border-right: 1px solid #c9d3e3;
-  border-bottom: 1px solid #c9d3e3;
+  border-right: 1px solid #b3c6dd;
+  border-bottom: 1px solid #b3c6dd;
 }
 .gloss-popover-def {
   display: block;
@@ -3317,9 +3346,17 @@ html.a11y-contrast-high .list-intro-content mark.tts-word-mark {
   .gloss-popover { display: none !important; }
 }
 
-/* Toolbar a11y: contrasto invertito (sfondo nero) */
+/* Toolbar a11y: contrasto invertito (sfondo nero, testo bianco) */
 html.a11y-contrast-invert .gloss-term {
+  text-decoration-color: #ffd700;
+}
+html.a11y-contrast-invert .gloss-icon {
   color: #ffd700;
+  opacity: 0.85;
+}
+html.a11y-contrast-invert .gloss-term:hover,
+html.a11y-contrast-invert .gloss-term[aria-expanded="true"] {
+  background: linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(255, 215, 0, 0.2) 70%, rgba(255, 215, 0, 0.2) 100%);
   text-decoration-color: #ffd700;
 }
 html.a11y-contrast-invert .gloss-popover {
