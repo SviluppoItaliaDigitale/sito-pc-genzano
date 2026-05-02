@@ -185,13 +185,33 @@
   margin-top: 1rem;
   padding: .9rem 1rem;
   border-radius: 8px;
-  text-align: center;
+  text-align: left;
   font-weight: 600;
+  animation: anagFeedbackSlide .35s ease;
+}
+.anagram-feedback .feedback-head {
+  text-align: center;
+  font-size: 1rem;
+}
+.anagram-feedback .feedback-explain {
+  margin: .6rem 0 0;
+  padding-top: .5rem;
+  border-top: 1px solid rgba(15, 81, 50, .25);
+  font-weight: 400;
+  font-size: .92rem;
+  line-height: 1.5;
 }
 .anagram-feedback.correct {
   background: #d1e7dd;
   color: #0f5132;
   border: 1px solid #badbcc;
+}
+@keyframes anagFeedbackSlide {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .anagram-feedback { animation: none; }
 }
 .anagram-feedback.wrong {
   background: #f8d7da;

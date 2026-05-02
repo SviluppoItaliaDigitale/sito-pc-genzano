@@ -174,11 +174,12 @@
     'anagrammi': {
       fascia: 'primaria',
       titolo: 'Consigli per gli Anagrammi della Sicurezza',
-      regola: 'Riordina le lettere per trovare una parola della Protezione Civile.',
+      regola: 'Riordina le lettere per trovare una parola della Protezione Civile. Dopo ogni risposta giusta leggi la spiegazione: serve a memorizzare il termine.',
       come: [
-        'Leggi la definizione: dà l\'indizio principale.',
-        'Conta le lettere: la lunghezza ti aiuta.',
-        'Pensa alle parole che hai imparato: rischio, allerta, soccorso, evacuazione.',
+        'Leggi categoria + suggerimento: dà l\'indizio principale.',
+        'Conta le lettere: la lunghezza ti aiuta a restringere il campo.',
+        'Le parole composte hanno uno spazio (es. PIANO FAMILIARE): trova prima una parola, poi l\'altra.',
+        'Pool ampliato: ora include anche parole sui Castelli Romani (NEMI, TUFO, CRATERE) e sulla comunicazione del rischio (IT-alert, Direttiva Mattarella).',
         'Se sei bloccato, usa l\'aiuto.'
       ],
       teoria: [
@@ -237,16 +238,18 @@
     'cruciverba': {
       fascia: 'primaria',
       titolo: 'Consigli per il Cruciverba',
-      regola: 'Le parole sono tutte legate alla Protezione Civile: rischi, soccorso, allerte.',
+      regola: 'Schemi tematici: cosa fare adesso, codici colore, allerta meteo, fonti ufficiali, IT-alert e fake news, sismo Castelli, AIB. Dopo ogni parola completata leggi la nota didattica.',
       come: [
-        'Leggi le definizioni una a una.',
-        'Inizia dalle più facili: ti danno lettere per le altre.',
-        'Se ti blocchi, usa il pulsante Aiuto.',
-        'Le parole che cerchi sono nelle pagine "Rischi" e "Numeri utili".'
+        'Leggi le definizioni una a una: indicano il tema della parola.',
+        'Inizia dalle più facili: le lettere che scrivi aiutano per le incrociate.',
+        'Le parole sono coerenti con le pagine /rischi-prevenzione/ e /glossario/ del sito.',
+        'Negli schemi difficili compaiono concetti recenti: IT-alert, Direttiva Mattarella, codici colore.',
+        'Se ti blocchi, usa il pulsante Aiuto (3 disponibili per puzzle).'
       ],
       teoria: [
         { titolo: 'Glossario', url: '/glossario/' },
-        { titolo: 'Rischi e prevenzione', url: '/rischi-prevenzione/' }
+        { titolo: 'Rischi e prevenzione', url: '/rischi-prevenzione/' },
+        { titolo: 'Cosa fare adesso', url: '/cosa-fare-adesso/' }
       ]
     },
     'labirinto-evacuazione': {
