@@ -1,6 +1,6 @@
 ---
 title: "Allagamenti urbani: cosa fare se l'acqua entra in casa"
-date: 2026-05-02
+date: 2026-05-02T00:01:00+02:00
 description: "Bombe d'acqua e piogge intense possono causare allagamenti anche in città. Comportamenti corretti durante l'evento e nelle ore successive."
 badge: "Prevenzione"
 priorita: "normale"
