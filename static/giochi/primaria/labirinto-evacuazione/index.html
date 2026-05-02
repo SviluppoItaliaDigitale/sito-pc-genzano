@@ -179,6 +179,30 @@
     .alert-msg.danger { background: #f8d7da; color: #842029; border: 1px solid #f5c2c7; animation: shake .3s; }
     @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 
+    /* Riserva sempre lo spazio dell'area feedback per non spostare i comandi
+       quando appare un errore. Quando hide, l'elemento resta in flusso ma
+       invisibile (visibility:hidden). Override esplicito su .hide perche'
+       altrove .hide e' display:none !important. */
+    #feedback { min-height: 3rem; }
+    #feedback.hide {
+      display: block !important;
+      visibility: hidden;
+      background: transparent !important;
+      border-color: transparent !important;
+      animation: none !important;
+    }
+    @media (max-width: 380px) {
+      #feedback { min-height: 3.6rem; }
+    }
+
+    /* Bottone "Ricomincia scenario" abbassato e distinto dai comandi: anche se
+       l'alert appare e i comandi sticky si comportano in modo diverso da
+       desktop, il reset resta a una distanza chiara dalle frecce. */
+    .reset-wrap { margin-top: 1.5rem; padding-bottom: .5rem; }
+    @media (max-width: 768px) {
+      .reset-wrap { margin-top: 2rem; padding-bottom: 1rem; }
+    }
+
     /* Sizing su mobile gestito direttamente da clamp() su .cell e .comandi */
   </style>
 </head>
@@ -272,7 +296,7 @@
               <button type="button" class="b-right" data-dir="right" aria-label="Vai a destra">▶</button>
             </div>
 
-            <div class="text-center">
+            <div class="text-center reset-wrap">
               <button type="button" id="btn-reset" class="btn btn-outline-secondary btn-sm">
                 <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Ricomincia scenario
               </button>
