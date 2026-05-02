@@ -129,6 +129,16 @@
     .uni7010.obbligo { background: #0033cc; border: 5px solid #0033cc; border-radius: 50%; color: #fff; }
     .uni7010.soccorso { background: #008000; border: 5px solid #008000; color: #fff; border-radius: 8px; }
     .uni7010.antincendio { background: #cc0000; border: 5px solid #cc0000; color: #fff; border-radius: 8px; }
+    /* Quando uso il pittogramma ISO ufficiale (img), il container .uni7010 fa
+       da cornice colorata e l'immagine sta dentro. Override clip-path e
+       allineamento per non tagliare l'SVG. */
+    .uni7010 .uni-iso {
+      max-width: 80%; max-height: 80%; display: block;
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,.15));
+    }
+    .uni7010.pericolo { padding-top: 0; align-items: center; clip-path: none; }
+    .uni7010.divieto::after { display: none; }
+    .uni7010.divieto { padding: 0; }
 
     .answers {
       display: flex; flex-direction: column; gap: .5rem;
@@ -296,21 +306,26 @@
         titolo: 'Cartelli UNI 7010',
         descrizione: 'Luoghi di lavoro',
         sample: '\u26A0\uFE0F',
+        // Le UNI 7010 italiane corrispondono allo standard internazionale ISO
+        // 7010. Quando possibile uso il pittogramma SVG ufficiale dalla
+        // libreria del sito (rules 04a \u2014 shortcode pittogramma): coerenza
+        // estetica e didattica, riconoscimento dei segnali REALI che il
+        // ragazzo vedra' a scuola, in cantiere, al lavoro.
         questions: [
-          { sym: '\u26A1', tipo: 'pericolo', correct: 'Pericolo: tensione elettrica', opts: ['Pericolo: tensione elettrica', 'Obbligo: usare guanti isolanti', 'Divieto: non toccare', 'Estintore'], why: 'Triangolo giallo con bordo nero = pericolo. Il simbolo della saetta indica alta tensione.' },
-          { sym: '\uD83D\uDD25', tipo: 'pericolo', correct: 'Pericolo: materiale infiammabile', opts: ['Pericolo: materiale infiammabile', 'Divieto di fumare', 'Estintore', 'Obbligo di usare la mascherina'], why: 'Triangolo giallo con fiamma: zona con materiali infiammabili. Evita fiamme libere e scintille.' },
-          { sym: '\u2620\uFE0F', tipo: 'pericolo', correct: 'Pericolo: sostanze tossiche', opts: ['Pericolo: sostanze tossiche', 'Divieto di fumare', 'Soccorso', 'Obbligo di mascherina'], why: 'Triangolo giallo con teschio: presenza di sostanze tossiche. Usa i DPI e rispetta le procedure.' },
-          { sym: '\uD83D\uDEAD', tipo: 'divieto', correct: 'Vietato fumare', opts: ['Vietato fumare', 'Vietato entrare', 'Divieto di bere', 'Divieto di usare fiamme libere'], why: 'Cerchio rosso con sbarra e sigaretta barrata: divieto di fumo. Obbligatorio per legge in luoghi pubblici e di lavoro.' },
-          { sym: '\uD83D\uDEAB', tipo: 'divieto', correct: 'Vietato l\'accesso', opts: ['Vietato fumare', 'Vietato usare l\'ascensore', 'Vietato l\'accesso', 'Vietato lavorare'], why: 'Cerchio rosso con sbarra senza simbolo interno: area interdetta alle persone non autorizzate.' },
-          { sym: '\u26D1\uFE0F', tipo: 'obbligo', correct: 'Obbligo di casco', opts: ['Obbligo di casco', 'Obbligo di occhiali', 'Obbligo di calzature di sicurezza', 'Obbligo di guanti'], why: 'Cerchio blu con casco: obbligatorio indossare il casco di protezione. Tipico nei cantieri.' },
-          { sym: '\uD83E\uDDE4', tipo: 'obbligo', correct: 'Obbligo di guanti di protezione', opts: ['Obbligo di guanti di protezione', 'Obbligo di mascherina', 'Obbligo di occhiali', 'Obbligo di grembiule'], why: 'Cerchio blu con guanto: usa guanti quando maneggi materiali o sostanze che possono ferirti o contaminarti.' },
-          { sym: '\uD83E\uDD7D', tipo: 'obbligo', correct: 'Obbligo di occhiali di sicurezza', opts: ['Obbligo di casco', 'Obbligo di occhiali di sicurezza', 'Obbligo di mascherina', 'Obbligo di tappi per orecchie'], why: 'Cerchio blu con occhiali: usa occhiali di sicurezza per proteggere gli occhi da polveri, schegge o schizzi.' },
-          { sym: '\u2795', tipo: 'soccorso', correct: 'Punto di primo soccorso', opts: ['Uscita di emergenza', 'Punto di primo soccorso', 'Idrante', 'Punto di raccolta'], why: 'Quadrato verde con croce bianca: qui trovi kit di medicazione o personale di primo soccorso.' },
-          { sym: '\uD83D\uDEAA', tipo: 'soccorso', correct: 'Uscita di emergenza', opts: ['Uscita di emergenza', 'Ingresso', 'Scala antincendio', 'Vietato entrare'], why: 'Quadrato verde con porta e freccia: la via di fuga in caso di emergenza. Tienila sempre libera.' },
-          { sym: '\u2764\uFE0F', tipo: 'soccorso', correct: 'Defibrillatore (DAE)', opts: ['Primo soccorso', 'Defibrillatore (DAE)', 'Antincendio', 'Idrante'], why: 'Quadrato verde con cuore e saetta: posizione del defibrillatore. Va usato subito in caso di arresto cardiaco.' },
-          { sym: '\uD83D\uDC65', tipo: 'soccorso', correct: 'Punto di raccolta', opts: ['Sala riunioni', 'Punto di raccolta', 'Ufficio informazioni', 'Uscita di emergenza'], why: 'Quadrato verde con frecce verso le persone: luogo dove riunirsi dopo un\'evacuazione per contarsi.' },
-          { sym: '\uD83E\uDDEF', tipo: 'antincendio', correct: 'Estintore', opts: ['Estintore', 'Idrante', 'Rilevatore di fumo', 'Pulsante di allarme'], why: 'Quadrato rosso con estintore: localizzazione di un estintore. Impara a usarlo: PASS (Prendi, Avvicina, Schiaccia, Spazza).' },
-          { sym: '\uD83D\uDEB1', tipo: 'antincendio', correct: 'Idrante antincendio', opts: ['Lavandino', 'Idrante antincendio', 'Prese acqua potabile', 'Estintore'], why: 'Quadrato rosso con manichetta: idrante o naspo. Va usato dai Vigili del Fuoco o da personale formato.' }
+          { sym: '\u26A1', iso: 'pericolo-elettrico', tipo: 'pericolo', correct: 'Pericolo: tensione elettrica', opts: ['Pericolo: tensione elettrica', 'Obbligo: usare guanti isolanti', 'Divieto: non toccare', 'Estintore'], why: 'Triangolo giallo con bordo nero = pericolo. Il simbolo della saetta indica alta tensione.' },
+          { sym: '\uD83D\uDD25', iso: 'materiale-infiammabile', tipo: 'pericolo', correct: 'Pericolo: materiale infiammabile', opts: ['Pericolo: materiale infiammabile', 'Divieto di fumare', 'Estintore', 'Obbligo di usare la mascherina'], why: 'Triangolo giallo con fiamma: zona con materiali infiammabili. Evita fiamme libere e scintille.' },
+          { sym: '\u2620\uFE0F', iso: 'pericolo-tossico', tipo: 'pericolo', correct: 'Pericolo: sostanze tossiche', opts: ['Pericolo: sostanze tossiche', 'Divieto di fumare', 'Soccorso', 'Obbligo di mascherina'], why: 'Triangolo giallo con teschio: presenza di sostanze tossiche. Usa i DPI e rispetta le procedure.' },
+          { sym: '\uD83D\uDEAD', iso: 'vietato-fumare', tipo: 'divieto', correct: 'Vietato fumare', opts: ['Vietato fumare', 'Vietato entrare', 'Divieto di bere', 'Divieto di usare fiamme libere'], why: 'Cerchio rosso con sbarra e sigaretta barrata: divieto di fumo. Obbligatorio per legge in luoghi pubblici e di lavoro.' },
+          { sym: '\uD83D\uDEAB', iso: 'vietato-pedoni', tipo: 'divieto', correct: 'Vietato l\'accesso', opts: ['Vietato fumare', 'Vietato usare l\'ascensore', 'Vietato l\'accesso', 'Vietato lavorare'], why: 'Cerchio rosso con sbarra: area interdetta alle persone non autorizzate (qui il segnale e\' "vietato pedoni").' },
+          { sym: '\u26D1\uFE0F', iso: 'casco-protettivo', tipo: 'obbligo', correct: 'Obbligo di casco', opts: ['Obbligo di casco', 'Obbligo di occhiali', 'Obbligo di calzature di sicurezza', 'Obbligo di guanti'], why: 'Cerchio blu con casco: obbligatorio indossare il casco di protezione. Tipico nei cantieri.' },
+          { sym: '\uD83E\uDDE4', iso: 'guanti-protettivi', tipo: 'obbligo', correct: 'Obbligo di guanti di protezione', opts: ['Obbligo di guanti di protezione', 'Obbligo di mascherina', 'Obbligo di occhiali', 'Obbligo di grembiule'], why: 'Cerchio blu con guanto: usa guanti quando maneggi materiali o sostanze che possono ferirti o contaminarti.' },
+          { sym: '\uD83E\uDD7D', iso: 'protezione-occhi', tipo: 'obbligo', correct: 'Obbligo di occhiali di sicurezza', opts: ['Obbligo di casco', 'Obbligo di occhiali di sicurezza', 'Obbligo di mascherina', 'Obbligo di tappi per orecchie'], why: 'Cerchio blu con occhiali: usa occhiali di sicurezza per proteggere gli occhi da polveri, schegge o schizzi.' },
+          { sym: '\u2795', iso: 'cassetta-primo-soccorso', tipo: 'soccorso', correct: 'Punto di primo soccorso', opts: ['Uscita di emergenza', 'Punto di primo soccorso', 'Idrante', 'Punto di raccolta'], why: 'Quadrato verde con croce bianca: qui trovi kit di medicazione o personale di primo soccorso.' },
+          { sym: '\uD83D\uDEAA', iso: 'uscita-emergenza-destra', tipo: 'soccorso', correct: 'Uscita di emergenza', opts: ['Uscita di emergenza', 'Ingresso', 'Scala antincendio', 'Vietato entrare'], why: 'Quadrato verde con porta e freccia: la via di fuga in caso di emergenza. Tienila sempre libera.' },
+          { sym: '\u2764\uFE0F', iso: 'defibrillatore-dae', tipo: 'soccorso', correct: 'Defibrillatore (DAE)', opts: ['Primo soccorso', 'Defibrillatore (DAE)', 'Antincendio', 'Idrante'], why: 'Quadrato verde con cuore e saetta: posizione del defibrillatore. Va usato subito in caso di arresto cardiaco.' },
+          { sym: '\uD83D\uDC65', iso: 'punto-raccolta', tipo: 'soccorso', correct: 'Punto di raccolta', opts: ['Sala riunioni', 'Punto di raccolta', 'Ufficio informazioni', 'Uscita di emergenza'], why: 'Quadrato verde con frecce verso le persone: luogo dove riunirsi dopo un\'evacuazione per contarsi.' },
+          { sym: '\uD83E\uDDEF', iso: 'estintore', tipo: 'antincendio', correct: 'Estintore', opts: ['Estintore', 'Idrante', 'Rilevatore di fumo', 'Pulsante di allarme'], why: 'Quadrato rosso con estintore: localizzazione di un estintore. Impara a usarlo: PASS (Prendi, Avvicina, Schiaccia, Spazza).' },
+          { sym: '\uD83D\uDEB1', iso: 'idrante-muro', tipo: 'antincendio', correct: 'Idrante antincendio', opts: ['Lavandino', 'Idrante antincendio', 'Prese acqua potabile', 'Estintore'], why: 'Quadrato rosso con manichetta: idrante o naspo. Va usato dai Vigili del Fuoco o da personale formato.' }
         ]
       }
     };
@@ -417,7 +432,13 @@
         d3.className = 'uni7010 ' + q.tipo;
         d3.setAttribute('role', 'img');
         d3.setAttribute('aria-label', 'Cartello UNI 7010 ' + q.tipo);
-        d3.textContent = q.sym;
+        // Se la domanda specifica un pittogramma ISO 7010, usa lo SVG ufficiale
+        // dalla libreria (static/pittogrammi/iso7010/). Fallback: emoji.
+        if (q.iso) {
+          d3.innerHTML = '<img src="/pittogrammi/iso7010/' + q.iso + '.svg" alt="" class="uni-iso" loading="lazy">';
+        } else {
+          d3.textContent = q.sym;
+        }
         pittogrammaWrap.appendChild(d3);
       }
     }
