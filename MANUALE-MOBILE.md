@@ -258,35 +258,30 @@ e troverai:
 
 ### Per Instagram: scarica le immagini da mobile
 
-Nel file `instagram.txt` in fondo trovi i percorsi delle immagini.
-Se è un **carosello multi-immagine** (lo script l'ha rilevato dal
-fatto che hai foto inline nel body), troverai qualcosa tipo:
+Le immagini Instagram (post/carosello + story) **stanno nella stessa cartella
+delle bozze**, accanto ai file `.txt`. Da maggio 2026 tutto il materiale di un
+articolo (testi + immagini) è in `social-bozze/<slug>/`, comodo da scaricare
+insieme.
+
+Nel file `instagram.txt` in fondo trovi un riferimento del tipo:
 
 ```
 📷 CAROSELLO Instagram (3 immagini, caricale in questo ordine):
-   1. /home/.../static/images-social/<slug>-instagram-post-1.webp
-   2. /home/.../static/images-social/<slug>-instagram-post-2.webp
-   3. /home/.../static/images-social/<slug>-instagram-post-3.webp
-📷 Story 1080x1920: /home/.../static/images-social/<slug>-instagram-story.webp
+   1. instagram-post-1.webp
+   2. instagram-post-2.webp
+   3. instagram-post-3.webp
+📷 Story 1080x1920: instagram-story.webp (in questa cartella)
 ```
 
-Quei percorsi locali li ignori. Le immagini le trovi anche nel repo a:
+Le trovi tutte nella stessa cartella su GitHub:
 
 ```
-https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/static/images-social
-```
-
-oppure raggiungibili in URL diretto sul sito Aruba:
-
-```
-https://www.protezionecivilegenzano.it/images-social/<slug>-instagram-post-1.webp
-https://www.protezionecivilegenzano.it/images-social/<slug>-instagram-post-2.webp
-https://www.protezionecivilegenzano.it/images-social/<slug>-instagram-story.webp
+https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/social-bozze/<slug>
 ```
 
 **Per scaricarle da mobile:**
-1. Apri l'URL diretto Aruba in un nuovo tab del browser
-2. Tieni premuto sull'immagine → «Salva immagine»
+1. Apri la cartella su GitHub web
+2. Tap sull'immagine → bottone «Download raw file» (icona freccia ↓)
 3. La trovi in `Galleria → Download`
 
 ---
@@ -444,8 +439,8 @@ Tu non devi fare nulla, succede in background.
 | Audit accessibilità Lighthouse | Dopo ogni deploy | Report accessibilità |
 | Cover automatica articoli | Push articolo senza foto | Genera cover tipografica blu+titolo |
 | Foto da Wikipedia/NASA/USGS | Push con marker `# TODO-foto-*` | Scarica + applica fascia blu |
-| **Bozze social X/FB/IG/TG** | Push articolo | Crea `social-bozze/<slug>/` (richiede quota Gemini disponibile) |
-| **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `static/images-social/` (Pillow, no rate limit) |
+| **Bozze social X/FB/IG/TG** | Push articolo | Crea `social-bozze/<slug>/*.txt` (richiede quota Gemini disponibile) |
+| **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `social-bozze/<slug>/instagram-*.webp` (Pillow, no rate limit) |
 
 > **Nota Gemini API gratuita**: il tier free ha ~50 richieste/giorno. Una rigenerazione massiva di tutte le bozze testuali si esaurisce dopo ~50 articoli con HTTP 429 — si riprende il giorno dopo (reset a mezzanotte UTC). Il workflow normale (1 articolo/push) gira sempre. Specifiche in [`manuale/parte-16-bozze-social-gestione-quota-gemini-api.md`](manuale/parte-16-bozze-social-gestione-quota-gemini-api.md).
 
@@ -529,8 +524,7 @@ commit. Al deploy successivo l'articolo sparisce dal sito.
 | Modifica allerta | <https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/edit/main/data/allerta.json> |
 | Modifica emergenza | <https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/edit/main/data/emergenza.json> |
 | Workflow CI | <https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions> |
-| Bozze social pronte | <https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/social-bozze> |
-| Immagini social | <https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/static/images-social> |
+| Bozze social pronte (testi + immagini insieme) | <https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/social-bozze> |
 | Issue aperte | <https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/issues> |
 | Sito live | <https://www.protezionecivilegenzano.it/> |
 

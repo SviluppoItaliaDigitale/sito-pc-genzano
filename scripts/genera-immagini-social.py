@@ -7,9 +7,10 @@ Template istituzionale:
   - Cover articolo ridimensionata (preserva proporzioni)
   - Footer con titolo articolo + URL del sito
 
-Output:
-  static/images-social/<slug>-instagram-post.webp   (1080x1080)
-  static/images-social/<slug>-instagram-story.webp  (1080x1920)
+Output (accanto ai testi delle bozze, comodo da scaricare insieme via mobile):
+  social-bozze/<slug>/instagram-post.webp        (1080x1080, 1 sola foto)
+  social-bozze/<slug>/instagram-post-N.webp      (carosello, 2-10 foto)
+  social-bozze/<slug>/instagram-story.webp       (1080x1920, sempre 1)
 
 Uso:
   python3 scripts/genera-immagini-social.py content/comunicazioni/2026-04-20-articolo.md
@@ -31,8 +32,15 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_COMUNICAZIONI = ROOT / "content" / "comunicazioni"
 IMAGES_DIR = ROOT / "static" / "images"
-SOCIAL_DIR = ROOT / "static" / "images-social"
+BOZZE_DIR = ROOT / "social-bozze"  # Output: stessa cartella dei testi (instagram.txt ecc.)
 LOGO_PATH = IMAGES_DIR / "logo-pc-genzano.png"
+
+
+def slug_dir(slug: str) -> Path:
+    """Cartella di output per un dato slug. Crea se non esiste."""
+    d = BOZZE_DIR / slug
+    d.mkdir(parents=True, exist_ok=True)
+    return d
 
 PRIMARY = (0, 51, 102)        # #003366 blu istituzionale
 PRIMARY_DARK = (0, 26, 51)    # #001a33
@@ -98,8 +106,8 @@ def wrap_testo(draw: ImageDraw.ImageDraw, testo: str, font: ImageFont.FreeTypeFo
     return righe
 
 
-def crea_post_quadrato(cover_path: Path, titolo: str, slug: str) -> Path:
-    """Genera l'immagine 1080x1080 per Instagram feed."""
+def crea_post_quadrato(cover_path: Path, titolo: str, out_path: Path) -> Path:
+    """Genera l'immagine 1080x1080 per Instagram feed nel path indicato."""
     W, H = 1080, 1080
     HEADER_H = 140
     FOOTER_H = 280
@@ -164,15 +172,14 @@ def crea_post_quadrato(cover_path: Path, titolo: str, slug: str) -> Path:
     draw.text((60, H - 60), "protezionecivilegenzano.it",
               font=font_url, fill=TEXT_DARK)
 
-    out_path = SOCIAL_DIR / f"{slug}-instagram-post.webp"
-    SOCIAL_DIR.mkdir(parents=True, exist_ok=True)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path, "WEBP", quality=85, method=6)
     return out_path
 
 
 def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
-                         slug: str) -> Path:
-    """Genera l'immagine 1080x1920 per Instagram story / reel."""
+                         out_path: Path) -> Path:
+    """Genera l'immagine 1080x1920 per Instagram story / reel nel path indicato."""
     W, H = 1080, 1920
     HEADER_H = 240
     FOOTER_H = 200
@@ -249,8 +256,7 @@ def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
     draw.text((70, H - FOOTER_H + 110), "protezionecivilegenzano.it",
               font=font_url2, fill=WHITE)
 
-    out_path = SOCIAL_DIR / f"{slug}-instagram-story.webp"
-    SOCIAL_DIR.mkdir(parents=True, exist_ok=True)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path, "WEBP", quality=85, method=6)
     return out_path
 
@@ -389,51 +395,45 @@ def main() -> int:
             continue
 
         n_foto = len(art["carousel"])
-
-        # Pulisci eventuali immagini precedenti se --force (potrebbero essere
-        # rimaste numerate da un run con più carousel)
-        if args.force:
-            for old in SOCIAL_DIR.glob(f"{art['slug']}-instagram-post*.webp"):
-                old.unlink()
+        out_dir = slug_dir(art["slug"])
+        story_path = out_dir / "instagram-story.webp"
 
         # Naming:
-        #   1 sola foto -> <slug>-instagram-post.webp (compat. retro)
-        #   2+ foto    -> <slug>-instagram-post-1.webp, -2.webp, ...
+        #   1 sola foto -> instagram-post.webp
+        #   2+ foto    -> instagram-post-1.webp, instagram-post-2.webp, ...
         if n_foto == 1:
-            target = SOCIAL_DIR / f"{art['slug']}-instagram-post.webp"
-            if not args.force and target.exists() and \
-                    (SOCIAL_DIR / f"{art['slug']}-instagram-story.webp").exists():
+            target = out_dir / "instagram-post.webp"
+            if not args.force and target.exists() and story_path.exists():
                 print(f"  GIÀ PRESENTE (--force per ri-generare): {art['slug']}",
                       file=sys.stderr)
                 saltati += 1
                 continue
         else:
-            target_1 = SOCIAL_DIR / f"{art['slug']}-instagram-post-1.webp"
-            if not args.force and target_1.exists() and \
-                    (SOCIAL_DIR / f"{art['slug']}-instagram-story.webp").exists():
+            target_1 = out_dir / "instagram-post-1.webp"
+            if not args.force and target_1.exists() and story_path.exists():
                 print(f"  GIÀ PRESENTE carosello (--force per ri-generare): {art['slug']}",
                       file=sys.stderr)
                 saltati += 1
                 continue
 
+        # --force: pulisci eventuali immagini precedenti (numero foto può variare
+        # tra un run e l'altro se l'utente aggiunge/toglie {{< foto >}} inline)
+        if args.force:
+            for old in out_dir.glob("instagram-post*.webp"):
+                old.unlink()
+
         try:
             if n_foto == 1:
-                # Singolo post: usa il nome senza suffisso numerico
-                crea_post_quadrato(art["carousel"][0], art["title"], art["slug"])
+                crea_post_quadrato(art["carousel"][0], art["title"],
+                                   out_dir / "instagram-post.webp")
             else:
-                # Carosello: <slug>-instagram-post-1.webp, -2.webp, ...
                 for idx, foto in enumerate(art["carousel"], 1):
-                    slug_num = f"{art['slug']}-{idx}"
-                    crea_post_quadrato(foto, art["title"], slug_num)
-                    # Rinomino: crea_post_quadrato salva come <slug>-instagram-post.webp
-                    src = SOCIAL_DIR / f"{slug_num}-instagram-post.webp"
-                    dst = SOCIAL_DIR / f"{art['slug']}-instagram-post-{idx}.webp"
-                    if src.exists():
-                        src.rename(dst)
+                    crea_post_quadrato(foto, art["title"],
+                                       out_dir / f"instagram-post-{idx}.webp")
 
             # Story: sempre 1 sola, usa la cover principale
             crea_story_verticale(art["cover"], art["title"], art["description"],
-                                 art["slug"])
+                                 story_path)
 
             tipo = "singolo" if n_foto == 1 else f"carosello x{n_foto}"
             print(f"  ✓ {art['slug']} ({tipo})", file=sys.stderr)

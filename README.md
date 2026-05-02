@@ -142,7 +142,6 @@ sito-pc-genzano/
 │
 ├── static/                     ← asset statici (deployati al pubblico)
 │   ├── images/                 ← copertine articoli + foto evento
-│   ├── images-social/          ← immagini Instagram generate (post/carosello/story)
 │   ├── manuali/                ← PDF, manuali tecnici, loghi e locandine ufficiali
 │   │   ├── loghi/              ← stemmi/loghi del Gruppo per personalizzazioni
 │   │   └── locandine/          ← locandine ufficiali (es. Diventa Volontario)
@@ -309,7 +308,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Aggiornamenti Bootstrap Italia |
 | `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (40 sezioni)**: contenuti, codice/template, governance docs, audit aggiuntivo, link critici normativa, **audit grammaticale italiano** (apostrofi finti, accenti mancanti, errori italiani tipici via `audit-grammatica-italiana.py`). Fusi `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026, sezione 40 grammaticale aggiunta il 29 aprile 2026. |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo lychee: tutti i link (interni + esterni) |
-| `genera-social-bozze.yml` | Push su `content/comunicazioni/**.md` o `.claude/rules/**.md` (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini Instagram (post 1080x1080 + carosello + story 1080x1920). Output in `social-bozze/<slug>/` e `static/images-social/`. Tier gratuito Gemini, costo zero. |
+| `genera-social-bozze.yml` | Push su `content/comunicazioni/**.md` o `.claude/rules/**.md` (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini Instagram (post 1080x1080 + carosello + story 1080x1920). Output **tutto insieme** in `social-bozze/<slug>/` (testi e immagini). Tier gratuito Gemini, costo zero. |
 | `scarica-foto-automatica.yml` | Push su `content/comunicazioni/**` o sui suoi script foto | Per articoli con marker `# TODO-foto-*`: scarica foto da **7 fonti supportate** (Wikipedia, NASA, USGS, NOAA — senza API key + Pexels, Pixabay, Unsplash — con API key via GitHub Secrets), applica fascia blu istituzionale, popola `image:` + credit. Plus step 2: cover tipografica auto col titolo per articoli con `image:""` (`auto-cover-mancanti.py`). Filtro `paths` aggiunto il 29 aprile 2026 per evitare run inutili su CSS/docs. |
 
 Le issue generate automaticamente compaiono nella [tab Issues](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/issues) con label `manutenzione`, `documentazione`, `link-rotti`, ecc.
@@ -345,7 +344,7 @@ Specifiche complete in [CLAUDE.md](CLAUDE.md) e nelle 11 regole `.claude/rules/`
 9. Verifica con `hugo server` in locale.
 10. Esegui la checklist pre-pubblicazione (Parte 5).
 11. `git add . && git commit -m "Nuovo articolo: titolo" && git push`.
-12. Al push automaticamente: deploy + bozze social generate (Gemini API) + immagini Instagram. Risultato in `social-bozze/<slug>/` e `static/images-social/<slug>-instagram-*.webp` entro 5–10 minuti.
+12. Al push automaticamente: deploy + bozze social generate (Gemini API) + immagini Instagram. Risultato **tutto insieme** in `social-bozze/<slug>/` (4 .txt + `instagram-post*.webp` + `instagram-story.webp`) entro 5–10 minuti.
 13. Controlla il deploy nella tab Actions.
 
 ---

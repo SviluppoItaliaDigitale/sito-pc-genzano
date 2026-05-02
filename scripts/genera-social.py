@@ -387,23 +387,22 @@ def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Pat
         # Aggiungi riferimento immagini Instagram se generate
         suffix = ""
         if piattaforma == "instagram":
-            social_dir = ROOT / "static" / "images-social"
-            # Caso 1: singola immagine <slug>-instagram-post.webp
-            img_post_singola = social_dir / f"{slug}-instagram-post.webp"
-            # Caso 2: carosello <slug>-instagram-post-1.webp, -2.webp, ...
-            carousel = sorted(social_dir.glob(f"{slug}-instagram-post-*.webp"))
-            img_story = social_dir / f"{slug}-instagram-story.webp"
+            # Le immagini sono nella stessa cartella delle bozze (out_dir),
+            # comodo da scaricare insieme via mobile.
+            img_post_singola = out_dir / "instagram-post.webp"
+            carousel = sorted(out_dir.glob("instagram-post-*.webp"))
+            img_story = out_dir / "instagram-story.webp"
 
             righe_img = []
             if img_post_singola.exists():
-                righe_img.append(f"📷 Post 1080x1080: {img_post_singola}")
+                righe_img.append(f"📷 Post 1080x1080: {img_post_singola.name} (in questa cartella)")
             elif carousel:
                 righe_img.append(f"📷 CAROSELLO Instagram ({len(carousel)} immagini, "
                                  f"caricale in questo ordine):")
                 for i, c in enumerate(carousel, 1):
-                    righe_img.append(f"   {i}. {c}")
+                    righe_img.append(f"   {i}. {c.name}")
             if img_story.exists():
-                righe_img.append(f"📷 Story 1080x1920: {img_story}")
+                righe_img.append(f"📷 Story 1080x1920: {img_story.name} (in questa cartella)")
             if righe_img:
                 suffix = "\n\n---\n" + "\n".join(righe_img) + "\n"
         (out_dir / f"{piattaforma}.txt").write_text(
@@ -421,9 +420,9 @@ Generate automaticamente da `scripts/genera-social.py` (motore: Gemini API).
 ## Come usarle
 
 Apri il file della piattaforma desiderata, copia il testo, incollalo nel
-post composer del social. Per Instagram ricorda di caricare anche
-l'immagine generata (post 1080x1080 e story 1080x1920) in
-`static/images-social/`.
+post composer del social. Per Instagram, le immagini (post 1080x1080,
+carosello, story 1080x1920) sono **in questa stessa cartella** —
+scaricale e caricale nel post composer.
 
 ## File
 
@@ -431,7 +430,7 @@ l'immagine generata (post 1080x1080 e story 1080x1920) in
 |---|---|---|
 | X (Twitter) | `x.txt` | Max 280 caratteri |
 | Facebook | `facebook.txt` | Anteprima OG da URL |
-| Instagram | `instagram.txt` | + immagine in `static/images-social/` |
+| Instagram | `instagram.txt` | + `instagram-post*.webp` + `instagram-story.webp` (qui dentro) |
 | Telegram | `telegram.txt` | Usa Markdown |
 
 > **Nota**: queste sono BOZZE. Rileggi sempre prima di pubblicare.
