@@ -89,6 +89,32 @@ Google AI Studio (gratis: <https://aistudio.google.com/apikey>).
 
 ---
 
+## 1.bis Agenti specializzati (frasi naturali)
+
+Da maggio 2026 il repo ha **5 agenti specializzati** in `.claude/agents/`
+con expertise mirate (caporedattore, art director, project manager, release
+engineer, comunicazione di crisi). Non devi ricordare nessun nome tecnico:
+**scrivi in italiano cosa vuoi e Claude attiva l'agent giusto da solo**.
+
+Esempi di frasi che attivano gli agent:
+
+| Frase che scrivi a Claude | Agent che si attiva | Cosa fa |
+|---|---|---|
+| *"Mi rivedi questo articolo prima di pubblicare?"* | Caporedattore | Controllo AGID + frontmatter + badge + foto |
+| *"Ecco una foto, mettila nell'articolo X"* | Art Director | Fascia blu + posizionamento inline + alt |
+| *"Controlla le issue aperte"* | Project Manager | Triage + chiusura obsolete (richiede gh + PC) |
+| *"Verifica prima del push, va tutto bene?"* | Release Engineer | GO/NO-GO con build + rules check |
+| *"Mi rivedi le bozze social?"* | Comunication Specialist | Revisione 4 testi + verifica immagini IG |
+
+Specifiche complete con frasi naturali, identità tecniche e workflow
+combinati: [`manuale/parte-19-agenti-specializzati.md`](manuale/parte-19-agenti-specializzati.md).
+
+> **Nota**: l'agente Project Manager (issue) richiede `gh` CLI installato e
+> autenticato — funziona solo da PC, non da mobile. Tutti gli altri 4
+> funzionano sia da desktop che da app Claude Android.
+
+---
+
 ## 2. Pubblicare un articolo nuovo da mobile
 
 ### Step A — Chiedi a Claude (app Android) di scriverlo
