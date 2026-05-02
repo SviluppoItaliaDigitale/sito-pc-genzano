@@ -12,7 +12,7 @@
   // Gli ID devono corrispondere a quelli passati a GiochiUtil.salvaEMostraAttestato
   // o GiochiPC.salvaRisultato nei singoli giochi.
   var CATALOGO = {
-    // Infanzia 3-6 (10 giochi)
+    // Infanzia 3-6 (giochi)
     'tartaruga-saggia':       { nome: 'La Tartaruga Saggia',        fascia: 'infanzia', icona: 'bi-shield-shaded' },
     'numero-emergenza':       { nome: 'Il Numero 112',              fascia: 'infanzia', icona: 'bi-telephone-fill' },
     'suoni-emergenza':        { nome: 'I Suoni dell’Emergenza',fascia: 'infanzia', icona: 'bi-volume-up-fill' },
@@ -23,7 +23,7 @@
     'trova-cartello':         { nome: 'Trova il Cartello',          fascia: 'infanzia', icona: 'bi-sign-turn-right-fill' },
     'acchiappa-pericolo':     { nome: 'Acchiappa il Pericolo',      fascia: 'infanzia', icona: 'bi-hand-index-thumb-fill' },
     'mezzo-giusto':           { nome: 'Il Mezzo Giusto',            fascia: 'infanzia', icona: 'bi-truck-front-fill' },
-    // Primaria 6-11 (13 giochi)
+    // Primaria 6-11 (giochi)
     'quiz-primaria':          { nome: 'Quiz della Sicurezza',       fascia: 'primaria', icona: 'bi-question-circle-fill' },
     'memory-primaria':        { nome: 'Memory dei Rischi',          fascia: 'primaria', icona: 'bi-grid-3x3-gap-fill' },
     'caccia-al-rischio':      { nome: 'Caccia al Rischio',          fascia: 'primaria', icona: 'bi-search' },
@@ -37,7 +37,7 @@
     'labirinto-evacuazione':  { nome: 'Labirinto di Evacuazione',   fascia: 'primaria', icona: 'bi-signpost-2-fill' },
     'chiamata-112':           { nome: 'Chiamata al 112',            fascia: 'primaria', icona: 'bi-telephone-fill' },
     'posiziona-cartelli':     { nome: 'Posiziona i Cartelli',       fascia: 'primaria', icona: 'bi-sign-turn-right-fill' },
-    // Ragazzi 11-19 (10 giochi)
+    // Ragazzi 11-19 (giochi)
     'simulatore-coc':         { nome: 'Simulatore COC',             fascia: 'ragazzi',  icona: 'bi-diagram-3-fill' },
     'emergency-responder':    { nome: 'Emergency Responder',        fascia: 'ragazzi',  icona: 'bi-person-walking' },
     'mappa-rischio':          { nome: 'La Mappa del Rischio',       fascia: 'ragazzi',  icona: 'bi-geo-alt-fill' },

@@ -217,7 +217,7 @@ Formato leggibile, a gruppi:
 
 - Voci parallele (tutte sostantivi, o tutte azioni, o tutte descrizioni).
 - Frasi brevi: niente punto finale se sono frammenti, punto finale se sono frasi complete.
-- Almeno 3 voci. Sotto le 3 scrivi un paragrafo.
+- Almeno voci. Sotto le 3 scrivi un paragrafo.
 
 **Numerati** (`1.`, `2.`): quando l'ordine **conta** (procedure, passaggi, priorità).
 

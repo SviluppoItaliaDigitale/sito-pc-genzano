@@ -541,7 +541,7 @@ cross-posting da Instagram per pubblicare questa variante):
 > la formazione è gratuita, interna e accompagna la persona dall'ingresso fino alla
 > specializzazione.
 >
-> Il percorso inizia con il corso base (dodici lezioni serali), prosegue con esercitazioni
+> Il percorso inizia con il corso base (lezioni serali), prosegue con esercitazioni
 > pratiche e consente di scegliere una specializzazione fra radiocomunicazioni, logistica,
 > avvistamento antincendio, assistenza alla popolazione. Il Gruppo opera sul territorio di
 > Genzano e collabora con @ComuneDiGenzano, @RegioneLazio e le altre protezioni civili dei

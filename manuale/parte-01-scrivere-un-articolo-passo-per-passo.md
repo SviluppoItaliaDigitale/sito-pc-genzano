@@ -259,7 +259,7 @@ Telegram. Ha solo **160 caratteri** per convincere il lettore ad aprirlo.
 
 ### Passo 1.7 — Struttura il corpo dell'articolo
 
-Un articolo ben strutturato ha **tre livelli**:
+Un articolo ben strutturato ha **Livelli**:
 
 1. **Apertura** (1-2 frasi): il fatto principale, in grassetto la parte più importante.
 2. **Corpo** con sotto-sezioni `## Titolo sezione` (H2).
@@ -370,7 +370,7 @@ Al successivo push, il workflow `.github/workflows/scarica-foto-automatica.yml` 
 
 **Cover tipografica automatica come fallback**. Se non aggiungi né foto né marker, il workflow `scarica-foto-automatica.yml` esegue come secondo step `auto-cover-mancanti.py`, che genera automaticamente una **cover tipografica istituzionale** (gradiente blu, titolo dell'articolo, fascia con logo) in `static/images/<slug>.webp` e popola il frontmatter. Lo script è sicuro: **non sovrascrive mai** una foto utente custom (es. `image: "/images/foto-evento-mio.webp"`). Risultato: nessun articolo finisce mai online senza copertina.
 
-**Tre livelli di fallback in cascata**:
+**Livelli di fallback in cascata**:
 1. **Foto vera** — utente o Wikipedia/NASA/USGS via marker
 2. **Cover tipografica istituzionale** — gradiente blu generato automaticamente
 3. **Default SVG generico** — fallback estremo (`images/notizia-default.svg`)

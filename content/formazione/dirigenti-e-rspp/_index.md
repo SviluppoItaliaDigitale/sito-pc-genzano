@@ -123,9 +123,9 @@ Questi documenti sono utili al DSGA per il fascicolo di pratica della convenzion
 
 Tutti i fac-simile editabili che servono al DS e al DSGA sono nella pagina dedicata:
 
-- 📁 **[Strumenti per le scuole — Pacchetto A e B](/formazione/scuole-strumenti/)** — 7 fac-simile (richiesta intervento, liberatoria GDPR, circolare, attestato, convenzione PCTO, progetto formativo, registro+valutazione+certificazione).
-- ⚖️ **[Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/)** — riepilogo unico delle 14+ norme di riferimento.
-- 🚀 **[Percorsi didattici pronti](/formazione/percorsi-didattici/)** — 6 percorsi pronti all'uso da 2-6 ore per i docenti.
+- 📁 **[Strumenti per le scuole — Pacchetto A e B](/formazione/scuole-strumenti/)** — fac-simile editabili (richiesta intervento, liberatoria GDPR, circolare, attestato, convenzione PCTO, progetto formativo, registro+valutazione+certificazione).
+- ⚖️ **[Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/)** — riepilogo delle norme di riferimento.
+- 🚀 **[Percorsi didattici pronti](/formazione/percorsi-didattici/)** — percorsi pronti all'uso da 2-6 ore per i docenti.
 
 ## Procedura tipo per attivare una collaborazione
 

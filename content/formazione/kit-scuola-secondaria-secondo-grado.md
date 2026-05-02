@@ -28,7 +28,7 @@ Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione C
 > 📚 **Per i docenti — risorse coordinate**
 >
 > - **Pagina hub** [La Protezione Civile per l'Educazione Civica](/formazione/educazione-civica/) — mappatura completa dei nostri contenuti sui **3 Nuclei Concettuali del D.M. 183/2024** (Costituzione, Sostenibilità, Cittadinanza Digitale) + **Goal Agenda 2030 ONU** + tabella interdisciplinare + calendario delle 33 ore.
-> - **Rubrica valutativa** pronta per la fascia: [Rubrica Ed. Civica — Secondaria di secondo grado](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/) — 6 indicatori × 4 livelli, con esempi di giudizio descrittivo / motivazione del voto.
+> - **Rubrica valutativa** pronta per la fascia: [Rubrica Ed. Civica — Secondaria di secondo grado](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/) — indicatori × livelli, con esempi di giudizio descrittivo / motivazione del voto.
 
 
 ### Obiettivi di apprendimento formalizzati
@@ -77,7 +77,7 @@ Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione C
 
 ### Durata consigliata e tabella del percorso
 
-Il percorso completo si articola in **7 moduli da 60-90 minuti**. Ogni modulo è autonomo e può essere approfondito ulteriormente per i percorsi PCTO.
+Il percorso completo si articola in **Moduli da 60-90 minuti**. Ogni modulo è autonomo e può essere approfondito ulteriormente per i percorsi PCTO.
 
 | Modulo | Tema | Durata | Classi consigliate |
 |---|---|---|---|
@@ -576,7 +576,7 @@ I cartelli di sicurezza adottano la norma **ISO 7010** anche in Italia (recepita
 | **Salvataggio** (E-emergency) | Quadrato/rettangolo | Verde | Uscita di emergenza, punto di raccolta |
 | **Antincendio** (F-fire) | Quadrato/rettangolo | Rosso | Estintore, idrante |
 
-Nel sito sono disponibili 46 pittogrammi ISO 7010: vedi [/pittogrammi/](/pittogrammi/).
+Nel sito sono disponibili pittogrammi ISO 7010: vedi [/pittogrammi/](/pittogrammi/).
 
 ### Connessione con la Protezione Civile
 
@@ -706,26 +706,26 @@ Per richieste specifiche: <a href="mailto:segreteria@protezionecivilegenzano.it"
 
 Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado:
 
-- 👉 [**Caso studio Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria2/) — analisi sistemica del terremoto del Centro Italia 2016: dati essenziali, 6 domande approfondite (fenomeno fisico, fattori predisponenti, risposta, criticità, lezione, riflessione personale).
+- 👉 [**Caso studio Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria2/) — analisi sistemica del terremoto del Centro Italia 2016: dati essenziali, domande approfondite (fenomeno fisico, fattori predisponenti, risposta, criticità, lezione, riflessione personale).
 - 👉 [**Comunicazione di crisi**](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/) — lo studente è il responsabile comunicazione del Comune durante un'allerta arancione. Produce 3 testi: post social, messaggio Telegram, nota stampa. Vincoli e griglia di valutazione.
 - 👉 [**Tracce per la prima prova d'esame**](/formazione/schede-stampabili/traccia-esame-secondaria2/) — tracce nello stile della prima prova di Stato (Beck, Ischia 2022, IT-alert, art. 2 D.Lgs. 1/2018, volontariato). 2 di Tipologia B, 3 di Tipologia C.
-- 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. 4 box "Prima/Durante/Comunicazioni/Quando chiamare", 3 attività domestiche, mini quiz. Adatta anche al secondo grado per il taglio cittadinanza/resilienza. *(ed. civica, tecnologia)*
+- 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. box "Prima/Durante/Comunicazioni/Quando chiamare", attività domestiche, mini quiz. Adatta anche al secondo grado per il taglio cittadinanza/resilienza. *(ed. civica, tecnologia)*
 - 👉 [**Monossido di carbonio**](/formazione/schede-stampabili/monossido-carbonio-secondaria/) — sicurezza domestica e prevenzione del pericolo invisibile in case, garage e locali chiusi: caldaie, stufe, barbecue. Caccia al rischio in casa, regole per ogni apparecchio, mini quiz. *(scienze, tecnologia, ed. civica)*
 - 👉 [**IT-alert e comunicazioni ufficiali**](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — sistema nazionale di allarme pubblico: tabella dei 5 elementi del messaggio operativo, esempio realistico, attività di scrittura per il territorio, mini quiz. *(ed. civica, cittadinanza digitale, italiano)*
 - 👉 [**Fake news in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — disinformazione e comunicazione del rischio: regola dei 3 controlli, checklist "prima di condividere", riscrittura di un messaggio allarmistico in forma corretta, mini quiz. *(ed. civica digitale, italiano, sociologia della comunicazione)*
-- 👉 [**Emergenza inclusiva**](/formazione/schede-stampabili/emergenza-inclusiva-secondaria2/) — aiutare persone con disabilità, fragilità o bisogni specifici senza improvvisare: 4 box "Chiedi/Comunica/Prepara/Rete", modello "scheda bisogni essenziali", verifica inclusiva del percorso, mini quiz. *(ed. civica, scienze umane, inclusione, diritto)*
+- 👉 [**Emergenza inclusiva**](/formazione/schede-stampabili/emergenza-inclusiva-secondaria2/) — aiutare persone con disabilità, fragilità o bisogni specifici senza improvvisare: box "Chiedi/Comunica/Prepara/Rete", modello "scheda bisogni essenziali", verifica inclusiva del percorso, mini quiz. *(ed. civica, scienze umane, inclusione, diritto)*
 
-**7 schede curriculari trasversali** (diritto, scienze, economia, etica, inglese, ed. civica):
+**Schede curriculari trasversali** (diritto, scienze, economia, etica, inglese, ed. civica):
 
-- 👉 [**Il Codice della Protezione Civile (D.Lgs. 1/2018)**](/formazione/schede-stampabili/codice-pc-secondaria2/) — analisi degli articoli chiave (artt. 1, 2, 6, 12, 18, 32-35), tabella delle autorità di PC per livello, 5 domande di applicazione. *(diritto, ed. civica)*
-- 👉 [**Tettonica delle placche e magnitudo**](/formazione/schede-stampabili/placche-tettoniche-secondaria2/) — placche, faglie, magnitudo Mw vs Richter, scala Mercalli, formula del momento sismico, 5 domande di applicazione. *(scienze della Terra, fisica)*
-- 👉 [**Cambiamento climatico e rischi mediterranei**](/formazione/schede-stampabili/climate-change-secondaria2/) — IPCC, dati italiani, 6 eventi recenti, mitigazione vs adattamento, costruzione grafico, 5 domande. *(scienze, geografia)*
-- 👉 [**Economia del rischio: prevenire o ricostruire**](/formazione/schede-stampabili/economia-rischio-secondaria2/) — rapporto 1:5 prevenzione/ricostruzione, costi reali italiani, formula BCR, 5 domande con quesito etico finale. *(economia, statistica)*
-- 👉 [**Il caso L'Aquila 2009 — comunicazione di crisi**](/formazione/schede-stampabili/caso-aquila-secondaria2/) — il processo alla Commissione Grandi Rischi, dilemmi etici, principio di precauzione, 5 domande con dilemma personale. *(diritto, etica)*
+- 👉 [**Il Codice della Protezione Civile (D.Lgs. 1/2018)**](/formazione/schede-stampabili/codice-pc-secondaria2/) — analisi degli articoli chiave (artt. 1, 2, 6, 12, 18, 32-35), tabella delle autorità di PC per livello, domande di applicazione. *(diritto, ed. civica)*
+- 👉 [**Tettonica delle placche e magnitudo**](/formazione/schede-stampabili/placche-tettoniche-secondaria2/) — placche, faglie, magnitudo Mw vs Richter, scala Mercalli, formula del momento sismico, domande di applicazione. *(scienze della Terra, fisica)*
+- 👉 [**Cambiamento climatico e rischi mediterranei**](/formazione/schede-stampabili/climate-change-secondaria2/) — IPCC, dati italiani, 6 eventi recenti, mitigazione vs adattamento, costruzione grafico, domande. *(scienze, geografia)*
+- 👉 [**Economia del rischio: prevenire o ricostruire**](/formazione/schede-stampabili/economia-rischio-secondaria2/) — rapporto 1:5 prevenzione/ricostruzione, costi reali italiani, formula BCR, domande con quesito etico finale. *(economia, statistica)*
+- 👉 [**Il caso L'Aquila 2009 — comunicazione di crisi**](/formazione/schede-stampabili/caso-aquila-secondaria2/) — il processo alla Commissione Grandi Rischi, dilemmi etici, principio di precauzione, domande con dilemma personale. *(diritto, etica)*
 - 👉 [**English for Civil Protection**](/formazione/schede-stampabili/english-civil-protection-secondaria2/) — glossario tecnico inglese, lettura di un articolo internazionale (EU Civil Protection Mechanism), comprehension, role-play emergency call. *(inglese L2)*
 - 👉 [**Diventare volontario di PC**](/formazione/schede-stampabili/percorso-volontariato-secondaria2/) — requisiti, specialità, 7 step del percorso, diritti e doveri (D.Lgs. 1/2018), mini-progetto personale. *(ed. civica, orientamento)*
 
-**12 nuovi case study** delle maxi-emergenze italiane (analisi sistemica con format «Cosa non andava / Cosa è cambiato / Lezioni apprese» + 6 domande di analisi + box per il docente):
+**12 nuovi case study** delle maxi-emergenze italiane (analisi sistemica con format «Cosa non andava / Cosa è cambiato / Lezioni apprese» + domande di analisi + box per il docente):
 
 - 👉 [**Caso Messina-Reggio Calabria 1908**](/formazione/schede-stampabili/caso-messina-reggio-secondaria2/) — terremoto + tsunami, 80.000-120.000 vittime: la più grande catastrofe naturale d'Europa moderna, prima legge antisismica italiana. *(storia, scienze della Terra, italiano)*
 - 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria2/) — «Fate presto»: 2.914 vittime, soccorsi tardivi, nascita del Ministero della Protezione Civile, percorso verso la legge 225/1992. *(storia, diritto, ed. civica)*
@@ -1018,7 +1018,7 @@ Tracce pronte nello stile della prima prova scritta dell'Esame di Stato (tipolog
 
 **Traccia 3 (Tipologia C)**: «Il sistema IT-alert, sperimentato in Italia nel 2023, è stato il primo caso di allerta diretta ai cellulari della popolazione. Dopo aver descritto funzionamento e base giuridica del sistema, rifletti sul rapporto tra tecnologia e cultura della sicurezza: gli strumenti tecnologici possono sostituire la preparazione individuale, o la presuppongono?»
 
-**Traccia 4 (Tipologia B)**: Testo di partenza: art. 2 del D.Lgs. 1/2018 (attività della protezione civile). «Il sistema italiano distingue quattro attività: **previsione, prevenzione, soccorso, superamento dell'emergenza**. Analizza come questi quattro momenti si integrano in un caso a tua scelta (Amatrice 2016, Ischia 2022, Vaia 2018, alluvione Emilia-Romagna 2023). Quali sono le criticità strutturali emerse?»
+**Traccia 4 (Tipologia B)**: Testo di partenza: art. 2 del D.Lgs. 1/2018 (attività della protezione civile). «Il sistema italiano distingue attività: **previsione, prevenzione, soccorso, superamento dell'emergenza**. Analizza come questi quattro momenti si integrano in un caso a tua scelta (Amatrice 2016, Ischia 2022, Vaia 2018, alluvione Emilia-Romagna 2023). Quali sono le criticità strutturali emerse?»
 
 **Traccia 5 (Tipologia C)**: «Il volontariato di protezione civile in Italia coinvolge oltre 700.000 persone. È un fenomeno peculiare italiano, radicato nell'art. 118 ultimo comma della Costituzione (principio di sussidiarietà orizzontale). Analizza il ruolo del volontariato nella tua comunità e discuti se oggi possa essere considerato una "forma evoluta di cittadinanza".»
 
@@ -1116,7 +1116,7 @@ Domande-chiave:
 - [Aree di emergenza di Genzano](/cartografia/) — Mappa delle aree di attesa e accoglienza
 - [Piano di Emergenza Comunale](/piano-emergenza/) — Struttura del piano
 - [Piano di Emergenza Familiare](/piano-familiare/) — Modello compilabile
-- [Giochi della Sicurezza — Ragazzi](/giochi/ragazzi/) — 10 giochi per la fascia 11-14 (ok anche primo biennio)
+- [Giochi della Sicurezza — Ragazzi](/giochi/ragazzi/) — giochi per la fascia 11-14 (ok anche primo biennio)
 - [Stop Disasters! — Simulatore ONU UNDRR](https://www.stopdisastersgame.org/game/) — Simulazione gratuita in italiano: 5 scenari (terremoto, alluvione, tsunami, uragano, incendio) con budget limitato. Ottimo come attività introduttiva al **Progetto C** (campagna di comunicazione del rischio) o come riflessione sul rapporto fra prevenzione strutturale e non strutturale.
 - [Chi siamo](/chi-siamo/) — Il Gruppo Comunale di Genzano
 - [Diventa Volontario](/diventa-volontario/) — Informazioni sull'iscrizione

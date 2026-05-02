@@ -4,7 +4,7 @@ Questo file raccoglie le regole su **template** principali, **menu di navigazion
 
 ## Menu di navigazione principale (mega-menu accorpato)
 
-Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `themes/flavour-pcgenzano/layouts/partials/navbar.html`. Struttura a **7 voci di primo livello**, di cui 4 dropdown:
+Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `themes/flavour-pcgenzano/layouts/partials/navbar.html`. Struttura a **Voci di primo livello**, di cui 4 dropdown:
 
 | Voce | Tipo | Contenuto |
 |---|---|---|
@@ -16,9 +16,9 @@ Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `the
 | Comunicazioni | diretta | `/comunicazioni/` |
 | Contatti | diretta | `/contatti/` |
 
-Razionale: 10 voci flat erano troppe per mobile e per l'utente in emergenza. L'accorpamento mantiene tutte le pagine raggiungibili in ≤ 2 click ma riduce il rumore visivo.
+Razionale: voci flat erano troppe per mobile e per l'utente in emergenza. L'accorpamento mantiene tutte le pagine raggiungibili in ≤ 2 click ma riduce il rumore visivo.
 
-**Storia del riordino (aprile 2026):** dopo audit di usabilità, la prima versione "6 voci con Formazione" lasciava 4 buchi gravi:
+**Storia del riordino (aprile 2026):** dopo audit di usabilità, la prima versione "voci con Formazione" lasciava 4 buchi gravi:
 - `/abili-a-proteggere/` e `/facile-da-leggere/` raggiungibili solo in 3+ click — paradosso, visto che servono a chi ha più difficoltà;
 - `/strumenti/`, `/area-download/`, `/normativa/`, `/faq/` visibili solo in homepage o footer, perse da chi entra dal motore di ricerca.
 
@@ -52,23 +52,24 @@ Il dropdown "Formazione" è stato rinominato **"Educazione e Inclusione"** e ha 
 
 Non aggiungere voci di primo livello senza valutarne l'impatto sul mobile: il limite di sicurezza è 6-7 voci visibili contemporaneamente.
 
-### Verifica automatica conteggi schede / giochi / attività
+### Niente conteggi inventario sul sito (decisione editoriale, maggio 2026)
 
-Il sito mostra in più punti i conteggi totali e per fascia (es. "100 schede stampabili", "33 giochi", "32 attività accessibili", "28 schede infanzia", "14 case study Sec II"). Esiste **`scripts/verifica-conteggi.sh`** che fa la conta reale (cartelle in `static/formazione/schede-stampabili/`, `static/giochi/`, `static/abili-a-proteggere/`) e la confronta con i numeri dichiarati nei file:
+Il sito **non riporta numeri di inventario** dei materiali (schede stampabili, giochi, storie, attività accessibili, kit, pittogrammi, fac-simile, case study, percorsi, moduli, ecc.). Le descrizioni sono **qualitative**: "schede stampabili per tutte le fasce", "giochi educativi divisi per fascia di età", ecc.
 
-- `themes/flavour-pcgenzano/layouts/assistente/list.html` (4 dropdown info_*)
-- `themes/flavour-pcgenzano/layouts/partials/games-cta.html`
-- `static/formazione/schede-stampabili/index.html` (meta + lead + sotto-sezione case study)
-- `static/giochi/index.html` (4 card)
-- `content/faq/_index.md`, `content/mappa-sito/_index.md`, `content/formazione/_index.md`
-- `MANUALE-SITO.md` tabella kit
+**Why:** i conteggi inventario erano una fonte continua di drift fra dichiarato e reale. Ogni volta che si aggiungeva o si toglieva un materiale serviva ricordarsi di aggiornare otto-dieci posti diversi: `assistente/list.html`, `games-cta.html`, `static/giochi/index.html`, `static/formazione/schede-stampabili/index.html`, `content/faq/_index.md`, `content/mappa-sito/_index.md`, `content/formazione/_index.md`, `MANUALE-SITO.md`. Era stato costruito uno script (`scripts/verifica-conteggi.sh`) + un hook `PostToolUse` + una sezione catch-all in `audit-sito.yml § 42` per inseguire il drift, ma il rimedio era complesso quanto il problema. La decisione di maggio 2026 elimina la causa: niente numeri, niente drift.
 
-**Esecuzione automatica** in due punti:
+**Cosa NON va toccato:**
 
-1. **Hook locale `PostToolUse`** in `.claude/settings.json`: dopo ogni `Write`/`Edit`/`MultiEdit` di Claude Code, lo script gira con `--quiet` e segnala SOLO se trova drift. Costo: ~50ms. Risolve il caso d'uso "ho aggiunto una scheda/gioco e mi sono dimenticato di aggiornare il contatore in qualche posto".
-2. **Workflow `audit-sito.yml § 42`**: catch-all settimanale (ogni lunedì 09:00 UTC). Necessario perché modifiche fatte da web GitHub o da mobile non passano dall'hook locale.
+- Numeri **citazionali** di documenti esterni: "Codice PC 50 articoli", "manuale FIC 88 pagine", "vademecum 240 pagine", "scala EMS-98 5 livelli", "Stop Disasters! 5 scenari".
+- Strutture **normative**: "le 4 attività della PC (previsione, prevenzione, soccorso, superamento)" — D.Lgs. 1/2018; "33 ore di Educazione Civica" — D.M. 183/2024; "4 livelli di allerta meteo" — Centro Funzionale Regionale.
+- Numeri **retrospettivi** in articoli di bilancio: "15 articoli pubblicati a ottobre", "oltre 100 articoli quest'anno" — sono report su periodi chiusi, non claim sull'inventario corrente.
+- **Date, telefoni, formati file, articoli di legge, dimensioni di documenti**.
 
-**Quando aggiungi un nuovo tipo di numerazione** (es. una nuova pagina che cita "X documenti", "Y mappe"), aggiorna `verifica-conteggi.sh` aggiungendo una nuova riga `check_count` con: numero reale, regex del pattern (es. `"[0-9]+ documenti"`), file da controllare, descrizione. Test rapido: `bash scripts/verifica-conteggi.sh`.
+**Cosa è stato disattivato:**
+
+- `scripts/verifica-conteggi.sh` — preservato come no-op (`exit 0`) per non rompere chiamate residue.
+- Hook `PostToolUse` in `.claude/settings.json` — rimosso.
+- Sezione `audit-sito.yml § 42` — rimossa con commento esplicativo.
 
 ### Sincronizzazione obbligatoria `hugo.toml` ↔ `site-chrome.js`
 
@@ -79,11 +80,11 @@ Il menu Hugo (`hugo.toml [[menus.main]]` + `themes/flavour-pcgenzano/layouts/par
 - Identificatori dei dropdown: `navDropdown-per-il-cittadino`, `navDropdown-educazione-inclusione`, `navDropdown-volontariato`, `navDropdown-risorse`.
 - Sotto-voci di ogni dropdown e relativi URL.
 
-**Why**: ad aprile 2026 il menu è stato riordinato (6 voci flat → 7 voci con dropdown, "Formazione" → "Educazione e Inclusione", nuovo dropdown "Risorse"). L'aggiornamento Hugo è stato fatto, ma `site-chrome.js` è rimasto col menu vecchio per giorni: la home aveva 7 voci con dropdown, le pagine statiche 6 voci flat. L'utente ha scoperto il drift confrontando due screenshot.
+**Why**: ad aprile 2026 il menu è stato riordinato (voci flat → voci con dropdown, "Formazione" → "Educazione e Inclusione", nuovo dropdown "Risorse"). L'aggiornamento Hugo è stato fatto, ma `site-chrome.js` è rimasto col menu vecchio per giorni: la home aveva voci con dropdown, le pagine statiche voci flat. L'utente ha scoperto il drift confrontando due screenshot.
 
 **Check automatico**: il workflow `audit-sito.yml` § 41 "Coerenza menu Hugo ↔ site-chrome.js" verifica ogni lunedì:
 - Tutti i dropdown dichiarati in `hugo.toml` (`identifier = "..."`) hanno l'`navDropdown-<id>` corrispondente in `site-chrome.js`.
-- Le 3 voci dirette (Home, Comunicazioni, Contatti) sono presenti.
+- Le voci dirette (Home, Comunicazioni, Contatti) sono presenti.
 - Nessun residuo obsoleto (es. `navDropdown-formazione` dopo il rename).
 
 Se trova drift, apre un'issue di manutenzione. Ma **non aspettare l'issue**: allinea al momento della modifica al menu.
@@ -155,7 +156,7 @@ Regole operative:
 
 ## Strumenti di Accessibilità (toolbar utente)
 
-In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo blu istituzionale** (FAB) con icona `bi-universal-access` che apre un **dialog modale** con preferenze di lettura: dimensione testo (4 livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (default/alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande.
+In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo blu istituzionale** (FAB) con icona `bi-universal-access` che apre un **dialog modale** con preferenze di lettura: dimensione testo (livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (default/alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande.
 
 **File coinvolti** (tutti nel tema, modificabili liberamente):
 
@@ -218,12 +219,12 @@ Sistema completo per generare bozze post social (X, Facebook, Instagram, Telegra
 
 ## Coach + TTS sui giochi statici (`giochi/assets/`)
 
-I giochi statici della sezione Giochi della Sicurezza vivono in `static/giochi/{infanzia,primaria,ragazzi}/` (33 giochi totali) e usano un sistema condiviso di onboarding e teoria di rinforzo.
+I giochi statici della sezione Giochi della Sicurezza vivono in `static/giochi/{infanzia,primaria,ragazzi}/` (giochi totali) e usano un sistema condiviso di onboarding e teoria di rinforzo.
 
 **Asset condivisi** in `static/giochi/assets/`:
 - `css/giochi.css` — palette, card hub, badge, focus visibile, guardrail responsive globale.
 - `css/coach.css` — bottone trigger inline, dialog modale, hint contestuale, bottone TTS. Tre varianti per fascia (rosso/verde/blu).
-- `js/coach.js` — modulo IIFE: manifest dei 33 giochi, dialog accessibile (`role=dialog`, focus trap, ESC), hint contestuale, TTS via Web Speech API. Auto-init via `data-coach-game="<id>"` sul `<body>` di ogni gioco.
+- `js/coach.js` — modulo IIFE: manifest dei giochi, dialog accessibile (`role=dialog`, focus trap, ESC), hint contestuale, TTS via Web Speech API. Auto-init via `data-coach-game="<id>"` sul `<body>` di ogni gioco.
 - `js/progressione.js`, `js/attestato.js`, `js/audio-sintetico.js`, `js/comune.js`, `js/attestato-inclusivo.js` — utilities di gameplay condivise.
 
 **Per ogni nuovo gioco** servono 3 righe HTML:
@@ -235,7 +236,7 @@ E **una voce nel manifest `CONTENUTI`** dentro `coach.js` con titolo, regola, co
 
 ## TTS sulle storie e fiabe (`storie-e-racconti/assets/tts-storia.js`)
 
-Le 18 fiabe in `static/formazione/storie-e-racconti/*/` hanno un bottone "🔊 Ascolta" via Web Speech API. Modulo standalone in `static/formazione/storie-e-racconti/assets/tts-storia.js`, auto-init via `DOMContentLoaded`, inietta il bottone nella `.storia-toolbar` di ogni storia. Legge `.storia-titolo-principale` + `.storia-corpo` spezzando in chunk di ~200 caratteri per fiabe lunghe.
+Le fiabe in `static/formazione/storie-e-racconti/*/` hanno un bottone "🔊 Ascolta" via Web Speech API. Modulo standalone in `static/formazione/storie-e-racconti/assets/tts-storia.js`, auto-init via `DOMContentLoaded`, inietta il bottone nella `.storia-toolbar` di ogni storia. Legge `.storia-titolo-principale` + `.storia-corpo` spezzando in chunk di ~200 caratteri per fiabe lunghe.
 
 **Per nuove storie:** includere il `<script src="/formazione/storie-e-racconti/assets/tts-storia.js" defer></script>` prima di `</body>`. Il bottone si aggiunge automaticamente. Stile in `assets/storia-libro.css` sezione "Bottone TTS".
 
@@ -243,7 +244,7 @@ Le 18 fiabe in `static/formazione/storie-e-racconti/*/` hanno un bottone "🔊 A
 
 `themes/flavour-pcgenzano/layouts/404.html` è una **pagina di atterraggio del recupero**, non un vicolo cieco. Contiene:
 - Form ricerca interna integrato (action su `/cerca/`)
-- 8 card di link rapidi alle pagine più consultate (Numeri Utili, Allerte Meteo, Cosa fare, Assistente, Diventa Volontario, Comunicazioni, Cartografia, Mappa Sito)
+- card di link rapidi alle pagine più consultate (Numeri Utili, Allerte Meteo, Cosa fare, Assistente, Diventa Volontario, Comunicazioni, Cartografia, Mappa Sito)
 - Alert «in caso di emergenza chiama il 112»
 - Script JS di redirect URL legacy (Joomla `*.html`) che si attiva solo se nessuna regola `.htaccess` server-side ha già intercettato l'URL
 

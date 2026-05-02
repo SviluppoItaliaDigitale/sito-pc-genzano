@@ -26,7 +26,7 @@ La **Legge 17 febbraio 2025, n. 21** ha introdotto la **lettera h-ter)** all'art
 > 📚 **Per i docenti — risorse coordinate**
 >
 > - **Pagina hub** [La Protezione Civile per l'Educazione Civica](/formazione/educazione-civica/) — mappatura completa dei nostri contenuti sui **3 Nuclei Concettuali del D.M. 183/2024** (Costituzione, Sostenibilità, Cittadinanza Digitale) + **Goal Agenda 2030 ONU** + tabella interdisciplinare + calendario delle 33 ore.
-> - **Rubrica valutativa** pronta per la fascia: [Rubrica Ed. Civica — Secondaria di primo grado](/formazione/schede-stampabili/rubrica-valutativa-secondaria/) — 6 indicatori × 4 livelli, con esempi di giudizio descrittivo / motivazione del voto.
+> - **Rubrica valutativa** pronta per la fascia: [Rubrica Ed. Civica — Secondaria di primo grado](/formazione/schede-stampabili/rubrica-valutativa-secondaria/) — indicatori × livelli, con esempi di giudizio descrittivo / motivazione del voto.
 
 
 ### Obiettivi di apprendimento formalizzati
@@ -71,7 +71,7 @@ La **Legge 17 febbraio 2025, n. 21** ha introdotto la **lettera h-ter)** all'art
 
 ### Durata consigliata e tabella del percorso
 
-Il percorso completo si articola in **6 moduli da 60 minuti**, adattabili in base alle esigenze della classe. Ogni modulo è autonomo.
+Il percorso completo si articola in **Moduli da 60 minuti**, adattabili in base alle esigenze della classe. Ogni modulo è autonomo.
 
 | Modulo | Tema | Durata | Discipline coinvolte |
 |---|---|---|---|
@@ -119,7 +119,7 @@ Il sistema italiano di protezione civile si basa sul **principio di sussidiariet
 
 Il **Sindaco** è la prima autorità di protezione civile nel comune. In caso di emergenza attiva il **Centro Operativo Comunale (COC)** e coordina i primi interventi.
 
-### Le quattro attività della Protezione Civile
+### Le attività della Protezione Civile
 
 La protezione civile non si occupa solo di emergenze. Le sue attività si dividono in quattro fasi:
 
@@ -393,7 +393,7 @@ Per saperne di più: [Chi siamo](/chi-siamo/) | [Diventa Volontario](/diventa-vo
 - b) Sussidiarietà ✔
 - c) Autonomia regionale
 
-**2. Quali sono le quattro attività della protezione civile?**
+**2. Quali sono le attività della protezione civile?**
 - a) Allarme, soccorso, evacuazione, ricostruzione
 - b) Previsione, prevenzione, gestione dell'emergenza, superamento dell'emergenza ✔
 - c) Monitoraggio, allerta, intervento, ripristino
@@ -489,34 +489,34 @@ Per richieste specifiche: <a href="mailto:segreteria@protezionecivilegenzano.it"
 
 Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 
-- 👉 [**Decodifica del bollettino di allerta**](/formazione/schede-stampabili/decodifica-bollettino-secondaria/) — bollettino realistico del Centro Funzionale Lazio per Genzano: 7 domande di analisi (codici colore, criticità, COC). Soluzioni per il docente.
-- 👉 [**Mappa dei rischi del quartiere**](/formazione/schede-stampabili/mappa-rischi-secondaria/) — indagine territoriale: lo studente consulta INGV, ISPRA, DPC, EFFIS e disegna la mappa dei rischi del proprio quartiere. 5 domande di analisi.
+- 👉 [**Decodifica del bollettino di allerta**](/formazione/schede-stampabili/decodifica-bollettino-secondaria/) — bollettino realistico del Centro Funzionale Lazio per Genzano: domande di analisi (codici colore, criticità, COC). Soluzioni per il docente.
+- 👉 [**Mappa dei rischi del quartiere**](/formazione/schede-stampabili/mappa-rischi-secondaria/) — indagine territoriale: lo studente consulta INGV, ISPRA, DPC, EFFIS e disegna la mappa dei rischi del proprio quartiere. domande di analisi.
 - 👉 [**Audit del Piano di Emergenza Scolastico**](/formazione/schede-stampabili/audit-piano-secondaria/) — compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.
-- 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. 4 box "Prima/Durante/Comunicazioni/Quando chiamare", 3 attività domestiche, mini quiz. *(ed. civica, tecnologia)*
+- 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. box "Prima/Durante/Comunicazioni/Quando chiamare", attività domestiche, mini quiz. *(ed. civica, tecnologia)*
 - 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — rischio sanitario del caldo: persone vulnerabili, comportamenti corretti, semaforo del caldo (verde/giallo/rosso) e mini quiz. *(scienze, ed. civica, valida anche per Primaria 4-5)*
 - 👉 [**Monossido di carbonio**](/formazione/schede-stampabili/monossido-carbonio-secondaria/) — il pericolo invisibile in case, garage e locali chiusi: prevenzione, usi vietati di barbecue/bracieri, segnali sospetti e azione sicura. Caccia al rischio in casa e mini quiz. *(scienze, tecnologia)*
 - 👉 [**IT-alert e comunicazioni ufficiali**](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — capire il sistema nazionale di allarme pubblico: anatomia di un messaggio (rischio/area/tempo/azione/fonte), esempio realistico, risposta in 140 caratteri, mini quiz. *(ed. civica, cittadinanza digitale, italiano)*
 - 👉 [**Fake news in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — riconoscere e fermare la disinformazione: regola dei 3 controlli (fonte/data/conferma), checklist "prima di condividere", classifica delle notizie a gruppi e mini quiz. *(ed. civica digitale, italiano)*
 
-**6 schede curriculari trasversali** (matematica, italiano, ed. civica, scienze):
+**Schede curriculari trasversali** (matematica, italiano, ed. civica, scienze):
 
 - 👉 [**Statistica dei Rischi Italiani**](/formazione/schede-stampabili/statistica-rischi-secondaria/) — tabella DPC, calcolo percentuali, costruzione istogramma, riflessione sui dati. *(matematica)*
 - 👉 [**Scrivi un Testo Informativo**](/formazione/schede-stampabili/scrittura-informativa-secondaria/) — produrre un testo di ~300 parole su un rischio del territorio (struttura 5W + fonti). *(italiano)*
 - 👉 [**Debate strutturato sui Rischi**](/formazione/schede-stampabili/debate-strutturato-secondaria/) — debate scolastico in 5 fasi su un tema PC (vietare costruzioni in zona sismica). Griglia di valutazione. *(ed. civica)*
-- 👉 [**Costituzione e PC — Analisi**](/formazione/schede-stampabili/costituzione-pc-secondaria/) — articoli 32, 117, 118 con testo originale + glossario costituzionale + 4 domande di approfondimento. *(ed. civica)*
+- 👉 [**Costituzione e PC — Analisi**](/formazione/schede-stampabili/costituzione-pc-secondaria/) — articoli 32, 117, 118 con testo originale + glossario costituzionale + domande di approfondimento. *(ed. civica)*
 - 👉 [**Vulcanologia dei Castelli Romani**](/formazione/schede-stampabili/vulcanologia-castelli-secondaria/) — il Vulcano Laziale: caldera, fumarole, monitoraggio INGV. Schema della caldera con i due laghi. *(scienze)*
-- 👉 [**Cronaca Recente — Ischia 2022**](/formazione/schede-stampabili/cronaca-recente-secondaria/) — articolo di cronaca su frana di Casamicciola. Analisi 5W + 5 domande critiche. *(italiano)*
+- 👉 [**Cronaca Recente — Ischia 2022**](/formazione/schede-stampabili/cronaca-recente-secondaria/) — articolo di cronaca su frana di Casamicciola. Analisi 5W + domande critiche. *(italiano)*
 - 👉 [**Articolo, Comunicato Stampa e Post Social**](/formazione/schede-stampabili/articolo-stampa-social-secondaria/) — piramide rovesciata + 5W+1H. Lo stesso evento PC in 3 formati (articolo, comunicato stampa, post Instagram) con esempio modello e hashtag strategici. *(italiano, giornalismo)*
 
 **Schede del curricolo a spirale 6-19 anni — versione Secondaria I** (stessi temi disponibili anche per Primaria e Secondaria II, per scelta del docente):
 
-- 👉 [**Caso Amatrice — cronologia e analisi**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — terremoto Centro Italia 2016 con timeline (24 agosto, 30 ottobre, Rigopiano gennaio 2017) + analisi cosa ha funzionato/non ha funzionato + 6 domande. *(storia, scienze, ed. civica)*
+- 👉 [**Caso Amatrice — cronologia e analisi**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — terremoto Centro Italia 2016 con timeline (24 agosto, 30 ottobre, Rigopiano gennaio 2017) + analisi cosa ha funzionato/non ha funzionato + domande. *(storia, scienze, ed. civica)*
 - 👉 [**Piano di Emergenza Familiare — esteso**](/formazione/schede-stampabili/piano-familiare-secondaria/) — versione approfondita del piano: scorte 72 ore, contatto fuori comune, animali domestici, persone fragili, ruoli di tutti. *(ed. civica, da completare con la famiglia)*
-- 👉 [**Cruciverba PC — definizioni tecniche**](/formazione/schede-stampabili/cruciverba-secondaria/) — 20 definizioni tecniche (sigle istituzionali, fenomeni, ruoli) collegabile al glossario online del sito. *(italiano, scienze)*
-- 👉 [**Calcolo dei tempi di evacuazione**](/formazione/schede-stampabili/labirinto-evacuazione-secondaria/) — pianta scuola di esempio + dati di norma (DM 3/8/2015): calcolo capacità uscite, tempo evacuazione totale, verifica conformità. 7 problemi matematici. *(matematica, tecnologia)*
-- 👉 [**Chiamare il 112 — Cosa NON dire**](/formazione/schede-stampabili/chiamo-112-secondaria/) — 3 scenari realistici (incidente bici, bambino al parco, anziano svenuto) con riformulazione di chiamate inefficaci, sistema AML, art. 658 c.p. *(italiano, ed. civica)*
+- 👉 [**Cruciverba PC — definizioni tecniche**](/formazione/schede-stampabili/cruciverba-secondaria/) — definizioni tecniche (sigle istituzionali, fenomeni, ruoli) collegabile al glossario online del sito. *(italiano, scienze)*
+- 👉 [**Calcolo dei tempi di evacuazione**](/formazione/schede-stampabili/labirinto-evacuazione-secondaria/) — pianta scuola di esempio + dati di norma (DM 3/8/2015): calcolo capacità uscite, tempo evacuazione totale, verifica conformità. Problemi matematici. *(matematica, tecnologia)*
+- 👉 [**Chiamare il 112 — Cosa NON dire**](/formazione/schede-stampabili/chiamo-112-secondaria/) — scenari realistici (incidente bici, bambino al parco, anziano svenuto) con riformulazione di chiamate inefficaci, sistema AML, art. 658 c.p. *(italiano, ed. civica)*
 
-**Case study — le maxi-emergenze italiane con analisi argomentativa (11-13 anni):** dodici schede di analisi storica con cronologia evento, box "Cosa ha funzionato / Cosa NON ha funzionato", 6 domande argomentative e note per il docente con riferimenti normativi (D.Lgs. 1/2018, L. 92/2019, D.M. 183/2024). Stesso evento disponibile in 3 fasce per il curricolo a spirale (Primaria 9-11 → Sec I 11-13 → Sec II 14-19).
+**Case study — le maxi-emergenze italiane con analisi argomentativa (11-13 anni):** schede di analisi storica con cronologia evento, box "Cosa ha funzionato / Cosa NON ha funzionato", domande argomentative e note per il docente con riferimenti normativi (D.Lgs. 1/2018, L. 92/2019, D.M. 183/2024). Stesso evento disponibile in fasce per il curricolo a spirale (Primaria 9-11 → Sec I 11-13 → Sec II 14-19).
 
 - 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — cronologia 24 agosto/30 ottobre 2016, IT-alert, evacuazioni preventive, ricostruzione lenta. *(storia/scienze/ed. civica)*
 - 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria/) — "dov'era e com'era": modello internazionale di ricostruzione + Legge 225/1992. *(storia/geografia)*
@@ -542,7 +542,7 @@ Un'attività alternativa o complementare all'UdA, più breve (4-6 ore), direttam
 **Fasi**
 1. Richiesta al Dirigente Scolastico di una copia del Piano (o della sua sintesi)
 2. Lettura in gruppo del Piano con evidenziazione dei punti chiave (vie di fuga, punto di raccolta, ruoli)
-3. Sondaggio (anonimo, max 10 domande) rivolto a una classe di scuola primaria dello stesso istituto: "Sai dove si trova l'uscita di emergenza? Sai cosa fare se suona l'allarme?"
+3. Sondaggio (anonimo, max domande) rivolto a una classe di scuola primaria dello stesso istituto: "Sai dove si trova l'uscita di emergenza? Sai cosa fare se suona l'allarme?"
 4. Analisi dei risultati
 5. Redazione di un **report di proposta** al Dirigente: cosa funziona, cosa si potrebbe migliorare (es. cartelli più chiari, esercitazioni più frequenti, materiale informativo agli alunni)
 6. Presentazione del report in Consiglio di Istituto o in un momento pubblico della scuola
@@ -816,7 +816,7 @@ Attività in cui gli studenti **agiscono concretamente** per la comunità, coniu
 
 **Progetto 1 — "Io non rischio Junior"**: gli studenti, formati da un volontario, preparano un banchetto informativo (con brochure, poster, gadget) da allestire in una piazza di Genzano il sabato mattina. Durata: 1 mattinata + 3 incontri preparatori.
 
-**Progetto 2 — Adotta un'area di attesa**: una classe si assume la responsabilità di monitorare nel corso dell'anno lo stato dei cartelli e la segnaletica di una delle 10 aree di attesa del Comune. Segnala al Gruppo eventuali danni o mancanze. Durata: tutto l'anno scolastico.
+**Progetto 2 — Adotta un'area di attesa**: una classe si assume la responsabilità di monitorare nel corso dell'anno lo stato dei cartelli e la segnaletica di una delle aree di attesa del Comune. Segnala al Gruppo eventuali danni o mancanze. Durata: tutto l'anno scolastico.
 
 **Progetto 3 — Nonni sicuri**: gli studenti preparano e conducono un incontro di 90 minuti presso un centro anziani per spiegare il 112, l'IT-alert, le allerte meteo. Include una dispensa cartacea stampata. Durata: 1 incontro + 4 incontri preparatori.
 
@@ -824,7 +824,7 @@ Attività in cui gli studenti **agiscono concretamente** per la comunità, coniu
 
 ### Intervista al volontario — traccia strutturata
 
-Prima che il volontario venga in classe, gli studenti preparano domande in piccoli gruppi. Traccia di **15 domande di qualità** (non banali) da personalizzare:
+Prima che il volontario venga in classe, gli studenti preparano domande in piccoli gruppi. Traccia di **Domande di qualità** (non banali) da personalizzare:
 
 **Personali**
 1. Quando hai deciso di diventare volontario di protezione civile? Cosa ti ha spinto?
@@ -873,7 +873,7 @@ Alla fine si chiede agli studenti di scrivere in 10 righe la propria posizione e
 - [Aree di emergenza di Genzano](/cartografia/) — Mappa delle aree di attesa e accoglienza
 - [Piano di Emergenza Comunale](/piano-emergenza/) — Struttura del piano del Comune
 - [Quiz di Protezione Civile](/quizpc/) — Quiz interattivo
-- [Giochi della Sicurezza — Ragazzi](/giochi/ragazzi/) — 10 giochi per la fascia 11-14
+- [Giochi della Sicurezza — Ragazzi](/giochi/ragazzi/) — giochi per la fascia 11-14
 - [Stop Disasters! — Simulatore ONU UNDRR](https://www.stopdisastersgame.org/game/) — Simulazione gratuita in italiano: 5 scenari (terremoto, alluvione, tsunami, uragano, incendio) per imparare la pianificazione e la prevenzione. Adatto a 11-14 anni come attività di gruppo guidata in classe (durata 10-20 minuti per scenario).
 - [Io non rischio](https://www.iononrischio.it/) — Materiali della campagna nazionale
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
