@@ -388,10 +388,11 @@ def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Pat
         suffix = ""
         if piattaforma == "instagram":
             # Le immagini sono nella stessa cartella delle bozze (out_dir),
-            # comodo da scaricare insieme via mobile.
-            img_post_singola = out_dir / "instagram-post.webp"
-            carousel = sorted(out_dir.glob("instagram-post-*.webp"))
-            img_story = out_dir / "instagram-story.webp"
+            # comodo da scaricare insieme via mobile. Formato JPG perché
+            # Instagram non accetta WebP per upload (web e app mobile).
+            img_post_singola = out_dir / "instagram-post.jpg"
+            carousel = sorted(out_dir.glob("instagram-post-*.jpg"))
+            img_story = out_dir / "instagram-story.jpg"
 
             righe_img = []
             if img_post_singola.exists():

@@ -16,8 +16,8 @@ Per ogni articolo in `content/comunicazioni/*.md`:
 2. **`scripts/genera-immagini-social.py`** usa Pillow per generare immagini
    Instagram con template istituzionale (logo + brand + cover articolo + URL
    sito) salvate **nella stessa cartella** `social-bozze/<slug>/` accanto ai
-   testi (`instagram-post.webp` per singola foto, `instagram-post-N.webp` per
-   carosello, `instagram-story.webp` per la story). Comodo da scaricare
+   testi (`instagram-post.jpg` per singola foto, `instagram-post-N.jpg` per
+   carosello, `instagram-story.jpg` per la story). Comodo da scaricare
    insieme via mobile.
 
 ## Setup iniziale (una sola volta)
@@ -70,8 +70,8 @@ Output:
 - `social-bozze/2026-04-20-articolo/instagram.txt`
 - `social-bozze/2026-04-20-articolo/telegram.txt`
 - `social-bozze/2026-04-20-articolo/README.md`
-- `social-bozze/2026-04-20-articolo/instagram-post.webp` (o `-1.webp`, `-2.webp`, … se carosello)
-- `social-bozze/2026-04-20-articolo/instagram-story.webp`
+- `social-bozze/2026-04-20-articolo/instagram-post.jpg` (o `-1.jpg`, `-2.jpg`, … se carosello)
+- `social-bozze/2026-04-20-articolo/instagram-story.jpg`
 
 ### Tutti gli articoli pubblicati (batch retroattivo)
 
@@ -144,9 +144,14 @@ cartella**, comoda da scaricare via mobile da GitHub.
 
 | Cartella | Contenuto | Deployata sul sito? |
 |---|---|---|
-| `social-bozze/<slug>/` | 4 .txt + README.md + `instagram-post*.webp` + `instagram-story.webp` | ❌ no (cartella fuori da Hugo, solo archivio di lavoro) |
+| `social-bozze/<slug>/` | 4 .txt + README.md + `instagram-post*.jpg` + `instagram-story.jpg` | ❌ no (cartella fuori da Hugo, solo archivio di lavoro) |
 
-> **Nota**: fino al 2 maggio 2026 le immagini stavano in `static/images-social/`
-> con URL pubblico Aruba. Spostate in `social-bozze/<slug>/` perché l'URL
-> pubblico non era usato da nessuna parte del sito (nessun template, partial o
-> articolo le linkava) e tenere tutto insieme è molto più comodo da mobile.
+> **Nota storica (2 maggio 2026)**:
+> 1. Le immagini stavano in `static/images-social/` con URL pubblico Aruba.
+>    Spostate in `social-bozze/<slug>/` perché l'URL pubblico non era usato
+>    da nessuna parte del sito e tenere tutto insieme è più comodo da mobile.
+> 2. Il formato output era **WebP** (più piccolo) ma **Instagram non lo
+>    accetta** in upload (web e app mobile lo rifiutano). Cambiato a **JPEG
+>    quality 90 progressive**, universalmente accettato da IG, Facebook, X,
+>    Telegram, LinkedIn. Le immagini sono ~2-3x più pesanti ma il peso non
+>    è critico (sono per copia/incolla manuale, non per il sito pubblico).

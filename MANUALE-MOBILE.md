@@ -267,10 +267,10 @@ Nel file `instagram.txt` in fondo trovi un riferimento del tipo:
 
 ```
 📷 CAROSELLO Instagram (3 immagini, caricale in questo ordine):
-   1. instagram-post-1.webp
-   2. instagram-post-2.webp
-   3. instagram-post-3.webp
-📷 Story 1080x1920: instagram-story.webp (in questa cartella)
+   1. instagram-post-1.jpg
+   2. instagram-post-2.jpg
+   3. instagram-post-3.jpg
+📷 Story 1080x1920: instagram-story.jpg (in questa cartella)
 ```
 
 Le trovi tutte nella stessa cartella su GitHub:
@@ -312,7 +312,7 @@ https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/social-bozze
 
 1. Apri l'app Instagram
 2. Nuovo post
-3. Seleziona l'immagine `<slug>-instagram-post.webp` dalla galleria
+3. Seleziona l'immagine `<slug>-instagram-post.jpg` dalla galleria
    (l'hai scaricata al passo 4)
 4. Caption: incolla il testo da `instagram.txt`
 5. Pubblica
@@ -330,7 +330,7 @@ https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/social-bozze
 #### Story
 
 1. Apri Instagram → Storie
-2. Sulla galleria seleziona `<slug>-instagram-story.webp`
+2. Sulla galleria seleziona `<slug>-instagram-story.jpg`
 3. (Facoltativo) Aggiungi adesivi/sticker — la story ha già il
    template con titolo e link
 4. Pubblica
@@ -440,7 +440,7 @@ Tu non devi fare nulla, succede in background.
 | Cover automatica articoli | Push articolo senza foto | Genera cover tipografica blu+titolo |
 | Foto da Wikipedia/NASA/USGS | Push con marker `# TODO-foto-*` | Scarica + applica fascia blu |
 | **Bozze social X/FB/IG/TG** | Push articolo | Crea `social-bozze/<slug>/*.txt` (richiede quota Gemini disponibile) |
-| **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `social-bozze/<slug>/instagram-*.webp` (Pillow, no rate limit) |
+| **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `social-bozze/<slug>/instagram-*.jpg` (Pillow, no rate limit) |
 
 > **Nota Gemini API gratuita**: il tier free ha ~50 richieste/giorno. Una rigenerazione massiva di tutte le bozze testuali si esaurisce dopo ~50 articoli con HTTP 429 — si riprende il giorno dopo (reset a mezzanotte UTC). Il workflow normale (1 articolo/push) gira sempre. Specifiche in [`manuale/parte-16-bozze-social-gestione-quota-gemini-api.md`](manuale/parte-16-bozze-social-gestione-quota-gemini-api.md).
 
