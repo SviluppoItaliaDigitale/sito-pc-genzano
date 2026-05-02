@@ -76,8 +76,10 @@ Se non sai in quale Parte cercare:
 >   da opt-in a opt-out — blacklist legali/tecniche)
 > - Selettore velocità (Lento 0.75x / Normale 0.95x / Veloce 1.15x), persistito
 >   in localStorage
-> - Toggle "Segui parole" che evidenzia la parola in lettura via
->   `SpeechSynthesisUtterance.onboundary` (default OFF, fallback Safari iOS)
+> - ~~Toggle "Segui parole" che evidenzia la parola in lettura~~ — **rimosso il
+>   2 maggio 2026**: dipende da `SpeechSynthesisUtterance.onboundary 'word'`
+>   che Chrome/Edge non emettono con voci cloud Google (default), feature
+>   invisibile per la maggioranza degli utenti italiani
 > - Tempo di lettura stimato sopra ogni articolo (`Lettura: ~N minuti`)
 > - Sillabazione automatica `hyphens: auto` con regole italiane
 > - Glossario inline con popover sui termini PC alla prima occorrenza (61 voci
