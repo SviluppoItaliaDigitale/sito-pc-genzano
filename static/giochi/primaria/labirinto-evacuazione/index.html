@@ -45,6 +45,11 @@
     }
     .hud-pill.errori { border-color: #dc3545; color: #dc3545; }
     .hud-pill.mosse { border-color: #198754; color: #198754; }
+    .hud-pill.budget { border-color: #b45309; color: #b45309; }
+    .hud-pill.budget.over { background: #f8d7da; border-color: #842029; color: #842029; }
+    @media (max-width: 380px) {
+      .hud-pill { padding: .25rem .65rem; font-size: .82rem; gap: .25rem; }
+    }
 
     .mappa-wrap {
       display: flex; justify-content: center; margin-bottom: 1rem;
@@ -85,10 +90,18 @@
     .cell.exit { background: #d1e7dd; font-size: calc(var(--mappa-cell) * 0.7); }
     .cell.elevator { background: #fff3cd; color: #664d03; }
     .cell.fire { background: #f8d7da; color: #dc3545; }
+    .cell.smoke { background: #d6d8db; color: #495057; animation: smokeIn .4s ease; }
     .cell.obstacle { background: #fff3cd; color: #b45309; }
     .cell.stair { background: #cfe2ff; color: #003366; }
     .cell.arrow-up, .cell.arrow-down, .cell.arrow-left, .cell.arrow-right {
       background: #d1e7dd; color: #0f5132; font-weight: 700;
+    }
+    @keyframes smokeIn {
+      from { opacity: .2; transform: scale(.85); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .cell.smoke { animation: none; }
     }
     .cell.player::after {
       content: "🧒";
@@ -125,6 +138,28 @@
     .comandi .b-left { grid-column: 1; grid-row: 2; }
     .comandi .b-down { grid-column: 2; grid-row: 2; }
     .comandi .b-right { grid-column: 3; grid-row: 2; }
+
+    /* Mobile: comandi sticky in basso al viewport per mappe lunghe (S6 ha 17
+       righe: su molti telefoni la mappa supera l'altezza visibile e i bottoni
+       finiscono fuori schermo). La barra resta agganciata al fondo finche la
+       sua posizione naturale non rientra in viewport. */
+    @media (max-width: 768px) {
+      .comandi {
+        position: sticky;
+        bottom: .4rem;
+        z-index: 5;
+        background: rgba(255,255,255,.96);
+        backdrop-filter: blur(2px);
+        padding: .5rem .25rem;
+        border-radius: 14px;
+        box-shadow: 0 -2px 12px rgba(0,0,0,.08);
+        margin: 1rem auto .5rem;
+        --cmd-size: clamp(44px, 13vw, 56px);
+      }
+    }
+    @media (prefers-reduced-transparency: reduce) {
+      .comandi { backdrop-filter: none; background: #fff; }
+    }
 
     .legenda {
       display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center;
@@ -177,7 +212,8 @@
                 <li><strong>Non usare mai l'ascensore</strong> durante l'evacuazione. Usa le <strong>scale</strong>.</li>
                 <li><strong>Segui le frecce verdi</strong> di emergenza: indicano la via di fuga più sicura.</li>
                 <li><strong>Non tornare indietro</strong> a prendere oggetti o amici: prosegui fino al punto di raccolta.</li>
-                <li><strong>Evita fuoco e fumo</strong>: se vedi fiamme o fumo, cerca una strada alternativa.</li>
+                <li><strong>Evita fuoco e fumo</strong>: se vedi fiamme o fumo, cerca una strada alternativa. <em>Negli ultimi scenari il fumo 💨 si sposta da solo.</em></li>
+                <li><strong>Cerca la via più breve</strong>: ogni scenario ha un budget di mosse. Si può finire anche oltre, ma più si va lunghi più punti si perdono.</li>
                 <li><strong>Raggiungi il punto di raccolta 🏁</strong> e resta lì in fila con l'insegnante.</li>
               </ul>
             </div>
@@ -190,11 +226,12 @@
               <span class="legenda-item">⚠️ Ascensore (no)</span>
               <span class="legenda-item">🔥 Fuoco (no)</span>
               <span class="legenda-item">📦 Ostacolo (no)</span>
+              <span class="legenda-item">💨 Fumo (no)</span>
               <span class="legenda-item">➡️ Freccia di emergenza</span>
             </div>
 
             <p class="text-center">
-              Affronterai <strong>3 scenari</strong>: piano con ascensore, corridoio con incendio, e un percorso completo con più ostacoli.
+              Affronterai <strong>6 scenari</strong> di difficoltà crescente: dall'aula al primo piano fino a un'evacuazione completa con incendi che propagano fumo.
               Muoviti con i pulsanti sotto la mappa o con le <strong>frecce della tastiera</strong>.
             </p>
 
@@ -218,6 +255,7 @@
             <div class="hud">
               <span class="hud-pill"><i class="bi bi-flag-fill" aria-hidden="true"></i> Scenario <span id="scenario-num">1</span>/<span id="scenario-tot">6</span></span>
               <span class="hud-pill mosse"><i class="bi bi-arrows-move" aria-hidden="true"></i> Mosse: <span id="mosse">0</span></span>
+              <span id="budget-pill" class="hud-pill budget" aria-live="polite"><i class="bi bi-stopwatch" aria-hidden="true"></i> Budget: <span id="budget-rest">0</span></span>
               <span class="hud-pill errori"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Errori: <span id="errori">0</span></span>
             </div>
 
@@ -273,123 +311,132 @@
     'use strict';
 
     // Tipi cella: . corridoio  # muro  S partenza  E uscita (punto raccolta)
-    //             A ascensore  F fuoco  X scala  U/D/L/R frecce direzionali
-    // Legenda celle: # muro  . corridoio  S start  E exit  A ascensore(trappola)
-    //                F fuoco(trappola)  X scala  U/D/L/R frecce emergenza
+    //             A ascensore  F fuoco  X scala  M fumo (generato)
+    //             U/D/L/R frecce direzionali (uscita vincolata)
+    // Mappe verificate via BFS in scripts/verifica-labirinti.py.
+    // Negli scenari con `fumo:true`, ogni `passiFumo` mosse il fuoco propaga fumo
+    // su una cella corridoio adiacente.
     var SCENARI = [
       {
         titolo: 'Scenario 1 — Aula al primo piano',
-        desc: 'Suona la campanella di evacuazione. Esci dalla tua aula evitando l\'ascensore ⚠️, gli zaini e i banchi rovesciati 📦. Scendi dalle scale 🪜 fino al punto di raccolta in cortile.',
+        desc: 'Suona la campanella di evacuazione. Esci dall\'aula evitando l\'ascensore ⚠️ e gli ostacoli 📦. Cerca le scale 🪜 e scendi fino al punto di raccolta in cortile.',
         righe: [
           '#########',
-          '#S.B....#',
-          '#.......#',
-          '#.#A..X.#',
-          '#...B...#',
+          '#S......#',
+          '#.#####.#',
           '#.#...#.#',
-          '#.....B.#',
-          '#.#.....#',
-          '#......E#',
+          '#.###.#X#',
+          '#A#...#.#',
+          '###.#.#.#',
+          '#.#.B.#.#',
+          '#.....#E#',
           '#########'
         ],
         max: 16
       },
       {
         titolo: 'Scenario 2 — Fuoco e ostacoli nel corridoio',
-        desc: 'Sei al piano terra. Si è sviluppato un incendio 🔥 e nei corridoi ci sono zaini caduti 📦. Evita il fuoco, salta gli ostacoli scegliendo un\'altra strada e raggiungi l\'uscita.',
+        desc: 'Sei al piano terra. Nei corridoi ci sono zaini caduti 📦, fuoco 🔥 e l\'ascensore ⚠️ è bloccato. Cerca le scale 🪜 e raggiungi l\'uscita più in basso.',
         righe: [
           '##########',
           '#S.B.....#',
-          '#........#',
-          '#...F....#',
-          '#.######B#',
-          '#.#......#',
-          '#..B.....#',
           '#.######.#',
-          '#....F...#',
-          '#.......E#',
+          '#.#......#',
+          '#.#.####.#',
+          '#...AF.#.#',
+          '#.#.####.#',
+          '#........#',
+          '#.######X#',
+          '#......BE#',
           '##########'
         ],
         max: 18
       },
       {
         titolo: 'Scenario 3 — Evacuazione completa',
-        desc: 'Allarme generale! Dall\'aula devi scendere le scale 🪜, evitare ascensore ⚠️, fuoco 🔥 e ostacoli 📦, seguire le frecce verdi ➡️ di emergenza fino al cortile. Tante scelte: usa la testa.',
+        desc: 'Allarme generale dall\'aula al cortile. La via diretta è bloccata da fuoco 🔥 e ostacoli 📦: trova il piano con la scala 🪜 e attraversa con calma. Tanti vicoli ciechi: leggi prima di muoverti.',
         righe: [
           '###########',
-          '#S..#.....#',
-          '#.#.#.B...#',
-          '#.#.X...#.#',
-          '#.#.###.#.#',
-          '#.#..A..#.#',
-          '#.########.',
-          '#.........#',
-          '#..######.#',
-          '#.#F....B.#',
-          '#.#.###...#',
-          '#.B.#.#...#',
-          '#...#...#.#',
-          '#####.###D#',
+          '#S.B......#',
+          '#.#######.#',
+          '#........A#',
+          '#.#######.#',
+          '#....X....#',
+          '#.#######.#',
+          '#...B.....#',
+          '#.#######.#',
+          '#...B.....#',
+          '#.###F###.#',
+          '#.#######.#',
           '#........E#',
           '###########'
         ],
-        max: 24
+        max: 22
       },
       {
-        titolo: 'Scenario 4 — Uscita con freccia di emergenza',
-        desc: 'Suona l\'allarme in aula. L\'ascensore ⚠️ è in fondo al corridoio: evitalo! C\'è anche del fuoco 🔥 e degli zaini 📦 sul percorso. Segui la freccia verde ⬇️ fino al punto di raccolta 🏁.',
+        titolo: 'Scenario 4 — Fumo che si propaga',
+        desc: 'L\'allarme suona e c\'è un piccolo incendio 🔥. Da ora in avanti il fumo 💨 si sposta da solo dopo qualche tua mossa: muoviti deciso, evita ascensore ⚠️ e ostacoli 📦, e usa le scale 🪜.',
+        fumo: true,
+        passiFumo: 4,
         righe: [
           '##########',
           '#S.B...A.#',
-          '#........#',
+          '#.######.#',
           '#...F.B..#',
-          '#.......D#',
-          '#######..#',
+          '###.######',
+          '#X......##',
+          '#.######.#',
           '#..B.....#',
           '#.......E#',
           '##########'
         ],
-        max: 18
+        max: 22
       },
       {
-        titolo: 'Scenario 5 — Freccia verso il punto di raccolta',
-        desc: 'Due piccoli incendi 🔥 e ostacoli 📦 nei corridoi. Trova una strada alternativa e, nell\'ultimo tratto, segui la freccia verde ➡️ che indica l\'uscita sicura.',
+        titolo: 'Scenario 5 — Doppio incendio e fumo che avanza',
+        desc: 'Due incendi 🔥 in due punti diversi: il fumo 💨 cresce in fretta. Trova la strada alternativa, evita gli ostacoli 📦 e segui la freccia verde ➡️ fino all\'uscita 🏁.',
+        fumo: true,
+        passiFumo: 4,
         righe: [
           '##########',
           '#S.B.....#',
-          '#........#',
-          '#...F.B..#',
-          '#.########',
-          '#.#...F..#',
-          '#..B.....#',
           '#.######.#',
-          '#........#',
+          '#.....F#.#',
+          '#.####.#.#',
+          '#.#X.#.#.#',
+          '#.#.######',
+          '#.#.B.F..#',
+          '#.######.#',
           '#......RE#',
           '##########'
         ],
         max: 18
       },
       {
-        titolo: 'Scenario 6 — Evacuazione completa con freccia finale',
-        desc: 'Evacuazione dall\'aula al primo piano: attraversa i corridoi, evita ascensore ⚠️, fuoco 🔥 e ostacoli 📦, segui le scale 🪜, arriva alla freccia verde ⬇️ e scendi fino al punto di raccolta 🏁.',
+        titolo: 'Scenario 6 — Evacuazione completa con fumo',
+        desc: 'Allarme generale: dall\'aula al primo piano fino al cortile. Due incendi 🔥 propagano fumo 💨, l\'ascensore ⚠️ è una trappola, segui scale 🪜 e freccia verde ⬇️. Pensa prima di muoverti.',
+        fumo: true,
+        passiFumo: 5,
         righe: [
           '############',
           '#S.B.......#',
           '#.##########',
           '#.#....A...#',
-          '#.#.########',
-          '#.#.#X..B..#',
-          '#.#.########',
+          '#.#.######.#',
+          '#.#.#X..B#.#',
+          '#.#.######D#',
           '#.#.B......#',
-          '#.####.#####',
-          '#....F.....#',
-          '#.........D#',
-          '########...#',
-          '#..B.......#',
+          '#.####F#####',
+          '#..........#',
+          '#.########.#',
+          '#.#......#.#',
+          '#.#.#####F.#',
+          '#...#......#',
+          '#####.######',
           '#.........E#',
           '############'
         ],
-        max: 28
+        max: 38
       }
     ];
 
@@ -400,9 +447,13 @@
     var mosse = 0;
     var erroriScenario = 0;
     var erroriTotali = 0;
+    var overTotali = 0;     // mosse oltre il budget cumulate (penalità leggera)
     var scenariOk = 0;
     var traccia = [];       // celle visitate (per non tornare indietro visivamente)
     var bloccato = false;
+    var passiDaFumo = 0;    // contatore mosse per propagazione fumo
+    var spreadFuoco = null; // map "r,c" -> volte che il fuoco ha propagato (cap 3)
+    var MAX_SPREAD_PER_F = 3;
 
     var intro = document.getElementById('intro');
     var game = document.getElementById('game');
@@ -413,13 +464,15 @@
     var numEl = document.getElementById('scenario-num');
     var mosseEl = document.getElementById('mosse');
     var erroriEl = document.getElementById('errori');
+    var budgetEl = document.getElementById('budget-rest');
+    var budgetPill = document.getElementById('budget-pill');
     var fbEl = document.getElementById('feedback');
     var endScen = document.getElementById('end-scenari');
     var endErr = document.getElementById('end-errori');
 
     document.getElementById('btn-start').addEventListener('click', function(){
       if (window.AudioSintetico) window.AudioSintetico.init();
-      scenarioIdx = 0; erroriTotali = 0; scenariOk = 0;
+      scenarioIdx = 0; erroriTotali = 0; overTotali = 0; scenariOk = 0;
       intro.classList.add('hide'); game.classList.remove('hide');
       caricaScenario();
     });
@@ -427,6 +480,7 @@
     document.getElementById('btn-reset').addEventListener('click', caricaScenario);
     document.getElementById('btn-rigioca').addEventListener('click', function(){
       end.classList.add('hide'); intro.classList.remove('hide');
+      scenarioIdx = 0; erroriTotali = 0; overTotali = 0; scenariOk = 0;
     });
 
     function caricaScenario(){
@@ -435,6 +489,7 @@
       descEl.textContent = s.desc;
       numEl.textContent = (scenarioIdx + 1);
       mosse = 0; erroriScenario = 0; traccia = []; bloccato = false;
+      passiDaFumo = 0; spreadFuoco = {};
       mosseEl.textContent = '0'; erroriEl.textContent = '0';
       fbEl.className = 'alert-msg hide'; fbEl.textContent = '';
       // converte righe in matrice mutabile
@@ -445,13 +500,26 @@
           if (mappa[r][c] === 'S') { playerR = r; playerC = c; }
         }
       }
+      aggiornaBudget();
       disegna();
+    }
+
+    function aggiornaBudget(){
+      var max = SCENARI[scenarioIdx].max;
+      var rest = max - mosse;
+      budgetEl.textContent = rest;
+      if (rest < 0) {
+        budgetPill.classList.add('over');
+      } else {
+        budgetPill.classList.remove('over');
+      }
     }
 
     function disegna(){
       var cols = mappa[0].length;
       mappaEl.style.setProperty('--mappa-cols', cols);
       mappaEl.innerHTML = '';
+      var playerCell = null;
       for (var r = 0; r < mappa.length; r++){
         for (var c = 0; c < mappa[r].length; c++){
           var ch = mappa[r][c];
@@ -462,11 +530,28 @@
           if (r === playerR && c === playerC){
             cell.classList.add('player');
             cell.setAttribute('aria-label', 'Posizione attuale dell\'alunno');
+            playerCell = cell;
           }
           if (traccia.some(function(t){ return t[0] === r && t[1] === c; }) && !(r === playerR && c === playerC)){
             cell.classList.add('traccia');
           }
           mappaEl.appendChild(cell);
+        }
+      }
+      // Mantieni il giocatore visibile: su mobile la mappa lunga (S6: 17 righe)
+      // puo uscire dal viewport e la barra comandi sticky copre il fondo, quindi
+      // su schermi <=768px scorriamo per centrare il giocatore. Su desktop
+      // 'nearest' evita scroll inutili quando tutto e gia visibile.
+      if (playerCell && playerCell.scrollIntoView){
+        var mobile = window.innerWidth <= 768;
+        try {
+          playerCell.scrollIntoView({
+            block: mobile ? 'center' : 'nearest',
+            inline: 'nearest',
+            behavior: 'smooth'
+          });
+        } catch (e) {
+          playerCell.scrollIntoView(false);
         }
       }
     }
@@ -478,6 +563,7 @@
         case 'E': return 'exit';
         case 'A': return 'elevator';
         case 'F': return 'fire';
+        case 'M': return 'smoke';
         case 'B': return 'obstacle';
         case 'X': return 'stair';
         case 'U': return 'arrow-up';
@@ -495,6 +581,7 @@
         case 'E': return '🏁';
         case 'A': return '⚠️';
         case 'F': return '🔥';
+        case 'M': return '💨';
         case 'B': return '📦';
         case 'X': return '🪜';
         case 'U': return '⬆️';
@@ -503,6 +590,41 @@
         case 'R': return '➡️';
         default: return '';
       }
+    }
+
+    // Propaga fumo dalle celle F: ogni fuoco prova a riempire una cella corridoio
+    // adiacente con M. Limite di MAX_SPREAD_PER_F per fuoco per scenario, per non
+    // chiudere completamente il labirinto. Restituisce true se almeno una cella
+    // si e' propagata (per feedback).
+    function propagaFumo(){
+      var righe = mappa.length;
+      var cols = mappa[0].length;
+      var nuove = [];
+      for (var r = 0; r < righe; r++){
+        for (var c = 0; c < cols; c++){
+          if (mappa[r][c] !== 'F') continue;
+          var key = r + ',' + c;
+          var n = spreadFuoco[key] || 0;
+          if (n >= MAX_SPREAD_PER_F) continue;
+          // candidate adiacenti (su, giu, sx, dx) che siano corridoi puri
+          var cand = [];
+          var ddir = [[-1,0],[1,0],[0,-1],[0,1]];
+          for (var i = 0; i < ddir.length; i++){
+            var nr = r + ddir[i][0], nc = c + ddir[i][1];
+            if (nr <= 0 || nr >= righe - 1 || nc <= 0 || nc >= cols - 1) continue;
+            if (mappa[nr][nc] !== '.') continue;
+            // non bloccare il giocatore stesso (lasciamo via di fuga immediata)
+            if (nr === playerR && nc === playerC) continue;
+            cand.push([nr, nc]);
+          }
+          if (cand.length === 0) continue;
+          var pick = cand[Math.floor(Math.random() * cand.length)];
+          mappa[pick[0]][pick[1]] = 'M';
+          spreadFuoco[key] = n + 1;
+          nuove.push(pick);
+        }
+      }
+      return nuove.length > 0;
     }
 
     function muovi(dir){
@@ -537,6 +659,13 @@
         erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
         mostraMessaggio('🔥 Attenzione: fuoco! Non attraversare fiamme e fumo. Cerca una strada alternativa.', 'danger');
         if (window.AudioSintetico) window.AudioSintetico.tono(160, 0.25);
+        return;
+      }
+      // fumo (propagato dal fuoco)
+      if (target === 'M') {
+        erroriScenario++; erroriTotali++; erroriEl.textContent = erroriScenario;
+        mostraMessaggio('💨 Il fumo è arrivato qui: non lo attraversare. Cerca subito un\'altra strada.', 'danger');
+        if (window.AudioSintetico) window.AudioSintetico.tono(170, 0.22);
         return;
       }
       // ostacolo (zaino, banco rovesciato)
@@ -574,16 +703,35 @@
       traccia.push([playerR, playerC]);
       playerR = nr; playerC = nc;
       mosse++; mosseEl.textContent = mosse;
+      aggiornaBudget();
       nascondiMessaggio();
       if (window.AudioSintetico) window.AudioSintetico.tono(380, 0.04);
+
+      // propagazione fumo (solo scenari con fumo:true)
+      var sc = SCENARI[scenarioIdx];
+      if (sc.fumo && target !== 'E') {
+        passiDaFumo++;
+        if (passiDaFumo >= (sc.passiFumo || 4)) {
+          passiDaFumo = 0;
+          var spread = propagaFumo();
+          if (spread) {
+            mostraMessaggio('💨 Il fumo si sta diffondendo dai fuochi: muoviti con attenzione.', 'warning');
+            if (window.AudioSintetico) window.AudioSintetico.tono(140, 0.18);
+          }
+        }
+      }
 
       // arrivo a destinazione
       if (target === 'E') {
         disegna();
         bloccato = true;
         scenariOk++;
-        var penalita = Math.min(erroriScenario, SCENARI[scenarioIdx].max - 1);
-        mostraMessaggio('🏁 Punto di raccolta raggiunto! Mosse: ' + mosse + ' · Errori: ' + erroriScenario + '.', 'ok');
+        var over = Math.max(0, mosse - sc.max);
+        if (over > 0) overTotali += over;
+        var msg = '🏁 Punto di raccolta raggiunto! Mosse: ' + mosse + ' · Errori: ' + erroriScenario;
+        if (over > 0) msg += ' · Oltre il budget: +' + over + ' mosse';
+        msg += '.';
+        mostraMessaggio(msg, 'ok');
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         setTimeout(function(){
           scenarioIdx++;
@@ -592,7 +740,7 @@
           } else {
             fineGioco();
           }
-        }, 2200);
+        }, 2400);
         return;
       }
 
@@ -604,10 +752,11 @@
       end.classList.remove('hide');
       endScen.textContent = scenariOk;
       endErr.textContent = erroriTotali;
-      // punteggio: max 10 per scenario, -1 per errore (min 0)
-      var punti = 0, max = SCENARI.length * 10;
-      for (var i = 0; i < SCENARI.length; i++) punti += 10;
-      punti = Math.max(0, punti - erroriTotali);
+      // punteggio: max 10 per scenario, -1 per errore, -0.5 per ogni mossa oltre
+      // budget (arrotondata per difetto). Min 0.
+      var max = SCENARI.length * 10;
+      var punti = max - erroriTotali - Math.floor(overTotali / 2);
+      punti = Math.max(0, punti);
       // Form attestato gestito da /giochi/assets/js/attestato-inclusivo.js
       // (box verde "Hai partecipato!" senza soglia di punteggio).
       if (window.GiochiPC) window.GiochiPC.salvaRisultato('labirinto-evacuazione', punti, max);
