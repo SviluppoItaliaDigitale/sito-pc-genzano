@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
   <link rel="stylesheet" href="/giochi/assets/css/coach.css">
+  <link rel="stylesheet" href="/giochi/assets/css/tts-bambini.css">
   <style>
     .scenario-card {
       background: linear-gradient(135deg, #fff8d6, #ffe4b5);
@@ -80,6 +81,9 @@
         <div class="emo-grande" id="scen-emo">🔥</div>
         <div class="titolo" id="scen-titolo">Vedi del fuoco!</div>
         <div class="desc" id="scen-desc">Cosa fai?</div>
+        <div class="tts-bambini-wrap">
+          <button type="button" class="tts-bambini-btn" data-tts-target="#scen-titolo" aria-label="Ascolta la storia">Ascolta</button>
+        </div>
         <button id="scen-go" class="inf-big-btn" style="background:var(--inf-blu);">
           <i class="bi bi-telephone-fill"></i> Chiamo il 112
         </button>
@@ -273,6 +277,7 @@
     mostraScenario();
   })();
   </script>
+  <script src="/giochi/assets/js/tts-bambini.js" defer></script>
   <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
   <link rel="stylesheet" href="/giochi/assets/css/coach.css">
+  <link rel="stylesheet" href="/giochi/assets/css/tts-bambini.css">
   <style>
     .scena-wrap {
       max-width: 560px; margin: 0 auto;
@@ -86,6 +87,9 @@
         <span class="bollino">6</span>
       </div>
       <div class="scena-label" id="scena-label">🏠 In cucina</div>
+      <div class="tts-bambini-wrap">
+        <button type="button" class="tts-bambini-btn" data-tts="Dove ti ripari Tina? Tocca il posto sicuro nella scena." aria-label="Ascolta la domanda">Ascolta</button>
+      </div>
 
       <div class="scena-wrap">
         <div id="scena-container" aria-label="Scena interattiva"></div>
@@ -463,6 +467,7 @@
     mostraScena();
   })();
   </script>
+  <script src="/giochi/assets/js/tts-bambini.js" defer></script>
   <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

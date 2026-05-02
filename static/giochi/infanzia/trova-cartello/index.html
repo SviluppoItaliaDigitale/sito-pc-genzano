@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
   <link rel="stylesheet" href="/giochi/assets/css/coach.css">
+  <link rel="stylesheet" href="/giochi/assets/css/tts-bambini.css">
   <style>
     .level-badge {
       display: inline-block; background: var(--inf-blu); color: #fff;
@@ -74,6 +75,35 @@
     .cartello-btn.sfondo-blu     { background: #cfe2ff; border-color: #0d6efd; }
     .cartello-btn.sfondo-verde   { background: #d1e7dd; border-color: #198754; }
     .cartello-btn.sfondo-uscita  { background: #d1e7dd; border-color: #0f5132; }
+
+    /* Overlay divieto: cerchio rosso barrato sopra l'icona, per i cartelli
+       "vietato X" che usano icone ARASAAC senza simbolo di divieto incluso
+       (es. ascensore, cibo). Bambino vede subito che e' un divieto. */
+    .cartello-btn.divieto-overlay { position: relative; }
+    .cartello-btn.divieto-overlay::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 75%; height: 75%;
+      transform: translate(-50%, -50%);
+      border: 8px solid #dc3545;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 2;
+      box-sizing: border-box;
+    }
+    .cartello-btn.divieto-overlay::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 12.5%;
+      width: 75%; height: 8px;
+      background: #dc3545;
+      transform: translateY(-50%) rotate(-45deg);
+      transform-origin: center;
+      pointer-events: none;
+      z-index: 2;
+      border-radius: 2px;
+    }
     .cartello-btn.sfondo-vvf     { background: #f8d7da; border-color: #dc3545; }
     .cartello-btn.correct { animation: inf-pulse-green .6s ease; box-shadow: 0 0 0 6px #198754; }
     .cartello-btn.wrong   { animation: inf-shake .4s ease; box-shadow: 0 0 0 6px #dc3545; }
@@ -109,6 +139,9 @@
       <div class="tina-fumetto" id="tina-fumetto" aria-live="polite">
         <span aria-hidden="true">🐢</span>
         <span id="domanda">Tina sta pensando…</span>
+      </div>
+      <div class="tts-bambini-wrap">
+        <button type="button" class="tts-bambini-btn" data-tts-target="#domanda" aria-label="Ascolta la domanda">Ascolta</button>
       </div>
       <div class="cartelli" id="cartelli" role="group" aria-label="Quattro cartelli: tocca quello giusto"></div>
       <div id="feedback" class="text-center mt-3 h5" aria-live="polite" style="min-height: 1.5em"></div>
@@ -163,9 +196,14 @@
                    perche: 'I cartelli rotondi rossi sono divieti: qui non si può fumare perché può prendere fuoco.' },
       entrare:   { img: ISO  + 'vietato-pedoni.svg',          sfondo: 'sfondo-rosso',  nome: 'vietato entrare',
                    perche: 'Il rosso col taglio significa "non fare": qui non puoi entrare perché è pericoloso.' },
-      ascensore: { img: ARAS + 'ascensore.png',               sfondo: 'sfondo-rosso',  nome: 'vietato usare l\'ascensore',
+      // Le icone ARASAAC mostrano l'oggetto SENZA il simbolo di divieto.
+      // Per i cartelli "vietato X" che usano queste icone serve l'overlay
+      // CSS (cerchio rosso barrato) altrimenti il bambino vede solo "ascensore"
+      // o "cibo" e non capisce che e' un divieto. overlay: 'divieto' attiva
+      // .divieto-overlay che disegna il cerchio + sbarra via ::before/::after.
+      ascensore: { img: ARAS + 'ascensore.png',               sfondo: 'sfondo-rosso',  nome: 'vietato usare l\'ascensore', overlay: 'divieto',
                    perche: 'Durante un\'emergenza l\'ascensore può bloccarsi: usa sempre le scale.' },
-      mangiare:  { img: ARAS + 'cibo.png',                    sfondo: 'sfondo-rosso',  nome: 'vietato mangiare e bere',
+      mangiare:  { img: ARAS + 'cibo.png',                    sfondo: 'sfondo-rosso',  nome: 'vietato mangiare e bere', overlay: 'divieto',
                    perche: 'In alcuni posti (laboratori, sale operative) non si mangia e non si beve per sicurezza.' },
       casco:     { img: ISO  + 'casco-protettivo.svg',        sfondo: 'sfondo-blu',    nome: 'mettere il casco',
                    perche: 'I cartelli blu rotondi sono obblighi: qui devi mettere il casco per proteggere la testa.' },
@@ -282,6 +320,10 @@
         var btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'cartello-btn ' + c.sfondo;
+        // Se il cartello e' "vietato X" e l'icona non ha gia' il simbolo
+        // di divieto (es. ARASAAC ascensore/cibo), aggiungo classe overlay
+        // che disegna cerchio rosso barrato via CSS sopra l'icona.
+        if (c.overlay === 'divieto') btn.classList.add('divieto-overlay');
         btn.setAttribute('aria-label', 'Cartello ' + c.nome);
         var img = document.createElement('img');
         img.src = c.img;
@@ -359,6 +401,7 @@
     start();
   })();
   </script>
+  <script src="/giochi/assets/js/tts-bambini.js" defer></script>
   <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

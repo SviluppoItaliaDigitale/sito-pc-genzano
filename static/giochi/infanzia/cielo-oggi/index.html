@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
   <link rel="stylesheet" href="/giochi/assets/css/coach.css">
+  <link rel="stylesheet" href="/giochi/assets/css/tts-bambini.css">
   <style>
     .meteo-box {
       background: linear-gradient(180deg, #cfe9ff 0%, #e8f4ff 100%);
@@ -132,6 +133,9 @@
       <div class="meteo-box">
         <div id="meteo-svg" aria-live="polite"></div>
         <div id="meteo-nome" class="text-center h4 mt-2" style="color:var(--inf-testo);">...</div>
+      </div>
+      <div class="tts-bambini-wrap">
+        <button type="button" class="tts-bambini-btn" data-tts-target="#meteo-nome" aria-label="Ascolta che meteo c'e'">Ascolta</button>
       </div>
 
       <div class="bandiere-grid" role="group" aria-label="Bandiere di allerta">
@@ -451,6 +455,7 @@
     avviaRound();
   })();
   </script>
+  <script src="/giochi/assets/js/tts-bambini.js" defer></script>
   <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

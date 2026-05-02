@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
   <link rel="stylesheet" href="/giochi/assets/css/coach.css">
+  <link rel="stylesheet" href="/giochi/assets/css/tts-bambini.css">
   <style>
     .zaino-wrap { display:flex; justify-content:center; margin-bottom: 1rem; }
     .zaino-wrap svg { max-width: 200px; height:auto; }
@@ -132,6 +133,9 @@
       </div>
 
       <div id="round-label" class="text-center h5 mb-3" aria-live="polite">Tocca la cosa giusta!</div>
+      <div class="tts-bambini-wrap">
+        <button type="button" class="tts-bambini-btn" data-tts-target="#round-label" aria-label="Ascolta la domanda">Ascolta</button>
+      </div>
 
       <div class="oggetti-grid" id="grid" role="group" aria-label="Oggetti da scegliere"></div>
 
@@ -326,6 +330,7 @@
     avviaLivello();
   })();
   </script>
+  <script src="/giochi/assets/js/tts-bambini.js" defer></script>
   <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>

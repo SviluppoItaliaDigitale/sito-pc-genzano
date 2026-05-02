@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
   <link rel="stylesheet" href="/giochi/assets/css/coach.css">
+  <link rel="stylesheet" href="/giochi/assets/css/tts-bambini.css">
   <style>
     .tina-fumetto {
       background: #fff; border: 3px solid var(--inf-blu, #003366);
@@ -93,6 +94,9 @@
       <div id="game-screen" class="hide">
         <div class="progress-dots" id="progress" aria-label="Avanzamento gioco"></div>
         <div class="tina-fumetto" id="prompt">Tocca la cosa pericolosa!</div>
+        <div class="tts-bambini-wrap">
+          <button type="button" class="tts-bambini-btn" data-tts-target="#prompt" aria-label="Ascolta la domanda">Ascolta</button>
+        </div>
         <div class="scena-griglia" id="scena" role="group" aria-label="4 oggetti, tocca quello pericoloso"></div>
         <div id="perche" class="tina-perche hide" aria-live="polite"></div>
       </div>
@@ -361,6 +365,7 @@
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/attestato-inclusivo.js"></script>
 
+  <script src="/giochi/assets/js/tts-bambini.js" defer></script>
   <script src="/giochi/assets/js/coach.js" defer></script>
 </body>
 </html>
