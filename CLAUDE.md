@@ -36,6 +36,25 @@ Specifiche complete e esempi in `.claude/rules/07-proattivita-coerenza.md` sezio
 
 ---
 
+## "Pubblica" significa portare in produzione, non aprire una PR
+
+Quando l'utente dice **«pubblica»**, **«mandala live»**, **«metti su»**, **«pubblica le modifiche»**, **«pubblicalo»** (e varianti italiane equivalenti) **devi portare le modifiche fino al sito live** senza chiedere conferme intermedie:
+
+1. `git add` + `git commit` (se serve) sul branch di lavoro
+2. `git push` sul branch
+3. Apri PR verso `main` (titolo + body completo)
+4. **`merge` della PR su `main`** (squash, default)
+5. Verifica che `deploy.yml` sia partito (Actions tab)
+6. Comunica all'utente l'URL della PR mergiata e l'ETA del deploy (~2-3 minuti)
+
+**Non interpretare "pubblica" come "apri PR e aspetta"**: il sito ha un solo branch di produzione (`main`) e l'utente gestisce la redazione da solo, non c'è un revisore intermedio. Se l'utente avesse voluto solo una PR aperta avrebbe detto "fai una PR" o "apri una PR".
+
+L'unica eccezione: se la build è chiaramente rotta (errori di sintassi rilevati, file corrotto evidente) **fermati prima del merge** e segnala. Ma se hai validato (Hugo build pulito, JS check OK, rules rispettate) procedi diritto fino al merge.
+
+Esiste perché il 2 maggio 2026, dopo il fix del labirinto, l'agent si è fermato alla creazione della PR aspettando ulteriore conferma — l'utente ha chiarito: «quando ti dico di pubblicare, devi fare in modo e maniera di pubblicare!». Niente conferme bonus.
+
+---
+
 ## Regole di dettaglio (file separati)
 
 @.claude/rules/01-governance-pa.md
