@@ -189,16 +189,19 @@
     'caccia-al-rischio': {
       fascia: 'primaria',
       titolo: 'Consigli per la Caccia al Rischio',
-      regola: 'Trova i pericoli nascosti in casa o a scuola: prevenire serve.',
+      regola: 'Pericoli quotidiani che durante un\'emergenza diventano grandi: trovali e impara cosa fare.',
       come: [
-        'Guarda bene tutta la stanza, non solo il centro.',
-        'Cerca: prese rotte, oggetti pesanti in alto, fili scoperti, fuochi accesi.',
-        'Una stufa accesa vicino alle tende è un rischio incendio.',
-        'Una scaffalatura non fissata cade durante un terremoto.'
+        'Guarda bene tutta la scena, non solo il centro.',
+        'Clicca sul pericolo: leggi la spiegazione "perche conta per la PC".',
+        'Spigoli, tappeti e mobili instabili in casa = problema durante un terremoto.',
+        'Fornelli e candele accese = rischio incendio se va via la luce.',
+        'Finestre aperte = pericolo con vento forte o temporali.'
       ],
       teoria: [
         { titolo: 'Rischio sismico', url: '/rischi-prevenzione/rischio-sismico/' },
-        { titolo: 'Rischio incendio', url: '/rischi-prevenzione/rischio-incendio/' }
+        { titolo: 'Rischio incendio', url: '/rischi-prevenzione/rischio-incendio/' },
+        { titolo: 'Temporali intensi', url: '/rischi-prevenzione/temporali-intensi/' },
+        { titolo: 'Vento forte', url: '/rischi-prevenzione/vento-forte/' }
       ]
     },
     'chiamata-112': {
