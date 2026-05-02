@@ -2,7 +2,7 @@
 title: "Dichiarazione di Accessibilità"
 description: "Dichiarazione di accessibilità del sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
-dataUltimaRevisione: "2026-04-26"
+dataUltimaRevisione: "2026-05-02"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
@@ -40,6 +40,62 @@ Le scelte vengono **ricordate sul tuo dispositivo** (tramite `localStorage`): ch
 Il pannello stesso è interamente accessibile da tastiera: si apre con `Invio`, si naviga con `Tab`, si chiude con `Esc` o cliccando fuori. Tutti i comandi hanno descrizioni per gli screen reader.
 
 > **Nota importante.** Questi strumenti sono un **aiuto in più** sopra a un sito **progettato secondo i principi delle Linee guida AGID sull'accessibilità e delle WCAG 2.2 livello AA**. Sono in corso verifiche periodiche per migliorare continuamente l'esperienza di utilizzo. Questi strumenti non sostituiscono gli strumenti di accessibilità del tuo sistema operativo o del tuo browser, che restano la soluzione più potente e completa: vedi la sezione successiva.
+
+## Lettura ad alta voce, glossario e supporti cognitivi
+
+In cima a quasi tutte le pagine del sito trovi un piccolo gruppo di strumenti pensati per **anziani, persone dislessiche, parlanti italiano come seconda lingua, bambini in lettura lenta, persone in stress da emergenza**.
+
+### Bottone "Leggi ad alta voce"
+
+Premendo il bottone, il sito legge ad alta voce il contenuto della pagina con la **voce italiana installata sul tuo dispositivo**. È completamente **gratuito** e **non invia nulla a server esterni**: tutto avviene nel browser, sfruttando la **Web Speech API** prevista dagli standard W3C.
+
+Accanto al bottone trovi tre comandi:
+
+- **Velocità di lettura**: scegli fra **Lento** (per anziani, bambini, italiano L2), **Normale** (default) o **Veloce** (per chi conosce già il testo). La scelta resta memorizzata sul tuo dispositivo per le pagine successive.
+- **Segui parole**: quando attivo, la parola attualmente pronunciata si **evidenzia in giallo** mentre la voce legge. Aiuta chi si distrae o ha difficoltà di lettura: gli occhi seguono l'orecchio. Default disattivato (alcuni utenti lo trovano "rumoroso" su pagine lunghe).
+
+### Glossario inline: termini sottolineati con definizione
+
+Alla **prima occorrenza** in ogni pagina, le sigle e i termini specialistici di Protezione Civile (DPC, COC, AeDES, IT-alert, NUE, CFR, magnitudo, ipocentro…) sono **sottolineati con tratteggio blu** e affiancati da una piccola icona ⓘ. Toccando o cliccando il termine si apre un riquadro con la definizione breve in italiano semplice e un link al [glossario completo](/glossario/).
+
+### Tempo di lettura stimato
+
+Sopra ogni articolo trovi un'etichetta del tipo *"Lettura: ~3 minuti"*. Calcolata automaticamente, riduce l'ansia da "muro di testo": sai subito quanto tempo ti serve.
+
+### Sillabazione automatica
+
+Il sito usa la sillabazione automatica del browser (`hyphens: auto`) con regole italiane: le parole lunghe vengono spezzate in modo elegante a fine riga, migliorando il ritmo di lettura per chi ha dislessia o legge italiano come seconda lingua.
+
+## Browser e privacy: dove la lettura ad alta voce può non funzionare
+
+La sintesi vocale del sito sfrutta la **Web Speech API** del tuo browser, che a sua volta usa le voci installate sul tuo sistema operativo. Funziona **bene su tutti i browser principali**:
+
+- ✅ **Google Chrome** (desktop, Android)
+- ✅ **Mozilla Firefox** (desktop, Android)
+- ✅ **Apple Safari** (macOS, iPad, iPhone)
+- ✅ **Microsoft Edge** (desktop)
+- ✅ **Samsung Internet, Opera, Vivaldi** e altri browser standard
+
+In alcuni browser **orientati alla privacy** la lettura vocale è invece **disattivata di proposito**, per impedire a chi gestisce un sito di "riconoscere" un visitatore unico tramite la lista delle voci installate sul suo computer (è una tecnica di tracciamento chiamata *fingerprinting*). Questo riguarda in particolare:
+
+- ❌ **Tor Browser** — disattivata sempre, in tutte le versioni
+- ❌ **LibreWolf** — disattivata di default (configurabile dall'utente)
+- ❌ **Brave** con scudo (*Shields*) impostato al massimo livello di privacy
+- ❌ Modalità di navigazione anti-fingerprinting di alcuni browser sperimentali
+
+Se usi uno di questi browser, **al posto del bottone vedrai un avviso** che spiega la causa: **non è un difetto del nostro sito, è una scelta del tuo browser per proteggere il tuo anonimato.** Per usare la lettura vocale puoi semplicemente aprire la stessa pagina con un browser diverso (Chrome, Firefox, Safari, Edge), oppure rivolgerti agli strumenti di sistema descritti più sotto.
+
+### Funzione "Segui parole" — bug noto su Safari iOS (iPhone, iPad)
+
+Su **Safari per iPhone e iPad** il sistema operativo ha un **bug noto e documentato**: l'evento `onboundary` della Web Speech API, che permette al sito di sapere quale parola la voce sta pronunciando, **non viene sparato in modo affidabile**. Il problema è di Apple, non del nostro sito.
+
+Conseguenza pratica:
+
+- La lettura ad alta voce **funziona regolarmente** anche su iPhone e iPad
+- Ma se attivi il toggle **"Segui parole"** su Safari iOS, l'evidenziazione gialla potrebbe **non comparire** o partire e fermarsi a metà frase
+- Il nostro sito gestisce questa situazione automaticamente: se entro 2,5 secondi non riceve gli eventi attesi, **disattiva l'evidenziazione e continua la lettura normalmente**, senza errore visibile
+
+Se desideri usare anche l'evidenziazione delle parole, ti consigliamo di usare **Chrome, Firefox o Edge su iPhone/iPad**, oppure Safari su Mac (dove il bug non si presenta). Quando Apple correggerà il problema, la funzione tornerà attiva anche su Safari iOS senza modifiche da parte nostra.
 
 ## Strumenti di sistema (browser e sistema operativo)
 

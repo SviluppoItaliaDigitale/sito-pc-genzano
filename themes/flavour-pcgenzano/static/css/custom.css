@@ -3102,6 +3102,52 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
 }
 
 /* ============================================================
+   TTS FALLBACK — messaggio "lettura vocale non disponibile" (v1.0)
+   Visualizzato quando il browser implementa speechSynthesis come
+   stub (Tor Browser, LibreWolf, Brave con scudo massimo) e
+   getVoices() resta vuoto. NON è un bug del sito: è una scelta
+   di privacy del browser che impedisce il fingerprinting.
+   ============================================================ */
+.tts-wrapper.tts-unavailable {
+  text-align: left;
+}
+.tts-fallback-msg {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  background: #f4f7fb;
+  border: 1px solid #b3c6dd;
+  border-left: 4px solid #003366;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+.tts-fallback-msg i {
+  color: #003366;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.tts-fallback-msg strong {
+  color: #003366;
+}
+@media print {
+  .tts-fallback-msg { display: none !important; }
+}
+html.a11y-contrast-invert .tts-fallback-msg {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #ffd700;
+  border-left-color: #ffd700;
+}
+html.a11y-contrast-invert .tts-fallback-msg i,
+html.a11y-contrast-invert .tts-fallback-msg strong {
+  color: #ffd700;
+}
+
+/* ============================================================
    TTS WORD HIGHLIGHT — evidenziazione parola in lettura (v1.0)
    <mark class="tts-word-mark"> avvolge la parola corrente quando
    il toggle "Segui parole" è attivo. L'elemento è temporaneo e

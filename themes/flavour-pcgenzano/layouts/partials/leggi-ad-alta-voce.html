@@ -72,6 +72,66 @@
   var RATE_KEY = 'pcgenzano-tts-rate';
   var FOLLOW_KEY = 'pcgenzano-tts-follow';
 
+  /*
+   * Detection "Tor Browser e simili": alcuni browser privacy-first
+   * (Tor, LibreWolf, Brave shield massimo) implementano speechSynthesis
+   * solo come stub — getVoices() ritorna [] e speak() non produce audio.
+   * È una scelta intenzionale per impedire fingerprinting (la lista delle
+   * voci installate sul SO è una superficie identificativa).
+   *
+   * Strategia: al load, attendi voiceschanged o un timeout di 1.8s.
+   * Se ancora getVoices() è vuoto, sostituisci la UI con un avviso
+   * elegante in italiano AGID che spiega la causa (privacy del browser),
+   * non un bug del sito.
+   */
+  function showTtsUnavailable() {
+    document.querySelectorAll('.tts-wrapper').forEach(function(w){
+      // Mantieni il wrapper per evitare reflow violenti, sostituisci il contenuto
+      w.classList.add('tts-unavailable');
+      w.innerHTML = '<div class="tts-fallback-msg" role="note">' +
+        '<i class="bi bi-info-circle me-2" aria-hidden="true"></i>' +
+        '<span><strong>Lettura vocale non disponibile in questo browser.</strong> ' +
+        'Alcuni browser orientati alla privacy (Tor Browser, LibreWolf, Brave con scudo massimo) ' +
+        'disattivano la sintesi vocale per impedire il riconoscimento del visitatore. ' +
+        'La funzione resta attiva su Chrome, Firefox, Safari ed Edge.</span>' +
+        '</div>';
+    });
+  }
+
+  var voicesReady = false;
+  function checkVoicesAvailability() {
+    if (voicesReady) return;
+    if (synth.getVoices().length > 0) {
+      voicesReady = true;
+      return;
+    }
+    // Voci ancora vuote: aspetta voiceschanged o timeout
+    var resolved = false;
+    var onVoicesChanged = function(){
+      if (resolved) return;
+      resolved = true;
+      synth.removeEventListener('voiceschanged', onVoicesChanged);
+      if (synth.getVoices().length > 0) {
+        voicesReady = true;
+      } else {
+        showTtsUnavailable();
+      }
+    };
+    synth.addEventListener('voiceschanged', onVoicesChanged);
+    setTimeout(function(){
+      if (resolved) return;
+      resolved = true;
+      synth.removeEventListener('voiceschanged', onVoicesChanged);
+      if (synth.getVoices().length > 0) {
+        voicesReady = true;
+      } else {
+        showTtsUnavailable();
+      }
+    }, 1800);
+  }
+  // Avvia la detection asincrona
+  checkVoicesAvailability();
+
   function getSavedRate() {
     try {
       var v = parseFloat(localStorage.getItem(RATE_KEY) || '');
