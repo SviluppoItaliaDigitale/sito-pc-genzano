@@ -11,7 +11,7 @@
      [data-fine].
    - Nessun bottone "Ho finito" fluttuante durante il gioco: il riquadro
      compare solo quando si entra nella schermata fine, condizione
-     semantica corretta. Tutti i 53 giochi del sito hanno una schermata
+     semantica corretta. Tutti i giochi del sito hanno una schermata
      fine fra i selettori monitorati (verificato).
    - Riusa AttestatoPC.genera/stampa (script: attestato.js) per produrre
      il file SVG istituzionale identico agli altri giochi.
@@ -210,7 +210,7 @@
     // appariva dopo 20s anche se il gioco era ancora in corso.
     // L'attestato compare ora SOLO quando il MutationObserver rileva
     // che e' diventata visibile una schermata di fine: e' la condizione
-    // semantica giusta. Tutti i 53 giochi del sito (verificati) hanno
+    // semantica giusta. Tutti i giochi del sito (verificati) hanno
     // una schermata fine fra i selettori monitorati.
   }
 

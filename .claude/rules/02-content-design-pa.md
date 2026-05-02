@@ -101,7 +101,7 @@ Le foto fornite dall'utente **non vanno mai nel banner/copertina** del sito (cam
 
 ## Regola pittogrammi — supporto comprensione (bambini, anziani, L2)
 
-Il sito ha una libreria di **171 pittogrammi standardizzati** (46 ISO 7010 + 125 ARASAAC) in `static/pittogrammi/` per supportare la comprensione del testo a bambini, anziani, persone con disabilità cognitive e parlanti italiano L2 (regola di accessibilità cognitiva).
+Il sito ha una libreria di **Pittogrammi standardizzati** (46 ISO 7010 + 125 ARASAAC) in `static/pittogrammi/` per supportare la comprensione del testo a bambini, anziani, persone con disabilità cognitive e parlanti italiano L2 (regola di accessibilità cognitiva).
 
 Si usano con lo shortcode `pittogramma`:
 
@@ -253,7 +253,7 @@ Il template `themes/flavour-pcgenzano/layouts/_default/single.html` mostra quest
 
 ## Coerenza kit didattici ↔ schede stampabili
 
-I 4 kit didattici per le scuole (`content/formazione/kit-scuola-{infanzia,primaria,secondaria-primo-grado,secondaria-secondo-grado}.md`) devono **tutti** rimandare alle schede stampabili della loro fascia in `static/formazione/schede-stampabili/`. La regola è simmetrica: ogni scheda fisica deve essere linkata almeno una volta dal kit del proprio livello.
+I kit didattici per le scuole (`content/formazione/kit-scuola-{infanzia,primaria,secondaria-primo-grado,secondaria-secondo-grado}.md`) devono **tutti** rimandare alle schede stampabili della loro fascia in `static/formazione/schede-stampabili/`. La regola è simmetrica: ogni scheda fisica deve essere linkata almeno una volta dal kit del proprio livello.
 
 **Convenzione di naming delle schede stampabili:**
 

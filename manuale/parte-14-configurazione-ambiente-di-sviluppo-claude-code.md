@@ -57,7 +57,7 @@ Le impostazioni della sandbox per questo repo sono in `.claude/settings.local.js
 }
 ```
 
-**Due sezioni distinte, entrambe necessarie:**
+**Sezioni distinte, entrambe necessarie:**
 
 - `permissions.allow` autorizza i tool (`WebFetch`, `Bash curl`) a essere chiamati senza chiederti il permesso ogni volta.
 - `sandbox.network.allowedDomains` sblocca a livello di rete le connessioni verso quei domini.
@@ -199,7 +199,7 @@ Se hai già committato un articolo con marker e vuoi forzare l'esecuzione del wo
 caption="Foto: USGS — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:...)."
 ```
 
-**Quando aggiungere una seconda/terza foto a un articolo esistente**: criterio operativo — un articolo merita foto multiple se (a) ha **almeno 5 sezioni H2**, (b) racconta **eventi storici specifici** (anniversari, memoria, ricostruzioni, sequenze sismiche), (c) le foto trovate hanno **valore narrativo** (luoghi, persone, mappe, satellite — non bandiere o stemmi). Non aggiungere foto a articoli di servizio quotidiano (preparazione casa, salute mentale, ecc.) o a articoli dottrinali (colonne mobili, normativa). Vale la regola del progetto: "non elemosinare le immagini, ma senza esagerare".
+**Quando aggiungere una seconda/terza foto a un articolo esistente**: criterio operativo — un articolo merita foto multiple se (a) ha **almeno sezioni H2**, (b) racconta **eventi storici specifici** (anniversari, memoria, ricostruzioni, sequenze sismiche), (c) le foto trovate hanno **valore narrativo** (luoghi, persone, mappe, satellite — non bandiere o stemmi). Non aggiungere foto a articoli di servizio quotidiano (preparazione casa, salute mentale, ecc.) o a articoli dottrinali (colonne mobili, normativa). Vale la regola del progetto: "non elemosinare le immagini, ma senza esagerare".
 
 ---
 
@@ -365,9 +365,7 @@ Breve inquadramento storico o normativo.
 
 ---
 
-## Punto principale 1
-
-Paragrafo esplicativo. Frasi brevi, concetti chiari.
+## Punto principale Paragrafo esplicativo. Frasi brevi, concetti chiari.
 
 ## Punto principale 2
 

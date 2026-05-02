@@ -37,7 +37,7 @@ Il Gruppo ha sviluppato kit didattici completi per ogni grado di istruzione, con
 
 > 🧭 **Non sai da dove cominciare?** [Scuole: da dove cominciare — il cruscotto per ogni ruolo](/formazione/scuole-da-dove-cominciare/) — scegli il tuo ruolo (DS, infanzia, primaria, sec I, sec II, sostegno, genitore) e arrivi in due click ai materiali giusti.
 
-> 🚀 **Per i docenti con poco tempo**: i [Percorsi didattici pronti](/formazione/percorsi-didattici/) riorganizzano i materiali in **sei pacchetti** già strutturati (PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO) con destinatari, durata, obiettivi e modalità di valutazione. La [pagina docenti dedicata all'Educazione Civica](/formazione/educazione-civica/) mappa l'intero patrimonio del Gruppo sui 3 Nuclei Concettuali del D.M. 183/2024.
+> 🚀 **Per i docenti con poco tempo**: i [Percorsi didattici pronti](/formazione/percorsi-didattici/) riorganizzano i materiali in **Pacchetti** già strutturati (PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO) con destinatari, durata, obiettivi e modalità di valutazione. La [pagina docenti dedicata all'Educazione Civica](/formazione/educazione-civica/) mappa l'intero patrimonio del Gruppo sui 3 Nuclei Concettuali del D.M. 183/2024.
 
 > 🏛️ **Per Dirigenti, DSGA, RSPP**: la [pagina dedicata Dirigenti e RSPP](/formazione/dirigenti-e-rspp/) chiarisce ruoli, limiti, responsabilità del Gruppo vs scuola, coordinamento col piano di emergenza, gestione PCTO. I [fac-simile editabili — Pacchetti A e B](/formazione/scuole-strumenti/) (modulo richiesta, liberatoria GDPR, circolare, attestato + convenzione PCTO, progetto formativo, registro+valutazione+certificazione) sono pronti all'uso. Per il quadro normativo unico: [Quadro normativo scuola](/formazione/quadro-normativo-scuola/).
 
@@ -50,7 +50,7 @@ Il Gruppo ha sviluppato kit didattici completi per ogni grado di istruzione, con
 
 ### Abili a proteggere
 
-Il Gruppo ha sviluppato **32 [attività educative accessibili](/abili-a-proteggere/)** per persone con difficoltà cognitive o motorie, anziani e bambini fragili, **prendendo ispirazione dal programma nazionale [Abili a proteggere](https://www.abiliaproteggere.net/)** promosso dal Dipartimento della Protezione Civile. Le attività sono un'iniziativa autonoma del nostro Gruppo Comunale e non costituiscono una sezione ufficiale del programma nazionale. Hanno pulsanti grandi, testi semplici, nessun limite di tempo e possono essere svolte con l'aiuto di un familiare o un operatore. I temi spaziano dalla chiamata al 112 all'evacuazione, dal punto sicuro durante un terremoto al riconoscimento delle proprie emozioni, fino alla rete dei vicini di casa, includendo i 12 nuovi scenari su terremoto, alluvione, blackout, ascensore vietato, ondate climatiche, fischietto SOS, indirizzo veloce, riconoscimento divise, punto di ritrovo familiare, animali domestici, lettura del cielo e orientamento di base.
+Il Gruppo ha sviluppato una raccolta di **[attività educative accessibili](/abili-a-proteggere/)** per persone con difficoltà cognitive o motorie, anziani e bambini fragili, **prendendo ispirazione dal programma nazionale [Abili a proteggere](https://www.abiliaproteggere.net/)** promosso dal Dipartimento della Protezione Civile. Le attività sono un'iniziativa autonoma del nostro Gruppo Comunale e non costituiscono una sezione ufficiale del programma nazionale. Hanno pulsanti grandi, testi semplici, nessun limite di tempo e possono essere svolte con l'aiuto di un familiare o un operatore. I temi spaziano dalla chiamata al 112 all'evacuazione, dal punto sicuro durante un terremoto al riconoscimento delle proprie emozioni, fino alla rete dei vicini di casa, includendo scenari su terremoto, alluvione, blackout, ascensore vietato, ondate climatiche, fischietto SOS, indirizzo veloce, riconoscimento divise, punto di ritrovo familiare, animali domestici, lettura del cielo e orientamento di base.
 
 Il Gruppo promuove la cultura della prevenzione fin dalla giovane età anche attraverso:
 
@@ -63,7 +63,7 @@ Se sei un insegnante e vuoi organizzare un incontro, contattaci a [segreteria@pr
 
 ## Storie e Racconti — leggere per imparare
 
-Il Gruppo ha scritto **18 storie di qualità letteraria** per bambini 3-11 anni: sei fiabe per la scuola dell'infanzia (3-5 anni) con la mascotte Tina la Tartaruga, sei racconti per la primaria (6-8 anni) con bambini protagonisti e l'<em>attimo decisivo</em> ispirato alla campagna DPC <em>Attimo Decisivo</em>, sei racconti più letterari per le classi 4ª-5ª (9-11 anni) su temi civici come memoria, ricostruzione, volontariato tecnico. Ogni storia ha una sezione dedicata <strong>"Per il/la docente"</strong> con obiettivi di apprendimento, discipline coinvolte, competenze chiave europee mobilitate, attività in classe e riferimenti curricolari (Indicazioni Nazionali 2012, Legge 92/2019, D.Lgs. 1/2018).
+Il Gruppo ha scritto una raccolta di **storie di qualità letteraria** per bambini 3-11 anni: fiabe per la scuola dell'infanzia (3-5 anni) con la mascotte Tina la Tartaruga, racconti per la primaria (6-8 anni) con bambini protagonisti e l'<em>attimo decisivo</em> ispirato alla campagna DPC <em>Attimo Decisivo</em>, racconti più letterari per le classi 4ª-5ª (9-11 anni) su temi civici come memoria, ricostruzione, volontariato tecnico. Ogni storia ha una sezione dedicata <strong>"Per il/la docente"</strong> con obiettivi di apprendimento, discipline coinvolte, competenze chiave europee mobilitate, attività in classe e riferimenti curricolari (Indicazioni Nazionali 2012, Legge 92/2019, D.Lgs. 1/2018).
 
 👉 [Vai alla biblioteca delle storie](/formazione/storie-e-racconti/)
 
@@ -71,15 +71,15 @@ Le storie sono pronte per essere lette ad alta voce, drammatizzate, stampate e f
 
 ## Giochi della Sicurezza — Impara giocando
 
-Il Gruppo ha sviluppato una collezione di **33 giochi educativi gratuiti** sulla protezione civile, divisi per fascia di età. Ogni gioco è pensato per trasmettere un messaggio chiaro di autoprotezione e termina con un **attestato di partecipazione** da stampare o conservare.
+Il Gruppo ha sviluppato una collezione di **giochi educativi gratuiti** sulla protezione civile, divisi per fascia di età. Ogni gioco è pensato per trasmettere un messaggio chiaro di autoprotezione e termina con un **attestato di partecipazione** da stampare o conservare.
 
 I giochi sono utilizzabili anche dai docenti come attività complementari ai kit didattici, sia in aula sia come compiti a casa. Funzionano da computer, tablet e smartphone, senza registrazione e senza installazione.
 
-| Fascia | Età | Giochi | Esempi |
-|---|---|---|---|
-| [Piccoli Esploratori](/giochi/infanzia/) | 3-6 anni | 10 | La tartaruga saggia, Il numero 112, Suoni dell'emergenza, Memory facile, Vesti Tina, Rifugio di Tina, Cielo oggi, Trova il cartello, Acchiappa il pericolo, Mezzo giusto |
-| [Scuola Primaria](/giochi/primaria/) | 6-11 anni | 13 | Memory, Caccia al rischio, Zaino dell'emergenza, Cruciverba, Puzzle degli scenari, Labirinto di evacuazione, Chiamata al 112, Posiziona i cartelli |
-| [Ragazzi e Famiglie](/giochi/ragazzi/) | 11-19 anni | 10 | Simulatore COC, Emergency Responder, Mappa del rischio, Radio di emergenza, Vero o bufala?, Triage S.T.A.R.T., Linea del tempo, Cartelli di pericolo, Codice arancione, Scelte difficili |
+| Fascia | Età | Esempi |
+|---|---|---|
+| [Piccoli Esploratori](/giochi/infanzia/) | 3-6 anni | La tartaruga saggia, Il numero 112, Suoni dell'emergenza, Memory facile, Vesti Tina, Rifugio di Tina, Cielo oggi, Trova il cartello, Acchiappa il pericolo, Mezzo giusto |
+| [Scuola Primaria](/giochi/primaria/) | 6-11 anni | Memory, Caccia al rischio, Zaino dell'emergenza, Cruciverba, Puzzle degli scenari, Labirinto di evacuazione, Chiamata al 112, Posiziona i cartelli |
+| [Ragazzi e Famiglie](/giochi/ragazzi/) | 11-19 anni | Simulatore COC, Emergency Responder, Mappa del rischio, Radio di emergenza, Vero o bufala?, Triage S.T.A.R.T., Linea del tempo, Cartelli di pericolo, Codice arancione, Scelte difficili |
 
 <a href="/giochi/" class="btn btn-primary btn-lg mt-2"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Vai ai Giochi della Sicurezza</a>
 
@@ -97,7 +97,7 @@ Il Gruppo ha sviluppato un'**area dedicata al primo soccorso**, con pagine divul
 
 ## Area tematica — Manuale da Campo
 
-Una **guida operativa** per il volontario impegnato in emergenza: struttura organizzativa e catena di comando (aggiornate al D.Lgs. 1/2018 e alla Direttiva PCM 30 aprile 2021), scouting e valutazione iniziale, funzioni tecniche (TLC, impiantistica, tende, ristorazione), funzioni di servizio (direzione, segreteria, infopoint, pulizie), **11 schede tecniche** di riferimento rapido (kit personale, mezzi, informazioni, idoneità area, standard UNHCR) e i **moduli radio** personalizzati per il Gruppo (modulo messaggio, registro di stazione, alfabeto NATO, codice Q).
+Una **guida operativa** per il volontario impegnato in emergenza: struttura organizzativa e catena di comando (aggiornate al D.Lgs. 1/2018 e alla Direttiva PCM 30 aprile 2021), scouting e valutazione iniziale, funzioni tecniche (TLC, impiantistica, tende, ristorazione), funzioni di servizio (direzione, segreteria, infopoint, pulizie), **schede tecniche** di riferimento rapido (kit personale, mezzi, informazioni, idoneità area, standard UNHCR) e i **moduli radio** personalizzati per il Gruppo (modulo messaggio, registro di stazione, alfabeto NATO, codice Q).
 
 <a href="/formazione/manuale-campo/" class="btn btn-primary mt-2"><i class="bi bi-clipboard-check-fill me-2" aria-hidden="true"></i>Vai al Manuale da Campo</a>
 

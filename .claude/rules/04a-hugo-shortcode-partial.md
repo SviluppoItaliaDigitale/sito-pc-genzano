@@ -47,9 +47,9 @@ Parametri:
 
 Produce `<img>` con `role="img"` e `loading="lazy"`, oppure `<figure>` con caption opzionale. CSS scoped in `custom.css` (sezione **PITTOGRAMMI v1.0**) con dimensioni fisse, override mobile (large/xlarge ridotti su <576px), mantenimento colori in stampa (i colori dei segnali ISO 7010 sono parte dell'informazione di sicurezza e non devono essere convertiti in scala di grigi).
 
-**Libreria disponibile** (171 simboli, 3.3 MB):
+**Libreria disponibile** (simboli, 3.3 MB):
 - `static/pittogrammi/iso7010/*.svg` — 46 segnali standard (E* evacuazione, F* antincendio, W* avvertimento, M* obbligo, P* divieto). Vettoriali, scalabili senza perdita.
-- `static/pittogrammi/arasaac/*.png` — 125 simboli (eventi/rischi, azioni autoprotezione, oggetti kit emergenza, persone, luoghi, segnali, veicoli, numeri utili). Bitmap 500px.
+- `static/pittogrammi/arasaac/*.png` — simboli (eventi/rischi, azioni autoprotezione, oggetti kit emergenza, persone, luoghi, segnali, veicoli, numeri utili). Bitmap 500px.
 
 **Re-download della libreria**: `bash scripts/scarica-pittogrammi.sh` (idempotente, scarica solo i mancanti; `--force` ri-scarica tutto). Lo script ha rate-limit 1s tra le richieste Wikimedia per evitare ban temporaneo.
 
@@ -275,7 +275,7 @@ Due partial standardizzati che `_default/single.html` chiama automaticamente per
 
 1. **`partials/articolo-navigazione.html`** — riga «Articolo più recente / Articolo precedente» basata su `.PrevInSection` / `.NextInSection`. Niente parametri: si attiva su qualsiasi pagina `.IsPage` con un `.Section` >= 2 articoli. Riusabile su nuove sezioni archivio future.
 
-2. **`partials/articoli-correlati.html`** — sezione «Leggi anche» con 3 card di articoli con stesso `badge` dell'articolo corrente, ordinate per data decrescente. Esclude l'articolo corrente. Mostra immagine cover + data + titolo + descrizione.
+2. **`partials/articoli-correlati.html`** — sezione «Leggi anche» con card di articoli con stesso `badge` dell'articolo corrente, ordinate per data decrescente. Esclude l'articolo corrente. Mostra immagine cover + data + titolo + descrizione.
 
 CSS in `custom.css` (sezioni "ARTICOLO PREV/NEXT v1.0" e "ARTICOLI CORRELATI v1.0"):
 - Hover lift `translateY(-2px)`, ombra blu istituzionale
@@ -289,7 +289,7 @@ Quando aggiungi una nuova sezione paginata (es. `/news-tecniche/`), nel suo `sin
 Pagina interattiva che guida il cittadino con domande semplici fino a una risposta di autoprotezione. È un **albero decisionale deterministico in JavaScript puro** (nessun LLM, nessuna API runtime), coerente con il vincolo di sito statico Hugo e con la responsabilità istituzionale di non dare indicazioni generate in emergenza.
 
 - **Contenuto**: `content/assistente/_index.md` (solo frontmatter — `type: "assistente"`, `layout: "list"`).
-- **Logica e dati**: `themes/flavour-pcgenzano/layouts/assistente/list.html`. Oggetto `NODES` con 8 percorsi (terremoto, incendio, gas, allerta meteo, allagamento, volontario, numeri utili, IT-alert) e circa 30 nodi totali. Struttura nodo: `{ kind: 'question'|'answer', title, prompt?, options?, body?, bullets?, emergency?, links? }`.
+- **Logica e dati**: `themes/flavour-pcgenzano/layouts/assistente/list.html`. Oggetto `NODES` con percorsi (terremoto, incendio, gas, allerta meteo, allagamento, volontario, numeri utili, IT-alert) e circa 30 nodi totali. Struttura nodo: `{ kind: 'question'|'answer', title, prompt?, options?, body?, bullets?, emergency?, links? }`.
 - **Compatibilità subpath**: i link interni usano `window.SITO_BASEURL` (iniettato via `{{ "" | relURL }}`) per essere compatibili sia con Aruba (root) sia con GitHub Pages (subpath `/sito-pc-genzano/`).
 - **Accessibilità**: `aria-live="polite"` sul contenitore, focus management sul `<h2>` ad ogni render, navigazione tastiera nativa, banner rosso in cima con richiamo al 112, fallback `<noscript>` con link alle pagine istituzionali.
 - **Deep link**: lo stato è riflesso in `location.hash` (es. `/assistente/#terremoto_casa`) per condividere una risposta.

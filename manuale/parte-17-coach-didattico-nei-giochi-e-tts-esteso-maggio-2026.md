@@ -31,7 +31,7 @@ Tutto in 2 file condivisi sotto `static/giochi/assets/`:
 - **`css/coach.css`** — bottone trigger, dialog modale, hint contestuale, bottone
   TTS. Tre varianti per fascia (rosso infanzia, verde primaria, blu ragazzi).
   Rispetta `prefers-reduced-motion`. Nascosto in stampa.
-- **`js/coach.js`** — modulo IIFE con: manifest dei 33 giochi, dialog accessibile
+- **`js/coach.js`** — modulo IIFE con: manifest dei giochi, dialog accessibile
   (`role=dialog`, focus trap, ESC), hint contestuale, TTS Web Speech API.
   Auto-init via `data-coach-game="<id>"` sul `<body>` di ogni gioco.
 
@@ -89,8 +89,8 @@ Lo stesso paradigma Web Speech API alimenta tre contesti distinti:
 | Contesto | Componente | Quanti |
 |---|---|---|
 | Pagine Hugo | `partials/leggi-ad-alta-voce.html` (opt-in `tts: true` nel frontmatter) | 21 pagine |
-| Coach giochi | `js/coach.js` (auto su tutti i giochi con `data-coach-game`) | 33 giochi |
-| Storie e fiabe | `formazione/storie-e-racconti/assets/tts-storia.js` | 18 storie |
+| Coach giochi | `js/coach.js` (auto su tutti i giochi con `data-coach-game`) | giochi |
+| Storie e fiabe | `formazione/storie-e-racconti/assets/tts-storia.js` | storie |
 
 Le 21 pagine Hugo con `tts: true`:
 - 12 storiche: cosa-fare-adesso, numeri-utili, facile-da-leggere, allerte-meteo,

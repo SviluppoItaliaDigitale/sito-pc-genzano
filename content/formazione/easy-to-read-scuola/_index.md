@@ -43,7 +43,7 @@ I riferimenti normativi e tecnici sono:
 
 Il Gruppo aderisce inoltre al **D.Lgs. 66/2017** sull'inclusione scolastica e applica il principio dell'**Universal Design for Learning** (UDL): un materiale costruito da subito per la massima accessibilità funziona meglio per **tutti**, non solo per chi ha bisogni specifici.
 
-## Le 4 schede Easy-to-Read per la scuola
+## Le schede Easy-to-Read per la scuola
 
 Sono **stampabili** in A4 e leggibili anche da proiettore in aula. Pittogrammi ARASAAC (CC BY-NC-SA 4.0) gratuiti e citati nelle [attribuzioni del sito](/attribuzioni-pittogrammi/).
 
@@ -160,15 +160,15 @@ Per stampare le schede in modo accessibile:
 - per alunni ipovedenti, attiva nella pagina lo **Strumento di Accessibilità** (bottone rotondo blu in basso a sinistra) e scegli "Testo grande" o "Carattere ad alta leggibilità" prima di stampare;
 - per alunni con difficoltà cognitive, può aiutare **plastificare** le schede e usarle come strisce manipolabili in sequenza ordinata.
 
-Le 4 schede si possono usare anche **in sequenza** come unità didattica accessibile di 4 lezioni da 30-45 minuti, integrate dalle [attività interattive di Abili a Proteggere](/abili-a-proteggere/) (32 mini-app accessibili da tablet e PC).
+Le schede si possono usare anche **in sequenza** come unità didattica accessibile di lezioni da 30-45 minuti, integrate dalle [attività interattive di Abili a Proteggere](/abili-a-proteggere/) (mini-app accessibili da tablet e PC).
 
 ## Risorse correlate sul sito
 
-- 📖 [Facile da Leggere](/facile-da-leggere/) — versione Easy-to-Read del sito per il cittadino (9 temi base).
-- ♿ [Abili a Proteggere](/abili-a-proteggere/) — 32 attività interattive accessibili.
-- 📚 [Pittogrammi del sito](/pittogrammi/) — catalogo dei 171 pittogrammi (46 ISO 7010 + 125 ARASAAC) liberamente utilizzabili.
+- 📖 [Facile da Leggere](/facile-da-leggere/) — versione Easy-to-Read del sito per il cittadino.
+- ♿ [Abili a Proteggere](/abili-a-proteggere/) — attività interattive accessibili.
+- 📚 [Pittogrammi del sito](/pittogrammi/) — catalogo dei pittogrammi ISO 7010 e ARASAAC liberamente utilizzabili.
 - 📋 [Per i docenti — Educazione Civica](/formazione/educazione-civica/#inclusione-e-accessibilita) — quadro generale sull'inclusione e il D.Lgs. 66/2017.
-- 🚀 [Percorsi didattici pronti](/formazione/percorsi-didattici/) — i 6 percorsi tematici per i docenti.
+- 🚀 [Percorsi didattici pronti](/formazione/percorsi-didattici/) — i percorsi tematici per i docenti.
 
 ## Per chi vuole approfondire (per docenti)
 

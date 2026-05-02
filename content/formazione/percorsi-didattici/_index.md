@@ -1,6 +1,6 @@
 ---
 title: "Percorsi didattici pronti per la scuola"
-description: "Sei percorsi di Educazione Civica già pacchettizzati con destinatari, durata, obiettivi e materiali del Gruppo: protezione civile di base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro."
+description: "percorsi di Educazione Civica già pacchettizzati con destinatari, durata, obiettivi e materiali del Gruppo: protezione civile di base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro."
 date: 2026-05-01
 draft: false
 type: "page"
@@ -13,9 +13,9 @@ Questa pagina è uno **strumento operativo per i docenti** che hanno poco tempo 
 
 Ogni percorso riorganizza i materiali del Gruppo già esistenti (kit, schede stampabili, storie, giochi, attività accessibili) in un **pacchetto di lezioni pronto all'uso**, coerente con il D.M. 7 settembre 2024 n. 183 (Linee guida nazionali per l'Educazione Civica, applicabili dall'a.s. 2024/2025) e con la Legge 92/2019.
 
-> Per la **mappa completa** dei nostri materiali sui 3 Nuclei Concettuali del D.M. 183/2024 e sull'Agenda 2030: vedi la [pagina dedicata ai docenti](/formazione/educazione-civica/). Per l'archivio integrale delle [schede stampabili](/formazione/schede-stampabili/) (oltre 100 schede per fascia e disciplina): vedi l'indice. Questa pagina **non sostituisce** quegli strumenti: li riorganizza in percorsi di consumo immediato.
+> Per la **mappa completa** dei nostri materiali sui 3 Nuclei Concettuali del D.M. 183/2024 e sull'Agenda 2030: vedi la [pagina dedicata ai docenti](/formazione/educazione-civica/). Per l'archivio integrale delle [schede stampabili](/formazione/schede-stampabili/) (per fascia e disciplina): vedi l'indice. Questa pagina **non sostituisce** quegli strumenti: li riorganizza in percorsi di consumo immediato.
 
-## Riepilogo dei sei percorsi
+## Riepilogo dei percorsi
 
 | Percorso | Destinatari | Durata | Tema | Riferimento normativo |
 |---|---|---|---|---|
@@ -31,7 +31,7 @@ Ogni percorso è completo di: **prerequisiti**, **obiettivi di apprendimento**, 
 ## Percorso 1 — Protezione Civile di base {#percorso-1}
 
 **Destinatari**: Scuola Primaria classi III-V (8-11 anni).
-**Durata**: 4 ore (4 lezioni da 1 ora) + eventuale incontro con i volontari del Gruppo.
+**Durata**: 4 ore (lezioni da 1 ora) + eventuale incontro con i volontari del Gruppo.
 **Disciplina prevalente**: Educazione Civica · Storia · Geografia · Cittadinanza.
 **Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà.
 
@@ -44,14 +44,14 @@ Ogni percorso è completo di: **prerequisiti**, **obiettivi di apprendimento**, 
 
 - Sa cos'è la Protezione Civile e perché esiste (cenno storico: Vajont, Friuli, Irpinia, nascita del Dipartimento).
 - Sa che il **112** è il numero unico per qualsiasi emergenza nel Lazio e in Italia.
-- Riconosce le quattro attività della PC: previsione, prevenzione, soccorso, superamento.
+- Riconosce le attività della PC: previsione, prevenzione, soccorso, superamento.
 - Capisce che il volontariato organizzato è un dovere di solidarietà (art. 2 Cost.) e non un favore.
 
 ### Articolazione delle 4 ore
 
 | Ora | Attività | Materiali |
 |---|---|---|
-| 1 | Cos'è la Protezione Civile, le 4 attività, perché è nata in Italia | Kit Primaria sezione 1 + storia di apertura |
+| 1 | Cos'è la Protezione Civile, le attività, perché è nata in Italia | Kit Primaria sezione 1 + storia di apertura |
 | 2 | Il 112 — quando si chiama, come si chiama, cosa si dice | Scheda [Chiamo il 112 — Primaria](/formazione/schede-stampabili/chiamo-112-primaria/) + scheda [Il numero 112 — Primaria](/formazione/schede-stampabili/il-numero-112-primaria/) |
 | 3 | I rischi del nostro territorio (Castelli Romani: idrogeologico, sismico, AIB) | Scheda [Geografia sismica Italia — Primaria](/formazione/schede-stampabili/geografia-sismica-italia-primaria/) + cartografia comunale |
 | 4 | Volontariato: chi sono, cosa fanno, perché. Visita al Gruppo o intervista a un volontario | Scheda [Intervista al volontario — Primaria](/formazione/schede-stampabili/intervista-volontario-primaria/) + scheda [Costituzione e PC — Primaria](/formazione/schede-stampabili/costituzione-pc-primaria/) |
@@ -69,7 +69,7 @@ Rubrica [Ed. Civica — Primaria](/formazione/schede-stampabili/rubrica-valutati
 ## Percorso 2 — Rischio meteo e allerta {#percorso-2}
 
 **Destinatari**: Primaria classi IV-V e Secondaria di I grado.
-**Durata**: 3 ore (3 lezioni da 1 ora).
+**Durata**: 3 ore (lezioni da 1 ora).
 **Disciplina prevalente**: Scienze · Geografia · Educazione Civica.
 **Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità.
 
@@ -186,7 +186,7 @@ Rubrica fascia, indicatori 1 (autoprotezione), 6 (cittadinanza attiva). Il piano
 ## Percorso 5 — Fake news e comunicazione di crisi {#percorso-5}
 
 **Destinatari**: Secondaria di I e II grado.
-**Durata**: 3 ore (3 lezioni da 1 ora).
+**Durata**: 3 ore (lezioni da 1 ora).
 **Disciplina prevalente**: Italiano · Tecnologia · Educazione Civica.
 **Nucleo concettuale D.M. 183/2024**: 3 — Cittadinanza digitale.
 
@@ -272,7 +272,7 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 <details class="faq-item">
 <summary><strong>Posso usare un percorso senza fare gli altri?</strong></summary>
 
-Sì. Ogni percorso è autonomo e copre 2-6 ore. Si possono scegliere uno o più percorsi in base al tempo disponibile e al curricolo della classe. La somma dei sei percorsi non esaurisce le 33 ore di Educazione Civica: la [pagina docenti](/formazione/educazione-civica/) propone un calendario completo che integra i materiali del Gruppo nelle 33 ore.
+Sì. Ogni percorso è autonomo e copre 2-6 ore. Si possono scegliere uno o più percorsi in base al tempo disponibile e al curricolo della classe. La somma dei percorsi non esaurisce le 33 ore di Educazione Civica: la [pagina docenti](/formazione/educazione-civica/) propone un calendario completo che integra i materiali del Gruppo nelle 33 ore.
 
 </details>
 

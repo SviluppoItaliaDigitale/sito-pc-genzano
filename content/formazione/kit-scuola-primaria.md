@@ -24,13 +24,13 @@ Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione C
 > 📚 **Per i docenti — risorse coordinate**
 >
 > - **Pagina hub** [La Protezione Civile per l'Educazione Civica](/formazione/educazione-civica/) — mappatura completa dei nostri contenuti sui **3 Nuclei Concettuali del D.M. 183/2024** (Costituzione, Sostenibilità, Cittadinanza Digitale) + **Goal Agenda 2030 ONU** + tabella interdisciplinare + calendario delle 33 ore.
-> - **Rubrica valutativa** pronta per la fascia: [Rubrica Ed. Civica — Scuola Primaria](/formazione/schede-stampabili/rubrica-valutativa-primaria/) — 6 indicatori × 4 livelli, con esempi di giudizio descrittivo / motivazione del voto.
+> - **Rubrica valutativa** pronta per la fascia: [Rubrica Ed. Civica — Scuola Primaria](/formazione/schede-stampabili/rubrica-valutativa-primaria/) — indicatori × livelli, con esempi di giudizio descrittivo / motivazione del voto.
 
 
 ### Obiettivi di apprendimento formalizzati
 
 **Conoscenze**
-- Conosce la definizione e le quattro attività della Protezione Civile (previsione, prevenzione, gestione, superamento)
+- Conosce la definizione e le attività della Protezione Civile (previsione, prevenzione, gestione, superamento)
 - Sa cos'è il Numero Unico di Emergenza 112 e sa quando usarlo
 - Conosce i principali rischi del territorio (sismico, idrogeologico, incendio, meteorologico)
 - Conosce la scala dei codici colore di allerta meteo (verde, giallo, arancione, rosso)
@@ -64,7 +64,7 @@ Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione C
 
 ### Durata consigliata e tabella del percorso
 
-Il percorso completo si articola in **6 moduli da 45-60 minuti**. Ogni modulo è autonomo e può essere svolto anche singolarmente.
+Il percorso completo si articola in **Moduli da 45-60 minuti**. Ogni modulo è autonomo e può essere svolto anche singolarmente.
 
 | Modulo | Tema | Durata | Classi consigliate | Spazio |
 |---|---|---|---|---|
@@ -484,31 +484,31 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Chiamo il 112**](/formazione/schede-stampabili/chiamo-112/) — role-play scritto: l'alunno simula una chiamata al numero unico di emergenza con consegna passo-passo.
 - 👉 [**Cruciverba della Sicurezza**](/formazione/schede-stampabili/cruciverba-primaria/) — 14 definizioni sulle parole-chiave della Protezione Civile, con soluzioni per il docente.
 - 👉 [**Piano di Emergenza Familiare**](/formazione/schede-stampabili/piano-familiare-primaria/) — l'alunno compila con la famiglia il piano di casa: contatti, punti di raccolta, kit, percorso di evacuazione.
-- 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — proteggere bambini, anziani, lavoratori all'aperto e animali domestici: 4 box "Ore calde / Acqua e alimenti / Casa / Mai in auto", semaforo del caldo, mini-rubrica delle persone fragili e mini quiz. *(classi 4-5, valida anche per Secondaria I grado)*
+- 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — proteggere bambini, anziani, lavoratori all'aperto e animali domestici: box "Ore calde / Acqua e alimenti / Casa / Mai in auto", semaforo del caldo, mini-rubrica delle persone fragili e mini quiz. *(classi 4-5, valida anche per Secondaria I grado)*
 
-**3 schede di letto-scrittura** a tema Protezione Civile per le classi 1ª-2ª (6-7 anni):
+**Schede di letto-scrittura** a tema Protezione Civile per le classi 1ª-2ª (6-7 anni):
 
 - 👉 [**Sillabe della Protezione Civile**](/formazione/schede-stampabili/sillabe-protezione-civile-primaria/) — parole-chiave divise in sillabe (CA·SCO, SI·RE·NA, POM·PIE·RE…), esercizio di divisione, ricomposizione di puzzle sillabici e copiatura di una frase. Soluzioni per il docente.
 - 👉 [**Completa la Parola**](/formazione/schede-stampabili/completa-parola-primaria/) — 10 parole con una lettera mancante da completare usando la "banca delle lettere", più 4 parole intere da scrivere a partire dall'indizio. Soluzioni incluse.
 - 👉 [**Copia la Frase — Le parole della sicurezza**](/formazione/schede-stampabili/copia-frase-primaria/) — 5 frasi semplici sulle regole di autoprotezione (chiamata 112, posizione tartaruga, evacuazione, volontariato) da ricopiare in stampatello su righe con linea-guida.
 
-**6 schede curriculari trasversali** a tema Protezione Civile (classi 1ª-4ª):
+**Schede curriculari trasversali** a tema Protezione Civile (classi 1ª-4ª):
 
 - 👉 [**Il Numero 112 — Tutto sull'emergenza**](/formazione/schede-stampabili/il-numero-112-primaria/) — ricalca le tre cifre, scrivi in lettere, mini-somma 1+1+2, scelta multipla, le 3 cose da dire all'operatore. *(numeri, classi 1ª-2ª)*
 - 👉 [**I Codici di Allerta Meteo**](/formazione/schede-stampabili/codici-allerta-numeri-primaria/) — i 4 codici colore della Regione Lazio (verde 1 → rosso 4). Ordina per gravità, colora i bollini, vero/falso. *(numeri, classi 2ª-3ª)*
-- 👉 [**Gli Strumenti del Meteorologo**](/formazione/schede-stampabili/strumenti-meteo-primaria/) — 5 strumenti (termometro, pluviometro, anemometro, barometro, igrometro) con cosa misurano e unità. *(scienze, classi 2ª-3ª)*
+- 👉 [**Gli Strumenti del Meteorologo**](/formazione/schede-stampabili/strumenti-meteo-primaria/) — strumenti (termometro, pluviometro, anemometro, barometro, igrometro) con cosa misurano e unità. *(scienze, classi 2ª-3ª)*
 - 👉 [**La Mappa del Mio Quartiere**](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/) — mappa di quartiere con 6 luoghi numerati (scuola, ospedale, farmacia, area di attesa, idrante, piazza) da etichettare + domande di comprensione. *(territorio, classi 2ª-4ª)*
-- 👉 [**Leggi e Rispondi — Flavio e il Pompiere**](/formazione/schede-stampabili/leggi-rispondi-pompiere-primaria/) — mini-racconto di una piccola emergenza domestica + 5 domande di comprensione (chi, cosa, dove, numero, scelta multipla). *(comprensione, classi 1ª-2ª)*
+- 👉 [**Leggi e Rispondi — Flavio e il Pompiere**](/formazione/schede-stampabili/leggi-rispondi-pompiere-primaria/) — mini-racconto di una piccola emergenza domestica + domande di comprensione (chi, cosa, dove, numero, scelta multipla). *(comprensione, classi 1ª-2ª)*
 - 👉 [**Riordina le Frasi — Una Giornata di Allerta**](/formazione/schede-stampabili/riordina-frasi-allerta-primaria/) — 6 frasi sulla cronologia di un'allerta arancione (bollettino, COC, IT-alert, volontari) da numerare. *(comprensione, classi 2ª-3ª)*
 
-**6 schede di approfondimento per classi 3ª-5ª** — storia, matematica, geografia, ed. civica, comprensione testo, compito di realtà:
+**Schede di approfondimento per classi 3ª-5ª** — storia, matematica, geografia, ed. civica, comprensione testo, compito di realtà:
 
 - 👉 [**Eventi che hanno fatto la PC italiana**](/formazione/schede-stampabili/eventi-pc-italiani-primaria/) — 6 eventi storici (Vajont, Friuli, Irpinia, Sarno, L'Aquila, Amatrice) da abbinare all'anno e riordinare. Causa-conseguenza fra evento e legge. *(storia)*
 - 👉 [**Problemi Matematici della PC**](/formazione/schede-stampabili/problemi-matematici-pc-primaria/) — 6 problemi con dati reali: pioggia in mm, evacuazione, kit, divisione volontari, raggio di emergenza, magnitudo. *(matematica)*
 - 👉 [**Geografia Sismica dell'Italia**](/formazione/schede-stampabili/geografia-sismica-italia-primaria/) — mappa SVG con le 4 zone sismiche, abbina regione/zona, riflessione sulla Sardegna. *(geografia)*
 - 👉 [**La Costituzione e la PC**](/formazione/schede-stampabili/costituzione-pc-primaria/) — articoli 32, 117, 118 spiegati in linguaggio semplice. Diritto alla salute, sussidiarietà, volontariato. *(ed. civica, classi 4ª-5ª)*
-- 👉 [**Comprensione Testo — Amatrice 2016**](/formazione/schede-stampabili/comprensione-testo-amatrice-primaria/) — brano semplificato di 4 paragrafi sul terremoto del 24 agosto 2016 + 8 domande di comprensione. *(italiano, classi 4ª-5ª)*
-- 👉 [**Intervista al Volontario PC**](/formazione/schede-stampabili/intervista-volontario-primaria/) — compito di realtà: prepara 10 domande, intervista un volontario, scrivi il testo giornalistico. *(compito di realtà)*
+- 👉 [**Comprensione Testo — Amatrice 2016**](/formazione/schede-stampabili/comprensione-testo-amatrice-primaria/) — brano semplificato di paragrafi sul terremoto del 24 agosto 2016 + domande di comprensione. *(italiano, classi 4ª-5ª)*
+- 👉 [**Intervista al Volontario PC**](/formazione/schede-stampabili/intervista-volontario-primaria/) — compito di realtà: prepara domande, intervista un volontario, scrivi il testo giornalistico. *(compito di realtà)*
 - 👉 [**Diventa Giornalista della PC**](/formazione/schede-stampabili/diventa-giornalista-primaria/) — anatomia di un articolo (occhiello/titolo/lead/corpo) + esempio modello + scrivi tu un articolo per il giornalino + post Instagram con hashtag. *(giornalismo, classi 4ª-5ª)*
 
 **Schede del curricolo a spirale 6-19 anni — versione Primaria** (stessi temi disponibili anche per Secondaria I e II, per scelta del docente):
@@ -519,7 +519,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 
-**Case study — le maxi-emergenze italiane raccontate ai bambini (classi 4ª-5ª):** dodici schede narrative su 12 eventi storici della Protezione Civile italiana. Ogni scheda ha cronologia in 4 box, "Cosa abbiamo imparato" in 3 punti, 5 domande di comprensione, soluzioni e note didattiche per il/la docente. Sono state escluse Vermicino e San Giuliano per sensibilità pedagogica (presenti solo nella fascia Sec II).
+**Case study — le maxi-emergenze italiane raccontate ai bambini (classi 4ª-5ª):** schede narrative su 12 eventi storici della Protezione Civile italiana. Ogni scheda ha cronologia in box, "Cosa abbiamo imparato" in 3 punti, domande di comprensione, soluzioni e note didattiche per il/la docente. Sono state escluse Vermicino e San Giuliano per sensibilità pedagogica (presenti solo nella fascia Sec II).
 
 - 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-primaria/) — "là dov'era, com'era": ricostruzione esemplare e nascita della PC italiana moderna. *(storia/geografia)*
 - 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-primaria/) — Zamberletti, "Fate presto" di Pertini, nascita del Servizio Nazionale di Protezione Civile. *(storia/ed. civica)*
@@ -534,7 +534,7 @@ Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come e
 - 👉 [**I vulcani d'Italia**](/formazione/schede-stampabili/caso-vulcani-italia-primaria/) — Etna, Stromboli, Vesuvio: i vulcani come bellezza e oggetti di studio. *(scienze/geografia)*
 - 👉 [**I Campi Flegrei**](/formazione/schede-stampabili/caso-campi-flegrei-primaria/) — il vulcano nascosto: monitoraggio scientifico e fiducia nelle istituzioni. *(scienze/geografia)*
 
-**Storie e racconti per leggere insieme — sezione 6-11 anni:** dodici racconti di qualità letteraria (sei per la fascia 6-8 anni, sei per la fascia 9-11 anni) ispirati alla campagna DPC <em>Attimo Decisivo</em>: ogni storia ha un attimo in cui il protagonista sceglie e l'esito si rovescia. Sezione "Per il/la docente" su ogni storia con obiettivi di apprendimento, discipline coinvolte, competenze chiave europee, attività in classe, riferimenti curricolari (Indicazioni Nazionali 2012, L. 92/2019, D.Lgs. 1/2018).
+**Storie e racconti per leggere insieme — sezione 6-11 anni:** racconti di qualità letteraria (sei per la fascia 6-8 anni, sei per la fascia 9-11 anni) ispirati alla campagna DPC <em>Attimo Decisivo</em>: ogni storia ha un attimo in cui il protagonista sceglie e l'esito si rovescia. Sezione "Per il/la docente" su ogni storia con obiettivi di apprendimento, discipline coinvolte, competenze chiave europee, attività in classe, riferimenti curricolari (Indicazioni Nazionali 2012, L. 92/2019, D.Lgs. 1/2018).
 
 Per la fascia **6-8 anni** (lettura autonoma o accompagnata, 400-700 parole):
 
@@ -634,7 +634,7 @@ La rubrica è uno strumento trasparente: il docente lo mostra agli alunni all'in
 
 | Competenza | Livello iniziale (D) | Livello base (C) | Livello intermedio (B) | Livello avanzato (A) |
 |---|---|---|---|---|
-| **Conoscenza del sistema di protezione civile** | Non riconosce le figure di soccorso | Conosce le principali figure e il 112 | Distingue i ruoli (sindaco, volontari, 112) e le quattro attività | Spiega il principio di sussidiarietà con esempi |
+| **Conoscenza del sistema di protezione civile** | Non riconosce le figure di soccorso | Conosce le principali figure e il 112 | Distingue i ruoli (sindaco, volontari, 112) e le attività | Spiega il principio di sussidiarietà con esempi |
 | **Comportamento in emergenza** | Non esegue la procedura | Esegue la procedura solo se guidato | Esegue correttamente la procedura in autonomia | Aiuta i compagni più piccoli o in difficoltà |
 | **Conoscenza dei rischi del territorio** | Nessuna | Conosce 1-2 rischi | Distingue i rischi e ne associa le cause | Collega i rischi al territorio dei Castelli Romani |
 | **Pianificazione familiare** | Non compila la scheda | Compila la scheda con aiuto | Compila correttamente la scheda con la famiglia | Presenta il piano ai compagni motivando le scelte |
@@ -885,7 +885,7 @@ Da adattare con intestazione della scuola:
 
 - [Piano di Emergenza Familiare](/piano-familiare/) — Da stampare e compilare con la famiglia
 - [Quiz di Protezione Civile](/quizpc/) — Quiz interattivo online
-- [Giochi della Sicurezza — Primaria](/giochi/primaria/) — 13 giochi educativi per bambini 6-11 anni (più 10 per l'infanzia 3-6 e 10 per i ragazzi 11-19, totale 33)
+- [Giochi della Sicurezza — Primaria](/giochi/primaria/) — giochi educativi per bambini 6-11 anni (più 10 per l'infanzia 3-6 e 10 per i ragazzi 11-19, totale 33)
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — Manuale DPC e Ministero dell'Istruzione
 - [Io non rischio](https://www.iononrischio.it/) — Materiali della campagna nazionale
 - [Aree di emergenza di Genzano](/cartografia/) — Mappa delle aree di attesa

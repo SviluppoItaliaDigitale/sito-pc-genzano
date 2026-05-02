@@ -75,14 +75,14 @@ Il sito ha una **libreria di pittogrammi standardizzati** disponibile via shortc
 **Regole operative:**
 - Il pittogramma **non sostituisce mai il testo**: è un complemento. L'attributo `alt` deve sempre essere testuale e equivalente (WCAG 1.1.1).
 - I pittogrammi sono marcati **funzionali**, non decorativi: restano visibili anche con la preferenza "Nascondi immagini" del toolbar di accessibilità.
-- Massimo 3-4 pittogrammi per pagina (evitare sovraccarico visivo).
+- Pochi pittogrammi per pagina, per evitare sovraccarico visivo.
 - Per ARASAAC è obbligatoria l'attribuzione su ogni pagina che li usa.
 
 Documentazione completa: `MANUALE-SITO.md` Parte 3.16.
 
 ## Strumenti di Accessibilità (toolbar utente)
 
-Il sito ha un **toolbar di accessibilità** nativo, presente su tutte le pagine come bottone rotondo blu (FAB) in basso a sinistra. Apre un dialog con preferenze di lettura: dimensione testo (4 livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande. Le preferenze sono salvate in `localStorage` e applicate come classi `html.a11y-*`.
+Il sito ha un **toolbar di accessibilità** nativo, presente su tutte le pagine come bottone rotondo blu (FAB) in basso a sinistra. Apre un dialog con preferenze di lettura: dimensione testo (livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande. Le preferenze sono salvate in `localStorage` e applicate come classi `html.a11y-*`.
 
 Per la struttura dei file, le regole di estensione e i divieti operativi vedi `04b-hugo-template-css.md` sezione "Strumenti di Accessibilità".
 
@@ -109,11 +109,11 @@ Pulsante grande "Leggi ad alta voce" inserito automaticamente all'inizio del cor
 
 ### 2. TTS dentro il "Coach" dei giochi (`giochi/assets/js/coach.js`)
 
-Bottone "🔊 Ascolta i consigli" dentro il dialog del bottone "Consigli per giocare" (presente su tutti i 33 giochi statici di `static/giochi/`). Legge ad alta voce: titolo dialog + regola del gioco + bullet "Come si gioca". Variante mini "🔊 Ascolta" anche nei suggerimenti contestuali sull'errore (Layer 3). API esposta: `window.GameCoach.{speak, stopSpeaking, ttsSupported}`.
+Bottone "🔊 Ascolta i consigli" dentro il dialog del bottone "Consigli per giocare" (presente su tutti i giochi statici di `static/giochi/`). Legge ad alta voce: titolo dialog + regola del gioco + bullet "Come si gioca". Variante mini "🔊 Ascolta" anche nei suggerimenti contestuali sull'errore (Layer 3). API esposta: `window.GameCoach.{speak, stopSpeaking, ttsSupported}`.
 
 ### 3. TTS sulle fiabe e storie (`formazione/storie-e-racconti/assets/tts-storia.js`)
 
-Bottone "🔊 Ascolta" nella `.storia-toolbar` di tutte le 18 fiabe in `static/formazione/storie-e-racconti/`. Modulo standalone auto-iniettato (basta includere il `<script>` nell'index.html della storia). Legge `.storia-titolo-principale` + `.storia-corpo`, spezzando il testo in chunk di ~200 caratteri per evitare cut-off su fiabe lunghe (lettura ~4 minuti).
+Bottone "🔊 Ascolta" nella `.storia-toolbar` di tutte le fiabe in `static/formazione/storie-e-racconti/`. Modulo standalone auto-iniettato (basta includere il `<script>` nell'index.html della storia). Legge `.storia-titolo-principale` + `.storia-corpo`, spezzando il testo in chunk di ~200 caratteri per evitare cut-off su fiabe lunghe (lettura ~4 minuti).
 
 ### Caratteristiche accessibilità (comuni ai tre contesti)
 
@@ -136,11 +136,11 @@ Bottone "🔊 Ascolta" nella `.storia-toolbar` di tutte le 18 fiabe in `static/f
 
 ## Coach dei giochi — onboarding e teoria di rinforzo
 
-Tutti i 33 giochi statici in `static/giochi/{infanzia,primaria,ragazzi}/` hanno un sistema condiviso di **onboarding** + **teoria di rinforzo** che riduce l'abbandono dei bambini che non hanno nozioni di base e rispondono a caso. Ispirato a "Io non rischio" del DPC e alla regola AGID di accessibilità cognitiva.
+Tutti i giochi statici in `static/giochi/{infanzia,primaria,ragazzi}/` hanno un sistema condiviso di **onboarding** + **teoria di rinforzo** che riduce l'abbandono dei bambini che non hanno nozioni di base e rispondono a caso. Ispirato a "Io non rischio" del DPC e alla regola AGID di accessibilità cognitiva.
 
 **Architettura:**
 - `static/giochi/assets/css/coach.css` — styling (bottone trigger inline, dialog modale accessibile, suggerimento contestuale, bottone TTS).
-- `static/giochi/assets/js/coach.js` — modulo IIFE con manifest dei 33 giochi + dialog accessibile (`role=dialog`, `aria-modal`, focus trap, ESC, click-outside) + hint contestuale + TTS Web Speech API. Auto-init via attributo `data-coach-game="<id>"` sul `<body>` di ogni gioco.
+- `static/giochi/assets/js/coach.js` — modulo IIFE con manifest dei giochi + dialog accessibile (`role=dialog`, `aria-modal`, focus trap, ESC, click-outside) + hint contestuale + TTS Web Speech API. Auto-init via attributo `data-coach-game="<id>"` sul `<body>` di ogni gioco.
 
 **Tre layer:**
 
@@ -148,7 +148,7 @@ Tutti i 33 giochi statici in `static/giochi/{infanzia,primaria,ragazzi}/` hanno 
 2. **TTS audio** nel dialog ("🔊 Ascolta i consigli") — vedi sezione TTS sopra.
 3. **Hint contestuale su errore**: quando il bambino sbaglia, accanto al bottone "Consigli" appare un riquadro giallo con suggerimento mirato + link "Scopri perché →". API: `window.GameCoach.hint(testo, urlOpz)` chiamata dai singoli giochi nel callback wrong-answer; `clearHint()` su risposta corretta o passaggio a domanda successiva.
 
-**Manifest dei contenuti** in `coach.js` (~33 voci, 1 per gioco). Ogni voce ha:
+**Manifest dei contenuti** in `coach.js` (~voci, 1 per gioco). Ogni voce ha:
 - `fascia: 'infanzia' | 'primaria' | 'ragazzi'`
 - `titolo`, `regola` (1 frase, italiano AGID)
 - `come` (3-6 bullet operativi, voce attiva, frasi <20 parole)
@@ -164,7 +164,7 @@ Specifiche complete di implementazione e mapping per fascia in `MANUALE-SITO.md`
 
 ## Pattern di design dei giochi (consolidato maggio 2026)
 
-Dopo l'audit completo del catalogo (33 giochi rifatti tra aprile e maggio 2026), 4 pattern trasversali si sono dimostrati efficaci e vanno applicati a ogni gioco nuovo o modificato.
+Dopo l'audit completo del catalogo (giochi rifatti tra aprile e maggio 2026), 4 pattern trasversali si sono dimostrati efficaci e vanno applicati a ogni gioco nuovo o modificato.
 
 ### 1. Pool randomizzato + estrazione N
 
@@ -211,7 +211,7 @@ Quando un gioco ha bisogno di icone, usa la **cascata di scelta** in ordine:
 3. **Bootstrap Icons** (caricato via CDN su tutti i giochi, 2000+ icone, MIT): per icone UI funzionali (badge, frecce, pulsanti, indicatori). Esempio: `bi-fire`, `bi-water`, `bi-shield-check`.
 4. **Emoji unicode**: ultimo fallback per concetti che le 3 librerie sopra non coprono. Esempio: 🐱 gatto sull'albero in tartaruga-saggia. Mai per segnali di sicurezza ufficiali (devono essere ISO).
 
-Riferimento concreto: `cartelli-pericolo` ha le 14 domande UNI 7010 con `iso:` che punta al pittogramma ISO ufficiale (vedi PR di maggio 2026); `memory` (primaria) usa ISO 7010 al 100% perché il gioco tratta proprio segnali di sicurezza.
+Riferimento concreto: `cartelli-pericolo` ha le domande UNI 7010 con `iso:` che punta al pittogramma ISO ufficiale (vedi PR di maggio 2026); `memory` (primaria) usa ISO 7010 al 100% perché il gioco tratta proprio segnali di sicurezza.
 
 Per ARASAAC ricordare l'attribuzione obbligatoria CC BY-NC-SA 4.0 (pagina `/attribuzioni-pittogrammi/`).
 
