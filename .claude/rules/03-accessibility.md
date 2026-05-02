@@ -162,6 +162,59 @@ Tutti i 33 giochi statici in `static/giochi/{infanzia,primaria,ragazzi}/` hanno 
 
 Specifiche complete di implementazione e mapping per fascia in `MANUALE-SITO.md` Parte 16.
 
+## Pattern di design dei giochi (consolidato maggio 2026)
+
+Dopo l'audit completo del catalogo (33 giochi rifatti tra aprile e maggio 2026), 4 pattern trasversali si sono dimostrati efficaci e vanno applicati a ogni gioco nuovo o modificato.
+
+### 1. Pool randomizzato + estrazione N
+
+Il pool dei dati (domande, scenari, scene, parole, eventi) deve essere **almeno 2× la quantità mostrata in una singola partita**. Ogni partita estrae `N` random dal pool. Implementazione tipo:
+
+```js
+const POOL = [/* 14-24 voci */];
+function pescaPartita(){
+  const arr = POOL.slice();
+  for (let i = arr.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr.slice(0, N_PARTITA);
+}
+```
+
+Why: dopo 1 partita il bambino non deve memorizzare la sequenza. Pool 14 → 6 random ad esempio garantisce ~2.500 combinazioni distinte.
+
+### 2. Spiegazione del PERCHÉ dopo ogni risposta
+
+Ogni voce dei dati ha un campo testuale didattico (`explain`, `perche`, `tip`, `azione`, `motivo`, `spiega` — il nome varia per gioco ma il pattern è lo stesso): 1-2 frasi che dicono **perché** una risposta è giusta o **cosa fare** quando si sente quel suono / si vede quel cartello / si abbina quel concetto. Mostrato nel feedback dopo la scelta del giocatore.
+
+Why: il gioco deve **lasciare qualcosa nel cervello del bambino**, non essere solo decorativo. Un "Bravo!" senza spiegazione non insegna nulla; un "Bravo! perché..." sì.
+
+### 3. Scoring graduato 0/1/3 per scelte ambigue
+
+Per giochi con scelte multiple di qualità diversa (non solo giusto/sbagliato): dare 3 punti alla scelta ottima, 1 alla scelta accettabile-ma-non-ideale, 0 alla scelta sbagliata. Vedi `chiamata-112`, `scelte-difficili`, `cosa-faccio-se`.
+
+Why: in PC molte situazioni hanno una "via giusta" e diverse "vie meno peggio". Il binario giusto/sbagliato perde sfumature.
+
+### 4. Branching parziale di recupero (per giochi a scelte multiple)
+
+Quando un giocatore sbaglia 2+ volte consecutive nello stesso scenario, mostrare un **mini-recupero**: overlay con i 3-4 punti chiave dello scenario, prima di lasciare proseguire. Vedi `cosa-faccio-se` (PAUSA_PUNTI dictionary + `consecutiveErrors` counter + overlay `.pausa-overlay`).
+
+Why: quando un bambino sbaglia ripetutamente sta perdendo il filo. Una pausa esplicativa lo rimette in carreggiata invece di lasciarlo accumulare errori e rinunciare.
+
+### Pattern bonus: cascata di icone vettoriali
+
+Quando un gioco ha bisogno di icone, usa la **cascata di scelta** in ordine:
+
+1. **ISO 7010** (`static/pittogrammi/iso7010/`, 46 SVG ufficiali): per segnali di sicurezza standard. Esempio: estintore, uscita-emergenza, vietato-fumare, casco-protettivo. Coerenza didattica: il bambino vede i segnali REALI che troverà a scuola, in cantiere, al supermercato.
+2. **ARASAAC** (`static/pittogrammi/arasaac/`, 125 PNG, CC BY-NC-SA): per concetti narrativi/didattici (azioni, persone, oggetti) dove ISO 7010 non ha un segnale. Esempio: ascensore, cibo, terremoto, persona-anziana.
+3. **Bootstrap Icons** (caricato via CDN su tutti i giochi, 2000+ icone, MIT): per icone UI funzionali (badge, frecce, pulsanti, indicatori). Esempio: `bi-fire`, `bi-water`, `bi-shield-check`.
+4. **Emoji unicode**: ultimo fallback per concetti che le 3 librerie sopra non coprono. Esempio: 🐱 gatto sull'albero in tartaruga-saggia. Mai per segnali di sicurezza ufficiali (devono essere ISO).
+
+Riferimento concreto: `cartelli-pericolo` ha le 14 domande UNI 7010 con `iso:` che punta al pittogramma ISO ufficiale (vedi PR di maggio 2026); `memory` (primaria) usa ISO 7010 al 100% perché il gioco tratta proprio segnali di sicurezza.
+
+Per ARASAAC ricordare l'attribuzione obbligatoria CC BY-NC-SA 4.0 (pagina `/attribuzioni-pittogrammi/`).
+
 ## Accessibilità dei post sui social media
 
 Quando il Gruppo pubblica sui canali social istituzionali (Instagram, Facebook, X, Telegram), valgono regole di accessibilità specifiche allineate al **CWA draft CEN/CENELEC** *Guidelines for effective social media messages in crisis and emergency situations* e alla norma **ISO 22329:2021**, complementari al manuale AGID:
