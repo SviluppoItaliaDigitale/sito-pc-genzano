@@ -223,7 +223,9 @@
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
     function avviaLivello(){
-      ROUNDS = LIVELLI[livello];
+      // Mescola i 5 round del livello: ordine diverso ad ogni partita
+      // (prima erano sempre nella stessa sequenza prevedibile).
+      ROUNDS = shuffle(LIVELLI[livello].slice());
       idx = 0;
       levelBadge.textContent = 'Livello ' + (livello + 1) + ' di ' + LIVELLI.length;
       progressBolli.forEach(function(b,i){
