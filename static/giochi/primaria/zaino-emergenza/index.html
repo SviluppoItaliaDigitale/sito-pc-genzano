@@ -38,7 +38,12 @@
             <div id="intro-screen">
               <p class="lead text-center mb-3">Prepara lo zaino di emergenza della tua famiglia!</p>
               <p class="text-center text-muted">Scegli gli oggetti giusti da mettere nello zaino. Attenzione: non tutti gli oggetti servono davvero!</p>
-              <div class="text-center">
+              <p class="fw-bold text-center mb-2">Scegli la modalità:</p>
+              <div class="modalita-zaino" role="radiogroup" aria-label="Modalita gioco">
+                <label class="mod-zaino"><input type="radio" name="modZaino" value="veloce" checked> <strong>Veloce</strong> · 16 oggetti, partita corta</label>
+                <label class="mod-zaino"><input type="radio" name="modZaino" value="completa"> <strong>Completa</strong> · tutti gli oggetti, sfida totale</label>
+              </div>
+              <div class="text-center mt-3">
                 <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia</button>
               </div>
             </div>
