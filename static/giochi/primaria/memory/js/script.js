@@ -3,8 +3,13 @@
 // (segnale di sicurezza standard) si abbina al comportamento corretto. Tre livelli
 // (4/6/8 coppie) estratti random da un pool di 12. Dopo ogni match, breve spiegazione
 // del segnale per fissare la nozione (rules 03 — apprendimento, non solo decorativo).
+//
+// Lo script viene caricato con `defer`: il DOM e' gia' parsato quando esegue,
+// quindi non serve aspettare DOMContentLoaded (e su alcuni browser mobile il
+// listener registrato dopo l'evento non veniva chiamato — i bottoni livello
+// non rispondevano al click).
 
-document.addEventListener('DOMContentLoaded', () => {
+(function init(){
   const introScreen = document.getElementById('intro-screen');
   const gameScreen = document.getElementById('game-screen');
   const winScreen = document.getElementById('win-screen');
@@ -263,4 +268,15 @@ document.addEventListener('DOMContentLoaded', () => {
       introScreen.classList.remove('hide');
     });
   }
-});
+
+  // Event delegation di backup sui bottoni livello: se per qualche ragione
+  // querySelectorAll non li ha catturati al boot, click su un [data-livello]
+  // viene comunque gestito.
+  document.body.addEventListener('click', (e) => {
+    const lvlBtn = e.target.closest('[data-livello]');
+    if (lvlBtn && introScreen && !introScreen.classList.contains('hide')) {
+      e.preventDefault();
+      avviaLivello(lvlBtn.dataset.livello);
+    }
+  });
+})();
