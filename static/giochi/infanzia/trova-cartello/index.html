@@ -169,24 +169,30 @@
       vvf:       { img: ISO  + 'telefono-antincendio.svg',    sfondo: 'sfondo-vvf',    nome: 'i vigili del fuoco' }
     };
 
-    // 12 domande in 2 round — round 1 piu' facile, round 2 piu' difficile
-    var DOMANDE_ROUND_1 = [
+    // Pool di 16 domande: ogni partita ne pesca 12 random, divise in 2 round
+    // da 6 (no overlap fra round). I round sono comunque in ordine random
+    // per non essere prevedibili dopo la prima partita. Copre tutti e 16 i
+    // cartelli del CATALOGO (prima 4 erano inutilizzati: caduta, entrare,
+    // mangiare, guanti).
+    var POOL_DOMANDE = [
       { target: 'uscita',    testo: 'Tocca il cartello che indica dove si esce in emergenza.' },
       { target: 'fuoco',     testo: 'Tocca il cartello che avvisa del pericolo di incendio.' },
       { target: 'casco',     testo: 'Tocca il cartello che dice di mettere il casco.' },
       { target: 'fumo',      testo: 'Tocca il cartello dove è vietato fumare.' },
       { target: 'croce',     testo: 'Tocca il cartello che indica il primo soccorso.' },
-      { target: 'estintore', testo: 'Tocca il cartello dell\'estintore per spegnere il fuoco.' }
-    ];
-    var DOMANDE_ROUND_2 = [
+      { target: 'estintore', testo: 'Tocca il cartello dell\'estintore per spegnere il fuoco.' },
       { target: 'ascensore', testo: 'Tocca il cartello che dice di non prendere l\'ascensore.' },
       { target: 'raccolta',  testo: 'Tocca il cartello del punto dove ci si raduna tutti insieme.' },
       { target: 'alta',      testo: 'Tocca il cartello che avvisa della corrente elettrica.' },
       { target: 'scivolo',   testo: 'Tocca il cartello che avvisa di stare attenti perché il pavimento è scivoloso.' },
       { target: 'mascherina',testo: 'Tocca il cartello che dice di mettere la mascherina.' },
-      { target: 'vvf',       testo: 'Tocca il cartello dei vigili del fuoco.' }
+      { target: 'vvf',       testo: 'Tocca il cartello dei vigili del fuoco.' },
+      { target: 'guanti',    testo: 'Tocca il cartello che dice di mettere i guanti per le mani.' },
+      { target: 'caduta',    testo: 'Tocca il cartello che avvisa che potresti cadere.' },
+      { target: 'entrare',   testo: 'Tocca il cartello che dice di non entrare.' },
+      { target: 'mangiare',  testo: 'Tocca il cartello che dice di non mangiare e di non bere.' }
     ];
-    var ROUNDS = [DOMANDE_ROUND_1, DOMANDE_ROUND_2];
+    var ROUNDS = []; // popolato a inizio partita
 
     var cartelliEl = document.getElementById('cartelli');
     var domandaEl = document.getElementById('domanda');
@@ -226,6 +232,10 @@
     }
 
     function start() {
+      // Ricostruisce ROUNDS pescando 12 domande random dal POOL di 16,
+      // divise in 2 round da 6 senza overlap.
+      var pool = shuffle(POOL_DOMANDE);
+      ROUNDS = [pool.slice(0, 6), pool.slice(6, 12)];
       roundIdx = 0;
       errors = 0;
       avviaRound();

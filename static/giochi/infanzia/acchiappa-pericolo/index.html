@@ -101,8 +101,10 @@
   (function () {
     'use strict';
 
-    // 6 scene: ogni scena ha 4 oggetti, uno solo è "pericoloso"
-    const SCENE = [
+    // Pool di 14 scene: ogni scena ha 4 oggetti, uno solo è "pericoloso".
+    // Ad ogni partita ne pesca 6 random per rigiocabilita'. I temi coprono
+    // sicurezza domestica + rischi PC (terremoto, alluvione, vento, fuoco).
+    const POOL = [
       {
         domanda: 'Cosa NON puoi toccare in cucina?',
         items: [
@@ -156,8 +158,81 @@
           { emo: '🍓', nome: 'Fragola', danger: false },
           { emo: '📱', nome: 'Telefono', danger: false }
         ]
+      },
+      {
+        domanda: 'Durante un terremoto cosa NON è sicuro?',
+        items: [
+          { emo: '🪟', nome: 'Vicino alla finestra', danger: true },
+          { emo: '🪑', nome: 'Sotto il tavolo', danger: false },
+          { emo: '🚪', nome: 'Vano della porta interna', danger: false },
+          { emo: '🛏️', nome: 'Vicino al letto', danger: false }
+        ]
+      },
+      {
+        domanda: 'Se piove tantissimo cosa NON faccio?',
+        items: [
+          { emo: '🚗', nome: 'Sottopasso allagato', danger: true },
+          { emo: '🏠', nome: 'Stare in casa', danger: false },
+          { emo: '👢', nome: 'Stivali di gomma', danger: false },
+          { emo: '☂️', nome: 'Aprire l\'ombrello', danger: false }
+        ]
+      },
+      {
+        domanda: 'Se sento odore di gas in casa, NON devo:',
+        items: [
+          { emo: '🚪', nome: 'Aprire le finestre', danger: false },
+          { emo: '🔥', nome: 'Accendere la luce', danger: true },
+          { emo: '📞', nome: 'Chiamare il 112', danger: false },
+          { emo: '🚶', nome: 'Uscire da casa', danger: false }
+        ]
+      },
+      {
+        domanda: 'Durante un temporale cosa NON tocco?',
+        items: [
+          { emo: '📺', nome: 'Cavi della TV', danger: true },
+          { emo: '🛋️', nome: 'Divano', danger: false },
+          { emo: '📚', nome: 'Libro', danger: false },
+          { emo: '🍪', nome: 'Biscotto', danger: false }
+        ]
+      },
+      {
+        domanda: 'In bosco con vento forte cosa fa pericolo?',
+        items: [
+          { emo: '🌲', nome: 'Albero alto che dondola', danger: true },
+          { emo: '🍄', nome: 'Funghi sul terreno', danger: false },
+          { emo: '🌿', nome: 'Erba bassa', danger: false },
+          { emo: '🐌', nome: 'Lumaca', danger: false }
+        ]
+      },
+      {
+        domanda: 'Quando fa caldissimo, cosa NON faccio?',
+        items: [
+          { emo: '🥤', nome: 'Bere acqua', danger: false },
+          { emo: '🧴', nome: 'Crema solare', danger: false },
+          { emo: '⛱️', nome: 'Stare all\'ombra', danger: false },
+          { emo: '☀️', nome: 'Correre al sole nelle ore calde', danger: true }
+        ]
+      },
+      {
+        domanda: 'Se vedo fuoco nel bosco cosa faccio SUBITO?',
+        items: [
+          { emo: '📞', nome: 'Chiamo il 112 con un adulto', danger: false },
+          { emo: '🤳', nome: 'Faccio un selfie col fuoco dietro', danger: true },
+          { emo: '💧', nome: 'Mi allontano dal fumo', danger: false },
+          { emo: '👀', nome: 'Guardo da dove arriva il vento', danger: false }
+        ]
       }
     ];
+
+    function pescaScene(){
+      const arr = POOL.slice();
+      for (let i = arr.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr.slice(0, 6);
+    }
+    let SCENE = pescaScene();
 
     let cur = 0, score = 0, locked = false;
     const startScr = document.getElementById('start-screen');
@@ -171,6 +246,8 @@
     document.getElementById('restart-btn').addEventListener('click', start);
 
     function start() {
+      // Estrae 6 scene random a ogni partita dal pool di 14
+      SCENE = pescaScene();
       cur = 0; score = 0; locked = false;
       startScr.classList.add('hide');
       endScr.classList.add('hide');

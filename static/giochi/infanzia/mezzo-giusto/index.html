@@ -126,13 +126,34 @@
   (function () {
     'use strict';
 
-    const ROUNDS = [
+    // Pool ampliato (14 scene) per rigiocabilita': ad ogni partita ne pesca
+    // 6 random. Le risposte sono 3: pompieri (fuoco/gas/blocchi), ambulanza
+    // (chi sta male), volontari PC (aiuto post-evento). Coerente con NUE 112.
+    const POOL = [
       { emo: '🔥', testo: 'Una casa va a fuoco!', giusto: 'pompiere' },
       { emo: '🤕', testo: 'Una persona si è fatta male!', giusto: 'ambulanza' },
-      { emo: '🌊', testo: "C'è stata un'alluvione, le persone hanno bisogno di acqua e cibo!", giusto: 'volontari' },
+      { emo: '🌊', testo: "C'è stata un'alluvione: serve acqua e cibo!", giusto: 'volontari' },
       { emo: '🚗💥', testo: 'Un incidente in strada con feriti!', giusto: 'ambulanza' },
-      { emo: '🌳', testo: 'Un albero è caduto sulla strada e blocca tutto!', giusto: 'volontari' }
+      { emo: '🌳', testo: 'Un albero è caduto sulla strada e blocca tutto!', giusto: 'volontari' },
+      { emo: '😵', testo: "Un signore anziano si è sentito male per il caldo!", giusto: 'ambulanza' },
+      { emo: '💨', testo: "C'è fumo dalla cucina dei vicini!", giusto: 'pompiere' },
+      { emo: '🐱', testo: "Un gatto è bloccato sull'albero più alto!", giusto: 'pompiere' },
+      { emo: '🚧', testo: "Una frana ha bloccato la strada del paese!", giusto: 'volontari' },
+      { emo: '🩹', testo: "La nonna è caduta e si è fatta una bua al ginocchio!", giusto: 'ambulanza' },
+      { emo: '⛑️', testo: "Dopo il terremoto serve allestire le tende!", giusto: 'volontari' },
+      { emo: '🚒', testo: "Un piccolo incendio nel bosco vicino casa!", giusto: 'pompiere' },
+      { emo: '💧', testo: "Una grossa perdita d'acqua allaga la cantina!", giusto: 'volontari' },
+      { emo: '😷', testo: "Un bambino non riesce a respirare bene!", giusto: 'ambulanza' }
     ];
+    function pescaScene(){
+      const arr = POOL.slice();
+      for (let i = arr.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr.slice(0, 6);
+    }
+    let ROUNDS = pescaScene();
 
     let cur = 0, score = 0, locked = false;
     const startScr = document.getElementById('start-screen');
@@ -148,6 +169,8 @@
     buttons.forEach(b => b.addEventListener('click', () => onPick(b)));
 
     function start() {
+      // Estrae nuove 6 scene a ogni partita: pool di 14 random
+      ROUNDS = pescaScene();
       cur = 0; score = 0; locked = false;
       startScr.classList.add('hide');
       endScr.classList.add('hide');

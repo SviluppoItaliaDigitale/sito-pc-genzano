@@ -368,6 +368,12 @@
       }
     ];
 
+    function shuffle(a){ for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+    // Mescola le scene a inizio partita per rigiocabilita' (prima erano sempre
+    // nello stesso ordine: cucina, scuola, giardino, cameretta, supermercato,
+    // bagno).
+    SCENE = shuffle(SCENE);
+
     var idx = 0, errori = 0, locked = false;
     var container = document.getElementById('scena-container');
     var labelEl = document.getElementById('scena-label');
@@ -445,6 +451,8 @@
     }
 
     document.getElementById('restart').addEventListener('click', function(){
+      // Rimescola le scene anche al restart per non ripetere stessa sequenza
+      SCENE = shuffle(SCENE);
       idx = 0; errori = 0;
       endScreen.classList.add('hide');
       document.querySelector('.inf-card.hide')?.classList.remove('hide');
