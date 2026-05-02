@@ -222,6 +222,64 @@
         ]
       },
       {
+        titolo: '🌋 Sciame sismico ai Castelli',
+        decisioni: [
+          {
+            testo: 'Una scossa M 4.8 ha colpito i Castelli Romani. Casa tua è agibile a vista. INGV annuncia probabili repliche fino a M 4.0 nelle prossime 48h. Cosa fai stanotte?',
+            scelte: [
+              { txt: 'Dormo a casa: M 4 non fa danni gravi a edifici recenti', pt: 1, esito: 'medio', fb: 'POTENZIALMENTE OK ma rischioso. La struttura va prima verificata da un tecnico. Dormi vestito, con scarpe e zaino pronti vicino al letto.' },
+              { txt: 'Vado dalla nonna in campagna in una casetta di tufo del 1920', pt: 0, esito: 'sbagliato', fb: 'PESSIMA SCELTA. Le case storiche di tufo non antisismiche sono <strong>più</strong> a rischio nelle repliche. Le costruzioni post-1981 sono più sicure.' },
+              { txt: 'Vado al palazzetto comunale dove il COC ha allestito un\'area di attesa, anche solo per la notte', pt: 3, esito: 'ottimo', fb: 'PERFETTO. Il <strong>COC ha aree di attesa</strong> proprio per questo: edificio antisismico verificato, presidio sanitario, informazioni in tempo reale.' }
+            ]
+          },
+          {
+            testo: 'Al mattino INGV ha registrato 3 repliche minori. Tu sei al COC. Una vicina anziana torna a casa "perché è tutto a posto" prendendo cibo dalla sua casa storica. Cosa fai?',
+            scelte: [
+              { txt: 'La accompagno per aiutarla a fare in fretta', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. <strong>Aggiungeresti una persona al rischio.</strong> Solo i tecnici autorizzati entrano in edifici non verificati durante una sequenza sismica.' },
+              { txt: 'Lascio fare e torno al COC: ognuno è responsabile di sé', pt: 0, esito: 'sbagliato', fb: 'INSUFFICIENTE. Una vicina anziana che entra in casa storica durante uno sciame è a rischio reale. Devi almeno avvisare.' },
+              { txt: 'Avviso il responsabile COC e i Vigili del Fuoco: sono loro che possono mediare e accompagnarla al sicuro', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La situazione richiede operatori formati. <strong>Tu segnali</strong>, loro intervengono. Questo è il volontariato consapevole.' }
+            ]
+          },
+          {
+            testo: 'Dopo 48h le repliche si sono ridotte. Sui social girano video di "tecnici amatoriali" che dicono "sta arrivando il Big One a Roma!". Tu sei al COC come supporto. Cosa fai?',
+            scelte: [
+              { txt: 'Rilancio i video con un commento "verifichiamo" per correttezza', pt: 0, esito: 'sbagliato', fb: 'GRAVE. Hai amplificato la fake news. La regola del DPC è <strong>"non amplificare", mai citare il post falso</strong>. Risposta solo con fonte ufficiale, senza riferimento all\'originale.' },
+              { txt: 'Mi limito a indicare le fonti ufficiali (INGV, DPC) sui canali del Comune e ignoro i video', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La PC <strong>contrasta le fake news producendo informazione verificata</strong>, non rispondendo direttamente alle bufale. Direttiva Mattarella 2008.' },
+              { txt: 'Contesto i video commentando uno per uno', pt: 0, esito: 'sbagliato', fb: 'CONTROPRODUCENTE. Discutere amplifica. Ogni commento moltiplica la visibilità del post falso. Mai entrare nella conversazione.' }
+            ]
+          }
+        ]
+      },
+      {
+        titolo: '⚡ Blackout esteso 24 ore',
+        decisioni: [
+          {
+            testo: 'Una tempesta ha causato un blackout su tutto il Comune. Sono passate già 6 ore, fa freddo. La cucina è elettrica. Hai 14 anni, sei a casa con tuo fratello di 6 anni. I genitori sono al lavoro fuori città. Come ti scaldi?',
+            scelte: [
+              { txt: 'Accendo qualche candela e il caminetto a legna che abbiamo in salotto', pt: 1, esito: 'medio', fb: 'CON CAUTELA. Il caminetto va bene <strong>solo</strong> se spazzato di recente e con qualcuno che lo sorveglia sempre. Le candele = rischio incendio: meglio torce a pile.' },
+              { txt: 'Mi metto piumino + coperta termica e do indicazioni a mio fratello, niente fiamme', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Niente fiamme libere senza un adulto.</strong> Il piumino + coperta termica scaldano. Brevi pause attive (saltare, ballare) aiutano.' },
+              { txt: 'Accendo il fornello a gas dell\'amica al piano sopra per scaldare la casa', pt: 0, esito: 'sbagliato', fb: 'PERICOLOSO. <strong>I fornelli a gas non si usano per riscaldare ambienti</strong>: producono CO. È una causa frequente di incidenti gravi.' }
+            ]
+          },
+          {
+            testo: 'Sono passate 12 ore. Il telefono è scarico, manca ancora la corrente. Tuo fratello chiede da mangiare. Nel frigo c\'è cibo che si sta scongelando. Cosa fate?',
+            scelte: [
+              { txt: 'Mangiamo subito le cose dal frigo prima che si rovinino', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Apri il frigo il meno possibile</strong>: quello che apri lo finisci. Mangiate il cibo che si scongela (yogurt, formaggi, verdure). Niente carne cruda.' },
+              { txt: 'Rimaniamo a digiuno per non aprire il frigo', pt: 1, esito: 'medio', fb: 'NON NECESSARIO. Un bambino ha bisogno di mangiare. Se hai dispense (crackers, biscotti, frutta) usali; se no, attingi al frigo razionalmente.' },
+              { txt: 'Andiamo in giro a cercare un bar aperto', pt: 0, esito: 'sbagliato', fb: 'RISCHIOSO. Lasciare un fratello di 6 anni o portarlo in giro al freddo nel buio espone a rischi. <strong>Resta in casa</strong>, comunica con i vicini se serve.' }
+            ]
+          },
+          {
+            testo: 'Sono passate 18 ore. Una vicina che ha la radio a pile dice che il Comune ha aperto un punto di accoglienza al palazzetto con riscaldamento e telefoni per chiamare. Cosa fai?',
+            scelte: [
+              { txt: 'Resto a casa: i miei genitori non sanno dove sono', pt: 0, esito: 'sbagliato', fb: 'INSUFFICIENTE. Non hai modo di comunicare e fa freddo. <strong>Vai al palazzetto</strong> con tuo fratello: là chiamerai i genitori e starai al caldo.' },
+              { txt: 'Andiamo al palazzetto, lasciando un biglietto e con la coperta termica', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Comunicare al Comune</strong> dov\'è la famiglia è esattamente perché esistono le aree di accoglienza. Il biglietto a casa permette ai genitori di trovarti.' },
+              { txt: 'Provo da solo a riavviare il quadro elettrico in cantina', pt: 0, esito: 'sbagliato', fb: 'PERICOLOSISSIMO. Mai toccare il quadro elettrico in blackout: potrebbe esserci tensione di ritorno. <strong>Solo il tecnico Acea</strong> ripristina la rete.' }
+            ]
+          }
+        ]
+      },
+      {
         titolo: '🔥 Incendio nel bosco',
         decisioni: [
           {
@@ -252,6 +310,13 @@
       }
     ];
 
+    // Shuffle helper
+    function shuffleArr(a){ for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+    // Pool 5 scenari originali + 2 nuovi (sciame sismico, blackout). A inizio
+    // partita ne pesca 5 random e ne shuffla l'ordine: il giocatore non puo'
+    // memorizzare la sequenza dopo 1 partita.
+    let SCENARI_PARTITA = SCENARI.slice();
+
     let scenarioIdx = 0, decisioneIdx = 0, totale = 0, sceltaCorrente = null;
     let storia = []; // {scenario, decisione, esito, pt}
 
@@ -264,17 +329,22 @@
     document.getElementById('next-btn').addEventListener('click', avanti);
 
     function start() {
+      // Pesca 5 scenari random dal pool di 7 (5 originali + 2 nuovi:
+      // sciame sismico Castelli, blackout esteso) e mescola l'ordine.
+      // Le decisioni interne ad ogni scenario restano nell'ordine narrativo
+      // perche' la loro sequenza ha senso (decisione 1 prepara decisione 2).
+      SCENARI_PARTITA = shuffleArr(SCENARI.slice()).slice(0, 5);
       scenarioIdx = 0; decisioneIdx = 0; totale = 0; sceltaCorrente = null;
       storia = [];
       intro.classList.add('hide');
       results.classList.add('hide');
       game.classList.remove('hide');
-      document.getElementById('scena-tot').textContent = SCENARI.length;
+      document.getElementById('scena-tot').textContent = SCENARI_PARTITA.length;
       render();
     }
 
     function render() {
-      const sc = SCENARI[scenarioIdx];
+      const sc = SCENARI_PARTITA[scenarioIdx];
       const dec = sc.decisioni[decisioneIdx];
       document.getElementById('scena-cur').textContent = scenarioIdx + 1;
       document.getElementById('dec-cur').textContent = decisioneIdx + 1;
@@ -309,7 +379,7 @@
       btn.style.color = '#fff';
       btn.style.borderColor = btn.style.background;
       totale += scelta.pt;
-      storia.push({ scenario: SCENARI[scenarioIdx].titolo, esito: scelta.esito, pt: scelta.pt });
+      storia.push({ scenario: SCENARI_PARTITA[scenarioIdx].titolo, esito: scelta.esito, pt: scelta.pt });
       const e = document.getElementById('esito');
       e.className = 'esito-box ' + scelta.esito;
       e.innerHTML = '<span class="badge-pt">+' + scelta.pt + ' pt</span>' + scelta.fb;
@@ -323,17 +393,17 @@
         }
       }
       // Last decision of last scenario? Otherwise show next btn
-      const isLastDec = (scenarioIdx === SCENARI.length - 1) &&
-                       (decisioneIdx === SCENARI[scenarioIdx].decisioni.length - 1);
+      const isLastDec = (scenarioIdx === SCENARI_PARTITA.length - 1) &&
+                       (decisioneIdx === SCENARI_PARTITA[scenarioIdx].decisioni.length - 1);
       document.getElementById('next-label').textContent = isLastDec ? 'Vedi risultati' : 'Continua';
       document.getElementById('next-row').classList.remove('hide');
     }
 
     function avanti() {
       // Avanza alla prossima decisione/scenario
-      if (decisioneIdx + 1 < SCENARI[scenarioIdx].decisioni.length) {
+      if (decisioneIdx + 1 < SCENARI_PARTITA[scenarioIdx].decisioni.length) {
         decisioneIdx++;
-      } else if (scenarioIdx + 1 < SCENARI.length) {
+      } else if (scenarioIdx + 1 < SCENARI_PARTITA.length) {
         scenarioIdx++;
         decisioneIdx = 0;
       } else {
