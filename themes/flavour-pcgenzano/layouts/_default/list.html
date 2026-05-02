@@ -25,8 +25,8 @@
       </div>
       {{ end }}
 
-      {{/* ── TEMPO DI LETTURA + PULSANTE TTS ── */}}
-      {{ $ttsBlacklist := slice "/privacy/" "/note-legali/" "/accessibilita/" "/social-media-policy/" "/mappa-sito/" "/attribuzioni-pittogrammi/" "/cerca/" "/comunicazioni/" }}
+      {{/* ── TEMPO DI LETTURA + PULSANTE TTS + GLOSSARIO INLINE ── */}}
+      {{ $ttsBlacklist := slice "/privacy/" "/note-legali/" "/accessibilita/" "/social-media-policy/" "/mappa-sito/" "/attribuzioni-pittogrammi/" "/cerca/" "/comunicazioni/" "/glossario/" }}
       {{ $isBlacklisted := false }}
       {{ range $ttsBlacklist }}{{ if eq $.RelPermalink . }}{{ $isBlacklisted = true }}{{ end }}{{ end }}
       {{ $ttsEnabled := and (ne .Params.tts false) (not $isBlacklisted) }}
@@ -41,6 +41,7 @@
       </div>
       {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".list-intro-content") }}
       <div class="list-intro-content">{{ .Content }}</div>
+      {{ partial "glossario-inline.html" . }}
       {{ else }}
       {{ .Content }}
       {{ end }}

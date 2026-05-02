@@ -160,6 +160,41 @@ CSS scoped sezione **SILLABAZIONE AUTOMATICA v1.0** in `custom.css`. Esclusioni 
 
 Compatibilità: Chrome 88+, Firefox 43+, Safari 5.1+ (tutti i browser moderni). Su browser senza supporto, il fallback è il rendering standard senza sillabazione (zero regressione).
 
+## Glossario inline con popover
+
+Il sito ha una libreria di voci di glossario (sigle e termini specialistici PC) che il browser **sostituisce automaticamente** alla **prima occorrenza** in ogni pagina con un bottone cliccabile + popover accessibile (definizione breve di 1-2 frasi + link al glossario completo). Aiuta cittadini non tecnici, anziani, italiano L2 e persone in stress da emergenza che incontrano sigle come **DPC**, **COC**, **AeDES**, **IT-alert**, **CFR** senza sapere cosa significhino.
+
+**Architettura:**
+- `data/glossario.yaml` — fonte unica delle voci. Ogni voce: `id`, `termine`, `varianti` (lista di forme da matchare), `definizione` (1-2 frasi AGID, max ~200 caratteri), `link` (URL della voce completa nel `/glossario/`).
+- `static/js/glossario-inline.js` — al `DOMContentLoaded` scansiona `.article-body` e `.list-intro-content`, costruisce una mega-regex con tutte le varianti (ordinata per lunghezza decrescente per priorità), sostituisce la **prima occorrenza** di ogni termine con `<button class="gloss-term">termine ⓘ</button>` + `<span class="gloss-popover" role="tooltip" hidden>`. Scansione O(N) sulla lunghezza del testo.
+- `themes/flavour-pcgenzano/layouts/partials/glossario-inline.html` — inietta `window.PCGENZANO_GLOSSARIO` come JSON statico al build (passa i `link` per `relURL` per compatibilità subpath GitHub Pages) e carica il JS con `defer`.
+- CSS scoped sezione **GLOSSARIO INLINE v1.0** in `custom.css`: termine sottolineato tratteggiato blu istituzionale + icona `ⓘ`, popover con triangolino, varianti per toolbar a11y (contrasto invertito, alto contrasto), nascosto in stampa.
+
+**Vincoli di copyright:** le definizioni sono **parafrasi originali** del Gruppo Comunale, basate sul glossario interno `content/glossario/_index.md` (già di sua penna) e sul glossario DPC pubblico (opera della PA italiana → libera, art. 5 L. 633/1941). **Mai copiare da Treccani** o altre opere protette: solo definizioni nostre, anche quando consultate come riferimento. Cf. policy concordata maggio 2026.
+
+**Esclusioni dal match:** il JS salta i nodi dentro `<a>`, `<button>`, `<code>`, `<pre>`, `<h1>`, `<kbd>`, `[aria-hidden="true"]`, `.no-gloss`, `.tts-wrapper`, `.gloss-term`. Così non si sovrappone a link esistenti, codice, intestazioni di pagina, o altri bottoni. Inoltre solo la **prima occorrenza** di ogni termine viene sostituita: niente rumore visivo se "DPC" appare 10 volte in un articolo.
+
+**Pagine escluse (blacklist nel template, identica a TTS):** `/privacy/`, `/note-legali/`, `/accessibilita/`, `/social-media-policy/`, `/mappa-sito/`, `/attribuzioni-pittogrammi/`, `/cerca/`, `/comunicazioni/` (list), `/glossario/` (auto-esclusa per non popolare popover sui termini del glossario stesso). Per disattivare su una singola pagina: `tts: false` nel frontmatter (la condizione è la stessa del TTS).
+
+**Accessibilità del popover:**
+- Tastiera: bottone nativo, **Enter/Space** apre, **ESC** chiude (con focus che torna al button), **Tab** esce normalmente (non c'è focus trap, è un popover non-modal).
+- ARIA: `aria-expanded` sul button, `aria-describedby` che punta al popover, `role="tooltip"` sul popover, `aria-label` esplicito sul link "Scopri di più nel glossario".
+- Mouse: hover su desktop con `pointer:fine` (no hover su touch), click ovunque chiude (delegato).
+- Scroll: chiude i popover quando l'utente scrolla, perché la posizione assoluta non li segue.
+- Stampa: il bottone torna a testo normale, il popover sparisce.
+
+**Quando aggiungere voci al glossario:**
+- Sigle PC ricorrenti che il cittadino non riconosce (DPC, COC, COI, AeDES, AIB, IT-alert, NUE, CFR…).
+- Termini tecnici che cambiano significato fra linguaggio comune e tecnico (allerta vs emergenza, magnitudo vs intensità, vulnerabilità vs pericolosità).
+- Sigle giuridiche e normative (D.Lgs. 1/2018, OdV, ETS, DPCM, TUSL).
+
+**Regole operative:**
+- Aggiungere una voce: editare `data/glossario.yaml` con id univoco, varianti complete (sigla + espansione + plurali), definizione AGID. Niente più nulla — il prossimo build la prende automaticamente.
+- Disattivare il glossario su una pagina specifica (es. articolo poetico, schede di servizio): `tts: false` nel frontmatter (esclude TTS + glossario insieme — sono accoppiati intenzionalmente, hanno la stessa logica di blacklist).
+- **Evitare definizioni-pubblicità** (mai *"il nostro Gruppo è esperto di X"*): la definizione deve essere **didattica** e **istituzionale**, lo stesso principio del glossario `content/glossario/_index.md`.
+
+Specifiche complete in `MANUALE-SITO.md` (futura parte) e nella regola `02-content-design-pa.md` § "Vocabolario PA".
+
 ## Coach dei giochi — onboarding e teoria di rinforzo
 
 Tutti i giochi statici in `static/giochi/{infanzia,primaria,ragazzi}/` hanno un sistema condiviso di **onboarding** + **teoria di rinforzo** che riduce l'abbandono dei bambini che non hanno nozioni di base e rispondono a caso. Ispirato a "Io non rischio" del DPC e alla regola AGID di accessibilità cognitiva.

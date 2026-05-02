@@ -80,11 +80,13 @@
       </div>
       {{ end }}
 
-      {{/* ── TEMPO DI LETTURA + PULSANTE TTS ── */}}
-      {{/* Opt-out: TTS attivo di default su tutte le pagine, escluse legali/tecniche.
-           Per disattivare su una specifica pagina: tts: false nel frontmatter.
-           Blacklist hard-coded: pagine legali + tecniche (regola 03-accessibility.md). */}}
-      {{ $ttsBlacklist := slice "/privacy/" "/note-legali/" "/accessibilita/" "/social-media-policy/" "/mappa-sito/" "/attribuzioni-pittogrammi/" "/cerca/" }}
+      {{/* ── TEMPO DI LETTURA + PULSANTE TTS + GLOSSARIO INLINE ── */}}
+      {{/* Opt-out: TTS e glossario attivi di default su tutte le pagine,
+           escluse legali/tecniche. Per disattivare su pagina specifica:
+           tts: false nel frontmatter (vale anche per glossario inline).
+           Blacklist hard-coded: pagine legali + tecniche + /glossario/
+           stesso (regola 03-accessibility.md). */}}
+      {{ $ttsBlacklist := slice "/privacy/" "/note-legali/" "/accessibilita/" "/social-media-policy/" "/mappa-sito/" "/attribuzioni-pittogrammi/" "/cerca/" "/glossario/" }}
       {{ $isBlacklisted := false }}
       {{ range $ttsBlacklist }}{{ if eq $.RelPermalink . }}{{ $isBlacklisted = true }}{{ end }}{{ end }}
       {{ $ttsEnabled := and (ne .Params.tts false) (not $isBlacklisted) }}
@@ -102,6 +104,14 @@
 
       {{/* ── CONTENUTO ── */}}
       <article class="article-body">{{ .Content }}</article>
+
+      {{/* ── GLOSSARIO INLINE (popover sui termini PC) ── */}}
+      {{/* Stesso opt-out del TTS: tts:false esclude anche il glossario.
+           Si carica dopo il contenuto per scansionare l'.article-body
+           già renderizzato. */}}
+      {{ if and $ttsEnabled (gt .WordCount 30) }}
+      {{ partial "glossario-inline.html" . }}
+      {{ end }}
 
       {{/* ── ALLEGATI (solo comunicazioni) ── */}}
       {{ if eq .Section "comunicazioni" }}

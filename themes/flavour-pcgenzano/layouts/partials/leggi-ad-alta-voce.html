@@ -98,7 +98,7 @@
   function extractText(el) {
     if (!el) return '';
     var clone = el.cloneNode(true);
-    clone.querySelectorAll('script, style, .visually-hidden, [aria-hidden="true"], pre, code.language-, .pittogramma, .pittogramma-figure, .tts-wrapper').forEach(function(n){ n.remove(); });
+    clone.querySelectorAll('script, style, .visually-hidden, [aria-hidden="true"], pre, code.language-, .pittogramma, .pittogramma-figure, .tts-wrapper, .gloss-popover, .gloss-icon').forEach(function(n){ n.remove(); });
     clone.querySelectorAll('br').forEach(function(n){ n.replaceWith('\n'); });
     var text = clone.innerText || clone.textContent || '';
     return text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
@@ -118,7 +118,7 @@
   function buildTextMap(targetEl) {
     if (!targetEl) return { fullText: '', chunks: [] };
     var SKIP = ['SCRIPT', 'STYLE', 'PRE', 'CODE'];
-    var SKIP_CLASS = ['visually-hidden', 'pittogramma', 'pittogramma-figure', 'tts-wrapper'];
+    var SKIP_CLASS = ['visually-hidden', 'pittogramma', 'pittogramma-figure', 'tts-wrapper', 'gloss-popover', 'gloss-icon'];
     var fullText = '';
     var chunks = [];
     function shouldSkip(node) {

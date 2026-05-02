@@ -3169,6 +3169,195 @@ html.a11y-contrast-high .list-intro-content mark.tts-word-mark {
 }
 
 /* ============================================================
+   GLOSSARIO INLINE — termini cliccabili con popover (v1.0)
+   La prima occorrenza di ogni termine PC nelle pagine viene
+   sostituita da un <button> con popover che mostra una breve
+   definizione e linka al glossario completo. Pattern WAI-ARIA:
+   button con aria-expanded + popover role=tooltip.
+
+   Beneficiari: cittadini non tecnici che incontrano sigle
+   specialistiche (DPC, COC, AeDES, IT-alert…). Aiuta italiano
+   L2, anziani e persone in stress da emergenza che non si
+   ricordano cosa significhi una sigla.
+   ============================================================ */
+.gloss-wrap {
+  position: relative;
+  display: inline;
+  white-space: normal;
+}
+.gloss-term {
+  /* Reset bottone → look "termine sottolineato tratteggiato" */
+  display: inline;
+  background: transparent;
+  border: 0;
+  padding: 0 1px;
+  margin: 0;
+  font: inherit;
+  color: #003366;
+  cursor: help;
+  text-decoration: underline dotted #003366;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  border-radius: 2px;
+  transition: background-color 0.15s ease;
+}
+.gloss-term:hover,
+.gloss-term[aria-expanded="true"] {
+  background: #eaf1fb;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+}
+.gloss-term:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+  background: #eaf1fb;
+}
+.gloss-icon {
+  display: inline-block;
+  font-size: 0.78em;
+  color: #003366;
+  margin-left: 1px;
+  vertical-align: super;
+  line-height: 1;
+  opacity: 0.75;
+}
+.gloss-term:hover .gloss-icon,
+.gloss-term[aria-expanded="true"] .gloss-icon {
+  opacity: 1;
+}
+
+/* Popover: sotto al button by default, flip sopra se overflow */
+.gloss-popover {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 1080; /* sopra header/cookie banner */
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 240px;
+  max-width: min(360px, 90vw);
+  padding: 0.7rem 0.85rem;
+  background: #fff;
+  border: 1px solid #c9d3e3;
+  border-left: 4px solid #003366;
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(0, 51, 102, 0.18);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #1a1a1a;
+  /* L'elemento è inline-flex content all'interno: serve normalize */
+  white-space: normal;
+  text-align: left;
+  text-decoration: none;
+  /* Triangolo che punta al termine */
+}
+.gloss-popover::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-left: 1px solid #c9d3e3;
+  border-top: 1px solid #c9d3e3;
+  transform: rotate(45deg);
+}
+.gloss-popover.is-flipped-up {
+  top: auto;
+  bottom: calc(100% + 6px);
+}
+.gloss-popover.is-flipped-up::before {
+  top: auto;
+  bottom: -7px;
+  border-left: 0;
+  border-top: 0;
+  border-right: 1px solid #c9d3e3;
+  border-bottom: 1px solid #c9d3e3;
+}
+.gloss-popover-def {
+  display: block;
+  color: #1a1a1a;
+}
+.gloss-popover-link {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #003366;
+  text-decoration: underline;
+  align-self: flex-start;
+}
+.gloss-popover-link:hover,
+.gloss-popover-link:focus {
+  text-decoration: underline;
+  color: #002952;
+}
+
+/* Mobile: il popover diventa più compatto */
+@media (max-width: 576px) {
+  .gloss-popover {
+    min-width: 200px;
+    max-width: calc(100vw - 32px);
+    font-size: 0.88rem;
+  }
+}
+
+/* Stampa: rimuove il bottone-stile e il popover, lascia solo il termine
+   come testo normale (la pagina stampata non ha tooltip interattivi) */
+@media print {
+  .gloss-term {
+    color: inherit !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    cursor: text !important;
+  }
+  .gloss-icon { display: none !important; }
+  .gloss-popover { display: none !important; }
+}
+
+/* Toolbar a11y: contrasto invertito (sfondo nero) */
+html.a11y-contrast-invert .gloss-term {
+  color: #ffd700;
+  text-decoration-color: #ffd700;
+}
+html.a11y-contrast-invert .gloss-popover {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #ffd700;
+  border-left-color: #ffd700;
+}
+html.a11y-contrast-invert .gloss-popover::before {
+  background: #1a1a1a;
+  border-color: #ffd700;
+}
+html.a11y-contrast-invert .gloss-popover-def {
+  color: #fff;
+}
+html.a11y-contrast-invert .gloss-popover-link {
+  color: #ffd700;
+}
+
+/* Toolbar a11y: alto contrasto (giallo su nero) */
+html.a11y-contrast-high .gloss-term {
+  color: #000;
+  text-decoration: underline solid #000;
+  text-decoration-thickness: 2px;
+}
+html.a11y-contrast-high .gloss-popover {
+  background: #fffbcf;
+  border: 2px solid #000;
+  border-left: 4px solid #000;
+  color: #000;
+}
+
+/* prefers-reduced-motion: niente transizioni */
+@media (prefers-reduced-motion: reduce) {
+  .gloss-term { transition: none; }
+}
+
+/* ============================================================
    TEMPO DI LETTURA — meta info sopra l'articolo (v1.0)
    Etichetta discreta che riduce l'ansia da "muro di testo"
    per anziani, dislessici, italiano L2. Usa Hugo .ReadingTime
