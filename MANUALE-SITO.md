@@ -38,6 +38,7 @@
 | Parte 16 | Bozze social: gestione quota Gemini API | [`manuale/parte-16-bozze-social-gestione-quota-gemini-api.md`](manuale/parte-16-bozze-social-gestione-quota-gemini-api.md) |
 | Parte 17 | Coach didattico nei giochi e TTS esteso (maggio 2026) | [`manuale/parte-17-coach-didattico-nei-giochi-e-tts-esteso-maggio-2026.md`](manuale/parte-17-coach-didattico-nei-giochi-e-tts-esteso-maggio-2026.md) |
 | Parte 18 | Lettura accessibile per fasce deboli: TTS dappertutto, glossario inline, tempo lettura, sillabazione (maggio 2026) | [`manuale/parte-18-lettura-accessibile-maggio-2026.md`](manuale/parte-18-lettura-accessibile-maggio-2026.md) |
+| Parte 19 | Agenti specializzati Claude Code (maggio 2026) — 5 profili professionali virtuali per redazione, immagini, issue, deploy, social | [`manuale/parte-19-agenti-specializzati.md`](manuale/parte-19-agenti-specializzati.md) |
 
 > 👉 **[Vai all'indice completo del manuale (`manuale/README.md`)](manuale/README.md)**
 

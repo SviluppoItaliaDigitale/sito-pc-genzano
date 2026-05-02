@@ -71,6 +71,22 @@ Esiste perché il 2 maggio 2026, dopo il fix del labirinto, l'agent si è fermat
 
 ---
 
+## Agenti specializzati disponibili
+
+In `.claude/agents/` ci sono 5 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
+
+| Agent | Trigger naturali italiani |
+|---|---|
+| `pc-article-reviewer` | "rivedi questo articolo", "controlla il frontmatter", "va bene per pubblicare?" |
+| `pc-image-fixer` | "ecco una foto", "queste immagini", "mettila nell'articolo", "applica fascia blu" |
+| `pc-issue-triage` | "controlla le issue", "fai pulizia tracker", "issue da chiudere?" |
+| `pc-deploy-validator` | "verifica prima del push", "controlla il deploy", "build OK?", "pubblico in sicurezza?" |
+| `pc-social-publisher` | "rivedi le bozze social", "pronti per pubblicare i social?", "controlla immagini Instagram" |
+
+Specifiche operative complete + esempi di workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Quando aggiungi/modifichi un agent, aggiorna anche la Parte 19 e questa tabella.
+
+---
+
 ## Project overview
 
 Static website for the **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, built with Hugo using the custom theme `flavour-pcgenzano` (Bootstrap Italia 2.x).
