@@ -3080,10 +3080,12 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   outline-offset: 3px;
   border-radius: 999px;
 }
-.tts-follow-input:checked ~ .tts-follow-label,
-.tts-follow-input:checked + .tts-follow-label {
-  /* Quando attivo: stile pieno blu istituzionale */
-}
+/* Stato attivo: stile pieno blu istituzionale.
+   Doppia regola per massima compatibilità:
+   - .is-active aggiunta dal JS (universale, sempre funziona)
+   - :has(.tts-follow-input:checked) come fallback CSS-only quando JS è
+     disattivato o il browser ignora la classe per qualche motivo. */
+.tts-follow-toggle.is-active,
 .tts-follow-toggle:has(.tts-follow-input:checked) {
   background: #003366;
   color: #fff;
