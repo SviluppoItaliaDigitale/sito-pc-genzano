@@ -51,6 +51,21 @@
     }
     .round-up .stelle { font-size: 2.5rem; line-height: 1; margin-bottom: .5rem; }
     .round-up .titolo { color: var(--inf-blu); font-weight: 800; font-size: 1.6rem; margin-bottom: .3rem; }
+    .tina-perche {
+      background: #d1e7dd; border: 2px solid #198754;
+      border-radius: 18px; padding: .8rem 1rem;
+      font-size: 1rem; font-weight: 600; color: #0f5132;
+      text-align: center; margin: 1rem 0 0;
+      animation: perche-in .35s ease;
+    }
+    .tina-perche.hide { display: none !important; }
+    @keyframes perche-in {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .tina-perche { animation: none; }
+    }
   </style>
 </head>
 <body class="inf-body" data-coach-game="acchiappa-pericolo">
@@ -79,6 +94,7 @@
         <div class="progress-dots" id="progress" aria-label="Avanzamento gioco"></div>
         <div class="tina-fumetto" id="prompt">Tocca la cosa pericolosa!</div>
         <div class="scena-griglia" id="scena" role="group" aria-label="4 oggetti, tocca quello pericoloso"></div>
+        <div id="perche" class="tina-perche hide" aria-live="polite"></div>
       </div>
 
       <div id="end-screen" class="hide">
@@ -107,6 +123,7 @@
     const POOL = [
       {
         domanda: 'Cosa NON puoi toccare in cucina?',
+        perche: 'La fiamma del fornello scotta tantissimo. Chiama sempre un adulto.',
         items: [
           { emo: '🍎', nome: 'Mela', danger: false },
           { emo: '🍞', nome: 'Pane', danger: false },
@@ -116,6 +133,7 @@
       },
       {
         domanda: 'Cosa è pericoloso a casa?',
+        perche: "La presa elettrica ha la corrente: non infilarci le dita o oggetti.",
         items: [
           { emo: '🧸', nome: 'Orsetto', danger: false },
           { emo: '⚡', nome: 'Presa elettrica', danger: true },
@@ -125,6 +143,7 @@
       },
       {
         domanda: 'Cosa NON puoi prendere?',
+        perche: 'I petardi possono far male alle mani e agli occhi. Solo i grandi li usano.',
         items: [
           { emo: '✏️', nome: 'Matita', danger: false },
           { emo: '🪪', nome: 'Tessera', danger: false },
@@ -133,7 +152,8 @@
         ]
       },
       {
-        domanda: 'Cosa fa pericolo se cammini?',
+        domanda: 'Cosa fa pericolo se cammini in montagna?',
+        perche: 'Sui sentieri di montagna possono cadere sassi: guarda sempre in alto e cammina lontano dalle pareti.',
         items: [
           { emo: '🌳', nome: 'Albero', danger: false },
           { emo: '🪨', nome: 'Sasso che cade', danger: true },
@@ -143,6 +163,7 @@
       },
       {
         domanda: 'Cosa è pericoloso se piove fortissimo?',
+        perche: "L'acqua in strada può nascondere buche profonde o portarti via. Stai lontano e aspetta che smetta.",
         items: [
           { emo: '☔', nome: 'Ombrello', danger: false },
           { emo: '🌊', nome: 'Acqua per strada', danger: true },
@@ -152,6 +173,7 @@
       },
       {
         domanda: 'Cosa NON tocco MAI?',
+        perche: 'Le medicine sembrano caramelle ma fanno male. Solo mamma o papà te le danno quando servono.',
         items: [
           { emo: '🎈', nome: 'Palloncino', danger: false },
           { emo: '💊', nome: 'Medicine', danger: true },
@@ -161,6 +183,7 @@
       },
       {
         domanda: 'Durante un terremoto cosa NON è sicuro?',
+        perche: 'Vicino alla finestra i vetri possono rompersi. Mettiti SOTTO il tavolo finché non finisce la scossa.',
         items: [
           { emo: '🪟', nome: 'Vicino alla finestra', danger: true },
           { emo: '🪑', nome: 'Sotto il tavolo', danger: false },
@@ -170,6 +193,7 @@
       },
       {
         domanda: 'Se piove tantissimo cosa NON faccio?',
+        perche: "I sottopassi allagati nascondono l'acqua: anche le auto galleggiano via. Mai entrarci, neanche a piedi.",
         items: [
           { emo: '🚗', nome: 'Sottopasso allagato', danger: true },
           { emo: '🏠', nome: 'Stare in casa', danger: false },
@@ -179,6 +203,7 @@
       },
       {
         domanda: 'Se sento odore di gas in casa, NON devo:',
+        perche: "Accendere una luce o un fiammifero col gas in aria può far esplodere la cucina. Apri le finestre, esci e chiama il 112.",
         items: [
           { emo: '🚪', nome: 'Aprire le finestre', danger: false },
           { emo: '🔥', nome: 'Accendere la luce', danger: true },
@@ -188,6 +213,7 @@
       },
       {
         domanda: 'Durante un temporale cosa NON tocco?',
+        perche: 'I cavi della TV portano elettricità: durante un temporale i fulmini possono passare attraverso i fili. Stacca tutto e non toccare.',
         items: [
           { emo: '📺', nome: 'Cavi della TV', danger: true },
           { emo: '🛋️', nome: 'Divano', danger: false },
@@ -197,6 +223,7 @@
       },
       {
         domanda: 'In bosco con vento forte cosa fa pericolo?',
+        perche: 'Gli alberi alti con vento forte possono cadere. Allontanati dai boschi e cerca un edificio robusto.',
         items: [
           { emo: '🌲', nome: 'Albero alto che dondola', danger: true },
           { emo: '🍄', nome: 'Funghi sul terreno', danger: false },
@@ -206,6 +233,7 @@
       },
       {
         domanda: 'Quando fa caldissimo, cosa NON faccio?',
+        perche: "Correre al sole nelle ore più calde può farti svenire. Sta all'ombra dalle 11 alle 17 e bevi tanta acqua.",
         items: [
           { emo: '🥤', nome: 'Bere acqua', danger: false },
           { emo: '🧴', nome: 'Crema solare', danger: false },
@@ -215,6 +243,7 @@
       },
       {
         domanda: 'Se vedo fuoco nel bosco cosa faccio SUBITO?',
+        perche: 'Davanti al fuoco non si fanno selfie: il vento può cambiare in un attimo. Allontanati e chiama il 112 con un adulto.',
         items: [
           { emo: '📞', nome: 'Chiamo il 112 con un adulto', danger: false },
           { emo: '🤳', nome: 'Faccio un selfie col fuoco dietro', danger: true },
@@ -279,6 +308,9 @@
         b.addEventListener('click', () => onPick(b, it));
         scenaEl.appendChild(b);
       });
+      // Nascondi spiegazione precedente al cambio scena
+      const perEl = document.getElementById('perche');
+      if (perEl) { perEl.classList.add('hide'); perEl.textContent = ''; }
       locked = false;
       drawProgress();
     }
@@ -286,6 +318,13 @@
     function onPick(btn, it) {
       if (locked) return;
       locked = true;
+      // Mostra spiegazione didattica del PERCHE' della risposta giusta
+      // (sia che il bambino abbia scelto bene sia che abbia sbagliato).
+      const perEl = document.getElementById('perche');
+      if (perEl && SCENE[cur].perche) {
+        perEl.textContent = '💡 ' + SCENE[cur].perche;
+        perEl.classList.remove('hide');
+      }
       if (it.danger) {
         btn.classList.add('correct');
         score++;

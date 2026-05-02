@@ -59,6 +59,21 @@
       transform: rotateY(180deg);
     }
     .mem-card.matched .mem-back { background: #d1e7dd; border-color: var(--inf-verde); }
+    .tina-perche {
+      background: #d1e7dd; border: 2px solid #198754;
+      border-radius: 18px; padding: .8rem 1rem;
+      font-size: 1rem; font-weight: 600; color: #0f5132;
+      text-align: center; margin: 1rem 0 0;
+      animation: perche-in .35s ease;
+    }
+    .tina-perche.hide { display: none !important; }
+    @keyframes perche-in {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .tina-perche { animation: none; }
+    }
   </style>
 </head>
 <body class="inf-body" data-coach-game="memory-facile">
@@ -79,6 +94,7 @@
         <span class="inf-score"><i class="bi bi-heart-fill"></i> Coppie: <span id="count">0</span> / <span id="total">3</span></span>
       </div>
       <div id="grid" class="mem-grid cols-3" role="group" aria-label="Griglia del memory"></div>
+      <div id="perche" class="tina-perche hide" aria-live="polite"></div>
     </div>
 
     <div id="level-up" class="inf-card hide">
@@ -111,15 +127,15 @@
   <script>
   (function(){
     var ICONE_TOTALI = [
-      { emo: '🚑', lbl: 'ambulanza' },
-      { emo: '🚒', lbl: 'pompieri' },
-      { emo: '⛑️', lbl: 'casco' },
-      { emo: '🔦', lbl: 'torcia' },
-      { emo: '🧯', lbl: 'estintore' },
-      { emo: '🚓', lbl: 'polizia' },
-      { emo: '⚠️', lbl: 'attenzione' },
-      { emo: '🚪', lbl: 'uscita' },
-      { emo: '📞', lbl: 'telefono' }
+      { emo: '🚑', lbl: 'ambulanza',  perche: "L'ambulanza porta in ospedale chi sta male." },
+      { emo: '🚒', lbl: 'pompieri',   perche: 'I pompieri spengono il fuoco e salvano le persone.' },
+      { emo: '⛑️', lbl: 'casco',     perche: 'Il casco protegge la testa dei volontari.' },
+      { emo: '🔦', lbl: 'torcia',     perche: 'La torcia fa luce quando manca la corrente.' },
+      { emo: '🧯', lbl: 'estintore',  perche: "L'estintore spegne le piccole fiamme. Solo i grandi lo usano." },
+      { emo: '🚓', lbl: 'polizia',    perche: 'La polizia aiuta a tenere tutti al sicuro.' },
+      { emo: '⚠️', lbl: 'attenzione', perche: 'Il triangolo giallo dice: stai attento, c\'è un pericolo!' },
+      { emo: '🚪', lbl: 'uscita',     perche: "L'uscita di emergenza è la strada per uscire in sicurezza." },
+      { emo: '📞', lbl: 'telefono',   perche: 'Per chiamare aiuto in Italia si fa il 1-1-2.' }
     ];
     var LIVELLI = [
       { coppie: 3, cols: 3 },
@@ -177,6 +193,9 @@
       btn.setAttribute('aria-label', c.lbl);
       if (window.AudioSintetico) { window.AudioSintetico.init(); window.AudioSintetico.tono({freq: 440, durata: 0.1, gain: 0.15}); }
       if (!first){ first = {btn: btn, lbl: c.lbl}; return; }
+      // Nasconde "perche" precedente quando si gira la seconda carta del turno
+      var perBox = document.getElementById('perche');
+      if (perBox) { perBox.classList.add('hide'); perBox.textContent = ''; }
       if (first.lbl === c.lbl){
         first.btn.classList.add('matched');
         btn.classList.add('matched');
@@ -184,8 +203,15 @@
         totaleCoppie++;
         countEl.textContent = matched;
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
+        // Mostra spiegazione didattica della coppia trovata (1 frase per
+        // bambini 3-6 anni). Resta visibile fino alla prossima carta girata.
+        var perEl = document.getElementById('perche');
+        if (perEl && c.perche) {
+          perEl.textContent = '💡 ' + c.emo + ' ' + c.perche;
+          perEl.classList.remove('hide');
+        }
         first = null;
-        if (matched === iconeLivello.length) setTimeout(fineLivello, 700);
+        if (matched === iconeLivello.length) setTimeout(fineLivello, 1800);
       } else {
         lock = true;
         var f = first;

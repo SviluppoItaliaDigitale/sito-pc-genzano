@@ -151,22 +151,38 @@
     var ISO  = '/pittogrammi/iso7010/';
     var ARAS = '/pittogrammi/arasaac/';
     var CATALOGO = {
-      fuoco:     { img: ISO  + 'materiale-infiammabile.svg',  sfondo: 'sfondo-giallo', nome: 'il fuoco' },
-      alta:      { img: ISO  + 'pericolo-elettrico.svg',      sfondo: 'sfondo-giallo', nome: 'l\'alta tensione (la corrente elettrica)' },
-      scivolo:   { img: ISO  + 'pavimento-scivoloso.svg',     sfondo: 'sfondo-giallo', nome: 'attenzione: pavimento scivoloso' },
-      caduta:    { img: ISO  + 'pericolo-generico.svg',       sfondo: 'sfondo-giallo', nome: 'attenzione al rischio di caduta' },
-      fumo:      { img: ISO  + 'vietato-fumare.svg',          sfondo: 'sfondo-rosso',  nome: 'vietato fumare' },
-      entrare:   { img: ISO  + 'vietato-pedoni.svg',          sfondo: 'sfondo-rosso',  nome: 'vietato entrare' },
-      ascensore: { img: ARAS + 'ascensore.png',               sfondo: 'sfondo-rosso',  nome: 'vietato usare l\'ascensore' },
-      mangiare:  { img: ARAS + 'cibo.png',                    sfondo: 'sfondo-rosso',  nome: 'vietato mangiare e bere' },
-      casco:     { img: ISO  + 'casco-protettivo.svg',        sfondo: 'sfondo-blu',    nome: 'mettere il casco' },
-      guanti:    { img: ISO  + 'guanti-protettivi.svg',       sfondo: 'sfondo-blu',    nome: 'mettere i guanti' },
-      mascherina:{ img: ISO  + 'maschera-protettiva.svg',     sfondo: 'sfondo-blu',    nome: 'mettere la mascherina' },
-      croce:     { img: ISO  + 'cassetta-primo-soccorso.svg', sfondo: 'sfondo-verde',  nome: 'il primo soccorso' },
-      raccolta:  { img: ISO  + 'punto-raccolta.svg',          sfondo: 'sfondo-verde',  nome: 'il punto di raccolta' },
-      uscita:    { img: ISO  + 'uscita-emergenza-destra.svg', sfondo: 'sfondo-uscita', nome: 'l\'uscita di emergenza' },
-      estintore: { img: ISO  + 'estintore.svg',               sfondo: 'sfondo-vvf',    nome: 'l\'estintore per spegnere il fuoco' },
-      vvf:       { img: ISO  + 'telefono-antincendio.svg',    sfondo: 'sfondo-vvf',    nome: 'i vigili del fuoco' }
+      fuoco:     { img: ISO  + 'materiale-infiammabile.svg',  sfondo: 'sfondo-giallo', nome: 'il fuoco',
+                   perche: 'I cartelli gialli con il triangolo avvisano di un pericolo: qui il fuoco.' },
+      alta:      { img: ISO  + 'pericolo-elettrico.svg',      sfondo: 'sfondo-giallo', nome: 'l\'alta tensione (la corrente elettrica)',
+                   perche: 'Il fulmine giallo avvisa che lì c\'è la corrente elettrica: non toccare i cavi.' },
+      scivolo:   { img: ISO  + 'pavimento-scivoloso.svg',     sfondo: 'sfondo-giallo', nome: 'attenzione: pavimento scivoloso',
+                   perche: 'Il pavimento bagnato fa scivolare: cammina piano e con scarpe asciutte.' },
+      caduta:    { img: ISO  + 'pericolo-generico.svg',       sfondo: 'sfondo-giallo', nome: 'attenzione al rischio di caduta',
+                   perche: 'Il triangolo con il punto esclamativo dice "stai attento": qui si può cadere.' },
+      fumo:      { img: ISO  + 'vietato-fumare.svg',          sfondo: 'sfondo-rosso',  nome: 'vietato fumare',
+                   perche: 'I cartelli rotondi rossi sono divieti: qui non si può fumare perché può prendere fuoco.' },
+      entrare:   { img: ISO  + 'vietato-pedoni.svg',          sfondo: 'sfondo-rosso',  nome: 'vietato entrare',
+                   perche: 'Il rosso col taglio significa "non fare": qui non puoi entrare perché è pericoloso.' },
+      ascensore: { img: ARAS + 'ascensore.png',               sfondo: 'sfondo-rosso',  nome: 'vietato usare l\'ascensore',
+                   perche: 'Durante un\'emergenza l\'ascensore può bloccarsi: usa sempre le scale.' },
+      mangiare:  { img: ARAS + 'cibo.png',                    sfondo: 'sfondo-rosso',  nome: 'vietato mangiare e bere',
+                   perche: 'In alcuni posti (laboratori, sale operative) non si mangia e non si beve per sicurezza.' },
+      casco:     { img: ISO  + 'casco-protettivo.svg',        sfondo: 'sfondo-blu',    nome: 'mettere il casco',
+                   perche: 'I cartelli blu rotondi sono obblighi: qui devi mettere il casco per proteggere la testa.' },
+      guanti:    { img: ISO  + 'guanti-protettivi.svg',       sfondo: 'sfondo-blu',    nome: 'mettere i guanti',
+                   perche: 'I guanti proteggono le mani da tagli, scottature e materiali sporchi.' },
+      mascherina:{ img: ISO  + 'maschera-protettiva.svg',     sfondo: 'sfondo-blu',    nome: 'mettere la mascherina',
+                   perche: 'La mascherina protegge naso e bocca da fumo, polvere o malattie.' },
+      croce:     { img: ISO  + 'cassetta-primo-soccorso.svg', sfondo: 'sfondo-verde',  nome: 'il primo soccorso',
+                   perche: 'I cartelli verdi indicano un posto di sicurezza: qui ci sono cerotti, bende e medicazioni.' },
+      raccolta:  { img: ISO  + 'punto-raccolta.svg',          sfondo: 'sfondo-verde',  nome: 'il punto di raccolta',
+                   perche: 'Dopo l\'evacuazione tutti vanno qui in fila: serve a contare chi è uscito.' },
+      uscita:    { img: ISO  + 'uscita-emergenza-destra.svg', sfondo: 'sfondo-uscita', nome: 'l\'uscita di emergenza',
+                   perche: 'I cartelli verdi con la freccia indicano la strada più sicura per uscire.' },
+      estintore: { img: ISO  + 'estintore.svg',               sfondo: 'sfondo-vvf',    nome: 'l\'estintore per spegnere il fuoco',
+                   perche: 'I cartelli rossi indicano gli strumenti antincendio: qui c\'è l\'estintore. Solo gli adulti lo usano.' },
+      vvf:       { img: ISO  + 'telefono-antincendio.svg',    sfondo: 'sfondo-vvf',    nome: 'i vigili del fuoco',
+                   perche: 'Il telefono rosso ricorda di chiamare i pompieri: in Italia il numero è 1-1-2.' }
     };
 
     // Pool di 16 domande: ogni partita ne pesca 12 random, divise in 2 round
@@ -284,7 +300,11 @@
       var q = domande[round];
       if (id === q.target) {
         btn.classList.add('correct');
-        feedbackEl.textContent = 'Giusto! Hai trovato ' + CATALOGO[id].nome + '.';
+        // Spiegazione didattica del cartello: 1 frase semplice (3-6 anni)
+        // sul significato del simbolo, non solo la conferma.
+        var perche = CATALOGO[id].perche || '';
+        feedbackEl.innerHTML = 'Giusto! Hai trovato ' + CATALOGO[id].nome + '.' +
+          (perche ? ' <small style="display:block;margin-top:.3rem;font-weight:400;color:#0f5132;">💡 ' + perche + '</small>' : '');
         feedbackEl.style.color = '#198754';
         cartelliEl.querySelectorAll('button').forEach(function (b) { b.disabled = true; if (b !== btn) b.classList.add('dim'); });
         if (window.AudioSintetico) window.AudioSintetico.tono({ freq: 659, durata: 0.18 });
@@ -292,7 +312,7 @@
         setTimeout(function () {
           round++;
           showRound();
-        }, 1100);
+        }, 2400);
       } else {
         errors++;
         btn.classList.add('wrong');
