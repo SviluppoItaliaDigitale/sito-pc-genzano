@@ -124,9 +124,14 @@ Bottone "🔊 Ascolta" nella `.storia-toolbar` di tutte le fiabe in `static/form
 ### Caratteristiche accessibilità (comuni ai tre contesti)
 
 - ARIA: `role=button` o `<button>` nativo, `aria-pressed` o `aria-label` dinamico (idle/speaking), `aria-live=polite` per stato annunciato a screen reader.
-- Tastiera: bottone nativo, attivabile con Enter/Space, focus visibile (`outline 3px #ffbe2e`). Anche i radio del selettore velocità sono tastiera-navigabili.
+- Tastiera: bottone nativo, attivabile con Enter/Space, focus visibile (`outline 3px #ffbe2e`). Anche i radio del selettore velocità e il toggle "Segui parole" sono tastiera-navigabili.
 - Voce italiana: priorità `it-IT`, fallback qualsiasi voce con `lang.startsWith("it")`, fallback voce default browser.
 - Velocità: tre opzioni (**0.75x lento / 0.95x normale / 1.15x veloce**) selezionabili dall'utente accanto al bottone. Persistite in `localStorage` (chiave `pcgenzano-tts-rate`) — la scelta vale per tutte le pagine. Default normale.
+- **"Segui parole" (highlight della parola in lettura)**: toggle accanto al selettore velocità. Quando attivo, la parola attualmente pronunciata dal TTS si evidenzia con `<mark class="tts-word-mark">` (sfondo `#fff3cd`, sottolineatura `#ffbe2e`). Sincronizzazione audio-visiva via evento `SpeechSynthesisUtterance.onboundary` (`event.name === 'word'`). Persistito in `localStorage` (chiave `pcgenzano-tts-follow`). Default OFF (alcuni utenti lo trovano "rumoroso" su pagine lunghe). Beneficio principale: dislessia, italiano L2, anziani che si distraggono, bambini in lettura lenta — gli occhi seguono l'orecchio. Letteratura: Sumner et al. 2013-2018, principio dei software didattici ClaroRead/Read&Write.
+  - **Fallback graceful**: se l'evento `word` non arriva entro 2.5s dall'avvio (Safari iOS ha bug noti), l'highlight si auto-disattiva per la sessione e il TTS continua puro. Niente regressione.
+  - **Varianti CSS** per la toolbar a11y: contrasto invertito (`html.a11y-contrast-invert`), scala grigi (`html.a11y-grayscale`), alto contrasto (`html.a11y-contrast-high`) → palette dedicate per non perdere leggibilità.
+  - **Auto-scroll** centrato sulla parola (`scrollIntoView({ block: 'center' })` con `behavior: smooth`, override `auto` se `prefers-reduced-motion`).
+  - **Override stampa**: il `<mark>` viene resettato in `@media print` per evitare che una stampa avviata durante la lettura mostri evidenziazione gialla casuale.
 - Stati visivi distinti: idle (outline), speaking (riempito + animazione pulse, rispetta `prefers-reduced-motion`).
 - Stop automatico su: page unload, dialog close, ESC, click su altro bottone TTS.
 - Fallback graceful: se browser senza Web Speech API, bottone nascosto via `ttsSupported()`.
