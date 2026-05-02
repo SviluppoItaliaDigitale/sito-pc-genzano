@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'zaino', name: 'Zaino di emergenza', icon: 'bi-backpack2' },
         { id: 'evacuazione', name: 'Evacuazione scuola', icon: 'bi-door-open' },
         { id: 'protezione-civile', name: 'Protezione Civile', icon: 'bi-shield-check' },
-        { id: 'sicurezza', name: 'Sicurezza in casa', icon: 'bi-house-check' }
+        { id: 'sicurezza', name: 'Sicurezza in casa', icon: 'bi-house-check' },
+        { id: 'comunicazione', name: 'Fonti ufficiali e IT-alert', icon: 'bi-broadcast' }
     ];
 
     const questions = [
@@ -1087,6 +1088,98 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'A controllare il Wi-Fi', correct: false }
             ],
             explanation: 'Il rilevatore di fumo è un piccolo apparecchio che suona forte appena sente fumo. Può salvare la vita, soprattutto di notte quando si dorme.'
+        },
+
+        // ═══════════════════════════════════════════════════════════════
+        // CATEGORIA 9: FONTI UFFICIALI E IT-ALERT (8 domande)
+        // ═══════════════════════════════════════════════════════════════
+        {
+            category: 'comunicazione',
+            question: 'Cosa è IT-alert?',
+            answers: [
+                { text: 'Un nuovo gioco di emergenza', correct: false },
+                { text: 'Un messaggio del Governo che arriva su tutti i cellulari nella zona di pericolo', correct: true },
+                { text: 'Una sigla dei volontari', correct: false },
+                { text: 'Una radio per i pompieri', correct: false }
+            ],
+            explanation: 'IT-alert è il sistema italiano di allarme pubblico, attivo dal 2024: il Governo manda un messaggio (cell broadcast) a tutti i cellulari accesi nella zona del pericolo. Arriva anche se non hai i contatti del Comune.'
+        },
+        {
+            category: 'comunicazione',
+            question: 'Tuo cugino ti manda su WhatsApp un messaggio "Allerta rossa! È previsto terremoto stanotte!". Cosa fai?',
+            answers: [
+                { text: 'Lo inoltro a tutti per avvisare', correct: false },
+                { text: 'Vado a dormire fuori casa', correct: false },
+                { text: 'Verifico sul sito del Comune o della Protezione Civile e non lo inoltro', correct: true },
+                { text: 'Chiamo subito il 112 per chiedere conferma', correct: false }
+            ],
+            explanation: 'I terremoti NON si possono prevedere. Ogni "allerta sismica" su WhatsApp è una bufala. Verifica sempre su fonti ufficiali (Comune, DPC, Centro Funzionale Regionale) prima di credere e di inoltrare.'
+        },
+        {
+            category: 'comunicazione',
+            question: 'Quale di queste NON è una fonte ufficiale per le allerte meteo nel Lazio?',
+            answers: [
+                { text: 'Il Centro Funzionale Regionale del Lazio', correct: false },
+                { text: 'Il sito del Dipartimento di Protezione Civile (DPC)', correct: false },
+                { text: 'Il sito del Comune di Genzano', correct: false },
+                { text: 'Un canale Telegram di un meteo amatoriale', correct: true }
+            ],
+            explanation: 'I canali amatoriali e i meteo "sensazionalistici" non sono ufficiali. Le sole fonti affidabili per le allerte sono Centro Funzionale Regionale, DPC e Comune.'
+        },
+        {
+            category: 'comunicazione',
+            question: 'Perché il messaggio di IT-alert arriva fortissimo e non puoi metterlo in silenzio?',
+            answers: [
+                { text: 'Per fare uno scherzo', correct: false },
+                { text: 'Perché in emergenza l\'allarme deve raggiungere TUTTI, anche chi dorme', correct: true },
+                { text: 'Per pubblicizzare il Governo', correct: false },
+                { text: 'Perché è un test', correct: false }
+            ],
+            explanation: 'IT-alert usa un suono forte e una vibrazione speciale che ignora le impostazioni silenziose: in emergenza vera, ogni minuto conta e la notifica deve svegliare anche chi dorme.'
+        },
+        {
+            category: 'comunicazione',
+            question: 'Una signora in metro ti dice che ha visto su Facebook che "il sindaco evacua mezzo paese stanotte". Come reagisci?',
+            answers: [
+                { text: 'La credo subito e lo dico ai miei genitori', correct: false },
+                { text: 'La ignoro completamente', correct: false },
+                { text: 'Le rispondo che è una bufala perché è su Facebook', correct: false },
+                { text: 'Verifico sul sito del Comune o sul canale ufficiale prima di credere', correct: true }
+            ],
+            explanation: 'In emergenza non si crede né si esclude a priori. Si verifica sulle fonti ufficiali. I social non sono fonti ufficiali (anche se a volte le riportano).'
+        },
+        {
+            category: 'comunicazione',
+            question: 'Cosa significa "non amplificare la fake news"?',
+            answers: [
+                { text: 'Non urlare quando la racconti', correct: false },
+                { text: 'Non condividere il post falso, nemmeno per smentirlo', correct: true },
+                { text: 'Mettere il volume basso al video', correct: false },
+                { text: 'Non parlare di politica', correct: false }
+            ],
+            explanation: 'Quando condividi una fake news (anche per criticarla) il post diventa più visibile e raggiunge più persone. Meglio rispondere SENZA citare il post falso, indicando solo la fonte ufficiale corretta.'
+        },
+        {
+            category: 'comunicazione',
+            question: 'In allerta arancione, dove cerchi le indicazioni del Comune di Genzano?',
+            answers: [
+                { text: 'Solo sui giornali del giorno dopo', correct: false },
+                { text: 'Sul sito ufficiale del Comune e sui canali social istituzionali', correct: true },
+                { text: 'Sul gruppo WhatsApp degli amici', correct: false },
+                { text: 'Su Wikipedia', correct: false }
+            ],
+            explanation: 'Il Comune comunica le emergenze sul sito istituzionale e sui canali social ufficiali (verificati con il bollino blu). In più ci sono il sito della Regione Lazio e quello del DPC.'
+        },
+        {
+            category: 'comunicazione',
+            question: 'I codici colore delle allerte meteo (verde/giallo/arancione/rosso) chi li stabilisce per il Lazio?',
+            answers: [
+                { text: 'Il Comune di Genzano', correct: false },
+                { text: 'Il Centro Funzionale Regionale del Lazio', correct: true },
+                { text: 'Il meteo della TV nazionale', correct: false },
+                { text: 'Il Sindaco', correct: false }
+            ],
+            explanation: 'Il Centro Funzionale Regionale (CFR) del Lazio è la struttura tecnica che valuta i bollettini di criticità ed emette i codici colore. Il Comune e il Sindaco poi attivano le misure operative.'
         }
     ];
 

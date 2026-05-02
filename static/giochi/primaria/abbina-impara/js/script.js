@@ -98,6 +98,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 { left: 'Gelo', right: 'Strade scivolose, attenzione al ghiaccio' },
                 { left: 'Vento forte', right: 'Attenzione ad alberi e cartelloni' }
             ]
+        },
+        {
+            title: 'Comunicazione di crisi', icon: '📢',
+            pairs: [
+                { left: 'IT-alert', right: 'SMS d\'emergenza dal Governo a tutti i cellulari nella zona' },
+                { left: 'Fonti ufficiali', right: 'Comune, DPC, Centro Funzionale Regionale' },
+                { left: 'Fake news', right: 'Notizia falsa: verifica prima di credere e di inoltrare' },
+                { left: 'Direttiva Mattarella 2008', right: 'Regole nazionali sulla comunicazione del rischio' },
+                { left: 'Bollettino di criticita', right: 'Documento ufficiale con il codice colore di allerta' },
+                { left: 'Non amplificare', right: 'Non condividere il post falso, neanche per smentirlo' }
+            ]
         }
     ];
 
@@ -112,7 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'Cartelli di sicurezza':  { url: '/pittogrammi/',                        titolo: 'pittogrammi' },
         'Classi di fuoco':        { url: '/rischi-prevenzione/rischio-incendio/',titolo: 'rischio incendio' },
         'Ruoli in emergenza':     { url: '/chi-siamo/',                          titolo: 'chi siamo' },
-        'Meteo e allerte':        { url: '/allerte-meteo/',                      titolo: 'allerte meteo' }
+        'Meteo e allerte':        { url: '/allerte-meteo/',                      titolo: 'allerte meteo' },
+        'Comunicazione di crisi': { url: '/social-media-policy/',                titolo: 'social media policy' }
     };
 
     function shuffle(arr) {
