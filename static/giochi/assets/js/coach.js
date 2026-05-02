@@ -264,16 +264,18 @@
     },
     'memory': {
       fascia: 'primaria',
-      titolo: 'Consigli per il Memory dei Rischi',
-      regola: 'Ogni rischio si abbina a un comportamento di prevenzione.',
+      titolo: 'Consigli per il Memory dei Segnali',
+      regola: 'Ogni segnale ISO 7010 di sicurezza si abbina al comportamento corretto.',
       come: [
-        'Gira una carta e leggi il rischio.',
-        'Pensa: cosa si fa per prevenirlo?',
-        'Cerca la carta gemella che mostra il comportamento.',
-        'Memorizza dove sono le carte già viste.'
+        'Scegli un livello (4, 6 o 8 coppie).',
+        'Gira una carta: è un pittogramma o una frase di comportamento.',
+        'Cerca la coppia: la "Scala antincendio" si abbina a "Mai ascensore se c\'è allarme".',
+        'Dopo ogni coppia leggi la spiegazione del segnale.',
+        'Memorizza dove sono le carte già viste per fare meno mosse.'
       ],
       teoria: [
-        { titolo: 'Rischi e prevenzione', url: '/rischi-prevenzione/' }
+        { titolo: 'Cosa fare adesso', url: '/cosa-fare-adesso/' },
+        { titolo: 'Pittogrammi di sicurezza', url: '/pittogrammi/' }
       ]
     },
     'posiziona-cartelli': {
