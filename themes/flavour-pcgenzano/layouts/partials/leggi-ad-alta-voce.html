@@ -1,7 +1,8 @@
 {{- /*
-  Partial: leggi-ad-alta-voce
-  Bottone "Leggi ad alta voce" che usa Web Speech API (window.speechSynthesis).
-  Cross-browser, voce italiana di default, pause/stop accessibili da tastiera.
+  Partial: leggi-ad-alta-voce (v2.0)
+  Bottone "Leggi ad alta voce" con Web Speech API + selettore velocità
+  (lento 0.75x / normale 0.95x / veloce 1.15x). Preferenza persistita
+  in localStorage (chiave: pcgenzano-tts-rate).
 
   Uso (in qualsiasi template):
     {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".article-body") }}
@@ -12,38 +13,69 @@
   Accessibilità:
     - Bottone con role=button, aria-pressed, aria-label dinamico
     - Stato "in lettura" annunciato a screen reader (aria-live)
-    - Funziona con tastiera (Enter/Space)
-    - Fallback graceful se Web Speech API non supportata (bottone nascosto)
+    - Funziona con tastiera (Enter/Space) sui bottoni di velocità (radio)
+    - Fallback graceful se Web Speech API non supportata (wrapper nascosto)
 
-  Pagine target consigliate: cosa-fare-adesso, numeri-utili, facile-da-leggere,
-  rischi-prevenzione/*, allerte-meteo, comunicazioni con priorita urgente.
+  Default attivo su tutte le pagine (single.html + list.html) con possibilità
+  di opt-out via frontmatter `tts: false` o blacklist hard-coded (legali, tecniche).
 */ -}}
 {{- $selector := .selector | default ".article-body" -}}
 <div class="tts-wrapper" role="region" aria-label="Strumenti di lettura ad alta voce">
-  <button type="button"
-          class="tts-button btn btn-outline-primary btn-sm"
-          data-tts-target="{{ $selector }}"
-          aria-pressed="false"
-          aria-label="Leggi ad alta voce il contenuto della pagina">
-    <i class="bi bi-volume-up-fill me-2" aria-hidden="true"></i>
-    <span class="tts-label">Leggi ad alta voce</span>
-  </button>
+  <div class="tts-controls">
+    <button type="button"
+            class="tts-button btn btn-outline-primary btn-sm"
+            data-tts-target="{{ $selector }}"
+            aria-pressed="false"
+            aria-label="Leggi ad alta voce il contenuto della pagina">
+      <i class="bi bi-volume-up-fill me-2" aria-hidden="true"></i>
+      <span class="tts-label">Leggi ad alta voce</span>
+    </button>
+    <fieldset class="tts-rate" aria-label="Velocità di lettura">
+      <legend class="visually-hidden">Velocità di lettura</legend>
+      <label class="tts-rate-option" title="Lento — utile per anziani, bambini, italiano L2">
+        <input type="radio" name="tts-rate" value="0.75">
+        <span aria-hidden="true">Lento</span>
+        <span class="visually-hidden">Velocità lenta</span>
+      </label>
+      <label class="tts-rate-option" title="Normale">
+        <input type="radio" name="tts-rate" value="0.95" checked>
+        <span aria-hidden="true">Normale</span>
+        <span class="visually-hidden">Velocità normale</span>
+      </label>
+      <label class="tts-rate-option" title="Veloce — per chi conosce bene il testo">
+        <input type="radio" name="tts-rate" value="1.15">
+        <span aria-hidden="true">Veloce</span>
+        <span class="visually-hidden">Velocità veloce</span>
+      </label>
+    </fieldset>
+  </div>
   <span class="tts-status visually-hidden" aria-live="polite" aria-atomic="true"></span>
 </div>
 
 <script>
 (function(){
   if (!('speechSynthesis' in window)) {
-    // Browser senza supporto: nasconde il bottone
     document.querySelectorAll('.tts-wrapper').forEach(function(w){ w.style.display = 'none'; });
     return;
   }
 
   var synth = window.speechSynthesis;
+  var STORAGE_KEY = 'pcgenzano-tts-rate';
+
+  function getSavedRate() {
+    try {
+      var v = parseFloat(localStorage.getItem(STORAGE_KEY) || '');
+      if (v === 0.75 || v === 0.95 || v === 1.15) return v;
+    } catch (e) {}
+    return 0.95;
+  }
+
+  function saveRate(v) {
+    try { localStorage.setItem(STORAGE_KEY, String(v)); } catch (e) {}
+  }
 
   function findItalianVoice() {
     var voices = synth.getVoices();
-    // Priorita: it-IT, poi qualsiasi voce italiana, poi default
     return voices.find(function(v){ return v.lang === 'it-IT'; })
         || voices.find(function(v){ return v.lang && v.lang.startsWith('it'); })
         || voices.find(function(v){ return v.default; })
@@ -53,20 +85,17 @@
 
   function extractText(el) {
     if (!el) return '';
-    // Clona e rimuove elementi non parlabili (script, style, code blocks, link icone, pittogrammi)
     var clone = el.cloneNode(true);
-    clone.querySelectorAll('script, style, .visually-hidden, [aria-hidden="true"], pre, code.language-, .pittogramma, .pittogramma-figure').forEach(function(n){ n.remove(); });
-    // Sostituisce <br> con newline per pause naturali
+    clone.querySelectorAll('script, style, .visually-hidden, [aria-hidden="true"], pre, code.language-, .pittogramma, .pittogramma-figure, .tts-wrapper').forEach(function(n){ n.remove(); });
     clone.querySelectorAll('br').forEach(function(n){ n.replaceWith('\n'); });
     var text = clone.innerText || clone.textContent || '';
-    // Compatta whitespace, preserva paragrafi
     return text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
   }
 
   function setButtonState(btn, state) {
     var label = btn.querySelector('.tts-label');
     var icon = btn.querySelector('i');
-    var status = btn.parentElement.querySelector('.tts-status');
+    var status = btn.closest('.tts-wrapper').querySelector('.tts-status');
     btn.setAttribute('aria-pressed', state === 'reading' ? 'true' : 'false');
     if (state === 'reading') {
       label.textContent = 'Pausa lettura';
@@ -90,6 +119,30 @@
     }
   }
 
+  // Sincronizza i radio button con la preferenza salvata
+  var savedRate = getSavedRate();
+  document.querySelectorAll('.tts-wrapper input[name="tts-rate"]').forEach(function(input){
+    input.checked = (parseFloat(input.value) === savedRate);
+    input.addEventListener('change', function(){
+      if (this.checked) {
+        var newRate = parseFloat(this.value);
+        saveRate(newRate);
+        // Se sta leggendo, riavvia con la nuova velocità dal punto attuale (semplice: dall'inizio)
+        if (synth.speaking || synth.paused) {
+          var btn = this.closest('.tts-wrapper').querySelector('.tts-button');
+          synth.cancel();
+          setButtonState(btn, 'idle');
+          // Trigger immediato per ripartire alla nuova velocità
+          btn.dispatchEvent(new Event('click'));
+        }
+        // Sincronizza altri eventuali wrapper TTS sulla pagina
+        document.querySelectorAll('.tts-wrapper input[name="tts-rate"][value="' + this.value + '"]').forEach(function(other){
+          if (other !== this) other.checked = true;
+        }, this);
+      }
+    });
+  });
+
   document.querySelectorAll('.tts-button').forEach(function(btn){
     var state = 'idle';
     var utterance = null;
@@ -102,13 +155,12 @@
           alert('Nessun testo da leggere su questa pagina.');
           return;
         }
-        // Cancella eventuale lettura precedente
         synth.cancel();
         utterance = new SpeechSynthesisUtterance(text);
         var voice = findItalianVoice();
         if (voice) utterance.voice = voice;
         utterance.lang = 'it-IT';
-        utterance.rate = 0.95;   // poco più lento del default per chiarezza
+        utterance.rate = getSavedRate();
         utterance.pitch = 1;
         utterance.volume = 1;
         utterance.onend = function(){ state = 'idle'; setButtonState(btn, 'idle'); };
@@ -128,7 +180,6 @@
     });
   });
 
-  // Stop globale quando si cambia pagina (evita lettura "fantasma" su SPA)
   window.addEventListener('beforeunload', function(){ synth.cancel(); });
 })();
 </script>

@@ -2972,14 +2972,20 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
 }
 
 /* ============================================================
-   TTS — Pulsante "Leggi ad alta voce" (Web Speech API) v1.0
-   Per pagine con frontmatter tts:true. Posizionato in alto al
-   contenuto, accessibile da tastiera, stati visivi distinti
-   (idle / reading / paused).
+   TTS — Pulsante "Leggi ad alta voce" (Web Speech API) v2.0
+   Default attivo su tutte le pagine (single + list), escluse
+   legali/tecniche via blacklist nel template. Selettore di
+   velocità (lento/normale/veloce) persistito in localStorage.
    ============================================================ */
 .tts-wrapper {
   margin: 0 0 1rem 0;
-  text-align: right;
+}
+.tts-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem 0.75rem;
 }
 .tts-button {
   font-size: 0.92rem;
@@ -2997,11 +3003,123 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   0%, 100% { opacity: 1; }
   50% { opacity: 0.55; }
 }
+
+/* Selettore velocità lettura: gruppo radio stilizzato come segmented control */
+.tts-rate {
+  display: inline-flex;
+  border: 1px solid #003366;
+  border-radius: 6px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+}
+.tts-rate-option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+.tts-rate-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.tts-rate-option > span[aria-hidden="true"] {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.82rem;
+  color: #003366;
+  border-right: 1px solid #003366;
+  transition: background 0.15s ease, color 0.15s ease;
+  user-select: none;
+}
+.tts-rate-option:last-child > span[aria-hidden="true"] {
+  border-right: 0;
+}
+.tts-rate-option input[type="radio"]:checked + span[aria-hidden="true"] {
+  background: #003366;
+  color: #fff;
+  font-weight: 600;
+}
+.tts-rate-option input[type="radio"]:focus-visible + span[aria-hidden="true"] {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+  z-index: 1;
+}
+.tts-rate-option:hover > span[aria-hidden="true"] {
+  background: #f4f7fb;
+}
+.tts-rate-option input[type="radio"]:checked + span[aria-hidden="true"]:hover {
+  background: #002952;
+}
+
+@media (max-width: 576px) {
+  .tts-controls { justify-content: stretch; flex-direction: column; align-items: stretch; }
+  .tts-rate { align-self: flex-end; }
+}
 @media print {
   .tts-wrapper { display: none !important; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tts-button.btn-primary i { animation: none; }
+}
+
+/* ============================================================
+   TEMPO DI LETTURA — meta info sopra l'articolo (v1.0)
+   Etichetta discreta che riduce l'ansia da "muro di testo"
+   per anziani, dislessici, italiano L2. Usa Hugo .ReadingTime
+   (200 parole/min). Mostrata solo se WordCount > 30.
+   ============================================================ */
+.reading-meta {
+  margin-bottom: 0.75rem;
+  font-size: 0.88rem;
+  color: #555;
+}
+.reading-time {
+  display: inline-flex;
+  align-items: center;
+  background: #f4f7fb;
+  border: 1px solid #d6dde8;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  color: #003366;
+}
+.reading-time strong {
+  color: #003366;
+  font-weight: 600;
+  margin-left: 0.15rem;
+}
+@media print {
+  .reading-meta { display: none !important; }
+}
+
+/* ============================================================
+   SILLABAZIONE AUTOMATICA — corpo articolo (v1.0)
+   Spezza le parole lunghe a fine riga (regole italiane via
+   lang="it" del <html>). Beneficio cognitivo per dislessici
+   e parlanti italiano L2: meno scoglioni a fine riga, ritmo
+   di lettura più uniforme. Solo testo flow, mai tabelle/code.
+   ============================================================ */
+.article-body,
+.list-intro-content {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  hyphenate-limit-chars: 6 3 3; /* min word len, min chars before, min chars after */
+}
+.article-body pre,
+.article-body code,
+.article-body table,
+.article-body .no-hyphens,
+.list-intro-content pre,
+.list-intro-content code,
+.list-intro-content table,
+.list-intro-content .no-hyphens {
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
 }
 
 /* ============================================================
