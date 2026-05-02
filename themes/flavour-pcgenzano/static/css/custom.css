@@ -2972,14 +2972,20 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
 }
 
 /* ============================================================
-   TTS — Pulsante "Leggi ad alta voce" (Web Speech API) v1.0
-   Per pagine con frontmatter tts:true. Posizionato in alto al
-   contenuto, accessibile da tastiera, stati visivi distinti
-   (idle / reading / paused).
+   TTS — Pulsante "Leggi ad alta voce" (Web Speech API) v2.0
+   Default attivo su tutte le pagine (single + list), escluse
+   legali/tecniche via blacklist nel template. Selettore di
+   velocità (lento/normale/veloce) persistito in localStorage.
    ============================================================ */
 .tts-wrapper {
   margin: 0 0 1rem 0;
-  text-align: right;
+}
+.tts-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem 0.75rem;
 }
 .tts-button {
   font-size: 0.92rem;
@@ -2997,11 +3003,414 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   0%, 100% { opacity: 1; }
   50% { opacity: 0.55; }
 }
+
+/* Selettore velocità lettura: gruppo radio stilizzato come segmented control */
+.tts-rate {
+  display: inline-flex;
+  border: 1px solid #003366;
+  border-radius: 6px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+}
+.tts-rate-option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+.tts-rate-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.tts-rate-option > span[aria-hidden="true"] {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.82rem;
+  color: #003366;
+  border-right: 1px solid #003366;
+  transition: background 0.15s ease, color 0.15s ease;
+  user-select: none;
+}
+.tts-rate-option:last-child > span[aria-hidden="true"] {
+  border-right: 0;
+}
+.tts-rate-option input[type="radio"]:checked + span[aria-hidden="true"] {
+  background: #003366;
+  color: #fff;
+  font-weight: 600;
+}
+.tts-rate-option input[type="radio"]:focus-visible + span[aria-hidden="true"] {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+  z-index: 1;
+}
+.tts-rate-option:hover > span[aria-hidden="true"] {
+  background: #f4f7fb;
+}
+.tts-rate-option input[type="radio"]:checked + span[aria-hidden="true"]:hover {
+  background: #002952;
+}
+
+/* Toggle "Segui parole" — checkbox stilizzata come pillola */
+.tts-follow-toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: #003366;
+  border: 1px solid #003366;
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  user-select: none;
+  background: #fff;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.tts-follow-toggle:hover { background: #f4f7fb; }
+.tts-follow-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.tts-follow-input:focus-visible + .tts-follow-label {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+.tts-follow-input:checked ~ .tts-follow-label,
+.tts-follow-input:checked + .tts-follow-label {
+  /* Quando attivo: stile pieno blu istituzionale */
+}
+.tts-follow-toggle:has(.tts-follow-input:checked) {
+  background: #003366;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .tts-controls { justify-content: stretch; flex-direction: column; align-items: stretch; }
+  .tts-rate, .tts-follow-toggle { align-self: flex-end; }
+}
 @media print {
   .tts-wrapper { display: none !important; }
 }
 @media (prefers-reduced-motion: reduce) {
   .tts-button.btn-primary i { animation: none; }
+}
+
+/* ============================================================
+   TTS WORD HIGHLIGHT — evidenziazione parola in lettura (v1.0)
+   <mark class="tts-word-mark"> avvolge la parola corrente quando
+   il toggle "Segui parole" è attivo. L'elemento è temporaneo e
+   viene rimosso non appena la parola successiva entra in lettura.
+
+   Beneficiari: dislessici, parlanti italiano L2, anziani che si
+   distraggono, bambini in lettura lenta. La sincronizzazione
+   audio-visiva è il principio dei software didattici come
+   ClaroRead/Read&Write.
+
+   Compat: usa <mark> nativo HTML5. Override di colore/sfondo
+   per non confondersi con altre evidenziazioni (es. risultato
+   ricerca interna, che non usa <mark>).
+   ============================================================ */
+.article-body mark.tts-word-mark,
+.list-intro-content mark.tts-word-mark,
+mark.tts-word-mark {
+  background: #fff3cd;
+  color: inherit;
+  border-bottom: 2px solid #ffbe2e;
+  padding: 0 1px;
+  border-radius: 2px;
+  /* Animazione morbida: niente flicker brusco quando si sposta */
+  transition: background-color 0.12s ease;
+  /* Importante: niente box-shadow né transform che causino reflow */
+}
+@media (prefers-reduced-motion: reduce) {
+  mark.tts-word-mark { transition: none; }
+}
+
+/* Variante per toolbar a11y "Contrasto invertito" (sfondo nero) */
+html.a11y-contrast-invert mark.tts-word-mark,
+html.a11y-contrast-invert .article-body mark.tts-word-mark,
+html.a11y-contrast-invert .list-intro-content mark.tts-word-mark {
+  background: #ffd700;
+  color: #000;
+  border-bottom-color: #ff8c00;
+}
+
+/* Variante per toolbar a11y "Scala di grigi" (mantiene contrasto) */
+html.a11y-grayscale mark.tts-word-mark,
+html.a11y-grayscale .article-body mark.tts-word-mark,
+html.a11y-grayscale .list-intro-content mark.tts-word-mark {
+  background: #d9d9d9;
+  border-bottom-color: #666;
+}
+
+/* Variante per toolbar a11y "Alto contrasto" (giallo su nero) */
+html.a11y-contrast-high mark.tts-word-mark,
+html.a11y-contrast-high .article-body mark.tts-word-mark,
+html.a11y-contrast-high .list-intro-content mark.tts-word-mark {
+  background: #ffeb3b;
+  color: #000;
+  border-bottom: 3px solid #000;
+}
+
+/* In stampa il <mark> potrebbe essere sopravvissuto se l'utente
+   stampa mentre il TTS sta leggendo: forziamo il reset. */
+@media print {
+  mark.tts-word-mark {
+    background: transparent !important;
+    border-bottom: none !important;
+    color: inherit !important;
+  }
+}
+
+/* ============================================================
+   GLOSSARIO INLINE — termini cliccabili con popover (v1.0)
+   La prima occorrenza di ogni termine PC nelle pagine viene
+   sostituita da un <button> con popover che mostra una breve
+   definizione e linka al glossario completo. Pattern WAI-ARIA:
+   button con aria-expanded + popover role=tooltip.
+
+   Beneficiari: cittadini non tecnici che incontrano sigle
+   specialistiche (DPC, COC, AeDES, IT-alert…). Aiuta italiano
+   L2, anziani e persone in stress da emergenza che non si
+   ricordano cosa significhi una sigla.
+   ============================================================ */
+.gloss-wrap {
+  position: relative;
+  display: inline;
+  white-space: normal;
+}
+.gloss-term {
+  /* Reset bottone → look "termine sottolineato tratteggiato" */
+  display: inline;
+  background: transparent;
+  border: 0;
+  padding: 0 1px;
+  margin: 0;
+  font: inherit;
+  color: #003366;
+  cursor: help;
+  text-decoration: underline dotted #003366;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  border-radius: 2px;
+  transition: background-color 0.15s ease;
+}
+.gloss-term:hover,
+.gloss-term[aria-expanded="true"] {
+  background: #eaf1fb;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+}
+.gloss-term:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+  background: #eaf1fb;
+}
+.gloss-icon {
+  display: inline-block;
+  font-size: 0.78em;
+  color: #003366;
+  margin-left: 1px;
+  vertical-align: super;
+  line-height: 1;
+  opacity: 0.75;
+}
+.gloss-term:hover .gloss-icon,
+.gloss-term[aria-expanded="true"] .gloss-icon {
+  opacity: 1;
+}
+
+/* Popover: sotto al button by default, flip sopra se overflow */
+.gloss-popover {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 1080; /* sopra header/cookie banner */
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 240px;
+  max-width: min(360px, 90vw);
+  padding: 0.7rem 0.85rem;
+  background: #fff;
+  border: 1px solid #c9d3e3;
+  border-left: 4px solid #003366;
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(0, 51, 102, 0.18);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #1a1a1a;
+  /* L'elemento è inline-flex content all'interno: serve normalize */
+  white-space: normal;
+  text-align: left;
+  text-decoration: none;
+  /* Triangolo che punta al termine */
+}
+.gloss-popover::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-left: 1px solid #c9d3e3;
+  border-top: 1px solid #c9d3e3;
+  transform: rotate(45deg);
+}
+.gloss-popover.is-flipped-up {
+  top: auto;
+  bottom: calc(100% + 6px);
+}
+.gloss-popover.is-flipped-up::before {
+  top: auto;
+  bottom: -7px;
+  border-left: 0;
+  border-top: 0;
+  border-right: 1px solid #c9d3e3;
+  border-bottom: 1px solid #c9d3e3;
+}
+.gloss-popover-def {
+  display: block;
+  color: #1a1a1a;
+}
+.gloss-popover-link {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #003366;
+  text-decoration: underline;
+  align-self: flex-start;
+}
+.gloss-popover-link:hover,
+.gloss-popover-link:focus {
+  text-decoration: underline;
+  color: #002952;
+}
+
+/* Mobile: il popover diventa più compatto */
+@media (max-width: 576px) {
+  .gloss-popover {
+    min-width: 200px;
+    max-width: calc(100vw - 32px);
+    font-size: 0.88rem;
+  }
+}
+
+/* Stampa: rimuove il bottone-stile e il popover, lascia solo il termine
+   come testo normale (la pagina stampata non ha tooltip interattivi) */
+@media print {
+  .gloss-term {
+    color: inherit !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    cursor: text !important;
+  }
+  .gloss-icon { display: none !important; }
+  .gloss-popover { display: none !important; }
+}
+
+/* Toolbar a11y: contrasto invertito (sfondo nero) */
+html.a11y-contrast-invert .gloss-term {
+  color: #ffd700;
+  text-decoration-color: #ffd700;
+}
+html.a11y-contrast-invert .gloss-popover {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #ffd700;
+  border-left-color: #ffd700;
+}
+html.a11y-contrast-invert .gloss-popover::before {
+  background: #1a1a1a;
+  border-color: #ffd700;
+}
+html.a11y-contrast-invert .gloss-popover-def {
+  color: #fff;
+}
+html.a11y-contrast-invert .gloss-popover-link {
+  color: #ffd700;
+}
+
+/* Toolbar a11y: alto contrasto (giallo su nero) */
+html.a11y-contrast-high .gloss-term {
+  color: #000;
+  text-decoration: underline solid #000;
+  text-decoration-thickness: 2px;
+}
+html.a11y-contrast-high .gloss-popover {
+  background: #fffbcf;
+  border: 2px solid #000;
+  border-left: 4px solid #000;
+  color: #000;
+}
+
+/* prefers-reduced-motion: niente transizioni */
+@media (prefers-reduced-motion: reduce) {
+  .gloss-term { transition: none; }
+}
+
+/* ============================================================
+   TEMPO DI LETTURA — meta info sopra l'articolo (v1.0)
+   Etichetta discreta che riduce l'ansia da "muro di testo"
+   per anziani, dislessici, italiano L2. Usa Hugo .ReadingTime
+   (200 parole/min). Mostrata solo se WordCount > 30.
+   ============================================================ */
+.reading-meta {
+  margin-bottom: 0.75rem;
+  font-size: 0.88rem;
+  color: #555;
+}
+.reading-time {
+  display: inline-flex;
+  align-items: center;
+  background: #f4f7fb;
+  border: 1px solid #d6dde8;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  color: #003366;
+}
+.reading-time strong {
+  color: #003366;
+  font-weight: 600;
+  margin-left: 0.15rem;
+}
+@media print {
+  .reading-meta { display: none !important; }
+}
+
+/* ============================================================
+   SILLABAZIONE AUTOMATICA — corpo articolo (v1.0)
+   Spezza le parole lunghe a fine riga (regole italiane via
+   lang="it" del <html>). Beneficio cognitivo per dislessici
+   e parlanti italiano L2: meno scoglioni a fine riga, ritmo
+   di lettura più uniforme. Solo testo flow, mai tabelle/code.
+   ============================================================ */
+.article-body,
+.list-intro-content {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  hyphenate-limit-chars: 6 3 3; /* min word len, min chars before, min chars after */
+}
+.article-body pre,
+.article-body code,
+.article-body table,
+.article-body .no-hyphens,
+.list-intro-content pre,
+.list-intro-content code,
+.list-intro-content table,
+.list-intro-content .no-hyphens {
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
 }
 
 /* ============================================================

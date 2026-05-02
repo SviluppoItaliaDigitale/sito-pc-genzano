@@ -1,0 +1,39 @@
+{{- /*
+  Partial: glossario-inline
+  Inietta i dati di data/glossario.yaml come JSON globale
+  (window.PCGENZANO_GLOSSARIO) e carica static/js/glossario-inline.js.
+
+  Il JS al DOMContentLoaded scansiona .article-body e .list-intro-content
+  e sostituisce la prima occorrenza di ogni termine con un <button> +
+  popover accessibile (definizione + link al glossario completo).
+
+  Cross-baseURL: i link nel YAML iniziano con `/`, qui passano per
+  relURL così il subpath di GitHub Pages funziona uniformemente con
+  Aruba (root). Strip del leading `/` prima del relURL come fa il
+  render-link hook del tema.
+
+  Inclusione raccomandata: dentro single.html e list.html, con stessa
+  condizione del TTS (default ON, blacklist pagine legali/tecniche).
+  La logica di blacklist resta nei template chiamanti, non qui.
+*/ -}}
+{{- $glossario := site.Data.glossario -}}
+{{- if $glossario -}}
+{{- $entries := slice -}}
+{{- range $glossario -}}
+  {{- $rawLink := .link | default "" -}}
+  {{- $relLink := strings.TrimPrefix "/" $rawLink -}}
+  {{- $absLink := cond (eq $rawLink "") "" ($relLink | relURL) -}}
+  {{- $entry := dict
+      "id" .id
+      "termine" .termine
+      "varianti" .varianti
+      "definizione" .definizione
+      "link" $absLink -}}
+  {{- $entries = $entries | append $entry -}}
+{{- end -}}
+<script>
+/* Glossario inline — dati statici dal build Hugo */
+window.PCGENZANO_GLOSSARIO = {{ $entries | jsonify | safeJS }};
+</script>
+<script src="{{ "js/glossario-inline.js" | relURL }}" defer></script>
+{{- end -}}

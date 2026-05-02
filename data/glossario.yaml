@@ -1,0 +1,525 @@
+# ============================================================
+# Glossario inline — voci con tooltip che il JS sostituisce
+# automaticamente nella prima occorrenza in .article-body e
+# .list-intro-content delle pagine Hugo.
+#
+# REGOLA COPYRIGHT (vincolo del progetto):
+#   Le definizioni qui scritte sono parafrasi originali del
+#   Gruppo Comunale, basate sul glossario interno
+#   `content/glossario/_index.md` e sul glossario DPC pubblico
+#   (opera della PA italiana → libera, art. 5 L. 633/1941).
+#   Nessun testo è copiato da Treccani o altre opere protette.
+#
+# COME AGGIUNGERE UNA VOCE:
+#   - id: identificatore univoco minuscolo, da usare nell'anchor
+#         del glossario completo (es. coc → /glossario/#coc)
+#   - termine: la parola/sigla che appare visibile nel testo
+#             quando il match scatta (case originale del match)
+#   - varianti: lista di stringhe da matchare. Tutte le forme
+#               grammaticali e le espressioni complete della sigla.
+#               Match case-insensitive, word-boundary regex.
+#   - definizione: 1-2 frasi, voce attiva, frasi <20 parole,
+#                  italiano AGID. Max ~200 caratteri (sta nel tooltip).
+#   - link: URL della voce completa nel /glossario/.
+#
+# REGOLE DI MATCH:
+#   - Solo PRIMA occorrenza per articolo (un termine non si
+#     evidenzia 10 volte di fila — sarebbe rumore visivo).
+#   - Mai dentro <a>, <button>, <code>, <pre>, <h1>, <kbd>,
+#     [aria-hidden=true], .no-gloss, .tts-wrapper.
+#   - Se il termine è già parte di un link/bottone esistente,
+#     non viene riprocessato.
+# ============================================================
+
+- id: dpc
+  termine: "DPC"
+  varianti:
+    - "DPC"
+    - "Dipartimento della Protezione Civile"
+    - "Dipartimento di Protezione Civile"
+  definizione: "Dipartimento della Protezione Civile: struttura della Presidenza del Consiglio che coordina il Servizio Nazionale di Protezione Civile."
+  link: "/glossario/#dpc"
+
+- id: coc
+  termine: "COC"
+  varianti:
+    - "COC"
+    - "Centro Operativo Comunale"
+  definizione: "Centro Operativo Comunale: la sala operativa che il Sindaco attiva per gestire un'emergenza sul territorio comunale."
+  link: "/glossario/#coc-centro-operativo-comunale"
+
+- id: coi
+  termine: "COI"
+  varianti:
+    - "COI"
+    - "Centro Operativo Intercomunale"
+  definizione: "Centro Operativo Intercomunale: coordina più Comuni vicini in un'emergenza estesa. Genzano fa parte del 15° COI Castelli Romani Sud."
+  link: "/glossario/#coi-centro-operativo-intercomunale"
+
+- id: nue
+  termine: "NUE"
+  varianti:
+    - "NUE"
+    - "Numero Unico Emergenze"
+    - "Numero Unico Europeo"
+  definizione: "Numero Unico Emergenze 112: dal 2017 è l'unico numero da chiamare per qualsiasi emergenza nel Lazio. Smista la chiamata all'ente competente."
+  link: "/glossario/#nue-112"
+
+- id: cfr
+  termine: "CFR"
+  varianti:
+    - "CFR"
+    - "Centro Funzionale Regionale"
+  definizione: "Centro Funzionale Regionale: emette il bollettino di criticità giornaliero per il Lazio (verde, giallo, arancione, rosso)."
+  link: "/glossario/#centro-funzionale-regionale-cfr"
+
+- id: aedes
+  termine: "AeDES"
+  varianti:
+    - "AeDES"
+  definizione: "Scheda Agibilità e Danno nell'Emergenza Sismica: tecnici qualificati la compilano dopo un terremoto per dichiarare un edificio agibile, parzialmente agibile o inagibile."
+  link: "/glossario/#aedes"
+
+- id: aib
+  termine: "AIB"
+  varianti:
+    - "AIB"
+    - "Antincendio Boschivo"
+  definizione: "Antincendio Boschivo: prevenzione, avvistamento e spegnimento degli incendi nei boschi. Stagione AIB nel Lazio: giugno-settembre."
+  link: "/glossario/#aib"
+
+- id: area-attesa
+  termine: "Area di Attesa"
+  varianti:
+    - "Area di Attesa"
+    - "Aree di Attesa"
+    - "Area Attesa"
+  definizione: "Punto sicuro dove la popolazione si raduna nelle prime fasi di un'emergenza, in attesa di indicazioni. A Genzano sono numerate AA1, AA2…"
+  link: "/glossario/#aa-area-di-attesa"
+
+- id: area-ricovero
+  termine: "Area di Ricovero"
+  varianti:
+    - "Area di Ricovero"
+    - "Aree di Ricovero"
+  definizione: "Aree dove si allestiscono tende o moduli abitativi per ospitare la popolazione evacuata, anche per settimane o mesi."
+  link: "/glossario/#ar-area-di-ricovero"
+
+- id: area-ammassamento
+  termine: "Area di Ammassamento"
+  varianti:
+    - "Area di Ammassamento"
+    - "Area di Ammassamento Soccorritori"
+    - "Aree di Ammassamento"
+  definizione: "Spazio dove si concentrano uomini, mezzi e materiali in arrivo da fuori comune per supportare un'emergenza. A Genzano: AS1 e AS2."
+  link: "/glossario/#as-area-di-ammassamento-soccorritori"
+
+- id: dicomac
+  termine: "DICOMAC"
+  varianti:
+    - "DICOMAC"
+  definizione: "Direzione Comando e Controllo: struttura nazionale di coordinamento operativo che il DPC attiva sul luogo di un'emergenza di rilevanza nazionale."
+  link: "/glossario/#dicomac"
+
+- id: codice-pc
+  termine: "Codice della Protezione Civile"
+  varianti:
+    - "Codice della Protezione Civile"
+    - "Codice di Protezione Civile"
+    - "D.Lgs. 1/2018"
+    - "D.Lgs. 2 gennaio 2018 n. 1"
+  definizione: "D.Lgs. 1/2018: la legge che regola tutto il Sistema Nazionale di Protezione Civile (chi fa cosa, le 4 attività, diritti dei volontari)."
+  link: "/glossario/#codice-della-protezione-civile"
+
+- id: it-alert
+  termine: "IT-alert"
+  varianti:
+    - "IT-alert"
+    - "ITalert"
+    - "IT Alert"
+  definizione: "Sistema di allarme pubblico nazionale: il DPC invia messaggi al cellulare nelle aree colpite da un'emergenza grave (terremoti, eruzioni, dighe)."
+  link: "/glossario/#it-alert"
+
+- id: bollettino-criticita
+  termine: "Bollettino di criticità"
+  varianti:
+    - "Bollettino di criticità"
+    - "Bollettino di criticità idrogeologica e idraulica"
+    - "Bollettino criticità"
+  definizione: "Documento del CFR emesso ogni giorno entro le 14:00, valido 24-36 ore. Indica il livello di rischio idrogeologico, idraulico e temporali."
+  link: "/glossario/#bollettino-di-criticita-idrogeologica-e-idraulica"
+
+- id: pec
+  termine: "PEC"
+  varianti:
+    - "Piano di Emergenza Comunale"
+    - "Piano Comunale di Protezione Civile"
+  definizione: "Piano di Emergenza Comunale: il documento del Comune che descrive scenari di rischio, aree di attesa, attivazione del COC e ruoli operativi."
+  link: "/glossario/#piano-di-emergenza-comunale"
+
+- id: pai
+  termine: "PAI"
+  varianti:
+    - "PAI"
+    - "Piano di Assetto Idrogeologico"
+  definizione: "Piano di Assetto Idrogeologico: mappa frane, alluvioni e dissesti del territorio. Definisce dove si può e non si può costruire."
+  link: "/glossario/#pai"
+
+- id: dpi
+  termine: "DPI"
+  varianti:
+    - "DPI"
+    - "Dispositivi di Protezione Individuale"
+  definizione: "Dispositivi di Protezione Individuale: caschi, guanti, scarpe antinfortunistiche, giubbotti alta visibilità che il volontario indossa in attivazione."
+  link: "/glossario/#dpi"
+
+- id: dvr
+  termine: "DVR"
+  varianti:
+    - "DVR"
+    - "Documento di Valutazione dei Rischi"
+  definizione: "Documento di Valutazione dei Rischi: obbligatorio per ogni datore di lavoro (D.Lgs. 81/2008). Nelle scuole è la base del piano di evacuazione."
+  link: "/glossario/#dvr"
+
+- id: copernicus-ems
+  termine: "Copernicus EMS"
+  varianti:
+    - "Copernicus EMS"
+    - "Copernicus Emergency Management Service"
+  definizione: "Emergency Management Service della Commissione Europea: fornisce mappe satellitari rapide dopo grandi emergenze (alluvioni, incendi estesi, terremoti)."
+  link: "/glossario/#copernicus-ems"
+
+- id: colonna-mobile
+  termine: "Colonna Mobile"
+  varianti:
+    - "Colonna Mobile"
+    - "Colonna mobile"
+  definizione: "Mezzi, attrezzature e personale che una Regione invia in un'altra Regione colpita da emergenza grave. Mobilitabile in poche ore."
+  link: "/glossario/#colonna-mobile"
+
+- id: arpa-lazio
+  termine: "ARPA Lazio"
+  varianti:
+    - "ARPA Lazio"
+  definizione: "Agenzia Regionale per la Protezione dell'Ambiente del Lazio: monitora aria, acqua, rumore, radiazioni. In emergenza fornisce dati a DPC e Regione."
+  link: "/glossario/#arpa-lazio"
+
+- id: ares-118
+  termine: "ARES 118"
+  varianti:
+    - "ARES 118"
+    - "ARES Lazio"
+  definizione: "Azienda Regionale Emergenza Sanitaria del Lazio: gestisce l'emergenza sanitaria territoriale. Per chiamare: NUE 112 (non più direttamente il 118)."
+  link: "/glossario/#ares-118"
+
+- id: bradisismo
+  termine: "Bradisismo"
+  varianti:
+    - "Bradisismo"
+  definizione: "Lento sollevamento o abbassamento del suolo dovuto ad attività vulcanica. Esempio italiano: i Campi Flegrei in Campania."
+  link: "/glossario/#bradisismo"
+
+- id: vulnerabilita
+  termine: "Vulnerabilità"
+  varianti:
+    - "vulnerabilità"
+  definizione: "Capacità di resistere all'evento dannoso. Un edificio antisismico è meno vulnerabile, una persona anziana è più vulnerabile a un'ondata di calore."
+  link: "/glossario/#rischio"
+
+- id: pericolosita
+  termine: "Pericolosità"
+  varianti:
+    - "pericolosità"
+  definizione: "Probabilità che un evento dannoso (terremoto, alluvione) si verifichi in una certa area in un certo tempo. È un dato del territorio."
+  link: "/glossario/#rischio"
+
+- id: resilienza
+  termine: "Resilienza"
+  varianti:
+    - "resilienza"
+  definizione: "Capacità di una comunità di assorbire un evento avverso, riorganizzarsi e tornare a funzionare. Si costruisce con prevenzione, formazione, pianificazione."
+  link: "/glossario/#resilienza"
+
+- id: allerta
+  termine: "allerta"
+  varianti:
+    - "allerta"
+    - "allerta meteo"
+    - "allerta meteorologica"
+  definizione: "Stato di attenzione comunicato dalle autorità prima che un evento si verifichi. Quattro livelli: verde, gialla, arancione, rossa. Diversa da emergenza."
+  link: "/glossario/#allerta"
+
+- id: emergenza
+  termine: "emergenza"
+  varianti:
+    - "emergenza"
+  definizione: "Situazione in cui un evento sta accadendo adesso e impone risposte immediate. Il Codice PC distingue tre tipi: A comunale, B regionale, C nazionale."
+  link: "/glossario/#emergenza"
+
+- id: evacuazione
+  termine: "Evacuazione"
+  varianti:
+    - "evacuazione"
+  definizione: "Allontanamento ordinato della popolazione da un'area a rischio verso aree sicure (di norma le aree di attesa del Piano Comunale)."
+  link: "/glossario/#evacuazione"
+
+- id: esercitazione
+  termine: "Esercitazione"
+  varianti:
+    - "esercitazione"
+  definizione: "Simulazione di emergenza per verificare piani e procedure. Può essere per posti di comando (solo decisori) o in pieno scenario (con uomini e mezzi reali)."
+  link: "/glossario/#esercitazione"
+
+- id: ingv
+  termine: "INGV"
+  varianti:
+    - "INGV"
+    - "Istituto Nazionale di Geofisica e Vulcanologia"
+  definizione: "Istituto Nazionale di Geofisica e Vulcanologia: monitora terremoti e vulcani in Italia 24/7. Pubblica le prime info dopo ogni scossa rilevante."
+  link: "/glossario/#ingv"
+
+- id: ispra
+  termine: "ISPRA"
+  varianti:
+    - "ISPRA"
+    - "Istituto Superiore per la Protezione e la Ricerca Ambientale"
+  definizione: "Istituto Superiore per la Protezione e la Ricerca Ambientale: gestisce dati nazionali su frane, alluvioni, costa, suolo. Pubblica il rapporto IdroGEO."
+  link: "/glossario/#ispra"
+
+- id: magnitudo
+  termine: "Magnitudo"
+  varianti:
+    - "magnitudo"
+  definizione: "Misura dell'energia liberata da un terremoto, calcolata dagli strumenti. Scala logaritmica: ogni unità in più moltiplica l'energia per ~32 volte."
+  link: "/glossario/#magnitudo"
+
+- id: intensita-sismica
+  termine: "Intensità"
+  varianti:
+    - "intensità sismica"
+    - "scala Mercalli"
+    - "scala MCS"
+    - "scala MSK"
+    - "scala EMS-98"
+  definizione: "Misura degli effetti del terremoto sull'uomo, sugli edifici e sull'ambiente. Diversa dalla magnitudo: si valuta osservando i danni, non con strumenti."
+  link: "/glossario/#intensita-sismica"
+
+- id: epicentro
+  termine: "Epicentro"
+  varianti:
+    - "epicentro"
+  definizione: "Punto in superficie sulla verticale dell'ipocentro: l'area più vicina alla sorgente del terremoto. Spesso coincide con la zona di maggiore danno."
+  link: "/glossario/#epicentro-e-ipocentro"
+
+- id: ipocentro
+  termine: "Ipocentro"
+  varianti:
+    - "ipocentro"
+    - "fuoco sismico"
+  definizione: "Punto in profondità dove si genera il terremoto, dentro la crosta terrestre. La distanza dal suolo si chiama profondità ipocentrale."
+  link: "/glossario/#epicentro-e-ipocentro"
+
+- id: shakemap
+  termine: "ShakeMap"
+  varianti:
+    - "ShakeMap"
+  definizione: "Mappa che mostra l'intensità di scuotimento del terreno dopo un terremoto, calcolata in pochi minuti da INGV o USGS sulla base delle stazioni sismiche."
+  link: "/glossario/#shakemap"
+
+- id: sciame-sismico
+  termine: "Sciame sismico"
+  varianti:
+    - "sciame sismico"
+  definizione: "Sequenza di molte scosse di magnitudo simile, in un'area ristretta, in giorni o settimane. Non sempre indica un terremoto maggiore in arrivo."
+  link: "/glossario/#sciame-sismico"
+
+- id: faglia
+  termine: "Faglia"
+  varianti:
+    - "faglia"
+  definizione: "Frattura nella crosta terrestre lungo cui si muovono le rocce. Quando il movimento è brusco si genera un terremoto. L'Italia centrale ne è ricca."
+  link: "/glossario/#faglia"
+
+- id: where-are-u
+  termine: "Where Are U"
+  varianti:
+    - "Where Are U"
+    - "WhereAreU"
+  definizione: "App ufficiale del NUE 112: invia automaticamente la tua posizione all'operatore di Centrale Unica quando chiami in emergenza. Gratuita per Android e iOS."
+  link: "/glossario/#where-are-u"
+
+- id: cell-broadcast
+  termine: "Cell Broadcast"
+  varianti:
+    - "Cell Broadcast"
+    - "Cell-Broadcast"
+  definizione: "Tecnologia che invia un messaggio a tutti i cellulari connessi alle antenne di una zona, senza usare la rubrica. È la base di IT-alert."
+  link: "/glossario/#cell-broadcast"
+
+- id: sala-operativa-lazio
+  termine: "Sala Operativa Lazio"
+  varianti:
+    - "Sala Operativa Lazio"
+    - "Sala Operativa Protezione Civile Lazio"
+    - "803 555"
+  definizione: "Sala Operativa della Protezione Civile della Regione Lazio (numero verde 803 555): per segnalazioni non urgenti. Per le emergenze chiama il NUE 112."
+  link: "/glossario/#sala-operativa-protezione-civile-lazio"
+
+- id: direttiva-pcm
+  termine: "Direttiva PCM"
+  varianti:
+    - "Direttiva PCM"
+    - "Direttiva del Presidente del Consiglio dei Ministri"
+  definizione: "Atto normativo di indirizzo del Presidente del Consiglio. Per la PC le più rilevanti sono la Direttiva 30 aprile 2021 e quella sulla pianificazione comunale."
+  link: "/glossario/#direttiva-pcm"
+
+- id: tusl
+  termine: "TUSL"
+  varianti:
+    - "TUSL"
+    - "D.Lgs. 81/2008"
+    - "Testo Unico Sicurezza Lavoro"
+    - "Testo Unico sulla Sicurezza"
+  definizione: "Testo Unico sulla Sicurezza sul Lavoro (D.Lgs. 81/2008): obbliga ogni datore di lavoro a valutare i rischi (DVR) e a redigere un piano di emergenza."
+  link: "/glossario/#tusl"
+
+- id: odv
+  termine: "OdV"
+  varianti:
+    - "OdV"
+    - "Organizzazione di Volontariato"
+    - "Organizzazioni di Volontariato"
+  definizione: "Organizzazione di Volontariato: forma giuridica del Codice Terzo Settore (D.Lgs. 117/2017). Il Gruppo Comunale Volontari di PC Genzano è iscritto come OdV."
+  link: "/glossario/#odv"
+
+- id: ets
+  termine: "ETS"
+  varianti:
+    - "ETS"
+    - "Ente del Terzo Settore"
+    - "Enti del Terzo Settore"
+  definizione: "Ente del Terzo Settore: categoria giuridica che raggruppa associazioni, OdV, fondazioni e imprese sociali che operano per finalità civiche e di utilità sociale."
+  link: "/glossario/#ets"
+
+- id: stato-emergenza
+  termine: "Stato di emergenza"
+  varianti:
+    - "stato di emergenza"
+    - "stato di emergenza nazionale"
+  definizione: "Atto del Consiglio dei Ministri (art. 24 Codice PC) che dichiara un'emergenza di rilevanza nazionale. Sblocca poteri straordinari e ordinanze di necessità."
+  link: "/glossario/#stato-di-emergenza"
+
+- id: tipo-emergenza
+  termine: "Tipo A/B/C"
+  varianti:
+    - "tipo A"
+    - "tipo B"
+    - "tipo C"
+  definizione: "Classificazione delle emergenze (art. 7 Codice PC): A gestita dal Comune, B dalla Regione, C di rilevanza nazionale (terremoto maggiore, alluvione estesa)."
+  link: "/glossario/#tipo-emergenza"
+
+- id: io-non-rischio
+  termine: "Io non rischio"
+  varianti:
+    - "Io non rischio"
+    - "Io Non Rischio"
+  definizione: "Campagna nazionale del DPC e ANPAS per la riduzione del rischio: ogni anno volontari informano i cittadini in piazza su terremoti, alluvioni, incendi e maremoti."
+  link: "/glossario/#io-non-rischio"
+
+- id: soggetto-attuatore
+  termine: "Soggetto Attuatore"
+  varianti:
+    - "Soggetto Attuatore"
+    - "soggetto attuatore"
+  definizione: "Figura nominata nelle ordinanze di emergenza per realizzare interventi specifici (es. la ricostruzione post-sisma). Risponde direttamente al Commissario."
+  link: "/glossario/#soggetto-attuatore"
+
+- id: ondata-calore
+  termine: "Ondata di calore"
+  varianti:
+    - "ondata di calore"
+    - "ondata di caldo"
+  definizione: "Periodo di almeno 3 giorni con temperature massime e minime molto sopra la media stagionale. Aumenta i ricoveri e la mortalità nelle persone fragili."
+  link: "/glossario/#ondata-di-calore"
+
+- id: capo-dipartimento
+  termine: "Capo Dipartimento"
+  varianti:
+    - "Capo Dipartimento"
+    - "Capo del Dipartimento della Protezione Civile"
+  definizione: "Massima autorità tecnico-operativa del Servizio Nazionale di PC, alle dipendenze della Presidenza del Consiglio. Coordina la risposta alle emergenze nazionali."
+  link: "/glossario/#capo-dipartimento"
+
+- id: allertamento
+  termine: "Sistema di allertamento"
+  varianti:
+    - "sistema di allertamento"
+    - "allertamento nazionale"
+  definizione: "Catena di soggetti (DPC, CFR, Comuni) che valutano il rischio e fanno arrivare l'allerta al cittadino. In Italia opera 24 ore su 24, 7 giorni su 7."
+  link: "/glossario/#sistema-di-allertamento"
+
+- id: zona-allerta
+  termine: "Zona di allerta"
+  varianti:
+    - "Zona di allerta"
+    - "Zone di allerta"
+    - "ZA"
+  definizione: "Area omogenea per caratteristiche meteo-idro-geologiche su cui il CFR emette il bollettino di criticità. Genzano è nella Zona F — Bacini Costieri Sud."
+  link: "/glossario/#zona-di-allerta"
+
+- id: censimento-danni
+  termine: "Censimento dei danni"
+  varianti:
+    - "censimento dei danni"
+    - "censimento del danno"
+  definizione: "Rilevazione tecnica post-evento, di norma con scheda AeDES per i terremoti, per quantificare i danni e attivare i contributi di ricostruzione."
+  link: "/glossario/#censimento-dei-danni"
+
+- id: pcm
+  termine: "PCM"
+  varianti:
+    - "PCM"
+    - "Presidenza del Consiglio dei Ministri"
+  definizione: "Presidenza del Consiglio dei Ministri: il DPC è una struttura della PCM, e da essa derivano le direttive che regolano il sistema di Protezione Civile."
+  link: "/glossario/#pcm"
+
+- id: ari
+  termine: "ARI"
+  varianti:
+    - "ARI"
+    - "Associazione Radioamatori Italiani"
+  definizione: "Associazione Radioamatori Italiani: federazione nazionale dei radioamatori, partner storico della PC nelle radiocomunicazioni di emergenza."
+  link: "/glossario/#ari"
+
+- id: hf-vhf-uhf
+  termine: "HF/VHF/UHF"
+  varianti:
+    - "HF"
+    - "VHF"
+    - "UHF"
+  definizione: "Bande di frequenza radio: HF a lunga portata (centinaia/migliaia di km), VHF e UHF a corto raggio (qualche km, ottime in città e per maglie comunali)."
+  link: "/glossario/#hf-vhf-uhf"
+
+- id: anpas
+  termine: "ANPAS"
+  varianti:
+    - "ANPAS"
+    - "Associazione Nazionale Pubbliche Assistenze"
+  definizione: "Associazione Nazionale Pubbliche Assistenze: rete nazionale di pubbliche assistenze sanitarie e di Protezione Civile, partner storica del DPC."
+  link: "/glossario/#anpas"
+
+- id: cri
+  termine: "CRI"
+  varianti:
+    - "CRI"
+    - "Croce Rossa Italiana"
+  definizione: "Croce Rossa Italiana: associazione di pubblica utilità nata nel 1864, oggi ente del Terzo Settore. Componente operativa del Servizio Nazionale di PC."
+  link: "/glossario/#cri"
+
+- id: dpcm
+  termine: "DPCM"
+  varianti:
+    - "DPCM"
+    - "Decreto del Presidente del Consiglio dei Ministri"
+  definizione: "Decreto del Presidente del Consiglio dei Ministri: atto amministrativo di rango secondario. Per la PC se ne usano molti per stati di emergenza e ordinanze."
+  link: "/glossario/#dpcm"
