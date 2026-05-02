@@ -210,7 +210,11 @@
     .legenda .dot { width: 14px; height: 14px; border-radius: 4px; display: inline-block; border: 2px solid; }
 
     .controls-tip {
-      font-size: .85rem; color: #5b6b7c; margin-top: .4rem; text-align: center;
+      /* Margine top piu' grande perche' le label dei cartelli sopra ora
+         vanno su 2 righe ed estendevano fino a sovrapporsi al
+         "Suggerimento" sotto. 1.6rem garantisce respiro visivo. */
+      font-size: .85rem; color: #5b6b7c; margin-top: 1.6rem; text-align: center;
+      padding-top: .4rem;
     }
     .controls-tip kbd {
       background: #003366; color: #fff; border-radius: 4px;
