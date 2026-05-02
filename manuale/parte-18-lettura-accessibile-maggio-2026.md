@@ -12,14 +12,22 @@ su tutto il sito** e si compone di **cinque strumenti integrati**:
 
 1. **Bottone TTS "Leggi ad alta voce"** su tutte le pagine
 2. **Velocità regolabile** (lento / normale / veloce)
-3. **Toggle "Segui parole"** che evidenzia la parola in lettura
-4. **Tempo di lettura stimato** sopra ogni articolo
-5. **Sillabazione automatica** del testo
-6. **Glossario inline con popover** sulla prima occorrenza dei termini PC
+3. **Tempo di lettura stimato** sopra ogni articolo
+4. **Sillabazione automatica** del testo
+5. **Glossario inline con popover** sulla prima occorrenza dei termini PC
 
-Tutti e sei sono nativi del browser, gratuiti, senza dipendenze esterne, niente
+Tutti e cinque sono nativi del browser, gratuiti, senza dipendenze esterne, niente
 API a pagamento. Niente overlay commerciali (AccessiBe, UserWay, Equally AI), che
 il W3C-WAI sconsiglia perché mascherano problemi invece di risolverli.
+
+> **Storico — feature rimossa il 2 maggio 2026.** Inizialmente la lista
+> includeva un sesto strumento, il **toggle "Segui parole"** che evidenziava
+> la parola in lettura via `SpeechSynthesisUtterance.onboundary 'word'`.
+> È stato rimosso perché Chrome/Edge con voci cloud Google (default per la
+> maggioranza degli utenti italiani) non emettono mai quell'evento, e Safari
+> iOS lo emette in modo intermittente — il toggle era invisibile per ~70%
+> degli utenti. Vedi § 18.5 e § 18.12 per i dettagli del bug e perché non
+> era recuperabile con compromessi accettabili.
 
 ---
 
@@ -31,11 +39,8 @@ contenuto:
 - una pillola **"Lettura: ~3 minuti"**
 - un bottone **"Leggi ad alta voce"** con icona altoparlante
 - un selettore **velocità** (Lento / Normale / Veloce — segmented control)
-- un toggle **"Segui parole"** (default OFF)
 
-Cliccando il bottone, la voce italiana del browser legge l'articolo. Se il toggle
-"Segui parole" è attivo, la parola attualmente pronunciata si **evidenzia in giallo**.
-La pagina **scrolla automaticamente** per tenere la parola al centro dello schermo.
+Cliccando il bottone, la voce italiana del browser legge l'articolo.
 
 Inoltre, quando il cittadino legge il testo da solo, alla **prima occorrenza** di
 ogni sigla o termine specialistico (es. **DPC**, **COC**, **AeDES**, **IT-alert**,
@@ -95,37 +100,40 @@ cambiare il rate "al volo" su un'utterance già in corso).
 
 ---
 
-### 18.5 Toggle "Segui parole" (word highlight)
+### 18.5 Toggle "Segui parole" — RIMOSSO il 2 maggio 2026
 
-Il toggle attiva la **sincronizzazione audio-visiva**: la parola attualmente
-pronunciata si evidenzia con `<mark class="tts-word-mark">` (sfondo giallo
-istituzionale `#fff3cd`, sottolineatura `#ffbe2e`).
+La feature evidenziava la parola in lettura via `<mark class="tts-word-mark">`,
+sincronizzata col TTS tramite `SpeechSynthesisUtterance.onboundary 'word'`.
 
-**Come funziona tecnicamente:**
+**Perché è stata rimossa:** la Web Speech API specifica che `onboundary` debba
+essere emesso ad ogni boundary di parola, ma nella pratica:
 
-1. Al click "Leggi ad alta voce", se "Segui parole" è ON, il JS pre-mappa il testo
-   ai TextNode del DOM.
-2. La Web Speech API spara `SpeechSynthesisUtterance.onboundary` ogni volta che
-   raggiunge la fine di una parola, con `event.charIndex` e `event.charLength`.
-3. Il JS trova il TextNode che contiene quel carattere, avvolge la parola in
-   `<mark>`, scrolla per centrarla, rimuove `<mark>` quando arriva la parola
-   successiva.
+- **Chrome desktop / Android con voci cloud Google** (default per la maggioranza
+  degli utenti italiani): l'evento `word` non viene **mai** emesso. Bug Chromium
+  noto: <https://issues.chromium.org/issues/40195928>
+- **Edge** (Chromium): stesso bug.
+- **Safari iOS**: emette in modo intermittente, spesso fallisce dopo poche righe.
+- **Firefox + voce sistema italiana** e **Safari macOS + voce locale Alice**:
+  funzionavano correttamente, ma rappresentano una minoranza degli utenti.
 
-**Beneficio per le fasce deboli:** la letteratura (Sumner et al. 2013-2018) mostra
-che la sincronizzazione audio-visiva migliora la comprensione di dislessici e L2
-del 15-25%. È il principio dei software didattici a pagamento (ClaroRead,
-Read&Write, ~€100/utente). Qui è gratis.
+Il fallback graceful (timer 2.5s che disattiva l'highlight se nessun evento
+arriva) faceva sì che, per la maggioranza dei nostri utenti, **il toggle fosse
+cosmetico**: cambiava colore al click ma le parole non venivano mai evidenziate.
+Esperienza incoerente e silenziosamente rotta, peggio di non avere la feature.
 
-**Default OFF** perché alcuni utenti lo trovano "rumoroso" su pagine lunghe.
-Persistito in `localStorage` (chiave `pcgenzano-tts-follow`).
+**Soluzioni teoriche valutate:**
 
-**Fallback graceful Safari iOS:** se l'evento `word` non arriva entro 2.5 secondi
-dall'avvio (Safari iOS ha bug noti su `onboundary`), il highlight si auto-disattiva
-per la sessione e il TTS continua a leggere normalmente. Niente regressioni.
+- *Forzare voci locali (`localService === true`)*: su Linux/Android di solito
+  non c'è una voce italiana locale → silenzio totale. Su Mac/Windows ci sono ma
+  con qualità peggiore della voce Google. Trade-off scartato.
+- *Calcolare i timing word-by-word in JavaScript* (approssimazione client-side):
+  desincronizzato in pochi secondi, peggiora invece di aiutare.
 
-**Compatibilità con la toolbar a11y:** il `<mark>` ha varianti CSS dedicate per
-contrasto invertito (giallo brillante su nero), alto contrasto (giallo + bordo
-nero) e scala di grigi (mantiene leggibilità).
+**Cosa è rimasto:** il bottone "Leggi ad alta voce" e il selettore velocità
+funzionano cross-browser senza problemi e restano. Il toggle e tutta la logica
+correlata (`tts-follow-btn`, `tts-word-mark`, `buildTextMap`, `highlightWord`,
+`onboundary`, fallback timer) sono stati rimossi dal partial
+`leggi-ad-alta-voce.html` (v3.1 → v4.0) e dal CSS `custom.css`.
 
 ---
 
@@ -276,7 +284,7 @@ installate sul SO è una superficie identificativa unica per ogni utente).
 | Google Chrome (desktop, Android) | ✅ funziona | Voci di sistema |
 | Mozilla Firefox (desktop, Android) | ✅ funziona | Voci di sistema |
 | Apple Safari (macOS) | ✅ funziona | Voci di sistema |
-| Apple Safari (iPhone, iPad) | ✅ funziona, ma vedi § 18.12 | Bug noto su "Segui parole" |
+| Apple Safari (iPhone, iPad) | ✅ funziona | Voci di sistema |
 | Microsoft Edge | ✅ funziona | Voci di sistema |
 | Samsung Internet, Opera, Vivaldi | ✅ funziona | Comportamento Chromium |
 | **Tor Browser** | ❌ disabilitata sempre | Scelta di privacy del Tor Project |
@@ -307,47 +315,25 @@ location.reload();
 
 ---
 
-### 18.12 Bug Safari iOS sul "Segui parole"
+### 18.12 (sezione storica) — Bug Safari iOS sul "Segui parole"
 
-Su **Safari per iPhone e iPad** il sistema operativo ha un **bug noto e
-documentato**: l'evento `SpeechSynthesisUtterance.onboundary`
-(`event.name === 'word'`), che il sito usa per sapere quale parola la voce
-sta pronunciando, **non viene sparato in modo affidabile**:
+> Sezione conservata come traccia storica. La feature "Segui parole" è stata
+> rimossa il 2 maggio 2026, vedi § 18.5 per le motivazioni complete. Il bug
+> Safari iOS qui descritto è uno dei tre fattori che hanno portato alla
+> rimozione (insieme al bug Chrome/Edge con voci cloud Google e all'assenza
+> di soluzioni di compromesso accettabili).
+
+Su **Safari per iPhone e iPad** il sistema operativo ha un bug noto e
+documentato: l'evento `SpeechSynthesisUtterance.onboundary`
+(`event.name === 'word'`) **non viene sparato in modo affidabile**:
 
 - A volte non spara mai
 - A volte spara solo eventi `sentence` (a livello di frase), non `word`
 - A volte spara con offset `charIndex` errato
 
-Il bug è di **WebKit/Apple**, non del nostro sito. È documentato sul
-WebKit Bugzilla e sui forum sviluppatori Apple da diversi anni.
-
-**Conseguenza pratica per il cittadino:**
-
-- La lettura ad alta voce **funziona regolarmente** anche su Safari iOS
-- Ma se l'utente attiva il toggle **"Segui parole"**, l'evidenziazione
-  gialla potrebbe **non comparire** o partire e fermarsi a metà frase
-
-**Cosa fa il sito automaticamente** (codice in
-`themes/flavour-pcgenzano/layouts/partials/leggi-ad-alta-voce.html`):
-
-1. Al click "Leggi ad alta voce" con "Segui parole" attivo, il JS attiva un
-   timer di **2,5 secondi**
-2. Se entro 2,5 secondi il primo evento `boundary` di tipo `word` non è
-   arrivato, il timer scatta e:
-   - Disattiva l'evidenziazione (rimuove il `<mark>` corrente, se esiste)
-   - **Non disattiva il TTS**, che continua a leggere normalmente
-3. L'utente sente la lettura completa, ma senza evidenziazione delle parole
-4. Nessun errore in console, nessun avviso visibile
-
-**Cosa è documentato pubblicamente al cittadino**: nella pagina
-`/accessibilita/` § "Funzione 'Segui parole' — bug noto su Safari iOS" il
-problema è spiegato chiaramente, con il consiglio operativo di usare Chrome,
-Firefox o Edge su iPhone/iPad oppure Safari su Mac (dove il bug non si
-manifesta).
-
-**Quando Apple correggerà il bug**: la funzione tornerà attiva su Safari iOS
-**senza modifiche da parte nostra**. Il codice è già pronto a usare gli
-eventi `word` quando arrivano.
+Il bug è di **WebKit/Apple**, documentato sul WebKit Bugzilla e sui forum
+sviluppatori Apple da diversi anni. **Apple non ha ancora fornito un fix
+nel momento in cui abbiamo deciso di rimuovere la feature.**
 
 ---
 
@@ -374,10 +360,8 @@ attiva** — in particolare contrasto invertito + reduced-motion.
 
 Tutti i controlli di lettura **scompaiono in stampa**:
 
-- Bottone TTS, selettore velocità, toggle "Segui parole" → `display: none`
+- Bottone TTS e selettore velocità → `display: none`
 - Tempo di lettura → `display: none`
-- Highlight `<mark>` → reset a transparent (caso paranoia: utente stampa mentre
-  TTS sta leggendo)
 - Glossario inline → bottoni tornano testo normale, popover sparisce
 
 Stampato, l'articolo è pulito come prima.
@@ -391,10 +375,10 @@ Stampato, l'articolo è pulito come prima.
 | `data/glossario.yaml` | Voci del glossario (61 al maggio 2026) |
 | `static/js/glossario-inline.js` | Parser DOM + popover accessibile |
 | `themes/flavour-pcgenzano/layouts/partials/glossario-inline.html` | Inietta JSON Hugo → JS browser |
-| `themes/flavour-pcgenzano/layouts/partials/leggi-ad-alta-voce.html` | TTS partial v2.1 (velocità + word highlight) |
+| `themes/flavour-pcgenzano/layouts/partials/leggi-ad-alta-voce.html` | TTS partial v4.0 (velocità + bottone lettura, niente word highlight) |
 | `themes/flavour-pcgenzano/layouts/_default/single.html` | Blacklist + tempo lettura + include partial |
 | `themes/flavour-pcgenzano/layouts/_default/list.html` | Idem per list page |
-| `themes/flavour-pcgenzano/static/css/custom.css` | 5 sezioni CSS: TTS v2.0, TTS WORD HIGHLIGHT v1.0, TEMPO DI LETTURA v1.0, SILLABAZIONE v1.0, GLOSSARIO INLINE v1.0 |
+| `themes/flavour-pcgenzano/static/css/custom.css` | 4 sezioni CSS: TTS v2.0, TEMPO DI LETTURA v1.0, SILLABAZIONE v1.0, GLOSSARIO INLINE v1.0 (TTS WORD HIGHLIGHT rimossa il 2 maggio 2026 con la feature "Segui parole") |
 | `.claude/rules/03-accessibility.md` | Regola tecnica per Claude Code |
 
 ---

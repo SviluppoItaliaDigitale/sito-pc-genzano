@@ -3055,38 +3055,9 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   background: #002952;
 }
 
-/* Toggle "Segui parole" — <button aria-pressed> stilizzato come pillola.
-   Pattern WAI-ARIA standard per toggle (al posto di label+checkbox).
-   Stato controllato 100% da JS (classe .is-active + aria-pressed=true). */
-.tts-follow-btn {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 0.82rem;
-  color: #003366;
-  border: 1px solid #003366;
-  border-radius: 999px;
-  padding: 0.25rem 0.7rem;
-  background: #fff;
-  font-family: inherit;
-  user-select: none;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-.tts-follow-btn:hover { background: #f4f7fb; }
-.tts-follow-btn:focus-visible {
-  outline: 3px solid #ffbe2e;
-  outline-offset: 3px;
-}
-.tts-follow-btn.is-active,
-.tts-follow-btn[aria-pressed="true"] {
-  background: #003366;
-  color: #fff;
-  font-weight: 600;
-}
-
 @media (max-width: 576px) {
   .tts-controls { justify-content: stretch; flex-direction: column; align-items: stretch; }
-  .tts-rate, .tts-follow-btn { align-self: flex-end; }
+  .tts-rate { align-self: flex-end; }
 }
 @media print {
   .tts-wrapper { display: none !important; }
@@ -3139,73 +3110,6 @@ html.a11y-contrast-invert .tts-fallback-msg {
 html.a11y-contrast-invert .tts-fallback-msg i,
 html.a11y-contrast-invert .tts-fallback-msg strong {
   color: #ffd700;
-}
-
-/* ============================================================
-   TTS WORD HIGHLIGHT — evidenziazione parola in lettura (v1.0)
-   <mark class="tts-word-mark"> avvolge la parola corrente quando
-   il toggle "Segui parole" è attivo. L'elemento è temporaneo e
-   viene rimosso non appena la parola successiva entra in lettura.
-
-   Beneficiari: dislessici, parlanti italiano L2, anziani che si
-   distraggono, bambini in lettura lenta. La sincronizzazione
-   audio-visiva è il principio dei software didattici come
-   ClaroRead/Read&Write.
-
-   Compat: usa <mark> nativo HTML5. Override di colore/sfondo
-   per non confondersi con altre evidenziazioni (es. risultato
-   ricerca interna, che non usa <mark>).
-   ============================================================ */
-.article-body mark.tts-word-mark,
-.list-intro-content mark.tts-word-mark,
-mark.tts-word-mark {
-  background: #fff3cd;
-  color: inherit;
-  border-bottom: 2px solid #ffbe2e;
-  padding: 0 1px;
-  border-radius: 2px;
-  /* Animazione morbida: niente flicker brusco quando si sposta */
-  transition: background-color 0.12s ease;
-  /* Importante: niente box-shadow né transform che causino reflow */
-}
-@media (prefers-reduced-motion: reduce) {
-  mark.tts-word-mark { transition: none; }
-}
-
-/* Variante per toolbar a11y "Contrasto invertito" (sfondo nero) */
-html.a11y-contrast-invert mark.tts-word-mark,
-html.a11y-contrast-invert .article-body mark.tts-word-mark,
-html.a11y-contrast-invert .list-intro-content mark.tts-word-mark {
-  background: #ffd700;
-  color: #000;
-  border-bottom-color: #ff8c00;
-}
-
-/* Variante per toolbar a11y "Scala di grigi" (mantiene contrasto) */
-html.a11y-grayscale mark.tts-word-mark,
-html.a11y-grayscale .article-body mark.tts-word-mark,
-html.a11y-grayscale .list-intro-content mark.tts-word-mark {
-  background: #d9d9d9;
-  border-bottom-color: #666;
-}
-
-/* Variante per toolbar a11y "Alto contrasto" (giallo su nero) */
-html.a11y-contrast-high mark.tts-word-mark,
-html.a11y-contrast-high .article-body mark.tts-word-mark,
-html.a11y-contrast-high .list-intro-content mark.tts-word-mark {
-  background: #ffeb3b;
-  color: #000;
-  border-bottom: 3px solid #000;
-}
-
-/* In stampa il <mark> potrebbe essere sopravvissuto se l'utente
-   stampa mentre il TTS sta leggendo: forziamo il reset. */
-@media print {
-  mark.tts-word-mark {
-    background: transparent !important;
-    border-bottom: none !important;
-    color: inherit !important;
-  }
 }
 
 /* ============================================================

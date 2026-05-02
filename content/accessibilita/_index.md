@@ -49,10 +49,7 @@ In cima a quasi tutte le pagine del sito trovi un piccolo gruppo di strumenti pe
 
 Premendo il bottone, il sito legge ad alta voce il contenuto della pagina con la **voce italiana installata sul tuo dispositivo**. È completamente **gratuito** e **non invia nulla a server esterni**: tutto avviene nel browser, sfruttando la **Web Speech API** prevista dagli standard W3C.
 
-Accanto al bottone trovi tre comandi:
-
-- **Velocità di lettura**: scegli fra **Lento** (per anziani, bambini, italiano L2), **Normale** (default) o **Veloce** (per chi conosce già il testo). La scelta resta memorizzata sul tuo dispositivo per le pagine successive.
-- **Segui parole**: quando attivo, la parola attualmente pronunciata si **evidenzia in giallo** mentre la voce legge. Aiuta chi si distrae o ha difficoltà di lettura: gli occhi seguono l'orecchio. Default disattivato (alcuni utenti lo trovano "rumoroso" su pagine lunghe).
+Accanto al bottone trovi un selettore di **velocità di lettura**: scegli fra **Lento** (per anziani, bambini, italiano L2), **Normale** (default) o **Veloce** (per chi conosce già il testo). La scelta resta memorizzata sul tuo dispositivo per le pagine successive.
 
 ### Glossario inline: termini sottolineati con definizione
 
@@ -84,18 +81,6 @@ In alcuni browser **orientati alla privacy** la lettura vocale è invece **disat
 - ❌ Modalità di navigazione anti-fingerprinting di alcuni browser sperimentali
 
 Se usi uno di questi browser, **al posto del bottone vedrai un avviso** che spiega la causa: **non è un difetto del nostro sito, è una scelta del tuo browser per proteggere il tuo anonimato.** Per usare la lettura vocale puoi semplicemente aprire la stessa pagina con un browser diverso (Chrome, Firefox, Safari, Edge), oppure rivolgerti agli strumenti di sistema descritti più sotto.
-
-### Funzione "Segui parole" — bug noto su Safari iOS (iPhone, iPad)
-
-Su **Safari per iPhone e iPad** il sistema operativo ha un **bug noto e documentato**: l'evento `onboundary` della Web Speech API, che permette al sito di sapere quale parola la voce sta pronunciando, **non viene sparato in modo affidabile**. Il problema è di Apple, non del nostro sito.
-
-Conseguenza pratica:
-
-- La lettura ad alta voce **funziona regolarmente** anche su iPhone e iPad
-- Ma se attivi il toggle **"Segui parole"** su Safari iOS, l'evidenziazione gialla potrebbe **non comparire** o partire e fermarsi a metà frase
-- Il nostro sito gestisce questa situazione automaticamente: se entro 2,5 secondi non riceve gli eventi attesi, **disattiva l'evidenziazione e continua la lettura normalmente**, senza errore visibile
-
-Se desideri usare anche l'evidenziazione delle parole, ti consigliamo di usare **Chrome, Firefox o Edge su iPhone/iPad**, oppure Safari su Mac (dove il bug non si presenta). Quando Apple correggerà il problema, la funzione tornerà attiva anche su Safari iOS senza modifiche da parte nostra.
 
 ## Strumenti di sistema (browser e sistema operativo)
 
