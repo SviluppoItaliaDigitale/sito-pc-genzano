@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/giochi/assets/css/tts-bambini.css">
 </head>
 <body>
   <main id="main-content" tabindex="-1">
@@ -36,6 +37,9 @@
           <!-- Intro -->
           <div id="intro-screen">
             <p class="lead text-center mb-3">Impara a fare una telefonata di emergenza!</p>
+            <div class="tts-bambini-wrap" data-tts-intro="true">
+              <button type="button" class="tts-bambini-btn" data-tts-target="#intro-screen p.lead" aria-label="Ascolta la presentazione">Ascolta</button>
+            </div>
             <p class="text-center text-muted mb-4">In questa attività userai un telefono finto per esercitarti a chiamare il <strong>112</strong>. Ti guideremo passo dopo passo.</p>
             <div class="text-center">
               <button id="start-btn" class="btn btn-primary btn-lg px-5 py-3" style="font-size: 1.3rem;"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia</button>
