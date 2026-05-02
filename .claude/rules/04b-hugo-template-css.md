@@ -193,8 +193,8 @@ Sistema completo per generare bozze post social (X, Facebook, Instagram, Telegra
 - `.github/workflows/genera-social-bozze.yml` — automazione CI a ogni push articolo.
 
 **Cartelle:**
-- `social-bozze/<slug>/` — fuori da Hugo (non deployata sul sito), visibile solo nel repo per copia/incolla.
-- `static/images-social/<slug>-instagram-{post,post-N,story}.webp` — deployata sul sito (URL pubblico Aruba).
+- `social-bozze/<slug>/` — fuori da Hugo (non deployata sul sito), visibile solo nel repo. Contiene **tutto** il materiale di un articolo per i social: 4 file `.txt` (X/Facebook/Instagram/Telegram), `README.md` operativo, `instagram-post.webp` (1080×1080, singola foto) o `instagram-post-N.webp` (carosello 2-10 foto), `instagram-story.webp` (1080×1920). Comodo da scaricare insieme via mobile.
+- (Storico) Fino al 2 maggio 2026 le immagini Instagram stavano in `static/images-social/<slug>-instagram-*.webp` con URL pubblico Aruba. Spostate in `social-bozze/<slug>/` perché l'URL pubblico non era usato da nessuna parte del sito (no template, no partial, no articolo le linkava): tenere tutto in un posto è molto più comodo dal mobile.
 
 **Setup chiave:**
 - Locale: `export GEMINI_API_KEY="..."` in `~/.bashrc` (chiave gratuita da `aistudio.google.com/apikey`).

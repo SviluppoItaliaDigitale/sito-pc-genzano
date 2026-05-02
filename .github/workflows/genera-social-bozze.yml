@@ -4,11 +4,10 @@ name: "📱 Genera bozze social automatiche"
 # le bozze social (X, Facebook, Instagram, Telegram) via Gemini API +
 # le immagini Instagram (post 1080x1080 + story 1080x1920) via Pillow.
 #
-# Le bozze finiscono in social-bozze/<slug>/ — committate dal workflow
-# con marker [skip-social-bozze] per evitare loop, e visibili da GitHub
-# web (utile da mobile).
-#
-# Le immagini finiscono in static/images-social/ — deployate sul sito.
+# Bozze testuali + immagini Instagram finiscono insieme in
+# social-bozze/<slug>/ — committate dal workflow con marker [skip-social]
+# per evitare loop, e visibili/scaricabili da GitHub web (utile da mobile:
+# tutto il materiale di un articolo in un solo posto).
 #
 # La cartella social-bozze/ NON viene servita da Hugo (non è una
 # cartella riconosciuta come content/, static/, themes/, data/, layouts/),
@@ -140,14 +139,17 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Aggiungi solo se ci sono nuovi file
-          git add social-bozze/ static/images-social/ 2>/dev/null || true
+          # Aggiungi solo se ci sono nuovi file (testi e immagini stanno insieme in social-bozze/<slug>/)
+          git add social-bozze/ 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "Nessuna nuova bozza/immagine da committare."
           else
-            COUNT_BOZZE=$(git diff --staged --name-only | grep -c '^social-bozze/' || echo 0)
-            COUNT_IMG=$(git diff --staged --name-only | grep -c '^static/images-social/' || echo 0)
-            git commit -m "[skip-social] Bozze social: $COUNT_BOZZE testi + $COUNT_IMG immagini"
+            CHANGED=$(git diff --staged --name-only)
+            COUNT_TXT=$(echo "$CHANGED" | grep -c '\.txt$' || true)
+            COUNT_IMG=$(echo "$CHANGED" | grep -c '\.webp$' || true)
+            COUNT_TXT="${COUNT_TXT:-0}"
+            COUNT_IMG="${COUNT_IMG:-0}"
+            git commit -m "[skip-social] Bozze social: $COUNT_TXT testi + $COUNT_IMG immagini"
             git push
           fi
