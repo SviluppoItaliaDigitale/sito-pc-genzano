@@ -67,6 +67,19 @@
     .stat-box { background: #eef4fc; border-radius: 8px; padding: .7rem 1rem; text-align: center; min-width: 120px; }
     .stat-box .num { font-size: 1.6rem; font-weight: 800; color: var(--rag-blu); }
     .stat-box .lbl { font-size: .8rem; color: #5b6b7c; }
+    /* Box segnali tipici (bufala / ufficiale): mostra bullet con i pattern
+       da riconoscere. Sfondo neutro chiaro perche' segue una colorazione
+       ok/ko gia' applicata al box .esito. */
+    .segnali-box {
+      margin-top: .8rem;
+      padding: .6rem .8rem;
+      background: rgba(0, 51, 102, .06);
+      border-left: 3px solid #003366;
+      border-radius: 6px;
+      font-size: .9rem;
+    }
+    .segnali-box ul { margin: .25rem 0 0 1.1rem; padding: 0; }
+    .segnali-box li { margin: .12rem 0; line-height: 1.4; }
   </style>
 </head>
 <body class="rag-body" data-coach-game="vero-o-bufala">
@@ -180,7 +193,14 @@
         data: 'messaggio inoltrato 100+ volte',
         testo: '🚨🚨 URGENTE! Un mio amico geologo dice che DOMANI ALLE 22 ci sarà una forte scossa di terremoto nel Lazio. ATTENZIONE!! CONDIVIDETE SUBITO PER AVVISARE TUTTI!!! 🙏',
         ufficiale: false,
-        spiega: 'Bufala classica. I terremoti non sono prevedibili con data e ora: nessuno scienziato serio lo afferma. Segnali di falso: maiuscolo, invito a condividere, fonte anonima ("un mio amico").' },
+        spiega: 'Bufala classica. I terremoti non sono prevedibili con data e ora: nessuno scienziato serio lo afferma.',
+        segnali: [
+          'Urgenza emotiva (URGENTE!! 🚨🚨, maiuscolo, esclamativi multipli)',
+          'Fonte anonima e non verificabile ("un mio amico geologo")',
+          'Predizione impossibile (data e ora di un terremoto)',
+          'Invito a condividere per "salvare" qualcuno',
+          'Inoltrato 100+ volte (catena tipica WhatsApp)'
+        ] },
       { canale: 'Regione Lazio — Centro Funzionale Regionale',
         data: 'Bollettino di vigilanza — 15 aprile 2026',
         testo: 'Per la giornata di domani 16 aprile è prevista allerta GIALLA per rischio idrogeologico sulla zona di allerta B (bacini centrali). Consultare il bollettino su regione.lazio.it.',
@@ -190,12 +210,26 @@
         data: 'post di 2 ore fa',
         testo: 'ATTENZIONE! Super tempesta solare distruggerà le linee elettriche del Lazio tra 48 ore. Il governo sta nascondendo la notizia. Staccate tutti gli elettrodomestici ORA!',
         ufficiale: false,
-        spiega: 'Bufala. I fenomeni solari di impatto tecnologico sono seguiti da INAF e ESA con comunicati pubblici: nessun "complotto" dello Stato. Segnali di falso: tono cospirativo, urgenza, assenza di fonte verificabile.' },
+        spiega: 'Bufala. I fenomeni solari di impatto tecnologico sono seguiti da INAF e ESA con comunicati pubblici: nessun "complotto" dello Stato.',
+        segnali: [
+          'Tono cospirativo ("il governo sta nascondendo")',
+          'Urgenza ("ORA!", "tra 48 ore")',
+          'Pagina con nome sensazionalista ("estremo")',
+          'Invita ad azione drastica senza dati tecnici (classe NOAA, intensita)',
+          'Nessuna fonte ufficiale citata (manca INAF, ESA, NOAA)'
+        ] },
       { canale: 'INGV — Istituto Nazionale di Geofisica e Vulcanologia',
         data: 'comunicato tecnico — 3 giugno 2026',
         testo: 'Registrata alle 04:12 locali scossa di magnitudo ML 3.2 con epicentro nei Castelli Romani, profondità 8 km. Nessun danno segnalato. Dati su terremoti.ingv.it.',
         ufficiale: true,
-        spiega: 'Comunicato INGV standard: parametri tecnici precisi (magnitudo, profondità, orario), nessun allarme inutile, rimando al sito dei dati.' },
+        spiega: 'Comunicato INGV standard.',
+        segnali: [
+          'Mittente identificabile (INGV, ente pubblico)',
+          'Parametri tecnici precisi (magnitudo ML 3.2, profondità 8 km, orario 04:12)',
+          'Tono neutro, nessuna emozione',
+          'Rimando al sito ufficiale per i dati (terremoti.ingv.it)',
+          'Posteriore al fatto: i terremoti si comunicano dopo, non prima'
+        ] },
       { canale: 'Tweet di un account non verificato',
         data: '@veritaNascoste — 1.400 retweet',
         testo: 'Gli animali di Genzano stanno scappando dalle case: è il segnale che un GROSSO TERREMOTO è imminente. Le autorità tacciono. #SvegliatiItalia',
@@ -220,7 +254,14 @@
         data: 'reshare anonimo',
         testo: '💥 ADESSO A GENZANO!!! Palazzo crollato in centro, decine di feriti. Evacuate la zona! (la foto mostra un palazzo in rovina con colonne di fumo)',
         ufficiale: false,
-        spiega: 'Bufala con foto decontestualizzata. Un controllo inverso della foto con Google Images rivela che ritrae un crollo avvenuto in un\'altra città anni fa. Regola: prima di condividere, verifica la foto.' },
+        spiega: 'Bufala con foto decontestualizzata. Un controllo inverso della foto con Google Images rivela che ritrae un crollo avvenuto in un\'altra città anni fa.',
+        segnali: [
+          'Reshare anonimo (nessuna fonte autoriale)',
+          'ADESSO + maiuscole + emoji di urgenza (💥)',
+          'Foto drammatica e generica (cerca con Google Lens: e\' di un altro evento)',
+          'Numeri vaghi ("decine di feriti")',
+          'Niente conferma da TG locali, sito Comune, Sindaco'
+        ] },
       { canale: 'ARPA Lazio — Agenzia regionale ambiente',
         data: 'bollettino qualità dell\'aria — 7 agosto 2026',
         testo: 'Superati oggi nei comuni della fascia costiera i valori soglia di ozono troposferico. Si raccomanda alle categorie fragili di limitare l\'attività fisica all\'aperto nelle ore più calde.',
@@ -230,7 +271,14 @@
         data: 'protezione.civile.italia@gmail.com',
         testo: 'Gentile cittadino, compili il modulo allegato per ricevere il contributo di 600 € per le emergenze meteo. Il DPC ha stanziato fondi straordinari. Clicchi qui per scaricare.',
         ufficiale: false,
-        spiega: 'Phishing. Il DPC non eroga contributi diretti ai cittadini via email e non usa @gmail.com. Segnali: mittente non istituzionale (gmail), richiesta di dati/clic, promessa di denaro.' },
+        spiega: 'Phishing. Il DPC non eroga contributi diretti ai cittadini via email e non usa @gmail.com.',
+        segnali: [
+          'Mittente non istituzionale (un dominio @gmail.com, mai @governo.it)',
+          'Promessa di denaro per attirare il click',
+          'Richiede di cliccare un link o scaricare un allegato',
+          'Linguaggio formale ma generico ("Gentile cittadino")',
+          'Le PA italiane non comunicano contributi via email diretta'
+        ] },
       { canale: 'Protezione Civile Genzano — sito ufficiale',
         data: 'comunicazione del 14 aprile 2026',
         testo: 'Sabato 19 aprile il Gruppo Comunale Volontari parteciperà al servizio di vigilanza per la Sagra delle Fragole. Presidi in piazza Tommaso Frasconi e via Italo Belardi. Info su protezionecivilegenzano.it.',
@@ -290,7 +338,9 @@
       intro.classList.add('hide');
       endScreen.classList.add('hide');
       game.classList.remove('hide');
-      queue = shuffle(NOTIZIE.slice());
+      // Pool 19 notizie -> 12 random a partita. Diverse ad ogni gioco e mai
+      // tutte uguali: il giocatore non puo' memorizzare le 19 in 2 partite.
+      queue = shuffle(NOTIZIE.slice()).slice(0, 12);
       idx = 0; score = 0; uff = 0; buf = 0;
       scoreEl.textContent = '0';
       idxTot.textContent = queue.length;
@@ -315,6 +365,19 @@
     function rispondi(scelta){
       var n = queue[idx];
       btnUff.disabled = true; btnBuf.disabled = true;
+      // Costruisce highlight dei segnali tipici (bufala o ufficiale): se la
+       // notizia ha un array `segnali`, lo mostro come bullet sotto la
+       // spiegazione. Cosi' il giocatore impara a riconoscere il PATTERN, non
+       // solo la singola notizia.
+      var segnaliHtml = '';
+      if (n.segnali && n.segnali.length){
+        var label = n.ufficiale
+          ? 'Segnali tipici di una fonte ufficiale'
+          : 'Segnali tipici della bufala';
+        segnaliHtml = '<div class="segnali-box"><strong>' + label + ':</strong><ul>'
+          + n.segnali.map(function(s){ return '<li>' + s + '</li>'; }).join('')
+          + '</ul></div>';
+      }
       var giusto = (scelta === 'ufficiale' && n.ufficiale) || (scelta === 'bufala' && !n.ufficiale);
       if (giusto){
         score++;
@@ -322,13 +385,13 @@
         scoreEl.textContent = score;
         esito.classList.remove('sbagliato');
         esito.classList.add('corretto');
-        esito.innerHTML = '<strong><i class="bi bi-check-circle-fill me-1"></i>Corretto.</strong> ' + n.spiega;
+        esito.innerHTML = '<strong><i class="bi bi-check-circle-fill me-1"></i>Corretto.</strong> ' + n.spiega + segnaliHtml;
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         esito.classList.remove('corretto');
         esito.classList.add('sbagliato');
         var eraRisp = n.ufficiale ? 'fonte ufficiale' : 'bufala';
-        esito.innerHTML = '<strong><i class="bi bi-x-circle-fill me-1"></i>Sbagliato.</strong> Era una <strong>' + eraRisp + '</strong>. ' + n.spiega;
+        esito.innerHTML = '<strong><i class="bi bi-x-circle-fill me-1"></i>Sbagliato.</strong> Era una <strong>' + eraRisp + '</strong>. ' + n.spiega + segnaliHtml;
         // Layer 3: hint con criteri per riconoscere fonti
         if (window.GameCoach && window.GameCoach.hint) {
           var tip = n.ufficiale
