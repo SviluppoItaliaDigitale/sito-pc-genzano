@@ -39,3 +39,36 @@
     .story-text { font-size: 0.95rem; }
     .choice-btn { font-size: 0.88rem; padding: 12px 14px; }
 }
+
+/* Pausa per riflettere — appare dopo 2 errori consecutivi.
+   Mini-recupero didattico: il bambino vede i punti chiave dello scenario
+   prima di continuare. Cliccare "Riprendo!" chiude e si torna al gioco. */
+.pausa-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+.pausa-box {
+  background: #fffbf0;
+  border: 3px solid #b45309;
+  border-radius: 16px;
+  padding: 1.5rem 1.2rem;
+  max-width: 480px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: pausaSlide .35s ease;
+}
+.pausa-box h3 { color: #b45309; margin: 0 0 .6rem; font-size: 1.2rem; }
+.pausa-box p { margin: 0 0 .6rem; font-size: .95rem; }
+.pausa-box ul { margin: 0 0 1rem 1.2rem; padding: 0; }
+.pausa-box li { margin: .3rem 0; line-height: 1.45; font-weight: 500; }
+.pausa-box button { width: 100%; padding: .7rem; font-weight: 700; }
+@keyframes pausaSlide {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pausa-box { animation: none; }
+}

@@ -290,7 +290,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    let currentScenario, stepIndex, errors;
+    let currentScenario, stepIndex, errors, consecutiveErrors;
+    // Punti chiave per il "Pausa per riflettere" box che appare dopo 2 errori
+    // consecutivi: aiuta il bambino a fermarsi e ripensare alle regole base
+    // dello scenario, prima di continuare a sbagliare.
+    const PAUSA_PUNTI = {
+      terremoto: ['Sotto un tavolo robusto', 'Lontano dalle finestre', 'Mai correre durante la scossa', 'Mai usare l\'ascensore'],
+      incendio: ['Esci subito senza tornare indietro', 'Mai usare l\'ascensore', 'Copri naso e bocca con un panno', 'Chiama il 112'],
+      alluvione: ['Sali ai piani alti', 'Mai entrare in cantina o garage', 'Mai attraversare sottopassi allagati', 'Chiudi acqua, gas, luce'],
+      temporale: ['Stai in casa, lontano da finestre', 'Niente cellulari sotto carica', 'Niente doccia o lavandino', 'Aspetta che passi'],
+      fuga_gas: ['Apri tutte le finestre', 'Chiudi il rubinetto del gas', 'Niente fiamme né interruttori', 'Esci e chiama il 112'],
+      smarrimento: ['Resta dove sei', 'Cerca un adulto in divisa', 'Non seguire sconosciuti', 'Memorizza nome e telefono di un adulto'],
+      bullismo: ['Parla con un adulto di fiducia', 'Non rispondere con violenza', 'Salva le prove (screenshot)', 'Chiedi aiuto: non sei solo'],
+      maltempo_scuola: ['Segui le indicazioni dei docenti', 'Resta nei corridoi sicuri', 'Mai aprire le finestre', 'Aspetta che passi']
+    };
 
     function renderScenarioList() {
         selectScreen.classList.remove('hide');
@@ -310,6 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentScenario = sc;
         stepIndex = 0;
         errors = 0;
+        consecutiveErrors = 0;
         selectScreen.classList.add('hide');
         storyScreen.classList.remove('hide');
         scenarioBadge.textContent = sc.title;
@@ -356,6 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
             storyFeedback.innerHTML = '<strong><i class="bi bi-check-circle-fill me-1"></i> Giusto!</strong> ' + choice.tip;
             storyFeedback.classList.remove('hide');
             if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
+            consecutiveErrors = 0; // risposta giusta azzera il contatore
             setTimeout(() => {
                 stepIndex++;
                 if (stepIndex < currentScenario.steps.length) { showStep(); }
@@ -364,6 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             btn.classList.add('wrong-choice');
             errors++;
+            consecutiveErrors++;
             storyFeedback.className = 'story-feedback wrong';
             storyFeedback.innerHTML = '<strong><i class="bi bi-x-circle-fill me-1"></i> Non proprio...</strong> ' + choice.tip;
             storyFeedback.classList.remove('hide');
@@ -377,8 +393,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!b.classList.contains('wrong-choice')) { b.disabled = false; }
                 });
                 storyFeedback.classList.add('hide');
+                // Mini-recupero: dopo 2 errori consecutivi mostro un box
+                // "Pausa per riflettere" con i punti chiave dello scenario,
+                // poi azzero il contatore (cosi' non ricompare immediatamente).
+                if (consecutiveErrors >= 2) {
+                    mostraPausaRecupero();
+                    consecutiveErrors = 0;
+                }
             }, 2200);
         }
+    }
+
+    function mostraPausaRecupero() {
+        const punti = PAUSA_PUNTI[currentScenario.id];
+        if (!punti) return;
+        const overlay = document.createElement('div');
+        overlay.className = 'pausa-overlay';
+        overlay.innerHTML = '<div class="pausa-box">' +
+          '<h3>🌿 Pausa per riflettere</h3>' +
+          '<p>Stai sbagliando un po\' di scelte. Fermati e ripensa a queste regole:</p>' +
+          '<ul>' + punti.map(p => '<li>' + p + '</li>').join('') + '</ul>' +
+          '<button type="button" class="btn btn-primary">Riprendo!</button>' +
+          '</div>';
+        document.body.appendChild(overlay);
+        const closeBtn = overlay.querySelector('button');
+        closeBtn.addEventListener('click', () => overlay.remove());
+        closeBtn.focus();
     }
 
     function showEnd() {
