@@ -228,6 +228,16 @@ jobs:
               echo "$OUTPUT"
               FAILED=$((FAILED+1))
               FAILED_ITEMS+=("$ARTICLE ($FONTE): script fallito (exit $EXIT)")
+              # Rimuovo il marker per evitare loop infinito di issue.
+              # Se non lo rimuovo, ad ogni run il workflow ritrova il marker
+              # ri-prova lo stesso titolo/query, ri-fallisce e ri-apre issue.
+              # La cover tipografica verrà generata nello step successivo
+              # auto-cover-mancanti come fallback definitivo. L'utente che
+              # vuole davvero la foto può ri-aggiungere il marker con
+              # titolo/query diversa o cambiare fonte.
+              python3 scripts/rimuovi-marker-foto.py "$ARTICLE" \
+                && echo "[info] marker rimosso da $ARTICLE (cover tipografica al prossimo step)" \
+                || echo "[warn] nessun marker trovato (anomalia, l'avevamo appena letto)"
               continue
             fi
             echo "$OUTPUT"
@@ -323,13 +333,24 @@ jobs:
           BODY=$(cat <<EOF
           Il workflow \`scarica-foto-automatica.yml\` non e riuscito a scaricare le foto per ${{ steps.download.outputs.failed }} articoli.
 
-          Articoli da gestire manualmente:
+          **Cosa ha fatto il workflow al posto tuo:**
+          - Ha **rimosso il marker** \`# TODO-foto-*\` da questi articoli (per evitare loop infinito di issue ad ogni run)
+          - Lo step successivo \`auto-cover-mancanti.py\` ha generato la **cover tipografica istituzionale** col titolo dell'articolo come fallback definitivo
+          - Gli articoli ora hanno tutti \`image:\` valorizzata e file fisico in \`static/images/\`
+
+          **Articoli su cui il download ha fallito:**
 
           ${{ steps.download.outputs.items }}
 
-          Per riprovare: modifica il marker (titolo Wikipedia diverso, query NASA, eventid USGS valido), poi committa.
+          **Cosa fare se vuoi davvero una foto vera (non la cover tipografica):**
+          1. Apri l'articolo nella lista sopra
+          2. Aggiungi un nuovo marker nel frontmatter, scegliendo:
+             - Un **titolo Wikipedia diverso** (la query precedente non ha trovato risultati o ha trovato solo bandiere/stemmi che il filtro scarta)
+             - Una **fonte diversa**: NASA, USGS, NOAA (no API key) oppure Pexels, Pixabay, Unsplash (richiedono GitHub Secret API key)
+          3. Svuota \`image: ""\` se vuoi che il prossimo run la rigeneri
+          4. Committa: il workflow ri-tenterà al prossimo push
 
-          Il workflow ri-girera automaticamente al prossimo push su \`main\`.
+          **Se ti va bene la cover tipografica**: niente da fare, è già il banner dell'articolo. Puoi chiudere questa issue.
           EOF
           )
           gh issue create --title "$TITLE" --body "$BODY" || echo "[warn] gh issue create fallito"

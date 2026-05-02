@@ -151,10 +151,11 @@ Al successivo push su `main`, il workflow `.github/workflows/scarica-foto-automa
 1. Scansiona `content/comunicazioni/*.md` cercando i marker `TODO-foto-(wikipedia|nasa|usgs|noaa|pexels|pixabay|unsplash)`.
 2. Per ogni articolo trovato: estrae il marker, verifica che lo script chiamato sia in **whitelist** (`foto-da-wikipedia.sh`, `foto-da-nasa.sh`, `foto-da-usgs.sh`, `foto-da-noaa.sh`, `foto-da-pexels.sh`, `foto-da-pixabay.sh`, `foto-da-unsplash.sh`) — qualunque altro nome viene rigettato per sicurezza.
 3. Esegue il comando con `bash -c "$CMD"` dopo la verifica whitelist.
-4. Aggiorna il frontmatter con `scripts/aggiorna-frontmatter-foto.py`: popola `image:` + `image_credit:` + `image_source_url:`, rimuove la riga TODO.
-5. Committa con messaggio `[skip-foto-wiki] Foto automatiche da fonti libere (...)` per evitare loop.
-6. Triggera esplicitamente `deploy.yml` via `gh workflow run deploy.yml` (i push fatti dal `GITHUB_TOKEN` non auto-triggerano i workflow `push`).
-7. Se uno o più articoli falliscono, apre **issue di follow-up** con la lista.
+4. **Successo**: aggiorna il frontmatter con `scripts/aggiorna-frontmatter-foto.py` — popola `image:` + `image_credit:` + `image_source_url:`, rimuove la riga TODO.
+5. **Fallimento** (titolo Wikipedia non esiste, query NASA vuota, ShakeMap inesistente, ecc.): chiama `scripts/rimuovi-marker-foto.py` per rimuovere il marker pendente. **Why**: senza questa rimozione, ad ogni run il workflow ri-trova lo stesso marker, ri-prova lo stesso download, ri-fallisce, ri-apre issue — loop infinito di issue duplicate (è successo dal 29 aprile al 2 maggio 2026, 13 issue accumulate prima del fix). Lo step successivo `auto-cover-mancanti.py` genera la cover tipografica come fallback definitivo.
+6. Committa con messaggio `[skip-foto-wiki] Cover automatiche: N foto + M cover tipografiche` per evitare loop del trigger push.
+7. Triggera esplicitamente `deploy.yml` via `gh workflow run deploy.yml` (i push fatti dal `GITHUB_TOKEN` non auto-triggerano i workflow `push`).
+8. Se uno o più articoli sono falliti, apre **issue di follow-up** che spiega: il marker è già stato rimosso + la cover tipografica è già stata generata + come ri-aggiungere un marker se l'utente vuole davvero una foto vera (titolo diverso o fonte diversa).
 
 **Permissions richiesti dal workflow**: `contents: write` (per il commit) + `actions: write` (per `gh workflow run`) + `issues: write` (per l'issue di fallback).
 
