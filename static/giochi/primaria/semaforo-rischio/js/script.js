@@ -55,6 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'Allerta meteo gialla per temporali nel pomeriggio.', answer: 'giallo', tip: 'Preparati: evita parchi, stadi, piscine. Se scoppia il temporale, rifugiati in un edificio.' },
         { text: 'Sei a casa e non hai connessione internet da 5 minuti.', answer: 'verde', tip: 'Internet può guastarsi per tanti motivi: aspetta, riavvia il router. Non è un\'emergenza.' },
         { text: 'Vedi un bambino più piccolo di te che sembra essersi perso al supermercato.', answer: 'giallo', tip: 'Chiedigli come si chiama e portalo da un commesso o alla cassa: loro chiameranno al microfono.' },
+
+        // Tema "comunicazione del rischio" — fonti ufficiali + IT-alert + fake news
+        { text: 'Tuo cugino ti gira un audio WhatsApp: "ho saputo che stanotte fanno saltare la diga di Nemi!".', answer: 'verde', tip: 'Audio anonimi su WhatsApp = quasi sempre fake news. Non lo inoltri, non ci credi, verifichi sul sito del Comune.' },
+        { text: 'Sul cellulare arriva un messaggio "IT-alert" con sirena fortissima e vibrazione.', answer: 'rosso', tip: 'IT-alert e ufficiale del Governo. Leggi attentamente le indicazioni: stanno avvisando di un pericolo concreto nella tua zona.' },
+        { text: 'Un meteorologo TikTok dice: "domani il Lazio sara colpito da uragano!".', answer: 'verde', tip: 'TikTok non e fonte ufficiale. Verifica sul sito del Centro Funzionale Regionale: senza allerta ufficiale, e sensazionalismo.' },
+        { text: 'Il sindaco di Genzano pubblica un video sui canali ufficiali del Comune: allerta arancione confermata.', answer: 'rosso', tip: 'Comunicazione ufficiale del sindaco: prendi sul serio. Limita gli spostamenti e segui le indicazioni.' },
+        { text: 'Su Instagram vedi un post di un negozio "evacuazione totale di Genzano stanotte!" con tante condivisioni.', answer: 'verde', tip: 'Le condivisioni non rendono vera una notizia. Mai un\'evacuazione si comunica via post di un negozio: si comunica per IT-alert, sito Comune e sirene.' },
+        { text: 'Sul sito del Centro Funzionale Regionale Lazio leggi: codice giallo per temporali domani 12-18.', answer: 'giallo', tip: 'Bollettino ufficiale codice giallo: criticita ordinaria. Preparati, ma niente panico.' },
+        { text: 'Un amico ti chiede di rilanciare un suo post che chiede preghiere per "il terremoto in arrivo".', answer: 'verde', tip: 'I terremoti non si possono prevedere. Niente preghiere preventive, niente allarmismo: si chiama "diffondere falsi allarmi".' },
+        { text: 'Il bollettino DPC (Dipartimento Protezione Civile) annuncia codice rosso per ondata di calore.', answer: 'rosso', tip: 'Codice rosso ufficiale: rischio elevato per anziani e bambini. Bevi tantissimo, niente sole tra 11 e 17, controlla i nonni.' },
+        { text: 'Un canale Telegram non ufficiale dice "il Comune sta nascondendo l\'emergenza!".', answer: 'verde', tip: 'Tipico schema cospirazionista. Le emergenze vere vengono comunicate dai canali ufficiali, non "rivelate" da canali anonimi.' },
+        { text: 'A scuola la maestra spiega l\'app "Allerta Lazio" della Regione e ti chiede di scaricarla con i genitori.', answer: 'giallo', tip: 'L\'app ufficiale Allerta Lazio manda gli avvisi del Centro Funzionale: utile, va attivata. Pre-emergenza informativa.' }
     ];
 
     let queue, index, score, locked;
