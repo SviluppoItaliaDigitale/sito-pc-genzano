@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Tartaruga Saggia — Giochi Piccoli Esploratori</title>
-  <meta name="description" content="15 scene in 3 round: scegli SÌ o NO per imparare i comportamenti sicuri. Gioco per bambini dai 3 ai 6 anni.">
+  <meta name="description" content="20 scene in 4 round: scegli SÌ o NO per imparare i comportamenti sicuri. L'ultimo round e' su solidarieta' e aiuto agli altri. Gioco per bambini dai 3 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -101,7 +101,8 @@
   <script src="/giochi/assets/js/comune.js"></script>
   <script>
   (function(){
-    // 15 scene divise in 3 round da 5 — difficoltà crescente
+    // 20 scene divise in 4 round da 5 — difficolta' crescente. Round 4
+    // tema "Tina aiuta gli altri" introduce solidarieta' e empatia.
     var ROUND_1 = [
       { emoji: '🔥', q: 'Vedi il fuoco. Tocchi con le mani?', si: false, tip: 'Giusto! Il fuoco scotta, non si tocca.' },
       { emoji: '📞', q: 'Se c\'è pericolo, chiami il 112?', si: true, tip: 'Bravissimo! Il 112 è il numero per chiedere aiuto.' },
@@ -123,7 +124,17 @@
       { emoji: '📱', q: 'Senti un suono fortissimo dal telefonino: è IT-alert. Ascolti il messaggio?', si: true, tip: 'Sì! IT-alert avvisa di un pericolo serio.' },
       { emoji: '🎒', q: 'A scuola facciamo l\'esercitazione. Tu prendi tutto il tuo zaino?', si: false, tip: 'No! Vai subito al punto di raccolta senza fermarti.' }
     ];
-    var ROUNDS = [ROUND_1, ROUND_2, ROUND_3];
+    // Round 4: tema "Tina aiuta gli altri" — solidarieta' e cura dei piu'
+    // fragili (anziani, bambini piccoli, animali). Presenta scelte di
+    // empatia coerenti con il volontariato di Protezione Civile.
+    var ROUND_4 = [
+      { emoji: '👵', q: 'La nonna del piano sopra non scende le scale per la spesa. Le porti su tu il pacco?', si: true, tip: 'Sì! Aiutare gli anziani è una cosa bellissima dei volontari.' },
+      { emoji: '👶', q: 'In autobus c\'è una mamma con il bebè e nessun posto. Le offri il tuo posto?', si: true, tip: 'Sì! Cedere il posto a chi ne ha più bisogno è gentilezza.' },
+      { emoji: '🐱', q: 'Un gatto è bloccato sull\'albero più alto. Sali tu a prenderlo?', si: false, tip: 'No! Chiama un grande, poi i pompieri (112). Tu non sali sull\'albero.' },
+      { emoji: '🩹', q: 'Un compagno è caduto e si è fatto male a un ginocchio. Vai subito a chiamare la maestra?', si: true, tip: 'Sì! Avvisare un adulto è la prima cosa da fare quando uno si fa male.' },
+      { emoji: '💧', q: 'Un anziano del paese sta male per il caldo. Gli porti un bicchiere d\'acqua e chiami un grande?', si: true, tip: 'Sì! Gli anziani con il caldo possono stare male: acqua e adulto subito.' }
+    ];
+    var ROUNDS = [ROUND_1, ROUND_2, ROUND_3, ROUND_4];
 
     var intro = document.getElementById('intro'),
         game = document.getElementById('game'),
