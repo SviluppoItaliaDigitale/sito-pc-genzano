@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/giochi/assets/css/tts-bambini.css">
 </head>
 <body>
   <main id="main-content" tabindex="-1">
@@ -35,6 +36,9 @@
 
           <div id="intro-screen">
             <p class="lead text-center mb-3">Che colore di allerta?</p>
+            <div class="tts-bambini-wrap" data-tts-intro="true">
+              <button type="button" class="tts-bambini-btn" data-tts-target="#intro-screen p.lead" aria-label="Ascolta la presentazione">Ascolta</button>
+            </div>
             <p class="text-center text-muted mb-3">Ti mostreremo una situazione. Scegli il colore giusto: verde se è tutto tranquillo, giallo o arancione se serve attenzione, rosso se è davvero pericoloso.</p>
             <div class="color-legend" aria-label="Legenda colori allerta">
               <div class="color-item"><span class="color-chip cc-verde"></span> Verde: tranquillo</div>
@@ -84,6 +88,7 @@
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="js/script.js" defer></script>
+  <script src="/giochi/assets/js/tts-bambini.js" defer></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/attestato-inclusivo.js"></script>
 
