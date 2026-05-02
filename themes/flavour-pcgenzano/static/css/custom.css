@@ -3055,8 +3055,10 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   background: #002952;
 }
 
-/* Toggle "Segui parole" — checkbox stilizzata come pillola */
-.tts-follow-toggle {
+/* Toggle "Segui parole" — <button aria-pressed> stilizzato come pillola.
+   Pattern WAI-ARIA standard per toggle (al posto di label+checkbox).
+   Stato controllato 100% da JS (classe .is-active + aria-pressed=true). */
+.tts-follow-btn {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -3065,28 +3067,18 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
   border: 1px solid #003366;
   border-radius: 999px;
   padding: 0.25rem 0.7rem;
-  user-select: none;
   background: #fff;
+  font-family: inherit;
+  user-select: none;
   transition: background 0.15s ease, color 0.15s ease;
 }
-.tts-follow-toggle:hover { background: #f4f7fb; }
-.tts-follow-input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-.tts-follow-input:focus-visible + .tts-follow-label {
+.tts-follow-btn:hover { background: #f4f7fb; }
+.tts-follow-btn:focus-visible {
   outline: 3px solid #ffbe2e;
   outline-offset: 3px;
-  border-radius: 999px;
 }
-/* Stato attivo: stile pieno blu istituzionale.
-   Doppia regola per massima compatibilità:
-   - .is-active aggiunta dal JS (universale, sempre funziona)
-   - :has(.tts-follow-input:checked) come fallback CSS-only quando JS è
-     disattivato o il browser ignora la classe per qualche motivo. */
-.tts-follow-toggle.is-active,
-.tts-follow-toggle:has(.tts-follow-input:checked) {
+.tts-follow-btn.is-active,
+.tts-follow-btn[aria-pressed="true"] {
   background: #003366;
   color: #fff;
   font-weight: 600;
@@ -3094,7 +3086,7 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
 
 @media (max-width: 576px) {
   .tts-controls { justify-content: stretch; flex-direction: column; align-items: stretch; }
-  .tts-rate, .tts-follow-toggle { align-self: flex-end; }
+  .tts-rate, .tts-follow-btn { align-self: flex-end; }
 }
 @media print {
   .tts-wrapper { display: none !important; }
