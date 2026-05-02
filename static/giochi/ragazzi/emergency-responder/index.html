@@ -179,10 +179,44 @@
       },
       arrivo_coc: {
         ora: '04:25',
-        testo: 'Al COC la sala è attivata: F1, F3, F7 e F8 già operative. Ti affiancano a un volontario esperto. Arriva una chiamata: una famiglia di 4 persone è sotto choc, in una casa dichiarata inagibile.',
+        testo: 'Al COC la sala è attivata: F1, F3, F7 e F8 già operative. Ti affiancano a un volontario esperto. Arriva una chiamata sulla quale dovrai operare. Quale risposta dai?',
+        scelte: [
+          { testo: 'Accolgo la chiamata seguendo la procedura COC: ascolto, prendo nota, attivo la squadra giusta.',
+            nextRandom: ['arrivo_famiglia', 'arrivo_falso_allarme', 'arrivo_turista'],
+            delta: { sicurezza: 1, aiutate: 0 } },
+          { testo: 'Vado da solo sul posto a vedere la situazione, senza ascoltare la chiamata fino in fondo.',
+            next: 'finale_medio', delta: { sicurezza: -2, aiutate: 1 } }
+        ]
+      },
+      // Nodo storico: famiglia inagibile (era la versione fissa di arrivo_coc).
+      // Mantenuto come uno dei 3 esiti random.
+      arrivo_famiglia: {
+        ora: '04:35',
+        testo: 'La chiamata è di una famiglia di 4 persone sotto choc, in una casa dichiarata inagibile. Servono squadra sanitaria + accoglienza.',
         scelte: [
           { testo: 'Accompagno la squadra sanitaria e segnalo la famiglia all\'area di accoglienza.', next: 'finale_buono', delta: { sicurezza: 0, aiutate: 4 } },
           { testo: 'Vado da solo a rassicurarli e li porto fuori senza attendere la squadra.', next: 'finale_medio', delta: { sicurezza: -2, aiutate: 2 } }
+        ]
+      },
+      // Evento "shock" #1: chiamata duplicata = falso allarme. Educa al
+      // riconoscimento delle ridondanze tipiche delle emergenze (più persone
+      // chiamano per lo stesso fatto).
+      arrivo_falso_allarme: {
+        ora: '04:35',
+        testo: 'La chiamata segnala "boato fortissimo" in via degli Olmi. Cinque minuti dopo arriva un\'altra chiamata: stessa via, stessa descrizione. F8 verifica: era un tuono di un temporale fuori zona, niente di legato al sisma. Cosa fai?',
+        scelte: [
+          { testo: 'Annoto sul registro come "duplicato verificato — non sismico", senza inviare squadre. Risorse risparmiate per emergenze vere.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 2 } },
+          { testo: 'Mando comunque una squadra a controllare: meglio sicuri che dispiaciuti.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 0 } }
+        ]
+      },
+      // Evento "shock" #2: chiamata da turista in inglese. Educa alla
+      // gestione plurilingue del COC e al ruolo del 112 NUE multi-lingua.
+      arrivo_turista: {
+        ora: '04:38',
+        testo: 'Una chiamata in inglese: una turista americana al B&B di via Italo Belardi è in panico, non sa come chiedere aiuto in italiano. Dice "earthquake, my room is shaking". Come gestisci?',
+        scelte: [
+          { testo: 'Le spiego in inglese di stare sotto un tavolo robusto, lontano da finestre, e che il 112 ha operatori multilingue. Le passo il numero diretto.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 3 } },
+          { testo: 'Le dico in italiano "stia calma" e attacco perché non parlo inglese.', next: 'finale_medio', delta: { sicurezza: -1, aiutate: 0 } }
         ]
       },
       pattuglia: {
@@ -262,7 +296,14 @@
             sicurezza = Math.max(0, sicurezza + (c.delta.sicurezza || 0));
             aiutate += (c.delta.aiutate || 0);
           }
-          show(c.next);
+          // Supporto per fork random: se la scelta specifica `nextRandom` come
+          // array, il motore pesca uno dei nodi random. Permette di simulare
+          // chiamate "shock" (falso allarme, turista in lingua) senza riscrivere
+          // tutto il grafo. Altrimenti fallback su `next` puntuale.
+          var dest = c.nextRandom && c.nextRandom.length
+            ? c.nextRandom[Math.floor(Math.random() * c.nextRandom.length)]
+            : c.next;
+          show(dest);
         });
         choicesEl.appendChild(b);
       });

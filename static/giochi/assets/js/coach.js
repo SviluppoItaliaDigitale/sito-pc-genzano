@@ -287,15 +287,17 @@
     'posiziona-cartelli': {
       fascia: 'primaria',
       titolo: 'Consigli per Posiziona i Cartelli',
-      regola: 'I cartelli si mettono dove servono davvero: leggi cosa dice ogni posto.',
+      regola: '6 scene (scuola, cantiere, bosco, palestra, centro storico Genzano, palasport) + due modalità: Normale (la scritta del posto guida) o Esperto (deduci dal contesto).',
       come: [
-        'Ogni posto vuoto ha una scritta breve (es. "Primo soccorso").',
-        'Cerca il cartello con la stessa funzione.',
-        'Forme e colori aiutano: rosso = divieto, blu = obbligo, verde = sicurezza, giallo = pericolo.',
-        'L\'estintore si mette vicino ai pericoli di incendio, non in giardino.'
+        'Modalità Normale: il posto vuoto ha la scritta del cartello giusto. Matching diretto.',
+        'Modalità Esperto: il posto è solo una sagoma con "?". Devi pensare a cosa serve LÌ in quella scena.',
+        'Forme e colori ISO 7010: giallo triangolo = pericolo (W), rosso cerchio barrato = divieto (P), blu cerchio = obbligo (M), verde quadrato = sicurezza/uscita (E), rosso quadrato = antincendio (F).',
+        'L\'estintore si mette vicino a pericoli di incendio, non in giardino. Il defibrillatore in luoghi affollati.',
+        'Centro storico e palasport: pensa al flusso pedonale e alla folla.'
       ],
       teoria: [
-        { titolo: 'Pittogrammi della sicurezza', url: '/pittogrammi/' }
+        { titolo: 'Pittogrammi della sicurezza', url: '/pittogrammi/' },
+        { titolo: 'Cosa fare adesso', url: '/cosa-fare-adesso/' }
       ]
     },
     'puzzle-scenari': {
@@ -394,17 +396,19 @@
     'emergency-responder': {
       fascia: 'ragazzi',
       titolo: 'Consigli per Emergency Responder',
-      regola: 'In emergenza pensi prima alle persone in pericolo, poi alla logistica. Le tue scelte hanno conseguenze.',
+      regola: 'In emergenza pensi prima alle persone in pericolo, poi alla logistica. Le tue scelte hanno conseguenze. Al COC arriva una chiamata random a partita: famiglia inagibile, falso allarme, turista in inglese.',
       come: [
         'Sicurezza personale prima: non puoi aiutare se ti fai male.',
         'Comunica subito alla Sala Operativa: cosa, dove, quanti.',
         'Priorità ai vulnerabili: bambini, anziani, persone con disabilità.',
-        'Non sei un eroe da solo: lavori in squadra coordinata.',
-        'Documenta tutto: i tempi e le decisioni servono dopo.'
+        'Falso allarme: chiamate duplicate sullo stesso evento sono normali. Verifica prima di mandare squadre.',
+        'Turista in lingua: il 112 NUE ha operatori multilingue. Indirizza chi non parla italiano.',
+        'Non sei un eroe da solo: lavori in squadra coordinata. Documenta tempi e decisioni.'
       ],
       teoria: [
         { titolo: 'Diventa volontario', url: '/diventa-volontario/' },
-        { titolo: 'Chi siamo', url: '/chi-siamo/' }
+        { titolo: 'Chi siamo', url: '/chi-siamo/' },
+        { titolo: 'Numeri utili', url: '/numeri-utili/' }
       ]
     },
     'linea-tempo-eventi': {
