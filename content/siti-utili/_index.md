@@ -26,7 +26,7 @@ In caso di emergenza, contatta sempre i numeri ufficiali per garantire un interv
 - [Città Metropolitana di Roma Capitale](https://www.cittametropolitanaroma.it/) — Ente di area vasta con competenze su viabilità e protezione civile sovracomunale
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/) — Sito ufficiale dell'ente comunale
 - [Geoportale Nazionale](https://www.pcn.minambiente.it/mattm/) — Cartografia e dati territoriali del Ministero dell'Ambiente
-- [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/) — Informazioni sul territorio e normative di tutela ambientale
+- [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/s/92003020580/) — Informazioni sul territorio e normative di tutela ambientale
 
 ## Monitoraggio e Dati Operativi
 
@@ -64,8 +64,8 @@ Le fonti istituzionali e tecniche su cui si basano la nostra Social Media Policy
 
 ### Italiane vincolanti
 
-- 🟢 [AGID — Linee guida design siti PA](https://www.agid.gov.it/it/design-servizi/linee-guida-design-pa) e [Designers Italia](https://designers.italia.it/) — Riferimento orizzontale per la comunicazione digitale della PA
-- 🟢 [DPC — Comunicazione del rischio](https://www.protezionecivile.gov.it/it/approfondimento/la-comunicazione/) — Linee guida e campagne nazionali del Dipartimento
+- 🟢 [Linee guida di design per i servizi web della PA](https://designers.italia.it/normativa/linee-guida-di-design/) (su Designers Italia, riferimento normativo AGID) e [Designers Italia](https://designers.italia.it/) — Riferimento orizzontale per la comunicazione digitale della PA
+- 🟢 [Portale Rischi del Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — Pagine ufficiali per ciascun rischio (sismico, idrogeologico, vulcanico, incendio, ecc.) con materiali di comunicazione nazionali
 - 🟢 [DPC — Io non rischio](https://www.iononrischio.it/) — Manuali operativi sui rischi sismico, vulcanico, maremoto, alluvione, incendio
 - 🟢 [D.Lgs. 1/2018 — Codice della Protezione Civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1) — Testo normativo aggiornato
 
