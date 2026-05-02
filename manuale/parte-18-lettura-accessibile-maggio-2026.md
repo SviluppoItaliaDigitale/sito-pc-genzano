@@ -264,7 +264,94 @@ Comunale**, basate su:
 
 ---
 
-### 18.11 Compatibilità con la toolbar di accessibilità
+### 18.11 Compatibilità browser
+
+La sintesi vocale del sito sfrutta la **Web Speech API** del browser. Funziona
+su tutti i browser principali, ma alcuni browser orientati alla privacy la
+disattivano di proposito per impedire il fingerprinting (la lista delle voci
+installate sul SO è una superficie identificativa unica per ogni utente).
+
+| Browser | Lettura vocale | Note |
+|---|---|---|
+| Google Chrome (desktop, Android) | ✅ funziona | Voci di sistema |
+| Mozilla Firefox (desktop, Android) | ✅ funziona | Voci di sistema |
+| Apple Safari (macOS) | ✅ funziona | Voci di sistema |
+| Apple Safari (iPhone, iPad) | ✅ funziona, ma vedi § 18.12 | Bug noto su "Segui parole" |
+| Microsoft Edge | ✅ funziona | Voci di sistema |
+| Samsung Internet, Opera, Vivaldi | ✅ funziona | Comportamento Chromium |
+| **Tor Browser** | ❌ disabilitata sempre | Scelta di privacy del Tor Project |
+| **LibreWolf** | ❌ disabilitata di default | Configurabile dall'utente |
+| **Brave** con Shields al massimo | ❌ disabilitata | Scelta di privacy |
+
+**Comportamento del sito:** al caricamento, se `speechSynthesis.getVoices()`
+ritorna lista vuota dopo `voiceschanged` o entro 1,8 secondi, il bottone
+"Leggi ad alta voce" viene **sostituito automaticamente** da un riquadro
+informativo che spiega:
+
+> *"Lettura vocale non disponibile in questo browser. Alcuni browser
+> orientati alla privacy (Tor Browser, LibreWolf, Brave con scudo massimo)
+> disattivano la sintesi vocale per impedire il riconoscimento del visitatore.
+> La funzione resta attiva su Chrome, Firefox, Safari ed Edge."*
+
+Niente errore in console, niente alert popup. L'utente capisce subito che
+**non è un difetto del nostro sito** ma una scelta del suo browser. CSS
+scoped sezione **TTS FALLBACK v1.0** in `custom.css` (riquadro azzurrino
+istituzionale, coerente con popover glossario).
+
+**Per testare il fallback in locale**: aprire la pagina con Tor Browser
+oppure simulare disabilitando l'API in DevTools:
+```js
+Object.defineProperty(window, 'speechSynthesis', { get: () => undefined });
+location.reload();
+```
+
+---
+
+### 18.12 Bug Safari iOS sul "Segui parole"
+
+Su **Safari per iPhone e iPad** il sistema operativo ha un **bug noto e
+documentato**: l'evento `SpeechSynthesisUtterance.onboundary`
+(`event.name === 'word'`), che il sito usa per sapere quale parola la voce
+sta pronunciando, **non viene sparato in modo affidabile**:
+
+- A volte non spara mai
+- A volte spara solo eventi `sentence` (a livello di frase), non `word`
+- A volte spara con offset `charIndex` errato
+
+Il bug è di **WebKit/Apple**, non del nostro sito. È documentato sul
+WebKit Bugzilla e sui forum sviluppatori Apple da diversi anni.
+
+**Conseguenza pratica per il cittadino:**
+
+- La lettura ad alta voce **funziona regolarmente** anche su Safari iOS
+- Ma se l'utente attiva il toggle **"Segui parole"**, l'evidenziazione
+  gialla potrebbe **non comparire** o partire e fermarsi a metà frase
+
+**Cosa fa il sito automaticamente** (codice in
+`themes/flavour-pcgenzano/layouts/partials/leggi-ad-alta-voce.html`):
+
+1. Al click "Leggi ad alta voce" con "Segui parole" attivo, il JS attiva un
+   timer di **2,5 secondi**
+2. Se entro 2,5 secondi il primo evento `boundary` di tipo `word` non è
+   arrivato, il timer scatta e:
+   - Disattiva l'evidenziazione (rimuove il `<mark>` corrente, se esiste)
+   - **Non disattiva il TTS**, che continua a leggere normalmente
+3. L'utente sente la lettura completa, ma senza evidenziazione delle parole
+4. Nessun errore in console, nessun avviso visibile
+
+**Cosa è documentato pubblicamente al cittadino**: nella pagina
+`/accessibilita/` § "Funzione 'Segui parole' — bug noto su Safari iOS" il
+problema è spiegato chiaramente, con il consiglio operativo di usare Chrome,
+Firefox o Edge su iPhone/iPad oppure Safari su Mac (dove il bug non si
+manifesta).
+
+**Quando Apple correggerà il bug**: la funzione tornerà attiva su Safari iOS
+**senza modifiche da parte nostra**. Il codice è già pronto a usare gli
+eventi `word` quando arrivano.
+
+---
+
+### 18.13 Compatibilità con la toolbar di accessibilità
 
 Tutti e sei gli strumenti rispettano le preferenze utente della toolbar:
 
@@ -283,7 +370,7 @@ attiva** — in particolare contrasto invertito + reduced-motion.
 
 ---
 
-### 18.12 Comportamento in stampa
+### 18.14 Comportamento in stampa
 
 Tutti i controlli di lettura **scompaiono in stampa**:
 
@@ -297,7 +384,7 @@ Stampato, l'articolo è pulito come prima.
 
 ---
 
-### 18.13 File coinvolti (architettura tecnica)
+### 18.15 File coinvolti (architettura tecnica)
 
 | File | Ruolo |
 |---|---|
@@ -312,7 +399,7 @@ Stampato, l'articolo è pulito come prima.
 
 ---
 
-### 18.14 Quando NON usare questi strumenti
+### 18.16 Quando NON usare questi strumenti
 
 - **Pagine legali** (privacy, note legali, accessibilità, social-media-policy):
   hanno un linguaggio giuridico denso che non beneficia della lettura ad alta voce
@@ -325,7 +412,7 @@ Stampato, l'articolo è pulito come prima.
 
 ---
 
-### 18.15 Domande frequenti redazionali
+### 18.17 Domande frequenti redazionali
 
 **D: Devo aggiungere `tts: true` ai miei nuovi articoli?**
 R: No. Il TTS è ON di default. Il flag `tts: true` non serve più (e non fa danni
