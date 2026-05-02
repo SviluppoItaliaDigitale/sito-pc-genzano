@@ -56,6 +56,12 @@ Il 30 aprile 2026, in concomitanza con la 499ª esercitazione della Rete Zamberl
 
 L'esercitazione è stata aperta a tutti i radioamatori volontari dei Municipi di Roma Capitale e dei comuni limitrofi.
 
+## Il Gruppo Comunale presente in rete
+
+Alle prove di collegamento della Rete di Emergenza Metropolitana partecipa anche **Alessandro Cuollo**, **radioamatore con nominativo IUØQVW** e **volontario del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. La sua presenza in rete porta sul territorio dei Castelli Romani un **operatore radio addestrato**, integrato sia nelle attività del Gruppo sia nelle esercitazioni periodiche della Rete Metropolitana coordinate da ARI Roma Capitale.
+
+È il modello di radiocomunicazione che il Gruppo promuove: **volontari abilitati**, **frequenze dichiarate**, **prove ricorrenti**. Quando un giorno le reti ordinarie dovessero cadere, le radio dei nostri operatori — già rodate sulle frequenze della Rete Metropolitana — sono pronte a entrare in funzione senza improvvisazione.
+
 ## Perché interessa anche i Castelli Romani
 
 Genzano di Roma fa parte della **Città Metropolitana di Roma Capitale**: rientra geograficamente nell'area di copertura della Rete di Emergenza Metropolitana. Quando le reti ordinarie (telefono, internet, cellulare) sono interrotte, le radio degli operatori ARI possono mantenere il contatto fra il territorio dei Castelli Romani e la stazione Capolinea presso il Comune di Roma.
