@@ -460,7 +460,7 @@
           '#.........E#',
           '############'
         ],
-        max: 38
+        max: 42
       }
     ];
 
@@ -478,6 +478,11 @@
     var passiDaFumo = 0;    // contatore mosse per propagazione fumo
     var spreadFuoco = null; // map "r,c" -> volte che il fuoco ha propagato (cap)
     var MAX_SPREAD_PER_F = 2;
+    var budgetBonus = 0;    // mosse extra concesse per ogni cella di fumo
+                            // apparsa: il fumo costringe a deviazioni e non
+                            // sarebbe giusto far perdere il budget per un
+                            // evento casuale fuori dal controllo del giocatore.
+    var BONUS_PER_FUMO = 3;
 
     var intro = document.getElementById('intro');
     var game = document.getElementById('game');
@@ -513,7 +518,7 @@
       descEl.textContent = s.desc;
       numEl.textContent = (scenarioIdx + 1);
       mosse = 0; erroriScenario = 0; traccia = []; bloccato = false;
-      passiDaFumo = 0; spreadFuoco = {};
+      passiDaFumo = 0; spreadFuoco = {}; budgetBonus = 0;
       mosseEl.textContent = '0'; erroriEl.textContent = '0';
       fbEl.className = 'alert-msg hide'; fbEl.textContent = '';
       // converte righe in matrice mutabile
@@ -529,7 +534,7 @@
     }
 
     function aggiornaBudget(){
-      var max = SCENARI[scenarioIdx].max;
+      var max = SCENARI[scenarioIdx].max + budgetBonus;
       var rest = max - mosse;
       budgetEl.textContent = rest;
       if (rest < 0) {
@@ -698,7 +703,7 @@
           // (provera al prossimo ciclo, eventualmente con candidate diverse)
         }
       }
-      return nuove.length > 0;
+      return nuove.length;
     }
 
     function muovi(dir){
@@ -781,15 +786,22 @@
       nascondiMessaggio();
       if (window.AudioSintetico) window.AudioSintetico.tono(380, 0.04);
 
-      // propagazione fumo (solo scenari con fumo:true)
+      // propagazione fumo (solo scenari con fumo:true): ogni cella di fumo
+      // costringe il giocatore a deviazioni che mangerebbero il budget
+      // calcolato sulla mappa pulita. Compensiamo con +BONUS_PER_FUMO mosse
+      // extra per ogni cella M apparsa, cosi' la randomicita' della
+      // propagazione non penalizza ingiustamente.
       var sc = SCENARI[scenarioIdx];
       if (sc.fumo && target !== 'E') {
         passiDaFumo++;
         if (passiDaFumo >= (sc.passiFumo || 4)) {
           passiDaFumo = 0;
           var spread = propagaFumo();
-          if (spread) {
-            mostraMessaggio('💨 Il fumo si sta diffondendo dai fuochi: muoviti con attenzione.', 'warning');
+          if (spread > 0) {
+            var bonus = spread * BONUS_PER_FUMO;
+            budgetBonus += bonus;
+            aggiornaBudget();
+            mostraMessaggio('💨 Il fumo si sta diffondendo: hai +' + bonus + ' mosse extra per deviare.', 'warning');
             if (window.AudioSintetico) window.AudioSintetico.tono(140, 0.18);
           }
         }
@@ -800,7 +812,8 @@
         disegna();
         bloccato = true;
         scenariOk++;
-        var over = Math.max(0, mosse - sc.max);
+        var budgetEff = sc.max + budgetBonus;
+        var over = Math.max(0, mosse - budgetEff);
         if (over > 0) overTotali += over;
         var msg = '🏁 Punto di raccolta raggiunto! Mosse: ' + mosse + ' · Errori: ' + erroriScenario;
         if (over > 0) msg += ' · Oltre il budget: +' + over + ' mosse';
