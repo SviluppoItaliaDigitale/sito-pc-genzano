@@ -1,6 +1,3 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "_comment": "Settings condivisi del repo (committati). Per settings personali usa .claude/settings.local.json (gitignored). Vedi rule 08-claude-code-setup.md.",
-
-  "_history": "Maggio 2026: rimosso l'hook PostToolUse che invocava scripts/verifica-conteggi.sh dopo ogni Write/Edit/MultiEdit. L'hook serviva a segnalare drift fra conteggi inventario dichiarati sul sito (es. '127 schede', '33 giochi') e cartelle reali. Decisione editoriale: i conteggi sono stati rimossi da tutto il sito e sostituiti con descrizioni qualitative, quindi non c'è più drift da inseguire."
+  "$schema": "https://json.schemastore.org/claude-code-settings.json"
 }
