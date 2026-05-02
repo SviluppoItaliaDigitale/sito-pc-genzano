@@ -42,6 +42,32 @@
     .check-item.ok .icon { color: var(--rag-verde); }
     .check-item.warn .icon { color: var(--rag-arancio); }
     .check-item.ko .icon { color: var(--rag-rosso); }
+
+    /* Scenario header: icona simbolica grande + briefing. Il colore di sfondo
+       dell'icona cambia per scenario (frana=ambra, alluvione=blu, sisma=rosso
+       scuro, AIB=rosso fuoco). Permette di identificare a colpo d'occhio il
+       tipo di emergenza con un linguaggio cromatico coerente alle allerte. */
+    .scenario-card-row {
+      display: flex; gap: 1rem; align-items: center;
+    }
+    .scenario-icon {
+      flex-shrink: 0;
+      width: 72px; height: 72px;
+      border-radius: 14px;
+      background: var(--rag-blu);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.4rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,.15);
+      transition: background .3s;
+    }
+    .scenario-text { flex: 1; min-width: 0; }
+    @media (max-width: 480px) {
+      .scenario-icon { width: 56px; height: 56px; font-size: 1.8rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scenario-icon { transition: none; }
+    }
   </style>
 </head>
 <body class="rag-body" data-coach-game="codice-arancione">
@@ -68,12 +94,32 @@
 
           <div id="intro" class="rag-panel">
             <h2>Briefing</h2>
-            <p>A seguito di una frana precauzionale in zona <em>Cynthianum</em>, la Prefettura ha disposto l'evacuazione di <strong>200 persone</strong> (di cui 40 anziani, 15 con disabilità motoria, 60 bambini).</p>
-            <p>Hai un <strong>budget di 200 unità</strong> (tempo + risorse). Devi scegliere cosa allestire nell'area del palazzetto comunale. Ogni risorsa ha un costo e un impatto sui bisogni.</p>
+            <p>Sei <strong>Funzionario di sala operativa</strong> al COC. È stato dichiarato un <strong>Codice Arancione</strong>: devi allestire un'area di accoglienza per gli sfollati nel palazzetto comunale rispettando i vincoli logistici, sanitari e di sicurezza.</p>
+            <p>Ogni partita propone uno scenario diverso (frana, alluvione, sisma, incendio boschivo) con popolazione, budget e priorità specifiche. <strong>Attento agli eventi sopravvenuti</strong>: durante l'allestimento la situazione può cambiare.</p>
             <button id="start" class="btn btn-primary btn-lg"><i class="bi bi-bounding-box me-1"></i> Apri il campo</button>
           </div>
 
           <div id="game" class="hide">
+            <!-- Header scenario: titolo + briefing + target posti, in evidenza -->
+            <div class="scenario-card rag-panel mb-3">
+              <div class="scenario-card-row">
+                <div class="scenario-icon" aria-hidden="true">
+                  <i class="bi bi-exclamation-octagon-fill"></i>
+                </div>
+                <div class="scenario-text">
+                  <h2 class="h5 mb-1" id="scenario-titolo">Codice Arancione</h2>
+                  <p class="small mb-1" id="scenario-briefing">Briefing dello scenario.</p>
+                  <p class="small mb-0"><strong>Target posti letto: <span id="target-posti">200</span></strong></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Box evento sopravvenuto (alert giallo, appare quando scatta) -->
+            <div id="sopravvenuto" class="alert alert-warning hide" role="alert" aria-live="assertive">
+              <h3 class="h6 mb-1" id="sopravv-titolo"></h3>
+              <p class="mb-0" id="sopravv-testo"></p>
+            </div>
+
             <div class="coa-grid">
               <div class="rag-panel">
                 <h3 class="h6">Risorse da allestire</h3>
@@ -83,7 +129,7 @@
               <div class="rag-panel">
                 <h3 class="h6">Dashboard</h3>
                 <div class="budget-row"><span>Budget disponibile</span><strong id="budget">200</strong></div>
-                <div class="budget-row"><span>Posti letto allestiti</span><strong id="posti">0</strong> / 200</div>
+                <div class="budget-row"><span>Posti letto allestiti</span><strong id="posti">0</strong></div>
                 <div class="budget-row"><span>Servizi igienici</span><strong id="igienici">0</strong></div>
                 <div class="budget-row"><span>Pasti/giorno</span><strong id="pasti">0</strong></div>
                 <div class="budget-row"><span>Copertura sanitaria</span><strong id="sanita">No</strong></div>
@@ -120,6 +166,8 @@
   <script src="/giochi/assets/js/comune.js"></script>
   <script>
   (function(){
+    /* Risorse condivise tra i 3 scenari. I costi sono fissi: cio' che cambia
+       e' il fabbisogno (popolazione, vincoli specifici) e il budget disponibile. */
     var RISORSE = [
       { id: 'brande-50', label: '50 brande base', costo: 30, posti: 50, icon: 'bi-layers-fill' },
       { id: 'brande-100', label: '100 brande base', costo: 55, posti: 100, icon: 'bi-layers-half' },
@@ -132,11 +180,86 @@
       { id: 'ludoteca', label: 'Area bambini protetta', costo: 15, bambini: true, icon: 'bi-balloon-heart-fill' },
       { id: 'generatore', label: 'Generatore elettrico + illuminazione', costo: 20, essenziale: 'elettricita', icon: 'bi-lightning-charge' },
       { id: 'telecom', label: 'Ponte radio + wifi emergenza', costo: 15, essenziale: 'telecom', icon: 'bi-broadcast' },
-      { id: 'sicurezza', label: 'Servizio d\'ordine (VVUU + volontari)', costo: 15, essenziale: 'sicurezza', icon: 'bi-shield-fill' }
+      { id: 'sicurezza', label: 'Servizio d\'ordine (VVUU + volontari)', costo: 15, essenziale: 'sicurezza', icon: 'bi-shield-fill' },
+      { id: 'acqua', label: 'Cisterna acqua potabile (1500 L)', costo: 15, essenziale: 'acqua', icon: 'bi-droplet-half' },
+      { id: 'riscaldamento', label: 'Riscaldatori d\'aria + coperte', costo: 20, essenziale: 'caldo', icon: 'bi-thermometer-sun' },
+      { id: 'climatizzazione', label: 'Ventilatori + ombrari', costo: 18, essenziale: 'fresco', icon: 'bi-wind' }
     ];
 
-    var MAX_BUDGET = 200;
+    /* 3 scenari con popolazione, vincoli e priorita' diverse. Random a inizio
+       partita. Le priorita' specifiche (es. "fresco" in incendio AIB estivo)
+       diventano essenziali nella checklist finale. */
+    var SCENARI = [
+      {
+        id: 'frana',
+        titolo: 'Codice Arancione — Frana Cynthianum',
+        icon: 'bi-arrow-down-circle-fill',
+        coloreScenario: '#b45309',
+        briefing: 'A seguito di una frana precauzionale in zona <em>Cynthianum</em>, la Prefettura ha disposto l\'evacuazione di <strong>200 persone</strong> (40 anziani, 15 con disabilità motoria, 60 bambini). Hai <strong>200 unità di budget</strong>.',
+        popolazione: 200, anziani: 40, disabili: 15, bambini: 60,
+        budget: 200,
+        priorita: ['elettricita', 'telecom', 'sicurezza'],
+        sopravvenuto: {
+          dopoSelezioni: 4,
+          titolo: 'Aggiornamento dalla SOI',
+          testo: 'La frana si è estesa: arrivano <strong>30 sfollati in più</strong>, fra cui 5 disabili. Il bisogno di posti letto sale a 230, l\'accessibilità diventa critica.',
+          delta: { popolazione: 30, disabili: 5, bonusBudget: 25 }
+        }
+      },
+      {
+        id: 'alluvione',
+        titolo: 'Codice Arancione — Alluvione zona Lago',
+        icon: 'bi-water',
+        coloreScenario: '#0369a1',
+        briefing: 'Esondazione del lago di Nemi dopo 48h di pioggia: <strong>150 persone</strong> evacuate (25 anziani, 10 disabili, 35 bambini). Strade principali interrotte. Budget <strong>180 unità</strong>.',
+        popolazione: 150, anziani: 25, disabili: 10, bambini: 35,
+        budget: 180,
+        priorita: ['elettricita', 'acqua', 'telecom'],
+        sopravvenuto: {
+          dopoSelezioni: 3,
+          titolo: 'Allerta meteo prolungata',
+          testo: 'La pioggia non si ferma. Il sindaco vieta uso di candele e fiamme libere: <strong>il generatore elettrico diventa obbligatorio</strong> (penalità raddoppiata se mancante).',
+          delta: { priorita: ['elettricita'], bonusBudget: 15, candele: false }
+        }
+      },
+      {
+        id: 'sisma',
+        titolo: 'Codice Arancione — Sisma Castelli Romani',
+        icon: 'bi-house-exclamation-fill',
+        coloreScenario: '#7f1d1d',
+        briefing: 'Magnitudo 5.4 epicentrale a sud dei Castelli Romani: <strong>250 persone</strong> evacuate (50 anziani, 20 disabili, 80 bambini). Edifici ancora da verificare. Budget <strong>220 unità</strong>.',
+        popolazione: 250, anziani: 50, disabili: 20, bambini: 80,
+        budget: 220,
+        priorita: ['elettricita', 'telecom', 'sicurezza', 'sanita'],
+        sopravvenuto: {
+          dopoSelezioni: 4,
+          titolo: 'Replica sismica M 4.2',
+          testo: 'Una scossa di assestamento ha richiesto evacuazione del palazzetto. <strong>Tutti all\'aperto</strong>: tendopoli + presidio sanitario diventano critici.',
+          delta: { priorita: ['sanita'], bonusBudget: 30 }
+        }
+      },
+      {
+        id: 'aib',
+        titolo: 'Codice Arancione — Incendio boschivo Lazio',
+        icon: 'bi-fire',
+        coloreScenario: '#dc2626',
+        briefing: 'Fronte di fuoco in avvicinamento: <strong>100 persone</strong> evacuate (30 anziani, 5 disabili, 25 bambini). Estate, calore estremo. Budget <strong>160 unità</strong>.',
+        popolazione: 100, anziani: 30, disabili: 5, bambini: 25,
+        budget: 160,
+        priorita: ['acqua', 'fresco', 'sanita'],
+        sopravvenuto: {
+          dopoSelezioni: 3,
+          titolo: 'Ondata di calore',
+          testo: 'Temperatura salita a 38°C. <strong>Acqua potabile e ombra diventano critici</strong> (bagni sotto stress, anziani a rischio).',
+          delta: { priorita: ['acqua', 'fresco'], bonusBudget: 20 }
+        }
+      }
+    ];
+
+    /* Stato di partita */
+    var scenario = null;
     var selezione = {};
+    var sopravvenutoFatto = false;
 
     var intro = document.getElementById('intro'),
         game = document.getElementById('game'),
@@ -148,11 +271,31 @@
         pastiEl = document.getElementById('pasti'),
         sanEl = document.getElementById('sanita'),
         accEl = document.getElementById('access'),
-        bamEl = document.getElementById('bambini');
+        bamEl = document.getElementById('bambini'),
+        sopravBox = document.getElementById('sopravvenuto'),
+        sopravTit = document.getElementById('sopravv-titolo'),
+        sopravTxt = document.getElementById('sopravv-testo'),
+        scenarioTit = document.getElementById('scenario-titolo'),
+        scenarioBriefing = document.getElementById('scenario-briefing'),
+        targetPosti = document.getElementById('target-posti');
 
     function start(){
-      intro.classList.add('hide'); end.classList.add('hide'); game.classList.remove('hide');
+      // Estrazione scenario random a ogni nuova partita (deep clone per non
+      // mutare il pool quando il sopravvenuto modifica popolazione/budget).
+      scenario = JSON.parse(JSON.stringify(SCENARI[Math.floor(Math.random() * SCENARI.length)]));
       selezione = {};
+      sopravvenutoFatto = false;
+      intro.classList.add('hide'); end.classList.add('hide'); game.classList.remove('hide');
+      sopravBox.classList.add('hide');
+      // Aggiorna intestazione e briefing
+      scenarioTit.textContent = scenario.titolo;
+      scenarioBriefing.innerHTML = scenario.briefing;
+      targetPosti.textContent = scenario.popolazione;
+      // Aggiorna icona scenario + colore coerente
+      var iconEl = document.querySelector('.scenario-icon i');
+      if (iconEl) iconEl.className = 'bi ' + scenario.icon;
+      var iconBox = document.querySelector('.scenario-icon');
+      if (iconBox) iconBox.style.background = scenario.coloreScenario;
       render();
     }
 
@@ -168,6 +311,7 @@
           if (attiva) delete selezione[r.id];
           else selezione[r.id] = r;
           render();
+          checkSopravvenuto();
         });
         risorseEl.appendChild(b);
       });
@@ -186,7 +330,7 @@
         if (r.access) access = true;
         if (r.bambini) bambini = true;
       });
-      var residuo = MAX_BUDGET - tot;
+      var residuo = scenario.budget - tot;
       budgetEl.textContent = residuo;
       budgetEl.style.color = residuo < 0 ? '#DC3545' : '#003366';
       postiEl.textContent = posti;
@@ -197,62 +341,103 @@
       bamEl.textContent = bambini ? 'Sì' : 'No';
     }
 
+    /* Quando il giocatore ha selezionato N risorse, scatta l'evento sopravvenuto:
+       cambia popolazione e/o priorita', accredita un piccolo bonus al budget per
+       compensare. Si attiva una sola volta per partita. */
+    function checkSopravvenuto(){
+      if (sopravvenutoFatto) return;
+      var nSel = Object.keys(selezione).length;
+      if (nSel < scenario.sopravvenuto.dopoSelezioni) return;
+      sopravvenutoFatto = true;
+      var d = scenario.sopravvenuto.delta || {};
+      if (d.popolazione) scenario.popolazione += d.popolazione;
+      if (d.disabili) scenario.disabili += d.disabili;
+      if (d.bonusBudget) scenario.budget += d.bonusBudget;
+      if (d.priorita) {
+        d.priorita.forEach(function(p){
+          if (scenario.priorita.indexOf(p) < 0) scenario.priorita.push(p);
+        });
+      }
+      // Mostra il box sopravvenuto
+      sopravTit.textContent = '🔔 ' + scenario.sopravvenuto.titolo;
+      sopravTxt.innerHTML = scenario.sopravvenuto.testo + '<br><small class="text-muted">Budget aggiornato: ' + scenario.budget + ' unità · Posti letto target: ' + scenario.popolazione + '</small>';
+      sopravBox.classList.remove('hide');
+      targetPosti.textContent = scenario.popolazione;
+      aggiornaDashboard();
+      // Auto-nasconde il box dopo 6 secondi (ma resta lo stato aggiornato)
+      setTimeout(function(){ sopravBox.classList.add('hide'); }, 8000);
+    }
+
     document.getElementById('verifica').addEventListener('click', function(){
       var tot = 0, posti = 0, ig = 0, pasti = 0;
-      var san=false, access=false, bambini=false, elettro=false, telecom=false, sicurezza=false;
+      var san = false, access = false, bambini = false;
+      var prioCoperte = {};
       Object.keys(selezione).forEach(function(k){
         var r = selezione[k];
         tot += r.costo;
         posti += r.posti || 0;
         ig += r.igienici || 0;
         pasti += r.pasti || 0;
-        if (r.sanita) san = true;
+        if (r.sanita) { san = true; prioCoperte['sanita'] = true; }
         if (r.access) access = true;
         if (r.bambini) bambini = true;
-        if (r.essenziale === 'elettricita') elettro = true;
-        if (r.essenziale === 'telecom') telecom = true;
-        if (r.essenziale === 'sicurezza') sicurezza = true;
+        if (r.essenziale) prioCoperte[r.essenziale] = true;
       });
 
+      var pop = scenario.popolazione;
+      var bagniMin = Math.ceil(pop / 25);
+      var pastiMin = pop;
+
       var check = [];
-      var score = 0;
-      check.push({ ok: posti >= 200, msg: 'Posti letto ≥ 200 (hai ' + posti + ')', punti: 20 });
-      check.push({ ok: ig >= 8, msg: 'Bagni ≥ 8 (hai ' + ig + ') — minimo di ~1 ogni 25 persone', punti: 15 });
-      check.push({ ok: pasti >= 200, msg: 'Pasti ≥ 200/giorno (hai ' + pasti + ')', punti: 15 });
-      check.push({ ok: san, msg: 'Copertura sanitaria presente', punti: 15 });
+      check.push({ ok: posti >= pop, msg: 'Posti letto ≥ ' + pop + ' (hai ' + posti + ')', punti: 20 });
+      check.push({ ok: ig >= bagniMin, msg: 'Bagni ≥ ' + bagniMin + ' (hai ' + ig + ') — minimo 1 ogni 25 persone', punti: 15 });
+      check.push({ ok: pasti >= pastiMin, msg: 'Pasti ≥ ' + pastiMin + '/giorno (hai ' + pasti + ')', punti: 15 });
+      check.push({ ok: san, msg: 'Copertura sanitaria presente', punti: 10 });
       check.push({ ok: access, msg: 'Soluzioni accessibili per disabili', punti: 10 });
       check.push({ ok: bambini, msg: 'Area bambini protetta', punti: 5 });
-      check.push({ ok: elettro, msg: 'Alimentazione elettrica e illuminazione', punti: 5 });
-      check.push({ ok: telecom, msg: 'Telecomunicazioni di emergenza', punti: 5 });
-      check.push({ ok: sicurezza, msg: 'Servizio d\'ordine', punti: 5 });
-      check.push({ ok: tot <= MAX_BUDGET, msg: 'Budget rispettato (speso ' + tot + '/' + MAX_BUDGET + ')', punti: 5 });
+      // Priorita' dello scenario specifico (peso maggiore)
+      scenario.priorita.forEach(function(p){
+        var label = ({
+          elettricita: 'Alimentazione elettrica e illuminazione',
+          telecom: 'Telecomunicazioni di emergenza',
+          sicurezza: 'Servizio d\'ordine',
+          acqua: 'Cisterna acqua potabile',
+          fresco: 'Climatizzazione (ondata calore)',
+          caldo: 'Riscaldamento (freddo)',
+          sanita: 'Presidio sanitario rinforzato'
+        })[p] || p;
+        check.push({ ok: !!prioCoperte[p], msg: label + ' — priorità di scenario', punti: 7 });
+      });
+      check.push({ ok: tot <= scenario.budget, msg: 'Budget rispettato (speso ' + tot + '/' + scenario.budget + ')', punti: 5 });
 
-      check.forEach(function(c){ if (c.ok) score += c.punti; });
-      finish(score, check);
+      var maxPunti = check.reduce(function(s, c){ return s + c.punti; }, 0);
+      var score = check.reduce(function(s, c){ return s + (c.ok ? c.punti : 0); }, 0);
+      finish(score, maxPunti, check);
     });
 
-    function finish(score, check){
+    function finish(score, maxPunti, check){
       game.classList.add('hide');
       end.classList.remove('hide');
       document.getElementById('final-punti').textContent = score;
-      document.getElementById('final-max').textContent = 100;
+      document.getElementById('final-max').textContent = maxPunti;
       var checklist = document.getElementById('checklist');
       checklist.innerHTML = check.map(function(c){
         return '<div class="check-item ' + (c.ok ? 'ok' : 'ko') + '"><span class="icon"><i class="bi ' + (c.ok ? 'bi-check-circle-fill' : 'bi-x-circle-fill') + '"></i></span><span>' + c.msg + ' <small class="text-muted">(' + (c.ok ? '+' : '+0/') + c.punti + ')</small></span></div>';
       }).join('');
 
+      var perc = (score / maxPunti) * 100;
       var msg;
-      if (score >= 90) msg = 'Allestimento eccellente: tutti i requisiti coperti.';
-      else if (score >= 70) msg = 'Buon allestimento. Qualche servizio da rinforzare.';
-      else if (score >= 50) msg = 'Allestimento sufficiente ma con carenze importanti.';
-      else msg = 'Allestimento insufficiente: ripassa i requisiti base dell\'accoglienza.';
+      if (perc >= 90) msg = 'Allestimento eccellente per lo scenario «' + scenario.titolo + '»: tutti i requisiti coperti.';
+      else if (perc >= 70) msg = 'Buon allestimento. Qualche servizio specifico dello scenario da rinforzare.';
+      else if (perc >= 50) msg = 'Allestimento sufficiente ma con carenze importanti per uno scenario di tipo «' + scenario.id + '».';
+      else msg = 'Allestimento insufficiente: rivedi i requisiti base + le priorità specifiche dello scenario.';
       document.getElementById('final-msg').textContent = msg;
 
-      if (window.GameCoach && window.GameCoach.hint && score < 70) {
-        window.GameCoach.hint('Le priorità in un\'area di accoglienza: posti letto + bagni + pasti + copertura sanitaria. Senza questi quattro pilastri non si parte. Accessibilità e sicurezza sono obbligatori per legge.', '/rischi-prevenzione/persone-necessita-specifiche/');
+      if (window.GameCoach && window.GameCoach.hint && perc < 70) {
+        window.GameCoach.hint('Le priorità in un\'area di accoglienza variano per scenario: alluvione → elettricità + acqua, sisma → sanità + sicurezza, AIB → acqua + fresco. Sempre obbligatori: posti letto, bagni, pasti, sanità, accessibilità.', '/rischi-prevenzione/persone-necessita-specifiche/');
       }
 
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('codice-arancione', score, 100, '#end');
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('codice-arancione-' + scenario.id, score, maxPunti, '#end');
     }
 
     document.getElementById('start').addEventListener('click', start);
