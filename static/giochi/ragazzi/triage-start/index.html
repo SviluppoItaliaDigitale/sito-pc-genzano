@@ -357,7 +357,11 @@
 
     function start(){
       intro.classList.add('hide'); endScreen.classList.add('hide'); game.classList.remove('hide');
-      queue = shuffle(PAZIENTI.slice());
+      // Estrae 8 pazienti random dal pool ampio (era: tutti i 12 sempre nello
+      // stesso ordine). Cosi' ogni partita e' un caso clinico diverso e
+      // l'allenamento al metodo S.T.A.R.T. non diventa memorizzazione
+      // sequenziale.
+      queue = shuffle(PAZIENTI.slice()).slice(0, 8);
       idx = 0; score = 0; rossiOk = 0; erroriCritici = 0;
       scoreEl.textContent = '0'; idxTot.textContent = queue.length;
       mostra();
