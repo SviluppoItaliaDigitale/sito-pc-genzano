@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Tartaruga Saggia — Giochi Piccoli Esploratori</title>
-  <meta name="description" content="20 scene in 4 round: scegli SÌ o NO per imparare i comportamenti sicuri. L'ultimo round e' su solidarieta' e aiuto agli altri. Gioco per bambini dai 3 ai 6 anni.">
+  <meta name="description" content="25 scene in 5 round: scegli SÌ o NO per imparare i comportamenti sicuri. Gli ultimi round sono su solidarieta' e gesti di prevenzione a casa. Gioco per bambini dai 3 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -57,7 +57,7 @@
 
     <div id="game" class="inf-card hide">
       <div class="text-center">
-        <span class="level-badge" id="level-badge">Round 1 di 3</span>
+        <span class="level-badge" id="level-badge">Round 1 di 5</span>
       </div>
       <div class="text-center mb-2">
         <span class="inf-score"><i class="bi bi-star-fill" aria-hidden="true"></i> Stelle: <span id="stars">0</span></span>
@@ -105,8 +105,9 @@
   <script src="/giochi/assets/js/comune.js"></script>
   <script>
   (function(){
-    // 20 scene divise in 4 round da 5 — difficolta' crescente. Round 4
+    // 25 scene divise in 5 round da 5 — difficolta' crescente. Round 4
     // tema "Tina aiuta gli altri" introduce solidarieta' e empatia.
+    // Round 5 tema "Come aiuto a casa" introduce gesti di prevenzione domestici.
     var ROUND_1 = [
       { emoji: '🔥', q: 'Vedi il fuoco. Tocchi con le mani?', si: false, tip: 'Giusto! Il fuoco scotta, non si tocca.' },
       { emoji: '📞', q: 'Se c\'è pericolo, chiami il 112?', si: true, tip: 'Bravissimo! Il 112 è il numero per chiedere aiuto.' },
@@ -138,7 +139,16 @@
       { emoji: '🩹', q: 'Un compagno è caduto e si è fatto male a un ginocchio. Vai subito a chiamare la maestra?', si: true, tip: 'Sì! Avvisare un adulto è la prima cosa da fare quando uno si fa male.' },
       { emoji: '💧', q: 'Un anziano del paese sta male per il caldo. Gli porti un bicchiere d\'acqua e chiami un grande?', si: true, tip: 'Sì! Gli anziani con il caldo possono stare male: acqua e adulto subito.' }
     ];
-    var ROUNDS = [ROUND_1, ROUND_2, ROUND_3, ROUND_4];
+    // Round 5: tema "Come aiuto a casa" — gesti quotidiani di prevenzione
+    // dentro casa che un bambino può fare insieme a un adulto.
+    var ROUND_5 = [
+      { emoji: '🔌', q: 'Vedi un filo elettrico rotto a terra. Lo tocchi per provare ad aggiustarlo?', si: false, tip: 'No! Mai toccare i fili rotti: chiama subito un grande.' },
+      { emoji: '💡', q: 'Esci da una stanza. Spegni la luce per non sprecare energia?', si: true, tip: 'Sì! Spegnere la luce aiuta tutti e protegge il pianeta.' },
+      { emoji: '🧴', q: 'Trovi una bottiglia con il teschio disegnato sopra. La bevi se hai sete?', si: false, tip: 'No! Il teschio vuol dire VELENO. Mai bere bottiglie sconosciute.' },
+      { emoji: '🚿', q: 'Mentre ti lavi i denti, lasci l\'acqua aperta tutto il tempo?', si: false, tip: 'No! Chiudi l\'acqua: si risparmia tanta acqua preziosa.' },
+      { emoji: '🪟', q: 'Senti il suono dell\'allarme antincendio a casa. Apri la finestra e chiami un grande?', si: true, tip: 'Sì! Avvisi un adulto e seguite insieme il piano di fuga.' }
+    ];
+    var ROUNDS = [ROUND_1, ROUND_2, ROUND_3, ROUND_4, ROUND_5];
 
     var intro = document.getElementById('intro'),
         game = document.getElementById('game'),

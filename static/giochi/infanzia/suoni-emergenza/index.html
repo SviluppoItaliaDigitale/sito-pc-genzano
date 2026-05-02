@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>I Suoni dell'Emergenza — Giochi Piccoli Esploratori</title>
-  <meta name="description" content="Riconosci 8 suoni dell'emergenza in 2 round: ambulanza, tuono, allarme, IT-alert, vento e altri. Gioco audio per bambini dai 3 ai 6 anni.">
+  <meta name="description" content="Riconosci 12 suoni dell'emergenza: ambulanza, pompieri, polizia, tuono, allarme, IT-alert, vento e altri. Gioco audio per bambini dai 3 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -65,7 +65,7 @@
     </div>
 
     <div id="intro" class="inf-card text-center">
-      <p class="h5">Ascolterai 8 suoni in 2 round: ambulanza, tuono, allarme, IT-alert, campanello, pioggia, vento e radio della Protezione Civile.</p>
+      <p class="h5">Ascolterai 12 suoni dell'emergenza: ambulanza, pompieri, polizia, tuono, allarme, IT-alert, campanello, pioggia, vento, radio PC, allarme casa, cane.</p>
       <button id="start" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-play-fill"></i> Iniziamo</button>
     </div>
 
@@ -132,7 +132,41 @@
           window.AudioSintetico.pipRadio();
           setTimeout(function(){ window.AudioSintetico.pipRadio(); }, 350);
         },
-        azione: 'Quando senti la radio della PC: ascolta bene, sta comunicando informazioni utili agli adulti.' }
+        azione: 'Quando senti la radio della PC: ascolta bene, sta comunicando informazioni utili agli adulti.' },
+      { id: 'pompieri', emo: '🚒', lbl: 'Pompieri', play: function(){
+          var t = window.AudioSintetico.tono;
+          var d = 0.35;
+          for (var i = 0; i < 3; i++){
+            t({ freq: 450, durata: d, tipo: 'sawtooth', gain: 0.18, delay: i*d*2, attack: 0.05, release: 0.1 });
+            t({ freq: 650, durata: d, tipo: 'sawtooth', gain: 0.18, delay: i*d*2+d, attack: 0.05, release: 0.1 });
+          }
+        },
+        azione: 'Quando senti questa sirena lenta: lascia passare i pompieri. Poi chiedi a un grande se serve evacuare.' },
+      { id: 'polizia', emo: '🚓', lbl: 'Polizia', play: function(){
+          var t = window.AudioSintetico.tono;
+          var d = 0.08;
+          for (var i = 0; i < 10; i++){
+            t({ freq: 700, durata: d, tipo: 'square', gain: 0.16, delay: i*d*2, attack: 0.01, release: 0.02 });
+            t({ freq: 1100, durata: d, tipo: 'square', gain: 0.16, delay: i*d*2+d, attack: 0.01, release: 0.02 });
+          }
+        },
+        azione: 'Quando senti questa sirena veloce: la polizia sta lavorando, lascia spazio e segui un grande.' },
+      { id: 'antifurto', emo: '🚨', lbl: 'Allarme casa', play: function(){
+          var t = window.AudioSintetico.tono;
+          var on = 0.18, off = 0.06;
+          for (var i = 0; i < 7; i++){
+            t({ freq: 2400, durata: on, tipo: 'square', gain: 0.14, delay: i*(on+off), attack: 0.005, release: 0.02 });
+          }
+        },
+        azione: 'Quando suona a casa: avvisa subito un adulto, esci con calma, non aprire a nessuno.' },
+      { id: 'cane', emo: '🐕', lbl: 'Cane abbaia', play: function(){
+          var t = window.AudioSintetico.tono;
+          var d = 0.13;
+          t({ freq: 300, durata: d, tipo: 'square', gain: 0.22, delay: 0, attack: 0.005, release: 0.05 });
+          t({ freq: 280, durata: d, tipo: 'square', gain: 0.22, delay: 0.28, attack: 0.005, release: 0.05 });
+          t({ freq: 320, durata: d, tipo: 'square', gain: 0.22, delay: 0.56, attack: 0.005, release: 0.05 });
+        },
+        azione: 'Quando un cane abbaia forte: stai fermo, non correre, chiama un grande.' }
     ];
 
     var intro = document.getElementById('intro'),

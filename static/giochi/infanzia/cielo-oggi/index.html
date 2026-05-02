@@ -115,12 +115,12 @@
     </nav>
     <div class="inf-home">
       <h1>Il Cielo di Oggi</h1>
-      <p>Guarda che tempo fa e tocca la <strong>bandiera giusta</strong>. 10 scene meteo in 2 round.</p>
+      <p>Guarda che tempo fa e tocca la <strong>bandiera giusta</strong>. 15 scene meteo in 3 round.</p>
     </div>
 
     <div class="inf-card" id="game-card">
       <div class="text-center" style="margin-bottom:.5rem">
-        <span style="display:inline-block;background:#003366;color:#fff;padding:.35rem .9rem;border-radius:999px;font-weight:800" id="level-badge">Round 1 di 2</span>
+        <span style="display:inline-block;background:#003366;color:#fff;padding:.35rem .9rem;border-radius:999px;font-weight:800" id="level-badge">Round 1 di 3</span>
       </div>
       <div class="progress-bolli" id="progress" aria-label="Scene completate">
         <span class="bollino">1</span>
@@ -171,7 +171,7 @@
 
     <div id="end" class="inf-card inf-end hide">
       <div class="bravi">Bravissimo!</div>
-      <p class="h5 mb-3">Hai superato 2 round di allerta meteo!</p>
+      <p class="h5 mb-3">Hai superato 3 round di allerta meteo!</p>
       <p class="small text-muted">Ricorda: più il colore è forte, più bisogna fare attenzione. Chiedi sempre a un grande.</p>
       <div class="attestato-inject my-3"></div>
       <div class="d-flex flex-wrap justify-content-center gap-2">
@@ -325,7 +325,97 @@
         <text x="200" y="40" font-size="20" font-weight="800" fill="#a82c00">°C</text>\
       </svg>';
 
-    // 10 scene divise in 2 round
+    var SVG_COPERTO = '\
+      <svg viewBox="0 0 240 180" role="img" aria-label="Cielo coperto">\
+        <ellipse cx="60" cy="55" rx="40" ry="20" fill="#cfd8e3" stroke="#8a99af" stroke-width="2"/>\
+        <ellipse cx="120" cy="48" rx="48" ry="22" fill="#bcc7d5" stroke="#8a99af" stroke-width="2"/>\
+        <ellipse cx="190" cy="58" rx="42" ry="20" fill="#cfd8e3" stroke="#8a99af" stroke-width="2"/>\
+        <ellipse cx="80" cy="100" rx="50" ry="22" fill="#d5dfec" stroke="#8a99af" stroke-width="2"/>\
+        <ellipse cx="170" cy="105" rx="55" ry="22" fill="#d5dfec" stroke="#8a99af" stroke-width="2"/>\
+      </svg>';
+    var SVG_GELO = '\
+      <svg viewBox="0 0 240 180" role="img" aria-label="Gelo notturno">\
+        <rect width="240" height="180" fill="#e5f0ff"/>\
+        <g stroke="#3E7BC8" stroke-width="2" fill="none" stroke-linecap="round">\
+          <line x1="60" y1="50" x2="60" y2="90"/>\
+          <line x1="40" y1="70" x2="80" y2="70"/>\
+          <line x1="46" y1="56" x2="74" y2="84"/>\
+          <line x1="74" y1="56" x2="46" y2="84"/>\
+        </g>\
+        <g stroke="#3E7BC8" stroke-width="2" fill="none" stroke-linecap="round">\
+          <line x1="180" y1="40" x2="180" y2="80"/>\
+          <line x1="160" y1="60" x2="200" y2="60"/>\
+          <line x1="166" y1="46" x2="194" y2="74"/>\
+          <line x1="194" y1="46" x2="166" y2="74"/>\
+        </g>\
+        <g stroke="#3E7BC8" stroke-width="2" fill="none" stroke-linecap="round">\
+          <line x1="120" y1="90" x2="120" y2="130"/>\
+          <line x1="100" y1="110" x2="140" y2="110"/>\
+          <line x1="106" y1="96" x2="134" y2="124"/>\
+          <line x1="134" y1="96" x2="106" y2="124"/>\
+        </g>\
+        <rect x="0" y="150" width="240" height="30" fill="#fff" stroke="#8a99af" stroke-width="1"/>\
+        <g fill="#fff" stroke="#3E7BC8" stroke-width="1">\
+          <circle cx="40" cy="160" r="3"/>\
+          <circle cx="90" cy="165" r="3"/>\
+          <circle cx="140" cy="160" r="3"/>\
+          <circle cx="190" cy="165" r="3"/>\
+        </g>\
+      </svg>';
+    var SVG_AFA = '\
+      <svg viewBox="0 0 240 180" role="img" aria-label="Caldo afoso">\
+        <rect width="240" height="180" fill="#ffe9c2"/>\
+        <circle cx="120" cy="80" r="38" fill="#FF6B35" stroke="#a82c00" stroke-width="3"/>\
+        <g stroke="#9ec8e0" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7">\
+          <path d="M 20 130 Q 80 120 140 130 Q 200 140 230 130"/>\
+          <path d="M 30 150 Q 90 140 150 150 Q 210 160 240 150"/>\
+        </g>\
+        <text x="50" y="50" font-size="32" fill="#a82c00" font-weight="800">~</text>\
+        <text x="170" y="60" font-size="32" fill="#a82c00" font-weight="800">~</text>\
+        <circle cx="108" cy="74" r="3" fill="#a82c00"/>\
+        <circle cx="132" cy="74" r="3" fill="#a82c00"/>\
+        <path d="M 100 92 Q 120 86 140 92" stroke="#a82c00" stroke-width="2.5" fill="none" stroke-linecap="round"/>\
+        <ellipse cx="105" cy="100" rx="4" ry="3" fill="#3E7BC8" opacity="0.7"/>\
+        <ellipse cx="135" cy="100" rx="4" ry="3" fill="#3E7BC8" opacity="0.7"/>\
+      </svg>';
+    var SVG_NUBIFRAGIO = '\
+      <svg viewBox="0 0 240 180" role="img" aria-label="Nubifragio">\
+        <ellipse cx="120" cy="50" rx="95" ry="34" fill="#3a4456" stroke="#1d2738" stroke-width="3"/>\
+        <ellipse cx="60" cy="40" rx="32" ry="22" fill="#4a5568"/>\
+        <ellipse cx="170" cy="42" rx="36" ry="24" fill="#4a5568"/>\
+        <g fill="#3E7BC8">\
+          <rect x="40" y="90" width="3" height="20"/>\
+          <rect x="60" y="95" width="3" height="22"/>\
+          <rect x="80" y="92" width="3" height="20"/>\
+          <rect x="100" y="98" width="3" height="22"/>\
+          <rect x="120" y="92" width="3" height="20"/>\
+          <rect x="140" y="98" width="3" height="22"/>\
+          <rect x="160" y="92" width="3" height="20"/>\
+          <rect x="180" y="98" width="3" height="22"/>\
+          <rect x="200" y="92" width="3" height="20"/>\
+          <rect x="50" y="120" width="3" height="20"/>\
+          <rect x="70" y="125" width="3" height="22"/>\
+          <rect x="90" y="122" width="3" height="20"/>\
+          <rect x="110" y="128" width="3" height="22"/>\
+          <rect x="130" y="122" width="3" height="20"/>\
+          <rect x="150" y="128" width="3" height="22"/>\
+          <rect x="170" y="122" width="3" height="20"/>\
+          <rect x="190" y="128" width="3" height="22"/>\
+        </g>\
+        <rect x="0" y="160" width="240" height="20" fill="#3E7BC8" opacity="0.6"/>\
+      </svg>';
+    var SVG_FOSCHIA = '\
+      <svg viewBox="0 0 240 180" role="img" aria-label="Foschia leggera">\
+        <rect width="240" height="180" fill="#eaf0f6"/>\
+        <circle cx="80" cy="60" r="22" fill="#F4B700" opacity="0.5" stroke="#a67a00" stroke-width="2"/>\
+        <ellipse cx="40" cy="90" rx="40" ry="8" fill="#fff" opacity="0.7"/>\
+        <ellipse cx="120" cy="100" rx="55" ry="9" fill="#fff" opacity="0.7"/>\
+        <ellipse cx="200" cy="95" rx="40" ry="8" fill="#fff" opacity="0.7"/>\
+        <ellipse cx="60" cy="120" rx="50" ry="8" fill="#fff" opacity="0.6"/>\
+        <ellipse cx="160" cy="125" rx="55" ry="9" fill="#fff" opacity="0.6"/>\
+        <ellipse cx="100" cy="145" rx="55" ry="8" fill="#fff" opacity="0.5"/>\
+      </svg>';
+    // 15 scene divise in 3 round
     var SCENE_ROUND_1 = [
       { svg: SVG_SOLE, nome: 'Sole', col: 'verde', tip: 'Verde! Cielo sereno, tutto bene.' },
       { svg: SVG_SOLE_NUVOLE, nome: 'Sole con nuvole', col: 'verde', tip: 'Verde! Qualche nuvola, ma non c\'è pericolo.' },
@@ -340,7 +430,14 @@
       { svg: SVG_TEMPORALE, nome: 'Temporale forte', col: 'rosso', tip: 'Rosso! Fulmini e tempesta, si resta in casa.' },
       { svg: SVG_CALDO, nome: 'Caldo estremo', col: 'rosso', tip: 'Rosso! Caldo fortissimo, bevi tanta acqua e stai all\'ombra.' }
     ];
-    var ROUNDS = [SCENE_ROUND_1, SCENE_ROUND_2];
+    var SCENE_ROUND_3 = [
+      { svg: SVG_COPERTO, nome: 'Cielo coperto', col: 'verde', tip: 'Verde! Tutto grigio ma non piove, puoi uscire.' },
+      { svg: SVG_FOSCHIA, nome: 'Foschia leggera', col: 'giallo', tip: 'Giallo! Si vede un po\' poco, attenzione in strada.' },
+      { svg: SVG_GELO, nome: 'Gelo notturno', col: 'arancione', tip: 'Arancione! Strade ghiacciate, si scivola: copriti bene.' },
+      { svg: SVG_AFA, nome: 'Caldo afoso', col: 'arancione', tip: 'Arancione! Aria pesante e calda, bevi tanta acqua.' },
+      { svg: SVG_NUBIFRAGIO, nome: 'Nubifragio', col: 'rosso', tip: 'Rosso! Acqua a catinelle, possono allagare le strade.' }
+    ];
+    var ROUNDS = [SCENE_ROUND_1, SCENE_ROUND_2, SCENE_ROUND_3];
 
     var scenaSvg = document.getElementById('meteo-svg');
     var scenaNome = document.getElementById('meteo-nome');
