@@ -198,6 +198,7 @@
         finalMsg = document.getElementById('final-msg');
 
     var selezione = null, idx = 0, ok = 0, ko = 0;
+    var EVENTI_PARTITA = []; // popolato a inizio partita: 8 random dal pool di 10
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -223,10 +224,15 @@
       intro.classList.add('hide');
       end.classList.add('hide');
       game.classList.remove('hide');
+      // Estrae 8 eventi random dal pool di 10. Mantiene l'ordine
+      // cronologico originale ma cambia quali eventi appaiono in ogni
+      // partita: il giocatore non puo' memorizzare la sequenza.
+      EVENTI_PARTITA = shuffle(EVENTI.slice()).slice(0, 8);
+      EVENTI_PARTITA.sort(function(a, b){ return a.ora.localeCompare(b.ora); });
       idx = 0; ok = 0; ko = 0;
       corretteEl.textContent = '0'; errateEl.textContent = '0';
       timeline.innerHTML = '';
-      evTotEl.textContent = EVENTI.length;
+      evTotEl.textContent = EVENTI_PARTITA.length;
       render();
       mostraEvento();
     }
@@ -236,7 +242,7 @@
       assegnaBtn.disabled = true;
       feedback.innerHTML = '';
       funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.classList.remove('selected'); });
-      var ev = EVENTI[idx];
+      var ev = EVENTI_PARTITA[idx];
       evNEl.textContent = idx+1;
       oreEl.textContent = ev.ora;
       eventoBox.innerHTML = '<div class="small text-muted mb-1"><i class="bi bi-clock me-1"></i>' + ev.ora + '</div><p class="mb-0">' + ev.testo + '</p>';
@@ -244,7 +250,7 @@
 
     assegnaBtn.addEventListener('click', function(){
       if (selezione == null) return;
-      var ev = EVENTI[idx];
+      var ev = EVENTI_PARTITA[idx];
       var corretto = (selezione === ev.corretta);
       var tl = document.createElement('div');
       tl.className = 'tl-item ' + (corretto ? 'ok' : 'ko');
@@ -261,11 +267,11 @@
           window.GameCoach.hint('Le 9 funzioni del Metodo Augustus: F1=tecnica/cartografia, F2=sanità, F3=volontariato, F4=materiali/mezzi, F5=servizi essenziali, F6=danni, F7=strutture/viabilità, F8=telecomunicazioni, F9=accoglienza popolazione.', '/normativa/');
         }
       }
-      kpiFill.style.width = Math.round(((idx+1) / EVENTI.length) * 100) + '%';
+      kpiFill.style.width = Math.round(((idx+1) / EVENTI_PARTITA.length) * 100) + '%';
       assegnaBtn.disabled = true;
       setTimeout(function(){
         idx++;
-        if (idx >= EVENTI.length) finish();
+        if (idx >= EVENTI_PARTITA.length) finish();
         else mostraEvento();
       }, 2200);
     });
@@ -274,13 +280,13 @@
       game.classList.add('hide');
       end.classList.remove('hide');
       finalScore.textContent = ok;
-      finalMax.textContent = EVENTI.length;
-      var perc = (ok / EVENTI.length) * 100;
+      finalMax.textContent = EVENTI_PARTITA.length;
+      var perc = (ok / EVENTI_PARTITA.length) * 100;
       if (perc >= 90) finalMsg.textContent = 'Eccellente! Hai coordinato il COC con grande padronanza del Metodo Augustus.';
       else if (perc >= 70) finalMsg.textContent = 'Buon lavoro! Hai gestito bene l\'allerta: ripassa le funzioni meno chiare.';
       else if (perc >= 50) finalMsg.textContent = 'Discreto. Ripassa le 9 funzioni: ogni decisione in sala è rapida.';
       else finalMsg.textContent = 'Ripassa il Metodo Augustus e le 9 funzioni di supporto, poi riprova.';
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('simulatore-coc', ok, EVENTI.length, '#end');
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('simulatore-coc', ok, EVENTI_PARTITA.length, '#end');
     }
 
     document.getElementById('start').addEventListener('click', start);
