@@ -73,20 +73,24 @@
   var FOLLOW_KEY = 'pcgenzano-tts-follow';
 
   /*
-   * Detection "Tor Browser e simili": alcuni browser privacy-first
-   * (Tor, LibreWolf, Brave shield massimo) implementano speechSynthesis
-   * solo come stub — getVoices() ritorna [] e speak() non produce audio.
-   * È una scelta intenzionale per impedire fingerprinting (la lista delle
-   * voci installate sul SO è una superficie identificativa).
+   * Fallback "browser senza voci utili" (Tor, LibreWolf, Brave shield massimo,
+   * Chromium su Linux senza speech-dispatcher configurato).
    *
-   * Strategia: al load, attendi voiceschanged o un timeout di 1.8s.
-   * Se ancora getVoices() è vuoto, sostituisci la UI con un avviso
-   * elegante in italiano AGID che spiega la causa (privacy del browser),
-   * non un bug del sito.
+   * Non possiamo fare detection preventiva basata su getVoices() vuoto:
+   * - Su Chrome/Edge è normale che getVoices() ritorni [] al primo load e
+   *   si popoli solo dopo l'evento voiceschanged, che a volte arriva tardi.
+   * - Su Linux con speech-dispatcher mancante, getVoices() resta vuoto ma
+   *   speak() può comunque produrre audio via fallback OS.
+   * - Su Firefox certi profili non scatenano voiceschanged affatto.
+   *
+   * Strategia robusta: lasciamo i controlli sempre visibili. Se il click
+   * porta a un errore di sintesi reale (utterance.onerror con error
+   * 'synthesis-failed' / 'synthesis-unavailable' / 'audio-hardware'),
+   * mostriamo il messaggio inline una sola volta.
    */
   function showTtsUnavailable() {
     document.querySelectorAll('.tts-wrapper').forEach(function(w){
-      // Mantieni il wrapper per evitare reflow violenti, sostituisci il contenuto
+      if (w.classList.contains('tts-unavailable')) return;
       w.classList.add('tts-unavailable');
       w.innerHTML = '<div class="tts-fallback-msg" role="note">' +
         '<i class="bi bi-info-circle me-2" aria-hidden="true"></i>' +
@@ -97,40 +101,6 @@
         '</div>';
     });
   }
-
-  var voicesReady = false;
-  function checkVoicesAvailability() {
-    if (voicesReady) return;
-    if (synth.getVoices().length > 0) {
-      voicesReady = true;
-      return;
-    }
-    // Voci ancora vuote: aspetta voiceschanged o timeout
-    var resolved = false;
-    var onVoicesChanged = function(){
-      if (resolved) return;
-      resolved = true;
-      synth.removeEventListener('voiceschanged', onVoicesChanged);
-      if (synth.getVoices().length > 0) {
-        voicesReady = true;
-      } else {
-        showTtsUnavailable();
-      }
-    };
-    synth.addEventListener('voiceschanged', onVoicesChanged);
-    setTimeout(function(){
-      if (resolved) return;
-      resolved = true;
-      synth.removeEventListener('voiceschanged', onVoicesChanged);
-      if (synth.getVoices().length > 0) {
-        voicesReady = true;
-      } else {
-        showTtsUnavailable();
-      }
-    }, 1800);
-  }
-  // Avvia la detection asincrona
-  checkVoicesAvailability();
 
   function getSavedRate() {
     try {
@@ -407,11 +377,20 @@
           clearMark();
           if (fallbackTimer) { clearTimeout(fallbackTimer); fallbackTimer = null; }
         };
-        utterance.onerror = function(){
+        utterance.onerror = function(ev){
           state = 'idle';
           setButtonState(btn, 'idle');
           clearMark();
           if (fallbackTimer) { clearTimeout(fallbackTimer); fallbackTimer = null; }
+          // Mostra il messaggio "non disponibile" solo se la sintesi è davvero
+          // bloccata dal browser (Tor, privacy shield aggressivi, ecc.).
+          // Errori transitori come 'interrupted' / 'canceled' non devono
+          // sostituire la UI.
+          var blocked = ev && (ev.error === 'synthesis-failed' ||
+                               ev.error === 'synthesis-unavailable' ||
+                               ev.error === 'audio-hardware' ||
+                               ev.error === 'not-allowed');
+          if (blocked) showTtsUnavailable();
         };
         synth.speak(utterance);
         state = 'reading';
