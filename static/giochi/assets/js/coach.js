@@ -373,17 +373,18 @@
     'codice-arancione': {
       fascia: 'ragazzi',
       titolo: 'Consigli per Codice Arancione',
-      regola: 'Allerta arancione = criticità moderata: prepararsi nelle prossime 24 ore. Non è ancora rosso, ma serve azione concreta.',
+      regola: 'Sei al COC: allesti un\'area di accoglienza con budget limitato. 4 scenari random (frana, alluvione, sisma, AIB) con priorità diverse. Attenzione agli eventi sopravvenuti che cambiano la situazione.',
       come: [
-        'Verifica il bollettino del Centro Funzionale Regionale Lazio: la fonte ufficiale, mai i social.',
-        'Controlla zone allagabili, scantinati, garage: sposta cose preziose.',
-        'Tieni pronto il kit di emergenza vicino alla porta.',
-        'Allerta i familiari fragili (anziani, persone con disabilità).',
-        'Limita gli spostamenti non necessari.'
+        'Pilastri sempre obbligatori: posti letto, bagni (1 ogni 25 persone), pasti, sanità.',
+        'Frana: priorità su elettricità + telecom + sicurezza per evacuazioni.',
+        'Alluvione: niente fiamme libere, generatore obbligatorio (no candele).',
+        'Sisma: priorità presidio sanitario rinforzato + sicurezza struttura.',
+        'AIB (estate): priorità acqua potabile + climatizzazione (anziani a rischio).',
+        'Accessibilità per disabili sempre dovuta per legge.'
       ],
       teoria: [
+        { titolo: 'Persone con necessità specifiche', url: '/rischi-prevenzione/persone-necessita-specifiche/' },
         { titolo: 'Allerte meteo', url: '/allerte-meteo/' },
-        { titolo: 'Rischio idrogeologico', url: '/rischi-prevenzione/rischio-idrogeologico/' },
         { titolo: 'Kit di emergenza', url: '/rischi-prevenzione/kit-emergenza/' }
       ]
     },
