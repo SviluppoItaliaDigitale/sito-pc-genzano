@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/giochi/assets/css/tts-bambini.css">
 </head>
 <body>
   <main id="main-content" tabindex="-1">
@@ -35,8 +36,11 @@
 
           <!-- Form -->
           <div id="form-screen">
-            <p class="lead text-center mb-2">Compila la tua scheda personale di emergenza</p>
+            <p class="lead text-center mb-2" id="scheda-lead">Compila la tua scheda personale di emergenza</p>
             <p class="text-center text-muted mb-4">Scrivi i tuoi dati importanti. Poi potrai stamparla e tenerla sempre con te. Un adulto può aiutarti a compilarla.</p>
+            <div class="tts-bambini-wrap" data-tts-intro="true">
+              <button type="button" class="tts-bambini-btn" data-tts-target="#scheda-lead" aria-label="Ascolta la presentazione">Ascolta</button>
+            </div>
 
             <form id="emergency-form" novalidate>
               <div class="form-section">
@@ -157,6 +161,7 @@
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="js/script.js" defer></script>
+  <script src="/giochi/assets/js/tts-bambini.js" defer></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/attestato-inclusivo.js"></script>
 
