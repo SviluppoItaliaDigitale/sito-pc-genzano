@@ -37,6 +37,10 @@ La modalità di trasmissione principale è **fonia FM**, con prove anche in **di
 
 La **stazione Capolinea**, accentratrice del traffico, opera dal Comune di Roma e raccoglie i collegamenti dei Municipi e dei comuni dell'area metropolitana.
 
+{{< foto src="/images/2026-04-30-rete-emergenza-metropolitana-roma-mappa-copertura.webp"
+         alt="Mappa satellitare dell'area di Roma con marker arancioni sui CAP dei Municipi (00135, 00191, 00139, 00184, 00152, 00128) e dei comuni limitrofi come Marino e Tivoli, coperti dalla Rete di Emergenza Metropolitana. Un marker rosso al centro indica la stazione Capolinea presso il Comune di Roma."
+         caption="Mappa: ARI Sezione di Roma Capitale APS. Copertura territoriale della Rete di Emergenza Metropolitana: i marker arancioni indicano i Municipi di Roma Capitale e i comuni limitrofi presidiati dalla rete radio; il marker rosso indica la stazione Capolinea." >}}
+
 ## L'esercitazione del 30 aprile 2026
 
 Il 30 aprile 2026, in concomitanza con la 499ª esercitazione della Rete Zamberletti nazionale, ARI Roma ha indetto la **29ª prova di collegamenti** della Rete di Emergenza Metropolitana.
