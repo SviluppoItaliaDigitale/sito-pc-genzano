@@ -525,7 +525,13 @@ article:not(.card) img {
   }
 }
 
-/* ── GALLERIA AUTOMATICA: 2+ immagini consecutive ── */
+/* ── GALLERIA AUTOMATICA: 2+ immagini consecutive ──
+   Doppio selettore per copertura cross-browser:
+   - .is-galleria-pair: applicata via /js/galleria-auto.js (funziona ovunque)
+   - :has(): progressive enhancement nativo per browser moderni
+   Su Safari ≤15.3 / FF <121 senza JS attivo, le immagini restano in colonna
+   (graceful degradation, layout leggibile anche se meno ottimale). */
+article:not(.card) p.is-galleria-pair,
 article:not(.card) p:has(img) + p:has(img) {
   display: inline-block;
   width: 48%;
@@ -1468,10 +1474,16 @@ article:not(.card) .galleria img {
   align-items: center;
 }
 
-.sidebar-archivio .sidebar-categoria-btn:hover,
+.sidebar-archivio .sidebar-categoria-btn:hover {
+  text-decoration: underline;
+}
+/* Focus tastiera: outline giallo PA (WCAG 2.4.7), non rimuoviamo il default
+   senza alternativa equivalente. */
 .sidebar-archivio .sidebar-categoria-btn:focus-visible {
   text-decoration: underline;
-  outline: none;
+  outline: 2px solid #ffbe2e;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .sidebar-archivio .archivio-badge {
@@ -1509,12 +1521,11 @@ article:not(.card) .galleria img {
   transition: background-color 0.15s ease;
   border-radius: 4px;
 }
-.archivio-mensile-anni .archivio-anno-summary:hover,
-.archivio-mensile-anni .archivio-anno-summary:focus-visible {
+.archivio-mensile-anni .archivio-anno-summary:hover {
   background-color: #f4f7fb;
-  outline: none;
 }
 .archivio-mensile-anni .archivio-anno-summary:focus-visible {
+  background-color: #f4f7fb;
   outline: 2px solid #ffbe2e;
   outline-offset: 1px;
 }
