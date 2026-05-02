@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Autismo" 2026-04-02-consapevolezza-autismo-emergenze-inclusive it
 ---
 
 Il **2 aprile** è la **Giornata mondiale per la consapevolezza dell'autismo**, istituita dall'ONU nel 2007. In questa data molti monumenti italiani si illuminano di **blu**, colore scelto per simboleggiare calma, sicurezza, accettazione.

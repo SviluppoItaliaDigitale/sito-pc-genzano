@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Organizzazione mondiale della sanità" 2026-04-07-giornata-mondiale-salute-primo-soccorso-portata it
 ---
 
 Il **7 aprile** è la **Giornata mondiale della salute** (*World Health Day*), promossa dall'**Organizzazione Mondiale della Sanità** nel giorno dell'anniversario della sua fondazione (1948). Ogni anno si focalizza un tema specifico di salute pubblica globale.

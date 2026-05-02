@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "IT-alert" 2026-06-11-it-alert-come-funziona-reagire it
 ---
 
 **IT-alert** è il sistema pubblico di **allarme nazionale** del Dipartimento della Protezione Civile. Invia messaggi a tutti i telefoni cellulari presenti in un'area geografica a rischio, in caso di emergenze gravi e imminenti. Il sistema è operativo a pieno regime dal **2024** dopo una lunga fase di test.

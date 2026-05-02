@@ -14,7 +14,6 @@ allegati:
     url: "/manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf"
     dimensione: "4,1 MB"
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Banco Alimentare" 2024-11-26-manuale-caritas-banco-alimentare-presentazione it
 ---
 
 Il **Manuale di corrette prassi operative per il recupero, la raccolta e la distribuzione di cibo ai fini di solidarietà sociale**, edito da **Caritas Italiana** e **Fondazione Banco Alimentare Onlus**, è stato **validato dal Ministero della Salute** ai sensi dell'**articolo 8 del Regolamento CE 852/2004**. La prima edizione è dell'ottobre 2015. Il testo completo è allegato a questo articolo.

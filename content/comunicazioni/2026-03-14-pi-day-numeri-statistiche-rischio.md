@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Pi greco" 2026-03-14-pi-day-numeri-statistiche-rischio it
 ---
 
 Il **14 marzo** (3/14, nella notazione anglosassone) è il **Pi Day**, la giornata internazionale del numero π e della matematica in generale. Dal 2019 è anche riconosciuta dall'**UNESCO** come *International Day of Mathematics*.

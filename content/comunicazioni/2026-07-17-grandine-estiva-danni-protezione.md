@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Grandine" 2026-07-17-grandine-estiva-danni-protezione it
 ---
 
 La **grandine** è tra i fenomeni meteo estivi più **impressionanti e dannosi**. In pochi minuti può distruggere raccolti, danneggiare veicoli, ferire persone, rompere finestre e coperture. Il 2026 vede eventi grandinigeni in aumento. Vale la pena conoscere il fenomeno e sapere come reagire.

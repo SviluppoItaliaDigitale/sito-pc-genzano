@@ -12,7 +12,6 @@ scadenza: ""
 area: "Formazione di protezione civile"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Triangolo del fuoco" 2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco it
 ---
 
 **L'incendio boschivo non è un evento casuale: è un fenomeno chimico governato da regole precise.** Capire il triangolo del fuoco, riconoscere i tipi di incendio, scegliere la tecnica di attacco giusta e usare l'attrezzo corretto sono competenze che ogni volontario di protezione civile impegnato nell'AIB deve possedere prima di salire sul pickup. Questa guida riassume le basi operative utilizzate nei corsi di formazione antincendio del Gruppo Comunale.

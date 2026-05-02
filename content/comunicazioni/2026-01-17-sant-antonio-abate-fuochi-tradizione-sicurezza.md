@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Antonio Abate" 2026-01-17-sant-antonio-abate-fuochi-tradizione-sicurezza it
 ---
 
 Il **17 gennaio**, festa di **Sant'Antonio Abate**, in molte comunità italiane si accendono i **falò rituali**. Una tradizione antica, spesso legata alla benedizione degli animali e alla fine del periodo più freddo dell'inverno. Anche nei Castelli Romani, in paesi e frazioni, il fuoco di Sant'Antonio è parte viva della cultura popolare.

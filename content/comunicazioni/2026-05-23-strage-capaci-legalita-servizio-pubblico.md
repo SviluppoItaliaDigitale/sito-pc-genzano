@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Strage di Capaci" 2026-05-23-strage-capaci-legalita-servizio-pubblico it
 ---
 
 Il **23 maggio 1992**, sull'autostrada A29 all'altezza dello svincolo di Capaci, un'esplosione uccise il magistrato **Giovanni Falcone**, la moglie **Francesca Morvillo** e gli agenti della scorta **Vito Schifani**, **Rocco Dicillo** e **Antonio Montinaro**. Fu uno dei momenti più tragici della storia repubblicana italiana. Cinquantasette giorni dopo, a Via D'Amelio, un'altra autobomba uccise **Paolo Borsellino** e la sua scorta.

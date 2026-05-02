@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Carnevale di Venezia" 2026-02-21-carnevale-sicurezza-eventi-assembramenti it
 ---
 
 Il **Carnevale** è un appuntamento amato in molti paesi dei Castelli Romani. Sfilate di carri allegorici, maschere, musica, banchetti di dolci, coriandoli. Un momento di comunità che coinvolge bambini, famiglie, associazioni, scuole.

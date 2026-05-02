@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Biodiversità" 2026-05-22-giornata-biodiversita-territori-resilienti it
 ---
 
 Il **22 maggio** è la [Giornata internazionale della Biodiversità](https://www.un.org/en/observances/biological-diversity-day) proclamata dalle Nazioni Unite. Può sembrare una ricorrenza distante dal lavoro di Protezione Civile. In realtà, la **biodiversità è una delle infrastrutture più importanti** per la sicurezza dei territori: boschi sani trattengono terreno, fiumi liberi assorbono piene, suoli vivi riducono dissesto e siccità.

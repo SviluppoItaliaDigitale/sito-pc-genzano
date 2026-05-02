@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Spiaggia" 2026-07-02-sicurezza-in-spiaggia-laghi-castelli it
 ---
 
 Ogni estate i **laghi di Nemi e Albano** attraggono migliaia di visitatori. Acque fresche, paesaggi suggestivi, relax a due passi da Roma. Ma l'acqua — mare, lago o piscina — è uno degli ambienti in cui si concentra il maggior numero di **incidenti estivi**. Alcune regole di base rendono più sicura la giornata.

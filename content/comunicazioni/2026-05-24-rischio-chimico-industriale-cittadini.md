@@ -11,7 +11,6 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Direttiva Seveso" 2026-05-24-rischio-chimico-industriale-cittadini it
 ---
 
 Il **rischio chimico e industriale** è uno dei capitoli della Protezione Civile meno discussi nel linguaggio comune, ma altrettanto importante. In Italia ci sono migliaia di stabilimenti che trattano sostanze pericolose e una rete di trasporto su gomma, ferro e mare che ogni giorno movimenta grandi quantità di materiali classificati. Un incidente può avere conseguenze gravi su chi vive o lavora nelle vicinanze.
