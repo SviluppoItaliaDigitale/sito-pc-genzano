@@ -27,6 +27,21 @@
     }
     .scenario .emo { font-size: 4.5rem; line-height: 1; }
     .scenario .testo { font-size: 1.05rem; font-weight: 700; color: #495057; margin-top: 0.5rem; }
+    .tina-perche {
+      background: #d1e7dd; border: 2px solid #198754;
+      border-radius: 18px; padding: .8rem 1rem;
+      font-size: 1rem; font-weight: 600; color: #0f5132;
+      text-align: center; margin: 1rem 0 0;
+      animation: perche-in .35s ease;
+    }
+    .tina-perche.hide { display: none !important; }
+    @keyframes perche-in {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .tina-perche { animation: none; }
+    }
     .mezzi-griglia {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem;
       max-width: 540px; margin: 0 auto;
@@ -103,6 +118,7 @@
             <span aria-hidden="true">🚐</span><span class="nome">Volontari PC</span>
           </button>
         </div>
+        <div id="perche" class="tina-perche hide" aria-live="polite"></div>
       </div>
 
       <div id="end-screen" class="hide">
@@ -130,20 +146,34 @@
     // 6 random. Le risposte sono 3: pompieri (fuoco/gas/blocchi), ambulanza
     // (chi sta male), volontari PC (aiuto post-evento). Coerente con NUE 112.
     const POOL = [
-      { emo: '🔥', testo: 'Una casa va a fuoco!', giusto: 'pompiere' },
-      { emo: '🤕', testo: 'Una persona si è fatta male!', giusto: 'ambulanza' },
-      { emo: '🌊', testo: "C'è stata un'alluvione: serve acqua e cibo!", giusto: 'volontari' },
-      { emo: '🚗💥', testo: 'Un incidente in strada con feriti!', giusto: 'ambulanza' },
-      { emo: '🌳', testo: 'Un albero è caduto sulla strada e blocca tutto!', giusto: 'volontari' },
-      { emo: '😵', testo: "Un signore anziano si è sentito male per il caldo!", giusto: 'ambulanza' },
-      { emo: '💨', testo: "C'è fumo dalla cucina dei vicini!", giusto: 'pompiere' },
-      { emo: '🐱', testo: "Un gatto è bloccato sull'albero più alto!", giusto: 'pompiere' },
-      { emo: '🚧', testo: "Una frana ha bloccato la strada del paese!", giusto: 'volontari' },
-      { emo: '🩹', testo: "La nonna è caduta e si è fatta una bua al ginocchio!", giusto: 'ambulanza' },
-      { emo: '⛑️', testo: "Dopo il terremoto serve allestire le tende!", giusto: 'volontari' },
-      { emo: '🚒', testo: "Un piccolo incendio nel bosco vicino casa!", giusto: 'pompiere' },
-      { emo: '💧', testo: "Una grossa perdita d'acqua allaga la cantina!", giusto: 'volontari' },
-      { emo: '😷', testo: "Un bambino non riesce a respirare bene!", giusto: 'ambulanza' }
+      { emo: '🔥', testo: 'Una casa va a fuoco!', giusto: 'pompiere',
+        perche: 'I pompieri spengono il fuoco e portano fuori le persone.' },
+      { emo: '🤕', testo: 'Una persona si è fatta male!', giusto: 'ambulanza',
+        perche: "L'ambulanza ha medici e infermieri: aiuta chi sta male." },
+      { emo: '🌊', testo: "C'è stata un'alluvione: serve acqua e cibo!", giusto: 'volontari',
+        perche: 'I volontari portano acqua e cibo a chi non ha più la casa.' },
+      { emo: '🚗💥', testo: 'Un incidente in strada con feriti!', giusto: 'ambulanza',
+        perche: "Per i feriti chiama subito l'ambulanza con il 112." },
+      { emo: '🌳', testo: 'Un albero è caduto sulla strada e blocca tutto!', giusto: 'volontari',
+        perche: 'I volontari liberano la strada con motoseghe e trattori.' },
+      { emo: '😵', testo: "Un signore anziano si è sentito male per il caldo!", giusto: 'ambulanza',
+        perche: 'Quando una persona si sente male, chiama il 112 e arriva l\'ambulanza.' },
+      { emo: '💨', testo: "C'è fumo dalla cucina dei vicini!", giusto: 'pompiere',
+        perche: 'Il fumo significa fuoco. Avvisa subito un adulto e chiama i pompieri.' },
+      { emo: '🐱', testo: "Un gatto è bloccato sull'albero più alto!", giusto: 'pompiere',
+        perche: 'I pompieri hanno la scala alta per salvare anche gli animali.' },
+      { emo: '🚧', testo: "Una frana ha bloccato la strada del paese!", giusto: 'volontari',
+        perche: 'I volontari aiutano a liberare la strada e a portare aiuti dove serve.' },
+      { emo: '🩹', testo: "La nonna è caduta e si è fatta una bua al ginocchio!", giusto: 'ambulanza',
+        perche: 'Per chi non riesce a camminare arriva l\'ambulanza con la barella.' },
+      { emo: '⛑️', testo: "Dopo il terremoto serve allestire le tende!", giusto: 'volontari',
+        perche: 'I volontari montano le tende per chi non può tornare a casa.' },
+      { emo: '🚒', testo: "Un piccolo incendio nel bosco vicino casa!", giusto: 'pompiere',
+        perche: 'I pompieri hanno i mezzi giusti per spegnere il fuoco nei boschi.' },
+      { emo: '💧', testo: "Una grossa perdita d'acqua allaga la cantina!", giusto: 'volontari',
+        perche: 'I volontari arrivano con le pompe per togliere l\'acqua.' },
+      { emo: '😷', testo: "Un bambino non riesce a respirare bene!", giusto: 'ambulanza',
+        perche: 'Quando manca il respiro è un\'emergenza: ambulanza subito col 112.' }
     ];
     function pescaScene(){
       const arr = POOL.slice();
@@ -193,6 +223,8 @@
       emoEl.textContent = r.emo;
       testoEl.textContent = r.testo;
       buttons.forEach(b => { b.classList.remove('correct', 'wrong', 'dim'); });
+      const perEl = document.getElementById('perche');
+      if (perEl) { perEl.classList.add('hide'); perEl.textContent = ''; }
       locked = false;
       drawProgress();
       if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
@@ -203,6 +235,12 @@
       locked = true;
       const tipo = btn.getAttribute('data-tipo');
       const giusto = ROUNDS[cur].giusto;
+      const perche = ROUNDS[cur].perche;
+      const perEl = document.getElementById('perche');
+      if (perEl && perche) {
+        perEl.textContent = '💡 ' + perche;
+        perEl.classList.remove('hide');
+      }
       if (tipo === giusto) {
         btn.classList.add('correct');
         score++;
