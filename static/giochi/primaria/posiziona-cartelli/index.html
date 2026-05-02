@@ -83,6 +83,47 @@
     .slot.filled.correct { border-color: #198754; background: #d1e7dd; }
     .slot.filled.wrong { border-color: #dc3545; background: #f8d7da; }
     .slot-hint { pointer-events: none; }
+    /* Modalita' esperto: nasconde la scritta del posto vuoto. Il giocatore
+       deve dedurre quale cartello va dal CONTESTO della scena. */
+    .scene.esperto .slot-hint { display: none; }
+    .scene.esperto .slot::after {
+      content: '?';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: rgba(0, 51, 102, .35);
+      font-weight: 700;
+      pointer-events: none;
+    }
+    .scene.esperto .slot.filled::after { display: none; }
+
+    /* Selettore modalita' nella selezione scena */
+    .modalita-toggle {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: .8rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .mod-opt {
+      display: block;
+      padding: .8rem 1rem;
+      background: #fff;
+      border: 2px solid #cfd8e3;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+    }
+    .mod-opt:has(input:checked) {
+      border-color: #003366;
+      background: #e7f1ff;
+    }
+    .mod-opt input { margin-right: .5rem; vertical-align: top; }
+    .mod-opt span { display: inline-block; vertical-align: top; }
+    .mod-opt small { display: block; color: #5b6b7c; font-weight: 400; margin-top: .15rem; }
 
     .tray {
       background: #fff; border-radius: 12px; padding: .8rem;
@@ -228,6 +269,18 @@
               <span><span class="dot" style="background:#0072CE;border-color:#003366;border-radius:50%"></span><strong>Blu, cerchio</strong> = obbligo (M)</span>
               <span><span class="dot" style="background:#237F52;border-color:#0f5132"></span><strong>Verde, quadrato</strong> = sicurezza, uscita, primo soccorso (E)</span>
               <span><span class="dot" style="background:#C8232C;border-color:#7f1d1d"></span><strong>Rosso, quadrato</strong> = antincendio (F)</span>
+            </div>
+
+            <h2 class="h5 text-center mt-4 mb-2">Modalità di gioco</h2>
+            <div class="modalita-toggle" role="radiogroup" aria-label="Modalità di gioco">
+              <label class="mod-opt">
+                <input type="radio" name="modalita" value="normale" checked>
+                <span><strong>Normale</strong><small>Il posto vuoto mostra la scritta del cartello giusto: matching diretto.</small></span>
+              </label>
+              <label class="mod-opt">
+                <input type="radio" name="modalita" value="esperto">
+                <span><strong>Esperto</strong><small>Il posto vuoto è solo una sagoma: deduci il cartello dal contesto della scena.</small></span>
+              </label>
             </div>
 
             <h2 class="h5 text-center mt-4 mb-3">Scegli una scena</h2>
@@ -381,6 +434,34 @@
           { id: 'f', x: 59, y: 55,  hint: 'Estintore', accepts: 'estintore' }
         ],
         cartelli: ['uscita', 'defibrillatore', 'vietatofumare', 'caduta', 'primosoccorso', 'estintore']
+      },
+      {
+        id: 'centro-genzano',
+        titolo: 'Centro storico di Genzano',
+        desc: 'Le vie strette del centro storico durante una processione. Cartelli per la gestione del flusso pedonale e per le emergenze.',
+        slots: [
+          { id: 'a', x: 5,  y: 8,   hint: 'Uscita emergenza', accepts: 'uscita' },
+          { id: 'b', x: 32, y: 8,   hint: 'Vietato entrare', accepts: 'vietatoingresso' },
+          { id: 'c', x: 59, y: 8,   hint: 'Punto di raccolta', accepts: 'raccolta' },
+          { id: 'd', x: 5,  y: 55,  hint: 'Primo soccorso', accepts: 'primosoccorso' },
+          { id: 'e', x: 32, y: 55,  hint: 'Defibrillatore', accepts: 'defibrillatore' },
+          { id: 'f', x: 59, y: 55,  hint: 'Idrante', accepts: 'idrante' }
+        ],
+        cartelli: ['uscita', 'vietatoingresso', 'raccolta', 'primosoccorso', 'defibrillatore', 'idrante']
+      },
+      {
+        id: 'palasport',
+        titolo: 'Al palasport (evento affollato)',
+        desc: 'Un palasport durante una partita o un concerto. Folla numerosa: la cartellonistica deve essere subito leggibile.',
+        slots: [
+          { id: 'a', x: 5,  y: 8,   hint: 'Uscita emergenza', accepts: 'uscita' },
+          { id: 'b', x: 32, y: 8,   hint: 'Defibrillatore', accepts: 'defibrillatore' },
+          { id: 'c', x: 59, y: 8,   hint: 'Estintore', accepts: 'estintore' },
+          { id: 'd', x: 5,  y: 55,  hint: 'Vietato fumare', accepts: 'vietatofumare' },
+          { id: 'e', x: 32, y: 55,  hint: 'Punto di raccolta', accepts: 'raccolta' },
+          { id: 'f', x: 59, y: 55,  hint: 'Primo soccorso', accepts: 'primosoccorso' }
+        ],
+        cartelli: ['uscita', 'defibrillatore', 'estintore', 'vietatofumare', 'raccolta', 'primosoccorso']
       }
     ];
 
@@ -407,6 +488,13 @@
     var current = null;   // scena corrente
     var placement = {};   // { segnoId: slotId | null }
     var selected = null;  // sign selezionato con tastiera
+    // Modalita' di gioco: 'normale' (le scritte del posto guidano) oppure
+    // 'esperto' (le scritte sono nascoste, deduzione dal contesto). Letta dai
+    // radio button al click su una scena.
+    function getModalita(){
+      var sel = document.querySelector('input[name="modalita"]:checked');
+      return sel ? sel.value : 'normale';
+    }
 
     function renderLevelList() {
       levelList.innerHTML = '';
@@ -437,6 +525,10 @@
       sceneDesc.textContent = s.desc;
       hudScene.textContent = s.titolo;
       feedbackMsg.classList.add('hide');
+      // Applica modalita' selezionata: in 'esperto' i .slot-hint vengono
+      // nascosti via CSS (.scene.esperto) e appare un '?' al posto della
+      // scritta. Il giocatore deve dedurre il cartello dal contesto.
+      sceneEl.classList.toggle('esperto', getModalita() === 'esperto');
       buildScene();
       buildTray();
       updateHud();
