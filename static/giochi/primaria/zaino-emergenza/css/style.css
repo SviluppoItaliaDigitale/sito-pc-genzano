@@ -71,3 +71,27 @@
     .item-card .item-icon { font-size: 1.5rem; }
     .item-card .item-name { font-size: 0.72rem; }
 }
+
+/* Selettore modalita' (veloce / completa) — radio button piu' grandi e leggibili */
+.modalita-zaino {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .6rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.mod-zaino {
+  display: block;
+  padding: .8rem 1rem;
+  background: #fff;
+  border: 2px solid #cfd8e3;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+  font-size: .95rem;
+}
+.mod-zaino:has(input:checked) {
+  border-color: #003366;
+  background: #e7f1ff;
+}
+.mod-zaino input { margin-right: .5rem; vertical-align: middle; }

@@ -70,7 +70,19 @@ document.addEventListener('DOMContentLoaded', () => {
         gameScreen.classList.remove('hide');
         winScreen.classList.add('hide');
         found = 0; errors = 0;
-        const items = shuffle([...allItems]);
+        // Modalita': veloce (16 oggetti random, ~10 corretti + ~6 distrattori)
+        // o completa (tutti gli oggetti). La modalita' veloce e' utile come
+        // partita "rapida" durante una lezione; la completa e' il test
+        // approfondito.
+        const modSel = document.querySelector('input[name="modZaino"]:checked');
+        const modalita = modSel ? modSel.value : 'veloce';
+        let items = shuffle([...allItems]);
+        if (modalita === 'veloce') {
+          // Estrai 10 corretti random e 6 distrattori random per garantire bilanciamento
+          const corretti = shuffle(allItems.filter(i => i.correct)).slice(0, 10);
+          const sbagliati = shuffle(allItems.filter(i => !i.correct)).slice(0, 6);
+          items = shuffle(corretti.concat(sbagliati));
+        }
         correctTotal = items.filter(i => i.correct).length;
         itemsTotal.textContent = correctTotal;
         itemsCount.textContent = 0;
