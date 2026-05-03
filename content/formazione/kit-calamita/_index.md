@@ -12,18 +12,18 @@ Le schede sono progettate con **font e grafica a basso consumo di inchiostro** (
 
 ### 👧 [Kit Calamità Bambini](/formazione/kit-calamita-bambini/)
 
-**46 schede + 1 guida operatori PFA Children** per bambini 3-14 anni e per supporto inclusione (disabilità motoria, visiva, cognitiva, italiano L2). Distrazione attiva + supporto emotivo + ricostruzione routine.
+Schede + guida operatori PFA Children per bambini 3-14 anni e per supporto inclusione (disabilità motoria, visiva, cognitiva, italiano L2). Distrazione attiva + supporto emotivo + ricostruzione routine.
 
-- 10 schede fascia 3-5 anni (pregrafismo, colorazione, mandala, storia sociale ARASAAC)
-- 10 schede fascia 6-8 anni (color-by-number, labirinti, cruciverba, origami, diario emozioni)
-- 10 schede fascia 9-11 anni (word search, sudoku, mappa campo, lettera al soccorritore, ricetta speranza)
-- 10 schede fascia 12-14 anni (diario riflessivo, lettera al futuro me, mini-progetti ripartenza)
-- 6 schede dedicate inclusione (tracciati grandi, alto contrasto, CAA, multilingua)
+- Fascia 3-5 anni: pregrafismo, colorazione, mandala, storia sociale ARASAAC
+- Fascia 6-8 anni: labirinti, cruciverba, origami, diario emozioni
+- Fascia 9-11 anni: word search, sudoku, mappa campo, lettera al soccorritore, ricetta speranza
+- Fascia 12-14 anni: diario riflessivo, lettera al futuro me, mini-progetti ripartenza
+- Schede dedicate inclusione (tracciati grandi, alto contrasto, CAA, multilingua)
 - Guida operatori PFA Children evidence-based (NCTSN, IFRC, WHO/UNHCR, Sphere)
 
 ### 👴 [Kit Calamità Anziani in casa](/formazione/kit-calamita-anziani/)
 
-**10 schede + 1 guida operatori** per anziani autonomi e parzialmente autonomi che vivono in casa propria. Sopravvivenza dignitosa + orientamento + supporto cognitivo.
+Schede + guida operatori per anziani autonomi e parzialmente autonomi che vivono in casa propria. Sopravvivenza dignitosa + orientamento + supporto cognitivo.
 
 - Carta d'identità di emergenza (anagrafica + terapie + ausili)
 - Diario settimanale medicinali
@@ -60,4 +60,4 @@ Le schede sono progettate con **font e grafica a basso consumo di inchiostro** (
 
 Stiamo lavorando per ampliare progressivamente i kit con nuove schede e per aggiungere kit per altre categorie (es. persone con disabilità adulte non istituzionalizzate, persone senza fissa dimora). Ogni nuovo kit verrà aggiunto come voce in questa pagina.
 
-Per segnalare bisogni o suggerire nuove schede: [info@protezionecivilegenzano.it](mailto:info@protezionecivilegenzano.it).
+Per segnalare bisogni o suggerire nuove schede: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).

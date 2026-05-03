@@ -56,4 +56,4 @@ Le schede sono **pronte da stampare A4** in B/N con consumo inchiostro ridotto (
 - **Cochrane Review 2018** — Reminiscence therapy for dementia
 - **DPC** — linee guida nazionali assistenza ai vulnerabili
 
-Per segnalare bisogni o suggerire nuove schede: [info@protezionecivilegenzano.it](mailto:info@protezionecivilegenzano.it).
+Per segnalare bisogni o suggerire nuove schede: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).

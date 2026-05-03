@@ -257,6 +257,10 @@ ul.elenco-pratico li::before {
     padding: 12mm;
   }
   .no-print { display: none !important; }
+  /* Nascondi soluzioni in stampa: <details> con soluzioni di
+     sudoku/cruciverba/word search devono restare riservati al
+     conduttore via schermo, non finire sul foglio del bambino. */
+  details, .soluzioni { display: none !important; }
   @page {
     size: A4;
     margin: 0;
