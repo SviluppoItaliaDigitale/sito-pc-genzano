@@ -129,6 +129,24 @@ enableGitInfo = true
   weight = 3
 
 [[menus.main]]
+  name = "Kit Calamità Bambini"
+  url = "/formazione/kit-calamita-bambini/"
+  parent = "educazione-inclusione"
+  weight = 31
+
+[[menus.main]]
+  name = "Kit Calamità Anziani"
+  url = "/formazione/kit-calamita-anziani/"
+  parent = "educazione-inclusione"
+  weight = 32
+
+[[menus.main]]
+  name = "Kit Calamità Strutture Sanitarie"
+  url = "/formazione/kit-calamita-strutture-sanitarie/"
+  parent = "educazione-inclusione"
+  weight = 33
+
+[[menus.main]]
   name = "Storie e Racconti"
   url = "/formazione/storie-e-racconti/"
   parent = "educazione-inclusione"
