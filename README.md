@@ -210,20 +210,23 @@ git add . && git commit -m "..." && git push
 ### Foto
 
 ```bash
-# Applica fascia blu istituzionale a una foto utente (output WebP 1200px)
-bash scripts/applica-fascia-foto.sh /path/foto.jpg nome-output-senza-ext
+# Cover tipografica banner (gradiente blu + titolo) — generata automatica
+# se l'articolo ha image:"". MAI sostituita da foto, la cover serve per
+# Open Graph (anteprima social) e fallback emergenza. Vedi CLAUDE.md punto 9.
+python3 scripts/auto-cover-mancanti.py
 
-# Scarica foto da Wikipedia (con licenza libera) + fascia blu automatica
-bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [it|en]
+# Per inserire una foto INLINE nel corpo articolo (Wikipedia/NASA/foto utente):
+# chiedi a Claude in italiano (es. "trovami una foto gratuita per X" oppure
+# "ecco una foto, mettila nell'articolo Y") — l'agent pc-image-fixer fa
+# WebFetch (per fonti web) + applica fascia blu + shortcode {{< foto >}}
+# inline nel corpo. NON usare il marker # TODO-foto-* nel frontmatter
+# (bandito dopo incidente del 3 maggio 2026: viene reso da Hugo come H1
+# in produzione + sovrascrive il banner).
 
-# Idem da NASA / USGS / NOAA
-bash scripts/foto-da-nasa.sh   "search query"     slug-articolo
-bash scripts/foto-da-usgs.sh   shakemap eventid   slug-articolo
-bash scripts/foto-da-noaa.sh   "https://...noaa.gov/foto.png" "Contesto" slug
-
-# In alternativa, da mobile/cloud: aggiungi nel frontmatter
-# # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo" slug
-# Il workflow CI scaricherà al prossimo push.
+# Comandi shell singoli (per chi preferisce eseguire a mano):
+bash scripts/applica-fascia-foto.sh /path/foto.jpg <nome-DIVERSO-da-slug>
+# Output: static/images/<nome>.webp (1200px, fascia blu, max 200KB)
+# Poi inserisci manualmente {{< foto src="/images/<nome>.webp" alt="..." caption="..." >}}
 ```
 
 ### Bozze social
@@ -309,7 +312,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (40 sezioni)**: contenuti, codice/template, governance docs, audit aggiuntivo, link critici normativa, **audit grammaticale italiano** (apostrofi finti, accenti mancanti, errori italiani tipici via `audit-grammatica-italiana.py`). Fusi `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026, sezione 40 grammaticale aggiunta il 29 aprile 2026. |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo lychee: tutti i link (interni + esterni) |
 | `genera-social-bozze.yml` | Push su `content/comunicazioni/**.md` o `.claude/rules/**.md` (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini Instagram (post 1080x1080 + carosello + story 1080x1920). Output **tutto insieme** in `social-bozze/<slug>/` (testi e immagini). Tier gratuito Gemini, costo zero. |
-| `scarica-foto-automatica.yml` | Push su `content/comunicazioni/**` o sui suoi script foto | Per articoli con marker `# TODO-foto-*`: scarica foto da **7 fonti supportate** (Wikipedia, NASA, USGS, NOAA — senza API key + Pexels, Pixabay, Unsplash — con API key via GitHub Secrets), applica fascia blu istituzionale, popola `image:` + credit. Step 2: cover tipografica auto col titolo per articoli con `image:""` (`auto-cover-mancanti.py`). **Fallimento download**: il marker viene rimosso automaticamente da `rimuovi-marker-foto.py` per evitare loop infinito di issue (fix maggio 2026 dopo accumulo di 13 issue duplicate); l'articolo riceve la cover tipografica come fallback definitivo. Filtro `paths` aggiunto il 29 aprile 2026 per evitare run inutili su CSS/docs. |
+| `scarica-foto-automatica.yml` | Push su `content/comunicazioni/**` o sui suoi script foto | Step 2 attivo: cover tipografica auto col titolo per articoli con `image:""` (`auto-cover-mancanti.py` + protezione regenerate-missing). **Step 1 marker `# TODO-foto-*` deprecato** dal 3 maggio 2026 (CLAUDE.md punto 9: il marker veniva reso da Hugo come H1 in produzione + sovrascriveva il banner col foto, contro la regola "BANNER COL TITOLO INTOCCABILE"). Per inserire foto da fonti ufficiali nel corpo articolo, usare l'agent `pc-image-fixer` (procedura WebFetch + curl + applica-fascia + shortcode `{{< foto >}}` inline). |
 
 Le issue generate automaticamente compaiono nella [tab Issues](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/issues) con label `manutenzione`, `documentazione`, `link-rotti`, ecc.
 
@@ -355,7 +358,8 @@ Workflow completo in [`MANUALE-MOBILE.md`](MANUALE-MOBILE.md): app **Claude Andr
 
 In sintesi:
 - L'articolo si scrive direttamente su GitHub web (modifica un file in `content/comunicazioni/` o crearne uno nuovo).
-- Per la foto: usare il **marker `# TODO-foto-*`** nel frontmatter — il workflow `scarica-foto-automatica.yml` scaricherà la foto dalla fonte scelta tra le **7 supportate** (Wikipedia, NASA, USGS, NOAA, Pexels, Pixabay, Unsplash) durante il deploy CI.
+- Banner: lasciare `image: ""` vuoto, la cover tipografica viene generata automaticamente al deploy.
+- Per inserire una foto inline nel corpo: chiedi a Claude (app Android) di trovartene una gratuita pertinente — l'agent `pc-image-fixer` cerca su Wikipedia/NASA/USGS, scarica, applica fascia blu, e inserisce shortcode `{{< foto >}}` nel corpo. **Non usare** il marker `# TODO-foto-*` nel frontmatter (bandito dopo incidente 3 maggio 2026).
 - Bozze social e immagini Instagram vengono generate automaticamente al push.
 
 ---

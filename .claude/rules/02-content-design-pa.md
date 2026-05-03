@@ -87,7 +87,7 @@ Specifiche complete in `MANUALE-SITO.md` Parte 14.9. Questa regola nasce dopo un
 Le foto fornite dall'utente **non vanno mai nel banner/copertina** del sito (campo `image:` del frontmatter). Il banner deve restare pulito col solo titolo dell'articolo e il page-hero blu istituzionale: è una scelta di design istituzionale che non si tocca.
 
 **Regola sito (web):**
-- `image:` resta `""` o viene popolato solo dalla **cover tipografica** automatica (gradiente blu + titolo, generata dal workflow `auto-cover-mancanti.py`) oppure dalle **foto da fonti ufficiali** (Wikipedia/NASA/USGS via marker `# TODO-foto-*`).
+- `image:` resta `""` o viene popolato solo dalla **cover tipografica** automatica (gradiente blu + titolo, generata da `auto-cover-mancanti.py`). MAI da foto utente, MAI da foto Wikipedia/NASA/USGS — quelle vanno **sempre inline nel corpo** come `{{< foto >}}`. Il marker `# TODO-foto-*` è bandito (vedi CLAUDE.md punto 9).
 - Le foto utente vanno **tutte dentro il corpo articolo** come `{{< foto >}}`:
   - 1 foto → punto narrativamente sensato (dopo l'apertura o sotto un H2 pertinente).
   - 2-3 foto → 1ª dopo 1° H2, 2ª dopo 2° H2, ecc. (convenzione articoli storici).

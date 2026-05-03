@@ -111,32 +111,30 @@ Se in futuro aggiungiamo uno script `foto-da-NUOVA.sh` (es. Copernicus, NOAA, EU
 - **Niente domini privati** (intranet, sistemi gestionali del Comune, ecc.): la sandbox è uno strato di difesa, non si "apre tutto" perché conviene.
 - **Niente `*` come allowlist**: meglio aggiungere domini specifici man mano che servono.
 
-### 14.7 — Quando NON serve sbloccare la sandbox
+### 14.7 — Quando serve sbloccare la sandbox per le foto
 
-Il workflow `.github/workflows/scarica-foto-automatica.yml` gira su un **runner GitHub Actions con rete libera**: scarica le foto, applica la fascia blu, committa. Quindi se un articolo nuovo include il **marker** `# TODO-foto-wikipedia: ...` nel frontmatter, **non serve** scaricare l'immagine localmente con Claude Code: basta committare l'articolo, il workflow fa il resto al push.
+Lo sblocco della sandbox (vedi `.claude/settings.local.json` configurato per i ~17 domini delle nostre fonti foto) serve quando:
 
-Lo sblocco della sandbox serve quando:
+- vuoi che l'agent `pc-image-fixer` scarichi una foto da Wikipedia/NASA/USGS via WebFetch + curl, applichi fascia blu (`scripts/applica-fascia-foto.sh`), e inserisca shortcode `{{< foto >}}` nel corpo articolo — tutto dentro la sessione Claude Code;
+- vuoi vedere l'immagine **prima del push** per verificare la fascia blu;
+- vuoi inserire **più immagini nel corpo** durante una passata di revisione articoli storici.
 
-- vuoi vedere l'immagine **prima del push** per verificare che la fascia blu venga bene;
-- vuoi inserire **più immagini nel corpo** dell'articolo (il workflow gestisce solo la copertina);
-- stai facendo una **passata di revisione** di articoli precedenti per arricchirli.
+> ⚠️ **Marker `# TODO-foto-*` BANDITO dal 3 maggio 2026.** Il vecchio meccanismo (marker nel frontmatter → workflow CI scarica + popola `image:`) è stato eliminato perché: (a) il marker veniva renderizzato da Hugo come `<h1>` in produzione finché il workflow non lo rimuoveva, e se `deploy.yml` finiva prima il sito andava live col marker visibile (incidente reale); (b) il workflow popolava `image:` con la foto sovrascrivendo il banner col titolo, contro la regola "BANNER COL TITOLO INTOCCABILE" (CLAUDE.md punto 9). Lo step 2 del workflow (cover tipografica auto) resta attivo.
 
-In tutti gli altri casi, il marker + workflow è sufficiente.
+### 14.8 — Pubblicare un articolo da cellulare: due modi
 
-### 14.8 — Pubblicare un articolo da cellulare: tre modi
+Il flusso editoriale è progettato per funzionare **anche senza un PC**: dal cellulare puoi pubblicare un articolo completo (testo + cover tipografica banner + deploy automatico).
 
-Il flusso editoriale è progettato per funzionare **anche senza un PC**: dal cellulare puoi pubblicare un articolo completo (testo + foto reale + cover tipografica + deploy automatico) senza toccare un terminale.
+**Modo 1 — App Claude mobile (la più comoda)**
 
-**Modo 1 — App Claude Code mobile (la più comoda)**
+Apri l'app Claude sul cellulare e chiedi all'AI: *"Crea un articolo su [argomento]"*. L'AI:
 
-Apri l'app Claude Code sul cellulare e chiedi all'AI: *"Crea un articolo su [argomento] con marker foto Wikipedia"*. L'AI:
+1. Crea il file `.md` in `content/comunicazioni/AAAA-MM-GG-slug.md` con frontmatter completo + `image: ""` (vuoto, la cover viene generata al deploy)
+2. Fa `git add` + `git commit` + `git push`
+3. Il workflow `scarica-foto-automatica.yml` step 2 (`auto-cover-mancanti.py`) genera la cover tipografica banner, popola `image:`, ri-triggera il deploy
+4. Tra 5-10 minuti l'articolo è online col banner istituzionale
 
-1. Crea il file `.md` in `content/comunicazioni/AAAA-MM-GG-slug.md` con frontmatter completo + marker `# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Wiki" slug`
-2. Fa `git add` + `git commit` + `git push` (l'app cloud può sempre fare git, anche senza accesso ai siti esterni)
-3. Il workflow GitHub `scarica-foto-automatica.yml` parte automaticamente al push, scarica la foto, applica fascia blu, popola il frontmatter, committa, ri-triggera il deploy
-4. Tra 2-3 minuti l'articolo è online con foto reale
-
-Tu non hai fatto nulla di tecnico: solo dialogo con l'AI.
+Per inserire una **foto inline nel corpo articolo**: dopo il push, chiedi a Claude *"trovami una foto gratuita per l'articolo X"*. L'agent `pc-image-fixer` (Parte 19) cerca via WebFetch su Wikipedia/NASA/etc, scarica, applica fascia blu, inserisce shortcode `{{< foto >}}` inline. Da app Claude mobile la procedura funziona perché l'app ha accesso a WebFetch + Bash; manca solo `applica-fascia-foto.sh` (richiede python3-pil): in quel caso l'agent lascia un commento HTML temporaneo e l'esecuzione viene fatta dal prossimo accesso PC.
 
 **Modo 2 — Browser su github.com (anche da cellulare)**
 
@@ -145,18 +143,9 @@ Se non vuoi usare l'AI, puoi creare l'articolo direttamente da `https://github.c
 1. Tab **Code**, cartella `content/comunicazioni/`
 2. **"Add file" → "Create new file"**
 3. Nome file: `AAAA-MM-GG-slug.md` (rispetta il formato data — vedi Parte 1.3)
-4. Contenuto: frontmatter + corpo articolo + marker `# TODO-foto-wikipedia: ...` (se vuoi foto reale)
+4. Contenuto: frontmatter + corpo articolo (con `image: ""` vuoto)
 5. Tasto verde **"Commit changes"**
-6. Aspetta 2-3 minuti → workflow processa → foto online
-
-**Modo 3 — Trigger manuale del workflow**
-
-Se hai già committato un articolo con marker e vuoi forzare l'esecuzione del workflow:
-
-1. `https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions`
-2. Workflow **"📷 Scarica foto da fonti libere"**
-3. **"Run workflow"** → branch `main` → tasto verde **"Run workflow"**
-4. Il workflow scansiona, processa, pubblica
+6. Aspetta 5-10 minuti → cover tipografica banner generata → articolo online
 
 **Riassunto: cosa fa cosa**
 

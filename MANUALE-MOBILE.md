@@ -185,7 +185,7 @@ puoi seguire da:
 | Workflow | Cosa fa |
 |---|---|
 | 🚀 Deploy | Builda Hugo e pubblica su Aruba + GitHub Pages |
-| 📷 Scarica foto | Se hai messo un marker `# TODO-foto-wikipedia: ...` (vedi sezione 3), scarica la foto da Wikipedia |
+| 📷 Cover tipografica | Genera la cover banner istituzionale col titolo (`auto-cover-mancanti.py`) per articoli con `image:""` |
 | 📱 Genera bozze social | Crea `social-bozze/<slug>/` con 4 file `.txt` per X/Facebook/Instagram/Telegram + immagini Instagram |
 
 Quando tutti i pallini diventano verdi ✅, l'articolo è online.
@@ -194,69 +194,62 @@ Quando tutti i pallini diventano verdi ✅, l'articolo è online.
 
 ## 3. Aggiungere foto a un articolo
 
-### Caso A — Hai una foto sul telefono che vuoi usare
+> ⚠️ **Regola intoccabile**: il **banner dell'articolo** mostra **sempre il titolo** (cover tipografica), MAI una foto. La foto serve come anteprima Open Graph quando l'URL è condiviso sui social, e come fallback in emergenza. **Tutte** le foto (utente, Wikipedia, NASA, USGS, stock) vanno **inline nel corpo articolo**, mai nel campo `image:` del frontmatter. Vedi CLAUDE.md punto 9.
+>
+> Il marker `# TODO-foto-*` nel frontmatter è **bandito** dal 3 maggio 2026 (incidente reale: Hugo l'ha renderizzato come `<h1>` in produzione + sovrascriveva il banner col foto).
 
-Le foto servono caricate sul repo come file `.webp` di 1200px con
-fascia blu istituzionale. Da mobile **non** puoi farlo direttamente:
-serve l'opzione B (Wikipedia/NASA/USGS automatico) oppure devi
-prima caricarle su un PC con `bash scripts/applica-fascia-foto.sh`.
+### Caso A — Vuoi pubblicare l'articolo subito SENZA foto inline
 
-### Caso B — Vuoi una foto automatica da fonti libere (7 fonti supportate)
+Lascia `image: ""` nel frontmatter. Al prossimo deploy la cover tipografica
+(gradiente blu + titolo) viene generata automaticamente. L'articolo sarà
+pubblicato col solo banner istituzionale. Va benissimo per articoli
+informativi/dottrinali — non si è obbligati ad avere foto.
 
-Nel frontmatter dell'articolo, aggiungi UNA riga di **marker**.
-Sono supportate **7 fonti**, ognuna pensata per un tipo di articolo diverso.
+### Caso B — Vuoi una foto inline gratuita (Wikipedia/NASA/USGS/NOAA/stock)
 
-#### 🗺️ Tabella decisionale: quale fonte per quale articolo
+Da mobile lo strumento giusto è **chiedere a Claude in italiano naturale**.
+L'agent `pc-image-fixer` (Parte 19) cerca, sceglie, scarica, applica fascia
+blu istituzionale, e inserisce lo shortcode `{{< foto >}}` nel corpo articolo.
 
-| Tipo di articolo | Fonte consigliata | Esempio marker |
-|---|---|---|
-| Anniversario evento storico (terremoti famosi, alluvioni, eruzioni) | **Wikipedia** | `# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto dell'Irpinia del 1980" slug` |
-| Personaggio storico, opera, libro, organizzazione | **Wikipedia** | `# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Giuseppe Zamberletti" slug` |
-| Fenomeno globale visto dallo spazio (uragani, eruzioni, ondata calore) | **NASA** | `# TODO-foto-nasa: bash scripts/foto-da-nasa.sh "Etna eruption" slug` |
-| ShakeMap di un terremoto specifico | **USGS** | `# TODO-foto-usgs: bash scripts/foto-da-usgs.sh shakemap us6000abcd slug` |
-| Uragani, traccia tropicale (NHC), foto storica meteo | **NOAA** | `# TODO-foto-noaa: bash scripts/foto-da-noaa.sh "URL diretto" "Descrizione" slug` |
-| **Foto stock generica** (volontari, atmosfera, persone, attività) | **Pexels** o **Unsplash** | `# TODO-foto-pexels: bash scripts/foto-da-pexels.sh "rescue volunteer" slug` |
-| **Foto stock alta qualità** (illustrazioni, oggetti, paesaggi) | **Pixabay** | `# TODO-foto-pixabay: bash scripts/foto-da-pixabay.sh "ambulance" slug` |
+Esempi di frasi che attivano l'agent:
 
-> ⚠️ **Mai usare i marker `pexels`/`pixabay`/`unsplash` per popolare batch di articoli con la stessa query categoriale.** Le API stock restituiscono sempre la stessa prima immagine: il risultato è decine di articoli con foto identica e caption duplicata. Esempio reale evitato (ad aprile 2026 un batch ha messo la stessa foto della Croce Rossa su 74 articoli, è stato ripulito interamente). Regola formale in `.claude/rules/02-content-design-pa.md` sezione "Divieto: foto stock generiche ripetute per macro-tema". Usare i marker stock **solo** per articoli singoli con query specifica al contenuto, e preferire sempre Wikipedia/NASA/USGS/NOAA quando la materia lo permette.
+- *"Trovami una foto gratuita per l'articolo X."*
+- *"Cerca una foto di stazione radioamatoriale in emergenza per l'articolo del 3 maggio."*
+- *"Mi serve un'immagine per l'articolo Y, qualcosa di tematico."*
 
-#### Esempio completo
+Tabella decisionale che l'agent applica internamente:
 
-```yaml
----
-title: "Anniversario terremoto Irpinia"
-date: 2026-11-23
-image: ""
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto dell'Irpinia del 1980" 2026-11-23-irpinia
----
+| Tipo di articolo | Fonte preferita |
+|---|---|
+| Anniversario evento storico (terremoti famosi, alluvioni, eruzioni) | Wikipedia |
+| Personaggio storico, opera, libro, organizzazione | Wikipedia |
+| Fenomeno globale visto dallo spazio (uragani, eruzioni, ondata calore) | NASA |
+| ShakeMap di un terremoto specifico | USGS |
+| Uragani, traccia tropicale, foto storica meteo | NOAA |
+| Foto generica di atmosfera (volontari, paesaggi, oggetti) | Pexels / Pixabay / Unsplash (con API key) |
+
+> ⚠️ **Vincolo anti-stock**: mai foto stock generica ripetuta per macro-tema (es. tutte le foto "volontari Croce Rossa" su 74 articoli, incidente aprile 2026). L'agent applica il vincolo automaticamente: query mirate, no batch.
+
+### Caso C — Hai una foto del Gruppo (cellulare, fotocamera)
+
+Da mobile, **caricala su GitHub web** in `static/images/` con nome
+`AAAA-MM-GG-descrizione-specifica.webp` (o `.jpg`/`.png` da convertire poi).
+
+Poi chiedi a Claude:
+
+- *"Ecco una foto, mettila nell'articolo X applicando fascia blu."*
+
+L'agent `pc-image-fixer` rileva la foto, applica la fascia blu istituzionale
+con `applica-fascia-foto.sh` (servizio richiede python3-pil, gira su PC),
+inserisce shortcode `{{< foto >}}` con alt text + caption. Se sei davvero
+da mobile senza shell, lascia un commento HTML temporaneo nel corpo
+articolo per ricordarti al prossimo accesso PC:
+
+```html
+<!-- TODO foto: applicare fascia a /static/images/foto-IMG_1234.jpg e inserire qui -->
 ```
 
-#### Lista completa marker
-
-```yaml
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Wikipedia" slug [it|en]
-# TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "search query"     slug
-# TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap <eventid> slug
-# TODO-foto-noaa:      bash scripts/foto-da-noaa.sh      "URL noaa.gov"     "Contesto" slug
-# TODO-foto-pexels:    bash scripts/foto-da-pexels.sh    "search query"     slug
-# TODO-foto-pixabay:   bash scripts/foto-da-pixabay.sh   "search query"     slug
-# TODO-foto-unsplash:  bash scripts/foto-da-unsplash.sh  "search query"     slug
-```
-
-#### Cosa succede al commit
-
-Il workflow `scarica-foto-automatica.yml` (CI):
-1. Scansiona gli articoli con marker
-2. Scarica la foto dalla fonte scelta (rete libera del runner GitHub)
-3. Applica la fascia blu istituzionale
-4. Popola `image:` + `image_credit:` + `image_source_url:` nel frontmatter
-5. Rimuove il marker
-6. Committa e ri-triggera il deploy
-
-> ⚠️ **Pexels/Pixabay/Unsplash richiedono API key** (gratuite). Devono essere configurate **una sola volta** come GitHub Secrets:
-> - `PEXELS_API_KEY` (https://www.pexels.com/api/)
-> - `PIXABAY_API_KEY` (https://pixabay.com/api/docs/)
-> - `UNSPLASH_ACCESS_KEY` (https://unsplash.com/developers)
+Hugo ignora i commenti HTML al render, quindi non si vedono in produzione.
 >
 > Se mancano, l'articolo con quel marker fallirà con messaggio chiaro nella issue automatica. Le altre 4 fonti (Wikipedia/NASA/USGS/NOAA) non richiedono API key e funzionano sempre.
 
@@ -463,8 +456,8 @@ Tu non devi fare nulla, succede in background.
 | Verifica fonti AGID | Lunedì 06:00 UTC | Issue se le fonti AGID cambiano (rumorose, ignorale se vuoi) |
 | Smoke test post-deploy | Dopo ogni deploy | Verifica che il sito risponda 200 |
 | Audit accessibilità Lighthouse | Dopo ogni deploy | Report accessibilità |
-| Cover automatica articoli | Push articolo senza foto | Genera cover tipografica blu+titolo |
-| Foto da Wikipedia/NASA/USGS | Push con marker `# TODO-foto-*` | Scarica + applica fascia blu |
+| Cover automatica articoli | Push articolo con `image:""` | Genera cover tipografica blu+titolo (banner istituzionale, anche per og:image social) |
+| Foto inline (Wikipedia/NASA/foto utente) | Su richiesta a Claude | Agent `pc-image-fixer`: scarica + fascia blu + shortcode `{{< foto >}}` nel corpo (mai nel banner) |
 | **Bozze social X/FB/IG/TG** | Push articolo | Crea `social-bozze/<slug>/*.txt` (richiede quota Gemini disponibile) |
 | **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `social-bozze/<slug>/instagram-*.jpg` (Pillow, no rate limit) |
 

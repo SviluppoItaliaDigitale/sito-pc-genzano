@@ -17,49 +17,28 @@ priorita: "normale"
 # Chi ha scritto o approvato la comunicazione
 autore: "Gruppo Comunale Volontari PC Genzano"
 
-# ── IMMAGINE ──
-# Percorso immagine di copertina (opzionale)
-# Formato: WebP, 1200px larghezza, max 200 KB
-# Deve includere la fascia blu istituzionale (#003366) con logo + testo ufficiale
-# Specifiche complete: MANUALE-SITO.md — Parte 3
-# Es: /images/2026-04-20-titolo.webp
+# ── IMMAGINE BANNER (cover tipografica con titolo) ──
+# LASCIA `image: ""` vuoto. Lo script `auto-cover-mancanti.py` genera
+# automaticamente la cover tipografica istituzionale (gradiente blu +
+# titolo + badge categoria + fascia con logo) prima del deploy e popola
+# `image:` + `image_alt:`. La cover serve per:
+#   1. Banner dell'articolo (riconoscibile, sempre col titolo)
+#   2. Anteprima Open Graph quando l'URL è condiviso su WhatsApp /
+#      Telegram / Facebook / X / LinkedIn
+#   3. Fallback in caso di emergenza (pagina lite /emergenza/)
+#
+# REGOLA INTOCCABILE: il banner mostra SEMPRE il titolo. Le foto
+# (utente, Wikipedia, NASA, USGS, stock) vanno SEMPRE nel corpo
+# articolo come {{< foto src="..." alt="..." caption="..." >}}, MAI
+# nel campo image: del frontmatter. Vedi CLAUDE.md punto 9.
+#
+# Per inserire foto da fonti ufficiali (Wikipedia/NASA/USGS/NOAA/stock)
+# inline nel corpo: chiedi a Claude in italiano naturale (es. "trovami
+# una foto gratuita per questo articolo" o "ecco una foto, mettila
+# nell'articolo") — l'agent pc-image-fixer fa WebFetch + scarica + fascia
+# blu + shortcode {{< foto >}} inline. Mai usare il marker # TODO-foto-*
+# (bandito: vedi CLAUDE.md punto 9 e .claude/agents/pc-image-fixer.md).
 image: ""
-
-# ── DOWNLOAD AUTOMATICO FOTO DA FONTI LIBERE (opzionale) ──
-# Se scrivi l'articolo da mobile / app cloud (sandbox blocca i domini esterni),
-# lascia `image: ""` e aggiungi qui sotto UN marker TODO. Al prossimo push su
-# main, il workflow `scarica-foto-automatica.yml` esegue il comando, scarica
-# la foto, applica la fascia blu, popola image: + image_credit: +
-# image_source_url:, rimuove la riga marker. Fonti supportate:
-#
-#   # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Wikipedia"   slug-articolo [lang]
-#   # TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "search query"       slug-articolo
-#   # TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap <eventid>   slug-articolo
-#   # TODO-foto-noaa:      bash scripts/foto-da-noaa.sh      "URL diretto NOAA"   "Descrizione" slug-articolo
-#   # TODO-foto-pexels:    bash scripts/foto-da-pexels.sh    "search query"       slug-articolo
-#   # TODO-foto-pixabay:   bash scripts/foto-da-pixabay.sh   "search query"       slug-articolo
-#   # TODO-foto-unsplash:  bash scripts/foto-da-unsplash.sh  "search query"       slug-articolo
-#
-# Quale fonte scegliere:
-#   - Wikipedia → eventi storici, personaggi, opere, organizzazioni
-#   - NASA → fenomeni globali visti dallo spazio (uragani, eruzioni)
-#   - USGS → ShakeMap di un terremoto specifico (serve l'eventid USGS)
-#   - NOAA → uragani, NHC tracks, foto storiche meteo (URL diretto)
-#   - Pexels/Unsplash → foto stock generiche (atmosfera, persone, attività)
-#   - Pixabay → foto stock alta qualità, illustrazioni, oggetti, paesaggi
-#
-# Esempi:
-#   # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
-#   # TODO-foto-nasa:      bash scripts/foto-da-nasa.sh      "Etna eruption"                  2026-08-12-etna
-#   # TODO-foto-usgs:      bash scripts/foto-da-usgs.sh      shakemap us10006g7d              2026-08-24-amatrice-shakemap
-#   # TODO-foto-noaa:      bash scripts/foto-da-noaa.sh      "https://www.nhc.noaa.gov/.../katrina.png" "Traccia uragano Katrina (NHC)" 2026-08-29-katrina
-#   # TODO-foto-pexels:    bash scripts/foto-da-pexels.sh    "rescue volunteer"               2026-09-15-volontariato
-#   # TODO-foto-pixabay:   bash scripts/foto-da-pixabay.sh   "first aid kit"                  2026-09-20-primo-soccorso
-#   # TODO-foto-unsplash:  bash scripts/foto-da-unsplash.sh  "fire firefighter"               2026-08-15-aib
-#
-# NOTA: Pexels/Pixabay/Unsplash richiedono API key configurate come GitHub
-# Secrets (PEXELS_API_KEY, PIXABAY_API_KEY, UNSPLASH_ACCESS_KEY). Le altre
-# 4 fonti (Wikipedia/NASA/USGS/NOAA) funzionano sempre senza API key.
 
 # ── TESTO ALTERNATIVO IMMAGINE (a11y) ──
 # Descrive cosa si vede nell'immagine per chi usa screen reader.

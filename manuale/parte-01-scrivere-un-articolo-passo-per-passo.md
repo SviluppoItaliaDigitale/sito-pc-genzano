@@ -355,25 +355,22 @@ bash scripts/foto-da-usgs.sh      shakemap us10006g7d              2026-08-24-am
 
 Tutti gli script: scaricano in alta risoluzione, applicano la fascia blu istituzionale, salvano in `static/images/<slug>.webp` (max ~200 KB), stampano autore + licenza + URL origine da citare in didascalia.
 
-**Da mobile / app cloud:** la sandbox blocca i domini esterni. Lascia `image: ""` e aggiungi UN marker nel frontmatter:
-```
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Terremoto del Friuli del 1976" 2026-05-06-friuli-1976
-# oppure
-# TODO-foto-nasa: bash scripts/foto-da-nasa.sh "Vesuvius volcano" 2026-10-01-vesuvio-spazio
-# oppure
-# TODO-foto-usgs: bash scripts/foto-da-usgs.sh shakemap us10006g7d 2026-08-24-amatrice-shakemap
-```
+**Da mobile / app cloud:** la sandbox blocca i domini esterni. Soluzione: lascia `image: ""` e chiedi a Claude in italiano (es. *"trovami una foto gratuita di terremoto Friuli per l'articolo X"*). L'agent `pc-image-fixer` (Parte 19) cerca su Wikipedia/NASA/USGS via WebFetch + scarica + applica fascia blu + inserisce shortcode `{{< foto >}}` **inline nel corpo articolo** (mai nel banner — vedi più sotto).
 
-Al successivo push, il workflow `.github/workflows/scarica-foto-automatica.yml` rileva il marker (whitelist di sicurezza: solo i 3 script noti), esegue il download, popola `image:` + `image_credit:` + `image_source_url:`, rimuove il marker e ri-triggera il deploy. **Tutto automatico.** Se la foto non viene trovata, il workflow apre un'issue di follow-up.
+> ⚠️ **Marker `# TODO-foto-*` BANDITO dal 3 maggio 2026.** Il marker scritto nel corpo Markdown veniva renderizzato da Hugo come `<h1>` finché il workflow non lo rimuoveva, e se `deploy.yml` finiva prima del workflow CI il sito andava live col marker H1 visibile al posto del titolo (incidente reale). Inoltre il workflow popolava `image:` con la foto, sovrascrivendo il banner col titolo. Vedi CLAUDE.md punto 9 per dettagli.
 
 **Per trovare un eventid USGS** (terremoti): cerca su `https://earthquake.usgs.gov/earthquakes/search/` per data/luogo, l'ID compare nell'URL della pagina evento.
 
-**Cover tipografica automatica come fallback**. Se non aggiungi né foto né marker, il workflow `scarica-foto-automatica.yml` esegue come secondo step `auto-cover-mancanti.py`, che genera automaticamente una **cover tipografica istituzionale** (gradiente blu, titolo dell'articolo, fascia con logo) in `static/images/<slug>.webp` e popola il frontmatter. Lo script è sicuro: **non sovrascrive mai** una foto utente custom (es. `image: "/images/foto-evento-mio.webp"`). Risultato: nessun articolo finisce mai online senza copertina.
+**Banner col titolo intoccabile.** Il banner dell'articolo (campo `image:`) deve **sempre** mostrare la cover tipografica col titolo. Mai una foto reale. Le foto vanno **sempre nel corpo** come `{{< foto >}}`. La cover tipografica serve a 3 scopi:
+1. Banner istituzionale dell'articolo (riconoscibile)
+2. Anteprima Open Graph quando il link è condiviso su WhatsApp/Telegram/FB/X/LinkedIn
+3. Fallback in emergenza (pagina lite `/emergenza/`)
 
-**Livelli di fallback in cascata**:
-1. **Foto vera** — utente o Wikipedia/NASA/USGS via marker
-2. **Cover tipografica istituzionale** — gradiente blu generato automaticamente
-3. **Default SVG generico** — fallback estremo (`images/notizia-default.svg`)
+**Cover tipografica automatica come fallback**. Se non aggiungi foto, lo script `auto-cover-mancanti.py` (chiamato dal workflow `scarica-foto-automatica.yml` step 2) genera automaticamente una **cover tipografica istituzionale** (gradiente blu, titolo dell'articolo, fascia con logo) in `static/images/<slug>.webp` e popola il frontmatter. Lo script è sicuro: **non sovrascrive mai** una foto utente custom (es. `image: "/images/foto-evento-mio.webp"`). E rigenera anche se per errore il file viene cancellato. Risultato: nessun articolo finisce mai online senza banner.
+
+**Livelli di fallback in cascata per il banner**:
+1. **Cover tipografica istituzionale** col titolo — gradiente blu generato automaticamente (sempre)
+2. **Default SVG generico** — fallback estremo se la cover non si genera (`images/notizia-default.svg`)
 
 ### Passo 1.12 — Test locale con Hugo
 
