@@ -48,9 +48,20 @@ Queste schede sono **pronte da stampare in formato A4** e usabili da soccorritor
 | 19 | [Disegna chi ti ha aiutato oggi](/formazione/kit-calamita-bambini/19-disegna-chi-ti-ha-aiutato.html) | Esercizio di gratitudine. Risignificazione del ruolo dei soccorritori. |
 | 20 | [Carta CAA — dimmelo con un pittogramma](/formazione/kit-calamita-bambini/20-carta-caa-comunicazione.html) | **Inclusione**: per L2, autismo, disabilità cognitiva, mutismo selettivo post-trauma. 12 pittogrammi essenziali. |
 
-### Schede per fascia 9-11 anni (in arrivo)
+### Schede per fascia 9-11 anni — pubblicate
 
-10 schede di word search, sudoku, cruciverba avanzati, mappa del campo accoglienza, calendario del giorno, lettera al soccorritore, ricetta della speranza.
+| # | Scheda | Quando usarla |
+|---|---|---|
+| 21 | [Cerca le 15 parole della Protezione Civile](/formazione/kit-calamita-bambini/21-word-search.html) | Word search 15×15. Lessico PC + emozioni di superamento. |
+| 22 | [Sudoku 6×6 della sicurezza](/formazione/kit-calamita-bambini/22-sudoku-tema.html) | Sudoku semplificato. Ragionamento logico-deduttivo. |
+| 23 | [Cruciverba avanzato della PC](/formazione/kit-calamita-bambini/23-cruciverba-avanzato.html) | 8 parole tecniche (DPC, VOLONTARIO, TERREMOTO, SOCCORSO, SIRENA, ALLERTA, 112…). |
+| 24 | [Disegna la mappa del tuo campo accoglienza](/formazione/kit-calamita-bambini/24-mappa-campo.html) | **Mastery experience**: ricostruisce senso di controllo + familiarità del proprio ambiente. |
+| 25 | [Calendario del mio giorno](/formazione/kit-calamita-bambini/25-calendario-giorno.html) | Pianificazione oraria. Ricostruzione routine = principio chiave PFA. |
+| 26 | [Memory cards — i mezzi della PC](/formazione/kit-calamita-bambini/26-memory-mezzi-pc.html) | Da ritagliare. 16 carte (8 coppie). Memoria a breve termine + conoscenza mezzi. |
+| 27 | [Lettera al soccorritore](/formazione/kit-calamita-bambini/27-lettera-soccorritore.html) | **Scrittura espressiva** (Pennebaker, JAMA 1999): riduce sintomi PTSD post-trauma. |
+| 28 | [Cose che so fare bene](/formazione/kit-calamita-bambini/28-cose-che-so-fare.html) | **Auto-efficacia** (Bandura). 6 trofei delle proprie capacità. Ricostruisce autostima. |
+| 29 | [Ricetta del biscotto della speranza](/formazione/kit-calamita-bambini/29-ricetta-biscotto-speranza.html) | Ricetta facile da fare con un grande. Behavioral activation + ancoraggio sensoriale. |
+| 30 | [I numeri di emergenza nel mondo](/formazione/kit-calamita-bambini/30-numeri-emergenza-mondo.html) | **Inclusione L2/stranieri**: 12 Paesi + numero. Riconoscimento universale del numero unico. |
 
 ### Schede per fascia 12-14 anni (in arrivo)
 
