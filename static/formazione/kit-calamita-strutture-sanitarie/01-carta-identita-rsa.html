@@ -1,45 +1,99 @@
 <!DOCTYPE html>
-<html lang="it"><head><meta charset="utf-8"><title>Scheda 1 — Carta d'identità RSA per emergenza</title><link rel="stylesheet" href="../kit-calamita-shared/print.css">
-<style>.scheda{font-size:12pt}.sez{border:2px solid #1a1a1a;border-radius:6px;padding:4mm;margin-bottom:4mm}.sez h2{color:var(--pc-blue);font-size:13pt;margin:0 0 3mm;border-bottom:1px solid var(--pc-blue);padding-bottom:1mm}.campo{display:grid;grid-template-columns:55mm 1fr;gap:3mm;padding:2mm 0;border-bottom:1px dotted #999;font-size:11pt}.campo span{border-bottom:1px solid #1a1a1a;min-height:6mm}</style>
-</head><body><button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button><a class="btn-indice no-print" href="./">← Indice</a>
-<article class="scheda"><header class="scheda-header"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect x="2" y="2" width="96" height="96" fill="none" stroke="#003366" stroke-width="3"/><text x="50" y="58" text-anchor="middle" font-size="32" font-weight="700" fill="#003366">PC</text></svg><div class="brand">Protezione Civile<small>Gruppo Comunale Volontari — Genzano di Roma</small></div><span class="kit-tag">RSA · Documento</span></header>
-<h1 class="scheda-title">Carta d'identità RSA per emergenza</h1><span class="scheda-eta">Compilata dal personale al ricovero, attaccata alla testata del letto</span>
-<div class="scheda-istruzione">📋 In emergenza, chi soccorre deve sapere subito tutto del paziente. La carta deve essere copia cartacea + copia digitale + sempre visibile sopra il letto.</div>
-<section class="scheda-attivita">
-<div class="sez"><h2>👤 ANAGRAFICA</h2>
-<div class="campo"><strong>Nome e cognome:</strong><span></span></div>
-<div class="campo"><strong>Data di nascita / età:</strong><span></span></div>
-<div class="campo"><strong>Codice fiscale:</strong><span></span></div>
-<div class="campo"><strong>Tessera sanitaria n.:</strong><span></span></div>
-<div class="campo"><strong>Stanza / letto:</strong><span></span></div></div>
-<div class="sez"><h2>🩺 STATO CLINICO</h2>
-<div class="campo"><strong>Diagnosi principali:</strong><span></span></div>
-<div class="campo"><strong>Mobilità (autonomo/parz./allettato):</strong><span></span></div>
-<div class="campo"><strong>Cognitività (lucido/lieve/moderata/grave):</strong><span></span></div>
-<div class="campo"><strong>Continenza:</strong><span></span></div>
-<div class="campo"><strong>Presidi medici (PEG/catetere/ossigeno):</strong><span></span></div></div>
-<div class="sez"><h2>💊 TERAPIE NON SOSPENDIBILI</h2>
-<div class="campo"><strong>Anticoagulanti:</strong><span></span></div>
-<div class="campo"><strong>Antidiabetici / insulina:</strong><span></span></div>
-<div class="campo"><strong>Cardio / pressione:</strong><span></span></div>
-<div class="campo"><strong>Antiparkinson:</strong><span></span></div>
-<div class="campo"><strong>Benzodiazepine (NO sospensione brusca!):</strong><span></span></div>
-<div class="campo"><strong>Altre:</strong><span></span></div></div>
-<div class="sez"><h2>⚠️ ALLERGIE — INTOLLERANZE</h2>
-<div class="campo"><strong>Farmaci:</strong><span></span></div>
-<div class="campo"><strong>Alimenti:</strong><span></span></div>
-<div class="campo"><strong>Materiali (es. lattice):</strong><span></span></div></div>
-<div class="sez"><h2>📞 CONTATTI</h2>
-<div class="campo"><strong>Familiare 1 (nome / parentela):</strong><span></span></div>
-<div class="campo"><strong>Telefono:</strong><span></span></div>
-<div class="campo"><strong>Familiare 2:</strong><span></span></div>
-<div class="campo"><strong>Telefono:</strong><span></span></div>
-<div class="campo"><strong>Medico curante:</strong><span></span></div></div>
-<div class="sez"><h2>🛏️ ASSISTENZA / NOTE OPERATIVE</h2>
-<div class="campo"><strong>Coniuge/convivente nella struttura (NON SEPARARE!):</strong><span></span></div>
-<div class="campo"><strong>Ausili (occhiali, apparecchio acustico, dentiera, deambulatore):</strong><span></span></div>
-<div class="campo"><strong>Oggetti di conforto (foto, rosario, coperta personale):</strong><span></span></div>
-<div class="campo"><strong>Particolarità di assistenza:</strong><span></span></div></div>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Scheda 1 — Carta d'identità RSA per emergenza</title>
+<link rel="stylesheet" href="../kit-calamita-shared/print.css">
+</head>
+<body>
+<button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>
+<a class="btn-indice no-print" href="./">← Indice</a>
+<article class="scheda">
+<header class="scheda-header">
+<svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect x="2" y="2" width="96" height="96" fill="none" stroke="#003366" stroke-width="3"/><text x="50" y="58" text-anchor="middle" font-size="32" font-weight="700" fill="#003366">PC</text></svg>
+<div class="brand">Protezione Civile<small>Gruppo Comunale Volontari — Genzano di Roma</small></div>
+<span class="kit-tag">RSA · Documento</span>
+</header>
+<h1 class="scheda-title">Carta d'identità RSA per emergenza</h1>
+<div class="scheda-istruzione">📋 Compilata dal personale al ricovero, attaccata alla testata del letto. Aggiornare ogni 6 mesi o a ogni cambio terapia. In emergenza chi soccorre deve sapere subito tutto del paziente: copia cartacea + copia digitale + sempre visibile sopra il letto.</div>
+<section class="scheda-attivita carta-id-corpo">
+
+<div class="carta-id-sez">
+<h2>👤 Anagrafica</h2>
+<div class="carta-id-campo"><label>Nome e cognome</label><span class="riga"></span></div>
+<div class="carta-id-coppia">
+  <div class="carta-id-campo"><label>Data di nascita / età</label><span class="riga"></span></div>
+  <div class="carta-id-campo"><label>Codice fiscale</label><span class="riga"></span></div>
+</div>
+<div class="carta-id-coppia">
+  <div class="carta-id-campo"><label>Tessera sanitaria n°</label><span class="riga"></span></div>
+  <div class="carta-id-campo"><label>Stanza / letto</label><span class="riga"></span></div>
+</div>
+</div>
+
+<div class="carta-id-sez">
+<h2>🩺 Stato clinico</h2>
+<div class="carta-id-campo"><label>Diagnosi principali</label><span class="riga"></span></div>
+<div class="carta-id-opzioni">
+  <span class="label">Mobilità</span>
+  <span class="opzioni">☐ Autonomo &nbsp;&nbsp; ☐ Parzialmente autonomo &nbsp;&nbsp; ☐ Allettato</span>
+</div>
+<div class="carta-id-opzioni">
+  <span class="label">Cognitività</span>
+  <span class="opzioni">☐ Lucido &nbsp;&nbsp; ☐ Decadimento lieve &nbsp;&nbsp; ☐ Moderato &nbsp;&nbsp; ☐ Grave (demenza)</span>
+</div>
+<div class="carta-id-campo"><label>Continenza (urinaria / fecale)</label><span class="riga"></span></div>
+<div class="carta-id-campo"><label>Presidi medici (PEG, catetere, ossigenoterapia)</label><span class="riga"></span></div>
+</div>
+
+<div class="carta-id-sez">
+<h2>💊 Terapie non sospendibili</h2>
+<div class="carta-id-campo"><label>Anticoagulanti</label><span class="riga"></span></div>
+<div class="carta-id-campo"><label>Antidiabetici / insulina</label><span class="riga"></span></div>
+<div class="carta-id-campo"><label>Cardiologici / pressione</label><span class="riga"></span></div>
+<div class="carta-id-campo"><label>Antiparkinson</label><span class="riga"></span></div>
+<div class="carta-id-campo"><label>Benzodiazepine (mai sospendere bruscamente!)</label><span class="riga"></span></div>
+<div class="carta-id-campo"><label>Altre terapie essenziali</label><span class="riga"></span></div>
+</div>
+
+<div class="carta-id-sez">
+<h2>⚠️ Allergie e intolleranze</h2>
+<div class="carta-id-coppia">
+  <div class="carta-id-campo"><label>Farmaci</label><span class="riga"></span></div>
+  <div class="carta-id-campo"><label>Alimenti</label><span class="riga"></span></div>
+</div>
+<div class="carta-id-campo"><label>Materiali (es. lattice)</label><span class="riga"></span></div>
+</div>
+
+<div class="carta-id-sez">
+<h2>📞 Contatti</h2>
+<div class="carta-id-coppia">
+  <div class="carta-id-campo"><label>Familiare 1 (nome / parentela)</label><span class="riga"></span></div>
+  <div class="carta-id-campo"><label>Telefono</label><span class="riga"></span></div>
+</div>
+<div class="carta-id-coppia">
+  <div class="carta-id-campo"><label>Familiare 2 (nome / parentela)</label><span class="riga"></span></div>
+  <div class="carta-id-campo"><label>Telefono</label><span class="riga"></span></div>
+</div>
+<div class="carta-id-coppia">
+  <div class="carta-id-campo"><label>Medico curante</label><span class="riga"></span></div>
+  <div class="carta-id-campo"><label>Telefono medico</label><span class="riga"></span></div>
+</div>
+</div>
+
+<div class="carta-id-sez">
+<h2>🛏️ Assistenza e note operative</h2>
+<div class="carta-id-campo"><label>Coniuge / convivente nella struttura (NON SEPARARE!)</label><span class="riga"></span></div>
+<div class="carta-id-campo"><label>Ausili (occhiali, apparecchio acustico, dentiera, deambulatore)</label><span class="riga"></span></div>
+<div class="carta-id-campo"><label>Oggetti di conforto (foto, rosario, coperta personale)</label><span class="riga"></span></div>
+<div class="carta-id-box">
+<label>Particolarità di assistenza (paure, abitudini, comunicazione)</label>
+<span class="area"></span>
+</div>
+</div>
+
 </section>
 <footer class="scheda-footer"><span>RSA Scheda 1 — Carta identità</span><span class="fonti">Standard Ministero Salute + AGENAS + lezioni Centro Italia 2016. Compilare al ricovero, aggiornare ogni 6 mesi o a ogni cambio terapia.</span><span>www.protezionecivilegenzano.it</span></footer>
-</article></body></html>
+</article>
+</body>
+</html>

@@ -257,10 +257,6 @@ ul.elenco-pratico li::before {
     padding: 12mm;
   }
   .no-print { display: none !important; }
-  /* Nascondi soluzioni in stampa: <details> con soluzioni di
-     sudoku/cruciverba/word search devono restare riservati al
-     conduttore via schermo, non finire sul foglio del bambino. */
-  details, .soluzioni { display: none !important; }
   @page {
     size: A4;
     margin: 0;
@@ -358,4 +354,176 @@ ul.elenco-pratico li::before {
 *:focus-visible {
   outline: 3px solid var(--pc-yellow);
   outline-offset: 2px;
+}
+
+/* ============================================================
+   CARTA D'IDENTITÀ — Template uniforme per schede compilabili
+   ============================================================
+   Convenzione: ogni "carta d'identità di emergenza" del progetto
+   usa le stesse classi .carta-id-* per garantire spazio di
+   scrittura adeguato a mano (penna + adulto sotto stress).
+   - min-height riga singola: 11mm (ben leggibile, scrivibile)
+   - min-height box libero: 30mm / 45mm / 60mm (small/medio/grande)
+   - sezioni con bordo + h2 azzurro istituzionale
+   - layout block (label sopra, riga sotto) — robusto in stampa
+   ============================================================ */
+.scheda-attivita.carta-id-corpo {
+  align-items: stretch;
+  width: 100%;
+  gap: 0;
+}
+.carta-id-sez {
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  padding: 4mm 5mm;
+  margin-bottom: 5mm;
+  page-break-inside: avoid;
+  width: 100%;
+}
+.carta-id-sez h2 {
+  color: var(--pc-blue);
+  font-size: 13pt;
+  margin: 0 0 4mm 0;
+  border-bottom: 1.5px solid var(--pc-blue);
+  padding-bottom: 1.5mm;
+  font-weight: 700;
+}
+.carta-id-campo {
+  margin: 4mm 0;
+  display: block;
+}
+.carta-id-campo > label,
+.carta-id-campo > .label {
+  display: block;
+  font-weight: 700;
+  font-size: 10.5pt;
+  margin-bottom: 1.5mm;
+  color: var(--line);
+}
+.carta-id-campo > .riga {
+  display: block;
+  border-bottom: 1.5px solid var(--line);
+  min-height: 11mm;
+  width: 100%;
+}
+.carta-id-coppia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5mm;
+  margin: 4mm 0;
+}
+.carta-id-tris {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4mm;
+  margin: 4mm 0;
+}
+.carta-id-coppia > .carta-id-campo,
+.carta-id-tris > .carta-id-campo {
+  margin: 0;
+}
+.carta-id-opzioni {
+  margin: 4mm 0;
+  display: block;
+}
+.carta-id-opzioni > .label {
+  display: block;
+  font-weight: 700;
+  font-size: 10.5pt;
+  margin-bottom: 1.5mm;
+}
+.carta-id-opzioni > .opzioni {
+  display: block;
+  font-size: 10.5pt;
+  line-height: 1.9;
+  padding: 1mm 0;
+}
+.carta-id-box {
+  margin: 4mm 0;
+  display: block;
+}
+.carta-id-box > label,
+.carta-id-box > .label {
+  display: block;
+  font-weight: 700;
+  font-size: 10.5pt;
+  margin-bottom: 1.5mm;
+  color: var(--line);
+}
+.carta-id-box > .area {
+  display: block;
+  border: 1.5px solid var(--line);
+  border-radius: 3px;
+  min-height: 30mm;
+  padding: 2mm;
+  width: 100%;
+}
+.carta-id-box > .area.medio { min-height: 45mm; }
+.carta-id-box > .area.grande { min-height: 60mm; }
+.carta-id-box > .area.righe-orizzontali {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 9mm,
+    #ccc 9mm,
+    #ccc calc(9mm + 0.3mm)
+  );
+}
+.carta-id-nota {
+  border: 1.5px solid #c1121f;
+  background: #fff5f5;
+  padding: 3mm 4mm;
+  border-radius: 4px;
+  font-size: 9.5pt;
+  margin: 4mm 0;
+  page-break-inside: avoid;
+}
+@media print {
+  .carta-id-sez { border-width: 1.5px; }
+  .carta-id-box > .area { border-width: 1px; }
+  .carta-id-nota { background: transparent; border-width: 1px; }
+}
+
+/* ============================================================
+   SOLUZIONE CAPOVOLTA — risposte stampate sotto, ruotate 180°
+   ============================================================
+   Convenzione presa dai giochi enigmistici cartacei: la
+   soluzione è stampata in fondo alla pagina, ruotata di 180°,
+   in modo che chi vuole vederla deve girare fisicamente il
+   foglio. Stessa pagina del gioco, nessun foglio operatore.
+   ============================================================ */
+.soluzione-capovolta {
+  margin: 12mm 0 0;
+  padding: 4mm 5mm;
+  border: 1.5px dashed var(--line);
+  border-radius: 4px;
+  background: #fafbfc;
+  transform: rotate(180deg);
+  transform-origin: center center;
+  font-size: 10pt;
+  line-height: 1.5;
+  page-break-inside: avoid;
+}
+.soluzione-capovolta strong { color: var(--pc-blue); }
+.soluzione-capovolta .titolo {
+  font-weight: 700;
+  color: var(--pc-blue);
+  font-size: 10pt;
+  margin-bottom: 2mm;
+  display: block;
+}
+.soluzione-capovolta pre {
+  font-family: monospace;
+  font-size: 11pt;
+  background: #fff;
+  padding: 2mm;
+  border: 1px solid #ccc;
+  margin: 2mm 0;
+  line-height: 1.5;
+}
+@media print {
+  .soluzione-capovolta {
+    background: transparent;
+    border-width: 1px;
+  }
 }

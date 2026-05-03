@@ -17,7 +17,8 @@ Queste schede sono **pronte da stampare in formato A4** e usabili da soccorritor
 | Scheda | Per chi | Quando usarla |
 |---|---|---|
 | [Guida operatori PFA Children](/formazione/kit-calamita-bambini/00-guida-operatori-pfa-children.html) | Soccorritori, educatori, genitori | **Leggere prima di iniziare.** Sintesi evidence-based del protocollo PFA: come avvicinarsi, cosa fare, cosa NON fare, segnali di allarme, fonti istituzionali. |
-| 🔑 [Soluzioni dei giochi](/formazione/kit-calamita-bambini/99-soluzioni-giochi.html) | Solo operatori | **Riservato.** Soluzioni di cruciverba, word search, sudoku, trova differenze. Stamparlo separato dalle schede dei bambini. |
+
+> 💡 **Soluzioni dei giochi**: ogni scheda con cruciverba, word search o sudoku ha la **soluzione stampata in fondo, capovolta**. Per leggerla basta girare il foglio sottosopra: i bambini non la vedono per caso, l'operatore la verifica al volo.
 
 ### Schede per fascia 3-5 anni — pubblicate
 
