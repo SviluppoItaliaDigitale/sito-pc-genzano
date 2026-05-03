@@ -108,7 +108,9 @@ Una volta riavviato, dura per tutte le sessioni successive in questo repo.
 
 ## Quando NON serve
 
-Il workflow `.github/workflows/scarica-foto-automatica.yml` gira su un runner GitHub Actions con rete libera. Se un articolo nuovo include il marker `# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Pagina" slug-articolo` nel frontmatter, al push il runner scarica la foto, applica la fascia blu istituzionale, popola `image:` + `image_credit:` + `image_source_url:` e rimuove il marker. **Per la sola copertina di un articolo nuovo, lo sblocco locale non è necessario.**
+Il workflow `.github/workflows/scarica-foto-automatica.yml` step 2 (`auto-cover-mancanti.py`) gira sempre al push e genera la cover tipografica banner per articoli con `image: ""`. Niente sandbox locale richiesta per la cover banner.
+
+Il marker `# TODO-foto-*` (ex meccanismo step 1 del workflow) è **bandito dal 3 maggio 2026** (CLAUDE.md punto 9): per inserire foto inline nel corpo articolo da fonti ufficiali si usa l'agent `pc-image-fixer` (procedura WebFetch + curl + applica-fascia + shortcode `{{< foto >}}`). Da Claude Code locale serve l'allowlist domini in `.claude/settings.local.json` per WebFetch + curl.
 
 ## Aggiungere un nuovo dominio
 

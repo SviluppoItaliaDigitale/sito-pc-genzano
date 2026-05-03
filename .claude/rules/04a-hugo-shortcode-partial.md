@@ -257,7 +257,7 @@ Comportamento del partial:
 
 Stile in `custom.css` sezione **ARTICLE COVER v1.0**: testo piccolo (0.82rem), italic, allineato a destra, link blu istituzionale. Su mobile: text-align left, font 0.78rem. In stampa: colori convertiti in nero, link che si espande con URL completo (per la riproducibilità del documento stampato).
 
-**Quando viene popolato `image_credit`**: il workflow `scarica-foto-automatica.yml` lo popola automaticamente per gli articoli con marker `# TODO-foto-wikipedia` (e analoghi NASA/USGS). Per articoli con foto utente o foto evento personali, il campo si compila manualmente nel frontmatter.
+**Quando viene popolato `image_credit`**: a maggio 2026 lo popolava automaticamente il workflow `scarica-foto-automatica.yml` per gli articoli con marker `# TODO-foto-wikipedia`. Dal 3 maggio 2026 il marker è bandito (CLAUDE.md punto 9): le foto da fonti ufficiali vanno inline nel corpo come `{{< foto >}}` con caption che cita autore + licenza, NON nel banner. Quindi `image_credit` resta usato solo per casi storici e per articoli che (eccezionalmente) hanno una foto utente custom come `image:` — sconsigliato. La cover tipografica generata da `auto-cover-mancanti.py` non popola `image_credit` (la cover è opera nostra).
 
 Esempio frontmatter completo:
 ```yaml

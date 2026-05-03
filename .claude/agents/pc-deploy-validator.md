@@ -30,7 +30,7 @@ Sei l'ultimo gate prima che il codice tocchi `main`. Il tuo output decide se il 
 6. **Numero unico emergenza Lazio = 112**: nelle modifiche dell'ultimo commit, NESSUN nuovo riferimento a 115/118/1515 come "numero da chiamare al cittadino". Citazioni storiche (es. "ARES 118 è l'organizzazione") OK. Vedi `feedback_numero_emergenza_lazio`.
 7. **15° C.O.I. (NON 14°)**: `grep -rn "14[°ª]\?\s*COI\|14[°ª]\?\s*C\.O\.I\.\|quattordicesimo COI" content/ themes/`. Risultati = errore storico già fixato che non deve tornare. Vedi `project_coi_roma`.
 8. **Nessun residuo `images-social/`**: `grep -rn "images-social" --include="*.md" --include="*.yml" --include="*.html"` deve essere vuoto (esclusi commenti storici espliciti). La cartella è stata spostata il 2 maggio 2026 in `social-bozze/<slug>/`.
-9. **Nessun marker `# TODO-foto-*` pendente da molto tempo**: i marker rimasti pendenti generano loop di issue (causa-radice dei 13 issue del 2 maggio). Verifica: per ogni articolo con marker, l'articolo è recente (ultimi 7 giorni)? Se >7 giorni, segnala — probabilmente il download fallisce sistematicamente.
+9. **Nessun marker `# TODO-foto-*` nel repo**: marker BANDITO dal 3 maggio 2026 (CLAUDE.md punto 9). Causa il rendering H1 in produzione + sovrascrive il banner. Comando: `grep -rn "^# TODO-foto-" content/`. Match = STOP, rimuovi i marker prima del push e usa l'agent `pc-image-fixer` per inserire la foto inline.
 
 ### C. Frontmatter articoli modificati — BLOCCANTI
 
@@ -39,7 +39,7 @@ Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni
 11. **Date format**: `date: AAAA-MM-GG` se 1 articolo nel giorno, `AAAA-MM-GGTHH:MM:SS+02:00` se 2+. Mai `Z` (UTC). Vedi `feedback_date_format`.
 12. **Badge ammesso** (1 dei 13 in regola `02-content-design-pa.md` § "Frontmatter obbligatorio").
 13. **`description` ≤160 char** per SEO.
-14. **`image:`** valorizzata (cover tipografica generata) OPPURE marker `# TODO-foto-*` presente OPPURE articolo calendarizzato a data futura (cover sarà generata al run successivo).
+14. **`image:`** valorizzata (cover tipografica generata) OPPURE `image: ""` su articolo calendarizzato a data futura (cover sarà generata al run successivo da `auto-cover-mancanti.py`). MAI marker `# TODO-foto-*` (vedi check #9).
 15. **`image_alt`** non vuoto se `image:` è valorizzata (WCAG 1.1.1).
 
 ### D. Sicurezza & privacy — BLOCCANTI

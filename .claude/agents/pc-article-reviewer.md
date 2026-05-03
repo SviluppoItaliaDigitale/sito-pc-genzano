@@ -37,7 +37,7 @@ Distinzione critica `Allerta` vs `Emergenza` (regola `06-protezione-civile-scien
 - **Aggiornamento/Comunicazione** = evento concluso (è stato/si è concluso)
 
 ### 4. Foto e immagini
-- `image:` deve puntare a cover tipografica con titolo (`/images/<slug>.webp`) o foto da fonte ufficiale via marker `# TODO-foto-*`. **MAI vuoto in produzione** se l'articolo è già pubblicato (data ≤ oggi).
+- `image:` deve puntare alla cover tipografica con titolo (`/images/<slug>.webp`). MAI a foto utente né a foto da fonti ufficiali (banner sempre col titolo, vedi CLAUDE.md punto 9). MAI marker `# TODO-foto-*` (bandito). **MAI vuoto in produzione** se l'articolo è già pubblicato (data ≤ oggi); se l'articolo ha `image: ""`, controlla che `auto-cover-mancanti.py` la rigeneri al prossimo deploy.
 - Foto utente nel corpo: SEMPRE come `{{< foto src="..." alt="..." caption="..." >}}`, MAI come markdown `![]()`.
 - Convenzione foto multiple in articoli storici: 1ª dopo 1° H2, 2ª dopo 2° H2, ecc.
 - ≥4 foto → galleria (lo script `galleria-auto.js` le affianca automaticamente con `.is-galleria-pair`).

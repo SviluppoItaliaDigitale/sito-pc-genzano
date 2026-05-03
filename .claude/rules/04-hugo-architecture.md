@@ -62,15 +62,15 @@ sito-pc-genzano/
 │   ├── scarica-pittogrammi.sh       # Scarica/aggiorna libreria pittogrammi
 │   │                                # ISO 7010 (Wikimedia) + ARASAAC.
 │   │                                # Output: static/pittogrammi/...
-│   ├── auto-cover-mancanti.py       # Genera cover tipografiche per articoli
-│   │                                # con image:"" e senza marker TODO-foto-*
+│   ├── auto-cover-mancanti.py       # Genera cover tipografiche banner per
+│   │                                # articoli con image:"" o con file mancante
 │   │                                # (sicuro: mai sovrascrive foto utente).
-│   │                                # Chiama genera-cover.py + aggiorna
-│   │                                # frontmatter solo se vuoto.
-│   ├── proponi-marker-foto.py       # Scansiona articoli con image:"" e
-│   │                                # propone marker TODO-foto-wikipedia da
-│   │                                # incollare manualmente. Output testuale
-│   │                                # o CSV. Sicuro: non modifica file.
+│   │                                # Chiama genera-cover.py + popola frontmatter.
+│   ├── proponi-marker-foto.py       # DEPRECATO 2026-05-03: il marker TODO-foto-*
+│   │                                # è bandito (CLAUDE.md punto 9). Lo script
+│   │                                # resta per riferimento storico ma il suo
+│   │                                # output non va più applicato. Per foto
+│   │                                # inline usare l'agent pc-image-fixer.
 │   └── export-contesto-ai.sh        # Export di tutta la documentazione in
 │                                    # un unico CONTESTO-AI.md per altra AI
 ├── .claude/rules/           # Regole di governance (questo file)
