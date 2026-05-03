@@ -258,6 +258,7 @@
       options: [
         { text: 'Per il cittadino', description: 'Allerte, rischi, cartografia, numeri, piano di famiglia.', icon: 'bi-person-fill', next: 'info_cittadino' },
         { text: 'Per le scuole', description: 'Kit didattici, schede stampabili, giochi, attività accessibili, formazione.', icon: 'bi-mortarboard-fill', next: 'info_scuole' },
+        { text: 'Kit Calamità per categorie vulnerabili', description: 'Schede stampabili A4 per bambini, anziani, disabilità, neonati, gravidanza, animali, caregiver, terapie salvavita, senza dimora, italiano L2, volontari PC.', icon: 'bi-printer-fill', next: 'info_kit_calamita' },
         { text: 'Volontariato', description: 'Diventare volontario, chi siamo, contatti del Gruppo.', icon: 'bi-heart-fill', next: 'info_volontariato' },
         { text: 'Territorio e norme', description: 'Genzano, Castelli, glossario, normativa, piano di emergenza comunale.', icon: 'bi-geo-alt-fill', next: 'info_territorio' },
         { text: 'Servizi e documenti', description: 'FAQ, area download, comunicazioni, mappa del sito, facile da leggere.', icon: 'bi-files', next: 'info_servizi' }
@@ -398,6 +399,106 @@
         { text: 'Tutti i giochi (33)', url: '/giochi/' },
         { text: 'Attività accessibili (32) — ispirate al programma Abili a proteggere', url: '/abili-a-proteggere/' }
       ]
+    },
+
+    // --- Macro 2bis: Kit Calamità per categorie vulnerabili ---
+    info_kit_calamita: {
+      kind: 'question',
+      title: 'Kit Calamità — qual è la tua situazione?',
+      prompt: '12 kit di schede A4 stampabili, basati su standard internazionali. Scegli la categoria che ti riguarda.',
+      options: [
+        { text: 'Sono genitore / educatore di bambini 3-14 anni', next: 'kc_bambini' },
+        { text: 'Sono genitore di un neonato 0-3 anni', next: 'kc_neonati' },
+        { text: 'Sono persona anziana / vivo con anziano in casa', next: 'kc_anziani' },
+        { text: 'Sono caregiver familiare di non autosufficiente', next: 'kc_caregiver' },
+        { text: 'Sono direttore / operatore di RSA o lungodegenza', next: 'kc_rsa' },
+        { text: 'Sono persona con disabilità adulta', next: 'kc_disabilita' },
+        { text: 'Dipendo da terapia salvavita continuativa', next: 'kc_salvavita' },
+        { text: 'Sono in gravidanza o ho appena partorito', next: 'kc_gravidanza' },
+        { text: 'Lavoro con persone senza fissa dimora', next: 'kc_sfd' },
+        { text: 'Sono persona straniera o assisto italiano L2', next: 'kc_l2' },
+        { text: 'Ho un animale domestico', next: 'kc_animali' },
+        { text: 'Sono volontario PC e voglio prendermi cura di me', next: 'kc_volontari' },
+        { text: 'Vedi tutti i kit (hub)', next: 'kc_hub' }
+      ]
+    },
+    kc_hub: {
+      kind: 'answer',
+      title: 'Hub Kit Calamità',
+      body: ['Cruscotto centrale dei 12 kit operativi. Standard internazionali NCTSN, IFRC, WHO, Sphere, FEANTSA, UNHCR, IOM, IFE, MISP, WSAVA, Eurocarers e normativa italiana di settore.'],
+      links: [{ text: 'Apri l\'hub', url: '/formazione/kit-calamita/' }]
+    },
+    kc_bambini: {
+      kind: 'answer',
+      title: 'Bambini 3-14 anni',
+      body: ['Standard PFA Children: NCTSN, IFRC, WHO/UNHCR, Sphere 2018. 4 fasce d\'età + schede inclusione (autismo, italiano L2, ipovisione).'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-bambini/' }]
+    },
+    kc_neonati: {
+      kind: 'answer',
+      title: 'Neonati 0-3 anni',
+      body: ['Standard IFE Core Group v3.0 (2017) + WHO Code sostituti latte materno + Sphere 2018. Termoregolazione, allattamento in emergenza, segnali rossi.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-neonati/' }]
+    },
+    kc_anziani: {
+      kind: 'answer',
+      title: 'Anziani in casa',
+      body: ['Standard HelpAge International + WHO mhGAP + SIGG/AIP. Carta identità, calendario orientativo, reminiscence, CAA pittogrammi.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-anziani/' }]
+    },
+    kc_caregiver: {
+      kind: 'answer',
+      title: 'Caregiver familiari',
+      body: ['Standard L. 205/2017 (riconoscimento caregiver in Italia) + Carta europea Eurocarers 2014 + WHO Self-care 2022. Doppio carico, persona allettata, cura di sé stesso.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-caregiver-familiari/' }]
+    },
+    kc_rsa: {
+      kind: 'answer',
+      title: 'Strutture sanitarie / RSA',
+      body: ['Standard Min. Salute + AGENAS + WHO Hospital Safety Index. Lezioni Centro Italia 2016 + Covid-RSA. Triage SALT geriatrico, comfort BPSD.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-strutture-sanitarie/' }]
+    },
+    kc_disabilita: {
+      kind: 'answer',
+      title: 'Persone con disabilità adulta',
+      body: ['Standard CRPD ONU art. 11 + L. 18/2009 ratifica italiana + WHO Disability Inclusive Emergency Response (2013) + Sphere 2018. Riferimenti FISH, FAND, UICI, ENS, ANGSA.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-disabilita-adulti/' }]
+    },
+    kc_salvavita: {
+      kind: 'answer',
+      title: 'Terapie salvavita continuative',
+      body: ['Standard WHO Health Cluster 2018 + Sphere § Essential health services + Direttiva PCM 24/06/2016 + ARERA 295/2018. Dialisi, ossigenoterapia, oncologici, trapiantati, malattie rare.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-terapie-salvavita/' }]
+    },
+    kc_gravidanza: {
+      kind: 'answer',
+      title: 'Gravidanza e neomamme',
+      body: ['Standard MISP IAWG (2018) + WHO Pregnancy in Emergencies + UNFPA Inter-Agency Field Manual. 5 priorità MISP, segnali rossi, parto improvviso.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-gravidanza/' }]
+    },
+    kc_sfd: {
+      kind: 'answer',
+      title: 'Persone senza fissa dimora',
+      body: ['Standard FEANTSA ETHOS + FIO.PSD + Min. Lavoro 2015 + Sphere § Non-discrimination + Housing First Italia. Approccio low-threshold + riduzione del danno.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-senza-fissa-dimora/' }]
+    },
+    kc_l2: {
+      kind: 'answer',
+      title: 'Italiano L2 e persone straniere',
+      body: ['Standard UNHCR Communicating with Communities (CwC) Handbook 2020 + IOM CCCM Toolkit + Sphere § Communication + WHO mhGAP-HIG + D.Lgs. 286/1998 art. 35. Carta multilingua + frasario in 7 lingue.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-italiano-l2/' }]
+    },
+    kc_animali: {
+      kind: 'answer',
+      title: 'Animali domestici in evacuazione',
+      body: ['Standard D.Lgs. 1/2018 art. 12 + L. 281/1991 + WSAVA Disaster Response Guidelines. Lezione storica: uragano Katrina 2005 / US PETS Act 2006.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-animali/' }]
+    },
+    kc_volontari: {
+      kind: 'answer',
+      title: 'Volontari PC — auto-cura',
+      body: ['Standard IFRC Caring for Volunteers (2015) + NCTSN Secondary Traumatic Stress (2018) + WHO mhGAP-HIG + ProQOL-5. L\'auto-cura è parte integrante dell\'operatività responsabile.'],
+      links: [{ text: 'Apri il kit', url: '/formazione/kit-calamita-volontari-pc/' }]
     },
 
     // --- Macro 3: Volontariato ---

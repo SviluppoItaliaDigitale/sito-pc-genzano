@@ -327,6 +327,76 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 </a>
 </div>
 
+<div class="ms-section"><span class="ms-section-icon" style="background:#7f1d1d"><i class="bi bi-printer-fill"></i></span><h2>Kit Calamità — Schede stampabili per categorie vulnerabili</h2></div>
+
+<div class="ms-grid">
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita/">
+  <div class="ms-card-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+  <p class="ms-card-title">Hub Kit Calamità</p>
+  <p class="ms-card-desc">Cruscotto di 12 kit operativi: scegli la tua situazione e arrivi alle schede pronte. Standard NCTSN, IFRC, WHO, Sphere, FEANTSA, UNHCR, IOM, IFE, MISP, WSAVA, Eurocarers.</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-bambini/">
+  <div class="ms-card-icon"><i class="bi bi-emoji-smile"></i></div>
+  <p class="ms-card-title">Kit Bambini 3-14 anni</p>
+  <p class="ms-card-desc">PFA Children NCTSN/IFRC/WHO/UNHCR/Sphere. 4 fasce + inclusione (autismo, L2, ipovisione).</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-neonati/">
+  <div class="ms-card-icon"><i class="bi bi-balloon-heart"></i></div>
+  <p class="ms-card-title">Kit Neonati 0-3 anni</p>
+  <p class="ms-card-desc">IFE Core Group v3.0 + WHO Code latte materno. Termoregolazione, allattamento, segnali rossi.</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-anziani/">
+  <div class="ms-card-icon"><i class="bi bi-person-arms-up"></i></div>
+  <p class="ms-card-title">Kit Anziani in casa</p>
+  <p class="ms-card-desc">HelpAge + WHO mhGAP + SIGG/AIP. Carta identità, reminiscence, calendario orientativo.</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-caregiver-familiari/">
+  <div class="ms-card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+  <p class="ms-card-title">Kit Caregiver familiari</p>
+  <p class="ms-card-desc">L. 205/2017 + Carta Eurocarers 2014 + WHO Self-care 2022. Carta assistito, piano allettato.</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-strutture-sanitarie/">
+  <div class="ms-card-icon"><i class="bi bi-hospital-fill"></i></div>
+  <p class="ms-card-title">Kit Strutture Sanitarie / RSA</p>
+  <p class="ms-card-desc">Min. Salute + AGENAS + WHO Hospital Safety Index. Triage SALT geriatrico, comfort BPSD.</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-disabilita-adulti/">
+  <div class="ms-card-icon"><i class="bi bi-universal-access-circle"></i></div>
+  <p class="ms-card-title">Kit Disabilità Adulti</p>
+  <p class="ms-card-desc">CRPD ONU art. 11 + L. 18/2009 + WHO. 4 categorie (motoria, sensoriale, cognitiva, psichiatrica).</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-terapie-salvavita/">
+  <div class="ms-card-icon"><i class="bi bi-capsule-pill"></i></div>
+  <p class="ms-card-title">Kit Terapie Salvavita</p>
+  <p class="ms-card-desc">WHO Health Cluster + Sphere + ARERA. Dialisi, ossigenoterapia, oncologici, trapiantati.</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-gravidanza/">
+  <div class="ms-card-icon"><i class="bi bi-flower2"></i></div>
+  <p class="ms-card-title">Kit Gravidanza e neomamme</p>
+  <p class="ms-card-desc">MISP IAWG + WHO + UNFPA + Sphere. 5 priorità MISP, segnali rossi, parto improvviso.</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-senza-fissa-dimora/">
+  <div class="ms-card-icon"><i class="bi bi-house-x"></i></div>
+  <p class="ms-card-title">Kit Senza Fissa Dimora</p>
+  <p class="ms-card-desc">FEANTSA ETHOS + FIO.PSD + Min. Lavoro 2015. Identificazione minima, mappa risorse Castelli.</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-italiano-l2/">
+  <div class="ms-card-icon"><i class="bi bi-translate"></i></div>
+  <p class="ms-card-title">Kit Italiano L2 / Stranieri</p>
+  <p class="ms-card-desc">UNHCR CwC 2020 + IOM CCCM + Sphere. Carta multilingua + frasario in 7 lingue.</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-animali/">
+  <div class="ms-card-icon"><i class="bi bi-piggy-bank"></i></div>
+  <p class="ms-card-title">Kit Animali domestici</p>
+  <p class="ms-card-desc">D.Lgs. 1/2018 art. 12 + L. 281/1991 + WSAVA. Lezione Katrina/PETS Act 2006.</p>
+</a>
+<a class="ms-card ms-emerg" href="/formazione/kit-calamita-volontari-pc/">
+  <div class="ms-card-icon"><i class="bi bi-shield-shaded"></i></div>
+  <p class="ms-card-title">Kit Volontari PC (auto-cura)</p>
+  <p class="ms-card-desc">IFRC Caring + NCTSN STS + WHO mhGAP + ProQOL-5. Auto-valutazione, decompressione.</p>
+</a>
+</div>
+
 <div class="ms-section"><span class="ms-section-icon" style="background:#15803d"><i class="bi bi-megaphone-fill"></i></span><h2>Comunicazioni e canali</h2></div>
 
 <div class="ms-grid">
