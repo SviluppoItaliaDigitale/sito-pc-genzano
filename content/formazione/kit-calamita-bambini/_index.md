@@ -33,9 +33,20 @@ Queste schede sono **pronte da stampare in formato A4** e usabili da soccorritor
 | 9 | [Carta emozioni con faccine](/formazione/kit-calamita-bambini/09-carta-emozioni-piccoli.html) | Per bambini non verbali o non ancora capaci di nominare emozioni. Indicare = comunicare. |
 | 10 | [Routine: lavarsi le mani in 5 passi](/formazione/kit-calamita-bambini/10-routine-lavarsi-mani.html) | Procedural support visivo. Igiene in tendopoli. Adatta autismo e disabilità cognitiva. |
 
-### Schede per fascia 6-8 anni (in arrivo)
+### Schede per fascia 6-8 anni — pubblicate
 
-10 schede di color-by-number, labirinti, cruciverba semplici, origami, diario emozioni, disegno con prompt.
+| # | Scheda | Quando usarla |
+|---|---|---|
+| 11 | [Color by number — l'elicottero](/formazione/kit-calamita-bambini/11-color-by-number-elicottero.html) | 5 colori, scena completa. Distrazione cognitiva 20-30 min. |
+| 12 | [Punto-punto — il casco del volontario](/formazione/kit-calamita-bambini/12-punto-punto-casco.html) | 24 numeri da unire in ordine. Conoscenza dell'attrezzatura PC. |
+| 13 | [Labirinto medio — il volontario raggiunge la tenda](/formazione/kit-calamita-bambini/13-labirinto-medio.html) | Concentrazione, problem-solving. 7×7 celle. |
+| 14 | [Trova le 7 differenze — la squadra al lavoro](/formazione/kit-calamita-bambini/14-trova-7-differenze.html) | Attenzione visiva. Adatto in coppia/piccolo gruppo. |
+| 15 | [Cruciverba semplice della sicurezza](/formazione/kit-calamita-bambini/15-cruciverba-semplice.html) | 5 parole chiave PC (CASCO/AIUTO/RADIO/TENDA/AMICO). Vocabolario + ortografia. |
+| 16 | [Origami — il cappello del volontario](/formazione/kit-calamita-bambini/16-origami-cappello.html) | Motricità fine. Risultato indossabile = identificazione coi soccorritori. |
+| 17 | [Storia da completare con disegno](/formazione/kit-calamita-bambini/17-storia-da-completare.html) | **Narrative therapy**: il bambino elabora il vissuto proiettandolo su un personaggio. |
+| 18 | [Diario delle emozioni quotidiano](/formazione/kit-calamita-bambini/18-diario-emozioni.html) | 1 foglio al giorno. 8 faccine + 2 domande. Pratica evidence-based di regolazione emotiva. |
+| 19 | [Disegna chi ti ha aiutato oggi](/formazione/kit-calamita-bambini/19-disegna-chi-ti-ha-aiutato.html) | Esercizio di gratitudine. Risignificazione del ruolo dei soccorritori. |
+| 20 | [Carta CAA — dimmelo con un pittogramma](/formazione/kit-calamita-bambini/20-carta-caa-comunicazione.html) | **Inclusione**: per L2, autismo, disabilità cognitiva, mutismo selettivo post-trauma. 12 pittogrammi essenziali. |
 
 ### Schede per fascia 9-11 anni (in arrivo)
 
