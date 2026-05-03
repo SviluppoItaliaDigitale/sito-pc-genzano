@@ -78,9 +78,16 @@ Queste schede sono **pronte da stampare in formato A4** e usabili da soccorritor
 | 39 | [Cose che voglio imparare](/formazione/kit-calamita-bambini/39-cose-che-voglio-imparare.html) | Future orientation + growth mindset (Dweck): obiettivi di apprendimento ricostruiscono prospettiva. |
 | 40 | [Lettera all'amministrazione del campo](/formazione/kit-calamita-bambini/40-lettera-amministrazione-campo.html) | Esercizio di cittadinanza attiva (Educazione Civica D.M. 35/2020): agency adolescenziale. |
 
-### Schede dedicate inclusione (in arrivo)
+### Schede dedicate inclusione — pubblicate
 
-6 schede trasversali per bambini con disabilità motoria, visiva, cognitiva (CAA con ARASAAC), bambini italiano L2 e stranieri.
+| # | Scheda | Per chi |
+|---|---|---|
+| 41 | [Disegno a tracciati grandi (camion)](/formazione/kit-calamita-bambini/41-disegno-tracciati-grandi.html) | **Disabilità motoria fine**: linee 6pt, aree ampie, niente dettagli minimi. |
+| 42 | [Colorazione a campiture larghe (casa/sole/prato)](/formazione/kit-calamita-bambini/42-colorazione-campiture-larghe.html) | **Disabilità motoria/cognitiva**: 3 sole grandi aree. Successo garantito = no frustrazione. |
+| 43 | [Carta emozioni AD ALTO CONTRASTO](/formazione/kit-calamita-bambini/43-emozioni-alto-contrasto.html) | **Ipovisione**: contrasto >7:1 (AAA WCAG), tracciato 4-5pt, faccine 40mm, font 36pt. |
+| 44 | [Numero 112 in caratteri tattili](/formazione/kit-calamita-bambini/44-112-tattile.html) | **Cecità/ipovisione grave**: 112 in 220pt + istruzioni per renderlo tattile in cartoncino. |
+| 45 | [Mappa pittografica del campo](/formazione/kit-calamita-bambini/45-mappa-pittografica-campo.html) | **L2 + disabilità cognitiva**: 12 pittogrammi essenziali con traduzioni IT/EN/AR/UK. |
+| 46 | [Ciao, grazie, aiuto in 12 lingue](/formazione/kit-calamita-bambini/46-ciao-molte-lingue.html) | **Accoglienza interculturale**: 12 lingue dei principali flussi migratori in Italia. |
 
 ## Come usarle in pratica
 
