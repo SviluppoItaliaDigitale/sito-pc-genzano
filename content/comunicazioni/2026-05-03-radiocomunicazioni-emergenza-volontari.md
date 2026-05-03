@@ -17,6 +17,10 @@ In un'epoca in cui tutti comunicano con lo smartphone, può sembrare anacronisti
 
 ## Perché le reti mobili non bastano
 
+{{< foto src="/images/2026-05-03-postazione-radioamatoriale-wikipedia.webp"
+         alt="Postazione operativa di un radioamatore (ham shack): banco con ricetrasmettitori, microfono, monitor, antenne all'esterno"
+         caption="Una tipica postazione operativa di radioamatore. Foto: Mw0rkb, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mw0rkbshack.jpg), licenza CC BY-SA 3.0." >}}
+
 Durante un'emergenza, la rete mobile entra in sofferenza per tre motivi concomitanti:
 
 1. **Sovraccarico**: migliaia di persone telefonano o cercano informazioni nello stesso momento.
