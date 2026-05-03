@@ -8,7 +8,7 @@ In una calamità (terremoto, alluvione, incendio, evacuazione) ci sono persone p
 
 Le schede sono progettate con **font e grafica a basso consumo di inchiostro** (~30% in meno di Arial) per essere stampabili anche con cartucce limitate sul posto.
 
-## I 3 kit disponibili
+## Kit attualmente disponibili
 
 ### 👧 [Kit Calamità Bambini](/formazione/kit-calamita-bambini/)
 

@@ -100,7 +100,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/percorsi-didattici/" role="menuitem"><span>Percorsi didattici pronti</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Kit per le scuole</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/schede-stampabili/" role="menuitem"><span>Schede Stampabili</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/kit-calamita/" role="menuitem"><span>Kit Calamità (per bambini, anziani, RSA)</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/kit-calamita/" role="menuitem"><span>Kit Emergenza Schede</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/storie-e-racconti/" role="menuitem"><span>Storie e Racconti</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/educazione-civica/" role="menuitem"><span>Per i docenti — Ed. Civica</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi della Sicurezza</span></a></li>' +
