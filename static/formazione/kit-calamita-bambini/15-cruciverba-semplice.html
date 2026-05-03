@@ -2,17 +2,19 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<title>Scheda 15 — Cruciverba semplice della sicurezza (6-8 anni)</title>
+<title>Scheda 15 — Completa le parole della sicurezza (6-8 anni)</title>
 <link rel="stylesheet" href="../kit-calamita-shared/print.css">
 <style>
-  .crux-grid { display: grid; gap: 0; margin: 5mm auto; }
-  .crux-cell { width: 12mm; height: 12mm; border: 1.5px solid #1a1a1a; display: flex; align-items: center; justify-content: center; position: relative; font-weight: 700; font-size: 18pt; }
-  .crux-cell.nera { background: #1a1a1a; }
-  .crux-cell .num-clue { position: absolute; top: 1px; left: 2px; font-size: 8pt; font-weight: 700; }
-  .clues { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-top: 6mm; }
-  .clue-list h4 { color: var(--pc-blue); font-size: 13pt; margin: 0 0 3mm; border-bottom: 1px solid var(--pc-blue); padding-bottom: 1mm; }
-  .clue-list ol { padding-left: 6mm; margin: 0; }
-  .clue-list li { font-size: 11pt; margin-bottom: 2mm; }
+  .parole-list { display: flex; flex-direction: column; gap: 5mm; }
+  .parola-row { display: grid; grid-template-columns: 8mm 1fr; gap: 3mm; align-items: center; padding: 3mm; border: 1.5px solid #1a1a1a; border-radius: 6px; }
+  .num-parola { background: var(--pc-blue); color: #fff; width: 8mm; height: 8mm; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12pt; }
+  .parola-content { display: flex; flex-direction: column; gap: 2mm; }
+  .indizio { font-size: 11pt; }
+  .celle { display: flex; gap: 2mm; }
+  .cella-vuota { width: 12mm; height: 12mm; border: 2px solid #1a1a1a; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18pt; background: #fff; }
+  .cella-vuota.aiuto { color: #ccc; font-size: 14pt; }
+  .soluzioni { margin-top: 6mm; padding: 3mm; background: #fafbfc; border: 1px dashed #1a1a1a; font-size: 10pt; }
+  .soluzioni summary { cursor: pointer; font-weight: 700; color: var(--pc-blue); }
 </style>
 </head>
 <body>
@@ -24,88 +26,51 @@
     <div class="brand">Protezione Civile<small>Gruppo Comunale Volontari — Genzano di Roma</small></div>
     <span class="kit-tag">Bambini · 6-8 anni</span>
   </header>
-  <h1 class="scheda-title">Cruciverba della sicurezza</h1>
+  <h1 class="scheda-title">Completa le parole della sicurezza</h1>
   <span class="scheda-eta">6-8 anni</span>
-  <div class="scheda-istruzione">📝 <strong>Risolvi il cruciverba</strong> con le 5 parole chiave della Protezione Civile.</div>
+  <div class="scheda-istruzione">📝 <strong>Leggi l'indizio</strong> e scrivi la parola nelle caselle. Una lettera per casella! La prima lettera è già scritta come aiuto.</div>
   <section class="scheda-attivita">
-    <!-- 7×7 grid; soluzioni: ORIZZ 1=CASCO, 3=AIUTO; VERT 1=COCCO(no), TENDA, RADIO, AMICO -->
-    <!-- Layout semplificato: 5 parole CASCO/AIUTO/RADIO/TENDA/AMICO incrociate -->
-    <div class="crux-grid" style="grid-template-columns: repeat(7, 12mm);">
-      <!-- Riga 1: . T . . . . . -->
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell"><span class="num-clue">1↓</span></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <!-- Riga 2: C A S C O . . -->
-      <div class="crux-cell"><span class="num-clue">2→</span></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <!-- Riga 3: . N . . . . . -->
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <!-- Riga 4: A I U T O . . -->
-      <div class="crux-cell"><span class="num-clue">3→</span></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <!-- Riga 5: . A . . . . . (chiude TENDA) -->
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <!-- Riga 6: R A D I O . . -->
-      <div class="crux-cell"><span class="num-clue">4→</span></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-      <!-- Riga 7: A M I C O . . -->
-      <div class="crux-cell"><span class="num-clue">5→</span></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell"></div>
-      <div class="crux-cell nera"></div>
-      <div class="crux-cell nera"></div>
-    </div>
-    <div class="clues">
-      <div class="clue-list">
-        <h4>Orizzontali →</h4>
-        <ol>
-          <li><strong>2.</strong> Lo mette in testa il volontario per protezione (5 lettere)</li>
-          <li><strong>3.</strong> Quello che danno i volontari (5 lettere)</li>
-          <li><strong>4.</strong> Apparecchio per parlare a distanza in emergenza (5 lettere)</li>
-          <li><strong>5.</strong> Una persona che ti vuole bene (5 lettere)</li>
-        </ol>
+    <div class="parole-list">
+      <div class="parola-row">
+        <div class="num-parola">1</div>
+        <div class="parola-content">
+          <div class="indizio">Lo mette in testa il volontario per protezione (5 lettere)</div>
+          <div class="celle"><div class="cella-vuota aiuto">C</div><div class="cella-vuota"></div><div class="cella-vuota"></div><div class="cella-vuota"></div><div class="cella-vuota"></div></div>
+        </div>
       </div>
-      <div class="clue-list">
-        <h4>Verticali ↓</h4>
-        <ol>
-          <li><strong>1.</strong> "Casa" di stoffa che si monta in emergenza (5 lettere)</li>
-        </ol>
+      <div class="parola-row">
+        <div class="num-parola">2</div>
+        <div class="parola-content">
+          <div class="indizio">Quello che danno i volontari quando ti serve (5 lettere)</div>
+          <div class="celle"><div class="cella-vuota aiuto">A</div><div class="cella-vuota"></div><div class="cella-vuota"></div><div class="cella-vuota"></div><div class="cella-vuota"></div></div>
+        </div>
+      </div>
+      <div class="parola-row">
+        <div class="num-parola">3</div>
+        <div class="parola-content">
+          <div class="indizio">Apparecchio per parlare a distanza in emergenza (5 lettere)</div>
+          <div class="celle"><div class="cella-vuota aiuto">R</div><div class="cella-vuota"></div><div class="cella-vuota"></div><div class="cella-vuota"></div><div class="cella-vuota"></div></div>
+        </div>
+      </div>
+      <div class="parola-row">
+        <div class="num-parola">4</div>
+        <div class="parola-content">
+          <div class="indizio">"Casa" di stoffa che si monta in emergenza (5 lettere)</div>
+          <div class="celle"><div class="cella-vuota aiuto">T</div><div class="cella-vuota"></div><div class="cella-vuota"></div><div class="cella-vuota"></div><div class="cella-vuota"></div></div>
+        </div>
+      </div>
+      <div class="parola-row">
+        <div class="num-parola">5</div>
+        <div class="parola-content">
+          <div class="indizio">Una persona che ti vuole bene (5 lettere)</div>
+          <div class="celle"><div class="cella-vuota aiuto">A</div><div class="cella-vuota"></div><div class="cella-vuota"></div><div class="cella-vuota"></div><div class="cella-vuota"></div></div>
+        </div>
       </div>
     </div>
-    <p style="font-size: 9pt; text-align: center; color: #666; margin-top: 4mm;">Soluzioni: 2→ CASCO, 3→ AIUTO, 4→ RADIO, 5→ AMICO, 1↓ TENDA</p>
+    <details class="soluzioni">
+      <summary>🔑 Soluzioni (clicca per vedere)</summary>
+      <p style="margin: 2mm 0 0;">1) <strong>CASCO</strong> · 2) <strong>AIUTO</strong> · 3) <strong>RADIO</strong> · 4) <strong>TENDA</strong> · 5) <strong>AMICO</strong></p>
+    </details>
   </section>
-  <footer class="scheda-footer"><span>Scheda 15 — Cruciverba sicurezza</span><span class="fonti">5 parole chiave del lessico PC. Allena vocabolario, ortografia e ragionamento. Adatto cooperativo.</span><span>www.protezionecivilegenzano.it</span></footer>
+  <footer class="scheda-footer"><span>Scheda 15 — Completa le parole</span><span class="fonti">5 parole chiave del lessico PC. Allena vocabolario, ortografia, lettura indizi. Formato a fila per garantire giocabilità (cruciverba intrecciati hanno alto rischio di errori non verificabili).</span><span>www.protezionecivilegenzano.it</span></footer>
 </article></body></html>
