@@ -1,0 +1,357 @@
+/* ============================================================
+   Kit Calamità — CSS condiviso per schede stampabili A4
+   Bianco/nero, alto contrasto, accessibile, ECO-PRINT FRIENDLY.
+
+   Convenzione: ogni scheda è un HTML standalone con questo CSS.
+   La scheda si vede a video (gradevole) e si stampa in B/N A4
+   con consumo inchiostro ridotto (~30% in meno di Arial).
+
+   STRATEGIA ECO-PRINT (in calamità le cartucce/toner sono risorse finite):
+   1. Font URW Gothic L (open-source GPL, equivalente Century Gothic):
+      tracce sottili = ~30% inchiostro in meno di Arial mantenendo
+      leggibilità ottima anche per bambini piccoli e ipovisione.
+   2. Niente fondi pieni colorati: blu istituzionale solo come bordo,
+      non come riempimento.
+   3. Linee sottili (1.5pt) per illustrazioni line-art.
+   4. Niente ombre, niente gradienti, niente texture.
+   5. Modalità "Eco-print" opzionale (.eco-print): tracce ancora più
+      sottili + rimuove accenti grafici accessori.
+   ============================================================ */
+
+:root {
+  --pc-blue: #003366;
+  --pc-blue-dark: #001a33;
+  --pc-yellow: #ffbe2e;
+  --line: #1a1a1a;
+  --bg-soft: #f4f7fb;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  /* ECO: URW Gothic L (open Linux GPL) ≈ Century Gothic ≈ Avant Garde
+     ~30% inchiostro in meno di Arial/Helvetica grazie a tracce sottili
+     senza compromettere leggibilità. Ecofont Vera Sans NON usata: i
+     buchi visibili compromettono leggibilità per bambini 3-5 anni e
+     ipovisione (priorità inclusione su risparmio assoluto). */
+  font-family: 'URW Gothic L', 'Century Gothic', 'Avant Garde Gothic',
+               'Avant Garde', 'ITC Avant Garde Gothic', 'Liberation Sans',
+               sans-serif;
+  color: var(--line);
+  background: #f0f2f5;
+  font-size: 16pt;
+  line-height: 1.5;
+}
+
+/* ── Layout pagina A4 ── */
+.scheda {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 1cm auto;
+  background: #fff;
+  padding: 18mm 18mm 22mm 18mm;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Banda istituzionale in alto ── */
+.scheda-header {
+  border-bottom: 3px solid var(--pc-blue);
+  padding-bottom: 6mm;
+  margin-bottom: 8mm;
+  display: flex;
+  align-items: center;
+  gap: 4mm;
+}
+.scheda-header .logo {
+  width: 18mm;
+  height: 18mm;
+  flex-shrink: 0;
+}
+.scheda-header .brand {
+  font-size: 10pt;
+  color: var(--pc-blue);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.scheda-header .brand small {
+  display: block;
+  font-weight: 400;
+  font-size: 8pt;
+  color: var(--line);
+  margin-top: 1mm;
+}
+.scheda-header .kit-tag {
+  margin-left: auto;
+  border: 1px solid var(--pc-blue);
+  color: var(--pc-blue);
+  padding: 1.5mm 3mm;
+  font-size: 8pt;
+  font-weight: 700;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+}
+
+/* ── Titolo della scheda ── */
+.scheda-title {
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--pc-blue);
+  margin: 0 0 3mm;
+  line-height: 1.15;
+}
+.scheda-subtitle {
+  font-size: 11pt;
+  color: var(--line);
+  margin: 0 0 8mm;
+  font-style: italic;
+}
+.scheda-eta {
+  display: inline-block;
+  background: var(--pc-blue);
+  color: #fff;
+  font-size: 9pt;
+  font-weight: 700;
+  padding: 1.5mm 3mm;
+  border-radius: 3px;
+  margin-bottom: 8mm;
+}
+
+/* ── Istruzione operativa (in alto, prima dell'attività) ── */
+.scheda-istruzione {
+  background: var(--bg-soft);
+  border-left: 4px solid var(--pc-blue);
+  padding: 4mm 5mm;
+  margin-bottom: 8mm;
+  font-size: 13pt;
+  font-weight: 500;
+}
+
+/* ── Area attività (cuore della scheda) ── */
+.scheda-attivita {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5mm;
+}
+
+/* ── Footer ── */
+.scheda-footer {
+  margin-top: auto;
+  padding-top: 6mm;
+  border-top: 1px solid #ccc;
+  font-size: 8pt;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.scheda-footer .fonti {
+  flex: 1;
+  font-size: 7.5pt;
+  line-height: 1.4;
+}
+
+/* ── Componenti riusabili ── */
+.box-prompt {
+  border: 1.5px dashed var(--pc-blue);
+  border-radius: 4px;
+  padding: 5mm;
+  width: 100%;
+  background: #fafbfc;
+  min-height: 40mm;
+}
+.box-disegno {
+  border: 1.5px solid var(--line);
+  border-radius: 4px;
+  width: 100%;
+  min-height: 80mm;
+  background: #fff;
+}
+.linea-scrittura {
+  border: none;
+  border-bottom: 1px solid var(--line);
+  width: 100%;
+  margin: 4mm 0;
+  height: 8mm;
+}
+.linea-scrittura.sottile { border-bottom-style: dashed; }
+
+.griglia-disegno {
+  display: grid;
+  gap: 3mm;
+  width: 100%;
+}
+.griglia-disegno.col-2 { grid-template-columns: 1fr 1fr; }
+.griglia-disegno.col-3 { grid-template-columns: 1fr 1fr 1fr; }
+.griglia-disegno.col-4 { grid-template-columns: repeat(4, 1fr); }
+
+.cella-disegno {
+  border: 1.5px solid var(--line);
+  border-radius: 3px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 2mm;
+}
+.cella-disegno svg, .cella-disegno img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cella-disegno .etichetta {
+  font-size: 9pt;
+  font-weight: 700;
+  text-align: center;
+}
+
+.faccina {
+  width: 25mm;
+  height: 25mm;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28pt;
+}
+
+ul.elenco-pratico {
+  list-style: none;
+  padding-left: 0;
+  margin: 4mm 0;
+}
+ul.elenco-pratico li {
+  padding: 3mm 0 3mm 8mm;
+  border-bottom: 1px dotted #ccc;
+  position: relative;
+}
+ul.elenco-pratico li::before {
+  content: '☐';
+  position: absolute;
+  left: 0;
+  font-size: 14pt;
+  color: var(--pc-blue);
+}
+
+/* ── Print ottimizzato A4 ── */
+@media print {
+  html, body {
+    background: #fff;
+    font-size: 12pt;
+  }
+  .scheda {
+    margin: 0;
+    box-shadow: none;
+    width: auto;
+    min-height: auto;
+    padding: 12mm;
+  }
+  .no-print { display: none !important; }
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
+
+/* ── Bottone stampa (solo a video) ── */
+.btn-stampa {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  background: var(--pc-blue);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,51,102,0.3);
+  z-index: 1000;
+}
+.btn-stampa:hover { background: var(--pc-blue-dark); }
+.btn-stampa:focus-visible {
+  outline: 3px solid var(--pc-yellow);
+  outline-offset: 2px;
+}
+
+/* ── Link "torna all'indice" (solo a video) ── */
+.btn-indice {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background: #fff;
+  color: var(--pc-blue);
+  border: 2px solid var(--pc-blue);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.btn-indice:hover { background: var(--bg-soft); }
+.btn-indice:focus-visible {
+  outline: 3px solid var(--pc-yellow);
+  outline-offset: 2px;
+}
+
+/* ── Modalità Eco-print (max risparmio inchiostro) ── */
+/* Aggiunge classe .eco-print al <body> per attivare risparmio massimo:
+   rimuove banda istituzionale piena, bordi più sottili, niente accenti
+   visivi. Da usare quando le cartucce sono al minimo. */
+.eco-print .scheda-header {
+  border-bottom-width: 1px;
+}
+.eco-print .scheda-header .kit-tag {
+  border-width: 0.5px;
+}
+.eco-print .scheda-eta {
+  background: transparent;
+  color: var(--pc-blue);
+  border: 1px solid var(--pc-blue);
+}
+.eco-print .scheda-istruzione {
+  background: transparent;
+  border-left-width: 2px;
+}
+.eco-print .scheda-footer {
+  border-top-style: dashed;
+  border-top-width: 0.5px;
+}
+.eco-print .box-prompt,
+.eco-print .box-disegno,
+.eco-print .cella-disegno {
+  border-width: 1px;
+}
+
+/* ── Versione ad alto contrasto (per ipovisione) ── */
+.scheda.alto-contrasto {
+  font-size: 22pt;
+}
+.scheda.alto-contrasto .scheda-title { font-size: 32pt; }
+.scheda.alto-contrasto .scheda-istruzione { font-size: 18pt; }
+.scheda.alto-contrasto .faccina { width: 35mm; height: 35mm; font-size: 38pt; }
+.scheda.alto-contrasto .scheda-istruzione,
+.scheda.alto-contrasto .scheda-header,
+.scheda.alto-contrasto .scheda-footer {
+  border-color: #000;
+  border-width: 3px;
+}
+
+/* ── Reset accessibilità globale ── */
+*:focus-visible {
+  outline: 3px solid var(--pc-yellow);
+  outline-offset: 2px;
+}
