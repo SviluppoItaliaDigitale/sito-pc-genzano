@@ -20,20 +20,20 @@ Le schede sono **pronte da stampare A4** in B/N con consumo inchiostro ridotto (
 |---|---|---|---|
 | 0 | [Guida operatori](/formazione/kit-calamita-anziani/00-guida-operatori-anziani.html) | Volontari PC, operatori, familiari | **Leggere prima di iniziare**. Tre rischi specifici (sanitario/cognitivo/psicosociale), come avvicinarsi, segnali di allarme, distinguere delirium da demenza, reminiscence therapy, terapia di validazione (Naomi Feil). |
 
-### 10 schede per anziani (in arrivo)
+### 10 schede per anziani — pubblicate
 
 | # | Scheda | Funzione operativa |
 |---|---|---|
-| 1 | Carta d'identità di emergenza | Anagrafica + contatti familiari + medico + allergie + terapie + ausili. Da portare sempre con sé. |
-| 2 | Diario medicinali settimanale | Tabella mattino/pranzo/sera per non saltare terapie. |
-| 3 | Calendario orientativo | "Oggi è... mi trovo a... mi assiste..." Anti-disorientamento, utile in Alzheimer iniziale. |
-| 4 | Ricordi della mia vita | 5 prompt di reminiscence therapy (terapia validata Cochrane 2018 per anziani in trauma). |
-| 5 | Carta dei bisogni con pittogrammi | CAA-style per chi ha difficoltà comunicative. |
-| 6 | La mia rete di supporto | Chi posso chiamare: famiglia, vicini, parrocchia, associazioni. |
-| 7 | Mandala adulti | Schema simmetrico complesso per rilassamento. |
-| 8 | Cruciverba della memoria | Parole italiane quotidiane (oggetti casa, ricette anni '50-'60). |
-| 9 | Sudoku 4×4 / 6×6 modulare | Esercizio cognitivo dolce, due livelli per capacità diverse. |
-| 10 | Lettera ai miei nipoti | Template per elaborazione affettiva e lascito narrativo. |
+| 1 | [Carta d'identità di emergenza](/formazione/kit-calamita-anziani/01-carta-identita-emergenza.html) | Anagrafica + familiari + medico + terapie + ausili. Da portare sempre nel portafogli. |
+| 2 | [Diario medicinali settimanale](/formazione/kit-calamita-anziani/02-diario-medicinali.html) | 7 giorni × 3 fasce (mattino/pranzo/sera). Aderenza terapeutica. |
+| 3 | [Calendario orientativo](/formazione/kit-calamita-anziani/03-calendario-orientativo.html) | Reality Orientation Therapy (Folsom 1968). Anti-disorientamento Alzheimer iniziale. |
+| 4 | [Ricordi della mia vita](/formazione/kit-calamita-anziani/04-ricordi-vita.html) | Reminiscence therapy in 5 prompt (Cochrane 2018, Butler 1963). |
+| 5 | [Carta dei bisogni con pittogrammi](/formazione/kit-calamita-anziani/05-bisogni-caa.html) | 12 pittogrammi CAA per anziani con afasia, ipoacusia, demenza. |
+| 6 | [La mia rete di supporto](/formazione/kit-calamita-anziani/06-rete-supporto.html) | Famiglia + vicini + parrocchia + istituzioni (NUE 112, ASL Roma 6). |
+| 7 | [Mandala per la calma](/formazione/kit-calamita-anziani/07-mandala-adulti.html) | Mandala therapy: ripetitività + simmetria = riduzione cortisolo. |
+| 8 | [Cruciverba della memoria](/formazione/kit-calamita-anziani/08-cruciverba-memoria.html) | 8 parole con prompt culturali italiani anni '50-'60 (PANETTONE, MODUGNO, BICICLETTA…). |
+| 9 | [Sudoku 6×6 caratteri grandi](/formazione/kit-calamita-anziani/09-sudoku.html) | Sudoku 6×6 verificato (algoritmo Latin square) + soluzione. Caratteri 28pt per ipovisione. |
+| 10 | [Lettera ai miei nipoti](/formazione/kit-calamita-anziani/10-lettera-nipoti.html) | Generatività di Erikson: lascito narrativo affettivo. |
 
 ## Come usarle in pratica
 

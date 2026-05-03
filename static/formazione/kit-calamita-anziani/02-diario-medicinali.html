@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Scheda 2 — Diario settimanale medicinali</title>
+<link rel="stylesheet" href="../kit-calamita-shared/print.css">
+<style>
+  table.med { width: 100%; border-collapse: collapse; margin: 4mm 0; font-size: 11pt; }
+  table.med th { background: var(--pc-blue); color: #fff; padding: 3mm; text-align: center; font-weight: 700; }
+  table.med td { border: 1.5px solid #1a1a1a; padding: 3mm; vertical-align: top; height: 16mm; }
+  table.med td:first-child { background: #fafbfc; font-weight: 700; color: var(--pc-blue); width: 25mm; text-align: center; }
+  .check-box { display: flex; gap: 2mm; justify-content: center; }
+  .check-box span { width: 7mm; height: 7mm; border: 1.5px solid #1a1a1a; border-radius: 3px; }
+</style>
+</head>
+<body>
+<button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>
+<a class="btn-indice no-print" href="./">← Indice</a>
+<article class="scheda">
+  <header class="scheda-header">
+    <svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect x="2" y="2" width="96" height="96" fill="none" stroke="#003366" stroke-width="3"/><text x="50" y="58" text-anchor="middle" font-size="32" font-weight="700" fill="#003366">PC</text></svg>
+    <div class="brand">Protezione Civile<small>Gruppo Comunale Volontari — Genzano di Roma</small></div>
+    <span class="kit-tag">Anziani · Salute</span>
+  </header>
+  <h1 class="scheda-title">Diario settimanale dei medicinali</h1>
+  <span class="scheda-eta">Per non saltare nessuna terapia anche in giorni difficili</span>
+  <div class="scheda-istruzione">💊 <strong>Spunta ogni casella</strong> appena prendi il farmaco. Se vivi solo, qualcuno ti chiama la sera per controllare con te.</div>
+  <section class="scheda-attivita">
+    <p style="margin: 0;"><strong>Settimana dal:</strong> ___________ <strong>al:</strong> ___________</p>
+    <p style="margin: 0 0 3mm;"><strong>Farmaci da prendere</strong> (scrivi nomi sotto le X):</p>
+    <table class="med">
+      <thead>
+        <tr><th>GIORNO</th><th>MATTINA</th><th>PRANZO</th><th>SERA</th><th>NOTE / SINTOMI</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>LUNEDÌ</td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td></td></tr>
+        <tr><td>MARTEDÌ</td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td></td></tr>
+        <tr><td>MERCOLEDÌ</td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td></td></tr>
+        <tr><td>GIOVEDÌ</td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td></td></tr>
+        <tr><td>VENERDÌ</td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td></td></tr>
+        <tr><td>SABATO</td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td></td></tr>
+        <tr><td>DOMENICA</td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td><div class="check-box"><span></span><span></span><span></span></div></td><td></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 10pt; color: #c1121f; font-weight: 700; margin-top: 4mm;">⚠️ NON sospendere mai farmaci di cuore, pressione, anticoagulanti, antiparkinson, benzodiazepine senza parlare col medico — anche in emergenza.</p>
+  </section>
+  <footer class="scheda-footer"><span>Anziani Scheda 2 — Diario medicinali</span><span class="fonti">Aderenza terapeutica = riduzione mortalità del 20-30% negli anziani polifarmaco. Prima causa decompenso post-evento secondo SIGG.</span><span>www.protezionecivilegenzano.it</span></footer>
+</article></body></html>
