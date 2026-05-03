@@ -1,106 +1,150 @@
 ---
 title: "Kit Calamità — schede stampabili per emergenza"
-description: "Schede operative pronte da stampare A4 per assistere bambini, anziani, ospiti di RSA, persone con disabilità, neonati, animali domestici, volontari di PC e donne in gravidanza durante e dopo una calamità. Basate su protocolli evidence-based PFA, HelpAge, Sphere Standards, MISP, WSAVA, IFRC."
+description: "Hub di 12 kit operativi pronti da stampare A4 per assistere bambini, anziani, ospiti RSA, persone con disabilità, neonati, gravidanza, animali, volontari PC, persone senza dimora, italiano L2, caregiver familiari e pazienti con terapie salvavita. Standard internazionali NCTSN, IFRC, WHO, Sphere, FEANTSA, UNHCR, IOM, IFE, MISP, WSAVA, ProQOL, Eurocarers."
 layout: "single"
+toc: true
 ---
 
-In una calamità (terremoto, alluvione, incendio, evacuazione) ci sono persone particolarmente vulnerabili che hanno bisogno di **strumenti operativi immediati**: bambini in stress da imprevisto, anziani disorientati, ospiti di RSA da evacuare, persone con disabilità adulte, neonati, donne in gravidanza, animali domestici, e gli stessi volontari di Protezione Civile esposti a stress operativo. Per ognuna di queste categorie il Gruppo Comunale Volontari ha preparato un **kit di schede stampabili** in formato A4, basato su protocolli internazionali (NCTSN, IFRC, WHO, Sphere Standards, HelpAge, MISP, WSAVA, IAWG).
+In una calamità (terremoto, alluvione, incendio, evacuazione) ci sono persone particolarmente vulnerabili che hanno bisogno di **strumenti operativi immediati**. Il Gruppo Comunale ha preparato **12 kit** di schede stampabili A4, ciascuno basato sugli standard internazionali ed evidence-based di settore.
 
-Le schede sono progettate con **font e grafica a basso consumo di inchiostro** (~30% in meno di Arial) per essere stampabili anche con cartucce limitate sul posto.
+> 🧭 **Scegli sotto la tua situazione**: arriverai in due click alle schede giuste. Nel dubbio, la **[Guida operatori](#standard-adottati)** di ogni kit va sempre letta per prima.
 
-## Kit attualmente disponibili
+Le schede sono progettate con **font e grafica a basso consumo di inchiostro** (URW Gothic L, ~30% in meno di Arial) per essere stampabili anche con cartucce limitate sul posto.
 
-### 👧 [Kit Calamità Bambini](/formazione/kit-calamita-bambini/)
+## 👶 Bambini e neonati
 
-Schede + guida operatori PFA Children per bambini 3-14 anni e per supporto inclusione (disabilità motoria, visiva, cognitiva, italiano L2). Distrazione attiva + supporto emotivo + ricostruzione routine.
+### 👧 Sono genitore / educatore di bambini 3-14 anni
+**Standard PFA Children (NCTSN, IFRC, WHO, UNHCR, Sphere 2018).** Distrazione attiva + supporto emotivo + ricostruzione routine. 4 fasce d'età + schede inclusione (autismo, italiano L2, ipovisione).
 
-- Fascia 3-5 anni: pregrafismo, colorazione, mandala, storia sociale ARASAAC
-- Fascia 6-8 anni: labirinti, cruciverba, origami, diario emozioni
-- Fascia 9-11 anni: word search, sudoku, mappa campo, lettera al soccorritore, ricetta speranza
-- Fascia 12-14 anni: diario riflessivo, lettera al futuro me, mini-progetti ripartenza
-- Schede dedicate inclusione (tracciati grandi, alto contrasto, CAA, multilingua)
-- Guida operatori PFA Children evidence-based (NCTSN, IFRC, WHO/UNHCR, Sphere)
+→ **[Kit Calamità Bambini](/formazione/kit-calamita-bambini/)**
 
-### 👴 [Kit Calamità Anziani in casa](/formazione/kit-calamita-anziani/)
+### 👶 Sono genitore di un neonato 0-3 anni
+**Standard IFE Core Group v3.0 (2017) + WHO Code sostituti latte materno + Sphere 2018.** Termoregolazione, allattamento in emergenza, latte artificiale sicuro, segnali rossi per chiamata 112.
 
-Schede + guida operatori per anziani autonomi e parzialmente autonomi che vivono in casa propria. Sopravvivenza dignitosa + orientamento + supporto cognitivo.
+→ **[Kit Calamità Neonati 0-3 anni](/formazione/kit-calamita-neonati/)**
 
-- Carta d'identità di emergenza (anagrafica + terapie + ausili)
-- Diario settimanale medicinali
-- Calendario orientativo (Reality Orientation Therapy)
-- Ricordi della vita (Reminiscence Therapy, Cochrane 2018)
-- Carta dei bisogni con pittogrammi (CAA)
-- La mia rete di supporto
-- Mandala adulti, cruciverba memoria, sudoku 6×6
-- Lettera ai miei nipoti (generatività di Erikson)
-- Guida operatori (HelpAge, WHO mhGAP, SIGG, AIP)
+## 👴 Anziani e fragilità in casa
 
-### 🏥 [Kit Calamità Strutture Sanitarie](/formazione/kit-calamita-strutture-sanitarie/)
+### 👴 Sono persona anziana / vivo con anziano in casa
+**Standard HelpAge International + WHO mhGAP + SIGG/AIP.** Sopravvivenza dignitosa, orientamento (Reality Orientation Therapy), reminiscence (Cochrane 2018), CAA pittogrammi, generatività di Erikson.
 
-**Schede operative per RSA, lungodegenze, hospice, ospedali geriatrici** in caso di calamità. Per direzione, personale sanitario/OSS, familiari distanti, ospiti residenti, anziani con demenza grave.
+→ **[Kit Calamità Anziani in casa](/formazione/kit-calamita-anziani/)**
 
-- Lezioni Centro Italia 2016 + Covid-RSA
-- Pre-emergenza (cartelle duplicate, bag trasferimento, protocollo non-separazione coppie)
-- Triage geriatrico SALT per priorità evacuazione
-- Comunicazione con familiari distanti
-- Comfort sensoriale per BPSD (Cochrane 2017)
-- Ruolo dei volontari di Protezione Civile a supporto
-- Guida operatori (Min. Salute, AGENAS, WHO Hospital Safety Index, CSNAP)
+### 🤝 Sono caregiver familiare di un familiare non autosufficiente
+**Standard L. 205/2017 (riconoscimento caregiver in Italia) + Carta europea Eurocarers 2014 + WHO Self-care 2022 + Zarit Burden Interview.** Doppio carico, persona allettata/demenza/SLA/terminale, cura del caregiver stesso.
 
-### ♿ [Kit Calamità Disabilità Adulti](/formazione/kit-calamita-disabilita-adulti/)
+→ **[Kit Calamità Caregiver familiari](/formazione/kit-calamita-caregiver-familiari/)**
 
-**Schede per persone con disabilità adulte non istituzionalizzate** (motoria, sensoriale, cognitiva, psichiatrica). Conformità CRPD art. 11 + L. 18/2009.
+## 🏥 Strutture sanitarie
 
-- Guida operatori — 4 categorie principali, cosa NON fare
-- Carta d'identità di emergenza (ausili + farmaci + bisogni)
-- Checklist evacuazione personale
-- Riferimenti FISH, FAND, UICI, ENS, ANGSA
+### 🏥 Sono direttore o operatore di RSA / lungodegenza / hospice
+**Standard Min. Salute + AGENAS + WHO Hospital Safety Index + CSNAP.** Lezioni Centro Italia 2016 + Covid-RSA. Pre-emergenza (cartelle duplicate, bag trasferimento, non-separazione coppie), triage geriatrico SALT, comunicazione familiari, comfort sensoriale BPSD.
 
-### 👶 [Kit Calamità Neonati 0-3 anni](/formazione/kit-calamita-neonati/)
+→ **[Kit Calamità Strutture Sanitarie](/formazione/kit-calamita-strutture-sanitarie/)**
 
-**Schede per la categoria con massima mortalità in emergenza** (ipotermia, disidratazione, infezioni). Conformità IFE Core Group + WHO Code sostituti latte materno.
+## ♿ Disabilità e bisogni speciali
 
-- Guida operatori — 3 priorità (termoregolazione, allattamento, acqua sicura)
-- Carta d'identità di emergenza del neonato
-- Kit evacuazione 72 ore (alimentazione, igiene, vestiario, salute)
-- Segnali rossi per chiamata 112/118
+### ♿ Sono persona con disabilità adulta non istituzionalizzata
+**Standard CRPD ONU art. 11 + L. 18/2009 ratifica italiana + WHO Disability Inclusive Emergency Response (2013) + Sphere 2018.** 4 categorie (motoria, sensoriale, cognitiva, psichiatrica). Carta d'identità, checklist evacuazione, riferimenti FISH/FAND/UICI/ENS/ANGSA.
 
-### 🐕 [Kit Calamità Animali domestici](/formazione/kit-calamita-animali/)
+→ **[Kit Calamità Disabilità Adulti](/formazione/kit-calamita-disabilita-adulti/)**
 
-**Schede per cani, gatti e altri animali da affezione** in caso di evacuazione. D.Lgs. 1/2018 art. 12 + L. 281/1991 + WSAVA. Lezione storica: uragano Katrina 2005 / US PETS Act 2006.
+### 🩺 Dipendo da terapia salvavita continuativa
+**Standard WHO Health Cluster 2018 + Sphere 2018 § Essential health services + Direttiva PCM 24/06/2016 + ARERA 295/2018 (priorità ENEL).** Dialisi, ossigenoterapia, oncologici, trapiantati, malattie rare. Continuità terapeutica = sopravvivenza in 24-72h.
 
-- Guida operatori — centri accoglienza, stress, animali esotici
-- Carta d'identità dell'animale (microchip + veterinario + abitudini)
-- Kit evacuazione 7 giorni (cibo, trasporto, salute, comfort)
-- Riferimenti ENPA, OIPA, LAV, LNDC
+→ **[Kit Calamità Terapie Salvavita](/formazione/kit-calamita-terapie-salvavita/)**
 
-### 🟢 [Kit Calamità Volontari PC (auto-cura)](/formazione/kit-calamita-volontari-pc/)
+## 🤰 Gravidanza
 
-**Schede di auto-cura e prevenzione del trauma vicario** per i volontari di Protezione Civile. IFRC + NCTSN + WHO mhGAP. L'auto-cura è parte integrante dell'operatività responsabile.
+### 🤰 Sono in gravidanza o ho appena partorito
+**Standard MISP IAWG (2018) + WHO Pregnancy in Emergencies + UNFPA Inter-Agency Field Manual + Sphere 2018.** 5 priorità MISP, fasce gestazionali, segnali rossi (112), travaglio improvviso, neomamme.
 
-- Guida operatori — 3 livelli di stress, segnali rossi, riferimenti per aiuto
-- Auto-valutazione stress vicario (ProQOL-5 semplificato)
-- Routine decompressione fine turno (5 passi in 15-30 min)
+→ **[Kit Calamità Gravidanza e neomamme](/formazione/kit-calamita-gravidanza/)**
 
-### 🤰 [Kit Calamità Gravidanza e neomamme](/formazione/kit-calamita-gravidanza/)
+## 🌍 Esclusione sociale e linguistica
 
-**Schede per donne in gravidanza, parto, post-parto** in caso di calamità. MISP IAWG + WHO Pregnancy in Emergencies + UNFPA.
+### 🏚️ Sono / lavoro con persone senza fissa dimora
+**Standard FEANTSA ETHOS + FIO.PSD + Min. Lavoro 2015 + Sphere 2018 § Non-discrimination + D.P.R. 223/1989 art. 2 (residenza fittizia) + Housing First Italia.** Approccio low-threshold + riduzione del danno. Identificazione minima senza documenti, mappa risorse Castelli Romani.
 
-- Guida operatori — 5 priorità MISP, fasce gestazionali, segnali rossi (112), parto improvviso
-- Carta d'identità di emergenza in gravidanza
-- Borsa nascita ed evacuazione (mamma + bambino + documenti + kit parto improvviso)
+→ **[Kit Calamità Senza Fissa Dimora](/formazione/kit-calamita-senza-fissa-dimora/)**
+
+### 🌐 Sono persona straniera o assisto persone in italiano L2
+**Standard UNHCR Communicating with Communities (CwC) Handbook 2020 + IOM CCCM Toolkit + Sphere 2018 § Communication + WHO mhGAP-HIG + D.Lgs. 286/1998 art. 35 + L. 47/2017 (MSNA).** Carta d'identità multilingua (7 lingue), frasario emergenza IT/EN/FR/ES/AR/UK/RO.
+
+→ **[Kit Calamità Italiano L2](/formazione/kit-calamita-italiano-l2/)**
+
+## 🐕 Animali
+
+### 🐕 Ho un animale domestico (cane, gatto, esotico)
+**Standard D.Lgs. 1/2018 art. 12 + L. 281/1991 + L. 189/2004 + WSAVA Disaster Response Guidelines.** Lezione storica: uragano Katrina 2005 / US PETS Act 2006. Centri accoglienza, stress da evacuazione, animali esotici.
+
+→ **[Kit Calamità Animali domestici](/formazione/kit-calamita-animali/)**
+
+## 🟢 Volontari di Protezione Civile
+
+### 🟢 Sono volontario PC e voglio prendermi cura di me
+**Standard IFRC Caring for Volunteers (2015) + NCTSN Secondary Traumatic Stress (2018) + WHO mhGAP-HIG + ICISF Mitchell CISM + ProQOL-5 (Stamm 2010) + DPC Direttiva PCM 13/06/2006.** Auto-cura, prevenzione trauma vicario, decompressione fine turno.
+
+→ **[Kit Calamità Volontari PC](/formazione/kit-calamita-volontari-pc/)**
+
+---
+
+## Standard adottati {#standard-adottati}
+
+I kit sono ispirati e/o conformi a un quadro **gerarchico** di standard internazionali ed italiani. In caso di conflitto teorico, prevalgono i livelli superiori. Questo elenco serve come riferimento autorevole per chi adotta i materiali in altri Comuni.
+
+### Livello 1 — italiano vincolante
+- **AGID** — Linee guida design per siti e servizi digitali della PA
+- **DPC — Dipartimento della Protezione Civile**: D.Lgs. 1/2018 (Codice PC), Direttiva PCM 30 aprile 2021, Direttiva PCM 13 giugno 2006 (psicosociale), Direttiva PCM 24 giugno 2016 (sanitario in emergenza), campagne "Io non rischio"
+- Codici colore allerta meteo del Centro Funzionale Regionale
+
+### Livello 2 — standard internazionali umanitari
+- **Sphere Standards 2018** — Humanitarian Charter and Minimum Standards in Humanitarian Response
+- **WHO** — Health Cluster Guide (2018), mhGAP-HIG, Self-care interventions (2022), Hospital Safety Index, Kangaroo Mother Care, Code of Marketing of Breast-milk Substitutes (1981), Disability Inclusive Emergency Response (2013)
+- **IFRC** — Caring for Volunteers (2015), Psychological First Aid Training Manual
+- **UNHCR** — Communicating with Communities Handbook (2020), Restoring Family Links
+- **IOM** — Camp Coordination and Camp Management (CCCM) Toolkit
+- **IFE Core Group** — Operational Guidance on Infant Feeding in Emergencies v3.0 (2017)
+- **IAWG MISP** — Minimum Initial Service Package for Sexual and Reproductive Health (2018)
+- **NCTSN** — Psychological First Aid Field Operations Guide, Secondary Traumatic Stress Fact Sheet
+- **WSAVA** — Global Veterinary Community Disaster Response Guidelines
+- **HelpAge International** — Older People in Emergencies
+- **FEANTSA** — European Typology on Homelessness and Housing Exclusion (ETHOS)
+- **Eurocarers** — Carta europea del caregiver familiare (2014)
+- **CWA CEN/CENELEC draft** — Guidelines for effective social media messages in crisis
+
+### Livello 3 — normativa italiana di settore
+- **L. 18/2009** ratifica CRPD (disabilità) · **L. 67/2006** antidiscriminazione
+- **L. 205/2017** art. 1 c. 255 — caregiver familiare · **L. 33/2023** legge delega anziani
+- **L. 104/1992** legge quadro disabilità · **D.Lgs. 105/2022** conciliazione vita-lavoro UE
+- **L. 281/1991** animali d'affezione · **L. 189/2004** maltrattamento animali
+- **D.Lgs. 286/1998** art. 35 (assistenza sanitaria stranieri) · **D.Lgs. 25/2008** protezione internazionale · **L. 47/2017** MSNA
+- **D.P.R. 223/1989** art. 2 — residenza fittizia per persone senza dimora
+- **ARERA delibera 295/2018** — Registro elettromedicali essenziali (priorità ENEL)
+
+### Livello 4 — società scientifiche e federazioni italiane
+**Salute**: SIGG (gerontologia), SICP (cure palliative), AIP (psicogeriatria), SIN (nefrologia + neonatologia), SIGO (ginecologia), AIOM (oncologia), AIPO-ITS (pneumologia), SIMER, SIMM (medicina migranti), CNT/CIST (trapianti), UNIAMO + Telethon (malattie rare), AIMA (Alzheimer), SIPEM SoS (psicologia emergenza), FNOPO (ostetriche), SIN neonatologia.
+**Inclusione**: FISH, FAND, UICI, ENS, ANGSA, FIO.PSD, Housing First Italia, Eurocarers.
+**Animali**: ENPA, OIPA, LAV, LNDC.
+**Strumenti CAA**: ARASAAC (CC BY-NC-SA 4.0), ISO 7010 (segnaletica sicurezza).
+
+---
 
 ## Come usare i kit
 
-1. **Identifica la categoria** della persona (bambino/anziano in casa/ospite RSA/persona con disabilità/neonato/animale/volontario/donna in gravidanza).
-2. **Apri il kit corrispondente** dal link sopra.
+1. **Identifica la categoria** della persona (vedi le 12 schede sopra).
+2. **Apri il kit corrispondente** dal link.
 3. **Leggi prima la guida operatori** del kit (1 sola pagina ben fatta).
 4. **Stampa solo le schede che servono** in A4 B/N. Niente colore richiesto.
 5. **Presenta con calma**, mai come "compito" né come "test".
 6. **Conserva la scheda compilata** se la persona vuole portarla con sé.
 
+## Riutilizzo e attribuzione
+
+Tutti i materiali di questi kit sono **rilasciati gratuitamente** dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e sono **liberi e riutilizzabili** da altri Comuni, Gruppi di Protezione Civile, scuole, associazioni del Terzo Settore, RSA e operatori sanitari. Le schede che includono pittogrammi **ARASAAC** ereditano la licenza **CC BY-NC-SA 4.0** (attribuzione, uso non commerciale, condividi allo stesso modo).
+
+> 🙏 **La citazione del nostro Gruppo è molto gradita** quando i materiali vengono copiati, adattati o redistribuiti. Una semplice nota — *"Adattato dai Kit Calamità del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma — www.protezionecivilegenzano.it"* — aiuta altri operatori a risalire alla fonte aggiornata e dà visibilità al lavoro del nostro Gruppo. **Non è obbligatoria, ma ci farebbe molto piacere.**
+
 ## Aggiornamenti e nuovi kit
 
-Stiamo lavorando per ampliare progressivamente i kit con nuove schede e per aggiungere kit per altre categorie (es. persone senza fissa dimora, comunità con disagio sociale). Ogni nuovo kit verrà aggiunto come voce in questa pagina.
-
-Per segnalare bisogni o suggerire nuove schede: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Stiamo continuando a sviluppare i kit con nuove schede e a coprire ulteriori categorie su richiesta. Per segnalare bisogni, suggerire nuove schede o segnalare imprecisioni nei riferimenti scientifici: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
