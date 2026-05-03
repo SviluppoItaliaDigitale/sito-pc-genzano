@@ -87,16 +87,27 @@ def main():
     candidates = []
     for md in sorted(CONTENT.glob("*.md")):
         text = md.read_text(encoding="utf-8")
-        if not has_empty_image(text):
-            continue
         if has_todo_marker(text):
             continue
         slug = md.stem
-        if (IMAGES / f"{slug}.webp").exists():
-            # cover già presente, basta aggiornare il frontmatter
-            candidates.append((md, slug, "frontmatter-only"))
-        else:
-            candidates.append((md, slug, "generate"))
+        cover_path = IMAGES / f"{slug}.webp"
+
+        # Caso A: image: "" (vuoto) → rigenera/aggiorna
+        if has_empty_image(text):
+            if cover_path.exists():
+                candidates.append((md, slug, "frontmatter-only"))
+            else:
+                candidates.append((md, slug, "generate"))
+            continue
+
+        # Caso B (NUOVO): image: punta alla cover canonica /images/<slug>.webp
+        # MA il file è stato cancellato accidentalmente → rigenera (sicurezza:
+        # la cover serve come og:image per anteprime social e fallback emergenza,
+        # non deve mai mancare). Se invece image: punta a una foto custom
+        # (filename != slug), skip — è una scelta esplicita dell'utente.
+        m = re.search(r'^image:\s*"(/images/[^"]+\.webp)"\s*$', text, flags=re.MULTILINE)
+        if m and m.group(1) == f"/images/{slug}.webp" and not cover_path.exists():
+            candidates.append((md, slug, "regenerate-missing"))
 
     if not candidates:
         print("[info] Nessun articolo candidato per cover automatica.")
@@ -116,8 +127,9 @@ def main():
         text = md.read_text(encoding="utf-8")
         title = extract_title(text, slug)
 
-        if kind == "generate":
-            print(f"[gen] {md.name} ...")
+        if kind in ("generate", "regenerate-missing"):
+            tag = "[gen]" if kind == "generate" else "[regen]"
+            print(f"{tag} {md.name} ...")
             try:
                 subprocess.run(
                     ["python3", str(GENERA_COVER), str(md)],
