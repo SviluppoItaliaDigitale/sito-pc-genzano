@@ -119,9 +119,21 @@ Se python3 yaml lo accetta, GitHub Actions lo accetterà sicuramente.
 
 ## Workflow `scarica-foto-automatica.yml` — supporto editing da mobile
 
-Quando l'utente scrive un articolo da app mobile / Claude Code cloud, la sandbox blocca i domini esterni e gli script `foto-da-*.sh` non possono girare in quel contesto.
+⚠️ **DEPRECATO al 3 maggio 2026** per il caso d'uso "foto da fonti ufficiali nel banner". Il marker `# TODO-foto-*` è ora **bandito** da CLAUDE.md punto 9 perché:
+1. Il workflow popola/sovrascrive `image:` del frontmatter con la foto scaricata → viola la regola "BANNER COL TITOLO INTOCCABILE"
+2. Il marker `# TODO-foto-*` nel corpo Markdown è renderizzato da Hugo come `<h1>` finché il workflow non lo rimuove → se `deploy.yml` finisce prima del workflow CI il sito va live col marker H1 visibile (incidente reale: articolo radiocomunicazioni del 3 maggio 2026, vedi commit `4e8c289` di rimozione urgente).
 
-**Soluzione**: l'articolo si pubblica con `image: ""` e include nel frontmatter **un solo** marker di servizio (uno tra i seguenti, in base alla fonte da cui prendere la foto):
+**Procedura corretta** per inserire foto da fonti ufficiali in articoli: vedi agent `pc-image-fixer` (`.claude/agents/pc-image-fixer.md`) sezione "4. Foto da fonti esterne" — flusso WebFetch + curl + `applica-fascia-foto.sh` + shortcode `{{< foto >}}` inline nel corpo. La cover tipografica del banner resta intatta.
+
+Lo step 2 del workflow (`auto-cover-mancanti.py`) per la generazione delle cover tipografiche per articoli con `image: ""` resta **valido e attivo**.
+
+Lo step 1 (download foto da marker) resta nel codice ma di fatto non viene più triggerato perché la regola vieta i marker. Conservato per: (a) eventuale uso futuro se il workflow venisse riscritto per popolare foto INLINE invece che banner; (b) compatibilità retroattiva con articoli vecchi che potrebbero ancora avere marker.
+
+---
+
+**Documentazione storica del marker** (per riferimento, non più operativa):
+
+L'articolo si pubblicava con `image: ""` e includeva nel frontmatter **un solo** marker di servizio (uno tra i seguenti, in base alla fonte da cui prendere la foto):
 
 ```
 # TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [lang]
