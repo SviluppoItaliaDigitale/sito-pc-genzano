@@ -55,15 +55,35 @@ Convenzione: `02-content-design-pa.md` § "Posizionamento di foto multiple in ar
 
 ### 4. Foto da fonti esterne (Wikipedia/NASA/USGS/NOAA + Pexels/Pixabay/Unsplash)
 
-NON eseguire `bash scripts/foto-da-*.sh` direttamente: la sandbox Claude Code blocca i domini di default. Inserisci invece il **marker** nel frontmatter:
+⚠️ **NON usare il marker `# TODO-foto-*`**. È **bandito** dalla regola CLAUDE.md punto 9 perché:
+- Il workflow `scarica-foto-automatica.yml` lo elabora sovrascrivendo `image:` del frontmatter → viola la regola "BANNER COL TITOLO INTOCCABILE"
+- Il marker scritto come `# TODO-foto-*` nel corpo Markdown viene renderizzato da Hugo come `<h1>` finché il workflow non lo rimuove → se `deploy.yml` finisce prima, il sito va live col marker H1 visibile (incidente del 3 maggio 2026, articolo radiocomunicazioni).
 
-```yaml
-# TODO-foto-wikipedia: bash scripts/foto-da-wikipedia.sh "Titolo Pagina" slug
+**Procedura corretta in 4 step** (eseguibile dentro la sessione Claude Code, no marker, no workflow CI):
+
+```
+1. WebFetch sulla pagina Wikipedia/NASA/etc per scoprire URL diretto + autore + licenza:
+   - WebFetch "https://it.wikipedia.org/wiki/<Titolo>" prompt: "elenca URL immagini sostanziali"
+   - WebFetch "https://commons.wikimedia.org/wiki/File:<Nome>.jpg" prompt: "autore + licenza esatta"
+
+2. curl per scaricare full-size in /tmp:
+   curl -sL "https://upload.wikimedia.org/wikipedia/commons/X/XX/Nome.jpg" -o /tmp/foto.jpg
+
+3. Applica fascia blu istituzionale (output WebP 1200px, max 200KB):
+   bash scripts/applica-fascia-foto.sh /tmp/foto.jpg <slug-foto-DIVERSO-da-slug-articolo>
+   → produce static/images/<slug-foto>.webp
+
+4. Inserisci shortcode {{< foto >}} INLINE nel corpo articolo (mai nel banner!):
+   {{< foto src="/images/<slug-foto>.webp"
+            alt="Descrizione tecnica della foto per screen reader"
+            caption="Soggetto della foto. Foto: <Autore>, [Wikimedia Commons](URL-PAGINA-COMMONS), licenza <CC-BY-SA-X>." >}}
 ```
 
-Al prossimo push il workflow `scarica-foto-automatica.yml` lo esegue su runner GitHub Actions (rete libera).
+**Naming file output (regola critica)**: il `<slug-foto>` deve essere **diverso dallo slug dell'articolo**, altrimenti sovrascrive la cover tipografica del banner. Esempio: per articolo `2026-05-03-radiocomunicazioni-emergenza-volontari.md` → foto in `2026-05-03-postazione-radioamatoriale-wikipedia.webp` (suffisso descrittivo, non slug).
 
-**Se vuoi davvero eseguire localmente**: l'utente deve aver configurato `.claude/settings.local.json` con allowlist domini (vedi `08-claude-code-setup.md`).
+**Per i sandbox bloccati**: i domini Wikimedia/NASA/USGS sono whitelistati di default in `.claude/settings.local.json` se l'utente ha completato il setup di rule 08. Se la `curl` fallisce per "Host not in allowlist", chiedi all'utente di aggiungere il dominio + riavviare Claude Code.
+
+**Verifica licenza prima di scaricare**: ogni fonte ha vincoli diversi. Wikimedia Commons usa CC BY-SA / CC BY / PD-shape / CC0 — in tutti i casi l'attribuzione (autore + licenza + link Commons) è obbligatoria nella caption. Per CC BY-SA, ricorda che l'opera derivata (se ne fai una) eredita la licenza share-alike.
 
 ## DIVIETI
 
