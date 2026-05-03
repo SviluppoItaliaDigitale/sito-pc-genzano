@@ -18,9 +18,20 @@ Queste schede sono **pronte da stampare in formato A4** e usabili da soccorritor
 |---|---|---|---|
 | 0 | [Guida operatori PFA Children](/formazione/kit-calamita-bambini/00-guida-operatori-pfa-children.html) | Soccorritori, educatori, genitori | **Leggere prima di iniziare**. Sintesi evidence-based del protocollo PFA: come avvicinarsi, cosa fare, cosa NON fare, segnali di allarme, fonti istituzionali. |
 
-### Schede per fascia 3-5 anni (in arrivo)
+### Schede per fascia 3-5 anni — pubblicate
 
-10 schede di pregrafismo, colorazione, mandala semplici, storia sociale per autismo, carta emozioni con pittogrammi, routine visive.
+| # | Scheda | Quando usarla |
+|---|---|---|
+| 1 | [Pregrafismo del 112](/formazione/kit-calamita-bambini/01-pregrafismo-112.html) | Memorizzazione passiva del numero unico emergenza ripetendo il tratto. Adatta anche alla fase di attesa (tendopoli, sala d'attesa). |
+| 2 | [Colora il camion della Protezione Civile](/formazione/kit-calamita-bambini/02-colora-camion-pc.html) | Riconoscibilità dei mezzi di soccorso. Riduce paura quando li vedono arrivare. |
+| 3 | [Colora la tenda dei volontari](/formazione/kit-calamita-bambini/03-colora-tenda.html) | Familiarizzare con la "casa temporanea". Ottimo se il bambino sta in tendopoli. |
+| 4 | [Colora l'elicottero del soccorso](/formazione/kit-calamita-bambini/04-colora-elicottero.html) | Tranquillizza sui rumori dell'elicottero ("non fa paura, porta i medici"). |
+| 5 | [Color by number — il cane del soccorso](/formazione/kit-calamita-bambini/05-color-by-number-cane-soccorso.html) | Distrazione attiva 15-20 min. Introduce le unità cinofile da soccorso. |
+| 6 | [Labirinto facile — volontario verso casetta](/formazione/kit-calamita-bambini/06-labirinto-facile.html) | Concentrazione + senso di "missione compiuta". Adatta a bambini iperattivati. |
+| 7 | [Mandala del sole](/formazione/kit-calamita-bambini/07-mandala-sole.html) | Calmare bambini agitati. La ripetitività è meditativa. |
+| 8 | [Storia sociale — cosa sta succedendo](/formazione/kit-calamita-bambini/08-storia-sociale-arasaac.html) | **Ottima per autismo, L2, bambini molto piccoli.** Spiega l'evento con sequenza visiva, riduce ansia da imprevisto (metodo Carol Gray). |
+| 9 | [Carta emozioni con faccine](/formazione/kit-calamita-bambini/09-carta-emozioni-piccoli.html) | Per bambini non verbali o non ancora capaci di nominare emozioni. Indicare = comunicare. |
+| 10 | [Routine: lavarsi le mani in 5 passi](/formazione/kit-calamita-bambini/10-routine-lavarsi-mani.html) | Procedural support visivo. Igiene in tendopoli. Adatta autismo e disabilità cognitiva. |
 
 ### Schede per fascia 6-8 anni (in arrivo)
 
