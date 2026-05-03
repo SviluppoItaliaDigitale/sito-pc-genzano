@@ -63,9 +63,20 @@ Queste schede sono **pronte da stampare in formato A4** e usabili da soccorritor
 | 29 | [Ricetta del biscotto della speranza](/formazione/kit-calamita-bambini/29-ricetta-biscotto-speranza.html) | Ricetta facile da fare con un grande. Behavioral activation + ancoraggio sensoriale. |
 | 30 | [I numeri di emergenza nel mondo](/formazione/kit-calamita-bambini/30-numeri-emergenza-mondo.html) | **Inclusione L2/stranieri**: 12 Paesi + numero. Riconoscimento universale del numero unico. |
 
-### Schede per fascia 12-14 anni (in arrivo)
+### Schede per fascia 12-14 anni — pubblicate
 
-10 schede di diario riflessivo, lettera al futuro me stesso, mappa della città, mini-progetti di ripartenza.
+| # | Scheda | Quando usarla |
+|---|---|---|
+| 31 | [Diario riflessivo strutturato](/formazione/kit-calamita-bambini/31-diario-riflessivo.html) | 5 domande standard (cosa è successo / come sto / cosa aiuta / cosa ho imparato / gratitudine). Protocollo Pennebaker. |
+| 32 | [Lettera al futuro me stesso](/formazione/kit-calamita-bambini/32-lettera-al-futuro-me.html) | Da scrivere e aprire dopo 1 anno. Future projection + Hope Theory (Snyder). |
+| 33 | [Mappa della mia città dopo](/formazione/kit-calamita-bambini/33-mappa-citta-dopo.html) | Cartografia partecipativa: legame col territorio + obiettivi di ricostruzione. |
+| 34 | [Io e la calamità — la mia storia in 4 capitoli](/formazione/kit-calamita-bambini/34-storia-io-e-la-calamita.html) | Narrative therapy (M. White): Prima/Durante/Dopo/Adesso. Integra il trauma. |
+| 35 | [10 cose per ripartire — mini-progetto](/formazione/kit-calamita-bambini/35-mini-progetto-ripartire.html) | Behavioral activation: pianificazione concreta = trattamento depressione post-trauma. |
+| 36 | [Segnali di sicurezza ISO 7010](/formazione/kit-calamita-bambini/36-segnali-iso7010.html) | 12 segnali standard internazionali. Conoscenza che salva vita ovunque. Inclusione internazionale. |
+| 37 | [Mappa di chi posso aiutare](/formazione/kit-calamita-bambini/37-mappa-famiglia-aiutare.html) | Helper Therapy Principle: aiutare gli altri è terapeutico. Mappa famiglia/vicinato/scuola/campo/animali. |
+| 38 | [Calendario emotivo settimanale](/formazione/kit-calamita-bambini/38-calendario-emotivo-settimana.html) | Mood tracking: regolazione emotiva + early warning depressione (CBT-A). |
+| 39 | [Cose che voglio imparare](/formazione/kit-calamita-bambini/39-cose-che-voglio-imparare.html) | Future orientation + growth mindset (Dweck): obiettivi di apprendimento ricostruiscono prospettiva. |
+| 40 | [Lettera all'amministrazione del campo](/formazione/kit-calamita-bambini/40-lettera-amministrazione-campo.html) | Esercizio di cittadinanza attiva (Educazione Civica D.M. 35/2020): agency adolescenziale. |
 
 ### Schede dedicate inclusione (in arrivo)
 
