@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Scheda 22 — Sudoku 6×6 della sicurezza (9-11 anni)</title>
+<link rel="stylesheet" href="../kit-calamita-shared/print.css">
+<style>
+  .sudoku { display: grid; grid-template-columns: repeat(6, 1fr); width: 110mm; margin: 4mm auto; border: 3px solid #1a1a1a; }
+  .sud-cell { aspect-ratio: 1; border: 1px solid #1a1a1a; display: flex; align-items: center; justify-content: center; font-size: 22pt; font-weight: 700; }
+  .sud-cell.dato { background: #f0f0f0; color: var(--pc-blue); }
+  /* Bordi spessi per gruppi 2x3 */
+  .sud-cell:nth-child(3n) { border-right: 3px solid #1a1a1a; }
+  .sud-cell:nth-child(n+13):nth-child(-n+18),
+  .sud-cell:nth-child(n+25):nth-child(-n+30) { border-bottom: 3px solid #1a1a1a; }
+</style>
+</head>
+<body>
+<button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>
+<a class="btn-indice no-print" href="./">← Indice</a>
+<article class="scheda">
+  <header class="scheda-header">
+    <svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect x="2" y="2" width="96" height="96" fill="none" stroke="#003366" stroke-width="3"/><text x="50" y="58" text-anchor="middle" font-size="32" font-weight="700" fill="#003366">PC</text></svg>
+    <div class="brand">Protezione Civile<small>Gruppo Comunale Volontari — Genzano di Roma</small></div>
+    <span class="kit-tag">Bambini · 9-11 anni</span>
+  </header>
+  <h1 class="scheda-title">Sudoku della sicurezza 6×6</h1>
+  <span class="scheda-eta">9-11 anni</span>
+  <div class="scheda-istruzione">🔢 <strong>Riempi lo schema</strong> con i numeri da <strong>1 a 6</strong>. Ogni numero deve apparire <strong>una sola volta</strong> in ogni riga, colonna e blocco 2×3.</div>
+  <section class="scheda-attivita">
+    <div class="sudoku">
+      <div class="sud-cell dato">1</div><div class="sud-cell"></div><div class="sud-cell">3</div><div class="sud-cell"></div><div class="sud-cell dato">5</div><div class="sud-cell"></div>
+      <div class="sud-cell"></div><div class="sud-cell dato">2</div><div class="sud-cell"></div><div class="sud-cell">6</div><div class="sud-cell"></div><div class="sud-cell dato">4</div>
+      <div class="sud-cell">2</div><div class="sud-cell"></div><div class="sud-cell dato">5</div><div class="sud-cell"></div><div class="sud-cell">6</div><div class="sud-cell"></div>
+      <div class="sud-cell"></div><div class="sud-cell">6</div><div class="sud-cell"></div><div class="sud-cell dato">3</div><div class="sud-cell"></div><div class="sud-cell">5</div>
+      <div class="sud-cell dato">3</div><div class="sud-cell"></div><div class="sud-cell">6</div><div class="sud-cell"></div><div class="sud-cell dato">4</div><div class="sud-cell"></div>
+      <div class="sud-cell"></div><div class="sud-cell">5</div><div class="sud-cell"></div><div class="sud-cell">2</div><div class="sud-cell"></div><div class="sud-cell dato">6</div>
+    </div>
+    <p style="font-size: 11pt; text-align: center; max-width: 130mm; margin: 4mm auto;">💡 <strong>Consiglio</strong>: comincia dalla riga o colonna con più numeri già scritti. Se ti blocchi, fai un respiro e ricomincia da capo.</p>
+    <p style="font-size: 11pt; text-align: center; margin-top: 4mm; color: var(--pc-blue);">Quando hai finito, hai allenato la mente proprio come fanno i volontari quando si preparano alle emergenze: con calma, metodo, e tante prove! 🎯</p>
+  </section>
+  <footer class="scheda-footer"><span>Scheda 22 — Sudoku 6×6</span><span class="fonti">Sudoku semplificato. Stimolazione cognitiva: ragionamento logico-deduttivo, concentrazione, perseveranza.</span><span>www.protezionecivilegenzano.it</span></footer>
+</article></body></html>
