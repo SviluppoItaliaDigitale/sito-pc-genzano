@@ -14,9 +14,10 @@ Queste schede sono **pronte da stampare in formato A4** e usabili da soccorritor
 
 ### Per gli adulti
 
-| # | Scheda | Per chi | Quando usarla |
-|---|---|---|---|
-| 0 | [Guida operatori PFA Children](/formazione/kit-calamita-bambini/00-guida-operatori-pfa-children.html) | Soccorritori, educatori, genitori | **Leggere prima di iniziare**. Sintesi evidence-based del protocollo PFA: come avvicinarsi, cosa fare, cosa NON fare, segnali di allarme, fonti istituzionali. |
+| Scheda | Per chi | Quando usarla |
+|---|---|---|
+| [Guida operatori PFA Children](/formazione/kit-calamita-bambini/00-guida-operatori-pfa-children.html) | Soccorritori, educatori, genitori | **Leggere prima di iniziare.** Sintesi evidence-based del protocollo PFA: come avvicinarsi, cosa fare, cosa NON fare, segnali di allarme, fonti istituzionali. |
+| 🔑 [Soluzioni dei giochi](/formazione/kit-calamita-bambini/99-soluzioni-giochi.html) | Solo operatori | **Riservato.** Soluzioni di cruciverba, word search, sudoku, trova differenze. Stamparlo separato dalle schede dei bambini. |
 
 ### Schede per fascia 3-5 anni — pubblicate
 
@@ -112,6 +113,4 @@ Le schede sono progettate sulla base di:
 
 ## Aggiornamenti
 
-Il kit cresce nel tempo. Le schede già pubblicate sono utilizzabili da subito. Le schede "in arrivo" saranno aggiunte progressivamente. Ogni nuova versione è disponibile alla pagina indice [/formazione/kit-calamita-bambini/](/formazione/kit-calamita-bambini/).
-
-Per segnalare bisogni specifici o suggerire nuove schede, scrivi a [info@protezionecivilegenzano.it](mailto:info@protezionecivilegenzano.it).
+Il kit cresce nel tempo. Per segnalare bisogni specifici o suggerire nuove schede, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).

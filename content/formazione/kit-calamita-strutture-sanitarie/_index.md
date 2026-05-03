@@ -56,4 +56,4 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 - **Cochrane Review 2017** — Music therapy for dementia
 - **FISH** — Federazione Italiana Superamento Handicap
 
-Per segnalare bisogni o suggerire nuove schede: [info@protezionecivilegenzano.it](mailto:info@protezionecivilegenzano.it).
+Per segnalare bisogni o suggerire nuove schede: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
