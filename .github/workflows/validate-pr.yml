@@ -1,0 +1,100 @@
+name: "🔍 Validate PR"
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'manuale/**'
+      - 'riferimenti-interni/**'
+      - 'CONTESTO-AI.md'
+      - 'social-bozze/**'
+
+permissions:
+  contents: read
+
+jobs:
+  hugo-build:
+    name: "Build Hugo (Aruba target)"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "⚙️ Setup Hugo"
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: "🏗️ Build di prova"
+        run: |
+          set -o pipefail
+          hugo --minify --baseURL "https://www.protezionecivilegenzano.it/" 2>&1 | tee build.log
+          # Hugo ritorna 0 anche su WARN, controllo esplicito ERROR
+          if grep -E "^ERROR" build.log; then
+            echo "::error::Hugo build ha prodotto errori — vedi log sopra"
+            exit 1
+          fi
+
+      - name: "📊 Statistiche build"
+        run: |
+          echo "Pagine generate: $(find public -name '*.html' | wc -l)"
+          echo "Dimensione public/: $(du -sh public | cut -f1)"
+
+  yaml-syntax:
+    name: "Sintassi YAML workflow"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🔬 Valida YAML di .github/workflows/"
+        run: |
+          for f in .github/workflows/*.yml; do
+            python3 -c "import yaml; yaml.safe_load(open('$f'))" \
+              || { echo "::error file=$f::YAML invalido"; exit 1; }
+            echo "OK: $f"
+          done
+
+  frontmatter-validity:
+    name: "Frontmatter articoli modificati"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "🔬 Valida YAML frontmatter dei file content/ modificati"
+        run: |
+          # File .md modificati nella PR (rispetto a main)
+          changed=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'content/**/*.md' 2>/dev/null || true)
+          if [ -z "$changed" ]; then
+            echo "Nessun articolo modificato"
+            exit 0
+          fi
+          fail=0
+          for f in $changed; do
+            [ -f "$f" ] || continue
+            python3 - "$f" <<'PY' || fail=1
+          import sys, yaml
+          path = sys.argv[1]
+          with open(path) as fh:
+              text = fh.read()
+          parts = text.split('---', 2)
+          if len(parts) < 3:
+              print(f"::warning file={path}::Nessun frontmatter rilevato")
+              sys.exit(0)
+          try:
+              fm = yaml.safe_load(parts[1])
+          except yaml.YAMLError as e:
+              print(f"::error file={path}::YAML frontmatter invalido: {e}")
+              sys.exit(1)
+          # Controllo soft draft:true (warning, non blocca)
+          if isinstance(fm, dict) and fm.get('draft') is True:
+              print(f"::warning file={path}::draft:true — non sarà pubblicato")
+          PY
+          done
+          exit $fail
