@@ -1,59 +1,60 @@
 {
   "_meta": {
-    "descrizione": "Hash SHA-256 delle fonti AGID / Designers Italia monitorate settimanalmente dal workflow .github/workflows/aggiorna-manuale.yml. Se un hash cambia, il workflow apre una issue con la checklist di revisione del MANUALE-SITO.md.",
-    "ultimo_aggiornamento": "2026-04-28T16:40:44Z",
+    "descrizione": "Hash SHA-256 del solo testo visibile (main/body) delle fonti AGID / Designers Italia monitorate settimanalmente dal workflow .github/workflows/aggiorna-manuale.yml. Lo script scripts/hash-fonte-agid.py rimuove script, style, header, footer, cookie banner e pattern volatili (timestamp, fingerprint asset) prima dell hashing, così le modifiche puramente cosmetiche non scattano falsi positivi.",
+    "algoritmo": "v2-text-only",
+    "ultimo_aggiornamento": "2026-05-04T08:17:12Z",
     "note": "Aggiornato automaticamente dal workflow. Non modificare manualmente."
   },
   "fonti": {
     "accessibilita_agid": {
       "url": "https://www.agid.gov.it/it/design-servizi/accessibilita",
-      "hash": "187a9c1dc7cd12f890327e1b0cbe86113b4d00a51a70244cf926702a0ea60aa1",
-      "verificato": "2026-04-28T16:40:46Z"
+      "hash": "ea70737f014b3044f636d5317330cc445cb959c32a380ea8870b11f4b3fffe9f",
+      "verificato": "2026-05-04T08:17:14Z"
     },
     "bootstrap_italia_docs": {
       "url": "https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/",
-      "hash": "72fde44728c5aded92f18af691a1e14d348452a68809afa6b18c3efe7255a224",
-      "verificato": "2026-04-28T16:40:46Z"
+      "hash": "845087f2645509a0184a834a06e01fd9e8f0c774c4c87b29306634b848d01b93",
+      "verificato": "2026-05-04T08:17:15Z"
     },
     "ui_kit": {
       "url": "https://designers.italia.it/kit/ui-kit/",
-      "hash": "0dcc1d5b60c1773dbe6623255200c06d8ac7e37a0b5450b57a05cb439b04c3d3",
-      "verificato": "2026-04-28T16:40:46Z"
+      "hash": "errore-download",
+      "verificato": "2026-05-04T08:17:15Z"
     },
     "linee_guida_design_pa": {
       "url": "https://www.agid.gov.it/it/design-servizi/linee-guida-design-servizi-web-pa",
-      "hash": "a405068b4845a532dcce2738bb8e880b8d7eebce2eef1c314ae869c814166aa4",
-      "verificato": "2026-04-28T16:40:49Z"
+      "hash": "errore-download",
+      "verificato": "2026-05-04T08:17:16Z"
     },
     "dichiarazione_accessibilita": {
       "url": "https://form.agid.gov.it/",
-      "hash": "32e04f4e157ea330394fb6c6e419de2c40380b20fbd9ca5249acc4b658d29c48",
-      "verificato": "2026-04-28T16:40:51Z"
+      "hash": "errore-download",
+      "verificato": "2026-05-04T08:17:17Z"
     },
     "writing_toolkit": {
       "url": "https://designers.italia.it/risorse-per-progettare/content-design/writing-toolkit/",
-      "hash": "a9148d23dd9b5f21172ee282f63a331184c97bce8662a6c4946a889a607dff15",
-      "verificato": "2026-04-28T16:40:52Z"
+      "hash": "errore-download",
+      "verificato": "2026-05-04T08:17:18Z"
     },
     "content_toolkit": {
       "url": "https://designers.italia.it/risorse-per-progettare/content-design/",
-      "hash": "a9148d23dd9b5f21172ee282f63a331184c97bce8662a6c4946a889a607dff15",
-      "verificato": "2026-04-28T16:40:52Z"
+      "hash": "errore-download",
+      "verificato": "2026-05-04T08:17:18Z"
     },
     "designers_italia_home": {
       "url": "https://designers.italia.it/",
-      "hash": "5ed625ba617db0d1e00abe42ad718be03234ad47a6c054a2715110f4b634bcd9",
-      "verificato": "2026-04-28T16:40:52Z"
+      "hash": "e45f36365c6462ae02e153c25ae5a4747a2427452861ccdcc2ee07455978cd17",
+      "verificato": "2026-05-04T08:17:18Z"
     },
     "dipartimento_pc": {
       "url": "https://www.protezionecivile.gov.it/",
-      "hash": "116218b89a3155005188b66475dbc77e4cb7fd95c8f89b4c5a74c8ae303c03ff",
-      "verificato": "2026-04-28T16:40:53Z"
+      "hash": "69bd720fabc5c030adcd6118ca01ee5a7f1427a194481ad100f17e9d232e6d7b",
+      "verificato": "2026-05-04T08:17:19Z"
     },
     "designers_italia_guide": {
       "url": "https://designers.italia.it/risorse-per-progettare/",
-      "hash": "5b6c9a5ecb6695698f537f7dc5d1018acf5b385cb757c2d64dbbed574135378c",
-      "verificato": "2026-04-28T16:40:54Z"
+      "hash": "ddd2af92ac3f9e87aa07cfbb381517eb38c18e24d13b5d8f93d9e3672d2de8ab",
+      "verificato": "2026-05-04T08:17:20Z"
     }
   }
 }
