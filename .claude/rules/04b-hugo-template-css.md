@@ -161,7 +161,7 @@ Regole operative:
 
 ## Strumenti di Accessibilità (toolbar utente)
 
-In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo blu istituzionale** (FAB) con icona `bi-universal-access` che apre un **dialog modale** con preferenze di lettura: dimensione testo (livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (default/alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande.
+In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo blu istituzionale** (FAB) con icona `bi-universal-access` che apre un **dialog modale** con preferenze di lettura: dimensione testo (livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (default/alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande, **nascondi pulsanti flottanti** (Assistente virtuale + SOS 112, utile da mobile dove possono coprire il testo — il FAB a11y stesso resta sempre visibile per riabilitare gli altri).
 
 **File coinvolti** (tutti nel tema, modificabili liberamente):
 
@@ -184,6 +184,7 @@ In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo b
 - Aggiungere nuovi livelli di dimensione testo (oggi 100/110/125/150%).
 - Aggiungere nuove palette di contrasto.
 - Aggiungere link nel dialog verso risorse interne (es. Glossario, FAQ).
+- Aggiungere toggle che nascondono elementi UI a richiesta dell'utente (pattern `html.a11y-hide-*`): es. *"Nascondi pulsanti flottanti"* sezione "Pulsanti flottanti" del dialog → toggle `hideAssistantFab` + `hideSosFab` → classi `html.a11y-hide-assistant-fab` / `html.a11y-hide-sos-fab` → regole `display: none` scoped in `custom.css`. Vincolo: il **FAB a11y stesso non si nasconde mai** (è il controllo per riabilitare gli altri).
 
 **Pagina pubblica correlata:** `content/accessibilita/_index.md` descrive il toolbar al cittadino e dà istruzioni complementari sugli strumenti di sistema (zoom OS, screen reader NVDA/VoiceOver/TalkBack, contrasto OS, riconoscimento vocale). Mantenere allineate le due descrizioni se modifichi le funzioni del toolbar.
 
@@ -197,7 +198,7 @@ Su ogni pagina del sito, in basso a sinistra **sopra il toolbar di accessibilit�
 **File coinvolti:**
 
 - `themes/flavour-pcgenzano/layouts/partials/assistente-fab.html` — markup `<a>` con auto-skip su 3 sezioni
-- `themes/flavour-pcgenzano/static/css/custom.css` sezione **ASSISTENTE FAB v1.0** — stili (posizione, hover lift, mobile solo-icona, stampa nascosto, rispetto `prefers-reduced-motion` + classe `html.a11y-pause-anim`)
+- `themes/flavour-pcgenzano/static/css/custom.css` sezione **ASSISTENTE FAB v2.1** — stili (pill su desktop, cerchio coordinato col FAB a11y su mobile, hover lift, stampa nascosto, rispetto `prefers-reduced-motion` + classe `html.a11y-pause-anim`)
 - `themes/flavour-pcgenzano/layouts/_default/baseof.html` — include `{{ partial "assistente-fab.html" . }}` dopo `accessibility-toolbar.html`
 
 **Skip automatico** su 3 sezioni dove sarebbe ridondante o distrarrebbe:
@@ -207,7 +208,10 @@ Su ogni pagina del sito, in basso a sinistra **sopra il toolbar di accessibilit�
 
 Logica skip in `assistente-fab.html`: `{{ $skipSections := slice "assistente" "emergenza" "cerca" }}{{ $skip := in $skipSections .Section }}`. Per aggiungere una sezione da escludere, allungare la slice.
 
-**Mobile (≤575.98px):** il FAB diventa **solo icona** (cerchio 2.85rem) senza label "Aiuto" per ridurre l'ingombro accanto al SOS-112. Il `.assistente-fab-label` viene nascosto via CSS.
+**Design v2.1 (maggio 2026):**
+- **Desktop (>575.98px):** pill blu con label "Assistente virtuale" visibile + icona `bi-chat-dots-fill`.
+- **Mobile (≤575.98px):** cerchio 50px dark blue con bordo bianco 3px, in coppia visiva sopra il FAB accessibilità (stessa forma, stesso bordo, stesso focus arancione `#ff6600`, stessa colonna sinistra). Label nascosto via sr-only style ma accessibile a screen reader (aria-label sul `<a>` + classe `.assistente-fab-label`).
+- L'utente può **nascondere temporaneamente** il FAB Assistente dal pannello *"Strumenti di accessibilità"* → sezione *"Pulsanti flottanti"* → toggle *"Nascondi pulsante Assistente virtuale"*. Persistito in `localStorage` con classe `html.a11y-hide-assistant-fab`. Stessa convenzione per SOS-112 (`html.a11y-hide-sos-fab`).
 
 **Why è ovunque:** un Assistente virtuale è utile a chi entra dal motore di ricerca su una singola pagina e non sa orientarsi nel sito. Tenerlo solo nel menu lo rende invisibile all'80% degli utenti che non aprono i dropdown. Il FAB lo rende ubiquo come il SOS-112.
 

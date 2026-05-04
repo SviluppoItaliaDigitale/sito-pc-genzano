@@ -82,7 +82,7 @@ Documentazione completa: `MANUALE-SITO.md` Parte 3.16.
 
 ## Strumenti di Accessibilità (toolbar utente)
 
-Il sito ha un **toolbar di accessibilità** nativo, presente su tutte le pagine come bottone rotondo blu (FAB) in basso a sinistra. Apre un dialog con preferenze di lettura: dimensione testo (livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande. Le preferenze sono salvate in `localStorage` e applicate come classi `html.a11y-*`.
+Il sito ha un **toolbar di accessibilità** nativo, presente su tutte le pagine come bottone rotondo blu (FAB) in basso a sinistra. Apre un dialog con preferenze di lettura: dimensione testo (livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande, **nascondi pulsanti flottanti** (Assistente virtuale + SOS 112, utile da mobile dove possono coprire il testo). Le preferenze sono salvate in `localStorage` e applicate come classi `html.a11y-*`.
 
 Per la struttura dei file, le regole di estensione e i divieti operativi vedi `04b-hugo-template-css.md` sezione "Strumenti di Accessibilità".
 
