@@ -54,7 +54,7 @@ Controllare ogni giorno una **fonte calda** (DPC, Regione, INGV) e ogni settiman
 
 ### Social e newsletter
 
-- **X (Twitter)**: @DPCgov, @INGVterremoti, @emergenzaborsa, @RegioneLazio, @VVFLazio, @ComuneGenzano
+- **X (Twitter)**: @DPCgov, @INGVterremoti, @iononrischio, @RegioneLazio, @vigilidelfuoco, @ARPALazio, @ComuneGenzano
 - **Facebook**: coordinamento regionale volontariato PC Lazio, gruppi comunali vicini
 - **Telegram**: canale @pcalfagenzano (proprio), IT-alert Lazio, INGV
 - **Newsletter**: Dipartimento PC, Regione Lazio PC, ARPA Lazio qualità aria
