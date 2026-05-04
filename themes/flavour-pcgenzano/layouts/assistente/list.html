@@ -256,12 +256,13 @@
       title: 'Cosa vuoi scoprire?',
       prompt: 'Scegli una delle aree del sito.',
       options: [
-        { text: 'Per il cittadino', description: 'Allerte, rischi, cartografia, numeri, piano di famiglia.', icon: 'bi-person-fill', next: 'info_cittadino' },
-        { text: 'Per le scuole', description: 'Kit didattici, schede stampabili, giochi, attività accessibili, formazione.', icon: 'bi-mortarboard-fill', next: 'info_scuole' },
+        { text: 'Per il cittadino', description: 'Allerte, rischi, cartografia, numeri, piano di famiglia, kit pronti per situazioni vulnerabili.', icon: 'bi-person-fill', next: 'info_cittadino' },
+        { text: 'Per le scuole', description: 'Kit didattici per fascia, percorsi pronti, schede didattiche, ed. civica, storie, giochi.', icon: 'bi-mortarboard-fill', next: 'info_scuole' },
         { text: 'Kit Calamità per categorie vulnerabili', description: 'Schede stampabili A4 per bambini, anziani, disabilità, neonati, gravidanza, animali, caregiver, terapie salvavita, senza dimora, italiano L2, volontari PC.', icon: 'bi-printer-fill', next: 'info_kit_calamita' },
+        { text: 'Accessibilità e supporti', description: 'Attività accessibili (Abili a Proteggere), Facile da Leggere, glossario PC, strumenti di lettura del sito.', icon: 'bi-universal-access', next: 'info_accessibilita' },
         { text: 'Volontariato', description: 'Diventare volontario, chi siamo, contatti del Gruppo.', icon: 'bi-heart-fill', next: 'info_volontariato' },
-        { text: 'Territorio e norme', description: 'Genzano, Castelli, glossario, normativa, piano di emergenza comunale.', icon: 'bi-geo-alt-fill', next: 'info_territorio' },
-        { text: 'Servizi e documenti', description: 'FAQ, area download, comunicazioni, mappa del sito, facile da leggere.', icon: 'bi-files', next: 'info_servizi' }
+        { text: 'Territorio e norme', description: 'Genzano, Castelli, normativa, piano di emergenza comunale.', icon: 'bi-geo-alt-fill', next: 'info_territorio' },
+        { text: 'Servizi e documenti', description: 'FAQ, area download, comunicazioni, mappa del sito.', icon: 'bi-files', next: 'info_servizi' }
       ]
     },
 
@@ -392,13 +393,58 @@
     info_scuole_panoramica: {
       kind: 'answer',
       title: 'Panoramica formazione',
-      body: ['Pagina di accesso a tutto il materiale formativo del Gruppo: i kit per fascia, le schede stampabili A4, i giochi interattivi, le attività accessibili ispirate al programma nazionale Abili a proteggere e le proposte di percorso annuale.'],
+      body: ['Pagina di accesso a tutto il materiale didattico del Gruppo: i kit per fascia, i percorsi didattici pronti, le schede stampabili A4, i giochi interattivi, le storie e i racconti, l\'educazione civica per i docenti.'],
       links: [
         { text: 'Formazione (hub principale)', url: '/formazione/' },
-        { text: 'Tutte le schede stampabili (100)', url: '/formazione/schede-stampabili/' },
-        { text: 'Tutti i giochi (33)', url: '/giochi/' },
-        { text: 'Attività accessibili (32) — ispirate al programma Abili a proteggere', url: '/abili-a-proteggere/' }
+        { text: 'Schede didattiche stampabili', url: '/formazione/schede-stampabili/' },
+        { text: 'Tutti i giochi della sicurezza', url: '/giochi/' },
+        { text: 'Percorsi didattici pronti', url: '/formazione/percorsi-didattici/' },
+        { text: 'Storie e racconti', url: '/formazione/storie-e-racconti/' }
       ]
+    },
+
+    // --- Macro 2ter: Accessibilità e supporti trasversali ---
+    info_accessibilita: {
+      kind: 'question',
+      title: 'Accessibilità e supporti',
+      prompt: 'Cosa cerchi?',
+      options: [
+        { text: 'Attività accessibili — Abili a Proteggere', next: 'info_acc_abili' },
+        { text: 'Versione "Facile da Leggere" del sito', next: 'info_acc_facile' },
+        { text: 'Glossario PC (sigle e termini spiegati)', next: 'info_acc_glossario' },
+        { text: 'Strumenti di accessibilità del sito (lettura ad alta voce, contrasto, ecc.)', next: 'info_acc_strumenti' },
+        { text: 'Dichiarazione di accessibilità', next: 'info_acc_dichiarazione' }
+      ]
+    },
+    info_acc_abili: {
+      kind: 'answer',
+      title: 'Abili a Proteggere — attività accessibili',
+      body: ['Raccolta di attività educative accessibili per persone con difficoltà cognitive o motorie, anziani e bambini fragili. Pulsanti grandi, testi semplici, nessun limite di tempo. Ispirate al programma nazionale del DPC, ma iniziativa autonoma del nostro Gruppo.'],
+      links: [{ text: 'Apri Abili a Proteggere', url: '/abili-a-proteggere/' }]
+    },
+    info_acc_facile: {
+      kind: 'answer',
+      title: 'Facile da Leggere',
+      body: ['Versione semplificata dei contenuti del sito (frasi corte, vocabolario base, pittogrammi ARASAAC) per persone con disabilità intellettiva, BES/DSA, italiano L2, anziani.'],
+      links: [{ text: 'Apri Facile da Leggere', url: '/facile-da-leggere/' }]
+    },
+    info_acc_glossario: {
+      kind: 'answer',
+      title: 'Glossario PC',
+      body: ['Più di 50 termini tecnici della Protezione Civile spiegati in linguaggio chiaro: COC, PEC, allertamento, magnitudo, NUE, IT-alert, e tutti gli acronimi più frequenti.'],
+      links: [{ text: 'Apri il glossario A-Z', url: '/glossario/' }]
+    },
+    info_acc_strumenti: {
+      kind: 'answer',
+      title: 'Strumenti di accessibilità del sito',
+      body: ['Il sito ha un toolbar in basso a sinistra con preferenze di lettura (dimensione testo, contrasto alto/invertito, scala di grigi, evidenzia link, ecc.) e un pulsante "Leggi ad alta voce" su tutte le pagine. Le preferenze vengono salvate sul tuo dispositivo.'],
+      links: [{ text: 'Pagina Accessibilità', url: '/accessibilita/' }]
+    },
+    info_acc_dichiarazione: {
+      kind: 'answer',
+      title: 'Dichiarazione di accessibilità',
+      body: ['Il sito rispetta WCAG 2.2 AA (Legge Stanca L. 4/2004 + D.Lgs. 106/2018). La pagina pubblica descrive lo stato di conformità, le tecnologie usate e come segnalare problemi.'],
+      links: [{ text: 'Apri la dichiarazione', url: '/accessibilita/' }]
     },
 
     // --- Macro 2bis: Kit Calamità per categorie vulnerabili ---
