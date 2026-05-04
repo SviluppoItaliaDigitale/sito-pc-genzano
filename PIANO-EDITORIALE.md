@@ -139,6 +139,7 @@ Ogni data fissa si ripete ogni anno con aggiornamenti minimi. Preparare le bozze
 - **1 settembre** — Ripresa attività del Gruppo dopo la pausa estiva (badge: Comunicazione)
 - **13 settembre** — Giornata mondiale primo soccorso (sabato seconda settimana) (badge: Formazione)
 - **15 settembre** — Inizio scuole: programma kit didattici (badge: Formazione)
+- **23 settembre** — Festa di San Pio da Pietrelcina, patrono dei Volontari di Protezione Civile italiana (memoria liturgica, anniversario della morte 1968). Articolo annuale di ricorrenza con rimando alla pagina istituzionale `/san-pio-da-pietrelcina/` (badge: Volontariato)
 - Fine campagna AIB: bilancio stagione (badge: Aggiornamento)
 - Preparazione autunno: rischio idrogeologico (badge: Prevenzione)
 - **Infiorata di Genzano** se ricade a settembre: sicurezza evento (badge: Attività)

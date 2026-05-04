@@ -1,6 +1,6 @@
 ---
 title: "Incendi domestici: la prevenzione prima dell'accensione del riscaldamento"
-date: 2026-09-23
+date: 2026-09-23T00:01:00+02:00
 description: "Stufe, camini, canne fumarie, impianti elettrici: prima di accendere il riscaldamento, controlli semplici evitano incendi domestici."
 badge: "Prevenzione"
 priorita: "normale"
