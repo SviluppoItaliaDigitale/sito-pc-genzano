@@ -137,6 +137,32 @@
       </a>
     </fieldset>
 
+    {{/* ─────────── SEZIONE PULSANTI FLOTTANTI ─────────── */}}
+    <fieldset class="a11y-section">
+      <legend class="a11y-section-title">
+        <i class="bi bi-square me-2" aria-hidden="true"></i>Pulsanti flottanti
+      </legend>
+
+      <p class="a11y-hint small text-muted mt-0 mb-2" style="font-size:0.78rem;">
+        I pulsanti rotondi in basso (Assistente virtuale, SOS 112) possono coprire una parte del testo, soprattutto da telefono. Se preferisci, puoi nasconderli temporaneamente. Il pulsante per riaprire questo pannello resta sempre visibile.
+      </p>
+
+      <button type="button" class="a11y-toggle" data-pref="hideAssistantFab" aria-pressed="false">
+        <i class="bi bi-chat-dots me-2" aria-hidden="true"></i>
+        <span class="a11y-toggle-text">Nascondi pulsante Assistente virtuale</span>
+        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
+      </button>
+
+      <button type="button" class="a11y-toggle" data-pref="hideSosFab" aria-pressed="false">
+        <i class="bi bi-telephone me-2" aria-hidden="true"></i>
+        <span class="a11y-toggle-text">Nascondi pulsante SOS 112</span>
+        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
+      </button>
+      <p class="a11y-hint small text-muted mt-1 mb-0" style="font-size:0.78rem;">
+        Consigliamo di lasciare visibile il pulsante <strong>SOS 112</strong>: in emergenza permette di chiamare il Numero Unico Europeo con un solo tocco. Anche se nascosto, puoi sempre comporre il <strong>112</strong> dalla tastiera del telefono.
+      </p>
+    </fieldset>
+
     <div class="a11y-status" role="status" aria-live="polite" id="a11yStatus"></div>
 
   </div>
