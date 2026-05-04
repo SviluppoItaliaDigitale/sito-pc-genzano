@@ -41,8 +41,8 @@ La sua vita è segnata da due tratti che restano centrali nella memoria popolare
 Padre Pio muore il **23 settembre 1968** a San Giovanni Rotondo.
 
 {{< foto src="/images/san-pio-da-pietrelcina-ritratto.webp"
-         alt="Ritratto fotografico di Padre Pio da Pietrelcina con il saio cappuccino e i guanti scuri che coprono le stigmate alle mani"
-         caption="San Pio da Pietrelcina (1887-1968). Foto storica — pubblico dominio, via Wikimedia Commons." >}}
+         alt="Ritratto fotografico a mezzo busto di Padre Pio da Pietrelcina anziano, con il saio marrone dei Frati Minori Cappuccini e la barba bianca, su sfondo azzurro chiaro"
+         caption="San Pio da Pietrelcina (1887-1968), frate cappuccino, patrono dei Volontari della Protezione Civile italiana." >}}
 
 ## La canonizzazione
 
