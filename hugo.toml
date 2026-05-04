@@ -212,6 +212,12 @@ enableGitInfo = true
   parent = "volontariato"
   weight = 2
 
+[[menus.main]]
+  name = "Il nostro patrono"
+  url = "/san-pio-da-pietrelcina/"
+  parent = "volontariato"
+  weight = 3
+
 # --- Dropdown: Risorse (6 voci, +Glossario maggio 2026) ---
 # Raccoglie pagine di servizio prima visibili solo dalla homepage o dal
 # footer. Pensate per chi entra dal motore di ricerca o da un articolo
