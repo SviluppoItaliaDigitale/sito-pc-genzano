@@ -126,6 +126,7 @@
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-volontariato"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/diventa-volontario/" role="menuitem"><span>Diventa Volontario</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/chi-siamo/" role="menuitem"><span>Chi Siamo</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/san-pio-da-pietrelcina/" role="menuitem"><span>Il nostro patrono</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 /* Dropdown: Risorse (6 voci, +Glossario maggio 2026) */

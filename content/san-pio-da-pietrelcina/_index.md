@@ -57,7 +57,9 @@ La cerimonia di canonizzazione del 2002 è una delle più partecipate della stor
 
 ## Perché è stato scelto come patrono dei Volontari di Protezione Civile
 
-Nel **2004** la **Congregazione per il Culto Divino e la Disciplina dei Sacramenti**, su istanza del **Dipartimento della Protezione Civile** e con l'approvazione di Papa **Giovanni Paolo II**, ha proclamato San Pio da Pietrelcina **patrono celeste dei Volontari della Protezione Civile italiana**.
+Il **21 febbraio 2004** la **Congregazione per il Culto Divino e la Disciplina dei Sacramenti** ha emanato il decreto con cui San Pio da Pietrelcina è proclamato **patrono celeste delle associazioni di volontariato che operano nell'ambito della Protezione Civile italiana**.
+
+La proclamazione non è stata una scelta dall'alto. La richiesta era stata presentata alla **Conferenza Episcopale Italiana** il **24 settembre 2002** dall'allora Capo del Dipartimento della Protezione Civile, **Guido Bertolaso**, sulla base di una petizione firmata da **circa 160 associazioni di volontariato** che rappresentavano nel loro insieme oltre **novemila volontari** di Protezione Civile. L'annuncio pubblico è stato dato il **29 marzo 2004** dal Segretario Generale della CEI Giuseppe Betori, in conferenza stampa.
 
 La scelta non è simbolica per caso: si appoggia su tratti della vita di San Pio che parlano direttamente al volontariato di Protezione Civile.
 
