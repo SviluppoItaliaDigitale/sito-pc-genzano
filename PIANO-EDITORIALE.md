@@ -54,10 +54,108 @@ Controllare ogni giorno una **fonte calda** (DPC, Regione, INGV) e ogni settiman
 
 ### Social e newsletter
 
-- **X (Twitter)**: @DPCgov, @INGVterremoti, @iononrischio, @RegioneLazio, @vigilidelfuoco, @ARPALazio, @ComuneGenzano
-- **Facebook**: coordinamento regionale volontariato PC Lazio, gruppi comunali vicini
-- **Telegram**: canale @pcalfagenzano (proprio), IT-alert Lazio, INGV
-- **Newsletter**: Dipartimento PC, Regione Lazio PC, ARPA Lazio qualità aria
+#### X (Twitter) — fonti istituzionali per fact-checking e comunicazione di crisi
+
+**Da seguire ogni giorno (priorità alta per la routine):** @DPCgov, @italertgov, @INGVterremoti, @LastQuake, @vigilidelfuoco, @RegioneLazio, @SaluteLazio, @ComuneGenzano.
+
+**Catalogo completo (verificato maggio 2026)** — circa 50 account istituzionali raggruppati per ruolo nel sistema di Protezione Civile italiano (D.Lgs. 1/2018) ed europeo. Tutti gli handle sono stati verificati uno per uno via siti istituzionali e ricerche incrociate. Quando un handle cambia, aggiornare anche `manuale/parte-11`.
+
+##### Italiani — Vertice istituzionale
+- **@Quirinale** — Presidenza della Repubblica
+- **@Palazzo_Chigi** — Presidenza del Consiglio dei Ministri *(la versione senza underscore non è ufficiale)*
+
+##### Italiani — Ministeri rilevanti per PC
+- **@Viminale** — Ministero dell'Interno
+- **@MinisteroSalute** — Ministero della Salute
+- **@MASE_IT** — Ministero Ambiente e Sicurezza Energetica
+- **@MinisteroDifesa** — Ministero della Difesa
+- **@SM_Difesa** — Stato Maggiore Difesa (Forze Armate)
+
+##### Italiani — Forze Armate
+- **@Esercito** — Esercito Italiano
+- **@ItalianNavy** — Marina Militare
+- **@ItalianAirForce** — Aeronautica Militare
+- *L'Arma dei Carabinieri è anche Forza Armata: vedi @_Carabinieri_ in Forze di Polizia.*
+
+##### Italiani — Forze di Polizia
+- **@poliziadistato** — Polizia di Stato
+- **@_Carabinieri_** — Arma dei Carabinieri *(underscore davanti e dietro)*
+- **@GDF** — Guardia di Finanza
+- **@guardiacostiera** — Capitanerie di Porto / Guardia Costiera
+
+##### Italiani — Strutture operative PC nazionali (D.Lgs. 1/2018 art. 13)
+- **@DPCgov** — Dipartimento della Protezione Civile (fonte primaria nazionale)
+- **@vigilidelfuoco** — Vigili del Fuoco (CNVVF)
+- **@italertgov** — IT-alert (sistema nazionale di allarme pubblico)
+
+##### Italiani — Agenzie scientifiche del sistema PC
+- **@CNRsocial_** — CNR — Consiglio Nazionale delle Ricerche *(underscore finale)*
+- **@INGVterremoti** — INGV terremoti (sismologia, vulcanologia)
+- **@ISPRA_Press** — ISPRA (ambiente, dissesto, costiero)
+- **@istsupsan** — Istituto Superiore di Sanità
+- **@Aifa_ufficiale** — AIFA (allerte farmaceutiche)
+- **@ENEAOfficial** — ENEA (energia, blackout, rischi tecnologici)
+
+##### Italiani — Volontariato organizzato di PC (D.Lgs. 1/2018 art. 32-35)
+- **@iononrischio** — Campagna ufficiale nazionale (DPC + ANPAS + INGV + ReLUIS + CIMA)
+- **@crocerossa** — Croce Rossa Italiana (CRI)
+- **@Anpasnazionale** — ANPAS — Pubbliche Assistenze
+- **@cnsas_official** — Corpo Nazionale Soccorso Alpino e Speleologico
+- **@misericordie1** — Confederazione Nazionale Misericordie d'Italia
+- **@ana_web** — Associazione Nazionale Alpini
+
+##### Italiani — Trasporti e infrastrutture
+- **@StradeAnas** — ANAS notizie generali
+- **@VAIstradeanas** — ANAS info traffico real-time
+- **@EnacGov** — ENAC (aviazione civile)
+
+##### Italiani — Lazio
+- **@RegioneLazio** — Regione Lazio
+- **@ARPALazio** — ARPA Lazio (qualità aria, pollini, dati ambientali)
+- **@SaluteLazio** — Sanità regionale Lazio (allerte sanitarie, ondate calore)
+- **@ComuneGenzano** — Comune di Genzano di Roma
+
+##### Europei — Sistema di Protezione Civile dell'Unione Europea
+- **@eu_echo** — DG ECHO (EU Civil Protection & Humanitarian Aid Operations)
+- **@CopernicusEMS** — Copernicus Emergency Management Service (rapid mapping satellitare)
+- **@EU_ScienceHub** — JRC — Joint Research Centre
+- **@EUEnvironment** — EEA — European Environment Agency
+
+##### Europei — Comunità scientifica e meteo
+- **@LastQuake** — EMSC — Euro-Mediterranean Seismological Centre *(particolarmente rilevante per il Mediterraneo)*
+- **@eumetsat** — EUMETSAT (satelliti meteo europei)
+- **@esa** — ESA — European Space Agency
+- **@ECMWF** — European Centre for Medium-Range Weather Forecasts *(nota: a marzo 2025 ECMWF ha annunciato che non posta più su X; canali primari ora su Bluesky/sito/Facebook. Tenuto come riferimento storico, non come fonte real-time.)*
+
+##### Internazionali — UN e standard globali
+- **@UNDRR** — UN Office for Disaster Risk Reduction (custodian Sendai Framework 2015-2030)
+- **@WMO** — World Meteorological Organization (UN)
+- **@WHO** — World Health Organization (OMS)
+- **@IPCC_CH** — Intergovernmental Panel on Climate Change
+- **@UNOCHA** — UN Office for the Coordination of Humanitarian Affairs
+- **@ifrc** — International Federation of Red Cross and Red Crescent Societies
+
+##### Internazionali — Scienza extra-UE rilevante per il Mediterraneo
+- **@NOAA** — National Oceanic and Atmospheric Administration (USA — oceani, uragani, dati meteo globali)
+- **@USGS_Quakes** — USGS Earthquakes (terremoti globali, ShakeMap, MMI)
+
+#### Account considerati e NON aggiunti — per onestà e tracciabilità
+
+| Soggetto | Stato X | Canale alternativo confermato |
+|---|---|---|
+| **MeteoAM** (Servizio Meteo Aeronautica) | ❌ Twitter non confermato | Telegram `t.me/meteoam`, sito `meteoam.it`, app *Meteo Aeronautica* |
+| **Polizia Penitenziaria** | ❌ no Twitter ufficiale | Facebook ufficiale + sito `poliziapenitenziaria.gov.it` |
+| **Carabinieri Forestale (CUFAA)** | ❌ no Twitter dedicato | Instagram `@carabinieri.forestali`, comunicazioni via `@_Carabinieri_` |
+| **ANC — Ass. Naz. Carabinieri** | ❌ no Twitter ufficiale nazionale | Facebook + sito `assocarabinieri.it` |
+| **Casa Italia** (PCM ricostruzione) | ⚠️ handle X non chiaro | Comunicazioni via `@Palazzo_Chigi` |
+| **ERCC** (UE coordinamento emergenze) | ❌ no account separato | Comunicazioni via `@eu_echo` |
+| **Centro Funzionale Lazio** | ❌ no account separato | Comunicazioni via `@RegioneLazio` |
+
+#### Altri canali
+
+- **Facebook**: pagine ufficiali del Comune di Genzano, della Regione Lazio PC, dei coordinamenti regionali del volontariato.
+- **Telegram**: `@pcalfagenzano` (canale del Gruppo), IT-alert Lazio, INGV, MeteoAM (canale meteo ufficiale italiano).
+- **Newsletter**: Dipartimento PC, Regione Lazio PC, ARPA Lazio qualità aria, EMSC LastQuake, IFRC.
 
 ---
 
