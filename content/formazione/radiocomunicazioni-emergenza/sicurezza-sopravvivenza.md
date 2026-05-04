@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 6 — Sicurezza e sopravvivenza in emergenza"
-description: "Famiglia e casa prima della missione, nutrizione, idratazione, riposo, igiene, gestione dello stress, rischi ambientali, traumi psicologici. Chiude la serie IARU adattata al Gruppo Comunale di Genzano."
+description: "Famiglia e casa prima della missione, nutrizione, idratazione, riposo, igiene, gestione dello stress, rischi ambientali, traumi psicologici. Serie IARU."
 layout: "single"
 toc: true
 ---

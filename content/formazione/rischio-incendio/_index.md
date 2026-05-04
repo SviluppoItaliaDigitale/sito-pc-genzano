@@ -1,6 +1,6 @@
 ---
 title: "Rischio Incendio — Fondamenti"
-description: "Area didattica sul rischio incendio: teoria della combustione, sostanze estinguenti, misure di protezione passiva e attiva, procedure di emergenza. Adattata per il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma."
+description: "Rischio incendio: combustione, sostanze estinguenti, misure di protezione passiva e attiva, procedure di emergenza. Per il Gruppo Volontari PC Genzano."
 ---
 
 Quest'area raccoglie i **fondamenti del rischio incendio** utili al volontario di protezione civile, al cittadino informato e al lavoratore incaricato dell'attività antincendio nei luoghi di lavoro (art. 37 c. 9 del D.Lgs. 81/2008).

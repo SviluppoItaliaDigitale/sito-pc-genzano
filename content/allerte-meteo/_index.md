@@ -15,7 +15,7 @@ toc: true
 <div class="card border-warning mb-4">
 <div class="card-body bg-warning bg-opacity-10 p-4">
 <h2 class="h5 text-dark"><i class="bi bi-broadcast me-2" aria-hidden="true"></i>Stato allerta in tempo reale</h2>
-<p class="mb-2">Lo stato di allerta aggiornato è sempre visibile nella barra colorata in cima alla <a href="/">homepage</a>. Il dato viene letto automaticamente dal bollettino del Dipartimento della Protezione Civile per il Comune di Genzano di Roma.</p>
+<p class="mb-2">Lo stato di allerta aggiornato è sempre visibile nella barra colorata in cima alla <a href="/">homepage</a>. Il dato viene letto automaticamente dai bollettini ufficiali del <strong>Centro Funzionale Regionale del Lazio</strong> per il Comune di Genzano di Roma, nell'ambito del sistema nazionale di Protezione Civile.</p>
 <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-warning">
   <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Vai al Bollettino della Regione Lazio
 </a>

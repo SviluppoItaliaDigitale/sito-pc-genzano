@@ -1,7 +1,7 @@
 ---
 
 title: "Capo II — Organizzazione del Servizio nazionale (articoli 14-16)"
-description: "Il secondo Capo del Codice della Protezione Civile definisce i ruoli di Regioni, Città metropolitane, Province e Comuni nel Servizio Nazionale, in base al principio di sussidiarietà."
+description: "Il Capo II del Codice di Protezione Civile: ruoli di Regioni, Città metropolitane, Province e Comuni nel Servizio Nazionale, principio di sussidiarietà."
 toc: true
 ---
 Il **Capo II** del Codice della Protezione Civile (articoli 14-16) disegna **l'impalcatura istituzionale** del Servizio Nazionale. Risponde a una domanda molto semplice: **chi fa cosa**, dal livello nazionale al singolo Comune. La chiave di lettura è il principio di **sussidiarietà**: ogni livello interviene **dove è più efficace**, lasciando al livello inferiore ciò che può gestire da solo.

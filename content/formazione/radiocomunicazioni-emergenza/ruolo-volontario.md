@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 1 — Il radioamatore volontario in emergenza"
-description: "Cosa sei e cosa non sei come operatore TLC di protezione civile: relazione con l'ente servito, limiti di responsabilità, differenza tra attività ordinaria e operatività in emergenza, quadro italiano (D.Lgs. 1/2018, ARI-RE)."
+description: "Operatore TLC di protezione civile: relazione con l'ente, limiti di responsabilità, attività ordinaria vs emergenza. Quadro D.Lgs. 1/2018 e ARI-RE."
 layout: "single"
 toc: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 1 — La combustione"
-description: "I fondamenti della combustione: triangolo del fuoco, combustibili solidi, liquidi e gassosi, sorgenti di innesco, prodotti della combustione e le cinque classi di fuoco UNI EN 2:2005."
+description: "I fondamenti della combustione: triangolo del fuoco, combustibili solidi, liquidi e gassosi, sorgenti di innesco e le cinque classi di fuoco UNI EN 2:2005."
 layout: "single"
 toc: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Area tematica — Radiocomunicazioni di emergenza"
-description: "Sei capitoli per il volontario radioamatore o operatore TLC: ruolo, tecniche operative, reti e canali, gestione messaggi, attivazione e sicurezza. Basati sulla Guida IARU alle Telecomunicazioni di Emergenza (ed. 2016)."
+description: "Sei capitoli per il volontario radioamatore o operatore TLC: ruolo, tecniche, reti, gestione messaggi, attivazione, sicurezza. Base: Guida IARU 2016."
 layout: "single"
 ---
 

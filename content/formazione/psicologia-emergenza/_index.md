@@ -1,6 +1,6 @@
 ---
 title: "Psicologia dell'emergenza — gestire ansia e paura prima, durante e dopo un evento"
-description: "Reazioni emotive normali e segnali che richiedono attenzione professionale. Primo soccorso psicologico secondo l'OMS, indicazioni per bambini, scuole, soccorritori. Riferimenti DPC e SIPEM SoS."
+description: "Primo soccorso psicologico secondo l'OMS: reazioni emotive normali, segnali da attenzionare, indicazioni per bambini, scuole e soccorritori. Fonti DPC e SIPEM."
 date: 2026-05-01
 draft: false
 type: "page"

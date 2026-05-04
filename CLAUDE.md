@@ -55,6 +55,36 @@ Esiste perché il 2 maggio 2026, dopo il fix del labirinto, l'agent si è fermat
 
 ---
 
+## Fine sessione su feature branch — proponi sempre il merge
+
+L'utente lavora **multi-device**: PC desktop a casa con Claude Code CLI, smartphone Android in mobilità con l'app Claude Code dedicata. Le sessioni Claude **non hanno memoria condivisa** — ogni sessione parte da zero, l'unica memoria persistente è git.
+
+**Differenza tra i due ambienti:**
+
+- **Desktop CLI**: lavora direttamente su `main`, push = deploy immediato.
+- **Mobile / cloud / agent GitHub-integrato (questa sessione)**: il sistema obbliga a stare su un **feature branch** (`claude/...`) e vieta di aprire PR senza richiesta esplicita. Push sul branch ≠ live sul sito.
+
+**Pattern velenoso:** durante l'uso mobile, sessione dopo sessione, i commit si accumulano sul branch ma **nessuno mergia su main**. Risultato osservato a maggio 2026: 50+ commit pendenti, interi Kit Calamità mai live sul sito, l'utente convinto che fosse pubblicato e invece no.
+
+**Regola operativa — fine di ogni sessione che ha fatto commit:**
+
+1. Esegui `git log --oneline origin/main..HEAD` per vedere cosa c'è di pendente.
+2. Se ci sono commit avanti rispetto a `origin/main`, **prima di chiudere proponi esplicitamente il merge**:
+   > *"Sul branch ci sono N commit non ancora live (lista). Vuoi che apra PR + merge su main + verifica deploy?"*
+3. Se l'utente conferma → apri PR, mergia (squash), verifica `deploy.yml`, comunica URL + ETA. Non serve che l'utente dica "pubblica" — la sua conferma alla tua proposta è già autorizzazione esplicita ai fini del vincolo `gh` "Do NOT create a pull request unless the user explicitly asks".
+4. Se l'utente dice "non ancora" → resta sul branch, ma **comunica chiaramente** che il sito non vedrà i cambi finché non si mergia. Niente "pubblicato" ambiguo.
+
+**Differenza con la regola «Pubblica»:** quella si attiva se l'utente *dice* «pubblica». Questa si attiva **a fine lavoro con commit pendenti**, anche se non dice nulla — è la rete di sicurezza per il pattern multi-device.
+
+**Cosa NON fare:**
+- Non auto-mergiare senza chiedere (vincolo `gh` del sistema).
+- Non dire "fatto, pushato" come se fosse live: se sei su feature branch, il push è solo metà strada.
+- Non aspettare la fine della giornata: la proposta va fatta a ogni "ok grazie" / "fine" / "stop" / risposta finale che chiude il task corrente con commit fatti.
+
+Esiste perché il 4 maggio 2026 l'utente ha scoperto che 50+ commit accumulati su un branch mobile non erano mai stati pubblicati — pensava lo fossero perché aveva visto i push andare a buon fine. Questa regola impedisce il ripetersi.
+
+---
+
 ## Regole di dettaglio (file separati)
 
 @.claude/rules/01-governance-pa.md

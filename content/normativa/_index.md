@@ -1,7 +1,7 @@
 ---
 
 title: "Normativa di Protezione Civile"
-description: "Guida alle principali norme che regolano il Servizio Nazionale di Protezione Civile: Codice della Protezione Civile (D.Lgs. 1/2018), leggi regionali del Lazio, pianificazione comunale."
+description: "Guida alle norme del Servizio Nazionale di Protezione Civile: Codice della PC (D.Lgs. 1/2018), leggi regionali del Lazio, pianificazione comunale."
 toc: true
 ---
 Il **Servizio Nazionale di Protezione Civile** è un sistema complesso, definito da norme di rango primario e secondario, integrato da regolamenti regionali e dalla pianificazione comunale. Conoscere il quadro normativo aiuta a capire **chi fa cosa**, **quando** e **con quali poteri** durante le attività ordinarie e durante le emergenze.

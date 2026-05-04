@@ -1,7 +1,7 @@
 ---
 
 title: "Capo III — Previsione e prevenzione dei rischi (articoli 17-21)"
-description: "Il terzo Capo del Codice della Protezione Civile disciplina le attività di previsione e prevenzione: allertamento, sistemi di monitoraggio, formazione, informazione alla popolazione."
+description: "Il Capo III del Codice di Protezione Civile: previsione e prevenzione, allertamento, sistemi di monitoraggio, formazione e informazione alla popolazione."
 toc: true
 ---
 Il **Capo III** del Codice della Protezione Civile (articoli 17-21) è dedicato alle attività che si svolgono **prima dell'evento**: previsione dei rischi, prevenzione strutturale e non strutturale, allertamento della popolazione. È il Capo che più di ogni altro indica **la strada dell'investimento preventivo** rispetto alla risposta emergenziale.

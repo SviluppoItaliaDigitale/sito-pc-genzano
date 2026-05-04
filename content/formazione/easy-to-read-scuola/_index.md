@@ -1,6 +1,6 @@
 ---
 title: "Easy-to-Read per le scuole — versioni semplificate dei materiali di Protezione Civile"
-description: "Schede di Protezione Civile in linguaggio facile e con pittogrammi ARASAAC, pensate per alunni con disabilità cognitive, BES/DSA e parlanti italiano L2. Stampabili, gratuite, già coordinate con i kit didattici e con la pagina Facile da Leggere."
+description: "Schede di Protezione Civile in linguaggio facile e pittogrammi ARASAAC per alunni con disabilità cognitive, BES/DSA e italiano L2. Stampabili e gratuite."
 date: 2026-05-01
 draft: false
 type: "page"
