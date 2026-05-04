@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 4 — Gestione dei messaggi e controllo di maglia"
-description: "Net Control Station, Net Manager, maglie dirette e libere, precedenze, formato del messaggio radioamatoriale (intestazione, testo, firma), collegamento con l'Incident Command System (ICS) e il Metodo Augustus."
+description: "Net Control Station, Net Manager, maglie dirette e libere, precedenze, formato del messaggio radioamatoriale, collegamento con ICS e Metodo Augustus."
 layout: "single"
 toc: true
 ---

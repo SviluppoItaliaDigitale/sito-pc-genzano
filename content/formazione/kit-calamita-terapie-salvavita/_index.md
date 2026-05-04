@@ -1,6 +1,6 @@
 ---
 title: "Kit Calamità per pazienti con terapie salvavita continuative"
-description: "Schede operative per pazienti che dipendono da terapie salvavita continuative (dialisi, ossigenoterapia, oncologici, trapiantati, malattie rare). Conformità WHO Health Cluster 2018 + Sphere Standards 2018 + Direttiva PCM 24/06/2016."
+description: "Schede per pazienti con terapie salvavita: dialisi, ossigenoterapia, oncologia, trapianti, malattie rare. WHO Health Cluster + Sphere + PCM 24/06/2016."
 layout: "single"
 ---
 

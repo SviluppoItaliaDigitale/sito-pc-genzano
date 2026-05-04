@@ -1,6 +1,6 @@
 ---
 title: "Catalogo dei pittogrammi del sito"
-description: "Catalogo dei pittogrammi standardizzati ISO 7010 e ARASAAC utilizzati sul sito della Protezione Civile di Genzano di Roma per migliorare la comprensione di bambini, persone con disabilità cognitive, anziani e parlanti italiano come lingua seconda."
+description: "Catalogo dei pittogrammi ISO 7010 e ARASAAC usati sul sito per migliorare la comprensione di bambini, persone con disabilità cognitive, anziani e L2."
 layout: "single"
 toc: false
 sitemap:

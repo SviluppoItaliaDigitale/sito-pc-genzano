@@ -1,6 +1,6 @@
 ---
 title: "Percorsi didattici pronti per la scuola"
-description: "percorsi di Educazione Civica già pacchettizzati con destinatari, durata, obiettivi e materiali del Gruppo: protezione civile di base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro."
+description: "Percorsi di Educazione Civica pronti: protezione civile di base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro."
 date: 2026-05-01
 draft: false
 type: "page"

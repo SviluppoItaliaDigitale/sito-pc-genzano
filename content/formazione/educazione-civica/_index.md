@@ -1,6 +1,6 @@
 ---
 title: "Per i docenti — La Protezione Civile per l'Educazione Civica"
-description: "Mappa operativa dei materiali del Gruppo (kit, schede, storie, giochi, attività accessibili) sui 3 Nuclei Concettuali del D.M. 183/2024 (applicabile dall'a.s. 2024/2025) e sull'Agenda 2030. Strumento per i docenti di scuola dell'infanzia, primaria e secondaria."
+description: "Mappa dei materiali del Gruppo sui 3 Nuclei Concettuali del D.M. 183/2024 e sull'Agenda 2030, per docenti di infanzia, primaria e secondaria."
 date: 2026-05-01
 draft: false
 type: "page"

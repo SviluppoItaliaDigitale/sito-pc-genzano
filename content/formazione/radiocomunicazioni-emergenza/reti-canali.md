@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 3 — Reti, maglie e canali"
-description: "Network theory: scegliere il canale giusto in base al messaggio. Telefono fisso, cellulare, VHF/UHF, HF, satellite, digitali. Caratteristiche, limiti, scenari d'uso per la protezione civile."
+description: "Scegliere il canale giusto in base al messaggio: telefono fisso, cellulare, VHF/UHF, HF, satellite, digitali. Caratteristiche, limiti e scenari d'uso PC."
 layout: "single"
 toc: true
 ---

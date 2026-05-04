@@ -1,6 +1,6 @@
 ---
 title: "Quadro normativo per la scuola — riepilogo unico"
-description: "Tutte le norme che regolano l'uso dei materiali del Gruppo nelle scuole: Educazione Civica, PCTO, sicurezza, inclusione, privacy, accessibilità. Una pagina, una fonte unica di verità."
+description: "Le norme che regolano l'uso dei materiali del Gruppo nelle scuole: Educazione Civica, PCTO, sicurezza, inclusione, privacy, accessibilità. Fonte unica."
 date: 2026-05-01
 draft: false
 type: "page"

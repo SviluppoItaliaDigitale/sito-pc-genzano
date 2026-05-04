@@ -1,6 +1,6 @@
 ---
 title: "Kit Calamità — schede stampabili per emergenza"
-description: "Hub di 12 kit operativi pronti da stampare A4 per assistere bambini, anziani, ospiti RSA, persone con disabilità, neonati, gravidanza, animali, volontari PC, persone senza dimora, italiano L2, caregiver familiari e pazienti con terapie salvavita. Standard internazionali NCTSN, IFRC, WHO, Sphere, FEANTSA, UNHCR, IOM, IFE, MISP, WSAVA, ProQOL, Eurocarers."
+description: "Kit operativi pronti da stampare A4 per categorie vulnerabili: bambini, anziani, RSA, disabilità, neonati, gravidanza, caregiver, terapie salvavita."
 layout: "single"
 toc: true
 ---

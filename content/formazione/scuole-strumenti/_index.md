@@ -1,6 +1,6 @@
 ---
 title: "Strumenti per le scuole — moduli e fac-simile editabili"
-description: "Moduli e fac-simile per scuole che lavorano con il Gruppo: richiesta intervento, liberatoria immagini, circolare famiglie, attestato. Strumenti formali PCTO: convenzione, progetto formativo, registro, valutazione, certificazione."
+description: "Moduli e fac-simile per scuole: richiesta intervento, liberatoria immagini, circolare famiglie, attestato. Strumenti PCTO: convenzione, registro, attestato."
 date: 2026-05-01
 draft: false
 type: "page"

@@ -1,6 +1,6 @@
 ---
 title: "Per Dirigenti scolastici, DSGA, RSPP, ASPP — ruoli e limiti del Gruppo"
-description: "Pagina dedicata alla parte istituzionale della scuola: cosa il Gruppo può fare, cosa non può fare, limiti di responsabilità, coordinamento col piano di emergenza, gestione alunni con disabilità in evacuazione."
+description: "Per dirigenti e RSPP scolastici: cosa il Gruppo può fare, limiti di responsabilità, coordinamento col piano di emergenza, alunni con disabilità."
 date: 2026-05-01
 draft: false
 type: "page"
