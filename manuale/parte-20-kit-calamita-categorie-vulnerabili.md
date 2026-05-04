@@ -122,7 +122,7 @@ Il box "Riutilizzo e attribuzione" appare in tutti i 9 hub statici (`index.html`
 ## 20.7 — Integrazione con il resto del sito
 
 **Menu di navigazione** (`hugo.toml` + `static/app-shared/site-chrome.js`):
-- voce unica "Kit Emergenza Schede" sotto "Educazione e Inclusione" → punta a `/formazione/kit-calamita/`
+- voce **"Kit pronti per situazioni vulnerabili"** sotto **"Per il Cittadino"** → punta a `/formazione/kit-calamita/` (riorganizzazione v3 maggio 2026: spostato da "Educazione e Inclusione" perché il pubblico target è il cittadino in difficoltà, non la scuola)
 
 **Mappa del sito** (`content/mappa-sito/_index.md`):
 - nuova sezione "Kit Calamità — Schede stampabili per categorie vulnerabili" con 13 card colorate (hub + 12 kit specifici)
@@ -163,7 +163,7 @@ Quando si aggiunge un nuovo kit, **aggiornare tutti e 4 i punti di accesso**:
 
 **Iter 1-7 (maggio 2026)** — Realizzazione iniziale dei 3 kit principali (bambini, anziani, RSA), template eco-print, schede compilabili, illustrazioni reali integrate (cane, camion, tende, elicottero, lavarsi mani WHO, mandala, Canadair).
 
-**Iter 8 (3 maggio 2026)** — Completamento Kit Strutture Sanitarie (20 schede operative). Menu rinominato "Kit Emergenza Schede" per generalità futura.
+**Iter 8 (3 maggio 2026)** — Completamento Kit Strutture Sanitarie (20 schede operative). Menu rinominato "Kit Emergenza Schede" per generalità futura (poi spostato in "Per il Cittadino" e rinominato "Kit pronti per situazioni vulnerabili" nell'Iter 11).
 
 **Iter 9 (3-4 maggio 2026)** — 5 nuovi kit MVP: disabilità adulti, neonati, animali, volontari PC, gravidanza. Aggiornamento landing principale con 8 kit.
 
