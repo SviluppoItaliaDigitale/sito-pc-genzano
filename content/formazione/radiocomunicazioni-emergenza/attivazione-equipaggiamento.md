@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 5 — Attivazione, equipaggiamento e impianto di stazione"
-description: "Kit personale e di stazione, scelta degli apparati VHF/UHF/HF, antenne portatili, autonomie batteria, procedura di attivazione, messa in onda, gestione operazioni prolungate, chiusura e rientro."
+description: "Kit personale e di stazione, apparati VHF/UHF/HF, antenne portatili, autonomie batteria, attivazione, messa in onda, operazioni prolungate, chiusura."
 layout: "single"
 toc: true
 ---

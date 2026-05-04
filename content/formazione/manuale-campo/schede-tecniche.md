@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 5 — Schede tecniche (raccolta rapida)"
-description: "Tutte le check-list del Manuale da Campo in un unico documento: kit personale, mezzi, informazioni, area accoglienza, progettazione, controlli rapidi — per consultazione e stampa."
+description: "Tutte le check-list del Manuale da Campo: kit personale, mezzi, informazioni, area accoglienza, progettazione, controlli rapidi. Per consultazione e stampa."
 layout: "single"
 toc: true
 ---

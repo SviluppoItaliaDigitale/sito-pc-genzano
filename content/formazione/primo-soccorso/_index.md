@@ -1,6 +1,6 @@
 ---
 title: "Primo Soccorso e Rianimazione Cardiopolmonare"
-description: "Area tematica dedicata al primo soccorso e alla rianimazione cardiopolmonare, basata sulle Linee Guida IRC 2025. Informazioni divulgative per cittadini e riferimenti ai testi ufficiali."
+description: "Primo soccorso e rianimazione cardiopolmonare secondo le Linee Guida IRC 2025. Informazioni divulgative per cittadini e riferimenti ai testi ufficiali."
 layout: "single"
 ---
 
