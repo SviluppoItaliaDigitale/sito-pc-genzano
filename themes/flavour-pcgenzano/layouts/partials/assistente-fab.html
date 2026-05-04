@@ -4,6 +4,12 @@
   le pagine. Click → /assistente/ (assistente virtuale guidato).
 
   Posizione: bottom-left, SOPRA il toolbar di accessibilità.
+  Design v2.0 (maggio 2026): cerchio dark blue con bordo bianco, in
+  coppia visiva con il FAB accessibilità sottostante (stessa forma,
+  stessa dimensione, stesso focus). Il label testuale è visivamente
+  nascosto ma resta accessibile a screen reader via aria-label e
+  alla classe .assistente-fab-label (sr-only style nel CSS).
+
   Convenzione FAB del sito:
    - bottom-left: a11y toolbar (in basso) + assistente FAB (sopra)
    - bottom-right: back-to-top + sos-112 (mobile)
@@ -13,8 +19,8 @@
 
   Accessibilità:
   - <a> nativo, raggiungibile da tastiera
-  - aria-label esplicito
-  - focus visible WCAG 2.4.7
+  - aria-label esplicito + title (tooltip hover)
+  - focus visible WCAG 2.4.7 (outline 3px arancione, come a11y-fab)
 */}}
 {{- /* skip su sezioni dove il FAB sarebbe ridondante o distrarrebbe */ -}}
 {{- $skipSections := slice "assistente" "emergenza" "cerca" -}}
