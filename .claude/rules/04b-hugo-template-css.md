@@ -187,6 +187,35 @@ In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo b
 
 **Pagina pubblica correlata:** `content/accessibilita/_index.md` descrive il toolbar al cittadino e dà istruzioni complementari sugli strumenti di sistema (zoom OS, screen reader NVDA/VoiceOver/TalkBack, contrasto OS, riconoscimento vocale). Mantenere allineate le due descrizioni se modifichi le funzioni del toolbar.
 
+## Assistente FAB (bottone "Aiuto" su tutte le pagine)
+
+Su ogni pagina del sito, in basso a sinistra **sopra il toolbar di accessibilità**, è presente un bottone "💬 Aiuto" blu istituzionale che porta all'**Assistente virtuale** (`/assistente/`). Convenzione FAB del sito:
+
+- **bottom-left**: a11y toolbar (in basso) + assistente FAB (sopra, ~5.5rem)
+- **bottom-right**: back-to-top (sempre) + sos-112 (mobile)
+
+**File coinvolti:**
+
+- `themes/flavour-pcgenzano/layouts/partials/assistente-fab.html` — markup `<a>` con auto-skip su 3 sezioni
+- `themes/flavour-pcgenzano/static/css/custom.css` sezione **ASSISTENTE FAB v1.0** — stili (posizione, hover lift, mobile solo-icona, stampa nascosto, rispetto `prefers-reduced-motion` + classe `html.a11y-pause-anim`)
+- `themes/flavour-pcgenzano/layouts/_default/baseof.html` — include `{{ partial "assistente-fab.html" . }}` dopo `accessibility-toolbar.html`
+
+**Skip automatico** su 3 sezioni dove sarebbe ridondante o distrarrebbe:
+- `/assistente/` — loop visivo (sei già lì)
+- `/emergenza/` — pagina lite ultraleggera (44KB), non aggiungere FAB
+- `/cerca/` — già un motore di ricerca interno
+
+Logica skip in `assistente-fab.html`: `{{ $skipSections := slice "assistente" "emergenza" "cerca" }}{{ $skip := in $skipSections .Section }}`. Per aggiungere una sezione da escludere, allungare la slice.
+
+**Mobile (≤575.98px):** il FAB diventa **solo icona** (cerchio 2.85rem) senza label "Aiuto" per ridurre l'ingombro accanto al SOS-112. Il `.assistente-fab-label` viene nascosto via CSS.
+
+**Why è ovunque:** un Assistente virtuale è utile a chi entra dal motore di ricerca su una singola pagina e non sa orientarsi nel sito. Tenerlo solo nel menu lo rende invisibile all'80% degli utenti che non aprono i dropdown. Il FAB lo rende ubiquo come il SOS-112.
+
+**Cosa NON fare:**
+- Non spostarlo bottom-right: collide con `back-to-top` + `sos-112` mobile.
+- Non sostituirlo con un chatbot LLM: l'Assistente è un albero decisionale deterministico (regola `06-protezione-civile-scientifica.md` e `04a-hugo-shortcode-partial.md` § "Assistente guidato"), nessuna API runtime, nessun rischio di risposte sbagliate in emergenza.
+- Non rimuovere lo skip su `/assistente/` (loop), `/emergenza/` (peso pagina lite), `/cerca/` (già motore di ricerca).
+
 ## Bozze social automatiche (Gemini API + Pillow)
 
 Sistema completo per generare bozze post social (X, Facebook, Instagram, Telegram) e immagini Instagram (post 1080×1080 + carosello + story 1080×1920) a partire dagli articoli del sito. Usa il **tier gratuito Gemini 2.5 Flash** (1500 req/giorno = costo zero).
