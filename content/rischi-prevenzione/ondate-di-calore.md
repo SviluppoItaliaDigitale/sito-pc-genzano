@@ -44,7 +44,7 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 {{< cosa-non-fare titolo="Cosa NON fare durante un'ondata di calore" >}}
 - **Non sottovalutare i primi sintomi** di malessere da calore (sete intensa, stanchezza, mal di testa)
 - **Non fare sforzi fisici intensi** nelle ore più calde (11-18)
-- **Non bere bevande ghiacciate** che possono causare congestione: meglio acqua a temperatura ambiente
+- **Non bere bevande gelate in grandi quantità a stomaco pieno**: lo shock termico può causare malesseri digestivi. Preferire acqua fresca (non ghiacciata) a piccoli sorsi e con frequenza
 - **Non lasciare farmaci esposti al calore** (alterano la loro efficacia)
 {{< /cosa-non-fare >}}
 
