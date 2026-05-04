@@ -1,0 +1,29 @@
+{{/*
+  Partial: assistente-fab.html
+  Bottone "Aiuto" fisso in basso a sinistra, sempre visibile su tutte
+  le pagine. Click → /assistente/ (assistente virtuale guidato).
+
+  Posizione: bottom-left, SOPRA il toolbar di accessibilità.
+  Convenzione FAB del sito:
+   - bottom-left: a11y toolbar (in basso) + assistente FAB (sopra)
+   - bottom-right: back-to-top + sos-112 (mobile)
+
+  Esclusioni (auto-skip): nascosto sulla pagina /assistente/ stessa
+  (loop visivo) e su pagine di emergenza lite/legali dove distrarrebbe.
+
+  Accessibilità:
+  - <a> nativo, raggiungibile da tastiera
+  - aria-label esplicito
+  - focus visible WCAG 2.4.7
+*/}}
+{{- /* skip su sezioni dove il FAB sarebbe ridondante o distrarrebbe */ -}}
+{{- $skipSections := slice "assistente" "emergenza" "cerca" -}}
+{{- $skip := in $skipSections .Section -}}
+{{- if not $skip -}}
+<a href="{{ "assistente/" | relURL }}" id="assistente-fab" class="assistente-fab"
+   aria-label="Apri l'Assistente virtuale: ti aiuta a trovare ciò che cerchi sul sito"
+   title="Hai bisogno di aiuto? Apri l'Assistente virtuale">
+  <i class="bi bi-question-circle-fill" aria-hidden="true"></i>
+  <span class="assistente-fab-label">Aiuto</span>
+</a>
+{{- end -}}

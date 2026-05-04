@@ -3964,3 +3964,86 @@ html.a11y-pause-animations body.home-page .reveal-on-scroll {
  * fine HOMEPAGE ENHANCEMENTS v1.0
  * ==========================================================================
  */
+
+/* ==========================================================================
+ * ASSISTENTE FAB v1.0 (maggio 2026)
+ * Bottone "Aiuto" fisso bottom-left sopra il toolbar accessibilità.
+ * Click → /assistente/. Disponibile su tutte le pagine.
+ * ==========================================================================
+ */
+.assistente-fab {
+  position: fixed;
+  bottom: 5.5rem;       /* sopra il FAB toolbar a11y (bottom: 1.2rem + h ~3rem + gap) */
+  left: 1.2rem;
+  z-index: 9998;        /* sotto i modal (sos-modal = 10001) ma sopra il contenuto */
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  background: #003366;  /* blu istituzionale --pc-blue */
+  color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.35), 0 0 0 2px rgba(255,255,255,0.1) inset;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+.assistente-fab i {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+.assistente-fab .assistente-fab-label {
+  display: inline;
+}
+.assistente-fab:hover,
+.assistente-fab:focus-visible {
+  background: #001a33;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.5), 0 0 0 2px rgba(255,255,255,0.1) inset;
+}
+.assistente-fab:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .assistente-fab { transition: none; }
+  .assistente-fab:hover,
+  .assistente-fab:focus-visible { transform: none; }
+}
+
+/* Mobile: solo icona (riduce spazio occupato accanto a SOS-112) */
+@media (max-width: 575.98px) {
+  .assistente-fab {
+    bottom: 5rem;
+    left: 1rem;
+    padding: 0.6rem;
+    width: 2.85rem;
+    height: 2.85rem;
+    justify-content: center;
+  }
+  .assistente-fab .assistente-fab-label {
+    display: none;
+  }
+  .assistente-fab i {
+    font-size: 1.4rem;
+  }
+}
+
+/* Stampa: nascosto */
+@media print {
+  .assistente-fab { display: none !important; }
+}
+
+/* Toolbar a11y attivo "pausa animazioni" + "nascondi animazioni": coerenza */
+html.a11y-pause-anim .assistente-fab { transition: none !important; }
+html.a11y-pause-anim .assistente-fab:hover,
+html.a11y-pause-anim .assistente-fab:focus-visible { transform: none !important; }
+/* ==========================================================================
+ * fine ASSISTENTE FAB v1.0
+ * ==========================================================================
+ */
