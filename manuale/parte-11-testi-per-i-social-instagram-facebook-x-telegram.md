@@ -153,9 +153,9 @@ a raffica. Mai emoji nel primo rigo del titolo di un'allerta se non ⚠️.
 - **Hashtag**: da **2 a 3**, mai più di 5. Su Facebook gli hashtag sono meno efficaci rispetto a
   Instagram e un'alta concentrazione fa "spam". Palette base ridotta:
   `#ProtezioneCivileGenzano #GenzanoDiRoma` + al massimo un hashtag tematico.
-- **Menzioni pagine**: usa `@ComuneDiGenzano`, `@RegioneLazio`, `@ProtezioneCivile` (verifica
-  l'handle corrente della pagina prima di taggare). Le menzioni creano link attivi alla pagina
-  citata.
+- **Menzioni pagine**: usa `@ComuneGenzano`, `@RegioneLazio`, `@DPCgov` (verifica
+  l'handle corrente della pagina prima di taggare — gli handle X/Twitter degli enti possono
+  cambiare nel tempo). Le menzioni creano link attivi alla pagina citata.
 - **Eventi Facebook**: per formazione, esercitazioni aperte al pubblico, campagne di reclutamento
   con scadenza, crea un **evento Facebook** collegato al post, con data, luogo, descrizione
   completa e link al sito. Non sostituisce il post, lo affianca.
@@ -544,7 +544,7 @@ cross-posting da Instagram per pubblicare questa variante):
 > Il percorso inizia con il corso base (lezioni serali), prosegue con esercitazioni
 > pratiche e consente di scegliere una specializzazione fra radiocomunicazioni, logistica,
 > avvistamento antincendio, assistenza alla popolazione. Il Gruppo opera sul territorio di
-> Genzano e collabora con @ComuneDiGenzano, @RegioneLazio e le altre protezioni civili dei
+> Genzano e collabora con @ComuneGenzano, @RegioneLazio e le altre protezioni civili dei
 > Castelli Romani.
 >
 > Possono iscriversi residenti maggiorenni. Le iscrizioni si chiudono il 30 aprile 2026.
@@ -590,7 +590,7 @@ cross-posting da Instagram per pubblicare questa variante):
 > Sulla base delle segnalazioni pervenute alla Sala operativa entro le 22, non si
 > registrano persone coinvolte né danni rilevanti alle abitazioni.
 >
-> Un ringraziamento ai volontari che sono stati in strada, alla @PoliziaLocaleGenzano
+> Un ringraziamento ai volontari che sono stati in strada, alla Polizia Locale di Genzano
 > e a tutti i cittadini che hanno seguito le raccomandazioni di auto-protezione limitando
 > gli spostamenti non necessari.
 >
