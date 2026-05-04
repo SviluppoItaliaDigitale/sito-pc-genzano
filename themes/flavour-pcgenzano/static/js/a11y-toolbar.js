@@ -20,7 +20,9 @@
     hideImages: false,
     pauseAnimations: false,
     highlightLinks: false,
-    bigCursor: false
+    bigCursor: false,
+    hideAssistantFab: false,
+    hideSosFab: false
   };
 
   var state = Object.assign({}, defaults);
@@ -91,6 +93,10 @@
 
     // Orientamento: cursore grande
     if (state.bigCursor) html.classList.add('a11y-big-cursor');
+
+    // Pulsanti flottanti: nascondi Assistente / SOS-112
+    if (state.hideAssistantFab) html.classList.add('a11y-hide-assistant-fab');
+    if (state.hideSosFab) html.classList.add('a11y-hide-sos-fab');
   }
 
   // Applica subito allo start (prima del DOM ready) per evitare flash

@@ -4071,6 +4071,13 @@ html.a11y-pause-animations body.home-page .reveal-on-scroll {
 html.a11y-pause-anim .assistente-fab { transition: none !important; }
 html.a11y-pause-anim .assistente-fab:hover,
 html.a11y-pause-anim .assistente-fab:focus-visible { transform: none !important; }
+
+/* ── Hide FAB user preferences (toggle nel pannello a11y "Pulsanti
+   flottanti") ── Usato per chi naviga da mobile e i FAB coprono il
+   testo. Il FAB a11y stesso resta sempre visibile (è il controllo
+   per riabilitarli). */
+html.a11y-hide-assistant-fab .assistente-fab { display: none !important; }
+html.a11y-hide-sos-fab .sos-button { display: none !important; }
 /* ==========================================================================
  * fine ASSISTENTE FAB v2.1
  * ==========================================================================
