@@ -34,6 +34,7 @@ In ogni pagina, in basso a sinistra, trovi un pulsante rotondo blu con l'icona d
 - **Nascondere le immagini** decorative e mettere in **pausa le animazioni**
 - **Evidenziare tutti i link** con sfondo giallo
 - Attivare un **cursore grande** del mouse
+- **Nascondere i pulsanti flottanti** (Assistente virtuale, SOS 112) se da telefono coprono il testo che stai leggendo
 
 Le scelte vengono **ricordate sul tuo dispositivo** (tramite `localStorage`): chiudendo e riaprendo il sito le ritrovi attive. Il pulsante "Reimposta tutto" del pannello cancella le preferenze e riporta il sito alle impostazioni standard.
 
