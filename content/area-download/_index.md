@@ -35,6 +35,7 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 | [Ordinanza Sindacale AIB 2024](https://www.protezionecivilegenzano.it/area-download/normativa/Ordinanza_Sindacale_AIB_2024.pdf) | PDF |
 | [Ordinanza Sindacale AIB 2025](https://www.protezionecivilegenzano.it/area-download/normativa/Ordinanza_Sindacale_AIB_2025.pdf) | PDF |
 | [Regolamento del Gruppo di P.C. Genzano](https://www.protezionecivilegenzano.it/area-download/normativa/Regolamento_Gruppo_Comunale_PC_Genzano.pdf) | PDF |
+| [Domanda di ammissione al Gruppo Comunale](/manuali/moduli/domanda-ammissione-volontari.pdf) | PDF (298 KB) |
 
 ## Normativa Regionale (Lazio)
 

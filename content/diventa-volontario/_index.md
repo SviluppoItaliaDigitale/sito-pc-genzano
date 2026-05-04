@@ -175,6 +175,23 @@ In sintesi, chiediamo:
 
 Il **primo passo** è un semplice colloquio conoscitivo, senza impegno. Ti raccontiamo chi siamo e cosa facciamo, tu ci racconti chi sei e cosa vorresti fare. Se entrambi sentiamo che può funzionare, si parte con l'iscrizione e il corso base.
 
+## Modulistica per l'iscrizione
+
+Quando arriva il momento dell'iscrizione formale, dopo il colloquio conoscitivo, ti chiederemo di compilare la **domanda di ammissione** al Gruppo Comunale. Puoi scaricarla in anticipo, leggerla con calma e portarla già compilata in sede:
+
+<a href="/manuali/moduli/domanda-ammissione-volontari.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+<i class="bi bi-file-earmark-pdf me-2" aria-hidden="true"></i>Scarica la domanda di ammissione (PDF, 298 KB)
+</a>
+
+Insieme alla domanda compilata e firmata, in sede serve presentare:
+
+- **documento di riconoscimento** valido (in originale e copia);
+- **codice fiscale**;
+- **certificato medico di sana e robusta costituzione**, rilasciato dal medico di base;
+- per i **minorenni**, il consenso firmato del genitore o di chi esercita la responsabilità genitoriale (la sezione dedicata è già nel modulo).
+
+La consegna avviene in **Sede Operativa, Via Sicilia 13/15**, alla presenza del Coordinatore, del Vice-Coordinatore o del Segretario. La sede è aperta **tutti i giorni dalle 15:30 alle 20:00**. Per le altre informazioni puoi scriverci o chiamarci ai recapiti in fondo a questa pagina.
+
 ## Domande frequenti
 
 ### Costa qualcosa iscriversi?
