@@ -3966,58 +3966,54 @@ html.a11y-pause-animations body.home-page .reveal-on-scroll {
  */
 
 /* ==========================================================================
- * ASSISTENTE FAB v2.0 (maggio 2026)
- * Bottone "Aiuto" fisso bottom-left, in coppia visiva sopra il toolbar
- * accessibilità: stessa forma circolare 56px (50px mobile), stesso bordo
- * bianco, stesso blu istituzionale, stesso focus arancione. Click →
- * /assistente/. Il label testuale è nascosto visualmente ma mantenuto
- * per screen reader (l'icona chat-dots + aria-label sono già univoche).
+ * ASSISTENTE FAB v2.1 (maggio 2026)
+ * Bottone "Aiuto" fisso bottom-left.
+ *  - Desktop: pill blu con label "Assistente virtuale" visibile (v1.0,
+ *    invariato — già consolidato graficamente).
+ *  - Mobile (≤575.98px): cerchio dark blue con bordo bianco coordinato
+ *    al FAB accessibilità sottostante (stesso diametro 50px, stesso
+ *    bordo, stesso focus arancione, stessa colonna sinistra). Il label
+ *    è nascosto visivamente ma resta accessibile a screen reader
+ *    (aria-label + sr-only). L'icona chat-dots è univoca.
  * ==========================================================================
  */
 .assistente-fab {
   position: fixed;
-  bottom: 6.25rem;          /* sopra a11y-fab (bottom 2rem + 56px + 0.75rem gap) */
-  left: 2rem;               /* allineato al a11y-fab desktop */
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--pc-primary, #003366);
-  color: #fff;
-  border: 3px solid #fff;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  bottom: 5.5rem;       /* sopra il FAB toolbar a11y (bottom: 1.2rem + h ~3rem + gap) */
+  left: 1.2rem;
+  z-index: 9998;        /* sotto i modal (sos-modal = 10001) ma sopra il contenuto */
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  background: #003366;  /* blu istituzionale --pc-blue */
+  color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.35), 0 0 0 2px rgba(255,255,255,0.1) inset;
   text-decoration: none;
-  cursor: pointer;
-  z-index: 1040;
-  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
-.assistente-fab i { line-height: 1; }
-/* Label hidden visually but readable by screen reader (l'aria-label è
-   sul tag <a>, è ridondante mostrarlo anche graficamente) */
-.assistente-fab .assistente-fab-label {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   white-space: nowrap;
-  border: 0;
+}
+.assistente-fab i {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+.assistente-fab .assistente-fab-label {
+  display: inline;
 }
 .assistente-fab:hover,
 .assistente-fab:focus-visible {
-  background: var(--pc-primary-dark, #00244d);
+  background: #001a33;
   color: #fff;
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.5), 0 0 0 2px rgba(255,255,255,0.1) inset;
 }
 .assistente-fab:focus-visible {
-  outline: 3px solid #ff6600;
+  outline: 3px solid #ffbe2e;
   outline-offset: 3px;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4026,14 +4022,43 @@ html.a11y-pause-animations body.home-page .reveal-on-scroll {
   .assistente-fab:focus-visible { transform: none; }
 }
 
-/* Mobile: stessa convenzione del FAB a11y (50px) */
+/* Mobile: cerchio coordinato col FAB a11y sottostante (50px, bordo
+   bianco, blu istituzionale, focus arancione). Label nascosto ma
+   accessibile a screen reader via .visually-hidden style. */
 @media (max-width: 575.98px) {
   .assistente-fab {
     bottom: 5.25rem;        /* sopra a11y-fab (bottom 1.25rem + 50px + 0.875rem gap) */
     left: 1.25rem;          /* allineato al a11y-fab mobile */
     width: 50px;
     height: 50px;
+    padding: 0;
+    gap: 0;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  }
+  .assistente-fab i {
     font-size: 1.35rem;
+  }
+  .assistente-fab .assistente-fab-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .assistente-fab:hover,
+  .assistente-fab:focus-visible {
+    background: #00244d;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  }
+  .assistente-fab:focus-visible {
+    outline-color: #ff6600;  /* coerente col focus del FAB a11y */
   }
 }
 
@@ -4047,6 +4072,6 @@ html.a11y-pause-anim .assistente-fab { transition: none !important; }
 html.a11y-pause-anim .assistente-fab:hover,
 html.a11y-pause-anim .assistente-fab:focus-visible { transform: none !important; }
 /* ==========================================================================
- * fine ASSISTENTE FAB v2.0
+ * fine ASSISTENTE FAB v2.1
  * ==========================================================================
  */
