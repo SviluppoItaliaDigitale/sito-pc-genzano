@@ -51,7 +51,7 @@ Gemini, Claude web, Mistral, altre sessioni di Claude Code, ecc.).
 **Copertura di questo file:**
 - Istruzioni generali (\`CLAUDE.md\`)
 - 11 regole di governance (\`.claude/rules/\` — 01-08 incluse 04a/b/c)
-- Manuale operativo completo (\`MANUALE-SITO.md\` indice + 18 file \`manuale/parte-NN.md\`)
+- Manuale operativo completo (\`MANUALE-SITO.md\` indice + 21 file \`manuale/parte-NN.md\`)
 - Piano editoriale con fonti e calendario (\`PIANO-EDITORIALE.md\`)
 - README del progetto
 - Template articoli (\`archetypes/comunicazioni.md\`)
@@ -69,7 +69,7 @@ Gemini, Claude web, Mistral, altre sessioni di Claude Code, ecc.).
 1. [README — Panoramica del progetto](#1-readme--panoramica-del-progetto)
 2. [CLAUDE.md — Istruzioni principali](#2-claudemd--istruzioni-principali)
 3. [Regole di governance (11 file in \`.claude/rules/\`)](#3-regole-di-governance)
-4. [MANUALE-SITO — Manuale operativo completo (split in 18 file)](#4-manuale-sito--manuale-operativo-completo-split-in-18-file)
+4. [MANUALE-SITO — Manuale operativo completo (split in 21 file)](#4-manuale-sito--manuale-operativo-completo-split-in-18-file)
 5. [PIANO-EDITORIALE — Fonti e calendario](#5-piano-editoriale--fonti-e-calendario)
 6. [Archetype articoli (\`archetypes/comunicazioni.md\`)](#6-archetype-articoli)
 7. [Configurazione Hugo (\`hugo.toml\`)](#7-configurazione-hugo)
@@ -138,11 +138,11 @@ include_file ".claude/rules/06-protezione-civile-scientifica.md" "3.9 06-protezi
 include_file ".claude/rules/07-proattivita-coerenza.md" "3.10 07-proattivita-coerenza.md"
 include_file ".claude/rules/08-claude-code-setup.md" "3.11 08-claude-code-setup.md"
 
-# ── 4. MANUALE-SITO (indice + 18 parti) ──────────────────────────────────────
-echo -e "\n## 4. MANUALE-SITO — Manuale operativo completo (split in 18 file)\n\nIl manuale operativo è stato spezzato a maggio 2026 in 18 file separati nella cartella \`manuale/\` (1 file per Parte) per facilitare manutenzione e revisioni puntuali. \`MANUALE-SITO.md\` nella root resta come indice/redirect.\n\n---\n" >> "$OUTPUT"
+# ── 4. MANUALE-SITO (indice + 21 parti) ──────────────────────────────────────
+echo -e "\n## 4. MANUALE-SITO — Manuale operativo completo (split in 21 file)\n\nIl manuale operativo è stato spezzato a maggio 2026 in 18 file separati nella cartella \`manuale/\` (1 file per Parte) per facilitare manutenzione e revisioni puntuali. \`MANUALE-SITO.md\` nella root resta come indice/redirect.\n\n---\n" >> "$OUTPUT"
 include_file "MANUALE-SITO.md" "4.0 MANUALE-SITO.md (indice)"
 include_file "manuale/README.md" "4.1 manuale/README.md (indice navigabile)"
-# Includi tutte le 18 parti nell'ordine
+# Includi tutte le 21 parti nell'ordine
 sub_idx=2
 for parte_file in $(ls manuale/parte-*.md 2>/dev/null | sort); do
     parte_name="$(basename "$parte_file" .md)"

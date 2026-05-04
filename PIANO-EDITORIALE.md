@@ -107,6 +107,7 @@ Ogni data fissa si ripete ogni anno con aggiornamenti minimi. Preparare le bozze
 - Esercitazione regionale se programmata (badge: Esercitazione)
 - Resoconto corsi primaverili del Gruppo (badge: Formazione)
 - Chiusura anno scolastico: bilancio kit scuole (badge: Formazione)
+- Lancio iniziativa **Kit Calamità per categorie vulnerabili** — 12 kit operativi A4 stampabili (bambini, anziani, RSA, disabilità, neonati, gravidanza, animali, caregiver, terapie salvavita, senza dimora, italiano L2, volontari PC) basati su standard internazionali NCTSN/IFRC/WHO/Sphere/FEANTSA/UNHCR/IOM/IFE/MISP/WSAVA/Eurocarers (badge: Formazione)
 
 ### Giugno
 - **1 giugno** — Avvio campagna AIB nel Lazio (badge: Prevenzione)
