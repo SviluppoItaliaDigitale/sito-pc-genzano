@@ -4,25 +4,30 @@ Questo file raccoglie le regole su **template** principali, **menu di navigazion
 
 ## Menu di navigazione principale (mega-menu accorpato)
 
-Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `themes/flavour-pcgenzano/layouts/partials/navbar.html`. Struttura a **Voci di primo livello**, di cui 4 dropdown:
+Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `themes/flavour-pcgenzano/layouts/partials/navbar.html`. Struttura a **Voci di primo livello**, di cui 5 dropdown (riorganizzazione v3 maggio 2026):
 
 | Voce | Tipo | Contenuto |
 |---|---|---|
 | Home | diretta | `/` |
-| Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare |
-| Educazione e Inclusione ▾ | dropdown | Kit per le scuole, Schede Stampabili, Giochi della Sicurezza, **Abili a Proteggere**, **Facile da Leggere**, Glossario |
+| Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare, **Kit pronti per situazioni vulnerabili** |
+| Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza |
+| Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
-| Risorse ▾ | dropdown | FAQ, Strumenti in Tempo Reale, Area Download, Normativa, Mappa del Sito |
+| Risorse ▾ | dropdown | FAQ, Strumenti in Tempo Reale, Area Download, Normativa, **Glossario**, Mappa del Sito |
 | Comunicazioni | diretta | `/comunicazioni/` |
 | Contatti | diretta | `/contatti/` |
 
 Razionale: voci flat erano troppe per mobile e per l'utente in emergenza. L'accorpamento mantiene tutte le pagine raggiungibili in ≤ 2 click ma riduce il rumore visivo.
 
-**Storia del riordino (aprile 2026):** dopo audit di usabilità, la prima versione "voci con Formazione" lasciava 4 buchi gravi:
-- `/abili-a-proteggere/` e `/facile-da-leggere/` raggiungibili solo in 3+ click — paradosso, visto che servono a chi ha più difficoltà;
-- `/strumenti/`, `/area-download/`, `/normativa/`, `/faq/` visibili solo in homepage o footer, perse da chi entra dal motore di ricerca.
+**Storia del riordino — v3 (maggio 2026):** audit di usabilità della struttura v2 (aprile 2026) ha rilevato 4 problemi:
+1. **"Educazione e Inclusione" sovraccarico** (10 voci, oltre Miller 7±2): mescolava materiale didattico per scuole + accessibilità trasversale + Glossario. Splittato in **"Per le scuole"** (6 voci didattiche coerenti) e **"Accessibilità e Supporti"** (2 voci trasversali).
+2. **"Kit Emergenza Schede"** (kit-calamita per cittadini in difficoltà — anziano in evacuazione, caregiver, neogenitore in calamità) era nel posto sbagliato (Educazione). Spostato in **"Per il Cittadino"** e rinominato *"Kit pronti per situazioni vulnerabili"*.
+3. **"Glossario"** è uno strumento di consultazione, non un'area didattica. Spostato in **"Risorse"** dove vivono FAQ, normativa, area download.
+4. **"Schede Stampabili"** era ambiguo (sembravano kit per cittadini): rinominato **"Schede didattiche stampabili"** per chiarezza vs Kit Calamità.
 
-Il dropdown "Formazione" è stato rinominato **"Educazione e Inclusione"** e ha accolto le 2 pagine accessibili. È stato aggiunto un nuovo dropdown **"Risorse"** per le 5 pagine di servizio. Il numero totale di voci di primo livello è salito da 6 a 7, ancora dentro il limite Miller 7±2.
+Il numero totale di voci di primo livello è 8 (Home + 5 dropdown + Comunicazioni + Contatti). Limite Miller superato di 1 voce, accettato perché compensato dalla coerenza interna dei dropdown.
+
+**Storia del riordino — v2 (aprile 2026, mantenuta in v3):** dopo audit precedente, le pagine accessibili (Abili a Proteggere, Facile da Leggere) erano raggiungibili solo in 3+ click. Le pagine di servizio (FAQ, Strumenti, Area Download, Normativa) erano solo in homepage o footer.
 
 **Convenzioni TOML per i dropdown:**
 - Il "padre" ha solo `name`, `identifier` e `weight` (nessun `url`).
@@ -76,11 +81,11 @@ Il sito **non riporta numeri di inventario** dei materiali (schede stampabili, g
 Il menu Hugo (`hugo.toml [[menus.main]]` + `themes/flavour-pcgenzano/layouts/partials/navbar.html`) renderizza la navigazione **solo per le pagine generate da Hugo**. Tutte le pagine HTML statiche fuori da Hugo (`static/formazione/schede-stampabili/`, `static/abili-a-proteggere/`, `static/giochi/`, `static/quizpc/`, `static/formazionepc/`, `static/giochi-bambini/`, ecc. — circa 50+ pagine) iniettano header e footer da `static/app-shared/site-chrome.js`, che ha il menu **hardcoded in JavaScript** e **non si auto-sincronizza** con `hugo.toml`.
 
 **Ogni modifica al menu Hugo richiede un aggiornamento speculare in `site-chrome.js`.** Sezioni da tenere allineate:
-- Voci di primo livello (Home + 4 dropdown + Comunicazioni + Contatti).
-- Identificatori dei dropdown: `navDropdown-per-il-cittadino`, `navDropdown-educazione-inclusione`, `navDropdown-volontariato`, `navDropdown-risorse`.
+- Voci di primo livello (Home + 5 dropdown + Comunicazioni + Contatti).
+- Identificatori dei dropdown: `navDropdown-per-il-cittadino`, `navDropdown-per-le-scuole`, `navDropdown-accessibilita-supporti`, `navDropdown-volontariato`, `navDropdown-risorse`.
 - Sotto-voci di ogni dropdown e relativi URL.
 
-**Why**: ad aprile 2026 il menu è stato riordinato (voci flat → voci con dropdown, "Formazione" → "Educazione e Inclusione", nuovo dropdown "Risorse"). L'aggiornamento Hugo è stato fatto, ma `site-chrome.js` è rimasto col menu vecchio per giorni: la home aveva voci con dropdown, le pagine statiche voci flat. L'utente ha scoperto il drift confrontando due screenshot.
+**Why**: ad aprile 2026 il menu è stato riordinato (voci flat → voci con dropdown). L'aggiornamento Hugo è stato fatto, ma `site-chrome.js` è rimasto col menu vecchio per giorni: la home aveva voci con dropdown, le pagine statiche voci flat. L'utente ha scoperto il drift confrontando due screenshot. Riorganizzazione v3 di maggio 2026 ha aggiornato entrambi simultaneamente.
 
 **Check automatico**: il workflow `audit-sito.yml` § 41 "Coerenza menu Hugo ↔ site-chrome.js" verifica ogni lunedì:
 - Tutti i dropdown dichiarati in `hugo.toml` (`identifier = "..."`) hanno l'`navDropdown-<id>` corrispondente in `site-chrome.js`.

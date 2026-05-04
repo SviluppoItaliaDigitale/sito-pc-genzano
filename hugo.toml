@@ -47,20 +47,37 @@ enableGitInfo = true
   coordinamento = "FEPIVOL"
 
 # Menu principale di navigazione (mega-menu accorpato)
-# 7 voci di primo livello: 3 dirette (Home, Comunicazioni, Contatti) e 4
-# dropdown (Per il Cittadino, Educazione e Inclusione, Volontariato, Risorse).
-# Razionale del riordino di aprile 2026: dopo audit di usabilità, le pagine
-# di accessibilità inclusiva (Abili a Proteggere, Facile da Leggere) erano
-# raggiungibili solo in 3+ click — paradosso, visto che servono a chi ha
-# più difficoltà. Spostate sotto "Educazione e Inclusione". Le pagine di
-# servizio (FAQ, Strumenti, Area Download, Normativa) erano solo in homepage
-# o footer: raccolte sotto un nuovo dropdown "Risorse" sempre disponibile.
+# 8 voci di primo livello: 3 dirette (Home, Comunicazioni, Contatti) e 5
+# dropdown (Per il Cittadino, Per le scuole, Accessibilità e Supporti,
+# Volontariato, Risorse).
+#
+# Razionale del riordino di maggio 2026 (v3): l'audit di usabilità ha
+# rilevato 3 problemi sull'organizzazione di aprile 2026:
+# 1) "Educazione e Inclusione" sovraccarico (10 voci, oltre Miller 7±2),
+#    con materiale didattico per scuole + accessibilità trasversale + uno
+#    strumento (glossario) tutto mescolato → splittato in "Per le scuole"
+#    e "Accessibilità e Supporti".
+# 2) "Kit Emergenza Schede" (kit-calamita per cittadini in difficoltà:
+#    anziano in evacuazione, caregiver di allettato, neogenitore in
+#    calamità) era nel posto sbagliato (Educazione) → spostato in
+#    "Per il Cittadino" e rinominato "Kit pronti per situazioni vulnerabili".
+# 3) "Glossario" è uno strumento, non un'area didattica → spostato in
+#    "Risorse" dove vivono FAQ, normativa, area download.
+# 4) "Schede Stampabili" era ambiguo (sembravano kit cittadini) → rinominato
+#    "Schede didattiche stampabili" per chiarezza vs Kit Calamità.
+#
+# Razionale del riordino precedente di aprile 2026 (v2, mantenuto): le
+# pagine di accessibilità inclusiva (Abili a Proteggere, Facile da Leggere)
+# erano raggiungibili solo in 3+ click — paradosso, visto che servono a
+# chi ha più difficoltà. Le pagine di servizio (FAQ, Strumenti, Area
+# Download, Normativa) erano solo in homepage o footer: raccolte sotto
+# un nuovo dropdown "Risorse" sempre disponibile.
 [[menus.main]]
   name = "Home"
   url = "/"
   weight = 1
 
-# --- Dropdown: Per il Cittadino ---
+# --- Dropdown: Per il Cittadino (7 voci) ---
 [[menus.main]]
   name = "Per il Cittadino"
   identifier = "per-il-cittadino"
@@ -102,79 +119,86 @@ enableGitInfo = true
   parent = "per-il-cittadino"
   weight = 6
 
-# --- Dropdown: Educazione e Inclusione ---
-# (era "Formazione" fino ad aprile 2026; rinominata per dare visibilità
-# alle attività accessibili — prima nascoste in fondo a /formazione/)
+# Spostato da "Educazione e Inclusione" a maggio 2026: il Kit Calamità è
+# rivolto al cittadino in situazione di vulnerabilità (anziano in casa,
+# caregiver, gravidanza, terapie salvavita...) non alla scuola. Vive sotto
+# "Per il Cittadino" dove l'utente lo cerca naturalmente.
 [[menus.main]]
-  name = "Educazione e Inclusione"
-  identifier = "educazione-inclusione"
-  weight = 3
+  name = "Kit pronti per situazioni vulnerabili"
+  url = "/formazione/kit-calamita/"
+  parent = "per-il-cittadino"
+  weight = 7
 
+# --- Dropdown: Per le scuole (6 voci didattiche) ---
+# (rinominato da "Educazione e Inclusione" a maggio 2026 — splittato per
+# alleggerire e separare le 3 vocazioni mescolate: didattica scolastica,
+# accessibilità trasversale, strumento di consultazione)
 [[menus.main]]
-  name = "Percorsi didattici pronti"
-  url = "/formazione/percorsi-didattici/"
-  parent = "educazione-inclusione"
-  weight = 1
+  name = "Per le scuole"
+  identifier = "per-le-scuole"
+  weight = 3
 
 [[menus.main]]
   name = "Kit per le scuole"
   url = "/formazione/"
-  parent = "educazione-inclusione"
+  parent = "per-le-scuole"
+  weight = 1
+
+[[menus.main]]
+  name = "Percorsi didattici pronti"
+  url = "/formazione/percorsi-didattici/"
+  parent = "per-le-scuole"
   weight = 2
 
 [[menus.main]]
-  name = "Schede Stampabili"
+  name = "Schede didattiche stampabili"
   url = "/formazione/schede-stampabili/"
-  parent = "educazione-inclusione"
+  parent = "per-le-scuole"
   weight = 3
-
-[[menus.main]]
-  name = "Kit Emergenza Schede"
-  url = "/formazione/kit-calamita/"
-  parent = "educazione-inclusione"
-  weight = 31
-
-[[menus.main]]
-  name = "Storie e Racconti"
-  url = "/formazione/storie-e-racconti/"
-  parent = "educazione-inclusione"
-  weight = 4
 
 [[menus.main]]
   name = "Per i docenti — Ed. Civica"
   url = "/formazione/educazione-civica/"
-  parent = "educazione-inclusione"
-  weight = 35
+  parent = "per-le-scuole"
+  weight = 4
+
+[[menus.main]]
+  name = "Storie e Racconti"
+  url = "/formazione/storie-e-racconti/"
+  parent = "per-le-scuole"
+  weight = 5
 
 [[menus.main]]
   name = "Giochi della Sicurezza"
   url = "/giochi/"
-  parent = "educazione-inclusione"
-  weight = 5
+  parent = "per-le-scuole"
+  weight = 6
+
+# --- Dropdown: Accessibilità e Supporti (2 voci) ---
+# (nuovo dropdown maggio 2026 — separato da Educazione per dare visibilità
+# alle attività accessibili trasversali, non specifiche della scuola)
+[[menus.main]]
+  name = "Accessibilità e Supporti"
+  identifier = "accessibilita-supporti"
+  weight = 4
 
 [[menus.main]]
   name = "Abili a Proteggere"
   url = "/abili-a-proteggere/"
-  parent = "educazione-inclusione"
-  weight = 6
+  parent = "accessibilita-supporti"
+  weight = 1
 
 [[menus.main]]
   name = "Facile da Leggere"
   url = "/facile-da-leggere/"
-  parent = "educazione-inclusione"
-  weight = 7
-
-[[menus.main]]
-  name = "Glossario"
-  url = "/glossario/"
-  parent = "educazione-inclusione"
-  weight = 8
+  parent = "accessibilita-supporti"
+  weight = 2
 
 # --- Dropdown: Volontariato ---
 [[menus.main]]
   name = "Volontariato"
   identifier = "volontariato"
-  weight = 4
+  weight = 5
 
 [[menus.main]]
   name = "Diventa Volontario"
@@ -188,14 +212,14 @@ enableGitInfo = true
   parent = "volontariato"
   weight = 2
 
-# --- Dropdown: Risorse (nuovo aprile 2026) ---
+# --- Dropdown: Risorse (6 voci, +Glossario maggio 2026) ---
 # Raccoglie pagine di servizio prima visibili solo dalla homepage o dal
 # footer. Pensate per chi entra dal motore di ricerca o da un articolo
-# specifico e vuole comunque trovare FAQ, strumenti, normativa.
+# specifico e vuole comunque trovare FAQ, strumenti, normativa, glossario.
 [[menus.main]]
   name = "Risorse"
   identifier = "risorse"
-  weight = 5
+  weight = 6
 
 [[menus.main]]
   name = "FAQ"
@@ -221,22 +245,31 @@ enableGitInfo = true
   parent = "risorse"
   weight = 4
 
+# Spostato da "Educazione e Inclusione" a maggio 2026: il glossario è uno
+# strumento di consultazione, non un'area didattica. Vive in Risorse
+# accanto a FAQ, normativa, area download.
+[[menus.main]]
+  name = "Glossario"
+  url = "/glossario/"
+  parent = "risorse"
+  weight = 5
+
 [[menus.main]]
   name = "Mappa del Sito"
   url = "/mappa-sito/"
   parent = "risorse"
-  weight = 5
+  weight = 6
 
 # --- Voci dirette ---
 [[menus.main]]
   name = "Comunicazioni"
   url = "/comunicazioni/"
-  weight = 6
+  weight = 7
 
 [[menus.main]]
   name = "Contatti"
   url = "/contatti/"
-  weight = 7
+  weight = 8
 
 # Menu footer — Link utili
 [[menus.footer]]
