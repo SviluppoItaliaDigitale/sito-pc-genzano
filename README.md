@@ -69,6 +69,35 @@ Tutti i giochi della sezione **Giochi della Sicurezza** hanno un sistema di onbo
 
 Pattern ispirato a campagna DPC "Io non rischio" e linee guida AGID per accessibilità cognitiva. Riduce l'abbandono dei bambini che giocano senza nozioni di base.
 
+### Kit Calamità per categorie vulnerabili (`/formazione/kit-calamita/`)
+
+Iniziativa autonoma del Gruppo (maggio 2026): **12 kit operativi A4 stampabili** per assistere persone particolarmente vulnerabili durante una calamità.
+
+Hub centrale: `/formazione/kit-calamita/` — cruscotto cruscotto-style: il visitatore sceglie la propria situazione ("Sono...") e arriva in 1 click al kit giusto.
+
+**12 kit pubblicati**:
+
+| Kit | Standard adottati |
+|---|---|
+| 👧 Bambini 3-14 anni | NCTSN PFA Children + IFRC + WHO/UNHCR + Sphere 2018 |
+| 👶 Neonati 0-3 anni | IFE Core Group v3.0 + WHO Code latte materno + Sphere |
+| 👴 Anziani in casa | HelpAge International + WHO mhGAP + SIGG/AIP |
+| 🤝 Caregiver familiari | L. 205/2017 + Carta Eurocarers 2014 + WHO Self-care 2022 |
+| 🏥 Strutture sanitarie / RSA | Min. Salute + AGENAS + WHO Hospital Safety Index |
+| ♿ Disabilità adulti | CRPD ONU art. 11 + L. 18/2009 + WHO Disability 2013 |
+| 🩺 Terapie salvavita | WHO Health Cluster + Sphere § Essential health + ARERA 295/2018 |
+| 🤰 Gravidanza e neomamme | MISP IAWG 2018 + WHO Pregnancy + UNFPA + Sphere |
+| 🏚️ Senza fissa dimora | FEANTSA ETHOS + FIO.PSD + Min. Lavoro 2015 + Housing First |
+| 🌐 Italiano L2 / stranieri | UNHCR CwC 2020 + IOM CCCM + Sphere § Communication |
+| 🐕 Animali domestici | D.Lgs. 1/2018 art. 12 + L. 281/1991 + WSAVA |
+| 🟢 Volontari PC (auto-cura) | IFRC Caring 2015 + NCTSN STS + WHO mhGAP + ProQOL-5 |
+
+Ogni kit ha guida operatori + carte d'identità di emergenza compilabili + checklist evacuazione, tutto in formato A4 con font **eco-print URW Gothic L** (~30% inchiostro in meno di Arial). I giochi (cruciverba, sudoku) hanno la **soluzione capovolta** in fondo alla scheda (paradigma enigmistico).
+
+Materiali **rilasciati gratuitamente**, liberi e riutilizzabili da altri Comuni/Gruppi PC. La citazione del nostro Gruppo è gradita ma non obbligatoria.
+
+Specifiche complete in [`manuale/parte-20-kit-calamita-categorie-vulnerabili.md`](manuale/parte-20-kit-calamita-categorie-vulnerabili.md).
+
 ### File in `archetypes/` (template Hugo)
 
 | File | A cosa serve |

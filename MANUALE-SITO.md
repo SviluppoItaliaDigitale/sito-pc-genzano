@@ -39,6 +39,7 @@
 | Parte 17 | Coach didattico nei giochi e TTS esteso (maggio 2026) | [`manuale/parte-17-coach-didattico-nei-giochi-e-tts-esteso-maggio-2026.md`](manuale/parte-17-coach-didattico-nei-giochi-e-tts-esteso-maggio-2026.md) |
 | Parte 18 | Lettura accessibile per fasce deboli: TTS dappertutto, glossario inline, tempo lettura, sillabazione (maggio 2026) | [`manuale/parte-18-lettura-accessibile-maggio-2026.md`](manuale/parte-18-lettura-accessibile-maggio-2026.md) |
 | Parte 19 | Agenti specializzati Claude Code (maggio 2026) — 5 profili professionali virtuali per redazione, immagini, issue, deploy, social | [`manuale/parte-19-agenti-specializzati.md`](manuale/parte-19-agenti-specializzati.md) |
+| Parte 20 | Kit Calamità per categorie vulnerabili (maggio 2026) — 12 kit operativi A4 stampabili (bambini, anziani, RSA, disabilità, neonati, gravidanza, animali, caregiver, terapie salvavita, senza dimora, italiano L2, volontari PC) basati su standard internazionali NCTSN, IFRC, WHO, Sphere, FEANTSA, UNHCR, IOM, IFE, MISP, WSAVA, Eurocarers | [`manuale/parte-20-kit-calamita-categorie-vulnerabili.md`](manuale/parte-20-kit-calamita-categorie-vulnerabili.md) |
 
 > 👉 **[Vai all'indice completo del manuale (`manuale/README.md`)](manuale/README.md)**
 
