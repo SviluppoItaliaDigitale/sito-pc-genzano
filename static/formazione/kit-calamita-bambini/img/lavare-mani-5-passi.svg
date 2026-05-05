@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Lavarsi le mani in cinque passi</title>
+  <desc id="desc">Scheda illustrata in bianco e nero con cinque passaggi semplici per lavarsi le mani: bagna, sapone, strofina, risciacqua, asciuga.</desc>
+  <defs><style>.l{fill:none;stroke:#111;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.s{fill:#fff;stroke:#111;stroke-width:5;stroke-linejoin:round}.t{font-family:Arial,Helvetica,sans-serif;font-weight:700;fill:#111}.n{font-family:Arial,Helvetica,sans-serif;font-weight:700;fill:#111;font-size:42px}</style></defs>
+  <rect x="35" y="35" width="1130" height="730" rx="28" class="l"/>
+  <text x="600" y="90" text-anchor="middle" font-size="42" class="t">LAVO LE MANI IN 5 PASSI</text>
+  <text x="600" y="128" text-anchor="middle" font-size="24" class="t">Prima di mangiare, dopo il bagno, quando torno da fuori</text>
+  <g transform="translate(85 175)">
+    <rect width="310" height="230" rx="18" class="s"/><circle cx="48" cy="48" r="29" class="s"/><text x="48" y="62" text-anchor="middle" class="n">1</text><text x="155" y="48" text-anchor="middle" font-size="28" class="t">BAGNA</text>
+    <path d="M155 78 C132 118 124 150 124 171 C124 205 186 205 186 171 C186 150 178 118 155 78 Z" class="l"/><path d="M112 158 Q155 135 198 158" class="l"/><path d="M128 198 Q155 180 182 198" class="l"/>
+  </g>
+  <g transform="translate(445 175)">
+    <rect width="310" height="230" rx="18" class="s"/><circle cx="48" cy="48" r="29" class="s"/><text x="48" y="62" text-anchor="middle" class="n">2</text><text x="170" y="48" text-anchor="middle" font-size="28" class="t">SAPONE</text>
+    <rect x="105" y="86" width="130" height="90" rx="15" class="l"/><path d="M130 86 V58 H210 V86" class="l"/><circle cx="148" cy="128" r="10" class="l"/><circle cx="190" cy="148" r="13" class="l"/><circle cx="168" cy="170" r="8" class="l"/>
+  </g>
+  <g transform="translate(805 175)">
+    <rect width="310" height="230" rx="18" class="s"/><circle cx="48" cy="48" r="29" class="s"/><text x="48" y="62" text-anchor="middle" class="n">3</text><text x="170" y="48" text-anchor="middle" font-size="28" class="t">STROFINA</text>
+    <path d="M98 145 C122 90 172 80 220 118" class="l"/><path d="M222 132 C182 112 142 128 112 172" class="l"/><path d="M128 112 L100 74 M160 103 L150 60 M194 110 L220 75" class="l"/><path d="M128 180 L105 205 M165 188 L160 215 M205 174 L242 200" class="l"/>
+  </g>
+  <g transform="translate(265 470)">
+    <rect width="310" height="230" rx="18" class="s"/><circle cx="48" cy="48" r="29" class="s"/><text x="48" y="62" text-anchor="middle" class="n">4</text><text x="170" y="48" text-anchor="middle" font-size="28" class="t">RISCIACQUA</text>
+    <path d="M170 75 C145 120 135 150 135 176 C135 214 205 214 205 176 C205 150 195 120 170 75 Z" class="l"/><path d="M92 102 H248" class="l"/><path d="M120 140 Q170 112 220 140" class="l"/><path d="M122 186 Q170 165 218 186" class="l"/>
+  </g>
+  <g transform="translate(625 470)">
+    <rect width="310" height="230" rx="18" class="s"/><circle cx="48" cy="48" r="29" class="s"/><text x="48" y="62" text-anchor="middle" class="n">5</text><text x="170" y="48" text-anchor="middle" font-size="28" class="t">ASCIUGA</text>
+    <rect x="118" y="82" width="112" height="128" rx="8" class="l"/><path d="M118 112 H230 M118 142 H230 M118 172 H230" class="l"/><path d="M96 115 C125 130 150 150 170 188" class="l"/><path d="M235 112 C210 132 198 156 190 190" class="l"/>
+  </g>
+</svg>
