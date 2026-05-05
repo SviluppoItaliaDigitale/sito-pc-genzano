@@ -22,6 +22,17 @@ toc: true
 </div>
 </div>
 
+<div class="card border-info mb-4">
+<div class="card-body bg-info bg-opacity-10 p-4">
+<h2 class="h5 text-dark"><i class="bi bi-telegram me-2" aria-hidden="true"></i>Ricevi le allerte sul telefono — canale Telegram</h2>
+<p class="mb-2">Iscriviti al <strong>canale Telegram ufficiale</strong> del Gruppo Comunale: ricevi una notifica sul telefono <strong>quando il livello di allerta cambia</strong> (verde → gialla → arancione → rossa) o quando viene attivata una <strong>modalità emergenza</strong> per il territorio. Niente spam: il canale invia messaggi <strong>solo</strong> per cambiamenti significativi dello stato.</p>
+<p class="mb-2 small text-muted">L'iscrizione è anonima: Telegram non ci dice chi è iscritto, gestisce la lista al posto nostro. Puoi disiscriverti in qualsiasi momento dal canale stesso.</p>
+<a href="https://t.me/pcalfagenzano" target="_blank" rel="noopener noreferrer" class="btn btn-info">
+  <i class="bi bi-telegram me-1" aria-hidden="true"></i> Iscriviti al canale Telegram
+</a>
+</div>
+</div>
+
 ## Mappa meteo interattiva
 
 **Strumento di consultazione** che mostra radar, precipitazioni, vento, temperatura e altri parametri meteo centrati su Genzano di Roma. Dal menu del widget puoi cambiare il tipo di layer e la scala temporale.

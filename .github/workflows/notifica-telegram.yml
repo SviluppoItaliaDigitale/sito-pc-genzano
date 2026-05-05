@@ -1,0 +1,55 @@
+name: "📲 Notifica Telegram (allerta + emergenza)"
+
+# Manda messaggio al canale Telegram del Gruppo quando cambia lo stato di
+# allerta meteo (livello verde/gialla/arancione/rossa) o emergenza in corso.
+#
+# Si triggera SOLO quando vengono modificati i due file di stato. Non manda
+# nulla per modifiche di codice, contenuti, articoli, schede, ecc.
+#
+# Configurazione richiesta (Settings → Secrets and variables → Actions):
+#   TELEGRAM_BOT_TOKEN  — ottenuto da @BotFather
+#   TELEGRAM_CHAT_ID    — ID del canale (numero negativo per i canali, es. -1001234567890)
+#
+# Se i secrets mancano, lo script logga un avviso e termina pulito (no fail).
+#
+# Logica anti-spam in scripts/notifica-telegram.py:
+#   - allerta.json: solo se cambia il LIVELLO (non per ultimo_controllo periodico)
+#   - emergenza.json: solo per attivazione, cessazione o aggiornamento sostanziale
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/allerta.json'
+      - 'data/emergenza.json'
+      - 'scripts/notifica-telegram.py'
+      - '.github/workflows/notifica-telegram.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "notifica-telegram"
+  cancel-in-progress: false
+
+jobs:
+  notifica:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout (con cronologia per il diff)"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: "🐍 Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: "📲 Invia notifica Telegram se serve"
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python3 scripts/notifica-telegram.py
