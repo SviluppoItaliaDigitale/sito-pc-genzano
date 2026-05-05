@@ -38,6 +38,8 @@ Il Comune di Genzano di Roma è classificato in **zona sismica 2B** (media sismi
 
 I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. Diffida di chi afferma di poter prevedere un terremoto. L'unico approccio efficace è **essere sempre preparati**.
 
+> 🎒 **Kit consigliato per questo rischio**: il [Kit "Vai" — evacuazione rapida](/rischi-prevenzione/kit-emergenza/#kit-vai) è essenziale per il rischio sismico. Tienilo pronto vicino all'ingresso, con scarpe robuste e torcia accessibili anche al buio. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
+
 ## Cosa fare PRIMA del terremoto
 
 - Fissa alle pareti mobili alti, librerie e scaffali con tasselli o staffe

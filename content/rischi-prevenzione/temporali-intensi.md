@@ -32,6 +32,8 @@ Mappa dei fulmini rilevati in Europa, aggiornata in tempo reale dalla rete volon
 
 L'area dei Castelli Romani è particolarmente soggetta a temporali convettivi, specialmente nel periodo maggio-ottobre. La conformazione collinare e la vicinanza ai laghi vulcanici favoriscono lo sviluppo di celle temporalesche molto localizzate ma intense, con il rischio di allagamenti lampo nelle zone più basse del territorio.
 
+> 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) per restare autonomi se il temporale provoca blackout o allagamenti. Se viaggi spesso, tieni anche il [Kit "Auto"](/rischi-prevenzione/kit-emergenza/#kit-auto) nel bagagliaio: una cella temporalesca improvvisa può bloccarti in strada. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
+
 ## Cosa fare PRIMA
 
 - Informati sulle previsioni meteo e sullo stato di allerta

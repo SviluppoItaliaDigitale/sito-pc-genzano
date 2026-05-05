@@ -19,6 +19,8 @@ Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani
 - Cenere o frammenti vegetali che cadono dall'alto
 - Animali che fuggono in una direzione precisa
 
+> 🎒 **Kit consigliato per questo rischio**: il [Kit "Vai" — evacuazione rapida](/rischi-prevenzione/kit-emergenza/#kit-vai) è essenziale, perché un incendio boschivo può imporre un'evacuazione in pochi minuti. Tieni anche il [Kit "Auto"](/rischi-prevenzione/kit-emergenza/#kit-auto) sempre nel bagagliaio: nei mesi estivi può servire se resti bloccato lungo strade chiuse dal fumo. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
+
 ## Cosa fare PRIMA — Prevenire
 
 - **Non gettare** mai mozziconi di sigaretta o fiammiferi accesi, soprattutto dall'auto

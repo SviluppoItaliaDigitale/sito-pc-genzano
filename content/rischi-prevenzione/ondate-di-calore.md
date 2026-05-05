@@ -19,6 +19,8 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 - Nausea, crampi muscolari, debolezza
 - Nei casi più gravi: perdita di conoscenza (colpo di calore)
 
+> 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è utile per la sua scorta d'acqua (almeno 12 litri a persona) e i farmaci. In caso di blackout estivo prolungato — molto frequente quando i condizionatori sovraccaricano la rete — saper restare autonomi 3 giorni è cruciale soprattutto per anziani e persone con patologie croniche. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
+
 ## Cosa fare PRIMA
 
 - Informati sulle previsioni e sugli eventuali bollettini del Ministero della Salute

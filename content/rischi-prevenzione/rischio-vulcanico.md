@@ -54,6 +54,8 @@ L'**anidride carbonica (CO₂)** è un gas **incolore, inodore, più pesante del
 
 L'aria all'aperto, ventilata, **non** è un problema: il pericolo è confinato.
 
+> 🎒 **Kit consigliato per questo rischio**: il [Kit "Vai"](/rischi-prevenzione/kit-emergenza/#kit-vai) per un'eventuale evacuazione preventiva e il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) per restare autonomi se la situazione lo richiede. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
+
 ## Cosa fare PRIMA
 
 - Conoscere il proprio territorio: se vivi o lavori vicino a Cava dei Selci, Solforata di Pomezia o aree note, informati presso il Comune e l'ARPA Lazio.

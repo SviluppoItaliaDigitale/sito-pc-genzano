@@ -21,6 +21,8 @@ Genzano di Roma si trova su un territorio collinare di origine vulcanica, con ve
 - Rumori insoliti dal sottosuolo (possibili indicatori di frana)
 - Alberi che si inclinano improvvisamente
 
+> 🎒 **Kit consigliato per questo rischio**: prepara sia il [Kit "Vai"](/rischi-prevenzione/kit-emergenza/#kit-vai) (se devi evacuare verso un'area sicura) sia il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) (se resti ai piani alti dell'abitazione isolato dall'acqua). Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
+
 ## Cosa fare PRIMA — Prepararsi
 
 - Informati sullo stato di allerta consultando la [pagina Allerte Meteo](/allerte-meteo/)
