@@ -1,5 +1,4 @@
 ---
-
 title: "Crea il tuo Piano di Emergenza Familiare"
 description: "Crea e stampa il tuo piano di emergenza familiare personalizzato. Tutti i dati restano solo sul tuo computer."
 tts: true
@@ -9,19 +8,39 @@ aliases:
   - /pianofamiliare/
 toc: true
 ---
-La sicurezza parte da te e dalla tua famiglia. Dedica pochi minuti a compilare questo modulo: lo strumento genererà un piano personalizzato che potrai stampare e conservare in un luogo sicuro. **Tutti i dati inseriti restano solo sul tuo computer** — non vengono inviati né salvati da nessuna parte.
+La sicurezza parte da te e dalla tua famiglia. Dedica pochi minuti a compilare questo modulo: lo strumento genererà un piano personalizzato che potrai stampare e conservare in un luogo sicuro. **Tutti i dati inseriti restano solo sul tuo computer**: non vengono inviati al sito, non vengono salvati online e non vengono trasmessi al Gruppo.
+
+Il Piano di Emergenza Familiare è utile perché, durante un evento improvviso, potresti non avere tempo per decidere con calma dove andare, chi chiamare, cosa prendere e come aiutare bambini, anziani, persone con disabilità o animali domestici.
+
+> Compila il piano insieme alla famiglia, rileggilo almeno una volta l'anno e aggiornalo ogni volta che cambiano casa, scuola, lavoro, numeri di telefono, farmaci, ausili o composizione del nucleo familiare.
 
 ## Perché serve un Piano Familiare
 
 Durante un'emergenza non c'è tempo per organizzarsi. Se la tua famiglia ha già discusso e concordato cosa fare, dove trovarsi e chi contattare, ognuno saprà come comportarsi anche se non siete insieme in quel momento.
 
-Un piano familiare efficace risponde a tre domande:
+Un piano familiare efficace risponde a cinque domande:
 
-1. **Dove ci troviamo?** — I punti di ritrovo concordati
-2. **Chi chiamiamo?** — Il contatto di riferimento fuori città
-3. **Cosa portiamo?** — Dove si trova il kit di emergenza
+1. **Dove ci troviamo?** — I punti di ritrovo concordati.
+2. **Chi chiamiamo?** — Il contatto di riferimento fuori città o fuori zona.
+3. **Cosa portiamo?** — Dove si trova il kit di emergenza.
+4. **Chi ha bisogno di aiuto?** — Bambini, anziani, persone con disabilità, terapie, animali domestici.
+5. **Cosa facciamo prima di uscire?** — Gas, acqua, quadro elettrico, documenti, farmaci e chiavi, solo se si può fare in sicurezza.
 
-Il modello che proponiamo qui segue le **campagne nazionali del Dipartimento della Protezione Civile** ("Io non rischio"). Lo schema dei punti di ritrovo, del contatto fuori area e dell'attenzione ai familiari fragili recepisce anche i principi della norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*, che tratta proprio la preparazione dell'unità famiglia all'evacuazione.
+Il modello proposto segue l'impostazione delle campagne nazionali del Dipartimento della Protezione Civile, in particolare la preparazione familiare, il contatto fuori area, i punti di ritrovo e l'attenzione alle persone fragili. È inoltre ispirato a buone pratiche internazionali sulla pianificazione familiare in caso di evacuazione.
+
+## Prima di compilare
+
+Tieni a portata di mano:
+
+- numeri di telefono aggiornati dei familiari;
+- contatto di una persona fuori città o fuori zona;
+- indirizzo dei punti di ritrovo scelti;
+- elenco dei farmaci abituali e dei contatti sanitari essenziali;
+- informazioni su ausili, dispositivi, allergie o bisogni specifici;
+- dati utili per animali domestici, veterinario e trasportino;
+- posizione del kit di emergenza, delle chiavi, del quadro elettrico e dei rubinetti principali.
+
+Non inserire più dati personali o sanitari del necessario. Il piano stampato deve essere utile in emergenza, ma va conservato con attenzione perché può contenere informazioni sensibili.
 
 ## Compila il tuo Piano
 
@@ -96,15 +115,15 @@ Il modello che proponiamo qui segue le **campagne nazionali del Dipartimento del
 <div class="row g-3 mb-3">
 <div class="col-md-6">
 <label for="farmaci" class="form-label">Farmaci indispensabili</label>
-<input type="text" class="form-control" id="farmaci" placeholder="Es. Insulina, antipertensivo...">
+<input type="text" class="form-control" id="farmaci" placeholder="Es. insulina, farmaco salvavita, terapia abituale...">
 </div>
 <div class="col-md-6">
 <label for="ausili" class="form-label">Ausili o necessità particolari</label>
-<input type="text" class="form-control" id="ausili" placeholder="Es. Sedia a rotelle, bombola O2...">
+<input type="text" class="form-control" id="ausili" placeholder="Es. sedia a rotelle, apparecchio acustico, ossigenoterapia prescritta...">
 </div>
 <div class="col-12">
 <label for="note" class="form-label">Note aggiuntive</label>
-<textarea class="form-control" id="note" rows="2" placeholder="Es. Bambino allergico alle arachidi; gatto che si spaventa..."></textarea>
+<textarea class="form-control" id="note" rows="2" placeholder="Es. allergia nota; animale che si spaventa; persona che ha bisogno di essere accompagnata..."></textarea>
 </div>
 </div>
 
@@ -124,9 +143,9 @@ Il modello che proponiamo qui segue le **campagne nazionali del Dipartimento del
 <div id="piano-contenuto"></div>
 <div class="piano-numeri text-center mt-4 p-3">
 <strong>Numeri di Emergenza</strong><br>
-<strong>112</strong> Numero Unico Emergenze (NUE) &mdash; valido nel Lazio per qualsiasi emergenza<br>
-<strong>803 555</strong> Sala Operativa Protezione Civile Lazio &mdash; segnalazioni non urgenti<br>
-<small class="text-muted">Conservare in un luogo accessibile a tutti i familiari. Aggiornare almeno una volta all'anno.</small>
+<strong>112</strong> Numero Unico Europeo per le emergenze<br>
+<strong>803 555</strong> Sala Operativa Protezione Civile Lazio &mdash; segnalazioni secondo le indicazioni regionali<br>
+<small class="text-muted">Conservare in un luogo accessibile ai familiari ma protetto. Aggiornare almeno una volta all'anno.</small>
 </div>
 <div id="piano-print-appendice"></div>
 </div>
@@ -142,47 +161,65 @@ Il modello che proponiamo qui segue le **campagne nazionali del Dipartimento del
 
 {{< pittogramma src="/pittogrammi/arasaac/bambino.png" alt="Pittogramma: bambino" size="medium" >}}
 
-- Spiega ai bambini cosa potrebbe succedere, con parole semplici e senza spaventarli
-- Assicurati che sappiano il loro **nome completo**, **indirizzo** e almeno **un numero di telefono** da chiamare
-- Insegna loro a riconoscere il suono di un allarme
-- Fai delle "prove" giocando a raggiungere il punto di ritrovo
-- Metti un documento identificativo nel loro zainetto
+- Spiega ai bambini cosa potrebbe succedere con parole semplici, senza immagini o racconti spaventosi.
+- Assicurati che sappiano il loro **nome completo**, **indirizzo** e almeno **un numero di telefono** da chiamare.
+- Insegna loro a riconoscere il suono di un allarme e a seguire l'adulto di riferimento.
+- Fai piccole prove in forma di gioco per raggiungere il punto di ritrovo.
+- Metti un documento identificativo o un contatto utile nello zainetto, se adatto all'età.
+- Prepara un piccolo oggetto rassicurante: peluche, libro, gioco semplice o foto familiare.
 
 ## Consigli per famiglie con anziani
 
 {{< pittogramma src="/pittogrammi/arasaac/anziano.png" alt="Pittogramma: persona anziana" size="medium" >}}
 
-- Verifica che le vie di fuga dalla casa siano accessibili e senza ostacoli
-- Tieni una lista scritta dei farmaci e dei dosaggi sempre aggiornata
-- Lascia una copia delle chiavi di casa a un vicino di fiducia
-- Programma il telefono con i numeri di emergenza in memoria rapida
-- Se la persona è sola, organizza un sistema di "chiamata giornaliera" con un familiare o un vicino
+- Verifica che le vie di fuga dalla casa siano accessibili e senza ostacoli.
+- Tieni una lista scritta e aggiornata dei farmaci abituali, secondo le indicazioni del medico.
+- Lascia una copia delle chiavi di casa a un familiare o vicino di fiducia, se la persona è d'accordo.
+- Programma il telefono con i numeri importanti in memoria rapida.
+- Se la persona vive sola, organizza una verifica periodica con un familiare, un vicino o un caregiver.
+- Prepara occhiali, apparecchi acustici, bastone, deambulatore o altri ausili in un punto facile da raggiungere.
 
-## Consigli per persone con disabilità
+## Consigli per persone con disabilità o bisogni specifici
 
-- Includi nel piano tutti gli ausili necessari (sedia a rotelle, apparecchi acustici, protesi)
-- Se dipendi da apparecchiature elettriche, [contatta la ASL](/rischi-prevenzione/persone-necessita-specifiche/) per la lista utenze non disalimentabili
-- Individua almeno due persone (vicini, amici) che possano aiutarti in caso di evacuazione
-- Memorizza i percorsi di uscita accessibili dalla tua abitazione
+- Includi nel piano tutti gli ausili necessari: sedia a rotelle, bastone, apparecchi acustici, protesi, comunicatore o altri dispositivi.
+- Se dipendi da apparecchiature elettriche o dispositivi elettromedicali, concorda in anticipo un piano con medico, servizi sanitari e gestore elettrico.
+- Individua almeno due persone di fiducia che possano aiutare in caso di evacuazione.
+- Verifica percorsi di uscita accessibili e alternative se scale, ascensori o passaggi non sono utilizzabili.
+- Prepara una scheda sintetica con comunicazione, farmaci, allergie, contatti e bisogni essenziali.
 
 ## Consigli per gli animali domestici
 
-- Includi nel kit cibo e acqua per almeno 3 giorni
-- Tieni pronto guinzaglio, trasportino e museruola (se necessaria)
-- Conserva il libretto sanitario con le vaccinazioni aggiornate
-- Identifica in anticipo un luogo dove portare gli animali se la tua casa non è agibile
+- Includi nel kit cibo, acqua, ciotola, sacchetti, farmaci prescritti e oggetti familiari in quantità adeguata.
+- Tieni pronto guinzaglio, pettorina, trasportino e museruola se necessaria.
+- Conserva libretto sanitario, microchip, foto recente e contatto del veterinario.
+- Identifica in anticipo un familiare, amico o luogo adatto dove portare l'animale se la casa non è agibile.
+- Verifica le indicazioni del Comune o del piano locale per l'accoglienza degli animali.
 
 ## Checklist finale
 
 Verifica di aver fatto tutto:
 
-- ☐ Compilato e stampato il Piano Familiare
-- ☐ Individuato le aree di attesa più vicine a casa e al lavoro
-- ☐ Preparato il [kit di emergenza](/rischi-prevenzione/kit-emergenza/)
-- ☐ Concordato i punti di ritrovo con tutti i familiari
-- ☐ Comunicato il piano al contatto di riferimento fuori città
-- ☐ Verificato dove sono i rubinetti del gas/acqua e il quadro elettrico
-- ☐ Scaricato l'app [Where Are U](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/) per le chiamate al 112 con localizzazione automatica
+- ☐ Compilato e stampato il Piano Familiare.
+- ☐ Conservato il piano in un luogo accessibile ai familiari ma protetto.
+- ☐ Individuato le aree di attesa più vicine a casa, scuola e lavoro.
+- ☐ Preparato o aggiornato il [kit di emergenza](/rischi-prevenzione/kit-emergenza/).
+- ☐ Concordato i punti di ritrovo con tutti i familiari.
+- ☐ Comunicata l'esistenza del piano al contatto di riferimento fuori città.
+- ☐ Verificato dove sono rubinetti del gas/acqua e quadro elettrico.
+- ☐ Aggiornati numeri di telefono, farmaci, ausili, documenti e dati degli animali.
+- ☐ Scaricata, se utile, l'app [Where Are U](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/) per le chiamate al 112 con localizzazione.
+- ☐ Riletto il piano con bambini, anziani, caregiver o persone con bisogni specifici.
+
+## Quando aggiornare il piano
+
+Aggiorna il Piano Familiare:
+
+- almeno una volta l'anno;
+- quando cambi casa, scuola, lavoro o numero di telefono;
+- quando cambia la composizione della famiglia;
+- quando cambiano farmaci, terapie, ausili o bisogni specifici;
+- quando arriva o manca un animale domestico;
+- dopo una prova di evacuazione o dopo aver scoperto un problema pratico.
 
 </div>
 
@@ -208,7 +245,6 @@ function generaPiano(){
 
   var h='';
 
-  /* ── Sezione 1: Famiglia ── */
   h+='<h3 class="piano-section-title">La mia Famiglia</h3>';
   h+='<table class="piano-table" role="presentation"><tbody>';
   h+='<tr><td>Cognome</td><td><strong>'+cognome+'</strong></td></tr>';
@@ -217,14 +253,12 @@ function generaPiano(){
   h+='<tr><td>Animali domestici</td><td><strong>'+animali+'</strong></td></tr>';
   h+='</tbody></table>';
 
-  /* ── Sezione 2: Punti di Ritrovo ── */
   h+='<h3 class="piano-section-title">Punti di Ritrovo</h3>';
   h+='<table class="piano-table" role="presentation"><tbody>';
   h+='<tr><td>Vicino casa</td><td><strong>'+vicino+'</strong></td></tr>';
   h+='<tr><td>Lontano da casa</td><td><strong>'+lontano+'</strong></td></tr>';
   h+='</tbody></table>';
 
-  /* ── Sezione 3: Contatti e Risorse ── */
   h+='<h3 class="piano-section-title">Contatti e Risorse</h3>';
   h+='<table class="piano-table" role="presentation"><tbody>';
   h+='<tr><td>Riferimento fuori città</td><td><strong>'+contatto+'</strong></td></tr>';
@@ -233,7 +267,6 @@ function generaPiano(){
   h+='<tr><td>Rubinetti e quadro elettrico</td><td><strong>'+chiusure+'</strong></td></tr>';
   h+='</tbody></table>';
 
-  /* ── Sezione 4: Esigenze specifiche (solo se compilate) ── */
   if(farmaci!=='Nessuno'||ausili!=='Nessuno'||note){
     h+='<h3 class="piano-section-title">Esigenze Specifiche</h3>';
     h+='<table class="piano-table" role="presentation"><tbody>';
@@ -250,7 +283,6 @@ function generaPiano(){
 }
 
 function stampaPiano(){
-  /* Clona consigli e checklist dentro l'area stampabile */
   var source=document.querySelector('.piano-screen-only');
   var target=document.getElementById('piano-print-appendice');
   if(source&&target){
@@ -271,7 +303,6 @@ function stampaPiano(){
     window.removeEventListener('afterprint',handler);
   });
   window.print();
-  /* Fallback per browser senza afterprint */
   setTimeout(function(){
     if(document.body.classList.contains('piano-printing')) cleanup();
   },2000);
