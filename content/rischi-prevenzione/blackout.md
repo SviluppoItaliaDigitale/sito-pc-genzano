@@ -12,6 +12,8 @@ Un blackout prolungato può derivare da eventi meteorologici estremi, guasti all
 
 Il territorio di Genzano, con la sua rete di distribuzione che attraversa aree boschive e collinari, può essere soggetto a interruzioni durante eventi meteo intensi, soprattutto per la caduta di alberi o rami sulle linee elettriche.
 
+> 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è pensato esattamente per questo. Acqua, alimenti che non richiedono cottura, torce, radio a pile, power bank: tutto quello che ti permette di stare autonomo per 3 giorni senza corrente. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
+
 ## Cosa fare PRIMA — Preparati
 
 - Tieni sempre a portata di mano una **torcia elettrica** con pile di scorta

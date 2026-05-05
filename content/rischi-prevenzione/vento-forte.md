@@ -12,6 +12,8 @@ Il vento forte è un fenomeno meteorologico frequente nella zona dei Castelli Ro
 
 Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare durante le perturbazioni atlantiche. La presenza di alberature storiche lungo le strade comunali e nei parchi aumenta il rischio di caduta rami, soprattutto in caso di terreno inzuppato dalle piogge.
 
+> 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è quello giusto: durante un'allerta vento forte si resta al chiuso, e potrebbe esserci un blackout per la caduta di alberi sulle linee elettriche. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
+
 ## Cosa fare PRIMA
 
 - Verifica la stabilità di tende da sole, persiane, antenne e oggetti sui balconi

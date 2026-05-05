@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Checklist Kit di Emergenza — Controllo semestrale</title>
+  <meta name="description" content="Checklist A4 da appendere al frigorifero. Controlla il tuo kit di emergenza ogni 6 mesi: pile, farmaci, alimenti, power bank, documenti.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .ck-tabella {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 0.6rem;
+    }
+    .ck-tabella th, .ck-tabella td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.4rem 0.5rem;
+      text-align: left;
+      font-size: 0.92rem;
+      vertical-align: top;
+    }
+    .ck-tabella th {
+      background: #f0f4f8;
+      color: var(--scheda-blu);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .ck-tabella td.ck-check {
+      width: 9%;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .ck-tabella .ck-data {
+      width: 22%;
+    }
+    .ck-box {
+      display: inline-block;
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 3px;
+      vertical-align: middle;
+    }
+    .ck-doppio-box {
+      display: inline-flex;
+      gap: 0.25rem;
+      justify-content: center;
+    }
+    .ck-section {
+      margin-bottom: 0.8rem;
+      page-break-inside: avoid;
+    }
+    .ck-h2 {
+      color: var(--scheda-blu);
+      font-size: 1.05rem;
+      margin: 0.8rem 0 0.4rem 0;
+      border-bottom: 2px solid var(--scheda-blu);
+      padding-bottom: 0.2rem;
+    }
+    .ck-intestazione-controlli {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      background: #f0f4f8;
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.5rem 0.8rem;
+      margin-bottom: 0.7rem;
+      font-size: 0.92rem;
+    }
+    .ck-intestazione-controlli strong {
+      color: var(--scheda-blu);
+    }
+    .ck-data-line {
+      border-bottom: 1.5px solid var(--scheda-grigio);
+      display: inline-block;
+      min-width: 6rem;
+    }
+    .ck-istruzioni {
+      background: #fff8e1;
+      border-left: 4px solid var(--scheda-oro);
+      padding: 0.5rem 0.8rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+    }
+    .ck-finale {
+      background: #e8f4ea;
+      border: 1.5px solid var(--scheda-verde);
+      padding: 0.5rem 0.8rem;
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      page-break-inside: avoid;
+    }
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      .ck-tabella td.ck-check { width: 8%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Checklist Kit di Emergenza — A4</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Checklist Kit di Emergenza</h1>
+        <div class="scheda-sottotitolo">Da appendere al frigorifero — controllo ogni 6 mesi</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Quando:</strong> 2 volte l'anno (es. al cambio dell'ora)</span>
+      <span><strong>Tempo:</strong> 15-20 minuti</span>
+      <span><strong>Versione:</strong> Famiglia generica</span>
+    </div>
+
+    <div class="ck-istruzioni">
+      <strong>Come si usa:</strong> stampa questa pagina, appendila al frigorifero o all'interno dello sportello del kit.
+      Ogni 6 mesi prendi i tre kit (Vai, Casa 72 ore, Auto) e spunta le caselle. Se trovi qualcosa di scaduto o
+      mancante, sostituiscilo subito. Per la lista completa del contenuto vedi
+      <strong>protezionecivilegenzano.it/rischi-prevenzione/kit-emergenza/</strong>
+    </div>
+
+    <div class="ck-intestazione-controlli">
+      <span><strong>Data primo controllo:</strong> <span class="ck-data-line"></span></span>
+      <span><strong>Data secondo controllo:</strong> <span class="ck-data-line"></span></span>
+    </div>
+
+    <div class="ck-section">
+      <h2 class="ck-h2">1. Kit Vai (evacuazione rapida)</h2>
+      <table class="ck-tabella">
+        <tr>
+          <th>Voce</th>
+          <th>Cosa controllare</th>
+          <th class="ck-check">1° contr.</th>
+          <th class="ck-check">2° contr.</th>
+        </tr>
+        <tr>
+          <td><strong>Acqua</strong> (2 L a persona)</td>
+          <td>Bottiglie sigillate, non scadute</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Alimenti</strong> (barrette, scatolame)</td>
+          <td>Verifica data di scadenza, sostituisci se vicina</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Torcia</strong> + pile</td>
+          <td>Si accende? Pile cariche? Pile di scorta presenti?</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Power bank</strong></td>
+          <td>Carico al 100%, cavo presente, funzionante</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Radio</strong> a pile</td>
+          <td>Si accende? Si sintonizza?</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Farmaci</strong> personali</td>
+          <td>Scorta sufficiente, nessuno scaduto</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Primo soccorso</strong></td>
+          <td>Cerotti, garze, disinfettante non scaduto</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Documenti</strong></td>
+          <td>Carta d'identità non scaduta, tessera sanitaria valida</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Numeri telefono</strong></td>
+          <td>Lista cartacea aggiornata e leggibile</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Contanti</strong></td>
+          <td>Banconote piccolo taglio, qualche moneta</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Vestiti</strong> di ricambio</td>
+          <td>Taglia giusta (specie per bambini), scarpe chiuse</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Coperta</strong> termica</td>
+          <td>Integra, non strappata</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Fischietto</strong></td>
+          <td>Suona? Accessibile dall'esterno dello zaino?</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Peso totale</strong></td>
+          <td>Sotto il 15-20% del tuo peso, portabile per 30 min</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="ck-section">
+      <h2 class="ck-h2">2. Kit Casa 72 ore</h2>
+      <table class="ck-tabella">
+        <tr>
+          <th>Voce</th>
+          <th>Cosa controllare</th>
+          <th class="ck-check">1° contr.</th>
+          <th class="ck-check">2° contr.</th>
+        </tr>
+        <tr>
+          <td><strong>Acqua</strong> (12 L per adulto, 6 L per bambino)</td>
+          <td>Bottiglie sigillate, sostituite ogni 6 mesi</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Alimenti</strong> 3 giorni</td>
+          <td>Pasta, scatolame, frutta secca: nessuno scaduto</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Fornello da campo</strong></td>
+          <td>Funziona? Bombola di scorta presente e piena?</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Candele</strong> + accendino</td>
+          <td>Accendino funzionante, candele in numero sufficiente</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Torce</strong> frontali</td>
+          <td>Una per ogni componente della famiglia, pile cariche</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Power bank</strong> grande capienza</td>
+          <td>Carico al 100% (almeno 20.000 mAh)</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Cassetta primo soccorso</strong></td>
+          <td>Completa, nessun farmaco scaduto, scorta 7 giorni terapie croniche</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Igiene senza acqua</strong></td>
+          <td>Salviette, gel igienizzante, sapone neutro</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Sacchi spazzatura</strong></td>
+          <td>Almeno 10 sacchi grandi resistenti</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="ck-section">
+      <h2 class="ck-h2">3. Kit Auto</h2>
+      <table class="ck-tabella">
+        <tr>
+          <th>Voce</th>
+          <th>Cosa controllare</th>
+          <th class="ck-check">1° contr.</th>
+          <th class="ck-check">2° contr.</th>
+        </tr>
+        <tr>
+          <td><strong>Acqua</strong> + barrette</td>
+          <td>2 bottiglie da 1,5 L, barrette non scadute</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Coperta</strong> termica + pile</td>
+          <td>Integre, asciutte</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Triangolo + gilet</strong></td>
+          <td>Obbligatori per legge, gilet in tasca conducente</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Catene da neve</strong></td>
+          <td>Adatte alla misura dei pneumatici, presenti in inverno</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Cavi batteria</strong></td>
+          <td>Integri, non corrosi</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Caricabatterie</strong> auto</td>
+          <td>Funzionante, presa pulita</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Mappa cartacea</strong></td>
+          <td>Aggiornata, leggibile</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Primo soccorso</strong> auto</td>
+          <td>Cerotti, garze, disinfettante non scaduto</td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+          <td class="ck-check"><span class="ck-box"></span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="ck-finale">
+      <strong>✓ Tutto a posto?</strong> Annota la data di controllo e il nome di chi ha controllato.
+      Se hai trovato qualcosa di scaduto o mancante, <strong>sostituiscilo subito</strong>: il kit è utile solo
+      se è completo e funzionante. Ricorda anche che acqua e farmaci vanno consumati e rinnovati,
+      non lasciati lì per anni.
+    </div>
+
+    <footer class="scheda-footer no-print" style="margin-top: 1rem; font-size: 0.85rem; text-align: center; color: #555;">
+      Gruppo Comunale Volontari di Protezione Civile — Genzano di Roma ·
+      <a href="/rischi-prevenzione/kit-emergenza/">Lista completa del kit</a>
+    </footer>
+
+  </article>
+
+</body>
+</html>
