@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-A complemento della **Rete Zamberletti nazionale** opera, sul territorio di Roma Capitale e dei comuni limitrofi, una **Rete di Emergenza Metropolitana** gestita dalla **Sezione ARI di Roma Capitale APS** (nominativo radio **IQØRM**). Garantisce comunicazioni radio dirette fra i **Municipi di Roma** e i comuni dell'area metropolitana, anche quando le reti telefoniche e internet sono interrotte da un evento catastrofico.
+A complemento della **Rete Zamberletti nazionale** opera, sul territorio di Roma Capitale e dei comuni limitrofi, una **Rete di Emergenza Metropolitana** gestita dalla **Sezione ARI di Roma Capitale APS** (nominativo radio **<span style="font-variant-numeric: slashed-zero; font-feature-settings: 'zero' 1;">IQ0RM</span>**). Garantisce comunicazioni radio dirette fra i **Municipi di Roma** e i comuni dell'area metropolitana, anche quando le reti telefoniche e internet sono interrotte da un evento catastrofico.
 
 ## Cos'è la Rete di Emergenza Metropolitana
 
@@ -58,7 +58,7 @@ L'esercitazione è stata aperta a tutti i radioamatori volontari dei Municipi di
 
 ## Il Gruppo Comunale presente in rete
 
-Alle prove di collegamento della Rete di Emergenza Metropolitana partecipa anche **Alessandro Cuollo**, **radioamatore con nominativo IUØQVW** e **volontario del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. La sua presenza in rete porta sul territorio dei Castelli Romani un **operatore radio addestrato**, integrato sia nelle attività del Gruppo sia nelle esercitazioni periodiche della Rete Metropolitana coordinate da ARI Roma Capitale.
+Alle prove di collegamento della Rete di Emergenza Metropolitana partecipa anche **Alessandro Cuollo**, **radioamatore con nominativo <span style="font-variant-numeric: slashed-zero; font-feature-settings: 'zero' 1;">IU0QVW</span>** e **volontario del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. La sua presenza in rete porta sul territorio dei Castelli Romani un **operatore radio addestrato**, integrato sia nelle attività del Gruppo sia nelle esercitazioni periodiche della Rete Metropolitana coordinate da ARI Roma Capitale.
 
 È il modello di radiocomunicazione che il Gruppo promuove: **volontari abilitati**, **frequenze dichiarate**, **prove ricorrenti**. Quando un giorno le reti ordinarie dovessero cadere, le radio dei nostri operatori — già rodate sulle frequenze della Rete Metropolitana — sono pronte a entrare in funzione senza improvvisazione.
 
@@ -71,7 +71,7 @@ Per il cittadino il messaggio operativo resta unico: **in emergenza si chiama il
 ## Per saperne di più
 
 - Articolo: [Rete Zamberletti: svolta la 499ª esercitazione radio nazionale](/comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/)
-- Sito ARI Sezione di Roma Capitale APS (IQØRM): [www.ariroma.it](https://www.ariroma.it/)
+- Sito ARI Sezione di Roma Capitale APS (<span style="font-variant-numeric: slashed-zero; font-feature-settings: 'zero' 1;">IQ0RM</span>): [www.ariroma.it](https://www.ariroma.it/)
 
 ## Fonte
 
