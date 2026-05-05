@@ -1,27 +1,29 @@
 ---
 title: "Kit Calamità per animali domestici in evacuazione"
-description: "Schede operative per la protezione di cani, gatti e altri animali da affezione in caso di calamità. Conformità D.Lgs. 1/2018 + L. 281/1991 + WSAVA Disaster Response."
+description: "Schede stampabili A4 per preparare documenti, trasportino, farmaci, cibo, contatti veterinari e materiali essenziali per animali domestici in caso di emergenza."
 layout: "single"
 ---
 
-Il **Codice della Protezione Civile (D.Lgs. 1/2018, art. 12)** riconosce gli animali da affezione nelle pianificazioni di emergenza. **Lezione storica**: nell'uragano Katrina (2005) circa il 44% dei residenti rifiutò l'evacuazione per non abbandonare gli animali — da allora la US **PETS Act 2006** impone l'inclusione degli animali nei piani federali. In Italia molti centri di accoglienza ancora non li accettano: **pianificare prima** è essenziale.
+Gli animali domestici fanno parte della vita di molte famiglie. In caso di evacuazione o accoglienza temporanea, preparare in anticipo documenti, trasportino, farmaci, cibo e contatti veterinari può evitare separazioni, ritardi e difficoltà organizzative.
 
-> Leggi prima la **[Guida operatori](/formazione/kit-calamita-animali/00-guida-operatori.html)** — principi base, centri accoglienza, stress, cosa NON fare.
+Il **Codice della Protezione Civile** richiama l’importanza di considerare anche gli animali nelle attività di pianificazione e assistenza. Questo kit offre schede pratiche per cane, gatto e altri animali da compagnia, ma **non sostituisce** indicazioni veterinarie, regolamenti dei centri di accoglienza o disposizioni delle autorità competenti.
+
+> Leggi prima la **[Guida operatori](/formazione/kit-calamita-animali/00-guida-operatori.html)**: contiene principi di base, indicazioni per accoglienza, trasporto, stress, sicurezza e gestione di animali con bisogni particolari.
 
 ## Indice del kit
 
 | Scheda | Quando usarla |
 |---|---|
-| [Guida operatori](/formazione/kit-calamita-animali/00-guida-operatori.html) | **Leggere prima.** Principi, centri accoglienza, stress, animali esotici. |
-| [Carta d'identità animale](/formazione/kit-calamita-animali/01-carta-identita-animale.html) | Da mettere nel trasportino + copia in casa. Anagrafica + microchip + veterinario. |
-| [Kit evacuazione 7 giorni](/formazione/kit-calamita-animali/02-checklist-kit-pet.html) | Borsa pronta vicino a guinzaglio/trasportino. Verificare ogni 6 mesi. |
+| [Guida operatori](/formazione/kit-calamita-animali/00-guida-operatori.html) | **Leggere prima.** Principi di base, centri di accoglienza, trasporto, stress, sicurezza e animali non convenzionali. |
+| [Carta d'identità animale](/formazione/kit-calamita-animali/01-carta-identita-animale.html) | Da tenere nel trasportino e in copia con i documenti familiari: nome, specie, microchip, veterinario, farmaci, alimentazione e contatti. |
+| [Kit evacuazione 7 giorni](/formazione/kit-calamita-animali/02-checklist-kit-pet.html) | Promemoria per preparare cibo, acqua, ciotole, guinzaglio, trasportino, lettiera, farmaci, documenti e oggetti familiari. Da verificare periodicamente. |
 
-## Riferimenti
+## Riferimenti utili
 
-- **D.Lgs. 1/2018** art. 12 — Animali nelle pianificazioni di Protezione Civile
-- **L. 281/1991** — Legge quadro animali d'affezione
-- **L. 189/2004** — Maltrattamento animali
-- **WSAVA** — Global Veterinary Community Disaster Response Guidelines
-- **ENPA**, **OIPA**, **LAV**, **LNDC** — strutture animaliste in emergenza
+- Codice della Protezione Civile — pianificazione e assistenza alla popolazione, con attenzione anche agli animali da affezione
+- L. 281/1991 — animali d'affezione e prevenzione del randagismo
+- WSAVA — materiali su gestione degli animali in emergenza
+- ENPA, OIPA, LAV, LNDC — organizzazioni animaliste e materiali informativi
+- Servizi veterinari territoriali e autorità competenti
 
 Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
