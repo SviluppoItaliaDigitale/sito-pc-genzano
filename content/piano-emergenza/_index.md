@@ -31,6 +31,16 @@ Il Piano di Emergenza è un documento tecnico, ma i concetti chiave che ogni cit
 
 Non serve leggere tutto il documento. Concentrati sulle aree di emergenza più vicine a casa tua e al tuo luogo di lavoro. Puoi consultarle nella pagina [Cartografia Operativa](/cartografia/).
 
+## Chi coordina l'emergenza
+
+In ambito comunale, la prima autorità di protezione civile è il **Sindaco**. Quando la situazione lo richiede, il Sindaco può attivare il **Centro Operativo Comunale (COC)**, cioè la struttura che coordina le funzioni operative sul territorio comunale: assistenza alla popolazione, volontariato, viabilità, comunicazione, servizi essenziali, censimento danni e supporto tecnico.
+
+Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** opera all'interno di questa catena di coordinamento. I volontari non vengono attivati direttamente dai cittadini, ma dagli enti competenti, secondo le procedure previste dal Piano e dal sistema regionale di protezione civile.
+
+Per emergenze che coinvolgono più Comuni può intervenire anche il **Centro Operativo Intercomunale (COI)**. Genzano di Roma fa parte del **14° COI della Provincia di Roma — Castelli Romani Sud**.
+
+> In caso di pericolo immediato chiama il **112**. Non cercare di attivare direttamente squadre o singoli volontari: il coordinamento dei soccorsi deve passare dai canali ufficiali.
+
 ## Le Aree di Emergenza
 
 ### Aree di Attesa della Popolazione (AA)
@@ -41,7 +51,7 @@ Sono i **primi punti di raccolta** dopo un evento come un terremoto. Qui la popo
 
 ### Aree di Ricovero della Popolazione (AR)
 
-Sono aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata. Qui vengono allestite tende, containers o si utilizzano strutture coperte (palestre, scuole) per ospitare le persone che non possono rientrare nelle proprie abitazioni.
+Sono aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata. Qui vengono allestite tende, container o si utilizzano strutture coperte (palestre, scuole) per ospitare le persone che non possono rientrare nelle proprie abitazioni.
 
 ### Aree di Ammassamento Soccorritori (AS)
 
@@ -66,15 +76,16 @@ Sono le sedi operative da cui viene coordinata l'emergenza: Municipio, sede Poli
 ### Durante l'emergenza
 
 1. **Mantieni la calma** e segui le indicazioni delle autorità
-2. **Raggiungi l'area di attesa** più vicina
-3. **Non intralciare i soccorsi** — non recarti sui luoghi dell'emergenza
+2. **Raggiungi l'area di attesa** più vicina se viene indicato o se devi allontanarti da un edificio non sicuro
+3. **Non intralciare i soccorsi** — non recarti sui luoghi dell'emergenza per curiosità
 4. **Usa il telefono solo per necessità urgenti** per non intasare le linee
+5. **Segui solo fonti ufficiali**: Comune, Protezione Civile, Regione Lazio, Dipartimento della Protezione Civile, 112 e autorità competenti
 
 ### Dopo l'emergenza
 
 1. **Non rientrare in casa** finché le autorità non lo autorizzano
 2. **Segui le comunicazioni ufficiali** per gli aggiornamenti
-3. **Segnala danni o pericoli** al 112
+3. **Segnala situazioni di pericolo** al 112 quando c'è un rischio immediato per persone, edifici, viabilità o servizi essenziali
 
 </div>
 </div>
