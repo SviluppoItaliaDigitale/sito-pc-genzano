@@ -37,6 +37,12 @@ Una guida pratica per i cittadini con indicazioni di autoprotezione per terremot
 
 <a href="/formazione/cosa-fare-in-caso-di/" class="btn btn-primary mt-2"><i class="bi bi-shield-exclamation me-2" aria-hidden="true"></i>Vai alla guida Cosa fare in caso di emergenza</a>
 
+## Kit per persone fragili e bisogni specifici
+
+Una pagina di orientamento raccoglie i kit stampabili dedicati a persone anziane, persone con disabilità, caregiver familiari, terapie salvavita, bambini, persone con difficoltà comunicative o linguistiche. Aiuta a scegliere rapidamente la scheda corretta e ricorda le cautele su privacy, farmaci, ausili e dati sanitari.
+
+<a href="/formazione/kit-fragilita-vulnerabilita/" class="btn btn-primary mt-2"><i class="bi bi-universal-access-circle me-2" aria-hidden="true"></i>Vai ai kit per fragilità e bisogni specifici</a>
+
 ## Materiale didattico per le scuole
 
 Il Gruppo ha sviluppato kit didattici completi per ogni grado di istruzione, con guide per i docenti, schede per gli alunni, attività pratiche e quiz di verifica.
