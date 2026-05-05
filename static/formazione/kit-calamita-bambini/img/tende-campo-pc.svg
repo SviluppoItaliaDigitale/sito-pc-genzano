@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Campo di accoglienza della Protezione Civile da colorare</title>
+  <desc id="desc">Disegno lineare in bianco e nero di un campo di accoglienza con tende, volontari, punto informazioni, ambulanza e materiali di emergenza.</desc>
+  <defs>
+    <style>
+      .line{fill:none;stroke:#111;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+      .thin{fill:none;stroke:#111;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .soft{fill:#fff;stroke:#111;stroke-width:6;stroke-linejoin:round}
+      .txt{font-family:Arial,Helvetica,sans-serif;font-weight:700;fill:#111}
+    </style>
+  </defs>
+  <rect x="35" y="35" width="1130" height="730" rx="28" class="thin"/>
+  <path d="M70 630 C220 600 345 620 500 642 C660 666 800 614 955 635 C1045 646 1100 640 1130 628" class="thin"/>
+  <g aria-label="sfondo naturale">
+    <path d="M75 330 L205 165 L335 330" class="thin"/>
+    <path d="M260 330 L420 125 L600 330" class="thin"/>
+    <path d="M520 330 L680 155 L850 330" class="thin"/>
+    <path d="M760 330 L915 180 L1085 330" class="thin"/>
+    <circle cx="1035" cy="130" r="43" class="thin"/>
+    <path d="M1035 62 V32 M1035 228 V198 M960 130 H930 M1140 130 H1110 M982 77 L960 54 M1088 183 L1110 206 M1088 77 L1110 54 M982 183 L960 206" class="thin"/>
+  </g>
+  <g aria-label="tenda comando centrale">
+    <path d="M410 590 L600 285 L790 590 Z" class="soft"/>
+    <path d="M600 285 L600 590" class="line"/>
+    <path d="M493 590 C520 500 556 400 600 285 C650 408 682 502 707 590" class="thin"/>
+    <rect x="510" y="612" width="180" height="42" rx="8" class="soft"/>
+    <text x="600" y="642" text-anchor="middle" font-size="27" class="txt">TENDA COMANDO</text>
+    <path d="M440 590 H760" class="line"/>
+  </g>
+  <g aria-label="tende laterali">
+    <path d="M115 590 L235 405 L360 590 Z" class="soft"/>
+    <path d="M235 405 L235 590" class="thin"/>
+    <path d="M178 590 C195 525 215 460 235 405 C258 463 283 528 302 590" class="thin"/>
+    <text x="235" y="622" text-anchor="middle" font-size="25" class="txt">ACCOGLIENZA</text>
+    <path d="M820 590 L950 395 L1080 590 Z" class="soft"/>
+    <path d="M950 395 L950 590" class="thin"/>
+    <path d="M885 590 C905 520 928 455 950 395 C974 455 999 520 1017 590" class="thin"/>
+    <text x="950" y="622" text-anchor="middle" font-size="25" class="txt">MENSA</text>
+    <path d="M705 565 L790 440 L875 565 Z" class="thin"/>
+    <path d="M790 440 L790 565" class="thin"/>
+    <path d="M320 565 L392 455 L464 565 Z" class="thin"/>
+    <path d="M392 455 L392 565" class="thin"/>
+  </g>
+  <g aria-label="punto informazioni e materiali">
+    <rect x="80" y="470" width="90" height="85" rx="10" class="soft"/>
+    <text x="125" y="523" text-anchor="middle" font-size="46" class="txt">i</text>
+    <text x="125" y="580" text-anchor="middle" font-size="21" class="txt">INFO</text>
+    <rect x="735" y="635" width="90" height="70" class="thin"/>
+    <path d="M735 660 H825 M780 635 V705" class="thin"/>
+    <rect x="830" y="620" width="100" height="85" class="thin"/>
+    <path d="M830 648 H930 M880 620 V705" class="thin"/>
+    <text x="835" y="735" text-anchor="middle" font-size="24" class="txt">MATERIALI</text>
+  </g>
+  <g aria-label="ambulanza e generatore">
+    <rect x="80" y="650" width="225" height="70" rx="12" class="soft"/>
+    <path d="M305 674 H362 L398 704 V720 H305 Z" class="soft"/>
+    <rect x="323" y="682" width="45" height="27" class="thin"/>
+    <circle cx="145" cy="724" r="24" class="soft"/>
+    <circle cx="330" cy="724" r="24" class="soft"/>
+    <path d="M190 665 V705 M170 685 H210" class="line"/>
+    <text x="238" y="696" text-anchor="middle" font-size="24" class="txt">112</text>
+    <rect x="965" y="652" width="90" height="55" rx="8" class="soft"/>
+    <circle cx="986" cy="680" r="8" class="thin"/>
+    <path d="M1005 678 H1040" class="thin"/>
+    <text x="1010" y="735" text-anchor="middle" font-size="21" class="txt">GEN.</text>
+  </g>
+  <g aria-label="volontari">
+    <g transform="translate(250 520)">
+      <circle cx="35" cy="30" r="24" class="soft"/>
+      <path d="M15 12 Q35 -6 55 12" class="thin"/>
+      <path d="M8 75 H62 L75 155 H-5 Z" class="soft"/>
+      <path d="M10 98 L-25 132 M62 98 L100 132" class="line"/>
+      <path d="M18 155 L10 220 M55 155 L65 220" class="line"/>
+      <text x="35" y="130" text-anchor="middle" font-size="19" class="txt">PC</text>
+    </g>
+    <g transform="translate(915 500)">
+      <circle cx="35" cy="30" r="24" class="soft"/>
+      <path d="M15 12 Q35 -6 55 12" class="thin"/>
+      <path d="M8 75 H62 L75 155 H-5 Z" class="soft"/>
+      <path d="M10 98 L-28 122 M62 98 L95 124" class="line"/>
+      <path d="M18 155 L10 218 M55 155 L65 218" class="line"/>
+      <text x="35" y="130" text-anchor="middle" font-size="19" class="txt">PC</text>
+    </g>
+  </g>
+  <text x="600" y="115" text-anchor="middle" font-size="42" class="txt">CAMPO DI ACCOGLIENZA</text>
+</svg>
