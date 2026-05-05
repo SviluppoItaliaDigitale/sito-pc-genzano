@@ -58,7 +58,7 @@ Struttura tecnico-scientifica regionale che riceve previsioni meteo dal DPC, val
 Sala operativa che il **Sindaco** attiva quando c'è un'emergenza sul territorio comunale. Coordina volontari, Polizia Locale, tecnici, sociale, comunicazione. A Genzano viene di norma allestita presso la sede del Gruppo Volontari o presso il Palazzo Comunale. È previsto dal **Piano di Emergenza Comunale**.
 
 ### COI — Centro Operativo Intercomunale
-Coordina più Comuni vicini in caso di emergenza che riguardi un territorio più vasto. **Genzano fa parte del 15° COI della Provincia di Roma** (Castelli Romani Sud).
+Coordina più Comuni vicini in caso di emergenza che riguardi un territorio più vasto. **Genzano fa parte del 14° COI della Provincia di Roma** (Castelli Romani Sud).
 
 ### Codice della Protezione Civile
 **D.Lgs. 2 gennaio 2018 n. 1**. È la legge organica che regola tutto il Sistema Nazionale di Protezione Civile: chi fa cosa, le 4 attività (previsione, prevenzione, soccorso, superamento), i diritti e doveri di volontari e cittadini.
@@ -130,7 +130,7 @@ Frattura nella crosta terrestre lungo cui possono verificarsi terremoti. Le fagl
 Misura dell'energia rilasciata da un terremoto. Diverse scale:
 - **Mw** (magnitudo momento): la più usata oggi, basata su parametri fisici della faglia
 - **ML** (Richter o locale): storica, usa l'ampiezza delle onde sismiche
-- **Md** (di durata): usa la durata del segnale sismico
+- **Md** (di durata): usa la durata del segnale
 
 A magnitudo +1 corrisponde **circa 32 volte più energia rilasciata** (non 10 volte!).
 
