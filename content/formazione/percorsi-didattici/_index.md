@@ -15,6 +15,139 @@ Ogni percorso riorganizza i materiali del Gruppo già esistenti (kit, schede sta
 
 > Per la **mappa completa** dei nostri materiali sui 3 Nuclei Concettuali del D.M. 183/2024 e sull'Agenda 2030: vedi la [pagina dedicata ai docenti](/formazione/educazione-civica/). Per l'archivio integrale delle [schede stampabili](/formazione/schede-stampabili/) (per fascia e disciplina): vedi l'indice. Questa pagina **non sostituisce** quegli strumenti: li riorganizza in percorsi di consumo immediato.
 
+## Quanto tempo hai a disposizione?
+
+Scegli il riquadro che corrisponde al tempo che puoi davvero dedicare. I percorsi più lunghi non sono "migliori": sono solo più completi. Anche **una sola ora** ben preparata lascia un segno nei ragazzi.
+
+<div class="tempo-grid" role="list" aria-label="Tre percorsi per tempo disponibile">
+
+  <a href="#tempo-1ora" class="tempo-card tempo-1h" role="listitem" aria-label="Una sola ora: lezione lampo">
+    <div class="tempo-card-tempo"><span class="tempo-numero">1</span><span class="tempo-unita">ora</span></div>
+    <h3 class="tempo-card-titolo">Lezione lampo</h3>
+    <p class="tempo-card-desc">Una singola ora autoconclusiva: il 112, oppure la scossa di terremoto (DROP-COVER-HOLD ON), oppure i codici colore dell'allerta meteo.</p>
+    <span class="tempo-card-cta">Vai al suggerimento <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+  </a>
+
+  <a href="#tempo-2-3ore" class="tempo-card tempo-mezza" role="listitem" aria-label="Da 2 a 3 ore: percorso compatto">
+    <div class="tempo-card-tempo"><span class="tempo-numero">2-3</span><span class="tempo-unita">ore</span></div>
+    <h3 class="tempo-card-titolo">Percorso compatto</h3>
+    <p class="tempo-card-desc">Un tema affrontato a fondo in 2-3 lezioni: terremoto e piano scuola, rischio meteo, piano familiare, fake news in emergenza.</p>
+    <span class="tempo-card-cta">Vai ai percorsi <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+  </a>
+
+  <a href="#tempo-progetto" class="tempo-card tempo-progetto" role="listitem" aria-label="Da 4 a 6 ore: progetto completo">
+    <div class="tempo-card-tempo"><span class="tempo-numero">4-6</span><span class="tempo-unita">ore</span></div>
+    <h3 class="tempo-card-titolo">Progetto completo</h3>
+    <p class="tempo-card-desc">Un'unità didattica trasversale, eventualmente con incontro con i volontari o PCTO: PC di base, sicurezza nei luoghi di lavoro, comunicazione di crisi.</p>
+    <span class="tempo-card-cta">Vai ai progetti <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+  </a>
+
+</div>
+
+<style>
+.tempo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0 2rem;
+}
+.tempo-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 1.4rem 1.6rem;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #1a1a1a;
+  background: #fff;
+  border: 2px solid;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.tempo-card.tempo-1h { border-color: #15803d; }
+.tempo-card.tempo-mezza { border-color: #003366; }
+.tempo-card.tempo-progetto { border-color: #b45309; }
+.tempo-card:hover,
+.tempo-card:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.18);
+  text-decoration: none;
+}
+.tempo-card:focus {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 3px;
+}
+.tempo-card-tempo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+.tempo-card.tempo-1h .tempo-card-tempo { color: #15803d; }
+.tempo-card.tempo-mezza .tempo-card-tempo { color: #003366; }
+.tempo-card.tempo-progetto .tempo-card-tempo { color: #b45309; }
+.tempo-numero { font-size: 2.6rem; line-height: 1; }
+.tempo-unita { font-size: 1.1rem; }
+.tempo-card-titolo {
+  margin: 0 0 0.5rem 0;
+  color: #003366;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.tempo-card-desc {
+  margin: 0 0 0.9rem 0;
+  font-size: 0.97rem;
+  line-height: 1.5;
+  color: #333;
+}
+.tempo-card-cta {
+  margin-top: auto;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+.tempo-card.tempo-1h .tempo-card-cta { color: #15803d; }
+.tempo-card.tempo-mezza .tempo-card-cta { color: #003366; }
+.tempo-card.tempo-progetto .tempo-card-cta { color: #b45309; }
+@media (prefers-reduced-motion: reduce) {
+  .tempo-card { transition: none; }
+  .tempo-card:hover,
+  .tempo-card:focus-within { transform: none; }
+}
+@media print {
+  .tempo-grid { gap: 0.5rem; }
+  .tempo-card { box-shadow: none !important; transform: none !important; page-break-inside: avoid; }
+}
+</style>
+
+### Se hai una sola ora {#tempo-1ora}
+
+Una buona ora vale più di tre ore distratte. Scegli **un solo tema**, lavoraci con calma, lascia 5-10 minuti finali per le domande dei ragazzi. Tre opzioni che funzionano:
+
+- **Il 112** — Ora 2 del [Percorso 1 (Primaria)](#percorso-1) o Ora 1 di [chiamata 112 secondaria](/formazione/schede-stampabili/chiamo-112-secondaria/). Quando si chiama, cosa si dice, cosa NON si dice, simulazione.
+- **DROP-COVER-HOLD ON (terremoto)** — Lezione 1 del [Percorso 3](#percorso-3). I tre comportamenti corretti in casa, a scuola, all'aperto.
+- **Codici colore dell'allerta meteo** — Ora 1 del [Percorso 2](#percorso-2). Verde, giallo, arancione, rosso: cosa significano.
+
+### Se hai 2-3 ore {#tempo-2-3ore}
+
+Il formato più richiesto dai docenti. Affronta un tema in modo strutturato e lascia un segno duraturo:
+
+- [Percorso 2 — Rischio meteo e allerta](#percorso-2) (3 ore)
+- [Percorso 3 — Terremoto e piano scuola](#percorso-3) (2 ore + prova di evacuazione)
+- [Percorso 4 — Piano di emergenza familiare](#percorso-4) (2 ore + compito a casa)
+- [Percorso 5 — Fake news e comunicazione di crisi](#percorso-5) (3 ore)
+
+### Se vuoi fare un progetto completo {#tempo-progetto}
+
+Un'unità didattica vera, che attraversa più discipline e può integrare l'incontro con un volontario PC o un PCTO:
+
+- [Percorso 1 — Protezione Civile di base](#percorso-1) (4 ore + visita opzionale al Gruppo)
+- [Percorso 6 — Sicurezza nei luoghi di lavoro e PCTO](#percorso-6) (4-6 ore, integrabile nel monte ore PCTO)
+- **Combinazione**: Percorso 1 + Percorso 4 + Percorso 5 = mini-curriculum di Educazione Civica su PC, famiglia e cittadinanza digitale (~9-10 ore).
+
 ## Riepilogo dei percorsi
 
 | Percorso | Destinatari | Durata | Tema | Riferimento normativo |
