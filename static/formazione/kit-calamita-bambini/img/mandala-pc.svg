@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Mandala della Protezione Civile da colorare</title>
+  <desc id="desc">Mandala lineare con simboli semplici della Protezione Civile: sole, tenda, radio, zaino, cuore, casco, casa sicura e punto informazioni.</desc>
+  <defs>
+    <style>.l{fill:none;stroke:#111;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.t{font-family:Arial,Helvetica,sans-serif;font-weight:700;fill:#111}.s{fill:#fff;stroke:#111;stroke-width:5;stroke-linejoin:round}</style>
+  </defs>
+  <rect x="35" y="35" width="1130" height="730" rx="28" class="l"/>
+  <text x="600" y="90" text-anchor="middle" font-size="38" class="t">MANDALA DELLA CALMA</text>
+  <text x="600" y="130" text-anchor="middle" font-size="24" class="t">Colora piano: respiro, mi calmo, mi sento al sicuro</text>
+  <g transform="translate(600 430)">
+    <circle r="260" class="l"/>
+    <circle r="205" class="l"/>
+    <circle r="150" class="l"/>
+    <circle r="86" class="l"/>
+    <path d="M0 -260 L42 -120 L0 -86 L-42 -120 Z" class="s"/>
+    <path d="M0 260 L42 120 L0 86 L-42 120 Z" class="s"/>
+    <path d="M-260 0 L-120 -42 L-86 0 L-120 42 Z" class="s"/>
+    <path d="M260 0 L120 -42 L86 0 L120 42 Z" class="s"/>
+    <path d="M-184 -184 L-70 -118 L-62 -62 L-118 -70 Z" class="s"/>
+    <path d="M184 -184 L70 -118 L62 -62 L118 -70 Z" class="s"/>
+    <path d="M-184 184 L-70 118 L-62 62 L-118 70 Z" class="s"/>
+    <path d="M184 184 L70 118 L62 62 L118 70 Z" class="s"/>
+    <circle r="55" class="s"/>
+    <path d="M-35 -6 C-35 -38 -5 -48 0 -20 C5 -48 35 -38 35 -6 C35 20 0 38 0 38 C0 38 -35 20 -35 -6 Z" class="l"/>
+    <text x="0" y="8" text-anchor="middle" font-size="18" class="t">AIUTO</text>
+    <g transform="translate(0 -186)"><path d="M-58 45 L0 -45 L58 45 Z" class="l"/><path d="M0 -45 V45" class="l"/><text y="76" text-anchor="middle" font-size="20" class="t">TENDA</text></g>
+    <g transform="translate(0 186)"><path d="M-55 -10 L0 -55 L55 -10 V50 H-55 Z" class="l"/><path d="M-15 50 V12 H15 V50" class="l"/><text y="82" text-anchor="middle" font-size="20" class="t">CASA</text></g>
+    <g transform="translate(-186 0)"><rect x="-30" y="-45" width="60" height="90" rx="10" class="l"/><path d="M0 -45 V-82" class="l"/><circle cy="-15" r="8" class="l"/><path d="M-18 18 H18" class="l"/><text y="78" text-anchor="middle" font-size="20" class="t">RADIO</text></g>
+    <g transform="translate(186 0)"><path d="M-45 45 V-25 C-45 -55 45 -55 45 -25 V45 Z" class="l"/><path d="M-28 -35 C-20 -70 20 -70 28 -35" class="l"/><path d="M-28 10 H28" class="l"/><text y="78" text-anchor="middle" font-size="20" class="t">ZAINO</text></g>
+    <g transform="translate(-132 -132)"><path d="M-45 18 Q-35 -42 0 -42 Q35 -42 45 18 Z" class="l"/><path d="M-52 18 H52" class="l"/><text y="65" text-anchor="middle" font-size="19" class="t">CASCO</text></g>
+    <g transform="translate(132 -132)"><circle r="42" class="l"/><path d="M0 -62 V-82 M0 62 V82 M-62 0 H-82 M62 0 H82" class="l"/><text y="70" text-anchor="middle" font-size="19" class="t">SOLE</text></g>
+    <g transform="translate(-132 132)"><rect x="-48" y="-38" width="96" height="76" rx="9" class="l"/><text y="11" text-anchor="middle" font-size="54" class="t">i</text><text y="70" text-anchor="middle" font-size="19" class="t">INFO</text></g>
+    <g transform="translate(132 132)"><circle r="42" class="l"/><path d="M0 -25 V20 M0 34 V36" class="l"/><text y="70" text-anchor="middle" font-size="19" class="t">112</text></g>
+  </g>
+</svg>
