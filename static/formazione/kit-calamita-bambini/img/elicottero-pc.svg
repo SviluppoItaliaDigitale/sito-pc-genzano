@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Elicottero del soccorso da colorare</title>
+  <desc id="desc">Disegno lineare in bianco e nero di un elicottero del soccorso con volontari della Protezione Civile, piazzola di atterraggio, tenda e ambulanza.</desc>
+  <defs>
+    <style>
+      .line{fill:none;stroke:#111;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+      .thin{fill:none;stroke:#111;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .soft{fill:#fff;stroke:#111;stroke-width:6;stroke-linejoin:round}
+      .txt{font-family:Arial,Helvetica,sans-serif;font-weight:700;fill:#111}
+    </style>
+  </defs>
+  <rect x="35" y="35" width="1130" height="730" rx="28" class="thin"/>
+  <g aria-label="cielo e paesaggio">
+    <circle cx="1030" cy="130" r="44" class="thin"/>
+    <path d="M1030 60 V30 M1030 230 V200 M955 130 H925 M1135 130 H1105 M975 75 L952 52 M1085 185 L1108 208 M1085 75 L1108 52 M975 185 L952 208" class="thin"/>
+    <path d="M90 350 L210 205 L330 350" class="thin"/>
+    <path d="M280 350 L445 155 L625 350" class="thin"/>
+    <path d="M590 350 L760 190 L930 350" class="thin"/>
+    <path d="M840 350 L980 220 L1120 350" class="thin"/>
+    <path d="M80 650 C235 610 350 625 500 650 C650 675 805 625 955 650 C1045 664 1100 653 1130 640" class="thin"/>
+  </g>
+  <g aria-label="elicottero del soccorso">
+    <path d="M600 130 V83" class="line"/>
+    <path d="M260 83 H940" class="line"/>
+    <path d="M385 108 H815" class="thin"/>
+    <path d="M310 300 C360 210 505 174 705 195 C842 210 930 285 928 377 C925 465 825 525 615 530 C445 534 326 488 286 405 C266 360 272 326 310 300 Z" class="soft"/>
+    <path d="M390 285 C460 238 575 225 710 238 C785 245 848 275 878 320 H390 Z" class="soft"/>
+    <rect x="460" y="342" width="130" height="92" rx="12" class="soft"/>
+    <rect x="615" y="342" width="130" height="92" rx="12" class="soft"/>
+    <path d="M340 382 H895" class="thin"/>
+    <text x="505" y="492" text-anchor="middle" font-size="47" class="txt">PC</text>
+    <text x="650" y="492" text-anchor="middle" font-size="38" class="txt">112</text>
+    <path d="M888 318 L1070 245 L1112 287 L965 390 Z" class="soft"/>
+    <path d="M1070 245 L1140 195" class="line"/>
+    <path d="M1110 175 L1162 220 M1162 175 L1110 220" class="line"/>
+    <path d="M430 530 L365 625 M825 518 L895 625" class="line"/>
+    <path d="M315 625 H955" class="line"/>
+    <circle cx="365" cy="625" r="23" class="soft"/>
+    <circle cx="895" cy="625" r="23" class="soft"/>
+  </g>
+  <g aria-label="piazzola di atterraggio">
+    <circle cx="620" cy="650" r="70" class="thin"/>
+    <text x="620" y="673" text-anchor="middle" font-size="70" class="txt">H</text>
+  </g>
+  <g aria-label="volontari">
+    <g transform="translate(150 485)">
+      <circle cx="42" cy="36" r="27" class="soft"/>
+      <path d="M20 17 Q42 -3 64 17" class="thin"/>
+      <path d="M14 88 H70 L84 175 H0 Z" class="soft"/>
+      <path d="M14 110 L-30 148 M70 110 L118 148" class="line"/>
+      <path d="M25 175 L14 246 M60 175 L74 246" class="line"/>
+      <text x="42" y="145" text-anchor="middle" font-size="22" class="txt">PC</text>
+      <rect x="-56" y="122" width="32" height="50" rx="7" class="soft"/>
+      <path d="M-40 122 V85" class="thin"/>
+      <text x="42" y="270" text-anchor="middle" font-size="22" class="txt">VOLONTARIO</text>
+    </g>
+    <g transform="translate(980 500)">
+      <circle cx="32" cy="30" r="24" class="soft"/>
+      <path d="M12 12 Q32 -5 52 12" class="thin"/>
+      <path d="M7 76 H57 L70 154 H-5 Z" class="soft"/>
+      <path d="M10 100 L-30 132 M57 100 L92 132" class="line"/>
+      <path d="M18 154 L8 220 M50 154 L62 220" class="line"/>
+      <text x="32" y="128" text-anchor="middle" font-size="20" class="txt">PC</text>
+    </g>
+  </g>
+  <g aria-label="tenda e ambulanza sullo sfondo">
+    <path d="M820 650 L930 485 L1040 650 Z" class="thin"/>
+    <path d="M930 485 L930 650" class="thin"/>
+    <path d="M875 650 C890 590 910 535 930 485 C952 535 974 590 988 650" class="thin"/>
+    <text x="930" y="684" text-anchor="middle" font-size="24" class="txt">TENDA</text>
+    <rect x="80" y="642" width="205" height="65" rx="12" class="soft"/>
+    <path d="M285 666 H340 L377 696 V707 H285 Z" class="soft"/>
+    <circle cx="132" cy="710" r="22" class="soft"/>
+    <circle cx="315" cy="710" r="22" class="soft"/>
+    <path d="M175 657 V695 M157 676 H193" class="line"/>
+    <text x="230" y="688" text-anchor="middle" font-size="24" class="txt">112</text>
+  </g>
+  <text x="600" y="745" text-anchor="middle" font-size="29" class="txt">L'ELICOTTERO PORTA AIUTO DOVE LE STRADE NON ARRIVANO</text>
+</svg>
