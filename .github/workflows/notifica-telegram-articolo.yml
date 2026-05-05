@@ -1,0 +1,63 @@
+name: "📲 Notifica Telegram (nuovi articoli urgenti)"
+
+# Manda notifica al canale Telegram quando viene pubblicato un nuovo
+# articolo con badge urgente (Allerta, Avviso, Emergenza, Aggiornamento).
+#
+# Filtri (vedi scripts/notifica-telegram-articolo.py):
+#   - Solo articoli AGGIUNTI (Added) nel commit, non modificati
+#   - Solo badge: Allerta, Avviso, Emergenza, Aggiornamento
+#   - Solo articoli con date <= oggi (i calendarizzati non vengono notificati)
+#   - Skip articoli draft:true
+#
+# Per articoli con campo `image` nel frontmatter: lo script aspetta 3 minuti
+# (per dare tempo al workflow deploy.yml di completare) e poi prova a
+# inviare la foto come anteprima. In caso di fallimento, fallback graceful
+# a messaggio testuale.
+#
+# Pin: i messaggi con badge Allerta o Emergenza vengono fissati in cima al
+# canale (sostituendo il pin precedente). Avviso e Aggiornamento sono inviati
+# senza pin.
+#
+# Skip-loop: i commit con [skip-telegram] nel messaggio non triggerano
+# il workflow.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/comunicazioni/**.md'
+      - 'scripts/notifica-telegram-articolo.py'
+      - 'scripts/telegram_lib.py'
+      - '.github/workflows/notifica-telegram-articolo.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "notifica-telegram-articolo"
+  cancel-in-progress: false
+
+jobs:
+  notifica:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip-telegram]')"
+    steps:
+      - name: "📥 Checkout (con storia per il diff)"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: "🐍 Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: "📦 Installa PyYAML"
+        run: pip install --quiet pyyaml
+
+      - name: "📲 Notifica articoli al canale"
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/notifica-telegram-articolo.py

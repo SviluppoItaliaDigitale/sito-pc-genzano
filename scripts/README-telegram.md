@@ -1,22 +1,37 @@
-# Notifica Telegram automatica per allerte e emergenze
+# Notifica Telegram automatica
 
-Sistema che invia messaggi al canale Telegram del Gruppo ogni volta che cambia lo stato di allerta meteo o di emergenza in corso.
+Sistema che invia messaggi al canale Telegram del Gruppo per **tre tipi di eventi**:
+
+1. **Cambi di livello allerta meteo** (`data/allerta.json`)
+2. **Attivazione/cessazione/aggiornamento emergenze** (`data/emergenza.json`)
+3. **Pubblicazione di articoli con badge urgente** (`content/comunicazioni/`): solo Allerta, Avviso, Emergenza, Aggiornamento
+
+I messaggi più gravi (allerta arancione/rossa, emergenza attiva, articolo Allerta o Emergenza) vengono **fissati in cima al canale** automaticamente. Quando l'evento cessa, il pin viene rimosso.
+
+Per gli articoli con campo `image` nel frontmatter, il messaggio include la **copertina come anteprima** (sendPhoto). Se il sito non è ancora deployato e l'immagine non è raggiungibile, fallback graceful a messaggio testuale.
 
 ## Cosa fa
 
-Quando lo stato di `data/allerta.json` o `data/emergenza.json` cambia in modo significativo, un messaggio formattato viene inviato automaticamente al canale Telegram. Il cittadino iscritto al canale riceve la notifica sul telefono **senza dover aprire il sito**.
+Quando uno degli eventi sopra si verifica, un messaggio formattato viene inviato automaticamente al canale Telegram. Il cittadino iscritto al canale riceve la notifica sul telefono **senza dover aprire il sito**.
 
 **Esempi di trigger reali:**
 
-- Allerta cambia da `verde` a `gialla` → notifica «🟡 ALLERTA GIALLA — Lazio»
-- Allerta cambia da `arancione` a `verde` → notifica «🟢 CESSATA ALLERTA»
-- `emergenza.json` viene attivato → notifica «🚨 EMERGENZA IN CORSO»
-- `emergenza.json` viene disattivato → notifica «✅ CESSATA EMERGENZA»
+- Allerta cambia da `verde` a `gialla` → notifica «🟡 ALLERTA GIALLA», nessun pin
+- Allerta cambia da `gialla` a `arancione` → notifica «🟠 ALLERTA ARANCIONE» + **pin in cima al canale**
+- Allerta cambia da `arancione` a `verde` → notifica «🟢 CESSATA ALLERTA» + **rimozione pin**
+- `emergenza.json` attivato → notifica «🚨 EMERGENZA IN CORSO» + **pin**
+- `emergenza.json` disattivato → notifica «✅ CESSATA EMERGENZA» + **rimozione pin**
+- Pubblicato articolo nuovo con `badge: Allerta` → notifica con titolo + descrizione + cover + link sito + **pin**
+- Pubblicato articolo nuovo con `badge: Aggiornamento` → notifica con cover + link sito (no pin)
 
 **Cosa NON triggera notifica (anti-spam):**
 
-- Aggiornamento di `ultimo_controllo` ogni 6 ore (workflow `check-allerta` che verifica il bollettino senza che il livello sia cambiato): il livello è uguale, niente messaggio.
-- Modifiche al codice, agli articoli, alle schede, alla cartografia, ecc.
+- Aggiornamento di `ultimo_controllo` ogni 6 ore (workflow `check-allerta` senza cambio di livello): il livello è uguale, niente messaggio.
+- Modifica di un articolo esistente (correzione di refusi, rinomine): solo articoli **aggiunti** ex novo vengono notificati.
+- Articoli con `date` futura (calendarizzati): non vengono notificati al momento del commit. Per notificarli al go-live servirebbe un trigger giornaliero, non implementato.
+- Articoli con badge non urgenti (Comunicazione, Formazione, Volontariato, Evento, Attività, Prevenzione, Esercitazione, Informazione, Radiocomunicazioni, ecc.).
+- Articoli con `draft: true`.
+- Modifiche al codice, alle schede stampabili, alla cartografia, ecc.
 
 ## Setup iniziale (10 minuti, da fare una sola volta)
 
@@ -67,11 +82,32 @@ Per forzare un test reale: modifica temporaneamente `data/allerta.json` con `liv
 
 | Componente | File | Cosa fa |
 |---|---|---|
-| Workflow | `.github/workflows/notifica-telegram.yml` | Si triggera su push che modifica `data/allerta.json` o `data/emergenza.json`. Esegue lo script |
-| Script | `scripts/notifica-telegram.py` | Confronta stato corrente vs HEAD~1, decide se notificare, costruisce messaggio HTML, invia via API Telegram |
+| Modulo condiviso | `scripts/telegram_lib.py` | Wrapper API Telegram: `send_message`, `send_photo`, `pin_message`, `unpin_all`, `get_credentials`, `trunc_caption`. Solo libreria standard Python, nessuna dipendenza |
+| Workflow allerta/emergenza | `.github/workflows/notifica-telegram.yml` | Triggerato su `data/allerta.json` o `data/emergenza.json` |
+| Script allerta/emergenza | `scripts/notifica-telegram.py` | Confronta stato corrente vs HEAD~1, decide categoria (critical/info/cessation), invia, applica pin/unpin |
+| Workflow articoli | `.github/workflows/notifica-telegram-articolo.yml` | Triggerato su nuovi `content/comunicazioni/**.md` |
+| Script articoli | `scripts/notifica-telegram-articolo.py` | Trova articoli aggiunti, filtra per badge/data/draft, attende deploy 3 min se ci sono immagini, invia con sendPhoto+caption (con fallback a sendMessage), pinna i critici |
 | Secrets | `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` | Configurati nei GitHub Secrets, mai committati nel repo |
 
-Il messaggio segue la struttura ISO 22329 + CWA CEN/CENELEC della comunicazione di crisi: tipo evento, livello, area+tempo, cosa fare, fonte ufficiale, riferimento al 112.
+I messaggi seguono la struttura ISO 22329 + CWA CEN/CENELEC della comunicazione di crisi: tipo evento, livello, area+tempo, cosa fare, fonte ufficiale, riferimento al 112.
+
+## Logica pin/unpin
+
+Telegram permette **un solo messaggio pinnato** per canale (più tecnicamente sì, ma per visibilità ne mostra uno solo). La logica è:
+
+| Evento | Azione |
+|---|---|
+| Allerta gialla (livello attenzione) | Solo invio, no pin |
+| Allerta arancione/rossa | Unpin precedente + invio + pin nuovo |
+| Cessata allerta (verde) | Unpin precedente + invio (no nuovo pin) |
+| Emergenza attivata | Unpin precedente + invio + pin nuovo |
+| Emergenza aggiornata (durante attiva) | Unpin precedente + invio + pin nuovo |
+| Cessata emergenza | Unpin precedente + invio (no nuovo pin) |
+| Articolo `Allerta` o `Emergenza` | Invio + pin (sostituisce il pin precedente) |
+| Articolo `Avviso` o `Aggiornamento` | Solo invio, no pin |
+| Articolo altro badge | Niente notifica |
+
+In questo modo il messaggio più recente di natura critica resta sempre fissato in cima al canale, finché un altro evento critico lo sostituisce o cessa lo stato.
 
 ## Sicurezza e privacy
 
