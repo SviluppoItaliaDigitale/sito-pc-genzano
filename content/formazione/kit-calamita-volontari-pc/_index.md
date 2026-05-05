@@ -1,28 +1,32 @@
 ---
-title: "Kit Calamità per i volontari di Protezione Civile (auto-cura)"
-description: "Schede di auto-cura e prevenzione del trauma vicario per volontari di Protezione Civile. Conformità IFRC + NCTSN + WHO mhGAP."
+title: "Kit Calamità per i volontari di Protezione Civile — auto-cura"
+description: "Schede stampabili A4 per volontari di Protezione Civile: auto-cura, fine turno, segnali di affaticamento, gestione dello stress operativo e supporto tra pari."
 layout: "single"
 ---
 
-Il volontario di Protezione Civile è esposto a **stress operativo acuto** (turni lunghi, sonno irregolare) e a **stress traumatico secondario** (esposizione al dolore altrui). Le linee guida internazionali — **IFRC Caring for Volunteers (2015)**, **NCTSN Secondary Traumatic Stress** — riconoscono l'auto-cura come *parte integrante* dell'operatività, non come "extra opzionale".
+Il volontario di Protezione Civile può affrontare turni lunghi, sonno irregolare, condizioni difficili, responsabilità operative e contatto con persone in difficoltà. Per questo l'auto-cura non è un elemento secondario: aiuta a mantenere lucidità, sicurezza e continuità del servizio.
 
-> Leggi prima la **[Guida operatori](/formazione/kit-calamita-volontari-pc/00-guida-operatori.html)** — 3 livelli di stress, auto-cura durante il turno, segnali rossi.
+Questo kit propone schede semplici e stampabili per favorire pause, decompressione di fine turno, attenzione ai segnali di affaticamento e supporto tra pari. Le schede sono strumenti di supporto e **non sostituiscono** formazione, procedure associative, assistenza sanitaria o supporto psicologico qualificato quando necessario.
+
+> Leggi prima la **[Guida operatori](/formazione/kit-calamita-volontari-pc/00-guida-operatori.html)**: contiene indicazioni sui livelli di stress, auto-cura durante il turno, segnali di attenzione e quando chiedere supporto.
 
 ## Indice del kit
 
 | Scheda | Quando usarla |
 |---|---|
-| [Guida operatori](/formazione/kit-calamita-volontari-pc/00-guida-operatori.html) | **Leggere prima.** Stress operativo, acuto, vicario. Cosa NON fare. |
-| [Auto-valutazione stress vicario](/formazione/kit-calamita-volontari-pc/01-autovalutazione-stress.html) | Ogni 2-3 mesi o entro 14 giorni da evento critico. ProQOL-5 semplificato. |
-| [Routine decompressione fine turno](/formazione/kit-calamita-volontari-pc/02-routine-decompressione.html) | Ogni fine turno, prima di rientrare a casa. 5 passi in 15-30 min. |
+| [Guida operatori](/formazione/kit-calamita-volontari-pc/00-guida-operatori.html) | **Leggere prima.** Stress operativo, affaticamento, supporto tra pari, pause, fine turno e cose da evitare. |
+| [Auto-valutazione stress](/formazione/kit-calamita-volontari-pc/01-autovalutazione-stress.html) | Periodicamente o dopo un evento impegnativo. Serve come promemoria personale, non come diagnosi. |
+| [Routine decompressione fine turno](/formazione/kit-calamita-volontari-pc/02-routine-decompressione.html) | Da usare a fine turno, prima di rientrare a casa, per chiudere gradualmente l'attività e recuperare lucidità. |
 
-## Riferimenti
+## Riferimenti utili
 
-- **IFRC** — Caring for Volunteers: A Psychosocial Support Toolkit (2015)
-- **NCTSN** — Secondary Traumatic Stress Fact Sheet (2018)
-- **WHO mhGAP-HIG** — Mental Health Gap in Humanitarian Settings
-- **ICISF** — International Critical Incident Stress Foundation
-- **ProQOL-5** — Stamm BH, Professional Quality of Life Scale
-- **DPC** — Direttiva PCM 13 giugno 2006 (psicosociale in emergenza)
+Le schede sono ispirate a materiali su supporto psicosociale, cura dei volontari, gestione dello stress operativo e supporto tra pari. Non sostituiscono formazione specifica, procedure di organizzazione o supporto professionale.
+
+- IFRC — Caring for Volunteers: A Psychosocial Support Toolkit
+- NCTSN — Secondary Traumatic Stress
+- WHO — materiali su salute mentale e supporto psicosociale in emergenza
+- ICISF — materiali sul supporto in eventi critici
+- ProQOL — Professional Quality of Life Scale
+- Dipartimento della Protezione Civile — riferimenti su supporto psicosociale in emergenza
 
 Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
