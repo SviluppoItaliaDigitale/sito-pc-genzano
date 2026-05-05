@@ -33,7 +33,7 @@ Queste schede sono **pronte da stampare in formato A4** e possono essere usate d
 | 7 | [Mandala della calma](/formazione/kit-calamita-bambini/07-mandala-sole.html) | Per un’attività lenta e ripetitiva con simboli semplici di sicurezza e aiuto. |
 | 8 | [Storia sociale — cosa sta succedendo](/formazione/kit-calamita-bambini/08-storia-sociale-arasaac.html) | Per spiegare un evento con sequenza visiva, utile anche per bambini piccoli, autismo e italiano L2. |
 | 9 | [Carta emozioni con faccine](/formazione/kit-calamita-bambini/09-carta-emozioni-piccoli.html) | Per indicare come ci si sente quando parlare è difficile. |
-| 10 | [Lavarsi le mani in 5 passi](/formazione/kit-calamita-bambini/10-routine-lavarsi-mani.html) | Per ricordare una routine semplice di igiene: bagna, sapone, strofina, risciacqua, asciuga. |
+| 10 | [Lavaggio completo delle mani](/formazione/kit-calamita-bambini/10-routine-lavarsi-mani.html) | Per imparare una procedura completa di igiene delle mani, seguendo tutti i passaggi illustrati nella scheda. |
 
 ### Schede per fascia 6-8 anni
 
