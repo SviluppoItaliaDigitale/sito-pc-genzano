@@ -1,0 +1,82 @@
+name: "📦 Genera pacchetti ZIP dei kit scolastici"
+
+# Auto-aggiorna i 4 ZIP offline con le schede stampabili dei kit scolastici.
+# Si triggera quando l'utente modifica:
+#   - content/formazione/kit-scuola-*.md  (link delle schede cambiati)
+#   - static/formazione/schede-stampabili/**  (scheda nuova / modificata / cancellata)
+#   - lo script generatore o questo workflow
+#
+# Lo script genera-pacchetti-kit.py legge i kit-scuola-*.md, estrae i link
+# /formazione/schede-stampabili/<slug>/ e zippa le schede effettivamente
+# presenti nel filesystem in static/formazione/pacchetti/kit-scuola-<fascia>.zip.
+#
+# Se ci sono link a schede non esistenti, lo script LO SEGNALA in log
+# ma non fallisce: lo ZIP è comunque prodotto con le schede esistenti.
+# (L'audit settimanale audit-sito.yml rileva i link rotti.)
+#
+# Skip: i commit del workflow stesso contengono "[skip-pacchetti]" nel
+# messaggio per evitare loop di re-trigger.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/formazione/kit-scuola-*.md'
+      - 'static/formazione/schede-stampabili/**'
+      - 'scripts/genera-pacchetti-kit.py'
+      - '.github/workflows/genera-pacchetti-kit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: "pacchetti-kit"
+  cancel-in-progress: false
+
+jobs:
+  genera-pacchetti:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip-pacchetti]')"
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "🐍 Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: "📦 Genera pacchetti ZIP"
+        run: |
+          python3 scripts/genera-pacchetti-kit.py
+
+      - name: "📊 Stato pacchetti generati"
+        run: |
+          ls -lh static/formazione/pacchetti/ || true
+
+      - name: "💾 Commit pacchetti se modificati"
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add static/formazione/pacchetti/
+          if git diff --staged --quiet; then
+            echo "Nessuna modifica ai pacchetti. Skip commit."
+            echo "modificato=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "📦 Auto-rigenera pacchetti kit scolastici [skip-pacchetti]"
+            git push origin main
+            echo "modificato=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: "🚀 Triggera deploy"
+        if: steps.commit.outputs.modificato == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run deploy.yml --ref main

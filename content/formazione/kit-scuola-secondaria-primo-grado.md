@@ -9,6 +9,8 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~138 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+
 ---
 
 ## Guida per il docente
