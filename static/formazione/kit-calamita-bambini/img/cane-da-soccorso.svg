@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Cane da soccorso da colorare con numeri</title>
+  <desc id="desc">Disegno lineare in bianco e nero di un cane da soccorso con conduttore della Protezione Civile, pettorina, radio, tenda e materiali di emergenza.</desc>
+  <defs>
+    <style>
+      .line{fill:none;stroke:#111;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+      .thin{fill:none;stroke:#111;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .soft{fill:#fff;stroke:#111;stroke-width:6;stroke-linejoin:round}
+      .txt{font-family:Arial,Helvetica,sans-serif;font-weight:700;fill:#111}
+      .num{font-family:Arial,Helvetica,sans-serif;font-weight:700;fill:#111;font-size:34px}
+    </style>
+  </defs>
+  <rect x="35" y="35" width="1130" height="730" rx="28" class="thin"/>
+  <path d="M75 650 C230 610 355 625 505 652 C650 676 805 625 960 650 C1045 664 1100 653 1130 640" class="thin"/>
+  <g aria-label="sfondo emergenza">
+    <path d="M90 600 L185 455 L280 600 Z" class="thin"/><path d="M185 455 V600" class="thin"/><text x="185" y="632" text-anchor="middle" font-size="23" class="txt">TENDA</text>
+    <rect x="920" y="570" width="95" height="76" class="thin"/><path d="M920 598 H1015 M968 570 V646" class="thin"/>
+    <rect x="1020" y="555" width="100" height="91" class="thin"/><path d="M1020 585 H1120 M1070 555 V646" class="thin"/>
+    <text x="1018" y="682" text-anchor="middle" font-size="23" class="txt">MATERIALI</text>
+    <path d="M720 625 L760 570 L805 625 L850 565 L900 625" class="thin"/>
+    <text x="810" y="663" text-anchor="middle" font-size="22" class="txt">MACERIE</text>
+  </g>
+  <g aria-label="conduttore cinofilo">
+    <circle cx="300" cy="265" r="38" class="soft"/>
+    <path d="M265 238 Q300 198 335 238" class="thin"/>
+    <path d="M250 330 H350 L372 515 H228 Z" class="soft"/>
+    <path d="M240 375 L175 430 M360 375 L465 455" class="line"/>
+    <path d="M275 515 L255 655 M328 515 L350 655" class="line"/>
+    <path d="M270 392 H330" class="thin"/><text x="300" y="465" text-anchor="middle" font-size="30" class="txt">PC</text>
+    <rect x="145" y="410" width="42" height="62" rx="8" class="soft"/><path d="M166 410 V360" class="thin"/>
+    <text x="300" y="705" text-anchor="middle" font-size="26" class="txt">CONDUTTORE</text>
+    <text x="315" y="382" class="num">2</text>
+  </g>
+  <g aria-label="cane da soccorso">
+    <path d="M490 438 C520 350 610 305 725 328 C800 343 860 398 882 480 C910 493 935 523 936 555 C938 600 895 620 855 596 C810 662 680 675 595 620 C555 646 505 640 488 600 C476 572 480 528 500 500 C486 480 482 455 490 438 Z" class="soft"/>
+    <path d="M775 335 C810 300 855 292 885 316 C912 338 912 382 880 412" class="soft"/>
+    <path d="M858 326 L900 285 L912 354" class="soft"/>
+    <circle cx="840" cy="372" r="7" fill="#111"/>
+    <path d="M887 405 Q915 420 890 438" class="thin"/>
+    <path d="M600 610 L565 715 M678 630 L660 715 M785 620 L805 715 M850 590 L890 715" class="line"/>
+    <path d="M545 715 H590 M640 715 H690 M780 715 H828 M865 715 H910" class="line"/>
+    <path d="M505 475 C450 438 410 455 385 505" class="line"/>
+    <path d="M535 385 C590 420 740 430 835 408" class="thin"/>
+    <path d="M575 430 H800 L822 535 H555 Z" class="soft"/>
+    <text x="690" y="498" text-anchor="middle" font-size="36" class="txt">UCS</text>
+    <text x="690" y="533" text-anchor="middle" font-size="23" class="txt">PROTEZIONE CIVILE</text>
+    <path d="M585 430 L620 398 M790 430 L835 405" class="thin"/>
+    <text x="625" y="385" class="num">1</text>
+    <text x="710" y="470" class="num">3</text>
+    <text x="825" y="365" class="num">4</text>
+    <text x="890" y="570" class="num">5</text>
+  </g>
+  <g aria-label="legenda colori">
+    <rect x="145" y="90" width="910" height="80" rx="14" class="thin"/>
+    <text x="600" y="122" text-anchor="middle" font-size="28" class="txt">COLORA SEGUENDO I NUMERI</text>
+    <text x="600" y="155" text-anchor="middle" font-size="24" class="txt">1 marrone · 2 rosso · 3 blu · 4 nero · 5 giallo</text>
+  </g>
+</svg>
