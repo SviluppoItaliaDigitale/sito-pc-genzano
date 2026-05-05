@@ -44,6 +44,8 @@ Le prime 72 ore dopo un evento grave sono le più critiche. In quella finestra i
 - **Mascherine FFP2**: utili in caso di polveri, fumo o aria contaminata.
 - **Prodotti igienici**: sapone neutro, salviette umide, carta igienica, assorbenti, pannolini se hai bambini piccoli.
 
+Per terapie salvavita, ossigenoterapia, insulina, anticoagulanti, dispositivi elettromedicali o farmaci che devono stare al freddo, prepara una scheda dedicata e concorda in anticipo le soluzioni con medico, farmacia, ASL o centro specialistico. Non modificare mai terapia, dosaggio o orario senza indicazione sanitaria.
+
 ### Documenti e denaro
 
 Inserisci **fotocopie** o scansioni protette:
@@ -52,6 +54,8 @@ Inserisci **fotocopie** o scansioni protette:
 - Codice fiscale, patente, libretto vaccinazioni.
 - Contatti utili (medico curante, parenti, scuola dei bambini).
 - Una **piccola somma in contanti** in banconote di piccolo taglio: i bancomat potrebbero non funzionare.
+
+Non inserire più dati personali o sanitari del necessario. Se il kit contiene copie di documenti, piani terapeutici o numeri riservati, conservalo in modo accessibile alla famiglia ma non esposto a estranei.
 
 ### Indumenti e riparo
 
@@ -64,6 +68,30 @@ Inserisci **fotocopie** o scansioni protette:
 
 - Pannolini, salviette, latte in polvere se serve.
 - Un gioco piccolo, un libro, una torcia sua: aiuta a gestire lo stress.
+
+### Per persone anziane, disabilità o bisogni specifici
+
+Aggiungi ciò che serve davvero alla persona:
+
+- occhiali di riserva, apparecchi acustici, batterie e caricabatterie;
+- bastone, deambulatore, carrozzina o altri ausili necessari;
+- elenco farmaci, allergie, contatti sanitari e caregiver;
+- istruzioni semplici per comunicare bisogni essenziali;
+- copia del Piano di Emergenza Familiare;
+- contatto di un vicino o familiare di fiducia.
+
+Per una preparazione più completa consulta la pagina [Kit per persone fragili e bisogni specifici](/formazione/kit-fragilita-vulnerabilita/).
+
+### Per gli animali domestici
+
+Se in famiglia ci sono animali domestici, aggiungi:
+
+- cibo e acqua dedicati;
+- ciotola pieghevole;
+- guinzaglio, pettorina, trasportino e museruola se necessaria;
+- sacchetti igienici o lettiera essenziale;
+- farmaci prescritti dal veterinario;
+- copia del libretto sanitario, microchip e foto recente.
 
 ## Dove tenere lo zaino
 
@@ -83,6 +111,8 @@ Un kit dimenticato rischia di essere inutile al momento del bisogno. Ogni **sei 
 2. Verifica che le pile funzionino.
 3. Sostituisci gli indumenti se la stagione è cambiata.
 4. Aggiorna i contatti e i documenti fotocopiati.
+5. Controlla farmaci, ausili, batterie, ricette e bisogni specifici delle persone fragili.
+6. Aggiorna il materiale per animali domestici, se presente.
 
 Un buon momento per il controllo: l'inizio della primavera e l'inizio dell'autunno.
 
@@ -98,6 +128,7 @@ Oltre allo zaino di casa, è utile avere una versione **minima** in auto (acqua,
 - Articolo: [Allagamenti urbani: cosa fare quando l'acqua entra in casa](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
 - Articolo: [Check casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
 - Pagina: [Piano familiare](/piano-familiare/)
+- Pagina: [Kit per persone fragili e bisogni specifici](/formazione/kit-fragilita-vulnerabilita/)
 - Pagina: [Rischi e prevenzione](/rischi-prevenzione/)
 - Pagina: [Numeri utili](/numeri-utili/)
 
