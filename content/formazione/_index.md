@@ -31,6 +31,12 @@ I volontari già operativi partecipano periodicamente a:
 - Simulazioni coordinate con la Sala Operativa Regionale
 - Incontri formativi con altri enti del sistema di protezione civile
 
+## Cosa fare in caso di emergenza
+
+Una guida pratica per i cittadini con indicazioni di autoprotezione per terremoto, alluvione, incendio, temporali, vento forte, neve, caldo, blackout ed evacuazione.
+
+<a href="/formazione/cosa-fare-in-caso-di/" class="btn btn-primary mt-2"><i class="bi bi-shield-exclamation me-2" aria-hidden="true"></i>Vai alla guida Cosa fare in caso di emergenza</a>
+
 ## Materiale didattico per le scuole
 
 Il Gruppo ha sviluppato kit didattici completi per ogni grado di istruzione, con guide per i docenti, schede per gli alunni, attività pratiche e quiz di verifica.
