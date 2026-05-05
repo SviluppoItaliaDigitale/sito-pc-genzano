@@ -11,24 +11,24 @@ aliases:
 <div class="card-body bg-danger bg-opacity-10 p-4">
 <h2 class="h4 text-danger fw-bold"><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>In emergenza chiama il 112</h2>
 <p class="mb-0 mt-2"><span class="fs-1 fw-bold text-danger">112</span></p>
-<p class="mb-0"><strong>Numero Unico Emergenze (NUE)</strong> — per qualsiasi emergenza: sanitaria, ordine pubblico, incendi, soccorso tecnico.</p>
+<p class="mb-0"><strong>Numero Unico Europeo per le emergenze</strong> — per emergenze sanitarie, ordine pubblico, incendi, soccorso tecnico e situazioni di pericolo immediato.</p>
 </div>
 </div>
 
 ## Numeri di emergenza e soccorso
 
-Nel Lazio, dal 2017, **l'unico numero da chiamare in emergenza è il 112**. Tutte le chiamate arrivano alla Centrale Unica del NUE, che smista l'intervento all'ente competente (Vigili del Fuoco, emergenza sanitaria, Carabinieri, Polizia, incendi boschivi).
+Nel Lazio il numero da chiamare in caso di emergenza è il **112**. La chiamata viene gestita dal sistema del Numero Unico Europeo e indirizzata verso l'ente competente in base alla situazione: emergenza sanitaria, Vigili del Fuoco, Forze dell'Ordine o altro servizio di soccorso.
 
 <div class="table-responsive">
 <table>
-<caption>Numeri di emergenza validi nel Lazio: quale chiamare e in quali casi</caption>
+<caption>Numeri utili: quale chiamare e in quali casi</caption>
 <thead>
 <tr><th scope="col">Numero</th><th scope="col">Servizio</th><th scope="col">Quando chiamare</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>112</strong></td><td>Numero Unico Emergenze (NUE)</td><td>Qualsiasi emergenza: sanitaria, ordine pubblico, incendi, soccorso tecnico</td></tr>
-<tr><td><strong>803 555</strong></td><td>Sala Operativa Protezione Civile Lazio</td><td>Segnalazioni non urgenti e informazioni su emergenze regionali</td></tr>
-<tr><td><strong>1530</strong></td><td>Guardia Costiera</td><td>Emergenze in mare e sui laghi</td></tr>
+<tr><td><strong>112</strong></td><td>Numero Unico Europeo per le emergenze</td><td>Emergenza in corso, pericolo immediato, persone ferite, incendio, soccorso tecnico, ordine pubblico</td></tr>
+<tr><td><strong>803 555</strong></td><td>Sala Operativa Regionale Protezione Civile Lazio</td><td>Numero verde regionale di Protezione Civile. Per emergenze con pericolo immediato resta prioritario il 112</td></tr>
+<tr><td><strong>1530</strong></td><td>Guardia Costiera</td><td>Emergenze e soccorso in mare e nelle acque di competenza</td></tr>
 </tbody>
 </table>
 </div>
@@ -51,10 +51,10 @@ Per informazioni amministrative, ufficio anagrafe, servizi al cittadino. Per **e
 
 ## Polizia Locale di Genzano di Roma
 
-Compete su viabilità, ordinanze, edilizia, controlli stradali e amministrativi. Per **emergenze in atto chiama il 112**, non i numeri del comando.
+Compete su viabilità, ordinanze, controlli stradali e amministrativi. Per **emergenze in atto chiama il 112**, non i numeri del comando.
 
 - **Sede:** Via Roma 31/A — 00045 Genzano di Roma (RM)
-- **Telefono:** [+39 06 9364687](tel:+390693646879) · [+39 06 9397994](tel:+390693979940)
+- **Telefono:** [+39 06 9364687](tel:+39069364687) · [+39 06 9397994](tel:+39069397994)
 - **Email:** [munipol@comune.genzanodiroma.roma.it](mailto:munipol@comune.genzanodiroma.roma.it)
 - **PEC:** [polizia_locale@comunegenzanodiromapec.it](mailto:polizia_locale@comunegenzanodiromapec.it)
 
@@ -74,4 +74,4 @@ Per informazioni sanitarie ordinarie, prenotazioni, certificazioni, ufficio rela
 
 ## In caso di emergenza
 
-Il Gruppo Comunale di Protezione Civile **non può essere attivato direttamente dai cittadini**. In caso di emergenza, contatta il **112** o l'**803 555**: saranno le autorità competenti ad allertare e attivare le nostre squadre.
+Il Gruppo Comunale di Protezione Civile **non può essere attivato direttamente dai cittadini**. In caso di emergenza, contatta il **112**. Per le comunicazioni di protezione civile regionale è disponibile anche il numero verde della Sala Operativa Regionale **803 555**: saranno le autorità competenti, quando necessario, ad allertare e attivare le squadre di volontariato.
