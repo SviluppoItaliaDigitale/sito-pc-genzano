@@ -8,29 +8,29 @@ che modifica data/allerta.json o data/emergenza.json.
 Logica:
 
 - ALLERTA: notifica solo se cambia il `livello` (verde/gialla/arancione/rossa).
-  Mai per cambi solo del campo `ultimo_controllo` (sennò il workflow check-allerta
-  che controlla ogni 6h spammerebbe il canale).
+  Mai per cambi solo del campo `ultimo_controllo` (sennò il workflow
+  check-allerta che gira ogni 6h spammerebbe il canale).
+  Pin del messaggio per livelli arancione/rossa. Unpin per cessazione (verde).
 
-- EMERGENZA: notifica se cambia `attiva` (false→true = ATTIVAZIONE,
-  true→false = CESSATA) oppure se mentre è attiva cambia `descrizione`
-  o `tipo` (= AGGIORNAMENTO).
+- EMERGENZA: notifica per attivazione (false→true), cessazione (true→false)
+  o aggiornamento sostanziale (titolo/descrizione/tipo/link cambiati mentre
+  attiva). Pin del messaggio per attivazione e aggiornamento, unpin per
+  cessazione.
 
 Configurazione: legge BOT_TOKEN e CHAT_ID dalle env var TELEGRAM_BOT_TOKEN
 e TELEGRAM_CHAT_ID. Se mancano, exit pulito senza inviare (non blocca CI).
-
-Per il diff usa `git show HEAD~1:<path>`. Se HEAD~1 non esiste (primo commit
-sul branch), tratta lo stato come "sempre cambiato" e notifica solo se
-livello != verde / emergenza attiva (per evitare notifica iniziale "tutto OK").
 """
 
 import json
-import os
 import subprocess
 import sys
 from pathlib import Path
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
-from urllib.error import URLError, HTTPError
+
+# Lib condivisa
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from telegram_lib import (  # noqa: E402
+    get_credentials, send_message, pin_message, unpin_all,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 ALLERTA_PATH = ROOT / "data" / "allerta.json"
@@ -47,6 +47,11 @@ EMOJI_LIVELLO = {
     "rosso": "🔴",
 }
 
+# Categoria della notifica determina pin/unpin
+CRITICAL = "critical"        # unpin all + send + pin
+INFORMATIONAL = "info"        # send (no pin/unpin)
+CESSATION = "cessation"       # unpin all + send (no pin)
+
 
 def leggi_json(path: Path) -> dict:
     if not path.exists():
@@ -58,15 +63,11 @@ def leggi_json(path: Path) -> dict:
 
 
 def leggi_json_precedente(rel_path: str) -> dict | None:
-    """Legge la versione precedente di un file via git show HEAD~1:<path>.
-    Ritorna None se HEAD~1 non esiste o il file non era presente."""
+    """Legge la versione precedente di un file via git show HEAD~1:<path>."""
     try:
         out = subprocess.run(
             ["git", "show", f"HEAD~1:{rel_path}"],
-            capture_output=True,
-            text=True,
-            cwd=ROOT,
-            timeout=10,
+            capture_output=True, text=True, cwd=ROOT, timeout=10,
         )
         if out.returncode != 0:
             return None
@@ -75,38 +76,13 @@ def leggi_json_precedente(rel_path: str) -> dict | None:
         return None
 
 
-def manda_telegram(token: str, chat_id: str, testo: str) -> tuple[bool, str]:
-    """Invia messaggio HTML al canale. Ritorna (ok, descrizione_errore)."""
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = {
-        "chat_id": chat_id,
-        "text": testo,
-        "parse_mode": "HTML",
-        "disable_web_page_preview": "false",
-    }
-    data = urlencode(payload).encode("utf-8")
-    req = Request(url, data=data, method="POST")
-    try:
-        with urlopen(req, timeout=15) as resp:
-            body = resp.read().decode("utf-8")
-            if resp.status == 200:
-                return (True, body)
-            return (False, f"HTTP {resp.status}: {body[:200]}")
-    except HTTPError as e:
-        return (False, f"HTTP {e.code}: {e.read().decode('utf-8', errors='replace')[:200]}")
-    except URLError as e:
-        return (False, f"URL error: {e}")
-
-
-def msg_allerta_cambiata(prev: dict, curr: dict) -> str:
+def msg_allerta_cambiata(prev: dict | None, curr: dict) -> str:
     livello = (curr.get("livello") or "").lower()
     emoji = EMOJI_LIVELLO.get(livello, "ℹ️")
     titolo = curr.get("titolo", "Allerta meteo aggiornata")
     descrizione = curr.get("descrizione", "")
-
     livello_prev = (prev.get("livello") or "").lower() if prev else None
 
-    # Costruisci header in base alla transizione
     if livello == "verde":
         if livello_prev and livello_prev != "verde":
             header = f"{emoji} <b>CESSATA ALLERTA</b>"
@@ -125,7 +101,6 @@ def msg_allerta_cambiata(prev: dict, curr: dict) -> str:
     parti = [header, "", f"<b>{titolo}</b>", sotto]
     if descrizione:
         parti.extend(["", descrizione])
-
     parti.extend([
         "",
         f"🔗 Dettagli: {SITO_URL}/allerte-meteo/",
@@ -140,11 +115,7 @@ def msg_emergenza_attivata(curr: dict) -> str:
     titolo = curr.get("titolo") or "Emergenza in corso"
     descrizione = curr.get("descrizione") or ""
     link = curr.get("link") or ""
-    parti = [
-        "🚨 <b>EMERGENZA IN CORSO</b>",
-        "",
-        f"<b>{titolo}</b>",
-    ]
+    parti = ["🚨 <b>EMERGENZA IN CORSO</b>", "", f"<b>{titolo}</b>"]
     if descrizione:
         parti.extend(["", descrizione])
     if link:
@@ -163,11 +134,7 @@ def msg_emergenza_aggiornata(curr: dict) -> str:
     titolo = curr.get("titolo") or "Emergenza in corso"
     descrizione = curr.get("descrizione") or ""
     link = curr.get("link") or ""
-    parti = [
-        "📢 <b>AGGIORNAMENTO EMERGENZA</b>",
-        "",
-        f"<b>{titolo}</b>",
-    ]
+    parti = ["📢 <b>AGGIORNAMENTO EMERGENZA</b>", "", f"<b>{titolo}</b>"]
     if descrizione:
         parti.extend(["", descrizione])
     if link:
@@ -198,71 +165,99 @@ def msg_emergenza_cessata(prev: dict) -> str:
     return "\n".join(parti)
 
 
-def determina_messaggio() -> str | None:
-    """Decide se inviare e cosa. Ritorna testo da inviare, None per skip."""
+def determina_notifica() -> tuple[str, str] | None:
+    """Decide cosa inviare e con quale categoria.
+
+    Ritorna (testo, categoria) dove categoria è uno di CRITICAL/INFORMATIONAL/CESSATION.
+    Ritorna None se non c'è nulla da notificare.
+    """
     allerta_curr = leggi_json(ALLERTA_PATH)
     allerta_prev = leggi_json_precedente("data/allerta.json")
     emergenza_curr = leggi_json(EMERGENZA_PATH)
     emergenza_prev = leggi_json_precedente("data/emergenza.json")
 
-    # Priorità 1: cambiamento di emergenza (più grave)
+    # Priorità 1: emergenza
     if emergenza_curr or emergenza_prev:
         attiva_curr = bool(emergenza_curr.get("attiva"))
         attiva_prev = bool((emergenza_prev or {}).get("attiva"))
 
         if attiva_curr and not attiva_prev:
-            return msg_emergenza_attivata(emergenza_curr)
+            return (msg_emergenza_attivata(emergenza_curr), CRITICAL)
         if not attiva_curr and attiva_prev:
-            return msg_emergenza_cessata(emergenza_prev or {})
+            return (msg_emergenza_cessata(emergenza_prev or {}), CESSATION)
         if attiva_curr and attiva_prev:
             cambi = ["titolo", "descrizione", "tipo", "link"]
             if any((emergenza_curr.get(k) or "") != ((emergenza_prev or {}).get(k) or "") for k in cambi):
-                return msg_emergenza_aggiornata(emergenza_curr)
+                return (msg_emergenza_aggiornata(emergenza_curr), CRITICAL)
 
-    # Priorità 2: cambiamento di livello allerta
+    # Priorità 2: allerta
     if allerta_curr:
         livello_curr = (allerta_curr.get("livello") or "").lower()
         livello_prev = (allerta_prev or {}).get("livello", "").lower() if allerta_prev else None
 
         if allerta_prev is None:
-            # Primo commit sul branch — notifica solo se siamo in stato non-verde
-            # (per evitare notifica spamming all'inizializzazione del sistema)
+            # Primo commit sul branch — notifica solo se non-verde
             if livello_curr and livello_curr != "verde":
-                return msg_allerta_cambiata(None, allerta_curr)
+                cat = CRITICAL if livello_curr in ("arancione", "rossa", "rosso") else INFORMATIONAL
+                return (msg_allerta_cambiata(None, allerta_curr), cat)
             return None
 
         if livello_curr != livello_prev:
-            return msg_allerta_cambiata(allerta_prev, allerta_curr)
+            if livello_curr == "verde":
+                return (msg_allerta_cambiata(allerta_prev, allerta_curr), CESSATION)
+            if livello_curr in ("arancione", "rossa", "rosso"):
+                return (msg_allerta_cambiata(allerta_prev, allerta_curr), CRITICAL)
+            # gialla
+            return (msg_allerta_cambiata(allerta_prev, allerta_curr), INFORMATIONAL)
 
     return None
 
 
 def main() -> int:
-    token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
-    chat_id = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
-
+    token, chat_id = get_credentials()
     if not token or not chat_id:
         print("⚠ TELEGRAM_BOT_TOKEN o TELEGRAM_CHAT_ID non configurati. Skip notifica.")
         print("  Per attivare le notifiche: vedi scripts/README-telegram.md")
         return 0
 
-    testo = determina_messaggio()
-    if testo is None:
+    risultato = determina_notifica()
+    if risultato is None:
         print("Nessun cambiamento significativo da notificare.")
         return 0
 
+    testo, categoria = risultato
+    print(f"Categoria: {categoria}")
     print("Messaggio da inviare:")
     print("-" * 60)
     print(testo)
     print("-" * 60)
 
-    ok, descr = manda_telegram(token, chat_id, testo)
-    if ok:
-        print("✓ Messaggio inviato al canale Telegram.")
-        return 0
-    else:
-        print(f"✗ Invio fallito: {descr}", file=sys.stderr)
+    # Step 1: per categoria CESSATION o CRITICAL, unpin di pulizia prima
+    if categoria in (CRITICAL, CESSATION):
+        ok, _, err = unpin_all(token, chat_id)
+        if ok:
+            print("✓ Messaggi pinnati precedenti rimossi.")
+        else:
+            # Niente di pinnato è ok, non bloccare
+            print(f"  (unpin: {err}) — proseguo")
+
+    # Step 2: invia il messaggio
+    ok, result, err = send_message(token, chat_id, testo)
+    if not ok:
+        print(f"✗ Invio fallito: {err}", file=sys.stderr)
         return 1
+    msg_id = result.get("message_id") if result else None
+    print(f"✓ Messaggio inviato al canale Telegram (msg_id={msg_id}).")
+
+    # Step 3: pin per categoria CRITICAL
+    if categoria == CRITICAL and msg_id:
+        ok, _, err = pin_message(token, chat_id, msg_id)
+        if ok:
+            print("✓ Messaggio fissato in cima al canale.")
+        else:
+            print(f"⚠ Pin fallito: {err}")
+
+    return 0
 
 
 if __name__ == "__main__":
