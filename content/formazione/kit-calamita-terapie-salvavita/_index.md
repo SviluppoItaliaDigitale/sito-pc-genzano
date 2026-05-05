@@ -1,31 +1,32 @@
 ---
 title: "Kit Calamità per pazienti con terapie salvavita continuative"
-description: "Schede per pazienti con terapie salvavita: dialisi, ossigenoterapia, oncologia, trapianti, malattie rare. WHO Health Cluster + Sphere + PCM 24/06/2016."
+description: "Schede stampabili A4 per pazienti con terapie salvavita: dialisi, ossigenoterapia, oncologia, trapianti, malattie rare, farmaci essenziali e dispositivi elettromedicali."
 layout: "single"
 ---
 
-Alcune categorie di pazienti dipendono da **terapie salvavita continuative** la cui interruzione causa morte o danno irreversibile in **24-72 ore**: dialisi, ossigenoterapia, immunosoppressione post-trapianto, chemioterapia in corso, anticoagulazione, insulina, terapie biologiche, terapie sostitutive per malattie rare. In emergenza la **continuità terapeutica è priorità assoluta**.
+Alcune persone dipendono da **terapie continuative o dispositivi essenziali** che non devono essere interrotti senza indicazione sanitaria: dialisi, ossigenoterapia, terapie post-trapianto, terapie oncologiche, anticoagulanti, insulina, terapie biologiche, terapie sostitutive per malattie rare e dispositivi elettromedicali.
 
-> Leggi prima la **[Guida operatori](/formazione/kit-calamita-terapie-salvavita/00-guida-operatori.html)** — 5 categorie a rischio, riconoscimento priorità ENEL, coordinamento sanitario, cosa NON fare.
+In emergenza è importante preparare in anticipo informazioni, contatti sanitari, farmaci, documenti e soluzioni di continuità, coinvolgendo sempre medico curante, centro specialistico, servizi sanitari e autorità competenti.
+
+> Leggi prima la **[Guida operatori](/formazione/kit-calamita-terapie-salvavita/00-guida-operatori.html)**: contiene indicazioni di base su riconoscimento dei bisogni, continuità terapeutica, dispositivi elettromedicali, coordinamento sanitario e cosa evitare.
 
 ## Indice del kit
 
 | Scheda | Quando usarla |
 |---|---|
-| [Guida operatori](/formazione/kit-calamita-terapie-salvavita/00-guida-operatori.html) | **Leggere prima.** 5 categorie (dialisi, OLT, oncologici, trapiantati, malattie rare). |
-| [Carta d'identità terapia salvavita](/formazione/kit-calamita-terapie-salvavita/01-carta-terapia-salvavita.html) | Categoria, terapie, centro specialistico, dispositivi elettromedicali. |
-| [Checklist scorta farmaci 7-14 giorni](/formazione/kit-calamita-terapie-salvavita/02-checklist-scorta-7-giorni.html) | Farmaci, catena del freddo, documenti, backup energetico, contatti centri. |
+| [Guida operatori](/formazione/kit-calamita-terapie-salvavita/00-guida-operatori.html) | **Leggere prima.** Categorie di bisogno, continuità terapeutica, dispositivi elettromedicali, coordinamento con personale sanitario e servizi competenti. |
+| [Carta d'identità terapia salvavita](/formazione/kit-calamita-terapie-salvavita/01-carta-terapia-salvavita.html) | Per raccogliere categoria, terapie, centro specialistico, dispositivi elettromedicali, contatti sanitari e informazioni essenziali. |
+| [Checklist scorta farmaci 7-14 giorni](/formazione/kit-calamita-terapie-salvavita/02-checklist-scorta-7-giorni.html) | Per preparare farmaci, catena del freddo, documenti, backup energetico, contatti e indicazioni del centro di riferimento. |
 
-## Standard di riferimento
+## Riferimenti utili
 
-- **WHO Health Cluster 2018** — Essential Health Services in Emergencies
-- **Sphere Standards 2018** § Health Systems / Essential health services
-- **Direttiva PCM 24 giugno 2016** — Sanitario in emergenza
-- **Min. Salute** — Linee guida assistenza in emergenza sanitaria
-- **ARERA delibera 295/2018** — Registro elettromedicali essenziali (priorità ENEL)
-- **SIN** Nefrologia, **AIOM** Oncologia, **AIPO-ITS** Pneumologi
-- **CNT** Centro Nazionale Trapianti, **CIST** Coordinamento Sanitari Trapianti
-- **UNIAMO** Federazione Italiana Malattie Rare, **Telethon**
-- **Rete Malattie Rare Lazio** — centri di riferimento regionali
+Le schede sono ispirate a materiali su servizi sanitari essenziali in emergenza, continuità terapeutica, dispositivi elettromedicali e assistenza alla popolazione fragile. Non sostituiscono valutazioni o prescrizioni sanitarie.
+
+- WHO Health Cluster — Essential Health Services in Emergencies
+- Sphere Standards — Health Systems / Essential health services
+- Direttiva PCM 24 giugno 2016 — sanitario in emergenza
+- Ministero della Salute — assistenza in emergenza sanitaria
+- ARERA — agevolazioni e registri collegati a dispositivi elettromedicali essenziali
+- SIN, AIOM, AIPO-ITS, CNT, UNIAMO, Telethon e reti regionali malattie rare — riferimenti specialistici
 
 Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
