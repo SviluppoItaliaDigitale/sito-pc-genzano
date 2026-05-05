@@ -271,6 +271,8 @@ Per bruciare, il fuoco ha bisogno di tre elementi:
 
 Se togli uno dei tre elementi, il fuoco si spegne. Questo è il principio con cui lavorano i vigili del fuoco.
 
+> 🧪 **Scheda stampabile dedicata**: [Il triangolo del fuoco con esperimenti — Primaria III-V](/formazione/schede-stampabili/triangolo-fuoco-primaria/) — esperimento "candela + bicchiere capovolto" (toglie l'ossigeno), esperimento "allontana il combustibile", applicazione alle 3 tecniche di spegnimento dei vigili del fuoco (raffreddamento / soffocamento / separazione), quiz scientifico vero/falso, domanda di ragionamento. Da svolgere in 1 ora di Scienze.
+
 ### Attività: quiz vero o falso
 
 | Affermazione | V/F |
