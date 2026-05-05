@@ -1,7 +1,7 @@
 {
-  "livello": "verde",
-  "titolo": "NESSUNA ALLERTA",
-  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
-  "ultimo_aggiornamento": "2026-05-01T15:50:29+02:00",
-  "ultimo_controllo": "2026-05-04T22:39:38+02:00"
+  "livello": "gialla",
+  "titolo": "TEST — Allerta Gialla (verifica canale Telegram)",
+  "descrizione": "Messaggio di test per verificare il funzionamento del nuovo canale Telegram. Da ignorare. Lo stato verrà ripristinato a 'verde' tra pochi secondi.",
+  "ultimo_aggiornamento": "2026-05-05T17:00:00+02:00",
+  "ultimo_controllo": "2026-05-05T17:00:00+02:00"
 }
