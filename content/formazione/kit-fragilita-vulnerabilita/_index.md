@@ -1,6 +1,6 @@
 ---
 title: "Kit per persone fragili e bisogni specifici"
-description: "Punto di accesso ai kit stampabili per anziani, persone con disabilità, caregiver, terapie salvavita, bambini e persone con difficoltà comunicative in emergenza."
+description: "Punto di accesso ai kit stampabili per anziani, persone con disabilità, caregiver, terapie salvavita, gravidanza, neonati, bambini, animali domestici e persone con difficoltà comunicative."
 date: 2026-05-05
 draft: false
 type: "page"
@@ -28,8 +28,10 @@ Questa pagina raccoglie i kit già disponibili sul sito per **persone fragili o 
 <tr><td>Persona adulta con disabilità motoria, sensoriale, cognitiva, comunicativa o psichica</td><td><a href="/formazione/kit-calamita-disabilita-adulti/">Kit Calamità per persone con disabilità adulte</a></td><td>Ausili, bisogni comunicativi, checklist evacuazione e informazioni utili ai soccorritori.</td></tr>
 <tr><td>Familiare che assiste una persona non autosufficiente</td><td><a href="/formazione/kit-calamita-caregiver-familiari/">Kit Calamità per caregiver familiari</a></td><td>Piano per persona assistita, rete familiare, terapie, ausili e continuità dell'assistenza.</td></tr>
 <tr><td>Persona con terapia salvavita o dispositivo essenziale</td><td><a href="/formazione/kit-calamita-terapie-salvavita/">Kit Calamità per terapie salvavita continuative</a></td><td>Contatti sanitari, farmaci, dispositivi elettromedicali, catena del freddo e backup energetico.</td></tr>
+<tr><td>Gravidanza, parto recente, neonato o lattante</td><td><a href="/formazione/kit-calamita-gravidanza-neonati/">Kit Calamità per gravidanza, neonati e lattanti</a></td><td>Documenti sanitari essenziali, borsa mamma, pannolini, alimentazione, contatti sanitari e segnali da comunicare al 112.</td></tr>
 <tr><td>Bambini e ragazzi durante attese, evacuazioni o accoglienza</td><td><a href="/formazione/kit-calamita-bambini/">Kit Calamità per Bambini</a></td><td>Schede stampabili, attività rassicuranti, CAA, routine visive e supporto emotivo leggero.</td></tr>
-<tr><td>Bambini, adulti o famiglie con difficoltà linguistiche o comunicative</td><td><a href="/formazione/easy-to-read-scuola/">Easy-to-Read per le scuole</a> · <a href="/facile-da-leggere/">Facile da Leggere</a> · <a href="/pittogrammi/">Pittogrammi</a></td><td>Testi semplici, immagini, pittogrammi e comunicazione più accessibile.</td></tr>
+<tr><td>Famiglie con animali domestici</td><td><a href="/formazione/kit-calamita-animali-domestici/">Kit Calamità per animali domestici</a></td><td>Cibo, acqua, trasportino, guinzaglio, documenti, farmaci veterinari e foto recente.</td></tr>
+<tr><td>Bambini, adulti o famiglie con difficoltà linguistiche o comunicative</td><td><a href="/formazione/kit-calamita-italiano-l2/">Kit italiano L2</a> · <a href="/formazione/easy-to-read-scuola/">Easy-to-Read per le scuole</a> · <a href="/facile-da-leggere/">Facile da Leggere</a> · <a href="/pittogrammi/">Pittogrammi</a></td><td>Testi semplici, immagini, frasario di emergenza, pittogrammi e comunicazione più accessibile.</td></tr>
 </tbody>
 </table>
 </div>
@@ -92,7 +94,9 @@ Quando parli con l'operatore:
 - spiega dove sei;
 - descrivi cosa è successo;
 - indica se ci sono persone con disabilità, anziani, bambini, persone allettate o terapie salvavita;
+- segnala gravidanza avanzata, parto recente, neonati o lattanti;
 - segnala ausili, ossigeno, dispositivi elettromedicali, difficoltà di comunicazione o bisogno di trasporto;
+- segnala eventuali animali presenti se incidono sull'evacuazione;
 - segui le istruzioni ricevute.
 
 Non tentare spostamenti rischiosi o improvvisati se la persona non può muoversi in sicurezza. Attendi indicazioni e, quando necessario, l'intervento dei soccorritori.
