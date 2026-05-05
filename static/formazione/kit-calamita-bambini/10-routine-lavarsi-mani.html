@@ -4,9 +4,67 @@
 <meta charset="utf-8">
 <title>Scheda 10 — Come lavarsi le mani (procedura WHO, 3-5 anni)</title>
 <link rel="stylesheet" href="../kit-calamita-shared/print.css">
+<style>
+  @page { size: A4 portrait; margin: 8mm; }
+  .scheda-a4 {
+    min-height: auto;
+    padding: 8mm;
+    display: flex;
+    flex-direction: column;
+    gap: 4mm;
+  }
+  .scheda-title {
+    margin: 1mm 0 0;
+    font-size: 22pt;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .scheda-eta {
+    align-self: center;
+    margin: 0;
+  }
+  .scheda-istruzione {
+    margin: 0;
+    padding: 3mm 4mm;
+    font-size: 12.5pt;
+    line-height: 1.25;
+  }
+  .mani-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .mani-wrap img {
+    display: block;
+    width: 100%;
+    max-width: 188mm;
+    height: auto;
+    max-height: 205mm;
+    object-fit: contain;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 4px;
+    background: #fff;
+  }
+  .scheda-footer {
+    margin-top: 1mm;
+    font-size: 8.5pt;
+    line-height: 1.15;
+  }
+  .scheda-footer .fonti {
+    max-width: 115mm;
+  }
+  @media print {
+    body { background: #fff; }
+    .scheda-a4 { box-shadow: none; border: 0; page-break-after: avoid; }
+  }
+</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>
+<a class="btn-indice no-print" href="./">← Indice</a>
 <article class="scheda-a4">
   <header class="scheda-header">
     <div class="logo-box">PC</div>
@@ -15,13 +73,13 @@
   </header>
   <h1 class="scheda-title">Come lavarsi le mani</h1>
   <span class="scheda-eta">3-5 anni · adatta a bambini con autismo</span>
-  <div class="scheda-istruzione">🧼 <strong>Procedura ufficiale WHO</strong> — 12 passi in 40-60 secondi. Da fare con un grande prima di mangiare e prima di dormire.</div>
-  <section class="scheda-attivita" style="justify-content: center;">
-    <img src="img/lavare-mani-who.jpg" alt="Procedura ufficiale WHO per il lavaggio delle mani: 12 disegni numerati che mostrano i passaggi per bagnare le mani, applicare sapone, strofinare palmo a palmo, intrecciare le dita, lavare i pollici, risciacquare e asciugare con salvietta monouso" style="width: 100%; max-width: 100%; max-height: 220mm; object-fit: contain; border: 1.5px solid #1a1a1a; border-radius: 4px;">
+  <div class="scheda-istruzione"><strong>Procedura ufficiale WHO</strong> — 12 passaggi in 40-60 secondi. Da fare con un adulto prima di mangiare, dopo essere andati in bagno e quando le mani sono sporche.</div>
+  <section class="mani-wrap">
+    <img src="img/lavare-mani-who.jpg" alt="Procedura ufficiale WHO per il lavaggio delle mani: dodici disegni numerati mostrano come bagnare le mani, applicare sapone, strofinare palmi, dita e pollici, risciacquare e asciugare con salvietta monouso">
   </section>
   <footer class="scheda-footer">
-    <span>Scheda 10 — Lavarsi le mani (procedura WHO)</span>
-    <span class="fonti">Fonte: World Health Organization (WHO) — protocollo ufficiale per l'igiene delle mani. In emergenza l'igiene è la prima difesa contro le infezioni. Sequenza visiva adatta a bambini con autismo, italiano L2, disabilità cognitiva.</span>
+    <span>Scheda 10 — Lavarsi le mani</span>
+    <span class="fonti">Fonte: World Health Organization (WHO). Sequenza visiva utile in emergenza, in tendopoli e nei luoghi di accoglienza.</span>
     <span>www.protezionecivilegenzano.it</span>
   </footer>
 </article>
