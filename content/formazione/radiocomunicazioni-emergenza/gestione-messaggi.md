@@ -35,7 +35,7 @@ In emergenza vera, la maglia libera **non funziona**: si sovrappongono troppe st
 
 All'**innesco** di un'emergenza, una maglia libera diventa una maglia diretta. Chi apre la maglia (in genere il primo ad accorgersi, o un operatore pre-designato) dichiara:
 
-*"Questa è la Maglia di Emergenza di Genzano, diretta, dal nominativo IØXYZ Net Control. Chiedo silenzio radio salvo traffico di emergenza o priorità. Stazioni con traffico di emergenza, chiamate ora."*
+*"Questa è la Maglia di Emergenza di Genzano, diretta, dal nominativo I0XYZ Net Control. Chiedo silenzio radio salvo traffico di emergenza o priorità. Stazioni con traffico di emergenza, chiamate ora."*
 
 ## Il Net Control Station (NCS)
 
@@ -175,9 +175,9 @@ Chi **origina** il messaggio (cioè l'autore, non il trasmettitore):
 ### Esempio di messaggio formale
 
 ```
-NUMERO 47 — PRIORITÀ — IØABC
+NUMERO 47 — PRIORITÀ — I0ABC
 CHECK 22
-DA: IØABC — GENZANO DI ROMA — 20 APR 2026 — 10:45 UTC
+DA: I0ABC — GENZANO DI ROMA — 20 APR 2026 — 10:45 UTC
 
 A:
 Sindaco Flavio Gabbarini
@@ -279,7 +279,7 @@ oppure (se COC è occupato):
 
 **6. Trasmissione del messaggio**
 
-*"Messaggio numero 12 priorità da Punto A — check 22 — da IØABC — Genzano — 20 aprile 2026 — 10 e 45 UTC.*
+*"Messaggio numero 12 priorità da Punto A — check 22 — da I0ABC — Genzano — 20 aprile 2026 — 10 e 45 UTC.*
 
 *A: Sindaco, Comune di Genzano, piazza Tommaso Frasconi 3, zero sei nove tre sette uno uno.*
 

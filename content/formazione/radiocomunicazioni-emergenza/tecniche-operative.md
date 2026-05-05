@@ -257,7 +257,7 @@ In pochi secondi hai dato al Net Control tutto ciò che gli serve per indirizzar
 
 ### Identificazione di stazione (normativa)
 
-In Italia l'autorizzazione generale per radioamatori impone l'identificazione con il **nominativo internazionale** (call sign) almeno all'inizio e alla fine di ogni QSO, e ogni **15 minuti** in caso di conversazione prolungata. In emergenza, l'uso dei **nominativi tattici** non sostituisce l'identificazione: si intervalla il call sign personale al nominativo tattico secondo la consuetudine locale (es.: "COC Genzano, operatore IØABC, per IØXYZ").
+In Italia l'autorizzazione generale per radioamatori impone l'identificazione con il **nominativo internazionale** (call sign) almeno all'inizio e alla fine di ogni QSO, e ogni **15 minuti** in caso di conversazione prolungata. In emergenza, l'uso dei **nominativi tattici** non sostituisce l'identificazione: si intervalla il call sign personale al nominativo tattico secondo la consuetudine locale (es.: "COC Genzano, operatore I0ABC, per I0XYZ").
 
 Verifica la normativa nazionale aggiornata: il Codice delle comunicazioni elettroniche (D.Lgs. 259/2003) e le delibere AGCOM sono il riferimento ufficiale.
 
