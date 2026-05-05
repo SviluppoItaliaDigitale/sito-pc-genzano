@@ -14,14 +14,14 @@ tts: true
 <div class="row mt-3">
 <div class="col-md-6 mb-2">
 <p class="fs-3 fw-bold text-danger mb-0">112</p>
-<p class="mb-0">Numero Unico Emergenze — per qualsiasi emergenza</p>
+<p class="mb-0">Numero Unico Europeo per le emergenze</p>
 </div>
 <div class="col-md-6 mb-2">
 <p class="fs-3 fw-bold text-danger mb-0">803 555</p>
-<p class="mb-0">Sala Operativa Protezione Civile Lazio</p>
+<p class="mb-0">Sala Operativa Regionale Protezione Civile Lazio</p>
 </div>
 </div>
-<p class="mb-0 mt-2"><small>Saranno loro, una volta valutata la situazione, ad allertare e attivare le nostre squadre sul territorio.</small></p>
+<p class="mb-0 mt-2"><small>In caso di pericolo immediato chiama il 112. Le squadre del volontariato vengono attivate dagli enti competenti quando necessario.</small></p>
 </div>
 </div>
 
@@ -74,8 +74,9 @@ Seguici per ricevere aggiornamenti, allerte e comunicazioni:
 <tr><th scope="col">Situazione</th><th scope="col">Cosa fare</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Emergenza in corso</strong> (incendio, alluvione, terremoto)</td><td>Chiama il <strong>112</strong></td></tr>
-<tr><td><strong>Segnalazione di pericolo</strong> (albero caduto, smottamento)</td><td>Chiama il <strong>112</strong></td></tr>
+<tr><td><strong>Emergenza in corso</strong> (incendio, alluvione, terremoto, persona in pericolo)</td><td>Chiama il <strong>112</strong></td></tr>
+<tr><td><strong>Segnalazione di pericolo immediato</strong> (albero caduto su strada, smottamento, cavi pericolanti, incendio)</td><td>Chiama il <strong>112</strong></td></tr>
+<tr><td><strong>Comunicazioni di protezione civile regionale</strong></td><td>Puoi fare riferimento alla Sala Operativa Regionale <strong>803 555</strong>, secondo le indicazioni ufficiali</td></tr>
 <tr><td><strong>Informazioni sul Gruppo</strong></td><td>Chiama o scrivi ai recapiti ordinari</td></tr>
 <tr><td><strong>Diventare volontario</strong></td><td>Vieni in sede, chiama o <a href="mailto:segreteria@protezionecivilegenzano.it">scrivi un'email</a></td></tr>
 <tr><td><strong>Collaborazione con scuole</strong></td><td>Scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></td></tr>
