@@ -104,7 +104,7 @@ Il **COI — Centro Operativo Intercomunale** è un livello di coordinamento par
 
 Il compito del COI è **intervenire nella gestione degli interventi di carattere locale** in stretta collaborazione tra i Comuni aderenti, condividendo risorse, attrezzature e personale quando l'evento supera la capacità del singolo Comune ma non richiede l'attivazione del COM.
 
-Il nostro Comune fa parte del **COI 15° zona**, che comprende:
+Il nostro Comune fa parte del **COI 14° zona**, che comprende:
 
 - **Albano Laziale** (capofila, dove ha sede il COI e la SOI — Sala Operativa Intercomunale)
 - **Ariccia**
@@ -113,7 +113,7 @@ Il nostro Comune fa parte del **COI 15° zona**, che comprende:
 - **Lanuvio**
 - **Nemi**
 
-Sono tutti Comuni dei Castelli Romani, con caratteristiche geografiche, rischio idrogeologico e densità di popolazione simili. Il COI 15° consente ai sei Comuni di **mettere in comune i mezzi** (piattaforme aeree, idrovore, motopompe) quando una situazione eccede le risorse del singolo Comune. La **SOI** (Sala Operativa Intercomunale), con sede ad Albano, è il punto di raccordo operativo tra i sei COC.
+Sono tutti Comuni dei Castelli Romani, con caratteristiche geografiche, rischio idrogeologico e densità di popolazione simili. Il COI 14° consente ai sei Comuni di **mettere in comune i mezzi** (piattaforme aeree, idrovore, motopompe) quando una situazione eccede le risorse del singolo Comune. La **SOI** (Sala Operativa Intercomunale), con sede ad Albano, è il punto di raccordo operativo tra i sei COC.
 
 ---
 
@@ -185,7 +185,7 @@ Questo è possibile perché ogni livello **non aspetta autorizzazione per agire 
 Dove si colloca concretamente il Gruppo Comunale di Genzano?
 
 - **In via ordinaria**: è la **componente operativa del COC di Genzano**, attivabile dal Sindaco per esercitazioni, attività di prevenzione, interventi minori
-- **Nelle emergenze locali**: opera sotto il **COI 15°** quando l'evento coinvolge più Comuni dei Castelli Romani
+- **Nelle emergenze locali**: opera sotto il **COI 14°** quando l'evento coinvolge più Comuni dei Castelli Romani
 - **Nelle maxi emergenze regionali o nazionali**: è inserito nelle **colonne mobili del FEPIVOL**, attivate dalla **SOUP** su richiesta del **DPC**
 
 In ogni scenario, il Gruppo non agisce mai in modo isolato: è sempre un **tassello di una filiera**, e deve conoscere a quale livello della catena sta operando per comunicare correttamente con i propri interlocutori.
