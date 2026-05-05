@@ -1,0 +1,71 @@
+name: "📄 Controllo settimanale documenti scaricabili"
+
+# Verifica settimanale (lunedì 11:00 UTC) di tutti i documenti scaricabili
+# del sito: PDF in /manuali, /allegati, /comunicati; ZIP in /pacchetti;
+# schede HTML stampabili.
+#
+# Controlla:
+#   1. INTEGRITÀ — file esistono, non vuoti, non corrotti (header valido)
+#   2. DRIFT ZIP — i pacchetti committati corrispondono a quello che lo
+#      script genererebbe ora (ovvero workflow di rigenerazione non saltato)
+#   3. LINK ROTTI — pagine del sito linkano documenti che non esistono
+#   4. ORFANI — documenti nel filesystem non linkati da nessuna pagina
+#
+# Schedule: lunedì 11:00 UTC, dopo audit-sito (09:00) e check-links (10:00).
+# Apre issue automatica solo se ci sono problemi bloccanti.
+
+on:
+  schedule:
+    - cron: "0 11 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: "controllo-documenti"
+  cancel-in-progress: false
+
+jobs:
+  controllo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: "🐍 Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: "🔍 Esegui controllo documenti"
+        id: controllo
+        run: |
+          set +e
+          python3 scripts/controllo-documenti.py
+          exit_code=$?
+          echo "exit_code=$exit_code" >> $GITHUB_OUTPUT
+          echo "Exit code: $exit_code"
+          exit 0
+
+      - name: "📋 Stampa report nei log"
+        run: |
+          if [ -f controllo-documenti-report.md ]; then
+            cat controllo-documenti-report.md
+          else
+            echo "Report non generato."
+          fi
+
+      - name: "🚨 Apri issue se ci sono problemi bloccanti"
+        if: steps.controllo.outputs.exit_code != '0'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "[Automatico] Controllo settimanale documenti — problemi rilevati"
+          content-filepath: ./controllo-documenti-report.md
+          labels: |
+            manutenzione
+            documenti
+            automatico

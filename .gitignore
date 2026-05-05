@@ -24,3 +24,6 @@ package-lock.json
 # Contesto AI generato on-demand (rigenerabile con scripts/export-contesto-ai.sh)
 CONTESTO-AI.md
 __pycache__/
+
+# Report runtime degli script di controllo (rigenerato ad ogni esecuzione)
+controllo-documenti-report.md
