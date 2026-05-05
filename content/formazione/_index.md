@@ -41,6 +41,8 @@ Il Gruppo ha sviluppato kit didattici completi per ogni grado di istruzione, con
 
 > 🏛️ **Per Dirigenti, DSGA, RSPP**: la [pagina dedicata Dirigenti e RSPP](/formazione/dirigenti-e-rspp/) chiarisce ruoli, limiti, responsabilità del Gruppo vs scuola, coordinamento col piano di emergenza, gestione PCTO. I [fac-simile editabili — Pacchetti A e B](/formazione/scuole-strumenti/) (modulo richiesta, liberatoria GDPR, circolare, attestato + convenzione PCTO, progetto formativo, registro+valutazione+certificazione) sono pronti all'uso. Per il quadro normativo unico: [Quadro normativo scuola](/formazione/quadro-normativo-scuola/).
 
+> 👨‍👩‍👧 **Per i genitori — dopo la lezione di Protezione Civile**: tuo figlio o tua figlia è tornato a casa parlando di terremoto, allerta, kit, 112? La pagina [In famiglia dopo la lezione](/formazione/in-famiglia-dopo-la-lezione/) propone **5 azioni concrete** per trasformare la lezione in preparazione vera della famiglia (numeri nel telefono, piano familiare, kit, prova domestica, conversazioni con i bambini).
+
 | Kit | Età | Contenuti principali |
 |---|---|---|
 | [Scuola dell'Infanzia](kit-scuola-infanzia/) | 3-6 anni | Storie, giochi, la regola della tartaruga, il numero 112 |

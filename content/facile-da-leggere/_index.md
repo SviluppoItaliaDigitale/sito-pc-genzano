@@ -200,6 +200,68 @@ sitemap:
 </div>
 
 <div class="facile-blocco">
+<h2><span class="icona">💨</span> Se c'è vento forte</h2>
+<p>Se il vento soffia molto forte:</p>
+
+{{< pittogramma src="/pittogrammi/arasaac/vento.png" alt="Pittogramma: vento forte" size="large" >}}
+
+<ul class="facile-elenco">
+<li>Resta in casa</li>
+<li>Chiudi finestre e porte</li>
+<li>Stai lontano dalle finestre</li>
+</ul>
+<p><strong>Non fare</strong>:</p>
+<ul class="facile-elenco no">
+<li>Non stare sotto un albero</li>
+<li>Non camminare vicino ai muri vecchi</li>
+<li>Non andare sul balcone</li>
+</ul>
+<p>Le cose sui balconi possono volare. Mettile dentro casa.</p>
+</div>
+
+<div class="facile-blocco">
+<h2><span class="icona">💡</span> Se manca la luce</h2>
+<p>Se in casa non c'è più la corrente:</p>
+
+{{< pittogramma src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: torcia accesa" size="large" >}}
+
+<ul class="facile-elenco">
+<li>Non avere paura. Succede a volte.</li>
+<li>Usa una torcia con le pile</li>
+<li>Tieni chiuso il frigo. Il cibo dura ore.</li>
+<li>Aspetta che torni la luce</li>
+</ul>
+<p><strong>Non fare</strong>:</p>
+<ul class="facile-elenco no">
+<li>Non accendere candele da solo</li>
+<li>Non prendere l'ascensore</li>
+<li>Non usare il barbecue dentro casa</li>
+</ul>
+<p>Se hai una macchina che ti aiuta a respirare o a vivere, chiama subito il <strong>112</strong>.</p>
+</div>
+
+<div class="facile-blocco">
+<h2><span class="icona">☀️</span> Se fa molto caldo</h2>
+<p>In estate ci sono giorni con caldo molto forte:</p>
+
+{{< pittogramma src="/pittogrammi/arasaac/caldo.png" alt="Pittogramma: caldo molto forte" size="large" >}}
+
+<ul class="facile-elenco">
+<li>Bevi tanta acqua</li>
+<li>Resta in casa nelle ore più calde (le 12, le 13, le 14)</li>
+<li>Chiudi le tapparelle quando c'è il sole</li>
+<li>Mangia frutta e verdura</li>
+</ul>
+<p><strong>Non fare</strong>:</p>
+<ul class="facile-elenco no">
+<li>Non uscire al sole forte</li>
+<li>Non bere alcolici</li>
+<li>Non lasciare bambini o animali in macchina</li>
+</ul>
+<p>Se ti senti male, chiedi aiuto a un adulto. Se la persona perde i sensi, chiama il <strong>112</strong>.</p>
+</div>
+
+<div class="facile-blocco">
 <h2><span class="icona">🎒</span> Cosa metto nello zaino di emergenza</h2>
 <p>Tieni in casa uno zaino con:</p>
 
