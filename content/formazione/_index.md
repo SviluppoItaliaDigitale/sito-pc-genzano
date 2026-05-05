@@ -43,6 +43,8 @@ Il Gruppo ha sviluppato kit didattici completi per ogni grado di istruzione, con
 
 > 🧭 **Non sai da dove cominciare?** [Scuole: da dove cominciare — il cruscotto per ogni ruolo](/formazione/scuole-da-dove-cominciare/) — scegli il tuo ruolo (DS, infanzia, primaria, sec I, sec II, sostegno, genitore) e arrivi in due click ai materiali giusti.
 
+> ✅ **Devi preparare una lezione?** La [Checklist docente per una lezione di Protezione Civile](/formazione/scuole-checklist-docente/) aiuta a scegliere parole, tempi, attività, inclusione, collegamento con le famiglie e valutazione senza creare allarmismo.
+
 > 🚀 **Per i docenti con poco tempo**: i [Percorsi didattici pronti](/formazione/percorsi-didattici/) riorganizzano i materiali in **Pacchetti** già strutturati (PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO) con destinatari, durata, obiettivi e modalità di valutazione. La [pagina docenti dedicata all'Educazione Civica](/formazione/educazione-civica/) mappa l'intero patrimonio del Gruppo sui 3 Nuclei Concettuali del D.M. 183/2024.
 
 > 🏛️ **Per Dirigenti, DSGA, RSPP**: la [pagina dedicata Dirigenti e RSPP](/formazione/dirigenti-e-rspp/) chiarisce ruoli, limiti, responsabilità del Gruppo vs scuola, coordinamento col piano di emergenza, gestione PCTO. I [fac-simile editabili — Pacchetti A e B](/formazione/scuole-strumenti/) (modulo richiesta, liberatoria GDPR, circolare, attestato + convenzione PCTO, progetto formativo, registro+valutazione+certificazione) sono pronti all'uso. Per il quadro normativo unico: [Quadro normativo scuola](/formazione/quadro-normativo-scuola/).
