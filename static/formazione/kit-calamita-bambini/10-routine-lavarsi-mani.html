@@ -2,86 +2,45 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<title>Scheda 10 — Lavaggio completo delle mani (procedura WHO)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scheda 10 — Lavaggio completo delle mani</title>
 <link rel="stylesheet" href="../kit-calamita-shared/print.css">
 <style>
-  @page { size: A4 portrait; margin: 8mm; }
-  .scheda-a4 {
-    min-height: auto;
-    padding: 8mm;
-    display: flex;
-    flex-direction: column;
-    gap: 4mm;
-  }
-  .scheda-title {
-    margin: 1mm 0 0;
-    font-size: 22pt;
-    line-height: 1.1;
-    text-align: center;
-  }
-  .scheda-eta {
-    align-self: center;
-    margin: 0;
-  }
-  .scheda-istruzione {
-    margin: 0;
-    padding: 3mm 4mm;
-    font-size: 12.5pt;
-    line-height: 1.25;
-  }
-  .mani-wrap {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-  .mani-wrap img {
-    display: block;
-    width: 100%;
-    max-width: 188mm;
-    height: auto;
-    max-height: 205mm;
-    object-fit: contain;
-    border: 1.5px solid #1a1a1a;
-    border-radius: 4px;
-    background: #fff;
-  }
-  .scheda-footer {
-    margin-top: 1mm;
-    font-size: 8.5pt;
-    line-height: 1.15;
-  }
-  .scheda-footer .fonti {
-    max-width: 115mm;
-  }
-  @media print {
-    body { background: #fff; }
-    .scheda-a4 { box-shadow: none; border: 0; page-break-after: avoid; }
-  }
+@page{size:A4 portrait;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#eef2f5;color:#111;font-family:Arial,Helvetica,sans-serif}
+.btn-stampa,.btn-indice{position:fixed;z-index:10;top:12px;padding:10px 14px;border-radius:6px;background:#063b6f;color:#fff;text-decoration:none;border:0;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.btn-stampa{right:12px}.btn-indice{left:12px}
+.scheda-a4{width:210mm;height:297mm;margin:10px auto;background:#fff;padding:8mm;display:grid;grid-template-rows:auto auto auto auto 1fr auto;gap:3.5mm;overflow:hidden;border:1px solid #d7dee8;box-shadow:0 3px 16px rgba(0,0,0,.16)}
+.scheda-header{display:grid;grid-template-columns:16mm 1fr auto;gap:4mm;align-items:center;border-bottom:1.5px solid #c8d5e2;padding-bottom:3mm;min-height:18mm}
+.logo-box{width:15mm;height:15mm;border:2px solid #063b6f;color:#063b6f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15pt;line-height:1}
+.brand{font-weight:800;color:#063b6f;font-size:13pt;line-height:1.1}.brand small{display:block;color:#333;font-size:8.5pt;font-weight:600;margin-top:1mm}.kit-tag{border:1.5px solid #063b6f;border-radius:999px;padding:2mm 3mm;color:#063b6f;font-size:8.8pt;font-weight:800;white-space:nowrap}
+.scheda-title{margin:0;text-align:center;color:#063b6f;font-size:23pt;line-height:1.05;letter-spacing:-.2px}.scheda-eta{text-align:center;font-size:10.5pt;font-weight:700;color:#444}.scheda-istruzione{margin:0;border-left:5px solid #063b6f;background:#eef5fb;padding:3mm 4mm;font-size:12.3pt;line-height:1.22}
+.mani-wrap{display:flex;align-items:center;justify-content:center;min-height:0;overflow:hidden}.mani-wrap img{display:block;width:100%;height:100%;max-width:190mm;max-height:192mm;object-fit:contain;border:1.5px solid #1a1a1a;border-radius:4px;background:#fff}
+.scheda-footer{display:grid;grid-template-columns:1fr 1.7fr 1fr;gap:3mm;align-items:start;border-top:1.5px solid #c8d5e2;padding-top:2.5mm;font-size:8.4pt;line-height:1.18;color:#333}.scheda-footer span:first-child{font-weight:800;color:#063b6f}.scheda-footer span:last-child{text-align:right;font-weight:700;color:#063b6f}
+@media print{html,body{width:210mm;height:297mm;background:#fff}.no-print,.btn-stampa,.btn-indice{display:none!important}.scheda-a4{width:210mm;height:297mm;margin:0;padding:8mm;border:0;box-shadow:none;page-break-after:avoid;break-after:avoid}.mani-wrap img{max-height:192mm}}
 </style>
 </head>
 <body>
-<button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>
-<a class="btn-indice no-print" href="./">← Indice</a>
+<button class="btn-stampa no-print" onclick="window.print()">Stampa A4</button>
+<a class="btn-indice no-print" href="./">Indice</a>
 <article class="scheda-a4">
-  <header class="scheda-header">
-    <div class="logo-box">PC</div>
-    <div class="brand">Protezione Civile<small>Gruppo Comunale Volontari — Genzano di Roma</small></div>
-    <span class="kit-tag">Bambini · 3-5 anni</span>
-  </header>
-  <h1 class="scheda-title">Lavaggio completo delle mani</h1>
-  <span class="scheda-eta">3-5 anni · adatta a bambini con autismo</span>
-  <div class="scheda-istruzione"><strong>Procedura completa WHO</strong> — la scheda mostra tutti i passaggi del lavaggio corretto delle mani, da eseguire in circa 40-60 secondi con l'aiuto di un adulto.</div>
-  <section class="mani-wrap">
-    <img src="img/lavare-mani-who.jpg" alt="Procedura completa WHO per il lavaggio delle mani: disegni numerati mostrano come bagnare le mani, applicare sapone, strofinare palmi, dita e pollici, risciacquare e asciugare con salvietta monouso">
-  </section>
-  <footer class="scheda-footer">
-    <span>Scheda 10 — Lavaggio completo delle mani</span>
-    <span class="fonti">Fonte: World Health Organization (WHO). Sequenza visiva utile in emergenza, in tendopoli e nei luoghi di accoglienza.</span>
-    <span>www.protezionecivilegenzano.it</span>
-  </footer>
+<header class="scheda-header">
+<div class="logo-box">PC</div>
+<div class="brand">Protezione Civile<small>Gruppo Comunale Volontari — Genzano di Roma</small></div>
+<span class="kit-tag">Bambini · 3-5 anni</span>
+</header>
+<h1 class="scheda-title">Lavaggio completo delle mani</h1>
+<div class="scheda-eta">Scheda 10 · procedura completa WHO</div>
+<div class="scheda-istruzione"><strong>Procedura completa per l'igiene delle mani.</strong> Segui tutti i passaggi illustrati, con l'aiuto di un adulto. È utile a casa, a scuola, in emergenza e nelle aree di accoglienza.</div>
+<section class="mani-wrap">
+<img src="img/lavare-mani-who.jpg" alt="Procedura completa WHO per il lavaggio delle mani con passaggi illustrati: bagnare le mani, applicare sapone, strofinare palmi, dita e pollici, risciacquare e asciugare">
+</section>
+<footer class="scheda-footer">
+<span>Scheda 10 — Lavaggio completo delle mani</span>
+<span>Fonte: World Health Organization (WHO). Sequenza visiva utile in emergenza, in tendopoli e nei luoghi di accoglienza.</span>
+<span>www.protezionecivilegenzano.it</span>
+</footer>
 </article>
 </body>
 </html>
