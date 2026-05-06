@@ -15,7 +15,7 @@ Il Piano di Emergenza Familiare è utile perché, durante un evento improvviso, 
 
 > Compila il piano insieme alla famiglia, rileggilo almeno una volta l'anno e aggiornalo ogni volta che cambiano casa, scuola, lavoro, numeri di telefono, farmaci, ausili o composizione del nucleo familiare.
 
-## Perché serve un Piano Familiare
+## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>Perché serve un Piano Familiare {#perche-serve-piano-familiare}
 
 Durante un'emergenza non c'è tempo per organizzarsi. Se la tua famiglia ha già discusso e concordato cosa fare, dove trovarsi e chi contattare, ognuno saprà come comportarsi anche se non siete insieme in quel momento.
 
@@ -29,7 +29,7 @@ Un piano familiare efficace risponde a cinque domande:
 
 Il modello proposto segue l'impostazione delle campagne nazionali del Dipartimento della Protezione Civile, in particolare la preparazione familiare, il contatto fuori area, i punti di ritrovo e l'attenzione alle persone fragili. È inoltre ispirato a buone pratiche internazionali sulla pianificazione familiare in caso di evacuazione.
 
-## Prima di compilare
+## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Prima di compilare {#prima-di-compilare}
 
 Tieni a portata di mano:
 
@@ -43,7 +43,7 @@ Tieni a portata di mano:
 
 Non inserire più dati personali o sanitari del necessario. Il piano stampato deve essere utile in emergenza, ma va conservato con attenzione perché può contenere informazioni sensibili.
 
-## Compila il tuo Piano
+## <i class="bi bi-pencil-square text-primary me-2" aria-hidden="true"></i>Compila il tuo Piano {#compila-il-tuo-piano}
 
 <div class="card shadow-sm p-4 mb-4">
 
@@ -158,7 +158,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 
 <div class="piano-screen-only">
 
-## Consigli per famiglie con bambini
+## <i class="bi bi-emoji-smile-fill text-primary me-2" aria-hidden="true"></i>Consigli per famiglie con bambini {#consigli-bambini}
 
 {{< pittogramma src="/pittogrammi/arasaac/bambino.png" alt="Pittogramma: bambino" size="medium" >}}
 
@@ -169,7 +169,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 - Metti un documento identificativo o un contatto utile nello zainetto, se adatto all'età.
 - Prepara un piccolo oggetto rassicurante: peluche, libro, gioco semplice o foto familiare.
 
-## Consigli per famiglie con anziani
+## <i class="bi bi-person-arms-up text-primary me-2" aria-hidden="true"></i>Consigli per famiglie con anziani {#consigli-anziani}
 
 {{< pittogramma src="/pittogrammi/arasaac/anziano.png" alt="Pittogramma: persona anziana" size="medium" >}}
 
@@ -180,7 +180,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 - Se la persona vive sola, organizza una verifica periodica con un familiare, un vicino o un caregiver.
 - Prepara occhiali, apparecchi acustici, bastone, deambulatore o altri ausili in un punto facile da raggiungere.
 
-## Consigli per persone con disabilità o bisogni specifici
+## <i class="bi bi-universal-access text-primary me-2" aria-hidden="true"></i>Consigli per persone con disabilità o bisogni specifici {#consigli-disabilita}
 
 - Includi nel piano tutti gli ausili necessari: sedia a rotelle, bastone, apparecchi acustici, protesi, comunicatore o altri dispositivi.
 - Se dipendi da apparecchiature elettriche o dispositivi elettromedicali, concorda in anticipo un piano con medico, servizi sanitari e gestore elettrico.
@@ -188,7 +188,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 - Verifica percorsi di uscita accessibili e alternative se scale, ascensori o passaggi non sono utilizzabili.
 - Prepara una scheda sintetica con comunicazione, farmaci, allergie, contatti e bisogni essenziali.
 
-## Consigli per gli animali domestici
+## <i class="bi bi-house-heart-fill text-primary me-2" aria-hidden="true"></i>Consigli per gli animali domestici {#consigli-animali}
 
 - Includi nel kit cibo, acqua, ciotola, sacchetti, farmaci prescritti e oggetti familiari in quantità adeguata.
 - Tieni pronto guinzaglio, pettorina, trasportino e museruola se necessaria.
@@ -196,7 +196,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 - Identifica in anticipo un familiare, amico o luogo adatto dove portare l'animale se la casa non è agibile.
 - Verifica le indicazioni del Comune o del piano locale per l'accoglienza degli animali.
 
-## Checklist finale
+## <i class="bi bi-check2-square text-primary me-2" aria-hidden="true"></i>Checklist finale {#checklist-finale}
 
 Verifica di aver fatto tutto:
 
@@ -211,7 +211,7 @@ Verifica di aver fatto tutto:
 - ☐ Scaricata, se utile, l'app [Where Are U](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/) per le chiamate al 112 con localizzazione.
 - ☐ Riletto il piano con bambini, anziani, caregiver o persone con bisogni specifici.
 
-## Quando aggiornare il piano
+## <i class="bi bi-arrow-clockwise text-primary me-2" aria-hidden="true"></i>Quando aggiornare il piano {#quando-aggiornare}
 
 Aggiorna il Piano Familiare:
 
