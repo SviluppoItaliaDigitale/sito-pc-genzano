@@ -40,7 +40,7 @@ Queste schede sono **pronte da stampare in formato A4** e possono essere usate d
 | # | Scheda | Quando usarla |
 |---|---|---|
 | 11 | [Color by number — l’elicottero](/formazione/kit-calamita-bambini/11-color-by-number-elicottero.html) | Attività numero-colore con mezzo di soccorso e legenda semplice. |
-| 12 | [Punto-punto — il casco del volontario](/formazione/kit-calamita-bambini/12-punto-punto-casco.html) | Per unire numeri in ordine e conoscere un’attrezzatura di protezione. |
+| 12 | [Unisci i puntini — il casco di Protezione Civile](/formazione/kit-calamita-bambini/12-unisci-puntini-casco.html) | Per unire i puntini in ordine e riconoscere un’attrezzatura di protezione. |
 | 13 | [Labirinto medio — il volontario raggiunge la tenda](/formazione/kit-calamita-bambini/13-labirinto-medio.html) | Per concentrazione e orientamento nello spazio. |
 | 14 | [Trova le 7 differenze — la squadra al lavoro](/formazione/kit-calamita-bambini/14-trova-7-differenze.html) | Per attenzione visiva, anche in coppia o piccolo gruppo. |
 | 15 | [Cruciverba semplice della sicurezza](/formazione/kit-calamita-bambini/15-cruciverba-semplice.html) | Per imparare parole chiave come casco, aiuto, radio, tenda e amico. |
