@@ -114,3 +114,18 @@ Per approfondire il quadro giuridico di riferimento del Vademecum, consigliamo l
 - [Capo IV — Pianificazione di protezione civile](/normativa/testo-unico-protezione-civile/capo-4-pianificazione/)
 - [Capo V — Gestione delle emergenze di rilievo nazionale](/normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali/)
 - [Piano Comunale di Emergenza di Genzano di Roma](/piano-emergenza/)
+
+## Kit consigliato per questo rischio
+
+Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
+
+- documenti, farmaci e chiavi in un punto noto;
+- telefono, caricabatterie e power bank;
+- torcia;
+- acqua;
+- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
+- elenco dei contatti utili;
+- guinzaglio, trasportino o materiale essenziale per animali domestici.
+
+In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

@@ -131,3 +131,18 @@ Non avere paura o vergogna: denunciare aiuta a prevenire altri casi.
 - Articolo: [Radiocomunicazioni di emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/)
 
 Una comunità digitalmente consapevole è una comunità più sicura, anche nelle emergenze tradizionali.
+
+## Kit consigliato per questo rischio
+
+Per un blackout prepara materiali che funzionano anche senza corrente elettrica.
+
+- torce, non candele, per ridurre il rischio incendio;
+- pile di ricambio o torce ricaricabili;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti pronti;
+- farmaci abituali e piano per dispositivi elettromedicali;
+- elenco dei numeri utili su carta.
+
+Se in famiglia ci sono dispositivi medici elettrici, prepara un piano specifico con il medico o il fornitore del dispositivo. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

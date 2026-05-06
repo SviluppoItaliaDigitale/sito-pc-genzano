@@ -184,3 +184,18 @@ Il volontario di protezione civile non è un improvvisato. **Ogni attrezzo che u
 - [Diventa Volontario](/diventa-volontario/) — come entrare nel Gruppo
 
 *Fonti: procedure operative interne del Gruppo Comunale, D.Lgs. 81/2008 (sicurezza sul lavoro), Accordo Stato-Regioni 22 febbraio 2012 (patentini PLE), esperienze dirette sulle alluvioni 2023 di Emilia-Romagna e Toscana.*
+
+## Kit consigliato per questo rischio
+
+Per piogge intense, allagamenti o possibili evacuazioni prepara un kit che resti asciutto e facile da prendere.
+
+- acqua e alimenti non deperibili;
+- torcia impermeabile o ben protetta;
+- radio a pile o a manovella;
+- power bank carico;
+- documenti e farmaci in busta impermeabile;
+- cambio asciutto, impermeabile leggero e calze di ricambio;
+- numeri utili stampati e contatti familiari.
+
+Non attraversare sottopassi, strade allagate o corsi d'acqua in piena. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

@@ -109,3 +109,18 @@ Dieci anni dopo, l'eredità del Centro Italia 2016 è una **lezione operativa** 
 - [San Giuliano di Puglia 2002: scuole sicure](/comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure/)
 - [Scheda rilievo danno beni culturali e chiese](/comunicazioni/2026-10-28-scheda-rilievo-danno-beni-culturali-chiese/)
 - [Messina e Reggio Calabria 1908: il terremoto che fondò il soccorso moderno](/comunicazioni/2026-12-28-messina-reggio-calabria-1908-soccorso-moderno/)
+
+## Kit consigliato per questo rischio
+
+Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
+
+- acqua in litri sufficienti per la famiglia;
+- torcia con pile o ricarica funzionante;
+- radio a pile o a manovella;
+- power bank carico;
+- fischietto per segnalare la presenza;
+- scarpe chiuse, guanti da lavoro e piccola coperta termica;
+- copie dei documenti, farmaci abituali e numeri utili.
+
+Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

@@ -207,3 +207,18 @@ Conoscere il **primo soccorso** è un dovere civile.
 - [Numero Verde SOS Caldo: 800 55 60 60](tel:800556060)
 
 Un colpo di calore ben riconosciuto si risolve con buona probabilità. Un colpo di calore **non riconosciuto** è un dramma. La differenza sta nella preparazione di ognuno di noi.
+
+## Kit consigliato per questo rischio
+
+Per caldo intenso e ondate di calore prepara un kit semplice, utile soprattutto per anziani, bambini, persone fragili e animali domestici.
+
+- acqua in litri adeguati alla famiglia;
+- sali o bevande reidratanti solo se consigliati dal medico;
+- farmaci abituali conservati correttamente;
+- lista di contatti familiari, medico e vicini di fiducia;
+- cappello, abiti leggeri e protezione solare;
+- acqua e ciotola per animali;
+- power bank per restare raggiungibili.
+
+Evita le ore più calde, controlla le persone fragili e non lasciare mai bambini o animali in auto. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

@@ -263,3 +263,18 @@ Il Gruppo forma costantemente nuovi operatori di sala radio, perché è una funz
 - [Manuale da Campo](/formazione/manuale-campo/) — modulo messaggio, registro di stazione, alfabeto NATO personalizzati del Gruppo
 
 *Fonti: procedure operative interne del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, esperienza consolidata delle attivazioni su territorio comunale e fuori regione.*
+
+## Kit consigliato per questo rischio
+
+Per piogge intense, allagamenti o possibili evacuazioni prepara un kit che resti asciutto e facile da prendere.
+
+- acqua e alimenti non deperibili;
+- torcia impermeabile o ben protetta;
+- radio a pile o a manovella;
+- power bank carico;
+- documenti e farmaci in busta impermeabile;
+- cambio asciutto, impermeabile leggero e calze di ricambio;
+- numeri utili stampati e contatti familiari.
+
+Non attraversare sottopassi, strade allagate o corsi d'acqua in piena. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

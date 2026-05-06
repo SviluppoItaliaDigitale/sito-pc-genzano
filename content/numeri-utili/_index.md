@@ -75,3 +75,18 @@ Per informazioni sanitarie ordinarie, prenotazioni, certificazioni, ufficio rela
 ## In caso di emergenza
 
 Il Gruppo Comunale di Protezione Civile **non può essere attivato direttamente dai cittadini**. In caso di emergenza, contatta il **112**. Per le comunicazioni di protezione civile regionale è disponibile anche il numero verde della Sala Operativa Regionale **803 555**: saranno le autorità competenti, quando necessario, ad allertare e attivare le squadre di volontariato.
+
+## Kit consigliato per questo rischio
+
+Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
+
+- documenti, farmaci e chiavi in un punto noto;
+- telefono, caricabatterie e power bank;
+- torcia;
+- acqua;
+- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
+- elenco dei contatti utili;
+- guinzaglio, trasportino o materiale essenziale per animali domestici.
+
+In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

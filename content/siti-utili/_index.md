@@ -115,3 +115,18 @@ Pubblicazioni rilasciate con licenza di pubblico dominio o *approved for public 
 - [Piattaforma E-Learning](/formazionepc/) — Formazione a distanza riservata ai volontari del Gruppo
 - [Quiz di Protezione Civile](/quizpc/) — Metti alla prova le tue conoscenze con il quiz interattivo
 - [Giochi della Sicurezza](/giochi/) — Giochi educativi per infanzia, scuola primaria e ragazzi
+
+## Kit consigliato per questo rischio
+
+Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
+
+- torcia;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- scarpe chiuse e guanti da lavoro;
+- numeri utili stampati.
+
+Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

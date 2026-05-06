@@ -51,3 +51,18 @@ Il lavoro dei radioamatori volontari, dei Centri TLC dei Vigili del Fuoco e degl
 ## Fonte
 
 Notizia ripresa dal post pubblico dell'**ARI Sezione di Catania** del 1° maggio 2026.
+
+## Kit consigliato per questo rischio
+
+Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
+
+- torcia;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- scarpe chiuse e guanti da lavoro;
+- numeri utili stampati.
+
+Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

@@ -90,3 +90,18 @@ Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma porta ancor
 ---
 
 *Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma esprime la propria vicinanza alle comunità abruzzesi colpite dal sisma del 2009 e a tutte le famiglie che ancora portano nel cuore quella notte.*
+
+## Kit consigliato per questo rischio
+
+Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
+
+- acqua in litri sufficienti per la famiglia;
+- torcia con pile o ricarica funzionante;
+- radio a pile o a manovella;
+- power bank carico;
+- fischietto per segnalare la presenza;
+- scarpe chiuse, guanti da lavoro e piccola coperta termica;
+- copie dei documenti, farmaci abituali e numeri utili.
+
+Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

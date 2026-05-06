@@ -169,3 +169,18 @@ Chi non ha risposte chiare a questi sette punti **non è pronto a partire**.
 - [Capo VI — Volontariato](/normativa/testo-unico-protezione-civile/capo-6-volontariato/)
 - [Scouting e valutazione iniziale](/formazione/manuale-campo/scouting/)
 - [Piano di Emergenza Comunale](/piano-emergenza/)
+
+## Kit consigliato per questo rischio
+
+Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
+
+- torcia;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- scarpe chiuse e guanti da lavoro;
+- numeri utili stampati.
+
+Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

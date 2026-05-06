@@ -101,3 +101,18 @@ Quindici anni dopo, il messaggio di Tōhoku è semplice: **anche le società pi�
 
 - [Chernobyl, 40 anni dopo: cosa ha insegnato alla protezione civile italiana](/comunicazioni/2026-04-26-chernobyl-40-anni-protezione-civile/)
 - [Pizzo Cengalo 2017: rischi alpini del cambiamento climatico](/comunicazioni/2026-08-23-pizzo-cengalo-bondo-2017-permafrost-cambiamento-climatico/)
+
+## Kit consigliato per questo rischio
+
+Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
+
+- acqua in litri sufficienti per la famiglia;
+- torcia con pile o ricarica funzionante;
+- radio a pile o a manovella;
+- power bank carico;
+- fischietto per segnalare la presenza;
+- scarpe chiuse, guanti da lavoro e piccola coperta termica;
+- copie dei documenti, farmaci abituali e numeri utili.
+
+Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

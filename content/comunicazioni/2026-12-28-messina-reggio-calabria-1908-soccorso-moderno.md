@@ -107,3 +107,18 @@ Centodiciotto anni dopo, il messaggio dello Stretto è sempre attuale: in Italia
 - [San Giuliano di Puglia 2002: scuole sicure](/comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure/)
 - [Centro Italia 2016: memoria del sisma di Amatrice e Norcia](/comunicazioni/2026-10-28-centro-italia-2016-memoria/)
 - [Tsunami dell'Oceano Indiano 2004: allerta globale](/comunicazioni/2026-12-26-tsunami-indiano-2004-allerta-globale/)
+
+## Kit consigliato per questo rischio
+
+Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
+
+- acqua in litri sufficienti per la famiglia;
+- torcia con pile o ricarica funzionante;
+- radio a pile o a manovella;
+- power bank carico;
+- fischietto per segnalare la presenza;
+- scarpe chiuse, guanti da lavoro e piccola coperta termica;
+- copie dei documenti, farmaci abituali e numeri utili.
+
+Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

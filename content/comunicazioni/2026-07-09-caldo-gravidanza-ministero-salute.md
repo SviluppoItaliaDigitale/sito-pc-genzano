@@ -117,3 +117,18 @@ Per qualsiasi dubbio sanitario, il riferimento resta sempre il **ginecologo** o 
 - [Proteggere cani e gatti dal caldo: le 10 regole del Ministero della Salute](/comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore/)
 - [Ondate di calore: prepararsi ora, prima che arrivi l'estate](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
 - [Casa sicura in estate: ventilazione, refrigerio, buone abitudini](/comunicazioni/2026-07-05-casa-sicura-estate-ventilazione-refrigerio/)
+
+## Kit consigliato per questo rischio
+
+Per caldo intenso e ondate di calore prepara un kit semplice, utile soprattutto per anziani, bambini, persone fragili e animali domestici.
+
+- acqua in litri adeguati alla famiglia;
+- sali o bevande reidratanti solo se consigliati dal medico;
+- farmaci abituali conservati correttamente;
+- lista di contatti familiari, medico e vicini di fiducia;
+- cappello, abiti leggeri e protezione solare;
+- acqua e ciotola per animali;
+- power bank per restare raggiungibili.
+
+Evita le ore più calde, controlla le persone fragili e non lasciare mai bambini o animali in auto. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

@@ -82,3 +82,18 @@ Il Lazio registra ogni anno diverse decine di persone soccorse per fulminazione,
 - [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/cittadini/protezione-civile/centro-funzionale)
 
 In emergenza: **112**.
+
+## Kit consigliato per questo rischio
+
+Per temporali forti, fulmini, grandine e vento prepara un piccolo kit domestico per blackout o interruzioni temporanee dei servizi.
+
+- torcia con pile cariche;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- numeri utili stampati;
+- coperta leggera o indumenti adatti alla stagione.
+
+Durante i temporali evita alberi isolati, strutture metalliche, corsi d'acqua e spostamenti non necessari. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

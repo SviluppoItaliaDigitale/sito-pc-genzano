@@ -23,3 +23,18 @@ Da alcuni giorni il vento forte interessa tutto il territorio comunale. Le autor
 - Articolo: [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
 - Articolo: [Previsioni meteo e bollettini di allerta](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
 - Pagina: [Vento forte](/rischi-prevenzione/vento-forte/)
+
+## Kit consigliato per questo rischio
+
+Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
+
+- torcia;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- scarpe chiuse e guanti da lavoro;
+- numeri utili stampati.
+
+Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

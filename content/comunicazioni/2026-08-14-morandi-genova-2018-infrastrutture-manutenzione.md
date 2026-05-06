@@ -102,3 +102,18 @@ Otto anni dopo, il messaggio del Morandi è semplice e duro: **l'invisibile va g
 
 - [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/)
 - [Dighe e sicurezza, grandi opere](/comunicazioni/2026-10-07-dighe-sicurezza-grandi-opere/)
+
+## Kit consigliato per questo rischio
+
+Per temporali forti, fulmini, grandine e vento prepara un piccolo kit domestico per blackout o interruzioni temporanee dei servizi.
+
+- torcia con pile cariche;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- numeri utili stampati;
+- coperta leggera o indumenti adatti alla stagione.
+
+Durante i temporali evita alberi isolati, strutture metalliche, corsi d'acqua e spostamenti non necessari. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

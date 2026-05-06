@@ -112,3 +112,18 @@ In questo caso la situazione da gestire con attenzione è **il temporale**, non 
 - Articolo correlato: [Previsioni meteo e bollettini di allerta](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
 
 Un bollettino, letto correttamente, vale più di una consultazione rapida di un'app meteo. Il sistema di allertamento italiano è **uno dei migliori al mondo**: imparare a usarlo è un investimento in sicurezza personale e familiare.
+
+## Kit consigliato per questo rischio
+
+Per temporali forti, fulmini, grandine e vento prepara un piccolo kit domestico per blackout o interruzioni temporanee dei servizi.
+
+- torcia con pile cariche;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- numeri utili stampati;
+- coperta leggera o indumenti adatti alla stagione.
+
+Durante i temporali evita alberi isolati, strutture metalliche, corsi d'acqua e spostamenti non necessari. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+
