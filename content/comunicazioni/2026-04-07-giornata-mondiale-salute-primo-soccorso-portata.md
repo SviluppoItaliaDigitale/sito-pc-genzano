@@ -31,7 +31,7 @@ Se **un anello manca**, la catena si spezza. Il **cittadino è il primo anello**
 
 ## Le cinque regole base
 
-Abbiamo già parlato delle **cinque regole base** del primo soccorso in un articolo dedicato ([qui](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)). Le richiamiamo:
+Abbiamo già parlato delle [**cinque regole base** del primo soccorso](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/) in un articolo dedicato. Le richiamiamo:
 
 1. **Sicurezza**: valutare se il luogo è sicuro per te, la vittima, gli altri.
 2. **Chiamata al 112**: al più presto, con informazioni chiare.

@@ -80,7 +80,7 @@ Fondamentale in ogni attivazione. Si apprendono:
 - **Canali di emergenza** e procedure.
 - **Gestione di radio link** in scenari complessi.
 
-Ne abbiamo parlato [qui](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
+Ne abbiamo parlato nell'articolo sulle [radiocomunicazioni di emergenza per i volontari](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
 
 ### Psicologia dell'emergenza
 

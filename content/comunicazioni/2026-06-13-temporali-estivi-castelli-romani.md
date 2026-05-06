@@ -37,7 +37,7 @@ Segnali nel cielo:
 Fonti istituzionali:
 - **Bollettini regionali** del Centro Funzionale Lazio.
 - **Radar meteo** ARPA e Aeronautica Militare (disponibili online e in app).
-- **Allerta meteo** regionale — abbiamo parlato di come leggerla [qui](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/).
+- **Allerta meteo** regionale — abbiamo parlato di [come leggere il bollettino delle zone di allerta del Lazio](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/).
 
 ## I rischi in ordine di probabilità
 
