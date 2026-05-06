@@ -1,17 +1,17 @@
 ---
-title: "Cartografia Operativa del Piano di Emergenza"
-description: "Mappa interattiva e tabelle delle aree di emergenza del Piano Comunale di Genzano di Roma."
+title: "Cartografia operativa del Piano di emergenza"
+description: "Mappa interattiva, tabelle e documenti sulle aree di emergenza del Piano Comunale di Genzano di Roma."
 layout: "single"
 aliases:
   - /mappe.html
   - /mappe/
 ---
 
-In questa sezione puoi consultare la **mappa interattiva** e le tabelle riassuntive con tutti i punti strategici individuati dal Piano di Emergenza Comunale. **Conoscere questi luoghi è fondamentale per la sicurezza di tutti i cittadini.**
+In questa sezione puoi consultare la **mappa interattiva** e le tabelle con i punti strategici previsti dal Piano di Emergenza Comunale.
 
 <div class="card border-primary mb-4">
 <div class="card-body bg-primary bg-opacity-10 p-3">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Come usare queste informazioni:</strong> individua l'area di attesa più vicina a casa tua e al tuo luogo di lavoro. In caso di terremoto o evacuazione, è lì che dovrai recarti. Comunica questa informazione a tutti i componenti della tua famiglia.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Prima dell'emergenza:</strong> individua l'area di attesa più vicina a casa tua, alla scuola dei tuoi figli e al luogo di lavoro. Comunica questa informazione anche ai familiari.</p>
 </div>
 </div>
 
@@ -19,10 +19,10 @@ In questa sezione puoi consultare la **mappa interattiva** e le tabelle riassunt
 
 <div class="alert alert-light border" role="note">
 <p class="mb-1"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Quando il documento e il territorio differiscono</strong></p>
-<p class="mb-0 small">In alcuni punti il testo del Piano di Emergenza Comunale può riportare denominazioni viarie diverse da quelle attualmente in uso, perché aggiornate successivamente alla redazione del documento. Per orientarti in caso di emergenza fai riferimento alla <strong>mappa interattiva</strong> qui sopra, all'<strong>indirizzo</strong> riportato nelle tabelle che seguono e al <strong>cartello installato sul posto</strong>: tutti e tre indicano la posizione reale dell'area sul territorio.</p>
+<p class="mb-0 small">In alcuni punti il Piano di Emergenza Comunale può riportare denominazioni viarie diverse da quelle attuali. Per orientarti fai riferimento alla <strong>mappa interattiva</strong>, all'<strong>indirizzo</strong> nelle tabelle e al <strong>cartello installato sul posto</strong>.</p>
 </div>
 
-## Aree di Attesa della Popolazione (AA)
+## Aree di attesa della popolazione (AA)
 
 Luoghi sicuri all'aperto dove la popolazione deve radunarsi **subito dopo un evento sismico** o in caso di evacuazione. Qui verrai censito e riceverai le prime informazioni.
 
@@ -39,7 +39,7 @@ Luoghi sicuri all'aperto dove la popolazione deve radunarsi **subito dopo un eve
 | AA9 | Colli di Cicerone | Parcheggio Via Colli di Cicerone |
 | AA10 | Landi | Piazzale Frazione Landi |
 
-## Aree di Ammassamento Soccorritori (AS)
+## Aree di ammassamento soccorritori (AS)
 
 Aree destinate al **raggruppamento di uomini e mezzi di soccorso** provenienti dall'esterno. Non sono destinate alla popolazione civile.
 
@@ -48,7 +48,7 @@ Aree destinate al **raggruppamento di uomini e mezzi di soccorso** provenienti d
 | AS1 | Via del Lavoro | Via del Lavoro (Zona Industriale) |
 | AS2 | Viale Mazzini | Viale G. Mazzini |
 
-## Aree di Ricovero della Popolazione (AR)
+## Aree di ricovero della popolazione (AR)
 
 Aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata, dove vengono allestiti i primi ripari.
 
@@ -61,15 +61,15 @@ Aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata, dove v
 
 ## Segnaletica delle aree di emergenza
 
-Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che identificano le aree di emergenza previste dal Piano Comunale. Conoscere questa segnaletica aiuta a orientarsi rapidamente in caso di necessità.
+Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che identificano le aree di emergenza previste dal Piano Comunale. Conoscere questa segnaletica aiuta a orientarsi rapidamente.
 
 <div class="card border-primary mb-4">
 <div class="card-body bg-primary bg-opacity-10 p-3">
-<p class="mb-0"><i class="bi bi-signpost-2 me-2" aria-hidden="true"></i><strong>Cosa indicano i cartelli:</strong> ogni area di emergenza è contrassegnata da un cartello che ne riporta il codice identificativo (AA, AS, AR), la denominazione e la tipologia. Individua quelli più vicini a casa tua.</p>
+<p class="mb-0"><i class="bi bi-signpost-2 me-2" aria-hidden="true"></i><strong>Cosa indicano i cartelli:</strong> ogni area di emergenza riporta un codice identificativo (AA, AS, AR), la denominazione e la tipologia. Individua quelli più vicini a casa tua.</p>
 </div>
 </div>
 
-### Aree di Attesa (AA)
+### Aree di attesa (AA)
 
 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 mb-4">
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA1.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di attesa AA1 — Palazzo Sforza, Piazza Tommaso Frasconi"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA1</p><p class="small text-muted mb-0">Palazzo Sforza</p></div></div></div>
@@ -84,14 +84,14 @@ Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che i
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/AA10.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di attesa AA10 — Piazzale Frazione Landi"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AA10</p><p class="small text-muted mb-0">Landi</p></div></div></div>
 </div>
 
-### Aree di Ammassamento Soccorritori (AS)
+### Aree di ammassamento soccorritori (AS)
 
 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 mb-4">
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/as1.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area ammassamento soccorritori AS1 — Via del Lavoro, Zona Industriale"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AS1</p><p class="small text-muted mb-0">Via del Lavoro</p></div></div></div>
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/as2.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area ammassamento soccorritori AS2 — Viale G. Mazzini"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AS2</p><p class="small text-muted mb-0">Viale Mazzini</p></div></div></div>
 </div>
 
-### Aree di Ricovero della Popolazione (AR)
+### Aree di ricovero della popolazione (AR)
 
 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 mb-4">
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar1.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR1 — Palazzetto dello Sport, Via G. di Vittorio"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR1</p><p class="small text-muted mb-0">Palazzetto Sport</p></div></div></div>
@@ -117,7 +117,7 @@ Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che i
 
 ## Vedi anche
 
-- [Rischi e Prevenzione](/rischi-prevenzione/) — cosa fare prima, durante e dopo un'emergenza
+- [Rischi e prevenzione](/rischi-prevenzione/) — cosa fare prima, durante e dopo un'emergenza
 - [Allerte meteo](/allerte-meteo/) — bollettini ufficiali della Regione Lazio
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — cosa preparare per casa, evacuazione e auto
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
