@@ -217,18 +217,3 @@ La **valutazione finale** di idoneità all'uso in classe e di adeguatezza al gru
 
 **Ultimo aggiornamento**: 1 maggio 2026.
 **Riferimenti normativi**: L. 92/2019 (art. 3 lett. h sulla protezione civile, lett. h-ter sulla sicurezza nei luoghi di lavoro come modificata dalla L. 21/2025) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 66/2017 · D.Lgs. 81/2008 · L. 145/2018 (art. 1 c. 785 sul monte ore PCTO) · D.M. 774/2019 (Linee guida PCTO) · D.Lgs. 77/2005 · D.Lgs. 62/2017 · Raccomandazione UE 22 maggio 2018 sulle competenze chiave per l'apprendimento permanente · Agenda 2030 ONU.
-
-## Kit consigliato per questo rischio
-
-Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
-
-- acqua in litri sufficienti per la famiglia;
-- torcia con pile o ricarica funzionante;
-- radio a pile o a manovella;
-- power bank carico;
-- fischietto per segnalare la presenza;
-- scarpe chiuse, guanti da lavoro e piccola coperta termica;
-- copie dei documenti, farmaci abituali e numeri utili.
-
-Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-

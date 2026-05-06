@@ -150,18 +150,3 @@ Esta página le ofrece la **información esencial** en español. La web completa
 <div class="alert alert-warning" role="note" style="margin-top:2rem">
 <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Esta página es un resumen. Para información completa sobre los riesgos específicos de Genzano, utilice el traductor de su navegador en las páginas italianas. Los voluntarios pueden ayudarle en persona en la sede.</p>
 </div>
-
-## Kit consigliato per questo rischio
-
-Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
-
-- acqua in litri sufficienti per la famiglia;
-- torcia con pile o ricarica funzionante;
-- radio a pile o a manovella;
-- power bank carico;
-- fischietto per segnalare la presenza;
-- scarpe chiuse, guanti da lavoro e piccola coperta termica;
-- copie dei documenti, farmaci abituali e numeri utili.
-
-Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-
