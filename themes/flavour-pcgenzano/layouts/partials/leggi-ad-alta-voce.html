@@ -1,5 +1,5 @@
 {{- /*
-  Partial: leggi-ad-alta-voce (v4.0)
+  Partial: leggi-ad-alta-voce (v4.1)
   Bottone "Leggi ad alta voce" con Web Speech API.
   - Velocità regolabile (lento 0.75x / normale 0.95x / veloce 1.15x)
   Preferenze persistite in localStorage:
@@ -13,12 +13,21 @@
     - aria-live=polite per stato lettura
     - Tastiera: bottoni e radio nativi (Enter/Space)
 
-  Storia: il toggle "Segui parole" (highlight della parola in lettura) è
-  stato rimosso il 2 maggio 2026. La feature dipendeva da
+  Storia v4.1 (6 maggio 2026): rimosso il fallback aggressivo introdotto
+  in v3.x ("Lettura vocale non disponibile in questo browser..." dentro
+  onerror). Sostituiva permanentemente il wrapper sui PRIMI errori
+  transitori che Chrome/Android emettono mentre le voci si caricano
+  (synthesis-failed, synthesis-unavailable, interrupted, canceled),
+  bloccando il TTS anche su utenti con motore vocale perfettamente
+  funzionante. La regressione era stata segnalata su PC Linux + Android.
+  Ora onerror torna semplicemente in stato 'idle' e logga in console
+  per debug. Browser senza API (Tor/LibreWolf) restano gestiti dal check
+  iniziale 'speechSynthesis' in window.
+
+  Storia v4.0: il toggle "Segui parole" (highlight della parola in
+  lettura) è stato rimosso il 2 maggio 2026. La feature dipendeva da
   SpeechSynthesisUtterance.onboundary 'word' che Chrome/Edge non emettono
   con voci cloud Google (default), e Safari iOS in modo intermittente.
-  Per la maggioranza degli utenti italiani il toggle era invisibile —
-  cambiava colore al click ma le parole non venivano mai evidenziate.
   Bug noto Chromium: issues.chromium.org/issues/40195928
 
   Default attivo su tutte le pagine (single.html + list.html), opt-out via
@@ -66,20 +75,6 @@
 
   var synth = window.speechSynthesis;
   var RATE_KEY = 'pcgenzano-tts-rate';
-
-  function showTtsUnavailable() {
-    document.querySelectorAll('.tts-wrapper').forEach(function(w){
-      if (w.classList.contains('tts-unavailable')) return;
-      w.classList.add('tts-unavailable');
-      w.innerHTML = '<div class="tts-fallback-msg" role="note">' +
-        '<i class="bi bi-info-circle me-2" aria-hidden="true"></i>' +
-        '<span><strong>Lettura vocale non disponibile in questo browser.</strong> ' +
-        'Alcuni browser orientati alla privacy (Tor Browser, LibreWolf, Brave con scudo massimo) ' +
-        'disattivano la sintesi vocale per impedire il riconoscimento del visitatore. ' +
-        'La funzione resta attiva su Chrome, Firefox, Safari ed Edge.</span>' +
-        '</div>';
-    });
-  }
 
   function getSavedRate() {
     try {
@@ -186,11 +181,14 @@
         utterance.onerror = function(ev){
           state = 'idle';
           setButtonState(btn, 'idle');
-          var blocked = ev && (ev.error === 'synthesis-failed' ||
-                               ev.error === 'synthesis-unavailable' ||
-                               ev.error === 'audio-hardware' ||
-                               ev.error === 'not-allowed');
-          if (blocked) showTtsUnavailable();
+          // Logghiamo per diagnostica ma NON sostituiamo il bottone:
+          // gli errori 'synthesis-failed', 'synthesis-unavailable',
+          // 'interrupted', 'canceled' sono spesso transitori (le voci si
+          // caricano dopo il primo speak() su Chrome/Android). Lasciare
+          // il bottone cliccabile permette il retry, che di solito riesce.
+          if (ev && ev.error && window.console) {
+            console.warn('[TTS] errore:', ev.error, '- riprova cliccando di nuovo il bottone.');
+          }
         };
         synth.speak(utterance);
         state = 'reading';
