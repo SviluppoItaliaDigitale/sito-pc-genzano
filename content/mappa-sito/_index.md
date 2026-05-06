@@ -63,8 +63,8 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .ms-card:hover, .ms-card:focus {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 51, 102, 0.18);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 51, 102, 0.14);
   text-decoration: none;
   color: inherit;
 }

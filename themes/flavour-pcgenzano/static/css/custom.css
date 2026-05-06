@@ -240,9 +240,9 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 }
 .quick-action-card:hover {
   border-color: var(--pc-primary);
-  box-shadow: var(--pc-shadow-lg);
+  box-shadow: 0 10px 22px rgba(0, 51, 102, 0.14);
   color: var(--pc-primary);
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 .quick-action-icon {
   width: 64px;
@@ -272,8 +272,8 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   overflow: hidden;
 }
 .card-servizio:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--pc-shadow-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 51, 102, 0.14);
   border-color: transparent;
 }
 .card-servizio .btn { border-radius: 20px; font-size: 0.8rem; padding: 0.35rem 1.2rem; }
@@ -304,7 +304,7 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   transition: all var(--pc-transition);
   background: #fff;
 }
-.card-notizia-hero:hover { box-shadow: var(--pc-shadow-hover); transform: translateY(-4px); }
+.card-notizia-hero:hover { box-shadow: 0 10px 22px rgba(0, 51, 102, 0.14); transform: translateY(-3px); }
 .card-notizia-hero-img { height: 260px; overflow: hidden; background: #003366; }
 .card-notizia-hero-img img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s ease; }
 .card-notizia-hero:hover .card-notizia-hero-img img { transform: scale(1.05); }
@@ -745,7 +745,7 @@ article:not(.card) .galleria img {
   box-shadow: var(--pc-shadow-sm);
 }
 .card-notizia-hero:hover {
-  box-shadow: var(--pc-shadow-lg);
+  box-shadow: 0 10px 22px rgba(0, 51, 102, 0.14);
   transform: translateY(-3px);
 }
 .card-notizia-hero-img {
@@ -2199,7 +2199,8 @@ article:not(.card) .galleria img {
 .lang-card:hover, .lang-card:focus {
   background: #e8f0fe;
   border-color: #003366;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 51, 102, 0.14);
   outline: 3px solid #ffbe2e;
   outline-offset: 2px;
   text-decoration: none;
@@ -3665,8 +3666,8 @@ table > caption.visually-hidden {
 .articolo-nav-card:hover, .articolo-nav-card:focus-visible {
   border-color: #003366;
   background: #e7f1ff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,51,102,0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 51, 102, 0.14);
   color: inherit;
 }
 .articolo-nav-card:focus-visible {
@@ -3732,8 +3733,8 @@ table > caption.visually-hidden {
 }
 .articolo-correlato-card:hover, .articolo-correlato-card:focus-visible {
   border-color: #003366;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,51,102,0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 51, 102, 0.14);
   color: inherit;
 }
 .articolo-correlato-card:focus-visible {
