@@ -1,52 +1,36 @@
 {{- /*
-  Partial: leggi-ad-alta-voce (v4.1)
+  Partial: leggi-ad-alta-voce (v5.0 — RIFATTO da zero il 6 maggio 2026)
   Bottone "Leggi ad alta voce" con Web Speech API.
-  - Velocità regolabile (lento 0.75x / normale 0.95x / veloce 1.15x)
+
+  Versione minimale: bottone + selettore velocità + script ~80 righe.
+  Niente fallback, niente highlight-parola, niente warmup complesso.
+  Solo: click → estrai testo → speak. Click di nuovo → ferma + ricomincia.
+
+  Storia: le versioni v3/v4 avevano accumulato workaround
+  (showTtsUnavailable, buildTextMap, fallbackTimer, ecc.) che si
+  ostacolavano a vicenda. Riscritto pulito da capo per eliminare la
+  regressione "audio non parte" su Chrome PC + Android segnalata il
+  6 maggio 2026.
+
   Preferenze persistite in localStorage:
     pcgenzano-tts-rate    (0.75 | 0.95 | 1.15)
 
   Uso:
     {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".article-body") }}
-
-  Accessibilità:
-    - Bottone TTS: <button> con aria-pressed + aria-label dinamico
-    - aria-live=polite per stato lettura
-    - Tastiera: bottoni e radio nativi (Enter/Space)
-
-  Storia v4.1 (6 maggio 2026): rimosso il fallback aggressivo introdotto
-  in v3.x ("Lettura vocale non disponibile in questo browser..." dentro
-  onerror). Sostituiva permanentemente il wrapper sui PRIMI errori
-  transitori che Chrome/Android emettono mentre le voci si caricano
-  (synthesis-failed, synthesis-unavailable, interrupted, canceled),
-  bloccando il TTS anche su utenti con motore vocale perfettamente
-  funzionante. La regressione era stata segnalata su PC Linux + Android.
-  Ora onerror torna semplicemente in stato 'idle' e logga in console
-  per debug. Browser senza API (Tor/LibreWolf) restano gestiti dal check
-  iniziale 'speechSynthesis' in window.
-
-  Storia v4.0: il toggle "Segui parole" (highlight della parola in
-  lettura) è stato rimosso il 2 maggio 2026. La feature dipendeva da
-  SpeechSynthesisUtterance.onboundary 'word' che Chrome/Edge non emettono
-  con voci cloud Google (default), e Safari iOS in modo intermittente.
-  Bug noto Chromium: issues.chromium.org/issues/40195928
-
-  Default attivo su tutte le pagine (single.html + list.html), opt-out via
-  frontmatter `tts: false` o blacklist hard-coded (legali, tecniche).
 */ -}}
 {{- $selector := .selector | default ".article-body" -}}
-<div class="tts-wrapper" role="region" aria-label="Strumenti di lettura ad alta voce" data-tts-target="{{ $selector }}">
+<div class="tts-wrapper" role="region" aria-label="Strumenti di lettura ad alta voce">
   <div class="tts-controls">
     <button type="button"
             class="tts-button btn btn-outline-primary btn-sm"
             data-tts-target="{{ $selector }}"
-            aria-pressed="false"
             aria-label="Leggi ad alta voce il contenuto della pagina">
       <i class="bi bi-volume-up-fill me-2" aria-hidden="true"></i>
       <span class="tts-label">Leggi ad alta voce</span>
     </button>
     <fieldset class="tts-rate" aria-label="Velocità di lettura">
       <legend class="visually-hidden">Velocità di lettura</legend>
-      <label class="tts-rate-option" title="Lento — utile per anziani, bambini, italiano L2">
+      <label class="tts-rate-option" title="Lento">
         <input type="radio" name="tts-rate" value="0.75">
         <span aria-hidden="true">Lento</span>
         <span class="visually-hidden">Velocità lenta</span>
@@ -56,7 +40,7 @@
         <span aria-hidden="true">Normale</span>
         <span class="visually-hidden">Velocità normale</span>
       </label>
-      <label class="tts-rate-option" title="Veloce — per chi conosce bene il testo">
+      <label class="tts-rate-option" title="Veloce">
         <input type="radio" name="tts-rate" value="1.15">
         <span aria-hidden="true">Veloce</span>
         <span class="visually-hidden">Velocità veloce</span>
@@ -67,144 +51,155 @@
 </div>
 
 <script>
-(function(){
-  if (!('speechSynthesis' in window)) {
-    document.querySelectorAll('.tts-wrapper').forEach(function(w){ w.style.display = 'none'; });
+(function () {
+  'use strict';
+
+  // 1. Se il browser non ha l'API speechSynthesis (Tor/LibreWolf), nascondi e basta.
+  if (!('speechSynthesis' in window) || typeof SpeechSynthesisUtterance === 'undefined') {
+    document.querySelectorAll('.tts-wrapper').forEach(function (w) { w.style.display = 'none'; });
     return;
   }
 
   var synth = window.speechSynthesis;
   var RATE_KEY = 'pcgenzano-tts-rate';
 
-  function getSavedRate() {
+  // 2. Warm-up: forza il caricamento delle voci. Su Chrome la prima
+  //    chiamata a getVoices() spesso restituisce []. L'evento
+  //    voiceschanged scatta quando le voci sono pronte.
+  function warmVoices() {
+    try { synth.getVoices(); } catch (e) {}
+  }
+  warmVoices();
+  if (typeof synth.addEventListener === 'function') {
+    synth.addEventListener('voiceschanged', warmVoices);
+  }
+
+  // 3. Lettura/scrittura preferenza velocità.
+  function getRate() {
     try {
       var v = parseFloat(localStorage.getItem(RATE_KEY) || '');
       if (v === 0.75 || v === 0.95 || v === 1.15) return v;
     } catch (e) {}
     return 0.95;
   }
-  function saveRate(v) { try { localStorage.setItem(RATE_KEY, String(v)); } catch (e) {} }
+  function setRate(v) { try { localStorage.setItem(RATE_KEY, String(v)); } catch (e) {} }
 
-  function findItalianVoice() {
-    var voices = synth.getVoices();
-    return voices.find(function(v){ return v.lang === 'it-IT'; })
-        || voices.find(function(v){ return v.lang && v.lang.startsWith('it'); })
-        || voices.find(function(v){ return v.default; })
-        || voices[0]
-        || null;
+  // 4. Trova la voce italiana migliore disponibile.
+  function pickItalianVoice() {
+    var voices = synth.getVoices() || [];
+    var byLang = voices.filter(function (v) { return v.lang && v.lang.toLowerCase().indexOf('it') === 0; });
+    if (byLang.length === 0) return null;
+    // Preferisci it-IT esatto, poi qualsiasi voce italiana.
+    var exact = byLang.find(function (v) { return v.lang === 'it-IT'; });
+    return exact || byLang[0];
   }
 
+  // 5. Estrae il testo leggibile dall'elemento target, escludendo
+  //    elementi non leggibili (toolbar TTS stessa, popover glossario,
+  //    pittogrammi, codice, elementi nascosti).
   function extractText(el) {
     if (!el) return '';
     var clone = el.cloneNode(true);
-    clone.querySelectorAll('script, style, .visually-hidden, [aria-hidden="true"], pre, code.language-, .pittogramma, .pittogramma-figure, .tts-wrapper, .gloss-popover, .gloss-icon').forEach(function(n){ n.remove(); });
-    clone.querySelectorAll('br').forEach(function(n){ n.replaceWith('\n'); });
+    var skip = [
+      'script', 'style', 'pre', 'code',
+      '.visually-hidden', '[aria-hidden="true"]',
+      '.tts-wrapper', '.gloss-popover', '.gloss-icon',
+      '.pittogramma', '.pittogramma-figure'
+    ];
+    clone.querySelectorAll(skip.join(',')).forEach(function (n) { n.remove(); });
     var text = clone.innerText || clone.textContent || '';
-    return text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
+    return text.replace(/\s+/g, ' ').trim();
   }
 
-  function setButtonState(btn, state) {
+  // 6. UI helper.
+  function setUI(btn, state) {
     var label = btn.querySelector('.tts-label');
     var icon = btn.querySelector('i');
     var status = btn.closest('.tts-wrapper').querySelector('.tts-status');
-    btn.setAttribute('aria-pressed', state === 'reading' ? 'true' : 'false');
     if (state === 'reading') {
-      label.textContent = 'Pausa lettura';
-      icon.className = 'bi bi-pause-circle-fill me-2';
-      btn.setAttribute('aria-label', 'In lettura, premi per mettere in pausa');
+      if (label) label.textContent = 'Ferma lettura';
+      if (icon) icon.className = 'bi bi-stop-circle-fill me-2';
       btn.classList.remove('btn-outline-primary');
       btn.classList.add('btn-primary');
-      status.textContent = 'Lettura in corso';
-    } else if (state === 'paused') {
-      label.textContent = 'Riprendi lettura';
-      icon.className = 'bi bi-play-circle-fill me-2';
-      btn.setAttribute('aria-label', 'Lettura in pausa, premi per riprendere');
-      status.textContent = 'Lettura in pausa';
+      btn.setAttribute('aria-label', 'Ferma la lettura ad alta voce');
+      if (status) status.textContent = 'Lettura in corso';
     } else {
-      label.textContent = 'Leggi ad alta voce';
-      icon.className = 'bi bi-volume-up-fill me-2';
-      btn.setAttribute('aria-label', 'Leggi ad alta voce il contenuto della pagina');
+      if (label) label.textContent = 'Leggi ad alta voce';
+      if (icon) icon.className = 'bi bi-volume-up-fill me-2';
       btn.classList.remove('btn-primary');
       btn.classList.add('btn-outline-primary');
-      status.textContent = '';
+      btn.setAttribute('aria-label', 'Leggi ad alta voce il contenuto della pagina');
+      if (status) status.textContent = '';
     }
   }
 
-  // --- Sincronizza i radio velocità ---
-  var savedRate = getSavedRate();
-  document.querySelectorAll('.tts-wrapper input[name="tts-rate"]').forEach(function(input){
-    input.checked = (parseFloat(input.value) === savedRate);
-    input.addEventListener('change', function(){
-      if (this.checked) {
-        var newRate = parseFloat(this.value);
-        saveRate(newRate);
-        if (synth.speaking || synth.paused) {
-          var btn = this.closest('.tts-wrapper').querySelector('.tts-button');
-          synth.cancel();
-          setButtonState(btn, 'idle');
-          btn.dispatchEvent(new Event('click'));
-        }
-        var self = this;
-        document.querySelectorAll('.tts-wrapper input[name="tts-rate"][value="' + this.value + '"]').forEach(function(other){
-          if (other !== self) other.checked = true;
-        });
-      }
-    });
-  });
+  // 7. Funzione di lettura. Restituisce true se ha avviato lo speak.
+  function speakText(btn) {
+    var target = document.querySelector(btn.getAttribute('data-tts-target'));
+    var text = extractText(target);
+    if (!text) {
+      alert('Nessun testo da leggere su questa pagina.');
+      return false;
+    }
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = 'it-IT';
+    u.rate = getRate();
+    u.pitch = 1;
+    u.volume = 1;
+    var voice = pickItalianVoice();
+    if (voice) u.voice = voice;
+    u.onend = function () { setUI(btn, 'idle'); };
+    u.onerror = function (ev) {
+      setUI(btn, 'idle');
+      if (window.console) console.warn('[TTS] error:', ev && ev.error);
+    };
+    // Importante: cancel() prima di speak() pulisce eventuali residui.
+    // Su alcuni browser cancel+speak immediati creano "interrupted":
+    // ritardiamo lo speak di 50ms per dare tempo alla coda di liberarsi.
+    synth.cancel();
+    setTimeout(function () { synth.speak(u); }, 50);
+    return true;
+  }
 
-  // --- Bottone "Leggi ad alta voce" ---
-  document.querySelectorAll('.tts-button').forEach(function(btn){
-    var state = 'idle';
-    var utterance = null;
-
-    btn.addEventListener('click', function(){
-      var target = document.querySelector(btn.getAttribute('data-tts-target'));
-      if (state === 'idle') {
-        var text = extractText(target);
-        if (!text || !text.trim()) {
-          alert('Nessun testo da leggere su questa pagina.');
-          return;
-        }
+  // 8. Wire-up bottoni.
+  document.querySelectorAll('.tts-button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (synth.speaking || synth.pending) {
         synth.cancel();
-        utterance = new SpeechSynthesisUtterance(text);
-        var voice = findItalianVoice();
-        if (voice) utterance.voice = voice;
-        utterance.lang = 'it-IT';
-        utterance.rate = getSavedRate();
-        utterance.pitch = 1;
-        utterance.volume = 1;
+        setUI(btn, 'idle');
+        return;
+      }
+      if (speakText(btn)) setUI(btn, 'reading');
+    });
+  });
 
-        utterance.onend = function(){
-          state = 'idle';
-          setButtonState(btn, 'idle');
-        };
-        utterance.onerror = function(ev){
-          state = 'idle';
-          setButtonState(btn, 'idle');
-          // Logghiamo per diagnostica ma NON sostituiamo il bottone:
-          // gli errori 'synthesis-failed', 'synthesis-unavailable',
-          // 'interrupted', 'canceled' sono spesso transitori (le voci si
-          // caricano dopo il primo speak() su Chrome/Android). Lasciare
-          // il bottone cliccabile permette il retry, che di solito riesce.
-          if (ev && ev.error && window.console) {
-            console.warn('[TTS] errore:', ev.error, '- riprova cliccando di nuovo il bottone.');
-          }
-        };
-        synth.speak(utterance);
-        state = 'reading';
-        setButtonState(btn, 'reading');
-      } else if (state === 'reading') {
-        synth.pause();
-        state = 'paused';
-        setButtonState(btn, 'paused');
-      } else if (state === 'paused') {
-        synth.resume();
-        state = 'reading';
-        setButtonState(btn, 'reading');
+  // 9. Wire-up radio velocità (sincronizza tutti i selettori della pagina).
+  var savedRate = getRate();
+  document.querySelectorAll('.tts-wrapper input[name="tts-rate"]').forEach(function (input) {
+    input.checked = (parseFloat(input.value) === savedRate);
+    input.addEventListener('change', function () {
+      if (!this.checked) return;
+      var v = parseFloat(this.value);
+      setRate(v);
+      // Sincronizza eventuali altri selettori sulla stessa pagina.
+      var val = this.value;
+      document.querySelectorAll('.tts-wrapper input[name="tts-rate"][value="' + val + '"]').forEach(function (other) {
+        other.checked = true;
+      });
+      // Se sta leggendo, riavvia con la nuova velocità.
+      if (synth.speaking || synth.pending) {
+        var wrapper = this.closest('.tts-wrapper');
+        var btn = wrapper && wrapper.querySelector('.tts-button');
+        if (btn) {
+          synth.cancel();
+          setUI(btn, 'idle');
+          if (speakText(btn)) setUI(btn, 'reading');
+        }
       }
     });
   });
 
-  window.addEventListener('beforeunload', function(){ synth.cancel(); });
+  // 10. Pulizia su unload (alcuni browser continuano a parlare dopo navigazione).
+  window.addEventListener('beforeunload', function () { try { synth.cancel(); } catch (e) {} });
 })();
 </script>
