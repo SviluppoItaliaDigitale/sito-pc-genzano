@@ -24,6 +24,9 @@ Redirect 301 /rischio-incendio.html /rischi-prevenzione/rischio-incendio/
 Redirect 301 /cosafacciamo.html /chi-siamo/
 Redirect 301 /simulatore.html /
 
+# URL rinominati post-pubblicazione
+Redirect 301 /formazione/kit-calamita-bambini/16-origami-cappello.html /formazione/kit-calamita-bambini/16-origami-barchetta.html
+
 # Cartelle vecchie → nuove
 Redirect 301 /assets/ /
 Redirect 301 /cache/ /
