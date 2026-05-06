@@ -71,7 +71,7 @@
 <div class="lite-allerta lite-allerta-{{ .livello }}" role="region" aria-label="Stato allerta meteo">
   <strong>Stato allerta meteo: {{ .titolo }}</strong>
   <p style="margin: 0.4rem 0 0;">{{ .descrizione }}</p>
-  <p style="margin: 0.4rem 0 0; font-size: 0.85rem;">Verificato: {{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }} · Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti">Centro Funzionale Lazio</a></p>
+  <p style="margin: 0.4rem 0 0; font-size: 0.85rem;">Verificato: {{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }} · Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a></p>
 </div>
 {{- end }}
 

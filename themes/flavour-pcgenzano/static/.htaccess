@@ -88,6 +88,10 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   # posizione" sulla mappa cartografia). microphone e camera restano negati.
   Header always set Permissions-Policy "geolocation=(self), microphone=(), camera=()"
   Header always set X-XSS-Protection "1; mode=block"
+  # HSTS: forza HTTPS per 1 anno, include sottodomini.
+  # Il sito è già full-HTTPS (RewriteRule sopra fa 301 da http a https).
+  # Aggiunto 2026-05-06 dopo audit security ChatGPT.
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </IfModule>
 
 # Cache statica — asset immutabili

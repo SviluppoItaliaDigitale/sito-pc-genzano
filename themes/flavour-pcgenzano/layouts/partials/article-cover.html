@@ -24,7 +24,7 @@
 {{- if $img -}}
 <figure class="article-cover mb-4">
   <div class="notizia-img-wrapper" style="height:250px;border-radius:8px;">
-    <img src="{{ $img | relURL }}" alt="{{ $alt }}" loading="lazy">
+    <img src="{{ $img | relURL }}" alt="{{ $alt }}" width="1200" height="630" loading="eager" fetchpriority="high">
   </div>
   {{- if or $credit $sourceUrl }}
   <figcaption class="article-cover-credit">
@@ -36,6 +36,6 @@
 </figure>
 {{- else -}}
 <div class="notizia-img-wrapper mb-4" style="height:250px;border-radius:8px;">
-  <img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">
+  <img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" width="1200" height="630" loading="eager">
 </div>
 {{- end -}}
