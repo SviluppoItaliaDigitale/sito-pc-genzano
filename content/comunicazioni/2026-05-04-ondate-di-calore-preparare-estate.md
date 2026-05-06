@@ -98,20 +98,6 @@ Sulla pagina [Ondate di calore](/rischi-prevenzione/ondate-di-calore/) del nostr
 - Articolo: [Previsioni meteo e bollettini di allerta](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
 - Articolo: [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
 
-## Kit consigliato per questo rischio
-
-Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
-
-- documenti, farmaci e chiavi in un punto noto;
-- telefono, caricabatterie e power bank;
-- torcia;
-- acqua;
-- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
-- elenco dei contatti utili;
-- guinzaglio, trasportino o materiale essenziale per animali domestici.
-
-In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-
 ## Fonti
 
 - [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp)

@@ -93,18 +93,3 @@ Quando circola una notizia di rischio:
 - [Social Media Policy](/social-media-policy/)
 
 In emergenza: **112**.
-
-## Kit consigliato per questo rischio
-
-Per piogge intense, allagamenti o possibili evacuazioni prepara un kit che resti asciutto e facile da prendere.
-
-- acqua e alimenti non deperibili;
-- torcia impermeabile o ben protetta;
-- radio a pile o a manovella;
-- power bank carico;
-- documenti e farmaci in busta impermeabile;
-- cambio asciutto, impermeabile leggero e calze di ricambio;
-- numeri utili stampati e contatti familiari.
-
-Non attraversare sottopassi, strade allagate o corsi d'acqua in piena. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-

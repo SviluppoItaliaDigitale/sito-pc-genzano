@@ -139,18 +139,3 @@ Il rispetto reciproco delle competenze è la regola.
 - [Ministero dell'Interno](https://www.interno.gov.it/)
 
 Il Corpo Forestale cambiato ma resta una risorsa fondamentale per la protezione del territorio. Conoscerne ruolo e competenze aiuta a valorizzarne il lavoro quotidiano.
-
-## Kit consigliato per questo rischio
-
-Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
-
-- documenti, farmaci e chiavi in un punto noto;
-- telefono, caricabatterie e power bank;
-- torcia;
-- acqua;
-- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
-- elenco dei contatti utili;
-- guinzaglio, trasportino o materiale essenziale per animali domestici.
-
-In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-

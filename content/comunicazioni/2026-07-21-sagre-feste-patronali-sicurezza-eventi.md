@@ -228,18 +228,3 @@ Molti volontari sono passati da sagre a grandi attivazioni nazionali.
 - [Comune di Genzano](https://www.comune.genzanodiroma.roma.it/)
 
 Dietro al divertimento di una sagra c'è un lavoro di sicurezza che permette a migliaia di persone di **divertirsi senza pericolo**. Vale la pena conoscerlo.
-
-## Kit consigliato per questo rischio
-
-Per temporali forti, fulmini, grandine e vento prepara un piccolo kit domestico per blackout o interruzioni temporanee dei servizi.
-
-- torcia con pile cariche;
-- radio a pile o a manovella;
-- power bank carico;
-- acqua e alimenti semplici;
-- farmaci abituali;
-- numeri utili stampati;
-- coperta leggera o indumenti adatti alla stagione.
-
-Durante i temporali evita alberi isolati, strutture metalliche, corsi d'acqua e spostamenti non necessari. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-

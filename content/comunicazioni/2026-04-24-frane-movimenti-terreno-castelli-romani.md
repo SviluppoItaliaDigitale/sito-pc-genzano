@@ -70,20 +70,6 @@ Sulla pagina [rischi e prevenzione](/rischi-prevenzione/) trovi la scheda dedica
 - Articolo: [Sicurezza sui laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/)
 - Pagina: [Rischi e prevenzione](/rischi-prevenzione/)
 
-## Kit consigliato per questo rischio
-
-Per piogge intense, allagamenti o possibili evacuazioni prepara un kit che resti asciutto e facile da prendere.
-
-- acqua e alimenti non deperibili;
-- torcia impermeabile o ben protetta;
-- radio a pile o a manovella;
-- power bank carico;
-- documenti e farmaci in busta impermeabile;
-- cambio asciutto, impermeabile leggero e calze di ricambio;
-- numeri utili stampati e contatti familiari.
-
-Non attraversare sottopassi, strade allagate o corsi d'acqua in piena. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-
 ## Fonti
 
 - [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico)

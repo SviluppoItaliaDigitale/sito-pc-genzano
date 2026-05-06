@@ -70,20 +70,6 @@ La transizione ecologica è anche una **politica di protezione civile**. Più il
 
 Sulla pagina [Rischi e prevenzione](/rischi-prevenzione/) del nostro sito trovi una scheda per ciascuno dei rischi principali del territorio. Leggerle e conoscerle è il primo passo: sapere cosa può succedere permette di reagire meglio quando succede.
 
-## Kit consigliato per questo rischio
-
-Per piogge intense, allagamenti o possibili evacuazioni prepara un kit che resti asciutto e facile da prendere.
-
-- acqua e alimenti non deperibili;
-- torcia impermeabile o ben protetta;
-- radio a pile o a manovella;
-- power bank carico;
-- documenti e farmaci in busta impermeabile;
-- cambio asciutto, impermeabile leggero e calze di ricambio;
-- numeri utili stampati e contatti familiari.
-
-Non attraversare sottopassi, strade allagate o corsi d'acqua in piena. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-
 ## Fonti
 
 - [Copernicus Climate Change Service](https://climate.copernicus.eu/)
