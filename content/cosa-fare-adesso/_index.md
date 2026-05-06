@@ -1,6 +1,6 @@
 ---
-title: "Cosa Fare Adesso"
-description: "Azioni immediate in caso di emergenza a Genzano di Roma: numeri da chiamare, comportamenti da adottare e link utili."
+title: "Cosa fare adesso"
+description: "Azioni immediate in caso di emergenza a Genzano di Roma: chi chiamare, cosa fare e quali informazioni consultare."
 tts: true
 layout: "single"
 aliases:
@@ -17,18 +17,18 @@ dataUltimaRevisione: "2026-05-06"
 <div class="row">
 <div class="col-md-6">
 <p class="fs-3 fw-bold text-danger mb-1">112</p>
-<p>Numero Unico Emergenze — per qualsiasi emergenza</p>
+<p>Numero Unico Europeo per le emergenze: chiamalo se c'è un pericolo immediato per persone, edifici, viabilità o ambiente.</p>
 </div>
 <div class="col-md-6">
 <p class="fs-3 fw-bold text-danger mb-1">803 555</p>
-<p>Sala Operativa Protezione Civile Lazio</p>
+<p>Sala Operativa Regionale Protezione Civile Lazio, per segnalazioni secondo le indicazioni regionali.</p>
 </div>
 </div>
 </div>
 </div>
 
 ## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>Cosa sta succedendo? {#cosa-sta-succedendo}
-Seleziona la situazione che stai vivendo per ricevere le indicazioni operative corrette.
+Scegli la situazione più vicina a quella che stai vivendo. Troverai indicazioni pratiche e comportamenti da evitare.
 
 <div class="row mt-3">
 <div class="col-md-6 mb-3">
@@ -100,11 +100,11 @@ Seleziona la situazione che stai vivendo per ricevere le indicazioni operative c
 </div>
 
 ## <i class="bi bi-list-check text-primary me-2" aria-hidden="true"></i>Regole generali valide sempre {#regole-generali}
-1. **Non farti prendere dal panico.** Pensa con calma e agisci in sicurezza.
-2. **Chiama il 112** per segnalare situazioni di pericolo.
-3. **Non intralciare i soccorsi.** Non recarti sui luoghi dell'emergenza per curiosità.
+1. **Mantieni la calma.** Osserva la situazione e agisci in sicurezza.
+2. **Chiama il 112** se c'è un pericolo immediato o qualcuno è ferito.
+3. **Non intralciare i soccorsi.** Non andare sul luogo dell'emergenza per curiosità.
 4. **Segui solo fonti ufficiali.** Non diffondere informazioni non verificate.
-5. **Aiuta chi è in difficoltà** se puoi farlo in sicurezza (anziani, bambini, persone con disabilità).
+5. **Aiuta chi è in difficoltà** solo se puoi farlo senza metterti in pericolo.
 6. **Tieni il telefono carico** e usalo solo per comunicazioni necessarie.
 
 {{< cosa-non-fare titolo="Cosa NON fare in qualunque emergenza" >}}
@@ -115,17 +115,17 @@ Seleziona la situazione che stai vivendo per ricevere le indicazioni operative c
 - **Non rientrare in un edificio danneggiato** prima del nullaosta dei Vigili del Fuoco.
 {{< /cosa-non-fare >}}
 
-## <i class="bi bi-bookmark-star-fill text-primary me-2" aria-hidden="true"></i>Risorse {#risorse}
-- [Stato allerta meteo attuale](/allerte-meteo/)
-- [Aree di emergenza del Piano Comunale](/piano-emergenza/)
-- [Cartografia Operativa](/cartografia/)
-- [Contatti e come attivarci](/contatti/)
-- [Kit di emergenza — cosa preparare](/rischi-prevenzione/kit-emergenza/)
+## <i class="bi bi-bookmark-star-fill text-primary me-2" aria-hidden="true"></i>Risorse utili {#risorse}
+- [Consulta lo stato dell'allerta meteo](/allerte-meteo/)
+- [Trova le aree di emergenza del Piano Comunale](/piano-emergenza/)
+- [Apri la cartografia operativa](/cartografia/)
+- [Leggi come contattare il Gruppo](/contatti/)
+- [Prepara il kit di emergenza](/rischi-prevenzione/kit-emergenza/)
 
 ## Vedi anche
 
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
-- [Rischi e Prevenzione](/rischi-prevenzione/) — comportamenti per ogni tipo di rischio
+- [Rischi e prevenzione](/rischi-prevenzione/) — comportamenti per ogni tipo di rischio
 - [Allerte meteo](/allerte-meteo/) — stato di allerta in corso
 - [Piano familiare](/piano-familiare/) — preparare il piano di emergenza in famiglia
 
