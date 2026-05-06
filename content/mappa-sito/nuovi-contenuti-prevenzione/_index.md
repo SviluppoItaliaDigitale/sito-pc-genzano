@@ -31,4 +31,9 @@ Guida per costruire il kit poco alla volta, senza marchi commerciali, senza nego
 
 ## Nota per la manutenzione
 
-Il file tecnico `sitemap.xml` viene generato automaticamente da Hugo. Questa pagina serve come integrazione manuale e consultabile della mappa del sito.
+Le tre pagine elencate sono ora linkate anche dai punti d'ingresso principali della navigazione:
+
+- dall'hub [Rischi e Prevenzione](/rischi-prevenzione/) sezione "Pagine di consultazione rapida";
+- dalla [Mappa del Sito](/mappa-sito/) sezione "Cosa fare in caso di…".
+
+Questa pagina resta come integrazione manuale dedicata. Il file tecnico `sitemap.xml` viene generato automaticamente da Hugo.
