@@ -5,8 +5,8 @@ description: "Oggi la Chiesa cattolica ricorda San Pio da Pietrelcina. Per i Vol
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-09-23-san-pio-patrono-volontari-festa.webp"
+image_alt: "Cover dell'articolo: 23 settembre: la festa di San Pio, patrono dei Volontari di Protezione Civile"
 scadenza: ""
 area: "Italia"
 allegati: []
