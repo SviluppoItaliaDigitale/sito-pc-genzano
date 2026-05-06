@@ -201,7 +201,8 @@
   termine: "ARPA Lazio"
   varianti:
     - "ARPA Lazio"
-  definizione: "Agenzia Regionale per la Protezione dell'Ambiente del Lazio: monitora aria, acqua, rumore, radiazioni. In emergenza fornisce dati a DPC e Regione."
+    - "ARPA"
+  definizione: "Agenzia Regionale per la Protezione dell'Ambiente. ARPA Lazio è quella di nostra competenza territoriale: monitora aria, acqua, rumore, radiazioni; in emergenza fornisce dati a DPC e Regione."
   link: "/glossario/#arpa-lazio"
 
 - id: ares-118
@@ -523,3 +524,176 @@
     - "Decreto del Presidente del Consiglio dei Ministri"
   definizione: "Decreto del Presidente del Consiglio dei Ministri: atto amministrativo di rango secondario. Per la PC se ne usano molti per stati di emergenza e ordinanze."
   link: "/glossario/#dpcm"
+
+# ============================================================
+# Aggiunte 2026-05-06 — sigle PC ricorrenti nei contenuti
+# ============================================================
+
+- id: asl
+  termine: "ASL"
+  varianti:
+    - "ASL"
+    - "Azienda Sanitaria Locale"
+    - "Aziende Sanitarie Locali"
+  definizione: "Azienda Sanitaria Locale: ente pubblico che eroga i servizi sanitari sul territorio. In emergenza coordina ospedali, 118 e medici di base."
+  link: "/glossario/#asl"
+
+- id: vvf
+  termine: "VVF"
+  varianti:
+    - "VVF"
+    - "Vigili del Fuoco"
+    - "Vigili Fuoco"
+  definizione: "Corpo nazionale specializzato in soccorso tecnico urgente: incendi, crolli, incidenti stradali, salvataggi. Si attiva chiamando il 112."
+  link: "/glossario/#vvf"
+
+- id: dae
+  termine: "DAE"
+  varianti:
+    - "DAE"
+    - "Defibrillatore Automatico Esterno"
+    - "defibrillatore"
+  definizione: "Apparecchio salvavita che riconosce un arresto cardiaco e somministra una scarica elettrica per riavviare il battito. Usabile da chiunque, anche non sanitario."
+  link: "/glossario/#dae"
+
+- id: bls
+  termine: "BLS"
+  varianti:
+    - "BLS"
+    - "Basic Life Support"
+    - "supporto vitale di base"
+  definizione: "Insieme delle manovre di base (massaggio cardiaco, respirazione bocca a bocca) per mantenere in vita una persona in arresto cardiaco fino all'arrivo dei soccorsi."
+  link: "/glossario/#bls"
+
+- id: blsd
+  termine: "BLSD"
+  varianti:
+    - "BLSD"
+    - "Basic Life Support Defibrillation"
+  definizione: "BLS unito all'uso del defibrillatore (DAE). È il livello base certificato per chi assiste un arresto cardiaco con un DAE a disposizione."
+  link: "/glossario/#blsd"
+
+- id: rcp
+  termine: "RCP"
+  varianti:
+    - "RCP"
+    - "Rianimazione CardioPolmonare"
+    - "rianimazione cardiopolmonare"
+    - "Rianimazione Cardio-Polmonare"
+  definizione: "Tecnica di emergenza che combina compressioni toraciche e respiri di soccorso per mantenere la circolazione del sangue in chi ha avuto un arresto cardiaco."
+  link: "/glossario/#rcp"
+
+- id: ares
+  termine: "ARES"
+  varianti:
+    - "ARES 118"
+    - "ARES"
+    - "Azienda Regionale Emergenza Sanitaria"
+  definizione: "Azienda Regionale Emergenza Sanitaria del Lazio: gestisce il servizio 118 ed elisoccorso. Per il cittadino il numero da chiamare resta il 112 (NUE)."
+  link: "/glossario/#ares"
+
+- id: oms
+  termine: "OMS"
+  varianti:
+    - "OMS"
+    - "WHO"
+    - "Organizzazione Mondiale della Sanità"
+  definizione: "Agenzia delle Nazioni Unite specializzata in salute pubblica. Pubblica linee guida internazionali su epidemie, ondate di calore, primo soccorso."
+  link: "/glossario/#oms"
+
+- id: iss
+  termine: "ISS"
+  varianti:
+    - "ISS"
+    - "Istituto Superiore di Sanità"
+  definizione: "Ente pubblico di ricerca italiano in materia di salute. In emergenza pubblica fornisce dati e raccomandazioni alle istituzioni sanitarie nazionali."
+  link: "/glossario/#iss"
+
+- id: com
+  termine: "COM"
+  varianti:
+    - "COM"
+    - "Centro Operativo Misto"
+  definizione: "Struttura intercomunale di coordinamento dei soccorsi che riunisce più Comuni colpiti da una stessa emergenza. Lavora a livello sovracomunale, sotto il CCS provinciale."
+  link: "/glossario/#com"
+
+- id: ccs
+  termine: "CCS"
+  varianti:
+    - "CCS"
+    - "Centro Coordinamento Soccorsi"
+  definizione: "Centro di coordinamento provinciale dei soccorsi, attivato dalla Prefettura. Coordina forze dell'ordine, sanità, vigili del fuoco, volontariato."
+  link: "/glossario/#ccs"
+
+- id: cor
+  termine: "COR"
+  varianti:
+    - "COR"
+    - "Centro Operativo Regionale"
+    - "Sala Operativa Regionale"
+  definizione: "Sala operativa della Protezione Civile regionale. Per il Lazio attiva i COC dei Comuni colpiti e coordina la colonna mobile regionale."
+  link: "/glossario/#cor"
+
+- id: soup
+  termine: "SOUP"
+  varianti:
+    - "SOUP"
+    - "Sala Operativa Unificata Permanente"
+  definizione: "Sala operativa regionale antincendio boschivo, attiva 24 ore su 24 nei mesi di maggior rischio. Coordina avvistamenti, mezzi aerei e squadre AIB."
+  link: "/glossario/#soup"
+
+- id: agesci
+  termine: "AGESCI"
+  varianti:
+    - "AGESCI"
+    - "Associazione Guide e Scout Cattolici Italiani"
+  definizione: "Associazione scout cattolica italiana. Il suo Settore Protezione Civile è iscritto nell'elenco nazionale dei volontari di PC presso il Dipartimento."
+  link: "/glossario/#agesci"
+
+- id: cnr
+  termine: "CNR"
+  varianti:
+    - "CNR"
+    - "Consiglio Nazionale delle Ricerche"
+  definizione: "Maggiore ente pubblico di ricerca italiano. Per la Protezione Civile fornisce conoscenze scientifiche su rischi naturali (frane via CNR-IRPI, sismicità via INGV)."
+  link: "/glossario/#cnr"
+
+- id: ntc
+  termine: "NTC"
+  varianti:
+    - "NTC"
+    - "NTC 2018"
+    - "Norme Tecniche per le Costruzioni"
+  definizione: "Norma italiana che fissa i requisiti antisismici e di sicurezza degli edifici. Aggiornate nel 2018, classificano l'Italia in zone sismiche."
+  link: "/glossario/#ntc"
+
+- id: haccp
+  termine: "HACCP"
+  varianti:
+    - "HACCP"
+    - "Hazard Analysis and Critical Control Points"
+  definizione: "Sistema di controllo dell'igiene degli alimenti basato su analisi dei rischi. Si applica anche alle cucine di campo nelle aree di accoglienza in emergenza."
+  link: "/glossario/#haccp"
+
+- id: mitigazione
+  termine: "Mitigazione"
+  varianti:
+    - "mitigazione del rischio"
+    - "Mitigazione"
+    - "mitigazione"
+  definizione: "Insieme di interventi che riducono gli effetti di un evento dannoso (es. argini, edifici antisismici). Distinta dalla prevenzione, che mira a evitare l'evento."
+  link: "/glossario/#mitigazione"
+
+- id: esposizione
+  termine: "Esposizione"
+  varianti:
+    - "esposizione"
+  definizione: "Quantità e valore di persone, edifici e beni presenti in un'area a rischio. Insieme a pericolosità e vulnerabilità è una delle tre componenti del rischio."
+  link: "/glossario/#esposizione"
+
+- id: triage
+  termine: "Triage"
+  varianti:
+    - "triage"
+  definizione: "Procedura di valutazione rapida delle vittime in un'emergenza per stabilire l'ordine di soccorso. Si basa sulla gravità clinica, non sull'ordine di arrivo."
+  link: "/glossario/#triage"
