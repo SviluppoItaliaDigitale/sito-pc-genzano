@@ -75,7 +75,7 @@ La discesa di livello è altrettanto importante: quando l'evento finisce, si rit
 
 ## Dove si trova il COC a Genzano
 
-Ogni Piano comunale individua una **sede primaria** per il COC (solitamente negli uffici comunali) e una o più **sedi alternative** da utilizzare se la primaria non è agibile. La localizzazione precisa e il dettaglio organizzativo sono contenuti nel [Piano di Protezione Civile del Comune di Genzano di Roma](/piano-emergenza/).
+A Genzano di Roma il **COC, quando attivato, ha sede presso il Comando di Polizia Locale**. È la sede primaria individuata dal Piano di Protezione Civile del Comune. Possono essere usate **sedi alternative** in caso di esigenze motivate (sede primaria non agibile, evento che la coinvolge direttamente, scelta operativa del Sindaco). Il dettaglio organizzativo è contenuto nel [Piano di Protezione Civile del Comune di Genzano di Roma](/piano-emergenza/).
 
 ## Cosa significa per i cittadini
 

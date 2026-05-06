@@ -71,6 +71,7 @@ Per informazioni sanitarie ordinarie, prenotazioni, certificazioni, ufficio rela
 
 - **IT-alert** — Sistema nazionale di allarme pubblico: [it-alert.it](https://www.it-alert.it/it/)
 - **Where Are U** — App ufficiale del 112 con invio automatico della posizione e chiamata silenziosa: [come funziona](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/) · [scarica l'app](https://where.areu.lombardia.it/)
+- **YouPol** — App della Polizia di Stato per segnalare bullismo, violenza domestica, droga e altri reati anche in forma anonima: [come funziona](/comunicazioni/2026-04-27-app-youpol-polizia-stato-bullismo-violenza-droga/) · [Polizia di Stato](https://www.poliziadistato.it/)
 
 ## In caso di emergenza
 

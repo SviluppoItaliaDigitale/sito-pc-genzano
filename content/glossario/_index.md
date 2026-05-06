@@ -55,7 +55,7 @@ Lento sollevamento o abbassamento del suolo dovuto ad attività vulcanica. Esemp
 Struttura tecnico-scientifica regionale che riceve previsioni meteo dal DPC, valuta gli effetti possibili sul territorio e **emette il bollettino di criticità**. Per il Lazio: Centro Funzionale Regionale dell'Agenzia di Protezione Civile. Genzano rientra nella **Zona di allerta F — Bacini Costieri Sud** (DGR Regione Lazio 865/2019).
 
 ### COC — Centro Operativo Comunale
-Sala operativa che il **Sindaco** attiva quando c'è un'emergenza sul territorio comunale. Coordina volontari, Polizia Locale, tecnici, sociale, comunicazione. A Genzano viene di norma allestita presso la sede del Gruppo Volontari o presso il Palazzo Comunale. È previsto dal **Piano di Emergenza Comunale**.
+Sala operativa che il **Sindaco** attiva quando c'è un'emergenza sul territorio comunale. Coordina volontari, Polizia Locale, tecnici, sociale, comunicazione. A Genzano di Roma, quando attivato, ha sede primaria presso il **Comando di Polizia Locale** (salvo diverse esigenze motivate, es. sede non agibile o evento che la coinvolga direttamente). È previsto dal **Piano di Emergenza Comunale**.
 
 ### COI — Centro Operativo Intercomunale
 Coordina più Comuni vicini in caso di emergenza che riguardi un territorio più vasto. **Genzano fa parte del 14° COI della Provincia di Roma** (Castelli Romani Sud).
