@@ -1,52 +1,79 @@
 ---
-
-title: "Normativa di Protezione Civile"
-description: "Guida alle norme del Servizio Nazionale di Protezione Civile: Codice della PC (D.Lgs. 1/2018), leggi regionali del Lazio, pianificazione comunale."
+title: "Normativa di protezione civile"
+description: "Guida alle principali norme del Servizio nazionale di protezione civile: Codice della protezione civile, leggi regionali del Lazio e pianificazione comunale."
 toc: true
+tts: true
+dataUltimaRevisione: "2026-05-06"
 ---
-Il **Servizio Nazionale di Protezione Civile** è un sistema complesso, definito da norme di rango primario e secondario, integrato da regolamenti regionali e dalla pianificazione comunale. Conoscere il quadro normativo aiuta a capire **chi fa cosa**, **quando** e **con quali poteri** durante le attività ordinarie e durante le emergenze.
 
-In questa sezione abbiamo raccolto letture e approfondimenti per **cittadini**, **volontari** e **amministratori locali** sul quadro normativo della protezione civile, con particolare attenzione al territorio di Genzano di Roma.
+Questa pagina aiuta cittadini, volontari e amministratori a orientarsi tra le principali norme di protezione civile. L'obiettivo è spiegare **chi fa cosa**, quali sono i riferimenti principali e dove consultare le fonti ufficiali aggiornate.
 
-## Il Codice della Protezione Civile
+<div class="alert alert-info" role="note">
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Questa pagina ha finalità informative. Per il testo vigente delle norme consulta sempre <a href="https://www.normattiva.it/" target="_blank" rel="noopener noreferrer">Normattiva</a>, la <a href="https://www.gazzettaufficiale.it/" target="_blank" rel="noopener noreferrer">Gazzetta Ufficiale</a> e i siti istituzionali competenti.</p>
+</div>
 
-Il riferimento principale è il **Decreto Legislativo 2 gennaio 2018, n. 1** — il cosiddetto **Codice** o **Testo Unico della Protezione Civile**. Ha sostituito la legge 225 del 1992 con un testo più ampio e organico, suddiviso in sette Capi.
+## Il Codice della protezione civile
 
-[Approfondisci il Codice della Protezione Civile](/normativa/testo-unico-protezione-civile/)
+Il riferimento principale è il **Decreto legislativo 2 gennaio 2018, n. 1**, chiamato anche **Codice della protezione civile**.
 
-## Approfondimenti normativi
+Il Codice definisce:
 
-- [Come sono evolute le procedure di emergenza: dal 1996 al 2026](/normativa/evoluzione-procedure-emergenza/) — confronto tra la direttiva Bertolaso 1996, il D.Lgs. 1/2018 e la Direttiva PCM 30 aprile 2021
+- le attività di previsione, prevenzione, gestione dell'emergenza e superamento dell'emergenza;
+- il ruolo del Servizio nazionale di protezione civile;
+- le competenze di Stato, Regioni, Province, Città metropolitane e Comuni;
+- il ruolo del Sindaco come autorità comunale di protezione civile;
+- diritti, doveri e benefici del volontariato organizzato.
+
+[Approfondisci il Codice della protezione civile](/normativa/testo-unico-protezione-civile/)
+
+## Il ruolo del Comune
+
+Ogni Comune deve dotarsi di un **Piano comunale di protezione civile**. Il Piano individua i rischi del territorio, le aree di emergenza, le procedure operative e le funzioni di supporto.
+
+Per il cittadino, le pagine più utili sono:
+
+- [Piano di emergenza di Genzano di Roma](/piano-emergenza/)
+- [Cartografia operativa](/cartografia/)
+- [Piano di emergenza familiare](/piano-familiare/)
 
 ## Normativa regionale del Lazio
 
-La **Regione Lazio** ha la competenza primaria su pianificazione, prevenzione e coordinamento delle emergenze non di rilievo nazionale. I riferimenti principali sono:
+La Regione Lazio ha competenze rilevanti su pianificazione, prevenzione, allertamento e coordinamento delle emergenze non di rilievo nazionale.
 
-- [**Direzione Protezione Civile Lazio — Normative**](https://protezionecivile.regione.lazio.it/direzione/normative) — Pagina aggregatrice ufficiale della Direzione regionale, con sezioni dedicate a normativa nazionale e regionale, regolamenti, DGR, circolari del DPC, protocolli di intesa, accordi quadro, convenzioni, determinazioni regionali e direttive RUNTS. **È il punto d'ingresso istituzionale per tutta la normativa di PC del Lazio.**
-- [**L.R. 26 febbraio 2014, n. 2** — Sistema integrato regionale di protezione civile](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9264&sv=vigente) — è la legge organica regionale: disciplina il riordino delle funzioni in materia di PC e istituisce il Sistema integrato regionale.
-- [**DGR 26 novembre 2019, n. 865**](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf) — Suddivisione del territorio regionale in 7 zone di allerta meteo-idrogeologica. **Genzano di Roma rientra nella Zona F — Bacini Costieri Sud**.
-- [**Bollettini di criticità e avvisi**](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) del Centro Funzionale Regionale.
-- [**Portale dell'Agenzia Regionale di Protezione Civile**](https://protezionecivile.regione.lazio.it/) — Sito istituzionale con direttive, bandi, piani e modulistica.
+I riferimenti principali sono:
 
-## Il Piano Comunale di Protezione Civile
+- [Direzione Protezione Civile Lazio — Normative](https://protezionecivile.regione.lazio.it/direzione/normative) — pagina ufficiale con normativa nazionale e regionale, regolamenti, delibere, circolari, protocolli e direttive.
+- [L.R. 26 febbraio 2014, n. 2](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9264&sv=vigente) — disciplina il sistema integrato regionale di protezione civile.
+- [DGR 26 novembre 2019, n. 865](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf) — suddivide il Lazio in zone di allerta meteo-idrogeologica. **Genzano di Roma rientra nella Zona F — Bacini Costieri Sud**.
+- [Bollettini di criticità e avvisi](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — pubblicati dal Centro Funzionale Regionale.
+- [Agenzia Regionale di Protezione Civile](https://protezionecivile.regione.lazio.it/) — sito istituzionale con direttive, bandi, piani e modulistica.
 
-Ogni Comune italiano ha l'obbligo di dotarsi di un **Piano di Protezione Civile** comunale (art. 12 D.Lgs. 1/2018), che è lo strumento operativo per l'autorità locale durante le emergenze.
+## Accessibilità e siti web pubblici
 
-- [Piano di emergenza di Genzano di Roma](/piano-emergenza/)
-- [Piano di emergenza familiare](/piano-familiare/)
+Per un sito rivolto ai cittadini sono importanti anche le norme su accessibilità, trasparenza e qualità dei servizi digitali.
 
-## Normativa sull'accessibilità
+I riferimenti principali sono:
 
-- **L. 4/2004** — "Legge Stanca": accessibilità dei siti web della pubblica amministrazione
-- **D.Lgs. 106/2018** — Recepimento della direttiva europea sull'accessibilità
-- **WCAG 2.2 livello AA** — Linee guida internazionali di riferimento
+- **Legge 9 gennaio 2004, n. 4** — accessibilità degli strumenti informatici, detta anche “Legge Stanca”.
+- **D.Lgs. 10 agosto 2018, n. 106** — recepisce la direttiva europea sull'accessibilità dei siti e delle app pubbliche.
+- **Linee guida AGID sull'accessibilità** — indicano requisiti e modalità operative.
+- **WCAG 2.2 livello AA** — standard tecnico internazionale usato come riferimento.
 
 [Dichiarazione di accessibilità del sito](/accessibilita/)
 
 ## Fonti normative ufficiali
 
-- [Normattiva](https://www.normattiva.it/) — Banca dati delle leggi italiane, testo aggiornato
-- [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/) — Pubblicazione ufficiale
-- [Dipartimento di Protezione Civile — sezione normativa](https://www.protezionecivile.gov.it/it/normativa/)
+Consulta sempre fonti ufficiali e aggiornate:
+
+- [Normattiva](https://www.normattiva.it/) — banca dati delle leggi italiane con testo vigente.
+- [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/) — pubblicazione ufficiale degli atti normativi.
+- [Dipartimento della Protezione Civile — normativa](https://www.protezionecivile.gov.it/it/normativa/)
 - [Regione Lazio — Agenzia Regionale di Protezione Civile](https://protezionecivile.regione.lazio.it/)
-- [Consiglio Regionale del Lazio — Banca dati delle leggi regionali](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionali)
+- [Consiglio Regionale del Lazio — banca dati delle leggi regionali](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionali)
+
+## Vedi anche
+
+- [Glossario](/glossario/) — sigle e termini tecnici spiegati in parole semplici
+- [Piano di emergenza comunale](/piano-emergenza/) — cosa prevede il Piano per Genzano
+- [Allerte meteo](/allerte-meteo/) — come leggere i bollettini regionali
+- [Siti utili](/siti-utili/) — fonti istituzionali e portali tecnici
