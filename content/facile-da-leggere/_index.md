@@ -157,7 +157,7 @@ sitemap:
 <ul class="facile-elenco no">
 <li>Non andare in cantina</li>
 <li>Non passare nei sottopassaggi</li>
-<li>Non bere l'acqua del rubinetto</li>
+<li>Non bere l'acqua del rubinetto se le autorità dicono che non è sicura</li>
 </ul>
 </div>
 
