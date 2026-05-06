@@ -354,7 +354,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | Workflow | Frequenza | Scopo |
 |---|---|---|
 | `deploy.yml` | Ogni push su `main` | Build + deploy Aruba (FTP) + GitHub Pages |
-| `check-allerta.yml` | Orario (min 12) | Verifica stato allerta meteo Regione Lazio |
+| `check-allerta.yml` | Orario (min 00) | Verifica stato allerta meteo Regione Lazio |
 | `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Pubblica articoli programmati |
 | `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO |
 | `smoke-test-post-deploy.yml` | Post-deploy | Smoke test live: status HTTP, marker JS, header sicurezza |

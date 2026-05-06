@@ -268,7 +268,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | Workflow | Frequenza | Scopo |
 |---|---|---|
 | `deploy.yml` | Ogni push su `main` | Build Hugo + deploy Aruba (FTP) + GitHub Pages |
-| `check-allerta.yml` | Orario (min 12) | Verifica stato allerta meteo Regione Lazio |
+| `check-allerta.yml` | Orario (min 00) | Verifica stato allerta meteo Regione Lazio |
 | `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Rilancia il deploy ogni mattina: gli articoli `draft: false` con `date` futura entrano nel sito al passaggio del giorno (Hugo li escludeva finché la data era oltre `now()`). NB: `draft: true` non viene flippato — gli articoli devono essere `draft: false` (regola: niente articoli in revisione) |
 | `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO (si attiva dopo ogni deploy riuscito) |
 | `smoke-test-post-deploy.yml` | Post-deploy | Verifica live: 20 pagine principali rispondono 200, 7 traduzioni accessibili, mini-app statiche, marker chiave su 7 pagine, 2 header sicurezza. Apre issue urgente se trova regressioni. Logica in `scripts/smoke-test-live.sh` (riusabile in locale) |
