@@ -96,17 +96,10 @@ Seguici per ricevere aggiornamenti, allerte e comunicazioni:
 <p><strong>Sede:</strong> Via Sicilia, 13-15 — 00045 Genzano di Roma (RM). La mappa interattiva richiede JavaScript per essere visualizzata.</p>
 </noscript>
 
-## Kit consigliato per questo rischio
+## Vedi anche
 
-Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
-
-- torcia;
-- radio a pile o a manovella;
-- power bank carico;
-- acqua e alimenti semplici;
-- farmaci abituali;
-- scarpe chiuse e guanti da lavoro;
-- numeri utili stampati.
-
-Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+- [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
+- [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
+- [Diventa volontario](/diventa-volontario/) — iscrizione, requisiti e formazione
+- [Mappa del sito](/mappa-sito/) — tutte le sezioni del sito
 
