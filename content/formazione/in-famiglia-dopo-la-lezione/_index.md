@@ -127,18 +127,3 @@ Tre suggerimenti per non sentirsi sopraffatti:
 Per le **persone con esigenze specifiche** (anziani, disabilità, terapie salvavita, bambini piccoli, gravidanza, animali, italiano L2, persone senza dimora, caregiver), il [Kit Calamità](/formazione/kit-calamita/) ha schede dedicate per ogni situazione.
 
 Per i **docenti** che vogliono lavorare in classe con materiali pronti: [Percorsi didattici pronti](/formazione/percorsi-didattici/) e [Schede stampabili](/formazione/schede-stampabili/).
-
-## Kit consigliato per questo rischio
-
-Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
-
-- acqua in litri sufficienti per la famiglia;
-- torcia con pile o ricarica funzionante;
-- radio a pile o a manovella;
-- power bank carico;
-- fischietto per segnalare la presenza;
-- scarpe chiuse, guanti da lavoro e piccola coperta termica;
-- copie dei documenti, farmaci abituali e numeri utili.
-
-Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-

@@ -141,18 +141,3 @@ Tutti i fac-simile editabili che servono al DS e al DSGA sono nella pagina dedic
 
 **Ultimo aggiornamento**: 1 maggio 2026.
 **Riferimenti normativi**: D.Lgs. 1/2018 · L.R. Lazio 2/2014 · L. 92/2019 · D.M. 183/2024 · L. 21/2025 · D.Lgs. 77/2005 · L. 145/2018 · D.M. 774/2019 · D.Lgs. 81/2008 · Accordo Stato-Regioni 21/12/2011 · D.Lgs. 66/2017 · D.Lgs. 196/2003 · GDPR · D.M. 26/08/1992. Per il quadro completo: [Quadro normativo scuola](/formazione/quadro-normativo-scuola/).
-
-## Kit consigliato per questo rischio
-
-Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
-
-- torcia;
-- radio a pile o a manovella;
-- power bank carico;
-- acqua e alimenti semplici;
-- farmaci abituali;
-- scarpe chiuse e guanti da lavoro;
-- numeri utili stampati.
-
-Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-
