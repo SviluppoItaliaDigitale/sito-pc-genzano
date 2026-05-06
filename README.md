@@ -354,7 +354,7 @@ Il progetto ha alcune regole non negoziabili da avere a portata di vista:
 - **Banner articoli** = **sempre cover tipografica con titolo grande** (gradiente blu + badge categoria + titolo articolo + fascia istituzionale). Generata da `scripts/auto-cover-mancanti.py`. Mai vuota in produzione, mai una foto utente.
 - **Foto fornite dall'utente** = sempre nel **corpo dell'articolo** come `{{< foto >}}` (mai nel campo `image:` del frontmatter). ≥4 foto → galleria nel corpo. Sui social diventano automaticamente carosello Instagram.
 - **NUE 112** è l'unico numero di emergenza nel Lazio: 115/118/1515 non vanno mai citati come numeri da chiamare al cittadino.
-- **15° C.O.I.** della Provincia di Roma (non 14°) è il riferimento del Gruppo.
+- **14° C.O.I.** della Provincia di Roma (non 15°) è il riferimento del Gruppo.
 - **Formato data nel frontmatter**: sempre `AAAA-MM-GG`. Mai con timezone (`AAAA-MM-DDTHH:MM:SSZ` causa esclusione dell'articolo dalla build).
 - **Nessun articolo `draft: true`** — solo pubblicazione immediata (data passata) o programmata (data futura).
 - **Lingua AGID**: frasi brevi (max ~20 parole), voce attiva, niente burocratese, linguaggio inclusivo.
