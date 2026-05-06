@@ -15,14 +15,12 @@ dataUltimaRevisione: "2026-05-06"
 ---
 Il Piano di Emergenza Comunale è lo strumento fondamentale che stabilisce le procedure operative per affrontare qualsiasi calamità in modo organizzato ed efficace. È un documento predisposto dal Comune per la tutela della popolazione e del territorio.
 
-## A cosa serve il Piano?
-
+## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>A cosa serve il Piano? {#a-cosa-serve}
 Il suo scopo principale è **salvare vite umane**. Definisce chi fa cosa, quali risorse utilizzare e come coordinare i soccorsi. Identifica le "Aree di Emergenza", luoghi sicuri destinati ad accogliere la popolazione in caso di evacuazione.
 
 L'impianto del Piano segue il **D.Lgs. 1/2018** (Codice della Protezione Civile) e le **direttive del Dipartimento della Protezione Civile**. La parte sull'evacuazione di massa, la pianificazione dei punti di raccolta e l'attenzione alle persone con esigenze specifiche recepisce inoltre i principi della norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*.
 
-## Come leggere il Piano
-
+## <i class="bi bi-book-fill text-primary me-2" aria-hidden="true"></i>Come leggere il Piano {#come-leggere}
 Il Piano di Emergenza è un documento tecnico, ma i concetti chiave che ogni cittadino deve conoscere sono semplici:
 
 1. **I rischi del territorio** — quali eventi possono colpire Genzano
@@ -32,8 +30,7 @@ Il Piano di Emergenza è un documento tecnico, ma i concetti chiave che ogni cit
 
 Non serve leggere tutto il documento. Concentrati sulle aree di emergenza più vicine a casa tua e al tuo luogo di lavoro. Puoi consultarle nella pagina [Cartografia Operativa](/cartografia/).
 
-## Chi coordina l'emergenza
-
+## <i class="bi bi-person-badge-fill text-primary me-2" aria-hidden="true"></i>Chi coordina l'emergenza {#chi-coordina}
 In ambito comunale, la prima autorità di protezione civile è il **Sindaco**. Quando la situazione lo richiede, il Sindaco può attivare il **Centro Operativo Comunale (COC)**, cioè la struttura che coordina le funzioni operative sul territorio comunale: assistenza alla popolazione, volontariato, viabilità, comunicazione, servizi essenziali, censimento danni e supporto tecnico.
 
 A Genzano di Roma, quando attivato, il **COC ha sede primaria presso il Comando di Polizia Locale**. Salvo diverse esigenze motivate (sede non agibile, evento che coinvolga direttamente la sede primaria, scelta operativa del Sindaco), è quello l'indirizzo di riferimento per il coordinamento operativo.
@@ -44,8 +41,7 @@ Per emergenze che coinvolgono più Comuni può intervenire anche il **Centro Ope
 
 > In caso di pericolo immediato chiama il **112**. Non cercare di attivare direttamente squadre o singoli volontari: il coordinamento dei soccorsi deve passare dai canali ufficiali.
 
-## Le Aree di Emergenza
-
+## <i class="bi bi-pin-map-fill text-primary me-2" aria-hidden="true"></i>Le Aree di Emergenza {#aree-emergenza}
 ### Aree di Attesa della Popolazione (AA)
 
 Sono i **primi punti di raccolta** dopo un evento come un terremoto. Qui la popolazione si raduna per essere censita e ricevere le prime informazioni. Sono luoghi all'aperto, lontani da edifici che potrebbero crollare.
@@ -64,8 +60,7 @@ Sono spazi destinati al **raggruppamento di uomini e mezzi di soccorso** proveni
 
 Sono le sedi operative da cui viene coordinata l'emergenza: Municipio, sede Polizia Locale, sede Protezione Civile, strutture sanitarie.
 
-## Cosa deve fare il cittadino
-
+## <i class="bi bi-person-walking text-primary me-2" aria-hidden="true"></i>Cosa deve fare il cittadino {#cosa-deve-fare-cittadino}
 <div class="card border-primary mb-4">
 <div class="card-body bg-primary bg-opacity-10 p-4">
 
@@ -93,8 +88,7 @@ Sono le sedi operative da cui viene coordinata l'emergenza: Municipio, sede Poli
 </div>
 </div>
 
-## Documenti scaricabili
-
+## <i class="bi bi-download text-primary me-2" aria-hidden="true"></i>Documenti scaricabili {#documenti}
 - [Piano di Emergenza Comunale di PC](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf)
 - [Carta delle Aree di Emergenza e degli Edifici Strategici](https://www.protezionecivilegenzano.it/area-download/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf)
 

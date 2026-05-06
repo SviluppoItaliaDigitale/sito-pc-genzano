@@ -10,8 +10,7 @@ In ogni emergenza, le persone con necessità specifiche sono le più vulnerabili
 
 Il principio dell'attenzione prioritaria alle persone con esigenze specifiche durante l'evacuazione è recepito dalla norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*, che riconosce queste categorie come la priorità nella pianificazione dei soccorsi. La normativa italiana (Codice della Protezione Civile, **D.Lgs. 1/2018**) e le linee guida del **Dipartimento della Protezione Civile** ne definiscono l'applicazione operativa nei piani comunali di emergenza.
 
-## Chi sono le persone con necessità specifiche
-
+## <i class="bi bi-people-fill text-primary me-2" aria-hidden="true"></i>Chi sono le persone con necessità specifiche {#chi-sono}
 - **Anziani**, soprattutto se soli o con difficoltà motorie
 - **Persone con disabilità** motoria, sensoriale o cognitiva
 - **Bambini piccoli** (sotto i 6 anni)
@@ -20,8 +19,7 @@ Il principio dell'attenzione prioritaria alle persone con esigenze specifiche du
 - **Persone che dipendono da apparecchiature elettromedicali**
 - **Persone con difficoltà linguistiche** (stranieri, turisti)
 
-## Preparazione — cosa fare ora
-
+## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Preparazione — cosa fare ora {#preparazione}
 ### Per le famiglie e i caregiver
 
 - Includi nel [Piano Familiare](/piano-familiare/) le esigenze specifiche di ogni componente
@@ -38,8 +36,7 @@ Il principio dell'attenzione prioritaria alle persone con esigenze specifiche du
 - Conserva una copia delle chiavi di casa presso una persona fidata
 - Partecipa alle iniziative di comunità del quartiere
 
-## Durante l'emergenza
-
+## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Durante l'emergenza {#durante-emergenza}
 ### Per le persone con difficoltà motorie
 
 - Se è necessario evacuare, chiedi aiuto ai vicini o attendi i soccorsi in un luogo sicuro dell'abitazione
@@ -58,8 +55,7 @@ Il principio dell'attenzione prioritaria alle persone con esigenze specifiche du
 - Assicurati che sappiano il loro nome completo, indirizzo e un numero di telefono da chiamare
 - Tieni un documento identificativo nel loro zaino
 
-## La rete di vicinato
-
+## <i class="bi bi-house-heart-fill text-primary me-2" aria-hidden="true"></i>La rete di vicinato {#rete-vicinato}
 La comunità è la prima risorsa in emergenza. Se conosci persone fragili nel tuo vicinato:
 
 - Presentati e scambia i numeri di telefono
@@ -67,8 +63,7 @@ La comunità è la prima risorsa in emergenza. Se conosci persone fragili nel tu
 - Segnala eventuali situazioni critiche al Comune o ai servizi sociali
 - Durante le ondate di calore o il freddo intenso, una telefonata o una visita possono salvare una vita
 
-## Risorse utili
-
+## <i class="bi bi-bookmark-star-fill text-primary me-2" aria-hidden="true"></i>Risorse utili {#risorse}
 - [Piano Familiare — crea il tuo](/piano-familiare/)
 - [Kit di Emergenza — cosa preparare](/rischi-prevenzione/kit-emergenza/)
 - [Piano di Emergenza Comunale](/piano-emergenza/)

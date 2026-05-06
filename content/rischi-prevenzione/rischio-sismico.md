@@ -8,8 +8,7 @@ toc: true
 ---
 Il terremoto è un evento naturale non prevedibile. L'unica difesa possibile è la prevenzione, la conoscenza delle corrette norme di comportamento e la preparazione.
 
-## Terremoti recenti in Italia
-
+## <i class="bi bi-broadcast text-primary me-2" aria-hidden="true"></i>Terremoti recenti in Italia {#terremoti-recenti}
 Mappa e lista degli eventi sismici recenti rilevati dall'**Istituto Nazionale di Geofisica e Vulcanologia (INGV)** — fonte scientifica ufficiale in Italia. La vista mostra tutti i terremoti localizzati sul territorio nazionale; usa il menu interno per filtrare per magnitudo, profondità e periodo.
 
 <div class="alert alert-info" role="note">
@@ -28,20 +27,17 @@ Mappa e lista degli eventi sismici recenti rilevati dall'**Istituto Nazionale di
     fallbackText="Elenco terremoti recenti consultabile su terremoti.ingv.it (Istituto Nazionale di Geofisica e Vulcanologia)"
     widgetId="sismico-ingv" >}}
 
-## Perché è rilevante sul nostro territorio
-
+## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Il Comune di Genzano di Roma è classificato in **zona sismica 2B** (media sismicità). L'area dei Colli Albani, di origine vulcanica, è soggetta a scosse sismiche, generalmente di bassa magnitudo ma talvolta avvertite dalla popolazione. Questo rende essenziale conoscere i comportamenti corretti.
 
 > ℹ️ **Sismicità e vulcanismo dei Colli Albani**: il Vulcano Laziale è quiescente, non spento; la sismicità di bassa magnitudo che caratterizza il territorio è in parte di origine vulcano-tettonica. Per il contesto vulcanologico, le emissioni di CO₂ in spazi confinati e le indicazioni operative dedicate vedi la pagina [Rischio Vulcanico (Colli Albani)](/rischi-prevenzione/rischio-vulcanico/).
 
-## Segnali e situazioni tipiche
-
+## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. Diffida di chi afferma di poter prevedere un terremoto. L'unico approccio efficace è **essere sempre preparati**.
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Vai" — evacuazione rapida](/rischi-prevenzione/kit-emergenza/#kit-vai) è essenziale per il rischio sismico. Tienilo pronto vicino all'ingresso, con scarpe robuste e torcia accessibili anche al buio. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
-## Cosa fare PRIMA del terremoto
-
+## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA del terremoto {#cosa-fare-prima}
 - Fissa alle pareti mobili alti, librerie e scaffali con tasselli o staffe
 - Allontana gli oggetti pesanti dai letti e dai divani
 - Tieni a portata di mano un [kit di emergenza](/rischi-prevenzione/kit-emergenza/) con torcia, radio a pile, acqua e medicinali
@@ -49,8 +45,7 @@ I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. D
 - Individua le vie di fuga e le [aree di attesa](/cartografia/) più vicine
 - Compila il tuo [Piano Familiare](/piano-familiare/) e condividilo con tutti i componenti della famiglia
 
-## Cosa fare DURANTE la scossa
-
+## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE la scossa {#cosa-fare-durante}
 **Se sei in un luogo chiuso:**
 
 - Cerca riparo sotto un tavolo robusto, una scrivania o vicino a un muro portante
@@ -71,8 +66,7 @@ I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. D
 - Non scendere dall'auto durante la scossa
 - Dopo la scossa, evita di percorrere ponti e sopraelevate che potrebbero essere danneggiati
 
-## Cosa fare DOPO la scossa
-
+## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO la scossa {#cosa-fare-dopo}
 - Assicurati dello stato di salute delle persone intorno a te
 - Esci con prudenza, **indossando le scarpe** (possono esserci vetri e calcinacci)
 - Raggiungi le [aree di attesa](/cartografia/) previste dal Piano di Emergenza Comunale

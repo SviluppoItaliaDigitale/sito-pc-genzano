@@ -15,8 +15,7 @@ Ogni percorso riorganizza i materiali del Gruppo già esistenti (kit, schede sta
 
 > Per la **mappa completa** dei nostri materiali sui 3 Nuclei Concettuali del D.M. 183/2024 e sull'Agenda 2030: vedi la [pagina dedicata ai docenti](/formazione/educazione-civica/). Per l'archivio integrale delle [schede stampabili](/formazione/schede-stampabili/) (per fascia e disciplina): vedi l'indice. Questa pagina **non sostituisce** quegli strumenti: li riorganizza in percorsi di consumo immediato.
 
-## Quanto tempo hai a disposizione?
-
+## <i class="bi bi-clock-fill text-primary me-2" aria-hidden="true"></i>Quanto tempo hai a disposizione? {#quanto-tempo}
 Scegli il riquadro che corrisponde al tempo che puoi davvero dedicare. I percorsi più lunghi non sono "migliori": sono solo più completi. Anche **una sola ora** ben preparata lascia un segno nei ragazzi.
 
 <div class="tempo-grid" role="list" aria-label="Tre percorsi per tempo disponibile">
@@ -148,8 +147,7 @@ Un'unità didattica vera, che attraversa più discipline e può integrare l'inco
 - [Percorso 6 — Sicurezza nei luoghi di lavoro e PCTO](#percorso-6) (4-6 ore, integrabile nel monte ore PCTO)
 - **Combinazione**: Percorso 1 + Percorso 4 + Percorso 5 = mini-curriculum di Educazione Civica su PC, famiglia e cittadinanza digitale (~9-10 ore).
 
-## Riepilogo dei percorsi
-
+## <i class="bi bi-list-ol text-primary me-2" aria-hidden="true"></i>Riepilogo dei percorsi {#riepilogo}
 | Percorso | Destinatari | Durata | Tema | Riferimento normativo |
 |---|---|---|---|---|
 | 1 — [Protezione Civile di base](#percorso-1) | Primaria III-V | 4 ore | 112, rischi, volontariato | L. 92/2019 art. 3 lett. h |
@@ -400,8 +398,7 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 
 ---
 
-## Domande frequenti dei docenti
-
+## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>Domande frequenti dei docenti {#faq-docenti}
 <details class="faq-item">
 <summary><strong>Posso usare un percorso senza fare gli altri?</strong></summary>
 
