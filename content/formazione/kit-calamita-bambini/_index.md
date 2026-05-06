@@ -79,6 +79,13 @@ Queste schede sono **pronte da stampare in formato A4** e possono essere usate d
 | 38 | [Calendario emotivo settimanale](/formazione/kit-calamita-bambini/38-calendario-emotivo-settimana.html) | Per osservare come cambiano le emozioni durante la settimana e parlarne con un adulto se serve. |
 | 39 | [Cose che voglio imparare](/formazione/kit-calamita-bambini/39-cose-che-voglio-imparare.html) | Per guardare avanti attraverso curiosità, competenze e obiettivi semplici. |
 | 40 | [Lettera all’amministrazione del campo](/formazione/kit-calamita-bambini/40-lettera-amministrazione-campo.html) | Per esercitare cittadinanza attiva: segnalare bisogni, proporre miglioramenti o ringraziare. |
+| 48 | [I 4 colori dell'allerta meteo](/formazione/kit-calamita-bambini/48-codici-colore-allerta.html) | Codici colore di allerta CFR Lazio: colorare verde/giallo/arancione/rosso e abbinare il "cosa fare". |
+| 49 | [La telefonata al 112: cosa dico](/formazione/kit-calamita-bambini/49-chiamata-112-copione.html) | Copione "chi sono / dove sono / cosa è successo" da compilare e tenere in tasca. |
+| 50 | [Il mio zainetto di emergenza](/formazione/kit-calamita-bambini/50-zainetto-emergenza.html) | Checklist + spazio per disegnare il go-bag personale (acqua, torcia, fischietto, dati identificativi). |
+| 51 | [Le 3 persone che mi aiutano sempre](/formazione/kit-calamita-bambini/51-tre-adulti-fiducia.html) | Tre cornici con nome, telefono e ruolo degli adulti di fiducia (principio "trusted adults" NCTSN). |
+| 52 | [Terremoto: cosa faccio in 4 mosse](/formazione/kit-calamita-bambini/52-terremoto-4-mosse.html) | Procedura sismica passo-passo (sotto al riparo → controllo → cerco adulto → punto di raccolta). |
+| 53 | [So scrivere chi sono](/formazione/kit-calamita-bambini/53-pregrafismo-identita.html) | Pregrafismo identità: nome, cognome, città, telefono di un adulto. Per bambini che potrebbero perdersi. |
+| 54 | [Al campo, cerchia i pericoli](/formazione/kit-calamita-bambini/54-cerchia-pericoli-campo.html) | Scena con oggetti sicuri e pericolosi al campo: cerchiare in rosso quelli da non toccare. |
 
 ### Schede dedicate inclusione
 
