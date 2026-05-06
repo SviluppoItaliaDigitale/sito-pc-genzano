@@ -1,6 +1,6 @@
 ---
-title: "Scuole: da dove cominciare — il cruscotto per ogni ruolo"
-description: "Punto di accesso unico per Dirigenti, docenti, sostegno, RSPP e famiglie. Percorsi guidati: scegli il tuo ruolo e arrivi in due click ai materiali giusti."
+title: "Scuole: da dove cominciare"
+description: "Punto di accesso per dirigenti, docenti, sostegno, RSPP e famiglie: scegli il tuo ruolo e trova subito i materiali didattici più adatti."
 date: 2026-05-01
 draft: false
 type: "page"
@@ -9,145 +9,117 @@ toc: true
 dataUltimaRevisione: "2026-05-06"
 ---
 
-I materiali del Gruppo per le scuole sono **molti**: kit per fascia, schede stampabili, giochi, attività accessibili, storie, fac-simile, percorsi pronti, rubriche valutative, modulo psicologia, modulo sicurezza nei luoghi di lavoro. Per non perdersi, **scegli sotto il tuo ruolo**: arriverai in due click ai materiali utili a te.
+Questa pagina aiuta scuole e famiglie a trovare rapidamente i materiali giusti: kit per fascia d'età, schede stampabili, giochi, attività inclusive, storie, percorsi pronti e strumenti per l'educazione civica.
 
-> 🚀 Hai pochi minuti? Vai direttamente ai [Percorsi didattici pronti](/formazione/percorsi-didattici/) — pacchetti già strutturati con destinatari, durata e materiali linkati.
+Scegli il tuo ruolo e parti dal percorso consigliato.
 
-> ✅ Devi preparare una lezione senza rischiare di spaventare la classe? Usa la nuova [Checklist docente per una lezione di Protezione Civile](/formazione/scuole-checklist-docente/): prima, durante, dopo la lezione, inclusione, famiglie, valutazione e gestione degli incontri con i volontari.
+<div class="alert alert-info" role="note">
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Hai poco tempo? Apri i <a href="/formazione/percorsi-didattici/">percorsi didattici pronti</a>: trovi attività già organizzate per durata, obiettivi e materiali.</p>
+</div>
 
-## 👶 Sono docente della Scuola dell'Infanzia (3-6 anni)
+## Docente della scuola dell'infanzia
 
-Cosa ti serve davvero, in ordine:
+Per bambini e bambine da 3 a 6 anni usa attività brevi, giochi, storie e immagini semplici. Evita video reali di disastri o racconti troppo forti.
 
-1. 📘 **[Kit Scuola Infanzia](/formazione/kit-scuola-infanzia/)** — il punto di partenza completo (programmazione, attività, riferimenti normativi)
-2. ✅ **[Checklist docente](/formazione/scuole-checklist-docente/)** — per scegliere parole, tempi e attività senza creare paura
-3. 📜 Schede pronte per l'aula:
-   - [La tartaruga saggia](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) (terremoto, posizione di sicurezza)
-   - [Cartelli amici](/formazione/schede-stampabili/cartelli-sicurezza-infanzia/) (lettura pittogrammi)
-   - [Colorare il 112](/formazione/schede-stampabili/colorare-112-infanzia/) — semplici colorazioni
-4. 📋 **[Rubrica valutativa Infanzia](/formazione/schede-stampabili/rubrica-valutativa-infanzia/)** — giudizio descrittivo per livelli e indicatori
-5. 📖 **[Easy-to-Read per le scuole](/formazione/easy-to-read-scuola/)** — schede semplificate per chi inizia a leggere o ha BES
-6. ⚠️ **[Avvertenza pedagogica anti-paura](/formazione/kit-scuola-infanzia/#guida-per-il-docente)** — niente cronaca cruda né video reali di disastri
+Materiali consigliati:
 
-**Tempo medio per preparare un'attività di 1 ora**: circa 30 minuti.
+- [Kit scuola infanzia](/formazione/kit-scuola-infanzia/) — percorso completo per l'età 3-6 anni.
+- [Checklist docente](/formazione/scuole-checklist-docente/) — parole, tempi e attività senza creare paura.
+- [La tartaruga saggia](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) — comportamento corretto durante una scossa.
+- [Cartelli amici](/formazione/schede-stampabili/cartelli-sicurezza-infanzia/) — primi pittogrammi di sicurezza.
+- [Colorare il 112](/formazione/schede-stampabili/colorare-112-infanzia/) — attività semplice sul numero di emergenza.
+- [Rubrica valutativa infanzia](/formazione/schede-stampabili/rubrica-valutativa-infanzia/) — osservazione per livelli.
 
----
+## Docente della scuola primaria
 
-## 📚 Sono docente della Scuola Primaria (6-11 anni)
+Per la primaria collega ogni concetto a un'azione concreta: chiamare il 112, riconoscere un rischio, preparare il piano familiare, seguire una fonte ufficiale.
 
-Cosa ti serve davvero, in ordine:
+Materiali consigliati:
 
-1. 📘 **[Kit Scuola Primaria](/formazione/kit-scuola-primaria/)** — programmazione completa, percorso modulare con verifiche
-2. ✅ **[Checklist docente](/formazione/scuole-checklist-docente/)** — per impostare una lezione chiara, inclusiva e non allarmistica
-3. 🚀 **[Percorsi didattici pronti — Percorso 1 PC base](/formazione/percorsi-didattici/#percorso-1)** — 4 ore strutturate per le classi III-V
-4. 📜 Schede chiave (qui le essenziali):
-   - [Chiamo il 112 — Primaria](/formazione/schede-stampabili/chiamo-112-primaria/)
-   - [Piano di Emergenza Familiare — Primaria](/formazione/schede-stampabili/piano-familiare-primaria/)
-   - [Mappa cieca del quartiere](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/)
-   - [Geografia sismica d'Italia](/formazione/schede-stampabili/geografia-sismica-italia-primaria/)
-5. 📚 **[Storie e racconti — Primaria](/formazione/storie-e-racconti/)** — racconti per le classi 6-11 anni con note "Per il/la docente"
-6. 📋 **[Rubrica valutativa Primaria](/formazione/schede-stampabili/rubrica-valutativa-primaria/)** — giudizio descrittivo per livelli
-7. 🎮 **[Giochi della Sicurezza — Primaria](/giochi/primaria/)** — mini-app per attività complementari
+- [Kit scuola primaria](/formazione/kit-scuola-primaria/) — attività e programmazione.
+- [Percorso protezione civile di base](/formazione/percorsi-didattici/#percorso-1) — unità pronta per le classi III-V.
+- [Chiamo il 112](/formazione/schede-stampabili/chiamo-112-primaria/) — simulazione guidata.
+- [Piano di emergenza familiare](/formazione/schede-stampabili/piano-familiare-primaria/) — attività da completare anche a casa.
+- [Mappa cieca del quartiere](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/) — orientamento e punti sicuri.
+- [Giochi della sicurezza — Primaria](/giochi/primaria/) — attività interattive.
 
-**Tempo medio per preparare un'unità di 4 ore**: circa 1 ora con i Percorsi pronti.
+## Docente della scuola secondaria di primo grado
 
----
+Con ragazze e ragazzi da 11 a 14 anni puoi introdurre bollettini, fonti ufficiali, fake news, rischio meteo, terremoto, evacuazione e cittadinanza attiva.
 
-## 🎓 Sono docente della Scuola Secondaria di Primo Grado (11-14 anni)
+Materiali consigliati:
 
-Cosa ti serve davvero, in ordine:
+- [Kit scuola secondaria di primo grado](/formazione/kit-scuola-secondaria-primo-grado/) — UdA, casi studio e attività.
+- [Percorsi didattici pronti](/formazione/percorsi-didattici/) — rischio meteo, terremoto, piano familiare e fake news.
+- [Decodifica bollettino allerta](/formazione/schede-stampabili/decodifica-bollettino-secondaria/) — lettura guidata di un avviso.
+- [Fake news in emergenza](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — uso corretto delle fonti.
+- [IT-alert e comunicazioni ufficiali](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — sistema nazionale di allarme pubblico.
+- [Mappa rischi del quartiere](/formazione/schede-stampabili/mappa-rischi-secondaria/) — osservazione del territorio.
 
-1. 📘 **[Kit Secondaria I grado](/formazione/kit-scuola-secondaria-primo-grado/)** — UdA, casi studio, service learning
-2. ✅ **[Checklist docente](/formazione/scuole-checklist-docente/)** — per collegare rischio, comportamento corretto, fonti ufficiali e famiglia
-3. 🚀 **[Percorsi didattici pronti](/formazione/percorsi-didattici/)** — quasi tutti i percorsi sono adatti, soprattutto rischio meteo, terremoto e fake news
-4. 📜 Schede tematiche più richieste:
-   - [Decodifica bollettino allerta](/formazione/schede-stampabili/decodifica-bollettino-secondaria/)
-   - [Fake news in emergenza](/formazione/schede-stampabili/fake-news-emergenza-secondaria/)
-   - [IT-Alert e comunicazioni ufficiali](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/)
-   - [Mappa rischi del quartiere](/formazione/schede-stampabili/mappa-rischi-secondaria/)
-   - [Costituzione e Protezione Civile](/formazione/schede-stampabili/costituzione-pc-secondaria/)
-5. 📚 **[Case study delle maxi-emergenze italiane](/formazione/schede-stampabili/)** — Vajont, Friuli, Irpinia, Amatrice ecc.
-6. 📋 **[Rubrica valutativa Secondaria I](/formazione/schede-stampabili/rubrica-valutativa-secondaria/)** — valutazione in decimi per livelli
+## Docente della scuola secondaria di secondo grado
 
-**Tempo medio per preparare un'unità di 3 ore**: circa 45 minuti con i Percorsi pronti.
+Per la secondaria di secondo grado puoi lavorare su comunicazione di crisi, sicurezza nei luoghi di lavoro, PCTO, normativa, responsabilità e cittadinanza digitale.
 
----
+Materiali consigliati:
 
-## 🎓 Sono docente della Scuola Secondaria di Secondo Grado (14-19 anni)
+- [Kit scuola secondaria di secondo grado](/formazione/kit-scuola-secondaria-secondo-grado/) — percorso modulare e attività avanzate.
+- [Percorso sicurezza e PCTO](/formazione/percorsi-didattici/#percorso-6) — sicurezza nei luoghi di lavoro e protezione civile.
+- [Codice della protezione civile](/formazione/schede-stampabili/codice-pc-secondaria2/) — lettura guidata del quadro normativo.
+- [Comunicazione di crisi](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/) — messaggi chiari e fonti ufficiali.
+- [Educazione civica](/formazione/educazione-civica/) — collegamenti con i nuclei del D.M. 183/2024.
+- [Strumenti per le scuole](/formazione/scuole-strumenti/) — fac-simile e materiali organizzativi.
 
-Cosa ti serve davvero, in ordine:
+## Docente di sostegno o referente inclusione
 
-1. 📘 **[Kit Secondaria II grado](/formazione/kit-scuola-secondaria-secondo-grado/)** — percorso modulare, PCTO, tracce Esame di Stato, compiti di realtà
-2. ✅ **[Checklist docente](/formazione/scuole-checklist-docente/)** — per definire obiettivi, attività, valutazione e collegamento alla cittadinanza attiva
-3. ⚖️ **[Modulo 7 — Sicurezza nei luoghi di lavoro (L. 21/2025)](/formazione/kit-scuola-secondaria-secondo-grado/#modulo-sicurezza-lavoro)** — 4-6 ore, D.Lgs. 81/2008, DPI, ISO 7010
-4. 🚀 **[Percorsi didattici pronti — Percorso 6 «Sicurezza e PCTO»](/formazione/percorsi-didattici/#percorso-6)**
-5. 📁 **[Pacchetto B — Strumenti formali PCTO](/formazione/scuole-strumenti/#pacchetto-b)** — convenzione, progetto formativo, registro+valutazione+certificazione
-6. 📜 Schede chiave Sec II:
-   - [Codice della Protezione Civile (D.Lgs. 1/2018)](/formazione/schede-stampabili/codice-pc-secondaria2/)
-   - [Comunicazione di crisi](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/)
-   - case study Sec II con analisi argomentativa
-7. 📋 **[Rubrica valutativa Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/)** — valutazione in decimi per livelli e indicatori
-8. 📖 **[Pagina docenti — sezione PCTO](/formazione/educazione-civica/#disponibilita-pcto)** — monte ore (90 Licei / 150 Tecnici / 210 Professionali)
+I materiali inclusivi sono utili per tutta la classe, non solo per chi ha una certificazione. Usa frasi brevi, pittogrammi, mappe, tempi più distesi e attività a piccoli passi.
 
-**Tempo medio per impostare un PCTO di 30 ore**: circa 2 ore (convenzione + progetto formativo) + tempo della scuola per protocollazione.
+Materiali consigliati:
 
----
+- [Checklist docente](/formazione/scuole-checklist-docente/) — sezione inclusione.
+- [Easy-to-Read per le scuole](/formazione/easy-to-read-scuola/) — schede semplificate.
+- [Abili a proteggere](/abili-a-proteggere/) — attività accessibili.
+- [Pittogrammi](/pittogrammi/) — simboli e supporti visivi.
+- [Facile da leggere](/facile-da-leggere/) — versione semplificata per cittadini.
+- [Psicologia dell'emergenza](/formazione/psicologia-emergenza/) — come parlare di rischio senza aumentare ansia.
 
-## ♿ Sono docente di sostegno o referente BES/DSA/inclusione
+## Dirigente scolastico, DSGA, RSPP o ASPP
 
-Cosa ti serve davvero, in ordine:
+Per organizzare incontri, prove o percorsi PCTO serve coordinare obiettivi, tempi, responsabilità e procedure interne della scuola.
 
-1. ✅ **[Checklist docente](/formazione/scuole-checklist-docente/)** — sezione inclusione, BES, italiano L2, tempi, consegne e modalità di risposta
-2. 📖 **[Easy-to-Read per le scuole](/formazione/easy-to-read-scuola/)** — schede in linguaggio facile (112, terremoto, evacuazione, zaino) con pittogrammi ARASAAC
-3. ♿ **[Abili a Proteggere](/abili-a-proteggere/)** — attività interattive accessibili (pulsanti grandi, niente timer, alto contrasto)
-4. 🎨 **[Pittogrammi del sito](/pittogrammi/)** — simboli ISO 7010 e ARASAAC liberamente utilizzabili come supporto visivo a qualunque attività
-5. 📖 **[Facile da Leggere — versione cittadino](/facile-da-leggere/)** — utilizzabile anche dai docenti come riferimento di stile
-6. 🧠 **[Psicologia dell'emergenza — sezione bambini per fascia d'età](/formazione/psicologia-emergenza/#bambini-e-adolescenti---segnali-a-cui-prestare-attenzione)** — segnali di attenzione per 0-5, 6-12, adolescenti
-7. ⚠️ **Avvertenza UDL**: i materiali Easy-to-Read funzionano meglio per **tutta la classe**, non solo per gli alunni con BES (Universal Design for Learning).
+Materiali consigliati:
 
-**Tempo medio per integrare le schede Easy-to-Read in un'unità esistente**: circa 20 minuti.
+- [Dirigenti e RSPP](/formazione/dirigenti-e-rspp/) — ruoli, limiti e responsabilità.
+- [Checklist docente](/formazione/scuole-checklist-docente/) — preparazione dell'incontro.
+- [Strumenti per le scuole](/formazione/scuole-strumenti/) — fac-simile e materiali formali.
+- [Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/) — riferimenti principali.
+- [Piano di emergenza comunale](/piano-emergenza/) — collegamento con la pianificazione territoriale.
 
----
+Per proporre un'attività scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it), possibilmente almeno 15 giorni prima della data richiesta.
 
-## 🏛️ Sono Dirigente Scolastico, DSGA, RSPP o ASPP
+## Genitore
 
-Cosa ti serve davvero, in ordine:
+La formazione funziona meglio quando continua anche a casa. Bastano poche azioni concrete.
 
-1. 🏛️ **[Pagina dedicata Dirigenti e RSPP](/formazione/dirigenti-e-rspp/)** — ruoli, limiti, responsabilità del Gruppo vs scuola, casi specifici (evacuazione, alunni con disabilità, PCTO)
-2. ✅ **[Checklist docente](/formazione/scuole-checklist-docente/)** — utile per concordare obiettivi, limiti e modalità degli incontri in classe
-3. 📁 **[Strumenti per le scuole — Pacchetto A + B](/formazione/scuole-strumenti/)** — fac-simile editabili (richiesta, liberatoria GDPR, circolare, attestato + convenzione PCTO, progetto formativo, registro)
-4. ⚖️ **[Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/)** — riepilogo delle norme di riferimento con cosa applicano e a chi
-5. 🛡️ **[Piano di Emergenza Comunale](/piano-emergenza/)** — coordinamento con il piano scolastico durante esercitazioni
-6. 📞 **Contatto operativo**: <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a> — almeno 15 giorni prima della data richiesta
+Materiali consigliati:
 
-**Tempo medio per attivare una collaborazione**: 15-30 giorni dalla prima e-mail (incluso protocollo, sopralluogo informale, eventuale convenzione).
+- [Piano di emergenza familiare](/piano-familiare/) — modello da compilare insieme.
+- [Cosa fare adesso](/cosa-fare-adesso/) — guida per i primi minuti.
+- [Cosa fare in caso di emergenza](/formazione/cosa-fare-in-caso-di/) — comportamenti per scenario.
+- [Numeri utili](/numeri-utili/) — 112 e recapiti essenziali.
+- [FAQ](/faq/) — risposte rapide.
+- [Facile da leggere](/facile-da-leggere/) — istruzioni semplici da leggere con bambini o persone fragili.
 
----
+## Non sai da dove partire?
 
-## 👨‍👩‍👧 Sono un genitore curioso
+- Cerchi una lezione pronta: vai ai [Percorsi didattici](/formazione/percorsi-didattici/).
+- Cerchi una scheda da stampare: vai alle [Schede stampabili](/formazione/schede-stampabili/).
+- Cerchi giochi: vai ai [Giochi della sicurezza](/giochi/).
+- Cerchi indicazioni pratiche per un rischio: vai a [Rischi e prevenzione](/rischi-prevenzione/).
+- Cerchi una norma: vai al [Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/) o alla [Normativa](/normativa/).
 
-Cosa ti serve davvero, in ordine:
+## Vedi anche
 
-1. 🏠 **[Piano di Emergenza Familiare](/piano-familiare/)** — modello stampabile da compilare con i figli
-2. 📖 **[Cosa fare adesso](/cosa-fare-adesso/)** — guida operativa per i primi minuti di ogni emergenza
-3. 🛡️ **[Cosa fare in caso di emergenza](/formazione/cosa-fare-in-caso-di/)** — guida pratica per terremoto, alluvione, incendio, caldo, blackout ed evacuazione
-4. 📞 **[Numeri Utili](/numeri-utili/)** — il 112 e i pochi altri da memorizzare
-5. ❓ **[Domande frequenti](/faq/)** — risposte sui rischi del territorio e sui comportamenti corretti
-6. 🧠 **[Psicologia dell'emergenza](/formazione/psicologia-emergenza/)** — come parlare di rischi ai bambini senza spaventarli
-7. 📖 **[Facile da Leggere](/facile-da-leggere/)** — versione semplificata del sito, ottima da leggere insieme ai bambini
-
-**Suggerimento**: dedicare 30 minuti a sedersi con i figli e compilare insieme il Piano di Emergenza Familiare è il singolo gesto di prevenzione più potente che si possa fare in famiglia.
-
----
-
-## 🤔 Non rientro in nessuna categoria — cosa faccio?
-
-- Se cerchi **un argomento preciso** (terremoto, allerta meteo, vulcanico, ecc.): vai a [Rischi e Prevenzione](/rischi-prevenzione/) — pagine pubbliche per il cittadino con la struttura uniforme PRIMA · DURANTE · DOPO · cosa NON fare · chi chiamare.
-- Se devi **preparare una lezione o un incontro**: usa la [Checklist docente](/formazione/scuole-checklist-docente/).
-- Se vuoi **indicazioni pratiche di autoprotezione**: vai a [Cosa fare in caso di emergenza](/formazione/cosa-fare-in-caso-di/).
-- Se cerchi **una norma specifica**: vai al [Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/) o alla sezione [Normativa](/normativa/).
-- Se hai una **domanda specifica per il Gruppo**: scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.
-
----
-
-**Ultimo aggiornamento**: 5 maggio 2026.
+- [Formazione e scuole](/formazione/) — indice generale dei materiali
+- [Educazione civica](/formazione/educazione-civica/) — collegamenti con le linee guida nazionali
+- [Checklist docente](/formazione/scuole-checklist-docente/) — preparare una lezione senza allarmismo
+- [In famiglia dopo la lezione](/formazione/in-famiglia-dopo-la-lezione/) — attività da fare a casa
