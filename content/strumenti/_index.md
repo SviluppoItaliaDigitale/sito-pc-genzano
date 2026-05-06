@@ -1,6 +1,6 @@
 ---
 title: "Strumenti di consultazione in tempo reale"
-description: "Raccolta di strumenti ufficiali e di consultazione per monitorare meteo, terremoti, rischio idrogeologico, incendi, qualità dell'aria, viabilità ed emergenze."
+description: "Strumenti utili per consultare meteo, terremoti, rischio idrogeologico, incendi, qualità dell'aria, viabilità ed emergenze da fonti ufficiali o qualificate."
 layout: "single"
 aliases:
   - /monitoraggio.html
@@ -8,20 +8,30 @@ aliases:
 sitemap:
   priority: 0.8
   changefreq: monthly
+toc: true
+tts: true
+dataUltimaRevisione: "2026-05-06"
 ---
 
-Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permettono di consultare in tempo reale le informazioni utili alla sicurezza del territorio: previsioni meteo, terremoti, incendi, qualità dell'aria, viabilità. Alcuni sono **incorporati direttamente** nel nostro sito (li puoi aprire con un click), altri rimandano al **sito ufficiale** del fornitore perché non consentono l'incorporamento.
+Questa pagina raccoglie strumenti online utili per consultare informazioni sul territorio: meteo, terremoti, incendi, qualità dell'aria, viabilità ed emergenze. Alcuni strumenti si aprono nel sito. Altri rimandano al sito ufficiale del fornitore.
 
 <div class="alert alert-warning" role="note">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Importante:</strong> questi strumenti sono un <strong>ausilio alla consultazione</strong>. In caso di allerta o emergenza, la fonte ufficiale per il territorio di Genzano di Roma resta sempre il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">bollettino del Centro Funzionale della Regione Lazio</a> e, per emergenze in corso, il numero unico <strong>112</strong>.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Importante:</strong> questi strumenti aiutano a informarsi, ma non sostituiscono i bollettini ufficiali. Per Genzano di Roma la fonte di riferimento per le allerte meteo è il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale della Regione Lazio</a>. In caso di emergenza chiama il <strong>112</strong>.</p>
 </div>
+
+## Come usare questa pagina
+
+- Usa la barra di ricerca per trovare uno strumento per nome o tema.
+- Usa i filtri per visualizzare solo una categoria.
+- Controlla sempre la fonte indicata nella scheda.
+- Durante un'emergenza segui le indicazioni delle autorità.
 
 ## Legenda
 
-- <span class="badge badge-fonte-istituzionale"><i class="bi bi-patch-check-fill me-1" aria-hidden="true"></i>Fonte istituzionale</span> — dato fornito da enti pubblici (DPC, INGV, ISPRA, ARPA, Commissione UE, ecc.)
-- <span class="badge badge-fonte-consultazione"><i class="bi bi-info-circle-fill me-1" aria-hidden="true"></i>Strumento di consultazione</span> — fornitore privato o rete volontaria, scientificamente affidabile ma non istituzionale
-- **Apri widget sul sito** — lo strumento si apre direttamente sul nostro sito
-- **Apri sito ufficiale** — lo strumento si apre sul sito del fornitore in una nuova scheda
+- <span class="badge badge-fonte-istituzionale"><i class="bi bi-patch-check-fill me-1" aria-hidden="true"></i>Fonte istituzionale</span> — dato fornito da enti pubblici o organismi ufficiali.
+- <span class="badge badge-fonte-consultazione"><i class="bi bi-info-circle-fill me-1" aria-hidden="true"></i>Strumento di consultazione</span> — servizio privato o rete volontaria utile alla consultazione, ma non sostitutivo delle fonti ufficiali.
+- **Apri widget sul sito** — lo strumento si apre dentro questo sito.
+- **Apri sito ufficiale** — lo strumento si apre in una nuova scheda.
 
 <style>
 .strumenti-filtri{position:sticky;top:0;z-index:50;background:#fff;border-radius:12px;padding:1rem 1.2rem;margin:1.5rem 0 2rem 0;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1px solid #dee2e6}
@@ -59,7 +69,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 </div>
 
 <div id="strumenti-no-results" class="strumenti-no-results" role="status">
-  <p class="mb-0"><strong>Nessuno strumento trovato.</strong> Prova a cambiare il filtro o il termine cercato.</p>
+  <p class="mb-0"><strong>Nessuno strumento trovato.</strong> Prova a cambiare filtro o parola cercata.</p>
 </div>
 
 <h2 data-categoria="meteo">Meteo, radar e fulmini</h2>
@@ -71,7 +81,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="Windy.com"
     icona="bi-cloud-rain-heavy"
     tipoFonte="consultazione"
-    descrizione="Radar, precipitazioni, vento, temperatura e pressione su Genzano di Roma. Modelli previsionali ECMWF, GFS, ICON. Utile per vedere a colpo d'occhio cosa si avvicina."
+    descrizione="Radar, precipitazioni, vento, temperatura e pressione su Genzano di Roma. Utile per vedere a colpo d'occhio cosa si avvicina."
     tipoAccesso="widget"
     url="/allerte-meteo/#meteo-windy" >}}
 
@@ -80,7 +90,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="Dipartimento Protezione Civile"
     icona="bi-broadcast-pin"
     tipoFonte="istituzionale"
-    descrizione="Mosaico radar nazionale aggiornato ogni 10 minuti. Mostra l'intensità reale della pioggia misurata dai radar meteo del Dipartimento di Protezione Civile."
+    descrizione="Mosaico radar nazionale delle precipitazioni. Mostra la pioggia rilevata dai radar meteorologici del Dipartimento della Protezione Civile."
     tipoAccesso="widget"
     url="/allerte-meteo/#radar-dpc" >}}
 
@@ -89,7 +99,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="Aeronautica Militare — Servizio Meteorologico"
     icona="bi-cloud-sun-fill"
     tipoFonte="istituzionale"
-    descrizione="Previsione meteorologica ufficiale italiana per Genzano di Roma. Fonte istituzionale del Servizio Meteorologico Nazionale."
+    descrizione="Previsione meteorologica ufficiale per Genzano di Roma, pubblicata dal Servizio Meteorologico dell'Aeronautica Militare."
     tipoAccesso="widget"
     url="/allerte-meteo/#meteo-aeronautica" >}}
 
@@ -98,7 +108,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="Blitzortung / Lightning Maps"
     icona="bi-lightning-charge-fill"
     tipoFonte="consultazione"
-    descrizione="Fulmini rilevati in Europa dalla rete volontaria Blitzortung. Utile durante temporali per capire dove si sta muovendo la cella."
+    descrizione="Fulmini rilevati in Europa dalla rete Blitzortung. Utile durante i temporali per capire dove si sta muovendo la cella temporalesca."
     tipoAccesso="widget"
     url="/rischi-prevenzione/temporali-intensi/#fulmini-blitzortung" >}}
 
@@ -107,7 +117,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="meteoblue"
     icona="bi-bar-chart-line-fill"
     tipoFonte="consultazione"
-    descrizione="Confronto grafico tra più modelli previsionali (ECMWF, GFS, ICON, ecc.) per Genzano di Roma. Utile per valutare l'<strong>affidabilità</strong> di una previsione: se i modelli concordano la previsione è robusta, se divergono c'è incertezza. Prodotto commerciale, non sostituisce le fonti istituzionali."
+    descrizione="Confronto tra più modelli previsionali per Genzano di Roma. Aiuta a capire se una previsione è stabile o incerta. Non sostituisce le fonti istituzionali."
     tipoAccesso="sito"
     url="https://www.meteoblue.com/it/tempo/previsioni/multimodel/genzano-di-roma_italia_3176203" >}}
 
@@ -122,7 +132,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="INGV — Istituto Nazionale di Geofisica e Vulcanologia"
     icona="bi-activity"
     tipoFonte="istituzionale"
-    descrizione="Mappa e lista degli eventi sismici rilevati sul territorio italiano. Usa lo zoom per focalizzare l'area dei Castelli Romani e dei Colli Albani. Fonte scientifica ufficiale per la sismologia in Italia."
+    descrizione="Mappa e lista degli eventi sismici registrati in Italia. Usa lo zoom per consultare l'area dei Castelli Romani e dei Colli Albani."
     tipoAccesso="widget"
     url="/rischi-prevenzione/rischio-sismico/#sismico-ingv" >}}
 
@@ -137,7 +147,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="ISPRA — Istituto Superiore per la Protezione e Ricerca Ambientale"
     icona="bi-water"
     tipoFonte="istituzionale"
-    descrizione="Piattaforma nazionale con mappe di pericolosità frane (inventario IFFI) e alluvioni (PAI). Cerca Genzano di Roma per vedere le aree censite sul nostro territorio."
+    descrizione="Piattaforma nazionale con mappe di pericolosità per frane e alluvioni. Cerca Genzano di Roma per consultare le aree censite."
     tipoAccesso="sito"
     url="https://idrogeo.isprambiente.it/app/" >}}
 
@@ -152,7 +162,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="Copernicus / JRC — Commissione Europea"
     icona="bi-fire"
     tipoFonte="istituzionale"
-    descrizione="Mappa europea degli incendi boschivi attivi, focolai rilevati da satellite e indice di pericolosità AIB. Particolarmente utile nel periodo giugno-settembre."
+    descrizione="Mappa europea degli incendi boschivi attivi, dei focolai rilevati da satellite e dell'indice di pericolosità AIB."
     tipoAccesso="sito"
     url="https://effis.jrc.ec.europa.eu/apps/effis_current_situation/" >}}
 
@@ -167,7 +177,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="ARPA Lazio"
     icona="bi-wind"
     tipoFonte="istituzionale"
-    descrizione="Dati delle centraline di monitoraggio di ARPA Lazio: PM10, PM2.5, ozono, biossido di azoto. Utile durante ondate di calore, incendi o episodi di inversione termica."
+    descrizione="Dati delle centraline di ARPA Lazio su PM10, PM2.5, ozono e biossido di azoto. Utile durante caldo intenso, incendi o inversione termica."
     tipoAccesso="sito"
     url="https://www.arpalazio.it/ambiente/aria" >}}
 
@@ -182,7 +192,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="ANAS — Rete stradale nazionale"
     icona="bi-signpost-split"
     tipoFonte="istituzionale"
-    descrizione="Stato della rete stradale nazionale: chiusure, incidenti, lavori in corso, traffico intenso. Utile per pianificare spostamenti durante eventi meteo avversi o emergenze."
+    descrizione="Stato della rete stradale nazionale: chiusure, incidenti, lavori e traffico. Utile per pianificare gli spostamenti durante maltempo o emergenze."
     tipoAccesso="sito"
     url="https://www.stradeanas.it/it/vai-traffico-in-tempo-reale" >}}
 
@@ -197,7 +207,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="Regione Lazio"
     icona="bi-geo-alt-fill"
     tipoFonte="istituzionale"
-    descrizione="Piattaforma cartografica regionale per il monitoraggio di emergenze in corso nel Lazio, incendi, allerte meteo, fenomeni estremi. Vista operativa della Regione."
+    descrizione="Piattaforma cartografica regionale per consultare informazioni operative su emergenze, incendi, allerte e fenomeni estremi nel Lazio."
     tipoAccesso="sito"
     url="https://temporeale.regione.lazio.it/aegis/" >}}
 
@@ -206,7 +216,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="Commissione Europea — Servizio Gestione Emergenze"
     icona="bi-shield-exclamation"
     tipoFonte="istituzionale"
-    descrizione="Servizio europeo di mappatura rapida post-evento (alluvioni, incendi estesi, terremoti maggiori). Le attivazioni forniscono cartografia immediata alle autorità di protezione civile."
+    descrizione="Servizio europeo di mappatura rapida dopo grandi emergenze, come alluvioni, incendi estesi e terremoti rilevanti."
     tipoAccesso="sito"
     url="https://emergency.copernicus.eu/" >}}
 
@@ -221,7 +231,7 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
     fonte="Windy.com (webcam pubbliche)"
     icona="bi-camera-video-fill"
     tipoFonte="consultazione"
-    descrizione="Raccolta di webcam pubbliche nei Castelli Romani e nell'area di Roma Sud. Utile per vedere in tempo reale le condizioni del cielo e del territorio."
+    descrizione="Webcam pubbliche nei Castelli Romani e nell'area di Roma Sud. Sono utili per osservare le condizioni visive del tempo e del territorio."
     tipoAccesso="sito"
     url="https://www.windy.com/-Webcams/webcams/cams/41.691,12.692" >}}
 
@@ -233,10 +243,10 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 {{< tool-card
     nome="Stop Disasters! — Simulatore ONU"
-    fonte="UNDRR (UN Office for Disaster Risk Reduction)"
+    fonte="UNDRR — United Nations Office for Disaster Risk Reduction"
     icona="bi-shield-fill-exclamation"
     tipoFonte="istituzionale"
-    descrizione="Gioco-simulazione gratuito dell'Agenzia ONU per la Riduzione del Rischio di Disastri. Cinque scenari (terremoto, alluvione, tsunami, uragano, incendio boschivo) per imparare a costruire villaggi e città più sicuri. Disponibile in italiano, adatto a 9-17 anni e a contesti educativi."
+    descrizione="Gioco-simulazione gratuito sulla riduzione del rischio di disastri. Propone scenari su terremoti, alluvioni, tsunami, uragani e incendi boschivi."
     tipoAccesso="sito"
     url="https://www.stopdisastersgame.org/game/" >}}
 
@@ -244,14 +254,14 @@ Questa pagina raccoglie in un unico posto gli **strumenti online** che ti permet
 
 ## Fonti ufficiali primarie
 
-Per completezza, ricordiamo le **fonti di riferimento istituzionali** per Genzano di Roma, che restano sempre prevalenti rispetto a qualunque strumento di consultazione:
+Per Genzano di Roma, le fonti istituzionali da consultare sono:
 
-- [Centro Funzionale Regionale Lazio — Bollettini di allerta](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — fonte ufficiale allerte meteo per il Lazio
-- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) — coordinamento nazionale
-- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/) — autorità territoriale
-- [IT-alert](https://www.it-alert.it/) — sistema nazionale di allarme pubblico
+- [Centro Funzionale Regionale Lazio — Bollettini di allerta](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/)
+- [IT-alert](https://www.it-alert.it/)
 
-Per emergenze in corso comporre sempre il **[112](tel:112)** — Numero Unico Europeo.
+Per emergenze in corso chiama sempre il **[112](tel:112)**.
 
 <script>
 (function(){
@@ -262,16 +272,12 @@ Per emergenze in corso comporre sempre il **[112](tel:112)** — Numero Unico Eu
   var rows = document.querySelectorAll('.row.g-4[data-categoria]');
   var h2s = document.querySelectorAll('h2[data-categoria]');
   var stato = {cat:'', q:''};
-
-  // Conta totale strumenti
   var totale = 0;
   rows.forEach(function(r){ totale += r.querySelectorAll('.tool-card').length; });
-
   function filtra(){
     var q = stato.q.trim().toLowerCase();
     var cat = stato.cat;
     var visibili = 0;
-
     rows.forEach(function(row){
       var rowCat = row.getAttribute('data-categoria');
       var rowVisibili = 0;
@@ -287,11 +293,8 @@ Per emergenze in corso comporre sempre il **[112](tel:112)** — Numero Unico Eu
       row.classList.toggle('strumenti-hidden', rowVisibili === 0);
       visibili += rowVisibili;
     });
-
-    // Nascondi h2 se la sua row è nascosta
     h2s.forEach(function(h){
       var hCat = h.getAttribute('data-categoria');
-      // Trova la prossima row.row con stessa categoria
       var sib = h.nextElementSibling;
       while (sib && !(sib.classList && sib.classList.contains('row') && sib.getAttribute('data-categoria') === hCat)) {
         sib = sib.nextElementSibling;
@@ -299,11 +302,9 @@ Per emergenze in corso comporre sempre il **[112](tel:112)** — Numero Unico Eu
       var hide = (cat && hCat !== cat) || (sib && sib.classList.contains('strumenti-hidden'));
       h.classList.toggle('strumenti-hidden', hide);
     });
-
     counter.innerHTML = '<strong>' + visibili + '</strong> di ' + totale + ' strumenti';
     noRes.style.display = visibili === 0 ? 'block' : 'none';
   }
-
   pills.forEach(function(p){
     p.addEventListener('click', function(){
       pills.forEach(function(x){x.classList.remove('attivo'); x.setAttribute('aria-pressed','false');});
@@ -313,14 +314,11 @@ Per emergenze in corso comporre sempre il **[112](tel:112)** — Numero Unico Eu
       filtra();
     });
   });
-
   var t;
   if (input) input.addEventListener('input', function(){
     clearTimeout(t);
     t = setTimeout(function(){ stato.q = input.value; filtra(); }, 150);
   });
-
-  // Hash deep-link: #cat=meteo
   var m = (location.hash||'').match(/cat=([a-z]+)/);
   if (m) {
     var pt = document.querySelector('.strumenti-pill[data-categoria="'+m[1]+'"]');
@@ -337,4 +335,3 @@ Per emergenze in corso comporre sempre il **[112](tel:112)** — Numero Unico Eu
 - [Cartografia](/cartografia/) — mappe del territorio
 - [Siti utili](/siti-utili/) — fonti istituzionali esterne
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
-
