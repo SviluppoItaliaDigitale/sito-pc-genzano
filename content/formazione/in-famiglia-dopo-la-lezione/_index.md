@@ -1,6 +1,6 @@
 ---
-title: "In famiglia dopo la lezione di Protezione Civile"
-description: "Tuo figlio o tua figlia ha fatto Protezione Civile a scuola. Cosa fare adesso a casa per trasformare la lezione in preparazione vera della famiglia."
+title: "In famiglia dopo la lezione di protezione civile"
+description: "Cinque azioni semplici da fare a casa dopo una lezione di protezione civile: numeri utili, piano familiare, kit, prova domestica e dialogo con i bambini."
 date: 2026-05-05
 draft: false
 type: "page"
@@ -10,120 +10,133 @@ tts: true
 dataUltimaRevisione: "2026-05-06"
 ---
 
-Se tuo figlio o tua figlia è tornato a casa parlando di **terremoto**, **allerta meteo**, **kit di emergenza**, **piano familiare** o **numero 112**, vuol dire che a scuola si è lavorato su un percorso di Protezione Civile previsto dall'**Educazione Civica** (Legge 92/2019, D.M. 183/2024).
+Se tuo figlio o tua figlia è tornato a casa parlando di terremoto, allerta meteo, kit di emergenza, piano familiare o numero 112, a scuola ha lavorato su un tema di protezione civile.
 
-La lezione lascia il segno solo se trova continuità in famiglia. Una scheda compilata e poi dimenticata in cartella vale poco; una scheda compilata insieme la sera, attaccata al frigorifero e ripresa ogni tanto, vale tantissimo. Questa pagina ti suggerisce **cinque azioni concrete** da fare adesso, in ordine di priorità: dalla più rapida (15 minuti) alla più impegnativa (un pomeriggio).
+La lezione diventa utile se continua anche in famiglia. Non serve fare tutto subito: parti da una piccola azione concreta.
 
-> Questa pagina è pensata per i **genitori e i tutori**: scritta in italiano semplice, niente burocratese, niente paura. Sappiamo che molte famiglie non hanno mai pensato seriamente alla preparazione domestica. Si parte da dove si è.
+<div class="alert alert-info" role="note">
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Prepararsi non significa vivere nella paura. Significa sapere cosa fare, con calma, prima che serva davvero.</p>
+</div>
 
-## 1. Salvate insieme i numeri utili nel telefono di tutti
+## 1. Salvate i numeri utili
 
-**Tempo necessario: 10 minuti.** **Effetto immediato.**
+**Tempo necessario: 10 minuti.**
 
-Aprite la rubrica del tuo telefono e di quello degli altri membri della famiglia (compresi nonni, se condividete con loro la cura dei bambini). Inserite questi contatti — meglio se con una sigla iniziale che li raggruppa, tipo **"!Emergenza"**:
+Inserisci nella rubrica del telefono i contatti essenziali, magari con una parola iniziale comune, per esempio “Emergenza”.
 
-- **!112 — Emergenze (NUE)**
-- **!Comune Genzano** — 06 93711
-- **!ASL Roma 6** — 06 93271
-- **!Pediatra**
-- **!Farmacia di fiducia**
-- **!Vicino di casa che può aiutare**
-- **!Mamma cellulare** / **!Papà cellulare** / **!Nonno cellulare** (per i bambini)
-- **!Veterinario** (se avete animali)
+Contatti utili:
 
-Spiegate insieme **cosa si dice al 112**: il proprio nome, dove si è, cosa è successo. Niente di più. Tre informazioni in tre frasi corte.
+- **112 — Emergenze**;
+- Comune di Genzano di Roma;
+- ASL Roma 6;
+- pediatra o medico di famiglia;
+- farmacia di fiducia;
+- vicino o parente che può aiutare;
+- veterinario, se ci sono animali.
 
-Se i bambini sono piccoli (Primaria), aiutali a memorizzare almeno **un numero di un familiare** e l'**indirizzo di casa**. È l'informazione che salva di più la vita: i bambini si perdono, e un bambino che sa il proprio cognome e l'indirizzo viene riportato a casa rapidamente.
+Spiega ai bambini cosa dire al 112:
 
-## 2. Compilate insieme il Piano di Emergenza Familiare
+1. dove sono;
+2. cosa è successo;
+3. se ci sono persone ferite o in pericolo.
 
-**Tempo necessario: 30-45 minuti.** **Da fare una sera tranquilla.**
+Per i bambini più piccoli è utile memorizzare almeno nome, cognome, indirizzo di casa e un numero familiare.
 
-Il [Piano di Emergenza Familiare](/piano-familiare/) è un foglio scritto che risponde a tre domande di base: **chi**, **dove**, **come**. Chi siamo come famiglia, dove ci ritroviamo se non siamo a casa quando succede qualcosa, come ci contattiamo se i telefoni sono giù.
+## 2. Compilate il piano di emergenza familiare
 
-A scuola tuo figlio o tua figlia probabilmente ha già visto la scheda; potrebbe averla in cartella, oppure averla portata a casa come compito. Vale la pena prendere quella scheda e **compilarla insieme** — tutti seduti al tavolo della cucina, tutti con qualcosa da dire.
+**Tempo necessario: 30-45 minuti.**
 
-Punti su cui prestare attenzione:
+Il [Piano di emergenza familiare](/piano-familiare/) aiuta a decidere prima dell'emergenza:
 
-- **Punto di ritrovo** vicino casa (un parco, una piazza, un punto sicuro che tutti conoscono).
-- **Punto di ritrovo lontano**, se il quartiere fosse non raggiungibile (la casa di un parente, di un amico).
-- **Persona-ponte fuori Genzano** (un parente o amico in un'altra città). Se i cellulari locali non funzionano, ognuno chiama lei e si fa dare le notizie degli altri.
-- **Esigenze speciali** della famiglia: chi ha bisogno di farmaci salvavita, chi ha mobilità ridotta, chi ha allergie gravi, chi non può stare da solo.
+- chi contattare;
+- dove ritrovarsi vicino casa;
+- dove ritrovarsi se il quartiere non è raggiungibile;
+- chi può aiutare bambini, anziani, persone fragili o animali;
+- quali farmaci, documenti e informazioni sanitarie servono.
 
-Stampate il piano compilato, attaccatelo dentro un'anta dell'ingresso o sul frigorifero, lasciatene una copia in macchina.
+Compilatelo insieme e conservatene una copia in un punto conosciuto da tutti, per esempio vicino all'ingresso o dentro un'anta della cucina.
 
-> Se in famiglia ci sono bambini piccoli, anziani non autosufficienti, persone con disabilità o persone in terapia salvavita, il [Kit Calamità](/formazione/kit-calamita/) ha schede dedicate per ciascuna situazione: vale la pena guardarle, contengono dettagli che la scheda generica non può prevedere.
+## 3. Preparate il kit di evacuazione rapida
 
-## 3. Costruite insieme il Kit "Vai" — evacuazione rapida
+**Tempo necessario: un pomeriggio, anche diviso in più giorni.**
 
-**Tempo necessario: un pomeriggio (anche distribuito su più sere).**
+Non serve comprare subito tutto. Inizia controllando cosa avete già in casa.
 
-Il [Kit di Emergenza](/rischi-prevenzione/kit-emergenza/) è la riserva di base per affrontare le prime ore lontano da casa o senza servizi. Per cominciare bene, **non comprate nulla** la prima volta. Aprite armadi e cassetti, cercate quello che avete già:
+Oggetti utili:
 
-- una torcia
-- una radio a pile (anche vecchia, basta che funzioni)
-- un power bank carico
-- un kit medicazione minimo (cerotti, garze, disinfettante)
-- una bottiglia d'acqua
-- barrette o crackers
-- una coperta termica (a volte sono nelle scatole di vecchi viaggi)
-- un fischietto
-- una copia delle chiavi
+- torcia;
+- radio a pile;
+- power bank carico;
+- piccolo kit di medicazione;
+- acqua;
+- snack a lunga conservazione;
+- coperta termica;
+- fischietto;
+- copie dei documenti;
+- chiavi di riserva, se disponibili;
+- farmaci abituali o salvavita, secondo indicazione medica.
 
-Fate l'inventario insieme. Quello che manca lo aggiungete pian piano alla prossima spesa. Senza pressione, senza ansia commerciale: la vera ricchezza del kit è che **esiste e si sa dove sta**, non che sia perfetto.
+La cosa più importante è che il kit esista, sia raggiungibile e tutti sappiano dove si trova.
 
-Il sito spiega in dettaglio i tre kit consigliati ([Kit Vai, Kit Casa 72 ore, Kit Auto](/rischi-prevenzione/kit-emergenza/)) e c'è una **[checklist A4 da appendere al frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/)** per il controllo periodico ogni 6 mesi.
+Per approfondire consulta la pagina [Kit di emergenza](/rischi-prevenzione/kit-emergenza/).
 
-## 4. Fate una "prova" di evacuazione domestica
+## 4. Fate una prova domestica semplice
 
-**Tempo necessario: 20-30 minuti.** **Da fare una volta sola.**
+**Tempo necessario: 20-30 minuti.**
 
-A scuola la prova di evacuazione si fa una o due volte l'anno. A casa **non si fa quasi mai** — eppure è qui che si passa la maggior parte delle ore della giornata.
+Una prova in casa aiuta a capire se il piano è realistico.
 
-Una prova domestica semplice può essere così:
+Esempio:
 
-1. Tutti in salotto. Annunciate: *"Adesso facciamo finta che ci sia una scossa di terremoto. Cosa fai?"*
-2. Ognuno cerca **il proprio riparo**: sotto un tavolo solido, vicino a un muro portante, lontano da finestre e mobili pesanti. Fatelo davvero, non solo a parole.
-3. Quando ognuno ha trovato il suo riparo, contate ad alta voce fino a 30 (la durata media di una scossa). Tutti restano fermi.
-4. Annunciate: *"Adesso usciamo di casa, prendiamo il Kit Vai e ci ritroviamo al punto stabilito"*. Camminate verso l'uscita prendendo il kit dall'ingresso (così verificate anche che sia raggiungibile al buio).
-5. Andate fino al vostro punto di ritrovo familiare e fate l'appello: *"Tutti qui? Bene"*.
+1. scegliete un momento tranquillo;
+2. immaginate una scossa di terremoto;
+3. individuate i punti sicuri in ogni stanza;
+4. provate il percorso verso l'uscita senza correre;
+5. prendete il kit;
+6. raggiungete il punto di ritrovo scelto;
+7. parlate di cosa ha funzionato e cosa va migliorato.
 
-Quando avete finito, parlatene 5 minuti: cosa è andato bene, cosa è andato storto. Il piano si migliora ogni volta. Si può ripetere ogni 6-12 mesi: i bambini crescono, gli appartamenti cambiano.
+La prova non deve spaventare i bambini. Deve essere breve, spiegata prima e fatta con calma.
 
-## 5. Parlate con calma di "cosa succede se…"
+## 5. Parlate con calma delle domande difficili
 
-**Tempo necessario: 15 minuti.** **Da fare quando i bambini chiedono.**
+I bambini possono chiedere: “E se non vi trovo?”, “E se la casa si rompe?”, “E se ho paura?”.
 
-I bambini fanno domande dirette: *"Cosa succede se la nostra casa cade?", "E se voi due morite?", "E se non ti trovo?"*. Non spaventatevi e non aggirate. La paura nasce dal silenzio degli adulti, non dalla domanda.
+Rispondi con frasi semplici e vere:
 
-Risposte semplici, concrete, vere:
+- “Se senti una scossa, ti proteggi e ascolti l'adulto vicino a te.”
+- “Se non ci troviamo subito, andiamo al punto di ritrovo.”
+- “Se non riesci a chiamare noi, chiedi aiuto a un adulto affidabile o chiama il 112.”
+- “Non sei solo: ci sono familiari, insegnanti, soccorritori e volontari.”
 
-- *"Se la casa fa rumore, vai sotto il tavolo. Non scappare alle scale."*
-- *"Se non ci troviamo subito, andiamo al punto di ritrovo (nominate il punto). Se neanche lì ci troviamo, vai dalla nonna / dal vicino di fiducia / dalla maestra."*
-- *"Se non puoi parlarci subito, manda un messaggio a (persona-ponte fuori Genzano). Lei sa dove siamo tutti."*
-- *"Tu non sei mai solo. Se non ci sono i genitori, ci sono i Vigili del Fuoco, i Carabinieri, i medici, i volontari di Protezione Civile. Sono persone che si occupano di te."*
+Evita immagini forti, video di disastri o racconti troppo drammatici. La preparazione deve aumentare sicurezza, non paura.
 
-I bambini più piccoli (Infanzia, prima Primaria) capiscono meglio attraverso le **storie**: il sito ha una raccolta di [storie e racconti per bambini](/formazione/storie-e-racconti/) sui temi della Protezione Civile (la tartaruga saggia, il pompiere, l'amico vigile). Si possono leggere prima di dormire.
+## Se è la prima volta
 
-## Se è la prima volta che pensate alla preparazione
+Non è un problema se la tua famiglia non ha ancora un piano o un kit. Molte famiglie iniziano da zero.
 
-Non è un problema. La grandissima maggioranza delle famiglie italiane non ha mai compilato un piano di emergenza, non ha un kit, non sa di preciso cosa fare in caso di terremoto. Cominciare significa essere già più preparati della media.
+Comincia così:
 
-Tre suggerimenti per non sentirsi sopraffatti:
+- oggi salva il 112 e i numeri utili;
+- questa settimana scegli il punto di ritrovo;
+- questo mese prepara un piccolo kit;
+- due volte l'anno controlla documenti, farmaci, torce e batterie.
 
-- **Una cosa per volta**. Anche solo l'azione 1 (i numeri nel telefono) basta per oggi.
-- **Niente ansia commerciale**. Non servono kit costosi pronti all'uso: un sacchetto IKEA con dentro torcia + radio + acqua + cerotti è già un kit. Si migliora con il tempo.
-- **I bambini sono partner, non protetti passivi**. Se li coinvolgete, ricordano. Se gli si nasconde tutto perché *"sono troppo piccoli"*, in emergenza non sanno cosa fare.
+## Per persone con bisogni specifici
 
-## Per saperne di più
+Se in famiglia ci sono bambini piccoli, anziani, persone con disabilità, terapie salvavita, gravidanza, animali domestici o difficoltà linguistiche, prepara indicazioni dedicate.
 
-- [Piano di Emergenza Familiare](/piano-familiare/) — la pagina principale per costruire il piano
-- [Kit di Emergenza (3 kit a confronto)](/rischi-prevenzione/kit-emergenza/) — Vai / Casa 72 ore / Auto
-- [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/) — controllo ogni 6 mesi
-- [Numeri utili e quando chiamarli](/numeri-utili/) — versione completa
-- [Cosa fare adesso](/cosa-fare-adesso/) — bussola rapida per ogni rischio
-- [Facile da leggere](/facile-da-leggere/) — versione in italiano facile per chi ha difficoltà con la lettura
+Risorse utili:
 
-Per le **persone con esigenze specifiche** (anziani, disabilità, terapie salvavita, bambini piccoli, gravidanza, animali, italiano L2, persone senza dimora, caregiver), il [Kit Calamità](/formazione/kit-calamita/) ha schede dedicate per ogni situazione.
+- [Kit per persone fragili e bisogni specifici](/formazione/kit-fragilita-vulnerabilita/)
+- [Facile da leggere](/facile-da-leggere/)
+- [Piano di emergenza familiare](/piano-familiare/)
 
-Per i **docenti** che vogliono lavorare in classe con materiali pronti: [Percorsi didattici pronti](/formazione/percorsi-didattici/) e [Schede stampabili](/formazione/schede-stampabili/).
+## Vedi anche
+
+- [Piano di emergenza familiare](/piano-familiare/) — compila il piano della tua famiglia
+- [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — tre kit: casa, auto, evacuazione
+- [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
+- [Cosa fare adesso](/cosa-fare-adesso/) — azioni rapide per ogni rischio
+- [Storie e racconti](/formazione/storie-e-racconti/) — letture per bambini
+- [Percorsi didattici](/formazione/percorsi-didattici/) — materiali per i docenti
