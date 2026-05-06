@@ -4078,6 +4078,12 @@ html.a11y-pause-animations .assistente-fab:focus-visible { transform: none !impo
    per riabilitarli). */
 html.a11y-hide-assistant-fab .assistente-fab { display: none !important; }
 html.a11y-hide-sos-fab .sos-button { display: none !important; }
+/* Toggle "Nascondi pulsante traduzione" del toolbar accessibilita':
+   nasconde il selettore lingua del sito (#lang-toggle in alto a destra)
+   e l'eventuale modal aperto. La classe viene impostata istantaneamente
+   da a11y-toolbar.js e dall'inline early script in baseof.html. */
+html.a11y-hide-translate-button .lang-toggle,
+html.a11y-hide-translate-button #lang-modal { display: none !important; }
 /* ==========================================================================
  * fine ASSISTENTE FAB v2.1
  * ==========================================================================
