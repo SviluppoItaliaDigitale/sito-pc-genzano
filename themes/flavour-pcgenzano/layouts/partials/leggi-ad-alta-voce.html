@@ -133,7 +133,44 @@
     }
   }
 
-  // 7. Funzione di lettura. Restituisce true se ha avviato lo speak.
+  // 7a. Spezza il testo in chunk brevi (massimo MAX_LEN caratteri ciascuno),
+  //     tagliando preferibilmente sulle frasi (.!?) o sugli spazi.
+  //
+  //     CRUCIALE: Chrome (PC + Android) ha un bug per cui SpeechSynthesisUtterance
+  //     con testi lunghi viene troncato silenziosamente o fallisce con
+  //     'synthesis-failed'. Il limite reale è ~200-300 caratteri, dopo i quali
+  //     l'audio si interrompe a metà o non parte affatto. Spezzando il testo
+  //     in chunk brevi e mandandoli in sequenza via onend, il problema
+  //     scompare. Stesso pattern usato in tts-storia.js per le fiabe.
+  function splitIntoChunks(text, maxLen) {
+    var max = maxLen || 180;
+    var chunks = [];
+    var i = 0;
+    while (i < text.length) {
+      if (text.length - i <= max) {
+        chunks.push(text.slice(i).trim());
+        break;
+      }
+      // Cerca un punto di taglio ideale: . ! ? prima di max
+      var slice = text.slice(i, i + max);
+      var cut = -1;
+      for (var k = slice.length - 1; k >= max * 0.5; k--) {
+        var c = slice.charAt(k);
+        if (c === '.' || c === '!' || c === '?') { cut = k + 1; break; }
+      }
+      // Fallback: cerca uno spazio
+      if (cut < 0) {
+        cut = slice.lastIndexOf(' ');
+        if (cut < max * 0.5) cut = max; // se proprio non trova, taglia hard
+      }
+      chunks.push(text.slice(i, i + cut).trim());
+      i += cut;
+    }
+    return chunks.filter(function (c) { return c.length > 0; });
+  }
+
+  // 7b. Funzione di lettura. Avvia la sequenza di chunk.
+  //     Ritorna true se ha qualcosa da leggere.
   function speakText(btn) {
     var target = document.querySelector(btn.getAttribute('data-tts-target'));
     var text = extractText(target);
@@ -141,23 +178,42 @@
       alert('Nessun testo da leggere su questa pagina.');
       return false;
     }
-    var u = new SpeechSynthesisUtterance(text);
-    u.lang = 'it-IT';
-    u.rate = getRate();
-    u.pitch = 1;
-    u.volume = 1;
+    var chunks = splitIntoChunks(text, 180);
     var voice = pickItalianVoice();
-    if (voice) u.voice = voice;
-    u.onend = function () { setUI(btn, 'idle'); };
-    u.onerror = function (ev) {
-      setUI(btn, 'idle');
-      if (window.console) console.warn('[TTS] error:', ev && ev.error);
-    };
-    // Importante: cancel() prima di speak() pulisce eventuali residui.
-    // Su alcuni browser cancel+speak immediati creano "interrupted":
-    // ritardiamo lo speak di 50ms per dare tempo alla coda di liberarsi.
+    var rate = getRate();
+    var idx = 0;
+
+    function speakNext() {
+      if (idx >= chunks.length) {
+        setUI(btn, 'idle');
+        return;
+      }
+      var u = new SpeechSynthesisUtterance(chunks[idx]);
+      u.lang = 'it-IT';
+      u.rate = rate;
+      u.pitch = 1;
+      u.volume = 1;
+      if (voice) u.voice = voice;
+      u.onend = function () {
+        idx++;
+        // Brevissima pausa fra un chunk e l'altro per evitare che Chrome
+        // accoda male e perda il chunk successivo.
+        setTimeout(speakNext, 30);
+      };
+      u.onerror = function (ev) {
+        if (window.console) console.warn('[TTS] error chunk', idx, '/', chunks.length, ':', ev && ev.error);
+        // Su error proviamo comunque ad andare avanti col prossimo chunk:
+        // a volte un singolo chunk fallisce ma i successivi vanno.
+        idx++;
+        setTimeout(speakNext, 30);
+      };
+      synth.speak(u);
+    }
+
+    // cancel() pulisce la coda di chunk eventualmente in corso.
+    // setTimeout 50ms evita il bug Chrome cancel+speak immediato.
     synth.cancel();
-    setTimeout(function () { synth.speak(u); }, 50);
+    setTimeout(speakNext, 50);
     return true;
   }
 
