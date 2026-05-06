@@ -1,6 +1,6 @@
 ---
-title: "Crea il tuo Piano di Emergenza Familiare"
-description: "Crea e stampa il tuo piano di emergenza familiare personalizzato. Tutti i dati restano solo sul tuo computer."
+title: "Piano di emergenza familiare"
+description: "Crea e stampa un piano di emergenza per la tua famiglia. I dati restano sul tuo computer e non vengono inviati al sito."
 tts: true
 layout: "single"
 aliases:
@@ -9,25 +9,23 @@ aliases:
 toc: true
 dataUltimaRevisione: "2026-05-06"
 ---
-La sicurezza parte da te e dalla tua famiglia. Dedica pochi minuti a compilare questo modulo: lo strumento genererà un piano personalizzato che potrai stampare e conservare in un luogo sicuro. **Tutti i dati inseriti restano solo sul tuo computer**: non vengono inviati al sito, non vengono salvati online e non vengono trasmessi al Gruppo.
+Compila il modulo per creare un piano di emergenza da stampare e conservare in casa. **I dati restano sul tuo computer**: non vengono inviati al sito, non vengono salvati online e non vengono trasmessi al Gruppo.
 
-Il Piano di Emergenza Familiare è utile perché, durante un evento improvviso, potresti non avere tempo per decidere con calma dove andare, chi chiamare, cosa prendere e come aiutare bambini, anziani, persone con disabilità o animali domestici.
+Un piano familiare aiuta tutti a sapere cosa fare se non c'è tempo per decidere con calma. È utile soprattutto quando in famiglia ci sono bambini, anziani, persone con disabilità, terapie da seguire o animali domestici.
 
-> Compila il piano insieme alla famiglia, rileggilo almeno una volta l'anno e aggiornalo ogni volta che cambiano casa, scuola, lavoro, numeri di telefono, farmaci, ausili o composizione del nucleo familiare.
+> Compila il piano insieme alla famiglia. Rileggilo almeno una volta l'anno e aggiornalo quando cambiano casa, scuola, lavoro, numeri di telefono, farmaci, ausili o composizione del nucleo familiare.
 
-## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>Perché serve un Piano Familiare {#perche-serve-piano-familiare}
+## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>Perché serve un piano familiare {#perche-serve-piano-familiare}
 
-Durante un'emergenza non c'è tempo per organizzarsi. Se la tua famiglia ha già discusso e concordato cosa fare, dove trovarsi e chi contattare, ognuno saprà come comportarsi anche se non siete insieme in quel momento.
+Durante un'emergenza potresti non essere con i tuoi familiari. Se avete già deciso dove trovarvi, chi chiamare e cosa portare, sarà più facile agire in sicurezza.
 
-Un piano familiare efficace risponde a cinque domande:
+Un piano familiare risponde a cinque domande:
 
-1. **Dove ci troviamo?** — I punti di ritrovo concordati.
-2. **Chi chiamiamo?** — Il contatto di riferimento fuori città o fuori zona.
-3. **Cosa portiamo?** — Dove si trova il kit di emergenza.
-4. **Chi ha bisogno di aiuto?** — Bambini, anziani, persone con disabilità, terapie, animali domestici.
-5. **Cosa facciamo prima di uscire?** — Gas, acqua, quadro elettrico, documenti, farmaci e chiavi, solo se si può fare in sicurezza.
-
-Il modello proposto segue l'impostazione delle campagne nazionali del Dipartimento della Protezione Civile, in particolare la preparazione familiare, il contatto fuori area, i punti di ritrovo e l'attenzione alle persone fragili. È inoltre ispirato a buone pratiche internazionali sulla pianificazione familiare in caso di evacuazione.
+1. **Dove ci troviamo?** I punti di ritrovo concordati.
+2. **Chi chiamiamo?** Un contatto fuori città o fuori zona.
+3. **Cosa portiamo?** Il kit di emergenza e gli oggetti essenziali.
+4. **Chi ha bisogno di aiuto?** Bambini, anziani, persone con disabilità, terapie e animali domestici.
+5. **Cosa facciamo prima di uscire?** Gas, acqua, quadro elettrico, documenti, farmaci e chiavi, solo se si può fare in sicurezza.
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Prima di compilare {#prima-di-compilare}
 
@@ -41,13 +39,13 @@ Tieni a portata di mano:
 - dati utili per animali domestici, veterinario e trasportino;
 - posizione del kit di emergenza, delle chiavi, del quadro elettrico e dei rubinetti principali.
 
-Non inserire più dati personali o sanitari del necessario. Il piano stampato deve essere utile in emergenza, ma va conservato con attenzione perché può contenere informazioni sensibili.
+Non inserire più dati personali o sanitari del necessario. Il piano stampato può contenere informazioni sensibili: conservalo in un luogo accessibile ai familiari ma protetto.
 
-## <i class="bi bi-pencil-square text-primary me-2" aria-hidden="true"></i>Compila il tuo Piano {#compila-il-tuo-piano}
+## <i class="bi bi-pencil-square text-primary me-2" aria-hidden="true"></i>Compila il tuo piano {#compila-il-tuo-piano}
 
 <div class="card shadow-sm p-4 mb-4">
 
-### 1. La mia Famiglia
+### 1. La mia famiglia
 
 <div class="row g-3 mb-3">
 <div class="col-md-6">
@@ -63,7 +61,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 <input type="number" class="form-control" id="adulti" min="0" value="2">
 </div>
 <div class="col-md-3">
-<label for="bambini" class="form-label">Bambini / Ragazzi</label>
+<label for="bambini" class="form-label">Bambini / ragazzi</label>
 <input type="number" class="form-control" id="bambini" min="0" value="0">
 </div>
 <div class="col-md-3">
@@ -76,21 +74,21 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 </div>
 </div>
 
-### 2. I nostri Punti di Ritrovo
+### 2. I nostri punti di ritrovo
 
 <div class="row g-3 mb-3">
 <div class="col-md-6">
-<label for="ritrovo-vicino" class="form-label">Punto di ritrovo VICINO casa</label>
+<label for="ritrovo-vicino" class="form-label">Punto di ritrovo vicino casa</label>
 <input type="text" class="form-control" id="ritrovo-vicino" placeholder="Es. Piazza Frasconi (AA1)">
 <small class="text-muted">Consulta le <a href="/cartografia/">aree di attesa</a> più vicine</small>
 </div>
 <div class="col-md-6">
-<label for="ritrovo-lontano" class="form-label">Punto di ritrovo LONTANO da casa</label>
+<label for="ritrovo-lontano" class="form-label">Punto di ritrovo lontano da casa</label>
 <input type="text" class="form-control" id="ritrovo-lontano" placeholder="Es. Casa dei nonni a...">
 </div>
 </div>
 
-### 3. Contatti e Risorse
+### 3. Contatti e risorse
 
 <div class="row g-3 mb-3">
 <div class="col-md-6">
@@ -102,11 +100,11 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 <input type="text" class="form-control" id="medico" placeholder="Es. Dott. Bianchi — 06 123456">
 </div>
 <div class="col-md-6">
-<label for="kit-emergenza" class="form-label">Dove si trova il Kit di emergenza?</label>
+<label for="kit-emergenza" class="form-label">Dove si trova il kit di emergenza?</label>
 <input type="text" class="form-control" id="kit-emergenza" placeholder="Es. Armadio ingresso">
 </div>
 <div class="col-md-6">
-<label for="chiusure" class="form-label">Dove sono i rubinetti gas/acqua e quadro elettrico?</label>
+<label for="chiusure" class="form-label">Dove sono rubinetti gas/acqua e quadro elettrico?</label>
 <input type="text" class="form-control" id="chiusure" placeholder="Es. Gas: cucina; Quadro: ingresso">
 </div>
 </div>
@@ -124,26 +122,26 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 </div>
 <div class="col-12">
 <label for="note" class="form-label">Note aggiuntive</label>
-<textarea class="form-control" id="note" rows="2" placeholder="Es. allergia nota; animale che si spaventa; persona che ha bisogno di essere accompagnata..."></textarea>
+<textarea class="form-control" id="note" rows="2" placeholder="Es. allergia nota; animale che si spaventa; persona che deve essere accompagnata..."></textarea>
 </div>
 </div>
 
 <button type="button" class="btn btn-primary btn-lg" onclick="generaPiano()">
-  <i class="bi bi-file-earmark-check me-2" aria-hidden="true"></i>Crea il mio Piano
+  <i class="bi bi-file-earmark-check me-2" aria-hidden="true"></i>Crea il mio piano
 </button>
 </div>
 
 <div id="piano-output" class="d-none">
 <div id="piano-stampabile" class="card shadow p-4 mb-4">
 <div class="piano-print-header text-center">
-<h2 class="mb-1">Piano di Emergenza Familiare</h2>
+<h2 class="mb-1">Piano di emergenza familiare</h2>
 <p class="text-muted mb-0">Protezione Civile Genzano di Roma &mdash; Gruppo Comunale Volontari</p>
 <p class="text-muted small mb-0">Documento generato il <span id="data-piano"></span></p>
 </div>
 <hr>
 <div id="piano-contenuto"></div>
 <div class="piano-numeri text-center mt-4 p-3">
-<strong>Numeri di Emergenza</strong><br>
+<strong>Numeri di emergenza</strong><br>
 <strong>112</strong> Numero Unico Europeo per le emergenze<br>
 <strong>803 555</strong> Sala Operativa Protezione Civile Lazio &mdash; segnalazioni secondo le indicazioni regionali<br>
 <small class="text-muted">Conservare in un luogo accessibile ai familiari ma protetto. Aggiornare almeno una volta all'anno.</small>
@@ -151,7 +149,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 <div id="piano-print-appendice"></div>
 </div>
 <div class="d-flex flex-wrap gap-2 mb-4 piano-buttons">
-<button type="button" class="btn btn-success btn-lg" onclick="stampaPiano()"><i class="bi bi-printer me-2" aria-hidden="true"></i>Stampa / Salva PDF</button>
+<button type="button" class="btn btn-success btn-lg" onclick="stampaPiano()"><i class="bi bi-printer me-2" aria-hidden="true"></i>Stampa / salva PDF</button>
 <button type="button" class="btn btn-outline-primary btn-lg" onclick="document.getElementById('piano-output').classList.add('d-none');window.scrollTo({top:0,behavior:'smooth'})"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Modifica</button>
 </div>
 </div>
@@ -163,7 +161,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 {{< pittogramma src="/pittogrammi/arasaac/bambino.png" alt="Pittogramma: bambino" size="medium" >}}
 
 - Spiega ai bambini cosa potrebbe succedere con parole semplici, senza immagini o racconti spaventosi.
-- Assicurati che sappiano il loro **nome completo**, **indirizzo** e almeno **un numero di telefono** da chiamare.
+- Assicurati che sappiano il loro nome completo, l'indirizzo e almeno un numero di telefono da chiamare.
 - Insegna loro a riconoscere il suono di un allarme e a seguire l'adulto di riferimento.
 - Fai piccole prove in forma di gioco per raggiungere il punto di ritrovo.
 - Metti un documento identificativo o un contatto utile nello zainetto, se adatto all'età.
@@ -200,7 +198,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato de
 
 Verifica di aver fatto tutto:
 
-- ☐ Compilato e stampato il Piano Familiare.
+- ☐ Compilato e stampato il piano familiare.
 - ☐ Conservato il piano in un luogo accessibile ai familiari ma protetto.
 - ☐ Individuato le aree di attesa più vicine a casa, scuola e lavoro.
 - ☐ Preparato o aggiornato il [kit di emergenza](/rischi-prevenzione/kit-emergenza/).
@@ -213,7 +211,7 @@ Verifica di aver fatto tutto:
 
 ## <i class="bi bi-arrow-clockwise text-primary me-2" aria-hidden="true"></i>Quando aggiornare il piano {#quando-aggiornare}
 
-Aggiorna il Piano Familiare:
+Aggiorna il piano familiare:
 
 - almeno una volta l'anno;
 - quando cambi casa, scuola, lavoro o numero di telefono;
@@ -246,21 +244,21 @@ function generaPiano(){
 
   var h='';
 
-  h+='<h3 class="piano-section-title">La mia Famiglia</h3>';
+  h+='<h3 class="piano-section-title">La mia famiglia</h3>';
   h+='<table class="piano-table" role="presentation"><tbody>';
   h+='<tr><td>Cognome</td><td><strong>'+cognome+'</strong></td></tr>';
   h+='<tr><td>Indirizzo</td><td><strong>'+indirizzo+'</strong></td></tr>';
-  h+='<tr><td>Composizione</td><td>Adulti: <strong>'+adulti+'</strong> &mdash; Bambini/Ragazzi: <strong>'+bambini+'</strong> &mdash; Anziani/Fragili: <strong>'+anziani+'</strong></td></tr>';
+  h+='<tr><td>Composizione</td><td>Adulti: <strong>'+adulti+'</strong> &mdash; Bambini/ragazzi: <strong>'+bambini+'</strong> &mdash; Anziani/fragili: <strong>'+anziani+'</strong></td></tr>';
   h+='<tr><td>Animali domestici</td><td><strong>'+animali+'</strong></td></tr>';
   h+='</tbody></table>';
 
-  h+='<h3 class="piano-section-title">Punti di Ritrovo</h3>';
+  h+='<h3 class="piano-section-title">Punti di ritrovo</h3>';
   h+='<table class="piano-table" role="presentation"><tbody>';
   h+='<tr><td>Vicino casa</td><td><strong>'+vicino+'</strong></td></tr>';
   h+='<tr><td>Lontano da casa</td><td><strong>'+lontano+'</strong></td></tr>';
   h+='</tbody></table>';
 
-  h+='<h3 class="piano-section-title">Contatti e Risorse</h3>';
+  h+='<h3 class="piano-section-title">Contatti e risorse</h3>';
   h+='<table class="piano-table" role="presentation"><tbody>';
   h+='<tr><td>Riferimento fuori città</td><td><strong>'+contatto+'</strong></td></tr>';
   h+='<tr><td>Medico di famiglia</td><td><strong>'+medico+'</strong></td></tr>';
@@ -269,7 +267,7 @@ function generaPiano(){
   h+='</tbody></table>';
 
   if(farmaci!=='Nessuno'||ausili!=='Nessuno'||note){
-    h+='<h3 class="piano-section-title">Esigenze Specifiche</h3>';
+    h+='<h3 class="piano-section-title">Esigenze specifiche</h3>';
     h+='<table class="piano-table" role="presentation"><tbody>';
     if(farmaci!=='Nessuno') h+='<tr><td>Farmaci</td><td><strong>'+farmaci+'</strong></td></tr>';
     if(ausili!=='Nessuno') h+='<tr><td>Ausili</td><td><strong>'+ausili+'</strong></td></tr>';
@@ -312,8 +310,7 @@ function stampaPiano(){
 
 ## Vedi anche
 
-- [Rischi e Prevenzione](/rischi-prevenzione/) — i rischi del territorio di Genzano
+- [Rischi e prevenzione](/rischi-prevenzione/) — i rischi del territorio di Genzano
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — cosa preparare per casa, auto ed evacuazione
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
-
