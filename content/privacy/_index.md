@@ -1,96 +1,129 @@
 ---
-title: "Privacy e Cookie Policy"
-description: "Informativa sulla privacy e utilizzo dei cookie ai sensi del GDPR."
+title: "Privacy e cookie policy"
+description: "Informativa sul trattamento dei dati personali e sull'uso dei cookie nel sito della Protezione Civile di Genzano di Roma."
 layout: "single"
-dataUltimaRevisione: "2026-04-25"
+toc: true
+tts: true
+dataUltimaRevisione: "2026-05-06"
 ---
 
-## Informativa sul trattamento dei dati personali
+Questa pagina spiega quali dati possono essere trattati durante la navigazione del sito e come sono gestiti cookie, widget esterni e strumenti interattivi.
 
-Ai sensi degli artt. 13 e 14 del Regolamento (UE) 2016/679 (GDPR), il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, in qualità di Titolare del trattamento, fornisce le seguenti informazioni.
+<div class="alert alert-info" role="note">
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Il sito non usa pubblicità, profilazione o sistemi di tracciamento commerciale.</p>
+</div>
 
-### Titolare del Trattamento
+## Titolare del trattamento
 
-**Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**
-Via Sicilia, 13-15 — 00045 Genzano di Roma (RM)
-C.F. 92011880588
+**Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**  
+Via Sicilia, 13-15 — 00045 Genzano di Roma (RM)  
+C.F. 92011880588  
 Email: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
 
-### Responsabile della Protezione dei Dati (DPO)
+## Responsabile della protezione dei dati
 
-<!-- NOTA IMPORTANTE: Se avete nominato un DPO, inserite qui i suoi contatti.
-     Per un ETS non è sempre obbligatorio, ma è consigliato. -->
-*Per informazioni contattare: segreteria@protezionecivilegenzano.it*
+Per informazioni sul trattamento dei dati personali puoi scrivere a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
-### Tipologie di dati raccolti
+## Dati trattati durante la navigazione
 
-Il presente sito web è un sito statico e **non raccoglie dati personali** degli utenti tramite form di registrazione, login o profilazione.
+Il sito è prevalentemente statico. Non prevede registrazione utenti, login pubblico o profilazione.
 
-I dati che possono essere raccolti automaticamente durante la navigazione sono:
-- **Dati di navigazione:** indirizzo IP, tipo di browser, sistema operativo, pagine visitate, orari di accesso. Questi dati sono utilizzati esclusivamente per finalità statistiche anonime e per garantire il funzionamento del sito.
+Durante la navigazione possono essere trattati dati tecnici necessari al funzionamento del sito, come:
 
-### Base giuridica
+- indirizzo IP;
+- tipo di browser;
+- sistema operativo;
+- pagine richieste;
+- data e ora della richiesta;
+- dati tecnici necessari alla sicurezza e alla manutenzione.
 
-Il trattamento dei dati di navigazione è fondato sul legittimo interesse del Titolare (art. 6, par. 1, lett. f, GDPR) a garantire il corretto funzionamento e la sicurezza del sito web.
+Questi dati sono usati per garantire il funzionamento del sito, la sicurezza tecnica e la risoluzione di eventuali problemi.
 
-### Periodo di conservazione
+## Base giuridica
 
-I dati di navigazione sono conservati per il tempo strettamente necessario alle finalità sopra indicate e comunque non oltre 12 mesi.
+Il trattamento dei dati tecnici di navigazione si basa sul legittimo interesse del Titolare a garantire sicurezza, continuità e corretto funzionamento del sito, ai sensi dell'art. 6, par. 1, lett. f del Regolamento (UE) 2016/679.
 
-### Diritti dell'interessato
+## Conservazione
 
-L'utente ha il diritto di:
-- Accedere ai propri dati personali (art. 15 GDPR)
-- Rettificare i propri dati (art. 16 GDPR)
-- Cancellare i propri dati (art. 17 GDPR)
-- Limitare il trattamento (art. 18 GDPR)
-- Opporsi al trattamento (art. 21 GDPR)
-- Proporre reclamo al Garante per la Protezione dei Dati Personali ([www.garanteprivacy.it](https://www.garanteprivacy.it))
+I dati tecnici sono conservati per il tempo necessario alle finalità indicate e comunque non oltre 12 mesi, salvo esigenze di sicurezza, accertamento di illeciti o obblighi di legge.
 
----
+## Diritti dell'interessato
 
-## Cookie Policy
+Puoi esercitare i diritti previsti dal GDPR, tra cui:
 
-### Cosa sono i cookie
+- accesso ai dati personali;
+- rettifica;
+- cancellazione;
+- limitazione del trattamento;
+- opposizione al trattamento;
+- reclamo al [Garante per la protezione dei dati personali](https://www.garanteprivacy.it/).
 
-I cookie sono piccoli file di testo che i siti web inviano al browser dell'utente durante la navigazione.
+Per esercitare i diritti puoi scrivere a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
-### Cookie utilizzati da questo sito
+## Cookie utilizzati dal sito
 
-Il presente sito, essendo un sito statico, **utilizza esclusivamente cookie tecnici** strettamente necessari al funzionamento del sito. Non vengono utilizzati cookie di profilazione o di terze parti a scopo pubblicitario.
+I cookie sono piccoli file di testo che il browser salva sul dispositivo durante la navigazione.
 
-| Tipo | Nome | Finalità | Durata |
-|------|------|----------|--------|
-| Tecnico | cookie_consent | Memorizza la scelta dell'utente sui cookie | 12 mesi |
+Questo sito usa solo cookie tecnici necessari al funzionamento. Non usa cookie di profilazione o cookie pubblicitari.
 
-### Cookie di terze parti
+<div class="table-responsive">
+<table>
+<caption>Cookie tecnici utilizzati dal sito</caption>
+<thead>
+<tr><th scope="col">Tipo</th><th scope="col">Nome</th><th scope="col">Finalità</th><th scope="col">Durata</th></tr>
+</thead>
+<tbody>
+<tr><td>Tecnico</td><td><code>cookie_consent</code></td><td>Memorizza la scelta dell'utente sui cookie.</td><td>12 mesi</td></tr>
+</tbody>
+</table>
+</div>
 
-Il presente sito non incorpora widget, player o strumenti di terze parti che installano cookie di profilazione in modo automatico.
+La disabilitazione dei cookie tecnici può compromettere alcune funzionalità del sito.
 
-Il sito incorpora, **solo su esplicita richiesta dell'utente**, alcuni widget di consultazione forniti da servizi esterni. Nessuno di questi widget viene caricato automaticamente: l'utente vede un'anteprima ("placeholder") e deve cliccare un pulsante di attivazione. Solo in quel momento il browser riceve risorse dal server esterno e possono essere impostati cookie tecnici o di preferenza dal fornitore, sui quali il Titolare non ha controllo diretto.
+## Widget di terze parti
 
-**Widget incorporati (iframe click-to-load):**
+Il sito incorpora alcuni widget di consultazione forniti da servizi esterni. Nessun widget viene caricato automaticamente: prima compare un riquadro informativo e l'utente deve scegliere di caricarlo.
 
-| Servizio | Fornitore | Finalità | Pagine in cui compare | Informativa |
-|------|------|------|------|------|
-| Windy.com | Windyty, SE (Rep. Ceca) | Mappa meteo interattiva (radar, precipitazioni, vento, temperatura) | [Home](/), [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | [Privacy Windy](https://account.windy.com/privacy-policy) |
-| INGV — Terremoti | Istituto Nazionale di Geofisica e Vulcanologia (Italia, ente pubblico di ricerca) | Mappa e lista dei terremoti recenti in Italia | [Home](/), [Rischio Sismico](/rischi-prevenzione/rischio-sismico/), [Strumenti](/strumenti/) | [Privacy INGV](https://www.ingv.it/privacy-policy) |
-| Radar DPC | Dipartimento della Protezione Civile (Italia, ente pubblico) | Mosaico radar nazionale precipitazioni | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | [Privacy DPC](https://www.protezionecivile.gov.it/it/privacy-policy) |
-| Blitzortung / Lightning Maps | Rete volontaria internazionale | Mappa dei fulmini in tempo reale | [Temporali Intensi](/rischi-prevenzione/temporali-intensi/), [Strumenti](/strumenti/) | [Informazioni Blitzortung](https://www.blitzortung.org/en/cover_your_area.php) |
-| MeteoAM — Aeronautica Militare | Ministero della Difesa (ente pubblico italiano) | Previsione meteo ufficiale per Genzano di Roma | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | [Privacy Aeronautica Militare](https://www.meteoam.it/it/privacy-policy) |
+Solo dopo il clic, il browser può ricevere risorse dal fornitore esterno e possono applicarsi anche le policy di quel servizio.
 
-**Cartografia interattiva (Leaflet + OpenStreetMap):**
+<div class="table-responsive">
+<table>
+<caption>Widget esterni caricati solo su richiesta dell'utente</caption>
+<thead>
+<tr><th scope="col">Servizio</th><th scope="col">Fornitore</th><th scope="col">Finalità</th><th scope="col">Pagine</th><th scope="col">Informativa</th></tr>
+</thead>
+<tbody>
+<tr><td>Windy.com</td><td>Windyty, SE</td><td>Mappa meteo interattiva.</td><td>Home, Allerte meteo, Strumenti.</td><td><a href="https://account.windy.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Windy</a></td></tr>
+<tr><td>INGV — Terremoti</td><td>Istituto Nazionale di Geofisica e Vulcanologia</td><td>Mappa e lista dei terremoti recenti.</td><td>Home, Rischio sismico, Strumenti.</td><td><a href="https://www.ingv.it/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy INGV</a></td></tr>
+<tr><td>Radar DPC</td><td>Dipartimento della Protezione Civile</td><td>Mosaico radar nazionale delle precipitazioni.</td><td>Allerte meteo, Strumenti.</td><td><a href="https://www.protezionecivile.gov.it/it/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy DPC</a></td></tr>
+<tr><td>Blitzortung / Lightning Maps</td><td>Rete volontaria internazionale</td><td>Mappa dei fulmini in tempo reale.</td><td>Temporali intensi, Strumenti.</td><td><a href="https://www.blitzortung.org/en/cover_your_area.php" target="_blank" rel="noopener noreferrer">Informazioni Blitzortung</a></td></tr>
+<tr><td>MeteoAM</td><td>Aeronautica Militare</td><td>Previsione meteo ufficiale per Genzano di Roma.</td><td>Allerte meteo, Strumenti.</td><td><a href="https://www.meteoam.it/it/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy MeteoAM</a></td></tr>
+</tbody>
+</table>
+</div>
 
-La pagina [Cartografia](/cartografia/) include una mappa interattiva delle aree di emergenza del Piano Comunale, realizzata con la libreria **Leaflet** (open source, ospitata sul nostro stesso server, nessuna chiamata a CDN esterne) e con tile cartografiche fornite dal progetto **OpenStreetMap** (`tile.openstreetmap.org`). All'apertura della pagina, il browser dell'utente si collega ai server di OpenStreetMap per scaricare le sole tile necessarie a visualizzare la mappa: nessun cookie di profilazione viene impostato, ma l'indirizzo IP e i dettagli minimi della richiesta (zoom, riquadro visibile) sono visibili al fornitore secondo la sua [tile usage policy](https://operations.osmfoundation.org/policies/tiles/) e [informativa privacy](https://wiki.osmfoundation.org/wiki/Privacy_Policy).
+Per non caricare un widget è sufficiente non premere il pulsante di attivazione. In alternativa puoi aprire direttamente il sito del fornitore.
 
-La funzione "Centra sulla mia posizione" usa la **Geolocation API** del browser: la posizione GPS viene letta solo dopo esplicita autorizzazione dell'utente al browser, è elaborata localmente per centrare la mappa e **non viene mai trasmessa al nostro server** né a terzi. Il dato viene scartato chiudendo la pagina.
+## Cartografia interattiva
 
-**Link esterni consigliati nella pagina [Strumenti](/strumenti/):**
+La pagina [Cartografia](/cartografia/) usa una mappa interattiva realizzata con Leaflet e tile fornite da OpenStreetMap.
 
-La pagina Strumenti rimanda inoltre, come link esterni in nuova scheda (nessun iframe, nessun cookie sul nostro sito), ai seguenti servizi istituzionali e di pubblica utilità: **ISPRA IdroGEO** (rischio frane/alluvioni), **EFFIS** (incendi UE — Commissione Europea), **ARPA Lazio** (qualità dell'aria regionale), **ANAS** (viabilità nazionale), **AEGIS Regione Lazio** (tempo reale Lazio), **Copernicus EMS** (emergenze UE), **Windy Webcams** (raccolta webcam pubbliche) e **meteoblue multi-modello** (confronto previsionale tra più modelli numerici, servizio commerciale). Cliccando su questi link, la navigazione esce dal nostro dominio e si applicano le rispettive informative privacy dei fornitori, consultabili sui loro siti.
+All'apertura della pagina, il browser scarica le sole porzioni di mappa necessarie alla visualizzazione. OpenStreetMap può quindi ricevere dati tecnici della richiesta, come indirizzo IP, area visualizzata e livello di zoom, secondo le proprie policy.
 
-Per non caricare un widget è sufficiente **non cliccare il pulsante** di attivazione. In alternativa è possibile consultare le stesse informazioni direttamente sui siti dei fornitori senza interazione col nostro sito.
+La funzione **Centra sulla mia posizione** usa la Geolocation API del browser. La posizione viene letta solo dopo autorizzazione dell'utente, è usata localmente per centrare la mappa e non viene inviata al nostro server.
 
-### Come disabilitare i cookie
+## Link esterni
 
-L'utente può disabilitare i cookie modificando le impostazioni del proprio browser. La disabilitazione dei cookie tecnici potrebbe compromettere alcune funzionalità del sito.
+La pagina [Strumenti](/strumenti/) e altre sezioni del sito contengono link a servizi esterni, per esempio ISPRA IdroGEO, EFFIS, ARPA Lazio, ANAS, AEGIS Regione Lazio, Copernicus EMS, Windy Webcams e meteoblue.
+
+Quando apri un link esterno, esci dal dominio del sito e si applicano le informative privacy del fornitore.
+
+## Come gestire i cookie nel browser
+
+Puoi cancellare o bloccare i cookie dalle impostazioni del browser. I percorsi cambiano a seconda del dispositivo e del programma usato. Cerca nelle impostazioni la voce **Privacy**, **Cookie** o **Dati dei siti**.
+
+## Vedi anche
+
+- [Accessibilità](/accessibilita/) — dichiarazione e strumenti del sito
+- [Strumenti in tempo reale](/strumenti/) — elenco dei servizi esterni utilizzati
+- [Contatti](/contatti/) — recapiti del Gruppo
