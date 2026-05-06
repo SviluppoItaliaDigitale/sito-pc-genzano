@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-01"
+dataUltimaRevisione: "2026-05-06"
 ---
 
 Questa pagina è dedicata a **dirigenti, docenti coordinatori di Educazione Civica e insegnanti** che cercano materiali di Protezione Civile **già allineati alla normativa scolastica vigente**. Tutti i contenuti del Gruppo sono utilizzabili gratuitamente nelle scuole; la citazione del Gruppo nelle programmazioni è gradita.

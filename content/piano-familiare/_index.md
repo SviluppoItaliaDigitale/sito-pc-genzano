@@ -7,6 +7,7 @@ aliases:
   - /pianofamiliare.html
   - /pianofamiliare/
 toc: true
+dataUltimaRevisione: "2026-05-06"
 ---
 La sicurezza parte da te e dalla tua famiglia. Dedica pochi minuti a compilare questo modulo: lo strumento genererà un piano personalizzato che potrai stampare e conservare in un luogo sicuro. **Tutti i dati inseriti restano solo sul tuo computer**: non vengono inviati al sito, non vengono salvati online e non vengono trasmessi al Gruppo.
 

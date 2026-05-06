@@ -6,7 +6,7 @@ toc: false
 sitemap:
   priority: 0.4
   changefreq: monthly
-dataUltimaRevisione: "2026-04-27"
+dataUltimaRevisione: "2026-05-06"
 ---
 
 Questa pagina elenca tutti i **pittogrammi standardizzati** disponibili nella libreria del sito, utilizzabili dalla redazione tramite lo shortcode Hugo `{{</* pittogramma src="..." alt="..." */>}}`.

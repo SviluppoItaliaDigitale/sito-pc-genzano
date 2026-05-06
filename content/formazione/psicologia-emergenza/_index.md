@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-01"
+dataUltimaRevisione: "2026-05-06"
 ---
 
 Un'**emergenza** non è solo un evento fisico (terremoto, alluvione, incendio): è anche un evento **psicologico** che lascia tracce su chi la vive direttamente, su chi la osserva, su chi presta soccorso. Ignorare questa dimensione produce danni a lungo termine. Questa pagina spiega in modo prudente:

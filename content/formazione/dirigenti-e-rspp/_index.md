@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-01"
+dataUltimaRevisione: "2026-05-06"
 ---
 
 Questa pagina è dedicata a chi nell'Istituto ha **responsabilità formali** sulla sicurezza e sulla regolarità amministrativa: **Dirigente Scolastico**, **DSGA**, **RSPP** e **ASPP**, **referente sicurezza**, **medico competente** dove presente. Spiega in modo trasparente **cosa il Gruppo può fare**, **cosa non può fare**, e come si coordina con il piano di emergenza dell'Istituto.

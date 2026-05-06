@@ -9,6 +9,7 @@ sitemap:
   changefreq: monthly
 toc: true
 tts: true
+dataUltimaRevisione: "2026-05-06"
 ---
 
 ## Allerte Meteo

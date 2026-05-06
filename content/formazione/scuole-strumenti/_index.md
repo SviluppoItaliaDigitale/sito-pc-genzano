@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-01"
+dataUltimaRevisione: "2026-05-06"
 ---
 
 Questa pagina raccoglie i **moduli operativi** che il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma mette a disposizione delle scuole che vogliono lavorare con noi. Sono divisi in **due pacchetti distinti**, perché coprono finalità diverse:
