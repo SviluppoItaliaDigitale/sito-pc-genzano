@@ -39,7 +39,7 @@
     if(p.pauseAnimations)add('a11y-pause-animations');
     if(p.highlightLinks)add('a11y-highlight-links');
     if(p.bigCursor)add('a11y-big-cursor');
-    if(p.hideTranslateButton){h.setAttribute('translate','no');add('notranslate');var m=document.createElement('meta');m.setAttribute('name','google');m.setAttribute('content','notranslate');document.head.appendChild(m);}
+    if(p.hideTranslateButton){add('a11y-hide-translate-button');h.setAttribute('translate','no');add('notranslate');var m=document.createElement('meta');m.setAttribute('name','google');m.setAttribute('content','notranslate');document.head.appendChild(m);}
   }catch(e){}})();
   </script>
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}

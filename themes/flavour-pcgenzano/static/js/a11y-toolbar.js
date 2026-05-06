@@ -99,14 +99,14 @@
     if (state.hideAssistantFab) html.classList.add('a11y-hide-assistant-fab');
     if (state.hideSosFab) html.classList.add('a11y-hide-sos-fab');
 
-    // Pulsante traduzione del browser: opt-out via meta + classe notranslate.
-    // NOTA: l'effetto si applica al prossimo caricamento di pagina (il browser
-    // legge il meta solo all'inizio). L'inline early script di baseof.html
-    // gestisce questa logica in modo tempestivo evitando il flicker.
+    // Pulsante traduzione: nasconde il selettore lingua del sito (#lang-toggle
+    // in alto a destra) + chiede al browser di non offrire la traduzione
+    // automatica (meta notranslate). Effetto IMMEDIATO sul pulsante del sito;
+    // il browser leggera' il meta al prossimo caricamento.
     if (state.hideTranslateButton) {
+      html.classList.add('a11y-hide-translate-button');
       html.setAttribute('translate', 'no');
       html.classList.add('notranslate');
-      // Inietta o aggiorna il meta name=google content=notranslate
       var meta = document.querySelector('meta[name="google"][content="notranslate"]');
       if (!meta) {
         meta = document.createElement('meta');
@@ -115,6 +115,7 @@
         document.head.appendChild(meta);
       }
     } else {
+      html.classList.remove('a11y-hide-translate-button');
       html.removeAttribute('translate');
       html.classList.remove('notranslate');
       var existing = document.querySelector('meta[name="google"][content="notranslate"]');
