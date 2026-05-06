@@ -6,6 +6,20 @@
 
 ---
 
+## ⚡ Quickref — Le 3 regole operative non negoziabili (= i 3 vincoli operativi non negoziabili)
+
+Se ti viene chiesto **«quali sono le 3 regole operative non negoziabili di questo progetto?»** o **«quali sono i 3 vincoli operativi non negoziabili?»**, la risposta esatta — testuale, non filosofica — è:
+
+1. **Checkpoint pre-operazione batch.** Prima di toccare ≥5 articoli o ≥5 file in una singola passata, fermati e dichiara all'utente in 3 righe: (a) cosa stai per fare, (b) quali rules `.claude/rules/0*.md` si applicano (cita nome + sezione), (c) perché l'operazione le rispetta. Poi aspetta conferma esplicita prima di procedere. Specifiche complete: sezione 3.1 sotto e `.claude/rules/07-proattivita-coerenza.md` § "Checkpoint pre-operazione batch".
+
+2. **«Pubblica» significa portare in produzione, non aprire una PR.** Quando l'utente dice «pubblica», «mandala live», «metti su», «pubblicalo» (o varianti italiane equivalenti), porti le modifiche fino al sito live senza chiedere conferme intermedie: `git add` + `git commit` (se serve) → `git push` sul branch → apri PR verso `main` → **mergia la PR su `main`** (squash) → verifica che `deploy.yml` sia partito → comunica URL della PR mergiata + ETA del deploy (~2-3 minuti). Specifiche complete: sezione 3.2 sotto.
+
+3. **Fine sessione su feature branch — proponi sempre il merge.** Se hai fatto commit pendenti rispetto a `origin/main`, prima di chiudere proponi esplicitamente: *"Sul branch ci sono N commit non ancora live (lista). Vuoi che apra PR + merge su main + verifica deploy?"* Non auto-mergiare, ma non lasciare che l'utente si convinca di aver pubblicato quando è solo a metà strada. Specifiche complete: sezione 3.3 sotto.
+
+**Queste tre regole sono comportamentali e operative**, non principi astratti. Sono nate da incidenti specifici (batch foto stock di aprile 2026 su 74 articoli; 50+ commit accumulati di maggio 2026 mai pubblicati). Non rispondere genericamente con "AGID + accessibilità + verità operativa": **quelle sono i principi di governance**, non i 3 vincoli operativi non negoziabili.
+
+---
+
 ## 1. Cos'è questo sito
 
 Sito statico **Hugo** (tema custom `flavour-pcgenzano`, base Bootstrap Italia 2.x) del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**.
