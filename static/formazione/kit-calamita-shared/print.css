@@ -259,7 +259,11 @@ ul.elenco-pratico li::before {
   .no-print { display: none !important; }
   @page {
     size: A4;
-    margin: 0;
+    /* margin: 5mm invece di 0: alcune stampanti fisiche hanno
+       margini non stampabili e rischiano di tagliare il bordo.
+       Il padding interno della .scheda (12mm) compensa la perdita
+       e il contenuto resta centrato. */
+    margin: 5mm;
   }
 }
 

@@ -226,6 +226,34 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 }
 .section-title.text-center::after { left: 50%; transform: translateX(-50%); }
 
+/* ============================================================
+   PATTERN HOVER-LIFT v1.0 (consolidato 2026-05-06)
+   ============================================================
+   Pattern uniforme di "lift" al hover delle card del sito.
+   Applicato a queste classi (cerca translateY(-3px) per averle tutte):
+
+     .quick-action-card     (homepage hero)
+     .card-servizio         (homepage servizi)
+     .card-notizia-hero     (notizie in evidenza)
+     .lang-card             (selettore lingue)
+     .articolo-nav-card     (prev/next articolo)
+     .articolo-correlato-card (leggi anche)
+     .ms-card               (mappa sito, CSS in content/mappa-sito/_index.md)
+     .back-to-top           (FAB scroll-to-top)
+
+   Pattern visivo:
+     transform: translateY(-3px);
+     box-shadow: 0 10px 22px rgba(0, 51, 102, 0.14);
+     transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+   NON applicato a card a "lift laterale" (translateX): .card-notizia-small,
+   .card-social-link — hanno layout orizzontale, il translateY non avrebbe senso.
+
+   Quando aggiungi una nuova card, segui lo stesso pattern. Aggiorna anche
+   l'elenco qui sopra. Override scoped body.home-page del v1.0 e' nel
+   blocco "HOMEPAGE ENHANCEMENTS v1.0" (cerca quel header in basso).
+   ============================================================ */
+
 /* ── QUICK ACTIONS (piu grandi) ── */
 .quick-action-card {
   background: #fff;

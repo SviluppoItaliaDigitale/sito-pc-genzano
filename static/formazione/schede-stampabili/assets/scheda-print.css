@@ -539,7 +539,10 @@ table.scheda-tabella th {
 @media print {
   @page {
     size: A4;
-    margin: 0;
+    /* margin: 5mm invece di 0: alcune stampanti fisiche hanno
+       margini non stampabili e rischiano di tagliare il bordo.
+       Il padding della .scheda interno compensa. */
+    margin: 5mm;
   }
   body {
     background: #fff;
