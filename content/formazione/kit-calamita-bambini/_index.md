@@ -79,6 +79,13 @@ Queste schede sono **pronte da stampare in formato A4** e possono essere usate d
 | 38 | [Calendario emotivo settimanale](/formazione/kit-calamita-bambini/38-calendario-emotivo-settimana.html) | Per osservare come cambiano le emozioni durante la settimana e parlarne con un adulto se serve. |
 | 39 | [Cose che voglio imparare](/formazione/kit-calamita-bambini/39-cose-che-voglio-imparare.html) | Per guardare avanti attraverso curiosità, competenze e obiettivi semplici. |
 | 40 | [Lettera all’amministrazione del campo](/formazione/kit-calamita-bambini/40-lettera-amministrazione-campo.html) | Per esercitare cittadinanza attiva: segnalare bisogni, proporre miglioramenti o ringraziare. |
+
+### Schede di autoprotezione operativa
+
+Schede che insegnano comportamenti pratici e procedure di autoprotezione: come chiamare il 112, cosa mettere nello zaino, cosa fare in caso di terremoto, codici colore dell'allerta meteo.
+
+| # | Scheda | Quando usarla |
+|---|---|---|
 | 48 | [I 4 colori dell'allerta meteo](/formazione/kit-calamita-bambini/48-codici-colore-allerta.html) | Codici colore di allerta CFR Lazio: colorare verde/giallo/arancione/rosso e abbinare il "cosa fare". |
 | 49 | [La telefonata al 112: cosa dico](/formazione/kit-calamita-bambini/49-chiamata-112-copione.html) | Copione "chi sono / dove sono / cosa è successo" da compilare e tenere in tasca. |
 | 50 | [Il mio zainetto di emergenza](/formazione/kit-calamita-bambini/50-zainetto-emergenza.html) | Checklist + spazio per disegnare il go-bag personale (acqua, torcia, fischietto, dati identificativi). |
@@ -86,6 +93,39 @@ Queste schede sono **pronte da stampare in formato A4** e possono essere usate d
 | 52 | [Terremoto: cosa faccio in 4 mosse](/formazione/kit-calamita-bambini/52-terremoto-4-mosse.html) | Procedura sismica passo-passo (sotto al riparo → controllo → cerco adulto → punto di raccolta). |
 | 53 | [So scrivere chi sono](/formazione/kit-calamita-bambini/53-pregrafismo-identita.html) | Pregrafismo identità: nome, cognome, città, telefono di un adulto. Per bambini che potrebbero perdersi. |
 | 54 | [Al campo, cerchia i pericoli](/formazione/kit-calamita-bambini/54-cerchia-pericoli-campo.html) | Scena con oggetti sicuri e pericolosi al campo: cerchiare in rosso quelli da non toccare. |
+
+### Schede di supporto psicologico post-evento (PFA / MHPSS)
+
+Strumenti di **Primo Supporto Psicosociale (Psychological First Aid)** e **Mental Health and Psychosocial Support (MHPSS)** ispirati alla manualistica internazionale (NCTSN, WHO, IASC, UNICEF, Save the Children CFS, ARC, Sesame Street in Communities, INEE). **Non sostituiscono** un intervento clinico specialistico: sono attività di prima accoglienza per ridurre stress acuto, normalizzare le reazioni e rinforzare la rete di sostegno percepita.
+
+| # | Scheda | Fonte di riferimento |
+|---|---|---|
+| 55 | [Termometro delle emozioni](/formazione/kit-calamita-bambini/55-termometro-emotivo.html) | NCTSN PFA — Feelings Thermometer 0-10 |
+| 56 | [La mano della calma](/formazione/kit-calamita-bambini/56-mano-della-calma.html) | NCTSN/WHO — 5 strategie auto-regolazione |
+| 57 | [La respirazione della pancia](/formazione/kit-calamita-bambini/57-respirazione-pancia.html) | WHO/NCTSN — Belly breathing diaframmatica |
+| 58 | [5-4-3-2-1: il gioco dei sensi](/formazione/kit-calamita-bambini/58-grounding-5-4-3-2-1.html) | NCTSN/IASC — Tecnica di grounding sensoriale |
+| 59 | [Il mio posto sicuro](/formazione/kit-calamita-bambini/59-posto-sicuro.html) | NCTSN/WHO — Safe Place Visualization |
+| 60 | [È normale provare questo](/formazione/kit-calamita-bambini/60-e-normale-provare-questo.html) | NCTSN — Normalizzare reazioni post-evento |
+| 61 | [Cosa mi serve adesso](/formazione/kit-calamita-bambini/61-cosa-mi-serve-adesso.html) | WHO PFA — Needs Identification |
+| 62 | [La mappa dei miei legami](/formazione/kit-calamita-bambini/62-mappa-legami-famiglia.html) | WHO/UNICEF — Family Connection Map |
+| 63 | [I miei oggetti di conforto](/formazione/kit-calamita-bambini/63-oggetti-conforto.html) | WHO PFA — Comfort/Transitional Objects |
+| 64 | [La mappa del corpo](/formazione/kit-calamita-bambini/64-mappa-del-corpo.html) | Save the Children CFS — Body Map |
+| 65 | [La scatola delle preoccupazioni](/formazione/kit-calamita-bambini/65-scatola-preoccupazioni.html) | Save the Children CFS / NCTSN — Worry Box |
+| 66 | [L'albero delle speranze](/formazione/kit-calamita-bambini/66-albero-speranze.html) | Save the Children CFS — Hope Tree |
+| 67 | [La coperta del sonno](/formazione/kit-calamita-bambini/67-coperta-del-sonno.html) | Save the Children CFS — Sleep Routine |
+| 68 | [Le 8 carte delle strategie](/formazione/kit-calamita-bambini/68-coping-cards.html) | UNICEF MHPSS — Coping Cards ritagliabili |
+| 69 | [L'albero delle mie forze](/formazione/kit-calamita-bambini/69-albero-delle-forze.html) | UNICEF MHPSS — Strength Tree |
+| 70 | [La mia linea del tempo](/formazione/kit-calamita-bambini/70-timeline-passato-presente-futuro.html) | UNICEF MHPSS — Time Orientation |
+| 71 | [La ruota della cura di me](/formazione/kit-calamita-bambini/71-ruota-cura-di-se.html) | IASC MHPSS — Self-Care Wheel |
+| 72 | [A chi chiedo aiuto per cosa](/formazione/kit-calamita-bambini/72-a-chi-chiedo-aiuto.html) | IASC — Help-Seeking Flowchart |
+| 73 | [Luoghi sicuri e da evitare al campo](/formazione/kit-calamita-bambini/73-mappa-luoghi-sicuri-campo.html) | ARC Resource Pack — Protection Mapping |
+| 74 | [Le emozioni grandi](/formazione/kit-calamita-bambini/74-emozioni-grandi.html) | Sesame Street in Communities — Big Feelings |
+| 75 | [Cosa mi aiuta a stare meglio](/formazione/kit-calamita-bambini/75-cosa-mi-aiuta-stare-meglio.html) | Sesame Street — What Helps Me Feel Better |
+| 76 | [Il pensiero coraggioso](/formazione/kit-calamita-bambini/76-pensiero-coraggioso.html) | Sesame Street — Brave Thought / Cognitive Reframing |
+| 77 | [La carta del conforto](/formazione/kit-calamita-bambini/77-carta-del-conforto.html) | Sesame Street — Comfort Card |
+| 78 | [Il mio spazio di apprendimento](/formazione/kit-calamita-bambini/78-mio-spazio-di-apprendimento.html) | INEE — Education in Emergencies Standards |
+| 79 | [Il patto del nostro campo](/formazione/kit-calamita-bambini/79-patto-del-campo.html) | INEE/UNICEF — Group Agreement |
+| 80 | [So dire cosa mi serve](/formazione/kit-calamita-bambini/80-so-dire-cosa-mi-serve.html) | ARC Resource Pack — Self-Advocacy |
 
 ### Schede dedicate inclusione
 
