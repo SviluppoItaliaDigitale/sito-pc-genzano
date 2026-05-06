@@ -10,6 +10,8 @@ Preparare un kit di emergenza non significa comprare tutto subito. Si può inizi
 
 Questa pagina aiuta famiglie, anziani, studenti e persone con budget limitato a costruire un kit utile, realistico e sostenibile.
 
+Questa pagina non indica marchi, negozi o prodotti commerciali: gli esempi sono categorie generiche di materiali utili in emergenza.
+
 ## Prima regola: non serve comprare tutto insieme
 
 Un buon kit nasce da tre idee semplici:
