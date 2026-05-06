@@ -153,17 +153,10 @@ Per esplorare la possibilità ti invitiamo a **richiedere un colloquio con il Co
 
 Per i termini tecnici (PAI, COC, DICOMAC, IT-alert, NUE, AeDES…) consulta il **[Glossario di Protezione Civile](/glossario/)**: una pagina dedicata che spiega in parole semplici sigle e termini tecnici che incontri spesso nei bollettini, sui giornali e in questo sito.
 
-## Kit consigliato per questo rischio
+## Vedi anche
 
-Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
-
-- acqua in litri sufficienti per la famiglia;
-- torcia con pile o ricarica funzionante;
-- radio a pile o a manovella;
-- power bank carico;
-- fischietto per segnalare la presenza;
-- scarpe chiuse, guanti da lavoro e piccola coperta termica;
-- copie dei documenti, farmaci abituali e numeri utili.
-
-Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+- [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
+- [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
+- [Rischi e Prevenzione](/rischi-prevenzione/) — i rischi del territorio
+- [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo
 

@@ -210,17 +210,10 @@ Versione pubblicata il **22 aprile 2026**, aggiornata il **27 aprile 2026**. La 
 
 **27 aprile 2026** — aggiunta la sezione *"Comunicazione di crisi sui social"* con struttura standard del messaggio di allerta, policy degli hashtag, monitoraggio della disinformazione, ridondanza tra canali e accessibilità dei post. Riferimenti normativi riorganizzati in 5 livelli con gerarchia di prevalenza esplicita: italiano vincolante (AGID + DPC) → scientifico italiano (CNR, ISPRA) → tecnico-operativo europeo (EENA, CWA CEN/CENELEC) → standard internazionali (ISO 22329:2021, WCAG 2.2 AA) → normativa orizzontale. **DPC** elevato a riferimento principale insieme ad AGID.
 
-## Kit consigliato per questo rischio
+## Vedi anche
 
-Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
-
-- torcia;
-- radio a pile o a manovella;
-- power bank carico;
-- acqua e alimenti semplici;
-- farmaci abituali;
-- scarpe chiuse e guanti da lavoro;
-- numeri utili stampati.
-
-Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+- [Privacy e cookie](/privacy/) — trattamento dei dati personali
+- [Note legali](/note-legali/) — licenze e responsabilità del sito
+- [Accessibilità](/accessibilita/) — strumenti per la lettura del sito
+- [Comunicazioni](/comunicazioni/) — archivio degli articoli pubblicati
 

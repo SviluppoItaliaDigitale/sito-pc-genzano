@@ -220,17 +220,10 @@ Tutti gli articoli sulle allerte meteo sono filtrabili nell'[archivio delle comu
 - [Radar nazionale precipitazioni](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/)
 - [Meteo Aeronautica Militare](https://www.meteoam.it/it/home)
 
-## Kit consigliato per questo rischio
+## Vedi anche
 
-Per temporali forti, fulmini, grandine e vento prepara un piccolo kit domestico per blackout o interruzioni temporanee dei servizi.
-
-- torcia con pile cariche;
-- radio a pile o a manovella;
-- power bank carico;
-- acqua e alimenti semplici;
-- farmaci abituali;
-- numeri utili stampati;
-- coperta leggera o indumenti adatti alla stagione.
-
-Durante i temporali evita alberi isolati, strutture metalliche, corsi d'acqua e spostamenti non necessari. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+- [Rischi e Prevenzione](/rischi-prevenzione/) — cosa fare per ogni tipo di rischio
+- [Cartografia](/cartografia/) — mappe del territorio e degli scenari
+- [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
+- [Piano familiare](/piano-familiare/) — il piano di emergenza per la tua famiglia
 
