@@ -196,6 +196,11 @@ Insieme di organizzazioni senza fini di lucro che svolgono attività di interess
 ### VVF
 **Vigili del Fuoco** — Corpo Nazionale dei Vigili del Fuoco. Ente del Ministero dell'Interno specializzato in soccorso tecnico urgente: incendi, dissesti statici, ricerche persone. Numero diretto storico: 115. **Oggi si chiama il 112**, che inoltra la chiamata.
 
+## Y
+
+### YouPol
+App ufficiale della **Polizia di Stato** per segnalare in modo anonimo o registrato episodi di **bullismo**, **violenza domestica**, **spaccio di droga** e altri reati. Le segnalazioni possono includere foto, video o messaggi vocali e arrivano direttamente alla Sala Operativa della Questura competente. Gratuita per Android e iOS. Approfondimento: [articolo dedicato](/comunicazioni/2026-04-27-app-youpol-polizia-stato-bullismo-violenza-droga/).
+
 ## Z
 
 ### Zona di allerta
