@@ -1,6 +1,6 @@
 ---
 title: "Facile da leggere"
-description: "Le informazioni più importanti di Protezione Civile in versione semplice. Frasi corte. Parole facili. Per tutti."
+description: "Le informazioni più importanti di Protezione Civile in versione semplice. Frasi corte, parole comuni e istruzioni pratiche."
 tts: true
 layout: "single"
 aliases:
@@ -12,7 +12,7 @@ sitemap:
 ---
 
 <div class="alert alert-success" role="note" style="font-size: 1.15rem; line-height: 1.6;">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Questa pagina usa parole semplici. Frasi corte. Per tutti. Anche per chi ha difficoltà a leggere o capisce poco l'italiano.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Questa pagina usa parole semplici e frasi corte. È pensata per tutti, anche per chi ha difficoltà a leggere o conosce poco l'italiano.</p>
 </div>
 
 <style>
@@ -115,11 +115,11 @@ sitemap:
 <a class="tel-grande" href="tel:112">📞 Chiama il 112</a>
 <p>Quando rispondono, dì:</p>
 <ul class="facile-elenco">
-<li>Il tuo nome</li>
-<li>Cosa è successo</li>
-<li>Dove sei</li>
+<li>come ti chiami;</li>
+<li>cosa è successo;</li>
+<li>dove sei.</li>
 </ul>
-<p>Parla piano. Non riagganciare.</p>
+<p>Parla piano. Non chiudere la chiamata.</p>
 </div>
 
 <div class="facile-blocco">
@@ -129,54 +129,54 @@ sitemap:
 {{< pittogramma src="/pittogrammi/arasaac/nascondersi-tavolo.png" alt="Pittogramma: persona che si nasconde sotto un tavolo durante il terremoto" size="large" >}}
 
 <ul class="facile-elenco">
-<li>Vai sotto un tavolo</li>
-<li>Metti le mani sulla testa</li>
-<li>Aspetta fermo</li>
+<li>vai sotto un tavolo;</li>
+<li>metti le mani sulla testa;</li>
+<li>aspetta fermo.</li>
 </ul>
-<p><strong>Non fare</strong>:</p>
+<p><strong>Non fare queste cose:</strong></p>
 <ul class="facile-elenco no">
-<li>Non scappare di corsa</li>
-<li>Non usare l'ascensore</li>
-<li>Non andare alla finestra</li>
+<li>non scappare di corsa;</li>
+<li>non usare l'ascensore;</li>
+<li>non andare alla finestra.</li>
 </ul>
-<p>Quando smette di tremare, esci con calma.</p>
+<p>Quando la scossa finisce, esci con calma se il luogo non è sicuro.</p>
 </div>
 
 <div class="facile-blocco">
 <h2><span class="icona">🌧️</span> Se piove molto forte</h2>
-<p>Se piove tanto e c'è il fango:</p>
+<p>Se piove tanto e l'acqua sale:</p>
 
 {{< pittogramma src="/pittogrammi/arasaac/alluvione.png" alt="Pittogramma: alluvione con acqua alta" size="large" >}}
 
 <ul class="facile-elenco">
-<li>Resta in casa</li>
-<li>Vai al piano alto</li>
-<li>Stacca la luce con un adulto</li>
+<li>resta in casa;</li>
+<li>vai al piano alto;</li>
+<li>stacca la luce con un adulto, solo se puoi farlo senza pericolo.</li>
 </ul>
-<p><strong>Non fare</strong>:</p>
+<p><strong>Non fare queste cose:</strong></p>
 <ul class="facile-elenco no">
-<li>Non andare in cantina</li>
-<li>Non passare nei sottopassaggi</li>
-<li>Non bere l'acqua del rubinetto se le autorità dicono che non è sicura</li>
+<li>non andare in cantina;</li>
+<li>non passare nei sottopassaggi;</li>
+<li>non bere l'acqua del rubinetto se le autorità dicono che non è sicura.</li>
 </ul>
 </div>
 
 <div class="facile-blocco">
-<h2><span class="icona">🔥</span> Se vedi del fumo</h2>
-<p>Se vedi fumo grande in casa:</p>
+<h2><span class="icona">🔥</span> Se vedi fumo</h2>
+<p>Se vedi molto fumo in casa:</p>
 
 {{< pittogramma src="/pittogrammi/arasaac/incendio.png" alt="Pittogramma: incendio" size="large" >}}
 
 <ul class="facile-elenco">
-<li>Avvisa subito un adulto</li>
-<li>Esci di casa</li>
-<li>Chiama il <strong>112</strong></li>
+<li>avvisa subito un adulto;</li>
+<li>esci di casa;</li>
+<li>chiama il <strong>112</strong>.</li>
 </ul>
-<p><strong>Non fare</strong>:</p>
+<p><strong>Non fare queste cose:</strong></p>
 <ul class="facile-elenco no">
-<li>Non tornare indietro</li>
-<li>Non prendere l'ascensore</li>
-<li>Non aprire le finestre</li>
+<li>non tornare indietro;</li>
+<li>non prendere l'ascensore;</li>
+<li>non aprire le finestre.</li>
 </ul>
 </div>
 
@@ -187,15 +187,15 @@ sitemap:
 {{< pittogramma src="/pittogrammi/arasaac/temporale.png" alt="Pittogramma: temporale con fulmini e pioggia" size="large" >}}
 
 <ul class="facile-elenco">
-<li>Resta in casa</li>
-<li>Chiudi le finestre</li>
-<li>Aspetta che passi</li>
+<li>resta in casa;</li>
+<li>chiudi le finestre;</li>
+<li>aspetta che passi.</li>
 </ul>
-<p><strong>Non stare</strong>:</p>
+<p><strong>Non stare:</strong></p>
 <ul class="facile-elenco no">
-<li>Non sotto un albero</li>
-<li>Non in piscina</li>
-<li>Non sul balcone</li>
+<li>sotto un albero;</li>
+<li>in piscina;</li>
+<li>sul balcone.</li>
 </ul>
 </div>
 
@@ -206,17 +206,17 @@ sitemap:
 {{< pittogramma src="/pittogrammi/arasaac/vento.png" alt="Pittogramma: vento forte" size="large" >}}
 
 <ul class="facile-elenco">
-<li>Resta in casa</li>
-<li>Chiudi finestre e porte</li>
-<li>Stai lontano dalle finestre</li>
+<li>resta in casa;</li>
+<li>chiudi finestre e porte;</li>
+<li>stai lontano dalle finestre.</li>
 </ul>
-<p><strong>Non fare</strong>:</p>
+<p><strong>Non fare queste cose:</strong></p>
 <ul class="facile-elenco no">
-<li>Non stare sotto un albero</li>
-<li>Non camminare vicino ai muri vecchi</li>
-<li>Non andare sul balcone</li>
+<li>non stare sotto un albero;</li>
+<li>non camminare vicino ai muri vecchi;</li>
+<li>non andare sul balcone.</li>
 </ul>
-<p>Le cose sui balconi possono volare. Mettile dentro casa.</p>
+<p>Le cose sui balconi possono cadere. Mettile dentro casa, se puoi farlo senza pericolo.</p>
 </div>
 
 <div class="facile-blocco">
@@ -226,18 +226,18 @@ sitemap:
 {{< pittogramma src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: torcia accesa" size="large" >}}
 
 <ul class="facile-elenco">
-<li>Non avere paura. Succede a volte.</li>
-<li>Usa una torcia con le pile</li>
-<li>Tieni chiuso il frigo. Il cibo dura ore.</li>
-<li>Aspetta che torni la luce</li>
+<li>resta calmo;</li>
+<li>usa una torcia con le pile;</li>
+<li>tieni chiuso il frigorifero;</li>
+<li>aspetta che torni la luce.</li>
 </ul>
-<p><strong>Non fare</strong>:</p>
+<p><strong>Non fare queste cose:</strong></p>
 <ul class="facile-elenco no">
-<li>Non accendere candele da solo</li>
-<li>Non prendere l'ascensore</li>
-<li>Non usare il barbecue dentro casa</li>
+<li>non accendere candele da solo;</li>
+<li>non prendere l'ascensore;</li>
+<li>non usare barbecue o bracieri dentro casa.</li>
 </ul>
-<p>Se hai una macchina che ti aiuta a respirare o a vivere, chiama subito il <strong>112</strong>.</p>
+<p>Se usi una macchina che ti aiuta a respirare o a vivere, chiama subito il <strong>112</strong>.</p>
 </div>
 
 <div class="facile-blocco">
@@ -247,34 +247,34 @@ sitemap:
 {{< pittogramma src="/pittogrammi/arasaac/caldo.png" alt="Pittogramma: caldo molto forte" size="large" >}}
 
 <ul class="facile-elenco">
-<li>Bevi tanta acqua</li>
-<li>Resta in casa nelle ore più calde (le 12, le 13, le 14)</li>
-<li>Chiudi le tapparelle quando c'è il sole</li>
-<li>Mangia frutta e verdura</li>
+<li>bevi acqua spesso;</li>
+<li>resta in casa nelle ore più calde;</li>
+<li>chiudi le tapparelle quando c'è il sole;</li>
+<li>mangia frutta e verdura.</li>
 </ul>
-<p><strong>Non fare</strong>:</p>
+<p><strong>Non fare queste cose:</strong></p>
 <ul class="facile-elenco no">
-<li>Non uscire al sole forte</li>
-<li>Non bere alcolici</li>
-<li>Non lasciare bambini o animali in macchina</li>
+<li>non uscire al sole forte;</li>
+<li>non bere alcolici;</li>
+<li>non lasciare bambini o animali in macchina.</li>
 </ul>
-<p>Se ti senti male, chiedi aiuto a un adulto. Se la persona perde i sensi, chiama il <strong>112</strong>.</p>
+<p>Se ti senti male, chiedi aiuto a un adulto. Se una persona perde i sensi, chiama il <strong>112</strong>.</p>
 </div>
 
 <div class="facile-blocco">
-<h2><span class="icona">🎒</span> Cosa metto nello zaino di emergenza</h2>
+<h2><span class="icona">🎒</span> Zaino di emergenza</h2>
 <p>Tieni in casa uno zaino con:</p>
 
 {{< pittogramma src="/pittogrammi/arasaac/zaino.png" alt="Pittogramma: zaino di emergenza" size="large" >}}
 
 <ul class="facile-elenco">
-<li>Acqua</li>
-<li>Cibo a lunga conservazione</li>
-<li>Torcia con le pile</li>
-<li>Coperta</li>
-<li>Caricabatteria del telefono</li>
-<li>Medicine importanti</li>
-<li>Carta d'identità</li>
+<li>acqua;</li>
+<li>cibo che dura a lungo;</li>
+<li>torcia con le pile;</li>
+<li>coperta;</li>
+<li>caricabatteria del telefono;</li>
+<li>medicine importanti;</li>
+<li>carta d'identità.</li>
 </ul>
 </div>
 
@@ -285,49 +285,44 @@ sitemap:
 
 {{< pittogramma src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Cartello del punto di raccolta" size="large" >}}
 
-<p>Sono in posti aperti e larghi.</p>
-<p>Tu vai lì se la tua casa non è sicura.</p>
-<p>👉 <a href="/cartografia/" style="display: inline-block; background: #003366; color: #fff; padding: 0.8rem 1.2rem; border-radius: 8px; text-decoration: none; margin-top: 0.5rem;">Vedi i posti sicuri di Genzano</a></p>
+<p>Sono luoghi aperti e larghi.</p>
+<p>Vai lì se la tua casa non è sicura.</p>
+<p>👉 <a href="/cartografia/" style="display: inline-block; background: #003366; color: #fff; padding: 0.8rem 1.2rem; border-radius: 8px; text-decoration: none; margin-top: 0.5rem;">Vedi le aree di attesa di Genzano</a></p>
 </div>
 
 <div class="facile-blocco">
 <h2><span class="icona">🆘</span> Chi ti aiuta</h2>
-<p>In Italia ci sono persone che ti aiutano in emergenza.</p>
+<p>In Italia ci sono persone che aiutano durante le emergenze.</p>
 
 {{< pittogramma src="/pittogrammi/arasaac/volontario.png" alt="Pittogramma: volontario di protezione civile" size="large" >}}
 
-<p>Sono:</p>
 <ul class="facile-elenco">
-<li><strong>I Vigili del Fuoco</strong> — spengono il fuoco</li>
-<li><strong>I Carabinieri</strong> — proteggono le persone</li>
-<li><strong>La Polizia</strong> — aiuta in pericolo</li>
-<li><strong>I medici</strong> — curano i feriti</li>
-<li><strong>I volontari di Protezione Civile</strong> — aiutano tutti</li>
+<li><strong>Vigili del Fuoco</strong>: spengono il fuoco e mettono in sicurezza.</li>
+<li><strong>Carabinieri e Polizia</strong>: aiutano quando c'è pericolo.</li>
+<li><strong>Soccorso sanitario</strong>: cura i feriti.</li>
+<li><strong>Volontari di Protezione Civile</strong>: aiutano la popolazione.</li>
 </ul>
-<p>Tutti questi rispondono al numero <strong>112</strong>.</p>
+<p>Per chiedere aiuto in emergenza chiama il <strong>112</strong>.</p>
 </div>
 
 <div class="facile-blocco">
 <h2><span class="icona">📚</span> Vuoi saperne di più?</h2>
 <p>Sul sito ci sono altre pagine con più dettagli.</p>
-<p>Per chi sa leggere bene:</p>
 <ul class="facile-elenco">
 <li><a href="/cosa-fare-adesso/">Cosa fare adesso</a></li>
 <li><a href="/piano-familiare/">Piano per la mia famiglia</a></li>
 <li><a href="/numeri-utili/">Numeri di telefono utili</a></li>
 <li><a href="/faq/">Domande frequenti</a></li>
+<li><a href="/formazione/easy-to-read-scuola/">Schede semplici per la scuola</a></li>
 </ul>
-<p>Per le maestre e i maestri:</p>
-<ul class="facile-elenco">
-<li><a href="/formazione/easy-to-read-scuola/">Easy-to-Read per le scuole</a> — schede semplificate da stampare in classe</li>
-</ul>
-<p>Se hai bisogno di aiuto a leggere, chiedi a un familiare o a un amico.</p>
+<p>Se hai bisogno di aiuto a leggere, chiedi a un familiare, a un insegnante o a una persona di fiducia.</p>
 </div>
 
 <div class="facile-blocco" style="background: #fff3cd; border-color: #b45309;">
 <h2 style="color: #b45309;"><span class="icona" style="background: #b45309;">✉️</span> Vuoi scriverci?</h2>
-<p>Se hai una domanda, scrivi a:</p>
+<p>Se hai una domanda non urgente, scrivi a:</p>
 <p style="text-align: center; font-size: 1.1rem;"><a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></p>
-<p>Oppure vai alla nostra sede:</p>
+<p>Oppure vieni alla nostra sede:</p>
 <p style="text-align: center;"><strong>Via Sicilia 13-15</strong><br>Genzano di Roma</p>
+<p>Se c'è un'emergenza, non scrivere email. Chiama il <strong>112</strong>.</p>
 </div>
