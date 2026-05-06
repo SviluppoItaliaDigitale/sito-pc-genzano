@@ -22,7 +22,8 @@
     highlightLinks: false,
     bigCursor: false,
     hideAssistantFab: false,
-    hideSosFab: false
+    hideSosFab: false,
+    hideTranslateButton: false
   };
 
   var state = Object.assign({}, defaults);
@@ -97,6 +98,28 @@
     // Pulsanti flottanti: nascondi Assistente / SOS-112
     if (state.hideAssistantFab) html.classList.add('a11y-hide-assistant-fab');
     if (state.hideSosFab) html.classList.add('a11y-hide-sos-fab');
+
+    // Pulsante traduzione del browser: opt-out via meta + classe notranslate.
+    // NOTA: l'effetto si applica al prossimo caricamento di pagina (il browser
+    // legge il meta solo all'inizio). L'inline early script di baseof.html
+    // gestisce questa logica in modo tempestivo evitando il flicker.
+    if (state.hideTranslateButton) {
+      html.setAttribute('translate', 'no');
+      html.classList.add('notranslate');
+      // Inietta o aggiorna il meta name=google content=notranslate
+      var meta = document.querySelector('meta[name="google"][content="notranslate"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', 'google');
+        meta.setAttribute('content', 'notranslate');
+        document.head.appendChild(meta);
+      }
+    } else {
+      html.removeAttribute('translate');
+      html.classList.remove('notranslate');
+      var existing = document.querySelector('meta[name="google"][content="notranslate"]');
+      if (existing) existing.remove();
+    }
   }
 
   // Applica subito allo start (prima del DOM ready) per evitare flash

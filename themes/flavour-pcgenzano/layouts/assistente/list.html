@@ -23,6 +23,29 @@
         </div>
       </div>
 
+      {{/* ── CERCA NEL SITO ──────────────────────────────────
+           Campo di ricerca rapida sopra l'assistente: l'utente che gia'
+           sa cosa cercare puo' digitare direttamente senza percorrere
+           l'albero decisionale. Usa lo stesso index.json di /cerca/
+           (esteso anche con le pagine HTML statiche).                 */}}
+      <div id="assistente-search" class="card border-primary mb-4">
+        <div class="card-body p-3">
+          <label for="assistente-search-input" class="form-label fw-bold mb-2">
+            <i class="bi bi-search me-1" aria-hidden="true"></i>
+            Cerca direttamente nel sito
+          </label>
+          <input type="search" id="assistente-search-input" class="form-control"
+                 placeholder="Es. terremoto, 112, kit emergenza, evacuazione…"
+                 autocomplete="off" inputmode="search"
+                 aria-describedby="assistente-search-count">
+          <div id="assistente-search-count" class="small text-muted mt-1"></div>
+          <div id="assistente-search-results" class="mt-2" role="region" aria-live="polite"></div>
+          <p class="small text-muted mt-2 mb-0">
+            Oppure scegli un percorso guidato qui sotto.
+          </p>
+        </div>
+      </div>
+
       <section id="assistente-app" aria-live="polite" aria-atomic="true">
         <!-- Popolato da JavaScript. Fallback no-JS sotto. -->
       </section>
@@ -1368,6 +1391,114 @@
 
   restoreFromHash();
   render();
+})();
+</script>
+
+<script>
+// =========================================================================
+// CERCA NEL SITO — campo di ricerca integrato nell'assistente.
+// Riusa public/index.json (gli stessi dati del template /cerca/, esteso
+// dallo script aggiungi-pagine-statiche-al-cerca.py al build).
+// =========================================================================
+(function () {
+  'use strict';
+
+  var input = document.getElementById('assistente-search-input');
+  var box = document.getElementById('assistente-search-results');
+  var cnt = document.getElementById('assistente-search-count');
+  if (!input || !box || !cnt) return;
+
+  var idx = null;
+  var loading = false;
+
+  // Costruisce l'URL dell'index.json: usa absURL relativo alla root del sito,
+  // così funziona sia su Aruba (root) sia su GitHub Pages (subpath).
+  var jsonURL = '{{ "index.json" | absURL }}';
+
+  function loadIndex() {
+    if (idx || loading) return;
+    loading = true;
+    fetch(jsonURL)
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        idx = data;
+        cnt.textContent = idx.length + ' pagine indicizzate. Digita almeno 3 caratteri.';
+      })
+      .catch(function () {
+        cnt.textContent = 'Errore caricamento indice di ricerca.';
+      });
+  }
+
+  // Carica l'indice al primo focus per non rallentare il page-load
+  input.addEventListener('focus', loadIndex, { once: true });
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function search(q) {
+    var ql = q.toLowerCase().trim();
+    if (ql.length < 3) {
+      box.innerHTML = '';
+      cnt.textContent = idx ? idx.length + ' pagine indicizzate. Digita almeno 3 caratteri.' : '';
+      return;
+    }
+    if (!idx) {
+      box.innerHTML = '<p class="small text-muted">Caricamento indice in corso…</p>';
+      return;
+    }
+    var res = [];
+    for (var i = 0; i < idx.length; i++) {
+      var p = idx[i];
+      var titleLow = (p.title || '').toLowerCase();
+      var contentLow = (p.content || '').toLowerCase();
+      var descLow = (p.description || '').toLowerCase();
+      var score = 0;
+      if (titleLow.indexOf(ql) >= 0) score += 10;
+      if (descLow.indexOf(ql) >= 0) score += 5;
+      if (contentLow.indexOf(ql) >= 0) score += 1;
+      if (score > 0) res.push({ p: p, score: score });
+    }
+    res.sort(function (a, b) { return b.score - a.score; });
+    res = res.slice(0, 8);
+
+    if (res.length === 0) {
+      box.innerHTML = '<p class="small text-muted">Nessun risultato. Prova con parole diverse o usa un percorso guidato qui sotto.</p>';
+      cnt.textContent = '0 risultati';
+      return;
+    }
+
+    var html = '<ul class="list-unstyled mb-0">';
+    for (var j = 0; j < res.length; j++) {
+      var p = res[j].p;
+      var snippet = '';
+      var content = p.content || p.description || '';
+      var pos = content.toLowerCase().indexOf(ql);
+      if (pos >= 0) {
+        var start = Math.max(0, pos - 40);
+        var end = Math.min(content.length, pos + ql.length + 80);
+        snippet = (start > 0 ? '… ' : '') + escapeHtml(content.substring(start, end)) + (end < content.length ? ' …' : '');
+      }
+      html += '<li class="mb-2 pb-2 border-bottom">' +
+        '<a href="' + escapeHtml(p.url) + '" class="fw-bold text-decoration-none">' +
+        escapeHtml(p.title) + '</a>';
+      if (snippet) html += '<div class="small text-muted">' + snippet + '</div>';
+      html += '</li>';
+    }
+    html += '</ul>';
+    box.innerHTML = html;
+    cnt.textContent = res.length + ' risultat' + (res.length === 1 ? 'o' : 'i');
+  }
+
+  // Debounce 150ms per non re-renderizzare ad ogni keystroke
+  var timer = null;
+  input.addEventListener('input', function () {
+    var q = this.value;
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () { search(q); }, 150);
+  });
 })();
 </script>
 
