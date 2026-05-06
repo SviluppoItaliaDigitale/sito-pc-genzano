@@ -128,7 +128,7 @@ sito-pc-genzano/
 ├── hugo.toml                   ← configurazione Hugo
 │
 ├── .claude/rules/              ← 11 regole di governance (01-08, 04 split a/b/c)
-├── .github/workflows/          ← 11 workflow CI/CD e controlli periodici
+├── .github/workflows/          ← 17 workflow CI/CD e controlli periodici
 ├── .manuale/sources-hashes.json ← stato hash fonti AGID (gestito dal workflow)
 │
 ├── archetypes/                 ← template per nuovi contenuti

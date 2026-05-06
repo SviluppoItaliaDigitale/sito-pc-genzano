@@ -52,12 +52,34 @@ gradiente non si muove (resta fisso al frame iniziale).
 ### 15.4 Hover lift card + freccia CTA che scivola
 
 Tutte le card della homepage hanno:
-- `translateY(-3px)` + ombra blu istituzionale al `:hover` o `:focus-within`.
+- `translateY(-3px)` + ombra blu istituzionale `0 10px 22px rgba(0, 51, 102, 0.14)` al `:hover` o `:focus-within`.
 - L'icona `bi-arrow-right` delle CTA scivola di 4px a destra al hover/focus.
 
 Su mobile l'effetto si attiva al `:focus-within` (cioè quando l'utente tocca/seleziona
 la card), che è il comportamento standard touch — non è una limitazione, è il pattern
 nativo del Web.
+
+#### Estensione globale del pattern (sessione 2026-05-06)
+
+Il pattern era inizialmente scoped a `body.home-page`. Dopo audit di consistency
+(commit `71c460a`) è stato esteso al **default globale** per coerenza tra tutte
+le pagine del sito. 8 selettori card uniformati al pattern v1.0 (era una mistura
+di `-2px`, `-4px`, `-5px` con ombre diverse):
+
+- `.quick-action-card`, `.card-servizio`, `.card-notizia-hero` (homepage)
+- `.lang-card` (selettore lingue)
+- `.articolo-nav-card` (prev/next articolo)
+- `.articolo-correlato-card` (leggi anche)
+- `.ms-card` (mappa sito, CSS in content/mappa-sito/_index.md)
+- `.back-to-top` (FAB scroll-to-top)
+
+Card a "lift laterale" (`.card-notizia-small`, `.card-social-link`) lasciate
+invariate per intenzione: hanno layout orizzontale, il `translateX(2-4px)` è
+coerente col loro contesto.
+
+Header documentale centralizzato in `custom.css` prima della prima card che usa
+il pattern (cerca `PATTERN HOVER-LIFT v1.0`) — elenco selettori + valori esatti
+per evitare drift futuro.
 
 ### 15.5 Estendere o disattivare le enhancement
 
