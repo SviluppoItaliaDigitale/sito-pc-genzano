@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-01"
+dataUltimaRevisione: "2026-05-06"
 ---
 
 Questa pagina è uno **strumento operativo per i docenti** che hanno poco tempo per preparare un'unità didattica e cercano un percorso **già strutturato**, con destinatari, durata, obiettivi, materiali e modalità di valutazione.

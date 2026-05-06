@@ -3,7 +3,7 @@ title: "Attribuzioni dei pittogrammi"
 description: "Crediti, fonti e licenze dei pittogrammi usati sul sito per supportare la comprensione di bambini, anziani e parlanti italiano L2."
 type: "page"
 layout: "single"
-dataUltimaRevisione: "2026-04-27"
+dataUltimaRevisione: "2026-05-06"
 ---
 
 Il sito utilizza pittogrammi standardizzati per facilitare la comprensione dei contenuti a **bambini, anziani, persone con disabilità cognitive e parlanti l'italiano come lingua seconda (L2)**. I simboli provengono da due fonti pubbliche, con licenze esplicite, riportate qui di seguito secondo le condizioni richieste dai rispettivi titolari.

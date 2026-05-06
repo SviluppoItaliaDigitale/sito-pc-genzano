@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-05"
+dataUltimaRevisione: "2026-05-06"
 ---
 
 Questa checklist aiuta i docenti a usare i materiali didattici del Gruppo Comunale di Protezione Civile di Genzano di Roma in modo semplice, ordinato e adatto all'età degli alunni.

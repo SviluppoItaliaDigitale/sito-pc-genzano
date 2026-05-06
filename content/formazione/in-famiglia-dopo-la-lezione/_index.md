@@ -7,7 +7,7 @@ type: "page"
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-05"
+dataUltimaRevisione: "2026-05-06"
 ---
 
 Se tuo figlio o tua figlia è tornato a casa parlando di **terremoto**, **allerta meteo**, **kit di emergenza**, **piano familiare** o **numero 112**, vuol dire che a scuola si è lavorato su un percorso di Protezione Civile previsto dall'**Educazione Civica** (Legge 92/2019, D.M. 183/2024).

@@ -5,6 +5,7 @@ layout: "single"
 aliases:
   - /contatti.html
 tts: true
+dataUltimaRevisione: "2026-05-06"
 ---
 
 <div class="card border-danger mb-4">

@@ -7,6 +7,7 @@ aliases:
   - /diventavolontario.html
   - /diventavolontario/
 tts: true
+dataUltimaRevisione: "2026-05-06"
 ---
 
 <div class="card border-primary mb-4">

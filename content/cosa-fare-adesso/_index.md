@@ -8,6 +8,7 @@ aliases:
 sitemap:
   priority: 0.8
   changefreq: monthly
+dataUltimaRevisione: "2026-05-06"
 ---
 
 <div class="card border-danger mb-4">

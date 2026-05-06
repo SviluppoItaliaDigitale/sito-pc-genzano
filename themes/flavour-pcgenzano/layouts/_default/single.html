@@ -54,8 +54,11 @@
       {{ partial "article-cover.html" . }}
 
       {{ else }}
-      {{/* Pagine non-comunicazione: solo data e badge */}}
-      {{ if and .Date (not (eq (.Date.Format "2006") "0001")) }}
+      {{/* Pagine non-comunicazione: solo data e badge.
+           Se la pagina ha gia' dataUltimaRevisione (mostrata sopra come box
+           "Pagina rivista il …"), saltiamo questo blocco per evitare la
+           duplicazione data che si vedeva su /formazione/percorsi-didattici/. */}}
+      {{ if and .Date (not (eq (.Date.Format "2006") "0001")) (not .Params.dataUltimaRevisione) }}
       <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
         {{ with .Params.badge }}{{ partial "badge.html" . }}{{ end }}
         <span class="notizia-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></span>

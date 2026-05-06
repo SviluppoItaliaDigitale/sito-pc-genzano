@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-05"
+dataUltimaRevisione: "2026-05-06"
 ---
 
 I materiali del Gruppo per le scuole sono **molti**: kit per fascia, schede stampabili, giochi, attività accessibili, storie, fac-simile, percorsi pronti, rubriche valutative, modulo psicologia, modulo sicurezza nei luoghi di lavoro. Per non perdersi, **scegli sotto il tuo ruolo**: arriverai in due click ai materiali utili a te.
