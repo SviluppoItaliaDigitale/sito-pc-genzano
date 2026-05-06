@@ -44,7 +44,7 @@ Queste schede sono **pronte da stampare in formato A4** e possono essere usate d
 | 13 | [Labirinto medio — il volontario raggiunge la tenda](/formazione/kit-calamita-bambini/13-labirinto-medio.html) | Per concentrazione e orientamento nello spazio. |
 | 14 | [Trova le 7 differenze — la squadra al lavoro](/formazione/kit-calamita-bambini/14-trova-7-differenze.html) | Per attenzione visiva, anche in coppia o piccolo gruppo. |
 | 15 | [Cruciverba semplice della sicurezza](/formazione/kit-calamita-bambini/15-cruciverba-semplice.html) | Per imparare parole chiave come casco, aiuto, radio, tenda e amico. |
-| 16 | [Origami — il cappello del volontario](/formazione/kit-calamita-bambini/16-origami-cappello.html) | Per motricità fine e attività manuale con risultato concreto. |
+| 16 | [Origami — la barchetta di carta](/formazione/kit-calamita-bambini/16-origami-cappello.html) | Origami classico semplice (foglio A4), tema rischio idraulico e alluvioni. Per motricità fine e sequenza di azioni. |
 | 17 | [Storia da completare con disegno](/formazione/kit-calamita-bambini/17-storia-da-completare.html) | Per inventare una piccola storia e completarla con un disegno. |
 | 18 | [Diario delle emozioni quotidiano](/formazione/kit-calamita-bambini/18-diario-emozioni.html) | Per scegliere una faccina, scrivere o disegnare come è andata la giornata. |
 | 19 | [Disegna chi ti ha aiutato oggi](/formazione/kit-calamita-bambini/19-disegna-chi-ti-ha-aiutato.html) | Per riconoscere persone di aiuto: familiari, volontari, insegnanti, amici. |
