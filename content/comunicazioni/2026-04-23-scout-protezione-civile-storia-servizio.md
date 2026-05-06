@@ -129,9 +129,9 @@ Dopo il terremoto del **24 agosto 2016** che ha distrutto Amatrice, Accumoli e A
 
 Tra il **17 giugno e il 10 settembre 2017** organizzano **cinque route di strada e servizio** in Valnerina: settimane di cammino e lavoro che attraversano i territori colpiti, con attività con bambini, anziani, disabili, e attività di recupero materiale. È una formula nuova: l'emergenza è passata, ma la **comunità ferita** ha bisogno di compagnia, di vita, di mani che lavorino accanto.
 
-{{< foto src="/images/2026-04-23-centro-italia-2016-scout.webp"
-         alt="Centro Italia 2016: la sequenza sismica che ha colpito Amatrice, Norcia, Visso e Camerino"
-         caption="Centro Italia 2016: la sequenza sismica che ha distrutto Amatrice, Accumoli, Arquata del Tronto e poi Visso, Norcia, Camerino. Gli scout dell'AGESCI Umbria hanno organizzato cinque route di servizio in Valnerina nel 2017. Foto: INGV / Centro Nazionale Terremoti — CC BY 4.0 — via Wikimedia Commons." >}}
+{{< foto src="/images/2026-evento-amatrice-2016-prima-scossa.webp"
+         alt="ShakeMap INGV del terremoto del 24 agosto 2016, magnitudo 6.0 a 1 km ovest di Accumoli"
+         caption="Mappa di intensità macrosismica della prima scossa della sequenza Centro Italia 2016 (M 6.0 alle 01:36 UTC del 24 agosto, ipocentro 8.1 km, ID INGV 7073641). L'area arancione e rossa mostra l'intensità VII-IX MCS che colpì Amatrice, Accumoli e Arquata del Tronto, prima delle scosse di Visso, Norcia e Camerino dei mesi successivi. Sulla scia di quel sisma, gli scout dell'AGESCI Umbria hanno organizzato cinque route di servizio in Valnerina nel 2017. Mappa: INGV / Centro Nazionale Terremoti — CC BY 4.0 — via Wikimedia Commons." >}}
 
 ## Emilia-Romagna 2023: la SAE attivata a Forlì
 
