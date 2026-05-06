@@ -27,8 +27,7 @@ dataUltimaRevisione: "2026-05-06"
 </div>
 </div>
 
-## Cosa sta succedendo?
-
+## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>Cosa sta succedendo? {#cosa-sta-succedendo}
 Seleziona la situazione che stai vivendo per ricevere le indicazioni operative corrette.
 
 <div class="row mt-3">
@@ -100,8 +99,7 @@ Seleziona la situazione che stai vivendo per ricevere le indicazioni operative c
 </div>
 </div>
 
-## Regole generali valide sempre
-
+## <i class="bi bi-list-check text-primary me-2" aria-hidden="true"></i>Regole generali valide sempre {#regole-generali}
 1. **Non farti prendere dal panico.** Pensa con calma e agisci in sicurezza.
 2. **Chiama il 112** per segnalare situazioni di pericolo.
 3. **Non intralciare i soccorsi.** Non recarti sui luoghi dell'emergenza per curiosità.
@@ -117,8 +115,7 @@ Seleziona la situazione che stai vivendo per ricevere le indicazioni operative c
 - **Non rientrare in un edificio danneggiato** prima del nullaosta dei Vigili del Fuoco.
 {{< /cosa-non-fare >}}
 
-## Risorse
-
+## <i class="bi bi-bookmark-star-fill text-primary me-2" aria-hidden="true"></i>Risorse {#risorse}
 - [Stato allerta meteo attuale](/allerte-meteo/)
 - [Aree di emergenza del Piano Comunale](/piano-emergenza/)
 - [Cartografia Operativa](/cartografia/)

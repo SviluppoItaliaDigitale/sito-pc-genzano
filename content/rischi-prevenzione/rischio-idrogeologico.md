@@ -8,12 +8,10 @@ toc: true
 ---
 Con il termine "rischio idrogeologico" si intendono i rischi legati all'azione delle acque: alluvioni, allagamenti, frane e smottamenti, che possono essere innescati da piogge intense e persistenti.
 
-## Perché è rilevante sul nostro territorio
-
+## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma si trova su un territorio collinare di origine vulcanica, con versanti che possono essere soggetti a frane e smottamenti, soprattutto quando il terreno è saturo d'acqua. Le aree più basse del territorio e le zone lungo i fossi possono essere interessate da allagamenti durante piogge intense. Il rischio aumenta nei periodi autunnali e primaverili.
 
-## Segnali e situazioni tipiche
-
+## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 - Piogge intense e prolungate per diverse ore
 - Innalzamento rapido del livello dell'acqua nei fossi e nei canali
 - Acqua che fuoriesce dai tombini e dalle caditoie
@@ -23,8 +21,7 @@ Genzano di Roma si trova su un territorio collinare di origine vulcanica, con ve
 
 > 🎒 **Kit consigliato per questo rischio**: prepara sia il [Kit "Vai"](/rischi-prevenzione/kit-emergenza/#kit-vai) (se devi evacuare verso un'area sicura) sia il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) (se resti ai piani alti dell'abitazione isolato dall'acqua). Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
-## Cosa fare PRIMA — Prepararsi
-
+## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA — Prepararsi {#cosa-fare-prima}
 - Informati sullo stato di allerta consultando la [pagina Allerte Meteo](/allerte-meteo/)
 - Verifica che tombini e caditoie vicino casa siano liberi da foglie e detriti
 - Metti in sicurezza auto e beni che si trovano in locali interrati o a rischio allagamento
@@ -32,8 +29,7 @@ Genzano di Roma si trova su un territorio collinare di origine vulcanica, con ve
 - Tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/)
 - Individua le zone più sicure dell'abitazione (i piani alti)
 
-## Cosa fare DURANTE l'evento
-
+## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE l'evento {#cosa-fare-durante}
 **Se sei in casa:**
 
 - Chiudi immediatamente il contatore del gas e dell'elettricità se l'acqua raggiunge gli impianti
@@ -54,8 +50,7 @@ Genzano di Roma si trova su un territorio collinare di origine vulcanica, con ve
 - Anche pochi centimetri d'acqua possono far perdere aderenza al veicolo o spegnere il motore
 - Se sei bloccato dall'acqua, **abbandona l'auto** e cerca di raggiungere un punto più elevato a piedi
 
-## Cosa fare DOPO l'evento
-
+## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO l'evento {#cosa-fare-dopo}
 - Non rientrare in casa finché le autorità non lo autorizzano
 - Non entrare in locali allagati dove sono presenti impianti elettrici
 - Non bere acqua del rubinetto finché non viene dichiarata potabile

@@ -12,8 +12,7 @@ tts: true
 dataUltimaRevisione: "2026-05-06"
 ---
 
-## Allerte Meteo
-
+## <i class="bi bi-cloud-rain-fill text-primary me-2" aria-hidden="true"></i>Allerte Meteo {#faq-allerte}
 ### Cosa significa allerta gialla, arancione e rossa?
 
 I codici colore indicano il livello di criticità prevista. Il **verde** significa nessuna criticità. Il **giallo** indica attenzione per fenomeni moderati. L'**arancione** indica preallarme con fenomeni potenzialmente pericolosi. Il **rosso** indica allarme con fenomeni molto intensi e possibili danni gravi. Per ogni livello, consulta la pagina [Allerte Meteo](/allerte-meteo/) con le indicazioni su cosa fare.
@@ -30,8 +29,7 @@ Sul sito dell'[Agenzia di Protezione Civile della Regione Lazio](https://protezi
 
 Non necessariamente, ma devi prestare attenzione. Evita le zone a rischio allagamento, non sostare lungo corsi d'acqua e tieni d'occhio le previsioni. In caso di allerta arancione o rossa, limita gli spostamenti.
 
-## Emergenze
-
+## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Emergenze {#faq-emergenze}
 ### Come posso attivare la Protezione Civile di Genzano?
 
 Il Gruppo Comunale **non può essere attivato direttamente dai cittadini**. In caso di emergenza, chiama il **112** o l'**803 555**: saranno loro ad allertare le nostre squadre se necessario. Per approfondire, consulta la pagina [Contatti](/contatti/).
@@ -48,8 +46,7 @@ Le aree di attesa, ricovero e ammassamento sono elencate nella pagina [Cartograf
 
 IT-alert è il **sistema nazionale di allarme pubblico** che invia messaggi ai telefoni cellulari presenti in un'area colpita da una grave emergenza. Funziona anche senza connessione internet e senza app installate. Maggiori informazioni su [it-alert.it](https://www.it-alert.it/it/).
 
-## Prevenzione
-
+## <i class="bi bi-shield-check text-primary me-2" aria-hidden="true"></i>Prevenzione {#faq-prevenzione}
 ### Come preparo un kit di emergenza?
 
 Prepara uno zaino con acqua, cibo a lunga conservazione, torcia, radio a pile, documenti, medicinali e un cambio di vestiti. La lista completa è nella pagina [Kit di Emergenza](/rischi-prevenzione/kit-emergenza/).
@@ -58,8 +55,7 @@ Prepara uno zaino con acqua, cibo a lunga conservazione, torcia, radio a pile, d
 
 È un documento che ogni famiglia dovrebbe compilare per sapere cosa fare, dove andare e chi contattare in caso di emergenza. Puoi crearlo e stamparlo dalla pagina [Piano Familiare](/piano-familiare/).
 
-## Volontariato
-
+## <i class="bi bi-people-fill text-primary me-2" aria-hidden="true"></i>Volontariato {#faq-volontariato}
 ### Come posso diventare volontario?
 
 Puoi iscriverti di persona alla sede (Via Sicilia, 13-15), telefonicamente o via email. Tutti i dettagli sono nella pagina [Diventa Volontario](/diventa-volontario/).
@@ -84,8 +80,7 @@ No. Il volontariato di protezione civile è **gratuito** per definizione (art. 1
 
 Durante un'**attivazione ufficiale dichiarata** (es. emergenza nazionale, regionale o comunale formalmente decretata), il D.Lgs. 1/2018 — art. 39 prevede che il volontario possa **assentarsi dal lavoro** senza perdita di stipendio: lo Stato rimborsa al datore di lavoro la retribuzione e gli oneri. Per le attività ordinarie (esercitazioni, formazione) si concorda con il datore di lavoro o si usano permessi.
 
-## Sul nostro territorio
-
+## <i class="bi bi-geo-alt-fill text-primary me-2" aria-hidden="true"></i>Sul nostro territorio {#faq-territorio}
 ### Genzano è in zona sismica?
 
 Sì, Genzano di Roma è classificato in **zona sismica 2B** (media sismicità) secondo l'OPCM 3274/2003 e successive aggiornamenti. Significa che possono verificarsi terremoti di magnitudo significativa con tempi di ritorno lunghi. Tutti i nuovi edifici devono rispettare le **norme antisismiche** delle NTC 2018. Per dettagli vedi la pagina [Rischio Sismico](/rischi-prevenzione/rischio-sismico/).
@@ -102,8 +97,7 @@ I principali rischi del territorio sono: **idrogeologico** (frane superficiali s
 
 Quando viene attivato il **COC** (Centro Operativo Comunale) per gestire un'emergenza, la Sala Operativa di norma viene allestita presso la sede del Gruppo in **Via Sicilia 13-15** o presso il Palazzo Comunale. La gestione è coordinata dal Sindaco con il supporto del Gruppo Volontari, della Polizia Locale e dei tecnici comunali.
 
-## Numeri di emergenza
-
+## <i class="bi bi-telephone-fill text-primary me-2" aria-hidden="true"></i>Numeri di emergenza {#faq-numeri}
 ### Devo chiamare il 112, il 113, il 115 o il 118?
 
 **Solo il 112**. Dal 2017 in Italia è attivo il **Numero Unico di Emergenza (NUE)**: una sola Centrale che smista la chiamata a Carabinieri, Polizia, Vigili del Fuoco, soccorso sanitario. I vecchi numeri (113, 115, 118, 1515) ricevono ancora chiamate ma il riferimento da memorizzare e insegnare ai bambini è **solo il 112**. Funziona anche **senza credito**, **senza SIM** e **senza segnale del proprio gestore** (cerca automaticamente la rete disponibile).
@@ -120,8 +114,7 @@ In ordine: **dove ti trovi** (indirizzo o riferimenti chiari), **cosa è success
 
 **Sì, ed è anche reato**. L'art. 658 del Codice penale (procurato allarme) punisce con l'arresto fino a 6 mesi o l'ammenda fino a 309 euro chi chiama i numeri di emergenza per motivi non urgenti. Spiega questo concetto ai bambini fin dalla scuola dell'infanzia.
 
-## Sito web e cookie
-
+## <i class="bi bi-laptop text-primary me-2" aria-hidden="true"></i>Sito web e cookie {#faq-sito}
 ### Il sito utilizza cookie di tracciamento?
 
 **No**. Il sito è un sito statico che usa esclusivamente **cookie tecnici** strettamente necessari al funzionamento (es. memorizza la scelta del cookie banner). Non c'è profilazione, non c'è pubblicità, non ci sono trackers di Google Analytics o simili. I dettagli sono nella [Privacy Policy](/privacy/).
@@ -134,8 +127,7 @@ Solo **se l'utente li carica esplicitamente** cliccando il pulsante "Carica…".
 
 Il sito è progettato per rispettare le **WCAG 2.2 livello AA** (Linee guida AGID). La [Dichiarazione di Accessibilità](/accessibilita/) elenca i contenuti di terze parti su cui non abbiamo controllo diretto. Se trovi un problema di accessibilità segnalacelo a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
-## Per insegnanti e scuole
-
+## <i class="bi bi-mortarboard-fill text-primary me-2" aria-hidden="true"></i>Per insegnanti e scuole {#faq-scuole}
 ### Avete materiale didattico gratuito?
 
 Sì. Mettiamo a disposizione **kit didattici** per ciascuna fascia (infanzia, primaria, secondaria di primo e secondo grado), **schede stampabili** pronte per essere fotocopiate (incluse schede da colorare per i più piccoli, schede progettate col **curricolo a spirale 6-19 anni** — lo stesso tema disponibile in più fasce di età con tagli adeguati — e **case study delle maxi-emergenze italiane** Friuli/Vajont/Irpinia/Aquila/Amatrice ecc. declinati su Primaria, Secondaria I e Secondaria II per spirale 9-19 anni), una raccolta di **storie e racconti** di qualità letteraria per bambini 3-11 anni con valore pedagogico esplicito per la scuola, **giochi educativi gratuiti** e **attività accessibili** ispirate al programma nazionale *[Abili a proteggere](https://www.abiliaproteggere.net/)* del Dipartimento della Protezione Civile, pensate per persone con difficoltà cognitive o motorie, anziani e bambini fragili. Tutto su [Formazione](/formazione/), [Schede didattiche stampabili](/formazione/schede-stampabili/), [Giochi della Sicurezza](/giochi/) e [Abili a Proteggere](/abili-a-proteggere/).
@@ -150,8 +142,7 @@ Sì, per le **scuole secondarie di secondo grado**. Il Gruppo di Genzano ha **gi
 
 Per esplorare la possibilità ti invitiamo a **richiedere un colloquio con il Coordinatore** scrivendo a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). Vedi anche il [Kit Secondaria di Secondo Grado](/formazione/kit-scuola-secondaria-secondo-grado/) per i contenuti formativi possibili.
 
-## Glossario rapido
-
+## <i class="bi bi-journal-bookmark-fill text-primary me-2" aria-hidden="true"></i>Glossario rapido {#faq-glossario}
 Per i termini tecnici (PAI, COC, DICOMAC, IT-alert, NUE, AeDES…) consulta il **[Glossario di Protezione Civile](/glossario/)**: una pagina dedicata che spiega in parole semplici sigle e termini tecnici che incontri spesso nei bollettini, sui giornali e in questo sito.
 
 ## Vedi anche

@@ -8,12 +8,10 @@ toc: true
 ---
 L'incendio boschivo è un fuoco che si sviluppa in aree vegetate (boschi, macchia mediterranea, terreni incolti) propagandosi rapidamente grazie al vento, alla siccità e alla vegetazione secca. La maggior parte degli incendi è causata da comportamenti umani imprudenti o, peggio, dolosi.
 
-## Perché è rilevante sul nostro territorio
-
+## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani, con ampie aree boschive e di macchia mediterranea. Il periodo estivo (giugno-settembre) è quello di massimo rischio, quando siccità prolungata e venti caldi possono trasformare una piccola fiamma in un incendio devastante. Il nostro Gruppo è costantemente impegnato nelle campagne antincendio boschivo (AIB).
 
-## Segnali e situazioni tipiche
-
+## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 - Fumo denso visibile in aree boschive o di campagna
 - Odore forte di bruciato trasportato dal vento
 - Cenere o frammenti vegetali che cadono dall'alto
@@ -21,16 +19,14 @@ Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Vai" — evacuazione rapida](/rischi-prevenzione/kit-emergenza/#kit-vai) è essenziale, perché un incendio boschivo può imporre un'evacuazione in pochi minuti. Tieni anche il [Kit "Auto"](/rischi-prevenzione/kit-emergenza/#kit-auto) sempre nel bagagliaio: nei mesi estivi può servire se resti bloccato lungo strade chiuse dal fumo. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
-## Cosa fare PRIMA — Prevenire
-
+## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA — Prevenire {#cosa-fare-prima}
 - **Non gettare** mai mozziconi di sigaretta o fiammiferi accesi, soprattutto dall'auto
 - **Non accendere fuochi** nelle aree boschive o nelle loro vicinanze, anche fuori dalle aree attrezzate durante il periodo di massimo rischio
 - Se devi bruciare sterpaglie o residui vegetali, contatta il Comune per conoscere le normative e ottenere le autorizzazioni
 - Mantieni puliti i terreni di proprietà da sterpaglie e vegetazione secca (è anche un obbligo di legge)
 - Se la tua casa è vicina a un'area boschiva, crea uno spazio difendibile rimuovendo la vegetazione secca intorno all'abitazione
 
-## Cosa fare DURANTE l'incendio
-
+## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE l'incendio {#cosa-fare-durante}
 **Se vedi un incendio:**
 
 - Chiama immediatamente il **112**: nel Lazio è l'unico numero di emergenza e attiva vigili del fuoco, forestali ed eventuale soccorso sanitario
@@ -53,8 +49,7 @@ Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani
 - Se sei circondato dal fumo: chiudi i finestrini, accendi i fari, rallenta e cerca di uscire dalla zona
 - Se non puoi procedere: fermati in un'area libera da vegetazione, chiudi i finestrini e attendi
 
-## Cosa fare DOPO l'incendio
-
+## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO l'incendio {#cosa-fare-dopo}
 - Non accedere alla zona percorsa dal fuoco: possono esserci tronchi instabili e braci ancora attive sotto la cenere
 - Segnala eventuali riprese di fuoco al **112**
 - Non tentare di bonificare da solo l'area incendiata

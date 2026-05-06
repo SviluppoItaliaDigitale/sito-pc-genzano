@@ -19,8 +19,7 @@ Un solo zaino non basta per ogni emergenza. La preparazione efficace si basa su 
 {{< pittogramma src="/pittogrammi/arasaac/fischietto.png" alt="Fischietto" size="small" inline="true" >}}
 </div>
 
-## I tre kit a confronto
-
+## <i class="bi bi-bag-check-fill text-primary me-2" aria-hidden="true"></i>I tre kit a confronto {#tre-kit}
 | Kit | Quando serve | Dove tenerlo | Peso indicativo |
 |---|---|---|---|
 | **Kit Vai** (evacuazione rapida) | Devi uscire subito di casa: terremoto, incendio, evacuazione ordinata | Vicino all'ingresso, pronto da prendere in 1 minuto | 5-7 kg per adulto |
@@ -31,8 +30,7 @@ I tre kit hanno **alcune cose in comune** (acqua, torcia, documenti) e **specifi
 
 ---
 
-## Kit "Vai" — evacuazione rapida {#kit-vai}
-
+## <i class="bi bi-bag-fill text-primary me-2" aria-hidden="true"></i>Kit "Vai" — evacuazione rapida {#kit-vai}
 Lo zaino che prendi in mano e porti via in **meno di un minuto**. Pensato per le **prime 24 ore** lontano da casa, prima di raggiungere un'area di attesa o un familiare.
 
 **Dove tenerlo**: in ingresso, in un armadio basso o appeso a un gancio. Tutti i componenti della famiglia devono sapere dove si trova. Un kit per ogni persona in grado di portarlo.
@@ -80,8 +78,7 @@ Lo zaino che prendi in mano e porti via in **meno di un minuto**. Pensato per le
 
 ---
 
-## Kit "Casa 72 ore" — autonomia domestica {#kit-casa}
-
+## <i class="bi bi-house-fill text-primary me-2" aria-hidden="true"></i>Kit "Casa 72 ore" — autonomia domestica {#kit-casa}
 La riserva di casa per **restare autonomi per 3 giorni** quando non puoi uscire (vento forte, alluvione in corso, blackout esteso) o quando i servizi pubblici sono interrotti.
 
 **Dove tenerlo**: in dispensa, ripostiglio, garage. Non serve trasportarlo: serve averlo.
@@ -137,8 +134,7 @@ Cerotti di varie misure, garze sterili, disinfettante (clorexidina o iodopovidon
 
 ---
 
-## Kit "Auto" — sempre nel bagagliaio {#kit-auto}
-
+## <i class="bi bi-car-front-fill text-primary me-2" aria-hidden="true"></i>Kit "Auto" — sempre nel bagagliaio {#kit-auto}
 Per chi guida spesso, per i pendolari, per chi vive nei Castelli Romani dove le strade possono restare chiuse per maltempo, neve o frane. Pensato per restare in auto **fino a 12 ore** in attesa di soccorsi o di sblocco della strada.
 
 **Dove tenerlo**: nel bagagliaio, in una scatola rigida facile da trovare al buio.
@@ -169,8 +165,7 @@ Aggiungi: parasole, ventaglio, scorta di acqua aumentata (4 litri), sali mineral
 
 ---
 
-## Per i bambini
-
+## <i class="bi bi-emoji-smile-fill text-primary me-2" aria-hidden="true"></i>Per i bambini {#bambini}
 Inserisci nel kit **a parte**, in una busta dedicata:
 
 - Pannolini e salviette (se necessari) — scorta per 3 giorni
@@ -183,8 +178,7 @@ Inserisci nel kit **a parte**, in una busta dedicata:
 
 Per la prima infanzia esiste anche una **scheda dedicata**: vedi [Kit Calamità — Bambini](/formazione/kit-calamita-bambini/) e [Kit Calamità — Neonati e gravidanza](/formazione/kit-calamita-neonati/).
 
-## Per gli animali domestici
-
+## <i class="bi bi-house-heart-fill text-primary me-2" aria-hidden="true"></i>Per gli animali domestici {#animali}
 - Cibo e acqua per almeno 3 giorni
 - Guinzaglio, trasportino, museruola se necessaria
 - Libretto sanitario, vaccinazioni, certificato di iscrizione all'anagrafe canina (microchip)
@@ -197,8 +191,7 @@ Per cani, gatti, animali esotici e per la lista delle strutture di accoglienza i
 
 ---
 
-## Controllo periodico
-
+## <i class="bi bi-arrow-clockwise text-primary me-2" aria-hidden="true"></i>Controllo periodico {#controllo-periodico}
 Un kit dimenticato è un kit inutile. Pile scariche, farmaci scaduti, batterie del power bank a zero rendono il kit inservibile proprio quando serve.
 
 > 📋 **Stampa la [Checklist A4 da appendere al frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/)**: una pagina, caselle da spuntare, controllo ogni 6 mesi. Aiuta a non dimenticare scadenze pile, farmaci, alimenti, power bank, documenti.
@@ -213,8 +206,7 @@ Un kit dimenticato è un kit inutile. Pile scariche, farmaci scaduti, batterie d
 - documenti aggiornati (carta d'identità non scaduta, tessera sanitaria valida)
 - vestiti ancora della taglia giusta (per i bambini soprattutto)
 
-## Consigli pratici
-
+## <i class="bi bi-lightbulb-fill text-primary me-2" aria-hidden="true"></i>Consigli pratici {#consigli-pratici}
 - Usa uno **zaino** piuttosto che una borsa per il Kit Vai: ti lascia le mani libere
 - **Non sovraccaricare il Kit Vai**: deve essere portabile anche di corsa
 - Etichetta ogni kit con un cartellino: "VAI" / "CASA" / "AUTO"

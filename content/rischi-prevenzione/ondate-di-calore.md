@@ -8,12 +8,10 @@ toc: true
 ---
 Le ondate di calore sono periodi prolungati di temperature molto elevate, spesso accompagnate da alti livelli di umidità, che possono rappresentare un rischio serio per la salute, soprattutto per le persone più vulnerabili.
 
-## Perché è rilevante sul nostro territorio
-
+## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calore intense durante i mesi di giugno, luglio e agosto. Le temperature possono superare i 38-40°C, con effetti particolarmente gravosi per gli anziani, i bambini piccoli e le persone con patologie croniche.
 
-## Segnali da riconoscere
-
+## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali da riconoscere {#segnali}
 - Temperatura corporea elevata, pelle calda e arrossata
 - Mal di testa intenso, vertigini, confusione
 - Nausea, crampi muscolari, debolezza
@@ -21,15 +19,13 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è utile per la sua scorta d'acqua (almeno 12 litri a persona) e i farmaci. In caso di blackout estivo prolungato — molto frequente quando i condizionatori sovraccaricano la rete — saper restare autonomi 3 giorni è cruciale soprattutto per anziani e persone con patologie croniche. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
-## Cosa fare PRIMA
-
+## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
 - Informati sulle previsioni e sugli eventuali bollettini del Ministero della Salute
 - Assicurati di avere scorte d'acqua in casa
 - Verifica che ventilatori o condizionatori funzionino
 - Contatta i vicini anziani o le persone sole per verificare il loro stato
 
-## Cosa fare DURANTE
-
+## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE {#cosa-fare-durante}
 - **Bevi molta acqua** anche se non senti sete, evita alcolici e bevande zuccherate
 - Non uscire nelle ore più calde (11:00-17:00)
 - Indossa abiti leggeri, chiari e in tessuti naturali; usa cappello e occhiali da sole
@@ -37,8 +33,7 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 - Fai pasti leggeri privilegiando frutta e verdura
 - Non lasciare mai persone o animali in auto parcheggiate al sole
 
-## Cosa fare DOPO
-
+## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO {#cosa-fare-dopo}
 - Se qualcuno mostra sintomi di colpo di calore, chiama il **112** immediatamente
 - In attesa dei soccorsi: porta la persona in un luogo fresco, falla sdraiare con le gambe sollevate, applicale panni umidi su fronte e collo
 - Continua a idratarti anche quando la temperatura scende
@@ -50,8 +45,7 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 - **Non lasciare farmaci esposti al calore** (alterano la loro efficacia)
 {{< /cosa-non-fare >}}
 
-## Categorie più a rischio
-
+## <i class="bi bi-people-fill text-primary me-2" aria-hidden="true"></i>Categorie più a rischio {#categorie-rischio}
 - **Anziani** (over 75), soprattutto se soli
 - **Bambini** sotto i 4 anni
 - **Persone con patologie croniche** (cardiovascolari, respiratorie, diabete)

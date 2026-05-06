@@ -8,8 +8,7 @@ toc: true
 ---
 I temporali intensi sono fenomeni meteorologici caratterizzati da forti piogge, fulmini, grandine e raffiche di vento improvvise. Possono verificarsi rapidamente e con grande violenza, soprattutto nei mesi estivi e durante i cambi di stagione.
 
-## Fulmini in tempo reale
-
+## <i class="bi bi-lightning-charge-fill text-primary me-2" aria-hidden="true"></i>Fulmini in tempo reale {#fulmini-realtime}
 Mappa dei fulmini rilevati in Europa, aggiornata in tempo reale dalla rete volontaria **Blitzortung / Lightning Maps**. Utile quando è in corso un temporale per capire dove si sta muovendo la cella e quanto è distante.
 
 <div class="alert alert-warning" role="note">
@@ -28,21 +27,18 @@ Mappa dei fulmini rilevati in Europa, aggiornata in tempo reale dalla rete volon
     fallbackText="Mappa fulmini in tempo reale consultabile su map.blitzortung.org (rete volontaria Blitzortung)"
     widgetId="fulmini-blitzortung" >}}
 
-## Perché è rilevante sul nostro territorio
-
+## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 L'area dei Castelli Romani è particolarmente soggetta a temporali convettivi, specialmente nel periodo maggio-ottobre. La conformazione collinare e la vicinanza ai laghi vulcanici favoriscono lo sviluppo di celle temporalesche molto localizzate ma intense, con il rischio di allagamenti lampo nelle zone più basse del territorio.
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) per restare autonomi se il temporale provoca blackout o allagamenti. Se viaggi spesso, tieni anche il [Kit "Auto"](/rischi-prevenzione/kit-emergenza/#kit-auto) nel bagagliaio: una cella temporalesca improvvisa può bloccarti in strada. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
-## Cosa fare PRIMA
-
+## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
 - Informati sulle previsioni meteo e sullo stato di allerta
 - Evita di programmare attività all'aperto durante le allerte per temporali
 - Individua un luogo sicuro e coperto dove ripararti rapidamente
 - Assicurati che tombini e caditoie vicino casa siano liberi da foglie e detriti
 
-## Cosa fare DURANTE
-
+## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE {#cosa-fare-durante}
 - **Ripara in un edificio solido** o in auto con i finestrini chiusi
 - Allontanati da alberi isolati, pali metallici, tralicci e recinzioni metalliche
 - Non ripararti sotto tettoie o strutture precarie
@@ -50,8 +46,7 @@ L'area dei Castelli Romani è particolarmente soggetta a temporali convettivi, s
 - In casa, scollega gli apparecchi elettrici e non usare il telefono fisso con filo durante i fulmini
 - Allontanati da finestre e porte finestre
 
-## Cosa fare DOPO
-
+## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO {#cosa-fare-dopo}
 - Presta attenzione a cavi elettrici caduti o danneggiati
 - Non entrare in locali allagati dove sono presenti impianti elettrici
 - Verifica lo stato delle strade prima di metterti in viaggio
