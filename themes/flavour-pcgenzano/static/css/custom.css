@@ -362,14 +362,6 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 }
 .card-notizia:hover { border-left-color: var(--pc-secondary); box-shadow: var(--pc-shadow-md); }
 
-/* ── SOCIAL ── */
-.card-social-link {
-  border: 1px solid var(--pc-border-subtle); border-radius: var(--pc-radius);
-  transition: all var(--pc-transition); display: flex; align-items: center;
-  text-decoration: none; color: #333; padding: 0.7rem 1rem;
-}
-.card-social-link:hover { border-color: var(--pc-primary); box-shadow: var(--pc-shadow-sm); color: #333; transform: translateX(2px); }
-
 /* ── BADGES ALLERTE ── */
 .badge-allerta-verde { background: #28a745; color: #fff; padding: 0.5em 1em; border-radius: var(--pc-radius-sm); }
 .badge-allerta-gialla { background: #ffc107; color: #000; padding: 0.5em 1em; border-radius: var(--pc-radius-sm); }
@@ -426,11 +418,6 @@ table tr:hover { background: #e8f4fd; }
 /* ── ANIMATIONS ── */
 .fade-in-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in-up.visible { opacity: 1; transform: translateY(0); }
-
-/* ── 404 ── */
-.page-404 { text-align: center; padding: 5rem 0; }
-.page-404 h1 { font-size: 7rem; font-weight: 800; color: var(--pc-primary); margin-bottom: 0; letter-spacing: -0.04em; opacity: 0.85; }
-.page-404 h2 { font-size: 1.4rem; color: #555; margin-bottom: 2rem; font-weight: 400; }
 
 /* ── FOOTER LINK ── */
 .footer-list { list-style: none; padding: 0; margin: 0; }
@@ -497,13 +484,6 @@ select:focus-visible, textarea:focus-visible { outline: 3px solid #ff9900; outli
   animation: pulse-allerta 2.5s ease-in-out infinite;
 }
 .emergenza-banner a.btn { font-size: 0.78rem; border-radius: 20px; }
-.emergenza-blu { background: #0066CC; color: #fff; }
-.emergenza-azzurro { background: #0073E6; color: #fff; }
-.emergenza-verde { background: #008758; color: #fff; }
-.emergenza-giallo { background: #A66300; color: #fff; }
-.emergenza-arancione { background: #CC5C00; color: #fff; }
-.emergenza-rosso { background: #CC334D; color: #fff; }
-.emergenza-viola { background: #7B2D8E; color: #fff; }
 
 /* ── IMMAGINI ARTICOLI: sempre centrate e responsive ──
    Escluso article.card (card-notizia di liste/archivi/homepage):
@@ -790,16 +770,6 @@ article:not(.card) .galleria img {
 .notizie-section {
   padding: 3rem 0;
   background: var(--pc-warm-bg);
-}
-
-/* ── FAQ ACCORDION STYLE ── */
-.faq-section h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--pc-primary);
-  margin-top: 1.5rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 1px solid var(--pc-border-subtle);
 }
 
 /* ── BADGE NOTIZIE — categorie aggiuntive ── */
@@ -1633,8 +1603,7 @@ article:not(.card) .galleria img {
 .article-body > ol,
 .article-body > blockquote,
 .article-body > figure,
-.article-body > table,
-.article-body > .callout {
+.article-body > table {
   margin-bottom: 1.25rem;
 }
 
@@ -2508,41 +2477,6 @@ article:not(.card) .galleria img {
 .ext-widget-iframe:focus {
   outline: 3px solid #ffbe2e;
   outline-offset: 2px;
-}
-
-/* Layout griglia due widget affiancati (homepage "Monitoraggio") */
-.ext-widget-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.ext-widget-grid .ext-widget-section {
-  margin: 0;
-}
-
-@media (max-width: 991px) {
-  .ext-widget-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem; /* respiro generoso tra widget impilati */
-  }
-  .ext-widget-grid .ext-widget-placeholder {
-    min-height: 460px; /* widget molto visibili quando hanno tutta la larghezza */
-  }
-  .ext-widget-grid .ext-widget-icon {
-    font-size: 3.5rem;
-  }
-  .ext-widget-grid .ext-widget-placeholder-title {
-    font-size: 1.65rem;
-  }
-  .ext-widget-grid .ext-widget-placeholder-desc {
-    font-size: 1.05rem;
-  }
-  .ext-widget-grid .ext-widget-placeholder-content .btn {
-    padding: 0.75rem 2rem;
-    font-size: 1.05rem;
-  }
 }
 
 @media (max-width: 576px) {
@@ -4069,9 +4003,9 @@ html.a11y-pause-animations body.home-page .reveal-on-scroll {
 }
 
 /* Toolbar a11y attivo "pausa animazioni" + "nascondi animazioni": coerenza */
-html.a11y-pause-anim .assistente-fab { transition: none !important; }
-html.a11y-pause-anim .assistente-fab:hover,
-html.a11y-pause-anim .assistente-fab:focus-visible { transform: none !important; }
+html.a11y-pause-animations .assistente-fab { transition: none !important; }
+html.a11y-pause-animations .assistente-fab:hover,
+html.a11y-pause-animations .assistente-fab:focus-visible { transform: none !important; }
 
 /* ── Hide FAB user preferences (toggle nel pannello a11y "Pulsanti
    flottanti") ── Usato per chi naviga da mobile e i FAB coprono il
