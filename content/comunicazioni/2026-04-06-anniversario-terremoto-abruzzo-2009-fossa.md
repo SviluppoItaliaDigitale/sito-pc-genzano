@@ -16,7 +16,7 @@ draft: false
 
 **Erano le 3:32 di notte del 6 aprile 2009** quando una scossa di magnitudo 6.3 svegliò di colpo l'intera regione Abruzzo. L'epicentro era a pochi chilometri dall'Aquila. In pochi secondi, interi quartieri della città crollarono, borghi antichi si sbriciolarono, 309 persone persero la vita. Era uno dei terremoti più devastanti che l'Italia avesse vissuto negli ultimi decenni.
 
-{{< foto src="/images/2026-evento-aquila-2009-centro-storico.webp"
+{{< foto src="/images/2026-04-23-aquila-2009-terremoto.webp"
          alt="L'Aquila dopo il terremoto del 6 aprile 2009: edifici lesionati e centro storico inaccessibile"
          caption="L'Aquila, 6 aprile 2009. Magnitudo 6,3 alle 03:32 del mattino. 309 vittime, oltre 1.500 feriti, decine di migliaia di sfollati. La ricostruzione durerà più di un decennio." >}}
 

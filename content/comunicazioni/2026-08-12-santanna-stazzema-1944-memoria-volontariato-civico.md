@@ -19,11 +19,6 @@ Nella mattina del **12 agosto 1944**, le SS naziste della **16ª Divisione Panze
 
 A prima vista Sant'Anna sembra un evento "estraneo" all'attività di Protezione Civile contemporanea. Non è un terremoto, non è un'alluvione. Ma il legame con il **volontariato civico** è profondo:
 
-{{< foto src="/images/2026-08-12-santanna-stazzema-1944-memoria-volontariato-civico-fonte-wikipedia.webp"
-         alt="Foto storica: Sant'Anna di Stazzema, 12 agosto 1944: la memoria che fonda il volontariato civico"
-         caption="Foto: HpSchaefer Hans Peter Schaefer http://www.reserv-a-rt.de — CC BY-SA 3.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Santanna_mahnmal.JPG)." >}}
-
-
 - Gli abitanti dei comuni circostanti, **a rischio della propria vita**, accolsero centinaia di feriti, recuperarono i corpi, ricostruirono il paese
 - Negli anni della Repubblica, Sant'Anna è diventata un riferimento per la **memoria civile europea** della resistenza al nazifascismo
 - L'idea che **la sicurezza della comunità si basa sull'impegno volontario dei cittadini** — principio fondante della Protezione Civile italiana — affonda le radici proprio in quegli anni di guerra e ricostruzione
@@ -39,7 +34,7 @@ Negli anni della Resistenza nacquero le prime forme organizzate di **soccorso ci
 
 {{< foto src="/images/2026-08-12-santanna-stazzema-1944-memoria-volontariato-civico-eccidio-santanna-stazzema.webp"
          alt="Memoriale dell'Eccidio di Sant'Anna di Stazzema"
-         caption="Il Memoriale dell'Eccidio di Sant'Anna di Stazzema: 560 civili massacrati il 12 agosto 1944 dalle SS. Oggi il borgo è Parco Nazionale della Pace. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Santanna_mahnmal.JPG)." >}}
+         caption="Il Memoriale dell'Eccidio di Sant'Anna di Stazzema: 560 civili massacrati il 12 agosto 1944 dalle SS. Oggi il borgo è Parco Nazionale della Pace. Foto: HpSchaefer Hans Peter Schaefer — CC BY-SA 3.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Santanna_mahnmal.JPG)." >}}
 
 
 Tutto questo, nel dopoguerra, sarebbe confluito nel sistema di **assistenza pubblica** (legge ENPAS 1944, riforma sanitaria), nei servizi sociali comunali, e infine — molti decenni dopo — nel **Servizio Nazionale di Protezione Civile** (legge 225/1992, oggi Codice 2018).

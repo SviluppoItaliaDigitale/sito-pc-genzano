@@ -19,7 +19,7 @@ Trent'anni fa, nella notte del **19 giugno 1996**, la **Versilia** e la **Garfag
 
 Nella tarda sera del 19 giugno:
 
-{{< foto src="/images/2026-11-08-alluvione-versilia-1996-trent-anni-cardoso-versilia.webp"
+{{< foto src="/images/2026-06-19-versilia-1996-alluvione-cardoso-stazzema-fonte-wikipedia.webp"
          alt="Cardoso, frazione di Stazzema (Lucca) colpita dall'alluvione del 1996"
          caption="Cardoso (Stazzema, Lucca): la frazione fu cancellata dall'onda di fango e detriti scesa dalle Alpi Apuane il 19 giugno 1996. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Cardoso,_veduta_01.JPG)." >}}
 
