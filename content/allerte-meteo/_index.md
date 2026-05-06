@@ -75,10 +75,10 @@ Mosaico radar nazionale del **Dipartimento della Protezione Civile**, aggiornato
 
 ## Previsione meteo per Genzano di Roma — Aeronautica Militare
 
-Previsione ufficiale emessa dall'**Aeronautica Militare — Servizio Meteorologico**. È la previsione meteorologica istituzionale italiana: accurata, aggiornata, scientificamente autorevole, pensata per il cittadino.
+Consulta la previsione del **Servizio Meteorologico dell'Aeronautica Militare** per Genzano di Roma. È la previsione meteorologica del Servizio Meteorologico Nazionale italiano.
 
-<div class="alert alert-success" role="note">
-<p class="mb-0"><i class="bi bi-patch-check-fill me-2" aria-hidden="true"></i><strong>Fonte istituzionale italiana:</strong> l'Aeronautica Militare è l'ente ufficiale per il Servizio Meteorologico Nazionale. Le previsioni qui mostrate sono quelle ufficiali italiane.</p>
+<div class="alert alert-light" role="note">
+<p class="mb-0"><i class="bi bi-patch-check-fill me-2" aria-hidden="true"></i><strong>Fonte istituzionale:</strong> l'Aeronautica Militare gestisce il Servizio Meteorologico Nazionale italiano.</p>
 </div>
 
 {{< external-widget
