@@ -34,9 +34,9 @@ Letture consigliate per chi vuole conoscere meglio i rischi del nostro territori
 
 Tutti gli articoli su rischi e prevenzione sono filtrabili nell'[archivio delle comunicazioni](/comunicazioni/) con i tag **Prevenzione** e **Informazione**.
 
-## Kit consigliato per questo rischio
+## Kit di emergenza essenziale
 
-Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
+Tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
 
 - acqua in litri sufficienti per la famiglia;
 - torcia con pile o ricarica funzionante;

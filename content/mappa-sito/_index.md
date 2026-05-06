@@ -225,6 +225,21 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
   <p class="ms-card-title">Kit di emergenza</p>
   <p class="ms-card-desc">Cosa mettere nello zaino di emergenza domestico, lista completa e priorità.</p>
 </a>
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/kit-emergenza-economico-progressivo/">
+  <div class="ms-card-icon"><i class="bi bi-piggy-bank"></i></div>
+  <p class="ms-card-title">Kit di emergenza economico e progressivo</p>
+  <p class="ms-card-desc">Come comporre il kit un pezzo alla volta, senza marchi né prodotti specifici.</p>
+</a>
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/rischi-in-parole-semplici/">
+  <div class="ms-card-icon"><i class="bi bi-easel"></i></div>
+  <p class="ms-card-title">Rischi principali in parole semplici</p>
+  <p class="ms-card-desc">Spiegazione accessibile per bambini, persone con bisogni cognitivi e parlanti italiano L2.</p>
+</a>
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/scuole-genzano-rischi-locali/">
+  <div class="ms-card-icon"><i class="bi bi-mortarboard"></i></div>
+  <p class="ms-card-title">Scuole di Genzano e rischi locali</p>
+  <p class="ms-card-desc">Riferimenti generali per famiglie e personale scolastico, da integrare con il piano di emergenza del singolo istituto.</p>
+</a>
 </div>
 
 <div class="ms-section"><span class="ms-section-icon" style="background:#7c3aed"><i class="bi bi-mortarboard-fill"></i></span><h2>Formazione e didattica</h2></div>
