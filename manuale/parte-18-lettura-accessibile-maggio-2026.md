@@ -179,8 +179,9 @@ fallback al rendering standard senza sillabazione (zero regressione).
 
 ### 18.8 Glossario inline con popover
 
-**File dati:** `data/glossario.yaml` — fonte unica delle voci (~60 voci a maggio
-2026).
+**File dati:** `data/glossario.yaml` — fonte unica delle voci (82 voci al
+2026-05-06: cresciuto da 61 con audit empirico delle sigle PC ricorrenti
+nei contenuti — vedi sessione consolidamento documentata in Parte 21).
 
 **Schema di una voce:**
 

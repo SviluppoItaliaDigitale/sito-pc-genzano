@@ -1,7 +1,7 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 3.1
-**Ultimo aggiornamento manuale:** 2026-05-02
+**Versione:** 3.2
+**Ultimo aggiornamento manuale:** 2026-05-06
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
 **Bootstrap Italia:** versione 2.17.3
@@ -40,6 +40,8 @@
 | Parte 18 | Lettura accessibile per fasce deboli: TTS dappertutto, glossario inline, tempo lettura, sillabazione (maggio 2026) | [`manuale/parte-18-lettura-accessibile-maggio-2026.md`](manuale/parte-18-lettura-accessibile-maggio-2026.md) |
 | Parte 19 | Agenti specializzati Claude Code (maggio 2026) — 5 profili professionali virtuali per redazione, immagini, issue, deploy, social | [`manuale/parte-19-agenti-specializzati.md`](manuale/parte-19-agenti-specializzati.md) |
 | Parte 20 | Kit Calamità per categorie vulnerabili (maggio 2026) — 12 kit operativi A4 stampabili (bambini, anziani, RSA, disabilità, neonati, gravidanza, animali, caregiver, terapie salvavita, senza dimora, italiano L2, volontari PC) basati su standard internazionali NCTSN, IFRC, WHO, Sphere, FEANTSA, UNHCR, IOM, IFE, MISP, WSAVA, Eurocarers | [`manuale/parte-20-kit-calamita-categorie-vulnerabili.md`](manuale/parte-20-kit-calamita-categorie-vulnerabili.md) |
+| Parte 21 | Aggiornamenti contenuti didattici e prevenzione (maggio 2026) — 3 nuove pagine prevenzione, regole scuole/kit/marchi commerciali, sessione consolidamento del 6 maggio (24 commit, 343 file ripuliti, asset -2.85 MB, glossario 61→82 voci, COC sede Comando Polizia Locale, icone H2 su 15 pagine lunghe) | [`manuale/parte-21-aggiornamenti-contenuti-didattici-prevenzione.md`](manuale/parte-21-aggiornamenti-contenuti-didattici-prevenzione.md) |
+| Parte 22 | Icone Bootstrap nei titoli H2 delle pagine lunghe (maggio 2026) — pattern editoriale per alleggerire visivamente la lettura. Vocabolario standardizzato concetto→icona, integrazione automatica col TOC, vincolo `{#slug}` per anchor puliti | [`manuale/parte-22-icone-h2-pagine-lunghe.md`](manuale/parte-22-icone-h2-pagine-lunghe.md) |
 
 > 👉 **[Vai all'indice completo del manuale (`manuale/README.md`)](manuale/README.md)**
 
