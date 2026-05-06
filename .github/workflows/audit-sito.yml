@@ -18,7 +18,7 @@ name: "🕵️ Audit settimanale sito"
 #         hugo.toml ↔ data/numeri_utili.yaml, smoke test rendering H1
 #         delle pagine critiche, link critici normativa/PDF locali
 #
-# Nasce dall'audit manuale di aprile 2026 (COI 14°→15°, cartello AR4 404,
+# Nasce dall'audit manuale di aprile 2026 (COI 15° errato → 14°, cartello AR4 404,
 # 115/118 come numero da chiamare, data widget meteo errata, placeholder
 # residui) e dal checkup completo di fine aprile 2026 (duplicate target
 # paths, slug typo nei link interni, draft:true dimenticati, manuale
