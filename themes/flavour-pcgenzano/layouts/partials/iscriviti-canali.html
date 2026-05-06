@@ -1,0 +1,54 @@
+{{/* Invito a iscriversi ai canali social del Gruppo Comunale.
+     Telegram in primo piano: invia notifiche automatiche al cambio di livello
+     di allerta meteo e in caso di comunicazioni di emergenza sul territorio.
+
+     Pilotato da data/social_links.yaml per gli URL.
+     Usato in: comunicazioni/list.html, _default/single.html (per /comunicazioni/). */}}
+{{ $social := .Site.Data.social_links }}
+{{ $telegramUrl := "https://t.me/pcalfagenzano" }}
+{{ if $social }}
+  {{ range $social.canali }}{{ if eq .nome "Telegram" }}{{ $telegramUrl = .url }}{{ end }}{{ end }}
+{{ end }}
+<section class="canali-social-block iscriviti-canali mt-5 pt-4" aria-labelledby="iscriviti-canali-heading">
+  <h2 id="iscriviti-canali-heading" class="h4 mb-3">
+    <i class="bi bi-broadcast" aria-hidden="true"></i> Resta aggiornato sulle allerte
+  </h2>
+
+  {{/* Chiamata principale: Telegram */}}
+  <div class="card border-info iscriviti-telegram mb-3">
+    <div class="card-body p-4">
+      <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+        <div class="iscriviti-telegram-icon flex-shrink-0" aria-hidden="true">
+          <i class="bi bi-telegram"></i>
+        </div>
+        <div class="flex-grow-1">
+          <h3 class="h5 mb-2">Iscriviti al canale Telegram</h3>
+          <p class="mb-2">Ricevi sul telefono una notifica automatica quando cambia il <strong>livello di allerta meteo</strong> per Genzano di Roma e — augurandoci di non doverle mai inviare — le <strong>comunicazioni di emergenza</strong> sul territorio.</p>
+          <p class="small text-muted mb-0">Niente spam: solo cambiamenti significativi dello stato. L'iscrizione è anonima e puoi disiscriverti in qualsiasi momento dal canale stesso.</p>
+        </div>
+        <div class="text-md-end flex-shrink-0">
+          <a href="{{ $telegramUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-info text-white" aria-label="Iscriviti al canale Telegram del Gruppo Comunale (si apre in una nuova finestra)">
+            <i class="bi bi-telegram me-1" aria-hidden="true"></i> Iscriviti al canale
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{/* Altri canali, in fila compatta */}}
+  <p class="mb-2 small text-muted">Ci trovi anche su:</p>
+  <div class="d-flex flex-wrap gap-2 mb-2">
+    {{ if $social }}
+    {{ range $social.canali }}
+    {{ if ne .nome "Telegram" }}
+    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary btn-sm" aria-label="{{ .aria_label }} — apri in una nuova finestra">
+      <i class="bi {{ .icona }} me-1" aria-hidden="true"></i> {{ .nome }}
+    </a>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </div>
+  <p class="small text-muted mb-0">
+    Modalità di pubblicazione e tempi di risposta nella <a href="{{ "social-media-policy/" | relURL }}">Social Media Policy</a>.
+  </p>
+</section>

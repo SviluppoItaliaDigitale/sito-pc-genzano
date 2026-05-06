@@ -1572,7 +1572,7 @@ article:not(.card) .galleria img {
     display: none;
   }
 }
-/* CANALI SOCIAL BLOCK — fondo /comunicazioni/ */
+/* CANALI SOCIAL BLOCK — fondo /comunicazioni/ + invito iscrizione articoli */
 .canali-social-block {
   border-top: 1px solid #e5e7eb;
 }
@@ -1582,6 +1582,43 @@ article:not(.card) .galleria img {
 .canali-social-block h2 .bi {
   color: #003366;
   margin-right: 0.35rem;
+}
+
+/* ISCRIVITI CANALI v1.0 — card Telegram in evidenza
+   Usato dal partial iscriviti-canali.html (fine articolo + list comunicazioni).
+   Telegram è in primo piano per le notifiche automatiche di allerta meteo. */
+.iscriviti-canali .iscriviti-telegram {
+  background: linear-gradient(135deg, #ecfaff 0%, #f4f7fb 100%);
+}
+.iscriviti-canali .iscriviti-telegram-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #0088cc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  line-height: 1;
+}
+.iscriviti-canali .iscriviti-telegram h3 {
+  color: #003366;
+  font-weight: 700;
+}
+.iscriviti-canali .btn-info {
+  background-color: #0088cc;
+  border-color: #0088cc;
+}
+.iscriviti-canali .btn-info:hover,
+.iscriviti-canali .btn-info:focus {
+  background-color: #006da3;
+  border-color: #006da3;
+}
+
+/* In stampa: niente sfondo gradiente, niente bottoni colorati */
+@media print {
+  .iscriviti-canali { display: none; }
 }
 
 @media (max-width: 991.98px) {
