@@ -87,7 +87,7 @@ In caso di scossa significativa:
 ## Per approfondire
 
 - [Geoportali e mappe di rischio](/comunicazioni/2026-10-05-geoportali-strumenti-digitali-rischio/)
-- [Memoria Amatrice 2016](/comunicazioni/2026-08-24-terremoto-amatrice-10-anni-memoria/)
+- [Amatrice 2016: dieci anni dalla notte del Centro Italia](/comunicazioni/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario/)
 - [INGV — Zone Sismiche](https://zonesismiche.mi.ingv.it/)
 
 In emergenza: **112**.
