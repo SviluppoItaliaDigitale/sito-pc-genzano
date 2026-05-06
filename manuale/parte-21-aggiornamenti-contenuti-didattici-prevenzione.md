@@ -132,3 +132,39 @@ Ogni contenuto istituzionale deve distinguere chiaramente tra:
 - materiali creativi o attività per bambini.
 
 Non inserire dati territoriali, numeri, procedure, indirizzi, enti o responsabilità se non sono verificati da fonte ufficiale o già presenti nella documentazione comunale del sito.
+
+## Sessione di consolidamento — 6 maggio 2026
+
+Audit strutturale completo del sito (le 7 Fasi del modello di lavoro). Esiti principali:
+
+### Fix di drift documentale e fact errors
+
+- **C.O.I. 14°** allineato in 4 file che avevano l'asserzione invertita (`README.md`, `audit-sito.yml`, `pc-article-reviewer`, `pc-deploy-validator`).
+- **Bandiera SPQR di Reggio Emilia** rimossa dall'articolo 1996: era spacciata come "foto storica del terremoto del 15 ottobre 1996". Pubblicata prima che il filtro anti-bandiere fosse aggiunto a `foto-da-wikipedia.sh`.
+- **Caption ShakeMap INGV** corrette in 5 articoli (Emilia 2012 + Amatrice 2016): la stessa foto md5-identica era usata in più articoli con caption diverse che dichiaravano "capannone industriale crollato a Mirandola" o "Amatrice in macerie", mentre la foto è una mappa di intensità macrosismica INGV.
+- **Duplicato editoriale 24 agosto** sul decimo anniversario di Amatrice 2016: due articoli con stessa data, stesso evento, badge diversi. Tenuto `2026-08-24-amatrice-2016-centro-italia-decimo-anniversario.md` (Comunicazione, taglio narrativo cronologico). Aliases nel file mantenuto preserva l'URL del file rimosso per SEO.
+
+### Pulizia template-injection
+
+- **Box "Kit consigliato per questo rischio"** rimosso da 17 hub di sezione di servizio (`/contatti/`, `/numeri-utili/`, `/cartografia/`, `/allerte-meteo/`, `/area-download/`, `/piano-familiare/`, `/faq/`, `/cosa-fare-adesso/`, `/formazione/`, `/siti-utili/`, `/strumenti/`, `/glossario/`, `/assistente/`, `/attribuzioni-pittogrammi/`, `/pittogrammi/`, `/social-media-policy/`, `/san-pio-da-pietrelcina/`). Il box appariva in 342 file totali in 7 varianti di testo, spesso con messaggio incoerente con il tema della pagina (es. `/contatti/` con "Per vento forte..."). Sostituito con `## Vedi anche` contestuale.
+- **Pagine rischio specifico** (`rischi-prevenzione/*.md`) e articoli di comunicazioni: lasciati intatti, il box è coerente lì.
+
+### Asset e performance
+
+- **-2.85 MB di asset** ottimizzati: `favicon.png` 932→10 KB (era duplicato del logo, ridimensionato a 64×64), `logo-pc-genzano.png` 932→237 KB (480×480 sufficiente), 2 webp ricompressi sotto i 200 KB, 8+3 webp duplicati md5 consolidati al filename canonico, articoli ridiretti.
+- **Bootstrap Italia bundle**: tentato switch a slim (-750 KB), **rollback** dopo che la navbar custom Italia ha smesso di rispondere. Decisione registrata in memoria: lasciare sempre il bundle 995 KB. Vedi `feedback_bs_italia_no_slim.md`.
+- **CSS unused audit**: rimosse 11 classi morte (-66 righe su `custom.css`). Bug fixato: selettore `html.a11y-pause-anim` (troncato) → `html.a11y-pause-animations` (full nome generato dal JS toolbar a11y).
+
+### Card uniformate al pattern v1.0
+
+8 card del sito allineate al pattern hover-lift v1.0 (homepage): `transform: translateY(-3px) + box-shadow: 0 10px 22px rgba(0, 51, 102, 0.14)`. Card a "lift laterale" (`.card-notizia-small`, `.card-social-link`) lasciate invariate per coerenza col layout orizzontale.
+
+### Navigazione
+
+3 nuove pagine prevenzione (`scuole-genzano-rischi-locali`, `rischi-in-parole-semplici`, `kit-emergenza-economico-progressivo`) integrate nell'hub `/rischi-prevenzione/_index.md` (sezione "Pagine di consultazione rapida") e nella mappa sito principale (sezione "Cosa fare in caso di…"). Voci di menu navbar **non toccate** per scelta editoriale ("Rischi in parole semplici" non promosso a primo livello, "Kit pronti per situazioni vulnerabili" lasciato dov'era).
+
+### Fasi NON eseguite (decisione)
+
+- **Description >160 char** su 115 articoli: scelta editoriale del Gruppo, articoli storici lunghi richiedono description ricca. Non riscritti.
+- **Foto stock duplicate** scartate dalla pulizia: tra i 9 cluster di duplicati md5 ne restano 1 (3 file Centro Italia 2016 con caption divergenti — risolto col fix Amatrice ShakeMap) e archivio-storico. Decisione: archivio-storico preservato come tale.
+- **Verifiche browser** (mobile 320/375/768/1024 px, stampa A4 reale, Lighthouse score, regressioni JS interattive): da fare quando l'utente è davanti al sito live, fuori scope autonomia CLI.
