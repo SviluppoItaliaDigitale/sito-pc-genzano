@@ -1,6 +1,6 @@
 ---
-title: "Il Sistema di Allertamento Meteo"
-description: "Consulta le allerte meteo in tempo reale per il territorio di Genzano di Roma e comprendi il significato dei codici colore."
+title: "Allerte meteo"
+description: "Consulta le allerte meteo per Genzano di Roma e capisci il significato dei codici colore."
 tts: true
 layout: "single"
 aliases:
@@ -10,23 +10,26 @@ sitemap:
   priority: 0.9
   changefreq: daily
 toc: true
+dataUltimaRevisione: "2026-05-06"
 ---
+
+Le allerte meteo indicano i possibili effetti al suolo di pioggia, temporali, vento e altri fenomeni. Servono a prepararsi prima che la situazione diventi pericolosa.
 
 <div class="card border-warning mb-4">
 <div class="card-body bg-warning bg-opacity-10 p-4">
-<h2 class="h5 text-dark"><i class="bi bi-broadcast me-2" aria-hidden="true"></i>Stato allerta in tempo reale</h2>
-<p class="mb-2">Lo stato di allerta aggiornato è sempre visibile nella barra colorata in cima alla <a href="/">homepage</a>. Il dato viene letto automaticamente dai bollettini ufficiali del <strong>Centro Funzionale Regionale del Lazio</strong> per il Comune di Genzano di Roma, nell'ambito del sistema nazionale di Protezione Civile.</p>
+<h2 class="h5 text-dark"><i class="bi bi-broadcast me-2" aria-hidden="true"></i>Stato dell'allerta</h2>
+<p class="mb-2">Lo stato aggiornato è visibile nella barra colorata in cima alla <a href="/">homepage</a>. Il dato viene letto dai bollettini ufficiali del <strong>Centro Funzionale Regionale del Lazio</strong> per il Comune di Genzano di Roma.</p>
 <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-warning">
-  <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Vai al Bollettino della Regione Lazio
+  <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Vai al bollettino della Regione Lazio
 </a>
 </div>
 </div>
 
 <div class="card border-info mb-4">
 <div class="card-body bg-info bg-opacity-10 p-4">
-<h2 class="h5 text-dark"><i class="bi bi-telegram me-2" aria-hidden="true"></i>Ricevi le allerte sul telefono — canale Telegram</h2>
-<p class="mb-2">Iscriviti al <strong>canale Telegram ufficiale</strong> del Gruppo Comunale: ricevi una notifica sul telefono <strong>quando il livello di allerta cambia</strong> (verde → gialla → arancione → rossa) o quando viene attivata una <strong>modalità emergenza</strong> per il territorio. Niente spam: il canale invia messaggi <strong>solo</strong> per cambiamenti significativi dello stato.</p>
-<p class="mb-2 small text-muted">L'iscrizione è anonima: Telegram non ci dice chi è iscritto, gestisce la lista al posto nostro. Puoi disiscriverti in qualsiasi momento dal canale stesso.</p>
+<h2 class="h5 text-dark"><i class="bi bi-telegram me-2" aria-hidden="true"></i>Ricevi le allerte su Telegram</h2>
+<p class="mb-2">Iscriviti al <strong>canale Telegram ufficiale</strong> del Gruppo Comunale. Riceverai una notifica quando cambia il livello di allerta o quando vengono pubblicate comunicazioni operative importanti.</p>
+<p class="mb-2 small text-muted">L'iscrizione è anonima: Telegram gestisce la lista degli iscritti. Puoi lasciare il canale in qualsiasi momento.</p>
 <a href="https://t.me/pcalfagenzano" target="_blank" rel="noopener noreferrer" class="btn btn-info">
   <i class="bi bi-telegram me-1" aria-hidden="true"></i> Iscriviti al canale Telegram
 </a>
@@ -35,10 +38,10 @@ toc: true
 
 ## Mappa meteo interattiva
 
-**Strumento di consultazione** che mostra radar, precipitazioni, vento, temperatura e altri parametri meteo centrati su Genzano di Roma. Dal menu del widget puoi cambiare il tipo di layer e la scala temporale.
+La mappa mostra radar, precipitazioni, vento, temperatura e altri parametri meteo centrati su Genzano di Roma. Dal menu del widget puoi cambiare il livello informativo e la scala temporale.
 
 <div class="alert alert-warning" role="note">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Attenzione:</strong> la mappa è un ausilio visivo fornito da <strong>Windy.com</strong> e si basa su modelli previsionali internazionali. <strong>Non sostituisce il bollettino ufficiale</strong>. Per le allerte che valgono sul territorio di Genzano consulta sempre il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale della Regione Lazio</a>.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Attenzione:</strong> la mappa è un ausilio visivo fornito da <strong>Windy.com</strong>. Non sostituisce il bollettino ufficiale. Per le allerte valide sul territorio consulta sempre il Centro Funzionale della Regione Lazio.</p>
 </div>
 
 {{< external-widget
@@ -53,12 +56,12 @@ toc: true
     fallbackText="Mappa meteo online consultabile su windy.com — Genzano di Roma (41.6919 N, 12.6928 E)"
     widgetId="meteo-windy" >}}
 
-## Radar nazionale precipitazioni — fonte istituzionale
+## Radar nazionale precipitazioni
 
-Mosaico radar nazionale del **Dipartimento della Protezione Civile**, aggiornato ogni 10 minuti. A differenza di Windy — che mostra previsioni elaborate da modelli internazionali — il radar DPC mostra la **pioggia realmente misurata** dai radar meteorologici italiani in questo momento.
+Il mosaico radar nazionale del **Dipartimento della Protezione Civile** mostra la pioggia misurata dai radar meteorologici italiani. È utile per vedere l'evoluzione delle precipitazioni in tempo reale.
 
 <div class="alert alert-success" role="note">
-<p class="mb-0"><i class="bi bi-patch-check-fill me-2" aria-hidden="true"></i><strong>Fonte istituzionale italiana:</strong> il radar DPC è lo strumento operativo ufficiale del Dipartimento di Protezione Civile per la sorveglianza meteo-idrologica nazionale.</p>
+<p class="mb-0"><i class="bi bi-patch-check-fill me-2" aria-hidden="true"></i><strong>Fonte istituzionale italiana:</strong> il radar DPC è uno strumento operativo del Dipartimento della Protezione Civile per la sorveglianza meteo-idrologica nazionale.</p>
 </div>
 
 {{< external-widget
@@ -73,13 +76,9 @@ Mosaico radar nazionale del **Dipartimento della Protezione Civile**, aggiornato
     fallbackText="Radar nazionale precipitazioni consultabile su mappe.protezionecivile.gov.it (Dipartimento Protezione Civile)"
     widgetId="radar-dpc" >}}
 
-## Previsione meteo per Genzano di Roma — Aeronautica Militare
+## Previsione meteo per Genzano di Roma
 
-Consulta la previsione del **Servizio Meteorologico dell'Aeronautica Militare** per Genzano di Roma. È la previsione meteorologica del Servizio Meteorologico Nazionale italiano.
-
-<div class="alert alert-light" role="note">
-<p class="mb-0"><i class="bi bi-patch-check-fill me-2" aria-hidden="true"></i><strong>Fonte istituzionale:</strong> l'Aeronautica Militare gestisce il Servizio Meteorologico Nazionale italiano.</p>
-</div>
+Consulta la previsione del **Servizio Meteorologico dell'Aeronautica Militare** per Genzano di Roma. È una fonte istituzionale per le previsioni meteorologiche.
 
 {{< external-widget
     src="https://www.meteoam.it/it/meteo-citta/genzano-di-roma"
@@ -95,123 +94,113 @@ Consulta la previsione del **Servizio Meteorologico dell'Aeronautica Militare** 
 
 ## Come funziona il sistema di allertamento
 
-Il sistema nazionale di allertamento per il rischio meteo-idrogeologico e idraulico si articola su due livelli:
+Il sistema nazionale di allertamento per il rischio meteo-idrogeologico e idraulico funziona su due livelli:
 
-1. **Il Dipartimento della Protezione Civile** emette un avviso di condizioni meteorologiche avverse quando si prevedono fenomeni significativi.
-2. **Il Centro Funzionale Regionale del Lazio** valuta i possibili effetti al suolo e determina il livello di criticità per ciascuna zona di allerta.
+1. **Dipartimento della Protezione Civile** — emette avvisi di condizioni meteorologiche avverse quando sono previsti fenomeni significativi.
+2. **Centro Funzionale Regionale del Lazio** — valuta i possibili effetti al suolo e assegna il livello di criticità per ciascuna zona di allerta.
 
-Il nostro Comune rientra nella **Zona di allerta F — Bacini Costieri Sud**, secondo la classificazione regionale [DGR 865/2019](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf). Il bollettino viene emesso ogni giorno, generalmente entro le ore 14:00, con validità per le successive 24-36 ore.
+Genzano di Roma rientra nella **Zona di allerta F — Bacini Costieri Sud**, secondo la classificazione regionale DGR 865/2019. Il bollettino viene emesso ogni giorno, di norma entro le ore 14:00, con validità per le successive 24-36 ore.
 
-L'architettura italiana — Dipartimento della Protezione Civile → Centro Funzionale Regionale → Sindaco → cittadini — recepisce i principi della norma internazionale **ISO 22322:2022** *Public warning systems*. La fonte istituzionale operativa per il cittadino resta il bollettino del Centro Funzionale Regionale del Lazio.
+### Previsione meteo e allerta non sono la stessa cosa
 
-### Differenza tra previsione meteo e allerta
+- **Previsione meteo:** indica il tempo previsto, per esempio pioggia, vento o temperatura.
+- **Allerta di criticità:** indica gli effetti possibili al suolo, per esempio allagamenti, frane o piene.
 
-- **Previsione meteo:** indica il tempo atmosferico previsto (pioggia, vento, temperature).
-- **Allerta di criticità:** indica gli effetti attesi al suolo (allagamenti, frane, piene). È la criticità — non la meteo — che determina il codice colore.
+Il codice colore dipende dagli effetti attesi, non solo dalla quantità di pioggia prevista.
 
 ## Significato dei codici colore
 
-I quattro livelli — **verde** (nessuna allerta), **giallo** (attenzione), **arancione** (preallarme), **rosso** (allarme) — sono lo standard italiano definito dal Dipartimento della Protezione Civile e applicato dal Centro Funzionale Regionale del Lazio. Il principio del codice-colore graduato è recepito anche nella norma internazionale **ISO 22324:2015** *Guidelines for color-coded alerts*, che lo identifica come metodo riconosciuto per la comunicazione del rischio alla popolazione. In Italia prevale lo schema DPC: il verde è incluso volutamente per dichiarare anche l'assenza di criticità.
+### <span class="badge badge-allerta-verde">VERDE</span> — Nessuna allerta
 
-### <span class="badge badge-allerta-verde">VERDE</span> — Nessuna Allerta
-
-{{< pittogramma src="/pittogrammi/arasaac/calma.png" alt="Pittogramma: situazione di calma" size="small" inline="true" >}} Assenza di fenomeni significativi prevedibili. La situazione è sotto controllo.
+{{< pittogramma src="/pittogrammi/arasaac/calma.png" alt="Pittogramma: situazione di calma" size="small" inline="true" >}} Non sono previsti fenomeni significativi.
 
 **Cosa fare:**
 
-- Nessuna azione richiesta.
-- Resta informato seguendo i canali ufficiali.
+- Non sono richieste azioni specifiche.
+- Resta informato attraverso i canali ufficiali.
 
-### <span class="badge badge-allerta-gialla">GIALLA</span> — Livello di Attenzione
+### <span class="badge badge-allerta-gialla">GIALLA</span> — Attenzione
 
-{{< pittogramma src="/pittogrammi/arasaac/attenzione.png" alt="Pittogramma: attenzione" size="small" inline="true" >}} Criticità ordinaria. Sono possibili fenomeni meteorologici localizzati e di intensità moderata.
-
-**Cosa fare:**
-
-- Presta attenzione ai bollettini ufficiali.
-- Evita zone a rischio allagamento.
-- Non sostare lungo i corsi d'acqua né sotto alberi isolati.
-
-### <span class="badge badge-allerta-arancione">ARANCIONE</span> — Livello di Preallarme
-
-{{< pittogramma src="/pittogrammi/arasaac/allarme.png" alt="Pittogramma: allarme" size="small" inline="true" >}} Criticità moderata. I fenomeni previsti possono essere diffusi e potenzialmente pericolosi.
+{{< pittogramma src="/pittogrammi/arasaac/attenzione.png" alt="Pittogramma: attenzione" size="small" inline="true" >}} Sono possibili fenomeni localizzati, anche intensi.
 
 **Cosa fare:**
 
-- Limita gli spostamenti allo stretto necessario.
-- Metti in sicurezza i beni che si trovano in locali interrati o seminterrati.
+- Segui i bollettini ufficiali.
+- Evita zone soggette ad allagamento.
+- Non sostare lungo corsi d'acqua, fossi o sottopassaggi.
+- Fai attenzione ad alberi, impalcature e oggetti esposti al vento.
+
+### <span class="badge badge-allerta-arancione">ARANCIONE</span> — Preallarme
+
+{{< pittogramma src="/pittogrammi/arasaac/allarme.png" alt="Pittogramma: allarme" size="small" inline="true" >}} I fenomeni previsti possono essere diffusi e pericolosi.
+
+**Cosa fare:**
+
+- Limita gli spostamenti non necessari.
+- Metti in sicurezza balconi, cantine e locali seminterrati, solo se puoi farlo senza pericolo.
 - Tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/).
 - Segui le indicazioni delle autorità.
 
-### <span class="badge badge-allerta-rossa">ROSSA</span> — Livello di Allarme
+### <span class="badge badge-allerta-rossa">ROSSA</span> — Allarme
 
-{{< pittogramma src="/pittogrammi/arasaac/emergenza.png" alt="Pittogramma: emergenza" size="small" inline="true" >}} Criticità elevata. I fenomeni previsti sono molto intensi e con elevata probabilità di causare danni gravi.
+{{< pittogramma src="/pittogrammi/arasaac/emergenza.png" alt="Pittogramma: emergenza" size="small" inline="true" >}} I fenomeni previsti sono molto intensi e possono causare danni gravi.
 
 **Cosa fare:**
 
-- Non uscire di casa se non è strettamente necessario.
-- Allontanati dai piani interrati e seminterrati.
-- Non attraversare strade allagate né sottopassaggi.
-- Segui esclusivamente le indicazioni delle autorità.
-- Tieni il telefono carico e in carica.
+- Non uscire se non è strettamente necessario.
+- Allontanati da piani interrati e seminterrati.
+- Non attraversare strade allagate o sottopassaggi.
+- Segui solo le indicazioni delle autorità.
+- Tieni il telefono carico.
 
 ## Tipi di rischio monitorati
 
-Per ogni bollettino vengono valutati separatamente:
+Nel bollettino possono essere valutati diversi rischi:
 
-- **Rischio idrogeologico** — frane, smottamenti, colate di fango
-- **Rischio idraulico** — esondazioni, piene, allagamenti
-- **Rischio temporali** — grandine, fulmini, raffiche di vento, piogge intense
-- **Criticità generale** — valutazione complessiva
+- **rischio idrogeologico** — frane, smottamenti, colate di fango;
+- **rischio idraulico** — esondazioni, piene, allagamenti;
+- **rischio temporali** — grandine, fulmini, raffiche di vento, piogge intense;
+- **criticità generale** — valutazione complessiva.
 
-Il livello di allerta mostrato nella barra del nostro sito corrisponde al **valore più alto** tra questi quattro indicatori per il Comune di Genzano di Roma.
+Il livello mostrato nella barra del sito corrisponde al valore più alto rilevato per il Comune di Genzano di Roma.
 
 ## Domande frequenti
 
 <details class="faq-item">
 <summary><strong>Chi emette le allerte?</strong></summary>
 
-Le allerte sono emesse dal **Centro Funzionale Regionale** dell'Agenzia di Protezione Civile del Lazio. Non vengono emesse dal nostro Gruppo né dal Comune.
+Le allerte sono emesse dal **Centro Funzionale Regionale** dell'Agenzia di Protezione Civile del Lazio. Non vengono emesse dal Gruppo Comunale né dal Comune.
 
 </details>
 
 <details class="faq-item">
-<summary><strong>Allerta gialla: devo stare a casa?</strong></summary>
+<summary><strong>Con allerta gialla devo stare a casa?</strong></summary>
 
-Non necessariamente, ma devi **prestare attenzione**.
-
-- Evita zone a rischio.
-- Tieni monitorata la situazione.
-- Con allerta arancione o rossa, limita gli spostamenti.
+No, non necessariamente. Devi però prestare attenzione, evitare zone a rischio e seguire gli aggiornamenti ufficiali. Con allerta arancione o rossa limita gli spostamenti non necessari.
 
 </details>
 
 <details class="faq-item">
 <summary><strong>Perché piove forte ma non c'è allerta?</strong></summary>
 
-L'allerta si basa su **previsioni emesse in anticipo**. A volte fenomeni localizzati e improvvisi non sono previsti dal bollettino. Per questo è importante adottare sempre comportamenti prudenti durante eventi meteo intensi.
+L'allerta si basa su previsioni emesse in anticipo. Alcuni fenomeni localizzati possono svilupparsi rapidamente. Anche senza allerta, durante piogge intense devi adottare comportamenti prudenti.
 
 </details>
 
 <details class="faq-item">
 <summary><strong>Come ricevo le notifiche?</strong></summary>
 
-- **Canale Telegram del Gruppo:** [@pcalfagenzano](https://t.me/pcalfagenzano) per aggiornamenti in tempo reale.
-- **IT-alert nazionale:** il sistema [IT-alert](https://www.it-alert.it/it/) invia messaggi direttamente ai telefoni cellulari nell'area interessata, in caso di emergenze gravi.
+Puoi seguire il canale Telegram del Gruppo: [@pcalfagenzano](https://t.me/pcalfagenzano). In caso di emergenze gravi può arrivare anche un messaggio dal sistema nazionale [IT-alert](https://www.it-alert.it/it/).
 
 </details>
 
 ## Approfondimenti dall'archivio
 
-Letture consigliate per capire meglio previsioni e bollettini:
-
-- Articolo: [Previsioni meteo e bollettini: come funziona il sistema](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
-- Articolo: [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
-- Articolo: [Temporali intensi: comportamenti corretti](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/)
-- Articolo: [Vento forte: cosa fare prima, durante e dopo](/comunicazioni/2026-05-16-vento-forte-prima-durante-dopo/)
-- Articolo: [Sentinelle del tempo: osservazione meteo amatoriale](/comunicazioni/2026-03-03-sentinelle-meteo-osservazione-amatoriale/)
-
-Tutti gli articoli sulle allerte meteo sono filtrabili nell'[archivio delle comunicazioni](/comunicazioni/) con i tag **Allerta** e **Informazione**.
+- [Previsioni meteo e bollettini: come funziona il sistema](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
+- [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
+- [Temporali intensi: comportamenti corretti](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/)
+- [Vento forte: cosa fare prima, durante e dopo](/comunicazioni/2026-05-16-vento-forte-prima-durante-dopo/)
+- [Sentinelle del tempo: osservazione meteo amatoriale](/comunicazioni/2026-03-03-sentinelle-meteo-osservazione-amatoriale/)
 
 ## Fonti ufficiali
 
@@ -222,8 +211,7 @@ Tutti gli articoli sulle allerte meteo sono filtrabili nell'[archivio delle comu
 
 ## Vedi anche
 
-- [Rischi e Prevenzione](/rischi-prevenzione/) — cosa fare per ogni tipo di rischio
-- [Cartografia](/cartografia/) — mappe del territorio e degli scenari
+- [Rischi e prevenzione](/rischi-prevenzione/) — cosa fare per ogni tipo di rischio
+- [Cartografia operativa](/cartografia/) — mappe del territorio e aree di emergenza
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
-- [Piano familiare](/piano-familiare/) — il piano di emergenza per la tua famiglia
-
+- [Piano di emergenza familiare](/piano-familiare/) — il piano per la tua famiglia

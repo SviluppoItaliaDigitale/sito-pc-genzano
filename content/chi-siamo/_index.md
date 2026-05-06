@@ -1,6 +1,6 @@
 ---
-title: "Chi Siamo"
-description: "La storia, il direttivo, gli automezzi e le attività del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma."
+title: "Chi siamo"
+description: "Storia, riferimenti istituzionali, direttivo, mezzi e attività del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma."
 layout: "single"
 toc: true
 aliases:
@@ -15,7 +15,7 @@ dataUltimaRevisione: "2026-05-06"
 <div class="row align-items-center">
 <div class="col-md-8">
 <h2 class="h4 text-primary mb-3">Il Gruppo Comunale Volontari di Protezione Civile</h2>
-<p class="mb-0">Dal 1981 al servizio della comunità di Genzano di Roma. Operiamo sotto la direzione della Sala Operativa Regionale Lazio e del Comando di Polizia Locale, aderenti al coordinamento FEPIVOL.</p>
+<p class="mb-0">Il Gruppo opera dal 1981 a servizio della comunità di Genzano di Roma. Svolge attività di prevenzione, supporto operativo, assistenza alla popolazione e informazione sui rischi, sempre nel quadro del sistema istituzionale di protezione civile.</p>
 </div>
 <div class="col-md-4 text-center">
 <i class="bi bi-shield-check" style="font-size:5rem;color:var(--pc-primary);opacity:0.3;" aria-hidden="true"></i>
@@ -24,7 +24,7 @@ dataUltimaRevisione: "2026-05-06"
 </div>
 </div>
 
-## Riferimenti Istituzionali
+## Riferimenti istituzionali
 
 <div class="row mb-5">
 <div class="col-md-6 mb-3">
@@ -43,32 +43,32 @@ dataUltimaRevisione: "2026-05-06"
 <div class="col-md-6 mb-3">
 <div class="card h-100 shadow-sm border-start border-4" style="border-color:var(--pc-secondary)!important;">
 <div class="card-body">
-<h3 class="h6"><i class="bi bi-people-fill text-primary me-2" aria-hidden="true"></i> Gruppo Volontari</h3>
-<p class="small mb-2">Il Gruppo Comunale Volontari è un Ente del Terzo Settore iscritto al RUNTS, dotato di proprio Statuto e Regolamento.</p>
-<p class="small mb-0">Opera in coordinamento con il Sindaco, autorità locale di Protezione Civile, e con il Comando di Polizia Locale.</p>
+<h3 class="h6"><i class="bi bi-people-fill text-primary me-2" aria-hidden="true"></i> Gruppo volontari</h3>
+<p class="small mb-2">Il Gruppo Comunale Volontari è un Ente del Terzo Settore iscritto al RUNTS, con Statuto e Regolamento propri.</p>
+<p class="small mb-0">Opera in coordinamento con il Sindaco, autorità locale di protezione civile, con il Comando di Polizia Locale, con la Sala Operativa Regionale Lazio e con il coordinamento FEPIVOL.</p>
 </div>
 </div>
 </div>
 </div>
 
-## La Nostra Storia
+## La nostra storia
 
 <div class="row mb-4">
 <div class="col-md-6">
 
-Il gruppo nasce il **23 Luglio 1981** con una prima associazione di volontari denominata "Comitato di Protezione Civile e Sicurezza". Successivamente il gruppo ha adottato il nominativo di **"CB Genzano"** (1985).
+Il Gruppo nasce il **23 luglio 1981** con una prima associazione di volontari denominata "Comitato di Protezione Civile e Sicurezza". Nel 1985 assume il nominativo di **CB Genzano**.
 
-Nel **1991** è stato istituito il gruppo comunale di Protezione Civile con delibera di Consiglio Comunale, grazie al sindaco on. Gino Cesaroni.
+Nel **1991** viene istituito il Gruppo Comunale di Protezione Civile con delibera del Consiglio Comunale, durante l'amministrazione del sindaco on. Gino Cesaroni.
 
 </div>
 <div class="col-md-6">
 
-Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha cambiato radicalmente il proprio apparato gestionale, con la creazione di un Direttivo e di una Assemblea dei volontari, nonché di un aggiornamento radicale dello Statuto e del Regolamento che dagli anni '80 era ancora in vigore.
+Con l'evoluzione della normativa sul Terzo Settore, alla fine del **2023** il Gruppo aggiorna il proprio assetto organizzativo. Vengono costituiti il Direttivo e l'Assemblea dei volontari e vengono rinnovati Statuto e Regolamento.
 
 </div>
 </div>
 
-## Il Consiglio Direttivo
+## Il Consiglio direttivo
 
 <div class="card shadow-sm mb-5">
 <div class="card-header bg-primary text-white">
@@ -83,8 +83,8 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 </thead>
 <tbody>
 <tr><td><strong><i class="bi bi-star-fill text-warning me-1" aria-hidden="true"></i> Coordinatore</strong></td><td>Dario Iacoangeli</td></tr>
-<tr><td><strong>Vice Coordinatore Operativo</strong></td><td>Alessandro Cesaroni</td></tr>
-<tr><td><strong>Vice Coordinatore Operativo</strong></td><td>Tiziano Di Miceli</td></tr>
+<tr><td><strong>Vice coordinatore operativo</strong></td><td>Alessandro Cesaroni</td></tr>
+<tr><td><strong>Vice coordinatore operativo</strong></td><td>Tiziano Di Miceli</td></tr>
 <tr><td>Consigliere</td><td>Fabrizio Moghetti</td></tr>
 <tr><td>Consigliere</td><td>Federico Spinetti</td></tr>
 <tr><td>Consigliere</td><td>Alessandro Pantani</td></tr>
@@ -95,139 +95,62 @@ Con l'avvento della normativa del Terzo Settore, il gruppo a fine **2023** ha ca
 </div>
 </div>
 
-## Attrezzature ed Automezzi
+## Mezzi e attrezzature principali
 
 <div class="row">
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> Land Rover Defender 130</h3>
-<p class="small text-muted mb-0">Pickup 4x4 con modulo antincendio da 600 litri</p>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> EVO Cross 4 Pickup</h3>
-<p class="small text-muted mb-0">Pickup 4x4 per trasporto persone o merci</p>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> Nissan Cabstar</h3>
-<p class="small text-muted mb-0">Automezzo con piattaforma aerea</p>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-truck text-danger me-2" aria-hidden="true"></i> Mercedes Actros</h3>
-<p class="small text-muted mb-0">Autobotte con impianto antincendio da 14.000 litri e distribuzione acqua potabile</p>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-truck text-danger me-2" aria-hidden="true"></i> Mercedes Atego</h3>
-<p class="small text-muted mb-0">Mezzo polivalente con impianto AIB da 6.000 litri, spazzaneve e spargisale</p>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-truck text-success me-2" aria-hidden="true"></i> Iveco VM90</h3>
-<p class="small text-muted mb-0">Automezzo 4x4 con modulo antincendio da 800 litri</p>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-house text-info me-2" aria-hidden="true"></i> Tenda Sociale</h3>
-<p class="small text-muted mb-0">Tenda pneumatica da 35 mq per l'assistenza alla popolazione</p>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-droplet text-primary me-2" aria-hidden="true"></i> Vasca Mobile</h3>
-<p class="small text-muted mb-0">Vasca da 8.000 litri per il rifornimento degli elicotteri antincendio</p>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> Fiat Doblò</h3>
-<p class="small text-muted mb-0">Trasporto persone, unità droni e attrezzature</p>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-display text-info me-2" aria-hidden="true"></i> Iveco Cacciamali</h3>
-<p class="small text-muted mb-0 fst-italic">In allestimento come Sala Operativa Mobile</p>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mb-3">
-<div class="card h-100 shadow-sm">
-<div class="card-body">
-<h3 class="h6"><i class="bi bi-truck text-success me-2" aria-hidden="true"></i> Astra BM201</h3>
-<p class="small text-muted mb-0 fst-italic">In allestimento</p>
-</div>
-</div>
-</div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> Land Rover Defender 130</h3><p class="small text-muted mb-0">Pickup 4x4 con modulo antincendio da 600 litri.</p></div></div></div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> EVO Cross 4 Pickup</h3><p class="small text-muted mb-0">Pickup 4x4 per trasporto persone o materiali.</p></div></div></div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> Nissan Cabstar</h3><p class="small text-muted mb-0">Automezzo con piattaforma aerea.</p></div></div></div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-truck text-danger me-2" aria-hidden="true"></i> Mercedes Actros</h3><p class="small text-muted mb-0">Autobotte con impianto antincendio da 14.000 litri e distribuzione di acqua potabile.</p></div></div></div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-truck text-danger me-2" aria-hidden="true"></i> Mercedes Atego</h3><p class="small text-muted mb-0">Mezzo polivalente con impianto AIB da 6.000 litri, spazzaneve e spargisale.</p></div></div></div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-truck text-success me-2" aria-hidden="true"></i> Iveco VM90</h3><p class="small text-muted mb-0">Automezzo 4x4 con modulo antincendio da 800 litri.</p></div></div></div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-house text-info me-2" aria-hidden="true"></i> Tenda sociale</h3><p class="small text-muted mb-0">Tenda pneumatica da 35 mq per l'assistenza alla popolazione.</p></div></div></div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-droplet text-primary me-2" aria-hidden="true"></i> Vasca mobile</h3><p class="small text-muted mb-0">Vasca da 8.000 litri per il rifornimento degli elicotteri antincendio.</p></div></div></div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-truck text-primary me-2" aria-hidden="true"></i> Fiat Doblò</h3><p class="small text-muted mb-0">Mezzo per trasporto persone, unità droni e attrezzature.</p></div></div></div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-display text-info me-2" aria-hidden="true"></i> Iveco Cacciamali</h3><p class="small text-muted mb-0 fst-italic">In allestimento come sala operativa mobile.</p></div></div></div>
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi bi-truck text-success me-2" aria-hidden="true"></i> Astra BM201</h3><p class="small text-muted mb-0 fst-italic">In allestimento.</p></div></div></div>
 </div>
 
-## I Settori operativi
+## Settori operativi
 
 <div class="row mb-5">
 <div class="col-md-6 mb-3">
 <div class="card h-100 shadow-sm border-start border-primary border-4">
 <div class="card-body">
-<h3 class="h5"><i class="bi bi-broadcast-pin text-primary me-2" aria-hidden="true"></i> Settore Telecomunicazioni</h3>
-<p>Il settore TLC è la spina dorsale delle nostre comunicazioni in emergenza. I volontari di questo gruppo si occupano della gestione e manutenzione di tutte le apparecchiature radio, garantendo collegamenti stabili e affidabili tra le squadre sul campo, la sala operativa e gli altri enti coinvolti.</p>
+<h3 class="h5"><i class="bi bi-broadcast-pin text-primary me-2" aria-hidden="true"></i> Telecomunicazioni</h3>
+<p>Il settore TLC cura le comunicazioni radio in attività ordinaria e in emergenza. I volontari gestiscono e mantengono le apparecchiature radio, per garantire collegamenti tra squadre sul campo, sala operativa e altri enti coinvolti.</p>
 </div>
 </div>
 </div>
 <div class="col-md-6 mb-3">
 <div class="card h-100 shadow-sm border-start border-4" style="border-color:var(--pc-secondary)!important;">
 <div class="card-body">
-<h3 class="h5"><i class="bi bi-megaphone text-warning me-2" aria-hidden="true"></i> Settore Web, Social e Divulgazione</h3>
-<p>La comunicazione con la cittadinanza è un pilastro della moderna Protezione Civile. Questo gruppo gestisce il sito web istituzionale e i canali social, fornendo aggiornamenti in tempo reale durante le allerte meteo e le emergenze. Si occupa inoltre della divulgazione delle buone pratiche di autoprotezione.</p>
+<h3 class="h5"><i class="bi bi-megaphone text-warning me-2" aria-hidden="true"></i> Web, social e divulgazione</h3>
+<p>Il settore cura il sito web, i canali social e la comunicazione al cittadino. Pubblica aggiornamenti durante allerte ed emergenze e diffonde buone pratiche di autoprotezione.</p>
 </div>
 </div>
 </div>
 <div class="col-md-6 mb-3">
 <div class="card h-100 shadow-sm border-start border-4" style="border-color:#28a745!important;">
 <div class="card-body">
-<h3 class="h5"><i class="bi bi-mortarboard text-success me-2" aria-hidden="true"></i> Settore Divulgazione Scuole</h3>
-<p>Questo settore si dedica alla divulgazione della cultura di protezione civile nelle scuole del territorio. I volontari formati portano nelle classi lezioni interattive sui rischi, i comportamenti corretti in emergenza e le buone pratiche di prevenzione, coinvolgendo bambini e ragazzi con dimostrazioni pratiche e materiali didattici. I divulgatori partecipano a eventi formativi periodici per restare sempre aggiornati e competenti.</p>
+<h3 class="h5"><i class="bi bi-mortarboard text-success me-2" aria-hidden="true"></i> Divulgazione nelle scuole</h3>
+<p>Il settore promuove la cultura di protezione civile nelle scuole del territorio. I volontari formati propongono lezioni, attività pratiche e materiali didattici su rischi, prevenzione e comportamenti corretti.</p>
 </div>
 </div>
 </div>
 <div class="col-md-6 mb-3">
 <div class="card h-100 shadow-sm border-start border-4" style="border-color:#6f42c1!important;">
 <div class="card-body">
-<h3 class="h5"><i class="bi bi-camera-reels text-purple me-2" aria-hidden="true"></i> Settore Droni</h3>
-<p>I piloti del Settore Droni sono volontari abilitati e certificati ENAC per il pilotaggio di aeromobili a pilotaggio remoto (APR). Utilizzano i droni nelle attività di protezione civile per la ricognizione del territorio, il monitoraggio di incendi boschivi, la mappatura di aree colpite da calamità e il supporto alle operazioni di ricerca. I piloti seguono eventi formativi specifici per mantenere le abilitazioni e affinare le competenze operative.</p>
+<h3 class="h5"><i class="bi bi-camera-reels text-purple me-2" aria-hidden="true"></i> Droni</h3>
+<p>I piloti abilitati utilizzano aeromobili a pilotaggio remoto per ricognizione, monitoraggio del territorio, supporto alle attività antincendio, mappatura di aree colpite da eventi e ricerca, secondo le autorizzazioni e le procedure previste.</p>
 </div>
 </div>
 </div>
 </div>
 
-## Timeline Eventi
+## Eventi e calamità significative
 
-Di seguito alcuni eventi e calamità significative dove il nostro gruppo ha partecipato attivamente, dalla fondazione al giorno d'oggi.
+Di seguito sono riportati alcuni eventi e calamità in cui il Gruppo ha partecipato ad attività di supporto, dalla fondazione a oggi.
 
 {{< foto src="/images/storica-gruppo-volontari-anni-90.webp"
          alt="Foto storica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma negli anni Novanta: sei volontari in divisa azzurra schierati davanti a due automezzi del Gruppo, tra cui un'autobotte con la scritta 'Protezione Civile — Comune di Genzano'"
@@ -241,18 +164,25 @@ Di seguito alcuni eventi e calamità significative dove il nostro gruppo ha part
 <div class="timeline-item"><strong>1999</strong> — Missione Arcobaleno (Kosovo)</div>
 <div class="timeline-item"><strong>2000</strong> — Giubileo di Roma</div>
 <div class="timeline-item"><strong>2000</strong> — Alluvione Bovalino (RC)</div>
-<div class="timeline-item"><strong>2000</strong> — Alluvione Val D'Aosta</div>
+<div class="timeline-item"><strong>2000</strong> — Alluvione Val d'Aosta</div>
 <div class="timeline-item"><strong>2002</strong> — Terremoto Molise</div>
 <div class="timeline-item"><strong>2003</strong> — Alluvione Termoli (CB)</div>
-<div class="timeline-item"><strong>2005</strong> — Funerali Santo Padre</div>
-<div class="timeline-item"><strong>2005</strong> — Elezioni Santo Padre</div>
+<div class="timeline-item"><strong>2005</strong> — Funerali del Santo Padre</div>
+<div class="timeline-item"><strong>2005</strong> — Elezione del Santo Padre</div>
 <div class="timeline-item"><strong>2009</strong> — Terremoto Abruzzo</div>
 <div class="timeline-item"><strong>2016</strong> — Terremoto Centro Italia (Amatrice, Norcia, Accumoli)</div>
 <div class="timeline-item"><strong>2020</strong> — Emergenza COVID-19</div>
 <div class="timeline-item"><strong>2023</strong> — Riforma ETS e nuovo Statuto</div>
-<div class="timeline-item"><strong>2023</strong> — Alluvione Emilia Romagna</div>
+<div class="timeline-item"><strong>2023</strong> — Alluvione Emilia-Romagna</div>
 <div class="timeline-item"><strong>2023</strong> — Alluvione Toscana</div>
-<div class="timeline-item"><strong>2024</strong> — Alluvione Emilia Romagna</div>
+<div class="timeline-item"><strong>2024</strong> — Alluvione Emilia-Romagna</div>
 <div class="timeline-item"><strong>2025</strong> — Emergenza incendio Parco del Vesuvio</div>
 <div class="timeline-item"><strong>2025</strong> — Giubileo dei Giovani — Campo base Tor Vergata</div>
 </div>
+
+## Vedi anche
+
+- [Contatti e sede](/contatti/) — recapiti e sede del Gruppo
+- [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo
+- [Formazione e scuole](/formazione/) — materiali didattici e percorsi formativi
+- [Piano di emergenza comunale](/piano-emergenza/) — ruoli, aree e procedure del Piano
