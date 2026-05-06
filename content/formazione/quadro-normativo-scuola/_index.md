@@ -1,105 +1,118 @@
 ---
-title: "Quadro normativo per la scuola — riepilogo unico"
-description: "Le norme che regolano l'uso dei materiali del Gruppo nelle scuole: Educazione Civica, PCTO, sicurezza, inclusione, privacy, accessibilità. Fonte unica."
+title: "Quadro normativo per la scuola"
+description: "Riepilogo delle norme principali per usare i materiali del Gruppo nelle scuole: educazione civica, PCTO, sicurezza, inclusione, privacy e accessibilità."
 date: 2026-05-01
 draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-01"
+dataUltimaRevisione: "2026-05-06"
 ---
 
-Questa pagina è il **riepilogo unico** delle norme che regolano la collaborazione fra il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e le istituzioni scolastiche. È pensata per **Dirigenti scolastici, DSGA, DPO, RSPP** e per i docenti che hanno bisogno del quadro completo in un solo punto.
+Questa pagina raccoglie i principali riferimenti normativi utili per collaborazioni tra scuole e Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. È pensata per Dirigenti scolastici, DSGA, DPO, RSPP, ASPP e docenti referenti.
 
-> ℹ️ **Fonte unica di verità.** Le altre pagine del sito citano queste stesse norme nelle "fonti normative" a piè di pagina. Se trovi un disallineamento, **prevale questa pagina**: tutte le altre vanno aggiornate qui per prime.
+<div class="alert alert-info" role="note">
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Questa pagina è un riepilogo informativo. Per il testo vigente consulta sempre Normattiva, Gazzetta Ufficiale, EUR-Lex e i siti istituzionali competenti.</p>
+</div>
 
-## Educazione Civica e Protezione Civile
+## Educazione civica e protezione civile
 
-| Norma | Cosa stabilisce | Applicabilità |
+| Norma | Cosa stabilisce | Dove incide |
 |---|---|---|
-| **L. 20 agosto 2019, n. 92** | Introduzione dell'insegnamento dell'**Educazione Civica** nelle scuole. **Art. 3 lett. h)** include esplicitamente la *"formazione di base in materia di protezione civile"* fra i temi. | Tutte le scuole, tutti i gradi |
-| **D.M. 7 settembre 2024, n. 183** | **Linee Guida nazionali** per l'insegnamento dell'Educazione Civica, **applicabili a decorrere dall'a.s. 2024/2025**. Organizza la disciplina in **3 Nuclei Concettuali**: Costituzione, Sviluppo economico e sostenibilità, Cittadinanza digitale. | Tutte le scuole, tutti i gradi |
-| **L. 17 febbraio 2025, n. 21** | Aggiunge la **lettera h-ter)** all'art. 3 della L. 92/2019: *"conoscenze di base in materia di sicurezza nei luoghi di lavoro"*. Si applica nelle 33 ore di Ed. Civica, particolarmente in Sec. II e PCTO. | Sec. II, PCTO |
-| **D.Lgs. 2 gennaio 2018, n. 1** | **Codice della Protezione Civile**. Cornice generale del Sistema nazionale: ruoli del Sindaco, COC, volontariato organizzato, principi. | Riferimento di sistema |
+| L. 20 agosto 2019, n. 92 | Introduce l'educazione civica. L'art. 3, lett. h, richiama la formazione di base in materia di protezione civile. | Tutti gli ordini di scuola |
+| D.M. 7 settembre 2024, n. 183 | Definisce le Linee guida nazionali per l'educazione civica dall'a.s. 2024/2025. | Tutti gli ordini di scuola |
+| L. 17 febbraio 2025, n. 21 | Introduce conoscenze di base sulla sicurezza nei luoghi di lavoro nell'educazione civica. | Secondaria II grado e PCTO |
+| D.Lgs. 2 gennaio 2018, n. 1 | Codice della protezione civile. Definisce ruoli, attività e principi del Servizio nazionale. | Quadro generale |
 
-## PCTO — Percorsi per le Competenze Trasversali e l'Orientamento
+Per esempi didattici consulta [Educazione civica e protezione civile](/formazione/educazione-civica/).
 
-| Norma | Cosa stabilisce | Applicabilità |
+## PCTO
+
+| Norma | Cosa stabilisce | Dove incide |
 |---|---|---|
-| **D.Lgs. 15 aprile 2005, n. 77** | Definizione e principi generali dell'**alternanza scuola-lavoro**, oggi PCTO. Norma istitutiva storica. | Sec. II |
-| **L. 30 dicembre 2018, n. 145**, art. 1 comma 785 | **Monte ore minimo triennale** PCTO: **90 Licei · 150 Istituti Tecnici · 210 Istituti Professionali**. | Sec. II |
-| **D.M. 4 settembre 2019, n. 774** | **Linee guida operative PCTO**: convenzione, progetto formativo, tutoraggio, valutazione, certificazione. | Sec. II |
-| **D.Lgs. 13 aprile 2017, n. 62** | Valutazione e **certificazione delle competenze**. Modello di certificazione finale del PCTO. | Tutte, focus Sec II |
-| **L. 13 luglio 2015, n. 107** (art. 1 c. 28) | Introduzione del **Curriculum dello studente** che include esiti formativi e PCTO. | Sec. II |
+| D.Lgs. 15 aprile 2005, n. 77 | Definisce l'alternanza scuola-lavoro, oggi PCTO. | Secondaria II grado |
+| L. 30 dicembre 2018, n. 145, art. 1 comma 785 | Stabilisce il monte ore minimo triennale: 90 ore licei, 150 tecnici, 210 professionali. | Secondaria II grado |
+| D.M. 4 settembre 2019, n. 774 | Linee guida PCTO: convenzione, progetto formativo, tutoraggio, valutazione e certificazione. | Secondaria II grado |
+| D.Lgs. 13 aprile 2017, n. 62 | Valutazione e certificazione delle competenze. | Percorsi formativi |
+| L. 13 luglio 2015, n. 107 | Prevede il curriculum dello studente, che include anche esperienze formative e PCTO. | Secondaria II grado |
 
-I moduli del Gruppo (30-50 ore) sono **inseriti** nel monte ore complessivo dell'Istituto, non lo sostituiscono. Vedi i [fac-simile del Pacchetto B](/formazione/scuole-strumenti/#pacchetto-b).
+I moduli proposti dal Gruppo possono essere inseriti nel monte ore complessivo dell'istituto, se approvati dalla scuola e formalizzati con gli atti necessari.
 
 ## Sicurezza nei luoghi di lavoro
 
-| Norma | Cosa stabilisce | Applicabilità |
+| Norma | Cosa stabilisce | Dove incide |
 |---|---|---|
-| **D.Lgs. 9 aprile 2008, n. 81** | **Testo Unico** sulla salute e sicurezza nei luoghi di lavoro. Lo studente in PCTO è **equiparato al lavoratore** (art. 2 c. 1 lett. a). | PCTO + scuole |
-| **Art. 37 D.Lgs. 81/2008** | Obbligo di **formazione generale** sulla sicurezza (almeno 4 ore) prima dell'avvio del PCTO. | PCTO obbligatorio |
-| **Accordo Stato-Regioni 21 dicembre 2011** | Specifica i contenuti della formazione generale e specifica + attestato. Aggiornato successivamente con Accordo del 21 dicembre 2023. | PCTO + lavoratori |
-| **D.M. 26 agosto 1992** | **Norme di prevenzione incendi per l'edilizia scolastica**. Riferimento per piani di evacuazione e prove. | Tutte le scuole |
-| **D.M. 18 dicembre 1975** (e succ. mod.) | Norme tecniche per l'**edilizia scolastica**. | Tutte le scuole |
-| **Reg. UE 2016/425** | Classificazione **DPI** in 3 categorie. | Sec. II + PCTO |
+| D.Lgs. 9 aprile 2008, n. 81 | Testo Unico su salute e sicurezza. Lo studente in PCTO è equiparato al lavoratore per gli aspetti di tutela. | PCTO e scuola |
+| Art. 37 D.Lgs. 81/2008 | Obbligo di formazione sulla sicurezza. | PCTO |
+| Accordo Stato-Regioni 21 dicembre 2011 | Contenuti minimi della formazione generale e specifica. | PCTO e lavoratori |
+| D.M. 26 agosto 1992 | Norme di prevenzione incendi per l'edilizia scolastica. | Piani di emergenza e prove |
+| D.M. 18 dicembre 1975 | Norme tecniche per l'edilizia scolastica. | Edifici scolastici |
+| Reg. UE 2016/425 | Classificazione dei dispositivi di protezione individuale. | DPI e attività pratiche |
 
-## Inclusione, accessibilità, BES/DSA
+La formazione obbligatoria sulla sicurezza resta in capo all'istituto e ai soggetti abilitati. Il Gruppo può svolgere attività divulgative, non sostitutive.
 
-| Norma | Cosa stabilisce | Applicabilità |
+## Inclusione, accessibilità, BES e DSA
+
+| Norma | Cosa stabilisce | Dove incide |
 |---|---|---|
-| **D.Lgs. 13 aprile 2017, n. 66** | **Inclusione scolastica** delle alunne e alunni con disabilità. PEI, GLO, GLI, sostegno. | Tutte le scuole |
-| **L. 8 ottobre 2010, n. 170** | Norme in materia di **Disturbi Specifici di Apprendimento** (DSA). PDP, strumenti compensativi e dispensativi. | Tutte le scuole |
-| **D.M. 12 luglio 2011** | Linee guida per il diritto allo studio degli alunni con DSA. | Tutte le scuole |
-| **L. 9 gennaio 2004, n. 4** (Legge Stanca) | **Accessibilità** dei siti web e dei servizi digitali. Aggiornata da D.Lgs. 106/2018. | Tutte le PA |
-| **Direttiva UE 2016/2102** | Accessibilità siti web e app delle PA, recepita con D.Lgs. 106/2018. | Tutte le PA |
-| **WCAG 2.2 livello AA** | Standard tecnico di accessibilità web (W3C). Riferimento operativo della Stanca. | Tutte le PA |
-| **Convenzione ONU CRPD** (2006, ratificata in Italia con L. 18/2009) | Diritti delle persone con disabilità. Art. 9 (accessibilità), art. 21 (informazione), art. 24 (istruzione inclusiva). | Stato italiano |
+| D.Lgs. 13 aprile 2017, n. 66 | Inclusione scolastica degli alunni con disabilità. | PEI, GLO, sostegno |
+| L. 8 ottobre 2010, n. 170 | Norme sui disturbi specifici di apprendimento. | PDP e strumenti compensativi |
+| D.M. 12 luglio 2011 | Linee guida per il diritto allo studio degli alunni con DSA. | Didattica inclusiva |
+| L. 9 gennaio 2004, n. 4 | Accessibilità degli strumenti informatici. | Siti e servizi digitali |
+| Direttiva UE 2016/2102 | Accessibilità di siti web e app degli enti pubblici. | PA e servizi digitali |
+| WCAG 2.2 livello AA | Standard tecnico internazionale per l'accessibilità web. | Siti e contenuti digitali |
+| Convenzione ONU CRPD | Diritti delle persone con disabilità, accesso all'informazione e istruzione inclusiva. | Inclusione e accessibilità |
+
+Materiali collegati:
+
+- [Easy-to-Read per le scuole](/formazione/easy-to-read-scuola/)
+- [Pittogrammi](/pittogrammi/)
+- [Abili a proteggere](/abili-a-proteggere/)
 
 ## Privacy e protezione dati
 
-| Norma | Cosa stabilisce | Applicabilità |
+| Norma | Cosa stabilisce | Dove incide |
 |---|---|---|
-| **Regolamento UE 2016/679 (GDPR)** | Protezione dati personali. Art. 6 (basi giuridiche), art. 8 (minori), artt. 13-14 (informativa), artt. 15-22 (diritti). | Tutte le PA |
-| **D.Lgs. 30 giugno 2003, n. 196** modif. **D.Lgs. 10 agosto 2018, n. 101** | Codice in materia di protezione dei dati personali. Art. **2-quinquies**: consenso minori sotto i 14 anni esclusivamente dei genitori. | Tutte le PA |
-| **D.Lgs. 30 marzo 2001, n. 39** | Atti pubblici e firma autografa sostituita a mezzo stampa (art. 3 c. 2). | Tutte le PA |
+| Regolamento UE 2016/679, GDPR | Protezione dei dati personali, basi giuridiche, diritti, informative e trattamento dei dati dei minori. | Tutte le attività |
+| D.Lgs. 196/2003, modificato dal D.Lgs. 101/2018 | Codice privacy italiano. | Trattamento dati personali |
+| D.Lgs. 30 marzo 2001, n. 39 | Regole su atti pubblici e firma autografa sostituita a mezzo stampa. | Documentazione amministrativa |
 
-Il **DPO dell'Istituto** è la figura di riferimento per qualunque domanda di famiglie e minori. La [liberatoria immagini minori](/scuole/generico/liberatoria-immagini-minori/) del Pacchetto A applica integralmente queste norme.
+Per foto, video e dati degli studenti il riferimento resta sempre il DPO dell'istituto. Eventuali fac-simile forniti dal Gruppo devono essere verificati e adattati dalla scuola.
 
-## Competenze chiave europee e Agenda 2030
+## Competenze europee e Agenda 2030
 
-| Riferimento | Cosa stabilisce | Applicabilità |
+| Riferimento | Cosa stabilisce | Dove incide |
 |---|---|---|
-| **Raccomandazione del Consiglio UE 22 maggio 2018** (2018/C 189/01) | **8 competenze chiave** per l'apprendimento permanente: alfabetica, multilinguistica, matematica/scientifica, digitale, personale-sociale, cittadinanza, imprenditoriale, espressione culturale. | Tutta UE |
-| **Indicazioni Nazionali per il Curricolo** (D.M. 254/2012) + **Nuovi Scenari** (2018) + **Nuovi Orientamenti per l'Infanzia** (MIM 2024) | Quadro pedagogico nazionale. | Infanzia, Primaria, Sec. I |
-| **D.P.R. 89/2010** (Licei) + **D.P.R. 87-88/2010** (Tecnici e Professionali) | Quadri orari e indicazioni nazionali Sec. II. | Sec. II |
-| **Agenda 2030 ONU** (Risoluzione A/RES/70/1) | 17 Goal di sviluppo sostenibile. Goal **3, 4, 6, 11, 13, 15, 16, 17** sono i più rilevanti per la PC. | Globale |
+| Raccomandazione Consiglio UE 22 maggio 2018 | Otto competenze chiave per l'apprendimento permanente. | Programmazione didattica |
+| Indicazioni Nazionali per il Curricolo, D.M. 254/2012 | Quadro pedagogico per infanzia, primaria e secondaria di primo grado. | Primo ciclo |
+| D.P.R. 87, 88 e 89/2010 | Regolamenti per professionali, tecnici e licei. | Secondaria II grado |
+| Agenda 2030 ONU | Obiettivi di sviluppo sostenibile. I più collegati alla protezione civile sono 3, 4, 6, 11, 13, 15, 16 e 17. | Educazione civica e sostenibilità |
 
-## Stato dei materiali del Gruppo rispetto alla normativa
+## Stato dei materiali del Gruppo
 
-I materiali pubblicati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma:
+I materiali pubblicati dal Gruppo:
 
-- ✅ **Sono progettati per tendere agli obiettivi formativi** definiti dalla normativa scolastica vigente sopra elencata.
-- ✅ **Sono liberamente utilizzabili** dalle scuole. La citazione del Gruppo nelle programmazioni è gradita.
-- ✅ **Sono pubblicati in conformità** WCAG 2.2 AA + Stanca + GDPR.
-- ❌ **NON sono approvati, validati, adottati o certificati** da MIM, USR del Lazio, Ufficio Scolastico Provinciale, Comune di Genzano di Roma, ASL Roma 6, Dipartimento Nazionale di Protezione Civile.
-- ❌ **NON costituiscono testi scolastici** ai sensi del D.Lgs. 297/1994.
-- ❌ **NON sostituiscono** libri di testo adottati dal collegio dei docenti né i materiali del piano dell'offerta formativa dell'Istituto.
+- sono progettati per attività didattiche e divulgative;
+- sono liberamente utilizzabili dalle scuole, con citazione gradita;
+- sono pensati per essere accessibili e aggiornabili;
+- non sono testi scolastici ministeriali;
+- non sono approvati o certificati da MIM, USR, ASL, Dipartimento della Protezione Civile o altri enti;
+- non sostituiscono libri di testo, PTOF, piano di emergenza scolastico o materiali adottati dall'istituto.
 
-La **valutazione finale di idoneità** all'uso in classe e di adeguatezza al gruppo classe specifico spetta al **docente**, in autonomia professionale e in coerenza con la programmazione del consiglio di classe e con il piano dell'offerta formativa dell'Istituto.
+La scelta finale sull'uso in classe spetta al docente e alla scuola, in coerenza con programmazione, PTOF, età degli studenti e bisogni del gruppo classe.
 
-## Dove trovare il testo ufficiale delle norme
+## Dove trovare le norme aggiornate
 
-- **Normattiva** (testi vigenti delle leggi italiane): <https://www.normattiva.it/>
-- **Gazzetta Ufficiale** (testi pubblicati): <https://www.gazzettaufficiale.it/>
-- **EUR-Lex** (testi UE): <https://eur-lex.europa.eu/>
-- **Sito MIM — Atti e norme di Ed. Civica**: <https://www.istruzione.it/educazione_civica/norme.html>
-- **Dipartimento Nazionale Protezione Civile — Normativa**: <https://www.protezionecivile.gov.it/it/normativa/>
-- **AGID — Linee guida**: <https://www.agid.gov.it/it/linee-guida>
+- [Normattiva](https://www.normattiva.it/) — testi vigenti delle leggi italiane.
+- [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/) — pubblicazione ufficiale delle norme.
+- [EUR-Lex](https://eur-lex.europa.eu/) — normativa europea.
+- [MIM — Educazione civica](https://www.istruzione.it/educazione_civica/norme.html) — norme e materiali ministeriali.
+- [Dipartimento della Protezione Civile — Normativa](https://www.protezionecivile.gov.it/it/normativa/) — norme di protezione civile.
+- [AGID — Linee guida](https://www.agid.gov.it/it/linee-guida) — riferimenti per digitale e accessibilità.
 
-Per la **versione interna ai contenuti del sito** consultare la sezione [Normativa](/normativa/) che ha approfondimenti dedicati al D.Lgs. 1/2018 in 7 Capi.
+## Vedi anche
 
----
-
-**Ultimo aggiornamento**: 1 maggio 2026.
+- [Dirigenti scolastici, DSGA, RSPP e ASPP](/formazione/dirigenti-e-rspp/)
+- [Educazione civica](/formazione/educazione-civica/)
+- [Strumenti per le scuole](/formazione/scuole-strumenti/)
+- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/)
