@@ -13,6 +13,14 @@ Sapere cosa fare prima, durante e dopo un'emergenza riduce il rischio per te, pe
 
 <!--more-->
 
+## Pagine di consultazione rapida
+
+Tre pagine pensate per essere consultate in pochi minuti, anche da chi non ha familiarità con il linguaggio tecnico:
+
+- [Rischi principali in parole semplici](/rischi-prevenzione/rischi-in-parole-semplici/) — spiegazione accessibile per bambini, persone con bisogni cognitivi e parlanti italiano L2.
+- [Scuole di Genzano e rischi locali](/rischi-prevenzione/scuole-genzano-rischi-locali/) — riferimenti generali per famiglie e personale scolastico, da integrare con il piano di emergenza del singolo istituto.
+- [Kit di emergenza economico e progressivo](/rischi-prevenzione/kit-emergenza-economico-progressivo/) — come comporre il kit un pezzo alla volta, senza marchi né prodotti specifici.
+
 ## Approfondimenti dall'archivio
 
 Letture consigliate per chi vuole conoscere meglio i rischi del nostro territorio:
