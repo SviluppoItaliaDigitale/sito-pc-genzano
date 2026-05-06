@@ -697,3 +697,11 @@
     - "triage"
   definizione: "Procedura di valutazione rapida delle vittime in un'emergenza per stabilire l'ordine di soccorso. Si basa sulla gravità clinica, non sull'ordine di arrivo."
   link: "/glossario/#triage"
+
+- id: youpol
+  termine: "YouPol"
+  varianti:
+    - "YouPol"
+    - "App YouPol"
+  definizione: "App ufficiale della Polizia di Stato per segnalare bullismo, violenza domestica, droga e altri reati. Le segnalazioni possono essere anonime e includere foto, video o messaggi vocali."
+  link: "/glossario/#youpol"
