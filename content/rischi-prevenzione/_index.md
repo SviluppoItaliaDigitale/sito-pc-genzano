@@ -1,7 +1,7 @@
 ---
 
-title: "Rischi e Prevenzione"
-description: "Conosci i rischi del territorio di Genzano di Roma e le norme di comportamento da adottare."
+title: "Rischi e prevenzione"
+description: "Informazioni sui rischi del territorio di Genzano di Roma e sui comportamenti da adottare prima, durante e dopo un'emergenza."
 aliases:
   - /areerischio.html
   - /areerischio/
@@ -9,13 +9,13 @@ sitemap:
   priority: 0.9
   changefreq: weekly
 ---
-Sapere cosa fare prima, durante e dopo un'emergenza riduce il rischio per te, per la tua famiglia e per chi ti soccorre. In questa sezione trovi i principali rischi del territorio di Genzano di Roma e i comportamenti corretti per proteggere te stesso e chi è vicino a te.
+Conoscere i rischi del territorio aiuta a proteggere te, la tua famiglia e chi interviene nei soccorsi. In questa sezione trovi informazioni pratiche sui principali rischi di Genzano di Roma e sui comportamenti da adottare prima, durante e dopo un'emergenza.
 
 <!--more-->
 
 ## Pagine di consultazione rapida
 
-Tre pagine pensate per essere consultate in pochi minuti, anche da chi non ha familiarità con il linguaggio tecnico:
+Queste pagine sono pensate per chi vuole orientarsi in pochi minuti, anche senza conoscenze tecniche:
 
 - [Rischi principali in parole semplici](/rischi-prevenzione/rischi-in-parole-semplici/) — spiegazione accessibile per bambini, persone con bisogni cognitivi e parlanti italiano L2.
 - [Scuole di Genzano e rischi locali](/rischi-prevenzione/scuole-genzano-rischi-locali/) — riferimenti generali per famiglie e personale scolastico, da integrare con il piano di emergenza del singolo istituto.
@@ -36,9 +36,9 @@ Tutti gli articoli su rischi e prevenzione sono filtrabili nell'[archivio delle 
 
 ## Kit di emergenza essenziale
 
-Tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
+Tieni pronto un kit leggero e raggiungibile. Può servire sia se devi uscire rapidamente, sia se devi restare in casa senza alcuni servizi essenziali.
 
-- acqua in litri sufficienti per la famiglia;
+- acqua per le prime necessità della famiglia;
 - torcia con pile o ricarica funzionante;
 - radio a pile o a manovella;
 - power bank carico;
