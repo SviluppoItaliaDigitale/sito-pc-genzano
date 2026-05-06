@@ -116,18 +116,3 @@ In questo senso, **la Protezione Civile e la tutela ambientale sono alleate natu
 - Articolo correlato: [Giornata della Terra](/comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani/)
 
 Buona Giornata della Biodiversità. Un territorio che conosce, protegge e rigenera la sua biodiversità è **un territorio più sicuro per tutti**.
-
-## Kit consigliato per questo rischio
-
-Per piogge intense, allagamenti o possibili evacuazioni prepara un kit che resti asciutto e facile da prendere.
-
-- acqua e alimenti non deperibili;
-- torcia impermeabile o ben protetta;
-- radio a pile o a manovella;
-- power bank carico;
-- documenti e farmaci in busta impermeabile;
-- cambio asciutto, impermeabile leggero e calze di ricambio;
-- numeri utili stampati e contatti familiari.
-
-Non attraversare sottopassi, strade allagate o corsi d'acqua in piena. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-

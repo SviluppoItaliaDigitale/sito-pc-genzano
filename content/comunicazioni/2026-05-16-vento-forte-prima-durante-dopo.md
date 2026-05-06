@@ -119,18 +119,3 @@ In caso di allerta vento rossa o arancione, il Gruppo Comunale Volontari può es
 - Pagina [Vento forte](/rischi-prevenzione/vento-forte/)
 
 Il vento forte non è uno "spettacolo della natura" da ammirare dalla finestra: è un **rischio da gestire**. Con poche attenzioni prima e con comportamenti calmi durante, si attraversa senza conseguenze.
-
-## Kit consigliato per questo rischio
-
-Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
-
-- torcia;
-- radio a pile o a manovella;
-- power bank carico;
-- acqua e alimenti semplici;
-- farmaci abituali;
-- scarpe chiuse e guanti da lavoro;
-- numeri utili stampati.
-
-Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-

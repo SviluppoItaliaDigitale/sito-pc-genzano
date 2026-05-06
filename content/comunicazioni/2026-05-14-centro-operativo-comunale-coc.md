@@ -104,18 +104,3 @@ Il COC funziona se il **Piano comunale di Protezione Civile** è aggiornato, con
 - Pagina [Piano di emergenza](/piano-emergenza/) del nostro sito
 
 Il COC non è una sigla burocratica: è il **cuore organizzativo** della risposta del Comune all'emergenza. Conoscerne il funzionamento aiuta i cittadini a capire come e perché certe scelte vengono fatte — e a fidarsi del sistema.
-
-## Kit consigliato per questo rischio
-
-Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
-
-- torcia;
-- radio a pile o a manovella;
-- power bank carico;
-- acqua e alimenti semplici;
-- farmaci abituali;
-- scarpe chiuse e guanti da lavoro;
-- numeri utili stampati.
-
-Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-

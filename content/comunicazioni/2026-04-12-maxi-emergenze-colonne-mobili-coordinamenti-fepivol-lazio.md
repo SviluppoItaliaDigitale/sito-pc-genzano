@@ -295,18 +295,3 @@ Un volontario che non ha mai montato una tenda in notturna con il vento, non ha 
 - [Articolo 39 del Codice della Protezione Civile](/comunicazioni/?tag=testo-unico) — i diritti del volontario attivato
 
 *Fonti: D.Lgs. 2 gennaio 2018 n. 1 (Codice della Protezione Civile), procedure operative del FEPIVOL, Meccanismo Europeo di Protezione Civile (ERCC — Bruxelles), esperienze dirette del Gruppo Comunale sulle emergenze 2023 (alluvioni Emilia-Romagna e Toscana) e 2022 (emergenza Ucraina).*
-
-## Kit consigliato per questo rischio
-
-Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
-
-- acqua in litri sufficienti per la famiglia;
-- torcia con pile o ricarica funzionante;
-- radio a pile o a manovella;
-- power bank carico;
-- fischietto per segnalare la presenza;
-- scarpe chiuse, guanti da lavoro e piccola coperta termica;
-- copie dei documenti, farmaci abituali e numeri utili.
-
-Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
-
