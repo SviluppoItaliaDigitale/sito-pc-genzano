@@ -1,6 +1,6 @@
 ---
 title: "Facile da leggere"
-description: "Le informazioni più importanti di Protezione Civile in versione semplice. Frasi corte, parole comuni e istruzioni pratiche."
+description: "Le informazioni più importanti di protezione civile in versione semplice: 112, terremoto, pioggia forte, incendio, temporale, vento, blackout, caldo e zaino di emergenza."
 tts: true
 layout: "single"
 aliases:
@@ -9,6 +9,7 @@ aliases:
 sitemap:
   priority: 0.8
   changefreq: monthly
+dataUltimaRevisione: "2026-05-06"
 ---
 
 <div class="alert alert-success" role="note" style="font-size: 1.15rem; line-height: 1.6;">
@@ -45,18 +46,8 @@ sitemap:
   font-size: 1.3rem;
   flex-shrink: 0;
 }
-.facile-blocco p {
-  margin-bottom: 0.7rem;
-}
+.facile-blocco p { margin-bottom: 0.7rem; }
 .facile-blocco strong { color: #003366; }
-.facile-blocco .numero-grande {
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: #dc3545;
-  display: block;
-  text-align: center;
-  margin: 0.5rem 0;
-}
 .facile-blocco a.tel-grande {
   display: block;
   text-align: center;
@@ -287,7 +278,7 @@ sitemap:
 
 <p>Sono luoghi aperti e larghi.</p>
 <p>Vai lì se la tua casa non è sicura.</p>
-<p>👉 <a href="/cartografia/" style="display: inline-block; background: #003366; color: #fff; padding: 0.8rem 1.2rem; border-radius: 8px; text-decoration: none; margin-top: 0.5rem;">Vedi le aree di attesa di Genzano</a></p>
+<p><a href="/cartografia/" style="display: inline-block; background: #003366; color: #fff; padding: 0.8rem 1.2rem; border-radius: 8px; text-decoration: none; margin-top: 0.5rem;">Vedi le aree di attesa di Genzano</a></p>
 </div>
 
 <div class="facile-blocco">
