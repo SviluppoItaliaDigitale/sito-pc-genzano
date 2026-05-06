@@ -1,158 +1,155 @@
 ---
-title: "Dichiarazione di Accessibilità"
-description: "Dichiarazione di accessibilità del sito web della Protezione Civile di Genzano di Roma."
+title: "Dichiarazione di accessibilità"
+description: "Informazioni sull'accessibilità del sito, strumenti disponibili, feedback e contatti per segnalare problemi."
 layout: "single"
-dataUltimaRevisione: "2026-05-02"
+toc: true
+tts: true
+dataUltimaRevisione: "2026-05-06"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
 
+Questa pagina spiega come il sito della Protezione Civile di Genzano di Roma gestisce l'accessibilità, quali strumenti sono disponibili e come segnalare eventuali problemi.
+
 ## Stato di accessibilità
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma si impegna a rendere il proprio sito web accessibile, conformemente alla Legge 9 gennaio 2004, n. 4, al D.Lgs. 10 agosto 2018, n. 106 e alle Linee Guida sull'accessibilità degli strumenti informatici emanate da AGID.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma si impegna a rendere il sito accessibile, in coerenza con:
 
-La presente dichiarazione si applica al sito web **www.protezionecivilegenzano.it**.
+- Legge 9 gennaio 2004, n. 4;
+- D.Lgs. 10 agosto 2018, n. 106;
+- Linee guida AGID sull'accessibilità degli strumenti informatici;
+- WCAG 2.2 livello AA.
 
-### Conformità
+La dichiarazione si applica al sito **www.protezionecivilegenzano.it**.
 
-Questo sito web è progettato seguendo i principi delle **Linee guida AGID sull'accessibilità** e delle **WCAG 2.2 livello AA** (W3C). Utilizza il framework Bootstrap Italia 2.x del design system della Pubblica Amministrazione italiana.
+<div class="alert alert-info" role="note">
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>La dichiarazione ufficiale secondo il modello AGID è in fase di predisposizione su <a href="https://form.agid.gov.it/" target="_blank" rel="noopener noreferrer">form.agid.gov.it</a>. Il link verrà inserito in questa pagina al termine della procedura.</p>
+</div>
 
-I requisiti di accessibilità per i siti della Pubblica Amministrazione italiana derivano dal recepimento della **Direttiva (UE) 2016/2102** attraverso lo standard europeo **EN 301 549** ("Requisiti di accessibilità per prodotti e servizi ICT"), a sua volta allineato alle WCAG 2.2 e ratificato come **ISO/IEC 40500**. Il quadro è quindi coerente a livello italiano (Legge Stanca + AGID), europeo (EN 301 549) e internazionale (WCAG 2.2 / ISO/IEC 40500).
+## Criteri adottati
 
-Sono in corso le **verifiche periodiche** per migliorare continuamente l'accessibilità. La **dichiarazione di accessibilità ufficiale**, compilata secondo quanto previsto dalla *Decisione di esecuzione (UE) 2018/1523*, è in fase di predisposizione su [form.agid.gov.it](https://form.agid.gov.it/) e il relativo link verrà inserito in questa pagina al termine della procedura. Nel frattempo, per qualsiasi segnalazione di accessibilità, usa il [meccanismo di feedback](#meccanismo-di-feedback) descritto in fondo alla pagina.
+Il sito è progettato per facilitare la consultazione da computer, tablet e smartphone. In particolare:
 
-## Strumenti di Accessibilità del sito
+- struttura le pagine con titoli ordinati;
+- usa testi alternativi per le immagini significative;
+- mantiene colori e contrasti leggibili;
+- permette la navigazione da tastiera;
+- usa link descrittivi;
+- evita, dove possibile, testi troppo lunghi o tecnici;
+- rispetta le preferenze di sistema per movimento ridotto e tema colore, dove applicabile.
 
-In ogni pagina, in basso a sinistra, trovi un pulsante rotondo blu con l'icona di accessibilità (la persona stilizzata cerchiata: <i class="bi bi-universal-access" aria-hidden="true"></i>). Toccandolo si apre il pannello **Strumenti di Accessibilità** con cui puoi:
+Sono previste verifiche periodiche per correggere errori, migliorare i contenuti e rendere più chiara la navigazione.
 
-- **Ingrandire il testo** fino al 150 % (mantenendo l'impaginazione leggibile)
-- Cambiare l'**allineamento** dei paragrafi (a sinistra o giustificato)
-- Attivare un **carattere ad alta leggibilità** (Verdana, di sistema)
-- Aumentare la **spaziatura** di righe e lettere (conforme al criterio WCAG 1.4.12)
-- Attivare il **contrasto alto** o **invertito** (sfondo nero, testo bianco)
-- Visualizzare il sito in **scala di grigi**
-- **Nascondere le immagini** decorative e mettere in **pausa le animazioni**
-- **Evidenziare tutti i link** con sfondo giallo
-- Attivare un **cursore grande** del mouse
-- **Nascondere i pulsanti flottanti** (Assistente virtuale, SOS 112) se da telefono coprono il testo che stai leggendo
+## Strumenti di accessibilità del sito
 
-Le scelte vengono **ricordate sul tuo dispositivo** (tramite `localStorage`): chiudendo e riaprendo il sito le ritrovi attive. Il pulsante "Reimposta tutto" del pannello cancella le preferenze e riporta il sito alle impostazioni standard.
+In ogni pagina, in basso a sinistra, trovi un pulsante rotondo blu con l'icona di accessibilità. Aprendo il pannello puoi:
 
-Il pannello stesso è interamente accessibile da tastiera: si apre con `Invio`, si naviga con `Tab`, si chiude con `Esc` o cliccando fuori. Tutti i comandi hanno descrizioni per gli screen reader.
+- ingrandire il testo;
+- cambiare l'allineamento dei paragrafi;
+- attivare un carattere ad alta leggibilità;
+- aumentare spaziatura di righe e lettere;
+- attivare contrasto alto o contrasto invertito;
+- visualizzare il sito in scala di grigi;
+- nascondere immagini decorative;
+- mettere in pausa le animazioni;
+- evidenziare i link;
+- attivare un cursore grande;
+- nascondere i pulsanti flottanti, se coprono il testo su telefono.
 
-> **Nota importante.** Questi strumenti sono un **aiuto in più** sopra a un sito **progettato secondo i principi delle Linee guida AGID sull'accessibilità e delle WCAG 2.2 livello AA**. Sono in corso verifiche periodiche per migliorare continuamente l'esperienza di utilizzo. Questi strumenti non sostituiscono gli strumenti di accessibilità del tuo sistema operativo o del tuo browser, che restano la soluzione più potente e completa: vedi la sezione successiva.
+Le preferenze restano salvate sul dispositivo. Puoi cancellarle con il pulsante **Reimposta tutto**.
 
-## Lettura ad alta voce, glossario e supporti cognitivi
+Il pannello è utilizzabile anche da tastiera: si apre con `Invio`, si naviga con `Tab` e si chiude con `Esc`.
 
-In cima a quasi tutte le pagine del sito trovi un piccolo gruppo di strumenti pensati per **anziani, persone dislessiche, parlanti italiano come seconda lingua, bambini in lettura lenta, persone in stress da emergenza**.
+## Lettura ad alta voce
 
-### Bottone "Leggi ad alta voce"
+In molte pagine trovi il pulsante **Leggi ad alta voce**. Il browser legge il contenuto con la voce italiana disponibile sul tuo dispositivo.
 
-Premendo il bottone, il sito legge ad alta voce il contenuto della pagina con la **voce italiana installata sul tuo dispositivo**. È completamente **gratuito** e **non invia nulla a server esterni**: tutto avviene nel browser, sfruttando la **Web Speech API** prevista dagli standard W3C.
+La funzione:
 
-Accanto al bottone trovi un selettore di **velocità di lettura**: scegli fra **Lento** (per anziani, bambini, italiano L2), **Normale** (default) o **Veloce** (per chi conosce già il testo). La scelta resta memorizzata sul tuo dispositivo per le pagine successive.
+- è gratuita;
+- non invia il testo a server esterni;
+- usa le funzionalità del browser e del sistema operativo;
+- permette di scegliere la velocità di lettura.
 
-### Glossario inline: termini sottolineati con definizione
+Può essere utile per anziani, persone con dislessia, bambini, persone che leggono lentamente o persone sotto stress durante un'emergenza.
 
-Alla **prima occorrenza** in ogni pagina, le sigle e i termini specialistici di Protezione Civile (DPC, COC, AeDES, IT-alert, NUE, CFR, magnitudo, ipocentro…) sono **sottolineati con tratteggio blu** e affiancati da una piccola icona ⓘ. Toccando o cliccando il termine si apre un riquadro con la definizione breve in italiano semplice e un link al [glossario completo](/glossario/).
+## Glossario e supporti alla lettura
 
-### Tempo di lettura stimato
+Il sito usa anche strumenti di supporto cognitivo:
 
-Sopra ogni articolo trovi un'etichetta del tipo *"Lettura: ~3 minuti"*. Calcolata automaticamente, riduce l'ansia da "muro di testo": sai subito quanto tempo ti serve.
+- tempo di lettura stimato negli articoli;
+- definizioni brevi per alcune sigle e parole tecniche;
+- link al [glossario completo](/glossario/);
+- sillabazione automatica del browser, dove disponibile;
+- pagina [Facile da leggere](/facile-da-leggere/) con frasi brevi e indicazioni essenziali.
 
-### Sillabazione automatica
+## Browser e lettura vocale
 
-Il sito usa la sillabazione automatica del browser (`hyphens: auto`) con regole italiane: le parole lunghe vengono spezzate in modo elegante a fine riga, migliorando il ritmo di lettura per chi ha dislessia o legge italiano come seconda lingua.
+La lettura vocale funziona con i principali browser, tra cui Chrome, Firefox, Safari, Edge e browser mobili moderni.
 
-## Browser e privacy: dove la lettura ad alta voce può non funzionare
+In alcuni browser orientati alla privacy, come Tor Browser o configurazioni molto restrittive di Brave e LibreWolf, la lettura vocale può essere disattivata. Non è un errore del sito: è una scelta del browser per ridurre il rischio di tracciamento tramite le voci installate sul dispositivo.
 
-La sintesi vocale del sito sfrutta la **Web Speech API** del tuo browser, che a sua volta usa le voci installate sul tuo sistema operativo. Funziona **bene su tutti i browser principali**:
+## Strumenti del dispositivo
 
-- ✅ **Google Chrome** (desktop, Android)
-- ✅ **Mozilla Firefox** (desktop, Android)
-- ✅ **Apple Safari** (macOS, iPad, iPhone)
-- ✅ **Microsoft Edge** (desktop)
-- ✅ **Samsung Internet, Opera, Vivaldi** e altri browser standard
+Per esigenze avanzate, usa anche gli strumenti del sistema operativo o del browser.
 
-In alcuni browser **orientati alla privacy** la lettura vocale è invece **disattivata di proposito**, per impedire a chi gestisce un sito di "riconoscere" un visitatore unico tramite la lista delle voci installate sul suo computer (è una tecnica di tracciamento chiamata *fingerprinting*). Questo riguarda in particolare:
+### Zoom della pagina
 
-- ❌ **Tor Browser** — disattivata sempre, in tutte le versioni
-- ❌ **LibreWolf** — disattivata di default (configurabile dall'utente)
-- ❌ **Brave** con scudo (*Shields*) impostato al massimo livello di privacy
-- ❌ Modalità di navigazione anti-fingerprinting di alcuni browser sperimentali
+- **Windows / Linux:** `Ctrl` + `+`, `Ctrl` + `-`, `Ctrl` + `0`.
+- **macOS:** `Cmd` + `+`, `Cmd` + `-`, `Cmd` + `0`.
+- **Tablet e smartphone:** usa il gesto con due dita per ingrandire.
 
-Se usi uno di questi browser, **al posto del bottone vedrai un avviso** che spiega la causa: **non è un difetto del nostro sito, è una scelta del tuo browser per proteggere il tuo anonimato.** Per usare la lettura vocale puoi semplicemente aprire la stessa pagina con un browser diverso (Chrome, Firefox, Safari, Edge), oppure rivolgerti agli strumenti di sistema descritti più sotto.
+### Lettori di schermo
 
-## Strumenti di sistema (browser e sistema operativo)
+- **Windows:** NVDA o JAWS.
+- **macOS, iPhone e iPad:** VoiceOver.
+- **Android:** TalkBack.
 
-Per esigenze più avanzate (lettore di schermo, ingrandimento estremo, riconoscimento vocale, contrasto a livello di sistema), gli strumenti del tuo dispositivo sono più completi del nostro pannello. Ecco le scorciatoie principali:
+### Contrasto e tema scuro
 
-### Ingrandimento e zoom della pagina (browser)
+Puoi impostare contrasto elevato, tema scuro, dimensione testo e riduzione animazioni dalle impostazioni di accessibilità del tuo dispositivo.
 
-- **Windows / Linux:** premi `Ctrl` `+` per ingrandire, `Ctrl` `-` per ridurre, `Ctrl` `0` per tornare al 100 %.
-- **macOS:** premi `Cmd` `+`, `Cmd` `-`, `Cmd` `0`.
-- **Tablet e smartphone:** allarga con due dita (pinch-to-zoom). Su Android e iOS lo zoom della pagina è abilitato di default su questo sito.
+## Contenuti di terze parti
 
-### Lettore di schermo (screen reader)
+Alcune pagine includono widget e strumenti esterni, per esempio Windy.com, INGV, Radar DPC, MeteoAM e Blitzortung.
 
-- **Windows:** [NVDA](https://www.nvaccess.org/) (gratuito) oppure JAWS. Si attiva con `Insert` + `Spazio`.
-- **macOS / iPhone / iPad:** **VoiceOver** già integrato. Su Mac: `Cmd` + `F5`. Su iPhone: `Impostazioni` → `Accessibilità` → `VoiceOver`.
-- **Android:** **TalkBack** già integrato. `Impostazioni` → `Accessibilità` → `TalkBack`.
+Questi contenuti sono caricati con un sistema **click-to-load**: prima compare un riquadro informativo e il contenuto esterno viene caricato solo se scegli di aprirlo.
 
-### Contrasto elevato e tema scuro a livello di sistema
+Quando carichi un widget, l'interfaccia interna del servizio esterno dipende dal fornitore. Quando possibile, il sito offre anche un link alternativo al sito ufficiale del servizio.
 
-- **Windows 11:** `Impostazioni` → `Accessibilità` → `Temi a contrasto`.
-- **macOS:** `Impostazioni di Sistema` → `Accessibilità` → `Schermo` → `Aumenta contrasto`.
-- **Android:** `Impostazioni` → `Accessibilità` → `Testo e visualizzazione` → `Contrasto elevato`.
-- **iOS:** `Impostazioni` → `Accessibilità` → `Schermo e dimensioni testo` → `Aumenta contrasto`.
+La pagina [Strumenti in tempo reale](/strumenti/) elenca gli strumenti usati e distingue le fonti istituzionali dagli strumenti di consultazione.
 
-Questo sito rispetta le preferenze di sistema (`prefers-reduced-motion`, `prefers-color-scheme`) dove pertinenti.
+## Feedback e segnalazioni
 
-### Riconoscimento vocale
-
-- **Windows:** **Accesso vocale** (`Win` + `Ctrl` + `S`) o Cortana.
-- **macOS:** **Comandi vocali** in `Accessibilità`.
-- **Android / iOS:** già integrati nelle impostazioni di accessibilità.
-
-### Risorse ufficiali
-
-- [Designers Italia — Accessibilità](https://designers.italia.it/) — linee guida del Dipartimento per la trasformazione digitale.
-- [W3C Web Accessibility Initiative — Strumenti per utenti](https://www.w3.org/WAI/users/) — guide ufficiali (in inglese).
-- [Difensore Civico per il digitale (AGID)](https://www.agid.gov.it/it/design-servizi/accessibilita/difensore-civico-digitale).
-
-### Meccanismo di feedback
-
-Se durante la navigazione riscontri problemi di accessibilità che ti impediscono di accedere ai contenuti del sito, puoi segnalarlo a:
+Se trovi un problema che ti impedisce di usare il sito o di accedere a un contenuto, puoi segnalarlo con questi recapiti:
 
 - **Email:** [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
 - **Telefono:** [+39 06 9362600](tel:+39069362600)
 
-Cercheremo di rispondere entro 30 giorni dalla segnalazione.
+Nella segnalazione indica, se possibile:
 
-### Procedura di attuazione
+- pagina interessata;
+- problema riscontrato;
+- dispositivo usato;
+- browser usato;
+- eventuale tecnologia assistiva utilizzata.
 
-In caso di risposta insoddisfacente o assente entro 30 giorni, l'utente può ricorrere al Difensore Civico per il digitale, la cui modalità di contatto è reperibile sul sito [AGID](https://www.agid.gov.it/it/design-servizi/accessibilita/difensore-civico-digitale).
+Cercheremo di rispondere entro 30 giorni.
 
-### Contenuti di terze parti
+## Procedura di attuazione
 
-Alcune sezioni del sito incorporano contenuti forniti da servizi esterni, sui quali il Titolare **non esercita controllo diretto** per la conformità WCAG. Tutti questi widget adottano il pattern **"click-to-load"**: si attivano solo dopo esplicita azione dell'utente e offrono sempre un'alternativa testuale (link diretto al sito del fornitore e fallback `<noscript>`).
+In caso di risposta assente o insoddisfacente entro 30 giorni, puoi rivolgerti al [Difensore civico per il digitale](https://www.agid.gov.it/it/design-servizi/accessibilita/difensore-civico-digitale) secondo le modalità indicate da AGID.
 
-La pagina [Strumenti in tempo reale](/strumenti/) raccoglie l'elenco completo degli strumenti esterni utilizzati, organizzati per categoria e con distinzione chiara tra widget incorporati sul sito (iframe click-to-load) e link esterni che aprono il sito del fornitore in una nuova scheda.
+## Risorse utili
 
-**Widget incorporati (iframe):**
+- [AGID — Accessibilità](https://www.agid.gov.it/it/design-servizi/accessibilita)
+- [Designers Italia](https://designers.italia.it/)
+- [W3C Web Accessibility Initiative](https://www.w3.org/WAI/)
+- [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
 
-- **Windy.com** — mappa meteo. Presente in [Home](/), [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/). Alternativa: [windy.com](https://www.windy.com/?41.691,12.692,12).
-- **INGV Terremoti** — mappa e lista sismica Italia (ente pubblico di ricerca). Presente in [Home](/), [Rischio Sismico](/rischi-prevenzione/rischio-sismico/), [Strumenti](/strumenti/). Alternativa: [terremoti.ingv.it](https://terremoti.ingv.it/).
-- **Radar DPC** — radar nazionale precipitazioni (Dipartimento Protezione Civile, ente pubblico). Presente in [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/). Alternativa: [mappe.protezionecivile.gov.it/piattaforma-radar](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/).
-- **Blitzortung / Lightning Maps** — fulmini in tempo reale (rete volontaria internazionale). Presente in [Temporali Intensi](/rischi-prevenzione/temporali-intensi/), [Strumenti](/strumenti/). Alternativa: [map.blitzortung.org](https://map.blitzortung.org/).
-- **MeteoAM — Aeronautica Militare** — previsione meteo ufficiale italiana (ente pubblico, Ministero Difesa). Presente in [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/). Alternativa: [meteoam.it](https://www.meteoam.it/it/meteo-citta/genzano-di-roma).
+## Vedi anche
 
-**Link esterni consigliati (nessun iframe):**
-
-La pagina [Strumenti](/strumenti/) rimanda inoltre ai seguenti servizi istituzionali e di pubblica utilità: ISPRA IdroGEO, EFFIS (Commissione UE), ARPA Lazio, ANAS, AEGIS Regione Lazio, Copernicus EMS, Windy Webcams e meteoblue (confronto multi-modello). Essendo link esterni in nuova scheda, l'accessibilità dell'interfaccia è gestita direttamente dal fornitore.
-
-**Altri contenuti di terzi:**
-
-- **Mappe e documenti PDF** delle pagine istituzionali (Regione Lazio, Dipartimento di Protezione Civile, Normattiva) aperte in nuova scheda.
-
-L'accessibilità dei controlli interni dei widget (zoom, layer switcher, slider temporale, filtri) è responsabilità dei fornitori. Per le parti di sito sotto il controllo diretto del Titolare è garantita la conformità WCAG 2.2 livello AA. Le segnalazioni relative a problemi di accessibilità dei contenuti di terzi vengono inoltrate al fornitore e, ove possibile, viene fornita un'alternativa accessibile.
+- [Privacy e cookie policy](/privacy/) — dati, cookie e widget esterni
+- [Facile da leggere](/facile-da-leggere/) — istruzioni essenziali in linguaggio semplice
+- [Glossario](/glossario/) — sigle e termini tecnici spiegati
+- [Strumenti in tempo reale](/strumenti/) — servizi esterni e fonti di consultazione
