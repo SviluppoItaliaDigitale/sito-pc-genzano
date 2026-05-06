@@ -8,31 +8,45 @@ toc: true
 
 La scuola è uno dei luoghi più importanti della prevenzione. Bambini, ragazzi, docenti, personale ATA e famiglie devono sapere prima cosa fare in caso di emergenza, senza improvvisare durante l'evento.
 
-Questa pagina raccoglie indicazioni pratiche per collegare il lavoro educativo delle scuole di Genzano di Roma ai principali rischi del territorio e agli strumenti già presenti sul sito della Protezione Civile comunale.
+Questa pagina raccoglie indicazioni pratiche per collegare il lavoro educativo delle scuole di Genzano di Roma ai principali rischi trattati dal sito e agli strumenti già disponibili per cittadini, famiglie e docenti.
+
+## Come è stata costruita questa pagina
+
+Questa pagina non contiene dati inventati su singoli istituti scolastici, indirizzi, responsabili, punti di raccolta interni o procedure specifiche di una scuola.
+
+Le indicazioni sono una sintesi divulgativa basata su:
+
+- norme di comportamento del Dipartimento della Protezione Civile per i principali rischi;
+- pagine già presenti su questo sito dedicate a rischio sismico, rischio idrogeologico, incendi boschivi, temporali, vento, caldo e blackout;
+- Piano Comunale di Protezione Civile e cartografia operativa comunale, da consultare per aree di attesa e informazioni territoriali;
+- principi generali di sicurezza scolastica, prove di evacuazione, inclusione e comunicazione alle famiglie;
+- materiali didattici e schede stampabili pubblicati su questo sito.
+
+Per le procedure operative interne, ogni istituto scolastico deve fare riferimento al proprio piano di emergenza, alle indicazioni del Dirigente scolastico, del RSPP e degli addetti designati.
 
 ## Perché una pagina dedicata alle scuole
 
-Le scuole sono luoghi con molte persone, orari definiti, procedure di evacuazione e bisogni diversi: bambini piccoli, studenti con disabilità, persone con difficoltà motorie, alunni che non parlano bene italiano, docenti e operatori scolastici.
+Le scuole sono luoghi con molte persone, orari definiti, procedure di evacuazione e bisogni diversi: bambini piccoli, studenti con disabilità, persone con difficoltà motorie, alunni con italiano L2, docenti e operatori scolastici.
 
 Per questo la prevenzione scolastica deve essere semplice, ripetuta e comprensibile. Non basta sapere che esiste un piano: ogni classe deve conoscere i comportamenti essenziali e ogni famiglia deve sapere dove informarsi.
 
-## Rischi più rilevanti per Genzano di Roma
+## Rischi da conoscere anche a scuola
 
 ### Terremoto
 
-Genzano di Roma si trova in un'area del Lazio a sismicità media. A scuola è fondamentale provare periodicamente le procedure: ripararsi durante la scossa, uscire solo quando indicato dagli adulti, raggiungere il punto di raccolta senza correre e senza tornare indietro.
+Il rischio sismico deve essere conosciuto anche a scuola. È fondamentale provare periodicamente le procedure previste dall'istituto: proteggersi durante la scossa, attendere le indicazioni degli adulti, uscire solo quando previsto, raggiungere il punto di raccolta senza correre e senza tornare indietro.
 
 Consulta anche la pagina [Rischio sismico](/rischi-prevenzione/rischio-sismico/).
 
 ### Piogge intense, allagamenti e frane
 
-Il territorio collinare e la presenza di fossi, versanti e strade in pendenza rendono importante l'attenzione al rischio idrogeologico. Durante forti piogge le scuole devono evitare spostamenti non necessari e seguire le comunicazioni ufficiali del Comune e della Protezione Civile.
+Durante piogge intense, allagamenti o criticità idrogeologiche, le scuole devono evitare spostamenti non necessari e seguire le comunicazioni ufficiali del Comune, della scuola e della Protezione Civile.
 
 Consulta anche la pagina [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
 
 ### Incendi boschivi e fumo
 
-Nel periodo estivo e nelle giornate secche o ventose, il rischio incendi boschivi può interessare aree verdi, strade e zone vicine al Parco Regionale dei Castelli Romani. Per le scuole è importante sapere come comportarsi in presenza di fumo, odore di bruciato o indicazioni di chiusura delle aree esterne.
+In caso di incendi, fumo o odore di bruciato, è importante che studenti e personale scolastico seguano le indicazioni degli adulti e dei soccorritori, senza avvicinarsi alle aree interessate e senza diffondere informazioni non verificate.
 
 Consulta anche la pagina [Rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/).
 
@@ -107,7 +121,8 @@ Preparare prima un piano familiare aiuta anche i bambini: sapere chi li prende, 
 
 ## Fonti e riferimenti
 
-- Dipartimento della Protezione Civile — norme di comportamento per i rischi;
-- Piano comunale di protezione civile e cartografia operativa comunale;
-- indicazioni generali per la sicurezza scolastica e le prove di evacuazione;
+- Dipartimento della Protezione Civile — norme di comportamento per i principali rischi;
+- Piano Comunale di Protezione Civile e cartografia operativa comunale;
+- piano di emergenza del singolo istituto scolastico, per procedure interne e punti di raccolta;
+- indicazioni generali per sicurezza scolastica, prove di evacuazione e inclusione;
 - materiali didattici e schede stampabili pubblicati su questo sito.
