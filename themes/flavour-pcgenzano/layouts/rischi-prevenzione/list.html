@@ -14,7 +14,21 @@
       {{ $approfondimenti := "" }}
       {{ if gt (len $parts) 1 }}{{ $approfondimenti = index $parts 1 }}{{ end }}
 
+      {{/* TTS + tempo di lettura sull'introduzione editoriale */}}
+      {{ if gt .WordCount 30 }}
+      <div class="reading-meta d-flex flex-wrap align-items-center gap-2 mb-3" aria-label="Informazioni di lettura">
+        <span class="reading-time" title="Tempo di lettura stimato (200 parole al minuto)">
+          <i class="bi bi-clock me-1" aria-hidden="true"></i>
+          Lettura: <strong>~{{ .ReadingTime }} {{ if eq .ReadingTime 1 }}minuto{{ else }}minuti{{ end }}</strong>
+          <span class="visually-hidden">— tempo di lettura stimato</span>
+        </span>
+      </div>
+      {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".list-intro-content") }}
+      {{ end }}
+
+      <div class="list-intro-content">
       {{ .RenderString (dict "display" "block") $intro }}
+      </div>
 
       {{/* Box informativo — La prevenzione salva la vita */}}
       <div class="card border-primary mt-4 mb-3">
