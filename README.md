@@ -98,6 +98,28 @@ Materiali **rilasciati gratuitamente**, liberi e riutilizzabili da altri Comuni/
 
 Specifiche complete in [`manuale/parte-20-kit-calamita-categorie-vulnerabili.md`](manuale/parte-20-kit-calamita-categorie-vulnerabili.md).
 
+### Aggiornamenti contenuti didattici e prevenzione (maggio 2026)
+
+Sessione di consolidamento del 6 maggio 2026 con esiti strutturali sul sito.
+
+**Nuove pagine di prevenzione**:
+
+- [`content/rischi-prevenzione/scuole-genzano-rischi-locali.md`](content/rischi-prevenzione/scuole-genzano-rischi-locali.md) — pagina di raccordo tra scuola, famiglie, rischi locali e materiali didattici. Non contiene dati inventati su singoli istituti: rimanda ai piani interni e al Piano Comunale.
+- [`content/rischi-prevenzione/rischi-in-parole-semplici.md`](content/rischi-prevenzione/rischi-in-parole-semplici.md) — versione semplificata dei rischi principali per bambini, BES, persone con disabilità cognitive e parlanti italiano L2.
+- [`content/rischi-prevenzione/kit-emergenza-economico-progressivo.md`](content/rischi-prevenzione/kit-emergenza-economico-progressivo.md) — guida per costruire il kit poco alla volta, senza marchi, negozi o prodotti sponsorizzati.
+
+**Schede didattiche aggiornate** (`static/formazione/kit-calamita-bambini/`): lavaggio completo delle mani (rinominato dal vecchio "5 passi"), unisci i puntini casco PC, mandala del sole.
+
+**Regole editoriali consolidate**:
+
+- Nei contenuti istituzionali non si indicano marchi commerciali, negozi o prodotti sponsorizzati.
+- Le pagine rivolte alle scuole non inventano dati su istituti, indirizzi, referenti o procedure interne: rimandano sempre al piano del singolo istituto e alle fonti ufficiali.
+- La mappa manuale del sito si aggiorna quando si pubblicano nuove pagine informative importanti. Il `sitemap.xml` tecnico resta generato da Hugo.
+
+**Drift documentale corretto**: `14° C.O.I.` allineato in tutti i file, bandiera SPQR errata rimossa dall'articolo Reggio Emilia 1996, caption ShakeMap INGV corrette in 5 articoli storici, duplicato editoriale Amatrice 2016 risolto. Asset -2.85 MB ottimizzati.
+
+Specifiche complete in [`manuale/parte-21-aggiornamenti-contenuti-didattici-prevenzione.md`](manuale/parte-21-aggiornamenti-contenuti-didattici-prevenzione.md).
+
 ### File in `archetypes/` (template Hugo)
 
 | File | A cosa serve |
