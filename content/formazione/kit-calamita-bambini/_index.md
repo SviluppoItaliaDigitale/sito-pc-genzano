@@ -110,16 +110,41 @@ Queste schede sono **pronte da stampare in formato A4** e possono essere usate d
 
 ## Riferimenti istituzionali e tecnici
 
-Le schede si ispirano a materiali e principi di primo supporto psicosociale, attività educative in emergenza, inclusione e comunicazione accessibile. Non sostituiscono interventi sanitari, psicologici o educativi specialistici.
+Le schede di questo kit **si ispirano a manuali, linee guida e protocolli pubblicati da enti riconosciuti a livello nazionale e internazionale** per il supporto psicosociale ai minori in emergenza, l'educazione in contesti di crisi e l'accessibilità cognitiva. **Non sostituiscono interventi sanitari, psicologici o educativi specialistici**: sono materiali di prima accoglienza pensati per soccorritori, educatori, insegnanti e genitori.
 
-Riferimenti utili:
+Ogni scheda riporta nel piè di pagina la fonte specifica a cui si ispira o da cui è tratta.
 
-- NCTSN — Psychological First Aid Field Operations Guide
-- IFRC — Caring for Children in Emergencies
-- WHO/UNHCR/War Trauma Foundation — Psychological First Aid: Guide for Field Workers
-- Save the Children HEART — Healing and Education through the Arts
-- Sphere Standards — Humanitarian Charter and Minimum Standards
-- Dipartimento della Protezione Civile — materiali informativi su prevenzione, emergenza e assistenza alla popolazione
+### Riferimenti italiani
+
+- **Dipartimento della Protezione Civile (DPC)** — D.Lgs. 1/2018 (Codice della Protezione Civile), Direttiva PCM 30 aprile 2021, campagne nazionali "Io non rischio" (sismico, vulcanico, alluvione, incendio boschivo)
+- **Centro Funzionale Regionale del Lazio** — codici colore allerta meteo (verde, giallo, arancione, rosso)
+- **EENA — European Emergency Number Association** — riferimento per il Numero Unico Europeo 112
+
+### Manualistica internazionale per supporto psicosociale ai minori (MHPSS / PFA)
+
+- **NCTSN — National Child Traumatic Stress Network** (USA) — *Psychological First Aid Field Operations Guide* (2nd edition), capitolo bambini e relativi handout
+- **WHO — World Health Organization** (con UNHCR e War Trauma Foundation) — *Psychological First Aid: Guide for Field Workers*
+- **IASC — Inter-Agency Standing Committee** — *Guidelines on Mental Health and Psychosocial Support in Emergency Settings*
+- **UNICEF** — *Operational Guidelines on Mental Health and Psychosocial Support for Children*
+- **Save the Children** — *Child-Friendly Spaces (CFS) Operational Guide and Activity Catalogue* + *HEART — Healing and Education through the Arts*
+- **ARC — Action for the Rights of Children** (UNHCR/Save the Children/UNICEF) — *Resource Pack* per la protezione e i diritti dei minori in emergenza
+
+### Standard umanitari e per l'educazione in emergenza
+
+- **Sphere 2018** — *Humanitarian Charter and Minimum Standards in Humanitarian Response*
+- **INEE — Inter-Agency Network for Education in Emergencies** — *Minimum Standards for Education* e Resource Bank
+- **IFRC — International Federation of Red Cross and Red Crescent Societies** — *Caring for Children in Emergencies* e linee guida sui kit personali di emergenza
+
+### Risorse educative open per la prima infanzia in emergenza
+
+- **Sesame Street in Communities — Emergencies and Disasters** (Sesame Workshop) — materiali educativi gratuiti per bambini e famiglie su preparazione e ripresa post-evento
+- **ARASAAC** (Government of Aragón, Spagna) — pittogrammi per Comunicazione Aumentativa Alternativa, licenza CC BY-NC-SA 4.0
+- **ISO 7010** — segnali di sicurezza standardizzati internazionalmente
+
+### Accessibilità
+
+- **WCAG 2.2 livello AA** (W3C) — Web Content Accessibility Guidelines
+- **Legge 4/2004 (Stanca)** e **D.Lgs. 106/2018** — accessibilità dei siti web della Pubblica Amministrazione italiana
 
 ## Aggiornamenti
 
