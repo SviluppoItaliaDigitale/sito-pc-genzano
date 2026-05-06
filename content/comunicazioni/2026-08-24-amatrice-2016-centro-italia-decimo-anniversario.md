@@ -19,9 +19,9 @@ Alle **3:36 del 24 agosto 2016** una scossa di **magnitudo 6.0** colpì l'Appenn
 
 Quella notte di fine agosto, in piena stagione turistica, la zona era affollata di residenti tornati per le ferie e di visitatori. Amatrice si stava preparando alla **Sagra dell'Amatriciana** del fine settimana successivo. La scossa sorprese tutti nel sonno.
 
-{{< foto src="/images/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario-fonte-wikipedia.webp"
-         alt="Foto storica: Amatrice, 24 agosto 2016: dieci anni dalla notte del Centro Italia"
-         caption="Foto: Istituto Nazionale di Geofisica e Vulcanologia and Centro Nazionale Terremoti — CC BY 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:2016_central_italy_earthquake.jpg)." >}}
+{{< foto src="/images/2026-evento-amatrice-2016-prima-scossa.webp"
+         alt="ShakeMap INGV del terremoto del 24 agosto 2016, magnitudo 6.0 a 1 km ovest di Accumoli"
+         caption="Mappa di intensità macrosismica della prima scossa della sequenza Centro Italia 2016 (M 6.0 alle 01:36 UTC del 24 agosto, ipocentro 8.1 km, ID INGV 7073641). L'area arancione e rossa mostra l'intensità VII-IX MCS che colpì Amatrice, Accumoli e Arquata del Tronto, mentre l'area gialla raggiunse Roma. Mappa: INGV / Centro Nazionale Terremoti — CC BY 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:2016_central_italy_earthquake.jpg)." >}}
 
 
 I primi soccorsi arrivarono nel giro di un'ora dal Comando provinciale dei Vigili del Fuoco di Rieti e dalle colonne mobili regionali. La **rete del volontariato di Protezione Civile** fu attivata in poche ore, con il sistema delle colonne mobili regionali coordinate dal Dipartimento. Anche il nostro **Gruppo del Lazio** fece parte della macchina dei soccorsi.
