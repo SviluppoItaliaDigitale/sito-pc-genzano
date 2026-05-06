@@ -153,3 +153,18 @@ In caso di emergenza, il numero da chiamare resta sempre il **112**.
 - [Proteggere cani e gatti dal caldo: le 10 regole del Ministero della Salute](/comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore/)
 - [Primo soccorso nei bambini e nei neonati](/formazione/primo-soccorso/rcp-bambini-neonati/)
 - [Area tematica Primo Soccorso](/formazione/primo-soccorso/)
+
+## Kit consigliato per questo rischio
+
+Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
+
+- documenti, farmaci e chiavi in un punto noto;
+- telefono, caricabatterie e power bank;
+- torcia;
+- acqua;
+- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
+- elenco dei contatti utili;
+- guinzaglio, trasportino o materiale essenziale per animali domestici.
+
+In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

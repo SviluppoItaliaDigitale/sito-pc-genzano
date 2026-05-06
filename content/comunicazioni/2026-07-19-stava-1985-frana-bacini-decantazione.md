@@ -98,3 +98,18 @@ Quarant'anni dopo, **Stava è la lezione più dura della cultura del rischio in 
 - [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/)
 - [Dighe e sicurezza, grandi opere](/comunicazioni/2026-10-07-dighe-sicurezza-grandi-opere/)
 - [Sarno 1998, frana e rischio idrogeologico](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/)
+
+## Kit consigliato per questo rischio
+
+Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
+
+- torcia;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- scarpe chiuse e guanti da lavoro;
+- numeri utili stampati.
+
+Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

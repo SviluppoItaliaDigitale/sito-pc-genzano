@@ -120,3 +120,18 @@ Il territorio non ospita stabilimenti di soglia superiore Seveso, ma ha reti di 
 - [Dipartimento della Protezione Civile — Rischio industriale](https://www.protezionecivile.gov.it/it/pagina/rischio-chimico-industriale)
 
 Un rischio conosciuto è un rischio **gestibile**. La trasparenza delle informazioni e la preparazione dei cittadini sono la migliore difesa contro gli incidenti industriali.
+
+## Kit consigliato per questo rischio
+
+Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
+
+- documenti, farmaci e chiavi in un punto noto;
+- telefono, caricabatterie e power bank;
+- torcia;
+- acqua;
+- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
+- elenco dei contatti utili;
+- guinzaglio, trasportino o materiale essenziale per animali domestici.
+
+In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

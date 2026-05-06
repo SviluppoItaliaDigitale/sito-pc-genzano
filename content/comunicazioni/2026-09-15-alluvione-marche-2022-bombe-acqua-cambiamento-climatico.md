@@ -102,3 +102,18 @@ Quattro anni dopo, l'Italia continua a fare i conti con la propria fragilità id
 - [Sarno 1998: la frana che ha riscritto le mappe del rischio](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/)
 - [Alluvione di Livorno 2017: memoria](/comunicazioni/2026-09-20-alluvione-livorno-2017-memoria/)
 - [Cambiamento climatico e protezione civile](/comunicazioni/2026-09-24-cambiamento-climatico-protezione-civile/)
+
+## Kit consigliato per questo rischio
+
+Per piogge intense, allagamenti o possibili evacuazioni prepara un kit che resti asciutto e facile da prendere.
+
+- acqua e alimenti non deperibili;
+- torcia impermeabile o ben protetta;
+- radio a pile o a manovella;
+- power bank carico;
+- documenti e farmaci in busta impermeabile;
+- cambio asciutto, impermeabile leggero e calze di ricambio;
+- numeri utili stampati e contatti familiari.
+
+Non attraversare sottopassi, strade allagate o corsi d'acqua in piena. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

@@ -114,3 +114,18 @@ Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che i
 - [AEGIS — Mappa Tempo Reale Regione Lazio](https://temporeale.regione.lazio.it/aegis/map/map2d)
 - [Piattaforma Radar Nazionale](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/)
 - [Copernicus Emergency Management Service](https://mapping.emergency.copernicus.eu/)
+
+## Kit consigliato per questo rischio
+
+Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
+
+- acqua in litri sufficienti per la famiglia;
+- torcia con pile o ricarica funzionante;
+- radio a pile o a manovella;
+- power bank carico;
+- fischietto per segnalare la presenza;
+- scarpe chiuse, guanti da lavoro e piccola coperta termica;
+- copie dei documenti, farmaci abituali e numeri utili.
+
+Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

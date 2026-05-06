@@ -169,3 +169,18 @@ Riunione strutturata (1-2 ore) condotta da un **professionista formato** (psicol
 
 **Ultimo aggiornamento**: 1 maggio 2026.
 **Riferimenti normativi e tecnici**: WHO PFA Guide (2011) · Sphere Standards · D.Lgs. 1/2018 (componente psicosociale del Servizio nazionale) · Direttiva PCM 30 aprile 2021 · L. 92/2019 (Educazione Civica) · D.Lgs. 66/2017 (Inclusione) · Linee operative MIM su lutto e trauma.
+
+## Kit consigliato per questo rischio
+
+Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
+
+- acqua in litri sufficienti per la famiglia;
+- torcia con pile o ricarica funzionante;
+- radio a pile o a manovella;
+- power bank carico;
+- fischietto per segnalare la presenza;
+- scarpe chiuse, guanti da lavoro e piccola coperta termica;
+- copie dei documenti, farmaci abituali e numeri utili.
+
+Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

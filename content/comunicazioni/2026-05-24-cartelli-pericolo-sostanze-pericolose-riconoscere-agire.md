@@ -95,3 +95,18 @@ La regola permanente è sempre la stessa: **il 112 è il numero da chiamare**. L
 - Decreto Legislativo 9 aprile 2008 n. 81 — Titolo V e allegati XXIV-XXXII
 - Norma tecnica UNI EN ISO 7010 — Segnaletica di sicurezza
 - Dipartimento della Protezione Civile — [protezionecivile.gov.it](https://www.protezionecivile.gov.it)
+
+## Kit consigliato per questo rischio
+
+Per piogge intense, allagamenti o possibili evacuazioni prepara un kit che resti asciutto e facile da prendere.
+
+- acqua e alimenti non deperibili;
+- torcia impermeabile o ben protetta;
+- radio a pile o a manovella;
+- power bank carico;
+- documenti e farmaci in busta impermeabile;
+- cambio asciutto, impermeabile leggero e calze di ricambio;
+- numeri utili stampati e contatti familiari.
+
+Non attraversare sottopassi, strade allagate o corsi d'acqua in piena. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

@@ -97,3 +97,18 @@ Nove anni dopo, Bondo è stato ricostruito. Il **bacino di laminazione** è stat
 - [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/)
 - [Cambiamento climatico e protezione civile](/comunicazioni/2026-09-24-cambiamento-climatico-protezione-civile/)
 - [Val Pola 1987, frana e monitoraggio continuo](/comunicazioni/2026-07-28-val-pola-1987-frana-monitoraggio-continuo/)
+
+## Kit consigliato per questo rischio
+
+Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
+
+- torcia;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- scarpe chiuse e guanti da lavoro;
+- numeri utili stampati.
+
+Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

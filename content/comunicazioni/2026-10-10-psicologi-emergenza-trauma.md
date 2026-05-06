@@ -102,3 +102,18 @@ Il Gruppo Comunale di Volontari sta lavorando — in coordinamento con l'**ASL R
 ## In una parola
 
 La **Giornata Mondiale della Salute Mentale** del 10 ottobre è un'occasione per ricordare che la salute mentale **fa parte della salute** (Costituzione, art. 32) e che dopo un'emergenza il lavoro non finisce con la riapertura delle strade. Ricostruire le vite richiede attenzione anche a quello che non si vede — e a chi quel lavoro lo fa, ogni giorno.
+
+## Kit consigliato per questo rischio
+
+Per temporali forti, fulmini, grandine e vento prepara un piccolo kit domestico per blackout o interruzioni temporanee dei servizi.
+
+- torcia con pile cariche;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- numeri utili stampati;
+- coperta leggera o indumenti adatti alla stagione.
+
+Durante i temporali evita alberi isolati, strutture metalliche, corsi d'acqua e spostamenti non necessari. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

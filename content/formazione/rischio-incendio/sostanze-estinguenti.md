@@ -202,3 +202,18 @@ Il volontario può:
 - [Capitolo 3 — Protezione passiva](/formazione/rischio-incendio/protezione-passiva/)
 - [Capitolo 4 — Protezione attiva (estintori e idranti)](/formazione/rischio-incendio/protezione-attiva/)
 - [Capitolo 5 — Procedure di emergenza](/formazione/rischio-incendio/procedure-emergenza/)
+
+## Kit consigliato per questo rischio
+
+Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
+
+- documenti, farmaci e chiavi in un punto noto;
+- telefono, caricabatterie e power bank;
+- torcia;
+- acqua;
+- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
+- elenco dei contatti utili;
+- guinzaglio, trasportino o materiale essenziale per animali domestici.
+
+In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

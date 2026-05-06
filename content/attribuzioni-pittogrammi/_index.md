@@ -44,3 +44,18 @@ I pittogrammi sul sito sono inseriti tramite uno shortcode Hugo dedicato, in mod
 ## Per contatti e segnalazioni
 
 Per qualunque chiarimento sull'uso dei pittogrammi o per segnalare un'attribuzione mancante o errata, contatta il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma all'indirizzo email indicato nella pagina [Contatti](/contatti/).
+
+## Kit consigliato per questo rischio
+
+Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
+
+- documenti, farmaci e chiavi in un punto noto;
+- telefono, caricabatterie e power bank;
+- torcia;
+- acqua;
+- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
+- elenco dei contatti utili;
+- guinzaglio, trasportino o materiale essenziale per animali domestici.
+
+In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

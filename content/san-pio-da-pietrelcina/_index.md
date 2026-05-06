@@ -111,6 +111,20 @@ La partecipazione è sempre **libera e personale**: il volontariato di Protezion
 - **Casa Sollievo della Sofferenza**, ospedale fondato da Padre Pio: [operapadrepio.it](https://www.operapadrepio.it/)
 - **Dipartimento della Protezione Civile** — Volontariato di Protezione Civile: [protezionecivile.gov.it](https://www.protezionecivile.gov.it/)
 
+## Kit consigliato per questo rischio
+
+Per vento forte e possibili cadute di rami, tegole o oggetti è utile avere un kit essenziale per restare in casa in sicurezza o uscire solo se necessario.
+
+- torcia;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- scarpe chiuse e guanti da lavoro;
+- numeri utili stampati.
+
+Prima del maltempo rimuovi o fissa oggetti su balconi, davanzali e giardini. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+
 ## Fonti
 
 Le informazioni su questa pagina sono tratte da:

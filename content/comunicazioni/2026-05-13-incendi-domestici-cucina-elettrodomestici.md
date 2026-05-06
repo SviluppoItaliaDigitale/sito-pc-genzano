@@ -122,3 +122,18 @@ In un incendio domestico **muoiono più persone per intossicazione da fumi** che
 - [UNI — Norme tecniche impianti domestici](https://www.uni.com/)
 
 Una casa sicura è una casa in cui **poche abitudini quotidiane** riducono drasticamente il rischio: mai lasciare cibo sul fuoco, mai sovraccaricare prese, mai candele vicino a tessuti. Non servono tecnologie avanzate: serve attenzione.
+
+## Kit consigliato per questo rischio
+
+Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
+
+- documenti, farmaci e chiavi in un punto noto;
+- telefono, caricabatterie e power bank;
+- torcia;
+- acqua;
+- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
+- elenco dei contatti utili;
+- guinzaglio, trasportino o materiale essenziale per animali domestici.
+
+In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

@@ -107,3 +107,18 @@ Parlare di microzonazione non significa vivere in perenne allarme. Significa **c
 - [Agenzia delle Entrate — Sismabonus](https://www.agenziaentrate.gov.it/)
 
 Conoscere il proprio suolo è il primo passo per abitarlo in sicurezza. I Castelli Romani non fanno eccezione.
+
+## Kit consigliato per questo rischio
+
+Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
+
+- acqua in litri sufficienti per la famiglia;
+- torcia con pile o ricarica funzionante;
+- radio a pile o a manovella;
+- power bank carico;
+- fischietto per segnalare la presenza;
+- scarpe chiuse, guanti da lavoro e piccola coperta termica;
+- copie dei documenti, farmaci abituali e numeri utili.
+
+Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

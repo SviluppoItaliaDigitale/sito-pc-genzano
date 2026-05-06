@@ -83,3 +83,18 @@ Il Codice non è un libro da leggere tutto d'un fiato. È uno **strumento di con
 - [Capo I — Finalità, attività e composizione del SNPC](/normativa/testo-unico-protezione-civile/capo-1-finalita/)
 - [Capo VI — Volontariato di protezione civile](/normativa/testo-unico-protezione-civile/capo-6-volontariato/)
 - [Diventa volontario a Genzano di Roma](/diventa-volontario/)
+
+## Kit consigliato per questo rischio
+
+Per il rischio sismico tieni pronto un kit leggero e raggiungibile, utile sia se devi uscire rapidamente sia se devi restare in casa senza servizi.
+
+- acqua in litri sufficienti per la famiglia;
+- torcia con pile o ricarica funzionante;
+- radio a pile o a manovella;
+- power bank carico;
+- fischietto per segnalare la presenza;
+- scarpe chiuse, guanti da lavoro e piccola coperta termica;
+- copie dei documenti, farmaci abituali e numeri utili.
+
+Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

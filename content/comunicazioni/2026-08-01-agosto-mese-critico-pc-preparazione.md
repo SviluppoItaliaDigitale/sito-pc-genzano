@@ -55,3 +55,18 @@ Il Gruppo Comunale Volontari di Protezione Civile di Genzano affronta agosto con
 - [Dipartimento di Protezione Civile](https://www.protezionecivile.gov.it/)
 
 In emergenza: **112**. Per aggiornamenti in tempo reale: sito del Gruppo e canale Telegram ufficiale.
+
+## Kit consigliato per questo rischio
+
+Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
+
+- documenti, farmaci e chiavi in un punto noto;
+- telefono, caricabatterie e power bank;
+- torcia;
+- acqua;
+- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
+- elenco dei contatti utili;
+- guinzaglio, trasportino o materiale essenziale per animali domestici.
+
+In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

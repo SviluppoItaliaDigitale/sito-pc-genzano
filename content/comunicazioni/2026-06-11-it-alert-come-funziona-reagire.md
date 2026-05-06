@@ -100,3 +100,18 @@ Ma quando scatta un messaggio IT-alert, il Gruppo è già **attivo** o **in pron
 - [DPC — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)
 
 Quando il tuo telefono suonerà un allarme inconfondibile, non spaventarti. Leggi, capisci, agisci. È il sistema che sta facendo quello per cui è stato costruito.
+
+## Kit consigliato per questo rischio
+
+Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
+
+- documenti, farmaci e chiavi in un punto noto;
+- telefono, caricabatterie e power bank;
+- torcia;
+- acqua;
+- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
+- elenco dei contatti utili;
+- guinzaglio, trasportino o materiale essenziale per animali domestici.
+
+In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

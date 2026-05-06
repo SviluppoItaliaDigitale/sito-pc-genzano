@@ -76,3 +76,18 @@ Rispettare regole, procedure e DPI non è un gesto burocratico: è il modo in cu
 - [Dipartimento Protezione Civile — Formazione](https://www.protezionecivile.gov.it/it/pagina/la-formazione-del-volontariato)
 
 Ricordare il 28 aprile è dire una cosa semplice: **si torna a casa, dopo ogni intervento**. E si torna a casa tutti.
+
+## Kit consigliato per questo rischio
+
+Per caldo intenso e ondate di calore prepara un kit semplice, utile soprattutto per anziani, bambini, persone fragili e animali domestici.
+
+- acqua in litri adeguati alla famiglia;
+- sali o bevande reidratanti solo se consigliati dal medico;
+- farmaci abituali conservati correttamente;
+- lista di contatti familiari, medico e vicini di fiducia;
+- cappello, abiti leggeri e protezione solare;
+- acqua e ciotola per animali;
+- power bank per restare raggiungibili.
+
+Evita le ore più calde, controlla le persone fragili e non lasciare mai bambini o animali in auto. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

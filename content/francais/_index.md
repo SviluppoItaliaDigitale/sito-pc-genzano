@@ -150,3 +150,18 @@ Cette page vous donne les **informations essentielles** en français. Le site co
 <div class="alert alert-warning" role="note" style="margin-top:2rem">
 <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Cette page est un résumé. Pour les informations complètes sur les risques spécifiques à Genzano, utilisez le traducteur de votre navigateur sur les pages italiennes. Les bénévoles peuvent vous aider en personne au siège.</p>
 </div>
+
+## Kit consigliato per questo rischio
+
+Per incendi, fumo o evacuazioni rapide è importante avere poche cose essenziali già pronte e non perdere tempo a cercarle.
+
+- documenti, farmaci e chiavi in un punto noto;
+- telefono, caricabatterie e power bank;
+- torcia;
+- acqua;
+- mascherina antipolvere o protezione semplice per il fumo leggero, se disponibile;
+- elenco dei contatti utili;
+- guinzaglio, trasportino o materiale essenziale per animali domestici.
+
+In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

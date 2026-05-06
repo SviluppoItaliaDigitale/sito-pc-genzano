@@ -125,3 +125,18 @@ Sono competenze di **Protezione Civile personale** che un bambino costruisce con
 - [Ministero della Salute — Prevenzione incidenti domestici](https://www.salute.gov.it/)
 
 L'estate è il tempo delle **esperienze** per i bambini. Il ruolo degli adulti non è spaventarli, ma **esserci**: presenti, attenti, capaci di intervenire.
+
+## Kit consigliato per questo rischio
+
+Per caldo intenso e ondate di calore prepara un kit semplice, utile soprattutto per anziani, bambini, persone fragili e animali domestici.
+
+- acqua in litri adeguati alla famiglia;
+- sali o bevande reidratanti solo se consigliati dal medico;
+- farmaci abituali conservati correttamente;
+- lista di contatti familiari, medico e vicini di fiducia;
+- cappello, abiti leggeri e protezione solare;
+- acqua e ciotola per animali;
+- power bank per restare raggiungibili.
+
+Evita le ore più calde, controlla le persone fragili e non lasciare mai bambini o animali in auto. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

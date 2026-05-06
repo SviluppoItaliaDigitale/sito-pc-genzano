@@ -106,3 +106,18 @@ Per segnalazioni meno urgenti (cornicione pericolante, strada danneggiata), usa 
 - Pagina [Temporali intensi](/rischi-prevenzione/temporali-intensi/)
 
 Un temporale, preso con le giuste cautele, passa senza conseguenze. Un temporale preso sottogamba può causare incidenti anche gravi. La differenza è **la conoscenza delle regole**.
+
+## Kit consigliato per questo rischio
+
+Per temporali forti, fulmini, grandine e vento prepara un piccolo kit domestico per blackout o interruzioni temporanee dei servizi.
+
+- torcia con pile cariche;
+- radio a pile o a manovella;
+- power bank carico;
+- acqua e alimenti semplici;
+- farmaci abituali;
+- numeri utili stampati;
+- coperta leggera o indumenti adatti alla stagione.
+
+Durante i temporali evita alberi isolati, strutture metalliche, corsi d'acqua e spostamenti non necessari. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+

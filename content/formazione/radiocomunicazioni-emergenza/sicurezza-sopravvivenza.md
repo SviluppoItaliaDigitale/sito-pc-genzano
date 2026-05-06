@@ -331,3 +331,18 @@ Da tenere aggiornata e da verificare **ogni 6 mesi**:
 - [Capitolo 5 — Attivazione, equipaggiamento e impianto di stazione](/formazione/radiocomunicazioni-emergenza/attivazione-equipaggiamento/)
 - [Manuale da Campo — Capitolo 3 — Schede tecniche (kit personale)](/formazione/manuale-campo/schede-tecniche/)
 - [Primo Soccorso — Area tematica](/formazione/primo-soccorso/)
+
+## Kit consigliato per questo rischio
+
+Per piogge intense, allagamenti o possibili evacuazioni prepara un kit che resti asciutto e facile da prendere.
+
+- acqua e alimenti non deperibili;
+- torcia impermeabile o ben protetta;
+- radio a pile o a manovella;
+- power bank carico;
+- documenti e farmaci in busta impermeabile;
+- cambio asciutto, impermeabile leggero e calze di ricambio;
+- numeri utili stampati e contatti familiari.
+
+Non attraversare sottopassi, strade allagate o corsi d'acqua in piena. Approfondisci nella pagina [Kit di emergenza: casa, evacuazione e auto](/rischi-prevenzione/kit-emergenza/).
+
