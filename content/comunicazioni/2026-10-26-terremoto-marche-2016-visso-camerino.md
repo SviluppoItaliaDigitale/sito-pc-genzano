@@ -104,7 +104,7 @@ Dieci anni dopo, l'eredità del Centro Italia 2016 è una **lezione operativa** 
 ## Approfondimenti dal nostro archivio
 
 - [Centro Italia 2016: memoria del sisma di Amatrice e Norcia](/comunicazioni/2026-10-28-centro-italia-2016-memoria/)
-- [Terremoto Amatrice 10 anni: memoria](/comunicazioni/2026-08-24-terremoto-amatrice-10-anni-memoria/)
+- [Amatrice, 24 agosto 2016: dieci anni dalla notte del Centro Italia](/comunicazioni/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario/)
 - [Friuli 1976: nascita della protezione civile italiana](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/)
 - [San Giuliano di Puglia 2002: scuole sicure](/comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure/)
 - [Scheda rilievo danno beni culturali e chiese](/comunicazioni/2026-10-28-scheda-rilievo-danno-beni-culturali-chiese/)

@@ -10,6 +10,8 @@ image_alt: "Cover dell'articolo: Amatrice, 24 agosto 2016: dieci anni dalla nott
 scadenza: ""
 area: ""
 allegati: []
+aliases:
+  - /comunicazioni/2026-08-24-terremoto-amatrice-10-anni-memoria/
 draft: false
 ---
 
