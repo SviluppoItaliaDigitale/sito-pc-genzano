@@ -35,6 +35,8 @@ Non serve leggere tutto il documento. Concentrati sulle aree di emergenza più v
 
 In ambito comunale, la prima autorità di protezione civile è il **Sindaco**. Quando la situazione lo richiede, il Sindaco può attivare il **Centro Operativo Comunale (COC)**, cioè la struttura che coordina le funzioni operative sul territorio comunale: assistenza alla popolazione, volontariato, viabilità, comunicazione, servizi essenziali, censimento danni e supporto tecnico.
 
+A Genzano di Roma, quando attivato, il **COC ha sede primaria presso il Comando di Polizia Locale**. Salvo diverse esigenze motivate (sede non agibile, evento che coinvolga direttamente la sede primaria, scelta operativa del Sindaco), è quello l'indirizzo di riferimento per il coordinamento operativo.
+
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** opera all'interno di questa catena di coordinamento. I volontari non vengono attivati direttamente dai cittadini, ma dagli enti competenti, secondo le procedure previste dal Piano e dal sistema regionale di protezione civile.
 
 Per emergenze che coinvolgono più Comuni può intervenire anche il **Centro Operativo Intercomunale (COI)**. Genzano di Roma fa parte del **14° COI della Provincia di Roma — Castelli Romani Sud**.
