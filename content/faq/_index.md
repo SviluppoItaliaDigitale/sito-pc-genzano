@@ -1,6 +1,6 @@
 ---
-title: "Domande Frequenti sulle Emergenze"
-description: "Risposte alle domande più comuni su allerte meteo, emergenze, protezione civile e volontariato a Genzano di Roma."
+title: "Domande frequenti"
+description: "Risposte semplici alle domande più comuni su emergenze, allerte, numeri utili, prevenzione, volontariato e scuole a Genzano di Roma."
 layout: "single"
 aliases:
   - /faq/
@@ -12,143 +12,144 @@ tts: true
 dataUltimaRevisione: "2026-05-06"
 ---
 
-## <i class="bi bi-cloud-rain-fill text-primary me-2" aria-hidden="true"></i>Allerte Meteo {#faq-allerte}
-### Cosa significa allerta gialla, arancione e rossa?
+In questa pagina trovi risposte rapide alle domande più frequenti. Se c'è un pericolo immediato, non cercare informazioni sul sito: **chiama il 112**.
 
-I codici colore indicano il livello di criticità prevista. Il **verde** significa nessuna criticità. Il **giallo** indica attenzione per fenomeni moderati. L'**arancione** indica preallarme con fenomeni potenzialmente pericolosi. Il **rosso** indica allarme con fenomeni molto intensi e possibili danni gravi. Per ogni livello, consulta la pagina [Allerte Meteo](/allerte-meteo/) con le indicazioni su cosa fare.
+## <i class="bi bi-cloud-rain-fill text-primary me-2" aria-hidden="true"></i>Allerte meteo {#faq-allerte}
+### Cosa significano allerta gialla, arancione e rossa?
+
+I colori indicano il livello di criticità previsto sul territorio. Il **verde** indica assenza di criticità significative. Il **giallo** richiede attenzione. L'**arancione** indica fenomeni potenzialmente pericolosi. Il **rosso** indica una situazione di maggiore gravità, con possibili danni importanti.
+
+Per sapere cosa fare, consulta la pagina [Allerte meteo](/allerte-meteo/).
 
 ### Chi emette le allerte meteo?
 
-Le allerte sono emesse dal **Centro Funzionale Regionale** dell'Agenzia di Protezione Civile del Lazio, sulla base dei bollettini del Dipartimento Nazionale della Protezione Civile. Non sono emesse dal nostro Gruppo né dal Comune.
+Le allerte sono emesse dal **Centro Funzionale Regionale** dell'Agenzia di Protezione Civile del Lazio. Non sono emesse dal Gruppo Comunale di Genzano né dal Comune.
 
 ### Dove trovo il bollettino ufficiale?
 
-Sul sito dell'[Agenzia di Protezione Civile della Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti). Lo stato aggiornato è visibile anche sulla barra allerta nella nostra [homepage](/).
+Il bollettino ufficiale è pubblicato sul sito dell'[Agenzia di Protezione Civile della Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti). Lo stato dell'allerta è richiamato anche nella barra della [homepage](/).
 
-### Allerta gialla: devo restare a casa?
+### Con allerta gialla devo restare a casa?
 
-Non necessariamente, ma devi prestare attenzione. Evita le zone a rischio allagamento, non sostare lungo corsi d'acqua e tieni d'occhio le previsioni. In caso di allerta arancione o rossa, limita gli spostamenti.
+Non necessariamente. Devi però prestare attenzione, evitare comportamenti rischiosi e seguire gli aggiornamenti ufficiali. Con allerta arancione o rossa limita gli spostamenti non necessari e rispetta eventuali ordinanze o indicazioni delle autorità.
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Emergenze {#faq-emergenze}
 ### Come posso attivare la Protezione Civile di Genzano?
 
-Il Gruppo Comunale **non può essere attivato direttamente dai cittadini**. In caso di emergenza, chiama il **112** o l'**803 555**: saranno loro ad allertare le nostre squadre se necessario. Per approfondire, consulta la pagina [Contatti](/contatti/).
+Il Gruppo Comunale **non può essere attivato direttamente dai cittadini**. In caso di emergenza chiama il **112**. Saranno le autorità competenti ad attivare le squadre, se necessario. Per informazioni non urgenti consulta la pagina [Contatti e sede](/contatti/).
 
 ### Cosa devo fare se sento una scossa di terremoto?
 
-Se sei in casa, riparati sotto un tavolo robusto o vicino a un muro portante. Non usare ascensori. Dopo la scossa, esci con prudenza e raggiungi le [aree di attesa](/piano-emergenza/) previste dal Piano di Emergenza. Per i dettagli, consulta la pagina [Rischio Sismico](/rischi-prevenzione/rischio-sismico/).
+Se sei in casa, riparati sotto un tavolo robusto o vicino a un muro portante. Non usare l'ascensore. Dopo la scossa, esci con prudenza se l'edificio non è sicuro e raggiungi un'area di attesa. Leggi la pagina [Rischio sismico](/rischi-prevenzione/rischio-sismico/).
 
 ### Dove sono le aree di emergenza più vicine?
 
-Le aree di attesa, ricovero e ammassamento sono elencate nella pagina [Cartografia Operativa](/cartografia/) con indirizzi e tabelle. Consultale e individua quelle più vicine a casa tua.
+Le aree di attesa, ricovero e ammassamento sono nella pagina [Cartografia operativa](/cartografia/). Individua prima dell'emergenza quelle più vicine a casa, scuola e lavoro.
 
-### Cos'è IT-alert?
+### Che cos'è IT-alert?
 
-IT-alert è il **sistema nazionale di allarme pubblico** che invia messaggi ai telefoni cellulari presenti in un'area colpita da una grave emergenza. Funziona anche senza connessione internet e senza app installate. Maggiori informazioni su [it-alert.it](https://www.it-alert.it/it/).
+IT-alert è il **sistema nazionale di allarme pubblico**. Invia messaggi ai telefoni presenti in un'area interessata da una grave emergenza. Non richiede app installate. Maggiori informazioni sono disponibili su [it-alert.it](https://www.it-alert.it/it/).
 
 ## <i class="bi bi-shield-check text-primary me-2" aria-hidden="true"></i>Prevenzione {#faq-prevenzione}
 ### Come preparo un kit di emergenza?
 
-Prepara uno zaino con acqua, cibo a lunga conservazione, torcia, radio a pile, documenti, medicinali e un cambio di vestiti. La lista completa è nella pagina [Kit di Emergenza](/rischi-prevenzione/kit-emergenza/).
+Prepara uno zaino con acqua, cibo a lunga conservazione, torcia, radio a pile, documenti, medicinali abituali e un cambio di vestiti. Trovi l'elenco completo nella pagina [Kit di emergenza](/rischi-prevenzione/kit-emergenza/).
 
-### Cos'è il Piano Familiare?
+### Che cos'è il piano di emergenza familiare?
 
-È un documento che ogni famiglia dovrebbe compilare per sapere cosa fare, dove andare e chi contattare in caso di emergenza. Puoi crearlo e stamparlo dalla pagina [Piano Familiare](/piano-familiare/).
+È un documento semplice che aiuta la famiglia a decidere prima dell'emergenza dove ritrovarsi, chi chiamare e cosa portare. Puoi compilarlo e stamparlo nella pagina [Piano di emergenza familiare](/piano-familiare/).
 
 ## <i class="bi bi-people-fill text-primary me-2" aria-hidden="true"></i>Volontariato {#faq-volontariato}
 ### Come posso diventare volontario?
 
-Puoi iscriverti di persona alla sede (Via Sicilia, 13-15), telefonicamente o via email. Tutti i dettagli sono nella pagina [Diventa Volontario](/diventa-volontario/).
+Puoi contattare il Gruppo, fissare un colloquio conoscitivo e poi presentare la domanda di ammissione. Tutte le informazioni sono nella pagina [Diventa volontario](/diventa-volontario/).
 
 ### Serve un'età minima?
 
-Si può entrare nel Gruppo a partire dai **16 anni** (piena operatività al compimento dei 18 anni).
+Sì. È possibile chiedere l'adesione dai **16 anni**. La piena operatività sul campo è prevista dal compimento dei 18 anni.
 
 ### Devo seguire un corso?
 
-Sì, ogni nuovo volontario segue un **corso di formazione base obbligatorio** che fornisce le conoscenze sul Sistema di Protezione Civile, sui rischi del territorio e sulle procedure operative.
+Sì. Ogni nuovo volontario segue un **corso base obbligatorio** sul sistema di protezione civile, sui rischi del territorio, sulla sicurezza e sulle procedure operative del Gruppo.
 
-### Posso fare il volontario solo nei weekend?
+### Posso fare il volontario solo nei fine settimana?
 
-Sì. Il volontariato di protezione civile è **flessibile**: ognuno contribuisce con il tempo che ha. Le attivazioni straordinarie (emergenze) possono richiedere disponibilità in giorni feriali, ma per le esercitazioni ordinarie e i servizi pubblici di routine ci si organizza tra volontari.
+Sì, molte attività ordinarie si svolgono anche nei fine settimana o in orario serale. Le emergenze possono però richiedere disponibilità in altri giorni e orari.
 
-### Esiste un compenso economico?
+### È previsto un compenso economico?
 
-No. Il volontariato di protezione civile è **gratuito** per definizione (art. 17 D.Lgs. 117/2017 — Codice del Terzo Settore). Sono però previsti **rimborsi spese vivi** (carburante, vitto durante attivazioni di più giorni) e **benefici di legge** durante le emergenze (assicurazione, copertura del lavoro perso secondo art. 39 D.Lgs. 1/2018).
+No. Il volontariato di protezione civile è gratuito. Nei casi previsti dalla normativa possono essere riconosciuti rimborsi spese e benefici di legge per le attivazioni ufficiali.
 
 ### Cosa succede al lavoro se vengo attivato in emergenza?
 
-Durante un'**attivazione ufficiale dichiarata** (es. emergenza nazionale, regionale o comunale formalmente decretata), il D.Lgs. 1/2018 — art. 39 prevede che il volontario possa **assentarsi dal lavoro** senza perdita di stipendio: lo Stato rimborsa al datore di lavoro la retribuzione e gli oneri. Per le attività ordinarie (esercitazioni, formazione) si concorda con il datore di lavoro o si usano permessi.
+Per le attivazioni ufficiali si applicano le tutele previste dal **D.Lgs. 1/2018**, nei casi e con le modalità stabilite dalla normativa. Per attività ordinarie, formazione ed esercitazioni la disponibilità va organizzata con anticipo.
 
 ## <i class="bi bi-geo-alt-fill text-primary me-2" aria-hidden="true"></i>Sul nostro territorio {#faq-territorio}
 ### Genzano è in zona sismica?
 
-Sì, Genzano di Roma è classificato in **zona sismica 2B** (media sismicità) secondo l'OPCM 3274/2003 e successive aggiornamenti. Significa che possono verificarsi terremoti di magnitudo significativa con tempi di ritorno lunghi. Tutti i nuovi edifici devono rispettare le **norme antisismiche** delle NTC 2018. Per dettagli vedi la pagina [Rischio Sismico](/rischi-prevenzione/rischio-sismico/).
+Sì. Genzano di Roma è classificato in **zona sismica 2B**. Significa che il rischio sismico deve essere considerato nella pianificazione e nei comportamenti di autoprotezione. Approfondisci nella pagina [Rischio sismico](/rischi-prevenzione/rischio-sismico/).
 
-### È vero che Genzano è su un vulcano?
+### È vero che Genzano si trova in un'area vulcanica?
 
-Sì, ma è un **vulcano quiescente**. I Colli Albani sono un complesso vulcanico le cui ultime eruzioni risalgono a circa 35.000 anni fa. Il lago di Nemi e il lago di Albano sono crateri vulcanici riempiti d'acqua. L'INGV monitora costantemente l'attività sismica e le emanazioni gassose dell'area. Lo stato attuale è di **quiescenza**, ma "quiescente" non significa "spento": va sorvegliato. Per approfondire: [INGV — Vulcani](https://www.ingv.it/).
+Sì. I Colli Albani sono un complesso vulcanico quiescente monitorato dagli enti scientifici competenti. Questo non significa che ci sia un pericolo immediato, ma che il territorio va conosciuto e sorvegliato. Approfondisci nella pagina [Rischio vulcanico](/rischi-prevenzione/rischio-vulcanico/).
 
-### Quali rischi specifici ha Genzano?
+### Quali sono i principali rischi di Genzano?
 
-I principali rischi del territorio sono: **idrogeologico** (frane superficiali sui versanti del cratere, allagamenti localizzati nelle aree basse), **temporali intensi** (specie estate, con possibili "bombe d'acqua"), **incendi boschivi** (giugno-settembre nelle aree boscate), **vento forte**. Rischio sismico in zona 2B. Rischio vulcanico residuo. Per la mappa completa: [Rischi e Prevenzione](/rischi-prevenzione/).
+I principali rischi sono sismico, idrogeologico, temporali intensi, incendi boschivi, vento forte, caldo intenso e blackout. Trovi una sintesi nella pagina [Rischi e prevenzione](/rischi-prevenzione/).
 
 ### Dov'è la Sala Operativa di Genzano?
 
-Quando viene attivato il **COC** (Centro Operativo Comunale) per gestire un'emergenza, la Sala Operativa di norma viene allestita presso la sede del Gruppo in **Via Sicilia 13-15** o presso il Palazzo Comunale. La gestione è coordinata dal Sindaco con il supporto del Gruppo Volontari, della Polizia Locale e dei tecnici comunali.
+Quando viene attivato il **Centro Operativo Comunale (COC)**, il coordinamento dell'emergenza è in capo al Sindaco e alle strutture comunali previste dal Piano. La sede operativa viene individuata secondo le condizioni e le procedure del momento.
 
 ## <i class="bi bi-telephone-fill text-primary me-2" aria-hidden="true"></i>Numeri di emergenza {#faq-numeri}
 ### Devo chiamare il 112, il 113, il 115 o il 118?
 
-**Solo il 112**. Dal 2017 in Italia è attivo il **Numero Unico di Emergenza (NUE)**: una sola Centrale che smista la chiamata a Carabinieri, Polizia, Vigili del Fuoco, soccorso sanitario. I vecchi numeri (113, 115, 118, 1515) ricevono ancora chiamate ma il riferimento da memorizzare e insegnare ai bambini è **solo il 112**. Funziona anche **senza credito**, **senza SIM** e **senza segnale del proprio gestore** (cerca automaticamente la rete disponibile).
+Memorizza e insegna ai bambini un solo numero: **112**. La centrale smista la chiamata verso il servizio competente.
 
 ### Posso chiamare il 112 da un cellulare straniero?
 
-Sì. Il **112** è il numero unico di emergenza in **tutta l'Unione Europea**. Funziona da qualsiasi cellulare, anche se sei in Italia con SIM straniera o all'estero con SIM italiana. È gratuito e sempre raggiungibile.
+Sì. Il **112** è il numero unico di emergenza nell'Unione Europea. È gratuito e funziona anche con SIM straniera.
 
 ### Cosa devo dire all'operatore del 112?
 
-In ordine: **dove ti trovi** (indirizzo o riferimenti chiari), **cosa è successo** (incidente/incendio/malore/altro), **se ci sono feriti** o pericoli per altre persone. Parla con calma, rispondi alle domande, **non riagganciare** prima dell'operatore. La conversazione viene registrata. La scheda fotocopiabile *"Chiamo il 112"* nella sezione [Schede stampabili](/formazione/schede-stampabili/) è un buon esercizio per i bambini.
+Dì prima **dove ti trovi**, poi **cosa è successo** e se ci sono **feriti o persone in pericolo**. Rispondi alle domande e non chiudere la chiamata finché l'operatore non te lo dice.
 
 ### È pericoloso chiamare il 112 per scherzo?
 
-**Sì, ed è anche reato**. L'art. 658 del Codice penale (procurato allarme) punisce con l'arresto fino a 6 mesi o l'ammenda fino a 309 euro chi chiama i numeri di emergenza per motivi non urgenti. Spiega questo concetto ai bambini fin dalla scuola dell'infanzia.
+Sì. Le chiamate false o inutili possono ritardare i soccorsi a chi ne ha davvero bisogno e possono avere conseguenze legali.
 
 ## <i class="bi bi-laptop text-primary me-2" aria-hidden="true"></i>Sito web e cookie {#faq-sito}
 ### Il sito utilizza cookie di tracciamento?
 
-**No**. Il sito è un sito statico che usa esclusivamente **cookie tecnici** strettamente necessari al funzionamento (es. memorizza la scelta del cookie banner). Non c'è profilazione, non c'è pubblicità, non ci sono trackers di Google Analytics o simili. I dettagli sono nella [Privacy Policy](/privacy/).
+No. Il sito usa solo cookie tecnici necessari al funzionamento. Non usa pubblicità né profilazione. I dettagli sono nella [Privacy policy](/privacy/).
 
-### I widget di Windy/INGV/Radar DPC raccolgono dati?
+### I widget di Windy, INGV o Radar DPC raccolgono dati?
 
-Solo **se l'utente li carica esplicitamente** cliccando il pulsante "Carica…". Prima del click, è solo un'anteprima statica del nostro sito senza alcuna richiesta a server esterni. Dopo il click, il browser dell'utente comunica direttamente con il fornitore (Windy.com, INGV, ecc.) e si applicano le loro policy. Per dettagli vedi [Privacy](/privacy/) e [Strumenti](/strumenti/).
+I widget esterni vengono caricati solo se l'utente sceglie di aprirli. Dopo il caricamento si applicano anche le policy del servizio esterno. Per dettagli consulta [Privacy](/privacy/) e [Strumenti](/strumenti/).
 
 ### Il sito è accessibile?
 
-Il sito è progettato per rispettare le **WCAG 2.2 livello AA** (Linee guida AGID). La [Dichiarazione di Accessibilità](/accessibilita/) elenca i contenuti di terze parti su cui non abbiamo controllo diretto. Se trovi un problema di accessibilità segnalacelo a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Il sito è progettato per rispettare le **WCAG 2.2 livello AA** e le linee guida AGID. Se trovi un problema di accessibilità, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
 ## <i class="bi bi-mortarboard-fill text-primary me-2" aria-hidden="true"></i>Per insegnanti e scuole {#faq-scuole}
 ### Avete materiale didattico gratuito?
 
-Sì. Mettiamo a disposizione **kit didattici** per ciascuna fascia (infanzia, primaria, secondaria di primo e secondo grado), **schede stampabili** pronte per essere fotocopiate (incluse schede da colorare per i più piccoli, schede progettate col **curricolo a spirale 6-19 anni** — lo stesso tema disponibile in più fasce di età con tagli adeguati — e **case study delle maxi-emergenze italiane** Friuli/Vajont/Irpinia/Aquila/Amatrice ecc. declinati su Primaria, Secondaria I e Secondaria II per spirale 9-19 anni), una raccolta di **storie e racconti** di qualità letteraria per bambini 3-11 anni con valore pedagogico esplicito per la scuola, **giochi educativi gratuiti** e **attività accessibili** ispirate al programma nazionale *[Abili a proteggere](https://www.abiliaproteggere.net/)* del Dipartimento della Protezione Civile, pensate per persone con difficoltà cognitive o motorie, anziani e bambini fragili. Tutto su [Formazione](/formazione/), [Schede didattiche stampabili](/formazione/schede-stampabili/), [Giochi della Sicurezza](/giochi/) e [Abili a Proteggere](/abili-a-proteggere/).
+Sì. Sono disponibili kit didattici, schede stampabili, giochi educativi, storie e materiali inclusivi. Parti dalla pagina [Formazione e scuole](/formazione/) oppure dal cruscotto [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/).
 
 ### I volontari vengono nelle scuole?
 
-Sì, gratuitamente. Le visite vanno concordate con almeno **3-4 settimane di anticipo** scrivendo a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). Possiamo portare divise, mezzi e attrezzature per dimostrazioni didattiche.
+Sì, se l'attività è compatibile con la disponibilità del Gruppo. La richiesta va inviata con anticipo a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
 ### Posso fare un PCTO con la Protezione Civile?
 
-Sì, per le **scuole secondarie di secondo grado**. Il Gruppo di Genzano ha **già ospitato PCTO con esiti positivi**: percorsi tipici di 30-50 ore con presentazioni, simulazioni, attività di formazione e service learning. Tuttavia l'attivazione di un nuovo PCTO è a **totale discrezione del Coordinatore e del Consiglio Direttivo del Gruppo**, che valutano caso per caso fattibilità, abbinamento studente-tutor, copertura assicurativa e coerenza con la programmazione operativa.
-
-Per esplorare la possibilità ti invitiamo a **richiedere un colloquio con il Coordinatore** scrivendo a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). Vedi anche il [Kit Secondaria di Secondo Grado](/formazione/kit-scuola-secondaria-secondo-grado/) per i contenuti formativi possibili.
+È possibile valutare percorsi PCTO per le scuole secondarie di secondo grado. L'attivazione dipende dalla disponibilità del Gruppo, dal progetto formativo, dalle coperture previste e dalla programmazione operativa. Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) per richiedere un colloquio.
 
 ## <i class="bi bi-journal-bookmark-fill text-primary me-2" aria-hidden="true"></i>Glossario rapido {#faq-glossario}
-Per i termini tecnici (PAI, COC, DICOMAC, IT-alert, NUE, AeDES…) consulta il **[Glossario di Protezione Civile](/glossario/)**: una pagina dedicata che spiega in parole semplici sigle e termini tecnici che incontri spesso nei bollettini, sui giornali e in questo sito.
+Per sigle e termini tecnici, consulta il [Glossario di Protezione Civile](/glossario/).
 
 ## Vedi anche
 
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
-- [Rischi e Prevenzione](/rischi-prevenzione/) — i rischi del territorio
+- [Rischi e prevenzione](/rischi-prevenzione/) — i rischi del territorio
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo
-
