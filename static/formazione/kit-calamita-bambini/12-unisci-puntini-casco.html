@@ -2,109 +2,113 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Scheda 12 — Unisci i puntini: casco di Protezione Civile</title>
 <link rel="stylesheet" href="../kit-calamita-shared/print.css">
 <style>
-@page{size:A4 portrait;margin:8mm}.scheda-a4{min-height:auto;padding:8mm;display:flex;flex-direction:column;gap:4mm}.scheda-title{margin:0;font-size:21pt;line-height:1.1;text-align:center}.scheda-istruzione{margin:0;padding:3mm 4mm;font-size:12pt;line-height:1.25}.puntini-wrap{display:flex;align-items:center;justify-content:center}.puntini-svg{width:100%;max-height:210mm;border:1.5px solid #1a1a1a;border-radius:4px;background:#fff}.dot{fill:#111}.num{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;fill:#111}.thin{fill:none;stroke:#111;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.guide{fill:none;stroke:#111;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.scheda-footer{margin-top:0;font-size:8.5pt;line-height:1.15}.scheda-footer .fonti{max-width:110mm}@media print{body{background:#fff}.scheda-a4{box-shadow:none;border:0;page-break-after:avoid}.no-print{display:none!important}}
+@page{size:A4 portrait;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#eef2f5;color:#111;font-family:Arial,Helvetica,sans-serif}
+.btn-stampa,.btn-indice{position:fixed;z-index:10;top:12px;padding:10px 14px;border-radius:6px;background:#063b6f;color:#fff;text-decoration:none;border:0;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.btn-stampa{right:12px}.btn-indice{left:12px}
+.scheda-a4{width:210mm;height:297mm;margin:10px auto;background:#fff;padding:8mm;display:grid;grid-template-rows:auto auto auto 1fr auto;gap:3.5mm;overflow:hidden;border:1px solid #d7dee8;box-shadow:0 3px 16px rgba(0,0,0,.16)}
+.scheda-header{display:grid;grid-template-columns:16mm 1fr auto;gap:4mm;align-items:center;border-bottom:1.5px solid #c8d5e2;padding-bottom:3mm;min-height:18mm}
+.logo-box{width:15mm;height:15mm;border:2px solid #063b6f;color:#063b6f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15pt;line-height:1}
+.brand{font-weight:800;color:#063b6f;font-size:13pt;line-height:1.1}.brand small{display:block;color:#333;font-size:8.5pt;font-weight:600;margin-top:1mm}.kit-tag{border:1.5px solid #063b6f;border-radius:999px;padding:2mm 3mm;color:#063b6f;font-size:8.8pt;font-weight:800;white-space:nowrap}
+.scheda-title{margin:0;text-align:center;color:#063b6f;font-size:22pt;line-height:1.05;letter-spacing:-.2px}
+.scheda-istruzione{margin:0;border-left:5px solid #063b6f;background:#eef5fb;padding:3mm 4mm;font-size:12.3pt;line-height:1.22}
+.puntini-wrap{display:flex;align-items:center;justify-content:center;min-height:0;overflow:hidden}
+.puntini-wrap img{display:block;width:100%;max-width:190mm;max-height:218mm;height:auto;object-fit:contain;border:1.5px solid #1a1a1a;border-radius:4px;background:#fff}
+.scheda-footer{display:grid;grid-template-columns:1fr 1.7fr 1fr;gap:3mm;align-items:start;border-top:1.5px solid #c8d5e2;padding-top:2.5mm;font-size:8.4pt;line-height:1.18;color:#333}.scheda-footer span:first-child{font-weight:800;color:#063b6f}.scheda-footer span:last-child{text-align:right;font-weight:700;color:#063b6f}
+#casco-data{display:none}
+@media print{html,body{width:210mm;height:297mm;background:#fff}.no-print,.btn-stampa,.btn-indice{display:none!important}.scheda-a4{width:210mm;height:297mm;margin:0;padding:8mm;border:0;box-shadow:none;page-break-after:avoid;break-after:avoid}}
 </style>
 </head>
 <body>
-<button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>
-<a class="btn-indice no-print" href="./">← Indice</a>
+<button class="btn-stampa no-print" onclick="window.print()">Stampa A4</button>
+<a class="btn-indice no-print" href="./">Indice</a>
 <article class="scheda-a4">
-<header class="scheda-header"><div class="logo-box">PC</div><div class="brand">Protezione Civile<small>Gruppo Comunale Volontari — Genzano di Roma</small></div><span class="kit-tag">Bambini · unisci i puntini</span></header>
+<header class="scheda-header">
+<div class="logo-box">PC</div>
+<div class="brand">Protezione Civile<small>Gruppo Comunale Volontari — Genzano di Roma</small></div>
+<span class="kit-tag">Bambini · unisci i puntini</span>
+</header>
 <h1 class="scheda-title">Unisci i puntini e scopri il casco<br>di Protezione Civile</h1>
-<div class="scheda-istruzione"><strong>Attività:</strong> collega i numeri in ordine. Alla fine comparirà il casco di Protezione Civile: puoi colorarlo con calma.</div>
+<div class="scheda-istruzione"><strong>Attività:</strong> collega i numeri in ordine. Alla fine comparirà il casco: puoi colorarlo con calma.</div>
 <section class="puntini-wrap">
-<svg class="puntini-svg" viewBox="0 0 720 890" role="img" aria-label="Scheda unisci i puntini per scoprire un casco di Protezione Civile">
-<rect x="14" y="14" width="692" height="862" rx="12" fill="#fff" stroke="#ddd"/>
-<text x="58" y="78" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700">★ UNISCI I PUNTINI E SCOPRI IL CASCO</text>
-<text x="170" y="111" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700">DA PROTEZIONE CIVILE!</text>
-<path class="guide" d="M168 572 C252 610 456 610 548 572"/>
-<path class="guide" d="M160 556 C196 560 224 522 236 472 C242 442 252 420 280 410 C338 390 452 390 510 410 C538 420 548 442 554 472 C566 522 594 560 630 556"/>
-<path class="guide" d="M298 398 C320 385 372 378 397 378 C423 378 476 386 500 398"/>
-<path class="guide" d="M352 423 C367 418 424 418 440 423 L436 507 C417 532 376 532 356 507 Z"/>
-<g id="punti">
-<circle class="dot" cx="338" cy="826" r="4"/><text class="num" x="321" y="846">1</text>
-<circle class="dot" cx="311" cy="800" r="4"/><text class="num" x="294" y="820">2</text>
-<circle class="dot" cx="284" cy="775" r="4"/><text class="num" x="267" y="795">3</text>
-<circle class="dot" cx="255" cy="747" r="4"/><text class="num" x="238" y="767">4</text>
-<circle class="dot" cx="228" cy="720" r="4"/><text class="num" x="211" y="740">5</text>
-<circle class="dot" cx="202" cy="690" r="4"/><text class="num" x="185" y="710">6</text>
-<circle class="dot" cx="178" cy="655" r="4"/><text class="num" x="161" y="675">7</text>
-<circle class="dot" cx="160" cy="620" r="4"/><text class="num" x="143" y="640">8</text>
-<circle class="dot" cx="148" cy="583" r="4"/><text class="num" x="131" y="603">9</text>
-<circle class="dot" cx="145" cy="545" r="4"/><text class="num" x="124" y="549">10</text>
-<circle class="dot" cx="149" cy="507" r="4"/><text class="num" x="124" y="512">11</text>
-<circle class="dot" cx="160" cy="470" r="4"/><text class="num" x="139" y="474">12</text>
-<circle class="dot" cx="178" cy="435" r="4"/><text class="num" x="153" y="440">13</text>
-<circle class="dot" cx="202" cy="404" r="4"/><text class="num" x="177" y="408">14</text>
-<circle class="dot" cx="232" cy="377" r="4"/><text class="num" x="207" y="381">15</text>
-<circle class="dot" cx="265" cy="356" r="4"/><text class="num" x="240" y="360">16</text>
-<circle class="dot" cx="300" cy="341" r="4"/><text class="num" x="275" y="345">17</text>
-<circle class="dot" cx="336" cy="331" r="4"/><text class="num" x="311" y="335">18</text>
-<circle class="dot" cx="374" cy="326" r="4"/><text class="num" x="349" y="330">19</text>
-<circle class="dot" cx="412" cy="326" r="4"/><text class="num" x="386" y="330">20</text>
-<circle class="dot" cx="450" cy="331" r="4"/><text class="num" x="425" y="335">21</text>
-<circle class="dot" cx="486" cy="341" r="4"/><text class="num" x="461" y="345">22</text>
-<circle class="dot" cx="521" cy="356" r="4"/><text class="num" x="496" y="360">23</text>
-<circle class="dot" cx="554" cy="377" r="4"/><text class="num" x="529" y="381">24</text>
-<circle class="dot" cx="584" cy="404" r="4"/><text class="num" x="559" y="408">25</text>
-<circle class="dot" cx="608" cy="435" r="4"/><text class="num" x="583" y="440">26</text>
-<circle class="dot" cx="626" cy="470" r="4"/><text class="num" x="601" y="474">27</text>
-<circle class="dot" cx="637" cy="507" r="4"/><text class="num" x="612" y="512">28</text>
-<circle class="dot" cx="641" cy="545" r="4"/><text class="num" x="616" y="549">29</text>
-<circle class="dot" cx="638" cy="583" r="4"/><text class="num" x="613" y="603">30</text>
-<circle class="dot" cx="626" cy="620" r="4"/><text class="num" x="601" y="640">31</text>
-<circle class="dot" cx="608" cy="655" r="4"/><text class="num" x="583" y="675">32</text>
-<circle class="dot" cx="584" cy="690" r="4"/><text class="num" x="559" y="710">33</text>
-<circle class="dot" cx="558" cy="720" r="4"/><text class="num" x="533" y="740">34</text>
-<circle class="dot" cx="529" cy="747" r="4"/><text class="num" x="504" y="767">35</text>
-<circle class="dot" cx="500" cy="775" r="4"/><text class="num" x="475" y="795">36</text>
-<circle class="dot" cx="469" cy="800" r="4"/><text class="num" x="444" y="820">37</text>
-<circle class="dot" cx="438" cy="826" r="4"/><text class="num" x="413" y="846">38</text>
-<circle class="dot" cx="176" cy="570" r="4"/><text class="num" x="151" y="565">39</text>
-<circle class="dot" cx="215" cy="568" r="4"/><text class="num" x="190" y="563">40</text>
-<circle class="dot" cx="254" cy="568" r="4"/><text class="num" x="229" y="563">41</text>
-<circle class="dot" cx="293" cy="568" r="4"/><text class="num" x="268" y="563">42</text>
-<circle class="dot" cx="332" cy="568" r="4"/><text class="num" x="307" y="563">43</text>
-<circle class="dot" cx="371" cy="568" r="4"/><text class="num" x="346" y="563">44</text>
-<circle class="dot" cx="410" cy="568" r="4"/><text class="num" x="385" y="563">45</text>
-<circle class="dot" cx="449" cy="568" r="4"/><text class="num" x="424" y="563">46</text>
-<circle class="dot" cx="488" cy="568" r="4"/><text class="num" x="463" y="563">47</text>
-<circle class="dot" cx="527" cy="568" r="4"/><text class="num" x="502" y="563">48</text>
-<circle class="dot" cx="566" cy="570" r="4"/><text class="num" x="541" y="565">49</text>
-<circle class="dot" cx="594" cy="555" r="4"/><text class="num" x="600" y="552">50</text>
-<circle class="dot" cx="568" cy="518" r="4"/><text class="num" x="574" y="515">51</text>
-<circle class="dot" cx="552" cy="480" r="4"/><text class="num" x="558" y="477">52</text>
-<circle class="dot" cx="540" cy="444" r="4"/><text class="num" x="546" y="441">53</text>
-<circle class="dot" cx="516" cy="418" r="4"/><text class="num" x="522" y="415">54</text>
-<circle class="dot" cx="486" cy="404" r="4"/><text class="num" x="492" y="401">55</text>
-<circle class="dot" cx="448" cy="395" r="4"/><text class="num" x="454" y="392">56</text>
-<circle class="dot" cx="405" cy="391" r="4"/><text class="num" x="411" y="388">57</text>
-<circle class="dot" cx="362" cy="393" r="4"/><text class="num" x="337" y="390">58</text>
-<circle class="dot" cx="321" cy="401" r="4"/><text class="num" x="296" y="398">59</text>
-<circle class="dot" cx="286" cy="416" r="4"/><text class="num" x="261" y="413">60</text>
-<circle class="dot" cx="258" cy="443" r="4"/><text class="num" x="233" y="440">61</text>
-<circle class="dot" cx="244" cy="480" r="4"/><text class="num" x="219" y="477">62</text>
-<circle class="dot" cx="230" cy="518" r="4"/><text class="num" x="205" y="515">63</text>
-<circle class="dot" cx="202" cy="555" r="4"/><text class="num" x="177" y="552">64</text>
-<circle class="dot" cx="352" cy="428" r="4"/><text class="num" x="327" y="425">65</text>
-<circle class="dot" cx="390" cy="420" r="4"/><text class="num" x="365" y="417">66</text>
-<circle class="dot" cx="430" cy="428" r="4"/><text class="num" x="436" y="425">67</text>
-<circle class="dot" cx="438" cy="468" r="4"/><text class="num" x="444" y="465">68</text>
-<circle class="dot" cx="421" cy="505" r="4"/><text class="num" x="427" y="502">69</text>
-<circle class="dot" cx="390" cy="522" r="4"/><text class="num" x="365" y="542">70</text>
-<circle class="dot" cx="360" cy="505" r="4"/><text class="num" x="335" y="502">71</text>
-<circle class="dot" cx="344" cy="468" r="4"/><text class="num" x="319" y="465">72</text>
-<circle class="dot" cx="120" cy="600" r="4"/><text class="num" x="96" y="604">73</text>
-<circle class="dot" cx="116" cy="640" r="4"/><text class="num" x="92" y="644">74</text>
-<circle class="dot" cx="650" cy="600" r="4"/><text class="num" x="656" y="604">75</text>
-<circle class="dot" cx="654" cy="640" r="4"/><text class="num" x="660" y="644">76</text>
-</g>
-</svg>
+<img id="casco-puntini" alt="Disegno unisci i puntini per scoprire il casco di Protezione Civile">
+<noscript>Per visualizzare l'immagine è necessario abilitare JavaScript.</noscript>
 </section>
-<footer class="scheda-footer"><span>Scheda 12 — Unisci i puntini: casco di Protezione Civile</span><span class="fonti">Attività di attenzione e coordinazione occhio-mano. Tema: dispositivi di protezione dei volontari.</span><span>www.protezionecivilegenzano.it</span></footer>
+<footer class="scheda-footer">
+<span>Scheda 12 — Unisci i puntini: casco di Protezione Civile</span>
+<span>Attività di attenzione e coordinazione occhio-mano. Tema: dispositivi di protezione dei volontari.</span>
+<span>www.protezionecivilegenzano.it</span>
+</footer>
 </article>
+<textarea id="casco-data" aria-hidden="true">
+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
+</textarea>
+<script>
+(function(){
+  var data = document.getElementById('casco-data').value.replace(/\s+/g,'');
+  document.getElementById('casco-puntini').src = 'data:image/png;base64,' + data;
+})();
+</script>
 </body>
 </html>
