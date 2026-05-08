@@ -13,7 +13,7 @@ Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `the
 | Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza |
 | Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
-| Risorse ▾ | dropdown | FAQ, Strumenti in Tempo Reale, Area Download, Normativa, **Glossario**, Mappa del Sito |
+| Risorse ▾ | dropdown | FAQ, Strumenti in Tempo Reale, Area Download, Normativa, **Glossario**, **Standard ISO**, Mappa del Sito |
 | Comunicazioni | diretta | `/comunicazioni/` |
 | Contatti | diretta | `/contatti/` |
 
@@ -24,6 +24,8 @@ Razionale: voci flat erano troppe per mobile e per l'utente in emergenza. L'acco
 2. **"Kit Emergenza Schede"** (kit-calamita per cittadini in difficoltà — anziano in evacuazione, caregiver, neogenitore in calamità) era nel posto sbagliato (Educazione). Spostato in **"Per il Cittadino"** e rinominato *"Kit pronti per situazioni vulnerabili"*.
 3. **"Glossario"** è uno strumento di consultazione, non un'area didattica. Spostato in **"Risorse"** dove vivono FAQ, normativa, area download.
 4. **"Schede Stampabili"** era ambiguo (sembravano kit per cittadini): rinominato **"Schede didattiche stampabili"** per chiarezza vs Kit Calamità.
+
+**Aggiunta v3.1 (8 maggio 2026):** voce **"Standard ISO"** sotto Risorse, dopo Glossario e prima di Mappa del Sito. Punta all'hub `/standard-iso/` con 30 schede degli standard internazionali rilevanti per la PC (ISO/TC 292 emergency management, famiglia ISO 31000 risk management, ISO 14090 adattamento climatico, ISO 7010 segnaletica, città e infrastrutture). Il dropdown Risorse passa da 6 a 7 voci.
 
 Il numero totale di voci di primo livello è 8 (Home + 5 dropdown + Comunicazioni + Contatti). Limite Miller superato di 1 voce, accettato perché compensato dalla coerenza interna dei dropdown.
 

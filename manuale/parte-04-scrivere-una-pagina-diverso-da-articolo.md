@@ -72,7 +72,7 @@ Il menu principale è organizzato come **mega-menu** (Opzione A) in `hugo.toml`:
 | Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza |
 | Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
-| Risorse ▾ | dropdown | FAQ, Strumenti in Tempo Reale, Area Download, Normativa, Glossario, Mappa del Sito |
+| Risorse ▾ | dropdown | FAQ, Strumenti in Tempo Reale, Area Download, Normativa, Glossario, **Standard ISO**, Mappa del Sito |
 | Comunicazioni | diretta | `/comunicazioni/` |
 | Contatti | diretta | `/contatti/` |
 
