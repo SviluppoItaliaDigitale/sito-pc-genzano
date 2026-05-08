@@ -22,7 +22,7 @@ Per gli standard **elettrotecnici** l'analogo italiano è il **CEI — Comitato 
 
 Anche le norme UNI, come quelle ISO, sono **a pagamento**. Sono però **gratuite**:
 
-- le **UNI/PdR — Prassi di Riferimento**: documenti pre-normativi (cornici, linee guida, framework) liberamente scaricabili dal sito UNI;
+- le **[UNI/PdR — Prassi di Riferimento](/standard-iso/uni-pdr/)**: documenti pre-normativi (cornici, linee guida, framework) liberamente scaricabili dal sito UNI — vedi scheda dedicata;
 - alcune **anteprime e abstract** consultabili gratuitamente prima dell'acquisto;
 - specifici **estratti** previsti per esigenze di sicurezza pubblica.
 
