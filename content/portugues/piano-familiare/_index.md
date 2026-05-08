@@ -2,6 +2,7 @@
 title: "Plano de Emergência Familiar — Português"
 description: "Como preparar um plano de emergência familiar: contactos, pontos de encontro, kit de emergência."
 layout: "single"
+language: "pt"
 ---
 
 [← Voltar à visão geral em português](/portugues/)

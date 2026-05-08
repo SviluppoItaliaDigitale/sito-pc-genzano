@@ -2,6 +2,7 @@
 title: "Plan d'Urgence Familial — Français"
 description: "Comment préparer un plan d'urgence familial : contacts, points de rassemblement, kit d'urgence."
 layout: "single"
+language: "fr"
 ---
 
 [← Retour à la vue d'ensemble en français](/francais/)

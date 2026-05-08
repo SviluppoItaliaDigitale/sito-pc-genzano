@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" dir="ltr">
+<html lang="{{ .Params.language | default .Site.LanguageCode }}" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
   <link rel="stylesheet" href="{{ "css/a11y-toolbar.css" | relURL }}">
   <link rel="canonical" href="{{ $canonicalURL }}">
+  {{ partial "hreflang-tags.html" . }}
   {{/* Pre-rendering: applica subito le preferenze di accessibilità salvate
        per evitare il flash visivo (FOUC) all'apertura della pagina.
        La logica completa del toolbar arriva con js/a11y-toolbar.js a fine body. */}}

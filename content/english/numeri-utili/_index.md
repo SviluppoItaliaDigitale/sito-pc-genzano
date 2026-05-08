@@ -2,6 +2,7 @@
 title: "Useful Numbers — English"
 description: "All emergency numbers and useful contacts for citizens of Genzano di Roma."
 layout: "single"
+language: "en"
 ---
 
 [← Back to English overview](/english/)

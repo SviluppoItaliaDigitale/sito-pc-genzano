@@ -2,6 +2,7 @@
 title: "Kion fari nun — Esperanto"
 description: "Tujaj agoj en urĝa kazo en Genzano di Roma: telefonoj, kondutoj, utilaj ligiloj."
 layout: "single"
+language: "eo"
 ---
 
 [← Reen al la Esperanta resumo](/esperanto/)

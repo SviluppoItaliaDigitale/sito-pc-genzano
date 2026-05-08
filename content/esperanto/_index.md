@@ -2,6 +2,7 @@
 title: "Esperanto — Civila Protekto Genzano di Roma"
 description: "Esencaj informoj en Esperanto pri civila protekto en Genzano di Roma: urĝaj numeroj, kondutoj antaŭ la ĉefaj riskoj, kontaktoj."
 layout: "single"
+language: "eo"
 aliases:
   - /eo/
 sitemap:

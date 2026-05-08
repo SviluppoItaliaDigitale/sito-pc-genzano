@@ -2,6 +2,7 @@
 title: "Português — Proteção Civil Genzano di Roma"
 description: "Informações essenciais em português para turistas e residentes estrangeiros: números de emergência, comportamentos perante os principais riscos, contactos."
 layout: "single"
+language: "pt"
 aliases:
   - /pt/
 sitemap:

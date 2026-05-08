@@ -2,6 +2,7 @@
 title: "Family Emergency Plan — English"
 description: "How to prepare a family emergency plan: contacts, meeting points, emergency kit."
 layout: "single"
+language: "en"
 ---
 
 [← Back to English overview](/english/)

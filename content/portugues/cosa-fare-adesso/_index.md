@@ -2,6 +2,7 @@
 title: "O que fazer agora — Português"
 description: "Ações imediatas em caso de emergência em Genzano di Roma: números para ligar, comportamentos a adotar, links úteis."
 layout: "single"
+language: "pt"
 ---
 
 [← Voltar à visão geral em português](/portugues/)

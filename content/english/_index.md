@@ -2,6 +2,7 @@
 title: "English — Civil Protection Genzano di Roma"
 description: "Essential information in English for tourists and foreign residents: emergency numbers, what to do in the main risks, key contacts."
 layout: "single"
+language: "en"
 aliases:
   - /en/
 sitemap:

@@ -2,6 +2,7 @@
 title: "Utilaj numeroj — Esperanto"
 description: "Ĉiuj urĝaj numeroj kaj utilaj kontaktoj por la civitanoj de Genzano di Roma."
 layout: "single"
+language: "eo"
 ---
 
 [← Reen al la Esperanta resumo](/esperanto/)

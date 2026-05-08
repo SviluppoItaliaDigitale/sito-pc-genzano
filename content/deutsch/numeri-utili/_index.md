@@ -2,6 +2,7 @@
 title: "Nützliche Nummern — Deutsch"
 description: "Alle Notfallnummern und nützliche Kontakte für die Bürger von Genzano di Roma."
 layout: "single"
+language: "de"
 ---
 
 [← Zurück zur deutschen Übersicht](/deutsch/)

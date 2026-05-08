@@ -2,6 +2,7 @@
 title: "Plan de Urgență Familial — Română"
 description: "Cum să pregătiți un plan de urgență familial: contacte, puncte de întâlnire, kit de urgență."
 layout: "single"
+language: "ro"
 ---
 
 [← Înapoi la prezentarea în limba română](/romana/)

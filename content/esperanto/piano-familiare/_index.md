@@ -2,6 +2,7 @@
 title: "Familia Urĝa Plano — Esperanto"
 description: "Kiel prepari familian urĝan planon: kontaktoj, kunvenpunktoj, urĝa kit."
 layout: "single"
+language: "eo"
 ---
 
 [← Reen al la Esperanta resumo](/esperanto/)

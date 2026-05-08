@@ -2,6 +2,7 @@
 title: "Deutsch — Zivilschutz Genzano di Roma"
 description: "Wesentliche Informationen auf Deutsch für Touristen und ausländische Einwohner: Notrufnummern, Verhalten bei den wichtigsten Risiken, Kontakte."
 layout: "single"
+language: "de"
 aliases:
   - /de/
 sitemap:

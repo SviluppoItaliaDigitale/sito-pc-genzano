@@ -2,6 +2,7 @@
 title: "Numéros utiles — Français"
 description: "Tous les numéros d'urgence et contacts utiles pour les citoyens de Genzano di Roma."
 layout: "single"
+language: "fr"
 ---
 
 [← Retour à la vue d'ensemble en français](/francais/)
