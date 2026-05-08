@@ -98,6 +98,14 @@ Materiali **rilasciati gratuitamente**, liberi e riutilizzabili da altri Comuni/
 
 Specifiche complete in [`manuale/parte-20-kit-calamita-categorie-vulnerabili.md`](manuale/parte-20-kit-calamita-categorie-vulnerabili.md).
 
+### Feed RSS pubblici (`/feed-rss/`)
+
+Hugo genera **39 feed RSS** automaticamente, uno per sezione del sito (homepage, comunicazioni, allerte, rischi, formazione, glossario, standard ISO, ecc.). Tutti i feed sono live su Aruba (`https://www.protezionecivilegenzano.it/<sezione>/index.xml`) e auto-discoverable via `<link rel="alternate" type="application/rss+xml">` nell'`<head>` di ogni pagina.
+
+A maggio 2026 è stata pubblicata una **pagina divulgativa** [`/feed-rss/`](content/feed-rss/_index.md) per cittadini e maintainer di altri Gruppi PC con: spiegazione di cosa sono i feed, 3 modi per iscriversi (aggregatori web, programmi desktop/mobile, browser), elenco dei 14 feed più utili, nota privacy (zero registrazione, zero cookie, zero dati personali). Voce **"Feed RSS"** nel **footer** del sito + nella **mappa-sito** + nell'**assistente virtuale** sotto "Servizi e documenti".
+
+Standard tecnico: RSS 2.0 generato da Hugo, content-type `application/xml`. Nessuna configurazione manuale richiesta — Hugo li mantiene aggiornati a ogni build.
+
 ### Standard ISO per la Protezione Civile (`/standard-iso/`)
 
 Hub permanente di consultazione (8 maggio 2026) con **30 schede brevi** sugli standard internazionali ISO rilevanti per la PC, organizzate per famiglia: **ISO/TC 292** emergency management (16 standard), **ISO 31000** risk management family (3), **ISO 14090** adattamento climatico (3), **ISO 7010** segnaletica (3), settori connessi (5: città resilienti, acqua, antincendio, sicurezza lavoro, GIS).

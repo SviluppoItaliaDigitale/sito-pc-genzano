@@ -309,6 +309,11 @@ enableGitInfo = true
   url = "/mappa-sito/"
   weight = 5
 
+[[menus.footer]]
+  name = "Feed RSS"
+  url = "/feed-rss/"
+  weight = 6
+
 # Menu footer — Servizi
 [[menus.servizi]]
   name = "Piano di Emergenza"

@@ -340,6 +340,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
   <p class="ms-card-title">Standard ISO per la PC</p>
   <p class="ms-card-desc">Hub di consultazione su 30 standard internazionali ISO rilevanti per la Protezione Civile (emergency management, gestione del rischio, comunicazione di crisi, segnaletica, adattamento climatico).</p>
 </a>
+<a class="ms-card ms-edu" href="/feed-rss/">
+  <div class="ms-card-icon"><i class="bi bi-rss-fill"></i></div>
+  <p class="ms-card-title">Feed RSS</p>
+  <p class="ms-card-desc">Ricevi le notizie del Gruppo nel tuo aggregatore preferito (Feedly, Inoreader, Thunderbird, NetNewsWire). 14 feed dedicati per sezione del sito. Niente registrazione, niente cookie, niente dati personali.</p>
+</a>
 <a class="ms-card ms-edu" href="/faq/">
   <div class="ms-card-icon"><i class="bi bi-patch-question-fill"></i></div>
   <p class="ms-card-title">Domande frequenti</p>
