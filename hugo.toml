@@ -261,10 +261,16 @@ enableGitInfo = true
   weight = 5
 
 [[menus.main]]
+  name = "Standard ISO"
+  url = "/standard-iso/"
+  parent = "risorse"
+  weight = 6
+
+[[menus.main]]
   name = "Mappa del Sito"
   url = "/mappa-sito/"
   parent = "risorse"
-  weight = 6
+  weight = 7
 
 # --- Voci dirette ---
 [[menus.main]]

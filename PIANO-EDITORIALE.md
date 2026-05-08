@@ -206,11 +206,15 @@ Ogni data fissa si ripete ogni anno con aggiornamenti minimi. Preparare le bozze
 - Resoconto corsi primaverili del Gruppo (badge: Formazione)
 - Chiusura anno scolastico: bilancio kit scuole (badge: Formazione)
 - Lancio iniziativa **Kit Calamità per categorie vulnerabili** — 12 kit operativi A4 stampabili (bambini, anziani, RSA, disabilità, neonati, gravidanza, animali, caregiver, terapie salvavita, senza dimora, italiano L2, volontari PC) basati su standard internazionali NCTSN/IFRC/WHO/Sphere/FEANTSA/UNHCR/IOM/IFE/MISP/WSAVA/Eurocarers (badge: Formazione)
+- **Serie Standard ISO per la Protezione Civile** (lancio 8 maggio 2026) — hub permanente `/standard-iso/` con 30 schede + serie news divulgative calendarizzate dal 12 maggio al 12 giugno (uno ogni 3-4 giorni): 22324 codici colore (12 maggio), 22322 public warning + IT-alert (15 maggio), 22329 social in emergenza (19 maggio), 22361 gestione crisi (22 maggio), 22398 esercitazioni (26 maggio), 22395 persone vulnerabili (29 maggio). Le restanti 4 ricadono in giugno. Vincolo: parafrasi originali nostre, mai copia di testo ISO (norme a pagamento). Badge: Formazione.
 
 ### Giugno
 - **1 giugno** — Avvio campagna AIB nel Lazio (badge: Prevenzione)
-- **5 giugno** — Giornata mondiale ambiente: rischio incendi e tutela (badge: Informazione)
+- **2 giugno** — Serie ISO: ISO 31000 gestione del rischio (badge: Formazione)
+- **5 giugno** — Giornata mondiale ambiente: rischio incendi e tutela (badge: Informazione) + Serie ISO: ISO 22327 allerta frane Castelli Romani (badge: Formazione)
 - **8 giugno** — Giornata mondiale degli oceani (rischio costiero) (badge: Informazione)
+- **9 giugno** — Serie ISO: ISO 7010 segnaletica di sicurezza (badge: Formazione)
+- **12 giugno** — Serie ISO: ISO 14090 adattamento ai cambiamenti climatici (badge: Formazione)
 - **14 giugno** — Giornata mondiale donatore di sangue (badge: Volontariato)
 - **15 giugno** — Prevenzione ondate di calore anziani e fragili (badge: Prevenzione)
 - **24 giugno** — Inizio estate meteorologica: bollettini calore (badge: Prevenzione)

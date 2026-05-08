@@ -7,7 +7,24 @@ toc: true
 
 Questa sezione raccoglie gli **standard ISO** (International Organization for Standardization) più rilevanti per la **Protezione Civile** in Italia, organizzati per famiglia tematica. Ogni scheda spiega in poche righe **cos'è la norma**, **a chi serve** e **come si collega alla prassi italiana** (D.Lgs. 1/2018, direttive DPC, codici colore del Centro Funzionale Regionale, Codice del Terzo Settore).
 
-> **Nota**: gli standard ISO sono **norme tecniche a pagamento**. In questa sezione si riportano **solo titolo, ambito e contestualizzazione**. Le definizioni e il testo completo si acquistano su [iso.org](https://www.iso.org/) o, in versione tradotta, su [uni.com](https://store.uni.com/) (UNI è l'ente italiano di normazione, partner ufficiale ISO).
+> **Nota**: gli standard ISO sono **norme tecniche a pagamento**. In questa sezione si riportano **solo titolo, ambito e contestualizzazione**. Le definizioni e il testo completo si acquistano su [iso.org](https://www.iso.org/) o, in versione tradotta, su [uni.com](https://store.uni.com/).
+
+## ISO e UNI: chi è chi
+
+**UNI — Ente Nazionale Italiano di Unificazione** è il **membro nazionale italiano dell'ISO** (ogni Paese ha un solo membro: DIN per la Germania, BSI per il Regno Unito, AFNOR per la Francia, UNI per l'Italia). UNI traduce e recepisce in Italia le norme ISO con questi prefissi:
+
+- **UNI ISO XXXX** — recepimento diretto di una norma ISO senza modifiche.
+- **UNI EN ISO XXXX** — norma adottata sia a livello europeo (CEN) sia internazionale (ISO), recepita in Italia.
+- **UNI EN XXXX** — norma europea (CEN) recepita, senza corrispondente ISO.
+- **UNI XXXX** — norma puramente italiana prodotta dalla Commissione Tecnica UNI.
+
+Per gli standard **elettrotecnici** l'analogo italiano è il **CEI — Comitato Elettrotecnico Italiano**, membro italiano dell'**IEC** (International Electrotechnical Commission).
+
+Anche le norme UNI, come quelle ISO, sono **a pagamento**. Sono però **gratuite**:
+
+- le **UNI/PdR — Prassi di Riferimento**: documenti pre-normativi (cornici, linee guida, framework) liberamente scaricabili dal sito UNI;
+- alcune **anteprime e abstract** consultabili gratuitamente prima dell'acquisto;
+- specifici **estratti** previsti per esigenze di sicurezza pubblica.
 
 ## Famiglia ISO/TC 292 — Security and resilience
 

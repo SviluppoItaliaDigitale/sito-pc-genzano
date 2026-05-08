@@ -129,7 +129,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/san-pio-da-pietrelcina/" role="menuitem"><span>Il nostro patrono</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
-                /* Dropdown: Risorse (6 voci, +Glossario maggio 2026) */
+                /* Dropdown: Risorse (7 voci, +Standard ISO maggio 2026) */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-risorse" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
                     '<span>Risorse</span>' +
@@ -141,6 +141,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/area-download/" role="menuitem"><span>Area Download</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/normativa/" role="menuitem"><span>Normativa</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/glossario/" role="menuitem"><span>Glossario</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/standard-iso/" role="menuitem"><span>Standard ISO</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/mappa-sito/" role="menuitem"><span>Mappa del Sito</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +

@@ -98,6 +98,16 @@ Materiali **rilasciati gratuitamente**, liberi e riutilizzabili da altri Comuni/
 
 Specifiche complete in [`manuale/parte-20-kit-calamita-categorie-vulnerabili.md`](manuale/parte-20-kit-calamita-categorie-vulnerabili.md).
 
+### Standard ISO per la Protezione Civile (`/standard-iso/`)
+
+Hub permanente di consultazione (8 maggio 2026) con **30 schede brevi** sugli standard internazionali ISO rilevanti per la PC, organizzate per famiglia: **ISO/TC 292** emergency management (16 standard), **ISO 31000** risk management family (3), **ISO 14090** adattamento climatico (3), **ISO 7010** segnaletica (3), settori connessi (5: città resilienti, acqua, antincendio, sicurezza lavoro, GIS).
+
+Ogni scheda spiega cosa è la norma, a chi serve, come si collega alla prassi italiana (D.Lgs. 1/2018, AGID, DPC, normativa di settore).
+
+**Vincolo copyright**: gli ISO sono norme a pagamento, le schede contengono solo titolo, ambito e contestualizzazione italiana — mai testo della norma. Per il dettaglio si rinvia a [iso.org](https://www.iso.org/) e al [catalogo UNI](https://store.uni.com/).
+
+Accompagnano l'hub **10 news divulgative** calendarizzate dal 12 maggio al 12 giugno 2026 sui 10 ISO più utili al cittadino: 22324 (codici colore allerta), 22322 (public warning + IT-alert), 22329 (social in emergenza), 22361 (gestione crisi), 22398 (esercitazioni), 22395 (persone vulnerabili), 31000 (gestione rischio), 22327 (allerta frane), 7010 (segnaletica), 14090 (adattamento clima).
+
 ### Aggiornamenti contenuti didattici e prevenzione (maggio 2026)
 
 Sessione di consolidamento del 6 maggio 2026 con esiti strutturali sul sito.

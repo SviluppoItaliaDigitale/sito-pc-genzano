@@ -335,6 +335,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
   <p class="ms-card-title">Glossario PC</p>
   <p class="ms-card-desc">50+ sigle e termini tecnici (PAI, COC, DICOMAC, IT-alert, ecc.) spiegati in parole semplici.</p>
 </a>
+<a class="ms-card ms-edu" href="/standard-iso/">
+  <div class="ms-card-icon"><i class="bi bi-rulers"></i></div>
+  <p class="ms-card-title">Standard ISO per la PC</p>
+  <p class="ms-card-desc">Hub di consultazione su 30 standard internazionali ISO rilevanti per la Protezione Civile (emergency management, gestione del rischio, comunicazione di crisi, segnaletica, adattamento climatico).</p>
+</a>
 <a class="ms-card ms-edu" href="/faq/">
   <div class="ms-card-icon"><i class="bi bi-patch-question-fill"></i></div>
   <p class="ms-card-title">Domande frequenti</p>
