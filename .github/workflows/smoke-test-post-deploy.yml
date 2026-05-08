@@ -54,39 +54,143 @@ jobs:
           } >> "$GITHUB_OUTPUT"
           exit $EXIT
 
-      - name: "🚨 Apri issue se smoke test fallisce"
+      - name: "🚨 Gestisci issue se smoke test fallisce (con dedup)"
         if: failure() && steps.smoke.outputs.exit_code != '0'
         uses: actions/github-script@v7
         with:
           script: |
             const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
             const report = `${{ steps.smoke.outputs.report }}`;
-            const body = [
-              `# Smoke test post-deploy fallito — ${today}`,
-              ``,
-              `Il sito è stato appena deployato ma alcune pagine critiche non rispondono come atteso.`,
-              `Verifica immediatamente: il deploy potrebbe aver introdotto un regresso o l'FTP non aver completato.`,
-              ``,
-              `## Risultati`,
-              ``,
-              '```',
-              report,
-              '```',
-              ``,
-              `## Cosa fare`,
-              ``,
-              `1. Apri il sito live e verifica le pagine segnalate come ❌`,
-              `2. Se il problema è temporaneo (FTP non propagato), rilancia questo workflow manualmente`,
-              `3. Se il problema persiste, identifica l'ultimo commit problematico con \`git log\` e considera \`git revert\``,
-              ``,
-              `---`,
-              `*Issue generata automaticamente dal workflow \`smoke-test-post-deploy.yml\`.*`
-            ].join('\n');
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
 
-            await github.rest.issues.create({
+            // Cerca issue smoke-test aperte (dedup: una sola issue attiva per volta)
+            const open = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `[Automatico] Smoke test post-deploy FALLITO — ${today}`,
-              body: body,
-              labels: ['smoke-test', 'manutenzione', 'urgente']
+              state: 'open',
+              labels: 'smoke-test',
+              per_page: 10
             });
+
+            if (open.data.length > 0) {
+              // Esiste già un'issue smoke-test aperta: aggiungi commento di nuovo fallimento
+              const existing = open.data[0];
+              const commentBody = [
+                `## ⚠️ Nuovo fallimento smoke-test — ${today}`,
+                ``,
+                `Il workflow ha rilevato un altro fallimento. Issue mantenuta per dedup (una sola attiva alla volta).`,
+                ``,
+                `[🔗 Run completo su Actions](${runUrl})`,
+                ``,
+                '<details><summary>📋 Output smoke-test</summary>',
+                '',
+                '```',
+                report,
+                '```',
+                '',
+                '</details>'
+              ].join('\n');
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: commentBody
+              });
+              console.log(`Aggiunto commento alla issue esistente #${existing.number}`);
+              // Se erano state chiuse altre issue smoke-test ma ne sono rimaste più di una aperta, segnaliamo
+              if (open.data.length > 1) {
+                console.log(`⚠️ Trovate ${open.data.length} issue smoke-test aperte. Una sola dovrebbe esistere — verificare manualmente.`);
+              }
+            } else {
+              // Nessuna issue smoke-test aperta: ne creo una nuova
+              const body = [
+                `# Smoke test post-deploy fallito — ${today}`,
+                ``,
+                `Il sito è stato appena deployato ma alcune pagine critiche non rispondono come atteso.`,
+                `Verifica immediatamente: il deploy potrebbe aver introdotto un regresso o l'FTP non aver completato.`,
+                ``,
+                `[🔗 Run completo su Actions](${runUrl})`,
+                ``,
+                `## Risultati`,
+                ``,
+                '```',
+                report,
+                '```',
+                ``,
+                `## Cosa fare`,
+                ``,
+                `1. Apri il sito live e verifica le pagine segnalate come ❌`,
+                `2. Se il problema è temporaneo (FTP non propagato), rilancia questo workflow manualmente`,
+                `3. Se il problema persiste, identifica l'ultimo commit problematico con \`git log\` e considera \`git revert\``,
+                ``,
+                `## Auto-correzione`,
+                ``,
+                `Se un deploy successivo torna **success**, il workflow chiude automaticamente questa issue con un commento di conferma. Niente azione manuale richiesta in caso di problemi temporanei (FTP, propagazione DNS, cache Aruba).`,
+                ``,
+                `---`,
+                `*Issue generata automaticamente dal workflow \`smoke-test-post-deploy.yml\`.*`
+              ].join('\n');
+
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `[Automatico] Smoke test post-deploy FALLITO — ${today}`,
+                body: body,
+                labels: ['smoke-test', 'manutenzione', 'urgente']
+              });
+              console.log(`Creata nuova issue #${created.data.number}`);
+            }
+
+      - name: "✅ Auto-chiudi issue smoke-test aperte se test torna success"
+        if: success() && steps.smoke.outputs.exit_code == '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            // Cerca issue smoke-test ancora aperte: se ce ne sono, vuol dire che
+            // erano state aperte da un fallimento precedente ma ora il test torna
+            // success → si auto-chiudono (auto-correzione confermata).
+            const open = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'smoke-test',
+              per_page: 20
+            });
+
+            if (open.data.length === 0) {
+              console.log('Nessuna issue smoke-test aperta. Nessuna azione.');
+              return;
+            }
+
+            const closeComment = [
+              `## ✅ Auto-correzione confermata — ${today}`,
+              ``,
+              `Lo smoke-test post-deploy è tornato **success**: tutte le pagine critiche del sito rispondono correttamente. Il problema rilevato in precedenza si è auto-risolto con il deploy successivo.`,
+              ``,
+              `[🔗 Run di conferma](${runUrl})`,
+              ``,
+              `Issue chiusa automaticamente. Se notate ancora problemi sul sito live, riaprite l'issue commentando o aprite una issue nuova con i dettagli specifici.`,
+              ``,
+              `---`,
+              `*Auto-chiusura dal workflow \`smoke-test-post-deploy.yml\`.*`
+            ].join('\n');
+
+            for (const issue of open.data) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: closeComment
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                state: 'closed',
+                state_reason: 'completed'
+              });
+              console.log(`Auto-chiusa issue smoke-test #${issue.number}`);
+            }
