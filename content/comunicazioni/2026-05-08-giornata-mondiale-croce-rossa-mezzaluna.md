@@ -1,6 +1,6 @@
 ---
 title: "8 maggio: Giornata mondiale della Croce Rossa e della Mezzaluna Rossa"
-date: 2026-05-08
+date: 2026-05-08T00:01:00+02:00
 description: "Il movimento nato da Henry Dunant unisce 192 Paesi nel soccorso e nell'aiuto umanitario. Una data che parla a tutto il volontariato mondiale."
 badge: "Volontariato"
 priorita: "normale"
