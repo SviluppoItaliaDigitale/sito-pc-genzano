@@ -1,12 +1,12 @@
 ---
 title: "Aiutare i vicini fragili in emergenza: un gesto di comunità che salva vite"
 date: 2026-05-05T00:01:00+02:00
-description: "Anziani soli, persone con disabilita, famiglie in difficolta: in emergenza la rete di prossimita e spesso la prima a fare la differenza. Come prepararsi."
+description: "Anziani soli, persone con disabilità, famiglie in difficoltà: in emergenza la rete di prossimità è spesso la prima a fare la differenza. Come prepararsi."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza.webp"
-image_alt: "Cover dell'articolo: Aiutare i vicini fragili in emergenza: un gesto di comunita che salva vite"
+image_alt: "Cover dell'articolo: Aiutare i vicini fragili in emergenza: un gesto di comunità che salva vite"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

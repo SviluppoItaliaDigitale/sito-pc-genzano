@@ -19,6 +19,28 @@
         <div id="search-count" class="mt-2 small text-muted"></div>
         <div id="search-results" class="mt-3" role="region" aria-live="polite"></div>
       </div>
+
+      <noscript>
+        <div class="alert alert-warning mt-3" role="alert">
+          <p class="mb-2"><strong>La ricerca interna richiede JavaScript.</strong> Hai disabilitato gli script: usa i link qui sotto per raggiungere direttamente le pagine principali del sito.</p>
+        </div>
+        <section aria-labelledby="cerca-fallback-titolo" class="mt-4">
+          <h2 id="cerca-fallback-titolo" class="h4">Pagine principali</h2>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="{{ "numeri-utili/" | relURL }}"><strong>Numeri utili e di emergenza</strong></a> — 112, Sala Operativa Lazio, Guardia Costiera</li>
+            <li class="mb-2"><a href="{{ "allerte-meteo/" | relURL }}"><strong>Allerte meteo</strong></a> — bollettini e codici colore della Regione Lazio</li>
+            <li class="mb-2"><a href="{{ "cosa-fare-adesso/" | relURL }}"><strong>Cosa fare adesso</strong></a> — comportamenti di autoprotezione</li>
+            <li class="mb-2"><a href="{{ "assistente/" | relURL }}"><strong>Assistente virtuale</strong></a> — guida passo passo per scegliere cosa fare</li>
+            <li class="mb-2"><a href="{{ "rischi-prevenzione/" | relURL }}"><strong>Rischi e prevenzione</strong></a> — sismico, idrogeologico, incendi, vento, temporali, blackout, calore</li>
+            <li class="mb-2"><a href="{{ "piano-familiare/" | relURL }}"><strong>Piano familiare di emergenza</strong></a> — strumento da compilare e stampare</li>
+            <li class="mb-2"><a href="{{ "comunicazioni/" | relURL }}"><strong>Archivio comunicazioni</strong></a> — articoli filtrabili per categoria e anno</li>
+            <li class="mb-2"><a href="{{ "formazione/" | relURL }}"><strong>Formazione e didattica</strong></a> — kit per scuole, giochi, schede stampabili</li>
+            <li class="mb-2"><a href="{{ "contatti/" | relURL }}"><strong>Contatti</strong></a> — sede, recapiti, modulo di contatto</li>
+            <li class="mb-2"><a href="{{ "mappa-sito/" | relURL }}"><strong>Mappa del sito</strong></a> — indice completo di tutte le pagine</li>
+          </ul>
+          <p class="mb-0"><a href="{{ "emergenza/" | relURL }}" class="btn btn-danger"><strong>Pagina Emergenza (versione lite)</strong></a></p>
+        </section>
+      </noscript>
     </div>
   </div>
 </div>
