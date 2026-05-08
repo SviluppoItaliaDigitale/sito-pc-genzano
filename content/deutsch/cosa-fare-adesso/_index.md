@@ -2,6 +2,7 @@
 title: "Was jetzt tun — Deutsch"
 description: "Sofortmaßnahmen im Notfall in Genzano di Roma: Notrufnummern, Verhaltensregeln, nützliche Links."
 layout: "single"
+language: "de"
 ---
 
 [← Zurück zur deutschen Übersicht](/deutsch/)

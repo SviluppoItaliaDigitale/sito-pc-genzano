@@ -2,6 +2,7 @@
 title: "Ce să faci acum — Română"
 description: "Acțiuni imediate în caz de urgență la Genzano di Roma: numere de sunat, comportamente de adoptat, link-uri utile."
 layout: "single"
+language: "ro"
 ---
 
 [← Înapoi la prezentarea în limba română](/romana/)

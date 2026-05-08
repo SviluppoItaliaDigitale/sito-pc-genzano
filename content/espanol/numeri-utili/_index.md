@@ -2,6 +2,7 @@
 title: "Números útiles — Español"
 description: "Todos los números de emergencia y contactos útiles para los ciudadanos de Genzano di Roma."
 layout: "single"
+language: "es"
 ---
 
 [← Volver a la descripción general en español](/espanol/)

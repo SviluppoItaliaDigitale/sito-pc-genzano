@@ -2,6 +2,7 @@
 title: "Familien-Notfallplan — Deutsch"
 description: "Wie man einen Familien-Notfallplan erstellt: Kontakte, Treffpunkte, Notfall-Set."
 layout: "single"
+language: "de"
 ---
 
 [← Zurück zur deutschen Übersicht](/deutsch/)

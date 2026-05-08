@@ -2,6 +2,7 @@
 title: "What To Do Now — English"
 description: "Immediate actions in case of emergency in Genzano di Roma: numbers to call, behaviors to adopt, useful links."
 layout: "single"
+language: "en"
 ---
 
 [← Back to English overview](/english/)

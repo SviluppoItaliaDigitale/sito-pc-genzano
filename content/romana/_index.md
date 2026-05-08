@@ -2,6 +2,7 @@
 title: "Română — Protecția Civilă Genzano di Roma"
 description: "Informații esențiale în limba română pentru turiști și rezidenți străini: numere de urgență, comportamente în fața principalelor riscuri, contacte."
 layout: "single"
+language: "ro"
 aliases:
   - /ro/
 sitemap:

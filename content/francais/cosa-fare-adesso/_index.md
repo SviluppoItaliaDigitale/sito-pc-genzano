@@ -2,6 +2,7 @@
 title: "Que faire maintenant — Français"
 description: "Actions immédiates en cas d'urgence à Genzano di Roma : numéros à appeler, comportements à adopter, liens utiles."
 layout: "single"
+language: "fr"
 ---
 
 [← Retour à la vue d'ensemble en français](/francais/)

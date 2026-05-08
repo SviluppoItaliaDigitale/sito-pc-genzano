@@ -1,0 +1,54 @@
+{{- /*
+  Partial: hreflang-tags (v1.0 — 8 maggio 2026)
+
+  Aggiunge i tag <link rel="alternate" hreflang="..."> per dichiarare a Google
+  e altri motori di ricerca le pagine equivalenti in lingue diverse.
+
+  Convenzione del sito: ogni pagina italiana di "primo livello" (es. /numeri-utili/)
+  ha 7 traduzioni nelle cartelle /english/, /francais/, /deutsch/, /espanol/,
+  /portugues/, /romana/, /esperanto/ con lo stesso slug terminale.
+
+  Il partial deduce dal path corrente quale traduzione esiste e produce gli
+  hreflang reciproci. Se la pagina corrente non ha equivalenti tradotte, non
+  produce alcun tag (Google interpreta come "monolingua").
+
+  Risolve il bug SEO segnalato 8 maggio 2026 dove Google considerava le
+  traduzioni come duplicati italiani della pagina principale.
+*/ -}}
+
+{{- /* Slug terminale del path corrente (es. "numeri-utili" da "/numeri-utili/" o "/english/numeri-utili/") */ -}}
+{{- $path := strings.TrimPrefix "/" .RelPermalink -}}
+{{- $path = strings.TrimSuffix "/" $path -}}
+{{- $parts := split $path "/" -}}
+{{- $slug := index $parts (sub (len $parts) 1) -}}
+
+{{- /* Lingue supportate dal sito (codice → cartella) */ -}}
+{{- $langMap := dict "it" "" "en" "english" "fr" "francais" "de" "deutsch" "es" "espanol" "pt" "portugues" "ro" "romana" "eo" "esperanto" -}}
+
+{{- /* Sezioni che hanno sempre versione tradotta (definite a mano per affidabilità) */ -}}
+{{- $sezioniTradotte := slice "" "numeri-utili" "piano-familiare" "cosa-fare-adesso" -}}
+
+{{- if in $sezioniTradotte $slug -}}
+  {{- range $code, $folder := $langMap -}}
+    {{- $altURL := "" -}}
+    {{- if eq $folder "" -}}
+      {{- /* Italiano: path senza prefisso lingua */ -}}
+      {{- if eq $slug "" -}}
+        {{- $altURL = "/" | absURL -}}
+      {{- else -}}
+        {{- $altURL = printf "/%s/" $slug | absURL -}}
+      {{- end -}}
+    {{- else -}}
+      {{- if eq $slug "" -}}
+        {{- $altURL = printf "/%s/" $folder | absURL -}}
+      {{- else -}}
+        {{- $altURL = printf "/%s/%s/" $folder $slug | absURL -}}
+      {{- end -}}
+    {{- end -}}
+    <link rel="alternate" hreflang="{{ $code }}" href="{{ $altURL }}">
+  {{- end -}}
+  {{- /* x-default: punta sempre alla versione italiana */ -}}
+  {{- $defaultURL := "" -}}
+  {{- if eq $slug "" -}}{{ $defaultURL = "/" | absURL }}{{ else }}{{ $defaultURL = printf "/%s/" $slug | absURL }}{{ end -}}
+  <link rel="alternate" hreflang="x-default" href="{{ $defaultURL }}">
+{{- end -}}

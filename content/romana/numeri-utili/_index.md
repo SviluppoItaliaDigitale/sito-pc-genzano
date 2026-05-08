@@ -2,6 +2,7 @@
 title: "Numere utile — Română"
 description: "Toate numerele de urgență și contactele utile pentru cetățenii din Genzano di Roma."
 layout: "single"
+language: "ro"
 ---
 
 [← Înapoi la prezentarea în limba română](/romana/)
