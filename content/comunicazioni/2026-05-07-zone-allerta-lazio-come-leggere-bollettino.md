@@ -1,12 +1,12 @@
 ---
-title: "Le zone di allerta del Lazio: come leggere il bollettino di criticita"
+title: "Le zone di allerta del Lazio: come leggere il bollettino di criticità"
 date: 2026-05-07
-description: "Il Lazio e suddiviso in sette zone di allerta. Sapere in quale zona si trova Genzano e capire il bollettino di criticita significa leggere correttamente un'allerta meteo."
+description: "Il Lazio è suddiviso in sette zone di allerta. Sapere in quale zona si trova Genzano e capire il bollettino di criticità significa leggere correttamente un'allerta meteo."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-07-zone-allerta-lazio-come-leggere-bollettino.webp"
-image_alt: "Cover dell'articolo: Le zone di allerta del Lazio: come leggere il bollettino di criticita"
+image_alt: "Cover dell'articolo: Le zone di allerta del Lazio: come leggere il bollettino di criticità"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
