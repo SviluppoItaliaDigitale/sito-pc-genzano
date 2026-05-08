@@ -1,0 +1,69 @@
+name: 🧹 Pulizia issue automatiche stale
+
+# Chiude automaticamente le issue create dai workflow di automazione dopo
+# un periodo di inattività. NON tocca le issue di lavoro umano (tracking,
+# enhancement, follow-up audit, ecc.) che vanno gestite manualmente.
+#
+# Logica:
+# - Se un'issue ha label "automazione" e nessun commento da 14 giorni → marca "stale"
+# - Se resta stale altri 7 giorni senza commenti → chiude
+# - Totale: 21 giorni di inattività → chiusura
+# - Se qualcuno commenta dopo la chiusura, l'issue si riapre automaticamente
+#
+# Razionale: le issue di automazione hanno un ciclo di vita breve.
+# Una novità normativa di 3 settimane fa che non hai approfondito
+# probabilmente non ti interessa più. Liberiamo la lista delle issue
+# aperte dal rumore.
+
+on:
+  schedule:
+    # Ogni giorno alle 04:00 UTC (orario calmo, prima del check-allerta orario)
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          # ===== ISSUE =====
+          days-before-issue-stale: 14
+          days-before-issue-close: 7
+          stale-issue-label: 'stale'
+          stale-issue-message: |
+            Questa issue è stata generata da un workflow di automazione e
+            non ha avuto attività negli ultimi 14 giorni. Verrà chiusa
+            automaticamente tra 7 giorni se nessuno commenta o aggiunge
+            informazioni.
+
+            Se l'argomento è ancora rilevante, basta lasciare un commento
+            (anche solo "ancora da affrontare") per fermare la chiusura
+            automatica.
+
+            _Comportamento configurato in `.github/workflows/stale-issues.yml`._
+          close-issue-message: |
+            Issue chiusa automaticamente per inattività prolungata (21 giorni).
+            Se serve riprendere l'argomento, basta commentare e l'issue verrà
+            riaperta automaticamente, oppure aprirne una nuova con i dettagli
+            aggiornati.
+
+          # Solo issue con almeno una di queste label vengono valutate
+          only-issue-labels: 'automazione,normativa-watcher,smoke-test,scarica-foto'
+
+          # MAI toccare issue con queste label (lavoro umano)
+          exempt-issue-labels: 'tracking,audit-followup,enhancement,bug,wontclose,pinned,urgente-permanente'
+
+          # ===== PR (non usate qui ma richieste dall'action) =====
+          days-before-pr-stale: -1
+          days-before-pr-close: -1
+
+          # Limiti di sicurezza
+          operations-per-run: 30
+          ascending: true
+          remove-stale-when-updated: true
+          enable-statistics: true
