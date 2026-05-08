@@ -1,0 +1,106 @@
+name: 📰 Normativa Watcher (sweep settimanale)
+
+on:
+  schedule:
+    # Lunedì 06:00 UTC (08:00 italiana ora legale)
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Finestra in giorni'
+        required: false
+        default: '7'
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installa dipendenze
+        run: pip install feedparser
+
+      - name: Esegui sweep RSS
+        id: sweep
+        run: |
+          DAYS="${{ inputs.days }}"
+          [ -z "$DAYS" ] && DAYS=7
+          python3 scripts/normativa-watcher.py --days "$DAYS" --out novita.json
+          TOTALE=$(python3 -c "import json; print(json.load(open('novita.json'))['totale'])")
+          echo "totale=$TOTALE" >> "$GITHUB_OUTPUT"
+          echo "[info] Hit settimana: $TOTALE"
+
+      - name: Genera issue body (se hit > 0)
+        if: steps.sweep.outputs.totale != '0'
+        run: |
+          python3 - <<'PY' > issue_body.md
+          import json
+          from datetime import datetime
+          d = json.load(open('novita.json'))
+          oggi = datetime.now().strftime('%d %B %Y')
+          print(f"# Novità normative e cronaca PC — settimana al {oggi}\n")
+          print(f"Sweep automatico ({d['finestra_giorni']} giorni). Trovati **{d['totale']} risultati** unici dopo dedup.\n")
+          print("Le voci sotto sono raggruppate per fonte. **Verificare sempre la fonte originale**: le notizie di Google News possono essere riprese non istituzionali.\n")
+          # Raggruppa per fonte
+          from collections import defaultdict
+          per_fonte = defaultdict(list)
+          for n in d['novita']:
+              per_fonte[n['fonte']].append(n)
+          for fonte, items in sorted(per_fonte.items()):
+              print(f"\n## {fonte} ({len(items)} hit)\n")
+              for it in items[:15]:
+                  data = (it.get('published') or '')[:10]
+                  titolo = it['titolo'].replace('|', '\\|')
+                  print(f"- **{data}** — [{titolo}]({it['link']})")
+              if len(items) > 15:
+                  print(f"- *... e altri {len(items) - 15} risultati (non mostrati per brevità)*")
+          print("\n---\n")
+          print("📌 **Cosa fare**:")
+          print("- scorri i titoli e identifica le novità potenzialmente rilevanti per articoli del Gruppo;")
+          print("- per ogni hit interessante, apri il link e verifica la fonte ufficiale;")
+          print("- se decidi di scrivere un articolo, chiudi questa issue commentando con il link all'articolo pubblicato;")
+          print("- se la settimana non ha novità rilevanti, chiudi senza commento.")
+          print("\n_Issue generata automaticamente da `.github/workflows/normativa-watcher.yml`._")
+          PY
+
+      - name: Crea label se mancanti
+        if: steps.sweep.outputs.totale != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create normativa-watcher --color 0E8A16 --description "Sweep settimanale RSS normativa PC" 2>/dev/null || true
+          gh label create automazione --color FBCA04 --description "Generato da workflow automatico" 2>/dev/null || true
+
+      - name: Apri issue settimanale
+        if: steps.sweep.outputs.totale != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATA=$(date -u +"%Y-%m-%d")
+          TITOLO="Novità normative PC — settimana al $DATA (${{ steps.sweep.outputs.totale }} hit)"
+          gh issue create \
+            --title "$TITOLO" \
+            --body-file issue_body.md \
+            --label "normativa-watcher,automazione"
+
+      - name: Log silenzioso (se zero hit)
+        if: steps.sweep.outputs.totale == '0'
+        run: echo "[info] Nessuna novità nella finestra. Niente issue creata."
+
+      - name: Upload risultato come artifact (debug)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: normativa-watcher-results
+          path: novita.json
+          retention-days: 14

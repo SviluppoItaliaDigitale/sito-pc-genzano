@@ -91,6 +91,144 @@ In `.gitignore` (preferenza locale, non di repo). Schema completo:
 
 **Servono entrambe le sezioni.** `permissions.allow` autorizza il tool, `sandbox.network.allowedDomains` autorizza la connessione di rete sottostante.
 
+## Fonti istituzionali normative (aggiunta 8 maggio 2026)
+
+Oltre alle fonti foto, l'allowlist include i siti istituzionali italiani ed europei per il **reperimento di normativa, atti, sentenze, ordinanze**, testati e funzionanti via WebFetch. Servono per supportare la stesura di articoli su novità normative e giurisprudenziali della Protezione Civile.
+
+| Categoria | Sito | Domini | Note |
+|---|---|---|---|
+| Normativa nazionale (testo consolidato) | **Normattiva** | `www.normattiva.it` | Ottimo — ricerca per data/atto/parola |
+| Normativa nazionale (Gazzetta Ufficiale) | **GU** | `www.gazzettaufficiale.it` | Ottimo — sommari per data, atti per ELI |
+| Atti parlamentari | **Camera dei Deputati** | `www.camera.it` | Ottimo — banca dati ddl, leggi, decreti |
+| Atti governativi | **Governo** | `www.governo.it` | Ottimo — comunicati CdM, provvedimenti |
+| Normativa regionale Lazio | **Regione Lazio** | `www.regione.lazio.it`, `*.regione.lazio.it` | Ottimo — atti, BURL (settimanali) |
+| Normativa regionale Lazio | **Consiglio regionale Lazio** | `www.consiglio.regione.lazio.it` | Ottimo — leggi regionali, atti del Consiglio |
+| Giurisprudenza costituzionale | **Corte Costituzionale** | `www.cortecostituzionale.it` | Ottimo — sentenze, archivio storico |
+| Giurisprudenza contabile | **Corte dei Conti** | `www.corteconti.it` | Ottimo — sentenze contabili, controllo |
+| Giurisprudenza UE | **CURIA** (CGUE) | `curia.europa.eu` | Ottimo — sentenze CGUE + Tribunale UE |
+| Giurisprudenza diritti umani | **HUDOC** (CEDU) | `hudoc.echr.coe.int` | Accessibile (JS-heavy, risposta più generica) |
+| Diritto UE (sommario) | **EUR-Lex** | `eur-lex.europa.eu` | In allowlist ma SPA JS — solo URL specifiche |
+| Normativa PC nazionale | **DPC** | `www.protezionecivile.gov.it` | In allowlist ma SPA JS — non funziona ora |
+
+## Fonti scientifico-tecniche, salute, locali, ministeri (aggiunta 8 maggio 2026, secondo giro test)
+
+Estensione della whitelist con 25 ulteriori siti istituzionali testati e funzionanti, organizzati per area di lavoro tipica della redazione PC.
+
+### Scientifico (rischi naturali, clima, ambiente)
+
+| Sito | Dominio | Uso tipico |
+|---|---|---|
+| **ISPRA** | `www.isprambiente.gov.it` | Cartografia rischio idrogeologico/sismico, dati ambientali nazionali |
+| **CNR-IRPI** | `www.irpi.cnr.it` | Frane, alluvioni, dissesti — rilevante per Castelli |
+| **CMCC** | `www.cmcc.it` | Centro euro-Mediterraneo cambiamenti climatici, scenari Lazio |
+| **ARPA Lazio** | `www.arpalazio.it` | Qualità aria, allerte ambientali Lazio |
+| **ARSIAL** | `www.arsial.it` | Agenzia regionale agricoltura Lazio (fonti agricole + ambientali) |
+
+### Meteo, osservazione Terra, emergenze satellitari
+
+| Sito | Dominio | Uso tipico |
+|---|---|---|
+| **Copernicus EMS** | `emergency.copernicus.eu` | Mappe satellitari emergenze UE in tempo reale (incendi, alluvioni, siccità) |
+| **ECMWF** | `www.ecmwf.int` | Centro europeo previsioni meteo (modelli ensemble) |
+| **WMO** | `wmo.int` | Organizzazione Meteorologica Mondiale (severe weather) |
+
+### Salute pubblica e gruppi vulnerabili
+
+| Sito | Dominio | Uso tipico |
+|---|---|---|
+| **Istituto Superiore di Sanità** | `www.iss.it` | Sorveglianza sanitaria, Piano caldo, autorevole su salute pubblica |
+| **ECDC** | `www.ecdc.europa.eu` | Centro europeo controllo malattie, allerte epidemiche |
+
+### Forze operative del Sistema PC
+
+| Sito | Dominio | Uso tipico |
+|---|---|---|
+| **Vigili del Fuoco** | `www.vigilfuoco.it` | VVF nazionale, statistiche interventi, comunicati |
+| **ANPAS** | `www.anpas.org` | Pubbliche assistenze, partner DPC su "Io non rischio" |
+| **Carabinieri** | `www.carabinieri.it` | Arma dei Carabinieri (Carabinieri Forestali, ordine pubblico in emergenza) |
+
+### Enti territoriali area Genzano
+
+| Sito | Dominio | Uso tipico |
+|---|---|---|
+| **Città Metropolitana Roma** | `www.cittametropolitanaroma.it` | Atti CM Roma (PC area metropolitana) |
+| **ASL Roma 6** | `www.aslroma6.it` | ASL competente Genzano (118, ondate calore, sanità locale) |
+
+### Ministeri
+
+| Sito | Dominio | Uso tipico |
+|---|---|---|
+| **Min. Istruzione e Merito (MIM)** | `www.mim.gov.it` | Ed. civica, D.M. 183/2024, sicurezza scolastica |
+| **Min. Cultura** | `www.cultura.gov.it` | Tutela patrimonio in emergenza |
+| **Min. Infrastrutture e Trasporti** | `www.mit.gov.it` | Infrastrutture critiche, dighe, sicurezza trasporti |
+
+### Statistiche, open data, cartografia
+
+| Sito | Dominio | Uso tipico |
+|---|---|---|
+| **ISTAT** | `www.istat.it` | Demografia, popolazione vulnerabile per Comune |
+| **dati.gov.it** | `www.dati.gov.it` | Portale nazionale open data PA |
+| **dati.lazio.it** | `dati.lazio.it` | Open data Regione Lazio (406 dataset) |
+| **OpenCoesione** | `opencoesione.gov.it` | Monitoraggio fondi pubblici (PNRR, fondi europei PC) |
+| **Geoportale Lazio** | `geoportale.regione.lazio.it` | Cartografia regionale (256 layer, WMS/WFS/WCS) |
+| **OpenStreetMap** | `www.openstreetmap.org` | Mappa libera, base per mappe del sito |
+
+### Educazione e ricerca didattica
+
+| Sito | Dominio | Uso tipico |
+|---|---|---|
+| **INDIRE** | `www.indire.it` | Ricerca educativa, materiali didattici PC per scuole |
+
+**Nessuna API key richiesta** per nessuna di queste fonti.
+
+### Siti testati che NON funzionano (motivo)
+
+| Sito | Causa | Risolvibile dalla whitelist? |
+|---|---|---|
+| **Senato** (`www.senato.it`) | HTTP 403 Forbidden anti-bot | No — server-side |
+| **Quirinale** (`www.quirinale.it`) | HTTP 403 Forbidden anti-bot | No — server-side |
+| **Giustizia Amministrativa** (`www.giustizia-amministrativa.it`) | Errore certificato SSL (CA giustizia non riconosciuta) | No — infrastrutturale |
+| **Cassazione SentenzeWeb** (`www.italgiure.giustizia.it`) | Errore certificato SSL stessa CA | No — infrastrutturale |
+| **ENEA** (`www.enea.it`) | Errore certificato SSL | No — infrastrutturale |
+| **terremoti.ingv.it** | Errore certificato SSL | No — provare invece `www.ingv.it` |
+| **Parco Castelli Romani** (`www.parcocastelliromani.it`) | Errore certificato SSL | No — infrastrutturale |
+| **Comune Genzano** (`www.comune.genzanodiroma.rm.it`) | ECONNREFUSED | No — sito offline o cambio URL |
+| **USR Lazio** (`www.lazio.istruzione.it`) | ECONNREFUSED | No — server offline |
+| **protezionecivile.regione.lazio.it** | ECONNREFUSED | No — sottosito offline (usare `www.regione.lazio.it`) |
+| **DG ECHO** (`civil-protection-humanitarian-aid.ec.europa.eu`) | Solo language selector visibile | SPA JS — pagine specifiche potrebbero funzionare |
+| **EUR-Lex** (`eur-lex.europa.eu`) | Contenuto vuoto | SPA JS — pagine specifiche potrebbero funzionare |
+| **DPC** (`www.protezionecivile.gov.it`) | Solo "Loading..." | SPA JS — endpoint REST forse OK |
+| **UNDRR** (`www.undrr.org`) | HTTP 403 Forbidden | No — anti-bot |
+| **OCHA** (`www.unocha.org`) | HTTP 403 Forbidden | No — anti-bot |
+| **Crusca** (`accademiadellacrusca.it`) | HTTP 403 Forbidden | No — anti-bot |
+| **Europeana** (`www.europeana.eu`) | HTTP 403 Forbidden | No — anti-bot |
+| **Library of Congress** (`www.loc.gov`) | HTTP 403 Forbidden | No — anti-bot |
+| **Geoportale Nazionale MASE** (`gn.mase.gov.it`) | HTTP 403 Forbidden | No — anti-bot |
+
+### Cosa funziona bene via WebFetch
+
+- Aprire un **atto specifico** se si ha l'URL diretta (Normattiva URN, GU ELI, sentenza per anno+numero).
+- Aprire il **sommario di una GU per data nota** (`https://www.gazzettaufficiale.it/gazzetta/serie_generale/caricaDettaglio?dataPubblicazioneGazzetta=AAAA-MM-GG&numeroGazzetta=NNN`).
+- Aprire un **numero specifico di BURL Lazio** (già usato per il regolamento SAFOR-PROCIV, BURL 36 e 37 di maggio 2026).
+- Aprire la **homepage tematica** del Consiglio regionale Lazio o della Corte Costituzionale per scorrere le ultime delibere/sentenze.
+
+### Cosa NON funziona via WebFetch
+
+- **Riempire form di ricerca** dinamici (Normattiva, GU, BURL hanno motori di ricerca client-side che WebFetch non sa azionare). Il workaround è aprire URL specifiche o scorrere sommari per data.
+- **Renderizzare SPA JavaScript** (DPC, EUR-Lex). Il workaround è cercare endpoint REST/API o pagine HTML statiche alternative.
+- **Senato** (`www.senato.it`) e **Quirinale** (`www.quirinale.it`): rispondono **HTTP 403 Forbidden** (anti-bot lato server, non risolvibile dall'allowlist client).
+- **Giustizia Amministrativa** (`www.giustizia-amministrativa.it`) e **Cassazione SentenzeWeb** (`www.italgiure.giustizia.it`): **errore certificato SSL** (CA della giustizia italiana non riconosciuta). Non risolvibile da allowlist; servirebbe `curl --insecure` o un browser reale.
+
+### Workflow tipico per "ultime N normative PC"
+
+1. **Identificare la finestra temporale** (es. ultime 5 GU, ultimo BURL Lazio, ultimo trimestre di sentenze CC).
+2. **Aprire i sommari** in parallelo (URL stabili — una WebFetch per numero).
+3. **Filtrare gli atti PC** dai sommari (titolo + ente emanante).
+4. **Restituire la lista** con titolo, fonte, data, link diretto.
+5. Se servono i **testi completi**, aprire le URL specifiche dei singoli atti.
+
+⚠️ **Affidabilità**: WebFetch passa il contenuto a un modello fast che lo riassume. Per atti dove **ogni parola conta** (numeri di articolo, date, importi, soglie), conviene **verificare il testo originale** sul link riportato. La trascrizione è un punto di partenza, non la fonte di verità finale.
+
 ## Procedura iniziale (una sola volta per repo)
 
 1. Verifica se il file esiste: `cat .claude/settings.local.json 2>/dev/null`.
