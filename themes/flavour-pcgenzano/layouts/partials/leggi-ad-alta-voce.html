@@ -1,16 +1,17 @@
 {{- /*
-  Partial: leggi-ad-alta-voce (v5.0 — RIFATTO da zero il 6 maggio 2026)
+  Partial: leggi-ad-alta-voce (v5.2 — fix Stop il 8 maggio 2026)
   Bottone "Leggi ad alta voce" con Web Speech API.
 
-  Versione minimale: bottone + selettore velocità + script ~80 righe.
-  Niente fallback, niente highlight-parola, niente warmup complesso.
-  Solo: click → estrai testo → speak. Click di nuovo → ferma + ricomincia.
+  v5.2 — fix bug "Ferma lettura non ferma davvero": il TTS legge il
+  testo in chunk da ~180 caratteri (workaround Chrome). Quando si
+  cancel-lava un chunk, Chrome emetteva comunque `onend` che
+  schedulava il chunk successivo. Risultato: stop interrompeva il
+  chunk corrente ma il prossimo partiva 30ms dopo. Fix: flag
+  `stopped` su una closure-controller che blocca la sequenza
+  prima che speakNext incrementi l'indice.
 
-  Storia: le versioni v3/v4 avevano accumulato workaround
-  (showTtsUnavailable, buildTextMap, fallbackTimer, ecc.) che si
-  ostacolavano a vicenda. Riscritto pulito da capo per eliminare la
-  regressione "audio non parte" su Chrome PC + Android segnalata il
-  6 maggio 2026.
+  v5.1 — chunk per pagine lunghe (Chrome tronca utterance > ~300 char).
+  v5.0 — riscritto da zero, minimale, senza highlight parole.
 
   Preferenze persistite in localStorage:
     pcgenzano-tts-rate    (0.75 | 0.95 | 1.15)
@@ -170,22 +171,27 @@
   }
 
   // 7b. Funzione di lettura. Avvia la sequenza di chunk.
-  //     Ritorna true se ha qualcosa da leggere.
+  //     Ritorna un controller con .stop() che ferma DAVVERO la sequenza
+  //     (anche se onend del chunk corrente sta per scattare).
+  //     Ritorna null se non c'è testo.
   function speakText(btn) {
     var target = document.querySelector(btn.getAttribute('data-tts-target'));
     var text = extractText(target);
     if (!text) {
       alert('Nessun testo da leggere su questa pagina.');
-      return false;
+      return null;
     }
     var chunks = splitIntoChunks(text, 180);
     var voice = pickItalianVoice();
     var rate = getRate();
     var idx = 0;
+    var stopped = false; // se true, speakNext non procede oltre
 
     function speakNext() {
+      if (stopped) return;
       if (idx >= chunks.length) {
         setUI(btn, 'idle');
+        currentController = null;
         return;
       }
       var u = new SpeechSynthesisUtterance(chunks[idx]);
@@ -195,12 +201,16 @@
       u.volume = 1;
       if (voice) u.voice = voice;
       u.onend = function () {
+        // Chrome emette onend anche dopo synth.cancel(): il flag stopped
+        // qui sotto è il SOLO modo per impedire il chunk successivo.
+        if (stopped) return;
         idx++;
         // Brevissima pausa fra un chunk e l'altro per evitare che Chrome
         // accoda male e perda il chunk successivo.
         setTimeout(speakNext, 30);
       };
       u.onerror = function (ev) {
+        if (stopped) return;
         if (window.console) console.warn('[TTS] error chunk', idx, '/', chunks.length, ':', ev && ev.error);
         // Su error proviamo comunque ad andare avanti col prossimo chunk:
         // a volte un singolo chunk fallisce ma i successivi vanno.
@@ -214,18 +224,32 @@
     // setTimeout 50ms evita il bug Chrome cancel+speak immediato.
     synth.cancel();
     setTimeout(speakNext, 50);
-    return true;
+    return {
+      stop: function () {
+        stopped = true;
+        try { synth.cancel(); } catch (e) {}
+      }
+    };
   }
+
+  // Controller della sequenza in corso (null se nessuna lettura attiva).
+  var currentController = null;
 
   // 8. Wire-up bottoni.
   document.querySelectorAll('.tts-button').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      if (synth.speaking || synth.pending) {
-        synth.cancel();
+      if (currentController || synth.speaking || synth.pending) {
+        if (currentController) currentController.stop();
+        else { try { synth.cancel(); } catch (e) {} }
+        currentController = null;
         setUI(btn, 'idle');
         return;
       }
-      if (speakText(btn)) setUI(btn, 'reading');
+      var ctl = speakText(btn);
+      if (ctl) {
+        currentController = ctl;
+        setUI(btn, 'reading');
+      }
     });
   });
 
@@ -242,20 +266,28 @@
       document.querySelectorAll('.tts-wrapper input[name="tts-rate"][value="' + val + '"]').forEach(function (other) {
         other.checked = true;
       });
-      // Se sta leggendo, riavvia con la nuova velocità.
-      if (synth.speaking || synth.pending) {
+      // Se sta leggendo, ferma davvero e riavvia con la nuova velocità.
+      if (currentController || synth.speaking || synth.pending) {
         var wrapper = this.closest('.tts-wrapper');
         var btn = wrapper && wrapper.querySelector('.tts-button');
+        if (currentController) currentController.stop();
+        currentController = null;
         if (btn) {
-          synth.cancel();
           setUI(btn, 'idle');
-          if (speakText(btn)) setUI(btn, 'reading');
+          var ctl = speakText(btn);
+          if (ctl) {
+            currentController = ctl;
+            setUI(btn, 'reading');
+          }
         }
       }
     });
   });
 
   // 10. Pulizia su unload (alcuni browser continuano a parlare dopo navigazione).
-  window.addEventListener('beforeunload', function () { try { synth.cancel(); } catch (e) {} });
+  window.addEventListener('beforeunload', function () {
+    if (currentController) currentController.stop();
+    try { synth.cancel(); } catch (e) {}
+  });
 })();
 </script>
