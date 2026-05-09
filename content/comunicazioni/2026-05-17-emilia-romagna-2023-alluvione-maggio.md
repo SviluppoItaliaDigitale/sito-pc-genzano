@@ -2,7 +2,6 @@
 title: "Alluvione dell'Emilia-Romagna, maggio 2023: il fango che ha cambiato la cultura del rischio in pianura"
 date: 2026-05-17T00:02:00+02:00
 description: "Maggio 2023 in Emilia-Romagna: 350 mm di pioggia in 36 ore, esondazione di 23 fiumi, 17 vittime, 36.000 sfollati. L'alluvione più grave del XXI secolo."
-
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -11,7 +10,6 @@ image_alt: "Copertina dell'articolo: Alluvione dell'Emilia-Romagna, maggio 2023,
 scadenza: ""
 area: "Italia · Emilia-Romagna"
 allegati: []
-
 draft: false
 ---
 
@@ -89,17 +87,19 @@ Le **17 vittime** dell'alluvione dell'Emilia-Romagna del maggio 2023 sono ricord
 
 L'Emilia-Romagna è oggi un **caso di studio europeo**: il modo in cui una regione altamente sviluppata gestisce il **trauma di un'alluvione** e si adatta al **cambiamento climatico** è osservato dalla comunità internazionale. Per la nostra protezione civile, è una **lezione viva**: non si finisce mai di imparare a leggere il territorio.
 
-## Per approfondire (fonti istituzionali)
+## Per approfondire
 
-- [Regione Emilia-Romagna — Alluvione maggio 2023](https://www.regione.emilia-romagna.it/alluvione-2023)
-- [Dipartimento di Protezione Civile — Emergenza alluvione Emilia-Romagna 2023](https://www.protezionecivile.gov.it/)
-- [Struttura commissariale per la ricostruzione](https://www.commissarioricostruzionesismaer.it/)
-- [Autorità di Bacino Distrettuale del Fiume Po — PGRA](https://www.adbpo.it/)
-- [ISPRA — Dissesto idrogeologico in Italia](https://www.isprambiente.gov.it/)
+Sul nostro sito:
 
-## Approfondimenti dal nostro archivio
+- [Sarno 1998: la frana che ha riscritto le mappe del rischio](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/).
+- [Alluvione delle Marche 2022: bombe d'acqua e cambiamento climatico](/comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/).
+- [Cambiamento climatico e protezione civile](/comunicazioni/2026-09-24-cambiamento-climatico-protezione-civile/).
+- [Alluvione di Livorno 2017: memoria](/comunicazioni/2026-09-20-alluvione-livorno-2017-memoria/).
+- [Rischio idrogeologico — pagina operativa](/rischi-prevenzione/rischio-idrogeologico/).
 
-- [Sarno 1998: la frana che ha riscritto le mappe del rischio](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/)
-- [Alluvione delle Marche 2022: bombe d'acqua e cambiamento climatico](/comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/)
-- [Cambiamento climatico e protezione civile](/comunicazioni/2026-09-24-cambiamento-climatico-protezione-civile/)
-- [Alluvione di Livorno 2017: memoria](/comunicazioni/2026-09-20-alluvione-livorno-2017-memoria/)
+Fonti istituzionali:
+
+- [Regione Emilia-Romagna — Alluvione maggio 2023](https://www.regione.emilia-romagna.it/alluvione-2023).
+- [Dipartimento di Protezione Civile](https://www.protezionecivile.gov.it/).
+- [Autorità di Bacino Distrettuale del Fiume Po — PGRA](https://www.adbpo.it/).
+- [ISPRA — Dissesto idrogeologico in Italia](https://www.isprambiente.gov.it/).

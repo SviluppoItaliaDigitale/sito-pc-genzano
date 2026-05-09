@@ -1,7 +1,7 @@
 ---
 title: "20 maggio 2012: il terremoto in Emilia e la memoria che diventa prevenzione"
 date: 2026-05-20T00:01:00+02:00
-description: "Quattordici anni dal sisma emiliano. Cosa abbiamo imparato sulla vulnerabilita delle strutture produttive, sulla protezione del patrimonio e sul volontariato."
+description: "Quattordici anni dal sisma emiliano. Cosa abbiamo imparato sulla vulnerabilità delle strutture produttive, sulla protezione del patrimonio e sul volontariato."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -87,11 +87,18 @@ Il miglior modo di ricordare le vittime del 20 maggio 2012 è **continuare a lav
 
 ## Per approfondire
 
-- Articolo: [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/)
-- Articolo: [29 maggio 2012: la seconda scossa in Emilia](/comunicazioni/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria/)
-- Articolo: [Diciassette anni fa il terremoto dell'Aquila: Fossa](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/)
-- [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/)
-- [Dipartimento della Protezione Civile — Terremoti](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico)
-- [Regione Emilia-Romagna — Sisma 2012](https://sismacentro.regione.emilia-romagna.it/)
+Sul nostro sito:
+
+- [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/).
+- [29 maggio 2012: la seconda scossa in Emilia](/comunicazioni/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria/).
+- [Diciassette anni fa il terremoto dell'Aquila: Fossa](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/).
+- [Rischio sismico — pagina operativa](/rischi-prevenzione/rischio-sismico/).
+- [Giornata dei Musei e patrimonio in emergenza](/comunicazioni/2026-05-18-giornata-musei-patrimonio-culturale-emergenze/).
+
+Fonti istituzionali:
+
+- [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/).
+- [Dipartimento della Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
+- [Regione Emilia-Romagna — Sisma 2012](https://sismacentro.regione.emilia-romagna.it/).
 
 *In memoria delle vittime del sisma emiliano.*

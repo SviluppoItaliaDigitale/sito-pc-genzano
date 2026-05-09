@@ -26,7 +26,7 @@ Il **20 maggio** è stato proclamato dalle Nazioni Unite, nel **2017**, **Giorna
          caption="Foto: John Severns (Severnjc) — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:European_honey_bee_extracts_nectar.jpg)." >}}
 
 
-Senza api, non solo niente miele: niente mele, ciliegie, mandorle, fragole, zucche, mandorle, girasoli. La FAO stima che il valore economico globale dell'impollinazione operata dagli insetti — di cui le api sono i principali agenti — sia tra **235 e 577 miliardi di dollari l'anno**.
+Senza api, non solo niente miele: niente mele, ciliegie, mandorle, fragole, zucche, pomodori, girasoli. La FAO stima che il valore economico globale dell'impollinazione operata dagli insetti — di cui le api sono i principali agenti — sia tra **235 e 577 miliardi di dollari l'anno**.
 
 Per questo le api sono **protette** dalla legge italiana e dalle direttive europee. **Uccidere uno sciame è vietato** (vedi *Legge 313/2004* sulla disciplina dell'apicoltura, **Codice Penale art. 727** sui maltrattamenti, e regolamenti regionali specifici).
 
@@ -127,12 +127,19 @@ Riassumendo per chiarezza:
 
 ## Per approfondire
 
-- [FAO — World Bee Day](https://www.fao.org/world-bee-day/) — celebrazione annuale del 20 maggio
-- [Albo Apicoltori della Regione Lazio](https://www.regione.lazio.it/) — elenco apicoltori iscritti per provincia
-- [Legge 313/2004](https://www.normattiva.it/) — Disciplina dell'apicoltura italiana
-- Articolo: [Giornata della biodiversità: territori resilienti](/comunicazioni/2026-05-22-giornata-biodiversita-territori-resilienti/)
-- Articolo: [Zanzara tigre e arbovirosi: prevenzione](/comunicazioni/2026-06-09-zanzara-tigre-arbovirosi-prevenzione/)
-- Articolo: [Anniversario nascita Protezione Civile (Vermicino 1981)](/comunicazioni/2026-06-10-vermicino-1981-alfredino-rampi-protezione-civile/)
+Sul nostro sito:
+
+- [Giornata della biodiversità: territori resilienti](/comunicazioni/2026-05-22-giornata-biodiversita-territori-resilienti/).
+- [Zanzara tigre e arbovirosi: prevenzione](/comunicazioni/2026-06-09-zanzara-tigre-arbovirosi-prevenzione/).
+- [Anniversario nascita Protezione Civile (Vermicino 1981)](/comunicazioni/2026-06-10-vermicino-1981-alfredino-rampi-protezione-civile/).
+- [Kit Calamità — Animali](/formazione/kit-calamita-animali/).
+
+Fonti istituzionali:
+
+- [FAO — World Bee Day](https://www.fao.org/world-bee-day/): celebrazione annuale del 20 maggio.
+- [Albo Apicoltori della Regione Lazio](https://www.regione.lazio.it/): elenco apicoltori iscritti per provincia.
+- [Legge 313/2004](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2004-12-24;313): Disciplina dell'apicoltura italiana.
+- [Vigili del Fuoco](https://www.vigilfuoco.it/): per recupero sciami chiamare il 112.
 
 Le api non sono un nemico. Sono uno dei **servizi ecosistemici** più preziosi che esistano. Quando ne incontri uno sciame, hai davanti decine di migliaia di lavoratrici stagionali che chiedono solo di passare un'ora e poi andarsene. Lasciale fare, oppure chiamaci: in un modo o nell'altro, si trasferiscono in un posto migliore.
 

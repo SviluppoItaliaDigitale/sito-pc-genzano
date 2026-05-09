@@ -91,9 +91,16 @@ Nel territorio dei Castelli Romani è possibile visitare il [Museo Diffuso del V
 
 ## Per approfondire
 
-- [Ministero della Cultura](https://www.beniculturali.it/)
-- [Carabinieri TPC](https://tpcweb.carabinieri.it/)
-- [ICOM Italia](https://www.icom-italia.org/)
-- [ISCR — Istituto Superiore per la Conservazione e il Restauro](https://www.iscr.beniculturali.it/)
+Sul nostro sito:
+
+- [Rischio sismico e tutela del patrimonio storico](/rischi-prevenzione/rischio-sismico/).
+- [Cartografia del territorio di Genzano](/cartografia/).
+
+Fonti istituzionali:
+
+- [Ministero della Cultura](https://www.cultura.gov.it/).
+- [Carabinieri Tutela Patrimonio Culturale (TPC)](https://tpcweb.carabinieri.it/).
+- [ICOM Italia](https://www.icom-italia.org/).
+- [ISCR — Istituto Superiore per la Conservazione e il Restauro](https://www.iscr.beniculturali.it/).
 
 Proteggere il patrimonio non è mai "invece" di proteggere le persone: è **parte** di proteggere le comunità. Buona Giornata dei Musei.

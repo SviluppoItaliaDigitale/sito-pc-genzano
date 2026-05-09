@@ -99,7 +99,14 @@ I social non sono un giocattolo da emergenza. Quando una sirena si attiva, i nos
 
 ## Per approfondire
 
-- Scheda interna dello standard: [ISO 22329 — Social media in emergenza](/standard-iso/iso-22329/)
-- [Social Media Policy del Gruppo](/social-media-policy/)
-- [ISO 22324 — Codici colore allerta](/standard-iso/iso-22324/)
-- [Standard ISO per la Protezione Civile](/standard-iso/)
+Sul nostro sito:
+
+- [ISO 22329 — Social media in emergenza](/standard-iso/iso-22329/): scheda interna con titolo, ambito e contestualizzazione italiana.
+- [Social Media Policy del Gruppo](/social-media-policy/).
+- [ISO 22324 — Codici colore allerta](/standard-iso/iso-22324/).
+- [Standard ISO per la Protezione Civile](/standard-iso/): hub di tutti gli standard rilevanti.
+
+Fonti istituzionali:
+
+- [Pagina ufficiale ISO 22329](https://www.iso.org/standard/50064.html): per il testo della norma (a pagamento) consulta [iso.org](https://www.iso.org/) o il [catalogo UNI](https://store.uni.com/).
+- [GDPR — Regolamento UE 2016/679](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679).

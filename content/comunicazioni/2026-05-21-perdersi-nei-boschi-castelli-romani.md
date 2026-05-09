@@ -48,7 +48,7 @@ Le cause più comuni sono:
 - **Giacca a vento** o mantella impermeabile.
 - **Coperta termica salvavita** (argentata, occupa pochissimo spazio).
 - **Piccolo kit di primo soccorso**.
-- **Coltello o moltiuso**.
+- **Coltello multiuso**.
 - **Indumenti adatti**: pantaloni lunghi, calze, scarpe da escursionismo.
 
 ### Vestiti giusti
@@ -110,8 +110,17 @@ Le ricerche in aree boschive e montane sono coordinate dal [Corpo Nazionale Socc
 
 ## Per approfondire
 
-- [Parco Regionale dei Castelli Romani](http://www.parcocastelliromani.it/)
-- [CAI — Club Alpino Italiano](https://www.cai.it/)
-- [Corpo Nazionale Soccorso Alpino](https://www.cnsas.it/)
+Sul nostro sito:
+
+- [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
+- [Cartografia del territorio di Genzano](/cartografia/).
+- [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/).
+
+Fonti istituzionali:
+
+- [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/).
+- [CAI — Club Alpino Italiano](https://www.cai.it/).
+- [Corpo Nazionale Soccorso Alpino e Speleologico](https://www.cnsas.it/).
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
 
 Il bosco è uno spazio meraviglioso e sicuro **se rispettato**. Chi si prepara bene, torna a casa con un bel ricordo; chi si prepara male, rischia di trasformare una gita in un'emergenza.
