@@ -231,40 +231,52 @@ alias menu-protezionecivile='bash ~/gestione-sito.sh'
 
 E creare i 2 file `.desktop` in `~/Scrivania/` (template in questa stessa parte del manuale, sezione precedente non necessaria — gli script wrapper sono già nel repo).
 
-### 14.11 — Workflow ibrido con AI esterne (ChatGPT, Gemini, Claude web)
+### 14.11 — Workflow ibrido con AI esterne (Gemini, ChatGPT, Claude web)
 
 Da maggio 2026, il menu di gestione (voce **21**) include un meccanismo automatico per **delegare la stesura dei testi** a una qualunque AI esterna che l'utente preferisce, mantenendo Claude Code come strumento di rifinitura tecnica.
 
-**Perché due AI invece di una.** Ogni LLM ha una sua "voce". ChatGPT è particolarmente forte nella stesura narrativa lunga e nella riformulazione. Gemini è ottimo per riassunti tecnici e citazioni normative. Claude è preciso sulle regole strutturate e sui dettagli del repo (frontmatter, shortcode, link, CSS scoped). Usarli **in catena** dà la qualità migliore: una scrive, l'altra rifinisce, l'utente sceglie cosa tenere.
+**Perché più AI invece di una.** Ogni LLM ha una sua "voce". ChatGPT è particolarmente forte nella stesura narrativa lunga e nella riformulazione. Gemini è ottimo per riassunti tecnici e citazioni normative, e ha la finestra di contesto più ampia (2M token). Claude è preciso sulle regole strutturate e sui dettagli del repo (frontmatter, shortcode, link, CSS scoped). Usarli **in catena** dà la qualità migliore: una scrive, l'altra rifinisce, l'utente sceglie cosa tenere.
+
+**Il limite di contesto cambia tutto.** Il file `CONTESTO-AI.md` con tutta la documentazione del sito è ~810 KB / ~200.000 token. Non tutte le AI lo accettano in paste:
+
+| AI | Contesto max | Strategia voce 21 |
+|---|---|---|
+| **Gemini** (gratis) | 1M-2M token | FULL via paste — entra tutto |
+| **ChatGPT Plus** (GPT-4o) | 128k token | SLIM via paste (~64k token) **OPPURE** FULL come allegato drag-drop (RAG interno) |
+| **Claude web Pro** | 200k token | FULL via paste |
+
+**Versione SLIM (modalità `--slim` di `export-contesto-ai.sh`).** Generata su misura per ChatGPT Plus paste. Contiene solo le regole **editoriali** (01-governance, 02-content-design, 03-accessibility, 06-protezione-civile, 07-proattività) + README + CLAUDE.md + PIANO-EDITORIALE + memorie utente + `prompt-istruzioni-ai.md`. Esclude le regole **tecniche** (04*/05/08 — Hugo template, deploy CI, sandbox locale) che non servono a un'AI per scrivere testi. Stessa efficienza per la scrittura, ~250 KB / ~64.000 token.
 
 **Il flusso operativo (zero errori se segui i passi):**
 
 1. Apri il menu (`menu-protezionecivile`) e scegli **voce 21 — Esporta contesto per altra AI**.
-2. Lo script automatizza:
-   - rigenera `CONTESTO-AI.md` (export di CLAUDE.md + 11 rules + manuale + memorie);
-   - lo combina con `scripts/prompt-istruzioni-ai.md` (system prompt che dice all'AI come comportarsi);
-   - mette tutto negli appunti (`xclip` su Linux desktop, `wl-copy` su Wayland, `termux-clipboard-set` su Android);
-   - apre **chat.openai.com** nel browser.
-3. Apri una NUOVA chat su ChatGPT (o Gemini), premi **Ctrl+V** e poi INVIO.
-4. ChatGPT/Gemini risponde tipo: *"Ho letto il contesto del sito Protezione Civile Genzano. Dimmi cosa serve."*
+2. **Lo script chiede quale AI userai** (1=Gemini, 2=ChatGPT, 3=Claude web). In base alla scelta:
+   - **Gemini** → genera FULL, copia in clipboard, apre `gemini.google.com`.
+   - **ChatGPT** → genera SLIM, copia in clipboard. **In più** genera anche FULL e la salva su `~/Scrivania/contesto-pc-genzano-completo.md` per drag-drop come allegato. Apre `chat.openai.com`.
+   - **Claude web** → genera FULL, copia in clipboard, apre `claude.ai`.
+3. Apri una NUOVA chat sull'AI scelta. Premi **Ctrl+V** (per Gemini/Claude web) oppure **trascina il file dalla Scrivania** (per ChatGPT, opzione B), poi INVIO.
+4. L'AI risponde *"Ho letto il contesto, dimmi cosa serve"*.
 5. Scrivi la richiesta in italiano naturale. Esempi:
    - *"Scrivimi un articolo sul rischio incendio nei Castelli Romani per giugno 2026."*
    - *"Rivedi questo testo in stile AGID: [...]"*
    - *"Genera bozze social X/Facebook/Instagram/Telegram per l'articolo sull'allerta gialla di domani."*
-6. ChatGPT produce il testo seguendo le regole del sito (frontmatter completo, badge giusto, formato data, niente foto stock generiche, ecc.).
+6. L'AI produce il testo seguendo le regole del sito (frontmatter completo, badge giusto, formato data, niente foto stock generiche, ecc.).
 7. Copi il testo e:
    - **Per pubblicarlo**: torni al menu, voce **1 — Crea nuova comunicazione**, e incolli il corpo dentro nano. Oppure salvi come file `content/comunicazioni/AAAA-MM-GG-slug.md` direttamente.
-   - **Per rifinitura tecnica** (foto inline, link, audit pre-push): voce **20 — Avvia Claude Code**, e dici *"ho appena scritto questo articolo con ChatGPT, fai i controlli e pubblica"*. Claude legge il file, applica le rules del repo nel dettaglio, committa e pusha.
+   - **Per rifinitura tecnica** (foto inline, link, audit pre-push): voce **20 — Avvia Claude Code**, e dici *"ho appena scritto questo articolo con [AI esterna], fai i controlli e pubblica"*. Claude legge il file, applica le rules del repo nel dettaglio, committa e pusha.
 
 **Il file `scripts/prompt-istruzioni-ai.md`.** È il "system prompt" che vincola l'AI esterna. Definisce: il ruolo (assistente editoriale del Gruppo, non sviluppatore), le regole AGID obbligatorie, il formato del frontmatter, la palette dei badge, il divieto foto stock generiche, il numero 112 come unico riferimento per il cittadino, il divieto di inventare URL/numeri/persone, la struttura ISO 22329 per post di crisi sui social, il formato dei 4 testi social. Quando aggiorni le rules del progetto, ricontrolla anche questo file: deve restare allineato.
 
-**Il file generato `/tmp/pcgenzano-contesto-per-ai.md`.** Contenuto = `prompt-istruzioni-ai.md` + `CONTESTO-AI.md`. È temporaneo (`/tmp` viene pulito dal sistema), si rigenera ogni volta che lanci la voce 21. Non va in git.
+**File temporanei prodotti dalla voce 21:**
+- `CONTESTO-AI.md` o `CONTESTO-AI-slim.md` nella root del repo (entrambi in `.gitignore`).
+- `/tmp/pcgenzano-contesto-per-ai.md` (combinato `prompt + contesto`, va negli appunti).
+- `~/Scrivania/contesto-pc-genzano-completo.md` (solo se scegli ChatGPT, per drag-drop).
 
-**Quando NON usare ChatGPT/Gemini.** Per articoli su eventi in corso (allerta meteo attiva, emergenza dichiarata, intervento appena concluso) il rischio "AI inventa dati" è alto. In quei casi: scrivi direttamente con Claude Code (che ha accesso al repo e può verificare `data/allerta.json`, `data/emergenza.json`, recenti commit). ChatGPT/Gemini sono perfetti per articoli **redazionali** (memoria storica, formazione, prevenzione, schede tematiche, riepiloghi attività).
+**Quando NON usare AI esterne.** Per articoli su eventi in corso (allerta meteo attiva, emergenza dichiarata, intervento appena concluso) il rischio "AI inventa dati" è alto. In quei casi: scrivi direttamente con Claude Code (che ha accesso al repo e può verificare `data/allerta.json`, `data/emergenza.json`, recenti commit). Le AI esterne sono perfette per articoli **redazionali** (memoria storica, formazione, prevenzione, schede tematiche, riepiloghi attività).
 
 **Cosa NON fa la voce 21:**
-- Non chiama l'API di ChatGPT (servirebbe una chiave a pagamento). Apre solo il sito web — l'utente usa il proprio account gratuito o ChatGPT Plus personale.
-- Non posta nulla per conto dell'utente. È un copia-incolla guidato.
+- Non chiama API a pagamento. Apre solo il sito web — l'utente usa il proprio account gratuito (Gemini è gratis senza limiti pratici di contesto) o gli abbonamenti ChatGPT Plus / Claude Pro personali.
+- Non posta nulla per conto dell'utente. È un copia-incolla (o drag-drop) guidato.
 - Non sostituisce Claude Code: fa parte di un workflow a due fasi.
 
 ---

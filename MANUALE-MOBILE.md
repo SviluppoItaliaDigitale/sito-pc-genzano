@@ -125,14 +125,25 @@ stesura → Claude Code per la rifinitura**. Ognuno fa quello in cui è più for
 
 **Da PC desktop (workflow automatizzato):** lancia il menu di gestione,
 voce **21 — Esporta contesto per altra AI**. Lo script:
-1. rigenera `CONTESTO-AI.md` con tutto il manuale del sito;
-2. lo combina con `scripts/prompt-istruzioni-ai.md` (system prompt pronto);
-3. copia tutto negli appunti e apre ChatGPT nel browser.
+1. ti chiede quale AI vuoi usare (Gemini / ChatGPT / Claude web);
+2. genera la versione adatta (FULL ~810 KB per Gemini/Claude, SLIM ~250 KB
+   per ChatGPT Plus, oppure FULL su Scrivania per allegato ChatGPT);
+3. la combina con `scripts/prompt-istruzioni-ai.md` (system prompt pronto);
+4. copia tutto negli appunti e apre il sito dell'AI scelta.
 
-Tu apri una nuova chat su ChatGPT, premi Ctrl+V, INVIO, e scrivi la richiesta
-("Scrivimi un articolo su X"). Quando l'AI risponde, copi il testo e lo
-pubblichi via voce **1** del menu, oppure passi a Claude Code (voce **20**)
-per le rifiniture tecniche (foto, link, audit).
+Tu apri una nuova chat sull'AI scelta, premi Ctrl+V (o trascini il file come
+allegato in ChatGPT), INVIO, e scrivi la richiesta ("Scrivimi un articolo su
+X"). Quando l'AI risponde, copi il testo e lo pubblichi via voce **1** del
+menu, oppure passi a Claude Code (voce **20**) per le rifiniture tecniche
+(foto, link, audit).
+
+**Quale AI scegliere:**
+- **Gemini** (raccomandato, gratis) — finestra di contesto 2M token, accetta
+  qualunque dimensione in paste. Forte su sintesi e citazioni normative.
+- **ChatGPT Plus** (a pagamento) — finestra 128k token, in paste useremo la
+  versione SLIM (regole editoriali essenziali, ~64k token); per il contesto
+  completo trascinare il file FULL salvato dallo script su Scrivania.
+- **Claude web Pro** (a pagamento) — finestra 200k token, paste FULL OK.
 
 **Da mobile (procedura manuale, nessun terminale richiesto):**
 
