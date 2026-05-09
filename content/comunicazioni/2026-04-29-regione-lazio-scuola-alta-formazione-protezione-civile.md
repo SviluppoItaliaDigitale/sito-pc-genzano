@@ -3,7 +3,7 @@ title: "Regione Lazio: dopo 12 anni nasce la Scuola di Alta Formazione di Protez
 date: 2026-04-29T00:02:00+02:00
 description: "La Giunta regionale del Lazio ha approvato il regolamento della Scuola di Alta Formazione di Protezione Civile."
 badge: "Informazione"
-priorita: normale
+priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-29-regione-lazio-scuola-alta-formazione-protezione-civile.webp"
 image_alt: "Cover dell'articolo: Regione Lazio: dopo 12 anni nasce la Scuola di Alta Formazione di Protezione Civile"
@@ -49,12 +49,21 @@ Per i volontari del Gruppo Comunale di Genzano l'avvio della Scuola può tradurs
 
 Il Gruppo segue con attenzione le prossime fasi di avvio operativo della Scuola e darà aggiornamenti puntuali sui canali ufficiali quando saranno disponibili informazioni sui primi corsi calendarizzati.
 
-## Riferimenti
+## Per approfondire
 
-- [Notizia ufficiale Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/notizie/protezione-civile-nel-lazio-dopo-12-anni-parte-un-nuovo-modello-di-formazione)
-- Legge Regionale Lazio n. 2 del 2014 — *Sistema integrato regionale di protezione civile*
-- D.Lgs. 1/2018 — *Codice della Protezione Civile*
-- Direttiva PCM 12 gennaio 2012 — *Indirizzi operativi per la formazione del volontariato di protezione civile*
+Sul nostro sito:
+
+- [SAFOR-PROCIV — Regolamento attuativo Scuola Alta Formazione PC Lazio](/comunicazioni/2026-05-08-safor-prociv-scuola-alta-formazione-pc-lazio/).
+- [Programma 2026 Campagna comunicazione PC Lazio](/comunicazioni/2026-05-08-campagna-comunicazione-protezione-civile-lazio-2026/).
+- [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Notizia ufficiale Regione Lazio](https://protezionecivile.regione.lazio.it/notizie/protezione-civile-nel-lazio-dopo-12-anni-parte-un-nuovo-modello-di-formazione).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [L.R. Lazio 2/2014 — Sistema integrato di Protezione Civile](https://www.regione.lazio.it/).
 
 ---
 

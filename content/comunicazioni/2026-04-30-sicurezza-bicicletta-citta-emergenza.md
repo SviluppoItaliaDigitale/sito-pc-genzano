@@ -90,17 +90,21 @@ Per le regole generali di primo soccorso trovi un riassunto nell'articolo [Primo
 
 Più persone in bicicletta significa meno traffico, meno inquinamento, meno rumore, più vita nelle strade. Una città che investe in piste ciclabili e sicurezza stradale è una città che riduce il rischio per tutti.
 
-## Fonti
-
-- [Ministero delle Infrastrutture e dei Trasporti](https://www.mit.gov.it/)
-- [ISTAT — Incidenti stradali](https://www.istat.it/argomento/incidenti-stradali)
-- [Fondazione ANIA per la sicurezza stradale](https://www.fondazioneania.it/)
-
 Pedalare è una forma di libertà. Farlo in sicurezza è un gesto di rispetto — per sé stessi, per gli altri e per la città.
 
 ## Per approfondire
 
-- Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
-- Articolo: [Escursioni estive: sicurezza in montagna e sui Castelli](/comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli/)
-- Articolo: [Sicurezza dei giochi dei bambini all'aperto](/comunicazioni/2026-05-28-sicurezza-giochi-bambini-aperto/)
-- Articolo: [Giornata della Terra: clima ed eventi estremi](/comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani/)
+Sul nostro sito:
+
+- [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/).
+- [Escursioni estive: sicurezza in montagna e sui Castelli](/comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli/).
+- [Sicurezza dei giochi dei bambini all'aperto](/comunicazioni/2026-05-28-sicurezza-giochi-bambini-aperto/).
+- [Giornata della Terra: clima ed eventi estremi](/comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani/).
+- [Cartografia del territorio](/cartografia/).
+
+Fonti istituzionali:
+
+- [Ministero delle Infrastrutture e dei Trasporti](https://www.mit.gov.it/).
+- [ISTAT — Incidenti stradali](https://www.istat.it/argomento/incidenti-stradali).
+- [Fondazione ANIA per la sicurezza stradale](https://www.fondazioneania.it/).
+- [Polizia di Stato — Polizia stradale](https://www.poliziadistato.it/).

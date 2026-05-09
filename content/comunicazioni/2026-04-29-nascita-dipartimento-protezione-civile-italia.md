@@ -3,7 +3,7 @@ title: "La nascita del Dipartimento della Protezione Civile: una storia italiana
 date: 2026-04-29T00:03:00+02:00
 description: "Dalla notte dell'Irpinia al Codice del 2018: come l'Italia ha costruito, in quarant'anni di leggi e di errori imparati."
 badge: "Informazione"
-priorita: normale
+priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-29-nascita-dipartimento-protezione-civile-italia.webp"
 image_alt: "Cover dell'articolo: La nascita del Dipartimento della Protezione Civile: una storia italiana che parte dalle macerie"
@@ -119,11 +119,20 @@ E quando un nostro volontario scende in piazza, indossa una divisa **riconosciut
 
 ## Per approfondire
 
-- [D.Lgs. 1/2018 — Codice della Protezione Civile su Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1)
-- [Legge 225/1992 (testo storico) su Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-24;225)
-- [Storia della Protezione Civile italiana — Dipartimento](https://www.protezionecivile.gov.it/it/dipartimento/)
-- Articolo: [Storia del Gruppo di Genzano: quarant'anni di volontariato](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/)
-- Articolo: [Che cos'è la protezione civile in Italia: da Irpinia e Vermicino al Servizio Nazionale](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/)
+Sul nostro sito:
+
+- [Storia del Gruppo di Genzano: quarant'anni di volontariato](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/).
+- [Che cos'è la protezione civile in Italia: da Irpinia e Vermicino](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/).
+- [Friuli 1976, cinquant'anni dopo](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
+- [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
+- [Catena delle comunicazioni in protezione civile](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/).
+
+Fonti istituzionali:
+
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
+- [Legge 225/1992 — Servizio Nazionale](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-24;225).
+- [Storia della Protezione Civile italiana — Dipartimento](https://www.protezionecivile.gov.it/it/dipartimento/).
 
 ---
 

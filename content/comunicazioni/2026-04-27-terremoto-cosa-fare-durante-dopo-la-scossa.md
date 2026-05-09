@@ -71,17 +71,23 @@ Sulla pagina [Rischio sismico](/rischi-prevenzione/rischio-sismico/) trovi la cl
 
 ## Per approfondire
 
-- Articolo: [Diciassette anni fa il terremoto dell'Aquila: Fossa](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/)
-- Articolo: [20 maggio 2012: terremoto in Emilia, memoria e resilienza](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/)
-- Articolo: [29 maggio 2012: la seconda scossa in Emilia](/comunicazioni/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria/)
-- Articolo: [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
-- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+Sul nostro sito:
 
-## Fonti
+- [Rischio sismico — pagina operativa](/rischi-prevenzione/rischio-sismico/).
+- [Anniversario terremoto Abruzzo 2009 (Fossa)](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/).
+- [20 maggio 2012: terremoto in Emilia, memoria e resilienza](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/).
+- [29 maggio 2012: seconda scossa in Emilia](/comunicazioni/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria/).
+- [Friuli 1976, cinquant'anni dopo](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
+- [Mostra «Terremoti d'Italia» a Napoli](/comunicazioni/2026-04-17-mostra-terremoti-italia-napoli/).
+- [Nepal Gorkha 2015](/comunicazioni/2026-04-25-nepal-2015-gorkha-terremoto/).
+- [Piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/).
+- [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
 
-- [DPC — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico)
-- [Istituto Nazionale di Geofisica e Vulcanologia (INGV)](https://www.ingv.it/)
-- [Mappe di pericolosità sismica](http://zonesismiche.mi.ingv.it/)
-- [Centro Microzonazione Sismica](https://www.centromicrozonazionesismica.it/)
+Fonti istituzionali:
+
+- [Dipartimento Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
+- [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
+- [Mappe di pericolosità sismica INGV](http://zonesismiche.mi.ingv.it/).
+- [Centro Microzonazione Sismica](https://www.centromicrozonazionesismica.it/).
 
 La prevenzione sismica non è paura: è **preparazione**. Due minuti di conversazione in famiglia oggi possono risparmiare molti rischi domani.
