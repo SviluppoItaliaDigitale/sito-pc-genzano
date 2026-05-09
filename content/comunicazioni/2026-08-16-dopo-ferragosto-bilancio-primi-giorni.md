@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-La giornata di Ferragosto si è chiusa. Per la Protezione Civile è il momento di fare un bilancio della prima metà del mese e di guardare alle prossime due settimane, tradizionalmente caratterizzate da un leggero calo delle presenze turistiche e da possibili cambi di pattern meteo.
+La giornata di Ferragosto si è chiusa. Per la Protezione Civile è il momento di fare un bilancio della prima metà del mese e di guardare alle prossime due settimane. Sono settimane tradizionalmente caratterizzate da un leggero calo delle presenze turistiche e da possibili cambi di pattern meteo.
 
 ## La prima metà del mese
 

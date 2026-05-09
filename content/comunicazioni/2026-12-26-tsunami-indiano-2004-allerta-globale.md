@@ -15,7 +15,7 @@ allegati: []
 draft: false
 ---
 
-Sono passati **ventidue anni** da quel 26 dicembre 2004, e la **mattina di Santo Stefano** resta una delle date scolpite nella memoria mondiale dei disastri naturali. Alle **7:58 ora locale** (le **2:58** del mattino in Italia), al largo della costa nord-occidentale di **Sumatra**, in Indonesia, una scossa sismica di **magnitudo 9.1** — fra le più potenti mai registrate — scosse il fondo dell'**Oceano Indiano** per **oltre otto minuti**.
+Sono passati **ventidue anni** da quel 26 dicembre 2004. La **mattina di Santo Stefano** resta una delle date scolpite nella memoria mondiale dei disastri naturali. Alle **7:58 ora locale** (le **2:58** del mattino in Italia), al largo della costa nord-occidentale di **Sumatra**, in Indonesia, una scossa sismica di **magnitudo 9.1** — fra le più potenti mai registrate — scosse il fondo dell'**Oceano Indiano** per **oltre otto minuti**.
 
 {{< foto src="/images/2026-evento-tsunami-2004-onda.webp"
          alt="L'onda di tsunami che colpisce le coste dell'Oceano Indiano il 26 dicembre 2004"

@@ -53,7 +53,7 @@ Nella pagina [Diventa volontario](/diventa-volontario/) trovi tutte le informazi
 
 ## Una memoria che guarda avanti
 
-Il 25 aprile non è solo ricordo del passato: è un impegno per il futuro. Ogni volta che un volontario mette in ordine un kit, segnala un fosso intasato, fa un'esercitazione, va in una scuola a parlare ai bambini, sta onorando quella stessa idea di cittadinanza attiva che la Liberazione ha reso possibile.
+Il 25 aprile non è solo ricordo del passato: è un impegno per il futuro. Ogni volta che un volontario mette in ordine un kit, segnala un fosso intasato, fa un'esercitazione, va in una scuola a parlare ai bambini sta onorando un'idea precisa: la stessa cittadinanza attiva che la Liberazione ha reso possibile.
 
 **Buon 25 aprile.**
 

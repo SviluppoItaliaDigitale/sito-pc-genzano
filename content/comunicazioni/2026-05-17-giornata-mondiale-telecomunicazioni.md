@@ -43,7 +43,7 @@ Un'infrastruttura resiliente prevede **ridondanze**: più percorsi, più operato
 
 ## Il sistema di allertamento pubblico IT-Alert
 
-L'Italia ha adottato il sistema **[IT-Alert](https://www.it-alert.gov.it/)** basato sulla tecnologia **cell broadcast**: un messaggio con suono distintivo e testo ad alta priorità che raggiunge **tutti i cellulari connessi in un'area geografica**, senza bisogno di rubrica o iscrizione. È stato attivato dal Dipartimento di Protezione Civile ed è in fase di graduale estensione e consolidamento.
+L'Italia ha adottato il sistema **[IT-Alert](https://www.it-alert.gov.it/)**, basato sulla tecnologia **cell broadcast**. Un messaggio con suono distintivo e testo ad alta priorità raggiunge **tutti i cellulari connessi in un'area geografica**, senza bisogno di rubrica o iscrizione. È stato attivato dal Dipartimento di Protezione Civile ed è in fase di graduale estensione e consolidamento.
 
 Caratteristiche:
 

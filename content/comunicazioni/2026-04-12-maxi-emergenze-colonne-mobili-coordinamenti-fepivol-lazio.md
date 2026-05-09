@@ -283,7 +283,7 @@ Il Gruppo Comunale ha partecipato negli anni alla **missione Arcobaleno del 1999
 
 La forza delle colonne mobili non sta in un'organizzazione astratta: sta nell'**esercitazione costante**. Ogni anno la Regione Lazio organizza esercitazioni di colonna mobile (montaggio campo, viaggio simulato, gestione di un campo di accoglienza per 48 ore), e i gruppi comunali vi partecipano con personale e mezzi reali. È durante queste esercitazioni che si scoprono le falle prima che un'emergenza vera le renda drammatiche.
 
-Un volontario che non ha mai montato una tenda in notturna con il vento, non ha mai guidato in colonna per 300 chilometri, non ha mai dormito su una brandina accanto a venti colleghi, non è ancora pronto per partire. Le colonne mobili si costruiscono con anni di addestramento, non con una chiamata la mattina dell'emergenza.
+Un volontario che non ha mai montato una tenda in notturna con il vento non è ancora pronto per partire. Lo stesso vale per chi non ha mai guidato in colonna per 300 chilometri o dormito su una brandina accanto a venti colleghi. Le colonne mobili si costruiscono con anni di addestramento, non con una chiamata la mattina dell'emergenza.
 
 ---
 

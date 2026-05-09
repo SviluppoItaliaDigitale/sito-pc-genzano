@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Un terremoto, un'alluvione, una lunga interruzione di corrente o di acqua: in queste situazioni avere in casa un kit già pronto può fare la differenza nelle prime ore, quando i soccorsi sono concentrati sulle persone in pericolo immediato. La Protezione Civile raccomanda a ogni famiglia di preparare uno **zaino di emergenza**: un contenitore unico, leggero, con l'essenziale per 72 ore.
+Un terremoto, un'alluvione, una lunga interruzione di corrente o di acqua: in queste situazioni avere in casa un kit già pronto può fare la differenza nelle prime ore. I soccorsi nelle primissime ore sono concentrati sulle persone in pericolo immediato. La Protezione Civile raccomanda a ogni famiglia di preparare uno **zaino di emergenza**: un contenitore unico, leggero, con l'essenziale per 72 ore.
 
 In questo articolo trovi la lista degli oggetti utili, le quantità per persona, dove tenere lo zaino e ogni quanto controllarlo.
 

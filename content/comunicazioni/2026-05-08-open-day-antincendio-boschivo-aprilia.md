@@ -24,7 +24,7 @@ L'**antincendio boschivo (AIB)** è una delle attività operative del Sistema di
 - confrontarsi con **tecnici e specialisti** del settore;
 - assistere a **dimostrazioni pratiche** dei prodotti.
 
-Per un Gruppo di volontariato l'aggiornamento tecnico continuo è uno degli strumenti per mantenere alti gli standard di sicurezza e di efficacia operativa, a tutela dei volontari stessi e dei cittadini che li vedono al lavoro durante un'emergenza.
+Per un Gruppo di volontariato l'aggiornamento tecnico continuo è essenziale. Mantiene alti gli standard di sicurezza e di efficacia operativa. È a tutela dei volontari stessi e dei cittadini che li vedono al lavoro durante un'emergenza.
 
 {{< foto src="/images/2026-05-09-open-day-cotterli-falcim-locandina.webp"
          alt="Locandina dell'Open Day Innovazione in azione — Antincendio Boschivo e DPI del 9 maggio 2026 ad Aprilia, organizzato da Estintori Cotterli e Falcim"
