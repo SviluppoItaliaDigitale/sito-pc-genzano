@@ -15,7 +15,7 @@ draft: false
 
 Il **17 gennaio**, festa di **Sant'Antonio Abate**, in molte comunità italiane si accendono i **falò rituali**. Una tradizione antica, spesso legata alla benedizione degli animali e alla fine del periodo più freddo dell'inverno. Anche nei Castelli Romani, in paesi e frazioni, il fuoco di Sant'Antonio è parte viva della cultura popolare.
 
-Come ogni tradizione che prevede **fuoco all'aperto**, richiede però **precauzioni serie**. Gennaio, pur essendo freddo, è un mese in cui vegetazione secca, vento e umidità bassa possono trasformare un falò in un incendio esteso.
+Come ogni tradizione che prevede **fuoco all'aperto**, richiede **precauzioni serie**. Anche a gennaio la vegetazione secca, il vento e l'umidità bassa possono trasformare un falò in un incendio esteso.
 
 ## Perché prestare attenzione
 
@@ -43,7 +43,7 @@ Per chi organizza un fuoco di Sant'Antonio, anche in un cortile privato o in un 
 ### Durante
 
 - **Non lasciare mai il fuoco incustodito**, nemmeno per pochi minuti.
-- **Sorveglianza adulta costante**, bambini a distanza di sicurezza.
+- **Mantieni la sorveglianza adulta costante**: tieni i bambini a distanza di sicurezza.
 - **Controlla le faville**: se il vento aumenta o cambia direzione, sii pronto a spegnere.
 
 ### Dopo
@@ -54,7 +54,7 @@ Per chi organizza un fuoco di Sant'Antonio, anche in un cortile privato o in un 
 
 ## Cosa NON fare
 
-- **Mai bruciare materiali plastici, vernici, gomme, pneumatici**: sprigionano **diossine** e sostanze tossiche pericolose per salute e ambiente.
+- **Mai bruciare materiali plastici, vernici, gomme, pneumatici**: sprigionano **diossine** e sostanze tossiche pericolose per la salute e l'ambiente.
 - **Mai bruciare residui verdi** se il regolamento comunale lo vieta (spesso è vietato per i mesi più caldi, ma verifica sempre).
 - **Mai accendere vicino a strade trafficate**: il fumo riduce la visibilità e può causare incidenti.
 - **Mai usare liquidi infiammabili** per accelerare la combustione: rischio di esplosione e ustioni gravi.
@@ -70,14 +70,11 @@ Se il fuoco sfugge al controllo:
 
 ## La festa resta viva
 
-La Protezione Civile non è contro le tradizioni. Anzi, il falò di Sant'Antonio Abate è un momento di comunità che vale la pena vivere. Basta viverlo con **consapevolezza**: poche regole semplici bastano a trasformarlo da rischio in occasione serena.
-
-Se ogni anno torniamo ad accendere lo stesso fuoco, è perché ci ricorda qualcosa di importante. La **vicinanza tra vicini**, il **passaggio delle stagioni**, la **gratitudine** per chi lavora la terra e accudisce gli animali. Viverlo in sicurezza è il modo migliore di rispettarlo.
+La Protezione Civile non è contro le tradizioni. Il falò di Sant'Antonio Abate è un momento di comunità: poche regole semplici bastano a viverlo in sicurezza.
 
 ## Per approfondire
 
+- [Rischio incendio: cosa fare prima, durante e dopo](/rischi-prevenzione/rischio-incendio/)
 - Articolo: [Triangolo del fuoco e prevenzione incendi](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
 - Articolo: [Incendi domestici: cucina ed elettrodomestici](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/)
 - [Vigili del Fuoco — Consigli di sicurezza](https://www.vigilfuoco.it/)
-
-Buon Sant'Antonio Abate: con il cuore nella tradizione, e la mente attenta alla sicurezza.

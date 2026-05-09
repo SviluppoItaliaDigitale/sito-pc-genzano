@@ -80,7 +80,6 @@ Un'Italia senza memoria è un'Italia più fragile, non solo di fronte ai terremo
 ## Per approfondire
 
 - [Museo della Shoah — Roma](https://www.museodellashoah.it/)
-- [Giornata della Memoria — Senato della Repubblica](https://www.senato.it/)
 - Il diario di Anna Frank
 - Primo Levi, *Se questo è un uomo* (1947)
 - Articolo: [Strage di Capaci: legalità e servizio pubblico](/comunicazioni/2026-05-23-strage-capaci-legalita-servizio-pubblico/)

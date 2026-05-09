@@ -18,26 +18,21 @@ draft: false
 
 È disponibile l'edizione 2026 del **Calendario del Dipartimento della Protezione Civile**, dedicata quest'anno alle emergenze internazionali.
 
-Puoi sfogliarlo online oppure scaricarlo in PDF tramite il link in fondo a questa pagina.
-
----
+Puoi scaricarlo in PDF tramite il collegamento in allegato a questa pagina.
 
 ## Il tema dell'edizione 2026
 
 Il calendario racconta l'**impegno della protezione civile italiana all'estero**: un percorso fatto di solidarietà, competenza e presenza nei momenti più difficili per le popolazioni colpite da calamità in tutto il mondo.
 
-Ciò che rende questo impegno ancora più significativo è il contesto in cui spesso si è svolto: i volontari e i professionisti italiani sono intervenuti in scenari internazionali anche mentre, contemporaneamente, il nostro Paese era alle prese con proprie situazioni di crisi. Una dimostrazione concreta di quanto il sistema della protezione civile italiana sia capace di proiettarsi oltre i confini nazionali senza mai venire meno alle responsabilità sul territorio.
+Spesso questi interventi si sono svolti mentre il nostro Paese affrontava proprie situazioni di crisi. Il sistema italiano ha saputo agire su due fronti contemporaneamente, dimostrando una capacità operativa concreta e collaudata.
 
 ## Solidarietà come valore permanente
 
 Le pagine del calendario documentano missioni, operazioni umanitarie e interventi di soccorso realizzati nel corso degli anni in paesi colpiti da terremoti, alluvioni e altre calamità. Ogni mese racconta una storia diversa, ma tutte parlano dello stesso impegno: quello di chi sceglie di esserci, anche lontano da casa.
 
-Per il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, questo calendario è anche uno spunto di riflessione sul ruolo del volontariato locale all'interno di un sistema che, quando necessario, sa agire su scala mondiale.
+Per il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, il calendario è uno spunto di riflessione: il volontariato locale fa parte di un sistema che, quando serve, agisce su scala mondiale.
 
----
-
-Consulta la pagina ufficiale del Dipartimento:
-[www.protezionecivile.gov.it](https://www.protezionecivile.gov.it/it/pubblicazione/calendario-dipartimento-della-protezione-civile-2026/)
+[Pagina ufficiale del calendario sul sito del Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/pubblicazione/calendario-dipartimento-della-protezione-civile-2026/)
 
 ## Per approfondire
 

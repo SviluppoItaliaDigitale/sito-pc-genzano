@@ -16,7 +16,7 @@ allegati:
 draft: false
 ---
 
-Una cucina da campo non si improvvisa. Il Manuale DSEFIC della Federazione Italiana Cuochi dedica due capitoli — "Le zone" e "Protocollo operativo" — a spiegare in modo pratico come si allestisce e come si gestisce. Qui riassumiamo le regole che ogni volontario impiegato nel supporto alla ristorazione dovrebbe conoscere.
+Una cucina da campo non si improvvisa. Il Manuale della Federazione Italiana Cuochi — redatto con il **DSEFIC** (Dipartimento Sicurezza e Formazione della Federazione Italiana Cuochi) — dedica due capitoli a spiegare come si allestisce e come si gestisce. Questo articolo riassume le regole che ogni volontario impiegato nel supporto alla ristorazione dovrebbe conoscere.
 
 Il **manuale completo** è in allegato a questo articolo e nella pagina [Area Download](/area-download/).
 
