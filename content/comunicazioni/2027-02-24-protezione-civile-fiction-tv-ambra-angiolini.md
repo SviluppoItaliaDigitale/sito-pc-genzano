@@ -1,23 +1,19 @@
 ---
-title: "La Protezione Civile in TV: la fiction con Ambra Angiolini e la fatica di raccontare il volontariato"
+title: "«Sempre al tuo fianco»: la fiction Rai sul rischio Vulcani con Ambra Angiolini"
 date: 2027-02-24
-description: "Una fiction Rai con Ambra Angiolini ha portato il mondo della Protezione Civile in prima serata."
+description: "«Sempre al tuo fianco» (Rai 1, 2024): la serie con Ambra Angiolini sulla Protezione Civile e il rischio Vulcani. Cosa convince e cosa è romanzato."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-24-protezione-civile-fiction-tv-ambra-angiolini.webp"
-image_alt: "Cover dell'articolo: La Protezione Civile in TV: la fiction con Ambra Angiolini e la fatica di raccontare il volontariato"
+image_alt: "Cover dell'articolo: «Sempre al tuo fianco», la fiction Rai con Ambra Angiolini sulla Protezione Civile e il rischio Vulcani"
 scadenza: ""
 area: ""
 allegati: []
 draft: false
-# TODO maintainer: verificare titolo esatto della fiction Rai con Ambra Angiolini
-# come protagonista sul tema Protezione Civile (anno di trasmissione, regista,
-# titolo della serie). L'articolo è scritto in modo da reggere anche se il
-# titolo non viene precisato; aggiornare quando confermato.
 ---
 
-Una fiction Rai con **Ambra Angiolini** come protagonista ha portato in prima serata il mondo della **Protezione Civile italiana**: i volontari, i Centri Operativi, le emergenze sul campo, le notti in colonna mobile. La PC raramente esce dai notiziari per arrivare alla narrazione di intrattenimento. Per il Gruppo è giusto parlarne — con qualche distinzione.
+«**Sempre al tuo fianco**» è la serie televisiva di **Rai 1** trasmessa nel **2024** in **6 puntate**, con **Ambra Angiolini** nel ruolo di una responsabile del **rischio Vulcani** del Dipartimento della Protezione Civile. Le vicende si muovono fra **Roma** (sede operativa nazionale) e **Stromboli** (la zona vulcanica monitorata). La serie ha portato in prima serata il lavoro quotidiano della **Protezione Civile italiana**: i volontari, i Centri Operativi, le emergenze sul campo, le notti in colonna mobile. La PC raramente esce dai notiziari per arrivare alla narrazione di intrattenimento. Per il Gruppo è giusto parlarne — con qualche distinzione.
 
 ## Perché ci interessa
 
@@ -66,9 +62,18 @@ Tutto il resto si impara dopo aver detto «sì». Se la fiction ti ha incuriosit
 
 ## Per saperne di più
 
+### Sul sito
+
 - [Diventa Volontario](/diventa-volontario/) — come si entra nel Gruppo Comunale di Genzano
 - [Chi Siamo](/chi-siamo/) — la nostra storia, la nostra struttura, i nostri valori
 - [Formazione](/formazione/) — corsi, esercitazioni, kit didattici per le scuole
 - [Piano di Emergenza](/piano-emergenza/) — il documento ufficiale della nostra città
+- [Rischi e Prevenzione](/rischi-prevenzione/) — i rischi del nostro territorio (per il rischio vulcanico vedi le fonti DPC e INGV qui sotto)
 
-> **Ringraziamo la produzione** della fiction Rai per l'attenzione data al mondo del volontariato di Protezione Civile. Anche se romanzata, ogni rappresentazione che porta sul piccolo schermo le persone che indossano il pettorale arancione è un piccolo passo culturale: il Paese ne ha bisogno.
+### Fonti istituzionali
+
+- [Dipartimento della Protezione Civile — Rischio Vulcanico](https://www.protezionecivile.gov.it/it/rischio/rischio-vulcanico/) — il quadro nazionale
+- [INGV — Osservatorio Etneo / Sezione Vulcanologia](https://www.ct.ingv.it/) — monitoraggio Stromboli, Etna, Vulcano
+- [Rai Play — «Sempre al tuo fianco»](https://www.raiplay.it/programmi/sempreatuofianco) — la serie in streaming
+
+> **Ringraziamo la produzione** di «Sempre al tuo fianco» e Rai 1 per aver portato in prima serata il mondo del volontariato di Protezione Civile e il lavoro tecnico del rischio Vulcani. Anche se romanzata, ogni rappresentazione che mette sul piccolo schermo le persone che indossano il pettorale arancione è un piccolo passo culturale: il Paese ne ha bisogno.
