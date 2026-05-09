@@ -1,7 +1,7 @@
 ---
 title: "San Giuliano di Puglia, 31 ottobre 2002: il terremoto che cambiò la sicurezza sismica delle scuole italiane"
 date: 2026-10-31T00:02:00+02:00
-description: "Alle 11:32 del 31 ottobre 2002, una scossa di magnitudo 5.8 fece crollare la scuola "F."
+description: "31 ottobre 2002: magnitudo 5.8 a San Giuliano di Puglia, crollo della scuola Jovine. Da lì la classificazione sismica nazionale e l'adeguamento delle scuole."
 
 badge: "Informazione"
 priorita: "normale"
