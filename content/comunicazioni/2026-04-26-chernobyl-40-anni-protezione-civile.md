@@ -74,7 +74,7 @@ Tuttavia il sistema di protezione civile funziona come una rete: anche un evento
 
 ## In ricordo
 
-Quarant'anni dopo, le foto del reattore numero 4 — quel sarcofago grigio costruito in fretta da uomini che sapevano di rischiare la salute, oggi a sua volta coperto da una nuova struttura di contenimento internazionale — restano un monumento a ciò che la protezione civile **non deve** mai essere costretta a improvvisare. Pripyat è ancora deserta. La zona di esclusione di 30 chilometri intorno alla centrale è ancora in vigore.
+Quarant'anni dopo, le foto del reattore numero 4 restano un monumento a ciò che la protezione civile **non deve** mai essere costretta a improvvisare. Quel sarcofago grigio fu costruito in fretta da uomini che sapevano di rischiare la salute. Oggi è a sua volta coperto da una nuova struttura di contenimento internazionale. Pripyat è ancora deserta. La zona di esclusione di 30 chilometri intorno alla centrale è ancora in vigore.
 
 L'Italia ha imparato la lezione. Continueremo a impararla, perché un sistema di protezione civile non è mai "finito" e un cittadino preparato vale più di mille piani sulla carta.
 

@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Maggio o giugno, una mattina qualunque a Genzano. Ti affacci al balcone e vedi, attaccata a un ramo di un albero del giardino, una **massa scura grande quanto un pallone da rugby**. Si muove. Vibra. Decine di migliaia di api si muovono in coordinazione attorno a un cuore comune. È uno **sciame**: una delle scene più ordinarie e meno comprese della primavera italiana.Negli ultimi anni il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** riceve regolarmente chiamate dei cittadini per il **recupero di sciami d'api** — soprattutto fra **maggio e luglio**, nel periodo di sciamatura naturale. Il servizio operativo non lo svolgiamo noi: in Italia il recupero sciami è di competenza dei **Vigili del Fuoco** e degli **apicoltori professionisti** convenzionati o iscritti all'Albo Apicoltori Regionale. Questa pagina spiega che cos'è uno sciame, perché non devi spaventarti e **chi devi chiamare** in base alla situazione.
+Maggio o giugno, una mattina qualunque a Genzano. Ti affacci al balcone e vedi, attaccata a un ramo di un albero del giardino, una **massa scura grande quanto un pallone da rugby**. Si muove. Vibra. Decine di migliaia di api si muovono in coordinazione attorno a un cuore comune. È uno **sciame**: una delle scene più ordinarie e meno comprese della primavera italiana.
+
+Negli ultimi anni il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** riceve regolarmente chiamate dei cittadini per il **recupero di sciami d'api** — soprattutto fra **maggio e luglio**, nel periodo di sciamatura naturale. Il servizio operativo non lo svolgiamo noi. In Italia il recupero sciami è di competenza dei **Vigili del Fuoco** e degli **apicoltori professionisti** convenzionati o iscritti all'Albo Apicoltori Regionale. Questa pagina spiega che cos'è uno sciame, perché non devi spaventarti e **chi devi chiamare** in base alla situazione.
 
 ## Il 20 maggio: Giornata Mondiale delle Api
 

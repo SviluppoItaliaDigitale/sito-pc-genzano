@@ -55,7 +55,15 @@ Per ogni compito è prevista una specifica analisi dei rischi: la cottura porta 
 
 ## Dispositivi di protezione individuale
 
-Il manuale prescrive per ogni fase di lavoro i DPI adeguati: **guanti in nitrile monouso** per la manipolazione degli alimenti, **guanti anti-taglio** per le lavorazioni con coltelli, **guanti anti-ustione** per la manipolazione di pentole e teglie calde, **scarpe antinfortunistiche**, **grembiule** e **copricapo** per contenere la capigliatura. È fatto divieto di indossare **anelli, bracciali, orecchini** e di portare **unghie lunghe o con smalto**. In cucina non si fuma, non si mangia e non si bevono alcolici.
+Il manuale prescrive per ogni fase di lavoro i DPI adeguati:
+
+- **guanti in nitrile monouso** per la manipolazione degli alimenti
+- **guanti anti-taglio** per le lavorazioni con coltelli
+- **guanti anti-ustione** per pentole e teglie calde
+- **scarpe antinfortunistiche**
+- **grembiule** e **copricapo** per contenere la capigliatura.
+
+È fatto divieto di indossare **anelli, bracciali, orecchini** e di portare **unghie lunghe o con smalto**. In cucina non si fuma, non si mangia e non si bevono alcolici.
 
 ## Cosa chiediamo ai volontari del Gruppo
 

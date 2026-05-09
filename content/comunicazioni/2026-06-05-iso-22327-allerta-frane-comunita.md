@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-I **Castelli Romani**, l'area collinare a sud-est di Roma in cui ricade Genzano, hanno una geomorfologia particolare: i versanti dei vecchi crateri vulcanici (Lago di Nemi, Lago Albano), la struttura tufacea del sottosuolo, i pendii ripidi, le strade strette scavate nei centri storici. Tutto questo crea una **predisposizione naturale a fenomeni franosi** localizzati, soprattutto in concomitanza di piogge intense.
+I **Castelli Romani**, l'area collinare a sud-est di Roma in cui ricade Genzano, hanno una geomorfologia particolare. I versanti dei vecchi crateri vulcanici (Lago di Nemi, Lago Albano), la struttura tufacea del sottosuolo, i pendii ripidi, le strade strette scavate nei centri storici. Tutto questo crea una **predisposizione naturale a fenomeni franosi** localizzati, soprattutto in concomitanza di piogge intense.
 
 Lo standard internazionale **ISO 22327 — Community-based landslide early warning system** spiega come si costruisce un sistema di allerta frane che davvero funziona a livello locale, con il **coinvolgimento attivo degli abitanti del territorio**. È un riferimento particolarmente utile per le aree collinari italiane.
 

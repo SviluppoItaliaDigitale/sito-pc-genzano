@@ -90,7 +90,7 @@ Per il **Gruppo Comunale di Genzano di Roma** — e per ogni Organizzazione di V
 
 ## Norma transitoria
 
-Le strutture che alla data di entrata in vigore del regolamento già svolgono attività di formazione per il Sistema regionale di Protezione Civile devono essere verificate sui nuovi requisiti: la determinazione di riconoscimento per tali strutture deve essere adottata **entro sei mesi** dall'entrata in vigore (art. 9), quindi **entro l'8 novembre 2026**.
+Le strutture che alla data di entrata in vigore del regolamento già svolgono attività di formazione per il Sistema regionale di Protezione Civile devono essere verificate sui nuovi requisiti. La determinazione di riconoscimento per tali strutture deve essere adottata **entro sei mesi** dall'entrata in vigore (art. 9), quindi **entro l'8 novembre 2026**.
 
 ## Documenti ufficiali
 

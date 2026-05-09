@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Alle **16:53 del 12 gennaio 2010** (ora locale di Port-au-Prince) un terremoto di **magnitudo 7.0** colpì Haiti. L'epicentro era a soli **25 chilometri** dalla capitale, l'ipocentro a **13 chilometri** di profondità. La maggior parte di Port-au-Prince **collassò in pochi secondi**: il **Palazzo Presidenziale**, la **Cattedrale**, l'**Ospedale Generale**, la **scuola elementare di Pétion-Ville**, **migliaia di abitazioni** in cemento armato non sismico.Il bilancio: **oltre 220.000 morti** (alcune fonti parlano di 316.000), **circa 300.000 feriti**, **1,5 milioni di sfollati**. Una città di 2 milioni di abitanti praticamente paralizzata. L'aeroporto e il porto principali distrutti, la rete elettrica nazionale interrotta.
+Alle **16:53 del 12 gennaio 2010** (ora locale di Port-au-Prince) un terremoto di **magnitudo 7.0** colpì Haiti. L'epicentro era a soli **25 chilometri** dalla capitale, l'ipocentro a **13 chilometri** di profondità. La maggior parte di Port-au-Prince **collassò in pochi secondi**. Crollarono il **Palazzo Presidenziale**, la **Cattedrale**, l'**Ospedale Generale**, la **scuola elementare di Pétion-Ville**, **migliaia di abitazioni** in cemento armato non sismico.
+
+Il bilancio: **oltre 220.000 morti** (alcune fonti parlano di 316.000), **circa 300.000 feriti**, **1,5 milioni di sfollati**. Una città di 2 milioni di abitanti praticamente paralizzata. L'aeroporto e il porto principali distrutti, la rete elettrica nazionale interrotta.
 
 ## La risposta internazionale
 

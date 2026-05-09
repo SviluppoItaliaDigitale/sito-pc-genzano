@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nell'ambito della campagna nazionale **Io Non Rischio**, promossa dal **Dipartimento della Protezione Civile** in collaborazione con **ANPAS**, **INGV**, **ReLUIS** e il volontariato organizzato, il Gruppo Comunale Volontari di PC di Genzano ha incontrato, o incontrerà secondo calendario regionale, i cittadini in una giornata pubblica in piazza. Date e luoghi puntuali sono comunicati sui canali ufficiali.
+La campagna nazionale **Io Non Rischio** è promossa dal **Dipartimento della Protezione Civile** in collaborazione con **ANPAS**, **INGV**, **ReLUIS** e il volontariato organizzato. Nell'ambito della campagna, il Gruppo Comunale Volontari di PC di Genzano ha incontrato (o incontrerà secondo calendario regionale) i cittadini in una giornata pubblica in piazza. Date e luoghi puntuali sono comunicati sui canali ufficiali.
 
 ## Il senso della giornata
 
