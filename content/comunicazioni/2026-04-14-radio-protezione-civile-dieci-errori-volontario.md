@@ -9,7 +9,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-14-radio-protezione-civile-dieci-errori-volontario.webp"
 image_alt: "Radio ricetrasmittente portatile con cuffia e microfono, simbolo delle comunicazioni di emergenza."
 scadenza: ""
-area: "Formazione interna del Gruppo Comunale"
+area: ""
 allegati: []
 draft: false
 ---

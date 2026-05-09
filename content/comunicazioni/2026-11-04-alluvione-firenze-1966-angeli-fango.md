@@ -41,7 +41,7 @@ L'alluvione di Firenze ha insegnato all'Italia tre cose ancora valide:
 
 ## Genzano e gli Angeli del fango
 
-Quando, vent'anni dopo Firenze, prese forma il sistema italiano di Protezione Civile, molti volontari della prima ora citavano l'esperienza degli Angeli come fonte di ispirazione. Anche il nostro Gruppo Comunale, nato all'inizio degli anni Ottanta, raccoglie quella stessa idea: cittadini che decidono di organizzarsi, formarsi e mettersi al servizio della comunità in tempo di pace e in tempo di emergenza.
+Quando, vent'anni dopo Firenze, prese forma il sistema italiano di Protezione Civile, molti volontari della prima ora citavano l'esperienza degli Angeli come fonte di ispirazione. Anche il nostro Gruppo Comunale, nato all'inizio degli anni Ottanta, raccoglie quella stessa idea: cittadini che decidono di organizzarsi e formarsi per intervenire in tempo di pace e in tempo di emergenza.
 
 Se vuoi continuare quella tradizione, scopri come [diventare volontario](/diventa-volontario/).
 

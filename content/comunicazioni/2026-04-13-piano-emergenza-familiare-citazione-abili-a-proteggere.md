@@ -60,7 +60,7 @@ Nessun dato transita in rete. Nessuna registrazione è necessaria. La sicurezza 
 
 ## Un ringraziamento e un impegno
 
-Ringraziamo la redazione di Abili a proteggere per l'attenzione dedicata al nostro progetto. Questa citazione conferma che anche un gruppo comunale di volontari, con passione e competenza, può produrre strumenti utili e innovativi al servizio della comunità.
+Ringraziamo la redazione di Abili a proteggere per l'attenzione dedicata al nostro progetto. Questa citazione conferma che anche un gruppo comunale di volontari può produrre strumenti utili e innovativi per la cittadinanza.
 
 Il nostro impegno non si ferma qui. Continueremo ad aggiornare il Piano di Emergenza Familiare, a migliorare l'accessibilità del nostro sito e a promuovere la cultura della prevenzione sul territorio di Genzano di Roma e dei Castelli Romani.
 
