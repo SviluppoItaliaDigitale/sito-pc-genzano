@@ -29,7 +29,7 @@ Il restyling non è solo estetico. Il nuovo simbolo nasce per raggiungere tre ob
 
 ## Come è costruito il marchio
 
-Il marchio segue un **Regolamento d'uso dei segni distintivi** emanato dal Dipartimento della Protezione Civile. Il disegno è costruito su proporzioni geometriche rigorose: rapporto d'oro del riquadro, cerchio iscritto che contiene il simbolo a tre petali, banda inferiore identificativa con la denominazione del sistema di appartenenza ("VOLONTARIATO") e richiamo al tricolore.
+Il marchio segue un **Regolamento d'uso dei segni distintivi** emanato dal Dipartimento della Protezione Civile. Il disegno è costruito su proporzioni geometriche rigorose. Rapporto d'oro del riquadro, cerchio iscritto che contiene il simbolo a tre petali, banda inferiore identificativa con la denominazione del sistema di appartenenza ("VOLONTARIATO") e richiamo al tricolore.
 
 {{< foto src="/images/2026-04-03-costruzione-nuovo-logo-snpc-regolamento.webp"
          alt="Pagina del Regolamento d'uso dei segni distintivi del SNPC: schema di costruzione geometrica del marchio, versione a colori e versione su fondo blu istituzionale"

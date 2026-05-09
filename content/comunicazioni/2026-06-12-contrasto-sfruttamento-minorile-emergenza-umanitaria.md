@@ -24,7 +24,7 @@ Il lavoro minorile non è un problema "solo" dei Paesi in via di sviluppo. Si in
 - **Crisi economiche** post-emergenza: la povertà improvvisa spinge al lavoro precoce.
 - **Traffici e sfruttamento**: situazioni di caos aumentano il rischio di sottrazione e sfruttamento criminale.
 
-La **Protezione Civile italiana** partecipa a missioni internazionali (Ucraina 2022, terremoti in Turchia e Siria, alluvioni nei Balcani) e ha esperienza nel coordinamento con agenzie internazionali come UNICEF e OIM che si occupano di tutela minori.
+La **Protezione Civile italiana** partecipa a missioni internazionali (Ucraina 2022, terremoti in Turchia e Siria, alluvioni nei Balcani). Ha esperienza nel coordinamento con agenzie internazionali come UNICEF e OIM che si occupano di tutela minori.
 
 ## I grandi numeri (OIL, ISTAT)
 

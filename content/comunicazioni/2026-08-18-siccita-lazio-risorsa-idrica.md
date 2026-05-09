@@ -52,7 +52,7 @@ Se si vede una **perdita** sulla rete pubblica (tubo rotto, pozzetto allagato, t
 
 ## Acqua e incendi
 
-Un uso improprio di acqua (irrigazione notturna massiva, sprechi ornamentali) in periodo di siccità ha un costo che si ripercuote anche sui sistemi antincendio: idranti con pressione insufficiente possono rallentare lo spegnimento di incendi urbani e boschivi.
+Un uso improprio di acqua (irrigazione notturna massiva, sprechi ornamentali) in periodo di siccità ha un costo che si ripercuote anche sui sistemi antincendio. Idranti con pressione insufficiente possono rallentare lo spegnimento di incendi urbani e boschivi.
 
 ## Per approfondire
 

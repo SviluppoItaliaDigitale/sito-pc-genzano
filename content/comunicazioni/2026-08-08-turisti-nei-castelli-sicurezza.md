@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Ad agosto i **Castelli Romani** registrano il picco annuale di presenze turistiche: italiani in gita fuori porta da Roma, stranieri in tour della regione, famiglie che frequentano il lago di Nemi o quello di Albano. La convivenza fra residenti e ospiti si gestisce meglio se le informazioni essenziali circolano da subito.
+Ad agosto i **Castelli Romani** registrano il picco annuale di presenze turistiche. Italiani in gita fuori porta da Roma, stranieri in tour della regione, famiglie che frequentano il lago di Nemi o quello di Albano. La convivenza fra residenti e ospiti si gestisce meglio se le informazioni essenziali circolano da subito.
 
 ## Informazioni utili per chi ospita
 

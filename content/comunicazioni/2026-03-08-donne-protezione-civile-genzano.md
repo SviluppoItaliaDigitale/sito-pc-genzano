@@ -41,7 +41,7 @@ Non esiste ruolo tecnico riservato o precluso. Ogni volontaria, come ogni volont
 
 ## Perché parlarne l'8 marzo
 
-La giornata internazionale della donna non serve a "far sentire speciali" le donne del volontariato: serve a ricordare che ci sono stati — e in parte ancora ci sono — **ostacoli** da riconoscere e superare. Quando parliamo di Protezione Civile:
+La giornata internazionale della donna non serve a "far sentire speciali" le donne del volontariato. Serve a ricordare che ci sono stati — e in parte ancora ci sono — **ostacoli** da riconoscere e superare. Quando parliamo di Protezione Civile:
 
 - **L'equipaggiamento** di serie è stato a lungo pensato "per l'uomo medio": divise, scarpe, attrezzature. Oggi la situazione migliora ma non ovunque.
 - **La conciliazione** con il lavoro di cura familiare — spesso sbilanciato sulle donne — incide sulla disponibilità a partecipare a turni di reperibilità e attivazioni lunghe.

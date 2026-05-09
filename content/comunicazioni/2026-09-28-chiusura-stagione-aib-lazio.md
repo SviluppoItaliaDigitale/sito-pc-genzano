@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **30 settembre** termina ufficialmente il **periodo di grave pericolosità per gli incendi boschivi** nel Lazio, come previsto dalla **Dichiarazione regionale dello stato di grave pericolosità AIB** che ha iniziato il suo corso il 15 giugno 2026. La chiusura non significa che il rischio sia zero, ma segna la **fine del regime straordinario**.
+Il **30 settembre** termina ufficialmente il **periodo di grave pericolosità per gli incendi boschivi** nel Lazio. Lo prevede la **Dichiarazione regionale dello stato di grave pericolosità AIB**, in corso dal 15 giugno 2026. La chiusura non significa che il rischio sia zero, ma segna la **fine del regime straordinario**.
 
 ## Cosa cambia
 

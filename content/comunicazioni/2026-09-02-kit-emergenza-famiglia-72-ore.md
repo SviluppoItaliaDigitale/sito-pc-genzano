@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **Dipartimento della Protezione Civile** consiglia a ogni famiglia di tenere pronto un **kit di emergenza** in grado di coprire autonomamente le **prime 72 ore**, quando i soccorsi potrebbero non essere ancora arrivati in modo capillare. Non è una raccomandazione allarmistica, è **buona educazione civile**: come lo zaino di primo soccorso in auto.
+Il **Dipartimento della Protezione Civile** consiglia a ogni famiglia di tenere pronto un **kit di emergenza**. Deve coprire autonomamente le **prime 72 ore**, quando i soccorsi potrebbero non essere ancora arrivati in modo capillare. Non è una raccomandazione allarmistica, è **buona educazione civile**: come lo zaino di primo soccorso in auto.
 
 ## Perché 72 ore
 

@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **1° settembre** è, in convenzione meteorologica, il **primo giorno dell'autunno**. Un passaggio simbolico che coincide quest'anno con l'avvio di una fase operativa importante per la Protezione Civile comunale: chiusura della stagione AIB, ripresa delle scuole, avvio delle attività formative, preparazione del territorio alla stagione delle piogge.
+Il **1° settembre** è, in convenzione meteorologica, il **primo giorno dell'autunno**. Un passaggio simbolico che coincide quest'anno con l'avvio di una fase operativa importante per la Protezione Civile comunale. Chiusura della stagione AIB, ripresa delle scuole, avvio delle attività formative, preparazione del territorio alla stagione delle piogge.
 
 ## Cosa cambia, in pratica
 
