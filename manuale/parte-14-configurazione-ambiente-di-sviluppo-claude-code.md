@@ -190,6 +190,47 @@ caption="Foto: USGS — Public domain — via Wikimedia Commons. [Fonte original
 
 **Quando aggiungere una seconda/terza foto a un articolo esistente**: criterio operativo — un articolo merita foto multiple se (a) ha **almeno sezioni H2**, (b) racconta **eventi storici specifici** (anniversari, memoria, ricostruzioni, sequenze sismiche), (c) le foto trovate hanno **valore narrativo** (luoghi, persone, mappe, satellite — non bandiere o stemmi). Non aggiungere foto a articoli di servizio quotidiano (preparazione casa, salute mentale, ecc.) o a articoli dottrinali (colonne mobili, normativa). Vale la regola del progetto: "non elemosinare le immagini, ma senza esagerare".
 
+### 14.10 — Avvio rapido di Claude Code e del menu di gestione
+
+Per evitare di dover ricordare comandi come `cd ~/sito-pc-genzano && claude` oppure `bash ~/gestione-sito.sh`, da maggio 2026 il progetto ha **3 punti di accesso paralleli** per i due strumenti principali. Tutti fanno la stessa cosa: scegli quello che ti viene comodo.
+
+**Strumento 1 — Claude Code (l'AI assistant)**:
+
+| Modo | Come si attiva |
+|---|---|
+| Icona desktop | Doppio click su **Claude PC Genzano** (`~/Scrivania/Claude-PC-Genzano.desktop`, icona terminale) |
+| Alias da terminale | Scrivi `claude-protezionecivile` (autocomplete: `cl` + TAB) |
+| Voce menu gestione | Voce **25 — Avvia Claude Code** dentro `gestione-sito.sh` (quando esci con `/exit` torni al menu) |
+
+**Strumento 2 — Menu interattivo gestione sito** (27 voci: contenuti, emergenze, allerte, deploy, ecc.):
+
+| Modo | Come si attiva |
+|---|---|
+| Icona desktop | Doppio click su **Gestione PC Genzano** (`~/Scrivania/Gestione-PC-Genzano.desktop`, icona ingranaggio) |
+| Alias da terminale | Scrivi `menu-protezionecivile` (autocomplete: `me` + TAB) |
+| Comando tradizionale | `bash ~/gestione-sito.sh` (sempre valido) |
+
+L'icona **Sito PC Genzano** esistente (apre VS Code col progetto) resta intatta.
+
+**Architettura**:
+
+- I 2 alias sono in `~/.bashrc` (il file di configurazione bash dell'utente — non versionato).
+- I 2 file `.desktop` sono in `~/Scrivania/` (non versionati — sono personali del PC dell'utente).
+- I 2 wrapper bash sono nel repo: `scripts/avvia-claude.sh` e `scripts/avvia-menu.sh`. **Versionati**: se in futuro cambia il path del progetto, modifichi solo lo script wrapper, non le icone né gli alias.
+
+**Quando hai appena aggiunto un alias**: i terminali già aperti non lo vedono. Soluzioni: chiudi e riapri il terminale, oppure esegui `source ~/.bashrc` nel terminale corrente.
+
+**File `.txt` di reminder personale**: `~/Scrivania/COME-AVVIARE-Claude-e-Menu.txt` riepiloga le istruzioni in formato testo semplice (non versionato — è del PC, non del repo).
+
+**Su un nuovo PC** (o se reinstalli il sistema): per ricreare la setup serve aggiungere a `~/.bashrc` le 2 righe:
+
+```bash
+alias claude-protezionecivile='cd ~/sito-pc-genzano && claude'
+alias menu-protezionecivile='bash ~/gestione-sito.sh'
+```
+
+E creare i 2 file `.desktop` in `~/Scrivania/` (template in questa stessa parte del manuale, sezione precedente non necessaria — gli script wrapper sono già nel repo).
+
 ---
 
 ## Appendici
@@ -240,6 +281,12 @@ hugo server
 
 # Avviare il sito in locale (mostra anche le bozze)
 hugo server -D
+
+# Avviare Claude Code sul progetto (alias in ~/.bashrc)
+claude-protezionecivile
+
+# Avviare il menu interattivo di gestione (alias in ~/.bashrc)
+menu-protezionecivile
 
 # Nuovo articolo
 hugo new comunicazioni/AAAA-MM-GG-titolo-breve.md
