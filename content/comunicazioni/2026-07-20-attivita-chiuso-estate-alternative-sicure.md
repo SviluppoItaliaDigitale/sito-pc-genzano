@@ -1,7 +1,7 @@
 ---
 title: "Attività al chiuso in estate: alternative sicure al caldo esterno"
 date: 2026-07-20
-description: "Nelle ore più calde la cosa più saggia è stare al riparo. Luoghi pubblici climatizzati, attività per bambini."
+description: "Nelle ore più calde è saggio stare al riparo. Luoghi pubblici climatizzati, attività per bambini e anziani: una mappa delle alternative al caldo esterno."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -47,11 +47,11 @@ I musei offrono:
 - **Eventi** e mostre temporanee.
 - **Ingressi** gratuiti in occasioni particolari.
 
-Nei Castelli Romani ricchi siti:
-- **Museo delle Navi** di Nemi.
-- **Museo civico** di Albano.
-- **Castelli** storici.
-- **Giardini archeologici**.
+Nei Castelli Romani ci sono molti siti culturali aperti d'estate:
+- il **Museo delle Navi** di Nemi;
+- il **Museo civico** di Albano;
+- i **castelli** e palazzi storici delle frazioni;
+- i **giardini archeologici** delle ville romane.
 
 ## I centri commerciali
 
@@ -128,7 +128,7 @@ Per chi ama l'acqua:
 - **Parchi acquatici** nei dintorni.
 - **Laghi dei Castelli** (per nuotatori esperti).
 
-**Non trascurare** l'idratazione anche in piscina: si perde liquidi anche in acqua.
+**Non trascurare** l'idratazione anche in piscina: si perdono liquidi anche stando in acqua.
 
 ## Attività ibride
 
@@ -165,11 +165,11 @@ Per questo **frequentare** luoghi pubblici non è solo rifugio climatico ma **re
 ## Il ruolo del vicinato
 
 Anche in estate il vicinato può:
-- **Invitare** anziani in casa climatizzata.
+- **Invitare** gli anziani in una casa climatizzata.
 - **Organizzare** pomeriggi condivisi.
-- **Portare** vicino in attività culturali.
-- **Chiamare** con regolarità.
-- **Offrire** aiuto concreto.
+- **Accompagnare** un vicino a un'attività culturale.
+- **Telefonare** con regolarità.
+- **Offrire** un aiuto concreto.
 
 Le **reti di vicinato** estive sono particolarmente importanti.
 

@@ -56,10 +56,10 @@ In Italia gli **eventi estremi** sono in aumento per il cambiamento climatico.
 - **Fori** in teli e serre.
 - **Intasamento** di pluviali e canali.
 
-### Per agricoltura
-- **Distruzione** di colture in maturazione.
-- **Danni** a alberi da frutto.
-- **Perdite** economiche elevate.
+### Per l'agricoltura
+- **Distruzione** delle colture in maturazione.
+- **Danni** agli alberi da frutto e ai vigneti.
+- **Perdite** economiche elevate per le aziende agricole.
 
 ## Come prevedere un temporale grandinigeno
 
@@ -106,21 +106,21 @@ Un'allerta **arancione** per temporali include possibile grandine.
 ## Dopo la grandinata
 
 Quando l'evento è passato:
-- **Verifica** stato proprio della casa e dei familiari.
-- **Documenta** danni con foto (per assicurazione).
-- **Controlla** pluviali e tetto dall'interno.
-- **Raccogli** chicchi in un sacchetto (documentazione dimensioni).
-- **Rimuovi** detriti e rami caduti **con attenzione** (rischio fili elettrici).
-- **Non camminare** su tetti senza verifiche.
+- **Verifica** lo stato della tua casa e di chi ci vive.
+- **Documenta** i danni con foto, da inviare all'assicurazione.
+- **Controlla** pluviali, grondaie e tetto guardandoli dall'interno.
+- **Raccogli** alcuni chicchi in un sacchetto: serviranno a documentarne le dimensioni.
+- **Rimuovi** detriti e rami caduti **con cautela**: attenzione ai fili elettrici scoperti.
+- **Non camminare** sui tetti prima delle verifiche di un tecnico.
 
 ## Veicoli danneggiati
 
 Se la grandine ha colpito la tua auto:
-- **Non muovere** l'auto se parabrezza rotto.
-- **Fotografa** danni da tutte le angolazioni.
+- **Non muovere** l'auto se il parabrezza è rotto.
+- **Fotografa** i danni da tutte le angolazioni.
 - **Chiama** l'assicurazione entro 48 ore.
-- **Denuncia** per eventuale indennizzo.
-- **Verifica** copertura polizza per "eventi atmosferici".
+- **Apri** una denuncia per ottenere un eventuale indennizzo.
+- **Verifica** se la polizza copre gli "eventi atmosferici".
 
 Molte polizze **non coprono** grandine senza garanzia specifica.
 

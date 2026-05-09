@@ -78,19 +78,19 @@ Può piovere in una zona e alluvionare in un'altra se il bacino è impermeabile.
 6. **Chiama il 112** se in pericolo.
 
 ### In auto
-1. **Non entrare** in guadi allagati. Seguine l'alternativa.
+1. **Non entrare** in guadi allagati: cerca un percorso alternativo.
 2. Se rimani **bloccato nell'acqua**:
-   - **Esci subito** se l'acqua sale.
-   - **Rompi un finestrino** se porte bloccate.
-   - **Abbandona l'auto** in zona non affollata dall'acqua.
-3. **Riferimento**: 15 cm di acqua in movimento è già pericolosa per un'auto.
+   - **Esci subito** dall'auto se il livello sale.
+   - **Rompi un finestrino** se le porte sono bloccate dalla pressione dell'acqua.
+   - **Abbandona l'auto** spostandoti verso una zona non sommersa.
+3. **Ricorda**: bastano 15 cm di acqua in movimento per spostare un'automobile.
 
 ### A piedi
 1. **Evita** di attraversare acque in movimento.
-2. **Usa un bastone** per sondare profondità.
-3. **Mantieni** il corpo rivolto verso monte (facile lettura del fondo).
-4. **Abbraccia** un albero stabile se travolto.
-5. **Non** nuotare contro corrente: nuota diagonale.
+2. **Usa un bastone** per sondare la profondità.
+3. **Mantieni** il corpo rivolto verso monte: leggi meglio il fondo.
+4. **Aggrappati** a un albero stabile se vieni travolto.
+5. **Non nuotare** contro corrente: punta in diagonale verso la riva.
 
 ## Riconoscere i segnali di pericolo
 
@@ -116,12 +116,12 @@ Un'allerta **arancione o rossa** per temporali intensi va presa seriamente.
 ## Dopo un flash flood
 
 Quando l'acqua si ritira:
-- **Non entrare** in edifici danneggiati prima delle verifiche.
-- **Attenzione** a fili elettrici scoperti.
-- **Non bere** acqua del rubinetto prima di autorizzazione (contaminazione).
-- **Proteggiti** con stivali e guanti.
-- **Aiuta** persone fragili.
-- **Segnala** danni alle autorità.
+- **Non rientrare** in edifici danneggiati prima delle verifiche dei tecnici.
+- **Attenzione** ai fili elettrici scoperti o caduti.
+- **Non bere** l'acqua del rubinetto fino al via libera dell'azienda idrica: rischio contaminazione.
+- **Proteggiti** con stivali di gomma e guanti spessi.
+- **Aiuta** le persone fragili dei dintorni.
+- **Segnala** i danni al Comune e alle autorità.
 
 **Il fango** post-alluvione può contenere agenti patogeni: lavarsi accuratamente dopo contatto.
 

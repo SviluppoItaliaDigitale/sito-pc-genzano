@@ -74,9 +74,9 @@ Per i **Castelli Romani** sono tipicamente attivabili:
 ## Costi e tempi
 
 Un mezzo aereo ha costi significativi:
-- **Elicottero medio**: ~5.000-8.000 euro/ora di volo.
-- **Canadair**: ~12.000-15.000 euro/ora di volo.
-- **Mobilitazione**: costi fissi all'attivazione.
+- **Elicottero medio**: 5.000-8.000 euro per ora di volo.
+- **Canadair**: 12.000-15.000 euro per ora di volo.
+- **Mobilitazione**: oltre ai costi orari, ogni attivazione comporta costi fissi di chiamata.
 
 Per questo motivo l'uso è **autorizzato solo per incendi rilevanti** — non per ogni principio di fuoco.
 

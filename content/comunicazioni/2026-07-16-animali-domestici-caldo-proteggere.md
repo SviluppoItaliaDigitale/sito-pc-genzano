@@ -29,10 +29,10 @@ La **temperatura letale** per un cane in auto chiusa al sole può essere raggiun
 ## L'auto al sole: il killer silenzioso
 
 Mai lasciare un animale in auto al sole, nemmeno:
-- Per **pochi minuti**.
-- Con **finestrini socchiusi**.
-- All'**ombra** (il sole si sposta).
-- Con **acqua** nella ciotola.
+- per **pochi minuti**;
+- con i **finestrini socchiusi**;
+- parcheggiando **all'ombra** (il sole si sposta in fretta);
+- con **acqua** nella ciotola: non basta a evitare il colpo di calore.
 
 In Italia lasciare un cane in auto al sole è **reato** (maltrattamento). Se vedi un animale in sofferenza, **chiama il 112** senza esitazione.
 
@@ -103,11 +103,11 @@ Non dimentichiamo che:
 ## Gli animali da cortile
 
 Chi vive in campagna o ha un orto:
-- **Pollaio** sempre con zona d'ombra.
-- **Acqua** in abbondanza rinnovata.
-- **Bagnatura** nebulizzata sulla lettiera.
-- **Ventilazione** naturale o meccanica.
-- **Osservazione**: galline accovacciate, ali aperte = caldo eccessivo.
+- **Tenere** sempre una zona d'ombra nel pollaio.
+- **Rinnovare** spesso l'acqua nelle abbeveratoie.
+- **Nebulizzare** acqua sulla lettiera.
+- **Garantire** ventilazione naturale o meccanica.
+- **Osservare** le galline: accovacciate con ali aperte sono in stress da caldo.
 
 ## Cani randagi e colonie feline
 

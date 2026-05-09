@@ -75,10 +75,10 @@ In generale la cittadinanza dei Castelli Romani ha mostrato **consapevolezza**:
 - Collaborazione in caso di evacuazioni precauzionali.
 - Partecipazione alle campagne informative.
 
-Restano **criticità** legate a:
-- Alcune pratiche agricole non conformi.
-- Turisti occasionali poco informati.
-- Mozziconi abbandonati su strade di campagna.
+Restano **alcune criticità**:
+- pratiche agricole non sempre conformi alle ordinanze;
+- turisti occasionali poco informati sulle regole estive;
+- mozziconi di sigaretta abbandonati lungo le strade di campagna.
 
 ## Le zone a maggior attenzione
 
@@ -121,7 +121,7 @@ Va sottolineato che il primo mese di campagna è stato **impegnativo** per tutti
 - **Stress** fisico e psicologico.
 - **Impegno familiare** da bilanciare.
 
-Ai volontari, ai vigili del fuoco, al personale forestale va il **riconoscimento** di tutta la comunità.
+Ai volontari, ai Vigili del Fuoco e al personale forestale va il **riconoscimento** di tutta la comunità.
 
 ## Il supporto logistico
 
@@ -138,7 +138,7 @@ La **logistica** non è visibile ma è essenziale: senza acqua, ricambi, carbura
 
 La campagna AIB durerà ancora fino al **30 settembre 2026** (eventualmente prorogabile). Restano **due mesi e mezzo** di attività. Il sistema è **pronto** ma serve **continuità** di attenzione.
 
-Come ricordano i responsabili regionali: *"Il peggior nemico a metà campagna è la stanchezza. Dobbiamo mantenere alta la guardia fino all'ultimo giorno."*
+Come si ripete spesso nelle sale operative regionali, il peggior nemico a metà campagna è la stanchezza. La guardia va tenuta alta fino all'ultimo giorno.
 
 ## Per approfondire
 
@@ -149,4 +149,4 @@ Come ricordano i responsabili regionali: *"Il peggior nemico a metà campagna è
 - Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
 - [DPC — Rischio incendi](https://www.protezionecivile.gov.it/it/rischi/rischio-incendi)
 
-Metà campagna è un momento di **verifica**, non di riposo. Il secondo tempo è tipicamente più duro del primo. Tutti preparati.
+Metà campagna è un momento di **verifica**, non di riposo. Il secondo tempo è di solito più duro del primo: il sistema, la rete dei volontari e i cittadini devono restare pronti.
