@@ -95,8 +95,8 @@ La **riforestazione** è politica strategica:
 
 - **PNRR** prevede milioni di alberi piantati;
 - **rimboschimenti** post-incendio;
-- **forestazione urbana** (Roma: 1 milione di alberi);
-- **progetti** private-pubblico;
+- **piani di forestazione urbana** in molte città italiane;
+- **progetti** pubblico-privato;
 - **partecipazione** cittadini e scuole.
 
 ## Gli alberi urbani

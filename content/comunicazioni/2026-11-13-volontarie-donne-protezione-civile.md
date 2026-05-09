@@ -77,14 +77,14 @@ Le donne volontarie contribuiscono in **ogni ambito**:
 - **tutor** per nuovi volontari;
 - **referenti** per scuole.
 
-## Alcune figure di riferimento
+## Una storia diffusa
 
 La storia della Protezione Civile italiana annovera:
 
-- **Luisa Festa** — tra le prime donne volontarie ad intervenire in Irpinia 1980;
-- **Maria Assunta Accili** — protagonista nel soccorso Marsica 2009;
-- **Operatrici e tecniche** di rilievo in tutte le maggiori emergenze;
-- **Ricercatrici scientifiche** all'INGV, CNR, ISPRA attive nella ricerca sui rischi.
+- **donne volontarie** intervenute fin dalle prime grandi emergenze (Irpinia 1980, Friuli 1976);
+- **operatrici e tecniche** di rilievo in tutte le maggiori emergenze;
+- **ricercatrici scientifiche** in INGV, CNR, ISPRA attive nella ricerca sui rischi naturali;
+- **dirigenti** dei Centri Funzionali Regionali e delle sale operative.
 
 E soprattutto: **migliaia** di donne "senza nome" che ogni giorno sono presenti nei Gruppi Comunali e nelle associazioni.
 

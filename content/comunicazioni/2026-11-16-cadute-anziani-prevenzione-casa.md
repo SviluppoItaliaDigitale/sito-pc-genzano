@@ -110,7 +110,7 @@ La prevenzione non è solo l'adattamento della casa. Anche:
 
 ### Controlli medici
 - **vista** controllata ogni 1-2 anni;
-- **audito** verificato (la perdita di udito facilita la disorientazione);
+- **udito** verificato (la perdita uditiva facilita il disorientamento);
 - **farmaci** rivisti con medico (rischio ipotensione);
 - **densitometria ossea** per valutare osteoporosi;
 - **pressione** e frequenza cardiaca monitorate.

@@ -110,9 +110,9 @@ Il **Comune** in periodi di allerta freddo attiva:
 - **coordinamento** con ASL per visite domiciliari;
 - **campagna informativa** alla popolazione.
 
-## L'allerta "wave freddo"
+## L'allerta ondata di freddo
 
-Il **Centro Funzionale Regionale Lazio** e l'**ARPAM** pubblicano bollettini di allerta quando condizioni climatiche previste richiedono attenzione:
+Il **Centro Funzionale Regionale Lazio** e **ARPA Lazio** pubblicano bollettini di allerta quando le condizioni climatiche previste richiedono attenzione:
 
 - **soglia 1**: condizioni meteo rilevanti ma non critiche;
 - **soglia 2**: condizioni a rischio per popolazione fragile;

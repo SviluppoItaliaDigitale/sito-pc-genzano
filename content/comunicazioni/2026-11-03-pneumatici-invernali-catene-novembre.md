@@ -84,7 +84,7 @@ Anche con pneumatici invernali montati:
 - **accendere** luci basse;
 - **attenzione** alle zone d'ombra (ghiaccio nascosto);
 - **attenzione** ai ponti (gelano prima);
-- **tenere** deicer anti-ghiaccio in auto per vetri.
+- **tenere** uno spray scioglighiaccio in auto per i vetri.
 
 ## Il controllo delle gomme
 
