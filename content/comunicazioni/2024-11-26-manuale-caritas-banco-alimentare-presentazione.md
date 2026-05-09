@@ -16,11 +16,11 @@ allegati:
 draft: false
 ---
 
-Il **Manuale di corrette prassi operative per il recupero, la raccolta e la distribuzione di cibo ai fini di solidarietà sociale** è edito da **Caritas Italiana** e **Fondazione Banco Alimentare Onlus**. È stato **validato dal Ministero della Salute** ai sensi dell'**articolo 8 del Regolamento CE 852/2004**. La prima edizione è dell'ottobre 2015. Il testo completo è allegato a questo articolo.
+Il **Manuale di corrette prassi operative per il recupero, la raccolta e la distribuzione di cibo ai fini di solidarietà sociale** è edito da **Caritas Italiana** e **Fondazione Banco Alimentare Onlus**, con prima edizione nell'ottobre 2015. Il Ministero della Salute lo ha **validato** ai sensi dell'**art. 8 del Regolamento CE 852/2004**. Il testo completo è allegato a questo articolo.
 
 ## Cos'è e a chi serve
 
-È il **manuale di riferimento nazionale** per tutte le **Organizzazioni Caritative (OC)** — associazioni, parrocchie, enti del Terzo Settore — che si occupano di recuperare alimenti e distribuirli gratuitamente agli indigenti. Nasce per colmare un vuoto: le OC non sono aziende della ristorazione, ma svolgono comunque attività di manipolazione alimentare e devono garantire la **sicurezza igienica** dei prodotti distribuiti.
+È il **manuale di riferimento nazionale** per tutte le **Organizzazioni Caritative (OC)** — associazioni, parrocchie, enti del Terzo Settore — che recuperano alimenti e li distribuiscono gratuitamente agli indigenti. Nasce per colmare un vuoto: le OC non sono aziende della ristorazione, ma manipolano comunque alimenti e devono garantirne la **sicurezza igienica**.
 
 Il manuale è stato elaborato in collaborazione con:
 
@@ -46,9 +46,9 @@ A questi si aggiungono centinaia di altre associazioni di piccole e medie dimens
 Il recupero e la distribuzione di alimenti a fini di solidarietà rientra nel "commercio al dettaglio" ai sensi del **Regolamento (CE) 178/2002**. Le principali norme applicabili sono:
 
 - **Reg. (CE) 178/2002** — principi e requisiti generali della legislazione alimentare, definizioni di "pericolo", "rischio", "rintracciabilità".
-- **Reg. (CE) 852/2004** — igiene dei prodotti alimentari, su cui si basa il sistema HACCP.
+- **Reg. (CE) 852/2004** — igiene dei prodotti alimentari, su cui si basa il sistema HACCP (Hazard Analysis and Critical Control Points).
 - **Reg. (UE) 1169/2011** — informazioni sugli alimenti ai consumatori (allergeni, date di scadenza, TMC).
-- **Legge 155/2003 "Legge del Buon Samaritano"** — protegge le ONLUS che donano alimenti gratuitamente agli indigenti, equiparandole al consumatore finale nei limiti del servizio prestato. Il donatore è tutelato da eventuali azioni giudiziarie successive alla donazione.
+- **Legge 155/2003 "Legge del Buon Samaritano"** — equipara le ONLUS donatrici al consumatore finale, tutelando il donatore da azioni giudiziarie successive alla donazione.
 - **Legge 147/2013** (art. 1 commi 236-237) — riconosce il valore sociale delle ONLUS che distribuiscono alimenti e dà loro il diritto di elaborare un proprio Manuale di corrette prassi igieniche.
 - **Legge 166/2016 "Legge Gadda"** — semplifica le procedure di donazione delle eccedenze alimentari.
 
@@ -69,7 +69,7 @@ Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma collabora s
 - **sagre, feste e rinfresco volontari** — dove si applicano principi analoghi di gestione igienica degli alimenti;
 - **esercitazioni con ristorazione da campo** — in sinergia con il [Manuale di Cucina in Emergenza DSEFIC](/comunicazioni/2024-10-06-manuale-cucina-emergenza-fic-presentazione/) della Federazione Italiana Cuochi.
 
-Conoscere il manuale Caritas-Banco Alimentare è utile a ogni volontario che a vario titolo si trovi a manipolare alimenti destinati alla popolazione: la logica è la stessa, i riferimenti normativi coincidono, e le buone prassi sono complementari.
+Conoscere il manuale Caritas-Banco Alimentare è utile a ogni volontario che manipola alimenti destinati alla popolazione. La logica è la stessa del manuale FIC, i riferimenti normativi coincidono e le buone prassi sono complementari.
 
 ## Nei prossimi articoli
 

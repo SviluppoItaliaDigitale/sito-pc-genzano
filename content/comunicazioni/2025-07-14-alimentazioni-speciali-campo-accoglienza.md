@@ -16,7 +16,7 @@ allegati:
 draft: false
 ---
 
-In un campo di accoglienza convivono persone con esigenze alimentari molto diverse: chi ha una **allergia grave**, chi è **celiaco**, chi segue una dieta **vegetariana o vegana** per scelta, chi non può mangiare carne di maiale o manzo per motivi **religiosi**. Il Manuale di Cucina in Emergenza del DSEFIC-FIC dedica un intero capitolo a questo tema. Come scrive la curatrice Rossanina Del Santo: *"chi sta in cucina non deve solo nutrire, ma far sentire amato chi sta vivendo un momento di grande criticità"*.
+In un campo di accoglienza convivono persone con esigenze alimentari molto diverse: chi ha un'**allergia grave**, chi è **celiaco**, chi segue una dieta **vegetariana o vegana**, chi non può mangiare certi alimenti per motivi **religiosi**. Il Manuale di Cucina in Emergenza del DSEFIC-FIC — Dipartimento di Sicurezza Alimentare della Federazione Italiana Cuochi — dedica un intero capitolo a queste situazioni. Come scrive la curatrice Rossanina Del Santo: *"chi sta in cucina non deve solo nutrire, ma far sentire amato chi sta vivendo un momento di grande criticità"*.
 
 Abbiamo allegato il manuale completo a questo articolo e alla pagina [Area Download](/area-download/). Qui riassumiamo le regole operative principali.
 
@@ -28,7 +28,7 @@ Il Regolamento UE 1169/2011 elenca **14 allergeni** che devono essere indicati i
 - su un apposito registro consultabile liberamente;
 - su cartelli ben visibili nella zona di distribuzione.
 
-Non è sufficiente affidarsi a un QR code o a un'app: chi non ha uno smartphone non riuscirebbe ad accedere all'informazione. In alternativa, si può esporre un cartello che riporta: *"Per qualsiasi informazione su sostanze e allergeni è possibile consultare l'apposita documentazione che verrà fornita, a richiesta, dal personale in servizio."*
+Non è sufficiente affidarsi a un QR code o a un'app: chi non ha uno smartphone non può accedere all'informazione. In alternativa, si può esporre un cartello che riporta: *"Per qualsiasi informazione su sostanze e allergeni è possibile consultare l'apposita documentazione che verrà fornita, a richiesta, dal personale in servizio."*
 
 ## Come si prepara un pasto senza allergeni
 
@@ -65,7 +65,7 @@ Le schede delle alimentazioni speciali (allergeni, celiachia, vegetariana, vegan
 
 ## Le regole di igiene personale
 
-Le stesse regole si applicano a tutti, ma con attenzione extra quando si preparano pasti speciali:
+Le stesse regole valgono per tutti, con maggiore rigore quando si preparano pasti speciali:
 
 - **capelli raccolti** sotto il copricapo;
 - **divisa pulita**, preferibilmente di colore chiaro;
@@ -86,5 +86,5 @@ Per approfondire, scarica il **manuale completo** dall'allegato di questo artico
 
 - Regolamento UE 1169/2011 (indicazione degli allergeni).
 - Regolamento UE 828/2014 (dicitura "senza glutine").
-- Guida ABC dell'AIC — Associazione Italiana Celiachia.
+- Guida ABC dell'AIC (Associazione Italiana Celiachia).
 - Manuale di Cucina in Emergenza DSEFIC-FIC, cap. 4.

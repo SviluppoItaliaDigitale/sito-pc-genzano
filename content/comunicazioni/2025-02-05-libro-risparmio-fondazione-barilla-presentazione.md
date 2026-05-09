@@ -22,7 +22,7 @@ In occasione della **Giornata nazionale di prevenzione dello spreco alimentare**
 
 La prevenzione non riguarda solo il rischio sismico, idrogeologico o incendi. Riguarda anche i comportamenti quotidiani che rendono la popolazione più resiliente: sapere conservare il cibo, pianificare la spesa, ridurre gli scarti è parte di una **cultura della preparazione** che in emergenza fa la differenza. La stessa logica che guida l'uso consapevole dell'acqua o dell'energia.
 
-Lo spreco alimentare non è un problema solo economico. Secondo i dati citati dalla Fondazione Barilla **le perdite lungo la filiera e gli sprechi alimentari generano fino al 10% delle emissioni globali di gas serra**. Inoltre **un terzo del cibo prodotto nel mondo viene sprecato**, per un totale di oltre un miliardo di tonnellate all'anno. Dimezzare lo spreco entro il 2030 è uno degli Obiettivi di Sviluppo Sostenibile delle Nazioni Unite.
+Lo spreco alimentare non è un problema solo economico. Secondo i dati della Fondazione Barilla, **le perdite lungo la filiera generano fino al 10% delle emissioni globali di gas serra**. **Un terzo del cibo prodotto nel mondo viene sprecato**: oltre un miliardo di tonnellate all'anno. Dimezzare lo spreco entro il 2030 è l'Obiettivo di Sviluppo Sostenibile ONU n. 12.3.
 
 ## L'evento di presentazione
 
@@ -53,7 +53,7 @@ Nelle prossime settimane pubblicheremo articoli tematici che riprendono i consig
 
 ## Collegamento con il nostro Gruppo
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano aderisce a **FEPIVOL** (Federazione Provinciale del Volontariato di Protezione Civile di Roma). La promozione di buone pratiche di sostenibilità alimentare rientra nelle attività di informazione al cittadino che il volontariato di Protezione Civile svolge nel tempo ordinario — in complemento alle attività di prevenzione dei rischi naturali.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano aderisce alla **Federazione Provinciale del Volontariato di Protezione Civile di Roma (FEPIVOL)**. La promozione di buone pratiche di sostenibilità alimentare rientra nelle attività di informazione al cittadino che il volontariato di Protezione Civile svolge nel tempo ordinario — in complemento alle attività di prevenzione dei rischi naturali.
 
 ## Riferimenti
 

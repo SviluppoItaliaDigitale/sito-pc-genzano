@@ -16,20 +16,20 @@ allegati:
 draft: false
 ---
 
-Quando la Protezione Civile apre un campo di accoglienza o un centro operativo, la **cucina** è una delle prime strutture a essere allestita. Non si tratta solo di preparare pasti: è un'area che deve rispettare gli stessi standard igienico-sanitari di una mensa permanente. Il Manuale DSEFIC della Federazione Italiana Cuochi — che abbiamo aggiunto alla nostra [Area Download](/area-download/) — dedica il primo capitolo proprio a questo tema.
+Quando la Protezione Civile apre un campo di accoglienza o un centro operativo, la **cucina** è una delle prime strutture a essere allestita. Non si tratta solo di preparare pasti: è un'area che deve rispettare gli stessi standard igienico-sanitari di una mensa permanente. Il Manuale del Dipartimento Solidarietà Emergenze della Federazione Italiana Cuochi (DSEFIC-FIC) — che abbiamo aggiunto alla nostra [Area Download](/area-download/) — dedica il primo capitolo proprio a questo tema.
 
 ## La sorveglianza sanitaria
 
 Tutti i volontari che operano in cucina, a qualsiasi titolo, devono avere una formazione adeguata secondo la normativa vigente. In particolare:
 
-- **HACCP** (Hazard Analysis and Critical Control Point). L'operatore deve essere formato alla gestione corretta degli alimenti, dei luoghi di stoccaggio, della preparazione e della conservazione dall'arrivo della merce fino alla somministrazione. **Chi ha in corso malattie trasmissibili** (anche una semplice influenza) **non può operare in cucina**.
+- **HACCP** (Hazard Analysis and Critical Control Points — analisi dei rischi e punti critici di controllo). L'operatore deve essere formato alla gestione corretta degli alimenti, dei luoghi di stoccaggio, della preparazione e della conservazione dall'arrivo della merce fino alla somministrazione. **Chi ha in corso malattie trasmissibili** (anche una semplice influenza) **non può operare in cucina**.
 - **Addetto antincendio**. Verifica la presenza e l'idoneità degli estintori in cucina: CO₂ per fuochi elettrici, coperta antifiamma per le pentole in caso di fiammata.
 - **Addetto al Primo Soccorso**. Controlla la cassetta di Primo Soccorso di tipo B con allegato 1 (quella prevista dal D.Lgs. 81/08 per le cucine).
 - **Installatore qualificato GPL**. Verifica la corretta installazione e lo stoccaggio delle bombole secondo la norma UNI/TR 11426.
 
 ## I ruoli in cucina
 
-Per gestire in sicurezza una cucina da campo servono almeno sei figure, anche se nella prima fase dell'emergenza alcuni compiti possono essere cumulati. Appena possibile è bene predisporre un **calendario di avvicendamento ogni 4 giorni**, con mezza giornata di sovrapposizione fra brigata entrante e uscente per passaggio di consegne.
+Per gestire in sicurezza una cucina da campo servono almeno sei figure. Nella prima fase dell'emergenza alcuni compiti possono essere cumulati; appena possibile è bene predisporre un **calendario di avvicendamento ogni 4 giorni**, con mezza giornata di sovrapposizione fra brigata entrante e uscente per il passaggio di consegne.
 
 | Ruolo | Numero indicativo per 700-800 pasti | Compiti principali |
 |---|---|---|
@@ -55,7 +55,7 @@ Per ogni compito è prevista una specifica analisi dei rischi. La cottura porta 
 
 ## Dispositivi di protezione individuale
 
-Il manuale prescrive per ogni fase di lavoro i DPI adeguati:
+Il manuale prescrive per ogni fase di lavoro i dispositivi di protezione individuale (DPI) adeguati:
 
 - **guanti in nitrile monouso** per la manipolazione degli alimenti
 - **guanti anti-taglio** per le lavorazioni con coltelli
