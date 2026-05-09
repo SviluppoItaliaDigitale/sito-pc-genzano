@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-A complemento della **Rete Zamberletti nazionale** opera, sul territorio di Roma Capitale e dei comuni limitrofi, una **Rete di Emergenza Metropolitana** gestita dalla **Sezione ARI di Roma Capitale APS** (nominativo radio **<span style="font-variant-numeric: slashed-zero; font-feature-settings: 'zero' 1;">IQ0RM</span>**). Garantisce comunicazioni radio dirette fra i **Municipi di Roma** e i comuni dell'area metropolitana, anche quando le reti telefoniche e internet sono interrotte da un evento catastrofico.
+A complemento della **Rete Zamberletti nazionale** opera, sul territorio di Roma Capitale e dei comuni limitrofi, una **Rete di Emergenza Metropolitana**. È gestita dalla **Sezione ARI di Roma Capitale APS** (nominativo radio **<span style="font-variant-numeric: slashed-zero; font-feature-settings: 'zero' 1;">IQ0RM</span>**). Garantisce comunicazioni radio dirette fra i **Municipi di Roma** e i comuni dell'area metropolitana, anche quando le reti telefoniche e internet sono interrotte da un evento catastrofico.
 
 ## Cos'è la Rete di Emergenza Metropolitana
 

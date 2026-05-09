@@ -54,7 +54,7 @@ Questo flusso garantisce che ogni intervento sia **coordinato**, **tracciato** e
 
 ## Ringraziamenti
 
-Un ringraziamento alla **Polizia Locale di Genzano di Roma** per il coordinamento sul posto e per la richiesta tempestiva, e ai **volontari del Gruppo** che hanno risposto alla chiamata in un sabato pomeriggio, mettendo a disposizione tempo, competenze e attrezzature per la sicurezza della comunità.
+Un ringraziamento alla **Polizia Locale di Genzano di Roma** per il coordinamento sul posto e per la richiesta tempestiva. E ai **volontari del Gruppo** che hanno risposto alla chiamata in un sabato pomeriggio, mettendo a disposizione tempo, competenze e attrezzature per la sicurezza della comunità.
 
 ## Per approfondire
 
