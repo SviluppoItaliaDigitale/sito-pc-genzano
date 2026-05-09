@@ -16,17 +16,17 @@ allegati:
 draft: false
 ---
 
-Domenica 6 ottobre 2024, all'Auditorium del Dipartimento della Protezione Civile di Roma, la Federazione Italiana Cuochi ha presentato il **Manuale di Cucina in Emergenza**, curato dal DSEFIC — Dipartimento Solidarietà Emergenze. È il primo testo organico dedicato a chi gestisce la ristorazione nei campi di accoglienza, nei centri operativi e nelle strutture di assistenza alla popolazione durante un'emergenza.
+Domenica 6 ottobre 2024, all'Auditorium del Dipartimento della Protezione Civile di Roma, la Federazione Italiana Cuochi (FIC) ha presentato il **Manuale di Cucina in Emergenza**. Il manuale è curato dal DSEFIC (Dipartimento Solidarietà Emergenze della FIC) ed è il primo testo organico per chi gestisce la ristorazione nei campi di accoglienza, nei centri operativi e nelle strutture di assistenza alla popolazione.
 
 ## Di cosa si tratta
 
 Il manuale nasce dall'esperienza sul campo dei cuochi volontari della FIC, impiegati dalla Protezione Civile nelle emergenze degli ultimi anni. Raccoglie in 88 pagine protocolli, procedure e buone pratiche per garantire pasti sicuri, equilibrati e rispettosi delle diverse esigenze nutrizionali anche nelle situazioni più difficili.
 
-Il lavoro è stato coordinato dal presidente nazionale DSEFIC **Roberto Rosati** e dalla responsabile formazione **Rossanina Del Santo**. Alla presentazione ha partecipato anche il Capo Dipartimento della Protezione Civile **Fabio Ciciliano**.
+Il testo porta la firma del presidente nazionale DSEFIC **Roberto Rosati** e della responsabile formazione **Rossanina Del Santo**. Alla presentazione ha partecipato anche il Capo Dipartimento della Protezione Civile **Fabio Ciciliano**.
 
 ## Perché è importante anche per noi
 
-Il Gruppo Comunale Volontari di Genzano di Roma aderisce a **FEPIVOL**, la Federazione Provinciale del Volontariato di Protezione Civile di Roma. Il manuale DSEFIC è un riferimento utile per tutte le associazioni che, pur non disponendo di cuochi professionisti, possono trovarsi a gestire la somministrazione di pasti durante un'attivazione.
+Il Gruppo Comunale Volontari di Genzano di Roma aderisce alla **FEPIVOL** (Federazione Provinciale del Volontariato di Protezione Civile di Roma). Il manuale DSEFIC è un riferimento utile per tutte le associazioni che, pur non disponendo di cuochi professionisti, possono trovarsi a gestire la somministrazione di pasti durante un'attivazione.
 
 Lo stesso DSEFIC lo dichiara esplicitamente nell'introduzione: il testo è pensato "anche alle associazioni che non hanno professionisti che si occupano della gestione di pasti".
 
@@ -42,8 +42,6 @@ Il manuale è organizzato in sei capitoli:
 6. **Ricette** — esempi di piatti equilibrati per grandi numeri.
 
 ## Scarica il manuale
-
-Abbiamo scelto di pubblicare il manuale in Area Download e di collegarlo a una piccola serie di articoli tematici. Così i volontari del Gruppo possono consultarne i contenuti principali senza dover aprire ogni volta il PDF completo.
 
 Il **manuale completo** è disponibile in allegato a questo articolo e nella pagina [Area Download](/area-download/).
 

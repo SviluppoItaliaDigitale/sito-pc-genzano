@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Con l'arrivo dell'estate aumenta il rischio di incendi boschivi. Dal 15 giugno al 30 settembre è in vigore lo **stato di massima allerta** su tutto il territorio comunale.
+Con l'arrivo dell'estate aumenta il rischio di incendi boschivi (AIB — antincendio boschivo). Dal 15 giugno al 30 settembre è il **periodo di massima pericolosità** sul territorio comunale, come previsto dalla normativa regionale del Lazio.
 
 Se avvisti un incendio, chiama subito il **112**.
 
