@@ -84,7 +84,7 @@ Anche il volontariato di Protezione Civile può beneficiare di questa cultura:
 - **Confronto** tra previsioni e realtà per capire meglio i modelli.
 - **Supporto alla divulgazione** verso i cittadini.
 
-Un volontario che sa leggere un bollettino, confrontarlo con la stazione locale e riconoscere un evento in corso è un **volontario più preparato**.
+Un volontario che sa leggere un bollettino, confrontarlo con i dati locali e riconoscere un evento in corso è un **volontario più preparato**.
 
 ## La segnalazione di eventi meteo
 
@@ -113,7 +113,7 @@ Ne abbiamo parlato nell'articolo [Previsioni meteo e bollettini: come funzionano
 
 ## Un'osservazione paziente
 
-Fare il meteo amatoriale ha **ritmi lunghi**. Un anno di dati è un punto di partenza, cinque anni iniziano a dare statistica, dieci anni danno un quadro climatologico locale.
+Fare il meteo amatoriale ha **ritmi lunghi**. Un anno di dati è un punto di partenza. Cinque anni iniziano a dare statistica. Dieci anni restituiscono un quadro climatologico locale.
 
 È un'attività educativa profonda: insegna a **osservare il cielo**, **leggere il vento**, **riconoscere l'arrivo di un fronte**. Competenze che i nostri nonni possedevano naturalmente e che abbiamo in parte perso.
 

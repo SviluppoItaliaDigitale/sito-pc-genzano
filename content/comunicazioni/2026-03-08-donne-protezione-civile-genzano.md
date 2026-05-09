@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-L'**8 marzo**, **Giornata internazionale della donna**, non è solo una ricorrenza di riflessione sulla parità. È un'occasione concreta per riconoscere, anche nel volontariato di Protezione Civile, il **contributo delle donne**.
+L'**8 marzo**, **Giornata internazionale della donna**, è un momento per riconoscere, anche nel volontariato di Protezione Civile, il **contributo delle donne**.
 
 Nel Gruppo Comunale di Genzano, come in tutto il sistema italiano, le donne sono **volontarie, formatrici, responsabili, coordinatrici, tecniche**. Non come eccezione, ma come **parte normale** di una realtà che funziona solo se tutti danno il proprio contributo.
 
@@ -21,7 +21,7 @@ Nel Gruppo Comunale di Genzano, come in tutto il sistema italiano, le donne sono
 
 Il volontariato italiano ha avuto, storicamente, una componente femminile molto forte. Dalle **crocerossine** dei conflitti mondiali alle **angele del fango** di Firenze 1966, le donne sono sempre state presenti nelle emergenze italiane.
 
-Nel sistema moderno di Protezione Civile, **la legge 225/1992** e il **Codice 2018** parlano di **volontari**, senza distinzioni di genere. Ma la cultura operativa ha impiegato anni per superare stereotipi di un settore percepito come "maschile": la divisa, il lavoro fisico, la reperibilità notturna, le esercitazioni in luoghi impervi.
+Nel sistema moderno di Protezione Civile, **la legge 225/1992** e il **D.Lgs. 1/2018** (Codice della Protezione Civile) parlano di **volontari**, senza distinzioni di genere. La cultura operativa ha però impiegato anni per superare gli stereotipi di un settore percepito come "maschile": la divisa, il lavoro fisico, la reperibilità notturna, le esercitazioni in luoghi impervi.
 
 Oggi nei gruppi comunali e nelle associazioni la **presenza femminile è alta e crescente**. In alcune realtà supera il 50%. Nei ruoli di coordinamento, le donne portano competenze di **gestione**, **comunicazione**, **relazione con la cittadinanza** — competenze essenziali in ogni emergenza.
 
@@ -41,7 +41,7 @@ Non esiste ruolo tecnico riservato o precluso. Ogni volontaria, come ogni volont
 
 ## Perché parlarne l'8 marzo
 
-La giornata internazionale della donna non serve a "far sentire speciali" le donne del volontariato. Serve a ricordare che ci sono stati — e in parte ancora ci sono — **ostacoli** da riconoscere e superare. Quando parliamo di Protezione Civile:
+La Giornata internazionale della donna serve a ricordare che ci sono stati — e in parte ancora ci sono — **ostacoli** da riconoscere e superare. Quando parliamo di Protezione Civile:
 
 - **L'equipaggiamento** di serie è stato a lungo pensato "per l'uomo medio": divise, scarpe, attrezzature. Oggi la situazione migliora ma non ovunque.
 - **La conciliazione** con il lavoro di cura familiare — spesso sbilanciato sulle donne — incide sulla disponibilità a partecipare a turni di reperibilità e attivazioni lunghe.
@@ -98,4 +98,4 @@ E **grazie** anche alle tante donne che, pur non essendo nel Gruppo, sostengono 
 - Pagina: [Diventa volontario](/diventa-volontario/)
 - [ONU Donne — Giornata Internazionale della donna](https://www.unwomen.org/)
 
-L'8 marzo è tutti i giorni. Per ogni volontaria: grazie. Il sistema, davvero, non funzionerebbe senza di voi.
+Per ogni volontaria del Gruppo: grazie. Il sistema non funzionerebbe senza di voi.

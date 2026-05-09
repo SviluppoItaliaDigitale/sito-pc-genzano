@@ -15,7 +15,7 @@ allegati: []
 draft: false
 ---
 
-Sono passati **quindici anni**. Erano le **14:46 di venerdì 11 marzo 2011** ora locale giapponese (le **6:46** del mattino in Italia). Al largo della costa nord-orientale del Giappone, nella regione del **Tōhoku**, una scossa sismica di **magnitudo momento 9.0** — una delle più potenti mai registrate nella storia degli strumenti — scosse l'arcipelago. Era la **quinta scossa più forte** della storia sismologica mondiale.
+Erano le **14:46 di venerdì 11 marzo 2011** ora locale (le **6:46** in Italia). Al largo della costa nord-orientale del Giappone, nella regione del **Tōhoku**, una scossa di **magnitudo momento 9.0** — quinta più potente mai registrata nella storia sismologica — scosse l'arcipelago. Seguì uno tsunami con onde fino a 40 metri. Poi l'incidente nucleare di Fukushima Daiichi. Quindici anni dopo, è ancora il punto di riferimento mondiale per capire cosa significa un'emergenza multipla.
 
 {{< foto src="/images/2026-evento-tohoku-2011-fukushima.webp"
          alt="La centrale nucleare di Fukushima Daiichi colpita dal maremoto dell'11 marzo 2011"
@@ -23,7 +23,7 @@ Sono passati **quindici anni**. Erano le **14:46 di venerdì 11 marzo 2011** ora
 
 Ma il terremoto, da solo, non sarebbe stato l'evento decisivo. Mezz'ora dopo, lo **tsunami** generato dal sisma raggiunse la costa con onde alte **fino a 40 metri** in alcuni punti. Travolse città, porti, autostrade, treni, scuole. Penetrò per **chilometri** nell'entroterra. La **Centrale nucleare di Fukushima Daiichi** — situata a 250 chilometri a nord-est di Tokyo — fu colpita da onde di **14 metri**, tre volte più alte della barriera di protezione progettata.
 
-L'**evento tripla** — terremoto, tsunami, incidente nucleare — provocò **18.500 vittime**, oltre **2.500 dispersi mai ritrovati**, mezzo milione di sfollati, danni economici stimati in **300 miliardi di dollari**. È il **disastro più costoso della storia**. La centrale di Fukushima perse il controllo di tre reattori, che andarono in **fusione del nocciolo (meltdown)**. La nube radioattiva fu fortunatamente molto più contenuta di quella di Chernobyl, ma l'impatto psicologico, ambientale ed energetico globale fu enorme.
+Il **triplice disastro** — terremoto, tsunami, incidente nucleare — provocò **19.747 vittime** accertate (dato INGV/JMA), oltre **2.500 dispersi mai ritrovati**, mezzo milione di sfollati, danni economici stimati in **300 miliardi di dollari**. È il **disastro più costoso della storia**. La centrale di Fukushima perse il controllo di tre reattori, che andarono in **fusione del nocciolo (meltdown)**. La nube radioattiva fu fortunatamente molto più contenuta di quella di Chernobyl, ma l'impatto psicologico, ambientale ed energetico globale fu enorme.
 
 Quindici anni dopo, l'**11 marzo 2011** è uno degli eventi che hanno **definito** la cultura mondiale del rischio nel ventunesimo secolo. L'Italia — che non ha grandi rischi tsunami sulle proprie coste tirreniche e adriatiche, ma ne ha sulle coste calabro-siciliane — ha imparato anche da Tōhoku ad attivare un proprio **sistema nazionale di allerta tsunami**, oggi parte integrante della protezione civile.
 
@@ -43,14 +43,17 @@ I **rilasci radioattivi** atmosferici e marini di Fukushima sono stati molto inf
 
 Tōhoku ha insegnato al mondo (e alla protezione civile italiana) molte cose. Le tre più importanti:
 
-**1. Le emergenze multiple non sono la somma di emergenze singole.**
-Quando un evento ne genera altri (sisma → tsunami → incidente nucleare), la **risposta operativa** non può essere lineare. Servono catene di comando capaci di gestire **scenari concatenati** dove ogni risposta a un problema può aggravare l'altro. La **gestione del Sindaco** di un Comune colpito da scenari multipli è un compito molto più complesso di quanto le esercitazioni "su singolo evento" suggeriscano.
+### Le emergenze multiple non sono la somma di emergenze singole
 
-**2. Le barriere fisiche da sole non bastano.**
+Quando un evento ne genera altri (sisma → tsunami → incidente nucleare), la **risposta operativa** non può essere lineare. Servono catene di comando capaci di gestire **scenari concatenati**, dove ogni risposta a un problema può aggravare l'altro. Gestire scenari multipli simultanei è molto più complesso di quanto le esercitazioni "su singolo evento" suggeriscano.
+
+### Le barriere fisiche da sole non bastano
+
 Il Giappone aveva costruito un sistema di **dighe costiere** considerato fra i più robusti al mondo. Furono inutili contro un'onda di 14 metri. La lezione internazionale è che **nessuna barriera è infinita**: il rischio residuo va sempre considerato, e la **pianificazione dell'evacuazione** è il livello finale di difesa.
 
-**3. I sistemi di allerta precoce salvano vite.**
-Il **Japan Meteorological Agency (JMA)** emise l'**allerta tsunami** entro 3 minuti dalla scossa, usando i dati sismici per prevedere altezza e tempo di arrivo delle onde. Molti residenti furono salvati. Tuttavia, in alcune comunità remote, l'allerta sottostimò l'altezza delle onde (inizialmente prevista di 6 metri, poi aggiornata a 10+) e persone che si erano spostate ai "punti alti" tradizionali furono comunque travolte. È il **paradosso degli allerta**: dare il numero **giusto** è importante quanto darlo **in tempo**.
+### I sistemi di allerta precoce salvano vite
+
+Il **Japan Meteorological Agency (JMA)** emise l'**allerta tsunami** entro 3 minuti dalla scossa, usando i dati sismici per prevedere altezza e tempo di arrivo delle onde. Molti residenti furono salvati. In alcune comunità remote, però, l'allerta sottostimò l'altezza delle onde (inizialmente prevista di 6 metri, poi aggiornata a 10+) e persone rifugiatesi nei "punti alti" tradizionali furono comunque travolte. È il **paradosso dell'allerta**: dare il numero **giusto** è importante quanto darlo **in tempo**.
 
 ## Il sistema italiano di allerta tsunami
 
@@ -66,13 +69,13 @@ Le **zone italiane più esposte** al rischio tsunami sono la **Sicilia orientale
 
 ## Cosa deve sapere il cittadino oggi
 
-Per chi vive sulla costa italiana, ne abbiamo parlato anche in altri articoli, e la regola è semplice:
+Per chi vive sulla costa italiana la regola è semplice:
 
 1. **Se senti una scossa sismica forte sulla costa o vedi che il mare si ritira improvvisamente**: NON aspettare l'allerta ufficiale. **Sali subito in alto** (zone elevate, piani alti degli edifici, colline). Lo tsunami può arrivare in pochi minuti.
 2. **Se ricevi un'allerta IT-alert o un'allerta del DPC**: rispetta le indicazioni. Se è "WATCH": evacua subito le zone basse della costa.
 3. **Conosci il piano di emergenza tsunami** del tuo Comune (se costiero). Le mappe di evacuazione sono pubbliche.
 
-Per chi vive nell'**interno**, il messaggio di Tōhoku è diverso: **i sistemi di emergenza non funzionano se non sono testati**. Il modo migliore di onorare le 18.500 vittime è **partecipare alle esercitazioni** del proprio Comune, conoscere i piani, sapere cosa fare.
+Per chi vive **nell'entroterra** — come Genzano di Roma — il messaggio di Tōhoku è diverso: **i sistemi di emergenza non funzionano se non sono testati**. Il modo migliore di onorare le 19.747 vittime è **partecipare alle esercitazioni** del proprio Comune, conoscere i piani, sapere cosa fare.
 
 ## Fukushima e il rischio nucleare
 
@@ -82,11 +85,11 @@ Per il rischio nucleare italiano (più legato a possibili eventi su centrali est
 
 ## In ricordo
 
-Le **18.500 vittime ufficiali** di Tōhoku (oltre i **2.500 dispersi** non ritrovati) sono ricordate ogni 11 marzo in Giappone con cerimonie nazionali. Le coste del Tōhoku sono in ricostruzione da quindici anni; **interi villaggi** sono stati spostati in alto, **nuove dighe più alte** sono state costruite, una **memorialistica forte** (musei, pietre commemorative ai punti raggiunti dall'onda, insegnamento scolastico) è oggi parte della cultura collettiva.
+Le **19.747 vittime** di Tōhoku (oltre i **2.500 dispersi** non ritrovati) sono ricordate ogni 11 marzo in Giappone con cerimonie nazionali. Le coste del Tōhoku sono in ricostruzione da quindici anni. **Interi villaggi** sono stati spostati in quota. **Nuove dighe più alte** sono state costruite. **Musei, pietre commemorative e programmi scolastici** sono oggi parte della cultura collettiva.
 
-Il **simbolo internazionale** dello tsunami giapponese è la **pietra tradizionale** delle aree costiere che recita, in giapponese antico: *"Non costruite case sotto questa pietra"*. Pietre piantate dai sopravvissuti dello tsunami di **Sanriku 1933** che indicavano il limite raggiunto da quell'onda. Dove gli abitanti di Tōhoku **avevano rispettato** il monito tramandato per generazioni, le case furono salvate. Dove **erano stati dimenticati**, no. È una delle lezioni più potenti della cultura del rischio: **la memoria operativa** vale quanto la tecnologia.
+Il **simbolo** dello tsunami giapponese è la **pietra tradizionale** delle aree costiere: *"Non costruite case sotto questa pietra"*. L'avevano piantata i sopravvissuti di **Sanriku 1933** per segnare il limite raggiunto dall'onda. Dove gli abitanti di Tōhoku **avevano rispettato** quel monito, le case furono salvate. Dove **era stato dimenticato**, no. Lezione potente per la cultura del rischio: **la memoria operativa** vale quanto la tecnologia.
 
-Quindici anni dopo, il messaggio di Tōhoku è semplice: **anche le società più tecnologicamente avanzate** possono essere colpite oltre la loro capacità di resistere. Solo la **pianificazione, la memoria, la formazione, la prudenza** del cittadino — sostenute da uno Stato presente — possono ridurre il numero di vite perse al prossimo evento.
+Quindici anni dopo, il messaggio di Tōhoku è semplice: **anche le società più tecnologicamente avanzate** possono essere colpite oltre la loro soglia di resistenza. Solo **pianificazione, memoria, formazione e prudenza** del cittadino — sostenute da istituzioni presenti — riducono le vite perse al prossimo evento.
 
 ## Per approfondire (fonti istituzionali)
 
