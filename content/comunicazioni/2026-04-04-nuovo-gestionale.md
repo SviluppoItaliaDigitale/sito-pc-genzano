@@ -49,7 +49,15 @@ L'adozione di ActivePager garantisce:
 
 ## Per approfondire
 
-- Articolo: [Nuovo logo della Protezione Civile](/comunicazioni/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano/)
-- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
-- Articolo: [Attivazione squadre primavera: calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/)
-- Articolo: [Sicurezza della rete e cybersecurity in emergenza](/comunicazioni/2026-02-07-sicurezza-rete-cybersecurity-emergenza/)
+Sul nostro sito:
+
+- [Nuovo logo della Protezione Civile](/comunicazioni/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano/).
+- [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
+- [Attivazione squadre primavera: calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/).
+- [Sicurezza della rete e cybersecurity in emergenza](/comunicazioni/2026-02-07-sicurezza-rete-cybersecurity-emergenza/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
+- [GDPR — Regolamento UE 2016/679](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679).
