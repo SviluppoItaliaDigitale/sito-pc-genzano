@@ -5,8 +5,8 @@ description: "Il 9 maggio si celebra la Giornata dell'Europa. Cos'è il Meccanis
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-09-ercc-bruxelles.webp"
-image_alt: "Sala operativa dell'ERCC a Bruxelles durante una risposta internazionale di protezione civile"
+image: "/images/2026-05-09-giornata-europa-meccanismo-protezione-civile-ue.webp"
+image_alt: "Cover dell'articolo: Giornata dell'Europa: il Meccanismo Unionale di Protezione Civile"
 scadenza: ""
 area: "Europa"
 allegati: []
