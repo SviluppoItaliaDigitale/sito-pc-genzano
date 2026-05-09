@@ -31,7 +31,7 @@ Il rischio da temperature estreme si **riduce progressivamente** ma non scompare
 Il **periodo di massima pericolosità** (DPGR Lazio) si chiude spesso a fine settembre, ma l'attenzione resta alta **tutto l'autunno**, soprattutto nelle giornate ventose e asciutte.
 
 ### Rischio idrogeologico
-Le **prime piogge autunnali** su terreno secco sono spesso le più pericolose: la pioggia scorre in superficie invece di essere assorbita, causando **flash flood** e **allagamenti lampo**. Primi segnali tipici:
+Le **prime piogge autunnali** su terreno secco sono spesso le più pericolose: la pioggia scorre in superficie invece di essere assorbita, causando **alluvioni lampo** (*flash flood*) e **allagamenti urbani**. Primi segnali tipici:
 
 - **temporali pomeridiani** con precipitazioni intense;
 - **grandine** localizzata;

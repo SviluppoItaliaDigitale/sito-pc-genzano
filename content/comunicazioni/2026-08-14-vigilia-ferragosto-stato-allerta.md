@@ -53,7 +53,7 @@ Per i cittadini di Genzano:
 - Lanciare lanterne volanti (vietate per legge e causa accertata di incendi).
 - Parcheggiare in sterpaglie: la marmitta calda può innescare un incendio.
 - Ignorare i cartelli di divieto di balneazione.
-- Viaggiare senza aver dato noticia a qualcuno del percorso.
+- Viaggiare senza aver detto a qualcuno il percorso.
 
 ## In caso di allerta meteo durante il Ferragosto
 

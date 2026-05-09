@@ -33,7 +33,7 @@ Un mix classico del Lazio estivo, con fattori di aumento della pericolosità AIB
 Il Gruppo Comunale ha:
 
 - mantenuto attivo il **servizio di avvistamento** nei giorni di massima pericolosità;
-- collaborato con il **COR della Regione Lazio** e le strutture provinciali;
+- collaborato con il **Centro Operativo Regionale (COR) della Regione Lazio** e le strutture provinciali;
 - partecipato a interventi di **spegnimento e bonifica** su segnalazione del sistema 112 e del COR;
 - collaborato con **Vigili del Fuoco**, **Carabinieri Forestali**, **Parco Castelli Romani**, Gruppi dei Comuni limitrofi.
 

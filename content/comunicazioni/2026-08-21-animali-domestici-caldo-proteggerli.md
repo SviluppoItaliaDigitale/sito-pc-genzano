@@ -84,7 +84,7 @@ Chi parte per le vacanze deve:
 ## Per approfondire
 
 - [Ministero della Salute — Animali e caldo](https://www.salute.gov.it/)
-- [ENPA, LAV, Leidaa](https://www.enpa.it/) per segnalazioni.
+- Associazioni per la tutela animali: [ENPA](https://www.enpa.it/), [LAV](https://www.lav.it/), [LEIDAA](https://www.leidaa.info/).
 - [ASL Roma 6 — Veterinaria](https://www.aslroma6.it/)
 
 In emergenza per persone: **112**. Per animali in pericolo: **112** (pubblica incolumità) o contatto diretto al veterinario.

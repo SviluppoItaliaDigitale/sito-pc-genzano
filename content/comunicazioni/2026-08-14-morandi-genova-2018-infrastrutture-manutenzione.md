@@ -62,7 +62,7 @@ In Italia, oggi:
 - Il **MIT** (Ministero delle Infrastrutture e dei Trasporti) gestisce attraverso **AINOP** un censimento di **oltre 200.000 opere d'arte stradali e autostradali** distribuite sull'intera rete nazionale.
 - Le **Linee Guida 2020** classificano ogni ponte in cinque classi di **attenzione** (bassa, media-bassa, media, media-alta, alta) sulla base di età, materiali, esposizione, importanza strategica.
 - I **gestori autostradali** sono obbligati a presentare piani triennali di manutenzione e a sottoporsi a verifiche dell'**ANSFISA**.
-- I **Comuni** hanno l'obbligo di censire le opere di propria competenza (strade comunali, ponti minori, attraversamenti) e di pianificarne la manutenzione, anche se la concreta attuazione resta uneven sul territorio.
+- I **Comuni** hanno l'obbligo di censire le opere di propria competenza (strade comunali, ponti minori, attraversamenti) e di pianificarne la manutenzione, anche se l'attuazione concreta resta disomogenea sul territorio.
 
 ## Cosa deve sapere il cittadino oggi
 

@@ -32,7 +32,7 @@ Solo una minoranza degli incendi è riconducibile a cause naturali (fulmini).
 
 - **Non accendere** fuochi nei boschi e nelle aree agricole dal 15 giugno al 30 settembre, come previsto dalle ordinanze regionali.
 - **Non gettare** mozziconi da veicoli o camminando.
-- **Non abbandonare** rifiuti in aree naturali (vetro e plastica possono innescare inneschi solari).
+- **Non abbandonare** rifiuti in aree naturali: vetro e plastica possono provocare inneschi al sole.
 - **Segnalare** subito al **112** qualsiasi principio di incendio o fumo sospetto.
 - **Non tentare** di spegnere fiamme di più di qualche metro quadrato: il fuoco boschivo avanza in modo imprevedibile.
 - **Non sostare** in auto in strade forestali strette: lasciare sempre via libera ai mezzi di soccorso.

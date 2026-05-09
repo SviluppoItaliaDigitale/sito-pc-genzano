@@ -39,7 +39,7 @@ Un Piano di Emergenza efficace risponde alle domande:
 - dove sono i **punti di raccolta** esterni?
 - chi fa cosa: **ruoli chiari** per squadra emergenza, addetti, referenti.
 
-Il Piano deve essere **conosciuto da tutti**: docenti, ATA, allievi adeguatamente alla loro età.
+Il Piano deve essere **conosciuto da tutti**: docenti, personale ATA e allievi, ciascuno in modo adatto alla propria età.
 
 ## Le prove di evacuazione
 

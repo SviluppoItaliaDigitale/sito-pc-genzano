@@ -21,7 +21,7 @@ Il **controesodo** è il fenomeno dei rientri dalle vacanze estive. I primi flus
 - Preferire le **partenze nelle prime ore del mattino** o **serali** in giornate caldissime.
 - Verificare lo **stato del veicolo**: pneumatici, livelli dei liquidi, impianto di climatizzazione.
 - Calcolare **pause ogni due ore** e assicurarsi di avere acqua a bordo.
-- **Cariche** di cellulare e power bank prima di partire.
+- **Caricare** cellulare e power bank prima di partire.
 
 ## A bordo
 

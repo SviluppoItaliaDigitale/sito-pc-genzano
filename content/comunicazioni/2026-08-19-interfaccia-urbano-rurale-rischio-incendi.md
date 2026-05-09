@@ -64,7 +64,7 @@ Se abiti in zona a rischio, vale la pena avere un piano minimo:
 
 ## Il ruolo dei Comuni
 
-I Comuni hanno l'obbligo di tenere un **catasto degli incendi boschivi** (L. 353/2000): un registro degli appezzamenti percorsi dal fuoco, con conseguenti vincoli urbanistici quindicennali. Tale strumento tutela dal rischio che aree incendiate vengano rapidamente edificate, peggiorando il quadro di vulnerabilità.
+I Comuni hanno l'obbligo di tenere un **catasto degli incendi boschivi** (L. 353/2000): un registro degli appezzamenti percorsi dal fuoco, con vincoli urbanistici quindicennali. Il catasto impedisce che le aree incendiate vengano subito edificate, peggiorando la vulnerabilità del territorio.
 
 ## Per approfondire
 

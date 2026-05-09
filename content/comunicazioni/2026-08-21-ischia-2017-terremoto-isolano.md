@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Alle **20:57 del 21 agosto 2017** una scossa di **magnitudo 4.0** colpì l'isola d'Ischia. Epicentro a **Casamicciola Terme**, ipocentro estremamente superficiale (circa 2 chilometri di profondità). Una scossa che, in altre zone d'Italia, sarebbe stata avvertita come fastidiosa ma non distruttiva.A Ischia provocò **2 morti**, **42 feriti**, **2.600 sfollati**, decine di edifici crollati o gravemente danneggiati nel centro storico di Casamicciola.
+Alle **20:57 del 21 agosto 2017** una scossa di **magnitudo 4.0** colpì l'isola d'Ischia. Epicentro a **Casamicciola Terme**, ipocentro estremamente superficiale (circa 2 chilometri di profondità). Una scossa che, in altre zone d'Italia, sarebbe stata avvertita come fastidiosa ma non distruttiva.
+
+A Ischia provocò **2 morti**, **42 feriti**, **2.600 sfollati**, decine di edifici crollati o gravemente danneggiati nel centro storico di Casamicciola.
 
 ## Magnitudo bassa, danni gravi: perché
 
