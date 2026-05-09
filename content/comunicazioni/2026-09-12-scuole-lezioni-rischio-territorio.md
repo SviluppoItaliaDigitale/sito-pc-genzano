@@ -29,7 +29,7 @@ Il Gruppo di Genzano propone percorsi graduati per età:
 - **storie** sulla Protezione Civile;
 - **canzoni** sui comportamenti di autoprotezione;
 - **visite** giocate ai mezzi del Gruppo;
-- **personaggi** come la **Famiglia Rischio Zero** del DPC.
+- **giochi e disegni** su acqua, fuoco, terremoto.
 
 ### Scuola primaria (6-11 anni)
 - **cosa è** la Protezione Civile;
@@ -37,7 +37,7 @@ Il Gruppo di Genzano propone percorsi graduati per età:
 - **come chiamare** il 112 (simulazioni);
 - **terremoto**: cosa fare (protezione sotto il banco, uscita ordinata);
 - **incendio**: cosa fare (evacuazione, non usare ascensori);
-- **Io Non Rischio Junior** (campagna nazionale del DPC).
+- **Io Non Rischio** (campagna nazionale del DPC) declinata per i bambini.
 
 ### Scuola secondaria di primo grado (11-14 anni)
 - **sistema nazionale** di Protezione Civile;
@@ -48,7 +48,7 @@ Il Gruppo di Genzano propone percorsi graduati per età:
 
 ### Scuola secondaria di secondo grado (14-19 anni)
 - **rischio e società**;
-- **decreto Legislativo 1/2018** e normativa PC;
+- **D.Lgs. 1/2018** e normativa di Protezione Civile;
 - **comunicazione di crisi**;
 - **cambiamento climatico** e rischi emergenti;
 - **orientamento** a percorsi professionali e di volontariato.
@@ -68,7 +68,7 @@ Le lezioni combinano:
 Il Gruppo propone lezioni **a richiesta della scuola** o in occasione di:
 
 - **prove di evacuazione** concordate;
-- **giornate della sicurezza** (DM, Settimana della PC);
+- **giornate della sicurezza** in occasione della Settimana nazionale della Protezione Civile;
 - **campagne nazionali** (Io Non Rischio, Giornata Internazionale Riduzione Disastri);
 - **progetti PCTO** per le superiori.
 

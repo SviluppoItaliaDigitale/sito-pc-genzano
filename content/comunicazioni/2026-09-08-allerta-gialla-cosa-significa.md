@@ -17,7 +17,7 @@ Nella comunicazione istituzionale, **allerta gialla** è il livello più frequen
 
 ## Il sistema di allerta
 
-Il sistema nazionale distingue tre livelli operativi:
+Il sistema nazionale distingue quattro livelli:
 
 | Livello | Significato |
 |---|---|
@@ -46,7 +46,7 @@ L'allerta si riferisce sempre a un **rischio specifico** (idrogeologico, idrauli
 ## Cosa NON fare
 
 - **ignorare** l'allerta perché "è solo gialla";
-- **panicare**: il livello giallo non giustifica chiusure di massa;
+- **andare in panico**: il livello giallo non giustifica chiusure di massa;
 - **affidarsi** a fonti non istituzionali (canali social non ufficiali);
 - **sottovalutare** aree fragili (vicino fiumi, versanti, aree boscate).
 

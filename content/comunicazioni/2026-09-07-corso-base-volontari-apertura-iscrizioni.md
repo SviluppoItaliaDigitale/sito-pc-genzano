@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Sono aperte le **iscrizioni al nuovo corso base** per diventare **Volontario di Protezione Civile** nel Gruppo Comunale di Genzano. Il percorso, obbligatorio per chi vuole entrare a far parte del Gruppo, è gratuito, si svolge in orario serale e prefestivo e culmina in un'abilitazione operativa riconosciuta dalla Regione Lazio.
+Sono aperte le **iscrizioni al nuovo corso base** per diventare **Volontario di Protezione Civile** nel Gruppo Comunale di Genzano. Il percorso è obbligatorio per chi vuole entrare nel Gruppo. È gratuito, si svolge in orario serale e prefestivo, e si conclude con un'abilitazione operativa riconosciuta dalla Regione Lazio.
 
 ## A chi è rivolto
 
@@ -71,7 +71,7 @@ Chi supera il corso entra in un percorso di **affiancamento** di 6 mesi. Durante
 
 Il volontariato di PC è:
 
-- **impegno civico** riconosciuto dalla legge italiana (L. 266/1991, Codice del Terzo Settore);
+- **impegno civico** riconosciuto dalla legge italiana (D.Lgs. 117/2017 — Codice del Terzo Settore);
 - **formazione continua** nei campi della sicurezza, del soccorso, della cartografia;
 - **occasione** di conoscenza del proprio territorio;
 - **esperienza** condivisa con persone motivate;

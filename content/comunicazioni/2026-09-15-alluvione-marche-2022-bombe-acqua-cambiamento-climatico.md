@@ -48,7 +48,7 @@ I primi soccorsi furono attivati nelle ore della notte stessa. **Vigili del fuoc
 
 Le operazioni di **ricerca dei dispersi**, **soccorso ai sopravvissuti intrappolati nelle case allagate**, **evacuazione delle aree ancora a rischio**, **drenaggio degli edifici colpiti**, **ripristino delle linee elettriche e di comunicazione** durarono settimane. Lo Stato dichiarò lo **stato di emergenza** e furono stanziati i primi 5 milioni di euro di risorse, poi progressivamente integrati.
 
-Particolarmente complesso fu il caso di **Cantiano**, paese marchigiano dell'entroterra, dove il torrente **Burano** distrusse parte del centro storico e mise in crisi le linee di approvvigionamento idrico. Un altro caso emblematico fu quello di **Castelleone di Suasa**, dove tra le vittime si contò un volontario dei vigili del fuoco intervenuto per soccorrere una famiglia.
+Particolarmente complesso fu il caso di **Cantiano**, paese marchigiano dell'entroterra, dove il torrente **Burano** distrusse parte del centro storico e mise in crisi le linee di approvvigionamento idrico. Tra le vittime si contò anche un volontario intervenuto per soccorrere chi era rimasto intrappolato nelle case allagate.
 
 ## La lezione: codici colore, allerta meteo, comunicazione
 
@@ -64,7 +64,7 @@ Negli anni successivi all'alluvione del 2022:
 
 - **IT-alert** è stato pienamente attivato dal 2024 e oggi il **Dipartimento di Protezione Civile** ha completato la copertura nazionale. Il sistema invia notifiche solo a chi si trova nell'area colpita ed è gratuito.
 - I **Centri Funzionali Regionali** sono stati potenziati con strumenti di **nowcasting** (previsione a brevissimo termine, 0-3 ore) basati su radar meteorologici, satelliti e modelli ad altissima risoluzione.
-- Nei **Piani di Emergenza Comunali** è stato rafforzato il principio di **autoprotezione di prima istanza**: non si può aspettare l'intervento delle squadre di soccorso per una piena improvvisa.
+- I **Piani di Emergenza Comunali** hanno rafforzato il principio dell'**autoprotezione di prima istanza**: non si può aspettare l'intervento delle squadre di soccorso davanti a una piena improvvisa.
 - Si è acceso il dibattito sulla **manutenzione ordinaria di fossi e caditoie** comunali: un fosso intasato da rifiuti o vegetazione moltiplica gli effetti di una piena improvvisa.
 
 ## Cosa deve sapere il cittadino oggi

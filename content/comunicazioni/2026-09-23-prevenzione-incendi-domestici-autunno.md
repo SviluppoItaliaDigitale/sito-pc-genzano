@@ -58,7 +58,7 @@ Non obbligatori per legge nelle abitazioni, ma **fortemente raccomandati**:
 ### Estintore domestico
 Non obbligatorio ma utile:
 
-- modello **6 kg a polvere ABC** o **idrico per classe K** (per cucina);
+- modello **6 kg a polvere ABC** o **estintore di classe F** (per olii da cucina, norma UNI EN 2);
 - posizione accessibile (ingresso, cucina);
 - **formazione** base di tutti i membri della famiglia all'uso.
 

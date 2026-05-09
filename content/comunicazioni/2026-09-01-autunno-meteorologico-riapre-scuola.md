@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **1° settembre** è, in convenzione meteorologica, il **primo giorno dell'autunno**. Un passaggio simbolico che coincide quest'anno con l'avvio di una fase operativa importante per la Protezione Civile comunale. Chiusura della stagione AIB, ripresa delle scuole, avvio delle attività formative, preparazione del territorio alla stagione delle piogge.
+Il **1° settembre** è, per convenzione meteorologica, il **primo giorno dell'autunno**. Coincide con una fase operativa importante per la Protezione Civile comunale: chiusura della stagione AIB, ripresa delle scuole, avvio delle attività formative, preparazione del territorio alle piogge autunnali.
 
 ## Cosa cambia, in pratica
 
@@ -36,9 +36,9 @@ Dal punto di vista organizzativo:
 Sono settimane delicate per diversi motivi:
 
 1. i **terreni secchi** faticano ad assorbire le prime piogge intense;
-2. il **rischio AIB** resta alto fino a quando non arrivano precipitazioni stabilizzanti;
-3. la **mobilità urbana** si intensifica per rientri e ripresa di lavoro e scuola;
-4. i **cantieri estivi** spesso si concludono in fretta, con attenzione alla sicurezza.
+2. il **rischio incendi boschivi** resta alto fino alle prime piogge consistenti;
+3. la **mobilità urbana** si intensifica per i rientri e la ripresa di lavoro e scuola;
+4. i **cantieri estivi** si concludono spesso in fretta: serve attenzione alla sicurezza.
 
 ## L'invito del Gruppo
 

@@ -19,7 +19,7 @@ In Italia, secondo stime del **Servizio Meteorologico dell'Aeronautica** e del *
 
 Il fulmine è una **scarica elettrica** fra nube e terra (o fra nubi). Può scaricare **centinaia di migliaia di ampere** in pochi millisecondi. La corrente attraversa il percorso di minor resistenza: aria ionizzata, metalli, acqua, esseri viventi alti rispetto al contesto.
 
-Non esiste "attrarre i fulmini": esistono **posizioni di maggior rischio**.
+Non esiste un modo di "attrarre" i fulmini: esistono **posizioni di rischio maggiore**.
 
 ## Posizioni di rischio
 
@@ -64,7 +64,7 @@ Un fulmine può causare: arresto cardiorespiratorio, ustioni, lesioni neurologic
 2. La persona colpita **non è elettrica**: si può e si deve toccarla per prestare aiuto.
 3. Se non respira o non ha polso, iniziare **RCP** (rianimazione cardiopolmonare) se formati.
 4. **Coprire** con coperta termica.
-5. **Non lasciare solo** fino all'arrivo dei soccorsi.
+5. **Restare accanto** alla persona fino all'arrivo dei soccorsi.
 
 ## Fulmini e animali domestici
 

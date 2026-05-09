@@ -32,7 +32,7 @@ crea **moti convettivi rapidi**: l'aria calda sale velocemente, si condensa in *
 
 ## Segnali da riconoscere
 
-Il temporale **si annuncia**:
+Il temporale **si annuncia con segnali precisi**:
 
 - **aumento dell'afa** nelle ore precedenti;
 - **cumulonembi** scuri all'orizzonte;
@@ -41,7 +41,7 @@ Il temporale **si annuncia**:
 - **lampi** in lontananza;
 - **odore** di terra bagnata (petricore) o di ozono.
 
-Se i **lampi** si vedono o si sentono, il temporale è a portata.
+Se si vedono lampi o si sentono tuoni, il temporale è già vicino.
 
 ## Regola del 30-30
 
@@ -81,7 +81,7 @@ Per misurare la distanza e la pericolosità:
 
 ## Quando scatta un'allerta
 
-Un'**allerta gialla** o **arancione** della Regione Lazio non significa che il temporale colpirà qui: significa che **è possibile**. L'allerta rende prudente l'autoprotezione: rimandare attività all'aperto, chiudere bene casa, tenere d'occhio il meteo.
+Un'**allerta gialla** o **arancione** del Centro Funzionale Regionale Lazio non significa che il temporale colpirà qui: significa che **è possibile**. L'allerta rende prudente l'autoprotezione: rimandare le attività all'aperto, chiudere bene casa, controllare gli aggiornamenti meteo.
 
 ## Per approfondire
 

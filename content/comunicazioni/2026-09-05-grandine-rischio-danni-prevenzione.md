@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Negli ultimi anni, **anche nel Lazio**, si registrano episodi di **grandinate intense** con chicchi di dimensioni anche superiori a 5 centimetri. Non è un fenomeno puramente alpino: è una realtà dei temporali di fine estate e inizio autunno anche nell'Italia centrale. Il Gruppo di PC di Genzano raccoglie in questo articolo le regole base per riconoscere, proteggersi e limitare i danni.
+Negli ultimi anni anche nel Lazio si registrano **grandinate intense**, con chicchi che superano i 5 centimetri. Non è più un fenomeno solo alpino: i temporali di fine estate e inizio autunno producono grandine severa anche nell'Italia centrale. Di seguito le regole base per riconoscere il pericolo, proteggersi e limitare i danni.
 
 ## Come si forma la grandine
 
@@ -25,7 +25,7 @@ Più è forte la corrente ascensionale, più grande è il chicco. Temporali seve
 
 - **piccola** (< 1 cm): disagio minimo, raramente danni;
 - **media** (1-3 cm): danni a colture, piante, veicoli, serramenti;
-- **grande** (3-5 cm): danni seri a auto, tetti, tendoni, panne solari;
+- **grande** (3-5 cm): danni seri ad auto, tetti, tendoni, pannelli solari;
 - **molto grande** (> 5 cm): rischio lesioni a persone all'aperto, danni significativi a strutture.
 
 ## Danni tipici
