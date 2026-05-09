@@ -25,15 +25,15 @@ Anche il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** �
 
 ## Una dotazione per intervenire più rapidamente
 
-All'evento erano presenti anche **Massimo La Pietra**, Direttore Regionale per l'Emergenza, la Protezione Civile e il NUE 112, e **Narciso Mostarda**, Direttore Generale di ARES 118.
+All'evento erano presenti anche **Massimo La Pietra** (Direttore Regionale per l'Emergenza, la Protezione Civile e il NUE 112) e **Narciso Mostarda** (Direttore Generale di ARES 118).
 
 I defibrillatori saranno registrati sul portale di ARES 118, che gestisce l'anagrafe dei defibrillatori presenti sul territorio regionale. Questo consente alla centrale operativa di individuare rapidamente lo strumento più vicino al luogo di un'emergenza, riducendo ulteriormente i tempi di intervento.
 
 ## Il percorso di formazione BLSD
 
-La consegna si inserisce in un più ampio programma avviato dalla Regione per rafforzare le competenze dei volontari nel primo soccorso. Negli ultimi mesi sono stati intensificati i corsi **BLSD (Basic Life Support and Defibrillation)**, realizzati in collaborazione con ARES 118.
+La consegna fa parte di un programma più ampio avviato dalla Regione per rafforzare le competenze dei volontari nel primo soccorso. Negli ultimi mesi la Regione ha intensificato i corsi **BLSD (Basic Life Support and Defibrillation)**, realizzati in collaborazione con ARES 118.
 
-L'obiettivo è fornire a ogni volontario le competenze necessarie per intervenire in modo tempestivo ed efficace nei casi di arresto cardiaco.
+L'obiettivo è formare ogni volontario a intervenire rapidamente ed efficacemente in caso di arresto cardiaco.
 
 > «Grazie all'acquisto e la consegna dei nuovi defibrillatori la Regione Lazio porta a compimento l'importante percorso avviato per rafforzare le competenze dei nostri volontari in materia di primo soccorso. Con queste azioni confermiamo l'impegno della Regione Lazio nel garantire la formazione dei volontari, assicurando così particolare attenzione per la prevenzione dei rischi.»
 >

@@ -120,11 +120,11 @@ L'**agricoltura** usa circa il **50% dell'acqua** consumata in Italia. Nei Caste
 
 Il **22 marzo** è un'occasione per:
 
-- **Visitare** una sorgente o un lavatoio storico dei Castelli.
-- **Partecipare** a iniziative con le scuole sull'acqua.
-- **Controllare** la propria casa: ci sono perdite? rubinetti che gocciolano?
-- **Informarsi** sulla qualità dell'acqua di Genzano attraverso il gestore.
-- **Controllare** se il proprio Comune ha un piano per le emergenze idriche.
+- **Visita** una sorgente o un lavatoio storico dei Castelli.
+- **Partecipa** a iniziative con le scuole sull'acqua.
+- **Controlla** la tua casa: ci sono perdite? rubinetti che gocciolano?
+- **Informati** sulla qualità dell'acqua di Genzano attraverso il gestore.
+- **Verifica** se il tuo Comune ha un piano per le emergenze idriche.
 
 ## Per approfondire
 

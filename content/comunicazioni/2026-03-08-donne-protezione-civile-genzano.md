@@ -13,15 +13,15 @@ allegati: []
 draft: false
 ---
 
-L'**8 marzo**, **Giornata internazionale della donna**, è un momento per riconoscere, anche nel volontariato di Protezione Civile, il **contributo delle donne**.
-
 Nel Gruppo Comunale di Genzano, come in tutto il sistema italiano, le donne sono **volontarie, formatrici, responsabili, coordinatrici, tecniche**. Non come eccezione, ma come **parte normale** di una realtà che funziona solo se tutti danno il proprio contributo.
+
+L'**8 marzo**, **Giornata internazionale della donna**, è l'occasione per dirlo con chiarezza — e per continuare a migliorare.
 
 ## Uno sguardo al passato
 
 Il volontariato italiano ha avuto, storicamente, una componente femminile molto forte. Dalle **crocerossine** dei conflitti mondiali alle **angele del fango** di Firenze 1966, le donne sono sempre state presenti nelle emergenze italiane.
 
-Nel sistema moderno di Protezione Civile, **la legge 225/1992** e il **D.Lgs. 1/2018** (Codice della Protezione Civile) parlano di **volontari**, senza distinzioni di genere. La cultura operativa ha però impiegato anni per superare gli stereotipi di un settore percepito come "maschile": la divisa, il lavoro fisico, la reperibilità notturna, le esercitazioni in luoghi impervi.
+Nel sistema moderno di Protezione Civile, **la legge 225/1992** e il **D.Lgs. 1/2018** (Codice della Protezione Civile) parlano di **volontari**, senza distinzioni di genere. La cultura operativa ha però impiegato anni per superare gli stereotipi di un settore percepito come "maschile": divisa, lavoro fisico, reperibilità notturna, esercitazioni in luoghi impervi.
 
 Oggi nei gruppi comunali e nelle associazioni la **presenza femminile è alta e crescente**. In alcune realtà supera il 50%. Nei ruoli di coordinamento, le donne portano competenze di **gestione**, **comunicazione**, **relazione con la cittadinanza** — competenze essenziali in ogni emergenza.
 
@@ -51,18 +51,18 @@ Su ognuno di questi punti **c'è lavoro da fare**, anche in un piccolo gruppo co
 
 ## Il contributo specifico
 
-Senza cadere in stereotipi, l'esperienza mostra che l'ingresso in forze del volontariato femminile ha **arricchito** la cultura operativa:
+Senza cadere in stereotipi: quando le donne sono entrate in forza nel volontariato, hanno **arricchito** la cultura operativa:
 
 - **Maggiore attenzione alla comunicazione** con popolazione vulnerabile (anziani, bambini, persone con disabilità).
 - **Sensibilità verso la relazione** con famiglie che hanno subito perdite o danni.
 - **Capacità di mediazione** in situazioni di tensione.
 - **Approccio pratico e collaborativo** al lavoro di squadra.
 
-Queste competenze non sono "femminili per natura": sono **apprendibili da tutti**. Ma l'ingresso di donne con queste competenze ne ha aumentato il peso nel modo di fare Protezione Civile.
+Queste competenze non sono "femminili per natura": sono **apprendibili da tutti**. Ma portarle nel Gruppo ha cambiato il modo di fare Protezione Civile.
 
 ## Storie (senza nomi)
 
-Nel nostro Gruppo, come in tanti altri, ci sono storie che vale la pena raccontare — senza indicare nomi, per rispetto della privacy:
+Nel nostro Gruppo, come in tanti altri, ci sono storie che vale la pena raccontare — senza nomi:
 
 - **La dottoressa di famiglia** che ha scelto di fare il corso antincendio perché "se capita qualcosa, voglio sapere come spegnere".
 - **La studentessa universitaria** che tra esami e tirocinio trova tempo per le esercitazioni.
@@ -74,7 +74,7 @@ Sono storie di **scelta libera**, senza militarismo, senza retorica. Persone che
 
 ## Verso un Gruppo più inclusivo
 
-Quello che possiamo continuare a fare, come Gruppo e come sistema:
+Come Gruppo e come sistema, possiamo continuare a:
 
 - **Selezionare equipaggiamenti** adatti a tutte le conformazioni corporee.
 - **Organizzare turnistica** compatibile con diverse esigenze familiari (uomini e donne, con figli piccoli, con genitori anziani).

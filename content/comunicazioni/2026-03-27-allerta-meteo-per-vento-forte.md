@@ -1,7 +1,7 @@
 ---
 title: "Allerta meteo per vento forte"
 date: 2026-03-27
-description: "È in vigore un'allerta meteo per vento forte sul territorio di Genzano di Roma. Si raccomanda la massima attenzione."
+description: "Allerta meteo per vento forte su Genzano di Roma emessa dal Centro Funzionale Regionale del Lazio. Cosa fare prima e durante le raffiche."
 badge: "Allerta"
 priorita: "urgente"
 autore: "Gruppo Comunale Volontari PC Genzano"
