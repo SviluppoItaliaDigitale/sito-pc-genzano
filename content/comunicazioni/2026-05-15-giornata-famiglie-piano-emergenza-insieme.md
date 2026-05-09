@@ -47,7 +47,7 @@ Non serve drammatizzare. Basta concordare poche regole semplici:
 - **Chi controlla l'allerta** e lo comunica ai familiari.
 - **Cosa facciamo** se siamo a scuola/lavoro e l'allerta è rossa (torniamo a casa? restiamo? dove?).
 - **Come mettiamo in sicurezza casa** (cosa togliamo dal balcone, cosa chiudiamo).
-- **Quali numeri chiamiamo** se c'è un'emergenza.
+- **Quali numeri chiamiamo** in emergenza: il **112** è il Numero Unico per ogni emergenza nel Lazio. Memorizzatelo insieme.
 
 ## Cinque: "Chi aiutiamo?"
 
@@ -99,9 +99,17 @@ Dedica **un'ora oggi** a una di queste cinque conversazioni. Anche solo una. In 
 
 ## Per approfondire
 
-- [ONU — Giornata delle Famiglie](https://www.un.org/en/observances/international-day-of-families)
-- Articolo correlato: [Piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
-- Articolo correlato: [Aiutare i vicini fragili in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
-- Pagina [Piano familiare](/piano-familiare/) del nostro sito
+Sul nostro sito:
+
+- [Piano familiare](/piano-familiare/): la guida operativa per famiglie del nostro sito.
+- [Piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/).
+- [Aiutare i vicini fragili in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Kit Calamità — Anziani](/formazione/kit-calamita-anziani/): scheda specifica per i nonni.
+- [Kit Calamità — Bambini](/formazione/kit-calamita-bambini/) e [Neonati](/formazione/kit-calamita-neonati/).
+- [Kit Calamità — Animali domestici](/formazione/kit-calamita-animali/).
+
+Fonti istituzionali:
+
+- [ONU — International Day of Families](https://www.un.org/en/observances/international-day-of-families).
 
 **Buona Giornata delle Famiglie.** E buon piano di emergenza, costruito insieme.

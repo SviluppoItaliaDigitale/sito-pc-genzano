@@ -86,20 +86,22 @@ I corsi di **PBLSD** (Pediatric Basic Life Support and Defibrillation) durano 5-
 - Società pediatriche e associazioni di genitori
 - Alcune scuole dell'infanzia, per genitori e personale
 
-## Per approfondire sul nostro sito
+## Per approfondire
 
-- [Kit emergenza per bambini](/formazione/kit-calamita-bambini/) — cosa mettere nella borsa per un'evacuazione con bambini piccoli
-- [Kit emergenza per neonati](/formazione/kit-calamita-neonati/) — specifico per i primissimi mesi di vita
-- [Soffocamento e disostruzione](/formazione/primo-soccorso/soffocamento-disostruzione/) — scheda di primo soccorso
-- [RCP su bambini e neonati](/formazione/primo-soccorso/rcp-bambini-neonati/) — rianimazione cardiopolmonare pediatrica
-- [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
-- [Neonati e bambini in emergenza](/comunicazioni/2026-05-10-festa-mamma-neonati-bambini-emergenza/)
+Sul nostro sito:
 
-## Fonti
+- [Kit emergenza per bambini](/formazione/kit-calamita-bambini/): cosa mettere nella borsa per un'evacuazione con bambini piccoli.
+- [Kit emergenza per neonati](/formazione/kit-calamita-neonati/): specifico per i primissimi mesi di vita.
+- [Soffocamento e disostruzione](/formazione/primo-soccorso/soffocamento-disostruzione/): scheda di primo soccorso.
+- [RCP su bambini e neonati](/formazione/primo-soccorso/rcp-bambini-neonati/): rianimazione cardiopolmonare pediatrica.
+- [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/).
+- [Neonati e bambini in emergenza](/comunicazioni/2026-05-10-festa-mamma-neonati-bambini-emergenza/).
 
-- [Italian Resuscitation Council (IRC) — Linee guida pediatriche](https://www.ircouncil.it/)
-- [European Resuscitation Council (ERC) — Paediatric life support](https://www.erc.edu/)
-- [Società Italiana di Pediatria (SIP)](https://sip.it/)
-- [Ministero della Salute — Disostruzione pediatrica](https://www.salute.gov.it/)
+Fonti istituzionali:
 
-Fare un corso di disostruzione pediatrica è uno dei gesti concreti che un genitore, un nonno o un educatore può fare per la sicurezza dei bambini.
+- [Italian Resuscitation Council (IRC)](https://www.ircouncil.it/) — Linee guida pediatriche.
+- [European Resuscitation Council (ERC)](https://www.erc.edu/) — Paediatric life support.
+- [Società Italiana di Pediatria (SIP)](https://sip.it/).
+- [Ministero della Salute](https://www.salute.gov.it/) — Disostruzione pediatrica.
+
+Fare un corso di disostruzione pediatrica è uno dei gesti più concreti che un genitore, un nonno o un educatore può fare per la sicurezza dei bambini.

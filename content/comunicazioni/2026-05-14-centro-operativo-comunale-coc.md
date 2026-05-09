@@ -98,9 +98,16 @@ Il COC funziona se il **Piano comunale di Protezione Civile** è aggiornato, con
 
 ## Per approfondire
 
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/)
-- [Dipartimento della Protezione Civile — Sistema nazionale](https://www.protezionecivile.gov.it/it/sistema-nazionale)
-- [Regione Lazio — Piani comunali](https://protezionecivile.regione.lazio.it/)
-- Pagina [Piano di emergenza](/piano-emergenza/) del nostro sito
+Sul nostro sito:
+
+- [Piano di emergenza del Comune di Genzano di Roma](/piano-emergenza/).
+- [Numeri utili](/numeri-utili/).
+- [Cosa fare adesso in emergenza](/cosa-fare-adesso/).
+
+Fonti istituzionali:
+
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Dipartimento della Protezione Civile — Sistema nazionale](https://www.protezionecivile.gov.it/it/sistema-nazionale).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
 
 Il COC non è solo una sigla tecnica: è la struttura che permette al Comune di coordinare informazioni, risorse e decisioni durante un evento. Conoscerne il funzionamento aiuta i cittadini a seguire le indicazioni corrette e a usare i canali giusti.

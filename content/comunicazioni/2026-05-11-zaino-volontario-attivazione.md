@@ -131,13 +131,18 @@ Se sei un volontario di recente ingresso, chiedi al coordinatore una lista uffic
 
 ## Per approfondire
 
-Risorse interne del sito:
+Sul nostro sito:
 
-- [Kit calamità per volontari di Protezione Civile](/formazione/kit-calamita-volontari-pc/) — dotazioni operative e liste di controllo ufficiali
-- [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo e cosa aspettarsi
-- [DPI e sicurezza sul lavoro per i volontari](/comunicazioni/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari/)
-- [Primo maggio: dignità del lavoro e sicurezza dei volontari](/comunicazioni/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile/)
-- [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
-- [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+- [Kit calamità per volontari di Protezione Civile](/formazione/kit-calamita-volontari-pc/) — dotazioni operative e liste di controllo.
+- [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo e cosa aspettarsi.
+- [DPI e sicurezza sul lavoro per i volontari](/comunicazioni/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari/).
+- [Primo maggio: dignità del lavoro e sicurezza dei volontari](/comunicazioni/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile/).
+- [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
+- [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
+
+Fonti istituzionali:
+
+- [D.Lgs. 81/2008](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81) — Testo Unico Sicurezza sul Lavoro: i DPI restano obbligatori anche per i volontari di Protezione Civile.
+- [Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/) — Sistema Nazionale di Protezione Civile (D.Lgs. 1/2018).
 
 Uno zaino ben preparato lavora prima ancora di arrivare sul posto. È disciplina personale che dà sicurezza alla squadra.

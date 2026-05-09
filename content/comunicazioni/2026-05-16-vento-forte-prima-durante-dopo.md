@@ -113,9 +113,16 @@ In caso di allerta vento rossa o arancione, il Gruppo Comunale Volontari può es
 
 ## Per approfondire
 
-- [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it/)
-- [Servizio Meteorologico Aeronautica](https://www.meteoam.it/)
-- Articolo correlato: [Zone di allerta del Lazio](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
-- Pagina [Vento forte](/rischi-prevenzione/vento-forte/)
+Sul nostro sito:
+
+- [Vento forte: cosa fare prima, durante, dopo](/rischi-prevenzione/vento-forte/): pagina operativa di riferimento.
+- [Zone di allerta del Lazio](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/).
+- [Allerte meteo del nostro territorio](/allerte-meteo/).
+
+Fonti istituzionali:
+
+- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Servizio Meteorologico dell'Aeronautica](https://www.meteoam.it/).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) — bollettini di vigilanza meteorologica.
 
 Il vento forte non è uno "spettacolo della natura" da ammirare dalla finestra: è un **rischio da gestire**. Con poche attenzioni prima e con comportamenti calmi durante, si attraversa senza conseguenze.

@@ -70,7 +70,14 @@ ISO 22322 è il modello internazionale di un sistema di allerta pubblica fatto b
 
 ## Per approfondire
 
-- Scheda interna dello standard: [ISO 22322 — Public warning](/standard-iso/iso-22322/)
-- [IT-alert — sito ufficiale del DPC](https://www.it-alert.gov.it/)
-- [Pagina ufficiale ISO](https://www.iso.org/search.html?q=ISO+22322)
-- [Standard ISO per la Protezione Civile](/standard-iso/)
+Sul nostro sito:
+
+- [ISO 22322 — Public warning](/standard-iso/iso-22322/): scheda interna con titolo, ambito e contestualizzazione italiana.
+- [Standard ISO per la Protezione Civile](/standard-iso/): hub di tutti gli standard rilevanti.
+- [Allerte meteo del nostro territorio](/allerte-meteo/).
+
+Fonti istituzionali:
+
+- [IT-alert — sito ufficiale del DPC](https://www.it-alert.gov.it/).
+- [Pagina ufficiale ISO 22322](https://www.iso.org/search.html?q=ISO+22322): per il testo della norma (a pagamento) consulta [iso.org](https://www.iso.org/) o il [catalogo UNI](https://store.uni.com/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
