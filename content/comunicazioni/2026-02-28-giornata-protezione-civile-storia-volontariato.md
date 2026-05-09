@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **28 febbraio** ricorre la **Giornata nazionale della Protezione Civile**, istituita nel 2017 con la Direttiva del Presidente del Consiglio. È un'occasione per ricordare la **storia** del sistema italiano di protezione civile, oggi tra i più strutturati d'Europa, e soprattutto il ruolo insostituibile del **volontariato**.
+Il **28 febbraio** ricorre la **Giornata nazionale della Protezione Civile**, istituita nel 2017 con la Direttiva del Presidente del Consiglio. La data celebra la Legge 225/1992 che ha fondato il Servizio Nazionale. È anche l'occasione per ripercorrere la storia del sistema e ricordare il ruolo centrale del **volontariato**.
 
 La Protezione Civile, come la conosciamo oggi, non è nata improvvisamente. È il risultato di **decenni di lezioni tragiche** e di riforme legislative che hanno costruito, passo dopo passo, un sistema nazionale integrato.
 
@@ -150,4 +150,4 @@ Per informazioni, visita la sezione **Volontariato** del sito o contatta diretta
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 - [Codice della Protezione Civile (D.Lgs. 1/2018)](https://www.normattiva.it/)
 
-Il 28 febbraio è la festa di chi protegge e di chi è protetto. Un giorno per dire: **il sistema siamo tutti noi**.
+Il 28 febbraio ricorda che la Protezione Civile non è solo uno Stato che interviene: è una comunità che si organizza. Volontari, comuni, famiglie preparate — ognuno è parte del sistema.

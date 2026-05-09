@@ -47,7 +47,7 @@ Fino al 2017, in Italia convivevano più numeri di emergenza:
 
 Il cittadino doveva scegliere il numero "giusto". Con il **passaggio al NUE 112**, la scelta non è più necessaria: **un solo numero, una sola Centrale**, che smista.
 
-**I vecchi numeri continuano a funzionare** per ragioni di transizione, ma il riferimento per il cittadino è il **112**. Ancora oggi è comune sentir dire "chiama il 118", "chiama il 115": sono abitudini consolidate, ma nel Lazio **il numero da ricordare è uno solo: 112**.
+**I vecchi numeri continuano a funzionare** per ragioni di transizione, ma il riferimento per il cittadino è il **112**. Nel Lazio **il numero da ricordare è uno solo: 112**. Non serve scegliere tra 115, 118 o 113: ci pensa la Centrale Unica.
 
 ## Quando chiamare il 112
 
@@ -125,4 +125,4 @@ Insegnare a bambini e ragazzi il numero **112** è parte della formazione civile
 - Articolo: [Piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
 - Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
 
-Un solo numero. Un solo gesto. Una rete intera di persone pronte a risponderti.
+Memorizzare il 112 — e insegnarlo a chi ci sta vicino — è un atto concreto di preparazione all'emergenza.

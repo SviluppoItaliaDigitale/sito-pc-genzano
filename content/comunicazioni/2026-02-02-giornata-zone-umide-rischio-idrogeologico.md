@@ -1,7 +1,7 @@
 ---
 title: "Giornata mondiale zone umide: rischio idrogeologico e territorio"
 date: 2026-02-02
-description: "Il 2 febbraio si celebra la Giornata mondiale delle zone umide. Un'occasione per capire il legame tra paludi, laghi, rete idrica."
+description: "Il 2 febbraio è la Giornata mondiale delle zone umide. Zone umide intatte riducono alluvioni, frane e siccità: perché contano per la Protezione Civile."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -60,7 +60,7 @@ Il nostro territorio ha zone umide preziose:
 - **Torrenti** che dai Castelli scendono verso la pianura romana.
 - **Zone ripariali** di piccoli corsi d'acqua.
 
-Sono ambienti **fragili**. L'abbassamento del livello del Lago di Albano, documentato in questi anni, è un segnale che qualcosa nel bilancio idrico non quadra: meno piogge, più prelievi, più consumo di suolo.
+Sono ambienti **fragili**. L'abbassamento del livello del Lago Albano, documentato negli ultimi anni, è un segnale chiaro: meno piogge, più prelievi, più consumo di suolo.
 
 ## Cosa succede quando si perdono
 
@@ -72,7 +72,7 @@ Oggi sappiamo che:
 - I fiumi "rettificati" e privi di golena **esondano con più violenza**.
 - Gli acquiferi un tempo alimentati da paludi sono oggi **in deficit idrico**.
 
-La nostra generazione è chiamata a **ricostruire**, dove possibile, pezzi di naturalità perduta. Le "rinaturalizzazioni" dei fiumi, le "casse di espansione", i "corridoi ecologici" sono progetti di protezione civile a lungo termine.
+Oggi è possibile **ricostruire** pezzi di naturalità perduta. Le "rinaturalizzazioni" dei fiumi, le "casse di espansione", i "corridoi ecologici" sono progetti di protezione civile a lungo termine.
 
 ## Cosa può fare un cittadino
 
@@ -94,11 +94,11 @@ Il volontariato di Protezione Civile ha un ruolo sempre più chiaro nella **tute
 
 La Protezione Civile non è solo "dopo il disastro". È anche — e sempre di più — **prevenzione basata sulla conoscenza del territorio**.
 
-## Una giornata per pensare
+## Territorio e acqua: una prospettiva di lungo periodo
 
-Il 2 febbraio è una data tra tante. Ma vale la pena fermarsi un momento a pensare: **da dove viene l'acqua** che beviamo, dove finisce quella che usiamo, cosa succede quando piove intensamente.
+Il 2 febbraio è una data tra tante. Vale però fermarsi a ragionare: **da dove viene l'acqua** che beviamo, dove finisce quella che usiamo, cosa succede quando piove intensamente.
 
-Un territorio che funziona non è un territorio asciutto, pulito e geometrico. È un territorio che **respira con l'acqua**, che ha spazi per accoglierla e liberarla. La Protezione Civile del futuro passa anche da qui.
+Un territorio che funziona non è un territorio asciutto e geometrico. È un territorio che **respira con l'acqua**, che ha spazi per accoglierla e rilasciarla. La Protezione Civile del futuro passa anche da qui.
 
 ## Per approfondire
 

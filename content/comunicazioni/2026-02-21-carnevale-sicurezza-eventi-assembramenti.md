@@ -30,7 +30,7 @@ Gli scenari di rischio in un evento carnevalesco — anche se raramente si concr
 - **Emergenze meteorologiche** che irrompono durante l'evento.
 - **Comportamenti sbagliati** della folla in caso di problemi.
 
-La maggior parte degli eventi si svolge senza alcun incidente. Ma **la preparazione è ciò che rende un evento sicuro**: se non succede nulla, non è per caso.
+La maggior parte degli eventi si svolge senza incidenti. **La preparazione è ciò che rende un evento sicuro**: se non succede nulla, non è per caso.
 
 ## Chi fa cosa
 
@@ -95,7 +95,7 @@ Per fortuna, nei Carnevali di paese queste situazioni sono **molto rare**, ma è
 Per i più piccoli, il Carnevale è emozione pura. Ma anche un momento in cui è facile perdersi:
 
 - **Scrivi il tuo numero di telefono** su un foglietto nella tasca del bambino (non un braccialetto visibile, per privacy).
-- **Concorda un adulto di riferimento** in cui chiedere aiuto se si perde ("polizia, volontari, negozianti, genitori con bambini").
+- **Indica al bambino a chi rivolgersi** se si perde: polizia, volontari, negozianti, genitori con bambini.
 - **Inquadra bene il punto di ritrovo**: non un generico "davanti al Comune", ma un oggetto fisico identificabile.
 - **Vestiti riconoscibili**: evita maschere che coprano completamente il volto se il bambino è piccolo.
 
@@ -133,7 +133,7 @@ Il nostro Comune comunica gli eventi carnevaleschi sui canali ufficiali. Segui:
 
 ## Un Carnevale sereno
 
-Il Carnevale è una **festa popolare** — letteralmente: festa del popolo, non di un singolo o di un gruppo. La sua riuscita dipende da tutti: organizzatori, istituzioni, volontari, partecipanti.
+Il Carnevale è una **festa di comunità**. La sua riuscita dipende da tutti: organizzatori, istituzioni, volontari, partecipanti.
 
 La Protezione Civile c'è, discreta ma presente. Ognuno di noi può contribuire a rendere la festa più bella: con attenzione, rispetto, buon senso.
 
