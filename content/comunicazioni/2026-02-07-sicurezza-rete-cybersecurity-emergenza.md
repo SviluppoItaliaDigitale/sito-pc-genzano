@@ -1,7 +1,7 @@
 ---
 title: "Sicurezza in Rete: quando la cybersecurity diventa Protezione Civile"
 date: 2026-02-07
-description: "Il 7 febbraio è la Giornata nazionale Sicurezza in Rete. Attacchi informatici."
+description: "Il 7 febbraio è la Giornata nazionale Sicurezza in Rete. Un attacco informatico a ospedali o acquedotti può diventare emergenza reale: cosa fare."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -15,7 +15,7 @@ draft: false
 
 Il **7 febbraio** si celebra la **Giornata nazionale Sicurezza in Rete** (*Safer Internet Day*, a livello europeo). Una ricorrenza promossa da scuole, istituzioni e Polizia Postale, dedicata all'uso responsabile del web da parte di bambini, ragazzi e adulti.
 
-Può sembrare un tema distante dalla Protezione Civile. Eppure oggi, in un mondo sempre più **interconnesso**, un attacco informatico a un ospedale, a un acquedotto, a un sistema ferroviario può diventare un'**emergenza reale** per cittadini e famiglie.
+Il collegamento con la Protezione Civile è diretto: oggi un attacco informatico a un ospedale, a un acquedotto o a un sistema ferroviario produce un'**emergenza reale** per cittadini e famiglie.
 
 ## Il digitale è infrastruttura critica
 

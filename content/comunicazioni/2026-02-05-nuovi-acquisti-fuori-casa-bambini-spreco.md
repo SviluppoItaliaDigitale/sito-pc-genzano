@@ -16,7 +16,7 @@ allegati:
 draft: false
 ---
 
-Il **5 febbraio** è la Giornata nazionale di prevenzione dello spreco alimentare. Chiudiamo oggi la serie dedicata al [Libro del Risparmio](/comunicazioni/2025-02-05-libro-risparmio-fondazione-barilla-presentazione/) di Fondazione Barilla. Trattiamo gli ultimi due capitoli: **nuovi acquisti** (capitolo 4) e **fuori casa** (capitolo 5). Il manuale esce dalla cucina domestica e affronta la spesa, il pranzo in ufficio, i pasti al ristorante, i bambini e le grandi feste. Il testo completo è in allegato.
+Il **5 febbraio** è la Giornata nazionale di prevenzione dello spreco alimentare. Questo articolo chiude la serie dedicata al [Libro del Risparmio](/comunicazioni/2025-02-05-libro-risparmio-fondazione-barilla-presentazione/) di Fondazione Barilla con gli ultimi due capitoli: **nuovi acquisti** (capitolo 4) e **fuori casa** (capitolo 5). Il manuale esce dalla cucina di casa e affronta spesa, pranzo in ufficio, ristorante, bambini e grandi feste. Il testo completo è in allegato.
 
 ## Pianificare la spesa prima di comprare
 
@@ -60,7 +60,7 @@ Il manuale dedica un paragrafo specifico ai bambini. Coinvolgerli nella pianific
 
 Alcuni suggerimenti pratici:
 
-- Per la **merenda a scuola** proponi porzioni adeguate all'appetito del bambino: porzioni troppo abbondanti spesso tornano a casa mezze mangiate o finiscono nel cestino, e il bambino arriva comunque al pasto successivo senza fame.
+- Per la **merenda a scuola** proponi porzioni adeguate all'appetito del bambino. Porzioni troppo abbondanti tornano a casa mezze mangiate o finiscono nel cestino, e il bambino arriva al pasto successivo senza fame.
 - **Mangiare in compagnia** ha una grande valenza educativa: i bambini osservano i coetanei e sono più inclini ad assaggiare cose nuove.
 
 ## Una nota per le attività del Gruppo
