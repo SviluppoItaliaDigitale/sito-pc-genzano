@@ -64,7 +64,7 @@ Ai primi sintomi spesso confusi con influenza o stanchezza:
 I **rilevatori di monossido** sono dispositivi economici (20-40 euro) che suonano quando il CO supera valori di sicurezza. Vanno installati:
 
 - **vicino** a caldaie, stufe, camini, boiler;
-- a **altezza** intermedia sulla parete (il CO ha densità simile all'aria);
+- ad **altezza** intermedia sulla parete (il CO ha densità simile all'aria);
 - con **batterie** controllate periodicamente;
 - **rinnovati** ogni 5-10 anni secondo specifiche del produttore.
 

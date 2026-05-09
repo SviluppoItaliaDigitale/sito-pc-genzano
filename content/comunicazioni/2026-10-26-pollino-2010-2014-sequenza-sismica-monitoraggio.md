@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Tra il **2010 e il 2014** una sequenza sismica eccezionale interessò il massiccio del **Pollino**, al confine fra Calabria e Basilicata. Oltre **4.000 scosse strumentali** registrate dalla rete INGV, magnitudo massima **5.0** (registrata il 25 ottobre 2012, vicino a Mormanno).A differenza di altre sequenze italiane, il Pollino **non ha causato vittime dirette**. Ma è stato un **caso scuola** per il monitoraggio sismico, la comunicazione del rischio e la gestione di una crisi prolungata.
+Tra il **2010 e il 2014** una sequenza sismica eccezionale interessò il massiccio del **Pollino**, al confine fra Calabria e Basilicata. Oltre **4.000 scosse strumentali** registrate dalla rete INGV, magnitudo massima **5.0** (registrata il 25 ottobre 2012, vicino a Mormanno).
+
+A differenza di altre sequenze italiane, il Pollino **non ha causato vittime dirette**. Ma è stato un **caso scuola** per il monitoraggio sismico, la comunicazione del rischio e la gestione di una crisi prolungata.
 
 ## Una sequenza lunga, di magnitudo media
 

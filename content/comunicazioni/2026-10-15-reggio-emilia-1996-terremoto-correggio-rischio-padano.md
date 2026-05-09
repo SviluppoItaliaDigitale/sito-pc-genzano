@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Alle **11:56 del 15 ottobre 1996** una scossa di **magnitudo 4.9** colpì la pianura tra **Correggio**, **Carpi** e **Reggio Emilia**. Profondità ipocentrale **27 chilometri**. Nessun morto, alcuni feriti lievi, **circa 100 edifici** dichiarati inagibili (soprattutto chiese e edifici storici).Per i parametri di magnitudo, fu un evento **di rilievo medio** nella scala dei terremoti italiani. Per la **Pianura Padana**, fu un campanello d'allarme: ricordò che **anche la pianura è zona sismica**, contro la percezione diffusa di "tranquillità sismica" che caratterizzava la valle del Po.
+Alle **11:56 del 15 ottobre 1996** una scossa di **magnitudo 4.9** colpì la pianura tra **Correggio**, **Carpi** e **Reggio Emilia**. Profondità ipocentrale **27 chilometri**. Nessun morto, alcuni feriti lievi, **circa 100 edifici** dichiarati inagibili (soprattutto chiese e edifici storici).
+
+Per i parametri di magnitudo, fu un evento **di rilievo medio** nella scala dei terremoti italiani. Per la **Pianura Padana**, fu un campanello d'allarme: ricordò che **anche la pianura è zona sismica**, contro la percezione diffusa di "tranquillità sismica" che caratterizzava la valle del Po.
 
 ## La sismicità "dimenticata" della Pianura Padana
 

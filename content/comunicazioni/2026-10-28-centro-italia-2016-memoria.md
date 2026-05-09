@@ -34,7 +34,7 @@ L'area interessata comprendeva:
 - **4 regioni** (Lazio, Umbria, Marche, Abruzzo);
 - **oltre 130 comuni**;
 - **oltre 40.000 sfollati**;
-- **casa storica** pesantemente danneggiata;
+- **edilizia storica** pesantemente danneggiata;
 - **patrimonio** artistico e religioso colpito (basiliche, chiese, borghi medievali).
 
 ## Ciò che ha funzionato

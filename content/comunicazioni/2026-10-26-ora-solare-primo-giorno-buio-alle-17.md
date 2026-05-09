@@ -33,7 +33,7 @@ Proseguiremo a perdere **circa 2 minuti di luce al giorno** fino al solstizio de
 - Le **luci** delle case si accendono prima;
 - I **parchi** e i giardini pubblici si svuotano prima;
 - Le **passeggiate** al tramonto si fanno prima cena;
-- Le **scuole superiori** uscirebbero con luce piena ma in alcuni orari con luce ridotta.
+- Le **scuole superiori** escono in alcuni orari con luce già ridotta.
 
 ## Abitudini da modificare
 
@@ -60,7 +60,7 @@ I **cani** che escono per la passeggiata serale richiedono:
 - **guinzaglio** sempre;
 - **collare** luminoso o **pettorina** riflettente;
 - **raccogliere** deiezioni anche al buio (usare torcia);
-- **evitare** zone dove ci sono **cinghiali** (lieti del buio).
+- **evitare** zone dove ci sono **cinghiali** (più attivi al buio).
 
 ## Mobilità e trasporto pubblico
 

@@ -69,7 +69,7 @@ Chi vive in aree prossime a uno stabilimento Seveso ha **diritto** a ricevere:
 - **esercitazioni** con coinvolgimento dei cittadini;
 - **contatti** del Comune e della Prefettura.
 
-Chiedete al vostro Comune se il territorio è interessato. A **Genzano** il comune **non ospita stabilimenti Seveso**, ma alcuni comuni vicini hanno situazioni diverse.
+Chiedete al vostro Comune se il territorio è interessato. **Genzano non ospita stabilimenti Seveso**, ma alcuni comuni vicini hanno situazioni diverse.
 
 ## Cosa fare in caso di incidente
 
@@ -79,7 +79,7 @@ Se l'allarme viene dato (sirena, SMS IT-alert, auto di Polizia):
 2. **chiudere** porte e finestre;
 3. **spegnere** impianti di climatizzazione;
 4. **ascoltare** la radio o i canali ufficiali;
-5. **non chiamare** il telefono (tenere linee libere);
+5. **non usare** il telefono se non strettamente necessario (tenere libere le linee);
 6. **attendere** il **cessato allarme**.
 
 In alcuni casi può essere disposta **evacuazione**: seguire le indicazioni delle forze dell'ordine.
