@@ -101,7 +101,7 @@ Queste reazioni sono **normali**. Ciò che aiuta:
 
 ## La Giornata della Mamma come promemoria
 
-Dedicare oggi un'ora a preparare il kit dei bambini, a scrivere la scheda personale, a spiegare in famiglia il piano di emergenza è un **gesto di cura concreto** che va oltre il fiore o la cena fuori.
+Dedica oggi un'ora a preparare il kit dei bambini, a scrivere la scheda personale, a spiegare in famiglia il piano di emergenza. È un **gesto di cura concreto** che va oltre il fiore o la cena fuori.
 
 ## Per approfondire
 

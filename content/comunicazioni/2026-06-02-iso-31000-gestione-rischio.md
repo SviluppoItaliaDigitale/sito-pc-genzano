@@ -68,7 +68,7 @@ Comunicare bene il rischio significa:
 - accompagnare il dato tecnico con **istruzioni operative** ("cosa fare adesso");
 - non **minimizzare** né **drammatizzare**: la fiducia istituzionale è una risorsa, va spesa bene.
 
-Questo principio ispira tutto il nostro sito: ogni pagina sui rischi (sismico, idrogeologico, incendio, vento, temporali, blackout, ondate calore) ha la stessa struttura — *cosa è — perché ci riguarda — cosa fare PRIMA / DURANTE / DOPO — cosa NON fare — chi chiamare*. È il modo concreto di applicare ISO 31000 al cittadino di Genzano.
+Questo principio ispira tutto il nostro sito. Ogni pagina sui rischi (sismico, idrogeologico, incendio, vento, temporali, blackout, ondate calore) ha la stessa struttura — *cosa è — perché ci riguarda — cosa fare PRIMA / DURANTE / DOPO — cosa NON fare — chi chiamare*. È il modo concreto di applicare ISO 31000 al cittadino di Genzano.
 
 ## La famiglia di standard derivati
 

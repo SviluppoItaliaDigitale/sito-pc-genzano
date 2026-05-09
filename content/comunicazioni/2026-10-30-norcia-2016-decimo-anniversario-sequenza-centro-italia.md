@@ -17,7 +17,7 @@ Alle **7:40 del 30 ottobre 2016** la scossa più forte registrata in Italia dopo
 
 A differenza del 24 agosto, questa volta il bilancio umano fu **straordinariamente contenuto**: nessuna vittima diretta nell'abitato di Norcia, due deceduti per cause indirette nelle ore successive, alcune centinaia di feriti.
 
-La ragione è precisa: nei giorni precedenti, dopo le scosse del 26 ottobre (M 5.4 e M 5.9), la **Protezione Civile aveva fatto evacuare** i centri storici più fragili e ospitato la popolazione in tendopoli, alberghi della costa adriatica e sistemazioni temporanee. **Quando la scossa principale arrivò, le case erano vuote.**
+La ragione è precisa. Nei giorni precedenti, dopo le scosse del 26 ottobre (M 5.4 e M 5.9), la **Protezione Civile aveva fatto evacuare** i centri storici più fragili. La popolazione era stata ospitata in tendopoli, alberghi della costa adriatica e sistemazioni temporanee. **Quando la scossa principale arrivò, le case erano vuote.**
 
 È una delle dimostrazioni più chiare della validità del modello italiano:
 - **Monitoraggio sismico continuo** da parte dell'INGV

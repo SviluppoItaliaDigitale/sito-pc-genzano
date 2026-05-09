@@ -30,7 +30,7 @@ Il regolamento disciplina il funzionamento della Scuola e ne definisce la strutt
 
 ## Perché serve una Scuola regionale
 
-In Italia la formazione dei volontari di Protezione Civile è regolata dalla **Direttiva del Presidente del Consiglio dei Ministri del 12 gennaio 2012** sugli indirizzi operativi per la formazione del volontariato e dal **Decreto Legislativo 1 del 2018** (Codice della Protezione Civile). I corsi base e di specializzazione vengono già erogati a livello locale dai Gruppi Comunali, dalle Organizzazioni di Volontariato e dalle Province, ma con grande variabilità di contenuti, durata e qualità.
+In Italia la formazione dei volontari di Protezione Civile è regolata da due fonti: la **Direttiva del Presidente del Consiglio dei Ministri del 12 gennaio 2012** sugli indirizzi operativi per la formazione del volontariato e il **Decreto Legislativo 1 del 2018** (Codice della Protezione Civile). I corsi base e di specializzazione sono già erogati a livello locale da Gruppi Comunali, Organizzazioni di Volontariato e Province. La variabilità di contenuti, durata e qualità è però grande.
 
 Una Scuola regionale serve a:
 

@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Il **4 novembre 2011** — esattamente **45 anni dopo l'alluvione di Firenze** — Genova fu colpita da un evento meteo eccezionale. **Oltre 500 millimetri di pioggia in 6 ore** sull'area urbana. Il **rio Fereggiano**, un piccolo torrente tombato sotto la città a fine Ottocento, esplose letteralmente dalla sede stradale di **via Fereggiano** trasformando le strade in fiumi.Bilancio: **6 morti**, di cui **quattro bambini** in via Fereggiano, due donne adulte. Centinaia di esercizi commerciali devastati, automobili portate via dal flusso, danni stimati in centinaia di milioni di euro.
+Il **4 novembre 2011** — esattamente **45 anni dopo l'alluvione di Firenze** — Genova fu colpita da un evento meteo eccezionale. **Oltre 500 millimetri di pioggia in 6 ore** sull'area urbana. Il **rio Fereggiano**, un piccolo torrente tombato sotto la città a fine Ottocento, esplose letteralmente dalla sede stradale di **via Fereggiano**, trasformando le strade in fiumi.
+
+Bilancio: **6 morti**, di cui **quattro bambini** in via Fereggiano, due donne adulte. Centinaia di esercizi commerciali devastati, automobili portate via dal flusso, danni stimati in centinaia di milioni di euro.
 
 ## I rii tombati: una bomba a orologeria urbana
 

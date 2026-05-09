@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **27 gennaio** è il **Giorno della Memoria**, istituito in Italia con la legge 211/2000 per ricordare la **Shoah** — lo sterminio degli ebrei europei — e tutte le vittime della persecuzione nazista e fascista, compresi i deportati militari e politici italiani.
+Il **27 gennaio** è il **Giorno della Memoria**, istituito in Italia con la legge 211/2000. Ricorda la **Shoah** — lo sterminio degli ebrei europei — e tutte le vittime della persecuzione nazista e fascista, compresi i deportati militari e politici italiani.
 
 Il Parlamento italiano ha scelto questa data perché il **27 gennaio 1945** le truppe dell'Armata Rossa entrarono ad Auschwitz, liberando i pochi prigionieri rimasti in vita. Una liberazione che ha mostrato al mondo, in modo incontrovertibile, l'orrore di quel sistema.
 

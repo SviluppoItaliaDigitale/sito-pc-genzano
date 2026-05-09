@@ -33,7 +33,7 @@ Where Are U **non sostituisce** la chiamata al 112: la **integra**. Il numero da
 
 ## Come funziona la geolocalizzazione
 
-Quando avvii una chiamata di emergenza con Where Are U, l'app calcola la posizione e la invia alla Centrale 112 con un grado di precisione **sensibilmente superiore** a quello fornito dal solo sistema AML (*Advanced Mobile Location*) integrato nel telefono. Questo è cruciale in situazioni come:
+Quando avvii una chiamata di emergenza con Where Are U, l'app calcola la posizione e la invia alla Centrale 112. Il grado di precisione è **sensibilmente superiore** a quello fornito dal solo sistema AML (*Advanced Mobile Location*) integrato nel telefono. Questo è cruciale in situazioni come:
 
 - ti trovi su una **strada extraurbana** e non conosci il chilometro né il nome del paese più vicino;
 - sei in **bosco**, **campo aperto**, **sentiero di trekking**;

@@ -43,7 +43,7 @@ Il manuale è organizzato in sei capitoli:
 
 ## Scarica il manuale
 
-Abbiamo scelto di pubblicare il manuale in Area Download e di collegarlo a una piccola serie di articoli tematici, in modo che i volontari del Gruppo possano consultarne i contenuti principali senza dover aprire ogni volta il PDF completo.
+Abbiamo scelto di pubblicare il manuale in Area Download e di collegarlo a una piccola serie di articoli tematici. Così i volontari del Gruppo possono consultarne i contenuti principali senza dover aprire ogni volta il PDF completo.
 
 Il **manuale completo** è disponibile in allegato a questo articolo e nella pagina [Area Download](/area-download/).
 
