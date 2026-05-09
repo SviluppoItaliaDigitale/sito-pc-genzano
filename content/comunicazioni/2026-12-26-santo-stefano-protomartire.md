@@ -189,8 +189,16 @@ Oggi, se hai un momento **tranquillo**, puoi chiedertelo:
 
 ## Per approfondire
 
-- [Natale auguri](/comunicazioni/2026-12-25-natale-auguri-genzano/)
-- [Vigilia di Natale](/comunicazioni/2026-12-24-vigilia-natale-auguri/)
-- [Anziani soli](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/)
+Sul nostro sito:
+
+- [Natale: auguri da Genzano](/comunicazioni/2026-12-25-natale-auguri-genzano/).
+- [Vigilia di Natale](/comunicazioni/2026-12-24-vigilia-natale-auguri/).
+- [Anziani soli a Natale](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/).
+- [Tsunami Indiano 2004: l'allerta globale](/comunicazioni/2026-12-26-tsunami-indiano-2004-allerta-globale/).
+- [Settimana tra le feste: riflessione](/comunicazioni/2026-12-27-settimana-tra-feste-riflessione/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 
 In emergenza: **112**.

@@ -2,7 +2,6 @@
 title: "Messina e Reggio Calabria, 28 dicembre 1908: il terremoto che fece 100.000 vittime e fondò l'idea moderna di soccorso"
 date: 2026-12-28T00:02:00+02:00
 description: "Alle 5:21 del 28 dicembre 1908 una scossa di magnitudo 7.1 distrusse Messina e Reggio Calabria."
-
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -11,7 +10,6 @@ image_alt: "Copertina dell'articolo: Messina e Reggio Calabria, 28 dicembre 1908
 scadenza: ""
 area: "Italia · Stretto di Messina · Sicilia · Calabria"
 allegati: []
-
 draft: false
 ---
 
@@ -91,19 +89,23 @@ Il **monumento alle vittime** del terremoto, a Messina, è un punto di ritrovo d
 
 Centodiciotto anni dopo, il messaggio dello Stretto è sempre attuale: in Italia non esiste una **terra ferma** in senso assoluto. La nostra casa comune è una **terra che vive** — geologicamente attiva, in continua trasformazione — e l'unica risposta possibile è una **cultura collettiva del rischio**: sapere, costruire bene, vigilare, prepararsi, ricordare. Il **volontariato di protezione civile** è uno dei luoghi più concreti dove questa cultura si pratica ogni giorno.
 
-## Per approfondire (fonti istituzionali)
+## Per approfondire
 
-- [INGV — Speciale 28 dicembre 1908: il terremoto di Messina e Reggio Calabria](https://www.ingv.it/)
-- [Dipartimento di Protezione Civile — Rischio sismico in Italia](https://www.protezionecivile.gov.it/it/rischio/rischio-sismico/)
-- [Mappa di Pericolosità Sismica dell'Italia](https://zonesismiche.mi.ingv.it/)
-- [Centro Allerta Tsunami (INGV)](https://www.ingv.it/cat/)
-- [Comune di Messina — Memoriale 1908](https://www.comune.messina.it/)
-- [Regio Decreto 18 aprile 1909, n. 193 — Normattiva (testo storico)](https://www.normattiva.it/)
+Sul nostro sito:
 
-## Approfondimenti dal nostro archivio
+- [Friuli 1976: nascita della protezione civile italiana](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
+- [Irpinia 1980, anniversario 46 anni](/comunicazioni/2026-11-23-irpinia-1980-anniversario-46/).
+- [San Giuliano di Puglia 2002: scuole sicure](/comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure/).
+- [Centro Italia 2016: memoria del sisma di Amatrice e Norcia](/comunicazioni/2026-10-28-centro-italia-2016-memoria/).
+- [Tsunami dell'Oceano Indiano 2004: allerta globale](/comunicazioni/2026-12-26-tsunami-indiano-2004-allerta-globale/).
+- [Anniversario terremoto Abruzzo 2009 (Fossa)](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/).
+- [Cos'è la protezione civile in Italia](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/).
+- [Rischio sismico — pagina operativa](/rischi-prevenzione/rischio-sismico/).
 
-- [Friuli 1976: nascita della protezione civile italiana](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/)
-- [Irpinia 1980, anniversario 46 anni](/comunicazioni/2026-11-23-irpinia-1980-anniversario-46/)
-- [San Giuliano di Puglia 2002: scuole sicure](/comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure/)
-- [Centro Italia 2016: memoria del sisma di Amatrice e Norcia](/comunicazioni/2026-10-28-centro-italia-2016-memoria/)
-- [Tsunami dell'Oceano Indiano 2004: allerta globale](/comunicazioni/2026-12-26-tsunami-indiano-2004-allerta-globale/)
+Fonti istituzionali:
+
+- [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
+- [Dipartimento Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/rischio/rischio-sismico/).
+- [Mappe di pericolosità sismica INGV](https://zonesismiche.mi.ingv.it/).
+- [INGV — Centro Allerta Tsunami](https://www.ingv.it/cat/).
+- [Comune di Messina](https://www.comune.messina.it/).

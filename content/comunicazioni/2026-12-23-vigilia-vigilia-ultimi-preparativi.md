@@ -231,8 +231,18 @@ Arriviamo insieme.
 
 ## Per approfondire
 
-- [Preparativi Natale](/comunicazioni/2026-12-12-preparativi-natale-acquisti-sicuri/)
-- [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/)
-- [Solidarietà natalizia](/comunicazioni/2026-12-20-solidarieta-natalizia-caritas-mense/)
+Sul nostro sito:
+
+- [Preparativi Natale: acquisti sicuri](/comunicazioni/2026-12-12-preparativi-natale-acquisti-sicuri/).
+- [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/).
+- [Solidarietà natalizia](/comunicazioni/2026-12-20-solidarieta-natalizia-caritas-mense/).
+- [Vigilia di Natale: auguri](/comunicazioni/2026-12-24-vigilia-natale-auguri/).
+- [Pacchi natalizi: logistica corriere](/comunicazioni/2026-12-16-pacchi-natalizi-logistica-corriere/).
+
+Fonti istituzionali:
+
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [Centro Antiveleni Roma — Policlinico Gemelli](https://www.policlinicogemelli.it/).
+- [Polizia di Stato — Polizia stradale](https://www.poliziadistato.it/).
 
 In emergenza: **112**. Centro Antiveleni: **800 883 300**.

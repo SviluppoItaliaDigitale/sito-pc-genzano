@@ -136,8 +136,18 @@ E **tanti**, **tanti auguri** di un **Natale sereno**.
 
 ## Per approfondire
 
-- [Solidarietà natalizia](/comunicazioni/2026-12-20-solidarieta-natalizia-caritas-mense/)
-- [Anziani soli](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/)
-- [Sicurezza cucina](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/)
+Sul nostro sito:
+
+- [Solidarietà natalizia](/comunicazioni/2026-12-20-solidarieta-natalizia-caritas-mense/).
+- [Anziani soli](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/).
+- [Sicurezza cucina](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/).
+- [Vigilia della vigilia: ultimi preparativi](/comunicazioni/2026-12-23-vigilia-vigilia-ultimi-preparativi/).
+- [Natale: auguri da Genzano](/comunicazioni/2026-12-25-natale-auguri-genzano/).
+- [Chi siamo](/chi-siamo/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
+- [Caritas Italiana](https://www.caritas.it/).
 
 In emergenza sempre: **112**.

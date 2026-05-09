@@ -234,8 +234,18 @@ E un **grazie grande** per essere stati con noi durante il **2026**.
 
 ## Per approfondire
 
-- [Prospettive 2027](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/)
-- [Capodanno e petardi](/comunicazioni/2026-12-30-capodanno-petardi-sicurezza/)
-- [Bilancio 2026](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/)
+Sul nostro sito:
+
+- [Prospettive 2027](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/).
+- [Capodanno e petardi: sicurezza](/comunicazioni/2026-12-30-capodanno-petardi-sicurezza/).
+- [Bilancio 2026](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
+- [Settimana tra feste: riflessione](/comunicazioni/2026-12-27-settimana-tra-feste-riflessione/).
+- [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/).
+- [Diventa volontario](/diventa-volontario/).
+- [Chi siamo](/chi-siamo/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 
 In emergenza: **112**.

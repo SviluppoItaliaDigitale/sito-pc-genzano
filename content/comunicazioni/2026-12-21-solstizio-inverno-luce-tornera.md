@@ -189,8 +189,18 @@ Dal **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**:
 
 ## Per approfondire
 
-- [Santa Lucia e il buio](/comunicazioni/2026-12-13-santa-lucia-tradizione-buio/)
-- [Qualità aria invernale](/comunicazioni/2026-11-09-qualita-aria-pm10-inverno/)
-- [Aggiornamento metà dicembre](/comunicazioni/2026-12-15-aggiornamento-meta-dicembre/)
+Sul nostro sito:
+
+- [Santa Lucia e il buio](/comunicazioni/2026-12-13-santa-lucia-tradizione-buio/).
+- [Qualità aria invernale](/comunicazioni/2026-11-09-qualita-aria-pm10-inverno/).
+- [Aggiornamento metà dicembre](/comunicazioni/2026-12-15-aggiornamento-meta-dicembre/).
+- [Avvio dicembre / inverno meteorologico](/comunicazioni/2026-12-01-avvio-dicembre-inverno-meteorologico/).
+- [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/).
+
+Fonti istituzionali:
+
+- [INAF — Istituto Nazionale di Astrofisica](https://www.inaf.it/).
+- [Servizio Meteorologico dell'Aeronautica](https://www.meteoam.it/).
+- [Copernicus Climate Change Service](https://climate.copernicus.eu/).
 
 In emergenza: **112**.

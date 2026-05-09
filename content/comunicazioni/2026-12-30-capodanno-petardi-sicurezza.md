@@ -268,8 +268,22 @@ Il **Capodanno** è **festa di tutti**. Anche di chi **non vuole** o **non può*
 
 ## Per approfondire
 
-- [Bilancio 2026](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/)
-- [Prospettive 2027](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/)
-- [Settimana tra feste](/comunicazioni/2026-12-27-settimana-tra-feste-riflessione/)
+Sul nostro sito:
+
+- [Bilancio 2026](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
+- [Prospettive 2027](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/).
+- [Settimana tra feste](/comunicazioni/2026-12-27-settimana-tra-feste-riflessione/).
+- [San Silvestro: auguri di fine anno](/comunicazioni/2026-12-31-san-silvestro-auguri-fine-anno/).
+- [Incendi domestici: prevenzione](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/).
+- [Estintori: classi di fuoco](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
+- [Kit Calamità — Animali](/formazione/kit-calamita-animali/).
+- [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/).
+
+Fonti istituzionali:
+
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [Polizia di Stato](https://www.poliziadistato.it/).
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
+- [Centro Antiveleni Roma — Policlinico Gemelli](https://www.policlinicogemelli.it/).
 
 In emergenza: **112**.

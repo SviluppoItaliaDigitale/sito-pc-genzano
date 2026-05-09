@@ -2,7 +2,6 @@
 title: "Tsunami dell'Oceano Indiano, 26 dicembre 2004: il giorno che ha imposto al mondo un sistema globale di allerta tsunami"
 date: 2026-12-26T00:02:00+02:00
 description: "Alle 7:58 del 26 dicembre 2004, un sisma di magnitudo 9.1 al largo di Sumatra generò uno tsunami che colpì 14 Paesi affacciati sull'Oceano Indiano."
-
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -11,7 +10,6 @@ image_alt: "Copertina dell'articolo: Tsunami dell'Oceano Indiano, 26 dicembre 20
 scadenza: ""
 area: "Oceano Indiano · rilevanza mondiale"
 allegati: []
-
 draft: false
 ---
 
@@ -91,15 +89,22 @@ Per i **543 italiani** che persero la vita — la **maggior parte turisti** in v
 
 Ventidue anni dopo, il messaggio del 26 dicembre 2004 è chiaro: **il rischio non conosce confini, e nessun Paese è "esonerato"** finché non si dota dei propri sistemi di allerta e dei propri piani di emergenza. L'Italia oggi è dotata. È un'eredità invisibile di chi non è tornato a casa.
 
-## Per approfondire (fonti istituzionali)
+## Per approfondire
 
-- [INGV — Centro Allerta Tsunami (CAT)](https://www.ingv.it/cat/)
-- [Dipartimento di Protezione Civile — Rischio maremoto e SiAM](https://www.protezionecivile.gov.it/it/rischio/rischio-maremoto/)
-- [UNESCO-IOC — Tsunami Programme](https://www.ioc-tsunami.org/)
-- [NEAMTWS — Tsunami Warning System Mediterraneo e Atlantico](https://www.ioc-tsunami.org/index.php?option=com_content&view=category&id=14&Itemid=20)
-- [Farnesina — Viaggiare Sicuri](https://www.viaggiaresicuri.it/)
+Sul nostro sito:
 
-## Approfondimenti dal nostro archivio
+- [Tōhoku-Fukushima 2011: emergenze multiple](/comunicazioni/2026-03-11-tohoku-fukushima-2011-tsunami-emergenze-multiple/).
+- [Chernobyl, 40 anni dopo](/comunicazioni/2026-04-26-chernobyl-40-anni-protezione-civile/).
+- [Nepal Gorkha 2015](/comunicazioni/2026-04-25-nepal-2015-gorkha-terremoto/).
+- [ISO 22322 — Public warning e IT-alert](/comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/).
+- [ISO 22324 — Codici colore allerta](/comunicazioni/2026-05-12-iso-22324-codici-colore-allerta/).
+- [Mostra «Terremoti d'Italia» a Napoli](/comunicazioni/2026-04-17-mostra-terremoti-italia-napoli/).
+- [Messina-Reggio Calabria 1908](/comunicazioni/2026-12-28-messina-reggio-calabria-1908-soccorso-moderno/).
 
-- [Tōhoku-Fukushima 2011: emergenze multiple](/comunicazioni/2026-03-11-tohoku-fukushima-2011-tsunami-emergenze-multiple/)
-- [Chernobyl, 40 anni dopo: cosa ha insegnato alla protezione civile italiana](/comunicazioni/2026-04-26-chernobyl-40-anni-protezione-civile/)
+Fonti istituzionali:
+
+- [INGV — Centro Allerta Tsunami (CAT)](https://www.ingv.it/cat/).
+- [Dipartimento Protezione Civile — Rischio maremoto e SiAM](https://www.protezionecivile.gov.it/it/rischio/rischio-maremoto/).
+- [UNESCO-IOC — Tsunami Programme](https://www.ioc-tsunami.org/).
+- [NEAMTWS — Tsunami Warning System Mediterraneo e Atlantico](https://www.ioc-tsunami.org/).
+- [Farnesina — Viaggiare Sicuri](https://www.viaggiaresicuri.it/).
