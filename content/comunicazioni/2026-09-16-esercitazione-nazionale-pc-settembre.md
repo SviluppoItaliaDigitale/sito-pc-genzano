@@ -26,17 +26,16 @@ Un'esercitazione nazionale serve a:
 - **integrare** volontariato e strutture professionali;
 - **individuare** debolezze e margini di miglioramento.
 
-## Esercitazioni storiche
+## I tipi di scenario
 
-Negli ultimi anni sono state significative:
+Negli ultimi anni le esercitazioni nazionali hanno coperto le principali tipologie di rischio italiano:
 
-- **"Terremoto ex Abruzzo"** (scenario sismico multiregionale);
-- **"Vulcano"** (Campi Flegrei, zona rossa);
-- **"Tevere"** (rischio idraulico del bacino del Tevere);
-- **"Flegra"** (scenario eruttivo);
-- **"Vesuvio"** (simulazione evacuazione).
+- **scenari sismici multiregionali** (Italia centrale e meridionale);
+- **scenari vulcanici** (Campi Flegrei, Vesuvio, zona rossa);
+- **rischio idraulico** del bacino del Tevere;
+- **incidenti tecnologici** in stabilimenti a rischio rilevante.
 
-Ciascuna ha prodotto **relazioni finali**, adottate poi dai piani operativi.
+Ogni esercitazione produce una **relazione finale**, che viene poi recepita nei piani operativi.
 
 ## Il coinvolgimento dei volontari
 

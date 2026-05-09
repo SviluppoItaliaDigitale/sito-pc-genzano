@@ -57,7 +57,7 @@ Usare le parole giuste evita due errori opposti:
 - **leggere** con attenzione il livello indicato;
 - **non confondere** notizia di un avviso con emergenza in atto;
 - **condividere** solo fonti istituzionali;
-- in caso di dubbio, chiamare **il 112** solo se c'è una situazione reale.
+- chiamare il **112** solo se è in corso una situazione reale di emergenza.
 
 ## Per approfondire
 

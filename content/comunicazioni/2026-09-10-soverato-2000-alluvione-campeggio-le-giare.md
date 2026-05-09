@@ -13,16 +13,11 @@ allegati: []
 draft: false
 ---
 
-Nella notte tra il **9 e il 10 settembre 2000**, una piena improvvisa del torrente **Beltrame** travolse il **campeggio Le Giare** a Soverato (Catanzaro), in Calabria. Il campeggio ospitava un gruppo di **persone con disabilità**, in vacanza con familiari e accompagnatori dell'associazione **AISM** (Associazione Italiana Sclerosi Multipla).Bilancio: **13 morti**, di cui molti ragazzi disabili che non riuscirono a fuggire dalle tende invase dall'acqua e dal fango.
+Nella notte tra il **9 e il 10 settembre 2000**, una piena improvvisa del torrente **Beltrame** travolse il **campeggio Le Giare** a Soverato (Catanzaro), in Calabria. Il campeggio ospitava un gruppo di **persone con disabilità** in vacanza con familiari e accompagnatori dell'associazione **AISM** (Associazione Italiana Sclerosi Multipla). Il bilancio fu di **13 morti**: molti ragazzi disabili non riuscirono a fuggire dalle tende invase dall'acqua e dal fango.
 
 ## La cronologia
 
 Le piogge intense iniziarono nelle ore precedenti la mezzanotte del 9 settembre. Il torrente Beltrame, normalmente quasi asciutto in estate, si gonfiò rapidamente. Il campeggio era stato realizzato **a meno di 100 metri dall'asta del torrente**, in un'area che le carte di pericolosità idraulica classificavano già come **zona di esondazione storica**.
-
-{{< foto src="/images/2026-09-10-soverato-2000-alluvione-campeggio-le-giare-fonte-wikipedia.webp"
-         alt="Foto storica: Soverato, 10 settembre 2000: l'alluvione del campeggio Le Giare"
-         caption="Foto: DucadiFraconalto3942 — CC BY-SA 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Soverato-Bandiera.svg)." >}}
-
 
 Tra le **2 e le 3 del mattino**, l'onda di piena raggiunse il campeggio. Le tende montate vicino al letto del torrente furono spazzate via in pochi minuti. Le persone con disabilità motoria, impossibilitate a fuggire da sole, furono le prime vittime.
 
@@ -32,9 +27,9 @@ L'inchiesta giudiziaria accertò responsabilità precise: **autorizzazione errat
 
 Soverato 2000 segnò una svolta nella **regolamentazione dei campeggi e delle strutture turistiche all'aperto** in Italia. Negli anni successivi:
 
-- Le **Regioni** rivisitarono i regolamenti sui criteri di apertura dei campeggi, vietando l'autorizzazione in **zone a rischio idraulico** classificate dal PAI (Piano di Assetto Idrogeologico)
-- I **gestori** delle strutture all'aperto sono oggi obbligati a redigere **piani di emergenza** specifici, con vie di fuga, punti di raccolta, procedure per allertare gli ospiti
-- L'**accessibilità delle strutture turistiche per persone con disabilità** include esplicitamente la dimensione di sicurezza in emergenza, non solo di accessibilità ordinaria
+- Le **Regioni** hanno rivisto i regolamenti sui criteri di apertura dei campeggi, vietando l'autorizzazione in **zone a rischio idraulico** classificate dal PAI (Piano di Assetto Idrogeologico).
+- I **gestori** delle strutture all'aperto sono oggi obbligati a redigere **piani di emergenza** specifici, con vie di fuga, punti di raccolta e procedure per allertare gli ospiti.
+- L'**accessibilità delle strutture turistiche** include oggi la dimensione della sicurezza in emergenza, non solo l'accessibilità ordinaria.
 
 ## Cosa ci insegna oggi
 
@@ -49,9 +44,10 @@ Soverato 2000 è memoria dolorosa ma essenziale. Tre lezioni:
 ## A Genzano
 
 A Genzano e nei Castelli Romani non abbiamo la specificità geografica di Soverato (campeggi vicino a torrenti a regime torrentizio), ma la lezione vale per:
-- **Eventi temporanei** organizzati in aree esposte (sagre, feste, eventi sportivi all'aperto)
-- **Strutture residenziali** per persone fragili (case di riposo, comunità) che devono avere piani di evacuazione testati
-- **Coordinamento con il Comune** per il registro delle persone con esigenze specifiche, da attivare in caso di evacuazione
+
+- **eventi temporanei** organizzati in aree esposte (sagre, feste, eventi sportivi all'aperto);
+- **strutture residenziali** per persone fragili (case di riposo, comunità) che devono avere piani di evacuazione testati;
+- **coordinamento con il Comune** per il registro delle persone con esigenze specifiche, da attivare in caso di evacuazione.
 
 Il nostro [Piano di Emergenza](/piano-emergenza/) considera questi aspetti.
 

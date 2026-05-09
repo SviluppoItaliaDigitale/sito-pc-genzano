@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **22 settembre 2026** segna l'**equinozio d'autunno** astronomico. Dopo questa data, nell'emisfero nord, le giornate diventano più brevi delle notti. È un passaggio che, oltre al valore culturale, ha conseguenze pratiche anche nella vita quotidiana e nella sicurezza domestica.
+Il **23 settembre 2026** segna l'**equinozio d'autunno** astronomico. Da questa data, nell'emisfero nord, le notti diventano più lunghe del giorno. È un passaggio che, oltre al valore culturale, ha conseguenze pratiche anche nella vita quotidiana e nella sicurezza domestica.
 
 ## Cosa cambia
 

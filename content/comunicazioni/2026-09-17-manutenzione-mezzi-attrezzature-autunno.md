@@ -34,7 +34,7 @@ Dietro ogni attivazione efficace c'è un lavoro **invisibile ma indispensabile**
 
 ### Dotazioni campo base
 
-- **tende** e camere da brande: verifiche teli, paleria, tiranti;
+- **tende** e brande da campo: verifica di teli, paleria, tiranti;
 - **cucine** da campo: pulizia, verifica bombole e raccordi;
 - **gruppi elettrogeni**: avviamento, livelli, cavi;
 - **impianti illuminanti**: torri-faro, proiettori.

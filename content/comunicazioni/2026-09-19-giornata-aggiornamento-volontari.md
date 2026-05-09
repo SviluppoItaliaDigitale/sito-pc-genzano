@@ -28,7 +28,7 @@ Le ragioni sono concrete:
 ## I principali moduli
 
 ### BLS-D (Basic Life Support and Defibrillation)
-Riabilitazione **biennale obbligatoria** per chi ha la certificazione. Senza retraining, la certificazione scade.
+Aggiornamento **biennale obbligatorio** per chi ha la certificazione. Senza retraining, l'abilitazione decade.
 
 ### Antincendio boschivo (AIB)
 Aggiornamento annuale, con parte teorica (normativa, comportamento del fuoco, sicurezza) e parte pratica (DPI, manovre, uso dei mezzi).

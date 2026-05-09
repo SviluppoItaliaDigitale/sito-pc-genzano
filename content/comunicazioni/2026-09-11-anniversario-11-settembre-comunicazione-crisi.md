@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-L'**11 settembre 2001** è una data che ha ridisegnato il concetto di **emergenza complessa** nel mondo. Dal punto di vista della Protezione Civile, nei venticinque anni successivi, sono cambiate molte cose nella **gestione della comunicazione** nelle grandi crisi. Il ruolo dei media, l'uso dei social, la coordinazione interistituzionale, il linguaggio verso la popolazione. Una data di memoria anche per chi si occupa di rischio e sicurezza pubblica.
+L'**11 settembre 2001** è una data che ha ridisegnato il concetto di **emergenza complessa** nel mondo. Nei venticinque anni successivi sono cambiate molte cose nella **comunicazione di crisi**: il ruolo dei media, l'uso dei social, il coordinamento fra istituzioni, il linguaggio verso la popolazione. Per chi si occupa di rischio e sicurezza pubblica resta una data di riferimento.
 
 ## Le lezioni che hanno cambiato la PC nel mondo
 
@@ -60,7 +60,7 @@ Non è un "di più": è **parte integrante** dell'intervento di soccorso.
 Il Gruppo Comunale Volontari di PC di Genzano cura la comunicazione seguendo:
 
 - le **linee guida AGID** per la PA;
-- la **Social Media Policy** pubblica pubblicata il 22 aprile 2026;
+- la **Social Media Policy** pubblicata il 22 aprile 2026;
 - le regole di **comunicazione istituzionale** stabilite con il Comune;
 - il principio di **trasparenza e verificabilità** delle fonti.
 
