@@ -162,8 +162,19 @@ Dicembre è un mese **intenso**: sul piano meteo, operativo, sociale. Ma anche u
 
 ## Per approfondire
 
-- [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/)
-- [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/)
-- [Chiusura novembre](/comunicazioni/2026-11-30-chiusura-novembre-bilancio-dicembre/)
+Sul nostro sito:
+
+- [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/).
+- [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/).
+- [Chiusura novembre](/comunicazioni/2026-11-30-chiusura-novembre-bilancio-dicembre/).
+- [Allerte meteo del territorio](/allerte-meteo/).
+- [Riscaldamento sicuro a dicembre](/comunicazioni/2026-12-04-riscaldamento-sicuro-dicembre/).
+- [Capodanno e petardi: sicurezza](/comunicazioni/2026-12-30-capodanno-petardi-sicurezza/).
+
+Fonti istituzionali:
+
+- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Servizio Meteorologico dell'Aeronautica](https://www.meteoam.it/).
+- [Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/).
 
 In emergenza: **112**.

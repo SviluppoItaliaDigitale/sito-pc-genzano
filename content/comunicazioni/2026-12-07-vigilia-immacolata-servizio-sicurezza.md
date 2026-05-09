@@ -175,8 +175,16 @@ Buona **vigilia dell'Immacolata** a tutti i cittadini di Genzano, a chi festeggi
 
 ## Per approfondire
 
-- [Ponte Immacolata](/comunicazioni/2026-11-29-ponte-immacolata-preparazione/)
-- [Presidio PC](/comunicazioni/2026-12-05-presidio-ponte-immacolata/)
-- [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/)
+Sul nostro sito:
+
+- [Ponte Immacolata](/comunicazioni/2026-11-29-ponte-immacolata-preparazione/).
+- [Presidio PC ponte Immacolata](/comunicazioni/2026-12-05-presidio-ponte-immacolata/).
+- [Immacolata: festa e auguri](/comunicazioni/2026-12-08-immacolata-festa-auguri/).
+- [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/).
+- [Riscaldamento sicuro a dicembre](/comunicazioni/2026-12-04-riscaldamento-sicuro-dicembre/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 
 In emergenza: **112**.
