@@ -15,7 +15,7 @@ draft: false
 
 Dietro ogni bollettino meteo ufficiale c'è una rete fitta di **stazioni di osservazione**: da quelle professionali dell'Aeronautica Militare e del Centro Funzionale Regionale, fino a quelle amatoriali installate da appassionati e associazioni.
 
-Le stazioni amatoriali, ben gestite, contribuiscono in modo significativo alla **conoscenza del clima locale**. E nei territori complessi come i **Castelli Romani** — dove l'altitudine, i versanti, l'influenza dei laghi creano **microclimi** molto diversi anche a pochi chilometri — questa granularità è preziosa.
+Le stazioni amatoriali, ben gestite, contribuiscono in modo significativo alla **conoscenza del clima locale**. Nei territori complessi come i **Castelli Romani** — dove altitudine, versanti e influenza dei laghi creano **microclimi** molto diversi anche a pochi chilometri — questa granularità è preziosa.
 
 ## Perché serve una rete densa di osservazione
 
@@ -77,14 +77,14 @@ Associazioni come **MeteoNetwork** raccolgono i dati di migliaia di stazioni ama
 
 ## Le "sentinelle" del Gruppo
 
-Anche il volontariato di Protezione Civile può beneficiare di questa cultura:
+Il volontariato di Protezione Civile trae vantaggio concreto da questa cultura:
 
 - **Segnalazione in tempo reale** di eventi locali (grandine, pioggia forte, vento anomalo).
 - **Verifica sul campo** di allerte meteo: "è davvero piovuto così tanto nel mio quartiere?"
 - **Confronto** tra previsioni e realtà per capire meglio i modelli.
 - **Supporto alla divulgazione** verso i cittadini.
 
-Un volontario che sa leggere un bollettino, confrontarlo con i dati locali e riconoscere un evento in corso è un **volontario più preparato**.
+Un volontario che sa leggere un bollettino, confrontarlo con i dati locali e riconoscere un evento in corso è **più preparato**.
 
 ## La segnalazione di eventi meteo
 
@@ -102,7 +102,7 @@ Per ricevere invece informazioni:
 
 ## Distinguere previsioni da allerte
 
-Una **previsione** meteo indica cosa è **probabile** che accada. Un'**allerta** indica che le condizioni previste **richiedono attenzione** per la popolazione.
+Una **previsione** meteo indica cosa è **probabile** che accada. Un'**allerta** indica che le condizioni previste **impongono comportamenti di autoprotezione** alla popolazione.
 
 - **Verde**: nessuna criticità prevista.
 - **Giallo**: fenomeni moderati, cautela ordinaria.
