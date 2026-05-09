@@ -1,6 +1,6 @@
 ---
 title: "Perché le allerte hanno colori? Lo standard ISO 22324 spiegato semplice"
-date: 2026-05-12
+date: 2026-05-12T00:02:00+02:00
 description: "Verde, giallo, arancione, rosso: cosa dice lo standard ISO 22324 e come si applica nel sistema italiano del Centro Funzionale Regionale."
 badge: "Formazione"
 priorita: "normale"
@@ -13,39 +13,39 @@ allegati: []
 draft: false
 ---
 
-Quando il Centro Funzionale Regionale del Lazio emette un **bollettino di criticità**, ogni provincia o zona di allerta è colorata in **verde, giallo, arancione o rosso**. Questi colori non sono una scelta grafica: rispondono a uno standard internazionale, **ISO 22324**, che dice come dovrebbe essere progettato un sistema di allerta a colori per essere comprensibile, accessibile e affidabile.
+Il Centro Funzionale Regionale del Lazio pubblica ogni giorno un **bollettino di criticità**. Ogni zona di allerta riceve un colore: verde, giallo, arancione o rosso. Quei colori non sono una scelta grafica. Seguono lo standard internazionale **ISO 22324**, che definisce come progettare un sistema di allerta cromatica comprensibile, accessibile e affidabile in qualsiasi contesto culturale.
 
 ## Quattro principi dietro a una scala di colori
 
-ISO 22324 si basa su quattro principi fondamentali per i codici colore delle allerte.
+ISO 22324 definisce quattro principi per i codici colore delle allerte.
 
-**Il primo principio** è la **scelta cromatica universale**. Il rosso significa "massima allerta" in tutte le culture; il verde significa "tutto regolare". Si parte da questi due estremi e si aggiungono gradini intermedi (giallo per attenzione, arancione per allerta elevata) seguendo un percorso che il cervello umano riconosce istintivamente. Lo standard sconsiglia colori esotici o creativi: l'allerta non è il momento per la fantasia.
+**Scelta cromatica universale.** Il rosso significa "massima allerta" in tutte le culture, il verde significa "nessuna criticità". I gradini intermedi — giallo per attenzione moderata, arancione per allerta elevata — seguono un percorso che l'occhio riconosce istintivamente. Lo standard esclude colori creativi o non convenzionali.
 
-**Il secondo principio** è il **numero di livelli**. Tre, quattro o cinque livelli sono ottimali. Meno di tre semplifica troppo (perde informazione utile). Più di cinque confonde (l'occhio non distingue facilmente sei sfumature). Il sistema italiano del Centro Funzionale usa **quattro livelli**, scelta in linea con la raccomandazione internazionale.
+**Numero di livelli.** Tre, quattro o cinque livelli sono ottimali. Meno di tre perde informazione utile; più di cinque confonde la lettura rapida. Il Centro Funzionale Regionale usa **quattro livelli**, in linea con la raccomandazione internazionale.
 
-**Il terzo principio**, forse il più importante, è che **il colore non basta da solo**. Una persona daltonica (in Italia ~5% dei maschi) può non distinguere rosso e verde. Per questo lo standard impone che ogni livello sia accompagnato da:
+**Il colore non basta da solo.** In Italia circa il 5% degli uomini ha una forma di daltonismo. Lo standard richiede che ogni livello sia accompagnato da:
 
-- una **parola scritta** chiaramente ("Allerta arancione", non solo cerchio arancione);
-- un'**icona o un simbolo** distinguibile in scala di grigi;
-- una **posizione coerente** nella scala (il rosso sempre in alto, il verde sempre in basso).
+- la **parola scritta** in chiaro (es. "Allerta arancione", non solo il cerchio colorato);
+- un'**icona o simbolo** leggibile anche in scala di grigi;
+- una **posizione fissa** nella scala (il rosso sempre in alto, il verde sempre in basso).
 
-Il principio di accessibilità — niente informazione veicolata solo dal colore — è anche una regola **WCAG 2.2** (criterio 1.4.1) e una nostra regola interna nelle pubblicazioni social.
+Questo principio coincide con il criterio **WCAG 2.2 — 1.4.1**: nessuna informazione critica affidata al solo colore. Lo applichiamo anche nelle nostre pubblicazioni social.
 
-**Il quarto principio** è la **stabilità nel tempo**. La scala non deve cambiare di anno in anno: il cittadino impara una volta cosa significa "arancione" e quell'apprendimento deve restare valido. ISO 22324 sconsiglia revisioni cosmetiche frequenti.
+**Stabilità nel tempo.** La scala non cambia di anno in anno. Il cittadino apprende una volta il significato di ciascun livello; quel significato deve restare valido nel tempo. ISO 22324 sconsiglia revisioni cosmetiche frequenti.
 
-## Come si applica in Italia
+## Come funziona in Italia
 
-Nel sistema italiano della Protezione Civile, i codici colore sono usati in più contesti:
+Nel sistema italiano di Protezione Civile, i codici colore si usano in più contesti:
 
 - **Allerta meteo idrogeologica e temporali**: bollettini quotidiani del Centro Funzionale Regionale Lazio per ogni zona di allerta. Quattro livelli **verde / giallo / arancione / rosso**.
 - **Allerta incendi boschivi**: ARSIAL e Regione Lazio pubblicano nei mesi estivi un bollettino di pericolosità per fascia climatica e tipo di vegetazione.
 - **Bollettini sanitari**: il Ministero della Salute usa scale colorate per ondate di calore, qualità dell'aria, allerta epidemica.
 
-Il riferimento normativo è la **Direttiva del Presidente del Consiglio dei Ministri del 27 febbraio 2004**, che ha introdotto i codici colore nazionali per il rischio idrogeologico. Le Regioni li applicano sui propri bollettini con piccole varianti grafiche, ma la sostanza è uniforme.
+Il riferimento normativo è la **Direttiva del Presidente del Consiglio dei Ministri del 27 febbraio 2004**, che ha introdotto i codici colore nazionali per il rischio idrogeologico. Le Regioni li applicano con piccole varianti grafiche, ma la struttura è uniforme.
 
-## Cosa significa per il cittadino
+## Cosa trovare in un bollettino di allerta
 
-In pratica, davanti a un bollettino di allerta si dovrebbe sempre vedere — sia sul sito istituzionale, sia sui social, sia su un'eventuale notifica push:
+Ogni bollettino di allerta — sul sito istituzionale, sui canali social, su una notifica push — deve contenere:
 
 1. il **livello scritto** in chiaro (es. "Allerta gialla per temporali");
 2. il **colore** corrispondente che lo rinforza visivamente;
@@ -54,13 +54,11 @@ In pratica, davanti a un bollettino di allerta si dovrebbe sempre vedere — sia
 5. la **fonte ufficiale** (Centro Funzionale Regionale Lazio o Dipartimento di Protezione Civile);
 6. **cosa fare** in pratica (es. "evita le aree alluvionabili", "non sostare sotto i tigli per il rischio caduta rami").
 
-Quando una di queste informazioni manca, il messaggio è **incompleto**: ISO 22324 non lo definirebbe un'allerta, ma un'informazione imprecisa.
+Se manca anche uno solo di questi elementi, il messaggio è **incompleto**. ISO 22324 non lo classificherebbe come allerta, ma come informazione imprecisa.
 
 ## Sul nostro sito
 
-Sul nostro sito i livelli di allerta del Lazio sono visibili in tempo reale nella **barra di stato in homepage** (in alto, sempre visibile) e nella pagina dedicata alle [allerte meteo](/allerte-meteo/). Il colore è sempre accompagnato dal **livello scritto**, dall'**area** e dalla **fonte** ufficiale, in linea con il principio di non affidare informazioni critiche al solo colore.
-
-Per un quadro completo della famiglia ISO sulla gestione delle emergenze, vedi la sezione [Standard ISO per la Protezione Civile](/standard-iso/).
+Il livello di allerta del Lazio è visibile in tempo reale nella **barra di stato in homepage** e nella pagina [Allerte meteo](/allerte-meteo/). Mostriamo sempre il livello scritto, l'area e la fonte ufficiale: mai il solo colore. Per un quadro completo degli standard ISO applicati alla gestione delle emergenze, consulta la sezione [Standard ISO per la Protezione Civile](/standard-iso/).
 
 ## Per approfondire
 
