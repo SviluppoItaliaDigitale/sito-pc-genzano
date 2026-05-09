@@ -97,7 +97,8 @@ Il Gruppo Comunale di PC include il BLS-D nel corso base dei volontari. Cittadin
 
 ## Per approfondire
 
-- [Registro nazionale DAE](https://www.itlsi.it/)
+- [Ministero della Salute — Defibrillatori semiautomatici esterni](https://www.salute.gov.it/)
+- [Italian Resuscitation Council (IRC)](https://www.ircouncil.it/)
 - [Croce Rossa Italiana](https://www.cri.it/)
 - [Corso base volontari](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/)
 

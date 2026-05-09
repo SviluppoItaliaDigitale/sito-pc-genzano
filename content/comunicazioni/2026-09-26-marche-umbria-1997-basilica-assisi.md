@@ -36,10 +36,11 @@ Umbria-Marche 1997 ha cambiato due protocolli operativi della Protezione Civile 
 
 ## La ricostruzione come modello
 
-La ricostruzione delle Marche e dell'Umbria post-1997 è considerata, con tutti i suoi limiti, **un caso di studio positivo**. Furono utilizzati per la prima volta su larga scala:
-- **Schede AeDES** (Agibilità e Danno nell'Emergenza Sismica) per la valutazione speditiva degli edifici
-- **Centri Operativi Misti (COM)** come livello intermedio di coordinamento tra Comuni e Regione
-- **Convenzioni con le Università** per la ricostruzione partecipata dei centri storici
+La ricostruzione delle Marche e dell'Umbria post-1997 è considerata, con tutti i suoi limiti, **un caso di studio positivo**. Furono usati per la prima volta su larga scala:
+
+- **Schede AeDES** (Agibilità e Danno nell'Emergenza Sismica) per la valutazione speditiva degli edifici;
+- **Centri Operativi Misti (COM)** come livello intermedio di coordinamento tra Comuni e Regione;
+- **convenzioni con le Università** per la ricostruzione partecipata dei centri storici.
 
 Molti di questi strumenti sono stati riutilizzati e raffinati nelle emergenze successive: L'Aquila 2009, Emilia 2012, Centro Italia 2016.
 
