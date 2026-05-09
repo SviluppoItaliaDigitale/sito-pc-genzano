@@ -13,16 +13,16 @@ allegati: []
 draft: false
 ---
 
-L'**8 dicembre 2026** cade di **martedì**. Molti sfrutteranno il **5-8 dicembre** (venerdì-lunedì-martedì) come lungo ponte. Il **ponte dell'Immacolata** segna l'avvio informale della **stagione natalizia**: mercatini, luminarie, prime nevicate in montagna, traffico in aumento. Qualche nota utile.
+L'**8 dicembre 2026** cade di **martedì**. Molti sfrutteranno il **5-8 dicembre** (sabato-martedì) come lungo ponte. Il **ponte dell'Immacolata** segna l'avvio informale della **stagione natalizia**: mercatini, luminarie, prime nevicate in montagna, traffico in aumento. Qualche nota utile.
 
 ## Il contesto
 
 ### Date
-- **5 dicembre** (venerdì): giornata operativa con possibile esodo serale;
-- **6 dicembre** (sabato): partenze;
-- **7 dicembre** (domenica): traffico distribuito;
-- **8 dicembre** (lunedì, festa Immacolata): punta di mercatini e visite;
-- **9 dicembre** (martedì): rientri.
+- **5 dicembre** (sabato): partenze concentrate al mattino;
+- **6 dicembre** (domenica): traffico distribuito;
+- **7 dicembre** (lunedì): giornata-ponte con esodo verso le mete;
+- **8 dicembre** (martedì, festa Immacolata): punta di mercatini e visite;
+- **9 dicembre** (mercoledì): rientri.
 
 Il **ponte** è considerato l'**avvio** ufficiale della stagione natalizia turistica in Italia.
 
@@ -174,7 +174,7 @@ A Genzano:
 
 ## Dopo il ponte
 
-Martedì 9 dicembre riprende:
+Mercoledì 9 dicembre riprende:
 - **scuole** (orario normale);
 - **uffici** pubblici e privati;
 - **rientro** del traffico autostradale;

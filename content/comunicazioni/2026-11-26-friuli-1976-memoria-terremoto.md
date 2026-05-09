@@ -99,11 +99,11 @@ Oggi "**Modello Friuli**" significa:
 - **verifica** tecnica costante;
 - **innovazione** combinata con tradizione.
 
-## Lo spirito del "Fur dal bas"
+## Lo spirito di una comunità
 
-Un elemento culturale importante: il **carattere friulano** di lavoro, disciplina, concretezza. "**Fur dal bas**" (letteralmente "fuori dal basso") è l'espressione con cui i friulani hanno affrontato la tragedia: **risollevarsi**, senza vittimismo, **ricostruendo**.
+Un elemento culturale importante: il **carattere friulano** di lavoro, disciplina e concretezza ha contribuito al successo della ricostruzione. La popolazione ha affrontato la tragedia con la volontà di **risollevarsi senza vittimismo**, restando sul territorio e ricostruendo "dov'era e com'era".
 
-Non è un tratto da idealizzare, ma una **risorsa culturale** che ha contribuito al successo della ricostruzione.
+Non è un tratto da idealizzare, ma una **risorsa culturale** documentata da sociologi e ricercatori che hanno studiato il caso friulano.
 
 ## L'impatto sulla PC nazionale
 
