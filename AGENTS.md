@@ -6,6 +6,37 @@
 
 ---
 
+## 🔴 Sezione 0 — Come usarmi (leggi questa per prima)
+
+**AGENTS.md è già completo come punto d'ingresso.** Contiene quickref, 3 regole operative non negoziabili, 16 invarianti, palette badge, comandi, agenti specializzati, divieti. **Non serve caricare altri file upfront.**
+
+### NON fare questo (blocca le sessioni cloud)
+
+- ❌ **Non leggere `CONTESTO-AI.md`** in apertura di sessione: è un export auto-generato di tutta la documentazione (oltre 1 MB) costruito per l'incollaggio una-tantum in altre AI, non per il caricamento via GitHub connector.
+- ❌ **Non leggere tutte le `.claude/rules/0*.md` upfront**: sono 11 file, oltre 200 KB cumulativi. Il GitHub connector di OpenAI fa N tool call sequenziali che timeoutano o esauriscono contesto, e l'agent finisce in *"Sto pensando"* indefinito o restituisce *"Something went wrong while generating the response"*.
+- ❌ **Non leggere tutto `manuale/parte-NN-*.md` upfront**: sono 21+ file di manuale operativo, stessa logica.
+- ❌ **Non leggere tutti gli articoli di `content/comunicazioni/`** upfront per «conoscere il sito»: sono 400+ file Markdown, sicuro overflow.
+
+Quando l'utente dice *"leggi tutta la manualistica"*, *"prendi confidenza col repo"*, *"studia il sito"*, **NON eseguirlo letteralmente**: rispondi *"Ho già AGENTS.md come punto d'ingresso. Dimmi il task specifico e leggo solo i file che servono per quello."*
+
+### Fai questo (on-demand, mirato)
+
+- ✅ **Leggi solo i file rilevanti per il task corrente**, identificati dal task stesso.
+- ✅ **Quando una regola in AGENTS.md ti rimanda** a `.claude/rules/0*.md` § X o a `manuale/parte-NN-*.md` § X, leggi *quella specifica sezione* solo se il task la coinvolge.
+- ✅ **Per modificare un articolo** in `content/comunicazioni/`: leggi solo quell'articolo + AGENTS.md sezione 5.1-5.2 (frontmatter, palette badge).
+- ✅ **Per aggiungere una foto inline**: leggi AGENTS.md sezione 5.3 + se serve `02-content-design-pa.md` § "Foto utente".
+- ✅ **Per pubblicare**: AGENTS.md sezione 3.2 (la regola «pubblica»), niente altro.
+
+### File caricati di default
+
+Se stai operando come **Claude Code** sul PC dell'utente: il sistema carica già automaticamente `CLAUDE.md` + tutte le `.claude/rules/0*.md` come system instructions all'avvio sessione. Non rileggerle, hai già tutto in contesto.
+
+Se stai operando come **ChatGPT/Codex via GitHub connector**: hai solo questo `AGENTS.md` (caricato dal connector all'avvio). Tutto il resto è on-demand.
+
+**Storia della regola:** esiste perché il 9 maggio 2026 una sessione ChatGPT-cloud è entrata in *"Sto pensando"* per ore dopo che l'utente ha detto *"ovviamente leggi tutta la manualistica!"* — il connector ha provato a caricare CONTESTO-AI.md + 11 rules + 21 parti del manuale + AGENTS.md insieme, ha timeoutato, ha bloccato la sessione. Per evitare il pattern: leggere on-demand, non upfront.
+
+---
+
 ## ⚡ Quickref — Le 3 regole operative non negoziabili (= i 3 vincoli operativi non negoziabili)
 
 Se ti viene chiesto **«quali sono le 3 regole operative non negoziabili di questo progetto?»** o **«quali sono i 3 vincoli operativi non negoziabili?»**, la risposta esatta — testuale, non filosofica — è:
@@ -446,7 +477,7 @@ R. Segnalalo all'utente. Non risolverlo autonomamente: la decisione su quale dei
 
 ---
 
-**Versione:** 1.1 — creato il 2026-05-06.
-**Ultima revisione:** 2026-05-09 — sezione 3.2 riscritta dopo incidente ChatGPT-cloud del 9 maggio: parole-trigger ampliate (informali + rinforzate + conferme), nuova sotto-sezione «Domande di stato sulla pubblicazione», nuove FAQ.
+**Versione:** 1.2 — creato il 2026-05-06.
+**Ultima revisione:** 2026-05-09 — aggiunta Sezione 0 «Come usarmi» (anti-overload del GitHub connector); sezione 3.2 riscritta (parole-trigger ampliate, sotto-sezione «Domande di stato sulla pubblicazione», nuove FAQ).
 **Autorità:** allineato a `CLAUDE.md` v3.0 e a `.claude/rules/0*.md` (snapshot maggio 2026).
 **Manutenzione:** quando modifichi `CLAUDE.md` aggiorna anche questo file, e viceversa.
