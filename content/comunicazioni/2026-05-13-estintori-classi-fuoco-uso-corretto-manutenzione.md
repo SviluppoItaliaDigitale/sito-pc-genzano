@@ -1,128 +1,136 @@
 ---
 title: "Estintori: classi di fuoco, uso corretto e manutenzione"
 date: 2026-05-13T00:02:00+02:00
-description: "Classi di fuoco A, B, C, D, F secondo UNI EN 2, tipi di estintore (polvere, CO2, schiuma, acqua), tecnica PASS di utilizzo e regole di manutenzione UNI 9994."
+description: "Guida pratica alle classi di fuoco, ai principali tipi di estintore e ai controlli periodici. Quando usarlo, quando uscire e chiamare il 112."
 
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione.webp"
-image_alt: "Cover dell'articolo: Estintori: classi di fuoco, uso corretto e manutenzione"
+image_alt: "Cover dell'articolo: Estintori, classi di fuoco, uso corretto e manutenzione"
 scadenza: ""
-area: ""
+area: "Genzano di Roma"
 allegati: []
 draft: false
 ---
 
-L'estintore portatile è lo strumento antincendio di prima difesa più diffuso in Italia. Lo si trova nelle sedi di protezione civile, nei mezzi operativi, nelle abitazioni, negli uffici, nei capannoni. Ma un estintore non è un oggetto universale: ognuno è progettato per spegnere un certo tipo di fuoco e può essere **inefficace o pericoloso** se usato su un fuoco della classe sbagliata.
+L'estintore portatile è uno strumento antincendio di prima difesa. Si trova nelle sedi operative, nei mezzi, negli uffici, nei capannoni e in molte abitazioni. Non è però uno strumento universale: ogni estintore è progettato per determinati tipi di fuoco e può essere **inefficace o pericoloso** se usato nel modo sbagliato.
 
-Questo articolo riassume quello che ogni volontario di protezione civile deve sapere: le classi di fuoco, i tipi di estintore, la tecnica corretta di utilizzo e le regole di manutenzione. Quando poi il fuoco è grande, in progressione rapida, su sostanze pericolose o in uno spazio chiuso, **la risposta giusta resta una sola: chiamare il 112 e lasciare il luogo**. L'estintore portatile è utile solo su un principio di incendio.
+Questo articolo riassume quello che un cittadino e un volontario devono sapere: classi di fuoco, tipi di estintore, uso corretto e controlli. Quando il fuoco è grande, cresce rapidamente, coinvolge sostanze pericolose o produce molto fumo, la risposta corretta resta una sola: **uscire, mettersi al sicuro e chiamare il 112**. L'estintore portatile è utile solo su un principio di incendio e solo se si ha una via di fuga libera.
 
-## Le cinque classi di fuoco — UNI EN 2:2005
+## Le cinque classi di fuoco
 
-La norma UNI EN 2:2005 classifica i fuochi in base al combustibile che alimenta la fiamma. La lettera sulla targhetta dell'estintore dice su quale classe può essere usato.
+Le classi di fuoco distinguono gli incendi in base al combustibile che alimenta la fiamma. La lettera sulla targhetta dell'estintore indica su quale classe può essere usato.
 
-- **Classe A — fuochi di materiali solidi**, generalmente di natura organica, la cui combustione produce brace. Legno, carta, cartone, tessuti, plastica, gomma. Sono i fuochi più comuni in casa e in ufficio.
-- **Classe B — fuochi di liquidi infiammabili**. Benzina, gasolio, oli lubrificanti, alcoli, solventi, vernici. Fuochi tipici di autorimessa, cantiere, industria.
-- **Classe C — fuochi di gas infiammabili**. Metano, GPL, acetilene, idrogeno. La regola d'oro prima di spegnere un fuoco di gas è **intercettare il flusso**: spegnere la fiamma senza chiudere la valvola lascia il gas libero di formare una nube infiammabile o esplosiva.
-- **Classe D — fuochi di metalli combustibili**. Magnesio, sodio, potassio, titanio, alluminio in polvere. Richiedono estintori specifici a polvere D: acqua e CO2 peggiorano la situazione.
-- **Classe F — fuochi di oli e grassi da cucina** (la vecchia classe "grassi" delle cucine professionali). Richiedono estintori specifici a schiuma F, in grado di saponificare il grasso. Usare acqua su un olio in fiamma provoca un'esplosione di vapore ed è una delle cause più frequenti di incidenti domestici gravi.
+- **Classe A — materiali solidi**: legno, carta, cartone, tessuti, plastica, gomma. Sono fuochi che possono produrre brace.
+- **Classe B — liquidi infiammabili**: benzina, gasolio, oli, alcoli, solventi, vernici.
+- **Classe C — gas infiammabili**: metano, GPL, acetilene, idrogeno. Prima di spegnere una fiamma di gas, dove possibile e sicuro, va intercettato il flusso.
+- **Classe D — metalli combustibili**: magnesio, sodio, potassio, titanio, alluminio in polvere. Richiedono estintori specifici.
+- **Classe F — oli e grassi da cucina**: richiedono estintori adatti alla classe F o una coperta antifiamma, se l'evento è ancora piccolo.
 
-La **"classe E" elettrica non esiste più** nella norma UNI EN 2:2005. I fuochi su impianti elettrici sotto tensione si spengono con estintori compatibili con la tensione di esercizio (tipicamente CO2 o polvere): la dicitura corretta sulla targhetta indica la tensione massima (es. "1000 V — 1 metro"). Prima di spegnere un fuoco elettrico, dove possibile, si toglie tensione dall'impianto.
+La **classe E elettrica non è una classe di fuoco**. Per incendi su apparecchiature sotto tensione si usano estintori compatibili con il rischio elettrico e con la tensione indicata in etichetta. Dove possibile, prima si toglie tensione dall'impianto.
 
 ## I tipi di estintore portatile
 
-Gli estintori portatili conformi alla norma UNI EN 3-7:2014 si distinguono per l'**agente estinguente** contenuto. I più diffusi in Italia sono quattro.
+Gli estintori portatili si distinguono per l'**agente estinguente**. I più diffusi sono quattro.
 
-### Estintore a polvere (ABC o BC)
+### Estintore a polvere
 
-Il più comune. Contiene polvere chimica a base di fosfati o bicarbonati, spinta da azoto o CO2 in pressione.
+È il più comune. È versatile e può essere efficace su molti principi di incendio.
 
-- **Classi coperte**: ABC (polivalente) o solo BC a seconda del tipo di polvere.
-- **Pregi**: versatile, leggero, efficace su tutto. Funziona su fuochi di natura elettrica entro la tensione indicata.
-- **Limiti**: la polvere imbratta tutto, rovina apparecchiature elettroniche, non raffredda (quindi il fuoco può riaccendersi se non si rimuove la fonte di innesco). In ambienti chiusi solleva una nube che riduce la visibilità e irrita le vie respiratorie.
+- **Pregi**: adatto a diversi scenari, utile in autorimessa, sede operativa, officina o mezzo.
+- **Limiti**: la polvere sporca, può danneggiare apparecchiature elettroniche, riduce la visibilità e può irritare le vie respiratorie in ambienti chiusi.
 
-### Estintore a CO2 (anidride carbonica)
+### Estintore a CO₂
 
-Contiene anidride carbonica liquefatta ad alta pressione. Si riconosce dal diffusore rigido, simile a un cono, molto più grande della manichetta di un estintore a polvere.
+Contiene anidride carbonica. Si riconosce dal diffusore rigido, simile a un cono.
 
-- **Classi coperte**: BC. Efficace anche su fuochi elettrici (la CO2 è un gas non conduttore).
-- **Pregi**: pulito, non lascia residui, ideale per apparecchiature elettroniche, quadri elettrici, laboratori.
-- **Limiti**: non è efficace su Classe A (non raffredda il materiale solido, che si riaccende). In ambienti piccoli e chiusi può abbassare drasticamente la concentrazione di ossigeno ed è **pericoloso per le persone presenti**. Il diffusore durante la scarica raggiunge temperature di **-70 °C circa**: afferrarlo dal manico isolato, mai dal metallo, per evitare ustioni da freddo.
+- **Pregi**: non lascia residui ed è utile su apparecchiature elettriche.
+- **Limiti**: non raffredda i materiali solidi, quindi il fuoco può riaccendersi. In locali piccoli può ridurre l'ossigeno. Il diffusore diventa molto freddo: va impugnato solo dalle parti isolate.
 
 ### Estintore a schiuma
 
 Contiene acqua additivata con schiumogeno.
 
-- **Classi coperte**: AB. Alcune schiume specifiche coprono anche la Classe F (oli da cucina).
-- **Pregi**: efficace sia sui solidi (raffredda) sia sui liquidi infiammabili (la schiuma forma un film che soffoca). Lascia residui meno aggressivi della polvere.
-- **Limiti**: l'acqua conduce elettricità — **non usare su impianti elettrici sotto tensione**. Sensibile al gelo nelle versioni non additivate.
+- **Pregi**: utile su solidi e alcuni liquidi infiammabili perché raffredda e crea uno strato che limita i vapori.
+- **Limiti**: non va usato su impianti elettrici sotto tensione se non espressamente indicato dall'etichetta.
 
 ### Estintore ad acqua
 
-Il più semplice, contiene acqua eventualmente additivata.
+È indicato soprattutto per fuochi di classe A.
 
-- **Classi coperte**: A. Alcune versioni nebulizzate anche F.
-- **Pregi**: economico, ecologico, efficace sui solidi grazie al raffreddamento.
-- **Limiti**: non usare su Classe B (l'acqua galleggia sull'olio e propaga il fuoco), su Classe C, su Classe D, su impianti elettrici sotto tensione.
+- **Pregi**: raffredda bene i materiali solidi.
+- **Limiti**: non va usato su olio, liquidi infiammabili, metalli combustibili o apparecchiature sotto tensione, salvo indicazioni specifiche del produttore.
 
-### Estintore specifico a polvere D (metalli)
+### Estintore specifico per metalli
 
-Presente in ambienti industriali dove si lavorano metalli combustibili. Contiene polveri dedicate (cloruro di sodio, grafite) che soffocano il fuoco del metallo senza reagire.
+È presente in ambienti particolari, dove si lavorano metalli combustibili. Va usato solo da personale formato e nello scenario per cui è previsto.
 
-## Come si usa un estintore — la tecnica PASS
+## Come si usa un estintore
 
-La sigla inglese **PASS** riassume i quattro gesti in sequenza. È un acronimo universale insegnato in tutti i corsi antincendio italiani:
+Prima di usarlo, verifica tre condizioni:
 
-1. **P — Prendi l'estintore e togli la spina di sicurezza**. La spina è un piccolo perno metallico o plastico con anello, inserito sopra il manico di azionamento. Si tira orizzontalmente, con decisione, rompendo il piombino.
-2. **A — Avvicinati al fuoco tenendo le spalle all'uscita**. Posizionati a **2-3 metri dal fuoco**, mai più vicino, mai di spalle a pareti o ostacoli che impediscano la ritirata. Controlla prima di partire di avere **la via di fuga libera alle tue spalle**.
-3. **S — Schiaccia la leva impugnando il manico**. Se l'estintore è a CO2, afferra il diffusore dal manico isolato, non dal cono metallico. Dirigi il getto alla base delle fiamme, non verso la punta.
-4. **S — Spazza il getto alla base del fuoco con movimento a ventaglio**, da sinistra a destra o in modo concentrico. La fiamma si spegne partendo dalla base. Non sprecare l'agente estinguente: la maggior parte degli estintori portatili si scarica in **6-12 secondi**.
+1. Il principio di incendio è piccolo.
+2. Hai una via di fuga libera alle spalle.
+3. Sai usare l'estintore e quello disponibile è adatto al tipo di fuoco.
 
-### Regole operative aggiuntive
+La procedura pratica si può riassumere così:
 
-- **Su fuochi all'aperto**: posizionati sempre **sopravento** rispetto al fuoco. Il vento allontana il calore da te e spinge l'agente estinguente sulle fiamme.
-- **Su fuochi in locale chiuso**: entra solo se sei sicuro di poter uscire, non restare dentro dopo l'esaurimento dell'estintore, non fare più di un tentativo. Il fumo è il pericolo principale: inalarlo è più rapido e mortale delle fiamme.
-- **Mai lanciare estintori**: non avvicinarli al fuoco senza impugnarli, non lasciarli cadere.
-- **Se hai più estintori**: usa prima il più vicino alla fiamma. Se non basta, passa al secondo. Dopo due estintori senza risultato, **abbandona l'area e chiama il 112**.
-- **Dopo l'uso**: anche un estintore usato per pochi secondi si considera scarico e deve essere ricaricato. Non rimetterlo in postazione senza manutenzione.
+1. **Togli la spina di sicurezza**.
+2. **Avvicinati senza superare la distanza di sicurezza**, mantenendo la via di fuga libera.
+3. **Dirigi il getto alla base delle fiamme**, non verso la punta.
+4. **Muovi il getto a ventaglio** fino a spegnimento.
+5. **Allontanati e controlla da distanza sicura**: il fuoco può riaccendersi.
 
-## Manutenzione — UNI 9994-1:2013
+Se l'estintore non funziona subito, se il fumo aumenta o se la fiamma cresce, **esci e chiama il 112**.
 
-Gli estintori richiedono una manutenzione periodica per garantirne l'efficienza. La norma UNI 9994-1:2013 prevede quattro fasi, a carico di tecnici abilitati, con scadenze diverse.
+## Regole operative essenziali
 
-- **Sorveglianza** — ogni volta che serve, almeno ogni 6 mesi. Controllo visivo: l'estintore è al suo posto, il cartello di segnalazione è visibile, la lancia è integra, il manometro è in zona verde, la spina di sicurezza e il piombino sono presenti, il cartellino di manutenzione è aggiornato. La sorveglianza può farla il personale non specializzato (es. il responsabile di sede del gruppo di volontari).
-- **Controllo** — ogni **6 mesi**. Verifica tecnica più approfondita a cura di personale abilitato: accertamento della correttezza di carica, stato della valvola, integrità della manichetta e del diffusore.
-- **Revisione** — variabile per tipo di estintore (tipicamente ogni **36 mesi per gli estintori a polvere e a schiuma, ogni 60 mesi per CO2**, secondo tabella UNI 9994-1). Lo smontaggio, l'esame interno e la ricarica avvengono in officina.
-- **Collaudo** — ogni **12 anni per polvere e schiuma, ogni 10 anni per CO2**. Prova idraulica di pressione del serbatoio e ripunzonatura.
+- **All'aperto**, posizionati sopravento se possibile.
+- **In un locale chiuso**, non restare se il fumo aumenta o se la visibilità cala.
+- **Non fare più tentativi** se il primo non riesce.
+- **Non usare acqua su olio o apparecchiature sotto tensione**.
+- **Dopo l'uso**, anche parziale, l'estintore deve essere controllato e ricaricato.
 
-La **data dell'ultimo controllo** è riportata sul cartellino appeso all'estintore. **Un estintore senza cartellino aggiornato è da considerare inefficiente** e va sostituito o richiamato in manutenzione prima dell'uso.
+## Manutenzione e controlli
+
+Gli estintori devono essere sottoposti a controlli periodici secondo le norme tecniche e le indicazioni del produttore. Per le attività soggette a obblighi di sicurezza, la manutenzione deve essere svolta da personale competente.
+
+La sorveglianza visiva serve a verificare che:
+
+- l'estintore sia al suo posto;
+- il cartello di segnalazione sia visibile;
+- la lancia e il tubo siano integri;
+- la spina di sicurezza e il sigillo siano presenti;
+- il manometro, se presente, non indichi anomalie;
+- il cartellino di manutenzione sia leggibile e aggiornato.
+
+Un estintore senza cartellino aggiornato, danneggiato o scarico deve essere segnalato e sostituito o inviato a manutenzione.
 
 ## Che cosa evitare
 
-- **Non usare estintori di classe sbagliata**: acqua o schiuma su fuochi elettrici e di Classe D, acqua su Classe B (benzina) o F (olio da cucina).
-- **Non entrare in un locale invaso dal fumo denso**: il fumo uccide prima della fiamma. Se non c'è visibilità, esci e chiama il 112.
-- **Non usare estintori dove mancano DPI adeguati**: un fuoco di sostanze pericolose (vedi articolo sui cartelli di pericolo) richiede equipaggiamento dei Vigili del Fuoco, non un estintore portatile.
-- **Non usare estintori scaduti o di manutenzione incerta**: in emergenza, il minimo che ti aspetti è che funzioni.
-- **Non attaccare un fuoco più grande delle tue possibilità**: regola empirica, un fuoco più alto di un uomo è già oltre la portata di un estintore portatile.
+- **Non usare estintori di classe sbagliata**.
+- **Non entrare in un locale invaso dal fumo**.
+- **Non affrontare incendi di sostanze pericolose** senza l'equipaggiamento e la competenza necessari.
+- **Non usare estintori di manutenzione incerta**.
+- **Non attaccare un fuoco più grande delle tue possibilità**.
 
 ## Riassunto operativo
 
-Un volontario di protezione civile che incontra un principio di incendio fa nell'ordine:
+Davanti a un principio di incendio:
 
-1. Verifica se ha via di fuga libera alle spalle.
-2. Identifica la classe di fuoco e sceglie l'estintore giusto (ABC se non sa, CO2 su quadro elettrico, mai acqua su olio o elettrico).
-3. Applica la tecnica PASS: Prendi la spina, Avvicinati a 2-3 m sopravento, Schiaccia la leva, Spazza alla base delle fiamme.
-4. Se dopo uno o due estintori il fuoco non si spegne, **esce, chiama il 112, evacua le persone** dal locale e dalle vicinanze.
+1. Verifica la via di fuga.
+2. Valuta se il fuoco è piccolo e se puoi intervenire senza esporti.
+3. Usa solo un estintore adatto e solo se sai farlo.
+4. Se il fuoco non si spegne subito, **esci, chiama il 112 ed evacua le persone**.
 
-L'estintore è un primo presidio, non uno strumento risolutivo. Per il volontario di protezione civile la priorità è sempre **salvaguardare la vita** — la propria, quella della squadra, quella dei cittadini coinvolti — **prima del bene materiale**.
+L'estintore è un primo presidio, non uno strumento risolutivo. La priorità è sempre **salvaguardare la vita**: la propria, quella della squadra e quella dei cittadini coinvolti.
 
 ## Fonti ufficiali
 
-- Norma tecnica UNI EN 2:2005 — Classificazione dei fuochi
-- Norma tecnica UNI EN 3-7:2014 — Estintori d'incendio portatili
-- Norma tecnica UNI 9994-1:2013 — Manutenzione degli estintori
-- Decreto Ministeriale 10 marzo 1998 — Criteri generali di sicurezza antincendio e gestione dell'emergenza nei luoghi di lavoro
+- Norma tecnica UNI EN 2 — Classificazione dei fuochi
+- Norma tecnica UNI EN 3 — Estintori d'incendio portatili
+- Norma tecnica UNI 9994-1 — Manutenzione degli estintori
 - Decreto del Presidente della Repubblica 1 agosto 2011 n. 151 — Regolamento prevenzione incendi
-- Dipartimento della Protezione Civile — [protezionecivile.gov.it](https://www.protezionecivile.gov.it)
 - Vigili del Fuoco — [vigilfuoco.it](https://www.vigilfuoco.it)
+- Dipartimento della Protezione Civile — [protezionecivile.gov.it](https://www.protezionecivile.gov.it)
