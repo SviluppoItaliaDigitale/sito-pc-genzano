@@ -143,8 +143,16 @@ Nei prossimi giorni pubblicheremo:
 
 ## Per approfondire
 
-- [Vigilia di Natale auguri](/comunicazioni/2026-12-24-vigilia-natale-auguri/)
-- [Presidio ponte Immacolata](/comunicazioni/2026-12-05-presidio-ponte-immacolata/)
-- [Gruppo Comunale PC](/chi-siamo/)
+Sul nostro sito:
+
+- [Vigilia di Natale: auguri](/comunicazioni/2026-12-24-vigilia-natale-auguri/).
+- [Presidio ponte Immacolata](/comunicazioni/2026-12-05-presidio-ponte-immacolata/).
+- [Santo Stefano protomartire](/comunicazioni/2026-12-26-santo-stefano-protomartire/).
+- [Bilancio annuale PC Genzano](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
+- [Chi siamo](/chi-siamo/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 
 In emergenza sempre: **112**.

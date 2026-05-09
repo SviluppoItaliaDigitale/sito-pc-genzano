@@ -253,8 +253,20 @@ Non sappiamo **cosa** porterà il 2027. Sappiamo solo che saremo **pronti** per 
 
 ## Per approfondire
 
-- [Bilancio 2026](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/)
-- [Settimana tra feste](/comunicazioni/2026-12-27-settimana-tra-feste-riflessione/)
-- [Gruppo Comunale PC](/chi-siamo/)
+Sul nostro sito:
+
+- [Bilancio 2026](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
+- [Settimana tra feste: riflessione](/comunicazioni/2026-12-27-settimana-tra-feste-riflessione/).
+- [San Silvestro: auguri di fine anno](/comunicazioni/2026-12-31-san-silvestro-auguri-fine-anno/).
+- [Capodanno e petardi: sicurezza](/comunicazioni/2026-12-30-capodanno-petardi-sicurezza/).
+- [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/).
+- [Diventa volontario](/diventa-volontario/).
+- [Chi siamo](/chi-siamo/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/).
 
 In emergenza: **112**.

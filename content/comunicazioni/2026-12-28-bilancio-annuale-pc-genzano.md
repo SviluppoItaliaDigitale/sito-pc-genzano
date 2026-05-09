@@ -237,8 +237,19 @@ Se oggi pensi "potrei contribuire anch'io", **contattaci**. Nel **2027** ci sara
 
 ## Per approfondire
 
-- [Chiusura novembre](/comunicazioni/2026-11-30-chiusura-novembre-bilancio-dicembre/)
-- [Esame corso base](/comunicazioni/2026-12-11-esame-corso-base/)
-- [Gruppo Comunale PC](/chi-siamo/)
+Sul nostro sito:
+
+- [Chiusura novembre](/comunicazioni/2026-11-30-chiusura-novembre-bilancio-dicembre/).
+- [Esame corso base](/comunicazioni/2026-12-11-esame-corso-base/).
+- [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/).
+- [Prospettive 2027: nuovo anno](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/).
+- [Chi siamo](/chi-siamo/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/).
 
 In emergenza: **112**.

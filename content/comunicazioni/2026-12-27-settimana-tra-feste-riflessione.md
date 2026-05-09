@@ -239,8 +239,16 @@ Questa settimana **sospesa** è **preziosa**:
 
 ## Per approfondire
 
-- [Santo Stefano](/comunicazioni/2026-12-26-santo-stefano-protomartire/)
-- [Natale auguri](/comunicazioni/2026-12-25-natale-auguri-genzano/)
-- [Anziani soli](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/)
+Sul nostro sito:
+
+- [Santo Stefano protomartire](/comunicazioni/2026-12-26-santo-stefano-protomartire/).
+- [Natale: auguri da Genzano](/comunicazioni/2026-12-25-natale-auguri-genzano/).
+- [Anziani soli a Natale](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/).
+- [Bilancio annuale PC Genzano](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
+- [Prospettive 2027: nuovo anno](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 
 In emergenza: **112**.

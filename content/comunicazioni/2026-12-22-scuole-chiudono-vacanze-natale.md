@@ -222,8 +222,21 @@ A **studenti**, **insegnanti**, **famiglie**: buone feste e buon riposo dalla sc
 
 ## Per approfondire
 
-- [Preparativi Natale](/comunicazioni/2026-12-12-preparativi-natale-acquisti-sicuri/)
-- [San Nicola tradizione bambini](/comunicazioni/2026-12-06-san-nicola-tradizione-bambini/)
-- [Educazione al rischio bambini](/comunicazioni/2026-11-20-educazione-al-rischio-bambini/)
+Sul nostro sito:
+
+- [Preparativi Natale](/comunicazioni/2026-12-12-preparativi-natale-acquisti-sicuri/).
+- [San Nicola tradizione bambini](/comunicazioni/2026-12-06-san-nicola-tradizione-bambini/).
+- [Educazione al rischio bambini](/comunicazioni/2026-11-20-educazione-al-rischio-bambini/).
+- [Sicurezza giochi bambini all'aperto](/comunicazioni/2026-05-28-sicurezza-giochi-bambini-aperto/).
+- [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/).
+- [Kit Calamità — Bambini](/formazione/kit-calamita-bambini/).
+
+Fonti istituzionali:
+
+- [Telefono Azzurro — emergenza infanzia 114](https://www.azzurro.it/).
+- [Centro Antiveleni Roma — Policlinico Gemelli](https://www.policlinicogemelli.it/).
+- [Società Italiana di Pediatria](https://sip.it/).
+- [UNICEF Italia](https://www.unicef.it/).
+- [MIM — Ministero Istruzione e Merito](https://www.mim.gov.it/).
 
 In emergenza: **112**. Emergenza infanzia: **114**. Telefono Azzurro: **19696**.
