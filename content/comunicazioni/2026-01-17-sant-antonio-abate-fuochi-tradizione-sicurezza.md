@@ -72,7 +72,7 @@ Se il fuoco sfugge al controllo:
 
 La Protezione Civile non è contro le tradizioni. Anzi, il falò di Sant'Antonio Abate è un momento di comunità che vale la pena vivere. Basta viverlo con **consapevolezza**: poche regole semplici bastano a trasformarlo da rischio in occasione serena.
 
-Se ogni anno torniamo ad accendere lo stesso fuoco, è perché ci ricorda qualcosa di importante: la **vicinanza tra vicini**, il **passaggio delle stagioni**, la **gratitudine** per chi lavora la terra e accudisce gli animali. Viverlo in sicurezza è il modo migliore di rispettarlo.
+Se ogni anno torniamo ad accendere lo stesso fuoco, è perché ci ricorda qualcosa di importante. La **vicinanza tra vicini**, il **passaggio delle stagioni**, la **gratitudine** per chi lavora la terra e accudisce gli animali. Viverlo in sicurezza è il modo migliore di rispettarlo.
 
 ## Per approfondire
 

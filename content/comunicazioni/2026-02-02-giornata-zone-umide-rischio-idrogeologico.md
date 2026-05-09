@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **2 febbraio** è la **Giornata mondiale delle zone umide** (*World Wetlands Day*), istituita nel 1971 quando fu firmata la **Convenzione di Ramsar** — il primo trattato internazionale per la tutela di paludi, stagni, laghi, fiumi e coste.
+Il **2 febbraio** è la **Giornata mondiale delle zone umide** (*World Wetlands Day*), istituita nel 1971. Ricorda la firma della **Convenzione di Ramsar** — il primo trattato internazionale per la tutela di paludi, stagni, laghi, fiumi e coste.
 
 Può sembrare un tema lontano dal nostro lavoro quotidiano. Non lo è. Le **zone umide** sono un **presidio naturale contro il rischio idrogeologico** — alluvioni, frane, siccità. Proteggerle significa **proteggere le città** a valle.
 

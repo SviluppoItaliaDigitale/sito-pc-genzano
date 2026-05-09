@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Quando la Regione Lazio emette un'allerta meteo, il bollettino non parla dell'intera regione in modo uniforme: la divide in **zone di allerta**, ognuna con le proprie caratteristiche di territorio e di rischio. Sapere **in quale zona si trova Genzano** e **come leggere il bollettino** è la competenza minima per capire cosa sta succedendo e cosa fare.
+Quando la Regione Lazio emette un'allerta meteo, il bollettino non parla dell'intera regione in modo uniforme. La divide in **zone di allerta**, ognuna con le proprie caratteristiche di territorio e di rischio. Sapere **in quale zona si trova Genzano** e **come leggere il bollettino** è la competenza minima per capire cosa sta succedendo e cosa fare.
 
 In questo articolo spieghiamo come funziona il sistema a zone.
 

@@ -59,7 +59,7 @@ La patente di radioamatore apre alla possibilità di usare in proprio tutte le b
 
 ## L'importanza per un territorio
 
-In un territorio come quello dei Castelli Romani, con versanti, gallerie, aree boschive che causano coni d'ombra cellulare, la rete radio del Gruppo garantisce una **continuità di comunicazione** anche in condizioni avverse. Nelle esercitazioni AIB, nelle emergenze meteo, nelle manifestazioni pubbliche, la radio resta uno strumento di lavoro concreto.
+In un territorio come i Castelli Romani — con versanti, gallerie e aree boschive che causano coni d'ombra cellulare — la rete radio del Gruppo garantisce **continuità di comunicazione** anche in condizioni avverse. Nelle esercitazioni AIB, nelle emergenze meteo, nelle manifestazioni pubbliche, la radio resta uno strumento di lavoro concreto.
 
 ## Per approfondire
 

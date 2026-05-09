@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il 16 marzo 2026, presso la sede della Regione Lazio, il Presidente **Francesco Rocca** e l'Assessore alla Protezione Civile **Pasquale Ciacciarelli** hanno consegnato 100 defibrillatori alle associazioni e ai gruppi comunali di Protezione Civile del territorio regionale.
+Il 16 marzo 2026, presso la sede della Regione Lazio, sono stati consegnati 100 defibrillatori alle associazioni e ai gruppi comunali di Protezione Civile del territorio regionale. Hanno presieduto la cerimonia il Presidente **Francesco Rocca** e l'Assessore alla Protezione Civile **Pasquale Ciacciarelli**.
 
 Anche il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è tra i beneficiari.
 

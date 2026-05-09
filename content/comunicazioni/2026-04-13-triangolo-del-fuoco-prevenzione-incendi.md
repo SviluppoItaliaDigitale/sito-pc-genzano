@@ -50,7 +50,7 @@ Non tutti i combustibili si comportano allo stesso modo. Alcuni prendono fuoco p
 
 ### Il comburente
 
-Il comburente è la sostanza che permette al combustibile di reagire. Nella maggior parte dei casi si tratta dell'ossigeno presente nell'aria. È un elemento che di solito non possiamo eliminare del tutto, ma che possiamo limitare in alcuni casi specifici, per esempio coprendo un piccolo focolaio con materiali adatti oppure usando estintori che agiscono per soffocamento.
+Il comburente è la sostanza che permette al combustibile di reagire. Nella maggior parte dei casi si tratta dell'ossigeno presente nell'aria. È un elemento che di solito non possiamo eliminare del tutto. Possiamo però limitarlo in alcuni casi specifici: coprendo un piccolo focolaio con materiali adatti oppure usando estintori che agiscono per soffocamento.
 
 Molte persone pensano che l'incendio dipenda solo dalla presenza di qualcosa che brucia. In realtà senza ossigeno sufficiente la combustione non si mantiene. Questo spiega perché alcuni sistemi antincendio agiscono proprio separando il fuoco dall'aria.
 
