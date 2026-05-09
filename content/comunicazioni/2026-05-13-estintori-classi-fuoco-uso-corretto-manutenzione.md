@@ -2,7 +2,6 @@
 title: "Estintori: classi di fuoco, uso corretto e manutenzione"
 date: 2026-05-13T00:02:00+02:00
 description: "Guida pratica alle classi di fuoco, ai principali tipi di estintore e ai controlli periodici. Quando usarlo, quando uscire e chiamare il 112."
-
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -126,19 +125,19 @@ Davanti a un principio di incendio:
 
 L'estintore è un primo presidio, non uno strumento risolutivo. La priorità è sempre **salvaguardare la vita**: la propria, quella della squadra e quella dei cittadini coinvolti.
 
-## Approfondimenti
+## Per approfondire
 
-Pagine del sito:
+Sul nostro sito:
 
-- [Rischio incendio — cosa fare prima, durante e dopo](/rischi-prevenzione/rischio-incendio/)
-- [Kit di emergenza — cosa tenere pronto in casa](/rischi-prevenzione/kit-emergenza/)
+- [Rischio incendio — cosa fare prima, durante e dopo](/rischi-prevenzione/rischio-incendio/).
+- [Kit di emergenza — cosa tenere pronto in casa](/rischi-prevenzione/kit-emergenza/).
 
-Fonti ufficiali esterne:
+Fonti istituzionali e norme tecniche:
 
-- Norma tecnica UNI EN 2 — Classificazione dei fuochi
-- Norma tecnica UNI EN 3 — Estintori d'incendio portatili
-- Norma tecnica UNI 9994-1 — Manutenzione degli estintori
-- D.P.R. 1 agosto 2011, n. 151 — Regolamento prevenzione incendi
-- D.Lgs. 9 aprile 2008, n. 81 — Testo Unico sulla sicurezza nei luoghi di lavoro
-- Vigili del Fuoco — [vigilfuoco.it](https://www.vigilfuoco.it)
-- Dipartimento della Protezione Civile — [protezionecivile.gov.it](https://www.protezionecivile.gov.it)
+- Norma tecnica UNI EN 2 — Classificazione dei fuochi.
+- Norma tecnica UNI EN 3 — Estintori d'incendio portatili.
+- Norma tecnica UNI 9994-1 — Manutenzione degli estintori.
+- D.P.R. 1 agosto 2011, n. 151 — Regolamento prevenzione incendi.
+- D.Lgs. 9 aprile 2008, n. 81 — Testo Unico sulla sicurezza nei luoghi di lavoro.
+- [Vigili del Fuoco](https://www.vigilfuoco.it).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it).

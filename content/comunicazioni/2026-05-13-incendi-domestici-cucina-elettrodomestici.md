@@ -70,7 +70,7 @@ Un rilevatore di fumo a pile costa 10-20 euro, si attacca al soffitto con una vi
 ### Incendio in cucina con olio in fiamme
 
 - **Non gettare acqua**: provoca un'esplosione di olio bollente.
-- **Non spostare la pentola**: sposti la fiamma e ti scotthi.
+- **Non spostare la pentola**: sposti la fiamma e ti scotti.
 - **Spegni il fornello** se è sicuro avvicinarsi.
 - **Copri con un coperchio o una coperta antifiamma**.
 - **Chiama il 112** se la fiamma ha raggiunto altri materiali.
@@ -115,17 +115,17 @@ In un incendio domestico **muoiono più persone per intossicazione da fumi** che
 
 ## Per approfondire
 
-Sul sito:
+Sul nostro sito:
 
-- [Rischio incendio boschivo: cosa fare prima, durante e dopo](/rischi-prevenzione/rischio-incendio/)
-- [Classi di fuoco e uso corretto dell'estintore](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/)
-- [Triangolo del fuoco: capire come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
-- [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
-- [Check-list casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
+- [Rischio incendio: cosa fare prima, durante e dopo](/rischi-prevenzione/rischio-incendio/).
+- [Classi di fuoco e uso corretto dell'estintore](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
+- [Triangolo del fuoco: capire come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
+- [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
+- [Check-list casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/).
 
-Fonti istituzionali esterne:
+Fonti istituzionali:
 
-- [Vigili del Fuoco — Prevenzione incendi](https://www.vigilfuoco.it/aspx/Home.aspx)
-- [Ministero dell'Interno — Campagne sicurezza domestica](https://www.interno.gov.it/)
+- [Vigili del Fuoco — Prevenzione incendi](https://www.vigilfuoco.it/).
+- [Ministero dell'Interno — Campagne sicurezza domestica](https://www.interno.gov.it/).
 
 Poche abitudini quotidiane riducono drasticamente il rischio: non lasciare cibo sul fuoco, non sovraccaricare le prese, non tenere candele vicino ai tessuti. Non servono tecnologie avanzate: serve attenzione.

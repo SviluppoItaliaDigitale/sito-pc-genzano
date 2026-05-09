@@ -58,11 +58,18 @@ Se manca anche uno solo di questi elementi, il messaggio è **incompleto**. ISO 
 
 ## Sul nostro sito
 
-Il livello di allerta del Lazio è visibile in tempo reale nella **barra di stato in homepage** e nella pagina [Allerte meteo](/allerte-meteo/). Mostriamo sempre il livello scritto, l'area e la fonte ufficiale: mai il solo colore. Per un quadro completo degli standard ISO applicati alla gestione delle emergenze, consulta la sezione [Standard ISO per la Protezione Civile](/standard-iso/).
+Il livello di allerta del Lazio è visibile in tempo reale nella **barra di stato in homepage** e nella pagina [Allerte meteo](/allerte-meteo/). Mostriamo sempre il livello scritto, l'area e la fonte ufficiale: mai il solo colore.
 
 ## Per approfondire
 
-- Scheda interna dello standard: [ISO 22324 — Allerte a codice colore](/standard-iso/iso-22324/)
-- [Pagina ufficiale ISO](https://www.iso.org/search.html?q=ISO+22324)
-- [Allerte meteo del nostro territorio](/allerte-meteo/)
-- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/cittadini/protezione-civile)
+Sul nostro sito:
+
+- [ISO 22324 — Allerte a codice colore](/standard-iso/iso-22324/): scheda interna con titolo, ambito e contestualizzazione italiana.
+- [Standard ISO per la Protezione Civile](/standard-iso/): hub di tutti gli standard internazionali rilevanti.
+- [Allerte meteo del nostro territorio](/allerte-meteo/).
+
+Fonti istituzionali:
+
+- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/cittadini/protezione-civile): bollettini quotidiani di criticità.
+- [Pagina ufficiale ISO 22324](https://www.iso.org/search.html?q=ISO+22324): per il testo della norma (a pagamento) consulta [iso.org](https://www.iso.org/) o il [catalogo UNI](https://store.uni.com/).
+- [WCAG 2.2 — 1.4.1 Use of Color](https://www.w3.org/TR/WCAG22/#use-of-color): criterio internazionale di accessibilità citato sopra.
