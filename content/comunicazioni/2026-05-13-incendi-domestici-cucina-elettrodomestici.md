@@ -13,9 +13,7 @@ allegati: []
 draft: false
 ---
 
-In Italia ogni anno i [Vigili del Fuoco](https://www.vigilfuoco.it/) intervengono per migliaia di **incendi domestici**. La maggior parte parte da due luoghi: la **cucina** e gli **impianti elettrici**. La buona notizia: con poche attenzioni, quasi tutti si possono evitare.
-
-In questo articolo riassumiamo le cause più frequenti e i comportamenti corretti in caso di principio di incendio.
+Ogni anno i [Vigili del Fuoco](https://www.vigilfuoco.it/) intervengono per migliaia di incendi domestici in Italia. La cucina e gli impianti elettrici sono le due cause principali. Con poche attenzioni, quasi tutti si possono evitare.
 
 ## Le cause più comuni
 
@@ -41,19 +39,19 @@ Mozziconi non spenti, ceneriere svuotate troppo presto, fumare a letto.
 
 ### 6. Impianti a gas non revisionati
 
-Caldaie, stufette a gas, bombole non controllate: gas può accumularsi e incendiarsi.
+Caldaie, stufette a gas, bombole non controllate: il gas può accumularsi e incendiarsi.
 
 ## Prevenzione: un check-up casa
 
-Una volta all'anno:
+Fai questi controlli almeno una volta all'anno:
 
 - **Controlla i cavi** degli elettrodomestici principali: nessuna abrasione, nessun collegamento improvvisato.
-- **Pulisci il filtro dell'asciugatrice** (se ce l'hai) dopo ogni uso.
-- **Verifica che le ciabatte** non ricevano più potenza di quanto sono dichiarate sostenere.
-- **Fai la manutenzione annuale** della caldaia (è obbligatoria per legge).
+- **Pulisci il filtro dell'asciugatrice** dopo ogni uso.
+- **Verifica le ciabatte**: non devono ricevere più potenza di quella dichiarata.
+- **Fai la manutenzione annuale della caldaia**: è obbligatoria per legge.
 - **Non lasciare bombole di gas** al sole o vicino a fonti di calore.
-- **Sostituisci i rilevatori di fumo** con nuovi ogni 10 anni (se ne hai).
-- **Prendi una coperta antifiamma** per la cucina (costa pochi euro, si trova nei supermercati).
+- **Sostituisci i rilevatori di fumo** ogni 10 anni.
+- **Tieni una coperta antifiamma in cucina**: costa pochi euro e si trova nei supermercati.
 
 ## Rilevatori di fumo: investimento piccolo, utilità grande
 
@@ -63,43 +61,46 @@ Un rilevatore di fumo a pile costa 10-20 euro, si attacca al soffitto con una vi
 
 ### Principio di incendio piccolo (padella, tostapane, asciugacapelli)
 
-1. **Spegni la fonte di calore** (fornello, spina).
+1. **Spegni la fonte di calore** (fornello o spina).
 2. **Copri con un coperchio** o una coperta antifiamma per soffocare la fiamma.
-3. **NON gettare acqua** su olio o elettricità.
-4. **Ventila il locale** quando è spento.
+3. **Non gettare acqua** su olio o su apparecchi elettrici.
+4. **Ventila il locale** solo quando la fiamma è spenta.
+5. Se non controlli la fiamma in pochi secondi, **chiama subito il 112**.
 
 ### Incendio in cucina con olio in fiamme
 
-- **NON gettare acqua**: l'acqua fa esplodere l'olio bollente.
-- **NON spostare la pentola**: sposteresti la fiamma.
-- **Spegni il fornello** (se è sicuro avvicinarsi).
+- **Non gettare acqua**: provoca un'esplosione di olio bollente.
+- **Non spostare la pentola**: sposti la fiamma e ti scotthi.
+- **Spegni il fornello** se è sicuro avvicinarsi.
 - **Copri con un coperchio o una coperta antifiamma**.
-- **Chiama il 112** se la fiamma ha toccato altro materiale.
+- **Chiama il 112** se la fiamma ha raggiunto altri materiali.
 
 ### Incendio di elettrodomestico
 
-- **Stacca la corrente** dal quadro generale, se è sicuro.
-- **NON gettare acqua** su apparecchi ancora sotto tensione.
-- **Usa un estintore a polvere o a CO₂** se lo hai e sai usarlo.
-- **Esci di casa** se l'incendio non è immediatamente controllabile.
+- **Stacca la corrente** dal quadro generale, se è sicuro farlo.
+- **Non gettare acqua** su apparecchi ancora sotto tensione.
+- **Usa un estintore a polvere o a CO₂** se lo hai e sai usarlo. Vedi il nostro [articolo sulle classi di fuoco e sull'uso corretto dell'estintore](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
+- **Esci di casa** se l'incendio non è subito controllabile.
+- **Chiama il 112**.
 
 ### Incendio esteso
 
 - **Esci subito** con la famiglia, senza prendere nulla.
-- **Chiudi le porte** alle tue spalle per rallentare la propagazione.
-- **Chiama il 112** da un luogo sicuro.
-- **Non rientrare per nessun motivo**: nemmeno "un secondo per prendere qualcosa".
+- **Chiudi le porte** alle tue spalle: rallentano la propagazione del fuoco.
+- **Non aprire una porta se la senti calda**: oltre c'è fuoco o fumo denso.
 - **Avvisa i vicini** battendo alle porte mentre scendi.
 - **Se c'è molto fumo**, procedi a carponi: l'aria respirabile è a 30-40 cm da terra.
-- **Se rimani bloccato in una stanza**, chiudi la porta, tappa gli spiragli con un panno bagnato, affacciati a una finestra e segnala la tua posizione.
+- **Se rimani bloccato in una stanza**: chiudi la porta, tappa gli spiragli con un panno bagnato, affacciati alla finestra e segnala la tua posizione.
+- **Chiama il 112** appena sei in luogo sicuro.
+- **Non rientrare per nessun motivo**.
 
-## Cosa NON fare mai
+## Cosa non fare mai
 
 - **Non usare l'ascensore** durante un incendio.
-- **Non rientrare** per oggetti, animali, documenti.
-- **Non aprire una porta se è calda al tocco**: oltre c'è fuoco o fumo denso.
-- **Non gettare acqua su olio o elettricità**.
-- **Non spegnere una fiamma con altre fiamme** (es. alcol).
+- **Non rientrare** per oggetti, animali o documenti.
+- **Non aprire una porta calda al tocco**: oltre c'è fuoco o fumo denso.
+- **Non gettare acqua su olio o su apparecchi elettrici**.
+- **Non usare alcol o altri liquidi infiammabili** per tentare di spegnere una fiamma.
 
 ## I fumi sono il primo killer
 
@@ -114,11 +115,17 @@ In un incendio domestico **muoiono più persone per intossicazione da fumi** che
 
 ## Per approfondire
 
-- Articolo: [Triangolo del fuoco: capire come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
-- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
-- Articolo: [Check-list casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
-- [Vigili del Fuoco — Prevenzione](https://www.vigilfuoco.it/aspx/Home.aspx)
-- [Ministero dell'Interno — Campagne sicurezza](https://www.interno.gov.it/)
-- [UNI — Norme tecniche impianti domestici](https://www.uni.com/)
+Sul sito:
 
-Una casa sicura è una casa in cui **poche abitudini quotidiane** riducono drasticamente il rischio: mai lasciare cibo sul fuoco, mai sovraccaricare prese, mai candele vicino a tessuti. Non servono tecnologie avanzate: serve attenzione.
+- [Rischio incendio boschivo: cosa fare prima, durante e dopo](/rischi-prevenzione/rischio-incendio/)
+- [Classi di fuoco e uso corretto dell'estintore](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/)
+- [Triangolo del fuoco: capire come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
+- [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+- [Check-list casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
+
+Fonti istituzionali esterne:
+
+- [Vigili del Fuoco — Prevenzione incendi](https://www.vigilfuoco.it/aspx/Home.aspx)
+- [Ministero dell'Interno — Campagne sicurezza domestica](https://www.interno.gov.it/)
+
+Poche abitudini quotidiane riducono drasticamente il rischio: non lasciare cibo sul fuoco, non sovraccaricare le prese, non tenere candele vicino ai tessuti. Non servono tecnologie avanzate: serve attenzione.
