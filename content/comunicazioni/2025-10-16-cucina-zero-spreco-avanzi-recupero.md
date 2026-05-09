@@ -64,7 +64,7 @@ Gli alimenti preparati in casa richiedono attenzione specifica:
 
 ## Perché queste abitudini contano
 
-Il Ministero dell'Ambiente e le Nazioni Unite stimano che **ridurre lo spreco alimentare è uno dei modi più efficaci** per ridurre l'impronta di carbonio individuale. Ogni piatto non buttato è acqua, terra, energia ed emissioni risparmiate a monte — oltre che denaro trattenuto in famiglia.
+Secondo la FAO e il Ministero dell'Ambiente e della Sicurezza Energetica, ridurre lo spreco alimentare è uno dei modi più efficaci per contenere l'impronta di carbonio individuale. Ogni piatto non buttato è acqua, terra, energia ed emissioni risparmiate a monte — oltre che denaro trattenuto in famiglia.
 
 Nel prossimo articolo della serie: **nuovi acquisti** (pianificare la spesa) e **fuori casa** (ristorante, ufficio, bambini, feste).
 

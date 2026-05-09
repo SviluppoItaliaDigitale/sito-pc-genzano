@@ -16,7 +16,7 @@ allegati:
 draft: false
 ---
 
-Quando la Protezione Civile apre un campo di accoglienza o un centro operativo, la **cucina** è una delle prime strutture a essere allestita. Non si tratta solo di preparare pasti: è un'area che deve rispettare gli stessi standard igienico-sanitari di una mensa permanente. Il Manuale del Dipartimento Solidarietà Emergenze della Federazione Italiana Cuochi (DSEFIC-FIC) — che abbiamo aggiunto alla nostra [Area Download](/area-download/) — dedica il primo capitolo proprio a questo tema.
+Quando la Protezione Civile apre un campo di accoglienza o un centro operativo, la **cucina** è una delle prime strutture a essere allestita. Preparare pasti per centinaia di persone richiede gli stessi standard igienico-sanitari di una mensa permanente. Il Manuale del Dipartimento Solidarietà Emergenze della Federazione Italiana Cuochi (DSEFIC-FIC) — che abbiamo aggiunto alla nostra [Area Download](/area-download/) — dedica il primo capitolo proprio a questo tema.
 
 ## La sorveglianza sanitaria
 

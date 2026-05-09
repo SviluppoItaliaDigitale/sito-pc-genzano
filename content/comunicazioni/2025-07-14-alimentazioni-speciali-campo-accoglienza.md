@@ -16,7 +16,7 @@ allegati:
 draft: false
 ---
 
-In un campo di accoglienza convivono persone con esigenze alimentari molto diverse: chi ha un'**allergia grave**, chi è **celiaco**, chi segue una dieta **vegetariana o vegana**, chi non può mangiare certi alimenti per motivi **religiosi**. Il Manuale di Cucina in Emergenza del DSEFIC-FIC — Dipartimento di Sicurezza Alimentare della Federazione Italiana Cuochi — dedica un intero capitolo a queste situazioni. Come scrive la curatrice Rossanina Del Santo: *"chi sta in cucina non deve solo nutrire, ma far sentire amato chi sta vivendo un momento di grande criticità"*.
+In un campo di accoglienza convivono persone con esigenze alimentari molto diverse: chi ha un'**allergia grave**, chi è **celiaco**, chi segue una dieta **vegetariana o vegana**, chi non può mangiare certi alimenti per motivi **religiosi**. Il Manuale di Cucina in Emergenza del DSEFIC-FIC (Dipartimento di Sicurezza Alimentare della Federazione Italiana Cuochi) dedica un intero capitolo a queste situazioni. Come scrive la curatrice Rossanina Del Santo: *"chi sta in cucina non deve solo nutrire, ma far sentire amato chi sta vivendo un momento di grande criticità"*.
 
 Abbiamo allegato il manuale completo a questo articolo e alla pagina [Area Download](/area-download/). Qui riassumiamo le regole operative principali.
 
@@ -78,7 +78,7 @@ Le stesse regole valgono per tutti, con maggiore rigore quando si preparano past
 
 ## Cosa chiediamo ai volontari
 
-Quando si entra in turno in una cucina da campo, è utile arrivare informati: leggere il capitolo sulle alimentazioni speciali del manuale DSEFIC aiuta a non improvvisare e a evitare errori che possono avere conseguenze sanitarie serie.
+Quando si entra in turno in una cucina da campo, arriva informato: leggere il capitolo sulle alimentazioni speciali del manuale DSEFIC-FIC aiuta a non improvvisare e a evitare errori con conseguenze sanitarie serie.
 
 Per approfondire, scarica il **manuale completo** dall'allegato di questo articolo o dalla pagina [Area Download](/area-download/).
 
