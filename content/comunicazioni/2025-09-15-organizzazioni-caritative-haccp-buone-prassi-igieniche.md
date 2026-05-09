@@ -36,7 +36,7 @@ Le fonti di contaminazione biologica sono quattro: **materie prime, attrezzature
 
 ## Le buone pratiche igieniche (GHP)
 
-Il capitolo 7 sintetizza le **Buone Pratiche Igieniche** (dal Codex Alimentarius e Reg. 852/2004) in regole semplici che ogni volontario deve conoscere e applicare:
+Il capitolo 7 sintetizza le **Buone Pratiche Igieniche** — GHP (Good Hygiene Practices, dal Codex Alimentarius e Reg. 852/2004) — in regole semplici che ogni volontario deve conoscere e applicare:
 
 ### Igiene del personale
 
@@ -58,7 +58,7 @@ Il capitolo 7 sintetizza le **Buone Pratiche Igieniche** (dal Codex Alimentarius
 - **Catena del caldo**: pasti caldi da distribuire devono restare **≥ +60 °C**.
 - **Trasporto**: contenitori isotermici adatti, tempi ridotti al minimo, registrazione delle temperature per spostamenti di media-lunga durata.
 
-### Congelamento da parte della OC (Organizzazione Caritatevole)
+### Congelamento da parte della OC (Organizzazione Caritatevole, secondo la terminologia del manuale)
 
 Il manuale è chiaro su **cosa si può congelare**:
 
@@ -70,7 +70,7 @@ Non si possono quindi congelare alimenti già cotti ricevuti a temperatura ambie
 
 ## Il sistema HACCP semplificato
 
-Il capitolo 8 affronta l'**HACCP** — Hazard Analysis and Critical Control Points, il sistema di analisi e controllo dei punti critici — adattato alle OC. Il manuale sceglie un **approccio schematico**, basato sulle fasi del processo, alternativo all'albero delle decisioni tipico delle aziende più strutturate.
+Il capitolo 8 affronta l'**HACCP** (Hazard Analysis and Critical Control Points — analisi dei rischi e controllo dei punti critici) adattato alle OC. Il manuale sceglie un **approccio schematico**, basato sulle fasi del processo, alternativo all'albero delle decisioni tipico delle aziende più strutturate.
 
 Le fasi del flusso sono:
 
