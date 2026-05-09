@@ -199,6 +199,7 @@ Ogni data fissa si ripete ogni anno con aggiornamenti minimi. Preparare le bozze
 ### Maggio
 - **1 maggio** — Sicurezza sul lavoro anche per i volontari di PC (badge: Formazione)
 - **8 maggio** — Giornata mondiale Croce Rossa e Mezzaluna Rossa (badge: Informazione)
+- **9 maggio** — Giornata dell'Europa: Meccanismo Unionale di Protezione Civile (UCPM) e rescEU (badge: Informazione)
 - **13 maggio** — Giornata nazionale contro pedofilia e tutela minori in emergenza (badge: Informazione)
 - **17 maggio** — Giornata telecomunicazioni: radio in emergenza (badge: Radiocomunicazioni)
 - Preparazione campagna AIB (badge: Prevenzione)
