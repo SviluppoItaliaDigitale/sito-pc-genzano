@@ -82,7 +82,13 @@ L'Italia diventa, in quegli anni, un **modello internazionale**: dagli anni Nova
 
 ## 1996-2018: vent'anni di rodaggio (e di errori imparati)
 
-Il sistema costruito da Zamberletti viene messo alla prova ogni due o tre anni: **alluvione di Sarno** (1998), **terremoto Umbria-Marche** (1997), **alluvione di Soverato** (2000), **terremoto Molise/San Giuliano di Puglia** (2002), **alluvione delle Marche** (2003), **terremoto dell'Aquila** (2009), **terremoto del Centro Italia** (2016-2017), **alluvione di Genova** (più volte), **frana di Rigopiano** (2017).
+Il sistema costruito da Zamberletti viene messo alla prova ogni due o tre anni:
+
+- **alluvione di Sarno** (1998), **terremoto Umbria-Marche** (1997)
+- **alluvione di Soverato** (2000), **terremoto Molise/San Giuliano di Puglia** (2002)
+- **alluvione delle Marche** (2003), **terremoto dell'Aquila** (2009)
+- **terremoto del Centro Italia** (2016-2017), **alluvione di Genova** (più volte)
+- **frana di Rigopiano** (2017).
 
 Ogni emergenza è una scuola. Ogni scuola produce **direttive, circolari, modifiche normative**. Tra le più importanti:
 
