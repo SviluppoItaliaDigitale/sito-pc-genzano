@@ -191,6 +191,12 @@ Estensione della whitelist con 25 ulteriori siti istituzionali testati e funzion
 | **Istituto Superiore di Sanità** | `www.iss.it` | Sorveglianza sanitaria, Piano caldo, autorevole su salute pubblica |
 | **ECDC** | `www.ecdc.europa.eu` | Centro europeo controllo malattie, allerte epidemiche |
 
+### Media istituzionali UE (uso editoriale per articoli)
+
+| Sito | Dominio | Uso tipico |
+|---|---|---|
+| **Commissione Europea — Audiovisual** | `audiovisual.ec.europa.eu` | Foto e video ufficiali della Commissione UE per uso editoriale (Schuman Day, ERCC, rescEU, Canadair, vertici, sedi istituzionali). Termini di riuso "Commission reuse policy" — citare sempre © European Union + anno + autore. Whitelist aggiunta 2026-05-09 dopo articolo Giornata dell'Europa. **Nota**: spesso le stesse foto sono già su Wikimedia Commons con licenze esplicite (CC/PD), preferirle quando disponibili (es. foto VOA in PD o foto EU rilasciate CC BY 4.0). |
+
 ### Forze operative del Sistema PC
 
 | Sito | Dominio | Uso tipico |

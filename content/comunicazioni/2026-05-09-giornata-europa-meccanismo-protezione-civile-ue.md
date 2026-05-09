@@ -31,6 +31,10 @@ Aderiscono al Meccanismo i **27 Stati membri dell'UE** più **8 Stati partecipan
 
 Il cuore del sistema è il **Centro di Coordinamento della Risposta alle Emergenze (ERCC)**, a Bruxelles. È **operativo 24 ore su 24, 7 giorni su 7**. Quando un Paese richiede aiuto, l'ERCC raccoglie le offerte di assistenza degli Stati partecipanti — squadre di soccorso, mezzi, materiali, esperti — e le coordina con il Paese richiedente. Tutto questo avviene in poche ore.
 
+{{< foto src="/images/2026-05-09-ercc-bruxelles.webp"
+         alt="Sala operativa dell'ERCC a Bruxelles: schermi con mappe sismiche, sistema GDACS e dati USGS durante la risposta al terremoto in Türkiye del febbraio 2023"
+         caption="Sala operativa dell'ERCC della Commissione Europea a Bruxelles, durante la risposta al terremoto magnitudo 7,8 in Türkiye del 7 febbraio 2023. Foto: Yıldız Yazıcıoğlu (Voice of America), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Emergency_Response_Coordination_Centre_(ERCC)_after_7.8_magnitude_earthquake_in_T%C3%BCrkiye.jpg) — pubblico dominio." >}}
+
 ## rescEU: la riserva strategica europea
 
 Nel 2019, dopo gli incendi devastanti in Grecia, Portogallo e Svezia degli anni precedenti, l'Unione ha rafforzato il Meccanismo creando **rescEU**: una riserva di mezzi e capacità **finanziati al 100% dall'UE** e ospitati fisicamente da alcuni Stati membri.
