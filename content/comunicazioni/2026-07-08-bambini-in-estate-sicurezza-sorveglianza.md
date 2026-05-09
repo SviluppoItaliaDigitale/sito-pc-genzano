@@ -13,16 +13,16 @@ allegati: []
 draft: false
 ---
 
-In estate i **bambini** cambiano routine. Scuole chiuse, campi estivi, vacanze, piscine, sagre, parchi gioco affollati. Il loro mondo si allarga. Con più opportunità vengono più **rischi**. Alcune attenzioni aumentano molto la sicurezza senza trasformare l'estate in un incubo di divieti.
+D'estate i **bambini** cambiano routine: scuole chiuse, campi estivi, vacanze, piscine, sagre, parchi gioco affollati. Il loro mondo si allarga. Con più opportunità arrivano anche più **rischi**. Poche attenzioni mirate aumentano molto la sicurezza, senza trasformare l'estate in un elenco di divieti.
 
 ## Prima degli 1-2 anni
 
 ### Calore
-- **Mai** al sole diretto prima dei 6 mesi.
-- **Sempre** coperti ma con tessuti leggeri.
-- **Idratazione** fondamentale (latte materno, acqua).
-- **Cappellino** e ombrellone sempre.
-- **Temperatura** in casa sotto i 27 °C.
+- **Mai** esporli al sole diretto prima dei 6 mesi.
+- **Coprili** sempre con tessuti leggeri e traspiranti.
+- **Idratali** spesso con latte materno o acqua.
+- **Usa** cappellino e ombrellone, sempre.
+- **Tieni** la temperatura di casa sotto i 27 °C.
 
 ### Automobile
 - **Mai** solo in auto nemmeno 30 secondi.
@@ -100,10 +100,10 @@ Approccio: **dialogo**, non solo divieti. Spiegare **perché** le regole contano
 ## Situazioni da evitare
 
 ### Bambini soli in casa
-- **Mai** con fornelli o forno accesi.
-- **Mai** se troppo piccoli per chiamare aiuto.
-- **Porta** ad accesso facile dal bagno.
-- **Numero di emergenza** ben visibile.
+- **Mai** lasciarli con fornelli o forno accesi.
+- **Mai** lasciarli soli se troppo piccoli per chiamare aiuto.
+- **Lasciare** la porta del bagno facilmente apribile dall'interno.
+- **Tenere** il numero di emergenza ben visibile (112).
 
 ### Bambini soli in strada
 - **Non** attraversare senza adulto fino ai 10 anni.
@@ -116,12 +116,12 @@ Approccio: **dialogo**, non solo divieti. Spiegare **perché** le regole contano
 - **Distanza minima** di pochi metri dall'adulto.
 - **In spiaggia** con sicurezza delimitata.
 
-### Caldo in estate
-- **Non** attività intense 11-16.
-- **Pause frequenti** all'ombra.
-- **Acqua** ogni 15-30 minuti.
-- **Crema solare** ogni 2 ore.
-- **Vestiti** chiari, larghi, cotone.
+### Caldo estivo
+- **Evitare** attività intense dalle 11 alle 16.
+- **Fare** pause frequenti all'ombra.
+- **Bere** acqua ogni 15-30 minuti.
+- **Riapplicare** crema solare ogni 2 ore.
+- **Vestire** abiti chiari, larghi, in cotone.
 
 ## I colpi di calore nei bambini
 
@@ -134,11 +134,11 @@ Sintomi:
 - **Convulsioni** (grave).
 
 Cosa fare:
-1. **Ambiente fresco**.
-2. **Spogliare**.
-3. **Impacchi** con acqua fresca.
-4. **Dissetare** se cosciente.
-5. **Chiamare il 112** in casi gravi.
+1. **Sposta** il bambino in un ambiente fresco.
+2. **Spogliarlo** togliendo i vestiti in eccesso.
+3. **Applica** impacchi con acqua fresca su collo, polsi e fronte.
+4. **Fallo bere** a piccoli sorsi se è cosciente.
+5. **Chiama il 112** se i sintomi sono gravi o non passano.
 
 ## Punture di insetti e animali
 
@@ -195,4 +195,4 @@ Insegna al bambino: **resta fermo** dove ci si perde, rivolgiti a una persona co
 - [Telefono Azzurro](https://www.azzurro.it/)
 - [114 — Emergenza infanzia](tel:114)
 
-Un bambino al sicuro è un bambino libero di esplorare. La sicurezza non è paura: è quadro che rende possibile divertirsi davvero.
+Un bambino al sicuro è un bambino libero di esplorare. La sicurezza non è paura: è la cornice che permette di divertirsi davvero.

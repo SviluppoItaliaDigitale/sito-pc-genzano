@@ -49,22 +49,22 @@ Un ambiente con **finestre aperte al sole** è un effetto serra: l'aria interna 
 ## Elettrodomestici e calore interno
 
 Alcune abitudini riducono il calore prodotto in casa:
-- **Stufe** elettriche e forni usati la sera o alla mattina presto.
-- **Phon** ridotto in estate se possibile.
-- **Lavastoviglie** e lavatrice in tarda serata.
-- **Frigorifero** non troppo vicino a fonti di calore (stufa, sole diretto).
-- **Computer** spenti quando non servono (generano calore).
+- **Usare** stufe elettriche e forni la sera o di mattina presto.
+- **Limitare** l'uso del phon nei giorni più caldi.
+- **Avviare** lavastoviglie e lavatrice in tarda serata.
+- **Tenere** il frigorifero lontano da stufe e sole diretto.
+- **Spegnere** i computer quando non servono: producono calore.
 
 Le **lampadine LED** producono molto meno calore delle alogene.
 
 ## Ventilatori
 
 I ventilatori sono **molto efficaci**:
-- **Non raffreddano** l'aria, ma aumentano la percezione di freschezza sul corpo.
-- **Posizionamento** importante: mirare verso le persone, creare circolazione.
-- **Ventilatori a soffitto** + ventilatore a pedestal = combinazione efficace.
-- **Finestra aperta** + ventilatore rivolto verso fuori = estrazione aria calda.
-- **Bicchiere di ghiaccio** davanti al ventilatore = effetto rinfrescante aggiuntivo.
+- **Non raffreddano** l'aria ma aumentano la sensazione di freschezza sulla pelle.
+- **Punta** il flusso verso le persone e crea circolazione tra le stanze.
+- **Combina** ventilatore a soffitto e ventilatore a piantana per coprire più superficie.
+- **Apri** una finestra e rivolgi il ventilatore verso l'esterno per estrarre l'aria calda.
+- **Metti** un bicchiere di ghiaccio davanti al ventilatore per un effetto rinfrescante extra.
 
 Costano poco in energia (50-100 W contro 1-2 kW di un condizionatore).
 
@@ -102,21 +102,21 @@ In questa stanza concentra ventilatore, acqua fresca, attività (lettura, TV, ri
 ## Anziani e fragili
 
 Per persone a rischio:
-- **Stanza fresca** dedicata con condizionatore preferibile.
-- **Bere regolarmente** anche senza sete.
-- **Vestiti leggeri**, cotone, chiari.
-- **Niente** riposo al sole anche al pomeriggio.
-- **Controllo** telefonico giornaliero da familiari.
-- **Verifica** farmaci salvavita (alcuni si alterano con il caldo — chiedi al farmacista).
+- **Dedicare** una stanza fresca con condizionatore, se possibile.
+- **Bere** regolarmente, anche senza sete.
+- **Vestire** abiti leggeri di cotone e di colore chiaro.
+- **Evitare** il sole pomeridiano, anche per un breve riposo.
+- **Telefonare** ogni giorno per un controllo da parte dei familiari.
+- **Verificare** la conservazione dei farmaci salvavita: alcuni si alterano col caldo. Chiedi al farmacista.
 
 ## Casa e bambini piccoli
 
 Attenzioni specifiche:
-- **Camerette** ben ventilate ma non direttamente sotto condizionatore.
-- **Niente** coperte pesanti di notte.
-- **Acqua** sempre a disposizione.
-- **Niente** mai in auto al sole.
-- **Creme solari** se in balcone/giardino.
+- **Ventilare** le camerette senza esporre i bambini al getto diretto del condizionatore.
+- **Evitare** le coperte pesanti di notte.
+- **Tenere** l'acqua sempre a portata.
+- **Mai lasciarli** in auto al sole, neanche per un attimo.
+- **Applicare** crema solare quando giocano in balcone o in giardino.
 
 ## Animali domestici
 
@@ -161,11 +161,11 @@ Sintomi di eccessiva esposizione al caldo in casa:
 - **Confusione**.
 
 Cosa fare:
-1. **Sposta** in ambiente più fresco.
-2. **Togli** vestiti in eccesso.
-3. **Impacchi** con acqua fresca.
-4. **Fai bere** lentamente acqua.
-5. **Chiama il 112** se sintomi persistenti o gravi.
+1. **Spostala** in un ambiente più fresco.
+2. **Toglile** i vestiti in eccesso.
+3. **Applica** impacchi con acqua fresca su collo, polsi, fronte.
+4. **Falle bere** acqua a piccoli sorsi.
+5. **Chiama il 112** se i sintomi sono gravi o non passano.
 
 ## Per approfondire
 

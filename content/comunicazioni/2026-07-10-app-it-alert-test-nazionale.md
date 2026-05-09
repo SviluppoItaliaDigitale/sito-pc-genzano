@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-**IT-alert** è il sistema italiano di allarme pubblico che invia messaggi di allerta agli smartphone presenti in una zona specifica. Attivato nel 2023, è progressivamente entrato nell'uso operativo del **Dipartimento della Protezione Civile**. I **test** regionali e nazionali servono a rodare il sistema e a far abituare la popolazione al suono e al contenuto dei messaggi.
+**IT-alert** è il sistema italiano di allarme pubblico che invia messaggi di allerta agli smartphone presenti in una zona specifica. Attivato nel 2023, è entrato gradualmente nell'uso operativo del **Dipartimento della Protezione Civile**. I **test** regionali e nazionali servono a collaudare il sistema e ad abituare la popolazione al suono e al contenuto dei messaggi.
 
 ## Come funziona IT-alert
 
@@ -34,11 +34,11 @@ Quando un messaggio viene inviato, **tutti** gli smartphone presenti sotto le ce
 ## Le tipologie di eventi
 
 IT-alert è attivato per:
-- **Maremoto** generato da sisma.
-- **Crollo** di grandi dighe.
-- **Attività vulcaniche** (principalmente Campi Flegrei, Vesuvio).
-- **Incidenti** nucleari.
-- **Incidenti industriali** (Seveso III).
+- **maremoto** generato da un sisma sottomarino;
+- **crollo** di grandi dighe;
+- **attività vulcanica** (in particolare Campi Flegrei e Vesuvio);
+- **incidente nucleare**;
+- **incidente industriale rilevante** (direttiva Seveso III).
 
 Non viene usato per ondate di calore o allerte meteo ordinarie. Per queste ci sono altri canali (bollettini, sito del Comune, altoparlanti).
 
@@ -144,10 +144,10 @@ IT-alert è uno degli strumenti di comunicazione del DPC, insieme a:
 ## Le frontiere dell'allertamento
 
 Il sistema sta evolvendo verso:
-- **Alert** su frane imminenti con sensori.
-- **Integrazione** con app di protezione civile.
-- **Alert** multilingue per aree turistiche.
-- **Coordinamento** con sistemi UE (EU-Alert).
+- **avvisi** su frane imminenti grazie a sensori sul territorio;
+- **integrazione** con le app ufficiali di Protezione Civile;
+- **messaggi** multilingue nelle aree turistiche;
+- **coordinamento** con i sistemi europei (EU-Alert).
 
 ## Per approfondire
 

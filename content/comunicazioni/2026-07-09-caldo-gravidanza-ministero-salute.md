@@ -48,7 +48,7 @@ Nelle grandi città, quando al caldo si aggiungono **elevati livelli di inquinam
 
 ### Bere, bere, bere
 
-- **Almeno 2 litri di acqua al giorno**, seguendo le indicazioni del medico curante
+- **Bevi** almeno 2 litri di acqua al giorno, seguendo le indicazioni del medico curante
 - **Limita** bevande gassate o zuccherate, tè e caffè
 - **Evita** bevande molto fredde e bevande alcoliche
 
