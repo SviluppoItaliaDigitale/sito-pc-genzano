@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nei **Castelli Romani** la neve non è la regola, ma nemmeno un'eccezione. L'altitudine di Genzano (circa 435 m s.l.m.) e quella dei comuni vicini, unita alle correnti fredde da nord, rende possibili nevicate **tra gennaio e inizio marzo**. Quando arrivano, spesso inattese, possono causare **disagi seri**: strade bloccate, scuole chiuse, difficoltà per persone fragili e servizi essenziali.
+Nei **Castelli Romani** la neve non è la regola, ma nemmeno un'eccezione. Genzano è a circa 435 m s.l.m. Le correnti fredde da nord rendono possibili nevicate **tra gennaio e inizio marzo**. Quando arrivano — spesso inattese — possono causare **disagi seri**: strade bloccate, scuole chiuse, difficoltà per persone fragili e servizi essenziali.
 
 Vediamo come il territorio si prepara e cosa può fare ogni famiglia per affrontare una nevicata in serenità.
 
@@ -60,7 +60,7 @@ La preparazione familiare alla neve non è complicata. Alcune semplici accortezz
 ### Prima della nevicata
 
 - **Scorte in casa**: cibo non deperibile, acqua, farmaci salvavita, pile cariche, torcia, radio, sale da spargere sui gradini.
-- **Verifica il condizionatore/caldaia**: se si rompesse, chi contatti? Numero e disponibilità del tecnico.
+- **Verifica il riscaldamento**: tieni a portata di mano il numero del tecnico della caldaia nel caso si guastasse.
 - **Parcheggio**: se abiti in zona a rischio frana o in discesa ripida, sposta l'auto in luogo sicuro e accessibile.
 - **Comunicazione**: cellulari carichi, numero 112 memorizzato, contatti dei vicini.
 
