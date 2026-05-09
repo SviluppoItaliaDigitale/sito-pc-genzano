@@ -65,11 +65,19 @@ Una **Protezione Civile capillare e preparata** nasce dall'investimento continuo
 
 ## Per approfondire
 
-- Articolo: [Attivazione squadre di primavera: il calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/)
-- Articolo: [Corso di formazione base](/comunicazioni/2025-03-10-formazione-base/)
-- Articolo: [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
-- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
-- Pagina: [Diventa volontario](/diventa-volontario/)
-- [Agenzia Regionale di Protezione Civile Lazio](https://www.regione.lazio.it/cittadini/protezione-civile)
+Sul nostro sito:
+
+- [Attivazione squadre di primavera: calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/).
+- [Corso di formazione base](/comunicazioni/2025-03-10-formazione-base/).
+- [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/).
+- [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
+- [SAFOR-PROCIV — Scuola Alta Formazione PC Lazio](/comunicazioni/2026-05-08-safor-prociv-scuola-alta-formazione-pc-lazio/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [L.R. Lazio 2/2014 — Sistema integrato di Protezione Civile](https://www.regione.lazio.it/).
 
 Chi forma forma due volte: chi impara e chi insegna. La formazione è la prima linea della Protezione Civile.

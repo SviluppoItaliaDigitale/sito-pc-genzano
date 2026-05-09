@@ -3,7 +3,7 @@ title: "La mostra «Terremoti d'Italia» fa tappa a Napoli: dal 20 aprile al 9 m
 date: 2026-04-17T00:02:00+02:00
 description: "Il Dipartimento della Protezione Civile e la Regione Campania portano a Napoli la mostra interattiva sul rischio sismico: simulatori."
 badge: "Informazione"
-priorita: normale
+priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-17-mostra-terremoti-italia-napoli.webp"
 image_alt: "Cover dell'articolo: La mostra «Terremoti d'Italia» fa tappa a Napoli: dal 20 aprile al 9 maggio"
@@ -75,12 +75,24 @@ Iniziative come «Terremoti d'Italia» fanno **comunicazione del rischio nel mod
 
 Per chi può raggiungere Napoli nel periodo 20 aprile – 9 maggio, la visita è caldamente consigliata. Per gli **insegnanti** del territorio è un'opportunità da considerare per una visita di istruzione mirata.
 
-## Riferimenti
+## Per approfondire
 
-- [Comunicato stampa ufficiale DPC](https://www.protezionecivile.gov.it/it/comunicato-stampa/la-mostra-terremoti-ditalia-fa-tappa-napoli/)
-- [Città della Scienza](https://www.cittadellascienza.it/)
-- [Campagna «Io non rischio»](https://iononrischio.protezionecivile.it/)
-- [Rete Accelerometrica Nazionale (RAN)](https://ran.protezionecivile.it/)
+Sul nostro sito:
+
+- [Rischio sismico — pagina operativa](/rischi-prevenzione/rischio-sismico/).
+- [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/).
+- [Anniversario terremoto Abruzzo 2009 (Fossa)](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/).
+- [Terremoto Emilia 2012](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/).
+- [Friuli 1976, cinquant'anni dopo](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
+- [Cartografia del territorio](/cartografia/).
+
+Fonti istituzionali:
+
+- [Dipartimento della Protezione Civile — Comunicato stampa](https://www.protezionecivile.gov.it/it/comunicato-stampa/la-mostra-terremoti-ditalia-fa-tappa-napoli/).
+- [Città della Scienza](https://www.cittadellascienza.it/).
+- [Campagna «Io non rischio»](https://iononrischio.protezionecivile.it/).
+- [Rete Accelerometrica Nazionale (RAN)](https://ran.protezionecivile.it/).
+- [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
 
 ---
 

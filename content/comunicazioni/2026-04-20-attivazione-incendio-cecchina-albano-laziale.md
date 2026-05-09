@@ -45,10 +45,19 @@ Un ringraziamento ai **Vigili del Fuoco** e a tutte le **squadre di Protezione C
 
 ## Per approfondire
 
-- Articolo: [Chi siamo](/chi-siamo/)
-- Articolo: [Diventa volontario](/diventa-volontario/)
-- Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
-- [Vigili del Fuoco](https://www.vigilfuoco.it/)
+Sul nostro sito:
+
+- [Rischio incendio boschivo — pagina operativa](/rischi-prevenzione/rischio-incendio/).
+- [Antincendio boschivo: triangolo del fuoco e attrezzature](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
+- [Esercitazione antincendio boschivo](/comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/).
+- [Open Day antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
+- [Chi siamo](/chi-siamo/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Comune di Albano Laziale](https://www.comune.albanolaziale.rm.it/).
 
 Ogni attivazione è l'occasione per rafforzare la collaborazione tra gli enti del sistema e confermare il ruolo operativo del volontariato organizzato.

@@ -2,7 +2,6 @@
 title: "La sala radio di protezione civile: come si gestisce una chiamata e come si compila la scheda di intervento"
 date: 2026-04-17T00:01:00+02:00
 description: "Dal primo squillo alla firma sulla scheda: la procedura completa per l'operatore di sala radio che raccoglie una richiesta di intervento."
-
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -257,9 +256,17 @@ Il Gruppo forma costantemente nuovi operatori di sala radio, perché è una funz
 
 ## Per approfondire
 
-- [Area tematica: Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/) — sei capitoli completi
-- [Dieci errori da evitare alla radio in protezione civile](/comunicazioni/2026-04-14-radio-protezione-civile-dieci-errori-volontario/)
-- [La catena delle comunicazioni in protezione civile](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/)
-- [Manuale da Campo](/formazione/manuale-campo/) — modulo messaggio, registro di stazione, alfabeto NATO personalizzati del Gruppo
+Sul nostro sito:
 
-*Fonti: procedure operative interne del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, esperienza consolidata delle attivazioni su territorio comunale e fuori regione.*
+- [Area tematica: Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/).
+- [Dieci errori da evitare alla radio in protezione civile](/comunicazioni/2026-04-14-radio-protezione-civile-dieci-errori-volontario/).
+- [La catena delle comunicazioni in protezione civile](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/).
+- [Manuale da Campo](/formazione/manuale-campo/) — modulo messaggio, registro di stazione, alfabeto NATO personalizzati del Gruppo.
+- [Radiocomunicazioni di emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
+
+Fonti istituzionali:
+
+- [ARI — Associazione Radioamatori Italiani](https://www.ari.it/).
+- [GDPR — Regolamento UE 2016/679](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679) — gestione dati delle chiamate.
+
+*Fonti: procedure operative interne del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.*

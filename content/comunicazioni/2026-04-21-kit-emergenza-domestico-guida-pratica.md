@@ -122,14 +122,22 @@ Oltre allo zaino di casa, è utile avere una versione **minima** in auto (acqua,
 
 ## Per approfondire
 
-- Articolo: [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
-- Articolo: [Il Piano di Emergenza Familiare digitale citato da Abili a proteggere](/comunicazioni/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere/)
-- Articolo: [Blackout: cosa fare quando salta la corrente](/comunicazioni/2026-05-06-blackout-interruzione-corrente-cosa-fare/)
-- Articolo: [Allagamenti urbani: cosa fare quando l'acqua entra in casa](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
-- Articolo: [Check casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
-- Pagina: [Piano familiare](/piano-familiare/)
-- Pagina: [Kit per persone fragili e bisogni specifici](/formazione/kit-fragilita-vulnerabilita/)
-- Pagina: [Rischi e prevenzione](/rischi-prevenzione/)
-- Pagina: [Numeri utili](/numeri-utili/)
+Sul nostro sito:
+
+- [Piano familiare](/piano-familiare/) — il piano digitale interattivo.
+- [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/).
+- [Il Piano di Emergenza Familiare digitale citato da Abili a proteggere](/comunicazioni/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere/).
+- [Blackout: cosa fare quando salta la corrente](/comunicazioni/2026-05-06-blackout-interruzione-corrente-cosa-fare/).
+- [Allagamenti urbani](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/).
+- [Check casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/).
+- [Hub Kit Calamità per situazioni vulnerabili](/formazione/kit-calamita/).
+- [Rischi e prevenzione](/rischi-prevenzione/).
+- [Numeri utili](/numeri-utili/).
+
+Fonti istituzionali:
+
+- [Dipartimento Protezione Civile — Io non rischio](https://iononrischio.protezionecivile.it/).
+- [Sphere Standards 2018](https://spherestandards.org/) — riferimento internazionale per kit emergenza.
+- [WHO — Emergency preparedness](https://www.who.int/health-topics/emergencies).
 
 Lo zaino non serve a vivere nel timore: è uno strumento di **normalità**, come la cintura di sicurezza in auto. Una volta preparato, si dimentica. Ma il giorno in cui serve, è lì.
