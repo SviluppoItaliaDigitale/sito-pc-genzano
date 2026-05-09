@@ -236,8 +236,19 @@ Tra oggi e il 25 dicembre, altri nostri articoli tratteranno:
 
 ## Per approfondire
 
-- [Truffe online](/comunicazioni/2026-11-22-truffe-online-black-friday/)
-- [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/)
-- [Animali domestici in emergenze](/comunicazioni/2026-11-19-animali-domestici-emergenze/)
+Sul nostro sito:
+
+- [Truffe online](/comunicazioni/2026-11-22-truffe-online-black-friday/).
+- [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/).
+- [Animali domestici in emergenze](/comunicazioni/2026-11-19-animali-domestici-emergenze/).
+- [Pacchi natalizi: logistica corriere](/comunicazioni/2026-12-16-pacchi-natalizi-logistica-corriere/).
+- [Anziani soli durante le feste](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/).
+- [Rientro post-ponte: sicurezza stradale](/comunicazioni/2026-12-09-rientro-post-ponte-sicurezza-stradale/).
+
+Fonti istituzionali:
+
+- [Polizia Postale — Truffe online](https://www.commissariatodips.it/).
+- [Agenzia delle Dogane e dei Monopoli](https://www.adm.gov.it/).
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
 
 In emergenza: **112**.

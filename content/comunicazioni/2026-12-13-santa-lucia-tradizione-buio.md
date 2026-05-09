@@ -173,8 +173,19 @@ Dal 13 dicembre al **21 dicembre** (solstizio d'inverno) siamo a 8 giorni. Dopo 
 
 ## Per approfondire
 
-- [Qualità dell'aria](/comunicazioni/2026-11-09-qualita-aria-pm10-inverno/)
-- [Cadute anziani](/comunicazioni/2026-11-16-cadute-anziani-prevenzione-casa/)
-- [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/)
+Sul nostro sito:
+
+- [Qualità dell'aria](/comunicazioni/2026-11-09-qualita-aria-pm10-inverno/).
+- [Cadute anziani](/comunicazioni/2026-11-16-cadute-anziani-prevenzione-casa/).
+- [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/).
+- [Solstizio d'inverno: la luce tornerà](/comunicazioni/2026-12-21-solstizio-inverno-luce-tornera/).
+- [Anziani soli durante le feste](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/).
+- [Kit Calamità — Anziani](/formazione/kit-calamita-anziani/).
+
+Fonti istituzionali:
+
+- [Ministero della Salute](https://www.salute.gov.it/).
+- [ISS — Istituto Superiore di Sanità](https://www.iss.it/).
+- [INAF — Istituto Nazionale di Astrofisica](https://www.inaf.it/).
 
 In emergenza: **112**.

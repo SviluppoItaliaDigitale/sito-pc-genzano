@@ -166,8 +166,18 @@ Auguriamo a tutti un **avvicinamento** al Natale:
 
 ## Per approfondire
 
-- [Avvio dicembre](/comunicazioni/2026-12-01-avvio-dicembre-inverno-meteorologico/)
-- [Preparativi Natale](/comunicazioni/2026-12-12-preparativi-natale-acquisti-sicuri/)
-- [Donazione sangue](/comunicazioni/2026-12-14-donazione-sangue-bilancio-annuale/)
+Sul nostro sito:
+
+- [Avvio dicembre/inverno meteorologico](/comunicazioni/2026-12-01-avvio-dicembre-inverno-meteorologico/).
+- [Preparativi Natale](/comunicazioni/2026-12-12-preparativi-natale-acquisti-sicuri/).
+- [Donazione sangue](/comunicazioni/2026-12-14-donazione-sangue-bilancio-annuale/).
+- [Esodo natalizio: traffico autostrade](/comunicazioni/2026-12-19-esodo-natalizio-traffico-autostrade/).
+- [Bilancio annuale PC Genzano](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
+- [Chi siamo](/chi-siamo/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
 
 In emergenza: **112**.

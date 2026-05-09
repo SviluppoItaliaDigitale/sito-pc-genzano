@@ -231,8 +231,21 @@ E spesso, chi dona, riceve più di chi ha ricevuto.
 
 ## Per approfondire
 
-- [Giornata Diritti Umani](/comunicazioni/2026-12-10-giornata-diritti-umani/)
-- [Anziani soli a Natale](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/)
-- [Donazione sangue](/comunicazioni/2026-12-14-donazione-sangue-bilancio-annuale/)
+Sul nostro sito:
 
-In emergenza: **112**. Caritas diocesana: contatti su sito Diocesi Albano.
+- [Giornata Diritti Umani](/comunicazioni/2026-12-10-giornata-diritti-umani/).
+- [Anziani soli a Natale](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/).
+- [Donazione sangue](/comunicazioni/2026-12-14-donazione-sangue-bilancio-annuale/).
+- [Persone fragili: aiutare i vicini](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Kit Calamità — Senza fissa dimora](/formazione/kit-calamita-senza-fissa-dimora/).
+- [ISO 22395 — Persone vulnerabili](/comunicazioni/2026-05-29-iso-22395-persone-vulnerabili/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Caritas Italiana](https://www.caritas.it/).
+- [Banco Alimentare](https://www.bancoalimentare.it/).
+- [FEANTSA — European Federation Homelessness](https://www.feantsa.org/).
+- [Croce Rossa Italiana](https://www.cri.it/).
+
+In emergenza: **112**. Caritas diocesana di Albano: contatti su sito Diocesi Albano.

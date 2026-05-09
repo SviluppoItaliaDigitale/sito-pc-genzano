@@ -186,8 +186,18 @@ Se hai amici o familiari idonei che non donano, **parlane** con loro. Una nuova 
 
 ## Per approfondire
 
-- [AVIS Italia](https://www.avis.it/)
-- [Diventare volontari PC](/diventa-volontario/)
-- [CRI e BLSD](/comunicazioni/2026-10-14-primo-soccorso-base-famiglie/)
+Sul nostro sito:
+
+- [Primo soccorso e BLSD](/comunicazioni/2026-10-14-primo-soccorso-base-famiglie/).
+- [Giornata mondiale Croce Rossa e Mezzaluna](/comunicazioni/2026-05-08-giornata-mondiale-croce-rossa-mezzaluna/).
+- [Defibrillatori in Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [AVIS Italia](https://www.avis.it/).
+- [Centro Nazionale Sangue (CNS)](https://www.centronazionalesangue.it/).
+- [Croce Rossa Italiana](https://www.cri.it/).
+- [Ministero della Salute — Sangue](https://www.salute.gov.it/).
 
 In emergenza: **112**.

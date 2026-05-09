@@ -237,8 +237,21 @@ La **solidarietà** di Natale è **spiegata** in gesti semplici come questo.
 
 ## Per approfondire
 
-- [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/)
-- [Cadute anziani](/comunicazioni/2026-11-16-cadute-anziani-prevenzione-casa/)
-- [Giornata Persone con Disabilità](/comunicazioni/2026-12-03-giornata-persone-disabilita/)
+Sul nostro sito:
+
+- [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/).
+- [Cadute anziani](/comunicazioni/2026-11-16-cadute-anziani-prevenzione-casa/).
+- [Giornata Persone con Disabilità](/comunicazioni/2026-12-03-giornata-persone-disabilita/).
+- [Persone fragili: aiutare i vicini](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Kit Calamità — Anziani](/formazione/kit-calamita-anziani/).
+- [Kit Calamità — Caregiver familiari](/formazione/kit-calamita-caregiver-familiari/).
+- [ISO 22395 — Persone vulnerabili](/comunicazioni/2026-05-29-iso-22395-persone-vulnerabili/).
+
+Fonti istituzionali:
+
+- [Telefono d'Argento — Roma](https://www.telefonodargento.it/).
+- [Auser](https://www.auser.it/) — associazione anziani.
+- [HelpAge International](https://www.helpage.org/).
+- [Ministero della Salute](https://www.salute.gov.it/).
 
 In emergenza: **112**. Telefono d'Argento: **06 87 58 46 06**.

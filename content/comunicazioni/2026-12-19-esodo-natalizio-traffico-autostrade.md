@@ -246,8 +246,20 @@ A chi si mette in strada in questo weekend, **buon viaggio** e **arrivo sicuro**
 
 ## Per approfondire
 
-- [Rientro post-ponte](/comunicazioni/2026-12-09-rientro-post-ponte-sicurezza-stradale/)
-- [Ponte Immacolata](/comunicazioni/2026-11-29-ponte-immacolata-preparazione/)
-- [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/)
+Sul nostro sito:
+
+- [Rientro post-ponte: sicurezza stradale](/comunicazioni/2026-12-09-rientro-post-ponte-sicurezza-stradale/).
+- [Ponte Immacolata](/comunicazioni/2026-11-29-ponte-immacolata-preparazione/).
+- [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/).
+- [Neve e ghiaccio: preparazione](/comunicazioni/2026-12-02-neve-e-ghiaccio-preparazione/).
+- [Sicurezza in bicicletta](/comunicazioni/2026-04-30-sicurezza-bicicletta-citta-emergenza/).
+
+Fonti istituzionali:
+
+- [ANAS — Strade italiane](https://www.stradeanas.it/).
+- [Autostrade per l'Italia](https://www.autostrade.it/).
+- [Polizia di Stato — Polizia stradale](https://www.poliziadistato.it/).
+- [Ministero delle Infrastrutture e dei Trasporti](https://www.mit.gov.it/).
+- [Servizio Meteorologico dell'Aeronautica](https://www.meteoam.it/).
 
 In emergenza: **112**. ACI soccorso stradale: **803 116**.
