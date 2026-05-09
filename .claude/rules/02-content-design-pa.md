@@ -99,6 +99,16 @@ Le foto fornite dall'utente **non vanno mai nel banner/copertina** del sito (cam
 
 **Riassunto pratico:** quando l'utente dice "ecco una foto" o "queste foto", `image:` resta vuoto, le foto vanno tutte nel corpo, e i social pescano da lì in automatico al prossimo workflow.
 
+**🔴 ANTI-PATTERN — modifica del campo `image:` durante una revisione testuale.** Quando il task è *"rivedi questo articolo"*, *"riscrivi secondo AGID"*, *"correggi i refusi"*, *"miglioralo"* o simile, **il campo `image:` non deve cambiare** rispetto al valore originale. Anche se trovi una foto pertinente su Wikimedia/NASA/altro, la foto va inline nel corpo come `{{< foto >}}`, non nel banner. **Check pre-commit obbligatorio:**
+
+```bash
+git diff <file.md> | grep -E '^[+-]image' | head -5
+```
+
+Se il diff contiene righe `+image:` / `-image:` (anche solo `image_alt:`) e l'utente non ha richiesto esplicitamente un cambio di copertina, **stop**: ripristina il valore originale prima del commit.
+
+**Why:** il 9 maggio 2026 ChatGPT-cloud durante la revisione AGID dell'articolo "Giornata Europa — Meccanismo UCPM" ha sostituito `image: ""` (cover tipografica da generare) con `image: "/images/2026-05-09-ercc-bruxelles.webp"` (foto reale Wikimedia ERCC). La foto era stata anche correttamente aggiunta inline come `{{< foto >}}`, ma il banner del sito è andato live con la foto reale invece della cover tipografica con il titolo. Identità visiva istituzionale rotta finché non si è corretto manualmente.
+
 ## Regola pittogrammi — supporto comprensione (bambini, anziani, L2)
 
 Il sito ha una libreria di **Pittogrammi standardizzati** (46 ISO 7010 + 125 ARASAAC) in `static/pittogrammi/` per supportare la comprensione del testo a bambini, anziani, persone con disabilità cognitive e parlanti italiano L2 (regola di accessibilità cognitiva).
