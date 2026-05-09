@@ -5,6 +5,18 @@ _[Indice manuale](README.md)_
 Queste regole derivano dal **Writing Toolkit di Designers Italia**, dal **Manuale operativo
 di design della PA** e dalle integrazioni specifiche per la Protezione Civile.
 
+> **Aggiornamento automatico**: le fonti AGID ufficiali sono monitorate dal workflow
+> `.github/workflows/aggiorna-manuale.yml` ogni lunedì 06:00 UTC. Quando una fonte cambia
+> (Writing Toolkit, Content Toolkit, UI Kit, Linee guida design PA, accessibilità AGID,
+> Bootstrap Italia, DPC), il workflow apre automaticamente un'issue con checklist
+> tripartita: aggiornare **(A)** questo file e gli altri della cartella `manuale/`,
+> **(B)** in coerenza i file `.claude/rules/02-content-design-pa.md`, `.claude/rules/03-accessibility.md`,
+> `CLAUDE.md` e gli agent custom letti da Claude Code in ogni sessione, **(C)** build
+> Hugo + commit. Manuale e rules Claude devono dire la stessa cosa sulla stessa regola
+> AGID, altrimenti il sito ha due fonti di verità divergenti e Claude applica regole
+> obsolete in tutte le sessioni successive. Vedi `.claude/rules/02-content-design-pa.md`
+> § "Sincronizzazione automatica con gli aggiornamenti AGID" per la procedura completa.
+
 ### 2.1 — I cinque principi del Writing Toolkit
 
 1. **Scrivi per chi legge, non per chi ha scritto la norma.** L'utente non conosce il lessico

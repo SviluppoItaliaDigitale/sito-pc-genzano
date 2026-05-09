@@ -177,6 +177,24 @@ Ad aprile 2026 si è scoperto che Hugo, con due articoli a `date: AAAA-MM-GG` id
 - Verifica sempre ortografia, grammatica, punteggiatura e accenti.
 - Se il testo originale non rispetta queste regole, riscrivilo prima di proporre pubblicazione.
 
+## Sincronizzazione automatica con gli aggiornamenti AGID
+
+Le linee guida AGID e Designers Italia **si aggiornano nel tempo**. Il sito ha un'automazione settimanale che monitora le 10 fonti ufficiali (Linee guida design PA, Designers Italia home + Writing Toolkit + Content Toolkit + UI Kit, Bootstrap Italia, Accessibilità AGID, Dichiarazione accessibilità, DPC) tramite hash SHA-256 con BeautifulSoup: workflow `.github/workflows/aggiorna-manuale.yml`, ogni lunedì 06:00 UTC.
+
+Quando una fonte cambia, il workflow apre automaticamente un'issue di label `manuale + documentazione + revisione` con checklist a 3 sezioni: **(A)** aggiornare il manuale operativo (`manuale/parte-02`, `parte-03`, `parte-11`, `parte-12`, `MANUALE-SITO.md`), **(B)** aggiornare in coerenza i file `.claude/rules/`, `CLAUDE.md` e gli agent `pc-article-reviewer`/`pc-social-publisher`/`pc-deploy-validator` letti da Claude Code in ogni sessione, **(C)** verifica finale (build, grep date, chiusura issue).
+
+**Regola di coerenza obbligatoria**: il manuale operativo (rivolto all'utente) e le rules `.claude/` (lette dall'AI in tutte le sessioni: CLI desktop, mobile, cloud) devono dire **la stessa cosa** sulla stessa regola AGID. Se aggiorni l'uno senza l'altro, il sito ha due fonti di verità divergenti e Claude continua ad applicare regole obsolete in tutte le sessioni successive.
+
+**Why**: l'utente ha sollevato il punto il 9 maggio 2026 — la regola "Claude Code redige come ChatGPT 9.5/10" non sopravvive nel tempo se quando AGID si aggiorna (Writing Toolkit nuove sezioni, Content Toolkit revisioni, Linee guida PA versioni successive) le rules Claude restano alla baseline iniziale. La versione storicamente esposta è già coperta dall'automazione: questa sezione documenta il vincolo di applicazione speculare.
+
+**How to apply** quando ti viene segnalata o trovi un'issue del workflow:
+1. Apri ogni URL elencato e identifica le novità.
+2. Aggiorna **simultaneamente** il manuale (cartella `manuale/`) e le rules (`.claude/rules/02-content-design-pa.md`, `.claude/rules/03-accessibility.md`, `CLAUDE.md` punti 2-4, agent rilevanti).
+3. Se la modifica AGID introduce un nuovo principio o una nuova regola, citalo come fonte ufficiale nei due posti.
+4. Esegui `grep -rn "<data-modifica>" manuale/ .claude/rules/ CLAUDE.md` per verificare la sincronia.
+5. Build Hugo pulito + commit "Aggiornamento AGID DD/MM/AAAA — manuale + rules Claude in sincronia" + push.
+6. Chiudi l'issue con riferimento al commit.
+
 ## Livello qualitativo della redazione — qualità ChatGPT 9.5/10
 
 **La regola vale per ogni contesto Claude Code**: CLI desktop sul PC, app mobile, sessione cloud, agent GitHub-integrato. **Nessuno dei tre delega ad AI esterne** la redazione/revisione di articoli: tutti applicano integralmente le regole AGID con la stessa cura del migliore strumento esterno di riferimento (test del 9 maggio 2026: ChatGPT 9.5/10 con drag-drop allegato, vedi `feedback_workflow_ai_esterne_validato.md`).
