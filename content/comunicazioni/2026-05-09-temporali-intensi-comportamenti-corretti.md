@@ -1,7 +1,7 @@
 ---
 title: "Temporali intensi: come riconoscerli e cosa fare"
 date: 2026-05-09T00:01:00+02:00
-description: "La primavera porta i primi temporali forti della stagione. Fulmini, grandine, raffiche: comportamenti corretti in casa, all'aperto e in auto."
+description: "Fulmini, grandine, raffiche: cosa fare in casa, all'aperto e in auto durante un temporale intenso. Comportamenti corretti e numeri utili."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,11 +13,11 @@ allegati: []
 draft: false
 ---
 
-I **temporali intensi** sono un fenomeno meteorologico che in primavera e in estate può svilupparsi molto rapidamente: dal sereno a un nubifragio in una quindicina di minuti. Fulmini, grandine, raffiche di vento, rovesci intensi: ciascuno di questi elementi può essere pericoloso. Conoscere i comportamenti corretti è fondamentale.
+Un temporale intenso può passare dal cielo sereno al nubifragio in quindici minuti. Fulmini, grandine, raffiche di vento: ciascuno di questi fenomeni può mettere in pericolo persone e cose. Questa pagina raccoglie i comportamenti corretti per chi si trova in casa, all'aperto o in auto.
 
 ## Come si forma un temporale
 
-Un temporale è una **cella di aria calda e umida** che sale rapidamente verso gli strati alti dell'atmosfera, incontra aria fredda, produce condensazione violenta. Il risultato: pioggia intensa, fulmini, spesso grandine, a volte downburst (raffiche discendenti molto forti).
+Un temporale nasce quando una massa d'aria calda e umida sale rapidamente verso gli strati alti dell'atmosfera. Incontra aria fredda e produce condensazione violenta. Il risultato: pioggia intensa, fulmini, spesso grandine, a volte **downburst** (raffiche discendenti molto forti che possono superare i 100 km/h).
 
 I segnali che un temporale è in arrivo o in sviluppo:
 
@@ -28,7 +28,7 @@ I segnali che un temporale è in arrivo o in sviluppo:
 
 ## Dove consultare le previsioni
 
-Il [Centro Funzionale Lazio](https://protezionecivile.regione.lazio.it/) pubblica ogni giorno bollettini di criticità che includono la previsione di temporali. Le app meteo commerciali danno informazioni utili ma **non sostituiscono** i bollettini ufficiali per le decisioni di sicurezza.
+Il **Centro Funzionale Regionale (CFR) del Lazio** pubblica ogni giorno bollettini di criticità che includono la previsione di temporali. Puoi consultarli sul [sito della Protezione Civile Regione Lazio](https://protezionecivile.regione.lazio.it/). Le app meteo commerciali danno informazioni utili, ma non sostituiscono i bollettini ufficiali per le decisioni di sicurezza.
 
 ## Cosa fare in casa
 
@@ -63,46 +63,54 @@ Se sei in auto durante un temporale:
 
 ## Grandine
 
-La grandine di dimensioni medio-grandi (oltre i 2 cm) può causare danni a veicoli, vetrate, colture. Se vedi grandine in arrivo:
+La grandine oltre i 2 cm di diametro può causare danni a veicoli, vetrate e colture. Se vedi grandine in arrivo:
 
-- **Metti al sicuro l'auto** sotto riparo.
-- **Chiudi tapparelle** per proteggere i vetri.
-- **Non uscire**: chicchi di grandine di alcuni centimetri possono provocare traumi seri.
+- metti al sicuro l'auto sotto un riparo;
+- chiudi le tapparelle per proteggere i vetri;
+- non uscire: chicchi di alcuni centimetri possono provocare traumi seri.
 
-## Raffiche di vento (downburst)
+## Raffiche di vento forti
 
-Alcuni temporali producono raffiche molto forti, anche superiori a 100 km/h. Queste raffiche possono:
+Alcuni temporali producono downburst: raffiche discendenti improvvise, anche superiori a 100 km/h. Possono:
 
-- Abbattere **alberi** e **rami**.
-- Far cadere **cornicioni** e **tegole**.
-- Sollevare **oggetti non fissati** su balconi e terrazze.
+- abbattere alberi e rami;
+- far cadere cornicioni e tegole;
+- sollevare oggetti non fissati su balconi e terrazze.
 
-Durante un temporale, stai lontano da balconi, finestre e da alberi grandi.
+Durante un temporale, allontanati da balconi, finestre e alberi grandi.
 
 ## Cosa fare dopo
 
 Passato il temporale:
 
-- **Fai un controllo visivo** di casa, balcone, giardino.
-- **Non toccare cavi elettrici** caduti o penzolanti: chiama il 112 o il gestore.
-- **Segnala al Comune** alberi abbattuti, tombini saturi, strade allagate.
-- **Aiuta i vicini fragili** se vedi situazioni di difficoltà.
+- fai un controllo visivo di casa, balcone e giardino;
+- non toccare cavi elettrici caduti o penzolanti: chiama il 112 o il gestore di rete;
+- segnala al Comune alberi abbattuti, tombini saturi, strade allagate;
+- aiuta i vicini fragili se noti situazioni di difficoltà.
 
-## Il 112 è per le emergenze
+## Quando chiamare il 112
 
-Chiama il **112** solo per:
+Il **112** è il Numero Unico Europeo delle Emergenze (NUE): è il numero da chiamare nel Lazio per qualsiasi emergenza. Chiamalo se si verificano:
 
-- Persone ferite o in pericolo
-- Incendi
-- Auto bloccata in sottopasso allagato
-- Alberi caduti su persone o auto
+- persone ferite o in pericolo;
+- incendi;
+- auto bloccata in un sottopasso allagato;
+- alberi caduti su persone o veicoli.
 
-Per segnalazioni meno urgenti (cornicione pericolante, strada danneggiata), usa i canali del Comune.
+Per segnalazioni non urgenti (cornicione pericolante, strada danneggiata, tombino intasato), usa i canali del Comune di Genzano di Roma.
 
 ## Per approfondire
 
-- Articolo correlato: [Previsioni meteo e bollettini](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
-- Articolo correlato: [Zone di allerta del Lazio](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
-- Pagina [Temporali intensi](/rischi-prevenzione/temporali-intensi/)
+Risorse interne del sito:
 
-Un temporale, preso con le giuste cautele, passa senza conseguenze. Un temporale preso sottogamba può causare incidenti anche gravi. La differenza è **la conoscenza delle regole**.
+- [Rischio temporali intensi](/rischi-prevenzione/temporali-intensi/) — scheda completa con cosa fare prima, durante e dopo
+- [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — cosa tenere in casa per essere pronti
+- [Piano di emergenza comunale](/piano-emergenza/) — come funziona la risposta del Comune in caso di evento
+- [Come leggere un bollettino di allerta meteo](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/) — significato dei codici colore del CFR Lazio
+- [Previsioni meteo e bollettini ufficiali](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/) — dove trovare le fonti ufficiali
+
+Fonti istituzionali:
+
+- [Centro Funzionale Regionale Lazio (CFR)](https://protezionecivile.regione.lazio.it/) — bollettini di criticità giornalieri
+- [Dipartimento della Protezione Civile (DPC)](https://www.protezionecivile.gov.it/) — campagne "Io non rischio", informazioni sui rischi naturali
+- [ISPRA — Istituto Superiore per la Protezione e la Ricerca Ambientale](https://www.isprambiente.gov.it/) — dati sul rischio idrogeologico nazionale
