@@ -1,7 +1,7 @@
 ---
 title: "17 maggio: Giornata mondiale delle telecomunicazioni e il ruolo in emergenza"
 date: 2026-05-17T00:01:00+02:00
-description: "La Giornata mondiale delle telecomunicazioni ricorda quanto la connettivita sia fondamentale per la sicurezza. Reti, antenne, resilienza digitale."
+description: "La Giornata mondiale delle telecomunicazioni ricorda quanto la connettività sia fondamentale per la sicurezza. Reti, antenne, resilienza digitale."
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -90,9 +90,15 @@ In emergenza, **meno messaggi e più verificati** è meglio di **molti messaggi 
 
 ## Per approfondire
 
-- [ITU — Unione Internazionale delle Telecomunicazioni](https://www.itu.int/)
-- [IT-Alert](https://www.it-alert.gov.it/)
-- [AGCOM — Autorità per le Garanzie nelle Comunicazioni](https://www.agcom.it/)
-- Articolo correlato: [Radio in emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/)
+Sul nostro sito:
+
+- [Radio in emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
+- [ISO 22322 — Public warning e IT-alert](/comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/).
+
+Fonti istituzionali:
+
+- [ITU — Unione Internazionale delle Telecomunicazioni](https://www.itu.int/).
+- [IT-alert — sito ufficiale del DPC](https://www.it-alert.gov.it/).
+- [AGCOM — Autorità per le Garanzie nelle Comunicazioni](https://www.agcom.it/).
 
 Le telecomunicazioni sono la **sala macchine silenziosa** del nostro mondo: funzionano così bene che raramente ci accorgiamo di loro, ma sono la spina dorsale di ogni sistema di protezione civile moderno. Buona Giornata delle Telecomunicazioni.

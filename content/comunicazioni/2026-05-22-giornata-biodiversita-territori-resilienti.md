@@ -1,7 +1,7 @@
 ---
 title: "22 maggio: Giornata della Biodiversità e territori più resilienti"
 date: 2026-05-22
-description: "La biodiversita non è solo tutela della natura: è infrastruttura di Protezione Civile. Boschi sani, fiumi curati, suoli fertili riducono il rischio."
+description: "La biodiversità non è solo tutela della natura: è infrastruttura di Protezione Civile. Boschi sani, fiumi curati, suoli fertili riducono il rischio."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -109,10 +109,18 @@ In questo senso, **la Protezione Civile e la tutela ambientale sono alleate natu
 
 ## Per approfondire
 
-- [ONU — Convenzione sulla Biodiversità](https://www.cbd.int/)
-- [Ministero dell'Ambiente](https://www.mase.gov.it/)
-- [ISPRA — Biodiversità](https://www.isprambiente.gov.it/it/attivita/biodiversita)
-- [Parco Regionale dei Castelli Romani](http://www.parcocastelliromani.it/)
-- Articolo correlato: [Giornata della Terra](/comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani/)
+Sul nostro sito:
+
+- [Giornata della Terra: clima ed eventi estremi nei Castelli Romani](/comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani/).
+- [Sciami d'api in estate: tutela degli impollinatori](/comunicazioni/2026-05-20-sciami-api-estate-recupero-genzano/).
+- [Rischio idrogeologico: pagina operativa](/rischi-prevenzione/rischio-idrogeologico/).
+- [Rischio incendio: pagina operativa](/rischi-prevenzione/rischio-incendio/).
+
+Fonti istituzionali:
+
+- [ONU — Convenzione sulla Biodiversità](https://www.cbd.int/).
+- [Ministero dell'Ambiente e della Sicurezza Energetica](https://www.mase.gov.it/).
+- [ISPRA — Biodiversità](https://www.isprambiente.gov.it/it/attivita/biodiversita).
+- [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/).
 
 Buona Giornata della Biodiversità. Un territorio che conosce, protegge e rigenera la sua biodiversità è **un territorio più sicuro per tutti**.

@@ -37,7 +37,7 @@ Entrambi sono **molto profondi in prossimità delle sponde**: bastano pochi metr
 
 ### Sbalzo termico
 
-Anche in agosto, la temperatura superficiale dei laghi raramente supera i 22-24 °C. In profondità scende rapidamente. Entrare in acqua in una giornata calda, dopo esposizione al sole, può causare un **idrocuzione** (shock termico): crampi, perdita di coordinazione, nei casi gravi arresto cardiaco.
+Anche in agosto, la temperatura superficiale dei laghi raramente supera i 22-24 °C. In profondità scende rapidamente. Entrare in acqua in una giornata calda, dopo esposizione al sole, può causare un'**idrocuzione** (shock termico): crampi, perdita di coordinazione, nei casi gravi arresto cardiaco.
 
 **Prevenzione**: entrare **gradualmente**, bagnandosi prima viso, nuca, polsi. Non immergersi di corsa.
 
@@ -122,9 +122,16 @@ In estate il rischio di incendio boschivo è alto. Le aree attorno ai laghi hann
 
 ## Per approfondire
 
-- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/)
-- [Parco Regionale dei Castelli Romani](http://www.parcocastelliromani.it/)
-- [Guardia Costiera — Acque interne](https://www.guardiacostiera.gov.it/)
-- Articolo correlato: [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
+Sul nostro sito:
+
+- [Primo soccorso: le cinque regole di base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/).
+- [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
+- [Cartografia del territorio di Genzano](/cartografia/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
+- [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/).
+- [Guardia Costiera — Acque interne](https://www.guardiacostiera.gov.it/) (numero 1530).
 
 I laghi sono un privilegio del nostro territorio: preservarli e frequentarli con rispetto è la **prima forma di Protezione Civile** ambientale.

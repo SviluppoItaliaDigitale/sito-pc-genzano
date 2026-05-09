@@ -94,7 +94,15 @@ ISO 22361 non è un manuale operativo per il singolo intervento. È una **cornic
 
 ## Per approfondire
 
-- Scheda interna dello standard: [ISO 22361 — Crisis management](/standard-iso/iso-22361/)
-- [Pagina ufficiale ISO 22361:2022](https://www.iso.org/standard/50061.html)
-- [Social Media Policy del Gruppo](/social-media-policy/)
-- [Standard ISO per la Protezione Civile](/standard-iso/)
+Sul nostro sito:
+
+- [ISO 22361 — Crisis management](/standard-iso/iso-22361/): scheda interna con titolo, ambito e contestualizzazione italiana.
+- [ISO 22329 — Social media in emergenza](/standard-iso/iso-22329/).
+- [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
+- [Social Media Policy del Gruppo](/social-media-policy/).
+- [Standard ISO per la Protezione Civile](/standard-iso/): hub di tutti gli standard rilevanti.
+
+Fonti istituzionali:
+
+- [Pagina ufficiale ISO 22361:2022](https://www.iso.org/standard/50061.html): per il testo della norma (a pagamento) consulta [iso.org](https://www.iso.org/) o il [catalogo UNI](https://store.uni.com/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
