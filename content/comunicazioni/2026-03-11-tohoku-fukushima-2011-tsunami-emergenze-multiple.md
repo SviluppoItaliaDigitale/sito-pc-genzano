@@ -1,7 +1,7 @@
 ---
 title: "Tōhoku, 11 marzo 2011: il terremoto, lo tsunami e Fukushima — quindici anni dopo l'emergenza tripla che ha cambiato il mondo"
 date: 2026-03-11
-description: "Alle 14:46 dell'11 marzo 2011 una scossa di magnitudo 9.0 colpì la costa nord-est del Giappone, generando uno tsunami con onde fino a 40 metri e provocando l'incidente nucleare di Fukushima Daiichi. 18.500 vittime, mezzo milione di sfollati, una lezione mondiale sulla gestione delle emergenze multiple e sui sistemi di allerta tsunami."
+description: "Alle 14:46 dell'11 marzo 2011 una scossa di magnitudo 9.0 colpì la costa nord-est del Giappone."
 
 badge: "Informazione"
 priorita: "normale"

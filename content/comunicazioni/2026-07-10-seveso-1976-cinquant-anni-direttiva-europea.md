@@ -1,7 +1,7 @@
 ---
 title: "Seveso, 10 luglio 1976: cinquant'anni dal disastro chimico che ha generato le direttive europee sui rischi industriali"
 date: 2026-07-10T00:02:00+02:00
-description: "A mezzogiorno di sabato 10 luglio 1976 una nube di diossina TCDD si sprigionò dallo stabilimento ICMESA di Meda, contaminando Seveso e i comuni vicini. Da quella tragedia nacquero le direttive europee Seveso I, II e III sui rischi industriali rilevanti."
+description: "A mezzogiorno di sabato 10 luglio 1976 una nube di diossina TCDD si sprigionò dallo stabilimento ICMESA di Meda, contaminando Seveso e i comuni vicini."
 
 badge: "Informazione"
 priorita: "normale"

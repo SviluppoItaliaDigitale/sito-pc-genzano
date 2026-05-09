@@ -1,7 +1,7 @@
 ---
 title: "Vajont, 9 ottobre 1963: la tragedia che la scienza aveva previsto"
 date: 2026-10-09T00:02:00+02:00
-description: "Alle 22:39 del 9 ottobre 1963, quasi 270 milioni di metri cubi di roccia caddero nel bacino della diga del Vajont. Quasi 2.000 morti, soprattutto a Longarone. Una catastrofe annunciata."
+description: "Alle 22:39 del 9 ottobre 1963, quasi 270 milioni di metri cubi di roccia caddero nel bacino della diga del Vajont."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

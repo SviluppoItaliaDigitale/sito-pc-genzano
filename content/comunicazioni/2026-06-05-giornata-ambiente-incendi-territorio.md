@@ -1,7 +1,7 @@
 ---
 title: "5 giugno: Giornata mondiale dell'ambiente e tutela del territorio"
 date: 2026-06-05
-description: "La Giornata mondiale dell'ambiente cade all'inizio della stagione degli incendi. Prevenire non è solo dovere delle istituzioni: è cura quotidiana del territorio."
+description: "La Giornata mondiale dell'ambiente cade all'inizio della stagione degli incendi."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

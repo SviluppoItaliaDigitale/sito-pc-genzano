@@ -1,7 +1,7 @@
 ---
 title: "Cos'è davvero un rischio? ISO 31000 spiegato a chi non è tecnico"
 date: 2026-06-02
-description: "Rischio non è la stessa cosa di pericolo. Lo standard ISO 31000 è la cornice internazionale per capire come si valuta, si gestisce e si comunica un rischio. Il fondamento di tutta la Protezione Civile."
+description: "Rischio non è la stessa cosa di pericolo. Lo standard ISO 31000 è la cornice internazionale per capire come si valuta."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

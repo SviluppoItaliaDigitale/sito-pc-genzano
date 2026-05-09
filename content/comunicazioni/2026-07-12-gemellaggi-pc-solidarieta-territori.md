@@ -1,7 +1,7 @@
 ---
 title: "Gemellaggi tra Gruppi di PC: la solidarietà tra territori"
 date: 2026-07-12
-description: "Un Gruppo di Protezione Civile non è un'isola. Gemellaggi, colonne mobili, scambi di esperienze costruiscono una comunità nazionale che si sostiene nelle emergenze."
+description: "Gemellaggi, colonne mobili, scambi: come un Gruppo di Protezione Civile costruisce una comunità nazionale che si sostiene nelle emergenze."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "Le donne della Protezione Civile di Genzano"
 date: 2026-03-08
-description: "L'8 marzo è la Giornata internazionale della donna. Nel volontariato di Protezione Civile le donne sono ogni giorno presenti, preparate, indispensabili. Un ringraziamento."
+description: "L'8 marzo è la Giornata internazionale della donna. Nel volontariato di Protezione Civile le donne sono ogni giorno presenti, preparate."
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "Attivazione a Cecchina (Albano Laziale) per incendio di un casolare"
 date: 2026-04-20T00:02:00+02:00
-description: "Nel pomeriggio del 20 aprile il nostro Gruppo è stato attivato dalla Sala Operativa Regionale per un incendio in località Cecchina. Supporto ai Vigili del Fuoco e alle altre squadre intervenute."
+description: "Nel pomeriggio del 20 aprile il nostro Gruppo è stato attivato dalla Sala Operativa Regionale per un incendio in località Cecchina."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

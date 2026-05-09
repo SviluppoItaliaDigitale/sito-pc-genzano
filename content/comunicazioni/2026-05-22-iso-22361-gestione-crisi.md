@@ -1,7 +1,7 @@
 ---
 title: "Quando l'emergenza diventa crisi: lo standard ISO 22361"
 date: 2026-05-22
-description: "Emergenza ed crisi non sono sinonimi. Lo standard ISO 22361 spiega quando una situazione richiede decisioni eccezionali e leadership di alto livello. Riferimento per Sindaci, dirigenti e responsabili operativi."
+description: "Emergenza e crisi non sono sinonimi: lo standard ISO 22361 spiega quando servono decisioni eccezionali e leadership di alto livello."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

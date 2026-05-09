@@ -1,7 +1,7 @@
 ---
 title: "Cani e gatti nel caldo di agosto: come proteggerli davvero"
 date: 2026-08-21T00:01:00+02:00
-description: "Gli animali domestici soffrono il caldo come le persone. Regole semplici per riconoscere il malessere e prevenire il colpo di calore degli amici a quattro zampe."
+description: "Gli animali domestici soffrono il caldo come le persone. Regole semplici per riconoscere il malessere."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

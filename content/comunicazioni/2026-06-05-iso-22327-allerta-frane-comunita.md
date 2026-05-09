@@ -1,7 +1,7 @@
 ---
 title: "Frane e allerta locale: ISO 22327 e il ruolo della comunità"
 date: 2026-06-05
-description: "Lo standard ISO 22327 spiega come si costruisce un sistema di allerta frane che funziona davvero a livello locale, con il coinvolgimento attivo degli abitanti del territorio. Particolarmente rilevante per i Castelli Romani."
+description: "Lo standard ISO 22327 spiega come si costruisce un sistema di allerta frane che funziona davvero a livello locale."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

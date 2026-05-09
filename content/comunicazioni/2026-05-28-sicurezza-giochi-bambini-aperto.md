@@ -1,7 +1,7 @@
 ---
 title: "Bambini all'aperto: sicurezza nei giochi e nel tempo libero"
 date: 2026-05-28
-description: "Parchi, biciclette, piscine gonfiabili, scalate, giochi in strada: la sicurezza dei bambini d'estate richiede attenzione degli adulti senza eccessive restrizioni."
+description: "Parchi, biciclette, piscine, giochi in strada: la sicurezza dei bambini d'estate richiede attenzione degli adulti, non eccessive restrizioni."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

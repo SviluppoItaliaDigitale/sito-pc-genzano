@@ -1,7 +1,7 @@
 ---
 title: "Soverato, 10 settembre 2000: l'alluvione del campeggio Le Giare"
 date: 2026-09-10T00:02:00+02:00
-description: "Nella notte tra il 9 e il 10 settembre 2000 una piena improvvisa del torrente Beltrame travolse il campeggio Le Giare a Soverato: 13 morti, soprattutto giovani disabili e accompagnatori. Una tragedia che ha cambiato i criteri di gestione dei campeggi italiani."
+description: "Nella notte tra il 9 e il 10 settembre 2000 una piena improvvisa del torrente Beltrame travolse il campeggio Le Giare a Soverato: 13 morti."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

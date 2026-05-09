@@ -1,7 +1,7 @@
 ---
 title: "La nascita del Dipartimento della Protezione Civile: una storia italiana che parte dalle macerie"
 date: 2026-04-29T00:03:00+02:00
-description: "Dalla notte dell'Irpinia al Codice del 2018: come l'Italia ha costruito, in quarant'anni di leggi e di errori imparati, il Sistema nazionale di Protezione Civile. Una storia di volontariato, di ingegneria istituzionale, di Stato che impara a non arrivare in ritardo."
+description: "Dalla notte dell'Irpinia al Codice del 2018: come l'Italia ha costruito, in quarant'anni di leggi e di errori imparati."
 badge: "Informazione"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "Ponte Morandi, 14 agosto 2018: il crollo che ha riscritto la cultura della manutenzione delle infrastrutture in Italia"
 date: 2026-08-14T00:02:00+02:00
-description: "Alle 11:36 del 14 agosto 2018 una sezione di 250 metri del Ponte Morandi di Genova crollava trascinando con sé pila 9 e gli stralli di sostegno. 43 vittime, 566 sfollati. Da quel giorno l'Italia ha cominciato un censimento sistematico della propria rete infrastrutturale e ridefinito la responsabilità della manutenzione."
+description: "Alle 11:36 del 14 agosto 2018 una sezione di 250 metri del Ponte Morandi di Genova crollava trascinando con sé pila 9 e gli stralli di sostegno."
 
 badge: "Informazione"
 priorita: "normale"

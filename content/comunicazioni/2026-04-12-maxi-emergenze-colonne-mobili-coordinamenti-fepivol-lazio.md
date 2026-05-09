@@ -1,7 +1,7 @@
 ---
 title: "Maxi emergenze e colonne mobili: come si organizza l'intervento fuori dal territorio comunale"
 date: 2026-04-12
-description: "Cos'è una colonna mobile, come si forma entro 6 ore dall'evento, quali attrezzature porta, cosa mettere nello zaino quando si parte per un terremoto o un'alluvione."
+description: "Cos'è una colonna mobile, come si forma entro 6 ore dall'evento, quali attrezzature porta."
 
 badge: "Informazione"
 priorita: "normale"

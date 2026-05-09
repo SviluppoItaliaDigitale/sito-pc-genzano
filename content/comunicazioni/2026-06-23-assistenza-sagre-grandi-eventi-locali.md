@@ -1,7 +1,7 @@
 ---
 title: "Assistenza a sagre e grandi eventi locali: cosa fa la PC"
 date: 2026-06-23
-description: "Sagre, feste patronali, concerti, eventi sportivi: la Protezione Civile è presente anche qui. Perché un evento di migliaia di persone è un piccolo scenario di rischio."
+description: "Sagre, feste patronali, concerti, eventi sportivi: la Protezione Civile è presente anche qui."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

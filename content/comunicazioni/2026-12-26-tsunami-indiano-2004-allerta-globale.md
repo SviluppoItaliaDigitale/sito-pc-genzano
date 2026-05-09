@@ -1,7 +1,7 @@
 ---
 title: "Tsunami dell'Oceano Indiano, 26 dicembre 2004: il giorno che ha imposto al mondo un sistema globale di allerta tsunami"
 date: 2026-12-26T00:02:00+02:00
-description: "Alle 7:58 del 26 dicembre 2004, un sisma di magnitudo 9.1 al largo di Sumatra generò uno tsunami che colpì 14 Paesi affacciati sull'Oceano Indiano. Oltre 230.000 vittime. Il primo evento tsunami a colpire più Paesi simultaneamente nell'era moderna, e la spinta decisiva alla nascita dei sistemi globali di allerta."
+description: "Alle 7:58 del 26 dicembre 2004, un sisma di magnitudo 9.1 al largo di Sumatra generò uno tsunami che colpì 14 Paesi affacciati sull'Oceano Indiano."
 
 badge: "Informazione"
 priorita: "normale"

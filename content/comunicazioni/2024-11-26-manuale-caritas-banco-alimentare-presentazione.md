@@ -1,7 +1,7 @@
 ---
 title: "Recupero e distribuzione di cibo per solidarietà: il manuale Caritas-Banco Alimentare validato dal Ministero della Salute"
 date: 2024-11-26
-description: "Il manuale di corrette prassi operative per le organizzazioni caritative, realizzato da Caritas Italiana e Fondazione Banco Alimentare Onlus e validato dal Ministero della Salute, stabilisce le regole igieniche per chi recupera e distribuisce alimenti a fini di solidarietà."
+description: "Manuale Caritas-Banco Alimentare validato dal Ministero della Salute: regole igieniche per chi recupera e distribuisce alimenti per solidarietà."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

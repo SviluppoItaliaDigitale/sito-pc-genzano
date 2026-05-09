@@ -1,7 +1,7 @@
 ---
 title: "La catena delle comunicazioni in protezione civile: DPC, COR, COM, COI, COC"
 date: 2026-04-16
-description: "Come le informazioni viaggiano dall'evento fino alla decisione operativa: dal Dipartimento della Protezione Civile al Centro Operativo Comunale, passando per COR e COM."
+description: "Come le informazioni viaggiano dall'evento fino alla decisione operativa: dal Dipartimento della Protezione Civile al Centro Operativo Comunale."
 
 badge: "Radiocomunicazioni"
 priorita: "normale"

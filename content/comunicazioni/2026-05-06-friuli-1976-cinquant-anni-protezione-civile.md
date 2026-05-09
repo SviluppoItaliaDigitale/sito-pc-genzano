@@ -1,7 +1,7 @@
 ---
 title: "Friuli 1976, cinquant'anni dopo: il terremoto che ha fatto nascere la protezione civile italiana"
 date: 2026-05-06T00:02:00+02:00
-description: "Alle 21:00 del 6 maggio 1976 una scossa di magnitudo 6.4 devastò il Friuli, lasciando 989 morti e 45.000 senza tetto. Da quel disastro sono nati il modello di ricostruzione e il Servizio Nazionale della Protezione Civile, grazie alla figura di Giuseppe Zamberletti."
+description: "Alle 21:00 del 6 maggio 1976 una scossa di magnitudo 6.4 devastò il Friuli, lasciando 989 morti e 45.000 senza tetto."
 
 badge: "Informazione"
 priorita: "normale"

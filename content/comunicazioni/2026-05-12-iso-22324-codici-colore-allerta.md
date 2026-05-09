@@ -1,7 +1,7 @@
 ---
 title: "Perché le allerte hanno colori? Lo standard ISO 22324 spiegato semplice"
 date: 2026-05-12
-description: "Verde, giallo, arancione, rosso: i colori delle allerte non sono scelti a caso. Cosa dice lo standard internazionale ISO 22324 e come si applica nel sistema italiano del Centro Funzionale Regionale."
+description: "Verde, giallo, arancione, rosso: cosa dice lo standard ISO 22324 e come si applica nel sistema italiano del Centro Funzionale Regionale."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

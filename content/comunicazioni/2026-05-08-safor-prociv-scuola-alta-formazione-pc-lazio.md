@@ -1,7 +1,7 @@
 ---
 title: "Lazio: in vigore il regolamento della Scuola di Alta Formazione di Protezione Civile (SAFOR-PROCIV)"
 date: 2026-05-08T00:03:00+02:00
-description: "Pubblicato sul BURL n. 37 del 7 maggio 2026 il regolamento regionale che disciplina il funzionamento della SAFOR-PROCIV: organi, requisiti, riconoscimento delle strutture formative, attestati e ruolo del volontariato."
+description: "Pubblicato sul BURL n. 37 del 7 maggio 2026 il regolamento regionale che disciplina il funzionamento della SAFOR-PROCIV: organi, requisiti."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

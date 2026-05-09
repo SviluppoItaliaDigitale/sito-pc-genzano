@@ -1,7 +1,7 @@
 ---
 title: "Alluvione dell'Emilia-Romagna, maggio 2023: il fango che ha cambiato la cultura del rischio in pianura"
 date: 2026-05-17T00:02:00+02:00
-description: "Fra il 16 e il 18 maggio 2023, oltre 350 millimetri di pioggia in 36 ore innescarono frane e l'esondazione di 23 fiumi e torrenti in Emilia-Romagna: 17 vittime, 36.000 sfollati, 8 miliardi di euro di danni. La più grave alluvione italiana del XXI secolo per estensione e impatto economico."
+description: "Maggio 2023 in Emilia-Romagna: 350 mm di pioggia in 36 ore, esondazione di 23 fiumi, 17 vittime, 36.000 sfollati. L'alluvione più grave del XXI secolo."
 
 badge: "Informazione"
 priorita: "normale"

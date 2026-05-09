@@ -1,7 +1,7 @@
 ---
 title: "Sarno, 5 maggio 1998: la frana che ha riscritto le mappe del rischio idrogeologico in Italia"
 date: 2026-05-05T00:02:00+02:00
-description: "Le colate rapide del 5 maggio 1998 a Sarno e Quindici travolsero quattro Comuni campani lasciando 161 vittime. Da quella tragedia nacque il primo strumento sistematico di pianificazione del rischio idrogeologico: la Legge Sarno e i Piani per l'Assetto Idrogeologico."
+description: "Le colate rapide del 5 maggio 1998 a Sarno e Quindici travolsero quattro Comuni campani lasciando 161 vittime."
 
 badge: "Informazione"
 priorita: "normale"

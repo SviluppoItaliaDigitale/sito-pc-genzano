@@ -1,7 +1,7 @@
 ---
 title: "Giornata mondiale dell'alimentazione: cucina a zero spreco e recupero degli avanzi"
 date: 2025-10-16
-description: "Bucce, gambi, foglie esterne, acqua di cottura, pane raffermo: cosa sembra scarto e invece è ingrediente. I capitoli 2 e 3 del Libro del Risparmio di Fondazione Barilla."
+description: "Bucce, gambi, foglie esterne, acqua di cottura, pane raffermo: cosa sembra scarto e invece è ingrediente."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

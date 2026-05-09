@@ -1,7 +1,7 @@
 ---
 title: "Alimentazioni speciali nei campi di accoglienza: allergie, celiachia e semaforo alimentare"
 date: 2025-07-14
-description: "Nei campi di Protezione Civile ci sono persone allergiche, celiache, vegetariane, di religione diversa. Ecco come garantire pasti sicuri per tutti secondo il Manuale DSEFIC-FIC."
+description: "Nei campi di Protezione Civile ci sono persone allergiche, celiache, vegetariane, di religione diversa."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
