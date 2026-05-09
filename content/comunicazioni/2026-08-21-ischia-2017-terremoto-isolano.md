@@ -1,7 +1,7 @@
 ---
 title: "Ischia, 21 agosto 2017: il terremoto su un'isola, le case di tufo e la lezione del Casamicciola"
 date: 2026-08-21T00:02:00+02:00
-description: "Una scossa di magnitudo 4.0 a Casamicciola Terme provocò 2 morti e crolli importanti. Magnitudo bassa, danni alti: la combinazione di edifici fragili e ipocentro superficiale rese tragica una scossa altrove non rilevante."
+description: "Una scossa di magnitudo 4.0 a Casamicciola Terme provocò 2 morti e crolli importanti."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

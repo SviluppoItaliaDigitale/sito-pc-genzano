@@ -1,7 +1,7 @@
 ---
 title: "Pizzo Cengalo, 23 agosto 2017: la frana di Bondo che ha mostrato i nuovi rischi alpini del cambiamento climatico"
 date: 2026-08-23T00:02:00+02:00
-description: "Tre milioni di metri cubi di roccia precipitarono dal Pizzo Cengalo nelle Alpi Retiche svizzere il 23 agosto 2017. Otto vittime e il villaggio di Bondo gravemente danneggiato. Una frana legata allo scioglimento del permafrost di alta quota: il primo grande evento di una nuova categoria di rischio per la regione alpina."
+description: "Tre milioni di metri cubi di roccia precipitarono dal Pizzo Cengalo nelle Alpi Retiche svizzere il 23 agosto 2017."
 
 badge: "Informazione"
 priorita: "normale"

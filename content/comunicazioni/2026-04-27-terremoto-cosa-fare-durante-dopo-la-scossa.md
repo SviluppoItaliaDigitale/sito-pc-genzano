@@ -1,7 +1,7 @@
 ---
 title: "Terremoto: cosa fare durante la scossa e nei minuti successivi"
 date: 2026-04-27T00:01:00+02:00
-description: "Poche regole chiare dal Dipartimento di Protezione Civile su come comportarsi durante un terremoto. Il Lazio è una regione a sismicità media: conoscerle fa la differenza."
+description: "Poche regole chiare dal Dipartimento di Protezione Civile su come comportarsi durante un terremoto."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

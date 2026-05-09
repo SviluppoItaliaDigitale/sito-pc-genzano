@@ -1,7 +1,7 @@
 ---
 title: "Giornata nazionale contro lo spreco alimentare: Fondazione Barilla presenta \"Il Libro del Risparmio\""
 date: 2025-02-05
-description: "120 azioni pratiche contro lo spreco di cibo, per risparmiare fino a 500 euro l'anno. Il manuale di Fondazione Barilla con Marta Antonelli e il Nobel Riccardo Valentini è disponibile gratuitamente."
+description: "120 azioni pratiche contro lo spreco di cibo, per risparmiare fino a 500 euro l'anno."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

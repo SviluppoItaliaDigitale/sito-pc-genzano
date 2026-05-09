@@ -1,7 +1,7 @@
 ---
 title: "Lazio: approvato il programma 2026 della Campagna di comunicazione pubblica sulla Protezione Civile"
 date: 2026-05-08T00:04:00+02:00
-description: "Pubblicata sul BURL n. 36 del 5 maggio 2026 la determinazione regionale che definisce il programma 2026: campagna social per i giovani volontari, Campi Scuola, Io non rischio, esercitazione CASSINUM_EXE, REAS 2026, visite alle Sale Operative."
+description: "Pubblicata sul BURL n. 36 del 5 maggio 2026 la determinazione regionale che definisce il programma 2026: campagna social per i giovani volontari."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "Giornata della Protezione Civile: storia e ruolo del volontariato"
 date: 2026-02-28
-description: "Il 28 febbraio ricorre la Giornata nazionale della Protezione Civile. Una storia italiana fatta di leggi, volontari, eventi che hanno formato il sistema di oggi."
+description: "Il 28 febbraio ricorre la Giornata nazionale della Protezione Civile. Una storia italiana fatta di leggi, volontari."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

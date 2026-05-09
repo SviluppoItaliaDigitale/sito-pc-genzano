@@ -1,7 +1,7 @@
 ---
 title: "YouPol: l'app della Polizia di Stato per segnalare bullismo, droga e violenza domestica"
 date: 2026-04-27T00:03:00+02:00
-description: "YouPol è l'app ufficiale della Polizia di Stato per segnalare in modo anonimo o registrato episodi di bullismo, spaccio di droga, violenza domestica e altri reati. Gratuita, semplice, sicura."
+description: "YouPol è l'app ufficiale della Polizia di Stato per segnalare in modo anonimo o registrato episodi di bullismo, spaccio di droga."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "7 giugno: sicurezza alimentare in emergenza"
 date: 2026-06-07
-description: "La Giornata mondiale della sicurezza alimentare tocca un aspetto pratico e spesso trascurato della preparazione: come conservare e gestire il cibo in situazioni di emergenza."
+description: "La Giornata mondiale della sicurezza alimentare tocca un aspetto pratico e spesso trascurato della preparazione: come conservare."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

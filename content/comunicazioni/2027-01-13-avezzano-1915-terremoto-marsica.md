@@ -1,7 +1,7 @@
 ---
 title: "Avezzano, 13 gennaio 1915: il terremoto della Marsica e la sua eredità"
 date: 2027-01-13
-description: "Alle 7:53 del 13 gennaio 1915 una scossa di magnitudo 7.0 distrusse Avezzano e tutto il bacino del Fucino. Oltre 30.000 morti. Una delle catastrofi sismiche più gravi della storia italiana, ancora poco conosciuta."
+description: "Alle 7:53 del 13 gennaio 1915 una scossa di magnitudo 7.0 distrusse Avezzano e tutto il bacino del Fucino."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "Quando il clima cambia, cambia anche la PC: ISO 14090 e l'adattamento"
 date: 2026-06-12
-description: "Ondate di calore, siccità, eventi meteo estremi: il cambiamento climatico modifica i rischi della Protezione Civile. Lo standard ISO 14090 spiega come una città si prepara, e perché interessa anche Genzano."
+description: "Ondate di calore, siccità, eventi meteo estremi: il cambiamento climatico modifica i rischi della Protezione Civile."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

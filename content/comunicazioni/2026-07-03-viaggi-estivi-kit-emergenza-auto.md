@@ -1,7 +1,7 @@
 ---
 title: "Viaggi estivi: kit di emergenza in auto e sicurezza stradale"
 date: 2026-07-03
-description: "Luglio è il mese dei grandi esodi. Un kit di emergenza in auto, qualche controllo preventivo e attenzione al caldo evitano la maggior parte delle emergenze da viaggio."
+description: "Luglio è il mese dei grandi esodi. Un kit di emergenza in auto, qualche controllo preventivo."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "Rete Zamberletti: svolta la 499ª esercitazione radio nazionale"
 date: 2026-05-01T00:02:00+02:00
-description: "Il 30 aprile 2026 si è svolta la 499ª esercitazione della Rete Zamberletti, che coordina le radiocomunicazioni alternative di emergenza fra Prefetture e Istituzioni dello Stato."
+description: "Il 30 aprile 2026 si è svolta la 499ª esercitazione della Rete Zamberletti, che coordina le radiocomunicazioni alternative di emergenza fra Prefetture."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

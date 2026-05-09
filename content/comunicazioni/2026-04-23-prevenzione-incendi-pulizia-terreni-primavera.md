@@ -1,7 +1,7 @@
 ---
 title: "Prevenzione incendi: pulire i terreni prima dell'estate è una responsabilità di tutti"
 date: 2026-04-23T00:01:00+02:00
-description: "La primavera è il momento per mettere in sicurezza terreni, giardini e aree confinanti con i boschi. Cosa prevedono le regole, cosa rischia chi non lo fa, come farlo bene."
+description: "La primavera è il momento per mettere in sicurezza terreni, giardini e aree confinanti con i boschi."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

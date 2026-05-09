@@ -1,7 +1,7 @@
 ---
 title: "Ora legale: cambi stagionali e preparazione primaverile"
 date: 2026-03-29
-description: "L'ultima domenica di marzo torna l'ora legale. Un'occasione per verificare il calendario delle attività di Protezione Civile e iniziare la preparazione primaverile."
+description: "L'ultima domenica di marzo torna l'ora legale. Un'occasione per verificare il calendario delle attività di Protezione Civile."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

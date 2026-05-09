@@ -1,7 +1,7 @@
 ---
 title: "Come si organizza una cucina da campo: zone, temperature e protocollo operativo"
 date: 2026-01-20
-description: "Dalla ricezione merci alla somministrazione: come si suddivide una cucina di Protezione Civile in zone, quali temperature rispettare, come garantire la tracciabilità degli alimenti."
+description: "Dalla ricezione merci alla somministrazione: come si suddivide una cucina di Protezione Civile in zone, quali temperature rispettare."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "Il Vademecum di Protezione Civile della Prefettura di Isernia: uno strumento utile anche per i cittadini"
 date: 2026-04-30T00:02:00+02:00
-description: "Il Vademecum di Protezione Civile della Prefettura di Isernia (2024) spiega come funziona il Sistema, come si scrivono i piani, qual è il ruolo del CCS e della Prefettura-UTG."
+description: "Il Vademecum di Protezione Civile della Prefettura di Isernia (2024) spiega come funziona il Sistema, come si scrivono i piani, qual è il ruolo del CCS."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

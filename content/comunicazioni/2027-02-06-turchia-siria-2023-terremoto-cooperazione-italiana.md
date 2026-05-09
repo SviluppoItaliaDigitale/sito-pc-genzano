@@ -1,7 +1,7 @@
 ---
 title: "Turchia-Siria, 6 febbraio 2023: il più grande dispiegamento internazionale italiano dopo Haiti"
 date: 2027-02-06
-description: "Alle 4:17 del 6 febbraio 2023 una scossa di magnitudo 7.8 colpì la Turchia meridionale e la Siria. Oltre 55.000 morti. L'Italia rispose con il dispiegamento di Protezione Civile più grande dopo Haiti 2010."
+description: "Alle 4:17 del 6 febbraio 2023 una scossa di magnitudo 7.8 colpì la Turchia meridionale e la Siria."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

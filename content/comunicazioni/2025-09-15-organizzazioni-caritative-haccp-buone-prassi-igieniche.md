@@ -1,7 +1,7 @@
 ---
 title: "Sicurezza alimentare nelle organizzazioni di volontariato: HACCP semplificato e prassi igieniche"
 date: 2025-09-15
-description: "Chi distribuisce alimenti per solidarietà non è un ristoratore, ma deve comunque rispettare il Pacchetto Igiene. Il manuale Caritas-Banco Alimentare spiega come applicare l'HACCP in modo semplificato."
+description: "Chi distribuisce alimenti per solidarietà non è un ristoratore, ma deve comunque rispettare il Pacchetto Igiene."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

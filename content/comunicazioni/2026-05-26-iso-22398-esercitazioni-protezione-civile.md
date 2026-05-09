@@ -1,7 +1,7 @@
 ---
 title: "Perché si fanno le esercitazioni di Protezione Civile? Lo standard ISO 22398"
 date: 2026-05-26
-description: "Le esercitazioni non sono spettacolo: sono lo strumento principale per verificare se un piano di emergenza funziona davvero. ISO 22398 spiega come progettarle bene, dalle simulazioni a tavolino alle full-scale."
+description: "Le esercitazioni non sono spettacolo: sono lo strumento principale per verificare se un piano di emergenza funziona davvero."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

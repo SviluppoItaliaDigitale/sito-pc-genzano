@@ -1,7 +1,7 @@
 ---
 title: "Gelate e ghiaccio sulle strade: come comportarsi in inverno"
 date: 2026-01-23
-description: "Il periodo delle gelate è il più insidioso per circolare a piedi e in auto. Comportamenti corretti, segnali da leggere, rischi da evitare per muoversi con sicurezza."
+description: "Il periodo delle gelate è il più insidioso per circolare a piedi."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

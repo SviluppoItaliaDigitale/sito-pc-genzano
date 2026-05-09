@@ -1,7 +1,7 @@
 ---
 title: "I nostri volontari all'Open Day antincendio boschivo del 9 maggio ad Aprilia"
 date: 2026-05-08T00:02:00+02:00
-description: "Sabato 9 maggio 2026 una rappresentanza del Gruppo Comunale prende parte all'Open Day su tecnologie e DPI per l'antincendio boschivo, presso il Consorzio Tecnart di Aprilia (LT)."
+description: "Sabato 9 maggio 2026 una rappresentanza del Gruppo Comunale prende parte all'Open Day su tecnologie."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

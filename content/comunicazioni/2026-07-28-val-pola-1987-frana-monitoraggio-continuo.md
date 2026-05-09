@@ -1,7 +1,7 @@
 ---
 title: "Val Pola, 28 luglio 1987: la frana della Valtellina che insegnò all'Italia il monitoraggio continuo dei versanti"
 date: 2026-07-28T00:02:00+02:00
-description: "Alle 7:23 del 28 luglio 1987, dal monte Zandila in Valtellina, 40 milioni di metri cubi di roccia precipitarono in valle distruggendo gli abitati di Sant'Antonio Morignone e Aquilone. L'evacuazione preventiva salvò centinaia di vite e cambiò per sempre la cultura del monitoraggio dei versanti instabili."
+description: "28 luglio 1987 in Valtellina: 40 milioni di metri cubi di roccia precipitano dal monte Zandila. L'evacuazione preventiva cambiò il monitoraggio dei versanti."
 
 badge: "Informazione"
 priorita: "normale"

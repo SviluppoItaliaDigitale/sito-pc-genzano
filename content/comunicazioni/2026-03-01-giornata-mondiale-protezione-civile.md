@@ -1,7 +1,7 @@
 ---
 title: "1° marzo, Giornata Mondiale della Protezione Civile"
 date: 2026-03-01
-description: "Ogni 1° marzo l'Organizzazione Internazionale di Protezione Civile celebra la Giornata Mondiale per ricordare il valore della prevenzione, del soccorso e del volontariato. Cosa significa, perché è importante anche per Genzano."
+description: "Ogni 1° marzo l'Organizzazione Internazionale di Protezione Civile celebra la Giornata Mondiale per ricordare il valore della prevenzione."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "Alluvione delle Marche, 15-16 settembre 2022: la notte delle bombe d'acqua sui Monti del Catria"
 date: 2026-09-15T00:02:00+02:00
-description: "Nella notte fra il 15 e il 16 settembre 2022 una violenta perturbazione scaricò oltre 400 millimetri di pioggia in poche ore sui Monti del Catria. Il torrente Misa esondò a Senigallia e i fossi dell'Appennino marchigiano si trasformarono in fiumi di fango: 13 vittime. Una delle più recenti e gravi alluvioni italiane, simbolo del rischio da rovesci concentrati."
+description: "Nella notte fra il 15 e il 16 settembre 2022 una violenta perturbazione scaricò oltre 400 millimetri di pioggia in poche ore sui Monti del Catria."
 
 badge: "Informazione"
 priorita: "normale"

@@ -1,7 +1,7 @@
 ---
 title: "Formazione regionale: un nostro formatore in Sala Operativa per i nuovi volontari"
 date: 2026-04-19
-description: "Daniele Toscani, formatore regionale del Gruppo Comunale di Genzano, ha guidato le lezioni ai nuovi volontari del sistema regionale, presso la Sala Operativa della Protezione Civile del Lazio."
+description: "Daniele Toscani, formatore regionale del Gruppo Comunale di Genzano, ha guidato le lezioni ai nuovi volontari del sistema regionale."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

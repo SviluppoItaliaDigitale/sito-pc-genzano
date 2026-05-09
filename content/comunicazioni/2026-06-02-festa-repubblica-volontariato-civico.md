@@ -1,7 +1,7 @@
 ---
 title: "2 giugno: Festa della Repubblica e volontariato civico"
 date: 2026-06-02
-description: "La Festa della Repubblica ci ricorda che la Protezione Civile nasce come espressione di solidarietà costituzionale. Perché il volontariato è un esercizio di cittadinanza."
+description: "La Festa della Repubblica ci ricorda che la Protezione Civile nasce come espressione di solidarietà costituzionale."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "La mostra «Terremoti d'Italia» fa tappa a Napoli: dal 20 aprile al 9 maggio"
 date: 2026-04-17T00:02:00+02:00
-description: "Il Dipartimento della Protezione Civile e la Regione Campania portano a Napoli la mostra interattiva sul rischio sismico: simulatori, divulgazione scientifica, comportamenti corretti. Un'occasione di formazione che il Gruppo segnala con favore."
+description: "Il Dipartimento della Protezione Civile e la Regione Campania portano a Napoli la mostra interattiva sul rischio sismico: simulatori."
 badge: "Informazione"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"

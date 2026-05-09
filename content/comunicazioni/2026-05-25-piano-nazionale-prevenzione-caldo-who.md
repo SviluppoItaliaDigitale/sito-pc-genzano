@@ -1,7 +1,7 @@
 ---
 title: "Il Piano nazionale di prevenzione degli effetti del caldo sulla salute"
 date: 2026-05-25T00:02:00+02:00
-description: "Come funziona il sistema italiano di prevenzione delle ondate di calore: allerta HHWWS, numero 1500, anagrafi dei fragili, sorveglianza attiva. Un quadro basato sulle linee guida del Ministero della Salute e sulla guidance OMS Europa."
+description: "Come funziona il sistema italiano di prevenzione delle ondate di calore: allerta HHWWS, numero 1500, anagrafi dei fragili, sorveglianza attiva."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

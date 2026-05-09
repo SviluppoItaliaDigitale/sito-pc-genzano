@@ -1,7 +1,7 @@
 ---
 title: "Quarant'anni di volontariato: la storia del Gruppo Comunale di Genzano di Roma, dalle radio CB al Terzo Settore"
 date: 2026-04-05
-description: "Dalla nascita negli anni '80 come gruppo CB all'istituzione nel 1993, dai mezzi dismessi dall'Esercito alla flotta moderna: la storia del Gruppo Comunale di Genzano."
+description: "Dagli anni '80 come gruppo CB, all'istituzione nel 1993, alla flotta moderna: la storia del Gruppo Comunale di Genzano."
 
 badge: "Comunicazione"
 priorita: "normale"

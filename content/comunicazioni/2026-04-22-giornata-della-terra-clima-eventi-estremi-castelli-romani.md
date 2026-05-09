@@ -1,7 +1,7 @@
 ---
 title: "Giornata della Terra: il clima che cambia e i rischi sul nostro territorio"
 date: 2026-04-22
-description: "Il 22 aprile si celebra la Giornata della Terra. Per la Protezione Civile è l'occasione per parlare del legame tra crisi climatica ed eventi estremi nei Castelli Romani."
+description: "Il 22 aprile è la Giornata della Terra: legame tra crisi climatica ed eventi estremi nei Castelli Romani."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

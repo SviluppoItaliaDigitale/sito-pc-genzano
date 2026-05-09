@@ -1,7 +1,7 @@
 ---
 title: "6 giugno: sport, movimento e resilienza della comunità"
 date: 2026-06-06
-description: "La Giornata internazionale dello sport per lo sviluppo e la pace ci ricorda che attività fisica e aggregazione locale sono basi concrete della resilienza di una comunità."
+description: "La Giornata internazionale dello sport per lo sviluppo e la pace ci ricorda che attività fisica."
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

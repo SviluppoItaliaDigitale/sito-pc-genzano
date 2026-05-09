@@ -1,7 +1,7 @@
 ---
 title: "Attività al chiuso in estate: alternative sicure al caldo esterno"
 date: 2026-07-20
-description: "Nelle ore più calde la cosa più saggia è stare al riparo. Luoghi pubblici climatizzati, attività per bambini e anziani, vita di comunità contro l'isolamento estivo."
+description: "Nelle ore più calde la cosa più saggia è stare al riparo. Luoghi pubblici climatizzati, attività per bambini."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

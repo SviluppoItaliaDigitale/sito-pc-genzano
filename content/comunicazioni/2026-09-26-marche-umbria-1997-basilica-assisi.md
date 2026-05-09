@@ -1,7 +1,7 @@
 ---
 title: "Marche-Umbria, 26 settembre 1997: il terremoto che fece crollare la volta della Basilica di Assisi"
 date: 2026-09-26T00:02:00+02:00
-description: "Il terremoto Umbria-Marche del 1997: 11 vittime, fra cui 4 persone schiacciate dal crollo della volta della Basilica Superiore di San Francesco, durante un sopralluogo. Una tragedia che ha cambiato i protocolli di soccorso post-sisma."
+description: "Il terremoto Umbria-Marche del 1997: 11 vittime, fra cui 4 persone schiacciate dal crollo della volta della Basilica Superiore di San Francesco."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

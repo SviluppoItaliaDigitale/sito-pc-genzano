@@ -1,7 +1,7 @@
 ---
 title: "Belice, 14-15 gennaio 1968: il terremoto che durò un giorno e una notte"
 date: 2027-01-14
-description: "Il terremoto della Valle del Belice fu il primo evento sismico del dopoguerra che mise in luce limiti gravissimi della macchina dei soccorsi italiana. Una ricostruzione lunghissima, contestata, che durò decenni."
+description: "Il terremoto della Valle del Belice fu il primo evento sismico del dopoguerra che mise in luce limiti gravissimi della macchina dei soccorsi italiana."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

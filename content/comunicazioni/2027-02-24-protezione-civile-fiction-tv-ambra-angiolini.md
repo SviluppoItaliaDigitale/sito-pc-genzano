@@ -1,7 +1,7 @@
 ---
 title: "La Protezione Civile in TV: la fiction con Ambra Angiolini e la fatica di raccontare il volontariato"
 date: 2027-02-24
-description: "Una fiction Rai con Ambra Angiolini ha portato il mondo della Protezione Civile in prima serata. È un'occasione importante di visibilità, ma con i limiti di ogni racconto televisivo: scegliamo cosa tenere e cosa correggere."
+description: "Una fiction Rai con Ambra Angiolini ha portato il mondo della Protezione Civile in prima serata."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

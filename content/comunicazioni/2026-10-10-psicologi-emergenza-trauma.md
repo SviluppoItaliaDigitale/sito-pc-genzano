@@ -1,7 +1,7 @@
 ---
 title: "Il supporto psicologico nelle emergenze: per chi le subisce e per chi soccorre"
 date: 2026-10-10T00:02:00+02:00
-description: "Lo psicologo dell'emergenza nella Protezione Civile italiana: ruolo, linee guida CNOP, sostegno alle popolazioni colpite e ai volontari. Come si previene il trauma vicario nei soccorritori."
+description: "Lo psicologo dell'emergenza nella Protezione Civile italiana: ruolo, linee guida CNOP, sostegno alle popolazioni colpite e ai volontari."
 
 badge: "Informazione"
 priorita: "normale"

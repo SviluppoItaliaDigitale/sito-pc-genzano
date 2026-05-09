@@ -1,7 +1,7 @@
 ---
 title: "Dieci errori da evitare alla radio in protezione civile"
 date: 2026-04-14
-description: "Le abitudini sbagliate che fanno perdere tempo e informazioni in emergenza: privacy, formalismi, codice Q, sequenza di chiamata, conferme. Sintesi pratica per il volontario."
+description: "Le abitudini sbagliate che fanno perdere tempo e informazioni in emergenza: privacy, formalismi, codice Q, sequenza di chiamata, conferme."
 
 badge: "Radiocomunicazioni"
 priorita: "normale"

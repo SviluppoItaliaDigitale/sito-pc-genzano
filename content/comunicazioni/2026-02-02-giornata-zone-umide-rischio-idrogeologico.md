@@ -1,7 +1,7 @@
 ---
 title: "Giornata mondiale zone umide: rischio idrogeologico e territorio"
 date: 2026-02-02
-description: "Il 2 febbraio si celebra la Giornata mondiale delle zone umide. Un'occasione per capire il legame tra paludi, laghi, rete idrica e prevenzione del rischio idrogeologico."
+description: "Il 2 febbraio si celebra la Giornata mondiale delle zone umide. Un'occasione per capire il legame tra paludi, laghi, rete idrica."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

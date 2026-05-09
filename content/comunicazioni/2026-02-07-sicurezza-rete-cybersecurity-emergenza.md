@@ -1,7 +1,7 @@
 ---
 title: "Sicurezza in Rete: quando la cybersecurity diventa Protezione Civile"
 date: 2026-02-07
-description: "Il 7 febbraio è la Giornata nazionale Sicurezza in Rete. Attacchi informatici e blackout digitali sono rischi che riguardano anche la Protezione Civile: ecco perché."
+description: "Il 7 febbraio è la Giornata nazionale Sicurezza in Rete. Attacchi informatici."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -1,7 +1,7 @@
 ---
 title: "1° settembre: inizia l'autunno meteorologico, riapre l'anno scolastico"
 date: 2026-09-01
-description: "Con il 1° settembre si apre la stagione autunnale dal punto di vista meteo e riprendono le attività scolastiche. Un passaggio che riguarda anche la Protezione Civile."
+description: "Con il 1° settembre si apre la stagione autunnale dal punto di vista meteo e riprendono le attività scolastiche."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

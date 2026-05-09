@@ -1,7 +1,7 @@
 ---
 title: "Rete di Emergenza Metropolitana di Roma: la rete radio dei Municipi"
 date: 2026-05-02T00:02:00+02:00
-description: "La Rete di Emergenza Metropolitana di ARI Roma collega via radio i Municipi di Roma Capitale e i comuni limitrofi, integrando a livello locale la Rete Zamberletti nazionale."
+description: "La Rete di Emergenza Metropolitana di ARI Roma collega via radio i Municipi di Roma Capitale."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
