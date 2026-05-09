@@ -38,6 +38,11 @@ Distinzione critica `Allerta` vs `Emergenza` (regola `06-protezione-civile-scien
 
 ### 4. Foto e immagini
 - `image:` deve puntare alla cover tipografica con titolo (`/images/<slug>.webp`). MAI a foto utente né a foto da fonti ufficiali (banner sempre col titolo, vedi CLAUDE.md punto 9). MAI marker `# TODO-foto-*` (bandito). **MAI vuoto in produzione** se l'articolo è già pubblicato (data ≤ oggi); se l'articolo ha `image: ""`, controlla che `auto-cover-mancanti.py` la rigeneri al prossimo deploy.
+- 🔴 **CHECK OBBLIGATORIO PRE-COMMIT — drift del campo `image:`**. Se stai facendo una revisione testuale (AGID, refusi, riscrittura), il campo `image:` **non deve cambiare** rispetto al valore originale. Esegui:
+  ```bash
+  git diff <file.md> | grep -E '^[+-]image' | head -5
+  ```
+  Se trovi righe `+image:` o `-image:` (anche solo `image_alt:`) e l'utente non te l'ha chiesto esplicitamente, è un **BLOCKER**: ripristina i valori originali prima del commit. Caso da non ripetere: **incidente Giornata Europa del 9 maggio 2026** — ChatGPT-cloud durante la revisione AGID ha sostituito `image: ""` con `image: "/images/2026-05-09-ercc-bruxelles.webp"` (foto Wikimedia ERCC), violando la regola del banner col titolo.
 - Foto utente nel corpo: SEMPRE come `{{< foto src="..." alt="..." caption="..." >}}`, MAI come markdown `![]()`.
 - Convenzione foto multiple in articoli storici: 1ª dopo 1° H2, 2ª dopo 2° H2, ecc.
 - ≥4 foto → galleria (lo script `galleria-auto.js` le affianca automaticamente con `.is-galleria-pair`).

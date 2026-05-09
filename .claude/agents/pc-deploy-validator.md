@@ -39,8 +39,16 @@ Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni
 11. **Date format**: `date: AAAA-MM-GG` se 1 articolo nel giorno, `AAAA-MM-GGTHH:MM:SS+02:00` se 2+. Mai `Z` (UTC). Vedi `feedback_date_format`.
 12. **Badge ammesso** (1 dei 13 in regola `02-content-design-pa.md` § "Frontmatter obbligatorio").
 13. **`description` ≤160 char** per SEO.
-14. **`image:`** valorizzata (cover tipografica generata) OPPURE `image: ""` su articolo calendarizzato a data futura (cover sarà generata al run successivo da `auto-cover-mancanti.py`). MAI marker `# TODO-foto-*` (vedi check #9).
+14. **`image:`** valorizzata (cover tipografica generata) OPPURE `image: ""` su articolo calendarizzato a data futura (cover sarà generata al run successivo da `auto-cover-mancanti.py`). MAI marker `# TODO-foto-*` (vedi check #9). **MAI** puntare a foto reale (utente, Wikimedia, NASA, USGS, NOAA, stock): solo cover tipografica con titolo. Vedi CLAUDE.md punto 9 § "ANTI-PATTERN".
 15. **`image_alt`** non vuoto se `image:` è valorizzata (WCAG 1.1.1).
+15bis. **🔴 BANNER TOCCATO DURANTE REVISIONE — BLOCKER**. Se nel diff ci sono modifiche a `image:` / `image_alt:` su articoli pre-esistenti, esegui:
+    ```bash
+    for f in $(git diff --name-only origin/main...HEAD -- 'content/comunicazioni/*.md'); do
+      changed=$(git diff origin/main...HEAD -- "$f" | grep -E '^[+-]image' | head -2)
+      [ -n "$changed" ] && echo "=== $f ===" && echo "$changed"
+    done
+    ```
+    Per ogni file con righe `+image:` / `-image:` non motivate da una richiesta esplicita dell'utente (revisione testuale AGID, riscrittura, refusi → NON dovrebbero toccare `image:`), il commit è un **BLOCKER**: chiedi all'utente se è voluto. Caso da non ripetere: incidente Giornata Europa del 9 maggio 2026 (ChatGPT-cloud durante revisione AGID ha sostituito `image: ""` con foto Wikimedia ERCC).
 
 ### D. Sicurezza & privacy — BLOCCANTI
 
