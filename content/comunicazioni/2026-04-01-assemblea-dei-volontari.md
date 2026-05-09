@@ -21,7 +21,10 @@ La partecipazione è aperta a tutti i volontari iscritti.
 
 ## Per approfondire
 
-- Articolo: [Attivazione squadre primavera: calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/)
-- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
-- Articolo: [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
-- Pagina: [Diventa volontario](/diventa-volontario/)
+Sul nostro sito:
+
+- [Attivazione squadre primavera: calendario operativo](/comunicazioni/2026-04-10-attivazione-squadre-primavera-calendario-operativo/).
+- [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
+- [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/).
+- [Diventa volontario](/diventa-volontario/).
+- [Chi siamo](/chi-siamo/).

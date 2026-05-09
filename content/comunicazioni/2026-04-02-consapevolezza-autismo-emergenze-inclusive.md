@@ -48,7 +48,7 @@ Questo vale per adulti e, in modo amplificato, per **bambini autistici**.
 
 - **Preparare una scheda identificativa** con informazioni chiave: nome, contatti, specificità sensoriali, modalità di calma, parole o gesti che tranquillizzano, farmaci.
 - **Familiarizzare** con i suoni e i luoghi dell'emergenza: visite alle caserme, incontri educativi con volontari e vigili.
-- **Spiegare in anticipo** cosa può succedere: video, immagini, racconti personalizzati ("Se suona un allarme, andiamo qui è facciamo questo").
+- **Spiegare in anticipo** cosa può succedere: video, immagini, racconti personalizzati ("Se suona un allarme, andiamo qui e facciamo questo").
 - **Preparare un kit sensoriale** con cuffie antirumore, giocattoli di riferimento, coperta pesante, snack abituali.
 - **Coinvolgere la scuola** nella preparazione: le esercitazioni scolastiche possono essere adattate.
 
@@ -122,10 +122,19 @@ Un sistema che **funziona per chi è più fragile**, funziona meglio per tutti.
 
 ## Per approfondire
 
-- [ANGSA — Associazione Nazionale Genitori Soggetti Autistici](https://www.angsa.it/)
-- [Autismo Italia](https://www.autismoitalia.org/)
-- [ONU — Giornata dell'autismo](https://www.un.org/en/observances/autism-day)
-- Articolo: [Persone fragili: come aiutare](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
-- Sezione: [Abili a proteggere](/abili-a-proteggere/)
+Sul nostro sito:
+
+- [Persone fragili: come aiutare i vicini in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Abili a proteggere](/abili-a-proteggere/).
+- [ISO 22395 — Persone vulnerabili](/comunicazioni/2026-05-29-iso-22395-persone-vulnerabili/).
+- [Kit Calamità — Disabilità adulti](/formazione/kit-calamita-disabilita-adulti/).
+- [Facile da leggere](/facile-da-leggere/).
+
+Fonti istituzionali:
+
+- [ANGSA — Associazione Nazionale Genitori Soggetti Autistici](https://www.angsa.it/).
+- [Autismo Italia](https://www.autismoitalia.org/).
+- [ONU — Giornata dell'autismo](https://www.un.org/en/observances/autism-day).
+- [WHO — Autism spectrum disorders](https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders).
 
 Una Protezione Civile che accoglie la neurodiversità è una Protezione Civile più umana.

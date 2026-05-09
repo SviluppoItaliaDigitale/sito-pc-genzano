@@ -2,7 +2,6 @@
 title: "Che cos'è la protezione civile in Italia: da Irpinia e Vermicino al Servizio Nazionale"
 date: 2026-04-08
 description: "Come è nato il sistema nazionale di protezione civile italiano, quali enti ne fanno parte, cosa prevede l'articolo 39 del Codice per il volontario."
-
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -150,9 +149,19 @@ Nessuna di queste leggi sarebbe esistita senza l'Irpinia e Vermicino. E nessuna 
 
 ## Per approfondire
 
-- [Diventa Volontario](/diventa-volontario/) — come entrare nel Gruppo Comunale di Genzano
-- [Rischi e prevenzione](/rischi-prevenzione/) — i rischi del territorio comunale
-- [Formazione e scuole](/formazione/) — corsi, kit didattici e attività nelle scuole
-- [Il Codice della Protezione Civile in 10 punti](/comunicazioni/?tag=testo-unico) — la serie di articoli di divulgazione sul D.Lgs. 1/2018
+Sul nostro sito:
+
+- [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo Comunale di Genzano.
+- [Rischi e prevenzione](/rischi-prevenzione/) — i rischi del territorio comunale.
+- [Formazione e scuole](/formazione/) — corsi, kit didattici e attività nelle scuole.
+- [Friuli 1976, cinquant'anni dopo](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
+- [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/).
+- [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
+
+Fonti istituzionali:
+
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Legge 225/1992 — Servizio Nazionale](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-24;225).
 
 *Fonti: Dipartimento della Protezione Civile (protezionecivile.gov.it), D.Lgs. 2 gennaio 2018 n. 1, Legge 24 febbraio 1992 n. 225, archivi RAI e testimonianze dirette del volontariato italiano.*

@@ -52,7 +52,16 @@ Le modalità di contatto e di intervento del Gruppo Comunale restano invariate. 
 
 ## Per approfondire
 
-- Articolo: [Giornata Nazionale della Protezione Civile](/comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/)
-- Articolo: [Donne nella Protezione Civile di Genzano](/comunicazioni/2026-03-08-donne-protezione-civile-genzano/)
-- Articolo: [Nuovo gestionale del Gruppo](/comunicazioni/2026-04-04-nuovo-gestionale/)
-- Pagina: [Chi siamo](/chi-siamo/)
+Sul nostro sito:
+
+- [Giornata Nazionale della Protezione Civile](/comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/).
+- [Donne nella Protezione Civile di Genzano](/comunicazioni/2026-03-08-donne-protezione-civile-genzano/).
+- [Nuovo gestionale del Gruppo](/comunicazioni/2026-04-04-nuovo-gestionale/).
+- [Chi siamo](/chi-siamo/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
+- [Servizio Nazionale della Protezione Civile](https://www.protezionecivile.gov.it/it/sistema-nazionale).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).

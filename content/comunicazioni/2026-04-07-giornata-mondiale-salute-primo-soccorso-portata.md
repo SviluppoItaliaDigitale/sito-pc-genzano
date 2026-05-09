@@ -70,7 +70,7 @@ La sequenza base (per adulti):
 2. Se **non respira**: inizia RCP con **30 compressioni toraciche** al centro del torace, profondità 5-6 cm, frequenza 100-120/minuto.
 3. Se sai fare **respirazione bocca a bocca**: 2 respirazioni ogni 30 compressioni.
 4. Se **non sei formato**: solo compressioni, senza interruzioni.
-5. **Continua fino all'arrivo del 118** o fino alla disponibilità di un **defibrillatore (DAE)**.
+5. **Continua fino all'arrivo dei soccorsi** o fino alla disponibilità di un **defibrillatore (DAE)**.
 
 La **rianimazione "solo con le mani"** (*hands-only CPR*) è oggi raccomandata per chi non è formato: meglio fare qualcosa che niente.
 
@@ -137,11 +137,19 @@ La Protezione Civile è una parte di questa rete: interviene quando tutto il res
 
 ## Per approfondire
 
-- [Organizzazione Mondiale della Sanità](https://www.who.int/)
-- [Croce Rossa Italiana — Corsi](https://www.cri.it/)
-- [Salvamento Academy — Manovre pediatriche](https://www.salvamentoacademy.it/)
-- Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
-- Articolo: [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/)
-- Articolo: [Defibrillatori nella Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/)
+Sul nostro sito:
+
+- [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/).
+- [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/).
+- [Defibrillatori nella Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/).
+- [Malori estivi: colpo di calore, ictus, infarto](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/).
+
+Fonti istituzionali:
+
+- [Organizzazione Mondiale della Sanità (WHO)](https://www.who.int/).
+- [Croce Rossa Italiana — Corsi](https://www.cri.it/).
+- [Italian Resuscitation Council (IRC)](https://www.ircouncil.it/) — Linee guida BLS-D.
+- [Salvamento Academy — Manovre pediatriche](https://www.salvamentoacademy.it/).
+- [Legge 116/2021 — uso DAE da parte di tutti](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2021-08-04;116).
 
 Saper aiutare è un regalo per gli altri. È anche un regalo per se stessi: la sicurezza di poter fare qualcosa, quando serve.

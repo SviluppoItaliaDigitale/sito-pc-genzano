@@ -2,7 +2,6 @@
 title: "Allagamenti, alluvioni e alberi pericolanti: gli interventi tecnici del Gruppo Comunale"
 date: 2026-04-09
 description: "Come si gestiscono caditoie tappate, garage allagati, strade invase dal fango e alberi caduti: attrezzature, procedure e sicurezza degli operatori."
-
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -178,9 +177,20 @@ Il volontario di protezione civile non è un improvvisato. **Ogni attrezzo che u
 
 ## Per approfondire
 
-- [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/)
-- [Rischio idrogeologico](/rischi-prevenzione/) — caratteristiche del territorio comunale
-- [Manuale da Campo](/formazione/manuale-campo/) — guida operativa per il volontario
-- [Diventa Volontario](/diventa-volontario/) — come entrare nel Gruppo
+Sul nostro sito:
+
+- [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/).
+- [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — caratteristiche del territorio comunale.
+- [Manuale da Campo](/formazione/manuale-campo/) — guida operativa per il volontario.
+- [Allagamenti urbani: cosa fare se l'acqua entra in casa](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/).
+- [Albero pericolante: rimozione volontari](/comunicazioni/2026-05-02-albero-pericolante-rimozione-volontari-genzano/).
+- [Vento forte: cosa fare](/rischi-prevenzione/vento-forte/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [D.Lgs. 81/2008 — Testo Unico Sicurezza sul Lavoro](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81).
+- [Accordo Stato-Regioni 22 febbraio 2012](https://www.normattiva.it/) — patentini PLE.
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
 
 *Fonti: procedure operative interne del Gruppo Comunale, D.Lgs. 81/2008 (sicurezza sul lavoro), Accordo Stato-Regioni 22 febbraio 2012 (patentini PLE), esperienze dirette sulle alluvioni 2023 di Emilia-Romagna e Toscana.*

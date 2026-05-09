@@ -2,7 +2,6 @@
 title: "Quarant'anni di volontariato: la storia del Gruppo Comunale di Genzano di Roma, dalle radio CB al Terzo Settore"
 date: 2026-04-05
 description: "Dagli anni '80 come gruppo CB, all'istituzione nel 1993, alla flotta moderna: la storia del Gruppo Comunale di Genzano."
-
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -173,9 +172,19 @@ Quarant'anni, sei Sindaci, due generazioni di volontari. Chi è passato per la s
 
 ## Per approfondire
 
-- [Chi siamo](/chi-siamo/) — l'organizzazione attuale del Gruppo
-- [Diventa Volontario](/diventa-volontario/) — come entrare nel Gruppo Comunale
-- [Rischi del territorio](/rischi-prevenzione/) — le emergenze tipiche su cui il Gruppo opera
-- [Archivio comunicazioni](/comunicazioni/) — filtro per tag "Attività" e "Aggiornamento" per seguire l'attività recente
+Sul nostro sito:
+
+- [Chi siamo](/chi-siamo/) — l'organizzazione attuale del Gruppo.
+- [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo Comunale.
+- [Rischi del territorio](/rischi-prevenzione/) — le emergenze tipiche su cui il Gruppo opera.
+- [Archivio comunicazioni](/comunicazioni/).
+- [Cos'è la protezione civile in Italia: dall'Irpinia a Vermicino](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/).
+- [Friuli 1976, cinquant'anni dopo](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
+
+Fonti istituzionali:
+
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Codice del Terzo Settore — D.Lgs. 117/2017](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2017-07-03;117).
+- [Legge 225/1992 — istituzione Servizio Nazionale PC](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-24;225).
 
 *Fonte: ricostruzione storica a cura del Direttivo del Gruppo, con il contributo dei volontari che hanno attraversato le diverse fasi di vita dell'associazione.*
