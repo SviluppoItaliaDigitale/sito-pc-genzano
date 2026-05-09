@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Alle **16:48 del 18 gennaio 2017** una valanga di neve, fango e detriti scese dal versante del **Monte Siella**, sul Gran Sasso, e investì l'**Hotel Rigopiano** nel comune di Farindola. **29 morti**, 11 superstiti tirati fuori dalle macerie nei giorni successivi. È stato il più grave evento valanghivo italiano degli ultimi cinquant'anni.## Il contesto: una giornata già difficile
+Alle **16:48 del 18 gennaio 2017** una valanga di neve, fango e detriti scese dal versante del **Monte Siella**, sul Gran Sasso, e investì l'**Hotel Rigopiano** nel comune di Farindola. **29 morti**, 11 superstiti tirati fuori dalle macerie nei giorni successivi. È il più grave evento valanghivo italiano degli ultimi cinquant'anni (fonte: Dipartimento della Protezione Civile).
+
+## Il contesto: una giornata già difficile
 
 Quella mattina sull'Italia centrale erano in corso più emergenze contemporaneamente:
 
@@ -28,7 +30,7 @@ L'hotel ospitava in quel momento clienti che, dopo le scosse del mattino, **stav
 I soccorsi furono complicatissimi: la struttura era a 1.200 metri di quota, su un fianco di montagna, con la strada bloccata. Vigili del Fuoco, Corpo Nazionale Soccorso Alpino e Speleologico, Carabinieri Forestali, **volontari di Protezione Civile** e mezzi della Guardia di Finanza lavorarono per oltre **100 ore consecutive** per estrarre i superstiti dal cono di valanga, sotto neve continua e nuove scosse.
 
 {{< foto src="/images/2027-01-18-rigopiano-2017-allerta-neve-valanga-fonte-wikipedia.webp"
-         alt="Foto storica: Rigopiano, 18 gennaio 2017: la valanga sull'hotel e il limite dell'allerta meteo"
+         alt="Operazioni di soccorso nelle macerie dell'Hotel Rigopiano dopo la valanga del 18 gennaio 2017"
          caption="Foto: ignoto — Public domain — via Wikimedia Commons. [Fonte originale](https://it.wikipedia.org/wiki/File:Rigo6005_MGZOOM.jpg)." >}}
 
 
@@ -49,7 +51,7 @@ Tre lezioni per la Protezione Civile contemporanea:
 
 2. **L'isolamento è un rischio in sé.** Strutture ricettive in posizione isolata, in territorio montano, devono pianificare scenari di **autosufficienza temporanea** in caso di interruzione viaria. Oggi le linee guida regionali per l'esercizio di queste strutture prevedono piani di emergenza specifici.
 
-3. **L'allerta deve diventare azione, non solo comunicazione.** Sapere che c'è un'allerta arancione non basta: bisogna sapere **cosa fare** in caso di allerta. Per questo il sito riporta sempre, accanto allo stato di allerta, le indicazioni operative per il cittadino (vedi [Allerte Meteo](/allerte-meteo/)).
+3. **L'allerta deve diventare azione, non solo comunicazione.** Sapere che c'è un'allerta arancione non basta: bisogna sapere **cosa fare** in caso di allerta. Per questo il sito riporta sempre, accanto allo stato di allerta, le indicazioni operative per il cittadino: consulta la pagina [Allerte Meteo](/allerte-meteo/).
 
 ## A Genzano
 

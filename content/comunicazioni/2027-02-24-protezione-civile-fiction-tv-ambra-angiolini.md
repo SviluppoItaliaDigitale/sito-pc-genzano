@@ -17,13 +17,13 @@ draft: false
 # titolo non viene precisato; aggiornare quando confermato.
 ---
 
-Una fiction Rai con **Ambra Angiolini** come protagonista ha portato in prima serata il mondo della **Protezione Civile italiana**: i volontari, i Centri Operativi, le emergenze sul campo, le notti in colonna mobile. È un'occasione di visibilità che la **Protezione Civile** raramente ha avuto fuori dai notiziari, e per noi del Gruppo è giusto parlarne — con qualche distinzione.
+Una fiction Rai con **Ambra Angiolini** come protagonista ha portato in prima serata il mondo della **Protezione Civile italiana**: i volontari, i Centri Operativi, le emergenze sul campo, le notti in colonna mobile. La PC raramente esce dai notiziari per arrivare alla narrazione di intrattenimento. Per il Gruppo è giusto parlarne — con qualche distinzione.
 
 ## Perché ci interessa
 
-La rappresentazione televisiva conta. Il pubblico italiano si è formato un'idea della **medicina** dai medical drama, del **diritto** dai legal drama, della **polizia** dalle serie poliziesche. La **Protezione Civile**, invece, era quasi assente dalla narrazione di intrattenimento. Per la prima volta una **fiction in prima serata** mette al centro le persone che fanno il nostro lavoro. Chi parte di notte con la chiamata di attivazione. Chi monta il campo. Chi tira su una tenda alle tre di mattina sotto la pioggia. C'è anche chi ascolta uno sfollato che non sa più dove andrà a dormire.
+La rappresentazione televisiva conta. Il pubblico italiano si è formato un'idea della **medicina** dai medical drama, del **diritto** dai legal drama, della **polizia** dalle serie poliziesche. La **Protezione Civile**, invece, era quasi assente dalla narrazione di intrattenimento. Per la prima volta una **fiction in prima serata** mette al centro le persone che fanno il nostro lavoro. Chi parte di notte con la chiamata di attivazione. Chi monta il campo. Chi tira su una tenda alle tre di mattina sotto la pioggia. Chi ascolta uno sfollato che non sa dove dormirà.
 
-Per chi fa volontariato significa una cosa concreta: **i giovani vedono che esiste**. È così che molti di noi, anche nei numerosi gruppi italiani, sono entrati: prima da spettatori, poi da curiosi, poi da volontari.
+Per chi fa volontariato significa una cosa concreta: **i giovani vedono che la Protezione Civile esiste**. Molti di noi sono entrati così, in tanti gruppi italiani: prima da spettatori, poi da curiosi, poi da volontari.
 
 ## Cosa ci convince della fiction
 
@@ -39,7 +39,7 @@ Una fiction è una fiction: deve raccontare, deve emozionare, deve far funzionar
 - **La catena di comando è più lunga e più formale** di quella mostrata in TV. Un volontario non decide una evacuazione: la propone al **Capo Gruppo**, che la valuta, che la passa al **Sindaco** (autorità di PC sul territorio), che la dispone. È una catena, non un eroe singolo.
 - **I tempi sono diversi**: una serie TV comprime in 50 minuti scenari che nella realtà durano giorni. La nostra giornata media non è azione continua: è **attesa attiva**, **briefing**, **logistica**, **manutenzione mezzi**, **formazione**, **esercitazioni**.
 - **Le emergenze "spettacolari"** (frane, valanghe, alluvioni) sono **una piccola parte** del nostro lavoro. La maggior parte del tempo la passiamo in **prevenzione**: scuola, segnaletica, esercitazioni, manutenzione, presenza in piazza, supporto a sagre e grandi eventi.
-- **Niente "lupi solitari"**: nella PC italiana <strong>non esiste il volontario eroe</strong> che salva la situazione da solo. Esiste la **squadra**, esiste il **sistema**. È quasi sempre meno cinematografico, quasi sempre più efficace.
+- **Niente "lupi solitari"**: nella PC italiana **non esiste il volontario eroe** che salva la situazione da solo. Esiste la **squadra**, esiste il **sistema**. È quasi sempre meno cinematografico, quasi sempre più efficace.
 - **Il rapporto con il 112**: nessun volontario può essere attivato direttamente dalla cittadinanza. La chiamata al 112 mette in moto la **Centrale Unica Regionale**, che valuta e coinvolge il **Sindaco** e quindi il **Gruppo Comunale**. Il volontario non si auto-attiva.
 
 ## Cosa la fiction non racconta (perché non vende)
@@ -48,7 +48,7 @@ C'è una parte del nostro lavoro che non si presta facilmente al racconto televi
 
 - **Ore di formazione**: corsi base, aggiornamenti, esercitazioni nazionali. Niente azione, molta pazienza.
 - **Burocrazia operativa**: schede di attivazione, verbali, registri di stazione radio. Sembra noioso, è la spina dorsale di tutto.
-- **Cura dei mezzi**: una pompa idrovora che non è stata controllata per sei mesi può fare la differenza fra un cantina svuotata e una persona che dorme in piedi sopra le valigie.
+- **Cura dei mezzi**: una pompa idrovora trascurata per sei mesi può fare la differenza fra una cantina svuotata e una persona che dorme in piedi sopra le valigie.
 - **Educazione nelle scuole**: ore e ore con i bambini, le maestre, i docenti. È prevenzione vera, ma in TV non si vede.
 
 ## A cosa serve guardarla con i nostri occhi

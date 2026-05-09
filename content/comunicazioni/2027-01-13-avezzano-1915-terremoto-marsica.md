@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Alle **7:53 del 13 gennaio 1915** una scossa sismica di **magnitudo 7.0** colpì la conca del Fucino, in Abruzzo. **Avezzano** e altri 15 comuni della Marsica furono **rasi al suolo**. Bilancio: **oltre 30.000 morti** (su una popolazione locale di circa 35.000), migliaia di feriti, centri storici cancellati per sempre.È la **seconda catastrofe sismica più grave** della storia italiana documentata, dopo Messina 1908. Eppure è meno conosciuta nella memoria collettiva.
+Alle **7:53 del 13 gennaio 1915** una scossa sismica di **magnitudo 7.0** colpì la conca del Fucino, in Abruzzo. **Avezzano** e altri 15 comuni della Marsica furono **rasi al suolo**. Bilancio: **oltre 30.000 morti** (su una popolazione locale di circa 35.000), migliaia di feriti, centri storici cancellati per sempre.
+
+È la **seconda catastrofe sismica più grave** della storia italiana documentata, dopo Messina 1908. Eppure è meno conosciuta nella memoria collettiva.
 
 ## Il contesto storico
 
@@ -30,7 +32,7 @@ Per le popolazioni della Marsica iniziò un periodo di **decenni di precarietà*
 
 Dal terremoto della Marsica emerse anche la prima generazione di **sismologi italiani professionisti**. Il **Padre Alfani** dell'Osservatorio Ximeniano di Firenze e i ricercatori dell'Istituto Geofisico di Pavia studiarono in modo sistematico la sequenza sismica. I dati raccolti sono ancora alla base della **conoscenza della pericolosità sismica del Centro Italia**.
 
-Il **Catalogo Parametrico dei Terremoti Italiani (CPTI15)** dell'INGV include il terremoto del 1915 fra gli eventi di riferimento per la stima della pericolosità sismica della zona Marsica-Fucino-Aterno.
+Il **Catalogo Parametrico dei Terremoti Italiani (CPTI15)** dell'**INGV** (Istituto Nazionale di Geofisica e Vulcanologia) include il terremoto del 1915 fra gli eventi di riferimento per la stima della pericolosità sismica della zona Marsica-Fucino-Aterno.
 
 ## Cosa ci insegna oggi
 
