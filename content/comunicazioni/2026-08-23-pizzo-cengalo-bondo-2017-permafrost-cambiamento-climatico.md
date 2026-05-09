@@ -23,7 +23,7 @@ Sono passati **nove anni** da quel 23 agosto 2017. Alle prime luci del mattino, 
 
 Il bilancio fu di **otto vittime**: escursionisti che stavano risalendo i sentieri della Val Bondasca verso le capanne alpine. Il villaggio di Bondo, sebbene parzialmente protetto da un'opera di contenimento costruita anni prima (un **bacino di laminazione**), fu raggiunto dal fango e dai detriti: distrutti **14 edifici** in Val Bondasca, danneggiati **quattro edifici** a Bondo, sommerso il **ponte cantonale**. I danni furono stimati **oltre 50 milioni di franchi**.
 
-La frana del Pizzo Cengalo non è "italiana" in senso stretto — è in territorio svizzero — ma la lezione che porta riguarda direttamente anche la **protezione civile italiana** dell'arco alpino: il **cambiamento climatico** sta scongelando il **permafrost** di alta quota, e questo sta innescando una nuova generazione di **frane catastrofiche** in zone storicamente considerate stabili.
+La frana del Pizzo Cengalo non è "italiana" in senso stretto — è in territorio svizzero. Ma la lezione che porta riguarda direttamente anche la **protezione civile italiana** dell'arco alpino. Il **cambiamento climatico** sta scongelando il **permafrost** di alta quota. Questo sta innescando una nuova generazione di **frane catastrofiche** in zone storicamente considerate stabili.
 
 {{< foto src="/images/2026-08-23-pizzo-cengalo-bondo-colata-fango.webp"
          alt="Foto a colori del 2017: vista di un ponte stradale a Bondo, in Val Bregaglia (Svizzera), parzialmente sommerso da una grigia colata di fango e detriti che ha invaso la valle. Sullo sfondo le case del villaggio, intatte ma a pochi metri dal limite del fango. Ai lati, il bosco alpino e i versanti rocciosi della valle."

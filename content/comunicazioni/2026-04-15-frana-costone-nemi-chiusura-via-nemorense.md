@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nella giornata di **mercoledì 15 aprile 2026** la **Polizia Locale di Genzano di Roma** ha richiesto il supporto del **Gruppo Comunale Volontari di Protezione Civile** per la **chiusura di via Nemorense**, strada che da Genzano porta a Nemi, a seguito del **cedimento di un costone** avvenuto in territorio del Comune di Nemi.
+Nella giornata di **mercoledì 15 aprile 2026** la **Polizia Locale di Genzano di Roma** ha richiesto il supporto del **Gruppo Comunale Volontari di Protezione Civile**. Motivo: la **chiusura di via Nemorense**, strada che da Genzano porta a Nemi. Causa: il **cedimento di un costone** avvenuto in territorio del Comune di Nemi.
 
 ## L'intervento
 

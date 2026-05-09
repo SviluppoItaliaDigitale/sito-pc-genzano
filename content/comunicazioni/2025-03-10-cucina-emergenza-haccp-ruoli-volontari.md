@@ -42,7 +42,14 @@ Per gestire in sicurezza una cucina da campo servono almeno sei figure, anche se
 
 ## I rischi del lavoro in cucina
 
-Il manuale elenca con precisione le situazioni di pericolo tipiche: cadute di materiale dall'alto, urti e schiacciamenti, **ferite e tagli** durante lo scarico e la lavorazione, **scivolamenti** su pavimenti bagnati, **elettrocuzione**, **movimentazione manuale dei carichi**, **inalazione di gas e vapori**, **ustioni**, rischio di incendio ed esplosione vicino a bombole e fuochi liberi.
+Il manuale elenca con precisione le situazioni di pericolo tipiche:
+
+- cadute di materiale dall'alto, urti e schiacciamenti
+- **ferite e tagli** durante lo scarico e la lavorazione
+- **scivolamenti** su pavimenti bagnati
+- **elettrocuzione** e **movimentazione manuale dei carichi**
+- **inalazione di gas e vapori**, **ustioni**
+- rischio di incendio ed esplosione vicino a bombole e fuochi liberi.
 
 Per ogni compito è prevista una specifica analisi dei rischi: la cottura porta con sé soprattutto ustioni e contatto con vapori; il taglio delle carni e dei salumi richiede attenzione alle cadute di coltelli; la movimentazione dei contenitori caldi unisce rischio di ustioni e scivolamenti.
 

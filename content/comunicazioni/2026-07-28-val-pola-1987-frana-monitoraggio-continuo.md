@@ -15,7 +15,7 @@ allegati: []
 draft: false
 ---
 
-Sono passati **trentanove anni**. Alle **7:23 del mattino del 28 luglio 1987**, dopo settimane di piogge eccezionali sulla **Valtellina**, dal **Monte Zandila** in **Val Pola** si staccò una frana di dimensioni straordinarie: **40 milioni di metri cubi** di roccia, terra, vegetazione precipitarono in valle a velocità altissima, cancellando in pochi secondi gli abitati di **Sant'Antonio Morignone** e **Aquilone**, frazioni del Comune di **Valdisotto** (provincia di Sondrio).
+Sono passati **trentanove anni**. Alle **7:23 del mattino del 28 luglio 1987**, dopo settimane di piogge eccezionali sulla **Valtellina**, dal **Monte Zandila** in **Val Pola** si staccò una frana di dimensioni straordinarie. **40 milioni di metri cubi** di roccia, terra e vegetazione precipitarono in valle a velocità altissima. In pochi secondi furono cancellati gli abitati di **Sant'Antonio Morignone** e **Aquilone**, frazioni del Comune di **Valdisotto** (provincia di Sondrio).
 
 {{< foto src="/images/2026-evento-val-pola-1987-monte-zandila.webp"
          alt="Il Monte Zandila prima della grande frana della Val Pola del 28 luglio 1987"
@@ -60,7 +60,7 @@ Per il **rischio frana** in Italia oggi esistono:
 - I sistemi di **monitoraggio in tempo reale** dei versanti critici, con dati pubblici accessibili dalle autorità locali.
 - I **piani di emergenza comunali** che integrano le aree IFFI nel layout di evacuazione e gestione emergenze.
 
-L'**evacuazione preventiva** è oggi una pratica consolidata: in tutto il Paese, ogni anno, **piccoli abitati** vengono evacuati per giorni o settimane su decisione del Sindaco e in coordinamento con il Centro Funzionale Regionale, in attesa che il versante torni stabile o che si concludano i lavori di messa in sicurezza.
+L'**evacuazione preventiva** è oggi una pratica consolidata. In tutto il Paese, ogni anno, **piccoli abitati** vengono evacuati per giorni o settimane su decisione del Sindaco e in coordinamento con il Centro Funzionale Regionale. L'attesa dura fino al ritorno della stabilità del versante o alla conclusione dei lavori di messa in sicurezza.
 
 ## Cosa deve sapere il cittadino oggi
 

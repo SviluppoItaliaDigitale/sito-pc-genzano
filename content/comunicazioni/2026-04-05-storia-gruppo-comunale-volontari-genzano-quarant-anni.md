@@ -14,7 +14,7 @@ allegati: []
 draft: false
 ---
 
-**Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma non è nato in un ufficio.** È nato in cucina, tra un caffè e una mappa sul tavolo, quando un gruppo di appassionati di radio CB ha deciso che una ricetrasmittente poteva servire a qualcosa di più che parlare di antenne. Era la prima metà degli anni Ottanta, in Italia la legge quadro sulla protezione civile non esisteva ancora, e chi voleva rendersi utile durante un'emergenza si organizzava come poteva. Quarant'anni dopo, quella piccola associazione di radioamatori è diventata uno dei gruppi comunali più strutturati dei Castelli Romani. Questa è la sua storia.
+**Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma non è nato in un ufficio.** È nato in cucina, tra un caffè e una mappa sul tavolo. Un gruppo di appassionati di radio CB aveva deciso che una ricetrasmittente poteva servire a qualcosa di più che parlare di antenne. Era la prima metà degli anni Ottanta. La legge quadro sulla protezione civile non esisteva ancora e chi voleva rendersi utile in emergenza si organizzava come poteva. Quarant'anni dopo, quella piccola associazione di radioamatori è diventata uno dei gruppi comunali più strutturati dei Castelli Romani. Questa è la sua storia.
 
 ---
 

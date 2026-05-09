@@ -14,7 +14,7 @@ allegati: []
 draft: false
 ---
 
-**La protezione civile italiana non è una sigla né un'uniforme: è un sistema.** Un sistema che lega insieme ministeri, forze armate, volontari, associazioni e cittadini, e che ha un compito preciso scritto nel primo articolo del suo Codice: **tutelare la vita, l'integrità fisica, i beni, gli insediamenti, gli animali e l'ambiente** dai rischi naturali e antropici. Per capire come funziona oggi bisogna tornare a due eventi del passato recente che hanno cambiato il Paese: il terremoto dell'Irpinia del 1980 e l'incidente di Vermicino del 1981.
+**La protezione civile italiana non è una sigla né un'uniforme: è un sistema.** Un sistema che lega insieme ministeri, forze armate, volontari, associazioni e cittadini. Il suo compito è scritto nel primo articolo del Codice: **tutelare la vita, l'integrità fisica, i beni, gli insediamenti, gli animali e l'ambiente** dai rischi naturali e antropici. Per capire come funziona oggi bisogna tornare a due eventi del passato recente: il terremoto dell'Irpinia del 1980 e l'incidente di Vermicino del 1981.
 
 ---
 

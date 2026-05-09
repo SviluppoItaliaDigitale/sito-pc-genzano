@@ -14,7 +14,7 @@ allegati: []
 draft: false
 ---
 
-**L'incendio boschivo non è un evento casuale: è un fenomeno chimico governato da regole precise.** Capire il triangolo del fuoco, riconoscere i tipi di incendio, scegliere la tecnica di attacco giusta e usare l'attrezzo corretto sono competenze che ogni volontario di protezione civile impegnato nell'AIB deve possedere prima di salire sul pickup. Questa guida riassume le basi operative utilizzate nei corsi di formazione antincendio del Gruppo Comunale.
+**L'incendio boschivo non è un evento casuale: è un fenomeno chimico governato da regole precise.** Capire il triangolo del fuoco, riconoscere i tipi di incendio, scegliere la tecnica di attacco e usare l'attrezzo corretto sono competenze necessarie. Ogni volontario AIB deve possederle prima di salire sul pickup. Questa guida riassume le basi operative dei corsi di formazione antincendio del Gruppo Comunale.
 
 ---
 

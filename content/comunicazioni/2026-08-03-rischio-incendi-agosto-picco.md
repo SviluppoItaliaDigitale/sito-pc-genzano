@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-La campagna regionale **Anti Incendi Boschivi (AIB)** del Lazio prevede il periodo di **massima pericolosità dal 15 giugno al 30 settembre**, ma il picco statistico cade in agosto: temperature alte, vegetazione secca, venti occidentali e presenza turistica elevata si combinano in una miscela di fattori che richiede attenzione da parte di tutti.
+La campagna regionale **Anti Incendi Boschivi (AIB)** del Lazio prevede il periodo di **massima pericolosità dal 15 giugno al 30 settembre**. Il picco statistico cade in agosto: temperature alte, vegetazione secca, venti occidentali e presenza turistica elevata. Una combinazione di fattori che richiede attenzione da parte di tutti.
 
 ## Le cause più frequenti
 

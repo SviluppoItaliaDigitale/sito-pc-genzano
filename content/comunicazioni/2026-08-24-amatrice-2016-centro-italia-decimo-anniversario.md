@@ -15,7 +15,9 @@ aliases:
 draft: false
 ---
 
-Alle **3:36 del 24 agosto 2016** una scossa di **magnitudo 6.0** colpì l'Appennino centrale, al confine tra Lazio, Umbria, Marche e Abruzzo. L'epicentro tra Accumoli e Amatrice. **299 morti**. Tre paesi cancellati: **Amatrice**, **Accumoli**, **Arquata del Tronto**.Era l'inizio della **sequenza sismica del Centro Italia**, la più lunga registrata in Italia in tempi recenti: oltre 70.000 scosse strumentali nei 12 mesi successivi, due eventi successivi di magnitudo superiore a 5.5 (26 ottobre e 30 ottobre, [Norcia](#)), 41.000 sfollati, danni stimati in oltre 23 miliardi di euro.
+Alle **3:36 del 24 agosto 2016** una scossa di **magnitudo 6.0** colpì l'Appennino centrale, al confine tra Lazio, Umbria, Marche e Abruzzo. L'epicentro tra Accumoli e Amatrice. **299 morti**. Tre paesi cancellati: **Amatrice**, **Accumoli**, **Arquata del Tronto**.
+
+Era l'inizio della **sequenza sismica del Centro Italia**, la più lunga registrata in Italia in tempi recenti. Oltre 70.000 scosse strumentali nei 12 mesi successivi. Due eventi successivi di magnitudo superiore a 5.5 (26 ottobre e 30 ottobre, [Norcia](#)). 41.000 sfollati, danni stimati in oltre 23 miliardi di euro.
 
 ## La cronologia di quella notte
 
