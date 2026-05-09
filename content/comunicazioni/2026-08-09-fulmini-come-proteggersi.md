@@ -50,7 +50,7 @@ Se sei sorpreso in aperta campagna senza possibilità di raggiungere un edificio
 
 L'automobile è un **buon riparo** dai fulmini grazie all'effetto gabbia di Faraday. Attenzione però a:
 
-- non toccare parti metalliche interne (volante escluso, che è obbligatorio);
+- non toccare parti metalliche interne (salvo il volante, indispensabile per la guida);
 - non parcheggiare sotto alberi che possono cadere;
 - non sostare in sottopassi allagabili.
 

@@ -75,7 +75,7 @@ Chi fa attività fisica o lavora all'aperto in agosto deve pianificare:
 - integrazione di acqua e sali minerali;
 - abbigliamento chiaro, leggero, traspirante.
 
-I datori di lavoro hanno obblighi precisi in materia, previsti dal D.Lgs. 81/2008.
+I datori di lavoro devono rispettare il **D.Lgs. 81/2008** (Testo Unico sulla sicurezza sul lavoro), che prevede obblighi precisi in caso di lavoro al caldo.
 
 ## Per approfondire
 

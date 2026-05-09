@@ -17,7 +17,7 @@ Nei paesi dei Castelli Romani agosto coincide con il **calendario delle sagre e 
 
 ## La normativa di riferimento
 
-Gli eventi pubblici con pubblico concentrato in spazi aperti o chiusi sono regolati da:
+Gli eventi con pubblico concentrato in spazi aperti o chiusi sono regolati da:
 
 - **Circolare Gabrielli** (7 giugno 2017) del Ministero dell'Interno, che fissa i criteri di gestione della sicurezza in eventi con pubblico.
 - **Direttiva Morcone** (28 luglio 2017), che approfondisce il tema della *public safety* (sicurezza) e *public security* (ordine pubblico).

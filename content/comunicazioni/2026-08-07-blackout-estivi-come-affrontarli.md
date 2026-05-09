@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nei mesi estivi, soprattutto nelle ore pomeridiane, può accadere che la rete elettrica locale ceda. Si tratta di **blackout** che in genere durano pochi minuti, ma che in casi gravi possono protrarsi per ore. I Castelli Romani, per densità di popolazione e picchi di consumo dovuti al turismo, sono zona sensibile.
+Nei mesi estivi, soprattutto nelle ore pomeridiane, la rete elettrica locale può cedere. I **blackout** in genere durano pochi minuti, ma nei casi gravi possono prolungarsi per ore. I Castelli Romani, per densità di popolazione e picchi di consumo dovuti al turismo, sono zona sensibile.
 
 ## Perché accadono d'estate
 
@@ -33,7 +33,7 @@ Nei mesi estivi, soprattutto nelle ore pomeridiane, può accadere che la rete el
 
 ## Chi chiamare
 
-Per segnalare un guasto elettrico si chiama il numero del **distributore locale** (in genere e-distribuzione in gran parte del Lazio), reperibile sulla bolletta. Il numero gratuito per guasti e-distribuzione è **803 500**.
+Per segnalare un guasto elettrico si chiama il **distributore locale** (per gran parte del Lazio è e-distribuzione): il numero è stampato sulla bolletta. Il numero gratuito per guasti e-distribuzione è **803 500**.
 
 **Non** chiamare il **112** per un blackout ordinario: il 112 è per emergenze a persone o cose. Va chiamato **solo** se il blackout causa:
 

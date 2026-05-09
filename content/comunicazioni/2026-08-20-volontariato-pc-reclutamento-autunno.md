@@ -22,7 +22,7 @@ Per iscriversi al corso base occorre:
 - aver compiuto **18 anni**;
 - essere in condizioni di **idoneità psicofisica** da verificare con visita medica;
 - avere **disponibilità** di tempo coerente con i turni del Gruppo;
-- essere **residenti** o avere un legame stabile con il territorio di Genzano (non vincolante in assoluto, ma preferenziale);
+- essere **residenti** o avere un legame stabile con il territorio di Genzano (preferenziale ma non obbligatorio);
 - accettare la **Carta dei Valori del Volontariato di Protezione Civile**.
 
 Non occorrono titoli specifici né esperienze pregresse: tutte le competenze si acquisiscono durante il percorso formativo.

@@ -25,7 +25,7 @@ In questa giornata, mentre molti riposano, un sistema invisibile continua a funz
 
 - i **Vigili del Fuoco** restano di turno sull'intero territorio nazionale;
 - le **forze di polizia** presidiano eventi ed emergenze;
-- il **118 e l'emergenza sanitaria** sono operativi h24;
+- il **servizio di emergenza sanitaria (ARES 118)** è operativo h24;
 - il **Centro Funzionale** della Regione Lazio monitora le condizioni meteo;
 - i **volontari di Protezione Civile** coprono turni di avvistamento antincendio;
 - il **personale sanitario** continua a curare in ospedale;

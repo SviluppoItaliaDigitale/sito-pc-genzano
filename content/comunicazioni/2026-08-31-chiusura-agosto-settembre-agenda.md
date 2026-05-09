@@ -43,7 +43,7 @@ Settembre è un mese di transizione: il Gruppo rivede il Piano di Emergenza loca
 ### 6. Appuntamenti pubblici
 Vengono definite le date di:
 
-- **Giornata Europea del 112** (11 febbraio, in riferimento al 2027, ma la programmazione parte da settembre);
+- **Giornata Europea del 112** (11 febbraio 2027): la programmazione parte già da settembre;
 - **Giornata Internazionale per la Riduzione dei Disastri** (13 ottobre);
 - **campagna nazionale "Io Non Rischio"** (edizione autunno);
 - **giornate aperte** con la cittadinanza.
