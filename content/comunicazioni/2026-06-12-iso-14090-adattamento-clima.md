@@ -82,7 +82,7 @@ Le misure di adattamento si dividono in:
 - **Misure verdi** (basate sulla natura): rimboschimenti, parchi urbani che riducono l'effetto isola di calore, gestione sostenibile del bosco.
 - **Misure soft** (educazione, normazione, governance): piani di emergenza aggiornati, formazione dei cittadini, regolamenti edilizi più stringenti, monitoraggio.
 
-Le misure più efficaci spesso combinano grigio + verde + soft: per esempio una città con più alberi nei parchi (verde), edifici più isolati termicamente (grigio) e cittadini formati a riconoscere i sintomi del colpo di calore (soft).
+Le misure più efficaci spesso combinano grigio + verde + soft. Per esempio una città con più alberi nei parchi (verde), edifici più isolati termicamente (grigio) e cittadini formati a riconoscere i sintomi del colpo di calore (soft).
 
 ### 5. Monitoraggio e revisione
 

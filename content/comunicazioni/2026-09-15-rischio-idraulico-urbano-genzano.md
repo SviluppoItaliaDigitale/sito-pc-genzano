@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Quando si parla di **rischio idraulico** si pensa soprattutto ai grandi fiumi in piena. In realtà, nei centri dei Castelli Romani — compresa Genzano — il rischio idraulico più concreto per i cittadini è quello **urbano**: strade che si trasformano in torrenti, sottopassi che si allagano, scantinati invasi, tombini che saltano. Conoscere i punti critici aiuta tutti — residenti, pendolari, operatori di PC.
+Quando si parla di **rischio idraulico** si pensa soprattutto ai grandi fiumi in piena. In realtà, nei centri dei Castelli Romani — compresa Genzano — il rischio idraulico più concreto per i cittadini è quello **urbano**. Strade che si trasformano in torrenti, sottopassi che si allagano, scantinati invasi, tombini che saltano. Conoscere i punti critici aiuta tutti — residenti, pendolari, operatori di PC.
 
 ## Cosa si intende per rischio idraulico urbano
 

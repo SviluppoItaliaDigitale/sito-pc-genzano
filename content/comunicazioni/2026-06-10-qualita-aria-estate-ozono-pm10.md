@@ -25,7 +25,7 @@ La Protezione Civile non è l'ente che gestisce l'aria: sono **ARPA Lazio**, il 
 
 ## L'ozono troposferico: cos'è
 
-L'**ozono** (O3) a livello del suolo non è emesso direttamente: si forma per **reazione fotochimica** tra ossidi di azoto (dai motori) e composti organici volatili (da solventi, evaporazione carburanti), **sotto l'azione del sole**.
+L'**ozono** (O3) a livello del suolo non è emesso direttamente. Si forma per **reazione fotochimica** tra ossidi di azoto (dai motori) e composti organici volatili (da solventi, evaporazione carburanti), **sotto l'azione del sole**.
 
 Caratteristiche:
 - Più **caldo fa e più sole c'è**, più ozono si forma.

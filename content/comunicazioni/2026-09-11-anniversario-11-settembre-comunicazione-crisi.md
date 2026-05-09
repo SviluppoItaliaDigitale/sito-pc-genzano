@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-L'**11 settembre 2001** è una data che ha ridisegnato il concetto di **emergenza complessa** nel mondo. Dal punto di vista della Protezione Civile, nei venticinque anni successivi, sono cambiate molte cose nella **gestione della comunicazione** nelle grandi crisi: il ruolo dei media, l'uso dei social, la coordinazione interistituzionale, il linguaggio verso la popolazione. Una data di memoria anche per chi si occupa di rischio e sicurezza pubblica.
+L'**11 settembre 2001** è una data che ha ridisegnato il concetto di **emergenza complessa** nel mondo. Dal punto di vista della Protezione Civile, nei venticinque anni successivi, sono cambiate molte cose nella **gestione della comunicazione** nelle grandi crisi. Il ruolo dei media, l'uso dei social, la coordinazione interistituzionale, il linguaggio verso la popolazione. Una data di memoria anche per chi si occupa di rischio e sicurezza pubblica.
 
 ## Le lezioni che hanno cambiato la PC nel mondo
 

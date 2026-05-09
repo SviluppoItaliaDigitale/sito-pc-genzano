@@ -85,7 +85,7 @@ A maggio 2026 il Gruppo Comunale ha realizzato dodici **Kit Calamità per catego
 11. Animali da compagnia
 12. Volontari di Protezione Civile
 
-Ogni kit cita standard internazionali di settore (NCTSN PFA, IFRC, WHO, Sphere 2018, FEANTSA, UNHCR CwC, IOM CCCM, IFE Core Group, IAWG MISP, WSAVA, HelpAge, Eurocarers) **oltre a ISO 22395**, e si raccorda con la normativa italiana (D.Lgs. 1/2018, L. 18/2009, L. 205/2017, L. 281/1991, ARERA, ecc.).
+Ogni kit cita standard internazionali di settore (NCTSN PFA, IFRC, WHO, Sphere 2018, FEANTSA, UNHCR CwC, IOM CCCM, IFE Core Group, IAWG MISP, WSAVA, HelpAge, Eurocarers) **oltre a ISO 22395**. Si raccorda inoltre con la normativa italiana (D.Lgs. 1/2018, L. 18/2009, L. 205/2017, L. 281/1991, ARERA, ecc.).
 
 I kit sono **rilasciati con licenza libera** (CC BY-NC-SA 4.0 dove ci sono pittogrammi ARASAAC, altrimenti uso libero) e sono **riutilizzabili** da altri Comuni e Gruppi PC. La citazione del Gruppo è gradita ma non obbligatoria.
 

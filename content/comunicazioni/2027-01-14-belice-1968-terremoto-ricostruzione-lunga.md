@@ -52,7 +52,7 @@ Il Belice è memoria scomoda ma essenziale:
 
 ## A Genzano
 
-Il nostro Gruppo Comunale è nato come risposta civica a quella che era stata, fino agli anni Settanta, una **debolezza strutturale del nostro Paese**: la mancanza di un sistema diffuso di volontariato di Protezione Civile. Oggi siamo una piccola tessera di una rete nazionale di **migliaia di gruppi e associazioni** che il Codice della Protezione Civile riconosce come componente strategica.
+Il nostro Gruppo Comunale è nato come risposta civica a una **debolezza strutturale del nostro Paese** fino agli anni Settanta: la mancanza di un sistema diffuso di volontariato di Protezione Civile. Oggi siamo una piccola tessera di una rete nazionale di **migliaia di gruppi e associazioni** che il Codice della Protezione Civile riconosce come componente strategica.
 
 Per [diventare volontario](/diventa-volontario/), è il momento giusto per dare anche tu un contributo a questa rete.
 

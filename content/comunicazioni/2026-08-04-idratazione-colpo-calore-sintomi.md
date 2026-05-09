@@ -17,7 +17,7 @@ In estate l'organismo perde acqua attraverso sudorazione, respirazione e urine. 
 
 ## Quanto bere
 
-Le indicazioni dell'**Istituto Superiore di Sanità** per un adulto sono di circa **2 litri al giorno** in condizioni normali, che salgono a **2,5-3 litri** nei giorni di caldo intenso o in caso di attività fisica. Per gli **anziani**, che spesso non avvertono la sete, il bere va distribuito lungo la giornata **anche senza stimolo**. Per i **bambini**, il riferimento è il pediatra.
+Le indicazioni dell'**Istituto Superiore di Sanità** per un adulto sono di circa **2 litri al giorno** in condizioni normali. Salgono a **2,5-3 litri** nei giorni di caldo intenso o in caso di attività fisica. Per gli **anziani**, che spesso non avvertono la sete, il bere va distribuito lungo la giornata **anche senza stimolo**. Per i **bambini**, il riferimento è il pediatra.
 
 ## Cosa bere
 

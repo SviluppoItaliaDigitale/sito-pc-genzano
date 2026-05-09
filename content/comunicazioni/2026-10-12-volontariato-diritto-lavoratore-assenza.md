@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Quando un volontario di Protezione Civile viene **attivato** per un'emergenza o un'esercitazione ufficiale, la legge italiana gli riconosce **precisi diritti** nei confronti del datore di lavoro: assenza giustificata, mantenimento della retribuzione, copertura assicurativa. Conoscerli è importante sia per i volontari sia per i datori di lavoro.
+Quando un volontario di Protezione Civile viene **attivato** per un'emergenza o un'esercitazione ufficiale, la legge italiana gli riconosce **precisi diritti** nei confronti del datore di lavoro. Assenza giustificata, mantenimento della retribuzione, copertura assicurativa. Conoscerli è importante sia per i volontari sia per i datori di lavoro.
 
 ## Il quadro normativo
 

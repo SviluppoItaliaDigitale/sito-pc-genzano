@@ -17,7 +17,7 @@ draft: false
 
 ## Come funziona
 
-IT-Alert utilizza la tecnologia **cell broadcast**: un messaggio viene inviato a **tutti i telefoni cellulari agganciati alle celle di una specifica area**, senza bisogno di iscrizioni, contatti salvati o app da scaricare. Il sistema è:
+IT-Alert utilizza la tecnologia **cell broadcast**. Un messaggio viene inviato a **tutti i telefoni cellulari agganciati alle celle di una specifica area**, senza bisogno di iscrizioni, contatti salvati o app da scaricare. Il sistema è:
 
 - **anonimo**: non raccoglie dati personali né numeri di telefono;
 - **indipendente** dalla connessione Internet;

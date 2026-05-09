@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Con l'avvicinarsi dell'inverno e l'accensione degli impianti termici, ricordiamo che la **manutenzione** della **caldaia** e del **circuito di riscaldamento** non è una scelta: è un **obbligo normativo** e, soprattutto, una questione di **sicurezza**.
+Con l'avvicinarsi dell'inverno e l'accensione degli impianti termici, ricordiamo che la **manutenzione** della **caldaia** e del **circuito di riscaldamento** non è una scelta. È un **obbligo normativo** e, soprattutto, una questione di **sicurezza**.
 
 ## La normativa
 
