@@ -14,7 +14,7 @@ allegati: []
 draft: false
 ---
 
-**La radio è uno strumento semplice, ma usarla male può costare minuti preziosi in emergenza.** Quando i ripetitori cellulari saturano, le linee telefoniche cadono o un'area resta isolata, la rete VHF/UHF diventa l'unico canale di coordinamento tra il Centro Operativo Comunale e le squadre sul territorio. Per questo il volontario di protezione civile non si limita ad accendere l'apparato: padroneggia le **regole di esercizio** che rendono il messaggio comprensibile a chi ascolta.
+**La radio è uno strumento semplice, ma usarla male può costare minuti preziosi in emergenza.** Quando i ripetitori cellulari saturano, le linee telefoniche cadono o un'area resta isolata, la rete VHF/UHF diventa l'unico canale di coordinamento tra il Centro Operativo Comunale e le squadre sul territorio. Per questo il volontario di protezione civile non si limita ad accendere l'apparato. Padroneggia le **regole di esercizio** che rendono il messaggio comprensibile a chi ascolta.
 
 In questo articolo riassumiamo dieci errori frequenti e le regole d'oro corrispondenti, coerenti con la **Guida IARU alle Telecomunicazioni di Emergenza** (ed. 2016), documento internazionale di riferimento adottato e adattato dal Gruppo nella nostra area formativa [Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/).
 

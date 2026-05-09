@@ -27,7 +27,11 @@ Il **23 aprile** è la festa di **San Giorgio**, patrono dello scoutismo. Robert
 
 ## Estote Parati: una pedagogia del "essere pronti"
 
-Il motto degli scout — *"Estote parati"*, "Siate pronti" — non è uno slogan. Baden-Powell lo definiva una **triplice preparazione**: di mente, perché il volontario sappia **decidere bene** in pochi secondi; di corpo, perché abbia la **resistenza fisica** di reggere giorni di servizio; e morale, perché sia **disposto** a fare la cosa giusta nel momento giusto, anche quando costa.
+Il motto degli scout — *"Estote parati"*, "Siate pronti" — non è uno slogan. Baden-Powell lo definiva una **triplice preparazione**:
+
+- di **mente**, perché il volontario sappia **decidere bene** in pochi secondi
+- di **corpo**, perché abbia la **resistenza fisica** di reggere giorni di servizio
+- **morale**, perché sia **disposto** a fare la cosa giusta nel momento giusto, anche quando costa.
 
 È esattamente il profilo che la Protezione Civile chiede a ogni volontario. Non a caso il Sistema Nazionale, ai sensi del **D.Lgs. 1/2018** (Codice della Protezione Civile), riconosce le associazioni scout fra i propri **organismi di volontariato organizzato**.
 

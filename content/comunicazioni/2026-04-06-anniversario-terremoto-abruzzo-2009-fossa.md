@@ -64,7 +64,7 @@ I volontari di Genzano lo fecero. Giorno dopo giorno, turno dopo turno, con pazi
 
 ## Il ritorno alla normalità
 
-Grazie all'intervento coordinato di centinaia di volontari provenienti da tutta Italia — tra cui il gruppo genzanese — la popolazione di Fossa riuscì in tempi relativamente brevi a recuperare una **condizione di normalità**: pasti garantiti, riparo sicuro, servizi essenziali ripristinati, una presenza umana costante che combatteva il senso di abbandono.
+Grazie all'intervento coordinato di centinaia di volontari provenienti da tutta Italia — tra cui il gruppo genzanese — la popolazione di Fossa riuscì in tempi relativamente brevi a recuperare una **condizione di normalità**. Pasti garantiti, riparo sicuro, servizi essenziali ripristinati. Una presenza umana costante combatteva il senso di abbandono.
 
 Non è poco. Nell'emergenza, la normalità è tutto.
 

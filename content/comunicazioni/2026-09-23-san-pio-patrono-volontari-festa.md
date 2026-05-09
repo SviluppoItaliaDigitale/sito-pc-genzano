@@ -23,7 +23,7 @@ Il **23 settembre** è la **memoria liturgica** di San Pio da Pietrelcina nella 
 
 San Pio è patrono dei Volontari di Protezione Civile dal **21 febbraio 2004**, data del decreto della **Congregazione per il Culto Divino e la Disciplina dei Sacramenti**.
 
-La proclamazione non è stata una decisione dall'alto: la richiesta era stata presentata alla **Conferenza Episcopale Italiana** nel settembre 2002 dal Capo del Dipartimento della Protezione Civile, sulla base di una **petizione firmata da circa 160 associazioni di volontariato** che rappresentavano oltre **novemila volontarie e volontari**.
+La proclamazione non è stata una decisione dall'alto. La richiesta era stata presentata alla **Conferenza Episcopale Italiana** nel settembre 2002 dal Capo del Dipartimento della Protezione Civile. Si basava su una **petizione firmata da circa 160 associazioni di volontariato** che rappresentavano oltre **novemila volontarie e volontari**.
 
 ## Perché proprio lui
 

@@ -25,7 +25,7 @@ ISO 22322 divide il processo in tre fasi.
 
 **2. Decisione di allertare.** Una **persona autorizzata** decide se emettere l'allerta, in base a soglie predefinite ma anche al contesto (orario, stagione, vulnerabilità della popolazione). La decisione è tracciata e auditabile.
 
-**3. Diffusione del messaggio.** Il messaggio raggiunge la popolazione. Qui entrano in gioco i canali (sirene, SMS, app, cell broadcast, radio, TV, megafoni della Polizia Locale), le **lingue** (italiano sempre, eventualmente lingue straniere parlate nel territorio), l'**accessibilità per persone con disabilità sensoriali** (sottotitoli, segnali visivi per non udenti, voce sintetica per non vedenti).
+**3. Diffusione del messaggio.** Il messaggio raggiunge la popolazione. Qui entrano in gioco diversi elementi: i **canali** (sirene, SMS, app, cell broadcast, radio, TV, megafoni della Polizia Locale), le **lingue** (italiano sempre, eventualmente lingue straniere parlate nel territorio), l'**accessibilità per persone con disabilità sensoriali** (sottotitoli, segnali visivi per non udenti, voce sintetica per non vedenti).
 
 ## Cosa caratterizza un buon messaggio di allerta
 

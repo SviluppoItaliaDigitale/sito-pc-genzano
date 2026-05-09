@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-In una scuola, in un ospedale, in un aeroporto, in un cinema o in qualsiasi luogo pubblico, vediamo gli stessi segnali: l'**uomo che corre verso una porta verde** indica la via di fuga; il **cerchio rosso barrato** vieta qualcosa; il **triangolo giallo** avvisa di un pericolo. Non è un caso che siano uguali in tutto il mondo: c'è uno standard internazionale che li ha codificati, **ISO 7010**.
+In una scuola, in un ospedale, in un aeroporto, in un cinema o in qualsiasi luogo pubblico, vediamo gli stessi segnali. L'**uomo che corre verso una porta verde** indica la via di fuga. Il **cerchio rosso barrato** vieta qualcosa. Il **triangolo giallo** avvisa di un pericolo. Non è un caso che siano uguali in tutto il mondo: c'è uno standard internazionale che li ha codificati, **ISO 7010**.
 
 Saperli leggere bene è un piccolo atto di **prevenzione personale**.
 

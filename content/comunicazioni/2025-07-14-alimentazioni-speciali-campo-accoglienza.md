@@ -16,7 +16,7 @@ allegati:
 draft: false
 ---
 
-In un campo di accoglienza convivono persone con esigenze alimentari molto diverse: chi ha una **allergia grave**, chi è **celiaco**, chi segue una dieta **vegetariana o vegana** per scelta, chi non può mangiare carne di maiale o manzo per motivi **religiosi**. Il Manuale di Cucina in Emergenza del DSEFIC-FIC dedica un intero capitolo a questo tema, perché — come scrive la curatrice Rossanina Del Santo — "chi sta in cucina non deve solo nutrire, ma far sentire amato chi sta vivendo un momento di grande criticità".
+In un campo di accoglienza convivono persone con esigenze alimentari molto diverse: chi ha una **allergia grave**, chi è **celiaco**, chi segue una dieta **vegetariana o vegana** per scelta, chi non può mangiare carne di maiale o manzo per motivi **religiosi**. Il Manuale di Cucina in Emergenza del DSEFIC-FIC dedica un intero capitolo a questo tema. Come scrive la curatrice Rossanina Del Santo: *"chi sta in cucina non deve solo nutrire, ma far sentire amato chi sta vivendo un momento di grande criticità"*.
 
 Abbiamo allegato il manuale completo a questo articolo e alla pagina [Area Download](/area-download/). Qui riassumiamo le regole operative principali.
 
