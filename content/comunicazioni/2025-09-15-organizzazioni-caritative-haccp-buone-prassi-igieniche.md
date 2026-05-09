@@ -22,7 +22,7 @@ Proseguiamo l'approfondimento sul [manuale Caritas-Banco Alimentare](/comunicazi
 
 Chi recupera e distribuisce cibo a fini di solidarietà **è a tutti gli effetti un operatore del settore alimentare**. Anche se non vende nulla, anche se non trasforma gli alimenti, ha **la responsabilità della sicurezza** degli alimenti che gestisce sotto il proprio controllo — Reg. (CE) 178/2002 art. 17.
 
-La **Legge del Buon Samaritano (L. 155/2003)** equipara le ONLUS donatrici al consumatore finale, nei limiti del servizio prestato. Non è un "liberatutti": significa che chi dona in buona fede, rispettando le regole di conservazione e trasporto, è tutelato — ma le regole vanno rispettate.
+La **Legge del Buon Samaritano (L. 155/2003)** equipara le ONLUS (Organizzazioni Non Lucrative di Utilità Sociale) donatrici al consumatore finale, nei limiti del servizio prestato. Non è un "liberatutti": significa che chi dona in buona fede, rispettando le regole di conservazione e trasporto, è tutelato — ma le regole vanno rispettate.
 
 ## I pericoli da conoscere
 
@@ -58,7 +58,7 @@ Il capitolo 7 sintetizza le **Buone Pratiche Igieniche** (dal Codex Alimentarius
 - **Catena del caldo**: pasti caldi da distribuire devono restare **≥ +60 °C**.
 - **Trasporto**: contenitori isotermici adatti, tempi ridotti al minimo, registrazione delle temperature per spostamenti di media-lunga durata.
 
-### Congelamento da parte della OC
+### Congelamento da parte della OC (Organizzazione Caritatevole)
 
 Il manuale è chiaro su **cosa si può congelare**:
 
@@ -70,7 +70,7 @@ Non si possono quindi congelare alimenti già cotti ricevuti a temperatura ambie
 
 ## Il sistema HACCP semplificato
 
-Il capitolo 8 affronta l'**HACCP** (Hazard Analysis and Critical Control Point) adattato alle OC. Il manuale sceglie un **approccio schematico**, basato sulle fasi del processo, alternativo all'albero delle decisioni tipico delle aziende più strutturate.
+Il capitolo 8 affronta l'**HACCP** — Hazard Analysis and Critical Control Points, il sistema di analisi e controllo dei punti critici — adattato alle OC. Il manuale sceglie un **approccio schematico**, basato sulle fasi del processo, alternativo all'albero delle decisioni tipico delle aziende più strutturate.
 
 Le fasi del flusso sono:
 

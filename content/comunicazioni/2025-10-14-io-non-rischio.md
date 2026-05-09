@@ -13,11 +13,11 @@ allegati: []
 draft: false
 ---
 
-Sabato 14 e domenica 15 ottobre 2025 il nostro Gruppo partecipa alle giornate nazionali della campagna **"Io non rischio — Buone pratiche di protezione civile"**.
+Sabato 14 e domenica 15 ottobre 2025 il nostro Gruppo partecipa alle giornate nazionali della campagna **"Io non rischio — Buone pratiche di protezione civile"**, promossa ogni anno dal Dipartimento Nazionale della Protezione Civile per informare i cittadini sui rischi del proprio territorio.
 
 I nostri volontari sono in **Piazza Tommaso Frasconi — Genzano di Roma**.
 
-Vieni a scoprire come ognuno di noi può contribuire a ridurre i rischi sul territorio!
+Passa a trovarci: parleremo di rischi, di cosa fare in caso di emergenza e di come partecipare come volontario.
 
 ## Per approfondire
 

@@ -54,7 +54,7 @@ La seconda categoria riguarda pasta secca, riso, legumi in scatola, biscotti, ca
 
 Il manuale consiglia di applicare a casa la stessa **regola FIFO** (First In First Out) che si usa nelle cucine professionali: i prodotti con scadenza più vicina si mettono davanti e si usano per primi. Una piccola etichetta con la data sui cibi congelati aiuta a non perdere traccia.
 
-Prima di fare la spesa, controllare sempre cosa c'è già in casa — anche in fondo agli scaffali della dispensa o in fondo al frigorifero. Evita di comprare doppio.
+Prima di fare la spesa, controlla sempre cosa c'è già in casa — anche in fondo agli scaffali della dispensa o in fondo al frigorifero. Evita di comprare doppio.
 
 ## I contenitori giusti
 
