@@ -44,9 +44,7 @@ I bollettini di pericolosità AIB della Regione Lazio continuano a essere emessi
 
 ## Il bilancio della stagione
 
-Un bilancio completo della stagione AIB 2026 sarà pubblicato a ottobre. I dati operativi vengono raccolti e consolidati dalla Regione Lazio, dai Comuni, dalle strutture del sistema nazionale.
-
-*(Già oggi si può dire che l'estate 2026 si è confermata stagionalmente critica, con condizioni meteo favorevoli alla propagazione del fuoco in più giornate.)*
+Un bilancio completo della stagione AIB 2026 sarà pubblicato a ottobre, dopo il consolidamento dei dati operativi da parte della Regione Lazio, dei Comuni e delle strutture del sistema nazionale.
 
 ## Il lavoro nei boschi
 
