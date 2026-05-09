@@ -3,34 +3,32 @@ title: "Standard ISO per la Protezione Civile"
 description: "Repertorio degli standard internazionali ISO rilevanti per la Protezione Civile italiana: emergency management, gestione del rischio, comunicazione di crisi, segnaletica, adattamento climatico, resilienza."
 layout: "single"
 toc: true
+dataUltimaRevisione: "2026-05-09"
 ---
 
-Questa sezione raccoglie gli **standard ISO** (International Organization for Standardization) più rilevanti per la **Protezione Civile** in Italia, organizzati per famiglia tematica. Ogni scheda spiega in poche righe **cos'è la norma**, **a chi serve** e **come si collega alla prassi italiana** (D.Lgs. 1/2018, direttive DPC, codici colore del Centro Funzionale Regionale, Codice del Terzo Settore).
+Questa sezione raccoglie gli **standard ISO** (International Organization for Standardization) più rilevanti per la **Protezione Civile** in Italia, organizzati per famiglia tematica. Ogni scheda spiega in poche righe **cos'è la norma**, **a chi serve** e **come può collegarsi alla prassi italiana**.
 
-> **Nota**: gli standard ISO sono **norme tecniche a pagamento**. In questa sezione si riportano **solo titolo, ambito e contestualizzazione**. Le definizioni e il testo completo si acquistano su [iso.org](https://www.iso.org/) o, in versione tradotta, su [uni.com](https://store.uni.com/).
+> **Nota**: gli standard ISO sono norme tecniche normalmente a pagamento. In questa sezione si riportano solo titolo, ambito e contestualizzazione divulgativa. Il testo completo va consultato sui canali ufficiali [iso.org](https://www.iso.org/) o, quando disponibile in versione italiana, [uni.com](https://store.uni.com/).
 
 ## ISO e UNI: chi è chi
 
-**UNI — Ente Nazionale Italiano di Unificazione** è il **membro nazionale italiano dell'ISO** (ogni Paese ha un solo membro: DIN per la Germania, BSI per il Regno Unito, AFNOR per la Francia, UNI per l'Italia). UNI traduce e recepisce in Italia le norme ISO con questi prefissi:
+**UNI — Ente Nazionale Italiano di Unificazione** è il membro nazionale italiano dell'ISO. UNI recepisce in Italia molte norme ISO con questi prefissi:
 
-- **UNI ISO XXXX** — recepimento diretto di una norma ISO senza modifiche.
-- **UNI EN ISO XXXX** — norma adottata sia a livello europeo (CEN) sia internazionale (ISO), recepita in Italia.
-- **UNI EN XXXX** — norma europea (CEN) recepita, senza corrispondente ISO.
-- **UNI XXXX** — norma puramente italiana prodotta dalla Commissione Tecnica UNI.
+- **UNI ISO XXXX** — recepimento nazionale di una norma ISO.
+- **UNI EN ISO XXXX** — norma adottata a livello europeo (CEN) e internazionale (ISO), recepita in Italia.
+- **UNI EN XXXX** — norma europea recepita in Italia, senza corrispondente ISO.
+- **UNI XXXX** — norma nazionale italiana prodotta in ambito UNI.
 
-Per gli standard **elettrotecnici** l'analogo italiano è il **CEI — Comitato Elettrotecnico Italiano**, membro italiano dell'**IEC** (International Electrotechnical Commission).
+Per gli standard **elettrotecnici** l'analogo italiano è il **CEI — Comitato Elettrotecnico Italiano**, membro italiano dell'**IEC**.
 
-Anche le norme UNI, come quelle ISO, sono **a pagamento**. Sono però **gratuite**:
+Anche le norme UNI, come quelle ISO, sono normalmente a pagamento. Sono invece consultabili liberamente alcune risorse come:
 
-- le **[UNI/PdR — Prassi di Riferimento](/standard-iso/uni-pdr/)**: documenti pre-normativi (cornici, linee guida, framework) liberamente scaricabili dal sito UNI — vedi scheda dedicata;
-- alcune **anteprime e abstract** consultabili gratuitamente prima dell'acquisto;
-- specifici **estratti** previsti per esigenze di sicurezza pubblica.
+- le **[UNI/PdR — Prassi di Riferimento](/standard-iso/uni-pdr/)**: documenti pre-normativi liberamente scaricabili dal sito UNI;
+- eventuali abstract, anteprime o materiali resi disponibili gratuitamente dai titolari dei diritti.
 
 ## Famiglia ISO/TC 292 — Security and resilience
 
-Il **Comitato Tecnico 292** è il principale ente ISO che produce standard sulla **gestione delle emergenze**, la **continuità operativa**, la **resilienza** delle organizzazioni e la **gestione delle crisi**. È il riferimento naturale per ogni Sistema di Protezione Civile.
-
-### Emergency management — gestione delle emergenze
+Il Comitato Tecnico 292 produce standard sulla gestione delle emergenze, la continuità operativa, la resilienza delle organizzazioni e la gestione delle crisi. È uno dei riferimenti internazionali più pertinenti per chi studia sistemi di Protezione Civile.
 
 | Standard | Titolo | Scheda |
 |---|---|---|
@@ -53,7 +51,7 @@ Il **Comitato Tecnico 292** è il principale ente ISO che produce standard sulla
 
 ## Famiglia ISO 31000 — Gestione del rischio
 
-Cornice generale per la **valutazione e gestione di qualsiasi tipo di rischio** (naturale, tecnologico, organizzativo, sanitario), trasversale alle attività di Protezione Civile.
+Cornice generale per la valutazione e gestione dei rischi, utile anche come riferimento metodologico per attività di previsione, prevenzione e pianificazione.
 
 | Standard | Titolo | Scheda |
 |---|---|---|
@@ -61,9 +59,9 @@ Cornice generale per la **valutazione e gestione di qualsiasi tipo di rischio** 
 | **ISO 31010** | Risk assessment techniques | [Vai alla scheda](/standard-iso/iso-31010/) |
 | **ISO 31073** | Risk management — Vocabulary | [Vai alla scheda](/standard-iso/iso-31073/) |
 
-## Adattamento ai cambiamenti climatici (ISO/TC 207/SC 7)
+## Adattamento ai cambiamenti climatici
 
-Standard sempre più rilevanti per la Protezione Civile: **ondate di calore**, **siccità**, **eventi meteo estremi** e **rischi territoriali emergenti**.
+Standard utili per comprendere e organizzare l'adattamento a ondate di calore, siccità, eventi meteo intensi e rischi territoriali emergenti.
 
 | Standard | Titolo | Scheda |
 |---|---|---|
@@ -71,9 +69,9 @@ Standard sempre più rilevanti per la Protezione Civile: **ondate di calore**, *
 | **ISO 14091** | Climate adaptation — Vulnerability and risk assessment | [Vai alla scheda](/standard-iso/iso-14091/) |
 | **ISO 14092** | Climate adaptation — Local government planning | [Vai alla scheda](/standard-iso/iso-14092/) |
 
-## Segnaletica di sicurezza (ISO/TC 145)
+## Segnaletica di sicurezza
 
-I segnali che il cittadino vede ovunque (uscite di emergenza, divieti, obblighi, avvertimenti) seguono standard ISO. Il sito utilizza la libreria **ISO 7010** ufficiale.
+I segnali di sicurezza, come uscite di emergenza, divieti, obblighi e avvertimenti, sono descritti da standard tecnici internazionali. Il sito utilizza pittogrammi e icone coerenti con questi riferimenti, senza dichiarare certificazioni o approvazioni ufficiali.
 
 | Standard | Titolo | Scheda |
 |---|---|---|
@@ -91,20 +89,12 @@ I segnali che il cittadino vede ovunque (uscite di emergenza, divieti, obblighi,
 | **ISO 45001** | Occupational health and safety management | [Vai alla scheda](/standard-iso/iso-45001/) |
 | **ISO 19115** | Geographic information — Metadata | [Vai alla scheda](/standard-iso/iso-19115/) |
 
-## Gerarchia delle fonti — perché elenchiamo gli ISO
+## Gerarchia delle fonti
 
-Il Gruppo si attiene al quadro gerarchico definito nelle nostre regole interne (`.claude/rules/06-protezione-civile-scientifica.md`):
+Gli standard ISO non sostituiscono le fonti italiane vincolanti, come il D.Lgs. 1/2018, le direttive del Dipartimento della Protezione Civile, le indicazioni della Regione Lazio e la normativa di settore. Possono però essere utili come riferimento internazionale per comunicazione di crisi, esercitazioni, gestione del rischio, continuità operativa e inclusione delle persone fragili.
 
-1. **Italiano vincolante**: AGID + DPC (D.Lgs. 1/2018, Direttiva PCM 30 aprile 2021, linee guida DPC, "Io non rischio", codici colore CFR);
-2. **Scientifico italiano**: CNR (IRPI, INGV, IGAG), ISPRA;
-3. **Tecnico-operativo europeo**: EENA (NUE 112), CWA CEN/CENELEC;
-4. **Standard internazionali**: **ISO** (questo elenco) + WCAG 2.2 AA;
-5. **Normativa orizzontale**: GDPR, L. 4/2004 (Stanca), CAD, D.Lgs. 117/2017 Terzo Settore.
-
-Gli ISO **non sostituiscono** le fonti italiane vincolanti (DPC), ma **le integrano** quando serve un riferimento internazionale per accessibilità, comunicazione di crisi, esercitazioni, gestione del rischio. In caso di conflitto teorico, prevale il livello superiore (vedi [Social media policy](/social-media-policy/) § Gerarchia delle fonti).
+In caso di differenza tra una norma tecnica internazionale e una disposizione italiana applicabile, prevale la fonte italiana vincolante.
 
 ## Approfondimenti
-
-Per gli approfondimenti divulgativi sui singoli standard più rilevanti per il cittadino, vedi gli articoli pubblicati nella sezione [Comunicazioni](/comunicazioni/) — in particolare la serie sugli **standard ISO** che pubblicheremo da maggio a giugno 2026.
 
 Per la cornice italiana: [Normativa di Protezione Civile](/normativa/), [Glossario](/glossario/), [Social media policy](/social-media-policy/).
