@@ -1,7 +1,7 @@
 ---
 title: "Viaggi estivi: kit di emergenza in auto e sicurezza stradale"
 date: 2026-07-03
-description: "Luglio è il mese dei grandi esodi. Un kit di emergenza in auto, qualche controllo preventivo."
+description: "Luglio è il mese degli esodi estivi. Un kit di emergenza in auto e pochi controlli preventivi riducono i rischi del viaggio."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -21,7 +21,7 @@ Secondo **ACI-ISTAT**, in luglio e agosto:
 - **20% degli incidenti stradali** annuali.
 - **Picco** di incidenti tra venerdì sera e domenica sera.
 - **Cause prevalenti**: distrazione, eccesso di velocità, stanchezza, caldo.
-- **Intralci** con caldo estremo in auto (frequenti).
+- **Frequenti** disagi nei veicoli per caldo estremo (climatizzatori in tilt, malori a bordo).
 
 La **Polizia Stradale** e la **Protezione Civile** operano insieme nei grandi scenari di ingorgo.
 
@@ -44,11 +44,11 @@ La **Polizia Stradale** e la **Protezione Civile** operano insieme nei grandi sc
 - **Radiatore** privo di forature.
 
 ### Altri controlli
-- **Olio motore**.
-- **Batterie** (gli elettronici in lungo uso scaricano).
-- **Liquido lavavetri**.
-- **Luci** tutte funzionanti (anche retro).
-- **Climatizzatore** efficace.
+- **Olio motore** al livello giusto.
+- **Batteria** efficiente (l'elettronica di bordo la mette sotto sforzo).
+- **Liquido lavavetri** rabboccato.
+- **Luci** tutte funzionanti, anche quelle posteriori e di retromarcia.
+- **Climatizzatore** che raffredda davvero.
 
 Un **tagliando** prima delle vacanze è un investimento saggio.
 

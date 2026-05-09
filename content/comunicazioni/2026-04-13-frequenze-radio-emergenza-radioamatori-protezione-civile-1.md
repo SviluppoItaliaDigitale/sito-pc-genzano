@@ -2,7 +2,6 @@
 title: "Le frequenze radio della Rete Zamberletti: i radioamatori al servizio della Protezione Civile nelle prove di sintonia tra le Prefetture d'Italia"
 date: 2026-04-13T00:01:00+02:00
 description: "La Rete Zamberletti: frequenze HF e VHF dei radioamatori per le emergenze, le prove di sintonia mensili tra le Prefetture e il ruolo nella protezione civile."
-
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -103,8 +102,18 @@ Dietro questi numeri c'è un sistema che funziona da oltre quarant'anni, testato
 
 ## Per approfondire
 
-- Articolo: [Radiocomunicazioni in emergenza: il ruolo dei volontari](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/)
-- Articolo: [Giornata mondiale delle telecomunicazioni](/comunicazioni/2026-05-17-giornata-mondiale-telecomunicazioni/)
-- Articolo: [Sicurezza della rete e cybersecurity in emergenza](/comunicazioni/2026-02-07-sicurezza-rete-cybersecurity-emergenza/)
-- Articolo: [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
-- Pagina: [Diventa volontario](/diventa-volontario/)
+Sul nostro sito:
+
+- [Radiocomunicazioni in emergenza: il ruolo dei volontari](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
+- [Rete Zamberletti: 499ª esercitazione radio nazionale](/comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/).
+- [Rete di Emergenza Metropolitana di Roma](/comunicazioni/2026-05-02-rete-emergenza-metropolitana-roma-radioamatori/).
+- [Giornata mondiale delle telecomunicazioni](/comunicazioni/2026-05-17-giornata-mondiale-telecomunicazioni/).
+- [Sicurezza della rete e cybersecurity in emergenza](/comunicazioni/2026-02-07-sicurezza-rete-cybersecurity-emergenza/).
+- [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [ARI — Associazione Radioamatori Italiani](https://www.ari.it/).
+- [ARI-RE — Radiocomunicazioni Emergenza](https://www.arire.it/).
+- [Ministero delle Imprese e del Made in Italy — Spettro radio](https://www.mimit.gov.it/).

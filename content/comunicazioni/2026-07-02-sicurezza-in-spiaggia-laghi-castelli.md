@@ -44,11 +44,11 @@ I laghi di **Nemi** e **Albano** sono ambienti specifici:
 - **Entra** gradualmente per abituare il corpo al freddo.
 
 ### In acqua
-- **Resta** in zone sorvegliate (bagnini) quando possibile.
-- **Non** sovrastimare resistenza.
-- **Torna** prima di essere stanco.
-- **Non** nuotare in tempesta o temporale.
-- **Segnala** se hai un crampo o malore.
+- **Resta** in zone sorvegliate dai bagnini quando possibile.
+- **Non sovrastimare** la tua resistenza.
+- **Torna a riva** prima di sentirti stanco.
+- **Non nuotare** durante temporali o vento forte.
+- **Chiedi aiuto** subito se senti un crampo o un malore.
 
 ### Fuori dall'acqua
 - **Riposati** dopo ogni bagno.
@@ -72,15 +72,15 @@ Il 50% degli annegamenti infantili avviene **quando l'adulto pensa "l'ho visto u
 
 Nei laghi di Nemi e Albano è presente la **biscia dal collare** (*Natrix natrix*) e la **biscia tassellata** (*Natrix tessellata*): serpenti **non velenosi** ma che possono spaventare. Si mimetizzano tra piante acquatiche e si allontanano da soli al rumore.
 
-Non toccarli, non aggredirli. Se un morso avviene (improbabile): lava la ferita, consulta il medico se hai dubbi.
+Non toccarli, non aggredirli. Nel caso raro di un morso, lava bene la ferita con acqua e sapone e consulta un medico se hai dubbi.
 
 ## Crampi, ipotermia, malori
 
 ### Crampi
-- **Fermati** e stai in superficie.
-- **Gira** in dorso per galleggiare senza sforzo.
+- **Resta calmo** e mantieni la testa fuori dall'acqua.
+- **Mettiti in dorso** per galleggiare senza sforzo.
 - **Chiama** aiuto.
-- **Stira** il muscolo se possibile.
+- **Stira** il muscolo se ci riesci.
 
 ### Ipotermia
 Anche nei laghi estivi puoi avere ipotermia se resti troppo in acqua. Sintomi:
@@ -92,10 +92,10 @@ Esci dall'acqua, copriti, bevi bevande calde se cosciente.
 
 ### Malori in acqua
 Se una persona sviene o si sente male:
-- **Chiama il 112** (1530 per emergenze su laghi e mare).
-- **Lancia oggetti** galleggianti.
-- **Se sai nuotare** e formato: soccorso con precauzioni.
-- **Non** entrare se non addestrato (due vittime).
+- **Chiama subito il 112** (oppure il 1530 della Guardia Costiera per emergenze in acqua).
+- **Lancia** oggetti galleggianti (salvagenti, palloni, taniche vuote).
+- **Soccorri** in acqua solo se sei un nuotatore esperto e formato al soccorso.
+- **Non entrare** se non sei addestrato: due persone in difficoltà sono peggio di una.
 
 ## Tuffi e profondità
 

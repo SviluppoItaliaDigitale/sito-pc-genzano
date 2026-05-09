@@ -44,10 +44,18 @@ Un ringraziamento alla **Polizia Locale di Genzano di Roma** per il coordinament
 
 ## Per approfondire
 
-- Articolo: [Chi siamo](/chi-siamo/)
-- Articolo: [Diventa volontario](/diventa-volontario/)
-- Pagina: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
-- [Comune di Nemi](https://www.comune.nemi.rm.it/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+Sul nostro sito:
+
+- [Rischio idrogeologico — pagina operativa](/rischi-prevenzione/rischio-idrogeologico/).
+- [Frane e movimenti del terreno nei Castelli Romani](/comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani/).
+- [Albero pericolante: rimozione volontari](/comunicazioni/2026-05-02-albero-pericolante-rimozione-volontari-genzano/).
+- [Chi siamo](/chi-siamo/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Comune di Nemi](https://www.comune.nemi.rm.it/).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico).
 
 La collaborazione tra Polizia Locale e Gruppo di Protezione Civile è uno strumento ordinario del sistema comunale per gestire situazioni che richiedono risorse aggiuntive sul territorio.
