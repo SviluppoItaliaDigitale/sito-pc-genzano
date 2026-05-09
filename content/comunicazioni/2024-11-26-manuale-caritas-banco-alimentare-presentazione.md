@@ -46,7 +46,7 @@ A questi si aggiungono centinaia di altre associazioni di piccole e medie dimens
 Il recupero e la distribuzione di alimenti a fini di solidarietà rientra nel "commercio al dettaglio" ai sensi del **Regolamento (CE) 178/2002**. Le principali norme applicabili sono:
 
 - **Reg. (CE) 178/2002** — principi e requisiti generali della legislazione alimentare, definizioni di "pericolo", "rischio", "rintracciabilità".
-- **Reg. (CE) 852/2004** — igiene dei prodotti alimentari, su cui si basa il sistema HACCP (Hazard Analysis and Critical Control Points).
+- **Reg. (CE) 852/2004** — igiene dei prodotti alimentari, su cui si basa il sistema HACCP (Hazard Analysis and Critical Control Points — analisi dei rischi e punti critici di controllo).
 - **Reg. (UE) 1169/2011** — informazioni sugli alimenti ai consumatori (allergeni, date di scadenza, TMC).
 - **Legge 155/2003 "Legge del Buon Samaritano"** — equipara le ONLUS donatrici al consumatore finale, tutelando il donatore da azioni giudiziarie successive alla donazione.
 - **Legge 147/2013** (art. 1 commi 236-237) — riconosce il valore sociale delle ONLUS che distribuiscono alimenti e dà loro il diritto di elaborare un proprio Manuale di corrette prassi igieniche.
@@ -69,7 +69,7 @@ Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma collabora s
 - **sagre, feste e rinfresco volontari** — dove si applicano principi analoghi di gestione igienica degli alimenti;
 - **esercitazioni con ristorazione da campo** — in sinergia con il [Manuale di Cucina in Emergenza DSEFIC](/comunicazioni/2024-10-06-manuale-cucina-emergenza-fic-presentazione/) della Federazione Italiana Cuochi.
 
-Conoscere il manuale Caritas-Banco Alimentare è utile a ogni volontario che manipola alimenti destinati alla popolazione. La logica è la stessa del manuale FIC, i riferimenti normativi coincidono e le buone prassi sono complementari.
+Conoscere il manuale Caritas-Banco Alimentare è utile a ogni volontario che manipola alimenti destinati alla popolazione. La logica è la stessa del [Manuale FIC](/comunicazioni/2024-10-06-manuale-cucina-emergenza-fic-presentazione/): i riferimenti normativi coincidono e le buone prassi sono complementari.
 
 ## Nei prossimi articoli
 

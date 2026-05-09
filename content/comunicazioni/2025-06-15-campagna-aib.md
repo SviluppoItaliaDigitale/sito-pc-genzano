@@ -1,8 +1,8 @@
 ---
 title: "Avvio Campagna Antincendio Boschivo 2025"
 date: 2025-06-15
-description: "Dal 15 giugno al 30 settembre il territorio è in stato di massima allerta per il rischio incendi boschivi."
-badge: "Allerta"
+description: "Dal 15 giugno al 30 settembre è il periodo di massima pericolosità per gli incendi boschivi nel territorio comunale."
+badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-06-15-campagna-aib.webp"
