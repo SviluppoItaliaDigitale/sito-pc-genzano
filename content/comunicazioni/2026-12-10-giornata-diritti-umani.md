@@ -211,8 +211,21 @@ La **solidarietà** è **universale**.
 
 ## Per approfondire
 
-- [Giornata Persone con Disabilità](/comunicazioni/2026-12-03-giornata-persone-disabilita/)
-- [Violenza sulle donne](/comunicazioni/2026-11-25-violenza-donne-numeri-emergenza/)
-- [Gruppo Comunale PC](/chi-siamo/)
+Sul nostro sito:
+
+- [Giornata Persone con Disabilità](/comunicazioni/2026-12-03-giornata-persone-disabilita/).
+- [Violenza sulle donne](/comunicazioni/2026-11-25-violenza-donne-numeri-emergenza/).
+- [ISO 22395 — Persone vulnerabili](/comunicazioni/2026-05-29-iso-22395-persone-vulnerabili/).
+- [Persone fragili: aiutare i vicini in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Strage di Capaci: legalità e servizio pubblico](/comunicazioni/2026-05-23-strage-capaci-legalita-servizio-pubblico/).
+- [Festa della Liberazione: volontariato civico](/comunicazioni/2026-04-25-festa-liberazione-volontariato-civico/).
+- [Chi siamo](/chi-siamo/).
+
+Fonti istituzionali:
+
+- [ONU — Human Rights Day](https://www.un.org/en/observances/human-rights-day).
+- [Dichiarazione Universale dei Diritti Umani (1948)](https://www.un.org/en/about-us/universal-declaration-of-human-rights).
+- [Costituzione italiana](https://www.senato.it/istituzione/la-costituzione).
+- [Consiglio d'Europa](https://www.coe.int/it/).
 
 In emergenza: **112**.

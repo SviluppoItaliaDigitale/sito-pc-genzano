@@ -153,8 +153,19 @@ Quando vedrete il logo della PC Genzano in giro, ricordate che dietro c'è un **
 
 ## Per approfondire
 
-- [Avvio corso base](/comunicazioni/2026-10-23-avvio-corso-base-prima-lezione/)
-- [Ultima settimana corso](/comunicazioni/2026-11-27-corso-base-ultima-settimana-esame/)
-- [Diventare volontario](/diventa-volontario/)
+Sul nostro sito:
+
+- [Avvio corso base](/comunicazioni/2026-10-23-avvio-corso-base-prima-lezione/).
+- [Ultima settimana corso](/comunicazioni/2026-11-27-corso-base-ultima-settimana-esame/).
+- [SAFOR-PROCIV — Scuola Alta Formazione PC Lazio](/comunicazioni/2026-05-08-safor-prociv-scuola-alta-formazione-pc-lazio/).
+- [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/).
+- [Lo zaino del volontario](/comunicazioni/2026-05-11-zaino-volontario-attivazione/).
+- [Diventa volontario](/diventa-volontario/).
+- [Chi siamo](/chi-siamo/).
+
+Fonti istituzionali:
+
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
 
 In emergenza: **112**.

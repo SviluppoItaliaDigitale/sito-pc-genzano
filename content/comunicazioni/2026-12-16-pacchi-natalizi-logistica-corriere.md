@@ -214,8 +214,17 @@ Ogni **regalo scelto con attenzione** è più prezioso di dieci comprati in fret
 
 ## Per approfondire
 
-- [Truffe online Black Friday](/comunicazioni/2026-11-22-truffe-online-black-friday/)
-- [Preparativi Natale](/comunicazioni/2026-12-12-preparativi-natale-acquisti-sicuri/)
-- [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/)
+Sul nostro sito:
+
+- [Truffe online Black Friday](/comunicazioni/2026-11-22-truffe-online-black-friday/).
+- [Preparativi Natale](/comunicazioni/2026-12-12-preparativi-natale-acquisti-sicuri/).
+- [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/).
+- [App YouPol — segnalazioni Polizia di Stato](/comunicazioni/2026-04-27-app-youpol-polizia-stato-bullismo-violenza-droga/).
+
+Fonti istituzionali:
+
+- [Polizia Postale](https://www.commissariatodips.it/).
+- [Antitrust — AGCM](https://www.agcm.it/).
+- [Polizia di Stato](https://www.poliziadistato.it/).
 
 In emergenza: **112**.

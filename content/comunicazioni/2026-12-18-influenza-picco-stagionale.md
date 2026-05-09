@@ -227,8 +227,19 @@ Il medico di base è il **riferimento** principale.
 
 ## Per approfondire
 
-- [Qualità dell'aria](/comunicazioni/2026-11-09-qualita-aria-pm10-inverno/)
-- [Riscaldamento sicuro](/comunicazioni/2026-12-04-riscaldamento-sicuro-dicembre/)
-- [Anziani soli](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/)
+Sul nostro sito:
 
-In emergenza: **112**. Medico di Guardia ASL Roma 6: contatti sul sito ufficiale.
+- [Qualità dell'aria](/comunicazioni/2026-11-09-qualita-aria-pm10-inverno/).
+- [Riscaldamento sicuro](/comunicazioni/2026-12-04-riscaldamento-sicuro-dicembre/).
+- [Anziani soli](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/).
+- [Persone fragili: aiutare i vicini](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/).
+
+Fonti istituzionali:
+
+- [Ministero della Salute — Influenza](https://www.salute.gov.it/portale/influenza/homeInfluenza.jsp).
+- [Istituto Superiore di Sanità — InfluNet](https://www.iss.it/).
+- [WHO — Influenza](https://www.who.int/health-topics/influenza-seasonal).
+- [ASL Roma 6](https://www.aslroma6.it/).
+
+In emergenza: **112**. Per medico di guardia ASL Roma 6: contatti sul sito ufficiale.
