@@ -9,7 +9,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-17-gestione-sala-radio-chiamata-emergenza-scheda-intervento.webp"
 image_alt: "Postazione di sala radio con ricetrasmittente, telefono e registro degli interventi."
 scadenza: ""
-area: "Formazione di protezione civile"
+area: ""
 allegati: []
 draft: false
 ---

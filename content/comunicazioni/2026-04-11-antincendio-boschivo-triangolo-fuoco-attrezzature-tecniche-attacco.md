@@ -9,7 +9,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco.webp"
 image_alt: "Volontario antincendio boschivo con manichetta e dispositivi di protezione durante un intervento."
 scadenza: ""
-area: "Formazione di protezione civile"
+area: ""
 allegati: []
 draft: false
 ---
