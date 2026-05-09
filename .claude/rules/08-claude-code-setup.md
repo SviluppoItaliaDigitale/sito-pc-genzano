@@ -2,7 +2,59 @@
 
 Questo file documenta come configurare l'ambiente di Claude Code per lavorare sul sito senza essere bloccato dalla sandbox di sicurezza, in particolare per il download di foto da fonti libere.
 
-## Sandbox: cos'è e come funziona
+## Sandbox CLOUD vs sandbox LOCALE — non sono la stessa cosa
+
+⚠️ **Distinzione critica scoperta il 9 maggio 2026** (test diretto sui domini di rete dalla sessione cloud):
+
+Tutto quanto descritto sopra (file `.claude/settings.local.json` + tabella delle 7 fonti foto) **vale solo per la sandbox LOCALE** — quella di Claude Code CLI eseguito sul PC dell'utente. Le sessioni di Claude Code **CLOUD** (mobile, web, agent GitHub-integrato) hanno una whitelist di rete **completamente diversa**, gestita lato Anthropic, **non modificabile dall'utente**, indipendente dal `.claude/settings.local.json` (che è in `.gitignore` e quindi non viene letto in cloud).
+
+### Whitelist effettiva sandbox CLOUD (testata 2026-05-09)
+
+| Dominio | Stato cloud | Note |
+|---|---|---|
+| `github.com` | ✅ 200 | clone, push (ma il push avviene via GitHub MCP server interno, non curl) |
+| `raw.githubusercontent.com` | ✅ 301 | lettura file singoli da repo pubblici |
+| `pypi.org`, `files.pythonhosted.org` | ✅ 200 | `pip install` funziona |
+| `registry.npmjs.org` | ✅ 200 | `npm install` funziona |
+| `archive.ubuntu.com` | ✅ 200 | `apt update` funziona (ma serve sudo) |
+| `api.github.com` | ❌ 403 | bloccato — usare i tool MCP `mcp__github__*` |
+| **TUTTE le 14 sorgenti foto** (Wikimedia, NASA, USGS, NOAA, Pexels, Pixabay, Unsplash) | ❌ 403 `host_not_allowed` | **non scaricabili dalla sessione cloud** |
+| `deb.debian.org` | ❌ 403 | bloccato |
+
+### Conseguenza operativa
+
+Le foto inline `{{< foto >}}` da fonti esterne (Wikimedia/NASA/USGS/NOAA/stock) **non possono essere scaricate dalle sessioni cloud**. La procedura `pc-image-fixer` (WebFetch + curl + applica-fascia) funziona **solo** dal Claude Code CLI sul PC dell'utente con `.claude/settings.local.json` configurato.
+
+Tre flussi praticabili:
+
+1. **Locale (PC)**: l'utente apre Claude Code CLI sul PC → l'agent `pc-image-fixer` fa tutto. Sandbox sbloccata via `.claude/settings.local.json`.
+2. **Cloud + utente che fornisce la foto**: l'utente carica/incolla un file immagine già scaricato → la sessione cloud lo legge dal filesystem temporaneo, applica fascia blu (Pillow è installabile via pip che è whitelistato), inserisce shortcode. Niente download esterno richiesto.
+3. **Workflow CI**: il workflow `scarica-foto-automatica.yml` su GitHub Actions ha **rete libera** (runner Ubuntu standard) e può scaricare da qualsiasi fonte. Lo step 2 (`auto-cover-mancanti.py`) genera comunque la cover tipografica banner per ogni articolo con `image: ""`. Lo step 1 (download foto inline) era basato sui marker `# TODO-foto-*` che sono **banditi** dal 3 maggio 2026 (CLAUDE.md punto 9): non c'è quindi un meccanismo CI per le foto inline.
+
+### Cosa funziona dalla sandbox cloud
+
+- Lettura/scrittura file del repo (Read, Edit, Write, Bash su file locali).
+- Build Hugo (se Hugo è preinstallato) o test sintassi.
+- Tool MCP per GitHub (`mcp__github__create_pull_request`, `merge_pull_request`, ecc.).
+- `pip install <pacchetto>` e `npm install <pacchetto>` per dipendenze toolchain.
+- Pillow installabile al volo per applicare la fascia blu **se la foto sorgente è già nel filesystem**.
+
+### Cosa NON funziona dalla sandbox cloud
+
+- `curl` o `WebFetch` verso Wikimedia/NASA/USGS/NOAA/Pexels/Pixabay/Unsplash → `403 host_not_allowed`.
+- `git push` di file `.claude/settings.local.json` per sbloccare la rete: il file resterà comunque ignorato dalla sandbox cloud (la whitelist è di sistema, non di repo).
+- Modificare la whitelist di rete della sessione cloud: non è esposta al codice utente.
+
+### Cosa NON fare
+
+- **Non promettere all'utente cloud-side che si possono scaricare foto da fonti esterne** in questa sessione: causa frustrazione (è successo il 9 maggio 2026 con l'articolo Giornata dell'Europa, da cui questa sezione).
+- **Non aggiungere domini di sorgenti foto a `.claude/settings.local.json` come "fix per il cloud"**: il file non viene letto in cloud, resta utile solo in locale.
+
+---
+
+## Sandbox LOCALE — sblocco per fonti foto (configurazione descritta sopra)
+
+Quanto segue vale solo per **Claude Code CLI eseguito sul PC dell'utente**. Per la sandbox cloud vedi sezione precedente.
 
 Claude Code esegue in una sandbox di sicurezza che, di default, blocca:
 
