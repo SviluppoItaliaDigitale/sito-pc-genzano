@@ -142,14 +142,23 @@ Il Ministero della Salute attiva ogni estate il numero gratuito **1500 "Proteggi
 
 In caso di emergenza, il numero da chiamare resta sempre il **112**.
 
-## Fonti ufficiali
+## Per approfondire
 
-- [Opuscolo "Estate in salute: come proteggere i vostri bambini"](https://www.salute.gov.it/new/sites/default/files/2025-06/opuscolo_bambini_rev2.pdf) (PDF) — a cura del **Dipartimento di Epidemiologia del Servizio Sanitario Regionale Lazio (DEP Lazio — ASL Roma 1)**, dell'**Associazione Culturale Pediatri (ACP)** e del **Ministero della Salute**
-- [Tema Ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore/) — portale del Ministero della Salute
-- Progetto **CCM "Sistema Operativo Nazionale per la Prevenzione degli Effetti del Caldo sulla Salute"**
+Sul nostro sito:
 
-## Leggi anche
+- [Proteggere cani e gatti dal caldo](/comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore/).
+- [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/).
+- [Piano nazionale prevenzione caldo](/comunicazioni/2026-05-25-piano-nazionale-prevenzione-caldo-who/).
+- [Malori estivi: colpo di calore, ictus, infarto](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/).
+- [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/).
+- [Festa della Mamma: piano emergenza neonati e bambini](/comunicazioni/2026-05-10-festa-mamma-neonati-bambini-emergenza/).
+- [Kit Calamità — Bambini](/formazione/kit-calamita-bambini/).
+- [Kit Calamità — Neonati](/formazione/kit-calamita-neonati/).
+- [Primo soccorso nei bambini e nei neonati](/formazione/primo-soccorso/rcp-bambini-neonati/).
 
-- [Proteggere cani e gatti dal caldo: le 10 regole del Ministero della Salute](/comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore/)
-- [Primo soccorso nei bambini e nei neonati](/formazione/primo-soccorso/rcp-bambini-neonati/)
-- [Area tematica Primo Soccorso](/formazione/primo-soccorso/)
+Fonti istituzionali:
+
+- [Opuscolo "Estate in salute: come proteggere i vostri bambini"](https://www.salute.gov.it/new/sites/default/files/2025-06/opuscolo_bambini_rev2.pdf) (PDF) — DEP Lazio + ACP + Ministero della Salute.
+- [Ministero della Salute — Tema Ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore/).
+- [Società Italiana di Pediatria (SIP)](https://sip.it/).
+- [Associazione Culturale Pediatri (ACP)](https://www.acp.it/).

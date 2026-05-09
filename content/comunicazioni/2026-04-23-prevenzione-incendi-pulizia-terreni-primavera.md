@@ -86,12 +86,21 @@ Se ti interessa partecipare, trovi le informazioni nella pagina [Diventa volonta
 
 ## Per approfondire
 
-- Articolo: [Triangolo del fuoco: capire come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
-- Articolo: [Esercitazione antincendio boschivo: come ci prepariamo](/comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/)
-- Articolo: [Campagna AIB 2025: avvio stagione](/comunicazioni/2025-06-15-campagna-aib/)
-- Articolo: [Giornata senza tabacco: mozziconi e rischio incendi](/comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi/)
-- Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
-- Pagina: [Formazione e kit didattici](/formazione/)
-- Pagina: [Numeri utili](/numeri-utili/)
+Sul nostro sito:
+
+- [Rischio incendio boschivo — pagina operativa](/rischi-prevenzione/rischio-incendio/).
+- [Triangolo del fuoco: capire come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
+- [Antincendio boschivo: triangolo del fuoco e attrezzature](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
+- [Esercitazione antincendio boschivo](/comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/).
+- [Giornata senza tabacco: mozziconi e rischio incendi](/comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi/).
+- [Diventa volontario](/diventa-volontario/).
+- [Numeri utili](/numeri-utili/).
+
+Fonti istituzionali:
+
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [Carabinieri Forestali](https://www.carabinieri.it/) — competenti su incendi boschivi.
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Dipartimento Protezione Civile — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/).
 
 La sicurezza dei nostri boschi e dei nostri paesi comincia da un gesto banale: un terreno pulito, a primavera. È un piccolo lavoro che, moltiplicato per tutti i proprietari, riduce in modo enorme il rischio collettivo.

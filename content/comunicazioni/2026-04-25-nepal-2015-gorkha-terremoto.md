@@ -55,8 +55,22 @@ Il Nepal 2015 ha consolidato lezioni che valgono per tutti i Paesi sismici, Ital
 
 Il nostro territorio non è confrontabile con la sismicità del Nepal. Ma il principio della **valutazione e mitigazione del rischio sui beni culturali** vale anche da noi. La **Collegiata di Santa Maria della Cima**, le chiese del centro storico, i palazzi lungo via Italo Belardi sono elementi di **patrimonio vulnerabile**: il Piano di Protezione Civile li considera nelle valutazioni di rischio territoriale.
 
-## Per saperne di più
+## Per approfondire
 
-- [INSARAG — International Search and Rescue Advisory Group](https://www.insarag.org/)
-- [Sendai Framework for Disaster Risk Reduction — UNDRR](https://www.undrr.org/)
-- Voce Wikipedia: [Terremoto del Nepal del 2015](https://it.wikipedia.org/wiki/Terremoto_del_Nepal_del_2015)
+Sul nostro sito:
+
+- [Anniversario terremoto Abruzzo 2009 (Fossa)](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/).
+- [Friuli 1976, cinquant'anni dopo](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
+- [Terremoto Emilia 2012](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/).
+- [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/).
+- [Mostra «Terremoti d'Italia» a Napoli](/comunicazioni/2026-04-17-mostra-terremoti-italia-napoli/).
+- [Rischio sismico — pagina operativa](/rischi-prevenzione/rischio-sismico/).
+- [Giornata dei monumenti: tutela del patrimonio in emergenza](/comunicazioni/2026-04-18-giornata-monumenti-patrimonio-emergenze/).
+
+Fonti istituzionali:
+
+- [INSARAG — International Search and Rescue Advisory Group](https://www.insarag.org/).
+- [Sendai Framework — UNDRR](https://www.undrr.org/implementing-sendai-framework).
+- [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
+- [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/).
+- Voce Wikipedia: [Terremoto del Nepal del 2015](https://it.wikipedia.org/wiki/Terremoto_del_Nepal_del_2015).

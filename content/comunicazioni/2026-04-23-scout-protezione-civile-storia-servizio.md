@@ -189,17 +189,19 @@ Buona festa di San Giorgio a tutti gli scout e a tutte le scolte d'Italia.
 
 ## Per approfondire
 
-- **AGESCI Settore Protezione Civile**: [protezionecivile.agesci.it](https://protezionecivile.agesci.it/)
-- **CNGEI**: [cngei.it](https://cngei.it/)
-- **Federazione Italiana dello Scautismo (FIS)**: [scouteguide.it](https://www.scouteguide.it/)
-- **Dipartimento della Protezione Civile**: [protezionecivile.gov.it](https://www.protezionecivile.gov.it/)
-- **Campi scuola "Anch'io sono la Protezione Civile"**: [protezionecivile.gov.it/it/approfondimento/anchio-sono-la-protezione-civile-i-campi-scuola-2025/](https://www.protezionecivile.gov.it/it/approfondimento/anchio-sono-la-protezione-civile-i-campi-scuola-2025/)
+Sul nostro sito:
 
-### Articoli correlati sul nostro sito
+- [Il terremoto del Friuli 1976: cinquant'anni di Protezione Civile](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
+- [Sarno 1998: la frana che ha cambiato il rischio idrogeologico](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/).
+- [Centro Italia 2016: terremoto di Amatrice e Norcia](/comunicazioni/2026-10-26-terremoto-marche-2016-visso-camerino/).
+- [Emilia-Romagna 2023: l'alluvione di maggio](/comunicazioni/2026-05-17-emilia-romagna-2023-alluvione-maggio/).
+- [Diventa volontario del Gruppo Comunale](/diventa-volontario/).
+- [Formazione e scuole](/formazione/).
 
-- [Il terremoto del Friuli 1976: cinquant'anni di Protezione Civile](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/)
-- [Sarno 1998: la frana che ha cambiato il rischio idrogeologico](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/)
-- [Centro Italia 2016: terremoto di Amatrice e Norcia](/comunicazioni/2026-10-26-terremoto-marche-2016-visso-camerino/)
-- [Emilia-Romagna 2023: l'alluvione di maggio](/comunicazioni/2026-05-17-emilia-romagna-2023-alluvione-maggio/)
-- [Diventa volontario del Gruppo Comunale](/diventa-volontario/)
-- [Formazione e scuole](/formazione/)
+Fonti istituzionali:
+
+- [AGESCI Settore Protezione Civile](https://protezionecivile.agesci.it/).
+- [CNGEI](https://cngei.it/).
+- [Federazione Italiana dello Scautismo (FIS)](https://www.scouteguide.it/).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
+- [Campi scuola "Anch'io sono la Protezione Civile"](https://www.protezionecivile.gov.it/it/approfondimento/anchio-sono-la-protezione-civile-i-campi-scuola-2025/).
