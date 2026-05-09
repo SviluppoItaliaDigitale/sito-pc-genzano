@@ -196,12 +196,48 @@ Ognuna è elaborata per esteso in `CLAUDE.md` sezione "Regole contenuti e qualit
 
 8. **Piano editoriale:** `PIANO-EDITORIALE.md`. Tendere a 1 articolo/giorno, minimo 3-4/settimana.
 
-9. **🔴 BANNER COL TITOLO INTOCCABILE — qualunque sia la fonte della foto:**
-   - Il campo `image:` del frontmatter deve **SEMPRE** puntare alla **cover tipografica con titolo** (gradiente blu + titolo + badge + fascia istituzionale, generata da `scripts/genera-cover.py` o `scripts/auto-cover-mancanti.py`).
-   - **TUTTE** le foto fornite dall'utente o scaricate da Wikipedia/NASA/USGS/NOAA/Pexels/Pixabay/Unsplash vanno **inline nel corpo dell'articolo** con lo shortcode `{{< foto >}}`, **MAI** nel banner.
-   - Convenzione foto multiple in articoli storici: 1ª dopo 1° H2, 2ª dopo 2° H2, foto successive sull'H2 di ogni evento specifico citato. ≥4 foto → galleria/carosello dentro l'articolo.
-   - **Sui social** lo script `genera-immagini-social.py` legge le foto inline `{{< foto >}}` dal body e le combina automaticamente in carosello Instagram. Stessa fonte, due usi distinti.
-   - **🚫 DIVIETO ASSOLUTO — marker `# TODO-foto-*` BANDITO** (dal 3 maggio 2026): non scriverlo mai nel frontmatter né nel corpo. Il workflow `scarica-foto-automatica.yml` lo elaborava sovrascrivendo `image:` (viola questa regola) e Hugo lo renderizzava come `<h1>` se il deploy partiva prima del workflow. Per inserire foto da fonti ufficiali usa: WebFetch su pagina Wikipedia/NASA/USGS → `curl -sL <URL> -o /tmp/foto.jpg` → `bash scripts/applica-fascia-foto.sh /tmp/foto.jpg <nome-output-DIVERSO-dallo-slug>` → shortcode `{{< foto >}}` inline + caption con credit.
+9. **🔴 BANNER COL TITOLO INTOCCABILE — il campo `image:` non si tocca mai per metterci una foto reale.**
+
+   **Regola base:** il **banner/copertina** dell'articolo (campo `image:` nel frontmatter) deve **SEMPRE** essere la **cover tipografica con titolo** (gradiente blu + titolo grande + badge categoria + fascia istituzionale con logo, generata da `scripts/genera-cover.py` o `scripts/auto-cover-mancanti.py`). Il campo `image:` può avere solo due valori validi:
+   - `""` (stringa vuota) → la cover tipografica verrà generata automaticamente al prossimo run di `auto-cover-mancanti.py`;
+   - `"/images/<slug-articolo>.webp"` → punta alla cover tipografica già generata (file con stesso slug dell'articolo).
+
+   **TUTTE le altre foto** (fornite dall'utente, Wikimedia, NASA, USGS, NOAA, Pexels, Pixabay, Unsplash, qualunque fonte) vanno **inline nel corpo articolo** con lo shortcode `{{< foto src="/images/<nome-DIVERSO-dallo-slug>.webp" alt="..." caption="..." >}}`, **MAI** nel campo `image:` del frontmatter.
+
+   ### 🚫 ANTI-PATTERN — Cosa NON fare MAI durante una revisione articolo
+
+   Se il tuo task è *"rivedi questo articolo"*, *"riscrivi secondo AGID"*, *"correggi i refusi"*, *"miglioralo"*, *"applica le linee guida"* o simile **tu non hai il permesso di modificare il campo `image:` del frontmatter**, salvo i due casi seguenti:
+   - L'utente te lo chiede **esplicitamente** ("cambia la copertina", "metti questa foto come cover").
+   - Il file puntato da `image:` non esiste fisicamente → svuotalo a `""` e basta.
+
+   **In particolare durante revisioni AGID/editoriali:**
+
+   - ❌ Hai trovato una foto bella su Wikimedia/NASA pertinente all'articolo? **NON metterla in `image:`**. Va inline nel corpo come `{{< foto >}}`.
+   - ❌ Pensi che il banner stia meglio con una foto reale invece della cover tipografica blu? **Sbagliato.** La cover tipografica è una scelta istituzionale (anteprima Open Graph riconoscibile su WhatsApp/Telegram, identità visiva, fallback emergenza). Non si discute.
+   - ❌ L'articolo aveva `image: ""` e tu l'hai popolato con una foto? **Hai violato la regola.** L'articolo doveva restare `image: ""` e il workflow CI avrebbe generato la cover tipografica.
+   - ❌ Stai facendo `git commit` di un cambio del campo `image:` insieme a un cambio di testo? **Stop.** Separa le cose: o l'utente ha chiesto entrambi, o stai fuori dallo scope.
+
+   **Esempio dell'incidente del 9 maggio 2026** (pattern da non ripetere): articolo `2026-05-09-giornata-europa-meccanismo-protezione-civile-ue.md` aveva `image: ""` (cover da generare). ChatGPT-cloud durante la revisione AGID ha trovato la foto Wikimedia dell'ERCC, l'ha scaricata, applicata fascia blu, salvata in `static/images/2026-05-09-ercc-bruxelles.webp`, e ha settato `image: "/images/2026-05-09-ercc-bruxelles.webp"` nel frontmatter. Risultato: banner del sito con foto reale, identità visiva rotta. Il fix corretto era: foto inline come `{{< foto >}}` (cosa che ChatGPT ha fatto, riga 34 del file) **e** lasciare `image: ""` per la cover tipografica.
+
+   ### Convenzione foto multiple in articoli storici
+
+   1ª dopo 1° H2, 2ª dopo 2° H2, foto successive sull'H2 di ogni evento specifico citato. **≥4 foto → galleria/carosello dentro l'articolo**.
+
+   ### Social
+
+   Lo script `genera-immagini-social.py` legge le foto inline `{{< foto >}}` dal body e le combina automaticamente in carosello Instagram. **Stessa fonte (foto nel corpo), due usi distinti**: niente da configurare in più, niente foto separate solo per i social.
+
+   ### 🚫 DIVIETO ASSOLUTO — marker `# TODO-foto-*` BANDITO
+
+   (Dal 3 maggio 2026.) Non scriverlo mai nel frontmatter né nel corpo. Il workflow `scarica-foto-automatica.yml` lo elaborava sovrascrivendo `image:` (viola questa regola) e Hugo lo renderizzava come `<h1>` se il deploy partiva prima del workflow. Per inserire foto da fonti ufficiali usa: WebFetch su pagina Wikipedia/NASA/USGS → `curl -sL <URL> -o /tmp/foto.jpg` → `bash scripts/applica-fascia-foto.sh /tmp/foto.jpg <nome-output-DIVERSO-dallo-slug>` → shortcode `{{< foto >}}` inline + caption con credit.
+
+   ### Check pre-commit per task di revisione
+
+   Prima di committare una revisione articolo, esegui sempre:
+   ```bash
+   git diff <file.md> | grep -E '^[+-]image' | head -5
+   ```
+   Se trovi righe `+image:` o `-image:`, **fermati** e verifica: hai cambiato il campo `image:` senza mandato esplicito dell'utente? Se sì, ripristina il valore originale prima del commit.
 
 10. **Stampa:** regole `@media print` globali in `themes/flavour-pcgenzano/static/css/custom.css`. Non duplicare. Non rompere.
 
@@ -477,7 +513,7 @@ R. Segnalalo all'utente. Non risolverlo autonomamente: la decisione su quale dei
 
 ---
 
-**Versione:** 1.2 — creato il 2026-05-06.
-**Ultima revisione:** 2026-05-09 — aggiunta Sezione 0 «Come usarmi» (anti-overload del GitHub connector); sezione 3.2 riscritta (parole-trigger ampliate, sotto-sezione «Domande di stato sulla pubblicazione», nuove FAQ).
+**Versione:** 1.3 — creato il 2026-05-06.
+**Ultima revisione:** 2026-05-09 — invariante 9 «BANNER COL TITOLO INTOCCABILE» riscritta con anti-pattern espliciti per task di revisione AGID (incidente Giornata Europa); aggiunta Sezione 0 «Come usarmi» (anti-overload del GitHub connector); sezione 3.2 riscritta (parole-trigger ampliate, sotto-sezione «Domande di stato sulla pubblicazione», nuove FAQ).
 **Autorità:** allineato a `CLAUDE.md` v3.0 e a `.claude/rules/0*.md` (snapshot maggio 2026).
 **Manutenzione:** quando modifichi `CLAUDE.md` aggiorna anche questo file, e viceversa.
