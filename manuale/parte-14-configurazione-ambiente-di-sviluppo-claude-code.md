@@ -250,18 +250,19 @@ Da maggio 2026, il menu di gestione (voce **21**) include un meccanismo automati
 **Il flusso operativo (zero errori se segui i passi):**
 
 1. Apri il menu (`menu-protezionecivile`) e scegli **voce 21 — Esporta contesto per altra AI**.
-2. **Lo script chiede quale AI userai** (1=Gemini, 2=ChatGPT, 3=Claude web). In base alla scelta:
+2. **Lo script fa automaticamente `git pull --ff-only`** sul repo, per recuperare modifiche fatte da altre sessioni (Claude mobile/cloud, altri device). In questo modo il contesto generato riflette sempre lo stato di GitHub, non quello locale stantio. Se ci sono modifiche locali pending o conflitti, lo script avvisa con un warning giallo e procede col contenuto locale (`--ff-only` non fa mai merge automatici, è sicuro).
+3. **Lo script chiede quale AI userai** (1=Gemini, 2=ChatGPT, 3=Claude web). In base alla scelta:
    - **Gemini** → genera FULL, copia in clipboard, apre `gemini.google.com`.
    - **ChatGPT** → genera SLIM, copia in clipboard. **In più** genera anche FULL e la salva su `~/Scrivania/contesto-pc-genzano-completo.md` per drag-drop come allegato. Apre `chat.openai.com`.
    - **Claude web** → genera FULL, copia in clipboard, apre `claude.ai`.
-3. Apri una NUOVA chat sull'AI scelta. Premi **Ctrl+V** (per Gemini/Claude web) oppure **trascina il file dalla Scrivania** (per ChatGPT, opzione B), poi INVIO.
-4. L'AI risponde *"Ho letto il contesto, dimmi cosa serve"*.
-5. Scrivi la richiesta in italiano naturale. Esempi:
+4. Apri una NUOVA chat sull'AI scelta. Premi **Ctrl+V** (per Gemini/Claude web) oppure **trascina il file dalla Scrivania** (per ChatGPT, opzione B), poi INVIO.
+5. L'AI risponde *"Ho letto il contesto, dimmi cosa serve"*.
+6. Scrivi la richiesta in italiano naturale. Esempi:
    - *"Scrivimi un articolo sul rischio incendio nei Castelli Romani per giugno 2026."*
    - *"Rivedi questo testo in stile AGID: [...]"*
    - *"Genera bozze social X/Facebook/Instagram/Telegram per l'articolo sull'allerta gialla di domani."*
-6. L'AI produce il testo seguendo le regole del sito (frontmatter completo, badge giusto, formato data, niente foto stock generiche, ecc.).
-7. Copi il testo e:
+7. L'AI produce il testo seguendo le regole del sito (frontmatter completo, badge giusto, formato data, niente foto stock generiche, ecc.).
+8. Copi il testo e:
    - **Per pubblicarlo**: torni al menu, voce **1 — Crea nuova comunicazione**, e incolli il corpo dentro nano. Oppure salvi come file `content/comunicazioni/AAAA-MM-GG-slug.md` direttamente.
    - **Per rifinitura tecnica** (foto inline, link, audit pre-push): voce **20 — Avvia Claude Code**, e dici *"ho appena scritto questo articolo con [AI esterna], fai i controlli e pubblica"*. Claude legge il file, applica le rules del repo nel dettaglio, committa e pusha.
 
@@ -271,6 +272,12 @@ Da maggio 2026, il menu di gestione (voce **21**) include un meccanismo automati
 - `CONTESTO-AI.md` o `CONTESTO-AI-slim.md` nella root del repo (entrambi in `.gitignore`).
 - `/tmp/pcgenzano-contesto-per-ai.md` (combinato `prompt + contesto`, va negli appunti).
 - `~/Scrivania/contesto-pc-genzano-completo.md` (solo se scegli ChatGPT, per drag-drop).
+
+**Sovrascrittura silenziosa dei file Scrivania.** Il file `contesto-pc-genzano-completo.md` ha **sempre lo stesso nome** ed è **sovrascritto silenziosamente** ad ogni rilancio della voce 21 con scelta ChatGPT. Niente accumulo di file vecchi sulla Scrivania, niente confusione su quale sia l'ultima versione. Se vuoi conservare una versione specifica (per riproducibilità), rinominala manualmente prima di rilanciare.
+
+**Workflow multi-device (mobile/cloud → desktop).** Se modifichi rules, manuale o `prompt-istruzioni-ai.md` da una sessione Claude mobile o cloud, le modifiche finiscono su GitHub al merge. La voce 21 desktop, **prima** di rigenerare il contesto, esegue automaticamente `git pull --ff-only` per recuperare quelle modifiche. Quindi il file Scrivania riflette sempre lo stato di GitHub, non lo stato locale del PC che potrebbe essere indietro.
+
+Se il `git pull` fallisce (modifiche locali non committate, conflitti reali divergenti), lo script ti avvisa con un warning giallo ma procede comunque con il contenuto locale: non perdi mai lavoro, decidi tu se risolvere il conflitto e rilanciare oppure usare il contesto stantio.
 
 **Quando NON usare AI esterne.** Per articoli su eventi in corso (allerta meteo attiva, emergenza dichiarata, intervento appena concluso) il rischio "AI inventa dati" è alto. In quei casi: scrivi direttamente con Claude Code (che ha accesso al repo e può verificare `data/allerta.json`, `data/emergenza.json`, recenti commit). Le AI esterne sono perfette per articoli **redazionali** (memoria storica, formazione, prevenzione, schede tematiche, riepiloghi attività).
 
