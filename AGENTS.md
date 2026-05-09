@@ -12,7 +12,7 @@ Se ti viene chiesto **«quali sono le 3 regole operative non negoziabili di ques
 
 1. **Checkpoint pre-operazione batch.** Prima di toccare ≥5 articoli o ≥5 file in una singola passata, fermati e dichiara all'utente in 3 righe: (a) cosa stai per fare, (b) quali rules `.claude/rules/0*.md` si applicano (cita nome + sezione), (c) perché l'operazione le rispetta. Poi aspetta conferma esplicita prima di procedere. Specifiche complete: sezione 3.1 sotto e `.claude/rules/07-proattivita-coerenza.md` § "Checkpoint pre-operazione batch".
 
-2. **«Pubblica» significa portare in produzione, non aprire una PR.** Quando l'utente dice «pubblica», «mandala live», «metti su», «pubblicalo» (o varianti italiane equivalenti), porti le modifiche fino al sito live senza chiedere conferme intermedie: `git add` + `git commit` (se serve) → `git push` sul branch → apri PR verso `main` → **mergia la PR su `main`** (squash) → verifica che `deploy.yml` sia partito → comunica URL della PR mergiata + ETA del deploy (~2-3 minuti). Specifiche complete: sezione 3.2 sotto.
+2. **«Pubblica» significa portare in produzione FINO ALLA FINE — niente fermate.** Quando l'utente dice «pubblica», «pubblicalo», «mandala live», «metti su», «vai», «procedi», «fai», «vai fino alla fine», «prosegui fino alla fine», «non fermarti» (o varianti italiane equivalenti, anche informali, anche conferme tipo «sì»/«ok» dopo una tua proposta esplicita), porti le modifiche fino al sito live **senza chiedere conferme intermedie e senza fermarti a metà strada**: `git add` + `git commit` (se serve) → `git push` sul branch → apri PR verso `main` → **mergia la PR su `main`** (squash) → verifica che `deploy.yml` sia partito → comunica URL della PR mergiata + ETA del deploy (~2-3 minuti). **Vietato fermarsi alla creazione della PR** dicendo «attendo conferma per il merge»: l'utente ha già autorizzato il merge dicendo «pubblica». Specifiche complete: sezione 3.2 sotto.
 
 3. **Fine sessione su feature branch — proponi sempre il merge.** Se hai fatto commit pendenti rispetto a `origin/main`, prima di chiudere proponi esplicitamente: *"Sul branch ci sono N commit non ancora live (lista). Vuoi che apra PR + merge su main + verifica deploy?"* Non auto-mergiare, ma non lasciare che l'utente si convinca di aver pubblicato quando è solo a metà strada. Specifiche complete: sezione 3.3 sotto.
 
@@ -71,9 +71,18 @@ Poi **aspetta conferma esplicita** dell'utente prima di procedere.
 
 Specifiche complete: `.claude/rules/07-proattivita-coerenza.md` § "Checkpoint pre-operazione batch".
 
-### 3.2 "Pubblica" significa portare in produzione, non aprire una PR
+### 3.2 "Pubblica" significa portare in produzione FINO ALLA FINE — niente fermate
 
-Quando l'utente dice **«pubblica»**, **«mandala live»**, **«metti su»**, **«pubblicalo»** (o varianti italiane equivalenti) **devi portare le modifiche fino al sito live** senza chiedere conferme intermedie:
+🔴 **Quando l'utente dice una di queste cose, vai fino al sito live senza fermarti, senza chiedere, senza spiegare lo stato a metà strada.**
+
+**Parole-trigger (lista non esaustiva, riconosci anche varianti italiane equivalenti):**
+
+- **Comandi diretti:** «pubblica», «pubblicalo», «pubblicale», «pubblica le modifiche», «mandala live», «mandalo live», «mettila su», «mettilo su», «metti online», «manda in produzione», «porta live».
+- **Comandi informali:** «vai», «procedi», «fai», «fallo», «forza», «dai», «manda».
+- **Comandi rinforzati che obbligano a non fermarsi:** «vai fino alla fine», «prosegui fino alla fine», «porta a termine», «non fermarti», «fai tutto», «completa», «chiudi tutto».
+- **Conferme dopo una proposta tua nel turno precedente:** «sì», «ok», «conferma», «d'accordo», «procedi pure» (sono trigger SE nel turno precedente hai chiesto cose tipo «Vuoi che apra PR + merge + verifica deploy?»).
+
+**Sequenza completa, da eseguire senza interruzioni:**
 
 1. `git add` + `git commit` (se serve) sul branch di lavoro
 2. `git push` sul branch
@@ -82,9 +91,39 @@ Quando l'utente dice **«pubblica»**, **«mandala live»**, **«metti su»**, *
 5. Verifica che `deploy.yml` sia partito (Actions tab)
 6. Comunica URL della PR mergiata + ETA del deploy (~2-3 minuti)
 
-**Non interpretare "pubblica" come "apri PR e aspetta":** il sito ha un solo branch di produzione (`main`) e l'utente gestisce la redazione da solo, niente revisore intermedio.
+**🚫 VIETATO:**
 
-**Eccezione unica:** se la build è chiaramente rotta (errori di sintassi, file corrotto evidente) **fermati prima del merge** e segnala. Ma se hai validato (Hugo build pulito, JS check OK, rules rispettate) procedi diritto fino al merge.
+- ❌ «PR aperta, attendo conferma per il merge». **NO**: il merge fa parte di «pubblica», l'utente ha già autorizzato.
+- ❌ «Branch avanti di N commit, vuoi che proceda?» dopo un comando di pubblicazione. **NO**: l'utente ha già detto vai.
+- ❌ Fermarsi a metà ("PR aperta, ora aspetto") quando il comando era «pubblica» o «vai». **NO**: si va fino in fondo, fino al merge + deploy verificato.
+- ❌ Interpretare «pubblica» come «aggiorna il branch». **NO**: solo `main` è live, il push sul branch da solo non pubblica nulla.
+- ❌ Chiedere all'utente di fare lui il merge. **NO**: lo fai tu.
+
+**Eccezione unica — build rotta:** se rilevi errori certi (Hugo build fallisce, file corrotto, sintassi YAML invalida) **fermati prima del merge**, segnala il blocker, fixa, riparti. Ma se la build è pulita e le rules sono rispettate, vai diritto fino al merge senza chiedere.
+
+#### Domande di stato sulla pubblicazione → SEMPRE offerta esplicita
+
+Se l'utente ti chiede una **domanda di stato** sulla pubblicazione mentre ci sono commit pendenti — *«Pubblicate?»*, *«Hai pubblicato?»*, *«È live?»*, *«Va in produzione?»*, *«Sono già su main?»*, *«Si vede online?»* — e la risposta onesta è **NO** (sono solo sul branch, non ancora mergiate), **devi sempre chiudere la stessa risposta con un'offerta operativa esplicita:**
+
+> *"Sul branch ci sono N commit non ancora live. Vuoi che apra PR + merge su main + verifica deploy?"*
+
+**Non lasciare l'utente a doverlo chiedere come azione successiva.** Se l'utente risponde «vai» / «sì» / «ok» / «procedi», quella è una conferma di pubblicazione e attiva la sequenza completa della sezione 3.2 (commit → push → PR → merge → deploy → comunica URL+ETA), senza altre fermate.
+
+Esempio corretto:
+
+> ❓ Utente: «Pubblicate?»
+> ✅ Tu: «No, non ancora. Sul branch `chatgpt/...` ci sono 7 commit avanti rispetto a `main` (lista). Per pubblicarle serve merge su main + deploy. **Vuoi che proceda?**»
+> ❓ Utente: «Vai»
+> ✅ Tu: *(esegui PR + merge + verifica + comunichi URL e ETA, senza altre domande)*
+
+Esempio sbagliato (vietato):
+
+> ❓ Utente: «Pubblicate?»
+> ❌ Tu: «No, non ancora pubblicate. Sono sul branch ... non ancora in main, ... per pubblicarle serve fare merge su main e poi far partire il deploy del sito.» *(spieghi lo stato ma non offri di farlo)*
+> ❓ Utente: «Vai»
+> ❌ Tu: *(non agisci perché «vai» da solo, senza una proposta tua sospesa, ti lascia incerto sull'oggetto del comando)*
+
+**Storia della regola:** esiste perché il 2 maggio 2026 un agent si è fermato alla creazione della PR aspettando conferma — l'utente ha chiarito: «quando ti dico di pubblicare, devi fare in modo e maniera di pubblicare!». Il 9 maggio 2026 ChatGPT-cloud ha replicato lo stesso bug nonostante la regola in questo file: ha spiegato lo stato del branch *senza offrire l'azione*, poi non ha riconosciuto «Vai» come trigger. La sezione è stata riscritta per rendere impossibile fraintenderla.
 
 ### 3.3 Fine sessione su feature branch — proponi sempre il merge
 
@@ -391,7 +430,13 @@ R. Sì. Aggiorna anche la tabella in `CLAUDE.md` § "Agenti specializzati dispon
 R. Applica il checkpoint pre-batch (sezione 3.1). Senza eccezioni, anche se ti sembra ovvio.
 
 **D. L'utente mi ha detto «pubblica» ma sono su feature branch.**
-R. Applica il flusso pubblica completo (sezione 3.2): commit → push → PR → merge → verifica deploy → comunica URL+ETA. Senza fermarti per conferme intermedie.
+R. Applica il flusso pubblica completo (sezione 3.2): commit → push → PR → merge → verifica deploy → comunica URL+ETA. Senza fermarti per conferme intermedie. Se ti fermi alla creazione della PR aspettando conferma per il merge, hai violato la regola.
+
+**D. L'utente mi ha detto «vai» o «procedi» ma non ricordo se è un comando di pubblicazione.**
+R. Se nel turno precedente hai proposto «Vuoi che apra PR + merge + verifica deploy?» o simile, allora «vai»/«sì»/«ok»/«procedi» sono conferme valide e attivano la sequenza completa di sezione 3.2. Se invece il contesto è ambiguo (es. l'utente non ti ha chiesto nulla di specifico sulla pubblicazione), chiedi *cosa* vuole che continui — ma **se ci sono commit pendenti sul branch e l'utente sembra spazientito**, l'interpretazione di default è: vuole che pubblichi.
+
+**D. L'utente mi chiede «Pubblicate?» / «Hai pubblicato?» / «È live?» e la risposta è no.**
+R. Non limitarti a spiegare lo stato. **Chiudi sempre la stessa risposta con un'offerta operativa esplicita:** *"Sul branch ci sono N commit non ancora live. Vuoi che apra PR + merge su main + verifica deploy?"*. Se l'utente risponde sì/vai/ok, esegui la sequenza completa di sezione 3.2 senza altre fermate. Vedi sezione 3.2 § "Domande di stato sulla pubblicazione".
 
 **D. L'utente sta chiudendo la sessione e ho commit pendenti sul branch.**
 R. Applica la regola "Fine sessione su feature branch" (sezione 3.3): proponi merge esplicito prima di chiudere.
@@ -401,7 +446,7 @@ R. Segnalalo all'utente. Non risolverlo autonomamente: la decisione su quale dei
 
 ---
 
-**Versione:** 1.0 — creato il 2026-05-06.
-**Ultima revisione:** 2026-05-06.
+**Versione:** 1.1 — creato il 2026-05-06.
+**Ultima revisione:** 2026-05-09 — sezione 3.2 riscritta dopo incidente ChatGPT-cloud del 9 maggio: parole-trigger ampliate (informali + rinforzate + conferme), nuova sotto-sezione «Domande di stato sulla pubblicazione», nuove FAQ.
 **Autorità:** allineato a `CLAUDE.md` v3.0 e a `.claude/rules/0*.md` (snapshot maggio 2026).
 **Manutenzione:** quando modifichi `CLAUDE.md` aggiorna anche questo file, e viceversa.
