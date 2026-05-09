@@ -1,7 +1,7 @@
 ---
 title: "23 maggio: Capaci e il servizio pubblico come scelta quotidiana"
 date: 2026-05-23
-description: "L'anniversario della strage di Capaci ricorda che il servizio allo Stato e alla comunità è un impegno quotidiano, fatto di regole, integrita, trasparenza."
+description: "L'anniversario della strage di Capaci ricorda che il servizio allo Stato e alla comunità è un impegno quotidiano, fatto di regole, integrità, trasparenza."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -83,8 +83,15 @@ Nel nostro piccolo, ogni volontario di Protezione Civile che si forma bene, che 
 
 ## Per approfondire
 
-- [Fondazione Giovanni Falcone](https://www.fondazionefalcone.org/)
-- [Ministero della Giustizia — Giornata della Legalità](https://www.giustizia.it/)
-- [Direzione Nazionale Antimafia e Antiterrorismo](https://www.procurageneralecassazione.it/)
+Sul nostro sito:
+
+- [Diventa volontario](/diventa-volontario/): il volontariato come servizio pubblico quotidiano.
+- [Chi siamo](/chi-siamo/): il Gruppo Comunale Volontari di PC Genzano.
+
+Fonti istituzionali:
+
+- [Fondazione Giovanni Falcone](https://www.fondazionefalcone.org/).
+- [Ministero della Giustizia — Giornata della Legalità](https://www.giustizia.it/).
+- [Quirinale — Discorsi del Presidente sul 23 maggio](https://www.quirinale.it/).
 
 **Nel ricordo di Giovanni Falcone, Francesca Morvillo, Vito Schifani, Rocco Dicillo, Antonio Montinaro. E di Paolo Borsellino e della sua scorta.**

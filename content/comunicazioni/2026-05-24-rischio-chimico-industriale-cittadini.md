@@ -114,9 +114,18 @@ Il territorio non ospita stabilimenti di soglia superiore Seveso, ma ha reti di 
 
 ## Per approfondire
 
-- [ISPRA — Rischio industriale](https://www.isprambiente.gov.it/it/attivita/rischio-industriale)
-- [Ministero dell'Ambiente — Direttiva Seveso](https://www.mase.gov.it/)
-- [IT-Alert](https://www.it-alert.gov.it/)
-- [Dipartimento della Protezione Civile — Rischio industriale](https://www.protezionecivile.gov.it/it/pagina/rischio-chimico-industriale)
+Sul nostro sito:
+
+- [Cartelli di pericolo delle sostanze pericolose: come riconoscerli](/comunicazioni/2026-05-24-cartelli-pericolo-sostanze-pericolose-riconoscere-agire/).
+- [ISO 22322 — Public warning e IT-alert](/comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/).
+- [Piano di emergenza del Comune di Genzano](/piano-emergenza/).
+
+Fonti istituzionali:
+
+- [ISPRA — Rischio industriale](https://www.isprambiente.gov.it/it/attivita/rischio-industriale).
+- [Ministero dell'Ambiente — Direttiva Seveso](https://www.mase.gov.it/).
+- [IT-alert — sito ufficiale del DPC](https://www.it-alert.gov.it/).
+- [Dipartimento della Protezione Civile — Rischio industriale](https://www.protezionecivile.gov.it/it/pagina/rischio-chimico-industriale).
+- [D.Lgs. 105/2015 — recepimento Seveso III](https://www.gazzettaufficiale.it/eli/id/2015/07/14/15G00121/sg).
 
 Un rischio conosciuto è un rischio **gestibile**. La trasparenza delle informazioni e la preparazione dei cittadini sono la migliore difesa contro gli incidenti industriali.
