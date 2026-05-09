@@ -119,9 +119,20 @@ Sono competenze di **Protezione Civile personale** che un bambino costruisce con
 
 ## Per approfondire
 
-- Articolo: [Primo soccorso — cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
-- Articolo: [Malori estivi: colpo di calore, ictus, infarto](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/)
-- Articolo: [Sicurezza ai laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/)
-- [Ministero della Salute — Prevenzione incidenti domestici](https://www.salute.gov.it/)
+Sul nostro sito:
+
+- [Primo soccorso — cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/).
+- [Malori estivi: colpo di calore, ictus, infarto](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/).
+- [Sicurezza ai laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/).
+- [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/).
+- [Kit Calamità — Bambini](/formazione/kit-calamita-bambini/).
+- [Kit Calamità — Neonati](/formazione/kit-calamita-neonati/).
+
+Fonti istituzionali:
+
+- [Ministero della Salute — Prevenzione incidenti domestici](https://www.salute.gov.it/).
+- [Società Italiana di Pediatria (SIP)](https://sip.it/).
+- [Istituto Superiore di Sanità — Prevenzione incidenti](https://www.iss.it/).
+- [UNICEF Italia](https://www.unicef.it/).
 
 L'estate è il tempo delle **esperienze** per i bambini. Il ruolo degli adulti non è spaventarli, ma **esserci**: presenti, attenti, capaci di intervenire.

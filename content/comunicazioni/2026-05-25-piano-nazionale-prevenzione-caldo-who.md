@@ -102,16 +102,22 @@ Per Genzano, pur essendo una cittadina collinare dei Castelli e non una metropol
 
 Tutti i piani nazionali ed europei di prevenzione del caldo si inseriscono nel quadro del **cambiamento climatico**: le proiezioni concordano sul fatto che, nei prossimi decenni, le ondate di calore saranno **più intense, più frequenti e più lunghe**. Prepararsi ora significa ridurre la mortalità futura.
 
-## Fonti ufficiali
+## Per approfondire
 
-- **Linee di indirizzo per la prevenzione. Ondate di calore e inquinamento atmosferico** (luglio 2019) — a cura del **Ministero della Salute** e del **Dipartimento di Epidemiologia del Servizio Sanitario Regionale Lazio (DEP Lazio)**. [PDF sul portale Ministero](https://www.salute.gov.it/new/sites/default/files/imported/C_17_pubblicazioni_2867_allegato.pdf)
-- **Heat-Health Action Plans: guidance** (2008) — World Health Organization, Regional Office for Europe, ISBN 978-92-890-7191-8. [Scheda e PDF su WHO IRIS](https://www.who.int/publications/i/item/9789289071918)
-- [Tema Ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore/) e [Linee guida e raccomandazioni](https://www.salute.gov.it/new/it/tema/ondate-di-calore/linee-guida-e-raccomandazioni/) — portale del Ministero della Salute
+Sul nostro sito:
 
-## Leggi anche
+- [Ondate di calore: prepararsi ora, prima che arrivi l'estate](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/).
+- [Estate in salute: come proteggere i bambini dal caldo](/comunicazioni/2026-04-25-caldo-bambini-ministero-salute/).
+- [Caldo in gravidanza: consigli per future mamme](/comunicazioni/2026-07-09-caldo-gravidanza-ministero-salute/).
+- [Ondate di calore, anziani e fragili: come proteggerli](/comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere/).
+- [Persone fragili: come aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Malori estivi: colpo di calore, ictus, infarto](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/).
+- [Kit Calamità — Anziani](/formazione/kit-calamita-anziani/).
 
-- [Ondate di calore: prepararsi ora, prima che arrivi l'estate](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
-- [Estate in salute: come proteggere i bambini dal caldo](/comunicazioni/2026-04-25-caldo-bambini-ministero-salute/)
-- [Caldo in gravidanza: consigli per future mamme](/comunicazioni/2026-07-09-caldo-gravidanza-ministero-salute/)
-- [Ondate di calore, anziani e fragili: come proteggerli](/comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere/)
-- [Persone fragili: come aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
+Fonti istituzionali:
+
+- [Linee di indirizzo Ondate di calore e inquinamento atmosferico (Min. Salute + DEP Lazio, luglio 2019)](https://www.salute.gov.it/new/sites/default/files/imported/C_17_pubblicazioni_2867_allegato.pdf).
+- [WHO Europe — Heat-Health Action Plans: guidance (2008)](https://www.who.int/publications/i/item/9789289071918).
+- [Ministero della Salute — Tema Ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore/).
+- [Ministero della Salute — Linee guida e raccomandazioni](https://www.salute.gov.it/new/it/tema/ondate-di-calore/linee-guida-e-raccomandazioni/).
+- [DEP Lazio — Dipartimento di Epidemiologia](https://www.deplazio.net/).

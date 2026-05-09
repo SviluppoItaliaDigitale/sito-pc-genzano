@@ -174,10 +174,19 @@ Sono segnali internazionali, semplici e inequivocabili.
 
 ## Per approfondire
 
-- Articolo: [Perdersi in bosco](/comunicazioni/2026-05-21-perdersi-nei-boschi-castelli-romani/)
-- Articolo: [Ricerca dispersi](/comunicazioni/2026-05-25-ricerca-dispersi-soccorso-volontariato/)
-- [CAI — Club Alpino Italiano](https://www.cai.it/)
-- [CNSAS — Soccorso Alpino](https://www.cnsas.it/)
-- [Parco Regionale dei Castelli Romani](http://www.parcocastelliromani.it/)
+Sul nostro sito:
+
+- [Perdersi in bosco](/comunicazioni/2026-05-21-perdersi-nei-boschi-castelli-romani/).
+- [Ricerca dispersi](/comunicazioni/2026-05-25-ricerca-dispersi-soccorso-volontariato/).
+- [Sicurezza ai laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/).
+- [Cartografia del territorio di Genzano](/cartografia/).
+- [Vento forte: cosa fare](/rischi-prevenzione/vento-forte/).
+
+Fonti istituzionali:
+
+- [CAI — Club Alpino Italiano](https://www.cai.it/).
+- [CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico](https://www.cnsas.it/).
+- [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/).
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
 
 L'escursione è un'esperienza meravigliosa **se preparata bene**. La montagna **non perdona** l'improvvisazione. Prepararsi non toglie libertà: ne aggiunge.

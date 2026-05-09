@@ -129,8 +129,20 @@ La comunicazione alla famiglia e alla comunità è parte integrante del protocol
 
 ## Per approfondire
 
-- [Ministero dell'Interno — Circolare 2/2017 ricerca dispersi](https://www.interno.gov.it/)
-- [Corpo Nazionale Soccorso Alpino](https://www.cnsas.it/)
-- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
+Sul nostro sito:
+
+- [Perdersi in bosco](/comunicazioni/2026-05-21-perdersi-nei-boschi-castelli-romani/).
+- [Escursioni estive: sicurezza in montagna](/comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli/).
+- [Persone fragili: aiutare i vicini in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Kit Calamità — Anziani](/formazione/kit-calamita-anziani/).
+- [Kit Calamità — Bambini](/formazione/kit-calamita-bambini/).
+- [Kit Calamità — Disabilità adulti](/formazione/kit-calamita-disabilita-adulti/).
+
+Fonti istituzionali:
+
+- [Ministero dell'Interno](https://www.interno.gov.it/) — Circolare 2/2017 ricerca dispersi.
+- [Corpo Nazionale Soccorso Alpino e Speleologico](https://www.cnsas.it/).
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 
 La ricerca dispersi è una delle attività in cui **la preparazione delle famiglie** e **la rapidità della segnalazione** contano più di tutto. In caso di dubbio, chiamare il 112 non è mai un'esagerazione: è la scelta giusta.

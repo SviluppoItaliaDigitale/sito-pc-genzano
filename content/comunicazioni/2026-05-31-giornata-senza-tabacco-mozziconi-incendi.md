@@ -104,11 +104,20 @@ Nella Giornata senza tabacco del 31 maggio, questo messaggio doppio: per la tua 
 
 ## Per approfondire
 
-- Articolo: [Prevenzione incendi e pulizia dei terreni](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/)
-- Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
-- [OMS — Giornata senza tabacco](https://www.who.int/campaigns/world-no-tobacco-day)
-- [Ministero della Salute — Dipendenza da tabacco](https://www.salute.gov.it/)
-- [Carabinieri Forestali — Incendi boschivi](https://www.carabinieri.it/)
-- [Dipartimento della Protezione Civile — Rischio incendi](https://www.protezionecivile.gov.it/it/rischi/rischio-incendi)
+Sul nostro sito:
+
+- [Prevenzione incendi e pulizia dei terreni](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/).
+- [Rischio incendio boschivo — pagina operativa](/rischi-prevenzione/rischio-incendio/).
+- [Open Day antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
+- [Estintori: classi di fuoco e uso corretto](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
+- [Incendi domestici](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/).
+
+Fonti istituzionali:
+
+- [WHO — World No Tobacco Day](https://www.who.int/campaigns/world-no-tobacco-day).
+- [Ministero della Salute — Dipendenza da tabacco](https://www.salute.gov.it/).
+- [Istituto Superiore di Sanità — Tabagismo](https://www.iss.it/).
+- [Carabinieri Forestali](https://www.carabinieri.it/) — competenti su incendi boschivi.
+- [Dipartimento della Protezione Civile — Rischio incendi](https://www.protezionecivile.gov.it/it/pagina/rischio-incendi-boschivi).
 
 Prendersi cura della propria salute e del proprio territorio sono **facce della stessa medaglia**: la responsabilità per la comunità in cui si vive.

@@ -96,4 +96,17 @@ Le strutture che alla data di entrata in vigore del regolamento già svolgono at
 
 Il **testo integrale** del regolamento (10 articoli) e la **Deliberazione di Giunta** che lo adotta sono allegati a questo articolo, scaricati dal Bollettino Ufficiale della Regione Lazio n. 37 del 7 maggio 2026.
 
-Per approfondimenti istituzionali si rimanda al sito ufficiale della **[Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile)** e al **[Bollettino Ufficiale della Regione Lazio (BURL)](https://www.regione.lazio.it/cittadini/burl)**.
+## Per approfondire
+
+Sul nostro sito:
+
+- [Programma 2026 della Campagna comunicazione PC Lazio](/comunicazioni/2026-05-08-campagna-comunicazione-protezione-civile-lazio-2026/).
+- [Diventa volontario](/diventa-volontario/).
+- [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/).
+
+Fonti istituzionali:
+
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [BURL — Bollettino Ufficiale della Regione Lazio](https://www.regione.lazio.it/cittadini/burl).
+- [L.R. Lazio 2/2014 — Sistema integrato di Protezione Civile](https://www.regione.lazio.it/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).

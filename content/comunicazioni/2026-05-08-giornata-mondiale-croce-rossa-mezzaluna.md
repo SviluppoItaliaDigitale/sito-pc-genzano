@@ -59,17 +59,20 @@ Per informazioni sulla [CRI Lazio](https://crilazio.it/) e sui comitati locali, 
 
 ## Per approfondire
 
-- Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
-- Articolo: [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/)
-- Articolo: [Il Gruppo riceve un defibrillatore dalla Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/)
-- Articolo: [Giornata Nazionale della Protezione Civile](/comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/)
-- Pagina: [Diventa volontario](/diventa-volontario/)
+Sul nostro sito:
 
-## Fonti
+- [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/).
+- [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/).
+- [Il Gruppo riceve un defibrillatore dalla Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/).
+- [Giornata Nazionale della Protezione Civile](/comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/).
+- [Diventa volontario](/diventa-volontario/).
 
-- [Croce Rossa Italiana](https://www.cri.it/)
-- [Federazione Internazionale CR/MR](https://www.ifrc.org/)
-- [Comitato Internazionale della Croce Rossa](https://www.icrc.org/)
-- [Storia della CRI](https://www.cri.it/chi-siamo/storia/)
+Fonti istituzionali:
+
+- [Croce Rossa Italiana](https://www.cri.it/).
+- [CRI Lazio](https://crilazio.it/).
+- [IFRC — Federazione Internazionale della Croce Rossa e Mezzaluna Rossa](https://www.ifrc.org/).
+- [ICRC — Comitato Internazionale della Croce Rossa](https://www.icrc.org/).
+- [Storia della CRI](https://www.cri.it/chi-siamo/storia/).
 
 Buona Giornata della Croce Rossa a chi, ogni giorno, tiene viva l'idea di **umanità** di Henry Dunant.

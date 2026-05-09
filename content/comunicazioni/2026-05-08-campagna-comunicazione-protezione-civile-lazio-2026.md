@@ -93,4 +93,17 @@ Per il **Gruppo Comunale di Genzano di Roma**, iscritto all'Elenco territoriale 
 
 Il **testo integrale** della determinazione regionale, comprensivo dell'**Allegato 1 — Programma**, è disponibile come PDF in fondo a questo articolo.
 
-Per approfondimenti istituzionali si rimanda al sito ufficiale della **[Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile)** e alla campagna nazionale **[Io non rischio](https://www.iononrischio.it/)** del Dipartimento.
+## Per approfondire
+
+Sul nostro sito:
+
+- [SAFOR-PROCIV — Scuola di Alta Formazione PC Lazio](/comunicazioni/2026-05-08-safor-prociv-scuola-alta-formazione-pc-lazio/).
+- [Diventa volontario](/diventa-volontario/).
+- [Cosa fare adesso in emergenza](/cosa-fare-adesso/).
+
+Fonti istituzionali:
+
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Io non rischio — campagna DPC](https://www.iononrischio.it/).
+- [Dipartimento Protezione Civile — Campi Scuola "Anch'io sono la Protezione Civile"](https://www.protezionecivile.gov.it/).
+- [L.R. Lazio 2/2014 — Sistema integrato di Protezione Civile](https://www.regione.lazio.it/).

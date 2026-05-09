@@ -100,9 +100,19 @@ Sono poche ore una volta l'anno, ma aiutano a ridurre molti rischi domestici est
 
 ## Per approfondire
 
-- Articolo: [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
-- Articolo: [Ondate di calore: preparare l'estate](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
-- Articolo: [Blackout: cosa fare](/comunicazioni/2026-05-06-blackout-interruzione-corrente-cosa-fare/)
-- Articolo: [Prevenzione incendi: pulizia dei terreni](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/)
+Sul nostro sito:
+
+- [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
+- [Ondate di calore: preparare l'estate](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/).
+- [Blackout: cosa fare](/comunicazioni/2026-05-06-blackout-interruzione-corrente-cosa-fare/).
+- [Prevenzione incendi: pulizia dei terreni](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/).
+- [Estintori: classi di fuoco e uso corretto](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
+- [Incendi domestici](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/).
+
+Fonti istituzionali:
+
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [ARERA — Autorità Reti e Ambiente](https://www.arera.it/).
+- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp).
 
 Una casa controllata protegge meglio quando serve. Un controllo fatto prima dell'estate riduce stress, danni e rischi per la famiglia.

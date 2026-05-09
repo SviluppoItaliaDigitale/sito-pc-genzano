@@ -101,7 +101,16 @@ Una società resiliente non si misura su quanto sa proteggere i cittadini in pie
 
 ## Per approfondire
 
-- Scheda interna dello standard: [ISO 22395 — Persone vulnerabili](/standard-iso/iso-22395/)
-- [Kit Calamità per situazioni vulnerabili](/formazione/kit-calamita/)
-- [Facile da leggere](/facile-da-leggere/)
-- [Standard ISO per la Protezione Civile](/standard-iso/)
+Sul nostro sito:
+
+- [ISO 22395 — Persone vulnerabili](/standard-iso/iso-22395/): scheda interna con titolo, ambito e contestualizzazione italiana.
+- [Kit Calamità per situazioni vulnerabili](/formazione/kit-calamita/): hub dei 12 kit operativi.
+- [Facile da leggere](/facile-da-leggere/).
+- [Standard ISO per la Protezione Civile](/standard-iso/): hub di tutti gli standard rilevanti.
+- [Persone fragili: aiutare i vicini in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+
+Fonti istituzionali:
+
+- [Pagina ufficiale ISO 22395](https://www.iso.org/standard/50291.html): per il testo della norma (a pagamento) consulta [iso.org](https://www.iso.org/) o il [catalogo UNI](https://store.uni.com/).
+- [WHO — Vulnerable groups in emergencies](https://www.who.int/).
+- [Sphere Standards 2018](https://spherestandards.org/) — riferimento internazionale per la qualità dell'aiuto umanitario.
