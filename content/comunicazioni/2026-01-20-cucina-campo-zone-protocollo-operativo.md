@@ -26,7 +26,7 @@ Fin dai primi momenti l'area destinata all'alimentazione si suddivide in quattro
 
 ### 1. Zona depositi
 
-Serve per stoccare le materie prime e dividerla ulteriormente in sottozone aiuta a mantenere l'igiene:
+Serve a stoccare le materie prime. Suddividerla in sottozone aiuta a mantenere l'igiene:
 
 - **apertura imballaggi** — all'esterno delle altre zone, vicino alle aree di smaltimento rifiuti;
 - **zona lavaggio prodotti per la pulizia** — con armadiatura chiusa, senza mai travasare da un contenitore all'altro;
@@ -91,7 +91,7 @@ Il manuale riporta le temperature previste dal DPR 327/80 e dai Regolamenti CE 8
 | Frattaglie | +3 °C |
 | Carni macinate | +2 °C |
 
-Nei container frigo si suddividono le aree: carne e pesce vicino al fan-coil (zona più fredda), verdure ben coperte nella zona meno fredda. All'esterno dei container si espone una **tabella aggiornata** con i prodotti dentro (lotto e scadenza), così non serve aprire la cella per verificarne il contenuto — evitando sbalzi di temperatura.
+Nei container frigo si suddividono le aree: carne e pesce vicino al fan-coil (zona più fredda), verdure ben coperte nella zona meno fredda. All'esterno dei container si espone una **tabella aggiornata** con i prodotti presenti (lotto e scadenza). In questo modo non serve aprire la cella per verificarne il contenuto, evitando sbalzi di temperatura.
 
 ### Lavorazione e cottura
 
@@ -118,7 +118,7 @@ Ogni fase ha i suoi rischi, le sue misure di prevenzione e i suoi DPI.
 
 ## Perché riguarda anche il Gruppo di Genzano
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano aderisce a **FEPIVOL** ed è iscritto all'Elenco territoriale regionale. Nelle attivazioni in supporto ad altri comuni può essere chiamato a contribuire al servizio di ristorazione di un campo. Sapere come è organizzata una cucina conforme, quali rischi esistono e quali procedure rispettare è parte integrante della preparazione di chi entra in turno.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano aderisce a **FEPIVOL** (Federazione Provinciale Volontari di Protezione Civile) ed è iscritto all'Elenco territoriale regionale. Nelle attivazioni in supporto ad altri comuni può essere chiamato a contribuire al servizio di ristorazione di un campo. Sapere come è organizzata una cucina conforme, quali rischi esistono e quali procedure rispettare è parte integrante della preparazione di chi entra in turno.
 
 ## Riferimenti
 
