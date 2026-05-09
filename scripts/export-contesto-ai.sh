@@ -1,21 +1,52 @@
 #!/bin/bash
 # ══════════════════════════════════════════════════════════════════════════════
 #   export-contesto-ai.sh
-#   Genera un file unico CONTESTO-AI.md con tutta la documentazione del sito,
-#   pronto da incollare in qualsiasi AI esterna (ChatGPT, Gemini, Claude web,
-#   Mistral, ecc.) per continuare la gestione senza perdere contesto.
+#   Genera un file unico con la documentazione del sito, pronto da incollare
+#   in qualsiasi AI esterna (ChatGPT, Gemini, Claude web) per continuare la
+#   gestione senza perdere contesto.
 #
-#   Uso: bash scripts/export-contesto-ai.sh
-#   Output: CONTESTO-AI.md nella root del progetto
+#   Uso:
+#     bash scripts/export-contesto-ai.sh           → versione FULL
+#                                                    (~810 KB, ~200k token)
+#                                                    output: CONTESTO-AI.md
+#                                                    Per Gemini paste, Claude
+#                                                    web paste, o ChatGPT
+#                                                    attach (drag-drop).
+#
+#     bash scripts/export-contesto-ai.sh --slim    → versione SLIM
+#                                                    (~250 KB, ~64k token)
+#                                                    output: CONTESTO-AI-slim.md
+#                                                    Per ChatGPT Plus paste.
+#                                                    Include solo le regole
+#                                                    editoriali (01,02,03,06,07)
+#                                                    + README + CLAUDE + PIANO
+#                                                    + memorie. Esclude i
+#                                                    dettagli tecnici Hugo,
+#                                                    deploy, sandbox, manuale
+#                                                    operativo split — non
+#                                                    necessari per scrivere
+#                                                    testi.
 # ══════════════════════════════════════════════════════════════════════════════
 
 set -e
+
+# Parsing argomenti
+SLIM_MODE=0
+if [ "$1" = "--slim" ]; then
+    SLIM_MODE=1
+fi
 
 # Trova la root del progetto (directory che contiene hugo.toml)
 PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$PROJECT_ROOT"
 
-OUTPUT="CONTESTO-AI.md"
+if [ $SLIM_MODE -eq 1 ]; then
+    OUTPUT="CONTESTO-AI-slim.md"
+    MODE_LABEL="SLIM (regole editoriali essenziali)"
+else
+    OUTPUT="CONTESTO-AI.md"
+    MODE_LABEL="FULL (tutta la documentazione)"
+fi
 DATA_NOW="$(date '+%Y-%m-%d %H:%M:%S %Z')"
 GIT_COMMIT="$(git rev-parse --short HEAD 2>/dev/null || echo 'sconosciuto')"
 GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo 'sconosciuto')"
@@ -129,26 +160,32 @@ echo -e "\n## 3. Regole di governance\n\nQuesti file sono importati automaticame
 include_file ".claude/rules/01-governance-pa.md" "3.1 01-governance-pa.md"
 include_file ".claude/rules/02-content-design-pa.md" "3.2 02-content-design-pa.md"
 include_file ".claude/rules/03-accessibility.md" "3.3 03-accessibility.md"
-include_file ".claude/rules/04-hugo-architecture.md" "3.4 04-hugo-architecture.md"
-include_file ".claude/rules/04a-hugo-shortcode-partial.md" "3.5 04a-hugo-shortcode-partial.md"
-include_file ".claude/rules/04b-hugo-template-css.md" "3.6 04b-hugo-template-css.md"
-include_file ".claude/rules/04c-hugo-static-cartelle.md" "3.7 04c-hugo-static-cartelle.md"
-include_file ".claude/rules/05-github-aruba-deploy.md" "3.8 05-github-aruba-deploy.md"
+if [ $SLIM_MODE -eq 0 ]; then
+    include_file ".claude/rules/04-hugo-architecture.md" "3.4 04-hugo-architecture.md"
+    include_file ".claude/rules/04a-hugo-shortcode-partial.md" "3.5 04a-hugo-shortcode-partial.md"
+    include_file ".claude/rules/04b-hugo-template-css.md" "3.6 04b-hugo-template-css.md"
+    include_file ".claude/rules/04c-hugo-static-cartelle.md" "3.7 04c-hugo-static-cartelle.md"
+    include_file ".claude/rules/05-github-aruba-deploy.md" "3.8 05-github-aruba-deploy.md"
+fi
 include_file ".claude/rules/06-protezione-civile-scientifica.md" "3.9 06-protezione-civile-scientifica.md"
 include_file ".claude/rules/07-proattivita-coerenza.md" "3.10 07-proattivita-coerenza.md"
-include_file ".claude/rules/08-claude-code-setup.md" "3.11 08-claude-code-setup.md"
+if [ $SLIM_MODE -eq 0 ]; then
+    include_file ".claude/rules/08-claude-code-setup.md" "3.11 08-claude-code-setup.md"
+fi
 
-# ── 4. MANUALE-SITO (indice + 21 parti) ──────────────────────────────────────
-echo -e "\n## 4. MANUALE-SITO — Manuale operativo completo (split in 21 file)\n\nIl manuale operativo è stato spezzato a maggio 2026 in 18 file separati nella cartella \`manuale/\` (1 file per Parte) per facilitare manutenzione e revisioni puntuali. \`MANUALE-SITO.md\` nella root resta come indice/redirect.\n\n---\n" >> "$OUTPUT"
-include_file "MANUALE-SITO.md" "4.0 MANUALE-SITO.md (indice)"
-include_file "manuale/README.md" "4.1 manuale/README.md (indice navigabile)"
-# Includi tutte le 21 parti nell'ordine
-sub_idx=2
-for parte_file in $(ls manuale/parte-*.md 2>/dev/null | sort); do
-    parte_name="$(basename "$parte_file" .md)"
-    include_file "$parte_file" "4.$sub_idx ${parte_name}"
-    sub_idx=$((sub_idx + 1))
-done
+# ── 4. MANUALE-SITO (indice + 21 parti) — solo in FULL ──────────────────────
+if [ $SLIM_MODE -eq 0 ]; then
+    echo -e "\n## 4. MANUALE-SITO — Manuale operativo completo (split in 21 file)\n\nIl manuale operativo è stato spezzato a maggio 2026 in 18 file separati nella cartella \`manuale/\` (1 file per Parte) per facilitare manutenzione e revisioni puntuali. \`MANUALE-SITO.md\` nella root resta come indice/redirect.\n\n---\n" >> "$OUTPUT"
+    include_file "MANUALE-SITO.md" "4.0 MANUALE-SITO.md (indice)"
+    include_file "manuale/README.md" "4.1 manuale/README.md (indice navigabile)"
+    # Includi tutte le 21 parti nell'ordine
+    sub_idx=2
+    for parte_file in $(ls manuale/parte-*.md 2>/dev/null | sort); do
+        parte_name="$(basename "$parte_file" .md)"
+        include_file "$parte_file" "4.$sub_idx ${parte_name}"
+        sub_idx=$((sub_idx + 1))
+    done
+fi
 
 # ── 5. PIANO-EDITORIALE ──────────────────────────────────────────────────────
 include_file "PIANO-EDITORIALE.md" "5. PIANO-EDITORIALE — Fonti e calendario"
@@ -156,28 +193,32 @@ include_file "PIANO-EDITORIALE.md" "5. PIANO-EDITORIALE — Fonti e calendario"
 # ── 6. Archetype articoli ────────────────────────────────────────────────────
 include_file "archetypes/comunicazioni.md" "6. Archetype articoli" "markdown"
 
-# ── 7. hugo.toml ─────────────────────────────────────────────────────────────
-include_file "hugo.toml" "7. Configurazione Hugo" "toml"
+# ── 7-11. Sezioni tecniche (Hugo config, shortcode, data, workflow, script)
+#         — solo in FULL. Non servono a un'AI che produce solo testi. ────────
+if [ $SLIM_MODE -eq 0 ]; then
+    # ── 7. hugo.toml ─────────────────────────────────────────────────────────
+    include_file "hugo.toml" "7. Configurazione Hugo" "toml"
 
-# ── 8. Shortcode foto ────────────────────────────────────────────────────────
-include_file "themes/flavour-pcgenzano/layouts/shortcodes/foto.html" "8. Shortcode foto" "go-html-template"
+    # ── 8. Shortcode foto ────────────────────────────────────────────────────
+    include_file "themes/flavour-pcgenzano/layouts/shortcodes/foto.html" "8. Shortcode foto" "go-html-template"
 
-# ── 9. Data files chiave ─────────────────────────────────────────────────────
-echo -e "\n## 9. Data files chiave\n\nFile sotto \`data/\` che alimentano il rendering. Le modifiche qui sono il modo principale per aggiornare contenuti dinamici senza toccare i template.\n\n---\n" >> "$OUTPUT"
-include_file "data/numeri_utili.yaml" "9.1 numeri_utili.yaml" "yaml"
-include_file "data/emergenza.json" "9.2 emergenza.json" "json"
-include_file "data/allerta.json" "9.3 allerta.json (esempio struttura)" "json"
+    # ── 9. Data files chiave ─────────────────────────────────────────────────
+    echo -e "\n## 9. Data files chiave\n\nFile sotto \`data/\` che alimentano il rendering. Le modifiche qui sono il modo principale per aggiornare contenuti dinamici senza toccare i template.\n\n---\n" >> "$OUTPUT"
+    include_file "data/numeri_utili.yaml" "9.1 numeri_utili.yaml" "yaml"
+    include_file "data/emergenza.json" "9.2 emergenza.json" "json"
+    include_file "data/allerta.json" "9.3 allerta.json (esempio struttura)" "json"
 
-# ── 10. Workflow GitHub Actions ──────────────────────────────────────────────
-echo -e "\n## 10. Workflow GitHub Actions principali\n\nIl sito ha 9 workflow attivi. Includiamo i 3 più importanti per dare contesto all'AI: deploy, audit completo (38 sezioni), smoke test post-deploy. Gli altri 6 sono descritti in CLAUDE.md sezione 'Automazioni periodiche'.\n\n---\n" >> "$OUTPUT"
-include_file ".github/workflows/deploy.yml" "10.1 deploy.yml — build + Aruba + GitHub Pages" "yaml"
-include_file ".github/workflows/audit-sito.yml" "10.2 audit-sito.yml — 38 sezioni di audit completo (lun 09:00)" "yaml"
-include_file ".github/workflows/smoke-test-post-deploy.yml" "10.3 smoke-test-post-deploy.yml — verifica live post-deploy" "yaml"
+    # ── 10. Workflow GitHub Actions ──────────────────────────────────────────
+    echo -e "\n## 10. Workflow GitHub Actions principali\n\nIl sito ha 9 workflow attivi. Includiamo i 3 più importanti per dare contesto all'AI: deploy, audit completo (38 sezioni), smoke test post-deploy. Gli altri 6 sono descritti in CLAUDE.md sezione 'Automazioni periodiche'.\n\n---\n" >> "$OUTPUT"
+    include_file ".github/workflows/deploy.yml" "10.1 deploy.yml — build + Aruba + GitHub Pages" "yaml"
+    include_file ".github/workflows/audit-sito.yml" "10.2 audit-sito.yml — 38 sezioni di audit completo (lun 09:00)" "yaml"
+    include_file ".github/workflows/smoke-test-post-deploy.yml" "10.3 smoke-test-post-deploy.yml — verifica live post-deploy" "yaml"
 
-# ── 11. Script di automazione ────────────────────────────────────────────────
-echo -e "\n## 11. Script di automazione\n\nScript in \`scripts/\` che l'AI può consigliare all'utente di lanciare in caso di bisogno.\n\n---\n" >> "$OUTPUT"
-include_file "scripts/smoke-test-live.sh" "11.1 smoke-test-live.sh — smoke test del sito live (50+ controlli)" "bash"
-include_file "scripts/applica-fascia-foto.sh" "11.2 applica-fascia-foto.sh — fascia blu istituzionale per foto utente" "bash"
+    # ── 11. Script di automazione ────────────────────────────────────────────
+    echo -e "\n## 11. Script di automazione\n\nScript in \`scripts/\` che l'AI può consigliare all'utente di lanciare in caso di bisogno.\n\n---\n" >> "$OUTPUT"
+    include_file "scripts/smoke-test-live.sh" "11.1 smoke-test-live.sh — smoke test del sito live (50+ controlli)" "bash"
+    include_file "scripts/applica-fascia-foto.sh" "11.2 applica-fascia-foto.sh — fascia blu istituzionale per foto utente" "bash"
+fi
 
 # ── 12. Memorie utente (feedback durevoli + project) ─────────────────────────
 MEMORY_DIR="$HOME/.claude/projects/-home-iu0qvw-sito-pc-genzano/memory"
@@ -255,6 +296,7 @@ LINES=$(wc -l < "$OUTPUT" | tr -d ' ')
 # ── Output a terminale ───────────────────────────────────────────────────────
 echo ""
 echo "✓ File generato: $PROJECT_ROOT/$OUTPUT"
+echo "  Modalità:     $MODE_LABEL"
 echo "  Dimensione:   ${SIZE_KB} KB ($SIZE_BYTES byte)"
 echo "  Righe:        $LINES"
 echo "  Commit:       $GIT_COMMIT ($GIT_BRANCH)"
