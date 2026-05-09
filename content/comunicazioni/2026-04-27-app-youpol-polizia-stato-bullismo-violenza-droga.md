@@ -133,10 +133,17 @@ YouPol è gestita direttamente dalla Polizia di Stato. I dati delle segnalazioni
 
 ## Per approfondire
 
-- [Polizia di Stato — Sito ufficiale](https://www.poliziadistato.it/) — sezione *"Per il cittadino"*
-- [Presentazione ufficiale YouPol (PDF)](/manuali/polizia-stato-presentazione-youpol-esserci.pdf) — la guida completa con schermate
-- [App Where Are U: l'app del 112 che ti localizza](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/) — il complemento di YouPol per le emergenze immediate
-- [Le app e i siti ufficiali da avere nel telefono](/comunicazioni/2026-09-14-app-protezione-civile-fonti-ufficiali/)
-- [Numeri utili](/numeri-utili/)
+Sul nostro sito:
+
+- [App Where Are U: l'app del 112 che ti localizza](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/).
+- [Le app e i siti ufficiali da avere nel telefono](/comunicazioni/2026-09-14-app-protezione-civile-fonti-ufficiali/).
+- [Presentazione ufficiale YouPol (PDF)](/manuali/polizia-stato-presentazione-youpol-esserci.pdf).
+- [Numeri utili](/numeri-utili/).
+
+Fonti istituzionali:
+
+- [Polizia di Stato — Sito ufficiale](https://www.poliziadistato.it/).
+- [Ministero dell'Interno](https://www.interno.gov.it/).
+- [GDPR — Regolamento UE 2016/679](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679).
 
 In emergenza: **112**. Per segnalare bullismo, droga o violenza domestica con calma e in modo sicuro: **YouPol**.

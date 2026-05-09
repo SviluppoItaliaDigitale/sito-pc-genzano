@@ -71,8 +71,19 @@ Rispettare regole, procedure e DPI non è un gesto burocratico: è il modo in cu
 
 ## Per approfondire
 
-- [ILO — World Day for Safety and Health at Work](https://www.ilo.org/global/topics/safety-and-health-at-work/events-training/events-meetings/world-day-for-safety/lang--en/index.htm)
-- [INAIL — Settore Protezione Civile](https://www.inail.it/)
-- [Dipartimento Protezione Civile — Formazione](https://www.protezionecivile.gov.it/it/pagina/la-formazione-del-volontariato)
+Sul nostro sito:
+
+- [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/).
+- [Festa del Lavoro: i DPI dei volontari](/comunicazioni/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile/).
+- [Allagamenti, alluvioni e alberi pericolanti: interventi tecnici](/comunicazioni/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici/).
+- [SAFOR-PROCIV — Scuola Alta Formazione PC Lazio](/comunicazioni/2026-05-08-safor-prociv-scuola-alta-formazione-pc-lazio/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [ILO — World Day for Safety and Health at Work](https://www.ilo.org/global/topics/safety-and-health-at-work/events-training/events-meetings/world-day-for-safety/lang--en/index.htm).
+- [INAIL](https://www.inail.it/).
+- [D.Lgs. 81/2008 — Testo Unico Sicurezza sul Lavoro](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81).
+- [Dipartimento Protezione Civile — Formazione](https://www.protezionecivile.gov.it/it/pagina/la-formazione-del-volontariato).
 
 Ricordare il 28 aprile è dire una cosa semplice: **si torna a casa, dopo ogni intervento**. E si torna a casa tutti.

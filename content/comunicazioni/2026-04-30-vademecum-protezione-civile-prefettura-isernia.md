@@ -107,18 +107,22 @@ Il Vademecum è stato scritto **in Molise** e fa esempi che talvolta rimandano a
 
 La logica istituzionale, però, è la stessa per tutto il Paese: il Vademecum della Prefettura di Isernia è un **buon manuale del Sistema nazionale**, utile anche a chi vive nei Castelli Romani.
 
-## Come accedere al documento
+## Per approfondire
 
-Il Vademecum è pubblicato sul sito del **Ministero dell'Interno** ed è liberamente scaricabile:
+Sul nostro sito:
 
-- [Vademecum di Protezione Civile — Prefettura di Isernia (2024, PDF)](https://prefettura.interno.gov.it/sites/default/files/11/2024-09/vademecum_di_protezione_civile_0.pdf)
+- [Il Codice della Protezione Civile (D.Lgs. 1/2018)](/normativa/testo-unico-protezione-civile/).
+- [Capo II — Organizzazione del Servizio nazionale](/normativa/testo-unico-protezione-civile/capo-2-organizzazione/).
+- [Capo IV — Pianificazione di protezione civile](/normativa/testo-unico-protezione-civile/capo-4-pianificazione/).
+- [Capo V — Gestione delle emergenze di rilievo nazionale](/normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali/).
+- [Piano Comunale di Emergenza di Genzano di Roma](/piano-emergenza/).
+- [Catena delle comunicazioni in PC: DPC-COR-COM-COC](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/).
+- [Cos'è la protezione civile in Italia](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/).
+- [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
 
-Per approfondire il quadro giuridico di riferimento del Vademecum, consigliamo la lettura della nostra sintesi divulgativa del **Codice della Protezione Civile**, articolo per articolo.
+Fonti istituzionali:
 
-## Leggi anche
-
-- [Il Codice della Protezione Civile (D.Lgs. 1/2018)](/normativa/testo-unico-protezione-civile/)
-- [Capo II — Organizzazione del Servizio nazionale](/normativa/testo-unico-protezione-civile/capo-2-organizzazione/)
-- [Capo IV — Pianificazione di protezione civile](/normativa/testo-unico-protezione-civile/capo-4-pianificazione/)
-- [Capo V — Gestione delle emergenze di rilievo nazionale](/normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali/)
-- [Piano Comunale di Emergenza di Genzano di Roma](/piano-emergenza/)
+- [Vademecum di Protezione Civile — Prefettura di Isernia (2024, PDF)](https://prefettura.interno.gov.it/sites/default/files/11/2024-09/vademecum_di_protezione_civile_0.pdf).
+- [Ministero dell'Interno — Prefetture](https://www.interno.gov.it/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).

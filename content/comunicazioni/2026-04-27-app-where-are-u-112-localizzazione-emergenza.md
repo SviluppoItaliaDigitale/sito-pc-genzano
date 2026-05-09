@@ -133,10 +133,20 @@ Dedica **15 minuti** in una sera per installarla insieme, compilare il profilo, 
 
 ## Per approfondire
 
-- Articolo: [Chiamare il 112: come fare bene una segnalazione di emergenza](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/)
-- Articolo: [11 febbraio: Giornata Europea del 112](/comunicazioni/2026-02-11-giornata-europea-112-numero-unico/)
-- Articolo: [Le app e i siti ufficiali da avere nel telefono](/comunicazioni/2026-09-14-app-protezione-civile-fonti-ufficiali/)
-- Pagina: [Numeri utili](/numeri-utili/)
-- Pagina: [Cosa fare adesso](/cosa-fare-adesso/)
+Sul nostro sito:
+
+- [Chiamare il 112: come fare bene una segnalazione di emergenza](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/).
+- [11 febbraio: Giornata Europea del 112](/comunicazioni/2026-02-11-giornata-europea-112-numero-unico/).
+- [Le app e i siti ufficiali da avere nel telefono](/comunicazioni/2026-09-14-app-protezione-civile-fonti-ufficiali/).
+- [App YouPol Polizia di Stato](/comunicazioni/2026-04-27-app-youpol-polizia-stato-bullismo-violenza-droga/).
+- [ISO 22322 — Public warning e IT-alert](/comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/).
+- [Numeri utili](/numeri-utili/).
+- [Cosa fare adesso](/cosa-fare-adesso/).
+
+Fonti istituzionali:
+
+- [Where Are U — sito ufficiale](https://www.wherareu.it/).
+- [EENA — European Emergency Number Association](https://eena.org/).
+- [Ministero dell'Interno — NUE 112](https://www.interno.gov.it/).
 
 In emergenza: **112**. Con **Where Are U**, il 112 sa anche **dove** sei.

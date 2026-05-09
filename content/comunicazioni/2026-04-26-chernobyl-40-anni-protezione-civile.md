@@ -2,7 +2,6 @@
 title: "Chernobyl, 40 anni dopo: cosa ha insegnato alla protezione civile italiana"
 date: 2026-04-26T00:02:00+02:00
 description: "Il 26 aprile 1986 esplodeva Chernobyl: come quel disastro ha cambiato la protezione civile italiana, il monitoraggio radiologico e la comunicazione."
-
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -11,7 +10,6 @@ image_alt: "Copertina dell'articolo: Chernobyl, 40 anni dopo: cosa ha insegnato 
 scadenza: ""
 area: "Italia · sistema nazionale"
 allegati: []
-
 draft: false
 ---
 
@@ -78,16 +76,20 @@ Quarant'anni dopo, le foto del reattore numero 4 restano un monumento a ciò che
 
 L'Italia ha imparato la lezione. Continueremo a impararla, perché un sistema di protezione civile non è mai "finito" e un cittadino preparato vale più di mille piani sulla carta.
 
-## Per approfondire (fonti istituzionali)
+## Per approfondire
 
-- [Dipartimento di Protezione Civile — Rischio nucleare e radiologico](https://www.protezionecivile.gov.it/it/rischio/rischio-nucleare/)
-- [ISIN — Ispettorato Nazionale per la Sicurezza Nucleare e la Radioprotezione](https://www.isinucleare.it/)
-- [ISS — Sistema RESORAD](https://www.iss.it/)
-- [IAEA — The Chernobyl Accident (rapporto ufficiale, in inglese)](https://www.iaea.org/topics/chornobyl)
-- [Piano nazionale per la gestione delle emergenze radiologiche e nucleari (2022)](https://www.protezionecivile.gov.it/it/normativa/piano-nazionale-la-gestione-delle-emergenze-radiologiche-e-nucleari/)
+Sul nostro sito:
 
-## Approfondimenti dal nostro archivio
+- [Cos'è la protezione civile in Italia: dall'Irpinia a Vermicino](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/).
+- [Quarant'anni del Gruppo Comunale Volontari di Genzano](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/).
+- [Catena delle comunicazioni in emergenza: DPC-COR-COM-COC](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/).
+- [Cartelli di pericolo delle sostanze pericolose](/comunicazioni/2026-05-24-cartelli-pericolo-sostanze-pericolose-riconoscere-agire/).
+- [Rischio chimico e industriale per i cittadini](/comunicazioni/2026-05-24-rischio-chimico-industriale-cittadini/).
 
-- [Cos'è la protezione civile in Italia: dall'Irpinia a Vermicino, la nascita di un sistema](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/)
-- [Quarant'anni del Gruppo Comunale Volontari di Genzano](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/)
-- [Come funziona la catena di comunicazione in emergenza: DPC, COR, COC](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/)
+Fonti istituzionali:
+
+- [Dipartimento Protezione Civile — Rischio nucleare e radiologico](https://www.protezionecivile.gov.it/it/rischio/rischio-nucleare/).
+- [ISIN — Ispettorato Nazionale per la Sicurezza Nucleare e la Radioprotezione](https://www.isinucleare.it/).
+- [ISS — Sistema RESORAD](https://www.iss.it/).
+- [IAEA — The Chernobyl Accident](https://www.iaea.org/topics/chornobyl).
+- [Piano nazionale emergenze radiologiche e nucleari (2022)](https://www.protezionecivile.gov.it/it/normativa/piano-nazionale-la-gestione-delle-emergenze-radiologiche-e-nucleari/).

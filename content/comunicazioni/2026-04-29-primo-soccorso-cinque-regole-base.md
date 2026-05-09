@@ -80,16 +80,20 @@ Il sistema sanitario regionale e le associazioni di volontariato (Croce Rossa It
 
 ## Per approfondire
 
-- Articolo: [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/)
-- Articolo: [Malori estivi: riconoscere colpo di calore e ictus](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/)
-- Articolo: [Il Gruppo riceve un defibrillatore dalla Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/)
-- Articolo: [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/)
-- Articolo: [Giornata mondiale della Croce Rossa e Mezzaluna Rossa](/comunicazioni/2026-05-08-giornata-mondiale-croce-rossa-mezzaluna/)
+Sul nostro sito:
 
-## Fonti
+- [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/).
+- [Malori estivi: riconoscere colpo di calore e ictus](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/).
+- [Il Gruppo riceve un defibrillatore dalla Regione Lazio](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/).
+- [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/).
+- [Giornata mondiale della Croce Rossa e Mezzaluna Rossa](/comunicazioni/2026-05-08-giornata-mondiale-croce-rossa-mezzaluna/).
+- [Primo soccorso — area tematica](/formazione/primo-soccorso/).
 
-- [Italian Resuscitation Council (IRC)](https://www.ircouncil.it/)
-- [Ministero della Salute — Primo soccorso](https://www.salute.gov.it/)
-- [European Resuscitation Council](https://www.erc.edu/)
+Fonti istituzionali:
+
+- [Italian Resuscitation Council (IRC)](https://www.ircouncil.it/).
+- [European Resuscitation Council](https://www.erc.edu/).
+- [Ministero della Salute](https://www.salute.gov.it/).
+- [Croce Rossa Italiana](https://www.cri.it/).
 
 Conoscere cinque regole non fa di nessuno un soccorritore professionista. Ma in un mondo in cui tutti conoscessero almeno queste cinque regole, molte più persone tornerebbero a casa dopo un malore.
