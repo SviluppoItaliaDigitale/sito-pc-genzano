@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-L'**ultima domenica di marzo** scattano **le lancette in avanti**: si passa dall'**ora solare** all'**ora legale**. Il cambio — mantenuto in Italia anche dopo che altri paesi europei hanno iniziato a discuterne l'abolizione — segna simbolicamente l'**arrivo della primavera**.
+L'**ultima domenica di marzo** scattano **le lancette in avanti**: si passa dall'**ora solare** all'**ora legale**. Il cambio segna simbolicamente l'**arrivo della primavera**.
 
 Per la Protezione Civile è un **buon momento** per avviare le attività stagionali tipiche della bella stagione: preparazione agli incendi boschivi, pulizia delle aree, esercitazioni, controlli sui mezzi, manutenzione dei kit.
 
@@ -55,7 +55,7 @@ In questo periodo dell'anno il Gruppo Comunale si attiva su diversi fronti:
 
 ### Ripasso formativo
 
-Prima della stagione "calda" (giugno-settembre), è buona prassi **ripassare** le tecniche antincendio, le radiocomunicazioni, il primo soccorso. Esercitazioni pratiche brevi mantengono l'efficienza operativa.
+Prima della stagione calda (giugno-settembre), **ripassate** le tecniche antincendio, le radiocomunicazioni, il primo soccorso. Esercitazioni pratiche brevi mantengono l'efficienza operativa.
 
 ### Sopralluoghi sul territorio
 
@@ -89,8 +89,8 @@ Se hai un **giardino**, **cortile**, **orto**, **vigna**:
 
 - **Rimuovi sterpaglie** e legname accumulato nell'inverno.
 - **Pulisci le aree** a ridosso della casa (10 metri liberi da combustibile).
-- **Pota rami secchi** e li allontana in modo ordinato.
-- **Verifica siepi, alberi ad alto fusto**: lo stato sanitario dopo l'inverno.
+- **Pota i rami secchi** e allontanali in modo ordinato.
+- **Verifica siepi e alberi ad alto fusto**: controlla il loro stato sanitario dopo l'inverno.
 
 Ne abbiamo parlato nell'articolo su [prevenzione incendi e pulizia dei terreni](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/).
 
@@ -138,4 +138,4 @@ Il Gruppo parteciperà a diverse attività, e ne racconteremo su questo sito. La
 - Articolo: [Pulizia terreni e prevenzione incendi](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/)
 - Articolo: [Check-list casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
 
-Cambia l'ora, cambia la stagione, cambia il passo. La Protezione Civile accompagna il territorio anche in queste piccole, silenziose transizioni.
+Il cambio stagionale è il momento giusto per aggiornare il kit, fare i sopralluoghi e riprendere i contatti con il Gruppo. Piccoli gesti continui che rendono la comunità più pronta.

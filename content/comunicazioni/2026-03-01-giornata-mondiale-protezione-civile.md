@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Il **1° marzo** di ogni anno si celebra la **Giornata Mondiale della Protezione Civile** (*World Civil Defence Day*), istituita dall'**Organizzazione Internazionale di Protezione Civile** (ICDO/OIPC) nel **1990**. La data ricorda l'anniversario dell'**entrata in vigore della Costituzione dell'OIPC**, avvenuta il 1° marzo 1972, dopo la trasformazione dell'organizzazione internazionale di soccorso fondata negli anni Trenta.## Cos'è l'OIPC
+Il **1° marzo** è la **Giornata Mondiale della Protezione Civile** (*World Civil Defence Day*). L'ha istituita nel **1990** l'**Organizzazione Internazionale di Protezione Civile** (ICDO/OIPC). La data ricorda il 1° marzo 1972, quando è entrata in vigore la Costituzione dell'OIPC dopo la trasformazione dell'organizzazione di soccorso fondata negli anni Trenta.
+
+## Cos'è l'OIPC
 
 L'**Organizzazione Internazionale di Protezione Civile** è un'agenzia intergovernativa con sede a Ginevra che riunisce le autorità nazionali di Protezione Civile di **circa 60 Paesi membri** e oltre 20 osservatori. Il suo scopo è promuovere la **cooperazione internazionale** nel campo della prevenzione e gestione dei disastri, attraverso:
 
@@ -39,11 +41,11 @@ Ogni anno la Giornata Mondiale ha un **tema specifico** scelto dall'OIPC per ori
 - La resilienza delle comunità locali
 - Il cambiamento climatico e gli eventi estremi
 
-Sul sito dell'OIPC si trovano ogni anno i materiali ufficiali della campagna, scaricabili e condivisibili.
+I materiali ufficiali della campagna — scaricabili e condivisibili — sono pubblicati ogni anno sul [sito OIPC](https://icdo.org/).
 
 ## Tre cose che puoi fare il 1° marzo
 
-La Giornata Mondiale non è solo una ricorrenza istituzionale: è un'occasione per **agire come cittadino**. Tre proposte concrete:
+La Giornata Mondiale è un'occasione per **agire come cittadino**. Tre proposte concrete:
 
 1. **Rivedi il tuo Piano Familiare di Emergenza.** Compilalo se non l'hai mai fatto, aggiornalo se è di vecchia data: dura solo 15 minuti e può fare la differenza in un'emergenza vera. Vai alla pagina [Piano Familiare](/piano-familiare/): è uno strumento digitale interattivo, i dati restano sul tuo computer.
 
@@ -53,7 +55,7 @@ La Giornata Mondiale non è solo una ricorrenza istituzionale: è un'occasione p
 
 ## A Genzano
 
-Il nostro Gruppo Comunale Volontari di Protezione Civile partecipa alla Giornata Mondiale con iniziative di sensibilizzazione. Il **1° marzo** è anche un'occasione utile per **diventare volontario**: se vuoi entrare nel nostro gruppo, è il momento giusto per cominciare il percorso. Vai alla pagina [Diventa Volontario](/diventa-volontario/) per i dettagli.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano partecipa alla Giornata Mondiale con iniziative di sensibilizzazione. Se vuoi entrare nel Gruppo, inizia dalla pagina [Diventa Volontario](/diventa-volontario/).
 
 ## Per saperne di più
 

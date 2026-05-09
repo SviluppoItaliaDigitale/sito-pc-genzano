@@ -39,7 +39,7 @@ I Castelli Romani hanno una storia idrica ricca:
 
 Il livello del **Lago di Albano** è monitorato da anni ed è al centro di dibattito tra studiosi: l'abbassamento progressivo ha cause multiple (meno piogge, prelievi, cambiamenti idrogeologici del bacino).
 
-La qualità dell'acqua potabile distribuita è controllata dal **gestore idrico** con analisi periodiche e pubblicate. È buona prassi consultare i report annuali.
+La qualità dell'acqua potabile distribuita è controllata dal **gestore idrico** con analisi periodiche. Consulta i report annuali del gestore per la tua zona.
 
 ## Quando l'acqua è un rischio
 
@@ -68,7 +68,7 @@ Rotture importanti che lasciano quartieri o interi comuni senza acqua per ore o 
 - **Non lasciare scorrere** l'acqua quando non necessaria (lavaggio denti, sapone sui piatti).
 - **Doccia invece del bagno**: risparmio fino al 70%.
 - **Lavatrice e lavastoviglie** a pieno carico.
-- **Riutilizzare** acqua pulita (es. acqua di cottura verdure per innaffiare).
+- **Riutilizza** acqua pulita (es. acqua di cottura verdure per innaffiare).
 - **Riparare perdite** domestiche: un rubinetto che gocciola disperde migliaia di litri all'anno.
 
 ### Scorta di emergenza
@@ -91,18 +91,18 @@ Se vedi una **perdita in strada** o su una tubazione pubblica, segnala al gestor
 
 In caso di **emergenza** o **contaminazione**:
 
-- **Seguire sempre le ordinanze** sul non consumare acqua dal rubinetto.
-- **Bollire l'acqua** (almeno 1 minuto) se indicato dal gestore.
+- **Rispetta le ordinanze** di non consumare acqua dal rubinetto.
+- **Bolli l'acqua** (almeno 1 minuto) se indicato dal gestore.
 - **Non bere da fontane** non certificate come potabili.
 - **Non dare acqua contaminata agli animali**.
 
-Per **bambini piccoli e persone fragili**, preferire sempre acqua imbottigliata sicura in caso di dubbio.
+Per **bambini piccoli e persone fragili**, usa sempre acqua imbottigliata sicura in caso di dubbio.
 
 ## Acqua e salute
 
 ### Idratazione
 
-Gli adulti hanno bisogno in media di **1,5-2 litri di acqua al giorno**. Di più in estate o con attività fisica. Le persone anziane sentono meno la sete: **ricordarsi di bere**.
+Gli adulti hanno bisogno in media di **1,5-2 litri di acqua al giorno**. Di più in estate o con attività fisica. Le persone anziane sentono meno la sete: **ricorda di farle bere**.
 
 ### Qualità
 
@@ -124,7 +124,7 @@ Il **22 marzo** è un'occasione per:
 - **Partecipare** a iniziative con le scuole sull'acqua.
 - **Controllare** la propria casa: ci sono perdite? rubinetti che gocciolano?
 - **Informarsi** sulla qualità dell'acqua di Genzano attraverso il gestore.
-- **Riflettere** su quanto diamo per scontato un rubinetto che apre.
+- **Controllare** se il proprio Comune ha un piano per le emergenze idriche.
 
 ## Per approfondire
 
@@ -134,4 +134,4 @@ Il **22 marzo** è un'occasione per:
 - Articolo: [Giornata mondiale zone umide](/comunicazioni/2026-02-02-giornata-zone-umide-rischio-idrogeologico/)
 - Articolo: [Allagamenti urbani: cosa fare](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
 
-L'acqua che scorre dal nostro rubinetto è un piccolo miracolo quotidiano. Non diamolo per scontato.
+Gestire bene l'acqua oggi — evitare sprechi, segnalare perdite, tenere una scorta di emergenza — significa ridurre i rischi per sé e per la comunità domani.
