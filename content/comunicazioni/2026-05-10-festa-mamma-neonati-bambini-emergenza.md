@@ -13,9 +13,9 @@ allegati: []
 draft: false
 ---
 
-La **Festa della Mamma** è un'occasione per pensare alla cura delle persone a cui vogliamo più bene. In un piano di emergenza familiare, **neonati e bambini piccoli** richiedono attenzioni particolari: hanno bisogni specifici, non possono spiegare cosa stanno sentendo, dipendono completamente dagli adulti.
+La **Festa della Mamma** è una buona occasione per mettere ordine nelle cose pratiche di casa. Una di queste è il **piano di emergenza familiare**: per neonati e bambini piccoli servono attenzioni in più, perché hanno bisogni specifici, non sanno spiegare cosa sentono e dipendono dagli adulti.
 
-Questo articolo raccoglie alcune indicazioni pratiche per chi ha figli piccoli in casa.
+Questa guida raccoglie indicazioni pratiche per chi ha figli piccoli in casa.
 
 ## Il kit aggiuntivo per bambini
 
@@ -47,7 +47,7 @@ Oltre al [kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-do
 - **Crema solare e cappello** se serve stare fuori a lungo.
 - **Una piccola torcia** loro, che conoscono.
 
-## La **scheda del bambino**
+## La scheda del bambino
 
 È utile preparare una scheda con:
 
@@ -62,6 +62,8 @@ Oltre al [kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-do
 Tieni la scheda dentro lo zaino, in un contenitore impermeabile. In emergenza, un soccorritore ha informazioni cruciali in due secondi.
 
 ## Cosa fare in caso di emergenza improvvisa
+
+In ogni emergenza che mette a rischio la vita o la salute, il numero da chiamare è **112** (Numero Unico Emergenze). Non chiamare il pediatra prima del 112: dopo, sì, sempre.
 
 ### Se sei sola/o con un neonato
 
@@ -79,9 +81,9 @@ Tieni la scheda dentro lo zaino, in un contenitore impermeabile. In emergenza, u
 
 ### Se sei in evacuazione
 
-- **Conta i bambini ogni pochi minuti**: in situazioni confuse è facile perdersi.
-- **Ripeti ai bambini il tuo nome e il tuo numero di telefono** prima di uscire: se si perdono, sapranno dirlo.
-- **Metti un foglietto con dati** in tasca a ogni bambino: nome, numero del genitore, eventuali allergie o condizioni mediche.
+- **Conta i bambini spesso**: in situazioni confuse è facile perdersi.
+- **Fai ripetere ai bambini il tuo nome e il tuo numero di telefono** prima di uscire. Se si separano, sapranno cosa dire a chi li aiuta.
+- **Metti un foglietto in tasca a ogni bambino** con: nome del bambino, numero del genitore, allergie o condizioni mediche se ci sono.
 
 ## Dopo l'emergenza
 
@@ -105,8 +107,15 @@ Dedica oggi un'ora a preparare il kit dei bambini, a scrivere la scheda personal
 
 ## Per approfondire
 
-- [Società Italiana di Pediatria](https://sip.it/)
-- [UNICEF — Bambini e emergenze](https://www.unicef.it/)
-- Articolo correlato: [Piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
+Sul nostro sito:
+
+- [Kit Calamità — Neonati](/formazione/kit-calamita-neonati/): scheda A4 stampabile dedicata.
+- [Kit Calamità — Bambini](/formazione/kit-calamita-bambini/): scheda A4 stampabile per la fascia 1-10 anni.
+- [Piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/).
+
+Fonti istituzionali:
+
+- [Società Italiana di Pediatria (SIP)](https://sip.it/).
+- [UNICEF Italia — bambini in emergenza](https://www.unicef.it/).
 
 **Buona Festa della Mamma**. A tutte le madri, e a tutti coloro che ogni giorno accudiscono i più piccoli: preparare un piano di emergenza è una delle forme più concrete di cura.
