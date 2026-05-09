@@ -118,19 +118,19 @@ Le attivazioni fuori regione passano attraverso la **Regione** del Gruppo, non p
 ## La comunità dei volontari
 
 Partecipare a grandi eventi permette di conoscere volontari da tutta Italia:
-- **Scambi** di contatti e amicizie.
-- **Comunità online** permanenti.
-- **Esercitazioni** comuni negli anni successivi.
-- **Visite** in tempi ordinari.
+- **Scambio** di contatti e nascita di amicizie.
+- **Comunità online** che restano attive negli anni.
+- **Esercitazioni** congiunte negli anni successivi.
+- **Visite reciproche** anche fuori dai contesti di emergenza.
 
 Questa comunità è uno dei **capitali sociali** più forti del Paese.
 
 ## Gemellaggi internazionali
 
 Alcuni Gruppi italiani hanno sviluppato gemellaggi con organizzazioni di PC di altri Paesi:
-- **Francia** (Protection Civile).
-- **Germania** (Bundesamt für Bevölkerungsschutz).
-- **Paesi dell'UE** attraverso il Meccanismo Unionale.
+- **Francia** (Protection Civile française).
+- **Germania** (BBK — Bundesamt für Bevölkerungsschutz und Katastrophenhilfe).
+- **Altri Paesi UE** attraverso il Meccanismo Unionale di Protezione Civile.
 
 Questi scambi consolidano **interoperabilità** in ottica di emergenze transfrontaliere.
 

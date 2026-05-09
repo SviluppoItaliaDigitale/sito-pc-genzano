@@ -45,7 +45,7 @@ I laghi di **Nemi** e **Albano** sono un elemento paesaggistico e idrologico cen
 - **Falde** dei Monti Albani sempre più sollecitate.
 - **Fonti** storiche con portate ridotte.
 
-La **Parco dei Castelli Romani** lavora su sorveglianza e tutela.
+Il **Parco Regionale dei Castelli Romani** lavora su sorveglianza e tutela.
 
 ## I tipi di siccità
 
@@ -73,21 +73,20 @@ Il cambiamento climatico **accelera** tutti questi fattori.
 Ogni cittadino può fare la differenza. Gesti concreti:
 
 ### In casa
-- **Chiudere il rubinetto** mentre ci si lava i denti (risparmio 10-15 L/uso).
-- **Doccia corta** invece che bagno in vasca.
-- **Lavatrice** a pieno carico.
-- **Lavastoviglie** a pieno carico.
-- **Riparare** perdite d'acqua.
-- **Rubinetti aeratori** e soffioni a basso consumo.
-- **Acqua del bollitore** non gettata ma usata per irrigazione.
+- **Chiudere il rubinetto** mentre ci si lava i denti: 10-15 litri risparmiati ogni volta.
+- **Fare** docce brevi invece del bagno in vasca.
+- **Avviare** lavatrice e lavastoviglie solo a pieno carico.
+- **Riparare** subito perdite e gocciolamenti dei rubinetti.
+- **Installare** rubinetti con aeratori e soffioni a basso consumo.
+- **Riutilizzare** l'acqua del bollitore o di lavaggio della frutta per innaffiare le piante.
 
 ### In giardino
 - **Irrigare** la sera o al mattino presto.
-- **Pacciamatura** per trattenere umidità.
-- **Piante autoctone** a basso fabbisogno idrico.
-- **Impianti** a goccia invece che sprinkler.
-- **Acqua piovana** raccolta e riutilizzata.
-- **Non lavare** auto con acqua potabile.
+- **Stendere** uno strato di pacciamatura per trattenere l'umidità del terreno.
+- **Scegliere** piante autoctone, a basso fabbisogno idrico.
+- **Usare** impianti a goccia invece degli sprinkler.
+- **Raccogliere** l'acqua piovana per il riutilizzo.
+- **Non lavare** l'auto con acqua potabile.
 
 ### In generale
 - **Evitare** sprechi evidenti.
@@ -181,10 +180,10 @@ Il Gruppo di PC di Genzano può:
 ## Educare i bambini al risparmio
 
 L'educazione idrica comincia in famiglia:
-- **Spiegare** il valore dell'acqua.
-- **Rendere** giochi semplici comportamenti utili (chi ci mette meno tempo sotto la doccia).
-- **Visitare** fontane, sorgenti, laghi.
-- **Collegare** acqua e natura.
+- **Spiega** il valore dell'acqua con esempi quotidiani.
+- **Trasforma** in gioco i comportamenti utili: chi ci mette meno tempo sotto la doccia.
+- **Visita** fontane, sorgenti, laghi del territorio.
+- **Collega** acqua e natura nelle uscite all'aperto.
 
 I bambini di oggi saranno **i cittadini** della transizione idrica.
 

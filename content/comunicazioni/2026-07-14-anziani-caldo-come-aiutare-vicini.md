@@ -48,30 +48,30 @@ Non serve essere invadenti. Segnali che possono indicare una situazione:
 
 ## Approcciarsi con rispetto
 
-Un anziano **non vuole sentirsi controllato** né compatito. L'approccio:
-- **Naturale e cordiale**: saluto quotidiano, presentazione informale.
-- **Gradualmente** si propone aiuto ("se ha bisogno di qualcosa…").
-- **Rispetto** della riservatezza.
-- **Senza** pressione.
-- **Offerta** di piccoli gesti concreti prima di grandi proposte.
+Un anziano **non vuole sentirsi controllato** né compatito. L'approccio giusto:
+- **Sii** naturale e cordiale: un saluto quotidiano basta per iniziare.
+- **Proponi** l'aiuto in modo graduale ("se ha bisogno di qualcosa, mi dica...").
+- **Rispetta** la sua riservatezza.
+- **Non insistere** mai con pressione.
+- **Comincia** con piccoli gesti concreti prima di proposte impegnative.
 
 Molti anziani **rifiutano l'aiuto** inizialmente per orgoglio o vergogna. Insistere gentilmente funziona.
 
 ## Gesti concreti in un'ondata di calore
 
 ### Quotidiani
-- **Passare** a salutare 1 volta al giorno.
-- **Portare** una bottiglia d'acqua fresca.
-- **Lasciare** un numero di telefono da chiamare in caso di malore.
-- **Aiutare** con piccole commissioni (farmacia, spesa).
+- **Passa** a salutare almeno una volta al giorno.
+- **Porta** una bottiglia d'acqua fresca.
+- **Lascia** il tuo numero di telefono per ogni malore.
+- **Aiuta** con piccole commissioni (farmacia, spesa).
 
 ### In caso di ondata di calore
-- **Verificare** che il condizionatore o ventilatore sia acceso.
-- **Offrire** ospitalità nella propria casa se più fresca.
-- **Monitorare** sintomi (confusione, stanchezza, febbre).
-- **Aiutare** con l'acquisto di frutta fresca.
-- **Stimolare** a bere acqua regolarmente.
-- **Chiamare** i familiari se la situazione peggiora.
+- **Verifica** che il condizionatore o il ventilatore sia acceso.
+- **Offri** ospitalità nella tua casa se è più fresca.
+- **Osserva** i sintomi: confusione, stanchezza, febbre.
+- **Procurati** frutta fresca per lui.
+- **Ricordagli** di bere acqua regolarmente.
+- **Avvisa** i familiari se la situazione peggiora.
 
 ## Sintomi da non ignorare
 
