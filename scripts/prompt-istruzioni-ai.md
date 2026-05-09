@@ -67,12 +67,36 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 description: "Una frase di sintesi, sotto i 160 caratteri."
 image: ""
 image_alt: ""
-area: ""
+area: "Castelli Romani"
 scadenza: ""
 allegati: []
 draft: false
 ---
 ```
+
+**Significato dei campi non ovvi:**
+- `area`: **zona geografica** dell'articolo, NON categoria di rischio. Esempi validi: *"Castelli Romani"*, *"Genzano centro storico"*, *"Lago di Nemi"*, *"Provincia di Roma"*. Esempi sbagliati (questi sono `badge` o `description`): *"Rischio meteo-idro"*, *"Allerta gialla"*, *"Prevenzione"*. Se l'articolo non ha una zona specifica (è generico), lascia stringa vuota `""`.
+- `scadenza`: data oltre la quale l'articolo perde rilevanza (eventi, allerte temporanee). Per articoli evergreen di prevenzione/formazione: `""`.
+- `priorita`: `"normale"` di default. Usa `"urgente"` solo per articoli che chiedono azione immediata al cittadino (allerta meteo arancione/rossa in corso, evacuazione, emergenza dichiarata).
+
+### Link interni — collega le pagine esistenti del sito
+Quando citi un argomento che ha già una pagina dedicata, **inserisci il link interno** in formato Markdown standard `[testo](/percorso/)`. NON inventare URL: se non sei sicuro che la pagina esista, scrivi solo il testo senza link.
+
+Pagine certe da linkare quando pertinenti:
+
+| Argomento citato nell'articolo | Link da inserire |
+|---|---|
+| Numeri di emergenza, 112, sala operativa | `[Numeri Utili](/numeri-utili/)` |
+| Allerte meteo, bollettini, codici colore | `[Allerte Meteo](/allerte-meteo/)` |
+| Cosa fare in emergenza ora | `[Cosa Fare Adesso](/cosa-fare-adesso/)` |
+| Piano familiare, evacuazione, kit | `[Piano Familiare](/piano-familiare/)` |
+| Rischio specifico (sismico, idro, incendio, vento, calore, blackout) | `[Rischi e Prevenzione](/rischi-prevenzione/)` o pagina specifica `/rischi-prevenzione/incendio/` |
+| Cartografia, mappe, aree di emergenza | `[Cartografia](/cartografia/)` |
+| Volontariato, iscrizioni, attività | `[Diventa Volontario](/diventa-volontario/)` |
+| Formazione, corsi, kit per le scuole | `[Formazione](/formazione/)` |
+| Domande ricorrenti | `[FAQ](/faq/)` |
+| Definizioni di termini tecnici | `[Glossario](/glossario/)` |
+| Documenti scaricabili | `[Area Download](/area-download/)` |
 
 ### Formato data
 - **1 articolo nella giornata** (default): `date: AAAA-MM-GG` semplice.
