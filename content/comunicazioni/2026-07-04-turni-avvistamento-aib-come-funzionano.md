@@ -13,17 +13,17 @@ allegati: []
 draft: false
 ---
 
-Una parte importante dell'estate del volontariato di Protezione Civile nel Lazio è dedicata ai **turni di avvistamento** per il **rischio incendi boschivi** (AIB). Sono attività che richiedono organizzazione, formazione e disponibilità di tempo. Ma producono un risultato chiaro: **rilevare** un principio d'incendio **prima che diventi inarrestabile**.
+D'estate, una parte importante del volontariato di Protezione Civile nel Lazio è dedicata ai **turni di avvistamento** per il **rischio incendi boschivi** (AIB). Servono organizzazione, formazione e disponibilità di tempo. Il risultato è chiaro: **vedere subito** un principio d'incendio, **prima che diventi impossibile da fermare**.
 
 ## Perché l'avvistamento è critico
 
 Un incendio boschivo segue curve molto rapide:
-- **Primi 5 minuti**: pochi metri quadri, gestibile con attrezzature minori.
+- **Primi 5 minuti**: pochi metri quadri, gestibile con attrezzature leggere.
 - **Primi 15 minuti**: qualche decina di metri quadri, ancora contenibile.
 - **Primi 30 minuti**: può estendersi a decine di migliaia di metri quadri.
-- **Dopo 1 ora**: in condizioni critiche diventa un fronte di fuoco di difficile spegnimento.
+- **Dopo 1 ora**: in condizioni critiche diventa un fronte di fuoco difficile da spegnere.
 
-**Avvistare precocemente** = possibilità di intervento efficace. Ogni minuto guadagnato vale chilometri di danno prevenuto.
+**Avvistare presto vuol dire poter intervenire davvero.** Ogni minuto guadagnato è un chilometro di danno evitato.
 
 ## Come funziona l'avvistamento
 
@@ -33,7 +33,7 @@ Esistono diversi modelli di avvistamento:
 - **Postazioni** su punti panoramici (crinali, torri, cime).
 - **Volontari di turno** con binocoli e radio.
 - **Orari di copertura** definiti (tipicamente le ore calde).
-- **Riporto** di fumo o incendio avvistato al Coordinamento.
+- **Comunicazione** al Coordinamento di ogni fumo o incendio avvistato.
 
 ### Avvistamento mobile (pattugliamento)
 - **Squadre in auto** o mezzi fuoristrada.
@@ -75,10 +75,10 @@ Durante un turno:
 1. **Conferma** visivamente l'evento (fumo, fiamme).
 2. **Determina**: posizione approssimata, direzione del vento, dimensione.
 3. **Comunica via radio** al Coordinamento:
-   - Nominativo volontario.
-   - Tipo di evento.
-   - Localizzazione (punti di riferimento).
-   - Caratteristiche (fronte, colore fumo, ecc.).
+   - nome del volontario in turno;
+   - tipo di evento osservato;
+   - posizione con punti di riferimento;
+   - caratteristiche del fronte e colore del fumo.
 4. **Chiama il 112** se istruito dal protocollo.
 5. **Monitora** evoluzione mentre i mezzi arrivano.
 6. **Non intervenire** senza autorizzazione.
@@ -152,4 +152,4 @@ Se sei cittadino interessato a diventare volontario, [contatta il Gruppo](/diven
 - [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
 - [DPC — Rischio incendi boschivi](https://www.protezionecivile.gov.it/it/rischi/rischio-incendi)
 
-Ogni ora di avvistamento è un contributo concreto alla sicurezza del territorio. Anche starsi seduti con un binocolo, in una postazione fresca, è un gesto di cittadinanza.
+Ogni ora di avvistamento è un contributo concreto alla sicurezza del territorio. Anche restare seduti in una postazione fresca, con un binocolo in mano, è un gesto di cittadinanza.

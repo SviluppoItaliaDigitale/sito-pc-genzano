@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Un'**alluvione** in un torrente che attraversa tre Comuni. Un **incendio** che dal Parco dei Castelli arriva a tre aree comunali. Un **terremoto** che colpisce un'intera area. Molte **emergenze** di Protezione Civile superano i confini amministrativi. La legge italiana prevede un sistema di coordinamento ben definito per queste situazioni.
+Un torrente in piena che attraversa tre Comuni. Un incendio nel Parco dei Castelli che si propaga oltre il confine comunale. Un terremoto che colpisce un'intera area: molte **emergenze di Protezione Civile** superano i confini amministrativi. La legge italiana prevede un sistema di coordinamento preciso per queste situazioni.
 
 ## Il principio di sussidiarietà
 
@@ -41,9 +41,9 @@ Il Codice distingue:
 ## La Prefettura (Ufficio Territoriale del Governo)
 
 Fino al 2012 la Prefettura aveva un ruolo operativo forte in PC. Oggi il ruolo è più di **coordinamento politico-amministrativo**:
-- **Rappresenta il Governo** sul territorio provinciale.
-- **Coordina** il Concorso delle forze dell'ordine in emergenza.
-- **Emana** ordinanze contingibili se necessarie.
+- **Rappresenta** il Governo sul territorio provinciale.
+- **Coordina** il concorso delle forze dell'ordine in emergenza.
+- **Emana** ordinanze contingibili e urgenti, quando necessarie.
 - **Attiva** il CCS (Centro Coordinamento Soccorsi).
 
 Il **CCS** a livello provinciale riunisce: Prefetto, Questura, Carabinieri, Vigili del Fuoco, 118/ARES, ENEL, Comuni interessati, Regione.
@@ -76,24 +76,24 @@ Postazioni operative sul teatro dell'emergenza, con uomini e mezzi, gestite dal 
 
 Scenario esemplificativo: incendio nel Parco dei Castelli che coinvolge Genzano, Rocca di Papa e Nemi.
 
-1. **Primo avvistamento** da volontari e cittadini.
-2. **Attivazione 112** con smistamento a VVF.
-3. **Attivazione SOUP** per richiesta mezzi aerei.
-4. **COC** di Genzano attivato, valutazione rischio per abitati.
-5. **COC** di Rocca di Papa e Nemi attivati se coinvolti.
-6. **Prefettura** informata, eventualmente attiva CCS provinciale.
-7. **Coordinamento** tra Comuni per risorse condivise.
-8. **Evacuazione precauzionale** se necessaria.
-9. **Comunicazione** coordinata ai cittadini.
-10. **Dopo**: verifica danni, ripristino.
+1. **Primo avvistamento** da parte di volontari o cittadini.
+2. **Chiamata al 112** che smista l'intervento ai Vigili del Fuoco.
+3. **Attivazione della SOUP** per la richiesta di mezzi aerei.
+4. **COC di Genzano attivato**: valutazione del rischio per gli abitati.
+5. **COC di Rocca di Papa e Nemi attivati** se l'incendio raggiunge il loro territorio.
+6. **Prefettura informata**: se serve, attiva il CCS provinciale.
+7. **Coordinamento** tra Comuni per la condivisione di risorse e mezzi.
+8. **Evacuazione precauzionale** delle zone esposte, se necessaria.
+9. **Comunicazione** coordinata ai cittadini su tutti i canali.
+10. **Dopo l'evento**: verifica dei danni e ripristino.
 
 ## Il ruolo del Gruppo comunale in eventi estesi
 
 Un Gruppo comunale in emergenza estesa:
-- **Opera** sul proprio territorio come prima risposta.
-- **Viene** messo a disposizione di altri COC se richiesto.
-- **Supporta** eventualmente il COI/CCS con rappresentanti.
-- **Si coordina** con Gruppi dei Comuni vicini.
+- **opera** sul proprio territorio come prima risposta;
+- **viene messo** a disposizione di altri COC se richiesto;
+- **supporta** il COI o il CCS con propri rappresentanti, quando serve;
+- **si coordina** con i gruppi dei Comuni vicini.
 
 Nella **colonna mobile regionale** ci sono Gruppi e Associazioni che possono essere mobilitati su teatro di emergenza anche fuori Lazio.
 

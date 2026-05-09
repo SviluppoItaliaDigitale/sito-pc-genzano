@@ -13,17 +13,17 @@ allegati: []
 draft: false
 ---
 
-Le **esercitazioni di Protezione Civile** possono apparire, a chi le guarda da fuori, come "rappresentazioni": squadre che simulano interventi, evacuazioni controllate, attivazione di sale operative. In realtà sono **momenti tecnici** con obiettivi precisi: **verificare piani**, **formare personale**, **integrare sistemi**, **identificare criticità**.
+Viste da fuori, le **esercitazioni di Protezione Civile** sembrano "rappresentazioni": squadre che simulano interventi, evacuazioni controllate, sale operative attivate. In realtà sono **momenti tecnici** con obiettivi precisi: **verificare i piani**, **formare il personale**, **integrare i sistemi**, **trovare le criticità**.
 
 ## Perché si fanno esercitazioni
 
 I motivi principali:
-- **Verificare operativamente** i Piani di PC (a tavolino sembrano perfetti, sul campo rivelano lacune).
+- **Verificare** sul campo i Piani di Protezione Civile: a tavolino sembrano perfetti, sul terreno rivelano lacune.
 - **Addestrare** il personale a procedure complesse.
-- **Integrare** enti diversi (VVF, PC, 118, FF.OO.).
-- **Testare** materiali, mezzi, comunicazioni.
+- **Integrare** enti diversi (Vigili del Fuoco, Protezione Civile, sanità d'emergenza, forze dell'ordine).
+- **Testare** materiali, mezzi e sistemi di comunicazione.
 - **Coinvolgere** la popolazione nell'autoprotezione.
-- **Dimostrare** trasparenza alla cittadinanza.
+- **Garantire** trasparenza verso la cittadinanza.
 
 Le grandi emergenze italiane (terremoti, alluvioni) hanno mostrato che **dove ci sono esercitazioni regolari** la risposta è più rapida ed efficace.
 

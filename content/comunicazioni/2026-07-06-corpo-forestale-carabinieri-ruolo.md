@@ -13,17 +13,17 @@ allegati: []
 draft: false
 ---
 
-Fino al **2016** in Italia esisteva il **Corpo Forestale dello Stato** come corpo di polizia autonomo. Nel **2017**, con la legge 177/2016, il CFS è stato **assorbito nell'Arma dei Carabinieri** diventando il **Comando Unità per la Tutela Forestale, Ambientale e Agroalimentare**. Oggi questo comando svolge un ruolo centrale nella protezione del territorio e nelle indagini su incendi boschivi, molto rilevante per i Castelli Romani.
+Fino al **2016** il **Corpo Forestale dello Stato** era un corpo di polizia autonomo. Nel **2017**, con il D.Lgs. 177/2016, è confluito nell'**Arma dei Carabinieri** ed è diventato il **Comando Unità per la Tutela Forestale, Ambientale e Agroalimentare**. Oggi svolge un ruolo centrale nella protezione del territorio e nelle indagini sugli incendi boschivi, molto importanti anche per i Castelli Romani.
 
 ## La riforma del 2017
 
-La riforma Madia (D.Lgs. 177/2016) ha previsto la fusione del Corpo Forestale nei Carabinieri:
-- **Risparmi** amministrativi.
-- **Maggiore integrazione** con le forze di polizia.
-- **Mantenimento** delle specializzazioni tecnico-ambientali.
-- **Competenze** trasferite a Vigili del Fuoco (parte AIB operativa).
+La riforma Madia (D.Lgs. 177/2016) ha previsto la fusione del Corpo Forestale nei Carabinieri con quattro obiettivi principali:
+- **ridurre** i costi amministrativi;
+- **integrare** maggiormente le forze di polizia;
+- **mantenere** le specializzazioni tecnico-ambientali del vecchio corpo;
+- **trasferire** ai Vigili del Fuoco la parte operativa antincendio boschivo.
 
-Non tutti hanno condiviso la riforma, ma oggi il nuovo assetto è operativo da anni.
+La riforma è stata discussa, ma da anni il nuovo assetto è pienamente operativo.
 
 ## La struttura attuale
 
@@ -104,12 +104,12 @@ Non opera sulle emergenze idrogeologiche o sismiche come primo intervento, ma co
 ## Cosa può fare il cittadino
 
 Se vuoi collaborare con il Corpo Forestale:
-- **Segnala illeciti ambientali** al 1515 (numero operativo dei Carabinieri Forestali).
-- **Denuncia** abbandono rifiuti, tagli abusivi, discariche.
-- **Fornisci informazioni** su incendi dolosi se sei testimone.
-- **Non intervenire** direttamente in situazioni di pericolo.
+- **Per emergenze in corso** (incendio attivo, persona ferita, danni in atto) chiama subito il **112**.
+- **Per segnalazioni non urgenti** (abbandono rifiuti, tagli abusivi, discariche) puoi rivolgerti alla Stazione Forestale del territorio o al numero **1515** dei Carabinieri Forestali.
+- **Fornisci informazioni** su eventuali incendi dolosi di cui sei testimone.
+- **Non intervenire** mai direttamente in situazioni di pericolo.
 
-Il **1515** è il numero storico del Corpo Forestale, ora dei Carabinieri Forestali, usato per segnalazioni ambientali. **Non è** un numero di emergenza: per quello c'è il **112**.
+Il **112** resta l'unico numero da chiamare in emergenza nel Lazio. Il **1515** è una linea dedicata alle segnalazioni ambientali non urgenti.
 
 ## Formazione e ricerca
 
@@ -138,4 +138,4 @@ Il rispetto reciproco delle competenze è la regola.
 - [Parco Regionale Castelli Romani](https://www.parcocastelliromani.it/)
 - [Ministero dell'Interno](https://www.interno.gov.it/)
 
-Il Corpo Forestale cambiato ma resta una risorsa fondamentale per la protezione del territorio. Conoscerne ruolo e competenze aiuta a valorizzarne il lavoro quotidiano.
+Il Corpo Forestale è cambiato, ma resta una risorsa fondamentale per la protezione del territorio. Conoscerne ruolo e competenze aiuta a valorizzarne il lavoro quotidiano.

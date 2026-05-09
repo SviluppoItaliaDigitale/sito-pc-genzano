@@ -103,9 +103,9 @@ Un'auto al sole raggiunge **60-70 °C** internamente in pochi minuti. **Mai lasc
 
 Prima di entrare in auto calda:
 - **Apri** tutti i finestrini.
-- **Ventila** 2-3 minuti.
-- **Climatizzatore** graduale.
-- **Volante** può scottare: tocca prima.
+- **Ventila** l'abitacolo per 2-3 minuti prima di salire.
+- **Accendi** il climatizzatore in modo graduale.
+- **Tocca** il volante con cautela: può scottare.
 
 ### Microsonni e stanchezza
 - **Dormire** 7-8 ore la notte prima.
@@ -124,7 +124,7 @@ Prima di entrare in auto calda:
 - **Fissaggio** corretto nel baule.
 - **Peso** distribuito uniformemente.
 - **Oggetti pesanti in basso**.
-- **Niente** oggetti sciolti sul sedile posteriore (in caso di frenata bruscamente diventano proiettili).
+- **Niente** oggetti sciolti sul sedile posteriore: in caso di frenata brusca diventano proiettili.
 
 ## Cosa fare in caso di panne
 
@@ -160,12 +160,12 @@ La **corsia di emergenza** è riservata a:
 ## Anziani e bambini in viaggio
 
 Soggetti più fragili al caldo e alla stanchezza:
-- **Idratazione** costante.
-- **Soste frequenti**.
-- **Clima** ben regolato (non solo caldo o troppo freddo).
-- **Farmaci** a portata.
-- **Pannolini, cambi, cibo speciale** abbondanti.
-- **Passaggi** al bagno previsti.
+- **Bere** spesso, anche senza sete.
+- **Fare** soste frequenti.
+- **Regolare** il clima a una temperatura intermedia, mai gelida.
+- **Tenere** i farmaci a portata di mano.
+- **Portare** pannolini, cambi e cibo specifico in quantità abbondante.
+- **Pianificare** in anticipo le soste in autogrill o aree di servizio attrezzate.
 
 ## Per approfondire
 
