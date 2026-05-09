@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-La corrente che salta per qualche minuto è un fastidio quotidiano. Un blackout che dura **ore o giorni** è una vera emergenza: si blocca il riscaldamento o la climatizzazione, si fermano frigo e congelatori, cellulari si scaricano, ascensori restano bloccati, semafori si spengono. Negli ultimi anni, con eventi meteo più intensi e reti sempre più sollecitate, gli episodi di lunga durata sono diventati più frequenti anche in Italia.
+La corrente che salta per qualche minuto è un fastidio quotidiano. Un blackout che dura **ore o giorni** è una vera emergenza. Si blocca il riscaldamento o la climatizzazione, si fermano frigo e congelatori, cellulari si scaricano, ascensori restano bloccati, semafori si spengono. Negli ultimi anni, con eventi meteo più intensi e reti sempre più sollecitate, gli episodi di lunga durata sono diventati più frequenti anche in Italia.
 
 Vediamo come prepararsi, cosa fare durante l'evento e cosa controllare al ripristino.
 

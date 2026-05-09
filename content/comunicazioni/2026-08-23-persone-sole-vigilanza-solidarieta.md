@@ -54,7 +54,7 @@ I riferimenti completi sono sul sito del Comune e nella pagina [Numeri Utili](/n
 
 ## La Protezione Civile e la fragilità sociale
 
-La Protezione Civile interviene in situazioni ordinarie ed emergenziali. La **mappatura preventiva** delle persone fragili (in accordo col Comune e la ASL) è uno strumento utile per sapere, in caso di blackout, emergenza idrica, ondata di calore estrema, **chi contattare per primi**. Questa mappatura non sostituisce il medico o i servizi sociali, ma aggiunge un livello di vigilanza.
+La Protezione Civile interviene in situazioni ordinarie ed emergenziali. La **mappatura preventiva** delle persone fragili (in accordo col Comune e la ASL) è uno strumento utile. Serve a sapere, in caso di blackout, emergenza idrica, ondata di calore estrema, **chi contattare per primi**. Questa mappatura non sostituisce il medico o i servizi sociali, ma aggiunge un livello di vigilanza.
 
 ## Un appello
 
