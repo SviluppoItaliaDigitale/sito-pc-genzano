@@ -13,11 +13,13 @@ allegati: []
 draft: false
 ---
 
-Alle **4:17 ora locale del 6 febbraio 2023** una scossa di **magnitudo 7.8** colpì la Turchia sud-orientale, al confine con la Siria settentrionale. Nove ore dopo, alle **13:24**, una seconda scossa di **magnitudo 7.5** colpì la stessa regione, a 90 chilometri di distanza dall'epicentro precedente. Era la sequenza sismica più devastante della storia recente del Mediterraneo orientale.Bilancio finale: **oltre 55.000 morti** (di cui circa 50.000 in Turchia e 6.000 in Siria), **120.000 feriti**, **circa 1,5 milioni di sfollati**. Centinaia di migliaia di edifici crollati, intere città medievali (Antiochia/Hatay) distrutte.
+Alle **4:17 ora locale del 6 febbraio 2023** una scossa di **magnitudo 7.8** colpì la Turchia sud-orientale, al confine con la Siria settentrionale. Nove ore dopo, alle **13:24**, una seconda scossa di **magnitudo 7.5** colpì la stessa regione, a 90 chilometri di distanza dall'epicentro precedente. Secondo i dati USGS ed EMSC, è la sequenza sismica più devastante del Mediterraneo orientale degli ultimi decenni.
+
+Bilancio finale: **oltre 55.000 morti** (di cui circa 50.000 in Turchia e 6.000 in Siria), **120.000 feriti**, **circa 1,5 milioni di sfollati**. Centinaia di migliaia di edifici crollati, intere città medievali (Antiochia/Hatay) distrutte.
 
 ## Una catastrofe di scala continentale
 
-L'evento del 2023 fu generato dalla rottura simultanea di **due segmenti della faglia est-anatolica**, uno dei principali sistemi sismotettonici del Mediterraneo. La sequenza durò ore: oltre **150 scosse superiori a M 4** nei primi tre giorni, decine sopra M 5.
+L'evento del 2023 fu generato dalla rottura simultanea di **due segmenti della faglia est-anatolica** (la grande struttura tettonica che attraversa la Turchia meridionale da est a ovest), uno dei principali sistemi sismici del Mediterraneo. La sequenza durò ore: oltre **150 scosse superiori a M 4** nei primi tre giorni, decine sopra M 5.
 
 {{< foto src="/images/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana-fonte-wikipedia.webp"
          alt="Foto storica: Turchia-Siria, 6 febbraio 2023: il più grande dispiegamento internazionale italiano dopo Haiti"
@@ -35,18 +37,18 @@ Per le dimensioni dell'evento e la vicinanza al Mediterraneo, l'**Italia rispose
          caption="Antakya (l'antica Antiochia): la città medievale fu in gran parte distrutta dalla sequenza sismica del 6 febbraio 2023. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Antakya_Views_from_hill_at_SE_in_1990%27s_05.jpg)." >}}
 
 
-- **Vigili del Fuoco**: oltre 50 unità del Corpo Nazionale, con squadre USAR (Urban Search and Rescue), cinofili da macerie, medici, mezzi mobili.
+- **Vigili del Fuoco**: oltre 50 unità del Corpo Nazionale, con squadre **USAR** (Urban Search and Rescue — ricerca e soccorso in ambiente urbano), cinofili da macerie, medici, mezzi mobili.
 - **Volontariato organizzato**: colonna mobile nazionale del Dipartimento di Protezione Civile, con presidi sanitari, cucine da campo, moduli di accoglienza, **centinaia di volontari** delle organizzazioni nazionali.
 - **Sanitari**: ospedali da campo dell'**Esercito Italiano** e di **EMERGENCY**, equipe del **118**.
 - **Aiuti umanitari**: voli C-130 con tonnellate di materiale (tende, coperte, generatori, viveri).
 
-Anche **Caritas Italiana**, **CRI** (Croce Rossa Italiana) e numerose ONG italiane attivarono operazioni dirette nelle aree colpite, in coordinamento con le autorità locali e con l'Unione Europea (Civil Protection Mechanism).
+Anche **Caritas Italiana**, **CRI** (Croce Rossa Italiana) e numerose ONG italiane attivarono operazioni dirette nelle aree colpite, in coordinamento con le autorità locali e con l'Unione Europea tramite il **Meccanismo di Protezione Civile dell'UE (UCPM — EU Civil Protection Mechanism)**.
 
 ## Cosa ci insegna oggi
 
 Tre lezioni operative dal terremoto Turchia-Siria 2023:
 
-1. **L'Unione Europea ha un meccanismo di Protezione Civile attivo e operativo.** Il **EU Civil Protection Mechanism** (UCPM) coordina la risposta degli Stati membri alle emergenze internazionali. L'Italia è uno dei contributori principali, con il Dipartimento di Protezione Civile come autorità nazionale designata.
+1. **L'Unione Europea ha un meccanismo di Protezione Civile attivo e operativo.** L'**UCPM** coordina la risposta degli Stati membri alle emergenze internazionali. L'Italia è uno dei contributori principali, con il Dipartimento di Protezione Civile come autorità nazionale designata.
 
 2. **Le normative antisismiche valgono solo se applicate.** La Turchia ha una normativa antisismica formalmente adeguata, ma la sua applicazione era irregolare nelle zone colpite. **Costruire bene è una scelta che si paga sempre**: in pace con investimento iniziale, in emergenza con vite umane salvate.
 
