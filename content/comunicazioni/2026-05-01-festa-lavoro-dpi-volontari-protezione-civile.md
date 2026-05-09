@@ -45,19 +45,21 @@ Il volontariato di Protezione Civile opera **a supporto** di queste strutture, n
 
 Il volontariato moderno è una **forma di lavoro civico**: non retribuito economicamente, ma dotato di regole, formazione, dispositivi, assicurazioni e responsabilità. In questo senso la Festa dei Lavoratori parla anche al volontariato: ricorda che dignità e sicurezza non sono un dettaglio, ma la condizione per dare un contributo utile e sostenibile alla comunità.
 
-## Buone letture per il primo maggio
-
-- [Costituzione italiana (testo ufficiale)](https://www.senato.it/istituzione/la-costituzione)
-- [Testo Unico sulla sicurezza sul lavoro — D.Lgs. 81/2008](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/sg)
-- [INAIL — Pubblicazioni](https://www.inail.it/cs/internet/comunicazione/pubblicazioni.html)
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/)
-
 ## Per approfondire
 
-- Articolo: [Giornata mondiale sicurezza sul lavoro](/comunicazioni/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari/)
-- Articolo: [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
-- Articolo: [Il 25 aprile: il volontariato di Protezione Civile come impegno civico](/comunicazioni/2026-04-25-festa-liberazione-volontariato-civico/)
-- Articolo: [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)
-- Pagina: [Diventa volontario](/diventa-volontario/)
+Sul nostro sito:
+
+- [Giornata mondiale sicurezza sul lavoro](/comunicazioni/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari/).
+- [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/).
+- [Il 25 aprile: il volontariato di PC come impegno civico](/comunicazioni/2026-04-25-festa-liberazione-volontariato-civico/).
+- [Formazione regionale alla Sala Operativa Lazio](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Costituzione italiana (testo ufficiale)](https://www.senato.it/istituzione/la-costituzione).
+- [D.Lgs. 81/2008 — Testo Unico sulla sicurezza sul lavoro](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/sg).
+- [INAIL — Pubblicazioni](https://www.inail.it/cs/internet/comunicazione/pubblicazioni.html).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
 
 **Buon primo maggio.** A chi lavora ogni giorno per la sicurezza degli altri e a chi, come volontario, sceglie di dedicare tempo gratuito alla comunità.

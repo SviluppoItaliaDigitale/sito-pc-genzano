@@ -69,7 +69,7 @@ Quando accade qualcosa (terremoto, allerta meteo, blackout esteso, ondata di cal
 
 - **Non entrare in casa di un estraneo** senza permesso esplicito.
 - **Non somministrare farmaci** che non conosci.
-- **Non spostare un anziano caduto** a terra se potrebbe essersi fatto male: aspetta il 118.
+- **Non spostare un anziano caduto** a terra se potrebbe essersi fatto male: chiama il 112 e attendi i soccorsi.
 - **Non promettere cose** che non puoi garantire (sarà tutto a posto, verranno subito). Sii realistico.
 - **Non lasciare che la persona resti sola** se è evidentemente in stato di shock o ha perso l'orientamento: resta finché arriva aiuto.
 
@@ -92,11 +92,20 @@ Il Gruppo Comunale Volontari coordina con il Comune e l'ASL le attività di **as
 
 ## Per approfondire
 
-- Articolo: [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
-- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
-- Articolo: [Consapevolezza sull'autismo: emergenze inclusive](/comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/)
-- Articolo: [Giornata delle famiglie: il piano di emergenza insieme](/comunicazioni/2026-05-15-giornata-famiglie-piano-emergenza-insieme/)
-- Articolo: [Il Piano di Emergenza Familiare digitale citato da Abili a proteggere](/comunicazioni/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere/)
-- Pagina: [Rischi e prevenzione](/rischi-prevenzione/)
+Sul nostro sito:
+
+- [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/).
+- [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
+- [Consapevolezza sull'autismo: emergenze inclusive](/comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/).
+- [Giornata delle famiglie: il piano di emergenza insieme](/comunicazioni/2026-05-15-giornata-famiglie-piano-emergenza-insieme/).
+- [Kit Calamità — Anziani](/formazione/kit-calamita-anziani/).
+- [Kit Calamità — Disabilità adulti](/formazione/kit-calamita-disabilita-adulti/).
+- [Kit Calamità — Caregiver familiari](/formazione/kit-calamita-caregiver-familiari/).
+- [Abili a Proteggere — La Mia Scheda emergenza](/abili-a-proteggere/scheda-emergenza/).
+
+Fonti istituzionali:
+
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [HelpAge International](https://www.helpage.org/) — buone pratiche per anziani in emergenza.
 
 La **prossimità** non è un servizio pubblico, è una virtù civile. In un paese come Genzano, dove molti si conoscono da sempre, coltivarla è più facile che in una grande città. Farlo è già un gesto di Protezione Civile.

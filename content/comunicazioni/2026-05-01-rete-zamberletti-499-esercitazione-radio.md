@@ -48,6 +48,17 @@ Le radiocomunicazioni di emergenza sono una **infrastruttura silenziosa ma essen
 
 Il lavoro dei radioamatori volontari, dei Centri TLC dei Vigili del Fuoco e degli operatori delle Prefetture rappresenta un presidio tecnico continuo, che si attiva nelle emergenze ma si allena tutto l'anno.
 
-## Fonte
+## Per approfondire
+
+Sul nostro sito:
+
+- [Radiocomunicazioni in emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
+- [Rete emergenza metropolitana di Roma](/comunicazioni/2026-05-02-rete-emergenza-metropolitana-roma-radioamatori/).
+
+Fonti istituzionali:
+
+- [ARI — Associazione Radioamatori Italiani](https://www.ari.it/).
+- [Vigili del Fuoco — Centri TLC](https://www.vigilfuoco.it/).
+- [Codice delle Comunicazioni Elettroniche](https://www.normattiva.it/).
 
 Notizia ripresa dal post pubblico dell'**ARI Sezione di Catania** del 1° maggio 2026.

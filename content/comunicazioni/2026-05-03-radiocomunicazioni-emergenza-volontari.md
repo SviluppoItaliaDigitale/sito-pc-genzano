@@ -78,9 +78,18 @@ Il Gruppo Comunale Volontari di Genzano ha volontari attivi nelle radiocomunicaz
 
 ## Per approfondire
 
-- [Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)
-- [Associazione Radioamatori Italiani (ARI)](https://www.ari.it/)
-- [ARI-RE — Radiocomunicazioni Emergenza](https://www.arire.it/)
-- [Ministero delle Imprese e del Made in Italy — Spettro radio](https://www.mimit.gov.it/)
+Sul nostro sito:
+
+- [Rete Zamberletti: 499ª esercitazione radio nazionale](/comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/).
+- [Rete di Emergenza Metropolitana di Roma](/comunicazioni/2026-05-02-rete-emergenza-metropolitana-roma-radioamatori/).
+- [Giornata mondiale delle telecomunicazioni](/comunicazioni/2026-05-17-giornata-mondiale-telecomunicazioni/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
+- [Associazione Radioamatori Italiani (ARI)](https://www.ari.it/).
+- [ARI-RE — Radiocomunicazioni Emergenza](https://www.arire.it/).
+- [Ministero delle Imprese e del Made in Italy — Spettro radio](https://www.mimit.gov.it/).
 
 In un mondo sempre più connesso, la vera **resilienza** sta nel mantenere anche le tecnologie apparentemente "vecchie" che continuano a funzionare quando il resto si ferma.

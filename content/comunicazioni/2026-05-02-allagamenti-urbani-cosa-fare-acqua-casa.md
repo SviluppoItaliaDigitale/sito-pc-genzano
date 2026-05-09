@@ -96,9 +96,17 @@ Ogni parte ha un ruolo. Ai cittadini si chiede di **non intralciare** e di segui
 
 ## Per approfondire
 
-- [Io Non Rischio — Alluvione](https://iononrischio.protezionecivile.it/alluvione/)
-- [ISPRA — Dissesto e alluvioni](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico)
-- [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it/)
-- Pagina del nostro sito: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
+Sul nostro sito:
+
+- [Rischio idrogeologico — pagina operativa](/rischi-prevenzione/rischio-idrogeologico/).
+- [Allerte meteo del nostro territorio](/allerte-meteo/).
+- [Alluvione Emilia-Romagna 2023: lezioni dall'evento](/comunicazioni/2026-05-17-emilia-romagna-2023-alluvione-maggio/).
+
+Fonti istituzionali:
+
+- [Io Non Rischio — Alluvione](https://iononrischio.protezionecivile.it/alluvione/).
+- [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico).
+- [Regione Lazio — Centro Funzionale](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 
 Un allagamento urbano non è una catastrofe se si mantiene la lucidità. Le regole sono poche, chiare e funzionano: **non entrare nell'acqua**, **non attraversare con l'auto**, **sali ai piani alti**, **ascolta i canali ufficiali**.
