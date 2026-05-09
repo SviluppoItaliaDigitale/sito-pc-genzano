@@ -104,17 +104,22 @@ Qualche indicazione pratica:
 4. **Non diffondere previsioni non ufficiali** su chat e social: in emergenza, un'informazione sbagliata può creare panico o comportamenti pericolosi.
 5. **Il 112 è per le emergenze in corso**, non per chiedere informazioni meteo. Per il meteo usa i bollettini ufficiali.
 
-## Fonti e approfondimenti
-
-- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
-- [Centro Funzionale Regionale Lazio — Bollettini](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
-- [Servizio Meteorologico dell'Aeronautica Militare](https://www.meteoam.it/)
-- [Istituto di Scienze dell'Atmosfera e del Clima — CNR (ISAC)](https://www.isac.cnr.it/)
-
 ## Per approfondire
 
-- Articolo: [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
-- Articolo: [Temporali intensi: come riconoscerli e cosa fare](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/)
-- Articolo: [Vento forte: cosa fare prima, durante e dopo](/comunicazioni/2026-05-16-vento-forte-prima-durante-dopo/)
-- Articolo: [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
-- Articolo: [Sentinelle del tempo: osservazione meteo amatoriale](/comunicazioni/2026-03-03-sentinelle-meteo-osservazione-amatoriale/)
+Sul nostro sito:
+
+- [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/).
+- [Temporali intensi: come riconoscerli e cosa fare](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/).
+- [Vento forte: cosa fare prima, durante e dopo](/comunicazioni/2026-05-16-vento-forte-prima-durante-dopo/).
+- [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/).
+- [Sentinelle del tempo: osservazione meteo amatoriale](/comunicazioni/2026-03-03-sentinelle-meteo-osservazione-amatoriale/).
+- [ISO 22324 — Codici colore allerta](/comunicazioni/2026-05-12-iso-22324-codici-colore-allerta/).
+- [Allerte meteo del territorio](/allerte-meteo/).
+
+Fonti istituzionali:
+
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
+- [Centro Funzionale Regionale Lazio — Bollettini](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
+- [Servizio Meteorologico dell'Aeronautica Militare](https://www.meteoam.it/).
+- [CNR-ISAC — Istituto di Scienze dell'Atmosfera e del Clima](https://www.isac.cnr.it/).
+- [ECMWF — Centro Europeo Previsioni Meteo](https://www.ecmwf.int/).

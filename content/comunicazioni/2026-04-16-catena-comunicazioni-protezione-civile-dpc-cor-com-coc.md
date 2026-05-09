@@ -2,7 +2,6 @@
 title: "La catena delle comunicazioni in protezione civile: DPC, COR, COM, COI, COC"
 date: 2026-04-16
 description: "Come le informazioni viaggiano dall'evento fino alla decisione operativa: dal Dipartimento della Protezione Civile al Centro Operativo Comunale."
-
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -202,9 +201,16 @@ Ogni volontario di protezione civile, nel proprio piccolo, contribuisce a questa
 
 ## Per approfondire
 
-- [Area tematica: Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/) — sei capitoli sul ruolo del volontario TLC
-- [Il Codice della Protezione Civile](/comunicazioni/?tag=testo-unico) — la serie di articoli sul D.Lgs. 1/2018
-- [Cos'è la protezione civile in Italia](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/)
-- [Maxi emergenze e colonne mobili](/comunicazioni/2026-04-12-maxi-emergenze-colonne-mobili-coordinamenti-fepivol-lazio/)
+Sul nostro sito:
 
-*Fonti: D.Lgs. 2 gennaio 2018 n. 1 (Codice della Protezione Civile), Direttiva PCM 3 dicembre 2008 ("Metodo Augustus"), organigramma del Dipartimento della Protezione Civile, documentazione della Regione Lazio sul sistema di protezione civile regionale.*
+- [Area tematica: Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/).
+- [Cos'è la protezione civile in Italia](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/).
+- [Maxi emergenze e colonne mobili](/comunicazioni/2026-04-12-maxi-emergenze-colonne-mobili-coordinamenti-fepivol-lazio/).
+- [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
+- [Gestione sala radio in emergenza](/comunicazioni/2026-04-17-gestione-sala-radio-chiamata-emergenza-scheda-intervento/).
+
+Fonti istituzionali:
+
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Direttiva PCM 3 dicembre 2008 — Metodo Augustus](https://www.protezionecivile.gov.it/).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).

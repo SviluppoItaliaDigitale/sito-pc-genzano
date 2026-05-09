@@ -139,10 +139,20 @@ Nel nostro piccolo, anche il Gruppo Comunale di Genzano è attento a questi temi
 
 ## Per approfondire
 
-- [ICOMOS Italia](https://www.icomos.it/)
-- [UNESCO — Patrimonio Mondiale](https://www.unesco.it/)
-- [Ministero della Cultura — Tutela patrimonio in emergenza](https://www.beniculturali.it/)
-- [Carabinieri TPC](https://www.carabinieri.it/tpc)
-- Articolo: [Terremoto: cosa fare durante e dopo](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/)
+Sul nostro sito:
+
+- [Giornata dei Musei e patrimonio in emergenza](/comunicazioni/2026-05-18-giornata-musei-patrimonio-culturale-emergenze/).
+- [Terremoto: cosa fare durante e dopo](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/).
+- [Mostra «Terremoti d'Italia» a Napoli](/comunicazioni/2026-04-17-mostra-terremoti-italia-napoli/).
+- [Rischio sismico — pagina operativa](/rischi-prevenzione/rischio-sismico/).
+- [Cartografia del territorio](/cartografia/).
+
+Fonti istituzionali:
+
+- [ICOMOS Italia](https://www.icomos.it/).
+- [UNESCO Italia — Patrimonio Mondiale](https://www.unesco.it/).
+- [Ministero della Cultura](https://www.cultura.gov.it/).
+- [Carabinieri Tutela Patrimonio Culturale (TPC)](https://tpcweb.carabinieri.it/).
+- [ICR — Istituto Centrale per il Restauro](https://www.icr.beniculturali.it/).
 
 Proteggere ciò che abbiamo ereditato è parte di ciò che siamo. Un monumento salvato è un pezzo di memoria collettiva consegnato al futuro.
