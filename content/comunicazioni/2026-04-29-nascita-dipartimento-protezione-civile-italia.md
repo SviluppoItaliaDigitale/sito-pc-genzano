@@ -24,7 +24,7 @@ Il Dipartimento della Protezione Civile nasce per rispondere — finalmente — 
 
 Per capire perché l'Italia ha aspettato quasi quarant'anni dalla Liberazione per dotarsi di un sistema nazionale di protezione civile, bisogna mettere insieme tre fatti.
 
-Il primo è **geografico**. L'Italia è il paese europeo più esposto al rischio sismico per estensione di territorio interessato, è uno dei più esposti al rischio idrogeologico, ha **vulcani attivi a meno di trenta chilometri da grandi città** (Vesuvio e Campi Flegrei vicino a Napoli, capoluogo della Campania; Etna vicino a Catania), e dal 1900 in poi conta in media **un terremoto distruttivo ogni quindici anni**.
+Il primo è **geografico**. L'Italia è il paese europeo più esposto al rischio sismico per estensione di territorio interessato. È uno dei più esposti al rischio idrogeologico. Ha **vulcani attivi a meno di trenta chilometri da grandi città**: Vesuvio e Campi Flegrei vicino a Napoli, Etna vicino a Catania. Dal 1900 in poi conta in media **un terremoto distruttivo ogni quindici anni**.
 
 Il secondo è **storico**. La Repubblica eredita dal Regno una Direzione generale della Protezione Antiaerea trasformata, nel dopoguerra, in un servizio di protezione civile incardinato nel **Ministero dell'Interno**, dipendente dai Vigili del Fuoco e dalle Prefetture. Funziona — bene o male — per le emergenze contenute (incendi, alluvioni locali, incidenti). Non funziona affatto per le **catastrofi su scala regionale**: lo dimostra il **Vajont** (1963), lo dimostra il **Belice** (1968), lo dimostra il **Friuli** (1976). Ogni volta lo schema è uguale: emergenza che coglie impreparati, soccorsi che arrivano in ritardo, ricostruzione che dura decenni.
 

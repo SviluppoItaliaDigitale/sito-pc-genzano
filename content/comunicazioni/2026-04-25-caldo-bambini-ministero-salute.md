@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-I **bambini piccoli** e i **neonati** sono tra le categorie più vulnerabili al caldo estivo, ma non solo: in estate aumentano anche i rischi legati all'**esposizione ai raggi solari (UV)**, all'**ozono** nelle aree urbane, agli **incendi boschivi** e alla **contaminazione degli alimenti**. Il loro sistema di termoregolazione non è ancora maturo, la pelle è più delicata, l'apparato respiratorio è in sviluppo.
+I **bambini piccoli** e i **neonati** sono tra le categorie più vulnerabili al caldo estivo. Ma non solo: in estate aumentano anche i rischi legati all'**esposizione ai raggi solari (UV)**, all'**ozono** nelle aree urbane, agli **incendi boschivi** e alla **contaminazione degli alimenti**. Il loro sistema di termoregolazione non è ancora maturo, la pelle è più delicata, l'apparato respiratorio è in sviluppo.
 
 Il [Ministero della Salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore/), insieme al **Dipartimento di Epidemiologia (DEP) Lazio — ASL Roma 1** e al **Gruppo Pediatri per un mondo possibile (ACP)**, ha pubblicato l'opuscolo **"Estate in salute: come proteggere i vostri bambini"**. Ne riassumiamo in questa pagina le raccomandazioni principali, fedeli al documento originale.
 

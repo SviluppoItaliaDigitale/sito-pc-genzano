@@ -69,7 +69,7 @@ A Genzano la festa tradizionale più importante è la **Infiorata del Corpus Dom
          alt="Via Italo Belardi a Genzano di Roma durante l'Infiorata del Corpus Domini: il lungo tappeto floreale si estende fino alla chiesa della Santissima Trinità, con la bandiera italiana in primo piano"
          caption="L'Infiorata di Genzano lungo via Italo Belardi: centinaia di metri di quadri floreali realizzati a mano, richiamano decine di migliaia di visitatori in un solo fine settimana." >}}
 
-L'evento richiama ogni anno decine di migliaia di visitatori che si muovono in una via stretta, chiusa al traffico e delimitata dalle transenne: uno scenario che richiede pianificazione delle vie di fuga, presidi sanitari, monitoraggio meteo e coordinamento costante tra Comune, Polizia Locale, Vigili del Fuoco, ASL e Protezione Civile.
+L'evento richiama ogni anno decine di migliaia di visitatori che si muovono in una via stretta, chiusa al traffico e delimitata dalle transenne. Lo scenario richiede pianificazione delle vie di fuga, presidi sanitari, monitoraggio meteo e coordinamento costante tra Comune, Polizia Locale, Vigili del Fuoco, ASL e Protezione Civile.
 
 {{< foto src="/images/2026-06-23-genzano-infiorata-aerea.webp"
          alt="Veduta aerea di Genzano di Roma con il Lago di Nemi sullo sfondo e il tappeto dell'Infiorata che attraversa il centro storico lungo via Italo Belardi"

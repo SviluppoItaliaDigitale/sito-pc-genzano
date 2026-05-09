@@ -30,7 +30,7 @@ Il documento ha orientato la costruzione dei piani nazionali in tutta Europa, co
 
 ## Il Piano nazionale italiano
 
-Il **Piano operativo nazionale per la prevenzione degli effetti del caldo sulla salute**, coordinato dal Centro per la prevenzione e il controllo delle malattie (**CCM**), si basa su **linee di indirizzo nazionali** aggiornate per l'ultima volta nel **luglio 2019** dal gruppo di lavoro del Ministero della Salute e del DEP Lazio. Le linee di indirizzo integrano, per la prima volta in modo sistematico, anche la **prevenzione degli effetti acuti dell'inquinamento atmosferico**.
+Il **Piano operativo nazionale per la prevenzione degli effetti del caldo sulla salute** è coordinato dal Centro per la prevenzione e il controllo delle malattie (**CCM**). Si basa su **linee di indirizzo nazionali** aggiornate per l'ultima volta nel **luglio 2019** dal gruppo di lavoro del Ministero della Salute e del DEP Lazio. Le linee di indirizzo integrano, per la prima volta in modo sistematico, anche la **prevenzione degli effetti acuti dell'inquinamento atmosferico**.
 
 Il Piano ha tre obiettivi:
 

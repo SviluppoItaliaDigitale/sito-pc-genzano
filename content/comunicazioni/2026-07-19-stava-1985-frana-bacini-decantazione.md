@@ -83,7 +83,7 @@ Il rischio "ondata di piena" per un evento di rottura artificiale dei laghi vulc
 
 Le **268 vittime** della Val di Stava sono ricordate ogni 19 luglio in una cerimonia sobria a Tesero, alla presenza dei familiari, delle autorità e dei volontari di protezione civile. La **Fondazione Stava 1985** ha realizzato un percorso museale che spiega tecnicamente e umanamente cosa è successo: l'**Esposizione Permanente "Stava 1985"**, accessibile gratuitamente, è un riferimento nelle attività didattiche scolastiche italiane sulla cultura della prevenzione.
 
-Quarant'anni dopo, **Stava è la lezione più dura della cultura del rischio in Italia**: ogni volta che qualcuno fa "manutenzione formale", ogni volta che una segnalazione di un cittadino o di un tecnico viene archiviata, ogni volta che una pratica burocratica precede una verifica sostanziale — qualcuno, da qualche parte, sta scrivendo la prossima Stava. **Il volontariato di protezione civile esiste anche per ricordarcelo**.
+Quarant'anni dopo, **Stava è la lezione più dura della cultura del rischio in Italia**. Ogni volta che qualcuno fa "manutenzione formale", che una segnalazione di un cittadino o di un tecnico viene archiviata, che una pratica burocratica precede una verifica sostanziale — qualcuno sta scrivendo la prossima Stava. **Il volontariato di protezione civile esiste anche per ricordarcelo**.
 
 ## Per approfondire (fonti istituzionali)
 

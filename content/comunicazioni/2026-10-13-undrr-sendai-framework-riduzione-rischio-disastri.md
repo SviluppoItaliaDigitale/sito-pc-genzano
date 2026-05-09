@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Il **13 ottobre** di ogni anno le Nazioni Unite celebrano la **Giornata Internazionale per la Riduzione del Rischio di Disastri** (*International Day for Disaster Risk Reduction*). Una ricorrenza istituita nel **1989** dall'Assemblea Generale ONU, oggi inserita nel quadro del **Sendai Framework 2015-2030**, il principale documento internazionale di indirizzo per la prevenzione dei disastri naturali e antropici.In questo articolo guardiamo cosa significa **prevenire i disastri a livello globale** e come si collega al lavoro che facciamo a Genzano.
+Il **13 ottobre** di ogni anno le Nazioni Unite celebrano la **Giornata Internazionale per la Riduzione del Rischio di Disastri** (*International Day for Disaster Risk Reduction*). È una ricorrenza istituita nel **1989** dall'Assemblea Generale ONU, oggi inserita nel quadro del **Sendai Framework 2015-2030**. Si tratta del principale documento internazionale di indirizzo per la prevenzione dei disastri naturali e antropici.
+
+In questo articolo guardiamo cosa significa **prevenire i disastri a livello globale** e come si collega al lavoro che facciamo a Genzano.
 
 ## I Sette Obiettivi del Sendai Framework
 

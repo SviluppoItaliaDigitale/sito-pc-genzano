@@ -22,7 +22,7 @@ In occasione della **Giornata nazionale di prevenzione dello spreco alimentare**
 
 La prevenzione non riguarda solo il rischio sismico, idrogeologico o incendi. Riguarda anche i comportamenti quotidiani che rendono la popolazione più resiliente: sapere conservare il cibo, pianificare la spesa, ridurre gli scarti è parte di una **cultura della preparazione** che in emergenza fa la differenza. La stessa logica che guida l'uso consapevole dell'acqua o dell'energia.
 
-Lo spreco alimentare, inoltre, non è un problema solo economico: secondo i dati citati dalla Fondazione Barilla **le perdite lungo la filiera e gli sprechi alimentari generano fino al 10% delle emissioni globali di gas serra**, e **un terzo del cibo prodotto nel mondo viene sprecato**, per un totale di oltre un miliardo di tonnellate all'anno. Dimezzare lo spreco entro il 2030 è uno degli Obiettivi di Sviluppo Sostenibile delle Nazioni Unite.
+Lo spreco alimentare non è un problema solo economico. Secondo i dati citati dalla Fondazione Barilla **le perdite lungo la filiera e gli sprechi alimentari generano fino al 10% delle emissioni globali di gas serra**. Inoltre **un terzo del cibo prodotto nel mondo viene sprecato**, per un totale di oltre un miliardo di tonnellate all'anno. Dimezzare lo spreco entro il 2030 è uno degli Obiettivi di Sviluppo Sostenibile delle Nazioni Unite.
 
 ## L'evento di presentazione
 

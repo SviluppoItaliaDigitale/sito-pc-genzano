@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nel giorno di **Ferragosto**, il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma desidera rivolgere un pensiero a tutta la cittadinanza: a chi trascorre la giornata con la famiglia, a chi presta servizio in ospedali, caserme, corpi di soccorso, a chi è lontano da casa, a chi è rimasto solo.
+Nel giorno di **Ferragosto**, il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma rivolge un pensiero a tutta la cittadinanza. A chi trascorre la giornata con la famiglia. A chi presta servizio in ospedali, caserme, corpi di soccorso. A chi è lontano da casa. A chi è rimasto solo.
 
 ## Il senso della festa
 

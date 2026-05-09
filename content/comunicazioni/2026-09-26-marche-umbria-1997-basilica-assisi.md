@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Alle **2:33 della notte del 26 settembre 1997**, una scossa di **magnitudo 5.7** colpì il confine tra Umbria e Marche. Era solo il preludio. Alle **11:40 della mattina successiva**, mentre tecnici e religiosi ispezionavano i danni della Basilica Superiore di San Francesco ad Assisi, una nuova scossa di **magnitudo 6.0** fece **crollare la volta della Basilica**, schiacciando **quattro persone**.Le immagini del crollo, riprese in diretta da una troupe RAI presente per documentare i danni, sono entrate nella memoria collettiva italiana. Il bilancio totale del terremoto Umbria-Marche fu di **11 morti**, **circa 100 feriti**, **80.000 sfollati**.
+Alle **2:33 della notte del 26 settembre 1997**, una scossa di **magnitudo 5.7** colpì il confine tra Umbria e Marche. Era solo il preludio. Alle **11:40 della mattina successiva**, tecnici e religiosi stavano ispezionando i danni della Basilica Superiore di San Francesco ad Assisi. Una nuova scossa di **magnitudo 6.0** fece **crollare la volta della Basilica**, schiacciando **quattro persone**. Le immagini del crollo, riprese in diretta da una troupe RAI presente per documentare i danni, sono entrate nella memoria collettiva italiana. Il bilancio totale del terremoto Umbria-Marche fu di **11 morti**, **circa 100 feriti**, **80.000 sfollati**.
 
 ## Una sequenza lunga e diffusa
 

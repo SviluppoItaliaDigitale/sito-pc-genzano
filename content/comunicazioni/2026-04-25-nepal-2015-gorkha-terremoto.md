@@ -53,7 +53,7 @@ Il Nepal 2015 ha consolidato lezioni che valgono per tutti i Paesi sismici, Ital
 
 ## A Genzano
 
-Il nostro territorio non è confrontabile con la sismicità del Nepal, ma il principio della **valutazione e mitigazione del rischio sui beni culturali** vale anche da noi: la **Collegiata di Santa Maria della Cima**, le chiese del centro storico, i palazzi storici lungo via Italo Belardi sono elementi di **patrimonio vulnerabile** che il Piano di Protezione Civile considera nelle valutazioni di rischio territoriale.
+Il nostro territorio non è confrontabile con la sismicità del Nepal. Ma il principio della **valutazione e mitigazione del rischio sui beni culturali** vale anche da noi. La **Collegiata di Santa Maria della Cima**, le chiese del centro storico, i palazzi lungo via Italo Belardi sono elementi di **patrimonio vulnerabile**: il Piano di Protezione Civile li considera nelle valutazioni di rischio territoriale.
 
 ## Per saperne di più
 

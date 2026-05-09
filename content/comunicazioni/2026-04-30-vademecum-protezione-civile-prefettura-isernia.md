@@ -30,7 +30,15 @@ Il Vademecum è un documento di **240 pagine** suddiviso in **cinque sezioni aut
 
 ### Sezione 1 — Il quadro normativo e operativo
 
-Apre il Vademecum con la fotografia del **Sistema nazionale di Protezione Civile**: il Dipartimento della Protezione Civile presso la Presidenza del Consiglio, la Direzione Generale della Protezione Civile e dei Servizi Antincendio del Ministero dell'Interno, le Regioni e le Province Autonome, le **Prefetture-UTG** (Uffici Territoriali del Governo), i Comuni. Include paragrafi su:
+Apre il Vademecum con la fotografia del **Sistema nazionale di Protezione Civile**:
+
+- il Dipartimento della Protezione Civile presso la Presidenza del Consiglio
+- la Direzione Generale della Protezione Civile e dei Servizi Antincendio del Ministero dell'Interno
+- le Regioni e le Province Autonome
+- le **Prefetture-UTG** (Uffici Territoriali del Governo)
+- i Comuni.
+
+Include paragrafi su:
 
 - competenze dei soggetti istituzionali
 - la **Sala Situazione Italia** del DPC
