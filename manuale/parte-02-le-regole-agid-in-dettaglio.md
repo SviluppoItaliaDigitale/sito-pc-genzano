@@ -291,6 +291,39 @@ Non:
 | Tono | Calmo, informativo, rassicurante. Mai allarmistico. Mai minimizzante. |
 | Autoprotezione | Per i comportamenti, cita sempre fonti ufficiali (DPC, Regione, Comune). |
 
+### 2.23 — Livello qualitativo atteso quando rivedi un articolo (qualità ChatGPT 9.5/10)
+
+Quando rileggi un articolo prima della pubblicazione (tuo o di Claude Code) il livello atteso è quello di un Caporedattore PA con 18 anni di esperienza: la stessa cura del migliore strumento esterno di riferimento (test del 9 maggio 2026: ChatGPT 9.5/10).
+
+Vale per **tutti i contesti** in cui Claude Code lavora: CLI desktop sul PC, app mobile, sessione cloud, agent GitHub-integrato. Nessuno dei tre delega ad AI esterne — l'utente ha chiesto esplicitamente che la stessa qualità sia raggiunta in tutte le sessioni.
+
+**Cosa significa nella pratica:**
+
+| Aspetto | Livello atteso |
+|---|---|
+| Lede (primo paragrafo) | Concreto, non retorico. "La Festa della Mamma è una buona occasione per mettere ordine nelle cose pratiche di casa" sì, "è un'occasione per pensare alla cura delle persone a cui vogliamo bene" no. |
+| Frasi >20 parole | Spezzate sistematicamente in 2-3 frasi più corte. |
+| Nominalizzazioni | Sostituite con verbi attivi. "Effettuare il pagamento" → "pagare". "Procedere alla compilazione" → "compilare". |
+| Voce passiva | Ridotta dove ne aumenta solo la formalità senza aiutare la chiarezza. |
+| Burocratese | Eliminato anche se presente nel testo originale. "Ad uopo", "giusta delibera", "nelle more di", "si prega di", "la S.V." sono fuori. |
+| Fonti istituzionali | Ogni claim tecnico ha fonte verificabile (DPC, CFR Lazio, ISPRA, INGV, ASL Roma 6, MIM, IFRC, WHO, …). |
+| Linkografia interna | Sempre verificata e valorizzata prima delle fonti esterne. Sezione "Per approfondire" strutturata in due blocchi: *Sul nostro sito* + *Fonti istituzionali*. |
+| Bullet uniformi | In una stessa lista tutti i bullet iniziano con la stessa parte del discorso (verbi all'imperativo, oppure sostantivi). |
+| H2 senza enfasi | Niente `**bold**` dentro l'H2, niente emoji decorative. L'H2 è già visivamente forte. |
+| `image:` del frontmatter | **Mai modificato durante una revisione testuale.** Pre-commit check `git diff <file> \| grep -E '^[+-]image' \| head -5` obbligatorio. |
+| Esito legittimo "nessuna modifica" | Quando un articolo è già conforme AGID, dichiararlo esplicitamente. Inventare modifiche per dimostrare attività è un anti-pattern. |
+
+**Workflow di revisione su singolo articolo:**
+
+1. Leggi il file integralmente.
+2. Identifica 0-15 problemi reali (non inventati).
+3. Applica `Edit` puntuali con razionale AGID per ogni modifica.
+4. **Pre-commit check obbligatorio**: `git diff <file> | grep -E '^[+-]image' | head -5` — se trovi diff su `image:` non richiesto, ripristina (anti-pattern banner intoccabile).
+5. Mostra il diff con tabella delle modifiche e dichiara cosa hai *lasciato intatto* e perché.
+6. Commit + push solo dopo conferma utente o se è già stato autorizzato un batch.
+
+**Per batch di revisione ≥5 articoli**: applicare il checkpoint pre-batch (`.claude/rules/07-proattivita-coerenza.md`), ottenere conferma esplicita, lavorare in serie con commit a tappe (≈30-50 articoli per commit) per mantenere la cronologia git navigabile.
+
 ---
 
 _[Indice manuale](README.md)_

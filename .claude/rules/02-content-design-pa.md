@@ -177,6 +177,38 @@ Ad aprile 2026 si è scoperto che Hugo, con due articoli a `date: AAAA-MM-GG` id
 - Verifica sempre ortografia, grammatica, punteggiatura e accenti.
 - Se il testo originale non rispetta queste regole, riscrivilo prima di proporre pubblicazione.
 
+## Livello qualitativo della redazione — qualità ChatGPT 9.5/10
+
+**La regola vale per ogni contesto Claude Code**: CLI desktop sul PC, app mobile, sessione cloud, agent GitHub-integrato. **Nessuno dei tre delega ad AI esterne** la redazione/revisione di articoli: tutti applicano integralmente le regole AGID con la stessa cura del migliore strumento esterno di riferimento (test del 9 maggio 2026: ChatGPT 9.5/10 con drag-drop allegato, vedi `feedback_workflow_ai_esterne_validato.md`).
+
+**Cosa significa concretamente in revisione:**
+
+1. **Lettura UX writer**: ogni paragrafo viene letto chiedendosi "il cittadino lo capisce in 30 secondi?". Frasi >20 parole vanno spezzate, nominalizzazioni ("effettuazione del pagamento") vanno sostituite con verbi attivi ("pagare"), passive vanno ridotte.
+2. **Lede concreto, non retorico**: il primo paragrafo dice cosa l'articolo fa per l'utente, non riempie di formule generiche ("è un'occasione per pensare a...", "è importante ricordare che...").
+3. **Fonti istituzionali sempre citate**: ogni claim tecnico (numeri, codici colore, regole operative) deve avere una fonte verificabile (DPC, CFR Lazio, ISPRA, INGV, ASL Roma 6, MIM, ecc.). Niente "secondo gli esperti" generici.
+4. **Valorizzazione linkografia interna**: prima di rimandare a fonti esterne, verificare se il sito ha già contenuti pertinenti (kit-calamita, schede stampabili, articoli correlati, glossario, standard ISO). Pattern `[Sul nostro sito:] / [Fonti istituzionali:]`.
+5. **Bullet uniformi**: in una stessa lista, tutti i bullet iniziano con la stessa parte del discorso (tutti verbi all'imperativo, oppure tutti sostantivi). Coerenza grammaticale.
+6. **H2 senza enfasi ridondante**: niente `**bold**` dentro l'H2, niente "🔥 ATTENZIONE 🔥". L'H2 è già visivamente forte.
+7. **Punto fermo a fine bullet**: regola Designers Italia. Bullet con frase compiuta = punto fermo. Bullet di una parola = nessun punto.
+8. **Distinzione `Allerta`/`Emergenza`/`Aggiornamento`** sempre rispettata (vedi `06-protezione-civile-scientifica.md`).
+9. **Niente burocratese residuo**: "ad uopo", "giusta delibera", "nelle more di", "si prega di", "la S.V." — eliminare anche se presenti nel testo originale dell'utente.
+
+**Workflow di revisione su singolo articolo:**
+
+```
+1. Read del file.
+2. Lettura come UX writer: identifica 0-15 problemi reali (non inventati).
+3. Edit puntuali con razionale AGID per ogni modifica.
+4. Pre-commit check OBBLIGATORIO: git diff <file> | grep -E '^[+-]image' | head -5
+   → se trovi diff su `image:` non richiesto, ripristina (anti-pattern banner).
+5. Mostra diff all'utente con tabella delle modifiche e cosa hai LASCIATO INTATTO e perché.
+6. Commit + push solo dopo conferma o se l'utente ha già autorizzato un batch.
+```
+
+**Quando un articolo non ha modifiche da fare**, dichiara esplicitamente *"Articolo conforme AGID, nessuna modifica necessaria"* — è un esito legittimo della revisione, non un fallimento. Inventare modifiche per dimostrare attività è anti-pattern.
+
+**Per batch di revisione ≥5 articoli**: applicare il checkpoint pre-batch (`07-proattivita-coerenza.md`), ottenere conferma esplicita, lavorare in serie con commit a tappe (≈30-50 articoli per commit) per mantenere la cronologia git navigabile.
+
 ## Frontmatter obbligatorio per gli articoli (comunicazioni/)
 
 Ogni articolo deve avere tutti i campi previsti dall'archetipo:
