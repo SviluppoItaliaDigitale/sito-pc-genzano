@@ -145,7 +145,7 @@ Un ringraziamento particolare a:
 
 ## Appuntamento a dicembre
 
-Continua a seguirci. Dicembre sarà il mese in cui chiuderemo il 2026 con gratitudine e preparemo il 2027 con entusiasmo. Auguri già da ora a tutti gli amici della PC di Genzano.
+Continua a seguirci. Dicembre sarà il mese in cui chiuderemo il 2026 con gratitudine e prepareremo il 2027 con entusiasmo. Auguri già da ora a tutti gli amici della PC di Genzano.
 
 ## Per approfondire
 

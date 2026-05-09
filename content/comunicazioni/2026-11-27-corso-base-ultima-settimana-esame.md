@@ -103,7 +103,7 @@ La **formazione** non è burocrazia: è **garanzia** che chi interviene sappia c
 
 Un ringraziamento a chi ha partecipato con costanza a tutte le lezioni. Avete dedicato serate e weekend a uno studio impegnativo. Questo investimento è **un regalo alla comunità** di Genzano.
 
-Arrivate all'esame con calma: lo scopo è verificare che abbiate compreso i concetti, non metterfi in difficoltà. I formatori sono dalla vostra parte.
+Arrivate all'esame con calma: lo scopo è verificare che abbiate compreso i concetti, non mettervi in difficoltà. I formatori sono dalla vostra parte.
 
 ## Ai prossimi aspiranti
 
