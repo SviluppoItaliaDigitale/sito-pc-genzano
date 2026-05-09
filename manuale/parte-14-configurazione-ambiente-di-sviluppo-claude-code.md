@@ -200,9 +200,9 @@ Per evitare di dover ricordare comandi come `cd ~/sito-pc-genzano && claude` opp
 |---|---|
 | Icona desktop | Doppio click su **Claude PC Genzano** (`~/Scrivania/Claude-PC-Genzano.desktop`, icona terminale) |
 | Alias da terminale | Scrivi `claude-protezionecivile` (autocomplete: `cl` + TAB) |
-| Voce menu gestione | Voce **25 — Avvia Claude Code** dentro `gestione-sito.sh` (quando esci con `/exit` torni al menu) |
+| Voce menu gestione | Voce **20 — Avvia Claude Code** dentro `gestione-sito.sh` (quando esci con `/exit` torni al menu) |
 
-**Strumento 2 — Menu interattivo gestione sito** (27 voci: contenuti, emergenze, allerte, deploy, ecc.):
+**Strumento 2 — Menu interattivo gestione sito** (23 voci: contenuti, emergenze, allerte, deploy, ChatGPT/Gemini):
 
 | Modo | Come si attiva |
 |---|---|
@@ -230,6 +230,42 @@ alias menu-protezionecivile='bash ~/gestione-sito.sh'
 ```
 
 E creare i 2 file `.desktop` in `~/Scrivania/` (template in questa stessa parte del manuale, sezione precedente non necessaria — gli script wrapper sono già nel repo).
+
+### 14.11 — Workflow ibrido con AI esterne (ChatGPT, Gemini, Claude web)
+
+Da maggio 2026, il menu di gestione (voce **21**) include un meccanismo automatico per **delegare la stesura dei testi** a una qualunque AI esterna che l'utente preferisce, mantenendo Claude Code come strumento di rifinitura tecnica.
+
+**Perché due AI invece di una.** Ogni LLM ha una sua "voce". ChatGPT è particolarmente forte nella stesura narrativa lunga e nella riformulazione. Gemini è ottimo per riassunti tecnici e citazioni normative. Claude è preciso sulle regole strutturate e sui dettagli del repo (frontmatter, shortcode, link, CSS scoped). Usarli **in catena** dà la qualità migliore: una scrive, l'altra rifinisce, l'utente sceglie cosa tenere.
+
+**Il flusso operativo (zero errori se segui i passi):**
+
+1. Apri il menu (`menu-protezionecivile`) e scegli **voce 21 — Esporta contesto per altra AI**.
+2. Lo script automatizza:
+   - rigenera `CONTESTO-AI.md` (export di CLAUDE.md + 11 rules + manuale + memorie);
+   - lo combina con `scripts/prompt-istruzioni-ai.md` (system prompt che dice all'AI come comportarsi);
+   - mette tutto negli appunti (`xclip` su Linux desktop, `wl-copy` su Wayland, `termux-clipboard-set` su Android);
+   - apre **chat.openai.com** nel browser.
+3. Apri una NUOVA chat su ChatGPT (o Gemini), premi **Ctrl+V** e poi INVIO.
+4. ChatGPT/Gemini risponde tipo: *"Ho letto il contesto del sito Protezione Civile Genzano. Dimmi cosa serve."*
+5. Scrivi la richiesta in italiano naturale. Esempi:
+   - *"Scrivimi un articolo sul rischio incendio nei Castelli Romani per giugno 2026."*
+   - *"Rivedi questo testo in stile AGID: [...]"*
+   - *"Genera bozze social X/Facebook/Instagram/Telegram per l'articolo sull'allerta gialla di domani."*
+6. ChatGPT produce il testo seguendo le regole del sito (frontmatter completo, badge giusto, formato data, niente foto stock generiche, ecc.).
+7. Copi il testo e:
+   - **Per pubblicarlo**: torni al menu, voce **1 — Crea nuova comunicazione**, e incolli il corpo dentro nano. Oppure salvi come file `content/comunicazioni/AAAA-MM-GG-slug.md` direttamente.
+   - **Per rifinitura tecnica** (foto inline, link, audit pre-push): voce **20 — Avvia Claude Code**, e dici *"ho appena scritto questo articolo con ChatGPT, fai i controlli e pubblica"*. Claude legge il file, applica le rules del repo nel dettaglio, committa e pusha.
+
+**Il file `scripts/prompt-istruzioni-ai.md`.** È il "system prompt" che vincola l'AI esterna. Definisce: il ruolo (assistente editoriale del Gruppo, non sviluppatore), le regole AGID obbligatorie, il formato del frontmatter, la palette dei badge, il divieto foto stock generiche, il numero 112 come unico riferimento per il cittadino, il divieto di inventare URL/numeri/persone, la struttura ISO 22329 per post di crisi sui social, il formato dei 4 testi social. Quando aggiorni le rules del progetto, ricontrolla anche questo file: deve restare allineato.
+
+**Il file generato `/tmp/pcgenzano-contesto-per-ai.md`.** Contenuto = `prompt-istruzioni-ai.md` + `CONTESTO-AI.md`. È temporaneo (`/tmp` viene pulito dal sistema), si rigenera ogni volta che lanci la voce 21. Non va in git.
+
+**Quando NON usare ChatGPT/Gemini.** Per articoli su eventi in corso (allerta meteo attiva, emergenza dichiarata, intervento appena concluso) il rischio "AI inventa dati" è alto. In quei casi: scrivi direttamente con Claude Code (che ha accesso al repo e può verificare `data/allerta.json`, `data/emergenza.json`, recenti commit). ChatGPT/Gemini sono perfetti per articoli **redazionali** (memoria storica, formazione, prevenzione, schede tematiche, riepiloghi attività).
+
+**Cosa NON fa la voce 21:**
+- Non chiama l'API di ChatGPT (servirebbe una chiave a pagamento). Apre solo il sito web — l'utente usa il proprio account gratuito o ChatGPT Plus personale.
+- Non posta nulla per conto dell'utente. È un copia-incolla guidato.
+- Non sostituisce Claude Code: fa parte di un workflow a due fasi.
 
 ---
 

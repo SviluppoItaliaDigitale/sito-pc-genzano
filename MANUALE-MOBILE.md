@@ -19,6 +19,8 @@ PC, usando solo:
 
 0. [Prima di iniziare a lavorare da mobile (CHECK SESSIONE)](#0-prima-di-iniziare-a-lavorare-da-mobile-check-sessione)
 1. [Setup iniziale (una sola volta)](#1-setup-iniziale-una-sola-volta)
+1.bis [Agenti specializzati (frasi naturali)](#1bis-agenti-specializzati-frasi-naturali)
+1.ter [Stesura testi con ChatGPT/Gemini (workflow ibrido)](#1ter-stesura-testi-con-chatgptgemini-workflow-ibrido)
 2. [Pubblicare un articolo nuovo da mobile](#2-pubblicare-un-articolo-nuovo-da-mobile)
 3. [Aggiungere foto a un articolo](#3-aggiungere-foto-a-un-articolo)
 4. [Ottenere le bozze social per gli articoli](#4-ottenere-le-bozze-social-per-gli-articoli)
@@ -112,6 +114,56 @@ combinati: [`manuale/parte-19-agenti-specializzati.md`](manuale/parte-19-agenti-
 > **Nota**: l'agente Project Manager (issue) richiede `gh` CLI installato e
 > autenticato — funziona solo da PC, non da mobile. Tutti gli altri 4
 > funzionano sia da desktop che da app Claude Android.
+
+---
+
+## 1.ter Stesura testi con ChatGPT/Gemini (workflow ibrido)
+
+Da maggio 2026 il flusso preferito per scrivere articoli "redazionali" (memoria
+storica, formazione, prevenzione, schede tematiche) è **ChatGPT o Gemini per la
+stesura → Claude Code per la rifinitura**. Ognuno fa quello in cui è più forte.
+
+**Da PC desktop (workflow automatizzato):** lancia il menu di gestione,
+voce **21 — Esporta contesto per altra AI**. Lo script:
+1. rigenera `CONTESTO-AI.md` con tutto il manuale del sito;
+2. lo combina con `scripts/prompt-istruzioni-ai.md` (system prompt pronto);
+3. copia tutto negli appunti e apre ChatGPT nel browser.
+
+Tu apri una nuova chat su ChatGPT, premi Ctrl+V, INVIO, e scrivi la richiesta
+("Scrivimi un articolo su X"). Quando l'AI risponde, copi il testo e lo
+pubblichi via voce **1** del menu, oppure passi a Claude Code (voce **20**)
+per le rifiniture tecniche (foto, link, audit).
+
+**Da mobile (procedura manuale, nessun terminale richiesto):**
+
+1. Apri l'app GitHub o il browser e vai su:
+   <https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/blob/main/CONTESTO-AI.md>
+2. Tocca *Raw* per vedere il file in testo puro.
+3. Seleziona tutto, copia.
+4. Apri l'app ChatGPT (o gemini.google.com nel browser).
+5. Apri una **nuova** chat, incolla.
+6. Aggiungi all'inizio (1 sola volta): *"Sei l'assistente editoriale del sito
+   Protezione Civile Genzano. Rispetta integralmente queste regole. Aspetta la
+   mia richiesta."* — invia.
+7. ChatGPT risponde "OK ho letto, dimmi cosa serve".
+8. Scrivi la richiesta: *"Scrivimi un articolo sul rischio idrogeologico nei
+   Castelli Romani per ottobre 2026."*
+9. Copi il testo prodotto.
+10. Su GitHub mobile, crea il file in `content/comunicazioni/AAAA-MM-GG-slug.md`
+    e incolla.
+11. Commit. Il deploy parte automaticamente in 2-3 minuti.
+
+**Da mobile con Termux + Tailscale** (utenti avanzati, vedi memoria
+`project_workflow_mobile_termux_tailscale.md`): la voce 21 del menu funziona
+anche su Termux Android perché lo script rileva `termux-clipboard-set`
+(richiede `pkg install termux-api`). Stesso flusso del PC desktop.
+
+**Quando NON usare ChatGPT/Gemini:** per articoli su eventi in corso (allerta
+meteo attiva, emergenza dichiarata, intervento appena concluso) il rischio "AI
+inventa dati" è alto. In quei casi scrivi direttamente con Claude Code (che ha
+accesso al repo e verifica `data/allerta.json`, recenti commit, dati reali).
+
+Specifiche complete: [`manuale/parte-14-...md` § 14.11](manuale/parte-14-configurazione-ambiente-di-sviluppo-claude-code.md).
 
 ---
 
