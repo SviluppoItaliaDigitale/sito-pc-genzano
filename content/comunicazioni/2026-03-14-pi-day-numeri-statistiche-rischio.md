@@ -15,7 +15,7 @@ draft: false
 
 Il **14 marzo** (3/14, nella notazione anglosassone) è il **Pi Day**, la giornata internazionale del numero π e della matematica in generale. Dal 2019 è anche riconosciuta dall'**UNESCO** come *International Day of Mathematics*.
 
-Può sembrare un tema lontano dalla Protezione Civile. In realtà la gestione del rischio **è matematica applicata**: probabilità, statistica, geometria delle mappe, modelli di calcolo. Dietro ogni bollettino meteo, ogni mappa di pericolosità sismica, ogni previsione di piena c'è un **corpo di dati e formule** enorme.
+La gestione del rischio **è matematica applicata**: probabilità, statistica, geometria delle mappe, modelli di calcolo. Dietro ogni bollettino meteo, ogni mappa di pericolosità sismica, ogni previsione di piena c'è un **corpo di dati e formule** enorme.
 
 ## La Protezione Civile è scienza dei numeri
 
@@ -30,8 +30,8 @@ I modelli di pericolosità sismica dell'**INGV** si basano su **secoli di dati s
 La statistica serve a **riassumere e interpretare** grandi quantità di dati:
 
 - Quante volte nel secolo scorso si è verificato un evento simile?
-- Qual è l'intensità "tipica" di un fenomeno in una certa zona?
-- Quali sono i trend in corso (aumento di alluvioni, incendi, ondate di calore)?
+- Quale intensità è "tipica" di un fenomeno in una certa zona?
+- Quali trend sono in corso (aumento di alluvioni, incendi, ondate di calore)?
 
 Ogni volta che sentiamo "eccezionale" o "storico" riferito a un evento, dietro c'è una statistica che ne misura effettivamente la rarità.
 
@@ -99,8 +99,8 @@ Una **cittadinanza matematicamente alfabetizzata** è più consapevole:
 
 - Non confonde probabilità e certezza.
 - Riconosce un titolo sensazionalistico che distorce i numeri.
-- Sa leggere un grafico di trend senza farsi ingannare da scale manipolate.
-- Capisce la differenza tra correlazione e causa.
+- Legge un grafico di trend senza farsi ingannare da scale manipolate.
+- Distingue tra correlazione e causa.
 
 Nella **comunicazione del rischio**, questi aspetti sono cruciali. Un cittadino che sa valutare le probabilità risponde meglio a un'allerta, né sottovaluta né esagera.
 
@@ -113,7 +113,7 @@ Il 14 marzo molte scuole organizzano **attività sul numero π** e sulla matemat
 - Uso del **GIS** per leggere il territorio.
 - Analisi di **serie storiche** climatiche.
 
-Anche la Protezione Civile può collaborare con le scuole su questi temi.
+Il Gruppo collabora con le scuole su questi temi: [contattaci](/contatti/) per organizzare un'attività didattica.
 
 ## Per approfondire
 

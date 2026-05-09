@@ -13,9 +13,9 @@ allegati: []
 draft: false
 ---
 
-Da alcuni giorni il vento forte interessa tutto il territorio comunale. Le autorità competenti hanno diramato un'allerta meteo per vento forte sulla nostra zona.
+Il **Centro Funzionale Regionale del Lazio** ha emesso un'allerta meteo per **vento forte** sul territorio di Genzano di Roma. Sono previste raffiche intense nelle prossime ore.
 
-**Si raccomanda la massima attenzione** per limitare i disagi e ridurre i rischi.
+Consulta la pagina [Vento forte](/rischi-prevenzione/vento-forte/) per sapere cosa fare prima, durante e dopo le raffiche.
 
 ## Per approfondire
 
