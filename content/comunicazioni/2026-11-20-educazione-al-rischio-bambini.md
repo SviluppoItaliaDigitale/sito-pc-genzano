@@ -61,7 +61,7 @@ Un bambino **informato**:
 - **numero 112** (cantato o memorizzato);
 - **riconoscere adulti** fidati;
 - **saper dire** nome, cognome, strada di casa;
-- **nascondi resisti scappa** in versione gioco;
+- **chi chiamare** se ci si fa male in casa;
 - **uscita di emergenza** (in casa e a scuola);
 - **sicurezza** domestica base (no pentole, no fornelli, no prese).
 

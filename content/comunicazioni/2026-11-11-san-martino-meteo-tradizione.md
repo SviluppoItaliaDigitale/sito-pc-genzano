@@ -19,7 +19,7 @@ Oggi **11 novembre** è **San Martino**, ricorrenza nota in tutta Italia per la 
 
 Nella cultura popolare italiana:
 
-- **"estate di San Martino"** (*o "di sant'Anna"*) — breve periodo di **tempo mite** intorno all'11 novembre;
+- **"estate di San Martino"** — breve periodo di **tempo mite** intorno all'11 novembre;
 - **"a San Martino ogni mosto diventa vino"** — fine della fermentazione autunnale;
 - **festa** dei raccolti e ringraziamento per il vino nuovo;
 - **contratto agricolo**: chiusura dei contratti di mezzadria, scadenze fondiarie;

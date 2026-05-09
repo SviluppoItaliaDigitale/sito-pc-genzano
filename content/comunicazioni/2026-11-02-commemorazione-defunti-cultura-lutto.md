@@ -33,7 +33,7 @@ Anche la Protezione Civile ha le sue **memorie**:
 
 - le **vittime di terremoti** (Irpinia 1980, Friuli 1976, Centro Italia 2016, L'Aquila 2009);
 - le **vittime di alluvioni** (Firenze 1966, Salerno 1954, Sarno 1998, Genova 2011, Romagna 2023);
-- le **vittime di frane** (Vajont 1963, Stava 1985, Cervinia 1979);
+- le **vittime di frane e colate** (Vajont 1963, Stava 1985);
 - le **vittime degli incendi**;
 - i **soccorritori caduti** in servizio.
 

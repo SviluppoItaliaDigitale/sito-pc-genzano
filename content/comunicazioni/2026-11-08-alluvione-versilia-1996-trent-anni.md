@@ -27,7 +27,7 @@ Nella tarda sera del 19 giugno:
 - un **sistema temporalesco stazionario** si fermò sulle Apuane;
 - **precipitazioni** ininterrotte per ore;
 - **bacini** idrografici piccoli e ripidi si saturarono;
-- **frane** si innescarono su versanti disabboccati;
+- **frane** si innescarono su versanti denudati dalla vegetazione;
 - **torrenti** tracimarono simultaneamente;
 - **detriti** di enorme entità riversarono a valle.
 

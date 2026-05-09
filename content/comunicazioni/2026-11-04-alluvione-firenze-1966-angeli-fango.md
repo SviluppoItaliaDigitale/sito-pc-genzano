@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-All'alba del **4 novembre 1966** l'Arno ruppe gli argini ed entrò a Firenze. L'acqua, mista a fango e nafta, raggiunse i sei metri in alcuni quartieri. **35 morti** in città, 17 in tutta la regione, oltre **5.000 famiglie** senza casa, **decine di migliaia** di opere d'arte, libri antichi e archivi danneggiati o distrutti.{{< foto src="/images/2026-04-23-firenze-alluvione-1966-angeli-fango.webp"
+All'alba del **4 novembre 1966** l'Arno ruppe gli argini ed entrò a Firenze. L'acqua, mista a fango e nafta, raggiunse i sei metri in alcuni quartieri. **17 morti** a Firenze, **35 in tutta la Toscana**, oltre **5.000 famiglie** senza casa, **decine di migliaia** di opere d'arte, libri antichi e archivi danneggiati o distrutti.
+
+{{< foto src="/images/2026-04-23-firenze-alluvione-1966-angeli-fango.webp"
          alt="Piazza Santa Croce a Firenze sommersa dal fango il 4 novembre 1966"
          caption="Firenze, 4 novembre 1966. L'Arno tracima e sommerge la città. Migliaia di giovani — gli «angeli del fango» — accorrono da tutta Italia e dal mondo per salvare libri, opere d'arte e abitazioni. Tra gli organizzatori, gli scout fiorentini incaricati dal sindaco Bargellini. Public domain — via Wikimedia Commons. [Fonte originale](https://it.wikipedia.org/wiki/File:Alluvione_di_Firenze_07.jpg)." >}}
 

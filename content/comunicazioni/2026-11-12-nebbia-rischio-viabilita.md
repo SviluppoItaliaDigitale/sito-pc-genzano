@@ -94,10 +94,10 @@ Chi si muove senza auto:
 
 ## Le condizioni speciali
 
-### Nebbia + ghiaccio ("gelicidio")
-- **strade** scivolose invisibili;
-- **rischio** massimo;
-- **abbassare** ulteriormente velocità;
+### Nebbia + ghiaccio sulla strada
+- **strade** scivolose invisibili (galaverna o brina);
+- **rischio** massimo, soprattutto su ponti e viadotti;
+- **abbassare** ulteriormente la velocità;
 - **evitare** frenate e sterzate brusche;
 - **se possibile**: **non partire**.
 

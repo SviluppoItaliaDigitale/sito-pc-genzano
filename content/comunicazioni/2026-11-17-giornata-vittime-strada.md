@@ -111,7 +111,7 @@ Non sostituisce ambulanze o pompieri, ma **integra** il sistema.
 
 Nella Giornata di oggi:
 
-- **Associazioni** dei familiari (AIFVS, ACAFVS) organizzano eventi;
+- **associazioni** dei familiari delle vittime (AIFVS e altre) organizzano eventi;
 - **Comuni** depongono corone di ricordo;
 - **Scuole** propongono momenti educativi;
 - **Forze di polizia** rilasciano comunicati dati;
