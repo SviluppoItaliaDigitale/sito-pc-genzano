@@ -3,7 +3,7 @@ title: "Estintori: classi di fuoco, uso corretto e manutenzione"
 date: 2026-05-13T00:02:00+02:00
 description: "Guida pratica alle classi di fuoco, ai principali tipi di estintore e ai controlli periodici. Quando usarlo, quando uscire e chiamare il 112."
 
-badge: "Formazione"
+badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione.webp"
@@ -14,9 +14,9 @@ allegati: []
 draft: false
 ---
 
-L'estintore portatile è uno strumento antincendio di prima difesa. Si trova nelle sedi operative, nei mezzi, negli uffici, nei capannoni e in molte abitazioni. Non è però uno strumento universale: ogni estintore è progettato per determinati tipi di fuoco e può essere **inefficace o pericoloso** se usato nel modo sbagliato.
+Ogni estintore è progettato per un tipo specifico di fuoco. Usarlo male è **inefficace o pericoloso**. Usarlo bene, al momento giusto, può fermare un principio di incendio prima che diventi un'emergenza.
 
-Questo articolo riassume quello che un cittadino e un volontario devono sapere: classi di fuoco, tipi di estintore, uso corretto e controlli. Quando il fuoco è grande, cresce rapidamente, coinvolge sostanze pericolose o produce molto fumo, la risposta corretta resta una sola: **uscire, mettersi al sicuro e chiamare il 112**. L'estintore portatile è utile solo su un principio di incendio e solo se si ha una via di fuga libera.
+Questa guida spiega classi di fuoco, tipi di estintore, procedura d'uso e controlli periodici. Regola sempre valida: se il fuoco è grande, cresce o produce molto fumo, **esci, mettiti al sicuro e chiama il 112**.
 
 ## Le cinque classi di fuoco
 
@@ -94,7 +94,7 @@ Se l'estintore non funziona subito, se il fumo aumenta o se la fiamma cresce, **
 
 ## Manutenzione e controlli
 
-Gli estintori devono essere sottoposti a controlli periodici secondo le norme tecniche e le indicazioni del produttore. Per le attività soggette a obblighi di sicurezza, la manutenzione deve essere svolta da personale competente.
+Il D.Lgs. 81/2008 (Testo Unico sulla sicurezza nei luoghi di lavoro) impone controlli periodici sugli estintori. La manutenzione va affidata a personale competente, secondo UNI 9994-1.
 
 La sorveglianza visiva serve a verificare che:
 
@@ -126,11 +126,19 @@ Davanti a un principio di incendio:
 
 L'estintore è un primo presidio, non uno strumento risolutivo. La priorità è sempre **salvaguardare la vita**: la propria, quella della squadra e quella dei cittadini coinvolti.
 
-## Fonti ufficiali
+## Approfondimenti
+
+Pagine del sito:
+
+- [Rischio incendio — cosa fare prima, durante e dopo](/rischi-prevenzione/rischio-incendio/)
+- [Kit di emergenza — cosa tenere pronto in casa](/rischi-prevenzione/kit-emergenza/)
+
+Fonti ufficiali esterne:
 
 - Norma tecnica UNI EN 2 — Classificazione dei fuochi
 - Norma tecnica UNI EN 3 — Estintori d'incendio portatili
 - Norma tecnica UNI 9994-1 — Manutenzione degli estintori
-- Decreto del Presidente della Repubblica 1 agosto 2011 n. 151 — Regolamento prevenzione incendi
+- D.P.R. 1 agosto 2011, n. 151 — Regolamento prevenzione incendi
+- D.Lgs. 9 aprile 2008, n. 81 — Testo Unico sulla sicurezza nei luoghi di lavoro
 - Vigili del Fuoco — [vigilfuoco.it](https://www.vigilfuoco.it)
 - Dipartimento della Protezione Civile — [protezionecivile.gov.it](https://www.protezionecivile.gov.it)
