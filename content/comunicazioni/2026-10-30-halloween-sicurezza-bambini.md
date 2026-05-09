@@ -111,7 +111,7 @@ Ai cittadini che vogliono partecipare come "distribuenti":
 - **distribuire** dolci confezionati in ambiente igienico;
 - **evitare** regali alimentari sfusi;
 - **parlare** con bambini e genitori in modo accogliente;
-- **chi non partecipa** ha diritto a non essere disturbato (lasciare lucce spente).
+- **chi non partecipa** ha diritto a non essere disturbato (lasciare luci spente).
 
 ## Dopo la festa
 

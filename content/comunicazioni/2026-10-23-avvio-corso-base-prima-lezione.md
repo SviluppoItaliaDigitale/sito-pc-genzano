@@ -35,7 +35,7 @@ Il corso si articola in:
 - **3 giornate** pratiche (sabato, giornata intera);
 - **1 esercitazione** finale (weekend completo).
 
-Il programma dettagliato è disponibile al link [pagina dedicata](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/).
+Il programma dettagliato è nella [pagina dedicata](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/).
 
 ## I moduli previsti
 

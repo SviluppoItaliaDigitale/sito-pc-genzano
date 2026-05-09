@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Alle **7:40 del 30 ottobre 2016** la scossa più forte registrata in Italia dopo l'Irpinia 1980 colpì la valle del Nera. **Magnitudo 6.5**, ipocentro a 9 chilometri di profondità, epicentro pochi chilometri a nord di Norcia. Crollò gran parte del centro storico, compresa la **Basilica di San Benedetto**, simbolo della città.## Una scossa attesa, paesi evacuati
+Alle **7:40 del 30 ottobre 2016** la scossa più forte registrata in Italia dopo l'Irpinia 1980 colpì la valle del Nera. **Magnitudo 6.5**, ipocentro a 9 chilometri di profondità, epicentro pochi chilometri a nord di Norcia. Crollò gran parte del centro storico, compresa la **Basilica di San Benedetto**, simbolo della città.
+
+## Una scossa attesa, paesi evacuati
 
 A differenza del 24 agosto, questa volta il bilancio umano fu **straordinariamente contenuto**: nessuna vittima diretta nell'abitato di Norcia, due deceduti per cause indirette nelle ore successive, alcune centinaia di feriti.
 

@@ -30,7 +30,7 @@ Per i cittadini che vogliono approfittare al meglio della giornata:
 
 - **arrivare** con domande specifiche (sul territorio, sui rischi, sul volontariato);
 - **portare** i bambini (ci sono attività dedicate);
-- **vestiti comodi** e scarpe adatte se si vogliono vedere esercitazioni esterne;
+- **indossare** vestiti comodi e scarpe adatte se si vogliono vedere esercitazioni esterne;
 - **tempo di permanenza consigliato**: almeno un'ora;
 - **non servono prenotazioni**.
 
@@ -74,7 +74,7 @@ Durante la giornata:
 - **non toccare** attrezzature o mezzi senza autorizzazione;
 - **evitare** di ostruire le aree di movimento;
 - **tenere** i bambini per mano in prossimità di mezzi in movimento;
-- i **cani** ammessi al guinzaglio fuori dalla sede.
+- i **cani** sono ammessi al guinzaglio fuori dalla sede.
 
 ## Per chi non può venire
 

@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-L'Italia gestisce circa **500 grandi dighe** (superiori ai 15 metri o con invaso oltre 1.000.000 m³) e oltre **10.000 piccoli invasi**. Dopo la tragedia del **Vajont** del 9 ottobre 1963, il sistema di sicurezza è stato profondamente rinnovato. Anche se nel Lazio non ci sono grandi dighe nei Castelli Romani, conoscere il sistema è parte della cultura nazionale di protezione civile.
+L'Italia gestisce circa **500 grandi dighe** (superiori ai 15 metri o con invaso oltre 1.000.000 m³) e oltre **10.000 piccoli invasi**. Dopo la tragedia del **Vajont** del 9 ottobre 1963, il sistema di sicurezza è stato profondamente rinnovato. Anche se nei Castelli Romani non ci sono grandi dighe, conoscere il sistema è parte della cultura nazionale di protezione civile.
 
 ## Il quadro italiano
 
@@ -70,7 +70,7 @@ Gli allertamenti sono diffusi tramite **sirene**, **IT-Alert**, **sistemi locali
 
 ## Il Lazio e le dighe
 
-Nel Lazio non ci sono grandi dighe nei Castelli Romani. Le principali dighe della Regione sono:
+Nei Castelli Romani non ci sono grandi dighe. Le principali dighe del Lazio sono:
 
 - **Diga di Salto** (Rieti);
 - **Diga del Turano** (Rieti);

@@ -29,7 +29,7 @@ Per iscriversi vedi la [pagina dedicata](/comunicazioni/2026-09-07-corso-base-vo
 
 ## Io Non Rischio: partecipazione e risultati
 
-La partecipazione del Gruppo alla campagna nazionale **Io Non Rischio** ha visto il coinvolgimento di cittadini interessati ai temi:
+La partecipazione del Gruppo alla campagna nazionale **Io Non Rischio** ha coinvolto cittadini interessati ai temi:
 
 - **rischio idrogeologico**;
 - **rischio sismico**;
@@ -45,7 +45,7 @@ Nelle ultime settimane il Gruppo ha svolto:
 - **esercitazione radio** con verifica di tutti gli apparati;
 - **revisione mezzi** con test di avviamento e di funzionalità;
 - **verifica** attrezzatura campo base;
-- **prove** di schiera di squadre su chiamata.
+- **prove** di schieramento di squadre su chiamata.
 
 Una **esercitazione** più ampia è in pianificazione per le prossime settimane, in coordinamento con altri Gruppi Comunali dei Castelli Romani.
 

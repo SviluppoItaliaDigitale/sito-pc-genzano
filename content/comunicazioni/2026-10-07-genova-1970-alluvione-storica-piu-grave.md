@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Tra il **7 e l'8 ottobre 1970** una pioggia di intensità eccezionale si abbatté sulla Liguria centrale. A Genova furono registrati **oltre 900 millimetri di pioggia in 24 ore** in alcune stazioni del bacino del Bisagno — più di quanto cade normalmente in mezzo anno. Il **torrente Bisagno**, che attraversa Genova in gran parte tombato sotto la città, esondò violentemente.Bilancio: **44 morti** in città, **22 dispersi**, **2.000 senzatetto**, **8.000 vittime indirette di danni** secondo i registri comunali dell'epoca. È stata la **più grave alluvione del Novecento ligure**.
+Tra il **7 e l'8 ottobre 1970** una pioggia di intensità eccezionale si abbatté sulla Liguria centrale. A Genova furono registrati **oltre 900 millimetri di pioggia in 24 ore** in alcune stazioni del bacino del Bisagno — più di quanto cade normalmente in mezzo anno. Il **torrente Bisagno**, che attraversa Genova in gran parte tombato sotto la città, esondò violentemente.
+
+Bilancio: **44 morti** in città, **22 dispersi**, **2.000 senzatetto**, **8.000 vittime indirette di danni** secondo i registri comunali dell'epoca. È stata la **più grave alluvione del Novecento ligure**.
 
 ## Una città pianificata sul rischio
 

@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Con l'ingresso di ottobre si apre, nel Lazio, il **periodo di maggiore attenzione per il rischio idrogeologico**. Le prime piogge intense, i venti atlantici, le prime situazioni di saturazione dei terreni richiedono attenzione costante da parte di cittadini, enti e volontari di Protezione Civile.
+Con l'ingresso di ottobre si apre, nel Lazio, il **periodo di maggiore attenzione per il rischio idrogeologico**. Le prime piogge intense, i venti atlantici, le prime situazioni di saturazione dei terreni richiedono l'attenzione costante di cittadini, enti e volontari di Protezione Civile.
 
 ## Il quadro di rischio
 
@@ -65,7 +65,7 @@ Nel mese di ottobre il Gruppo Comunale:
 
 ## Il ruolo della cittadinanza
 
-Il **miglior alleato** della Protezione Civile sono cittadini informati. Ottobre è un mese in cui la partecipazione fa la differenza:
+I **migliori alleati** della Protezione Civile sono i cittadini informati. Ottobre è un mese in cui la partecipazione fa la differenza:
 
 - **segnalare** situazioni critiche note;
 - **seguire** fonti ufficiali;

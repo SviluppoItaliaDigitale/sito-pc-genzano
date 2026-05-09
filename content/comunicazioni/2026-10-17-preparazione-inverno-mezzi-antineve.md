@@ -43,7 +43,7 @@ Anche se al Sud Roma le nevicate sono meno frequenti, la stagione invernale pres
 
 - **gelate notturne** con rischio di ghiaccio su strade e marciapiedi;
 - **nebbie** con ridotta visibilità;
-- **venti forti** fredde con danni a rami e strutture;
+- **venti forti e freddi** con danni a rami e strutture;
 - **piogge** persistenti con rischio idrogeologico;
 - **ondate di freddo** pericolose per persone fragili.
 

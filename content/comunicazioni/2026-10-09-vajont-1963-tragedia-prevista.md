@@ -13,7 +13,9 @@ allegati: []
 draft: false
 ---
 
-Alle **22:39 del 9 ottobre 1963** una frana di circa **270 milioni di metri cubi** di roccia si staccò dal versante nord del Monte Toc. Precipitò nel bacino artificiale della diga del Vajont, in Friuli. L'onda di sfollamento superò i 250 metri di altezza, scavalcò la diga (che resse) e si rovesciò sui paesi a valle. **Quasi 2.000 persone** persero la vita in pochi minuti, soprattutto a **Longarone**.{{< foto src="/images/2026-10-09-vajont-1963-tragedia-prevista-fonte-wikipedia.webp"
+Alle **22:39 del 9 ottobre 1963** una frana di circa **270 milioni di metri cubi** di roccia si staccò dal versante nord del Monte Toc. Precipitò nel bacino artificiale della diga del Vajont, in Friuli. L'onda di sfollamento superò i 250 metri di altezza, scavalcò la diga (che resse) e si rovesciò sui paesi a valle. **Quasi 2.000 persone** persero la vita in pochi minuti, soprattutto a **Longarone**.
+
+{{< foto src="/images/2026-10-09-vajont-1963-tragedia-prevista-fonte-wikipedia.webp"
          alt="La diga del Vajont vista dall'invaso, prima della frana del 9 ottobre 1963"
          caption="La diga del Vajont. Il 9 ottobre 1963 una frana di 270 milioni di metri cubi precipita nell'invaso causando un'onda di 200 metri. Quasi 2.000 morti a Longarone. Una tragedia annunciata, ignorata. Foto: Ispettorato Vigili del Fuoco — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Vajont1963_5.jpg)." >}}
 
