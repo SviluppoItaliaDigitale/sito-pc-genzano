@@ -92,11 +92,11 @@ Il **piano** riflette questi elementi.
 ## Per rischio incendio domestico
 
 ### Prevenzione
-- **Estintori** facilmente raggiungibili.
-- **Rilevatori** di fumo funzionanti.
-- **Vie di fuga** libere.
-- **Chiavi** sempre nelle serrature interne.
-- **Plan scala** a molla se al piano alto.
+- **Estintori** facilmente raggiungibili e revisionati.
+- **Rilevatori di fumo** funzionanti e con batteria carica.
+- **Vie di fuga** libere da ingombri.
+- **Chiavi** sempre nelle serrature interne, lato dell'uscita.
+- **Scala di emergenza** o ripiegabile a finestra, se vivi ai piani alti senza altre vie di fuga.
 
 ### Evacuazione
 - **Chiudere** porte dietro di sé.
@@ -109,10 +109,10 @@ Il **piano** riflette questi elementi.
 ## Per rischio terremoto
 
 ### Durante
-- **Triangolo salvavita** (sotto tavolo robusto, mobile stabile).
-- **Lontano** da mobili pesanti cadenti.
-- **Proteggere** testa e collo.
-- **Rimanere** fermi fino a fine scossa.
+- **Riparati** sotto un tavolo robusto, l'architrave di una porta portante o vicino a un muro maestro (indicazione DPC).
+- **Stai lontano** da mobili pesanti, scaffali, vetrate.
+- **Proteggi** testa e collo con le braccia.
+- **Resta fermo** fino alla fine della scossa.
 
 ### Dopo
 - **Verificare** feriti.

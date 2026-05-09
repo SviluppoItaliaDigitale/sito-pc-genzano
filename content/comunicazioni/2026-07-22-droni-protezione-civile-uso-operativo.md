@@ -37,7 +37,7 @@ Nella PC italiana sono usati:
 - **Droni con altimetri**, LIDAR, spettrometri.
 - **Droni tethered** (collegati a terra) per sorveglianza continua.
 
-Scelta dipende da **obiettivo operativo**.
+La scelta del modello dipende dall'**obiettivo operativo**.
 
 ## Le applicazioni operative
 
@@ -91,7 +91,7 @@ L'uso professionale dei droni richiede:
 - **Autorizzazioni** per volo in aree sensibili.
 - **Responsabilità** per eventuali danni.
 
-Negli ultimi anni la normativa è **armonizzata a livello UE**.
+Negli ultimi anni la normativa è stata **armonizzata a livello UE** (Regolamenti 2019/947 e 2019/945).
 
 ## I droni privati e la PC
 

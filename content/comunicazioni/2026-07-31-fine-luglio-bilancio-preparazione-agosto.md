@@ -261,9 +261,9 @@ Il mese di agosto sarà:
 
 I volontari sono **pronti**.
 
-## Il monito degli esperti
+## Il messaggio dalle sale operative
 
-Come ricordano i responsabili regionali: *"Non abbassate mai la guardia ad agosto. Il sistema è fatto per reggere, ma solo se ogni componente — comprese le famiglie e i cittadini — collabora. La sicurezza dei Castelli dipende anche da chi ci vive ogni giorno."*
+Una sintesi di quanto si sente ripetere da chi coordina le sale operative: ad agosto la guardia non si abbassa mai. Il sistema è progettato per reggere, ma solo se ogni componente — incluse le famiglie e i cittadini — collabora. La sicurezza dei Castelli dipende anche da chi ci vive ogni giorno.
 
 ## Per approfondire
 
