@@ -64,6 +64,7 @@ Se non sai in quale Parte cercare:
 | Comunicato stampa in emergenza | [Parte 12](manuale/parte-12-comunicati-stampa-tempo-ordinario-e-tempo-emergenziale.md) |
 | Gerarchia fonti DPC/CNR/EENA per crisi sui social | [Parte 13](manuale/parte-13-social-media-policy-pubblica.md) § 13.7 + 13.9 |
 | Configurare Claude Code (sandbox, API keys) | [Parte 14](manuale/parte-14-configurazione-ambiente-di-sviluppo-claude-code.md) |
+| Avviare Claude Code o il menu di gestione (alias + icone desktop) | [Parte 14](manuale/parte-14-configurazione-ambiente-di-sviluppo-claude-code.md) § 14.10 |
 | Coach dei giochi + TTS audio + fiabe | [Parte 17](manuale/parte-17-coach-didattico-nei-giochi-e-tts-esteso-maggio-2026.md) |
 | TTS dappertutto + glossario inline + tempo lettura + sillabazione | [Parte 18](manuale/parte-18-lettura-accessibile-maggio-2026.md) |
 | Aggiungere voce al glossario inline (popover sui termini PC) | [Parte 18](manuale/parte-18-lettura-accessibile-maggio-2026.md) § 18.9 |
