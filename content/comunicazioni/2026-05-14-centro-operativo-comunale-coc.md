@@ -1,25 +1,25 @@
 ---
-title: "Il Centro Operativo Comunale (COC): il cuore della Protezione Civile locale"
+title: "Il Centro Operativo Comunale (COC): il coordinamento della Protezione Civile locale"
 date: 2026-05-14
-description: "Quando l'emergenza arriva, il Sindaco attiva il COC. Cos'e, come funziona, chi ne fa parte, perché è il riferimento del cittadino."
+description: "Quando l'emergenza arriva, il Sindaco può attivare il COC. Cos'è, come funziona, chi ne fa parte e perché è importante per i cittadini."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-14-centro-operativo-comunale-coc.webp"
-image_alt: "Cover dell'articolo: Il Centro Operativo Comunale (COC): il cuore della Protezione Civile locale"
+image_alt: "Cover dell'articolo: Il Centro Operativo Comunale (COC), il coordinamento della Protezione Civile locale"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
 ---
 
-In caso di emergenza sul territorio comunale, il [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/) (D.Lgs. 1/2018) assegna al **Sindaco** il ruolo di **Autorità di Protezione Civile a livello locale**. Lo strumento operativo con cui il Sindaco coordina le risposte è il **Centro Operativo Comunale (COC)**. Conoscerlo è utile a ogni cittadino: è lì che si decide, in emergenza, chi fa cosa.
+In caso di emergenza sul territorio comunale, il [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/) (D.Lgs. 1/2018) assegna al **Sindaco** il ruolo di **Autorità territoriale di Protezione Civile**. Lo strumento operativo con cui il Sindaco coordina la risposta locale è il **Centro Operativo Comunale (COC)**. Conoscerlo è utile a ogni cittadino: aiuta a capire chi decide, chi interviene e da quali canali arrivano le informazioni ufficiali.
 
 ## Cos'è il COC
 
-Il **Centro Operativo Comunale** è una struttura temporanea e modulare, prevista nel **Piano comunale di Protezione Civile**, che il Sindaco attiva quando un evento richiede coordinamento oltre l'ordinario.
+Il **Centro Operativo Comunale** è una struttura temporanea e modulare, prevista nel **Piano comunale di Protezione Civile**, che il Sindaco può attivare quando un evento richiede un coordinamento oltre l'ordinario.
 
-In tempi normali, il COC "non esiste": esistono uffici comunali che si occupano di protezione civile in via ordinaria. **In emergenza il COC si attiva**: persone, spazi e strumenti dedicati si concentrano per gestire l'evento.
+In tempi ordinari operano gli uffici comunali e le strutture previste dal Piano. **In emergenza il COC si attiva**: persone, spazi e strumenti dedicati lavorano insieme per gestire l'evento.
 
 ## Come è organizzato: le funzioni di supporto
 
@@ -28,7 +28,7 @@ Il COC è organizzato per **funzioni di supporto**, ciascuna con un responsabile
 | Funzione | Ambito |
 |---|---|
 | **F1 Tecnico-scientifica** | Analisi dell'evento, rapporto con enti tecnici (Regione, DPC, INGV) |
-| **F2 Sanità** | Coordinamento con ASL e 118, assistenza sanitaria |
+| **F2 Sanità** | Coordinamento con ASL, ARES 118 e servizi sanitari |
 | **F3 Volontariato** | Attivazione e gestione dei gruppi di volontariato |
 | **F4 Materiali e mezzi** | Inventario e gestione delle risorse operative |
 | **F5 Servizi essenziali** | Gas, elettricità, acqua, telefonia, rifiuti |
@@ -51,14 +51,14 @@ Il COC riunisce:
 - **Rappresentanti di Vigili del Fuoco e forze dell'ordine** (secondo le necessità)
 - **Tecnici esterni** convocati in base allo scenario
 
-Il COC non è un'assemblea politica: è una **sala operativa**. Si lavora con mappe, radio, telefoni, decisioni rapide, procedure.
+Il COC non è un'assemblea politica: è una **sala operativa**. Si lavora con mappe, radio, telefoni, decisioni rapide e procedure.
 
 ## Quando viene attivato
 
 Il COC può essere attivato:
 
 - In caso di **evento previsto** (allerta meteo rossa, esercitazione, evento pubblico importante).
-- In caso di **evento in corso** (terremoto, alluvione, grande incendio, black out prolungato).
+- In caso di **evento in corso** (terremoto, alluvione, grande incendio, blackout prolungato).
 - In caso di **evento locale** che il Sindaco ritenga richiedere coordinamento.
 
 L'attivazione è decisa dal Sindaco, solitamente su proposta del responsabile comunale di protezione civile.
@@ -81,20 +81,20 @@ A Genzano di Roma il **COC, quando attivato, ha sede presso il Comando di Polizi
 
 Quando il COC è attivo:
 
-- **Le comunicazioni ufficiali** passano dal Comune tramite i suoi canali (sito, social, SMS, megafoni, info point fisici).
-- **Le richieste di assistenza non urgenti** dei cittadini vanno al COC (numero dedicato attivato per l'emergenza).
+- **Le comunicazioni ufficiali** passano dal Comune tramite i suoi canali (sito, social, SMS, megafoni, punti informativi fisici).
+- **Le richieste di assistenza non urgenti** dei cittadini seguono i canali indicati dal Comune per l'evento.
 - **Le chiamate per emergenze reali con persone in pericolo** vanno al 112.
-- **I volontari** sono attivati con canali interni: i cittadini non devono "cercarli" per farsi aiutare — il sistema li orienta.
+- **I volontari** sono attivati con canali interni: i cittadini non devono cercarli direttamente per farsi aiutare. Il sistema li orienta.
 
 ## Cosa NON è il COC
 
 - **Non è un pronto soccorso**: non sostituisce il 112, le ambulanze, i Vigili del Fuoco.
-- **Non è aperto al pubblico**: durante l'emergenza, le persone non si presentano al COC per essere ricevute. Le informazioni escono, non si va a prenderle.
+- **Non è aperto al pubblico**: durante l'emergenza, le persone non si presentano al COC per essere ricevute. Le informazioni escono attraverso i canali ufficiali.
 - **Non è un ufficio di reclami**: reclami e segnalazioni post-evento seguono le procedure ordinarie del Comune.
 
 ## L'importanza del Piano comunale
 
-Il COC funziona se il **Piano comunale di Protezione Civile** è aggiornato, conosciuto, esercitato. Il Piano prevede procedure, scenari, catene di comando, risorse disponibili. Ogni Comune italiano è tenuto ad avere un proprio Piano: il Piano di Genzano di Roma è consultabile nella sezione dedicata del sito.
+Il COC funziona se il **Piano comunale di Protezione Civile** è aggiornato, conosciuto ed esercitato. Il Piano prevede procedure, scenari, catene di comando e risorse disponibili. Ogni Comune italiano è tenuto ad avere un proprio Piano: il Piano di Genzano di Roma è consultabile nella sezione dedicata del sito.
 
 ## Per approfondire
 
@@ -103,4 +103,4 @@ Il COC funziona se il **Piano comunale di Protezione Civile** è aggiornato, con
 - [Regione Lazio — Piani comunali](https://protezionecivile.regione.lazio.it/)
 - Pagina [Piano di emergenza](/piano-emergenza/) del nostro sito
 
-Il COC non è una sigla burocratica: è il **cuore organizzativo** della risposta del Comune all'emergenza. Conoscerne il funzionamento aiuta i cittadini a capire come e perché certe scelte vengono fatte — e a fidarsi del sistema.
+Il COC non è solo una sigla tecnica: è la struttura che permette al Comune di coordinare informazioni, risorse e decisioni durante un evento. Conoscerne il funzionamento aiuta i cittadini a seguire le indicazioni corrette e a usare i canali giusti.
