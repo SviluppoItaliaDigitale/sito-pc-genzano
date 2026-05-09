@@ -22,7 +22,7 @@ Per un gruppo di volontari comunali, vedersi riconosciuti da una delle voci più
 
 ## Che cos'è Abili a proteggere
 
-Abili a proteggere è il progetto promosso dal Dipartimento della Protezione Civile dedicato alle persone con disabilità e alle fasce vulnerabili della popolazione in situazioni di emergenza. Il portale rappresenta un punto di riferimento nazionale per chi lavora sull'inclusione nel sistema di protezione civile: raccoglie buone pratiche, interviste, strumenti operativi e segnala le iniziative più significative su tutto il territorio italiano.
+Abili a proteggere è il progetto promosso dal Dipartimento della Protezione Civile dedicato alle persone con disabilità e alle fasce vulnerabili in situazioni di emergenza. Il portale è un punto di riferimento nazionale per chi lavora sull'inclusione nel sistema di protezione civile. Raccoglie buone pratiche, interviste, strumenti operativi e segnala le iniziative più significative su tutto il territorio italiano.
 
 Essere citati in questo contesto significa che il lavoro svolto a Genzano è stato riconosciuto come un esempio di buona pratica a livello nazionale.
 

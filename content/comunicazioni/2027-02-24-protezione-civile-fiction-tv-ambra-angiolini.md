@@ -21,7 +21,7 @@ Una fiction Rai con **Ambra Angiolini** come protagonista ha portato in prima se
 
 ## Perché ci interessa
 
-La rappresentazione televisiva conta. Il pubblico italiano si è formato un'idea della **medicina** dai medical drama, del **diritto** dai legal drama, della **polizia** dalle serie poliziesche. La **Protezione Civile**, invece, era quasi assente dalla narrazione di intrattenimento. Per la prima volta una **fiction in prima serata** mette al centro le persone che fanno il nostro lavoro: chi parte di notte con la chiamata di attivazione, chi monta il campo, chi tira su una tenda alle tre di mattina sotto la pioggia. C'è anche chi ascolta uno sfollato che non sa più dove andrà a dormire.
+La rappresentazione televisiva conta. Il pubblico italiano si è formato un'idea della **medicina** dai medical drama, del **diritto** dai legal drama, della **polizia** dalle serie poliziesche. La **Protezione Civile**, invece, era quasi assente dalla narrazione di intrattenimento. Per la prima volta una **fiction in prima serata** mette al centro le persone che fanno il nostro lavoro. Chi parte di notte con la chiamata di attivazione. Chi monta il campo. Chi tira su una tenda alle tre di mattina sotto la pioggia. C'è anche chi ascolta uno sfollato che non sa più dove andrà a dormire.
 
 Per chi fa volontariato significa una cosa concreta: **i giovani vedono che esiste**. È così che molti di noi, anche nei numerosi gruppi italiani, sono entrati: prima da spettatori, poi da curiosi, poi da volontari.
 

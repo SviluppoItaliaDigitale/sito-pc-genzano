@@ -52,7 +52,7 @@ Il risultato fu, nel 1982, la **Direttiva 82/501/CEE**, conosciuta come **Dirett
 - **predisporre** un piano di emergenza interno;
 - **informare** la popolazione residente nelle vicinanze sui rischi e sui comportamenti da tenere.
 
-La direttiva fu poi sostituita da **Seveso II** (Direttiva 96/82/CE, 1996) e infine da **Seveso III** (Direttiva 2012/18/UE, ancora in vigore), che ha esteso ed irrobustito gli obblighi includendo la **partecipazione del pubblico** ai processi decisionali, la **trasparenza** sui dati, la **classificazione armonizzata** delle sostanze secondo il Regolamento CLP.
+La direttiva fu poi sostituita da **Seveso II** (Direttiva 96/82/CE, 1996) e infine da **Seveso III** (Direttiva 2012/18/UE, ancora in vigore). Quest'ultima ha esteso ed irrobustito gli obblighi: **partecipazione del pubblico** ai processi decisionali, **trasparenza** sui dati, **classificazione armonizzata** delle sostanze secondo il Regolamento CLP.
 
 In Italia, Seveso III è recepita dal **D.Lgs. 26 giugno 2015, n. 105**, che individua due classi di stabilimenti — di **soglia inferiore** e **soglia superiore** — con obblighi crescenti di valutazione, comunicazione e pianificazione. Gli stabilimenti italiani classificati "Seveso" sono circa **mille**, distribuiti su tutto il territorio nazionale, e sono mappati nell'**Inventario Nazionale degli Stabilimenti a Rischio di Incidente Rilevante** dell'**ISPRA**, consultabile online.
 
