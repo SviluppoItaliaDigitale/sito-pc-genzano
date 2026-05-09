@@ -201,8 +201,21 @@ E a chi si prende cura di loro — genitori, insegnanti, medici, educatori, alle
 
 ## Per approfondire
 
-- [Educazione al rischio bambini](/comunicazioni/2026-11-20-educazione-al-rischio-bambini/)
-- [Truffe online](/comunicazioni/2026-11-22-truffe-online-black-friday/)
-- [Violenza sulle donne (tutela minori)](/comunicazioni/2026-11-25-violenza-donne-numeri-emergenza/)
+Sul nostro sito:
+
+- [Educazione al rischio bambini](/comunicazioni/2026-11-20-educazione-al-rischio-bambini/).
+- [Truffe online](/comunicazioni/2026-11-22-truffe-online-black-friday/).
+- [Violenza sulle donne (tutela minori)](/comunicazioni/2026-11-25-violenza-donne-numeri-emergenza/).
+- [Sicurezza giochi bambini all'aperto](/comunicazioni/2026-05-28-sicurezza-giochi-bambini-aperto/).
+- [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/).
+- [Kit Calamità — Bambini](/formazione/kit-calamita-bambini/).
+- [Kit Calamità — Neonati](/formazione/kit-calamita-neonati/).
+
+Fonti istituzionali:
+
+- [Telefono Azzurro — emergenza infanzia 114](https://www.azzurro.it/).
+- [Centro Antiveleni Roma — Policlinico Gemelli](https://www.policlinicogemelli.it/).
+- [UNICEF Italia](https://www.unicef.it/).
+- [Società Italiana di Pediatria](https://sip.it/).
 
 In emergenza: **112**. Emergenza infanzia: **114**. Bambini scomparsi: **116000**. Centro Antiveleni: **800 883 300**.

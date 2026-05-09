@@ -154,8 +154,18 @@ A chi sceglie di **dedicare** il ponte dell'Immacolata al servizio per la comuni
 
 ## Per approfondire
 
-- [Ponte Immacolata informazioni](/comunicazioni/2026-11-29-ponte-immacolata-preparazione/)
-- [Neve e ghiaccio](/comunicazioni/2026-12-02-neve-e-ghiaccio-preparazione/)
-- [Riscaldamento sicuro](/comunicazioni/2026-12-04-riscaldamento-sicuro-dicembre/)
+Sul nostro sito:
+
+- [Ponte Immacolata informazioni](/comunicazioni/2026-11-29-ponte-immacolata-preparazione/).
+- [Neve e ghiaccio](/comunicazioni/2026-12-02-neve-e-ghiaccio-preparazione/).
+- [Riscaldamento sicuro](/comunicazioni/2026-12-04-riscaldamento-sicuro-dicembre/).
+- [Vigilia Immacolata: servizio sicurezza](/comunicazioni/2026-12-07-vigilia-immacolata-servizio-sicurezza/).
+- [Chi siamo](/chi-siamo/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
 
 In emergenza: **112**.

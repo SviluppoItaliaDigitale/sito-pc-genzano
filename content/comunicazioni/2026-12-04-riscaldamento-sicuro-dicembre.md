@@ -215,8 +215,19 @@ A Genzano:
 
 ## Per approfondire
 
-- [Monossido di carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
-- [Manutenzione caldaia](/comunicazioni/2026-10-27-manutenzione-caldaia-controllo-annuale/)
-- [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/)
+Sul nostro sito:
 
-In emergenza: **112**. Gas emergenza area Lazio (Italgas): 800 900 999.
+- [Monossido di carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/).
+- [Manutenzione caldaia](/comunicazioni/2026-10-27-manutenzione-caldaia-controllo-annuale/).
+- [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/).
+- [Incendi domestici](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/).
+- [Estintori: classi di fuoco e uso corretto](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
+- [Neve e ghiaccio: preparazione](/comunicazioni/2026-12-02-neve-e-ghiaccio-preparazione/).
+
+Fonti istituzionali:
+
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [ARERA — Autorità Reti e Ambiente](https://www.arera.it/).
+- [ISS — Salute e ambiente domestico](https://www.iss.it/).
+
+In emergenza: **112**. Pronto intervento gas Italgas Lazio: 800 900 999.

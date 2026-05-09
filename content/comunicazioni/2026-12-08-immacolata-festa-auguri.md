@@ -124,8 +124,16 @@ Continueremo a seguire la settimana con articoli informativi e di servizio.
 
 ## Per approfondire
 
-- [Vigilia Immacolata](/comunicazioni/2026-12-07-vigilia-immacolata-servizio-sicurezza/)
-- [Presidio PC ponte](/comunicazioni/2026-12-05-presidio-ponte-immacolata/)
-- [Gruppo Comunale PC](/chi-siamo/)
+Sul nostro sito:
+
+- [Vigilia Immacolata](/comunicazioni/2026-12-07-vigilia-immacolata-servizio-sicurezza/).
+- [Presidio PC ponte Immacolata](/comunicazioni/2026-12-05-presidio-ponte-immacolata/).
+- [Rientro post-ponte: sicurezza stradale](/comunicazioni/2026-12-09-rientro-post-ponte-sicurezza-stradale/).
+- [Chi siamo](/chi-siamo/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 
 In emergenza sempre: **112**.

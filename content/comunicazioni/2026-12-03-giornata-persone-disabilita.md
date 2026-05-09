@@ -178,8 +178,22 @@ La PC di Genzano, in occasione di questa giornata, rinnova il proprio impegno pe
 
 ## Per approfondire
 
-- [Gruppo Comunale PC](/chi-siamo/)
-- [Accessibilità del sito](/accessibilita/)
-- [Comportamenti corretti](/rischi/)
+Sul nostro sito:
 
-In emergenza: **112**. Uniche Emergenza per sordi: chiamata video in LIS tramite app dedicate (dipende da operatore).
+- [Chi siamo](/chi-siamo/).
+- [Accessibilità del sito](/accessibilita/).
+- [Abili a Proteggere](/abili-a-proteggere/).
+- [ISO 22395 — Persone vulnerabili](/comunicazioni/2026-05-29-iso-22395-persone-vulnerabili/).
+- [Persone fragili: aiutare i vicini in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Consapevolezza autismo: emergenze inclusive](/comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/).
+- [Kit Calamità — Disabilità adulti](/formazione/kit-calamita-disabilita-adulti/).
+- [Facile da leggere](/facile-da-leggere/).
+
+Fonti istituzionali:
+
+- [ONU — International Day of Persons with Disabilities](https://www.un.org/en/observances/day-of-persons-with-disabilities).
+- [Convenzione ONU sui diritti delle persone con disabilità](https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html).
+- [FISH — Federazione Italiana per il Superamento dell'Handicap](https://www.fishonlus.it/).
+- [Where Are U](https://www.wherareu.it/) — chiamate al 112 con localizzazione.
+
+In emergenza: **112**. Per persone sorde è disponibile la chiamata video in LIS tramite app dedicate (dipende dall'operatore).

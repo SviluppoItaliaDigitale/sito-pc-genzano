@@ -196,8 +196,19 @@ In caso di neve a Genzano:
 
 ## Per approfondire
 
-- [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/)
-- [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/)
-- [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
+Sul nostro sito:
+
+- [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/).
+- [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/).
+- [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/).
+- [Riscaldamento sicuro a dicembre](/comunicazioni/2026-12-04-riscaldamento-sicuro-dicembre/).
+- [Allerte meteo del territorio](/allerte-meteo/).
+- [Kit Calamità — Anziani](/formazione/kit-calamita-anziani/).
+
+Fonti istituzionali:
+
+- [Servizio Meteorologico dell'Aeronautica](https://www.meteoam.it/).
+- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/).
 
 In emergenza: **112**.

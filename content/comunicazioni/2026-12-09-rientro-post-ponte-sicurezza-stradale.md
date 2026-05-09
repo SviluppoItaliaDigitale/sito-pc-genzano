@@ -171,8 +171,19 @@ La PC sarà presente con articoli su: **Santa Lucia** (13 dicembre), **solstizio
 
 ## Per approfondire
 
-- [Ponte Immacolata](/comunicazioni/2026-11-29-ponte-immacolata-preparazione/)
-- [Neve e ghiaccio](/comunicazioni/2026-12-02-neve-e-ghiaccio-preparazione/)
-- [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/)
+Sul nostro sito:
+
+- [Ponte Immacolata](/comunicazioni/2026-11-29-ponte-immacolata-preparazione/).
+- [Neve e ghiaccio](/comunicazioni/2026-12-02-neve-e-ghiaccio-preparazione/).
+- [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/).
+- [Esodo natalizio: traffico autostrade](/comunicazioni/2026-12-19-esodo-natalizio-traffico-autostrade/).
+- [Sicurezza in bicicletta](/comunicazioni/2026-04-30-sicurezza-bicicletta-citta-emergenza/).
+
+Fonti istituzionali:
+
+- [Polizia di Stato — Polizia stradale](https://www.poliziadistato.it/).
+- [Ministero delle Infrastrutture e dei Trasporti](https://www.mit.gov.it/).
+- [ISTAT — Incidenti stradali](https://www.istat.it/argomento/incidenti-stradali).
+- [ANAS](https://www.stradeanas.it/).
 
 In emergenza: **112**.
