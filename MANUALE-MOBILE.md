@@ -207,7 +207,13 @@ informativi/dottrinali — non si è obbligati ad avere foto.
 
 ### Caso B — Vuoi una foto inline gratuita (Wikipedia/NASA/USGS/NOAA/stock)
 
-Da mobile lo strumento giusto è **chiedere a Claude in italiano naturale**.
+> ⚠️ **Vincolo della sandbox cloud (testato 2026-05-09)**: le sessioni Claude Code da mobile/web/agent GitHub-integrato hanno la **rete verso Wikimedia, NASA, USGS, NOAA, Pexels, Pixabay, Unsplash bloccata** (`HTTP 403 host_not_allowed`). L'agent `pc-image-fixer` può scaricare foto solo da **Claude Code CLI sul PC** dell'utente, dove la sandbox locale è sbloccata via `.claude/settings.local.json`. Specifiche complete in `.claude/rules/08-claude-code-setup.md` § "Sandbox CLOUD vs sandbox LOCALE".
+>
+> Da mobile due strade:
+> - **Aspetti di tornare al PC** e lì lanci Claude Code CLI con la richiesta in linguaggio naturale (vedi sotto).
+> - **Carichi tu la foto** già su GitHub web in `static/images/` (vedi Caso C); allora la sessione cloud può applicare la fascia blu (Pillow installabile via pip che è whitelistato) e inserire lo shortcode senza dover scaricare nulla da fonti esterne.
+
+**Da Claude Code CLI sul PC** lo strumento giusto è **chiedere a Claude in italiano naturale**.
 L'agent `pc-image-fixer` (Parte 19) cerca, sceglie, scarica, applica fascia
 blu istituzionale, e inserisce lo shortcode `{{< foto >}}` nel corpo articolo.
 
