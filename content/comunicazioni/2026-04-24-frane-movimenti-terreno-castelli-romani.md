@@ -63,18 +63,23 @@ Sulla pagina [rischi e prevenzione](/rischi-prevenzione/) trovi la scheda dedica
 
 ## Per approfondire
 
-- Articolo: [Allagamenti urbani: cosa fare quando l'acqua entra in casa](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
-- Articolo: [Giornata mondiale dell'acqua: rete idrica e sicurezza](/comunicazioni/2026-03-22-giornata-mondiale-acqua-rete-idrica-sicurezza/)
-- Articolo: [Giornata delle zone umide: rischio idrogeologico](/comunicazioni/2026-02-02-giornata-zone-umide-rischio-idrogeologico/)
-- Articolo: [Temporali intensi: comportamenti corretti](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/)
-- Articolo: [Sicurezza sui laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/)
-- Pagina: [Rischi e prevenzione](/rischi-prevenzione/)
+Sul nostro sito:
 
-## Fonti
+- [Rischio idrogeologico — pagina operativa](/rischi-prevenzione/rischio-idrogeologico/).
+- [Allagamenti urbani: cosa fare](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/).
+- [Giornata mondiale dell'acqua: rete idrica e sicurezza](/comunicazioni/2026-03-22-giornata-mondiale-acqua-rete-idrica-sicurezza/).
+- [Giornata delle zone umide: rischio idrogeologico](/comunicazioni/2026-02-02-giornata-zone-umide-rischio-idrogeologico/).
+- [Temporali intensi: comportamenti corretti](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/).
+- [Sicurezza sui laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/).
+- [Sarno 1998](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/).
+- [Frana costone Nemi: chiusura via Nemorense](/comunicazioni/2026-04-15-frana-costone-nemi-chiusura-via-nemorense/).
 
-- [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico)
-- [Piattaforma IdroGEO](https://idrogeo.isprambiente.it/)
-- [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
-- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
+Fonti istituzionali:
+
+- [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico).
+- [Piattaforma IdroGEO ISPRA](https://idrogeo.isprambiente.it/).
+- [CNR-IRPI — Frane e alluvioni](https://www.irpi.cnr.it/).
+- [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 
 Il rischio idrogeologico non è una novità e non è un'emergenza permanente. È una caratteristica del territorio che conosciamo e con cui possiamo convivere in sicurezza, se il Comune, i cittadini e il volontariato lavorano insieme.

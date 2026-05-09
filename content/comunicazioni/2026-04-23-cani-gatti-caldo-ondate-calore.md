@@ -91,17 +91,22 @@ I gatti, se liberi di muoversi in casa, cercano in autonomia le zone più fresch
 
 Il Ministero della Salute attiva ogni estate il numero **1500** "**Proteggiamoci dal caldo**" per informazioni e consigli sulle ondate di calore, rivolto a persone e animali. Il servizio è gratuito ed è attivo nei mesi estivi.
 
-## Fonte ufficiale
-
-Le raccomandazioni di questo articolo sono tratte integralmente dalla pagina del Ministero della Salute:
-
-- [Come proteggere dal caldo cani e gatti](https://www.salute.gov.it/new/it/tema/ondate-di-calore/come-proteggere-dal-caldo-cani-e-gatti/) — Ministero della Salute (aggiornamento 21 maggio 2025)
-
 Per chi ha dubbi su condizioni sanitarie specifiche del proprio animale, il riferimento resta sempre **il medico veterinario** di fiducia.
 
-## Altri articoli sul caldo e sulla prevenzione
+## Per approfondire
 
-- [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/)
-- [Primo soccorso e rianimazione cardiopolmonare](/formazione/primo-soccorso/) — area tematica
+Sul nostro sito:
 
-Tutti gli articoli sulla prevenzione sono filtrabili nell'[archivio delle comunicazioni](/comunicazioni/) con il tag **Prevenzione**.
+- [Giornata mondiale della salute: primo soccorso alla portata di tutti](/comunicazioni/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata/).
+- [Ondate di calore: prepararsi ora](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/).
+- [Malori estivi: colpo di calore, ictus, infarto](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/).
+- [Sciami d'api in estate](/comunicazioni/2026-05-20-sciami-api-estate-recupero-genzano/).
+- [Kit Calamità — Animali](/formazione/kit-calamita-animali/).
+- [Primo soccorso — area tematica](/formazione/primo-soccorso/).
+
+Fonti istituzionali:
+
+- [Ministero della Salute — Come proteggere dal caldo cani e gatti](https://www.salute.gov.it/new/it/tema/ondate-di-calore/come-proteggere-dal-caldo-cani-e-gatti/) (aggiornamento 21 maggio 2025).
+- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp).
+- [LAV — Lega Anti Vivisezione](https://www.lav.it/).
+- [ENPA — Ente Nazionale Protezione Animali](https://www.enpa.it/).
