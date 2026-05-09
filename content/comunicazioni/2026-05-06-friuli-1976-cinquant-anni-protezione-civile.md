@@ -2,7 +2,6 @@
 title: "Friuli 1976, cinquant'anni dopo: il terremoto che ha fatto nascere la protezione civile italiana"
 date: 2026-05-06T00:02:00+02:00
 description: "Alle 21:00 del 6 maggio 1976 una scossa di magnitudo 6.4 devastò il Friuli, lasciando 989 morti e 45.000 senza tetto."
-
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -11,7 +10,6 @@ image_alt: "Copertina dell'articolo: Friuli 1976, cinquant'anni dopo: il terremo
 scadenza: ""
 area: "Italia · Friuli-Venezia Giulia"
 allegati: []
-
 draft: false
 ---
 
@@ -126,17 +124,22 @@ Le **989 vittime** del 6 maggio 1976 e dei mesi successivi sono ricordate ogni a
 
 A cinquant'anni di distanza, il Friuli ricorda i suoi morti e celebra una verità importante: **da una catastrofe può nascere un sistema migliore**, se le persone giuste fanno le cose giuste al momento giusto. Zamberletti morì nel 2018, dopo aver visto il Codice della Protezione Civile portare il suo nome morale in tutta Italia.
 
-## Per approfondire (fonti istituzionali)
+## Per approfondire
 
-- [Dipartimento di Protezione Civile — Il terremoto del Friuli](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-del-friuli/)
-- [INGV Terremoti — Speciale Friuli 1976](https://ingvterremoti.com/2014/05/06/speciale-i-terremoti-del-900-il-terremoto-del-friuli-6-maggio-1976/)
-- [Vigili del Fuoco — Memoria storica del terremoto del Friuli](https://www.vigilfuoco.it/chi-siamo/memoria-storica/notizie-storiche/il-terremoto-del-friuli-del-maggio-1976)
-- [Consiglio regionale FVG — Friuli 1976-2016: dalla ricostruzione a un nuovo modello](https://www.consiglio.regione.fvg.it/cms/export/sites/consiglio/pagine/4/pubblicazioni/Pubblicazioni-allegati/Friuli-1976-2016-dalla-ricostruzione-a-un-nuovo-modello-di-sviluppo.pdf)
-- [Legge 24 febbraio 1992, n. 225 — Normattiva (testo storico)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-24;225)
+Sul nostro sito:
 
-## Approfondimenti dal nostro archivio
+- [Cos'è la protezione civile in Italia: dall'Irpinia a Vermicino](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/).
+- [Anniversario del terremoto dell'Abruzzo 2009 (Fossa)](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/).
+- [Terremoto dell'Emilia 2012](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/).
+- [Irpinia 1980, anniversario 46 anni](/comunicazioni/2026-11-23-irpinia-1980-anniversario-46/).
+- [Centro Italia 2016 — memoria del sisma di Amatrice e Norcia](/comunicazioni/2026-10-28-centro-italia-2016-memoria/).
+- [Rischio sismico — pagina operativa](/rischi-prevenzione/rischio-sismico/).
+- [Cartografia operativa](/cartografia/).
 
-- [Cos'è la protezione civile in Italia: dall'Irpinia a Vermicino, la nascita di un sistema](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/)
-- [Anniversario del terremoto dell'Abruzzo 2009 (Fossa)](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/)
-- [Irpinia 1980, anniversario 46 anni](/comunicazioni/2026-11-23-irpinia-1980-anniversario-46/)
-- [Centro Italia 2016 — memoria del sisma di Amatrice e Norcia](/comunicazioni/2026-10-28-centro-italia-2016-memoria/)
+Fonti istituzionali:
+
+- [Dipartimento di Protezione Civile — Il terremoto del Friuli](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-del-friuli/).
+- [INGV Terremoti — Speciale Friuli 1976](https://ingvterremoti.com/2014/05/06/speciale-i-terremoti-del-900-il-terremoto-del-friuli-6-maggio-1976/).
+- [Vigili del Fuoco — Memoria storica del terremoto del Friuli](https://www.vigilfuoco.it/chi-siamo/memoria-storica/notizie-storiche/il-terremoto-del-friuli-del-maggio-1976).
+- [Legge 24 febbraio 1992, n. 225 — Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-24;225).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).

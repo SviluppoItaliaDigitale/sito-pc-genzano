@@ -92,16 +92,20 @@ Sulla pagina [Ondate di calore](/rischi-prevenzione/ondate-di-calore/) del nostr
 
 ## Per approfondire
 
-- Articolo: [Malori estivi: riconoscere colpo di calore e ictus](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/)
-- Articolo: [Persone fragili: aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
-- Articolo: [Check casa prima dell'estate: prevenzione](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
-- Articolo: [Previsioni meteo e bollettini di allerta](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
-- Articolo: [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
+Sul nostro sito:
 
-## Fonti
+- [Ondate di calore — pagina operativa](/rischi-prevenzione/ondate-di-calore/).
+- [Malori estivi: riconoscere colpo di calore e ictus](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/).
+- [Persone fragili: aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Check casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/).
+- [Previsioni meteo e bollettini di allerta](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/).
+- [Kit Calamità — Anziani](/formazione/kit-calamita-anziani/).
 
-- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp)
-- [Istituto Superiore di Sanità](https://www.iss.it/)
-- [Copernicus — Heat and health](https://climate.copernicus.eu/)
+Fonti istituzionali:
+
+- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp).
+- [Istituto Superiore di Sanità](https://www.iss.it/).
+- [Copernicus — Heat and health](https://climate.copernicus.eu/).
+- [WHO — Heat and health](https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health).
 
 Prepararsi alle ondate di calore non è allarmismo: è la differenza, in alcune settimane dell'anno, tra un'estate difficile e un'estate con troppe persone in ospedale.

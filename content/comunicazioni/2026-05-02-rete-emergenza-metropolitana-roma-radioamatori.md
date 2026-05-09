@@ -68,10 +68,19 @@ Genzano di Roma fa parte della **Città Metropolitana di Roma Capitale**: rientr
 
 Per il cittadino il messaggio operativo resta unico: **in emergenza si chiama il 112**. Ma sapere che dietro alle Sale Operative esiste una rete radio volontaria pronta a entrare in funzione quando le linee cadono, aiuta a capire perché il sistema di Protezione Civile è fatto di **molti livelli che si sovrappongono e si rinforzano**.
 
-## Per saperne di più
+## Per approfondire
 
-- Articolo: [Rete Zamberletti: svolta la 499ª esercitazione radio nazionale](/comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/)
-- Sito ARI Sezione di Roma Capitale APS (<span style="font-variant-numeric: slashed-zero; font-feature-settings: 'zero' 1;">IQ0RM</span>): [www.ariroma.it](https://www.ariroma.it/)
+Sul nostro sito:
+
+- [Rete Zamberletti: 499ª esercitazione radio nazionale](/comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/).
+- [Radiocomunicazioni in emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
+- [Giornata mondiale delle telecomunicazioni](/comunicazioni/2026-05-17-giornata-mondiale-telecomunicazioni/).
+
+Fonti istituzionali:
+
+- [ARI Sezione di Roma Capitale APS — IQ0RM](https://www.ariroma.it/).
+- [ARI — Associazione Radioamatori Italiani](https://www.ari.it/).
+- [Città Metropolitana di Roma Capitale](https://www.cittametropolitanaroma.it/).
 
 ## Fonte
 

@@ -58,9 +58,17 @@ Un ringraziamento alla **Polizia Locale di Genzano di Roma** per il coordinament
 
 ## Per approfondire
 
-- Pagina: [Chi siamo](/chi-siamo/)
-- Pagina: [Diventa volontario](/diventa-volontario/)
-- Pagina: [Numeri utili](/numeri-utili/)
-- Pagina: [Contatti](/contatti/)
+Sul nostro sito:
+
+- [Chi siamo](/chi-siamo/).
+- [Diventa volontario](/diventa-volontario/).
+- [Numeri utili](/numeri-utili/).
+- [Contatti](/contatti/).
+- [Vento forte: cosa fare prima, durante e dopo](/rischi-prevenzione/vento-forte/).
+
+Fonti istituzionali:
+
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Vigili del Fuoco](https://www.vigilfuoco.it/) — competenti per gli interventi su alberi pericolanti su pubblica via.
 
 La collaborazione quotidiana fra **Polizia Locale** e **Gruppo Comunale di Protezione Civile** è uno strumento ordinario del sistema comunale per gestire situazioni che richiedono risorse aggiuntive sul territorio. Funziona perché ognuno fa la propria parte: la Polizia Locale **valuta e coordina**, i volontari **eseguono il supporto operativo** sotto le sue indicazioni.

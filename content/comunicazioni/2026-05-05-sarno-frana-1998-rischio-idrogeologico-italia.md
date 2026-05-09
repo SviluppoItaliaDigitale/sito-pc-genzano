@@ -2,7 +2,6 @@
 title: "Sarno, 5 maggio 1998: la frana che ha riscritto le mappe del rischio idrogeologico in Italia"
 date: 2026-05-05T00:02:00+02:00
 description: "Le colate rapide del 5 maggio 1998 a Sarno e Quindici travolsero quattro Comuni campani lasciando 161 vittime."
-
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -11,7 +10,6 @@ image_alt: "Copertina dell'articolo: Sarno, 5 maggio 1998, la frana che ha riscr
 scadenza: ""
 area: "Italia · Campania"
 allegati: []
-
 draft: false
 ---
 
@@ -81,16 +79,20 @@ Le **161 persone** morte fra il 5 e il 6 maggio 1998 a Sarno, Quindici, Bracigli
 
 Ventotto anni dopo, nessun versante in Italia è ancora "sicuro" in modo assoluto. Ma la differenza fra il Paese del 1998 e quello del 2026 è enorme: oggi sappiamo dove guardare, abbiamo un sistema di allerta e abbiamo uno Stato che — dopo Sarno — ha smesso di pretendere che il territorio fosse problema solo dei Comuni.
 
-## Per approfondire (fonti istituzionali)
+## Per approfondire
 
-- [Dipartimento di Protezione Civile — L'alluvione di Sarno e Quindici](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/lalluvione-di-sarno-e-quindici/)
-- [CNR-IRPI Polaris — Le colate rapide di Sarno del maggio 1998](https://polaris.irpi.cnr.it/le-colate-rapide-di-sarno-del-maggio-1998/)
-- [ISPRA — Dissesto idrogeologico in Italia (rapporti annuali)](https://www.isprambiente.gov.it/it/pubblicazioni/rapporti)
-- [Legge 3 agosto 1998, n. 267 — Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1998-08-03;267)
-- [Corpo Nazionale dei Vigili del Fuoco — Memoria storica: Sarno](https://www.vigilfuoco.tv/storia/alluvione-sarno)
+Sul nostro sito:
 
-## Approfondimenti dal nostro archivio
+- [Cos'è la protezione civile in Italia: dall'Irpinia a Vermicino](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/).
+- [Rischio idraulico urbano a Genzano](/comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano/).
+- [Cartografia operativa del Comune](/comunicazioni/2026-06-25-cartografia-operativa-piano-comunale/).
+- [Rischio idrogeologico — pagina operativa](/rischi-prevenzione/rischio-idrogeologico/).
+- [Alluvione Emilia-Romagna 2023](/comunicazioni/2026-05-17-emilia-romagna-2023-alluvione-maggio/).
 
-- [Cos'è la protezione civile in Italia: dall'Irpinia a Vermicino, la nascita di un sistema](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/)
-- [Rischio idraulico urbano a Genzano](/comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano/)
-- [Cartografia operativa del Comune](/comunicazioni/2026-06-25-cartografia-operativa-piano-comunale/)
+Fonti istituzionali:
+
+- [Dipartimento di Protezione Civile — L'alluvione di Sarno e Quindici](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/lalluvione-di-sarno-e-quindici/).
+- [CNR-IRPI Polaris — Le colate rapide di Sarno del maggio 1998](https://polaris.irpi.cnr.it/le-colate-rapide-di-sarno-del-maggio-1998/).
+- [ISPRA — Dissesto idrogeologico in Italia](https://www.isprambiente.gov.it/it/pubblicazioni/rapporti).
+- [Legge 3 agosto 1998, n. 267 — Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1998-08-03;267).
+- [Vigili del Fuoco — Memoria storica: Sarno](https://www.vigilfuoco.tv/storia/alluvione-sarno).

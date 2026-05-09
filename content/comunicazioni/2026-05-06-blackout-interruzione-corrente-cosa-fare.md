@@ -102,18 +102,21 @@ Come cittadino, il contributo più utile è **non intralciare** e **aiutare i vi
 
 ## Per approfondire
 
-- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
-- Articolo: [Persone fragili: aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
-- Articolo: [Allagamenti urbani: cosa fare quando l'acqua entra in casa](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
-- Articolo: [Check casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/)
-- Articolo: [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
-- Pagina: [Rischi e prevenzione](/rischi-prevenzione/)
+Sul nostro sito:
 
-## Fonti
+- [Rischio blackout — pagina operativa](/rischi-prevenzione/blackout/).
+- [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
+- [Persone fragili: aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Allagamenti urbani: cosa fare quando l'acqua entra in casa](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/).
+- [Check casa prima dell'estate](/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/).
+- [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/).
+- [Kit Calamità — Pazienti terapie salvavita](/formazione/kit-calamita-terapie-salvavita/).
 
-- [Terna](https://www.terna.it/)
-- [E-Distribuzione](https://www.e-distribuzione.it/)
-- [ARERA — Autorità per Reti e Ambiente](https://www.arera.it/)
-- [Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)
+Fonti istituzionali:
+
+- [Terna — gestore della rete elettrica nazionale](https://www.terna.it/).
+- [E-Distribuzione](https://www.e-distribuzione.it/).
+- [ARERA — Autorità per Reti e Ambiente](https://www.arera.it/).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 
 Una casa preparata è una casa che attraversa un blackout **senza panico**. Le regole sono poche, conosciute prima, messe in pratica al momento giusto.
