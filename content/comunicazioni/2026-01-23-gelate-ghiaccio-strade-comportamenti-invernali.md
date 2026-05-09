@@ -1,7 +1,7 @@
 ---
 title: "Gelate e ghiaccio sulle strade: come comportarsi in inverno"
 date: 2026-01-23
-description: "Il periodo delle gelate è il più insidioso per circolare a piedi."
+description: "Ghiaccio e gelate nei Castelli Romani: come muoversi a piedi e in auto in sicurezza nei giorni più freddi."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -40,7 +40,7 @@ Gennaio registra molte cadute accidentali, soprattutto tra **anziani**. Per ridu
 - **Sostieniti** a corrimano, muretti, pali: non fa niente se diventi goffo, l'importante è non cadere.
 - **Se cadi**, cerca di proteggere il capo (braccia sopra la testa).
 
-Per gli **anziani soli**, è utile essere accompagnati o limitare le uscite alle ore centrali della giornata, quando il ghiaccio è sciolto.
+Se sei un **anziano solo** o conosci qualcuno che lo è: esci solo nelle ore centrali, quando il ghiaccio è di solito sciolto, o fatti accompagnare.
 
 ## Se sei in auto
 
@@ -48,7 +48,7 @@ Per gli **anziani soli**, è utile essere accompagnati o limitare le uscite alle
 
 - **Verifica il parabrezza**: il ghiaccio va rimosso completamente. Non basta una finestrella sul lato guida.
 - **Luci di posizione pulite**: una targa coperta da brina è sanzionabile e poco visibile.
-- **Partenza a motore caldo** non è obbligatoria, ma attenzione a specchietti e vetri laterali.
+- **Verifica specchietti e vetri laterali** prima di partire: la brina può coprirli anche con il motore già avviato.
 - **Gomme invernali**: nei Castelli sono spesso consigliate in base all'ordinanza locale.
 
 ### Durante la guida
@@ -57,7 +57,7 @@ Per gli **anziani soli**, è utile essere accompagnati o limitare le uscite alle
 - **Distanza di sicurezza doppia**: lo spazio di frenata su ghiaccio è molto più lungo.
 - **Accelerazione e frenata dolci**: niente movimenti bruschi.
 - **Marce basse in discesa** per usare il freno motore.
-- **In caso di slittamento**, non sterzare bruscamente: leva il piede dall'acceleratore, sterza piano nella direzione che vuoi prendere.
+- **Se l'auto slitta**: leva il piede dall'acceleratore, sterza piano verso la direzione che vuoi prendere. Niente movimenti bruschi.
 
 ### Attenzione ai punti critici
 
@@ -92,7 +92,7 @@ Nelle aree pubbliche, il Comune e gli enti gestori possono spargere **sale** o *
 - **Segnala al Comune** tramite i canali ufficiali.
 - **Non improvvisare soluzioni** sul suolo pubblico.
 
-Per **cortili e rampe private**, puoi intervenire con sale fine o graniglia (attenzione al sale fine che può rovinare i pavimenti interni se trascinato).
+Per **cortili e rampe private**, puoi usare sale grosso o graniglia. Attenzione: il sale fine trascinato all'interno può rovinare i pavimenti.
 
 ## Quando chiamare il 112
 
@@ -104,14 +104,8 @@ Il **Numero Unico Emergenze 112** si chiama quando:
 
 Per **segnalazioni non urgenti** su tratti stradali pericolosi, usa invece i canali del Comune (centralino, polizia locale) o della Provincia per le strade provinciali.
 
-## Un inverno sereno
-
-Gennaio e febbraio sono mesi in cui un piccolo cambio di abitudini fa la differenza: **partire qualche minuto prima**, **cambiare le scarpe**, **rallentare un po'**. Piccole accortezze che trasformano una mattinata potenzialmente pericolosa in una giornata normale.
-
 ## Per approfondire
 
 - Articolo: [Neve nei Castelli Romani: come ci organizziamo](/comunicazioni/2026-01-31-neve-castelli-romani-organizzazione/)
 - Articolo: [Persone fragili: come aiutare i vicini anziani](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
-- [Polizia Stradale — Consigli di guida invernale](https://www.poliziadistato.it/)
-
-Muoversi con prudenza è la prima forma di protezione civile personale.
+- [Polizia di Stato — Sicurezza stradale in inverno](https://www.poliziadistato.it/strade-sicure/)
