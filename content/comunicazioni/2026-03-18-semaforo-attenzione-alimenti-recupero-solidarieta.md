@@ -55,7 +55,7 @@ I parametri che determinano il livello sono: processo produttivo, modalità di c
 - Pesce marinato o condito
 - Dolci e salati farciti con creme o salse a base di uova non pastorizzate
 
-**Trasporto**: contenitori isotermici differenziati caldo/freddo. Il tempo tra recupero e consegna alla OC di II livello **non deve superare i 60 minuti**.
+**Trasporto**: contenitori isotermici differenziati caldo/freddo. Il tempo tra recupero e consegna all'OC di II livello (Organizzazione di carità ricevente) **non deve superare i 60 minuti**.
 
 **Gestione una volta arrivati**: o consumati entro 1 ora dall'arrivo, o refrigerati a ≤ +4 °C e consumati entro 24 ore, o **congelati preferibilmente entro 1 ora dall'arrivo**.
 
@@ -82,7 +82,7 @@ Include gli alimenti **deperibili conservati in catena del freddo** (pre-confezi
 
 **Trasporto**: grandi quantitativi con automezzi refrigerati; piccoli quantitativi su brevi tragitti in contenitori isotermici.
 
-**Gestione**: conservati a ≤ +4 °C e utilizzati nel più breve tempo possibile, eventualmente **congelati** presso la OC (una sola volta).
+**Gestione**: conservati a ≤ +4 °C e utilizzati nel più breve tempo possibile, eventualmente **congelati** presso l'OC ricevente (una sola volta).
 
 ## Basso livello di attenzione — alimenti stabili
 
@@ -115,7 +115,7 @@ Per gli alimenti con **TMC ("da consumarsi preferibilmente entro…")** superata
 
 ## La rintracciabilità
 
-Il capitolo 10 del manuale imporrà poi la **tracciabilità** dell'intero processo: le OC devono poter identificare **da chi hanno ricevuto** gli alimenti (rintracciabilità in entrata/monte) e **a chi li hanno distribuiti** (rintracciabilità in uscita/valle). L'elenco fornitori e il registro delle donazioni sono strumenti minimi indispensabili.
+Il capitolo 10 del manuale disciplina la **tracciabilità** dell'intero processo: le OC devono poter identificare **da chi hanno ricevuto** gli alimenti (rintracciabilità in entrata/monte) e **a chi li hanno distribuiti** (rintracciabilità in uscita/valle). L'elenco fornitori e il registro delle donazioni sono strumenti minimi indispensabili.
 
 ## Collegamento con l'operatività del nostro Gruppo
 

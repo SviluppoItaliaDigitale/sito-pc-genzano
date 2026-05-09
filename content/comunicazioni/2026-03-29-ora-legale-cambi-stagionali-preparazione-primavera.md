@@ -13,9 +13,9 @@ allegati: []
 draft: false
 ---
 
-L'**ultima domenica di marzo** scattano **le lancette in avanti**: si passa dall'**ora solare** all'**ora legale**. Il cambio segna simbolicamente l'**arrivo della primavera**.
+L'**ultima domenica di marzo** si passa dall'**ora solare** all'**ora legale**: le lancette avanzano di un'ora.
 
-Per la Protezione Civile è un **buon momento** per avviare le attività stagionali tipiche della bella stagione: preparazione agli incendi boschivi, pulizia delle aree, esercitazioni, controlli sui mezzi, manutenzione dei kit.
+Per la Protezione Civile è il momento di avviare le attività stagionali: preparazione agli incendi boschivi, pulizia delle aree, esercitazioni, controlli sui mezzi, manutenzione dei kit.
 
 ## Il cambio ora: note pratiche
 
@@ -55,11 +55,11 @@ In questo periodo dell'anno il Gruppo Comunale si attiva su diversi fronti:
 
 ### Ripasso formativo
 
-Prima della stagione calda (giugno-settembre), **ripassate** le tecniche antincendio, le radiocomunicazioni, il primo soccorso. Esercitazioni pratiche brevi mantengono l'efficienza operativa.
+Prima della stagione calda (giugno-settembre), il Gruppo **ripassa** le tecniche antincendio, le radiocomunicazioni, il primo soccorso. Esercitazioni pratiche brevi mantengono l'efficienza operativa.
 
 ### Sopralluoghi sul territorio
 
-I volontari fanno **sopralluoghi** nei punti sensibili: aree boscate, incolti, viabilità secondaria, fontane e sorgenti. Serve per:
+I volontari fanno **sopralluoghi** nei punti sensibili: aree boscate, incolti, viabilità secondaria, fontane e sorgenti. I sopralluoghi servono a:
 
 - **Verificare lo stato** dei luoghi dopo l'inverno.
 - **Segnalare** eventuali criticità al Comune.
@@ -71,7 +71,7 @@ La primavera è il periodo classico delle **esercitazioni congiunte** con altri 
 
 ## Cosa può fare un cittadino
 
-Anche chi non è volontario può approfittare del cambio stagionale per **mettersi in regola** con alcuni accorgimenti domestici:
+Anche chi non è volontario può usare il cambio stagionale per **adottare alcuni accorgimenti domestici**:
 
 ### Check-up del kit di emergenza
 
