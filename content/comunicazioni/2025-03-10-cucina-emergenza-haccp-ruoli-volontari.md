@@ -51,7 +51,7 @@ Il manuale elenca con precisione le situazioni di pericolo tipiche:
 - **inalazione di gas e vapori**, **ustioni**
 - rischio di incendio ed esplosione vicino a bombole e fuochi liberi.
 
-Per ogni compito è prevista una specifica analisi dei rischi: la cottura porta con sé soprattutto ustioni e contatto con vapori; il taglio delle carni e dei salumi richiede attenzione alle cadute di coltelli; la movimentazione dei contenitori caldi unisce rischio di ustioni e scivolamenti.
+Per ogni compito è prevista una specifica analisi dei rischi. La cottura porta con sé soprattutto ustioni e contatto con vapori. Il taglio delle carni e dei salumi richiede attenzione alle cadute di coltelli. La movimentazione dei contenitori caldi unisce rischio di ustioni e scivolamenti.
 
 ## Dispositivi di protezione individuale
 

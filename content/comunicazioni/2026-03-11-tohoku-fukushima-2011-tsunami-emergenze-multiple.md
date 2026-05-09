@@ -37,7 +37,7 @@ Sul Tōhoku, le onde raggiunsero altezze di **10-15 metri** in molti punti, e in
 
 A **Fukushima Daiichi**, il **terremoto** mise correttamente in **arresto automatico** i sei reattori della centrale. Tutti i sistemi di sicurezza progettati per il sisma funzionarono. Il problema fu lo **tsunami che arrivò 50 minuti dopo**: le onde superarono il muro di protezione di 5,7 metri e allagarono i **generatori diesel di emergenza**, ubicati negli scantinati. Senza energia per le pompe di raffreddamento, **tre reattori** persero il controllo termico e fusero il combustibile nucleare in pochi giorni.
 
-I **rilasci radioattivi** atmosferici e marini di Fukushima sono stati molto inferiori a quelli di Chernobyl (1986) — circa il **10-20%** in termini di radioattività totale — ma l'evacuazione di un'area di **20 km di raggio** intorno alla centrale durò anni e per alcune zone persiste ancora oggi.
+I **rilasci radioattivi** atmosferici e marini di Fukushima sono stati molto inferiori a quelli di Chernobyl (1986) — circa il **10-20%** in termini di radioattività totale. Ma l'evacuazione di un'area di **20 km di raggio** intorno alla centrale durò anni. Per alcune zone persiste ancora oggi.
 
 ## La lezione: emergenze multiple e sistemi di allerta tsunami
 

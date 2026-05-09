@@ -136,7 +136,7 @@ Il beneficio non è illimitato: il Codice fissa un **tetto di 180 giorni all'ann
 - massimo **60 giorni continuativi** per emergenze nazionali e missioni all'estero
 - ulteriori **10 giorni** per corsi di formazione regionali ed esercitazioni particolari
 
-Questo quadro normativo è ciò che consente al volontariato italiano di operare in modo sostenibile: il volontario sa che quando viene attivato non perde né il lavoro né lo stipendio, e il datore di lavoro sa di avere un meccanismo di rimborso previsto per legge.
+Questo quadro normativo è ciò che consente al volontariato italiano di operare in modo sostenibile. Il volontario sa che, quando viene attivato, non perde né il lavoro né lo stipendio. Il datore di lavoro sa di avere un meccanismo di rimborso previsto per legge.
 
 ---
 

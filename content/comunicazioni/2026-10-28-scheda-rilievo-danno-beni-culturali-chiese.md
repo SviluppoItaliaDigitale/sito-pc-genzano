@@ -193,7 +193,7 @@ Ma può trovarsi a **supportare** l'attività:
 - **raccordando** la parrocchia con il **Centro Operativo Comunale**
 - **documentando fotograficamente** quanto richiesto dalla squadra tecnica
 
-Nel territorio di Genzano di Roma — con chiese storiche come **la Collegiata di Santa Maria della Cima**, l'**Eremo di Sant'Antonio** e le **chiese rurali dei Castelli Romani** — sapere che esiste una procedura standard per il rilievo del danno significa sapere **chi farà cosa** se (quando) il sisma colpirà.
+Nel territorio di Genzano di Roma ci sono chiese storiche come **la Collegiata di Santa Maria della Cima**, l'**Eremo di Sant'Antonio** e le **chiese rurali dei Castelli Romani**. Sapere che esiste una procedura standard per il rilievo del danno significa sapere **chi farà cosa** se (quando) il sisma colpirà.
 
 ## Il ruolo delle Soprintendenze
 
