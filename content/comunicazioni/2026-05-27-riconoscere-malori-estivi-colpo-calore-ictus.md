@@ -130,10 +130,19 @@ I corsi sono offerti da **Croce Rossa Italiana**, **ANPAS**, **Misericordie**, s
 
 ## Per approfondire
 
-- Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
-- Articolo: [Ondate di calore: preparare l'estate](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
-- Articolo: [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/)
-- [Croce Rossa Italiana](https://www.cri.it/)
-- [Ministero della Salute — Ondate di calore](https://www.salute.gov.it/)
+Sul nostro sito:
+
+- [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/).
+- [Ondate di calore: preparare l'estate](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/).
+- [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/).
+- [Persone fragili: aiutare i vicini anziani in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Kit Calamità — Anziani](/formazione/kit-calamita-anziani/).
+
+Fonti istituzionali:
+
+- [Italian Resuscitation Council (IRC)](https://www.ircouncil.it/) — Linee guida BLS-D.
+- [Croce Rossa Italiana](https://www.cri.it/) — corsi di primo soccorso.
+- [Ministero della Salute — Ondate di calore](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp).
+- [American Heart Association — FAST stroke](https://www.heart.org/) — riconoscimento ictus.
 
 Riconoscere un malore in tempo **può salvare una vita**. Non serve fare diagnosi: servono attenzione, prontezza e un numero — il **112**.

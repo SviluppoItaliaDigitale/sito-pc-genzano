@@ -107,8 +107,18 @@ In questo caso la situazione da gestire con attenzione è **il temporale**, non 
 
 ## Per approfondire
 
-- [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
-- [Dipartimento Protezione Civile — Rischio meteo](https://www.protezionecivile.gov.it/it/pagina/rischio-meteo-idrogeologico-e-idraulico)
-- Articolo correlato: [Previsioni meteo e bollettini di allerta](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
+Sul nostro sito:
+
+- [Allerte Meteo](/allerte-meteo/): livello in tempo reale del Lazio.
+- [Previsioni meteo e bollettini di allerta](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/).
+- [ISO 22324 — Codici colore allerta](/comunicazioni/2026-05-12-iso-22324-codici-colore-allerta/).
+- [Vento forte: cosa fare prima, durante, dopo](/rischi-prevenzione/vento-forte/).
+- [Rischio idrogeologico — pagina operativa](/rischi-prevenzione/rischio-idrogeologico/).
+
+Fonti istituzionali:
+
+- [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
+- [Dipartimento Protezione Civile — Rischio meteo](https://www.protezionecivile.gov.it/it/pagina/rischio-meteo-idrogeologico-e-idraulico).
+- [DGR Lazio 865/2019 — Tabella zone allerta](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf).
 
 Un bollettino, letto correttamente, vale più di una consultazione rapida di un'app meteo. Il sistema di allertamento italiano è **uno dei migliori al mondo**: imparare a usarlo è un investimento in sicurezza personale e familiare.

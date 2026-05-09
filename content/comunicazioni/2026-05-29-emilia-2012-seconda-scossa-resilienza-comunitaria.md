@@ -114,10 +114,18 @@ Nel ricordo delle **17 vittime** di quel mattino, e di tutte le persone colpite 
 
 ## Per approfondire
 
-- Articolo: [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/)
-- Articolo: [Terremoto Emilia 2012: memoria e resilienza](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/)
-- [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/)
-- [Dipartimento Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/rischi/rischio-sismico)
-- [Regione Emilia-Romagna — Ricostruzione post-sisma 2012](https://www.regione.emilia-romagna.it/terremoto)
+Sul nostro sito:
+
+- [Terremoto: cosa fare durante e dopo la scossa](/comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/).
+- [Terremoto Emilia 2012: memoria e resilienza (prima scossa)](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/).
+- [Friuli 1976, cinquant'anni dopo](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
+- [Rischio sismico — pagina operativa](/rischi-prevenzione/rischio-sismico/).
+- [Persone fragili: aiutare i vicini in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+
+Fonti istituzionali:
+
+- [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
+- [Dipartimento Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
+- [Regione Emilia-Romagna — Ricostruzione post-sisma 2012](https://www.regione.emilia-romagna.it/terremoto).
 
 Memoria, preparazione, comunità: tre pilastri della Protezione Civile che il 29 maggio richiama con forza.

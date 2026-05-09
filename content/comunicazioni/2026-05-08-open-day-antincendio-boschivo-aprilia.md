@@ -45,4 +45,17 @@ Al rientro condividiamo sui canali del Gruppo le novità tecniche più rilevanti
 
 Nel Lazio, per **segnalare un incendio in corso** il cittadino chiama il **NUE 112** (Numero Unico Emergenze). La Centrale Unica smista la chiamata agli enti competenti: **Vigili del Fuoco**, squadre **AIB** regionali, forze dell'ordine. Il Gruppo Comunale di Genzano di Roma viene attivato dal Comune e non può essere chiamato direttamente dai cittadini per le emergenze.
 
-Per informazioni di prevenzione e comportamento, vedi la pagina [Rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/) e la [Cartografia del territorio](/cartografia/).
+## Per approfondire
+
+Sul nostro sito:
+
+- [Rischio incendio — pagina operativa](/rischi-prevenzione/rischio-incendio/).
+- [Cartografia del territorio](/cartografia/).
+- [Estintori: classi di fuoco e uso corretto](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
+- [Incendi domestici](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/).
+
+Fonti istituzionali:
+
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [Regione Lazio — AIB](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Dipartimento Protezione Civile — Rischio incendi](https://www.protezionecivile.gov.it/it/pagina/rischio-incendi-boschivi).
