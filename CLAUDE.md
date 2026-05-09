@@ -36,9 +36,18 @@ Specifiche complete e esempi in `.claude/rules/07-proattivita-coerenza.md` sezio
 
 ---
 
-## "Pubblica" significa portare in produzione, non aprire una PR
+## "Pubblica" significa portare in produzione FINO ALLA FINE — niente fermate
 
-Quando l'utente dice **«pubblica»**, **«mandala live»**, **«metti su»**, **«pubblica le modifiche»**, **«pubblicalo»** (e varianti italiane equivalenti) **devi portare le modifiche fino al sito live** senza chiedere conferme intermedie:
+🔴 **Quando l'utente dice una di queste cose, vai fino al sito live senza fermarti, senza chiedere, senza spiegare lo stato a metà strada.**
+
+**Parole-trigger (lista non esaustiva, riconosci anche varianti italiane equivalenti):**
+
+- **Comandi diretti:** «pubblica», «pubblicalo», «pubblicale», «pubblica le modifiche», «mandala live», «mettila su», «metti online», «manda in produzione», «porta live».
+- **Comandi informali:** «vai», «procedi», «fai», «fallo», «forza», «dai», «manda».
+- **Comandi rinforzati che obbligano a non fermarsi:** «vai fino alla fine», «prosegui fino alla fine», «porta a termine», «non fermarti», «fai tutto», «completa», «chiudi tutto».
+- **Conferme dopo una proposta tua nel turno precedente:** «sì», «ok», «conferma», «d'accordo», «procedi pure» (sono trigger SE nel turno precedente hai chiesto cose tipo «Vuoi che apra PR + merge + verifica deploy?»).
+
+**Sequenza completa, da eseguire senza interruzioni:**
 
 1. `git add` + `git commit` (se serve) sul branch di lavoro
 2. `git push` sul branch
@@ -47,11 +56,25 @@ Quando l'utente dice **«pubblica»**, **«mandala live»**, **«metti su»**, *
 5. Verifica che `deploy.yml` sia partito (Actions tab)
 6. Comunica all'utente l'URL della PR mergiata e l'ETA del deploy (~2-3 minuti)
 
-**Non interpretare "pubblica" come "apri PR e aspetta"**: il sito ha un solo branch di produzione (`main`) e l'utente gestisce la redazione da solo, non c'è un revisore intermedio. Se l'utente avesse voluto solo una PR aperta avrebbe detto "fai una PR" o "apri una PR".
+**🚫 VIETATO:**
 
-L'unica eccezione: se la build è chiaramente rotta (errori di sintassi rilevati, file corrotto evidente) **fermati prima del merge** e segnala. Ma se hai validato (Hugo build pulito, JS check OK, rules rispettate) procedi diritto fino al merge.
+- ❌ «PR aperta, attendo conferma per il merge». **NO**: il merge fa parte di «pubblica», l'utente ha già autorizzato.
+- ❌ «Branch avanti di N commit, vuoi che proceda?» dopo un comando di pubblicazione. **NO**: l'utente ha già detto vai.
+- ❌ Fermarsi a metà ("PR aperta, ora aspetto") quando il comando era «pubblica» o «vai». **NO**: si va fino in fondo.
+- ❌ Interpretare «pubblica» come «aggiorna il branch». **NO**: solo `main` è live, il push sul branch da solo non pubblica nulla.
+- ❌ Chiedere all'utente di fare lui il merge. **NO**: lo fai tu.
 
-Esiste perché il 2 maggio 2026, dopo il fix del labirinto, l'agent si è fermato alla creazione della PR aspettando ulteriore conferma — l'utente ha chiarito: «quando ti dico di pubblicare, devi fare in modo e maniera di pubblicare!». Niente conferme bonus.
+**Eccezione unica — build rotta:** se rilevi errori certi (Hugo build fallisce, file corrotto, sintassi YAML invalida) **fermati prima del merge**, segnala il blocker, fixa, riparti. Ma se la build è pulita e le rules rispettate, vai diritto fino al merge senza chiedere.
+
+### Domande di stato sulla pubblicazione → SEMPRE offerta esplicita
+
+Se l'utente ti chiede una **domanda di stato** sulla pubblicazione mentre ci sono commit pendenti — *«Pubblicate?»*, *«Hai pubblicato?»*, *«È live?»*, *«Va in produzione?»*, *«Sono già su main?»*, *«Si vede online?»* — e la risposta onesta è **NO** (sono solo sul branch, non ancora mergiate), **devi sempre chiudere la stessa risposta con un'offerta operativa esplicita:**
+
+> *"Sul branch ci sono N commit non ancora live. Vuoi che apra PR + merge su main + verifica deploy?"*
+
+Non lasciare l'utente a doverlo chiedere come azione successiva. Se l'utente risponde «vai»/«sì»/«ok»/«procedi», quella è una conferma di pubblicazione e attiva la sequenza completa sopra (commit → push → PR → merge → deploy → comunica URL+ETA), senza altre fermate.
+
+**Storia della regola:** esiste perché il 2 maggio 2026 un agent si è fermato alla creazione della PR aspettando conferma — l'utente ha chiarito: «quando ti dico di pubblicare, devi fare in modo e maniera di pubblicare!». Il 9 maggio 2026 ChatGPT-cloud ha replicato lo stesso bug nonostante la regola: ha spiegato lo stato del branch *senza offrire l'azione*, poi non ha riconosciuto «Vai» come trigger. La sezione è stata riscritta per rendere impossibile fraintenderla.
 
 ---
 
