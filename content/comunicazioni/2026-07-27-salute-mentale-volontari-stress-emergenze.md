@@ -203,25 +203,25 @@ Per supporto psicologico:
 
 La **rete** italiana è in sviluppo.
 
-## Il cappio del controfobico
+## La trappola del controfobico
 
 Attenzione al comportamento **controfobico**:
-- Cercare **sempre più** attivazioni.
-- **Non** rinunciare mai.
-- **Sfidare** i propri limiti continuamente.
-- **Non ascoltare** segnali di stress.
+- cercare **sempre più** attivazioni;
+- **non rinunciare mai**, anche quando si dovrebbe;
+- **sfidare** continuamente i propri limiti;
+- **ignorare** ogni segnale di stress.
 
-È spesso **reazione** a traumi non elaborati. Non è eroismo.
+È spesso una **reazione** a traumi non elaborati. Non è eroismo: è un campanello d'allarme.
 
 ## Il Gruppo come risorsa
 
-Un Gruppo di PC funziona bene quando:
-- **Cultura** del supporto reciproco.
-- **Responsabili** attenti al benessere.
-- **Spazi** per condivisione informale.
-- **Attività** sociali fuori dall'operatività.
-- **Accoglienza** dei nuovi.
-- **Saluto** degli anziani.
+Un Gruppo di PC funziona bene quando ha:
+- **una cultura** del supporto reciproco;
+- **responsabili** attenti al benessere dei volontari;
+- **spazi** per la condivisione informale;
+- **attività** sociali fuori dall'operatività;
+- **accoglienza** vera dei nuovi volontari;
+- **rispetto** verso i veterani e i loro percorsi.
 
 Il **gruppo umano** è prima risorsa psicologica.
 
@@ -238,12 +238,12 @@ Non c'è **stigma** nel chiedere supporto.
 
 ## Il fattore genere
 
-Dati mostrano che:
-- **Uomini** sottostimano sintomi ma hanno più burnout silenzioso.
-- **Donne** chiedono più facilmente aiuto ma sono più esposte a commenti e discriminazioni.
-- Approcci **diversificati** servono.
+Dati di settore mostrano che:
+- gli **uomini** tendono a sottostimare i sintomi e sviluppano più spesso burnout silenzioso;
+- le **donne** chiedono più facilmente aiuto ma sono più esposte a commenti e discriminazioni;
+- servono **approcci diversificati** per dare supporto efficace.
 
-La **diversity** arricchisce il supporto.
+La **diversità di genere e di esperienza** arricchisce il sistema di supporto del Gruppo.
 
 ## Casi studio internazionali
 

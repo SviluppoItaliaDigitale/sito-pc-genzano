@@ -191,11 +191,11 @@ La **Protezione Civile** vi trova **ampio spazio**.
 ## L'autonomia scolastica
 
 Ogni scuola può:
-- **Sviluppare** progetti proprio.
-- **Integrare** nel Piano Triennale Offerta Formativa (PTOF).
-- **Collaborare** con enti esterni.
-- **Organizzare** uscite didattiche.
-- **Accedere** a fondi.
+- **Sviluppare** progetti propri.
+- **Integrare** la PC nel Piano Triennale dell'Offerta Formativa (PTOF).
+- **Collaborare** con enti esterni qualificati.
+- **Organizzare** uscite didattiche tematiche.
+- **Accedere** a fondi nazionali e regionali per la sicurezza.
 
 L'**autonomia scolastica** è risorsa importante.
 
@@ -251,7 +251,7 @@ Il Gruppo di Genzano è **disponibile** a collaborare.
 - Articolo: [Esercitazioni PC a cosa servono](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/)
 - Articolo: [IT-alert test nazionale](/comunicazioni/2026-07-10-app-it-alert-test-nazionale/)
 - [DPC — Io non rischio](https://iononrischio.protezionecivile.it/)
-- [Ministero Istruzione](https://www.miur.gov.it/)
+- [Ministero dell'Istruzione e del Merito](https://www.mim.gov.it/)
 - [Io non rischio — Scuola](https://iononrischio.protezionecivile.it/)
 
 Ogni bambino che esce dalla scuola **conoscendo il 112, il kit di emergenza e il comportamento in caso di terremoto** è un piccolo pezzo di resilienza nazionale in più. La prevenzione è educazione.

@@ -117,7 +117,7 @@ Ogni cittadino può:
 
 ## Le ore di rischio
 
-Le zanzare diverse hanno **picchi** diversi:
+Le diverse specie di zanzara hanno **picchi di attività** diversi:
 - **Zanzara comune** (Culex): **crepuscolo e notte**.
 - **Zanzara tigre** (Aedes): **giorno intero**, picco mattino e tramonto.
 - **Anopheles** (rare): notte.
@@ -175,15 +175,15 @@ Approcci ecologici in sviluppo:
 
 Sono **alternative** ai pesticidi tradizionali.
 
-## La lotta ai pesticidi
+## I limiti dei pesticidi chimici
 
-Le insetticide chimiche hanno costi:
-- **Resistenze** sviluppate.
-- **Effetti** su altri insetti (api!).
-- **Inquinamento** ambientale.
-- **Tossicità** per fauna.
+Gli insetticidi chimici di massa hanno costi rilevanti:
+- **resistenze** sviluppate dalle zanzare nel tempo;
+- **danni** ad altri insetti utili come le api;
+- **inquinamento** ambientale di aria, acqua e suolo;
+- **tossicità** per la fauna selvatica.
 
-Per questo si preferisce **prevenzione e larvicidi specifici** rispetto a adulticidi di massa.
+Per questo oggi si preferisce la **prevenzione** e l'uso mirato di **larvicidi**, rispetto agli adulticidi di massa.
 
 ## Viaggi in zone tropicali
 

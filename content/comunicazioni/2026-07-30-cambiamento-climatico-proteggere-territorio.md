@@ -172,20 +172,20 @@ I **cittadini** hanno diritto a informazione **scientifica e accessibile**.
 Ogni cittadino:
 
 ### Mitigazione
-- **Ridurre** consumi energetici.
-- **Mobility** sostenibile.
-- **Alimentazione** consapevole.
-- **Riciclo** e riduzione rifiuti.
-- **Acquisti** responsabili.
-- **Voto** informato.
+- **Ridurre** i consumi energetici di casa.
+- **Scegliere** mezzi di mobilità sostenibili.
+- **Mangiare** con consapevolezza, prediligendo cibi locali e di stagione.
+- **Riciclare** e ridurre i rifiuti alla fonte.
+- **Acquistare** in modo responsabile.
+- **Informarsi** prima di votare.
 
 ### Adattamento
-- **Kit** emergenza domestico.
-- **Piano** famigliare di evacuazione.
-- **Isolamento** termico casa.
-- **Giardino** resiliente.
-- **Informarsi** su rischi locali.
-- **Aiutare** persone fragili.
+- **Preparare** il kit di emergenza domestico.
+- **Definire** un piano familiare di evacuazione.
+- **Migliorare** l'isolamento termico della casa.
+- **Curare** un giardino resiliente al caldo e alla siccità.
+- **Informarsi** sui rischi specifici del proprio territorio.
+- **Aiutare** le persone più fragili del vicinato.
 
 ## Giovani generazioni
 

@@ -36,9 +36,9 @@ Questo **"rumore"** è un pericolo di per sé.
 - **Comunicati stampa** ufficiali.
 
 ### IT-alert
-- **Sistema** di allerta nazionale su smartphone.
-- **Messaggi** ufficiali del DPC e autorità.
-- **Mai** disattivare sul proprio telefono.
+- **Sistema** di allerta nazionale che invia messaggi a tutti gli smartphone in una zona.
+- **Messaggi** ufficiali del DPC e delle autorità competenti.
+- **Mai** disattivare gli avvisi pubblici di emergenza sul proprio telefono.
 
 ### Ministero della Salute
 - Per **emergenze sanitarie**.
@@ -154,9 +154,9 @@ Preferire **testate riconosciute** a siti clickbait.
 ## Social network
 
 ### X (Twitter)
-- **Fonte veloce** ma attenzione a bufale.
-- **Account** ufficiali verificati (badge).
-- **Hashtag** possono esser inquinati.
+- **Fonte veloce** ma attenzione alle bufale.
+- **Privilegia** gli account istituzionali verificati (badge blu).
+- **Gli hashtag** possono essere inquinati da messaggi non verificati.
 
 ### Facebook
 - **Pagine** ufficiali più affidabili di gruppi.

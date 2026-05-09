@@ -178,12 +178,12 @@ I **punti di smarrimento bambini** sono attivi alle feste principali.
 
 Per gli anziani:
 - **Scegliere** orari meno affollati.
-- **Portare** acqua, cappello, ombrellino.
-- **Accompagnamento** familiare.
-- **Zona** con sedute e ombra.
-- **Uscita** ai primi segnali di malessere.
+- **Portare** acqua, cappello e ombrellino.
+- **Farsi** accompagnare da un familiare.
+- **Cercare** zone con sedute e ombra.
+- **Uscire** ai primi segnali di malessere.
 
-Gli eventi estivi sono **belli ma faticosi**: conoscere i propri limiti.
+Gli eventi estivi sono **belli ma faticosi**: riconoscere i propri limiti aiuta a goderli senza rischi.
 
 ## Persone con disabilità
 
@@ -200,11 +200,11 @@ I **Comuni** dei Castelli stanno lavorando su accessibilità.
 ## Dopo l'evento
 
 Al termine di ogni evento:
-- **Debriefing** organizzatori e enti.
-- **Raccolta** dati e statistiche.
-- **Lezioni apprese** per edizioni future.
-- **Ringraziamenti** ai volontari.
-- **Pulizia** e ripristino luoghi.
+- **Debriefing** tra organizzatori ed enti coinvolti.
+- **Raccolta** di dati e statistiche.
+- **Annotazione** delle lezioni apprese, da usare nelle edizioni future.
+- **Ringraziamento** ai volontari che hanno presidiato.
+- **Pulizia** e ripristino dei luoghi.
 
 La **qualità** delle edizioni future dipende dal **lavoro post-evento**.
 

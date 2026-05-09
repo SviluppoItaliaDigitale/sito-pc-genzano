@@ -54,7 +54,7 @@ Una persona con disabilità in emergenza può incontrare:
 - **Informazioni** non accessibili.
 - **Veicoli** di soccorso non adattati.
 - **Punti di raccolta** irraggiungibili.
-- **Mancanza** di personal attendants.
+- **Mancanza** di assistenti personali formati.
 
 ## Pianificazione preventiva
 
@@ -191,9 +191,9 @@ Sono **interlocutori** essenziali.
 ## Il 112 e la disabilità
 
 Quando si chiama il 112:
-- **Persone sorde**: è attivo il **112 Sordi** con SMS e videochiamata LIS.
-- **Persone mute**: si può chiamare e stare in silenzio, l'operatore capisce.
-- **Persone straniere**: servizio multilingue.
+- **Persone sorde**: è attivo il **112 Sordi** con SMS e videochiamata in LIS.
+- **Persone che non possono parlare**: si può chiamare e restare in silenzio; l'operatore riconosce la chiamata muta come potenziale emergenza.
+- **Persone straniere**: il servizio è multilingue.
 
 L'**accessibilità** del 112 è in progresso.
 
