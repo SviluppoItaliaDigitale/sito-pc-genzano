@@ -2,7 +2,6 @@
 title: "Cartelli di pericolo delle sostanze pericolose: come riconoscerli"
 date: 2026-05-24T00:02:00+02:00
 description: "Guida pratica per riconoscere pittogrammi CLP, etichette ADR e segnaletica di sicurezza. Cosa osservare, cosa comunicare al 112 e cosa evitare."
-
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -88,10 +87,18 @@ Davanti a un contenitore, un veicolo o un locale con simboli di pericolo, il vol
 
 La regola permanente è sempre la stessa: **in caso di emergenza chiama il 112**. La Centrale Unica smista la richiesta agli enti competenti. Il volontario di protezione civile, nel frattempo, supporta la sicurezza dell'area e trasmette informazioni utili.
 
-## Fonti ufficiali
+## Per approfondire
 
-- Regolamento CE 1272/2008 (CLP) — [eur-lex.europa.eu](https://eur-lex.europa.eu)
-- Accordo ADR — documentazione ufficiale UNECE e Ministero delle Infrastrutture e dei Trasporti
-- Decreto Legislativo 9 aprile 2008 n. 81 — Titolo V e allegati XXIV-XXXII
-- Norma tecnica UNI EN ISO 7010 — Segnaletica di sicurezza
-- Dipartimento della Protezione Civile — [protezionecivile.gov.it](https://www.protezionecivile.gov.it)
+Sul nostro sito:
+
+- [Rischio chimico industriale per i cittadini](/comunicazioni/2026-05-24-rischio-chimico-industriale-cittadini/).
+- [ISO 7010 — Segnaletica di sicurezza](/standard-iso/iso-7010/).
+- [Standard ISO per la Protezione Civile](/standard-iso/).
+
+Fonti istituzionali:
+
+- [Regolamento CE 1272/2008 (CLP)](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32008R1272).
+- [Accordo ADR — UNECE](https://unece.org/transport/dangerous-goods).
+- [D.Lgs. 81/2008](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81): Testo Unico Sicurezza, Titolo V e allegati XXIV-XXXII.
+- [Vigili del Fuoco](https://www.vigilfuoco.it/): per emergenze chimiche chiamare il 112.
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
