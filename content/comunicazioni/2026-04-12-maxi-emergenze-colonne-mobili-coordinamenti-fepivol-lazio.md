@@ -2,7 +2,6 @@
 title: "Maxi emergenze e colonne mobili: come si organizza l'intervento fuori dal territorio comunale"
 date: 2026-04-12
 description: "Cos'è una colonna mobile, come si forma entro 6 ore dall'evento, quali attrezzature porta."
-
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -289,9 +288,17 @@ Un volontario che non ha mai montato una tenda in notturna con il vento non è a
 
 ## Per approfondire
 
-- [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/)
-- [Che cos'è la protezione civile in Italia](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/) — il contesto nazionale
-- [Manuale da Campo](/formazione/manuale-campo/) — guida operativa completa per il volontario in missione
-- [Articolo 39 del Codice della Protezione Civile](/comunicazioni/?tag=testo-unico) — i diritti del volontario attivato
+Sul nostro sito:
 
-*Fonti: D.Lgs. 2 gennaio 2018 n. 1 (Codice della Protezione Civile), procedure operative del FEPIVOL, Meccanismo Europeo di Protezione Civile (ERCC — Bruxelles), esperienze dirette del Gruppo Comunale sulle emergenze 2023 (alluvioni Emilia-Romagna e Toscana) e 2022 (emergenza Ucraina).*
+- [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/).
+- [Che cos'è la protezione civile in Italia](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/) — il contesto nazionale.
+- [Manuale da Campo](/formazione/manuale-campo/) — guida operativa per il volontario in missione.
+- [Anniversario terremoto Abruzzo 2009 — i volontari di Genzano a Fossa](/comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/).
+- [Lo zaino del volontario](/comunicazioni/2026-05-11-zaino-volontario-attivazione/).
+- [Giornata dell'Europa: Meccanismo UCPM](/comunicazioni/2026-05-09-giornata-europa-meccanismo-protezione-civile-ue/).
+
+Fonti istituzionali:
+
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Meccanismo Europeo di Protezione Civile (ERCC)](https://civil-protection-humanitarian-aid.ec.europa.eu/).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).

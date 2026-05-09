@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Luglio entra nelle case con la sua reputazione: **il mese più caldo dell'anno** nel Lazio centrale. I dati storici raccolti dalle stazioni meteo di Ciampino, Velletri, Rocca di Papa confermano la tendenza. L'estate entra nella sua fase più intensa e i sistemi di Protezione Civile, sanitario e antincendio lavorano a pieno regime.
+Luglio è **il mese più caldo dell'anno** nel Lazio centrale. Lo confermano i dati storici delle stazioni meteo di Ciampino, Velletri e Rocca di Papa. È la fase in cui i sistemi di Protezione Civile, sanitario e antincendio lavorano a pieno regime. Sapere cosa aspettarsi aiuta a prepararsi per tempo.
 
 ## I numeri di luglio nel Lazio
 
@@ -53,30 +53,30 @@ Viaggi estivi, strade affollate, caldo nei veicoli, stanchezza. Il mese più cri
 ## Cosa fare durante il mese
 
 ### A casa
-- **Schermare** finestre esposte a sud/ovest con tapparelle o tende durante il giorno.
+- **Schermare** finestre esposte a sud e ovest con tapparelle o tende durante il giorno.
 - **Ventilare** di notte e di mattina presto.
-- **Ridurre** fonti di calore interne (elettrodomestici non essenziali, cottura in giornata).
-- **Bere** acqua regolarmente anche senza sete.
-- **Alimentazione** leggera, frutta e verdura, pasti piccoli.
+- **Ridurre** fonti di calore interne (elettrodomestici non essenziali, cottura nelle ore più calde).
+- **Bere** acqua regolarmente, anche senza sete.
+- **Mangiare** leggero, con frutta, verdura e pasti piccoli.
 
 ### All'aperto
-- **Evitare** ore 12-17 in estate.
-- **Cappello, occhiali da sole, crema solare** obbligatori.
-- **Acqua sempre** con sé.
-- **Scarpe chiuse** nei boschi.
-- **Non bere alcol** in condizioni di calore.
+- **Evitare** le uscite dalle 12 alle 17.
+- **Indossare** cappello, occhiali da sole e crema solare ad alta protezione.
+- **Portare** sempre con sé acqua a sufficienza.
+- **Calzare** scarpe chiuse nei boschi.
+- **Non bere** alcol con il caldo.
 
 ### In auto
 - **Non lasciare** mai bambini, anziani o animali in auto al sole.
-- **Ventilare** prima di partire.
-- **Idratazione** in viaggi lunghi.
-- **Evita ore di punta** nei giorni caldi.
+- **Ventilare** l'abitacolo prima di partire.
+- **Bere** spesso nei viaggi lunghi.
+- **Evitare** le ore di punta nei giorni più caldi.
 
 ### In casa con anziani o fragili
-- **Telefonate** quotidiane a familiari lontani.
-- **Verifica ambienti freschi**.
-- **Farmaci salvavita** disponibili.
-- **Allerta** medico di base se sintomi.
+- **Telefonare** ogni giorno ai familiari soli.
+- **Verificare** che gli ambienti restino freschi e ventilati.
+- **Tenere** a portata di mano i farmaci salvavita.
+- **Avvisare** subito il medico di base ai primi sintomi sospetti.
 
 ## Il sistema di allerta caldo
 
@@ -126,4 +126,4 @@ Il Gruppo comunale in questo mese:
 - [ARPA Lazio — Dati climatici](https://www.arpalazio.it/)
 - [Aeronautica Militare — Meteo](https://www.meteoam.it/)
 
-Luglio non è solo "vacanze": è un mese tecnico del sistema di PC. Prepariamoci senza allarmismi ma con attenzione.
+Luglio non è soltanto il mese delle vacanze: è anche un mese di lavoro intenso per il sistema di Protezione Civile. Prepararsi senza allarmismi, con attenzione, fa la differenza.

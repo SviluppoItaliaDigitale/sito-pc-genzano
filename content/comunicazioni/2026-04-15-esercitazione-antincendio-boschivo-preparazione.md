@@ -163,9 +163,20 @@ A ogni incendio estivo spento in tempo, a ogni famiglia messa in salvo, a ogni b
 
 ## Per approfondire
 
-- Articolo: [Triangolo del fuoco e prevenzione incendi](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
-- Articolo: [Prevenzione incendi: pulizia terreni](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/)
-- Articolo: [Radiocomunicazioni di emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/)
-- Articolo: [Campagna AIB 2025](/comunicazioni/2025-06-15-campagna-aib/)
+Sul nostro sito:
+
+- [Antincendio boschivo: triangolo del fuoco e attrezzature](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
+- [Triangolo del fuoco e prevenzione incendi](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
+- [Prevenzione incendi: pulizia terreni](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/).
+- [Radiocomunicazioni di emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
+- [Open Day antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
+- [Rischio incendio boschivo — pagina operativa](/rischi-prevenzione/rischio-incendio/).
+
+Fonti istituzionali:
+
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [Carabinieri Forestali](https://www.carabinieri.it/).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Dipartimento Protezione Civile — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/).
 
 Esercitarsi è rispettare chi domani avrà bisogno del nostro intervento.

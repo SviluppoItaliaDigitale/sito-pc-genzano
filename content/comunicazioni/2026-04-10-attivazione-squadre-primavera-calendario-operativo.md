@@ -164,9 +164,18 @@ Ai volontari che parteciperanno alle attività dei prossimi mesi: **grazie in an
 
 ## Per approfondire
 
-- [Regione Lazio — Agenzia di Protezione Civile](https://www.regione.lazio.it/)
-- Articolo: [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/)
-- Pagina: [Diventa volontario](/diventa-volontario/)
-- Articolo: [Lo zaino del volontario](/comunicazioni/2026-05-11-zaino-volontario-attivazione/)
+Sul nostro sito:
+
+- [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
+- [Lo zaino del volontario](/comunicazioni/2026-05-11-zaino-volontario-attivazione/).
+- [Radiocomunicazioni di emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
+- [Open Day antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
+- [SAFOR-PROCIV — Scuola Alta Formazione PC Lazio](/comunicazioni/2026-05-08-safor-prociv-scuola-alta-formazione-pc-lazio/).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 
 La primavera del volontariato è fatta di molti piccoli passi. Passo dopo passo, la stagione è pronta.

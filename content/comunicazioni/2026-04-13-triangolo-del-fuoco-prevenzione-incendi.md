@@ -2,7 +2,6 @@
 title: "Triangolo del fuoco: capire come nasce un incendio per prevenirlo in tempo"
 date: 2026-04-13T00:02:00+02:00
 description: "Il triangolo del fuoco spiega come nasce e si mantiene un incendio. Conoscere i suoi tre elementi aiuta a prevenire rischi in casa e all'aperto."
-
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -132,11 +131,21 @@ Per chi opera nel volontariato di protezione civile, nella scuola, nelle associa
 
 ## Per approfondire
 
-- Articolo: [Prevenzione incendi: pulizia dei terreni a primavera](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/)
-- Articolo: [Esercitazione antincendio boschivo: come ci prepariamo](/comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/)
-- Articolo: [Incendi domestici: cause più comuni e come prevenirli](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/)
-- Articolo: [Sant'Antonio Abate: tradizione dei fuochi e rischio incendi](/comunicazioni/2026-01-17-sant-antonio-abate-fuochi-tradizione-sicurezza/)
-- Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
+Sul nostro sito:
+
+- [Rischio incendio boschivo — pagina operativa](/rischi-prevenzione/rischio-incendio/).
+- [Prevenzione incendi: pulizia dei terreni a primavera](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/).
+- [Esercitazione antincendio boschivo](/comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/).
+- [Incendi domestici](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/).
+- [Estintori: classi di fuoco e uso corretto](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
+- [Antincendio boschivo: triangolo del fuoco e attrezzature](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
+- [Sant'Antonio Abate: tradizione dei fuochi e sicurezza](/comunicazioni/2026-01-17-sant-antonio-abate-fuochi-tradizione-sicurezza/).
+
+Fonti istituzionali:
+
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [Dipartimento Protezione Civile — Rischio incendi](https://www.protezionecivile.gov.it/it/pagina/rischio-incendi-boschivi).
+- [Carabinieri Forestali](https://www.carabinieri.it/).
 
 ---
 

@@ -2,7 +2,6 @@
 title: "Antincendio boschivo: dal triangolo del fuoco agli attrezzi manuali, la guida pratica per il volontario"
 date: 2026-04-11
 description: "Le basi dell'antincendio boschivo: combustione, tipi di incendio, attacco diretto e indiretto, attrezzature dal flabello al rastro, sicurezza degli operatori."
-
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -260,9 +259,21 @@ Ogni volontario AIB del Gruppo passa attraverso corsi di formazione regionali, e
 
 ## Per approfondire
 
-- [Area tematica: Rischio Incendio](/formazione/rischio-incendio/) — corso introduttivo completo in cinque capitoli
-- [Rischio incendi boschivi](/rischi-prevenzione/) — caratteristiche del territorio comunale
-- [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/) — i mezzi AIB nel tempo
-- [Diventa Volontario](/diventa-volontario/) — come entrare nel Gruppo
+Sul nostro sito:
 
-*Fonti: procedure operative interne del Gruppo Comunale, [Piano AIB della Regione Lazio](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_AIB_Lazio.pdf) (PDF, dalla nostra Area Download), [pagina ufficiale del Dipartimento della Protezione Civile sul rischio incendi boschivi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/).*
+- [Area tematica: Rischio Incendio](/formazione/rischio-incendio/) — corso introduttivo completo.
+- [Rischio incendio boschivo — pagina operativa](/rischi-prevenzione/rischio-incendio/).
+- [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/) — i mezzi AIB nel tempo.
+- [Triangolo del fuoco: prevenzione incendi](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
+- [Open Day antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
+- [Estintori: classi di fuoco e uso corretto](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
+- [Piano AIB della Regione Lazio](/area-download/normativa/Piano_AIB_Lazio.pdf) (PDF dall'Area Download).
+- [Diventa volontario](/diventa-volontario/).
+
+Fonti istituzionali:
+
+- [Dipartimento della Protezione Civile — Rischio incendi boschivi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/).
+- [Vigili del Fuoco](https://www.vigilfuoco.it/).
+- [Carabinieri Forestali](https://www.carabinieri.it/) — competenti su incendi boschivi.
+
+*Fonti: procedure operative interne del Gruppo Comunale.*

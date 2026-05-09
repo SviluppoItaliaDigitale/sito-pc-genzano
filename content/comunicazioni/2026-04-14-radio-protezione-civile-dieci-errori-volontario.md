@@ -2,7 +2,6 @@
 title: "Dieci errori da evitare alla radio in protezione civile"
 date: 2026-04-14
 description: "Le abitudini sbagliate che fanno perdere tempo e informazioni in emergenza: privacy, formalismi, codice Q, sequenza di chiamata, conferme."
-
 badge: "Radiocomunicazioni"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -195,14 +194,20 @@ Il Gruppo Comunale organizza prove radio periodiche con tutti i volontari iscrit
 
 ---
 
-## Approfondimenti
+## Per approfondire
 
-Il volontario che vuole approfondire trova nell'area formativa del Gruppo **sei capitoli completi** sulle radiocomunicazioni di emergenza, basati sulla Guida IARU adattata al contesto italiano:
+Sul nostro sito:
 
-- [Area tematica: Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/) — sei capitoli sul ruolo del volontario TLC, tecniche operative, reti e canali, gestione dei messaggi, attivazione ed equipaggiamento, sicurezza e sopravvivenza
-- [Le frequenze della Rete Zamberletti](/comunicazioni/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1/) — il sistema nazionale dei radioamatori al servizio della protezione civile
-- [Manuale da Campo](/formazione/manuale-campo/) — i moduli radio personalizzati del Gruppo (modulo messaggio, registro di stazione, alfabeto NATO, codice Q per uso operatore)
+- [Area tematica: Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/) — sei capitoli sul ruolo del volontario TLC.
+- [Le frequenze della Rete Zamberletti](/comunicazioni/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1/).
+- [Rete Zamberletti: 499ª esercitazione radio nazionale](/comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/).
+- [Rete di Emergenza Metropolitana di Roma](/comunicazioni/2026-05-02-rete-emergenza-metropolitana-roma-radioamatori/).
+- [Radiocomunicazioni in emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
+- [Manuale da Campo](/formazione/manuale-campo/) — moduli radio personalizzati del Gruppo.
 
----
+Fonti istituzionali:
 
-*Fonte: [IARU Emergency Telecommunications Guide, Rev. 1 September 2016](https://www.iaru.org/reference/resources-for-member-societies/iaru-emergency-telecommunications-guide/) — International Amateur Radio Union; [Codice delle comunicazioni elettroniche (D.Lgs. 1° agosto 2003 n. 259)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2003-08-01;259); procedure operative interne del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.*
+- [IARU Emergency Telecommunications Guide](https://www.iaru.org/reference/resources-for-member-societies/iaru-emergency-telecommunications-guide/) — International Amateur Radio Union.
+- [Codice delle comunicazioni elettroniche — D.Lgs. 259/2003](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2003-08-01;259).
+- [ARI — Associazione Radioamatori Italiani](https://www.ari.it/).
+- [GDPR — Regolamento UE 2016/679](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679).

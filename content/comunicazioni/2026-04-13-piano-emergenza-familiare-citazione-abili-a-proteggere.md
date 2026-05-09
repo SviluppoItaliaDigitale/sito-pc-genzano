@@ -2,7 +2,6 @@
 title: "Il nostro Piano di Emergenza Familiare citato da Abili a proteggere, il portale del Dipartimento della Protezione Civile"
 date: 2026-04-13T00:03:00+02:00
 description: "Il portale Abili a proteggere del Dipartimento della Protezione Civile cita il Piano di Emergenza Familiare digitale del nostro Gruppo."
-
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -74,8 +73,18 @@ La sicurezza parte da te e dalla tua famiglia. Dedicare pochi minuti oggi può f
 
 ## Per approfondire
 
-- Articolo: [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
-- Articolo: [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
-- Articolo: [Giornata delle famiglie: il piano di emergenza insieme](/comunicazioni/2026-05-15-giornata-famiglie-piano-emergenza-insieme/)
-- Articolo: [Consapevolezza sull'autismo: emergenze inclusive](/comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/)
-- Pagina: [Piano familiare](/piano-familiare/)
+Sul nostro sito:
+
+- [Piano familiare](/piano-familiare/) — il piano digitale interattivo.
+- [Il piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/).
+- [Il kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
+- [Giornata delle famiglie: il piano di emergenza insieme](/comunicazioni/2026-05-15-giornata-famiglie-piano-emergenza-insieme/).
+- [Consapevolezza sull'autismo: emergenze inclusive](/comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/).
+- [Persone fragili: aiutare i vicini in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).
+- [Abili a Proteggere](/abili-a-proteggere/).
+- [ISO 22395 — Persone vulnerabili](/comunicazioni/2026-05-29-iso-22395-persone-vulnerabili/).
+
+Fonti istituzionali:
+
+- [Abili a Proteggere — Dipartimento della Protezione Civile](https://www.abiliaproteggere.net/).
+- [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).

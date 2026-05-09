@@ -32,7 +32,7 @@ La morfologia del territorio — un complesso vulcanico con rilievi che toccano 
 - **Rientrare** rapidamente in un edificio solido o in un'auto.
 - **Evitare** cime, creste, spazi aperti, alberi isolati.
 - **Allontanarsi** da corsi d'acqua, che possono ingrossarsi in minuti.
-- Se sei in bicicletta o in moto, **scendere** e non usare il veicolo come ripriatro.
+- Se sei in bicicletta o in moto, **scendere** e non usare il veicolo come riparo.
 - Se sei in costume al lago, **uscire** dall'acqua subito.
 
 ## Cosa fare se sei in auto
