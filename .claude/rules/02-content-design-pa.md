@@ -255,13 +255,13 @@ Ogni articolo deve avere tutti i campi previsti dall'archetipo:
 | Evento | `#c026d3` | Magenta — iniziativa pubblica |
 | Comunicazione | `#003366` | Blu istituzionale — informazione ordinaria |
 | Radiocomunicazioni | `#0369a1` | Blu radio — attività HF/VHF/UHF |
-| Informazione | `#0284c7` | Azzurro — notizia di servizio |
+| Informazione | `#075985` | Blu petrolio — notizia di servizio (WCAG AA 7.56:1) |
 | Prevenzione | `#15803d` | Verde — contenuti di auto-protezione |
-| Esercitazione | `#ea580c` | Arancione — addestramento operativo |
+| Esercitazione | `#c2410c` | Arancione bruciato — addestramento operativo (WCAG AA 5.18:1) |
 | Aggiornamento | `#4338ca` | Indaco — stato avanzamento |
 | Formazione | `#7c3aed` | Viola — corsi e didattica |
 | Volontariato | `#b45309` | Ambra scuro — reclutamento e attività volontari |
-| Attività | `#0891b2` | Turchese — operatività ordinaria |
+| Attività | `#0e7490` | Turchese scuro — operatività ordinaria (WCAG AA 5.36:1) |
 
 Queste tinte sono applicate in `custom.css` in due gruppi coordinati: le classi `.notizia-categoria.<categoria>` (badge nelle card) e i selettori `.filter-pill[data-filter="<categoria>"]` (pulsanti filtro nell'archivio). Qualsiasi modifica alla palette va replicata in **entrambi** i gruppi per mantenere la coerenza visiva.
 
