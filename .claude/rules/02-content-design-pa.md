@@ -227,6 +227,16 @@ Quando una fonte cambia, il workflow apre automaticamente un'issue di label `man
 
 **Per batch di revisione ≥5 articoli**: applicare il checkpoint pre-batch (`07-proattivita-coerenza.md`), ottenere conferma esplicita, lavorare in serie con commit a tappe (≈30-50 articoli per commit) per mantenere la cronologia git navigabile.
 
+### Auto-gate AGID prima del commit (sintesi operativa)
+
+La regola completa è in `CLAUDE.md` § "Auto-gate AGID prima del commit di un nuovo articolo". Sintesi:
+
+1. **Quando generi un articolo nuovo** in `content/comunicazioni/`, **prima del `git add`** invochi `pc-article-reviewer` su quel file.
+2. Solo dopo il via libera dell'agent (o dopo aver applicato i suoi fix) procedi al commit.
+3. Il gate è **obbligato**, non opzionale. Vale anche su singolo articolo.
+
+**Eccezione — registro non-AGID solo su richiesta esplicita dell'utente.** Se l'utente chiede di redigere un documento in registro diverso (comunicato stampa, lettera istituzionale, paper scientifico, relazione tecnica, memoria, bando, delibera, ordinanza, scheda accademica, **o qualunque altro documento per cui chiede esplicitamente uno stile diverso**), sospendi il gate AGID per quel documento e applica le **convenzioni di genere** del settore di appartenenza (piramide rovesciata + 5W per il comunicato stampa; intestazione + protocollo per la lettera; IMRaD per il paper; ecc.). Diventa il miglior professionista di quel genere. L'eccezione vale solo per il documento richiesto: il prossimo articolo per `content/comunicazioni/` ricade nel gate AGID standard. **L'eccezione la decide l'utente, non tu.**
+
 ## Frontmatter obbligatorio per gli articoli (comunicazioni/)
 
 Ogni articolo deve avere tutti i campi previsti dall'archetipo:
