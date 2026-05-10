@@ -399,6 +399,8 @@ Apri `http://localhost:1313` nel browser:
 
 Vai a **Parte 5** e spunta ogni voce. Se qualcosa non è a posto, torna indietro.
 
+> 🤖 **Se stai lavorando con Claude Code (CLI desktop, app mobile, sessione cloud, agent GitHub):** prima del `git add` Claude **deve obbligatoriamente** invocare l'agent `pc-article-reviewer` sul file appena scritto. Il gate è codificato in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"* e in `.claude/rules/02-content-design-pa.md` § *"Auto-gate AGID prima del commit"*. Solo dopo il via libera dell'agent (o dopo l'applicazione dei suoi fix) si procede al commit. Il gate vale anche per un singolo articolo. Eccezione: se chiedi esplicitamente un **registro non-AGID** (comunicato stampa, lettera istituzionale, paper scientifico, qualsiasi altro genere a tua richiesta esplicita), il gate è sospeso per quel documento — vedi **Parte 12** per i comunicati stampa.
+
 ### Passo 1.14 — Commit e push
 
 ```bash

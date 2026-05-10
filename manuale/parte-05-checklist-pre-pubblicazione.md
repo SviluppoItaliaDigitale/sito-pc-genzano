@@ -2,6 +2,14 @@ _[Indice manuale](README.md)_
 
 # Parte 5 — Checklist pre-pubblicazione
 
+### 🤖 Checklist AI (Claude Code) — gate obbligato prima del commit
+
+Se il file è stato scritto, modificato o anche solo ripassato con Claude Code (CLI desktop, app mobile, sessione cloud, agent GitHub-integrato), **prima del `git add`** Claude **deve obbligatoriamente** invocare l'agent `pc-article-reviewer` sul file appena salvato. Solo dopo il via libera dell'agent (o dopo l'applicazione dei suoi fix) si procede al commit. Vale anche per un singolo articolo. Regola codificata in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"*.
+
+**Eccezione — registro non-AGID solo su richiesta esplicita:** se l'utente chiede esplicitamente un documento in registro diverso (comunicato stampa, lettera istituzionale, paper scientifico, relazione tecnica, memoria, bando, delibera, ordinanza, scheda accademica, **o qualsiasi altro genere a richiesta esplicita**), il gate è sospeso per quel documento e Claude applica le convenzioni di genere del settore di appartenenza. Per i comunicati stampa vedi **Parte 12**.
+
+La checklist umana che segue resta valida **anche** dopo il passaggio dell'agent: l'agent fa il pre-flight automatico, l'utente fa il check finale.
+
 ### Checklist articolo
 
 **Frontmatter:**
