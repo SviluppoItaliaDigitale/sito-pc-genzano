@@ -16,10 +16,11 @@ l'agente giusto.
 
 ## 19.1 I cinque agenti e quando si attivano
 
-### 1. Caporedattore (revisione articoli)
+### 1. Caporedattore (revisione articoli) — 🔴 GATE OBBLIGATO
 
-**Quando lo attivi**: hai scritto un articolo nuovo o ne hai modificato uno
-sostanziale e vuoi un controllo prima di pubblicare.
+**Da maggio 2026 questo agent è il gate obbligato pre-commit.** Quando Claude Code (in qualunque sessione: CLI desktop, app mobile, sessione cloud, agent GitHub-integrato) genera o modifica sostanzialmente un articolo in `content/comunicazioni/`, **prima del `git add`** invoca questo agent. Non è "proattivo a discrezione": è obbligatorio. Regola codificata in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"* e in `.claude/rules/02-content-design-pa.md` § *"Auto-gate AGID prima del commit"*. Esiste perché il 9 maggio 2026 abbiamo dovuto rivedere retroattivamente 43 articoli storici per ripianare il debito accumulato dalle sessioni che non lo invocavano spontaneamente.
+
+**Quando lo attivi tu manualmente**: hai scritto un articolo a mano o ne hai modificato uno sostanziale e vuoi un controllo prima di pubblicare. (Se l'articolo lo ha generato Claude, l'agent è già passato per il gate prima del commit.)
 
 **Frasi naturali che lo attivano automaticamente**:
 
@@ -27,14 +28,11 @@ sostanziale e vuoi un controllo prima di pubblicare.
 - *"Controlla l'articolo `<nome-file>.md`, va bene?"*
 - *"Mi dici se ci sono errori in questo articolo?"*
 - *"Verifica frontmatter e linguaggio AGID dell'articolo che ho scritto."*
+- *"Fai una revisione AGID di tutti gli articoli del mese di X"* (batch retrospettivo).
 
-**Cosa fa**: legge il file, applica le 13 categorie di badge, verifica formato
-data, lunghezza description (≤160 char per SEO), sezioni rigide delle pagine
-rischio, foto secondo convenzione, link interni esistenti, niente conteggi
-inventario, niente burocratese, NUE 112 unico numero emergenza Lazio.
+**Cosa fa**: legge il file, applica le 13 categorie di badge, verifica formato data, lunghezza description (≤160 char per SEO), sezioni rigide delle pagine rischio, foto secondo convenzione, link interni esistenti, niente conteggi inventario, niente burocratese, NUE 112 unico numero emergenza Lazio. Quando lo si invoca con istruzione esplicita di edit (come nel pre-commit gate), applica i fix direttamente con razionale AGID per ogni modifica.
 
-**Cosa NON fa**: non riscrive l'articolo da solo. Ti dà una lista di cose da
-sistemare e tu decidi.
+**🔴 Eccezione — registro non-AGID:** se l'utente ha chiesto esplicitamente un documento in registro diverso (comunicato stampa, lettera istituzionale, paper scientifico, relazione tecnica, memoria, bando, delibera, ordinanza, scheda accademica, **o qualsiasi altro genere a richiesta esplicita**), il gate è sospeso per quel documento. Claude applica le convenzioni del genere (vedi **Parte 12** per i comunicati stampa). L'eccezione la attivi tu chiedendo esplicitamente quel registro: in assenza di richiesta esplicita, il default è AGID.
 
 **Identità tecnica** (se proprio ti serve): `pc-article-reviewer`.
 

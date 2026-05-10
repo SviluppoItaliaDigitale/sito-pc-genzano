@@ -1,6 +1,6 @@
 ---
 name: pc-article-reviewer
-description: Use this agent PROACTIVELY when the user creates a new article (file in content/comunicazioni/) or substantially edits an existing one. Reviews frontmatter completeness, applies AGID writing rules, verifies badge correctness, date format, internal links validity, photo conventions, and absence of fictitious data. Returns a punch list of issues to fix BEFORE the article is committed.
+description: 🔴 MANDATORY GATE — invoke this agent on EVERY new or substantially modified article in content/comunicazioni/ BEFORE the git add. Not optional, not "proactive when convenient": it is the obligated pre-commit step codified in CLAUDE.md § "Auto-gate AGID prima del commit di un nuovo articolo". Reviews frontmatter completeness, applies AGID writing rules at ChatGPT 9.5/10 level (sentences <20 words, active voice, no nominalizations, sigle sciolte, fonti istituzionali cited, internal linkography valued before external sources, badge correctness Allerta/Emergenza/Aggiornamento, date format, internal links validity, photo conventions, absence of fictitious data). Returns either applied fixes with rationale or "Articolo conforme AGID, nessuna modifica necessaria". EXCEPTION — register: if the user explicitly requested a non-AGID register (press release, formal letter, scientific paper, technical report, ordinance, or any other genre with explicit user request), this gate is suspended for that document only.
 tools: Read, Edit, Grep, Glob, Bash
 model: sonnet
 ---

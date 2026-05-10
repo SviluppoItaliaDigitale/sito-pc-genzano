@@ -276,6 +276,8 @@ python3 scripts/auto-cover-mancanti.py
 git add . && git commit -m "..." && git push
 ```
 
+> 🤖 **Se redigi con Claude Code (CLI/mobile/cloud/agent):** il workflow ha un **gate AGID obbligato** prima del `git add` — Claude invoca automaticamente l'agent `pc-article-reviewer` sul file appena scritto e applica i fix di linguaggio AGID livello ChatGPT 9.5/10 (frasi <20 parole, voce attiva, sigle sciolte, fonti istituzionali, badge corretto). Eccezione: se chiedi esplicitamente un comunicato stampa, una lettera istituzionale, un paper scientifico o **qualsiasi altro documento in registro non-AGID**, il gate è sospeso e Claude applica le convenzioni di genere. Specifiche in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"*.
+
 ### Foto
 
 ```bash

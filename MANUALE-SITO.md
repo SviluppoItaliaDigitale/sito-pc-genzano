@@ -54,6 +54,8 @@ Se non sai in quale Parte cercare:
 | Vuoi… | Vai a |
 |---|---|
 | Scrivere un nuovo articolo | [Parte 1](manuale/parte-01-scrivere-un-articolo-passo-per-passo.md) → [Parte 2](manuale/parte-02-le-regole-agid-in-dettaglio.md) → [Parte 3](manuale/parte-03-immagini-per-gli-articoli.md) → [Parte 5](manuale/parte-05-checklist-pre-pubblicazione.md) |
+| 🤖 Auto-gate AGID Claude Code (obbligato pre-commit) | [Parte 5](manuale/parte-05-checklist-pre-pubblicazione.md) → [Parte 19](manuale/parte-19-agenti-specializzati.md) § 19.1 + `CLAUDE.md` § *"Auto-gate AGID prima del commit"* |
+| Comunicato stampa o altro documento NON-AGID con Claude | [Parte 12](manuale/parte-12-comunicati-stampa-tempo-ordinario-e-tempo-emergenziale.md) — eccezione registro su richiesta esplicita |
 | Mettere la fascia blu su una foto | [Parte 3](manuale/parte-03-immagini-per-gli-articoli.md) § 3.8 Metodo 4 |
 | Pittogrammi ISO 7010 / ARASAAC | [Parte 3](manuale/parte-03-immagini-per-gli-articoli.md) § 3.16 |
 | Scaricare foto da Wikipedia/NASA/USGS/NOAA/Pexels/Pixabay/Unsplash | [Parte 3](manuale/parte-03-immagini-per-gli-articoli.md) + [Parte 14](manuale/parte-14-configurazione-ambiente-di-sviluppo-claude-code.md) |
