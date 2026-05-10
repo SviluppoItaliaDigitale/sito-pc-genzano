@@ -2,8 +2,14 @@ name: "⛈️ Aggiornamento Allerta Meteo"
 
 on:
   schedule:
-    # Ogni ora, al minuto 0 (allo scattare dell'ora)
-    - cron: '0 * * * *'
+    # Ogni 5 minuti — riduce la latenza di reazione ai cambi DPC.
+    # Frequenza di POLLING (288 run/giorno), NON di commit: lo script
+    # committa solo a cambio livello effettivo o quando ultimo_controllo
+    # è ≥5h45min (vedi soglia stale_check più sotto). Quindi:
+    #   - commit/giorno: 4 (ultimo_controllo) + N (cambi livello reali)
+    #   - latency effettiva al cambio livello: 5-7 min (cron drift incluso)
+    # Repo pubblico → minuti GitHub Actions illimitati.
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
