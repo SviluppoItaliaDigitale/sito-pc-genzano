@@ -189,7 +189,11 @@ sito-pc-genzano/
 │   ├── numeri_utili.yaml       ← numeri emergenza
 │   ├── quick_links.yaml        ← CTA homepage
 │   ├── social_links.yaml       ← link social
-│   └── codici_colore.yaml      ← descrizioni codici allerta
+│   ├── codici_colore.yaml      ← descrizioni codici allerta
+│   ├── glossario.yaml          ← voci glossario inline (sigle PC)
+│   ├── aree_emergenza.yaml     ← 16 punti del Piano Emergenza (verified)
+│   ├── idranti.yaml            ← idranti antincendio territorio (template)
+│   └── dae.yaml                ← DAE territorio (template, registro IRC)
 │
 ├── scripts/                    ← script Python/bash di automazione
 │   ├── genera-cover.py             ← cover tipografica con titolo (gradiente blu)
@@ -374,7 +378,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | Workflow | Frequenza | Scopo |
 |---|---|---|
 | `deploy.yml` | Ogni push su `main` | Build + deploy Aruba (FTP) + GitHub Pages |
-| `check-allerta.yml` | Orario (min 00) | Verifica stato allerta meteo Regione Lazio |
+| `check-allerta.yml` | 4 run/h scaglionati (min 7,22,37,52) | Verifica stato allerta meteo Regione Lazio. Latenza media ~7-8 min al cambio livello DPC. Cron espliciti scaglionati fuori dai picchi GitHub Actions (verifica empirica 10 mag 2026: cron `*/5` non onorato). |
 | `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Pubblica articoli programmati |
 | `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO |
 | `smoke-test-post-deploy.yml` | Post-deploy | Smoke test live: status HTTP, marker JS, header sicurezza |

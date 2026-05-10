@@ -9,7 +9,7 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 | Workflow | File | Trigger | Scopo |
 |---|---|---|---|
 | Build e Deploy | `deploy.yml` | push su `main`, manuale | Build Hugo, deploy Aruba (FTP), deploy GitHub Pages |
-| Aggiornamento Allerta Meteo | `check-allerta.yml` | orario (cron `0 * * * *`), manuale | Legge feed DPC, aggiorna `data/allerta.json` |
+| Aggiornamento Allerta Meteo | `check-allerta.yml` | 4 run/h scaglionati (`7,22,37,52 * * * *`), manuale | Legge feed DPC, aggiorna `data/allerta.json`. Latenza media ~7-8 min. Cron espliciti fuori dai picchi GH Actions. |
 | Pubblicazione programmata | `pubblica-programmata.yml` | giornaliero (06:00 UTC), manuale | Riavvia il deploy per pubblicare articoli a data futura |
 | Audit Accessibilità | `lighthouse-audit.yml` | dopo ogni deploy, manuale | Lighthouse su home e 5 pagine chiave |
 | Smoke test post-deploy | `smoke-test-post-deploy.yml` | dopo ogni deploy, manuale | Verifica live di 20 pagine + 7 lingue + mini-app + 11 marker JS + 2 header sicurezza. Logica in `scripts/smoke-test-live.sh` |
@@ -60,7 +60,9 @@ exclude: |
 
 ### 10.3 — `check-allerta.yml` — Aggiornamento allerta meteo
 
-**Trigger**: cron orario (`0 * * * *`, allo scattare di ogni ora), esecuzione manuale.
+**Trigger**: 4 run/h scaglionati (`7,22,37,52 * * * *` — minuti dispari fuori dai quarti d'ora canonici per evitare i picchi di carico GitHub Actions), esecuzione manuale.
+
+> **Nota tecnica (10 maggio 2026)**: cron `*/5` testato in produzione il 10 maggio 2026 ha dato 0 run scheduled in 42 minuti. La documentazione GitHub conferma: *"Schedule events can be delayed during periods of high loads. To decrease the chance of delay, schedule your workflow to run at a different time of the hour."* Cron espliciti scaglionati hanno aderenza molto migliore.
 
 **Cosa fa:**
 1. Scarica il CSV ufficiale del Dipartimento Protezione Civile dal mirror opendatasicilia.

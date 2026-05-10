@@ -16,9 +16,9 @@ In quanto articolazione del Comune e parte del **Sistema Nazionale di Protezione
 | Aspetto | Riferimento |
 |---|---|
 | Anno di costituzione | 1981 |
-| Soggetto costituente | Comune di Genzano di Roma |
-| Atto costitutivo | Decreto del Sindaco *(disponibile presso la Segreteria Comunale)* |
-| Forma giuridica | Articolazione operativa del Comune (non ETS, non OdV con personalità giuridica autonoma) |
+| Soggetto costituente | Consiglio Comunale di Genzano di Roma |
+| Atto costitutivo | Delibera di Consiglio Comunale *(disponibile presso la Segreteria Comunale)* |
+| Forma giuridica | Ramo interno del Comune (non ETS, non OdV con personalità giuridica autonoma, nessuna convenzione esterna) |
 | Iscrizione RUNTS | Non applicabile (il Gruppo è soggetto pubblico locale) |
 | Coordinamento operativo | 14° C.O.I. — Centro Operativo Intercomunale della Provincia di Roma |
 | Quadro normativo | D.Lgs. 1/2018 + L.R. Lazio 9/2017 + Direttiva PCM 30/04/2021 |
@@ -37,26 +37,22 @@ I documenti che seguono sono pubblicati progressivamente man mano che vengono pr
 
 | Documento | Stato | Link |
 |---|---|---|
-| Decreto del Sindaco di costituzione del Gruppo | in aggiornamento | — |
+| Delibera di Consiglio Comunale di costituzione del Gruppo | in aggiornamento | — |
 | Regolamento interno del Gruppo Comunale | in aggiornamento | — |
-| Convenzione Comune-Gruppo | in aggiornamento | — |
 
 ### Bilanci e rendicontazione
 
 Il Gruppo non gestisce un bilancio autonomo: i fondi destinati alle attività di Protezione Civile transitano dal capitolo di spesa del Comune di Genzano. Per la rendicontazione finanziaria fai riferimento al bilancio comunale pubblicato sul sito del Comune.
 
+Il Gruppo **non riceve** contributi 5×1000: trattandosi di ramo interno del Comune, non risulta tra i soggetti destinatari ammessi dalla normativa sul 5×1000.
+
 | Documento | Stato | Link |
 |---|---|---|
 | Rendiconto annuale attività | in aggiornamento | — |
-| Eventuali contributi 5×1000 (se ricevuti tramite Comune) | in aggiornamento | — |
 
-### Verbali assembleari
+### Comunicazioni interne ai volontari
 
-I verbali delle assemblee del Gruppo (riunioni operative, formazione, esercitazioni) sono custoditi presso la sede operativa. La pubblicazione dei verbali in formato digitale è in corso di valutazione con la Segreteria Comunale.
-
-| Documento | Stato | Link |
-|---|---|---|
-| Verbali assemblee 2026 | in aggiornamento | — |
+I verbali delle assemblee, gli ordini di servizio e le comunicazioni operative del Gruppo vengono trasmessi **privatamente via email** ai volontari iscritti. Non sono pubblicate online: rappresentano comunicazione di servizio interna, non atti pubblici nel senso del D.Lgs. 33/2013. Per richieste documentali specifiche da parte di cittadini, vale la procedura di accesso civico generalizzato indicata in fondo a questa pagina.
 
 ### Piani operativi e dotazioni
 
