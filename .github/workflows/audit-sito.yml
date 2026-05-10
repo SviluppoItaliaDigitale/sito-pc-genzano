@@ -1083,29 +1083,39 @@ jobs:
           cat "$REPORT"
 
       - name: "🚨 Apri issue se l'audit rileva problemi"
-        # always() perché lo step audit fa exit 1 quando FOUND=true (per
-        # marcare il workflow come failure visibile). Senza always(), GitHub
-        # skippa questo step e non si crea mai l'issue.
-        # Fix: 10 maggio 2026 dopo 5 fallimenti consecutivi senza issue.
+        # always() perché lo step audit prima faceva exit 1 quando FOUND=true.
+        # Adesso lo step audit termina sempre 0, ma always() resta come
+        # safety-net se qualcuno re-introduce un exit 1.
         if: ${{ always() && steps.audit.outputs.found_issues == 'true' }}
         uses: actions/github-script@v7
         with:
           script: |
+            // Legge il report direttamente dal file invece che interpolare
+            // ${{ steps.audit.outputs.report }} nello script JS — l'interpolation
+            // rompeva il parsing per via di backtick + numeri Markdown nel report
+            // (SyntaxError: Unexpected number).
+            const fs = require('fs');
+            let report = '(report non disponibile)';
+            try {
+              report = fs.readFileSync('/tmp/audit-report.md', 'utf-8');
+            } catch (e) {
+              report = '(errore lettura report: ' + e.message + ')';
+            }
+
             const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
-            const report = `${{ steps.audit.outputs.report }}`;
             const body = [
               report,
-              ``,
-              `---`,
-              ``,
-              `### Come agire`,
-              ``,
-              `- ❌ = errore da correggere prima del prossimo deploy`,
-              `- ⚠️ = warning: valuta se è un falso positivo o se vale la pena sistemare`,
-              ``,
-              `Dopo aver corretto, chiudi la issue citando il commit di fix.`,
-              ``,
-              `*Issue generata automaticamente dal workflow \`audit-sito.yml\` (lun 09:00 UTC).*`
+              '',
+              '---',
+              '',
+              '### Come agire',
+              '',
+              '- ❌ = errore da correggere prima del prossimo deploy',
+              '- ⚠️ = warning: valuta se è un falso positivo o se vale la pena sistemare',
+              '',
+              'Dopo aver corretto, chiudi la issue citando il commit di fix.',
+              '',
+              '*Issue generata automaticamente dal workflow `audit-sito.yml` (lun 09:00 UTC).*'
             ].join('\n');
 
             await github.rest.issues.create({
