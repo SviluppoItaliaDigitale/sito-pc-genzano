@@ -2,21 +2,28 @@ name: "⛈️ Aggiornamento Allerta Meteo"
 
 on:
   schedule:
-    # 4 run/h scaglionati ai minuti 7, 22, 37, 52 — fuori dai picchi
-    # (l'inizio dell'ora 0/15/30/45 è il momento più carico GitHub
-    # Actions, e i cron lì vengono spesso saltati o ritardati).
-    # Verifica empirica del 2026-05-10: con cron */5 in 42 minuti
-    # GitHub Actions ha eseguito 0 run scheduled (solo workflow_dispatch
-    # manuale). Cron espliciti scaglionati hanno aderenza molto migliore.
-    # Documentazione GitHub: "To decrease the chance of delay, schedule
-    # your workflow to run at a different time of the hour."
-    #
-    # Latenza media al cambio livello DPC: ~7-8 min (era ~30 min con
-    # cron orario, era ~irregolare con */5).
-    # Frequenza di POLLING: 4 run/h, 96 run/giorno.
-    # Frequenza di COMMIT: invariata (max ~4/giorno per ultimo_controllo
-    # + N per cambi livello reali, vedi soglia stale_check di 5h45min).
-    - cron: '7,22,37,52 * * * *'
+    # Cron GitHub interno come FAIL-SAFE minimale: 1 run/h al minuto 17
+    # (fuori dai quarti d'ora canonici 0/15/30/45 che sono i picchi di
+    # carico GitHub Actions, per ridurre il drift).
+    # Frequenza nominale: 1 run/h, 24 run/giorno.
+    # NON è il trigger primario — quello è cron-job.org che fa il polling
+    # ogni 5 minuti puntuale. Questo cron interviene SOLO se cron-job.org
+    # va giù: nel peggiore dei casi il sito ricontrolla DPC entro 1 ora.
+    - cron: '17 * * * *'
+  # Trigger esterno PRIMARIO: cron-job.org chiama workflow_dispatch ogni
+  # 5 minuti via API GitHub (Personal Access Token fine-grained con
+  # permessi Actions: write sul solo sito-pc-genzano). Latenza end-to-end
+  # osservata al cambio livello DPC: ~15 secondi.
+  #
+  # Configurazione cron-job.org gestita dall'utente su:
+  # https://console.cron-job.org/jobs
+  #
+  # Architettura "doppio trigger" (FAIL-SAFE):
+  # - cron-job.org primary: SLA 99.9%, garantisce ogni 5 min puntuale
+  # - GitHub schedule: ridondanza se cron-job.org va giù (drift accettabile
+  #   come secondario)
+  # Lo script anti-spam interno (soglia stale_check 5h45min) impedisce
+  # commit duplicati anche se i due trigger sparano ravvicinati.
   workflow_dispatch:
 
 permissions:

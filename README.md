@@ -378,7 +378,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | Workflow | Frequenza | Scopo |
 |---|---|---|
 | `deploy.yml` | Ogni push su `main` | Build + deploy Aruba (FTP) + GitHub Pages |
-| `check-allerta.yml` | 4 run/h scaglionati (min 7,22,37,52) | Verifica stato allerta meteo Regione Lazio. Latenza media ~7-8 min al cambio livello DPC. Cron espliciti scaglionati fuori dai picchi GitHub Actions (verifica empirica 10 mag 2026: cron `*/5` non onorato). |
+| `check-allerta.yml` | **Doppio trigger fail-safe**: cron-job.org ogni 5 min (primario, ~15 sec latenza) + GitHub schedule `17 * * * *` (fail-safe orario) | Verifica stato allerta meteo Regione Lazio. Trigger primario tramite cron-job.org → API GitHub `workflow_dispatch` (PAT fine-grained con Actions: write). GitHub schedule come paracadute (1 run/h) se cron-job.org va giù. Anti-spam interno (stale_check 5h45min) impedisce commit duplicati. |
 | `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Pubblica articoli programmati |
 | `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO |
 | `smoke-test-post-deploy.yml` | Post-deploy | Smoke test live: status HTTP, marker JS, header sicurezza |

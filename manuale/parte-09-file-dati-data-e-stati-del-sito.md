@@ -107,9 +107,17 @@ Regola d'oro: **prima di creare un nuovo partial o template, verifica se la stes
 - `ultimo_aggiornamento` *(string ISO 8601)*: timestamp dell'**ultimo cambio di livello**. Cambia solo quando il livello reale passa da uno stato all'altro (es. verde → gialla).
 - `ultimo_controllo` *(string ISO 8601)*: timestamp dell'**ultima verifica del bollettino DPC**. Aggiornato dal workflow ogni 6 ore (anche se il livello è invariato), così la barra mostra al cittadino una data sempre fresca con il testo "Verificato: …". Sulla homepage il JS lato browser aggiorna ulteriormente questo testo all'ora locale ad ogni visita.
 
-**Aggiornamento automatico**: il workflow `check-allerta.yml` (vedi Parte 10) interroga il feed ufficiale DPC **4 volte/h** (ai minuti 7, 22, 37, 52 — scaglionati fuori dai picchi GitHub Actions) e aggiorna `allerta.json` quando il livello cambia OPPURE quando sono passate ≥5h45min dall'ultimo controllo. Limita i commit a max 4/giorno + cambi di livello. Latenza media al cambio livello DPC: ~7-8 min. Nella maggior parte dei casi **non serve intervenire manualmente**.
+**Aggiornamento automatico** (architettura doppio trigger fail-safe, 10 maggio 2026):
 
-> **Nota tecnica (10 maggio 2026)**: i cron `*/N` (in particolare `*/5`) **non sono affidabili** su GitHub Actions — verifica empirica del 10 maggio mostra 0 run in 42 minuti col `*/5`. Documentazione GH: *"To decrease the chance of delay, schedule your workflow to run at a different time of the hour."* Cron espliciti scaglionati hanno aderenza molto migliore.
+1. **Trigger primario — cron-job.org ogni 5 min** (free tier, SLA 99.9%): chiama l'API GitHub `workflow_dispatch` con un Personal Access Token fine-grained (permessi Actions: write sul solo `sito-pc-genzano`). **Latenza end-to-end osservata: ~15 secondi** al cambio livello DPC. Setup gestito su [console.cron-job.org](https://console.cron-job.org/).
+
+2. **Trigger fail-safe — GitHub schedule orario** (`cron: '17 * * * *'`, 1 run/h al minuto 17, fuori dai picchi 0/15/30/45 dei quarti d'ora canonici): paracadute minimale se cron-job.org dovesse andare giù. Garantisce ricontrollo entro 60 min nel peggior caso.
+
+Lo script committa `allerta.json` solo quando il livello cambia OPPURE quando sono passate ≥5h45min dall'ultimo controllo (max 4 commit/giorno + cambi di livello reali). L'anti-spam interno impedisce commit duplicati anche se i due trigger sparano ravvicinati.
+
+Nella maggior parte dei casi **non serve intervenire manualmente**.
+
+> **Storia tecnica (10 maggio 2026)**: la versione 100% interna a GitHub Actions (cron `*/5 * * * *` o `7,22,37,52 * * * *`) si è rivelata **non affidabile** durante i picchi di carico — verifica empirica del 10 maggio mostra 0 run scheduled in 42 minuti col `*/5`. Documentazione GH conferma: *"Schedule events can be delayed during periods of high loads."* L'aggiunta di cron-job.org come trigger primario garantisce SLA reali; il cron GitHub interno resta solo come fail-safe orario (1 run/h, non 96 run/h, per non sovraccaricare inutilmente il runner). Setup PAT e cron-job.org documentati in `CLAUDE.md` e nella memoria Claude (`feedback_github_cron_explicit_better.md`).
 
 **Aggiornamento manuale**: serve solo se l'automazione fallisce o se si vuole forzare un messaggio istituzionale specifico. Modifica il file, commit, push. **Nota**: al successivo ciclo orario il workflow sovrascriverà il tuo intervento con il valore letto dal feed DPC. Per evitarlo, disabilita temporaneamente il workflow (vedi 10.9).
 
