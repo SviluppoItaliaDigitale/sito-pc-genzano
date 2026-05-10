@@ -1357,6 +1357,16 @@ article:not(.card) .galleria img {
   border-color: transparent;
 }
 
+/* WCAG AA — pill ATTIVO: il filter-count aveva bg rgba(255,255,255,0.55)
+   che su pill colorato diventa un grigio bluastro ~#8ca3ba, e il color
+   inherit = #fff dava ratio 2.6:1. Forzo bg bianco opaco + colore del
+   pill: tutti i 13 colori categoria passano AA su bianco. */
+.comunicazioni-archivio .filter-pill.active .filter-count {
+  background: #ffffff !important;
+  color: var(--pill-color) !important;
+  border-color: #ffffff !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .comunicazioni-archivio .filter-pill,
   .comunicazioni-archivio .filter-pill:hover,
@@ -1606,7 +1616,7 @@ article:not(.card) .galleria img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: #0088cc;
+  background: #006fa3; /* WCAG AA 5.52:1 (era #0088cc Telegram brand puro = 3.89:1) */
   color: #fff;
   display: flex;
   align-items: center;
@@ -1619,13 +1629,13 @@ article:not(.card) .galleria img {
   font-weight: 700;
 }
 .iscriviti-canali .btn-info {
-  background-color: #0088cc;
-  border-color: #0088cc;
+  background-color: #006fa3 !important; /* WCAG AA 5.52:1 (era #0088cc = 3.89:1) */
+  border-color: #006fa3 !important;
 }
 .iscriviti-canali .btn-info:hover,
 .iscriviti-canali .btn-info:focus {
-  background-color: #006da3;
-  border-color: #006da3;
+  background-color: #00598a !important;
+  border-color: #00598a !important;
 }
 
 /* In stampa: niente sfondo gradiente, niente bottoni colorati */
