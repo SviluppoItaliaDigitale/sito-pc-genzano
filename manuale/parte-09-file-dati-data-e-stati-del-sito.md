@@ -15,6 +15,10 @@ I file nella cartella `data/` pilotano comportamenti dinamici del sito **senza t
 | `quick_links.yaml` | YAML | CTA del hero + "Cosa fare in caso di..." + servizi |
 | `social_links.yaml` | YAML | Canali social + linktree |
 | `codici_colore.yaml` | YAML | Descrizioni colori allertamento (pagina Allerte Meteo) |
+| `glossario.yaml` | YAML | Voci del glossario inline (sigle PC sostituite da popover) |
+| `aree_emergenza.yaml` | YAML | 16 punti del Piano Emergenza (10 AA + 2 AS + 4 AR) — coordinate verificate |
+| `idranti.yaml` | YAML | Idranti antincendio sul territorio (template, da popolare con dati VVF) |
+| `dae.yaml` | YAML | Defibrillatori semi-Automatici Esterni (template, registro IRC ai sensi L. 116/2021) |
 
 Regola d'oro: **prima di creare un nuovo partial o template, verifica se la stessa cosa può essere fatta con un data file**. Questo mantiene il sito manutenibile da chi non conosce Hugo.
 
@@ -103,7 +107,9 @@ Regola d'oro: **prima di creare un nuovo partial o template, verifica se la stes
 - `ultimo_aggiornamento` *(string ISO 8601)*: timestamp dell'**ultimo cambio di livello**. Cambia solo quando il livello reale passa da uno stato all'altro (es. verde → gialla).
 - `ultimo_controllo` *(string ISO 8601)*: timestamp dell'**ultima verifica del bollettino DPC**. Aggiornato dal workflow ogni 6 ore (anche se il livello è invariato), così la barra mostra al cittadino una data sempre fresca con il testo "Verificato: …". Sulla homepage il JS lato browser aggiorna ulteriormente questo testo all'ora locale ad ogni visita.
 
-**Aggiornamento automatico**: il workflow `check-allerta.yml` (vedi Parte 10) interroga il feed ufficiale DPC **ogni ora** e aggiorna `allerta.json` quando il livello cambia OPPURE quando sono passate ≥6 ore dall'ultimo controllo. Limita i commit a max 4/giorno + cambi di livello. Nella maggior parte dei casi **non serve intervenire manualmente**.
+**Aggiornamento automatico**: il workflow `check-allerta.yml` (vedi Parte 10) interroga il feed ufficiale DPC **4 volte/h** (ai minuti 7, 22, 37, 52 — scaglionati fuori dai picchi GitHub Actions) e aggiorna `allerta.json` quando il livello cambia OPPURE quando sono passate ≥5h45min dall'ultimo controllo. Limita i commit a max 4/giorno + cambi di livello. Latenza media al cambio livello DPC: ~7-8 min. Nella maggior parte dei casi **non serve intervenire manualmente**.
+
+> **Nota tecnica (10 maggio 2026)**: i cron `*/N` (in particolare `*/5`) **non sono affidabili** su GitHub Actions — verifica empirica del 10 maggio mostra 0 run in 42 minuti col `*/5`. Documentazione GH: *"To decrease the chance of delay, schedule your workflow to run at a different time of the hour."* Cron espliciti scaglionati hanno aderenza molto migliore.
 
 **Aggiornamento manuale**: serve solo se l'automazione fallisce o se si vuole forzare un messaggio istituzionale specifico. Modifica il file, commit, push. **Nota**: al successivo ciclo orario il workflow sovrascriverà il tuo intervento con il valore letto dal feed DPC. Per evitarlo, disabilita temporaneamente il workflow (vedi 10.9).
 

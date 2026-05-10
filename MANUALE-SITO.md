@@ -1,7 +1,8 @@
 # Manuale Operativo — Sito Protezione Civile Genzano di Roma
 
-**Versione:** 3.2
-**Ultimo aggiornamento manuale:** 2026-05-06
+**Versione:** 3.3
+**Ultimo aggiornamento manuale:** 2026-05-10
+**Roadmap 8-item ROI:** completata 2026-05-10 (Lighthouse 95/100/100/100, Telegram allerta, cron 7,22,37,52, schede offline 299, dichiarazione AGID conforme, scheletri Trasparenza+Open Data+Mappa territorio).
 **Ultimo check linee guida AGID:** 2026-04-20
 **Manuale operativo di design PA:** versione 2025.1
 **Bootstrap Italia:** versione 2.17.3
