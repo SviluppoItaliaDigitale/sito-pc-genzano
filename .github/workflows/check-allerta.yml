@@ -2,14 +2,21 @@ name: "⛈️ Aggiornamento Allerta Meteo"
 
 on:
   schedule:
-    # Ogni 5 minuti — riduce la latenza di reazione ai cambi DPC.
-    # Frequenza di POLLING (288 run/giorno), NON di commit: lo script
-    # committa solo a cambio livello effettivo o quando ultimo_controllo
-    # è ≥5h45min (vedi soglia stale_check più sotto). Quindi:
-    #   - commit/giorno: 4 (ultimo_controllo) + N (cambi livello reali)
-    #   - latency effettiva al cambio livello: 5-7 min (cron drift incluso)
-    # Repo pubblico → minuti GitHub Actions illimitati.
-    - cron: '*/5 * * * *'
+    # 4 run/h scaglionati ai minuti 7, 22, 37, 52 — fuori dai picchi
+    # (l'inizio dell'ora 0/15/30/45 è il momento più carico GitHub
+    # Actions, e i cron lì vengono spesso saltati o ritardati).
+    # Verifica empirica del 2026-05-10: con cron */5 in 42 minuti
+    # GitHub Actions ha eseguito 0 run scheduled (solo workflow_dispatch
+    # manuale). Cron espliciti scaglionati hanno aderenza molto migliore.
+    # Documentazione GitHub: "To decrease the chance of delay, schedule
+    # your workflow to run at a different time of the hour."
+    #
+    # Latenza media al cambio livello DPC: ~7-8 min (era ~30 min con
+    # cron orario, era ~irregolare con */5).
+    # Frequenza di POLLING: 4 run/h, 96 run/giorno.
+    # Frequenza di COMMIT: invariata (max ~4/giorno per ultimo_controllo
+    # + N per cambi livello reali, vedi soglia stale_check di 5h45min).
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
 
 permissions:
