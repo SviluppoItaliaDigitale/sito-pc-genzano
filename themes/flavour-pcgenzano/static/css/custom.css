@@ -986,6 +986,15 @@ article:not(.card) .galleria img {
 }
 /* .utility-bar è già nascosta dal blocco @media print consolidato */
 
+/* ── ACCESSIBILITÀ — override .text-muted Bootstrap per WCAG AA ──
+   .text-muted Bootstrap default = #6c757d → 4.07-4.69:1 a seconda
+   dello sfondo (border, contesto). Lighthouse axe-core spesso lo
+   segnala come fallito. #5a6268 garantisce 5.04:1 su #fff e 5.68:1
+   su #f2f5f8 — passa AA con margine in entrambi i contesti. */
+.text-muted {
+  color: #5a6268 !important;
+}
+
 /* ── SLIM HEADER — Pulsante Area Volontari ── */
 .btn-slim-header {
   background: rgba(255,255,255,0.15);
@@ -1011,17 +1020,20 @@ article:not(.card) .galleria img {
 /* Variante "Facile da leggere": tipografia più grande e alto contrasto
    per essere immediatamente riconoscibile come supporto accessibilità */
 .btn-easy-read {
-  background: #ffd60a;
-  color: #003366;
-  border-color: #ffd60a;
+  background: #ffd60a !important;
+  color: #003366 !important;
+  border-color: #ffd60a !important;
   font-size: 0.85rem;
   font-weight: 700;
 }
+.btn-easy-read > * {
+  color: #003366 !important;
+}
 .btn-easy-read:hover,
 .btn-easy-read:focus {
-  background: #ffeb6b;
-  color: #001f3d;
-  border-color: #ffeb6b;
+  background: #ffeb6b !important;
+  color: #001f3d !important;
+  border-color: #ffeb6b !important;
 }
 .slim-header-divider {
   width: 1px;
