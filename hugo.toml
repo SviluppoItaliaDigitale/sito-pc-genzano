@@ -267,10 +267,22 @@ enableGitInfo = true
   weight = 6
 
 [[menus.main]]
+  name = "Trasparenza"
+  url = "/trasparenza/"
+  parent = "risorse"
+  weight = 7
+
+[[menus.main]]
+  name = "Open Data"
+  url = "/open-data/"
+  parent = "risorse"
+  weight = 8
+
+[[menus.main]]
   name = "Mappa del Sito"
   url = "/mappa-sito/"
   parent = "risorse"
-  weight = 7
+  weight = 9
 
 # --- Voci dirette ---
 [[menus.main]]
