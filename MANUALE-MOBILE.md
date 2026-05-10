@@ -180,6 +180,8 @@ Specifiche complete: [`manuale/parte-14-...md` § 14.11](manuale/parte-14-config
 
 ## 2. Pubblicare un articolo nuovo da mobile
 
+> 🤖 **Auto-gate AGID — vale anche da mobile.** Da maggio 2026 ogni articolo nuovo in `content/comunicazioni/` deve passare per l'agent `pc-article-reviewer` PRIMA del commit. Se usi l'app Claude Code per Android (sessione cloud sul repo), la sessione è obbligata al gate dalla regola in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"*: invoca l'agent automaticamente sull'articolo che ha appena scritto, applica i fix, **poi** committa. Se invece usi l'app Claude generica per Android (non collegata al repo), Step A qui sotto ti guida nel chiedere a mano lo stesso livello AGID 9.5/10. Se il documento è un comunicato stampa o altro registro non-AGID, il gate è sospeso (vedi *Parte 12* del manuale operativo).
+
 ### Step A — Chiedi a Claude (app Android) di scriverlo
 
 Apri Claude e scrivigli qualcosa tipo:

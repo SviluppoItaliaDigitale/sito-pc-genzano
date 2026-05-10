@@ -37,9 +37,9 @@ Se stai operando come **ChatGPT/Codex via GitHub connector**: hai solo questo `A
 
 ---
 
-## ⚡ Quickref — Le 3 regole operative non negoziabili (= i 3 vincoli operativi non negoziabili)
+## ⚡ Quickref — Le 4 regole operative non negoziabili (= i 4 vincoli operativi non negoziabili)
 
-Se ti viene chiesto **«quali sono le 3 regole operative non negoziabili di questo progetto?»** o **«quali sono i 3 vincoli operativi non negoziabili?»**, la risposta esatta — testuale, non filosofica — è:
+Se ti viene chiesto **«quali sono le 4 regole operative non negoziabili di questo progetto?»** o **«quali sono i 4 vincoli operativi non negoziabili?»**, la risposta esatta — testuale, non filosofica — è:
 
 1. **Checkpoint pre-operazione batch.** Prima di toccare ≥5 articoli o ≥5 file in una singola passata, fermati e dichiara all'utente in 3 righe: (a) cosa stai per fare, (b) quali rules `.claude/rules/0*.md` si applicano (cita nome + sezione), (c) perché l'operazione le rispetta. Poi aspetta conferma esplicita prima di procedere. Specifiche complete: sezione 3.1 sotto e `.claude/rules/07-proattivita-coerenza.md` § "Checkpoint pre-operazione batch".
 
@@ -47,7 +47,9 @@ Se ti viene chiesto **«quali sono le 3 regole operative non negoziabili di ques
 
 3. **Fine sessione su feature branch — proponi sempre il merge.** Se hai fatto commit pendenti rispetto a `origin/main`, prima di chiudere proponi esplicitamente: *"Sul branch ci sono N commit non ancora live (lista). Vuoi che apra PR + merge su main + verifica deploy?"* Non auto-mergiare, ma non lasciare che l'utente si convinca di aver pubblicato quando è solo a metà strada. Specifiche complete: sezione 3.3 sotto.
 
-**Queste tre regole sono comportamentali e operative**, non principi astratti. Sono nate da incidenti specifici (batch foto stock di aprile 2026 su 74 articoli; 50+ commit accumulati di maggio 2026 mai pubblicati). Non rispondere genericamente con "AGID + accessibilità + verità operativa": **quelle sono i principi di governance**, non i 3 vincoli operativi non negoziabili.
+4. **Auto-gate AGID prima del commit di un nuovo articolo.** Quando generi/modifichi sostanzialmente un articolo in `content/comunicazioni/`, **prima del `git add`** invochi (o emuli, se sei una sessione cloud OpenAI senza accesso a `pc-article-reviewer`) il check AGID livello ChatGPT 9.5/10 sul file: frasi <20 parole, voce attiva, niente nominalizzazioni, sigle sciolte alla prima occorrenza, fonti istituzionali citate, linkografia interna valorizzata prima di fonti esterne, badge `Allerta`/`Emergenza`/`Aggiornamento` corretto. Solo dopo la passata pulita procedi al commit. Vale anche per un singolo articolo. Eccezione: se l'utente chiede esplicitamente un **registro non-AGID** (comunicato stampa, lettera istituzionale, paper scientifico, relazione tecnica, ordinanza, **o qualsiasi altro genere a sua richiesta esplicita**), il gate è sospeso per quel documento e applichi le convenzioni del genere. Specifiche complete: sezione 3.4 sotto e `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"*.
+
+**Queste quattro regole sono comportamentali e operative**, non principi astratti. Sono nate da incidenti specifici (batch foto stock di aprile 2026 su 74 articoli; 50+ commit accumulati di maggio 2026 mai pubblicati; 43 articoli AGID rivisti retroattivamente il 9 maggio 2026 perché il gate non era esplicito). Non rispondere genericamente con "AGID + accessibilità + verità operativa": **quelle sono i principi di governance**, non i 4 vincoli operativi non negoziabili.
 
 ---
 
@@ -81,7 +83,7 @@ Quando lavori su questo repo agisci sempre come **task force multidisciplinare**
 
 ---
 
-## 3. Tre vincoli operativi che non si negoziano
+## 3. Quattro vincoli operativi che non si negoziano
 
 ### 3.1 Checkpoint pre-operazione batch
 
@@ -173,6 +175,36 @@ L'utente lavora **multi-device** (PC desktop, smartphone Android, agenti GitHub-
 **Cosa NON fare:**
 - Non auto-mergiare senza chiedere quando l'utente non ha detto "pubblica".
 - Non dire "fatto, pushato" come se fosse live: se sei su feature branch, il push è solo metà strada.
+
+### 3.4 Auto-gate AGID prima del commit di un nuovo articolo
+
+🟢 **Ogni volta che generi/modifichi sostanzialmente un articolo in `content/comunicazioni/`, prima del `git add` esegui il pre-commit AGID gate sul file.** In Claude Code l'agent dedicato è `pc-article-reviewer`. In sessione cloud OpenAI/ChatGPT (senza accesso a quell'agent) emuli lo stesso check applicando manualmente la checklist AGID livello ChatGPT 9.5/10 al file:
+
+- Frasi >20 parole → spezza
+- Nominalizzazioni → verbi attivi ("effettuazione del pagamento" → "pagare")
+- Passive ridondanti → voce attiva
+- Lede concreto, non retorico (no "è un'occasione per…", "è importante ricordare…")
+- Fonti istituzionali sempre citate (DPC, INGV, ISPRA, ARPA Lazio, ASL Roma 6, MIM, ecc.) per ogni claim tecnico
+- Linkografia interna valorizzata prima di fonti esterne
+- Bullet uniformi (tutti imperativo o tutti sostantivi)
+- H2 senza enfasi ridondante (no `**bold**` dentro H2, no emoji urlate)
+- Niente burocratese ("ad uopo", "giusta delibera", "nelle more di", "si prega di")
+- Distinzione `Allerta`/`Emergenza`/`Aggiornamento` corretta nel badge (regola 06)
+- Sigle sciolte alla prima occorrenza (HACCP, OdV, BLSD, AeDES, COC, COI, USAR, ecc.)
+- 🔴 **Anti-pattern `image:`**: `git diff <file> | grep -E '^[+-]image' | head -5`. Se trovi diff sul campo `image:` non richiesto, ripristina (banner intoccabile).
+
+Solo dopo la passata pulita procedi al commit. Vale anche per un singolo articolo. **Il gate è obbligato, non opzionale.**
+
+**Eccezione — registro non-AGID solo su richiesta esplicita dell'utente.** Se l'utente chiede esplicitamente un documento in registro diverso dal linguaggio AGID per il cittadino (esempi non esaustivi: **comunicato stampa**, **lettera istituzionale formale**, **articolo scientifico**, **paper di ricerca**, **relazione tecnica**, **memoria difensiva**, **risposta a interrogazione**, **studio di prefattibilità**, **bando pubblico**, **delibera**, **ordinanza**, **scheda accademica**), in quel caso:
+
+- Sospendi il gate AGID per quel documento specifico.
+- Diventa il miglior professionista del settore di scrittura per quel genere: stile, lessico, struttura, citazioni, registro, lunghezza adeguati al pubblico target del documento.
+- Cita le **convenzioni di genere**: comunicato stampa = piramide rovesciata + lead 5W + boilerplate finale; lettera istituzionale = intestazione + protocollo + formula apertura/chiusura; paper = abstract + IMRaD; ecc.
+- L'eccezione vale **solo** per quel documento richiesto. Il prossimo articolo per `content/comunicazioni/` ricade nel gate AGID standard.
+
+**L'eccezione la decide l'utente, non tu.** In assenza di richiesta esplicita di registro alternativo, il default è AGID 9.5/10 con gate obbligato.
+
+**Why esiste questa regola:** il 9 maggio 2026 sono usciti **43 articoli rivisti retroattivamente** in 8 PR consecutive (2024 + 2025 + Q1 2026 + 2027 calendarizzati) per ripianare il debito accumulato dalle sessioni che redigevano senza gate. Specifiche complete in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"* e in `.claude/rules/02-content-design-pa.md` § *"Auto-gate AGID prima del commit"*. Per i comunicati stampa vedi `manuale/parte-12-comunicati-stampa-tempo-ordinario-e-tempo-emergenziale.md`.
 
 ---
 

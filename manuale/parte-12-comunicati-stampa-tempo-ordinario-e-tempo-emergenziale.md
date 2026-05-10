@@ -2,6 +2,8 @@ _[Indice manuale](README.md)_
 
 # Parte 12 — Comunicati stampa (tempo ordinario e tempo emergenziale)
 
+> 🤖 **Nota per chi redige con Claude Code.** I comunicati stampa rientrano nell'**eccezione di registro non-AGID** definita in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"*. Quando chiedi a Claude di scrivere un comunicato stampa, il gate AGID standard (qualità ChatGPT 9.5/10 con frasi <20 parole, voce attiva da UX writer per il cittadino) **viene sospeso** e Claude applica le **convenzioni di genere** del comunicato istituzionale: piramide rovesciata, lead 5W, virgolettati attribuiti, blocco firma, distribuzione ai media. La differenza con un articolo del sito è sostanziale — pubblico target diverso (giornalisti vs cittadini), registro diverso (formale-tecnico vs piano-divulgativo), struttura diversa (linearità vs gerarchia di lettura libera). **L'eccezione la attivi tu chiedendo esplicitamente "scrivi un comunicato stampa"**: se ti limiti a "scrivi un articolo sull'evento X", Claude resta nel registro AGID web-cittadino. Lo stesso vale per altri generi tecnici elencati nell'eccezione (lettera istituzionale, paper scientifico, relazione, bando, ordinanza, scheda accademica, eccetera): l'eccezione la decidi tu, non Claude.
+
 ### 12.1 — A cosa serve un comunicato stampa
 
 Il comunicato stampa è lo strumento con cui il Gruppo comunica ufficialmente con i media. Nasce
