@@ -77,7 +77,7 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 /* ── ALLERTA BAR + PULSE ── */
 .allerta-bar { padding: 0.6rem 0; font-size: 0.85rem; font-weight: 500; transition: background var(--pc-transition), opacity 0.3s ease; }
 .allerta-bar-loading { opacity: 0; }
-.allerta-bar-verde { background: #28a745 !important; color: #fff !important; }
+.allerta-bar-verde { background: #157a3a !important; color: #fff !important; } /* WCAG AA 5.42:1 (era #28a745 = 3.13:1) */
 .allerta-bar-gialla { background: #ffc107 !important; color: #000 !important; }
 .allerta-bar-arancione { background: #fd7e14 !important; color: #fff !important; }
 .allerta-bar-rossa { background: #dc3545 !important; color: #fff !important; }
@@ -966,7 +966,7 @@ article:not(.card) .galleria img {
   border-bottom: 1px solid var(--pc-border-subtle);
   padding: 0.5rem 0;
   font-size: 0.78rem;
-  color: #6c757d;
+  color: #5a6268; /* WCAG AA 5.68:1 su #f2f5f8 (era #6c757d = 4.29:1) */
 }
 .utility-bar-item {
   display: inline-flex;
