@@ -59,7 +59,11 @@ jobs:
         id: audit
         shell: bash
         run: |
-          set -u
+          # Volutamente NIENTE set -u: lo script ha 40+ sezioni con grep
+          # condizionali e variabili settate solo in alcuni branch. Set -u
+          # fallisce immediatamente sui runner GitHub se UNA variabile non
+          # è definita (vincolo molto stretto). Lasciare set -e -o pipefail
+          # che è il default GitHub Actions per shell bash.
           REPORT="/tmp/audit-report.md"
           : > "$REPORT"
           FOUND="false"
