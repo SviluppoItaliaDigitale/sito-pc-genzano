@@ -1090,10 +1090,12 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            // Legge il report direttamente dal file invece che interpolare
-            // ${{ steps.audit.outputs.report }} nello script JS — l'interpolation
-            // rompeva il parsing per via di backtick + numeri Markdown nel report
-            // (SyntaxError: Unexpected number).
+            // Legge il report direttamente dal file. Storia: prima si usava
+            // l'output dello step audit interpolato come template literal JS
+            // ma rompeva il parsing perche' il report contiene backtick e
+            // numeri Markdown (SyntaxError: Unexpected number / Invalid token).
+            // ATTENZIONE: niente sintassi GH Actions in questo commento,
+            // GH la espande anche dentro commenti JS, contaminando il codice.
             const fs = require('fs');
             let report = '(report non disponibile)';
             try {
