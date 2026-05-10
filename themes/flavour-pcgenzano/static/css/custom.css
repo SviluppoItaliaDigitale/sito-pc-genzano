@@ -1353,7 +1353,7 @@ article:not(.card) .galleria img {
 }
 
 .comunicazioni-archivio .filter-pill:not(.active) .filter-count {
-  background: rgba(15, 23, 42, 0.06);
+  background: transparent; /* WCAG AA: sfondo grigio rgba(15,23,42,0.06) abbassava il contrasto sotto 4.5:1 per 5 colori categorie su 13 (allerta, avviso, evento, prevenzione, volontariato) */
   border-color: transparent;
 }
 
