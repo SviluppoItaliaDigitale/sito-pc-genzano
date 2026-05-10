@@ -95,6 +95,31 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   # Il sito è già full-HTTPS (RewriteRule sopra fa 301 da http a https).
   # Aggiunto 2026-05-06 dopo audit security ChatGPT.
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # Content-Security-Policy in MODALITÀ REPORT-ONLY (10 maggio 2026):
+  # il browser valuta la policy MA non blocca niente — registra solo
+  # le violazioni nella console DevTools. Periodo di test: 1-2 settimane.
+  # Se non emergono regressioni reali sui widget click-to-load (Windy,
+  # INGV) né sulla mappa cartografia (OpenStreetMap), si converte
+  # l'header a Content-Security-Policy attivo (senza -Report-Only).
+  #
+  # Direttive:
+  # - default-src 'self': fallback per tutte le risorse non specificate
+  # - script-src 'unsafe-inline' 'unsafe-eval': richiesti da Hugo +
+  #   Bootstrap Italia + Leaflet. Migrazione a nonces in futuro è
+  #   possibile ma richiede modifiche a tutti i template
+  # - style-src 'unsafe-inline': inline styles dagli shortcode + BS-Italia
+  # - cdn.jsdelivr.net: Bootstrap Icons CSS
+  # - img-src https: data: blob:: foto inline da Wikipedia/NASA/ecc. +
+  #   data URI per loghi inline + blob URI per upload utente
+  # - connect-src raw.githubusercontent.com: fetch CSV DPC opendatasicilia
+  # - frame-src: widget click-to-load (Windy, INGV, MeteoAM, DPC)
+  # - frame-ancestors 'self': anti-clickjacking (ridondante con X-Frame)
+  # - form-action 'self': solo form interni (ricerca, contatti)
+  # - base-uri 'self': anti-XSS via tag <base>
+  # - object-src 'none': niente Flash/plugin obsoleti
+  # - upgrade-insecure-requests: forza HTTPS sui rare http:// residui
+  Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: blob: https:; font-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://raw.githubusercontent.com https://api.github.com https://*.openstreetmap.org https://*.tile.openstreetmap.org; frame-src https://embed.windy.com https://www.windy.com https://*.ingv.it https://terremoti.ingv.it https://www.youtube.com https://www.youtube-nocookie.com https://*.protezionecivile.gov.it https://*.regione.lazio.it https://mappe.protezionecivile.gov.it; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
 </IfModule>
 
 # Cache statica — asset immutabili
