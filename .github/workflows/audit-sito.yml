@@ -1018,8 +1018,10 @@ jobs:
           MENU_DRIFT=""
           if [ -f static/app-shared/site-chrome.js ] && [ -f hugo.toml ]; then
             # Estrai i nomi delle voci di primo livello dal menu Hugo
-            # (gli identifier dei dropdown sono: per-il-cittadino, educazione-inclusione, volontariato, risorse)
-            HUGO_PARENTS=$(grep -E '^  identifier = "(per-il-cittadino|educazione-inclusione|volontariato|risorse)"' hugo.toml | grep -oE '"[a-z-]+"' | tr -d '"' | sort -u)
+            # (gli identifier dei dropdown attuali sono 5: per-il-cittadino,
+            # per-le-scuole, accessibilita-supporti, volontariato, risorse —
+            # split di educazione-inclusione in per-le-scuole + accessibilita-supporti, maggio 2026)
+            HUGO_PARENTS=$(grep -E '^  identifier = "(per-il-cittadino|per-le-scuole|accessibilita-supporti|volontariato|risorse)"' hugo.toml | grep -oE '"[a-z-]+"' | tr -d '"' | sort -u)
             for parent_id in $HUGO_PARENTS; do
               if ! grep -q "navDropdown-$parent_id" static/app-shared/site-chrome.js; then
                 MENU_DRIFT="${MENU_DRIFT}- Dropdown \`$parent_id\` mancante in \`site-chrome.js\` (presente in \`hugo.toml\`)\n"
@@ -1033,13 +1035,16 @@ jobs:
             done
             # Verifica che NON ci siano voci obsolete (residui)
             if grep -q "navDropdown-formazione" static/app-shared/site-chrome.js; then
-              MENU_DRIFT="${MENU_DRIFT}- Residuo obsoleto \`navDropdown-formazione\` in \`site-chrome.js\` (sostituito da \`educazione-inclusione\`)\n"
+              MENU_DRIFT="${MENU_DRIFT}- Residuo obsoleto \`navDropdown-formazione\` in \`site-chrome.js\` (sostituito dal nuovo schema 5-dropdown)\n"
+            fi
+            if grep -q "navDropdown-educazione-inclusione" static/app-shared/site-chrome.js; then
+              MENU_DRIFT="${MENU_DRIFT}- Residuo obsoleto \`navDropdown-educazione-inclusione\` in \`site-chrome.js\` (split in per-le-scuole + accessibilita-supporti, maggio 2026)\n"
             fi
             if [ -n "$MENU_DRIFT" ]; then
               err "Menu Hugo ↔ site-chrome.js NON allineati. Aggiornare \`static/app-shared/site-chrome.js\` per riflettere \`hugo.toml [[menus.main]]\` (vedi memoria \`feedback_sincronizza_site_chrome.md\`):"
               printf "%b" "$MENU_DRIFT" >> "$REPORT"
             else
-              ok "Menu Hugo ↔ site-chrome.js allineati (4 dropdown + 3 voci dirette)."
+              ok "Menu Hugo ↔ site-chrome.js allineati (5 dropdown + 3 voci dirette)."
             fi
           else
             warn "File \`hugo.toml\` o \`static/app-shared/site-chrome.js\` non trovati: check saltato."
