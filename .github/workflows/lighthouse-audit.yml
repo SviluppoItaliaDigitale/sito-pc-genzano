@@ -26,23 +26,24 @@ jobs:
       - name: "⏳ Attendi propagazione deploy"
         run: sleep 60
 
-      - name: "🔦 Esegui Lighthouse"
+      - name: "🔦 Esegui Lighthouse (3 run × 3 URL, mediana)"
         id: lighthouse
         uses: treosh/lighthouse-ci-action@v12
         with:
-          # Inserisci qui l'URL del tuo sito
-          urls: |
-            https://www.protezionecivilegenzano.it/
+          configPath: ./lighthouserc.json
           uploadArtifacts: true
 
       - name: "📊 Riepilogo punteggi"
         if: always()
         run: |
-          echo "## ♿ Risultati Audit Accessibilità" >> $GITHUB_STEP_SUMMARY
+          echo "## ♿ Risultati Audit Accessibilità + Performance" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Verifica completata. Controlla gli artifact per i dettagli." >> $GITHUB_STEP_SUMMARY
+          echo "Configurazione: 3 run × 3 URL (home + comunicazioni + numeri-utili), mobile, mediana." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Obiettivo" >> $GITHUB_STEP_SUMMARY
-          echo "- Accessibilità: ≥ 90/100 (requisito WCAG 2.1 AA)" >> $GITHUB_STEP_SUMMARY
-          echo "- Performance: ≥ 80/100" >> $GITHUB_STEP_SUMMARY
-          echo "- Best Practices: ≥ 90/100" >> $GITHUB_STEP_SUMMARY
+          echo "### Soglie" >> $GITHUB_STEP_SUMMARY
+          echo "- Accessibilità: ≥ 95/100 (warn errore se sotto, requisito WCAG 2.2 AA)" >> $GITHUB_STEP_SUMMARY
+          echo "- Best Practices: ≥ 95/100 (errore)" >> $GITHUB_STEP_SUMMARY
+          echo "- SEO: ≥ 95/100 (errore)" >> $GITHUB_STEP_SUMMARY
+          echo "- Performance: ≥ 85/100 (warn, target operativo)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Configurazione: lighthouserc.json nella root del repo. Modifica le soglie lì." >> $GITHUB_STEP_SUMMARY

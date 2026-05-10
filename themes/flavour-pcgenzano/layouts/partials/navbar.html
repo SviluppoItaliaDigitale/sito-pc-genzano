@@ -5,7 +5,10 @@
         <div class="it-header-center-content-wrapper">
           <div class="it-brand-wrapper">
             <a href="{{ "/" | relURL }}">
-              <img src="{{ "images/logo-pc-genzano.png" | relURL }}" alt="" width="82" height="82" aria-hidden="true">
+              <picture>
+                <source srcset="{{ "images/logo-pc-genzano.webp" | relURL }}" type="image/webp">
+                <img src="{{ "images/logo-pc-genzano.png" | relURL }}" alt="" width="82" height="82" aria-hidden="true">
+              </picture>
               <div class="it-brand-text">
                 <div class="it-brand-title">Protezione Civile</div>
                 <div class="it-brand-tagline d-none d-md-block">Gruppo Comunale Volontari di Genzano di Roma</div>
