@@ -100,6 +100,8 @@ Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che i
 <div class="col"><div class="card h-100 shadow-sm"><img src="https://www.protezionecivilegenzano.it/cartelli/ar4.png" loading="lazy" decoding="async" class="card-img-top" alt="Cartello area di ricovero AR4 — Campo Sportivo Don Bosco, Viale Piave angolo Via Lega Latina"><div class="card-body p-2 text-center"><p class="small fw-bold mb-0">AR4</p><p class="small text-muted mb-0">Don Bosco (Salesiani)</p></div></div></div>
 </div>
 
+{{< mappa-territorio >}}
+
 ## Mappe scaricabili
 
 - [Carta delle Aree di Emergenza e degli Edifici Strategici (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf)

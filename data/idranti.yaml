@@ -1,0 +1,44 @@
+# Mappa idranti antincendio sul territorio di Genzano di Roma.
+#
+# STATO: scheletro vuoto in attesa di dati ufficiali.
+#
+# Fonti per popolare il file:
+#   1. Coordinamento con Comando provinciale VVF Roma — Distaccamento di
+#      riferimento (Velletri/Albano) per ricezione del registro idranti
+#      operativi nella zona di Genzano.
+#   2. Servizio Tecnico Comunale (Acea ATO2 per la rete idrica) — punti
+#      di prelievo emergenza disponibili nella convenzione Comune-Gestore.
+#   3. Sopralluogo congiunto VVF + Gruppo Comunale Volontari per
+#      verifica fisica e classificazione.
+#
+# Schema voce singola (decommentare ed espandere per ogni idrante):
+#
+# idranti:
+#   - id: ID1
+#     codice: "IDR-001"        # codice catastale o VVF
+#     tipo: "soprasuolo"       # soprasuolo | sottosuolo | naspo | sprinkler
+#     diametro_mm: 80          # 70 | 80 | 100 | 125
+#     portata_l_min: 600       # portata indicativa
+#     pressione_bar: 2.5       # pressione minima certificata
+#     indirizzo: "Via X, civico Y"
+#     riferimento: "davanti al cancello del parco"
+#     lat: 41.69xx
+#     lon: 12.69xx
+#     verified: true            # true se confermato da sopralluogo
+#     ultima_verifica: "AAAA-MM-GG"
+#     accessibilita: "carrabile"   # carrabile | pedonale | parcheggio
+#     note: "in efficienza, controllo annuale 2025-XX-XX"
+#
+# Privacy / sicurezza:
+#   La pubblicazione dei punti idrante è strumento di trasparenza
+#   istituzionale per i volontari e per gli operatori. Eventuali punti
+#   "sensibili" (es. siti militari, infrastrutture critiche) vanno
+#   esclusi su richiesta del coordinamento operativo.
+#
+# Riferimenti normativi:
+#   - DM 01/02/1986 (Norme di sicurezza antincendio nelle autorimesse)
+#   - DM 16/02/1982 (Tabelle delle attività soggette a controllo VVF)
+#   - UNI 10779:2014 (Reti idranti antincendio)
+#   - D.Lgs. 81/2008 (TUSL) — manutenzione obbligatoria
+
+idranti: []
