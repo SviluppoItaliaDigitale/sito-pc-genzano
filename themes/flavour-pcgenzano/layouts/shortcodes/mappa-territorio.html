@@ -1,0 +1,165 @@
+{{/* Shortcode mappa-territorio: mappa interattiva con layer "operativi"
+     a complemento della mappa-aree del Piano di Emergenza.
+     Layer supportati:
+       - Idranti antincendio    (data/idranti.yaml)
+       - DAE defibrillatori     (data/dae.yaml)
+     I file YAML sono inizialmente vuoti; finché restano vuoti, lo
+     shortcode mostra un alert "in costruzione" invece della mappa.
+     Le coordinate ufficiali si caricano nei file data/, niente di
+     hardcoded qui. */}}
+
+{{ $idranti := site.Data.idranti.idranti | default slice }}
+{{ $dae := site.Data.dae.dae | default slice }}
+{{ $hasData := or (gt (len $idranti) 0) (gt (len $dae) 0) }}
+
+{{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
+{{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
+
+<div class="mappa-territorio-wrapper" aria-labelledby="mappa-territorio-titolo">
+  <h2 id="mappa-territorio-titolo" class="h3 mt-4 mb-3" style="color:#003366">
+    <i class="bi bi-geo-fill me-2" aria-hidden="true"></i>Mappa operativa del territorio
+  </h2>
+
+  <p class="mb-2">Layer a complemento del Piano di Emergenza: idranti antincendio e DAE (defibrillatori) accessibili al pubblico. Strumenti operativi per i volontari e per la cittadinanza.</p>
+
+{{ if not $hasData }}
+  <div class="alert alert-warning border" role="note" style="border-left:6px solid #b45309 !important">
+    <h3 class="h5 mt-0"><i class="bi bi-cone-striped me-2" aria-hidden="true"></i>Mappa in costruzione</h3>
+    <p class="mb-2">Stiamo raccogliendo le coordinate ufficiali con i soggetti competenti. La mappa si attiverà automaticamente quando saranno disponibili dati validati.</p>
+    <p class="mb-2"><strong>Hai informazioni utili?</strong> Se conosci la posizione di un DAE accessibile al pubblico (farmacia, scuola, palestra, parrocchia, ufficio pubblico) o di un idrante antincendio operativo, scrivici a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>. Ci coordineremo con ASL Roma 6 / 118 / VVF / Comune per la verifica.</p>
+    <p class="small mb-0">Riferimento per i DAE: registro nazionale <a href="https://dae.irc-com.it" target="_blank" rel="noopener noreferrer">IRC</a> (Italian Resuscitation Council) ai sensi della <strong>Legge 116/2021</strong>. Riferimento per gli idranti: Comando provinciale VVF Roma + Servizio Tecnico Comunale.</p>
+  </div>
+
+  <p class="small text-muted mt-3 mb-0">In emergenza chiama sempre il <strong><a href="tel:112">112</a></strong> (NUE). Il DAE va recuperato solo se vicino entro 1-2 minuti; altrimenti continua le compressioni toraciche (BLS).</p>
+{{ else }}
+  <link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+  <style>
+  .mappa-territorio-toolbar{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;margin-bottom:0.75rem}
+  .mappa-territorio-filter{display:inline-flex;align-items:center;gap:0.4rem;border:2px solid transparent;background:#fff;padding:0.4rem 0.85rem;border-radius:999px;font-size:0.95rem;cursor:pointer;transition:all 0.15s}
+  .mappa-territorio-filter[aria-pressed="true"]{color:#fff}
+  .mappa-territorio-filter[aria-pressed="false"]{color:#333;background:#f0f0f0}
+  .mappa-territorio-filter:focus-visible{outline:3px solid #ffbe2e;outline-offset:2px}
+  .mappa-territorio-filter .pallino{width:0.85rem;height:0.85rem;border-radius:50%;display:inline-block;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,0.2)}
+  .mappa-territorio-filter[data-tipo="IDR"][aria-pressed="true"]{background:#dc3545;border-color:#dc3545}
+  .mappa-territorio-filter[data-tipo="DAE"][aria-pressed="true"]{background:#15803d;border-color:#15803d}
+  #mappa-territorio{height:520px;width:100%;border-radius:8px;border:2px solid #003366;box-shadow:0 4px 12px rgba(0,0,0,0.08);background:#eaeaea}
+  @media (max-width: 575px){#mappa-territorio{height:440px}}
+  .mappa-territorio-popup h3{font-size:1.05rem;color:#003366;margin:0 0 0.4rem 0;font-weight:700}
+  .mappa-territorio-popup .badge-tipo{display:inline-block;color:#fff;padding:0.15rem 0.55rem;border-radius:4px;font-size:0.75rem;font-weight:700;letter-spacing:0.03em;margin-bottom:0.4rem}
+  </style>
+
+  <div class="mappa-territorio-toolbar" role="group" aria-label="Filtri layer territorio">
+    <button type="button" class="mappa-territorio-filter" data-tipo="IDR" aria-pressed="true">
+      <span class="pallino" style="background:#dc3545" aria-hidden="true"></span>
+      Idranti ({{ len $idranti }})
+    </button>
+    <button type="button" class="mappa-territorio-filter" data-tipo="DAE" aria-pressed="true">
+      <span class="pallino" style="background:#15803d" aria-hidden="true"></span>
+      DAE ({{ len $dae }})
+    </button>
+  </div>
+
+  <div id="mappa-territorio" role="application" aria-label="Mappa operativa del territorio: idranti antincendio e DAE."></div>
+
+  <noscript>
+    <div class="alert alert-warning mt-3" role="note">
+      <strong>JavaScript disattivato:</strong> per visualizzare la mappa è necessario abilitare JavaScript.
+    </div>
+  </noscript>
+
+  <p class="small text-muted mt-2 mb-0">Mappa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> — libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 self-hosted. Dati DAE conformi <a href="https://dae.irc-com.it" target="_blank" rel="noopener noreferrer">registro IRC</a> (L. 116/2021). Idranti coordinati con Comando VVF Roma.</p>
+
+  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  <script id="dati-territorio" type="application/json">{{ dict "idranti" $idranti "dae" $dae | jsonify | safeJS }}</script>
+  <script>
+  (function(){
+    if (typeof L === 'undefined') return;
+    var dati;
+    try {
+      dati = JSON.parse(document.getElementById('dati-territorio').textContent);
+    } catch(e) { return; }
+
+    var COLORI = { IDR: '#dc3545', DAE: '#15803d' };
+    var ETICHETTE = { IDR: 'Idrante antincendio', DAE: 'DAE — Defibrillatore' };
+
+    var centro = [41.7045, 12.6890];
+    var mappa = L.map('mappa-territorio', { center: centro, zoom: 13, scrollWheelZoom: false });
+    mappa.on('focus', function(){ mappa.scrollWheelZoom.enable(); });
+    mappa.on('blur',  function(){ mappa.scrollWheelZoom.disable(); });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+    }).addTo(mappa);
+
+    function creaIcona(tipo, label){
+      var colore = COLORI[tipo] || '#003366';
+      var simbolo = tipo === 'IDR' ? 'H' : '+';
+      var html = ''
+        + '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="42" viewBox="0 0 32 42" aria-hidden="true">'
+        + '<path d="M16 0C7.2 0 0 7 0 15.6 0 27.5 16 42 16 42S32 27.5 32 15.6C32 7 24.8 0 16 0z" fill="' + colore + '" stroke="#fff" stroke-width="2"/>'
+        + '<circle cx="16" cy="15" r="9" fill="#fff"/>'
+        + '<text x="16" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="' + colore + '">' + simbolo + '</text>'
+        + '</svg>';
+      return L.divIcon({ className:'mappa-marker-divicon', html:html, iconSize:[32,42], iconAnchor:[16,42], popupAnchor:[0,-38] });
+    }
+
+    function creaPopupIdrante(p){
+      var coordsParam = encodeURIComponent(p.lat + ',' + p.lon);
+      return ''
+        + '<div class="mappa-territorio-popup">'
+        + '<span class="badge-tipo" style="background:#dc3545">' + (p.id || 'IDR') + ' · Idrante</span>'
+        + '<h3>' + (p.indirizzo || 'Idrante') + '</h3>'
+        + (p.tipo ? '<p class="mb-1"><strong>Tipo:</strong> ' + p.tipo + (p.diametro_mm ? ' · DN ' + p.diametro_mm + ' mm' : '') + '</p>' : '')
+        + (p.riferimento ? '<p class="mb-1 small">' + p.riferimento + '</p>' : '')
+        + '<div class="mt-2"><a href="https://www.openstreetmap.org/?mlat=' + p.lat + '&mlon=' + p.lon + '#map=18/' + p.lat + '/' + p.lon + '" target="_blank" rel="noopener noreferrer">Apri su OpenStreetMap</a></div>'
+        + '</div>';
+    }
+
+    function creaPopupDAE(p){
+      return ''
+        + '<div class="mappa-territorio-popup">'
+        + '<span class="badge-tipo" style="background:#15803d">' + (p.id || 'DAE') + ' · DAE</span>'
+        + '<h3>' + (p.ubicazione || 'DAE') + '</h3>'
+        + (p.accesso_pubblico ? '<p class="mb-1"><strong>Accesso:</strong> ' + p.accesso_pubblico + '</p>' : '')
+        + (p.orario ? '<p class="mb-1 small"><strong>Orario:</strong> ' + p.orario + '</p>' : '')
+        + (p.marca ? '<p class="mb-1 small"><strong>Modello:</strong> ' + p.marca + ' ' + (p.modello || '') + '</p>' : '')
+        + '<p class="mt-2 small text-danger"><strong>In emergenza chiama il <a href="tel:112">112</a> prima.</strong></p>'
+        + '</div>';
+    }
+
+    var gruppi = { IDR: L.layerGroup(), DAE: L.layerGroup() };
+    var bounds = L.latLngBounds([]);
+
+    (dati.idranti || []).forEach(function(p){
+      if (typeof p.lat !== 'number' || typeof p.lon !== 'number') return;
+      var marker = L.marker([p.lat, p.lon], { icon: creaIcona('IDR', p.id), title: 'Idrante ' + (p.id || ''), keyboard:true });
+      marker.bindPopup(creaPopupIdrante(p), { maxWidth: 320 });
+      marker.addTo(gruppi.IDR);
+      bounds.extend([p.lat, p.lon]);
+    });
+
+    (dati.dae || []).forEach(function(p){
+      if (typeof p.lat !== 'number' || typeof p.lon !== 'number') return;
+      var marker = L.marker([p.lat, p.lon], { icon: creaIcona('DAE', p.id), title: 'DAE ' + (p.id || ''), keyboard:true });
+      marker.bindPopup(creaPopupDAE(p), { maxWidth: 320 });
+      marker.addTo(gruppi.DAE);
+      bounds.extend([p.lat, p.lon]);
+    });
+
+    Object.keys(gruppi).forEach(function(k){ gruppi[k].addTo(mappa); });
+    if (bounds.isValid()) mappa.fitBounds(bounds, { padding: [30, 30] });
+
+    document.querySelectorAll('.mappa-territorio-filter').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var tipo = btn.dataset.tipo;
+        var attivo = btn.getAttribute('aria-pressed') === 'true';
+        btn.setAttribute('aria-pressed', attivo ? 'false' : 'true');
+        if (attivo) mappa.removeLayer(gruppi[tipo]);
+        else gruppi[tipo].addTo(mappa);
+      });
+    });
+  })();
+  </script>
+{{ end }}
+</div>

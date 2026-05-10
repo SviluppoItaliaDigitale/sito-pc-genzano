@@ -1,0 +1,56 @@
+# Mappa DAE (Defibrillatori semi-Automatici Esterni) sul territorio di
+# Genzano di Roma.
+#
+# STATO: scheletro vuoto in attesa di dati ufficiali.
+#
+# Riferimento normativo: Legge 4 agosto 2021, n. 116 ("BLSD per tutti")
+# che ha reso obbligatorio il registro pubblico dei DAE installati sul
+# territorio italiano, gestito centralmente dal Centro Operativo 118 e
+# dalle Centrali Uniche di Risposta NUE 112.
+#
+# Fonti per popolare il file:
+#   1. ASL Roma 6 — Centrale Operativa 118 (sede Albano Laziale).
+#      Richiesta del registro DAE attivi nei Comuni dei Castelli Romani
+#      con autorizzazione alla pubblicazione su sito istituzionale.
+#   2. ARES 118 Lazio — coordinamento regionale.
+#   3. IRC (Italian Resuscitation Council) — registro nazionale DAE
+#      consultabile su https://dae.irc-com.it (verificare API/export
+#      per import bulk).
+#   4. Censimento diretto del Gruppo Comunale: chiediamo a scuole,
+#      farmacie, palestre, centri sportivi, parrocchie, supermercati,
+#      uffici pubblici di confermare presenza DAE + orari di accesso.
+#
+# Schema voce singola (decommentare ed espandere per ogni DAE):
+#
+# dae:
+#   - id: D1
+#     codice: "DAE-IRC-XXXXX"   # codice IRC se registrato
+#     marca: "Philips HeartStart"   # esempio
+#     modello: "HS1"
+#     ubicazione: "Farmacia Comunale, Via X civico Y"
+#     tipo_locale: "farmacia"   # farmacia | scuola | palestra | ufficio_pubblico | parrocchia | privato_aperto
+#     accesso_pubblico: "h24"   # h24 | orario_apertura | su_chiamata
+#     orario: "lun-ven 08:30-20:00, sab 08:30-13:00"
+#     custode: "personale farmacia"
+#     telefono_custode: "+39 06 9362xxx"
+#     lat: 41.69xx
+#     lon: 12.69xx
+#     verified: true
+#     ultima_verifica: "AAAA-MM-GG"
+#     ultima_manutenzione: "AAAA-MM-GG"
+#     batteria_scadenza: "AAAA-MM-GG"
+#     elettrodi_scadenza: "AAAA-MM-GG"
+#     note: "presente segnaletica di emergenza in 3 lingue"
+#
+# Importante per il cittadino:
+#   In ogni emergenza chiamare PRIMA il 112. Il DAE va recuperato solo
+#   se vicino (entro 1-2 minuti); altrimenti continuare le compressioni
+#   toraciche (BLS) finché arrivano i soccorsi.
+#
+# Privacy:
+#   I dati di custodi/numeri di telefono sono mostrati pubblicamente
+#   solo se il custode ha autorizzato esplicitamente.
+#   Per i privati che hanno DAE accessibili al pubblico, è richiesta
+#   firma di consenso al trattamento dati.
+
+dae: []
