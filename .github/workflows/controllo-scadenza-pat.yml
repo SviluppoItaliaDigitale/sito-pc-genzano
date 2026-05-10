@@ -1,0 +1,165 @@
+name: "🔑 Controllo scadenza PAT cron-job.org"
+
+# Controlla mensilmente la scadenza del Personal Access Token GitHub
+# usato da cron-job.org per il trigger esterno di check-allerta.yml.
+#
+# Se mancano ≤30 giorni alla scadenza, apre automaticamente una issue
+# "🔑 Rinnovo PAT cron-job.org entro il AAAA-MM-GG" con la procedura
+# di rinnovo passo passo.
+#
+# Setup richiesto: GitHub Secret `CRONJOB_GH_PAT` configurato con il
+# valore del Personal Access Token usato su cron-job.org. Vedi:
+# Settings → Secrets and variables → Actions → New repository secret
+#
+# Se il secret non è configurato, il workflow logga un warning ed
+# esce pulito (non blocca CI).
+
+on:
+  schedule:
+    # Primo giorno del mese alle 09:00 UTC = 11:00 italiana (estate)
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  check-pat-expiration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "🔍 Verifica scadenza PAT"
+        id: check
+        env:
+          PAT: ${{ secrets.CRONJOB_GH_PAT }}
+        run: |
+          if [ -z "$PAT" ]; then
+            echo "::warning::Secret CRONJOB_GH_PAT non configurato — skip controllo"
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # L'API /user con un PAT autenticato include nell'header di
+          # risposta `github-authentication-token-expiration` con la
+          # data di scadenza del token.
+          HEADERS=$(curl -sI \
+            -H "Authorization: Bearer $PAT" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/user)
+
+          HTTP_CODE=$(echo "$HEADERS" | head -n1 | awk '{print $2}')
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error::PAT non valido — risposta HTTP $HTTP_CODE da api.github.com/user"
+            echo "skip=false" >> $GITHUB_OUTPUT
+            echo "expiration=INVALID" >> $GITHUB_OUTPUT
+            echo "days_left=-999" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          EXPIRATION=$(echo "$HEADERS" | grep -i '^github-authentication-token-expiration:' | sed 's/^[^:]*: //; s/\r//' | xargs)
+
+          if [ -z "$EXPIRATION" ]; then
+            echo "::warning::PAT classico senza scadenza esplicita — controllo non possibile via API"
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Calcola giorni mancanti
+          EXP_TS=$(date -u -d "$EXPIRATION" +%s 2>/dev/null || echo "0")
+          if [ "$EXP_TS" = "0" ]; then
+            echo "::error::Impossibile parsare la data di scadenza: $EXPIRATION"
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          NOW_TS=$(date -u +%s)
+          DAYS_LEFT=$(( (EXP_TS - NOW_TS) / 86400 ))
+
+          echo "✅ PAT scadenza: $EXPIRATION"
+          echo "✅ Giorni mancanti: $DAYS_LEFT"
+          echo "skip=false" >> $GITHUB_OUTPUT
+          echo "expiration=$EXPIRATION" >> $GITHUB_OUTPUT
+          echo "days_left=$DAYS_LEFT" >> $GITHUB_OUTPUT
+
+      - name: "🚨 Apri/aggiorna issue se scadenza imminente o token invalido"
+        if: steps.check.outputs.skip == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DAYS_LEFT: ${{ steps.check.outputs.days_left }}
+          EXPIRATION: ${{ steps.check.outputs.expiration }}
+        run: |
+          # Skip se >30 giorni rimasti e PAT valido
+          if [ "$DAYS_LEFT" -gt 30 ] && [ "$EXPIRATION" != "INVALID" ]; then
+            echo "✅ PAT valido per $DAYS_LEFT giorni — nessuna azione richiesta"
+            exit 0
+          fi
+
+          # Determina urgenza e label
+          if [ "$DAYS_LEFT" -le -990 ] || [ "$EXPIRATION" = "INVALID" ]; then
+            URGENZA="🔴 PAT INVALIDO"
+            LABEL="urgente,manutenzione"
+            TITLE_SUFFIX="— PAT non valido"
+          elif [ "$DAYS_LEFT" -le 0 ]; then
+            URGENZA="🔴 PAT SCADUTO"
+            LABEL="urgente,manutenzione"
+            TITLE_SUFFIX="entro oggi (SCADUTO)"
+          elif [ "$DAYS_LEFT" -le 7 ]; then
+            URGENZA="🟠 URGENTE — meno di 7 giorni alla scadenza"
+            LABEL="urgente,manutenzione"
+            TITLE_SUFFIX="entro $EXPIRATION (URGENTE)"
+          else
+            URGENZA="🟡 Promemoria — meno di 30 giorni alla scadenza"
+            LABEL="manutenzione"
+            TITLE_SUFFIX="entro $EXPIRATION"
+          fi
+
+          # Cerca se c'è già una issue aperta dello stesso tipo
+          EXISTING=$(gh issue list --label "manutenzione" --search "Rinnovo PAT cron-job.org in:title state:open" --json number --jq '.[0].number // empty')
+
+          BODY="## $URGENZA
+
+          Il Personal Access Token GitHub usato da cron-job.org per il polling DPC sta per scadere o non è più valido.
+
+          - **Scadenza**: $EXPIRATION
+          - **Giorni mancanti**: $DAYS_LEFT
+          - **Cronjob esterno**: PC Genzano — Allerta meteo polling su [console.cron-job.org](https://console.cron-job.org/jobs)
+
+          ## Procedura di rinnovo
+
+          1. Vai su <https://github.com/settings/personal-access-tokens>
+          2. Genera un nuovo PAT con gli stessi permessi:
+             - **Resource owner**: SviluppoItaliaDigitale
+             - **Repository access**: Only \`sito-pc-genzano\`
+             - **Permissions**: Actions: Read and write, Contents: Read-only, Metadata: Read-only
+             - **Expiration**: 1 year (max)
+          3. Copia il nuovo token (inizia con \`github_pat_\`)
+          4. Vai su <https://console.cron-job.org/jobs>
+          5. Modifica il cronjob \"PC Genzano — Allerta meteo polling\"
+          6. Tab AVANZATE → Headers → modifica \`Authorization\` con il nuovo token (\`Bearer github_pat_...\`)
+          7. Clicca TEST DI ESECUZIONE per verificare (deve dare 204 No Content)
+          8. Salva il cronjob
+          9. Aggiorna il GitHub Secret: Settings → Secrets and variables → Actions → \`CRONJOB_GH_PAT\` → Update con il nuovo token
+          10. (Opzionale) Elimina il vecchio token dalla pagina Personal access tokens
+          11. Chiudi questa issue
+
+          ## Cosa succede se non rinnovi
+
+          - Cron-job.org riceverà 401 Unauthorized da GitHub
+          - Il polling allerta meteo NON funzionerà più tramite il trigger primario
+          - Il sistema cadrà sul **fail-safe orario** GitHub schedule \`17 * * * *\` (1 run/h)
+          - Latenza al cambio livello DPC tornerà a ~60 min worst case (invece di ~15 sec)
+          - Il sistema continuerà a funzionare ma in modalità **degradata**
+
+          ---
+          *Issue creata automaticamente dal workflow \`controllo-scadenza-pat.yml\` (mensile, 1° del mese 09:00 UTC).*"
+
+          if [ -n "$EXISTING" ]; then
+            echo "Issue già aperta: #$EXISTING — aggiorno con commento"
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh issue create \
+              --title "🔑 Rinnovo PAT cron-job.org $TITLE_SUFFIX" \
+              --label "$LABEL" \
+              --body "$BODY"
+            echo "✅ Issue creata"
+          fi
