@@ -92,6 +92,39 @@ Esiste perché il 4 maggio 2026 l'utente ha scoperto che 50+ commit accumulati s
 
 ---
 
+## Auto-gate AGID prima del commit di un nuovo articolo
+
+🟢 **Ogni volta che generi un articolo nuovo in `content/comunicazioni/`, prima del `git add` invochi l'agent `pc-article-reviewer` su quel file.** Solo dopo il via libera dell'agent (o dopo aver applicato i suoi fix) procedi al commit. Vale anche su un singolo articolo. **Il gate è obbligato, non opzionale.**
+
+**Trigger:** creazione/modifica sostanziale di un file in `content/comunicazioni/AAAA-MM-GG-*.md`. Vale per articoli generati da te, da workflow CI, da altre AI esterne le cui bozze passano da una tua sessione, e da editing manuale dell'utente quando ti chiede una rilettura.
+
+**Workflow obbligato:**
+
+1. Scrivi/modifichi il file.
+2. **Invochi `pc-article-reviewer`** sul file appena scritto.
+3. L'agent applica i fix AGID o dichiara *"Articolo conforme AGID, nessuna modifica necessaria"*.
+4. **Solo a quel punto** `git add` + commit.
+5. Se l'utente ha detto «pubblica» o equivalente, prosegui con push + PR + merge come da regola «Pubblica».
+
+**Eccezione — modalità non-AGID solo su richiesta esplicita dell'utente:**
+
+Se l'utente ti chiede esplicitamente di redigere un documento in un **registro diverso** dal linguaggio AGID per il cittadino (esempi non esaustivi: **comunicato stampa**, **lettera istituzionale formale**, **articolo scientifico**, **paper di ricerca**, **relazione tecnica**, **memoria difensiva**, **risposta a interrogazione**, **studio di prefattibilità**, **bando pubblico**, **delibera**, **ordinanza**, **scheda accademica**), in quel caso:
+
+- **Sospendi il gate AGID** per quel documento specifico.
+- **Diventa il miglior professionista del settore** di scrittura per quel genere: stile, lessico, struttura, citazioni, registro, lunghezza adeguati al pubblico target del documento (giornalisti per il comunicato stampa, controparti istituzionali per la lettera formale, peer-reviewer per il paper scientifico, ecc.).
+- Cita le **convenzioni di genere**: comunicato stampa = piramide rovesciata + lead 5W + boilerplate finale; lettera istituzionale = intestazione + protocollo + formula di apertura/chiusura; paper scientifico = abstract + IMRaD; ecc.
+- L'eccezione vale **solo** per quel documento specifico richiesto. Il prossimo articolo generato per `content/comunicazioni/` ricade nel gate AGID standard.
+
+**L'eccezione la decide l'utente, non tu.** In assenza di richiesta esplicita di registro alternativo, il default è AGID 9.5/10 con gate obbligato.
+
+**Why esiste questa regola:**
+
+Le rules `02-content-design-pa.md` § "Livello qualitativo della redazione" e `CLAUDE.md` punto 4 («qualità ChatGPT 9.5/10») definivano già lo standard atteso. Il problema era che vivevano come **contesto di lettura**, non come **passo obbligato del flusso di pubblicazione**. Tra "ho generato il testo" e "lo committo" non c'era nulla che mi forzasse a rileggerlo da UX writer. L'agent `pc-article-reviewer` era pensato per essere invocato proattivamente, ma di fatto veniva attivato solo quando l'utente lo chiedeva esplicitamente, in revisione retroattiva.
+
+Risultato: il **9 maggio 2026** l'utente ha chiesto di rivedere AGID tutti gli articoli storici. Sono usciti **43 articoli rivisti** (2024 + 2025 + Q1 2026 + 2027 calendarizzati) in 8 PR consecutive, con interventi che andavano dal cosmetico al bloccante (badge `Allerta` improprio su campagna AIB stagionale, sigle mai sciolte, lede retorici, fonti istituzionali mai citate). Tutti debiti che si potevano evitare con un gate al momento della generazione. Da maggio 2026 il gate è obbligato per impedire che il debito si riformi.
+
+---
+
 ## Regole di dettaglio (file separati)
 
 @.claude/rules/01-governance-pa.md
