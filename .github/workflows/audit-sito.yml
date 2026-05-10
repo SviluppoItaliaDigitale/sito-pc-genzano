@@ -184,7 +184,7 @@ jobs:
           # ATTRIBUTI sono nomi dei parametri, non testi placeholder).
           PLACEHOLDER=$(grep -rInE '\b(TODO|TBD|FIXME|XXX|lorem ipsum|placeholder|DA COMPLETARE|DA VERIFICARE|\{\{\s*[a-z_]+\s*\}\})\b' \
             "$CONTENT_GLOB/" 2>/dev/null \
-            | grep -vE '(_index\.md:.*description:[[:space:]]*""|#.*TODO|placeholderTitle=|placeholderDesc=)' \
+            | grep -vE "(_index\.md:.*description:[[:space:]]*\"\"|#.*TODO|placeholderTitle=|placeholderDesc=|placeholder=\"|placeholder='|::placeholder|\.placeholder|placeholder-|aria-placeholder|input.*placeholder)" \
             || true)
           if [ -n "$PLACEHOLDER" ]; then
             err "Contenuti con placeholder o marker di lavoro in corso:"
@@ -1071,7 +1071,11 @@ jobs:
           cat "$REPORT"
 
       - name: "🚨 Apri issue se l'audit rileva problemi"
-        if: steps.audit.outputs.found_issues == 'true'
+        # always() perché lo step audit fa exit 1 quando FOUND=true (per
+        # marcare il workflow come failure visibile). Senza always(), GitHub
+        # skippa questo step e non si crea mai l'issue.
+        # Fix: 10 maggio 2026 dopo 5 fallimenti consecutivi senza issue.
+        if: ${{ always() && steps.audit.outputs.found_issues == 'true' }}
         uses: actions/github-script@v7
         with:
           script: |
