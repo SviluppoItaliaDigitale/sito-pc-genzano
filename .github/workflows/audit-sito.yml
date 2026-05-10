@@ -59,11 +59,16 @@ jobs:
         id: audit
         shell: bash
         run: |
-          # Volutamente NIENTE set -u: lo script ha 40+ sezioni con grep
-          # condizionali e variabili settate solo in alcuni branch. Set -u
-          # fallisce immediatamente sui runner GitHub se UNA variabile non
-          # è definita (vincolo molto stretto). Lasciare set -e -o pipefail
-          # che è il default GitHub Actions per shell bash.
+          # Override del default GitHub Actions (set -e -o pipefail).
+          # Lo script ha 40+ sezioni con grep condizionali. Un grep che
+          # ritorna 1 (no match) sul primo controllo NON deve far fallire
+          # tutto lo script — è informazione legittima (no issue trovate).
+          # Set -e e set -u sono troppo aggressivi per il pattern di
+          # questo script. Pipefail mantenuto per intercettare errori veri
+          # nelle pipeline (es. grep | head | wc dove head fallisce).
+          set +e
+          set +u
+          set -o pipefail
           REPORT="/tmp/audit-report.md"
           : > "$REPORT"
           FOUND="false"
@@ -1064,10 +1069,13 @@ jobs:
 
           # ----------------------------------------------------------------
           # Output
+          # Garantisce default "false" se la variabile non è stata mai
+          # toccata (improbabile con set +u ma difensivo per sicurezza).
+          : "${FOUND:=false}"
           echo "found_issues=$FOUND" >> "$GITHUB_OUTPUT"
           {
             echo "report<<EOF"
-            cat "$REPORT"
+            cat "$REPORT" 2>/dev/null || echo "(report vuoto)"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
