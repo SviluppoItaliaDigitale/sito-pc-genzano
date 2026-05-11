@@ -63,6 +63,10 @@
 
   var synth = window.speechSynthesis;
   var RATE_KEY = 'pcgenzano-tts-rate';
+  var RATE_EVENT = 'pcgenzano:tts-rate-change';
+  // Guard anti-loop: quando aggiorniamo i radio in risposta a un evento
+  // della toolbar, NON ri-emettiamo l'evento (anti-eco).
+  var rateSyncing = false;
 
   // 2. Warm-up: forza il caricamento delle voci. Su Chrome la prima
   //    chiamata a getVoices() spesso restituisce []. L'evento
@@ -266,6 +270,16 @@
       document.querySelectorAll('.tts-wrapper input[name="tts-rate"][value="' + val + '"]').forEach(function (other) {
         other.checked = true;
       });
+      // Notifica la toolbar di accessibilità via CustomEvent (sync
+      // bidirezionale). La guard rateSyncing evita echo quando siamo
+      // noi stessi i destinatari di un evento esterno.
+      if (!rateSyncing) {
+        try {
+          window.dispatchEvent(new CustomEvent(RATE_EVENT, {
+            detail: { rate: String(v), source: 'inline-pill' }
+          }));
+        } catch (e) { /* CustomEvent non supportato su browser molto vecchi */ }
+      }
       // Se sta leggendo, ferma davvero e riavvia con la nuova velocità.
       if (currentController || synth.speaking || synth.pending) {
         var wrapper = this.closest('.tts-wrapper');
@@ -282,6 +296,21 @@
         }
       }
     });
+  });
+
+  // 9b. Listener cross-component: se la toolbar cambia velocità, allinea
+  //     i radio della pill inline senza ri-emettere l'evento.
+  window.addEventListener(RATE_EVENT, function (ev) {
+    var d = ev && ev.detail; if (!d) return;
+    if (d.source === 'inline-pill') return; // siamo noi: ignora
+    var allowed = ['0.75', '0.95', '1.15'];
+    var rateStr = String(d.rate);
+    if (allowed.indexOf(rateStr) === -1) return;
+    rateSyncing = true;
+    document.querySelectorAll('.tts-wrapper input[name="tts-rate"][value="' + rateStr + '"]').forEach(function (input) {
+      input.checked = true;
+    });
+    rateSyncing = false;
   });
 
   // 10. Pulizia su unload (alcuni browser continuano a parlare dopo navigazione).

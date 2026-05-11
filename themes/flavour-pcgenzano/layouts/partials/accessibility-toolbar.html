@@ -78,6 +78,23 @@
       </button>
     </fieldset>
 
+    {{/* ─────────── SEZIONE LETTURA AD ALTA VOCE ─────────── */}}
+    <fieldset class="a11y-section">
+      <legend class="a11y-section-title">
+        <i class="bi bi-volume-up-fill me-2" aria-hidden="true"></i>Lettura ad alta voce
+      </legend>
+
+      <div class="a11y-control">
+        <span class="a11y-control-label" id="a11yLblTtsRate">Velocità di lettura</span>
+        <div class="a11y-segments" role="radiogroup" aria-labelledby="a11yLblTtsRate">
+          <button type="button" class="a11y-seg" data-pref="ttsRate" data-value="0.75" aria-pressed="false">Lenta</button>
+          <button type="button" class="a11y-seg" data-pref="ttsRate" data-value="0.95" aria-pressed="true">Normale</button>
+          <button type="button" class="a11y-seg" data-pref="ttsRate" data-value="1.15" aria-pressed="false">Veloce</button>
+        </div>
+        <p class="a11y-hint small text-muted mt-1 mb-0" style="font-size:0.78rem;">La scelta si applica subito al bottone <strong>"Leggi ad alta voce"</strong> presente sopra ogni articolo.</p>
+      </div>
+    </fieldset>
+
     {{/* ─────────── SEZIONE VISIVO ─────────── */}}
     <fieldset class="a11y-section">
       <legend class="a11y-section-title">
