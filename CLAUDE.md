@@ -138,6 +138,8 @@ Risultato: il **9 maggio 2026** l'utente ha chiesto di rivedere AGID tutti gli a
 @.claude/rules/06-protezione-civile-scientifica.md
 @.claude/rules/07-proattivita-coerenza.md
 @.claude/rules/08-claude-code-setup.md
+@.claude/rules/09-regole-contenuti-qualita.md
+@.claude/rules/10-automazioni-github-actions.md
 
 ---
 
@@ -247,96 +249,23 @@ bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
 | Coach dei giochi (bottone "Consigli per giocare" + hint contestuale + TTS) su giochi statici | `03-accessibility.md` § "Coach dei giochi" + `04b-hugo-template-css.md` § "Coach + TTS sui giochi" |
 | TTS Web Speech API: pagine Hugo (`tts: true`), coach giochi, fiabe `storie-e-racconti/` | `03-accessibility.md` § "TTS Leggi ad alta voce" |
 
-## Regole contenuti e qualità
+## Regole contenuti e qualità (19 punti)
 
-1. **FORMATO DATA**: schema dipendente dal numero di articoli/giorno. **1 articolo/giorno**: `date: AAAA-MM-GG` semplice. **2+ articoli/giorno**: `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti (1° articolo `T00:01:00+02:00`, 2° `T00:02:00+02:00`, ...) per garantire l'ordering "ultimo scritto in cima" — Hugo applica come tie-break su Date uguali l'ordine alfabetico filename, non quello di pubblicazione. Mai `Z` (UTC) come tz: usa sempre `+02:00`. L'orario non è mostrato all'utente, è solo per ordering Hugo. Fix retroattivo automatico: `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (legge git first-commit per assegnare l'ordine giusto). Specifiche in `.claude/rules/02-content-design-pa.md` § "Regola critica formato data".
+L'elenco numerato completo (formato data, AGID, qualità testi, banner intoccabile, anti-pattern `image:`, stampa, dataUltimaRevisione, gerarchia fonti crisi, sandbox foto, allerta meteo, kit calamità, feed RSS, standard ISO, traduzioni) è in `.claude/rules/09-regole-contenuti-qualita.md`. Sintesi dei vincoli più critici da tenere a mente:
 
-2. **CONFORMITÀ AGID**: il sito rispetta rigorosamente le linee guida AGID/Designers Italia per la PA. Ogni template deve usare Bootstrap Italia, garantire accessibilità WCAG 2.2, e seguire la struttura AGID.
+- **Punto 1 — Formato data**: `AAAA-MM-GG` se 1 articolo/giorno; `AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti `00:01, 00:02, ...` se 2+ articoli/giorno. Mai `Z` UTC.
+- **Punto 4 — Qualità ChatGPT 9.5/10**: redazione AGID in tutti i contesti (CLI/mobile/cloud), nessuna delega ad AI esterne.
+- **Punto 9 — Banner intoccabile**: il campo `image:` è la cover tipografica col titolo. Tutte le foto (utente/Wikipedia/NASA/stock) vanno **inline** nel corpo con `{{< foto >}}`, mai nel banner. Marker `# TODO-foto-*` bandito. Anti-pattern: durante una revisione testuale, `image:` non si tocca.
+- **Punto 12 — Gerarchia fonti crisi**: AGID+DPC vincolanti italiani → CNR/ISPRA scientifici → EENA/CWA tecnici UE → ISO 22329 + WCAG 2.2 AA → normativa orizzontale.
 
-3. **QUALITÀ TESTI**: ogni articolo o testo prodotto deve essere:
-   - Scritto in italiano corretto
-   - Riscritto secondo le linee guida AGID per il linguaggio della PA
-   - Frasi brevi e chiare
-   - Voce attiva preferita alla passiva
-   - Niente burocratese o termini tecnici non necessari
-   - Accessibile a tutti i cittadini
-   - Inclusivo nel linguaggio
+Tutti gli altri punti (2-3, 5-8, 10-11, 13-19) restano nel file split.
 
-4. **VERIFICA**: prima di pubblicare qualsiasi contenuto, controllare sempre ortografia, grammatica e conformità AGID. Se il testo fornito dall'utente non rispetta questi criteri, riscriverlo mantenendo il significato.
+## Automazioni periodiche (GitHub Actions) e Key operational notes
 
-   🟢 **LIVELLO ATTESO IN REDAZIONE — qualità ChatGPT 9.5/10**: Claude Code redige e revisiona articoli con la stessa cura del migliore strumento esterno di riferimento (test del 9 maggio 2026 ha validato ChatGPT 9.5/10 su redazione AGID). **La regola vale in tutti i contesti**: CLI desktop, app mobile, sessione cloud, agent GitHub-integrato — nessuno dei tre delega ad AI esterne la redazione, tutti producono lo stesso livello qualitativo. Significa: non basta correggere refusi, va riletto come UX writer PA — accorciare frasi >20 parole, sostituire nominalizzazioni, ridurre passive, asciugare retorica, citare sempre fonte istituzionale, valorizzare la linkografia interna del sito (kit-calamita, schede stampabili, articoli correlati) prima di rimandare a fonti esterne. **Ogni revisione produce un diff visibile** con razionale per ogni modifica, e **rispetta sempre l'ANTI-PATTERN del campo `image:`** (mai toccato durante revisione testuale). Specifiche operative in `.claude/rules/02-content-design-pa.md` § "Livello qualitativo della redazione".
+La tabella completa dei workflow di manutenzione (deploy, check-allerta doppio trigger, audit-sito, check-links, normativa-watcher, scarica-foto-automatica, genera-social-bozze, ecc.) + le note operative chiave (modalità emergenza, allerta meteo, draft, deploy CI, credenziali FTP) sono in `.claude/rules/10-automazioni-github-actions.md`.
 
-5. **AGGIORNAMENTO AGID — automazione + regola di coerenza**: le linee guida AGID sono in continuo aggiornamento. Il workflow `.github/workflows/aggiorna-manuale.yml` (lunedì 06:00 UTC) monitora 10 fonti ufficiali (Linee guida design PA, Designers Italia, Writing Toolkit, Content Toolkit, UI Kit, Bootstrap Italia, Accessibilità AGID, Dichiarazione, DPC) via hash SHA-256 con BeautifulSoup, e apre automaticamente issue con checklist tripartita quando una fonte cambia. **Regola di coerenza obbligatoria**: il manuale operativo (cartella `manuale/`) e le rules `.claude/` (lette da Claude Code in ogni sessione — CLI, mobile, cloud) devono dire **la stessa cosa** sulla stessa regola AGID. Aggiornarne uno senza l'altro = due fonti di verità divergenti + Claude applica regole obsolete in tutte le sessioni successive. Specifiche operative complete in `.claude/rules/02-content-design-pa.md` § "Sincronizzazione automatica con gli aggiornamenti AGID".
-
-6. **MANUALE DI STILE**: il manuale operativo (v3.0, split a maggio 2026) ha l'indice in `MANUALE-SITO.md` nella root e i contenuti completi in `manuale/parte-NN-*.md`. Copre: procedura passo-passo per articoli (Parte 1), regole AGID integrate (Parte 2), specifiche immagini fascia blu (Parte 3), procedura pagine (Parte 4), checklist pre-pubblicazione (Parte 5), aggiornamento automatico settimanale (Parte 7). È il riferimento unico per la redazione dei contenuti, anche da parte di AI esterne.
-
-7. **IMMAGINI**: ogni immagine di copertina deve avere la fascia blu istituzionale (#003366) con logo e testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari — Genzano di Roma". Formato WebP, 1200px, max 200 KB. Specifiche complete in `manuale/parte-03-immagini-per-gli-articoli.md`.
-
-8. **PIANO EDITORIALE**: il file `PIANO-EDITORIALE.md` elenca le fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, Comune) e il calendario redazionale mensile. L'obiettivo è **tendere a un articolo al giorno** (300-365 l'anno) con un minimo sostenibile di **3-4 articoli a settimana** nei periodi di minore attività. Usalo per proporre nuovi articoli coerenti con la strategia.
-
-9. **BANNER COL TITOLO INTOCCABILE — qualunque sia la fonte della foto**: il banner/copertina dell'articolo deve **SEMPRE** mostrare il **titolo dell'articolo** (cover tipografica con gradiente blu + titolo + badge + fascia, generata da `genera-cover.py` o `auto-cover-mancanti.py`). Funzioni: identità visiva, anteprima Open Graph corretta sui social, fallback universale in emergenza.
-
-   **TUTTE** le foto (utente, Wikipedia/NASA/USGS/NOAA, stock Pexels/Pixabay/Unsplash) vanno **SEMPRE inline nel corpo** con lo shortcode `{{< foto >}}` (mai markdown `![]()` diretto), con fascia blu + alt text + caption credit/licenza. Convenzione foto multiple in articoli storici: 1ª dopo 1° H2, 2ª dopo 2° H2, ecc. **≥4 foto → galleria/carosello inline**. Il campo `image:` punta **sempre** alla cover tipografica (mai a foto utente/Wikipedia/altro): pre-push lanciare `python3 scripts/auto-cover-mancanti.py` o lasciare `image: ""` per generazione CI. Lo script `genera-immagini-social.py` legge le `{{< foto >}}` dal body e le usa in carosello Instagram automatico.
-
-   ⚠️ **DIVIETO ASSOLUTO — marker `# TODO-foto-*` BANDITO**: sovrascriveva `image:` (viola questa regola) e veniva renderizzato come H1 finché il workflow CI non lo rimuoveva (incidente 3 maggio 2026). **Procedura corretta** per foto da fonti ufficiali: WebFetch per URL+autore+licenza → `curl -sL <URL> -o /tmp/foto.jpg` → `bash scripts/applica-fascia-foto.sh /tmp/foto.jpg <nome-DIVERSO-dallo-slug>` → shortcode `{{< foto >}}` inline + caption credit. Vedi agent `pc-image-fixer`.
-
-   🔴 **ANTI-PATTERN — `image:` non si tocca durante una revisione**. Su task *"rivedi/riscrivi/correggi/miglioralo"*, **non modificare `image:`** salvo: (a) richiesta esplicita; (b) file inesistente → svuotalo a `""`. Foto pertinenti trovate durante la revisione vanno inline, mai nel banner. **Check pre-commit:** `git diff <file.md> | grep -E '^[+-]image' | head -5` — se trovi diff su `image:` non richiesto, ripristina. Storico: incidente del 9 maggio 2026 (ChatGPT-cloud articolo Giornata Europa) e dettagli in `02-content-design-pa.md`.
-
-   API keys stock (Pexels/Pixabay/Unsplash) configurabili via GitHub Secrets, ma la foto va comunque inline.
-
-10. **STAMPA**: il file `themes/flavour-pcgenzano/static/css/custom.css` contiene regole `@media print` globali che, quando l'utente clicca "Stampa" su una pagina, nascondono header/navbar/footer/banner/cookie/utility bar/page tools e stampano solo il contenuto della pagina (H1 + articolo + allegati) su A4 con margini standard. Non modificare questa sezione senza valutare l'impatto su tutti i layout.
-
-11. **DATA ULTIMA REVISIONE (pagine legali/istituzionali)**: le pagine `privacy`, `note-legali`, `accessibilita`, `social-media-policy` hanno nel frontmatter il campo **`dataUltimaRevisione: "AAAA-MM-GG"`**. Il template `single.html` lo mostra come box evidente in cima al contenuto ("Pagina rivista il …"). Quando modifichi il contenuto sostanziale di una di queste pagine, aggiorna anche la data. Non usare stringhe tipo "Marzo 2026" nel corpo: il riferimento è unico e nel frontmatter. Il partial `page-tools.html` riconosce il campo e omette la `.Lastmod` automatica su queste pagine, per evitare date duplicate in conflitto.
-
-12. **COMUNICAZIONE DI CRISI — gerarchia delle fonti** (in caso di conflitto, prevale il livello superiore): (1) **Italiano vincolante**: AGID + DPC (D.Lgs. 1/2018, Direttiva PCM 30 aprile 2021, "Io non rischio", codici colore) — su contenuti PC, DPC prevale su AGID; (2) **Scientifico italiano**: CNR (IRPI/INGV/IGAG) + ISPRA; (3) **Tecnico-operativo europeo**: EENA + CWA CEN/CENELEC; (4) **Standard internazionali**: ISO 22329:2021 + WCAG 2.2 AA; (5) **Normativa orizzontale**: DL 25/2025, GDPR, L. 4/2004, CAD.
-
-    Post allerta/emergenza: struttura 6 punti (tipo / livello-colore / area+tempo / cosa fare / fonte / prossimo aggiornamento), hashtag localizzati, mai amplificare disinformazione per smentire, alt text + max 2 emoji + non solo-colore. Dettagli in `manuale/parte-13-social-media-policy-pubblica.md` § 13.7-13.9 e nelle rules `02`, `03`, `06`.
-
-13. **CARTELLA `riferimenti-interni/`** (root del repo, NON deployata): contiene documentazione di lavoro per maintainer/AI di supporto che non va pubblicata sul sito (norme copyrighted, draft di consultazione, materiale interno). Hugo non la legge perché non rientra nelle cartelle native (`content/`, `static/`, `themes/`, `data/`, `assets/`, `layouts/`). Convenzione: 🟢 documenti pubblici → `static/manuali/`, 💶 copyrighted o riservati → `riferimenti-interni/<categoria>/`. Indice + stato accessibilità in `riferimenti-interni/README.md`. Specifiche complete nella regola `04c-hugo-static-cartelle.md`.
-
-14. **SANDBOX CLAUDE CODE — sblocco fonti foto**: per le 7 fonti supportate (Wikipedia/Wikimedia, NASA, USGS, NOAA, Pexels, Pixabay, Unsplash) il repo ha `.claude/settings.local.json` (in `.gitignore`) con allowlist `permissions` + `sandbox.network.allowedDomains`. Riavviare Claude Code dopo creazione (sandbox letta solo all'avvio). Serve all'agent `pc-image-fixer` per WebFetch+curl+applica-fascia su foto **inline** (mai banner — punto 9). API keys solo per stock (gratuite): locale `~/.bashrc`, CI GitHub Secrets. Schema completo in `.claude/rules/08-claude-code-setup.md`.
-
-15. **DATI ALLERTA METEO `data/allerta.json`**: due campi temporali distinti. `ultimo_aggiornamento` cambia **solo** quando il livello DPC cambia. `ultimo_controllo` cambia ogni volta che il workflow `check-allerta.yml` verifica il bollettino e committa (ogni ≥6 ore o cambio livello). Limite: max 4 commit/giorno + cambi di livello. Sia la barra allerta della homepage sia la pagina `/emergenza/` lite mostrano "Verificato: ..." sempre fresco. Il JS lato browser sulla homepage aggiorna ulteriormente il timestamp all'ora locale del client. Schema completo in `manuale/parte-09-file-dati-data-e-stati-del-sito.md` § 9.3.
-
-16. **KIT CALAMITÀ — kit A4 stampabili per categorie vulnerabili**: hub `/formazione/kit-calamita/`, voce menu **"Kit pronti per situazioni vulnerabili"** sotto **"Per il Cittadino"** (NON "Per le scuole": target cittadino vulnerabile). Categorie: bambini, anziani, RSA, disabilità, neonati, gravidanza, animali, caregiver, pazienti terapie salvavita, senza fissa dimora, italiano L2, volontari PC. Ogni kit cita standard internazionali (NCTSN PFA, IFRC, WHO, Sphere 2018, ecc.) + normativa italiana + società scientifiche. Materiali liberi e riutilizzabili (CC BY-NC-SA 4.0 dove ARASAAC). **Aggiungere nuovo kit aggiorna 4 punti**: (a) `_index.md` del kit, (b) hub `/formazione/kit-calamita/`, (c) `content/mappa-sito/_index.md`, (d) assistente `themes/flavour-pcgenzano/layouts/assistente/list.html` (sotto-albero `kc_*`). Carte d'identità: template `.carta-id-*` in `static/formazione/kit-calamita-shared/print.css` (riga 11mm). Giochi: soluzione ruotata 180° (`.soluzione-capovolta`), vietato `<details>` + foglio operatore separato. Specifiche in `manuale/parte-20-kit-calamita-categorie-vulnerabili.md`.
-
-17. **FEED RSS PUBBLICI**: Hugo genera 39 feed RSS 2.0 auto-discoverable (uno per sezione). Pagina divulgativa `/feed-rss/` per il cittadino, voce nel footer Hugo + `site-chrome.js`, card mappa-sito, nodo `info_servizi_rss` nell'assistente. Privacy-first (zero registrazione/cookie). Auto-generati da Hugo al build, niente da configurare.
-
-18. **STANDARD ISO — hub `/standard-iso/`**: 30 schede ISO rilevanti per PC organizzate per famiglia (ISO/TC 292 emergency management, ISO 31000 risk, ISO 14090 clima, ISO 7010 segnaletica, ecc.). Voce menu sotto **Risorse**, presente in assistente + mappa-sito. ⚠️ **VINCOLO COPYRIGHT**: norme a pagamento — solo titolo/ambito/contestualizzazione italiana, mai testo della norma, link a iso.org/store.uni.com per dettagli. 10 news divulgative calendarizzate 12 maggio-12 giugno 2026. **Aggiungere nuovo standard aggiorna 4 punti**: (a) `content/standard-iso/iso-XXXX.md`, (b) tabella in `_index.md`, (c) eventuale card mappa-sito, (d) eventuale link assistente.
-
-19. **TRADUZIONI — `<html lang>` dinamico + hreflang + og:locale**: 7 traduzioni (`/english/`, `/francais/`, `/deutsch/`, `/espanol/`, `/portugues/`, `/romana/`, `/esperanto/`) × 4 sotto-pagine = 28 pagine tradotte. Ogni `_index.md` ha `language: "<codice>"` (en/fr/de/es/pt/ro/eo) letto da `baseof.html` per `<html lang>` e da `meta-social.html` per `og:locale`. Partial `hreflang-tags.html` aggiunge `<link rel="alternate" hreflang>` per IT + 7 lingue + x-default sulle sezioni in whitelist (`$sezioniTradotte` hardcoded). Aggiungere nuova pagina tradotta: crea `_index.md` con `language` + aggiungi slug a `$sezioniTradotte`. Storia bug: fino all'8 maggio 2026 era hardcoded `lang="it"` → violazione WCAG 3.1.1 + Google duplicati.
-
-## Automazioni periodiche (GitHub Actions)
-
-Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della settimana), scaglionati in orari diversi per non caricare il runner nello stesso momento. L'utente ha scelto il lunedì per avere una finestra settimanale costante di issue/verifica da affrontare.
-
-| Workflow | Frequenza | Scopo |
-|---|---|---|
-| `deploy.yml` | Ogni push su `main` | Build Hugo + deploy Aruba (FTP) + GitHub Pages |
-| `check-allerta.yml` | **Doppio trigger fail-safe**: (1) cron-job.org ogni 5 min via `workflow_dispatch` API GitHub [PRIMARIO, latenza ~15 sec]; (2) GitHub schedule `17 * * * *` [FAIL-SAFE orario al minuto 17, fuori dai picchi] | Verifica stato allerta meteo Regione Lazio. Latenza end-to-end ~15 sec al cambio livello DPC tramite cron-job.org (free tier, SLA 99.9%). GitHub schedule come fail-safe minimale (1 run/h) se cron-job.org dovesse andare giù: nel peggior caso il sito ricontrolla DPC entro 60 min. Setup PAT: token GitHub fine-grained (Actions: write sul solo `sito-pc-genzano`) configurato su [console.cron-job.org](https://console.cron-job.org/). Anti-spam: lo script interno (soglia stale_check 5h45min) impedisce commit duplicati anche se i due trigger sparano ravvicinati. Commit di `data/allerta.json` vincolato a cambio livello effettivo o ultimo_controllo ≥5h45min (max ~4 commit/giorno + cambi reali). |
-| `controllo-scadenza-pat.yml` | Mensile (1° del mese 09:00 UTC) | Verifica scadenza del PAT GitHub usato da cron-job.org. Se ≤30 giorni, apre/aggiorna issue con label `manutenzione` (`urgente` se ≤7 giorni). Procedura di rinnovo step-by-step nella issue. Richiede secret `CRONJOB_GH_PAT` configurato (stesso valore del token usato su cron-job.org). |
-| `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Rilancia il deploy ogni mattina: gli articoli `draft: false` con `date` futura entrano nel sito al passaggio del giorno (Hugo li escludeva finché la data era oltre `now()`). NB: `draft: true` non viene flippato — gli articoli devono essere `draft: false` (regola: niente articoli in revisione) |
-| `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO (si attiva dopo ogni deploy riuscito) |
-| `smoke-test-post-deploy.yml` | Post-deploy | Verifica live: 20 pagine principali rispondono 200, 7 traduzioni accessibili, mini-app statiche, marker chiave su 7 pagine, 2 header sicurezza. Apre issue urgente se trova regressioni. Logica in `scripts/smoke-test-live.sh` (riusabile in locale) |
-| `aggiorna-manuale.yml` | Lunedì 06:00 UTC | Confronta hash fonti AGID/Designers Italia/DPC (10 URL), apre issue con checklist tripartita se cambiano: (A) manuale operativo, (B) rules `.claude/` + CLAUDE.md + agent, (C) verifica finale. Regola di coerenza obbligatoria: manuale e rules dicono la stessa cosa |
-| `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Verifica aggiornamenti Bootstrap Italia |
-| `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (sezioni)**: contenuti pubblicati (COI, NUE 112, telefono, sede, CAP, placeholder, asset, badge, date, allegati, frasi AGID, draft `_index`, schede stampabili, modalità emergenza, pagine legali, widget) + codice/template (build Hugo, articoli `draft:true`, link a slug inesistenti, sintassi JS, validità YAML workflow, path assoluti template, residui CCV-MB/lombardo/`/index.html`) + governance docs (file presenti, import CLAUDE, badge list coerente, formato date, frontmatter, riferimenti incrociati, pagine obbligatorie, shortcode foto, script export, `dataUltimaRevisione`) + audit aggiuntivo (mixed content `http://`, `image_alt` accessibility WCAG 1.1.1, coerenza dati istituzionali nelle 7 traduzioni, divergenze `hugo.toml` ↔ `data/numeri_utili.yaml`, smoke test rendering H1 pagine critiche, **8 link critici normativa/PDF locali con messaggi dedicati**). Apre 1 issue settimanale con tutti i findings |
-| `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo del sito con **lychee**: verifica TUTTI i link (interni + esterni, tutte le pagine), apre issue automatica su 404/drift. Catch-all per mantenere aggiornati hub Strumenti, widget, Area Download, link esterni nei contenuti |
-| `stale-issues.yml` | Giornaliero 04:00 UTC | **Pulizia issue automatiche**: chiude le issue create dai workflow (`automazione`, `normativa-watcher`, `smoke-test`, `scarica-foto`) dopo 14 gg di inattività (marcatura "stale") + 7 gg ulteriori di silenzio (chiusura). Riapre se qualcuno commenta. **NON tocca** issue umane (label `tracking`, `audit-followup`, `enhancement`, `bug`, `pinned`, `urgente-permanente`). Logica `actions/stale@v9` |
-| `normativa-watcher.yml` | Lunedì 06:00 UTC | **Sweep RSS settimanale** delle novità normative PC. Aggrega 37 query Google News (12 tematiche + 25 con filtro `site:dominio.it` per i 25+ siti istituzionali in whitelist: Normattiva, GU, Regione Lazio, DPC, VVF, ISPRA, CNR-IRPI, CMCC, ARPA, ISS, Camera, Governo, Corte Costituzionale, ecc.) + feed RSS TGR Lazio. Filtra per parole chiave PC, deduplica per URL, apre 1 issue/settimana con digest se trova hit (silenzioso se zero). Logica in `scripts/normativa-watcher.py` (riusabile in locale: `python3 scripts/normativa-watcher.py --days 7`). Output JSON archiviato come artifact GitHub Actions per 14 giorni |
-| `scarica-foto-automatica.yml` | Ogni push su `main` | **Step 1 DEPRECATO 2026-05-03** — il vecchio meccanismo "marker `# TODO-foto-*` nel frontmatter → workflow scarica + popola `image:`" è bandito da CLAUDE.md punto 9: il marker veniva renderizzato da Hugo come H1 in produzione + sovrascriveva il banner col titolo. Per foto inline da fonti ufficiali si usa l'agent `pc-image-fixer` (procedura WebFetch + curl + applica-fascia + shortcode `{{< foto >}}`). **Step 2 ATTIVO** — genera cover tipografiche istituzionali banner (gradiente blu + titolo + badge + fascia) per articoli con `image: ""` o con file fisico mancante (via `scripts/auto-cover-mancanti.py`, che chiama `genera-cover.py` + popola frontmatter, mai sovrascrive foto utente). **Step 3** — Commit `[skip-foto-wiki]` se ci sono modifiche, ri-triggera `deploy.yml`. |
-| `genera-social-bozze.yml` | Ogni push articolo | Genera bozze social (X/Facebook/Instagram/Telegram) + immagini Instagram (post + carosello + story) via Gemini API + Pillow. Skip-loop con `[skip-social]`. Dettagli in `04b-hugo-template-css.md` § "Bozze social automatiche" |
-
-> **Storia merge**: il 26 aprile 2026 sono stati fusi 2 workflow dentro `audit-sito.yml` per consolidare le issue settimanali:
-> - `coerenza-docs.yml` (lun 07:00) → sezioni 23-32 (governance docs)
-> - `check-normativa-links.yml` (lun 08:00) → sezione 38 (link critici con messaggi dedicati)
->
-> Risultato: -2 workflow, 1 issue settimanale invece di 3, stessa copertura.
-
-## Key operational notes
-
-- **To activate emergency mode**: set `"attiva": true` in `data/emergenza.json` and fill `tipo`, `titolo`, `descrizione`. Reset to `false` when done.
-- **To set weather alert**: edit `data/allerta.json` — change `livello` to `verde/giallo/arancione/rosso`.
-- **Draft posts**: set `draft: true` in front matter. They appear locally with `hugo server -D` but are not published. **Regola progetto**: niente articoli in `draft: true` — solo immediato (`date` passata) o calendarizzato (`date` futura).
-- **CI deploy**: pushing to `main` triggers `.github/workflows/deploy.yml` which builds twice (once per baseURL) and deploys via FTP to Aruba and via GitHub Pages API. Monitor at the Actions tab.
-- **FTP credentials** are stored as GitHub secrets (`FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`).
+Trigger rapidi da ricordare:
+- `deploy.yml` parte a ogni push su `main`.
+- Modalità emergenza: `data/emergenza.json` → `"attiva": true`.
+- Allerta meteo manuale: `data/allerta.json` → `livello: verde|giallo|arancione|rosso`.
+- Regola progetto: niente articoli `draft: true`. Solo pubblicato (data passata) o calendarizzato (data futura).
