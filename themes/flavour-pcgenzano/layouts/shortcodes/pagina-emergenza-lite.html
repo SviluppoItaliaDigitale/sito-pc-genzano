@@ -47,7 +47,7 @@
 <div class="lite-pagina">
 
 <p class="text-muted small" style="margin: 0.5rem 0;">
-  ℹ️ <strong>Pagina ultra-leggera</strong> per emergenze e rete debole. Per il sito completo: <a href="/">homepage</a>. Per accessibilità cognitiva: <a href="/facile-da-leggere/">facile da leggere</a>.
+  ℹ️ <strong>Pagina ultra-leggera</strong> per emergenze e rete debole. Per il sito completo: <a href="{{ "/" | relURL }}">homepage</a>. Per accessibilità cognitiva: <a href="{{ "/facile-da-leggere/" | relURL }}">facile da leggere</a>.
 </p>
 
 {{- if and $emergenza $emergenza.attiva }}
@@ -96,16 +96,16 @@
 </div>
 
 <div class="lite-link-essenziali">
-  <a href="/cosa-fare-adesso/">Cosa fare adesso (per tipo di emergenza)</a>
-  <a href="/numeri-utili/">Tutti i numeri utili</a>
-  <a href="/allerte-meteo/">Sistema di allertamento meteo</a>
-  <a href="/piano-familiare/">Crea/consulta il tuo Piano Familiare</a>
-  <a href="/cartografia/">Aree di attesa di Genzano</a>
-  <a href="/facile-da-leggere/">Facile da leggere (testo semplificato)</a>
-  <a href="/formazione/kit-calamita-bambini/"><strong>Kit calamità bambini</strong> (schede stampabili)</a>
-  <a href="/formazione/kit-calamita-anziani/"><strong>Kit calamità anziani</strong> (schede stampabili)</a>
-  <a href="/formazione/kit-calamita-strutture-sanitarie/"><strong>Kit calamità RSA</strong> (schede operative)</a>
-  <a href="/">Sito completo</a>
+  <a href="{{ "/cosa-fare-adesso/" | relURL }}">Cosa fare adesso (per tipo di emergenza)</a>
+  <a href="{{ "/numeri-utili/" | relURL }}">Tutti i numeri utili</a>
+  <a href="{{ "/allerte-meteo/" | relURL }}">Sistema di allertamento meteo</a>
+  <a href="{{ "/piano-familiare/" | relURL }}">Crea/consulta il tuo Piano Familiare</a>
+  <a href="{{ "/cartografia/" | relURL }}">Aree di attesa di Genzano</a>
+  <a href="{{ "/facile-da-leggere/" | relURL }}">Facile da leggere (testo semplificato)</a>
+  <a href="{{ "/formazione/kit-calamita-bambini/" | relURL }}"><strong>Kit calamità bambini</strong> (schede stampabili)</a>
+  <a href="{{ "/formazione/kit-calamita-anziani/" | relURL }}"><strong>Kit calamità anziani</strong> (schede stampabili)</a>
+  <a href="{{ "/formazione/kit-calamita-strutture-sanitarie/" | relURL }}"><strong>Kit calamità RSA</strong> (schede operative)</a>
+  <a href="{{ "/" | relURL }}">Sito completo</a>
 </div>
 
 <p class="lite-footer">
