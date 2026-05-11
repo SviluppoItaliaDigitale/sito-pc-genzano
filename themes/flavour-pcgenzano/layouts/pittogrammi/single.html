@@ -41,8 +41,8 @@
         </div>
 
         <div class="catalogo-counter mt-2 small text-muted" aria-live="polite" aria-atomic="true">
-          <span id="counter-iso">0</span> simboli ISO 7010 ·
-          <span id="counter-ara">0</span> simboli ARASAAC mostrati
+          <span id="counter-iso">{{ sub (len (readDir $isoDir)) 1 }}</span> simboli ISO 7010 ·
+          <span id="counter-ara">{{ sub (len (readDir $araDir)) 1 }}</span> simboli ARASAAC mostrati
         </div>
       </div>
 
