@@ -352,6 +352,65 @@ html.a11y-readable-font select {
   font-family: Verdana, Tahoma, "Trebuchet MS", "DejaVu Sans", sans-serif !important;
 }
 
+/* ── Carattere OpenDyslexic (self-hosted, SIL OFL 1.1) ──
+   Font scaricato da github.com/antijingoist/opendyslexic (release v0.91.12,
+   ottobre 2019). Licenza SIL Open Font License 1.1 — testo della licenza in
+   `themes/flavour-pcgenzano/static/fonts/opendyslexic/OFL.txt`, attribuzione
+   pubblica in /accessibilita/.
+   I 4 .woff2 (~115 KB ciascuno, ~460 KB totali) sono caricati `font-display:
+   swap` per non bloccare il rendering: l'utente vede prima Verdana e poi
+   OpenDyslexic si sostituisce quando arriva. */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/opendyslexic/OpenDyslexic-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/opendyslexic/OpenDyslexic-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/opendyslexic/OpenDyslexic-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/opendyslexic/OpenDyslexic-Bold-Italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* La classe `a11y-dyslexic-font` è applicata su <html> dal JS della toolbar
+   quando l'utente sceglie il carattere OpenDyslexic. È pensata come
+   *mutuamente esclusiva* con `a11y-readable-font`: il JS rimuove una
+   quando attiva l'altra (a partire da Sera 2, quando arriva l'UI segmented). */
+html.a11y-dyslexic-font,
+html.a11y-dyslexic-font body,
+html.a11y-dyslexic-font p,
+html.a11y-dyslexic-font li,
+html.a11y-dyslexic-font h1,
+html.a11y-dyslexic-font h2,
+html.a11y-dyslexic-font h3,
+html.a11y-dyslexic-font h4,
+html.a11y-dyslexic-font h5,
+html.a11y-dyslexic-font h6,
+html.a11y-dyslexic-font a,
+html.a11y-dyslexic-font button,
+html.a11y-dyslexic-font input,
+html.a11y-dyslexic-font textarea,
+html.a11y-dyslexic-font select {
+  font-family: "OpenDyslexic", Verdana, Tahoma, sans-serif !important;
+}
+
 /* ── Spaziatura ampia (WCAG 1.4.12 Text Spacing) ── */
 html.a11y-spacing main,
 html.a11y-spacing .article-body { line-height: 2 !important; letter-spacing: 0.12em !important; word-spacing: 0.16em !important; }

@@ -142,6 +142,17 @@ Le preferenze restano salvate sul dispositivo. Puoi cancellarle con il pulsante 
 
 Il pannello è utilizzabile anche da tastiera: si apre con `Invio`, si naviga con `Tab` e si chiude con `Esc`.
 
+## Font utilizzati
+
+Il sito usa di base un carattere sans-serif moderno, leggibile su tutti i dispositivi. Dal pannello **Strumenti di accessibilità** puoi attivare due alternative:
+
+- **Carattere ad alta leggibilità**: passa il testo a Verdana o Tahoma, due caratteri sans-serif considerati più leggibili da molte persone, in particolare anziani e ipovedenti. Sono già installati sul tuo dispositivo, non viene scaricato nulla.
+- **Carattere OpenDyslexic** (in fase di attivazione): un carattere disegnato per persone con dislessia. Le lettere hanno una base più pesante, pensata per ridurre i ribaltamenti tipici (b/d, p/q). Le evidenze scientifiche sul beneficio sono **discusse**: alcuni studi non hanno trovato miglioramenti misurabili rispetto a Verdana o Arial, ma molte persone con dislessia ne apprezzano l'uso. Lo offriamo come scelta opzionale, mai come impostazione predefinita.
+
+OpenDyslexic è rilasciato con **SIL Open Font License 1.1 (OFL)**, una licenza libera che ne consente l'uso anche su siti istituzionali. Il font è copiato sul nostro server (`/fonts/opendyslexic/`), il browser non lo richiede a domini esterni: nessun dato dell'utente lascia il sito.
+
+**Crediti:** OpenDyslexic — Abbie Gonzalez, [opendyslexic.org](https://opendyslexic.org), SIL OFL 1.1.
+
 ## Lettura ad alta voce
 
 In molte pagine trovi il pulsante **Leggi ad alta voce**. Il browser legge il contenuto con la voce italiana disponibile sul tuo dispositivo.
