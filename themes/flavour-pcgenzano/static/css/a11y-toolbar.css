@@ -186,6 +186,11 @@
   border-radius: 8px;
   padding: 4px;
 }
+/* Variante stack: una colonna sola, etichette lunghe (es. "Per dislessia
+   (OpenDyslexic)"). Usata dal segmented Tipo carattere. */
+.a11y-segments-stack {
+  grid-template-columns: 1fr;
+}
 .a11y-seg {
   background: transparent;
   color: #1a1a1a;
@@ -416,6 +421,59 @@ html.a11y-spacing main,
 html.a11y-spacing .article-body { line-height: 2 !important; letter-spacing: 0.12em !important; word-spacing: 0.16em !important; }
 html.a11y-spacing main p,
 html.a11y-spacing .article-body p { margin-bottom: 2em !important; }
+
+/* ── Modalità lettura (Sera 2, macro-toggle) ──
+   Aggrega: sfondo crema #fdf6e3 + testo #1a1a1a (contrast ratio 14:1 -
+   abbondantemente sopra WCAG 1.4.6 AAA 7:1), max-width 65ch sul corpo
+   articolo (riga di lettura ottimale ~60-75 caratteri, AGID + Bringhurst),
+   text-align left forzato (override eventuale justify), spaziatura
+   aumentata. Il font è gestito separatamente da fontFamily:
+   readingMode alza 'default' a 'readable' via JS, lascia 'dyslexic'.
+
+   Scope: NON tocchiamo `body` globale per non ribaltare l'hero-section
+   blu istituzionale dell'homepage e altri layout speciali. Lo sfondo
+   crema si applica solo a `.article-body` (corpo articolo) e
+   `.list-intro-content` (intro pagine archivio). I kit-calamita
+   stampabili (static/formazione/kit-calamita-*/) NON sono toccati
+   perché non caricano `a11y-toolbar.css`. */
+html.a11y-reading-mode .article-body,
+html.a11y-reading-mode .list-intro-content {
+  background: #fdf6e3 !important;
+  color: #1a1a1a !important;
+  max-width: 65ch !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 1.5rem 1.75rem !important;
+  border-radius: 8px !important;
+  text-align: left !important;
+  line-height: 1.85 !important;
+  letter-spacing: 0.02em !important;
+}
+/* Anche i bullet, le voci di lista e i paragrafi figli forzati a left
+   (per battere eventuali justify forzato dal toolbar `a11y-align-justify`). */
+html.a11y-reading-mode .article-body p,
+html.a11y-reading-mode .article-body li,
+html.a11y-reading-mode .list-intro-content p,
+html.a11y-reading-mode .list-intro-content li {
+  text-align: left !important;
+}
+/* I link nel corpo restano blu istituzionali ma con sfondo crema il
+   contrast resta ottimo (#003366 su #fdf6e3 ≈ 11.6:1, WCAG AAA). */
+
+/* Override stampa: la modalità lettura NON deve sporcare il PDF/stampa.
+   Sfondo bianco, no max-width (la pagina A4 ha già i suoi margini),
+   line-height standard. */
+@media print {
+  html.a11y-reading-mode .article-body,
+  html.a11y-reading-mode .list-intro-content {
+    background: #fff !important;
+    color: #000 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+}
 
 /* ── Contrasto alto ── */
 html.a11y-contrast-high body,

@@ -18,8 +18,13 @@
   var defaults = {
     textSize: '0',
     textAlign: 'default',
-    readableFont: false,
+    // fontFamily ha tre valori: 'default' | 'readable' | 'dyslexic'.
+    // Sostituisce il vecchio bool `readableFont` (vedi migrazione in load()).
+    fontFamily: 'default',
     spacing: false,
+    // readingMode (Sera 2): macro-toggle che attiva spaziatura + sfondo crema
+    // + max-width + align-left + (se fontFamily=='default') forza 'readable'.
+    readingMode: false,
     contrast: 'default',
     grayscale: false,
     hideImages: false,
@@ -34,6 +39,7 @@
     // compatibile col partial inline `leggi-ad-alta-voce.html`.
     ttsRate: '0.95'
   };
+  var FONT_FAMILY_ALLOWED = ['default', 'readable', 'dyslexic'];
 
   var state = Object.assign({}, defaults);
   // Guard anti-loop: quando aggiorniamo la UI in risposta a un evento
@@ -42,6 +48,7 @@
 
   // ----------- Storage helpers -----------
   function load() {
+    var migratedFromLegacy = false;
     try {
       var raw = window.localStorage.getItem(STORAGE_KEY);
       if (raw) {
@@ -54,9 +61,39 @@
               state[k] = saved[k];
             }
           });
+
+          // MIGRAZIONE LEGACY (Sera 2): chi aveva il vecchio bool
+          // `readableFont:true` deve ritrovarsi con il nuovo
+          // `fontFamily:"readable"`. Se entrambi sono presenti vince il
+          // nuovo. Il vecchio campo viene poi rimosso dal blob al
+          // prossimo save() (vedi save() che salva solo le chiavi di
+          // defaults, e readableFont non c'è più).
+          if (Object.prototype.hasOwnProperty.call(saved, 'readableFont')) {
+            if (saved.readableFont === true && (!saved.fontFamily || saved.fontFamily === 'default')) {
+              state.fontFamily = 'readable';
+              migratedFromLegacy = true;
+            }
+          }
+
+          // Sanitize: fontFamily deve essere uno dei tre valori validi.
+          if (FONT_FAMILY_ALLOWED.indexOf(state.fontFamily) === -1) {
+            state.fontFamily = defaults.fontFamily;
+          }
         }
       }
     } catch (e) { /* localStorage non disponibile o JSON corrotto: usa default */ }
+    // Se abbiamo migrato, salva subito così il vecchio blob viene riscritto
+    // senza il campo `readableFont` legacy.
+    if (migratedFromLegacy) {
+      try {
+        var blob = {};
+        Object.keys(defaults).forEach(function (k) {
+          if (k === 'ttsRate') return;
+          blob[k] = state[k];
+        });
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(blob));
+      } catch (e) { /* */ }
+    }
     // ttsRate: leggi dalla chiave dedicata condivisa con la pill inline.
     try {
       var r = window.localStorage.getItem(TTS_RATE_KEY);
@@ -111,11 +148,21 @@
     if (state.textAlign === 'left') html.classList.add('a11y-align-left');
     else if (state.textAlign === 'justify') html.classList.add('a11y-align-justify');
 
-    // Testo: carattere
-    if (state.readableFont) html.classList.add('a11y-readable-font');
+    // Testo: famiglia carattere (mutuamente esclusive: solo UNA classe
+    // viene aggiunta su <html>, mai entrambe. Il CSS ha selettori
+    // separati `html.a11y-readable-font` e `html.a11y-dyslexic-font`).
+    if (state.fontFamily === 'readable') html.classList.add('a11y-readable-font');
+    else if (state.fontFamily === 'dyslexic') html.classList.add('a11y-dyslexic-font');
 
     // Testo: spaziatura
     if (state.spacing) html.classList.add('a11y-spacing');
+
+    // Testo: modalità lettura (macro-toggle Sera 2). Applica classe
+    // `a11y-reading-mode` che attiva: sfondo crema, max-width 65ch,
+    // align-left, spaziatura. Il font è gestito a parte da fontFamily —
+    // vedi side-effect in setPref('readingMode', true) che alza
+    // fontFamily a 'readable' se era 'default'.
+    if (state.readingMode) html.classList.add('a11y-reading-mode');
 
     // Visivo: contrasto
     if (state.contrast === 'high') html.classList.add('a11y-contrast-high');
@@ -271,6 +318,15 @@
     // ----------- Handle controls -----------
     function setPref(name, value) {
       state[name] = value;
+      // Side-effect coerente: attivando Modalità lettura, se l'utente
+      // ha "Predefinito" come font, lo alziamo a "Alta leggibilità"
+      // perché la modalità lettura nasce per ridurre la fatica visiva
+      // e il font sans-serif comune è meno adatto. Se ha già scelto
+      // "Per dislessia" (OpenDyslexic), lo lasciamo: rispetta la scelta.
+      // La regola è stata richiesta esplicitamente in Sera 2.
+      if (name === 'readingMode' && value === true && state.fontFamily === 'default') {
+        state.fontFamily = 'readable';
+      }
       if (name === 'ttsRate') saveTtsRate();
       else save();
       applyState();
