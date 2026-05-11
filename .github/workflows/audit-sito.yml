@@ -626,7 +626,9 @@ jobs:
                    .claude/rules/04c-hugo-static-cartelle.md \
                    .claude/rules/05-github-aruba-deploy.md .claude/rules/06-protezione-civile-scientifica.md \
                    .claude/rules/07-proattivita-coerenza.md \
-                   .claude/rules/08-claude-code-setup.md; do
+                   .claude/rules/08-claude-code-setup.md \
+                   .claude/rules/09-regole-contenuti-qualita.md \
+                   .claude/rules/10-automazioni-github-actions.md; do
             [ -f "$f" ] || GOV_MISSING="${GOV_MISSING}- \`$f\`\n"
           done
           # Verifica anche che le 18 parti del manuale esistano (parte-00 a parte-17)
