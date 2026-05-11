@@ -65,15 +65,25 @@
         <p class="a11y-hint small text-muted mt-1 mb-0" style="font-size:0.78rem;">Per la dislessia è preferibile l'allineamento <strong>a sinistra</strong>: il giustificato crea «fiumi di bianco» difficili da leggere (WCAG 1.4.8).</p>
       </div>
 
-      <button type="button" class="a11y-toggle" data-pref="readableFont" aria-pressed="false">
-        <i class="bi bi-type me-2" aria-hidden="true"></i>
-        <span class="a11y-toggle-text">Carattere ad alta leggibilità</span>
-        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
-      </button>
+      <div class="a11y-control">
+        <span class="a11y-control-label" id="a11yLblFontFamily">Tipo carattere</span>
+        <div class="a11y-segments a11y-segments-stack" role="radiogroup" aria-labelledby="a11yLblFontFamily">
+          <button type="button" class="a11y-seg" data-pref="fontFamily" data-value="default" aria-pressed="true">Predefinito</button>
+          <button type="button" class="a11y-seg" data-pref="fontFamily" data-value="readable" aria-pressed="false">Alta leggibilità</button>
+          <button type="button" class="a11y-seg" data-pref="fontFamily" data-value="dyslexic" aria-pressed="false">Per dislessia (OpenDyslexic)</button>
+        </div>
+        <p class="a11y-hint small text-muted mt-1 mb-0" style="font-size:0.78rem;">"Alta leggibilità" usa Verdana/Tahoma (già installati). "Per dislessia" carica il font OpenDyslexic: alcune persone con dislessia lo trovano d'aiuto, le evidenze scientifiche sono discusse — provalo e decidi tu.</p>
+      </div>
 
       <button type="button" class="a11y-toggle" data-pref="spacing" aria-pressed="false">
         <i class="bi bi-distribute-vertical me-2" aria-hidden="true"></i>
         <span class="a11y-toggle-text">Spaziatura ampia (righe e lettere)</span>
+        <span class="a11y-toggle-state" aria-hidden="true">Off</span>
+      </button>
+
+      <button type="button" class="a11y-toggle" data-pref="readingMode" aria-pressed="false">
+        <i class="bi bi-book me-2" aria-hidden="true"></i>
+        <span class="a11y-toggle-text">Modalità lettura (sfondo crema + spaziatura)</span>
         <span class="a11y-toggle-state" aria-hidden="true">Off</span>
       </button>
     </fieldset>
