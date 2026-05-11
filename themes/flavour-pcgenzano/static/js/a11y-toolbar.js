@@ -8,6 +8,11 @@
   'use strict';
 
   var STORAGE_KEY = 'pcgenzano-a11y-prefs';
+  // Chiave già usata dal partial `leggi-ad-alta-voce.html` (pill inline) —
+  // qui leggiamo/scriviamo lo stesso valore per sync bidirezionale.
+  var TTS_RATE_KEY = 'pcgenzano-tts-rate';
+  var TTS_RATE_EVENT = 'pcgenzano:tts-rate-change';
+  var TTS_RATES_ALLOWED = ['0.75', '0.95', '1.15'];
 
   // Default state
   var defaults = {
@@ -23,30 +28,66 @@
     bigCursor: false,
     hideAssistantFab: false,
     hideSosFab: false,
-    hideTranslateButton: false
+    hideTranslateButton: false,
+    // ttsRate: stringa fra '0.75' | '0.95' | '1.15'. Persistita nella
+    // chiave separata TTS_RATE_KEY (non in STORAGE_KEY) per restare
+    // compatibile col partial inline `leggi-ad-alta-voce.html`.
+    ttsRate: '0.95'
   };
 
   var state = Object.assign({}, defaults);
+  // Guard anti-loop: quando aggiorniamo la UI in risposta a un evento
+  // esterno (pill inline → toolbar), non vogliamo rilanciare l'evento.
+  var ttsRateSyncing = false;
 
   // ----------- Storage helpers -----------
   function load() {
     try {
       var raw = window.localStorage.getItem(STORAGE_KEY);
-      if (!raw) return;
-      var saved = JSON.parse(raw);
-      if (saved && typeof saved === 'object') {
-        Object.keys(defaults).forEach(function (k) {
-          if (Object.prototype.hasOwnProperty.call(saved, k)) {
-            state[k] = saved[k];
-          }
-        });
+      if (raw) {
+        var saved = JSON.parse(raw);
+        if (saved && typeof saved === 'object') {
+          Object.keys(defaults).forEach(function (k) {
+            // ttsRate lo leggiamo solo dalla sua chiave dedicata, mai dal blob.
+            if (k === 'ttsRate') return;
+            if (Object.prototype.hasOwnProperty.call(saved, k)) {
+              state[k] = saved[k];
+            }
+          });
+        }
       }
     } catch (e) { /* localStorage non disponibile o JSON corrotto: usa default */ }
+    // ttsRate: leggi dalla chiave dedicata condivisa con la pill inline.
+    try {
+      var r = window.localStorage.getItem(TTS_RATE_KEY);
+      if (r && TTS_RATES_ALLOWED.indexOf(r) !== -1) state.ttsRate = r;
+    } catch (e) { /* */ }
   }
 
   function save() {
-    try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
-    catch (e) { /* fallisce silenziosamente in private mode */ }
+    try {
+      // Salva tutte le pref tranne ttsRate, che vive nella sua chiave dedicata.
+      var blob = {};
+      Object.keys(defaults).forEach(function (k) {
+        if (k === 'ttsRate') return;
+        blob[k] = state[k];
+      });
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(blob));
+    } catch (e) { /* fallisce silenziosamente in private mode */ }
+  }
+
+  // Scrive ttsRate sulla chiave dedicata e notifica gli altri componenti
+  // (pill inline) via CustomEvent. La guard ttsRateSyncing evita il
+  // re-broadcast quando siamo NOI stessi i destinatari di un evento.
+  function saveTtsRate() {
+    try { window.localStorage.setItem(TTS_RATE_KEY, String(state.ttsRate)); }
+    catch (e) { /* */ }
+    if (ttsRateSyncing) return;
+    try {
+      window.dispatchEvent(new CustomEvent(TTS_RATE_EVENT, {
+        detail: { rate: state.ttsRate, source: 'toolbar' }
+      }));
+    } catch (e) { /* CustomEvent non supportato su browser molto vecchi */ }
   }
 
   // ----------- Apply state to <html> -----------
@@ -230,7 +271,8 @@
     // ----------- Handle controls -----------
     function setPref(name, value) {
       state[name] = value;
-      save();
+      if (name === 'ttsRate') saveTtsRate();
+      else save();
       applyState();
       syncUI();
     }
@@ -259,9 +301,30 @@
     btnReset.addEventListener('click', function () {
       state = Object.assign({}, defaults);
       try { window.localStorage.removeItem(STORAGE_KEY); } catch (e) { /* */ }
+      // Anche ttsRate torna al default 0.95 e notifica la pill inline.
+      try { window.localStorage.removeItem(TTS_RATE_KEY); } catch (e) { /* */ }
+      try {
+        window.dispatchEvent(new CustomEvent(TTS_RATE_EVENT, {
+          detail: { rate: state.ttsRate, source: 'toolbar-reset' }
+        }));
+      } catch (e) { /* */ }
       applyState();
       syncUI();
       announce('Impostazioni reimpostate.');
+    });
+
+    // Listener cross-component: se la pill inline cambia velocità, la
+    // toolbar si aggiorna senza ri-emettere l'evento (guard ttsRateSyncing).
+    window.addEventListener(TTS_RATE_EVENT, function (ev) {
+      var d = ev && ev.detail; if (!d) return;
+      if (d.source === 'toolbar' || d.source === 'toolbar-reset') return;
+      if (TTS_RATES_ALLOWED.indexOf(String(d.rate)) === -1) return;
+      ttsRateSyncing = true;
+      state.ttsRate = String(d.rate);
+      // Persistito anche se sappiamo che la pill l'ha già scritto: idempotente.
+      try { window.localStorage.setItem(TTS_RATE_KEY, state.ttsRate); } catch (e) { /* */ }
+      syncUI();
+      ttsRateSyncing = false;
     });
   }
 
