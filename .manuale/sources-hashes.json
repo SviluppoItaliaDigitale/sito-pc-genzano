@@ -2,59 +2,59 @@
   "_meta": {
     "descrizione": "Hash SHA-256 del solo testo visibile (main/body) delle fonti AGID / Designers Italia monitorate settimanalmente dal workflow .github/workflows/aggiorna-manuale.yml. Lo script scripts/hash-fonte-agid.py rimuove script, style, header, footer, cookie banner e pattern volatili (timestamp, fingerprint asset) prima dell hashing, così le modifiche puramente cosmetiche non scattano falsi positivi.",
     "algoritmo": "v2-text-only",
-    "ultimo_aggiornamento": "2026-05-04T08:17:12Z",
+    "ultimo_aggiornamento": "2026-05-11T08:58:15Z",
     "note": "Aggiornato automaticamente dal workflow. Non modificare manualmente."
   },
   "fonti": {
     "accessibilita_agid": {
       "url": "https://www.agid.gov.it/it/design-servizi/accessibilita",
       "hash": "ea70737f014b3044f636d5317330cc445cb959c32a380ea8870b11f4b3fffe9f",
-      "verificato": "2026-05-04T08:17:14Z"
+      "verificato": "2026-05-11T08:58:18Z"
     },
     "bootstrap_italia_docs": {
       "url": "https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/",
       "hash": "845087f2645509a0184a834a06e01fd9e8f0c774c4c87b29306634b848d01b93",
-      "verificato": "2026-05-04T08:17:15Z"
+      "verificato": "2026-05-11T08:58:18Z"
     },
     "ui_kit": {
       "url": "https://designers.italia.it/kit/ui-kit/",
       "hash": "errore-download",
-      "verificato": "2026-05-04T08:17:15Z"
+      "verificato": "2026-05-11T08:58:19Z"
     },
     "linee_guida_design_pa": {
       "url": "https://www.agid.gov.it/it/design-servizi/linee-guida-design-servizi-web-pa",
       "hash": "errore-download",
-      "verificato": "2026-05-04T08:17:16Z"
+      "verificato": "2026-05-11T08:58:22Z"
     },
     "dichiarazione_accessibilita": {
       "url": "https://form.agid.gov.it/",
       "hash": "errore-download",
-      "verificato": "2026-05-04T08:17:17Z"
+      "verificato": "2026-05-11T08:58:23Z"
     },
     "writing_toolkit": {
       "url": "https://designers.italia.it/risorse-per-progettare/content-design/writing-toolkit/",
       "hash": "errore-download",
-      "verificato": "2026-05-04T08:17:18Z"
+      "verificato": "2026-05-11T08:58:23Z"
     },
     "content_toolkit": {
       "url": "https://designers.italia.it/risorse-per-progettare/content-design/",
       "hash": "errore-download",
-      "verificato": "2026-05-04T08:17:18Z"
+      "verificato": "2026-05-11T08:58:24Z"
     },
     "designers_italia_home": {
       "url": "https://designers.italia.it/",
       "hash": "e45f36365c6462ae02e153c25ae5a4747a2427452861ccdcc2ee07455978cd17",
-      "verificato": "2026-05-04T08:17:18Z"
+      "verificato": "2026-05-11T08:58:24Z"
     },
     "dipartimento_pc": {
       "url": "https://www.protezionecivile.gov.it/",
       "hash": "69bd720fabc5c030adcd6118ca01ee5a7f1427a194481ad100f17e9d232e6d7b",
-      "verificato": "2026-05-04T08:17:19Z"
+      "verificato": "2026-05-11T08:58:25Z"
     },
     "designers_italia_guide": {
       "url": "https://designers.italia.it/risorse-per-progettare/",
       "hash": "ddd2af92ac3f9e87aa07cfbb381517eb38c18e24d13b5d8f93d9e3672d2de8ab",
-      "verificato": "2026-05-04T08:17:20Z"
+      "verificato": "2026-05-11T08:58:26Z"
     }
   }
 }
