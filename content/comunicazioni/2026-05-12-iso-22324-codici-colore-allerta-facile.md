@@ -12,7 +12,7 @@ area: "Lazio"
 allegati: []
 versione_facile_di: "2026-05-12-iso-22324-codici-colore-allerta"
 draft: false
-_build:
+build:
   list: never
   render: always
   publishResources: true
