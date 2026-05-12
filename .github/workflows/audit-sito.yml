@@ -38,6 +38,7 @@ on:
 permissions:
   contents: read
   issues: write
+  actions: read   # per `gh run list --workflow=deploy.yml` nella sezione 43 (Stale FTP files detection)
 
 jobs:
   audit:
@@ -58,6 +59,8 @@ jobs:
       - name: "🧪 Audit contenuti"
         id: audit
         shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # auth gh CLI per sezione 43
         run: |
           # Override del default GitHub Actions (set -e -o pipefail).
           # Lo script ha 40+ sezioni con grep condizionali. Un grep che
@@ -1075,6 +1078,67 @@ jobs:
           # tutti i conteggi inventario sono stati rimossi dal sito e sostituiti
           # con descrizioni qualitative. Non c'è più drift da inseguire perché
           # non ci sono più numeri da allineare.
+
+          # ----------------------------------------------------------------
+          section "43. Stale FTP files detection — Last-Modified pagine Hugo"
+          # Il deploy FTP usa `dangerous-clean-slate: false`: i file su Aruba che
+          # NON cambiano fra due build non vengono ricaricati. In caso di deploy
+          # falliti consecutivi (es. bug `_build`/`build` frontmatter del 12 maggio
+          # 2026, 4 deploy falliti consecutivi che hanno bloccato l'upload per
+          # ~7 ore), alcune pagine restavano stantie con vecchio header/footer.
+          # Questa sezione fa curl -I sulle pagine Hugo critiche e verifica che
+          # Last-Modified HTTP sia entro 2 ore dall'ultimo deploy `success`.
+          # Specifiche: rule 05-github-aruba-deploy.md § "File stantii su Aruba —
+          # strategia cache-bust dopo modifiche al chrome".
+          #
+          # Sono escluse le pagine HTML statiche sotto static/ (es.
+          # /abili-a-proteggere/, /giochi/, kit-calamita stampabili): hanno l'header
+          # iniettato lato client da site-chrome.js, il loro Last-Modified può essere
+          # vecchio senza che sia un bug (il chrome JS si aggiorna automaticamente).
+          STALE_PAGES=""
+          if command -v gh >/dev/null 2>&1; then
+            # Recupera timestamp dell'ultimo deploy success (UTC ISO 8601)
+            LATEST_DEPLOY=$(gh run list --workflow=deploy.yml --status=success --limit=1 --json updatedAt --jq '.[0].updatedAt' 2>/dev/null || echo "")
+            if [ -n "$LATEST_DEPLOY" ]; then
+              LATEST_DEPLOY_EPOCH=$(date -u -d "$LATEST_DEPLOY" +%s 2>/dev/null || echo "0")
+              # Soglia: 2 ore (7200 sec). Il deploy FTP impiega ~10-15 min;
+              # 2h copre ritardi senza falsi positivi.
+              THRESHOLD=7200
+              # 8 pagine Hugo critiche (NON statiche). Tutte dovrebbero essere
+              # ri-deployate ad ogni cambio del chrome (navbar/footer/utility-bar).
+              SAMPLE_URLS="https://www.protezionecivilegenzano.it/
+              https://www.protezionecivilegenzano.it/comunicazioni/
+              https://www.protezionecivilegenzano.it/cosa-fare-adesso/
+              https://www.protezionecivilegenzano.it/formazione/
+              https://www.protezionecivilegenzano.it/accessibilita/
+              https://www.protezionecivilegenzano.it/glossario/
+              https://www.protezionecivilegenzano.it/contatti/
+              https://www.protezionecivilegenzano.it/rischi-prevenzione/"
+              for url in $SAMPLE_URLS; do
+                lm=$(curl -sI --max-time 10 -H "Cache-Control: no-cache" "$url" 2>/dev/null | grep -i "^last-modified:" | sed 's/last-modified: *//I' | tr -d '\r' | head -1)
+                if [ -n "$lm" ]; then
+                  lm_epoch=$(date -u -d "$lm" +%s 2>/dev/null || echo "0")
+                  if [ "$lm_epoch" -gt 0 ]; then
+                    delta=$((LATEST_DEPLOY_EPOCH - lm_epoch))
+                    if [ "$delta" -gt "$THRESHOLD" ]; then
+                      hrs=$((delta / 3600))
+                      STALE_PAGES="${STALE_PAGES}- \`$url\` Last-Modified \`$lm\` (~${hrs}h prima dell'ultimo deploy success). Probabile file stantio su Aruba.\n"
+                    fi
+                  fi
+                fi
+              done
+              if [ -n "$STALE_PAGES" ]; then
+                err "Pagine Hugo con Last-Modified stantio rispetto all'ultimo deploy \`success\` (\`$LATEST_DEPLOY\`). Applicare cache-bust nei \`_index.md\` (vedi rule 05-github-aruba-deploy.md § \"File stantii su Aruba\"):"
+                printf "%b" "$STALE_PAGES" >> "$REPORT"
+              else
+                ok "Tutte le pagine Hugo campione hanno Last-Modified entro 2h dall'ultimo deploy success."
+              fi
+            else
+              warn "Impossibile recuperare timestamp ultimo deploy success via gh CLI: check Last-Modified saltato."
+            fi
+          else
+            warn "gh CLI non disponibile sul runner: check Last-Modified pagine Hugo saltato."
+          fi
 
           # ----------------------------------------------------------------
           # Output
