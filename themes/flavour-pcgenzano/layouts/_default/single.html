@@ -110,6 +110,12 @@
            Specifiche: manuale/parte-24-output-braille-articoli.md */}}
       {{ partial "scarica-braille.html" . }}
 
+      {{/* ── DOWNLOAD TRASCRIZIONE PDF (Punto 15 roadmap) ──
+           Chiama window.print(). Il sito ha già @media print globale che
+           stampa solo il corpo articolo (no chrome). L'utente sceglie
+           "Salva come PDF" nella finestra di stampa. */}}
+      {{ partial "scarica-trascrizione-pdf.html" . }}
+
       {{/* ── CONTENUTO ── */}}
       <article class="article-body">{{ .Content }}</article>
 

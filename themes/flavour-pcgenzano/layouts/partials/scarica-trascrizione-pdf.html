@@ -1,0 +1,30 @@
+{{/* Partial: scarica-trascrizione-pdf (Punto 15 roadmap — maggio 2026)
+
+     Bottone "Scarica trascrizione PDF" sopra il corpo articolo.
+     Implementazione minimale: chiama window.print(). Il sito ha già
+     `@media print` globale che nasconde header/navbar/footer/banner
+     e stampa solo il corpo articolo. L'utente sceglie "Salva come PDF"
+     nella finestra di stampa del browser per ottenere il PDF.
+
+     Niente generazione server-side (richiederebbe WeasyPrint/wkhtmltopdf
+     come dipendenza CI), niente API esterne, niente costi.
+
+     Mostrato sopra il corpo dell'articolo, vicino al bottone TTS e
+     al bottone "Scarica versione braille". Cluster di accessibilità
+     coerente. */}}
+
+{{- if eq .Section "comunicazioni" -}}
+<div class="trascrizione-pdf-download mb-3" role="region" aria-label="Scarica trascrizione PDF">
+  <button type="button"
+          class="btn btn-outline-primary btn-sm"
+          onclick="window.print()"
+          aria-label="Apri la finestra di stampa per salvare l'articolo come PDF">
+    <i class="bi bi-file-earmark-pdf me-2" aria-hidden="true"></i>
+    <span>Scarica trascrizione PDF</span>
+  </button>
+  <p class="trascrizione-pdf-hint small text-muted mt-1 mb-0">
+    Apre la finestra di stampa del browser. Scegli <strong>"Salva come PDF"</strong>
+    come destinazione: avrai l'articolo formattato A4 senza il chrome del sito.
+  </p>
+</div>
+{{- end -}}
