@@ -465,6 +465,43 @@ html.a11y-reading-mode body {
 html.a11y-reading-mode main {
   background: #fdf6e3 !important;
 }
+/* SEZIONI E CARD CHE COPRONO LA PAGINA — fix urgente 12 maggio 2026.
+   Senza queste regole, sulla homepage si vede tutto bianco perché:
+   - `.servizi-section` ha `background: var(--pc-light-bg)` esplicito
+   - Le `.card` di Bootstrap-Italia hanno bg bianco di default
+   - Le `.quick-action-card` / `.card-servizio` ereditano da bootstrap
+   Queste regole vincono sui bg bianchi delle card MA NON toccano gli
+   "elementi istituzionali" (navbar, footer, banner allerta, banner
+   emergenza, hero blu, badge colorati) che hanno classi diverse e
+   restano col loro colore di brand. */
+html.a11y-reading-mode .servizi-section,
+html.a11y-reading-mode .notizie-section,
+html.a11y-reading-mode .card,
+html.a11y-reading-mode .card-body,
+html.a11y-reading-mode .quick-action-card,
+html.a11y-reading-mode .card-servizio,
+html.a11y-reading-mode .card-notizia-hero,
+html.a11y-reading-mode .card-notizia-small,
+html.a11y-reading-mode .card-numero-utile,
+html.a11y-reading-mode .card-rischio,
+html.a11y-reading-mode .link-card,
+html.a11y-reading-mode .stat-hero-item,
+html.a11y-reading-mode .bg-light,
+html.a11y-reading-mode .bg-white,
+html.a11y-reading-mode section:not(.hero-section):not(.emergency-banner) {
+  background: #fdf6e3 !important;
+  background-color: #fdf6e3 !important;
+}
+
+/* Eccezioni esplicite — restano col loro colore di brand:
+   - .navbar / .it-header-* / .it-footer-* (chrome del sito)
+   - .allerta-bar / .allerta-bar-* (banner allerta colorato)
+   - .emergency-banner (banner emergenza rosso)
+   - .hero-section (gradient blu istituzionale)
+   - .servizio-icon, .quick-action-icon, .servizio-icon-* (icone cerchio)
+   - .badge-allerta-* / .notizia-categoria-* (badge categorie)
+   Queste non sono toccate dai selettori sopra (classi diverse), quindi
+   mantengono il loro background naturalmente. */
 /* Wrapper editoriali: oltre allo sfondo crema (ereditato da body),
    applichiamo il restringimento riga (65ch), il padding, l'allineamento
    sinistra e la spaziatura tipografica. Vale per articoli e liste
@@ -498,14 +535,28 @@ html.a11y-reading-mode .list-intro-content li {
    line-height standard. */
 @media print {
   html.a11y-reading-mode body,
-  html.a11y-reading-mode main {
+  html.a11y-reading-mode main,
+  html.a11y-reading-mode .servizi-section,
+  html.a11y-reading-mode .notizie-section,
+  html.a11y-reading-mode .card,
+  html.a11y-reading-mode .card-body,
+  html.a11y-reading-mode .quick-action-card,
+  html.a11y-reading-mode .card-servizio,
+  html.a11y-reading-mode .card-notizia-hero,
+  html.a11y-reading-mode .card-notizia-small,
+  html.a11y-reading-mode .card-numero-utile,
+  html.a11y-reading-mode .card-rischio,
+  html.a11y-reading-mode .link-card,
+  html.a11y-reading-mode .stat-hero-item,
+  html.a11y-reading-mode .bg-light,
+  html.a11y-reading-mode .bg-white,
+  html.a11y-reading-mode section:not(.hero-section):not(.emergency-banner) {
     background: #fff !important;
+    background-color: #fff !important;
     color: #000 !important;
   }
   html.a11y-reading-mode .article-body,
   html.a11y-reading-mode .list-intro-content {
-    background: #fff !important;
-    color: #000 !important;
     max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
