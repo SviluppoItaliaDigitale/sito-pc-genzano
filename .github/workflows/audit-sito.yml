@@ -1121,16 +1121,43 @@ jobs:
               THRESHOLD=7200      # 2h per Last-Modified HTTP
               SEM_THRESHOLD_H=24  # 24h per Sito aggiornato il (semantico)
               NOW_EPOCH=$(date -u +%s)
-              # 8 pagine Hugo critiche (NON statiche). Tutte dovrebbero essere
-              # ri-deployate ad ogni cambio del chrome (navbar/footer/utility-bar).
+              # 19 pagine Hugo critiche (NON statiche) + 1 articolo dinamico
+              # (totale 20 URL). Tutte dovrebbero essere ri-deployate ad ogni
+              # cambio del chrome (navbar/footer/utility-bar). Allargato da 8 a
+              # 20 il 12 maggio 2026 per coprire l'intero campione di smoke test
+              # raccomandato dalla rule 05 (homepage, sezioni servizi, pagine
+              # legali/istituzionali, archivio, articolo singolo).
               SAMPLE_URLS="https://www.protezionecivilegenzano.it/
-              https://www.protezionecivilegenzano.it/comunicazioni/
+              https://www.protezionecivilegenzano.it/accessibilita/
               https://www.protezionecivilegenzano.it/cosa-fare-adesso/
               https://www.protezionecivilegenzano.it/formazione/
-              https://www.protezionecivilegenzano.it/accessibilita/
-              https://www.protezionecivilegenzano.it/glossario/
+              https://www.protezionecivilegenzano.it/comunicazioni/
+              https://www.protezionecivilegenzano.it/allerte-meteo/
+              https://www.protezionecivilegenzano.it/piano-emergenza/
+              https://www.protezionecivilegenzano.it/piano-familiare/
+              https://www.protezionecivilegenzano.it/numeri-utili/
+              https://www.protezionecivilegenzano.it/chi-siamo/
               https://www.protezionecivilegenzano.it/contatti/
-              https://www.protezionecivilegenzano.it/rischi-prevenzione/"
+              https://www.protezionecivilegenzano.it/rischi-prevenzione/
+              https://www.protezionecivilegenzano.it/cartografia/
+              https://www.protezionecivilegenzano.it/diventa-volontario/
+              https://www.protezionecivilegenzano.it/faq/
+              https://www.protezionecivilegenzano.it/strumenti/
+              https://www.protezionecivilegenzano.it/area-download/
+              https://www.protezionecivilegenzano.it/normativa/
+              https://www.protezionecivilegenzano.it/glossario/"
+              # Aggiunge dinamicamente un articolo recente come 20° URL (estratto
+              # dal primo path articolo trovato nell'indice /comunicazioni/).
+              # Pattern resiliente alle variazioni di Hugo minify (con/senza
+              # virgolette negli href, URL relative/assolute, ecc.):
+              # cerchiamo direttamente il path "/comunicazioni/AAAA-MM-GG-slug/"
+              # ovunque appaia nell'HTML. Se l'estrazione fallisce, il 20° URL
+              # viene skippato senza errore.
+              SAMPLE_ARTICLE=$(curl -sL --max-time 10 "https://www.protezionecivilegenzano.it/comunicazioni/" 2>/dev/null | grep -oE '/comunicazioni/2[0-9]{3}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+/' | head -1)
+              if [ -n "$SAMPLE_ARTICLE" ]; then
+                SAMPLE_URLS="${SAMPLE_URLS}
+              https://www.protezionecivilegenzano.it${SAMPLE_ARTICLE}"
+              fi
               for url in $SAMPLE_URLS; do
                 short=$(echo "$url" | sed 's|https://www.protezionecivilegenzano.it||')
 
@@ -1185,7 +1212,7 @@ jobs:
                 printf "%b" "$SEMANTIC_FAIL" >> "$REPORT"
               fi
               if [ -z "$STALE_PAGES" ] && [ -z "$SEMANTIC_FAIL" ]; then
-                ok "Tutte le pagine Hugo campione (8 URL): Last-Modified entro 2h dall'ultimo deploy + 4 marker semantici tutti OK (canonical-dropdown ≥ 1, niente Giochi legacy, niente tel: con spazi encoded, Sito aggiornato il entro 24h)."
+                ok "Tutte le pagine Hugo campione (19 fisse + 1 articolo dinamico = 20 URL): Last-Modified entro 2h dall'ultimo deploy + 4 marker semantici tutti OK (canonical-dropdown ≥ 1, niente Giochi legacy, niente tel: con spazi encoded, Sito aggiornato il entro 24h)."
               fi
             else
               warn "Impossibile recuperare timestamp ultimo deploy success via gh CLI: check § 43 saltato."
