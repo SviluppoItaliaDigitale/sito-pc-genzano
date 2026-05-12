@@ -502,6 +502,36 @@ html.a11y-reading-mode section:not(.hero-section):not(.emergency-banner) {
    - .badge-allerta-* / .notizia-categoria-* (badge categorie)
    Queste non sono toccate dai selettori sopra (classi diverse), quindi
    mantengono il loro background naturalmente. */
+
+/* FIX CONTRASTO 12 maggio 2026 — quando una card che PRIMA aveva
+   sfondo blu/scuro con testo bianco (es. la card "Mappa meteo —
+   Windy" sulla pagina /strumenti-tempo-reale/) viene rifatta crema,
+   il suo testo bianco diventa illeggibile su sfondo crema (contrasto
+   ~1.1:1, fallisce WCAG drasticamente). Forziamo TUTTI i testi
+   figli delle card crema a #1a1a1a (contrasto 14:1 vs crema, AAA).
+   Inclusi h1-h6, p, li, span, strong, em che potrebbero avere
+   `color: #fff` ereditato dalla regola tema della card. */
+html.a11y-reading-mode .servizi-section,
+html.a11y-reading-mode .servizi-section *:not(.btn):not(.badge):not(i):not(svg):not(svg *),
+html.a11y-reading-mode .notizie-section,
+html.a11y-reading-mode .notizie-section *:not(.btn):not(.badge):not(i):not(svg):not(svg *),
+html.a11y-reading-mode .card,
+html.a11y-reading-mode .card *:not(.btn):not(.badge):not(i):not(svg):not(svg *):not(.servizio-icon):not(.quick-action-icon),
+html.a11y-reading-mode .quick-action-card *:not(.btn):not(.badge):not(i):not(svg):not(svg *):not(.quick-action-icon),
+html.a11y-reading-mode .card-servizio *:not(.btn):not(.badge):not(i):not(svg):not(svg *):not(.servizio-icon),
+html.a11y-reading-mode .card-numero-utile *:not(.btn):not(.badge):not(i):not(svg):not(svg *),
+html.a11y-reading-mode .card-rischio *:not(.btn):not(.badge):not(i):not(svg):not(svg *),
+html.a11y-reading-mode .link-card *:not(.btn):not(.badge):not(i):not(svg):not(svg *),
+html.a11y-reading-mode .stat-hero-item *:not(.btn):not(.badge):not(i):not(svg):not(svg *) {
+  color: #1a1a1a !important;
+}
+/* I link nel corpo card restano blu istituzionale (su crema ~11.6:1, AAA). */
+html.a11y-reading-mode .card a:not(.btn),
+html.a11y-reading-mode .servizi-section a:not(.btn),
+html.a11y-reading-mode .notizie-section a:not(.btn) {
+  color: #003366 !important;
+}
+/* Bottoni outline/primary mantengono i loro colori di brand (azione). */
 /* Wrapper editoriali: oltre allo sfondo crema (ereditato da body),
    applichiamo il restringimento riga (65ch), il padding, l'allineamento
    sinistra e la spaziatura tipografica. Vale per articoli e liste
