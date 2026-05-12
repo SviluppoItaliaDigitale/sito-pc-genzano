@@ -353,12 +353,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se no
 <a class="ms-card ms-edu" href="/trasparenza/">
   <div class="ms-card-icon"><i class="bi bi-eye-fill"></i></div>
   <p class="ms-card-title">Trasparenza</p>
-  <p class="ms-card-desc">Quadro istituzionale del Gruppo (ramo interno del Comune ex L.R. Lazio 9/2017), composizione direttivo, atti pubblici e accesso civico generalizzato (D.Lgs. 33/2013).</p>
-</a>
-<a class="ms-card ms-edu" href="/open-data/">
-  <div class="ms-card-icon"><i class="bi bi-database-fill"></i></div>
-  <p class="ms-card-title">Open Data</p>
-  <p class="ms-card-desc">Dataset CSV/JSON delle attività del Gruppo (interventi, ore-volontariato, esercitazioni, formazione, dotazioni) sotto licenza Creative Commons BY 4.0 — D.Lgs. 36/2006.</p>
+  <p class="ms-card-desc">Natura giuridica del Gruppo (articolazione del Comune iscritta al RUNTS, determina G14230 del 28/10/2024), riferimenti al portale RUNTS per statuto e atti, procedura di accesso civico generalizzato (D.Lgs. 33/2013).</p>
 </a>
 </div>
 
