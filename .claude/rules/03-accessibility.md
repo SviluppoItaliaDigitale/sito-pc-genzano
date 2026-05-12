@@ -378,6 +378,23 @@ Da maggio 2026 (Punto 19 della roadmap) il sito genera automaticamente una versi
 
 **Test di accettazione:** validazione qualità reale con lettori braille esperti (UICI Roma, BIC Monza) pianificata per giugno 2026, post-Sera 2 + Sera 3.
 
+## Pagina Podcast `/podcast/` + Scarica trascrizione PDF
+
+Da maggio 2026 (Punto 15 roadmap) il sito ha:
+
+1. **Pagina `/podcast/`** — elenco scopribile di tutti gli articoli ascoltabili, con **durata stimata audio** (`ReadingTime × 1.33` perché il TTS browser parla a ~150 wpm vs ~200 wpm di lettura visiva). Voce menu sotto **Risorse** (Hugo + `site-chrome.js` sincronizzati per le pagine statiche fuori da Hugo).
+2. **Bottone "Scarica trascrizione PDF"** su ogni articolo `/comunicazioni/`, nel cluster accessibilità sopra il corpo (TTS + Braille + PDF). Implementazione minimale: chiama `window.print()`. Il sito ha già `@media print` globale che produce stampa pulita (no chrome). L'utente sceglie "Salva come PDF" come destinazione nella finestra di stampa del browser.
+
+**Niente generazione MP3 server-side**, niente feed RSS podcast, niente PDF server-side con WeasyPrint. Tutto sul dispositivo dell'utente, gratuito, privacy-first. Specifiche operative in `manuale/parte-26-podcast-pdf-trascrizione.md`.
+
+## Versione "italiano semplice" (A2 CEFR) per gli articoli
+
+Da maggio 2026 (Punto 16 roadmap) ogni articolo del sito può avere una versione semplificata in italiano L2 livello A2 CEFR (file affiancato `<slug>-facile.md` + frontmatter incrociato `versione_facile` / `versione_facile_di`). Banner giallo in cima all'articolo (partial `versione-facile-toggle.html`) permette di passare fra le due versioni con un click.
+
+**Target d'uso:** parlanti italiano L2, persone con disabilità cognitive, anziani con esperienza scolastica limitata, chi legge in fretta o in stress.
+
+**Eccezione gate AGID obbligata:** la versione facile NON segue il linguaggio AGID standard, usa le regole **CEFR A2** (frasi 8-12 parole, lessico 2000 parole frequenti, sigle spiegate, niente subordinate concatenate). Non invocare `pc-article-reviewer` sui file `*-facile.md`. Specifiche complete: `manuale/parte-25-italiano-l2-versione-facile.md` + `rule 02-content-design-pa.md § "Versione italiano semplice"`.
+
 ## Divieti
 
 - Non eliminare il focus outline senza fornire un'alternativa visibile equivalente.
