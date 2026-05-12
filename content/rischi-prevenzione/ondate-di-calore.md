@@ -5,6 +5,10 @@ description: "Come proteggersi dal caldo estremo: consigli per anziani, bambini 
 tts: true
 weight: 6
 toc: true
+# Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
+howto_prima: "Informati sulle previsioni e sui bollettini del Ministero della Salute. Assicurati di avere scorte d'acqua in casa. Verifica che ventilatori o condizionatori funzionino. Contatta i vicini anziani o le persone sole per verificare il loro stato. Prepara una lista dei farmaci da conservare al fresco e dei contatti di emergenza."
+howto_durante: "Bevi molta acqua anche se non senti sete, evita alcolici e bevande zuccherate. Non uscire nelle ore più calde (11:00-17:00). Indossa abiti leggeri, chiari e in tessuti naturali; usa cappello e occhiali da sole. Rinfresca gli ambienti e abbassa le tapparelle nelle ore di sole diretto. Fai pasti leggeri privilegiando frutta e verdura. Non lasciare mai persone o animali in auto parcheggiate al sole."
+howto_dopo: "Se qualcuno mostra sintomi di colpo di calore, chiama il 112 immediatamente. In attesa dei soccorsi porta la persona in un luogo fresco, falla sdraiare con le gambe sollevate, applicale panni umidi su fronte e collo. Continua a idratarti anche quando la temperatura scende. Non sottovalutare i primi sintomi (sete intensa, stanchezza, mal di testa)."
 ---
 Le ondate di calore sono periodi prolungati di temperature molto elevate, spesso accompagnate da alti livelli di umidità, che possono rappresentare un rischio serio per la salute, soprattutto per le persone più vulnerabili.
 

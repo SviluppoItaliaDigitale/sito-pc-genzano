@@ -5,6 +5,10 @@ description: "Cosa fare per prevenire gli incendi boschivi e come comportarsi in
 tts: true
 weight: 3
 toc: true
+# Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
+howto_prima: "Non gettare mai mozziconi di sigaretta o fiammiferi accesi, soprattutto dall'auto. Non accendere fuochi nelle aree boschive o nelle loro vicinanze durante il periodo di massimo rischio. Per bruciare sterpaglie o residui vegetali, contatta il Comune per le normative e autorizzazioni. Mantieni puliti i terreni di proprietà da sterpaglie e vegetazione secca (è anche un obbligo di legge). Se la tua casa è vicina a un'area boschiva, crea uno spazio difendibile rimuovendo la vegetazione secca intorno all'abitazione."
+howto_durante: "Se vedi un incendio, chiama immediatamente il 112: attiva vigili del fuoco, forestali ed eventuale soccorso sanitario. Fornisci indicazioni precise: Comune, località, riferimento visibile, direzione del fumo. Non avvicinarti alle fiamme e non tentare di spegnere l'incendio da solo. Non sostare nelle strade percorse dal fumo. Se un incendio minaccia la tua casa, allontanati subito in direzione opposta al fumo; se non puoi allontanarti, entra in casa e chiudi porte, finestre, persiane e prese d'aria."
+howto_dopo: "Non accedere alla zona percorsa dal fuoco: possono esserci tronchi instabili e braci ancora attive sotto la cenere. Segnala eventuali riprese di fuoco al 112. Non tentare di bonificare da solo l'area incendiata. Se la tua abitazione è stata interessata, fai verificare la stabilità della struttura prima di rientrare. Non tentare mai di spegnere un incendio da solo con mezzi di fortuna."
 ---
 L'incendio boschivo è un fuoco che si sviluppa in aree vegetate (boschi, macchia mediterranea, terreni incolti) propagandosi rapidamente grazie al vento, alla siccità e alla vegetazione secca. La maggior parte degli incendi è causata da comportamenti umani imprudenti o, peggio, dolosi.
 
