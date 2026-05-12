@@ -1,0 +1,63 @@
+{{/* Partial: versione-facile-toggle (Punto 16 roadmap — maggio 2026)
+
+     Mostra in cima all'articolo:
+     - Un bottone "Leggi in italiano semplice (A2)" se la pagina
+       corrente ha `versione_facile: <slug>` nel frontmatter.
+       Link: /comunicazioni/<slug>/ (la versione facile è una pagina
+       Hugo separata).
+     - Un badge + bottone "Torna alla versione completa" se la
+       pagina corrente ha `versione_facile_di: <slug>` nel
+       frontmatter (siamo sulla versione facile).
+
+     Convenzione naming dei file:
+     - Articolo complesso:  content/comunicazioni/<slug>.md
+     - Versione facile:     content/comunicazioni/<slug>-facile.md
+       (frontmatter `versione_facile_di: <slug>` + `easy: true`)
+
+     Hugo renderizza entrambi come pagine separate; il toggle qui
+     permette il passaggio. Registro non-AGID legittimo per la
+     versione facile (italiano L2 A2 CEFR — eccezione esplicita
+     citata in CLAUDE.md § "Auto-gate AGID"). */}}
+
+{{- $vf := .Params.versione_facile -}}
+{{- $vfdi := .Params.versione_facile_di -}}
+
+{{- if $vf -}}
+  {{/* Siamo sulla versione standard, mostra link alla versione facile */}}
+  {{- $facilePath := printf "/comunicazioni/%s/" $vf -}}
+  <div class="versione-facile-banner mb-3" role="region" aria-label="Versione facile da leggere disponibile">
+    <a href="{{ $facilePath | relURL }}" class="btn btn-warning btn-sm">
+      <i class="bi bi-book me-2" aria-hidden="true"></i>
+      <span>Leggi in italiano semplice</span>
+      <span class="badge bg-light text-dark ms-1">A2</span>
+    </a>
+    <p class="versione-facile-hint small text-muted mt-1 mb-0">
+      Esiste una versione di questo articolo in <strong>italiano semplificato</strong>
+      (livello A2 — Quadro Europeo CEFR), pensata per <strong>parlanti italiano L2</strong>,
+      <strong>persone con disabilità cognitive</strong>, <strong>anziani</strong> e
+      <strong>chi legge in fretta</strong>. Frasi corte, parole comuni, niente sigle non spiegate.
+    </p>
+  </div>
+{{- end -}}
+
+{{- if $vfdi -}}
+  {{/* Siamo sulla versione facile, mostra link alla versione standard */}}
+  {{- $standardPath := printf "/comunicazioni/%s/" $vfdi -}}
+  <div class="versione-facile-banner versione-facile-banner-easy mb-3" role="region" aria-label="Versione facile da leggere — torna alla versione completa">
+    <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+      <span class="badge bg-warning text-dark">
+        <i class="bi bi-book me-1" aria-hidden="true"></i>
+        Italiano semplice — Livello A2
+      </span>
+    </div>
+    <p class="small mb-2">
+      Questa è la <strong>versione facile da leggere</strong> dell'articolo.
+      Frasi corte, parole comuni. Per il testo completo, con tutti i dettagli
+      e le fonti, leggi la <a href="{{ $standardPath | relURL }}">versione completa</a>.
+    </p>
+    <a href="{{ $standardPath | relURL }}" class="btn btn-outline-primary btn-sm">
+      <i class="bi bi-arrow-left me-2" aria-hidden="true"></i>
+      Torna alla versione completa
+    </a>
+  </div>
+{{- end -}}

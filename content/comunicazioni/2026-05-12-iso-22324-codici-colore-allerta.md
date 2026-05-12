@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Perché le allerte hanno colori? Lo standard IS
 scadenza: ""
 area: "Lazio"
 allegati: []
+versione_facile: "2026-05-12-iso-22324-codici-colore-allerta-facile"
 draft: false
 ---
 
