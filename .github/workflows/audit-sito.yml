@@ -1080,14 +1080,30 @@ jobs:
           # non ci sono più numeri da allineare.
 
           # ----------------------------------------------------------------
-          section "43. Stale FTP files detection — Last-Modified pagine Hugo"
+          section "43. Stale FTP files detection — Last-Modified + 4 marker semantici"
           # Il deploy FTP usa `dangerous-clean-slate: false`: i file su Aruba che
           # NON cambiano fra due build non vengono ricaricati. In caso di deploy
           # falliti consecutivi (es. bug `_build`/`build` frontmatter del 12 maggio
           # 2026, 4 deploy falliti consecutivi che hanno bloccato l'upload per
           # ~7 ore), alcune pagine restavano stantie con vecchio header/footer.
-          # Questa sezione fa curl -I sulle pagine Hugo critiche e verifica che
-          # Last-Modified HTTP sia entro 2 ore dall'ultimo deploy `success`.
+          #
+          # Questa sezione fa per ciascuna delle 8 pagine campione DUE check:
+          #
+          # (a) Last-Modified HTTP entro 2h dall'ultimo deploy `success`.
+          #     Soglia 2h copre il tempo di upload FTP (10-15 min) + ritardi
+          #     occasionali senza falsi positivi.
+          #
+          # (b) 4 marker semantici nel body (catturano i casi in cui Last-Modified
+          #     è recente ma il contenuto è stantio — es. cache CDN intermedia,
+          #     proxy che serve versione vecchia, file modificato fuori dal repo):
+          #     1. canonical-dropdown ≥ 1 (header canonico Hugo presente)
+          #     2. giochi-legacy = 0 (niente voce menu flat ">Giochi</a>"
+          #        rimossa nel refactoring menu del 10 maggio 2026)
+          #     3. tel-encoding-bug = 0 (niente "tel:+39%20..." o "tel:+39 ...",
+          #        atteso "tel:+39069362600" senza spazi — vedi fix 29 apr 2026
+          #        commit 72ec3aa con `printf "tel:%s" ... | safeURL`)
+          #     4. Sito aggiornato il entro 24h dal momento dell'audit
+          #
           # Specifiche: rule 05-github-aruba-deploy.md § "File stantii su Aruba —
           # strategia cache-bust dopo modifiche al chrome".
           #
@@ -1096,14 +1112,15 @@ jobs:
           # iniettato lato client da site-chrome.js, il loro Last-Modified può essere
           # vecchio senza che sia un bug (il chrome JS si aggiorna automaticamente).
           STALE_PAGES=""
+          SEMANTIC_FAIL=""
           if command -v gh >/dev/null 2>&1; then
             # Recupera timestamp dell'ultimo deploy success (UTC ISO 8601)
             LATEST_DEPLOY=$(gh run list --workflow=deploy.yml --status=success --limit=1 --json updatedAt --jq '.[0].updatedAt' 2>/dev/null || echo "")
             if [ -n "$LATEST_DEPLOY" ]; then
               LATEST_DEPLOY_EPOCH=$(date -u -d "$LATEST_DEPLOY" +%s 2>/dev/null || echo "0")
-              # Soglia: 2 ore (7200 sec). Il deploy FTP impiega ~10-15 min;
-              # 2h copre ritardi senza falsi positivi.
-              THRESHOLD=7200
+              THRESHOLD=7200      # 2h per Last-Modified HTTP
+              SEM_THRESHOLD_H=24  # 24h per Sito aggiornato il (semantico)
+              NOW_EPOCH=$(date -u +%s)
               # 8 pagine Hugo critiche (NON statiche). Tutte dovrebbero essere
               # ri-deployate ad ogni cambio del chrome (navbar/footer/utility-bar).
               SAMPLE_URLS="https://www.protezionecivilegenzano.it/
@@ -1115,6 +1132,9 @@ jobs:
               https://www.protezionecivilegenzano.it/contatti/
               https://www.protezionecivilegenzano.it/rischi-prevenzione/"
               for url in $SAMPLE_URLS; do
+                short=$(echo "$url" | sed 's|https://www.protezionecivilegenzano.it||')
+
+                # === (a) Last-Modified HTTP check ===
                 lm=$(curl -sI --max-time 10 -H "Cache-Control: no-cache" "$url" 2>/dev/null | grep -i "^last-modified:" | sed 's/last-modified: *//I' | tr -d '\r' | head -1)
                 if [ -n "$lm" ]; then
                   lm_epoch=$(date -u -d "$lm" +%s 2>/dev/null || echo "0")
@@ -1122,22 +1142,56 @@ jobs:
                     delta=$((LATEST_DEPLOY_EPOCH - lm_epoch))
                     if [ "$delta" -gt "$THRESHOLD" ]; then
                       hrs=$((delta / 3600))
-                      STALE_PAGES="${STALE_PAGES}- \`$url\` Last-Modified \`$lm\` (~${hrs}h prima dell'ultimo deploy success). Probabile file stantio su Aruba.\n"
+                      STALE_PAGES="${STALE_PAGES}- \`$short\` Last-Modified \`$lm\` (~${hrs}h prima dell'ultimo deploy success). Probabile file stantio su Aruba.\n"
+                    fi
+                  fi
+                fi
+
+                # === (b) 4 marker semantici nel body ===
+                body=$(curl -sL --max-time 10 -H "Cache-Control: no-cache" "$url" 2>/dev/null)
+                if [ -n "$body" ]; then
+                  # 1. canonical-dropdown: deve esserci il dropdown "Per il Cittadino"
+                  if [ "$(echo "$body" | grep -c 'navDropdown-per-il-cittadino')" -lt 1 ]; then
+                    SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` manca \`navDropdown-per-il-cittadino\` nel body (header canonico Hugo non renderizzato — refactoring menu del 10 maggio 2026 non riflesso).\n"
+                  fi
+                  # 2. giochi-legacy: NON deve esserci la voce menu flat "Giochi"
+                  if [ "$(echo "$body" | grep -c '>Giochi</a>')" -gt 0 ]; then
+                    SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` contiene voce menu legacy \`>Giochi</a>\` (rimossa nel refactoring del 10 maggio 2026 — indica file stantio).\n"
+                  fi
+                  # 3. tel encoding bug: NON deve esserci tel:+39%20 o tel:+39 (con spazio)
+                  if [ "$(echo "$body" | grep -cE 'tel:\+39%20|tel:\+39 [0-9]')" -gt 0 ]; then
+                    SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` contiene \`tel:\` con spazi encoded (atteso \`tel:+39069362600\` senza spazi — vedi fix 29 aprile 2026 commit 72ec3aa).\n"
+                  fi
+                  # 4. Sito aggiornato il — entro 24h dal momento dell'audit
+                  aggiornato_dt=$(echo "$body" | grep -oE 'Sito aggiornato il[^<]*<time[^>]*datetime="[^"]+"' | head -1 | grep -oE 'datetime="[^"]+"' | sed 's/datetime="//;s/"//')
+                  if [ -n "$aggiornato_dt" ]; then
+                    aggiornato_epoch=$(date -u -d "$aggiornato_dt" +%s 2>/dev/null || echo "0")
+                    if [ "$aggiornato_epoch" -gt 0 ]; then
+                      diff_h=$(( (NOW_EPOCH - aggiornato_epoch) / 3600 ))
+                      if [ "$diff_h" -gt "$SEM_THRESHOLD_H" ]; then
+                        SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` \"Sito aggiornato il\" mostra \`$aggiornato_dt\` (~${diff_h}h fa, atteso entro ${SEM_THRESHOLD_H}h).\n"
+                      fi
                     fi
                   fi
                 fi
               done
+
               if [ -n "$STALE_PAGES" ]; then
-                err "Pagine Hugo con Last-Modified stantio rispetto all'ultimo deploy \`success\` (\`$LATEST_DEPLOY\`). Applicare cache-bust nei \`_index.md\` (vedi rule 05-github-aruba-deploy.md § \"File stantii su Aruba\"):"
+                err "Pagine Hugo con Last-Modified HTTP stantio rispetto all'ultimo deploy \`success\` (\`$LATEST_DEPLOY\`). Applicare cache-bust nei \`_index.md\` (vedi rule 05-github-aruba-deploy.md § \"File stantii su Aruba\"):"
                 printf "%b" "$STALE_PAGES" >> "$REPORT"
-              else
-                ok "Tutte le pagine Hugo campione hanno Last-Modified entro 2h dall'ultimo deploy success."
+              fi
+              if [ -n "$SEMANTIC_FAIL" ]; then
+                err "Pagine Hugo con marker semantici inconsistenti (file deployato ma contenuto stantio, cache CDN intermedia, o regressione template):"
+                printf "%b" "$SEMANTIC_FAIL" >> "$REPORT"
+              fi
+              if [ -z "$STALE_PAGES" ] && [ -z "$SEMANTIC_FAIL" ]; then
+                ok "Tutte le pagine Hugo campione (8 URL): Last-Modified entro 2h dall'ultimo deploy + 4 marker semantici tutti OK (canonical-dropdown ≥ 1, niente Giochi legacy, niente tel: con spazi encoded, Sito aggiornato il entro 24h)."
               fi
             else
-              warn "Impossibile recuperare timestamp ultimo deploy success via gh CLI: check Last-Modified saltato."
+              warn "Impossibile recuperare timestamp ultimo deploy success via gh CLI: check § 43 saltato."
             fi
           else
-            warn "gh CLI non disponibile sul runner: check Last-Modified pagine Hugo saltato."
+            warn "gh CLI non disponibile sul runner: check § 43 saltato."
           fi
 
           # ----------------------------------------------------------------
