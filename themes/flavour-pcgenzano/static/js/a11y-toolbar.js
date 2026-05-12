@@ -164,9 +164,16 @@
     // fontFamily a 'readable' se era 'default'.
     if (state.readingMode) html.classList.add('a11y-reading-mode');
 
-    // Visivo: contrasto
+    // Visivo: contrasto — 5 valori
+    //   'default'      → niente classe (resta lo stile nativo del tema)
+    //   'high'         → a11y-contrast-high       (nero su bianco)
+    //   'invert'       → a11y-contrast-invert     (bianco su nero)
+    //   'yellow-black' → a11y-contrast-yellow-black (giallo su nero, stile Windows HC Black)
+    //   'blue-cream'   → a11y-contrast-blue-cream   (blu scuro su crema, stile BBC My Web My Way)
     if (state.contrast === 'high') html.classList.add('a11y-contrast-high');
     else if (state.contrast === 'invert') html.classList.add('a11y-contrast-invert');
+    else if (state.contrast === 'yellow-black') html.classList.add('a11y-contrast-yellow-black');
+    else if (state.contrast === 'blue-cream') html.classList.add('a11y-contrast-blue-cream');
 
     // Visivo: scala di grigi
     if (state.grayscale) html.classList.add('a11y-grayscale');
