@@ -236,7 +236,7 @@ Il commento HTML in fondo al frontmatter cambia per ogni cache-bust diverso (nuo
 
 ### Detection: il workflow audit-sito.yml controlla coerenza HTTP + 4 marker semantici
 
-Da maggio 2026, `audit-sito.yml` ha una sezione (sezione 43 — "Stale FTP files detection") che ogni lunedì 09:00 UTC fa **due check** su ciascuna delle 8 pagine Hugo campione (`/`, `/comunicazioni/`, `/cosa-fare-adesso/`, `/formazione/`, `/accessibilita/`, `/glossario/`, `/contatti/`, `/rischi-prevenzione/`):
+Da maggio 2026, `audit-sito.yml` ha una sezione (sezione 43 — "Stale FTP files detection") che ogni lunedì 09:00 UTC fa **due check** su ciascuna delle **20 pagine Hugo campione** (19 fisse + 1 articolo dinamico estratto dall'indice `/comunicazioni/`): `/`, `/accessibilita/`, `/cosa-fare-adesso/`, `/formazione/`, `/comunicazioni/`, `/allerte-meteo/`, `/piano-emergenza/`, `/piano-familiare/`, `/numeri-utili/`, `/chi-siamo/`, `/contatti/`, `/rischi-prevenzione/`, `/cartografia/`, `/diventa-volontario/`, `/faq/`, `/strumenti/`, `/area-download/`, `/normativa/`, `/glossario/` + l'ultimo articolo pubblicato. **Allargato da 8 a 20 URL il 12 maggio 2026** dopo le 3 sessioni audit consecutive sullo stesso problema (il campione di 8 non includeva pagine come `/allerte-meteo/`, `/numeri-utili/`, `/area-download/` segnalate negli audit storici).
 
 **(a) Last-Modified HTTP** entro 2 ore dall'ultimo deploy `success` (recuperato via API GitHub `gh run list --workflow=deploy.yml --status=success --limit=1`). Soglia 2h copre il tempo di upload FTP (10-15 min) + ritardi occasionali senza falsi positivi.
 
