@@ -279,10 +279,16 @@ enableGitInfo = true
   weight = 8
 
 [[menus.main]]
+  name = "Podcast"
+  url = "/podcast/"
+  parent = "risorse"
+  weight = 9
+
+[[menus.main]]
   name = "Mappa del Sito"
   url = "/mappa-sito/"
   parent = "risorse"
-  weight = 9
+  weight = 10
 
 # --- Voci dirette ---
 [[menus.main]]
