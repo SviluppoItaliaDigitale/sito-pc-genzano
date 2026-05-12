@@ -1,5 +1,8 @@
 {{ define "main" }}
-{{- $pages := .Pages -}}
+{{/* Escludi le versioni "facile da leggere" (A2 CEFR) dall'archivio:
+     hanno `versione_facile_di` nel frontmatter e devono essere
+     raggiungibili solo dall'articolo madre via toggle. */}}
+{{- $pages := where .Pages "Params.versione_facile_di" nil -}}
 {{- $badges := slice -}}
 {{- $anni := slice -}}
 {{- range $pages -}}
