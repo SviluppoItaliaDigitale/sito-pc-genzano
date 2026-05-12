@@ -5,6 +5,12 @@ description: "Cosa fare prima, durante e dopo una scossa di terremoto per la sic
 tts: true
 weight: 1
 toc: true
+# Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
+# Vedi rule 04a-hugo-shortcode-partial.md § "Partial structured-data".
+# Aggiunto 12 maggio 2026.
+howto_prima: "Fissa alle pareti mobili alti, librerie e scaffali con tasselli o staffe. Allontana gli oggetti pesanti dai letti e dai divani. Tieni a portata di mano un kit di emergenza con torcia, radio a pile, acqua e medicinali. Individua i punti sicuri della tua casa (sotto un tavolo robusto, contro un muro portante, vicino a una trave). Individua le vie di fuga e le aree di attesa più vicine. Compila il Piano Familiare e condividilo con tutti i componenti della famiglia."
+howto_durante: "Se sei in un luogo chiuso, cerca riparo sotto un tavolo robusto, una scrivania o vicino a un muro portante. Proteggiti la testa con un cuscino o con le braccia. NON precipitarti fuori durante la scossa. Non usare le scale e non usare l'ascensore. Allontanati da finestre, vetri, specchi e mobili pesanti che possono cadere. Se sei all'aperto, allontanati da edifici, alberi, lampioni, linee elettriche e cartelloni; cerca un'area aperta e attendi la fine della scossa."
+howto_dopo: "Assicurati dello stato di salute delle persone intorno a te. Esci con prudenza, indossando le scarpe (possono esserci vetri e calcinacci). Raggiungi le aree di attesa previste dal Piano di Emergenza Comunale. Non rientrare in casa finché le autorità non lo consentono. Non usare il telefono se non per reali necessità, per non intasare le linee. Chiudi il gas e l'interruttore generale dell'elettricità prima di uscire. Stai lontano da costruzioni danneggiate. Ascolta le notizie fornite dalle autorità tramite radio o canali ufficiali."
 ---
 Il terremoto è un evento naturale non prevedibile. L'unica difesa possibile è la prevenzione, la conoscenza delle corrette norme di comportamento e la preparazione.
 

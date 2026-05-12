@@ -267,6 +267,55 @@
 }
 </script>
 {{ end }}
+{{/* HowTo — schema aggiuntivo per pagine procedure di emergenza con
+     struttura PRIMA/DURANTE/DOPO esplicitata nel frontmatter.
+     Attivato dai 3 campi `howto_prima` / `howto_durante` / `howto_dopo`.
+     Pagine candidate: /rischi-prevenzione/* (sismico, idrogeologico,
+     incendio, vulcanico, ondate-di-calore, blackout, vento-forte,
+     temporali-intensi). Aiuta Google a generare il box "How To" nei
+     risultati di ricerca. Sintassi: {{ . | jsonify }} per gestire
+     correttamente apostrofi italiani e virgolette interne. */}}
+{{ if and .Params.howto_prima .Params.howto_durante .Params.howto_dopo }}
+{{- $totalMin := math.Max 5 (int (math.Round (mul .ReadingTime 1.5))) -}}
+{{/* IMPORTANTE: dentro <script> Hugo applica un secondo escape JS
+     contestuale che produce "\"Foo\"" da jsonify. Per evitare il
+     doppio escape uso `| jsonify | safeJS`. Stessa logica per tutti
+     i campi che contengono testo italiano con apostrofi/virgolette. */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": {{ .Title | jsonify | safeJS }},
+  "description": {{ with .Description }}{{ . | jsonify | safeJS }}{{ else }}{{ printf "Procedure di emergenza per %s: cosa fare prima, durante e dopo." .Title | jsonify | safeJS }}{{ end }},
+  "totalTime": "PT{{ $totalMin }}M",
+  "inLanguage": "it-IT",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Prima",
+      "text": {{ .Params.howto_prima | jsonify | safeJS }},
+      "url": "{{ $prodURL }}#cosa-fare-prima"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Durante",
+      "text": {{ .Params.howto_durante | jsonify | safeJS }},
+      "url": "{{ $prodURL }}#cosa-fare-durante"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Dopo",
+      "text": {{ .Params.howto_dopo | jsonify | safeJS }},
+      "url": "{{ $prodURL }}#cosa-fare-dopo"
+    }
+  ]
+}
+</script>
+{{ end }}
+
 {{/* BreadcrumbList — tutte le pagine tranne la homepage */}}
 {{ if not .IsHome }}
 <script type="application/ld+json">

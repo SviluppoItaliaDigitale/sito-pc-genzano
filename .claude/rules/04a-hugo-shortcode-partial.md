@@ -301,7 +301,21 @@ Pagina interattiva che guida il cittadino con domande semplici fino a una rispos
 
 `themes/flavour-pcgenzano/layouts/partials/structured-data.html` inietta il blocco `<script type="application/ld+json">` con i dati strutturati Schema.org per i motori di ricerca e gli assistenti vocali.
 
-**Schema attivi:** Organization+NGO, ContactPoint, WebSite (con SearchAction), BreadcrumbList, Article (per `/comunicazioni/`), Event (aggiuntivo per `badge: Evento` con location Place + organizer), FAQPage (per `/faq/`), WebPage (default), Question/Answer, ImageObject, PostalAddress, GeoCoordinates, City.
+**Schema attivi:** Organization+NGO, ContactPoint, WebSite (con SearchAction), BreadcrumbList, Article (per `/comunicazioni/`), Event (aggiuntivo per `badge: Evento` con location Place + organizer), FAQPage (per `/faq/`), HowTo (per pagine `/rischi-prevenzione/*` con frontmatter `howto_prima` / `howto_durante` / `howto_dopo` — vedi sotto), WebPage (default), Question/Answer, HowToStep, ImageObject, PostalAddress, GeoCoordinates, City.
+
+**HowTo opt-in per pagine rischio.** Da maggio 2026 le pagine `/rischi-prevenzione/*` con struttura uniforme PRIMA/DURANTE/DOPO (rischio sismico, idrogeologico, incendio, vulcanico, ondate-di-calore, blackout, vento-forte, temporali-intensi) possono attivare il markup `HowTo` aggiungendo nel frontmatter 3 campi stringa:
+
+```yaml
+howto_prima: "Riassunto in 1-3 frasi delle azioni preventive da fare prima dell'evento."
+howto_durante: "Riassunto in 1-3 frasi delle azioni immediate da fare durante l'evento."
+howto_dopo: "Riassunto in 1-3 frasi delle azioni di recupero da fare dopo l'evento."
+```
+
+Il partial controlla `if and .Params.howto_prima .Params.howto_durante .Params.howto_dopo` — il blocco HowTo viene emesso **solo** se tutti e tre i campi sono presenti. Pagine senza i campi continuano ad avere solo `WebPage` + `BreadcrumbList` (nessuna regressione).
+
+**`totalTime`** calcolato come `ReadingTime × 1.5` minuti (lettura → applicazione pratica), minimo 5 minuti. **`url` di ciascun HowToStep** punta al frammento `#cosa-fare-prima` / `#cosa-fare-durante` / `#cosa-fare-dopo` della pagina, ancore presenti su tutte le pagine rischio per la struttura uniforme già documentata in `rule 06-protezione-civile-scientifica.md`.
+
+⚠️ **Sintassi obbligatoria `| jsonify | safeJS`** per ogni campo testuale dentro `<script type="application/ld+json">`. Hugo applica un **secondo escape JS contestuale** alle stringhe dentro `<script>`, e il solo `| jsonify` produce doppio escape (es. `name: "\"Foo\""`). Aggiungere `| safeJS` dopo `| jsonify` impedisce il secondo escape e produce JSON valido. Vale anche per gli apostrofi italiani (es. "L'unica difesa"). Testato con `validator.schema.org` post-fix del 12 maggio 2026.
 
 **Importante — vincolo di tipo Organization:** l'Organization è marcata come `["Organization", "NGO"]`, **NON** `GovernmentOrganization` né `EmergencyService`. Il Gruppo è associazione di volontariato OdV, non ente pubblico né servizio di emergenza chiamabile direttamente — usare quei tipi indurrebbe Google/assistenti vocali a presentare il Gruppo come servizio chiamabile, contraddicendo la regola "in emergenza chiama il 112".
 
