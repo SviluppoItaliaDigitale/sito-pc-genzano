@@ -344,3 +344,34 @@ done
 ```
 
 Ogni kit deve linkarne almeno tante quante ne contiene la cartella per il suo livello. Un kit con zero link verso le schede del proprio livello è un bug — è successo una volta a entrambi i kit secondaria, scoperto solo quando un docente ha segnalato che non trovava le schede dal proprio kit.
+
+## Versione "italiano semplice" (A2 CEFR) — file affiancato
+
+Da maggio 2026 (Punto 16 della roadmap) gli articoli del sito possono avere una **versione semplificata** in italiano L2 livello A2 CEFR, pensata per parlanti italiano L2, persone con disabilità cognitive, anziani con esperienza scolastica limitata, e chi legge in fretta. Vedi `manuale/parte-25-italiano-l2-versione-facile.md` per la guida completa.
+
+**Convenzione di naming:**
+
+```
+content/comunicazioni/<slug>.md          ← versione completa AGID
+content/comunicazioni/<slug>-facile.md   ← versione italiano L2 A2
+```
+
+**Frontmatter incrociato:**
+- Versione completa: `versione_facile: "<slug>-facile"`
+- Versione facile: `versione_facile_di: "<slug>"`
+
+Hugo renderizza entrambi come pagine distinte. Il partial `partials/versione-facile-toggle.html` aggiunge un banner giallo in cima a ciascuna pagina che linka all'altra.
+
+**Eccezione gate AGID obbligata.** La versione facile NON segue il linguaggio AGID standard. Usa le **regole CEFR A2**:
+- frasi corte (8-12 parole massimo),
+- lessico delle 2000 parole più frequenti dell'italiano,
+- verbi al presente indicativo,
+- sigle spiegate la prima volta (es. "il 112, il numero unico europeo"),
+- numeri in cifre, mai in lettere,
+- niente subordinate concatenate, niente metafore, niente retorica.
+
+Questa è la formalizzazione del registro non-AGID già coperto da `CLAUDE.md § "Auto-gate AGID"` come eccezione. **Non invocare `pc-article-reviewer` sui file `<slug>-facile.md`**: l'agent rigetterebbe le frasi "troppo corte" o "tono troppo elementare". Il review della versione facile va fatto secondo i criteri CEFR A2, non secondo l'AGID.
+
+**Workflow operativo on-demand** (per articolo): vedi Parte 25 § 25.6. Non è automatico, è una scelta editoriale per i contenuti ad alta priorità (bollettini allerta, procedure autoprotezione, numeri emergenza, articoli normativi densi).
+
+**Articolo campione live**: `content/comunicazioni/2026-05-12-iso-22324-codici-colore-allerta-facile.md` (associato alla versione completa `2026-05-12-iso-22324-codici-colore-allerta.md`).

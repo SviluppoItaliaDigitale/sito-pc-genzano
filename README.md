@@ -345,6 +345,28 @@ python3 scripts/genera-braille.py --article 2026-05-12-iso-22324-codici-colore-a
 # leggono nativamente questo formato. Specifiche: manuale/parte-24-output-braille-articoli.md
 ```
 
+### Pagina Podcast + Scarica trascrizione PDF (P15)
+
+Pagina automatica `/podcast/` con elenco di tutti gli articoli ascoltabili + durata stimata audio (`ReadingTime × 1.33`). Su ogni articolo c'è anche un bottone "Scarica trascrizione PDF" che chiama `window.print()` — il sito ha già un CSS `@media print` globale che produce stampa pulita senza chrome.
+
+Niente da generare a mano: la pagina podcast si aggiorna automaticamente ad ogni build Hugo (gli articoli con TTS attivo + WordCount > 30 entrano nella lista). Specifiche complete: `manuale/parte-26-podcast-pdf-trascrizione.md`.
+
+### Versione "italiano semplice" (A2 CEFR) — workflow on-demand (P16)
+
+Per articoli ad alta priorità (bollettini allerta, procedure autoprotezione, ISO densi) si può affiancare una versione semplificata in italiano L2 livello A2 CEFR.
+
+```bash
+# Convenzione: file affiancati nella stessa cartella
+content/comunicazioni/<slug>.md          # versione completa AGID
+content/comunicazioni/<slug>-facile.md   # versione italiano semplice A2
+
+# Frontmatter incrociato:
+# Sull'articolo completo:  versione_facile: "<slug>-facile"
+# Sull'articolo facile:    versione_facile_di: "<slug>"
+```
+
+Hugo genera due pagine distinte. Un banner giallo in cima a ciascuna permette di passare all'altra. Eccezione gate AGID: NON invocare `pc-article-reviewer` sui file `*-facile.md` (è registro CEFR A2 deliberato, non AGID). Articolo campione live: ISO 22324. Specifiche: `manuale/parte-25-italiano-l2-versione-facile.md`.
+
 ### Audit grammaticale italiano
 
 ```bash
