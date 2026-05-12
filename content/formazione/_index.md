@@ -116,3 +116,5 @@ Tutti gli articoli su formazione e scuole sono filtrabili nell'[archivio delle c
 - [Educazione civica](/formazione/educazione-civica/) — moduli per docenti
 - [Rischi e prevenzione](/rischi-prevenzione/) — comportamenti per scenario
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo
+
+<!-- cache-bust: 2026-05-12 forza re-upload FTP per allineare header/footer dopo audit -->
