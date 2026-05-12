@@ -94,7 +94,7 @@ servizi:
     url: "/abili-a-proteggere/"
     icona: "bi-universal-access"
     classe_icona: "si-blue"
-    descrizione: "Attività accessibili per persone con disabilità cognitive, anziani e bambini fragili. 20 mini-giochi con attestato."
+    descrizione: "Attività accessibili per persone con disabilità cognitive, anziani e bambini fragili. Mini-giochi educativi con attestato di partecipazione."
     azione: "Apri attività"
 
   - titolo: "Area Download"
