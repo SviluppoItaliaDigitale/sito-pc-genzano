@@ -654,6 +654,130 @@ html.a11y-contrast-invert .a11y-fab,
 html.a11y-contrast-invert .a11y-dialog,
 html.a11y-contrast-invert .a11y-dialog * { /* niente override aggressivo */ }
 
+/* ── Contrasto Giallo su nero — Sera 3 (12 maggio 2026) ──
+   Stile "High Contrast Black" di Windows: sfondo nero, testo giallo
+   (#ffff00), link ciano (#00ffff). Contrast ratio giallo/nero = 19.6:1,
+   ciano/nero = 16.5:1 (entrambi WCAG AAA con larghissimo margine).
+   Approccio: override esplicito per body, intestazioni, paragrafi,
+   form input, card, alert, hero-section. Niente `filter: invert(1)`
+   (che ribalterebbe immagini e logo). Le icone Bootstrap restano
+   bianche o seguono colore corrente, quindi diventano gialle.
+   Form input: bordi visibili 2px gialli, sfondo nero.
+   Hero blu e banner colorati: override esplicito a nero+giallo per
+   coerenza visiva e leggibilità. */
+html.a11y-contrast-yellow-black body,
+html.a11y-contrast-yellow-black main { background: #000 !important; color: #ffff00 !important; }
+html.a11y-contrast-yellow-black h1,
+html.a11y-contrast-yellow-black h2,
+html.a11y-contrast-yellow-black h3,
+html.a11y-contrast-yellow-black h4,
+html.a11y-contrast-yellow-black h5,
+html.a11y-contrast-yellow-black h6,
+html.a11y-contrast-yellow-black p,
+html.a11y-contrast-yellow-black li,
+html.a11y-contrast-yellow-black td,
+html.a11y-contrast-yellow-black th,
+html.a11y-contrast-yellow-black span,
+html.a11y-contrast-yellow-black strong,
+html.a11y-contrast-yellow-black em { color: #ffff00 !important; }
+html.a11y-contrast-yellow-black a,
+html.a11y-contrast-yellow-black a:visited { color: #00ffff !important; text-decoration: underline !important; }
+html.a11y-contrast-yellow-black .card,
+html.a11y-contrast-yellow-black .alert,
+html.a11y-contrast-yellow-black .servizi-section,
+html.a11y-contrast-yellow-black .notizie-section,
+html.a11y-contrast-yellow-black .card-body,
+html.a11y-contrast-yellow-black .quick-action-card,
+html.a11y-contrast-yellow-black .card-servizio,
+html.a11y-contrast-yellow-black .card-numero-utile,
+html.a11y-contrast-yellow-black .card-rischio,
+html.a11y-contrast-yellow-black .link-card,
+html.a11y-contrast-yellow-black .stat-hero-item,
+html.a11y-contrast-yellow-black .hero-section,
+html.a11y-contrast-yellow-black .mini-hero,
+html.a11y-contrast-yellow-black .emergency-banner,
+html.a11y-contrast-yellow-black .it-footer-main,
+html.a11y-contrast-yellow-black .it-footer-small-prints {
+  background: #000 !important;
+  background-color: #000 !important;
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+/* Form input: contorno giallo, sfondo nero, testo giallo. Cursore
+   visibile su entrambi i fondi. */
+html.a11y-contrast-yellow-black input,
+html.a11y-contrast-yellow-black textarea,
+html.a11y-contrast-yellow-black select,
+html.a11y-contrast-yellow-black button:not(.a11y-fab):not(.a11y-seg):not(.a11y-toggle):not(.a11y-close):not(.a11y-btn) {
+  background: #000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+}
+html.a11y-contrast-yellow-black input::placeholder,
+html.a11y-contrast-yellow-black textarea::placeholder { color: #cccc00 !important; }
+/* Lascia inalterati FAB e dialog di accessibilità (sono contrastati per design). */
+html.a11y-contrast-yellow-black .a11y-fab,
+html.a11y-contrast-yellow-black .a11y-dialog,
+html.a11y-contrast-yellow-black .a11y-dialog * { /* niente override */ }
+
+/* ── Contrasto Blu su crema — Sera 3 (12 maggio 2026) ──
+   Stile "BBC My Web My Way": sfondo crema #fdf6e3, testo blu istituzionale
+   #003a78 (contrast 9.8:1 vs crema, WCAG AAA). Variante adatta a utenti
+   con dislessia o ipovisione che trovano stancante il bianco puro ma
+   vogliono comunque alto contrasto + leggibilità lunga. Link in blu
+   navy più scuro #00224e (~14:1) per distinguibilità. */
+html.a11y-contrast-blue-cream body,
+html.a11y-contrast-blue-cream main { background: #fdf6e3 !important; color: #003a78 !important; }
+html.a11y-contrast-blue-cream h1,
+html.a11y-contrast-blue-cream h2,
+html.a11y-contrast-blue-cream h3,
+html.a11y-contrast-blue-cream h4,
+html.a11y-contrast-blue-cream h5,
+html.a11y-contrast-blue-cream h6,
+html.a11y-contrast-blue-cream p,
+html.a11y-contrast-blue-cream li,
+html.a11y-contrast-blue-cream td,
+html.a11y-contrast-blue-cream th,
+html.a11y-contrast-blue-cream span,
+html.a11y-contrast-blue-cream strong,
+html.a11y-contrast-blue-cream em { color: #003a78 !important; }
+html.a11y-contrast-blue-cream a,
+html.a11y-contrast-blue-cream a:visited { color: #00224e !important; text-decoration: underline !important; }
+html.a11y-contrast-blue-cream .card,
+html.a11y-contrast-blue-cream .alert,
+html.a11y-contrast-blue-cream .servizi-section,
+html.a11y-contrast-blue-cream .notizie-section,
+html.a11y-contrast-blue-cream .card-body,
+html.a11y-contrast-blue-cream .quick-action-card,
+html.a11y-contrast-blue-cream .card-servizio,
+html.a11y-contrast-blue-cream .card-numero-utile,
+html.a11y-contrast-blue-cream .card-rischio,
+html.a11y-contrast-blue-cream .link-card,
+html.a11y-contrast-blue-cream .stat-hero-item,
+html.a11y-contrast-blue-cream .hero-section,
+html.a11y-contrast-blue-cream .mini-hero,
+html.a11y-contrast-blue-cream .emergency-banner,
+html.a11y-contrast-blue-cream .it-footer-main,
+html.a11y-contrast-blue-cream .it-footer-small-prints {
+  background: #fdf6e3 !important;
+  background-color: #fdf6e3 !important;
+  color: #003a78 !important;
+  border-color: #003a78 !important;
+}
+html.a11y-contrast-blue-cream input,
+html.a11y-contrast-blue-cream textarea,
+html.a11y-contrast-blue-cream select,
+html.a11y-contrast-blue-cream button:not(.a11y-fab):not(.a11y-seg):not(.a11y-toggle):not(.a11y-close):not(.a11y-btn) {
+  background: #fffaf0 !important;
+  color: #003a78 !important;
+  border: 2px solid #003a78 !important;
+}
+html.a11y-contrast-blue-cream input::placeholder,
+html.a11y-contrast-blue-cream textarea::placeholder { color: #6b7a9c !important; }
+html.a11y-contrast-blue-cream .a11y-fab,
+html.a11y-contrast-blue-cream .a11y-dialog,
+html.a11y-contrast-blue-cream .a11y-dialog * { /* niente override */ }
+
 /* ── Scala di grigi ── */
 html.a11y-grayscale { filter: grayscale(1); }
 /* Eccezione: il dialog di accessibilità deve restare in colori vivi
