@@ -205,6 +205,43 @@ Lo script `scripts/auto-cover-mancanti.py` agisce così:
 2. **Cover tipografica istituzionale** (gradiente blu + titolo, generata automaticamente)
 3. **Default SVG** (`images/notizia-default.svg`) — solo come fallback estremo se anche cover tipografica fallisce
 
+## File stantii su Aruba — strategia cache-bust dopo modifiche al chrome
+
+⚠️ **Problema noto del deploy FTP** (`dangerous-clean-slate: false`): l'azione `SamKirkland/FTP-Deploy-Action@v4.3.5` configurata in `deploy.yml` carica **solo i file modificati** rispetto a quelli già su Aruba (confronto per dimensione + timestamp). Conseguenza: se Hugo rigenera un HTML ma il contenuto rispetto al file su Aruba è bytewise identico (raro ma possibile), il file non viene ricaricato.
+
+**Caso patologico più frequente — refactoring del chrome** (`partials/navbar.html`, `partials/footer.html`, `partials/utility-bar.html`, `partials/slim-header.html`, `_default/baseof.html`): tutti gli HTML del sito hanno il chrome cambiato → Hugo li rigenera → FTP dovrebbe caricarli tutti. **Ma** se in quel periodo ci sono **deploy falliti consecutivi** (build error), gli HTML restano stantii su Aruba per ore o giorni. Quando il deploy si sblocca, alcuni file potrebbero non essere ri-caricati (timestamp identico, contenuto leggermente diverso → FTP li ignora).
+
+**Storia incidente 12 maggio 2026**: 4 deploy falliti per il bug `_build`/`build` del frontmatter (PR #186/#188/#190) hanno bloccato l'upload per ~7 ore. Le pagine `/cosa-fare-adesso/`, `/formazione/`, `/comunicazioni/`, `/accessibilita/` su Aruba mostravano un header "Versione B/C" piatto risalente al deploy del 18 aprile 2026 (header pre-refactoring del 10 maggio), mentre altre pagine (`/`, `/glossario/`, `/abili-a-proteggere/`, articoli) avevano già l'header canonico "Versione A". PR #191 (sha `dfe5e19`) ha sbloccato il deploy → tutti gli HTML allineati.
+
+### Strategia cache-bust raccomandata
+
+Quando modifichi **un partial del chrome** (`navbar.html`, `footer.html`, `slim-header.html`, `utility-bar.html`, `baseof.html`), nello **stesso PR** aggiungi un commento cache-bust nei `_index.md` delle sezioni principali per forzare la rigenerazione "evidente" lato Hugo + il re-upload FTP:
+
+```markdown
+<!-- cache-bust: AAAA-MM-GG forza re-upload FTP per allineare header/footer -->
+```
+
+Sezioni da toccare (in ordine di importanza, le ho gerarchizzate dal più al meno frequentate):
+
+1. `content/comunicazioni/_index.md` (archivio principale)
+2. `content/cosa-fare-adesso/_index.md` (pagina critica emergenza)
+3. `content/formazione/_index.md`
+4. `content/rischi-prevenzione/_index.md` (hub rischi)
+5. `content/accessibilita/_index.md` (pagina legale)
+6. `content/contatti/_index.md`
+
+Il commento HTML in fondo al frontmatter cambia per ogni cache-bust diverso (nuova data), Hugo lo rigenera, il timestamp/dimensione cambia, FTP lo riconosce come "diverso" → upload forzato.
+
+**Riferimento storico**: PR #187 (12 maggio 2026 — "Cache-bust: forza re-upload FTP indici sezione per audit header/footer") ha applicato questa strategia per la prima volta dopo l'incidente del menu refactoring. Pattern adottato come **convenzione stabile**.
+
+### Detection: il workflow audit-sito.yml controlla la coerenza Last-Modified
+
+Da maggio 2026, `audit-sito.yml` ha una sezione (sezione 43 — "Stale FTP files detection") che ogni lunedì 09:00 UTC fa `curl -I` su un campione di 8 pagine Hugo critiche, estrae `Last-Modified` HTTP, e lo confronta col timestamp dell'ultimo deploy `success` recuperato via API GitHub. Soglia di tolleranza: 2 ore (il deploy FTP impiega ~10-15 minuti; 2h copre eventuali ritardi senza falsi positivi).
+
+Se anche una sola pagina ha `Last-Modified` più vecchio della soglia, apre/aggiorna l'issue settimanale di audit con sezione dedicata. Il fix è applicare cache-bust come descritto sopra + rilanciare deploy.
+
+**Eccezione**: le pagine HTML statiche sotto `static/` (es. `/abili-a-proteggere/`, `/giochi/`, `/quizpc/`, `/formazionepc/`, kit-calamita stampabili) hanno l'header iniettato lato client da `static/app-shared/site-chrome.js`. Il loro `Last-Modified` HTML può essere vecchio senza che sia un bug: il chrome JavaScript si aggiorna automaticamente al caricamento. NON vanno incluse nel check Last-Modified delle pagine Hugo.
+
 ## Verifica prima del push
 
 Prima di fare push su `main`, verifica sempre:
