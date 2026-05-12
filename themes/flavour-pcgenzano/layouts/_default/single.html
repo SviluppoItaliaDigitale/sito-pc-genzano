@@ -66,6 +66,12 @@
       {{ end }}
       {{ end }}
 
+      {{/* ── BANNER VERSIONE FACILE DA LEGGERE (Punto 16 roadmap) ──
+           Mostra link alla versione facile/standard se il frontmatter
+           contiene `versione_facile` o `versione_facile_di`.
+           Specifiche: manuale/parte-25-italiano-l2-versione-facile.md */}}
+      {{ partial "versione-facile-toggle.html" . }}
+
       {{/* ── INDICE DELLA PAGINA (frontmatter: toc: true) ── */}}
       {{ if .Params.toc }}
       <div id="indice" class="article-toc mb-4" tabindex="-1" aria-label="Indice della pagina">
