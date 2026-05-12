@@ -12,6 +12,10 @@ area: "Lazio"
 allegati: []
 versione_facile_di: "2026-05-12-iso-22324-codici-colore-allerta"
 draft: false
+_build:
+  list: never
+  render: always
+  publishResources: true
 ---
 
 I bollettini di allerta usano quattro colori.
