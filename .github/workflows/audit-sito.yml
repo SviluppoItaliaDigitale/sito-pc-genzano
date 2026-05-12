@@ -634,10 +634,10 @@ jobs:
                    .claude/rules/10-automazioni-github-actions.md; do
             [ -f "$f" ] || GOV_MISSING="${GOV_MISSING}- \`$f\`\n"
           done
-          # Verifica anche che le 27 parti del manuale esistano (parte-00 a parte-26).
+          # Verifica anche che le 28 parti del manuale esistano (parte-00 a parte-27).
           # Aggiornare il range quando si aggiunge una Parte nuova al manuale split.
           MANUALE_PARTS_MISSING=""
-          for n in 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26; do
+          for n in 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27; do
             if ! ls manuale/parte-${n}-*.md >/dev/null 2>&1; then
               MANUALE_PARTS_MISSING="${MANUALE_PARTS_MISSING}- \`manuale/parte-${n}-*.md\` (mancante)\n"
             fi
@@ -646,7 +646,7 @@ jobs:
             err "File di governance/manuale mancanti:"
             printf "%b" "$GOV_MISSING$MANUALE_PARTS_MISSING" >> "$REPORT"
           else
-            ok "Tutti i file di governance presenti (15 file root + 27 parti del manuale)."
+            ok "Tutti i file di governance presenti (15 file root + 28 parti del manuale)."
           fi
 
           # ----------------------------------------------------------------
