@@ -3100,6 +3100,36 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
 }
 
 /* ============================================================
+   SCARICA VERSIONE BRAILLE (BRF) — Punto 19 roadmap, Sera 3 (v1.0)
+   Bottone presente sopra il corpo degli articoli /comunicazioni/.
+   Stesso pattern visivo del bottone "Leggi ad alta voce" (TTS) per
+   coerenza: btn-outline-primary btn-sm + frase di contesto piccola.
+   Specifiche complete: manuale/parte-24-output-braille-articoli.md
+   ============================================================ */
+.braille-download {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+.braille-download .btn {
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+}
+.braille-download .braille-download-hint {
+  font-size: 0.78rem;
+  line-height: 1.35;
+  max-width: 60ch;
+}
+/* In modalità lettura il bottone va su sfondo crema:
+   `.btn-outline-primary` di Bootstrap-Italia ha già `color: var(--bs-primary)`
+   + `background: transparent` → resta leggibile (#003366 su crema = 11.6:1, AAA).
+   Niente override esplicito necessario. */
+@media print {
+  .braille-download { display: none !important; }
+}
+
+/* ============================================================
    TTS FALLBACK — messaggio "lettura vocale non disponibile" (v1.0)
    Visualizzato quando il browser implementa speechSynthesis come
    stub (Tor Browser, LibreWolf, Brave con scudo massimo) e

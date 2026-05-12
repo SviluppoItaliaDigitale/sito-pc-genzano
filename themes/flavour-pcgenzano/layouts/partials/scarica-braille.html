@@ -1,0 +1,39 @@
+{{/* Partial: scarica-braille (Punto 19 roadmap, Sera 3 — maggio 2026)
+
+     Bottone "Scarica versione braille" mostrato sopra il corpo degli
+     articoli di /comunicazioni/. Il file .brf è generato dal workflow
+     deploy.yml prima del build Hugo (vedi step "Genera versioni
+     Braille") e finisce in static/braille/comunicazioni/<slug>.brf.
+     Hugo lo copia in public/braille/... al build.
+
+     Robustezza: usiamo `os.FileExists` (alias `fileExists`) per
+     mostrare il bottone SOLO se il .brf esiste davvero in static/.
+     In dev locale dove l'autore non ha lanciato genera-braille.py,
+     il bottone resta nascosto invece di puntare a un 404. Su CI
+     dopo lo step di generazione tutti gli articoli pubblicati hanno
+     il loro .brf, quindi il bottone è sempre visibile in produzione.
+
+     Tabella di traduzione: it-it-comp6.utb (braille italiano 6 punti
+     standard, ASCII output). Specifiche complete:
+     manuale/parte-24-output-braille-articoli.md */}}
+
+{{- if eq .Section "comunicazioni" -}}
+  {{- $slug := .File.BaseFileName -}}
+  {{- $brfStaticPath := printf "static/braille/comunicazioni/%s.brf" $slug -}}
+  {{- if fileExists $brfStaticPath -}}
+    {{- $brfURL := printf "/braille/comunicazioni/%s.brf" $slug -}}
+    <div class="braille-download mb-3" role="region" aria-label="Versione braille dell'articolo">
+      <a href="{{ $brfURL | relURL }}"
+         download="{{ $slug }}.brf"
+         class="btn btn-outline-primary btn-sm"
+         aria-label="Scarica la versione braille di questo articolo (formato BRF, italiano 6 punti)">
+        <i class="bi bi-download me-2" aria-hidden="true"></i>
+        <span>Scarica versione braille</span>
+        <span class="visually-hidden">— file BRF, Braille Ready Format, italiano 6 punti standard, per display e stampanti braille</span>
+      </a>
+      <p class="braille-download-hint small text-muted mt-1 mb-0">
+        Per <strong>display braille</strong> e <strong>stampanti braille</strong>. Formato BRF (ASCII puro), italiano 6 punti standard.
+      </p>
+    </div>
+  {{- end -}}
+{{- end -}}
