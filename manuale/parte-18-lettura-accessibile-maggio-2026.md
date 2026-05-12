@@ -427,4 +427,74 @@ il testo le scrive così), (e) il build Hugo sia stato rilanciato.
 
 ---
 
+### 18.18 Modalità lettura (Sera 2/3 — maggio 2026)
+
+Sotto la sezione "Testo" del pannello Strumenti di accessibilità c'è un
+toggle **"Modalità lettura"** che applica in un click una serie di
+preferenze tipografiche pensate per ridurre la fatica visiva nelle
+letture lunghe:
+
+- sfondo **crema** `#fdf6e3` (riposante, evita il bagliore del bianco puro);
+- **`max-width: 65 ch`** sul corpo articolo (riga di lettura ottimale
+  ~60-75 caratteri, criterio AGID/Bringhurst);
+- **`text-align: left`** forzato (sovrascrive eventuale giustificato che
+  crea "fiumi di bianco" per chi ha dislessia);
+- line-height aumentato a 1.85, letter-spacing 0.02em;
+- se il **Tipo carattere** era impostato a "Predefinito", viene alzato
+  automaticamente a "Alta leggibilità" (Verdana/Tahoma) per coerenza —
+  la modalità lettura nasce per ridurre la fatica visiva e il sans-serif
+  comune è meno adatto. Se l'utente aveva già scelto "Per dislessia
+  (OpenDyslexic)", la sua scelta viene rispettata.
+
+**Contrasto risultante:** crema `#fdf6e3` + testo scuro `#1a1a1a` =
+14:1 → WCAG AAA con largo margine.
+
+**Scope CSS:**
+La crema si applica a `body`, `main`, e a un elenco esplicito di
+classi del tema: `.servizi-section`, `.notizie-section`, `.card`,
+`.card-body`, `.quick-action-card`, `.card-servizio`, `.card-notizia-hero`,
+`.card-numero-utile`, `.card-rischio`, `.link-card`, `.stat-hero-item`,
+`.bg-light`, `.bg-white`. **Niente selettori generici** tipo
+`section:not(.hero-section)` perché catturerebbero anche la `<section>`
+interna al `<footer>` (incidente del 12 maggio 2026, vedi commit
+8c7cd06 e PR #179 — bug "footer blu illeggibile in modalità lettura").
+Le "isole istituzionali" (hero blu, banner allerta, banner emergenza,
+navbar, footer blu) restano col loro colore di brand per cascade
+naturale.
+
+**`@media print`:** override esteso a body + main + tutte le classi
+sopra → sfondo bianco in stampa, niente crema sul PDF. I
+kit-calamita stampabili (`static/formazione/kit-calamita-*/`)
+non sono toccati perché non caricano `a11y-toolbar.css`.
+
+**Tipo carattere** (segmented "Predefinito / Alta leggibilità / Per dislessia"):
+il vecchio toggle bool `readableFont` è stato sostituito con la pref
+`fontFamily` a tre valori. La migrazione legacy è automatica in
+`load()`: chi aveva `readableFont:true` viene mappato a
+`fontFamily:'readable'` alla prima visita post-deploy e il vecchio
+campo viene rimosso al primo save. La classe `a11y-readable-font` e
+`a11y-dyslexic-font` sono **mutuamente esclusive** lato JS
+(`applyState()` applica una sola fra le due, mai entrambe).
+
+**Velocità lettura ad alta voce nella toolbar (Sera 1):**
+oltre alla pill velocità accanto al bottone "Leggi ad alta voce",
+c'è ora un segmented dedicato dentro il dialog toolbar (sezione
+"Lettura ad alta voce"). I due controlli sono sincronizzati
+bidirezionalmente via `CustomEvent('pcgenzano:tts-rate-change')` su
+`window` + guard `ttsRateSyncing` / `rateSyncing` su entrambi i lati
+per evitare loop di echo. Chiave storage condivisa: `pcgenzano-tts-rate`.
+
+**Contrasto a 5 varianti (Sera 3):**
+predefinito / alto (nero su bianco) / invertito (bianco su nero) /
+**giallo su nero** (stile Windows HC Black, contrast 19.6:1) /
+**blu su crema** (stile BBC My Web My Way, contrast 9.8:1). Le ultime
+due sono pensate per utenti con ipovisione (giallo/nero) e con dislessia
+o stancabilità visiva (blu/crema). Approccio: niente `filter: invert(1)`
+(ribalterebbe immagini e logo), tutto via override esplicito su body,
+intestazioni, form input, card, hero, banner. Hero blu e banner colorati
+vengono **ridipinti** per coerenza visiva quando il contrasto avanzato
+è attivo (a differenza della Modalità lettura crema dove restano blu).
+
+---
+
 _[Indice manuale](README.md)_

@@ -82,17 +82,30 @@ Documentazione completa: `MANUALE-SITO.md` Parte 3.16.
 
 ## Strumenti di Accessibilità (toolbar utente)
 
-Il sito ha un **toolbar di accessibilità** nativo, presente su tutte le pagine come bottone rotondo blu (FAB) in basso a sinistra. Apre un dialog con preferenze di lettura: dimensione testo (livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande, **nascondi pulsanti flottanti** (Assistente virtuale + SOS 112, utile da mobile dove possono coprire il testo). Le preferenze sono salvate in `localStorage` e applicate come classi `html.a11y-*`.
+Il sito ha un **toolbar di accessibilità** nativo, presente su tutte le pagine come bottone rotondo blu (FAB) in basso a sinistra. Apre un dialog con preferenze di lettura:
 
-Per la struttura dei file, le regole di estensione e i divieti operativi vedi `04b-hugo-template-css.md` sezione "Strumenti di Accessibilità".
+- **Testo**: dimensione (4 livelli 100/110/125/150%), allineamento (predefinito/sinistra/giustificato), **Tipo carattere** (segmented a 3 valori: Predefinito / Alta leggibilità Verdana-Tahoma / Per dislessia OpenDyslexic self-hosted SIL OFL 1.1), spaziatura ampia, **Modalità lettura** (macro-toggle: sfondo crema #fdf6e3 + max-width 65ch + align-left + spaziatura).
+- **Visivo**: **Contrasto** segmented a **5 valori** (Predefinito / Alto nero-su-bianco / Invertito bianco-su-nero / Giallo-su-nero stile Windows HC Black / Blu-su-crema stile BBC My Web My Way), scala di grigi, nascondi immagini decorative, pausa animazioni.
+- **Orientamento**: evidenzia link, cursore grande.
+- **Lettura ad alta voce**: velocità (segmented Lenta 0.75x / Normale 0.95x / Veloce 1.15x) — sincronizzata bidirezionalmente con la pill inline accanto al bottone "Leggi ad alta voce" via `CustomEvent('pcgenzano:tts-rate-change')` su `window`, chiave storage condivisa `pcgenzano-tts-rate`.
+- **Pulsanti flottanti**: nascondi Assistente virtuale / SOS 112 / selettore lingua (utile da mobile dove possono coprire il testo).
+
+Le preferenze sono salvate in `localStorage` chiave `pcgenzano-a11y-prefs` (tranne `ttsRate` che vive nella chiave dedicata `pcgenzano-tts-rate`) e applicate come classi `html.a11y-*`. C'è anche un **inline early-script** in `baseof.html` che applica le pref pre-paint per evitare FOUC.
+
+**Pref `fontFamily` (sostituisce il vecchio bool `readableFont`):** tre valori `default` / `readable` / `dyslexic`. Migrazione legacy automatica in `load()`: chi aveva `readableFont:true` viene mappato a `fontFamily:'readable'` alla prima visita e il vecchio campo rimosso al primo save. Le classi `a11y-readable-font` e `a11y-dyslexic-font` sono **mutuamente esclusive** lato JS — mai applicate insieme su `<html>`.
+
+Per la struttura dei file, le regole di estensione e i divieti operativi vedi `04b-hugo-template-css.md` sezione "Strumenti di Accessibilità". Documentazione operativa completa: `manuale/parte-18-lettura-accessibile-maggio-2026.md` § 18.18 "Modalità lettura".
 
 **Principio:** il toolbar è uno strumento di **preferenze utente** sopra a un sito **già conforme WCAG 2.2 AA**. Non sostituisce l'accessibilità nativa: la integra. **Non è un overlay commerciale** (tipo AccessiBe, UserWay, Equally AI), che il W3C-WAI e le associazioni delle persone con disabilità sconsigliano perché mascherano problemi invece di risolverli.
 
 **Regole operative:**
 
-- Quando si modifica un componente del sito, controllare che funzioni anche con il toolbar attivo: in particolare con **contrasto invertito** (sfondo nero, testo bianco), **scala di grigi**, **immagini nascoste** e **pausa animazioni**.
+- Quando si modifica un componente del sito, controllare che funzioni anche con il toolbar attivo: in particolare con **contrasto invertito** (sfondo nero, testo bianco), **giallo-su-nero**, **blu-su-crema**, **modalità lettura**, **scala di grigi**, **immagini nascoste** e **pausa animazioni**.
 - Le icone funzionali (Bootstrap Icons) restano visibili anche con "Nascondi immagini" attivo: solo `<img>`, `<picture>`, `<video>`, `<iframe>` e SVG decorativi sono nascosti.
 - Il FAB ha posizione **bottom-left** per non collidere con `back-to-top` (right) né con `sos-112` (right su mobile). Mantenere questa convenzione.
+- **`a11y-reading-mode`** (Modalità lettura): la crema si applica **solo** a `body`, `main` e a un elenco esplicito di classi del tema (`.servizi-section`, `.notizie-section`, `.card*`, `.quick-action-card`, `.stat-hero-item`, `.bg-light`, `.bg-white`). **VIETATO usare selettori generici** tipo `section:not(.hero-section)` perché catturano anche la `<section>` interna al `<footer>` e rompono il colore di brand del footer (incidente 12 maggio 2026, PR #179). Per estendere a una nuova sezione, aggiungere classe **esplicita**.
+- **`a11y-contrast-yellow-black` e `a11y-contrast-blue-cream`** (varianti contrasto avanzate): applicano override esplicito su body + intestazioni + form input + card + hero + banner + footer (ridipinti in coppia colore per coerenza visiva). **Niente `filter: invert(1)`** che ribalterebbe immagini e logo.
+- Per i contrasti, mai usare `html.a11y-reading-mode body { color: ... !important }` o regole `color` su `body` globale: ribaltano il testo bianco delle "isole brand" (footer blu, hero blu, banner colorati). Il colore del testo va applicato **solo** dove anche lo sfondo è ribaltato (coppia coerente).
 - La pagina pubblica `/accessibilita/` descrive il toolbar al cittadino e va tenuta allineata se si aggiungono o tolgono funzioni.
 
 ## TTS "Leggi ad alta voce" (Web Speech API)

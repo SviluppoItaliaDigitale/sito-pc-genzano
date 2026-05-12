@@ -113,11 +113,14 @@
 
       <div class="a11y-control">
         <span class="a11y-control-label" id="a11yLblContrast">Contrasto</span>
-        <div class="a11y-segments" role="radiogroup" aria-labelledby="a11yLblContrast">
+        <div class="a11y-segments a11y-segments-stack" role="radiogroup" aria-labelledby="a11yLblContrast">
           <button type="button" class="a11y-seg" data-pref="contrast" data-value="default" aria-pressed="true">Predefinito</button>
-          <button type="button" class="a11y-seg" data-pref="contrast" data-value="high" aria-pressed="false">Alto</button>
-          <button type="button" class="a11y-seg" data-pref="contrast" data-value="invert" aria-pressed="false">Invertito</button>
+          <button type="button" class="a11y-seg" data-pref="contrast" data-value="high" aria-pressed="false">Alto (nero su bianco)</button>
+          <button type="button" class="a11y-seg" data-pref="contrast" data-value="invert" aria-pressed="false">Invertito (bianco su nero)</button>
+          <button type="button" class="a11y-seg" data-pref="contrast" data-value="yellow-black" aria-pressed="false">Giallo su nero</button>
+          <button type="button" class="a11y-seg" data-pref="contrast" data-value="blue-cream" aria-pressed="false">Blu su crema</button>
         </div>
+        <p class="a11y-hint small text-muted mt-1 mb-0" style="font-size:0.78rem;">"Giallo su nero" è la modalità ad alto contrasto del sistema Windows; "Blu su crema" è la preferenza consigliata da BBC My Web My Way per molti utenti con dislessia o ipovisione.</p>
       </div>
 
       <button type="button" class="a11y-toggle" data-pref="grayscale" aria-pressed="false">

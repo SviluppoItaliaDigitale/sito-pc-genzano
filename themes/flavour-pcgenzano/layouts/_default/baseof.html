@@ -59,7 +59,10 @@
        max-width + align-left + spaziatura. Va applicata prima del
        primo paint per evitare il flash di "modalità non attiva". */
     if(p.readingMode)add('a11y-reading-mode');
-    if(p.contrast==='high')add('a11y-contrast-high');else if(p.contrast==='invert')add('a11y-contrast-invert');
+    if(p.contrast==='high')add('a11y-contrast-high');
+    else if(p.contrast==='invert')add('a11y-contrast-invert');
+    else if(p.contrast==='yellow-black')add('a11y-contrast-yellow-black');
+    else if(p.contrast==='blue-cream')add('a11y-contrast-blue-cream');
     if(p.grayscale)add('a11y-grayscale');
     if(p.hideImages)add('a11y-hide-images');
     if(p.pauseAnimations)add('a11y-pause-animations');

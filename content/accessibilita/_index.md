@@ -4,7 +4,7 @@ description: "Dichiarazione di accessibilità conforme al modello AGID. Stato di
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-10"
+dataUltimaRevisione: "2026-05-12"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
@@ -126,17 +126,19 @@ Il sito è progettato per facilitare la consultazione da computer, tablet e smar
 
 In ogni pagina, in basso a sinistra, trovi un pulsante rotondo blu con l'icona di accessibilità. Aprendo il pannello puoi:
 
-- ingrandire il testo;
-- cambiare l'allineamento dei paragrafi;
-- attivare un carattere ad alta leggibilità;
-- aumentare spaziatura di righe e lettere;
-- attivare contrasto alto o contrasto invertito;
+- ingrandire il testo (quattro livelli, fino al 150 per cento);
+- cambiare l'allineamento dei paragrafi (predefinito, a sinistra, giustificato);
+- scegliere il **tipo di carattere**: predefinito, ad alta leggibilità (Verdana/Tahoma), oppure **OpenDyslexic** (carattere disegnato per persone con dislessia, opzionale);
+- aumentare la spaziatura di righe e lettere;
+- attivare la **Modalità lettura**: sfondo crema, riga di lettura ottimale (65 caratteri), spaziatura aumentata, allineamento a sinistra forzato. Pensata per ridurre la fatica visiva nelle letture lunghe;
+- scegliere il **contrasto** tra cinque varianti: predefinito, alto (nero su bianco), invertito (bianco su nero), giallo su nero (stile Windows ad alto contrasto), blu su crema (stile BBC My Web My Way per dislessia e ipovisione);
+- regolare la **velocità della lettura ad alta voce** (lenta, normale, veloce) direttamente dal pannello — la scelta si applica subito al bottone "Leggi ad alta voce";
 - visualizzare il sito in scala di grigi;
-- nascondere immagini decorative;
+- nascondere le immagini decorative;
 - mettere in pausa le animazioni;
-- evidenziare i link;
+- evidenziare tutti i link;
 - attivare un cursore grande;
-- nascondere i pulsanti flottanti, se coprono il testo su telefono.
+- nascondere i pulsanti flottanti (Assistente virtuale, SOS 112, selettore lingua) se coprono il testo, soprattutto da telefono.
 
 Le preferenze restano salvate sul dispositivo. Puoi cancellarle con il pulsante **Reimposta tutto**.
 
