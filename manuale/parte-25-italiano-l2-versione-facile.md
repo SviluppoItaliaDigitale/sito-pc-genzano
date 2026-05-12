@@ -65,6 +65,10 @@ area: "Lazio"
 allegati: []
 versione_facile_di: "2026-05-12-iso-22324-codici-colore-allerta"
 draft: false
+_build:
+  list: never
+  render: always
+  publishResources: true
 ---
 ```
 
@@ -72,6 +76,7 @@ draft: false
 - `image: ""` sulla versione facile → Hugo genererà automaticamente una cover tipografica (vedi regola progetto sul banner). Mai una foto utente.
 - `date` della versione facile: usare lo **stesso giorno** della versione completa con orario leggermente posteriore (`T00:03` vs `T00:02`) per mantenere l'ordering cronologico Hugo.
 - `description`: indicare chiaramente che è la **versione semplificata**.
+- **`_build.list = never` OBBLIGATORIO** (vedi § 25.11 sotto).
 
 ## 25.4 Bottone toggle (automatico via partial)
 
@@ -153,7 +158,39 @@ Come riferimento operativo, c'è una versione facile completa del primo articolo
 3. **Multilingua sulla versione facile**: per ora solo italiano A2. Versioni inglese / arabo / rumeno / cinese semplificate sono fuori scope (esisterebbe la traduzione automatica di Chrome/iOS).
 4. **Toggle "Mostra entrambe affiancate"** (split-view): l'utente sceglie una versione e legge solo quella. Niente UI complessa.
 
-## 25.10 Riferimenti
+## 25.11 Hide dalle liste — `_build.list = never` OBBLIGATORIO
+
+Da 12 maggio 2026 (revisione richiesta dall'utente dopo prima pubblicazione P16) **ogni file `<slug>-facile.md` deve avere `_build.list: never` nel frontmatter**. Senza questa regola la versione facile compariva in homepage come "ultima notizia" doppia, nell'archivio `/comunicazioni/`, nella pagina `/podcast/`, nel feed RSS e nell'indice di ricerca — confondendo gli utenti che si trovavano due card praticamente identiche.
+
+Sintassi Hugo moderna `_build` (espressiva):
+
+```yaml
+_build:
+  list: never              # esclusa da homepage, archivio, RSS, sitemap,
+                           # podcast list, articoli correlati, index.json
+  render: always           # ma resta renderizzata come pagina HTML
+                           # accessibile via URL diretto
+  publishResources: true   # gli asset Page Resources sono comunque pubblicati
+```
+
+(La sintassi legacy `list: false` / `render: true` funziona ancora come alias, ma per chiarezza usa la forma moderna `never` / `always`.)
+
+**Cosa esclude `_build.list: never`:**
+- `where .Site.RegularPages "..."` → niente più in homepage `partials/latest-news.html`
+- `.Site.AllPages` → niente più in `index.json` di ricerca, sitemap.xml, RSS feed di sezione
+- `articoli-correlati.html` (legge da `.Site.RegularPages`) → niente più nei correlati
+- `podcast/list.html` (filtra da `.Site.RegularPages`) → niente più in /podcast/
+
+**Cosa resta funzionante:**
+- URL diretto `/comunicazioni/<slug>-facile/` → HTML renderizzato (perché `render: always`)
+- Bottone "Leggi in italiano semplice" sull'articolo madre (lo costruisce il partial `versione-facile-toggle.html` leggendo `Params.versione_facile`, non `Site.Pages`)
+- Bottone "Torna alla versione completa" sulla versione facile (legge dal proprio frontmatter `versione_facile_di`)
+
+**Risultato netto:** la versione facile è raggiungibile **solo** dall'articolo madre. Non appare in nessuna lista pubblica. Esattamente il comportamento richiesto.
+
+**Storia del fix:** il 12 maggio 2026 la versione facile dell'articolo ISO 22324 era apparsa come card "ultima notizia" in homepage. PR #186 (frontmatter `_build.list: never`) + PR #187 (cache-bust FTP) + PR #188 (filtro esplicito nei template) hanno risolto il bug. Da allora la convenzione è **obbligatoria** per qualunque file `*-facile.md` futuro.
+
+## 25.12 Riferimenti
 
 - **CEFR (Quadro Comune Europeo di Riferimento per le Lingue)** — Consiglio d'Europa: <https://www.coe.int/en/web/common-european-framework-reference-languages/>
 - **Italiano L2 A2** — descrittori ufficiali: comprensione di frasi e parole frequenti su famiglia, lavoro, ambiente immediato. Lettura di testi brevi con vocabolario ad alta frequenza.
