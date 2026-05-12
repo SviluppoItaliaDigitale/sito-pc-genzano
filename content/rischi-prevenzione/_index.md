@@ -77,3 +77,5 @@ Tutti gli articoli su rischi e prevenzione sono filtrabili nell'[archivio delle 
 - [Piano di emergenza](/piano-emergenza/) — aree e procedure comunali
 - [Piano familiare](/piano-familiare/) — organizzare la famiglia prima dell'emergenza
 - [Numeri utili](/numeri-utili/) — recapiti essenziali
+
+<!-- cache-bust: 2026-05-12 forza re-upload FTP per allineare header/footer dopo audit -->

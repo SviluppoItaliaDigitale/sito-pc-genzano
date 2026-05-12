@@ -251,3 +251,5 @@ Ai sensi dell'art. 3-quinquies della Legge 9 gennaio 2004 n. 4, in caso di rispo
 - [Facile da leggere](/facile-da-leggere/) — istruzioni essenziali in linguaggio semplice
 - [Glossario](/glossario/) — sigle e termini tecnici spiegati
 - [Strumenti in tempo reale](/strumenti/) — servizi esterni e fonti di consultazione
+
+<!-- cache-bust: 2026-05-12 forza re-upload FTP per allineare header/footer dopo audit -->
