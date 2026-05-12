@@ -458,13 +458,19 @@ html.a11y-spacing .article-body p { margin-bottom: 2em !important; }
    fuori da Hugo, includono solo print.css proprio). */
 html.a11y-reading-mode body {
   background: #fdf6e3 !important;
-  color: #1a1a1a !important;
 }
 /* Anche `main` esplicitamente crema, perché in alcuni layout ha
    background bianco proprio che vincerebbe su body. */
 html.a11y-reading-mode main {
   background: #fdf6e3 !important;
 }
+/* IMPORTANTE — il `color` NON viene forzato su body globale.
+   Una versione precedente di questa regola applicava
+   `color: #1a1a1a !important` a tutto body, ma ribaltava il testo
+   bianco del footer blu istituzionale (.it-footer-main) e di altri
+   elementi "isole brand" che hanno testo bianco esplicito su sfondo
+   scuro proprio. Il colore scuro viene applicato SOLO ai figli delle
+   card crema dal blocco "FIX CONTRASTO" più sotto, dove serve. */
 /* SEZIONI E CARD CHE COPRONO LA PAGINA — fix urgente 12 maggio 2026.
    Senza queste regole, sulla homepage si vede tutto bianco perché:
    - `.servizi-section` ha `background: var(--pc-light-bg)` esplicito
