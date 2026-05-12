@@ -353,6 +353,31 @@ Le 7 pagine `/rischi-prevenzione/*` (sismico, idrogeologico, incendio, vento, te
 
 L'ordine fisso permette al cittadino in stress (e allo screen reader user) di **navigare prevedibilmente** tra le 7 pagine: trova sempre le stesse sezioni nello stesso ordine. Coerenza WCAG 3.2.3 (Consistent Navigation) e 3.2.4 (Consistent Identification) applicate al contenuto.
 
+## Output Braille-ready (BRF) per gli articoli
+
+Da maggio 2026 (Punto 19 della roadmap) il sito genera automaticamente una versione **BRF** (Braille Ready Format) ASCII di ogni articolo pubblicato in `content/comunicazioni/`. Apre un canale di comunicazione **vero** verso ciechi e ipovedenti, complementare allo screen reader: file scaricabile, portabile, stampabile su carta braille con stampanti Index/ViewPlus/Tiger Cub. UICI Roma e Biblioteca Italiana per Ciechi di Monza leggono nativamente questo formato.
+
+**Stato attuale (Sera 1, 12 maggio 2026):** script Python `scripts/genera-braille.py` standalone, eseguibile in locale, idempotente. Sere 2-3 (integrazione `deploy.yml` + bottone download UI) pianificate.
+
+**Stack tecnico:**
+- Libreria: **liblouis** (open source, raccomandata W3C-WAI per traduzione braille). Binding Python ufficiale `python3-louis`.
+- Tabella: **`it-it-comp6.utb`** (braille italiano 6 punti standard, output ASCII puro). NOTA: `it-it-g1.utb` citata in molta documentazione internazionale NON esiste in liblouis upstream — la canonica italiana è comp6 (corrisponde di fatto al "Grade 1 italiano uncontracted"). Per testi tecnici computer 8 punti esiste `it-it-comp8.utb` ma produce Unicode (non ASCII), inadatto a BRF.
+- Standard: **ICEB** (International Council on English Braille) per BRF/embosser conventions. Line width 40 celle, page length 25 righe, form-feed `0x0C` tra pagine, numero pagina formato `#N`.
+
+**Preprocessing Markdown** gestito dallo script (vedi `manuale/parte-24-output-braille-articoli.md` per dettagli):
+- Shortcode `foto` / `pittogramma` / `cosa-non-fare` / `chi-chiamare` → testo equivalente preservando alt + caption.
+- Heading H1/H2 → MAIUSCOLO; H3+ → Title Case.
+- Link assoluti → "testo (URL)"; relativi → solo testo.
+- Bold/italic stripped (Grade 1 italiano non ha standard di enfasi tipografica).
+
+**Regole operative:**
+- Le 7 traduzioni multilingua (`/english/`, `/francais/`, ecc.) **NON** sono incluse nell'MVP — userebbero tabelle braille diverse (en-us-g1.ctb, fr-bfu-comp8.utb, ...) e hanno scarsa massa critica.
+- Le pagine non-comunicazioni (rischi/prevenzione, FAQ, kit calamità) **NON** sono nell'MVP — hanno shortcode complessi che richiederebbero handler dedicati.
+- I `.brf` sono **rigenerati al deploy**, mai committati: `.gitignore` include `static/braille/`.
+- Il bottone "Scarica versione braille" sulla pagina articolo arriverà in Sera 3 (partial `scarica-braille.html`).
+
+**Test di accettazione:** validazione qualità reale con lettori braille esperti (UICI Roma, BIC Monza) pianificata per giugno 2026, post-Sera 2 + Sera 3.
+
 ## Divieti
 
 - Non eliminare il focus outline senza fornire un'alternativa visibile equivalente.

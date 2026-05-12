@@ -321,6 +321,30 @@ bash scripts/genera-social.sh --dry-run <file>.md
 # Richiede GEMINI_API_KEY in env (gratuita: aistudio.google.com/apikey).
 ```
 
+### Versione Braille degli articoli (BRF)
+
+```bash
+# Prerequisito una sola volta (Ubuntu/Debian):
+sudo apt-get install -y python3-louis liblouis-data python3-yaml
+
+# Genera/aggiorna i .brf di tutti gli articoli (idempotente: skip se up-to-date)
+python3 scripts/genera-braille.py
+
+# Solo i primi N (utile per test)
+python3 scripts/genera-braille.py --limit 10
+
+# Forza rigenerazione completa
+python3 scripts/genera-braille.py --force
+
+# Solo un articolo specifico
+python3 scripts/genera-braille.py --article 2026-05-12-iso-22324-codici-colore-allerta
+
+# Output: static/braille/comunicazioni/<slug>.brf (ASCII puro, BRF/ICEB-compliant)
+# Tabella: it-it-comp6.utb (braille italiano 6 punti standard, output ASCII).
+# Per display braille e stampanti braille (Index, ViewPlus). UICI Roma + BIC Monza
+# leggono nativamente questo formato. Specifiche: manuale/parte-24-output-braille-articoli.md
+```
+
 ### Audit grammaticale italiano
 
 ```bash
