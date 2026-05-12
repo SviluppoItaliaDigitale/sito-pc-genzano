@@ -234,13 +234,24 @@ Il commento HTML in fondo al frontmatter cambia per ogni cache-bust diverso (nuo
 
 **Riferimento storico**: PR #187 (12 maggio 2026 — "Cache-bust: forza re-upload FTP indici sezione per audit header/footer") ha applicato questa strategia per la prima volta dopo l'incidente del menu refactoring. Pattern adottato come **convenzione stabile**.
 
-### Detection: il workflow audit-sito.yml controlla la coerenza Last-Modified
+### Detection: il workflow audit-sito.yml controlla coerenza HTTP + 4 marker semantici
 
-Da maggio 2026, `audit-sito.yml` ha una sezione (sezione 43 — "Stale FTP files detection") che ogni lunedì 09:00 UTC fa `curl -I` su un campione di 8 pagine Hugo critiche, estrae `Last-Modified` HTTP, e lo confronta col timestamp dell'ultimo deploy `success` recuperato via API GitHub. Soglia di tolleranza: 2 ore (il deploy FTP impiega ~10-15 minuti; 2h copre eventuali ritardi senza falsi positivi).
+Da maggio 2026, `audit-sito.yml` ha una sezione (sezione 43 — "Stale FTP files detection") che ogni lunedì 09:00 UTC fa **due check** su ciascuna delle 8 pagine Hugo campione (`/`, `/comunicazioni/`, `/cosa-fare-adesso/`, `/formazione/`, `/accessibilita/`, `/glossario/`, `/contatti/`, `/rischi-prevenzione/`):
 
-Se anche una sola pagina ha `Last-Modified` più vecchio della soglia, apre/aggiorna l'issue settimanale di audit con sezione dedicata. Il fix è applicare cache-bust come descritto sopra + rilanciare deploy.
+**(a) Last-Modified HTTP** entro 2 ore dall'ultimo deploy `success` (recuperato via API GitHub `gh run list --workflow=deploy.yml --status=success --limit=1`). Soglia 2h copre il tempo di upload FTP (10-15 min) + ritardi occasionali senza falsi positivi.
 
-**Eccezione**: le pagine HTML statiche sotto `static/` (es. `/abili-a-proteggere/`, `/giochi/`, `/quizpc/`, `/formazionepc/`, kit-calamita stampabili) hanno l'header iniettato lato client da `static/app-shared/site-chrome.js`. Il loro `Last-Modified` HTML può essere vecchio senza che sia un bug: il chrome JavaScript si aggiorna automaticamente al caricamento. NON vanno incluse nel check Last-Modified delle pagine Hugo.
+**(b) 4 marker semantici nel body** della pagina (introdotti in fortificazione del 12 maggio 2026 dopo che l'audit § 43 v1 si era rivelato insufficiente a catturare scenari con `Last-Modified` recente ma contenuto stantio):
+
+1. **`canonical-dropdown ≥ 1`** — il body deve contenere `navDropdown-per-il-cittadino` (header canonico Hugo presente). Se manca, indica che il refactoring del menu del 10 maggio 2026 non è riflesso sulla pagina.
+2. **`giochi-legacy = 0`** — il body NON deve contenere la voce menu flat `>Giochi</a>` (rimossa nel refactoring del 10 maggio 2026 in cui "Giochi" è diventata sotto-voce del dropdown "Per le scuole"). Se presente, indica file deployato prima del refactoring.
+3. **`tel-encoding-bug = 0`** — il body NON deve contenere `tel:+39%20...` o `tel:+39 [0-9]` (spazi encoded). Atteso `tel:+39069362600` senza spazi. Se presente, indica che il fix del 29 aprile 2026 (commit `72ec3aa` con `printf "tel:%s" .Site.Params.telefono_tel | safeURL`) non è stato deployato.
+4. **`Sito aggiornato il`** entro 24 ore dal momento dell'audit. La stringa viene da `partials/utility-bar.html` riga 19 con `now.Format` (timestamp build), quindi se la pagina è stata generata e deployata correttamente, è automaticamente fresca.
+
+Se anche uno solo dei due check fallisce per una pagina, apre/aggiorna l'issue settimanale di audit con sezione dedicata. Il fix è applicare cache-bust come descritto sopra + rilanciare deploy.
+
+**Perché 2 livelli di check.** Il Last-Modified HTTP cattura il 95% dei casi (deploy bloccato per ore = file vecchi). I marker semantici catturano il restante 5% (deploy fresco ma cache CDN intermedia che serve versione vecchia, oppure regressione template che produce HTML senza il marker atteso). Storia: il 12 maggio 2026 l'audit § 43 v1 (solo Last-Modified) avrebbe potuto mancare il caso "deploy fresco con tel: encoding rotto perché commit safeURL non incluso" — fortificato in PR di maggio 2026.
+
+**Eccezione**: le pagine HTML statiche sotto `static/` (es. `/abili-a-proteggere/`, `/giochi/`, `/quizpc/`, `/formazionepc/`, kit-calamita stampabili) hanno l'header iniettato lato client da `static/app-shared/site-chrome.js`. Il loro `Last-Modified` HTML può essere vecchio senza che sia un bug: il chrome JavaScript si aggiorna automaticamente al caricamento. NON vanno incluse nel check § 43.
 
 ## Verifica prima del push
 
