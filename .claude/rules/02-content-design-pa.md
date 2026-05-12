@@ -358,9 +358,19 @@ content/comunicazioni/<slug>-facile.md   ← versione italiano L2 A2
 
 **Frontmatter incrociato:**
 - Versione completa: `versione_facile: "<slug>-facile"`
-- Versione facile: `versione_facile_di: "<slug>"`
+- Versione facile: `versione_facile_di: "<slug>"` + **`_build: { list: false, render: true }` OBBLIGATORIO**
 
 Hugo renderizza entrambi come pagine distinte. Il partial `partials/versione-facile-toggle.html` aggiunge un banner giallo in cima a ciascuna pagina che linka all'altra.
+
+🔴 **VINCOLO HIDE DALLE LISTE.** Ogni file `<slug>-facile.md` DEVE includere nel frontmatter:
+
+```yaml
+_build:
+  list: false
+  render: true
+```
+
+Senza questa configurazione la versione facile compare in homepage, archivio `/comunicazioni/`, pagina `/podcast/`, feed RSS, sitemap, index.json (ricerca) e articoli correlati — confondendo gli utenti che si trovano due "card articolo" praticamente identiche. Con `_build.list = false` la versione facile è raggiungibile **solo** dal bottone "Leggi in italiano semplice" sull'articolo madre. È esattamente il comportamento richiesto. Storia: regola aggiunta il 12 maggio 2026 dopo prima pubblicazione P16 che aveva fatto comparire la versione facile in homepage come "ultima notizia" doppia (vedi PR di hot-fix). Specifiche complete: `manuale/parte-25-italiano-l2-versione-facile.md § 25.11`.
 
 **Eccezione gate AGID obbligata.** La versione facile NON segue il linguaggio AGID standard. Usa le **regole CEFR A2**:
 - frasi corte (8-12 parole massimo),

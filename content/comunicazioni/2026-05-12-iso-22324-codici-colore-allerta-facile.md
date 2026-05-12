@@ -12,6 +12,16 @@ area: "Lazio"
 allegati: []
 versione_facile_di: "2026-05-12-iso-22324-codici-colore-allerta"
 draft: false
+# _build.list = false esclude la versione facile da: homepage "ultime
+# notizie", archivio /comunicazioni/, pagina /podcast/, articoli correlati,
+# feed RSS, sitemap, indice di ricerca /index.json. La pagina resta
+# renderizzata (render: true) e raggiungibile via URL diretto SOLO dal
+# bottone "Leggi in italiano semplice" presente sull'articolo madre.
+# Convenzione obbligatoria per tutti i file *-facile.md (vedi
+# manuale/parte-25-italiano-l2-versione-facile.md § 25.11).
+_build:
+  list: false
+  render: true
 ---
 
 I bollettini di allerta usano quattro colori.
