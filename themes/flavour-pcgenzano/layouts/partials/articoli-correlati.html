@@ -12,7 +12,10 @@
 {{- $self := .RelPermalink -}}
 {{- $correlati := slice -}}
 {{- if $badgeAttuale -}}
-  {{- range where (where .Site.RegularPages "Section" "comunicazioni") "Params.badge" "==" $badgeAttuale -}}
+  {{/* Escludi le versioni "facile da leggere" (A2 CEFR) dai correlati:
+       hanno `versione_facile_di` nel frontmatter e devono essere
+       raggiungibili solo dall'articolo madre. */}}
+  {{- range where (where (where .Site.RegularPages "Section" "comunicazioni") "Params.badge" "==" $badgeAttuale) "Params.versione_facile_di" nil -}}
     {{- if ne .RelPermalink $self -}}
       {{- $correlati = $correlati | append . -}}
     {{- end -}}
