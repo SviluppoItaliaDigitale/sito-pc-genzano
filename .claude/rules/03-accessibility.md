@@ -357,7 +357,7 @@ L'ordine fisso permette al cittadino in stress (e allo screen reader user) di **
 
 Da maggio 2026 (Punto 19 della roadmap) il sito genera automaticamente una versione **BRF** (Braille Ready Format) ASCII di ogni articolo pubblicato in `content/comunicazioni/`. Apre un canale di comunicazione **vero** verso ciechi e ipovedenti, complementare allo screen reader: file scaricabile, portabile, stampabile su carta braille con stampanti Index/ViewPlus/Tiger Cub. UICI Roma e Biblioteca Italiana per Ciechi di Monza leggono nativamente questo formato.
 
-**Stato attuale (Sera 1, 12 maggio 2026):** script Python `scripts/genera-braille.py` standalone, eseguibile in locale, idempotente. Sere 2-3 (integrazione `deploy.yml` + bottone download UI) pianificate.
+**Stato attuale (12 maggio 2026): feature COMPLETA end-to-end (Sere 1+2+3).** Lo script `scripts/genera-braille.py` gira sia in locale sia nel workflow `deploy.yml` (step `apt-get install python3-louis liblouis-data python3-yaml` + esecuzione pre-build). Il partial `partials/scarica-braille.html` aggiunge il bottone "Scarica versione braille" su ogni articolo `/comunicazioni/`, mostrato solo se il `.brf` esiste (guardia `fileExists`). Test accettazione UICI Roma / BIC Monza pianificato per giugno 2026.
 
 **Stack tecnico:**
 - Libreria: **liblouis** (open source, raccomandata W3C-WAI per traduzione braille). Binding Python ufficiale `python3-louis`.
