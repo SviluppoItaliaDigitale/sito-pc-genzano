@@ -28,3 +28,7 @@ __pycache__/
 
 # Report runtime degli script di controllo (rigenerato ad ogni esecuzione)
 controllo-documenti-report.md
+
+# Output braille generato da scripts/genera-braille.py (Punto 19 roadmap).
+# I file .brf sono rigenerati dal workflow al deploy, mai committati.
+static/braille/
