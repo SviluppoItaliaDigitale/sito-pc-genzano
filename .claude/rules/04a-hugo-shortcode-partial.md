@@ -303,7 +303,7 @@ Pagina interattiva che guida il cittadino con domande semplici fino a una rispos
 
 **Schema attivi:** Organization+NGO, ContactPoint, WebSite (con SearchAction), BreadcrumbList, Article (per `/comunicazioni/`), Event (aggiuntivo per `badge: Evento` con location Place + organizer), FAQPage (per `/faq/`), HowTo (per pagine `/rischi-prevenzione/*` con frontmatter `howto_prima` / `howto_durante` / `howto_dopo` — vedi sotto), WebPage (default), Question/Answer, HowToStep, ImageObject, PostalAddress, GeoCoordinates, City.
 
-**HowTo opt-in per pagine rischio.** Da maggio 2026 le pagine `/rischi-prevenzione/*` con struttura uniforme PRIMA/DURANTE/DOPO (rischio sismico, idrogeologico, incendio, vulcanico, ondate-di-calore, blackout, vento-forte, temporali-intensi) possono attivare il markup `HowTo` aggiungendo nel frontmatter 3 campi stringa:
+**HowTo per pagine rischio — 8 pagine già coperte.** Da maggio 2026 le 8 pagine `/rischi-prevenzione/*` con struttura uniforme PRIMA/DURANTE/DOPO sono **tutte** coperte da markup `HowTo` (`rischio-sismico`, `rischio-idrogeologico`, `rischio-incendio`, `rischio-vulcanico`, `ondate-di-calore`, `blackout`, `vento-forte`, `temporali-intensi`). Il pattern è documentato qui per chi aggiungerà nuove pagine rischio in futuro. Il blocco HowTo si attiva aggiungendo nel frontmatter 3 campi stringa:
 
 ```yaml
 howto_prima: "Riassunto in 1-3 frasi delle azioni preventive da fare prima dell'evento."
