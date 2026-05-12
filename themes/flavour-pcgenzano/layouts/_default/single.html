@@ -105,6 +105,11 @@
       {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".article-body") }}
       {{ end }}
 
+      {{/* ── DOWNLOAD VERSIONE BRAILLE (BRF) ──
+           Mostrato solo se il .brf esiste in static/braille/comunicazioni/.
+           Specifiche: manuale/parte-24-output-braille-articoli.md */}}
+      {{ partial "scarica-braille.html" . }}
+
       {{/* ── CONTENUTO ── */}}
       <article class="article-body">{{ .Content }}</article>
 

@@ -36,15 +36,15 @@ Il file `.brf` colma questi tre limiti: scarica una volta, stampa in casa o in a
 
 ## 24.3 Architettura
 
-Tre componenti, introdotti in tre serate successive:
+Tre componenti, **tutti completati** a maggio 2026:
 
-| Sera | Componente | File toccati |
-|---|---|---|
-| Sera 1 (12 maggio 2026) | **Script Python** `scripts/genera-braille.py` standalone, esecuzione locale, idempotente, CLI con `--force`/`--limit`/`--article`/`--verbose`. | `scripts/genera-braille.py`, `.gitignore` |
-| Sera 2 (futura) | **Integrazione `deploy.yml`**: step apt-install liblouis + esecuzione script prima di `hugo --minify`, output `.brf` finisce in `public/braille/comunicazioni/` e viene deployato su Aruba e GitHub Pages. | `.github/workflows/deploy.yml` |
-| Sera 3 (futura) | **Partial HTML** `partials/scarica-braille.html` + integrazione `_default/single.html`: bottone "Scarica versione braille" sopra il corpo articolo, vicino al pulsante "Leggi ad alta voce". | `themes/.../partials/scarica-braille.html`, `themes/.../_default/single.html` |
+| Sera | Componente | File toccati | Stato |
+|---|---|---|---|
+| Sera 1 (12 maggio 2026) | **Script Python** `scripts/genera-braille.py` standalone, esecuzione locale, idempotente, CLI con `--force`/`--limit`/`--article`/`--verbose`. | `scripts/genera-braille.py`, `.gitignore` | ✅ live |
+| Sera 2 (12 maggio 2026) | **Integrazione `deploy.yml`**: step apt-install `python3-louis liblouis-data python3-yaml` + esecuzione script prima di `hugo --minify`, output `.brf` finisce in `static/braille/comunicazioni/`, Hugo copia in `public/braille/...` al build → deployato su Aruba e GitHub Pages. | `.github/workflows/deploy.yml` (+2 step) | ✅ live |
+| Sera 3 (12 maggio 2026) | **Partial HTML** `partials/scarica-braille.html` + integrazione `_default/single.html`: bottone "Scarica versione braille" sopra il corpo articolo, vicino al pulsante "Leggi ad alta voce". Mostrato solo se il `.brf` esiste in `static/` (guardia `fileExists`). | `themes/.../partials/scarica-braille.html` (nuovo), `themes/.../_default/single.html` (+4 righe), `themes/.../static/css/custom.css` (sezione SCARICA VERSIONE BRAILLE v1.0) | ✅ live |
 
-Questo manuale documenta lo **stato a fine Sera 1** + roadmap per le serate successive.
+La feature è **completamente funzionante** end-to-end. Resta solo il **test di accettazione UICI Roma / BIC Monza** pianificato per giugno 2026 (vedi § 24.12).
 
 ## 24.4 Path canonici
 
