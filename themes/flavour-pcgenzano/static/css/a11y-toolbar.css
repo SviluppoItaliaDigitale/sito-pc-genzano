@@ -422,20 +422,53 @@ html.a11y-spacing .article-body { line-height: 2 !important; letter-spacing: 0.1
 html.a11y-spacing main p,
 html.a11y-spacing .article-body p { margin-bottom: 2em !important; }
 
-/* ── Modalità lettura (Sera 2, macro-toggle) ──
-   Aggrega: sfondo crema #fdf6e3 + testo #1a1a1a (contrast ratio 14:1 -
-   abbondantemente sopra WCAG 1.4.6 AAA 7:1), max-width 65ch sul corpo
-   articolo (riga di lettura ottimale ~60-75 caratteri, AGID + Bringhurst),
-   text-align left forzato (override eventuale justify), spaziatura
-   aumentata. Il font è gestito separatamente da fontFamily:
-   readingMode alza 'default' a 'readable' via JS, lascia 'dyslexic'.
+/* ── Modalità lettura (Sera 2 + revisione "tutto il sito") ──
+   Macro-toggle che aggrega: sfondo crema #fdf6e3 + testo #1a1a1a
+   (contrast 14:1, abbondantemente sopra WCAG 1.4.6 AAA 7:1), max-width
+   65ch sul corpo articoli (riga di lettura ottimale ~60-75 caratteri,
+   AGID + Bringhurst), text-align left forzato, spaziatura aumentata.
 
-   Scope: NON tocchiamo `body` globale per non ribaltare l'hero-section
-   blu istituzionale dell'homepage e altri layout speciali. Lo sfondo
-   crema si applica solo a `.article-body` (corpo articolo) e
-   `.list-intro-content` (intro pagine archivio). I kit-calamita
-   stampabili (static/formazione/kit-calamita-*/) NON sono toccati
-   perché non caricano `a11y-toolbar.css`. */
+   SCOPE (revisione 12 maggio 2026): la crema si applica a `<body>`
+   globale, non più solo a `.article-body` / `.list-intro-content`.
+   Motivo: la homepage e le pagine di servizio (cartografia, contatti,
+   numeri-utili, ecc.) non hanno `.article-body`, quindi col vecchio
+   scope la modalità lettura era invisibile lì. Ora la crema riempie
+   tutta la pagina.
+
+   ELEMENTI ISTITUZIONALI CHE RESTANO COL LORO COLORE (per cascade
+   naturale: hanno `background-color` esplicito nel CSS del tema,
+   quindi vincono sul body crema senza bisogno di override qui):
+   - hero-section blu (homepage)
+   - mini-hero blu (pagine interne)
+   - banner emergenza rosso (quando attivo)
+   - banner allerta giallo/arancione/rosso
+   - navbar slim + navbar principale
+   - footer istituzionale
+   - card servizi con bg bianco esplicito
+   - dialog/modal/popover con bg proprio
+   Queste "isole" mantengono l'identità di brand. Solo il fondo
+   pagina + le card/sezioni con bg trasparente o ereditato da body
+   diventano crema.
+
+   Il font è gestito separatamente da fontFamily: readingMode alza
+   'default' a 'readable' via JS, lascia 'dyslexic'.
+
+   I kit-calamita stampabili (static/formazione/kit-calamita-*/) NON
+   sono toccati perché non caricano `a11y-toolbar.css` (HTML statici
+   fuori da Hugo, includono solo print.css proprio). */
+html.a11y-reading-mode body {
+  background: #fdf6e3 !important;
+  color: #1a1a1a !important;
+}
+/* Anche `main` esplicitamente crema, perché in alcuni layout ha
+   background bianco proprio che vincerebbe su body. */
+html.a11y-reading-mode main {
+  background: #fdf6e3 !important;
+}
+/* Wrapper editoriali: oltre allo sfondo crema (ereditato da body),
+   applichiamo il restringimento riga (65ch), il padding, l'allineamento
+   sinistra e la spaziatura tipografica. Vale per articoli e liste
+   archivio, NON per homepage / pagine speciali. */
 html.a11y-reading-mode .article-body,
 html.a11y-reading-mode .list-intro-content {
   background: #fdf6e3 !important;
@@ -457,13 +490,18 @@ html.a11y-reading-mode .list-intro-content p,
 html.a11y-reading-mode .list-intro-content li {
   text-align: left !important;
 }
-/* I link nel corpo restano blu istituzionali ma con sfondo crema il
-   contrast resta ottimo (#003366 su #fdf6e3 ≈ 11.6:1, WCAG AAA). */
+/* I link nel corpo restano blu istituzionali: contrast su crema
+   #003366 vs #fdf6e3 ≈ 11.6:1, WCAG AAA. */
 
 /* Override stampa: la modalità lettura NON deve sporcare il PDF/stampa.
    Sfondo bianco, no max-width (la pagina A4 ha già i suoi margini),
    line-height standard. */
 @media print {
+  html.a11y-reading-mode body,
+  html.a11y-reading-mode main {
+    background: #fff !important;
+    color: #000 !important;
+  }
   html.a11y-reading-mode .article-body,
   html.a11y-reading-mode .list-intro-content {
     background: #fff !important;
