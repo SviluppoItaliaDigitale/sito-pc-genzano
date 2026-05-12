@@ -493,11 +493,17 @@ html.a11y-reading-mode .card-rischio,
 html.a11y-reading-mode .link-card,
 html.a11y-reading-mode .stat-hero-item,
 html.a11y-reading-mode .bg-light,
-html.a11y-reading-mode .bg-white,
-html.a11y-reading-mode section:not(.hero-section):not(.emergency-banner) {
+html.a11y-reading-mode .bg-white {
   background: #fdf6e3 !important;
   background-color: #fdf6e3 !important;
 }
+/* IMPORTANTE — il selettore generico `section:not(.hero-section):not(.emergency-banner)`
+   è stato RIMOSSO (12 maggio 2026) perché catturava anche la `<section>` interna
+   a `<footer>.it-footer > .it-footer-main > .container > section`. Risultato:
+   il footer blu diventava crema, e il testo `text-white` di Bootstrap restava
+   bianco → bianco su crema, illeggibile. Se in futuro emerge che una sezione
+   specifica del tema NON ha una classe nell'elenco sopra ma deve diventare
+   crema, va aggiunta esplicitamente per classe (non con un selettore generico). */
 
 /* Eccezioni esplicite — restano col loro colore di brand:
    - .navbar / .it-header-* / .it-footer-* (chrome del sito)
@@ -585,8 +591,7 @@ html.a11y-reading-mode .list-intro-content li {
   html.a11y-reading-mode .link-card,
   html.a11y-reading-mode .stat-hero-item,
   html.a11y-reading-mode .bg-light,
-  html.a11y-reading-mode .bg-white,
-  html.a11y-reading-mode section:not(.hero-section):not(.emergency-banner) {
+  html.a11y-reading-mode .bg-white {
     background: #fff !important;
     background-color: #fff !important;
     color: #000 !important;
