@@ -42,6 +42,33 @@
     </div>
   </div>
 </div>
+{{/* ── PRE-ALLERTA DOMANI — visibile solo se livello-domani ≥ gialla.
+     Il div esce SEMPRE dal template (per consentire al JS client di
+     aggiornarlo dinamicamente anche se al build domani era verde), ma
+     parte con display:none quando non c'è pre-allerta da mostrare. */}}
+{{ $domaniLivelliVisibili := slice "gialla" "arancione" "rossa" }}
+{{ $domaniVisibile := false }}
+{{ $domaniLiv := "verde" }}
+{{ $domaniDataLeg := "" }}
+{{ $domaniTitolo := "" }}
+{{ $domaniRischi := "" }}
+{{ with $allerta.domani }}
+  {{ if in $domaniLivelliVisibili .livello }}
+    {{ $domaniVisibile = true }}
+    {{ $domaniLiv = .livello }}
+    {{ $domaniTitolo = .titolo }}
+    {{ $domaniRischi = delimit .rischi ", " }}
+    {{ $td := time.AsTime .data }}
+    {{ $domaniDataLeg = printf "%d %s %d" $td.Day (index $mesi (int $td.Month)) $td.Year }}
+  {{ end }}
+{{ end }}
+<div id="allerta-bar-domani" class="allerta-bar-domani allerta-bar-domani-{{ $domaniLiv }}" role="status" aria-label="Pre-allerta meteo per domani"{{ if not $domaniVisibile }} style="display:none"{{ end }}>
+  <div class="container">
+    <i class="bi bi-calendar-event me-2" aria-hidden="true"></i>
+    <strong>Previsto domani{{ if $domaniDataLeg }} ({{ $domaniDataLeg }}){{ end }}:</strong>
+    <span id="allerta-domani-titolo">{{ $domaniTitolo }}</span>{{ if $domaniRischi }} <span class="text-nowrap">— {{ $domaniRischi }}</span>{{ end }}
+  </div>
+</div>
 {{ end }}
 
 {{/* ══════════════════════════════════════════════════════
@@ -346,12 +373,55 @@ function checkAllertaDPC(){
 
       // Aggiorna "Verificato: <ora>" con l'ora locale del client (max freschezza)
       var ck=document.getElementById('allerta-controllo');
+      var mesi=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
       if(ck){
         var n=new Date();
         var pad=function(x){return x<10?'0'+x:''+x};
-        var mesi=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
         ck.textContent=n.getDate()+' '+mesi[n.getMonth()]+' '+n.getFullYear()+', '+pad(n.getHours())+':'+pad(n.getMinutes());
       }
+
+      // Pre-allerta DOMANI: se il bollettino-domani CSV punta a un giorno
+      // strettamente futuro rispetto a oggi, ed ha livello ≥ gialla, mostra
+      // la fascia. Altrimenti nascondi/rimuovi.
+      var barDomani=document.getElementById('allerta-bar-domani');
+      var domaniRow=results[1]?parseBollettino(results[1]):null;
+      var domaniLevel=0;
+      var domaniRisks=[];
+      var domaniDate=null;
+      if(domaniRow){
+        var inizioD=domaniRow.inizio?new Date(domaniRow.inizio):null;
+        var p2=function(x){return x<10?'0'+x:''+x};
+        var oggiYMD=now.getFullYear()+'-'+p2(now.getMonth()+1)+'-'+p2(now.getDate());
+        var inizioYMD=inizioD?inizioD.getFullYear()+'-'+p2(inizioD.getMonth()+1)+'-'+p2(inizioD.getDate()):null;
+        if(inizioYMD&&inizioYMD>oggiYMD){
+          for(var cd=0;cd<colonne.length;cd++){
+            var levD=levelFromValue(domaniRow[colonne[cd].key]);
+            if(levD>domaniLevel)domaniLevel=levD;
+            if(levD>0&&['temporali','idrogeologico','idraulico'].indexOf(colonne[cd].key)>=0){
+              var nomeR=colonne[cd].nome.toLowerCase();
+              if(domaniRisks.indexOf(nomeR)<0)domaniRisks.push(nomeR);
+            }
+          }
+          domaniDate=inizioD;
+        }
+      }
+      if(barDomani){
+        if(domaniLevel>=1&&domaniDate){
+          var liv=names[domaniLevel];
+          var titoloDom={gialla:'Previsto giallo',arancione:'Previsto arancione',rossa:'Previsto rosso'}[liv];
+          var dataLeg=domaniDate.getDate()+' '+mesi[domaniDate.getMonth()]+' '+domaniDate.getFullYear();
+          barDomani.className='allerta-bar-domani allerta-bar-domani-'+liv;
+          barDomani.style.display='';
+          var html='<div class="container"><i class="bi bi-calendar-event me-2" aria-hidden="true"></i><strong>Previsto domani ('+dataLeg+'):</strong> <span id="allerta-domani-titolo">'+titoloDom+'</span>';
+          if(domaniRisks.length>0)html+=' <span class="text-nowrap">— '+domaniRisks.join(', ')+'</span>';
+          html+='</div>';
+          barDomani.innerHTML=html;
+        }else{
+          // Niente pre-allerta valida: nascondi la fascia
+          barDomani.style.display='none';
+        }
+      }
+
       bar.classList.remove('allerta-bar-loading');
     })
     .catch(function(){ bar.classList.remove('allerta-bar-loading'); });
