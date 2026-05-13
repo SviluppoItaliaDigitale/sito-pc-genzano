@@ -26,7 +26,7 @@
             '</div>' +
             '<div class="it-header-slim-right-zone" role="navigation" aria-label="Link rapidi e social">' +
               '<a href="' + SITE_URL + '/facile-da-leggere/" class="btn btn-slim-header btn-easy-read me-2" aria-label="Vai alla versione facile da leggere del sito"><i class="bi bi-book-half me-1" aria-hidden="true"></i><span class="d-none d-md-inline">Facile da leggere</span><span class="d-md-none">Aa</span></a>' +
-              '<a href="https://activepager.com/auth/login" target="_blank" rel="noopener noreferrer" class="btn btn-slim-header me-3" aria-label="Accedi al gestionale volontari (si apre in una nuova finestra)"><i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i><span class="d-none d-md-inline">Area Volontari</span><span class="d-md-none">Accedi</span></a>' +
+              '<a href="' + SITE_URL + '/area-volontari/" class="btn btn-slim-header me-3" aria-label="Area Volontari: informazioni e accesso al gestionale"><i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i><span class="d-none d-md-inline">Area Volontari</span><span class="d-md-none">Accedi</span></a>' +
               '<span class="slim-header-divider d-none d-lg-inline" aria-hidden="true"></span>' +
               '<a href="https://www.facebook.com/protezionecivilegenzanodiroma" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-white me-2"><i class="bi bi-facebook" aria-hidden="true"></i></a>' +
               '<a href="https://www.instagram.com/protezionecivilegenzano/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-white me-2"><i class="bi bi-instagram" aria-hidden="true"></i></a>' +

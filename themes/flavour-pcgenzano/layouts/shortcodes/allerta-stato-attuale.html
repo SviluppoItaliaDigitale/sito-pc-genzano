@@ -1,0 +1,55 @@
+{{- /* Shortcode allerta-stato-attuale — mostra il livello corrente leggendo data/allerta.json.
+       Riusabile su qualunque pagina (allerte-meteo, emergenza, cosa-fare-adesso, ecc.).
+       Il dato è coerente con la barra in homepage perché legge la stessa fonte (data/allerta.json),
+       aggiornata da check-allerta.yml.
+*/ -}}
+{{- $allerta := .Site.Data.allerta -}}
+{{- if $allerta -}}
+{{- $controllo := or $allerta.ultimo_controllo $allerta.ultimo_aggiornamento -}}
+{{- $t := time.AsTime $controllo -}}
+{{- $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" -}}
+{{- $bg := "bg-success bg-opacity-10 border-success" -}}
+{{- $titoloCol := "text-success-emphasis" -}}
+{{- $icon := "bi-shield-check" -}}
+{{- if eq $allerta.livello "giallo" -}}
+  {{- $bg = "bg-warning bg-opacity-10 border-warning" -}}
+  {{- $titoloCol = "text-warning-emphasis" -}}
+  {{- $icon = "bi-exclamation-triangle-fill" -}}
+{{- else if eq $allerta.livello "arancione" -}}
+  {{- $bg = "bg-orange bg-opacity-25 border-warning" -}}
+  {{- $titoloCol = "text-danger-emphasis" -}}
+  {{- $icon = "bi-exclamation-triangle-fill" -}}
+{{- else if eq $allerta.livello "rosso" -}}
+  {{- $bg = "bg-danger bg-opacity-25 border-danger" -}}
+  {{- $titoloCol = "text-danger-emphasis" -}}
+  {{- $icon = "bi-exclamation-octagon-fill" -}}
+{{- end -}}
+
+<div class="card mb-4 border-2 {{ $bg }}" role="region" aria-label="Stato allerta meteo attuale">
+  <div class="card-body p-4">
+    <div class="d-flex flex-wrap align-items-center mb-2">
+      <i class="bi {{ $icon }} fs-3 me-3 {{ $titoloCol }}" aria-hidden="true"></i>
+      <div>
+        <h2 class="h5 mb-0 {{ $titoloCol }}">Stato attuale: {{ $allerta.titolo }}</h2>
+        <p class="mb-0 text-muted small">Livello {{ $allerta.livello | title }} · Comune di Genzano di Roma</p>
+      </div>
+    </div>
+    {{- with $allerta.descrizione }}
+    <p class="mb-2">{{ . }}</p>
+    {{- end }}
+    <p class="small text-muted mb-2">
+      <i class="bi bi-clock-history me-1" aria-hidden="true"></i>
+      Verificato: <strong>{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</strong>
+      · Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale Lazio</a>
+    </p>
+    <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+      <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Bollettino ufficiale Regione Lazio
+    </a>
+  </div>
+</div>
+{{- else -}}
+<div class="alert alert-secondary" role="note">
+  <strong>Stato allerta non disponibile.</strong> Consulta direttamente il
+  <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio</a>.
+</div>
+{{- end -}}
