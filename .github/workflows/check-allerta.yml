@@ -42,7 +42,8 @@ jobs:
         run: |
           python3 << 'PYEOF'
           import csv, json, io, os, sys, urllib.request
-          from datetime import datetime, timezone, timedelta
+          from datetime import datetime, timedelta
+          from zoneinfo import ZoneInfo  # gestisce automaticamente CET/CEST (ora solare/legale Europe/Rome)
 
           # opendatasicilia espone due CSV: "bollettino-oggi" (per il giorno
           # corrente, validità fino alle 23:59 del giorno di emissione) e
@@ -67,7 +68,10 @@ jobs:
           COMUNE = "Genzano di Roma"
           ALLERTA_PATH = "data/allerta.json"
 
-          rome_tz = timezone(timedelta(hours=2))
+          # ZoneInfo Europe/Rome gestisce automaticamente l'offset corretto:
+          # +02:00 in ora legale (ultima domenica di marzo → ultima domenica di ottobre)
+          # +01:00 in ora solare (ultima domenica di ottobre → ultima domenica di marzo)
+          rome_tz = ZoneInfo("Europe/Rome")
           now = datetime.now(rome_tz)
 
           # ── 1. Scarica entrambi i CSV e trova la riga Genzano ──────
@@ -186,7 +190,9 @@ jobs:
               descrizione = f"Criticità per {rischi_str}. {BASE_DESCS[livello]}"
 
           # ── 5. Confronta con allerta.json attuale ──────────────────
-          timestamp_now = now.strftime("%Y-%m-%dT%H:%M:%S+02:00")
+          # isoformat con timespec='seconds' produce automaticamente l'offset
+          # corretto in base alla data: +02:00 d'estate, +01:00 d'inverno.
+          timestamp_now = now.isoformat(timespec="seconds")
 
           try:
               with open(ALLERTA_PATH, "r", encoding="utf-8") as f:
