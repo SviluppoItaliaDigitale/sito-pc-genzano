@@ -6,6 +6,7 @@ layout: "single"
 aliases:
   - /numeri-utili/
 ---
+<!-- cache-bust: 2026-05-13 forza re-upload FTP per allineare header/footer (audit 13/05) -->
 
 <div class="card border-danger mb-4">
 <div class="card-body bg-danger bg-opacity-10 p-4">

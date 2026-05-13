@@ -11,6 +11,7 @@ toc: true
 tts: true
 dataUltimaRevisione: "2026-05-06"
 ---
+<!-- cache-bust: 2026-05-13 forza re-upload FTP per allineare header/footer (audit 13/05) -->
 
 Conoscere i rischi del territorio aiuta a proteggere te, la tua famiglia e chi interviene nei soccorsi. In questa sezione trovi indicazioni pratiche sui principali rischi di Genzano di Roma e sui comportamenti da adottare prima, durante e dopo un'emergenza.
 
