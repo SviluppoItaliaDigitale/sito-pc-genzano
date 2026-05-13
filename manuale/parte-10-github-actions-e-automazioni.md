@@ -69,19 +69,47 @@ Esecuzione manuale via Actions tab GitHub sempre disponibile.
 
 > **Storia tecnica (10 maggio 2026)**: cron GitHub `*/5` testato in produzione il 10 maggio 2026 ha dato 0 run scheduled in 42 minuti. La documentazione GitHub conferma: *"Schedule events can be delayed during periods of high loads. To decrease the chance of delay, schedule your workflow to run at a different time of the hour."* Cron espliciti scaglionati (`7,22,37,52`) provati ma con aderenza ancora variabile. Soluzione definitiva: trigger esterno cron-job.org puntuale + GitHub schedule `17 * * * *` come fail-safe minimale (1 run/h invece di 96/h, per non sovraccaricare il runner).
 
-**Cosa fa:**
-1. Scarica il CSV ufficiale del Dipartimento Protezione Civile dal mirror opendatasicilia.
-2. Cerca la riga di "Genzano di Roma".
-3. Estrae il livello massimo tra `avviso_criticita`, `avviso_idrogeologico`, `avviso_temporali`, `avviso_idraulico`.
-4. Se diverso dal livello corrente in `data/allerta.json`, aggiorna il file.
-5. Commit automatico dal bot `github-actions[bot]` con messaggio `chore: aggiornamento allerta <livello>`.
-6. Il commit su `main` ritriggera `deploy.yml`.
+**Cosa fa** (architettura aggiornata 13 maggio 2026 — tre script in pipeline):
 
-**Permessi**: `contents: write`.
+A ogni run il workflow esegue in sequenza tre script Python, ognuno responsabile di un dominio specifico:
 
-**Quando NON intervenire manualmente**: mai, se non per test. L'automazione è affidabile e le modifiche umane vengono sovrascritte al ciclo successivo.
+1. **`scripts/check-allerta.py` — criticità idrogeologica/idraulica**
+   - Scarica entrambi i CSV opendatasicilia `bollettino-oggi-comuni-latest.csv` e `bollettino-domani-comuni-latest.csv`
+   - Filtra per validità temporale `data_validita_inizio ≤ now ≤ data_validita_fine` (timezone `Europe/Rome` dinamica, CET/CEST automatico)
+   - Calcola MAX livello tra i bollettini validi (avviso_criticita, avviso_idrogeologico, avviso_temporali, avviso_idraulico)
+   - Estrae il blocco `domani` separato come pre-allerta SE il bollettino-domani CSV punta a una data strettamente futura
+   - **Fallback PDF Regione Lazio** se ENTRAMBI i CSV opendatasicilia non rispondono: scarica `tbl_bollettini_criticita/bollettino_DD_MM_YYYY.pdf` del giorno corrente (o di ieri se 404), parsa con `pdftotext -layout`, estrae Zona F (Genzano)
+   - Aggiorna i campi `livello`, `titolo`, `descrizione`, `ultimo_aggiornamento`, `ultimo_controllo`, `domani` di `data/allerta.json`
 
-**Disattivazione temporanea**: commenta la sezione `schedule:` e lascia solo `workflow_dispatch:`. Esempio in caso di manutenzione straordinaria del feed DPC.
+2. **`scripts/check-avvisi-meteo.py` — avvisi meteo avversi (vento, neve, calore, gelate, mareggiate)**
+   - Scarica HTML della pagina `/bollettini/allertamenti` Regione Lazio
+   - Estrae i link PDF degli ultimi 5 giorni (lookback window)
+   - Per ogni PDF: scarica + parsa + identifica `PER I SEGUENTI RISCHI: <tipo>`
+   - Salta i PDF di criticità idrogeologica (già coperti dallo script 1)
+   - Gestisce avvisi compositi: `VENTO, NEVE, IDROGEOLOGICA` → estrae `tipo='vento, neve'` ignorando l'idrogeologica
+   - Estrae livello, descrizione fenomeno, finestra validità (24-36 ore dalla data emissione)
+   - Aggiorna o rimuove il blocco `avviso_meteo` di `data/allerta.json`
+
+3. **`scripts/check-rischi-incendi.py` — rischio incendi boschivi (campagna AIB Lazio)**
+   - Scarica il PDF `Bollettino AIB Lazio_DD_MM_YYYY.pdf` (o `BollettinoAIB_DD_MM_YYYY.pdf`) del giorno corrente, fallback ieri se 404
+   - Parsa con `pdftotext -layout`, estrae le 2 sezioni "Previsioni per oggi" e "Previsioni per domani"
+   - Estrae il livello AIB della **Zona 9** (Genzano, confermato dal PDF ufficiale "Tabelle Comuni_Zone Allerta AIB" 2019)
+   - Mapping AIB → palette PC: BASSO→verde (nascosto), MEDIO→gialla, MODERATO→arancione, ELEVATO→rossa
+   - Aggiorna o rimuove il blocco `rischio_incendi` di `data/allerta.json`
+   - Fuori stagione AIB (di norma novembre-maggio): nessun PDF, blocco rimosso (cessazione automatica)
+
+Dopo i tre script, lo step di commit:
+- Verifica `git diff --cached --quiet` su `data/allerta.json`
+- Se ci sono modifiche: commit con messaggio combinato (`Allerta meteo: livello verde → gialla + avviso meteo: vento gialla + rischio incendi: MODERATO`)
+- Push + trigger esplicito di `deploy.yml` via `gh workflow run`
+
+**Permessi**: `contents: write` + `actions: write` (per il trigger esplicito del deploy).
+
+**Dipendenze runtime**: `poppler-utils` per `pdftotext` (preinstallato su `ubuntu-latest`, installazione difensiva nel workflow se mancasse).
+
+**Quando NON intervenire manualmente**: mai, se non per test. L'automazione è affidabile e le modifiche umane vengono sovrascritte al ciclo successivo (5 min).
+
+**Disattivazione temporanea**: rimuovi il job di cron-job.org sulla [console](https://console.cron-job.org/) oppure commenta la sezione `workflow_dispatch:` nel yaml. Il fail-safe orario continuerà a girare.
 
 ### 10.4 — `pubblica-programmata.yml` — Pubblicazione programmata
 

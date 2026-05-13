@@ -424,7 +424,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | Workflow | Frequenza | Scopo |
 |---|---|---|
 | `deploy.yml` | Ogni push su `main` | Build + deploy Aruba (FTP) + GitHub Pages |
-| `check-allerta.yml` | **Doppio trigger fail-safe**: cron-job.org ogni 5 min (primario, ~15 sec latenza) + GitHub schedule `17 * * * *` (fail-safe orario) | Verifica stato allerta meteo Regione Lazio. Trigger primario tramite cron-job.org → API GitHub `workflow_dispatch` (PAT fine-grained con Actions: write). GitHub schedule come paracadute (1 run/h) se cron-job.org va giù. Anti-spam interno (stale_check 5h45min) impedisce commit duplicati. |
+| `check-allerta.yml` | **Doppio trigger fail-safe**: cron-job.org ogni 5 min (primario, ~15 sec latenza) + GitHub schedule `17 * * * *` (fail-safe orario) | **Pipeline a tre script** (refactor 13/05/2026): (a) `check-allerta.py` — criticità idrogeologica/idraulica (CSV opendatasicilia + fallback PDF Regione Lazio, MAX time-aware oggi+domani, fuso Europe/Rome dinamico); (b) `check-avvisi-meteo.py` — avvisi vento/neve/calore (PDF Regione Lazio); (c) `check-rischi-incendi.py` — rischio AIB Zona 9 = Genzano (PDF Regione Lazio, campagna giugno-ottobre). Commit unico combinato se almeno uno modifica `data/allerta.json`. |
 | `pubblica-programmata.yml` | Giornaliero 06:00 UTC | Pubblica articoli programmati |
 | `lighthouse-audit.yml` | Post-deploy | Audit performance/accessibilità/SEO |
 | `smoke-test-post-deploy.yml` | Post-deploy | Smoke test live: status HTTP, marker JS, header sicurezza |

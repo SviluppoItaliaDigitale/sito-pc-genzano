@@ -4,6 +4,8 @@ _[Indice manuale](README.md)_
 
 Questa parte documenta l'architettura del sistema di polling allerta meteo introdotta il **10 maggio 2026**, basata su un trigger esterno gratuito (cron-job.org) che chiama l'API GitHub `workflow_dispatch` per garantire latenza reale di **~15 secondi** al cambio livello DPC.
 
+> **Aggiornamento 13 maggio 2026**: dietro a questo trigger gira ora una **pipeline a tre script** che copre tre fonti distinte: criticità idrogeologica (CSV opendatasicilia + fallback PDF Regione Lazio), avvisi meteo avversi (PDF Regione Lazio), rischio incendi AIB (PDF Regione Lazio Zona 9). Il trigger esterno descritto in questa parte resta invariato: gli script aggiuntivi vengono semplicemente eseguiti in sequenza all'interno del workflow `check-allerta.yml`. Specifiche dei tre script in `parte-10-github-actions-e-automazioni.md` § 10.3.
+
 ## 23.1 — Perché un trigger esterno
 
 GitHub Actions schedule (`cron:` nel file `.yml`) è **best effort**, non garantito. Verifica empirica del 10 maggio 2026:
