@@ -216,64 +216,119 @@
 })();
 
 // === ALLERTE METEO ===
-// Fonte unica: CSV DPC per comune (opendatasicilia)
-// Aggiornamento: ad ogni visita + ogni 30 minuti
+// Fonte: CSV DPC per comune (opendatasicilia), bollettino-oggi + bollettino-domani.
+// Filtra per validità temporale (now ∈ [data_validita_inizio, data_validita_fine])
+// e combina MAX dei livelli tra i bollettini validi adesso.
+// Aggiornamento: ad ogni visita + ogni 30 minuti.
+// Allineato alla stessa logica del workflow server check-allerta.yml.
+
+function parseBollettino(csv){
+  var lines=csv.split('\n');
+  if(lines.length<2)return null;
+  var header=lines[0].split(',');
+  var col={};
+  for(var h=0;h<header.length;h++){
+    var n=header[h].trim().toLowerCase();
+    if(n.indexOf('data_validita_inizio')>-1)col.inizio=h;
+    else if(n.indexOf('data_validita_fine')>-1)col.fine=h;
+    else if(n.indexOf('avviso_criticita')>-1)col.criticita=h;
+    else if(n.indexOf('avviso_idrogeologico')>-1)col.idrogeo=h;
+    else if(n.indexOf('avviso_temporali')>-1)col.temporali=h;
+    else if(n.indexOf('avviso_idraulico')>-1)col.idraulico=h;
+  }
+  for(var i=1;i<lines.length;i++){
+    if(lines[i].toLowerCase().indexOf('genzano di roma')>-1){
+      var f=lines[i].split(',');
+      var get=function(k){return col[k]>=0&&col[k]<f.length?f[col[k]].trim().replace(/"/g,''):''};
+      return {
+        inizio:get('inizio'),
+        fine:get('fine'),
+        criticita:get('criticita'),
+        idrogeologico:get('idrogeo'),
+        temporali:get('temporali'),
+        idraulico:get('idraulico')
+      };
+    }
+  }
+  return null;
+}
+
+function levelFromValue(val){
+  var v=(val||'').toLowerCase();
+  if(v.indexOf('allerta rossa')>-1)return 3;
+  if(v.indexOf('allerta arancione')>-1)return 2;
+  if(v.indexOf('allerta gialla')>-1)return 1;
+  return 0;
+}
 
 function checkAllertaDPC(){
   var bar=document.getElementById('allerta-bar');
   if(!bar)return;
 
-  var CSV_URL='https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/bollettino-oggi-comuni-latest.csv';
+  var BASE='https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/';
+  var URL_OGGI=BASE+'bollettino-oggi-comuni-latest.csv';
+  var URL_DOMANI=BASE+'bollettino-domani-comuni-latest.csv';
 
-  fetch(CSV_URL)
-    .then(function(r){return r.text()})
-    .then(function(csv){
-      var lines=csv.split('\n');
-      if(lines.length<2)return;
+  function fetchCsv(url){
+    return fetch(url).then(function(r){return r.ok?r.text():null}).catch(function(){return null});
+  }
 
-      var header=lines[0].split(',');
-      var colCriticita=-1,colIdrogeo=-1,colTemporali=-1,colIdraulico=-1;
-      for(var h=0;h<header.length;h++){
-        var col=header[h].trim().toLowerCase();
-        if(col.indexOf('avviso_criticita')>-1)colCriticita=h;
-        if(col.indexOf('avviso_idrogeologico')>-1)colIdrogeo=h;
-        if(col.indexOf('avviso_temporali')>-1)colTemporali=h;
-        if(col.indexOf('avviso_idraulico')>-1)colIdraulico=h;
-      }
-
-      var genzanoRow=null;
-      for(var i=1;i<lines.length;i++){
-        if(lines[i].toLowerCase().indexOf('genzano di roma')>-1){
-          genzanoRow=lines[i];
-          break;
+  Promise.all([fetchCsv(URL_OGGI),fetchCsv(URL_DOMANI)])
+    .then(function(results){
+      var now=new Date();
+      var bollettini=[];
+      for(var k=0;k<results.length;k++){
+        if(!results[k])continue;
+        var b=parseBollettino(results[k]);
+        if(!b)continue;
+        var inizio=b.inizio?new Date(b.inizio):null;
+        var fine=b.fine?new Date(b.fine):null;
+        if(inizio&&fine&&now>=inizio&&now<=fine){
+          bollettini.push(b);
         }
       }
-      if(!genzanoRow)return;
 
-      var fields=genzanoRow.split(',');
-      var levels={verde:0,gialla:1,arancione:2,rossa:3};
-      var maxLiv='verde';
-      var dettagli=[];
-
-      var colonne=[
-        {idx:colCriticita,nome:'Criticità'},
-        {idx:colIdrogeo,nome:'Idrogeologico'},
-        {idx:colTemporali,nome:'Temporali'},
-        {idx:colIdraulico,nome:'Idraulico'}
-      ];
-
-      for(var c2=0;c2<colonne.length;c2++){
-        var idx=colonne[c2].idx;
-        if(idx<0||idx>=fields.length)continue;
-        var val=fields[idx].trim().replace(/"/g,'').toLowerCase();
-        var color='verde';
-        if(val.indexOf('allerta rossa')>-1)color='rossa';
-        else if(val.indexOf('allerta arancione')>-1)color='arancione';
-        else if(val.indexOf('allerta gialla')>-1)color='gialla';
-        if(levels[color]>0)dettagli.push(colonne[c2].nome+': '+color);
-        if(levels[color]>levels[maxLiv])maxLiv=color;
+      // Fallback: se entrambi fuori validità, prendi il "domani" se c'è,
+      // altrimenti l'"oggi" — meglio mostrare qualcosa che niente.
+      if(bollettini.length===0){
+        for(var k2=results.length-1;k2>=0;k2--){
+          if(results[k2]){
+            var pb=parseBollettino(results[k2]);
+            if(pb){ bollettini.push(pb); break; }
+          }
+        }
       }
 
+      if(bollettini.length===0){
+        bar.classList.remove('allerta-bar-loading');
+        return;
+      }
+
+      var levels={verde:0,gialla:1,arancione:2,rossa:3};
+      var names={0:'verde',1:'gialla',2:'arancione',3:'rossa'};
+      var maxLevel=0;
+      var risksOrder=[];
+      var risksSeen={};
+      var colonne=[
+        {key:'criticita',nome:'Criticità'},
+        {key:'idrogeologico',nome:'Idrogeologico'},
+        {key:'temporali',nome:'Temporali'},
+        {key:'idraulico',nome:'Idraulico'}
+      ];
+
+      for(var bi=0;bi<bollettini.length;bi++){
+        var b2=bollettini[bi];
+        for(var c2=0;c2<colonne.length;c2++){
+          var lev=levelFromValue(b2[colonne[c2].key]);
+          if(lev>maxLevel)maxLevel=lev;
+          if(lev>0&&!risksSeen[colonne[c2].nome]){
+            risksSeen[colonne[c2].nome]=names[lev];
+            risksOrder.push(colonne[c2].nome+': '+names[lev]);
+          }
+        }
+      }
+
+      var maxLiv=names[maxLevel];
       var titles={verde:'NESSUNA ALLERTA',gialla:'ALLERTA GIALLA',arancione:'ALLERTA ARANCIONE',rossa:'ALLERTA ROSSA'};
       var descs={verde:'Non sono previsti fenomeni significativi sul nostro territorio.',gialla:'Criticità ordinaria. Prestare attenzione.',arancione:'Criticità moderata. Limitare gli spostamenti.',rossa:'Criticità elevata. Seguire le indicazioni delle autorità.'};
 
@@ -284,7 +339,7 @@ function checkAllertaDPC(){
       if(t)t.textContent=titles[maxLiv];
       if(d){
         var testo='— '+descs[maxLiv];
-        if(dettagli.length>0)testo+=' ('+dettagli.join(', ')+')';
+        if(risksOrder.length>0)testo+=' ('+risksOrder.join(', ')+')';
         d.textContent=testo;
       }
       if(ic)ic.className=maxLiv==='verde'?'bi bi-shield-check me-2':'bi bi-exclamation-triangle-fill me-2';
