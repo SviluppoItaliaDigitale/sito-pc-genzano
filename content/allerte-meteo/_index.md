@@ -15,15 +15,11 @@ dataUltimaRevisione: "2026-05-06"
 
 Le allerte meteo indicano i possibili effetti al suolo di pioggia, temporali, vento e altri fenomeni. Servono a prepararsi prima che la situazione diventi pericolosa.
 
-<div class="card border-warning mb-4">
-<div class="card-body bg-warning bg-opacity-10 p-4">
-<h2 class="h5 text-dark"><i class="bi bi-broadcast me-2" aria-hidden="true"></i>Stato dell'allerta</h2>
-<p class="mb-2">Lo stato aggiornato è visibile nella barra colorata in cima alla <a href="/">homepage</a>. Il dato viene letto dai bollettini ufficiali del <strong>Centro Funzionale Regionale del Lazio</strong> per il Comune di Genzano di Roma.</p>
-<a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-warning">
-  <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Vai al bollettino della Regione Lazio
-</a>
-</div>
-</div>
+## Stato attuale dell'allerta
+
+Lo stato sotto è letto direttamente dai **bollettini ufficiali del Centro Funzionale Regionale del Lazio** per il Comune di Genzano di Roma. È lo stesso valore mostrato nella barra in cima alla [homepage](/) e aggiornato automaticamente quando cambia il livello.
+
+{{< allerta-stato-attuale >}}
 
 <div class="card border-info mb-4">
 <div class="card-body bg-info bg-opacity-10 p-4">
