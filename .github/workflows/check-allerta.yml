@@ -313,24 +313,45 @@ jobs:
                   f.write(f"level_changed={'true' if level_changed else 'false'}\n")
           PYEOF
 
-      - name: "📝 Commit e push"
-        if: steps.check.outputs.changed == 'true'
+      - name: "🌬️ Check avvisi meteo avversi (vento, neve, calore)"
+        id: avvisi
+        run: |
+          # poppler-utils per pdftotext, preinstallato su ubuntu-latest ma garantiamo
+          which pdftotext || sudo apt-get install -y --no-install-recommends poppler-utils
+          python3 scripts/check-avvisi-meteo.py
+
+      - name: "📝 Commit e push se allerta o avviso cambiato"
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/allerta.json
-          git diff --cached --quiet && exit 0
-          git commit -m "$(cat <<EOF
-          Allerta meteo: ${{ steps.check.outputs.motivo }}
-
-          Aggiornamento automatico da bollettino DPC (opendatasicilia).
-          ${{ steps.check.outputs.descrizione }}
-          EOF
-          )"
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica a data/allerta.json: skip commit"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # Messaggio commit combinato: descrive cosa è cambiato
+          MSG_PARTS=()
+          if [ "${{ steps.check.outputs.changed }}" = "true" ]; then
+            MSG_PARTS+=("${{ steps.check.outputs.motivo }}")
+          fi
+          if [ "${{ steps.avvisi.outputs.changed }}" = "true" ]; then
+            if [ -n "${{ steps.avvisi.outputs.tipo }}" ]; then
+              MSG_PARTS+=("avviso meteo: ${{ steps.avvisi.outputs.tipo }} ${{ steps.avvisi.outputs.livello }}")
+            else
+              MSG_PARTS+=("avviso meteo cessato")
+            fi
+          fi
+          MSG_HEAD=$(IFS=' + '; echo "${MSG_PARTS[*]}")
+          [ -z "$MSG_HEAD" ] && MSG_HEAD="aggiornamento periodico"
+          git commit -m "Allerta meteo: $MSG_HEAD" \
+                     -m "Aggiornamento automatico da bollettino DPC (opendatasicilia) e avvisi meteo Regione Lazio."
           git push
+          echo "committed=true" >> "$GITHUB_OUTPUT"
 
       - name: "🚀 Avvia deploy"
-        if: steps.check.outputs.changed == 'true'
+        if: steps.commit.outputs.committed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
