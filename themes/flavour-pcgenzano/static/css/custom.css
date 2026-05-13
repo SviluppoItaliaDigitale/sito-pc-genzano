@@ -823,6 +823,7 @@ article:not(.card) .galleria img {
   /* Nascondi tutto il chrome del sito */
   .skip-to-content,
   .it-header-slim-wrapper,
+  .it-header-center-wrapper,
   .it-header-wrapper,
   .it-header-navbar-wrapper,
   header.it-header-wrapper,
