@@ -139,6 +139,10 @@ La consegna avviene presso la **Sede Operativa, Via Sicilia 13-15**. Prima di ve
 
 ## Domande frequenti
 
+### Quanto tempo devo dedicare?
+
+Il monte ore di riferimento è di **16 ore al mese**, generalmente coperte da uno o due turni in sede. In caso di indisponibilità il turno può essere ricollocato in accordo con il Direttivo. Durante allerte e emergenze la reperibilità è prioritaria sul calendario ordinario.
+
 ### L'iscrizione costa qualcosa?
 
 No. L'iscrizione al Gruppo è gratuita. Anche la formazione di base è gratuita.
