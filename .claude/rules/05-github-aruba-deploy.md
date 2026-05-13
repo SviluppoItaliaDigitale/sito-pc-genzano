@@ -221,7 +221,11 @@ Quando modifichi **un partial del chrome** (`navbar.html`, `footer.html`, `slim-
 <!-- cache-bust: AAAA-MM-GG forza re-upload FTP per allineare header/footer -->
 ```
 
-Sezioni da toccare (in ordine di importanza, le ho gerarchizzate dal più al meno frequentate):
+#### Lista canonica cache-bust (allineata al campione audit-sito § 43)
+
+**Principio**: il set di pagine "high-traffic sotto monitoraggio" deve essere identico fra **detection** (audit-sito.yml § 43, 20 URL) e **rimedio** (cache-bust qui sotto). Se § 43 controlla una pagina ma il rimedio non la copre, quella pagina può restare stale senza essere ricoperta dal pattern documentato. Riferimento incrociato: ogni pagina elencata qui è anche nel campione § 43 (cfr. sezione "Detection" sotto).
+
+9 file in ordine di priorità (alto-traffico + pagine flaggate negli incidenti reali):
 
 1. `content/comunicazioni/_index.md` (archivio principale)
 2. `content/cosa-fare-adesso/_index.md` (pagina critica emergenza)
@@ -229,10 +233,15 @@ Sezioni da toccare (in ordine di importanza, le ho gerarchizzate dal più al men
 4. `content/rischi-prevenzione/_index.md` (hub rischi)
 5. `content/accessibilita/_index.md` (pagina legale)
 6. `content/contatti/_index.md`
+7. `content/chi-siamo/_index.md` (storia + direttivo, flaggata stale 13/05/2026)
+8. `content/numeri-utili/_index.md` (numeri emergenza, flaggata stale 13/05/2026)
+9. `content/diventa-volontario/_index.md` (recruiting, flaggata stale 13/05/2026)
 
 Il commento HTML in fondo al frontmatter cambia per ogni cache-bust diverso (nuova data), Hugo lo rigenera, il timestamp/dimensione cambia, FTP lo riconosce come "diverso" → upload forzato.
 
 **Riferimento storico**: PR #187 (12 maggio 2026 — "Cache-bust: forza re-upload FTP indici sezione per audit header/footer") ha applicato questa strategia per la prima volta dopo l'incidente del menu refactoring. Pattern adottato come **convenzione stabile**.
+
+**Pattern trigger noto**: una serie di ≥3 PR consecutive che modifica solo CSS globale o partial chrome (senza toccare nessun `_index.md`) può lasciare alcuni HTML stale, perché il diff bytewise è troppo "leggero" (solo cambio del `?v=...` nel link CSS) per essere intercettato in modo unambiguo da FTP-Deploy-Action col sync-state desincronizzato dopo un incidente. Incidente 13/05/2026 come riferimento (12 PR pipeline allerta meteo #201-#212 che toccavano `custom.css` 4× ma nessun `_index.md` di sezione; le 6 pagine `chi-siamo / numeri-utili / diventa-volontario / cosa-fare-adesso / contatti / rischi-prevenzione` sono andate stale e sono state sbloccate con PR #215 cache-bust simultaneo sui 6 file).
 
 ### Detection: il workflow audit-sito.yml controlla coerenza HTTP + 4 marker semantici
 
