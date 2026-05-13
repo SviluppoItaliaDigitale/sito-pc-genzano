@@ -9,6 +9,7 @@ aliases:
 tts: true
 dataUltimaRevisione: "2026-05-06"
 ---
+<!-- cache-bust: 2026-05-13 forza re-upload FTP per allineare header/footer (audit 13/05) -->
 
 Diventare volontario di Protezione Civile significa mettere tempo, competenze e disponibilità al servizio della comunità. Non servono esperienze precedenti: il Gruppo ti affianca e ti forma prima dell'impiego operativo.
 
