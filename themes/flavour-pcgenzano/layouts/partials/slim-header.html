@@ -27,7 +27,7 @@
             </a>
             {{/* Area Riservata — posizione AGID standard. Punta alla pagina intermedia
                  /area-volontari/ che spiega cos'è, chi la gestisce e come accedere. */}}
-            <a href="{{ "/area-volontari/" | relURL }}" class="btn btn-slim-header me-3" aria-label="Area Volontari: informazioni e accesso al gestionale">
+            <a href="{{ .Site.Params.areaVolontariUrl | relURL }}" class="btn btn-slim-header me-3" aria-label="Area Volontari: informazioni e accesso al gestionale">
               <i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i>
               <span class="d-none d-md-inline">Area Volontari</span>
               <span class="d-md-none">Accedi</span>

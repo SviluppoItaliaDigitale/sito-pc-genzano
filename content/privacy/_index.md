@@ -104,6 +104,21 @@ Solo dopo il clic, il browser può ricevere risorse dal fornitore esterno e poss
 
 Per non caricare un widget è sufficiente non premere il pulsante di attivazione. In alternativa puoi aprire direttamente il sito del fornitore.
 
+## Trasferimento dati a terzi: piattaforma ActivePager
+
+Il Gruppo Comunale utilizza la piattaforma esterna **ActivePager** per la gestione dell'area riservata ai volontari. Quando un utente clicca il pulsante "Accedi alla piattaforma" dalla pagina [Area Volontari](/area-volontari/), avviene un reindirizzamento al dominio activepager.com.
+
+Dati trasferiti al momento del reindirizzamento:
+
+- indirizzo IP
+- User-Agent del browser
+- cookie tecnici di sessione
+- credenziali di accesso (gestite direttamente da ActivePager)
+
+Il trattamento di tali dati avviene secondo la [Privacy Policy di ActivePager](https://activepager.com/privacy). La pagina [Area Volontari](/area-volontari/) del nostro sito presenta l'avviso prima del redirect, in modo che l'utente sia informato preventivamente.
+
+Base giuridica: esecuzione del rapporto associativo (art. 6 § 1 lett. b GDPR).
+
 ## Cartografia interattiva
 
 La pagina [Cartografia](/cartografia/) usa una mappa interattiva realizzata con Leaflet e tile fornite da OpenStreetMap.
