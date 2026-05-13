@@ -32,7 +32,7 @@ on:
   schedule:
     # Ogni lunedi alle 09:00 UTC (dopo check-normativa-links delle 08:00,
     # prima di check-links-sito delle 10:00)
-    - cron: "0 9 * * 1"
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 permissions:
