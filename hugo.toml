@@ -37,6 +37,10 @@ enableGitInfo = true
   telegram = "https://t.me/pcalfagenzano"
   linktree = "https://linktr.ee/protezionecivilegenzano"
   gestionale = "https://activepager.com/auth/login"
+  # Area Volontari — URL centralizzati (audit 13/05 P1-3)
+  areaVolontariUrl = "/area-volontari/"
+  activePagerLoginUrl = "https://activepager.com/auth/login"
+  activePagerPrivacyUrl = "https://activepager.com/privacy"
   httpsAttivo = true
   # Link alla dichiarazione di accessibilità su form.agid.gov.it
   dichiarazioneAccessibilita = ""
