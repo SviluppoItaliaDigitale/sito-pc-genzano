@@ -96,6 +96,8 @@ Genzano di Roma è nel territorio dei Castelli Romani, con versanti collinari so
 ### Rischio incendi boschivi (AIB)
 Il periodo di massima pericolosità è giugno–settembre. Nel Lazio il numero da chiamare è **il 112** (NUE): la Centrale Unica smista l'intervento a vigili del fuoco e squadre AIB. Non chiamare direttamente il gruppo di volontari per segnalare incendi attivi.
 
+**Zona AIB di Genzano di Roma = 9** (Castelli Romani), come da PDF ufficiale "Tabelle Comuni_Zone Allerta AIB" 2019 della Regione Lazio (`/zone_allerta_aib_comuni/`). La pagina `/bollettini/rischi-incendi` del Centro Funzionale Regionale pubblica il "Bollettino di Pericolosità da Incendi Boschivi" quotidianamente durante la campagna AIB (modello previsionale RISICOLazio in collaborazione con Fondazione CIMA). Lo script `scripts/check-rischi-incendi.py` (gira ogni 5 min via `check-allerta.yml`, vedi rule `10-automazioni-github-actions.md`) parsa il PDF, estrae la Zona 9 e popola il blocco `rischio_incendi` in `data/allerta.json`. Mapping: BASSO→verde (nascosto in homepage perché baseline estiva), MEDIO→gialla, MODERATO→arancione, ELEVATO→rossa. Fuori stagione (di norma novembre-maggio) il blocco viene rimosso (cessazione automatica).
+
 ### Rischio sismico
 Il Lazio è una regione a sismicità media. In caso di scossa, rimanda sempre alle linee guida ufficiali del Dipartimento di Protezione Civile per i comportamenti di autoprotezione.
 

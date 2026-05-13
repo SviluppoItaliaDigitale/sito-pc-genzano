@@ -24,9 +24,11 @@ Quando uno degli eventi sopra si verifica, un messaggio formattato viene inviato
 - Pubblicato articolo nuovo con `badge: Allerta` → notifica con titolo + descrizione + cover + link sito + **pin**
 - Pubblicato articolo nuovo con `badge: Aggiornamento` → notifica con cover + link sito (no pin)
 
+> **Nota (13 maggio 2026)**: dal refactor della pipeline allerta a tre script, `data/allerta.json` può contenere anche i blocchi `domani` (pre-allerta criticità), `avviso_meteo` (vento/neve/calore) e `rischio_incendi` (AIB). Lo script `notifica-telegram.py` attualmente confronta solo il campo `livello` principale: una variazione di soli sotto-blocchi NON triggera notifica Telegram dedicata. Una notifica viene comunque inviata quando il livello principale cambia, e la descrizione del messaggio può menzionare i sotto-blocchi attivi. Estensione del bot a notifiche dedicate per `avviso_meteo` / `rischio_incendi` è un follow-up possibile (vedi roadmap).
+
 **Cosa NON triggera notifica (anti-spam):**
 
-- Aggiornamento di `ultimo_controllo` ogni 6 ore (workflow `check-allerta` senza cambio di livello): il livello è uguale, niente messaggio.
+- Aggiornamento di `ultimo_controllo` ogni 5 minuti (workflow `check-allerta` senza cambio di livello): il livello è uguale, niente messaggio.
 - Modifica di un articolo esistente (correzione di refusi, rinomine): solo articoli **aggiunti** ex novo vengono notificati.
 - Articoli con `date` futura (calendarizzati): non vengono notificati al momento del commit. Per notificarli al go-live servirebbe un trigger giornaliero, non implementato.
 - Articoli con badge non urgenti (Comunicazione, Formazione, Volontariato, Evento, Attività, Prevenzione, Esercitazione, Informazione, Radiocomunicazioni, ecc.).

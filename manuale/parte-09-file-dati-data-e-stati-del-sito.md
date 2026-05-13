@@ -86,42 +86,95 @@ Regola d'oro: **prima di creare un nuovo partial o template, verifica se la stes
 4. Commit: `Chiusura modalità emergenza — allerta rientrata`.
 5. Pubblica in parallelo un articolo di aggiornamento operativo ("allerta rientrata, nessuna criticità rilevata").
 
-### 9.3 — `allerta.json` (banner allerta meteo)
+### 9.3 — `allerta.json` (banner allerta meteo + pre-allerta domani + avvisi meteo + rischio incendi)
 
-**Schema:**
+Dal 13 maggio 2026 il file `data/allerta.json` è diventato il **bus unico di stato meteo del sito**: raccoglie il livello attuale di criticità idrogeologica, la pre-allerta di domani, gli avvisi di condizioni meteorologiche avverse (vento, neve, calore) e il rischio incendi boschivi (campagna AIB Lazio). Ogni blocco è opzionale e popolato dal workflow `check-allerta.yml` con tre script Python specializzati.
+
+**Schema completo (esempio "tutto attivo"):**
 
 ```json
 {
-  "livello": "verde",
-  "titolo": "NESSUNA ALLERTA",
-  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
-  "ultimo_aggiornamento": "2026-04-23T16:07:32+02:00",
-  "ultimo_controllo": "2026-04-27T11:00:00+02:00"
+  "livello": "gialla",
+  "titolo": "ALLERTA GIALLA",
+  "descrizione": "Criticità per temporali. Prestare attenzione.",
+  "ultimo_aggiornamento": "2026-05-13T05:43:55+02:00",
+  "ultimo_controllo": "2026-05-13T05:43:55+02:00",
+  "domani": {
+    "livello": "gialla",
+    "titolo": "Previsto giallo",
+    "rischi": ["temporali"],
+    "data": "2026-05-14"
+  },
+  "avviso_meteo": {
+    "tipo": "vento",
+    "livello": "gialla",
+    "descrizione": "Venti da forti a burrasca dai quadranti settentrionali",
+    "validita_inizio": "2026-05-13T00:00:00+02:00",
+    "validita_fine": "2026-05-14T12:00:00+02:00",
+    "url": "https://protezionecivile.regione.lazio.it/.../allertamento_13_05_2026.pdf",
+    "fonte_data": "2026-05-12"
+  },
+  "rischio_incendi": {
+    "livello": "gialla",
+    "livello_aib": "MEDIO",
+    "titolo": "Pericolosità MEDIA",
+    "zona_aib": 9,
+    "data": "2026-05-13",
+    "fonte": "Regione Lazio — Centro Funzionale (modello RISICOLazio + Fondazione CIMA)",
+    "domani": {"livello": "gialla", "livello_aib": "MEDIO", "data": "2026-05-14"}
+  }
 }
 ```
 
-**Campi:**
-- `livello` *(string, obbligatorio)*: `verde` | `gialla` | `arancione` | `rossa`. Pilota colore della barra allerta in cima a ogni pagina.
-- `titolo` *(string)*: es. "ALLERTA GIALLA SUI CASTELLI ROMANI".
-- `descrizione` *(string)*: una frase sintetica.
-- `ultimo_aggiornamento` *(string ISO 8601)*: timestamp dell'**ultimo cambio di livello**. Cambia solo quando il livello reale passa da uno stato all'altro (es. verde → gialla).
-- `ultimo_controllo` *(string ISO 8601)*: timestamp dell'**ultima verifica del bollettino DPC**. Aggiornato dal workflow ogni 6 ore (anche se il livello è invariato), così la barra mostra al cittadino una data sempre fresca con il testo "Verificato: …". Sulla homepage il JS lato browser aggiorna ulteriormente questo testo all'ora locale ad ogni visita.
+**Campi del livello principale (criticità idrogeologica/idraulica):**
+- `livello` *(string, obbligatorio)*: `verde` | `gialla` | `arancione` | `rossa`. Pilota il colore della barra allerta in cima a ogni pagina.
+- `titolo` *(string)*: es. "ALLERTA GIALLA".
+- `descrizione` *(string)*: frase sintetica conforme palette messaggi DPC.
+- `ultimo_aggiornamento` *(ISO 8601)*: timestamp dell'**ultimo cambio livello**. Suffisso `+02:00` o `+01:00` automatico in base alla data (fuso Europe/Rome dinamico).
+- `ultimo_controllo` *(ISO 8601)*: timestamp dell'**ultima verifica**. Cambia ogni volta che il workflow committa.
+
+**Blocco `domani` (pre-allerta criticità idrogeologica):** popolato solo quando il bollettino-domani del DPC ha `data_validita_inizio` **strettamente futura** rispetto a oggi (filtro che evita la falsa pre-allerta tra 00:00 e ~14:00 quando il CSV "domani" copre ancora il giorno corrente). Mostrato in homepage come fascia "Previsto domani: …" solo se `livello ≥ gialla`.
+
+**Blocco `avviso_meteo` (vento, neve, calore, gelate, mareggiate):** popolato dal parser PDF degli "Allertamenti" Regione Lazio quando rileva un avviso di condizioni meteorologiche avverse **non già coperto** dal bollettino di criticità idrogeologica. Frequenza tipica: 1-3 emissioni al mese (a evento). Cessazione automatica quando l'avviso scade. Campo `tipo` può essere composito (es. `"vento, neve"`).
+
+**Blocco `rischio_incendi` (campagna AIB Lazio):** popolato dal parser PDF del "Bollettino di Pericolosità da Incendi Boschivi" durante la campagna giugno-ottobre. Genzano di Roma è in **Zona AIB 9** (confermato dal PDF ufficiale "Tabelle Comuni_Zone Allerta AIB" 2019). Mapping: BASSO→verde (nascosto), MEDIO→gialla, MODERATO→arancione, ELEVATO→rossa. Fuori stagione il blocco non esiste (cessazione automatica quando i PDF AIB non sono più pubblicati).
 
 **Aggiornamento automatico** (architettura doppio trigger fail-safe, 10 maggio 2026):
 
 1. **Trigger primario — cron-job.org ogni 5 min** (free tier, SLA 99.9%): chiama l'API GitHub `workflow_dispatch` con un Personal Access Token fine-grained (permessi Actions: write sul solo `sito-pc-genzano`). **Latenza end-to-end osservata: ~15 secondi** al cambio livello DPC. Setup gestito su [console.cron-job.org](https://console.cron-job.org/).
+2. **Trigger fail-safe — GitHub schedule orario** (`cron: '17 * * * *'`, 1 run/h al minuto 17): paracadute minimale se cron-job.org va giù.
 
-2. **Trigger fail-safe — GitHub schedule orario** (`cron: '17 * * * *'`, 1 run/h al minuto 17, fuori dai picchi 0/15/30/45 dei quarti d'ora canonici): paracadute minimale se cron-job.org dovesse andare giù. Garantisce ricontrollo entro 60 min nel peggior caso.
+A ogni run vengono eseguiti **in sequenza** tre script:
 
-Lo script committa `allerta.json` solo quando il livello cambia OPPURE quando sono passate ≥5h45min dall'ultimo controllo (max 4 commit/giorno + cambi di livello reali). L'anti-spam interno impedisce commit duplicati anche se i due trigger sparano ravvicinati.
+| Script | Cosa fa | Fonte |
+|---|---|---|
+| `scripts/check-allerta.py` | Criticità idrogeologica + pre-allerta `domani` | CSV opendatasicilia (primaria) → fallback PDF Regione Lazio se entrambi i CSV non rispondono |
+| `scripts/check-avvisi-meteo.py` | Avvisi meteo avversi (vento/neve/calore) | Parser PDF pagina `/bollettini/allertamenti` Regione Lazio |
+| `scripts/check-rischi-incendi.py` | Rischio incendi AIB Zona 9 | Parser PDF pagina `/bollettini/rischi-incendi` Regione Lazio (solo in campagna AIB) |
+
+Ogni script aggiorna **solo il proprio blocco** in `allerta.json` (anti-spam per blocco). Lo script committa **solo se almeno uno** dei tre ha modificato il file. Messaggio commit combinato:
+
+```
+Allerta meteo: livello verde → gialla + avviso meteo: vento gialla + rischio incendi: MODERATO
+```
+
+**Anti-flicker JS lato client:** la funzione `checkAllertaDPC()` in homepage rilegge il CSV opendatasicilia ad ogni page-load e ogni 30 minuti. Per evitare lo sfarfallio visivo del banner, il JS sovrascrive titolo/descrizione **solo se il livello calcolato è diverso** da quello già renderizzato server-side. Se i livelli combaciano, il banner resta intatto.
+
+**Fallback PDF Regione Lazio** (attivato solo se opendatasicilia non risponde): lo script `check-allerta.py` scarica il PDF firmato di criticità idrogeologica del giorno corrente (`tbl_bollettini_criticita/bollettino_DD_MM_YYYY.pdf`), parsa con `pdftotext -layout` ed estrae la Zona F (Bacini Costieri Sud = Genzano) per le due sezioni "Valutazioni per OGGI" e "Valutazioni per DOMANI". Output GH Actions estende il campo `source` a `opendatasicilia | pdf-regione-lazio | misto`.
+
+**Timezone Europe/Rome dinamica:** tutti i timestamp di `allerta.json` usano `ZoneInfo("Europe/Rome")` che gestisce automaticamente CEST (+02:00, ora legale) e CET (+01:00, ora solare) senza intervento al cambio del fuso.
 
 Nella maggior parte dei casi **non serve intervenire manualmente**.
 
-> **Storia tecnica (10 maggio 2026)**: la versione 100% interna a GitHub Actions (cron `*/5 * * * *` o `7,22,37,52 * * * *`) si è rivelata **non affidabile** durante i picchi di carico — verifica empirica del 10 maggio mostra 0 run scheduled in 42 minuti col `*/5`. Documentazione GH conferma: *"Schedule events can be delayed during periods of high loads."* L'aggiunta di cron-job.org come trigger primario garantisce SLA reali; il cron GitHub interno resta solo come fail-safe orario (1 run/h, non 96 run/h, per non sovraccaricare inutilmente il runner). Setup PAT e cron-job.org documentati in `CLAUDE.md` e nella memoria Claude (`feedback_github_cron_explicit_better.md`).
+> **Storia tecnica (13 maggio 2026)**: la versione iniziale leggeva solo `bollettino-oggi-comuni-latest.csv`, causando un gap di ~14 ore notturne (00:00-14:00) durante il quale il CSV "oggi" era già scaduto e il CSV "domani" non veniva consultato. Il bug si è manifestato il 13/05: l'utente leggeva sul sito "NESSUNA ALLERTA" mentre la Regione Lazio aveva già emesso allerta gialla per temporali per il giorno corrente. Fix: lettura di entrambi i CSV con filtro `data_validita_inizio ≤ now ≤ data_validita_fine` e MAX dei livelli tra i validi.
 
-**Aggiornamento manuale**: serve solo se l'automazione fallisce o se si vuole forzare un messaggio istituzionale specifico. Modifica il file, commit, push. **Nota**: al successivo ciclo orario il workflow sovrascriverà il tuo intervento con il valore letto dal feed DPC. Per evitarlo, disabilita temporaneamente il workflow (vedi 10.9).
+**Aggiornamento manuale**: serve solo se l'automazione fallisce o se si vuole forzare un messaggio istituzionale specifico. Modifica il file, commit, push. **Nota**: al successivo ciclo il workflow sovrascriverà il tuo intervento col valore letto dalle fonti DPC. Per evitarlo, disabilita temporaneamente il workflow (vedi 10.9).
 
-**Fonte dati ufficiale**: CSV pubblicato dal Dipartimento Protezione Civile, mirror mantenuto da opendatasicilia: `https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/bollettino-oggi-comuni-latest.csv`.
+**Fonti dati ufficiali:**
+- Criticità idrogeologica/idraulica (primaria): `https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/bollettino-{oggi,domani}-comuni-latest.csv`
+- Criticità idrogeologica (fallback PDF): `https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/criticita-idrogeologica-idraulica`
+- Allertamenti / avvisi meteo: `https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/allertamenti`
+- Rischi incendi AIB: `https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/rischi-incendi`
 
 ### 9.4 — `risk_cards.yaml` (Rischi e Prevenzione)
 
