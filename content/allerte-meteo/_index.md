@@ -6,6 +6,7 @@ layout: "single"
 aliases:
   - /allertameteo.html
   - /allertameteo/
+  - /allerta-oggi/
 sitemap:
   priority: 0.9
   changefreq: daily
