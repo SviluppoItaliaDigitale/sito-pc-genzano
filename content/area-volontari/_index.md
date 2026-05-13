@@ -49,10 +49,21 @@ Il **titolare del trattamento** resta il Gruppo Comunale Volontari di Protezione
 
 Per dettagli sul trattamento dati e diritti dell'interessato vedi la [Privacy Policy](/privacy/) del sito.
 
+## Cosa viene trasferito al momento del reindirizzamento
+
+Prima di proseguire al click sul pulsante di accesso, è importante che tu sappia quali dati tecnici vengono trasferiti al dominio esterno **activepager.com**:
+
+- **indirizzo IP** del tuo dispositivo
+- **User-Agent** del browser (tipo di browser, sistema operativo)
+- **cookie tecnici** necessari alla sessione di autenticazione
+- le **credenziali** (utente e password) che inserisci sulla loro piattaforma — non transitano dai server del Gruppo Comunale
+
+Il trattamento di questi dati avviene secondo la [Privacy Policy di ActivePager](https://activepager.com/privacy), indipendente da quella del Gruppo Comunale. Base giuridica: esecuzione del rapporto associativo (art. 6 § 1 lett. b GDPR).
+
 ## Accesso alla piattaforma
 
 <div class="text-center my-4">
-<a href="https://www.activepager.com/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+<a href="https://activepager.com/auth/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
   <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Accedi alla piattaforma Activepager
 </a>
 </div>
