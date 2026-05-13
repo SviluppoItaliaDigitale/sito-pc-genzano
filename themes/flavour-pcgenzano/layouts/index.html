@@ -92,6 +92,37 @@
     {{ if $avvisoUrl }}<a id="avviso-meteo-url" href="{{ $avvisoUrl }}" target="_blank" rel="noopener noreferrer" class="ms-2 avviso-meteo-link">PDF ufficiale <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>{{ end }}
   </div>
 </div>
+{{/* ── RISCHIO INCENDI BOSCHIVI (AIB) — solo se livello-oggi ≥ MEDIO (gialla) ── */}}
+{{ $incendiVisibile := false }}
+{{ $incendiLiv := "verde" }}
+{{ $incendiTitolo := "" }}
+{{ $incendiAib := "" }}
+{{ $incendiZona := 0 }}
+{{ $incendiDomLiv := "" }}
+{{ $incendiDomAib := "" }}
+{{ with $allerta.rischio_incendi }}
+  {{ if in (slice "gialla" "arancione" "rossa") .livello }}
+    {{ $incendiVisibile = true }}
+    {{ $incendiLiv = .livello }}
+    {{ $incendiTitolo = .titolo }}
+    {{ $incendiAib = .livello_aib }}
+    {{ $incendiZona = .zona_aib }}
+    {{ with .domani }}
+      {{ $incendiDomLiv = .livello }}
+      {{ $incendiDomAib = .livello_aib }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+<div id="incendi-bar" class="incendi-bar incendi-bar-{{ $incendiLiv }}" role="alert" aria-label="Rischio incendi boschivi"{{ if not $incendiVisibile }} style="display:none"{{ end }}>
+  <div class="container">
+    <i class="bi bi-fire me-2" aria-hidden="true"></i>
+    <strong>Rischio incendi boschivi:</strong>
+    <span id="incendi-titolo" class="ms-1">{{ $incendiTitolo }}</span>
+    {{ if $incendiAib }}<span class="incendi-aib ms-2">(Zona AIB {{ $incendiZona }} — livello {{ $incendiAib }})</span>{{ end }}
+    {{ if $incendiDomAib }}<span class="incendi-domani d-none d-md-inline ms-2">· Domani: {{ $incendiDomAib }}</span>{{ end }}
+    <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/rischi-incendi" target="_blank" rel="noopener noreferrer" class="ms-2 incendi-link">Bollettino AIB <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+  </div>
+</div>
 {{ end }}
 
 {{/* ══════════════════════════════════════════════════════
@@ -382,17 +413,35 @@ function checkAllertaDPC(){
       var titles={verde:'NESSUNA ALLERTA',gialla:'ALLERTA GIALLA',arancione:'ALLERTA ARANCIONE',rossa:'ALLERTA ROSSA'};
       var descs={verde:'Non sono previsti fenomeni significativi sul nostro territorio.',gialla:'Criticità ordinaria. Prestare attenzione.',arancione:'Criticità moderata. Limitare gli spostamenti.',rossa:'Criticità elevata. Seguire le indicazioni delle autorità.'};
 
-      bar.className='allerta-bar allerta-bar-'+maxLiv;
-      var t=document.getElementById('allerta-titolo');
-      var d=document.getElementById('allerta-desc');
-      var ic=document.getElementById('allerta-icon');
-      if(t)t.textContent=titles[maxLiv];
-      if(d){
-        var testo='— '+descs[maxLiv];
-        if(risksOrder.length>0)testo+=' ('+risksOrder.join(', ')+')';
-        d.textContent=testo;
+      // Anti-flicker: se il livello calcolato dal CSV combacia con quello
+      // già renderizzato dal server (classe CSS allerta-bar-<liv>), NON
+      // sovrascrivere titolo/descrizione/icona. Mantiene il testo
+      // personalizzato del server (più ricco e specifico) e evita lo
+      // sfarfallio che si vede in caricamento pagina.
+      // Sovrascrive solo se il LIVELLO è cambiato.
+      var levelServer=null;
+      var clsList=bar.className.split(/\s+/);
+      for(var ci=0;ci<clsList.length;ci++){
+        var c=clsList[ci];
+        if(c.indexOf('allerta-bar-')===0){
+          var suf=c.substring('allerta-bar-'.length);
+          if(suf!=='loading')levelServer=suf;
+        }
       }
-      if(ic)ic.className=maxLiv==='verde'?'bi bi-shield-check me-2':'bi bi-exclamation-triangle-fill me-2';
+      if(levelServer!==maxLiv){
+        // Livello cambiato → sovrascrivi tutto
+        bar.className='allerta-bar allerta-bar-'+maxLiv;
+        var t=document.getElementById('allerta-titolo');
+        var d=document.getElementById('allerta-desc');
+        var ic=document.getElementById('allerta-icon');
+        if(t)t.textContent=titles[maxLiv];
+        if(d){
+          var testo='— '+descs[maxLiv];
+          if(risksOrder.length>0)testo+=' ('+risksOrder.join(', ')+')';
+          d.textContent=testo;
+        }
+        if(ic)ic.className=maxLiv==='verde'?'bi bi-shield-check me-2':'bi bi-exclamation-triangle-fill me-2';
+      }
 
       // Aggiorna "Verificato: <ora>" con l'ora locale del client (max freschezza)
       var ck=document.getElementById('allerta-controllo');
