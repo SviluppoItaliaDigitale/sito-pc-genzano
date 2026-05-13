@@ -20,8 +20,27 @@
          quindi togliamo lo slash iniziale: "cerca/" → "/sito-pc-genzano/cerca/"
          mentre "/cerca/" → "/cerca/" (rotto su GitHub Pages). */ -}}
   {{- $relLink := strings.TrimPrefix "/" $link -}}
+  {{- /* Peso automatico per PDF locali: legge os.Stat al build e appende "(N KB)" o "(N MB)".
+         Skip se l'autore ha già scritto manualmente la dimensione nel testo del link. */ -}}
+  {{- $sizeSuffix := "" -}}
+  {{- if and $isStatic (strings.HasSuffix $lowerPath ".pdf") -}}
+    {{- $textLower := lower (printf "%s" .Text) -}}
+    {{- $hasManualSize := or (in $textLower "kb)") (in $textLower "mb)") -}}
+    {{- if not $hasManualSize -}}
+      {{- $staticPath := printf "static%s" $path -}}
+      {{- if fileExists $staticPath -}}
+        {{- $bytes := (os.Stat $staticPath).Size -}}
+        {{- if ge $bytes 1048576 -}}
+          {{- $sizeSuffix = printf " (%.1f MB)" (div (float $bytes) 1048576.0) -}}
+        {{- else -}}
+          {{- $kb := math.Ceil (div (float $bytes) 1024.0) -}}
+          {{- $sizeSuffix = printf " (%.0f KB)" $kb -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
   {{- if $isStatic -}}
-    <a href="{{ $relLink | relURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+    <a href="{{ $relLink | relURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}{{ $sizeSuffix }}</a>
   {{- else -}}
     {{- $cleanPath := strings.TrimSuffix "/" (strings.TrimPrefix "/" $path) -}}
     {{- $target := site.GetPage $cleanPath -}}
