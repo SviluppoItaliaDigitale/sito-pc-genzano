@@ -20,6 +20,7 @@ Dal **28 ottobre 2024** il Gruppo è anche **iscritto al RUNTS** (Registro Unico
 | Forma giuridica | Ente del Terzo Settore (ETS) — articolazione del Comune di Genzano |
 | Iscrizione RUNTS | Sezione *"Altri Enti del Terzo Settore"*, determina n. G14230 del 28/10/2024 |
 | Coordinamento operativo | 14° C.O.I. — Centro Operativo Intercomunale della Provincia di Roma |
+| Coordinamento regionale | Aderente al coordinamento **FEPIVOL** |
 | Quadro normativo | D.Lgs. 117/2017 (Codice del Terzo Settore) + D.Lgs. 1/2018 (Codice della Protezione Civile) + L.R. Lazio 9/2017 + Direttiva PCM 30/04/2021 |
 
 ## Statuto, atto costitutivo e iscrizione
