@@ -69,6 +69,29 @@
     <span id="allerta-domani-titolo">{{ $domaniTitolo }}</span>{{ if $domaniRischi }} <span class="text-nowrap">— {{ $domaniRischi }}</span>{{ end }}
   </div>
 </div>
+{{/* ── AVVISO METEO AVVERSO (vento, neve, calore...) — solo se attivo ── */}}
+{{ $avvisoLiv := "verde" }}
+{{ $avvisoTipo := "" }}
+{{ $avvisoDescr := "" }}
+{{ $avvisoUrl := "" }}
+{{ $avvisoVisibile := false }}
+{{ with $allerta.avviso_meteo }}
+  {{ $avvisoLiv = .livello }}
+  {{ $avvisoTipo = .tipo }}
+  {{ $avvisoDescr = .descrizione }}
+  {{ $avvisoUrl = .url }}
+  {{ $avvisoVisibile = true }}
+{{ end }}
+<div id="avviso-meteo-bar" class="avviso-meteo-bar avviso-meteo-bar-{{ $avvisoLiv }}" role="alert" aria-label="Avviso meteo avverso"{{ if not $avvisoVisibile }} style="display:none"{{ end }}>
+  <div class="container">
+    <i class="bi bi-wind me-2" aria-hidden="true"></i>
+    <strong>Avviso meteo:</strong>
+    <span id="avviso-meteo-tipo">{{ $avvisoTipo }}</span>
+    <span id="avviso-meteo-livello" class="ms-1">— allerta {{ $avvisoLiv }}</span>
+    {{ if $avvisoDescr }}<span id="avviso-meteo-descr" class="d-none d-md-inline ms-2">({{ $avvisoDescr }})</span>{{ end }}
+    {{ if $avvisoUrl }}<a id="avviso-meteo-url" href="{{ $avvisoUrl }}" target="_blank" rel="noopener noreferrer" class="ms-2 avviso-meteo-link">PDF ufficiale <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>{{ end }}
+  </div>
+</div>
 {{ end }}
 
 {{/* ══════════════════════════════════════════════════════
