@@ -159,7 +159,7 @@ Di seguito sono riportati alcuni eventi e calamità in cui il Gruppo ha partecip
 
 <div class="timeline-wrapper mt-4">
 <div class="timeline-item"><strong>1981</strong> — Fondazione del Comitato di Protezione Civile di Genzano di Roma</div>
-<div class="timeline-item"><strong>1991</strong> — Fondazione del Gruppo Comunale di Protezione Civile</div>
+<div class="timeline-item"><strong>1991</strong> — Istituzione del Gruppo Comunale di Protezione Civile (delibera del Consiglio Comunale, sindaco Gino Cesaroni)</div>
 <div class="timeline-item"><strong>1997</strong> — Terremoto Umbria - Marche</div>
 <div class="timeline-item"><strong>1998</strong> — Frana Sarno (SA)</div>
 <div class="timeline-item"><strong>1999</strong> — Missione Arcobaleno (Kosovo)</div>
