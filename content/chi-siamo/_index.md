@@ -177,6 +177,7 @@ Di seguito sono riportati alcuni eventi e calamità in cui il Gruppo ha partecip
 <div class="timeline-item"><strong>2023</strong> — Alluvione Emilia-Romagna</div>
 <div class="timeline-item"><strong>2023</strong> — Alluvione Toscana</div>
 <div class="timeline-item"><strong>2024</strong> — Alluvione Emilia-Romagna</div>
+<div class="timeline-item"><strong>2024</strong> — Iscrizione al RUNTS sezione "Altri Enti del Terzo Settore" (determina G14230 del 28/10/2024)</div>
 <div class="timeline-item"><strong>2025</strong> — Emergenza incendio Parco del Vesuvio</div>
 <div class="timeline-item"><strong>2025</strong> — Giubileo dei Giovani — Campo base Tor Vergata</div>
 </div>
