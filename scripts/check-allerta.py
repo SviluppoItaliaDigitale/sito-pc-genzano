@@ -89,6 +89,71 @@ BASE_DESCS = {
     "rossa": "Seguire le indicazioni delle autorità.",
 }
 
+MESI_IT = [
+    "", "gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
+    "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre",
+]
+# Genzano è in Zona di Allerta Lazi-F = "Bacini Costieri Sud" (Centro Funzionale
+# Regionale Lazio, DGR 865 del 26/11/2019). Hardcoded perché vale sempre per
+# questo sito (un solo Comune monitorato).
+ZONA_NAME_BREVE = "Zona F"
+ZONA_NAME_LUNGO = "Zona F — Bacini Costieri Sud (Genzano)"
+
+
+def costruisci_descrizione_ricca(row, livello, rischi_attivi):
+    """Combina i dati grezzi del CSV in una descrizione AGID dettagliata.
+
+    Forma desiderata (esempio gialla per temporali):
+      "Ordinaria per rischio temporali, Zona F — Bacini Costieri Sud (Genzano).
+      Bollettino DPC/Regione Lazio del 12 maggio 2026,
+      validità 13 maggio 00:00–23:59."
+
+    Per livello verde: descrizione standard generica (BASE_DESCS).
+    Per livelli ≥ gialla: combina avviso_criticita CSV + zona + finestra
+    di validità formattata in italiano.
+    """
+    if livello == "verde" or not row:
+        return BASE_DESCS[livello]
+
+    # Frase fenomeno dal CSV: "Ordinaria per rischio temporali / ALLERTA GIALLA"
+    # → tieni solo la parte PRIMA dello slash
+    crit_raw = row.get("avviso_criticita", "") or ""
+    if "/" in crit_raw:
+        fenomeno = crit_raw.split("/")[0].strip()
+    else:
+        fenomeno = crit_raw.strip()
+    if not fenomeno:
+        # Fallback: usa BASE_DESCS
+        fenomeno = BASE_DESCS[livello]
+
+    parts = [f"{fenomeno}, {ZONA_NAME_LUNGO}."]
+
+    # Date emissione + finestra validità
+    pub = parse_iso(row.get("data_pubblicazione", ""))
+    val_inizio = parse_iso(row.get("data_validita_inizio", ""))
+    val_fine = parse_iso(row.get("data_validita_fine", ""))
+    if pub and val_inizio and val_fine:
+        bol_data = f"{pub.day} {MESI_IT[pub.month]} {pub.year}"
+        val_giorno = f"{val_inizio.day} {MESI_IT[val_inizio.month]}"
+        val_h = f"{val_inizio.strftime('%H:%M')}–{val_fine.strftime('%H:%M')}"
+        parts.append(f"Bollettino DPC/Regione Lazio del {bol_data}, validità {val_giorno} {val_h}.")
+
+    return " ".join(parts)
+
+
+def costruisci_titolo_ricco(livello, rischi_attivi):
+    """Titolo banner: 'ALLERTA <LIV>' + ' — <lista rischi>' se ce ne sono.
+
+    Esempi:
+    - verde: "NESSUNA ALLERTA"
+    - gialla con temporali: "ALLERTA GIALLA — temporali"
+    - arancione con temporali + idrogeologico: "ALLERTA ARANCIONE — temporali, rischio idrogeologico"
+    """
+    base = TITLES[livello]
+    if livello == "verde" or not rischi_attivi:
+        return base
+    return f"{base} — {', '.join(rischi_attivi)}"
+
 
 def http_get_text(url, timeout=HTTP_TIMEOUT):
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -385,13 +450,18 @@ def main():
             }
             print(f"📅 Bollettino DOMANI ({inizio_d.date()}): {liv_dom}, rischi={risks_dom_order}")
 
-    # ── 4. Costruisci titolo e descrizione ──
-    titolo = TITLES[livello]
-    if livello == "verde" or not active_risks:
-        descrizione = BASE_DESCS[livello]
-    else:
-        rischi_str = ", ".join(active_risks)
-        descrizione = f"Criticità per {rischi_str}. {BASE_DESCS[livello]}"
+    # ── 4. Costruisci titolo e descrizione ricca ──
+    # Il titolo include la lista rischi attivi (es. "ALLERTA GIALLA — temporali").
+    # La descrizione integra: frase fenomeno DPC + zona Lazi-F + data emissione
+    # bollettino + finestra validità (es. "Ordinaria per rischio temporali,
+    # Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del
+    # 12 maggio 2026, validità 13 maggio 00:00–23:59.").
+    # Il dato grezzo del CSV opendatasicilia ha già tutti i campi necessari.
+    titolo = costruisci_titolo_ricco(livello, active_risks)
+    # Per la descrizione passo la riga "vincente" dell'attivo (quella che ha
+    # determinato il MAX); per livello verde la riga può essere None.
+    row_per_descr = attivi.get(bollettino_attivo_label) if bollettino_attivo_label else None
+    descrizione = costruisci_descrizione_ricca(row_per_descr, livello, active_risks)
 
     timestamp_now = now.isoformat(timespec="seconds")
 
