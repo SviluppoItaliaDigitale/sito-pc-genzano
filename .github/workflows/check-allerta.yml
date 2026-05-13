@@ -47,12 +47,13 @@ jobs:
 
       - name: "🌬️ Check avvisi meteo avversi (vento, neve, calore)"
         id: avvisi
-        run: |
-          # poppler-utils per pdftotext, preinstallato su ubuntu-latest ma garantiamo
-          which pdftotext || sudo apt-get install -y --no-install-recommends poppler-utils
-          python3 scripts/check-avvisi-meteo.py
+        run: python3 scripts/check-avvisi-meteo.py
 
-      - name: "📝 Commit e push se allerta o avviso cambiato"
+      - name: "🔥 Check rischio incendi boschivi (AIB Regione Lazio)"
+        id: incendi
+        run: python3 scripts/check-rischi-incendi.py
+
+      - name: "📝 Commit e push se allerta/avviso/incendi cambiato"
         id: commit
         run: |
           git config user.name "github-actions[bot]"
@@ -75,10 +76,17 @@ jobs:
               MSG_PARTS+=("avviso meteo cessato")
             fi
           fi
+          if [ "${{ steps.incendi.outputs.changed }}" = "true" ]; then
+            if [ -n "${{ steps.incendi.outputs.livello_aib }}" ]; then
+              MSG_PARTS+=("rischio incendi: ${{ steps.incendi.outputs.livello_aib }}")
+            else
+              MSG_PARTS+=("rischio incendi cessato")
+            fi
+          fi
           MSG_HEAD=$(IFS=' + '; echo "${MSG_PARTS[*]}")
           [ -z "$MSG_HEAD" ] && MSG_HEAD="aggiornamento periodico"
           git commit -m "Allerta meteo: $MSG_HEAD" \
-                     -m "Aggiornamento automatico da bollettino DPC (opendatasicilia) e avvisi meteo Regione Lazio."
+                     -m "Aggiornamento automatico da bollettino DPC (opendatasicilia), avvisi meteo e bollettino AIB Regione Lazio."
           git push
           echo "committed=true" >> "$GITHUB_OUTPUT"
 
