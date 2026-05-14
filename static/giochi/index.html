@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Giochi della Sicurezza — Protezione Civile Genzano di Roma</title>
-  <meta name="description" content="Giochi educativi sulla protezione civile divisi per fascia d'età: infanzia, scuola primaria, ragazzi e attività accessibili del programma Abili a Proteggere.">
+  <title>Arena PC Genzano — Giochi della Sicurezza</title>
+  <meta name="description" content="Arena PC Genzano: il launcher dei giochi educativi sulla protezione civile. Tutti i giochi in un colpo d'occhio, con i tuoi progressi salvati sul dispositivo. Diviso per fascia d'età.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
@@ -13,106 +13,100 @@
   <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/assets/css/arena.css">
 </head>
 <body>
-  <main id="main-content" tabindex="-1" class="giochi-section">
-    <div class="app-page-hero">
+  <main id="main-content" tabindex="-1" class="giochi-section arena">
+    <div class="app-page-hero arena-hero">
       <div class="container">
         <nav aria-label="Percorso">
           <ol class="breadcrumb mb-2">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Giochi della Sicurezza</li>
+            <li class="breadcrumb-item active" aria-current="page">Arena PC Genzano</li>
           </ol>
         </nav>
-        <h1>Giochi della Sicurezza</h1>
-        <p class="lead">Impara le regole della Protezione Civile divertendoti. Scegli la fascia d'età o le attività accessibili.</p>
+        <h1>Arena PC Genzano</h1>
+        <p class="lead">Tutti i giochi della sicurezza in un colpo d'occhio. Impara le regole della Protezione Civile divertendoti — i tuoi progressi restano sul tuo dispositivo.</p>
       </div>
     </div>
 
-    <div class="container py-5">
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-6 col-lg-3">
-          <a href="infanzia/index.html" class="fascia-card fascia-card-infanzia">
-            <div class="fascia-icon-big fascia-icon-infanzia">
-              <i class="bi bi-emoji-smile-fill" aria-hidden="true"></i>
-            </div>
-            <h2>Piccoli Esploratori</h2>
-            <div class="fascia-eta">3 – 6 anni</div>
-            <p class="fascia-desc">Giochi semplici con icone grandi, suoni e pochissimo testo. Ideali da fare con un adulto accanto.</p>
-            <span class="fascia-conteggio">giochi disponibili</span>
-          </a>
-        </div>
+    <div class="container py-4">
 
-        <div class="col-md-6 col-lg-3">
-          <a href="primaria/index.html" class="fascia-card fascia-card-primaria">
-            <div class="fascia-icon-big fascia-icon-primaria">
-              <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
-            </div>
-            <h2>Scuola Primaria</h2>
-            <div class="fascia-eta">6 – 11 anni</div>
-            <p class="fascia-desc">Quiz, memory, cruciverba e scenari di emergenza: imparare i comportamenti corretti giocando.</p>
-            <span class="fascia-conteggio">giochi disponibili</span>
-          </a>
+      <!-- Tutorial primo accesso (dismissibile) -->
+      <div id="arena-intro" class="arena-intro" role="note" hidden>
+        <div class="arena-intro-testo">
+          <strong><i class="bi bi-stars me-1" aria-hidden="true"></i> Benvenuto nell'Arena!</strong>
+          Scegli un gioco dalla griglia qui sotto. Quando completi un gioco con almeno l'80% ottieni un <strong>badge</strong>.
+          I progressi si salvano automaticamente, solo su questo dispositivo: nessun account, niente registrazione.
         </div>
-
-        <div class="col-md-6 col-lg-3">
-          <a href="ragazzi/index.html" class="fascia-card fascia-card-ragazzi">
-            <div class="fascia-icon-big fascia-icon-ragazzi">
-              <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
-            </div>
-            <h2>Ragazzi</h2>
-            <div class="fascia-eta">11 – 19 anni</div>
-            <p class="fascia-desc">Simulazioni, narrativa interattiva, radiocomunicazioni e pianificazione: pensa come un volontario.</p>
-            <span class="fascia-conteggio">giochi disponibili</span>
-          </a>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <a href="/abili-a-proteggere/" class="fascia-card fascia-card-abili">
-            <div class="fascia-icon-big fascia-icon-abili">
-              <i class="bi bi-heart-fill" aria-hidden="true"></i>
-            </div>
-            <h2>Abili a Proteggere</h2>
-            <div class="fascia-eta">Attività accessibili</div>
-            <p class="fascia-desc">Pulsanti grandi, testi semplici e nessun limite di tempo: per persone con difficoltà, anziani e bambini fragili.</p>
-            <span class="fascia-conteggio">attività disponibili</span>
-          </a>
-        </div>
+        <button type="button" id="arena-intro-chiudi" class="arena-intro-chiudi" aria-label="Ho capito, chiudi il messaggio di benvenuto">Ho capito</button>
       </div>
 
-      <!-- Sezione: Risorse esterne istituzionali -->
-      <section class="mt-5" aria-labelledby="titolo-risorse-esterne">
-        <h2 id="titolo-risorse-esterne" class="h4 mb-3">
-          <i class="bi bi-globe2 text-primary me-1" aria-hidden="true"></i> Risorse esterne istituzionali
-        </h2>
-        <p class="text-muted mb-3">Giochi e simulazioni curati da enti internazionali e nazionali di protezione civile, complementari ai contenuti del nostro sito.</p>
-        <div class="row g-4">
-          <div class="col-md-8 col-lg-6">
-            <a href="https://www.stopdisastersgame.org/game/" target="_blank" rel="noopener noreferrer" class="fascia-card fascia-card-ragazzi" aria-label="Apri Stop Disasters! sul sito ufficiale UNDRR (si apre in una nuova finestra)">
-              <div class="fascia-icon-big fascia-icon-ragazzi">
-                <i class="bi bi-shield-fill-exclamation" aria-hidden="true"></i>
-              </div>
-              <h3 style="font-size:1.25rem;margin-bottom:0.4rem">Stop Disasters! <span class="badge bg-primary ms-1" style="font-size:0.65rem;vertical-align:middle">ONU · UNDRR</span></h3>
-              <div class="fascia-eta">9 – 17 anni</div>
-              <p class="fascia-desc">Simulazione gratuita dell'Agenzia ONU per la Riduzione del Rischio di Disastri (UNDRR). Costruisci villaggi e città più sicuri contro 5 disastri naturali: terremoto, alluvione, tsunami, uragano e incendio boschivo. Disponibile in italiano. <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i></p>
-              <span class="fascia-conteggio">5 scenari · facile/medio/difficile</span>
-            </a>
-          </div>
+      <!-- Barra strumenti: skin + riepilogo -->
+      <div class="arena-toolbar">
+        <div class="arena-skin" role="group" aria-label="Stile di visualizzazione">
+          <span class="arena-skin-label">Stile:</span>
+          <button type="button" class="arena-skin-btn" data-skin="arena" aria-pressed="true">Arena</button>
+          <button type="button" class="arena-skin-btn" data-skin="classica" aria-pressed="false">Classica</button>
+        </div>
+        <p class="arena-riepilogo" id="arena-riepilogo" aria-live="polite"></p>
+      </div>
+
+      <!-- Continua dove avevi lasciato -->
+      <section id="arena-continua" aria-labelledby="arena-continua-h" hidden>
+        <h2 id="arena-continua-h" class="arena-sez"><i class="bi bi-play-circle-fill me-1" aria-hidden="true"></i> Continua dove avevi lasciato</h2>
+        <div id="arena-continua-card"></div>
+      </section>
+
+      <!-- Filtri per fascia -->
+      <h2 class="arena-sez" id="arena-griglia-h"><i class="bi bi-controller me-1" aria-hidden="true"></i> Tutti i giochi</h2>
+      <div class="arena-filtri" role="group" aria-label="Filtra i giochi per fascia d'età">
+        <button type="button" class="arena-filtro" data-fascia="" aria-pressed="true">Tutti</button>
+        <button type="button" class="arena-filtro" data-fascia="infanzia" aria-pressed="false">Infanzia 3-6</button>
+        <button type="button" class="arena-filtro" data-fascia="primaria" aria-pressed="false">Primaria 6-11</button>
+        <button type="button" class="arena-filtro" data-fascia="ragazzi" aria-pressed="false">Ragazzi 11-19</button>
+      </div>
+      <div class="row g-3 arena-griglia" id="arena-griglia" aria-live="polite">
+        <!-- Card gioco popolate da arena.js -->
+      </div>
+
+      <!-- Anche: pagine fascia + attività accessibili -->
+      <section class="mt-5" aria-labelledby="arena-altro-h">
+        <h2 id="arena-altro-h" class="arena-sez"><i class="bi bi-grid me-1" aria-hidden="true"></i> Sfoglia per fascia</h2>
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-3"><a href="infanzia/index.html" class="arena-fascia-link arena-f-infanzia"><i class="bi bi-emoji-smile-fill" aria-hidden="true"></i><span>Piccoli Esploratori</span><small>3-6 anni</small></a></div>
+          <div class="col-sm-6 col-lg-3"><a href="primaria/index.html" class="arena-fascia-link arena-f-primaria"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i><span>Scuola Primaria</span><small>6-11 anni</small></a></div>
+          <div class="col-sm-6 col-lg-3"><a href="ragazzi/index.html" class="arena-fascia-link arena-f-ragazzi"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i><span>Ragazzi</span><small>11-19 anni</small></a></div>
+          <div class="col-sm-6 col-lg-3"><a href="/abili-a-proteggere/" class="arena-fascia-link arena-f-abili"><i class="bi bi-heart-fill" aria-hidden="true"></i><span>Abili a Proteggere</span><small>Attività accessibili</small></a></div>
         </div>
       </section>
 
-      <!-- Box: I tuoi badge -->
+      <!-- I tuoi badge: riepilogo + azzera -->
       <section class="mt-5" aria-labelledby="titolo-badge">
-        <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
-          <h2 id="titolo-badge" class="h4 m-0"><i class="bi bi-award-fill text-warning me-1" aria-hidden="true"></i> I tuoi badge</h2>
+        <div class="d-flex flex-wrap align-items-center justify-content-between mb-2">
+          <h2 id="titolo-badge" class="arena-sez m-0"><i class="bi bi-award-fill me-1" aria-hidden="true"></i> I tuoi badge</h2>
           <button type="button" id="btn-reset-badge" class="btn btn-sm btn-outline-secondary">
             <i class="bi bi-arrow-counterclockwise me-1" aria-hidden="true"></i> Azzera progressi
           </button>
         </div>
-        <p class="text-muted small mb-3" id="badge-intro">I badge si ottengono rispondendo correttamente almeno all'80% delle domande di un gioco. I progressi sono salvati solo su questo dispositivo.</p>
-        <div class="row g-3" id="elenco-badge" aria-live="polite">
-          <!-- Popolato da JS -->
+        <p class="text-muted small mb-0">I badge si ottengono completando un gioco con almeno l'80%. I progressi sono salvati solo su questo dispositivo e si cancellano con un clic.</p>
+      </section>
+
+      <!-- Risorse esterne istituzionali -->
+      <section class="mt-5" aria-labelledby="titolo-risorse-esterne">
+        <h2 id="titolo-risorse-esterne" class="arena-sez"><i class="bi bi-globe2 me-1" aria-hidden="true"></i> Risorse esterne istituzionali</h2>
+        <p class="text-muted mb-3">Giochi e simulazioni curati da enti internazionali e nazionali di protezione civile.</p>
+        <div class="row g-4">
+          <div class="col-md-8 col-lg-6">
+            <a href="https://www.stopdisastersgame.org/game/" target="_blank" rel="noopener noreferrer" class="fascia-card fascia-card-ragazzi" aria-label="Apri Stop Disasters! sul sito ufficiale UNDRR (si apre in una nuova finestra)">
+              <div class="fascia-icon-big fascia-icon-ragazzi"><i class="bi bi-shield-fill-exclamation" aria-hidden="true"></i></div>
+              <h3 style="font-size:1.25rem;margin-bottom:0.4rem">Stop Disasters! <span class="badge bg-primary ms-1" style="font-size:0.65rem;vertical-align:middle">ONU · UNDRR</span></h3>
+              <div class="fascia-eta">9 – 17 anni</div>
+              <p class="fascia-desc">Simulazione gratuita dell'Agenzia ONU per la Riduzione del Rischio di Disastri. Costruisci villaggi e città più sicuri contro 5 disastri naturali. Disponibile in italiano. <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i></p>
+              <span class="fascia-conteggio">5 scenari · facile/medio/difficile</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -127,55 +121,6 @@
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
-  <script>
-  (function(){
-    var cont = document.getElementById('elenco-badge');
-    var intro = document.getElementById('badge-intro');
-    if (!cont || !window.GiochiPC) return;
-
-    function render(){
-      var badge = window.GiochiPC.elencoBadge();
-      var ottenuti = badge.filter(function(b){return b.ottenuto;}).length;
-      var totale = badge.length;
-
-      cont.innerHTML = '';
-      if (ottenuti === 0) {
-        cont.innerHTML = '<div class="col-12"><p class="text-muted fst-italic mb-0">Non hai ancora ottenuto nessun badge. Inizia a giocare!</p></div>';
-      } else {
-        intro.innerHTML = 'Hai ottenuto <strong>' + ottenuti + '</strong> badge su ' + totale + '. I progressi sono salvati solo su questo dispositivo.';
-      }
-      badge.forEach(function(b){
-        if (!b.ottenuto && !b.completato) return;
-        var col = document.createElement('div');
-        col.className = 'col-md-6 col-lg-4';
-        var stato = b.ottenuto ? 'badge-ottenuto' : 'badge-bloccato';
-        var fasciaLabel = { infanzia:'Infanzia', primaria:'Primaria', ragazzi:'Ragazzi' }[b.fascia] || '';
-        var dataStr = b.data ? window.GiochiPC.formattaData(b.data) : '';
-        col.innerHTML = ''
-          + '<div class="badge-giochi ' + stato + '">'
-          + '  <div class="badge-icona"><i class="bi ' + (b.ottenuto ? 'bi-award-fill' : 'bi-hourglass-split') + '" aria-hidden="true"></i></div>'
-          + '  <div>'
-          + '    <p class="badge-nome">' + b.nome + '</p>'
-          + '    <p class="badge-dettaglio"><span class="fascia-badge fascia-' + b.fascia + '">' + fasciaLabel + '</span> &middot; ' + b.percentuale + '%'
-          + (dataStr ? ' &middot; ' + dataStr : '')
-          + '</p>'
-          + '  </div>'
-          + '</div>';
-        cont.appendChild(col);
-      });
-    }
-
-    render();
-
-    var btn = document.getElementById('btn-reset-badge');
-    if (btn) {
-      btn.addEventListener('click', function(){
-        if (!confirm('Sei sicuro di voler azzerare tutti i progressi e i badge ottenuti?')) return;
-        window.GiochiPC.reset();
-        render();
-      });
-    }
-  })();
-  </script>
+  <script src="/giochi/assets/js/arena.js"></script>
 </body>
 </html>
