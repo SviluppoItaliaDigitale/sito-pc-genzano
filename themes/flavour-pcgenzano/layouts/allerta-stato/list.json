@@ -1,0 +1,16 @@
+{{- /* Endpoint JSON pubblico dello stato di allerta: rende data/allerta.json
+       a un URL pubblico (/allerta-stato/index.json) che le notifiche browser
+       (static/js/notifiche-allerta.js) interrogano. Si aggiorna a ogni deploy,
+       quindi resta allineato a data/allerta.json aggiornato da check-allerta.yml. */ -}}
+{{- $a := .Site.Data.allerta -}}
+{{- $e := .Site.Data.emergenza -}}
+{{- dict
+      "livello" ($a.livello | default "verde")
+      "titolo" ($a.titolo | default "")
+      "descrizione" ($a.descrizione | default "")
+      "ultimo_aggiornamento" ($a.ultimo_aggiornamento | default "")
+      "ultimo_controllo" ($a.ultimo_controllo | default "")
+      "emergenza_attiva" (and $e $e.attiva)
+      "emergenza_titolo" (cond (and $e $e.attiva) ($e.titolo | default "") "")
+      "generato" now
+   | jsonify (dict "indent" "  ") -}}
