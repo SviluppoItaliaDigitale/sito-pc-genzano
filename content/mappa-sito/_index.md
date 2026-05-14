@@ -388,6 +388,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Storia del territorio</p>
   <p class="ms-card-desc">Linea del tempo dei Castelli Romani: natura vulcanica, terremoti storici, evoluzione del sistema di protezione civile. Ogni voce con fonte istituzionale.</p>
 </a>
+<a class="ms-card ms-edu" href="/lanterna/">
+  <div class="ms-card-icon"><i class="bi bi-lightbulb"></i></div>
+  <p class="ms-card-title">Modalità Lanterna</p>
+  <p class="ms-card-desc">Pagina ultra-leggera di sopravvivenza: torcia, bussola, schermo sempre acceso, 112 sempre in alto. Per poca batteria, rete debole, di notte.</p>
+</a>
 <a class="ms-card ms-edu" href="/podcast/">
   <div class="ms-card-icon"><i class="bi bi-mic-fill"></i></div>
   <p class="ms-card-title">Podcast</p>
