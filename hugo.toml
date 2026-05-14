@@ -318,6 +318,12 @@ enableGitInfo = true
   parent = "risorse"
   weight = 12
 
+[[menus.main]]
+  name = "Open Data"
+  url = "/open-data/"
+  parent = "risorse"
+  weight = 13
+
 # --- Voci dirette ---
 [[menus.main]]
   name = "Comunicazioni"
