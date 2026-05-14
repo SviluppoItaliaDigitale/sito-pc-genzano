@@ -2,11 +2,12 @@ _[Indice manuale](README.md)_
 
 # Parte 19 — Agenti specializzati Claude Code (maggio 2026)
 
-A maggio 2026 sono stati installati nel repo cinque **agenti specializzati**
-in `.claude/agents/`. Sono profili professionali virtuali con cui Claude Code
-ti aiuta nei compiti ricorrenti del Gruppo, ognuno con un'expertise mirata
-(redazione AGID, art direction, gestione issue, deploy engineering,
-comunicazione di crisi).
+A maggio 2026 sono stati installati nel repo **agenti specializzati**
+in `.claude/agents/` (sette al 14 maggio 2026). Sono profili professionali
+virtuali con cui Claude Code ti aiuta nei compiti ricorrenti del Gruppo,
+ognuno con un'expertise mirata (redazione AGID, art direction, gestione
+issue, deploy engineering, comunicazione di crisi, QA schede stampabili,
+audit di sistema).
 
 **La parte importante:** non devi ricordare nessun nome tecnico. **Scrivi a
 Claude in italiano normale**, dicendo cosa vuoi fare, e Claude attiva da solo
@@ -14,7 +15,7 @@ l'agente giusto.
 
 ---
 
-## 19.1 I cinque agenti e quando si attivano
+## 19.1 I sette agenti e quando si attivano
 
 ### 1. Caporedattore (revisione articoli) — 🔴 GATE OBBLIGATO
 
@@ -143,6 +144,60 @@ manuale, è una scelta del Gruppo.
 
 ---
 
+### 6. Print Quality Engineer (QA schede stampabili)
+
+**Quando lo attivi**: hai creato o modificato una scheda A4 stampabile in
+`static/formazione/kit-calamita-*/` e vuoi un controllo prima di pubblicarla.
+
+**Frasi naturali che lo attivano automaticamente**:
+
+- *"Controlla le schede stampabili del kit bambini."*
+- *"Fai il QA del kit calamità anziani."*
+- *"I puzzle di questa scheda sono giocabili davvero?"*
+- *"Il labirinto ha una via d'uscita? Il cruciverba ha le celle giuste?"*
+
+**Cosa fa**: verifica struttura HTML, conformità al `print.css`, esistenza
+delle immagini referenziate, **giocabilità reale dei puzzle** (labirinti con
+percorso valido, parole effettivamente nascoste nel word search, celle
+corrette nei cruciverba, sudoku risolvibile), accessibilità (alt text,
+contrasto, dimensione font). Restituisce una punch list di problemi.
+
+**Cosa NON fa**: non valuta il rendering visivo finale (serve un occhio umano
+o un test browser) e non genera contenuto creativo — verifica solo l'esistente.
+
+**Identità tecnica**: `pc-print-card-qa`.
+
+---
+
+### 7. Auditor di Sistema (audit completo del sito)
+
+**Quando lo attivi**: vuoi una fotografia onesta dello stato del sito —
+bug, incongruenze, cosa funziona — su tutto il repo, non solo sull'ultimo
+commit.
+
+**Frasi naturali che lo attivano automaticamente**:
+
+- *"Fammi un audit approfondito del sito."*
+- *"Controlla tutto il sito, ci sono incongruenze?"*
+- *"Pro e contro, dimmi che bug ci sono."*
+- *"Il sito è in ordine? Fai una verifica seria."*
+
+**Cosa fa**: build Hugo, integrità dei link interni (distinguendo i link
+realmente rotti dai link verso articoli calendarizzati, che NON sono bug),
+ordering degli articoli pubblicati lo stesso giorno, completezza del
+frontmatter, anti-pattern banditi, coerenza tra file (menu, sigla COI,
+pagine legali, documentazione agenti), peso delle immagini. Produce un
+report tabellare con PRO / bug per gravità / raccomandazioni.
+
+**Cosa NON fa**: non corregge niente, non committa, non pusha, non apre
+PR né issue. È un auditor in sola lettura — le correzioni le autorizzi tu.
+È diverso dal **Release Engineer** (che controlla solo il diff prima di un
+push) e dall'audit settimanale automatico `audit-sito.yml`.
+
+**Identità tecnica**: `pc-site-auditor`.
+
+---
+
 ## 19.2 Esempi di workflow tipici
 
 ### Pubblicare un articolo nuovo (sequenza ideale)
@@ -226,6 +281,8 @@ problema"* — e Claude corregge.
 | `.claude/agents/pc-issue-triage.md` | Project Manager | 16 anni Engineering Manager OSS/CNCF |
 | `.claude/agents/pc-deploy-validator.md` | Release Engineer | 15 anni SRE per PA italiana |
 | `.claude/agents/pc-social-publisher.md` | Risk Communication | 12 anni Comunication Officer PC, contributor CWA CEN/CENELEC |
+| `.claude/agents/pc-print-card-qa.md` | Print Quality Engineer | 10 anni Print Production Specialist per editori didattici |
+| `.claude/agents/pc-site-auditor.md` | Auditor di Sistema | 17 anni QA Lead e auditor tecnico per portali PA |
 
 I background sono "personae" usati per ancorare le valutazioni a standard
 verificabili (linee guida AGID, ISO 22329, WCAG, CWA, ecc.). Non sono persone
