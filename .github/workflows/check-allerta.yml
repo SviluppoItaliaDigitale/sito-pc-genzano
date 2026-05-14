@@ -97,3 +97,17 @@ jobs:
         run: |
           echo "Triggering deploy workflow..."
           gh workflow run deploy.yml --ref main
+
+      # I push fatti con il GITHUB_TOKEN NON auto-triggerano i workflow `push`:
+      # notifica-telegram.yml ascolta su push -> data/allerta.json, ma non si
+      # sveglia da solo per i commit automatici di questo workflow. Va avviato
+      # esplicitamente, come deploy.yml qui sopra. notifica-telegram.py ha la
+      # sua logica di de-duplica (confronta con HEAD~1, invia solo se il
+      # livello e' davvero cambiato): chiamarlo a ogni commit e' sicuro.
+      - name: "📲 Avvia notifica Telegram"
+        if: steps.commit.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Triggering notifica-telegram workflow..."
+          gh workflow run notifica-telegram.yml --ref main
