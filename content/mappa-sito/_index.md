@@ -383,6 +383,16 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Stato del sistema</p>
   <p class="ms-card-desc">Cruscotto pubblico di trasparenza tecnica: stato di allerta, modalità del sito, automazioni di manutenzione con semaforo, conformità AGID e WCAG.</p>
 </a>
+<a class="ms-card ms-edu" href="/storia/">
+  <div class="ms-card-icon"><i class="bi bi-clock-history"></i></div>
+  <p class="ms-card-title">Storia del territorio</p>
+  <p class="ms-card-desc">Linea del tempo dei Castelli Romani: natura vulcanica, terremoti storici, evoluzione del sistema di protezione civile. Ogni voce con fonte istituzionale.</p>
+</a>
+<a class="ms-card ms-edu" href="/podcast/">
+  <div class="ms-card-icon"><i class="bi bi-mic-fill"></i></div>
+  <p class="ms-card-title">Podcast</p>
+  <p class="ms-card-desc">Il podcast del Gruppo Comunale: episodi audio sui rischi locali, esercitazioni, interviste. Feed RSS per Spotify, Apple Podcasts e ogni app.</p>
+</a>
 <a class="ms-card ms-edu" href="/faq/">
   <div class="ms-card-icon"><i class="bi bi-patch-question-fill"></i></div>
   <p class="ms-card-title">Domande frequenti</p>

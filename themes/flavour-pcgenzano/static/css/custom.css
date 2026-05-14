@@ -4978,3 +4978,129 @@ html.a11y-hide-translate-button #lang-modal { display: none !important; }
  * fine PODCAST v2.0
  * ==========================================================================
  */
+
+/* ==========================================================================
+ * TIMELINE STORICA v1.0 — linea del tempo /storia/ (idea #8)
+ * Layout: layouts/storia/list.html — Dati: data/eventi_storici.yaml
+ * Timeline verticale, marker colorati per tipo evento, fade-in con guardia
+ * prefers-reduced-motion. Palette istituzionale.
+ * ==========================================================================
+ */
+
+.pcg-timeline {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0 0 0 2rem;
+  position: relative;
+}
+
+.pcg-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 3px;
+  background: #c9d3e0;
+  border-radius: 2px;
+}
+
+.pcg-timeline-voce {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.pcg-timeline-marker {
+  position: absolute;
+  left: -1.72rem;
+  top: 0.35rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 50%;
+  background: #003366;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #003366;
+}
+
+/* Marker colorati per tipo di evento */
+.pcg-timeline-geologico .pcg-timeline-marker { background: #b45309; box-shadow: 0 0 0 2px #b45309; }
+.pcg-timeline-sismico .pcg-timeline-marker { background: #d9364f; box-shadow: 0 0 0 2px #d9364f; }
+.pcg-timeline-idrogeologico .pcg-timeline-marker { background: #0369a1; box-shadow: 0 0 0 2px #0369a1; }
+.pcg-timeline-normativo .pcg-timeline-marker { background: #15803d; box-shadow: 0 0 0 2px #15803d; }
+
+.pcg-timeline-card {
+  border: 1px solid #d0d7e2;
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+  background: #ffffff;
+}
+
+.pcg-timeline-anno {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #003366;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.15rem;
+}
+
+.pcg-timeline-titolo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.35rem;
+}
+
+.pcg-timeline-luogo {
+  font-size: 0.85rem;
+  color: #5b6770;
+  margin: 0 0 0.5rem;
+}
+
+.pcg-timeline-desc {
+  margin: 0 0 0.6rem;
+  color: #333333;
+}
+
+.pcg-timeline-lezione {
+  margin: 0 0 0.6rem;
+  padding: 0.5rem 0.75rem;
+  background: #f4f7fb;
+  border-left: 3px solid #003366;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+}
+
+.pcg-timeline-fonte {
+  font-size: 0.82rem;
+  color: #5b6770;
+  margin: 0;
+}
+
+.pcg-timeline-fonte-link {
+  font-size: 0.82rem;
+  margin: 0.15rem 0 0;
+}
+
+/* Fade-in sobrio — solo se l'utente non ha chiesto meno animazioni */
+@media (prefers-reduced-motion: no-preference) {
+  .pcg-timeline-voce {
+    animation: pcgTimelineIn 0.5s ease-out both;
+  }
+  @keyframes pcgTimelineIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+html.a11y-pause-anim .pcg-timeline-voce {
+  animation: none;
+}
+
+@media print {
+  .pcg-timeline-voce { animation: none; page-break-inside: avoid; }
+  .pcg-timeline-card { border: 1px solid #000000; }
+}
+/* ==========================================================================
+ * fine TIMELINE STORICA v1.0
+ * ==========================================================================
+ */
