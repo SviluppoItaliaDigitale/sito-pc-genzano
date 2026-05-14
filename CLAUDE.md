@@ -145,7 +145,7 @@ Risultato: il **9 maggio 2026** l'utente ha chiesto di rivedere AGID tutti gli a
 
 ## Agenti specializzati disponibili
 
-In `.claude/agents/` ci sono 5 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
+In `.claude/agents/` ci sono 7 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
 
 | Agent | Trigger naturali italiani |
 |---|---|
@@ -154,6 +154,8 @@ In `.claude/agents/` ci sono 5 agenti custom da usare PROATTIVAMENTE quando la c
 | `pc-issue-triage` | "controlla le issue", "fai pulizia tracker", "issue da chiudere?" |
 | `pc-deploy-validator` | "verifica prima del push", "controlla il deploy", "build OK?", "pubblico in sicurezza?" |
 | `pc-social-publisher` | "rivedi le bozze social", "pronti per pubblicare i social?", "controlla immagini Instagram" |
+| `pc-print-card-qa` | "controlla le schede stampabili", "QA del kit calamità", "i puzzle sono giocabili?" |
+| `pc-site-auditor` | "fammi un audit del sito", "audit approfondito", "controlla tutto il sito", "ci sono incongruenze?", "pro e contro" |
 
 Specifiche operative complete + esempi di workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Quando aggiungi/modifichi un agent, aggiorna anche la Parte 19 e questa tabella.
 

@@ -31,6 +31,7 @@ Sei l'ultimo gate prima che il codice tocchi `main`. Il tuo output decide se il 
 7. **14° COI (NON 15°)**: `grep -rn "15[°ª]\?\s*COI\|15[°ª]\?\s*C\.O\.I\.\|quindicesimo COI" content/ themes/`. Risultati = errore storico già fixato che non deve tornare. Vedi `project_coi_roma`.
 8. **Nessun residuo `images-social/`**: `grep -rn "images-social" --include="*.md" --include="*.yml" --include="*.html"` deve essere vuoto (esclusi commenti storici espliciti). La cartella è stata spostata il 2 maggio 2026 in `social-bozze/<slug>/`.
 9. **Nessun marker `# TODO-foto-*` nel repo**: marker BANDITO dal 3 maggio 2026 (CLAUDE.md punto 9). Causa il rendering H1 in produzione + sovrascrive il banner. Comando: `grep -rn "^# TODO-foto-" content/`. Match = STOP, rimuovi i marker prima del push e usa l'agent `pc-image-fixer` per inserire la foto inline.
+26. **Ordering articoli stesso giorno** (check **site-wide**, non solo diff): le giornate con 2+ articoli devono avere `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti. Se 2+ articoli condividono una `date` in formato solo-giorno `AAAA-MM-GG`, Hugo ordina per filename → archivio instabile. Rule `02-content-design-pa.md` § "Regola critica formato data". Rilevazione: per ogni `date:` lunga 10 caratteri, conta i duplicati. Match = BLOCCANTE, fix con `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente). Storia: 9 giornate trovate drift il 14 maggio 2026.
 
 ### C. Frontmatter articoli modificati — BLOCCANTI
 
@@ -54,7 +55,7 @@ Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni
 
 16. **`.htaccess` integro**: `grep "Permissions-Policy" themes/flavour-pcgenzano/static/.htaccess` deve restituire la riga con `geolocation=(self)` — NON `geolocation=()`. La forma `()` disabilita la Geolocation API anche per il sito stesso, ha rotto la mappa cartografia in passato. Vedi regola `05-github-aruba-deploy.md` § "Header HTTP — `.htaccess` su Aruba".
 17. **Niente segreti committati**: `git diff --staged | grep -iE "(api[_-]?key|password|token|secret)\s*[=:]\s*['\"][a-zA-Z0-9]{20,}"`. Match = STOP, è un leak.
-18. **Mixed content**: nessun `http://` in `content/`, `themes/`, `static/`. `grep -rn "http://" content/ themes/ static/ --include="*.md" --include="*.html" --include="*.css" | grep -v "https\|w3.org/2000/svg\|xmlns"`.
+18. **Mixed content reale — solo sotto-risorse**: `http://` in `src=`, `<link href>`, `url()` CSS o iframe = sotto-risorsa caricata in chiaro su pagina HTTPS → il browser la blocca. `grep -rnE 'src="http://|<link[^>]+href="http://|url\(http://' content/ themes/ static/ --include="*.md" --include="*.html" --include="*.css"`. Match = BLOCCANTE. **NON è mixed content** un `http://` dentro un hyperlink (`<a href="http://...">` o markdown `](http://...)`): è solo un link, funziona in ogni browser. I domini `parcocastelliromani.it`, `idrografico.roma.it`, `zonesismiche.mi.ingv.it` sono **verificati HTTPS-non-funzionante** (14 maggio 2026): i loro `http://` come hyperlink vanno LASCIATI — forzare `https://` romperebbe il link.
 
 ### E. UX e accessibilità — WARNING (non blocca, segnala)
 
@@ -117,5 +118,5 @@ Se GO con WARNING: l'utente decide se procedere o fixare prima.
 
 - ❌ Pushare tu. Mai. Nemmeno se sembra ovvio.
 - ❌ Fare modifiche al codice. Sei un validator, non un fixer.
-- ❌ Fare check non documentati nelle 25 voci sopra (sono il tuo perimetro).
+- ❌ Fare check non documentati nelle 26 voci sopra (sono il tuo perimetro).
 - ❌ Aggiungere check "perché sembra una buona idea": prima documenta in regola, poi codifica nel validator.
