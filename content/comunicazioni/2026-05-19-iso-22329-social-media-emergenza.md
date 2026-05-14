@@ -1,6 +1,6 @@
 ---
 title: "Social media in emergenza: cosa dice lo standard ISO 22329"
-date: 2026-05-19
+date: 2026-05-19T00:02:00+02:00
 description: "Quando arriva un'emergenza, i social diventano un canale critico. Lo standard ISO 22329 spiega come usarli istituzionalmente: monitorare, diffondere."
 badge: "Formazione"
 priorita: "normale"

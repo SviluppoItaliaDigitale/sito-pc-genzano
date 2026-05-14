@@ -1,6 +1,6 @@
 ---
 title: "15 maggio: Giornata delle Famiglie, un'occasione per un piano condiviso"
-date: 2026-05-15
+date: 2026-05-15T00:01:00+02:00
 description: "La Giornata internazionale delle famiglie, istituita dall'ONU, invita a ripensare il proprio piano di emergenza familiare come gesto di cura condiviso."
 badge: "Prevenzione"
 priorita: "normale"

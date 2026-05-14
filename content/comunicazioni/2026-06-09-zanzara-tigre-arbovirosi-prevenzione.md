@@ -1,6 +1,6 @@
 ---
 title: "Zanzara tigre e arbovirosi: prevenzione domestica"
-date: 2026-06-09
+date: 2026-06-09T00:01:00+02:00
 description: "Con l'arrivo del caldo torna il problema delle zanzare tigre e delle malattie che possono trasmettere. La prevenzione inizia a casa, giardino per giardino."
 badge: "Prevenzione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Nessuno indietro: ISO 22395 e il supporto inclusivo nelle emergenze"
-date: 2026-05-29
+date: 2026-05-29T00:02:00+02:00
 description: "Anziani, persone con disabilità, bambini, italiano L2, senza dimora: lo standard ISO 22395 spiega come una società resiliente raggiunge davvero tutti."
 badge: "Formazione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Perché si fanno le esercitazioni di Protezione Civile? Lo standard ISO 22398"
-date: 2026-05-26
+date: 2026-05-26T00:02:00+02:00
 description: "Le esercitazioni non sono spettacolo: sono lo strumento principale per verificare se un piano di emergenza funziona davvero."
 badge: "Formazione"
 priorita: "normale"

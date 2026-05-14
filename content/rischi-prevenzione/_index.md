@@ -39,9 +39,9 @@ Consulta la scheda del rischio che ti interessa.
 | Temporali intensi | Fulmini, grandine, raffiche, piogge brevi e violente | [Temporali intensi](/rischi-prevenzione/temporali-intensi/) |
 | Vento forte | Caduta rami, oggetti instabili, danni a tetti e coperture | [Vento forte](/rischi-prevenzione/vento-forte/) |
 | Incendio | Fumo, fiamme, incendio boschivo o urbano | [Rischio incendio](/rischi-prevenzione/rischio-incendio/) |
-| Caldo intenso | Ondate di calore, fragilità, bambini, anziani e animali | [Caldo e ondate di calore](/rischi-prevenzione/caldo/) |
+| Caldo intenso | Ondate di calore, fragilità, bambini, anziani e animali | [Caldo e ondate di calore](/rischi-prevenzione/ondate-di-calore/) |
 | Blackout | Mancanza di corrente, dispositivi elettrici, sicurezza domestica | [Blackout](/rischi-prevenzione/blackout/) |
-| Evacuazione | Uscita rapida da casa o scuola, kit, aree di attesa | [Evacuazione](/rischi-prevenzione/evacuazione/) |
+| Evacuazione | Uscita rapida da casa o scuola, kit, aree di attesa | [Kit di emergenza ed evacuazione](/rischi-prevenzione/kit-emergenza/) |
 
 ## Kit di emergenza essenziale
 

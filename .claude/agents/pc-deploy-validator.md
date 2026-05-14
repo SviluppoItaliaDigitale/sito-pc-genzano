@@ -28,7 +28,7 @@ Sei l'ultimo gate prima che il codice tocchi `main`. Il tuo output decide se il 
 
 5. **Niente `draft: true` in `content/comunicazioni/`**: `grep -rln "^draft: true" content/comunicazioni/`. Regola: solo immediato (data passata) o calendarizzato (data futura). Vedi `feedback_no_draft_in_revisione`.
 6. **Numero unico emergenza Lazio = 112**: nelle modifiche dell'ultimo commit, NESSUN nuovo riferimento a 115/118/1515 come "numero da chiamare al cittadino". Citazioni storiche (es. "ARES 118 è l'organizzazione") OK. Vedi `feedback_numero_emergenza_lazio`.
-7. **14° C.O.I. (NON 15°)**: `grep -rn "15[°ª]\?\s*COI\|15[°ª]\?\s*C\.O\.I\.\|quindicesimo COI" content/ themes/`. Risultati = errore storico già fixato che non deve tornare. Vedi `project_coi_roma`.
+7. **14° COI (NON 15°)**: `grep -rn "15[°ª]\?\s*COI\|15[°ª]\?\s*C\.O\.I\.\|quindicesimo COI" content/ themes/`. Risultati = errore storico già fixato che non deve tornare. Vedi `project_coi_roma`.
 8. **Nessun residuo `images-social/`**: `grep -rn "images-social" --include="*.md" --include="*.yml" --include="*.html"` deve essere vuoto (esclusi commenti storici espliciti). La cartella è stata spostata il 2 maggio 2026 in `social-bozze/<slug>/`.
 9. **Nessun marker `# TODO-foto-*` nel repo**: marker BANDITO dal 3 maggio 2026 (CLAUDE.md punto 9). Causa il rendering H1 in produzione + sovrascrive il banner. Comando: `grep -rn "^# TODO-foto-" content/`. Match = STOP, rimuovi i marker prima del push e usa l'agent `pc-image-fixer` per inserire la foto inline.
 

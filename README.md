@@ -134,7 +134,7 @@ Sessione di consolidamento del 6 maggio 2026 con esiti strutturali sul sito.
 - Le pagine rivolte alle scuole non inventano dati su istituti, indirizzi, referenti o procedure interne: rimandano sempre al piano del singolo istituto e alle fonti ufficiali.
 - La mappa manuale del sito si aggiorna quando si pubblicano nuove pagine informative importanti. Il `sitemap.xml` tecnico resta generato da Hugo.
 
-**Drift documentale corretto**: `14° C.O.I.` allineato in tutti i file, bandiera SPQR errata rimossa dall'articolo Reggio Emilia 1996, caption ShakeMap INGV corrette in 5 articoli storici, duplicato editoriale Amatrice 2016 risolto. Asset -2.85 MB ottimizzati.
+**Drift documentale corretto**: `14° COI` allineato in tutti i file, bandiera SPQR errata rimossa dall'articolo Reggio Emilia 1996, caption ShakeMap INGV corrette in 5 articoli storici, duplicato editoriale Amatrice 2016 risolto. Asset -2.85 MB ottimizzati.
 
 Specifiche complete in [`manuale/parte-21-aggiornamenti-contenuti-didattici-prevenzione.md`](manuale/parte-21-aggiornamenti-contenuti-didattici-prevenzione.md).
 
@@ -446,7 +446,7 @@ Il progetto ha alcune regole non negoziabili da avere a portata di vista:
 - **Banner articoli** = **sempre cover tipografica con titolo grande** (gradiente blu + badge categoria + titolo articolo + fascia istituzionale). Generata da `scripts/auto-cover-mancanti.py`. Mai vuota in produzione, mai una foto utente.
 - **Foto fornite dall'utente** = sempre nel **corpo dell'articolo** come `{{< foto >}}` (mai nel campo `image:` del frontmatter). ≥4 foto → galleria nel corpo. Sui social diventano automaticamente carosello Instagram.
 - **NUE 112** è l'unico numero di emergenza nel Lazio: 115/118/1515 non vanno mai citati come numeri da chiamare al cittadino.
-- **14° C.O.I.** della Provincia di Roma (non 15°) è il riferimento del Gruppo.
+- **14° COI** della Provincia di Roma (non 15°) è il riferimento del Gruppo.
 - **Formato data nel frontmatter**: sempre `AAAA-MM-GG`. Mai con timezone (`AAAA-MM-DDTHH:MM:SSZ` causa esclusione dell'articolo dalla build).
 - **Nessun articolo `draft: true`** — solo pubblicazione immediata (data passata) o programmata (data futura).
 - **Lingua AGID**: frasi brevi (max ~20 parole), voce attiva, niente burocratese, linguaggio inclusivo.
