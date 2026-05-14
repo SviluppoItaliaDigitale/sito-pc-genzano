@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{- $eventi := sort .Site.Data.eventi_storici.eventi "ordine" -}}
+<div class="page-hero">
+  <div class="container">
+    {{ partial "breadcrumb.html" . }}
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+<div class="container py-4">
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+
+      <div class="list-intro-content mb-4">
+        {{ .Content }}
+      </div>
+
+      {{- with $eventi }}
+      <ol class="pcg-timeline" role="list">
+        {{- range . }}
+        <li class="pcg-timeline-voce pcg-timeline-{{ .tipo | default "istituzionale" }}" role="listitem">
+          <div class="pcg-timeline-marker" aria-hidden="true"></div>
+          <div class="pcg-timeline-card">
+            <p class="pcg-timeline-anno">{{ .anno }}</p>
+            <h2 class="pcg-timeline-titolo">{{ .titolo }}</h2>
+            {{- with .luogo }}<p class="pcg-timeline-luogo"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>{{ . }}</p>{{ end }}
+            <p class="pcg-timeline-desc">{{ .descrizione }}</p>
+            {{- with .lezione }}
+            <p class="pcg-timeline-lezione"><strong>Cosa ci insegna:</strong> {{ . }}</p>
+            {{- end }}
+            {{- with .fonte }}
+            <p class="pcg-timeline-fonte">
+              <i class="bi bi-bookmark-check me-1" aria-hidden="true"></i>Fonte: {{ . }}
+            </p>
+            {{- end }}
+            {{- with .fonte_url }}
+            <p class="pcg-timeline-fonte-link"><a href="{{ . }}" target="_blank" rel="noopener noreferrer">Vai alla fonte <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></p>
+            {{- end }}
+          </div>
+        </li>
+        {{- end }}
+      </ol>
+      {{- else }}
+      <p class="text-muted">La linea del tempo è in preparazione.</p>
+      {{- end }}
+
+      <div class="alert alert-light mt-4" role="note">
+        <p class="mb-0"><i class="bi bi-clock-history me-2" aria-hidden="true"></i>Conosci un evento storico documentato del nostro territorio che dovrebbe essere qui? Scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a> indicando la fonte.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+{{ end }}

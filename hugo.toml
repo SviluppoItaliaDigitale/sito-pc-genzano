@@ -300,6 +300,12 @@ enableGitInfo = true
   parent = "risorse"
   weight = 11
 
+[[menus.main]]
+  name = "Storia del territorio"
+  url = "/storia/"
+  parent = "risorse"
+  weight = 12
+
 # --- Voci dirette ---
 [[menus.main]]
   name = "Comunicazioni"
