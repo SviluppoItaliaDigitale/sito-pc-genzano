@@ -40,6 +40,13 @@ Fonti su comunicazione di crisi e uso dei social media in emergenza. Recepite in
 - **`cwa-cen-cenelec-draft-social-media-messages.pdf`** (1.0 MB)
   *Guidelines for effective social media messages in crisis and emergency situations*. CEN/CENELEC Workshop Agreement, draft *open for comments*.
 
+### Pianificazione
+
+Materiale di lavoro per l'evoluzione del sito — non destinato alla pubblicazione.
+
+- **`PROMPT-ROADMAP-PC-GENZANO.md`**
+  Libreria dei prompt alto-livello per la roadmap di sviluppo del sito (25 iniziative organizzate per livello di difficoltà: calendario `.ics`, ricerca Pagefind, glossario interattivo, dashboard ETS, giochi, ecc.). Ogni prompt si incolla in una sessione Claude Code per implementare l'iniziativa corrispondente. Archiviato qui per essere disponibile a tutte le sessioni (desktop CLI, mobile, cloud) tramite git, l'unica memoria condivisa. L'idea #6 (QR articoli) è già implementata; l'idea #24 (Pagefind) è in corso.
+
 ## Documenti pubblici (NON in questa cartella)
 
 I documenti rilasciati con licenza pubblica o di pubblico dominio stanno in `static/manuali/` e sono linkati pubblicamente dal sito:
