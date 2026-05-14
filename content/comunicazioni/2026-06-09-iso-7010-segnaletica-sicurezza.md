@@ -1,6 +1,6 @@
 ---
 title: "Quei segnali che vediamo ovunque: ISO 7010 spiega perché sono uguali in tutto il mondo"
-date: 2026-06-09
+date: 2026-06-09T00:02:00+02:00
 description: "L'omino verso la porta verde, il cerchio rosso barrato, il triangolo giallo: lo standard ISO 7010 codifica la segnaletica mondiale."
 badge: "Formazione"
 priorita: "normale"

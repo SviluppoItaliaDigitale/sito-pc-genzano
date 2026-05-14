@@ -132,7 +132,7 @@ Alcuni elementi chiave da riconoscere:
 
 - Articolo: [Piano Comunale di Protezione Civile](/piano-emergenza/)
 - Articolo: [Microzonazione sismica nei Castelli](/comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/)
-- Pagina: [Aree di emergenza](/aree-emergenza/)
+- Pagina: [Cartografia e aree di emergenza](/cartografia/)
 - [ISPRA — Portale Cartografico](https://www.isprambiente.gov.it/)
 - [Geoportale Nazionale](https://www.pcn.minambiente.it/)
 - [Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)

@@ -267,7 +267,7 @@ Sul nostro sito:
 - [Triangolo del fuoco: prevenzione incendi](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
 - [Open Day antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
 - [Estintori: classi di fuoco e uso corretto](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
-- [Piano AIB della Regione Lazio](/area-download/normativa/Piano_AIB_Lazio.pdf) (PDF dall'Area Download).
+- [Piano AIB della Regione Lazio](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_AIB_Lazio.pdf) (PDF dall'Area Download).
 - [Diventa volontario](/diventa-volontario/).
 
 Fonti istituzionali:

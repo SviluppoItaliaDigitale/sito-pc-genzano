@@ -1,6 +1,6 @@
 ---
 title: "5 giugno: Giornata mondiale dell'ambiente e tutela del territorio"
-date: 2026-06-05
+date: 2026-06-05T00:01:00+02:00
 description: "La Giornata mondiale dell'ambiente cade all'inizio della stagione degli incendi."
 badge: "Informazione"
 priorita: "normale"
