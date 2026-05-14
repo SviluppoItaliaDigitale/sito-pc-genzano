@@ -69,8 +69,7 @@ Il trattamento di questi dati avviene secondo la [Privacy Policy di ActivePager]
 </div>
 
 <div class="alert alert-warning small" role="note">
-<i class="bi bi-info-circle me-1" aria-hidden="true"></i>
-Il link sopra apre un **sito esterno** (activepager.com) in una nuova scheda. Le credenziali ti sono state fornite dalla segreteria del Gruppo. Se hai dimenticato la password o non hai ancora ricevuto le credenziali, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Il link sopra apre un <strong>sito esterno</strong> (activepager.com) in una nuova scheda. Le credenziali ti sono state fornite dalla segreteria del Gruppo. Se hai dimenticato la password o non hai ancora ricevuto le credenziali, scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
 </div>
 
 ## Domande frequenti
