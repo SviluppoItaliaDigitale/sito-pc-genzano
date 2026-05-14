@@ -4665,3 +4665,70 @@ html.a11y-hide-translate-button #lang-modal { display: none !important; }
  * fine RICERCA PAGEFIND v1.0
  * ==========================================================================
  */
+
+/* ==========================================================================
+ * GLOSSARIO PAGINA v1.0 — filtro alfabetico + ricerca live su /glossario/
+ * JS: static/js/glossario-pagina.js — enhancement progressivo (la pagina
+ * funziona anche senza JS). Palette istituzionale #003366.
+ * ==========================================================================
+ */
+
+.glossario-strumenti {
+  margin: 1rem 0 1.75rem;
+}
+
+#glossario-cerca {
+  max-width: 32rem;
+}
+
+.glossario-lettere {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.85rem;
+}
+
+.glossario-lettera-btn {
+  min-width: 2.1rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #003366;
+  background: #ffffff;
+  border: 1px solid #c9d3e0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.glossario-lettera-btn:hover {
+  background: #eef2f7;
+  border-color: #003366;
+}
+
+.glossario-lettera-btn:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+
+.glossario-lettera-btn[aria-pressed="true"] {
+  color: #ffffff;
+  background: #003366;
+  border-color: #003366;
+}
+
+.glossario-conteggio {
+  margin: 0.85rem 0 0;
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+@media print {
+  .glossario-strumenti {
+    display: none;
+  }
+}
+/* ==========================================================================
+ * fine GLOSSARIO PAGINA v1.0
+ * ==========================================================================
+ */
