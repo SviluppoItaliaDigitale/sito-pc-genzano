@@ -115,6 +115,7 @@
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-accessibilita-supporti"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/abili-a-proteggere/" role="menuitem"><span>Abili a Proteggere</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/facile-da-leggere/" role="menuitem"><span>Facile da Leggere</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/lis/" role="menuitem"><span>Contenuti in LIS</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 /* Dropdown: Volontariato */
