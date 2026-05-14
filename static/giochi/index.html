@@ -59,7 +59,18 @@
         <div id="arena-continua-card"></div>
       </section>
 
-      <!-- Filtri per fascia -->
+      <!-- Sfoglia per fascia + attività accessibili -->
+      <section aria-labelledby="arena-altro-h">
+        <h2 id="arena-altro-h" class="arena-sez"><i class="bi bi-grid me-1" aria-hidden="true"></i> Sfoglia per fascia</h2>
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-3"><a href="infanzia/index.html" class="arena-fascia-link arena-f-infanzia"><i class="bi bi-emoji-smile-fill" aria-hidden="true"></i><span>Piccoli Esploratori</span><small>3-6 anni</small></a></div>
+          <div class="col-sm-6 col-lg-3"><a href="primaria/index.html" class="arena-fascia-link arena-f-primaria"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i><span>Scuola Primaria</span><small>6-11 anni</small></a></div>
+          <div class="col-sm-6 col-lg-3"><a href="ragazzi/index.html" class="arena-fascia-link arena-f-ragazzi"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i><span>Ragazzi</span><small>11-19 anni</small></a></div>
+          <div class="col-sm-6 col-lg-3"><a href="/abili-a-proteggere/" class="arena-fascia-link arena-f-abili"><i class="bi bi-heart-fill" aria-hidden="true"></i><span>Abili a Proteggere</span><small>Attività accessibili</small></a></div>
+        </div>
+      </section>
+
+      <!-- Tutti i giochi: filtri + griglia -->
       <h2 class="arena-sez" id="arena-griglia-h"><i class="bi bi-controller me-1" aria-hidden="true"></i> Tutti i giochi</h2>
       <div class="arena-filtri" role="group" aria-label="Filtra i giochi per fascia d'età">
         <button type="button" class="arena-filtro" data-fascia="" aria-pressed="true">Tutti</button>
@@ -70,17 +81,6 @@
       <div class="row g-3 arena-griglia" id="arena-griglia" aria-live="polite">
         <!-- Card gioco popolate da arena.js -->
       </div>
-
-      <!-- Anche: pagine fascia + attività accessibili -->
-      <section class="mt-5" aria-labelledby="arena-altro-h">
-        <h2 id="arena-altro-h" class="arena-sez"><i class="bi bi-grid me-1" aria-hidden="true"></i> Sfoglia per fascia</h2>
-        <div class="row g-3">
-          <div class="col-sm-6 col-lg-3"><a href="infanzia/index.html" class="arena-fascia-link arena-f-infanzia"><i class="bi bi-emoji-smile-fill" aria-hidden="true"></i><span>Piccoli Esploratori</span><small>3-6 anni</small></a></div>
-          <div class="col-sm-6 col-lg-3"><a href="primaria/index.html" class="arena-fascia-link arena-f-primaria"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i><span>Scuola Primaria</span><small>6-11 anni</small></a></div>
-          <div class="col-sm-6 col-lg-3"><a href="ragazzi/index.html" class="arena-fascia-link arena-f-ragazzi"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i><span>Ragazzi</span><small>11-19 anni</small></a></div>
-          <div class="col-sm-6 col-lg-3"><a href="/abili-a-proteggere/" class="arena-fascia-link arena-f-abili"><i class="bi bi-heart-fill" aria-hidden="true"></i><span>Abili a Proteggere</span><small>Attività accessibili</small></a></div>
-        </div>
-      </section>
 
       <!-- I tuoi badge: riepilogo + azzera -->
       <section class="mt-5" aria-labelledby="titolo-badge">
