@@ -1,0 +1,157 @@
+{{- /*
+  Modalità Lanterna — pagina STANDALONE di sopravvivenza (idea #4 roadmap).
+  NON usa baseof.html: è un documento HTML completo, ultra-leggero (<60 KB),
+  niente JS bloccante, niente Bootstrap, niente font esterni. Pensata per
+  poca batteria, rete debole, di notte, sotto stress.
+  Alto contrasto fisso giallo-su-nero (leggibile al buio, risparmia OLED).
+*/ -}}
+{{- $allerta := .Site.Data.allerta -}}
+{{- $liv := lower ($allerta.livello | default "verde") -}}
+<!doctype html>
+<html lang="it" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modalità Lanterna — Protezione Civile Genzano di Roma</title>
+<meta name="description" content="Strumenti di sopravvivenza: torcia, bussola, schermo sempre acceso, 112. Pagina ultra-leggera per le emergenze.">
+<meta name="robots" content="index,follow">
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;color:#ffd000;font-family:-apple-system,system-ui,"Segoe UI",Arial,sans-serif;font-size:20px;line-height:1.5;padding:0 1rem 3rem}
+.wrap{max-width:560px;margin:0 auto}
+a{color:#ffd000}
+h1{font-size:1.5rem;margin:1rem 0 .5rem;text-align:center}
+.sub{text-align:center;font-size:.95rem;color:#fff6c2;margin-bottom:1rem}
+/* 112 sempre in alto */
+.sticky112{position:sticky;top:0;z-index:10;background:#000;padding:.6rem 0;border-bottom:3px solid #ffd000}
+.b112{display:block;background:#d9000a;color:#fff;text-decoration:none;text-align:center;padding:.7rem;border-radius:10px;font-weight:900;font-size:1.7rem}
+.b112 small{display:block;font-size:.8rem;font-weight:600;color:#ffdede}
+/* strumenti */
+.tools{display:grid;grid-template-columns:1fr;gap:.7rem;margin:1.2rem 0}
+.tool{display:flex;align-items:center;gap:.8rem;width:100%;background:#1a1a1a;color:#ffd000;border:3px solid #ffd000;border-radius:12px;padding:1rem;font-size:1.15rem;font-weight:700;text-align:left;cursor:pointer}
+.tool:focus-visible{outline:4px solid #fff;outline-offset:2px}
+.tool[aria-pressed=true]{background:#ffd000;color:#000}
+.tool .ico{font-size:1.8rem;line-height:1;flex:0 0 auto}
+.tool .st{margin-left:auto;font-size:.85rem;font-weight:600}
+.tool[disabled]{opacity:.45;cursor:not-allowed}
+.bussola-box{display:none;text-align:center;margin:.3rem 0 1rem}
+.bussola-box.on{display:block}
+.rosa{font-size:4rem;display:inline-block;transition:transform .15s linear}
+.nota{font-size:.85rem;color:#fff6c2;margin:.3rem 0 1rem}
+.allerta{border:3px solid #ffd000;border-radius:10px;padding:.7rem 1rem;margin:1rem 0;font-size:1rem}
+/* link rapidi */
+h2{font-size:1.15rem;margin:1.4rem 0 .6rem;border-bottom:2px solid #ffd000;padding-bottom:.3rem}
+.links{list-style:none}
+.links li{margin:.5rem 0}
+.links a{display:block;background:#1a1a1a;border:2px solid #ffd000;border-radius:10px;padding:.8rem 1rem;text-decoration:none;font-weight:700}
+.foot{font-size:.85rem;color:#fff6c2;margin-top:1.6rem;text-align:center}
+@media (prefers-reduced-motion:reduce){.rosa{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sticky112">
+    <a class="b112" href="tel:112">112 <small>Numero Unico di Emergenza — tocca per chiamare</small></a>
+  </div>
+
+  <h1>🔦 Modalità Lanterna</h1>
+  <p class="sub">Strumenti essenziali per l'emergenza. Funziona con poca batteria e rete debole.</p>
+
+  {{- if and .Site.Data.emergenza .Site.Data.emergenza.attiva }}
+  <div class="allerta"><strong>⚠ Emergenza in corso:</strong> {{ .Site.Data.emergenza.titolo }}. Segui le indicazioni delle autorità.</div>
+  {{- else if ne $liv "verde" }}
+  <div class="allerta"><strong>Allerta meteo {{ $allerta.livello }}</strong> — {{ $allerta.titolo }}.</div>
+  {{- end }}
+
+  <div class="tools">
+    <button type="button" class="tool" id="t-torcia" aria-pressed="false">
+      <span class="ico" aria-hidden="true">🔦</span> Torcia <span class="st" id="st-torcia">spenta</span>
+    </button>
+    <button type="button" class="tool" id="t-bussola" aria-pressed="false">
+      <span class="ico" aria-hidden="true">🧭</span> Bussola <span class="st" id="st-bussola">spenta</span>
+    </button>
+    <button type="button" class="tool" id="t-wake" aria-pressed="false">
+      <span class="ico" aria-hidden="true">💡</span> Schermo sempre acceso <span class="st" id="st-wake">off</span>
+    </button>
+  </div>
+  <div class="bussola-box" id="bussola-box">
+    <span class="rosa" id="rosa" aria-hidden="true">⬆️</span>
+    <p class="nota" id="bussola-nota">La freccia indica il Nord. Tieni il telefono in piano.</p>
+  </div>
+  <p class="nota">«Schermo sempre acceso» consuma più batteria: attivalo solo se ti serve davvero.</p>
+
+  <h2>Cosa fare adesso</h2>
+  <ul class="links">
+    <li><a href="{{ "cosa-fare-adesso/" | relURL }}">Cosa fare adesso — comportamenti di autoprotezione</a></li>
+    <li><a href="{{ "emergenza/" | relURL }}">Pagina Emergenza — numeri e stato allerta</a></li>
+    <li><a href="{{ "assistente/" | relURL }}">Assistente — guida passo passo</a></li>
+    <li><a href="{{ "numeri-utili/" | relURL }}">Numeri utili</a></li>
+    <li><a href="{{ "piano-familiare/" | relURL }}">Piano familiare di emergenza</a></li>
+  </ul>
+
+  <p class="foot">Protezione Civile — Gruppo Comunale Volontari di Genzano di Roma.<br>In emergenza chiama sempre il <strong>112</strong>.</p>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  // ── Torcia: getUserMedia + track torch constraint (Chrome Android) ──
+  var bT=document.getElementById('t-torcia'),sT=document.getElementById('st-torcia');
+  var stream=null,track=null,torciaOn=false;
+  bT.addEventListener('click',function(){
+    if(torciaOn){spegniTorcia();return;}
+    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){sT.textContent='non disponibile';bT.disabled=true;return;}
+    navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}}).then(function(s){
+      stream=s;track=s.getVideoTracks()[0];
+      var cap=track.getCapabilities?track.getCapabilities():{};
+      if(!cap.torch){sT.textContent='non disponibile su questo dispositivo';try{track.stop();}catch(e){}return;}
+      track.applyConstraints({advanced:[{torch:true}]}).then(function(){
+        torciaOn=true;bT.setAttribute('aria-pressed','true');sT.textContent='accesa';
+      }).catch(function(){sT.textContent='non disponibile';});
+    }).catch(function(){sT.textContent='permesso fotocamera negato';});
+  });
+  function spegniTorcia(){
+    try{if(track)track.applyConstraints({advanced:[{torch:false}]});}catch(e){}
+    try{if(track)track.stop();}catch(e){}
+    torciaOn=false;track=null;stream=null;bT.setAttribute('aria-pressed','false');sT.textContent='spenta';
+  }
+
+  // ── Bussola: DeviceOrientation (iOS richiede permesso) ──
+  var bB=document.getElementById('t-bussola'),sB=document.getElementById('st-bussola');
+  var boxB=document.getElementById('bussola-box'),rosa=document.getElementById('rosa'),notaB=document.getElementById('bussola-nota');
+  var bussolaOn=false;
+  function onOrient(e){
+    var h=(e.webkitCompassHeading!=null)?e.webkitCompassHeading:(e.alpha!=null?360-e.alpha:null);
+    if(h==null){notaB.textContent='Il tuo dispositivo non fornisce la direzione.';return;}
+    rosa.style.transform='rotate('+(-h)+'deg)';
+  }
+  bB.addEventListener('click',function(){
+    if(bussolaOn){window.removeEventListener('deviceorientation',onOrient);bussolaOn=false;bB.setAttribute('aria-pressed','false');sB.textContent='spenta';boxB.classList.remove('on');return;}
+    if(!window.DeviceOrientationEvent){sB.textContent='non disponibile';bB.disabled=true;return;}
+    function attiva(){window.addEventListener('deviceorientation',onOrient);bussolaOn=true;bB.setAttribute('aria-pressed','true');sB.textContent='attiva';boxB.classList.add('on');}
+    if(typeof DeviceOrientationEvent.requestPermission==='function'){
+      DeviceOrientationEvent.requestPermission().then(function(r){if(r==='granted')attiva();else sB.textContent='permesso negato';}).catch(function(){sB.textContent='permesso negato';});
+    }else{attiva();}
+  });
+
+  // ── Wake Lock: schermo sempre acceso ──
+  var bW=document.getElementById('t-wake'),sW=document.getElementById('st-wake'),lock=null;
+  bW.addEventListener('click',function(){
+    if(lock){try{lock.release();}catch(e){}lock=null;bW.setAttribute('aria-pressed','false');sW.textContent='off';return;}
+    if(!('wakeLock'in navigator)){sW.textContent='non disponibile';bW.disabled=true;return;}
+    navigator.wakeLock.request('screen').then(function(l){
+      lock=l;bW.setAttribute('aria-pressed','true');sW.textContent='ON';
+      l.addEventListener('release',function(){bW.setAttribute('aria-pressed','false');sW.textContent='off';lock=null;});
+    }).catch(function(){sW.textContent='non disponibile';});
+  });
+  // ri-acquisisce il wake lock se la pagina torna visibile
+  document.addEventListener('visibilitychange',function(){
+    if(lock!==null&&document.visibilityState==='visible'){
+      navigator.wakeLock.request('screen').then(function(l){lock=l;}).catch(function(){});
+    }
+  });
+})();
+</script>
+</body>
+</html>
