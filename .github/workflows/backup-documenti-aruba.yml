@@ -1,0 +1,78 @@
+name: "💾 Backup documenti solo-Aruba"
+
+# Copia di sicurezza dei ~29 documenti istituzionali (incluso il Piano di
+# Emergenza Comunale) che il sito serve da URL assoluti
+# www.protezionecivilegenzano.it ma che NON hanno copia nel repo git.
+# Senza questo backup esistono in un solo posto: il server Aruba.
+# Lo script li scarica e verifica; il workflow li pubblica come asset della
+# Release "backup-documenti-aruba" (rolling, aggiornata ogni mese).
+
+on:
+  schedule:
+    # 1° del mese, 04:00 UTC — orario tranquillo, nessuna collisione
+    - cron: "0 4 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: "backup-documenti-aruba"
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🐍 Setup Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: "⬇️ Scarica e verifica i documenti solo-Aruba"
+        id: scarica
+        run: |
+          set +e
+          python3 scripts/backup-documenti-aruba.py --out backup-aruba
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          set -e
+          echo "--- contenuto staging ---"
+          ls -la backup-aruba/ || true
+
+      - name: "📦 Pubblica/aggiorna la Release backup-documenti-aruba"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="backup-documenti-aruba"
+          DATE_UTC="$(date -u +%Y-%m-%d)"
+          NOTES="Copia di sicurezza dei documenti istituzionali (incluso il Piano di Emergenza Comunale) che il sito serve da URL assoluti www.protezionecivilegenzano.it ma che non hanno copia nel repo git. Release rolling, aggiornata mensilmente dal workflow backup-documenti-aruba.yml. Ultimo aggiornamento: ${DATE_UTC}. L'inventario completo (dimensioni, SHA-256, URL di origine) è nell'asset MANIFEST.md."
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" \
+              --title "Backup documenti solo-Aruba" \
+              --notes "$NOTES"
+          else
+            gh release edit "$TAG" --notes "$NOTES"
+          fi
+          # --clobber sovrascrive solo gli asset ri-scaricati con successo:
+          # i file eventualmente falliti mantengono la copia del mese prima.
+          if ls backup-aruba/* >/dev/null 2>&1; then
+            gh release upload "$TAG" backup-aruba/* --clobber
+          else
+            echo "Nessun file da caricare — staging vuoto."
+            exit 1
+          fi
+
+      - name: "🚨 Apri issue se qualche file ha fallito"
+        if: steps.scarica.outputs.exit_code != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE_UTC="$(date -u +%Y-%m-%d)"
+          gh issue create \
+            --title "💾 Backup documenti Aruba — file falliti il ${DATE_UTC}" \
+            --label "automazione,manutenzione" \
+            --body-file backup-aruba/MANIFEST.md
