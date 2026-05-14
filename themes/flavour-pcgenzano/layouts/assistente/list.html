@@ -34,12 +34,23 @@
             <i class="bi bi-search me-1" aria-hidden="true"></i>
             Cerca direttamente nel sito
           </label>
-          <input type="search" id="assistente-search-input" class="form-control"
-                 placeholder="Es. terremoto, 112, kit emergenza, evacuazione…"
-                 autocomplete="off" inputmode="search"
-                 aria-describedby="assistente-search-count">
-          <div id="assistente-search-count" class="small text-muted mt-1"></div>
+          <div class="input-group">
+            <input type="search" id="assistente-search-input" class="form-control"
+                   placeholder="Es. terremoto, 112, kit emergenza, evacuazione…"
+                   autocomplete="off" inputmode="search"
+                   aria-describedby="assistente-search-count assistente-mic-nota">
+            <button type="button" id="assistente-mic" class="btn btn-outline-primary" hidden
+                    aria-label="Fai una domanda a voce">
+              <i class="bi bi-mic-fill" aria-hidden="true"></i>
+              <span class="visually-hidden">Fai una domanda a voce</span>
+            </button>
+          </div>
+          <div id="assistente-search-count" class="small text-muted mt-1" role="status" aria-live="polite"></div>
           <div id="assistente-search-results" class="mt-2" role="region" aria-live="polite"></div>
+          <p class="small text-muted mt-2 mb-0" id="assistente-mic-nota" hidden>
+            <i class="bi bi-info-circle me-1" aria-hidden="true"></i>
+            La domanda a voce usa il riconoscimento vocale del browser. Alcuni browser (Chrome, Edge) inviano l'audio ai server del produttore per trascriverlo: usa la voce solo se sei d'accordo. Tutto ciò che chiedi a voce puoi anche scriverlo o sceglierlo dai percorsi guidati.
+          </p>
           <p class="small text-muted mt-2 mb-0">
             Oppure scegli un percorso guidato qui sotto.
           </p>
@@ -216,6 +227,19 @@
     #assistente-app .opt-list,
     #assistente-app .cards-grid { display: none; }
   }
+  /* Domanda a voce — idea #5 roadmap */
+  #assistente-mic.is-listening {
+    background: #d9364f;
+    border-color: #d9364f;
+    color: #fff;
+  }
+  #assistente-mic.is-listening i { animation: assistenteMicPulse 1s ease-in-out infinite; }
+  @keyframes assistenteMicPulse { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+  @media (prefers-reduced-motion: reduce) {
+    #assistente-mic.is-listening i { animation: none; }
+  }
+  html.a11y-pause-anim #assistente-mic.is-listening i { animation: none; }
+  @media print { #assistente-mic, #assistente-mic-nota { display: none; } }
 </style>
 
 <script>
@@ -1521,6 +1545,70 @@
     if (timer) clearTimeout(timer);
     timer = setTimeout(function () { search(q); }, 150);
   });
+
+  // ── Domanda a voce — Web Speech API SpeechRecognition (idea #5 roadmap) ──
+  // Riconoscimento vocale del browser: nessuna IA esterna, nessun backend.
+  // L'utente parla, la trascrizione finisce nella ricerca esistente, e un
+  // riepilogo del risultato viene letto ad alta voce con il TTS del browser.
+  // Fallback completo: senza supporto SpeechRecognition il bottone resta hidden;
+  // tutto resta fattibile da tastiera e dai percorsi guidati.
+  (function initVoce() {
+    var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    var mic = document.getElementById('assistente-mic');
+    var nota = document.getElementById('assistente-mic-nota');
+    if (!SR || !mic) return; // browser non supportato: bottone resta hidden
+    mic.hidden = false;
+    if (nota) nota.hidden = false;
+
+    var rec = new SR();
+    rec.lang = 'it-IT';
+    rec.interimResults = false;
+    rec.maxAlternatives = 1;
+    var ascolto = false;
+
+    function setStato(on) {
+      ascolto = on;
+      mic.classList.toggle('is-listening', on);
+      mic.setAttribute('aria-label', on ? 'Sto ascoltando, tocca per fermare' : 'Fai una domanda a voce');
+    }
+
+    mic.addEventListener('click', function () {
+      if (ascolto) { try { rec.stop(); } catch (e) {} return; }
+      loadIndex();
+      cnt.textContent = 'Sto ascoltando… fai la tua domanda.';
+      try { rec.start(); setStato(true); }
+      catch (e) { setStato(false); }
+    });
+
+    rec.addEventListener('result', function (ev) {
+      var testo = (ev.results[0][0].transcript || '').trim();
+      if (!testo) return;
+      input.value = testo;
+      search(testo);
+      parlaRisultato(testo);
+    });
+    rec.addEventListener('end', function () { setStato(false); });
+    rec.addEventListener('error', function () {
+      setStato(false);
+      cnt.textContent = 'Non ho capito la domanda. Riprova, oppure scrivi nel campo di ricerca.';
+    });
+
+    function parlaRisultato(q) {
+      if (!('speechSynthesis' in window)) return;
+      var primo = box.querySelector('a');
+      var msg = primo
+        ? 'Per "' + q + '" il risultato principale è: ' + primo.textContent + '. Tocca il risultato per aprire la pagina.'
+        : 'Non ho trovato risultati per "' + q + '". Prova con parole diverse oppure scegli un percorso guidato qui sotto.';
+      try {
+        window.speechSynthesis.cancel();
+        var u = new SpeechSynthesisUtterance(msg);
+        u.lang = 'it-IT';
+        var rate = parseFloat(localStorage.getItem('pcgenzano-tts-rate') || '0.95');
+        u.rate = isNaN(rate) ? 0.95 : rate;
+        window.speechSynthesis.speak(u);
+      } catch (e) {}
+    }
+  })();
 })();
 </script>
 
