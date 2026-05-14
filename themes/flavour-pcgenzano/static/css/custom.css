@@ -5313,3 +5313,150 @@ html.a11y-pause-anim .pcg-timeline-voce {
  * fine NOTIFICHE ALLERTA v1.0
  * ==========================================================================
  */
+
+/* ==========================================================================
+ * QUIZ PREPARAZIONE v1.0 — quiz adattivo "Quanto sei preparato?" (idea #7)
+ * JS: static/js/quiz-preparazione.js. Tono non giudicante, palette
+ * istituzionale, accessibile da tastiera, badge + stampa client-side.
+ * ==========================================================================
+ */
+
+#quiz-app { margin: 1rem 0; }
+
+.quiz-progress {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5b6770;
+  margin-bottom: 0.35rem;
+}
+
+.quiz-barra {
+  height: 6px;
+  background: #e6e9ef;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+.quiz-barra span {
+  display: block;
+  height: 100%;
+  background: #003366;
+  transition: width 0.3s ease;
+}
+@media (prefers-reduced-motion: reduce) { .quiz-barra span { transition: none; } }
+html.a11y-pause-anim .quiz-barra span { transition: none; }
+
+.quiz-fieldset { border: 0; padding: 0; margin: 0 0 1.25rem; }
+
+.quiz-domanda {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 0.9rem;
+  padding: 0;
+}
+
+.quiz-opzioni { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.quiz-opt {
+  text-align: left;
+  background: #ffffff;
+  border: 2px solid #c9d3e0;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  font-size: 1.02rem;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+.quiz-opt:hover { border-color: #003366; background: #f4f7fb; }
+.quiz-opt:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.quiz-opt.is-sel { border-color: #003366; background: #003366; color: #ffffff; }
+
+.quiz-nav { margin-top: 1rem; }
+
+.quiz-btn {
+  background: #003366;
+  color: #ffffff;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.quiz-btn:hover { background: #002244; }
+.quiz-btn:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.quiz-btn-sec { background: #ffffff; color: #003366; }
+.quiz-btn-sec:hover { background: #f4f7fb; }
+
+/* Risultato */
+.quiz-risultato:focus { outline: none; }
+
+.quiz-badge {
+  text-align: center;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.quiz-badge-alto { background: #15803d; }
+.quiz-badge-medio { background: #003366; }
+.quiz-badge-base { background: #b45309; }
+.quiz-badge-label {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+.quiz-badge-tier {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 0.25rem;
+}
+
+.quiz-risultato-intro { font-size: 1.05rem; color: #333333; }
+
+.quiz-sez {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #003366;
+  margin: 1.4rem 0 0.6rem;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.3rem;
+}
+
+.quiz-forza { padding-left: 1.3rem; }
+.quiz-forza li { margin-bottom: 0.3rem; color: #15803d; }
+
+.quiz-lacune { padding-left: 1.4rem; }
+.quiz-lacune li { margin-bottom: 0.7rem; }
+.quiz-lacune li a {
+  display: inline-block;
+  margin-top: 0.15rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.quiz-altre { color: #5b6770; }
+
+.quiz-azioni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.quiz-data {
+  font-size: 0.82rem;
+  color: #666666;
+  margin-top: 1rem;
+}
+
+@media print {
+  .quiz-progress, .quiz-barra, .quiz-azioni, #quiz-app .no-print { display: none !important; }
+  .quiz-badge { color: #000000 !important; background: transparent !important; border: 2px solid #000000; }
+}
+/* ==========================================================================
+ * fine QUIZ PREPARAZIONE v1.0
+ * ==========================================================================
+ */
