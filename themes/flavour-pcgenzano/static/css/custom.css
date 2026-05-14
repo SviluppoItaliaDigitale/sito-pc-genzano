@@ -4328,3 +4328,195 @@ html.a11y-hide-translate-button #lang-modal { display: none !important; }
  * fine ASSISTENTE FAB v2.1
  * ==========================================================================
  */
+
+/* ==========================================================================
+ * QR ARTICOLO v1.0 — modal QR code scaricabile/stampabile per gli articoli
+ * Partial: partials/qr-articolo.html — Script: scripts/genera-qr-articoli.py
+ * Palette istituzionale (#003366), contrasto WCAG 2.2 AA, <dialog> nativo,
+ * print-only mode (in stampa appare SOLO il QR + titolo + URL + credits).
+ * ==========================================================================
+ */
+
+.pcg-qr-dialog {
+  border: 0;
+  border-radius: 12px;
+  padding: 0;
+  max-width: min(92vw, 560px);
+  width: 100%;
+  background: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 24px 48px rgba(0, 51, 102, 0.25);
+}
+
+.pcg-qr-dialog::backdrop {
+  background: rgba(0, 51, 102, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.pcg-qr-dialog:not([open]) {
+  display: none;
+}
+
+.pcg-qr-print {
+  padding: 1.5rem;
+}
+
+.pcg-qr-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.5rem;
+}
+
+.pcg-qr-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #003366;
+  margin: 0;
+}
+
+.pcg-qr-close {
+  background: transparent;
+  border: 0;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #003366;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  border-radius: 4px;
+}
+
+.pcg-qr-close:hover,
+.pcg-qr-close:focus-visible {
+  background: #003366;
+  color: #ffffff;
+  outline: 2px solid #003366;
+  outline-offset: 2px;
+}
+
+.pcg-qr-desc {
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  color: #333333;
+}
+
+.pcg-qr-figure {
+  margin: 0 0 1.25rem;
+  text-align: center;
+}
+
+.pcg-qr-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 320px;
+  height: auto;
+  border: 8px solid #ffffff;
+  outline: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.pcg-qr-url {
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+  color: #555555;
+  word-break: break-all;
+}
+
+.pcg-qr-url-label {
+  display: block;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 0.2rem;
+}
+
+.pcg-qr-url code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: #f5f7fa;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  color: #003366;
+}
+
+.pcg-qr-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.pcg-qr-credits {
+  font-size: 0.8rem;
+  color: #666666;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pcg-qr-dialog::backdrop {
+    backdrop-filter: none;
+  }
+}
+
+/* STAMPA: clic su "Stampa QR" → mostra SOLO il QR su A4. Lavora in tandem con
+   le regole @media print globali (che già nascondono header/navbar/footer). */
+@media print {
+  body:has(.pcg-qr-dialog[open]) > *:not(.pcg-qr-dialog) {
+    display: none !important;
+  }
+
+  .pcg-qr-dialog[open] {
+    position: static;
+    display: block;
+    border: 0;
+    box-shadow: none;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .pcg-qr-dialog[open]::backdrop {
+    display: none;
+  }
+
+  .pcg-qr-dialog .no-print,
+  .pcg-qr-dialog .pcg-qr-close {
+    display: none !important;
+  }
+
+  .pcg-qr-print {
+    padding: 2cm;
+    text-align: center;
+  }
+
+  .pcg-qr-img {
+    width: 12cm !important;
+    height: 12cm !important;
+    max-width: none;
+  }
+
+  .pcg-qr-title {
+    font-size: 18pt;
+    margin-bottom: 0.5cm;
+  }
+
+  .pcg-qr-desc {
+    font-size: 11pt;
+  }
+
+  .pcg-qr-url code {
+    background: transparent;
+    font-size: 10pt;
+  }
+}
+/* ==========================================================================
+ * fine QR ARTICOLO v1.0
+ * ==========================================================================
+ */
