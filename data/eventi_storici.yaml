@@ -1,0 +1,96 @@
+# Timeline storica — tappe di rilievo per la Protezione Civile dei Castelli Romani.
+#
+# Mescola la storia naturale del territorio (vulcano, sismicità) e l'evoluzione
+# del sistema di protezione civile che ci riguarda.
+#
+# REGOLA: ogni voce DEVE avere una fonte istituzionale verificabile con link
+# permanente (niente contenuti non verificati — divieto di progetto). Per
+# aggiungere un evento: copiare un blocco, compilare tutti i campi, citare la
+# fonte. Le voci sono ordinate dal campo `ordine` (anno numerico, crescente).
+#
+# tipo: geologico | sismico | idrogeologico | normativo | istituzionale
+
+eventi:
+  - anno: "~600 a.C."
+    ordine: -600
+    tipo: "geologico"
+    titolo: "L'ultima attività del Vulcano Laziale"
+    luogo: "Colli Albani"
+    descrizione: >-
+      I Castelli Romani sorgono su un apparato vulcanico, il Vulcano Laziale,
+      la cui ultima attività eruttiva è collocata dagli studi geologici intorno
+      al 600 a.C. (con margini di incertezza). Oggi è classificato come vulcano
+      quiescente: non spento, ma senza eruzioni in corso.
+    lezione: >-
+      Conoscere la natura del territorio è il primo passo della prevenzione:
+      il nostro paesaggio — i laghi, i crateri, il terreno fertile — è il
+      risultato di quell'attività vulcanica.
+    fonte: "INGV — I vulcani italiani; Voce «Colli Albani», Wikipedia"
+    fonte_url: "https://www.ingv.it/"
+
+  - anno: "1806"
+    ordine: 1806
+    tipo: "sismico"
+    titolo: "Il terremoto dei Castelli Romani"
+    luogo: "Rocca di Papa e Castelli Romani"
+    descrizione: >-
+      Il 26 agosto 1806 un forte terremoto colpì l'area dei Castelli Romani,
+      con i danni più gravi a Rocca di Papa e nei comuni vicini. È uno degli
+      eventi sismici storici meglio documentati della nostra zona ed è censito
+      nel Catalogo Parametrico dei Terremoti Italiani dell'INGV.
+    lezione: >-
+      La sismicità dei Castelli non è un'ipotesi astratta: è già accaduta. La
+      memoria degli eventi storici è alla base della classificazione sismica
+      attuale e delle norme antisismiche per le costruzioni.
+    fonte: "INGV — Catalogo Parametrico dei Terremoti Italiani (CPTI)"
+    fonte_url: "https://emidius.mi.ingv.it/CPTI15-DBMI15/"
+
+  - anno: "1992"
+    ordine: 1992
+    tipo: "normativo"
+    titolo: "Nasce il Servizio Nazionale della Protezione Civile"
+    luogo: "Italia"
+    descrizione: >-
+      La Legge 24 febbraio 1992, n. 225 (Legge Zamberletti) istituisce il
+      Servizio nazionale della protezione civile, definendo per la prima volta
+      in modo organico ruoli, competenze e il sistema di coordinamento fra
+      Stato, Regioni, Comuni e volontariato.
+    lezione: >-
+      La protezione civile moderna è un sistema, non un singolo ente: ogni
+      Comune — Genzano compreso — ne è parte attiva, con il suo Gruppo
+      Comunale di volontari.
+    fonte: "Normattiva — Legge 24 febbraio 1992, n. 225"
+    fonte_url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992;225"
+
+  - anno: "2003"
+    ordine: 2003
+    tipo: "normativo"
+    titolo: "Genzano classificata in Zona sismica 2"
+    luogo: "Genzano di Roma e Castelli Romani"
+    descrizione: >-
+      Con la riclassificazione sismica del territorio nazionale (2003) e il
+      successivo recepimento regionale, Genzano di Roma e i Castelli Romani
+      rientrano nella Zona sismica 2, a sismicità medio-alta. La classificazione
+      determina le norme tecniche da rispettare nelle costruzioni.
+    lezione: >-
+      Vivere in Zona 2 significa progettare e costruire pensando al terremoto.
+      Non è burocrazia: è prevenzione che salva vite.
+    fonte: "Regione Lazio — Classificazione sismica del territorio"
+    fonte_url: "https://www.regione.lazio.it/"
+
+  - anno: "2018"
+    ordine: 2018
+    tipo: "normativo"
+    titolo: "Il Codice della Protezione Civile"
+    luogo: "Italia"
+    descrizione: >-
+      Il Decreto legislativo 2 gennaio 2018, n. 1 — il Codice della Protezione
+      Civile — riunisce e aggiorna la disciplina del settore: attività di
+      previsione, prevenzione, soccorso e superamento dell'emergenza, ruolo
+      dei Comuni e centralità del volontariato organizzato.
+    lezione: >-
+      È la cornice entro cui opera oggi il Gruppo Comunale di Genzano: un
+      riferimento unico per sapere chi fa cosa, prima, durante e dopo
+      un'emergenza.
+    fonte: "Normattiva — D.Lgs. 2 gennaio 2018, n. 1"
+    fonte_url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018;1"
