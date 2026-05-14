@@ -102,6 +102,10 @@
   <script src="{{ "js/a11y-toolbar.js" | relURL }}?v={{ $v }}" defer></script>
   <script src="{{ "js/share.js" | relURL }}" defer></script>
   <script src="{{ "js/galleria-auto.js" | relURL }}" defer></script>
+  {{/* Notifiche browser per l'allerta meteo (idea #2). URL endpoint + pagina
+       allerte iniettati per compatibilità subpath GitHub Pages. */}}
+  <script>window.PCGENZANO_ALLERTA_URL={{ "allerta-stato/index.json" | relURL | jsonify }};window.PCGENZANO_ALLERTE_PAGE={{ "allerte-meteo/" | relURL | jsonify }};</script>
+  <script src="{{ "js/notifiche-allerta.js" | relURL }}" defer></script>
   {{ if .IsHome }}<script src="{{ "js/homepage-reveal.js" | relURL }}" defer></script>{{ end }}
   {{ if eq .Section "glossario" }}<script src="{{ "js/glossario-pagina.js" | relURL }}" defer></script>{{ end }}
   <script>
