@@ -288,6 +288,12 @@ enableGitInfo = true
   parent = "risorse"
   weight = 9
 
+[[menus.main]]
+  name = "Stato del Sito"
+  url = "/stato-sistema/"
+  parent = "risorse"
+  weight = 10
+
 # --- Voci dirette ---
 [[menus.main]]
   name = "Comunicazioni"
