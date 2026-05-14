@@ -31,7 +31,10 @@ echo "## 1. Status HTTP pagine principali (scoperte dinamicamente da content/)"
 # content/<sezione>/) escludendo le directory di lingua, articoli e
 # materiali interni che non sono pagine pubbliche da verificare con
 # uno smoke test (kit didattici, schede, articoli singoli).
-EXCLUDED_DIRS="english deutsch espanol francais portugues romana esperanto comunicazioni archivio-storico"
+# allerta-stato: sezione SENZA output HTML per scelta (outputs: ["JSON"]) —
+#   espone solo /allerta-stato/index.json per le notifiche browser (idea #2).
+#   Va esclusa: l'URL HTML /allerta-stato/ restituisce 403 by design.
+EXCLUDED_DIRS="english deutsch espanol francais portugues romana esperanto comunicazioni archivio-storico allerta-stato"
 PAGES_DYNAMIC=""
 if [ -d content ]; then
   for idx in content/*/_index.md; do
@@ -128,6 +131,11 @@ HTML=$(fetch "$BASE/numeri-utili/")
 HTML=$(fetch "$BASE/area-download/")
 [ "$(echo "$HTML" | grep -c 'Piano_AIB_Lazio.pdf')" -ge 1 ] && ok "Area download: link Piano AIB presente" || err "Area download: link Piano AIB mancante"
 [ "$(echo "$HTML" | grep -c 'Piano_Emergenza_Comunale_PC_Genzano.pdf')" -ge 1 ] && ok "Area download: Piano Emergenza Comunale presente" || err "Area download: Piano Emergenza mancante"
+
+# Endpoint JSON dello stato di allerta (idea #2): alimenta le notifiche
+# browser. La pagina HTML /allerta-stato/ NON esiste by design (vedi
+# EXCLUDED_DIRS sopra): qui verifichiamo che esista il JSON.
+[ "$(status "$BASE/allerta-stato/index.json")" = "200" ] && ok "Allerta JSON: endpoint /allerta-stato/index.json risponde" || err "Allerta JSON: endpoint /allerta-stato/index.json non risponde"
 
 HTML=$(fetch "$BASE/quizpc/")
 echo "$HTML" | grep -q "Quiz Formativo" && ok "Quiz: H1 presente" || err "Quiz: H1 mancante"
