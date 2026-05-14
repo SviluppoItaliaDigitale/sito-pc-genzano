@@ -122,6 +122,10 @@
            "Salva come PDF" nella finestra di stampa. */}}
       {{ partial "scarica-trascrizione-pdf.html" . }}
 
+      {{/* Badge "Disponibile in LIS" — appare solo se la pagina ha
+           lis_video nel frontmatter (idea #10 roadmap). */}}
+      {{ partial "lis-badge.html" . }}
+
       {{/* ── CONTENUTO ── */}}
       <article class="article-body">{{ .Content }}</article>
 

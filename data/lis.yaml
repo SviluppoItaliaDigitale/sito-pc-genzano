@@ -1,0 +1,44 @@
+# Registro dei video in Lingua Italiana dei Segni (LIS) — idea #10 roadmap.
+#
+# I video LIS, una volta prodotti con un interprete LIS qualificato (in
+# collaborazione con ENS — Ente Nazionale Sordi, sezione di Roma), sono
+# ospitati come asset di una GitHub Release del repo (gratis fino a 2 GB).
+#
+# Una pagina del sito mostra il badge "Disponibile in LIS" se ha nel
+# frontmatter `lis_video: "<id>"`, dove <id> e' una chiave di `video` qui sotto.
+# Finche' `video_url` e' vuoto il video e' in preparazione: il badge lo
+# segnala e la finestra mostra comunque la TRASCRIZIONE testuale completa
+# (obbligatoria — WCAG 1.2.1 / 1.2.2).
+#
+# Per aggiungere un video: nuova voce in `video`, compilare i campi, e
+# aggiungere `lis_video: "<id>"` al frontmatter della pagina interessata.
+
+video:
+  cosa-fare-emergenza:
+    titolo: "Cosa fare in caso di emergenza"
+    descrizione: "Le azioni essenziali di autoprotezione spiegate in Lingua Italiana dei Segni."
+    durata: ""
+    video_url: ""
+    captions_url: ""
+    trascrizione: |-
+      In caso di emergenza, mantieni la calma e segui poche regole chiare.
+
+      Primo: chiama il 112, il Numero Unico di Emergenza. Vale per ogni
+      emergenza: incendio, malore, incidente, pericolo. La centrale capisce
+      di cosa hai bisogno e invia i soccorsi giusti.
+
+      Secondo: mettiti al sicuro. Allontanati dal pericolo. Se sei in casa
+      e c'e' un terremoto, riparati sotto un tavolo robusto e resta lontano
+      da finestre e mobili che possono cadere. Se c'e' un incendio, esci
+      subito e non usare l'ascensore.
+
+      Terzo: ascolta le indicazioni delle autorita'. Le informazioni ufficiali
+      arrivano dal Comune, dalla Protezione Civile e dal sistema IT-alert,
+      che invia messaggi direttamente sul telefono.
+
+      Quarto: aiuta chi e' in difficolta', se puoi farlo senza correre
+      rischi: persone anziane, bambini, persone con disabilita'.
+
+      Ricorda: prepararsi prima rende tutto piu' semplice. Tieni pronto un
+      piccolo kit di emergenza e parla in famiglia di cosa fare. Trovi tutte
+      le informazioni sul sito della Protezione Civile di Genzano di Roma.
