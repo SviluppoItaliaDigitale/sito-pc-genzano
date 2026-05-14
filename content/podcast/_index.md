@@ -1,19 +1,36 @@
 ---
-title: "Podcast — Ascolta gli articoli del sito"
-description: "Tutti gli articoli del Gruppo Comunale ascoltabili ad alta voce, gratis, senza app esterne. Lettura vocale diretta dal browser con voce italiana."
+title: "Podcast — Voci dalla Protezione Civile di Genzano"
+description: "Il podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma: divulgazione dei rischi locali, racconti di esercitazioni, interviste a volontari ed esperti. Ascoltabile su Spotify, Apple Podcasts e da qualsiasi app con il feed RSS."
 type: "podcast"
 layout: "list"
-dataUltimaRevisione: "2026-05-12"
+outputs:
+  - HTML
+  - RSS
+sitemap:
+  priority: 0.6
+  changefreq: monthly
+tts: false
+params:
+  # Metadati del canale per il feed RSS iTunes-compatible.
+  # Compilare la copertina prima di inviare il podcast a Spotify/Apple:
+  # serve un'immagine quadrata 1400-3000 px (placeholder generato in
+  # static/images/podcast-cover.png — sostituibile con una versione curata).
+  podcast_autore: "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+  podcast_email: "segreteria@protezionecivilegenzano.it"
+  podcast_proprietario: "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+  podcast_categoria: "Government"
+  podcast_lingua: "it-IT"
+  podcast_explicit: "false"
+  podcast_tipo: "episodic"
+  podcast_copyright: "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+  podcast_cover: "images/podcast-cover.png"
+  # Link alle piattaforme — compilare dopo la prima distribuzione.
+  podcast_spotify: ""
+  podcast_apple: ""
 ---
 
-Tutti gli articoli pubblicati sul sito possono essere **ascoltati ad alta voce** direttamente dal tuo browser, senza scaricare nulla e senza installare app. La voce italiana del tuo dispositivo legge il testo in tempo reale.
+**Voci dalla Protezione Civile di Genzano** è il podcast del Gruppo Comunale Volontari. Episodi brevi — dai 10 ai 20 minuti — su come funziona la protezione civile vicino a casa: i rischi del nostro territorio, il racconto delle esercitazioni, le interviste ai volontari e agli esperti.
 
-**Come funziona.** Apri un articolo e clicca il bottone **"Leggi ad alta voce"** in cima al contenuto. Il browser usa la voce italiana del sistema operativo (Chrome, Edge, Safari iOS, Firefox supportano tutti questa funzione). Niente account, niente cookie, niente connessione a server esterni: la lettura avviene **interamente sul tuo dispositivo**.
+Si ascolta gratis, senza account. Puoi seguirlo dalla tua app preferita iscrivendoti al **feed RSS** qui sotto, oppure su Spotify e Apple Podcasts non appena il podcast sarà distribuito.
 
-**Velocità di lettura.** Lenta, normale o veloce — scegli dal selettore accanto al bottone, oppure dal pannello **Strumenti di accessibilità** (icona blu in basso a sinistra di ogni pagina).
-
-**Trascrizione PDF.** Su ogni articolo è disponibile un bottone **"Scarica trascrizione PDF"** che apre la finestra di stampa del browser: scegli "Salva come PDF" per avere il testo dell'articolo su carta digitale, formato A4, senza il chrome del sito.
-
-**Versione Braille (BRF).** Ogni articolo ha anche una versione Braille Ready Format scaricabile, compatibile con display braille e stampanti braille (Index, ViewPlus). Pensata per ciechi e ipovedenti che usano lettori tattili.
-
-Sotto trovi l'elenco completo degli articoli ascoltabili, con la **durata stimata** di lettura ad alta voce.
+Ogni episodio ha la **trascrizione completa** in pagina: per chi preferisce leggere, per chi non sente bene, e per ritrovare al volo un'informazione.

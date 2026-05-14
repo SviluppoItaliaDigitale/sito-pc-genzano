@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{- $rss := .OutputFormats.Get "RSS" -}}
+{{- $episodi := .Pages.ByParam "episodio" -}}
+{{- $episodi = $episodi.Reverse -}}
 <div class="page-hero">
   <div class="container">
     {{ partial "breadcrumb.html" . }}
@@ -7,69 +10,63 @@
 </div>
 <div class="container py-4">
   <div class="row">
-    <div class="col-lg-10 mx-auto">
+    <div class="col-lg-9 mx-auto">
 
-      {{/* Intro pagina (frontmatter description + corpo Markdown) */}}
       <div class="list-intro-content mb-4">
         {{ .Content }}
       </div>
 
-      {{/* Blacklist TTS (stessa di _default/single.html e _default/list.html).
-           Articoli su queste sezioni non hanno il bottone "Leggi ad alta voce",
-           quindi non li elenchiamo qui. La sezione comunicazioni è SEMPRE inclusa. */}}
-      {{ $allComunicazioni := where .Site.RegularPages "Section" "comunicazioni" }}
-      {{ $articoli := where $allComunicazioni "Draft" "ne" true }}
-      {{ $articoli = where $articoli "Params.tts" "ne" false }}
-      {{ $articoli = where $articoli "WordCount" "gt" 30 }}
+      {{/* ─── Iscriviti ─── */}}
+      <section class="pcg-podcast-iscriviti" aria-labelledby="pcg-podcast-iscriviti-h">
+        <h2 id="pcg-podcast-iscriviti-h" class="h5"><i class="bi bi-broadcast me-2" aria-hidden="true"></i>Iscriviti al podcast</h2>
+        <p class="small mb-2">Copia il feed RSS nella tua app di podcast, oppure usa i pulsanti delle piattaforme.</p>
+        <div class="pcg-podcast-iscriviti-azioni">
+          {{- with $rss }}
+          <a href="{{ .RelPermalink }}" class="btn btn-sm btn-primary">
+            <i class="bi bi-rss-fill me-1" aria-hidden="true"></i> Feed RSS
+          </a>
+          {{- end }}
+          {{- with .Params.podcast_spotify }}
+          <a href="{{ . }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">Spotify</a>
+          {{- end }}
+          {{- with .Params.podcast_apple }}
+          <a href="{{ . }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
+          {{- end }}
+        </div>
+        {{- if and (not .Params.podcast_spotify) (not .Params.podcast_apple) }}
+        <p class="small text-muted mt-2 mb-0">Spotify e Apple Podcasts saranno disponibili dopo la prima distribuzione del feed.</p>
+        {{- end }}
+      </section>
 
-      <p class="reading-meta-info small text-muted mb-4">
-        <i class="bi bi-info-circle me-1" aria-hidden="true"></i>
-        Le durate sono <strong>stimate</strong>: la voce italiana del browser (~150 parole al minuto)
-        impiega circa il <strong>33% in più</strong> di un lettore visivo medio
-        (~200 parole al minuto). La velocità "Veloce" del pannello accessibilità
-        riduce ulteriormente i tempi.
-      </p>
-
-      <ul class="podcast-list list-unstyled" role="list">
-        {{ range $articoli.ByDate.Reverse }}
-        {{/* Durata stimata audio: ReadingTime * (200/150) = * 1.33, arrotondato. */}}
-        {{ $audioMin := math.Max 1 (int (math.Round (mul .ReadingTime 1.33))) }}
-        <li class="podcast-item card mb-3" role="listitem">
-          <div class="card-body p-3 d-flex flex-wrap align-items-start gap-3">
-            <div class="podcast-icon" aria-hidden="true">
-              <i class="bi bi-volume-up-fill"></i>
-            </div>
-            <div class="podcast-meta flex-grow-1">
-              <h2 class="h6 mb-1">
-                <a href="{{ .RelPermalink }}" class="stretched-link">{{ .Title }}</a>
-              </h2>
-              <p class="small text-muted mb-1">
-                {{ with .Params.badge }}<span class="me-2">{{ partial "badge.html" . }}</span>{{ end }}
-                <time datetime="{{ .Date.Format "2006-01-02" }}">
-                  <i class="bi bi-calendar3 me-1" aria-hidden="true"></i>{{ .Date | time.Format ":date_long" }}
-                </time>
-              </p>
-              {{ with .Description }}<p class="small mb-0">{{ . }}</p>{{ end }}
-            </div>
-            <div class="podcast-duration small text-end">
-              <i class="bi bi-clock me-1" aria-hidden="true"></i>
-              <strong>~{{ $audioMin }} {{ if eq $audioMin 1 }}minuto{{ else }}minuti{{ end }}</strong>
-              <span class="visually-hidden">di ascolto stimati</span>
-              <br>
-              <span class="small text-muted">audio</span>
-            </div>
+      {{/* ─── Episodi ─── */}}
+      {{- if $episodi }}
+      <h2 class="h4 mt-4 mb-3">Episodi</h2>
+      <ul class="pcg-podcast-lista list-unstyled" role="list">
+        {{- range $episodi }}
+        <li class="pcg-podcast-ep card mb-3" role="listitem">
+          <div class="card-body">
+            <p class="pcg-podcast-ep-meta">
+              {{- with .Params.episodio }}<span class="pcg-podcast-ep-num">Episodio {{ . }}</span> · {{ end -}}
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+              {{- with .Params.durata }} · {{ . }}{{ end -}}
+            </p>
+            <h3 class="h5 mb-1"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{- with .Params.description }}<p class="mb-0 small">{{ . }}</p>{{ end -}}
           </div>
         </li>
-        {{ end }}
+        {{- end }}
       </ul>
+      {{- else }}
+      <div class="alert alert-info mt-4" role="note">
+        <p class="mb-0"><i class="bi bi-mic me-2" aria-hidden="true"></i><strong>Il primo episodio è in preparazione.</strong> L'infrastruttura del podcast è pronta: appena registreremo il primo episodio comparirà qui e nel feed RSS. Nel frattempo puoi già iscriverti al feed: lo riceverai automaticamente.</p>
+      </div>
+      {{- end }}
 
-      <p class="small text-muted mt-4">
-        Trovi un totale di <strong>{{ len $articoli }}</strong> articoli ascoltabili sul sito.
-        Tutti rispondono alla stessa logica: bottone <em>Leggi ad alta voce</em> in cima
-        al testo, voce italiana del dispositivo, niente account.
+      <p class="mt-4 small text-muted">
+        Preferisci leggere o ascoltare gli articoli del sito invece degli episodi audio?
+        Vai agli <a href="{{ "articoli-da-ascoltare/" | relURL }}">articoli da ascoltare</a> (lettura vocale dal browser, gratuita).
       </p>
 
-      {{ partial "page-tools.html" . }}
     </div>
   </div>
 </div>

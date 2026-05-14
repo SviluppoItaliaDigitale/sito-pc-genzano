@@ -147,6 +147,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/standard-iso/" role="menuitem"><span>Standard ISO</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/trasparenza/" role="menuitem"><span>Trasparenza</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/podcast/" role="menuitem"><span>Podcast</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/articoli-da-ascoltare/" role="menuitem"><span>Articoli da ascoltare</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/mappa-sito/" role="menuitem"><span>Mappa del Sito</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/stato-sistema/" role="menuitem"><span>Stato del Sito</span></a></li>' +
                   '</ul></div></div>' +

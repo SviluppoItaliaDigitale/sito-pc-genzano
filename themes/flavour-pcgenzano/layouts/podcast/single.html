@@ -1,0 +1,53 @@
+{{ define "main" }}
+<div class="page-hero">
+  <div class="container">
+    {{ partial "breadcrumb.html" . }}
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+<div class="container py-4">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+
+      <p class="pcg-podcast-ep-meta">
+        {{- with .Params.episodio }}<span class="pcg-podcast-ep-num">Episodio {{ . }}</span> · {{ end -}}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        {{- with .Params.durata }} · {{ . }}{{ end -}}
+      </p>
+
+      {{- with .Params.descrizione_lunga }}
+      <p class="pcg-podcast-ep-desc">{{ . }}</p>
+      {{- end }}
+
+      {{/* ─── Player audio ─── */}}
+      {{- with .Params.audio }}
+      <div class="pcg-podcast-player">
+        <audio controls preload="none" src="{{ . }}">
+          Il tuo browser non supporta la riproduzione audio.
+          <a href="{{ . }}" download>Scarica l'episodio (MP3)</a>.
+        </audio>
+        <p class="pcg-podcast-player-nota small">
+          <a href="{{ . }}" download><i class="bi bi-download me-1" aria-hidden="true"></i>Scarica l'episodio (MP3)</a>
+          · Oppure <a href="{{ "podcast/" | relURL }}">iscriviti al feed</a> per riceverlo nella tua app.
+        </p>
+      </div>
+      {{- else }}
+      <div class="alert alert-info" role="note">
+        <p class="mb-0"><i class="bi bi-mic me-2" aria-hidden="true"></i>L'audio di questo episodio non è ancora disponibile. Sotto trovi comunque la trascrizione completa.</p>
+      </div>
+      {{- end }}
+
+      {{/* ─── Trascrizione ─── */}}
+      <article class="article-body pcg-podcast-trascrizione">
+        <h2>Trascrizione</h2>
+        {{ .Content }}
+      </article>
+
+      <p class="mt-4">
+        <a href="{{ "podcast/" | relURL }}"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Tutti gli episodi</a>
+      </p>
+
+    </div>
+  </div>
+</div>
+{{ end }}

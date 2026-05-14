@@ -1,0 +1,63 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML -}}
+{{- /* Feed RSS 2.0 iTunes-compatible per il podcast — idea #22 roadmap.
+       Distribuibile su Spotify, Apple Podcasts, Pocket Casts, ecc.
+       Solo gli episodi con un file audio (.Params.audio) entrano nel feed.
+       La dichiarazione <?xml?> e' emessa via printf|safeHTML perche'
+       Hugo (html/template) altrimenti escapa "<?" in "&lt;?". */ -}}
+{{- $cover := .Params.podcast_cover | default "images/podcast-cover.png" | absURL -}}
+{{- $self := "" -}}{{- with .OutputFormats.Get "RSS" }}{{ $self = .Permalink }}{{ end -}}
+{{- $episodi := (where .Pages "Params.audio" "!=" "").ByParam "episodio" -}}
+{{- $episodi = $episodi.Reverse -}}
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Title | html }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ .Description | html }}</description>
+    <language>{{ .Params.podcast_lingua | default "it-IT" }}</language>
+    <copyright>{{ .Params.podcast_copyright | default .Site.Title | html }}</copyright>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    <generator>Hugo</generator>
+    {{- with $self }}
+    <atom:link href="{{ . }}" rel="self" type="application/rss+xml" />
+    {{- end }}
+    <itunes:author>{{ .Params.podcast_autore | default .Site.Title | html }}</itunes:author>
+    <itunes:summary>{{ .Description | html }}</itunes:summary>
+    <itunes:type>{{ .Params.podcast_tipo | default "episodic" }}</itunes:type>
+    <itunes:explicit>{{ .Params.podcast_explicit | default "false" }}</itunes:explicit>
+    <itunes:owner>
+      <itunes:name>{{ .Params.podcast_proprietario | default .Params.podcast_autore | default .Site.Title | html }}</itunes:name>
+      <itunes:email>{{ .Params.podcast_email | default .Site.Params.email | html }}</itunes:email>
+    </itunes:owner>
+    <itunes:image href="{{ $cover }}" />
+    <itunes:category text="{{ .Params.podcast_categoria | default "Government" }}" />
+    <image>
+      <url>{{ $cover }}</url>
+      <title>{{ .Title | html }}</title>
+      <link>{{ .Permalink }}</link>
+    </image>
+    {{- range $episodi }}
+    <item>
+      <title>{{ .Title | html }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <description>{{ with .Params.descrizione_lunga }}{{ . }}{{ else }}{{ .Params.description }}{{ end }}</description>
+      <content:encoded>{{ .Content | html }}</content:encoded>
+      {{- with .Params.episodio }}
+      <itunes:episode>{{ . }}</itunes:episode>
+      {{- end }}
+      {{- with .Params.durata }}
+      <itunes:duration>{{ . }}</itunes:duration>
+      {{- end }}
+      <itunes:explicit>{{ $.Params.podcast_explicit | default "false" }}</itunes:explicit>
+      {{- with .Params.image }}
+      <itunes:image href="{{ . | absURL }}" />
+      {{- end }}
+      <enclosure url="{{ .Params.audio }}" length="{{ .Params.audio_bytes | default 0 }}" type="audio/mpeg" />
+    </item>
+    {{- end }}
+  </channel>
+</rss>

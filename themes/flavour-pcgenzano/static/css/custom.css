@@ -3267,7 +3267,7 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
 }
 
 /* ============================================================
-   PODCAST LIST — pagina /podcast/ (Punto 15 roadmap v1.0)
+   PODCAST LIST — pagina /articoli-da-ascoltare/ (ex /podcast/, Punto 15 roadmap v1.0)
    Card-style list di tutti gli articoli con TTS attivo + durata
    stimata di lettura ad alta voce.
    ============================================================ */
@@ -4886,5 +4886,95 @@ html.a11y-hide-translate-button #lang-modal { display: none !important; }
 }
 /* ==========================================================================
  * fine STATO SISTEMA v1.0
+ * ==========================================================================
+ */
+
+/* ==========================================================================
+ * PODCAST v2.0 — podcast vero con episodi MP3 e feed RSS (idea #22)
+ * Layout: layouts/podcast/{list,single,rss.xml} — distinto dalla vecchia
+ * "PODCAST LIST" (articoli TTS), ora spostata in /articoli-da-ascoltare/.
+ * ==========================================================================
+ */
+
+.pcg-podcast-iscriviti {
+  border: 1px solid #d0d7e2;
+  border-left: 4px solid #003366;
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  background: #f5f7fa;
+  margin-bottom: 1.5rem;
+}
+
+.pcg-podcast-iscriviti h2 {
+  color: #003366;
+  margin-top: 0;
+}
+
+.pcg-podcast-iscriviti-azioni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pcg-podcast-lista {
+  margin: 0;
+  padding: 0;
+}
+
+.pcg-podcast-ep {
+  border: 1px solid #d0d7e2;
+  border-radius: 8px;
+}
+
+.pcg-podcast-ep:hover,
+.pcg-podcast-ep:focus-within {
+  border-color: #003366;
+  box-shadow: 0 2px 10px rgba(0, 51, 102, 0.12);
+}
+
+.pcg-podcast-ep-meta {
+  font-size: 0.85rem;
+  color: #5b6770;
+  margin: 0 0 0.25rem;
+}
+
+.pcg-podcast-ep-num {
+  font-weight: 700;
+  color: #003366;
+}
+
+.pcg-podcast-ep-desc {
+  font-size: 1.05rem;
+  color: #1a1a1a;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.pcg-podcast-player {
+  margin: 1.25rem 0;
+}
+
+.pcg-podcast-player audio {
+  width: 100%;
+}
+
+.pcg-podcast-player-nota {
+  margin-top: 0.4rem;
+  color: #5b6770;
+}
+
+.pcg-podcast-trascrizione {
+  margin-top: 1.5rem;
+  border-top: 2px solid #003366;
+  padding-top: 1rem;
+}
+
+@media print {
+  .pcg-podcast-iscriviti,
+  .pcg-podcast-player {
+    display: none;
+  }
+}
+/* ==========================================================================
+ * fine PODCAST v2.0
  * ==========================================================================
  */
