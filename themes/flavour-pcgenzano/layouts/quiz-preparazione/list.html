@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div class="page-hero">
+  <div class="container">
+    {{ partial "breadcrumb.html" . }}
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+<div class="container py-4">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+
+      <div class="list-intro-content mb-4">
+        {{ .Content }}
+      </div>
+
+      {{/* Contenitore del quiz: riempito da static/js/quiz-preparazione.js.
+           data-pagefind-ignore: il quiz non va indicizzato dalla ricerca. */}}
+      <div id="quiz-app" data-pagefind-ignore aria-live="polite">
+        <noscript>
+          <div class="alert alert-warning" role="alert">
+            <p class="mb-0">Il quiz richiede JavaScript. Puoi comunque consultare direttamente la guida:
+            <a href="{{ "piano-familiare/" | relURL }}">Piano familiare di emergenza</a>,
+            <a href="{{ "rischi-prevenzione/kit-emergenza/" | relURL }}">Kit di emergenza</a>,
+            <a href="{{ "cosa-fare-adesso/" | relURL }}">Cosa fare adesso</a>.</p>
+          </div>
+        </noscript>
+      </div>
+
+    </div>
+  </div>
+</div>
+{{ end }}

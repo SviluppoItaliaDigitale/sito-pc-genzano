@@ -89,6 +89,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/numeri-utili/" role="menuitem"><span>Numeri Utili</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" role="menuitem"><span>Piano Familiare</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/kit-calamita/" role="menuitem"><span>Kit pronti per situazioni vulnerabili</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/quiz-preparazione/" role="menuitem"><span>Quanto sei preparato? (quiz)</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 /* Dropdown: Per le scuole (6 voci didattiche, splittato da "Educazione e Inclusione" maggio 2026) */
