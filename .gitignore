@@ -32,3 +32,8 @@ controllo-documenti-report.md
 # Output braille generato da scripts/genera-braille.py (Punto 19 roadmap).
 # I file .brf sono rigenerati dal workflow al deploy, mai committati.
 static/braille/
+
+# Staging del backup documenti solo-Aruba (scripts/backup-documenti-aruba.py).
+# I file vengono pubblicati come asset della Release "backup-documenti-aruba",
+# mai committati nel repo (l'Atlante da solo è 118 MB).
+backup-aruba/
