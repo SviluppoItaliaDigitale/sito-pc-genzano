@@ -78,13 +78,18 @@
   <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
   {{ partial "slim-header.html" . }}
   {{ partial "navbar.html" . }}
-  <main id="main-content" tabindex="-1">
+  {{/* data-pagefind-body: Pagefind indicizza SOLO il contenuto di <main>,
+       non navbar/footer/banner. data-pagefind-filter: filtro "Sezione" nel
+       modal di ricerca. Vedi partials/ricerca-modal.html. */}}
+  <main id="main-content" tabindex="-1" data-pagefind-body
+        data-pagefind-filter="Sezione:{{ cond (eq .Section "") "Sito" (.Section | replaceRE "-" " " | title) }}">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "utility-bar.html" . }}
   {{ partial "footer.html" . }}
   {{ partial "cookie-banner.html" . }}
   {{ partial "language-selector.html" . }}
+  {{ partial "ricerca-modal.html" . }}
   {{ partial "sos-112.html" . }}
   {{ partial "accessibility-toolbar.html" . }}
   {{ partial "assistente-fab.html" . }}

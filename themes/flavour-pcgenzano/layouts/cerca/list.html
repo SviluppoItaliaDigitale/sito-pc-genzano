@@ -13,11 +13,13 @@
 <div class="container py-4">
   <div class="row">
     <div class="col-lg-8 mx-auto">
-      <div id="search-container">
-        <label for="search-input" class="form-label fw-bold">Cosa stai cercando?</label>
-        <input type="search" id="search-input" class="form-control form-control-lg" placeholder="Digita almeno 3 caratteri..." autocomplete="off" inputmode="search" aria-describedby="search-count" autofocus>
-        <div id="search-count" class="mt-2 small text-muted"></div>
-        <div id="search-results" class="mt-3" role="region" aria-live="polite"></div>
+      {{/* data-pagefind-ignore: la pagina di ricerca stessa non va indicizzata.
+           Ricerca full-text con Pagefind — stesso motore del modal Ctrl+K. */}}
+      <div id="pcg-ricerca-page-wrap" data-pagefind-ignore>
+        <p class="text-muted mb-3">Cerca tra articoli, pagine, rischi, numeri utili e materiali del sito. Puoi anche premere <kbd>Ctrl</kbd>+<kbd>K</kbd> da qualsiasi pagina.</p>
+        <div id="pcg-ricerca-page" class="pcg-ricerca-ui">
+          <p class="pcg-ricerca-loading" role="status">Caricamento della ricerca…</p>
+        </div>
       </div>
 
       <noscript>
@@ -47,107 +49,35 @@
 {{ end }}
 
 {{ define "scripts" }}
+{{- $bundle := "pagefind/" | relURL -}}
+<link rel="stylesheet" href="{{ $bundle }}pagefind-ui.css">
+<script src="{{ $bundle }}pagefind-ui.js"></script>
 <script>
-(function(){
-  var idx=null;
-  var el=document.getElementById('search-input');
-  var box=document.getElementById('search-results');
-  var cnt=document.getElementById('search-count');
-  var jsonURL='{{ "index.json" | absURL }}';
-
-  fetch(jsonURL).then(function(r){return r.json()}).then(function(d){
-    idx=d;
-    cnt.textContent=idx.length+' pagine indicizzate';
-  }).catch(function(){cnt.textContent='Errore caricamento indice';});
-
-  el.addEventListener('input',function(){
-    var q=this.value.toLowerCase().trim();
-    if(q.length<3){box.innerHTML='';cnt.textContent=idx?idx.length+' pagine indicizzate':'';return}
-    if(!idx){box.innerHTML='<p>Caricamento...</p>';return}
-
-    var res=[];
-    for(var i=0;i<idx.length;i++){
-      var p=idx[i];
-      var score=0;
-      var titleLow=(p.title||'').toLowerCase();
-      var contentLow=(p.content||'').toLowerCase();
-      var descLow=(p.description||'').toLowerCase();
-
-      // Cerca in tutte le parole della query
-      var words=q.split(/\s+/);
-      var allFound=true;
-      for(var w=0;w<words.length;w++){
-        if(words[w].length<2)continue;
-        var inTitle=titleLow.indexOf(words[w])>-1;
-        var inContent=contentLow.indexOf(words[w])>-1;
-        var inDesc=descLow.indexOf(words[w])>-1;
-        if(!inTitle && !inContent && !inDesc){allFound=false;break}
-        if(inTitle)score+=10;
-        if(inDesc)score+=5;
-        if(inContent)score+=1;
+  (function () {
+    "use strict";
+    if (typeof PagefindUI === "undefined") return;
+    new PagefindUI({
+      element: "#pcg-ricerca-page",
+      bundlePath: "{{ $bundle }}",
+      showSubResults: true,
+      showImages: false,
+      pageSize: 10,
+      resetStyles: false,
+      autofocus: true,
+      translations: {
+        placeholder: "Cerca articoli, rischi, numeri utili…",
+        clear_search: "Pulisci",
+        load_more: "Mostra altri risultati",
+        search_label: "Cerca nel sito",
+        filters_label: "Filtra per sezione",
+        zero_results: "Nessun risultato per [SEARCH_TERM]",
+        many_results: "[COUNT] risultati per [SEARCH_TERM]",
+        one_result: "[COUNT] risultato per [SEARCH_TERM]",
+        alt_search: "Nessun risultato per [SEARCH_TERM]. Risultati per [DIFFERENT_TERM]:",
+        search_suggestion: "Nessun risultato per [SEARCH_TERM]. Prova con:",
+        searching: "Ricerca di [SEARCH_TERM]…"
       }
-      if(allFound && score>0){
-        // Estrai snippet con evidenziazione
-        var snippet='';
-        var pos=contentLow.indexOf(words[0]);
-        if(pos>-1){
-          var start=Math.max(0,pos-80);
-          var end=Math.min(contentLow.length,pos+200);
-          snippet=(start>0?'...':'')+p.content.substring(start,end)+(end<contentLow.length?'...':'');
-        } else if(p.description){
-          snippet=p.description;
-        } else {
-          snippet=p.content.substring(0,200)+'...';
-        }
-        res.push({page:p,score:score,snippet:snippet});
-      }
-    }
-
-    // Ordina per punteggio
-    res.sort(function(a,b){return b.score-a.score});
-
-    if(res.length===0){
-      box.innerHTML='<p class="text-muted py-3">Nessun risultato per "<strong>'+q+'</strong>".</p>';
-      cnt.textContent='0 risultati';
-      return;
-    }
-
-    cnt.textContent=res.length+' risultat'+(res.length===1?'o':'i')+' per "'+q+'"';
-
-    var h='';
-    for(var j=0;j<Math.min(res.length,30);j++){
-      var r=res[j];
-      var sec=r.page.section||'';
-      var badge='';
-      if(r.page.badge){
-        var bLow=r.page.badge.toLowerCase();
-        var knownBadges=['allerta','avviso','evento','comunicazione','radiocomunicazioni','prevenzione','esercitazione','aggiornamento','informazione','emergenza','formazione','volontariato','attività'];
-        if(knownBadges.indexOf(bLow)>-1){
-          badge='<span class="notizia-categoria '+bLow+'" style="font-size:0.6rem;margin-right:0.5rem;">'+r.page.badge+'</span>';
-        }else{
-          var bPalette=['#00838f','#4527a0','#c62828','#2e7d32','#ad1457','#1565c0','#ef6c00','#6a1b9a','#00695c','#283593','#827717','#4e342e','#0277bd','#558b2f','#880e4f','#33691e'];
-          var bHash=0;for(var bi=0;bi<bLow.length;bi++)bHash=((bHash<<5)-bHash)+bLow.charCodeAt(bi);
-          var bColor=bPalette[Math.abs(bHash)%bPalette.length];
-          badge='<span class="notizia-categoria" style="background:'+bColor+';font-size:0.6rem;margin-right:0.5rem;">'+r.page.badge+'</span>';
-        }
-      }
-      // Evidenzia parole cercate nello snippet
-      var snip=r.snippet;
-      for(var w2=0;w2<words.length;w2++){
-        if(words[w2].length<2)continue;
-        var re=new RegExp('('+words[w2].replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
-        snip=snip.replace(re,'<mark>$1</mark>');
-      }
-      h+='<div class="search-result-item py-3" style="border-bottom:1px solid #eee;">';
-      h+='<div>'+badge;
-      if(sec)h+='<span class="text-muted small text-uppercase">'+sec+'</span>';
-      h+='</div>';
-      h+='<h3 class="h5 mb-1"><a href="'+r.page.url+'" style="color:var(--pc-primary);text-decoration:none;">'+r.page.title+'</a></h3>';
-      h+='<p class="small text-muted mb-0" style="line-height:1.5;">'+snip+'</p>';
-      h+='</div>';
-    }
-    box.innerHTML=h;
-  });
-})();
+    });
+  })();
 </script>
 {{ end }}

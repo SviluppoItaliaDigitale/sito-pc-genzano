@@ -411,6 +411,16 @@ python3 scripts/genera-qr-articoli.py
 
 Lo script è **idempotente**: genera solo i QR mancanti, salta quelli già presenti. Produce `static/qr/<nome-file>.png` e `.svg`. Se è la prima volta, installa la dipendenza con `pip install --break-system-packages segno`. I file `static/qr/` vanno aggiunti al commit (Passo 1.14). Se salti questo passo l'articolo si pubblica lo stesso: semplicemente il bottone "Scarica QR" non appare finché il QR non viene generato (il partial si auto-nasconde).
 
+### Passo 1.13-ter — Aggiorna l'indice di ricerca
+
+Il sito ha una **ricerca full-text** (icona ricerca nella navbar o scorciatoia <kbd>Ctrl</kbd>+<kbd>K</kbd>) basata su [Pagefind](https://pagefind.app). L'indice è una fotografia del sito: copre solo gli articoli **già pubblicati** al momento della generazione. Per far comparire i nuovi articoli nei risultati, rigenera l'indice con:
+
+```bash
+bash scripts/genera-indice-ricerca.sh
+```
+
+Lo script ricostruisce il sito, lo indicizza e aggiorna `static/pagefind/` (da aggiungere al commit). Non è obbligatorio a ogni articolo: l'articolo si pubblica e resta raggiungibile da menu, archivio e link interni anche senza re-indicizzazione — semplicemente non compare nella ricerca finché non rigeneri. **Abitudine consigliata: rigenera una volta a settimana** o dopo aver pubblicato un blocco di articoli. Richiede `npx` (Node.js); Pagefind viene scaricato al volo, niente `node_modules` nel repo.
+
 ### Passo 1.14 — Commit e push
 
 ```bash

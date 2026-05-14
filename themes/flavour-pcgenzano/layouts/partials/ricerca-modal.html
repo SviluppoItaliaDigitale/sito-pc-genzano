@@ -1,0 +1,142 @@
+{{/*
+  ricerca-modal.html — Modal di ricerca full-text Pagefind.
+
+  Incluso globalmente da baseof.html. Si apre:
+    - cliccando l'icona di ricerca nella navbar ([data-ricerca-trigger])
+    - con la scorciatoia da tastiera Ctrl+K / ⌘+K
+
+  L'indice è generato da scripts/genera-indice-ricerca.sh in static/pagefind/.
+  pagefind-ui.css e pagefind-ui.js (~135 KB) sono caricati in LAZY: solo alla
+  prima apertura del modal, così le pagine non li scaricano se nessuno cerca.
+
+  Accessibilità:
+    - <dialog> HTML5 nativo: focus trap + Esc + backdrop accessibili
+    - Pagefind UI usa <input type="search"> reale e aria-live sui risultati
+    - bundlePath via relURL → funziona su Aruba (root) e GitHub Pages (subpath)
+
+  Progressive enhancement: senza JS l'icona navbar resta un link a /cerca/.
+*/}}
+{{- $bundle := "pagefind/" | relURL -}}
+{{- $cercaURL := "cerca/" | relURL -}}
+<dialog id="pcg-ricerca-dialog" class="pcg-ricerca-dialog" aria-labelledby="pcg-ricerca-title">
+  <div class="pcg-ricerca-box">
+    <header class="pcg-ricerca-header">
+      <h2 id="pcg-ricerca-title" class="pcg-ricerca-title">
+        <i class="bi bi-search me-2" aria-hidden="true"></i>Cerca nel sito
+      </h2>
+      <button type="button" class="pcg-ricerca-close" data-pcg-ricerca-close
+              aria-label="Chiudi la ricerca">&times;</button>
+    </header>
+    <div id="pcg-ricerca-ui" class="pcg-ricerca-ui">
+      <p class="pcg-ricerca-loading" role="status">Caricamento della ricerca…</p>
+    </div>
+    <footer class="pcg-ricerca-footer">
+      <span class="pcg-ricerca-hint">
+        <kbd>Esc</kbd> per chiudere · <kbd>Ctrl</kbd>+<kbd>K</kbd> per riaprire
+      </span>
+      <a href="{{ $cercaURL }}" class="pcg-ricerca-fullpage">Ricerca a tutta pagina</a>
+    </footer>
+  </div>
+</dialog>
+
+<script>
+  (function () {
+    "use strict";
+    var dialog = document.getElementById("pcg-ricerca-dialog");
+    if (!dialog) return;
+
+    var BUNDLE = "{{ $bundle }}";
+    var loaded = false;
+
+    function caricaAsset(src, tag) {
+      return new Promise(function (resolve, reject) {
+        var el;
+        if (tag === "css") {
+          el = document.createElement("link");
+          el.rel = "stylesheet";
+          el.href = src;
+        } else {
+          el = document.createElement("script");
+          el.src = src;
+        }
+        el.onload = resolve;
+        el.onerror = reject;
+        document.head.appendChild(el);
+      });
+    }
+
+    function initPagefind() {
+      if (loaded) return Promise.resolve();
+      loaded = true;
+      return caricaAsset(BUNDLE + "pagefind-ui.css", "css")
+        .then(function () { return caricaAsset(BUNDLE + "pagefind-ui.js", "js"); })
+        .then(function () {
+          /* global PagefindUI */
+          new PagefindUI({
+            element: "#pcg-ricerca-ui",
+            bundlePath: BUNDLE,
+            showSubResults: true,
+            showImages: false,
+            pageSize: 8,
+            resetStyles: false,
+            translations: {
+              placeholder: "Cerca articoli, rischi, numeri utili…",
+              clear_search: "Pulisci",
+              load_more: "Mostra altri risultati",
+              search_label: "Cerca nel sito",
+              filters_label: "Filtra per sezione",
+              zero_results: "Nessun risultato per [SEARCH_TERM]",
+              many_results: "[COUNT] risultati per [SEARCH_TERM]",
+              one_result: "[COUNT] risultato per [SEARCH_TERM]",
+              alt_search: "Nessun risultato per [SEARCH_TERM]. Risultati per [DIFFERENT_TERM]:",
+              search_suggestion: "Nessun risultato per [SEARCH_TERM]. Prova con:",
+              searching: "Ricerca di [SEARCH_TERM]…"
+            }
+          });
+        })
+        .catch(function () {
+          var box = document.getElementById("pcg-ricerca-ui");
+          if (box) {
+            box.innerHTML = '<p class="pcg-ricerca-loading">Ricerca non disponibile. ' +
+              'Apri la <a href="{{ $cercaURL }}">ricerca a tutta pagina</a>.</p>';
+          }
+        });
+    }
+
+    function apri() {
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
+      initPagefind().then(function () {
+        var input = dialog.querySelector("input[type='search'], .pagefind-ui__search-input");
+        if (input) { try { input.focus(); } catch (e) {} }
+      });
+    }
+
+    // Trigger: icona ricerca nella navbar (progressive enhancement del link)
+    document.querySelectorAll("[data-ricerca-trigger]").forEach(function (t) {
+      t.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        apri();
+      });
+    });
+
+    // Scorciatoia Ctrl+K / ⌘+K
+    document.addEventListener("keydown", function (ev) {
+      if ((ev.ctrlKey || ev.metaKey) && (ev.key === "k" || ev.key === "K")) {
+        ev.preventDefault();
+        if (dialog.open) { dialog.close(); } else { apri(); }
+      }
+    });
+
+    // Chiusura: bottoni dedicati + click sul backdrop
+    dialog.querySelectorAll("[data-pcg-ricerca-close]").forEach(function (btn) {
+      btn.addEventListener("click", function () { dialog.close(); });
+    });
+    dialog.addEventListener("click", function (ev) {
+      if (ev.target === dialog) { dialog.close(); }
+    });
+  })();
+</script>

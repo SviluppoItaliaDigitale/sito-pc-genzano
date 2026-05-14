@@ -18,7 +18,11 @@
           </div>
           <div class="it-right-zone">
             <div class="it-search-wrapper">
-              <a class="search-link rounded-icon" href="{{ "cerca/" | relURL }}" aria-label="Cerca nel sito">
+              {{/* data-ricerca-trigger: con JS apre il modal Pagefind (Ctrl+K).
+                   Senza JS resta un link funzionante a /cerca/ (progressive
+                   enhancement). Vedi partials/ricerca-modal.html. */}}
+              <a class="search-link rounded-icon" href="{{ "cerca/" | relURL }}"
+                 data-ricerca-trigger aria-label="Cerca nel sito (Ctrl+K)" title="Cerca nel sito — Ctrl+K">
                 <svg class="icon"><use href="{{ "vendor/bootstrap-italia/svg/sprites.svg" | relURL }}#it-search"></use></svg>
               </a>
             </div>

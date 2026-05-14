@@ -4520,3 +4520,148 @@ html.a11y-hide-translate-button #lang-modal { display: none !important; }
  * fine QR ARTICOLO v1.0
  * ==========================================================================
  */
+
+/* ==========================================================================
+ * RICERCA PAGEFIND v1.0 — modal di ricerca full-text
+ * Partial: partials/ricerca-modal.html — Indice: scripts/genera-indice-ricerca.sh
+ * <dialog> nativo + Pagefind UI temato con la palette istituzionale (#003366).
+ * Apertura: icona navbar + scorciatoia Ctrl+K.
+ * ==========================================================================
+ */
+
+.pcg-ricerca-dialog {
+  border: 0;
+  border-radius: 12px;
+  padding: 0;
+  max-width: min(94vw, 680px);
+  width: 100%;
+  background: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 24px 48px rgba(0, 51, 102, 0.28);
+}
+
+.pcg-ricerca-dialog::backdrop {
+  background: rgba(0, 51, 102, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.pcg-ricerca-dialog:not([open]) {
+  display: none;
+}
+
+.pcg-ricerca-box {
+  padding: 1.25rem 1.5rem 1rem;
+}
+
+.pcg-ricerca-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.5rem;
+}
+
+.pcg-ricerca-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #003366;
+  margin: 0;
+}
+
+.pcg-ricerca-close {
+  background: transparent;
+  border: 0;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #003366;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  border-radius: 4px;
+}
+
+.pcg-ricerca-close:hover,
+.pcg-ricerca-close:focus-visible {
+  background: #003366;
+  color: #ffffff;
+  outline: 2px solid #003366;
+  outline-offset: 2px;
+}
+
+.pcg-ricerca-loading {
+  color: #555555;
+  font-size: 0.95rem;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+/* Pagefind UI temato con la palette istituzionale */
+.pcg-ricerca-ui {
+  --pagefind-ui-scale: 0.9;
+  --pagefind-ui-primary: #003366;
+  --pagefind-ui-text: #1a1a1a;
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-border: #d0d7e2;
+  --pagefind-ui-tag: #eef2f7;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 8px;
+  max-height: 62vh;
+  overflow-y: auto;
+}
+
+.pcg-ricerca-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #e6e9ef;
+  font-size: 0.82rem;
+}
+
+.pcg-ricerca-hint {
+  color: #666666;
+}
+
+.pcg-ricerca-hint kbd {
+  background: #eef2f7;
+  border: 1px solid #d0d7e2;
+  border-radius: 3px;
+  padding: 0.05rem 0.35rem;
+  font-size: 0.85em;
+  color: #003366;
+}
+
+.pcg-ricerca-fullpage {
+  color: #003366;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pcg-ricerca-dialog::backdrop {
+    backdrop-filter: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pcg-ricerca-box {
+    padding: 1rem 1rem 0.85rem;
+  }
+  .pcg-ricerca-ui {
+    --pagefind-ui-scale: 0.82;
+    max-height: 70vh;
+  }
+}
+
+@media print {
+  .pcg-ricerca-dialog {
+    display: none !important;
+  }
+}
+/* ==========================================================================
+ * fine RICERCA PAGEFIND v1.0
+ * ==========================================================================
+ */

@@ -14,7 +14,7 @@
 {{- $prev := .PrevInSection -}}
 {{- $next := .NextInSection -}}
 {{- if or $prev $next -}}
-<nav class="articolo-prev-next mt-5" aria-label="Naviga tra gli articoli">
+<nav class="articolo-prev-next mt-5" aria-label="Naviga tra gli articoli" data-pagefind-ignore>
   <div class="row g-3">
     {{ if $next }}
     {{/* "Successivo" in Hugo = pubblicato DOPO (più recente). Per l'utente
