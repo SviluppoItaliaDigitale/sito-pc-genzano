@@ -1,0 +1,112 @@
+name: "📊 Aggiorna stato del sistema"
+
+# Aggiorna data/stato-sistema.json con lo stato dei workflow critici di
+# manutenzione, letto via API GitHub (gh run list). La pagina pubblica
+# /stato-sistema/ lo legge al build successivo per mostrare il cruscotto
+# di trasparenza tecnica con semaforo verde/giallo/rosso.
+#
+# deploy.yml NON e' toccato (vincolo): questo workflow committa il file in
+# data/ e ri-triggera deploy.yml esplicitamente (i push del GITHUB_TOKEN
+# non auto-triggerano i workflow su push).
+
+on:
+  schedule:
+    # Giornaliero alle 05:30 UTC. Orario esplicito (non */N): vedi memoria
+    # feedback_github_cron_explicit_better.
+    - cron: "30 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: "aggiorna-stato-sistema"
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🔎 Leggi lo stato dei workflow critici"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          ts_now="$(date -u +%Y-%m-%dT%H:%M:%S+00:00)"
+
+          stato_di() {
+            # $1 = file workflow → stampa "status|conclusion|createdAt"
+            gh run list --workflow="$1" --limit=1 \
+              --json status,conclusion,createdAt \
+              --jq '"\(.[0].status)|\(.[0].conclusion)|\(.[0].createdAt)"' 2>/dev/null || echo "unknown||"
+          }
+
+          # Mappa: status+conclusion grezzi → stato sintetico per la pagina
+          sintetico() {
+            local status="$1" conclusion="$2"
+            if [ "$status" != "completed" ] && [ -n "$status" ] && [ "$status" != "unknown" ]; then
+              echo "in_progress"
+            elif [ "$conclusion" = "success" ]; then
+              echo "success"
+            elif [ "$conclusion" = "failure" ] || [ "$conclusion" = "timed_out" ]; then
+              echo "failure"
+            elif [ -n "$conclusion" ]; then
+              echo "other"
+            else
+              echo "unknown"
+            fi
+          }
+
+          riga() {
+            # $1 nome  $2 file  $3 descrizione
+            IFS='|' read -r st cc ca <<< "$(stato_di "$2")"
+            sint="$(sintetico "$st" "$cc")"
+            printf '    {\n'
+            printf '      "nome": "%s",\n' "$1"
+            printf '      "file": "%s",\n' "$2"
+            printf '      "stato": "%s",\n' "$sint"
+            printf '      "ultimo_run": "%s",\n' "$ca"
+            printf '      "descrizione": "%s"\n' "$3"
+            printf '    }'
+          }
+
+          {
+            printf '{\n'
+            printf '  "aggiornato": "%s",\n' "$ts_now"
+            printf '  "nota": "File aggiornato automaticamente dal workflow aggiorna-stato-sistema.yml. Stato dei workflow critici di manutenzione del sito.",\n'
+            printf '  "workflow": [\n'
+            riga "Pubblicazione del sito" "deploy.yml" "Costruisce e pubblica il sito a ogni modifica approvata."
+            printf ',\n'
+            riga "Controllo allerta meteo" "check-allerta.yml" "Verifica i bollettini della Regione Lazio e aggiorna lo stato di allerta."
+            printf ',\n'
+            riga "Audit settimanale del sito" "audit-sito.yml" "Controlla contenuti, link, accessibilita e coerenza ogni lunedi."
+            printf ',\n'
+            riga "Verifica dopo la pubblicazione" "smoke-test-post-deploy.yml" "Controlla che le pagine principali rispondano dopo ogni pubblicazione."
+            printf ',\n'
+            riga "Audit prestazioni e accessibilita" "lighthouse-audit.yml" "Misura velocita, accessibilita e SEO con Lighthouse dopo ogni pubblicazione."
+            printf '\n  ]\n}\n'
+          } > data/stato-sistema.json
+
+          echo "--- data/stato-sistema.json ---"
+          cat data/stato-sistema.json
+          python3 -c "import json; json.load(open('data/stato-sistema.json'))" && echo "JSON valido"
+
+      - name: "💾 Commit se cambiato + ri-trigger deploy"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet data/stato-sistema.json; then
+            echo "Nessun cambiamento di stato — niente commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/stato-sistema.json
+          git commit -m "chore(stato-sistema): aggiornamento automatico stato workflow [skip-stato]"
+          git push
+          gh workflow run deploy.yml
