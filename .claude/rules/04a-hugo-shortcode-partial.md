@@ -333,3 +333,15 @@ Tutti i meta tag che controllano l'**anteprima** dei link quando vengono condivi
 Default per pagine senza copertina: `static/images/og-default.png` 1200×630 nel tema.
 
 **Cache delle anteprime**: le piattaforme social cachano le anteprime (Facebook/X possono cachare per ore o giorni). Se modifichi la copertina di un articolo, l'anteprima si aggiorna **solo dopo che la piattaforma ricontrolla**. Per forzare il refresh: [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) e [Twitter Card Validator](https://cards-dev.twitter.com/validator).
+
+## Partial della roadmap (maggio 2026)
+
+Partial aggiunti con le iniziative della roadmap. Tutti auto-protettivi (renderizzano solo quando hanno senso) e inclusi dai template `_default`.
+
+- **`qr-articolo.html`** (idea #6) — bottone "Scarica QR" + `<dialog>` con il QR dell'articolo. Si attiva solo se esiste `static/qr/<slug>.png|svg` (generati da `scripts/genera-qr-articoli.py`). Incluso in `page-tools.html`. CSS § QR ARTICOLO v1.0.
+- **`ricerca-modal.html`** (idea #24) — modal di ricerca full-text Pagefind, apertura da icona navbar e da `Ctrl+K`. `pagefind-ui` caricato in lazy alla prima apertura. Incluso in `baseof.html`. Indice in `static/pagefind/` generato da `scripts/genera-indice-ricerca.sh`. CSS § RICERCA PAGEFIND v1.0. La pagina `/cerca/` (`layouts/cerca/list.html`) usa lo stesso motore.
+- **`lis-badge.html`** (idea #10) — badge "Disponibile in LIS" + `<dialog>` con video + `<track>` WebVTT + trascrizione. Si attiva solo se la pagina ha `lis_video: "<id>"` nel frontmatter e `<id>` esiste in `data/lis.yaml`. Incluso (non condizionato) in `_default/single.html` e `_default/list.html`. CSS § LIS v1.0.
+
+Layout di pagina aggiunti dalla roadmap (non partial, ma `layouts/<sezione>/`): `stato-sistema/list.html` (#25), `storia/list.html` (#8), `lis/list.html` (#10), `lanterna/list.html` (#4, standalone — NON usa `baseof.html`), `quiz-preparazione/list.html` (#7), `podcast/{list,single,rss.xml}` (#22), `articoli-da-ascoltare/list.html` (#22, ex `podcast/`), `allerta-stato/list.json` (#2, endpoint JSON puro).
+
+Script asset associati: `genera-qr-articoli.py`, `genera-indice-ricerca.sh`, `backup-documenti-aruba.py`. JS statici: `notifiche-allerta.js` (#2), `glossario-pagina.js` (#21), `quiz-preparazione.js` (#7), `static/giochi/assets/js/arena.js` (#11).
