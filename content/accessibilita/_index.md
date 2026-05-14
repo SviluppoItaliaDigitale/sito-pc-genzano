@@ -168,7 +168,7 @@ La funzione:
 
 Può essere utile per anziani, persone con dislessia, bambini, persone che leggono lentamente o persone sotto stress durante un'emergenza.
 
-La pagina [Podcast](/podcast/) raccoglie l'elenco di tutti gli articoli ascoltabili, con la **durata stimata** della lettura ad alta voce.
+La pagina [Articoli da ascoltare](/articoli-da-ascoltare/) raccoglie l'elenco di tutti gli articoli ascoltabili, con la **durata stimata** della lettura ad alta voce.
 
 ## Versioni alternative degli articoli
 

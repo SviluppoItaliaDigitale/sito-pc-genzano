@@ -294,6 +294,12 @@ enableGitInfo = true
   parent = "risorse"
   weight = 10
 
+[[menus.main]]
+  name = "Articoli da ascoltare"
+  url = "/articoli-da-ascoltare/"
+  parent = "risorse"
+  weight = 11
+
 # --- Voci dirette ---
 [[menus.main]]
   name = "Comunicazioni"
