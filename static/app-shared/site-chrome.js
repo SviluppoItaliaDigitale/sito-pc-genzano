@@ -131,10 +131,10 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/san-pio-da-pietrelcina/" role="menuitem"><span>Il nostro patrono</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
-                /* Dropdown: Risorse (8 voci — Open Data rimosso maggio 2026
-                   perché schema vuoto perpetuo: i dati operativi del Gruppo
-                   transitano dal bilancio del Comune, non sono pubblicabili
-                   come dataset CSV/JSON autonomi). */
+                /* Dropdown: Risorse. Open Data reinserito (maggio 2026):
+                   la pagina /open-data/ pubblica i dataset delle attività
+                   del Gruppo (interventi, ore, esercitazioni, formazione,
+                   dotazioni) in CSV/JSON sotto CC BY 4.0. */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-risorse" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
                     '<span>Risorse</span>' +
@@ -148,6 +148,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/glossario/" role="menuitem"><span>Glossario</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/standard-iso/" role="menuitem"><span>Standard ISO</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/trasparenza/" role="menuitem"><span>Trasparenza</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/open-data/" role="menuitem"><span>Open Data</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/podcast/" role="menuitem"><span>Podcast</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/articoli-da-ascoltare/" role="menuitem"><span>Articoli da ascoltare</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/storia/" role="menuitem"><span>Storia del territorio</span></a></li>' +
