@@ -403,6 +403,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Quanto sei preparato?</p>
   <p class="ms-card-desc">Quiz adattivo e non giudicante: scopri cosa ti manca per essere pronto a un'emergenza. Profilo di preparazione, piano d'azione su misura, badge scaricabile.</p>
 </a>
+<a class="ms-card ms-edu" href="/open-data/">
+  <div class="ms-card-icon"><i class="bi bi-database"></i></div>
+  <p class="ms-card-title">Open Data</p>
+  <p class="ms-card-desc">I dataset delle attività del Gruppo (interventi, ore di volontariato, esercitazioni, formazione, dotazioni) in formato aperto CSV e JSON, riusabili sotto licenza CC BY 4.0.</p>
+</a>
 <a class="ms-card ms-edu" href="/podcast/">
   <div class="ms-card-icon"><i class="bi bi-mic-fill"></i></div>
   <p class="ms-card-title">Podcast</p>
