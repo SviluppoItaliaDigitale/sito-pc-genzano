@@ -22,6 +22,8 @@ Lo stato sotto è letto direttamente dai **bollettini ufficiali del Centro Funzi
 
 {{< allerta-stato-attuale >}}
 
+<div id="notifiche-allerta-toggle" data-pagefind-ignore></div>
+
 <div class="card border-info mb-4">
 <div class="card-body bg-info bg-opacity-10 p-4">
 <h2 class="h5 text-dark"><i class="bi bi-telegram me-2" aria-hidden="true"></i>Ricevi le allerte su Telegram</h2>
