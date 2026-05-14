@@ -378,6 +378,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Feed RSS</p>
   <p class="ms-card-desc">Ricevi le notizie del Gruppo nel tuo aggregatore preferito (Feedly, Inoreader, Thunderbird, NetNewsWire). 14 feed dedicati per sezione del sito. Niente registrazione, niente cookie, niente dati personali.</p>
 </a>
+<a class="ms-card ms-edu" href="/stato-sistema/">
+  <div class="ms-card-icon"><i class="bi bi-activity"></i></div>
+  <p class="ms-card-title">Stato del sistema</p>
+  <p class="ms-card-desc">Cruscotto pubblico di trasparenza tecnica: stato di allerta, modalità del sito, automazioni di manutenzione con semaforo, conformità AGID e WCAG.</p>
+</a>
 <a class="ms-card ms-edu" href="/faq/">
   <div class="ms-card-icon"><i class="bi bi-patch-question-fill"></i></div>
   <p class="ms-card-title">Domande frequenti</p>

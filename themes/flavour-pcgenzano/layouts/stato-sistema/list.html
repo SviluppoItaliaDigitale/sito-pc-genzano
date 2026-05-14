@@ -1,0 +1,133 @@
+{{ define "main" }}
+{{- $allerta := .Site.Data.allerta -}}
+{{- $emergenza := .Site.Data.emergenza -}}
+{{- $stato := index .Site.Data "stato-sistema" -}}
+{{- $esercitazioni := where (where .Site.RegularPages "Section" "comunicazioni") "Params.badge" "Esercitazione" -}}
+{{- $svolte := first 4 (where $esercitazioni "Date" "lt" now) -}}
+{{- $prossime := where $esercitazioni "Date" "ge" now -}}
+
+<div class="page-hero">
+  <div class="container">
+    <nav aria-label="Percorso di navigazione">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Stato del sistema</li>
+      </ol>
+    </nav>
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+
+      <div class="stato-intro">{{ .Content }}</div>
+
+      {{/* ─── Allerta meteo ─── */}}
+      <section class="stato-panel" aria-labelledby="stato-allerta-h">
+        <h2 id="stato-allerta-h" class="stato-panel-title"><i class="bi bi-cloud-rain me-2" aria-hidden="true"></i>Allerta meteo</h2>
+        {{- with $allerta -}}
+        {{- $liv := lower (.livello | default "verde") -}}
+        {{- $cls := cond (in (slice "verde") $liv) "verde" (cond (in (slice "giallo" "gialla") $liv) "giallo" (cond (in (slice "arancione") $liv) "arancione" "rosso")) -}}
+        <p class="stato-allerta-riga">
+          <span class="stato-allerta-pallino stato-allerta-{{ $cls }}" aria-hidden="true"></span>
+          <strong>{{ .titolo | default "Stato non disponibile" }}</strong>
+        </p>
+        {{- with .descrizione }}<p class="stato-panel-desc">{{ . }}</p>{{ end -}}
+        {{- with .ultimo_controllo }}<p class="stato-meta">Verificato: <time datetime="{{ . }}">{{ dateFormat "2 January 2006, 15:04" . }}</time> (ora italiana)</p>{{ end -}}
+        {{- else -}}
+        <p class="stato-panel-desc">Dati di allerta non disponibili.</p>
+        {{- end }}
+        <p class="stato-panel-link"><a href="{{ "allerte-meteo/" | relURL }}">Vai alla pagina Allerte meteo</a></p>
+      </section>
+
+      {{/* ─── Modalità del sito ─── */}}
+      <section class="stato-panel" aria-labelledby="stato-modalita-h">
+        <h2 id="stato-modalita-h" class="stato-panel-title"><i class="bi bi-broadcast me-2" aria-hidden="true"></i>Modalità del sito</h2>
+        {{- if and $emergenza $emergenza.attiva -}}
+        <p class="stato-allerta-riga">
+          <span class="stato-badge stato-failure">Emergenza attiva</span>
+        </p>
+        {{- with $emergenza.titolo }}<p class="stato-panel-desc"><strong>{{ . }}</strong></p>{{ end -}}
+        {{- with $emergenza.descrizione }}<p class="stato-panel-desc">{{ . }}</p>{{ end -}}
+        {{- else -}}
+        <p class="stato-allerta-riga">
+          <span class="stato-badge stato-success">Funzionamento ordinario</span>
+        </p>
+        <p class="stato-panel-desc">Il sito è in modalità normale. In caso di emergenza in corso, la homepage si trasforma per dare priorità alle informazioni operative.</p>
+        {{- end }}
+      </section>
+
+      {{/* ─── Aggiornamento del sito ─── */}}
+      <section class="stato-panel" aria-labelledby="stato-deploy-h">
+        <h2 id="stato-deploy-h" class="stato-panel-title"><i class="bi bi-arrow-repeat me-2" aria-hidden="true"></i>Aggiornamento del sito</h2>
+        <p class="stato-allerta-riga"><span class="stato-badge stato-success">Online</span></p>
+        <p class="stato-panel-desc">Questa pagina è stata generata il <strong>{{ now.Format "2 January 2006 alle 15:04" }}</strong>. Il sito viene ricostruito e ripubblicato a ogni modifica approvata e ogni mattina per gli articoli programmati.</p>
+      </section>
+
+      {{/* ─── Automazioni di manutenzione ─── */}}
+      <section class="stato-panel" aria-labelledby="stato-workflow-h">
+        <h2 id="stato-workflow-h" class="stato-panel-title"><i class="bi bi-gear-wide-connected me-2" aria-hidden="true"></i>Automazioni di manutenzione</h2>
+        <p class="stato-panel-desc">Controlli automatici che tengono il sito aggiornato, accessibile e senza errori. Verde = ultimo controllo riuscito.</p>
+        {{- with $stato }}
+        <ul class="stato-workflow-list">
+          {{- range .workflow -}}
+          {{- $s := .stato -}}
+          {{- $etichetta := cond (eq $s "success") "Operativo" (cond (eq $s "failure") "Da verificare" (cond (eq $s "in_progress") "In corso" "Sconosciuto")) -}}
+          <li class="stato-workflow-item">
+            <span class="stato-badge stato-{{ $s }}">{{ $etichetta }}</span>
+            <span class="stato-workflow-testo">
+              <strong>{{ .nome }}</strong>
+              <span class="stato-workflow-desc">{{ .descrizione }}</span>
+              {{- with .ultimo_run }}<span class="stato-meta">Ultimo controllo: <time datetime="{{ . }}">{{ dateFormat "2 January 2006, 15:04" . }}</time></span>{{ end -}}
+            </span>
+          </li>
+          {{- end -}}
+        </ul>
+        <p class="stato-meta">Stato aggiornato il <time datetime="{{ .aggiornato }}">{{ dateFormat "2 January 2006, 15:04" .aggiornato }}</time>.</p>
+        {{- else }}
+        <p class="stato-panel-desc">Dati delle automazioni non ancora disponibili.</p>
+        {{- end }}
+      </section>
+
+      {{/* ─── Esercitazioni ─── */}}
+      <section class="stato-panel" aria-labelledby="stato-eserc-h">
+        <h2 id="stato-eserc-h" class="stato-panel-title"><i class="bi bi-people me-2" aria-hidden="true"></i>Esercitazioni</h2>
+        {{- with $prossime }}
+        <h3 class="stato-sub">Prossime</h3>
+        <ul class="stato-link-list">
+          {{- range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time></li>{{ end -}}
+        </ul>
+        {{- end }}
+        {{- with $svolte }}
+        <h3 class="stato-sub">Ultime svolte</h3>
+        <ul class="stato-link-list">
+          {{- range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time></li>{{ end -}}
+        </ul>
+        {{- end }}
+        {{- if and (not $prossime) (not $svolte) }}
+        <p class="stato-panel-desc">Nessuna esercitazione registrata al momento.</p>
+        {{- end }}
+      </section>
+
+      {{/* ─── Conformità ─── */}}
+      <section class="stato-panel" aria-labelledby="stato-conf-h">
+        <h2 id="stato-conf-h" class="stato-panel-title"><i class="bi bi-patch-check me-2" aria-hidden="true"></i>Conformità</h2>
+        <ul class="stato-workflow-list">
+          <li class="stato-workflow-item">
+            <span class="stato-badge stato-success">Conforme</span>
+            <span class="stato-workflow-testo"><strong>Accessibilità WCAG 2.2 AA</strong><span class="stato-workflow-desc">Il sito è progettato secondo le Linee guida AGID e le WCAG 2.2 livello AA, con verifiche periodiche.</span></span>
+          </li>
+          <li class="stato-workflow-item">
+            <span class="stato-badge stato-success">Conforme</span>
+            <span class="stato-workflow-testo"><strong>Linee guida AGID / Designers Italia</strong><span class="stato-workflow-desc">Tema Bootstrap Italia, linguaggio chiaro, struttura conforme ai siti della Pubblica Amministrazione.</span></span>
+          </li>
+        </ul>
+        <p class="stato-panel-link"><a href="{{ "accessibilita/" | relURL }}">Leggi la dichiarazione di accessibilità</a></p>
+      </section>
+
+    </div>
+  </div>
+</div>
+{{ end }}

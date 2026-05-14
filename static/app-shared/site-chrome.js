@@ -148,6 +148,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/trasparenza/" role="menuitem"><span>Trasparenza</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/podcast/" role="menuitem"><span>Podcast</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/mappa-sito/" role="menuitem"><span>Mappa del Sito</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/stato-sistema/" role="menuitem"><span>Stato del Sito</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/comunicazioni/" role="menuitem"><span>Comunicazioni</span></a></li>' +
