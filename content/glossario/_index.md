@@ -12,9 +12,12 @@ dataUltimaRevisione: "2026-05-06"
 
 Le sigle della protezione civile possono sembrare difficili. Questo glossario le spiega in modo semplice, con esempi collegati al territorio quando utile.
 
+<div id="glossario-strumenti" class="glossario-strumenti"></div>
+<noscript>
 <div class="alert alert-info" role="note">
 <p class="mb-0"><i class="bi bi-search me-2" aria-hidden="true"></i><strong>Suggerimento:</strong> usa la ricerca del browser: <kbd>Ctrl+F</kbd> su Windows e Linux, <kbd>Cmd+F</kbd> su Mac.</p>
 </div>
+</noscript>
 
 Se cerchi un termine che non trovi, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
