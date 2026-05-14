@@ -401,10 +401,20 @@ Vai a **Parte 5** e spunta ogni voce. Se qualcosa non è a posto, torna indietro
 
 > 🤖 **Se stai lavorando con Claude Code (CLI desktop, app mobile, sessione cloud, agent GitHub):** prima del `git add` Claude **deve obbligatoriamente** invocare l'agent `pc-article-reviewer` sul file appena scritto. Il gate è codificato in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"* e in `.claude/rules/02-content-design-pa.md` § *"Auto-gate AGID prima del commit"*. Solo dopo il via libera dell'agent (o dopo l'applicazione dei suoi fix) si procede al commit. Il gate vale anche per un singolo articolo. Eccezione: se chiedi esplicitamente un **registro non-AGID** (comunicato stampa, lettera istituzionale, paper scientifico, qualsiasi altro genere a tua richiesta esplicita), il gate è sospeso per quel documento — vedi **Parte 12** per i comunicati stampa.
 
+### Passo 1.13-bis — Genera il QR code dell'articolo
+
+Ogni articolo ha un **QR code** scaricabile e stampabile (bottone "Scarica QR" accanto a "Stampa"), utile per le affissioni in bacheca, sedi e info-point. Dopo aver creato il file dell'articolo, genera il QR con:
+
+```bash
+python3 scripts/genera-qr-articoli.py
+```
+
+Lo script è **idempotente**: genera solo i QR mancanti, salta quelli già presenti. Produce `static/qr/<nome-file>.png` e `.svg`. Se è la prima volta, installa la dipendenza con `pip install --break-system-packages segno`. I file `static/qr/` vanno aggiunti al commit (Passo 1.14). Se salti questo passo l'articolo si pubblica lo stesso: semplicemente il bottone "Scarica QR" non appare finché il QR non viene generato (il partial si auto-nasconde).
+
 ### Passo 1.14 — Commit e push
 
 ```bash
-git add content/comunicazioni/2026-05-15-tuo-articolo.md static/images/2026-05-15-tua-immagine.webp
+git add content/comunicazioni/2026-05-15-tuo-articolo.md static/images/2026-05-15-tua-immagine.webp static/qr/2026-05-15-tuo-articolo.png static/qr/2026-05-15-tuo-articolo.svg
 git commit -m "Articolo: titolo breve dell'articolo"
 git push origin main
 ```

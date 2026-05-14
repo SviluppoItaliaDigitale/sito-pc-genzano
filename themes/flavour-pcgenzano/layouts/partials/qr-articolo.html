@@ -1,0 +1,182 @@
+{{/*
+  qr-articolo.html — Partial che mostra un bottone "Scarica QR" e un dialog modale
+  con il QR code dell'articolo corrente, pronto da scaricare o stampare.
+
+  Si aspetta i file generati da scripts/genera-qr-articoli.py in:
+    static/qr/<basename>.png
+    static/qr/<basename>.svg
+
+  Uso (da chiamare dentro page-tools.html o single.html):
+    {{ partial "qr-articolo.html" . }}
+
+  Auto-protettivo:
+    - guardia `{{ if .File }}`: pagine generate senza file sorgente non rompono il build
+    - guardia `fileExists`: se il QR non è stato generato, non renderizza nulla
+
+  Accessibilità:
+    - usa <dialog> HTML5 nativo (focus trap + Esc + backdrop accessibili)
+    - bottoni con aria-label espliciti
+    - QR ha alt text che include l'URL leggibile
+    - contrasto WCAG 2.2 AA garantito (#003366 su #FFFFFF = 12.6:1)
+
+  Stampa:
+    - la classe .pcg-qr-print sul dialog + l'override @media print (sezione
+      "QR ARTICOLO v1.0" in custom.css) mostra in stampa solo il QR + titolo + URL
+
+  Compatibilità subpath: i percorsi degli asset passano per `relURL` così
+  funzionano sia su Aruba (root) sia su GitHub Pages (subpath /sito-pc-genzano/).
+*/}}
+{{- if .File -}}
+{{- $base := .File.BaseFileName -}}
+{{- $qrPng := printf "static/qr/%s.png" $base -}}
+{{- $qrSvg := printf "static/qr/%s.svg" $base -}}
+{{- $hasQr := or (fileExists $qrPng) (fileExists $qrSvg) -}}
+
+{{- if $hasQr -}}
+{{- $dialogId := printf "pcg-qr-dialog-%s" $base -}}
+{{- $urlArticolo := .Permalink -}}
+{{- $pngURL := (printf "qr/%s.png" $base) | relURL -}}
+{{- $svgURL := (printf "qr/%s.svg" $base) | relURL -}}
+
+<button
+  type="button"
+  class="btn btn-outline-secondary btn-sm pcg-qr-trigger"
+  data-pcg-qr-target="{{ $dialogId }}"
+  aria-haspopup="dialog"
+  aria-label="Apri il QR code di questo articolo, per stamparlo o condividerlo">
+  <i class="bi bi-qr-code me-1" aria-hidden="true"></i>
+  <span>Scarica QR</span>
+</button>
+
+<dialog
+  id="{{ $dialogId }}"
+  class="pcg-qr-dialog"
+  aria-labelledby="{{ $dialogId }}-title"
+  aria-describedby="{{ $dialogId }}-desc">
+  <div class="pcg-qr-print">
+    <header class="pcg-qr-header">
+      <h2 id="{{ $dialogId }}-title" class="pcg-qr-title">QR code dell'articolo</h2>
+      <button
+        type="button"
+        class="pcg-qr-close"
+        data-pcg-qr-close
+        aria-label="Chiudi finestra QR">
+        &times;
+      </button>
+    </header>
+
+    <p id="{{ $dialogId }}-desc" class="pcg-qr-desc">
+      Inquadra questo QR con la fotocamera per aprire l'articolo
+      <strong>{{ .Title }}</strong> sul sito istituzionale.
+    </p>
+
+    <figure class="pcg-qr-figure">
+      {{- if fileExists $qrPng -}}
+        <img
+          src="{{ $pngURL }}"
+          alt="QR code che apre {{ $urlArticolo }}"
+          class="pcg-qr-img"
+          width="600"
+          height="600"
+          loading="lazy">
+      {{- else -}}
+        <img
+          src="{{ $svgURL }}"
+          alt="QR code che apre {{ $urlArticolo }}"
+          class="pcg-qr-img"
+          width="600"
+          height="600"
+          loading="lazy">
+      {{- end -}}
+      <figcaption class="pcg-qr-url">
+        <span class="pcg-qr-url-label">Indirizzo web:</span>
+        <code>{{ $urlArticolo }}</code>
+      </figcaption>
+    </figure>
+
+    <footer class="pcg-qr-footer no-print">
+      {{- if fileExists $qrPng -}}
+        <a
+          href="{{ $pngURL }}"
+          download="qr-{{ $base }}.png"
+          class="btn btn-primary btn-sm"
+          aria-label="Scarica il QR in formato PNG (immagine raster)">
+          Scarica PNG
+        </a>
+      {{- end -}}
+      {{- if fileExists $qrSvg -}}
+        <a
+          href="{{ $svgURL }}"
+          download="qr-{{ $base }}.svg"
+          class="btn btn-outline-primary btn-sm"
+          aria-label="Scarica il QR in formato SVG (vettoriale, per stampa grande)">
+          Scarica SVG
+        </a>
+      {{- end -}}
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-sm"
+        data-pcg-qr-print
+        aria-label="Stampa il QR code">
+        Stampa QR
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary btn-sm"
+        data-pcg-qr-close>
+        Chiudi
+      </button>
+    </footer>
+
+    <p class="pcg-qr-credits no-print">
+      Protezione Civile Genzano di Roma — Gruppo Comunale Volontari.
+      Utile per affissioni in bacheche, sedi, info-point.
+    </p>
+  </div>
+</dialog>
+
+<script>
+  (function () {
+    "use strict";
+
+    var trigger = document.querySelector(
+      '[data-pcg-qr-target="{{ $dialogId }}"]'
+    );
+    var dialog = document.getElementById("{{ $dialogId }}");
+    if (!trigger || !dialog) return;
+
+    // Apertura: showModal() nativo, focus automatico al primo bottone, Esc chiude
+    trigger.addEventListener("click", function () {
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        // Fallback browser molto vecchi (pre-2022): apertura statica
+        dialog.setAttribute("open", "");
+      }
+    });
+
+    // Chiusura via bottoni dedicati
+    dialog.querySelectorAll("[data-pcg-qr-close]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        dialog.close();
+      });
+    });
+
+    // Click sul backdrop (fuori dal contenuto) chiude
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) {
+        dialog.close();
+      }
+    });
+
+    // Stampa: il CSS @media print nasconde il resto e mostra solo .pcg-qr-print
+    var printBtn = dialog.querySelector("[data-pcg-qr-print]");
+    if (printBtn) {
+      printBtn.addEventListener("click", function () {
+        window.print();
+      });
+    }
+  })();
+</script>
+{{- end -}}
+{{- end -}}
