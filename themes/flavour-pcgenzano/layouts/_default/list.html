@@ -40,6 +40,7 @@
         </span>
       </div>
       {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".list-intro-content") }}
+      {{ partial "lis-badge.html" . }}
       <div class="list-intro-content">{{ .Content }}</div>
       {{ partial "glossario-inline.html" . }}
       {{ else }}

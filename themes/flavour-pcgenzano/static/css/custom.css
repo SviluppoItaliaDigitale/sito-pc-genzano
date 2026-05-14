@@ -5104,3 +5104,168 @@ html.a11y-pause-anim .pcg-timeline-voce {
  * fine TIMELINE STORICA v1.0
  * ==========================================================================
  */
+
+/* ==========================================================================
+ * LIS v1.0 — badge "Disponibile in LIS" + finestra video/trascrizione
+ * Partial: partials/lis-badge.html — Indice: layouts/lis/list.html
+ * Dati: data/lis.yaml. Idea #10 roadmap.
+ * ==========================================================================
+ */
+
+.lis-badge-wrap { margin: 0.75rem 0; }
+
+.lis-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #003366;
+  border: 2px solid #003366;
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem 0.3rem 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lis-badge:hover,
+.lis-badge:focus-visible {
+  background: #003366;
+  color: #ffffff;
+}
+
+.lis-badge:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+
+.lis-badge-ico {
+  background: #003366;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.4rem;
+  border-radius: 999px;
+}
+
+.lis-badge:hover .lis-badge-ico,
+.lis-badge:focus-visible .lis-badge-ico {
+  background: #ffffff;
+  color: #003366;
+}
+
+.lis-dialog {
+  border: 0;
+  border-radius: 12px;
+  padding: 0;
+  max-width: min(94vw, 640px);
+  width: 100%;
+  background: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 24px 48px rgba(0, 51, 102, 0.28);
+}
+
+.lis-dialog::backdrop { background: rgba(0, 51, 102, 0.55); }
+.lis-dialog:not([open]) { display: none; }
+.lis-dialog-box { padding: 1.25rem 1.4rem; }
+
+.lis-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.lis-dialog-title { font-size: 1.2rem; font-weight: 700; color: #003366; margin: 0; }
+
+.lis-dialog-close {
+  background: transparent;
+  border: 0;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #003366;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  border-radius: 4px;
+}
+.lis-dialog-close:hover,
+.lis-dialog-close:focus-visible { background: #003366; color: #ffffff; }
+
+.lis-dialog-desc { margin: 0 0 0.85rem; color: #333333; }
+
+.lis-video { width: 100%; border-radius: 8px; background: #000000; }
+
+.lis-dialog-attesa {
+  background: #f4f7fb;
+  border-left: 4px solid #003366;
+  border-radius: 0 8px 8px 0;
+  padding: 0.75rem 1rem;
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+}
+
+.lis-trascrizione { margin: 0.85rem 0; }
+.lis-trascrizione summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #003366;
+  padding: 0.4rem 0;
+}
+.lis-trascrizione summary:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.lis-trascrizione-testo { padding: 0.5rem 0 0; }
+
+.lis-dialog-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-top: 1px solid #e6e9ef;
+  padding-top: 0.7rem;
+  margin-top: 0.5rem;
+}
+.lis-dialog-link { font-size: 0.9rem; font-weight: 600; color: #003366; }
+.lis-dialog-btn {
+  background: #003366;
+  color: #ffffff;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.35rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Indice /lis/ */
+.lis-elenco { margin: 1rem 0 0; padding: 0; }
+.lis-elenco-voce {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  border: 1px solid #d0d7e2;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 0.75rem;
+}
+.lis-elenco-stato {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
+}
+.lis-pronto { background: #15803d; color: #ffffff; }
+.lis-attesa { background: #b45309; color: #ffffff; }
+.lis-elenco-titolo { font-size: 1.05rem; font-weight: 700; color: #1a1a1a; margin: 0 0 0.2rem; }
+.lis-elenco-desc { margin: 0 0 0.2rem; color: #333333; }
+.lis-elenco-meta { font-size: 0.85rem; color: #5b6770; margin: 0; }
+
+@media print {
+  .lis-badge-wrap { display: none; }
+  .lis-dialog { display: none !important; }
+}
+/* ==========================================================================
+ * fine LIS v1.0
+ * ==========================================================================
+ */

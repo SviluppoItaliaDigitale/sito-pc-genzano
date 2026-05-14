@@ -393,6 +393,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Modalità Lanterna</p>
   <p class="ms-card-desc">Pagina ultra-leggera di sopravvivenza: torcia, bussola, schermo sempre acceso, 112 sempre in alto. Per poca batteria, rete debole, di notte.</p>
 </a>
+<a class="ms-card ms-edu" href="/lis/">
+  <div class="ms-card-icon"><i class="bi bi-hand-index-thumb"></i></div>
+  <p class="ms-card-title">Contenuti in LIS</p>
+  <p class="ms-card-desc">I contenuti vitali sulla sicurezza in Lingua Italiana dei Segni, per le persone sorde segnanti. Video con sottotitoli e trascrizione completa.</p>
+</a>
 <a class="ms-card ms-edu" href="/podcast/">
   <div class="ms-card-icon"><i class="bi bi-mic-fill"></i></div>
   <p class="ms-card-title">Podcast</p>

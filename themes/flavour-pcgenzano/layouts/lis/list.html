@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{- $video := .Site.Data.lis.video -}}
+<div class="page-hero">
+  <div class="container">
+    {{ partial "breadcrumb.html" . }}
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+<div class="container py-4">
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+
+      <div class="list-intro-content mb-4">
+        {{ .Content }}
+      </div>
+
+      {{- with $video }}
+      <ul class="lis-elenco list-unstyled">
+        {{- range $id, $v := . }}
+        {{- $haVideo := and $v.video_url (ne $v.video_url "") -}}
+        <li class="lis-elenco-voce">
+          <span class="lis-elenco-stato {{ if $haVideo }}lis-pronto{{ else }}lis-attesa{{ end }}">
+            {{ if $haVideo }}Disponibile{{ else }}In preparazione{{ end }}
+          </span>
+          <div class="lis-elenco-testo">
+            <h2 class="lis-elenco-titolo">{{ $v.titolo }}</h2>
+            {{- with $v.descrizione }}<p class="lis-elenco-desc">{{ . }}</p>{{ end }}
+            {{- with $v.durata }}<p class="lis-elenco-meta">Durata: {{ . }}</p>{{ end }}
+          </div>
+        </li>
+        {{- end }}
+      </ul>
+      {{- else }}
+      <p class="text-muted">Nessun video LIS ancora registrato.</p>
+      {{- end }}
+
+      <div class="alert alert-light mt-4" role="note">
+        <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>I video sono prodotti con interpreti LIS qualificati in collaborazione con l'<strong>ENS — Ente Nazionale Sordi</strong>. Ogni video ha sottotitoli e trascrizione testuale completa. Per segnalare un contenuto da tradurre in LIS scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+{{ end }}

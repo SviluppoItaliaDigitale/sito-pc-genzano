@@ -3,6 +3,7 @@ title: "Cosa fare adesso"
 description: "Azioni immediate in caso di emergenza a Genzano di Roma: chi chiamare, cosa fare e quali informazioni consultare."
 tts: true
 layout: "single"
+lis_video: "cosa-fare-emergenza"
 aliases:
   - /cosa-fare/
 sitemap:
