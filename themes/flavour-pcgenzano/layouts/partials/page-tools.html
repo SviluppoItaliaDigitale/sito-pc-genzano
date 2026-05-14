@@ -28,7 +28,7 @@
 {{- $urlX        := printf "https://x.com/intent/post?text=%s&url=%s" $titleEnc $urlEnc -}}
 {{- $urlLinkedIn := printf "https://www.linkedin.com/sharing/share-offsite/?url=%s&title=%s&summary=%s&source=%s" $urlEnc $titleEnc $descEnc $sourceEnc -}}
 {{- $urlEmail    := printf "mailto:?subject=%s&body=%s" $titleEnc $bodyEmail -}}
-<div class="page-tools mt-4 pt-3 border-top">
+<div class="page-tools mt-4 pt-3 border-top" data-pagefind-ignore>
   <div class="d-flex flex-wrap justify-content-between align-items-center">
     <div class="small text-muted">
       {{ if and (not .Params.dataUltimaRevisione) .Date (not (eq (.Date.Format "2006") "0001")) }}
