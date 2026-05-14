@@ -138,6 +138,26 @@ Sessione di consolidamento del 6 maggio 2026 con esiti strutturali sul sito.
 
 Specifiche complete in [`manuale/parte-21-aggiornamenti-contenuti-didattici-prevenzione.md`](manuale/parte-21-aggiornamenti-contenuti-didattici-prevenzione.md).
 
+### Iniziative roadmap (maggio 2026)
+
+Blocco di 13 iniziative dalla roadmap di evoluzione del sito (libreria prompt in `riferimenti-interni/PROMPT-ROADMAP-PC-GENZANO.md`):
+
+- **#24 Ricerca Pagefind** — ricerca full-text con modal `Ctrl+K`; indice `static/pagefind/` rigenerato da `scripts/genera-indice-ricerca.sh`.
+- **#21 Glossario interattivo** — filtri alfabetici + ricerca live sulla pagina `/glossario/`.
+- **#25 Stato del sistema** — pagina `/stato-sistema/`, cruscotto di trasparenza tecnica con semaforo, alimentato da `aggiorna-stato-sistema.yml`.
+- **#22 Podcast** — `/podcast/` con episodi MP3 + feed RSS iTunes; la vecchia pagina TTS si è spostata su `/articoli-da-ascoltare/`.
+- **#8 Storia del territorio** — timeline `/storia/` dei Castelli Romani, voci con fonte istituzionale (`data/eventi_storici.yaml`).
+- **#5 Assistente vocale** — input vocale (`SpeechRecognition`) nell'`/assistente/`.
+- **#4 Modalità Lanterna** — `/lanterna/`, pagina standalone ultra-leggera (torcia, bussola, Wake Lock, 112 sticky).
+- **#10 Contenuti LIS** — `/lis/` + badge "Disponibile in LIS" su pagine con `lis_video:` nel frontmatter (`data/lis.yaml`).
+- **#2 Notifiche allerta browser** — opt-in su `/allerte-meteo/`, polling dell'endpoint JSON `/allerta-stato/`, senza Service Worker.
+- **#7 Quiz "Quanto sei preparato?"** — `/quiz-preparazione/`, quiz adattivo con badge PNG e stampa.
+- **#11 Hub "Arena PC Genzano"** — `/giochi/` ridisegnato come launcher (skin Arena/Classica, badge progressi, "continua").
+- **#6 QR articoli** + **Open Data** reinserita (`/open-data/`).
+- Più: agent `pc-site-auditor`, workflow `backup-documenti-aruba.yml`, fix pipeline Telegram allerta.
+
+Architettura di dettaglio nella tabella "Architettura — riferimenti rapidi" di [`CLAUDE.md`](CLAUDE.md) e nelle rules `.claude/rules/04a` / `04b`. Riepilogo operativo in [`manuale/parte-29-iniziative-roadmap.md`](manuale/parte-29-iniziative-roadmap.md).
+
 ### File in `archetypes/` (template Hugo)
 
 | File | A cosa serve |

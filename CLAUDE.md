@@ -234,14 +234,26 @@ bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
 | Cosa | Dove |
 |---|---|
 | Homepage dual-mode (normale / emergenza) | `themes/flavour-pcgenzano/layouts/index.html` + `data/emergenza.json`. Dettagli in `04-hugo-architecture.md` § "Homepage dual-mode" |
-| Data files (`emergenza.json`, `allerta.json`, `risk_cards.yaml`, `numeri_utili.yaml`, `quick_links.yaml`, `social_links.yaml`, `codici_colore.yaml`) | `data/` — vedi `04-hugo-architecture.md` § "Contenuti dinamici via data files" |
+| Data files (`emergenza.json`, `allerta.json`, `risk_cards.yaml`, `numeri_utili.yaml`, `quick_links.yaml`, `social_links.yaml`, `codici_colore.yaml`, `glossario.yaml`, `aree_emergenza.yaml`, `dae.yaml`, `idranti.yaml`, `stato-sistema.json`, `eventi_storici.yaml`, `lis.yaml`) | `data/` — vedi `04-hugo-architecture.md` § "Contenuti dinamici via data files" |
 | Articoli `comunicazioni/` (frontmatter, badge, palette categorie, formato data) | `02-content-design-pa.md` |
 | Badge categorie articoli (dichiarati in `themes/flavour-pcgenzano/layouts/partials/badge.html`): **Allerta · Avviso · Comunicazione · Attività · Formazione · Evento · Volontariato · Radiocomunicazioni · Prevenzione · Esercitazione · Aggiornamento · Informazione · Emergenza** — palette completa con hex e contrasto WCAG in `02-content-design-pa.md` § "Frontmatter obbligatorio" | `02-content-design-pa.md` |
 | Tema custom `flavour-pcgenzano` (layouts, partials, shortcodes, render hook, CSS custom) | `04a-hugo-shortcode-partial.md` + `04b-hugo-template-css.md` |
 | Shortcode disponibili: `foto`, `pittogramma`, `cosa-non-fare`, `chi-chiamare`, `pagina-emergenza-lite` | `04a-hugo-shortcode-partial.md` |
 | Render hook Markdown: `render-link.html`, `render-table.html` | `04a-hugo-shortcode-partial.md` |
-| Partial: `article-cover`, `leggi-ad-alta-voce` (TTS), `accessibility-toolbar`, `assistente-fab` (bottone Aiuto), `structured-data` (JSON-LD), `meta-social` (Open Graph), `articolo-navigazione`, `articoli-correlati`, `page-tools`, `sos-112` | `04a-hugo-shortcode-partial.md` + `04b-hugo-template-css.md` (assistente-fab) |
+| Partial: `article-cover`, `leggi-ad-alta-voce` (TTS), `accessibility-toolbar`, `assistente-fab` (bottone Aiuto), `structured-data` (JSON-LD), `meta-social` (Open Graph), `articolo-navigazione`, `articoli-correlati`, `page-tools`, `sos-112`, `qr-articolo` (QR + modal), `ricerca-modal` (Pagefind Ctrl+K), `lis-badge` (badge LIS + finestra video) | `04a-hugo-shortcode-partial.md` + `04b-hugo-template-css.md` (assistente-fab) |
 | Menu navbar mega-menu, TOC pagine lunghe, tipografia `.article-body` v7.2, regole stampa, toolbar a11y, bozze social Gemini, pagina 404, homepage enhancements v1.0 | `04b-hugo-template-css.md` |
+| Ricerca full-text Pagefind (`/cerca/` + modal Ctrl+K, indice `static/pagefind/` da `scripts/genera-indice-ricerca.sh`) | `partials/ricerca-modal.html`, `layouts/cerca/list.html`, `custom.css` § RICERCA PAGEFIND v1.0 — idea #24 |
+| QR code per articolo (bottone in `page-tools`, `static/qr/` da `scripts/genera-qr-articoli.py`) | `partials/qr-articolo.html`, `custom.css` § QR ARTICOLO v1.0 — idea #6 |
+| Pagina `/stato-sistema/` (cruscotto trasparenza tecnica: allerta, modalità sito, automazioni con semaforo, conformità) | `layouts/stato-sistema/list.html` + `data/stato-sistema.json` (aggiornato da `aggiorna-stato-sistema.yml`) — idea #25 |
+| Pagina `/podcast/` (podcast con episodi MP3 + feed RSS iTunes) e `/articoli-da-ascoltare/` (ex `/podcast/`, articoli TTS) | `layouts/podcast/{list,single,rss.xml}` + `archetypes/podcast.md`; `layouts/articoli-da-ascoltare/list.html` — idea #22 |
+| Timeline storica `/storia/` (linea del tempo dei Castelli Romani, voci con fonte) | `layouts/storia/list.html` + `data/eventi_storici.yaml` — idea #8 |
+| Assistente vocale: input `SpeechRecognition` nell'`/assistente/` (domanda a voce → ricerca → risposta TTS) | `layouts/assistente/list.html` — idea #5 |
+| Modalità Lanterna `/lanterna/` (pagina standalone ~7 KB: torcia, bussola, Wake Lock, 112 sticky) | `layouts/lanterna/list.html` (NON usa baseof) — idea #4 |
+| Contenuti LIS `/lis/` (badge "Disponibile in LIS" + finestra video/trascrizione) | `layouts/lis/list.html`, `partials/lis-badge.html`, `data/lis.yaml`; frontmatter `lis_video:` — idea #10 |
+| Notifiche allerta browser (opt-in su `/allerte-meteo/`, polling endpoint JSON, no Service Worker) | `static/js/notifiche-allerta.js`, `content/allerta-stato/` (output solo JSON) — idea #2 |
+| Quiz `/quiz-preparazione/` ("Quanto sei preparato?", adattivo, badge PNG + stampa) | `layouts/quiz-preparazione/list.html` + `static/js/quiz-preparazione.js` — idea #7 |
+| Hub `/giochi/` "Arena PC Genzano" (launcher giochi: skin Arena/Classica, badge progressi, continua) | `static/giochi/index.html` + `static/giochi/assets/{css/arena.css,js/arena.js}` — idea #11 |
+| Pagina `/open-data/` (dataset aperti delle attività del Gruppo, CSV/JSON CC BY 4.0) | `content/open-data/_index.md`, voce nel dropdown Risorse |
 | Cartelle `static/` canoniche e cartella `riferimenti-interni/` non deployata | `04c-hugo-static-cartelle.md` |
 | Assistente guidato `/assistente/` (albero decisionale JS) | `04a-hugo-shortcode-partial.md` § "Assistente guidato" |
 | Hub `/standard-iso/` (30 schede ISO + 10 news divulgative calendarizzate, voce sotto Risorse) | sezione `content/standard-iso/` — vedi punto 18 sotto |
