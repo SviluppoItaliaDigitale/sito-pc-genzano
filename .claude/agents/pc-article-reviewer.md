@@ -54,7 +54,7 @@ Distinzione critica `Allerta` vs `Emergenza` (regola `06-protezione-civile-scien
 - Frasi brevi (max ~20 parole), voce attiva, niente burocratese.
 - Numeri telefono in formato leggibile (es. `06 1234 5678`).
 - NUE 112 è l'unico numero emergenza nel Lazio. MAI 115/118/1515 come "numero da chiamare al cittadino" (vedi `feedback_numero_emergenza_lazio.md`).
-- COI: il Gruppo aderisce al **14° C.O.I.** della Provincia di Roma (NON 15°).
+- COI: il Gruppo aderisce al **14° COI** della Provincia di Roma (NON 15°).
 - Niente nomi di persone non pertinenti / enti locali estranei (es. Biella, Imbersago) — se serve la fonte, va come link in fondo.
 
 ### 6. Link interni

@@ -1,6 +1,6 @@
 ---
 title: "Come dovrebbe funzionare un sistema di allerta pubblica: ISO 22322 e IT-alert"
-date: 2026-05-15
+date: 2026-05-15T00:02:00+02:00
 description: "Il sistema italiano IT-alert è coerente con uno standard internazionale che dice come si progetta un'allerta pubblica davvero efficace."
 badge: "Formazione"
 priorita: "normale"

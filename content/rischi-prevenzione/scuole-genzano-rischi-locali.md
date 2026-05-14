@@ -97,7 +97,6 @@ Per le famiglie è utile anche il [Kit di emergenza: casa, evacuazione e auto](/
 Il sito mette a disposizione schede A4 per aiutare bambini, famiglie e operatori a parlare di emergenza in modo semplice e non traumatico:
 
 - [Kit Calamità per Bambini](/formazione/kit-calamita-bambini/);
-- [Kit Calamità per Adolescenti](/formazione/kit-calamita-adolescenti/);
 - [Kit Calamità — raccolta completa](/formazione/kit-calamita/);
 - [Piano di emergenza familiare](/piano-familiare/).
 

@@ -9,7 +9,7 @@ basati sull'ordine reale di prima pubblicazione (git first commit timestamp).
 Risolve il bug di ordering instabile dell'archivio /comunicazioni/: con due
 articoli a `date: 2026-04-30` Hugo li ordina alfabeticamente per filename,
 non per ordine di pubblicazione. Aggiungendo orario crescente nello stesso
-giorno (08:00, 14:00, 18:00 a seconda del numero), Hugo ordina Date desc
+giorno (00:01, 00:02, ... a seconda del numero), Hugo ordina Date desc
 correttamente e l'ultimo scritto finisce in cima.
 
 Articoli singoli giornalieri restano `date: AAAA-MM-GG` (no modifica).

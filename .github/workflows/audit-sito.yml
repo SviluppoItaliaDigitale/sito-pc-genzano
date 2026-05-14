@@ -50,7 +50,7 @@ jobs:
       - name: "🔧 Setup Hugo"
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "latest"
+          hugo-version: "0.143.1"
           extended: true
 
       - name: "🏗️ Build sito (per smoke test rendering)"
@@ -91,7 +91,7 @@ jobs:
 
           # ----------------------------------------------------------------
           section "1. Coerenza COI (Centro Operativo Intercomunale)"
-          # Il gruppo aderisce al 14° C.O.I. della Provincia di Roma.
+          # Il gruppo aderisce al 14° COI della Provincia di Roma.
           # Qualsiasi altro grado citato nei contenuti pubblici è un errore storico.
           BAD_COI=$(grep -rInE '\b(1[0-35-9]|20|21|22)°[[:space:]]*C\.?O\.?I\.?\b' \
             "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" hugo.toml data/ 2>/dev/null || true)

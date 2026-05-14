@@ -1,6 +1,6 @@
 ---
 title: "Quando l'emergenza diventa crisi: lo standard ISO 22361"
-date: 2026-05-22
+date: 2026-05-22T00:02:00+02:00
 description: "Emergenza e crisi non sono sinonimi. Lo standard ISO 22361 aiuta a capire quando servono decisioni straordinarie, ruoli chiari e comunicazione coordinata."
 badge: "Formazione"
 priorita: "normale"

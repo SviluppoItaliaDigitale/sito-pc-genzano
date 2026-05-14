@@ -187,7 +187,7 @@ Su ogni articolo è disponibile un bottone **Scarica versione braille**. Apre un
 
 Il file è generato automaticamente per ogni articolo pubblicato. La traduzione usa la tabella **braille italiano standard a 6 punti** (uncontracted, lettera per lettera). Il file è scaricabile gratuitamente, senza account.
 
-La generazione è automatica con la libreria open source **liblouis** (raccomandata da W3C-WAI), nessun servizio esterno coinvolto. Specifiche tecniche complete sul nostro [manuale tecnico interno](/manuali/) (Parte 24).
+La generazione è automatica con la libreria open source **liblouis** (raccomandata da W3C-WAI), nessun servizio esterno coinvolto.
 
 ### 3. PDF — Scarica trascrizione
 

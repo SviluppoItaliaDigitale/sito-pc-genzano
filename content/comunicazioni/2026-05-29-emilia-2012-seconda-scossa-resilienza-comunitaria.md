@@ -1,6 +1,6 @@
 ---
 title: "29 maggio 2012: la seconda scossa in Emilia e la resilienza comunitaria"
-date: 2026-05-29
+date: 2026-05-29T00:01:00+02:00
 description: "A 14 anni dalla seconda scossa in Emilia (29 maggio 2012): cosa significa resilienza comunitaria nelle emergenze sismiche prolungate."
 badge: "Informazione"
 priorita: "normale"

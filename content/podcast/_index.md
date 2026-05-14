@@ -14,6 +14,6 @@ Tutti gli articoli pubblicati sul sito possono essere **ascoltati ad alta voce**
 
 **Trascrizione PDF.** Su ogni articolo è disponibile un bottone **"Scarica trascrizione PDF"** che apre la finestra di stampa del browser: scegli "Salva come PDF" per avere il testo dell'articolo su carta digitale, formato A4, senza il chrome del sito.
 
-**Versione Braille (BRF).** Ogni articolo ha anche una versione [Braille Ready Format](/manuali/) scaricabile, compatibile con display braille e stampanti braille (Index, ViewPlus). Pensata per ciechi e ipovedenti che usano lettori tattili.
+**Versione Braille (BRF).** Ogni articolo ha anche una versione Braille Ready Format scaricabile, compatibile con display braille e stampanti braille (Index, ViewPlus). Pensata per ciechi e ipovedenti che usano lettori tattili.
 
 Sotto trovi l'elenco completo degli articoli ascoltabili, con la **durata stimata** di lettura ad alta voce.

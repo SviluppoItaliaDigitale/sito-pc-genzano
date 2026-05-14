@@ -1,6 +1,6 @@
 ---
 title: "Cos'è davvero un rischio? ISO 31000 spiegato a chi non è tecnico"
-date: 2026-06-02
+date: 2026-06-02T00:02:00+02:00
 description: "Rischio non è la stessa cosa di pericolo. Lo standard ISO 31000 è la cornice internazionale per capire come si valuta."
 badge: "Formazione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Quando il clima cambia, cambia anche la PC: ISO 14090 e l'adattamento"
-date: 2026-06-12
+date: 2026-06-12T00:02:00+02:00
 description: "Ondate di calore, siccità, eventi meteo estremi: il cambiamento climatico modifica i rischi della Protezione Civile."
 badge: "Formazione"
 priorita: "normale"

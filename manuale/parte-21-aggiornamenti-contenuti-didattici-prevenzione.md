@@ -114,13 +114,13 @@ Quando vengono aggiunte nuove pagine informative importanti, aggiornare anche la
 
 Il file tecnico `sitemap.xml` è generato automaticamente da Hugo e non deve essere modificato a mano.
 
-## Regola C.O.I.
+## Regola COI
 
 Il riferimento corretto indicato dall'utente è:
 
-**14° C.O.I.**
+**14° COI**
 
-Non usare “15° C.O.I.” nei testi pubblici, nei manuali o nelle regole di governance.
+Non usare “15° COI” nei testi pubblici, nei manuali o nelle regole di governance.
 
 ## Regola generale sulle fonti
 
@@ -139,7 +139,7 @@ Audit strutturale completo del sito (le 7 Fasi del modello di lavoro). Esiti pri
 
 ### Fix di drift documentale e fact errors
 
-- **C.O.I. 14°** allineato in 4 file che avevano l'asserzione invertita (`README.md`, `audit-sito.yml`, `pc-article-reviewer`, `pc-deploy-validator`).
+- **COI 14°** allineato in 4 file che avevano l'asserzione invertita (`README.md`, `audit-sito.yml`, `pc-article-reviewer`, `pc-deploy-validator`).
 - **Bandiera SPQR di Reggio Emilia** rimossa dall'articolo 1996: era spacciata come "foto storica del terremoto del 15 ottobre 1996". Pubblicata prima che il filtro anti-bandiere fosse aggiunto a `foto-da-wikipedia.sh`.
 - **Caption ShakeMap INGV** corrette in 5 articoli (Emilia 2012 + Amatrice 2016): la stessa foto md5-identica era usata in più articoli con caption diverse che dichiaravano "capannone industriale crollato a Mirandola" o "Amatrice in macerie", mentre la foto è una mappa di intensità macrosismica INGV.
 - **Duplicato editoriale 24 agosto** sul decimo anniversario di Amatrice 2016: due articoli con stessa data, stesso evento, badge diversi. Tenuto `2026-08-24-amatrice-2016-centro-italia-decimo-anniversario.md` (Comunicazione, taglio narrativo cronologico). Aliases nel file mantenuto preserva l'URL del file rimosso per SEO.
