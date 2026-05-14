@@ -196,13 +196,13 @@ enableGitInfo = true
   name = "Facile da Leggere"
   url = "/facile-da-leggere/"
   parent = "accessibilita-supporti"
+  weight = 2
 
 [[menus.main]]
   name = "Contenuti in LIS"
   url = "/lis/"
   parent = "accessibilita-supporti"
-  weight = 50
-  weight = 2
+  weight = 3
 
 # --- Dropdown: Volontariato ---
 [[menus.main]]
