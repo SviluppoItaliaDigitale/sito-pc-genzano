@@ -36,9 +36,14 @@
       Ultimo aggiornamento: <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod | time.Format ":date_long" }}</time>
       {{ end }}
     </div>
-    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.print()" aria-label="Stampa questa pagina">
-      <i class="bi bi-printer me-1" aria-hidden="true"></i> Stampa
-    </button>
+    <div class="d-flex flex-wrap gap-2">
+      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.print()" aria-label="Stampa questa pagina">
+        <i class="bi bi-printer me-1" aria-hidden="true"></i> Stampa
+      </button>
+      {{/* QR code dell'articolo: si auto-nasconde se il QR non è stato
+           generato (guardia fileExists nel partial). Solo /comunicazioni/. */}}
+      {{ partial "qr-articolo.html" . }}
+    </div>
   </div>
 
   <div class="page-tools-share mt-3" role="group" aria-label="Condividi questa pagina">
