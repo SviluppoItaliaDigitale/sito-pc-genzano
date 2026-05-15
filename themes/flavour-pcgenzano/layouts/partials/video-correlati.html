@@ -1,0 +1,65 @@
+{{/*
+  video-correlati.html — Sezione "Approfondimenti video" in fondo agli
+  articoli/pagine del sito. Renderizza i video DPC/AaP pertinenti calcolati
+  da scripts/genera-video-correlati.py e salvati in data/video_correlati.yaml.
+
+  Auto-protettivo: rende qualcosa SOLO se la pagina corrente ha un'entry in
+  Site.Data.video_correlati.pagine indicizzata per Permalink.
+
+  Privacy-first: solo link esterni a YouTube (target=_blank,
+  rel=noopener), niente embed iframe, niente cookie di terze parti.
+
+  Incluso in _default/single.html, _default/list.html,
+  rischi-prevenzione/single.html.
+*/}}
+
+{{/* Calcola chiave di lookup: path relativo a content/, senza .md e senza
+     /_index. Es. content/rischi-prevenzione/rischio-sismico.md
+                  → "rischi-prevenzione/rischio-sismico" */}}
+{{- $key := "" -}}
+{{- with .File }}
+  {{- $p := .Path -}}
+  {{- if hasSuffix $p "/_index.md" -}}
+    {{- $key = strings.TrimSuffix "/_index.md" $p -}}
+  {{- else if hasSuffix $p ".md" -}}
+    {{- $key = strings.TrimSuffix ".md" $p -}}
+  {{- end -}}
+{{- end -}}
+{{- $data := index $.Site.Data.video_correlati.pagine $key -}}
+{{- with $data -}}
+{{- $videos := .video -}}
+{{- $canali := $.Site.Data.video_correlati.canali -}}
+{{- if $videos }}
+<section class="video-correlati" aria-labelledby="video-correlati-titolo" data-pagefind-ignore>
+  <h2 id="video-correlati-titolo">
+    <i class="bi bi-collection-play me-2" aria-hidden="true"></i>Approfondimenti video
+  </h2>
+  <p class="video-correlati-intro">
+    Selezione di video pertinenti dai canali istituzionali del Dipartimento di Protezione Civile e dal progetto Abili a Proteggere. I video sono ospitati sui canali ufficiali — il click apre YouTube in una nuova scheda.
+  </p>
+  <ul class="video-correlati-list">
+    {{- range $videos }}
+    {{- $canale := index $canali .canale }}
+    <li class="video-correlati-item">
+      <a class="video-correlati-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+         aria-label="Apri su YouTube: {{ .titolo }} (si apre in nuova scheda)">
+        <span class="video-correlati-icona" aria-hidden="true">
+          <i class="bi bi-play-circle-fill"></i>
+        </span>
+        <span class="video-correlati-meta">
+          <span class="video-correlati-titolo">{{ .titolo }}</span>
+          <span class="video-correlati-canale">
+            {{- with $canale }}{{ .nome }}{{ else }}{{ $.canale }}{{ end }}
+            <span class="video-correlati-arrow" aria-hidden="true">↗</span>
+          </span>
+        </span>
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+  <p class="video-correlati-disclaimer">
+    <i class="bi bi-info-circle me-1" aria-hidden="true"></i>Selezione effettuata automaticamente in base alle parole chiave del contenuto, rivista periodicamente. I video sono di proprietà dei rispettivi enti — il Gruppo Comunale Volontari di Genzano cura la cernita e l'attribuzione tematica.
+  </p>
+</section>
+{{- end }}
+{{- end -}}
