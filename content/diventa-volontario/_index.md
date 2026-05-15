@@ -92,6 +92,65 @@ L'impegno ordinario è di circa **16 ore al mese** per turni, formazione, addest
 
 Durante emergenze, esercitazioni o allerte significative può essere richiesta una disponibilità aggiuntiva. Per i volontari lavoratori si applicano le tutele previste dal **D.Lgs. 1/2018**, nei casi e con le modalità stabilite dalla normativa.
 
+## Una giornata tipo del volontario
+
+Non esiste una "giornata tipo" sola: l'attività cambia in base al periodo (ordinario o emergenza) e al ruolo. Ti diamo tre esempi reali.
+
+### Sabato mattina ordinario
+
+- **9:00** — arrivo in sede, briefing del Capo Gruppo (5-10 minuti)
+- **9:15** — verifica mezzi, attrezzature, dotazioni radio
+- **10:00** — supporto a un'attività programmata: esercitazione, presenza in piazza per evento divulgativo, intervento nelle scuole, manutenzione magazzino
+- **12:30** — rientro in sede, debriefing breve, archiviazione schede
+
+Niente di "eroico": è lavoro tecnico fatto bene. La maggior parte delle attività ordinarie non è azione, è **preparazione e manutenzione**.
+
+### Sera con allerta meteo arancione
+
+- **18:00** — il Capo Gruppo riceve l'attivazione dal Comune (COC)
+- **18:30** — volontari reperibili si presentano in sede in turni
+- **19:00** — presidio del territorio: cancelli su strade allagabili, supporto ai Vigili del Fuoco se richiesto, monitoraggio radio
+- **dopo cessazione allerta** — ripristino mezzi, segnalazione situazioni residue, archiviazione
+
+Lo scenario può durare **anche tutta la notte**: si lavora in turni di 4-6 ore.
+
+### Emergenza fuori comune (sisma, alluvione)
+
+In **maxi-emergenze** il Gruppo può essere mobilitato dal Dipartimento di Protezione Civile per attività di **colonna mobile** in altre regioni. La partecipazione è **sempre su base volontaria** e dipende da disponibilità individuale, ruoli assegnati, autorizzazioni del datore di lavoro.
+
+Per i ruoli operativi possibili (logistica, radio, cucina da campo, supporto popolazione) vedi gli articoli storici del sito (es. [Maxi-emergenze e colonne mobili](/comunicazioni/2026-04-12-maxi-emergenze-colonne-mobili-coordinamenti-fepivol-lazio/), [Friuli 1976 — 50 anni dalla nascita della PC](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/)).
+
+## Cosa NON fa un volontario
+
+Per evitare aspettative sbagliate, chiariamo cosa **non rientra** nel ruolo:
+
+- ❌ **Non sostituisce VVF, Polizia, Carabinieri o personale sanitario.** I volontari operano in **supporto** alle forze istituzionali, mai al loro posto.
+- ❌ **Non si auto-attiva.** L'intervento è disposto dall'autorità competente (Sindaco, Comune, Funzione Volontariato del COC, Sala Operativa Regionale).
+- ❌ **Non risolve problemi privati.** Allagamenti in cantine condominiali private, rami caduti su proprietà privata, animali domestici dispersi: sono gestiti da privati, ditte, assicurazioni o dal Comune secondo competenza.
+- ❌ **Non fa il "salvatore solitario".** Lavoriamo **in squadra**, sempre. Il singolo "eroe" che esce da solo è il pattern che mette a rischio sé stesso e gli altri.
+- ❌ **Non gestisce il 112.** Quello è il Numero Unico Europeo: smista a forze di polizia, sanità, vigili del fuoco. Il volontariato non è alternativo al 112.
+- ❌ **Non comunica in autonomia con i media.** I comunicati sono autorizzati dal Capo Gruppo o dal Comune. Vedi [Social Media Policy](/social-media-policy/).
+
+Vedi la pagina dedicata [Cosa succede quando scatta un'allerta](/cosa-succede-quando-scatta-allerta/) per il quadro completo del rapporto fra autorità, COC, Gruppo e cittadino.
+
+## Ruoli possibili — non serve essere "atleti"
+
+Molti pensano che il volontariato di protezione civile sia solo per chi è giovane, sportivo, abituato alla fatica fisica. **Non è vero.** Il Gruppo ha bisogno di competenze diverse:
+
+| Ruolo | Profilo tipico |
+|---|---|
+| **Logistica e magazzino** | Sa organizzare, fare inventari, gestire materiali |
+| **Sala radio / comunicazioni** | Tranquillità, attenzione, abilità con apparati |
+| **Segreteria operativa** | Buona scrittura, ordine documentale, riservatezza |
+| **Educazione nelle scuole** | Esperienza pedagogica, calma con bambini, capacità divulgativa |
+| **Supporto eventi** | Presenza fisica regolare, contatto con il pubblico, gestione code |
+| **Cucina da campo** | Igiene alimentare, organizzazione, lavoro di squadra (vedi articoli HACCP) |
+| **Antincendio boschivo** | Forma fisica buona, formazione specifica AIB, disponibilità stagionale |
+| **Guida mezzi** | Patente B/C/E in base al mezzo, calma sotto pressione |
+| **Comunicazione e social** | Scrittura chiara, conoscenza norme privacy, sensibilità istituzionale |
+
+C'è spazio per **profili diversi**: chi può sollevare carichi pesanti, chi non può; chi guida, chi non guida; chi parla in pubblico, chi preferisce stare dietro. Il Gruppo si organizza in funzione delle competenze disponibili.
+
 ## Come iscriversi
 
 Il primo passo è un colloquio conoscitivo. Serve a capire cosa fa il Gruppo, quali sono gli impegni richiesti e quale contributo puoi portare.
