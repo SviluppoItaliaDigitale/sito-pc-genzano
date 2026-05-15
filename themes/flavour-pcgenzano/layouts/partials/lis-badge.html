@@ -1,28 +1,62 @@
 {{/*
-  lis-badge.html — Badge "Disponibile in LIS" + finestra con video e
-  trascrizione. Idea #10 roadmap.
+  lis-badge.html — Badge "Disponibile in LIS" sulle pagine del sito.
+  Idea #10 roadmap. Riorganizzato a maggio 2026 per supportare entrambe
+  le modalità:
 
-  Auto-protettivo: renderizza qualcosa SOLO se la pagina ha nel frontmatter
-  `lis_video: "<id>"` e <id> esiste in data/lis.yaml. Altrimenti niente.
+  MODALITÀ 1 (preferita da maggio 2026): `lis_section: "<famiglia>"` nel
+  frontmatter. La pagina dichiara la famiglia di interesse (es.
+  "rischio-sismico"); il badge mostra "N video LIS disponibili" e linka
+  a `/lis/#<famiglia>` (anchor della sezione corrispondente). Il video
+  resta sul canale YouTube del produttore (Io non rischio o Abili a
+  Proteggere) — privacy-first, niente embed, niente cookie di terzi.
+
+  MODALITÀ 2 (legacy, retrocompatibilità): `lis_video: "<id>"` punta
+  a una voce singola di `data/lis.yaml`. Aprire dialog con trascrizione
+  (eventuale) e link al video. Non più consigliato per nuove pagine —
+  preferire la modalità 1 che porta all'hub /lis/ con tutti i video
+  della famiglia.
+
+  Auto-protettivo: rende qualcosa SOLO se uno dei due campi è nel
+  frontmatter e il riferimento esiste in data/lis.yaml.
 
   Incluso (non condizionato) in _default/single.html e _default/list.html.
-
-  Accessibilità: <dialog> nativo (focus trap + Esc), <video> con <track>
-  WebVTT per i sottotitoli, trascrizione testuale completa sempre presente
-  (WCAG 1.2.1 / 1.2.2). Se il video non è ancora prodotto, il badge lo
-  segnala e la finestra mostra comunque la trascrizione.
 */}}
+
+{{/* ── MODALITÀ 1: lis_section → link alla sezione di /lis/ ── */}}
+{{- with .Params.lis_section -}}
+{{- $famKey := . -}}
+{{- $famiglia := index $.Site.Data.lis.famiglia $famKey -}}
+{{- if $famiglia -}}
+{{/* Conta i video di questa famiglia */}}
+{{- $n := 0 -}}
+{{- range $id, $v := $.Site.Data.lis.video -}}
+  {{- if eq $v.famiglia $famKey -}}{{- $n = add $n 1 -}}{{- end -}}
+{{- end -}}
+{{- if gt $n 0 -}}
+<div class="lis-badge-wrap" data-pagefind-ignore>
+  <a class="lis-badge" href="{{ printf "lis/#%s" $famKey | relURL }}"
+     aria-label="Contenuti su questo tema disponibili in Lingua Italiana dei Segni: {{ $n }} video — apri la sezione dedicata">
+    <span class="lis-badge-ico" aria-hidden="true">LIS</span>
+    <span>{{ $n }} video in LIS disponibili</span>
+  </a>
+</div>
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{/* ── MODALITÀ 2: lis_video → dialog popup legacy ── */}}
 {{- with .Params.lis_video -}}
 {{- $v := index $.Site.Data.lis.video . -}}
 {{- if $v -}}
 {{- $id := printf "lis-dialog-%s" . -}}
 {{- $haVideo := and $v.video_url (ne $v.video_url "") -}}
+{{- $haYoutube := and $v.youtube_url (ne $v.youtube_url "") -}}
 <div class="lis-badge-wrap" data-pagefind-ignore>
   <button type="button" class="lis-badge" data-lis-target="{{ $id }}"
           aria-haspopup="dialog"
           aria-label="Contenuto disponibile in Lingua Italiana dei Segni: {{ $v.titolo }}">
     <span class="lis-badge-ico" aria-hidden="true">LIS</span>
-    <span>{{ if $haVideo }}Disponibile in LIS{{ else }}LIS in preparazione{{ end }}</span>
+    <span>{{ if or $haVideo $haYoutube }}Disponibile in LIS{{ else }}LIS in preparazione{{ end }}</span>
   </button>
 </div>
 
@@ -42,18 +76,26 @@
       {{- end }}
       Il tuo browser non riproduce il video. <a href="{{ $v.video_url }}">Scarica il video</a>.
     </video>
+    {{- else if $haYoutube }}
+    <p class="lis-dialog-attesa">
+      <strong>Video disponibile sul canale YouTube del produttore.</strong>
+      Per rispetto della tua privacy il video non è incorporato qui (eviti i cookie di YouTube): apri il link sotto per vederlo direttamente sul canale ufficiale, dove è disponibile la versione in LIS.
+    </p>
+    <p><a class="lis-dialog-link" href="{{ $v.youtube_url }}" target="_blank" rel="noopener noreferrer">Apri il video su YouTube ↗</a></p>
     {{- else }}
     <p class="lis-dialog-attesa">
-      <strong>Video LIS in preparazione.</strong> Il video con interprete LIS qualificato è in produzione, in collaborazione con l'ENS — Ente Nazionale Sordi. Qui sotto trovi già la <strong>trascrizione completa</strong> del contenuto.
+      <strong>Video LIS in preparazione.</strong> Il video con interprete LIS qualificato è in produzione. Qui sotto trovi la <strong>trascrizione completa</strong> del contenuto.
     </p>
     {{- end }}
 
-    <details class="lis-trascrizione"{{ if not $haVideo }} open{{ end }}>
+    {{- with $v.trascrizione }}
+    <details class="lis-trascrizione"{{ if not (or $haVideo $haYoutube) }} open{{ end }}>
       <summary>Trascrizione testuale completa</summary>
       <div class="lis-trascrizione-testo">
-        {{ $v.trascrizione | markdownify }}
+        {{ . | markdownify }}
       </div>
     </details>
+    {{- end }}
 
     <footer class="lis-dialog-footer">
       <a href="{{ "lis/" | relURL }}" class="lis-dialog-link">Tutti i video in LIS</a>

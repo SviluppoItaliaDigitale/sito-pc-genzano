@@ -3,6 +3,7 @@
 title: "Rischio Incendi Boschivi"
 description: "Cosa fare per prevenire gli incendi boschivi e come comportarsi in caso di emergenza sul territorio di Genzano di Roma."
 tts: true
+lis_section: "rischio-incendio"
 weight: 3
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.

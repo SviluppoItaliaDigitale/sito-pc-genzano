@@ -1,41 +1,99 @@
 {{ define "main" }}
+{{- $famiglie := .Site.Data.lis.famiglia -}}
+{{- $fonti := .Site.Data.lis.fonte -}}
 {{- $video := .Site.Data.lis.video -}}
+
 <div class="page-hero">
   <div class="container">
     {{ partial "breadcrumb.html" . }}
     <h1>{{ .Title }}</h1>
   </div>
 </div>
+
 <div class="container py-4">
   <div class="row">
-    <div class="col-lg-9 mx-auto">
+    <div class="col-lg-10 mx-auto">
 
       <div class="list-intro-content mb-4">
         {{ .Content }}
       </div>
 
-      {{- with $video }}
-      <ul class="lis-elenco list-unstyled">
-        {{- range $id, $v := . }}
-        {{- $haVideo := and $v.video_url (ne $v.video_url "") -}}
-        <li class="lis-elenco-voce">
-          <span class="lis-elenco-stato {{ if $haVideo }}lis-pronto{{ else }}lis-attesa{{ end }}">
-            {{ if $haVideo }}Disponibile{{ else }}In preparazione{{ end }}
-          </span>
-          <div class="lis-elenco-testo">
-            <h2 class="lis-elenco-titolo">{{ $v.titolo }}</h2>
-            {{- with $v.descrizione }}<p class="lis-elenco-desc">{{ . }}</p>{{ end }}
-            {{- with $v.durata }}<p class="lis-elenco-meta">Durata: {{ . }}</p>{{ end }}
-          </div>
-        </li>
+      {{/* Indice di navigazione delle famiglie tematiche */}}
+      {{- if $famiglie }}
+      <details class="article-toc lis-toc" open>
+        <summary><i class="bi bi-list-ul me-2" aria-hidden="true"></i>Sezioni</summary>
+        <div class="lis-toc-grid">
+          {{- range $fkey, $f := $famiglie }}
+          {{- $n := 0 }}
+          {{- range $id, $v := $video }}{{- if eq $v.famiglia $fkey }}{{- $n = add $n 1 }}{{- end }}{{- end }}
+          {{- if gt $n 0 }}
+          <a href="#{{ $fkey }}" class="lis-toc-link">
+            <span class="lis-toc-titolo">{{ $f.titolo }}</span>
+            <span class="lis-toc-count">{{ $n }} video</span>
+          </a>
+          {{- end }}
+          {{- end }}
+        </div>
+      </details>
+      {{- end }}
+
+      {{/* Attribuzione fonti (in evidenza prima dei video) */}}
+      <section class="lis-fonti" aria-label="Fonti dei video">
+        <h2>Fonti dei video</h2>
+        <p>I video LIS pubblicati su questa pagina sono prodotti da due canali istituzionali pubblici. Per rispetto della tua privacy il sito <strong>non incorpora il player YouTube</strong>: ogni link apre il video sul canale ufficiale del produttore in una nuova scheda.</p>
+        <div class="lis-fonti-grid">
+          {{- range $fkey, $f := $fonti }}
+          <article class="lis-fonte-card">
+            <h3>{{ $f.nome }}</h3>
+            <p>{{ $f.descrizione }}</p>
+            <p class="lis-fonte-link">
+              <a href="{{ $f.canale_url }}" target="_blank" rel="noopener noreferrer">Canale ufficiale ↗</a>
+              {{- with $f.playlist_lis_url }}
+              &nbsp;·&nbsp;<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Playlist LIS ↗</a>
+              {{- end }}
+            </p>
+          </article>
+          {{- end }}
+        </div>
+      </section>
+
+      {{/* Sezioni per famiglia tematica */}}
+      {{- range $fkey, $f := $famiglie }}
+      {{- $videoFamiglia := slice }}
+      {{- range $id, $v := $video }}
+        {{- if eq $v.famiglia $fkey }}
+          {{- $videoFamiglia = $videoFamiglia | append (dict "id" $id "v" $v) }}
         {{- end }}
-      </ul>
-      {{- else }}
-      <p class="text-muted">Nessun video LIS ancora registrato.</p>
+      {{- end }}
+      {{- if gt (len $videoFamiglia) 0 }}
+      <section class="lis-sezione" id="{{ $fkey }}" aria-labelledby="{{ $fkey }}-titolo">
+        <h2 id="{{ $fkey }}-titolo">{{ $f.titolo }}</h2>
+        {{- with $f.descrizione }}<p class="lis-sezione-desc">{{ . }}</p>{{ end }}
+
+        <ul class="lis-video-list">
+          {{- range $videoFamiglia }}
+          {{- $v := .v }}
+          {{- $fonte := index $fonti $v.fonte }}
+          <li class="lis-video-item">
+            <a class="lis-video-link" href="{{ $v.youtube_url }}" target="_blank" rel="noopener noreferrer"
+               aria-label="Apri su YouTube: {{ $v.titolo }} (si apre in nuova scheda)">
+              <span class="lis-video-titolo">{{ $v.titolo }}</span>
+              <span class="lis-video-meta">
+                {{- with $v.durata }}<span class="lis-video-durata">{{ . }}</span> · {{ end -}}
+                <span class="lis-video-fonte">{{ $fonte.nome }}</span>
+                <span class="lis-video-arrow" aria-hidden="true">↗</span>
+              </span>
+            </a>
+            {{- with $v.note }}<p class="lis-video-note">{{ . }}</p>{{ end }}
+          </li>
+          {{- end }}
+        </ul>
+      </section>
+      {{- end }}
       {{- end }}
 
       <div class="alert alert-light mt-4" role="note">
-        <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>I video sono prodotti con interpreti LIS qualificati in collaborazione con l'<strong>ENS — Ente Nazionale Sordi</strong>. Ogni video ha sottotitoli e trascrizione testuale completa. Per segnalare un contenuto da tradurre in LIS scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
+        <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>I video sono prodotti da soggetti terzi e ospitati sui rispettivi canali YouTube. Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma cura la <strong>selezione</strong>, l'<strong>organizzazione tematica</strong> e l'<strong>integrazione contestuale</strong> sulle pagine del sito. Per segnalare un video aggiuntivo o un errore di classificazione scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
       </div>
 
     </div>

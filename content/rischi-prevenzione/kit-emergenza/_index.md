@@ -6,6 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
+lis_section: "kit-emergenza"
 dataUltimaRevisione: "2026-05-06"
 ---
 

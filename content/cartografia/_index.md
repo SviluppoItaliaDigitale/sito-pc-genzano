@@ -2,6 +2,7 @@
 title: "Cartografia operativa del Piano di emergenza"
 description: "Mappa interattiva, tabelle e documenti sulle aree di emergenza del Piano Comunale di Genzano di Roma."
 layout: "single"
+lis_section: "aree-emergenza"
 aliases:
   - /mappe.html
   - /mappe/

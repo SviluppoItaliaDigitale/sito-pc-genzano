@@ -3,6 +3,7 @@
 title: "Piano di emergenza comunale"
 description: "Che cos'è il Piano di Emergenza Comunale di Genzano di Roma, quali aree prevede e cosa deve sapere il cittadino."
 layout: "single"
+lis_section: "gestione-emergenza"
 aliases:
   - /pianodiemergenza.html
   - /pianodiemergenza/

@@ -1,44 +1,519 @@
-# Registro dei video in Lingua Italiana dei Segni (LIS) — idea #10 roadmap.
+# Registro dei video in Lingua Italiana dei Segni (LIS).
 #
-# I video LIS, una volta prodotti con un interprete LIS qualificato (in
-# collaborazione con ENS — Ente Nazionale Sordi, sezione di Roma), sono
-# ospitati come asset di una GitHub Release del repo (gratis fino a 2 GB).
+# Da maggio 2026 il sito linka video LIS prodotti da due canali istituzionali
+# pubblici, in modalità *privacy-first* (nessun embed YouTube — il click
+# apre il video sul canale del produttore in nuova scheda). I 2 canali sono:
 #
-# Una pagina del sito mostra il badge "Disponibile in LIS" se ha nel
-# frontmatter `lis_video: "<id>"`, dove <id> e' una chiave di `video` qui sotto.
-# Finche' `video_url` e' vuoto il video e' in preparazione: il badge lo
-# segnala e la finestra mostra comunque la TRASCRIZIONE testuale completa
-# (obbligatoria — WCAG 1.2.1 / 1.2.2).
+# 1. Io non rischio (DPC + ANPAS + INGV + RELUIS + CIMA) — canale ufficiale
+#    della campagna nazionale di comunicazione sulle buone pratiche di PC.
+#    Tre collezioni LIS distinte:
+#    a) Playlist "Materiali informativi Io non rischio in LIS e con audio
+#       descrizione" (id PLyRppYk2-sTIDs7RX-2C0pB1ZmgtA0yMo, 12 video 2023).
+#    b) 3 video Stromboli LIS pubblicati nel 2025.
+#    c) Playlist "Videolezioni - L'attimo decisivo" (id PLyRppYk2-sTKsMmo7PNnOabYpz2paC77V,
+#       12 lezioni divulgative con interprete LIS in sovrimpressione,
+#       senza dichiarazione esplicita LIS nei metadata YouTube).
+#    Livello 1 nella gerarchia delle fonti PC
+#    (vedi .claude/rules/06-protezione-civile-scientifica.md).
 #
-# Per aggiungere un video: nuova voce in `video`, compilare i campi, e
-# aggiungere `lis_video: "<id>"` al frontmatter della pagina interessata.
+# 2. Abili a Proteggere (Cooperativa Sociale Europe Consulting) — progetto
+#    sul rapporto disabilità ↔ protezione civile. Serie "Glossario in LIS"
+#    che traduce in Lingua dei Segni i termini chiave del lessico tecnico
+#    della PC. Sinergia diretta con la nostra pagina /abili-a-proteggere/.
+#
+# I video sono raggruppati in *famiglie tematiche* (campo `famiglia:`); le
+# pagine del sito dichiarano `lis_section: <famiglia>` nel frontmatter per
+# mostrare il badge "X video in LIS" che porta alla sezione corrispondente
+# di /lis/.
+#
+# Per aggiungere un video: nuova voce in `video:`, compilare i campi, e
+# (se vuoi mostrarlo come badge contestuale) aggiungere `lis_section:` al
+# frontmatter della pagina target.
 
+# Famiglie tematiche con i loro metadata (titolo sezione, descrizione).
+famiglia:
+  rischio-sismico:
+    titolo: "Rischio sismico"
+    descrizione: "Cosa fare in caso di terremoto e il vocabolario tecnico essenziale: classificazione sismica, fenomeni precursori, reti di monitoraggio, normativa antisismica."
+
+  rischio-vulcanico:
+    titolo: "Rischio vulcanico"
+    descrizione: "Cosa sapere e cosa fare sulle eruzioni vulcaniche (con riferimento al caso Stromboli) e il vocabolario di base: bradisismo, fumarole, eruzioni effusive ed esplosive."
+
+  rischio-idrogeologico:
+    titolo: "Rischio idrogeologico — alluvioni"
+    descrizione: "Cosa fare prima, durante e dopo un'alluvione, in base alla campagna nazionale del Dipartimento di Protezione Civile."
+
+  rischio-incendio:
+    titolo: "Rischio incendi boschivi"
+    descrizione: "Come evitare, riconoscere e affrontare un incendio boschivo: comportamenti di autoprotezione e segnalazione."
+
+  maremoto:
+    titolo: "Rischio maremoto (utile per chi va al mare)"
+    descrizione: "Cosa sapere e cosa fare in caso di maremoto sulle coste italiane: per quanto Genzano sia comune interno, è informazione utile per chi raggiunge il litorale laziale e altre coste."
+
+  allerte-meteo:
+    titolo: "Allerte meteo e bollettini"
+    descrizione: "Come leggere i bollettini di criticità e di vigilanza meteo, i livelli di allerta, il ruolo del Centro funzionale per la protezione civile."
+
+  gestione-emergenza:
+    titolo: "Sale operative e gestione delle emergenze"
+    descrizione: "Centro Operativo Comunale (COC), Comitato Operativo, Sala situazione Italia, DICOMAC, Strutture operative nazionali e Funzioni di supporto."
+
+  pianificazione:
+    titolo: "Pianificazione e attività di protezione civile"
+    descrizione: "Pianificazione di protezione civile, esercitazioni e Colonna Mobile Nazionale: come si prepara il sistema."
+
+  aree-emergenza:
+    titolo: "Aree di emergenza"
+    descrizione: "I tre tipi di aree previste dal Piano di Emergenza Comunale: aree di attesa, di accoglienza, di ammassamento dei soccorritori."
+
+  kit-emergenza:
+    titolo: "Kit di emergenza"
+    descrizione: "Cosa contiene il kit di emergenza domestico secondo la campagna nazionale Io non rischio."
+
+# Fonti dei video — usate per attribuzione visibile sulla pagina /lis/.
+fonte:
+  io-non-rischio:
+    nome: "Io non rischio"
+    descrizione: "Campagna nazionale di comunicazione sulle buone pratiche di protezione civile promossa dal Dipartimento della Protezione Civile in collaborazione con ANPAS, INGV, RELUIS e CIMA."
+    canale_url: "https://www.youtube.com/@io_non_rischio"
+    playlist_lis_url: "https://www.youtube.com/playlist?list=PLyRppYk2-sTIDs7RX-2C0pB1ZmgtA0yMo"
+    licenza: "Materiali della campagna nazionale Io non rischio — riuso secondo i termini della campagna. Video sul canale ufficiale YouTube."
+
+  abili-a-proteggere:
+    nome: "Abili a Proteggere"
+    descrizione: "Progetto della Cooperativa Sociale Europe Consulting sul rapporto disabilità e protezione civile. Serie 'Glossario in LIS — Lingua dei Segni' che traduce i termini chiave della PC."
+    canale_url: "https://www.youtube.com/@abiliaproteggere4520"
+    licenza: "Video pubblici sul canale YouTube del progetto Abili a Proteggere."
+
+# Elenco dei video (58 voci).
 video:
-  cosa-fare-emergenza:
-    titolo: "Cosa fare in caso di emergenza"
-    descrizione: "Le azioni essenziali di autoprotezione spiegate in Lingua Italiana dei Segni."
+
+  # ─── RISCHIO SISMICO — 10 video ─────────────────────────────────────
+  inr-terremoto-cosa-sapere:
+    titolo: "Io non rischio Terremoto — Cosa sapere e cosa fare fin da subito"
+    famiglia: "rischio-sismico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/tQmqOQJEArY"
     durata: ""
-    video_url: ""
-    captions_url: ""
-    trascrizione: |-
-      In caso di emergenza, mantieni la calma e segui poche regole chiare.
 
-      Primo: chiama il 112, il Numero Unico di Emergenza. Vale per ogni
-      emergenza: incendio, malore, incidente, pericolo. La centrale capisce
-      di cosa hai bisogno e invia i soccorsi giusti.
+  inr-terremoto-durante-dopo:
+    titolo: "Io non rischio Terremoto — Cosa fare durante e dopo"
+    famiglia: "rischio-sismico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/D3SLHWmR8J4"
+    durata: ""
 
-      Secondo: mettiti al sicuro. Allontanati dal pericolo. Se sei in casa
-      e c'e' un terremoto, riparati sotto un tavolo robusto e resta lontano
-      da finestre e mobili che possono cadere. Se c'e' un incendio, esci
-      subito e non usare l'ascensore.
+  inr-terremoto-domande:
+    titolo: "Io non rischio Terremoto — Domande e risposte"
+    famiglia: "rischio-sismico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/NYkbfYbXssA"
+    durata: ""
 
-      Terzo: ascolta le indicazioni delle autorita'. Le informazioni ufficiali
-      arrivano dal Comune, dalla Protezione Civile e dal sistema IT-alert,
-      che invia messaggi direttamente sul telefono.
+  aap-classificazione-sismica:
+    titolo: "Glossario in LIS — Classificazione sismica"
+    famiglia: "rischio-sismico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/ANy5seKbNAQ"
+    durata: "57 secondi"
 
-      Quarto: aiuta chi e' in difficolta', se puoi farlo senza correre
-      rischi: persone anziane, bambini, persone con disabilita'.
+  aap-normativa-antisismica:
+    titolo: "Glossario in LIS — Normativa antisismica"
+    famiglia: "rischio-sismico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/sY9mI1fTofA"
+    durata: "53 secondi"
 
-      Ricorda: prepararsi prima rende tutto piu' semplice. Tieni pronto un
-      piccolo kit di emergenza e parla in famiglia di cosa fare. Trovi tutte
-      le informazioni sul sito della Protezione Civile di Genzano di Roma.
+  aap-rete-sismica-nazionale:
+    titolo: "Glossario in LIS — Rete sismica nazionale"
+    famiglia: "rischio-sismico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/a08e7a5njBU"
+    durata: "1 minuto e 30 secondi"
+
+  aap-rete-accelerometrica:
+    titolo: "Glossario in LIS — Rete accelerometrica nazionale"
+    famiglia: "rischio-sismico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/YLfRQrJ1_14"
+    durata: "2 minuti e 4 secondi"
+
+  aap-fenomeni-precursori:
+    titolo: "Glossario in LIS — Fenomeni precursori"
+    famiglia: "rischio-sismico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/xAe635P8qDk"
+    durata: "47 secondi"
+
+  aap-epicentro:
+    titolo: "Glossario in LIS — Epicentro"
+    famiglia: "rischio-sismico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/U1ogOp6cKAk"
+    durata: "30 secondi"
+
+  inr-attimo-rischio-terremoto:
+    titolo: "L'attimo decisivo — Il rischio terremoto"
+    famiglia: "rischio-sismico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/nQcOVWAnXCs"
+    durata: ""
+    note: "Videolezione divulgativa con Emanuela Ercolani (INGV) ed Elena Speranza (DPC). Interprete LIS in sovrimpressione."
+
+  # ─── RISCHIO VULCANICO — 13 video ───────────────────────────────────
+  inr-stromboli-cosa-sapere:
+    titolo: "Io non rischio Stromboli — Cosa sapere e cosa fare fin da subito"
+    famiglia: "rischio-vulcanico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/NkV7uPFNZg4"
+    durata: ""
+
+  inr-stromboli-prima-durante-dopo:
+    titolo: "Io non rischio Stromboli — Cosa fare prima, durante e dopo un'esplosione parossistica"
+    famiglia: "rischio-vulcanico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/GtkgBAJXIf4"
+    durata: ""
+
+  inr-stromboli-domande:
+    titolo: "Io non rischio Stromboli — Domande e risposte"
+    famiglia: "rischio-vulcanico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/mVKKl4neabw"
+    durata: ""
+
+  aap-eruzione-vulcanica:
+    titolo: "Glossario in LIS — Eruzione vulcanica"
+    famiglia: "rischio-vulcanico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/kqLsEnanSKk"
+    durata: "1 minuto"
+
+  aap-eruzioni-effusive:
+    titolo: "Glossario in LIS — Eruzioni effusive"
+    famiglia: "rischio-vulcanico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/gOnj_Lw0lMs"
+    durata: "53 secondi"
+
+  aap-eruzioni-esplosive:
+    titolo: "Glossario in LIS — Eruzioni esplosive"
+    famiglia: "rischio-vulcanico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/81NMK5yqLy0"
+    durata: "1 minuto e 39 secondi"
+
+  aap-bradisismo:
+    titolo: "Glossario in LIS — Bradisismo"
+    famiglia: "rischio-vulcanico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/dXY08iwaj0k"
+    durata: "1 minuto e 34 secondi"
+
+  aap-fumarola:
+    titolo: "Glossario in LIS — Fumarola"
+    famiglia: "rischio-vulcanico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/Jkcd_8TIavc"
+    durata: "1 minuto e 41 secondi"
+
+  inr-attimo-campi-flegrei-area:
+    titolo: "L'attimo decisivo — L'area vulcanica dei Campi Flegrei"
+    famiglia: "rischio-vulcanico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/Tf_EbZAIfv4"
+    durata: ""
+    note: "Videolezione divulgativa con interprete LIS in sovrimpressione."
+
+  inr-attimo-bradisismo:
+    titolo: "L'attimo decisivo — Il bradisismo"
+    famiglia: "rischio-vulcanico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/bP55Ly8Vtr0"
+    durata: ""
+    note: "Videolezione divulgativa con interprete LIS in sovrimpressione."
+
+  inr-attimo-risposta-bradisismo:
+    titolo: "L'attimo decisivo — La risposta di protezione civile al bradisismo"
+    famiglia: "rischio-vulcanico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/Z-QHnTJraFE"
+    durata: ""
+    note: "Videolezione divulgativa con interprete LIS in sovrimpressione."
+
+  inr-attimo-piano-vulcanico-flegrei:
+    titolo: "L'attimo decisivo — Il piano nazionale di protezione civile per il rischio vulcanico ai Campi Flegrei"
+    famiglia: "rischio-vulcanico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/pGVhFbQ5EhU"
+    durata: ""
+    note: "Videolezione divulgativa con interprete LIS in sovrimpressione."
+
+  inr-attimo-buone-pratiche-flegrei:
+    titolo: "L'attimo decisivo — Buone pratiche di protezione civile per i Campi Flegrei"
+    famiglia: "rischio-vulcanico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/2SF0-xO4P_I"
+    durata: ""
+    note: "Videolezione divulgativa con interprete LIS in sovrimpressione."
+
+  # ─── RISCHIO IDROGEOLOGICO — 4 video ────────────────────────────────
+  inr-alluvione-cosa-sapere:
+    titolo: "Io non rischio Alluvione — Cosa sapere e cosa fare fin da subito"
+    famiglia: "rischio-idrogeologico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/pRNdk6d1tWg"
+    durata: ""
+
+  inr-alluvione-cosa-fare:
+    titolo: "Io non rischio Alluvione — Cosa fare durante un'allerta, durante e dopo un'alluvione"
+    famiglia: "rischio-idrogeologico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/DbGSeVbDLCg"
+    durata: ""
+
+  inr-alluvione-domande:
+    titolo: "Io non rischio Alluvione — Domande e risposte"
+    famiglia: "rischio-idrogeologico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/OnGj0IaLePA"
+    durata: ""
+
+  inr-attimo-rischio-alluvione:
+    titolo: "L'attimo decisivo — Il rischio alluvione"
+    famiglia: "rischio-idrogeologico"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/YDpdHRrBYT0"
+    durata: ""
+    note: "Videolezione divulgativa con interprete LIS in sovrimpressione."
+
+  # ─── RISCHIO INCENDI BOSCHIVI — 4 video ─────────────────────────────
+  inr-incendi-cosa-sapere:
+    titolo: "Io non rischio Incendi boschivi — Cosa sapere e cosa fare fin da subito"
+    famiglia: "rischio-incendio"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/9tYSNBQY7OY"
+    durata: ""
+
+  inr-incendi-cosa-fare:
+    titolo: "Io non rischio Incendi boschivi — Cosa fare per evitare, se avvisti, se sei coinvolto"
+    famiglia: "rischio-incendio"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/qxQJQEjzRwc"
+    durata: ""
+
+  inr-incendi-domande:
+    titolo: "Io non rischio Incendi boschivi — Domande e risposte"
+    famiglia: "rischio-incendio"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/pvk-P_5WBBw"
+    durata: ""
+
+  inr-attimo-rischio-incendi:
+    titolo: "L'attimo decisivo — Il rischio incendi boschivi"
+    famiglia: "rischio-incendio"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/p0XiSkPbK0Y"
+    durata: ""
+    note: "Videolezione divulgativa con interprete LIS in sovrimpressione."
+
+  # ─── MAREMOTO — 4 video ─────────────────────────────────────────────
+  inr-maremoto-cosa-sapere:
+    titolo: "Io non rischio Maremoto — Cosa sapere e cosa fare fin da subito"
+    famiglia: "maremoto"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/zEhSFKhma0Y"
+    durata: ""
+
+  inr-maremoto-durante-dopo:
+    titolo: "Io non rischio Maremoto — Cosa fare durante e dopo"
+    famiglia: "maremoto"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/O_goGeLCJ98"
+    durata: ""
+
+  inr-maremoto-domande:
+    titolo: "Io non rischio Maremoto — Domande e risposte"
+    famiglia: "maremoto"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/lAC3EvSTCl0"
+    durata: ""
+
+  inr-attimo-rischio-maremoto:
+    titolo: "L'attimo decisivo — Il rischio maremoto"
+    famiglia: "maremoto"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/ZNkiU42glf8"
+    durata: ""
+    note: "Videolezione divulgativa con interprete LIS in sovrimpressione."
+
+  # ─── ALLERTE METEO — 4 video ────────────────────────────────────────
+  aap-livelli-allerta-meteo:
+    titolo: "Glossario in LIS — Livelli di allerta per il rischio meteo-idro"
+    famiglia: "allerte-meteo"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/k3svI11aiwQ"
+    durata: "2 minuti e 28 secondi"
+
+  aap-bollettino-criticita:
+    titolo: "Glossario in LIS — Bollettino di criticità e allerta"
+    famiglia: "allerte-meteo"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/Ihj9G0pjOh4"
+    durata: "2 minuti e 14 secondi"
+
+  aap-bollettino-vigilanza:
+    titolo: "Glossario in LIS — Bollettino di vigilanza meteorologica nazionale"
+    famiglia: "allerte-meteo"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/aRzN8LhWTmc"
+    durata: "1 minuto"
+
+  aap-centro-funzionale:
+    titolo: "Glossario in LIS — Centro funzionale per finalità di protezione civile"
+    famiglia: "allerte-meteo"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/4WZ2LXGvHDU"
+    durata: ""
+
+  # ─── GESTIONE EMERGENZA / SALE OPERATIVE — 9 video ──────────────────
+  aap-coc:
+    titolo: "Glossario in LIS — COC, Centro Operativo Comunale"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/Q9JaOMzqd1w"
+    durata: "30 secondi"
+
+  aap-comitato-operativo:
+    titolo: "Glossario in LIS — Comitato Operativo"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/o6LWokLGtXY"
+    durata: "1 minuto e 1 secondo"
+
+  aap-sala-operativa-unificata:
+    titolo: "Glossario in LIS — Sala operativa unificata permanente"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/Ok4mVQDypVE"
+    durata: "1 minuto e 19 secondi"
+
+  aap-sala-situazione-italia:
+    titolo: "Glossario in LIS — Sala situazione Italia"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/wm2mdD9Up3k"
+    durata: "1 minuto e 41 secondi"
+
+  aap-dicomac:
+    titolo: "Glossario in LIS — DICOMAC, Direzione Comando e Controllo"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/JA4rl94AE9E"
+    durata: "33 secondi"
+
+  aap-strutture-operative:
+    titolo: "Glossario in LIS — Strutture operative nazionali"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/Np56yTydrOI"
+    durata: "2 minuti e 37 secondi"
+
+  aap-componenti:
+    titolo: "Glossario in LIS — Componenti del Servizio nazionale di PC"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/KgVWOINY0CU"
+    durata: "33 secondi"
+
+  aap-funzioni-supporto:
+    titolo: "Glossario in LIS — Funzioni di supporto"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/b9uU246oNGk"
+    durata: "2 minuti e 1 secondo"
+
+  aap-sistema-informativo:
+    titolo: "Glossario in LIS — Sistema informativo gestione emergenza"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/B9IqdiEiM3o"
+    durata: "1 minuto e 18 secondi"
+
+  # ─── PIANIFICAZIONE — 3 video ───────────────────────────────────────
+  aap-pianificazione:
+    titolo: "Glossario in LIS — Pianificazione di protezione civile"
+    famiglia: "pianificazione"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/rxw8AWs2B0E"
+    durata: "25 secondi"
+
+  aap-esercitazione:
+    titolo: "Glossario in LIS — Esercitazione di protezione civile"
+    famiglia: "pianificazione"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/QFQtk_XfdS4"
+    durata: "46 secondi"
+
+  aap-colonna-mobile:
+    titolo: "Glossario in LIS — Colonna Mobile Nazionale"
+    famiglia: "pianificazione"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/WU-vErzbN5U"
+    durata: "2 minuti e 21 secondi"
+
+  inr-attimo-il-progetto:
+    titolo: "L'attimo decisivo — Il progetto"
+    famiglia: "pianificazione"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/BDTLUbeSCC0"
+    durata: ""
+    note: "Video introduttivo della serie 'L'attimo decisivo'. Interprete LIS in sovrimpressione."
+
+  inr-attimo-attivita-pc:
+    titolo: "L'attimo decisivo — Le attività di protezione civile"
+    famiglia: "pianificazione"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/VFkgtLkI-H4"
+    durata: ""
+    note: "Le quattro attività di PC (previsione, prevenzione, soccorso, superamento) ai sensi del D.Lgs. 1/2018. Interprete LIS in sovrimpressione."
+
+  inr-attimo-la-virgola:
+    titolo: "L'attimo decisivo — La virgola"
+    famiglia: "pianificazione"
+    fonte: "io-non-rischio"
+    youtube_url: "https://youtu.be/dDOTPqIDYuE"
+    durata: ""
+    note: "Video manifesto della serie: il concetto di 'attimo decisivo'. Interprete LIS in sovrimpressione."
+
+  # ─── AREE DI EMERGENZA — 3 video ────────────────────────────────────
+  aap-aree-attesa:
+    titolo: "Glossario in LIS — Aree di attesa"
+    famiglia: "aree-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/-i75MR2EFGQ"
+    durata: "1 minuto e 5 secondi"
+
+  aap-aree-accoglienza:
+    titolo: "Glossario in LIS — Aree di accoglienza"
+    famiglia: "aree-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/1A-exeeR1Tc"
+    durata: "50 secondi"
+
+  aap-aree-ammassamento:
+    titolo: "Glossario in LIS — Aree di ammassamento soccorritori e risorse"
+    famiglia: "aree-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/5Ow7QuWo-So"
+    durata: "57 secondi"
+
+  # ─── KIT EMERGENZA — 1 video ────────────────────────────────────────
+  aap-kit-emergenza:
+    titolo: "Glossario in LIS — Kit emergenza Io non rischio"
+    famiglia: "kit-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/WMqDdYseamU"
+    durata: "1 minuto e 10 secondi"

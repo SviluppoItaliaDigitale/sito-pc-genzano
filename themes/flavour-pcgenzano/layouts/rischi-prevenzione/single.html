@@ -54,6 +54,9 @@
       {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".article-body") }}
       {{ end }}
 
+      {{/* Badge "N video in LIS disponibili" se la pagina dichiara lis_section nel frontmatter */}}
+      {{ partial "lis-badge.html" . }}
+
       <article class="article-body">{{ .Content }}</article>
 
       {{ if $ttsEnabled }}

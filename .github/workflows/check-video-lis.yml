@@ -1,0 +1,84 @@
+name: Check nuovi video LIS
+
+# Verifica periodica della presenza di nuovi video LIS sui due canali
+# istituzionali monitorati (Io non rischio DPC, Abili a Proteggere
+# Cooperativa Europe Consulting). Se trova video LIS non ancora integrati
+# in data/lis.yaml, apre/aggiorna un'issue di label `automazione + lis`
+# con elenco + suggerimento famiglia tematica.
+#
+# Scaglionato fuori dai picchi di altri workflow di manutenzione
+# (vedi .claude/rules/10-automazioni-github-actions.md).
+
+on:
+  schedule:
+    - cron: '23 11 * * 1'   # Lunedì 11:23 UTC (12:23 Europe/Rome, fuori quarti d'ora canonici)
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  check-video-lis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Run check
+        id: check
+        run: |
+          set -uo pipefail
+          OUTPUT=$(python3 scripts/check-nuovi-video-lis.py 2>&1 || true)
+          echo "$OUTPUT"
+          # First line is either OK_NO_NEW_VIDEOS or NEW_VIDEOS_FOUND
+          FIRST=$(echo "$OUTPUT" | head -1)
+          if [ "$FIRST" = "OK_NO_NEW_VIDEOS" ]; then
+            echo "has_new=false" >> "$GITHUB_OUTPUT"
+            echo "Nessun nuovo video LIS — niente da fare."
+          else
+            echo "has_new=true" >> "$GITHUB_OUTPUT"
+            # Body issue: tutto tranne la prima riga marker
+            echo "$OUTPUT" | tail -n +2 > /tmp/issue-body.md
+            echo "---" >> /tmp/issue-body.md
+            echo "" >> /tmp/issue-body.md
+            echo "## Come integrare" >> /tmp/issue-body.md
+            echo "" >> /tmp/issue-body.md
+            echo "1. Apri \`data/lis.yaml\` e aggiungi una nuova voce sotto \`video:\` per ciascun video segnalato." >> /tmp/issue-body.md
+            echo "2. Compila: \`titolo\`, \`famiglia\` (vedi suggerimento), \`fonte\` (\`io-non-rischio\` o \`abili-a-proteggere\`), \`youtube_url\`, \`durata\`." >> /tmp/issue-body.md
+            echo "3. Verifica con \`hugo --quiet --minify\` che la build sia pulita." >> /tmp/issue-body.md
+            echo "4. Commit con messaggio \`LIS: aggiunti N nuovi video dal canale XXX\` + push." >> /tmp/issue-body.md
+            echo "" >> /tmp/issue-body.md
+            echo "Verifica anche che la classificazione \`famiglia\` suggerita sia corretta (è solo un'euristica sul titolo)." >> /tmp/issue-body.md
+            echo "" >> /tmp/issue-body.md
+            echo "_Issue generata automaticamente dal workflow \`check-video-lis.yml\`._" >> /tmp/issue-body.md
+          fi
+
+      - name: Crea/aggiorna issue
+        if: steps.check.outputs.has_new == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="LIS: nuovi video LIS rilevati dai canali monitorati"
+          # Cerca issue aperta con label automazione + lis
+          EXISTING=$(gh issue list --label "automazione" --label "lis" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            echo "Aggiorno issue esistente #$EXISTING"
+            gh issue comment "$EXISTING" --body-file /tmp/issue-body.md
+          else
+            echo "Creo nuova issue"
+            gh issue create \
+              --title "$TITLE" \
+              --body-file /tmp/issue-body.md \
+              --label "automazione" \
+              --label "lis"
+          fi
