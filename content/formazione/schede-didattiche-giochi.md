@@ -131,6 +131,7 @@ Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezioneciv
 
 - [Arena PC Genzano](/giochi/) — pagina principale per giocare
 - [Per le scuole](/scuole/) — landing per docenti, dirigenti, genitori, studenti
+- [Percorsi didattici pronti](/formazione/percorsi-didattici/) — 6 unità di Educazione Civica già strutturate (4 ore, obiettivi, valutazione)
 - [Formazione](/formazione/) — hub completo dei materiali
 - [Schede stampabili A4](/formazione/schede-stampabili/) — materiali fotocopiabili per la classe
 - [Storie e racconti](/formazione/storie-e-racconti/) — fiabe e racconti per fascia d'età
