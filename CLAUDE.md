@@ -92,6 +92,63 @@ Esiste perché il 4 maggio 2026 l'utente ha scoperto che 50+ commit accumulati s
 
 ---
 
+## Foto utente e banner — guarda PRIMA, scrivi DOPO. Verifica visiva obbligata.
+
+🔴 **Tre regole cogenti, mai infrangibili, scritte dopo l'incidente del 15 maggio 2026 sull'articolo "Giro d'Italia 2026 a Formia".** L'utente non ha tutorato un sito di parrocchia: ha tutorato un sito istituzionale di Protezione Civile, dove un'immagine senza didascalia coerente o un banner senza titolo sono errori che non si possono ripetere.
+
+### REGOLA 1 — Banner col titolo, sempre generato LOCALMENTE prima del commit
+
+Quando crei un articolo nuovo in `content/comunicazioni/` con `image: ""` nel frontmatter:
+
+1. **Prima del `git add`**, lancia `python3 scripts/genera-cover.py <file>` (per il singolo file) o `python3 scripts/auto-cover-mancanti.py` (per tutti gli articoli mancanti).
+2. **Read** della cover generata in `static/images/<slug>.webp` per verifica visiva: deve mostrare il titolo dell'articolo + il badge + la fascia istituzionale. Se manca uno solo di questi elementi, lo script ha fallito — diagnosi prima di committare.
+3. **Popola `image:`** nel frontmatter col path `/images/<slug>.webp` + `image_alt:` con `"Cover dell'articolo: <titolo>"`.
+4. Solo a quel punto procedi al commit.
+
+**Cosa NON fare:** affidarsi al workflow CI `scarica-foto-automatica.yml` step 2 (`auto-cover-mancanti.py`) per generare la cover post-push. Il workflow gira DOPO il `deploy.yml` standard, quindi il primo deploy del nuovo articolo può andare live con `images/notizia-default.svg` come fallback — un banner generico "PROTEZIONE CIVILE / Genzano di Roma" SENZA il titolo dell'articolo. È un errore visibile in homepage e in OG/Twitter Card delle anteprime social.
+
+**Causa root incidente 15 maggio 2026:** l'articolo Giro d'Italia è andato live con il banner default SVG senza titolo. Scoperto dall'utente in homepage e sulla pagina dell'articolo. Risolto generando la cover localmente e ri-deployando.
+
+### REGOLA 2 — Read di OGNI foto fornita dall'utente prima di scrivere caption/alt
+
+Quando l'utente fornisce foto (path filesystem o caricamento diretto):
+
+1. **Per ogni foto**, esegui il tool **Read** sul path della foto. Read è multimodale: vedi visivamente l'immagine.
+2. **Caption e alt devono descrivere SOLO ciò che si vede** nell'immagine — persone, oggetti, ambiente, espressioni, divise, badge, contesto visibile. **Mai inferenze testuali**: se nella foto non si vede "il briefing davanti alla Colonna Mobile", non scriverlo, anche se il contesto testuale del task lo suggerisce.
+3. **Niente fantasia, niente generalizzazioni**: se la foto mostra 3 persone, scrivi "tre persone". Se mostra un veicolo, scrivi che veicolo è. Se vedi un badge, leggi il badge.
+4. Se l'utente fornisce **N foto + M testi correlati**, i testi sono **contesto** dell'articolo, **non** descrizione delle foto. Tieni separate le 2 cose.
+
+**Causa root incidente 15 maggio 2026:** ho scritto caption tipo *"Il briefing operativo davanti alla Colonna Mobile Sala Operativa"* prendendo le parole dai testi FEPIVOL del task, mentre la foto mostrava in realtà due volontari del nostro Gruppo dentro un veicolo. Stesso errore sulla seconda foto: *"marea di volontari accorsi da molte parti del Lazio"* su una foto di 3 volontari nostri in posa davanti ai mezzi. Caption fabbricate, completamente scollegate dalla realtà visiva.
+
+### REGOLA 3 — Attribuzione foto: default = "Foto: Gruppo Comunale Volontari PC Genzano"
+
+Quando l'utente fornisce foto direttamente (anche solo dicendo *"ti allego le nostre foto"* o caricando file), **l'attribuzione di default è**:
+
+> *"Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma."*
+
+Mai attribuire foto fornite dall'utente a soggetti terzi (Coordinamento FEPIVOL, Comune, Regione, DPC, ecc.) **solo perché** nel task ci sono testi/contenuti di quei soggetti. Le foto del Gruppo restano del Gruppo, anche se accompagnate da testi di altre entità.
+
+**Eccezioni** (richiedono indicazione esplicita dell'utente o evidenza certa):
+- Foto chiaramente da canali social di terzi (file con nome tipo `699227882_*_n.jpg` = pattern Facebook/Instagram) → attribuibile alla fonte presunta con formula prudente *"Foto: dai canali del Coordinamento FE.PI.VOL."*
+- Foto scaricate da Wikimedia/NASA/USGS/NOAA via agent `pc-image-fixer` → attribuzione come da metadata fonte (autore + licenza).
+- Foto storiche con autore noto → autore + fonte.
+
+**Causa root incidente 15 maggio 2026:** ho attribuito *"Foto: Coordinamento FEPIVOL"* a foto che l'utente aveva fornito dicendo testualmente *"ti allego le nostre foto"*. Le foto erano dei NOSTRI volontari e dovevano essere attribuite al Gruppo Comunale.
+
+### Gate operativo
+
+Prima del commit di un articolo nuovo con foto utente, controlla mentalmente la sequenza:
+
+- [ ] Cover banner generata localmente con `genera-cover.py` e popolato `image:` nel frontmatter? *(REGOLA 1)*
+- [ ] **Read** di tutte le foto fornite dall'utente? *(REGOLA 2)*
+- [ ] Caption descrivono solo ciò che si vede, niente inferenze? *(REGOLA 2)*
+- [ ] Attribuzione foto utente = "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"? *(REGOLA 3)*
+- [ ] Gate AGID via `pc-article-reviewer` superato? *(regola sotto)*
+
+Se anche uno solo dei 5 punti non è verificato, **non committare**.
+
+---
+
 ## Auto-gate AGID prima del commit di un nuovo articolo
 
 🟢 **Ogni volta che generi un articolo nuovo in `content/comunicazioni/`, prima del `git add` invochi l'agent `pc-article-reviewer` su quel file.** Solo dopo il via libera dell'agent (o dopo aver applicato i suoi fix) procedi al commit. Vale anche su un singolo articolo. **Il gate è obbligato, non opzionale.**
@@ -145,11 +202,12 @@ Risultato: il **9 maggio 2026** l'utente ha chiesto di rivedere AGID tutti gli a
 
 ## Agenti specializzati disponibili
 
-In `.claude/agents/` ci sono 7 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
+In `.claude/agents/` ci sono 8 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
 
 | Agent | Trigger naturali italiani |
 |---|---|
 | `pc-article-reviewer` | "rivedi questo articolo", "controlla il frontmatter", "va bene per pubblicare?" |
+| `pc-photo-caption-verifier` | gate visivo automatico richiamato da `pc-article-reviewer` quando l'articolo contiene `{{< foto >}}` — verifica con Read multimodale che alt/caption descrivano davvero ciò che si vede nella foto, e che l'attribuzione sia corretta (foto utente = "Foto: Gruppo Comunale Volontari PC Genzano") |
 | `pc-image-fixer` | "ecco una foto", "queste immagini", "mettila nell'articolo", "applica fascia blu" |
 | `pc-issue-triage` | "controlla le issue", "fai pulizia tracker", "issue da chiudere?" |
 | `pc-deploy-validator` | "verifica prima del push", "controlla il deploy", "build OK?", "pubblico in sicurezza?" |
