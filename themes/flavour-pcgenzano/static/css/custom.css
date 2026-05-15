@@ -5460,3 +5460,38 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
  * fine QUIZ PREPARAZIONE v1.0
  * ==========================================================================
  */
+
+/* ==========================================================================
+ * PROFILI RAPIDI v1.0 — 4 card di accesso per profilo utente
+ * Incluse in homepage (partial) e /mappa-sito/ (shortcode).
+ * Coerenti con audit ChatGPT 13/05/2026 § 4.1.
+ * ==========================================================================
+ */
+.profili-rapidi-section {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #fff 100%);
+}
+.profili-rapidi-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.profili-rapidi-card:hover,
+.profili-rapidi-card:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 51, 102, 0.12);
+}
+@media (prefers-reduced-motion: reduce) {
+  .profili-rapidi-card { transition: none; }
+  .profili-rapidi-card:hover,
+  .profili-rapidi-card:focus-within { transform: none; }
+}
+/* 4° card "caregiver": viola istituzionale (mancante in Bootstrap Italia) */
+.profili-rapidi-card-caregiver {
+  border: 2px solid #7c3aed;
+}
+.profili-rapidi-card-caregiver h3 {
+  color: #6d28d9;
+}
+/* Stampa: nasconde il blocco (non utile su carta) */
+@media print {
+  .profili-rapidi-section { display: none !important; }
+}
+/* fine PROFILI RAPIDI v1.0 */
