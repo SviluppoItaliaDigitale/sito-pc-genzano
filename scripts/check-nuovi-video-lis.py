@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """
 check-nuovi-video-lis.py — Verifica periodica nuovi video LIS sui canali
-"Io non rischio" (DPC + ANPAS + INGV + RELUIS + CIMA) e "Abili a Proteggere"
-(Cooperativa Europe Consulting).
+istituzionali monitorati:
+  - "Io non rischio" (DPC + ANPAS + INGV + RELUIS + CIMA) — campagna nazionale
+  - "Dipartimento della Protezione Civile (DPCgov)" — canale ufficiale PCM
+  - "Abili a Proteggere" (Cooperativa Sociale Europe Consulting)
 
 Logica:
   1. Carica data/lis.yaml e estrae i youtube_url già integrati nel sito.
@@ -10,6 +12,7 @@ Logica:
      - Feed RSS del canale Io non rischio (15 video più recenti)
      - Feed RSS della playlist LIS DPC (12 storici)
      - Feed RSS della playlist L'attimo decisivo (lezioni)
+     - Feed RSS del canale DPCgov (15 video più recenti, filtra LIS)
      - HTML scrape del canale Abili a Proteggere (tutto, ~30 video)
   3. Filtra solo i video LIS plausibili (heuristica: titolo contiene "LIS",
      "Glossario", "lingua dei segni", oppure è nella playlist LIS dichiarata).
@@ -30,8 +33,9 @@ import urllib.error
 import xml.etree.ElementTree as ET
 
 # Canali e playlist da monitorare
-CHANNEL_INR = "UCdOg4quMoJDjQIkopcXkqCQ"       # Io non rischio (DPC)
-CHANNEL_AAP = "UCjsiExhgS_2oL5dMwUsgd0Q"       # Abili a Proteggere
+CHANNEL_INR = "UCdOg4quMoJDjQIkopcXkqCQ"       # Io non rischio (DPC + ANPAS + INGV + RELUIS + CIMA)
+CHANNEL_DPCGOV = "UC4fru33Tzpu0UhCIHChiNFA"    # Dipartimento Protezione Civile (PCM) — canale ufficiale
+CHANNEL_AAP = "UCjsiExhgS_2oL5dMwUsgd0Q"       # Abili a Proteggere (Europe Consulting)
 PLAYLIST_LIS_DPC = "PLyRppYk2-sTIDs7RX-2C0pB1ZmgtA0yMo"     # Materiali LIS ufficiali
 PLAYLIST_ATTIMO = "PLyRppYk2-sTKsMmo7PNnOabYpz2paC77V"      # Videolezioni L'attimo decisivo
 
@@ -112,9 +116,16 @@ def extract_existing_video_ids(lis_yaml_path: str) -> set[str]:
 
 
 def is_lis_plausible(title: str) -> bool:
-    """Heuristic: does this title look like a LIS video?"""
+    """Heuristic: does this title look like a LIS video?
+
+    Usa word boundary su "LIS" per evitare falsi positivi (nomi come Elisa,
+    Felisia, sigle come PLIS, BLIS che contengono "LIS" come sottostringa).
+    """
+    if re.search(r"\bLIS\b", title):
+        return True
     t = title.lower()
-    return any(k in t for k in ("lis", "lingua dei segni", "in segni", "glossario in lis"))
+    return any(k in t for k in ("lingua dei segni", "lingua italiana dei segni",
+                                 "in segni", "glossario in lis"))
 
 
 def main() -> int:
@@ -159,7 +170,20 @@ def main() -> int:
     except Exception as e:
         print(f"  Errore canale Io non rischio: {e}", file=sys.stderr)
 
-    # 4) Canale Abili a Proteggere (HTML scrape) — tutti i Glossario in LIS
+    # 4) Feed canale DPCgov (ufficiale PCM) — filtra per LIS nel titolo.
+    # Il canale non ha playlist LIS dedicata, ma occasionalmente pubblica
+    # video con interprete LIS (eventi istituzionali, conferenze stampa).
+    try:
+        feed = parse_feed(fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_DPCGOV}"))
+        for v in feed:
+            v["channel"] = "dpcgov (canale ufficiale DPC-PCM)"
+            v["is_lis"] = is_lis_plausible(v["title"])
+            candidates.append(v)
+        print(f"  Canale DPCgov: {len(feed)} video (di cui LIS plausibili: {sum(1 for v in feed if is_lis_plausible(v['title']))})", file=sys.stderr)
+    except Exception as e:
+        print(f"  Errore canale DPCgov: {e}", file=sys.stderr)
+
+    # 5) Canale Abili a Proteggere (HTML scrape) — tutti i Glossario in LIS
     try:
         scraped = scrape_channel_videos("https://www.youtube.com/@abiliaproteggere4520/videos")
         for v in scraped:
