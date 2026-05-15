@@ -1,0 +1,115 @@
+name: Aggiorna catalogo video + cross-match
+
+# Re-scraping mensile dei 3 canali YouTube monitorati (Io non rischio,
+# DPCgov, Abili a Proteggere) e rigenerazione della mappa
+# pagina→video_correlati per integrazione automatica nelle pagine del sito.
+#
+# Logica:
+#  1. scrape-catalogo-video.py via yt-dlp → data/video_dpc_catalogo.yaml
+#  2. genera-video-correlati.py (IDF cross-match) → data/video_correlati.yaml
+#  3. Se ci sono diff, commit con [skip-aggiorna-video] + ri-trigger deploy
+#
+# Scaglionato 1° del mese 10:13 UTC (fuori quarti d'ora canonici, in mezzo
+# alla finestra di manutenzione).
+
+on:
+  schedule:
+    - cron: '13 10 1 * *'   # Ogni 1° del mese, 10:13 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  aggiorna-video:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yt-dlp pyyaml
+
+      - name: Scrape catalogo completo
+        run: python3 scripts/scrape-catalogo-video.py
+
+      - name: Genera mappa video correlati
+        run: python3 scripts/genera-video-correlati.py --min-score 3.0 --max-per-page 3
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Verifica build Hugo
+        run: hugo --quiet --minify
+
+      - name: Check diff
+        id: diff
+        run: |
+          if git diff --quiet data/video_dpc_catalogo.yaml data/video_correlati.yaml; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "Nessuna modifica nel catalogo o nella mappa."
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            # Statistiche per il commit message
+            CAT=$(python3 -c "
+          import yaml
+          with open('data/video_dpc_catalogo.yaml') as f: d = yaml.safe_load(f)
+          print(len(d['video']))
+          ")
+            PAG=$(python3 -c "
+          import yaml
+          with open('data/video_correlati.yaml') as f: d = yaml.safe_load(f)
+          print(len(d['pagine']))
+          ")
+            LINK=$(python3 -c "
+          import yaml
+          with open('data/video_correlati.yaml') as f: d = yaml.safe_load(f)
+          print(sum(len(p['video']) for p in d['pagine'].values()))
+          ")
+            echo "cat_count=$CAT" >> "$GITHUB_OUTPUT"
+            echo "pag_count=$PAG" >> "$GITHUB_OUTPUT"
+            echo "link_count=$LINK" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit modifiche
+        if: steps.diff.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/video_dpc_catalogo.yaml data/video_correlati.yaml
+          git commit -m "[skip-aggiorna-video] Aggiorna catalogo video DPC/AaP
+
+          Re-scraping mensile dei 3 canali monitorati + rigenerazione mappa
+          pagina→video_correlati via algoritmo IDF cross-match.
+
+          - Video totali nel catalogo: ${{ steps.diff.outputs.cat_count }}
+          - Pagine del sito con video correlati: ${{ steps.diff.outputs.pag_count }}
+          - Link totali integrati: ${{ steps.diff.outputs.link_count }}
+
+          Generato dal workflow aggiorna-video-correlati.yml (cron mensile).
+          La selezione resta editoriale: per escludere video falsi positivi
+          rimuovi manualmente la voce da data/video_correlati.yaml e committa."
+          git push origin main
+
+      - name: Triggera deploy
+        if: steps.diff.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # GITHUB_TOKEN push non auto-triggera deploy.yml, lo lanciamo
+          # esplicitamente
+          gh workflow run deploy.yml
