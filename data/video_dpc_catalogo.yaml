@@ -1,0 +1,3006 @@
+# Catalogo completo dei video LIS + eventi sui 3 canali YouTube
+# monitorati. Generato da scripts/scrape-catalogo-video.py.
+# Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
+# per il cross-match con i contenuti del sito.
+#
+# Totale: 597 video (3 canali).
+
+canali:
+  abili-a-proteggere:
+    nome: Abili a Proteggere
+    url: https://www.youtube.com/@abiliaproteggere4520/videos
+    video_count: 124
+  dpc-gov:
+    nome: Dipartimento della Protezione Civile (PCM)
+    url: https://www.youtube.com/@DPCgov/videos
+    video_count: 376
+  io-non-rischio:
+    nome: Io non rischio
+    url: https://www.youtube.com/@io_non_rischio/videos
+    video_count: 97
+video:
+  abili-a-proteggere--8j4TkuV6jU:
+    canale: abili-a-proteggere
+    id: -8j4TkuV6jU
+    titolo: '#NienteDiSpeciale: Intervista a Giuseppe Petrucci presidente Ente Nazionale Sordi'
+    url: https://youtu.be/-8j4TkuV6jU
+  abili-a-proteggere--BdXOck8Cd8:
+    canale: abili-a-proteggere
+    id: -BdXOck8Cd8
+    titolo: '#NienteDiSpeciale: Intervista a Silvia Assennato - formazione, autosoccorso e autocensimento'
+    url: https://youtu.be/-BdXOck8Cd8
+  abili-a-proteggere--VCUHAjZyIc:
+    canale: abili-a-proteggere
+    id: -VCUHAjZyIc
+    titolo: '#NienteDiSpeciale: Intervista a Roberto Romeo presidente ANGLAT'
+    url: https://youtu.be/-VCUHAjZyIc
+  abili-a-proteggere--i75MR2EFGQ:
+    canale: abili-a-proteggere
+    id: -i75MR2EFGQ
+    titolo: 'Glossario in LIS: Aree di attesa'
+    url: https://youtu.be/-i75MR2EFGQ
+  abili-a-proteggere--uo5YHl0qy4:
+    canale: abili-a-proteggere
+    id: -uo5YHl0qy4
+    titolo: '#NienteDiSpeciale: Intervista a Giampiero Griffo'
+    url: https://youtu.be/-uo5YHl0qy4
+  abili-a-proteggere-06YsmvWwmQ4:
+    canale: abili-a-proteggere
+    id: 06YsmvWwmQ4
+    titolo: '#NienteDiSpeciale: Intervista a Iacopo Melio fondatore della Onlus #vorreiprendereiltreno'
+    url: https://youtu.be/06YsmvWwmQ4
+  abili-a-proteggere-1A-exeeR1Tc:
+    canale: abili-a-proteggere
+    id: 1A-exeeR1Tc
+    titolo: 'Glossario in LIS: Aree di accoglienza'
+    url: https://youtu.be/1A-exeeR1Tc
+  abili-a-proteggere-2oZHTrIAXi0:
+    canale: abili-a-proteggere
+    id: 2oZHTrIAXi0
+    titolo: 'Presidente Mattarella: "rimuovere ogni barriera che limiti i diritti delle persone con disabilità'
+    url: https://youtu.be/2oZHTrIAXi0
+  abili-a-proteggere-4WZ2LXGvHDU:
+    canale: abili-a-proteggere
+    id: 4WZ2LXGvHDU
+    titolo: 'Glossario in LIS: Centro funzionale per finalità di protezione civile (rete dei Cfc)'
+    url: https://youtu.be/4WZ2LXGvHDU
+  abili-a-proteggere-5Ow7QuWo-So:
+    canale: abili-a-proteggere
+    id: 5Ow7QuWo-So
+    titolo: 'Glossario in LIS: Aree di ammassamento soccorritori e risorse'
+    url: https://youtu.be/5Ow7QuWo-So
+  abili-a-proteggere-6Ue54lPvZ48:
+    canale: abili-a-proteggere
+    id: 6Ue54lPvZ48
+    titolo: La centralità della solidarietà - Paolo Giordano (fisico delle particelle, saggista, giornalista)
+    url: https://youtu.be/6Ue54lPvZ48
+  abili-a-proteggere-6cdj_38nH9k:
+    canale: abili-a-proteggere
+    id: 6cdj_38nH9k
+    titolo: '#NienteDiSpeciale: Intervista a Mario Nodari, resp. comunicazione Ass. Supporto Nazionale Emergenze​'
+    url: https://youtu.be/6cdj_38nH9k
+  abili-a-proteggere-6vs0l5jfx1s:
+    canale: abili-a-proteggere
+    id: 6vs0l5jfx1s
+    titolo: Io non rischio 2018
+    url: https://youtu.be/6vs0l5jfx1s
+  abili-a-proteggere-73Y4xtB--lQ:
+    canale: abili-a-proteggere
+    id: 73Y4xtB--lQ
+    titolo: '#NienteDiSpeciale​: intervista a Sammy Basso Associazione Italiana Progeria'
+    url: https://youtu.be/73Y4xtB--lQ
+  abili-a-proteggere-7o7ACTa6F68:
+    canale: abili-a-proteggere
+    id: 7o7ACTa6F68
+    titolo: '#NienteDiSpeciale: Intervista a Vincenzo Falabella presidente Fish'
+    url: https://youtu.be/7o7ACTa6F68
+  abili-a-proteggere-81NMK5yqLy0:
+    canale: abili-a-proteggere
+    id: 81NMK5yqLy0
+    titolo: 'Glossario in LIS: Eruzioni esplosive'
+    url: https://youtu.be/81NMK5yqLy0
+  abili-a-proteggere-88NyIgS1PbE:
+    canale: abili-a-proteggere
+    id: 88NyIgS1PbE
+    titolo: '#NienteDiSpeciale: Intervista a Carmine Lizza su Anpas e disabilità'
+    url: https://youtu.be/88NyIgS1PbE
+  abili-a-proteggere-8MkXPjfgoaE:
+    canale: abili-a-proteggere
+    id: 8MkXPjfgoaE
+    titolo: Intervista ad Andrea Zaccone - Dirigente della UO Protezione Civile Regione Lombardia
+    url: https://youtu.be/8MkXPjfgoaE
+  abili-a-proteggere-9Dk3gnv5Jpo:
+    canale: abili-a-proteggere
+    id: 9Dk3gnv5Jpo
+    titolo: '#NienteDiSpeciale: Intervista a Maurizio Fiorda Presidente Nazionale di C.I.V.E.S'
+    url: https://youtu.be/9Dk3gnv5Jpo
+  abili-a-proteggere-ANy5seKbNAQ:
+    canale: abili-a-proteggere
+    id: ANy5seKbNAQ
+    titolo: 'Glossario in LIS: Classificazione sismica'
+    url: https://youtu.be/ANy5seKbNAQ
+  abili-a-proteggere-AkNeH7HEZuk:
+    canale: abili-a-proteggere
+    id: AkNeH7HEZuk
+    titolo: '#NienteDiSpeciale: intervista a Stefania Leone, ADV, Associazione Disabili Visivi'
+    url: https://youtu.be/AkNeH7HEZuk
+  abili-a-proteggere-B9IqdiEiM3o:
+    canale: abili-a-proteggere
+    id: B9IqdiEiM3o
+    titolo: 'Glossario in LIS: Sistema informativo gestione emergenza'
+    url: https://youtu.be/B9IqdiEiM3o
+  abili-a-proteggere-C16hv6OgGOU:
+    canale: abili-a-proteggere
+    id: C16hv6OgGOU
+    titolo: '#NienteDiSpeciale: intervista a Stefano Zanut CNVVF'
+    url: https://youtu.be/C16hv6OgGOU
+  abili-a-proteggere-COprCBE0iyY:
+    canale: abili-a-proteggere
+    id: COprCBE0iyY
+    titolo: '#NienteDiSpeciale: Intervista a Fabio Mangani presidente Prociv-Arci'
+    url: https://youtu.be/COprCBE0iyY
+  abili-a-proteggere-ConPTCXMrug:
+    canale: abili-a-proteggere
+    id: ConPTCXMrug
+    titolo: '#NienteDiSpeciale: intervista a Consuelo Agnesi'
+    url: https://youtu.be/ConPTCXMrug
+  abili-a-proteggere-DgyNXXwl42M:
+    canale: abili-a-proteggere
+    id: DgyNXXwl42M
+    titolo: '#NienteDiSpeciale: Intervista all''architetto Elisabetta Schiavone'
+    url: https://youtu.be/DgyNXXwl42M
+  abili-a-proteggere-Ia_Uf9i6BTk:
+    canale: abili-a-proteggere
+    id: Ia_Uf9i6BTk
+    titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+    url: https://youtu.be/Ia_Uf9i6BTk
+  abili-a-proteggere-Ihj9G0pjOh4:
+    canale: abili-a-proteggere
+    id: Ihj9G0pjOh4
+    titolo: 'Glossario in LIS: Bollettino di criticità/allerta'
+    url: https://youtu.be/Ihj9G0pjOh4
+  abili-a-proteggere-JA4rl94AE9E:
+    canale: abili-a-proteggere
+    id: JA4rl94AE9E
+    titolo: 'Glossario in LIS: Dicomac'
+    url: https://youtu.be/JA4rl94AE9E
+  abili-a-proteggere-Jkcd_8TIavc:
+    canale: abili-a-proteggere
+    id: Jkcd_8TIavc
+    titolo: 'Glossario in LIS: Fumarola'
+    url: https://youtu.be/Jkcd_8TIavc
+  abili-a-proteggere-JrkBqmIUtrU:
+    canale: abili-a-proteggere
+    id: JrkBqmIUtrU
+    titolo: Intervista a Mauro Casinghini, Direttore generale Agenzia della Protezione civile Regione Abruzzo
+    url: https://youtu.be/JrkBqmIUtrU
+  abili-a-proteggere-JuR9zL7ZHT8:
+    canale: abili-a-proteggere
+    id: JuR9zL7ZHT8
+    titolo: '#NienteDiSpeciale: intervista a Paolo Ruffini'
+    url: https://youtu.be/JuR9zL7ZHT8
+  abili-a-proteggere-KgVWOINY0CU:
+    canale: abili-a-proteggere
+    id: KgVWOINY0CU
+    titolo: 'Glossario in LIS: Componenti'
+    url: https://youtu.be/KgVWOINY0CU
+  abili-a-proteggere-LNzSezlcJG4:
+    canale: abili-a-proteggere
+    id: LNzSezlcJG4
+    titolo: Quale messaggio lasciare? -  Elisa Palazzi (climatologa, Università di Torino)
+    url: https://youtu.be/LNzSezlcJG4
+  abili-a-proteggere-LVVDJSYf1oA:
+    canale: abili-a-proteggere
+    id: LVVDJSYf1oA
+    titolo: '#NienteDiSpeciale: intervista a Luca Rotondi - presidente di Emergenza Sordi'
+    url: https://youtu.be/LVVDJSYf1oA
+  abili-a-proteggere-NVGl55mPITc:
+    canale: abili-a-proteggere
+    id: NVGl55mPITc
+    titolo: '#NienteDiSpeciale: intervista a Agnese Rossi ANC "Roma1"'
+    url: https://youtu.be/NVGl55mPITc
+  abili-a-proteggere-Np56yTydrOI:
+    canale: abili-a-proteggere
+    id: Np56yTydrOI
+    titolo: 'Glossario in LIS: Strutture operative nazionali'
+    url: https://youtu.be/Np56yTydrOI
+  abili-a-proteggere-Ok4mVQDypVE:
+    canale: abili-a-proteggere
+    id: Ok4mVQDypVE
+    titolo: 'Glossario in LIS: Sala operativa unificata permanente'
+    url: https://youtu.be/Ok4mVQDypVE
+  abili-a-proteggere-PqWpRDCBBW4:
+    canale: abili-a-proteggere
+    id: PqWpRDCBBW4
+    titolo: '#NienteDiSpeciale: Intervista a Danilo Ragona e Luca Paiardi - ideatori del progetto Viaggio Italia'
+    url: https://youtu.be/PqWpRDCBBW4
+  abili-a-proteggere-Q4xOdRf2xfY:
+    canale: abili-a-proteggere
+    id: Q4xOdRf2xfY
+    titolo: '#NienteDiSpeciale: intervista a Emiliano Malagoli presidente Onlus Di.Di. Diversamente Disabili'
+    url: https://youtu.be/Q4xOdRf2xfY
+  abili-a-proteggere-Q9JaOMzqd1w:
+    canale: abili-a-proteggere
+    id: Q9JaOMzqd1w
+    titolo: 'Glossario in LIS: COC - Centro Operativo Comunale'
+    url: https://youtu.be/Q9JaOMzqd1w
+  abili-a-proteggere-QFQtk_XfdS4:
+    canale: abili-a-proteggere
+    id: QFQtk_XfdS4
+    titolo: 'Glossario in LIS: Esercitazione di protezione civile'
+    url: https://youtu.be/QFQtk_XfdS4
+  abili-a-proteggere-R00PZpq-hhk:
+    canale: abili-a-proteggere
+    id: R00PZpq-hhk
+    titolo: '#NienteDiSpeciale: Abili a proteggere intervista Gian Antonio Stella'
+    url: https://youtu.be/R00PZpq-hhk
+  abili-a-proteggere-T7D5KT6NrxA:
+    canale: abili-a-proteggere
+    id: T7D5KT6NrxA
+    titolo: Qualificare il rischio - Massimo Crescimbene (psicologo Ingv)
+    url: https://youtu.be/T7D5KT6NrxA
+  abili-a-proteggere-TA79weXs8W8:
+    canale: abili-a-proteggere
+    id: TA79weXs8W8
+    titolo: '#NienteDiSpeciale: Intervista a Gerardo Solaro del Borgo, Presidente del CISOM'
+    url: https://youtu.be/TA79weXs8W8
+  abili-a-proteggere-TQbxtV7G9QI:
+    canale: abili-a-proteggere
+    id: TQbxtV7G9QI
+    titolo: '#NienteDiSpeciale: intervista a G. Pisano, SSB, M. Simone, Fand Calabria e A. Bianchi, Fish Calabria'
+    url: https://youtu.be/TQbxtV7G9QI
+  abili-a-proteggere-Tc3zhweSzE4:
+    canale: abili-a-proteggere
+    id: Tc3zhweSzE4
+    titolo: Sala monitoraggio terremoti e tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami)
+    url: https://youtu.be/Tc3zhweSzE4
+  abili-a-proteggere-U1ogOp6cKAk:
+    canale: abili-a-proteggere
+    id: U1ogOp6cKAk
+    titolo: 'Glossario in LIS: Epicentro'
+    url: https://youtu.be/U1ogOp6cKAk
+  abili-a-proteggere-U4j6xvwqh34:
+    canale: abili-a-proteggere
+    id: U4j6xvwqh34
+    titolo: '#NienteDiSpeciale: Intervista a Benedetta Demartis presidente dell''ANGSA'
+    url: https://youtu.be/U4j6xvwqh34
+  abili-a-proteggere-Va3JjF9n8yk:
+    canale: abili-a-proteggere
+    id: Va3JjF9n8yk
+    titolo: L'equazione del rischio - Antonello Provenzale (Direttore Istituto Geoscienze e Georisorse del Cnr)
+    url: https://youtu.be/Va3JjF9n8yk
+  abili-a-proteggere-WA6HZdcMTHw:
+    canale: abili-a-proteggere
+    id: WA6HZdcMTHw
+    titolo: Attività Abili a proteggere 2017
+    url: https://youtu.be/WA6HZdcMTHw
+  abili-a-proteggere-WMqDdYseamU:
+    canale: abili-a-proteggere
+    id: WMqDdYseamU
+    titolo: Kit emergenza Io non rischio
+    url: https://youtu.be/WMqDdYseamU
+  abili-a-proteggere-WU-vErzbN5U:
+    canale: abili-a-proteggere
+    id: WU-vErzbN5U
+    titolo: 'Glossario in LIS: Colonna Mobile Nazionale'
+    url: https://youtu.be/WU-vErzbN5U
+  abili-a-proteggere-Wq11ZtK4imA:
+    canale: abili-a-proteggere
+    id: Wq11ZtK4imA
+    titolo: '#NienteDiSpeciale: Intervista a Emilio Garau  Presidente PROCIV ITALIA'
+    url: https://youtu.be/Wq11ZtK4imA
+  abili-a-proteggere-X4NnIjLN86U:
+    canale: abili-a-proteggere
+    id: X4NnIjLN86U
+    titolo: '#NienteDiSpeciale: intervista a Cosimo Cilli - Responsabile Protezione Civile Unitalsi'
+    url: https://youtu.be/X4NnIjLN86U
+  abili-a-proteggere-XHA2duGlElg:
+    canale: abili-a-proteggere
+    id: XHA2duGlElg
+    titolo: Paolo Ruffini e gli attori della compagnia teatrale Mayor Von Frinzius
+    url: https://youtu.be/XHA2duGlElg
+  abili-a-proteggere-XVVayor2A34:
+    canale: abili-a-proteggere
+    id: XVVayor2A34
+    titolo: Previsione - predizione - Angelo Masi (ordinario di Tecnica delle Costruzioni, ReLUIS)
+    url: https://youtu.be/XVVayor2A34
+  abili-a-proteggere-XWIL73M1pDU:
+    canale: abili-a-proteggere
+    id: XWIL73M1pDU
+    titolo: '#NienteDiSpeciale: Intervista a Marzia Toti - volontaria ANVVFC Delegazione Divino Amore'
+    url: https://youtu.be/XWIL73M1pDU
+  abili-a-proteggere-YLfRQrJ1_14:
+    canale: abili-a-proteggere
+    id: YLfRQrJ1_14
+    titolo: 'Glossario in LIS: Rete accelerometrica nazionale'
+    url: https://youtu.be/YLfRQrJ1_14
+  abili-a-proteggere-YPvLBGOvRog:
+    canale: abili-a-proteggere
+    id: YPvLBGOvRog
+    titolo: Fabrizio Curcio introduce i lavori del convegno “Dal megafono ai social network”
+    url: https://youtu.be/YPvLBGOvRog
+  abili-a-proteggere-Z1lNNzBPVPk:
+    canale: abili-a-proteggere
+    id: Z1lNNzBPVPk
+    titolo: '#NienteDiSpeciale: Intervista a Fabrizio Pregliasco presidente Anpas nazionale'
+    url: https://youtu.be/Z1lNNzBPVPk
+  abili-a-proteggere-ZcmuzPflPSY:
+    canale: abili-a-proteggere
+    id: ZcmuzPflPSY
+    titolo: '#NienteDiSpeciale: Intervista a Roberto Ferri - Società Italiana Psicologia dell''Emergenza'
+    url: https://youtu.be/ZcmuzPflPSY
+  abili-a-proteggere-ZoSFH_IhlT0:
+    canale: abili-a-proteggere
+    id: ZoSFH_IhlT0
+    titolo: Intervista a Gionata Fatichenti, Direttore Area Emergenze Misericordie d'Italia – EXE FLEGREI 2019
+    url: https://youtu.be/ZoSFH_IhlT0
+  abili-a-proteggere-_7lhyAgB_E4:
+    canale: abili-a-proteggere
+    id: _7lhyAgB_E4
+    titolo: Intervista ad Antonio Pasquale Belloi, Direttore Generale della Protezione Civile Regione Sardegna
+    url: https://youtu.be/_7lhyAgB_E4
+  abili-a-proteggere-_SoXPt4FwdA:
+    canale: abili-a-proteggere
+    id: _SoXPt4FwdA
+    titolo: '#NienteDiSpeciale: Intervista a Domenico Barbati, Ass. Medici di Famiglia Volontari per le Emergenze'
+    url: https://youtu.be/_SoXPt4FwdA
+  abili-a-proteggere-_xh2UfBsE2A:
+    canale: abili-a-proteggere
+    id: _xh2UfBsE2A
+    titolo: '#NienteDiSpeciale: Intervista a Rosario Maria Gianluca Valastro vice presidente Croce Rossa Italiana'
+    url: https://youtu.be/_xh2UfBsE2A
+  abili-a-proteggere-a08e7a5njBU:
+    canale: abili-a-proteggere
+    id: a08e7a5njBU
+    titolo: 'Glossario in LIS: Rete simica nazionale'
+    url: https://youtu.be/a08e7a5njBU
+  abili-a-proteggere-aRzN8LhWTmc:
+    canale: abili-a-proteggere
+    id: aRzN8LhWTmc
+    titolo: 'Glossario in LIS: Bollettino di vigilanza meteorologica nazionale'
+    url: https://youtu.be/aRzN8LhWTmc
+  abili-a-proteggere-b5W1-Cj7eu0:
+    canale: abili-a-proteggere
+    id: b5W1-Cj7eu0
+    titolo: Giornata internazionale delle persone con disabilità
+    url: https://youtu.be/b5W1-Cj7eu0
+  abili-a-proteggere-b9uU246oNGk:
+    canale: abili-a-proteggere
+    id: b9uU246oNGk
+    titolo: 'Glossario in LIS: Funzioni di supporto'
+    url: https://youtu.be/b9uU246oNGk
+  abili-a-proteggere-bMGqE0f-Rw0:
+    canale: abili-a-proteggere
+    id: bMGqE0f-Rw0
+    titolo: '#NienteDiSpeciale: Intervista a Nazaro Pagano presidente Anmic'
+    url: https://youtu.be/bMGqE0f-Rw0
+  abili-a-proteggere-bYxj66uJQHc:
+    canale: abili-a-proteggere
+    id: bYxj66uJQHc
+    titolo: '#NienteDiSpeciale: Intervista a Carmine Lizza su Anpas e Protezione Civile'
+    url: https://youtu.be/bYxj66uJQHc
+  abili-a-proteggere-cLfE9CQ33vc:
+    canale: abili-a-proteggere
+    id: cLfE9CQ33vc
+    titolo: Sei preparato in caso di venti forti o burrasca?
+    url: https://youtu.be/cLfE9CQ33vc
+  abili-a-proteggere-cczCEixlJ7I:
+    canale: abili-a-proteggere
+    id: cczCEixlJ7I
+    titolo: '#NienteDiSpeciale: Intervista a Roberto Scano Presidente Commissione UNINFO e-Accessibility'
+    url: https://youtu.be/cczCEixlJ7I
+  abili-a-proteggere-cj_rQyR56Gs:
+    canale: abili-a-proteggere
+    id: cj_rQyR56Gs
+    titolo: '#NienteDiSpeciale: intervista a Franco Lepore Disability Manager del Comune di Torino'
+    url: https://youtu.be/cj_rQyR56Gs
+  abili-a-proteggere-cuz0YIg-DwY:
+    canale: abili-a-proteggere
+    id: cuz0YIg-DwY
+    titolo: '#NienteDiSpeciale: intervista a Fra Pietro Cicinelli, presidente AFMAL'
+    url: https://youtu.be/cuz0YIg-DwY
+  abili-a-proteggere-d5KdsHZx5pE:
+    canale: abili-a-proteggere
+    id: d5KdsHZx5pE
+    titolo: '#NienteDiSpeciale: Intervista a Paolo Bandiera direttore affari generali AISM'
+    url: https://youtu.be/d5KdsHZx5pE
+  abili-a-proteggere-dXY08iwaj0k:
+    canale: abili-a-proteggere
+    id: dXY08iwaj0k
+    titolo: 'Glossario in LIS: Bradisismo'
+    url: https://youtu.be/dXY08iwaj0k
+  abili-a-proteggere-dbeb45w0tVo:
+    canale: abili-a-proteggere
+    id: dbeb45w0tVo
+    titolo: '#NienteDiSpeciale: intervista ad Antonio Ciotola chef e formatore volontari cucine da campo'
+    url: https://youtu.be/dbeb45w0tVo
+  abili-a-proteggere-dkZLWSEFClI:
+    canale: abili-a-proteggere
+    id: dkZLWSEFClI
+    titolo: '#NienteDiSpeciale: Intervista a Luca Pancalli - Presidente Comitato Italiano Paralimpico'
+    url: https://youtu.be/dkZLWSEFClI
+  abili-a-proteggere-dms19PfH1Mc:
+    canale: abili-a-proteggere
+    id: dms19PfH1Mc
+    titolo: 'Glossario in LIS : Aree di emergenza'
+    url: https://youtu.be/dms19PfH1Mc
+  abili-a-proteggere-e_bwJY-3fh8:
+    canale: abili-a-proteggere
+    id: e_bwJY-3fh8
+    titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+    url: https://youtu.be/e_bwJY-3fh8
+  abili-a-proteggere-eipXsdeGp50:
+    canale: abili-a-proteggere
+    id: eipXsdeGp50
+    titolo: '#NienteDiSpeciale: Intervista a Vincenzo Costa presidente nazionale Auser'
+    url: https://youtu.be/eipXsdeGp50
+  abili-a-proteggere-fjgLpfoIX0g:
+    canale: abili-a-proteggere
+    id: fjgLpfoIX0g
+    titolo: '#NienteDiSpeciale: Intervista a Michelangelo Gratton, fondatore di Ability Channel'
+    url: https://youtu.be/fjgLpfoIX0g
+  abili-a-proteggere-gAIcSfhIFOk:
+    canale: abili-a-proteggere
+    id: gAIcSfhIFOk
+    titolo: '#NienteDiSpeciale: intervista al dott. Pagliaccia vice coord. sanitario Istituto San Giovanni di Dio'
+    url: https://youtu.be/gAIcSfhIFOk
+  abili-a-proteggere-gOnj_Lw0lMs:
+    canale: abili-a-proteggere
+    id: gOnj_Lw0lMs
+    titolo: 'Glossario in LIS: Eruzioni effusive'
+    url: https://youtu.be/gOnj_Lw0lMs
+  abili-a-proteggere-gh0Hmf3Jhr4:
+    canale: abili-a-proteggere
+    id: gh0Hmf3Jhr4
+    titolo: '#NienteDiSpeciale: Intervista a Pablo, autismo, protezione civile e autonomia'
+    url: https://youtu.be/gh0Hmf3Jhr4
+  abili-a-proteggere-hypvowP2lXI:
+    canale: abili-a-proteggere
+    id: hypvowP2lXI
+    titolo: '#NienteDiSpeciale: Intervista a Anna Fusco e Chiara Bordi'
+    url: https://youtu.be/hypvowP2lXI
+  abili-a-proteggere-jHD_z0dSSCI:
+    canale: abili-a-proteggere
+    id: jHD_z0dSSCI
+    titolo: Abili a Proteggere - le origini
+    url: https://youtu.be/jHD_z0dSSCI
+  abili-a-proteggere-jJpZO_erLUQ:
+    canale: abili-a-proteggere
+    id: jJpZO_erLUQ
+    titolo: Intervista a David Piccinini - Direttore Generale servizio protezione civile regione Marche
+    url: https://youtu.be/jJpZO_erLUQ
+  abili-a-proteggere-jW8-8ky2v-g:
+    canale: abili-a-proteggere
+    id: jW8-8ky2v-g
+    titolo: Foto attività Abili a proteggere
+    url: https://youtu.be/jW8-8ky2v-g
+  abili-a-proteggere-j_dSWRv7krs:
+    canale: abili-a-proteggere
+    id: j_dSWRv7krs
+    titolo: '#NienteDiSpeciale: Intervista a Tiziana Grilli presidente AIPD'
+    url: https://youtu.be/j_dSWRv7krs
+  abili-a-proteggere-jy4kGt-eFWg:
+    canale: abili-a-proteggere
+    id: jy4kGt-eFWg
+    titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+    url: https://youtu.be/jy4kGt-eFWg
+  abili-a-proteggere-k3svI11aiwQ:
+    canale: abili-a-proteggere
+    id: k3svI11aiwQ
+    titolo: 'Glossario in LIS: Livelli di allerta per il rischio meteo-idro'
+    url: https://youtu.be/k3svI11aiwQ
+  abili-a-proteggere-kqLsEnanSKk:
+    canale: abili-a-proteggere
+    id: kqLsEnanSKk
+    titolo: 'Glossario in LIS: Eruzione vulcanica'
+    url: https://youtu.be/kqLsEnanSKk
+  abili-a-proteggere-lBaJLyC7-Qs:
+    canale: abili-a-proteggere
+    id: lBaJLyC7-Qs
+    titolo: '#NienteDiSpeciale: Abili a proteggere intervista Susanna Balducci'
+    url: https://youtu.be/lBaJLyC7-Qs
+  abili-a-proteggere-lPwrsDvO1J8:
+    canale: abili-a-proteggere
+    id: lPwrsDvO1J8
+    titolo: '#NienteDiSpeciale: intervista ad Antonio Giuseppe Malafarina - giornalista e scrittore'
+    url: https://youtu.be/lPwrsDvO1J8
+  abili-a-proteggere-lQXiNcvR7jQ:
+    canale: abili-a-proteggere
+    id: lQXiNcvR7jQ
+    titolo: 'Ondate di calore: 10 consigli per proteggersi'
+    url: https://youtu.be/lQXiNcvR7jQ
+  abili-a-proteggere-mUxzPVncpvM:
+    canale: abili-a-proteggere
+    id: mUxzPVncpvM
+    titolo: '#NienteDiSpeciale: Abili a proteggere intervista Roberta Speziale Anffas'
+    url: https://youtu.be/mUxzPVncpvM
+  abili-a-proteggere-mmX73__eS-8:
+    canale: abili-a-proteggere
+    id: mmX73__eS-8
+    titolo: Il Direttore Agostino Miozzo ricorda l'importanza dei piani comunali di protezione civile
+    url: https://youtu.be/mmX73__eS-8
+  abili-a-proteggere-n9O-ad2Hxyo:
+    canale: abili-a-proteggere
+    id: n9O-ad2Hxyo
+    titolo: Indicazioni operative per la pianificazione inclusiva
+    url: https://youtu.be/n9O-ad2Hxyo
+  abili-a-proteggere-neSt6rIYSic:
+    canale: abili-a-proteggere
+    id: neSt6rIYSic
+    titolo: Vivere il trauma - Edoardo Giordan (schermidore, Fiamme Oro - Polizia di Stato)
+    url: https://youtu.be/neSt6rIYSic
+  abili-a-proteggere-nwqGXP0h34w:
+    canale: abili-a-proteggere
+    id: nwqGXP0h34w
+    titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+    url: https://youtu.be/nwqGXP0h34w
+  abili-a-proteggere-o6LWokLGtXY:
+    canale: abili-a-proteggere
+    id: o6LWokLGtXY
+    titolo: 'Glossario in LIS: Comitato Operativo'
+    url: https://youtu.be/o6LWokLGtXY
+  abili-a-proteggere-qKj_T60Hwc8:
+    canale: abili-a-proteggere
+    id: qKj_T60Hwc8
+    titolo: Intervista a Bernardo Mazzanti, Responsabile Protezione Civile Regione Toscana
+    url: https://youtu.be/qKj_T60Hwc8
+  abili-a-proteggere-qYDhVqwxKiU:
+    canale: abili-a-proteggere
+    id: qYDhVqwxKiU
+    titolo: Campo scuola Val Pescara "Anche io sono la protezione civile"
+    url: https://youtu.be/qYDhVqwxKiU
+  abili-a-proteggere-rxw8AWs2B0E:
+    canale: abili-a-proteggere
+    id: rxw8AWs2B0E
+    titolo: 'Glossario in LIS: Pianificazione di protezione civile'
+    url: https://youtu.be/rxw8AWs2B0E
+  abili-a-proteggere-s7NyKK8EXFQ:
+    canale: abili-a-proteggere
+    id: s7NyKK8EXFQ
+    titolo: La cultura della prevenzione -  Titti Postiglione (Vice Capo del Dipartimento di Protezione Civile)
+    url: https://youtu.be/s7NyKK8EXFQ
+  abili-a-proteggere-sY9mI1fTofA:
+    canale: abili-a-proteggere
+    id: sY9mI1fTofA
+    titolo: 'Glossario in LIS: Normativa antisismica'
+    url: https://youtu.be/sY9mI1fTofA
+  abili-a-proteggere-tWBLKYes5B8:
+    canale: abili-a-proteggere
+    id: tWBLKYes5B8
+    titolo: '#NienteDiSpeciale: Intervista a Nazaro Pagano presidente Fand - protezione civile e disabilità'
+    url: https://youtu.be/tWBLKYes5B8
+  abili-a-proteggere-tzmEiku-yXI:
+    canale: abili-a-proteggere
+    id: tzmEiku-yXI
+    titolo: '#NienteDiSpeciale: Abili a proteggere intervista Oney Tapia'
+    url: https://youtu.be/tzmEiku-yXI
+  abili-a-proteggere-uCpiEWpYoT0:
+    canale: abili-a-proteggere
+    id: uCpiEWpYoT0
+    titolo: '#NienteDiSpeciale: Intervista a Vincenzo Falabella presidente FAIP'
+    url: https://youtu.be/uCpiEWpYoT0
+  abili-a-proteggere-umJULvjqW2o:
+    canale: abili-a-proteggere
+    id: umJULvjqW2o
+    titolo: '#NienteDiSpeciale: intervista a Stella Egidi responsabile medico di Medici Senza Frontiere'
+    url: https://youtu.be/umJULvjqW2o
+  abili-a-proteggere-vYwxNjixlLE:
+    canale: abili-a-proteggere
+    id: vYwxNjixlLE
+    titolo: '#NienteDiSpeciale: Intervista a Donatella Galliano presidente Federazione Psicologi per i Popoli'
+    url: https://youtu.be/vYwxNjixlLE
+  abili-a-proteggere-wJtpPJlLZsE:
+    canale: abili-a-proteggere
+    id: wJtpPJlLZsE
+    titolo: '#NienteDiSpeciale: Intervista a Nazaro Pagano presidente Fand - azioni e obiettivi della Federazione'
+    url: https://youtu.be/wJtpPJlLZsE
+  abili-a-proteggere-wQi_xPD4IvA:
+    canale: abili-a-proteggere
+    id: wQi_xPD4IvA
+    titolo: Conferenza stampa Protezione Civile 14 aprile 2020 ore 18.00 – Coronavirus e disabilità
+    url: https://youtu.be/wQi_xPD4IvA
+  abili-a-proteggere-wdicC3ZzRJU:
+    canale: abili-a-proteggere
+    id: wdicC3ZzRJU
+    titolo: 'Glossario in LIS : Protezione Civile'
+    url: https://youtu.be/wdicC3ZzRJU
+  abili-a-proteggere-wm2mdD9Up3k:
+    canale: abili-a-proteggere
+    id: wm2mdD9Up3k
+    titolo: 'Glossario in LIS: Sala situazione Italia'
+    url: https://youtu.be/wm2mdD9Up3k
+  abili-a-proteggere-xAe635P8qDk:
+    canale: abili-a-proteggere
+    id: xAe635P8qDk
+    titolo: 'Glossario in LIS: Fenomeni precursori'
+    url: https://youtu.be/xAe635P8qDk
+  abili-a-proteggere-xoAlUH-8hcE:
+    canale: abili-a-proteggere
+    id: xoAlUH-8hcE
+    titolo: Diretta nazionale "Io non rischio" 2022 in LIS
+    url: https://youtu.be/xoAlUH-8hcE
+  abili-a-proteggere-xymAoW-l-VA:
+    canale: abili-a-proteggere
+    id: xymAoW-l-VA
+    titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+    url: https://youtu.be/xymAoW-l-VA
+  abili-a-proteggere-yhCLcmFNZaI:
+    canale: abili-a-proteggere
+    id: yhCLcmFNZaI
+    titolo: Il Centro Allerta Tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami - Ingv)
+    url: https://youtu.be/yhCLcmFNZaI
+  abili-a-proteggere-z42iCe_7mG0:
+    canale: abili-a-proteggere
+    id: z42iCe_7mG0
+    titolo: Intervista a Fortunato Varone - Dirigente Generale Dipartimento Protezione Civile Regione Calabria
+    url: https://youtu.be/z42iCe_7mG0
+  abili-a-proteggere-zaM_spcLCV0:
+    canale: abili-a-proteggere
+    id: zaM_spcLCV0
+    titolo: La visione d'insieme - Fabrizio Curcio (Capo del Dipartimento di Protezione Civile)
+    url: https://youtu.be/zaM_spcLCV0
+  dpc-gov--JD2Ay0RcBg:
+    canale: dpc-gov
+    id: -JD2Ay0RcBg
+    titolo: Seminario previsori meteo (4 di 8)
+    url: https://youtu.be/-JD2Ay0RcBg
+  dpc-gov--K5zvQfU-ps:
+    canale: dpc-gov
+    id: -K5zvQfU-ps
+    titolo: Conferenza stampa 28 agosto 2016 ore 13.00 – Terremoto Centro Italia
+    url: https://youtu.be/-K5zvQfU-ps
+  dpc-gov--Q8ynNpWcQQ:
+    canale: dpc-gov
+    id: -Q8ynNpWcQQ
+    titolo: 'La scienza nel futuro della protezione civile: intervista a Mauro Dolce'
+    url: https://youtu.be/-Q8ynNpWcQQ
+  dpc-gov--Wo1cmGFcWQ:
+    canale: dpc-gov
+    id: -Wo1cmGFcWQ
+    titolo: Conferenza stampa 22 gennaio 2017 ore 10.30 – Terremoto Centro Italia
+    url: https://youtu.be/-Wo1cmGFcWQ
+  dpc-gov--fRczo32vkE:
+    canale: dpc-gov
+    id: -fRczo32vkE
+    titolo: Fabrizio Curcio e Nicola Lagioia sul tema "Tra rischi e sostenibilità" – SalTo24
+    url: https://youtu.be/-fRczo32vkE
+  dpc-gov-0--y1oKrz-4:
+    canale: dpc-gov
+    id: 0--y1oKrz-4
+    titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+    url: https://youtu.be/0--y1oKrz-4
+  dpc-gov-0-6oRTWk5O4:
+    canale: dpc-gov
+    id: 0-6oRTWk5O4
+    titolo: Il recupero del carburante dall'alto – Naufragio Concordia
+    url: https://youtu.be/0-6oRTWk5O4
+  dpc-gov-06hxN3HOqNI:
+    canale: dpc-gov
+    id: 06hxN3HOqNI
+    titolo: Conferenza stampa 2 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/06hxN3HOqNI
+  dpc-gov-0JztqATnvGg:
+    canale: dpc-gov
+    id: 0JztqATnvGg
+    titolo: Il Capo Dipartimento incontra i cittadini di Accumoli – Terremoto Centro Italia
+    url: https://youtu.be/0JztqATnvGg
+  dpc-gov-0U6OSmNcAiw:
+    canale: dpc-gov
+    id: 0U6OSmNcAiw
+    titolo: Conferenza stampa 12 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/0U6OSmNcAiw
+  dpc-gov-0pNSQMjXonA:
+    canale: dpc-gov
+    id: 0pNSQMjXonA
+    titolo: Conferenza stampa 26 febbraio 2020 ore 12.00 – Coronavirus
+    url: https://youtu.be/0pNSQMjXonA
+  dpc-gov-1EPKMSirtVI:
+    canale: dpc-gov
+    id: 1EPKMSirtVI
+    titolo: L'intervento di Giorgio Napolitano – Stati Generali del Volontariato di Protezione Civile
+    url: https://youtu.be/1EPKMSirtVI
+  dpc-gov-1a4RglswwP0:
+    canale: dpc-gov
+    id: 1a4RglswwP0
+    titolo: La rimozione dello scoglio dal relitto – Naufragio Concordia
+    url: https://youtu.be/1a4RglswwP0
+  dpc-gov-1udf_hQQjtc:
+    canale: dpc-gov
+    id: 1udf_hQQjtc
+    titolo: Conferenza stampa 27 agosto 2016 ore 9.00 – Terremoto Centro Italia
+    url: https://youtu.be/1udf_hQQjtc
+  dpc-gov-1zpqQzMy8qY:
+    canale: dpc-gov
+    id: 1zpqQzMy8qY
+    titolo: Open Day al Dipartimento della Protezione Civile
+    url: https://youtu.be/1zpqQzMy8qY
+  dpc-gov-25ci6GjB-so:
+    canale: dpc-gov
+    id: 25ci6GjB-so
+    titolo: Il volontariato di protezione civile – Settimana Nazionale della Protezione Civile 2020
+    url: https://youtu.be/25ci6GjB-so
+  dpc-gov-2AlSvdzzkTM:
+    canale: dpc-gov
+    id: 2AlSvdzzkTM
+    titolo: La testimonianza di un medico dell'ospedale da campo italiano – Terremoto Nepal
+    url: https://youtu.be/2AlSvdzzkTM
+  dpc-gov-2Evnqcfry8Q:
+    canale: dpc-gov
+    id: 2Evnqcfry8Q
+    titolo: L'intervento italiano a una settimana dal sisma – Terremoto Turchia e Siria
+    url: https://youtu.be/2Evnqcfry8Q
+  dpc-gov-2LkIejoezIM:
+    canale: dpc-gov
+    id: 2LkIejoezIM
+    titolo: 'Stromboli: l''attività vulcanica di luglio e agosto 2019 e l''impegno del sistema di protezione civile'
+    url: https://youtu.be/2LkIejoezIM
+  dpc-gov-2N_kkwjEbMg:
+    canale: dpc-gov
+    id: 2N_kkwjEbMg
+    titolo: 'Promo 2022 sul volontariato di protezione civile: "Il futuro è insieme"'
+    url: https://youtu.be/2N_kkwjEbMg
+  dpc-gov-2_pnGr9GLyQ:
+    canale: dpc-gov
+    id: 2_pnGr9GLyQ
+    titolo: Closing Ceremony 23 nov 2018 – EFDRR 2018
+    url: https://youtu.be/2_pnGr9GLyQ
+  dpc-gov-2iqDEZQh3a8:
+    canale: dpc-gov
+    id: 2iqDEZQh3a8
+    titolo: Modello digitale 3D delle deformazioni – Naufragio Concordia
+    url: https://youtu.be/2iqDEZQh3a8
+  dpc-gov-3GBgFZJacIc:
+    canale: dpc-gov
+    id: 3GBgFZJacIc
+    titolo: 'Giornata Servizio Civile Universale: Annalia e Andrea raccontano la loro esperienza al Dipartimento'
+    url: https://youtu.be/3GBgFZJacIc
+  dpc-gov-3GDIYdwbwx0:
+    canale: dpc-gov
+    id: 3GDIYdwbwx0
+    titolo: Conferenza stampa 2 aprile 2020 ore 18.00 – Coronavirus​
+    url: https://youtu.be/3GDIYdwbwx0
+  dpc-gov-3JJ0tafRvoA:
+    canale: dpc-gov
+    id: 3JJ0tafRvoA
+    titolo: Dichiarazione del Capo Dipartimento Borrelli 17 febbraio 2020 – Coronavirus
+    url: https://youtu.be/3JJ0tafRvoA
+  dpc-gov-3V_Cujoe5x4:
+    canale: dpc-gov
+    id: 3V_Cujoe5x4
+    titolo: Conferenza stampa 25 agosto 2016 ore 17.30 – Terremoto Centro Italia
+    url: https://youtu.be/3V_Cujoe5x4
+  dpc-gov-3aDF3Rjs_jE:
+    canale: dpc-gov
+    id: 3aDF3Rjs_jE
+    titolo: Workshop annuale Programma/gen 2019 (3 di 3) – Protezione civile e PONGOV 2014-2020
+    url: https://youtu.be/3aDF3Rjs_jE
+  dpc-gov-3c_4vjCWYZg:
+    canale: dpc-gov
+    id: 3c_4vjCWYZg
+    titolo: Sorvolo su Arquata del Tronto (AP) – Terremoto Centro Italia
+    url: https://youtu.be/3c_4vjCWYZg
+  dpc-gov-3cs5ekyCU4Y:
+    canale: dpc-gov
+    id: 3cs5ekyCU4Y
+    titolo: Conferenza stampa 29 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/3cs5ekyCU4Y
+  dpc-gov-3nXk4GzmP_M:
+    canale: dpc-gov
+    id: 3nXk4GzmP_M
+    titolo: Il racconto delle attività del sistema di protezione civile – Crollo Ponte Morandi
+    url: https://youtu.be/3nXk4GzmP_M
+  dpc-gov-3qWdsc994kk:
+    canale: dpc-gov
+    id: 3qWdsc994kk
+    titolo: Mattarella consegna la Medaglia al Valore al Dipartimento – Medaglia d'oro al Valore Civile
+    url: https://youtu.be/3qWdsc994kk
+  dpc-gov-3zCCZIjX1Xg:
+    canale: dpc-gov
+    id: 3zCCZIjX1Xg
+    titolo: L'intervento di Simone Andreotti – Stati Generali del Volontariato di Protezione Civile
+    url: https://youtu.be/3zCCZIjX1Xg
+  dpc-gov-4-r2rPCOEPM:
+    canale: dpc-gov
+    id: 4-r2rPCOEPM
+    titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+    url: https://youtu.be/4-r2rPCOEPM
+  dpc-gov-4UBxxIfaGL4:
+    canale: dpc-gov
+    id: 4UBxxIfaGL4
+    titolo: Spot 2006 sul rischio incendi boschivi
+    url: https://youtu.be/4UBxxIfaGL4
+  dpc-gov-4rddsVI1ecw:
+    canale: dpc-gov
+    id: 4rddsVI1ecw
+    titolo: Ricordo del 6 aprile 2009 – Decennale terremoto Abruzzo
+    url: https://youtu.be/4rddsVI1ecw
+  dpc-gov-53T8_i-ROSk:
+    canale: dpc-gov
+    id: 53T8_i-ROSk
+    titolo: L'invio degli aiuti italiani – Emergenza Ucraina
+    url: https://youtu.be/53T8_i-ROSk
+  dpc-gov-53yYyLsFW3Q:
+    canale: dpc-gov
+    id: 53yYyLsFW3Q
+    titolo: Spot 2012 sul rischio incendi boschivi
+    url: https://youtu.be/53yYyLsFW3Q
+  dpc-gov-56_omuXxqQI:
+    canale: dpc-gov
+    id: 56_omuXxqQI
+    titolo: Conferenza stampa 12 novembre 2016 ore 16.00 – Terremoto Centro Italia
+    url: https://youtu.be/56_omuXxqQI
+  dpc-gov-5Cds6O7BFp4:
+    canale: dpc-gov
+    id: 5Cds6O7BFp4
+    titolo: Marco Rossari a partire da "Sotto il Vulcano" di Malcolm Lowry – SalTo24
+    url: https://youtu.be/5Cds6O7BFp4
+  dpc-gov-5M_Pqa1gcrk:
+    canale: dpc-gov
+    id: 5M_Pqa1gcrk
+    titolo: Conferenza stampa 19 novembre 2018 – EFDRR 2018
+    url: https://youtu.be/5M_Pqa1gcrk
+  dpc-gov-5VguRqgDrhs:
+    canale: dpc-gov
+    id: 5VguRqgDrhs
+    titolo: Seminario previsori meteo (1 di 8)
+    url: https://youtu.be/5VguRqgDrhs
+  dpc-gov-5dOUHCl-d9E:
+    canale: dpc-gov
+    id: 5dOUHCl-d9E
+    titolo: Le attività del Posto Medico Avanzato – Ciclone Mozambico
+    url: https://youtu.be/5dOUHCl-d9E
+  dpc-gov-5podakAz7GI:
+    canale: dpc-gov
+    id: 5podakAz7GI
+    titolo: Conferenza stampa 14 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/5podakAz7GI
+  dpc-gov-5vMTP0S0vQ8:
+    canale: dpc-gov
+    id: 5vMTP0S0vQ8
+    titolo: L'allestimento del Posto Medico Avanzato – Ciclone Mozambico
+    url: https://youtu.be/5vMTP0S0vQ8
+  dpc-gov-5zPNWPflc7M:
+    canale: dpc-gov
+    id: 5zPNWPflc7M
+    titolo: Conferenza stampa 30 ottobre 2016 ore 12.00 – Terremoto Centro Italia
+    url: https://youtu.be/5zPNWPflc7M
+  dpc-gov-6Hjhuui1tF8:
+    canale: dpc-gov
+    id: 6Hjhuui1tF8
+    titolo: Le attività di ricerca e soccorso ad Amatrice – Terremoto Centro Italia
+    url: https://youtu.be/6Hjhuui1tF8
+  dpc-gov-6ImZj3WaeQY:
+    canale: dpc-gov
+    id: 6ImZj3WaeQY
+    titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+    url: https://youtu.be/6ImZj3WaeQY
+  dpc-gov-6IxVn9UhXOI:
+    canale: dpc-gov
+    id: 6IxVn9UhXOI
+    titolo: Conferenza stampa 19 gennaio 2017 ore 17.30 – Terremoto Centro Italia
+    url: https://youtu.be/6IxVn9UhXOI
+  dpc-gov-6JuLpVcQurE:
+    canale: dpc-gov
+    id: 6JuLpVcQurE
+    titolo: Il Capo Dipartimento presenta la Settimana – Settimana Nazionale della Protezione Civile 2020
+    url: https://youtu.be/6JuLpVcQurE
+  dpc-gov-6TOPw7IkITI:
+    canale: dpc-gov
+    id: 6TOPw7IkITI
+    titolo: Invio del team della protezione civile italiana in India – Coronavirus
+    url: https://youtu.be/6TOPw7IkITI
+  dpc-gov-6Vo3hNzYJBA:
+    canale: dpc-gov
+    id: 6Vo3hNzYJBA
+    titolo: Conferenza stampa 15 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/6Vo3hNzYJBA
+  dpc-gov-6eeYoCoFn5M:
+    canale: dpc-gov
+    id: 6eeYoCoFn5M
+    titolo: Le attività operative in corso a Niscemi in seguito alla Frana
+    url: https://youtu.be/6eeYoCoFn5M
+  dpc-gov-6ekte5CXsWc:
+    canale: dpc-gov
+    id: 6ekte5CXsWc
+    titolo: Conferenza stampa 16 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/6ekte5CXsWc
+  dpc-gov-703-dYyDlDE:
+    canale: dpc-gov
+    id: 703-dYyDlDE
+    titolo: Giornata nazionale sul volontariato – Settimana Nazionale della Protezione Civile 2021
+    url: https://youtu.be/703-dYyDlDE
+  dpc-gov-7GKL3KVOGLQ:
+    canale: dpc-gov
+    id: 7GKL3KVOGLQ
+    titolo: 'Giornata Servizio Civile Universale: le volontarie raccontano la loro esperienza al Dipartimento'
+    url: https://youtu.be/7GKL3KVOGLQ
+  dpc-gov-7LfXwR1HO7Y:
+    canale: dpc-gov
+    id: 7LfXwR1HO7Y
+    titolo: Allestimento dell'area di accoglienza ad Amatrice – Terremoto Centro Italia
+    url: https://youtu.be/7LfXwR1HO7Y
+  dpc-gov-7OiIpUJMjyc:
+    canale: dpc-gov
+    id: 7OiIpUJMjyc
+    titolo: Conferenza stampa 19 gennaio 2017 ore 13.00 – Terremoto Centro Italia
+    url: https://youtu.be/7OiIpUJMjyc
+  dpc-gov-7RBcEnyHCPU:
+    canale: dpc-gov
+    id: 7RBcEnyHCPU
+    titolo: Conferenza stampa 3 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/7RBcEnyHCPU
+  dpc-gov-7RLK3dWVmdI:
+    canale: dpc-gov
+    id: 7RLK3dWVmdI
+    titolo: L'allestimento della mostra "Terremoti d'Italia" al Forum europeo – EFDRR 2018
+    url: https://youtu.be/7RLK3dWVmdI
+  dpc-gov-7RYjE2nO1L0:
+    canale: dpc-gov
+    id: 7RYjE2nO1L0
+    titolo: Il progetto EMT2 Toscana
+    url: https://youtu.be/7RYjE2nO1L0
+  dpc-gov-7Y8nLJngiZc:
+    canale: dpc-gov
+    id: 7Y8nLJngiZc
+    titolo: Conferenza stampa 24 agosto 2016 ore 19.00 – Terremoto Centro Italia
+    url: https://youtu.be/7Y8nLJngiZc
+  dpc-gov-7hffrTLFtX0:
+    canale: dpc-gov
+    id: 7hffrTLFtX0
+    titolo: Conferenza stampa 25 agosto 2016 ore 8.30 – Terremoto Centro Italia
+    url: https://youtu.be/7hffrTLFtX0
+  dpc-gov-7kfSO7qhqBM:
+    canale: dpc-gov
+    id: 7kfSO7qhqBM
+    titolo: Conferenza stampa 23 febbraio 2020 ore 12.30 – Coronavirus
+    url: https://youtu.be/7kfSO7qhqBM
+  dpc-gov-7q9IP5GpBRw:
+    canale: dpc-gov
+    id: 7q9IP5GpBRw
+    titolo: Il campo di Carsoli (AQ) – Campi scuola "Anch'io sono la protezione civile" 2019
+    url: https://youtu.be/7q9IP5GpBRw
+  dpc-gov-8v4izQL7MuA:
+    canale: dpc-gov
+    id: 8v4izQL7MuA
+    titolo: 'Sarno 1998-2023: il ricordo dei funzionari del Dipartimento'
+    url: https://youtu.be/8v4izQL7MuA
+  dpc-gov-91W1aNc-P90:
+    canale: dpc-gov
+    id: 91W1aNc-P90
+    titolo: Allestimento del campo di accoglienza a Michalovce (Slovacchia) – Emergenza Ucraina
+    url: https://youtu.be/91W1aNc-P90
+  dpc-gov-9B73_iz2bqw:
+    canale: dpc-gov
+    id: 9B73_iz2bqw
+    titolo: Conferenza stampa 11 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/9B73_iz2bqw
+  dpc-gov-9LxJaPpQTFQ:
+    canale: dpc-gov
+    id: 9LxJaPpQTFQ
+    titolo: L'intervento italiano in Sri Lanka a due anni dallo tsunami
+    url: https://youtu.be/9LxJaPpQTFQ
+  dpc-gov-9Ylr4JBLIiQ:
+    canale: dpc-gov
+    id: 9Ylr4JBLIiQ
+    titolo: Conferenza stampa 23 gennaio 2017 ore 12.30 – Terremoto Centro Italia
+    url: https://youtu.be/9Ylr4JBLIiQ
+  dpc-gov-9agnufQ831k:
+    canale: dpc-gov
+    id: 9agnufQ831k
+    titolo: La visita di Conte alla sede operativa del Dpc – Benemerenze di protezione civile
+    url: https://youtu.be/9agnufQ831k
+  dpc-gov-9jiFvSs1yEw:
+    canale: dpc-gov
+    id: 9jiFvSs1yEw
+    titolo: La gestione dell'emergenza – Decennale terremoto Abruzzo
+    url: https://youtu.be/9jiFvSs1yEw
+  dpc-gov-9oEusKsoWqM:
+    canale: dpc-gov
+    id: 9oEusKsoWqM
+    titolo: 'NEIFLEX 2018: international exercise on flood risk management'
+    url: https://youtu.be/9oEusKsoWqM
+  dpc-gov-9olWlF0VMDM:
+    canale: dpc-gov
+    id: 9olWlF0VMDM
+    titolo: Il Capo Dipartimento fa il punto sulle attività in corso a Niscemi
+    url: https://youtu.be/9olWlF0VMDM
+  dpc-gov-9sCCX9mXlPM:
+    canale: dpc-gov
+    id: 9sCCX9mXlPM
+    titolo: Workshop presentazione Programma/apr 2017  (1 di 3) – Protezione civile e PONGOV 2014-2020
+    url: https://youtu.be/9sCCX9mXlPM
+  dpc-gov-A0RLdu7jawI:
+    canale: dpc-gov
+    id: A0RLdu7jawI
+    titolo: Conferenza stampa 10 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/A0RLdu7jawI
+  dpc-gov-A9Jt17gCjlw:
+    canale: dpc-gov
+    id: A9Jt17gCjlw
+    titolo: Conferenza stampa 5 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/A9Jt17gCjlw
+  dpc-gov-AEICrlclH3g:
+    canale: dpc-gov
+    id: AEICrlclH3g
+    titolo: Conferenza stampa 25 febbraio 2020 ore 12.00 – Coronavirus
+    url: https://youtu.be/AEICrlclH3g
+  dpc-gov-AJKMlz1DG6g:
+    canale: dpc-gov
+    id: AJKMlz1DG6g
+    titolo: Conferenza stampa 29 febbraio 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/AJKMlz1DG6g
+  dpc-gov-ANdpQP6fJ2g:
+    canale: dpc-gov
+    id: ANdpQP6fJ2g
+    titolo: Sorvolo 31 ottobre 2016 – Terremoto Centro Italia
+    url: https://youtu.be/ANdpQP6fJ2g
+  dpc-gov-AUo9oQKL-Fw:
+    canale: dpc-gov
+    id: AUo9oQKL-Fw
+    titolo: Conferenza stampa 17 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/AUo9oQKL-Fw
+  dpc-gov-AsI_Jg1bhSo:
+    canale: dpc-gov
+    id: AsI_Jg1bhSo
+    titolo: Il campo di Stromboli (ME) – Campi scuola "Anch'io sono la protezione civile" 2019 (2 di 2)
+    url: https://youtu.be/AsI_Jg1bhSo
+  dpc-gov-B9--XweE0nQ:
+    canale: dpc-gov
+    id: B9--XweE0nQ
+    titolo: 'Sopralluoghi post-sisma: il software Erikus (2 di 2) – Terremoto Centro Italia'
+    url: https://youtu.be/B9--XweE0nQ
+  dpc-gov-BEeFWmfG4dk:
+    canale: dpc-gov
+    id: BEeFWmfG4dk
+    titolo: Il saluto del Capo Dipartimento Borrelli ai volontari formatori di "Io Non Rischio" 2019
+    url: https://youtu.be/BEeFWmfG4dk
+  dpc-gov-BMhPmjiKXwI:
+    canale: dpc-gov
+    id: BMhPmjiKXwI
+    titolo: Conferenza stampa 24 agosto 2016 ore 15.30 – Terremoto Centro Italia
+    url: https://youtu.be/BMhPmjiKXwI
+  dpc-gov-BVAm2Km9fgs:
+    canale: dpc-gov
+    id: BVAm2Km9fgs
+    titolo: Conferenza stampa 20 gennaio 2017 ore 19.15 – Terremoto Centro Italia
+    url: https://youtu.be/BVAm2Km9fgs
+  dpc-gov-BZHiguXkEiQ:
+    canale: dpc-gov
+    id: BZHiguXkEiQ
+    titolo: Intervista a Paola Santillo, Protezione Aziendale Ferrovie dello Stato Italiane – EXE Flegrei 2019
+    url: https://youtu.be/BZHiguXkEiQ
+  dpc-gov-BfiF6PA2AR4:
+    canale: dpc-gov
+    id: BfiF6PA2AR4
+    titolo: L'emergenza Terremoto Centro Italia al Forum PA 2017 (5 di 5)
+    url: https://youtu.be/BfiF6PA2AR4
+  dpc-gov-BhrejcTtQ5U:
+    canale: dpc-gov
+    id: BhrejcTtQ5U
+    titolo: L'ospedale da campo EMT2 – Terremoto Turchia e Siria
+    url: https://youtu.be/BhrejcTtQ5U
+  dpc-gov-BlFtGnn9K0c:
+    canale: dpc-gov
+    id: BlFtGnn9K0c
+    titolo: Conferenza stampa 18 febbraio 2020 ore 21.30  – Coronavirus
+    url: https://youtu.be/BlFtGnn9K0c
+  dpc-gov-BooLyjLFbSM:
+    canale: dpc-gov
+    id: BooLyjLFbSM
+    titolo: Mattarella visita la sede operativa del Dipartimento – Medaglia d'oro al Valore Civile
+    url: https://youtu.be/BooLyjLFbSM
+  dpc-gov-C6nh5cJ5GdE:
+    canale: dpc-gov
+    id: C6nh5cJ5GdE
+    titolo: Presentazione del libro "Il sistema di protezione civile"
+    url: https://youtu.be/C6nh5cJ5GdE
+  dpc-gov-CVnJQ42uysc:
+    canale: dpc-gov
+    id: CVnJQ42uysc
+    titolo: Titoli di coda diretta nazionale "Io Non Rischio" 2022
+    url: https://youtu.be/CVnJQ42uysc
+  dpc-gov-ClFIKEGjiX0:
+    canale: dpc-gov
+    id: ClFIKEGjiX0
+    titolo: Gli interventi di messa in sicurezza nel Patan Museum (2 di 2) – Terremoto Nepal
+    url: https://youtu.be/ClFIKEGjiX0
+  dpc-gov-CnIiu1LQdmM:
+    canale: dpc-gov
+    id: CnIiu1LQdmM
+    titolo: 'I temi del Tavolo nazionale giovani: scambi formativi e gemellaggi'
+    url: https://youtu.be/CnIiu1LQdmM
+  dpc-gov-D-Skr6gnPk4:
+    canale: dpc-gov
+    id: D-Skr6gnPk4
+    titolo: Conferenza stampa 26 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/D-Skr6gnPk4
+  dpc-gov-D2PCqgs6wNw:
+    canale: dpc-gov
+    id: D2PCqgs6wNw
+    titolo: Conferenza stampa 26 agosto 2016 ore 18.30 – Terremoto Centro Italia
+    url: https://youtu.be/D2PCqgs6wNw
+  dpc-gov-DIZLJ_CTwI4:
+    canale: dpc-gov
+    id: DIZLJ_CTwI4
+    titolo: Conferenza stampa 9 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/DIZLJ_CTwI4
+  dpc-gov-Dnwz8rkOxIE:
+    canale: dpc-gov
+    id: Dnwz8rkOxIE
+    titolo: Conferenza stampa 14 agosto 2018 ore 15.00 – Crollo Ponte Morandi
+    url: https://youtu.be/Dnwz8rkOxIE
+  dpc-gov-E4-Oti5-Iv0:
+    canale: dpc-gov
+    id: E4-Oti5-Iv0
+    titolo: Conferenza stampa 25 febbraio 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/E4-Oti5-Iv0
+  dpc-gov-E77IwmGUX_I:
+    canale: dpc-gov
+    id: E77IwmGUX_I
+    titolo: Seminario previsori meteo (5 di 8)
+    url: https://youtu.be/E77IwmGUX_I
+  dpc-gov-ERbKJuW6bqo:
+    canale: dpc-gov
+    id: ERbKJuW6bqo
+    titolo: National Exercise "Exe Flegrei 2024" - SUB ENG
+    url: https://youtu.be/ERbKJuW6bqo
+  dpc-gov-EinjLkaNhBM:
+    canale: dpc-gov
+    id: EinjLkaNhBM
+    titolo: Salone Internazionale del Libro di Torino / 2025 - Stefano Ciolli
+    url: https://youtu.be/EinjLkaNhBM
+  dpc-gov-EsxqgkoTDQQ:
+    canale: dpc-gov
+    id: EsxqgkoTDQQ
+    titolo: Spot 2017 "Io Non Rischio"
+    url: https://youtu.be/EsxqgkoTDQQ
+  dpc-gov-FLQ5eqSB9wg:
+    canale: dpc-gov
+    id: FLQ5eqSB9wg
+    titolo: Napolitano consegna la Medaglia al Merito al Dpc
+    url: https://youtu.be/FLQ5eqSB9wg
+  dpc-gov-FPLoljB20QA:
+    canale: dpc-gov
+    id: FPLoljB20QA
+    titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
+    url: https://youtu.be/FPLoljB20QA
+  dpc-gov-F_vrlLmzTYQ:
+    canale: dpc-gov
+    id: F_vrlLmzTYQ
+    titolo: Il time-lapse della rotazione (foto HD) – Naufragio Concordia
+    url: https://youtu.be/F_vrlLmzTYQ
+  dpc-gov-GDXMk34lxuY:
+    canale: dpc-gov
+    id: GDXMk34lxuY
+    titolo: Conferenza stampa 4 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/GDXMk34lxuY
+  dpc-gov-GNjS6ykd1oY:
+    canale: dpc-gov
+    id: GNjS6ykd1oY
+    titolo: Sorvolo 25 agosto 2016 – Terremoto Centro Italia
+    url: https://youtu.be/GNjS6ykd1oY
+  dpc-gov-GPEu7LV0CZM:
+    canale: dpc-gov
+    id: GPEu7LV0CZM
+    titolo: Spot 2006 sul rischio ondate di calore
+    url: https://youtu.be/GPEu7LV0CZM
+  dpc-gov-GVU_zVxPCSY:
+    canale: dpc-gov
+    id: GVU_zVxPCSY
+    titolo: Conferenza stampa 7 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/GVU_zVxPCSY
+  dpc-gov-GeEmCtzEXTc:
+    canale: dpc-gov
+    id: GeEmCtzEXTc
+    titolo: Afternoon Plenary Session 23 nov 2018 – EFDRR 2018
+    url: https://youtu.be/GeEmCtzEXTc
+  dpc-gov-Gifm5amH5yw:
+    canale: dpc-gov
+    id: Gifm5amH5yw
+    titolo: Workshop "La scienza per la protezione civile"
+    url: https://youtu.be/Gifm5amH5yw
+  dpc-gov-Gj2iowlMOE0:
+    canale: dpc-gov
+    id: Gj2iowlMOE0
+    titolo: Conferimento pubblica benemerenza della Protezione Civile alle CROSS di Torino e Pistoia-Empoli.
+    url: https://youtu.be/Gj2iowlMOE0
+  dpc-gov-GoLH4rmulgs:
+    canale: dpc-gov
+    id: GoLH4rmulgs
+    titolo: Il Capo Dipartimento Ciciliano presenta la Settimana Nazionale della Protezione Civile 2024
+    url: https://youtu.be/GoLH4rmulgs
+  dpc-gov-H9rTVM67PRY:
+    canale: dpc-gov
+    id: H9rTVM67PRY
+    titolo: Le attività del Tavolo nazionale giovani
+    url: https://youtu.be/H9rTVM67PRY
+  dpc-gov-HCUjLDolHHA:
+    canale: dpc-gov
+    id: HCUjLDolHHA
+    titolo: Le testimonianze dei primi soccorritori – Terremoto Turchia e Siria
+    url: https://youtu.be/HCUjLDolHHA
+  dpc-gov-HqPjxdIZct4:
+    canale: dpc-gov
+    id: HqPjxdIZct4
+    titolo: Eventi e iniziative della terza edizione – Settimana Nazionale della Protezione Civile 2021
+    url: https://youtu.be/HqPjxdIZct4
+  dpc-gov-I710MlnlKgY:
+    canale: dpc-gov
+    id: I710MlnlKgY
+    titolo: Giubileo dei Giovani 2025
+    url: https://youtu.be/I710MlnlKgY
+  dpc-gov-I9c31EWptCI:
+    canale: dpc-gov
+    id: I9c31EWptCI
+    titolo: Sorvolo sulla SS80 tra Arischia (AQ) e Collevecchio (TE) – Terremoto Centro Italia
+    url: https://youtu.be/I9c31EWptCI
+  dpc-gov-IFfM0T0-x6o:
+    canale: dpc-gov
+    id: IFfM0T0-x6o
+    titolo: L'attivazione della CROSS – Coronavirus
+    url: https://youtu.be/IFfM0T0-x6o
+  dpc-gov-ILYJdJTgEnA:
+    canale: dpc-gov
+    id: ILYJdJTgEnA
+    titolo: Intervista al Direttore del Museo archeologico dei Campi Flegrei – EXE Flegrei 2019
+    url: https://youtu.be/ILYJdJTgEnA
+  dpc-gov-ILcOFS6hDGg:
+    canale: dpc-gov
+    id: ILcOFS6hDGg
+    titolo: L'esercitazione nazionale SISMA DELLO STRETTO 2022
+    url: https://youtu.be/ILcOFS6hDGg
+  dpc-gov-IZAcwEB9SLI:
+    canale: dpc-gov
+    id: IZAcwEB9SLI
+    titolo: Opening Ceremony and Morning Plenary Session 22 nov 2018 – EFDRR 2018
+    url: https://youtu.be/IZAcwEB9SLI
+  dpc-gov-Ibb5H5TTy4o:
+    canale: dpc-gov
+    id: Ibb5H5TTy4o
+    titolo: Conferenza stampa 26 ottobre 2016 ore 24.00 – Terremoto Centro Italia
+    url: https://youtu.be/Ibb5H5TTy4o
+  dpc-gov-Ic15jC_BZ0s:
+    canale: dpc-gov
+    id: Ic15jC_BZ0s
+    titolo: Primo incontro del Tavolo nazionale giovani - 24 e 25 giugno 2025
+    url: https://youtu.be/Ic15jC_BZ0s
+  dpc-gov-JDtHt_5IEjI:
+    canale: dpc-gov
+    id: JDtHt_5IEjI
+    titolo: 'Alluvione Libia: l''intervento della protezione civile italiana'
+    url: https://youtu.be/JDtHt_5IEjI
+  dpc-gov-JF1_GQXcVTg:
+    canale: dpc-gov
+    id: JF1_GQXcVTg
+    titolo: Numero verde per l'assistenza psicologica – Coronavirus
+    url: https://youtu.be/JF1_GQXcVTg
+  dpc-gov-JWoZz85O6j4:
+    canale: dpc-gov
+    id: JWoZz85O6j4
+    titolo: '"Le attività ordinarie" : un confronto tra volontari di diverse generazioni'
+    url: https://youtu.be/JWoZz85O6j4
+  dpc-gov-JfKUxdyp0Ig:
+    canale: dpc-gov
+    id: JfKUxdyp0Ig
+    titolo: Intervista a Vincenzo Schiattarella, Responsabile RSA Posillipo – EXE Flegrei 2019
+    url: https://youtu.be/JfKUxdyp0Ig
+  dpc-gov-JoXsNTy8Npk:
+    canale: dpc-gov
+    id: JoXsNTy8Npk
+    titolo: Conferenza stampa 6 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/JoXsNTy8Npk
+  dpc-gov-K1A4EjpdzCo:
+    canale: dpc-gov
+    id: K1A4EjpdzCo
+    titolo: Spot 2009 "Gli strumenti per ripartire"
+    url: https://youtu.be/K1A4EjpdzCo
+  dpc-gov-K2Il_Qdnrmg:
+    canale: dpc-gov
+    id: K2Il_Qdnrmg
+    titolo: 'ODESCALCHI 2016: esercitazione transfrontaliera italo-svizzera'
+    url: https://youtu.be/K2Il_Qdnrmg
+  dpc-gov-KTRAcjsdxSg:
+    canale: dpc-gov
+    id: KTRAcjsdxSg
+    titolo: 'Alluvione Belgio: l''intervento della protezione civile italiana'
+    url: https://youtu.be/KTRAcjsdxSg
+  dpc-gov-KeCKqhrkKB0:
+    canale: dpc-gov
+    id: KeCKqhrkKB0
+    titolo: Conferenza stampa 11 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/KeCKqhrkKB0
+  dpc-gov-KhuzbWTo3vE:
+    canale: dpc-gov
+    id: KhuzbWTo3vE
+    titolo: Il racconto delle fasi dell'emergenza – Naufragio Concordia
+    url: https://youtu.be/KhuzbWTo3vE
+  dpc-gov-KjQSuaVrjlY:
+    canale: dpc-gov
+    id: KjQSuaVrjlY
+    titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+    url: https://youtu.be/KjQSuaVrjlY
+  dpc-gov-Kz08BJ1OYb4:
+    canale: dpc-gov
+    id: Kz08BJ1OYb4
+    titolo: 'Webinar 1 giugno 2023 "I gruppi comunali: equilibrio tra volontariato organizzato e amministrazione"'
+    url: https://youtu.be/Kz08BJ1OYb4
+  dpc-gov-L98tBMJZn0k:
+    canale: dpc-gov
+    id: L98tBMJZn0k
+    titolo: Il Professor Casagli illustra le caratteristiche della frana di Niscemi (CL)
+    url: https://youtu.be/L98tBMJZn0k
+  dpc-gov-L9G03g67Hbk:
+    canale: dpc-gov
+    id: L9G03g67Hbk
+    titolo: Conferenza stampa 18 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/L9G03g67Hbk
+  dpc-gov-LP8wyzSUjnw:
+    canale: dpc-gov
+    id: LP8wyzSUjnw
+    titolo: Spot 2019 "Settimana Nazionale della Protezione Civile"
+    url: https://youtu.be/LP8wyzSUjnw
+  dpc-gov-L_S__6YW8qw:
+    canale: dpc-gov
+    id: L_S__6YW8qw
+    titolo: Conferenza stampa 30 ottobre 2016 ore 16.00 – Terremoto Centro Italia
+    url: https://youtu.be/L_S__6YW8qw
+  dpc-gov-LmROqpEFEng:
+    canale: dpc-gov
+    id: LmROqpEFEng
+    titolo: Conferenza stampa 18 gennaio 2017 ore 18.00 – Terremoto Centro Italia
+    url: https://youtu.be/LmROqpEFEng
+  dpc-gov-M4qIbNFceTw:
+    canale: dpc-gov
+    id: M4qIbNFceTw
+    titolo: Donatella Di Pietrantonio a partire da "Bella mia" e "L'età fragile" – SalTo24
+    url: https://youtu.be/M4qIbNFceTw
+  dpc-gov-M7g5pPACQ6g:
+    canale: dpc-gov
+    id: M7g5pPACQ6g
+    titolo: Conferenza stampa 12 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/M7g5pPACQ6g
+  dpc-gov-M7so0kQR388:
+    canale: dpc-gov
+    id: M7so0kQR388
+    titolo: L'intervento di Franco Gabrielli – Stati Generali del Volontariato di Protezione Civile
+    url: https://youtu.be/M7so0kQR388
+  dpc-gov-MzVgNeBjJSQ:
+    canale: dpc-gov
+    id: MzVgNeBjJSQ
+    titolo: 'Incendi boschivi: le buone pratiche'
+    url: https://youtu.be/MzVgNeBjJSQ
+  dpc-gov-NN6QVaAhnjo:
+    canale: dpc-gov
+    id: NN6QVaAhnjo
+    titolo: Il Presidente Conte visita la mostra "Terremoti d'Italia" – EFDRR 2018
+    url: https://youtu.be/NN6QVaAhnjo
+  dpc-gov-NO8SzogRBSc:
+    canale: dpc-gov
+    id: NO8SzogRBSc
+    titolo: Conferenza stampa 22 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/NO8SzogRBSc
+  dpc-gov-NT1nqaLW6y8:
+    canale: dpc-gov
+    id: NT1nqaLW6y8
+    titolo: Seminario previsori meteo (6 di 8)
+    url: https://youtu.be/NT1nqaLW6y8
+  dpc-gov-NukrIN8jnE4:
+    canale: dpc-gov
+    id: NukrIN8jnE4
+    titolo: La Protezione Civile racconta il podcast DPC - Dove Parliamo di Clima con Filippo Thiery
+    url: https://youtu.be/NukrIN8jnE4
+  dpc-gov-Nzw79fQGwws:
+    canale: dpc-gov
+    id: Nzw79fQGwws
+    titolo: Conferenza stampa 26 febbraio 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/Nzw79fQGwws
+  dpc-gov-O-LPjrT5yIc:
+    canale: dpc-gov
+    id: O-LPjrT5yIc
+    titolo: Roberto Gagnor e Mattia Surroz su "L'attimo decisivo" – SalTo24
+    url: https://youtu.be/O-LPjrT5yIc
+  dpc-gov-ODn51yzQel0:
+    canale: dpc-gov
+    id: ODn51yzQel0
+    titolo: Conferenza stampa 23 febbraio 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/ODn51yzQel0
+  dpc-gov-OIcYSg5z-pQ:
+    canale: dpc-gov
+    id: OIcYSg5z-pQ
+    titolo: Le attività dell'ospedale da campo italiano (1 di 3) – Terremoto Nepal
+    url: https://youtu.be/OIcYSg5z-pQ
+  dpc-gov-OJXX5f5lNZQ:
+    canale: dpc-gov
+    id: OJXX5f5lNZQ
+    titolo: Campi scuola "Anche io sono la Protezione Civile" 2023
+    url: https://youtu.be/OJXX5f5lNZQ
+  dpc-gov-OSfoajg3wzQ:
+    canale: dpc-gov
+    id: OSfoajg3wzQ
+    titolo: Attività di messa in sicurezza dei beni culturali – Terremoto Centro Italia
+    url: https://youtu.be/OSfoajg3wzQ
+  dpc-gov-Oc9MqHMK1wo:
+    canale: dpc-gov
+    id: Oc9MqHMK1wo
+    titolo: Conferenza stampa 24 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/Oc9MqHMK1wo
+  dpc-gov-OkEoPVutZr4:
+    canale: dpc-gov
+    id: OkEoPVutZr4
+    titolo: Esercitazione “Verso una pianificazione di protezione civile inclusiva”
+    url: https://youtu.be/OkEoPVutZr4
+  dpc-gov-Oq8kb7VBW0c:
+    canale: dpc-gov
+    id: Oq8kb7VBW0c
+    titolo: 'I temi del Tavolo nazionale giovani: identità e comunicazione'
+    url: https://youtu.be/Oq8kb7VBW0c
+  dpc-gov-OzfpYb95ElQ:
+    canale: dpc-gov
+    id: OzfpYb95ElQ
+    titolo: Conferenza stampa 25 gennaio ore 12.30 – Terremoto Centro Italia
+    url: https://youtu.be/OzfpYb95ElQ
+  dpc-gov-P4SvUlT3e8s:
+    canale: dpc-gov
+    id: P4SvUlT3e8s
+    titolo: Il ripristino della viabilità ad Amatrice – Terremoto Centro Italia
+    url: https://youtu.be/P4SvUlT3e8s
+  dpc-gov-PI0DyYVXsQc:
+    canale: dpc-gov
+    id: PI0DyYVXsQc
+    titolo: L'intervento della protezione civile italiana – Terremoto Albania
+    url: https://youtu.be/PI0DyYVXsQc
+  dpc-gov-PRtzGF8aTv0:
+    canale: dpc-gov
+    id: PRtzGF8aTv0
+    titolo: Il progetto Proculther - 24 novembre 2021
+    url: https://youtu.be/PRtzGF8aTv0
+  dpc-gov-PSYpKYDeYnU:
+    canale: dpc-gov
+    id: PSYpKYDeYnU
+    titolo: Conferenza stampa 22 gennaio 2017 ore 18.30 – Terremoto Centro Italia
+    url: https://youtu.be/PSYpKYDeYnU
+  dpc-gov-PWU1V-vgoZk:
+    canale: dpc-gov
+    id: PWU1V-vgoZk
+    titolo: Conferenza stampa 24 febbraio 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/PWU1V-vgoZk
+  dpc-gov-PfvQloH4RQ4:
+    canale: dpc-gov
+    id: PfvQloH4RQ4
+    titolo: Il Dipartimento della Protezione Civile al Salone Internazionale del libro di Torino 2025
+    url: https://youtu.be/PfvQloH4RQ4
+  dpc-gov-Pjy_ANlpTrg:
+    canale: dpc-gov
+    id: Pjy_ANlpTrg
+    titolo: Conferenza stampa 15 marzo 2020 ore 18.00 – Coronavirus​
+    url: https://youtu.be/Pjy_ANlpTrg
+  dpc-gov-Pme6tXzpq3U:
+    canale: dpc-gov
+    id: Pme6tXzpq3U
+    titolo: Conferenza stampa 20 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/Pme6tXzpq3U
+  dpc-gov-Q8S0OHxOYtQ:
+    canale: dpc-gov
+    id: Q8S0OHxOYtQ
+    titolo: Sorvolo di Vulcano – Esercitazione VULCANO 2022
+    url: https://youtu.be/Q8S0OHxOYtQ
+  dpc-gov-Qdr1TEgicd8:
+    canale: dpc-gov
+    id: Qdr1TEgicd8
+    titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
+    url: https://youtu.be/Qdr1TEgicd8
+  dpc-gov-QhVWOEPOvd8:
+    canale: dpc-gov
+    id: QhVWOEPOvd8
+    titolo: 'Giornata internazionale delle donne nella scienza: la testimonianza di Titti Postiglione'
+    url: https://youtu.be/QhVWOEPOvd8
+  dpc-gov-RIR586wkbKA:
+    canale: dpc-gov
+    id: RIR586wkbKA
+    titolo: Primi cittadini di Accumoli a San Benedetto del Tronto – Terremoto Centro Italia
+    url: https://youtu.be/RIR586wkbKA
+  dpc-gov-RL0FIwgF3oc:
+    canale: dpc-gov
+    id: RL0FIwgF3oc
+    titolo: Conferenza stampa 6 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/RL0FIwgF3oc
+  dpc-gov-RWrTuKsjt_4:
+    canale: dpc-gov
+    id: RWrTuKsjt_4
+    titolo: L'intervento di Guido Fabiani – Stati Generali del Volontariato di Protezione Civile -
+    url: https://youtu.be/RWrTuKsjt_4
+  dpc-gov-Ra3C7K8tHos:
+    canale: dpc-gov
+    id: Ra3C7K8tHos
+    titolo: Il Centro Funzionale Centrale
+    url: https://youtu.be/Ra3C7K8tHos
+  dpc-gov-RjCdoyyz3sQ:
+    canale: dpc-gov
+    id: RjCdoyyz3sQ
+    titolo: Ricordo di Giuseppe Zamberletti
+    url: https://youtu.be/RjCdoyyz3sQ
+  dpc-gov-RlwTnpacmJI:
+    canale: dpc-gov
+    id: RlwTnpacmJI
+    titolo: Test comunicazione radio con veliero Amerigo Vespucci
+    url: https://youtu.be/RlwTnpacmJI
+  dpc-gov-SI5nGbyQlw8:
+    canale: dpc-gov
+    id: SI5nGbyQlw8
+    titolo: Il campo di Castelporziano (RM) – Campi scuola "Anch'io sono la protezione civile" 2019
+    url: https://youtu.be/SI5nGbyQlw8
+  dpc-gov-SczNlae2-fQ:
+    canale: dpc-gov
+    id: SczNlae2-fQ
+    titolo: Conferenza stampa 31 ottobre 2016 ore 12.00 – Terremoto Centro Italia
+    url: https://youtu.be/SczNlae2-fQ
+  dpc-gov-SenKErtd7oQ:
+    canale: dpc-gov
+    id: SenKErtd7oQ
+    titolo: '"Guardare indietro per andare avanti": le video-interviste'
+    url: https://youtu.be/SenKErtd7oQ
+  dpc-gov-ShU_V_7SUQA:
+    canale: dpc-gov
+    id: ShU_V_7SUQA
+    titolo: Il rischio vulcanico nei Campi Flegrei e la risposta di protezione civile – EXE Flegrei 2019
+    url: https://youtu.be/ShU_V_7SUQA
+  dpc-gov-Si7_xLt2fUo:
+    canale: dpc-gov
+    id: Si7_xLt2fUo
+    titolo: Conferenza stampa 21 gennaio 2017 ore 19.00 – Terremoto Centro Italia
+    url: https://youtu.be/Si7_xLt2fUo
+  dpc-gov-SyONIJy-Yv8:
+    canale: dpc-gov
+    id: SyONIJy-Yv8
+    titolo: Campo scuola "Anch'io sono la protezione civile" Lovero (SO)
+    url: https://youtu.be/SyONIJy-Yv8
+  dpc-gov-T7Y6_wCq6WA:
+    canale: dpc-gov
+    id: T7Y6_wCq6WA
+    titolo: Conferenza stampa 24 agosto 2016 ore 11.30 – Terremoto Centro Italia
+    url: https://youtu.be/T7Y6_wCq6WA
+  dpc-gov-TBxgvQodVa4:
+    canale: dpc-gov
+    id: TBxgvQodVa4
+    titolo: Conferenza stampa 17 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/TBxgvQodVa4
+  dpc-gov-TQUz3uOuGs4:
+    canale: dpc-gov
+    id: TQUz3uOuGs4
+    titolo: Conferenza stampa 25 agosto 2016 ore 13.00 – Terremoto Centro Italia
+    url: https://youtu.be/TQUz3uOuGs4
+  dpc-gov-TyFthQEznc8:
+    canale: dpc-gov
+    id: TyFthQEznc8
+    titolo: Il time-lapse della rotazione (telecamera di sorveglianza) – Naufragio Concordia
+    url: https://youtu.be/TyFthQEznc8
+  dpc-gov-UIpzlwhK2ik:
+    canale: dpc-gov
+    id: UIpzlwhK2ik
+    titolo: 'CALABRIA 2011: esercitazione nazionale sul rischio sismico'
+    url: https://youtu.be/UIpzlwhK2ik
+  dpc-gov-U_hlU-gp8JQ:
+    canale: dpc-gov
+    id: U_hlU-gp8JQ
+    titolo: 'I temi del Tavolo nazionale giovani: il confronto con le altre realtà giovanili'
+    url: https://youtu.be/U_hlU-gp8JQ
+  dpc-gov-Ua3p2Y473ck:
+    canale: dpc-gov
+    id: Ua3p2Y473ck
+    titolo: L'ultimo saluto a Papa Francesco – Funerali Papa Francesco
+    url: https://youtu.be/Ua3p2Y473ck
+  dpc-gov-Ucx3BYBHpkw:
+    canale: dpc-gov
+    id: Ucx3BYBHpkw
+    titolo: Conferenza Nazionale delle Autorità di Protezione Civile
+    url: https://youtu.be/Ucx3BYBHpkw
+  dpc-gov-VJ6WpzycmMc:
+    canale: dpc-gov
+    id: VJ6WpzycmMc
+    titolo: La protezione civile alla Rivista del 2 giugno 2012
+    url: https://youtu.be/VJ6WpzycmMc
+  dpc-gov-VS4uGFyNu48:
+    canale: dpc-gov
+    id: VS4uGFyNu48
+    titolo: Conferenza stampa 21 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/VS4uGFyNu48
+  dpc-gov-VXXQy2Gop0Y:
+    canale: dpc-gov
+    id: VXXQy2Gop0Y
+    titolo: Conferenza stampa 16 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/VXXQy2Gop0Y
+  dpc-gov-V_xKcQnfi1s:
+    canale: dpc-gov
+    id: V_xKcQnfi1s
+    titolo: Spot "Non aspettare un'emergenza per chiederti come affrontarla"
+    url: https://youtu.be/V_xKcQnfi1s
+  dpc-gov-Vr815sdAcyM:
+    canale: dpc-gov
+    id: Vr815sdAcyM
+    titolo: Dichiarazione del Capo Dipartimento Borrelli 31 gennaio 2020 – Coronavirus
+    url: https://youtu.be/Vr815sdAcyM
+  dpc-gov-W96QrZ01Qn0:
+    canale: dpc-gov
+    id: W96QrZ01Qn0
+    titolo: Conferenza stampa 20 gennaio 2017 ore 12.45 – Terremoto Centro Italia
+    url: https://youtu.be/W96QrZ01Qn0
+  dpc-gov-WB8jOhjk1Is:
+    canale: dpc-gov
+    id: WB8jOhjk1Is
+    titolo: Promo 2012 sul volontariato di protezione civile
+    url: https://youtu.be/WB8jOhjk1Is
+  dpc-gov-WGB66uANGMk:
+    canale: dpc-gov
+    id: WGB66uANGMk
+    titolo: Conferenza stampa 1 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/WGB66uANGMk
+  dpc-gov-WW0F1o1EBs4:
+    canale: dpc-gov
+    id: WW0F1o1EBs4
+    titolo: Villaggio Campale soccorritori
+    url: https://youtu.be/WW0F1o1EBs4
+  dpc-gov-WleA7Q3_5LY:
+    canale: dpc-gov
+    id: WleA7Q3_5LY
+    titolo: Conferenza stampa 3 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/WleA7Q3_5LY
+  dpc-gov-WpCiMPzdgwU:
+    canale: dpc-gov
+    id: WpCiMPzdgwU
+    titolo: L'emergenza Terremoto Centro Italia al Forum PA 2017 (2 di 5)
+    url: https://youtu.be/WpCiMPzdgwU
+  dpc-gov-WpopFnIr8ME:
+    canale: dpc-gov
+    id: WpopFnIr8ME
+    titolo: Conferenza stampa 27 febbraio 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/WpopFnIr8ME
+  dpc-gov-Ws-2LUHsQmo:
+    canale: dpc-gov
+    id: Ws-2LUHsQmo
+    titolo: Nadia Terranova a partire da "Trema la notte" – SalTo24
+    url: https://youtu.be/Ws-2LUHsQmo
+  dpc-gov-X8zRt2CN9qo:
+    canale: dpc-gov
+    id: X8zRt2CN9qo
+    titolo: 'Maltempo Sardegna: il sopralluogo di Borrelli nelle aree del nuorese'
+    url: https://youtu.be/X8zRt2CN9qo
+  dpc-gov-XJrslXpfc5Y:
+    canale: dpc-gov
+    id: XJrslXpfc5Y
+    titolo: I ragazzi del Servizio Civile raccontano l'esperienza in Dipartimento
+    url: https://youtu.be/XJrslXpfc5Y
+  dpc-gov-XOHR1OWB-cs:
+    canale: dpc-gov
+    id: XOHR1OWB-cs
+    titolo: La Sala Situazione Italia
+    url: https://youtu.be/XOHR1OWB-cs
+  dpc-gov-XbTc7Eppflc:
+    canale: dpc-gov
+    id: XbTc7Eppflc
+    titolo: La Protezione Civile in Vaticano per l'udienza con Papa Francesco
+    url: https://youtu.be/XbTc7Eppflc
+  dpc-gov-XimMbO39YIw:
+    canale: dpc-gov
+    id: XimMbO39YIw
+    titolo: Sorvolo su Pescara del Tronto (Arquata del Tronto, AP) – Terremoto Centro Italia
+    url: https://youtu.be/XimMbO39YIw
+  dpc-gov-YInihWkOdI0:
+    canale: dpc-gov
+    id: YInihWkOdI0
+    titolo: Esercitazione nazionale "Exe Flegrei 2024"
+    url: https://youtu.be/YInihWkOdI0
+  dpc-gov-YKdvXzRUjgg:
+    canale: dpc-gov
+    id: YKdvXzRUjgg
+    titolo: Animazione del logo
+    url: https://youtu.be/YKdvXzRUjgg
+  dpc-gov-YKzuDqox1qE:
+    canale: dpc-gov
+    id: YKzuDqox1qE
+    titolo: La mensa allestita presso il palazzetto dello sport Pio La Torre di Niscemi
+    url: https://youtu.be/YKzuDqox1qE
+  dpc-gov-YLALC46rNiw:
+    canale: dpc-gov
+    id: YLALC46rNiw
+    titolo: 'Emergenza migranti dal Nord Africa: lo smaltimento delle imbarcazioni'
+    url: https://youtu.be/YLALC46rNiw
+  dpc-gov-YLScynhjpn4:
+    canale: dpc-gov
+    id: YLScynhjpn4
+    titolo: 'I temi del Tavolo nazionale giovani: Tavoli regionali giovani'
+    url: https://youtu.be/YLScynhjpn4
+  dpc-gov-YRSmc95PQ8o:
+    canale: dpc-gov
+    id: YRSmc95PQ8o
+    titolo: La Protezione Civile incontra Marina Cuollo
+    url: https://youtu.be/YRSmc95PQ8o
+  dpc-gov-YWxlxDzYZeo:
+    canale: dpc-gov
+    id: YWxlxDzYZeo
+    titolo: Arrivo in Romania degli aiuti della protezione civile – Emergenza Ucraina
+    url: https://youtu.be/YWxlxDzYZeo
+  dpc-gov-YdPDiEAukNA:
+    canale: dpc-gov
+    id: YdPDiEAukNA
+    titolo: Conferenza stampa 24 febbraio 2020 ore 12.00 – Coronavirus
+    url: https://youtu.be/YdPDiEAukNA
+  dpc-gov-YnGVme8IRfU:
+    canale: dpc-gov
+    id: YnGVme8IRfU
+    titolo: Conferenza stampa 25 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/YnGVme8IRfU
+  dpc-gov-YswDbftm13w:
+    canale: dpc-gov
+    id: YswDbftm13w
+    titolo: Lo stand del Dipartimento all'interno del Forum europeo – EFDRR 2018
+    url: https://youtu.be/YswDbftm13w
+  dpc-gov-Z93XXOBJro0:
+    canale: dpc-gov
+    id: Z93XXOBJro0
+    titolo: Conferenza stampa 24 gennaio 2017 ore 12.00 – Terremoto Centro Italia
+    url: https://youtu.be/Z93XXOBJro0
+  dpc-gov-ZDaR5eZaEF0:
+    canale: dpc-gov
+    id: ZDaR5eZaEF0
+    titolo: Le attività dell'ospedale da campo italiano (2 di 3) – Terremoto Nepal
+    url: https://youtu.be/ZDaR5eZaEF0
+  dpc-gov-ZEvG0QoflEY:
+    canale: dpc-gov
+    id: ZEvG0QoflEY
+    titolo: Anche io sono la protezione civile / 2025
+    url: https://youtu.be/ZEvG0QoflEY
+  dpc-gov-ZKKPmQ1ymvE:
+    canale: dpc-gov
+    id: ZKKPmQ1ymvE
+    titolo: Il racconto del Forum europeo – EFDRR 2018
+    url: https://youtu.be/ZKKPmQ1ymvE
+  dpc-gov-ZTDrRHbiR3M:
+    canale: dpc-gov
+    id: ZTDrRHbiR3M
+    titolo: 'Giornata internazionale delle persone con disabilità: il messaggio di Borrelli'
+    url: https://youtu.be/ZTDrRHbiR3M
+  dpc-gov-Zn_A3z-8wXY:
+    canale: dpc-gov
+    id: Zn_A3z-8wXY
+    titolo: 'Giornata Servizio Civile Universale: i volontari raccontano la loro esperienza al Dipartimento'
+    url: https://youtu.be/Zn_A3z-8wXY
+  dpc-gov-Zs1VmF6p9f0:
+    canale: dpc-gov
+    id: Zs1VmF6p9f0
+    titolo: Inaugurazione dell'anno scolastico ad Amatrice – Terremoto Centro Italia
+    url: https://youtu.be/Zs1VmF6p9f0
+  dpc-gov-Zy6GaNwgVOA:
+    canale: dpc-gov
+    id: Zy6GaNwgVOA
+    titolo: Franco Arminio su "Sacro minore" e "Lettera a chi non c'era" – SalTo24
+    url: https://youtu.be/Zy6GaNwgVOA
+  dpc-gov-_AIRkOGDNzw:
+    canale: dpc-gov
+    id: _AIRkOGDNzw
+    titolo: Le attività dell'ospedale da campo italiano (3 di 3) – Terremoto Nepal
+    url: https://youtu.be/_AIRkOGDNzw
+  dpc-gov-_AYUUv69F3U:
+    canale: dpc-gov
+    id: _AYUUv69F3U
+    titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
+    url: https://youtu.be/_AYUUv69F3U
+  dpc-gov-_K-Gc5rFpOA:
+    canale: dpc-gov
+    id: _K-Gc5rFpOA
+    titolo: La mostra "Terremoti d'Italia" al Forum europeo – EFDRR 2018
+    url: https://youtu.be/_K-Gc5rFpOA
+  dpc-gov-_n4sTk4Xy2E:
+    canale: dpc-gov
+    id: _n4sTk4Xy2E
+    titolo: Conferenza stampa 20 marzo 2020 ore 19.50 – Coronavirus
+    url: https://youtu.be/_n4sTk4Xy2E
+  dpc-gov-_osjFBJOasE:
+    canale: dpc-gov
+    id: _osjFBJOasE
+    titolo: Gli interventi di messa in sicurezza nel Patan Museum (1 di 2) – Terremoto Nepal
+    url: https://youtu.be/_osjFBJOasE
+  dpc-gov-_qulzvkSnQw:
+    canale: dpc-gov
+    id: _qulzvkSnQw
+    titolo: '"La crescita della vita associativa": un confronto tra volontari di diverse generazioni'
+    url: https://youtu.be/_qulzvkSnQw
+  dpc-gov-aEPou6jzUAQ:
+    canale: dpc-gov
+    id: aEPou6jzUAQ
+    titolo: Workshop presentazione Programma/apr 2017 (3 di 3) – Protezione civile e PONGOV 2014-2020
+    url: https://youtu.be/aEPou6jzUAQ
+  dpc-gov-aFpjxX7owog:
+    canale: dpc-gov
+    id: aFpjxX7owog
+    titolo: Conferenza stampa 31 agosto 2016 ore 17.30  – Terremoto Centro Italia
+    url: https://youtu.be/aFpjxX7owog
+  dpc-gov-aOXAUgcd3EI:
+    canale: dpc-gov
+    id: aOXAUgcd3EI
+    titolo: Il ricordo del Capo Dipartimento Curcio nel decennale – Naufragio Concordia  2012-2014
+    url: https://youtu.be/aOXAUgcd3EI
+  dpc-gov-aZX4e4ckayc:
+    canale: dpc-gov
+    id: aZX4e4ckayc
+    titolo: Conferenza stampa 27 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/aZX4e4ckayc
+  dpc-gov-aaFhkDgV8E0:
+    canale: dpc-gov
+    id: aaFhkDgV8E0
+    titolo: Conferenza stampa 31 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/aaFhkDgV8E0
+  dpc-gov-aeAHGLkbU18:
+    canale: dpc-gov
+    id: aeAHGLkbU18
+    titolo: '"La crescita della vita associativa": un confronto tra volontari di diverse generazioni'
+    url: https://youtu.be/aeAHGLkbU18
+  dpc-gov-b-vqRU46zyY:
+    canale: dpc-gov
+    id: b-vqRU46zyY
+    titolo: Percorsi di Protezione Civile
+    url: https://youtu.be/b-vqRU46zyY
+  dpc-gov-b5uzV-QlezM:
+    canale: dpc-gov
+    id: b5uzV-QlezM
+    titolo: Dichiarazione del Capo Dipartimento Borrelli 3 febbraio 2020 – Coronavirus
+    url: https://youtu.be/b5uzV-QlezM
+  dpc-gov-b7_mq2t13Nc:
+    canale: dpc-gov
+    id: b7_mq2t13Nc
+    titolo: Evento "Cultura è... protezione civile"
+    url: https://youtu.be/b7_mq2t13Nc
+  dpc-gov-b8dUdzMYqLg:
+    canale: dpc-gov
+    id: b8dUdzMYqLg
+    titolo: Rosella Postorino a partire dai suoi libri "Il mare in salita" e "Mi limitavo ad amare te" – SalTo24
+    url: https://youtu.be/b8dUdzMYqLg
+  dpc-gov-bA2sNiHjHWM:
+    canale: dpc-gov
+    id: bA2sNiHjHWM
+    titolo: Conferenza stampa 5 febbraio 2020 ore 17.00 – Coronavirus
+    url: https://youtu.be/bA2sNiHjHWM
+  dpc-gov-bQFnYQbiHu4:
+    canale: dpc-gov
+    id: bQFnYQbiHu4
+    titolo: Michelangelo Pistoletto su "Il terzo paradiso" e "La formula della creazione" – SalTo24
+    url: https://youtu.be/bQFnYQbiHu4
+  dpc-gov-beYhBfj9LoE:
+    canale: dpc-gov
+    id: beYhBfj9LoE
+    titolo: Sant'Agostino, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+    url: https://youtu.be/beYhBfj9LoE
+  dpc-gov-blcI4iLNb1k:
+    canale: dpc-gov
+    id: blcI4iLNb1k
+    titolo: Conferenza stampa 19 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/blcI4iLNb1k
+  dpc-gov-bqMCbMpxsL0:
+    canale: dpc-gov
+    id: bqMCbMpxsL0
+    titolo: DC Award and MCRC Ceremony 22 nov 2018 – EFDRR 2018
+    url: https://youtu.be/bqMCbMpxsL0
+  dpc-gov-cAmstkSrorc:
+    canale: dpc-gov
+    id: cAmstkSrorc
+    titolo: Le attività dell'Italian Field Hospital a Mansehra in Pakistan
+    url: https://youtu.be/cAmstkSrorc
+  dpc-gov-cNjHGoYCIz8:
+    canale: dpc-gov
+    id: cNjHGoYCIz8
+    titolo: La Protezione Civile incontra Elisa Palazzi
+    url: https://youtu.be/cNjHGoYCIz8
+  dpc-gov-cRTmbi7MFSo:
+    canale: dpc-gov
+    id: cRTmbi7MFSo
+    titolo: Concordia, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+    url: https://youtu.be/cRTmbi7MFSo
+  dpc-gov-clKcz0w6l1U:
+    canale: dpc-gov
+    id: clKcz0w6l1U
+    titolo: Promo 2018 European Forum for Disaster Risk Reduction – EFDRR 2018
+    url: https://youtu.be/clKcz0w6l1U
+  dpc-gov-cr7HHEvu4Z8:
+    canale: dpc-gov
+    id: cr7HHEvu4Z8
+    titolo: Salone Internazionale del Libro di Torino / 2025 - Chiara Cristiani e Stefano Ciolli
+    url: https://youtu.be/cr7HHEvu4Z8
+  dpc-gov-cv2dRWavPlM:
+    canale: dpc-gov
+    id: cv2dRWavPlM
+    titolo: La Protezione Civile incontra Graziano Graziani
+    url: https://youtu.be/cv2dRWavPlM
+  dpc-gov-czjyINhayvU:
+    canale: dpc-gov
+    id: czjyINhayvU
+    titolo: La CROSS e gli ospedali da campo – Coronavirus
+    url: https://youtu.be/czjyINhayvU
+  dpc-gov-dRLULa2YOdo:
+    canale: dpc-gov
+    id: dRLULa2YOdo
+    titolo: Il time-lapse della rotazione (telecamera a infrarossi) – Naufragio Concordia
+    url: https://youtu.be/dRLULa2YOdo
+  dpc-gov-dVzAGLSymsU:
+    canale: dpc-gov
+    id: dVzAGLSymsU
+    titolo: Conferenza stampa 24 agosto 2016 ore 8.30 – Terremoto Centro Italia
+    url: https://youtu.be/dVzAGLSymsU
+  dpc-gov-dkUue6aexbo:
+    canale: dpc-gov
+    id: dkUue6aexbo
+    titolo: Le operazioni di ricerca e recupero – Ecoballe Golfo di Follonica
+    url: https://youtu.be/dkUue6aexbo
+  dpc-gov-eYbuW1LxdkQ:
+    canale: dpc-gov
+    id: eYbuW1LxdkQ
+    titolo: Conferenza stampa 28 febbraio 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/eYbuW1LxdkQ
+  dpc-gov-ecFfjMQCINM:
+    canale: dpc-gov
+    id: ecFfjMQCINM
+    titolo: Spot 2006 sul rischio alluvione
+    url: https://youtu.be/ecFfjMQCINM
+  dpc-gov-ecQqY2oZYuA:
+    canale: dpc-gov
+    id: ecQqY2oZYuA
+    titolo: La Dicomac e gli scenari operativi – EXE Flegrei 2019
+    url: https://youtu.be/ecQqY2oZYuA
+  dpc-gov-ewp6ZLbpfrY:
+    canale: dpc-gov
+    id: ewp6ZLbpfrY
+    titolo: Il Centro Operativo Aereo Unificato
+    url: https://youtu.be/ewp6ZLbpfrY
+  dpc-gov-f-hekabnvjE:
+    canale: dpc-gov
+    id: f-hekabnvjE
+    titolo: L'emergenza Terremoto Centro Italia al Forum PA 2017 (4 di 5)
+    url: https://youtu.be/f-hekabnvjE
+  dpc-gov-f1yJjfoUsv4:
+    canale: dpc-gov
+    id: f1yJjfoUsv4
+    titolo: 'Eruzioni vulcaniche e bradisismo: la risposta di protezione civile – Bradisismo Campi Flegrei 2024'
+    url: https://youtu.be/f1yJjfoUsv4
+  dpc-gov-f25q-dk7g-M:
+    canale: dpc-gov
+    id: f25q-dk7g-M
+    titolo: Conferenza stampa 19 gennaio 2017 ore 8.30 – Terremoto Centro Italia
+    url: https://youtu.be/f25q-dk7g-M
+  dpc-gov-fDjq2R5pyjY:
+    canale: dpc-gov
+    id: fDjq2R5pyjY
+    titolo: Conferenza stampa 26 ottobre 2016 ore 22.00 – Terremoto Centro Italia
+    url: https://youtu.be/fDjq2R5pyjY
+  dpc-gov-fJoDtV0Eolc:
+    canale: dpc-gov
+    id: fJoDtV0Eolc
+    titolo: Conferenza stampa 27 febbraio 2020 ore 12.00 – Coronavirus
+    url: https://youtu.be/fJoDtV0Eolc
+  dpc-gov-fUu40H4nIqo:
+    canale: dpc-gov
+    id: fUu40H4nIqo
+    titolo: Partecipa per essere pronto – EXE Flegrei 2024
+    url: https://youtu.be/fUu40H4nIqo
+  dpc-gov-foHnkcP5Q9I:
+    canale: dpc-gov
+    id: foHnkcP5Q9I
+    titolo: L'intervento di Vasco Errani – Stati Generali del Volontariato di Protezione Civile
+    url: https://youtu.be/foHnkcP5Q9I
+  dpc-gov-g-V5r1FQpIA:
+    canale: dpc-gov
+    id: g-V5r1FQpIA
+    titolo: Un intervento chirurgico nell'ospedale da campo italiano – Terremoto Nepal
+    url: https://youtu.be/g-V5r1FQpIA
+  dpc-gov-gA5H_FuzG-c:
+    canale: dpc-gov
+    id: gA5H_FuzG-c
+    titolo: 'JFWEDROP 2015: esercitazione europea sulle emergenze in mare'
+    url: https://youtu.be/gA5H_FuzG-c
+  dpc-gov-gGIk2A5GvUY:
+    canale: dpc-gov
+    id: gGIk2A5GvUY
+    titolo: EMT2 Toscana Project
+    url: https://youtu.be/gGIk2A5GvUY
+  dpc-gov-gPQ09lgeL8Q:
+    canale: dpc-gov
+    id: gPQ09lgeL8Q
+    titolo: Le scienze umane e sociali per il sistema di protezione civile
+    url: https://youtu.be/gPQ09lgeL8Q
+  dpc-gov-gYvw6oz4o3M:
+    canale: dpc-gov
+    id: gYvw6oz4o3M
+    titolo: La partenza del team italiano – Ciclone Mozambico
+    url: https://youtu.be/gYvw6oz4o3M
+  dpc-gov-giEwXwgYvR0:
+    canale: dpc-gov
+    id: giEwXwgYvR0
+    titolo: Afternoon Plenary Session 22 nov 2018 – EFDRR 2018
+    url: https://youtu.be/giEwXwgYvR0
+  dpc-gov-h4LFPg69clc:
+    canale: dpc-gov
+    id: h4LFPg69clc
+    titolo: Conferenza stampa 30 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/h4LFPg69clc
+  dpc-gov-h9gHG4ggiK4:
+    canale: dpc-gov
+    id: h9gHG4ggiK4
+    titolo: Il Capo Dipartimento Borrelli presenta la Settimana Nazionale della Protezione Civile 2019
+    url: https://youtu.be/h9gHG4ggiK4
+  dpc-gov-hNprXkqvtK0:
+    canale: dpc-gov
+    id: hNprXkqvtK0
+    titolo: Sorvolo su Valle Fara (Valle Castellana, TE) – Terremoto Centro Italia
+    url: https://youtu.be/hNprXkqvtK0
+  dpc-gov-hWGiEuQWA0k:
+    canale: dpc-gov
+    id: hWGiEuQWA0k
+    titolo: Conferenza stampa 5 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/hWGiEuQWA0k
+  dpc-gov-hfqmRYz3bXE:
+    canale: dpc-gov
+    id: hfqmRYz3bXE
+    titolo: Conferenza stampa 21 gennaio 2017 ore 12.00 – Terremoto Centro Italia
+    url: https://youtu.be/hfqmRYz3bXE
+  dpc-gov-hjVbeH3W1rE:
+    canale: dpc-gov
+    id: hjVbeH3W1rE
+    titolo: Conferenza stampa 7 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/hjVbeH3W1rE
+  dpc-gov-hyY5TFND6wc:
+    canale: dpc-gov
+    id: hyY5TFND6wc
+    titolo: Conferenza stampa 23 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/hyY5TFND6wc
+  dpc-gov-iz7jY58ei9k:
+    canale: dpc-gov
+    id: iz7jY58ei9k
+    titolo: Il campo di Paternò (CT) – Campi scuola "Anch'io sono la protezione civile" 2019
+    url: https://youtu.be/iz7jY58ei9k
+  dpc-gov-j1UrFKfdux8:
+    canale: dpc-gov
+    id: j1UrFKfdux8
+    titolo: Spot 2006 sul rischio black-out
+    url: https://youtu.be/j1UrFKfdux8
+  dpc-gov-j1iiry-4GwA:
+    canale: dpc-gov
+    id: j1iiry-4GwA
+    titolo: Conferenza stampa 8 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/j1iiry-4GwA
+  dpc-gov-j88CTpgBSlg:
+    canale: dpc-gov
+    id: j88CTpgBSlg
+    titolo: Stati Generali della Protezione Civile 2025
+    url: https://youtu.be/j88CTpgBSlg
+  dpc-gov-j8OYAh_2_k8:
+    canale: dpc-gov
+    id: j8OYAh_2_k8
+    titolo: Promo 2014 "Io Non Rischio"  (versione 2 di 2)
+    url: https://youtu.be/j8OYAh_2_k8
+  dpc-gov-jOhCY8YhooM:
+    canale: dpc-gov
+    id: jOhCY8YhooM
+    titolo: Presentazione – Esercitazione VULCANO 2022
+    url: https://youtu.be/jOhCY8YhooM
+  dpc-gov-jayQDcse88k:
+    canale: dpc-gov
+    id: jayQDcse88k
+    titolo: Morning Plenary Session 23 nov 2018 – EFDRR 2018
+    url: https://youtu.be/jayQDcse88k
+  dpc-gov-jrYePDI7kqU:
+    canale: dpc-gov
+    id: jrYePDI7kqU
+    titolo: Conferenza stampa 8 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/jrYePDI7kqU
+  dpc-gov-k-TsREEE2rY:
+    canale: dpc-gov
+    id: k-TsREEE2rY
+    titolo: Gli obiettivi del Programma del Dipartimento – Protezione civile e PONGOV 2014-2020
+    url: https://youtu.be/k-TsREEE2rY
+  dpc-gov-k6Xs00zCKKk:
+    canale: dpc-gov
+    id: k6Xs00zCKKk
+    titolo: Salone Internazionale del Libro di Torino / 2025 - Luca Mercalli
+    url: https://youtu.be/k6Xs00zCKKk
+  dpc-gov-k90I_coJTsA:
+    canale: dpc-gov
+    id: k90I_coJTsA
+    titolo: Operazioni di salvataggio rimasti isolati dopo la frana di Niescemi.
+    url: https://youtu.be/k90I_coJTsA
+  dpc-gov-kWrmqmJ7sAM:
+    canale: dpc-gov
+    id: kWrmqmJ7sAM
+    titolo: Conferenza stampa 13 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/kWrmqmJ7sAM
+  dpc-gov-kX5CkXqGEu0:
+    canale: dpc-gov
+    id: kX5CkXqGEu0
+    titolo: Intervista a Gionata Fatichenti, Direttore Area Emergenze Misercordie d'Italia – EXE Flegrei 2019
+    url: https://youtu.be/kX5CkXqGEu0
+  dpc-gov-kn46KFErDnE:
+    canale: dpc-gov
+    id: kn46KFErDnE
+    titolo: Francesca Mannocchi e Fabrizio Curcio a partire da "Lo sguardo oltre il confine" – SalTo24
+    url: https://youtu.be/kn46KFErDnE
+  dpc-gov-lbI7yBJGGs8:
+    canale: dpc-gov
+    id: lbI7yBJGGs8
+    titolo: 'Piattaforma Radar: le funzionalità e i prodotti del servizio del Dipartimento'
+    url: https://youtu.be/lbI7yBJGGs8
+  dpc-gov-lgoD38omUIo:
+    canale: dpc-gov
+    id: lgoD38omUIo
+    titolo: Conferenza stampa 23 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/lgoD38omUIo
+  dpc-gov-lqqZk9Txj4w:
+    canale: dpc-gov
+    id: lqqZk9Txj4w
+    titolo: Il time-lapse del rigalleggiamento – Naufragio Concordia
+    url: https://youtu.be/lqqZk9Txj4w
+  dpc-gov-mA7QRkgPdF0:
+    canale: dpc-gov
+    id: mA7QRkgPdF0
+    titolo: 'Promo 2022 Stati Generali del Volontariato di Protezione Civile: "Il futuro è insieme"'
+    url: https://youtu.be/mA7QRkgPdF0
+  dpc-gov-mY0FCsMPreU:
+    canale: dpc-gov
+    id: mY0FCsMPreU
+    titolo: San Felice sul Panaro, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+    url: https://youtu.be/mY0FCsMPreU
+  dpc-gov-nDK9ad9z6uY:
+    canale: dpc-gov
+    id: nDK9ad9z6uY
+    titolo: Campi scuola "Anche io sono la protezione civile" 2024
+    url: https://youtu.be/nDK9ad9z6uY
+  dpc-gov-nJ_MsENPe7Q:
+    canale: dpc-gov
+    id: nJ_MsENPe7Q
+    titolo: Conferenza stampa 29 agosto 2016 ore 17.30 – Terremoto Centro Italia
+    url: https://youtu.be/nJ_MsENPe7Q
+  dpc-gov-nMk-y0gQmdc:
+    canale: dpc-gov
+    id: nMk-y0gQmdc
+    titolo: Seminario previsori meteo (7 di 8)
+    url: https://youtu.be/nMk-y0gQmdc
+  dpc-gov-nOK5tUKuoh8:
+    canale: dpc-gov
+    id: nOK5tUKuoh8
+    titolo: Conferenza stampa 30 ottobre 2016 ore 9.30 – Terremoto Centro Italia
+    url: https://youtu.be/nOK5tUKuoh8
+  dpc-gov-no26vNJAfsg:
+    canale: dpc-gov
+    id: no26vNJAfsg
+    titolo: Sorvolo, ricerca e soccorso, allestimento area d'accoglienza – Terremoto Albania
+    url: https://youtu.be/no26vNJAfsg
+  dpc-gov-nqKnBWUZsvA:
+    canale: dpc-gov
+    id: nqKnBWUZsvA
+    titolo: Spot 2021 "Settimana Nazionale della Protezione Civile"
+    url: https://youtu.be/nqKnBWUZsvA
+  dpc-gov-nv25cHkPu28:
+    canale: dpc-gov
+    id: nv25cHkPu28
+    titolo: Sorvolo su Collevecchio (Montorio al Vomano, TE) – Terremoto Centro Italia
+    url: https://youtu.be/nv25cHkPu28
+  dpc-gov-nvoIKEg8frY:
+    canale: dpc-gov
+    id: nvoIKEg8frY
+    titolo: '8 marzo: la protezione civile di tutte, con tutte'
+    url: https://youtu.be/nvoIKEg8frY
+  dpc-gov-ofugjj43GcA:
+    canale: dpc-gov
+    id: ofugjj43GcA
+    titolo: La risposta del Servizio Nazionale di Protezione Civile all'emergenza – Coronavirus
+    url: https://youtu.be/ofugjj43GcA
+  dpc-gov-p2tej13NDqY:
+    canale: dpc-gov
+    id: p2tej13NDqY
+    titolo: Spot 2022 "Settimana Nazionale della Protezione Civile"
+    url: https://youtu.be/p2tej13NDqY
+  dpc-gov-p5LtgeUKjcM:
+    canale: dpc-gov
+    id: p5LtgeUKjcM
+    titolo: Incontri con la popolazione della zona rossa – EXE Flegrei 2019
+    url: https://youtu.be/p5LtgeUKjcM
+  dpc-gov-p7sony993IQ:
+    canale: dpc-gov
+    id: p7sony993IQ
+    titolo: Workshop annuale Programma/gen 2019 (2 di 3) – Protezione civile e PONGOV 2014-2020
+    url: https://youtu.be/p7sony993IQ
+  dpc-gov-p8j5whUGlhI:
+    canale: dpc-gov
+    id: p8j5whUGlhI
+    titolo: 'TEREX 2010: esercitazione internazionale sul rischio sismico'
+    url: https://youtu.be/p8j5whUGlhI
+  dpc-gov-pgHPsSGI1HY:
+    canale: dpc-gov
+    id: pgHPsSGI1HY
+    titolo: Il time-lapse dell'allestimento della mostra "Terremoti d'Italia" – EFDRR 2018
+    url: https://youtu.be/pgHPsSGI1HY
+  dpc-gov-q0SsN6MtVeI:
+    canale: dpc-gov
+    id: q0SsN6MtVeI
+    titolo: Conferenza stampa 10 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/q0SsN6MtVeI
+  dpc-gov-qDRVFC3UqHs:
+    canale: dpc-gov
+    id: qDRVFC3UqHs
+    titolo: Conferenza stampa 27 marzo 2020 ore 17.30 – Coronavirus
+    url: https://youtu.be/qDRVFC3UqHs
+  dpc-gov-qfyfnlKbs_I:
+    canale: dpc-gov
+    id: qfyfnlKbs_I
+    titolo: Il bradisismo ai Campi Flegrei. Sei preparato? – Bradisismo Campi Flegrei 2024
+    url: https://youtu.be/qfyfnlKbs_I
+  dpc-gov-qhy_CnfT_SU:
+    canale: dpc-gov
+    id: qhy_CnfT_SU
+    titolo: Conferenza stampa 14 agosto 2018 ore 18.00 – Crollo Ponte Morandi
+    url: https://youtu.be/qhy_CnfT_SU
+  dpc-gov-qjleHfVHiWU:
+    canale: dpc-gov
+    id: qjleHfVHiWU
+    titolo: Attività di recupero dei beni culturali – Terremoto Centro Italia
+    url: https://youtu.be/qjleHfVHiWU
+  dpc-gov-qkKqenrA8Og:
+    canale: dpc-gov
+    id: qkKqenrA8Og
+    titolo: 'Sopralluoghi post-sisma: il software Erikus (1 di 2) – Terremoto Centro Italia'
+    url: https://youtu.be/qkKqenrA8Og
+  dpc-gov-r-uQ8tJ7UHE:
+    canale: dpc-gov
+    id: r-uQ8tJ7UHE
+    titolo: L'emergenza Terremoto Centro Italia al Forum PA 2017 (3 di 5)
+    url: https://youtu.be/r-uQ8tJ7UHE
+  dpc-gov-r7-UeRiiANk:
+    canale: dpc-gov
+    id: r7-UeRiiANk
+    titolo: Il time-lapse della rotazione – Naufragio Concordia
+    url: https://youtu.be/r7-UeRiiANk
+  dpc-gov-rFOwwUkBE7o:
+    canale: dpc-gov
+    id: rFOwwUkBE7o
+    titolo: La cerimonia di conferimento – Benemerenze di protezione civile
+    url: https://youtu.be/rFOwwUkBE7o
+  dpc-gov-rNCCCBqoFIU:
+    canale: dpc-gov
+    id: rNCCCBqoFIU
+    titolo: Il campo di Zovencedo (VI) – Campi scuola "Anch'io sono la protezione civile" 2019
+    url: https://youtu.be/rNCCCBqoFIU
+  dpc-gov-r_wPDDidTPc:
+    canale: dpc-gov
+    id: r_wPDDidTPc
+    titolo: Conferenza stampa 22 febbraio 2020 ore 23.15 – Coronavirus
+    url: https://youtu.be/r_wPDDidTPc
+  dpc-gov-s5EeNpspzHg:
+    canale: dpc-gov
+    id: s5EeNpspzHg
+    titolo: Conferenza stampa 26 agosto 2016 ore 8.30 – Terremoto Centro Italia
+    url: https://youtu.be/s5EeNpspzHg
+  dpc-gov-sE2XbYXf2Bo:
+    canale: dpc-gov
+    id: sE2XbYXf2Bo
+    titolo: Campi scuola "Anch'io sono la protezione civile" 2023
+    url: https://youtu.be/sE2XbYXf2Bo
+  dpc-gov-sE35he6wSok:
+    canale: dpc-gov
+    id: sE35he6wSok
+    titolo: Renzi, Delrio e Curcio ad Amatrice – Terremoto Centro Italia
+    url: https://youtu.be/sE35he6wSok
+  dpc-gov-sUk8PLNviSI:
+    canale: dpc-gov
+    id: sUk8PLNviSI
+    titolo: Croce Rossa Italiana consegna la Medaglia al Merito al Dpc
+    url: https://youtu.be/sUk8PLNviSI
+  dpc-gov-su6gTLmjvqY:
+    canale: dpc-gov
+    id: su6gTLmjvqY
+    titolo: Cos'è un Posto Medico Avanzato di secondo livello – Ciclone Mozambico
+    url: https://youtu.be/su6gTLmjvqY
+  dpc-gov-t7F7eF9yfDQ:
+    canale: dpc-gov
+    id: t7F7eF9yfDQ
+    titolo: Salone Internazionale del Libro di Torino / 2025 - Silvia Camporesi
+    url: https://youtu.be/t7F7eF9yfDQ
+  dpc-gov-tJqR4vUHvLk:
+    canale: dpc-gov
+    id: tJqR4vUHvLk
+    titolo: Conferenza stampa 9 aprile 2020 ore 18.00 – Coronavirus​
+    url: https://youtu.be/tJqR4vUHvLk
+  dpc-gov-tkwtLbPvAm4:
+    canale: dpc-gov
+    id: tkwtLbPvAm4
+    titolo: Sorvolo su Amatrice (RI) – Terremoto Centro Italia
+    url: https://youtu.be/tkwtLbPvAm4
+  dpc-gov-twvMJnmKJOg:
+    canale: dpc-gov
+    id: twvMJnmKJOg
+    titolo: Conferenza stampa 4 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/twvMJnmKJOg
+  dpc-gov-tx19eTMm_R4:
+    canale: dpc-gov
+    id: tx19eTMm_R4
+    titolo: Sorvolo su Campotosto (AQ) – Terremoto Centro Italia
+    url: https://youtu.be/tx19eTMm_R4
+  dpc-gov-u-LiH0jR4Yk:
+    canale: dpc-gov
+    id: u-LiH0jR4Yk
+    titolo: Salone Internazionale del Libro di Torino / 2025 - Roberto Gagnor
+    url: https://youtu.be/u-LiH0jR4Yk
+  dpc-gov-uadgyNJU2N0:
+    canale: dpc-gov
+    id: uadgyNJU2N0
+    titolo: L'arrivo del team italiano a Maputo e il trasferimento a Beira – Ciclone Mozambico
+    url: https://youtu.be/uadgyNJU2N0
+  dpc-gov-uit9_QqNiRw:
+    canale: dpc-gov
+    id: uit9_QqNiRw
+    titolo: Le attività del sistema di protezione civile – Ecoballe Golfo di Follonica
+    url: https://youtu.be/uit9_QqNiRw
+  dpc-gov-ury_ZmaByLg:
+    canale: dpc-gov
+    id: ury_ZmaByLg
+    titolo: Il campo di Napoli – Campi scuola "Anch'io sono la protezione civile" 2019
+    url: https://youtu.be/ury_ZmaByLg
+  dpc-gov-v0ZDu8pzpn4:
+    canale: dpc-gov
+    id: v0ZDu8pzpn4
+    titolo: Workshop presentazione Programma/apr 2017 (2 di 3) – Protezione civile e PONGOV 2014-2020
+    url: https://youtu.be/v0ZDu8pzpn4
+  dpc-gov-vP7hI-62gH8:
+    canale: dpc-gov
+    id: vP7hI-62gH8
+    titolo: Promo 2014 "Io Non Rischio" (versione 1 di 2)
+    url: https://youtu.be/vP7hI-62gH8
+  dpc-gov-vR5-01ZjYmM:
+    canale: dpc-gov
+    id: vR5-01ZjYmM
+    titolo: Conferenza stampa 13 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/vR5-01ZjYmM
+  dpc-gov-vbCGEqukJA4:
+    canale: dpc-gov
+    id: vbCGEqukJA4
+    titolo: '"Terremoti d''Italia" e "Io Non Rischio" al Forum europeo – EFDRR 2018'
+    url: https://youtu.be/vbCGEqukJA4
+  dpc-gov-vdFZ34XCF7o:
+    canale: dpc-gov
+    id: vdFZ34XCF7o
+    titolo: Il campo di Stromboli (ME) – Campi scuola "Anch'io sono la protezione civile" 2019 (1 di 2)
+    url: https://youtu.be/vdFZ34XCF7o
+  dpc-gov-vfzPkO5dV-M:
+    canale: dpc-gov
+    id: vfzPkO5dV-M
+    titolo: L'intervento di Mario Monti – Stati Generali del Volontariato di Protezione Civile
+    url: https://youtu.be/vfzPkO5dV-M
+  dpc-gov-vyTJcOxzntg:
+    canale: dpc-gov
+    id: vyTJcOxzntg
+    titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+    url: https://youtu.be/vyTJcOxzntg
+  dpc-gov-w0T-sypAh7U:
+    canale: dpc-gov
+    id: w0T-sypAh7U
+    titolo: Direct Nationale "Je Ne Prends Pas de Risques" 2021
+    url: https://youtu.be/w0T-sypAh7U
+  dpc-gov-w3M_EQci5mk:
+    canale: dpc-gov
+    id: w3M_EQci5mk
+    titolo: Conferenza stampa 30 aprile 2020 ore 18.00 – Coronavirus​
+    url: https://youtu.be/w3M_EQci5mk
+  dpc-gov-w7Liq4bl_Lc:
+    canale: dpc-gov
+    id: w7Liq4bl_Lc
+    titolo: Conferenza stampa 1 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/w7Liq4bl_Lc
+  dpc-gov-wCc5NO9nrp8:
+    canale: dpc-gov
+    id: wCc5NO9nrp8
+    titolo: Task force medici e infermieri per l'emergenza – Coronavirus
+    url: https://youtu.be/wCc5NO9nrp8
+  dpc-gov-wCtyvTmx-iI:
+    canale: dpc-gov
+    id: wCtyvTmx-iI
+    titolo: Seminario previsori meteo (8 di 8)
+    url: https://youtu.be/wCtyvTmx-iI
+  dpc-gov-wFWhEsiKypQ:
+    canale: dpc-gov
+    id: wFWhEsiKypQ
+    titolo: Carico di aiuti della protezione civile – Emergenza Ucraina
+    url: https://youtu.be/wFWhEsiKypQ
+  dpc-gov-wQQuu6JGnJM:
+    canale: dpc-gov
+    id: wQQuu6JGnJM
+    titolo: Conferenza stampa 14 marzo 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/wQQuu6JGnJM
+  dpc-gov-wZbUwMCiJZc:
+    canale: dpc-gov
+    id: wZbUwMCiJZc
+    titolo: L'attivazione del sistema di protezione civile – EXE Flegrei 2024
+    url: https://youtu.be/wZbUwMCiJZc
+  dpc-gov-x4bZFqxGYqU:
+    canale: dpc-gov
+    id: x4bZFqxGYqU
+    titolo: Workshop annuale Programma/gen 2019 (1 di 3) – Protezione civile e PONGOV 2014-2020
+    url: https://youtu.be/x4bZFqxGYqU
+  dpc-gov-xC2RSa_29WM:
+    canale: dpc-gov
+    id: xC2RSa_29WM
+    titolo: 'TWIST 2013: esercitazione internazionale sul rischio maremoto'
+    url: https://youtu.be/xC2RSa_29WM
+  dpc-gov-xKjX65qpi8E:
+    canale: dpc-gov
+    id: xKjX65qpi8E
+    titolo: Webinar "Esercizi di futuro"
+    url: https://youtu.be/xKjX65qpi8E
+  dpc-gov-xNM2x-ekpbM:
+    canale: dpc-gov
+    id: xNM2x-ekpbM
+    titolo: Conferenza stampa 26 gennaio 2017 ore 12.30 – Terremoto Centro Italia
+    url: https://youtu.be/xNM2x-ekpbM
+  dpc-gov-xSUcGnamN0M:
+    canale: dpc-gov
+    id: xSUcGnamN0M
+    titolo: Seminario previsori meteo (2 di 8)
+    url: https://youtu.be/xSUcGnamN0M
+  dpc-gov-xWvj46n9t_c:
+    canale: dpc-gov
+    id: xWvj46n9t_c
+    titolo: Conferenza stampa 20 aprile 2020 ore 18.00 – Coronavirus
+    url: https://youtu.be/xWvj46n9t_c
+  dpc-gov-xZONHzUsggU:
+    canale: dpc-gov
+    id: xZONHzUsggU
+    titolo: PROCULTHER-NET 2-Protecting Cultural Heritage from the Consequences of Disasters-Network 2
+    url: https://youtu.be/xZONHzUsggU
+  dpc-gov-xzV92bZ8gqQ:
+    canale: dpc-gov
+    id: xzV92bZ8gqQ
+    titolo: Conferenza stampa del 28 marzo 2020 ore 18.00 –  Coronavirus
+    url: https://youtu.be/xzV92bZ8gqQ
+  dpc-gov-y2a-szGCpWM:
+    canale: dpc-gov
+    id: y2a-szGCpWM
+    titolo: Modello digitale 3D della rotazione – Naufragio Concordia
+    url: https://youtu.be/y2a-szGCpWM
+  dpc-gov-y6igNoLLToE:
+    canale: dpc-gov
+    id: y6igNoLLToE
+    titolo: Sorvolo 26 agosto 2016 – Terremoto Centro Italia
+    url: https://youtu.be/y6igNoLLToE
+  dpc-gov-yC5HG1BIoB8:
+    canale: dpc-gov
+    id: yC5HG1BIoB8
+    titolo: Salone Internazionale del Libro di Torino / 2025 - Fiorenza Sarzanini
+    url: https://youtu.be/yC5HG1BIoB8
+  dpc-gov-yRAlV7EVo74:
+    canale: dpc-gov
+    id: yRAlV7EVo74
+    titolo: Nicola Lagioia e Titti Postiglione su "eQuiLIBRI di protezione civile" – SalTo24
+    url: https://youtu.be/yRAlV7EVo74
+  dpc-gov-yRNxAUcgdNE:
+    canale: dpc-gov
+    id: yRNxAUcgdNE
+    titolo: 'Promo 2018 mostra Terremoti d''Italia: "Il rischio sismico tra conoscenza, memoria ed esperienza"'
+    url: https://youtu.be/yRNxAUcgdNE
+  dpc-gov-ySBzi8wN3BU:
+    canale: dpc-gov
+    id: ySBzi8wN3BU
+    titolo: Le attività del Dipartimento della Protezione Civile
+    url: https://youtu.be/ySBzi8wN3BU
+  dpc-gov-yhZyhxQFOSU:
+    canale: dpc-gov
+    id: yhZyhxQFOSU
+    titolo: Il campo base dei volontari di protezione civile a Centocelle – Funerali Papa Francesco
+    url: https://youtu.be/yhZyhxQFOSU
+  dpc-gov-ypGnlUFR9-g:
+    canale: dpc-gov
+    id: ypGnlUFR9-g
+    titolo: Seminario previsori meteo (3 di 8)
+    url: https://youtu.be/ypGnlUFR9-g
+  dpc-gov-zDmfPr-Vdjs:
+    canale: dpc-gov
+    id: zDmfPr-Vdjs
+    titolo: Le operazioni di carico del Posto Medico Avanzato – Ciclone Mozambico
+    url: https://youtu.be/zDmfPr-Vdjs
+  dpc-gov-zJl4jR8fwsg:
+    canale: dpc-gov
+    id: zJl4jR8fwsg
+    titolo: L'emergenza Terremoto Centro Italia al Forum PA 2017  (1 di 5)
+    url: https://youtu.be/zJl4jR8fwsg
+  dpc-gov-zUAHn1GvoaQ:
+    canale: dpc-gov
+    id: zUAHn1GvoaQ
+    titolo: Playlist Settimana Nazionale della Protezione Civile / 2025
+    url: https://youtu.be/zUAHn1GvoaQ
+  dpc-gov-zc9-va0yPww:
+    canale: dpc-gov
+    id: zc9-va0yPww
+    titolo: Conferenza stampa 23 gennaio 2017 ore 18.45 – Terremoto Centro Italia
+    url: https://youtu.be/zc9-va0yPww
+  dpc-gov-zh0Gft-9rNk:
+    canale: dpc-gov
+    id: zh0Gft-9rNk
+    titolo: Esercitazione SISMA DELLO STRETTO 2022
+    url: https://youtu.be/zh0Gft-9rNk
+  io-non-rischio--lfm_NBSFIs:
+    canale: io-non-rischio
+    id: -lfm_NBSFIs
+    titolo: Io non rischio 2017 - Luca Pancalli testimonial della Campagna
+    url: https://youtu.be/-lfm_NBSFIs
+  io-non-rischio-1WaW34maCtc:
+    canale: io-non-rischio
+    id: 1WaW34maCtc
+    titolo: Io non rischio 2017 - Il meglio dalle piazze
+    url: https://youtu.be/1WaW34maCtc
+  io-non-rischio-1kZMImTOPXU:
+    canale: io-non-rischio
+    id: 1kZMImTOPXU
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Piemonte
+    url: https://youtu.be/1kZMImTOPXU
+  io-non-rischio-277lnJ8CNaY:
+    canale: io-non-rischio
+    id: 277lnJ8CNaY
+    titolo: Io non rischio 2012 - La piazza di Viadana
+    url: https://youtu.be/277lnJ8CNaY
+  io-non-rischio-2g2ABfQVjJA:
+    canale: io-non-rischio
+    id: 2g2ABfQVjJA
+    titolo: La lezione del terremoto in Nepal
+    url: https://youtu.be/2g2ABfQVjJA
+  io-non-rischio-2rqG514_228:
+    canale: io-non-rischio
+    id: 2rqG514_228
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Campania
+    url: https://youtu.be/2rqG514_228
+  io-non-rischio-3c-xNVlpYns:
+    canale: io-non-rischio
+    id: 3c-xNVlpYns
+    titolo: 'INGV: Io non rischio perché'
+    url: https://youtu.be/3c-xNVlpYns
+  io-non-rischio-3vOPhwM29Sc:
+    canale: io-non-rischio
+    id: 3vOPhwM29Sc
+    titolo: La tua casa è sicura?
+    url: https://youtu.be/3vOPhwM29Sc
+  io-non-rischio-4bWyjdayqlE:
+    canale: io-non-rischio
+    id: 4bWyjdayqlE
+    titolo: Io non rischio 2023 - Lo spot
+    url: https://youtu.be/4bWyjdayqlE
+  io-non-rischio-4qIaN4pM2O0:
+    canale: io-non-rischio
+    id: 4qIaN4pM2O0
+    titolo: Io non rischio 2012 - La piazza di Modena
+    url: https://youtu.be/4qIaN4pM2O0
+  io-non-rischio-68qIeYfIEjY:
+    canale: io-non-rischio
+    id: 68qIeYfIEjY
+    titolo: Il valore della semplicità nella comunicazione del rischio
+    url: https://youtu.be/68qIeYfIEjY
+  io-non-rischio-7MRMK51szxE:
+    canale: io-non-rischio
+    id: 7MRMK51szxE
+    titolo: Io non rischio Vulcano  - Cosa fare in attenzione, preallarme e allarme
+    url: https://youtu.be/7MRMK51szxE
+  io-non-rischio-7wmtJhFI_bc:
+    canale: io-non-rischio
+    id: 7wmtJhFI_bc
+    titolo: Conoscere la caldera - Pillole di protezione civile
+    url: https://youtu.be/7wmtJhFI_bc
+  io-non-rischio-9tYSNBQY7OY:
+    canale: io-non-rischio
+    id: 9tYSNBQY7OY
+    titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
+    url: https://youtu.be/9tYSNBQY7OY
+  io-non-rischio-C-kdxa6OGT8:
+    canale: io-non-rischio
+    id: C-kdxa6OGT8
+    titolo: Io non rischio 2014 - Lo spot
+    url: https://youtu.be/C-kdxa6OGT8
+  io-non-rischio-CwxxWH-8cso:
+    canale: io-non-rischio
+    id: CwxxWH-8cso
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Campania
+    url: https://youtu.be/CwxxWH-8cso
+  io-non-rischio-D3SLHWmR8J4:
+    canale: io-non-rischio
+    id: D3SLHWmR8J4
+    titolo: Io non rischio Terremoto – Cosa fare durante e dopo
+    url: https://youtu.be/D3SLHWmR8J4
+  io-non-rischio-DOUAL7JYHfQ:
+    canale: io-non-rischio
+    id: DOUAL7JYHfQ
+    titolo: Conoscere la caldera - La pianificazione di protezione civile
+    url: https://youtu.be/DOUAL7JYHfQ
+  io-non-rischio-DbGSeVbDLCg:
+    canale: io-non-rischio
+    id: DbGSeVbDLCg
+    titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
+    url: https://youtu.be/DbGSeVbDLCg
+  io-non-rischio-DleU0hlx_Lk:
+    canale: io-non-rischio
+    id: DleU0hlx_Lk
+    titolo: Non aspettare un'emergenza per chiederti come affrontarla
+    url: https://youtu.be/DleU0hlx_Lk
+  io-non-rischio-Dn3scBsvhqg:
+    canale: io-non-rischio
+    id: Dn3scBsvhqg
+    titolo: L'attimo decisivo - La virgola
+    url: https://youtu.be/Dn3scBsvhqg
+  io-non-rischio-ExDMCEV-oM0:
+    canale: io-non-rischio
+    id: ExDMCEV-oM0
+    titolo: Il Cat dell'INGV
+    url: https://youtu.be/ExDMCEV-oM0
+  io-non-rischio-GtkgBAJXIf4:
+    canale: io-non-rischio
+    id: GtkgBAJXIf4
+    titolo: Io non rischio Stromboli in LIS - Cosa fare prima, durante e dopo un'esplosione parossistica
+    url: https://youtu.be/GtkgBAJXIf4
+  io-non-rischio-I01ayubS8OI:
+    canale: io-non-rischio
+    id: I01ayubS8OI
+    titolo: Io non rischio 2012 - La piazza di Valtournenche
+    url: https://youtu.be/I01ayubS8OI
+  io-non-rischio-I_egHXW7s6Y:
+    canale: io-non-rischio
+    id: I_egHXW7s6Y
+    titolo: La cultura della prevenzione
+    url: https://youtu.be/I_egHXW7s6Y
+  io-non-rischio-Jicc4Alt20I:
+    canale: io-non-rischio
+    id: Jicc4Alt20I
+    titolo: Io non rischio 2018 - La piazza di Roma parla inglese
+    url: https://youtu.be/Jicc4Alt20I
+  io-non-rischio-KFsfrTXLFvs:
+    canale: io-non-rischio
+    id: KFsfrTXLFvs
+    titolo: Io non rischio 2013 - La piazza di Martinsicuro
+    url: https://youtu.be/KFsfrTXLFvs
+  io-non-rischio-L8kzwtfQqig:
+    canale: io-non-rischio
+    id: L8kzwtfQqig
+    titolo: Conoscere la caldera dei Campi Flegrei
+    url: https://youtu.be/L8kzwtfQqig
+  io-non-rischio-MX2yO6KHvns:
+    canale: io-non-rischio
+    id: MX2yO6KHvns
+    titolo: Io non rischio scuola - La presentazione di Roberto Giarola
+    url: https://youtu.be/MX2yO6KHvns
+  io-non-rischio-N7QxzG0W9iY:
+    canale: io-non-rischio
+    id: N7QxzG0W9iY
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Abruzzo
+    url: https://youtu.be/N7QxzG0W9iY
+  io-non-rischio-NA92alBV-tE:
+    canale: io-non-rischio
+    id: NA92alBV-tE
+    titolo: Non aspettare un'emergenza per chiederti come affrontarla
+    url: https://youtu.be/NA92alBV-tE
+  io-non-rischio-NYkbfYbXssA:
+    canale: io-non-rischio
+    id: NYkbfYbXssA
+    titolo: Io non rischio Terremoto – Domande e risposte
+    url: https://youtu.be/NYkbfYbXssA
+  io-non-rischio-Nd0kXDrHD9Y:
+    canale: io-non-rischio
+    id: Nd0kXDrHD9Y
+    titolo: Compiere scelte pensando al futuro
+    url: https://youtu.be/Nd0kXDrHD9Y
+  io-non-rischio-NkV7uPFNZg4:
+    canale: io-non-rischio
+    id: NkV7uPFNZg4
+    titolo: Io non rischio Stromboli in LIS - Cosa sapere e cosa fare fin da subito
+    url: https://youtu.be/NkV7uPFNZg4
+  io-non-rischio-O_goGeLCJ98:
+    canale: io-non-rischio
+    id: O_goGeLCJ98
+    titolo: Io non rischio Maremoto – Cosa fare durante e dopo
+    url: https://youtu.be/O_goGeLCJ98
+  io-non-rischio-Oapnfcdpkz8:
+    canale: io-non-rischio
+    id: Oapnfcdpkz8
+    titolo: Io non rischio Vulcano - Domande e risposte
+    url: https://youtu.be/Oapnfcdpkz8
+  io-non-rischio-OnGj0IaLePA:
+    canale: io-non-rischio
+    id: OnGj0IaLePA
+    titolo: Io non rischio Alluvione – Domande e risposte
+    url: https://youtu.be/OnGj0IaLePA
+  io-non-rischio-P1LpgdnXPj8:
+    canale: io-non-rischio
+    id: P1LpgdnXPj8
+    titolo: 'IT-alert: il sistema di allarme pubblico'
+    url: https://youtu.be/P1LpgdnXPj8
+  io-non-rischio-P9KCcfDGlbE:
+    canale: io-non-rischio
+    id: P9KCcfDGlbE
+    titolo: 'Io non rischio 2015: la piazza di Lauria 17 e 18 ottobre'
+    url: https://youtu.be/P9KCcfDGlbE
+  io-non-rischio-PwTmszS3mZ0:
+    canale: io-non-rischio
+    id: PwTmszS3mZ0
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Lombardia
+    url: https://youtu.be/PwTmszS3mZ0
+  io-non-rischio-Pz5Dky_rvFI:
+    canale: io-non-rischio
+    id: Pz5Dky_rvFI
+    titolo: 'Vent''anni anni dallo tsunami di Stromboli: storia o attualità?'
+    url: https://youtu.be/Pz5Dky_rvFI
+  io-non-rischio-Q3P_vu7---M:
+    canale: io-non-rischio
+    id: Q3P_vu7---M
+    titolo: Io non rischio 2016 - Video messaggio del Capo Dipartimento per il Tweetstorm
+    url: https://youtu.be/Q3P_vu7---M
+  io-non-rischio-Q4U9Rdknj9o:
+    canale: io-non-rischio
+    id: Q4U9Rdknj9o
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Lombardia
+    url: https://youtu.be/Q4U9Rdknj9o
+  io-non-rischio-Q97XEn6T_-c:
+    canale: io-non-rischio
+    id: Q97XEn6T_-c
+    titolo: Io non rischio 2017 - La piazza di Frosinone
+    url: https://youtu.be/Q97XEn6T_-c
+  io-non-rischio-Qk7LdCP5_ig:
+    canale: io-non-rischio
+    id: Qk7LdCP5_ig
+    titolo: Vulcano - Cosa sapere e cosa fare
+    url: https://youtu.be/Qk7LdCP5_ig
+  io-non-rischio-R-L7wvNC85A:
+    canale: io-non-rischio
+    id: R-L7wvNC85A
+    titolo: Io non rischio 2014 - Il video-messaggio di Franco Gabrielli
+    url: https://youtu.be/R-L7wvNC85A
+  io-non-rischio-RdUhM54AF8k:
+    canale: io-non-rischio
+    id: RdUhM54AF8k
+    titolo: Io non rischio 2018 - La piazza di Bologna
+    url: https://youtu.be/RdUhM54AF8k
+  io-non-rischio-SiH1xfWptto:
+    canale: io-non-rischio
+    id: SiH1xfWptto
+    titolo: Titoli di coda diretta nazionale 15 10 2022
+    url: https://youtu.be/SiH1xfWptto
+  io-non-rischio-U2vCzA4rPAc:
+    canale: io-non-rischio
+    id: U2vCzA4rPAc
+    titolo: Io non rischio 2012 - La piazza di Castel di Sangro
+    url: https://youtu.be/U2vCzA4rPAc
+  io-non-rischio-VljPoXQhX6c:
+    canale: io-non-rischio
+    id: VljPoXQhX6c
+    titolo: Io non rischio 2012 - La piazza di Lentini
+    url: https://youtu.be/VljPoXQhX6c
+  io-non-rischio-W_b8SVMXAkw:
+    canale: io-non-rischio
+    id: W_b8SVMXAkw
+    titolo: Io non rischio 2015 - Lo spot
+    url: https://youtu.be/W_b8SVMXAkw
+  io-non-rischio-WymXhZm2Bcg:
+    canale: io-non-rischio
+    id: WymXhZm2Bcg
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Toscana
+    url: https://youtu.be/WymXhZm2Bcg
+  io-non-rischio-Z0yHNAn2qs8:
+    canale: io-non-rischio
+    id: Z0yHNAn2qs8
+    titolo: 'Abili a proteggere: Io non rischio perché'
+    url: https://youtu.be/Z0yHNAn2qs8
+  io-non-rischio-_9KwcLgBCAc:
+    canale: io-non-rischio
+    id: _9KwcLgBCAc
+    titolo: Stati Generali del Volontariato di Protezione Civile 2022 - Intervento di Flavia Moro
+    url: https://youtu.be/_9KwcLgBCAc
+  io-non-rischio-_L64AntzfPY:
+    canale: io-non-rischio
+    id: _L64AntzfPY
+    titolo: Prevenire è necessario
+    url: https://youtu.be/_L64AntzfPY
+  io-non-rischio-_keMq9voFQw:
+    canale: io-non-rischio
+    id: _keMq9voFQw
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Veneto
+    url: https://youtu.be/_keMq9voFQw
+  io-non-rischio-_klPKMITf6E:
+    canale: io-non-rischio
+    id: _klPKMITf6E
+    titolo: Vulcano - What to do and what to know
+    url: https://youtu.be/_klPKMITf6E
+  io-non-rischio-_rwA0VWBIGo:
+    canale: io-non-rischio
+    id: _rwA0VWBIGo
+    titolo: Io non rischio Vulcano - Cosa sapere e cosa fare fin da subito
+    url: https://youtu.be/_rwA0VWBIGo
+  io-non-rischio-bESNWQQVu8M:
+    canale: io-non-rischio
+    id: bESNWQQVu8M
+    titolo: Spot Io non rischio 2024
+    url: https://youtu.be/bESNWQQVu8M
+  io-non-rischio-bQiJIpfa-r4:
+    canale: io-non-rischio
+    id: bQiJIpfa-r4
+    titolo: 'Anpas: Io non rischio perché'
+    url: https://youtu.be/bQiJIpfa-r4
+  io-non-rischio-bovgEuNpq9w:
+    canale: io-non-rischio
+    id: bovgEuNpq9w
+    titolo: Stromboli - What to know and what to do
+    url: https://youtu.be/bovgEuNpq9w
+  io-non-rischio-brzkHrIX30c:
+    canale: io-non-rischio
+    id: brzkHrIX30c
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Veneto
+    url: https://youtu.be/brzkHrIX30c
+  io-non-rischio-cHDYvGntxEg:
+    canale: io-non-rischio
+    id: cHDYvGntxEg
+    titolo: Il tempo della prevenzione
+    url: https://youtu.be/cHDYvGntxEg
+  io-non-rischio-cM_-XxA14yk:
+    canale: io-non-rischio
+    id: cM_-XxA14yk
+    titolo: Non aspettare un'emergenza per chiederti come affrontarla
+    url: https://youtu.be/cM_-XxA14yk
+  io-non-rischio-chdlSnAIAGo:
+    canale: io-non-rischio
+    id: chdlSnAIAGo
+    titolo: Io non Rischio 2018 - Lo spot
+    url: https://youtu.be/chdlSnAIAGo
+  io-non-rischio-dWQe7W5KPM4:
+    canale: io-non-rischio
+    id: dWQe7W5KPM4
+    titolo: Io non rischio 2015 - La piazza di Salerno
+    url: https://youtu.be/dWQe7W5KPM4
+  io-non-rischio-drzJinmfZPE:
+    canale: io-non-rischio
+    id: drzJinmfZPE
+    titolo: Il kit d'emergenza
+    url: https://youtu.be/drzJinmfZPE
+  io-non-rischio-eHeP3f2-PJw:
+    canale: io-non-rischio
+    id: eHeP3f2-PJw
+    titolo: Io non rischio 2014 - Lo spot (versione grafica)
+    url: https://youtu.be/eHeP3f2-PJw
+  io-non-rischio-eoA3X3i54TY:
+    canale: io-non-rischio
+    id: eoA3X3i54TY
+    titolo: Io non rischio 2017 - I testimonial dell'edizione speciale
+    url: https://youtu.be/eoA3X3i54TY
+  io-non-rischio-esAjpZQ2C9E:
+    canale: io-non-rischio
+    id: esAjpZQ2C9E
+    titolo: Conoscere la caldera - Cosa fare in caso di terremoto, gas vulcanici ed eruzione vulcanica
+    url: https://youtu.be/esAjpZQ2C9E
+  io-non-rischio-itxBlj3NvVs:
+    canale: io-non-rischio
+    id: itxBlj3NvVs
+    titolo: 'ReLUIS: Io non rischio perché'
+    url: https://youtu.be/itxBlj3NvVs
+  io-non-rischio-jngoLN7077k:
+    canale: io-non-rischio
+    id: jngoLN7077k
+    titolo: 'Beni culturali e gestione del rischio: l''esperienza del Parco archeologico di Sibari'
+    url: https://youtu.be/jngoLN7077k
+  io-non-rischio-kT-m1l4haIQ:
+    canale: io-non-rischio
+    id: kT-m1l4haIQ
+    titolo: Chi ha paura dei temporali?
+    url: https://youtu.be/kT-m1l4haIQ
+  io-non-rischio-lAC3EvSTCl0:
+    canale: io-non-rischio
+    id: lAC3EvSTCl0
+    titolo: Io non rischio Maremoto – Domande e risposte
+    url: https://youtu.be/lAC3EvSTCl0
+  io-non-rischio-mVKKl4neabw:
+    canale: io-non-rischio
+    id: mVKKl4neabw
+    titolo: Io non rischio Stromboli in LIS - Domande e risposte
+    url: https://youtu.be/mVKKl4neabw
+  io-non-rischio-nrconQoHY8M:
+    canale: io-non-rischio
+    id: nrconQoHY8M
+    titolo: Acqua amica o nemica?
+    url: https://youtu.be/nrconQoHY8M
+  io-non-rischio-oJB82_5224k:
+    canale: io-non-rischio
+    id: oJB82_5224k
+    titolo: Io non rischio 2016  - Lo spot
+    url: https://youtu.be/oJB82_5224k
+  io-non-rischio-p7BNHjiqT48:
+    canale: io-non-rischio
+    id: p7BNHjiqT48
+    titolo: Io non rischio 2017 - Lo spot
+    url: https://youtu.be/p7BNHjiqT48
+  io-non-rischio-pRNdk6d1tWg:
+    canale: io-non-rischio
+    id: pRNdk6d1tWg
+    titolo: Io non rischio Alluvione – Cosa sapere e cosa fare fin da subito
+    url: https://youtu.be/pRNdk6d1tWg
+  io-non-rischio-phK5ETSeUwI:
+    canale: io-non-rischio
+    id: phK5ETSeUwI
+    titolo: Conoscere la caldera – Cosa devi ricordare e cosa puoi fare fin da subito
+    url: https://youtu.be/phK5ETSeUwI
+  io-non-rischio-pvk-P_5WBBw:
+    canale: io-non-rischio
+    id: pvk-P_5WBBw
+    titolo: Io non rischio Incendi Boschivi – Domande e risposte
+    url: https://youtu.be/pvk-P_5WBBw
+  io-non-rischio-qeU_VhZuMGI:
+    canale: io-non-rischio
+    id: qeU_VhZuMGI
+    titolo: 'CIMA: Io non rischio perché'
+    url: https://youtu.be/qeU_VhZuMGI
+  io-non-rischio-qmaEBC_jQfg:
+    canale: io-non-rischio
+    id: qmaEBC_jQfg
+    titolo: Io non rischio 2022 - Lo spot
+    url: https://youtu.be/qmaEBC_jQfg
+  io-non-rischio-qxQJQEjzRwc:
+    canale: io-non-rischio
+    id: qxQJQEjzRwc
+    titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+    url: https://youtu.be/qxQJQEjzRwc
+  io-non-rischio-r1_tqC9ZGgU:
+    canale: io-non-rischio
+    id: r1_tqC9ZGgU
+    titolo: Le novità della campagna Io non rischio 2023
+    url: https://youtu.be/r1_tqC9ZGgU
+  io-non-rischio-riblLuEdN9Y:
+    canale: io-non-rischio
+    id: riblLuEdN9Y
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Campania
+    url: https://youtu.be/riblLuEdN9Y
+  io-non-rischio-ricWjCnb9Es:
+    canale: io-non-rischio
+    id: ricWjCnb9Es
+    titolo: Prepariamoci a parlare dei rischi
+    url: https://youtu.be/ricWjCnb9Es
+  io-non-rischio-sEOnZawITHM:
+    canale: io-non-rischio
+    id: sEOnZawITHM
+    titolo: Io non rischio 2018 - Messaggio di Angelo Borrelli da Aosta
+    url: https://youtu.be/sEOnZawITHM
+  io-non-rischio-tQmqOQJEArY:
+    canale: io-non-rischio
+    id: tQmqOQJEArY
+    titolo: Io non rischio Terremoto – Cosa sapere e cosa fare fin da subito
+    url: https://youtu.be/tQmqOQJEArY
+  io-non-rischio-thO9qvYazO0:
+    canale: io-non-rischio
+    id: thO9qvYazO0
+    titolo: Io non rischio 2014 - Lo spot (versione radio)
+    url: https://youtu.be/thO9qvYazO0
+  io-non-rischio-vwn856-aTrM:
+    canale: io-non-rischio
+    id: vwn856-aTrM
+    titolo: La comunicazione del rischio
+    url: https://youtu.be/vwn856-aTrM
+  io-non-rischio-wXCglNkyX3g:
+    canale: io-non-rischio
+    id: wXCglNkyX3g
+    titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Lombardia
+    url: https://youtu.be/wXCglNkyX3g
+  io-non-rischio-yqZURftuqOY:
+    canale: io-non-rischio
+    id: yqZURftuqOY
+    titolo: Io non rischio 2020 - Lo spot social
+    url: https://youtu.be/yqZURftuqOY
+  io-non-rischio-ytXmlU21-ZU:
+    canale: io-non-rischio
+    id: ytXmlU21-ZU
+    titolo: Io non rischio 2015 - La piazza di Avezzano
+    url: https://youtu.be/ytXmlU21-ZU
+  io-non-rischio-z16w2yYm-8Y:
+    canale: io-non-rischio
+    id: z16w2yYm-8Y
+    titolo: Io non rischio 2018 - La piazza di Pescara in LIS
+    url: https://youtu.be/z16w2yYm-8Y
+  io-non-rischio-zEhSFKhma0Y:
+    canale: io-non-rischio
+    id: zEhSFKhma0Y
+    titolo: Io non rischio Maremoto – Cosa sapere e cosa fare fin da subito
+    url: https://youtu.be/zEhSFKhma0Y
+  io-non-rischio-zi73q6iZPPg:
+    canale: io-non-rischio
+    id: zi73q6iZPPg
+    titolo: Stromboli - Cosa sapere e cosa fare
+    url: https://youtu.be/zi73q6iZPPg

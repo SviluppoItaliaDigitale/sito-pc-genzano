@@ -1,0 +1,5005 @@
+# Mappa pagina del sito → video correlati pertinenti.
+# Generato da scripts/genera-video-correlati.py via cross-match
+# algoritmico (IDF-weighted) sul catalogo data/video_dpc_catalogo.yaml.
+#
+# Usato dal partial Hugo `video-correlati.html` per renderizzare la
+# sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
+#
+# Pagine coperte: 205 / Video unici usati: 170 /
+# Link totali: 410 (max 3 per pagina,
+# soglia score >= 3.0).
+
+canali:
+  abili-a-proteggere:
+    nome: Abili a Proteggere
+    url: https://www.youtube.com/@abiliaproteggere4520/videos
+    video_count: 124
+  dpc-gov:
+    nome: Dipartimento della Protezione Civile (PCM)
+    url: https://www.youtube.com/@DPCgov/videos
+    video_count: 376
+  io-non-rischio:
+    nome: Io non rischio
+    url: https://www.youtube.com/@io_non_rischio/videos
+    video_count: 97
+pagine:
+  comunicazioni/2024-10-06-manuale-cucina-emergenza-fic-presentazione:
+    title: La Federazione Italiana Cuochi presenta il Manuale di Cucina in Emergenza
+    url: /comunicazioni/2024-10-06-manuale-cucina-emergenza-fic-presentazione/
+    video:
+    - anchored:
+      - presenta
+      canale: dpc-gov
+      id: GoLH4rmulgs
+      overlap:
+      - capo
+      - ciciliano
+      - presenta
+      score: 5.0
+      titolo: Il Capo Dipartimento Ciciliano presenta la Settimana Nazionale della Protezione Civile 2024
+      url: https://youtu.be/GoLH4rmulgs
+    - anchored:
+      - federazione
+      canale: abili-a-proteggere
+      id: vYwxNjixlLE
+      overlap:
+      - federazione
+      - presidente
+      score: 4.0
+      titolo: '#NienteDiSpeciale: Intervista a Donatella Galliano presidente Federazione Psicologi per i Popoli'
+      url: https://youtu.be/vYwxNjixlLE
+    - anchored:
+      - federazione
+      canale: abili-a-proteggere
+      id: wJtpPJlLZsE
+      overlap:
+      - federazione
+      - presidente
+      score: 4.0
+      titolo: '#NienteDiSpeciale: Intervista a Nazaro Pagano presidente Fand - azioni e obiettivi della Federazione'
+      url: https://youtu.be/wJtpPJlLZsE
+  comunicazioni/2024-11-26-manuale-caritas-banco-alimentare-presentazione:
+    title: 'Recupero e distribuzione di cibo per solidarietà: il manuale Caritas-Banco Alimentare validato dal Ministero della
+      Salute'
+    url: /comunicazioni/2024-11-26-manuale-caritas-banco-alimentare-presentazione/
+    video:
+    - anchored:
+      - solidarietà
+      canale: abili-a-proteggere
+      id: 6Ue54lPvZ48
+      overlap:
+      - solidarietà
+      score: 3.0
+      titolo: La centralità della solidarietà - Paolo Giordano (fisico delle particelle, saggista, giornalista)
+      url: https://youtu.be/6Ue54lPvZ48
+    - anchored:
+      - recupero
+      canale: dpc-gov
+      id: 0-6oRTWk5O4
+      overlap:
+      - recupero
+      score: 3.0
+      titolo: Il recupero del carburante dall'alto – Naufragio Concordia
+      url: https://youtu.be/0-6oRTWk5O4
+    - anchored:
+      - recupero
+      canale: dpc-gov
+      id: dkUue6aexbo
+      overlap:
+      - recupero
+      score: 3.0
+      titolo: Le operazioni di ricerca e recupero – Ecoballe Golfo di Follonica
+      url: https://youtu.be/dkUue6aexbo
+  comunicazioni/2024-12-20-auguri-2025:
+    title: Auguri di Buone Feste dal Gruppo
+    url: /comunicazioni/2024-12-20-auguri-2025/
+    video:
+    - anchored:
+      - buone
+      canale: dpc-gov
+      id: MzVgNeBjJSQ
+      overlap:
+      - buone
+      score: 3.0
+      titolo: 'Incendi boschivi: le buone pratiche'
+      url: https://youtu.be/MzVgNeBjJSQ
+  comunicazioni/2025-02-05-libro-risparmio-fondazione-barilla-presentazione:
+    title: 'Giornata nazionale contro lo spreco alimentare: Fondazione Barilla presenta \"Il Libro del Risparmio\'
+    url: /comunicazioni/2025-02-05-libro-risparmio-fondazione-barilla-presentazione/
+    video:
+    - anchored:
+      - presenta
+      canale: dpc-gov
+      id: 6JuLpVcQurE
+      overlap:
+      - presenta
+      score: 3.0
+      titolo: Il Capo Dipartimento presenta la Settimana – Settimana Nazionale della Protezione Civile 2020
+      url: https://youtu.be/6JuLpVcQurE
+    - anchored:
+      - presenta
+      canale: dpc-gov
+      id: GoLH4rmulgs
+      overlap:
+      - presenta
+      score: 3.0
+      titolo: Il Capo Dipartimento Ciciliano presenta la Settimana Nazionale della Protezione Civile 2024
+      url: https://youtu.be/GoLH4rmulgs
+    - anchored:
+      - presenta
+      canale: dpc-gov
+      id: h9gHG4ggiK4
+      overlap:
+      - presenta
+      score: 3.0
+      titolo: Il Capo Dipartimento Borrelli presenta la Settimana Nazionale della Protezione Civile 2019
+      url: https://youtu.be/h9gHG4ggiK4
+  comunicazioni/2025-03-10-cucina-emergenza-haccp-ruoli-volontari:
+    title: 'Cucina in emergenza: chi fa cosa e perché la formazione HACCP è obbligatoria'
+    url: /comunicazioni/2025-03-10-cucina-emergenza-haccp-ruoli-volontari/
+    video:
+    - anchored:
+      - accoglienza
+      canale: dpc-gov
+      id: 91W1aNc-P90
+      overlap:
+      - accoglienza
+      - campo
+      - emergenza
+      score: 3.2
+      titolo: Allestimento del campo di accoglienza a Michalovce (Slovacchia) – Emergenza Ucraina
+      url: https://youtu.be/91W1aNc-P90
+  comunicazioni/2025-06-15-campagna-aib:
+    title: Avvio Campagna Antincendio Boschivo 2025
+    url: /comunicazioni/2025-06-15-campagna-aib/
+    video:
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: -lfm_NBSFIs
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Io non rischio 2017 - Luca Pancalli testimonial della Campagna
+      url: https://youtu.be/-lfm_NBSFIs
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: r1_tqC9ZGgU
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Le novità della campagna Io non rischio 2023
+      url: https://youtu.be/r1_tqC9ZGgU
+  comunicazioni/2025-07-14-alimentazioni-speciali-campo-accoglienza:
+    title: 'Alimentazioni speciali nei campi di accoglienza: allergie, celiachia e semaforo alimentare'
+    url: /comunicazioni/2025-07-14-alimentazioni-speciali-campo-accoglienza/
+    video:
+    - anchored:
+      - accoglienza
+      canale: dpc-gov
+      id: 91W1aNc-P90
+      overlap:
+      - accoglienza
+      - campo
+      - emergenza
+      score: 3.8
+      titolo: Allestimento del campo di accoglienza a Michalovce (Slovacchia) – Emergenza Ucraina
+      url: https://youtu.be/91W1aNc-P90
+    - anchored:
+      - campi
+      canale: dpc-gov
+      id: 7q9IP5GpBRw
+      overlap:
+      - campi
+      - campo
+      score: 3.6
+      titolo: Il campo di Carsoli (AQ) – Campi scuola "Anch'io sono la protezione civile" 2019
+      url: https://youtu.be/7q9IP5GpBRw
+    - anchored:
+      - campi
+      canale: dpc-gov
+      id: AsI_Jg1bhSo
+      overlap:
+      - campi
+      - campo
+      score: 3.6
+      titolo: Il campo di Stromboli (ME) – Campi scuola "Anch'io sono la protezione civile" 2019 (2 di 2)
+      url: https://youtu.be/AsI_Jg1bhSo
+  comunicazioni/2025-09-15-organizzazioni-caritative-haccp-buone-prassi-igieniche:
+    title: 'Sicurezza alimentare nelle organizzazioni di volontariato: HACCP semplificato e prassi igieniche'
+    url: /comunicazioni/2025-09-15-organizzazioni-caritative-haccp-buone-prassi-igieniche/
+    video:
+    - anchored:
+      - solidarietà
+      canale: abili-a-proteggere
+      id: 6Ue54lPvZ48
+      overlap:
+      - fisico
+      - solidarietà
+      score: 3.0
+      titolo: La centralità della solidarietà - Paolo Giordano (fisico delle particelle, saggista, giornalista)
+      url: https://youtu.be/6Ue54lPvZ48
+  comunicazioni/2025-10-14-io-non-rischio:
+    title: Io Non Rischio 2025 - Genzano in piazza
+    url: /comunicazioni/2025-10-14-io-non-rischio/
+    video:
+    - anchored:
+      - piazza
+      canale: io-non-rischio
+      id: 1kZMImTOPXU
+      overlap:
+      - piazza
+      - rischio
+      - trovarci
+      score: 4.6
+      titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Piemonte
+      url: https://youtu.be/1kZMImTOPXU
+    - anchored:
+      - piazza
+      canale: io-non-rischio
+      id: 2rqG514_228
+      overlap:
+      - piazza
+      - rischio
+      - trovarci
+      score: 4.6
+      titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Campania
+      url: https://youtu.be/2rqG514_228
+    - anchored:
+      - piazza
+      canale: io-non-rischio
+      id: CwxxWH-8cso
+      overlap:
+      - piazza
+      - rischio
+      - trovarci
+      score: 4.6
+      titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Campania
+      url: https://youtu.be/CwxxWH-8cso
+  comunicazioni/2025-10-16-cucina-zero-spreco-avanzi-recupero:
+    title: 'Giornata mondiale dell''alimentazione: cucina a zero spreco e recupero degli avanzi'
+    url: /comunicazioni/2025-10-16-cucina-zero-spreco-avanzi-recupero/
+    video:
+    - anchored:
+      - recupero
+      canale: dpc-gov
+      id: 0-6oRTWk5O4
+      overlap:
+      - recupero
+      score: 3.0
+      titolo: Il recupero del carburante dall'alto – Naufragio Concordia
+      url: https://youtu.be/0-6oRTWk5O4
+    - anchored:
+      - recupero
+      canale: dpc-gov
+      id: dkUue6aexbo
+      overlap:
+      - recupero
+      score: 3.0
+      titolo: Le operazioni di ricerca e recupero – Ecoballe Golfo di Follonica
+      url: https://youtu.be/dkUue6aexbo
+    - anchored:
+      - recupero
+      canale: dpc-gov
+      id: qjleHfVHiWU
+      overlap:
+      - recupero
+      score: 3.0
+      titolo: Attività di recupero dei beni culturali – Terremoto Centro Italia
+      url: https://youtu.be/qjleHfVHiWU
+  comunicazioni/2026-01-17-sant-antonio-abate-fuochi-tradizione-sicurezza:
+    title: 'Sant''Antonio Abate: tradizione dei fuochi e rischio incendi'
+    url: /comunicazioni/2026-01-17-sant-antonio-abate-fuochi-tradizione-sicurezza/
+    video:
+    - anchored:
+      - antonio
+      canale: abili-a-proteggere
+      id: dbeb45w0tVo
+      overlap:
+      - antonio
+      - campo
+      score: 3.6
+      titolo: '#NienteDiSpeciale: intervista ad Antonio Ciotola chef e formatore volontari cucine da campo'
+      url: https://youtu.be/dbeb45w0tVo
+    - anchored:
+      - antonio
+      canale: abili-a-proteggere
+      id: R00PZpq-hhk
+      overlap:
+      - antonio
+      score: 3.0
+      titolo: '#NienteDiSpeciale: Abili a proteggere intervista Gian Antonio Stella'
+      url: https://youtu.be/R00PZpq-hhk
+    - anchored:
+      - antonio
+      canale: abili-a-proteggere
+      id: _7lhyAgB_E4
+      overlap:
+      - antonio
+      score: 3.0
+      titolo: Intervista ad Antonio Pasquale Belloi, Direttore Generale della Protezione Civile Regione Sardegna
+      url: https://youtu.be/_7lhyAgB_E4
+  comunicazioni/2026-01-27-giorno-memoria-dovere-civile-ricordare:
+    title: 'Giorno della Memoria: il dovere civile di ricordare'
+    url: /comunicazioni/2026-01-27-giorno-memoria-dovere-civile-ricordare/
+    video:
+    - anchored:
+      - memoria
+      canale: dpc-gov
+      id: yRNxAUcgdNE
+      overlap:
+      - conoscenza
+      - memoria
+      - terremoti
+      score: 5.0
+      titolo: 'Promo 2018 mostra Terremoti d''Italia: "Il rischio sismico tra conoscenza, memoria ed esperienza"'
+      url: https://youtu.be/yRNxAUcgdNE
+    - anchored:
+      - ricordare
+      canale: io-non-rischio
+      id: phK5ETSeUwI
+      overlap:
+      - conoscere
+      - ricordare
+      score: 3.6
+      titolo: Conoscere la caldera – Cosa devi ricordare e cosa puoi fare fin da subito
+      url: https://youtu.be/phK5ETSeUwI
+  comunicazioni/2026-02-11-giornata-europea-112-numero-unico:
+    title: '11 febbraio: Giornata Europea del 112, un solo numero per ogni emergenza'
+    url: /comunicazioni/2026-02-11-giornata-europea-112-numero-unico/
+    video:
+    - anchored:
+      - europea
+      canale: dpc-gov
+      id: gA5H_FuzG-c
+      overlap:
+      - emergenze
+      - europea
+      - mare
+      score: 4.2
+      titolo: 'JFWEDROP 2015: esercitazione europea sulle emergenze in mare'
+      url: https://youtu.be/gA5H_FuzG-c
+  comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato:
+    title: 'Giornata della Protezione Civile: storia e ruolo del volontariato'
+    url: /comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/
+    video:
+    - anchored:
+      - storia
+      canale: io-non-rischio
+      id: Pz5Dky_rvFI
+      overlap:
+      - storia
+      score: 3.0
+      titolo: 'Vent''anni anni dallo tsunami di Stromboli: storia o attualità?'
+      url: https://youtu.be/Pz5Dky_rvFI
+  comunicazioni/2026-03-01-giornata-mondiale-protezione-civile:
+    title: 1° marzo, Giornata Mondiale della Protezione Civile
+    url: /comunicazioni/2026-03-01-giornata-mondiale-protezione-civile/
+    video:
+    - anchored:
+      - valore
+      canale: dpc-gov
+      id: BooLyjLFbSM
+      overlap:
+      - sede
+      - valore
+      score: 3.0
+      titolo: Mattarella visita la sede operativa del Dipartimento – Medaglia d'oro al Valore Civile
+      url: https://youtu.be/BooLyjLFbSM
+    - anchored:
+      - ricordare
+      canale: io-non-rischio
+      id: phK5ETSeUwI
+      overlap:
+      - puoi
+      - ricordare
+      score: 3.0
+      titolo: Conoscere la caldera – Cosa devi ricordare e cosa puoi fare fin da subito
+      url: https://youtu.be/phK5ETSeUwI
+  comunicazioni/2026-03-08-donne-protezione-civile-genzano:
+    title: Le donne della Protezione Civile di Genzano
+    url: /comunicazioni/2026-03-08-donne-protezione-civile-genzano/
+    video:
+    - anchored:
+      - donne
+      canale: dpc-gov
+      id: QhVWOEPOvd8
+      overlap:
+      - donne
+      score: 3.0
+      titolo: 'Giornata internazionale delle donne nella scienza: la testimonianza di Titti Postiglione'
+      url: https://youtu.be/QhVWOEPOvd8
+  comunicazioni/2026-03-11-tohoku-fukushima-2011-tsunami-emergenze-multiple:
+    title: 'Tōhoku, 11 marzo 2011: il terremoto, lo tsunami e Fukushima — quindici anni dopo l''emergenza tripla che ha cambiato
+      il mondo'
+    url: /comunicazioni/2026-03-11-tohoku-fukushima-2011-tsunami-emergenze-multiple/
+    video:
+    - anchored:
+      - tsunami
+      canale: abili-a-proteggere
+      id: yhCLcmFNZaI
+      overlap:
+      - allerta
+      - ingv
+      - tsunami
+      score: 4.6
+      titolo: Il Centro Allerta Tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami - Ingv)
+      url: https://youtu.be/yhCLcmFNZaI
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 4.4
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 4.4
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+  comunicazioni/2026-03-18-semaforo-attenzione-alimenti-recupero-solidarieta:
+    title: 'Il semaforo di attenzione degli alimenti: come classificare ciò che si recupera per solidarietà'
+    url: /comunicazioni/2026-03-18-semaforo-attenzione-alimenti-recupero-solidarieta/
+    video:
+    - anchored:
+      - solidarietà
+      canale: abili-a-proteggere
+      id: 6Ue54lPvZ48
+      overlap:
+      - solidarietà
+      score: 3.0
+      titolo: La centralità della solidarietà - Paolo Giordano (fisico delle particelle, saggista, giornalista)
+      url: https://youtu.be/6Ue54lPvZ48
+  comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive:
+    title: 'Giornata per la consapevolezza sull''autismo: emergenze inclusive'
+    url: /comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/
+    video:
+    - anchored:
+      - autismo
+      canale: abili-a-proteggere
+      id: gh0Hmf3Jhr4
+      overlap:
+      - autismo
+      - autonomia
+      score: 4.0
+      titolo: '#NienteDiSpeciale: Intervista a Pablo, autismo, protezione civile e autonomia'
+      url: https://youtu.be/gh0Hmf3Jhr4
+  comunicazioni/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano:
+    title: 'Nuovo logo della Protezione Civile: cosa cambia per i volontari di Genzano'
+    url: /comunicazioni/2026-04-03-nuovo-logo-della-protezione-civile-cosa-cambia-per-i-volontari-di-genzano/
+    video:
+    - anchored:
+      - logo
+      canale: dpc-gov
+      id: YKdvXzRUjgg
+      overlap:
+      - logo
+      score: 3.0
+      titolo: Animazione del logo
+      url: https://youtu.be/YKdvXzRUjgg
+  comunicazioni/2026-04-04-nuovo-gestionale:
+    title: Adozione nuovo gestionale
+    url: /comunicazioni/2026-04-04-nuovo-gestionale/
+    video:
+    - anchored:
+      - piattaforma
+      canale: dpc-gov
+      id: lbI7yBJGGs8
+      overlap:
+      - funzionalità
+      - piattaforma
+      - servizio
+      score: 3.2
+      titolo: 'Piattaforma Radar: le funzionalità e i prodotti del servizio del Dipartimento'
+      url: https://youtu.be/lbI7yBJGGs8
+  comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni:
+    title: 'Quarant''anni di volontariato: la storia del Gruppo Comunale di Genzano di Roma, dalle radio CB al Terzo Settore'
+    url: /comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/
+    video:
+    - anchored:
+      - terzo
+      canale: dpc-gov
+      id: bQFnYQbiHu4
+      overlap:
+      - terzo
+      score: 3.0
+      titolo: Michelangelo Pistoletto su "Il terzo paradiso" e "La formula della creazione" – SalTo24
+      url: https://youtu.be/bQFnYQbiHu4
+    - anchored:
+      - storia
+      canale: io-non-rischio
+      id: Pz5Dky_rvFI
+      overlap:
+      - storia
+      score: 3.0
+      titolo: 'Vent''anni anni dallo tsunami di Stromboli: storia o attualità?'
+      url: https://youtu.be/Pz5Dky_rvFI
+  comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa:
+    title: 'Diciassette anni fa il terremoto dell''Aquila: quando i volontari di Genzano portarono la speranza a Fossa'
+    url: /comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/
+    video:
+    - anchored:
+      - sisma
+      canale: dpc-gov
+      id: 2Evnqcfry8Q
+      overlap:
+      - sisma
+      - terremoto
+      score: 3.8
+      titolo: L'intervento italiano a una settimana dal sisma – Terremoto Turchia e Siria
+      url: https://youtu.be/2Evnqcfry8Q
+    - anchored:
+      - sisma
+      canale: dpc-gov
+      id: B9--XweE0nQ
+      overlap:
+      - sisma
+      - terremoto
+      score: 3.8
+      titolo: 'Sopralluoghi post-sisma: il software Erikus (2 di 2) – Terremoto Centro Italia'
+      url: https://youtu.be/B9--XweE0nQ
+    - anchored:
+      - sisma
+      canale: dpc-gov
+      id: qkKqenrA8Og
+      overlap:
+      - sisma
+      - terremoto
+      score: 3.8
+      titolo: 'Sopralluoghi post-sisma: il software Erikus (1 di 2) – Terremoto Centro Italia'
+      url: https://youtu.be/qkKqenrA8Og
+  comunicazioni/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici:
+    title: 'Allagamenti, alluvioni e alberi pericolanti: gli interventi tecnici del Gruppo Comunale'
+    url: /comunicazioni/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici/
+    video:
+    - anchored:
+      - interventi
+      canale: dpc-gov
+      id: ClFIKEGjiX0
+      overlap:
+      - interventi
+      score: 3.0
+      titolo: Gli interventi di messa in sicurezza nel Patan Museum (2 di 2) – Terremoto Nepal
+      url: https://youtu.be/ClFIKEGjiX0
+    - anchored:
+      - interventi
+      canale: dpc-gov
+      id: _osjFBJOasE
+      overlap:
+      - interventi
+      score: 3.0
+      titolo: Gli interventi di messa in sicurezza nel Patan Museum (1 di 2) – Terremoto Nepal
+      url: https://youtu.be/_osjFBJOasE
+  comunicazioni/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1:
+    title: 'Le frequenze radio della Rete Zamberletti: i radioamatori al servizio della Protezione Civile nelle prove di sintonia
+      tra le Prefetture d''Italia'
+    url: /comunicazioni/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1/
+    video:
+    - anchored:
+      - zamberletti
+      canale: dpc-gov
+      id: vyTJcOxzntg
+      overlap:
+      - emergenza
+      - radio
+      - rete
+      - telecomunicazioni
+      - zamberletti
+      score: 7.8
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
+    - anchored:
+      - zamberletti
+      canale: dpc-gov
+      id: RjCdoyyz3sQ
+      overlap:
+      - zamberletti
+      score: 3.0
+      titolo: Ricordo di Giuseppe Zamberletti
+      url: https://youtu.be/RjCdoyyz3sQ
+  comunicazioni/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere:
+    title: Il nostro Piano di Emergenza Familiare citato da Abili a proteggere, il portale del Dipartimento della Protezione
+      Civile
+    url: /comunicazioni/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere/
+    video:
+    - anchored:
+      - abili
+      - proteggere
+      canale: abili-a-proteggere
+      id: R00PZpq-hhk
+      overlap:
+      - abili
+      - proteggere
+      score: 6.0
+      titolo: '#NienteDiSpeciale: Abili a proteggere intervista Gian Antonio Stella'
+      url: https://youtu.be/R00PZpq-hhk
+    - anchored:
+      - abili
+      - proteggere
+      canale: abili-a-proteggere
+      id: WA6HZdcMTHw
+      overlap:
+      - abili
+      - proteggere
+      score: 6.0
+      titolo: Attività Abili a proteggere 2017
+      url: https://youtu.be/WA6HZdcMTHw
+    - anchored:
+      - abili
+      - proteggere
+      canale: abili-a-proteggere
+      id: jHD_z0dSSCI
+      overlap:
+      - abili
+      - proteggere
+      score: 6.0
+      titolo: Abili a Proteggere - le origini
+      url: https://youtu.be/jHD_z0dSSCI
+  comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione:
+    title: 'Esercitazione antincendio boschivo: come ci prepariamo'
+    url: /comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/
+    video:
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      overlap:
+      - esercitazione
+      - evacuazione
+      - procedure
+      score: 4.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      overlap:
+      - esercitazione
+      - evacuazione
+      score: 3.6
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: OkEoPVutZr4
+      overlap:
+      - esercitazione
+      - pianificazione
+      score: 3.6
+      titolo: Esercitazione “Verso una pianificazione di protezione civile inclusiva”
+      url: https://youtu.be/OkEoPVutZr4
+  comunicazioni/2026-04-15-frana-costone-nemi-chiusura-via-nemorense:
+    title: 'Frana di un costone nel territorio di Nemi: supporto alla chiusura di via Nemorense'
+    url: /comunicazioni/2026-04-15-frana-costone-nemi-chiusura-via-nemorense/
+    video:
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Le attività operative in corso a Niscemi in seguito alla Frana
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana di Niscemi (CL)
+      url: https://youtu.be/L98tBMJZn0k
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: k90I_coJTsA
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Operazioni di salvataggio rimasti isolati dopo la frana di Niescemi.
+      url: https://youtu.be/k90I_coJTsA
+  comunicazioni/2026-04-17-gestione-sala-radio-chiamata-emergenza-scheda-intervento:
+    title: 'La sala radio di protezione civile: come si gestisce una chiamata e come si compila la scheda di intervento'
+    url: /comunicazioni/2026-04-17-gestione-sala-radio-chiamata-emergenza-scheda-intervento/
+    video:
+    - anchored:
+      - sala
+      canale: dpc-gov
+      id: XOHR1OWB-cs
+      overlap:
+      - sala
+      - situazione
+      score: 3.6
+      titolo: La Sala Situazione Italia
+      url: https://youtu.be/XOHR1OWB-cs
+    - anchored:
+      - sala
+      canale: abili-a-proteggere
+      id: Tc3zhweSzE4
+      overlap:
+      - sala
+      score: 3.0
+      titolo: Sala monitoraggio terremoti e tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami)
+      url: https://youtu.be/Tc3zhweSzE4
+  comunicazioni/2026-04-17-mostra-terremoti-italia-napoli:
+    title: 'La mostra «Terremoti d''Italia» fa tappa a Napoli: dal 20 aprile al 9 maggio'
+    url: /comunicazioni/2026-04-17-mostra-terremoti-italia-napoli/
+    video:
+    - anchored:
+      - mostra
+      - terremoti
+      canale: dpc-gov
+      id: yRNxAUcgdNE
+      overlap:
+      - mostra
+      - rischio
+      - sismico
+      - terremoti
+      score: 7.6
+      titolo: 'Promo 2018 mostra Terremoti d''Italia: "Il rischio sismico tra conoscenza, memoria ed esperienza"'
+      url: https://youtu.be/yRNxAUcgdNE
+    - anchored:
+      - mostra
+      - terremoti
+      canale: dpc-gov
+      id: NN6QVaAhnjo
+      overlap:
+      - mostra
+      - terremoti
+      - visita
+      score: 7.0
+      titolo: Il Presidente Conte visita la mostra "Terremoti d'Italia" – EFDRR 2018
+      url: https://youtu.be/NN6QVaAhnjo
+    - anchored:
+      - mostra
+      - terremoti
+      canale: dpc-gov
+      id: pgHPsSGI1HY
+      overlap:
+      - dell
+      - mostra
+      - terremoti
+      score: 6.2
+      titolo: Il time-lapse dell'allestimento della mostra "Terremoti d'Italia" – EFDRR 2018
+      url: https://youtu.be/pgHPsSGI1HY
+  comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari:
+    title: 'Formazione regionale: un nostro formatore in Sala Operativa per i nuovi volontari'
+    url: /comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/
+    video:
+    - anchored:
+      - formatore
+      canale: abili-a-proteggere
+      id: dbeb45w0tVo
+      overlap:
+      - campo
+      - formatore
+      score: 3.6
+      titolo: '#NienteDiSpeciale: intervista ad Antonio Ciotola chef e formatore volontari cucine da campo'
+      url: https://youtu.be/dbeb45w0tVo
+    - anchored:
+      - sala
+      canale: abili-a-proteggere
+      id: Tc3zhweSzE4
+      overlap:
+      - sala
+      score: 3.0
+      titolo: Sala monitoraggio terremoti e tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami)
+      url: https://youtu.be/Tc3zhweSzE4
+    - anchored:
+      - sala
+      canale: dpc-gov
+      id: XOHR1OWB-cs
+      overlap:
+      - sala
+      score: 3.0
+      titolo: La Sala Situazione Italia
+      url: https://youtu.be/XOHR1OWB-cs
+  comunicazioni/2026-04-20-attivazione-incendio-cecchina-albano-laziale:
+    title: Attivazione a Cecchina (Albano Laziale) per incendio di un casolare
+    url: /comunicazioni/2026-04-20-attivazione-incendio-cecchina-albano-laziale/
+    video:
+    - anchored:
+      - sala
+      canale: abili-a-proteggere
+      id: Tc3zhweSzE4
+      overlap:
+      - monitoraggio
+      - responsabile
+      - sala
+      score: 3.6
+      titolo: Sala monitoraggio terremoti e tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami)
+      url: https://youtu.be/Tc3zhweSzE4
+  comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica:
+    title: 'Il kit di emergenza domestico: cosa mettere e dove tenerlo'
+    url: /comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/
+    video:
+    - anchored:
+      - posto
+      canale: dpc-gov
+      id: zDmfPr-Vdjs
+      overlap:
+      - carico
+      - medico
+      - posto
+      score: 4.0
+      titolo: Le operazioni di carico del Posto Medico Avanzato – Ciclone Mozambico
+      url: https://youtu.be/zDmfPr-Vdjs
+    - anchored:
+      - posto
+      canale: dpc-gov
+      id: 5dOUHCl-d9E
+      overlap:
+      - medico
+      - posto
+      score: 3.0
+      titolo: Le attività del Posto Medico Avanzato – Ciclone Mozambico
+      url: https://youtu.be/5dOUHCl-d9E
+    - anchored:
+      - posto
+      canale: dpc-gov
+      id: 5vMTP0S0vQ8
+      overlap:
+      - medico
+      - posto
+      score: 3.0
+      titolo: L'allestimento del Posto Medico Avanzato – Ciclone Mozambico
+      url: https://youtu.be/5vMTP0S0vQ8
+  comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani:
+    title: 'Giornata della Terra: il clima che cambia e i rischi sul nostro territorio'
+    url: /comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani/
+    video:
+    - anchored:
+      - clima
+      canale: dpc-gov
+      id: NukrIN8jnE4
+      overlap:
+      - clima
+      score: 3.0
+      titolo: La Protezione Civile racconta il podcast DPC - Dove Parliamo di Clima con Filippo Thiery
+      url: https://youtu.be/NukrIN8jnE4
+  comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore:
+    title: 'Proteggere cani e gatti dal caldo: le 10 regole del Ministero della Salute'
+    url: /comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore/
+    video:
+    - anchored:
+      - proteggere
+      canale: io-non-rischio
+      id: Z0yHNAn2qs8
+      overlap:
+      - proteggere
+      - rischio
+      score: 3.2
+      titolo: 'Abili a proteggere: Io non rischio perché'
+      url: https://youtu.be/Z0yHNAn2qs8
+    - anchored:
+      - proteggere
+      canale: abili-a-proteggere
+      id: R00PZpq-hhk
+      overlap:
+      - proteggere
+      score: 3.0
+      titolo: '#NienteDiSpeciale: Abili a proteggere intervista Gian Antonio Stella'
+      url: https://youtu.be/R00PZpq-hhk
+    - anchored:
+      - proteggere
+      canale: abili-a-proteggere
+      id: WA6HZdcMTHw
+      overlap:
+      - proteggere
+      score: 3.0
+      titolo: Attività Abili a proteggere 2017
+      url: https://youtu.be/WA6HZdcMTHw
+  comunicazioni/2026-04-23-scout-protezione-civile-storia-servizio:
+    title: 'Scout e Protezione Civile: una storia di servizio che parte da Firenze'
+    url: /comunicazioni/2026-04-23-scout-protezione-civile-storia-servizio/
+    video:
+    - anchored:
+      - storia
+      canale: io-non-rischio
+      id: Pz5Dky_rvFI
+      overlap:
+      - storia
+      score: 3.0
+      titolo: 'Vent''anni anni dallo tsunami di Stromboli: storia o attualità?'
+      url: https://youtu.be/Pz5Dky_rvFI
+  comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani:
+    title: 'Frane e movimenti del terreno: cosa succede sotto i Castelli Romani'
+    url: /comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani/
+    video:
+    - anchored:
+      - caratteristiche
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      overlap:
+      - caratteristiche
+      - frana
+      score: 3.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana di Niscemi (CL)
+      url: https://youtu.be/L98tBMJZn0k
+  comunicazioni/2026-04-25-caldo-bambini-ministero-salute:
+    title: 'Estate in salute: come proteggere i bambini dal caldo, dai raggi UV, dagli incendi'
+    url: /comunicazioni/2026-04-25-caldo-bambini-ministero-salute/
+    video:
+    - anchored:
+      - dagli
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      overlap:
+      - dagli
+      - evacuazione
+      score: 3.6
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - ondate
+      canale: dpc-gov
+      id: GPEu7LV0CZM
+      overlap:
+      - calore
+      - ondate
+      - rischio
+      score: 3.4
+      titolo: Spot 2006 sul rischio ondate di calore
+      url: https://youtu.be/GPEu7LV0CZM
+    - anchored:
+      - ondate
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - calore
+      - ondate
+      score: 3.2
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+  comunicazioni/2026-04-25-festa-liberazione-volontariato-civico:
+    title: '25 aprile: il volontariato di Protezione Civile come impegno civico'
+    url: /comunicazioni/2026-04-25-festa-liberazione-volontariato-civico/
+    video:
+    - anchored:
+      - impegno
+      canale: dpc-gov
+      id: 2LkIejoezIM
+      overlap:
+      - impegno
+      - sistema
+      score: 3.2
+      titolo: 'Stromboli: l''attività vulcanica di luglio e agosto 2019 e l''impegno del sistema di protezione civile'
+      url: https://youtu.be/2LkIejoezIM
+  comunicazioni/2026-04-25-nepal-2015-gorkha-terremoto:
+    title: 'Nepal, 25 aprile 2015: il terremoto del Gorkha e la fragilità dei Paesi a rischio'
+    url: /comunicazioni/2026-04-25-nepal-2015-gorkha-terremoto/
+    video:
+    - anchored:
+      - nepal
+      canale: dpc-gov
+      id: 2AlSvdzzkTM
+      overlap:
+      - campo
+      - dell
+      - nepal
+      - terremoto
+      score: 5.6
+      titolo: La testimonianza di un medico dell'ospedale da campo italiano – Terremoto Nepal
+      url: https://youtu.be/2AlSvdzzkTM
+    - anchored:
+      - nepal
+      canale: dpc-gov
+      id: OIcYSg5z-pQ
+      overlap:
+      - campo
+      - dell
+      - nepal
+      - terremoto
+      score: 5.6
+      titolo: Le attività dell'ospedale da campo italiano (1 di 3) – Terremoto Nepal
+      url: https://youtu.be/OIcYSg5z-pQ
+    - anchored:
+      - nepal
+      canale: dpc-gov
+      id: ZDaR5eZaEF0
+      overlap:
+      - campo
+      - dell
+      - nepal
+      - terremoto
+      score: 5.6
+      titolo: Le attività dell'ospedale da campo italiano (2 di 3) – Terremoto Nepal
+      url: https://youtu.be/ZDaR5eZaEF0
+  comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa:
+    title: 'Terremoto: cosa fare durante la scossa e nei minuti successivi'
+    url: /comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/
+    video:
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - scossa
+      - terremoto
+      score: 4.8
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - scossa
+      - terremoto
+      score: 4.8
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      overlap:
+      - scossa
+      - terremoto
+      score: 4.8
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-04-29-nascita-dipartimento-protezione-civile-italia:
+    title: 'La nascita del Dipartimento della Protezione Civile: una storia italiana che parte dalle macerie'
+    url: /comunicazioni/2026-04-29-nascita-dipartimento-protezione-civile-italia/
+    video:
+    - anchored:
+      - storia
+      canale: io-non-rischio
+      id: Pz5Dky_rvFI
+      overlap:
+      - storia
+      - vent
+      score: 4.0
+      titolo: 'Vent''anni anni dallo tsunami di Stromboli: storia o attualità?'
+      url: https://youtu.be/Pz5Dky_rvFI
+  comunicazioni/2026-04-30-sicurezza-bicicletta-citta-emergenza:
+    title: 'Andare in bicicletta in sicurezza: anche la mobilità è prevenzione'
+    url: /comunicazioni/2026-04-30-sicurezza-bicicletta-citta-emergenza/
+    video:
+    - anchored:
+      - andare
+      canale: dpc-gov
+      id: SenKErtd7oQ
+      overlap:
+      - andare
+      - guardare
+      score: 4.0
+      titolo: '"Guardare indietro per andare avanti": le video-interviste'
+      url: https://youtu.be/SenKErtd7oQ
+  comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio:
+    title: 'Rete Zamberletti: svolta la 499ª esercitazione radio nazionale'
+    url: /comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/
+    video:
+    - anchored:
+      - zamberletti
+      canale: dpc-gov
+      id: vyTJcOxzntg
+      overlap:
+      - emergenza
+      - radio
+      - rete
+      - zamberletti
+      score: 7.0
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
+    - anchored:
+      - zamberletti
+      canale: dpc-gov
+      id: RjCdoyyz3sQ
+      overlap:
+      - giuseppe
+      - zamberletti
+      score: 4.0
+      titolo: Ricordo di Giuseppe Zamberletti
+      url: https://youtu.be/RjCdoyyz3sQ
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      overlap:
+      - esercitazione
+      - procedure
+      score: 3.6
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+  comunicazioni/2026-05-02-albero-pericolante-rimozione-volontari-genzano:
+    title: 'Albero pericolante a Genzano: rimozione e messa in sicurezza dell''area da parte dei volontari'
+    url: /comunicazioni/2026-05-02-albero-pericolante-rimozione-volontari-genzano/
+    video:
+    - anchored:
+      - rimozione
+      canale: dpc-gov
+      id: 1a4RglswwP0
+      overlap:
+      - rimozione
+      score: 3.0
+      titolo: La rimozione dello scoglio dal relitto – Naufragio Concordia
+      url: https://youtu.be/1a4RglswwP0
+    - anchored:
+      - messa
+      canale: dpc-gov
+      id: ClFIKEGjiX0
+      overlap:
+      - messa
+      score: 3.0
+      titolo: Gli interventi di messa in sicurezza nel Patan Museum (2 di 2) – Terremoto Nepal
+      url: https://youtu.be/ClFIKEGjiX0
+    - anchored:
+      - messa
+      canale: dpc-gov
+      id: OSfoajg3wzQ
+      overlap:
+      - messa
+      score: 3.0
+      titolo: Attività di messa in sicurezza dei beni culturali – Terremoto Centro Italia
+      url: https://youtu.be/OSfoajg3wzQ
+  comunicazioni/2026-05-04-ondate-di-calore-preparare-estate:
+    title: 'Ondate di calore: prepararsi ora, prima che arrivi l''estate'
+    url: /comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/
+    video:
+    - anchored:
+      - ondate
+      canale: dpc-gov
+      id: GPEu7LV0CZM
+      overlap:
+      - calore
+      - ondate
+      - rischio
+      score: 5.2
+      titolo: Spot 2006 sul rischio ondate di calore
+      url: https://youtu.be/GPEu7LV0CZM
+    - anchored:
+      - ondate
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - calore
+      - ondate
+      score: 4.8
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+  comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia:
+    title: 'Sarno, 5 maggio 1998: la frana che ha riscritto le mappe del rischio idrogeologico in Italia'
+    url: /comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/
+    video:
+    - anchored:
+      - sarno
+      canale: dpc-gov
+      id: 8v4izQL7MuA
+      overlap:
+      - ricordo
+      - sarno
+      score: 4.0
+      titolo: 'Sarno 1998-2023: il ricordo dei funzionari del Dipartimento'
+      url: https://youtu.be/8v4izQL7MuA
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Le attività operative in corso a Niscemi in seguito alla Frana
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana di Niscemi (CL)
+      url: https://youtu.be/L98tBMJZn0k
+  comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile:
+    title: 'Friuli 1976, cinquant''anni dopo: il terremoto che ha fatto nascere la protezione civile italiana'
+    url: /comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/
+    video:
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.8
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.8
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.8
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-05-08-campagna-comunicazione-protezione-civile-lazio-2026:
+    title: 'Lazio: approvato il programma 2026 della Campagna di comunicazione pubblica sulla Protezione Civile'
+    url: /comunicazioni/2026-05-08-campagna-comunicazione-protezione-civile-lazio-2026/
+    video:
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: -lfm_NBSFIs
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Io non rischio 2017 - Luca Pancalli testimonial della Campagna
+      url: https://youtu.be/-lfm_NBSFIs
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: r1_tqC9ZGgU
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Le novità della campagna Io non rischio 2023
+      url: https://youtu.be/r1_tqC9ZGgU
+    - anchored:
+      - programma
+      canale: dpc-gov
+      id: 3aDF3Rjs_jE
+      overlap:
+      - programma
+      score: 3.0
+      titolo: Workshop annuale Programma/gen 2019 (3 di 3) – Protezione civile e PONGOV 2014-2020
+      url: https://youtu.be/3aDF3Rjs_jE
+  comunicazioni/2026-05-08-giornata-mondiale-croce-rossa-mezzaluna:
+    title: '8 maggio: Giornata mondiale della Croce Rossa e della Mezzaluna Rossa'
+    url: /comunicazioni/2026-05-08-giornata-mondiale-croce-rossa-mezzaluna/
+    video:
+    - anchored:
+      - croce
+      - rossa
+      canale: abili-a-proteggere
+      id: _xh2UfBsE2A
+      overlap:
+      - croce
+      - rossa
+      score: 6.0
+      titolo: '#NienteDiSpeciale: Intervista a Rosario Maria Gianluca Valastro vice presidente Croce Rossa Italiana'
+      url: https://youtu.be/_xh2UfBsE2A
+    - anchored:
+      - croce
+      - rossa
+      canale: dpc-gov
+      id: sUk8PLNviSI
+      overlap:
+      - croce
+      - rossa
+      score: 6.0
+      titolo: Croce Rossa Italiana consegna la Medaglia al Merito al Dpc
+      url: https://youtu.be/sUk8PLNviSI
+    - anchored:
+      - rossa
+      canale: dpc-gov
+      id: p5LtgeUKjcM
+      overlap:
+      - popolazione
+      - rossa
+      score: 3.6
+      titolo: Incontri con la popolazione della zona rossa – EXE Flegrei 2019
+      url: https://youtu.be/p5LtgeUKjcM
+  comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia:
+    title: I nostri volontari all'Open Day antincendio boschivo del 9 maggio ad Aprilia
+    url: /comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/
+    video:
+    - anchored:
+      - open
+      canale: dpc-gov
+      id: 1zpqQzMy8qY
+      overlap:
+      - open
+      score: 3.0
+      titolo: Open Day al Dipartimento della Protezione Civile
+      url: https://youtu.be/1zpqQzMy8qY
+  comunicazioni/2026-05-08-safor-prociv-scuola-alta-formazione-pc-lazio:
+    title: 'Lazio: in vigore il regolamento della Scuola di Alta Formazione di Protezione Civile (SAFOR-PROCIV)'
+    url: /comunicazioni/2026-05-08-safor-prociv-scuola-alta-formazione-pc-lazio/
+    video:
+    - anchored:
+      - prociv
+      canale: abili-a-proteggere
+      id: COprCBE0iyY
+      overlap:
+      - presidente
+      - prociv
+      score: 4.0
+      titolo: '#NienteDiSpeciale: Intervista a Fabio Mangani presidente Prociv-Arci'
+      url: https://youtu.be/COprCBE0iyY
+    - anchored:
+      - prociv
+      canale: abili-a-proteggere
+      id: Wq11ZtK4imA
+      overlap:
+      - presidente
+      - prociv
+      score: 4.0
+      titolo: '#NienteDiSpeciale: Intervista a Emilio Garau  Presidente PROCIV ITALIA'
+      url: https://youtu.be/Wq11ZtK4imA
+  comunicazioni/2026-05-09-giorno-memoria-vittime-terrorismo-comunicazione-crisi:
+    title: '9 maggio, Giorno della memoria delle vittime del terrorismo: il caso Moro e la nascita della comunicazione di
+      crisi in Italia'
+    url: /comunicazioni/2026-05-09-giorno-memoria-vittime-terrorismo-comunicazione-crisi/
+    video:
+    - anchored:
+      - memoria
+      canale: dpc-gov
+      id: yRNxAUcgdNE
+      overlap:
+      - memoria
+      score: 3.0
+      titolo: 'Promo 2018 mostra Terremoti d''Italia: "Il rischio sismico tra conoscenza, memoria ed esperienza"'
+      url: https://youtu.be/yRNxAUcgdNE
+    - anchored:
+      - moro
+      canale: io-non-rischio
+      id: _9KwcLgBCAc
+      overlap:
+      - moro
+      score: 3.0
+      titolo: Stati Generali del Volontariato di Protezione Civile 2022 - Intervento di Flavia Moro
+      url: https://youtu.be/_9KwcLgBCAc
+  comunicazioni/2026-05-12-iso-22324-codici-colore-allerta-facile:
+    title: Perché le allerte hanno colori? Versione facile da leggere
+    url: /comunicazioni/2026-05-12-iso-22324-codici-colore-allerta-facile/
+    video:
+    - anchored:
+      - versione
+      canale: dpc-gov
+      id: j8OYAh_2_k8
+      overlap:
+      - versione
+      score: 3.0
+      titolo: Promo 2014 "Io Non Rischio"  (versione 2 di 2)
+      url: https://youtu.be/j8OYAh_2_k8
+    - anchored:
+      - versione
+      canale: dpc-gov
+      id: vP7hI-62gH8
+      overlap:
+      - versione
+      score: 3.0
+      titolo: Promo 2014 "Io Non Rischio" (versione 1 di 2)
+      url: https://youtu.be/vP7hI-62gH8
+    - anchored:
+      - versione
+      canale: io-non-rischio
+      id: eHeP3f2-PJw
+      overlap:
+      - versione
+      score: 3.0
+      titolo: Io non rischio 2014 - Lo spot (versione grafica)
+      url: https://youtu.be/eHeP3f2-PJw
+  comunicazioni/2026-05-15-iso-22322-public-warning-it-alert:
+    title: 'Come dovrebbe funzionare un sistema di allerta pubblica: ISO 22322 e IT-alert'
+    url: /comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/
+    video:
+    - anchored:
+      - alert
+      canale: io-non-rischio
+      id: P1LpgdnXPj8
+      overlap:
+      - alert
+      - allarme
+      - sistema
+      score: 4.6
+      titolo: 'IT-alert: il sistema di allarme pubblico'
+      url: https://youtu.be/P1LpgdnXPj8
+  comunicazioni/2026-05-17-emilia-romagna-2023-alluvione-maggio:
+    title: 'Alluvione dell''Emilia-Romagna, maggio 2023: il fango che ha cambiato la cultura del rischio in pianura'
+    url: /comunicazioni/2026-05-17-emilia-romagna-2023-alluvione-maggio/
+    video:
+    - anchored:
+      - emilia
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - danni
+      - emilia
+      - finale
+      score: 4.6
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - emilia
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - danni
+      - emilia
+      score: 3.6
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - emilia
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      overlap:
+      - danni
+      - emilia
+      score: 3.6
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-05-17-giornata-mondiale-telecomunicazioni:
+    title: '17 maggio: Giornata mondiale delle telecomunicazioni e il ruolo in emergenza'
+    url: /comunicazioni/2026-05-17-giornata-mondiale-telecomunicazioni/
+    video:
+    - anchored:
+      - telecomunicazioni
+      canale: dpc-gov
+      id: vyTJcOxzntg
+      overlap:
+      - emergenza
+      - radio
+      - rete
+      - telecomunicazioni
+      score: 4.8
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
+    - anchored:
+      - digitale
+      canale: dpc-gov
+      id: 2iqDEZQh3a8
+      overlap:
+      - digitale
+      - modello
+      score: 3.0
+      titolo: Modello digitale 3D delle deformazioni – Naufragio Concordia
+      url: https://youtu.be/2iqDEZQh3a8
+    - anchored:
+      - digitale
+      canale: dpc-gov
+      id: y2a-szGCpWM
+      overlap:
+      - digitale
+      - modello
+      score: 3.0
+      titolo: Modello digitale 3D della rotazione – Naufragio Concordia
+      url: https://youtu.be/y2a-szGCpWM
+  comunicazioni/2026-05-18-giornata-musei-patrimonio-culturale-emergenze:
+    title: '18 maggio: Giornata dei Musei e tutela del patrimonio in emergenza'
+    url: /comunicazioni/2026-05-18-giornata-musei-patrimonio-culturale-emergenze/
+    video:
+    - anchored:
+      - terremoti
+      canale: dpc-gov
+      id: yRNxAUcgdNE
+      overlap:
+      - memoria
+      - rischio
+      - sismico
+      - terremoti
+      score: 3.8
+      titolo: 'Promo 2018 mostra Terremoti d''Italia: "Il rischio sismico tra conoscenza, memoria ed esperienza"'
+      url: https://youtu.be/yRNxAUcgdNE
+  comunicazioni/2026-05-19-iso-22329-social-media-emergenza:
+    title: 'Social media in emergenza: cosa dice lo standard ISO 22329'
+    url: /comunicazioni/2026-05-19-iso-22329-social-media-emergenza/
+    video:
+    - anchored:
+      - social
+      canale: io-non-rischio
+      id: yqZURftuqOY
+      overlap:
+      - rischio
+      - social
+      score: 3.2
+      titolo: Io non rischio 2020 - Lo spot social
+      url: https://youtu.be/yqZURftuqOY
+    - anchored:
+      - social
+      canale: abili-a-proteggere
+      id: YPvLBGOvRog
+      overlap:
+      - social
+      score: 3.0
+      titolo: Fabrizio Curcio introduce i lavori del convegno “Dal megafono ai social network”
+      url: https://youtu.be/YPvLBGOvRog
+  comunicazioni/2026-05-20-sciami-api-estate-recupero-genzano:
+    title: 'Sciami d''api in estate: cosa fare, chi chiamare, perché non hanno bisogno della nostra paura'
+    url: /comunicazioni/2026-05-20-sciami-api-estate-recupero-genzano/
+    video:
+    - anchored:
+      - paura
+      canale: io-non-rischio
+      id: kT-m1l4haIQ
+      overlap:
+      - paura
+      score: 3.0
+      titolo: Chi ha paura dei temporali?
+      url: https://youtu.be/kT-m1l4haIQ
+  comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza:
+    title: '20 maggio 2012: il terremoto in Emilia e la memoria che diventa prevenzione'
+    url: /comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/
+    video:
+    - anchored:
+      - emilia
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - emilia
+      - scossa
+      - terremoto
+      score: 5.8
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - emilia
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - emilia
+      - scossa
+      - terremoto
+      score: 5.8
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - emilia
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      overlap:
+      - emilia
+      - scossa
+      - terremoto
+      score: 5.8
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-05-25-piano-nazionale-prevenzione-caldo-who:
+    title: Il Piano nazionale di prevenzione degli effetti del caldo sulla salute
+    url: /comunicazioni/2026-05-25-piano-nazionale-prevenzione-caldo-who/
+    video:
+    - anchored:
+      - ondate
+      canale: dpc-gov
+      id: GPEu7LV0CZM
+      overlap:
+      - calore
+      - ondate
+      - rischio
+      score: 3.4
+      titolo: Spot 2006 sul rischio ondate di calore
+      url: https://youtu.be/GPEu7LV0CZM
+    - anchored:
+      - ondate
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - calore
+      - ondate
+      score: 3.2
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+  comunicazioni/2026-05-25-ricerca-dispersi-soccorso-volontariato:
+    title: 'La ricerca dispersi: come funziona e chi la coordina'
+    url: /comunicazioni/2026-05-25-ricerca-dispersi-soccorso-volontariato/
+    video:
+    - anchored:
+      - ricerca
+      canale: dpc-gov
+      id: 6Hjhuui1tF8
+      overlap:
+      - centro
+      - ricerca
+      - soccorso
+      score: 3.4
+      titolo: Le attività di ricerca e soccorso ad Amatrice – Terremoto Centro Italia
+      url: https://youtu.be/6Hjhuui1tF8
+    - anchored:
+      - ricerca
+      canale: dpc-gov
+      id: no26vNJAfsg
+      overlap:
+      - area
+      - ricerca
+      - soccorso
+      score: 3.4
+      titolo: Sorvolo, ricerca e soccorso, allestimento area d'accoglienza – Terremoto Albania
+      url: https://youtu.be/no26vNJAfsg
+    - anchored:
+      - ricerca
+      canale: dpc-gov
+      id: dkUue6aexbo
+      overlap:
+      - ricerca
+      score: 3.0
+      titolo: Le operazioni di ricerca e recupero – Ecoballe Golfo di Follonica
+      url: https://youtu.be/dkUue6aexbo
+  comunicazioni/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria:
+    title: '29 maggio 2012: la seconda scossa in Emilia e la resilienza comunitaria'
+    url: /comunicazioni/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria/
+    video:
+    - anchored:
+      - emilia
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - danni
+      - emilia
+      - scossa
+      - terremoto
+      score: 7.2
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - emilia
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - danni
+      - emilia
+      - scossa
+      - terremoto
+      score: 7.2
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - emilia
+      - scossa
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      overlap:
+      - danni
+      - emilia
+      - scossa
+      - terremoto
+      score: 7.2
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-05-29-iso-22395-persone-vulnerabili:
+    title: 'Nessuno indietro: ISO 22395 e il supporto inclusivo nelle emergenze'
+    url: /comunicazioni/2026-05-29-iso-22395-persone-vulnerabili/
+    video:
+    - anchored:
+      - disabilità
+      canale: dpc-gov
+      id: ZTDrRHbiR3M
+      overlap:
+      - disabilità
+      - messaggio
+      - persone
+      score: 3.4
+      titolo: 'Giornata internazionale delle persone con disabilità: il messaggio di Borrelli'
+      url: https://youtu.be/ZTDrRHbiR3M
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      overlap:
+      - disabilità
+      - evacuazione
+      - persona
+      score: 3.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - indietro
+      canale: dpc-gov
+      id: SenKErtd7oQ
+      overlap:
+      - indietro
+      score: 3.0
+      titolo: '"Guardare indietro per andare avanti": le video-interviste'
+      url: https://youtu.be/SenKErtd7oQ
+  comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi:
+    title: '31 maggio: Giornata senza tabacco, mozziconi e rischio incendi'
+    url: /comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi/
+    video:
+    - anchored:
+      - boschivi
+      canale: dpc-gov
+      id: 4UBxxIfaGL4
+      overlap:
+      - boschivi
+      - incendi
+      - rischio
+      score: 3.2
+      titolo: Spot 2006 sul rischio incendi boschivi
+      url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivi
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      overlap:
+      - boschivi
+      - incendi
+      - rischio
+      score: 3.2
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
+  comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026:
+    title: '1 giugno: avvio della campagna antincendio boschivo del Lazio'
+    url: /comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/
+    video:
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: -lfm_NBSFIs
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Io non rischio 2017 - Luca Pancalli testimonial della Campagna
+      url: https://youtu.be/-lfm_NBSFIs
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: r1_tqC9ZGgU
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Le novità della campagna Io non rischio 2023
+      url: https://youtu.be/r1_tqC9ZGgU
+  comunicazioni/2026-06-06-sport-movimento-resilienza-comunita:
+    title: '6 giugno: sport, movimento e resilienza della comunità'
+    url: /comunicazioni/2026-06-06-sport-movimento-resilienza-comunita/
+    video:
+    - anchored:
+      - sport
+      canale: dpc-gov
+      id: YKzuDqox1qE
+      overlap:
+      - sport
+      score: 3.0
+      titolo: La mensa allestita presso il palazzetto dello sport Pio La Torre di Niscemi
+      url: https://youtu.be/YKzuDqox1qE
+  comunicazioni/2026-06-08-giornata-oceani-laghi-castelli:
+    title: '8 giugno: Giornata mondiale degli oceani e la lezione per i nostri laghi'
+    url: /comunicazioni/2026-06-08-giornata-oceani-laghi-castelli/
+    video:
+    - anchored:
+      - lezione
+      canale: io-non-rischio
+      id: 2g2ABfQVjJA
+      overlap:
+      - lezione
+      score: 3.0
+      titolo: La lezione del terremoto in Nepal
+      url: https://youtu.be/2g2ABfQVjJA
+  comunicazioni/2026-06-10-qualita-aria-estate-ozono-pm10:
+    title: 'Qualità dell''aria in estate: ozono, PM10 e pollini'
+    url: /comunicazioni/2026-06-10-qualita-aria-estate-ozono-pm10/
+    video:
+    - anchored:
+      - proteggersi
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - calore
+      - ondate
+      - proteggersi
+      score: 3.6
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+  comunicazioni/2026-06-11-it-alert-come-funziona-reagire:
+    title: 'IT-alert: come funziona e come reagire a un messaggio'
+    url: /comunicazioni/2026-06-11-it-alert-come-funziona-reagire/
+    video:
+    - anchored:
+      - alert
+      - allarme
+      canale: io-non-rischio
+      id: P1LpgdnXPj8
+      overlap:
+      - alert
+      - allarme
+      - pubblico
+      - sistema
+      score: 6.6
+      titolo: 'IT-alert: il sistema di allarme pubblico'
+      url: https://youtu.be/P1LpgdnXPj8
+    - anchored:
+      - allarme
+      canale: io-non-rischio
+      id: 7MRMK51szxE
+      overlap:
+      - allarme
+      - attenzione
+      - rischio
+      - vulcano
+      score: 3.4
+      titolo: Io non rischio Vulcano  - Cosa fare in attenzione, preallarme e allarme
+      url: https://youtu.be/7MRMK51szxE
+    - anchored:
+      - messaggio
+      canale: io-non-rischio
+      id: Q3P_vu7---M
+      overlap:
+      - messaggio
+      - rischio
+      score: 3.2
+      titolo: Io non rischio 2016 - Video messaggio del Capo Dipartimento per il Tweetstorm
+      url: https://youtu.be/Q3P_vu7---M
+  comunicazioni/2026-06-12-contrasto-sfruttamento-minorile-emergenza-umanitaria:
+    title: '12 giugno: contrasto al lavoro minorile ed emergenze umanitarie'
+    url: /comunicazioni/2026-06-12-contrasto-sfruttamento-minorile-emergenza-umanitaria/
+    video:
+    - anchored:
+      - campi
+      canale: dpc-gov
+      id: ShU_V_7SUQA
+      overlap:
+      - campi
+      - rischio
+      - risposta
+      score: 3.0
+      titolo: Il rischio vulcanico nei Campi Flegrei e la risposta di protezione civile – EXE Flegrei 2019
+      url: https://youtu.be/ShU_V_7SUQA
+  comunicazioni/2026-06-12-iso-14090-adattamento-clima:
+    title: 'Quando il clima cambia, cambia anche la PC: ISO 14090 e l''adattamento'
+    url: /comunicazioni/2026-06-12-iso-14090-adattamento-clima/
+    video:
+    - anchored:
+      - ondate
+      canale: dpc-gov
+      id: GPEu7LV0CZM
+      overlap:
+      - calore
+      - ondate
+      - rischio
+      score: 3.4
+      titolo: Spot 2006 sul rischio ondate di calore
+      url: https://youtu.be/GPEu7LV0CZM
+    - anchored:
+      - ondate
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - calore
+      - ondate
+      score: 3.2
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+    - anchored:
+      - clima
+      canale: dpc-gov
+      id: NukrIN8jnE4
+      overlap:
+      - clima
+      score: 3.0
+      titolo: La Protezione Civile racconta il podcast DPC - Dove Parliamo di Clima con Filippo Thiery
+      url: https://youtu.be/NukrIN8jnE4
+  comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere:
+    title: '15 giugno: ondate di calore, proteggere anziani e persone fragili'
+    url: /comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere/
+    video:
+    - anchored:
+      - ondate
+      canale: dpc-gov
+      id: GPEu7LV0CZM
+      overlap:
+      - calore
+      - ondate
+      - rischio
+      score: 5.2
+      titolo: Spot 2006 sul rischio ondate di calore
+      url: https://youtu.be/GPEu7LV0CZM
+    - anchored:
+      - ondate
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - calore
+      - ondate
+      score: 4.8
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+    - anchored:
+      - proteggere
+      canale: io-non-rischio
+      id: Z0yHNAn2qs8
+      overlap:
+      - proteggere
+      - rischio
+      score: 3.4
+      titolo: 'Abili a proteggere: Io non rischio perché'
+      url: https://youtu.be/Z0yHNAn2qs8
+  comunicazioni/2026-06-18-kit-emergenza-ufficio-lavoro:
+    title: Kit di emergenza per ufficio e posto di lavoro
+    url: /comunicazioni/2026-06-18-kit-emergenza-ufficio-lavoro/
+    video:
+    - anchored:
+      - posto
+      canale: dpc-gov
+      id: zDmfPr-Vdjs
+      overlap:
+      - carico
+      - posto
+      score: 4.0
+      titolo: Le operazioni di carico del Posto Medico Avanzato – Ciclone Mozambico
+      url: https://youtu.be/zDmfPr-Vdjs
+    - anchored:
+      - posto
+      canale: dpc-gov
+      id: 5dOUHCl-d9E
+      overlap:
+      - posto
+      score: 3.0
+      titolo: Le attività del Posto Medico Avanzato – Ciclone Mozambico
+      url: https://youtu.be/5dOUHCl-d9E
+    - anchored:
+      - posto
+      canale: dpc-gov
+      id: 5vMTP0S0vQ8
+      overlap:
+      - posto
+      score: 3.0
+      titolo: L'allestimento del Posto Medico Avanzato – Ciclone Mozambico
+      url: https://youtu.be/5vMTP0S0vQ8
+  comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026:
+    title: 'Primo mese di campagna AIB: il punto al 30 giugno'
+    url: /comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/
+    video:
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: -lfm_NBSFIs
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Io non rischio 2017 - Luca Pancalli testimonial della Campagna
+      url: https://youtu.be/-lfm_NBSFIs
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: r1_tqC9ZGgU
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Le novità della campagna Io non rischio 2023
+      url: https://youtu.be/r1_tqC9ZGgU
+  comunicazioni/2026-07-05-casa-sicura-estate-ventilazione-refrigerio:
+    title: 'Casa sicura in estate: ventilazione, refrigerio, buone abitudini'
+    url: /comunicazioni/2026-07-05-casa-sicura-estate-ventilazione-refrigerio/
+    video:
+    - anchored:
+      - sicura
+      canale: io-non-rischio
+      id: 3vOPhwM29Sc
+      overlap:
+      - casa
+      - sicura
+      score: 3.6
+      titolo: La tua casa è sicura?
+      url: https://youtu.be/3vOPhwM29Sc
+    - anchored:
+      - buone
+      canale: dpc-gov
+      id: MzVgNeBjJSQ
+      overlap:
+      - buone
+      score: 3.0
+      titolo: 'Incendi boschivi: le buone pratiche'
+      url: https://youtu.be/MzVgNeBjJSQ
+  comunicazioni/2026-07-08-bambini-in-estate-sicurezza-sorveglianza:
+    title: 'Bambini in estate: sicurezza e sorveglianza nei mesi caldi'
+    url: /comunicazioni/2026-07-08-bambini-in-estate-sicurezza-sorveglianza/
+    video:
+    - anchored:
+      - sorveglianza
+      canale: dpc-gov
+      id: TyFthQEznc8
+      overlap:
+      - sorveglianza
+      score: 3.0
+      titolo: Il time-lapse della rotazione (telecamera di sorveglianza) – Naufragio Concordia
+      url: https://youtu.be/TyFthQEznc8
+  comunicazioni/2026-07-09-caldo-gravidanza-ministero-salute:
+    title: 'Caldo in gravidanza: consigli per future mamme e loro bambini'
+    url: /comunicazioni/2026-07-09-caldo-gravidanza-ministero-salute/
+    video:
+    - anchored:
+      - consigli
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - calore
+      - consigli
+      - ondate
+      score: 4.6
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+  comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono:
+    title: 'Le esercitazioni di Protezione Civile: a cosa servono davvero'
+    url: /comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/
+    video:
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: OkEoPVutZr4
+      overlap:
+      - esercitazione
+      - pianificazione
+      - verso
+      score: 3.8
+      titolo: Esercitazione “Verso una pianificazione di protezione civile inclusiva”
+      url: https://youtu.be/OkEoPVutZr4
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: Q8S0OHxOYtQ
+      overlap:
+      - esercitazione
+      - vulcano
+      score: 3.0
+      titolo: Sorvolo di Vulcano – Esercitazione VULCANO 2022
+      url: https://youtu.be/Q8S0OHxOYtQ
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: _AYUUv69F3U
+      overlap:
+      - esercitazione
+      - vulcano
+      score: 3.0
+      titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
+      url: https://youtu.be/_AYUUv69F3U
+  comunicazioni/2026-07-10-app-it-alert-test-nazionale:
+    title: 'IT-alert: come si preparano i test e cosa fare al ricevimento'
+    url: /comunicazioni/2026-07-10-app-it-alert-test-nazionale/
+    video:
+    - anchored:
+      - alert
+      canale: io-non-rischio
+      id: P1LpgdnXPj8
+      overlap:
+      - alert
+      - allarme
+      - pubblico
+      - sistema
+      score: 5.0
+      titolo: 'IT-alert: il sistema di allarme pubblico'
+      url: https://youtu.be/P1LpgdnXPj8
+    - anchored:
+      - test
+      canale: dpc-gov
+      id: RlwTnpacmJI
+      overlap:
+      - test
+      score: 3.0
+      titolo: Test comunicazione radio con veliero Amerigo Vespucci
+      url: https://youtu.be/RlwTnpacmJI
+  comunicazioni/2026-07-11-alluvioni-lampo-cosa-sono-come-proteggersi:
+    title: 'Alluvioni lampo (flash flood): cosa sono e come proteggersi'
+    url: /comunicazioni/2026-07-11-alluvioni-lampo-cosa-sono-come-proteggersi/
+    video:
+    - anchored:
+      - proteggersi
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - ondate
+      - proteggersi
+      score: 4.0
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+    - anchored:
+      - flood
+      canale: dpc-gov
+      id: 9oEusKsoWqM
+      overlap:
+      - flood
+      score: 3.0
+      titolo: 'NEIFLEX 2018: international exercise on flood risk management'
+      url: https://youtu.be/9oEusKsoWqM
+  comunicazioni/2026-07-12-gemellaggi-pc-solidarieta-territori:
+    title: 'Gemellaggi tra Gruppi di PC: la solidarietà tra territori'
+    url: /comunicazioni/2026-07-12-gemellaggi-pc-solidarieta-territori/
+    video:
+    - anchored:
+      - gemellaggi
+      - scambi
+      canale: dpc-gov
+      id: CnIiu1LQdmM
+      overlap:
+      - gemellaggi
+      - scambi
+      score: 5.0
+      titolo: 'I temi del Tavolo nazionale giovani: scambi formativi e gemellaggi'
+      url: https://youtu.be/CnIiu1LQdmM
+    - anchored:
+      - solidarietà
+      canale: abili-a-proteggere
+      id: 6Ue54lPvZ48
+      overlap:
+      - solidarietà
+      score: 3.0
+      titolo: La centralità della solidarietà - Paolo Giordano (fisico delle particelle, saggista, giornalista)
+      url: https://youtu.be/6Ue54lPvZ48
+  comunicazioni/2026-07-15-meta-luglio-bilancio-campagna-aib:
+    title: 'Metà luglio: bilancio intermedio della campagna AIB'
+    url: /comunicazioni/2026-07-15-meta-luglio-bilancio-campagna-aib/
+    video:
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: -lfm_NBSFIs
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Io non rischio 2017 - Luca Pancalli testimonial della Campagna
+      url: https://youtu.be/-lfm_NBSFIs
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: r1_tqC9ZGgU
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Le novità della campagna Io non rischio 2023
+      url: https://youtu.be/r1_tqC9ZGgU
+  comunicazioni/2026-07-22-droni-protezione-civile-uso-operativo:
+    title: 'Droni e Protezione Civile: come stanno cambiando le operazioni'
+    url: /comunicazioni/2026-07-22-droni-protezione-civile-uso-operativo/
+    video:
+    - anchored:
+      - operazioni
+      canale: dpc-gov
+      id: dkUue6aexbo
+      overlap:
+      - operazioni
+      - ricerca
+      score: 4.0
+      titolo: Le operazioni di ricerca e recupero – Ecoballe Golfo di Follonica
+      url: https://youtu.be/dkUue6aexbo
+    - anchored:
+      - operazioni
+      canale: dpc-gov
+      id: k90I_coJTsA
+      overlap:
+      - operazioni
+      score: 3.0
+      titolo: Operazioni di salvataggio rimasti isolati dopo la frana di Niescemi.
+      url: https://youtu.be/k90I_coJTsA
+    - anchored:
+      - operazioni
+      canale: dpc-gov
+      id: zDmfPr-Vdjs
+      overlap:
+      - operazioni
+      score: 3.0
+      titolo: Le operazioni di carico del Posto Medico Avanzato – Ciclone Mozambico
+      url: https://youtu.be/zDmfPr-Vdjs
+  comunicazioni/2026-07-23-disabilita-emergenza-piani-accessibili:
+    title: 'Disabilità in emergenza: piani accessibili e inclusivi'
+    url: /comunicazioni/2026-07-23-disabilita-emergenza-piani-accessibili/
+    video:
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      overlap:
+      - disabilità
+      - evacuazione
+      - motoria
+      - persona
+      - procedure
+      score: 6.4
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: 2oZHTrIAXi0
+      overlap:
+      - diritti
+      - disabilità
+      - persone
+      score: 4.4
+      titolo: 'Presidente Mattarella: "rimuovere ogni barriera che limiti i diritti delle persone con disabilità'
+      url: https://youtu.be/2oZHTrIAXi0
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: b5W1-Cj7eu0
+      overlap:
+      - disabilità
+      - persone
+      score: 3.4
+      titolo: Giornata internazionale delle persone con disabilità
+      url: https://youtu.be/b5W1-Cj7eu0
+  comunicazioni/2026-07-25-zanzare-rischio-sanitario-prevenzione:
+    title: 'Zanzare e rischio sanitario: prevenzione e malattie emergenti'
+    url: /comunicazioni/2026-07-25-zanzare-rischio-sanitario-prevenzione/
+    video:
+    - anchored:
+      - sanitario
+      canale: abili-a-proteggere
+      id: gAIcSfhIFOk
+      overlap:
+      - sanitario
+      score: 3.0
+      titolo: '#NienteDiSpeciale: intervista al dott. Pagliaccia vice coord. sanitario Istituto San Giovanni di Dio'
+      url: https://youtu.be/gAIcSfhIFOk
+  comunicazioni/2026-07-28-val-pola-1987-frana-monitoraggio-continuo:
+    title: 'Val Pola, 28 luglio 1987: la frana della Valtellina che insegnò all''Italia il monitoraggio continuo dei versanti'
+    url: /comunicazioni/2026-07-28-val-pola-1987-frana-monitoraggio-continuo/
+    video:
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Le attività operative in corso a Niscemi in seguito alla Frana
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana di Niscemi (CL)
+      url: https://youtu.be/L98tBMJZn0k
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: k90I_coJTsA
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Operazioni di salvataggio rimasti isolati dopo la frana di Niescemi.
+      url: https://youtu.be/k90I_coJTsA
+  comunicazioni/2026-07-30-cambiamento-climatico-proteggere-territorio:
+    title: 'Cambiamento climatico e Protezione Civile: un territorio da proteggere'
+    url: /comunicazioni/2026-07-30-cambiamento-climatico-proteggere-territorio/
+    video:
+    - anchored:
+      - proteggere
+      canale: io-non-rischio
+      id: Z0yHNAn2qs8
+      overlap:
+      - proteggere
+      - rischio
+      score: 3.2
+      titolo: 'Abili a proteggere: Io non rischio perché'
+      url: https://youtu.be/Z0yHNAn2qs8
+    - anchored:
+      - proteggere
+      canale: abili-a-proteggere
+      id: R00PZpq-hhk
+      overlap:
+      - proteggere
+      score: 3.0
+      titolo: '#NienteDiSpeciale: Abili a proteggere intervista Gian Antonio Stella'
+      url: https://youtu.be/R00PZpq-hhk
+    - anchored:
+      - proteggere
+      canale: abili-a-proteggere
+      id: WA6HZdcMTHw
+      overlap:
+      - proteggere
+      score: 3.0
+      titolo: Attività Abili a proteggere 2017
+      url: https://youtu.be/WA6HZdcMTHw
+  comunicazioni/2026-08-02-ondate-calore-agosto-fragili:
+    title: 'Ondate di calore di agosto: come proteggere anziani, bambini e persone fragili'
+    url: /comunicazioni/2026-08-02-ondate-calore-agosto-fragili/
+    video:
+    - anchored:
+      - ondate
+      canale: dpc-gov
+      id: GPEu7LV0CZM
+      overlap:
+      - calore
+      - ondate
+      - rischio
+      score: 5.2
+      titolo: Spot 2006 sul rischio ondate di calore
+      url: https://youtu.be/GPEu7LV0CZM
+    - anchored:
+      - ondate
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - calore
+      - ondate
+      score: 4.8
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+    - anchored:
+      - proteggere
+      canale: io-non-rischio
+      id: Z0yHNAn2qs8
+      overlap:
+      - proteggere
+      - rischio
+      score: 3.4
+      titolo: 'Abili a proteggere: Io non rischio perché'
+      url: https://youtu.be/Z0yHNAn2qs8
+  comunicazioni/2026-08-03-rischio-incendi-agosto-picco:
+    title: 'Incendi boschivi: agosto è il mese del picco'
+    url: /comunicazioni/2026-08-03-rischio-incendi-agosto-picco/
+    video:
+    - anchored:
+      - boschivi
+      canale: dpc-gov
+      id: 4UBxxIfaGL4
+      overlap:
+      - boschivi
+      - incendi
+      score: 3.6
+      titolo: Spot 2006 sul rischio incendi boschivi
+      url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivi
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      overlap:
+      - boschivi
+      - incendi
+      score: 3.6
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
+    - anchored:
+      - boschivi
+      canale: dpc-gov
+      id: FPLoljB20QA
+      overlap:
+      - boschivi
+      - incendi
+      score: 3.6
+      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
+      url: https://youtu.be/FPLoljB20QA
+  comunicazioni/2026-08-09-fulmini-come-proteggersi:
+    title: 'Fulmini in estate: come proteggersi all''aperto e in casa'
+    url: /comunicazioni/2026-08-09-fulmini-come-proteggersi/
+    video:
+    - anchored:
+      - proteggersi
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - proteggersi
+      score: 3.0
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+  comunicazioni/2026-08-12-santanna-stazzema-1944-memoria-volontariato-civico:
+    title: 'Sant''Anna di Stazzema, 12 agosto 1944: la memoria che fonda il volontariato civico'
+    url: /comunicazioni/2026-08-12-santanna-stazzema-1944-memoria-volontariato-civico/
+    video:
+    - anchored:
+      - sant
+      canale: dpc-gov
+      id: beYhBfj9LoE
+      overlap:
+      - sant
+      - terremoto
+      score: 3.6
+      titolo: Sant'Agostino, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/beYhBfj9LoE
+    - anchored:
+      - memoria
+      canale: dpc-gov
+      id: yRNxAUcgdNE
+      overlap:
+      - memoria
+      - rischio
+      score: 3.2
+      titolo: 'Promo 2018 mostra Terremoti d''Italia: "Il rischio sismico tra conoscenza, memoria ed esperienza"'
+      url: https://youtu.be/yRNxAUcgdNE
+    - anchored:
+      - anna
+      canale: abili-a-proteggere
+      id: hypvowP2lXI
+      overlap:
+      - anna
+      score: 3.0
+      titolo: '#NienteDiSpeciale: Intervista a Anna Fusco e Chiara Bordi'
+      url: https://youtu.be/hypvowP2lXI
+  comunicazioni/2026-08-13-casa-vacanze-affittate-sicurezza:
+    title: 'Case vacanze affittate: cosa controllare al momento dell''arrivo'
+    url: /comunicazioni/2026-08-13-casa-vacanze-affittate-sicurezza/
+    video:
+    - anchored:
+      - arrivo
+      canale: dpc-gov
+      id: YWxlxDzYZeo
+      overlap:
+      - arrivo
+      - degli
+      - emergenza
+      score: 3.4
+      titolo: Arrivo in Romania degli aiuti della protezione civile – Emergenza Ucraina
+      url: https://youtu.be/YWxlxDzYZeo
+    - anchored:
+      - arrivo
+      canale: dpc-gov
+      id: uadgyNJU2N0
+      overlap:
+      - arrivo
+      score: 3.0
+      titolo: L'arrivo del team italiano a Maputo e il trasferimento a Beira – Ciclone Mozambico
+      url: https://youtu.be/uadgyNJU2N0
+  comunicazioni/2026-08-14-morandi-genova-2018-infrastrutture-manutenzione:
+    title: 'Ponte Morandi, 14 agosto 2018: il crollo che ha riscritto la cultura della manutenzione delle infrastrutture in
+      Italia'
+    url: /comunicazioni/2026-08-14-morandi-genova-2018-infrastrutture-manutenzione/
+    video:
+    - anchored:
+      - crollo
+      - morandi
+      - ponte
+      canale: dpc-gov
+      id: 3nXk4GzmP_M
+      overlap:
+      - crollo
+      - morandi
+      - ponte
+      score: 9.0
+      titolo: Il racconto delle attività del sistema di protezione civile – Crollo Ponte Morandi
+      url: https://youtu.be/3nXk4GzmP_M
+    - anchored:
+      - crollo
+      - morandi
+      - ponte
+      canale: dpc-gov
+      id: Dnwz8rkOxIE
+      overlap:
+      - crollo
+      - morandi
+      - ponte
+      score: 9.0
+      titolo: Conferenza stampa 14 agosto 2018 ore 15.00 – Crollo Ponte Morandi
+      url: https://youtu.be/Dnwz8rkOxIE
+    - anchored:
+      - crollo
+      - morandi
+      - ponte
+      canale: dpc-gov
+      id: qhy_CnfT_SU
+      overlap:
+      - crollo
+      - morandi
+      - ponte
+      score: 9.0
+      titolo: Conferenza stampa 14 agosto 2018 ore 18.00 – Crollo Ponte Morandi
+      url: https://youtu.be/qhy_CnfT_SU
+  comunicazioni/2026-08-17-controesodo-viabilita-sicurezza:
+    title: 'Controesodo: viabilità e sicurezza nei rientri dalle vacanze'
+    url: /comunicazioni/2026-08-17-controesodo-viabilita-sicurezza/
+    video:
+    - anchored:
+      - viabilità
+      canale: dpc-gov
+      id: P4SvUlT3e8s
+      overlap:
+      - viabilità
+      score: 3.0
+      titolo: Il ripristino della viabilità ad Amatrice – Terremoto Centro Italia
+      url: https://youtu.be/P4SvUlT3e8s
+  comunicazioni/2026-08-21-ischia-2017-terremoto-isolano:
+    title: 'Ischia, 21 agosto 2017: il terremoto su un''isola, le case di tufo e la lezione del Casamicciola'
+    url: /comunicazioni/2026-08-21-ischia-2017-terremoto-isolano/
+    video:
+    - anchored:
+      - lezione
+      canale: io-non-rischio
+      id: 2g2ABfQVjJA
+      overlap:
+      - lezione
+      - terremoto
+      score: 4.8
+      titolo: La lezione del terremoto in Nepal
+      url: https://youtu.be/2g2ABfQVjJA
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 4.4
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 4.4
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+  comunicazioni/2026-08-23-pizzo-cengalo-bondo-2017-permafrost-cambiamento-climatico:
+    title: 'Pizzo Cengalo, 23 agosto 2017: la frana di Bondo che ha mostrato i nuovi rischi alpini del cambiamento climatico'
+    url: /comunicazioni/2026-08-23-pizzo-cengalo-bondo-2017-permafrost-cambiamento-climatico/
+    video:
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Le attività operative in corso a Niscemi in seguito alla Frana
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana di Niscemi (CL)
+      url: https://youtu.be/L98tBMJZn0k
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: k90I_coJTsA
+      overlap:
+      - frana
+      score: 3.0
+      titolo: Operazioni di salvataggio rimasti isolati dopo la frana di Niescemi.
+      url: https://youtu.be/k90I_coJTsA
+  comunicazioni/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario:
+    title: 'Amatrice, 24 agosto 2016: dieci anni dalla notte del Centro Italia'
+    url: /comunicazioni/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario/
+    video:
+    - anchored:
+      - accumoli
+      - tronto
+      canale: dpc-gov
+      id: RIR586wkbKA
+      overlap:
+      - accumoli
+      - centro
+      - primi
+      - terremoto
+      - tronto
+      score: 5.8
+      titolo: Primi cittadini di Accumoli a San Benedetto del Tronto – Terremoto Centro Italia
+      url: https://youtu.be/RIR586wkbKA
+    - anchored:
+      - arquata
+      - tronto
+      canale: dpc-gov
+      id: 3c_4vjCWYZg
+      overlap:
+      - arquata
+      - centro
+      - terremoto
+      - tronto
+      score: 5.2
+      titolo: Sorvolo su Arquata del Tronto (AP) – Terremoto Centro Italia
+      url: https://youtu.be/3c_4vjCWYZg
+    - anchored:
+      - arquata
+      - tronto
+      canale: dpc-gov
+      id: XimMbO39YIw
+      overlap:
+      - arquata
+      - centro
+      - terremoto
+      - tronto
+      score: 5.2
+      titolo: Sorvolo su Pescara del Tronto (Arquata del Tronto, AP) – Terremoto Centro Italia
+      url: https://youtu.be/XimMbO39YIw
+  comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere:
+    title: 'IT-Alert: cosa è, come funziona, come reagire al prossimo test'
+    url: /comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere/
+    video:
+    - anchored:
+      - alert
+      - allarme
+      canale: io-non-rischio
+      id: P1LpgdnXPj8
+      overlap:
+      - alert
+      - allarme
+      - pubblico
+      - sistema
+      score: 6.6
+      titolo: 'IT-alert: il sistema di allarme pubblico'
+      url: https://youtu.be/P1LpgdnXPj8
+    - anchored:
+      - test
+      canale: dpc-gov
+      id: RlwTnpacmJI
+      overlap:
+      - test
+      score: 3.0
+      titolo: Test comunicazione radio con veliero Amerigo Vespucci
+      url: https://youtu.be/RlwTnpacmJI
+  comunicazioni/2026-08-30-bilancio-campagna-aib-2026:
+    title: 'Campagna antincendio boschivo 2026: un bilancio di fine estate'
+    url: /comunicazioni/2026-08-30-bilancio-campagna-aib-2026/
+    video:
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: -lfm_NBSFIs
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Io non rischio 2017 - Luca Pancalli testimonial della Campagna
+      url: https://youtu.be/-lfm_NBSFIs
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: r1_tqC9ZGgU
+      overlap:
+      - campagna
+      - rischio
+      score: 3.2
+      titolo: Le novità della campagna Io non rischio 2023
+      url: https://youtu.be/r1_tqC9ZGgU
+  comunicazioni/2026-09-01-autunno-meteorologico-riapre-scuola:
+    title: '1° settembre: inizia l''autunno meteorologico, riapre l''anno scolastico'
+    url: /comunicazioni/2026-09-01-autunno-meteorologico-riapre-scuola/
+    video:
+    - anchored:
+      - scolastico
+      canale: dpc-gov
+      id: Zs1VmF6p9f0
+      overlap:
+      - dell
+      - scolastico
+      score: 3.2
+      titolo: Inaugurazione dell'anno scolastico ad Amatrice – Terremoto Centro Italia
+      url: https://youtu.be/Zs1VmF6p9f0
+  comunicazioni/2026-09-03-temporali-settembre-prevenzione:
+    title: 'Temporali di settembre: come riconoscerli e proteggersi'
+    url: /comunicazioni/2026-09-03-temporali-settembre-prevenzione/
+    video:
+    - anchored:
+      - proteggersi
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - proteggersi
+      score: 3.0
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+  comunicazioni/2026-09-05-grandine-rischio-danni-prevenzione:
+    title: 'Grandine: un rischio in crescita anche nel Lazio'
+    url: /comunicazioni/2026-09-05-grandine-rischio-danni-prevenzione/
+    video:
+    - anchored:
+      - crescita
+      canale: dpc-gov
+      id: _qulzvkSnQw
+      overlap:
+      - crescita
+      score: 3.0
+      titolo: '"La crescita della vita associativa": un confronto tra volontari di diverse generazioni'
+      url: https://youtu.be/_qulzvkSnQw
+    - anchored:
+      - crescita
+      canale: dpc-gov
+      id: aeAHGLkbU18
+      overlap:
+      - crescita
+      score: 3.0
+      titolo: '"La crescita della vita associativa": un confronto tra volontari di diverse generazioni'
+      url: https://youtu.be/aeAHGLkbU18
+  comunicazioni/2026-09-08-allerta-gialla-cosa-significa:
+    title: 'Allerta gialla: cosa significa davvero e cosa fare'
+    url: /comunicazioni/2026-09-08-allerta-gialla-cosa-significa/
+    video:
+    - anchored:
+      - allarme
+      canale: io-non-rischio
+      id: P1LpgdnXPj8
+      overlap:
+      - alert
+      - allarme
+      - sistema
+      score: 3.2
+      titolo: 'IT-alert: il sistema di allarme pubblico'
+      url: https://youtu.be/P1LpgdnXPj8
+  comunicazioni/2026-09-10-vento-forte-terrazzi-balconi:
+    title: 'Vento forte: proteggere balconi, terrazzi, oggetti esterni'
+    url: /comunicazioni/2026-09-10-vento-forte-terrazzi-balconi/
+    video:
+    - anchored:
+      - proteggere
+      canale: abili-a-proteggere
+      id: jW8-8ky2v-g
+      overlap:
+      - foto
+      - proteggere
+      score: 4.0
+      titolo: Foto attività Abili a proteggere
+      url: https://youtu.be/jW8-8ky2v-g
+    - anchored:
+      - proteggere
+      canale: abili-a-proteggere
+      id: R00PZpq-hhk
+      overlap:
+      - proteggere
+      score: 3.0
+      titolo: '#NienteDiSpeciale: Abili a proteggere intervista Gian Antonio Stella'
+      url: https://youtu.be/R00PZpq-hhk
+    - anchored:
+      - proteggere
+      canale: abili-a-proteggere
+      id: WA6HZdcMTHw
+      overlap:
+      - proteggere
+      score: 3.0
+      titolo: Attività Abili a proteggere 2017
+      url: https://youtu.be/WA6HZdcMTHw
+  comunicazioni/2026-09-12-scuole-lezioni-rischio-territorio:
+    title: 'Lezioni nelle scuole: la Protezione Civile racconta il territorio ai ragazzi'
+    url: /comunicazioni/2026-09-12-scuole-lezioni-rischio-territorio/
+    video:
+    - anchored:
+      - ragazzi
+      canale: dpc-gov
+      id: XJrslXpfc5Y
+      overlap:
+      - ragazzi
+      score: 3.0
+      titolo: I ragazzi del Servizio Civile raccontano l'esperienza in Dipartimento
+      url: https://youtu.be/XJrslXpfc5Y
+  comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico:
+    title: 'Alluvione delle Marche, 15-16 settembre 2022: la notte delle bombe d''acqua sui Monti del Catria'
+    url: /comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/
+    video:
+    - anchored:
+      - marche
+      canale: abili-a-proteggere
+      id: jJpZO_erLUQ
+      overlap:
+      - marche
+      score: 3.0
+      titolo: Intervista a David Piccinini - Direttore Generale servizio protezione civile regione Marche
+      url: https://youtu.be/jJpZO_erLUQ
+    - anchored:
+      - monti
+      canale: dpc-gov
+      id: vfzPkO5dV-M
+      overlap:
+      - monti
+      score: 3.0
+      titolo: L'intervento di Mario Monti – Stati Generali del Volontariato di Protezione Civile
+      url: https://youtu.be/vfzPkO5dV-M
+  comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano:
+    title: 'Rischio idraulico urbano a Genzano: conoscere i punti critici'
+    url: /comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano/
+    video:
+    - anchored:
+      - idraulico
+      canale: dpc-gov
+      id: Qdr1TEgicd8
+      overlap:
+      - idraulico
+      - rischio
+      score: 3.6
+      titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
+      url: https://youtu.be/Qdr1TEgicd8
+  comunicazioni/2026-09-20-alluvione-livorno-2017-memoria:
+    title: '10 settembre 2017: ricordare Livorno per non ripetere gli errori'
+    url: /comunicazioni/2026-09-20-alluvione-livorno-2017-memoria/
+    video:
+    - anchored:
+      - ricordare
+      canale: io-non-rischio
+      id: phK5ETSeUwI
+      overlap:
+      - ricordare
+      score: 3.0
+      titolo: Conoscere la caldera – Cosa devi ricordare e cosa puoi fare fin da subito
+      url: https://youtu.be/phK5ETSeUwI
+  comunicazioni/2026-09-25-io-non-rischio-campagna-autunno:
+    title: 'Io Non Rischio: torna la campagna nazionale di volontariato per il rischio'
+    url: /comunicazioni/2026-09-25-io-non-rischio-campagna-autunno/
+    video:
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: -lfm_NBSFIs
+      overlap:
+      - campagna
+      - rischio
+      score: 3.6
+      titolo: Io non rischio 2017 - Luca Pancalli testimonial della Campagna
+      url: https://youtu.be/-lfm_NBSFIs
+    - anchored:
+      - campagna
+      canale: io-non-rischio
+      id: r1_tqC9ZGgU
+      overlap:
+      - campagna
+      - rischio
+      score: 3.6
+      titolo: Le novità della campagna Io non rischio 2023
+      url: https://youtu.be/r1_tqC9ZGgU
+  comunicazioni/2026-09-26-marche-umbria-1997-basilica-assisi:
+    title: 'Marche-Umbria, 26 settembre 1997: il terremoto che fece crollare la volta della Basilica di Assisi'
+    url: /comunicazioni/2026-09-26-marche-umbria-1997-basilica-assisi/
+    video:
+    - anchored:
+      - marche
+      canale: abili-a-proteggere
+      id: jJpZO_erLUQ
+      overlap:
+      - marche
+      - regione
+      score: 3.2
+      titolo: Intervista a David Piccinini - Direttore Generale servizio protezione civile regione Marche
+      url: https://youtu.be/jJpZO_erLUQ
+  comunicazioni/2026-09-27-giornata-aperta-gruppo-cittadinanza:
+    title: 'Porte aperte al Gruppo: una giornata per conoscere la Protezione Civile di Genzano'
+    url: /comunicazioni/2026-09-27-giornata-aperta-gruppo-cittadinanza/
+    video:
+    - anchored:
+      - sede
+      canale: dpc-gov
+      id: 9agnufQ831k
+      overlap:
+      - sede
+      - visita
+      score: 3.0
+      titolo: La visita di Conte alla sede operativa del Dpc – Benemerenze di protezione civile
+      url: https://youtu.be/9agnufQ831k
+    - anchored:
+      - sede
+      canale: dpc-gov
+      id: BooLyjLFbSM
+      overlap:
+      - sede
+      - visita
+      score: 3.0
+      titolo: Mattarella visita la sede operativa del Dipartimento – Medaglia d'oro al Valore Civile
+      url: https://youtu.be/BooLyjLFbSM
+  comunicazioni/2026-09-29-parco-castelli-romani-collaborazione:
+    title: 'Il Parco dei Castelli Romani: un alleato della Protezione Civile'
+    url: /comunicazioni/2026-09-29-parco-castelli-romani-collaborazione/
+    video:
+    - anchored:
+      - parco
+      canale: io-non-rischio
+      id: jngoLN7077k
+      overlap:
+      - parco
+      - rischio
+      score: 3.2
+      titolo: 'Beni culturali e gestione del rischio: l''esperienza del Parco archeologico di Sibari'
+      url: https://youtu.be/jngoLN7077k
+  comunicazioni/2026-09-30-settembre-bilancio-ottobre-prospettive:
+    title: 'Settembre 2026: un bilancio e lo sguardo a ottobre'
+    url: /comunicazioni/2026-09-30-settembre-bilancio-ottobre-prospettive/
+    video:
+    - anchored:
+      - sguardo
+      canale: dpc-gov
+      id: kn46KFErDnE
+      overlap:
+      - sguardo
+      score: 3.0
+      titolo: Francesca Mannocchi e Fabrizio Curcio a partire da "Lo sguardo oltre il confine" – SalTo24
+      url: https://youtu.be/kn46KFErDnE
+  comunicazioni/2026-10-02-monossido-carbonio-intossicazioni:
+    title: 'Monossido di carbonio: il killer silenzioso delle case italiane'
+    url: /comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/
+    video:
+    - anchored:
+      - italiane
+      canale: dpc-gov
+      id: BZHiguXkEiQ
+      overlap:
+      - italiane
+      score: 3.0
+      titolo: Intervista a Paola Santillo, Protezione Aziendale Ferrovie dello Stato Italiane – EXE Flegrei 2019
+      url: https://youtu.be/BZHiguXkEiQ
+  comunicazioni/2026-10-04-giornata-aperta-ottobre-preparazione:
+    title: 'Preparazione della Giornata Aperta: ultimi dettagli'
+    url: /comunicazioni/2026-10-04-giornata-aperta-ottobre-preparazione/
+    video:
+    - anchored:
+      - sede
+      canale: dpc-gov
+      id: 9agnufQ831k
+      overlap:
+      - operativa
+      - sede
+      - visita
+      score: 3.2
+      titolo: La visita di Conte alla sede operativa del Dpc – Benemerenze di protezione civile
+      url: https://youtu.be/9agnufQ831k
+    - anchored:
+      - sede
+      canale: dpc-gov
+      id: BooLyjLFbSM
+      overlap:
+      - operativa
+      - sede
+      - visita
+      score: 3.2
+      titolo: Mattarella visita la sede operativa del Dipartimento – Medaglia d'oro al Valore Civile
+      url: https://youtu.be/BooLyjLFbSM
+  comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b:
+    title: 'Sismicità dei Castelli Romani: perché siamo in zona 2B'
+    url: /comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/
+    video:
+    - anchored:
+      - costruzioni
+      canale: abili-a-proteggere
+      id: XVVayor2A34
+      overlap:
+      - costruzioni
+      - tecnica
+      score: 3.0
+      titolo: Previsione - predizione - Angelo Masi (ordinario di Tecnica delle Costruzioni, ReLUIS)
+      url: https://youtu.be/XVVayor2A34
+  comunicazioni/2026-10-09-vajont-1963-tragedia-prevista:
+    title: 'Vajont, 9 ottobre 1963: la tragedia che la scienza aveva previsto'
+    url: /comunicazioni/2026-10-09-vajont-1963-tragedia-prevista/
+    video:
+    - anchored:
+      - scienza
+      canale: dpc-gov
+      id: -Q8ynNpWcQQ
+      overlap:
+      - scienza
+      score: 3.0
+      titolo: 'La scienza nel futuro della protezione civile: intervista a Mauro Dolce'
+      url: https://youtu.be/-Q8ynNpWcQQ
+    - anchored:
+      - scienza
+      canale: dpc-gov
+      id: Gifm5amH5yw
+      overlap:
+      - scienza
+      score: 3.0
+      titolo: Workshop "La scienza per la protezione civile"
+      url: https://youtu.be/Gifm5amH5yw
+    - anchored:
+      - scienza
+      canale: dpc-gov
+      id: QhVWOEPOvd8
+      overlap:
+      - scienza
+      score: 3.0
+      titolo: 'Giornata internazionale delle donne nella scienza: la testimonianza di Titti Postiglione'
+      url: https://youtu.be/QhVWOEPOvd8
+  comunicazioni/2026-10-11-io-non-rischio-giornata-piazza:
+    title: 'Io Non Rischio: il Gruppo di Genzano in piazza per la cittadinanza'
+    url: /comunicazioni/2026-10-11-io-non-rischio-giornata-piazza/
+    video:
+    - anchored:
+      - piazza
+      canale: io-non-rischio
+      id: 1kZMImTOPXU
+      overlap:
+      - piazza
+      - rischio
+      score: 3.6
+      titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Piemonte
+      url: https://youtu.be/1kZMImTOPXU
+    - anchored:
+      - piazza
+      canale: io-non-rischio
+      id: 277lnJ8CNaY
+      overlap:
+      - piazza
+      - rischio
+      score: 3.6
+      titolo: Io non rischio 2012 - La piazza di Viadana
+      url: https://youtu.be/277lnJ8CNaY
+    - anchored:
+      - piazza
+      canale: io-non-rischio
+      id: 2rqG514_228
+      overlap:
+      - piazza
+      - rischio
+      score: 3.6
+      titolo: Io non rischio 2016 - Vieni a trovarci in piazza... in Campania
+      url: https://youtu.be/2rqG514_228
+  comunicazioni/2026-10-12-volontariato-diritto-lavoratore-assenza:
+    title: 'Volontariato di PC e lavoro: i diritti del volontario attivato'
+    url: /comunicazioni/2026-10-12-volontariato-diritto-lavoratore-assenza/
+    video:
+    - anchored:
+      - diritti
+      canale: abili-a-proteggere
+      id: 2oZHTrIAXi0
+      overlap:
+      - diritti
+      score: 3.0
+      titolo: 'Presidente Mattarella: "rimuovere ogni barriera che limiti i diritti delle persone con disabilità'
+      url: https://youtu.be/2oZHTrIAXi0
+  comunicazioni/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano:
+    title: 'Reggio Emilia, 15 ottobre 1996: il terremoto che ha riportato la Pianura Padana sulla mappa sismica'
+    url: /comunicazioni/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano/
+    video:
+    - anchored:
+      - emilia
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - danni
+      - emilia
+      - scossa
+      - terremoto
+      score: 6.4
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - emilia
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - danni
+      - emilia
+      - scossa
+      - terremoto
+      score: 6.4
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - emilia
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      overlap:
+      - danni
+      - emilia
+      - scossa
+      - terremoto
+      score: 6.4
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-10-16-risk-communication-comunicare-rischio:
+    title: 'Risk communication: come si comunica un rischio senza creare panico'
+    url: /comunicazioni/2026-10-16-risk-communication-comunicare-rischio/
+    video:
+    - anchored:
+      - risk
+      canale: dpc-gov
+      id: 9oEusKsoWqM
+      overlap:
+      - risk
+      score: 3.0
+      titolo: 'NEIFLEX 2018: international exercise on flood risk management'
+      url: https://youtu.be/9oEusKsoWqM
+    - anchored:
+      - risk
+      canale: dpc-gov
+      id: clKcz0w6l1U
+      overlap:
+      - risk
+      score: 3.0
+      titolo: Promo 2018 European Forum for Disaster Risk Reduction – EFDRR 2018
+      url: https://youtu.be/clKcz0w6l1U
+  comunicazioni/2026-10-18-settimana-protezione-civile-scuole:
+    title: 'Settimana della Protezione Civile nelle scuole: il programma'
+    url: /comunicazioni/2026-10-18-settimana-protezione-civile-scuole/
+    video:
+    - anchored:
+      - settimana
+      canale: dpc-gov
+      id: 2Evnqcfry8Q
+      overlap:
+      - settimana
+      - sisma
+      - terremoto
+      score: 4.6
+      titolo: L'intervento italiano a una settimana dal sisma – Terremoto Turchia e Siria
+      url: https://youtu.be/2Evnqcfry8Q
+    - anchored:
+      - settimana
+      canale: dpc-gov
+      id: 25ci6GjB-so
+      overlap:
+      - settimana
+      score: 3.0
+      titolo: Il volontariato di protezione civile – Settimana Nazionale della Protezione Civile 2020
+      url: https://youtu.be/25ci6GjB-so
+    - anchored:
+      - programma
+      canale: dpc-gov
+      id: 3aDF3Rjs_jE
+      overlap:
+      - programma
+      score: 3.0
+      titolo: Workshop annuale Programma/gen 2019 (3 di 3) – Protezione civile e PONGOV 2014-2020
+      url: https://youtu.be/3aDF3Rjs_jE
+  comunicazioni/2026-10-22-abbigliamento-tecnico-volontario:
+    title: 'Abbigliamento del volontario: la divisa tecnica e i DPI'
+    url: /comunicazioni/2026-10-22-abbigliamento-tecnico-volontario/
+    video:
+    - anchored:
+      - tecnica
+      canale: abili-a-proteggere
+      id: XVVayor2A34
+      overlap:
+      - tecnica
+      score: 3.0
+      titolo: Previsione - predizione - Angelo Masi (ordinario di Tecnica delle Costruzioni, ReLUIS)
+      url: https://youtu.be/XVVayor2A34
+  comunicazioni/2026-10-23-avvio-corso-base-prima-lezione:
+    title: 'Corso base volontari: la prima lezione è questa sera'
+    url: /comunicazioni/2026-10-23-avvio-corso-base-prima-lezione/
+    video:
+    - anchored:
+      - lezione
+      canale: io-non-rischio
+      id: 2g2ABfQVjJA
+      overlap:
+      - lezione
+      score: 3.0
+      titolo: La lezione del terremoto in Nepal
+      url: https://youtu.be/2g2ABfQVjJA
+  comunicazioni/2026-10-26-terremoto-marche-2016-visso-camerino:
+    title: 'Terremoto delle Marche, 26 ottobre 2016: la scossa di Visso che riportò il sisma del Centro Italia su nuove regioni'
+    url: /comunicazioni/2026-10-26-terremoto-marche-2016-visso-camerino/
+    video:
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 5.4
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 5.4
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - sisma
+      canale: dpc-gov
+      id: B9--XweE0nQ
+      overlap:
+      - centro
+      - sisma
+      - terremoto
+      score: 5.4
+      titolo: 'Sopralluoghi post-sisma: il software Erikus (2 di 2) – Terremoto Centro Italia'
+      url: https://youtu.be/B9--XweE0nQ
+  comunicazioni/2026-10-27-manutenzione-caldaia-controllo-annuale:
+    title: 'Caldaia e termosifoni: il controllo annuale obbligatorio'
+    url: /comunicazioni/2026-10-27-manutenzione-caldaia-controllo-annuale/
+    video:
+    - anchored:
+      - annuale
+      canale: dpc-gov
+      id: 3aDF3Rjs_jE
+      overlap:
+      - annuale
+      score: 3.0
+      titolo: Workshop annuale Programma/gen 2019 (3 di 3) – Protezione civile e PONGOV 2014-2020
+      url: https://youtu.be/3aDF3Rjs_jE
+    - anchored:
+      - annuale
+      canale: dpc-gov
+      id: p7sony993IQ
+      overlap:
+      - annuale
+      score: 3.0
+      titolo: Workshop annuale Programma/gen 2019 (2 di 3) – Protezione civile e PONGOV 2014-2020
+      url: https://youtu.be/p7sony993IQ
+    - anchored:
+      - annuale
+      canale: dpc-gov
+      id: x4bZFqxGYqU
+      overlap:
+      - annuale
+      score: 3.0
+      titolo: Workshop annuale Programma/gen 2019 (1 di 3) – Protezione civile e PONGOV 2014-2020
+      url: https://youtu.be/x4bZFqxGYqU
+  comunicazioni/2026-10-28-centro-italia-2016-memoria:
+    title: 'Dieci anni dal sisma del Centro Italia: la memoria come prevenzione'
+    url: /comunicazioni/2026-10-28-centro-italia-2016-memoria/
+    video:
+    - anchored:
+      - arquata
+      - tronto
+      canale: dpc-gov
+      id: XimMbO39YIw
+      overlap:
+      - arquata
+      - centro
+      - pescara
+      - terremoto
+      - tronto
+      score: 6.2
+      titolo: Sorvolo su Pescara del Tronto (Arquata del Tronto, AP) – Terremoto Centro Italia
+      url: https://youtu.be/XimMbO39YIw
+    - anchored:
+      - tronto
+      canale: dpc-gov
+      id: RIR586wkbKA
+      overlap:
+      - accumoli
+      - benedetto
+      - centro
+      - cittadini
+      - terremoto
+      - tronto
+      score: 5.4
+      titolo: Primi cittadini di Accumoli a San Benedetto del Tronto – Terremoto Centro Italia
+      url: https://youtu.be/RIR586wkbKA
+    - anchored:
+      - arquata
+      - tronto
+      canale: dpc-gov
+      id: 3c_4vjCWYZg
+      overlap:
+      - arquata
+      - centro
+      - terremoto
+      - tronto
+      score: 5.2
+      titolo: Sorvolo su Arquata del Tronto (AP) – Terremoto Centro Italia
+      url: https://youtu.be/3c_4vjCWYZg
+  comunicazioni/2026-10-28-scheda-rilievo-danno-beni-culturali-chiese:
+    title: 'Come si rileva il danno sismico a una chiesa: la scheda Modello A-DC del Dipartimento di Protezione Civile'
+    url: /comunicazioni/2026-10-28-scheda-rilievo-danno-beni-culturali-chiese/
+    video:
+    - anchored:
+      - modello
+      canale: dpc-gov
+      id: 2iqDEZQh3a8
+      overlap:
+      - modello
+      score: 3.0
+      titolo: Modello digitale 3D delle deformazioni – Naufragio Concordia
+      url: https://youtu.be/2iqDEZQh3a8
+    - anchored:
+      - modello
+      canale: dpc-gov
+      id: y2a-szGCpWM
+      overlap:
+      - modello
+      score: 3.0
+      titolo: Modello digitale 3D della rotazione – Naufragio Concordia
+      url: https://youtu.be/y2a-szGCpWM
+  comunicazioni/2026-10-30-halloween-sicurezza-bambini:
+    title: 'Halloween in sicurezza: consigli per genitori e bambini'
+    url: /comunicazioni/2026-10-30-halloween-sicurezza-bambini/
+    video:
+    - anchored:
+      - consigli
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - consigli
+      score: 3.0
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+  comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia:
+    title: 'Norcia, 30 ottobre 2016: la scossa più forte d''Italia degli ultimi 30 anni'
+    url: /comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia/
+    video:
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - danni
+      - scossa
+      score: 3.6
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - danni
+      - scossa
+      score: 3.6
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      overlap:
+      - danni
+      - scossa
+      score: 3.6
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure:
+    title: 'San Giuliano di Puglia, 31 ottobre 2002: il terremoto che cambiò la sicurezza sismica delle scuole italiane'
+    url: /comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure/
+    video:
+    - anchored:
+      - italiane
+      canale: dpc-gov
+      id: BZHiguXkEiQ
+      overlap:
+      - italiane
+      score: 3.0
+      titolo: Intervista a Paola Santillo, Protezione Aziendale Ferrovie dello Stato Italiane – EXE Flegrei 2019
+      url: https://youtu.be/BZHiguXkEiQ
+  comunicazioni/2026-11-01-ognissanti-cimiteri-viabilita:
+    title: 'Ognissanti: viabilità nei pressi dei cimiteri e comportamenti'
+    url: /comunicazioni/2026-11-01-ognissanti-cimiteri-viabilita/
+    video:
+    - anchored:
+      - viabilità
+      canale: dpc-gov
+      id: P4SvUlT3e8s
+      overlap:
+      - viabilità
+      score: 3.0
+      titolo: Il ripristino della viabilità ad Amatrice – Terremoto Centro Italia
+      url: https://youtu.be/P4SvUlT3e8s
+  comunicazioni/2026-11-02-commemorazione-defunti-cultura-lutto:
+    title: 'Commemorazione dei defunti: memoria e cura collettiva'
+    url: /comunicazioni/2026-11-02-commemorazione-defunti-cultura-lutto/
+    video:
+    - anchored:
+      - memoria
+      canale: dpc-gov
+      id: yRNxAUcgdNE
+      overlap:
+      - memoria
+      - rischio
+      - terremoti
+      score: 4.2
+      titolo: 'Promo 2018 mostra Terremoti d''Italia: "Il rischio sismico tra conoscenza, memoria ed esperienza"'
+      url: https://youtu.be/yRNxAUcgdNE
+    - anchored:
+      - valore
+      canale: dpc-gov
+      id: BooLyjLFbSM
+      overlap:
+      - valore
+      - visita
+      score: 3.0
+      titolo: Mattarella visita la sede operativa del Dipartimento – Medaglia d'oro al Valore Civile
+      url: https://youtu.be/BooLyjLFbSM
+  comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano:
+    title: 'Genova, 4 novembre 2011: l''alluvione del Fereggiano e la lezione dei rii tombati'
+    url: /comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano/
+    video:
+    - anchored:
+      - lezione
+      canale: io-non-rischio
+      id: 2g2ABfQVjJA
+      overlap:
+      - lezione
+      score: 3.0
+      titolo: La lezione del terremoto in Nepal
+      url: https://youtu.be/2g2ABfQVjJA
+  comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani:
+    title: 'Ondate di freddo: come prepararsi e proteggere gli anziani'
+    url: /comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/
+    video:
+    - anchored:
+      - ondate
+      canale: dpc-gov
+      id: GPEu7LV0CZM
+      overlap:
+      - calore
+      - ondate
+      - rischio
+      score: 4.0
+      titolo: Spot 2006 sul rischio ondate di calore
+      url: https://youtu.be/GPEu7LV0CZM
+    - anchored:
+      - ondate
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - calore
+      - ondate
+      score: 3.6
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+    - anchored:
+      - proteggere
+      canale: io-non-rischio
+      id: Z0yHNAn2qs8
+      overlap:
+      - proteggere
+      - rischio
+      score: 3.4
+      titolo: 'Abili a proteggere: Io non rischio perché'
+      url: https://youtu.be/Z0yHNAn2qs8
+  comunicazioni/2026-11-07-esercitazione-radio-inter-comunale:
+    title: 'Esercitazione radio inter-comunale: i Castelli in rete'
+    url: /comunicazioni/2026-11-07-esercitazione-radio-inter-comunale/
+    video:
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      overlap:
+      - comunali
+      - esercitazione
+      score: 4.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - test
+      canale: dpc-gov
+      id: RlwTnpacmJI
+      overlap:
+      - comunicazione
+      - radio
+      - test
+      score: 4.0
+      titolo: Test comunicazione radio con veliero Amerigo Vespucci
+      url: https://youtu.be/RlwTnpacmJI
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      overlap:
+      - esercitazione
+      - sismico
+      score: 3.6
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+  comunicazioni/2026-11-10-volontariato-giovane-studenti:
+    title: 'Volontariato per studenti: perché iniziare da giovane'
+    url: /comunicazioni/2026-11-10-volontariato-giovane-studenti/
+    video:
+    - anchored:
+      - crescita
+      canale: dpc-gov
+      id: _qulzvkSnQw
+      overlap:
+      - crescita
+      - diverse
+      - vita
+      score: 3.2
+      titolo: '"La crescita della vita associativa": un confronto tra volontari di diverse generazioni'
+      url: https://youtu.be/_qulzvkSnQw
+    - anchored:
+      - crescita
+      canale: dpc-gov
+      id: aeAHGLkbU18
+      overlap:
+      - crescita
+      - diverse
+      - vita
+      score: 3.2
+      titolo: '"La crescita della vita associativa": un confronto tra volontari di diverse generazioni'
+      url: https://youtu.be/aeAHGLkbU18
+    - anchored:
+      - giovani
+      canale: dpc-gov
+      id: CnIiu1LQdmM
+      overlap:
+      - formativi
+      - giovani
+      score: 3.0
+      titolo: 'I temi del Tavolo nazionale giovani: scambi formativi e gemellaggi'
+      url: https://youtu.be/CnIiu1LQdmM
+  comunicazioni/2026-11-13-volontarie-donne-protezione-civile:
+    title: Le donne nel volontariato di Protezione Civile
+    url: /comunicazioni/2026-11-13-volontarie-donne-protezione-civile/
+    video:
+    - anchored:
+      - donne
+      canale: dpc-gov
+      id: QhVWOEPOvd8
+      overlap:
+      - donne
+      score: 3.0
+      titolo: 'Giornata internazionale delle donne nella scienza: la testimonianza di Titti Postiglione'
+      url: https://youtu.be/QhVWOEPOvd8
+  comunicazioni/2026-11-14-sicurezza-impianti-elettrici-casa:
+    title: 'Impianto elettrico di casa: sicurezza, controlli, buone pratiche'
+    url: /comunicazioni/2026-11-14-sicurezza-impianti-elettrici-casa/
+    video:
+    - anchored:
+      - buone
+      canale: dpc-gov
+      id: MzVgNeBjJSQ
+      overlap:
+      - buone
+      - incendi
+      - pratiche
+      score: 5.2
+      titolo: 'Incendi boschivi: le buone pratiche'
+      url: https://youtu.be/MzVgNeBjJSQ
+  comunicazioni/2026-11-17-giornata-vittime-strada:
+    title: Giornata mondiale delle vittime della strada
+    url: /comunicazioni/2026-11-17-giornata-vittime-strada/
+    video:
+    - anchored:
+      - terza
+      canale: dpc-gov
+      id: HqPjxdIZct4
+      overlap:
+      - iniziative
+      - terza
+      score: 3.0
+      titolo: Eventi e iniziative della terza edizione – Settimana Nazionale della Protezione Civile 2021
+      url: https://youtu.be/HqPjxdIZct4
+  comunicazioni/2026-11-22-truffe-online-black-friday:
+    title: 'Black Friday e shopping online: attenzione alle truffe'
+    url: /comunicazioni/2026-11-22-truffe-online-black-friday/
+    video:
+    - anchored:
+      - black
+      canale: dpc-gov
+      id: j1UrFKfdux8
+      overlap:
+      - black
+      score: 3.0
+      titolo: Spot 2006 sul rischio black-out
+      url: https://youtu.be/j1UrFKfdux8
+  comunicazioni/2026-11-23-irpinia-1980-anniversario-46:
+    title: '23 novembre 1980: 46 anni dal terremoto dell''Irpinia'
+    url: /comunicazioni/2026-11-23-irpinia-1980-anniversario-46/
+    video:
+    - anchored:
+      - sisma
+      canale: dpc-gov
+      id: 2Evnqcfry8Q
+      overlap:
+      - sisma
+      - terremoto
+      score: 3.8
+      titolo: L'intervento italiano a una settimana dal sisma – Terremoto Turchia e Siria
+      url: https://youtu.be/2Evnqcfry8Q
+    - anchored:
+      - sisma
+      canale: dpc-gov
+      id: B9--XweE0nQ
+      overlap:
+      - sisma
+      - terremoto
+      score: 3.8
+      titolo: 'Sopralluoghi post-sisma: il software Erikus (2 di 2) – Terremoto Centro Italia'
+      url: https://youtu.be/B9--XweE0nQ
+    - anchored:
+      - sisma
+      canale: dpc-gov
+      id: qkKqenrA8Og
+      overlap:
+      - sisma
+      - terremoto
+      score: 3.8
+      titolo: 'Sopralluoghi post-sisma: il software Erikus (1 di 2) – Terremoto Centro Italia'
+      url: https://youtu.be/qkKqenrA8Og
+  comunicazioni/2026-11-25-violenza-donne-numeri-emergenza:
+    title: '25 novembre: contro la violenza sulle donne, i numeri da conoscere'
+    url: /comunicazioni/2026-11-25-violenza-donne-numeri-emergenza/
+    video:
+    - anchored:
+      - donne
+      canale: dpc-gov
+      id: QhVWOEPOvd8
+      overlap:
+      - donne
+      score: 3.0
+      titolo: 'Giornata internazionale delle donne nella scienza: la testimonianza di Titti Postiglione'
+      url: https://youtu.be/QhVWOEPOvd8
+  comunicazioni/2026-11-26-friuli-1976-memoria-terremoto:
+    title: 'Friuli 1976: la ricostruzione che divenne modello nazionale'
+    url: /comunicazioni/2026-11-26-friuli-1976-memoria-terremoto/
+    video:
+    - anchored:
+      - europeo
+      - terremoti
+      canale: dpc-gov
+      id: 7RLK3dWVmdI
+      overlap:
+      - europeo
+      - terremoti
+      score: 4.0
+      titolo: L'allestimento della mostra "Terremoti d'Italia" al Forum europeo – EFDRR 2018
+      url: https://youtu.be/7RLK3dWVmdI
+    - anchored:
+      - europeo
+      - terremoti
+      canale: dpc-gov
+      id: _K-Gc5rFpOA
+      overlap:
+      - europeo
+      - terremoti
+      score: 4.0
+      titolo: La mostra "Terremoti d'Italia" al Forum europeo – EFDRR 2018
+      url: https://youtu.be/_K-Gc5rFpOA
+    - anchored:
+      - europeo
+      - terremoti
+      canale: dpc-gov
+      id: vbCGEqukJA4
+      overlap:
+      - europeo
+      - terremoti
+      score: 4.0
+      titolo: '"Terremoti d''Italia" e "Io Non Rischio" al Forum europeo – EFDRR 2018'
+      url: https://youtu.be/vbCGEqukJA4
+  comunicazioni/2026-11-27-corso-base-ultima-settimana-esame:
+    title: 'Corso base: ultima settimana e preparazione all''esame'
+    url: /comunicazioni/2026-11-27-corso-base-ultima-settimana-esame/
+    video:
+    - anchored:
+      - settimana
+      canale: dpc-gov
+      id: HqPjxdIZct4
+      overlap:
+      - eventi
+      - settimana
+      score: 3.2
+      titolo: Eventi e iniziative della terza edizione – Settimana Nazionale della Protezione Civile 2021
+      url: https://youtu.be/HqPjxdIZct4
+    - anchored:
+      - settimana
+      canale: dpc-gov
+      id: 25ci6GjB-so
+      overlap:
+      - settimana
+      score: 3.0
+      titolo: Il volontariato di protezione civile – Settimana Nazionale della Protezione Civile 2020
+      url: https://youtu.be/25ci6GjB-so
+    - anchored:
+      - settimana
+      canale: dpc-gov
+      id: 2Evnqcfry8Q
+      overlap:
+      - settimana
+      score: 3.0
+      titolo: L'intervento italiano a una settimana dal sisma – Terremoto Turchia e Siria
+      url: https://youtu.be/2Evnqcfry8Q
+  comunicazioni/2026-11-29-ponte-immacolata-preparazione:
+    title: 'Ponte dell''Immacolata: viabilità, meteo e sicurezza'
+    url: /comunicazioni/2026-11-29-ponte-immacolata-preparazione/
+    video:
+    - anchored:
+      - viabilità
+      canale: dpc-gov
+      id: P4SvUlT3e8s
+      overlap:
+      - centro
+      - viabilità
+      score: 3.2
+      titolo: Il ripristino della viabilità ad Amatrice – Terremoto Centro Italia
+      url: https://youtu.be/P4SvUlT3e8s
+    - anchored:
+      - ponte
+      canale: dpc-gov
+      id: 3nXk4GzmP_M
+      overlap:
+      - ponte
+      score: 3.0
+      titolo: Il racconto delle attività del sistema di protezione civile – Crollo Ponte Morandi
+      url: https://youtu.be/3nXk4GzmP_M
+    - anchored:
+      - ponte
+      canale: dpc-gov
+      id: Dnwz8rkOxIE
+      overlap:
+      - ponte
+      score: 3.0
+      titolo: Conferenza stampa 14 agosto 2018 ore 15.00 – Crollo Ponte Morandi
+      url: https://youtu.be/Dnwz8rkOxIE
+  comunicazioni/2026-12-03-giornata-persone-disabilita:
+    title: '3 dicembre: Giornata internazionale delle persone con disabilità'
+    url: /comunicazioni/2026-12-03-giornata-persone-disabilita/
+    video:
+    - anchored:
+      - diritti
+      - disabilità
+      canale: abili-a-proteggere
+      id: 2oZHTrIAXi0
+      overlap:
+      - diritti
+      - disabilità
+      - persone
+      score: 5.6
+      titolo: 'Presidente Mattarella: "rimuovere ogni barriera che limiti i diritti delle persone con disabilità'
+      url: https://youtu.be/2oZHTrIAXi0
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      overlap:
+      - disabilità
+      - motoria
+      score: 4.0
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: b5W1-Cj7eu0
+      overlap:
+      - disabilità
+      - persone
+      score: 3.6
+      titolo: Giornata internazionale delle persone con disabilità
+      url: https://youtu.be/b5W1-Cj7eu0
+  comunicazioni/2026-12-05-presidio-ponte-immacolata:
+    title: 'Ponte Immacolata: presidio attivo del Gruppo PC'
+    url: /comunicazioni/2026-12-05-presidio-ponte-immacolata/
+    video:
+    - anchored:
+      - ponte
+      canale: dpc-gov
+      id: 3nXk4GzmP_M
+      overlap:
+      - ponte
+      score: 3.0
+      titolo: Il racconto delle attività del sistema di protezione civile – Crollo Ponte Morandi
+      url: https://youtu.be/3nXk4GzmP_M
+    - anchored:
+      - ponte
+      canale: dpc-gov
+      id: Dnwz8rkOxIE
+      overlap:
+      - ponte
+      score: 3.0
+      titolo: Conferenza stampa 14 agosto 2018 ore 15.00 – Crollo Ponte Morandi
+      url: https://youtu.be/Dnwz8rkOxIE
+    - anchored:
+      - ponte
+      canale: dpc-gov
+      id: qhy_CnfT_SU
+      overlap:
+      - ponte
+      score: 3.0
+      titolo: Conferenza stampa 14 agosto 2018 ore 18.00 – Crollo Ponte Morandi
+      url: https://youtu.be/qhy_CnfT_SU
+  comunicazioni/2026-12-06-san-nicola-tradizione-bambini:
+    title: 'San Nicola: tradizione e sicurezza per i bambini'
+    url: /comunicazioni/2026-12-06-san-nicola-tradizione-bambini/
+    video:
+    - anchored:
+      - nicola
+      canale: dpc-gov
+      id: -fRczo32vkE
+      overlap:
+      - nicola
+      - rischi
+      score: 3.2
+      titolo: Fabrizio Curcio e Nicola Lagioia sul tema "Tra rischi e sostenibilità" – SalTo24
+      url: https://youtu.be/-fRczo32vkE
+    - anchored:
+      - nicola
+      canale: dpc-gov
+      id: yRAlV7EVo74
+      overlap:
+      - nicola
+      score: 3.0
+      titolo: Nicola Lagioia e Titti Postiglione su "eQuiLIBRI di protezione civile" – SalTo24
+      url: https://youtu.be/yRAlV7EVo74
+  comunicazioni/2026-12-09-rientro-post-ponte-sicurezza-stradale:
+    title: 'Rientro dal ponte: sicurezza stradale e stanchezza'
+    url: /comunicazioni/2026-12-09-rientro-post-ponte-sicurezza-stradale/
+    video:
+    - anchored:
+      - ponte
+      canale: dpc-gov
+      id: 3nXk4GzmP_M
+      overlap:
+      - ponte
+      score: 3.0
+      titolo: Il racconto delle attività del sistema di protezione civile – Crollo Ponte Morandi
+      url: https://youtu.be/3nXk4GzmP_M
+    - anchored:
+      - ponte
+      canale: dpc-gov
+      id: Dnwz8rkOxIE
+      overlap:
+      - ponte
+      score: 3.0
+      titolo: Conferenza stampa 14 agosto 2018 ore 15.00 – Crollo Ponte Morandi
+      url: https://youtu.be/Dnwz8rkOxIE
+    - anchored:
+      - ponte
+      canale: dpc-gov
+      id: qhy_CnfT_SU
+      overlap:
+      - ponte
+      score: 3.0
+      titolo: Conferenza stampa 14 agosto 2018 ore 18.00 – Crollo Ponte Morandi
+      url: https://youtu.be/qhy_CnfT_SU
+  comunicazioni/2026-12-10-giornata-diritti-umani:
+    title: '10 dicembre: Giornata dei Diritti Umani'
+    url: /comunicazioni/2026-12-10-giornata-diritti-umani/
+    video:
+    - anchored:
+      - diritti
+      canale: abili-a-proteggere
+      id: 2oZHTrIAXi0
+      overlap:
+      - diritti
+      - disabilità
+      - limiti
+      - persone
+      score: 5.2
+      titolo: 'Presidente Mattarella: "rimuovere ogni barriera che limiti i diritti delle persone con disabilità'
+      url: https://youtu.be/2oZHTrIAXi0
+  comunicazioni/2026-12-20-solidarieta-natalizia-caritas-mense:
+    title: 'Solidarietà natalizia: mense, Caritas e sostegno ai fragili'
+    url: /comunicazioni/2026-12-20-solidarieta-natalizia-caritas-mense/
+    video:
+    - anchored:
+      - solidarietà
+      canale: abili-a-proteggere
+      id: 6Ue54lPvZ48
+      overlap:
+      - solidarietà
+      score: 3.0
+      titolo: La centralità della solidarietà - Paolo Giordano (fisico delle particelle, saggista, giornalista)
+      url: https://youtu.be/6Ue54lPvZ48
+  comunicazioni/2026-12-26-santo-stefano-protomartire:
+    title: 'Santo Stefano: riflessione tra Natale e nuovo anno'
+    url: /comunicazioni/2026-12-26-santo-stefano-protomartire/
+    video:
+    - anchored:
+      - stefano
+      canale: abili-a-proteggere
+      id: C16hv6OgGOU
+      overlap:
+      - stefano
+      score: 3.0
+      titolo: '#NienteDiSpeciale: intervista a Stefano Zanut CNVVF'
+      url: https://youtu.be/C16hv6OgGOU
+    - anchored:
+      - stefano
+      canale: dpc-gov
+      id: EinjLkaNhBM
+      overlap:
+      - stefano
+      score: 3.0
+      titolo: Salone Internazionale del Libro di Torino / 2025 - Stefano Ciolli
+      url: https://youtu.be/EinjLkaNhBM
+    - anchored:
+      - stefano
+      canale: dpc-gov
+      id: cr7HHEvu4Z8
+      overlap:
+      - stefano
+      score: 3.0
+      titolo: Salone Internazionale del Libro di Torino / 2025 - Chiara Cristiani e Stefano Ciolli
+      url: https://youtu.be/cr7HHEvu4Z8
+  comunicazioni/2026-12-26-tsunami-indiano-2004-allerta-globale:
+    title: 'Tsunami dell''Oceano Indiano, 26 dicembre 2004: il giorno che ha imposto al mondo un sistema globale di allerta
+      tsunami'
+    url: /comunicazioni/2026-12-26-tsunami-indiano-2004-allerta-globale/
+    video:
+    - anchored:
+      - tsunami
+      canale: abili-a-proteggere
+      id: yhCLcmFNZaI
+      overlap:
+      - allerta
+      - ingv
+      - tsunami
+      score: 5.8
+      titolo: Il Centro Allerta Tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami - Ingv)
+      url: https://youtu.be/yhCLcmFNZaI
+    - anchored:
+      - tsunami
+      canale: abili-a-proteggere
+      id: Tc3zhweSzE4
+      overlap:
+      - allerta
+      - tsunami
+      score: 4.8
+      titolo: Sala monitoraggio terremoti e tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami)
+      url: https://youtu.be/Tc3zhweSzE4
+    - anchored:
+      - tsunami
+      canale: dpc-gov
+      id: 9LxJaPpQTFQ
+      overlap:
+      - lanka
+      - tsunami
+      score: 4.0
+      titolo: L'intervento italiano in Sri Lanka a due anni dallo tsunami
+      url: https://youtu.be/9LxJaPpQTFQ
+  comunicazioni/2026-12-27-settimana-tra-feste-riflessione:
+    title: 'Settimana tra feste: riflessione e preparazione al nuovo anno'
+    url: /comunicazioni/2026-12-27-settimana-tra-feste-riflessione/
+    video:
+    - anchored:
+      - settimana
+      canale: dpc-gov
+      id: 25ci6GjB-so
+      overlap:
+      - settimana
+      score: 3.0
+      titolo: Il volontariato di protezione civile – Settimana Nazionale della Protezione Civile 2020
+      url: https://youtu.be/25ci6GjB-so
+    - anchored:
+      - settimana
+      canale: dpc-gov
+      id: 2Evnqcfry8Q
+      overlap:
+      - settimana
+      score: 3.0
+      titolo: L'intervento italiano a una settimana dal sisma – Terremoto Turchia e Siria
+      url: https://youtu.be/2Evnqcfry8Q
+    - anchored:
+      - settimana
+      canale: dpc-gov
+      id: 6JuLpVcQurE
+      overlap:
+      - settimana
+      score: 3.0
+      titolo: Il Capo Dipartimento presenta la Settimana – Settimana Nazionale della Protezione Civile 2020
+      url: https://youtu.be/6JuLpVcQurE
+  comunicazioni/2026-12-28-messina-reggio-calabria-1908-soccorso-moderno:
+    title: 'Messina e Reggio Calabria, 28 dicembre 1908: il terremoto che fece 100.000 vittime e fondò l''idea moderna di
+      soccorso'
+    url: /comunicazioni/2026-12-28-messina-reggio-calabria-1908-soccorso-moderno/
+    video:
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - finale
+      - scossa
+      - terremoto
+      score: 4.8
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.8
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.8
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-12-30-capodanno-petardi-sicurezza:
+    title: 'Capodanno e petardi: sicurezza e rispetto'
+    url: /comunicazioni/2026-12-30-capodanno-petardi-sicurezza/
+    video:
+    - anchored:
+      - buone
+      canale: dpc-gov
+      id: MzVgNeBjJSQ
+      overlap:
+      - boschivi
+      - buone
+      - incendi
+      - pratiche
+      score: 4.4
+      titolo: 'Incendi boschivi: le buone pratiche'
+      url: https://youtu.be/MzVgNeBjJSQ
+  comunicazioni/2027-01-13-avezzano-1915-terremoto-marsica:
+    title: 'Avezzano, 13 gennaio 1915: il terremoto della Marsica e la sua eredità'
+    url: /comunicazioni/2027-01-13-avezzano-1915-terremoto-marsica/
+    video:
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.8
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.8
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.8
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2027-01-14-belice-1968-terremoto-ricostruzione-lunga:
+    title: 'Belice, 14-15 gennaio 1968: il terremoto che durò un giorno e una notte'
+    url: /comunicazioni/2027-01-14-belice-1968-terremoto-ricostruzione-lunga/
+    video:
+    - anchored:
+      - valle
+      canale: dpc-gov
+      id: hNprXkqvtK0
+      overlap:
+      - terremoto
+      - valle
+      score: 3.8
+      titolo: Sorvolo su Valle Fara (Valle Castellana, TE) – Terremoto Centro Italia
+      url: https://youtu.be/hNprXkqvtK0
+  comunicazioni/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana:
+    title: 'Turchia-Siria, 6 febbraio 2023: il più grande dispiegamento internazionale italiano dopo Haiti'
+    url: /comunicazioni/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana/
+    video:
+    - anchored:
+      - siria
+      - turchia
+      canale: dpc-gov
+      id: BhrejcTtQ5U
+      overlap:
+      - campo
+      - siria
+      - terremoto
+      - turchia
+      score: 7.2
+      titolo: L'ospedale da campo EMT2 – Terremoto Turchia e Siria
+      url: https://youtu.be/BhrejcTtQ5U
+    - anchored:
+      - siria
+      - turchia
+      canale: dpc-gov
+      id: HCUjLDolHHA
+      overlap:
+      - primi
+      - siria
+      - terremoto
+      - turchia
+      score: 7.2
+      titolo: Le testimonianze dei primi soccorritori – Terremoto Turchia e Siria
+      url: https://youtu.be/HCUjLDolHHA
+    - anchored:
+      - siria
+      - turchia
+      canale: dpc-gov
+      id: 2Evnqcfry8Q
+      overlap:
+      - siria
+      - terremoto
+      - turchia
+      score: 6.6
+      titolo: L'intervento italiano a una settimana dal sisma – Terremoto Turchia e Siria
+      url: https://youtu.be/2Evnqcfry8Q
+  contatti:
+    title: Contatti e sede
+    url: /contatti/
+    video:
+    - anchored:
+      - sede
+      canale: dpc-gov
+      id: 9agnufQ831k
+      overlap:
+      - operativa
+      - sede
+      score: 3.2
+      titolo: La visita di Conte alla sede operativa del Dpc – Benemerenze di protezione civile
+      url: https://youtu.be/9agnufQ831k
+    - anchored:
+      - sede
+      canale: dpc-gov
+      id: BooLyjLFbSM
+      overlap:
+      - operativa
+      - sede
+      score: 3.2
+      titolo: Mattarella visita la sede operativa del Dipartimento – Medaglia d'oro al Valore Civile
+      url: https://youtu.be/BooLyjLFbSM
+  faq:
+    title: Domande frequenti
+    url: /faq/
+    video:
+    - anchored:
+      - domande
+      - risposte
+      canale: io-non-rischio
+      id: Oapnfcdpkz8
+      overlap:
+      - domande
+      - rischio
+      - risposte
+      score: 5.2
+      titolo: Io non rischio Vulcano - Domande e risposte
+      url: https://youtu.be/Oapnfcdpkz8
+  formazione/dirigenti-e-rspp:
+    title: Dirigenti scolastici, DSGA, RSPP e ASPP
+    url: /formazione/dirigenti-e-rspp/
+    video:
+    - anchored:
+      - limiti
+      canale: abili-a-proteggere
+      id: 2oZHTrIAXi0
+      overlap:
+      - disabilità
+      - limiti
+      score: 3.0
+      titolo: 'Presidente Mattarella: "rimuovere ogni barriera che limiti i diritti delle persone con disabilità'
+      url: https://youtu.be/2oZHTrIAXi0
+  formazione/easy-to-read-scuola:
+    title: Easy-to-Read per le scuole
+    url: /formazione/easy-to-read-scuola/
+    video:
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: 2oZHTrIAXi0
+      overlap:
+      - diritti
+      - disabilità
+      - persone
+      score: 3.2
+      titolo: 'Presidente Mattarella: "rimuovere ogni barriera che limiti i diritti delle persone con disabilità'
+      url: https://youtu.be/2oZHTrIAXi0
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      overlap:
+      - disabilità
+      - evacuazione
+      - persona
+      score: 3.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+  formazione/in-famiglia-dopo-la-lezione:
+    title: In famiglia dopo la lezione di protezione civile
+    url: /formazione/in-famiglia-dopo-la-lezione/
+    video:
+    - anchored:
+      - lezione
+      canale: io-non-rischio
+      id: 2g2ABfQVjJA
+      overlap:
+      - lezione
+      - terremoto
+      score: 3.6
+      titolo: La lezione del terremoto in Nepal
+      url: https://youtu.be/2g2ABfQVjJA
+  formazione/kit-calamita:
+    title: Kit Calamità — schede stampabili per emergenza
+    url: /formazione/kit-calamita/
+    video:
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      overlap:
+      - disabilità
+      - evacuazione
+      - persona
+      score: 3.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+  formazione/kit-calamita-disabilita-adulti:
+    title: Kit Calamità per persone con disabilità adulte
+    url: /formazione/kit-calamita-disabilita-adulti/
+    video:
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      overlap:
+      - disabilità
+      - evacuazione
+      - motoria
+      - procedure
+      score: 5.8
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: 2oZHTrIAXi0
+      overlap:
+      - diritti
+      - disabilità
+      - persone
+      score: 4.6
+      titolo: 'Presidente Mattarella: "rimuovere ogni barriera che limiti i diritti delle persone con disabilità'
+      url: https://youtu.be/2oZHTrIAXi0
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: tWBLKYes5B8
+      overlap:
+      - disabilità
+      - fand
+      score: 4.0
+      titolo: '#NienteDiSpeciale: Intervista a Nazaro Pagano presidente Fand - protezione civile e disabilità'
+      url: https://youtu.be/tWBLKYes5B8
+  formazione/kit-fragilita-vulnerabilita:
+    title: Kit per persone fragili e bisogni specifici
+    url: /formazione/kit-fragilita-vulnerabilita/
+    video:
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      overlap:
+      - disabilità
+      - evacuazione
+      - motoria
+      - persona
+      - procedure
+      score: 4.8
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+  formazione/manuale-campo/moduli-radio:
+    title: Capitolo 6 — Moduli e codici radio (allegati operativi)
+    url: /formazione/manuale-campo/moduli-radio/
+    video:
+    - anchored:
+      - messaggio
+      canale: io-non-rischio
+      id: Q3P_vu7---M
+      overlap:
+      - capo
+      - messaggio
+      score: 3.0
+      titolo: Io non rischio 2016 - Video messaggio del Capo Dipartimento per il Tweetstorm
+      url: https://youtu.be/Q3P_vu7---M
+  formazione/manuale-campo/schede-tecniche:
+    title: Capitolo 5 — Schede tecniche (raccolta rapida)
+    url: /formazione/manuale-campo/schede-tecniche/
+    video:
+    - anchored:
+      - accoglienza
+      canale: dpc-gov
+      id: 91W1aNc-P90
+      overlap:
+      - accoglienza
+      - campo
+      - emergenza
+      score: 3.4
+      titolo: Allestimento del campo di accoglienza a Michalovce (Slovacchia) – Emergenza Ucraina
+      url: https://youtu.be/91W1aNc-P90
+  formazione/manuale-campo/scouting:
+    title: Capitolo 2 — Scouting e valutazione iniziale
+    url: /formazione/manuale-campo/scouting/
+    video:
+    - anchored:
+      - azioni
+      canale: abili-a-proteggere
+      id: wJtpPJlLZsE
+      overlap:
+      - azioni
+      - obiettivi
+      score: 3.0
+      titolo: '#NienteDiSpeciale: Intervista a Nazaro Pagano presidente Fand - azioni e obiettivi della Federazione'
+      url: https://youtu.be/wJtpPJlLZsE
+  formazione/percorsi-didattici:
+    title: Percorsi didattici pronti per la scuola
+    url: /formazione/percorsi-didattici/
+    video:
+    - anchored:
+      - percorsi
+      canale: dpc-gov
+      id: b-vqRU46zyY
+      overlap:
+      - percorsi
+      score: 3.0
+      titolo: Percorsi di Protezione Civile
+      url: https://youtu.be/b-vqRU46zyY
+  formazione/psicologia-emergenza:
+    title: Psicologia dell'emergenza
+    url: /formazione/psicologia-emergenza/
+    video:
+    - anchored:
+      - psicologia
+      canale: abili-a-proteggere
+      id: ZcmuzPflPSY
+      overlap:
+      - dell
+      - emergenza
+      - psicologia
+      score: 4.2
+      titolo: '#NienteDiSpeciale: Intervista a Roberto Ferri - Società Italiana Psicologia dell''Emergenza'
+      url: https://youtu.be/ZcmuzPflPSY
+  formazione/radiocomunicazioni-emergenza/attivazione-equipaggiamento:
+    title: Capitolo 5 — Attivazione, equipaggiamento e impianto di stazione
+    url: /formazione/radiocomunicazioni-emergenza/attivazione-equipaggiamento/
+    video:
+    - anchored:
+      - operazioni
+      canale: dpc-gov
+      id: zDmfPr-Vdjs
+      overlap:
+      - medico
+      - operazioni
+      - posto
+      score: 4.0
+      titolo: Le operazioni di carico del Posto Medico Avanzato – Ciclone Mozambico
+      url: https://youtu.be/zDmfPr-Vdjs
+  formazione/radiocomunicazioni-emergenza/gestione-messaggi:
+    title: Capitolo 4 — Gestione dei messaggi e controllo di maglia
+    url: /formazione/radiocomunicazioni-emergenza/gestione-messaggi/
+    video:
+    - anchored:
+      - messaggio
+      canale: io-non-rischio
+      id: Q3P_vu7---M
+      overlap:
+      - capo
+      - messaggio
+      score: 3.0
+      titolo: Io non rischio 2016 - Video messaggio del Capo Dipartimento per il Tweetstorm
+      url: https://youtu.be/Q3P_vu7---M
+  formazione/scuole-checklist-docente:
+    title: Checklist docente per una lezione di protezione civile
+    url: /formazione/scuole-checklist-docente/
+    video:
+    - anchored:
+      - lezione
+      canale: io-non-rischio
+      id: 2g2ABfQVjJA
+      overlap:
+      - lezione
+      score: 3.0
+      titolo: La lezione del terremoto in Nepal
+      url: https://youtu.be/2g2ABfQVjJA
+  formazione/scuole-strumenti:
+    title: Strumenti per le scuole
+    url: /formazione/scuole-strumenti/
+    video:
+    - anchored:
+      - strumenti
+      canale: dpc-gov
+      id: K1A4EjpdzCo
+      overlap:
+      - strumenti
+      score: 3.0
+      titolo: Spot 2009 "Gli strumenti per ripartire"
+      url: https://youtu.be/K1A4EjpdzCo
+  lanterna:
+    title: Modalità Lanterna — strumenti di sopravvivenza
+    url: /lanterna/
+    video:
+    - anchored:
+      - strumenti
+      canale: dpc-gov
+      id: K1A4EjpdzCo
+      overlap:
+      - strumenti
+      score: 3.0
+      titolo: Spot 2009 "Gli strumenti per ripartire"
+      url: https://youtu.be/K1A4EjpdzCo
+  normativa/testo-unico-protezione-civile/capo-1-finalita:
+    title: Capo I — Finalità, attività e composizione del SNPC (articoli 1-13)
+    url: /normativa/testo-unico-protezione-civile/capo-1-finalita/
+    video:
+    - anchored:
+      - capo
+      canale: abili-a-proteggere
+      id: s7NyKK8EXFQ
+      overlap:
+      - capo
+      - prevenzione
+      score: 3.2
+      titolo: La cultura della prevenzione -  Titti Postiglione (Vice Capo del Dipartimento di Protezione Civile)
+      url: https://youtu.be/s7NyKK8EXFQ
+    - anchored:
+      - capo
+      canale: dpc-gov
+      id: BEeFWmfG4dk
+      overlap:
+      - capo
+      - rischio
+      score: 3.2
+      titolo: Il saluto del Capo Dipartimento Borrelli ai volontari formatori di "Io Non Rischio" 2019
+      url: https://youtu.be/BEeFWmfG4dk
+    - anchored:
+      - capo
+      canale: io-non-rischio
+      id: Q3P_vu7---M
+      overlap:
+      - capo
+      - rischio
+      score: 3.2
+      titolo: Io non rischio 2016 - Video messaggio del Capo Dipartimento per il Tweetstorm
+      url: https://youtu.be/Q3P_vu7---M
+  normativa/testo-unico-protezione-civile/capo-2-organizzazione:
+    title: Capo II — Organizzazione del Servizio nazionale (articoli 14-16)
+    url: /normativa/testo-unico-protezione-civile/capo-2-organizzazione/
+    video:
+    - anchored:
+      - capo
+      canale: abili-a-proteggere
+      id: zaM_spcLCV0
+      overlap:
+      - capo
+      - insieme
+      score: 3.6
+      titolo: La visione d'insieme - Fabrizio Curcio (Capo del Dipartimento di Protezione Civile)
+      url: https://youtu.be/zaM_spcLCV0
+    - anchored:
+      - capo
+      canale: abili-a-proteggere
+      id: s7NyKK8EXFQ
+      overlap:
+      - capo
+      - prevenzione
+      score: 3.2
+      titolo: La cultura della prevenzione -  Titti Postiglione (Vice Capo del Dipartimento di Protezione Civile)
+      url: https://youtu.be/s7NyKK8EXFQ
+    - anchored:
+      - capo
+      canale: dpc-gov
+      id: 0JztqATnvGg
+      overlap:
+      - capo
+      - centro
+      score: 3.2
+      titolo: Il Capo Dipartimento incontra i cittadini di Accumoli – Terremoto Centro Italia
+      url: https://youtu.be/0JztqATnvGg
+  normativa/testo-unico-protezione-civile/capo-3-previsione-prevenzione:
+    title: Capo III — Previsione e prevenzione dei rischi (articoli 17-21)
+    url: /normativa/testo-unico-protezione-civile/capo-3-previsione-prevenzione/
+    video:
+    - anchored:
+      - capo
+      canale: abili-a-proteggere
+      id: s7NyKK8EXFQ
+      overlap:
+      - capo
+      - prevenzione
+      score: 3.6
+      titolo: La cultura della prevenzione -  Titti Postiglione (Vice Capo del Dipartimento di Protezione Civile)
+      url: https://youtu.be/s7NyKK8EXFQ
+    - anchored:
+      - capo
+      canale: abili-a-proteggere
+      id: zaM_spcLCV0
+      overlap:
+      - capo
+      - insieme
+      score: 3.6
+      titolo: La visione d'insieme - Fabrizio Curcio (Capo del Dipartimento di Protezione Civile)
+      url: https://youtu.be/zaM_spcLCV0
+    - anchored:
+      - capo
+      canale: dpc-gov
+      id: 0JztqATnvGg
+      overlap:
+      - capo
+      - centro
+      score: 3.2
+      titolo: Il Capo Dipartimento incontra i cittadini di Accumoli – Terremoto Centro Italia
+      url: https://youtu.be/0JztqATnvGg
+  normativa/testo-unico-protezione-civile/capo-4-pianificazione:
+    title: Capo IV — Pianificazione di protezione civile (articoli 22-23)
+    url: /normativa/testo-unico-protezione-civile/capo-4-pianificazione/
+    video:
+    - anchored:
+      - capo
+      canale: abili-a-proteggere
+      id: zaM_spcLCV0
+      overlap:
+      - capo
+      - insieme
+      score: 3.6
+      titolo: La visione d'insieme - Fabrizio Curcio (Capo del Dipartimento di Protezione Civile)
+      url: https://youtu.be/zaM_spcLCV0
+    - anchored:
+      - capo
+      canale: dpc-gov
+      id: 0JztqATnvGg
+      overlap:
+      - capo
+      - centro
+      score: 3.2
+      titolo: Il Capo Dipartimento incontra i cittadini di Accumoli – Terremoto Centro Italia
+      url: https://youtu.be/0JztqATnvGg
+    - anchored:
+      - capo
+      canale: dpc-gov
+      id: BEeFWmfG4dk
+      overlap:
+      - capo
+      - rischio
+      score: 3.2
+      titolo: Il saluto del Capo Dipartimento Borrelli ai volontari formatori di "Io Non Rischio" 2019
+      url: https://youtu.be/BEeFWmfG4dk
+  normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali:
+    title: Capo V — Gestione delle emergenze di rilievo nazionale (articoli 24-30)
+    url: /normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali/
+    video:
+    - anchored:
+      - capo
+      - dichiarazione
+      canale: dpc-gov
+      id: 3JJ0tafRvoA
+      overlap:
+      - capo
+      - dichiarazione
+      score: 5.0
+      titolo: Dichiarazione del Capo Dipartimento Borrelli 17 febbraio 2020 – Coronavirus
+      url: https://youtu.be/3JJ0tafRvoA
+    - anchored:
+      - capo
+      - dichiarazione
+      canale: dpc-gov
+      id: Vr815sdAcyM
+      overlap:
+      - capo
+      - dichiarazione
+      score: 5.0
+      titolo: Dichiarazione del Capo Dipartimento Borrelli 31 gennaio 2020 – Coronavirus
+      url: https://youtu.be/Vr815sdAcyM
+    - anchored:
+      - capo
+      - dichiarazione
+      canale: dpc-gov
+      id: b5uzV-QlezM
+      overlap:
+      - capo
+      - dichiarazione
+      score: 5.0
+      titolo: Dichiarazione del Capo Dipartimento Borrelli 3 febbraio 2020 – Coronavirus
+      url: https://youtu.be/b5uzV-QlezM
+  normativa/testo-unico-protezione-civile/capo-6-volontariato:
+    title: Capo VI — Volontariato di protezione civile (articoli 31-42)
+    url: /normativa/testo-unico-protezione-civile/capo-6-volontariato/
+    video:
+    - anchored:
+      - organizzato
+      canale: dpc-gov
+      id: Kz08BJ1OYb4
+      overlap:
+      - comunali
+      - gruppi
+      - organizzato
+      score: 4.4
+      titolo: 'Webinar 1 giugno 2023 "I gruppi comunali: equilibrio tra volontariato organizzato e amministrazione"'
+      url: https://youtu.be/Kz08BJ1OYb4
+    - anchored:
+      - capo
+      canale: dpc-gov
+      id: 0JztqATnvGg
+      overlap:
+      - capo
+      - cittadini
+      score: 3.2
+      titolo: Il Capo Dipartimento incontra i cittadini di Accumoli – Terremoto Centro Italia
+      url: https://youtu.be/0JztqATnvGg
+    - anchored:
+      - capo
+      canale: abili-a-proteggere
+      id: s7NyKK8EXFQ
+      overlap:
+      - capo
+      score: 3.0
+      titolo: La cultura della prevenzione -  Titti Postiglione (Vice Capo del Dipartimento di Protezione Civile)
+      url: https://youtu.be/s7NyKK8EXFQ
+  normativa/testo-unico-protezione-civile/capo-7-disposizioni-finali:
+    title: Capo VII — Disposizioni transitorie e finali (articoli 43-50)
+    url: /normativa/testo-unico-protezione-civile/capo-7-disposizioni-finali/
+    video:
+    - anchored:
+      - capo
+      canale: dpc-gov
+      id: 0JztqATnvGg
+      overlap:
+      - capo
+      - terremoto
+      score: 3.6
+      titolo: Il Capo Dipartimento incontra i cittadini di Accumoli – Terremoto Centro Italia
+      url: https://youtu.be/0JztqATnvGg
+    - anchored:
+      - capo
+      canale: abili-a-proteggere
+      id: s7NyKK8EXFQ
+      overlap:
+      - capo
+      score: 3.0
+      titolo: La cultura della prevenzione -  Titti Postiglione (Vice Capo del Dipartimento di Protezione Civile)
+      url: https://youtu.be/s7NyKK8EXFQ
+    - anchored:
+      - capo
+      canale: abili-a-proteggere
+      id: zaM_spcLCV0
+      overlap:
+      - capo
+      score: 3.0
+      titolo: La visione d'insieme - Fabrizio Curcio (Capo del Dipartimento di Protezione Civile)
+      url: https://youtu.be/zaM_spcLCV0
+  piano-familiare:
+    title: Piano di emergenza familiare
+    url: /piano-familiare/
+    video:
+    - anchored:
+      - stampa
+      canale: abili-a-proteggere
+      id: wQi_xPD4IvA
+      overlap:
+      - disabilità
+      - stampa
+      score: 3.0
+      titolo: Conferenza stampa Protezione Civile 14 aprile 2020 ore 18.00 – Coronavirus e disabilità
+      url: https://youtu.be/wQi_xPD4IvA
+  quiz-preparazione:
+    title: Quanto sei preparato a un'emergenza?
+    url: /quiz-preparazione/
+    video:
+    - anchored:
+      - preparato
+      canale: abili-a-proteggere
+      id: cLfE9CQ33vc
+      overlap:
+      - preparato
+      score: 3.0
+      titolo: Sei preparato in caso di venti forti o burrasca?
+      url: https://youtu.be/cLfE9CQ33vc
+    - anchored:
+      - preparato
+      canale: dpc-gov
+      id: qfyfnlKbs_I
+      overlap:
+      - preparato
+      score: 3.0
+      titolo: Il bradisismo ai Campi Flegrei. Sei preparato? – Bradisismo Campi Flegrei 2024
+      url: https://youtu.be/qfyfnlKbs_I
+  rischi-prevenzione/blackout:
+    title: Blackout e Interruzione Servizi
+    url: /rischi-prevenzione/blackout/
+    video:
+    - anchored:
+      - telecomunicazioni
+      canale: dpc-gov
+      id: vyTJcOxzntg
+      overlap:
+      - emergenza
+      - radio
+      - rete
+      - telecomunicazioni
+      score: 3.4
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
+  rischi-prevenzione/ondate-di-calore:
+    title: Ondate di Calore
+    url: /rischi-prevenzione/ondate-di-calore/
+    video:
+    - anchored:
+      - consigli
+      - ondate
+      - proteggersi
+      canale: abili-a-proteggere
+      id: lQXiNcvR7jQ
+      overlap:
+      - calore
+      - consigli
+      - ondate
+      - proteggersi
+      score: 8.8
+      titolo: 'Ondate di calore: 10 consigli per proteggersi'
+      url: https://youtu.be/lQXiNcvR7jQ
+    - anchored:
+      - ondate
+      canale: dpc-gov
+      id: GPEu7LV0CZM
+      overlap:
+      - calore
+      - ondate
+      - rischio
+      score: 5.0
+      titolo: Spot 2006 sul rischio ondate di calore
+      url: https://youtu.be/GPEu7LV0CZM
+  rischi-prevenzione/persone-necessita-specifiche:
+    title: Persone con Necessità Specifiche
+    url: /rischi-prevenzione/persone-necessita-specifiche/
+    video:
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      overlap:
+      - disabilità
+      - evacuazione
+      - motoria
+      - persona
+      score: 4.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+  rischi-prevenzione/rischio-incendio:
+    title: Rischio Incendi Boschivi
+    url: /rischi-prevenzione/rischio-incendio/
+    video:
+    - anchored:
+      - boschivi
+      canale: dpc-gov
+      id: 4UBxxIfaGL4
+      overlap:
+      - boschivi
+      - incendi
+      - rischio
+      score: 4.2
+      titolo: Spot 2006 sul rischio incendi boschivi
+      url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivi
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      overlap:
+      - boschivi
+      - incendi
+      - rischio
+      score: 4.2
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
+    - anchored:
+      - boschivi
+      canale: dpc-gov
+      id: FPLoljB20QA
+      overlap:
+      - boschivi
+      - incendi
+      score: 3.6
+      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
+      url: https://youtu.be/FPLoljB20QA
+  rischi-prevenzione/rischio-sismico:
+    title: 'Rischio Sismico: Cosa Fare'
+    url: /rischi-prevenzione/rischio-sismico/
+    video:
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      overlap:
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  rischi-prevenzione/rischio-vulcanico:
+    title: 'Rischio Vulcanico (Colli Albani): Cosa Fare'
+    url: /rischi-prevenzione/rischio-vulcanico/
+    video:
+    - anchored:
+      - vulcanico
+      - vulcano
+      canale: dpc-gov
+      id: _AYUUv69F3U
+      overlap:
+      - rischio
+      - vulcanico
+      - vulcano
+      score: 5.6
+      titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
+      url: https://youtu.be/_AYUUv69F3U
+    - anchored:
+      - vulcanico
+      canale: dpc-gov
+      id: ShU_V_7SUQA
+      overlap:
+      - rischio
+      - vulcanico
+      score: 3.6
+      titolo: Il rischio vulcanico nei Campi Flegrei e la risposta di protezione civile – EXE Flegrei 2019
+      url: https://youtu.be/ShU_V_7SUQA
+  standard-iso:
+    title: Standard ISO per la Protezione Civile
+    url: /standard-iso/
+    video:
+    - anchored:
+      - management
+      canale: dpc-gov
+      id: 9oEusKsoWqM
+      overlap:
+      - international
+      - management
+      score: 3.0
+      titolo: 'NEIFLEX 2018: international exercise on flood risk management'
+      url: https://youtu.be/9oEusKsoWqM
+  standard-iso/iso-22300:
+    title: ISO 22300 — Vocabolario di sicurezza e resilienza
+    url: /standard-iso/iso-22300/
+    video:
+    - anchored:
+      - dagli
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      overlap:
+      - dagli
+      - esercitazione
+      score: 3.0
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+  standard-iso/iso-22325:
+    title: ISO 22325 — Auto-valutazione delle capacità di emergency management
+    url: /standard-iso/iso-22325/
+    video:
+    - anchored:
+      - management
+      canale: dpc-gov
+      id: 9oEusKsoWqM
+      overlap:
+      - management
+      score: 3.0
+      titolo: 'NEIFLEX 2018: international exercise on flood risk management'
+      url: https://youtu.be/9oEusKsoWqM
+  standard-iso/iso-22326:
+    title: ISO 22326 — Sorveglianza di siti a pericolosità nota
+    url: /standard-iso/iso-22326/
+    video:
+    - anchored:
+      - sorveglianza
+      canale: dpc-gov
+      id: TyFthQEznc8
+      overlap:
+      - sorveglianza
+      score: 3.0
+      titolo: Il time-lapse della rotazione (telecamera di sorveglianza) – Naufragio Concordia
+      url: https://youtu.be/TyFthQEznc8
+  standard-iso/iso-22329:
+    title: ISO 22329 — Uso dei social media in emergenza
+    url: /standard-iso/iso-22329/
+    video:
+    - anchored:
+      - social
+      canale: abili-a-proteggere
+      id: YPvLBGOvRog
+      overlap:
+      - social
+      score: 3.0
+      titolo: Fabrizio Curcio introduce i lavori del convegno “Dal megafono ai social network”
+      url: https://youtu.be/YPvLBGOvRog
+    - anchored:
+      - social
+      canale: io-non-rischio
+      id: yqZURftuqOY
+      overlap:
+      - social
+      score: 3.0
+      titolo: Io non rischio 2020 - Lo spot social
+      url: https://youtu.be/yqZURftuqOY
+  standard-iso/iso-22395:
+    title: ISO 22395 — Supporto inclusivo a gruppi vulnerabili
+    url: /standard-iso/iso-22395/
+    video:
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: 2oZHTrIAXi0
+      overlap:
+      - diritti
+      - disabilità
+      - persone
+      score: 3.4
+      titolo: 'Presidente Mattarella: "rimuovere ogni barriera che limiti i diritti delle persone con disabilità'
+      url: https://youtu.be/2oZHTrIAXi0
+  standard-iso/iso-31073:
+    title: ISO 31073 — Vocabolario di gestione del rischio
+    url: /standard-iso/iso-31073/
+    video:
+    - anchored:
+      - management
+      - risk
+      canale: dpc-gov
+      id: 9oEusKsoWqM
+      overlap:
+      - management
+      - risk
+      score: 4.0
+      titolo: 'NEIFLEX 2018: international exercise on flood risk management'
+      url: https://youtu.be/9oEusKsoWqM
+  standard-iso/iso-9186-1:
+    title: ISO 9186-1 — Test di comprensione dei pittogrammi
+    url: /standard-iso/iso-9186-1/
+    video:
+    - anchored:
+      - test
+      canale: dpc-gov
+      id: RlwTnpacmJI
+      overlap:
+      - comunicazione
+      - test
+      score: 3.2
+      titolo: Test comunicazione radio con veliero Amerigo Vespucci
+      url: https://youtu.be/RlwTnpacmJI
+  storia:
+    title: La storia del rischio nei Castelli Romani
+    url: /storia/
+    video:
+    - anchored:
+      - vulcanica
+      canale: io-non-rischio
+      id: esAjpZQ2C9E
+      overlap:
+      - conoscere
+      - vulcanica
+      score: 3.2
+      titolo: Conoscere la caldera - Cosa fare in caso di terremoto, gas vulcanici ed eruzione vulcanica
+      url: https://youtu.be/esAjpZQ2C9E
+    - anchored:
+      - storia
+      canale: io-non-rischio
+      id: Pz5Dky_rvFI
+      overlap:
+      - storia
+      score: 3.0
+      titolo: 'Vent''anni anni dallo tsunami di Stromboli: storia o attualità?'
+      url: https://youtu.be/Pz5Dky_rvFI
+  strumenti:
+    title: Strumenti di consultazione in tempo reale
+    url: /strumenti/
+    video:
+    - anchored:
+      - strumenti
+      canale: dpc-gov
+      id: K1A4EjpdzCo
+      overlap:
+      - strumenti
+      score: 3.0
+      titolo: Spot 2009 "Gli strumenti per ripartire"
+      url: https://youtu.be/K1A4EjpdzCo

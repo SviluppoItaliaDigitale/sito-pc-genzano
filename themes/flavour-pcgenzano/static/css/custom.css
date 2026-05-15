@@ -5382,6 +5382,134 @@ html.a11y-pause-anim .pcg-timeline-voce {
  */
 
 /* ==========================================================================
+ * VIDEO CORRELATI v1.0 — selezione video DPC/AaP pertinenti per ogni pagina.
+ * Partial: partials/video-correlati.html — Data: data/video_correlati.yaml
+ * Privacy-first: solo link YouTube esterni, niente embed iframe.
+ * ==========================================================================
+ */
+
+.video-correlati {
+  margin: 2rem 0 1.5rem;
+  padding: 1.1rem 1.2rem;
+  background: #f5f7fa;
+  border: 1px solid #d0d7e2;
+  border-radius: 10px;
+  border-left: 4px solid #c026d3;   /* viola → "approfondimento multimediale" */
+}
+
+.video-correlati h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem;
+  color: #003366;
+  border-left: none;          /* override .article-body h2 */
+  padding-left: 0;
+}
+
+.video-correlati-intro {
+  margin: 0 0 0.85rem;
+  color: #333333;
+  font-size: 0.95rem;
+}
+
+.video-correlati-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.video-correlati-item {
+  background: #ffffff;
+  border: 1px solid #d0d7e2;
+  border-radius: 8px;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.video-correlati-item:hover,
+.video-correlati-item:focus-within {
+  border-color: #003366;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.08);
+}
+
+.video-correlati-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.video-correlati-link:hover,
+.video-correlati-link:focus-visible {
+  text-decoration: none;
+  background: #f0f7ff;
+}
+
+.video-correlati-link:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: -2px;
+  border-radius: 7px;
+}
+
+.video-correlati-icona {
+  font-size: 1.8rem;
+  color: #c026d3;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.video-correlati-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.video-correlati-titolo {
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.video-correlati-canale {
+  font-size: 0.85rem;
+  color: #5b6770;
+  font-style: italic;
+}
+
+.video-correlati-arrow {
+  color: #003366;
+  font-weight: 700;
+  margin-left: 0.3rem;
+}
+
+.video-correlati-disclaimer {
+  font-size: 0.85rem;
+  color: #5b6770;
+  margin: 0.9rem 0 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 575.98px) {
+  .video-correlati-link { gap: 0.6rem; }
+  .video-correlati-icona { font-size: 1.5rem; }
+  .video-correlati-titolo { font-size: 0.95rem; }
+  .video-correlati-canale { font-size: 0.82rem; }
+}
+
+@media print {
+  .video-correlati { display: none; }
+}
+/* ==========================================================================
+ * fine VIDEO CORRELATI v1.0
+ * ==========================================================================
+ */
+
+/* ==========================================================================
  * NOTIFICHE ALLERTA v1.0 — opt-in notifiche browser (idea #2)
  * JS: static/js/notifiche-allerta.js — toggle su /allerte-meteo/.
  * ==========================================================================
