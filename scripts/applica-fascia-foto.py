@@ -62,9 +62,21 @@ def apply_band(src_path: Path, out_name: str) -> Path:
 
     # 1) Carica e ridimensiona la foto a larghezza WIDTH (mantenendo aspect)
     src = Image.open(src_path)
+
+    # 1a) STRIP EXIF — privacy: rimuove coordinate GPS, timestamp,
+    # modello camera, autore, software, e altri metadati identificativi
+    # che le foto WhatsApp/smartphone portano con sé. Le foto utente
+    # pubblicate sul sito istituzionale non devono mai esporre la
+    # posizione geografica della persona che ha scattato.
+    # Tecnica: ricreare l'immagine da zero copia solo i pixel, scarta
+    # tutti i campi EXIF/IPTC/XMP del file sorgente.
     if src.mode in ("RGBA", "LA", "P"):
-        # Per la composizione finale usiamo RGB
         src = src.convert("RGB")
+    src_pixels = list(src.getdata())
+    src_clean = Image.new(src.mode, src.size)
+    src_clean.putdata(src_pixels)
+    src = src_clean
+
     aspect = src.height / src.width
     new_h = int(WIDTH * aspect)
     src = src.resize((WIDTH, new_h), Image.LANCZOS)
