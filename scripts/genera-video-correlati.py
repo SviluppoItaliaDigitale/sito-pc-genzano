@@ -74,9 +74,17 @@ SKIP_PAGE_PATTERNS = [
 
 
 def tokenize(text: str) -> set[str]:
-    text = text.lower()
-    text = re.sub(r"[^a-zàèéìòùù\s]", " ", text)
-    return {t for t in text.split() if len(t) >= 4 and t not in STOPWORDS_IT}
+    """Estrae keywords da text. Include:
+       - parole lunghe ≥4 caratteri (es. "terremoto", "alluvione")
+       - sigle maiuscole 3+ caratteri (es. "COC", "DPC", "ASL", "INGV")
+       Esclude stop-words italiane."""
+    # 1) Sigle maiuscole (preservate dal testo originale)
+    sigle = {s.lower() for s in re.findall(r"\b[A-Z]{3,}\b", text)}
+    # 2) Parole lowercase ≥4 char
+    t = text.lower()
+    t = re.sub(r"[^a-zàèéìòùù\s]", " ", t)
+    parole = {w for w in t.split() if len(w) >= 4 and w not in STOPWORDS_IT}
+    return parole | sigle
 
 
 def extract_page_data(path: Path) -> dict:
@@ -162,7 +170,11 @@ def main() -> int:
     videos = catalogo["video"]
     print(f"Catalogo: {len(videos)} video totali", file=sys.stderr)
 
-    # Carica registry LIS per escludere video già presenti
+    # Carica registry LIS per marcare i video LIS nel risultato (NON per
+    # escluderli: un video LIS pertinente al contesto specifico di un
+    # articolo è prezioso anche se il badge LIS è già presente sulla
+    # pagina madre del rischio. Cf. caso articolo "Centro Operativo
+    # Comunale COC" — il video LIS specifico sul COC va integrato).
     with open(repo_root / "data" / "lis.yaml") as f:
         lis_data = yaml.safe_load(f)
     lis_video_ids = set()
@@ -171,7 +183,7 @@ def main() -> int:
         m = re.search(r"youtu\.be/([A-Za-z0-9_-]{11})", url)
         if m:
             lis_video_ids.add(m.group(1))
-    print(f"Video già in LIS (esclusi): {len(lis_video_ids)}", file=sys.stderr)
+    print(f"Video LIS marcati: {len(lis_video_ids)} (inclusi nel cross-match)", file=sys.stderr)
 
     # Scansiona contenuti sito
     pages = []
@@ -199,13 +211,15 @@ def main() -> int:
     # Costruisci IDF dei video (frequenza delle keyword nei titoli video)
     video_keywords = {}
     for key, v in videos.items():
-        if v["id"] in lis_video_ids:
-            continue
         kw = tokenize(v["titolo"])
         if not kw:
             continue
-        video_keywords[key] = {"v": v, "kw": kw}
-    print(f"Video candidati (no LIS): {len(video_keywords)}", file=sys.stderr)
+        video_keywords[key] = {
+            "v": v,
+            "kw": kw,
+            "is_lis": v["id"] in lis_video_ids,
+        }
+    print(f"Video candidati: {len(video_keywords)}", file=sys.stderr)
 
     # IDF su pagine sito: parole molto frequenti = peso 0.2
     df = defaultdict(int)
@@ -236,9 +250,12 @@ def main() -> int:
             if not overlap:
                 continue
             # Vincolo qualità: almeno una keyword "ancorata" al titolo/desc
-            # con peso IDF >= 0.7 (parole specifiche, non generiche)
+            # della pagina. Accetto anche peso IDF moderato (>= 0.5) per
+            # consentire match su frasi tecniche con parole comuni nel sito
+            # (es. "Centro Operativo Comunale" dove tutte le parole sono
+            # frequenti ma il match è genuino sulla terminologia tecnica).
             anchored = [k for k in overlap
-                        if k in title_desc_kw and weights.get(k, 1.0) >= 0.7]
+                        if k in title_desc_kw and weights.get(k, 1.0) >= 0.5]
             if not anchored:
                 continue
             # Score posizionale: title × 3, desc × 2, body × 1
@@ -261,6 +278,7 @@ def main() -> int:
                 "score": round(score, 2),
                 "overlap": sorted(overlap),
                 "anchored": sorted(anchored),
+                "is_lis": vdata["is_lis"],
             })
         candidates.sort(key=lambda x: -x["score"])
         top = candidates[: args.max_per_page]

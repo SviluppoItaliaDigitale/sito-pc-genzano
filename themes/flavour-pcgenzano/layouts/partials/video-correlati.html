@@ -47,7 +47,10 @@
           <i class="bi bi-play-circle-fill"></i>
         </span>
         <span class="video-correlati-meta">
-          <span class="video-correlati-titolo">{{ .titolo }}</span>
+          <span class="video-correlati-titolo">
+            {{ .titolo }}
+            {{- if .is_lis }} <span class="video-correlati-lis-badge" aria-label="Disponibile anche in Lingua Italiana dei Segni">in LIS</span>{{ end }}
+          </span>
           <span class="video-correlati-canale">
             {{- with $canale }}{{ .nome }}{{ else }}{{ $.canale }}{{ end }}
             <span class="video-correlati-arrow" aria-hidden="true">↗</span>
