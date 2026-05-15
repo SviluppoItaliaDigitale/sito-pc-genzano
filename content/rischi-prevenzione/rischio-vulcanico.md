@@ -2,6 +2,7 @@
 title: "Rischio Vulcanico (Colli Albani): Cosa Fare"
 description: "Il Vulcano Laziale dei Colli Albani è quiescente, non spento: cosa significa, quali sono i fenomeni associati (sismicità di bassa magnitudo, emissioni di gas), come comportarsi."
 tts: true
+lis_section: "rischio-vulcanico"
 weight: 9
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.

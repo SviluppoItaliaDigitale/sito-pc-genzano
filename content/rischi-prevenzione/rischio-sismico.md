@@ -3,6 +3,7 @@
 title: "Rischio Sismico: Cosa Fare"
 description: "Cosa fare prima, durante e dopo una scossa di terremoto per la sicurezza della tua famiglia."
 tts: true
+lis_section: "rischio-sismico"
 weight: 1
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.

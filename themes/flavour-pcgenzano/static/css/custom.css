@@ -5263,12 +5263,121 @@ html.a11y-pause-anim .pcg-timeline-voce {
 .lis-elenco-desc { margin: 0 0 0.2rem; color: #333333; }
 .lis-elenco-meta { font-size: 0.85rem; color: #5b6770; margin: 0; }
 
+/* ── v2.0 (maggio 2026) — pagina /lis/ con 58 video raggruppati per
+   famiglia tematica, fonti DPC "Io non rischio" + Cooperativa Sociale
+   Europe Consulting "Abili a Proteggere". Privacy-first: niente embed
+   YouTube, solo link esterni in nuova scheda. */
+
+.lis-toc { margin: 1rem 0 1.5rem; }
+.lis-toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+}
+.lis-toc-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d0d7e2;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #003366;
+  background: #ffffff;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.lis-toc-link:hover,
+.lis-toc-link:focus-visible {
+  background: #f0f7ff;
+  border-color: #003366;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.lis-toc-link:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.lis-toc-titolo { font-weight: 700; font-size: 0.95rem; }
+.lis-toc-count { font-size: 0.85rem; color: #5b6770; }
+
+.lis-fonti { margin: 1.5rem 0 2rem; padding: 1.1rem 1.2rem; background: #f5f7fa; border: 1px solid #d0d7e2; border-radius: 10px; }
+.lis-fonti h2 { font-size: 1.15rem; margin: 0 0 0.4rem; color: #003366; }
+.lis-fonti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+.lis-fonte-card {
+  background: #ffffff;
+  border: 1px solid #d0d7e2;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+.lis-fonte-card h3 { font-size: 1rem; margin: 0 0 0.35rem; color: #003366; }
+.lis-fonte-card p { margin: 0 0 0.5rem; font-size: 0.92rem; color: #333333; line-height: 1.5; }
+.lis-fonte-link { font-size: 0.88rem; }
+.lis-fonte-link a { font-weight: 600; }
+
+.lis-sezione { margin: 1.5rem 0 2rem; scroll-margin-top: 90px; }
+.lis-sezione > h2 {
+  font-size: 1.3rem;
+  color: #003366;
+  border-left: 4px solid #003366;
+  padding-left: 0.7rem;
+  margin: 0 0 0.4rem;
+}
+.lis-sezione-desc { margin: 0 0 1rem; color: #333333; }
+
+.lis-video-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; }
+.lis-video-item {
+  border: 1px solid #d0d7e2;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.lis-video-item:hover,
+.lis-video-item:focus-within {
+  border-color: #003366;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.08);
+}
+.lis-video-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #1a1a1a;
+  flex-wrap: wrap;
+}
+.lis-video-link:hover,
+.lis-video-link:focus-visible {
+  text-decoration: none;
+  background: #f0f7ff;
+}
+.lis-video-link:focus-visible { outline: 3px solid #ffbe2e; outline-offset: -2px; border-radius: 7px; }
+.lis-video-titolo { font-weight: 600; flex: 1 1 60%; min-width: 0; }
+.lis-video-meta { font-size: 0.85rem; color: #5b6770; display: inline-flex; align-items: center; gap: 0.4rem; flex-shrink: 0; }
+.lis-video-durata { white-space: nowrap; }
+.lis-video-fonte { font-style: italic; }
+.lis-video-arrow { color: #003366; font-weight: 700; }
+.lis-video-note { font-size: 0.85rem; color: #5b6770; padding: 0 1rem 0.6rem; margin: 0; line-height: 1.45; }
+
+@media (max-width: 575.98px) {
+  .lis-video-link { flex-direction: column; align-items: flex-start; }
+  .lis-video-meta { font-size: 0.82rem; }
+}
+
 @media print {
   .lis-badge-wrap { display: none; }
   .lis-dialog { display: none !important; }
+  .lis-toc, .lis-fonti { display: none; }
+  .lis-video-item { break-inside: avoid; border-color: #000; }
+  .lis-video-link { color: #000; }
+  .lis-video-arrow { display: none; }
 }
 /* ==========================================================================
- * fine LIS v1.0
+ * fine LIS v2.0
  * ==========================================================================
  */
 

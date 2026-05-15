@@ -3,6 +3,7 @@
 title: "Rischio Idrogeologico"
 description: "Le norme di comportamento da adottare in caso di alluvioni, frane e temporali intensi sul territorio di Genzano di Roma."
 tts: true
+lis_section: "rischio-idrogeologico"
 weight: 2
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
