@@ -10,40 +10,9 @@ sitemap:
   changefreq: monthly
 ---
 
-In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sai già cosa cerchi, salta ai 3 accessi rapidi qui sotto.
+In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sai già cosa cerchi, salta ai 4 accessi rapidi qui sotto.
 
-## Accessi rapidi
-
-<div class="row row-cols-1 row-cols-md-3 g-3 my-4" role="navigation" aria-label="Accessi rapidi alle pagine principali">
-
-<div class="col">
-  <a href="/emergenza/" class="card h-100 text-decoration-none text-reset border-danger border-2" aria-label="Sono in emergenza ora">
-    <div class="card-body">
-      <h3 class="h6 text-danger mb-2"><i class="bi bi-exclamation-octagon-fill me-2" aria-hidden="true"></i>Sono in emergenza ora</h3>
-      <p class="small mb-0">Pagina ultra-leggera: 112, stato allerta, cosa fare adesso, numeri essenziali, aree di attesa.</p>
-    </div>
-  </a>
-</div>
-
-<div class="col">
-  <a href="/piano-familiare/" class="card h-100 text-decoration-none text-reset border-primary border-2" aria-label="Voglio prepararmi">
-    <div class="card-body">
-      <h3 class="h6 text-primary mb-2"><i class="bi bi-shield-check me-2" aria-hidden="true"></i>Voglio prepararmi</h3>
-      <p class="small mb-0">Piano familiare interattivo, kit emergenza, rischi del territorio, aree di attesa, allerte meteo.</p>
-    </div>
-  </a>
-</div>
-
-<div class="col">
-  <a href="/scuole/" class="card h-100 text-decoration-none text-reset border-success border-2" aria-label="Sono docente, dirigente, genitore o studente">
-    <div class="card-body">
-      <h3 class="h6 text-success mb-2"><i class="bi bi-mortarboard-fill me-2" aria-hidden="true"></i>Sono docente o scuola</h3>
-      <p class="small mb-0">Kit didattici per ogni fascia, schede stampabili, storie, giochi, normativa scolastica.</p>
-    </div>
-  </a>
-</div>
-
-</div>
+{{< profili-rapidi >}}
 
 <div class="alert alert-info" role="note">
 <p class="mb-0"><i class="bi bi-search me-2" aria-hidden="true"></i><strong>Cerchi qualcosa di specifico?</strong> Usa il <a href="/cerca/">motore di ricerca interno</a> oppure premi <kbd>Ctrl+F</kbd> (Windows/Linux) o <kbd>Cmd+F</kbd> (Mac) sulla tastiera.</p>
