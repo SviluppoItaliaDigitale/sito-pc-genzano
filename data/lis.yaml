@@ -87,6 +87,12 @@ fonte:
     canale_url: "https://www.youtube.com/@abiliaproteggere4520"
     licenza: "Video pubblici sul canale YouTube del progetto Abili a Proteggere."
 
+  dpc-gov:
+    nome: "Dipartimento della Protezione Civile (PCM)"
+    descrizione: "Canale ufficiale del Dipartimento della Protezione Civile della Presidenza del Consiglio dei Ministri. Pubblica conferenze stampa, eventi istituzionali, materiali su esercitazioni nazionali e supporto a emergenze in atto. Non ha playlist LIS dedicata, ma occasionalmente i video istituzionali hanno interprete LIS. Monitorato settimanalmente dal workflow `check-video-lis.yml`."
+    canale_url: "https://www.youtube.com/@DPCgov"
+    licenza: "Video del Dipartimento di Protezione Civile — riuso secondo i termini istituzionali."
+
 # Elenco dei video (58 voci).
 video:
 
