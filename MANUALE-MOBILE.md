@@ -93,9 +93,13 @@ Google AI Studio (gratis: <https://aistudio.google.com/apikey>).
 
 ## 1.bis Agenti specializzati (frasi naturali)
 
-Da maggio 2026 il repo ha **5 agenti specializzati** in `.claude/agents/`
-con expertise mirate (caporedattore, art director, project manager, release
-engineer, comunicazione di crisi). Non devi ricordare nessun nome tecnico:
+Da maggio 2026 il repo ha **13 agenti specializzati** in `.claude/agents/`
+con expertise mirate (caporedattore AGID, art director foto, project manager
+issue, release engineer pre-push, risk communication social, QA schede
+stampabili, audit di sistema, gate visivo caption foto, accessibility
+auditor WCAG IAAP CPACC, content strategist editoriale freschezza articoli,
+glottologa italiano L2 A2 CEFR, SEO internal linker, SEO technical Google,
+avvocato amministrativista vigenza norme). Non devi ricordare nessun nome tecnico:
 **scrivi in italiano cosa vuoi e Claude attiva l'agent giusto da solo**.
 
 Esempi di frasi che attivano gli agent:
