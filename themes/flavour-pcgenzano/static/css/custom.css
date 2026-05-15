@@ -4228,13 +4228,14 @@ html.a11y-pause-animations body.home-page .reveal-on-scroll {
   padding: 0.55rem 1rem;
   background: #003366;  /* blu istituzionale --pc-blue */
   color: #fff;
+  border: 2px solid #ff6600;  /* accent arancione: risalto cromatico */
   border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.35), 0 0 0 2px rgba(255,255,255,0.1) inset;
+  box-shadow: 0 4px 14px rgba(255, 102, 0, 0.45), 0 0 0 2px rgba(255,255,255,0.1) inset;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 600;
   font-family: inherit;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
   white-space: nowrap;
 }
 .assistente-fab i {
@@ -4250,7 +4251,8 @@ html.a11y-pause-animations body.home-page .reveal-on-scroll {
   color: #fff;
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.5), 0 0 0 2px rgba(255,255,255,0.1) inset;
+  border-color: #ffbe2e;  /* hover: bordo giallo per ulteriore accent */
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6), 0 0 0 2px rgba(255,255,255,0.1) inset;
 }
 .assistente-fab:focus-visible {
   outline: 3px solid #ffbe2e;
@@ -5483,13 +5485,17 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
   .profili-rapidi-card:hover,
   .profili-rapidi-card:focus-within { transform: none; }
 }
-/* 4° card "caregiver": viola istituzionale (mancante in Bootstrap Italia) */
-.profili-rapidi-card-caregiver {
-  border: 2px solid #7c3aed;
-}
-.profili-rapidi-card-caregiver h3 {
-  color: #6d28d9;
-}
+/* Bordi e colori h3 uniformi sulle 4 card (utility BS Italia border-*
+   non rendono affidabilmente lo style sulle .card del tema: definiamo
+   border esplicito per ciascun modifier per garantire uniformità). */
+.profili-rapidi-card-emergenza { border: 2px solid #dc3545; }
+.profili-rapidi-card-emergenza h3 { color: #b21f2d; }
+.profili-rapidi-card-prepararsi { border: 2px solid #0066cc; }
+.profili-rapidi-card-prepararsi h3 { color: #003366; }
+.profili-rapidi-card-scuola { border: 2px solid #198754; }
+.profili-rapidi-card-scuola h3 { color: #146c43; }
+.profili-rapidi-card-caregiver { border: 2px solid #7c3aed; }
+.profili-rapidi-card-caregiver h3 { color: #6d28d9; }
 /* Stampa: nasconde il blocco (non utile su carta) */
 @media print {
   .profili-rapidi-section { display: none !important; }
