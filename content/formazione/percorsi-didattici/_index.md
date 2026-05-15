@@ -427,6 +427,15 @@ Scrivere a **[segreteria@protezionecivilegenzano.it](mailto:segreteria@protezion
 
 </details>
 
+## Vedi anche
+
+- [Schede didattiche dei giochi](/formazione/schede-didattiche-giochi/) — catalogo dei 33 giochi con obiettivi, durata, competenze e accessibilità (per scegliere un gioco singolo)
+- [Per le scuole](/scuole/) — landing per docenti, dirigenti, genitori, studenti
+- [Educazione Civica](/formazione/educazione-civica/) — collegamenti normativi e calendario 33 ore
+- [Formazione](/formazione/) — hub completo dei materiali
+- [Schede stampabili A4](/formazione/schede-stampabili/) — materiali fotocopiabili per la classe
+- [Storie e racconti](/formazione/storie-e-racconti/) — fiabe per fascia d'età
+
 ---
 
 **Ultimo aggiornamento**: 1 maggio 2026.
