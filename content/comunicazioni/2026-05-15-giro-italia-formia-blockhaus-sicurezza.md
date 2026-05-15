@@ -28,8 +28,8 @@ Il **sistema di Protezione Civile del Lazio** ha coordinato la giornata su tre l
 Al loro fianco hanno operato le **Forze dell'Ordine** e la **Polizia Locale** per la sicurezza pubblica.
 
 {{< foto src="/images/2026-05-15-formia-giro-briefing-fepivol.webp"
-         alt="Briefing operativo sotto un gazebo bianco con bandella 'Coordinamento Volontari Protezione Civile FE.PI.VOL.': un coordinatore in giubbino della Protezione Civile E.R. Formia (LT) è di spalle al centro, davanti a un tavolino con laptop aperto e fogli. In semicerchio numerosi volontari in divisa di varie associazioni (giubbini alta visibilità giallo/nero, divise rosse, stemmi 'Italia')."
-         caption="Il briefing operativo sotto il gazebo del Coordinamento FE.PI.VOL.: il coordinatore di Protezione Civile E.R. Formia illustra le assegnazioni alle associazioni del Coordinamento prima dell'apertura del dispositivo. Foto: Coordinamento FE.PI.VOL." >}}
+         alt="Briefing operativo sotto un gazebo bianco con bandella 'Coordinamento Volontari Protezione Civile FE.PI.VOL.': un coordinatore in giubbino della Protezione Civile V.E.R. Formia (LT) è di spalle al centro, davanti a un tavolino con laptop aperto e fogli. In semicerchio numerosi volontari in divisa di varie associazioni (giubbini alta visibilità giallo/nero, divise rosse, stemmi 'Italia')."
+         caption="Il briefing operativo sotto il gazebo del Coordinamento FE.PI.VOL.: il coordinatore della Protezione Civile V.E.R. Formia (associazione del Coordinamento) illustra le assegnazioni alle altre associazioni prima dell'apertura del dispositivo. Foto: Coordinamento FE.PI.VOL." >}}
 
 ## Il nostro contributo
 
@@ -64,6 +64,9 @@ Una giornata di sport e di lavoro collettivo — silenzioso, coordinato, profess
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo Comunale di Genzano di Roma.
 - [Chi siamo](/chi-siamo/) — la nostra adesione al 14° C.O.I. e al Coordinamento FEPIVOL.
 - [Piano di Emergenza Comunale](/piano-emergenza/) — come si organizza un Centro Operativo Comunale.
+- [Maxi emergenze e colonne mobili FEPIVOL Lazio](/comunicazioni/2026-04-12-maxi-emergenze-colonne-mobili-coordinamenti-fepivol-lazio/) — come si organizza un'attivazione regionale fuori dal territorio comunale.
+- [La catena delle comunicazioni: DPC, COR, COM, COI, COC](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/) — i livelli di coordinamento citati in questo articolo.
+- [ISO 22320 — Gestione operativa dell'incidente](/standard-iso/iso-22320/) — lo standard internazionale che inquadra il coordinamento multi-livello in eventi pianificati e in emergenza.
 - [Glossario di Protezione Civile](/glossario/) — sigle e termini tecnici (SOUP, COC, COI, FEPIVOL).
 
 ## Fonti istituzionali

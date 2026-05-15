@@ -135,6 +135,27 @@ Mai attribuire foto fornite dall'utente a soggetti terzi (Coordinamento FEPIVOL,
 
 **Causa root incidente 15 maggio 2026:** ho attribuito *"Foto: Coordinamento FEPIVOL"* a foto che l'utente aveva fornito dicendo testualmente *"ti allego le nostre foto"*. Le foto erano dei NOSTRI volontari e dovevano essere attribuite al Gruppo Comunale.
 
+### REGOLA 4 — Verifica web obbligata di OGNI entità citata (associazione, ente, persona, sigla)
+
+Prima di citare in un articolo (testo, alt, caption) un'**associazione, ente, gruppo, sigla, persona, denominazione**, devi **verificare sul web che esista realmente con quel nome esatto**.
+
+Pattern operativi:
+- WebFetch su DuckDuckGo / motori di ricerca per la denominazione tra virgolette.
+- Se l'entità appare in canali ufficiali (FEPIVOL, DPC, Regione, Comuni, Forze dell'Ordine), riportala col nome esatto.
+- Se la verifica web restituisce 0 o pochissimi risultati ed è un'associazione locale poco indicizzata, **non sciogliere l'acronimo a indovinare**: cita solo la sigla come la leggi nella fonte (badge, gazebo, documento ufficiale), senza inventare l'espansione.
+
+**Casi tipici:**
+- Lettura da badge sulla divisa in foto → verifica web prima di citare (oggi *"V.E.R. Formia"* non *"E.R. Formia"* — letto male, smentito dall'utente).
+- Sigla di un gruppo trovata in un comunicato stampa → verifica web prima di scioglierla.
+- Nome di un funzionario citato in testi correlati → verifica funzione (memoria utente dice: niente nomi di persone non locali nel corpo).
+
+**Cosa NON fare:**
+- Sciogliere un acronimo "a senso" perché sembra plausibile.
+- Riportare un nome letto velocemente da un'immagine senza ricontrollare a piena risoluzione.
+- Citare una persona o un ruolo solo perché menzionato nei testi correlati al task, senza verificare che esista davvero in quella funzione.
+
+**Causa root incidente 15 maggio 2026 (didascalia briefing Formia):** ho letto da una foto il badge *"V.E.R. FORMIA (LT)"* e ho scritto *"E.R. Formia"* — perdendo la V iniziale. Né l'agent `pc-photo-caption-verifier` né io abbiamo fatto un check web per confermare che esistesse un'associazione con quel nome. L'utente l'ha corretto: *"il gruppo si chiama V.E.R. FORMIA. fai sempre un check sul web se effettivamente esiste o meno ciò che stai citando"*.
+
 ### Gate operativo
 
 Prima del commit di un articolo nuovo con foto utente, controlla mentalmente la sequenza:
@@ -143,9 +164,10 @@ Prima del commit di un articolo nuovo con foto utente, controlla mentalmente la 
 - [ ] **Read** di tutte le foto fornite dall'utente? *(REGOLA 2)*
 - [ ] Caption descrivono solo ciò che si vede, niente inferenze? *(REGOLA 2)*
 - [ ] Attribuzione foto utente = "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"? *(REGOLA 3)*
+- [ ] **Web check di OGNI entità citata** (associazione, ente, sigla, persona)? *(REGOLA 4)*
 - [ ] Gate AGID via `pc-article-reviewer` superato? *(regola sotto)*
 
-Se anche uno solo dei 5 punti non è verificato, **non committare**.
+Se anche uno solo dei 6 punti non è verificato, **non committare**.
 
 ---
 
