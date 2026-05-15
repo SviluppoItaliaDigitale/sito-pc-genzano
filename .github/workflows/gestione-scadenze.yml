@@ -1,0 +1,104 @@
+name: Gestione scadenze articoli
+
+# Sweep settimanale degli articoli con campo `scadenza:` superato.
+# Apre/aggiorna issue con elenco degli articoli scaduti, suggerendo se
+# archiviare (allerta passata, evento concluso) o aggiornare (norma
+# abrogata, dati cristallizzati). La decisione finale resta editoriale.
+#
+# Scaglionato lunedì 09:37 UTC, fuori dai picchi degli altri audit.
+
+on:
+  schedule:
+    - cron: '37 9 * * 1'   # Lunedì 09:37 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  gestione-scadenze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sweep articoli con scadenza superata
+        id: sweep
+        run: |
+          set -uo pipefail
+          TODAY=$(date +%Y-%m-%d)
+          echo "Today: $TODAY"
+          BODY="/tmp/issue-body.md"
+          : > "$BODY"
+
+          COUNT_EXPIRED=0
+          COUNT_NO_ARCHIVED=0
+
+          for f in content/comunicazioni/*.md; do
+            scad=$(grep -E "^scadenza:" "$f" 2>/dev/null | head -1 | sed 's/^scadenza:\s*"\?\([^"]*\)"\?\s*$/\1/' | tr -d '"')
+            [ -z "$scad" ] && continue
+            [ "$scad" = "" ] && continue
+            # Confronto stringa lessicografico (AAAA-MM-GG)
+            if [ "$scad" \< "$TODAY" ]; then
+              COUNT_EXPIRED=$((COUNT_EXPIRED + 1))
+              # Check se già archiviato
+              if grep -qE "^archiviato:\s*true" "$f"; then
+                echo "- ~~$(basename "$f" .md)~~ — già archiviato (scadenza $scad)" >> "$BODY"
+              else
+                COUNT_NO_ARCHIVED=$((COUNT_NO_ARCHIVED + 1))
+                title=$(grep -E "^title:" "$f" | head -1 | sed 's/^title:\s*"\?\([^"]*\)"\?\s*$/\1/')
+                echo "- **\`$(basename "$f" .md)\`** (scadenza $scad) — $title" >> "$BODY"
+              fi
+            fi
+          done
+
+          echo "expired=$COUNT_EXPIRED" >> "$GITHUB_OUTPUT"
+          echo "no_archived=$COUNT_NO_ARCHIVED" >> "$GITHUB_OUTPUT"
+
+          if [ "$COUNT_NO_ARCHIVED" -gt 0 ]; then
+            {
+              echo "# Articoli con scadenza superata da archiviare"
+              echo ""
+              echo "Sweep settimanale del $TODAY: trovati **$COUNT_EXPIRED articoli con scadenza superata**, di cui **$COUNT_NO_ARCHIVED non ancora archiviati**."
+              echo ""
+              echo "## Articoli da rivedere"
+              echo ""
+              cat "$BODY"
+              echo ""
+              echo "## Come procedere"
+              echo ""
+              echo "Per ciascun articolo, decidi:"
+              echo ""
+              echo "1. **ARCHIVIA** se è un'allerta meteo passata, un avviso temporaneo, un evento concluso senza valore storico: aggiungi \`archiviato: true\` nel frontmatter (Hugo lo escluderà da homepage e archivio principale, ma resterà al suo URL come memoria storica)."
+              echo "2. **AGGIORNA** se l'articolo ha valore informativo permanente e la \`scadenza:\` era solo un promemoria di rilettura: riscrivi titolo/corpo in passato e rimuovi il campo \`scadenza\`."
+              echo "3. **PROROGA** se l'articolo è ancora rilevante e la scadenza era stata messa stretta: aggiorna la scadenza a una data futura sensata."
+              echo ""
+              echo "Per un audit completo invoca l'agent \`pc-content-freshness\` sulla lista qui sopra."
+              echo ""
+              echo "_Issue generata automaticamente dal workflow \`gestione-scadenze.yml\`. Si aggiorna o riapre ogni lunedì 09:37 UTC._"
+            } > /tmp/issue-final.md
+          fi
+
+      - name: Crea/aggiorna issue
+        if: steps.sweep.outputs.no_archived != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="Articoli con scadenza superata: ${{ steps.sweep.outputs.no_archived }} da archiviare"
+          EXISTING=$(gh issue list --label "automazione" --label "scadenze" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue edit "$EXISTING" --title "$TITLE"
+            gh issue comment "$EXISTING" --body-file /tmp/issue-final.md
+          else
+            gh issue create \
+              --title "$TITLE" \
+              --body-file /tmp/issue-final.md \
+              --label "automazione" \
+              --label "scadenze"
+          fi
+
+      - name: Nessuna scadenza superata da gestire
+        if: steps.sweep.outputs.no_archived == '0'
+        run: echo "✓ Nessun articolo scaduto da archiviare."

@@ -202,12 +202,18 @@ Risultato: il **9 maggio 2026** l'utente ha chiesto di rivedere AGID tutti gli a
 
 ## Agenti specializzati disponibili
 
-In `.claude/agents/` ci sono 8 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
+In `.claude/agents/` ci sono 13 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
 
 | Agent | Trigger naturali italiani |
 |---|---|
 | `pc-article-reviewer` | "rivedi questo articolo", "controlla il frontmatter", "va bene per pubblicare?" |
-| `pc-photo-caption-verifier` | gate visivo automatico richiamato da `pc-article-reviewer` quando l'articolo contiene `{{< foto >}}` — verifica con Read multimodale che alt/caption descrivano davvero ciò che si vede nella foto, e che l'attribuzione sia corretta (foto utente = "Foto: Gruppo Comunale Volontari PC Genzano") |
+| `pc-photo-caption-verifier` | gate visivo automatico richiamato da `pc-article-reviewer` quando l'articolo contiene `{{< foto >}}` — verifica con Read multimodale che alt/caption descrivano davvero ciò che si vede nella foto, e che l'attribuzione sia corretta |
+| `pc-accessibility-auditor` | "audit accessibilità", "controlla WCAG", "alt foto e contrasto OK?" — audit WCAG 2.2 AA sui contenuti markdown (alt, headings, link, sigle, lingua dichiarata). Diverso da Lighthouse (che fa solo tecnica HTML/CSS) |
+| `pc-content-freshness` | "ci sono articoli vecchi?", "articoli da aggiornare", "scadenze passate" — sweep articoli con `scadenza:` superata, identifica articoli > 18 mesi con dati obsoleti |
+| `pc-italian-l2-writer` | "genera la versione facile", "italiano semplice A2", "facile da leggere" — produce `<slug>-facile.md` da articolo standard con regole CEFR A2 |
+| `pc-internal-linker` | "linkografia interna", "questo articolo ha abbastanza link interni?", "suggerisci link" — propone/applica link a glossario, kit, articoli correlati, standard ISO |
+| `pc-seo-checker` | "controlla il SEO", "meta description OK?", "Open Graph immagine giusta?" — verifica meta, OG, structured data, sitemap, slug, canonical |
+| `pc-normative-verifier` | "le norme citate sono vigenti?", "verifica leggi", "L. 225/1992 ancora valida?" — verifica vigenza norme statali (Normattiva) e regionali (BURL Lazio) |
 | `pc-image-fixer` | "ecco una foto", "queste immagini", "mettila nell'articolo", "applica fascia blu" |
 | `pc-issue-triage` | "controlla le issue", "fai pulizia tracker", "issue da chiudere?" |
 | `pc-deploy-validator` | "verifica prima del push", "controlla il deploy", "build OK?", "pubblico in sicurezza?" |

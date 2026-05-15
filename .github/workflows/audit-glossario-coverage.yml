@@ -1,0 +1,60 @@
+name: Audit glossario coverage
+
+# Audit settimanale della copertura del glossario inline.
+# Scansiona tutti gli articoli e le pagine del sito, estrae le sigle PC
+# (acronimi maiuscoli 3+ caratteri), confronta con il glossario, apre
+# issue automatica con elenco sigle ricorrenti NON ancora nel glossario
+# (soglia: usate ≥ 3 volte nel sito).
+#
+# Aggiungere queste sigle al glossario attiva il popover inline automatico
+# (vedi rule 03 § "Glossario inline con popover").
+#
+# Scaglionato lunedì 10:07 UTC.
+
+on:
+  schedule:
+    - cron: '7 10 * * 1'   # Lunedì 10:07 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  audit-glossario:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run coverage check
+        id: check
+        run: |
+          set -uo pipefail
+          OUTPUT=$(python3 scripts/check-glossario-coverage.py 2>&1 || true)
+          echo "$OUTPUT"
+          FIRST=$(echo "$OUTPUT" | head -1)
+          if [ "$FIRST" = "OK_NO_MISSING" ]; then
+            echo "has_missing=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_missing=true" >> "$GITHUB_OUTPUT"
+            echo "$OUTPUT" | tail -n +2 > /tmp/issue-body.md
+          fi
+
+      - name: Crea/aggiorna issue
+        if: steps.check.outputs.has_missing == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="Glossario: sigle ricorrenti non ancora coperte"
+          EXISTING=$(gh issue list --label "automazione" --label "glossario" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body-file /tmp/issue-body.md
+          else
+            gh issue create \
+              --title "$TITLE" \
+              --body-file /tmp/issue-body.md \
+              --label "automazione" \
+              --label "glossario"
+          fi
