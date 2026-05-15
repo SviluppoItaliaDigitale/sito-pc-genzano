@@ -5,8 +5,8 @@ description: "Il 15 maggio 2026 una squadra del nostro Gruppo è stata a Formia,
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-15-giro-italia-formia-blockhaus-sicurezza.webp"
+image_alt: "Cover dell'articolo: Giro d'Italia 2026 a Formia, il nostro Gruppo a supporto del dispositivo di sicurezza"
 scadenza: ""
 area: "Formia (LT)"
 allegati: []
@@ -28,8 +28,8 @@ Il **sistema di Protezione Civile del Lazio** ha coordinato la giornata su tre l
 Al loro fianco hanno operato le **Forze dell'Ordine** e la **Polizia Locale** per la sicurezza pubblica.
 
 {{< foto src="/images/2026-05-15-formia-giro-coordinamento-fepivol.webp"
-         alt="Coordinatori della Protezione Civile in pettorina ad alta visibilità davanti alla Colonna Mobile Sala Operativa, mentre studiano mappe e fogli di servizio appoggiati ai tavoli per la copertura dei varchi"
-         caption="Il briefing operativo davanti alla Colonna Mobile Sala Operativa allestita per l'evento. Foto: Coordinamento FEPIVOL." >}}
+         alt="Due volontari del nostro Gruppo Comunale di Genzano nel veicolo della Protezione Civile a Formia: caposquadra e volontario in divisa rossa con stemma della Protezione Civile, radio Motorola in spalla, pollice in su."
+         caption="La nostra squadra a Formia, durante la giornata di attivazione. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Il nostro contributo
 
@@ -38,16 +38,16 @@ Il nostro Gruppo ha messo a disposizione una squadra di volontari per il **presi
 Queste attivazioni sono anche **formazione operativa concreta**. Gli eventi di grande affluenza mettono alla prova le stesse competenze che servono in emergenza: comunicazione radio fra postazioni, raccordo con Forze dell'Ordine e sanità, gestione dei flussi di persone in spazi limitati. L'adesione al Coordinamento FE.PI.VOL. ci permette di partecipare a queste attivazioni regionali con continuità.
 
 {{< foto src="/images/2026-05-15-formia-giro-volontari-territorio.webp"
-         alt="Gruppo numeroso di volontari di Protezione Civile in pettorina ad alta visibilità, schierati in piazza prima dell'apertura del dispositivo di sicurezza per la partenza del Giro d'Italia"
-         caption="La grande partecipazione delle associazioni del Coordinamento FEPIVOL accorse da molte parti del Lazio prima dell'apertura del dispositivo. Foto: Coordinamento FEPIVOL." >}}
+         alt="Tre volontari del nostro Gruppo Comunale di Genzano in posa davanti ai mezzi della Protezione Civile a Formia: divise rosse e blu con stemma, cappelli e occhiali da sole, sorrisi di squadra."
+         caption="I tre volontari del nostro Gruppo schierati a Formia per la giornata. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Una giornata storica per Formia
 
 Formia ha ospitato la **partenza ufficiale** di una tappa del Giro dopo oltre **cinquant'anni**. Il pubblico lungo il tracciato cittadino, fino al chilometro zero, è stato imponente. Un evento internazionale che ha richiesto collaborazione stretta fra tutte le componenti del sistema.
 
 {{< foto src="/images/2026-05-15-formia-giro-folla-partenza.webp"
-         alt="Strada cittadina di Formia gremita di pubblico ai due lati, gruppo di ciclisti professionisti che parte con auto e moto di servizio del Giro al seguito, festoni rosa del Giro d'Italia"
-         caption="La partenza della 7ª tappa: la marea di pubblico lungo il tracciato cittadino. Foto: Coordinamento FEPIVOL." >}}
+         alt="Strada cittadina di Formia gremita di pubblico ai due lati delle transenne rosa del Giro, gruppo dei ciclisti professionisti in partenza con auto e moto di servizio al seguito, bandiera dell'Uruguay tra il pubblico."
+         caption="La partenza della 7ª tappa Formia-Blockhaus: la marea di pubblico lungo il tracciato cittadino. Foto: dai canali del Coordinamento FE.PI.VOL." >}}
 
 ## Un riconoscimento agli organizzatori
 
