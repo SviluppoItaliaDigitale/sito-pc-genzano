@@ -45,6 +45,20 @@ A complemento delle informazioni istituzionali, sul sito sono già pubblicamente
 - **[Normativa](/normativa/)** — riferimenti istituzionali (testo unico della Protezione Civile, ecc.)
 - **[Standard ISO](/standard-iso/)** — schede degli standard internazionali rilevanti per la Protezione Civile
 
+## Dataset aperti (Open Data)
+
+Il Gruppo pubblica i dati delle proprie attività in formato aperto, sotto licenza **Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)**: interventi operativi, ore di servizio, esercitazioni, formazione svolta, dotazioni del Gruppo.
+
+I dataset sono in formato **CSV** e **JSON**, riutilizzabili da chiunque per ricerca, giornalismo, controllo civico o studio. Aggiornati periodicamente a cura del Direttivo.
+
+- **[Vai agli Open Data](/open-data/)** — elenco dei dataset disponibili
+
+## Stato tecnico del sito
+
+Per piena trasparenza tecnica sul funzionamento del sito istituzionale, è disponibile un cruscotto in tempo reale che mostra lo stato dei processi automatici (deploy, controllo allerta meteo, audit, smoke test, lighthouse) e la conformità agli standard.
+
+- **[Vai allo Stato del Sito](/stato-sistema/)** — cruscotto delle automazioni con semaforo
+
 ## Accesso civico generalizzato (FOIA)
 
 Per **richieste di accesso a documenti** del Gruppo non già pubblicati su questo sito, applicabili ai sensi del **D.Lgs. 33/2013** (accesso civico generalizzato — FOIA italiano):

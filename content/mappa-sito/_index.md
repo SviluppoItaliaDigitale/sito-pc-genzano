@@ -122,7 +122,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card" href="/assistente/">
   <div class="ms-card-icon"><i class="bi bi-question-circle-fill"></i></div>
   <p class="ms-card-title">Cosa devo fare?</p>
-  <p class="ms-card-desc">Assistente guidato passo-passo: rispondi a domande semplici e ricevi indicazioni in caso di emergenza.</p>
+  <p class="ms-card-desc">Assistente guidato passo-passo: rispondi a domande semplici, ricevi indicazioni in emergenza e orientati tra le pagine del sito.</p>
   <span class="ms-card-arrow">Apri assistente →</span>
 </a>
 <a class="ms-card" href="/piano-familiare/">
@@ -377,10 +377,20 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Open Data</p>
   <p class="ms-card-desc">I dataset delle attività del Gruppo (interventi, ore di volontariato, esercitazioni, formazione, dotazioni) in formato aperto CSV e JSON, riusabili sotto licenza CC BY 4.0.</p>
 </a>
+<a class="ms-card ms-edu" href="/audio-e-podcast/">
+  <div class="ms-card-icon"><i class="bi bi-headphones"></i></div>
+  <p class="ms-card-title">Audio e podcast</p>
+  <p class="ms-card-desc">Punto d'ingresso unico per i contenuti audio: scegli fra il podcast con episodi MP3 o gli articoli letti ad alta voce dal browser. Entrambi gratuiti, accessibili e rispettosi della privacy.</p>
+</a>
 <a class="ms-card ms-edu" href="/podcast/">
   <div class="ms-card-icon"><i class="bi bi-mic-fill"></i></div>
   <p class="ms-card-title">Podcast</p>
   <p class="ms-card-desc">Il podcast del Gruppo Comunale: episodi audio sui rischi locali, esercitazioni, interviste. Feed RSS per Spotify, Apple Podcasts e ogni app.</p>
+</a>
+<a class="ms-card ms-edu" href="/articoli-da-ascoltare/">
+  <div class="ms-card-icon"><i class="bi bi-volume-up-fill"></i></div>
+  <p class="ms-card-title">Articoli da ascoltare</p>
+  <p class="ms-card-desc">Tutti gli articoli del sito ascoltabili ad alta voce direttamente dal browser, con voce italiana e selettore di velocità. Niente account, niente cookie, niente connessione a server esterni.</p>
 </a>
 <a class="ms-card ms-edu" href="/faq/">
   <div class="ms-card-icon"><i class="bi bi-patch-question-fill"></i></div>

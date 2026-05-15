@@ -253,7 +253,8 @@ bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
 | Notifiche allerta browser (opt-in su `/allerte-meteo/`, polling endpoint JSON, no Service Worker) | `static/js/notifiche-allerta.js`, `content/allerta-stato/` (output solo JSON) — idea #2 |
 | Quiz `/quiz-preparazione/` ("Quanto sei preparato?", adattivo, badge PNG + stampa) | `layouts/quiz-preparazione/list.html` + `static/js/quiz-preparazione.js` — idea #7 |
 | Hub `/giochi/` "Arena PC Genzano" (launcher giochi: skin Arena/Classica, badge progressi, continua) | `static/giochi/index.html` + `static/giochi/assets/{css/arena.css,js/arena.js}` — idea #11 |
-| Pagina `/open-data/` (dataset aperti delle attività del Gruppo, CSV/JSON CC BY 4.0) | `content/open-data/_index.md`, voce nel dropdown Risorse |
+| Pagina `/open-data/` (dataset aperti delle attività del Gruppo, CSV/JSON CC BY 4.0) | `content/open-data/_index.md`, richiamata come sezione "Dataset aperti" in `/trasparenza/` (v3.3 menu — non più voce diretta del dropdown Risorse) |
+| Pagina hub `/audio-e-podcast/` (punto d'ingresso unico per podcast + articoli TTS, v3.3 menu maggio 2026) | `content/audio-e-podcast/_index.md`, voce del dropdown Risorse |
 | Cartelle `static/` canoniche e cartella `riferimenti-interni/` non deployata | `04c-hugo-static-cartelle.md` |
 | Assistente guidato `/assistente/` (albero decisionale JS) | `04a-hugo-shortcode-partial.md` § "Assistente guidato" |
 | Hub `/standard-iso/` (30 schede ISO + 10 news divulgative calendarizzate, voce sotto Risorse) | sezione `content/standard-iso/` — vedi punto 18 sotto |

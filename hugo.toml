@@ -139,6 +139,15 @@ enableGitInfo = true
   parent = "per-il-cittadino"
   weight = 8
 
+# Spostata da "Risorse" a maggio 2026: la timeline storica del territorio
+# è contenuto narrativo per il cittadino, vive meglio qui che fra gli
+# strumenti di consultazione.
+[[menus.main]]
+  name = "Storia del territorio"
+  url = "/storia/"
+  parent = "per-il-cittadino"
+  weight = 9
+
 # --- Dropdown: Per le scuole (6 voci didattiche) ---
 # (rinominato da "Educazione e Inclusione" a maggio 2026 — splittato per
 # alleggerire e separare le 3 vocazioni mescolate: didattica scolastica,
@@ -234,10 +243,15 @@ enableGitInfo = true
   parent = "volontariato"
   weight = 3
 
-# --- Dropdown: Risorse (6 voci, +Glossario maggio 2026) ---
-# Raccoglie pagine di servizio prima visibili solo dalla homepage o dal
-# footer. Pensate per chi entra dal motore di ricerca o da un articolo
-# specifico e vuole comunque trovare FAQ, strumenti, normativa, glossario.
+# --- Dropdown: Risorse (7 voci, riorganizzato maggio 2026) ---
+# Riorganizzazione maggio 2026: il dropdown era cresciuto a 13 voci, oltre
+# il limite Miller 7±2. Strategia "accorpamento per hub":
+#  - Podcast + Articoli da ascoltare → fusi in pagina hub "Audio e podcast"
+#  - Open Data + Stato del Sito → richiamati come sezioni in /trasparenza/
+#  - Trasparenza + Stato del Sito → voce footer (accountability istituzionale)
+#  - Mappa del Sito → già nel footer, rimossa la duplicazione
+#  - Storia del territorio → spostata in "Per il Cittadino" (narrativa cittadino)
+# Risultato: 7 voci pulite di sola consultazione + 1 canale audio.
 [[menus.main]]
   name = "Risorse"
   identifier = "risorse"
@@ -250,8 +264,8 @@ enableGitInfo = true
   weight = 1
 
 [[menus.main]]
-  name = "Strumenti in Tempo Reale"
-  url = "/strumenti/"
+  name = "Glossario"
+  url = "/glossario/"
   parent = "risorse"
   weight = 2
 
@@ -267,62 +281,26 @@ enableGitInfo = true
   parent = "risorse"
   weight = 4
 
-# Spostato da "Educazione e Inclusione" a maggio 2026: il glossario è uno
-# strumento di consultazione, non un'area didattica. Vive in Risorse
-# accanto a FAQ, normativa, area download.
-[[menus.main]]
-  name = "Glossario"
-  url = "/glossario/"
-  parent = "risorse"
-  weight = 5
-
 [[menus.main]]
   name = "Standard ISO"
   url = "/standard-iso/"
   parent = "risorse"
+  weight = 5
+
+[[menus.main]]
+  name = "Strumenti in Tempo Reale"
+  url = "/strumenti/"
+  parent = "risorse"
   weight = 6
 
+# Pagina hub introdotta a maggio 2026: punto d'ingresso unico per i due
+# canali audio (Podcast con episodi MP3 + RSS, Articoli da ascoltare via
+# TTS browser). Riduce 2 voci ridondanti del menu a 1 hub esplicativo.
 [[menus.main]]
-  name = "Trasparenza"
-  url = "/trasparenza/"
+  name = "Audio e podcast"
+  url = "/audio-e-podcast/"
   parent = "risorse"
   weight = 7
-
-[[menus.main]]
-  name = "Podcast"
-  url = "/podcast/"
-  parent = "risorse"
-  weight = 8
-
-[[menus.main]]
-  name = "Mappa del Sito"
-  url = "/mappa-sito/"
-  parent = "risorse"
-  weight = 9
-
-[[menus.main]]
-  name = "Stato del Sito"
-  url = "/stato-sistema/"
-  parent = "risorse"
-  weight = 10
-
-[[menus.main]]
-  name = "Articoli da ascoltare"
-  url = "/articoli-da-ascoltare/"
-  parent = "risorse"
-  weight = 11
-
-[[menus.main]]
-  name = "Storia del territorio"
-  url = "/storia/"
-  parent = "risorse"
-  weight = 12
-
-[[menus.main]]
-  name = "Open Data"
-  url = "/open-data/"
-  parent = "risorse"
-  weight = 13
 
 # --- Voci dirette ---
 [[menus.main]]
@@ -351,20 +329,36 @@ enableGitInfo = true
   url = "/accessibilita/"
   weight = 3
 
+# Spostata da "Risorse" a maggio 2026: la Trasparenza è obbligo istituzionale
+# di accountability — vive coerente accanto a Note Legali / Privacy /
+# Accessibilità nel footer.
+[[menus.footer]]
+  name = "Trasparenza"
+  url = "/trasparenza/"
+  weight = 4
+
 [[menus.footer]]
   name = "Siti Utili"
   url = "/siti-utili/"
-  weight = 4
+  weight = 5
 
 [[menus.footer]]
   name = "Mappa del Sito"
   url = "/mappa-sito/"
-  weight = 5
+  weight = 6
+
+# Spostato da "Risorse" a maggio 2026: cruscotto tecnico di trasparenza
+# sul funzionamento delle automazioni del sito. Coerente nel footer
+# accanto a Trasparenza, Mappa del Sito, Feed RSS.
+[[menus.footer]]
+  name = "Stato del Sito"
+  url = "/stato-sistema/"
+  weight = 7
 
 [[menus.footer]]
   name = "Feed RSS"
   url = "/feed-rss/"
-  weight = 6
+  weight = 8
 
 # Menu footer — Servizi
 [[menus.servizi]]
