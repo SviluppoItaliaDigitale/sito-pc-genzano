@@ -41,7 +41,23 @@ Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni
 12. **Badge ammesso** (1 dei 13 in regola `02-content-design-pa.md` § "Frontmatter obbligatorio").
 13. **`description` ≤160 char** per SEO.
 14. **`image:`** valorizzata (cover tipografica generata) OPPURE `image: ""` su articolo calendarizzato a data futura (cover sarà generata al run successivo da `auto-cover-mancanti.py`). MAI marker `# TODO-foto-*` (vedi check #9). **MAI** puntare a foto reale (utente, Wikimedia, NASA, USGS, NOAA, stock): solo cover tipografica con titolo. Vedi CLAUDE.md punto 9 § "ANTI-PATTERN".
+14bis. **🔴 COVER ESISTENTE — BLOCKER per articoli del giorno corrente o passati**. Se l'articolo ha `date ≤ today` (cioè è in produzione, non calendarizzato), verifica:
+    ```bash
+    for f in $(git diff --name-only origin/main...HEAD -- 'content/comunicazioni/*.md'); do
+      slug=$(basename "$f" .md)
+      img=$(grep -E "^image:" "$f" | head -1 | sed 's/^image:\s*"//; s/"$//')
+      # Se image: punta a /images/<slug>.webp, verifica esistenza
+      if echo "$img" | grep -q "/images/${slug}.webp"; then
+        [ -f "static/images/${slug}.webp" ] || echo "❌ COVER MANCANTE: $f → atteso static/images/${slug}.webp"
+      elif [ -z "$img" ]; then
+        # image vuoto: lancia genera-cover.py ora
+        echo "⚠️  image: vuoto su $f — esegui python3 scripts/genera-cover.py $f prima del push"
+      fi
+    done
+    ```
+    Se trovi ❌ o ⚠️, è BLOCKER: lancia `python3 scripts/genera-cover.py <file>` e popola `image:` + `image_alt:` PRIMA del push. **Read della cover generata** per verifica visiva (deve mostrare titolo + badge + fascia, non il fallback default). Affidarsi al workflow CI per generare la cover post-deploy porta al primo deploy live col fallback `notizia-default.svg` senza titolo: è successo il 15 maggio 2026 con l'articolo "Giro d'Italia 2026 a Formia". Non si ripete.
 15. **`image_alt`** non vuoto se `image:` è valorizzata (WCAG 1.1.1).
+15ter. **🔴 GATE VISIVO foto/caption — BLOCKER se assente**. Per ogni articolo modificato che contiene `{{< foto >}}` shortcode, l'agent `pc-article-reviewer` deve aver invocato `pc-photo-caption-verifier`. Se nel diff vedi caption/alt nuovi su `{{< foto >}}` ma non c'è traccia di invocazione del verifier nel turno della sessione, considera BLOCKER (la caption potrebbe essere fabbricata dai testi anziché dalla foto). Procedura: lanciare `pc-photo-caption-verifier` sul file ora, applicare gli eventuali fix, poi pushare. Vedi CLAUDE.md § "Foto utente e banner — guarda PRIMA, scrivi DOPO".
 15bis. **🔴 BANNER TOCCATO DURANTE REVISIONE — BLOCKER**. Se nel diff ci sono modifiche a `image:` / `image_alt:` su articoli pre-esistenti, esegui:
     ```bash
     for f in $(git diff --name-only origin/main...HEAD -- 'content/comunicazioni/*.md'); do

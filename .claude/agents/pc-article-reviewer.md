@@ -39,16 +39,42 @@ Distinzione critica `Allerta` vs `Emergenza` (regola `06-protezione-civile-scien
 - **Aggiornamento/Comunicazione** = evento concluso (è stato/si è concluso)
 
 ### 4. Foto e immagini
-- `image:` deve puntare alla cover tipografica con titolo (`/images/<slug>.webp`). MAI a foto utente né a foto da fonti ufficiali (banner sempre col titolo, vedi CLAUDE.md punto 9). MAI marker `# TODO-foto-*` (bandito). **MAI vuoto in produzione** se l'articolo è già pubblicato (data ≤ oggi); se l'articolo ha `image: ""`, controlla che `auto-cover-mancanti.py` la rigeneri al prossimo deploy.
+
+#### 4.1 Banner cover (campo `image:`)
+- `image:` deve puntare alla cover tipografica con titolo (`/images/<slug>.webp`). MAI a foto utente né a foto da fonti ufficiali (banner sempre col titolo, vedi CLAUDE.md punto 9). MAI marker `# TODO-foto-*` (bandito).
+- 🔴 **CHECK COVER GENERATA — BLOCKER se mancante.** Quando l'articolo è NUOVO e ha `image: ""`, verifica con `ls static/images/<slug>.webp`. Se il file non esiste, lancia immediatamente `python3 scripts/genera-cover.py <path-articolo>` e popola `image:` + `image_alt:` nel frontmatter. **NON dare via libera al commit** finché non hai verificato visivamente la cover con un Read di `static/images/<slug>.webp`: deve mostrare badge + titolo + fascia istituzionale. Affidarsi al workflow CI per generare la cover post-push porta al primo deploy live col fallback `notizia-default.svg` ("PROTEZIONE CIVILE / Genzano di Roma" senza titolo): è successo il 15 maggio 2026 con l'articolo "Giro d'Italia 2026 a Formia" e l'utente l'ha visto in homepage. Non si ripete.
 - 🔴 **CHECK OBBLIGATORIO PRE-COMMIT — drift del campo `image:`**. Se stai facendo una revisione testuale (AGID, refusi, riscrittura), il campo `image:` **non deve cambiare** rispetto al valore originale. Esegui:
   ```bash
   git diff <file.md> | grep -E '^[+-]image' | head -5
   ```
   Se trovi righe `+image:` o `-image:` (anche solo `image_alt:`) e l'utente non te l'ha chiesto esplicitamente, è un **BLOCKER**: ripristina i valori originali prima del commit. Caso da non ripetere: **incidente Giornata Europa del 9 maggio 2026** — ChatGPT-cloud durante la revisione AGID ha sostituito `image: ""` con `image: "/images/2026-05-09-ercc-bruxelles.webp"` (foto Wikimedia ERCC), violando la regola del banner col titolo.
+
+#### 4.2 Foto inline nel corpo
 - Foto utente nel corpo: SEMPRE come `{{< foto src="..." alt="..." caption="..." >}}`, MAI come markdown `![]()`.
 - Convenzione foto multiple in articoli storici: 1ª dopo 1° H2, 2ª dopo 2° H2, ecc.
 - ≥4 foto → galleria (lo script `galleria-auto.js` le affianca automaticamente con `.is-galleria-pair`).
 - DIVIETO: stessa foto stock generica per macro-tema (regola 02 § "Divieto: foto stock generiche ripetute per macro-tema"). Verifica che la foto inline NON sia già usata in altri articoli con caption identica.
+
+#### 4.3 🔴 GATE VISIVO OBBLIGATO — pc-photo-caption-verifier
+**Quando l'articolo contiene almeno uno shortcode `{{< foto >}}`, devi obbligatoriamente invocare l'agent `pc-photo-caption-verifier`** prima di dare via libera al commit. Questo agent:
+
+- Fa **Read multimodale** di ogni foto sorgente in `static/<src>`.
+- Verifica che `alt` e `caption` descrivano **solo ciò che si vede** nella foto, non inferenze dal contesto testuale dell'articolo.
+- Verifica l'**attribuzione**: foto fornite dall'utente con dicitura "le nostre foto" o file da `~/Scaricati/IMG-*` / `~/Immagini/*` → attribuzione "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" (default). Mai attribuirle al Coordinamento FEPIVOL / DPC / Comune solo perché nel testo dell'articolo si parla di quegli enti.
+- Applica fix in-place e produce report.
+
+**Causa root del gate visivo (15 maggio 2026, articolo "Giro d'Italia 2026 a Formia")**: l'utente ha fornito 3 foto delle nostre squadre + testi FEPIVOL come spunto. Sono state scritte caption fabbricate dai testi ("briefing davanti alla Colonna Mobile", "marea di volontari accorsi") su foto che mostravano in realtà 2 volontari in auto e 3 volontari in posa. Attribuzione errata "Foto: Coordinamento FEPIVOL" su foto del nostro Gruppo. L'utente ha richiamato: *"non siamo un sito della parrocchia"*. Da quel giorno il gate visivo è obbligato.
+
+Operativo:
+```
+Agent({
+  subagent_type: "pc-photo-caption-verifier",
+  description: "Verifica visiva foto/caption",
+  prompt: "Verifica le foto dell'articolo content/comunicazioni/<file>.md: Read di ogni foto, confronto con alt e caption, fix in-place se trovi incoerenze. Applica regola attribuzione: foto utente = Gruppo Comunale Volontari PC Genzano."
+})
+```
+
+Se il verifier produce correzioni, applicale e completa il tuo report AGID. Se dichiara "Foto e didascalie coerenti", procedi al passo successivo.
 
 ### 5. Linguaggio AGID
 - Frasi brevi (max ~20 parole), voce attiva, niente burocratese.
