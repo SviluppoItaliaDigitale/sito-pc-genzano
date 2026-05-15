@@ -257,7 +257,7 @@ bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
 | Pagina hub `/audio-e-podcast/` (punto d'ingresso unico per podcast + articoli TTS, v3.3 menu maggio 2026) | `content/audio-e-podcast/_index.md`, voce del dropdown Risorse |
 | Cartelle `static/` canoniche e cartella `riferimenti-interni/` non deployata | `04c-hugo-static-cartelle.md` |
 | Assistente guidato `/assistente/` (albero decisionale JS) | `04a-hugo-shortcode-partial.md` § "Assistente guidato" |
-| Hub `/standard-iso/` (30 schede ISO + 10 news divulgative calendarizzate, voce sotto Risorse) | sezione `content/standard-iso/` — vedi punto 18 sotto |
+| Hub `/standard-iso/` (30 schede ISO + 10 news divulgative calendarizzate, richiamato come sezione di `/normativa/` da v3.3 menu maggio 2026) | sezione `content/standard-iso/` — vedi punto 18 sotto |
 | Pagina `/feed-rss/` (divulgativa: spiega i 39 feed RSS auto-generati da Hugo) + voce nel footer + mappa-sito + assistente | `content/feed-rss/_index.md` — vedi punto 17 sotto |
 | Hreflang + `<html lang>` + `og:locale` dinamici per le 7 traduzioni | `themes/.../partials/hreflang-tags.html` + frontmatter `language: <code>` nei `_index.md` di english/francais/deutsch/espanol/portugues/romana/esperanto — vedi punto 19 |
 | Pagina lite `/emergenza/` (44 KB) | `04a-hugo-shortcode-partial.md` § "Shortcode pagina-emergenza-lite" |
