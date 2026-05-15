@@ -15,6 +15,17 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 </div>
 </div>
 
+<div class="alert alert-warning mb-4" role="note">
+<h2 class="h6 mb-2"><i class="bi bi-universal-access me-2" aria-hidden="true"></i>Stato di accessibilità dei PDF</h2>
+<p class="mb-2 small">Stiamo conducendo un <strong>audit progressivo</strong> dei documenti per garantire piena conformità <abbr title="Portable Document Format / Universal Accessibility">PDF/UA</abbr>:</p>
+<ul class="small mb-2">
+<li><strong>Documenti del Gruppo</strong> (regolamenti, ordinanze, modulistica) — generalmente accessibili: OCR completo, tag strutturali, alt text.</li>
+<li><strong>Documenti storici</strong> (carte tematiche scansionate, piani pre-2022 ricevuti da enti terzi) — potrebbero avere OCR parziale o tag PDF/UA mancanti.</li>
+<li><strong>Documenti istituzionali recenti</strong> (DPC, Regione Lazio, Atlante 2025) — accessibilità a cura dell'ente emittente.</li>
+</ul>
+<p class="mb-0 small">Se trovi un PDF che il tuo screen reader non legge correttamente, scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>: forniremo una versione alternativa o un testo equivalente. Vedi anche la <a href="/accessibilita/">Dichiarazione di accessibilità</a> per il quadro completo. <strong>Scadenza audit completo: 31 dicembre 2026.</strong></p>
+</div>
+
 ## Piano e Cartografia Comunale
 
 | Documento | Formato |
@@ -161,10 +172,36 @@ Il Gruppo ha sviluppato **kit didattici completi** per ogni grado di istruzione,
 
 Se sei un insegnante e desideri materiale aggiuntivo per attività in classe, contattaci a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). Siamo disponibili anche per incontri formativi nelle scuole del territorio.
 
+## Accessibilità dei documenti — guida rapida
+
+Un **PDF accessibile** può essere letto da screen reader (NVDA, VoiceOver, TalkBack), navigato da tastiera, e include alt text per le immagini significative. I requisiti tecnici sono fissati dallo standard **PDF/UA — ISO 14289-1**.
+
+**Cosa rende un PDF accessibile:**
+
+- **OCR completo**: il testo è riconosciuto dal computer (non è "immagine di testo")
+- **Tag strutturali**: il documento ha intestazioni, paragrafi, liste, tabelle marcate correttamente
+- **Alt text**: ogni immagine informativa ha una descrizione testuale
+- **Ordine di lettura**: lo screen reader segue l'ordine logico del documento
+- **Lingua dichiarata**: il PDF dichiara la lingua (italiano)
+
+**Cosa fare se un PDF non è accessibile:**
+
+1. Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) indicando il titolo del documento e il problema riscontrato.
+2. Ti forniremo, in base alla complessità del documento, una **versione HTML equivalente**, una **trascrizione testuale**, o un **PDF rigenerato** con OCR e tag.
+3. Per richieste urgenti (es. preparazione esame, scadenza) indicalo nel messaggio: rispondiamo entro 5 giorni lavorativi (riferimento art. 4 D.Lgs. 106/2018).
+
+**Riferimenti normativi:**
+
+- **Legge 4/2004** (Legge Stanca) sull'accessibilità dei siti delle PA
+- **D.Lgs. 106/2018** — recepimento Direttiva UE 2016/2102
+- **WCAG 2.2 livello AA** + **PDF/UA — ISO 14289-1**
+- Vedi la nostra [Dichiarazione di accessibilità](/accessibilita/) per il quadro istituzionale completo
+
 ## Vedi anche
 
 - [Cartografia](/cartografia/) — mappe interattive del territorio
 - [Rischi e Prevenzione](/rischi-prevenzione/) — schede operative per ogni rischio
 - [Formazione](/formazione/) — kit didattici e schede stampabili
 - [Siti utili](/siti-utili/) — fonti istituzionali esterne
+- [Dichiarazione di accessibilità](/accessibilita/) — conformità WCAG 2.2 AA
 
