@@ -73,17 +73,67 @@ SKIP_PAGE_PATTERNS = [
 ]
 
 
+# Mini-lemmatizzazione PC: forme plurali → singolari per matchare titoli
+# di video DPC (che usano forme tecniche al singolare).
+LEMMA_PC = {
+    "alluvioni": "alluvione",
+    "frane": "frana",
+    "terremoti": "terremoto",
+    "incendi": "incendio",
+    "maremoti": "maremoto",
+    "tsunamis": "tsunami",
+    "scosse": "scossa",
+    "evacuazioni": "evacuazione",
+    "esercitazioni": "esercitazione",
+    "bollettini": "bollettino",
+    "emergenze": "emergenza",
+    "criticita": "criticità",
+    "allerte": "allerta",
+    "boschive": "boschivo",
+    "boschivi": "boschivo",
+    "vulcani": "vulcano",
+    "vulcanici": "vulcanico",
+    "vulcaniche": "vulcanico",
+    "sismiche": "sismico",
+    "sismici": "sismico",
+    "idrogeologici": "idrogeologico",
+    "idrogeologiche": "idrogeologico",
+    "operativi": "operativo",
+    "operative": "operativo",
+    "comunali": "comunale",
+    "regionali": "regionale",
+    "nazionali": "nazionale",
+    "esondazioni": "esondazione",
+    "smottamenti": "smottamento",
+    "frequenze": "frequenza",
+    "radiocomunicazioni": "radiocomunicazione",
+    "telecomunicazioni": "telecomunicazione",
+    "soccorsi": "soccorso",
+    "interventi": "intervento",
+    "centri": "centro",
+    "sale": "sala",
+    "piani": "piano",
+    "rischi": "rischio",
+    "fenomeni": "fenomeno",
+}
+
+
 def tokenize(text: str) -> set[str]:
     """Estrae keywords da text. Include:
        - parole lunghe ≥4 caratteri (es. "terremoto", "alluvione")
        - sigle maiuscole 3+ caratteri (es. "COC", "DPC", "ASL", "INGV")
+       - lemmatizzazione PC (plurale→singolare) per matchare titoli DPC
        Esclude stop-words italiane."""
     # 1) Sigle maiuscole (preservate dal testo originale)
     sigle = {s.lower() for s in re.findall(r"\b[A-Z]{3,}\b", text)}
-    # 2) Parole lowercase ≥4 char
+    # 2) Parole lowercase ≥4 char + lemmatizzazione PC
     t = text.lower()
     t = re.sub(r"[^a-zàèéìòùù\s]", " ", t)
-    parole = {w for w in t.split() if len(w) >= 4 and w not in STOPWORDS_IT}
+    parole = set()
+    for w in t.split():
+        if len(w) < 4 or w in STOPWORDS_IT:
+            continue
+        parole.add(LEMMA_PC.get(w, w))
     return parole | sigle
 
 
