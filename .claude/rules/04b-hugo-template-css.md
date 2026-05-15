@@ -13,7 +13,7 @@ Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `the
 | Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza |
 | Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere, **Contenuti in LIS** |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
-| Risorse ▾ | dropdown | FAQ, Glossario, Area Download, Normativa, Standard ISO, Strumenti in Tempo Reale, **Audio e podcast** |
+| Risorse ▾ | dropdown | FAQ, Glossario, Area Download, Normativa, Strumenti in Tempo Reale, **Audio e podcast** |
 | Comunicazioni | diretta | `/comunicazioni/` |
 | Contatti | diretta | `/contatti/` |
 
@@ -29,14 +29,15 @@ Razionale: voci flat erano troppe per mobile e per l'utente in emergenza. L'acco
 
 **Aggiunte v3.2 (roadmap, maggio 2026):** le iniziative della roadmap hanno aggiunto voci ai dropdown: **Per il Cittadino** → "Quanto sei preparato? (quiz)" (idea #7); **Accessibilità e Supporti** → "Contenuti in LIS" (idea #10); **Risorse** → "Trasparenza", "Storia del territorio" (#8), "Open Data" (reinserita), "Podcast" (#22), "Articoli da ascoltare" (#22, ex `/podcast/`), "Stato del Sito" (#25). Il dropdown Risorse era cresciuto a 13 voci, oltre il limite Miller 7±2 → riorganizzato in v3.3 (vedi sotto). Ogni voce di menu va sempre aggiunta **sia in `hugo.toml` sia in `static/app-shared/site-chrome.js`** (vedi § "Sincronizzazione obbligatoria").
 
-**Riorganizzazione v3.3 (15 maggio 2026) — accorpamento Risorse 13→7 voci.** Strategia "accorpamento per hub" applicata per riportare Risorse dentro Miller 7±2:
+**Riorganizzazione v3.3 (15 maggio 2026) — accorpamento Risorse 13→6 voci.** Strategia "accorpamento per hub" applicata per riportare Risorse dentro Miller 7±2:
 - **Podcast** + **Articoli da ascoltare** → fusi in una nuova pagina hub **"Audio e podcast"** (`content/audio-e-podcast/_index.md`) che spiega la differenza fra i due canali e linka entrambi. Le pagine madre `/podcast/` e `/articoli-da-ascoltare/` restano accessibili al loro URL (link interni, sitemap, ricerca).
 - **Open Data** e **Stato del Sito** → richiamati come sezioni dedicate dentro `/trasparenza/` ("Dataset aperti" + "Stato tecnico del sito"). Le pagine madre restano accessibili al loro URL.
 - **Trasparenza** + **Stato del Sito** → spostati nel footer accanto a Note Legali / Privacy / Accessibilità (accountability istituzionale coerente con le altre pagine legali).
 - **Mappa del Sito** → rimossa dal dropdown Risorse (era duplicata: già nel footer).
 - **Storia del territorio** → spostata in **"Per il Cittadino"** (è contenuto narrativo per il cittadino, non strumento di consultazione).
+- **Standard ISO** → spostata come sezione `## Standard tecnici internazionali (ISO)` dentro `/normativa/`. Razionale: le schede del hub `/standard-iso/` non riproducono il testo della norma (a pagamento, copyright ISO/UNI) e rimandano tutte a iso.org/uni.com per il testo integrale; non è quindi uno *"strumento di consultazione quotidiana"* come FAQ/Glossario/Area Download. Inserito in `/normativa/` completa la tassonomia delle fonti (nazionale → regionale → comunale → internazionale), che è il suo livello naturale di lettura.
 
-Risultato: Risorse a **7 voci** pulite (FAQ, Glossario, Area Download, Normativa, Standard ISO, Strumenti in Tempo Reale, Audio e podcast), 5 dropdown di primo livello (invariati), footer a 8 voci nella sezione "Link Utili".
+Risultato: Risorse a **6 voci** pulite (FAQ, Glossario, Area Download, Normativa, Strumenti in Tempo Reale, Audio e podcast), 5 dropdown di primo livello (invariati), footer a 8 voci nella sezione "Link Utili". Margine Miller: 1 voce di spazio libero per future aggiunte.
 
 Il numero totale di voci di primo livello è 8 (Home + 5 dropdown + Comunicazioni + Contatti). Limite Miller superato di 1 voce, accettato perché compensato dalla coerenza interna dei dropdown.
 

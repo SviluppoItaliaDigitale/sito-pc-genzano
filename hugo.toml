@@ -243,7 +243,7 @@ enableGitInfo = true
   parent = "volontariato"
   weight = 3
 
-# --- Dropdown: Risorse (7 voci, riorganizzato maggio 2026) ---
+# --- Dropdown: Risorse (6 voci, riorganizzato maggio 2026) ---
 # Riorganizzazione maggio 2026: il dropdown era cresciuto a 13 voci, oltre
 # il limite Miller 7±2. Strategia "accorpamento per hub":
 #  - Podcast + Articoli da ascoltare → fusi in pagina hub "Audio e podcast"
@@ -251,7 +251,12 @@ enableGitInfo = true
 #  - Trasparenza + Stato del Sito → voce footer (accountability istituzionale)
 #  - Mappa del Sito → già nel footer, rimossa la duplicazione
 #  - Storia del territorio → spostata in "Per il Cittadino" (narrativa cittadino)
-# Risultato: 7 voci pulite di sola consultazione + 1 canale audio.
+#  - Standard ISO → spostata come sezione in /normativa/ (gli ISO sono norme
+#    tecniche internazionali, livello mancante nella tassonomia normativa
+#    nazionale/regionale/comunale già presente; le voci del hub rimandano
+#    tutte a iso.org/uni.com perché il testo integrale è a pagamento, quindi
+#    non è uno "strumento di consultazione" quotidiano)
+# Risultato: 6 voci pulite di sola consultazione + 1 canale audio.
 [[menus.main]]
   name = "Risorse"
   identifier = "risorse"
@@ -282,16 +287,10 @@ enableGitInfo = true
   weight = 4
 
 [[menus.main]]
-  name = "Standard ISO"
-  url = "/standard-iso/"
-  parent = "risorse"
-  weight = 5
-
-[[menus.main]]
   name = "Strumenti in Tempo Reale"
   url = "/strumenti/"
   parent = "risorse"
-  weight = 6
+  weight = 5
 
 # Pagina hub introdotta a maggio 2026: punto d'ingresso unico per i due
 # canali audio (Podcast con episodi MP3 + RSS, Articoli da ascoltare via
@@ -300,7 +299,7 @@ enableGitInfo = true
   name = "Audio e podcast"
   url = "/audio-e-podcast/"
   parent = "risorse"
-  weight = 7
+  weight = 6
 
 # --- Voci dirette ---
 [[menus.main]]

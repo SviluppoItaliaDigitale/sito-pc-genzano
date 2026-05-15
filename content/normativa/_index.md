@@ -48,6 +48,16 @@ I riferimenti principali sono:
 - [Bollettini di criticità e avvisi](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — pubblicati dal Centro Funzionale Regionale.
 - [Agenzia Regionale di Protezione Civile](https://protezionecivile.regione.lazio.it/) — sito istituzionale con direttive, bandi, piani e modulistica.
 
+## Standard tecnici internazionali (ISO)
+
+Oltre alla normativa cogente, il Gruppo allinea le proprie pratiche a una serie di **standard tecnici internazionali ISO** (International Organization for Standardization) e alle versioni italiane **UNI** rilevanti per la Protezione Civile: gestione delle emergenze, gestione del rischio, comunicazione di crisi, segnaletica di sicurezza, adattamento ai cambiamenti climatici, città resilienti.
+
+Gli standard ISO **non sono leggi**: sono norme tecniche di adesione volontaria. Il loro testo integrale è venduto da [iso.org](https://www.iso.org/store.html) (versione internazionale) e da [uni.com](https://store.uni.com/) (versione italiana ufficiale).
+
+Sul sito è disponibile un **hub di consultazione** con la presentazione divulgativa di una selezione di standard rilevanti, con titolo, ambito di applicazione e perché interessano il sistema di Protezione Civile. **Non riproduciamo il testo della norma**: per il testo integrale si rimanda sempre al canale ufficiale di acquisto.
+
+- **[Hub Standard ISO per la Protezione Civile](/standard-iso/)** — schede divulgative degli standard rilevanti, organizzate per famiglia (ISO/TC 292 emergency management, ISO 31000 risk management, ISO 14090 adattamento climatico, ISO 7010 segnaletica).
+
 ## Accessibilità e siti web pubblici
 
 Per un sito rivolto ai cittadini sono importanti anche le norme su accessibilità, trasparenza e qualità dei servizi digitali.

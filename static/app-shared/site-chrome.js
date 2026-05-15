@@ -133,12 +133,15 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/san-pio-da-pietrelcina/" role="menuitem"><span>Il nostro patrono</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
-                /* Dropdown: Risorse (7 voci, riorganizzato maggio 2026):
+                /* Dropdown: Risorse (6 voci, riorganizzato maggio 2026):
                    - Podcast + Articoli da ascoltare → hub "Audio e podcast"
                    - Open Data + Stato del Sito → sezioni in /trasparenza/
                    - Trasparenza + Stato del Sito → footer (accountability)
                    - Mappa del Sito → solo footer (era duplicata)
-                   - Storia del territorio → "Per il Cittadino" */
+                   - Storia del territorio → "Per il Cittadino"
+                   - Standard ISO → sezione in /normativa/ (norme tecniche
+                     internazionali, completa la tassonomia nazionale/
+                     regionale/comunale; testo a pagamento iso.org/uni.com) */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-risorse" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
                     '<span>Risorse</span>' +
@@ -149,7 +152,6 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/glossario/" role="menuitem"><span>Glossario</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/area-download/" role="menuitem"><span>Area Download</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/normativa/" role="menuitem"><span>Normativa</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/standard-iso/" role="menuitem"><span>Standard ISO</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/strumenti/" role="menuitem"><span>Strumenti in Tempo Reale</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/audio-e-podcast/" role="menuitem"><span>Audio e podcast</span></a></li>' +
                   '</ul></div></div>' +

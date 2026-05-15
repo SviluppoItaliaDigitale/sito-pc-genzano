@@ -68,11 +68,11 @@ Il menu principale è organizzato come **mega-menu** (Opzione A) in `hugo.toml`:
 | Voce | Tipo | Contenuto |
 |---|---|---|
 | Home | diretta | `/` |
-| Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare, Kit pronti per situazioni vulnerabili |
+| Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare, Kit pronti per situazioni vulnerabili, Quanto sei preparato? (quiz), Storia del territorio |
 | Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza |
-| Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere |
+| Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere, Contenuti in LIS |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
-| Risorse ▾ | dropdown | FAQ, Strumenti in Tempo Reale, Area Download, Normativa, Glossario, **Standard ISO**, Mappa del Sito |
+| Risorse ▾ | dropdown | FAQ, Glossario, Area Download, Normativa, Strumenti in Tempo Reale, **Audio e podcast** |
 | Comunicazioni | diretta | `/comunicazioni/` |
 | Contatti | diretta | `/contatti/` |
 
