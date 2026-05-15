@@ -54,12 +54,16 @@
 {{ $domaniRischi := "" }}
 {{ with $allerta.domani }}
   {{ if in $domaniLivelliVisibili .livello }}
+    {{/* Difesa: blocco visibile SOLO se livello rilevante E titolo non vuoto.
+         Evita render "Previsto domani: — gialla" se dati popolati a metà. */}}
+    {{ if .titolo }}
     {{ $domaniVisibile = true }}
     {{ $domaniLiv = .livello }}
     {{ $domaniTitolo = .titolo }}
     {{ $domaniRischi = delimit .rischi ", " }}
     {{ $td := time.AsTime .data }}
     {{ $domaniDataLeg = printf "%d %s %d" $td.Day (index $mesi (int $td.Month)) $td.Year }}
+    {{ end }}
   {{ end }}
 {{ end }}
 <div id="allerta-bar-domani" class="allerta-bar-domani allerta-bar-domani-{{ $domaniLiv }}" role="status" aria-label="Pre-allerta meteo per domani"{{ if not $domaniVisibile }} style="display:none"{{ end }}>
@@ -76,11 +80,15 @@
 {{ $avvisoUrl := "" }}
 {{ $avvisoVisibile := false }}
 {{ with $allerta.avviso_meteo }}
+  {{/* Difesa: blocco visibile SOLO se tipo non vuoto.
+       Evita render "Avviso meteo: — allerta verde" se dati popolati a metà. */}}
+  {{ if .tipo }}
   {{ $avvisoLiv = .livello }}
   {{ $avvisoTipo = .tipo }}
   {{ $avvisoDescr = .descrizione }}
   {{ $avvisoUrl = .url }}
   {{ $avvisoVisibile = true }}
+  {{ end }}
 {{ end }}
 <div id="avviso-meteo-bar" class="avviso-meteo-bar avviso-meteo-bar-{{ $avvisoLiv }}" role="alert" aria-label="Avviso meteo avverso"{{ if not $avvisoVisibile }} style="display:none"{{ end }}>
   <div class="container">
