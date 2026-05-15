@@ -1,0 +1,84 @@
+name: Check video DPC su eventi correlati ai contenuti
+
+# Verifica periodica (bi-settimanale) di video/playlist sul canale ufficiale
+# DPCgov potenzialmente integrabili in articoli e pagine del sito.
+# Logica IDF-weighted in scripts/check-video-dpc-eventi.py:
+#  - scrape playlist e feed canale DPC
+#  - cross-match con i contenuti del sito (titoli, descrizioni, corpo)
+#  - apre issue con suggerimenti di abbinamento ordinati per forza del match
+# La decisione di integrare resta editoriale (umana).
+#
+# Scaglionato bi-settimanale lunedì 11:47 UTC per non collidere con
+# check-video-lis.yml (11:23 UTC stessa data).
+
+on:
+  schedule:
+    - cron: '47 11 1,15 * *'   # 1° e 15° del mese, 11:47 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  check-video-dpc-eventi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run cross-match
+        id: check
+        run: |
+          set -uo pipefail
+          OUTPUT=$(python3 scripts/check-video-dpc-eventi.py 2>&1 || true)
+          echo "$OUTPUT"
+          FIRST=$(echo "$OUTPUT" | head -1)
+          if [ "$FIRST" = "OK_NO_MATCHES" ]; then
+            echo "has_matches=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_matches=true" >> "$GITHUB_OUTPUT"
+            echo "$OUTPUT" | tail -n +2 > /tmp/issue-body.md
+            {
+              echo ""
+              echo "***"
+              echo ""
+              echo "## Come usare questi suggerimenti"
+              echo ""
+              echo "Ogni suggerimento è un **possibile abbinamento** fra una playlist o un video del canale DPCgov e un contenuto del sito che condivide parole chiave significative. Il punteggio (\`score\`) misura la forza del match (parole specifiche al sito = peso 1.0, parole moderate = 0.6, parole molto generiche = 0.2)."
+              echo ""
+              echo "**La decisione di integrare resta editoriale**: l'agent solo segnala potenziali abbinamenti, ma sta all'utente valutare se il video DPC è davvero pertinente al contenuto, e in che modo integrarlo (link in fondo all'articolo, sezione dedicata, citazione esplicita, ecc.)."
+              echo ""
+              echo "Modalità di integrazione possibili:"
+              echo "1. **Link semplice in fondo all'articolo**: \"Vedi anche il video DPC: [titolo](URL)\""
+              echo "2. **Sezione \"Approfondimenti video\"**: card dedicata"
+              echo "3. **Campo frontmatter \`video_correlati:\`** (futuro, da implementare)"
+              echo ""
+              echo "_Issue generata automaticamente dal workflow \`check-video-dpc-eventi.yml\` (bi-settimanale). I match con score basso (1.8-2.0) possono essere ignorati se non davvero pertinenti — sono inclusi per copertura._"
+            } >> /tmp/issue-body.md
+          fi
+
+      - name: Crea/aggiorna issue
+        if: steps.check.outputs.has_matches == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="Video DPC: potenziali abbinamenti con articoli del sito"
+          EXISTING=$(gh issue list --label "automazione" --label "video-dpc" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            echo "Aggiorno issue esistente #$EXISTING"
+            gh issue comment "$EXISTING" --body-file /tmp/issue-body.md
+          else
+            echo "Creo nuova issue"
+            gh issue create \
+              --title "$TITLE" \
+              --body-file /tmp/issue-body.md \
+              --label "automazione" \
+              --label "video-dpc"
+          fi
