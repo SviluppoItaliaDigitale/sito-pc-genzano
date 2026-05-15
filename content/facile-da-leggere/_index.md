@@ -253,6 +253,82 @@ dataUltimaRevisione: "2026-05-06"
 </div>
 
 <div class="facile-blocco">
+<h2><span class="icona">📱</span> Se ricevi un IT-alert</h2>
+<p><strong>IT-alert</strong> è un messaggio che lo Stato manda sul tuo telefono quando c'è un pericolo grande.</p>
+
+<ul class="facile-elenco">
+<li>il telefono suona forte anche se è in silenzio;</li>
+<li>appare un messaggio sullo schermo;</li>
+<li>leggi tutto il messaggio con calma;</li>
+<li>fai quello che dice il messaggio.</li>
+</ul>
+<p><strong>Non fare queste cose:</strong></p>
+<ul class="facile-elenco no">
+<li>non spegnere il telefono;</li>
+<li>non chiamare il 112 per dire che hai ricevuto il messaggio;</li>
+<li>non avere paura: serve a proteggerti.</li>
+</ul>
+<p>Il messaggio arriva a tutti i telefoni in una zona. Non sei tu da solo.</p>
+</div>
+
+<div class="facile-blocco">
+<h2><span class="icona">🔎</span> Se non trovi una persona della famiglia</h2>
+<p>In una emergenza la famiglia può separarsi. Niente panico.</p>
+
+<ul class="facile-elenco">
+<li>aspetta nel punto di ritrovo della famiglia, se l'avete scelto prima;</li>
+<li>se non avete un punto di ritrovo, vai a casa o all'<a href="/aree-attesa/">area di attesa</a> più vicina;</li>
+<li>chiama il numero di una persona fuori città scelto in famiglia (parente o amico);</li>
+<li>aspetta. La persona arriverà nello stesso posto.</li>
+</ul>
+<p><strong>Non fare queste cose:</strong></p>
+<ul class="facile-elenco no">
+<li>non chiamare il 112 per dire che non trovi un familiare, a meno che pensi sia in pericolo grave;</li>
+<li>non andare a cercarla in giro: potreste mancarvi.</li>
+</ul>
+<p>Prima dell'emergenza: <a href="/piano-familiare/">scegli con la tua famiglia</a> un punto di ritrovo e un contatto fuori città.</p>
+</div>
+
+<div class="facile-blocco">
+<h2><span class="icona">🚪</span> Se devi lasciare la casa</h2>
+<p>Se la Protezione Civile o i Vigili del Fuoco dicono di andare via dalla casa:</p>
+
+<ul class="facile-elenco">
+<li>prendi lo zaino di emergenza;</li>
+<li>prendi medicine, documenti, telefono e caricabatteria;</li>
+<li>chiudi acqua, luce e gas se hai tempo;</li>
+<li>chiudi la porta;</li>
+<li>vai all'<a href="/aree-attesa/">area di attesa</a> indicata.</li>
+</ul>
+<p><strong>Non fare queste cose:</strong></p>
+<ul class="facile-elenco no">
+<li>non tornare indietro per le cose dimenticate;</li>
+<li>non usare l'ascensore;</li>
+<li>non andare nei sottopassi e non passare sotto alberi grandi.</li>
+</ul>
+<p>Aiuta vicini anziani o persone che fanno fatica a camminare, se puoi farlo in sicurezza.</p>
+</div>
+
+<div class="facile-blocco">
+<h2><span class="icona">🐕</span> Se hai un animale con te</h2>
+<p>Anche cani, gatti e altri animali devono essere protetti.</p>
+
+<ul class="facile-elenco">
+<li>tieni l'animale al guinzaglio o nel trasportino;</li>
+<li>porta cibo, acqua e medicine dell'animale;</li>
+<li>porta il libretto sanitario se ce l'hai;</li>
+<li>portalo con te nell'<a href="/aree-attesa/">area di attesa</a>: gli animali sono ammessi.</li>
+</ul>
+<p><strong>Non fare queste cose:</strong></p>
+<ul class="facile-elenco no">
+<li>non lasciare l'animale in casa da solo;</li>
+<li>non lasciare l'animale in macchina con il caldo;</li>
+<li>non liberare l'animale: potrebbe perdersi.</li>
+</ul>
+<p>Per cani, gatti e animali di affezione il Gruppo ha un kit dedicato: <a href="/formazione/kit-calamita-animali-domestici/">Kit calamità animali domestici</a>.</p>
+</div>
+
+<div class="facile-blocco">
 <h2><span class="icona">🎒</span> Zaino di emergenza</h2>
 <p>Tieni in casa uno zaino con:</p>
 
