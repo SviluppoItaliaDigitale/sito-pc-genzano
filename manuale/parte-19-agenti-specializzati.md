@@ -3,11 +3,12 @@ _[Indice manuale](README.md)_
 # Parte 19 — Agenti specializzati Claude Code (maggio 2026)
 
 A maggio 2026 sono stati installati nel repo **agenti specializzati**
-in `.claude/agents/` (sette al 14 maggio 2026). Sono profili professionali
+in `.claude/agents/` (**tredici al 15 maggio 2026**). Sono profili professionali
 virtuali con cui Claude Code ti aiuta nei compiti ricorrenti del Gruppo,
-ognuno con un'expertise mirata (redazione AGID, art direction, gestione
-issue, deploy engineering, comunicazione di crisi, QA schede stampabili,
-audit di sistema).
+ognuno con un'expertise mirata. La progressione:
+
+- **8 agent dell'apertura** (maggio 2026): redazione AGID, art direction, gestione issue, deploy engineering, comunicazione di crisi, QA schede stampabili, audit di sistema, **gate visivo foto** (aggiunto il 15 maggio dopo l'incidente "Giro d'Italia 2026 a Formia": caption fabbricate dai testi di terzi invece che dalle foto reali).
+- **5 agent professionisti aggiuntivi** (15 maggio 2026, in risposta alla richiesta utente *"assumi le migliori professionalità per essere perfetti"*): accessibility auditor IAAP CPACC, content strategist editoriale (Repubblica.it/ANSA), glottologa italiano L2 (Univ. Stranieri Siena), SEO editor (La Stampa/Sole 24 Ore Digital), avvocato amministrativista (Camera Deputati). Ognuno con CV credibile e responsabilità chiara nel ciclo editoriale.
 
 **La parte importante:** non devi ricordare nessun nome tecnico. **Scrivi a
 Claude in italiano normale**, dicendo cosa vuoi fare, e Claude attiva da solo
@@ -15,7 +16,7 @@ l'agente giusto.
 
 ---
 
-## 19.1 I sette agenti e quando si attivano
+## 19.1 I tredici agenti e quando si attivano
 
 ### 1. Caporedattore (revisione articoli) — 🔴 GATE OBBLIGATO
 
@@ -195,6 +196,122 @@ PR né issue. È un auditor in sola lettura — le correzioni le autorizzi tu.
 push) e dall'audit settimanale automatico `audit-sito.yml`.
 
 **Identità tecnica**: `pc-site-auditor`.
+
+---
+
+### 8. Verificatore Visivo Foto (gate caption/alt) — 🔴 GATE OBBLIGATO
+
+**Da maggio 2026 questo agent è il gate visivo obbligato** richiamato automaticamente da **pc-article-reviewer** ogni volta che un articolo contiene `{{< foto >}}`. Esiste dopo l'incidente del 15 maggio 2026 (articolo "Giro d'Italia 2026 a Formia"): l'AI aveva scritto caption fabbricate dai testi FEPIVOL — *"briefing davanti alla Colonna Mobile"* su foto che mostrava due volontari in auto, *"marea di volontari accorsi"* su tre ragazzi in posa. Caption sciolte dalla realtà visiva, attribuzioni sbagliate (foto nostre attribuite al FEPIVOL).
+
+**Cosa fa**: per ogni `{{< foto >}}`, esegue **Read multimodale** della foto sorgente (Claude vede l'immagine), confronta con alt e caption dichiarati, applica fix se trova incoerenze. Verifica anche l'attribuzione: foto utente (file da `~/Scaricati/IMG-*` o `~/Immagini/*`) = "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" come default. Mai attribuirle a soggetti terzi solo perché il task cita testi di quei soggetti.
+
+**Identità tecnica**: `pc-photo-caption-verifier`.
+
+---
+
+### 9. Accessibility Designer IAAP CPACC (audit WCAG contenuti)
+
+**CV**: certificazione IAAP CPACC, 15 anni audit WCAG su PA italiana (INPS, INAIL, Min. Salute, Agenzia Entrate). Membro gruppo AGID per la "Dichiarazione di accessibilità". Autore manuali pratici Designers Italia su accessibilità contenuti.
+
+**Quando lo attivi**: vuoi un check WCAG sui CONTENUTI di un articolo o di una pagina — non solo sul rendering HTML (che è il lavoro di Lighthouse).
+
+**Frasi naturali che lo attivano automaticamente**:
+- *"Audit accessibilità di questo articolo, va bene per WCAG?"*
+- *"Controlla alt e contrasto."*
+- *"Sigle sciolte alla prima occorrenza?"*
+
+**Cosa fa**: verifica alt foto significativi (no "Immagine di…"), gerarchia heading H2→H3 senza salti, link descrittivi (no "clicca qui"), sigle PC sciolte alla prima occorrenza, lingua dichiarata per pagine tradotte, tabelle con scope + caption dove serve, contrasto badge custom. Report con riferimento puntuale ai success criteria WCAG (1.1.1, 1.3.1, 1.4.3, 2.4.4, 3.1.1, 3.1.4).
+
+**Identità tecnica**: `pc-accessibility-auditor`.
+
+---
+
+### 10. Content Strategist Editoriale (freschezza articoli)
+
+**CV**: 18 anni ex-vicedirettore Repubblica.it (cronaca + sicurezza), ex-caporedattore web ANSA.it, Master Content Strategy SDA Bocconi. Cura di 3 progetti AGID sulla freschezza dei contenuti PA.
+
+**Quando lo attivi**: vuoi sapere quali articoli sono scaduti, vecchi con dati obsoleti, o da aggiornare prima di una revisione editoriale.
+
+**Frasi naturali che lo attivano automaticamente**:
+- *"Ci sono articoli vecchi da aggiornare?"*
+- *"Fai un audit della freschezza degli articoli."*
+- *"Articoli con scadenza passata da archiviare?"*
+
+**Cosa fa**: sweep articoli con `scadenza:` superata (proponi ARCHIVIA/AGGIORNA/PROROGA), audit articoli > 18 mesi su topic time-sensitive, verifica norme citate (per check vigenza puntuale rinvia all'agent giuridico), telefoni/URL che possono essere cambiati, conteggi cristallizzati banditi dalla regola "niente conteggi inventario sul sito" (maggio 2026).
+
+**Si integra con il workflow `gestione-scadenze.yml`** (lunedì 09:37 UTC), che apre issue automatica con elenco articoli scaduti.
+
+**Identità tecnica**: `pc-content-freshness`.
+
+---
+
+### 11. Glottologa Italiano L2 (versione facile A2 CEFR)
+
+**CV**: dottorato in Linguistica Applicata all'**Università per Stranieri di Siena**, 8 anni glottologa CILS, esperienza didattica con migranti in CPIA Roma/Milano/Bologna, membro gruppo AGID "Versione facile da leggere" 2024.
+
+**Quando lo attivi**: vuoi creare la versione facile da leggere di un articolo (rivolta a parlanti italiano L2, persone con disabilità cognitive, anziani con poca scolarizzazione).
+
+**Frasi naturali che lo attivano automaticamente**:
+- *"Genera la versione facile di questo articolo."*
+- *"Versione italiano L2 di questa pagina."*
+- *"Riscrivi in italiano semplice per A2."*
+
+**Cosa fa**: produce `<slug>-facile.md` con regole **CEFR A2** rigorose — frasi 8-12 parole, lessico delle 2000 parole più frequenti, sigle sempre sciolte, verbi al presente, voce attiva, niente subordinate concatenate, niente metafore. Aggiunge il cross-frontmatter (`versione_facile:` sull'originale, `versione_facile_di:` + `build:list:never` sulla versione facile per escluderla da homepage/archivio/RSS).
+
+**Eccezione gate AGID**: il file `*-facile.md` NON segue il linguaggio AGID standard ma le regole CEFR A2; `pc-article-reviewer` NON viene invocato su di esso (vedi CLAUDE.md § "Auto-gate AGID — eccezione registro").
+
+**Identità tecnica**: `pc-italian-l2-writer`.
+
+---
+
+### 12. SEO Editor / Internal Linker (linkografia interna)
+
+**CV**: 12 anni content editor digitale a **La Stampa** + **Il Sole 24 Ore Digital**, Master Information Architecture al **Royal College of Art** di Londra, autore del libro "Linkografia delle PA" (Designers Italia, 2024).
+
+**Quando lo attivi**: vuoi rivedere la linkografia interna di un articolo prima della pubblicazione.
+
+**Frasi naturali che lo attivano automaticamente**:
+- *"Suggerisci link interni per questo articolo."*
+- *"L'articolo ha abbastanza link al glossario e ai kit?"*
+- *"Quali articoli correlati metterei in fondo?"*
+
+**Cosa fa**: scansiona il corpo per sigle e entità (rischi, kit calamità, standard ISO, categorie vulnerabili), mappa ciascuna alla pagina madre del sito (glossario, `/rischio-sismico/`, `/formazione/kit-calamita-anziani/`, ecc.), propone una sezione "Sul nostro sito" con 4-6 link interni prima delle "Fonti istituzionali" (regola AGID: prima rispondi sul tuo sito, poi rinvia a fonti esterne). Massimo 1 link per concetto, prima occorrenza.
+
+**Identità tecnica**: `pc-internal-linker`.
+
+---
+
+### 13. SEO Technical Specialist (meta / OG / structured data)
+
+**CV**: certificazione **Google Search Central** 2023, 10 anni SEO technical lead in agenzie digital per portali PA (Min. Cultura, Min. Salute campagne, INPS sezione Sostegni). Cura del toolkit Designers Italia "SEO per servizi pubblici digitali".
+
+**Quando lo attivi**: vuoi verificare che un articolo sia ottimizzato per Google e per le anteprime social prima della pubblicazione.
+
+**Frasi naturali che lo attivano automaticamente**:
+- *"Controlla il SEO di questo articolo."*
+- *"Meta description OK?"*
+- *"L'anteprima OG su Facebook funziona?"*
+
+**Cosa fa**: verifica meta description ≤160 char, title ≤60, slug SEO-friendly, OG image esiste 1200×630, Twitter Card, JSON-LD Article (Schema.org), canonical, presenza in sitemap.xml, inclusione in RSS feed, lang attribute. Report PASS/WARN/FAIL per ciascun check.
+
+**Identità tecnica**: `pc-seo-checker`.
+
+---
+
+### 14. Avvocato Amministrativista (vigenza norme citate)
+
+**CV**: laurea Giurisprudenza LUISS con dottorato Diritto Amministrativo Sapienza, 14 anni consulente legislativo **Camera dei Deputati** (Ufficio Studi e Documentazione, specializzazione PC + ambiente), autore manuale **"La Protezione Civile dopo il D.Lgs. 1/2018"** (Giuffrè, 2023).
+
+**Quando lo attivi**: vuoi sapere se le norme citate in un articolo sono ancora vigenti — utile per articoli vecchi e per nuovi articoli che citano normativa specifica.
+
+**Frasi naturali che lo attivano automaticamente**:
+- *"Le norme citate qui sono ancora vigenti?"*
+- *"Controlla i riferimenti di legge."*
+- *"La L. 225/1992 vale ancora?"* (no, è abrogata dal D.Lgs. 1/2018)
+
+**Cosa fa**: estrae citazioni normative dal corpo (D.Lgs., L., L.R., DGR, DPCM, D.M.), verifica via WebFetch su **Normattiva** / **Gazzetta Ufficiale** / **Consiglio regionale Lazio** / **BURL Lazio** se ogni norma è vigente, abrogata o modificata. Conoscenza pregressa di norme PC fondamentali (D.Lgs. 1/2018 vigente, L. 225/1992 abrogata, L.R. Lazio 9/2017 vigente, ecc.) per evitare WebFetch inutili. Suggerisce sostituzioni dove abrogata.
+
+**Identità tecnica**: `pc-normative-verifier`.
 
 ---
 
