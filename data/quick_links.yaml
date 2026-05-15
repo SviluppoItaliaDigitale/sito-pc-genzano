@@ -52,7 +52,7 @@ servizi:
     url: "/assistente/"
     icona: "bi-question-circle"
     classe_icona: "si-red"
-    descrizione: "Assistente guidato: ti aiuta a capire cosa fare in caso di emergenza."
+    descrizione: "Assistente guidato: ti aiuta a capire cosa fare in emergenza e a orientarti nel sito."
     azione: "Avvia assistente"
 
   - titolo: "Facile da Leggere"

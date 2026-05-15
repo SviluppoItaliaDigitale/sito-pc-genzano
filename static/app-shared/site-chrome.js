@@ -90,6 +90,8 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" role="menuitem"><span>Piano Familiare</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/kit-calamita/" role="menuitem"><span>Kit pronti per situazioni vulnerabili</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/quiz-preparazione/" role="menuitem"><span>Quanto sei preparato? (quiz)</span></a></li>' +
+                    /* Spostata da "Risorse" a maggio 2026: timeline storica del territorio = contenuto narrativo per il cittadino. */
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/storia/" role="menuitem"><span>Storia del territorio</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 /* Dropdown: Per le scuole (6 voci didattiche, splittato da "Educazione e Inclusione" maggio 2026) */
@@ -131,10 +133,12 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/san-pio-da-pietrelcina/" role="menuitem"><span>Il nostro patrono</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
-                /* Dropdown: Risorse. Open Data reinserito (maggio 2026):
-                   la pagina /open-data/ pubblica i dataset delle attività
-                   del Gruppo (interventi, ore, esercitazioni, formazione,
-                   dotazioni) in CSV/JSON sotto CC BY 4.0. */
+                /* Dropdown: Risorse (7 voci, riorganizzato maggio 2026):
+                   - Podcast + Articoli da ascoltare → hub "Audio e podcast"
+                   - Open Data + Stato del Sito → sezioni in /trasparenza/
+                   - Trasparenza + Stato del Sito → footer (accountability)
+                   - Mappa del Sito → solo footer (era duplicata)
+                   - Storia del territorio → "Per il Cittadino" */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-risorse" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
                     '<span>Risorse</span>' +
@@ -142,18 +146,12 @@
                   '</a>' +
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-risorse"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/faq/" role="menuitem"><span>FAQ</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/strumenti/" role="menuitem"><span>Strumenti in Tempo Reale</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/glossario/" role="menuitem"><span>Glossario</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/area-download/" role="menuitem"><span>Area Download</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/normativa/" role="menuitem"><span>Normativa</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/glossario/" role="menuitem"><span>Glossario</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/standard-iso/" role="menuitem"><span>Standard ISO</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/trasparenza/" role="menuitem"><span>Trasparenza</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/open-data/" role="menuitem"><span>Open Data</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/podcast/" role="menuitem"><span>Podcast</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/articoli-da-ascoltare/" role="menuitem"><span>Articoli da ascoltare</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/storia/" role="menuitem"><span>Storia del territorio</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/mappa-sito/" role="menuitem"><span>Mappa del Sito</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/stato-sistema/" role="menuitem"><span>Stato del Sito</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/strumenti/" role="menuitem"><span>Strumenti in Tempo Reale</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/audio-e-podcast/" role="menuitem"><span>Audio e podcast</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/comunicazioni/" role="menuitem"><span>Comunicazioni</span></a></li>' +
@@ -202,7 +200,13 @@
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/note-legali/" style="color:rgba(255,255,255,0.85);">Note Legali</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/privacy/" style="color:rgba(255,255,255,0.85);">Privacy</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/accessibilita/" style="color:rgba(255,255,255,0.85);">Accessibilit&agrave;</a></li>' +
+                /* Trasparenza + Stato del Sito spostati da "Risorse" a maggio 2026:
+                   accountability istituzionale, coerenti nel footer accanto a
+                   Note Legali / Privacy / Accessibilità. */
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/trasparenza/" style="color:rgba(255,255,255,0.85);">Trasparenza</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/siti-utili/" style="color:rgba(255,255,255,0.85);">Siti Utili</a></li>' +
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/mappa-sito/" style="color:rgba(255,255,255,0.85);">Mappa del Sito</a></li>' +
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/stato-sistema/" style="color:rgba(255,255,255,0.85);">Stato del Sito</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/feed-rss/" style="color:rgba(255,255,255,0.85);">Feed RSS</a></li>' +
               '</ul></nav>' +
               '<div class="mt-3">' +

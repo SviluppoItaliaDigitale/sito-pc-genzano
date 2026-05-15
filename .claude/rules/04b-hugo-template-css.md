@@ -9,11 +9,11 @@ Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `the
 | Voce | Tipo | Contenuto |
 |---|---|---|
 | Home | diretta | `/` |
-| Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare, **Kit pronti per situazioni vulnerabili**, **Quanto sei preparato? (quiz)** |
+| Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare, **Kit pronti per situazioni vulnerabili**, **Quanto sei preparato? (quiz)**, **Storia del territorio** |
 | Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza |
 | Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere, **Contenuti in LIS** |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
-| Risorse ▾ | dropdown | FAQ, Strumenti in Tempo Reale, Area Download, Normativa, Glossario, Standard ISO, **Trasparenza**, **Storia del territorio**, **Open Data**, **Podcast**, **Articoli da ascoltare**, Mappa del Sito, **Stato del Sito** |
+| Risorse ▾ | dropdown | FAQ, Glossario, Area Download, Normativa, Standard ISO, Strumenti in Tempo Reale, **Audio e podcast** |
 | Comunicazioni | diretta | `/comunicazioni/` |
 | Contatti | diretta | `/contatti/` |
 
@@ -27,7 +27,16 @@ Razionale: voci flat erano troppe per mobile e per l'utente in emergenza. L'acco
 
 **Aggiunta v3.1 (8 maggio 2026):** voce **"Standard ISO"** sotto Risorse, dopo Glossario e prima di Mappa del Sito. Punta all'hub `/standard-iso/` con 30 schede degli standard internazionali rilevanti per la PC (ISO/TC 292 emergency management, famiglia ISO 31000 risk management, ISO 14090 adattamento climatico, ISO 7010 segnaletica, città e infrastrutture). Il dropdown Risorse passa da 6 a 7 voci.
 
-**Aggiunte v3.2 (roadmap, maggio 2026):** le iniziative della roadmap hanno aggiunto voci ai dropdown: **Per il Cittadino** → "Quanto sei preparato? (quiz)" (idea #7); **Accessibilità e Supporti** → "Contenuti in LIS" (idea #10); **Risorse** → "Trasparenza", "Storia del territorio" (#8), "Open Data" (reinserita), "Podcast" (#22), "Articoli da ascoltare" (#22, ex `/podcast/`), "Stato del Sito" (#25). ⚠️ Il dropdown **Risorse è cresciuto a 13 voci**, ben oltre il limite Miller 7±2: vale la pena valutare una riorganizzazione futura (es. raggruppare strumenti di consultazione vs canali alternativi vs trasparenza). Ogni voce di menu va sempre aggiunta **sia in `hugo.toml` sia in `static/app-shared/site-chrome.js`** (vedi § "Sincronizzazione obbligatoria").
+**Aggiunte v3.2 (roadmap, maggio 2026):** le iniziative della roadmap hanno aggiunto voci ai dropdown: **Per il Cittadino** → "Quanto sei preparato? (quiz)" (idea #7); **Accessibilità e Supporti** → "Contenuti in LIS" (idea #10); **Risorse** → "Trasparenza", "Storia del territorio" (#8), "Open Data" (reinserita), "Podcast" (#22), "Articoli da ascoltare" (#22, ex `/podcast/`), "Stato del Sito" (#25). Il dropdown Risorse era cresciuto a 13 voci, oltre il limite Miller 7±2 → riorganizzato in v3.3 (vedi sotto). Ogni voce di menu va sempre aggiunta **sia in `hugo.toml` sia in `static/app-shared/site-chrome.js`** (vedi § "Sincronizzazione obbligatoria").
+
+**Riorganizzazione v3.3 (15 maggio 2026) — accorpamento Risorse 13→7 voci.** Strategia "accorpamento per hub" applicata per riportare Risorse dentro Miller 7±2:
+- **Podcast** + **Articoli da ascoltare** → fusi in una nuova pagina hub **"Audio e podcast"** (`content/audio-e-podcast/_index.md`) che spiega la differenza fra i due canali e linka entrambi. Le pagine madre `/podcast/` e `/articoli-da-ascoltare/` restano accessibili al loro URL (link interni, sitemap, ricerca).
+- **Open Data** e **Stato del Sito** → richiamati come sezioni dedicate dentro `/trasparenza/` ("Dataset aperti" + "Stato tecnico del sito"). Le pagine madre restano accessibili al loro URL.
+- **Trasparenza** + **Stato del Sito** → spostati nel footer accanto a Note Legali / Privacy / Accessibilità (accountability istituzionale coerente con le altre pagine legali).
+- **Mappa del Sito** → rimossa dal dropdown Risorse (era duplicata: già nel footer).
+- **Storia del territorio** → spostata in **"Per il Cittadino"** (è contenuto narrativo per il cittadino, non strumento di consultazione).
+
+Risultato: Risorse a **7 voci** pulite (FAQ, Glossario, Area Download, Normativa, Standard ISO, Strumenti in Tempo Reale, Audio e podcast), 5 dropdown di primo livello (invariati), footer a 8 voci nella sezione "Link Utili".
 
 Il numero totale di voci di primo livello è 8 (Home + 5 dropdown + Comunicazioni + Contatti). Limite Miller superato di 1 voce, accettato perché compensato dalla coerenza interna dei dropdown.
 
