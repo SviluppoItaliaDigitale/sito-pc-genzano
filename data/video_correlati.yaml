@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 205 / Video unici usati: 170 /
-# Link totali: 410 (max 3 per pagina,
+# Pagine coperte: 235 / Video unici usati: 190 /
+# Link totali: 466 (max 3 per pagina,
 # soglia score >= 3.0).
 
 canali:
@@ -23,6 +23,21 @@ canali:
     url: https://www.youtube.com/@io_non_rischio/videos
     video_count: 97
 pagine:
+  aree-attesa:
+    title: Aree di attesa di Genzano
+    url: /aree-attesa/
+    video:
+    - anchored:
+      - attesa
+      canale: abili-a-proteggere
+      id: -i75MR2EFGQ
+      is_lis: true
+      overlap:
+      - aree
+      - attesa
+      score: 3.6
+      titolo: 'Glossario in LIS: Aree di attesa'
+      url: https://youtu.be/-i75MR2EFGQ
   comunicazioni/2024-10-06-manuale-cucina-emergenza-fic-presentazione:
     title: La Federazione Italiana Cuochi presenta il Manuale di Cucina in Emergenza
     url: /comunicazioni/2024-10-06-manuale-cucina-emergenza-fic-presentazione/
@@ -31,6 +46,7 @@ pagine:
       - presenta
       canale: dpc-gov
       id: GoLH4rmulgs
+      is_lis: false
       overlap:
       - capo
       - ciciliano
@@ -42,6 +58,7 @@ pagine:
       - federazione
       canale: abili-a-proteggere
       id: vYwxNjixlLE
+      is_lis: false
       overlap:
       - federazione
       - presidente
@@ -52,6 +69,7 @@ pagine:
       - federazione
       canale: abili-a-proteggere
       id: wJtpPJlLZsE
+      is_lis: false
       overlap:
       - federazione
       - presidente
@@ -67,6 +85,7 @@ pagine:
       - solidarietà
       canale: abili-a-proteggere
       id: 6Ue54lPvZ48
+      is_lis: false
       overlap:
       - solidarietà
       score: 3.0
@@ -76,6 +95,7 @@ pagine:
       - recupero
       canale: dpc-gov
       id: 0-6oRTWk5O4
+      is_lis: false
       overlap:
       - recupero
       score: 3.0
@@ -85,6 +105,7 @@ pagine:
       - recupero
       canale: dpc-gov
       id: dkUue6aexbo
+      is_lis: false
       overlap:
       - recupero
       score: 3.0
@@ -98,6 +119,7 @@ pagine:
       - buone
       canale: dpc-gov
       id: MzVgNeBjJSQ
+      is_lis: false
       overlap:
       - buone
       score: 3.0
@@ -111,6 +133,7 @@ pagine:
       - presenta
       canale: dpc-gov
       id: 6JuLpVcQurE
+      is_lis: false
       overlap:
       - presenta
       score: 3.0
@@ -120,6 +143,7 @@ pagine:
       - presenta
       canale: dpc-gov
       id: GoLH4rmulgs
+      is_lis: false
       overlap:
       - presenta
       score: 3.0
@@ -129,6 +153,7 @@ pagine:
       - presenta
       canale: dpc-gov
       id: h9gHG4ggiK4
+      is_lis: false
       overlap:
       - presenta
       score: 3.0
@@ -142,6 +167,7 @@ pagine:
       - accoglienza
       canale: dpc-gov
       id: 91W1aNc-P90
+      is_lis: false
       overlap:
       - accoglienza
       - campo
@@ -154,9 +180,24 @@ pagine:
     url: /comunicazioni/2025-06-15-campagna-aib/
     video:
     - anchored:
+      - boschivi
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - avvisti
+      - boschivi
+      - incendi
+      - incendio
+      - rischio
+      score: 4.2
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
+    - anchored:
       - campagna
       canale: io-non-rischio
       id: -lfm_NBSFIs
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -164,15 +205,18 @@ pagine:
       titolo: Io non rischio 2017 - Luca Pancalli testimonial della Campagna
       url: https://youtu.be/-lfm_NBSFIs
     - anchored:
-      - campagna
+      - boschivi
       canale: io-non-rischio
-      id: r1_tqC9ZGgU
+      id: 9tYSNBQY7OY
+      is_lis: true
       overlap:
-      - campagna
+      - boschivi
+      - incendi
       - rischio
+      - subito
       score: 3.2
-      titolo: Le novità della campagna Io non rischio 2023
-      url: https://youtu.be/r1_tqC9ZGgU
+      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
+      url: https://youtu.be/9tYSNBQY7OY
   comunicazioni/2025-07-14-alimentazioni-speciali-campo-accoglienza:
     title: 'Alimentazioni speciali nei campi di accoglienza: allergie, celiachia e semaforo alimentare'
     url: /comunicazioni/2025-07-14-alimentazioni-speciali-campo-accoglienza/
@@ -181,6 +225,7 @@ pagine:
       - accoglienza
       canale: dpc-gov
       id: 91W1aNc-P90
+      is_lis: false
       overlap:
       - accoglienza
       - campo
@@ -192,6 +237,7 @@ pagine:
       - campi
       canale: dpc-gov
       id: 7q9IP5GpBRw
+      is_lis: false
       overlap:
       - campi
       - campo
@@ -202,6 +248,7 @@ pagine:
       - campi
       canale: dpc-gov
       id: AsI_Jg1bhSo
+      is_lis: false
       overlap:
       - campi
       - campo
@@ -216,6 +263,7 @@ pagine:
       - solidarietà
       canale: abili-a-proteggere
       id: 6Ue54lPvZ48
+      is_lis: false
       overlap:
       - fisico
       - solidarietà
@@ -230,6 +278,7 @@ pagine:
       - piazza
       canale: io-non-rischio
       id: 1kZMImTOPXU
+      is_lis: false
       overlap:
       - piazza
       - rischio
@@ -241,6 +290,7 @@ pagine:
       - piazza
       canale: io-non-rischio
       id: 2rqG514_228
+      is_lis: false
       overlap:
       - piazza
       - rischio
@@ -252,6 +302,7 @@ pagine:
       - piazza
       canale: io-non-rischio
       id: CwxxWH-8cso
+      is_lis: false
       overlap:
       - piazza
       - rischio
@@ -267,6 +318,7 @@ pagine:
       - recupero
       canale: dpc-gov
       id: 0-6oRTWk5O4
+      is_lis: false
       overlap:
       - recupero
       score: 3.0
@@ -276,6 +328,7 @@ pagine:
       - recupero
       canale: dpc-gov
       id: dkUue6aexbo
+      is_lis: false
       overlap:
       - recupero
       score: 3.0
@@ -285,6 +338,7 @@ pagine:
       - recupero
       canale: dpc-gov
       id: qjleHfVHiWU
+      is_lis: false
       overlap:
       - recupero
       score: 3.0
@@ -298,6 +352,7 @@ pagine:
       - antonio
       canale: abili-a-proteggere
       id: dbeb45w0tVo
+      is_lis: false
       overlap:
       - antonio
       - campo
@@ -308,6 +363,7 @@ pagine:
       - antonio
       canale: abili-a-proteggere
       id: R00PZpq-hhk
+      is_lis: false
       overlap:
       - antonio
       score: 3.0
@@ -317,6 +373,7 @@ pagine:
       - antonio
       canale: abili-a-proteggere
       id: _7lhyAgB_E4
+      is_lis: false
       overlap:
       - antonio
       score: 3.0
@@ -330,6 +387,7 @@ pagine:
       - memoria
       canale: dpc-gov
       id: yRNxAUcgdNE
+      is_lis: false
       overlap:
       - conoscenza
       - memoria
@@ -341,6 +399,7 @@ pagine:
       - ricordare
       canale: io-non-rischio
       id: phK5ETSeUwI
+      is_lis: false
       overlap:
       - conoscere
       - ricordare
@@ -355,6 +414,7 @@ pagine:
       - europea
       canale: dpc-gov
       id: gA5H_FuzG-c
+      is_lis: false
       overlap:
       - emergenze
       - europea
@@ -370,6 +430,7 @@ pagine:
       - storia
       canale: io-non-rischio
       id: Pz5Dky_rvFI
+      is_lis: false
       overlap:
       - storia
       score: 3.0
@@ -383,6 +444,7 @@ pagine:
       - valore
       canale: dpc-gov
       id: BooLyjLFbSM
+      is_lis: false
       overlap:
       - sede
       - valore
@@ -393,6 +455,7 @@ pagine:
       - ricordare
       canale: io-non-rischio
       id: phK5ETSeUwI
+      is_lis: false
       overlap:
       - puoi
       - ricordare
@@ -407,6 +470,7 @@ pagine:
       - donne
       canale: dpc-gov
       id: QhVWOEPOvd8
+      is_lis: false
       overlap:
       - donne
       score: 3.0
@@ -421,6 +485,7 @@ pagine:
       - tsunami
       canale: abili-a-proteggere
       id: yhCLcmFNZaI
+      is_lis: false
       overlap:
       - allerta
       - ingv
@@ -430,8 +495,10 @@ pagine:
       url: https://youtu.be/yhCLcmFNZaI
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - danni
       - scossa
@@ -441,8 +508,10 @@ pagine:
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - danni
       - scossa
@@ -458,6 +527,7 @@ pagine:
       - solidarietà
       canale: abili-a-proteggere
       id: 6Ue54lPvZ48
+      is_lis: false
       overlap:
       - solidarietà
       score: 3.0
@@ -471,6 +541,7 @@ pagine:
       - autismo
       canale: abili-a-proteggere
       id: gh0Hmf3Jhr4
+      is_lis: false
       overlap:
       - autismo
       - autonomia
@@ -485,6 +556,7 @@ pagine:
       - logo
       canale: dpc-gov
       id: YKdvXzRUjgg
+      is_lis: false
       overlap:
       - logo
       score: 3.0
@@ -498,6 +570,7 @@ pagine:
       - piattaforma
       canale: dpc-gov
       id: lbI7yBJGGs8
+      is_lis: false
       overlap:
       - funzionalità
       - piattaforma
@@ -513,6 +586,7 @@ pagine:
       - terzo
       canale: dpc-gov
       id: bQFnYQbiHu4
+      is_lis: false
       overlap:
       - terzo
       score: 3.0
@@ -522,6 +596,7 @@ pagine:
       - storia
       canale: io-non-rischio
       id: Pz5Dky_rvFI
+      is_lis: false
       overlap:
       - storia
       score: 3.0
@@ -532,35 +607,45 @@ pagine:
     url: /comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/
     video:
     - anchored:
+      - terremoto
+      canale: dpc-gov
+      id: 7LfXwR1HO7Y
+      is_lis: false
+      overlap:
+      - accoglienza
+      - allestimento
+      - area
+      - dell
+      - terremoto
+      score: 4.6
+      titolo: Allestimento dell'area di accoglienza ad Amatrice – Terremoto Centro Italia
+      url: https://youtu.be/7LfXwR1HO7Y
+    - anchored:
+      - terremoto
+      canale: dpc-gov
+      id: no26vNJAfsg
+      is_lis: false
+      overlap:
+      - accoglienza
+      - allestimento
+      - area
+      - soccorso
+      - terremoto
+      score: 4.2
+      titolo: Sorvolo, ricerca e soccorso, allestimento area d'accoglienza – Terremoto Albania
+      url: https://youtu.be/no26vNJAfsg
+    - anchored:
       - sisma
+      - terremoto
       canale: dpc-gov
       id: 2Evnqcfry8Q
+      is_lis: false
       overlap:
       - sisma
       - terremoto
       score: 3.8
       titolo: L'intervento italiano a una settimana dal sisma – Terremoto Turchia e Siria
       url: https://youtu.be/2Evnqcfry8Q
-    - anchored:
-      - sisma
-      canale: dpc-gov
-      id: B9--XweE0nQ
-      overlap:
-      - sisma
-      - terremoto
-      score: 3.8
-      titolo: 'Sopralluoghi post-sisma: il software Erikus (2 di 2) – Terremoto Centro Italia'
-      url: https://youtu.be/B9--XweE0nQ
-    - anchored:
-      - sisma
-      canale: dpc-gov
-      id: qkKqenrA8Og
-      overlap:
-      - sisma
-      - terremoto
-      score: 3.8
-      titolo: 'Sopralluoghi post-sisma: il software Erikus (1 di 2) – Terremoto Centro Italia'
-      url: https://youtu.be/qkKqenrA8Og
   comunicazioni/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici:
     title: 'Allagamenti, alluvioni e alberi pericolanti: gli interventi tecnici del Gruppo Comunale'
     url: /comunicazioni/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici/
@@ -569,6 +654,7 @@ pagine:
       - interventi
       canale: dpc-gov
       id: ClFIKEGjiX0
+      is_lis: false
       overlap:
       - interventi
       score: 3.0
@@ -578,20 +664,40 @@ pagine:
       - interventi
       canale: dpc-gov
       id: _osjFBJOasE
+      is_lis: false
       overlap:
       - interventi
       score: 3.0
       titolo: Gli interventi di messa in sicurezza nel Patan Museum (1 di 2) – Terremoto Nepal
       url: https://youtu.be/_osjFBJOasE
+  comunicazioni/2026-04-12-maxi-emergenze-colonne-mobili-coordinamenti-fepivol-lazio:
+    title: 'Maxi emergenze e colonne mobili: come si organizza l''intervento fuori dal territorio comunale'
+    url: /comunicazioni/2026-04-12-maxi-emergenze-colonne-mobili-coordinamenti-fepivol-lazio/
+    video:
+    - anchored:
+      - colonna
+      - mobile
+      canale: abili-a-proteggere
+      id: WU-vErzbN5U
+      is_lis: true
+      overlap:
+      - colonna
+      - mobile
+      score: 4.0
+      titolo: 'Glossario in LIS: Colonna Mobile Nazionale'
+      url: https://youtu.be/WU-vErzbN5U
   comunicazioni/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1:
     title: 'Le frequenze radio della Rete Zamberletti: i radioamatori al servizio della Protezione Civile nelle prove di sintonia
       tra le Prefetture d''Italia'
     url: /comunicazioni/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1/
     video:
     - anchored:
+      - radio
+      - rete
       - zamberletti
       canale: dpc-gov
       id: vyTJcOxzntg
+      is_lis: false
       overlap:
       - emergenza
       - radio
@@ -605,6 +711,7 @@ pagine:
       - zamberletti
       canale: dpc-gov
       id: RjCdoyyz3sQ
+      is_lis: false
       overlap:
       - zamberletti
       score: 3.0
@@ -620,6 +727,7 @@ pagine:
       - proteggere
       canale: abili-a-proteggere
       id: R00PZpq-hhk
+      is_lis: false
       overlap:
       - abili
       - proteggere
@@ -631,6 +739,7 @@ pagine:
       - proteggere
       canale: abili-a-proteggere
       id: WA6HZdcMTHw
+      is_lis: false
       overlap:
       - abili
       - proteggere
@@ -642,12 +751,30 @@ pagine:
       - proteggere
       canale: abili-a-proteggere
       id: jHD_z0dSSCI
+      is_lis: false
       overlap:
       - abili
       - proteggere
       score: 6.0
       titolo: Abili a Proteggere - le origini
       url: https://youtu.be/jHD_z0dSSCI
+  comunicazioni/2026-04-14-radio-protezione-civile-dieci-errori-volontario:
+    title: Dieci errori da evitare alla radio in protezione civile
+    url: /comunicazioni/2026-04-14-radio-protezione-civile-dieci-errori-volontario/
+    video:
+    - anchored:
+      - radio
+      canale: dpc-gov
+      id: vyTJcOxzntg
+      is_lis: false
+      overlap:
+      - emergenza
+      - radio
+      - rete
+      - telecomunicazioni
+      score: 3.8
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
   comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione:
     title: 'Esercitazione antincendio boschivo: come ci prepariamo'
     url: /comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/
@@ -656,6 +783,7 @@ pagine:
       - esercitazione
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
+      is_lis: false
       overlap:
       - esercitazione
       - evacuazione
@@ -667,6 +795,7 @@ pagine:
       - esercitazione
       canale: abili-a-proteggere
       id: jy4kGt-eFWg
+      is_lis: false
       overlap:
       - esercitazione
       - evacuazione
@@ -677,6 +806,7 @@ pagine:
       - esercitazione
       canale: dpc-gov
       id: OkEoPVutZr4
+      is_lis: false
       overlap:
       - esercitazione
       - pianificazione
@@ -691,6 +821,7 @@ pagine:
       - frana
       canale: dpc-gov
       id: 6eeYoCoFn5M
+      is_lis: false
       overlap:
       - frana
       score: 3.0
@@ -700,6 +831,7 @@ pagine:
       - frana
       canale: dpc-gov
       id: L98tBMJZn0k
+      is_lis: false
       overlap:
       - frana
       score: 3.0
@@ -709,19 +841,60 @@ pagine:
       - frana
       canale: dpc-gov
       id: k90I_coJTsA
+      is_lis: false
       overlap:
       - frana
       score: 3.0
       titolo: Operazioni di salvataggio rimasti isolati dopo la frana di Niescemi.
       url: https://youtu.be/k90I_coJTsA
+  comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc:
+    title: 'La catena delle comunicazioni in protezione civile: DPC, COR, COM, COI, COC'
+    url: /comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/
+    video:
+    - anchored:
+      - coc
+      - operativo
+      canale: abili-a-proteggere
+      id: Q9JaOMzqd1w
+      is_lis: true
+      overlap:
+      - centro
+      - coc
+      - comunale
+      - operativo
+      score: 5.0
+      titolo: 'Glossario in LIS: COC - Centro Operativo Comunale'
+      url: https://youtu.be/Q9JaOMzqd1w
+    - anchored:
+      - dpc
+      canale: dpc-gov
+      id: NukrIN8jnE4
+      is_lis: false
+      overlap:
+      - dpc
+      score: 3.0
+      titolo: La Protezione Civile racconta il podcast DPC - Dove Parliamo di Clima con Filippo Thiery
+      url: https://youtu.be/NukrIN8jnE4
   comunicazioni/2026-04-17-gestione-sala-radio-chiamata-emergenza-scheda-intervento:
     title: 'La sala radio di protezione civile: come si gestisce una chiamata e come si compila la scheda di intervento'
     url: /comunicazioni/2026-04-17-gestione-sala-radio-chiamata-emergenza-scheda-intervento/
     video:
     - anchored:
       - sala
+      canale: abili-a-proteggere
+      id: wm2mdD9Up3k
+      is_lis: true
+      overlap:
+      - sala
+      - situazione
+      score: 3.6
+      titolo: 'Glossario in LIS: Sala situazione Italia'
+      url: https://youtu.be/wm2mdD9Up3k
+    - anchored:
+      - sala
       canale: dpc-gov
       id: XOHR1OWB-cs
+      is_lis: false
       overlap:
       - sala
       - situazione
@@ -731,21 +904,25 @@ pagine:
     - anchored:
       - sala
       canale: abili-a-proteggere
-      id: Tc3zhweSzE4
+      id: Ok4mVQDypVE
+      is_lis: true
       overlap:
+      - operativa
       - sala
-      score: 3.0
-      titolo: Sala monitoraggio terremoti e tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami)
-      url: https://youtu.be/Tc3zhweSzE4
+      score: 3.2
+      titolo: 'Glossario in LIS: Sala operativa unificata permanente'
+      url: https://youtu.be/Ok4mVQDypVE
   comunicazioni/2026-04-17-mostra-terremoti-italia-napoli:
     title: 'La mostra «Terremoti d''Italia» fa tappa a Napoli: dal 20 aprile al 9 maggio'
     url: /comunicazioni/2026-04-17-mostra-terremoti-italia-napoli/
     video:
     - anchored:
       - mostra
+      - sismico
       - terremoti
       canale: dpc-gov
       id: yRNxAUcgdNE
+      is_lis: false
       overlap:
       - mostra
       - rischio
@@ -759,6 +936,7 @@ pagine:
       - terremoti
       canale: dpc-gov
       id: NN6QVaAhnjo
+      is_lis: false
       overlap:
       - mostra
       - terremoti
@@ -771,6 +949,7 @@ pagine:
       - terremoti
       canale: dpc-gov
       id: pgHPsSGI1HY
+      is_lis: false
       overlap:
       - dell
       - mostra
@@ -783,9 +962,21 @@ pagine:
     url: /comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/
     video:
     - anchored:
+      - sala
+      canale: abili-a-proteggere
+      id: Ok4mVQDypVE
+      is_lis: true
+      overlap:
+      - operativa
+      - sala
+      score: 3.6
+      titolo: 'Glossario in LIS: Sala operativa unificata permanente'
+      url: https://youtu.be/Ok4mVQDypVE
+    - anchored:
       - formatore
       canale: abili-a-proteggere
       id: dbeb45w0tVo
+      is_lis: false
       overlap:
       - campo
       - formatore
@@ -796,20 +987,12 @@ pagine:
       - sala
       canale: abili-a-proteggere
       id: Tc3zhweSzE4
+      is_lis: false
       overlap:
       - sala
       score: 3.0
       titolo: Sala monitoraggio terremoti e tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami)
       url: https://youtu.be/Tc3zhweSzE4
-    - anchored:
-      - sala
-      canale: dpc-gov
-      id: XOHR1OWB-cs
-      overlap:
-      - sala
-      score: 3.0
-      titolo: La Sala Situazione Italia
-      url: https://youtu.be/XOHR1OWB-cs
   comunicazioni/2026-04-20-attivazione-incendio-cecchina-albano-laziale:
     title: Attivazione a Cecchina (Albano Laziale) per incendio di un casolare
     url: /comunicazioni/2026-04-20-attivazione-incendio-cecchina-albano-laziale/
@@ -818,6 +1001,7 @@ pagine:
       - sala
       canale: abili-a-proteggere
       id: Tc3zhweSzE4
+      is_lis: false
       overlap:
       - monitoraggio
       - responsabile
@@ -825,6 +1009,48 @@ pagine:
       score: 3.6
       titolo: Sala monitoraggio terremoti e tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami)
       url: https://youtu.be/Tc3zhweSzE4
+  comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano:
+    title: 'Previsioni meteo e bollettini di allerta: come funziona il sistema'
+    url: /comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/
+    video:
+    - anchored:
+      - allerta
+      - bollettino
+      canale: abili-a-proteggere
+      id: Ihj9G0pjOh4
+      is_lis: true
+      overlap:
+      - allerta
+      - bollettino
+      - criticità
+      score: 4.8
+      titolo: 'Glossario in LIS: Bollettino di criticità/allerta'
+      url: https://youtu.be/Ihj9G0pjOh4
+    - anchored:
+      - bollettino
+      canale: abili-a-proteggere
+      id: aRzN8LhWTmc
+      is_lis: true
+      overlap:
+      - bollettino
+      - meteorologica
+      - vigilanza
+      score: 4.0
+      titolo: 'Glossario in LIS: Bollettino di vigilanza meteorologica nazionale'
+      url: https://youtu.be/aRzN8LhWTmc
+    - anchored:
+      - allerta
+      canale: abili-a-proteggere
+      id: k3svI11aiwQ
+      is_lis: true
+      overlap:
+      - allerta
+      - livelli
+      - meteo
+      - rischio
+      score: 3.6
+      titolo: 'Glossario in LIS: Livelli di allerta per il rischio meteo-idro'
+      url: https://youtu.be/k3svI11aiwQ
   comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica:
     title: 'Il kit di emergenza domestico: cosa mettere e dove tenerlo'
     url: /comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/
@@ -833,6 +1059,7 @@ pagine:
       - posto
       canale: dpc-gov
       id: zDmfPr-Vdjs
+      is_lis: false
       overlap:
       - carico
       - medico
@@ -844,6 +1071,7 @@ pagine:
       - posto
       canale: dpc-gov
       id: 5dOUHCl-d9E
+      is_lis: false
       overlap:
       - medico
       - posto
@@ -854,6 +1082,7 @@ pagine:
       - posto
       canale: dpc-gov
       id: 5vMTP0S0vQ8
+      is_lis: false
       overlap:
       - medico
       - posto
@@ -868,6 +1097,7 @@ pagine:
       - clima
       canale: dpc-gov
       id: NukrIN8jnE4
+      is_lis: false
       overlap:
       - clima
       score: 3.0
@@ -881,6 +1111,7 @@ pagine:
       - proteggere
       canale: io-non-rischio
       id: Z0yHNAn2qs8
+      is_lis: false
       overlap:
       - proteggere
       - rischio
@@ -891,6 +1122,7 @@ pagine:
       - proteggere
       canale: abili-a-proteggere
       id: R00PZpq-hhk
+      is_lis: false
       overlap:
       - proteggere
       score: 3.0
@@ -900,6 +1132,7 @@ pagine:
       - proteggere
       canale: abili-a-proteggere
       id: WA6HZdcMTHw
+      is_lis: false
       overlap:
       - proteggere
       score: 3.0
@@ -913,6 +1146,7 @@ pagine:
       - storia
       canale: io-non-rischio
       id: Pz5Dky_rvFI
+      is_lis: false
       overlap:
       - storia
       score: 3.0
@@ -926,6 +1160,7 @@ pagine:
       - caratteristiche
       canale: dpc-gov
       id: L98tBMJZn0k
+      is_lis: false
       overlap:
       - caratteristiche
       - frana
@@ -940,6 +1175,7 @@ pagine:
       - dagli
       canale: abili-a-proteggere
       id: jy4kGt-eFWg
+      is_lis: false
       overlap:
       - dagli
       - evacuazione
@@ -947,9 +1183,11 @@ pagine:
       titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
       url: https://youtu.be/jy4kGt-eFWg
     - anchored:
+      - calore
       - ondate
       canale: dpc-gov
       id: GPEu7LV0CZM
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -958,9 +1196,11 @@ pagine:
       titolo: Spot 2006 sul rischio ondate di calore
       url: https://youtu.be/GPEu7LV0CZM
     - anchored:
+      - calore
       - ondate
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -975,6 +1215,7 @@ pagine:
       - impegno
       canale: dpc-gov
       id: 2LkIejoezIM
+      is_lis: false
       overlap:
       - impegno
       - sistema
@@ -987,8 +1228,10 @@ pagine:
     video:
     - anchored:
       - nepal
+      - terremoto
       canale: dpc-gov
       id: 2AlSvdzzkTM
+      is_lis: false
       overlap:
       - campo
       - dell
@@ -999,8 +1242,10 @@ pagine:
       url: https://youtu.be/2AlSvdzzkTM
     - anchored:
       - nepal
+      - terremoto
       canale: dpc-gov
       id: OIcYSg5z-pQ
+      is_lis: false
       overlap:
       - campo
       - dell
@@ -1011,8 +1256,10 @@ pagine:
       url: https://youtu.be/OIcYSg5z-pQ
     - anchored:
       - nepal
+      - terremoto
       canale: dpc-gov
       id: ZDaR5eZaEF0
+      is_lis: false
       overlap:
       - campo
       - dell
@@ -1027,8 +1274,10 @@ pagine:
     video:
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -1037,8 +1286,10 @@ pagine:
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -1047,8 +1298,10 @@ pagine:
       url: https://youtu.be/4-r2rPCOEPM
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: KjQSuaVrjlY
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -1063,6 +1316,7 @@ pagine:
       - storia
       canale: io-non-rischio
       id: Pz5Dky_rvFI
+      is_lis: false
       overlap:
       - storia
       - vent
@@ -1077,6 +1331,7 @@ pagine:
       - andare
       canale: dpc-gov
       id: SenKErtd7oQ
+      is_lis: false
       overlap:
       - andare
       - guardare
@@ -1088,9 +1343,12 @@ pagine:
     url: /comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/
     video:
     - anchored:
+      - radio
+      - rete
       - zamberletti
       canale: dpc-gov
       id: vyTJcOxzntg
+      is_lis: false
       overlap:
       - emergenza
       - radio
@@ -1103,6 +1361,7 @@ pagine:
       - zamberletti
       canale: dpc-gov
       id: RjCdoyyz3sQ
+      is_lis: false
       overlap:
       - giuseppe
       - zamberletti
@@ -1113,6 +1372,7 @@ pagine:
       - esercitazione
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
+      is_lis: false
       overlap:
       - esercitazione
       - procedure
@@ -1127,6 +1387,7 @@ pagine:
       - rimozione
       canale: dpc-gov
       id: 1a4RglswwP0
+      is_lis: false
       overlap:
       - rimozione
       score: 3.0
@@ -1136,6 +1397,7 @@ pagine:
       - messa
       canale: dpc-gov
       id: ClFIKEGjiX0
+      is_lis: false
       overlap:
       - messa
       score: 3.0
@@ -1145,19 +1407,56 @@ pagine:
       - messa
       canale: dpc-gov
       id: OSfoajg3wzQ
+      is_lis: false
       overlap:
       - messa
       score: 3.0
       titolo: Attività di messa in sicurezza dei beni culturali – Terremoto Centro Italia
       url: https://youtu.be/OSfoajg3wzQ
+  comunicazioni/2026-05-02-rete-emergenza-metropolitana-roma-radioamatori:
+    title: 'Rete di Emergenza Metropolitana di Roma: la rete radio dei Municipi'
+    url: /comunicazioni/2026-05-02-rete-emergenza-metropolitana-roma-radioamatori/
+    video:
+    - anchored:
+      - radio
+      - rete
+      canale: dpc-gov
+      id: vyTJcOxzntg
+      is_lis: false
+      overlap:
+      - emergenza
+      - radio
+      - rete
+      - zamberletti
+      score: 5.2
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
+  comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari:
+    title: 'Radio in emergenza: perché sono ancora fondamentali per la Protezione Civile'
+    url: /comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/
+    video:
+    - anchored:
+      - radio
+      canale: dpc-gov
+      id: vyTJcOxzntg
+      is_lis: false
+      overlap:
+      - emergenza
+      - radio
+      - rete
+      score: 3.0
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
   comunicazioni/2026-05-04-ondate-di-calore-preparare-estate:
     title: 'Ondate di calore: prepararsi ora, prima che arrivi l''estate'
     url: /comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/
     video:
     - anchored:
+      - calore
       - ondate
       canale: dpc-gov
       id: GPEu7LV0CZM
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -1166,9 +1465,11 @@ pagine:
       titolo: Spot 2006 sul rischio ondate di calore
       url: https://youtu.be/GPEu7LV0CZM
     - anchored:
+      - calore
       - ondate
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -1183,6 +1484,7 @@ pagine:
       - sarno
       canale: dpc-gov
       id: 8v4izQL7MuA
+      is_lis: false
       overlap:
       - ricordo
       - sarno
@@ -1193,6 +1495,7 @@ pagine:
       - frana
       canale: dpc-gov
       id: 6eeYoCoFn5M
+      is_lis: false
       overlap:
       - frana
       score: 3.0
@@ -1202,6 +1505,7 @@ pagine:
       - frana
       canale: dpc-gov
       id: L98tBMJZn0k
+      is_lis: false
       overlap:
       - frana
       score: 3.0
@@ -1213,8 +1517,10 @@ pagine:
     video:
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -1223,8 +1529,10 @@ pagine:
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -1233,14 +1541,44 @@ pagine:
       url: https://youtu.be/4-r2rPCOEPM
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: KjQSuaVrjlY
+      is_lis: false
       overlap:
       - scossa
       - terremoto
       score: 3.8
       titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
       url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino:
+    title: 'Le zone di allerta del Lazio: come leggere il bollettino di criticità'
+    url: /comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/
+    video:
+    - anchored:
+      - allerta
+      - bollettino
+      - criticità
+      canale: abili-a-proteggere
+      id: Ihj9G0pjOh4
+      is_lis: true
+      overlap:
+      - allerta
+      - bollettino
+      - criticità
+      score: 7.8
+      titolo: 'Glossario in LIS: Bollettino di criticità/allerta'
+      url: https://youtu.be/Ihj9G0pjOh4
+    - anchored:
+      - bollettino
+      canale: abili-a-proteggere
+      id: aRzN8LhWTmc
+      is_lis: true
+      overlap:
+      - bollettino
+      score: 3.0
+      titolo: 'Glossario in LIS: Bollettino di vigilanza meteorologica nazionale'
+      url: https://youtu.be/aRzN8LhWTmc
   comunicazioni/2026-05-08-campagna-comunicazione-protezione-civile-lazio-2026:
     title: 'Lazio: approvato il programma 2026 della Campagna di comunicazione pubblica sulla Protezione Civile'
     url: /comunicazioni/2026-05-08-campagna-comunicazione-protezione-civile-lazio-2026/
@@ -1249,6 +1587,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: -lfm_NBSFIs
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -1259,6 +1598,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: r1_tqC9ZGgU
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -1269,6 +1609,7 @@ pagine:
       - programma
       canale: dpc-gov
       id: 3aDF3Rjs_jE
+      is_lis: false
       overlap:
       - programma
       score: 3.0
@@ -1283,6 +1624,7 @@ pagine:
       - rossa
       canale: abili-a-proteggere
       id: _xh2UfBsE2A
+      is_lis: false
       overlap:
       - croce
       - rossa
@@ -1294,6 +1636,7 @@ pagine:
       - rossa
       canale: dpc-gov
       id: sUk8PLNviSI
+      is_lis: false
       overlap:
       - croce
       - rossa
@@ -1304,6 +1647,7 @@ pagine:
       - rossa
       canale: dpc-gov
       id: p5LtgeUKjcM
+      is_lis: false
       overlap:
       - popolazione
       - rossa
@@ -1318,6 +1662,7 @@ pagine:
       - open
       canale: dpc-gov
       id: 1zpqQzMy8qY
+      is_lis: false
       overlap:
       - open
       score: 3.0
@@ -1331,6 +1676,7 @@ pagine:
       - prociv
       canale: abili-a-proteggere
       id: COprCBE0iyY
+      is_lis: false
       overlap:
       - presidente
       - prociv
@@ -1341,6 +1687,7 @@ pagine:
       - prociv
       canale: abili-a-proteggere
       id: Wq11ZtK4imA
+      is_lis: false
       overlap:
       - presidente
       - prociv
@@ -1356,6 +1703,7 @@ pagine:
       - memoria
       canale: dpc-gov
       id: yRNxAUcgdNE
+      is_lis: false
       overlap:
       - memoria
       score: 3.0
@@ -1365,6 +1713,7 @@ pagine:
       - moro
       canale: io-non-rischio
       id: _9KwcLgBCAc
+      is_lis: false
       overlap:
       - moro
       score: 3.0
@@ -1378,6 +1727,7 @@ pagine:
       - versione
       canale: dpc-gov
       id: j8OYAh_2_k8
+      is_lis: false
       overlap:
       - versione
       score: 3.0
@@ -1387,6 +1737,7 @@ pagine:
       - versione
       canale: dpc-gov
       id: vP7hI-62gH8
+      is_lis: false
       overlap:
       - versione
       score: 3.0
@@ -1396,11 +1747,30 @@ pagine:
       - versione
       canale: io-non-rischio
       id: eHeP3f2-PJw
+      is_lis: false
       overlap:
       - versione
       score: 3.0
       titolo: Io non rischio 2014 - Lo spot (versione grafica)
       url: https://youtu.be/eHeP3f2-PJw
+  comunicazioni/2026-05-14-centro-operativo-comunale-coc:
+    title: 'Il Centro Operativo Comunale (COC): il coordinamento della Protezione Civile locale'
+    url: /comunicazioni/2026-05-14-centro-operativo-comunale-coc/
+    video:
+    - anchored:
+      - coc
+      - operativo
+      canale: abili-a-proteggere
+      id: Q9JaOMzqd1w
+      is_lis: true
+      overlap:
+      - centro
+      - coc
+      - comunale
+      - operativo
+      score: 6.0
+      titolo: 'Glossario in LIS: COC - Centro Operativo Comunale'
+      url: https://youtu.be/Q9JaOMzqd1w
   comunicazioni/2026-05-15-iso-22322-public-warning-it-alert:
     title: 'Come dovrebbe funzionare un sistema di allerta pubblica: ISO 22322 e IT-alert'
     url: /comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/
@@ -1409,6 +1779,7 @@ pagine:
       - alert
       canale: io-non-rischio
       id: P1LpgdnXPj8
+      is_lis: false
       overlap:
       - alert
       - allarme
@@ -1424,6 +1795,7 @@ pagine:
       - emilia
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - danni
       - emilia
@@ -1435,6 +1807,7 @@ pagine:
       - emilia
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - danni
       - emilia
@@ -1445,6 +1818,7 @@ pagine:
       - emilia
       canale: dpc-gov
       id: KjQSuaVrjlY
+      is_lis: false
       overlap:
       - danni
       - emilia
@@ -1459,6 +1833,7 @@ pagine:
       - telecomunicazioni
       canale: dpc-gov
       id: vyTJcOxzntg
+      is_lis: false
       overlap:
       - emergenza
       - radio
@@ -1471,6 +1846,7 @@ pagine:
       - digitale
       canale: dpc-gov
       id: 2iqDEZQh3a8
+      is_lis: false
       overlap:
       - digitale
       - modello
@@ -1481,6 +1857,7 @@ pagine:
       - digitale
       canale: dpc-gov
       id: y2a-szGCpWM
+      is_lis: false
       overlap:
       - digitale
       - modello
@@ -1495,6 +1872,7 @@ pagine:
       - terremoti
       canale: dpc-gov
       id: yRNxAUcgdNE
+      is_lis: false
       overlap:
       - memoria
       - rischio
@@ -1511,6 +1889,7 @@ pagine:
       - social
       canale: io-non-rischio
       id: yqZURftuqOY
+      is_lis: false
       overlap:
       - rischio
       - social
@@ -1521,6 +1900,7 @@ pagine:
       - social
       canale: abili-a-proteggere
       id: YPvLBGOvRog
+      is_lis: false
       overlap:
       - social
       score: 3.0
@@ -1534,6 +1914,7 @@ pagine:
       - paura
       canale: io-non-rischio
       id: kT-m1l4haIQ
+      is_lis: false
       overlap:
       - paura
       score: 3.0
@@ -1545,8 +1926,10 @@ pagine:
     video:
     - anchored:
       - emilia
+      - terremoto
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - emilia
       - scossa
@@ -1556,8 +1939,10 @@ pagine:
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
       - emilia
+      - terremoto
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - emilia
       - scossa
@@ -1567,8 +1952,10 @@ pagine:
       url: https://youtu.be/4-r2rPCOEPM
     - anchored:
       - emilia
+      - terremoto
       canale: dpc-gov
       id: KjQSuaVrjlY
+      is_lis: false
       overlap:
       - emilia
       - scossa
@@ -1581,9 +1968,11 @@ pagine:
     url: /comunicazioni/2026-05-25-piano-nazionale-prevenzione-caldo-who/
     video:
     - anchored:
+      - calore
       - ondate
       canale: dpc-gov
       id: GPEu7LV0CZM
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -1592,9 +1981,11 @@ pagine:
       titolo: Spot 2006 sul rischio ondate di calore
       url: https://youtu.be/GPEu7LV0CZM
     - anchored:
+      - calore
       - ondate
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -1609,6 +2000,7 @@ pagine:
       - ricerca
       canale: dpc-gov
       id: 6Hjhuui1tF8
+      is_lis: false
       overlap:
       - centro
       - ricerca
@@ -1620,6 +2012,7 @@ pagine:
       - ricerca
       canale: dpc-gov
       id: no26vNJAfsg
+      is_lis: false
       overlap:
       - area
       - ricerca
@@ -1631,6 +2024,7 @@ pagine:
       - ricerca
       canale: dpc-gov
       id: dkUue6aexbo
+      is_lis: false
       overlap:
       - ricerca
       score: 3.0
@@ -1645,6 +2039,7 @@ pagine:
       - scossa
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - danni
       - emilia
@@ -1658,6 +2053,7 @@ pagine:
       - scossa
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - danni
       - emilia
@@ -1671,6 +2067,7 @@ pagine:
       - scossa
       canale: dpc-gov
       id: KjQSuaVrjlY
+      is_lis: false
       overlap:
       - danni
       - emilia
@@ -1687,6 +2084,7 @@ pagine:
       - disabilità
       canale: dpc-gov
       id: ZTDrRHbiR3M
+      is_lis: false
       overlap:
       - disabilità
       - messaggio
@@ -1698,6 +2096,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
+      is_lis: false
       overlap:
       - disabilità
       - evacuazione
@@ -1709,6 +2108,7 @@ pagine:
       - indietro
       canale: dpc-gov
       id: SenKErtd7oQ
+      is_lis: false
       overlap:
       - indietro
       score: 3.0
@@ -1720,8 +2120,22 @@ pagine:
     video:
     - anchored:
       - boschivi
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - boschivi
+      - incendi
+      - incendio
+      - rischio
+      score: 3.8
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
+    - anchored:
+      - boschivi
       canale: dpc-gov
       id: 4UBxxIfaGL4
+      is_lis: false
       overlap:
       - boschivi
       - incendi
@@ -1733,6 +2147,7 @@ pagine:
       - boschivi
       canale: dpc-gov
       id: 53yYyLsFW3Q
+      is_lis: false
       overlap:
       - boschivi
       - incendi
@@ -1748,6 +2163,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: -lfm_NBSFIs
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -1758,6 +2174,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: r1_tqC9ZGgU
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -1772,6 +2189,7 @@ pagine:
       - sport
       canale: dpc-gov
       id: YKzuDqox1qE
+      is_lis: false
       overlap:
       - sport
       score: 3.0
@@ -1785,6 +2203,7 @@ pagine:
       - lezione
       canale: io-non-rischio
       id: 2g2ABfQVjJA
+      is_lis: false
       overlap:
       - lezione
       score: 3.0
@@ -1798,6 +2217,7 @@ pagine:
       - proteggersi
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -1812,8 +2232,10 @@ pagine:
     - anchored:
       - alert
       - allarme
+      - pubblico
       canale: io-non-rischio
       id: P1LpgdnXPj8
+      is_lis: false
       overlap:
       - alert
       - allarme
@@ -1826,6 +2248,7 @@ pagine:
       - allarme
       canale: io-non-rischio
       id: 7MRMK51szxE
+      is_lis: false
       overlap:
       - allarme
       - attenzione
@@ -1838,6 +2261,7 @@ pagine:
       - messaggio
       canale: io-non-rischio
       id: Q3P_vu7---M
+      is_lis: false
       overlap:
       - messaggio
       - rischio
@@ -1852,6 +2276,7 @@ pagine:
       - campi
       canale: dpc-gov
       id: ShU_V_7SUQA
+      is_lis: false
       overlap:
       - campi
       - rischio
@@ -1864,9 +2289,11 @@ pagine:
     url: /comunicazioni/2026-06-12-iso-14090-adattamento-clima/
     video:
     - anchored:
+      - calore
       - ondate
       canale: dpc-gov
       id: GPEu7LV0CZM
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -1875,9 +2302,11 @@ pagine:
       titolo: Spot 2006 sul rischio ondate di calore
       url: https://youtu.be/GPEu7LV0CZM
     - anchored:
+      - calore
       - ondate
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -1888,6 +2317,7 @@ pagine:
       - clima
       canale: dpc-gov
       id: NukrIN8jnE4
+      is_lis: false
       overlap:
       - clima
       score: 3.0
@@ -1898,9 +2328,11 @@ pagine:
     url: /comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere/
     video:
     - anchored:
+      - calore
       - ondate
       canale: dpc-gov
       id: GPEu7LV0CZM
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -1909,9 +2341,11 @@ pagine:
       titolo: Spot 2006 sul rischio ondate di calore
       url: https://youtu.be/GPEu7LV0CZM
     - anchored:
+      - calore
       - ondate
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -1922,6 +2356,7 @@ pagine:
       - proteggere
       canale: io-non-rischio
       id: Z0yHNAn2qs8
+      is_lis: false
       overlap:
       - proteggere
       - rischio
@@ -1936,6 +2371,7 @@ pagine:
       - posto
       canale: dpc-gov
       id: zDmfPr-Vdjs
+      is_lis: false
       overlap:
       - carico
       - posto
@@ -1946,6 +2382,7 @@ pagine:
       - posto
       canale: dpc-gov
       id: 5dOUHCl-d9E
+      is_lis: false
       overlap:
       - posto
       score: 3.0
@@ -1955,11 +2392,57 @@ pagine:
       - posto
       canale: dpc-gov
       id: 5vMTP0S0vQ8
+      is_lis: false
       overlap:
       - posto
       score: 3.0
       titolo: L'allestimento del Posto Medico Avanzato – Ciclone Mozambico
       url: https://youtu.be/5vMTP0S0vQ8
+  comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani:
+    title: 'Microzonazione sismica dei Castelli Romani: cos''è e perché conta'
+    url: /comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/
+    video:
+    - anchored:
+      - sismica
+      canale: abili-a-proteggere
+      id: ANy5seKbNAQ
+      is_lis: true
+      overlap:
+      - sismica
+      score: 3.0
+      titolo: 'Glossario in LIS: Classificazione sismica'
+      url: https://youtu.be/ANy5seKbNAQ
+  comunicazioni/2026-06-20-solstizio-estate-massima-attenzione-incendi:
+    title: '20 giugno: solstizio d''estate e massima attenzione incendi'
+    url: /comunicazioni/2026-06-20-solstizio-estate-massima-attenzione-incendi/
+    video:
+    - anchored:
+      - boschivi
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - boschivi
+      - incendi
+      - incendio
+      - rischio
+      score: 3.4
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
+  comunicazioni/2026-06-24-inizio-estate-meteorologica-bilancio-primavera:
+    title: 'Dal 1° giugno è estate meteorologica: il bilancio della primavera'
+    url: /comunicazioni/2026-06-24-inizio-estate-meteorologica-bilancio-primavera/
+    video:
+    - anchored:
+      - meteorologica
+      canale: abili-a-proteggere
+      id: aRzN8LhWTmc
+      is_lis: true
+      overlap:
+      - meteorologica
+      score: 3.0
+      titolo: 'Glossario in LIS: Bollettino di vigilanza meteorologica nazionale'
+      url: https://youtu.be/aRzN8LhWTmc
   comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026:
     title: 'Primo mese di campagna AIB: il punto al 30 giugno'
     url: /comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/
@@ -1968,6 +2451,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: -lfm_NBSFIs
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -1978,6 +2462,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: r1_tqC9ZGgU
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -1992,6 +2477,7 @@ pagine:
       - sicura
       canale: io-non-rischio
       id: 3vOPhwM29Sc
+      is_lis: false
       overlap:
       - casa
       - sicura
@@ -2002,6 +2488,7 @@ pagine:
       - buone
       canale: dpc-gov
       id: MzVgNeBjJSQ
+      is_lis: false
       overlap:
       - buone
       score: 3.0
@@ -2015,6 +2502,7 @@ pagine:
       - sorveglianza
       canale: dpc-gov
       id: TyFthQEznc8
+      is_lis: false
       overlap:
       - sorveglianza
       score: 3.0
@@ -2028,6 +2516,7 @@ pagine:
       - consigli
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - calore
       - consigli
@@ -2041,8 +2530,10 @@ pagine:
     video:
     - anchored:
       - esercitazione
+      - pianificazione
       canale: dpc-gov
       id: OkEoPVutZr4
+      is_lis: false
       overlap:
       - esercitazione
       - pianificazione
@@ -2054,6 +2545,7 @@ pagine:
       - esercitazione
       canale: dpc-gov
       id: Q8S0OHxOYtQ
+      is_lis: false
       overlap:
       - esercitazione
       - vulcano
@@ -2064,6 +2556,7 @@ pagine:
       - esercitazione
       canale: dpc-gov
       id: _AYUUv69F3U
+      is_lis: false
       overlap:
       - esercitazione
       - vulcano
@@ -2078,6 +2571,7 @@ pagine:
       - alert
       canale: io-non-rischio
       id: P1LpgdnXPj8
+      is_lis: false
       overlap:
       - alert
       - allarme
@@ -2090,6 +2584,7 @@ pagine:
       - test
       canale: dpc-gov
       id: RlwTnpacmJI
+      is_lis: false
       overlap:
       - test
       score: 3.0
@@ -2103,6 +2598,7 @@ pagine:
       - proteggersi
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - ondate
       - proteggersi
@@ -2113,6 +2609,7 @@ pagine:
       - flood
       canale: dpc-gov
       id: 9oEusKsoWqM
+      is_lis: false
       overlap:
       - flood
       score: 3.0
@@ -2127,6 +2624,7 @@ pagine:
       - scambi
       canale: dpc-gov
       id: CnIiu1LQdmM
+      is_lis: false
       overlap:
       - gemellaggi
       - scambi
@@ -2137,6 +2635,7 @@ pagine:
       - solidarietà
       canale: abili-a-proteggere
       id: 6Ue54lPvZ48
+      is_lis: false
       overlap:
       - solidarietà
       score: 3.0
@@ -2150,6 +2649,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: -lfm_NBSFIs
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -2160,6 +2660,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: r1_tqC9ZGgU
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -2174,6 +2675,7 @@ pagine:
       - operazioni
       canale: dpc-gov
       id: dkUue6aexbo
+      is_lis: false
       overlap:
       - operazioni
       - ricerca
@@ -2184,6 +2686,7 @@ pagine:
       - operazioni
       canale: dpc-gov
       id: k90I_coJTsA
+      is_lis: false
       overlap:
       - operazioni
       score: 3.0
@@ -2193,6 +2696,7 @@ pagine:
       - operazioni
       canale: dpc-gov
       id: zDmfPr-Vdjs
+      is_lis: false
       overlap:
       - operazioni
       score: 3.0
@@ -2204,8 +2708,10 @@ pagine:
     video:
     - anchored:
       - disabilità
+      - procedure
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
+      is_lis: false
       overlap:
       - disabilità
       - evacuazione
@@ -2219,6 +2725,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
+      is_lis: false
       overlap:
       - diritti
       - disabilità
@@ -2230,6 +2737,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: b5W1-Cj7eu0
+      is_lis: false
       overlap:
       - disabilità
       - persone
@@ -2244,6 +2752,7 @@ pagine:
       - sanitario
       canale: abili-a-proteggere
       id: gAIcSfhIFOk
+      is_lis: false
       overlap:
       - sanitario
       score: 3.0
@@ -2257,6 +2766,7 @@ pagine:
       - frana
       canale: dpc-gov
       id: 6eeYoCoFn5M
+      is_lis: false
       overlap:
       - frana
       score: 3.0
@@ -2266,6 +2776,7 @@ pagine:
       - frana
       canale: dpc-gov
       id: L98tBMJZn0k
+      is_lis: false
       overlap:
       - frana
       score: 3.0
@@ -2275,6 +2786,7 @@ pagine:
       - frana
       canale: dpc-gov
       id: k90I_coJTsA
+      is_lis: false
       overlap:
       - frana
       score: 3.0
@@ -2288,6 +2800,7 @@ pagine:
       - proteggere
       canale: io-non-rischio
       id: Z0yHNAn2qs8
+      is_lis: false
       overlap:
       - proteggere
       - rischio
@@ -2298,6 +2811,7 @@ pagine:
       - proteggere
       canale: abili-a-proteggere
       id: R00PZpq-hhk
+      is_lis: false
       overlap:
       - proteggere
       score: 3.0
@@ -2307,6 +2821,7 @@ pagine:
       - proteggere
       canale: abili-a-proteggere
       id: WA6HZdcMTHw
+      is_lis: false
       overlap:
       - proteggere
       score: 3.0
@@ -2317,9 +2832,11 @@ pagine:
     url: /comunicazioni/2026-08-02-ondate-calore-agosto-fragili/
     video:
     - anchored:
+      - calore
       - ondate
       canale: dpc-gov
       id: GPEu7LV0CZM
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -2328,9 +2845,11 @@ pagine:
       titolo: Spot 2006 sul rischio ondate di calore
       url: https://youtu.be/GPEu7LV0CZM
     - anchored:
+      - calore
       - ondate
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -2341,6 +2860,7 @@ pagine:
       - proteggere
       canale: io-non-rischio
       id: Z0yHNAn2qs8
+      is_lis: false
       overlap:
       - proteggere
       - rischio
@@ -2353,34 +2873,39 @@ pagine:
     video:
     - anchored:
       - boschivi
+      canale: io-non-rischio
+      id: 9tYSNBQY7OY
+      is_lis: true
+      overlap:
+      - boschivi
+      - incendi
+      - subito
+      score: 4.2
+      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
+      url: https://youtu.be/9tYSNBQY7OY
+    - anchored:
+      - boschivi
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - boschivi
+      - incendi
+      - incendio
+      score: 4.2
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
+    - anchored:
+      - boschivi
       canale: dpc-gov
       id: 4UBxxIfaGL4
+      is_lis: false
       overlap:
       - boschivi
       - incendi
       score: 3.6
       titolo: Spot 2006 sul rischio incendi boschivi
       url: https://youtu.be/4UBxxIfaGL4
-    - anchored:
-      - boschivi
-      canale: dpc-gov
-      id: 53yYyLsFW3Q
-      overlap:
-      - boschivi
-      - incendi
-      score: 3.6
-      titolo: Spot 2012 sul rischio incendi boschivi
-      url: https://youtu.be/53yYyLsFW3Q
-    - anchored:
-      - boschivi
-      canale: dpc-gov
-      id: FPLoljB20QA
-      overlap:
-      - boschivi
-      - incendi
-      score: 3.6
-      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
-      url: https://youtu.be/FPLoljB20QA
   comunicazioni/2026-08-09-fulmini-come-proteggersi:
     title: 'Fulmini in estate: come proteggersi all''aperto e in casa'
     url: /comunicazioni/2026-08-09-fulmini-come-proteggersi/
@@ -2389,6 +2914,7 @@ pagine:
       - proteggersi
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - proteggersi
       score: 3.0
@@ -2402,6 +2928,7 @@ pagine:
       - sant
       canale: dpc-gov
       id: beYhBfj9LoE
+      is_lis: false
       overlap:
       - sant
       - terremoto
@@ -2412,6 +2939,7 @@ pagine:
       - memoria
       canale: dpc-gov
       id: yRNxAUcgdNE
+      is_lis: false
       overlap:
       - memoria
       - rischio
@@ -2422,6 +2950,7 @@ pagine:
       - anna
       canale: abili-a-proteggere
       id: hypvowP2lXI
+      is_lis: false
       overlap:
       - anna
       score: 3.0
@@ -2435,6 +2964,7 @@ pagine:
       - arrivo
       canale: dpc-gov
       id: YWxlxDzYZeo
+      is_lis: false
       overlap:
       - arrivo
       - degli
@@ -2446,6 +2976,7 @@ pagine:
       - arrivo
       canale: dpc-gov
       id: uadgyNJU2N0
+      is_lis: false
       overlap:
       - arrivo
       score: 3.0
@@ -2462,6 +2993,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: 3nXk4GzmP_M
+      is_lis: false
       overlap:
       - crollo
       - morandi
@@ -2475,6 +3007,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: Dnwz8rkOxIE
+      is_lis: false
       overlap:
       - crollo
       - morandi
@@ -2488,6 +3021,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: qhy_CnfT_SU
+      is_lis: false
       overlap:
       - crollo
       - morandi
@@ -2503,6 +3037,7 @@ pagine:
       - viabilità
       canale: dpc-gov
       id: P4SvUlT3e8s
+      is_lis: false
       overlap:
       - viabilità
       score: 3.0
@@ -2514,8 +3049,10 @@ pagine:
     video:
     - anchored:
       - lezione
+      - terremoto
       canale: io-non-rischio
       id: 2g2ABfQVjJA
+      is_lis: false
       overlap:
       - lezione
       - terremoto
@@ -2524,8 +3061,10 @@ pagine:
       url: https://youtu.be/2g2ABfQVjJA
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - danni
       - scossa
@@ -2535,8 +3074,10 @@ pagine:
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - danni
       - scossa
@@ -2544,6 +3085,34 @@ pagine:
       score: 4.4
       titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
       url: https://youtu.be/4-r2rPCOEPM
+  comunicazioni/2026-08-22-radiocomunicazioni-emergenza-hf-vhf:
+    title: 'Radiocomunicazioni in emergenza: quando le onde radio salvano vite'
+    url: /comunicazioni/2026-08-22-radiocomunicazioni-emergenza-hf-vhf/
+    video:
+    - anchored:
+      - radio
+      canale: dpc-gov
+      id: RlwTnpacmJI
+      is_lis: false
+      overlap:
+      - comunicazione
+      - radio
+      - test
+      score: 3.0
+      titolo: Test comunicazione radio con veliero Amerigo Vespucci
+      url: https://youtu.be/RlwTnpacmJI
+    - anchored:
+      - radio
+      canale: dpc-gov
+      id: vyTJcOxzntg
+      is_lis: false
+      overlap:
+      - emergenza
+      - radio
+      - rete
+      score: 3.0
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
   comunicazioni/2026-08-23-pizzo-cengalo-bondo-2017-permafrost-cambiamento-climatico:
     title: 'Pizzo Cengalo, 23 agosto 2017: la frana di Bondo che ha mostrato i nuovi rischi alpini del cambiamento climatico'
     url: /comunicazioni/2026-08-23-pizzo-cengalo-bondo-2017-permafrost-cambiamento-climatico/
@@ -2552,6 +3121,7 @@ pagine:
       - frana
       canale: dpc-gov
       id: 6eeYoCoFn5M
+      is_lis: false
       overlap:
       - frana
       score: 3.0
@@ -2561,6 +3131,7 @@ pagine:
       - frana
       canale: dpc-gov
       id: L98tBMJZn0k
+      is_lis: false
       overlap:
       - frana
       score: 3.0
@@ -2570,6 +3141,7 @@ pagine:
       - frana
       canale: dpc-gov
       id: k90I_coJTsA
+      is_lis: false
       overlap:
       - frana
       score: 3.0
@@ -2584,6 +3156,7 @@ pagine:
       - tronto
       canale: dpc-gov
       id: RIR586wkbKA
+      is_lis: false
       overlap:
       - accumoli
       - centro
@@ -2598,6 +3171,7 @@ pagine:
       - tronto
       canale: dpc-gov
       id: 3c_4vjCWYZg
+      is_lis: false
       overlap:
       - arquata
       - centro
@@ -2611,6 +3185,7 @@ pagine:
       - tronto
       canale: dpc-gov
       id: XimMbO39YIw
+      is_lis: false
       overlap:
       - arquata
       - centro
@@ -2626,8 +3201,10 @@ pagine:
     - anchored:
       - alert
       - allarme
+      - pubblico
       canale: io-non-rischio
       id: P1LpgdnXPj8
+      is_lis: false
       overlap:
       - alert
       - allarme
@@ -2640,11 +3217,26 @@ pagine:
       - test
       canale: dpc-gov
       id: RlwTnpacmJI
+      is_lis: false
       overlap:
       - test
       score: 3.0
       titolo: Test comunicazione radio con veliero Amerigo Vespucci
       url: https://youtu.be/RlwTnpacmJI
+  comunicazioni/2026-08-29-fine-estate-meteorologica-passaggio-autunno:
+    title: 'Fine dell''estate meteorologica: cosa cambia nel rischio'
+    url: /comunicazioni/2026-08-29-fine-estate-meteorologica-passaggio-autunno/
+    video:
+    - anchored:
+      - meteorologica
+      canale: abili-a-proteggere
+      id: aRzN8LhWTmc
+      is_lis: true
+      overlap:
+      - meteorologica
+      score: 3.0
+      titolo: 'Glossario in LIS: Bollettino di vigilanza meteorologica nazionale'
+      url: https://youtu.be/aRzN8LhWTmc
   comunicazioni/2026-08-30-bilancio-campagna-aib-2026:
     title: 'Campagna antincendio boschivo 2026: un bilancio di fine estate'
     url: /comunicazioni/2026-08-30-bilancio-campagna-aib-2026/
@@ -2653,6 +3245,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: -lfm_NBSFIs
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -2663,6 +3256,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: r1_tqC9ZGgU
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -2677,6 +3271,7 @@ pagine:
       - scolastico
       canale: dpc-gov
       id: Zs1VmF6p9f0
+      is_lis: false
       overlap:
       - dell
       - scolastico
@@ -2691,6 +3286,7 @@ pagine:
       - proteggersi
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - proteggersi
       score: 3.0
@@ -2704,6 +3300,7 @@ pagine:
       - crescita
       canale: dpc-gov
       id: _qulzvkSnQw
+      is_lis: false
       overlap:
       - crescita
       score: 3.0
@@ -2713,6 +3310,7 @@ pagine:
       - crescita
       canale: dpc-gov
       id: aeAHGLkbU18
+      is_lis: false
       overlap:
       - crescita
       score: 3.0
@@ -2723,9 +3321,23 @@ pagine:
     url: /comunicazioni/2026-09-08-allerta-gialla-cosa-significa/
     video:
     - anchored:
+      - allerta
+      canale: abili-a-proteggere
+      id: k3svI11aiwQ
+      is_lis: true
+      overlap:
+      - allerta
+      - livelli
+      - meteo
+      - rischio
+      score: 3.2
+      titolo: 'Glossario in LIS: Livelli di allerta per il rischio meteo-idro'
+      url: https://youtu.be/k3svI11aiwQ
+    - anchored:
       - allarme
       canale: io-non-rischio
       id: P1LpgdnXPj8
+      is_lis: false
       overlap:
       - alert
       - allarme
@@ -2741,6 +3353,7 @@ pagine:
       - proteggere
       canale: abili-a-proteggere
       id: jW8-8ky2v-g
+      is_lis: false
       overlap:
       - foto
       - proteggere
@@ -2751,6 +3364,7 @@ pagine:
       - proteggere
       canale: abili-a-proteggere
       id: R00PZpq-hhk
+      is_lis: false
       overlap:
       - proteggere
       score: 3.0
@@ -2760,6 +3374,7 @@ pagine:
       - proteggere
       canale: abili-a-proteggere
       id: WA6HZdcMTHw
+      is_lis: false
       overlap:
       - proteggere
       score: 3.0
@@ -2773,6 +3388,7 @@ pagine:
       - ragazzi
       canale: dpc-gov
       id: XJrslXpfc5Y
+      is_lis: false
       overlap:
       - ragazzi
       score: 3.0
@@ -2786,6 +3402,7 @@ pagine:
       - marche
       canale: abili-a-proteggere
       id: jJpZO_erLUQ
+      is_lis: false
       overlap:
       - marche
       score: 3.0
@@ -2795,6 +3412,7 @@ pagine:
       - monti
       canale: dpc-gov
       id: vfzPkO5dV-M
+      is_lis: false
       overlap:
       - monti
       score: 3.0
@@ -2808,6 +3426,7 @@ pagine:
       - idraulico
       canale: dpc-gov
       id: Qdr1TEgicd8
+      is_lis: false
       overlap:
       - idraulico
       - rischio
@@ -2822,6 +3441,7 @@ pagine:
       - ricordare
       canale: io-non-rischio
       id: phK5ETSeUwI
+      is_lis: false
       overlap:
       - ricordare
       score: 3.0
@@ -2835,6 +3455,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: -lfm_NBSFIs
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -2845,6 +3466,7 @@ pagine:
       - campagna
       canale: io-non-rischio
       id: r1_tqC9ZGgU
+      is_lis: false
       overlap:
       - campagna
       - rischio
@@ -2856,15 +3478,44 @@ pagine:
     url: /comunicazioni/2026-09-26-marche-umbria-1997-basilica-assisi/
     video:
     - anchored:
-      - marche
-      canale: abili-a-proteggere
-      id: jJpZO_erLUQ
+      - terremoto
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      is_lis: false
       overlap:
-      - marche
-      - regione
-      score: 3.2
-      titolo: Intervista a David Piccinini - Direttore Generale servizio protezione civile regione Marche
-      url: https://youtu.be/jJpZO_erLUQ
+      - danni
+      - emilia
+      - scossa
+      - terremoto
+      score: 4.4
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - terremoto
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      is_lis: false
+      overlap:
+      - danni
+      - emilia
+      - scossa
+      - terremoto
+      score: 4.4
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - terremoto
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      is_lis: false
+      overlap:
+      - danni
+      - emilia
+      - scossa
+      - terremoto
+      score: 4.4
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
   comunicazioni/2026-09-27-giornata-aperta-gruppo-cittadinanza:
     title: 'Porte aperte al Gruppo: una giornata per conoscere la Protezione Civile di Genzano'
     url: /comunicazioni/2026-09-27-giornata-aperta-gruppo-cittadinanza/
@@ -2873,6 +3524,7 @@ pagine:
       - sede
       canale: dpc-gov
       id: 9agnufQ831k
+      is_lis: false
       overlap:
       - sede
       - visita
@@ -2883,6 +3535,7 @@ pagine:
       - sede
       canale: dpc-gov
       id: BooLyjLFbSM
+      is_lis: false
       overlap:
       - sede
       - visita
@@ -2897,6 +3550,7 @@ pagine:
       - parco
       canale: io-non-rischio
       id: jngoLN7077k
+      is_lis: false
       overlap:
       - parco
       - rischio
@@ -2911,6 +3565,7 @@ pagine:
       - sguardo
       canale: dpc-gov
       id: kn46KFErDnE
+      is_lis: false
       overlap:
       - sguardo
       score: 3.0
@@ -2924,6 +3579,7 @@ pagine:
       - italiane
       canale: dpc-gov
       id: BZHiguXkEiQ
+      is_lis: false
       overlap:
       - italiane
       score: 3.0
@@ -2937,6 +3593,7 @@ pagine:
       - sede
       canale: dpc-gov
       id: 9agnufQ831k
+      is_lis: false
       overlap:
       - operativa
       - sede
@@ -2948,6 +3605,7 @@ pagine:
       - sede
       canale: dpc-gov
       id: BooLyjLFbSM
+      is_lis: false
       overlap:
       - operativa
       - sede
@@ -2960,9 +3618,21 @@ pagine:
     url: /comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/
     video:
     - anchored:
+      - sismica
+      canale: abili-a-proteggere
+      id: ANy5seKbNAQ
+      is_lis: true
+      overlap:
+      - classificazione
+      - sismica
+      score: 3.0
+      titolo: 'Glossario in LIS: Classificazione sismica'
+      url: https://youtu.be/ANy5seKbNAQ
+    - anchored:
       - costruzioni
       canale: abili-a-proteggere
       id: XVVayor2A34
+      is_lis: false
       overlap:
       - costruzioni
       - tecnica
@@ -2977,6 +3647,7 @@ pagine:
       - scienza
       canale: dpc-gov
       id: -Q8ynNpWcQQ
+      is_lis: false
       overlap:
       - scienza
       score: 3.0
@@ -2986,6 +3657,7 @@ pagine:
       - scienza
       canale: dpc-gov
       id: Gifm5amH5yw
+      is_lis: false
       overlap:
       - scienza
       score: 3.0
@@ -2995,6 +3667,7 @@ pagine:
       - scienza
       canale: dpc-gov
       id: QhVWOEPOvd8
+      is_lis: false
       overlap:
       - scienza
       score: 3.0
@@ -3008,6 +3681,7 @@ pagine:
       - piazza
       canale: io-non-rischio
       id: 1kZMImTOPXU
+      is_lis: false
       overlap:
       - piazza
       - rischio
@@ -3018,6 +3692,7 @@ pagine:
       - piazza
       canale: io-non-rischio
       id: 277lnJ8CNaY
+      is_lis: false
       overlap:
       - piazza
       - rischio
@@ -3028,6 +3703,7 @@ pagine:
       - piazza
       canale: io-non-rischio
       id: 2rqG514_228
+      is_lis: false
       overlap:
       - piazza
       - rischio
@@ -3042,6 +3718,7 @@ pagine:
       - diritti
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
+      is_lis: false
       overlap:
       - diritti
       score: 3.0
@@ -3053,8 +3730,10 @@ pagine:
     video:
     - anchored:
       - emilia
+      - terremoto
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - danni
       - emilia
@@ -3065,8 +3744,10 @@ pagine:
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
       - emilia
+      - terremoto
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - danni
       - emilia
@@ -3077,8 +3758,10 @@ pagine:
       url: https://youtu.be/4-r2rPCOEPM
     - anchored:
       - emilia
+      - terremoto
       canale: dpc-gov
       id: KjQSuaVrjlY
+      is_lis: false
       overlap:
       - danni
       - emilia
@@ -3095,6 +3778,7 @@ pagine:
       - risk
       canale: dpc-gov
       id: 9oEusKsoWqM
+      is_lis: false
       overlap:
       - risk
       score: 3.0
@@ -3104,6 +3788,7 @@ pagine:
       - risk
       canale: dpc-gov
       id: clKcz0w6l1U
+      is_lis: false
       overlap:
       - risk
       score: 3.0
@@ -3117,6 +3802,7 @@ pagine:
       - settimana
       canale: dpc-gov
       id: 2Evnqcfry8Q
+      is_lis: false
       overlap:
       - settimana
       - sisma
@@ -3128,6 +3814,7 @@ pagine:
       - settimana
       canale: dpc-gov
       id: 25ci6GjB-so
+      is_lis: false
       overlap:
       - settimana
       score: 3.0
@@ -3137,6 +3824,7 @@ pagine:
       - programma
       canale: dpc-gov
       id: 3aDF3Rjs_jE
+      is_lis: false
       overlap:
       - programma
       score: 3.0
@@ -3150,6 +3838,7 @@ pagine:
       - tecnica
       canale: abili-a-proteggere
       id: XVVayor2A34
+      is_lis: false
       overlap:
       - tecnica
       score: 3.0
@@ -3163,19 +3852,49 @@ pagine:
       - lezione
       canale: io-non-rischio
       id: 2g2ABfQVjJA
+      is_lis: false
       overlap:
       - lezione
       score: 3.0
       titolo: La lezione del terremoto in Nepal
       url: https://youtu.be/2g2ABfQVjJA
+  comunicazioni/2026-10-26-pollino-2010-2014-sequenza-sismica-monitoraggio:
+    title: 'Pollino 2010-2014: la sequenza sismica che ha cambiato il monitoraggio italiano'
+    url: /comunicazioni/2026-10-26-pollino-2010-2014-sequenza-sismica-monitoraggio/
+    video:
+    - anchored:
+      - monitoraggio
+      canale: abili-a-proteggere
+      id: Tc3zhweSzE4
+      is_lis: false
+      overlap:
+      - allerta
+      - centro
+      - monitoraggio
+      - tsunami
+      score: 3.6
+      titolo: Sala monitoraggio terremoti e tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami)
+      url: https://youtu.be/Tc3zhweSzE4
+    - anchored:
+      - sismica
+      canale: abili-a-proteggere
+      id: ANy5seKbNAQ
+      is_lis: true
+      overlap:
+      - sismica
+      score: 3.0
+      titolo: 'Glossario in LIS: Classificazione sismica'
+      url: https://youtu.be/ANy5seKbNAQ
   comunicazioni/2026-10-26-terremoto-marche-2016-visso-camerino:
     title: 'Terremoto delle Marche, 26 ottobre 2016: la scossa di Visso che riportò il sisma del Centro Italia su nuove regioni'
     url: /comunicazioni/2026-10-26-terremoto-marche-2016-visso-camerino/
     video:
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - danni
       - scossa
@@ -3185,8 +3904,10 @@ pagine:
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - danni
       - scossa
@@ -3196,8 +3917,10 @@ pagine:
       url: https://youtu.be/4-r2rPCOEPM
     - anchored:
       - sisma
+      - terremoto
       canale: dpc-gov
       id: B9--XweE0nQ
+      is_lis: false
       overlap:
       - centro
       - sisma
@@ -3213,6 +3936,7 @@ pagine:
       - annuale
       canale: dpc-gov
       id: 3aDF3Rjs_jE
+      is_lis: false
       overlap:
       - annuale
       score: 3.0
@@ -3222,6 +3946,7 @@ pagine:
       - annuale
       canale: dpc-gov
       id: p7sony993IQ
+      is_lis: false
       overlap:
       - annuale
       score: 3.0
@@ -3231,6 +3956,7 @@ pagine:
       - annuale
       canale: dpc-gov
       id: x4bZFqxGYqU
+      is_lis: false
       overlap:
       - annuale
       score: 3.0
@@ -3245,6 +3971,7 @@ pagine:
       - tronto
       canale: dpc-gov
       id: XimMbO39YIw
+      is_lis: false
       overlap:
       - arquata
       - centro
@@ -3258,6 +3985,7 @@ pagine:
       - tronto
       canale: dpc-gov
       id: RIR586wkbKA
+      is_lis: false
       overlap:
       - accumoli
       - benedetto
@@ -3273,6 +4001,7 @@ pagine:
       - tronto
       canale: dpc-gov
       id: 3c_4vjCWYZg
+      is_lis: false
       overlap:
       - arquata
       - centro
@@ -3286,23 +4015,60 @@ pagine:
     url: /comunicazioni/2026-10-28-scheda-rilievo-danno-beni-culturali-chiese/
     video:
     - anchored:
-      - modello
+      - terremoto
       canale: dpc-gov
-      id: 2iqDEZQh3a8
+      id: B9--XweE0nQ
+      is_lis: false
       overlap:
-      - modello
-      score: 3.0
-      titolo: Modello digitale 3D delle deformazioni – Naufragio Concordia
-      url: https://youtu.be/2iqDEZQh3a8
+      - post
+      - sisma
+      - sopralluoghi
+      - terremoto
+      score: 4.2
+      titolo: 'Sopralluoghi post-sisma: il software Erikus (2 di 2) – Terremoto Centro Italia'
+      url: https://youtu.be/B9--XweE0nQ
     - anchored:
-      - modello
+      - terremoto
       canale: dpc-gov
-      id: y2a-szGCpWM
+      id: qkKqenrA8Og
+      is_lis: false
       overlap:
-      - modello
-      score: 3.0
-      titolo: Modello digitale 3D della rotazione – Naufragio Concordia
-      url: https://youtu.be/y2a-szGCpWM
+      - post
+      - sisma
+      - sopralluoghi
+      - terremoto
+      score: 4.2
+      titolo: 'Sopralluoghi post-sisma: il software Erikus (1 di 2) – Terremoto Centro Italia'
+      url: https://youtu.be/qkKqenrA8Og
+    - anchored:
+      - terremoto
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      is_lis: false
+      overlap:
+      - emilia
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+  comunicazioni/2026-10-29-allerta-meteo-ottobre-genzano:
+    title: 'Allerta gialla per temporali: il Gruppo segue l''evoluzione'
+    url: /comunicazioni/2026-10-29-allerta-meteo-ottobre-genzano/
+    video:
+    - anchored:
+      - allerta
+      canale: abili-a-proteggere
+      id: Tc3zhweSzE4
+      is_lis: false
+      overlap:
+      - allerta
+      - centro
+      - monitoraggio
+      - sala
+      score: 3.8
+      titolo: Sala monitoraggio terremoti e tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami)
+      url: https://youtu.be/Tc3zhweSzE4
   comunicazioni/2026-10-30-halloween-sicurezza-bambini:
     title: 'Halloween in sicurezza: consigli per genitori e bambini'
     url: /comunicazioni/2026-10-30-halloween-sicurezza-bambini/
@@ -3311,6 +4077,7 @@ pagine:
       - consigli
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - consigli
       score: 3.0
@@ -3324,6 +4091,7 @@ pagine:
       - scossa
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - danni
       - scossa
@@ -3334,6 +4102,7 @@ pagine:
       - scossa
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - danni
       - scossa
@@ -3344,6 +4113,7 @@ pagine:
       - scossa
       canale: dpc-gov
       id: KjQSuaVrjlY
+      is_lis: false
       overlap:
       - danni
       - scossa
@@ -3355,14 +4125,41 @@ pagine:
     url: /comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure/
     video:
     - anchored:
-      - italiane
-      canale: dpc-gov
-      id: BZHiguXkEiQ
+      - classificazione
+      - sismica
+      canale: abili-a-proteggere
+      id: ANy5seKbNAQ
+      is_lis: true
       overlap:
-      - italiane
-      score: 3.0
-      titolo: Intervista a Paola Santillo, Protezione Aziendale Ferrovie dello Stato Italiane – EXE Flegrei 2019
-      url: https://youtu.be/BZHiguXkEiQ
+      - classificazione
+      - sismica
+      score: 5.0
+      titolo: 'Glossario in LIS: Classificazione sismica'
+      url: https://youtu.be/ANy5seKbNAQ
+    - anchored:
+      - terremoto
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      is_lis: false
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 3.4
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - terremoto
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      is_lis: false
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 3.4
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
   comunicazioni/2026-11-01-ognissanti-cimiteri-viabilita:
     title: 'Ognissanti: viabilità nei pressi dei cimiteri e comportamenti'
     url: /comunicazioni/2026-11-01-ognissanti-cimiteri-viabilita/
@@ -3371,6 +4168,7 @@ pagine:
       - viabilità
       canale: dpc-gov
       id: P4SvUlT3e8s
+      is_lis: false
       overlap:
       - viabilità
       score: 3.0
@@ -3384,6 +4182,7 @@ pagine:
       - memoria
       canale: dpc-gov
       id: yRNxAUcgdNE
+      is_lis: false
       overlap:
       - memoria
       - rischio
@@ -3395,6 +4194,7 @@ pagine:
       - valore
       canale: dpc-gov
       id: BooLyjLFbSM
+      is_lis: false
       overlap:
       - valore
       - visita
@@ -3409,6 +4209,7 @@ pagine:
       - lezione
       canale: io-non-rischio
       id: 2g2ABfQVjJA
+      is_lis: false
       overlap:
       - lezione
       score: 3.0
@@ -3422,6 +4223,7 @@ pagine:
       - ondate
       canale: dpc-gov
       id: GPEu7LV0CZM
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -3433,6 +4235,7 @@ pagine:
       - ondate
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -3443,6 +4246,7 @@ pagine:
       - proteggere
       canale: io-non-rischio
       id: Z0yHNAn2qs8
+      is_lis: false
       overlap:
       - proteggere
       - rischio
@@ -3454,9 +4258,11 @@ pagine:
     url: /comunicazioni/2026-11-07-esercitazione-radio-inter-comunale/
     video:
     - anchored:
+      - comunali
       - esercitazione
       canale: abili-a-proteggere
       id: jy4kGt-eFWg
+      is_lis: false
       overlap:
       - comunali
       - esercitazione
@@ -3464,9 +4270,11 @@ pagine:
       titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
       url: https://youtu.be/jy4kGt-eFWg
     - anchored:
+      - radio
       - test
       canale: dpc-gov
       id: RlwTnpacmJI
+      is_lis: false
       overlap:
       - comunicazione
       - radio
@@ -3475,15 +4283,18 @@ pagine:
       titolo: Test comunicazione radio con veliero Amerigo Vespucci
       url: https://youtu.be/RlwTnpacmJI
     - anchored:
-      - esercitazione
+      - radio
+      - rete
       canale: dpc-gov
-      id: 6ImZj3WaeQY
+      id: vyTJcOxzntg
+      is_lis: false
       overlap:
-      - esercitazione
-      - sismico
-      score: 3.6
-      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
-      url: https://youtu.be/6ImZj3WaeQY
+      - emergenza
+      - radio
+      - rete
+      score: 4.0
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
   comunicazioni/2026-11-10-volontariato-giovane-studenti:
     title: 'Volontariato per studenti: perché iniziare da giovane'
     url: /comunicazioni/2026-11-10-volontariato-giovane-studenti/
@@ -3492,6 +4303,7 @@ pagine:
       - crescita
       canale: dpc-gov
       id: _qulzvkSnQw
+      is_lis: false
       overlap:
       - crescita
       - diverse
@@ -3503,6 +4315,7 @@ pagine:
       - crescita
       canale: dpc-gov
       id: aeAHGLkbU18
+      is_lis: false
       overlap:
       - crescita
       - diverse
@@ -3514,6 +4327,7 @@ pagine:
       - giovani
       canale: dpc-gov
       id: CnIiu1LQdmM
+      is_lis: false
       overlap:
       - formativi
       - giovani
@@ -3528,6 +4342,7 @@ pagine:
       - donne
       canale: dpc-gov
       id: QhVWOEPOvd8
+      is_lis: false
       overlap:
       - donne
       score: 3.0
@@ -3539,8 +4354,10 @@ pagine:
     video:
     - anchored:
       - buone
+      - pratiche
       canale: dpc-gov
       id: MzVgNeBjJSQ
+      is_lis: false
       overlap:
       - buone
       - incendi
@@ -3556,6 +4373,7 @@ pagine:
       - terza
       canale: dpc-gov
       id: HqPjxdIZct4
+      is_lis: false
       overlap:
       - iniziative
       - terza
@@ -3570,6 +4388,7 @@ pagine:
       - black
       canale: dpc-gov
       id: j1UrFKfdux8
+      is_lis: false
       overlap:
       - black
       score: 3.0
@@ -3581,8 +4400,10 @@ pagine:
     video:
     - anchored:
       - sisma
+      - terremoto
       canale: dpc-gov
       id: 2Evnqcfry8Q
+      is_lis: false
       overlap:
       - sisma
       - terremoto
@@ -3591,8 +4412,10 @@ pagine:
       url: https://youtu.be/2Evnqcfry8Q
     - anchored:
       - sisma
+      - terremoto
       canale: dpc-gov
       id: B9--XweE0nQ
+      is_lis: false
       overlap:
       - sisma
       - terremoto
@@ -3601,8 +4424,10 @@ pagine:
       url: https://youtu.be/B9--XweE0nQ
     - anchored:
       - sisma
+      - terremoto
       canale: dpc-gov
       id: qkKqenrA8Og
+      is_lis: false
       overlap:
       - sisma
       - terremoto
@@ -3617,6 +4442,7 @@ pagine:
       - donne
       canale: dpc-gov
       id: QhVWOEPOvd8
+      is_lis: false
       overlap:
       - donne
       score: 3.0
@@ -3631,6 +4457,7 @@ pagine:
       - terremoti
       canale: dpc-gov
       id: 7RLK3dWVmdI
+      is_lis: false
       overlap:
       - europeo
       - terremoti
@@ -3642,6 +4469,7 @@ pagine:
       - terremoti
       canale: dpc-gov
       id: _K-Gc5rFpOA
+      is_lis: false
       overlap:
       - europeo
       - terremoti
@@ -3653,6 +4481,7 @@ pagine:
       - terremoti
       canale: dpc-gov
       id: vbCGEqukJA4
+      is_lis: false
       overlap:
       - europeo
       - terremoti
@@ -3667,6 +4496,7 @@ pagine:
       - settimana
       canale: dpc-gov
       id: HqPjxdIZct4
+      is_lis: false
       overlap:
       - eventi
       - settimana
@@ -3677,6 +4507,7 @@ pagine:
       - settimana
       canale: dpc-gov
       id: 25ci6GjB-so
+      is_lis: false
       overlap:
       - settimana
       score: 3.0
@@ -3686,6 +4517,7 @@ pagine:
       - settimana
       canale: dpc-gov
       id: 2Evnqcfry8Q
+      is_lis: false
       overlap:
       - settimana
       score: 3.0
@@ -3699,6 +4531,7 @@ pagine:
       - viabilità
       canale: dpc-gov
       id: P4SvUlT3e8s
+      is_lis: false
       overlap:
       - centro
       - viabilità
@@ -3709,6 +4542,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: 3nXk4GzmP_M
+      is_lis: false
       overlap:
       - ponte
       score: 3.0
@@ -3718,6 +4552,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: Dnwz8rkOxIE
+      is_lis: false
       overlap:
       - ponte
       score: 3.0
@@ -3732,6 +4567,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
+      is_lis: false
       overlap:
       - diritti
       - disabilità
@@ -3743,6 +4579,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
+      is_lis: false
       overlap:
       - disabilità
       - motoria
@@ -3753,6 +4590,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: b5W1-Cj7eu0
+      is_lis: false
       overlap:
       - disabilità
       - persone
@@ -3767,6 +4605,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: 3nXk4GzmP_M
+      is_lis: false
       overlap:
       - ponte
       score: 3.0
@@ -3776,6 +4615,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: Dnwz8rkOxIE
+      is_lis: false
       overlap:
       - ponte
       score: 3.0
@@ -3785,6 +4625,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: qhy_CnfT_SU
+      is_lis: false
       overlap:
       - ponte
       score: 3.0
@@ -3798,6 +4639,7 @@ pagine:
       - nicola
       canale: dpc-gov
       id: -fRczo32vkE
+      is_lis: false
       overlap:
       - nicola
       - rischi
@@ -3808,6 +4650,7 @@ pagine:
       - nicola
       canale: dpc-gov
       id: yRAlV7EVo74
+      is_lis: false
       overlap:
       - nicola
       score: 3.0
@@ -3821,6 +4664,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: 3nXk4GzmP_M
+      is_lis: false
       overlap:
       - ponte
       score: 3.0
@@ -3830,6 +4674,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: Dnwz8rkOxIE
+      is_lis: false
       overlap:
       - ponte
       score: 3.0
@@ -3839,6 +4684,7 @@ pagine:
       - ponte
       canale: dpc-gov
       id: qhy_CnfT_SU
+      is_lis: false
       overlap:
       - ponte
       score: 3.0
@@ -3852,6 +4698,7 @@ pagine:
       - diritti
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
+      is_lis: false
       overlap:
       - diritti
       - disabilità
@@ -3868,6 +4715,7 @@ pagine:
       - solidarietà
       canale: abili-a-proteggere
       id: 6Ue54lPvZ48
+      is_lis: false
       overlap:
       - solidarietà
       score: 3.0
@@ -3881,6 +4729,7 @@ pagine:
       - stefano
       canale: abili-a-proteggere
       id: C16hv6OgGOU
+      is_lis: false
       overlap:
       - stefano
       score: 3.0
@@ -3890,6 +4739,7 @@ pagine:
       - stefano
       canale: dpc-gov
       id: EinjLkaNhBM
+      is_lis: false
       overlap:
       - stefano
       score: 3.0
@@ -3899,6 +4749,7 @@ pagine:
       - stefano
       canale: dpc-gov
       id: cr7HHEvu4Z8
+      is_lis: false
       overlap:
       - stefano
       score: 3.0
@@ -3910,9 +4761,11 @@ pagine:
     url: /comunicazioni/2026-12-26-tsunami-indiano-2004-allerta-globale/
     video:
     - anchored:
+      - allerta
       - tsunami
       canale: abili-a-proteggere
       id: yhCLcmFNZaI
+      is_lis: false
       overlap:
       - allerta
       - ingv
@@ -3921,9 +4774,11 @@ pagine:
       titolo: Il Centro Allerta Tsunami - Alessandro Amato (responsabile del Centro Allerta Tsunami - Ingv)
       url: https://youtu.be/yhCLcmFNZaI
     - anchored:
+      - allerta
       - tsunami
       canale: abili-a-proteggere
       id: Tc3zhweSzE4
+      is_lis: false
       overlap:
       - allerta
       - tsunami
@@ -3934,6 +4789,7 @@ pagine:
       - tsunami
       canale: dpc-gov
       id: 9LxJaPpQTFQ
+      is_lis: false
       overlap:
       - lanka
       - tsunami
@@ -3948,6 +4804,7 @@ pagine:
       - settimana
       canale: dpc-gov
       id: 25ci6GjB-so
+      is_lis: false
       overlap:
       - settimana
       score: 3.0
@@ -3957,6 +4814,7 @@ pagine:
       - settimana
       canale: dpc-gov
       id: 2Evnqcfry8Q
+      is_lis: false
       overlap:
       - settimana
       score: 3.0
@@ -3966,6 +4824,7 @@ pagine:
       - settimana
       canale: dpc-gov
       id: 6JuLpVcQurE
+      is_lis: false
       overlap:
       - settimana
       score: 3.0
@@ -3978,8 +4837,10 @@ pagine:
     video:
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - finale
       - scossa
@@ -3989,8 +4850,10 @@ pagine:
       url: https://youtu.be/4-r2rPCOEPM
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -3999,8 +4862,10 @@ pagine:
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: KjQSuaVrjlY
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -4013,8 +4878,10 @@ pagine:
     video:
     - anchored:
       - buone
+      - pratiche
       canale: dpc-gov
       id: MzVgNeBjJSQ
+      is_lis: false
       overlap:
       - boschivi
       - buone
@@ -4029,8 +4896,10 @@ pagine:
     video:
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -4039,8 +4908,10 @@ pagine:
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -4049,8 +4920,10 @@ pagine:
       url: https://youtu.be/4-r2rPCOEPM
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: KjQSuaVrjlY
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -4062,15 +4935,58 @@ pagine:
     url: /comunicazioni/2027-01-14-belice-1968-terremoto-ricostruzione-lunga/
     video:
     - anchored:
+      - terremoto
+      canale: dpc-gov
+      id: B9--XweE0nQ
+      is_lis: false
+      overlap:
+      - post
+      - sisma
+      - terremoto
+      score: 3.8
+      titolo: 'Sopralluoghi post-sisma: il software Erikus (2 di 2) – Terremoto Centro Italia'
+      url: https://youtu.be/B9--XweE0nQ
+    - anchored:
+      - terremoto
       - valle
       canale: dpc-gov
       id: hNprXkqvtK0
+      is_lis: false
       overlap:
       - terremoto
       - valle
       score: 3.8
       titolo: Sorvolo su Valle Fara (Valle Castellana, TE) – Terremoto Centro Italia
       url: https://youtu.be/hNprXkqvtK0
+    - anchored:
+      - terremoto
+      canale: dpc-gov
+      id: qkKqenrA8Og
+      is_lis: false
+      overlap:
+      - post
+      - sisma
+      - terremoto
+      score: 3.8
+      titolo: 'Sopralluoghi post-sisma: il software Erikus (1 di 2) – Terremoto Centro Italia'
+      url: https://youtu.be/qkKqenrA8Og
+  comunicazioni/2027-01-18-rigopiano-2017-allerta-neve-valanga:
+    title: 'Rigopiano, 18 gennaio 2017: la valanga sull''hotel e il limite dell''allerta meteo'
+    url: /comunicazioni/2027-01-18-rigopiano-2017-allerta-neve-valanga/
+    video:
+    - anchored:
+      - allerta
+      canale: abili-a-proteggere
+      id: k3svI11aiwQ
+      is_lis: true
+      overlap:
+      - allerta
+      - livelli
+      - meteo
+      - rischio
+      score: 3.6
+      titolo: 'Glossario in LIS: Livelli di allerta per il rischio meteo-idro'
+      url: https://youtu.be/k3svI11aiwQ
   comunicazioni/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana:
     title: 'Turchia-Siria, 6 febbraio 2023: il più grande dispiegamento internazionale italiano dopo Haiti'
     url: /comunicazioni/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana/
@@ -4080,6 +4996,7 @@ pagine:
       - turchia
       canale: dpc-gov
       id: BhrejcTtQ5U
+      is_lis: false
       overlap:
       - campo
       - siria
@@ -4093,6 +5010,7 @@ pagine:
       - turchia
       canale: dpc-gov
       id: HCUjLDolHHA
+      is_lis: false
       overlap:
       - primi
       - siria
@@ -4106,6 +5024,7 @@ pagine:
       - turchia
       canale: dpc-gov
       id: 2Evnqcfry8Q
+      is_lis: false
       overlap:
       - siria
       - terremoto
@@ -4121,6 +5040,7 @@ pagine:
       - sede
       canale: dpc-gov
       id: 9agnufQ831k
+      is_lis: false
       overlap:
       - operativa
       - sede
@@ -4131,12 +5051,29 @@ pagine:
       - sede
       canale: dpc-gov
       id: BooLyjLFbSM
+      is_lis: false
       overlap:
       - operativa
       - sede
       score: 3.2
       titolo: Mattarella visita la sede operativa del Dipartimento – Medaglia d'oro al Valore Civile
       url: https://youtu.be/BooLyjLFbSM
+  cosa-succede-quando-scatta-allerta:
+    title: Cosa succede quando scatta un'allerta
+    url: /cosa-succede-quando-scatta-allerta/
+    video:
+    - anchored:
+      - allerta
+      canale: abili-a-proteggere
+      id: Ihj9G0pjOh4
+      is_lis: true
+      overlap:
+      - allerta
+      - bollettino
+      - criticità
+      score: 3.8
+      titolo: 'Glossario in LIS: Bollettino di criticità/allerta'
+      url: https://youtu.be/Ihj9G0pjOh4
   faq:
     title: Domande frequenti
     url: /faq/
@@ -4145,7 +5082,22 @@ pagine:
       - domande
       - risposte
       canale: io-non-rischio
+      id: NYkbfYbXssA
+      is_lis: true
+      overlap:
+      - domande
+      - rischio
+      - risposte
+      - terremoto
+      score: 5.8
+      titolo: Io non rischio Terremoto – Domande e risposte
+      url: https://youtu.be/NYkbfYbXssA
+    - anchored:
+      - domande
+      - risposte
+      canale: io-non-rischio
       id: Oapnfcdpkz8
+      is_lis: false
       overlap:
       - domande
       - rischio
@@ -4153,6 +5105,19 @@ pagine:
       score: 5.2
       titolo: Io non rischio Vulcano - Domande e risposte
       url: https://youtu.be/Oapnfcdpkz8
+    - anchored:
+      - domande
+      - risposte
+      canale: io-non-rischio
+      id: OnGj0IaLePA
+      is_lis: true
+      overlap:
+      - domande
+      - rischio
+      - risposte
+      score: 5.2
+      titolo: Io non rischio Alluvione – Domande e risposte
+      url: https://youtu.be/OnGj0IaLePA
   formazione/dirigenti-e-rspp:
     title: Dirigenti scolastici, DSGA, RSPP e ASPP
     url: /formazione/dirigenti-e-rspp/
@@ -4161,6 +5126,7 @@ pagine:
       - limiti
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
+      is_lis: false
       overlap:
       - disabilità
       - limiti
@@ -4175,6 +5141,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
+      is_lis: false
       overlap:
       - diritti
       - disabilità
@@ -4186,6 +5153,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
+      is_lis: false
       overlap:
       - disabilità
       - evacuazione
@@ -4201,6 +5169,7 @@ pagine:
       - lezione
       canale: io-non-rischio
       id: 2g2ABfQVjJA
+      is_lis: false
       overlap:
       - lezione
       - terremoto
@@ -4215,6 +5184,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
+      is_lis: false
       overlap:
       - disabilità
       - evacuazione
@@ -4228,8 +5198,10 @@ pagine:
     video:
     - anchored:
       - disabilità
+      - evacuazione
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
+      is_lis: false
       overlap:
       - disabilità
       - evacuazione
@@ -4242,6 +5214,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
+      is_lis: false
       overlap:
       - diritti
       - disabilità
@@ -4253,12 +5226,29 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: tWBLKYes5B8
+      is_lis: false
       overlap:
       - disabilità
       - fand
       score: 4.0
       titolo: '#NienteDiSpeciale: Intervista a Nazaro Pagano presidente Fand - protezione civile e disabilità'
       url: https://youtu.be/tWBLKYes5B8
+  formazione/kit-calamita-strutture-sanitarie:
+    title: Kit Calamità per Strutture Sanitarie — schede stampabili
+    url: /formazione/kit-calamita-strutture-sanitarie/
+    video:
+    - anchored:
+      - operative
+      - strutture
+      canale: abili-a-proteggere
+      id: Np56yTydrOI
+      is_lis: true
+      overlap:
+      - operative
+      - strutture
+      score: 3.0
+      titolo: 'Glossario in LIS: Strutture operative nazionali'
+      url: https://youtu.be/Np56yTydrOI
   formazione/kit-fragilita-vulnerabilita:
     title: Kit per persone fragili e bisogni specifici
     url: /formazione/kit-fragilita-vulnerabilita/
@@ -4267,6 +5257,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
+      is_lis: false
       overlap:
       - disabilità
       - evacuazione
@@ -4276,6 +5267,146 @@ pagine:
       score: 4.8
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
+  formazione/kit-scuola-infanzia:
+    title: Kit Didattico — Scuola dell'Infanzia
+    url: /formazione/kit-scuola-infanzia/
+    video:
+    - anchored:
+      - scuola
+      canale: abili-a-proteggere
+      id: e_bwJY-3fh8
+      is_lis: false
+      overlap:
+      - campi
+      - disabilità
+      - scuola
+      score: 3.8
+      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+      url: https://youtu.be/e_bwJY-3fh8
+    - anchored:
+      - scuola
+      canale: abili-a-proteggere
+      id: nwqGXP0h34w
+      is_lis: false
+      overlap:
+      - campi
+      - disabilità
+      - scuola
+      score: 3.8
+      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+      url: https://youtu.be/nwqGXP0h34w
+    - anchored:
+      - scuola
+      canale: abili-a-proteggere
+      id: xymAoW-l-VA
+      is_lis: false
+      overlap:
+      - campi
+      - disabilità
+      - scuola
+      score: 3.8
+      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+      url: https://youtu.be/xymAoW-l-VA
+  formazione/kit-scuola-secondaria-primo-grado:
+    title: Kit Didattico — Scuola Secondaria di Primo Grado
+    url: /formazione/kit-scuola-secondaria-primo-grado/
+    video:
+    - anchored:
+      - scuola
+      canale: abili-a-proteggere
+      id: e_bwJY-3fh8
+      is_lis: false
+      overlap:
+      - campi
+      - disabilità
+      - scuola
+      score: 3.8
+      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+      url: https://youtu.be/e_bwJY-3fh8
+    - anchored:
+      - scuola
+      canale: abili-a-proteggere
+      id: nwqGXP0h34w
+      is_lis: false
+      overlap:
+      - campi
+      - disabilità
+      - scuola
+      score: 3.8
+      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+      url: https://youtu.be/nwqGXP0h34w
+    - anchored:
+      - scuola
+      canale: abili-a-proteggere
+      id: xymAoW-l-VA
+      is_lis: false
+      overlap:
+      - campi
+      - disabilità
+      - scuola
+      score: 3.8
+      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+      url: https://youtu.be/xymAoW-l-VA
+  formazione/manuale-campo:
+    title: Manuale da Campo
+    url: /formazione/manuale-campo/
+    video:
+    - anchored:
+      - campo
+      canale: dpc-gov
+      id: 91W1aNc-P90
+      is_lis: false
+      overlap:
+      - accoglienza
+      - campo
+      - emergenza
+      score: 3.2
+      titolo: Allestimento del campo di accoglienza a Michalovce (Slovacchia) – Emergenza Ucraina
+      url: https://youtu.be/91W1aNc-P90
+  formazione/manuale-campo/funzioni-servizio:
+    title: Capitolo 4 — Funzioni di servizio
+    url: /formazione/manuale-campo/funzioni-servizio/
+    video:
+    - anchored:
+      - funzioni
+      - supporto
+      canale: abili-a-proteggere
+      id: b9uU246oNGk
+      is_lis: true
+      overlap:
+      - funzioni
+      - supporto
+      score: 4.2
+      titolo: 'Glossario in LIS: Funzioni di supporto'
+      url: https://youtu.be/b9uU246oNGk
+  formazione/manuale-campo/funzioni-tecniche:
+    title: Capitolo 3 — Funzioni tecniche
+    url: /formazione/manuale-campo/funzioni-tecniche/
+    video:
+    - anchored:
+      - radio
+      - rete
+      canale: dpc-gov
+      id: vyTJcOxzntg
+      is_lis: false
+      overlap:
+      - emergenza
+      - radio
+      - rete
+      - telecomunicazioni
+      score: 3.8
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
+    - anchored:
+      - funzioni
+      canale: abili-a-proteggere
+      id: b9uU246oNGk
+      is_lis: true
+      overlap:
+      - funzioni
+      score: 3.0
+      titolo: 'Glossario in LIS: Funzioni di supporto'
+      url: https://youtu.be/b9uU246oNGk
   formazione/manuale-campo/moduli-radio:
     title: Capitolo 6 — Moduli e codici radio (allegati operativi)
     url: /formazione/manuale-campo/moduli-radio/
@@ -4284,6 +5415,7 @@ pagine:
       - messaggio
       canale: io-non-rischio
       id: Q3P_vu7---M
+      is_lis: false
       overlap:
       - capo
       - messaggio
@@ -4296,8 +5428,10 @@ pagine:
     video:
     - anchored:
       - accoglienza
+      - campo
       canale: dpc-gov
       id: 91W1aNc-P90
+      is_lis: false
       overlap:
       - accoglienza
       - campo
@@ -4313,12 +5447,43 @@ pagine:
       - azioni
       canale: abili-a-proteggere
       id: wJtpPJlLZsE
+      is_lis: false
       overlap:
       - azioni
       - obiettivi
       score: 3.0
       titolo: '#NienteDiSpeciale: Intervista a Nazaro Pagano presidente Fand - azioni e obiettivi della Federazione'
       url: https://youtu.be/wJtpPJlLZsE
+  formazione/manuale-campo/struttura-organizzativa:
+    title: Capitolo 1 — Struttura organizzativa e catena di comando
+    url: /formazione/manuale-campo/struttura-organizzativa/
+    video:
+    - anchored:
+      - secondo
+      canale: dpc-gov
+      id: su6gTLmjvqY
+      is_lis: false
+      overlap:
+      - avanzato
+      - livello
+      - posto
+      - secondo
+      score: 3.8
+      titolo: Cos'è un Posto Medico Avanzato di secondo livello – Ciclone Mozambico
+      url: https://youtu.be/su6gTLmjvqY
+    - anchored:
+      - operativo
+      canale: abili-a-proteggere
+      id: Q9JaOMzqd1w
+      is_lis: true
+      overlap:
+      - centro
+      - coc
+      - comunale
+      - operativo
+      score: 3.0
+      titolo: 'Glossario in LIS: COC - Centro Operativo Comunale'
+      url: https://youtu.be/Q9JaOMzqd1w
   formazione/percorsi-didattici:
     title: Percorsi didattici pronti per la scuola
     url: /formazione/percorsi-didattici/
@@ -4327,6 +5492,7 @@ pagine:
       - percorsi
       canale: dpc-gov
       id: b-vqRU46zyY
+      is_lis: false
       overlap:
       - percorsi
       score: 3.0
@@ -4340,6 +5506,7 @@ pagine:
       - psicologia
       canale: abili-a-proteggere
       id: ZcmuzPflPSY
+      is_lis: false
       overlap:
       - dell
       - emergenza
@@ -4355,6 +5522,7 @@ pagine:
       - operazioni
       canale: dpc-gov
       id: zDmfPr-Vdjs
+      is_lis: false
       overlap:
       - medico
       - operazioni
@@ -4370,12 +5538,49 @@ pagine:
       - messaggio
       canale: io-non-rischio
       id: Q3P_vu7---M
+      is_lis: false
       overlap:
       - capo
       - messaggio
       score: 3.0
       titolo: Io non rischio 2016 - Video messaggio del Capo Dipartimento per il Tweetstorm
       url: https://youtu.be/Q3P_vu7---M
+  formazione/rischio-incendio:
+    title: Rischio Incendio — Fondamenti
+    url: /formazione/rischio-incendio/
+    video:
+    - anchored:
+      - incendio
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - boschivi
+      - evitare
+      - incendi
+      - incendio
+      - rischio
+      score: 4.2
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
+  formazione/rischio-incendio/procedure-emergenza:
+    title: Capitolo 5 — Procedure di emergenza
+    url: /formazione/rischio-incendio/procedure-emergenza/
+    video:
+    - anchored:
+      - evacuazione
+      - procedure
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - disabilità
+      - evacuazione
+      - motoria
+      - procedure
+      score: 5.0
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
   formazione/scuole-checklist-docente:
     title: Checklist docente per una lezione di protezione civile
     url: /formazione/scuole-checklist-docente/
@@ -4384,6 +5589,7 @@ pagine:
       - lezione
       canale: io-non-rischio
       id: 2g2ABfQVjJA
+      is_lis: false
       overlap:
       - lezione
       score: 3.0
@@ -4397,11 +5603,29 @@ pagine:
       - strumenti
       canale: dpc-gov
       id: K1A4EjpdzCo
+      is_lis: false
       overlap:
       - strumenti
       score: 3.0
       titolo: Spot 2009 "Gli strumenti per ripartire"
       url: https://youtu.be/K1A4EjpdzCo
+  glossario:
+    title: Glossario di protezione civile
+    url: /glossario/
+    video:
+    - anchored:
+      - coc
+      canale: abili-a-proteggere
+      id: Q9JaOMzqd1w
+      is_lis: true
+      overlap:
+      - centro
+      - coc
+      - comunale
+      - operativo
+      score: 3.0
+      titolo: 'Glossario in LIS: COC - Centro Operativo Comunale'
+      url: https://youtu.be/Q9JaOMzqd1w
   lanterna:
     title: Modalità Lanterna — strumenti di sopravvivenza
     url: /lanterna/
@@ -4410,6 +5634,7 @@ pagine:
       - strumenti
       canale: dpc-gov
       id: K1A4EjpdzCo
+      is_lis: false
       overlap:
       - strumenti
       score: 3.0
@@ -4420,9 +5645,21 @@ pagine:
     url: /normativa/testo-unico-protezione-civile/capo-1-finalita/
     video:
     - anchored:
+      - finalità
+      canale: abili-a-proteggere
+      id: 4WZ2LXGvHDU
+      is_lis: true
+      overlap:
+      - finalità
+      - rete
+      score: 3.6
+      titolo: 'Glossario in LIS: Centro funzionale per finalità di protezione civile (rete dei Cfc)'
+      url: https://youtu.be/4WZ2LXGvHDU
+    - anchored:
       - capo
       canale: abili-a-proteggere
       id: s7NyKK8EXFQ
+      is_lis: false
       overlap:
       - capo
       - prevenzione
@@ -4433,22 +5670,13 @@ pagine:
       - capo
       canale: dpc-gov
       id: BEeFWmfG4dk
+      is_lis: false
       overlap:
       - capo
       - rischio
       score: 3.2
       titolo: Il saluto del Capo Dipartimento Borrelli ai volontari formatori di "Io Non Rischio" 2019
       url: https://youtu.be/BEeFWmfG4dk
-    - anchored:
-      - capo
-      canale: io-non-rischio
-      id: Q3P_vu7---M
-      overlap:
-      - capo
-      - rischio
-      score: 3.2
-      titolo: Io non rischio 2016 - Video messaggio del Capo Dipartimento per il Tweetstorm
-      url: https://youtu.be/Q3P_vu7---M
   normativa/testo-unico-protezione-civile/capo-2-organizzazione:
     title: Capo II — Organizzazione del Servizio nazionale (articoli 14-16)
     url: /normativa/testo-unico-protezione-civile/capo-2-organizzazione/
@@ -4457,6 +5685,7 @@ pagine:
       - capo
       canale: abili-a-proteggere
       id: zaM_spcLCV0
+      is_lis: false
       overlap:
       - capo
       - insieme
@@ -4467,6 +5696,7 @@ pagine:
       - capo
       canale: abili-a-proteggere
       id: s7NyKK8EXFQ
+      is_lis: false
       overlap:
       - capo
       - prevenzione
@@ -4477,6 +5707,7 @@ pagine:
       - capo
       canale: dpc-gov
       id: 0JztqATnvGg
+      is_lis: false
       overlap:
       - capo
       - centro
@@ -4491,6 +5722,7 @@ pagine:
       - capo
       canale: abili-a-proteggere
       id: s7NyKK8EXFQ
+      is_lis: false
       overlap:
       - capo
       - prevenzione
@@ -4501,6 +5733,7 @@ pagine:
       - capo
       canale: abili-a-proteggere
       id: zaM_spcLCV0
+      is_lis: false
       overlap:
       - capo
       - insieme
@@ -4511,6 +5744,7 @@ pagine:
       - capo
       canale: dpc-gov
       id: 0JztqATnvGg
+      is_lis: false
       overlap:
       - capo
       - centro
@@ -4525,6 +5759,7 @@ pagine:
       - capo
       canale: abili-a-proteggere
       id: zaM_spcLCV0
+      is_lis: false
       overlap:
       - capo
       - insieme
@@ -4532,25 +5767,28 @@ pagine:
       titolo: La visione d'insieme - Fabrizio Curcio (Capo del Dipartimento di Protezione Civile)
       url: https://youtu.be/zaM_spcLCV0
     - anchored:
+      - funzioni
+      - supporto
+      canale: abili-a-proteggere
+      id: b9uU246oNGk
+      is_lis: true
+      overlap:
+      - funzioni
+      - supporto
+      score: 3.2
+      titolo: 'Glossario in LIS: Funzioni di supporto'
+      url: https://youtu.be/b9uU246oNGk
+    - anchored:
       - capo
       canale: dpc-gov
       id: 0JztqATnvGg
+      is_lis: false
       overlap:
       - capo
       - centro
       score: 3.2
       titolo: Il Capo Dipartimento incontra i cittadini di Accumoli – Terremoto Centro Italia
       url: https://youtu.be/0JztqATnvGg
-    - anchored:
-      - capo
-      canale: dpc-gov
-      id: BEeFWmfG4dk
-      overlap:
-      - capo
-      - rischio
-      score: 3.2
-      titolo: Il saluto del Capo Dipartimento Borrelli ai volontari formatori di "Io Non Rischio" 2019
-      url: https://youtu.be/BEeFWmfG4dk
   normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali:
     title: Capo V — Gestione delle emergenze di rilievo nazionale (articoli 24-30)
     url: /normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali/
@@ -4560,6 +5798,7 @@ pagine:
       - dichiarazione
       canale: dpc-gov
       id: 3JJ0tafRvoA
+      is_lis: false
       overlap:
       - capo
       - dichiarazione
@@ -4571,6 +5810,7 @@ pagine:
       - dichiarazione
       canale: dpc-gov
       id: Vr815sdAcyM
+      is_lis: false
       overlap:
       - capo
       - dichiarazione
@@ -4582,6 +5822,7 @@ pagine:
       - dichiarazione
       canale: dpc-gov
       id: b5uzV-QlezM
+      is_lis: false
       overlap:
       - capo
       - dichiarazione
@@ -4593,9 +5834,12 @@ pagine:
     url: /normativa/testo-unico-protezione-civile/capo-6-volontariato/
     video:
     - anchored:
+      - comunali
+      - gruppi
       - organizzato
       canale: dpc-gov
       id: Kz08BJ1OYb4
+      is_lis: false
       overlap:
       - comunali
       - gruppi
@@ -4607,6 +5851,7 @@ pagine:
       - capo
       canale: dpc-gov
       id: 0JztqATnvGg
+      is_lis: false
       overlap:
       - capo
       - cittadini
@@ -4617,6 +5862,7 @@ pagine:
       - capo
       canale: abili-a-proteggere
       id: s7NyKK8EXFQ
+      is_lis: false
       overlap:
       - capo
       score: 3.0
@@ -4630,6 +5876,7 @@ pagine:
       - capo
       canale: dpc-gov
       id: 0JztqATnvGg
+      is_lis: false
       overlap:
       - capo
       - terremoto
@@ -4640,6 +5887,7 @@ pagine:
       - capo
       canale: abili-a-proteggere
       id: s7NyKK8EXFQ
+      is_lis: false
       overlap:
       - capo
       score: 3.0
@@ -4649,6 +5897,7 @@ pagine:
       - capo
       canale: abili-a-proteggere
       id: zaM_spcLCV0
+      is_lis: false
       overlap:
       - capo
       score: 3.0
@@ -4662,6 +5911,7 @@ pagine:
       - stampa
       canale: abili-a-proteggere
       id: wQi_xPD4IvA
+      is_lis: false
       overlap:
       - disabilità
       - stampa
@@ -4676,6 +5926,7 @@ pagine:
       - preparato
       canale: abili-a-proteggere
       id: cLfE9CQ33vc
+      is_lis: false
       overlap:
       - preparato
       score: 3.0
@@ -4685,6 +5936,7 @@ pagine:
       - preparato
       canale: dpc-gov
       id: qfyfnlKbs_I
+      is_lis: false
       overlap:
       - preparato
       score: 3.0
@@ -4698,6 +5950,7 @@ pagine:
       - telecomunicazioni
       canale: dpc-gov
       id: vyTJcOxzntg
+      is_lis: false
       overlap:
       - emergenza
       - radio
@@ -4711,11 +5964,13 @@ pagine:
     url: /rischi-prevenzione/ondate-di-calore/
     video:
     - anchored:
+      - calore
       - consigli
       - ondate
       - proteggersi
       canale: abili-a-proteggere
       id: lQXiNcvR7jQ
+      is_lis: false
       overlap:
       - calore
       - consigli
@@ -4725,9 +5980,11 @@ pagine:
       titolo: 'Ondate di calore: 10 consigli per proteggersi'
       url: https://youtu.be/lQXiNcvR7jQ
     - anchored:
+      - calore
       - ondate
       canale: dpc-gov
       id: GPEu7LV0CZM
+      is_lis: false
       overlap:
       - calore
       - ondate
@@ -4743,6 +6000,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
+      is_lis: false
       overlap:
       - disabilità
       - evacuazione
@@ -4757,8 +6015,22 @@ pagine:
     video:
     - anchored:
       - boschivi
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - boschivi
+      - incendi
+      - incendio
+      - rischio
+      score: 4.8
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
+    - anchored:
+      - boschivi
       canale: dpc-gov
       id: 4UBxxIfaGL4
+      is_lis: false
       overlap:
       - boschivi
       - incendi
@@ -4770,6 +6042,7 @@ pagine:
       - boschivi
       canale: dpc-gov
       id: 53yYyLsFW3Q
+      is_lis: false
       overlap:
       - boschivi
       - incendi
@@ -4777,24 +6050,30 @@ pagine:
       score: 4.2
       titolo: Spot 2012 sul rischio incendi boschivi
       url: https://youtu.be/53yYyLsFW3Q
-    - anchored:
-      - boschivi
-      canale: dpc-gov
-      id: FPLoljB20QA
-      overlap:
-      - boschivi
-      - incendi
-      score: 3.6
-      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
-      url: https://youtu.be/FPLoljB20QA
   rischi-prevenzione/rischio-sismico:
     title: 'Rischio Sismico: Cosa Fare'
     url: /rischi-prevenzione/rischio-sismico/
     video:
     - anchored:
+      - sismico
+      canale: dpc-gov
+      id: yRNxAUcgdNE
+      is_lis: false
+      overlap:
+      - conoscenza
+      - mostra
+      - rischio
+      - sismico
+      - terremoti
+      score: 5.4
+      titolo: 'Promo 2018 mostra Terremoti d''Italia: "Il rischio sismico tra conoscenza, memoria ed esperienza"'
+      url: https://youtu.be/yRNxAUcgdNE
+    - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 0--y1oKrz-4
+      is_lis: false
       overlap:
       - scossa
       - terremoto
@@ -4803,24 +6082,16 @@ pagine:
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
       - scossa
+      - terremoto
       canale: dpc-gov
       id: 4-r2rPCOEPM
+      is_lis: false
       overlap:
       - scossa
       - terremoto
       score: 3.2
       titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
       url: https://youtu.be/4-r2rPCOEPM
-    - anchored:
-      - scossa
-      canale: dpc-gov
-      id: KjQSuaVrjlY
-      overlap:
-      - scossa
-      - terremoto
-      score: 3.2
-      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
-      url: https://youtu.be/KjQSuaVrjlY
   rischi-prevenzione/rischio-vulcanico:
     title: 'Rischio Vulcanico (Colli Albani): Cosa Fare'
     url: /rischi-prevenzione/rischio-vulcanico/
@@ -4830,6 +6101,7 @@ pagine:
       - vulcano
       canale: dpc-gov
       id: _AYUUv69F3U
+      is_lis: false
       overlap:
       - rischio
       - vulcanico
@@ -4841,6 +6113,7 @@ pagine:
       - vulcanico
       canale: dpc-gov
       id: ShU_V_7SUQA
+      is_lis: false
       overlap:
       - rischio
       - vulcanico
@@ -4855,6 +6128,7 @@ pagine:
       - management
       canale: dpc-gov
       id: 9oEusKsoWqM
+      is_lis: false
       overlap:
       - international
       - management
@@ -4869,6 +6143,7 @@ pagine:
       - dagli
       canale: abili-a-proteggere
       id: jy4kGt-eFWg
+      is_lis: false
       overlap:
       - dagli
       - esercitazione
@@ -4883,6 +6158,7 @@ pagine:
       - management
       canale: dpc-gov
       id: 9oEusKsoWqM
+      is_lis: false
       overlap:
       - management
       score: 3.0
@@ -4896,11 +6172,26 @@ pagine:
       - sorveglianza
       canale: dpc-gov
       id: TyFthQEznc8
+      is_lis: false
       overlap:
       - sorveglianza
       score: 3.0
       titolo: Il time-lapse della rotazione (telecamera di sorveglianza) – Naufragio Concordia
       url: https://youtu.be/TyFthQEznc8
+  standard-iso/iso-22328-2:
+    title: ISO 22328-2 — Sistemi di allerta sismica precoce
+    url: /standard-iso/iso-22328-2/
+    video:
+    - anchored:
+      - sismica
+      canale: abili-a-proteggere
+      id: ANy5seKbNAQ
+      is_lis: true
+      overlap:
+      - sismica
+      score: 3.0
+      titolo: 'Glossario in LIS: Classificazione sismica'
+      url: https://youtu.be/ANy5seKbNAQ
   standard-iso/iso-22329:
     title: ISO 22329 — Uso dei social media in emergenza
     url: /standard-iso/iso-22329/
@@ -4909,6 +6200,7 @@ pagine:
       - social
       canale: abili-a-proteggere
       id: YPvLBGOvRog
+      is_lis: false
       overlap:
       - social
       score: 3.0
@@ -4918,11 +6210,27 @@ pagine:
       - social
       canale: io-non-rischio
       id: yqZURftuqOY
+      is_lis: false
       overlap:
       - social
       score: 3.0
       titolo: Io non rischio 2020 - Lo spot social
       url: https://youtu.be/yqZURftuqOY
+  standard-iso/iso-22351:
+    title: ISO 22351 — Struttura dei messaggi per lo scambio informativo (EMSI)
+    url: /standard-iso/iso-22351/
+    video:
+    - anchored:
+      - informativo
+      canale: abili-a-proteggere
+      id: B9IqdiEiM3o
+      is_lis: true
+      overlap:
+      - emergenza
+      - informativo
+      score: 3.4
+      titolo: 'Glossario in LIS: Sistema informativo gestione emergenza'
+      url: https://youtu.be/B9IqdiEiM3o
   standard-iso/iso-22395:
     title: ISO 22395 — Supporto inclusivo a gruppi vulnerabili
     url: /standard-iso/iso-22395/
@@ -4931,6 +6239,7 @@ pagine:
       - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
+      is_lis: false
       overlap:
       - diritti
       - disabilità
@@ -4947,6 +6256,7 @@ pagine:
       - risk
       canale: dpc-gov
       id: 9oEusKsoWqM
+      is_lis: false
       overlap:
       - management
       - risk
@@ -4961,6 +6271,7 @@ pagine:
       - test
       canale: dpc-gov
       id: RlwTnpacmJI
+      is_lis: false
       overlap:
       - comunicazione
       - test
@@ -4972,9 +6283,11 @@ pagine:
     url: /storia/
     video:
     - anchored:
+      - conoscere
       - vulcanica
       canale: io-non-rischio
       id: esAjpZQ2C9E
+      is_lis: false
       overlap:
       - conoscere
       - vulcanica
@@ -4985,6 +6298,7 @@ pagine:
       - storia
       canale: io-non-rischio
       id: Pz5Dky_rvFI
+      is_lis: false
       overlap:
       - storia
       score: 3.0
@@ -4998,6 +6312,7 @@ pagine:
       - strumenti
       canale: dpc-gov
       id: K1A4EjpdzCo
+      is_lis: false
       overlap:
       - strumenti
       score: 3.0

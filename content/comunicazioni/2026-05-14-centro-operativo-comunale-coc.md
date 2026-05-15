@@ -3,6 +3,7 @@ title: "Il Centro Operativo Comunale (COC): il coordinamento della Protezione Ci
 date: 2026-05-14
 description: "Quando l'emergenza arriva, il Sindaco può attivare il COC. Cos'è, come funziona, chi ne fa parte e perché è importante per i cittadini."
 badge: "Informazione"
+lis_section: "gestione-emergenza"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-14-centro-operativo-comunale-coc.webp"

@@ -5481,6 +5481,20 @@ html.a11y-pause-anim .pcg-timeline-voce {
   font-style: italic;
 }
 
+.video-correlati-lis-badge {
+  display: inline-block;
+  background: #003366;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
 .video-correlati-arrow {
   color: #003366;
   font-weight: 700;
