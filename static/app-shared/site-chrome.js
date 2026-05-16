@@ -89,9 +89,6 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/numeri-utili/" role="menuitem"><span>Numeri Utili</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" role="menuitem"><span>Piano Familiare</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/kit-calamita/" role="menuitem"><span>Kit pronti per situazioni vulnerabili</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/quiz-preparazione/" role="menuitem"><span>Quanto sei preparato? (quiz)</span></a></li>' +
-                    /* Spostata da "Risorse" a maggio 2026: timeline storica del territorio = contenuto narrativo per il cittadino. */
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/storia/" role="menuitem"><span>Storia del territorio</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 /* Dropdown: Per le scuole (6 voci didattiche, splittato da "Educazione e Inclusione" maggio 2026) */
@@ -107,6 +104,8 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/educazione-civica/" role="menuitem"><span>Per i docenti — Ed. Civica</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/storie-e-racconti/" role="menuitem"><span>Storie e Racconti</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi della Sicurezza</span></a></li>' +
+                    /* Spostato da "Per il Cittadino" maggio 2026: quiz strumento didattico naturale */
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/quiz-preparazione/" role="menuitem"><span>Quanto sei preparato? (quiz)</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 /* Dropdown: Accessibilità e Supporti (2 voci trasversali, nuovo maggio 2026) */
@@ -155,6 +154,8 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/strumenti/" role="menuitem"><span>Strumenti in Tempo Reale</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/audio-e-podcast/" role="menuitem"><span>Audio e podcast</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/risorse-pronte/" role="menuitem"><span>Materiali pronti</span></a></li>' +
+                    /* Spostato da "Per il Cittadino" maggio 2026: timeline storica = consultazione narrativa, fra le risorse */
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/storia/" role="menuitem"><span>Storia del territorio</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/comunicazioni/" role="menuitem"><span>Comunicazioni</span></a></li>' +
