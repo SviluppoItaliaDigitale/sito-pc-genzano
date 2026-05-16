@@ -86,10 +86,10 @@ TEMI = {
             f"{SITO_BASE}/glossario/",
         ],
         "fonti_istituzionali": [
-            "Manuale 'Io non rischio terremoto' (DPC): scarica PDF da https://iononrischio.protezionecivile.it",
-            "Mappa pericolosità sismica MPS04 (INGV): pagina https://emidius.mi.ingv.it/MPS04/",
-            "Linee guida ricostruzione (Casa Italia): https://www.casaitalia.governo.it",
-            "Standard ISO 22324 (codici colore allerta) — pagina sito: " + SITO_BASE + "/standard-iso/iso-22324/",
+            "Campagna 'Io non rischio' (DPC): https://iononrischio.protezionecivile.it",
+            "INGV — Istituto Nazionale di Geofisica e Vulcanologia: https://www.ingv.it",
+            "Terremoti in tempo reale (INGV): https://terremoti.ingv.it",
+            "Standard ISO 22324 (codici colore allerta) — pagina del nostro sito: " + SITO_BASE + "/standard-iso/iso-22324/",
         ],
         "focus_podcast": [
             "Perché Genzano e i Castelli Romani sono sismicamente attivi (vulcanismo dei Colli Albani spento ma non estinto, faglie attive)",
