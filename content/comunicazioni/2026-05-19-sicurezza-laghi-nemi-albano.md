@@ -111,7 +111,7 @@ In estate il rischio di incendio boschivo è alto. Le aree attorno ai laghi hann
 ### In acqua
 
 - **Non buttarti** a soccorrere se non sei esperto: il rischio è che abbiate bisogno di soccorso entrambi.
-- **Chiama il 112** (anche il **1530 Guardia Costiera** per emergenze in acque interne in alcuni casi) e indica con precisione il luogo.
+- **Chiama il 112** e indica con precisione il luogo.
 - **Lancia un oggetto galleggiante** (salvagente, bottiglia chiusa, tavola): dà a chi è in difficoltà qualcosa a cui aggrapparsi.
 - **Se puoi, avvicinati via terra** fino al punto più vicino e tira la persona con un oggetto (ramo, asciugamano, fune).
 
@@ -132,6 +132,5 @@ Fonti istituzionali:
 
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 - [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/).
-- [Guardia Costiera — Acque interne](https://www.guardiacostiera.gov.it/) (numero 1530).
 
 I laghi sono un privilegio del nostro territorio: preservarli e frequentarli con rispetto è la **prima forma di Protezione Civile** ambientale.

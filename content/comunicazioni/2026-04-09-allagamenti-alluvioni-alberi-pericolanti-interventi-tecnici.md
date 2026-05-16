@@ -58,7 +58,7 @@ La sequenza operativa tipica è:
 
 ## Alluvione: l'ordine degli interventi
 
-Durante un'alluvione **in corso** il Gruppo non è in prima linea per il salvataggio in acqua: non disponiamo di unità sommozzatori né di gommoni di soccorso fluviale. Quei compiti spettano ai **Vigili del Fuoco**, al **Nucleo Sommozzatori** e ai gruppi specializzati della Guardia Costiera quando operativi.
+Durante un'alluvione **in corso** il Gruppo non è in prima linea per il salvataggio in acqua: non disponiamo di unità sommozzatori né di gommoni di soccorso fluviale. Quei compiti spettano ai **Vigili del Fuoco** e al **Nucleo Sommozzatori** quando operativi.
 
 Il nostro ruolo inizia **dopo che le acque si sono ritirate**, con le operazioni di **ripristino**. La sequenza consolidata negli interventi a Santa Agata sul Santerno (Ravenna, 2023) e Quarrata (Pistoia, 2023) è la seguente:
 

@@ -32,7 +32,6 @@ Quando chiami il 112, arrivi alla **Centrale Unica di Risposta**, che valuta la 
 - **Vigili del Fuoco** per incendi, crolli, fughe di gas.
 - **Emergenza sanitaria** per malori, incidenti con feriti.
 - **Forze dell'Ordine** (Carabinieri, Polizia) per sicurezza pubblica.
-- **Capitaneria di Porto / Guardia Costiera** per emergenze in mare.
 - **Squadre AIB** (Antincendio Boschivo) per incendi nei boschi.
 
 ## Cosa è cambiato nel Lazio dal 2017

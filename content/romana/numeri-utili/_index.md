@@ -23,7 +23,6 @@ language: "ro"
 |---|---|---|
 | **112** | Numărul Unic de Urgență (NUE) | Orice urgență: sanitară, ordine publică, incendii, salvare tehnică |
 | **803&nbsp;555** | Sala Operativă Protecția Civilă Lazio | Sesizări non-urgente și informații despre urgențe regionale |
-| **1530** | Garda de Coastă | Urgențe pe mare și pe lacuri |
 
 ## Contacte ale Grupului de Protecție Civilă
 

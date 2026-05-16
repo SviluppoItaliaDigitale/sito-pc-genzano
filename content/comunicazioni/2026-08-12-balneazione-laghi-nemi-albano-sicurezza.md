@@ -55,9 +55,6 @@ Nei laghi dei Castelli la sorveglianza in acqua è **limitata alle spiagge organ
 - **Chiamare** il bagnante per mantenerlo cosciente.
 - **Attendere** i soccorsi.
 
-## La Guardia Costiera e il 1530
-
-Anche sui laghi italiani, la competenza di soccorso in acqua è della **Guardia Costiera**, il cui numero dedicato è **1530**. Nel Lazio la filiera è attiva anche per i laghi di Nemi e Albano, oltre che per le coste marine.
 
 ## La tutela ambientale
 
@@ -73,7 +70,6 @@ I laghi dei Castelli sono ecosistemi fragili. Alcune attenzioni:
 
 - [Portale Acque Ministero Salute](https://www.portaleacque.salute.gov.it/)
 - [ARPA Lazio — balneazione](https://www.arpalazio.it/)
-- [Guardia Costiera](https://www.guardiacostiera.gov.it/) — 1530
 - [Parco Regionale Castelli Romani](https://www.parcocastelliromani.it/)
 
-In emergenza in acqua: **112** (o **1530** per soccorso nautico specifico).
+In emergenza in acqua: **112**.

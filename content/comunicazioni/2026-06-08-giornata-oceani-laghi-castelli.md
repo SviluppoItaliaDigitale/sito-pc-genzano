@@ -45,7 +45,7 @@ Nel periodo estivo, i laghi sono frequentati per balneazione, canoa, paddle. Reg
 - **Non fare fuochi** sulle sponde.
 - **Rispetta la fauna e la flora** lacustre.
 
-I **Vigili del Fuoco** e la **Guardia Costiera** (sì, è competente anche su laghi) operano in caso di emergenza. Il numero unico è sempre il **112**.
+I **Vigili del Fuoco** operano in caso di emergenza sui laghi. Il numero unico da chiamare è sempre il **112**.
 
 ## Cambiamento climatico e laghi
 

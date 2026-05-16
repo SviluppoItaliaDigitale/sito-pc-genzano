@@ -39,15 +39,7 @@ Nel Lazio il numero da chiamare in caso di emergenza è il **112**. La centrale 
 </div>
 </div>
 </div>
-<div class="col-md-4">
-<div class="card h-100 border-primary">
-<div class="card-body">
-<p class="fs-2 fw-bold text-primary mb-1">1530</p>
-<h3 class="h5">Guardia Costiera</h3>
-<p class="mb-0">Per emergenze e soccorso in mare e nelle acque di competenza.</p>
-</div>
-</div>
-</div>
+
 </div>
 
 ## Recapiti del Gruppo di Protezione Civile

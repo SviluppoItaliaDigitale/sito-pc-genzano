@@ -23,7 +23,6 @@ Na região do Lácio, desde 2017, **o único número para ligar em caso de emerg
 |---|---|---|
 | **112** | Número Único de Emergência (NUE) | Qualquer emergência: sanitária, ordem pública, incêndios, salvamento técnico |
 | **803&nbsp;555** | Sala Operacional Proteção Civil Lácio | Avisos não urgentes e informações sobre emergências regionais |
-| **1530** | Guarda Costeira | Emergências no mar e nos lagos |
 
 ## Contactos do Grupo de Proteção Civil
 

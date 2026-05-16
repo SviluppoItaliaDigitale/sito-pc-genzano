@@ -23,7 +23,6 @@ Nei giorni di **Ferragosto** sono tipicamente attivi su Genzano e nei Castelli:
 - **Polizia Locale** con pattuglie rinforzate per viabilità.
 - **Vigili del Fuoco** con distaccamenti regionali a pieno organico.
 - **ASL Roma 6** con guardia medica estiva e pronto soccorso presidiato.
-- **Guardia Costiera** sui laghi di Nemi e Albano.
 - **Carabinieri** con servizi ordinari e straordinari.
 
 ## La comunicazione ufficiale
