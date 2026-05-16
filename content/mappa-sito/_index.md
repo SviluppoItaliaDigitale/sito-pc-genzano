@@ -252,6 +252,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Hub Formazione</p>
   <p class="ms-card-desc">Punto centrale della formazione: kit didattici, schede, giochi, primo soccorso.</p>
 </a>
+<a class="ms-card ms-edu" href="/scuole/">
+  <div class="ms-card-icon"><i class="bi bi-people-fill"></i></div>
+  <p class="ms-card-title">Scuole — parti da qui</p>
+  <p class="ms-card-desc">4 percorsi per ruolo: sono un/una docente, sono dirigente scolastico (RSPP/DSGA/DPO), sono un genitore, sono uno studente o studentessa. Ogni card porta in 2 click ai materiali giusti.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/scuole-da-dove-cominciare/">
   <div class="ms-card-icon"><i class="bi bi-compass-fill"></i></div>
   <p class="ms-card-title">Scuole: da dove cominciare</p>
