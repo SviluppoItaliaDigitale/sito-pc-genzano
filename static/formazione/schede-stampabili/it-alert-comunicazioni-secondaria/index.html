@@ -43,12 +43,27 @@
     </div>
 
     <p class="scheda-intro">
-      <strong>IT-alert</strong> è il sistema nazionale di allarme pubblico che invia un messaggio
-      sonoro e visivo a tutti i telefoni cellulari presenti in un'area geografica colpita o
-      potenzialmente colpita da una grave emergenza. Non è un'app: arriva da solo. Ma per
-      <em>diventare azione corretta</em> deve incontrare un cittadino che sappia leggerlo, capirlo
-      e seguire le indicazioni delle autorità.
+      <strong>IT-alert</strong> è il sistema nazionale di allarme pubblico che invia un messaggio sonoro e visivo a tutti i telefoni cellulari presenti in un'area geografica colpita o potenzialmente colpita da una grave emergenza. Non è un'app: arriva da solo. Operativo dal <strong>13 febbraio 2024</strong>, dopo una fase di test su scala regionale (2022-2023). Ma per <em>diventare azione corretta</em> deve incontrare un cittadino che sappia leggerlo, capirlo e seguire le indicazioni delle autorità.
     </p>
+
+    <h2 class="scheda-h2">🔬 Come funziona la tecnologia cell-broadcast</h2>
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55;">
+      <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem;">Differenza tra SMS, app e cell-broadcast</div>
+      Un normale SMS o messaggio app (Telegram, WhatsApp) arriva a una <strong>singola persona</strong> identificata dal numero o dall'account. Il <strong>cell-broadcast</strong> è diverso: il DPC invia il messaggio direttamente alle <strong>celle radio</strong> della rete (4G/5G) che coprono una zona geografica. Tutti i telefoni che si "agganciano" a quelle celle ricevono il messaggio, indipendentemente da contratto, gestore, presenza in rubrica. È <strong>anonimo</strong> (nessuno raccoglie il tuo numero), <strong>universale</strong> (compresi i turisti), <strong>veloce</strong> (pochi secondi). Standard ETSI TS 123.041, integrato nei protocolli telefonici dal 1997. È lo stesso meccanismo usato dal <strong>EU-Alert</strong> in tutti i Paesi UE dal 2022 (Regolamento EECC 2018/1972).
+      <div style="font-style: italic; color: #495057; font-size: 0.76rem; margin-top: 0.3rem;">Fonte: DPC — it-alert.it; ETSI — Cell Broadcast Service standard.</div>
+    </div>
+
+    <h2 class="scheda-h2">📖 Glossario operativo</h2>
+    <dl style="display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px;">
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Cell-broadcast</dt><dd style="margin: 0;">tecnologia di invio messaggi a tutti i terminali agganciati a una cella radio. Anonimo, geolocalizzato, indipendente da contratto.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">EU-Alert / WEA</dt><dd style="margin: 0;">EU-Alert europeo (Regolamento EECC 2018/1972) — Wireless Emergency Alert USA. Sistemi analoghi a IT-alert nei rispettivi paesi.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Categorie IT-alert</dt><dd style="margin: 0;">6 scenari da Direttiva PCM 2023: maremoto, collasso diga, attività vulcanica Vesuvio, attività vulcanica Campi Flegrei, incidente nucleare/radiazioni, incidente chimico industriale (Seveso).</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Test regionali</dt><dd style="margin: 0;">2022-2023: prova in tutte le regioni con calendario pubblico. Cittadini avvisati prima. Permette di familiarizzare con il segnale e identificare bug.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Approfondimento ufficiale</dt><dd style="margin: 0;">sito DPC <em>it-alert.it</em>: spiega categorie, suono distintivo, immagini standard, come reagire. Pagina ufficiale anche multilingua.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Suono distintivo</dt><dd style="margin: 0;">sequenza acustica unica IT-alert (8 toni discendenti + scampanio). Designed da DPC per essere riconoscibile anche con vibrazione attiva.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Quattro fasi del messaggio</dt><dd style="margin: 0;">(1) <em>Imminente</em>: arriverà a breve (es. evacuazione preventiva). (2) <em>In corso</em>: evento attivo. (3) <em>Cessato</em>: rientro consentito. (4) <em>Test</em>: prova di funzionamento.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">ISO 22329 + CWA CEN/CENELEC</dt><dd style="margin: 0;">standard internazionali per la comunicazione di crisi sui social e mobile: struttura messaggio + alt-text + accessibilità.</dd>
+    </dl>
 
     <h2 class="scheda-h2">🎯 Obiettivi di apprendimento</h2>
     <ul class="scheda-elenco">
