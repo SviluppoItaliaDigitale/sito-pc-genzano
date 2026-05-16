@@ -26,6 +26,8 @@ Redirect 301 /simulatore.html /
 
 # URL rinominati post-pubblicazione
 Redirect 301 /formazione/kit-calamita-bambini/16-origami-cappello.html /formazione/kit-calamita-bambini/16-origami-barchetta.html
+Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026/ /comunicazioni/2026-05-30-infiorata-genzano-2026/
+Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026.html /comunicazioni/2026-05-30-infiorata-genzano-2026/
 
 # Cartelle vecchie → nuove
 Redirect 301 /assets/ /
