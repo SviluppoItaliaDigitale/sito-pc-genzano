@@ -151,5 +151,20 @@ jobs:
             COUNT_TXT="${COUNT_TXT:-0}"
             COUNT_IMG="${COUNT_IMG:-0}"
             git commit -m "[skip-social] Bozze social: $COUNT_TXT testi + $COUNT_IMG immagini"
-            git push
+
+            # Rebase + push con retry per gestire conflitti di concorrenza
+            # (più workflow possono pushare insieme dopo un articolo nuovo).
+            # Fino a 3 tentativi: pull --rebase + push.
+            for tentativo in 1 2 3; do
+              if git push 2>&1; then
+                echo "Push riuscito al tentativo $tentativo"
+                break
+              fi
+              echo "Push fallito (tentativo $tentativo), rebase e riprovo..."
+              git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+              if [ "$tentativo" = "3" ]; then
+                echo "Push fallito dopo 3 tentativi"
+                exit 1
+              fi
+            done
           fi
