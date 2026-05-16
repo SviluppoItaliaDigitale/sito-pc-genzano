@@ -107,18 +107,17 @@
       {{ if eq .Kind "section" }}{{ range $ttsBlacklist }}{{ if eq $.Section . }}{{ $isBlacklisted = true }}{{ end }}{{ end }}{{ end }}
       {{ $ttsEnabled := and (ne .Params.tts false) (not $isBlacklisted) }}
 
-      {{/* ── BOX UNIFICATO "Leggi questo articolo in altri modi" ──
+      {{/* ── BOX UNIFICATO STRUMENTI DI LETTURA ──
            Raggruppa reading-time + TTS + braille + PDF in un riquadro blu
-           istituzionale sopra il corpo dell'articolo. Mantiene la logica
-           WCAG (strumenti di lettura PRIMA del contenuto) ma con stile
-           unificato. CSS sezione STRUMENTI ARTICOLO v1.0 in custom.css.
-           Specifiche layout: scelto dall'utente il 16/05/2026 (due box
-           gemelli, in alto lettura, in fondo condivisione). */}}
+           istituzionale sopra il contenuto. Su /comunicazioni/ usa il
+           microtesto "articolo"; sulle pagine stabili usa "pagina" per
+           evitare confusione editoriale. CSS sezione STRUMENTI ARTICOLO
+           v1.0 in custom.css. */}}
       {{ if and $ttsEnabled (gt .WordCount 30) }}
-      <div class="strumenti-articolo strumenti-lettura" role="region" aria-label="Strumenti di lettura dell'articolo">
+      <div class="strumenti-articolo strumenti-lettura" role="region" aria-label="Strumenti di lettura del contenuto">
         <div class="strumenti-articolo-header">
           <i class="bi bi-info-circle me-2" aria-hidden="true"></i>
-          Leggi questo articolo in altri modi
+          {{ if eq .Section "comunicazioni" }}Leggi questo articolo in altri modi{{ else }}Leggi questa pagina in altri modi{{ end }}
         </div>
         <div class="strumenti-articolo-body">
           <span class="reading-time" title="Tempo di lettura stimato (200 parole al minuto)">
