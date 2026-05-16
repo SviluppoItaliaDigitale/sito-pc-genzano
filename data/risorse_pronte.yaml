@@ -108,3 +108,47 @@ materiali:
   dimensione: 5.0 MB
   data_pubblicazione: '2026-05-16'
   licenza: CC BY-NC-SA 4.0
+- id: rischio-incendio-presentazione-pdf-2026-05-16
+  tema: rischio-incendio
+  tema_titolo: Rischio incendi boschivi
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Rischio incendi boschivi'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-16-rischio-incendio-presentazione-pdf.pdf
+  dimensione: 13.7 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
+- id: rischio-incendio-presentazione-2026-05-16
+  tema: rischio-incendio
+  tema_titolo: Rischio incendi boschivi
+  tipo: presentazione
+  titolo: 'Presentazione: Rischio incendi boschivi'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-16-rischio-incendio-presentazione.pptx
+  dimensione: 16.1 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
+- id: rischio-incendio-podcast-2026-05-16
+  tema: rischio-incendio
+  tema_titolo: Rischio incendi boschivi
+  tipo: podcast
+  titolo: 'Podcast: Rischio incendi boschivi'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-16-rischio-incendio-podcast.m4a
+  dimensione: 50.2 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
+- id: rischio-incendio-infografica-2026-05-16
+  tema: rischio-incendio
+  tema_titolo: Rischio incendi boschivi
+  tipo: infografica
+  titolo: 'Infografica: Rischio incendi boschivi'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-16-rischio-incendio-infografica.png
+  dimensione: 4.7 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
