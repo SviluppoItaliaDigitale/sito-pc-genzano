@@ -239,14 +239,14 @@ Logica skip in `assistente-fab.html`: `{{ $skipSections := slice "assistente" "e
 Sistema completo per generare bozze post social (X, Facebook, Instagram, Telegram) e immagini Instagram (post 1080×1080 + carosello + story 1080×1920) a partire dagli articoli del sito. Usa il **tier gratuito Gemini 2.5 Flash** (1500 req/giorno = costo zero).
 
 **Componenti operativi:**
-- `scripts/genera-social.py` — motore Python: legge le rules `.claude/rules/02|03|06.md` e le inietta nel system prompt di Gemini, ottiene 4 testi via JSON strutturato, salva in `social-bozze/<slug>/`.
+- `scripts/genera-social.py` — motore Python: legge le rules `.claude/rules/02|03|06.md` e le inietta nel system prompt di Gemini, ottiene 4 testi via JSON strutturato, salva in `social-bozze/AAAA/MM/<slug>/`.
 - `scripts/genera-immagini-social.py` — Pillow: template istituzionale per Instagram con auto-rilevamento carosello (estrae le foto inline `{{< foto >}}` dal body).
 - `scripts/genera-social.sh` — wrapper bash sequenziale.
 - `.github/workflows/genera-social-bozze.yml` — automazione CI a ogni push articolo.
 
 **Cartelle:**
-- `social-bozze/<slug>/` — fuori da Hugo (non deployata sul sito), visibile solo nel repo. Contiene **tutto** il materiale di un articolo per i social: 4 file `.txt` (X/Facebook/Instagram/Telegram), `README.md` operativo, `instagram-post.jpg` (1080×1080, singola foto) o `instagram-post-N.jpg` (carosello 2-10 foto), `instagram-story.jpg` (1080×1920). Comodo da scaricare insieme via mobile.
-- (Storico) Fino al 2 maggio 2026 le immagini Instagram stavano in `static/images-social/<slug>-instagram-*.jpg` con URL pubblico Aruba. Spostate in `social-bozze/<slug>/` perché l'URL pubblico non era usato da nessuna parte del sito (no template, no partial, no articolo le linkava): tenere tutto in un posto è molto più comodo dal mobile.
+- `social-bozze/AAAA/MM/<slug>/` — fuori da Hugo (non deployata sul sito), visibile solo nel repo. Contiene **tutto** il materiale di un articolo per i social: 4 file `.txt` (X/Facebook/Instagram/Telegram), `README.md` operativo, `instagram-post.jpg` (1080×1080, singola foto) o `instagram-post-N.jpg` (carosello 2-10 foto), `instagram-story.jpg` (1080×1920). Comodo da scaricare insieme via mobile.
+- (Storico) Fino al 2 maggio 2026 le immagini Instagram stavano in `static/images-social/<slug>-instagram-*.jpg` con URL pubblico Aruba. Spostate in `social-bozze/AAAA/MM/<slug>/` perché l'URL pubblico non era usato da nessuna parte del sito (no template, no partial, no articolo le linkava): tenere tutto in un posto è molto più comodo dal mobile.
 
 **Setup chiave:**
 - Locale: `export GEMINI_API_KEY="..."` in `~/.bashrc` (chiave gratuita da `aistudio.google.com/apikey`).

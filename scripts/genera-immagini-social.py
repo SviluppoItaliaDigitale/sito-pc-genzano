@@ -41,9 +41,31 @@ BOZZE_DIR = ROOT / "social-bozze"  # Output: stessa cartella dei testi (instagra
 LOGO_PATH = IMAGES_DIR / "logo-pc-genzano.png"
 
 
+def slug_to_path(slug: str) -> Path:
+    """Da slug 'AAAA-MM-GG-titolo' ricava la struttura nidificata
+    AAAA/MM/AAAA-MM-GG-titolo per navigabilità in social-bozze/.
+
+    Esempi:
+      '2026-05-15-giro-italia' -> Path('2026/05/2026-05-15-giro-italia')
+      'slug-senza-data'        -> Path('slug-senza-data')  (fallback piatto)
+
+    Storia: il 16/05/2026 la cartella social-bozze/ aveva 103 cartelle
+    piatte impossibili da navigare da mobile. Migrazione a struttura
+    anno/mese per allineare alla logica della pagina /comunicazioni/.
+    """
+    parts = slug.split('-', 3)
+    if (len(parts) >= 4
+            and len(parts[0]) == 4 and parts[0].isdigit()
+            and len(parts[1]) == 2 and parts[1].isdigit()
+            and len(parts[2]) == 2 and parts[2].isdigit()):
+        return Path(parts[0]) / parts[1] / slug
+    return Path(slug)
+
+
 def slug_dir(slug: str) -> Path:
-    """Cartella di output per un dato slug. Crea se non esiste."""
-    d = BOZZE_DIR / slug
+    """Cartella di output per un dato slug. Crea se non esiste.
+    Usa struttura nidificata social-bozze/AAAA/MM/AAAA-MM-GG-slug/."""
+    d = BOZZE_DIR / slug_to_path(slug)
     d.mkdir(parents=True, exist_ok=True)
     return d
 

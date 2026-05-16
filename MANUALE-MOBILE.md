@@ -255,7 +255,7 @@ puoi seguire da:
 |---|---|
 | 🚀 Deploy | Builda Hugo e pubblica su Aruba + GitHub Pages |
 | 📷 Cover tipografica | Genera la cover banner istituzionale col titolo (`auto-cover-mancanti.py`) per articoli con `image:""` |
-| 📱 Genera bozze social | Crea `social-bozze/<slug>/` con 4 file `.txt` per X/Facebook/Instagram/Telegram + immagini Instagram |
+| 📱 Genera bozze social | Crea `social-bozze/AAAA/MM/<slug>/` con 4 file `.txt` per X/Facebook/Instagram/Telegram + immagini Instagram |
 
 Quando tutti i pallini diventano verdi ✅, l'articolo è online.
 
@@ -354,7 +354,7 @@ e troverai:
 
 Le immagini Instagram (post/carosello + story) **stanno nella stessa cartella
 delle bozze**, accanto ai file `.txt`. Da maggio 2026 tutto il materiale di un
-articolo (testi + immagini) è in `social-bozze/<slug>/`, comodo da scaricare
+articolo (testi + immagini) è in `social-bozze/AAAA/MM/<slug>/`, comodo da scaricare
 insieme.
 
 Nel file `instagram.txt` in fondo trovi un riferimento del tipo:
@@ -370,7 +370,7 @@ Nel file `instagram.txt` in fondo trovi un riferimento del tipo:
 Le trovi tutte nella stessa cartella su GitHub:
 
 ```
-https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/social-bozze/<slug>
+https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/social-bozze/AAAA/MM/<slug>
 ```
 
 **Per scaricarle da mobile:**
@@ -533,8 +533,8 @@ Tu non devi fare nulla, succede in background.
 | Audit accessibilità Lighthouse | Dopo ogni deploy | Report accessibilità |
 | Cover automatica articoli | Push articolo con `image:""` | Genera cover tipografica blu+titolo (banner istituzionale, anche per og:image social) |
 | Foto inline (Wikipedia/NASA/foto utente) | Su richiesta a Claude | Agent `pc-image-fixer`: scarica + fascia blu + shortcode `{{< foto >}}` nel corpo (mai nel banner) |
-| **Bozze social X/FB/IG/TG** | Push articolo | Crea `social-bozze/<slug>/*.txt` (richiede quota Gemini disponibile) |
-| **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `social-bozze/<slug>/instagram-*.jpg` (Pillow, no rate limit) |
+| **Bozze social X/FB/IG/TG** | Push articolo | Crea `social-bozze/AAAA/MM/<slug>/*.txt` (richiede quota Gemini disponibile) |
+| **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `social-bozze/AAAA/MM/<slug>/instagram-*.jpg` (Pillow, no rate limit) |
 
 > **Nota Gemini API gratuita**: il tier free ha ~50 richieste/giorno. Una rigenerazione massiva di tutte le bozze testuali si esaurisce dopo ~50 articoli con HTTP 429 — si riprende il giorno dopo (reset a mezzanotte UTC). Il workflow normale (1 articolo/push) gira sempre. Specifiche in [`manuale/parte-16-bozze-social-gestione-quota-gemini-api.md`](manuale/parte-16-bozze-social-gestione-quota-gemini-api.md).
 
@@ -572,7 +572,7 @@ clicca sul workflow rosso, leggi l'errore. Le cause più comuni:
 
 Verifica che:
 1. Il workflow `📱 Genera bozze social` sia andato a buon fine (verde ✅).
-2. Hai dato qualche minuto al refresh. La cartella `social-bozze/<slug>/`
+2. Hai dato qualche minuto al refresh. La cartella `social-bozze/AAAA/MM/<slug>/`
    compare nel repo dopo che il workflow ha committato.
 
 ### «Le bozze sono fatte male»
