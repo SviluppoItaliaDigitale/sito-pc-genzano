@@ -693,12 +693,37 @@
       options: [
         { text: 'Domande frequenti (FAQ)', next: 'info_servizi_faq' },
         { text: 'Documenti scaricabili e modulistica', next: 'info_servizi_download' },
+        { text: 'Materiali pronti (podcast, infografiche, presentazioni)', next: 'info_servizi_materiali_pronti' },
+        { text: 'Podcast del Gruppo', next: 'info_servizi_podcast' },
         { text: 'Comunicazioni e news', next: 'info_servizi_comunicazioni' },
         { text: 'Mappa del sito', next: 'info_servizi_mappa' },
         { text: 'Standard ISO per la Protezione Civile', next: 'info_servizi_iso' },
         { text: 'Trasparenza — natura ETS, statuto, accesso civico', next: 'info_servizi_trasparenza' },
         { text: 'Feed RSS — ricevi le notizie nel tuo aggregatore', next: 'info_servizi_rss' },
         { text: 'Versione "Facile da leggere"', next: 'info_servizi_facile' }
+      ]
+    },
+    info_servizi_materiali_pronti: {
+      kind: 'answer',
+      title: 'Materiali pronti da scaricare',
+      body: [
+        'Podcast, infografiche e presentazioni divisi per tema di Protezione Civile (allerta meteo, kit emergenza famiglia, rischio sismico, idrogeologico, incendio).',
+        'Tutti i materiali sono pubblicati con licenza Creative Commons CC BY-NC-SA 4.0: puoi scaricarli e condividerli per scuola, formazione interna e divulgazione, citando la fonte.'
+      ],
+      links: [
+        { text: 'Apri Materiali pronti', url: '/risorse-pronte/' }
+      ]
+    },
+    info_servizi_podcast: {
+      kind: 'answer',
+      title: 'Podcast del Gruppo',
+      body: [
+        'Episodi audio sui rischi del territorio e sulla preparazione alle emergenze, generati partendo da fonti istituzionali (DPC, INGV, ISPRA, Centro Funzionale Regionale Lazio) e verificati prima della pubblicazione.',
+        'Iscriviti al feed RSS per ricevere i nuovi episodi automaticamente nella tua app preferita (Spotify, Apple Podcasts, Pocket Casts, AntennaPod).'
+      ],
+      links: [
+        { text: 'Apri la pagina Podcast', url: '/podcast/' },
+        { text: 'Feed RSS del podcast', url: '/podcast/index.xml' }
       ]
     },
     info_servizi_faq: {
