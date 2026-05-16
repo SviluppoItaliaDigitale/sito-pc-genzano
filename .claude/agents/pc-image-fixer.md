@@ -85,6 +85,47 @@ Convenzione: `02-content-design-pa.md` § "Posizionamento di foto multiple in ar
 
 **Verifica licenza prima di scaricare**: ogni fonte ha vincoli diversi. Wikimedia Commons usa CC BY-SA / CC BY / PD-shape / CC0 — in tutti i casi l'attribuzione (autore + licenza + link Commons) è obbligatoria nella caption. Per CC BY-SA, ricorda che l'opera derivata (se ne fai una) eredita la licenza share-alike.
 
+## 🔁 Foto aggiunte post-pubblicazione (caso frequente)
+
+L'utente spesso pubblica un articolo **prima** di avere le foto. Le foto arrivano in un secondo momento (giorni dopo, dal canale Telegram del Gruppo, da un volontario che le invia, ecc.). È un pattern di lavoro **legittimo e ricorrente** — non un'eccezione.
+
+### Procedura standard per foto post-pubblicazione
+
+Quando l'utente ti fornisce 1+ foto da aggiungere a un articolo già pubblicato:
+
+1. **Backup difensivo** della foto eventualmente già presente con lo stesso nome:
+   ```bash
+   cp static/images/<nome>.webp /tmp/<nome>-OLD.webp
+   ```
+
+2. **Applica fascia blu** via lo script idempotente:
+   ```bash
+   python3 scripts/applica-fascia-foto.py /tmp/<file-sorgente> <nome-output>
+   ```
+
+   Lo script **rileva automaticamente** se la foto sorgente ha già una fascia (pixel-check a 98% h + 80% h) e va in **skip** invece di sovrapporre una seconda fascia. Output tipico in caso di skip:
+   ```
+   [skip] La foto sorgente 'X.webp' ha già una fascia blu istituzionale
+          (pixel @98%h=brand-blue, @80%h=pura).
+          Non applico una seconda fascia. Usa --force se vuoi davvero
+          sovrascrivere.
+   ```
+
+3. **Rigenera carosello Instagram** (e story) dopo aver aggiornato le foto:
+   ```bash
+   python3 scripts/genera-immagini-social.py --force content/comunicazioni/<slug>.md
+   ```
+
+4. **Testi social** (`x.txt`, `facebook.txt`, ecc.) sono rigenerati dal workflow CI `genera-social-bozze.yml` al prossimo push (richiede `GEMINI_API_KEY`), oppure dal PC utente con quella chiave in env. Dalla sandbox cloud non sono accessibili.
+
+### Errore tipico da NON ripetere (incident 16/05/2026)
+
+⚠️ **Doppia fascia sovrapposta** su 3 foto inline dell'articolo "Giro d'Italia Formia". Causa: check pixel a 92% h cadeva in zona di transizione foto/fascia → falso negativo → script ha aggiunto una seconda fascia su foto che ce l'avevano già.
+
+Fix nello script (16/05/2026, v2): funzione `has_brand_band()` campiona pixel a **98% h E 80% h**, valuta delta, è idempotente. Detection robusta.
+
+**Tu come agent**: non rifare il pixel-check a mano nei tuoi prompt. **Fidati dello script**: applica e leggi il messaggio `[skip]` o `[ok]`. Se vedi `[skip]`, riporta all'utente che la foto era già con fascia e niente è stato modificato.
+
 ## DIVIETI
 
 - ❌ Sostituire il banner col foto utente.
@@ -92,6 +133,7 @@ Convenzione: `02-content-design-pa.md` § "Posizionamento di foto multiple in ar
 - ❌ Stessa foto stock generica per macro-tema (es. tutte le foto "volontari Croce Rossa" su 74 articoli — incidente aprile 2026 documentato in `02-content-design-pa.md` § "Divieto: foto stock generiche ripetute per macro-tema"). Caption mai riusata identica su più articoli.
 - ❌ Bandiere/stemmi comunali come foto evento (lo script Wikipedia li scarta automaticamente con exit 4).
 - ❌ Cover tipografica generata con script altri da `genera-cover.py` o `auto-cover-mancanti.py`.
+- ❌ **Doppia fascia istituzionale** sovrapposta. Lo script `applica-fascia-foto.py` da v2 (16/05/2026) è idempotente: se vedi `[skip]` non insistere, non passare `--force` a meno che l'utente non lo chieda esplicitamente.
 
 ## Checkpoint pre-batch (rule 07)
 

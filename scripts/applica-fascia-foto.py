@@ -52,7 +52,47 @@ def find_font(weight: str = "Bold") -> Path:
     return None
 
 
-def apply_band(src_path: Path, out_name: str) -> Path:
+def has_brand_band(im: Image.Image) -> bool:
+    """Rileva se la foto sorgente ha già una fascia blu istituzionale in basso.
+
+    Strategia robusta (post-incident 16 maggio 2026 "doppia fascia Giro
+    d'Italia Formia"): campiona 3 pixel a 98% h (centro fascia attesa) E
+    3 pixel a 80% h (zona foto pura sopra la fascia). Se i bottom sono
+    blu istituzionale (#003366 ± 30) e gli upper NO, la fascia è già
+    presente → lo script va in skip per non sovrapporre una seconda
+    fascia.
+
+    Il check al 92% h era falsato perché cadeva in zona di transizione
+    foto/fascia, con pixel impuri che davano falsi negativi.
+    """
+    w, h = im.size
+    rgb = im.convert("RGB") if im.mode != "RGB" else im
+    BRAND_R, BRAND_G, BRAND_B = PRIMARY  # (0, 51, 102)
+    TOL = 30
+
+    def is_brand_blue(px):
+        r, g, b = px[:3]
+        return (
+            abs(r - BRAND_R) <= TOL
+            and abs(g - BRAND_G) <= TOL
+            and abs(b - BRAND_B) <= TOL
+        )
+
+    # 3 sample a 98% h (centro fascia, se presente)
+    bottom_samples = [
+        rgb.getpixel((int(w * x), int(h * 0.98))) for x in (0.2, 0.5, 0.8)
+    ]
+    # 3 sample a 80% h (sopra la fascia, in zona foto pura)
+    above_samples = [
+        rgb.getpixel((int(w * x), int(h * 0.80))) for x in (0.2, 0.5, 0.8)
+    ]
+    bottom_blue_count = sum(is_brand_blue(p) for p in bottom_samples)
+    above_blue_count = sum(is_brand_blue(p) for p in above_samples)
+    # Almeno 2 su 3 in basso devono essere blu brand E meno di 2 in alto
+    return bottom_blue_count >= 2 and above_blue_count < 2
+
+
+def apply_band(src_path: Path, out_name: str, force: bool = False) -> Path:
     if not src_path.is_file():
         raise FileNotFoundError(f"sorgente non trovata: {src_path}")
     if not LOGO_PATH.is_file():
@@ -62,6 +102,25 @@ def apply_band(src_path: Path, out_name: str) -> Path:
 
     # 1) Carica e ridimensiona la foto a larghezza WIDTH (mantenendo aspect)
     src = Image.open(src_path)
+
+    # 1.PRE) IDEMPOTENZA — se la foto sorgente HA GIÀ una fascia blu
+    # istituzionale, NON applicare una seconda fascia. Skip per evitare
+    # doppia fascia sovrapposta (incident 16 maggio 2026 "Giro d'Italia
+    # Formia" — 3 foto inline con doppia fascia visibile sotto al
+    # contenuto). Override possibile con --force.
+    if not force and has_brand_band(src):
+        print(
+            f"[skip] La foto sorgente '{src_path.name}' ha già una fascia blu "
+            f"istituzionale (pixel @98%h=brand-blue, @80%h=pura).",
+            file=sys.stderr,
+        )
+        print(
+            f"       Non applico una seconda fascia. Usa --force se vuoi "
+            f"davvero sovrascrivere il file di destinazione.",
+            file=sys.stderr,
+        )
+        print(f"File NON modificato: {out_path}", file=sys.stderr)
+        return out_path
 
     # 1a) STRIP EXIF — privacy: rimuove coordinate GPS, timestamp,
     # modello camera, autore, software, e altri metadati identificativi
@@ -157,13 +216,27 @@ def save_webp(img: Image.Image, out_path: Path):
 
 
 def main():
-    if len(sys.argv) != 3:
+    # Parsing minimale: supporta `--force` come flag opzionale prima/dopo gli args
+    args = [a for a in sys.argv[1:] if a != "--force"]
+    force = "--force" in sys.argv[1:]
+    if len(args) != 2:
         print(__doc__, file=sys.stderr)
+        print(
+            "\nUso: python3 applica-fascia-foto.py <src> <nome-output> [--force]",
+            file=sys.stderr,
+        )
+        print(
+            "\nIDEMPOTENZA: se la foto sorgente ha già una fascia blu "
+            "istituzionale, lo script va in skip per non applicare una "
+            "seconda fascia (incident 16/05/2026). Usa --force per "
+            "bypassare il check.",
+            file=sys.stderr,
+        )
         sys.exit(1)
-    src = Path(sys.argv[1])
-    name = sys.argv[2]
+    src = Path(args[0])
+    name = args[1]
     try:
-        apply_band(src, name)
+        apply_band(src, name, force=force)
     except FileNotFoundError as e:
         print(f"[error] {e}", file=sys.stderr)
         sys.exit(2)
