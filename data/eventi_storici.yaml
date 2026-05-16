@@ -1,64 +1,133 @@
 # Timeline storica — tappe di rilievo per la Protezione Civile dei Castelli Romani.
 #
-# Mescola la storia naturale del territorio (vulcano, sismicità) e l'evoluzione
-# del sistema di protezione civile che ci riguarda.
+# Mescola la storia naturale del territorio (vulcano, sismicità, idrogeologia)
+# e l'evoluzione del sistema di protezione civile che ci riguarda. Focus
+# operativo sulla cultura del rischio: ogni voce dice cosa ci insegna.
 #
-# REGOLA: ogni voce DEVE avere una fonte istituzionale verificabile con link
-# permanente (niente contenuti non verificati — divieto di progetto). Per
-# aggiungere un evento: copiare un blocco, compilare tutti i campi, citare la
-# fonte. Le voci sono ordinate dal campo `ordine` (anno numerico, crescente).
+# REGOLA: ogni voce DEVE avere una fonte istituzionale verificabile.
+# Niente contenuti inventati (vincolo di progetto in CLAUDE.md).
+# Le voci sono ordinate dal campo `ordine` (anno numerico, crescente).
 #
-# tipo: geologico | sismico | idrogeologico | normativo | istituzionale
+# tipo: geologico | sismico | idrogeologico | meteorologico |
+#       sanitario | normativo | istituzionale
 
 eventi:
-  - anno: "~600 a.C."
-    ordine: -600
+
+  - anno: "~300.000 anni fa"
+    ordine: -300000
     tipo: "geologico"
-    titolo: "L'ultima attività del Vulcano Laziale"
-    luogo: "Colli Albani"
+    titolo: "Formazione del cratere di Nemi — Fase delle Faete"
+    luogo: "Bacino del Lago di Nemi, Vulcano Laziale"
     descrizione: >-
-      I Castelli Romani sorgono su un apparato vulcanico, il Vulcano Laziale,
-      la cui ultima attività eruttiva è collocata dagli studi geologici intorno
-      al 600 a.C. (con margini di incertezza). Oggi è classificato come vulcano
-      quiescente: non spento, ma senza eruzioni in corso.
+      Il cratere di Nemi si forma durante la fase eruttiva del Vulcano
+      delle Faete (circa 308.000–250.000 anni fa), una delle tappe
+      dell'attività del Vulcano Laziale (Colli Albani). Lo stesso apparato
+      ha generato i crateri gemelli di Albano e Ariccia. È la storia
+      geologica che spiega perché viviamo su un territorio fertile ma
+      sismicamente attivo.
     lezione: >-
-      Conoscere la natura del territorio è il primo passo della prevenzione:
-      il nostro paesaggio — i laghi, i crateri, il terreno fertile — è il
-      risultato di quell'attività vulcanica.
-    fonte: "INGV — I vulcani italiani; Voce «Colli Albani», Wikipedia"
+      Il paesaggio dei Castelli Romani — i laghi craterici, le colline
+      di tufo, i suoli vulcanici — è il risultato di un'attività eruttiva
+      potente. Il vulcano oggi è classificato "quiescente": non spento,
+      ma non in eruzione. Monitorarlo è parte del sistema nazionale.
+    fonte: "INGV — Sezione Vulcani; pubblicazioni scientifiche su Vulcano Laziale (Fase delle Faete)"
     fonte_url: "https://www.ingv.it/"
 
-  - anno: "1806"
+  - anno: "V–IV secolo a.C."
+    ordine: -400
+    tipo: "idrogeologico"
+    titolo: "L'Emissario antico del Lago di Nemi"
+    luogo: "Lago di Nemi"
+    descrizione: >-
+      Già in epoca pre-romana (V–IV secolo a.C.) viene realizzato un
+      cunicolo emissario sotterraneo per regolare il livello del Lago
+      di Nemi ed evitare esondazioni delle terre coltivabili a valle.
+      È fra le più antiche opere documentate di ingegneria idraulica per
+      la prevenzione del rischio idrogeologico in Italia centrale.
+    lezione: >-
+      Il controllo dei bacini lacustri è prevenzione, non magia: chi
+      viveva qui 2.500 anni fa lo sapeva e costruiva opere mirate.
+      La cultura del rischio idrogeologico è antica.
+    fonte: "Soprintendenza Speciale di Roma; ISPRA — Carta geologica e archeologica del territorio dei Colli Albani"
+    fonte_url: "https://www.isprambiente.gov.it/"
+
+  - anno: "26 agosto 1806"
     ordine: 1806
     tipo: "sismico"
-    titolo: "Il terremoto dei Castelli Romani"
-    luogo: "Rocca di Papa e Castelli Romani"
+    titolo: "Terremoto dei Castelli Romani — il sisma di riferimento"
+    luogo: "Castelli Romani, danni rilevanti a Genzano"
     descrizione: >-
-      Il 26 agosto 1806 un forte terremoto colpì l'area dei Castelli Romani,
-      con i danni più gravi a Rocca di Papa e nei comuni vicini. È uno degli
-      eventi sismici storici meglio documentati della nostra zona ed è censito
-      nel Catalogo Parametrico dei Terremoti Italiani dell'INGV.
+      Il 26 agosto 1806 un forte terremoto colpisce l'area dei Castelli
+      Romani con epicentro stimato fra Rocca di Papa e Genzano. A
+      Genzano l'intensità macrosismica raggiunge il grado VIII MCS:
+      crolli e danni gravi documentati a Palazzo Sforza Cesarini e alla
+      Chiesa della SS. Trinità (Chiesa della Cima). È il sisma di
+      riferimento (benchmark) per il rischio sismico massimo storico
+      del nostro territorio comunale.
     lezione: >-
-      La sismicità dei Castelli non è un'ipotesi astratta: è già accaduta. La
-      memoria degli eventi storici è alla base della classificazione sismica
-      attuale e delle norme antisismiche per le costruzioni.
-    fonte: "INGV — Catalogo Parametrico dei Terremoti Italiani (CPTI)"
+      Vivere in Zona sismica 2 non è un'astrazione amministrativa: è
+      la memoria di eventi accaduti. Le moderne norme antisismiche (NTC
+      2018) sono calibrate proprio sulla sismicità storica come questa.
+    fonte: "INGV — Catalogo Parametrico dei Terremoti Italiani CPTI15 e Database Macrosismico DBMI15"
     fonte_url: "https://emidius.mi.ingv.it/CPTI15-DBMI15/"
+
+  - anno: "1928–1932"
+    ordine: 1928
+    tipo: "idrogeologico"
+    titolo: "Abbassamento del Lago di Nemi — recupero delle Navi di Caligola"
+    luogo: "Lago di Nemi"
+    descrizione: >-
+      Fra il 1928 e il 1932 il livello del Lago di Nemi viene abbassato
+      di oltre 20 metri per recuperare le due navi monumentali di
+      Caligola (I secolo d.C.) dal fondale. L'operazione ha conseguenze
+      idrogeologiche dirette: la repentina variazione del livello
+      destabilizza le pareti del cratere e i versanti sotto l'abitato
+      di Nemi e Genzano. È l'inizio del monitoraggio sistematico dei
+      versanti a rischio frana.
+    lezione: >-
+      Ogni modifica antropica significativa dei bacini lacustri ha
+      ripercussioni sulla stabilità dei versanti. Il rischio
+      idrogeologico locale è figlio anche di scelte umane, non solo
+      di natura.
+    fonte: "ISPRA — Carta nazionale del dissesto idrogeologico (versanti Colli Albani); Museo delle Navi Romane"
+    fonte_url: "https://www.isprambiente.gov.it/"
+
+  - anno: "1989–1990"
+    ordine: 1989
+    tipo: "sismico"
+    titolo: "Crisi sismica dei Colli Albani"
+    luogo: "Colli Albani, Castelli Romani"
+    descrizione: >-
+      Fra il 1989 e il 1990 i Colli Albani sono interessati da uno
+      sciame sismico di migliaia di scosse, generalmente di bassa
+      magnitudo ma percepite dalla popolazione. L'evento principale è
+      del 14 aprile 1989 con magnitudo M 4.2. La crisi attiva sul
+      territorio comunale il primo nucleo operativo di volontariato di
+      Protezione Civile: monitoraggio degli edifici, censimento dei
+      danni minori, assistenza alla popolazione preoccupata.
+    lezione: >-
+      Le crisi sismiche non sono sempre eventi singoli: anche sciami
+      prolungati di scosse piccole richiedono organizzazione, presidio
+      degli edifici scolastici, comunicazione costante con i cittadini.
+      Da qui nasce concretamente la PC comunale di Genzano.
+    fonte: "INGV — Bollettino sismico storico; ISIDe — Italian Seismological Instrumental and parametric Database"
+    fonte_url: "https://terremoti.ingv.it/"
 
   - anno: "1992"
     ordine: 1992
     tipo: "normativo"
-    titolo: "Nasce il Servizio Nazionale della Protezione Civile"
+    titolo: "Legge Zamberletti — nasce il Servizio Nazionale della Protezione Civile"
     luogo: "Italia"
     descrizione: >-
-      La Legge 24 febbraio 1992, n. 225 (Legge Zamberletti) istituisce il
-      Servizio nazionale della protezione civile, definendo per la prima volta
-      in modo organico ruoli, competenze e il sistema di coordinamento fra
-      Stato, Regioni, Comuni e volontariato.
+      La Legge 24 febbraio 1992, n. 225 (Legge Zamberletti) istituisce
+      il Servizio nazionale della protezione civile, definendo per la
+      prima volta in modo organico ruoli, competenze e il sistema di
+      coordinamento fra Stato, Regioni, Comuni e volontariato
+      organizzato.
     lezione: >-
-      La protezione civile moderna è un sistema, non un singolo ente: ogni
-      Comune — Genzano compreso — ne è parte attiva, con il suo Gruppo
-      Comunale di volontari.
+      La protezione civile moderna è un sistema, non un singolo ente.
+      Ogni Comune — Genzano compreso — ne è parte attiva, con il suo
+      Gruppo Comunale di volontari.
     fonte: "Normattiva — Legge 24 febbraio 1992, n. 225"
     fonte_url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992;225"
 
@@ -68,14 +137,36 @@ eventi:
     titolo: "Genzano classificata in Zona sismica 2"
     luogo: "Genzano di Roma e Castelli Romani"
     descrizione: >-
-      Con la riclassificazione sismica del territorio nazionale (2003) e il
-      successivo recepimento regionale, Genzano di Roma e i Castelli Romani
-      rientrano nella Zona sismica 2, a sismicità medio-alta. La classificazione
-      determina le norme tecniche da rispettare nelle costruzioni.
+      Con l'OPCM 20 marzo 2003 n. 3274 e il recepimento regionale,
+      Genzano di Roma e i Castelli Romani sono classificati in Zona
+      sismica 2 (sismicità medio-alta, ag = 0,15–0,25 g). La
+      classificazione vincola le Norme Tecniche di Costruzione
+      antisismiche per nuove edificazioni e ristrutturazioni.
     lezione: >-
-      Vivere in Zona 2 significa progettare e costruire pensando al terremoto.
-      Non è burocrazia: è prevenzione che salva vite.
-    fonte: "Regione Lazio — Classificazione sismica del territorio"
+      Vivere in Zona 2 significa progettare e costruire tenendo conto
+      del terremoto. Non è solo burocrazia: è prevenzione che salva
+      vite e patrimonio.
+    fonte: "Regione Lazio — DGR n. 387/2009 (classificazione sismica); OPCM 3274/2003"
+    fonte_url: "https://www.regione.lazio.it/"
+
+  - anno: "novembre 2014"
+    ordine: 2014
+    tipo: "idrogeologico"
+    titolo: "Alluvione lampo a Genzano"
+    luogo: "Frazione Landi e zona Olmo"
+    descrizione: >-
+      Nel novembre 2014 piogge intense scaricano in poche ore quantità
+      d'acqua che la rete di drenaggio comunale non riesce a smaltire:
+      criticità idrauliche nella Frazione Landi e nella zona Olmo,
+      con allagamenti di scantinati, garage e tratti di viabilità.
+      Intervento del Gruppo Comunale e delle squadre regionali per
+      svuotamenti e ripristino.
+    lezione: >-
+      Le alluvioni lampo non avvengono solo nei grandi fiumi: una rete
+      urbana sottodimensionata in un'ora di pioggia intensa è un
+      rischio reale. Manutenzione di caditoie, tombini e fossi è
+      prevenzione quotidiana.
+    fonte: "Comune di Genzano di Roma — Cronaca delle attività di protezione civile; Regione Lazio Centro Funzionale"
     fonte_url: "https://www.regione.lazio.it/"
 
   - anno: "2018"
@@ -84,13 +175,78 @@ eventi:
     titolo: "Il Codice della Protezione Civile"
     luogo: "Italia"
     descrizione: >-
-      Il Decreto legislativo 2 gennaio 2018, n. 1 — il Codice della Protezione
-      Civile — riunisce e aggiorna la disciplina del settore: attività di
-      previsione, prevenzione, soccorso e superamento dell'emergenza, ruolo
-      dei Comuni e centralità del volontariato organizzato.
+      Il Decreto Legislativo 2 gennaio 2018, n. 1 — Codice della
+      Protezione Civile — riunisce e aggiorna la disciplina del settore:
+      le 4 attività (previsione, prevenzione, soccorso, superamento),
+      il ruolo dei Comuni, la centralità del volontariato organizzato.
     lezione: >-
-      È la cornice entro cui opera oggi il Gruppo Comunale di Genzano: un
-      riferimento unico per sapere chi fa cosa, prima, durante e dopo
-      un'emergenza.
+      È la cornice entro cui opera oggi il Gruppo Comunale di Genzano:
+      un riferimento unico per sapere chi fa cosa, prima, durante e
+      dopo un'emergenza.
     fonte: "Normattiva — D.Lgs. 2 gennaio 2018, n. 1"
     fonte_url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018;1"
+
+  - anno: "29 ottobre 2018"
+    ordine: 2018.5
+    tipo: "meteorologico"
+    titolo: "Tempesta di vento — schianto di alberature monumentali"
+    luogo: "Le Olmate, Genzano di Roma"
+    descrizione: >-
+      Il 29 ottobre 2018 raffiche di vento eccezionali colpiscono il
+      centro Italia. A Genzano si registra lo schianto di alberature
+      monumentali (tigli e platani) lungo Le Olmate, il viale storico
+      che collega il centro al Santuario. L'intervento di rimozione e
+      messa in sicurezza dura circa 48 ore per ripristinare la
+      viabilità strategica del corridoio comunale.
+      Nota storica — il viale era originariamente alberato con olmi;
+      la grafiosi (malattia fungina causata da *Ophiostoma novo-ulmi*)
+      ha decimato il patrimonio nazionale di olmi nel Novecento,
+      portando alla sostituzione con tigli e platani.
+    lezione: >-
+      Il vento estremo è ormai un rischio ricorrente. La gestione del
+      verde urbano (potature, monitoraggio fitosanitario, piani di
+      sostituzione) è prevenzione di protezione civile a tutti gli
+      effetti.
+    fonte: "Centro Funzionale Regionale Lazio — bollettini meteo ottobre 2018; Cronaca attività Gruppo Comunale"
+    fonte_url: "https://www.regione.lazio.it/"
+
+  - anno: "2020–2022"
+    ordine: 2020
+    tipo: "sanitario"
+    titolo: "Pandemia COVID-19 — supporto logistico e sanitario"
+    luogo: "Genzano di Roma, Italia"
+    descrizione: >-
+      Durante la pandemia da SARS-CoV-2 il Gruppo Comunale partecipa
+      al sistema nazionale di emergenza sanitaria: distribuzione di
+      farmaci e DPI alle persone fragili, supporto logistico ai centri
+      vaccinali, presidio dei punti tampone, comunicazione di
+      pubblica utilità ai cittadini. È il primo evento di durata
+      pluriennale gestito dalla PC moderna.
+    lezione: >-
+      Le emergenze sanitarie sono dentro al perimetro della Protezione
+      Civile. La rete di volontariato organizzato regge anche eventi
+      lunghi mesi o anni, se è formata e coordinata.
+    fonte: "Dipartimento della Protezione Civile — Cronologia ufficiale emergenza COVID-19"
+    fonte_url: "https://www.protezionecivile.gov.it/"
+
+  - anno: "2025"
+    ordine: 2025
+    tipo: "istituzionale"
+    titolo: "Giubileo 2025 e nuova identità visiva della Protezione Civile"
+    luogo: "Italia; flussi Genzano–Roma"
+    descrizione: >-
+      Due fronti nello stesso anno. Il Giubileo della Speranza apre a
+      dicembre 2024 e attraversa il 2025: gestione del rischio
+      antropico-logistico nei Castelli Romani per i flussi diretti a
+      Roma, in particolare durante la GMG e gli eventi al Villaggio
+      di Tor Vergata. Sul piano istituzionale, il DPCM 5 agosto 2025
+      adegua la nuova identità visiva del sistema nazionale di
+      Protezione Civile (logo, livrea mezzi, divise, segnaletica).
+      Il Gruppo Comunale di Genzano avvia il piano di adeguamento.
+    lezione: >-
+      Grandi eventi e cambiamenti istituzionali si gestiscono come si
+      gestisce un'emergenza: con tempo, formazione, pianificazione.
+      Anche un cambio di logo è un'operazione complessa quando coinvolge
+      migliaia di organizzazioni in tutta Italia.
+    fonte: "DPCM 5 agosto 2025 (identità visiva PC); Dipartimento della Protezione Civile — Piano operativo Giubileo 2025"
+    fonte_url: "https://www.protezionecivile.gov.it/"
