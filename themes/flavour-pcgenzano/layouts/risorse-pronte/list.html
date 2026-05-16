@@ -57,6 +57,41 @@
             di un tema a settimana: torna a controllare fra qualche giorno.
           </div>
         </div>
+        {{ else }}
+
+        {{/* ── INDICE CHIP NAVIGABILE PER TEMA ──
+             Mostra i 5 temi come pillole cliccabili in cima. Chip con
+             materiali = link smooth-scroll alla sezione; chip senza
+             materiali = visibile ma disabilitato ("—"). Conteggio
+             materiali nel badge accanto al nome.
+             Si auto-nasconde se zero materiali totali (empty state). */}}
+        <nav class="risorse-indice mt-3 mb-4" aria-label="Naviga rapidamente per tema">
+          <p class="risorse-indice-label mb-2">
+            <i class="bi bi-bookmark-fill me-1" aria-hidden="true"></i>
+            Vai direttamente al tema:
+          </p>
+          <div class="risorse-indice-chips">
+            {{ range $dati.temi }}
+              {{ $count := 0 }}
+              {{ if $tutti }}{{ $count = len (where $tutti "tema" .slug) }}{{ end }}
+              {{ if gt $count 0 }}
+              <a href="#tema-{{ .slug }}" class="risorse-chip"
+                 aria-label="{{ .titolo }}, {{ $count }} materiali disponibili">
+                <i class="bi {{ .icona }}" aria-hidden="true"></i>
+                <span class="risorse-chip-label">{{ .titolo }}</span>
+                <span class="risorse-chip-count" aria-hidden="true">{{ $count }}</span>
+              </a>
+              {{ else }}
+              <span class="risorse-chip risorse-chip-vuoto"
+                    aria-label="{{ .titolo }}, in preparazione">
+                <i class="bi {{ .icona }}" aria-hidden="true"></i>
+                <span class="risorse-chip-label">{{ .titolo }}</span>
+                <span class="risorse-chip-count" aria-hidden="true">—</span>
+              </span>
+              {{ end }}
+            {{ end }}
+          </div>
+        </nav>
         {{ end }}
 
         {{/* Sezione per ogni tema, con materiali in card responsive */}}

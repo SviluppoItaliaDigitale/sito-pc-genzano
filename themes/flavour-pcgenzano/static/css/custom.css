@@ -5958,6 +5958,86 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
 .risorsa-meta dt { font-weight: 600; margin: 0; }
 .risorsa-meta dd { margin: 0; }
 @media print { .risorse-tema { page-break-inside: avoid; } }
+
+/* ── INDICE CHIP per /risorse-pronte/ — navigazione rapida per tema ──
+   Stile pillole cliccabili (coerente col linguaggio istituzionale del sito).
+   Chip attivo = blu su azzurrino tenue, hover/focus = inverso. Chip
+   "vuoto" (tema senza materiali) = muted, non cliccabile. */
+.risorse-indice {
+  background: #f4f7fb;
+  border-left: 4px solid #003366;
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+.risorse-indice-label {
+  font-weight: 600;
+  color: #003366;
+  font-size: 0.95rem;
+}
+.risorse-indice-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.risorse-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  background: #e7f0fa;
+  border: 1px solid #b3c6dd;
+  border-radius: 999px;
+  color: #003366;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
+  white-space: nowrap;
+}
+.risorse-chip:hover,
+.risorse-chip:focus-visible {
+  background: #003366;
+  border-color: #003366;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.risorse-chip:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.risorse-chip-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.4rem;
+  height: 1.4rem;
+  padding: 0 0.4rem;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: #003366;
+}
+.risorse-chip:hover .risorse-chip-count,
+.risorse-chip:focus-visible .risorse-chip-count {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+.risorse-chip-vuoto {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+@media (max-width: 575.98px) {
+  .risorse-indice-chips { gap: 0.35rem; }
+  .risorse-chip { font-size: 0.85rem; padding: 0.35rem 0.7rem; }
+}
+@media print { .risorse-indice { display: none; } }
+
+/* Smooth scroll quando si clicca un chip → sezione del tema.
+   Offset per evitare che il titolo della sezione vada sotto la navbar fissa. */
+:target.risorse-tema { scroll-margin-top: 90px; }
 /* fine RISORSE PRONTE v1.0 */
 
 
