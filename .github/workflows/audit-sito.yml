@@ -507,9 +507,17 @@ jobs:
           # render-link hook ma rappresentano comunque un'intenzione persa.
           # Tutto in bash per evitare il pattern velenoso heredoc-python (la
           # validazione YAML strict si rompe con righe Python a colonna 1).
+          #
+          # Regex richiede / finale obbligatorio per evitare match su URL
+          # come /comunicazioni/index.xml (feed RSS) che catturavano "index"
+          # come slug fantasma. Esclude righe YAML aliases: (formato lista
+          # "  - /comunicazioni/<slug>/") che sono redirect legittimi gestiti
+          # da Hugo, non link interni rotti.
           BROKEN_INTERNAL=""
-          LINKED_SLUGS=$(grep -rohE '/comunicazioni/[a-zA-Z0-9_-]+' "$CONTENT_GLOB"/ 2>/dev/null \
-            | sed 's|/comunicazioni/||' | sort -u || true)
+          LINKED_SLUGS=$(grep -rhE '/comunicazioni/[a-zA-Z0-9_-]+/' "$CONTENT_GLOB"/ 2>/dev/null \
+            | grep -vE '^\s*-\s+/comunicazioni/' \
+            | grep -oE '/comunicazioni/[a-zA-Z0-9_-]+/' \
+            | sed 's|/comunicazioni/||; s|/$||' | sort -u || true)
           for slug in $LINKED_SLUGS; do
             [ -f "$CONTENT_GLOB/comunicazioni/${slug}.md" ] || BROKEN_INTERNAL="${BROKEN_INTERNAL}- \`/comunicazioni/${slug}/\`\n"
           done
