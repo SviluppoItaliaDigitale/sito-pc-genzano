@@ -8,9 +8,9 @@
 #   bash scripts/genera-social.sh --dry-run content/comunicazioni/<file>.md
 #
 # Cosa fa, per ogni articolo:
-#   1) chiama scripts/genera-social.py (Gemini) -> 4 file .txt in social-bozze/<slug>/
+#   1) chiama scripts/genera-social.py (Gemini) -> 4 file .txt in social-bozze/AAAA/MM/<slug>/
 #   2) chiama scripts/genera-immagini-social.py (Pillow) -> .webp nella STESSA cartella
-#      social-bozze/<slug>/ (instagram-post*.webp + instagram-story.webp)
+#      social-bozze/AAAA/MM/<slug>/ (instagram-post*.webp + instagram-story.webp)
 #
 # Variabili richieste:
 #   GEMINI_API_KEY  (vedi README-social.md per setup)
@@ -43,4 +43,4 @@ case " $* " in
 esac
 
 echo ""
-echo "✅ Fatto. Tutto (testi + immagini) in: social-bozze/<slug>/"
+echo "✅ Fatto. Tutto (testi + immagini) in: social-bozze/AAAA/MM/<slug>/"

@@ -42,6 +42,23 @@ CONTENT_COMUNICAZIONI = ROOT / "content" / "comunicazioni"
 RULES_DIR = ROOT / ".claude" / "rules"
 SOCIAL_BOZZE = ROOT / "social-bozze"
 
+
+def slug_to_path(slug: str) -> Path:
+    """Da slug 'AAAA-MM-GG-titolo' ricava la struttura nidificata
+    AAAA/MM/AAAA-MM-GG-titolo per navigabilità in social-bozze/.
+
+    Storia: il 16/05/2026 la cartella social-bozze/ aveva 103 cartelle
+    piatte impossibili da navigare da mobile. Migrazione a struttura
+    anno/mese per allineare alla logica della pagina /comunicazioni/.
+    """
+    parts = slug.split('-', 3)
+    if (len(parts) >= 4
+            and len(parts[0]) == 4 and parts[0].isdigit()
+            and len(parts[1]) == 2 and parts[1].isdigit()
+            and len(parts[2]) == 2 and parts[2].isdigit()):
+        return Path(parts[0]) / parts[1] / slug
+    return Path(slug)
+
 # Le rules che lo script inietta nel system prompt. Ordinate per rilevanza
 # per la generazione dei post social (no manuale Hugo, no setup tecnico).
 RULES_FILES = [
@@ -370,7 +387,7 @@ def chiama_gemini(api_key: str, system_prompt: str, user_prompt: str,
 
 def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Path:
     """Scrive 4 file .txt + un README.md in social-bozze/<slug>/."""
-    out_dir = SOCIAL_BOZZE / slug
+    out_dir = SOCIAL_BOZZE / slug_to_path(slug)
     if dry_run:
         stampa_info(f"\n=== DRY-RUN: {out_dir} ===")
         for piattaforma in ("x", "facebook", "instagram", "telegram"):
@@ -512,7 +529,7 @@ def main() -> int:
             saltati += 1
             continue
 
-        out_dir = SOCIAL_BOZZE / art["slug"]
+        out_dir = SOCIAL_BOZZE / slug_to_path(art["slug"])
         if out_dir.exists() and not args.force and not args.dry_run:
             stampa_info(f"  - GIÀ PRESENTE (usa --force per ri-generare): {art['slug']}")
             saltati += 1
