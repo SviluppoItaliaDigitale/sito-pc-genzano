@@ -92,7 +92,7 @@ Esci dall'acqua, copriti, bevi bevande calde se cosciente.
 
 ### Malori in acqua
 Se una persona sviene o si sente male:
-- **Chiama subito il 112** (oppure il 1530 della Guardia Costiera per emergenze in acqua).
+- **Chiama subito il 112**.
 - **Lancia** oggetti galleggianti (salvagenti, palloni, taniche vuote).
 - **Soccorri** in acqua solo se sei un nuotatore esperto e formato al soccorso.
 - **Non entrare** se non sei addestrato: due persone in difficoltà sono peggio di una.
@@ -151,7 +151,6 @@ Se porti il cane:
 ## Numeri utili
 
 - **112** — Unico numero di emergenza (anche per emergenze sui laghi).
-- **1530** — Guardia Costiera (competente anche su laghi).
 - **Bagnini** dello stabilimento — primo contatto sul posto.
 
 ## Per approfondire
@@ -159,7 +158,6 @@ Se porti il cane:
 - Articolo: [Giornata degli oceani e laghi Castelli](/comunicazioni/2026-06-08-giornata-oceani-laghi-castelli/)
 - Articolo: [Primo soccorso estivo](/comunicazioni/2026-06-29-primo-soccorso-estivo-caldo-traumi/)
 - [ARPA Lazio — Balneazione](https://www.arpalazio.it/)
-- [Guardia Costiera](https://www.guardiacostiera.gov.it/)
 - [Federazione Italiana Nuoto](https://www.federnuoto.it/)
 
 I laghi sono un tesoro del territorio. Vederli con rispetto e prudenza vuol dire poterli vivere per una vita intera.

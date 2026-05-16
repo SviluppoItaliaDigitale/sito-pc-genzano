@@ -30,7 +30,6 @@ In questa giornata, mentre molti riposano, un sistema invisibile continua a funz
 - i **volontari di Protezione Civile** coprono turni di avvistamento antincendio;
 - il **personale sanitario** continua a curare in ospedale;
 - gli **operatori delle sale operative** coordinano gli interventi;
-- la **Guardia Costiera** presidia mari e laghi.
 
 A tutte queste persone, spesso lontane dai propri cari in giornate di festa, va un pensiero di riconoscenza della comunità.
 
