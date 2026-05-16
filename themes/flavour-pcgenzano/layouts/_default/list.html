@@ -25,21 +25,36 @@
       </div>
       {{ end }}
 
-      {{/* ── TEMPO DI LETTURA + PULSANTE TTS + GLOSSARIO INLINE ── */}}
-      {{ $ttsBlacklist := slice "/privacy/" "/note-legali/" "/accessibilita/" "/social-media-policy/" "/mappa-sito/" "/attribuzioni-pittogrammi/" "/cerca/" "/comunicazioni/" "/glossario/" }}
+      {{/* ── BOX UNIFICATO "Leggi questo articolo in altri modi" ──
+           Stesso pattern di _default/single.html: box blu istituzionale che
+           raggruppa reading-time + TTS + braille + PDF. Uniformato il 16/05/2026
+           dopo richiesta utente "le due box devono essere in tutte le pagine".
+           CSS sezione STRUMENTI ARTICOLO v1.0 in custom.css. */}}
+      {{/* Blacklist TTS — vedi nota in _default/single.html. Match su .Section
+           per essere indipendente dal baseURL (Aruba vs GH Pages subpath).
+           Su list.html includiamo anche "comunicazioni" (la list page
+           dell'archivio articoli, dove TTS è inutile — sono solo card). */}}
+      {{ $ttsBlacklist := slice "privacy" "note-legali" "accessibilita" "social-media-policy" "mappa-sito" "attribuzioni-pittogrammi" "cerca" "comunicazioni" "glossario" }}
       {{ $isBlacklisted := false }}
-      {{ range $ttsBlacklist }}{{ if eq $.RelPermalink . }}{{ $isBlacklisted = true }}{{ end }}{{ end }}
+      {{ if eq .Kind "section" }}{{ range $ttsBlacklist }}{{ if eq $.Section . }}{{ $isBlacklisted = true }}{{ end }}{{ end }}{{ end }}
       {{ $ttsEnabled := and (ne .Params.tts false) (not $isBlacklisted) }}
 
       {{ if and $ttsEnabled (gt .WordCount 30) }}
-      <div class="reading-meta d-flex flex-wrap align-items-center gap-2 mb-3" aria-label="Informazioni di lettura">
-        <span class="reading-time" title="Tempo di lettura stimato (200 parole al minuto)">
-          <i class="bi bi-clock me-1" aria-hidden="true"></i>
-          Lettura: <strong>~{{ .ReadingTime }} {{ if eq .ReadingTime 1 }}minuto{{ else }}minuti{{ end }}</strong>
-          <span class="visually-hidden">— tempo di lettura stimato</span>
-        </span>
+      <div class="strumenti-articolo strumenti-lettura" role="region" aria-label="Strumenti di lettura della pagina">
+        <div class="strumenti-articolo-header">
+          <i class="bi bi-info-circle me-2" aria-hidden="true"></i>
+          Leggi questa pagina in altri modi
+        </div>
+        <div class="strumenti-articolo-body">
+          <span class="reading-time" title="Tempo di lettura stimato (200 parole al minuto)">
+            <i class="bi bi-clock me-1" aria-hidden="true"></i>
+            ~{{ .ReadingTime }} min<span class="visually-hidden"> di lettura stimati</span>
+          </span>
+          {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".list-intro-content") }}
+          {{ partial "scarica-braille.html" . }}
+          {{ partial "scarica-trascrizione-pdf.html" . }}
+        </div>
       </div>
-      {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".list-intro-content") }}
       {{ partial "lis-badge.html" . }}
       <div class="list-intro-content">{{ .Content }}</div>
       {{ partial "glossario-inline.html" . }}
@@ -73,6 +88,15 @@
       </article>
       {{ end }}
       {{ template "_internal/pagination.html" . }}
+
+      {{/* ── BOX UNIFICATO "Condividi e scarica" ──
+           Stesso pattern di _default/single.html. Aggiunto il 16/05/2026
+           dopo richiesta utente di portare i 2 box su tutte le pagine.
+           Si auto-nasconde su pagine blacklist (cerca, mappa-sito, privacy)
+           tramite la stessa logica TTS. */}}
+      {{ if and $ttsEnabled (gt .WordCount 30) }}
+      {{ partial "page-tools.html" . }}
+      {{ end }}
     </div>
   </div>
 </div>

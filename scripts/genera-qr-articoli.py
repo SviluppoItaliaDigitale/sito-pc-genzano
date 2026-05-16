@@ -58,7 +58,22 @@ except ImportError:
 # ─────────────────────────────────────────────────────────────────────────────
 
 DEFAULT_URL_BASE = "https://www.protezionecivilegenzano.it"
-DEFAULT_SEZIONE = "comunicazioni"
+# Default vuoto = processa TUTTE le sezioni di content/ (modalità completa,
+# allineata alla scelta del 16/05/2026 di mostrare il QR su tutte le pagine).
+# Specificare --sezione X per filtrare a una sola sezione.
+DEFAULT_SEZIONE = ""
+
+# Sezioni escluse di default per evitare conflitti di naming.
+# Le 7 traduzioni multilingua hanno _index.md con nomi sezione identici
+# alla versione italiana (es. content/english/cosa-fare-adesso/_index.md
+# vs content/cosa-fare-adesso/_index.md → entrambi userebbero
+# "cosa-fare-adesso" come basename del QR). Le traduzioni sono pagine
+# secondarie con valore marginale per il QR (chi le legge bilingue ha
+# già scansionato l'URL italiano). Saltate per default.
+EXCLUDED_SECTIONS = frozenset({
+    "english", "francais", "deutsch",
+    "espanol", "portugues", "romana", "esperanto",
+})
 
 # Colori istituzionali: il QR funziona meglio in nero su bianco per scanner
 # economici. Mantieni questi default salvo richiesta esplicita.
@@ -120,6 +135,32 @@ def costruisci_url(url_prefix: str, slug: str) -> str:
     return f"{prefix}{slug.strip('/')}/"
 
 
+def deriva_target(md_path: Path, content_root: Path, url_base: str) -> tuple[str, str]:
+    """Per un file .md sotto content/ ritorna (basename_qr, url_pubblico).
+
+    Logica di naming (allineata al partial qr-articolo.html):
+      - content/_index.md                       → ("home", url_base + "/")
+      - content/<sez>/_index.md                 → ("<sez>", url_base + "/<sez>/")
+      - content/<sez>/<nome>.md                 → ("<nome>", url_base + "/<sez>/<nome>/")
+      - content/<sez>/<sub>/<nome>.md           → ("<nome>", url_base + "/<sez>/<sub>/<nome>/")
+
+    Storia: il 16/05/2026 l'utente ha chiesto QR su tutte le pagine, non solo
+    /comunicazioni/. Naming uniformato col partial Hugo per coerenza.
+    """
+    rel = md_path.relative_to(content_root)
+    parent = rel.parent
+    base_url = url_base.rstrip("/")
+    if rel.name == "_index.md":
+        if str(parent) in (".", ""):
+            return ("home", base_url + "/")
+        section_name = parent.name
+        path_str = str(parent).replace("\\", "/")
+        return (section_name, f"{base_url}/{path_str}/")
+    basename = md_path.stem
+    path_str = str(rel.with_suffix("")).replace("\\", "/")
+    return (basename, f"{base_url}/{path_str}/")
+
+
 def genera_qr_png(url: str, output_path: Path) -> None:
     """Genera il QR in formato PNG raster."""
     qr = segno.make(url, error=ERROR_LEVEL)
@@ -167,12 +208,14 @@ def main() -> int:
     parser.add_argument(
         "--sezione",
         default=DEFAULT_SEZIONE,
-        help=f"Sezione content/ da processare (default: {DEFAULT_SEZIONE})",
+        help="Sezione content/ da processare (default: vuoto = TUTTE le sezioni). "
+             "Esempio: --sezione comunicazioni per limitare ai soli articoli.",
     )
     parser.add_argument(
-        "--url-prefix",
-        default=f"{DEFAULT_URL_BASE}/{DEFAULT_SEZIONE}/",
-        help="Prefisso URL pubblico (default: %(default)s)",
+        "--url-base",
+        default=DEFAULT_URL_BASE,
+        help="Base URL del sito (default: %(default)s). Lo slug viene derivato "
+             "automaticamente dal path del file .md.",
     )
     parser.add_argument(
         "--force",
@@ -194,30 +237,48 @@ def main() -> int:
     # Risolve la root del repo (assume script in scripts/, root = parent)
     script_dir = Path(__file__).resolve().parent
     repo_root = script_dir.parent
-
-    content_dir = repo_root / "content" / args.sezione
+    content_root = repo_root / "content"
     output_dir = repo_root / "static" / "qr"
 
-    if not content_dir.is_dir():
-        sys.stderr.write(f"ERRORE: cartella non trovata: {content_dir}\n")
+    if not content_root.is_dir():
+        sys.stderr.write(f"ERRORE: cartella non trovata: {content_root}\n")
         return 1
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Trova tutti i .md, escludendo gli _index.md di sezione
-    file_md = sorted(
-        f for f in content_dir.glob("*.md") if f.name != "_index.md"
-    )
+    # Trova tutti i .md sotto content/ (ricorsivo). Include _index.md (sezioni)
+    # ed esclude solo file in subcartelle considerate "non Hugo" (zero per il
+    # nostro repo, ma futuro-safe).
+    if args.sezione:
+        sezione_dir = content_root / args.sezione
+        if not sezione_dir.is_dir():
+            sys.stderr.write(f"ERRORE: sezione non trovata: {sezione_dir}\n")
+            return 1
+        file_md_iter = sezione_dir.rglob("*.md")
+    else:
+        file_md_iter = content_root.rglob("*.md")
+
+    # Filtra le sezioni escluse (multilingua) — top-level sezione del path
+    # relativo determina se l'intero sottoalbero è escluso.
+    def _is_excluded(md: Path) -> bool:
+        try:
+            rel = md.relative_to(content_root)
+        except ValueError:
+            return False
+        first = rel.parts[0] if rel.parts else ""
+        return first in EXCLUDED_SECTIONS
+
+    file_md = sorted(f for f in file_md_iter if not _is_excluded(f))
 
     if args.only:
         file_md = [f for f in file_md if args.only in f.name]
 
     if not file_md:
-        print(f"Nessun file da processare in {content_dir} (filtro: {args.only or 'nessuno'}).")
+        print(f"Nessun file da processare (filtro: {args.only or 'nessuno'}).")
         return 0
 
-    print(f"📂 Sezione: {args.sezione}")
-    print(f"🌐 URL prefix: {args.url_prefix}")
+    print(f"📂 Scope: {args.sezione or 'tutte le sezioni'}")
+    print(f"🌐 URL base: {args.url_base}")
     print(f"📦 Output: {output_dir.relative_to(repo_root)}/")
     print(f"📄 File trovati: {len(file_md)}")
     print()
@@ -225,20 +286,23 @@ def main() -> int:
     generati = 0
     saltati = 0
     errori = 0
+    visti = set()  # detect conflitti di naming
 
     for md_path in file_md:
         try:
-            testo = md_path.read_text(encoding="utf-8")
-        except (OSError, UnicodeDecodeError) as exc:
-            sys.stderr.write(f"  ✗ {md_path.name}: lettura fallita ({exc})\n")
+            base_name, url = deriva_target(md_path, content_root, args.url_base)
+        except ValueError as exc:
+            sys.stderr.write(f"  ✗ {md_path}: {exc}\n")
             errori += 1
             continue
 
-        frontmatter = estrai_frontmatter(testo)
-        slug = deriva_slug(md_path, frontmatter)
-        url = costruisci_url(args.url_prefix, slug)
+        # Avvisa se due file producono lo stesso basename (potenziale conflitto)
+        if base_name in visti:
+            sys.stderr.write(
+                f"  ⚠ conflitto naming: '{base_name}' già usato (file: {md_path})\n"
+            )
+        visti.add(base_name)
 
-        base_name = md_path.stem
         png_path = output_dir / f"{base_name}.png"
         svg_path = output_dir / f"{base_name}.svg"
 
