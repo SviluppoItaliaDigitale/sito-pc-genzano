@@ -34,7 +34,7 @@ Genzano rientra nel **Piano Neve comunale**, che prevede:
 - **accessi** a scuole, ospedale, ambulatori;
 - **punti** critici (scale, passerelle) da trattare con sale;
 - **coordinamento** con impresa comunale di manutenzione;
-- **supporto** della Polizia Locale per viabilità;
+- **presidio** della Polizia Locale sulla viabilità (compito di sua esclusiva competenza);
 - **attivazione** del Gruppo Comunale Volontari in caso di evento grave.
 
 ## I rischi invernali

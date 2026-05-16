@@ -93,6 +93,38 @@ Per ogni link `[testo](/path/)` interno verifica con `find content -path "*<path
 ### 8. Allegati e PDF
 Se l'utente ha fornito un PDF, deve essere in `static/allegati/AAAA/` o `static/manuali/` (mai in `static/documenti/` che non viene deployata). Frontmatter `allegati:` con `titolo`, `url`, `dimensione`.
 
+### 9. 🔴 GATE DI LEGALITÀ — Circolare DPC 6/8/2018 su manifestazioni pubbliche
+
+**Si applica quando l'articolo descrive operativamente cosa fa il Gruppo Comunale durante eventi pubblici** (sagre, feste, Infiorata, processioni, cerimonie, commemorazioni, concerti, mercatini, manifestazioni sportive, incidenti stradali estesi).
+
+Riferimento normativo: [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) + artt. 11-12 Codice della Strada. Specifiche complete in `.claude/rules/06-protezione-civile-scientifica.md` § "Manifestazioni pubbliche".
+
+**Pattern velenosi da intercettare (= BLOCCANTI)**:
+
+```bash
+grep -nEi "(supporto.{0,30}viabilit|gestione.{0,30}traffi|regola.{0,15}traffi|polizia stradale|palette.{0,15}(dirigi|traffi|stradal)|presidio.{0,30}stradal|gestione.{0,15}pedoni|controllo.{0,15}traffic|supporto.{0,30}deviazion)" "<file.md>"
+```
+
+Se uno di questi pattern è **attribuito al Gruppo Comunale Volontari di PC** (cioè descrive cosa fa il volontariato, non la Polizia Locale), è **bloccante**: la circolare DPC vieta esplicitamente al volontariato di Protezione Civile:
+- la regolazione del traffico veicolare;
+- i servizi di polizia stradale;
+- l'uso di palette dirigitraffico.
+
+**Riformulazione standard** (vedi tabella in `06-protezione-civile-scientifica.md`):
+| Da | A |
+|---|---|
+| "supporto alla viabilità" | "informazione su percorsi e accessi alle aree dedicate" |
+| "gestione di deviazioni" | "informazione su deviazioni deliberate dalle autorità" |
+| "supporto alla PL per la viabilità" | "supporto logistico alla PL/FdO sul mandato del Comune" |
+| "gestione pedoni" | "informazione e accoglienza nei punti di accesso" |
+
+**Quando l'articolo descrive operativamente i compiti del Gruppo in un evento**, raccomanda di includere il **disclaimer normativo** (formulazione completa in `06-protezione-civile-scientifica.md`) con link alla circolare.
+
+**Eccezioni — quando NON segnalare**:
+- L'articolo attribuisce correttamente la viabilità alla Polizia Locale / FdO (descrive il loro ruolo, non quello del Gruppo).
+- L'articolo riguarda emergenze meteo/sismica/idrogeologiche (non rientrano nelle "manifestazioni pubbliche").
+- Articolo di servizio (numeri-utili, COC, glossario, piano-emergenza) che cita la viabilità come funzione comunale generale.
+
 ## Anti-pattern editoriali che riconosci da lontano
 
 - **"Si comunica che..."** in apertura: nominalizzazione tipica del burocratese. Sostituisci con apertura attiva ("La protezione civile interviene...", "Da lunedì 6 maggio...").

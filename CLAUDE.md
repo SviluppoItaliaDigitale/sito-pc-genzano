@@ -204,6 +204,37 @@ Risultato: il **9 maggio 2026** l'utente ha chiesto di rivedere AGID tutti gli a
 
 ---
 
+## Gate di legalità — Circolare DPC 6/8/2018 su manifestazioni pubbliche
+
+🔴 **Quando scrivi un articolo che descrive cosa fa il Gruppo Comunale Volontari di PC durante un evento pubblico** (sagra, festa patronale, Infiorata, commemorazione, manifestazione sportiva, concerto, cerimonia, processione, mercatino, incidente stradale esteso), **applica come filtro la Circolare del 6 agosto 2018 del Dipartimento della Protezione Civile**.
+
+**Il volontariato di PC non può svolgere**:
+- regolazione del traffico veicolare;
+- servizi di polizia stradale;
+- uso di palette dirigitraffico.
+
+Sono compiti di **competenza esclusiva delle Forze dell'Ordine e della Polizia Locale** ai sensi degli **articoli 11 e 12 del Codice della Strada** (D.Lgs. 285/1992).
+
+**Il volontariato di PC può svolgere**:
+- informazione alla popolazione su percorsi/tracciati straordinari e limitazioni di accesso (citazione testuale dalla circolare);
+- presidio di aree pedonali dedicate, punti di raccolta, vie di fuga;
+- comunicazione al pubblico (altoparlanti, cartelli);
+- primo soccorso in collegamento con 118;
+- monitoraggio meteo e attuazione protocolli;
+- collegamento radio con la centrale di coordinamento;
+- supporto logistico alle Forze dell'Ordine sul mandato del Comune;
+- assistenza alle persone fragili.
+
+**Mai scrivere** che il Gruppo fa "supporto alla viabilità", "gestione del traffico", "gestione pedoni", "regolazione di deviazioni": sono formulazioni illegittime alla luce della circolare. Sostituire con "informazione su percorsi e accessi", "presidio di aree pedonali dedicate", "supporto logistico alla PL/FdO sul mandato del Comune".
+
+Quando l'articolo è operativo, includere un **disclaimer normativo** con link alla [Circolare DPC 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/).
+
+Specifiche complete + tabella riformulazioni standard in `.claude/rules/06-protezione-civile-scientifica.md` § "Manifestazioni pubbliche — ruolo del volontariato di PC". L'agent `pc-article-reviewer` ha il gate di legalità come check § 9 e segnala i pattern velenosi come **BLOCCANTI**.
+
+**Why esiste questa regola**: il 16 maggio 2026 l'utente ha segnalato che un articolo descriveva il Gruppo come svolgesse viabilità, e che le circolari DPC lo vietano. Un sweep su `content/` ha trovato 5 articoli con il pattern "supporto alla viabilità" attribuito al volontariato. Tutti corretti contestualmente, e il gate è stato codificato per impedire che il pattern si ripresenti in articoli futuri.
+
+---
+
 ## Automatismo totale sugli articoli — Claude decide, l'utente corregge se dissente
 
 🟢 **Quando l'utente chiede di pubblicare un articolo nuovo, io eseguo da solo TUTTI i passaggi tecnici e editoriali senza chiedere conferma.** L'utente fornisce SOLO: il testo (o l'argomento + materia prima), eventuali foto, eventuali vincoli temporali ("deve uscire venerdì", "scadenza fra 7 giorni"). Tutto il resto, **incluse le scelte editoriali sul frontmatter**, è mio per default. Se sbaglio, l'utente me lo dice e correggo: ma il default è agire, non chiedere.

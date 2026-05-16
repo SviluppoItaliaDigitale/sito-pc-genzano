@@ -130,8 +130,8 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/diventa-volontario/" role="menuitem"><span>Diventa Volontario</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/chi-siamo/" role="menuitem"><span>Chi Siamo</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/san-pio-da-pietrelcina/" role="menuitem"><span>Il nostro patrono</span></a></li>' +
-                    /* Aggiunto 16/05/2026: hub esercitazioni del Gruppo */
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/esercitazioni/" role="menuitem"><span>Esercitazioni e buone pratiche</span></a></li>' +
+                    /* Aggiunto 16/05/2026: hub addestramento del Gruppo (turni + esercitazioni) */
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/esercitazioni/" role="menuitem"><span>Addestramento e buone pratiche</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 /* Dropdown: Risorse (6 voci, riorganizzato maggio 2026):

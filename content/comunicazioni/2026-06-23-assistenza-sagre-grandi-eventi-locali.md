@@ -49,12 +49,13 @@ Le attività tipiche dei volontari:
 - **Definizione** delle postazioni di presidio.
 
 ### Durante l'evento
-- **Presidio** delle aree critiche (punti di accesso, piazze, palchi).
-- **Supporto** alla viabilità interna e gestione pedoni.
+- **Presidio** delle aree pedonali dedicate (punti di accesso, piazze, palchi) in coordinamento con Polizia Locale e Forze dell'Ordine.
+- **Informazione al pubblico** su percorsi, accessi, vie di fuga e posizione dei servizi (compito esplicitamente consentito dalla [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) sull'impiego del volontariato).
 - **Assistenza sanitaria** di primo soccorso (con ASL/ARES 118).
-- **Informazione** al pubblico (indicazioni, punti utili).
-- **Monitoraggio meteo** con attivazione procedure in caso di allerta.
-- **Collegamento radio** con Comando di coordinamento.
+- **Monitoraggio meteo** con attivazione delle procedure in caso di allerta.
+- **Collegamento radio** con il Comando di coordinamento.
+
+La **regolazione del traffico veicolare e i servizi di polizia stradale** non rientrano nei compiti del volontariato di Protezione Civile: sono di competenza esclusiva delle Forze dell'Ordine e della Polizia Locale, come stabilito dagli **articoli 11 e 12 del Codice della Strada** (D.Lgs. 285/1992). Anche l'**uso di palette dirigitraffico è vietato** ai volontari di PC dalla citata Circolare DPC.
 
 ### Dopo l'evento
 - **Verifica finale** del luogo.
