@@ -291,9 +291,83 @@
         { text: 'Sento odore di gas', next: 'gas', emergency: true },
         { text: 'C’è un’allerta meteo attiva', next: 'allerta_meteo' },
         { text: 'C’è un allagamento', next: 'allagamento', emergency: true },
+        { text: 'Ho ricevuto un’allerta IT-alert', next: 'italert_ricevuto', emergency: true },
+        { text: 'Una persona non risponde, è scomparsa', next: 'persona_scomparsa', emergency: true },
+        { text: 'Sono con animali domestici in emergenza', next: 'animali_emergenza' },
+        { text: 'Sono turista, non conosco Genzano', next: 'turista_orientamento' },
         { text: 'Voglio diventare volontario', next: 'volontario' },
         { text: 'Cerco un numero utile', next: 'numeri' },
         { text: 'Cos’è IT-alert?', next: 'italert' }
+      ]
+    },
+
+    // --- Nodi aggiunti il 16/05/2026: 2 scenari operativi (TASK 2) + 2 profili (TASK 1) ---
+    italert_ricevuto: {
+      kind: 'answer',
+      title: 'Hai ricevuto un IT-alert: cosa fare',
+      emergency: true,
+      body: [
+        'IT-alert è il sistema nazionale di allarme pubblico. Quando il tuo telefono squilla con suono diverso e mostra un messaggio: la situazione è seria.',
+        'Per prima cosa: leggi tutto il messaggio (non solo il titolo). Indica tipo di rischio, area, azione richiesta, tempi.',
+        'Segui le indicazioni operative del messaggio. NON chiamare il 112 per chiedere "cos\'è questo allarme": il numero serve per emergenze in atto, non per informazioni.',
+        'Per conferma e dettagli aggiornati: sito ufficiale IT-alert, sito della Regione Lazio, sito del nostro Gruppo.',
+        'Se l\'allerta riguarda un evento immediato (alluvione, incidente industriale, maremoto, ecc.), allontanati dalla zona indicata nel messaggio. Non perdere tempo: agisci come dice il messaggio.'
+      ],
+      links: [
+        { text: 'Sito ufficiale IT-alert', url: 'https://www.it-alert.it/it/' },
+        { text: 'Pagina IT-alert del nostro sito', url: '/comunicazioni/2026-02-11-giornata-europea-112-numero-unico/' },
+        { text: 'Allerte meteo Lazio', url: '/allerte-meteo/' }
+      ]
+    },
+
+    persona_scomparsa: {
+      kind: 'answer',
+      title: 'Una persona è scomparsa o non risponde',
+      emergency: true,
+      body: [
+        'Chiama subito il 112 (Numero Unico Emergenze). Spiega chi è scomparsa, da quando, dove è stata vista l\'ultima volta, descrizione fisica, eventuali patologie o farmaci.',
+        'NON aspettare le 24 ore: il mito delle "24 ore prima della denuncia" è falso. La denuncia di scomparsa si può presentare immediatamente.',
+        'Se la persona è anziana con problemi cognitivi, bambino, o ha condizioni di salute critiche: dirlo subito al 112. Il livello di priorità cambia.',
+        'Conserva oggetti personali (per cani molecolari se l\'attivazione lo prevede): un indumento usato di recente, in busta di carta.',
+        'Diffondi appello solo dopo che le forze dell\'ordine te lo confermano. Una foto su Facebook senza coordinamento può ostacolare le indagini.'
+      ],
+      links: [
+        { text: 'Chiama il 112', url: 'tel:112' },
+        { text: 'Commissario straordinario per le persone scomparse', url: 'https://www.commissariopersonescomparse.it/' }
+      ]
+    },
+
+    animali_emergenza: {
+      kind: 'answer',
+      title: 'Emergenza con animali domestici',
+      body: [
+        'Gli animali fanno parte del tuo piano di emergenza. Trattali come membri della famiglia: ogni decisione di evacuazione li include.',
+        'PRIMA: tieni sempre pronti trasportino, libretto sanitario, farmaci, ciotole, kit guinzaglio, microchip aggiornato.',
+        'DURANTE: in caso di evacuazione portali con te. Non lasciarli incustoditi in casa "perché tanto torniamo subito" — potresti non poter rientrare per giorni.',
+        'Aree di attesa: verifica con il Comune se l\'area destinata accetta animali e in quali condizioni (gabbie, guinzaglio obbligatorio, ecc.). Alcune emergenze hanno aree dedicate.',
+        'Per cavalli, animali da reddito e fauna selvatica: ASL veterinaria e Protezione Civile regionale hanno protocolli specifici.'
+      ],
+      links: [
+        { text: 'Kit emergenza famiglia', url: '/rischi-prevenzione/kit-emergenza/' },
+        { text: 'Piano familiare interattivo', url: '/piano-familiare/' }
+      ]
+    },
+
+    turista_orientamento: {
+      kind: 'answer',
+      title: 'Sei turista a Genzano: cosa serve sapere',
+      body: [
+        'Se sei a Genzano per visita, eventi (Infiorata, Giro d\'Italia, manifestazioni) o passaggio: tieni a mente 3 cose.',
+        'Numero unico di emergenza in Italia: 112. Vale per qualsiasi emergenza (sanitaria, sicurezza, soccorso tecnico). Funziona anche senza SIM e senza credito.',
+        'I Castelli Romani sono in Zona sismica 2 (medio-alta). Il rischio principale per il visitatore: orientarsi velocemente verso aree aperte se senti una scossa.',
+        'D\'estate: il rischio incendio boschivo è alto. Mai accendere fuochi, mai gettare mozziconi. Se vedi fumo nei boschi: 112.',
+        'Per allerte meteo della giornata: bollettino del Centro Funzionale Regionale Lazio. Disponibile sul sito del nostro Gruppo come barra in cima a ogni pagina.'
+      ],
+      links: [
+        { text: 'Numeri utili nel Lazio', url: '/numeri-utili/' },
+        { text: 'Allerte meteo oggi', url: '/allerte-meteo/' },
+        { text: 'Aree di attesa cittadine', url: '/aree-attesa/' },
+        { text: 'Cartografia del territorio', url: '/cartografia/' }
       ]
     },
 
