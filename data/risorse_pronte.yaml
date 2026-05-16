@@ -196,3 +196,47 @@ materiali:
   dimensione: 4.5 MB
   data_pubblicazione: '2026-05-16'
   licenza: CC BY-NC-SA 4.0
+- id: rischio-idrogeologico-podcast-2026-05-16
+  tema: rischio-idrogeologico
+  tema_titolo: Rischio idrogeologico
+  tipo: podcast
+  titolo: 'Podcast: Rischio idrogeologico'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-16-rischio-idrogeologico-podcast.m4a
+  dimensione: 49.0 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
+- id: rischio-idrogeologico-presentazione-pdf-2026-05-16
+  tema: rischio-idrogeologico
+  tema_titolo: Rischio idrogeologico
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Rischio idrogeologico'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-16-rischio-idrogeologico-presentazione-pdf.pdf
+  dimensione: 19.1 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
+- id: rischio-idrogeologico-presentazione-2026-05-16
+  tema: rischio-idrogeologico
+  tema_titolo: Rischio idrogeologico
+  tipo: presentazione
+  titolo: 'Presentazione: Rischio idrogeologico'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-16-rischio-idrogeologico-presentazione.pptx
+  dimensione: 24.2 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
+- id: rischio-idrogeologico-infografica-2026-05-16
+  tema: rischio-idrogeologico
+  tema_titolo: Rischio idrogeologico
+  tipo: infografica
+  titolo: 'Infografica: Rischio idrogeologico'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-16-rischio-idrogeologico-infografica.png
+  dimensione: 4.6 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
