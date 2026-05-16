@@ -6258,3 +6258,99 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
   .evento-mappa-link::after { content: " (" attr(href) ")"; font-size: 0.8em; }
 }
 /* fine EVENTO CARD v1.0 */
+
+
+/* ==========================================================================
+   SCHEDE "1 MINUTO" v1.0 — /schede-1-minuto/ (maggio 2026)
+   Micro-schede di autoprotezione stampabili A5/A4 per bacheca, casa,
+   sede, banchetti informativi. Stile coerente col sistema istituzionale.
+   ========================================================================== */
+.schede-1-minuto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.2rem;
+  margin: 2rem 0;
+}
+.scheda-1-min {
+  background: #ffffff;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  padding: 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0, 51, 102, 0.08);
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.scheda-1-min-head { margin-bottom: 0.7rem; }
+.scheda-1-min-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #003366;
+  background: #e7f0fa;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+}
+.scheda-1-min h2 {
+  color: #003366;
+  font-size: 1.35rem;
+  margin: 0;
+  line-height: 1.25;
+  border-left: none;
+  padding-left: 0;
+}
+.scheda-1-min-passi {
+  list-style: decimal;
+  padding-left: 1.4rem;
+  margin: 0.5rem 0 1rem 0;
+  flex-grow: 1;
+}
+.scheda-1-min-passi li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+.scheda-1-min-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #d9e2ec;
+  font-size: 0.82rem;
+  flex-wrap: wrap;
+}
+.scheda-1-min-112 {
+  color: #d9364f;
+  font-weight: 600;
+}
+.scheda-1-min-url { color: #003366; font-family: monospace; }
+
+/* Stampa: ogni scheda su pagina A5 separata */
+@media print {
+  .schede-1-minuto-grid { display: block; }
+  .scheda-1-min {
+    page-break-after: always;
+    break-after: page;
+    margin: 0;
+    width: 100%;
+    max-width: 148mm;  /* A5 verticale */
+    box-shadow: none;
+    border: 2px solid #000;
+    page-break-inside: avoid;
+  }
+  .scheda-1-min:last-child {
+    page-break-after: auto;
+  }
+  .scheda-1-min-eyebrow {
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+  }
+  .scheda-1-min h2, .scheda-1-min-112, .scheda-1-min-url { color: #000; }
+}
+/* fine SCHEDE 1 MINUTO v1.0 */
