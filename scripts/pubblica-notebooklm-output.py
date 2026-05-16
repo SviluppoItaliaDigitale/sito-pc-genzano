@@ -46,25 +46,58 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 STATIC = REPO_ROOT / "static"
 DATA_FILE = REPO_ROOT / "data" / "risorse_pronte.yaml"
 
-# Mapping nome file scaricato → (tipo, cartella static, estensione canonica).
-# Per il podcast NotebookLM scarica .m4a (AAC). Lo accettiamo nativamente:
-# il browser HTML5 audio lo riproduce, è più piccolo dell'MP3 a parità di
-# qualità. Hugo serve i file static tali e quali, niente conversione.
-MAPPING_FILE = {
-    "podcast.mp3":        ("podcast",         "podcast/episodi",  ".mp3"),
-    "podcast.m4a":        ("podcast",         "podcast/episodi",  ".m4a"),
-    "podcast.ogg":        ("podcast",         "podcast/episodi",  ".ogg"),
-    "infografica.png":    ("infografica",     "infografiche",     ".png"),
-    "infografica.jpg":    ("infografica",     "infografiche",     ".jpg"),
-    "infografica.webp":   ("infografica",     "infografiche",     ".webp"),
-    "presentazione.pptx": ("presentazione",   "presentazioni",    ".pptx"),
-    "presentazione.pdf":  ("presentazione-pdf", "presentazioni",  ".pdf"),
-    "quiz.txt":           ("quiz",            "risorse-quiz",     ".txt"),
-    "quiz.json":          ("quiz",            "risorse-quiz",     ".json"),
-    "flashcard.pdf":      ("flashcard",       "flashcard",        ".pdf"),
-    "mappa.png":          ("mappa-mentale",   "mappe-mentali",    ".png"),
-    "mappa.svg":          ("mappa-mentale",   "mappe-mentali",    ".svg"),
+# Classificazione per ESTENSIONE — NotebookLM scarica i file con nomi
+# auto-generati arbitrari (es. "La_realtà_dietro_un_allerta_meteo.m4a",
+# "Civil_Protection_Operational_Dashboard.pptx"). Non possiamo aspettarci
+# che l'utente li rinomini a mano: classifichiamo per estensione.
+# Mapping estensione → (tipo, cartella static, estensione normalizzata).
+MAPPING_EXT = {
+    # Audio = podcast
+    ".mp3":  ("podcast",           "podcast/episodi", ".mp3"),
+    ".m4a":  ("podcast",           "podcast/episodi", ".m4a"),
+    ".ogg":  ("podcast",           "podcast/episodi", ".ogg"),
+    ".wav":  ("podcast",           "podcast/episodi", ".wav"),
+    ".aac":  ("podcast",           "podcast/episodi", ".aac"),
+    # Immagini = infografica
+    ".png":  ("infografica",       "infografiche",    ".png"),
+    ".jpg":  ("infografica",       "infografiche",    ".jpg"),
+    ".jpeg": ("infografica",       "infografiche",    ".jpg"),
+    ".webp": ("infografica",       "infografiche",    ".webp"),
+    # Presentazioni
+    ".pptx": ("presentazione",     "presentazioni",   ".pptx"),
+    ".ppt":  ("presentazione",     "presentazioni",   ".ppt"),
+    ".odp":  ("presentazione",     "presentazioni",   ".odp"),
+    # PDF — quasi sempre è la presentazione in PDF nel workflow NotebookLM.
+    # Se in futuro arrivano flashcard.pdf, rinominarli a mano prima.
+    ".pdf":  ("presentazione-pdf", "presentazioni",   ".pdf"),
+    # SVG = mappa mentale (NotebookLM esporta le mappe come SVG)
+    ".svg":  ("mappa-mentale",     "mappe-mentali",   ".svg"),
 }
+
+# Nomi canonici (vecchio comportamento, backward compat): se l'utente
+# rinomina manualmente i file, vengono comunque riconosciuti. Hanno
+# priorità su MAPPING_EXT.
+MAPPING_NOMI_CANONICI = {
+    "presentazione.pdf": ("presentazione-pdf", "presentazioni", ".pdf"),
+    "flashcard.pdf":     ("flashcard",         "flashcard",     ".pdf"),
+    "quiz.txt":          ("quiz",              "risorse-quiz",  ".txt"),
+    "quiz.json":         ("quiz",              "risorse-quiz",  ".json"),
+    "mappa.png":         ("mappa-mentale",     "mappe-mentali", ".png"),
+}
+
+
+def classifica_file(path: Path) -> tuple[str, str, str] | None:
+    """Dato un file, ritorna (tipo, sub_static, estensione_normalizzata)
+    o None se non riconosciuto."""
+    nome_lower = path.name.lower()
+    # 1. Priorità: match esatto nome canonico (per casi specifici)
+    if nome_lower in MAPPING_NOMI_CANONICI:
+        return MAPPING_NOMI_CANONICI[nome_lower]
+    # 2. Fallback: classifica per estensione
+    ext = path.suffix.lower()
+    if ext in MAPPING_EXT:
+        return MAPPING_EXT[ext]
+    return None
 
 # Descrizioni per tipo (usate quando l'utente non fornisce descrizione custom)
 DESC_TIPO = {
@@ -156,16 +189,32 @@ def pubblica_tema(tema_slug: str, dry_run: bool = False) -> int:
     pubblicati = 0
     nuove_voci = []
 
-    for nome_file, (tipo, sub_static, ext) in MAPPING_FILE.items():
-        src = drop_dir / nome_file
-        if not src.exists():
-            continue
+    # Itera TUTTI i file nella drop zone (qualunque nome, qualunque
+    # estensione). Classifica ognuno per nome canonico → estensione.
+    tipi_visti = {}  # tipo → counter, per disambiguare se più file stesso tipo
+    file_in_dropzone = sorted(
+        p for p in drop_dir.iterdir()
+        if p.is_file() and not p.name.startswith(".") and p.name != "00-LEGGIMI.md"
+    )
+    if not file_in_dropzone:
+        print(f"  ⚠ Nessun file in {drop_dir}.")
+        print(f"     Drop file scaricati da NotebookLM dentro questa cartella.")
+        return 0
 
-        # Naming canonico: <data>-<tema>-<tipo>.<ext> per non sovrascrivere
-        # versioni vecchie. Per podcast lo metto in /podcast/episodi/ in
-        # formato compatibile con feed RSS Hugo.
+    for src in file_in_dropzone:
+        classificazione = classifica_file(src)
+        if classificazione is None:
+            print(f"  ⚠ {src.name}: estensione non riconosciuta, saltato")
+            continue
+        tipo, sub_static, ext = classificazione
+
+        # Naming canonico: <data>-<tema>-<tipo>[-N].<ext> per non
+        # sovrascrivere versioni vecchie. Suffisso -N se più file stesso tipo.
+        n_tipo = tipi_visti.get(tipo, 0) + 1
+        tipi_visti[tipo] = n_tipo
+        suffisso = f"-{n_tipo}" if n_tipo > 1 else ""
         dest_dir = STATIC / sub_static
-        dest_name = f"{oggi}-{tema_slug}-{tipo}{ext}"
+        dest_name = f"{oggi}-{tema_slug}-{tipo}{suffisso}{ext}"
         dest = dest_dir / dest_name
 
         if dry_run:
@@ -179,7 +228,7 @@ def pubblica_tema(tema_slug: str, dry_run: bool = False) -> int:
         pubblicati += 1
 
         # Costruisci voce yaml
-        voce_id = f"{tema_slug}-{tipo}-{oggi}"
+        voce_id = f"{tema_slug}-{tipo}{suffisso}-{oggi}"
         if voce_id in ids_esistenti:
             # Aggiorna esistente (sovrascrive) invece di duplicare
             materiali_esistenti = [m for m in materiali_esistenti if m.get("id") != voce_id]
@@ -210,10 +259,13 @@ def pubblica_tema(tema_slug: str, dry_run: bool = False) -> int:
         return pubblicati
 
     if not nuove_voci:
-        print(f"  ⚠ Nessun file trovato in {drop_dir}.")
-        print(f"     Devi trascinarci dentro almeno uno dei file:")
-        for f in MAPPING_FILE.keys():
-            print(f"       - {f}")
+        print(f"  ⚠ Nessun materiale pubblicabile in {drop_dir}.")
+        print(f"     Drop dentro file con estensioni note:")
+        print(f"       - audio (.mp3, .m4a, .ogg, .wav)         → podcast")
+        print(f"       - immagini (.png, .jpg, .webp)           → infografica")
+        print(f"       - presentazioni (.pptx, .ppt, .odp)      → presentazione")
+        print(f"       - .pdf                                    → presentazione PDF")
+        print(f"       - .svg                                    → mappa mentale")
         return 0
 
     # Salva yaml aggiornato
