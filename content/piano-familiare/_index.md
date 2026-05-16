@@ -311,6 +311,7 @@ function stampaPiano(){
 
 ## Vedi anche
 
+- [Schede "1 minuto per proteggerti"](/schede-1-minuto/) — sei azioni concrete di autoprotezione in un minuto, stampabili A5 per casa e bacheca
 - [Rischi e prevenzione](/rischi-prevenzione/) — i rischi del territorio di Genzano
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — cosa preparare per casa, auto ed evacuazione
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino

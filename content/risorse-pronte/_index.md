@@ -26,3 +26,9 @@ Per uso commerciale o istituzionale fuori dal contesto della Protezione Civile, 
 ## Stiamo costruendo questa biblioteca
 
 I primi materiali stanno arrivando. Torna fra qualche giorno: aggiorniamo periodicamente, compatibilmente con il tempo del volontariato.
+
+## Altri materiali del sito
+
+- [Schede "1 minuto per proteggerti"](/schede-1-minuto/) — sei micro-schede A5 stampabili con azioni concrete di autoprotezione
+- [Esercitazioni e buone pratiche](/esercitazioni/) — resoconto delle esercitazioni del Gruppo
+- [Audio e podcast](/audio-e-podcast/) — articoli ascoltabili e podcast del Gruppo
