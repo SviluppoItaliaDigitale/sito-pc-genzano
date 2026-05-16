@@ -1,11 +1,11 @@
 ---
 title: "Infiorata di Genzano 2026: cosa sapere prima di venire"
-date: 2026-05-16
+date: 2026-05-30T00:02:00+02:00
 description: "L'Infiorata di Genzano torna dal 13 al 15 giugno 2026: 248ª edizione, via Italo Belardi. Indicazioni pratiche per il cittadino e il visitatore."
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-16-infiorata-genzano-2026.webp"
+image: "/images/2026-05-30-infiorata-genzano-2026.webp"
 image_alt: "Cover dell'articolo: Infiorata di Genzano 2026: cosa sapere prima di venire"
 scadenza: "2026-06-16"
 area: "Genzano di Roma"
@@ -23,7 +23,7 @@ L'evento attira decine di migliaia di visitatori da tutta Italia e dall'estero, 
     data_fine="15 giugno 2026"
     luogo="Via Italo Belardi, Genzano di Roma"
     orario="apertura al pubblico in fase di definizione"
-    mappa_url="https://maps.app.goo.gl/?q=Via+Italo+Belardi,+Genzano+di+Roma"
+    mappa_url="https://www.google.com/maps/search/?api=1&query=Via+Italo+Belardi+Genzano+di+Roma"
     afflusso="molto alto"
     pc_presente="sì, presidio del Gruppo Comunale lungo il percorso"
 >}}

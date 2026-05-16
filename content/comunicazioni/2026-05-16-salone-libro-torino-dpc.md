@@ -74,7 +74,7 @@ Sono raggiungibili anche dalla nostra pagina [Audio e podcast](/audio-e-podcast/
     data_fine="18 maggio 2026"
     luogo="Lingotto Fiere, Padiglione 2 stand H146-J145, Torino"
     orario="negli orari di apertura del Salone del Libro"
-    mappa_url="https://maps.app.goo.gl/?q=Lingotto+Fiere+Torino"
+    mappa_url="https://www.google.com/maps/search/?api=1&query=Lingotto+Fiere+Torino"
     afflusso="molto alto"
     pc_presente="stand DPC + ANPAS — non è una manifestazione operativa di emergenza"
 >}}
