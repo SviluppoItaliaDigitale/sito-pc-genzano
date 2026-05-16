@@ -129,7 +129,13 @@ jobs:
           else
             git add .manuale/sources-hashes.json
             git commit -m "Aggiornamento hash fonti manuale — verifica settimanale"
-            git push
+            # Retry+rebase per evitare conflitti di concorrenza con altri workflow
+            for tentativo in 1 2 3; do
+              if git push 2>&1; then break; fi
+              echo "Push fallito (tentativo $tentativo), rebase..."
+              git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+              if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+            done
           fi
 
       - name: "Apri issue di revisione se ci sono cambiamenti"

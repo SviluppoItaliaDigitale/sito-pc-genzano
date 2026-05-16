@@ -108,5 +108,11 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/stato-sistema.json
           git commit -m "chore(stato-sistema): aggiornamento automatico stato workflow [skip-stato]"
-          git push
+          # Retry+rebase per evitare conflitti di concorrenza con altri workflow
+          for tentativo in 1 2 3; do
+            if git push 2>&1; then break; fi
+            echo "Push fallito (tentativo $tentativo), rebase..."
+            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+          done
           gh workflow run deploy.yml

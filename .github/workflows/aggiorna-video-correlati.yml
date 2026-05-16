@@ -103,7 +103,13 @@ jobs:
           Generato dal workflow aggiorna-video-correlati.yml (cron mensile).
           La selezione resta editoriale: per escludere video falsi positivi
           rimuovi manualmente la voce da data/video_correlati.yaml e committa."
-          git push origin main
+          # Retry+rebase per evitare conflitti di concorrenza con altri workflow
+          for tentativo in 1 2 3; do
+            if git push origin main 2>&1; then break; fi
+            echo "Push fallito (tentativo $tentativo), rebase..."
+            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+          done
 
       - name: Triggera deploy
         if: steps.diff.outputs.has_changes == 'true'

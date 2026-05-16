@@ -319,7 +319,13 @@ jobs:
           (image + image_credit + image_source_url).
           Per cover tipografiche: applicata solo dove image: era vuoto e senza
           marker TODO-foto-* (mai sovrascritte foto utente custom)."
-          git push
+          # Retry+rebase per evitare conflitti di concorrenza con altri workflow
+          for tentativo in 1 2 3; do
+            if git push 2>&1; then break; fi
+            echo "Push fallito (tentativo $tentativo), rebase..."
+            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+          done
           echo "did_commit=true" >> "$GITHUB_OUTPUT"
 
       - name: "🚀 Triggera deploy"

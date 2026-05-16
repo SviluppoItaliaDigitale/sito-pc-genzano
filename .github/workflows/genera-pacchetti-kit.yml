@@ -70,7 +70,13 @@ jobs:
             echo "modificato=false" >> $GITHUB_OUTPUT
           else
             git commit -m "📦 Auto-rigenera pacchetti kit scolastici [skip-pacchetti]"
-            git push origin main
+            # Retry+rebase per evitare conflitti di concorrenza con altri workflow
+            for tentativo in 1 2 3; do
+              if git push origin main 2>&1; then break; fi
+              echo "Push fallito (tentativo $tentativo), rebase..."
+              git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+              if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+            done
             echo "modificato=true" >> $GITHUB_OUTPUT
           fi
 
