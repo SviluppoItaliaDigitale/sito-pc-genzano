@@ -12,9 +12,9 @@ sitemap:
 tts: false
 params:
   # Metadati del canale per il feed RSS iTunes-compatible.
-  # Compilare la copertina prima di inviare il podcast a Spotify/Apple:
-  # serve un'immagine quadrata 1400-3000 px (placeholder generato in
-  # static/images/podcast-cover.png — sostituibile con una versione curata).
+  # La copertina del canale è in static/images/podcast-cover.png
+  # (immagine quadrata 1400-3000 px, sostituibile con una versione curata
+  # prima dell'invio del podcast a Spotify/Apple).
   podcast_autore: "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
   podcast_email: "segreteria@protezionecivilegenzano.it"
   podcast_proprietario: "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
