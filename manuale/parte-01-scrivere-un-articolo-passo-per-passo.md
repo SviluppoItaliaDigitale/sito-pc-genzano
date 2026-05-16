@@ -409,7 +409,9 @@ Ogni articolo ha un **QR code** scaricabile e stampabile (bottone "Scarica QR" a
 python3 scripts/genera-qr-articoli.py
 ```
 
-Lo script è **idempotente**: genera solo i QR mancanti, salta quelli già presenti. Produce `static/qr/<nome-file>.png` e `.svg`. Se è la prima volta, installa la dipendenza con `pip install --break-system-packages segno`. I file `static/qr/` vanno aggiunti al commit (Passo 1.14). Se salti questo passo l'articolo si pubblica lo stesso: semplicemente il bottone "Scarica QR" non appare finché il QR non viene generato (il partial si auto-nasconde).
+Lo script è **idempotente**: genera solo i QR mancanti, salta quelli già presenti. Produce `static/qr/<nome-file>.png` e `.svg`. Se è la prima volta, installa la dipendenza con `pip install --break-system-packages segno`. I file `static/qr/` vanno aggiunti al commit (Passo 1.14).
+
+🟢 **Rete di sicurezza da maggio 2026**: il workflow `deploy.yml` ora include lo step *"Genera QR code mancanti per gli articoli"* (idempotente). Se pubblichi da mobile o salti questo passo, il deploy genera comunque i QR al volo prima della build Hugo: il bottone "Scarica QR" sarà disponibile sul sito anche senza che il file QR sia nel repo. Lanciare lo script in locale resta consigliato per tenere repo e sito allineati, ma non è più un blocker.
 
 ### Passo 1.13-ter — Aggiorna l'indice di ricerca
 

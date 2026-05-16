@@ -59,7 +59,7 @@ L'hub `/giochi/` è ora un **launcher** con tutti i giochi a colpo d'occhio, bad
 
 ## 29.12 QR articoli (#6) e Open Data
 
-- **QR articoli**: ogni articolo ha un bottone "Scarica QR" (in `page-tools`). I QR stanno in `static/qr/`, rigenerati da `scripts/genera-qr-articoli.py` (vedi **Parte 1, Passo 1.13-bis**).
+- **QR articoli**: ogni articolo ha un bottone "Scarica QR" (in `page-tools`). I QR stanno in `static/qr/`, rigenerati da `scripts/genera-qr-articoli.py` (vedi **Parte 1, Passo 1.13-bis**). Da maggio 2026 il workflow `deploy.yml` include uno step idempotente che genera i QR mancanti al volo: chi pubblica da mobile senza lanciare lo script non perde più il bottone "Scarica QR".
 - **Open Data**: la pagina `/open-data/` (dataset delle attività del Gruppo in CSV/JSON, CC BY 4.0) è stata reinserita nel dropdown Risorse.
 
 ## 29.13 Manutenzione collaterale
@@ -72,7 +72,7 @@ L'hub `/giochi/` è ora un **launcher** con tutti i giochi a colpo d'occhio, bad
 
 ## 29.14 Cosa ricordare
 
-- Dopo aver pubblicato articoli, **rigenera l'indice di ricerca** (`scripts/genera-indice-ricerca.sh`) e i **QR** (`scripts/genera-qr-articoli.py`).
+- Dopo aver pubblicato articoli, **rigenera l'indice di ricerca** (`scripts/genera-indice-ricerca.sh`). I **QR** (`scripts/genera-qr-articoli.py`) sono ora rigenerati anche dal workflow `deploy.yml` come rete di sicurezza per le pubblicazioni da mobile, ma lanciarlo in locale resta consigliato per tenere repo e sito allineati.
 - Ogni nuova voce di menu va aggiunta **sia in `hugo.toml` sia in `static/app-shared/site-chrome.js`**.
 - Il dropdown **Risorse** è cresciuto molto (13 voci): se in futuro diventa ingestibile, valutare una riorganizzazione (vedi rule `04b` § menu).
 - Le pagine/feature con "infrastruttura pronta, contenuto da completare": podcast (episodi), LIS (video), timeline (altre voci), open-data (dataset reali).
