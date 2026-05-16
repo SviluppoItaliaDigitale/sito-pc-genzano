@@ -6038,6 +6038,18 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
 /* Smooth scroll quando si clicca un chip → sezione del tema.
    Offset per evitare che il titolo della sezione vada sotto la navbar fissa. */
 :target.risorse-tema { scroll-margin-top: 90px; }
+
+/* Stato attivo del chip (selezione filtro). Coerente con hover/focus
+   ma persistente: indica la scelta corrente. */
+.risorse-chip.is-active {
+  background: #003366;
+  border-color: #003366;
+  color: #fff;
+}
+.risorse-chip.is-active .risorse-chip-count {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
 /* fine RISORSE PRONTE v1.0 */
 
 
