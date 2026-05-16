@@ -101,7 +101,10 @@ def generate_cover(md_path: Path, force: bool = False) -> Path:
         return out
 
     accent = BADGE_COLORS.get(badge, PRIMARY)
-    wrapped = wrap_title(title, 26)
+    # Wrap a 24 caratteri (era 26): titolo più stretto = sta nella safe zone
+    # centrale di 75% richiesta da Facebook composer mobile (incident 16/05/2026
+    # "preview ingrandita Giro d'Italia tagliata ai lati").
+    wrapped = wrap_title(title, 24)
 
     # Step 1: build base PNG with gradient + badges + title + band + text
     badge_w = 40 + 12 * len(badge)
@@ -126,13 +129,17 @@ def generate_cover(md_path: Path, force: bool = False) -> Path:
         # Separator line above band
         "-fill", "rgba(255,255,255,0.15)",
         "-draw", f"rectangle 80,{H-BAND_H-30} 1120,{H-BAND_H-29}",
-        # Title
+        # Title — centrato per safe zone Facebook composer mobile.
+        # Prima era "gravity West +80-30" → fuori dalla safe zone centrale 75%
+        # → tagliato nel composer FB mobile. Ora "Center +0-30" → titolo
+        # leggibile sia nel post pubblicato 1.91:1 sia nel composer ingrandito.
+        # Incident 16/05/2026 "preview Giro d'Italia tagliata ai lati".
         "-fill", WHITE,
         "-font", FONT_BOLD,
         "-pointsize", "50",
         "-interline-spacing", "16",
-        "-gravity", "West",
-        "-annotate", f"+80-30", wrapped,
+        "-gravity", "Center",
+        "-annotate", f"+0-30", wrapped,
         # Bottom blue band
         "-fill", PRIMARY,
         "-draw", f"rectangle 0,{H-BAND_H} {W},{H}",
