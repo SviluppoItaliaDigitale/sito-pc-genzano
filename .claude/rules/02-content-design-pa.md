@@ -67,6 +67,12 @@ Specifiche complete: `MANUALE-SITO.md`, Parte 3.
    - **Quando aggiungere foto multiple**: l'articolo deve avere ≥5 H2, raccontare eventi storici specifici, e le foto candidate devono avere valore narrativo (luoghi, persone, mappe, satellite — non bandiere o stemmi). Non per articoli di servizio quotidiano o dottrinali.
    - **Filtro automatico bandiere/stemmi comunali**: lo script `scripts/foto-da-wikipedia.sh` scarta i risultati con pattern `*Bandiera.svg`, `Flag_of_*`, `*-Stemma.svg`, `*Coat_of_arms*`, `*Stemma_di_*` (exit code `4`). Se capita, provare un titolo più specifico (un monumento, una piazza, una veduta).
 
+7. **Idempotenza della fascia blu (no doppia fascia)** — incident 16 maggio 2026 "Giro d'Italia Formia":
+   - **Mai applicare la fascia blu su una foto che ce l'ha già.** Il risultato è 2 fasce sovrapposte, visibili come 2 bande blu istituzionali con lo stesso testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari" sotto la foto.
+   - Lo script `scripts/applica-fascia-foto.py` da **v2 (16 maggio 2026) è idempotente**: rileva automaticamente fasce esistenti (sample pixel a 98% h centro fascia + 80% h zona foto, confronto con `#003366 ± 30`) e va in **skip** invece di sovrapporre. Output `[skip] La foto ha già una fascia ... Non applico una seconda fascia`.
+   - **Override esplicito** con flag `--force` (solo casi edge, mai automatico). Se uno script o un agent passa `--force` senza richiesta utente, è un bug.
+   - **Pattern operativo "foto aggiunte dopo la pubblicazione"** (frequente: l'utente pubblica un articolo prima di avere le foto e le aggiunge in giorni successivi): è un workflow legittimo e ricorrente, non un'eccezione. Backup difensivo in `/tmp/`, applica fascia via script, rigenera carosello IG via `genera-immagini-social.py --force`. Vedi `manuale/parte-03-immagini-per-gli-articoli.md` § "Aggiungere foto dopo la pubblicazione" e agent `pc-image-fixer.md` § "Foto aggiunte post-pubblicazione".
+
 Specifiche complete in `MANUALE-SITO.md` Parte 14.9. Questa regola nasce dopo un incidente in cui una foto fornita dall'utente era stata sostituita dalla sola copertina automatica — comportamento non accettabile.
 
 ### Divieto: foto stock generiche ripetute per macro-tema
