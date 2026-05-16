@@ -64,3 +64,47 @@ materiali:
   dimensione: 16.0 MB
   data_pubblicazione: '2026-05-16'
   licenza: CC BY-NC-SA 4.0
+- id: kit-emergenza-podcast-2026-05-16
+  tema: kit-emergenza
+  tema_titolo: Kit emergenza famiglia
+  tipo: podcast
+  titolo: 'Podcast: Kit emergenza famiglia'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-16-kit-emergenza-podcast.m4a
+  dimensione: 48.0 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
+- id: kit-emergenza-presentazione-pdf-2026-05-16
+  tema: kit-emergenza
+  tema_titolo: Kit emergenza famiglia
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Kit emergenza famiglia'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-16-kit-emergenza-presentazione-pdf.pdf
+  dimensione: 17.8 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
+- id: kit-emergenza-presentazione-2026-05-16
+  tema: kit-emergenza
+  tema_titolo: Kit emergenza famiglia
+  tipo: presentazione
+  titolo: 'Presentazione: Kit emergenza famiglia'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-16-kit-emergenza-presentazione.pptx
+  dimensione: 22.8 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
+- id: kit-emergenza-infografica-2026-05-16
+  tema: kit-emergenza
+  tema_titolo: Kit emergenza famiglia
+  tipo: infografica
+  titolo: 'Infografica: Kit emergenza famiglia'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-16-kit-emergenza-infografica.png
+  dimensione: 5.0 MB
+  data_pubblicazione: '2026-05-16'
+  licenza: CC BY-NC-SA 4.0
