@@ -3476,18 +3476,11 @@ html.a11y-contrast-invert .tts-fallback-msg strong {
      del .gloss-term che lo precede */
   text-decoration-line: none;
 }
-.gloss-popover::before {
-  content: "";
-  position: absolute;
-  top: -7px;
-  left: 14px;
-  width: 12px;
-  height: 12px;
-  background: #eef4fb;
-  border-left: 1px solid #b3c6dd;
-  border-top: 1px solid #b3c6dd;
-  transform: rotate(45deg);
-}
+/* Triangolino disattivato dal 16/05/2026: il popover è ora posizionato
+   via position: fixed con coordinate dal getBoundingClientRect del button
+   (per uscire dalla cella <td> e non essere clippato). In modalità fixed
+   il triangolino non punterebbe più correttamente al termine. */
+.gloss-popover::before { display: none; }
 .gloss-popover.is-flipped-up {
   top: auto;
   bottom: calc(100% + 6px);

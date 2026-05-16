@@ -114,7 +114,9 @@
     btn.setAttribute('aria-expanded', 'false');
     btn.setAttribute('aria-describedby', idPop);
     btn.setAttribute('data-gloss-id', voce.id);
-    btn.title = 'Spiegazione: clicca per leggere la definizione';
+    // No btn.title: il tooltip browser-native si sovrapponeva al popover
+    // quando l'utente cliccava. L'icona ⓘ + sottolineato tratteggiato +
+    // aria-describedby sono sufficienti come affordance visiva/screen-reader.
     btn.appendChild(document.createTextNode(matchedText));
     var ico = document.createElement('span');
     ico.className = 'gloss-icon';
@@ -196,16 +198,37 @@
     if (!openPopover) return;
     openPopover.hidden = true;
     openPopover.classList.remove('is-flipped-up');
+    openPopover.style.cssText = '';
     if (openButton) openButton.setAttribute('aria-expanded', 'false');
     openPopover = null;
     openButton = null;
   }
 
-  function flipIfOverflow(pop) {
-    pop.classList.remove('is-flipped-up');
-    var rect = pop.getBoundingClientRect();
+  // Posiziona il popover via position: fixed con coordinate dal button.
+  // Necessario perché position: absolute viene clippato quando il button
+  // è dentro una <td> o un .table-responsive (overflow auto/hidden).
+  function positionPopover(btn, pop) {
+    var br = btn.getBoundingClientRect();
+    var pw = pop.offsetWidth;
+    var ph = pop.offsetHeight;
+    var vw = window.innerWidth || document.documentElement.clientWidth;
     var vh = window.innerHeight || document.documentElement.clientHeight;
-    if (rect.bottom > vh - 10) pop.classList.add('is-flipped-up');
+    // Default: sotto al button, allineato a sinistra
+    var top = br.bottom + 6;
+    var left = br.left;
+    var flipped = false;
+    // Se va fuori dal viewport in basso → flip sopra
+    if (top + ph > vh - 10) {
+      top = br.top - ph - 6;
+      flipped = true;
+    }
+    // Se va fuori dal viewport a destra → riallinea
+    if (left + pw > vw - 10) left = Math.max(10, vw - pw - 10);
+    if (left < 10) left = 10;
+    pop.style.position = 'fixed';
+    pop.style.top = top + 'px';
+    pop.style.left = left + 'px';
+    pop.classList.toggle('is-flipped-up', flipped);
   }
 
   function openFor(btn) {
@@ -216,8 +239,8 @@
     btn.setAttribute('aria-expanded', 'true');
     openPopover = pop;
     openButton = btn;
-    // Calcola flip dopo render
-    requestAnimationFrame(function () { flipIfOverflow(pop); });
+    // Posiziona con coordinate fisse dopo render iniziale per dimensioni reali
+    requestAnimationFrame(function () { positionPopover(btn, pop); });
   }
 
   function togglePopover(btn) {
