@@ -1,6 +1,6 @@
 ---
 title: "Vento forte: cosa fare prima, durante e dopo"
-date: 2026-05-16
+date: 2026-05-16T00:01:00+02:00
 description: "Raffiche improvvise possono causare danni anche seri: alberi caduti, cornicioni, oggetti scagliati. Regole di prevenzione e comportamento."
 badge: "Prevenzione"
 priorita: "normale"
