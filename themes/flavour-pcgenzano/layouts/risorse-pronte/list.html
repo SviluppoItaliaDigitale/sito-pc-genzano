@@ -41,8 +41,11 @@
       {{ $dati := .Site.Data.risorse_pronte }}
       {{ if $dati }}
 
-        {{/* Conta materiali totali per decidere se mostrare empty state */}}
-        {{ $tutti := $dati.materiali | default slice }}
+        {{/* Conta materiali totali per decidere se mostrare empty state.
+             Usiamo slice + with per evitare problemi con `default slice` che
+             in Go template passa la funzione invece di chiamarla. */}}
+        {{ $tutti := slice }}
+        {{ with $dati.materiali }}{{ $tutti = . }}{{ end }}
         {{ $totale := len $tutti }}
 
         {{ if eq $totale 0 }}
@@ -59,7 +62,8 @@
         {{/* Sezione per ogni tema, con materiali in card responsive */}}
         {{ range $dati.temi }}
           {{ $temaSlug := .slug }}
-          {{ $materialiTema := where $tutti "tema" $temaSlug }}
+          {{ $materialiTema := slice }}
+          {{ if $tutti }}{{ $materialiTema = where $tutti "tema" $temaSlug }}{{ end }}
           {{ if gt (len $materialiTema) 0 }}
           <section class="risorse-tema mt-5" id="tema-{{ $temaSlug }}" aria-labelledby="h-{{ $temaSlug }}">
             <h2 id="h-{{ $temaSlug }}" class="risorse-tema-titolo">
@@ -68,21 +72,29 @@
             {{ with .descrizione }}<p class="risorse-tema-desc text-muted">{{ . }}</p>{{ end }}
             <div class="row g-3">
               {{ range $materialiTema }}
+              {{ $tipo := .tipo }}
+              {{ $titolo := .titolo }}
+              {{ $fileUrl := .file_url }}
               <div class="col-md-6 col-lg-4">
-                <div class="card risorsa-card h-100" data-tipo="{{ .tipo }}">
+                <div class="card risorsa-card h-100" data-tipo="{{ $tipo }}">
                   <div class="card-body d-flex flex-column">
                     <div class="risorsa-tipo mb-2">
-                      {{ if eq .tipo "podcast" }}<i class="bi bi-headphones me-1" aria-hidden="true"></i>Podcast
-                      {{ else if eq .tipo "infografica" }}<i class="bi bi-image me-1" aria-hidden="true"></i>Infografica
-                      {{ else if eq .tipo "presentazione" }}<i class="bi bi-file-earmark-slides me-1" aria-hidden="true"></i>Presentazione
-                      {{ else if eq .tipo "quiz" }}<i class="bi bi-check2-square me-1" aria-hidden="true"></i>Quiz
-                      {{ else if eq .tipo "flashcard" }}<i class="bi bi-card-list me-1" aria-hidden="true"></i>Flashcard
-                      {{ else }}<i class="bi bi-file-earmark me-1" aria-hidden="true"></i>{{ .tipo | title }}
+                      {{ if eq $tipo "podcast" }}<i class="bi bi-headphones me-1" aria-hidden="true"></i>Podcast
+                      {{ else if eq $tipo "infografica" }}<i class="bi bi-image me-1" aria-hidden="true"></i>Infografica
+                      {{ else if eq $tipo "presentazione" }}<i class="bi bi-file-earmark-slides me-1" aria-hidden="true"></i>Presentazione PPTX
+                      {{ else if eq $tipo "presentazione-pdf" }}<i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i>Presentazione PDF
+                      {{ else if eq $tipo "quiz" }}<i class="bi bi-check2-square me-1" aria-hidden="true"></i>Quiz
+                      {{ else if eq $tipo "flashcard" }}<i class="bi bi-card-list me-1" aria-hidden="true"></i>Flashcard
+                      {{ else }}<i class="bi bi-file-earmark me-1" aria-hidden="true"></i>{{ $tipo | title }}
                       {{ end }}
                     </div>
-                    <h3 class="h6 risorsa-titolo">{{ .titolo }}</h3>
+                    <h3 class="h6 risorsa-titolo">{{ $titolo }}</h3>
                     {{ with .anteprima_url }}
                     <img src="{{ . | relURL }}" alt="" class="risorsa-anteprima mb-2" loading="lazy">
+                    {{ end }}
+                    {{/* Per le infografiche mostriamo direttamente l'immagine come preview */}}
+                    {{ if and (eq $tipo "infografica") $fileUrl }}
+                    <img src="{{ $fileUrl | relURL }}" alt="Anteprima {{ $titolo }}" class="risorsa-anteprima mb-2" loading="lazy">
                     {{ end }}
                     <p class="risorsa-descrizione small text-muted flex-grow-1">{{ .descrizione }}</p>
                     <dl class="risorsa-meta small mb-2">
@@ -91,12 +103,19 @@
                       {{ with .data_pubblicazione }}<div><dt>Pubblicato:</dt><dd>{{ . }}</dd></div>{{ end }}
                       {{ with .licenza }}<div><dt>Licenza:</dt><dd>{{ . }}</dd></div>{{ end }}
                     </dl>
-                    {{ with .file_url }}
-                    <a href="{{ . | relURL }}" class="btn btn-sm btn-outline-primary mt-auto"
-                       {{ if ne $.tipo "podcast" }}download{{ end }}
-                       aria-label="Scarica {{ $.titolo }}">
+                    {{/* Per i podcast mostriamo un player audio HTML5 nativo inline */}}
+                    {{ if and (eq $tipo "podcast") $fileUrl }}
+                    <audio controls preload="none" class="w-100 mb-2" aria-label="Player audio: {{ $titolo }}">
+                      <source src="{{ $fileUrl | relURL }}" type="{{ if hasSuffix $fileUrl ".m4a" }}audio/mp4{{ else if hasSuffix $fileUrl ".ogg" }}audio/ogg{{ else }}audio/mpeg{{ end }}">
+                      Il tuo browser non supporta l'audio HTML5. <a href="{{ $fileUrl | relURL }}">Scarica il file</a>.
+                    </audio>
+                    {{ end }}
+                    {{ if $fileUrl }}
+                    <a href="{{ $fileUrl | relURL }}" class="btn btn-sm btn-outline-primary mt-auto"
+                       {{ if ne $tipo "podcast" }}download{{ end }}
+                       aria-label="Scarica {{ $titolo }}">
                       <i class="bi bi-download me-1" aria-hidden="true"></i>
-                      {{ if eq $.tipo "podcast" }}Ascolta / Scarica{{ else }}Scarica{{ end }}
+                      {{ if eq $tipo "podcast" }}Scarica audio{{ else }}Scarica{{ end }}
                     </a>
                     {{ end }}
                   </div>

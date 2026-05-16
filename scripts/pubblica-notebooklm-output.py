@@ -46,37 +46,50 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 STATIC = REPO_ROOT / "static"
 DATA_FILE = REPO_ROOT / "data" / "risorse_pronte.yaml"
 
-# Mapping nome file scaricato → (tipo, cartella static, estensione canonica)
+# Mapping nome file scaricato → (tipo, cartella static, estensione canonica).
+# Per il podcast NotebookLM scarica .m4a (AAC). Lo accettiamo nativamente:
+# il browser HTML5 audio lo riproduce, è più piccolo dell'MP3 a parità di
+# qualità. Hugo serve i file static tali e quali, niente conversione.
 MAPPING_FILE = {
-    "podcast.mp3":     ("podcast",       "podcast/episodi",  ".mp3"),
-    "infografica.png": ("infografica",   "infografiche",     ".png"),
-    "infografica.jpg": ("infografica",   "infografiche",     ".jpg"),
-    "infografica.webp":("infografica",   "infografiche",     ".webp"),
-    "presentazione.pptx": ("presentazione", "presentazioni", ".pptx"),
-    "quiz.txt":        ("quiz",          "risorse-quiz",     ".txt"),
-    "quiz.json":       ("quiz",          "risorse-quiz",     ".json"),
-    "flashcard.pdf":   ("flashcard",     "flashcard",        ".pdf"),
-    "mappa.png":       ("mappa-mentale", "mappe-mentali",    ".png"),
-    "mappa.svg":       ("mappa-mentale", "mappe-mentali",    ".svg"),
+    "podcast.mp3":        ("podcast",         "podcast/episodi",  ".mp3"),
+    "podcast.m4a":        ("podcast",         "podcast/episodi",  ".m4a"),
+    "podcast.ogg":        ("podcast",         "podcast/episodi",  ".ogg"),
+    "infografica.png":    ("infografica",     "infografiche",     ".png"),
+    "infografica.jpg":    ("infografica",     "infografiche",     ".jpg"),
+    "infografica.webp":   ("infografica",     "infografiche",     ".webp"),
+    "presentazione.pptx": ("presentazione",   "presentazioni",    ".pptx"),
+    "presentazione.pdf":  ("presentazione-pdf", "presentazioni",  ".pdf"),
+    "quiz.txt":           ("quiz",            "risorse-quiz",     ".txt"),
+    "quiz.json":          ("quiz",            "risorse-quiz",     ".json"),
+    "flashcard.pdf":      ("flashcard",       "flashcard",        ".pdf"),
+    "mappa.png":          ("mappa-mentale",   "mappe-mentali",    ".png"),
+    "mappa.svg":          ("mappa-mentale",   "mappe-mentali",    ".svg"),
 }
 
 # Descrizioni per tipo (usate quando l'utente non fornisce descrizione custom)
 DESC_TIPO = {
-    "podcast":       "Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online o scaricabile per ascolto offline.",
-    "infografica":   "Infografica formato quadrato pronta per condivisione social, stampa A4 e affissione in bacheca.",
-    "presentazione": "Presentazione PowerPoint per docenti: 15 slide per un'ora di Educazione Civica in classe.",
-    "quiz":          "Quiz a 10 domande a risposta multipla con difficoltà progressiva. Da usare in aula o in autoverifica.",
-    "flashcard":     "Mazzo di 20 flashcard domanda/risposta in formato PDF stampabile per studio individuale o di gruppo.",
-    "mappa-mentale": "Mappa mentale visuale per orientarsi rapidamente sull'argomento.",
+    "podcast":         "Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online o scaricabile per ascolto offline.",
+    "infografica":     "Infografica formato quadrato pronta per condivisione social, stampa A4 e affissione in bacheca.",
+    "presentazione":   "Presentazione PowerPoint per docenti: 15 slide per un'ora di Educazione Civica in classe (formato modificabile).",
+    "presentazione-pdf": "Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo senza PowerPoint.",
+    "quiz":            "Quiz a 10 domande a risposta multipla con difficoltà progressiva. Da usare in aula o in autoverifica.",
+    "flashcard":       "Mazzo di 20 flashcard domanda/risposta in formato PDF stampabile per studio individuale o di gruppo.",
+    "mappa-mentale":   "Mappa mentale visuale per orientarsi rapidamente sull'argomento.",
 }
 
 ICONA_TIPO = {
-    "podcast":       "bi-headphones",
-    "infografica":   "bi-image",
-    "presentazione": "bi-file-earmark-slides",
-    "quiz":          "bi-check2-square",
-    "flashcard":     "bi-card-list",
-    "mappa-mentale": "bi-diagram-3",
+    "podcast":         "bi-headphones",
+    "infografica":     "bi-image",
+    "presentazione":   "bi-file-earmark-slides",
+    "presentazione-pdf": "bi-file-earmark-pdf",
+    "quiz":            "bi-check2-square",
+    "flashcard":       "bi-card-list",
+    "mappa-mentale":   "bi-diagram-3",
+}
+
+# Titolo personalizzato per tipo (sovrascrive il default "Tipo: Titolo tema")
+TITOLO_TIPO = {
+    "presentazione-pdf": "Presentazione (PDF)",
 }
 
 
@@ -171,12 +184,13 @@ def pubblica_tema(tema_slug: str, dry_run: bool = False) -> int:
             # Aggiorna esistente (sovrascrive) invece di duplicare
             materiali_esistenti = [m for m in materiali_esistenti if m.get("id") != voce_id]
 
+        titolo_base = TITOLO_TIPO.get(tipo, tipo.capitalize())
         voce = {
             "id": voce_id,
             "tema": tema_slug,
             "tema_titolo": tema_info["titolo"],
             "tipo": tipo,
-            "titolo": f"{tipo.capitalize()}: {tema_info['titolo']}",
+            "titolo": f"{titolo_base}: {tema_info['titolo']}",
             "descrizione": DESC_TIPO.get(tipo, "Materiale di approfondimento."),
             "file_url": f"/{sub_static}/{dest_name}",
             "dimensione": umano_dimensione(dest.stat().st_size),
