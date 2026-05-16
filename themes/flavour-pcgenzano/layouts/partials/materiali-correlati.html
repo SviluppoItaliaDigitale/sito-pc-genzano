@@ -1,0 +1,84 @@
+{{/* Partial: materiali-correlati
+     Mostra i materiali multimediali (podcast, infografiche, presentazioni,
+     quiz, flashcard) di /risorse-pronte/ filtrati per il tema della pagina.
+
+     Auto-discovery del tema:
+       1. .Params.risorse_tema (frontmatter override, valore string o false)
+       2. fallback su .Section (per _index.md di sezione, es. "allerte-meteo")
+       3. fallback su .File.BaseFileName (per single pages, es. "rischio-sismico")
+
+     Per disattivare su una pagina specifica: `risorse_tema: false`.
+
+     Auto-protettivo: se non ci sono materiali per il tema, non renderizza
+     nulla. Quindi il partial può essere chiamato OVUNQUE senza rischio di
+     spam vuoto.
+
+     Storia: 16/05/2026 — richiesta utente "i materiali sono linkati anche
+     nelle pagine rischio e didattiche?". Risposta: con questo partial sì.
+*/}}
+{{- $param := .Params.risorse_tema -}}
+{{- $temaCandidate := "" -}}
+
+{{- if eq $param false -}}
+  {{/* Opt-out esplicito: il partial non mostra nulla */}}
+{{- else -}}
+  {{- if $param -}}
+    {{- $temaCandidate = $param -}}
+  {{- else if eq .Kind "section" -}}
+    {{- $temaCandidate = .Section -}}
+  {{- else if .File -}}
+    {{- $temaCandidate = .File.BaseFileName -}}
+  {{- end -}}
+
+  {{- $dati := site.Data.risorse_pronte -}}
+  {{- if and $temaCandidate $dati -}}
+    {{- $materiali := where (default slice $dati.materiali) "tema" $temaCandidate -}}
+    {{- if gt (len $materiali) 0 -}}
+      {{- $temaInfo := index (where (default slice $dati.temi) "slug" $temaCandidate) 0 -}}
+      <section class="materiali-correlati mt-5" aria-labelledby="mc-{{ $temaCandidate }}">
+        <h2 id="mc-{{ $temaCandidate }}" class="materiali-correlati-titolo">
+          <i class="bi bi-collection-play me-2" aria-hidden="true"></i>
+          Materiali pronti su questo tema
+        </h2>
+        <p class="materiali-correlati-intro text-muted">
+          Podcast da ascoltare, infografiche da condividere, presentazioni
+          per docenti, quiz e flashcard. Liberamente scaricabili
+          (CC&nbsp;BY-NC-SA&nbsp;4.0).
+        </p>
+        <div class="row g-3">
+          {{- range $materiali }}
+          <div class="col-md-6 col-lg-4">
+            <a href="{{ .file_url | relURL }}"
+               class="card materiali-correlati-card h-100 text-decoration-none"
+               {{ if ne .tipo "podcast" }}download{{ end }}
+               aria-label="Scarica {{ .titolo }} ({{ .tipo }})">
+              <div class="card-body d-flex flex-column">
+                <div class="risorsa-tipo mb-2">
+                  {{ if eq .tipo "podcast" }}<i class="bi bi-headphones me-1" aria-hidden="true"></i>Podcast
+                  {{ else if eq .tipo "infografica" }}<i class="bi bi-image me-1" aria-hidden="true"></i>Infografica
+                  {{ else if eq .tipo "presentazione" }}<i class="bi bi-file-earmark-slides me-1" aria-hidden="true"></i>Presentazione
+                  {{ else if eq .tipo "quiz" }}<i class="bi bi-check2-square me-1" aria-hidden="true"></i>Quiz
+                  {{ else if eq .tipo "flashcard" }}<i class="bi bi-card-list me-1" aria-hidden="true"></i>Flashcard
+                  {{ else }}<i class="bi bi-file-earmark me-1" aria-hidden="true"></i>{{ .tipo | title }}
+                  {{ end }}
+                </div>
+                <h3 class="h6 mb-2">{{ .titolo }}</h3>
+                <p class="small text-muted mb-2 flex-grow-1">{{ .descrizione }}</p>
+                {{ with .durata }}<small class="text-muted"><i class="bi bi-clock me-1" aria-hidden="true"></i>{{ . }}</small>{{ end }}
+                {{ with .dimensione }}<small class="text-muted ms-2">{{ . }}</small>{{ end }}
+              </div>
+            </a>
+          </div>
+          {{- end }}
+        </div>
+        <p class="mt-3 mb-0">
+          <a href="{{ "/risorse-pronte/" | relURL }}#tema-{{ $temaCandidate }}"
+             class="materiali-correlati-link">
+            Vedi tutti i materiali pronti
+            <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+          </a>
+        </p>
+      </section>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
