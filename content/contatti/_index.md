@@ -5,9 +5,8 @@ layout: "single"
 aliases:
   - /contatti.html
 tts: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-05-16"
 ---
-<!-- cache-bust: 2026-05-13 forza re-upload FTP per allineare header/footer (audit 13/05) -->
 
 <div class="card border-danger mb-4">
 <div class="card-body bg-danger bg-opacity-10 p-4">
@@ -69,23 +68,39 @@ Segui i canali ufficiali per aggiornamenti, allerte e comunicazioni del Gruppo.
 
 ## Quando contattarci
 
-<div class="table-responsive">
-<table>
-<caption>Canali corretti da usare in base alla situazione</caption>
-<thead>
-<tr><th scope="col">Situazione</th><th scope="col">Cosa fare</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Emergenza in corso</strong> (incendio, alluvione, terremoto, persona in pericolo)</td><td>Chiama il <strong>112</strong></td></tr>
-<tr><td><strong>Pericolo immediato</strong> (albero caduto su strada, smottamento, cavi pericolanti, incendio)</td><td>Chiama il <strong>112</strong></td></tr>
-<tr><td><strong>Comunicazioni di protezione civile regionale</strong></td><td>Fai riferimento alla Sala Operativa Regionale <strong>803&nbsp;555</strong>, secondo le indicazioni ufficiali</td></tr>
-<tr><td><strong>Informazioni sul Gruppo</strong></td><td>Chiama o scrivi ai recapiti ordinari</td></tr>
-<tr><td><strong>Diventare volontario</strong></td><td>Vieni in sede, chiama o <a href="mailto:segreteria@protezionecivilegenzano.it">scrivi un'email</a></td></tr>
-<tr><td><strong>Collaborazione con scuole</strong></td><td>Scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></td></tr>
-<tr><td><strong>Segnalazione problema sul sito</strong></td><td>Scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></td></tr>
-<tr><td><strong>Media e giornalisti</strong> (interviste, dichiarazioni, immagini)</td><td>Scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></td></tr>
-</tbody>
-</table>
+<div class="row g-3 my-3">
+<div class="col-md-6">
+<div class="card h-100 border-danger">
+<div class="card-body">
+<h3 class="h5 text-danger">Emergenza o pericolo immediato</h3>
+<p class="mb-0">Chiama il <strong>112</strong> per incendio, alluvione, terremoto, persona in pericolo, albero caduto su strada, smottamento, cavi pericolanti o altra situazione urgente.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card h-100 border-warning">
+<div class="card-body">
+<h3 class="h5 text-warning">Comunicazioni regionali di Protezione Civile</h3>
+<p class="mb-0">Fai riferimento alla Sala Operativa Regionale <strong>803&nbsp;555</strong>, secondo le indicazioni ufficiali. Per pericolo immediato resta prioritario il 112.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card h-100">
+<div class="card-body">
+<h3 class="h5">Informazioni sul Gruppo o volontariato</h3>
+<p class="mb-0">Chiama la segreteria, vieni in sede o scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card h-100">
+<div class="card-body">
+<h3 class="h5">Scuole, sito, media e collaborazioni</h3>
+<p class="mb-0">Per progetti scolastici, segnalazioni sul sito, richieste media o collaborazioni scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
+</div>
+</div>
+</div>
 </div>
 
 ## Mappa della sede
@@ -104,4 +119,3 @@ Segui i canali ufficiali per aggiornamenti, allerte e comunicazioni del Gruppo.
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
 - [Diventa volontario](/diventa-volontario/) — iscrizione, requisiti e formazione
 - [Mappa del sito](/mappa-sito/) — tutte le sezioni del sito
-
