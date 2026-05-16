@@ -34,9 +34,39 @@ from pathlib import Path
 from textwrap import dedent
 
 HOME = Path.home()
+REPO_ROOT = Path(__file__).resolve().parent.parent
 PACCHETTI_DIR = HOME / "Scrivania" / "notebooklm-pacchetti"
 OUTPUT_DIR = HOME / "Scrivania" / "notebooklm-output"
 SITO_BASE = "https://www.protezionecivilegenzano.it"
+
+# Keyword matching per individuare gli articoli del sito pertinenti a un tema.
+# Match case-insensitive nel body + frontmatter dei .md di content/comunicazioni/.
+KEYWORDS_TEMA = {
+    "rischio-sismico": [
+        "terremoto", "terremoti", "sisma", "sismic", "magnitudo", "shake",
+        "fagli", "INGV", "ipocentro", "epicentro", "Richter", "Mercalli",
+        "Irpinia", "L'Aquila", "Amatrice", "Centro Italia",
+    ],
+    "rischio-idrogeologico": [
+        "frana", "frane", "alluvion", "idrogeologic", "dissesto", "PAI",
+        "esondazion", "allagament", "smottament", "torrent", "Sarno",
+        "Genova", "ARSIAL", "ISPRA",
+    ],
+    "rischio-incendio": [
+        "incendio", "incendi", "AIB", "antincendio", "boschiv", "rogo",
+        "RISICO", "Zona AIB", "L. 353/2000", "Canadair",
+    ],
+    "allerta-meteo": [
+        "allerta", "allerte", "bollettin", "criticità",
+        "Centro Funzionale", "codice colore", "vento forte", "temporal",
+        "ondata di calore", "neve", "zona di allerta",
+    ],
+    "kit-emergenza": [
+        "kit emergenza", "kit di emergenza", "piano familiare", "evacuazione",
+        "kit vai", "kit casa", "kit auto", "preparazione", "72 ore",
+        "vulnerabili", "anzian", "neonat", "famiglia", "scorte",
+    ],
+}
 
 # Dati per ogni tema. Ogni voce contiene:
 #   titolo: nome leggibile (italiano)
@@ -545,12 +575,36 @@ def indice_md(tema_slug: str, tema_data: dict) -> str:
         - Clicca "Crea notebook" in alto a destra
         - Quando ti chiede il titolo, scrivi: "{tema_data["titolo"]}"
 
-        ### Passo 2 — Carica le fonti
-        - Apri il file `01-fonti.md` qui nella cartella
-        - Segui le istruzioni dentro per caricare URL del sito + PDF
-          istituzionali nel notebook
-        - Aspetta che NotebookLM "legga" tutte le fonti (rotella accanto
-          a ogni voce → diventa spunta verde quando è pronto)
+        ### Passo 2 — Carica le fonti (5-6 click totali)
+
+        🎯 **PASSO 2A — 1 upload (contenuti del nostro sito)**:
+        nella cartella c'è un file chiamato
+        `AAA-FONTI-SITO-AGGREGATE-{tema_slug}.md`. Contiene già aggregati
+        TUTTI i contenuti del sito sul tema (pagina rischio + articoli
+        + glossario): da 145 a 267 contenuti in un singolo file.
+
+        In NotebookLM clicca "Aggiungi fonti" → "Carica file" → seleziona
+        il file `AAA-FONTI-...`. Un solo click e hai dentro tutto il
+        sito sul tema.
+
+        🔗 **PASSO 2B — 4 incoll URL (fonti istituzionali esterne)**:
+        apri il file `LINKS-DA-INCOLLARE.txt`. Vedi gli URL delle fonti
+        istituzionali (DPC "Io non rischio", INGV, ISPRA, ecc.):
+
+        Per ognuno (sono 3-5 in totale):
+        1. Copia l'URL
+        2. In NotebookLM clicca "Aggiungi fonti" → "Link" (o "URL")
+        3. Incolla l'URL e conferma
+
+        NotebookLM scarica e legge la pagina automaticamente. Aspetta
+        che la spunta verde appaia accanto ad ogni voce (10-30 secondi).
+
+        ⚠️ NotebookLM **non** visita link contenuti dentro a file
+        caricati: per quello c'è il passo 2B (URL incollati direttamente
+        come fonti).
+
+        Totale passo 2: **5-6 click per ~270 contenuti del sito + 4-5
+        fonti istituzionali ufficiali**.
 
         ### Passo 3 — Imposta italiano una volta sola
         - Clicca l'ingranaggio ⚙️ in alto a destra
@@ -611,12 +665,114 @@ def indice_md(tema_slug: str, tema_data: dict) -> str:
     """)
 
 
+def aggrega_fonti_sito(tema_slug: str, tema_data: dict) -> tuple[str, int]:
+    """Genera un singolo file Markdown con tutti i contenuti del sito
+    pertinenti al tema, da caricare in NotebookLM come fonte unica.
+
+    Match: keyword nel body + frontmatter di content/comunicazioni/*.md,
+    più la pagina /rischi-prevenzione/<tema>.md (e altre pagine canoniche
+    note come /allerte-meteo/_index.md, /rischi-prevenzione/kit-emergenza.md).
+
+    Esclude articoli draft:true. Pagina rischio sempre come primo capitolo.
+    """
+    keywords = [kw.lower() for kw in KEYWORDS_TEMA.get(tema_slug, [])]
+    contenuti = []  # lista di (titolo_visibile, percorso_relativo, testo_completo)
+
+    # 1. Pagina principale del tema (canonica). Mapping slug → file sul filesystem.
+    pagine_canoniche = {
+        "rischio-sismico": "content/rischi-prevenzione/rischio-sismico.md",
+        "rischio-idrogeologico": "content/rischi-prevenzione/rischio-idrogeologico.md",
+        "rischio-incendio": "content/rischi-prevenzione/rischio-incendio.md",
+        "allerta-meteo": "content/allerte-meteo/_index.md",
+        "kit-emergenza": "content/rischi-prevenzione/kit-emergenza.md",
+    }
+    pagina_canonica = pagine_canoniche.get(tema_slug)
+    if pagina_canonica:
+        path = REPO_ROOT / pagina_canonica
+        if path.exists():
+            contenuti.append(("PAGINA PRINCIPALE", pagina_canonica, path.read_text(encoding="utf-8")))
+
+    # 2. Articoli /comunicazioni/ pertinenti al tema (keyword matching)
+    if keywords:
+        comunicazioni_dir = REPO_ROOT / "content" / "comunicazioni"
+        for f in sorted(comunicazioni_dir.glob("*.md")):
+            try:
+                testo = f.read_text(encoding="utf-8")
+            except (OSError, UnicodeDecodeError):
+                continue
+            if "draft: true" in testo:
+                continue
+            testo_lower = testo.lower()
+            # Almeno 1 keyword deve apparire
+            if any(kw in testo_lower for kw in keywords):
+                contenuti.append((f"ARTICOLO: {f.stem}", f"content/comunicazioni/{f.name}", testo))
+
+    # 3. Glossario voci pertinenti
+    glossario_path = REPO_ROOT / "content" / "glossario" / "_index.md"
+    if glossario_path.exists():
+        glossario_text = glossario_path.read_text(encoding="utf-8")
+        glossario_lower = glossario_text.lower()
+        if any(kw in glossario_lower for kw in keywords):
+            contenuti.append(("GLOSSARIO", "content/glossario/_index.md", glossario_text))
+
+    # Costruisci il file aggregato
+    n = len(contenuti)
+    header = dedent(f"""\
+        # Fonti del sito Protezione Civile Genzano — Aggregato per NotebookLM
+        ## Tema: {tema_data["titolo"]}
+
+        Questo file aggrega **{n} contenuti** del sito istituzionale di Protezione
+        Civile di Genzano di Roma sul tema "{tema_data["titolo"]}".
+
+        Origine: <https://www.protezionecivilegenzano.it>
+        Generato il: (vedi data file)
+
+        Carica questo singolo file in NotebookLM come fonte: NotebookLM lo legge
+        come unica fonte tematica e ti permette di generare podcast, infografiche,
+        presentazioni, quiz e flashcard basate su questi contenuti istituzionali.
+
+        Tutti i contenuti del sito sono pubblicati con licenza CC BY-NC-SA 4.0.
+
+        ---
+
+    """)
+    parts = [header]
+    for titolo, percorso, testo in contenuti:
+        parts.append(f"\n\n# ════════════════════════════════════════\n# {titolo}\n# Origine: {percorso}\n# ════════════════════════════════════════\n\n{testo}\n\n")
+    return "\n".join(parts), n
+
+
 def scrivi_pacchetto(tema_slug: str, tema_data: dict) -> int:
-    """Scrive tutti e 6 i file nella cartella di un tema. Ritorna numero file."""
+    """Scrive tutti i file nella cartella di un tema. Ritorna numero file."""
     cartella = PACCHETTI_DIR / tema_slug
     cartella.mkdir(parents=True, exist_ok=True)
     output_cartella = OUTPUT_DIR / tema_slug
     output_cartella.mkdir(parents=True, exist_ok=True)
+
+    # Aggrega fonti del sito in un singolo MD
+    fonti_aggregate, n_fonti = aggrega_fonti_sito(tema_slug, tema_data)
+
+    # File TXT con solo gli URL puliti (uno per riga) delle fonti istituzionali
+    # esterne. L'utente lo apre, copia un URL alla volta, incolla nel campo
+    # "Aggiungi link" di NotebookLM. 3-5 incoll totali per tema.
+    import re as _re
+    links_esterni = [
+        f"# URL fonti istituzionali esterne — Tema: {tema_data['titolo']}",
+        "# Apri questo file, copia un URL alla volta, incollalo in NotebookLM",
+        "# alla voce 'Aggiungi fonti' → 'Link'. NotebookLM scarica e legge la pagina.",
+        "# (NotebookLM NON visita link contenuti in altri file: serve incollare l'URL diretto)",
+        "",
+        "# === Fonti istituzionali esterne raccomandate (3-5 URL): ===",
+    ]
+    for fonte in tema_data["fonti_istituzionali"]:
+        urls = _re.findall(r"https?://[^\s,;\"<>)\]]+", fonte)
+        for u in urls:
+            links_esterni.append(u)
+    links_esterni.append("")
+    links_esterni.append("# === Articoli del sito (opzionali: già aggregati nel file MD principale) ===")
+    links_esterni.append(tema_data["pagina_sito"])
+    for url in tema_data["articoli_correlati"]:
+        links_esterni.append(url)
 
     files = {
         "00-INDICE.md": indice_md(tema_slug, tema_data),
@@ -626,11 +782,15 @@ def scrivi_pacchetto(tema_slug: str, tema_data: dict) -> int:
         "04-prompt-presentazione.md": prompt_presentazione(tema_data),
         "05-prompt-quiz.md": prompt_quiz(tema_data),
         "06-prompt-flashcard.md": prompt_flashcard(tema_data),
+        f"AAA-FONTI-SITO-AGGREGATE-{tema_slug}.md": fonti_aggregate,
+        "LINKS-DA-INCOLLARE.txt": "\n".join(links_esterni) + "\n",
     }
 
     for nome, contenuto in files.items():
         (cartella / nome).write_text(contenuto, encoding="utf-8")
 
+    # Stampa info aggregazione
+    print(f"     fonti aggregate: {n_fonti} contenuti del sito in 1 unico file")
     return len(files)
 
 
