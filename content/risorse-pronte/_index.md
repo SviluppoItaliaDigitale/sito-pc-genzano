@@ -30,5 +30,5 @@ I primi materiali stanno arrivando. Torna fra qualche giorno: aggiorniamo period
 ## Altri materiali del sito
 
 - [Schede "1 minuto per proteggerti"](/schede-1-minuto/) — sei micro-schede A5 stampabili con azioni concrete di autoprotezione
-- [Esercitazioni e buone pratiche](/esercitazioni/) — resoconto delle esercitazioni del Gruppo
+- [Addestramento e buone pratiche](/esercitazioni/) — come si addestra il Gruppo: turni operativi ed esercitazioni programmate
 - [Audio e podcast](/audio-e-podcast/) — articoli ascoltabili e podcast del Gruppo

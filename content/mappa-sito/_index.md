@@ -364,8 +364,8 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 </a>
 <a class="ms-card ms-edu" href="/esercitazioni/">
   <div class="ms-card-icon"><i class="bi bi-list-task"></i></div>
-  <p class="ms-card-title">Esercitazioni e buone pratiche</p>
-  <p class="ms-card-desc">Vetrina educativa delle esercitazioni del Gruppo: antincendio boschivo, sismica, idrogeologica, radio, logistica, sanitaria. Resoconti divulgativi, non diari operativi riservati.</p>
+  <p class="ms-card-title">Addestramento e buone pratiche</p>
+  <p class="ms-card-desc">Come si addestra il Gruppo: addestramento continuo nei turni operativi (mezzi, attrezzature, radio), esercitazioni programmate (antincendio boschivo, sismica, idrogeologica, logistica, sanitaria). Vetrina educativa.</p>
 </a>
 <a class="ms-card ms-edu" href="/stato-sistema/">
   <div class="ms-card-icon"><i class="bi bi-activity"></i></div>

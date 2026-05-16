@@ -237,11 +237,12 @@ enableGitInfo = true
   parent = "volontariato"
   weight = 3
 
-# Aggiunto il 16/05/2026: hub esercitazioni e buone pratiche del Gruppo
-# (vetrina educativa, non diario operativo). Auto-popolato da articoli
-# /comunicazioni/ con badge "Esercitazione".
+# Aggiunto il 16/05/2026: hub addestramento e buone pratiche del Gruppo.
+# Racconta come ci alleniamo (turni operativi + esercitazioni programmate),
+# vetrina educativa, non diario operativo. Niente elenco articoli — gran parte
+# dell'addestramento avviene nei turni e non genera un articolo dedicato.
 [[menus.main]]
-  name = "Esercitazioni e buone pratiche"
+  name = "Addestramento e buone pratiche"
   url = "/esercitazioni/"
   parent = "volontariato"
   weight = 4

@@ -74,11 +74,12 @@ Molte delle indicazioni valide per il 1° novembre restano valide oggi. In parti
 
 Nelle giornate di commemorazione, i volontari di PC possono essere presenti, in coordinamento con il Comune e la Polizia Locale, per:
 
-- **supporto** alla viabilità;
-- **informazioni** ai visitatori;
-- **assistenza** a persone con difficoltà;
+- **informazione ai visitatori** su percorsi pedonali, accessi e parcheggi deliberati dalle autorità;
+- **assistenza** a persone anziane o con difficoltà di mobilità;
 - **primo soccorso** in caso di necessità;
-- **presenza discreta** in punti strategici.
+- **presenza discreta** in punti strategici di prossimità.
+
+La regolazione del traffico nei pressi dei cimiteri resta compito esclusivo della Polizia Locale e delle Forze dell'Ordine, come ribadito dalla [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) sull'impiego del volontariato di Protezione Civile.
 
 Si opera **senza invadenza**, riconoscendo che il momento appartiene ai cittadini.
 

@@ -44,14 +44,16 @@ Un piano di sicurezza per una sagra o una festa patronale contiene tipicamente:
 
 In molti eventi di Genzano e dei Castelli il Gruppo Comunale Volontari di Protezione Civile viene attivato dal Comune per:
 
-- **presidio** dei punti di raccolta e delle vie di fuga;
-- **supporto alla Polizia Locale** per la viabilità;
-- **gestione** dei flussi di persone in ingresso/uscita;
+- **presidio** dei punti di raccolta e delle vie di fuga (compito esplicitamente consentito al volontariato dalla Circolare DPC del 6 agosto 2018);
+- **informazione al pubblico** su percorsi, accessi e vie di fuga deliberati dalle autorità competenti;
 - **comunicazione** di eventuali emergenze alla folla con altoparlanti e cartelli;
-- **raccordo** con le squadre sanitarie;
-- **segnalazione** di condizioni meteo critiche e attuazione dei protocolli previsti.
+- **raccordo** con le squadre sanitarie del 118;
+- **segnalazione** di condizioni meteo critiche e attuazione dei protocolli previsti;
+- **supporto logistico** alla Polizia Locale e alle Forze dell'Ordine sul mandato del Comune.
 
-Il Gruppo **non sostituisce** le forze dell'ordine, né la sanità, né i Vigili del Fuoco: ne è **complementare**.
+La **regolazione del traffico veicolare e l'attività di polizia stradale** non rientrano nei compiti del volontariato di Protezione Civile: sono di competenza esclusiva delle Forze dell'Ordine e della Polizia Locale (artt. 11 e 12 del Codice della Strada; [Circolare DPC 6/8/2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/)). Anche l'uso di palette dirigitraffico è vietato ai volontari.
+
+Il Gruppo **non sostituisce** le Forze dell'Ordine, né la sanità, né i Vigili del Fuoco: ne è **complementare**.
 
 ## Cosa può fare il cittadino
 

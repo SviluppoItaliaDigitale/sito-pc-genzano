@@ -118,6 +118,61 @@ Non citare numeri di emergenza non verificati. Non presentare più 115/118/1515 
 
 **Nota**: "NUE 112" e "ARES 118" possono essere citati come **nomi di organizzazioni** quando il contesto lo richiede (es. riferimenti istituzionali), ma mai come numero da chiamare in emergenza.
 
+## Manifestazioni pubbliche — ruolo del volontariato di PC (Circolare DPC 6/8/2018)
+
+🔴 **Regola cogente — applicare a ogni articolo che descrive cosa fa il Gruppo Comunale Volontari di PC durante eventi pubblici** (sagre, feste patronali, Infiorata, commemorazioni, manifestazioni sportive, concerti, cerimonie, processioni, mercatini, ecc.). La fonte normativa di riferimento è la [Circolare del 6 agosto 2018 del Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) *"Manifestazioni pubbliche: precisazioni sull'attivazione e l'impiego del volontariato di protezione civile"*. Base normativa più ampia: **D.Lgs. 285/1992 (Codice della Strada) articoli 11 e 12** + **D.Lgs. 1/2018 (Codice della Protezione Civile)**.
+
+### Cosa è VIETATO scrivere (il Gruppo NON lo può fare)
+
+| Pattern velenoso | Perché è illegale |
+|---|---|
+| "supporto alla viabilità" | regolazione del traffico = competenza esclusiva polizia stradale |
+| "gestione del traffico" / "regolazione del traffico" | art. 12 Codice della Strada |
+| "servizi di polizia stradale" | esclusi dai compiti del volontariato di PC |
+| "uso di palette dirigitraffico" | esplicitamente vietato dalla Circolare DPC 6/8/2018 |
+| "deviazioni e chiusure" (riferito al Gruppo) | competenza Polizia Locale/FdO |
+| "gestione pedoni" | implica regolamentazione del flusso = polizia stradale |
+| "presidio stradale" (riferito al Gruppo) | ambiguo, evitare |
+
+### Cosa è CONSENTITO scrivere (compiti effettivi del Gruppo)
+
+- **"informazione alla popolazione su percorsi e tracciati straordinari o limitazioni di accesso"** — citazione testuale dalla circolare (compito esplicitamente consentito).
+- **Presidio di aree pedonali dedicate**, punti di raccolta, vie di fuga, accessi alle aree dell'evento.
+- **Comunicazione al pubblico** con altoparlanti, cartelli, contatto diretto (informazione, non comando).
+- **Supporto sanitario di primo soccorso** in collegamento con 118.
+- **Monitoraggio meteo** e attuazione protocolli in caso di allerta.
+- **Collegamento radio** con la centrale di coordinamento.
+- **Supporto logistico** alle Forze dell'Ordine e Polizia Locale (logistica, non operatività di polizia).
+- **Assistenza alle persone fragili** (anziani, persone con disabilità, bambini smarriti se a supporto di servizi dedicati).
+- **Ricerca persone scomparse** sotto coordinamento del Sindaco/Prefettura.
+
+### Pattern di sostituzione standard (riformulazioni autorizzate)
+
+| Da evitare | Sostituire con |
+|---|---|
+| "supporto alla viabilità" | "informazione su percorsi e accessi alle aree dedicate" |
+| "gestione di deviazioni" | "informazione su deviazioni deliberate dalle autorità" |
+| "supporto alla Polizia Locale per la viabilità" | "supporto logistico alla Polizia Locale e alle Forze dell'Ordine sul mandato del Comune" |
+| "gestione pedoni" | "informazione e accoglienza nei punti di accesso pedonale" |
+| "presidio della viabilità" | "presidio delle aree pedonali dedicate" |
+
+### Disclaimer da includere negli articoli operativi sugli eventi
+
+Quando un articolo descrive operativamente i compiti del Gruppo durante un evento pubblico, aggiungere (con formulazione adattata al contesto):
+
+> Il volontariato di Protezione Civile **non può svolgere regolazione del traffico, servizi di polizia stradale né utilizzare palette dirigitraffico**: sono compiti di competenza esclusiva delle Forze dell'Ordine e della Polizia Locale, come stabilito dagli articoli 11 e 12 del Codice della Strada (D.Lgs. 285/1992) e ribadito dalla [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/).
+
+### Quando NON aggiungere il disclaimer
+
+- Articoli che parlano di emergenze meteo, sismiche, idrogeologiche (non rientrano nelle "manifestazioni pubbliche").
+- Articoli che parlano in generale del **sistema di Protezione Civile** senza descrivere compiti operativi del Gruppo.
+- Articoli che attribuiscono **correttamente** la viabilità alla Polizia Locale o alle Forze dell'Ordine (descrivono cosa fanno loro, non il Gruppo).
+- Articoli di servizio (numeri utili, COC, glossario) che citano la viabilità come una delle funzioni comunali.
+
+### Why esiste questa regola
+
+Il 16 maggio 2026 l'utente ha segnalato che la viabilità è esplicitamente vietata al volontariato di PC dalle circolari DPC. Un grep su `content/` ha trovato 5 articoli che descrivevano il Gruppo come svolgesse "supporto alla viabilità" — formulazione che, pur essendo storicamente diffusa nei testi sul volontariato di PC, è **illegittima** alla luce della Circolare DPC del 6 agosto 2018 e degli articoli 11-12 del Codice della Strada. La regola è stata codificata per impedire il ripetersi del pattern in articoli futuri e per facilitare il check sistematico dell'agent `pc-article-reviewer`.
+
 ## Regole di comunicazione del rischio
 
 - Non generare allarme ingiustificato: usa un tono calmo, informativo e rassicurante.

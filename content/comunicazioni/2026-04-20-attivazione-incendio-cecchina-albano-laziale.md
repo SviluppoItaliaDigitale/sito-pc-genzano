@@ -34,10 +34,11 @@ La collaborazione tra **VVF**, **Gruppi di PC dei Comuni limitrofi** e **Sala Op
 Nell'intervento di Cecchina i volontari hanno operato in **stretta subordinazione** agli ordini del responsabile dei Vigili del Fuoco presente sul posto, svolgendo compiti di supporto che non sostituiscono mai l'azione delle forze tecniche specializzate.
 
 Le attività tipiche in questi scenari sono:
-- Supporto alla **gestione della viabilità** nell'area dell'intervento.
+- **Informazione alla popolazione** su accessi alternativi e zone interdette deliberate dalle autorità competenti (compito esplicitamente consentito dalla [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/)).
 - Collaborazione nel **rifornimento idrico** dei mezzi operativi.
 - Assistenza nelle **operazioni di bonifica** dopo lo spegnimento.
 - **Monitoraggio** del perimetro e comunicazione via radio.
+- **Supporto logistico** alle Forze dell'Ordine e alla Polizia Locale (la regolazione del traffico e i servizi di polizia stradale restano di esclusiva competenza degli organi di polizia stradale, ai sensi degli artt. 11 e 12 del Codice della Strada).
 
 ## Ringraziamenti
 

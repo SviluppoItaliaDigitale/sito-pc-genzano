@@ -56,15 +56,16 @@ Il rischio non è uniforme:
 
 ## Cosa fa il Gruppo di PC
 
-Il **volontariato di PC** interviene in incidenti stradali quando:
+In presenza di **emergenze estese** che coinvolgono la viabilità (calamità, eventi di Protezione Civile), il volontariato di PC può essere attivato dal Comune o dalla Sala Operativa Regionale per:
 
-- **supporto** alla viabilità in emergenze estese;
-- **gestione** di deviazioni e chiusure;
-- **assistenza** alle forze dell'ordine;
-- **supporto** ai cittadini coinvolti (non sanitario);
-- **collaborazione** con **118** e Vigili del Fuoco.
+- **informazione alla popolazione** su percorsi alternativi e accessi deliberati dalle autorità competenti;
+- **assistenza ai cittadini coinvolti** non sanitaria (coperte, acqua, supporto alla ricerca di persone fragili);
+- **collaborazione** con **118** e **Vigili del Fuoco** per il supporto al primo soccorso;
+- **supporto logistico** alle Forze dell'Ordine sul mandato del Comune.
 
-Non sostituisce ambulanze o pompieri, ma **integra** il sistema.
+Il volontariato di PC **non può svolgere regolazione del traffico, servizi di polizia stradale né utilizzare palette dirigitraffico**: la circolazione stradale è competenza esclusiva degli organi di polizia stradale (artt. 11 e 12 del Codice della Strada; [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/)).
+
+Non sostituiamo ambulanze o pompieri, ma **integriamo** il sistema dove il Comune ci attiva.
 
 ## Comportamenti salva-vita
 
