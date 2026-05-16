@@ -5,8 +5,8 @@ tts: true
 layout: "single"
 aliases:
   - /numeri-utili/
+dataUltimaRevisione: "2026-05-16"
 ---
-<!-- cache-bust: 2026-05-13 forza re-upload FTP per allineare header/footer (audit 13/05) -->
 
 <div class="card border-danger mb-4">
 <div class="card-body bg-danger bg-opacity-10 p-4">
@@ -20,18 +20,34 @@ aliases:
 
 Nel Lazio il numero da chiamare in caso di emergenza è il **112**. La centrale indirizza la chiamata verso il servizio competente in base alla situazione: soccorso sanitario, Vigili del Fuoco, Forze dell'Ordine o altro servizio di emergenza.
 
-<div class="table-responsive">
-<table>
-<caption>Numeri utili: quale chiamare e in quali casi</caption>
-<thead>
-<tr><th scope="col">Numero</th><th scope="col">Servizio</th><th scope="col">Quando chiamare</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>112</strong></td><td>Numero Unico Europeo per le emergenze</td><td>Emergenza in corso, pericolo immediato, persone ferite, incendio, soccorso tecnico, sicurezza pubblica</td></tr>
-<tr><td><strong>803 555</strong></td><td>Sala Operativa Regionale Protezione Civile Lazio</td><td>Numero verde regionale di Protezione Civile. Per emergenze con pericolo immediato resta prioritario il 112</td></tr>
-<tr><td><strong>1530</strong></td><td>Guardia Costiera</td><td>Emergenze e soccorso in mare e nelle acque di competenza</td></tr>
-</tbody>
-</table>
+<div class="row g-3 my-3">
+<div class="col-md-4">
+<div class="card h-100 border-danger">
+<div class="card-body">
+<p class="fs-2 fw-bold text-danger mb-1">112</p>
+<h3 class="h5">Numero Unico Europeo</h3>
+<p class="mb-0">Per emergenza in corso, pericolo immediato, persone ferite, incendio, incidente, soccorso tecnico o sicurezza pubblica.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card h-100 border-warning">
+<div class="card-body">
+<p class="fs-2 fw-bold text-warning mb-1">803&nbsp;555</p>
+<h3 class="h5">Sala Operativa Regionale Lazio</h3>
+<p class="mb-0">Numero verde regionale di Protezione Civile. Per pericolo immediato resta sempre prioritario il 112.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card h-100 border-primary">
+<div class="card-body">
+<p class="fs-2 fw-bold text-primary mb-1">1530</p>
+<h3 class="h5">Guardia Costiera</h3>
+<p class="mb-0">Per emergenze e soccorso in mare e nelle acque di competenza.</p>
+</div>
+</div>
+</div>
 </div>
 
 ## Recapiti del Gruppo di Protezione Civile
@@ -87,7 +103,7 @@ Parla con calma e non chiudere la chiamata finché l'operatore non te lo dice.
 
 ## In caso di emergenza
 
-Il Gruppo Comunale di Protezione Civile **non può essere attivato direttamente dai cittadini**. In caso di emergenza, contatta il **112**. Per le comunicazioni di protezione civile regionale è disponibile anche il numero verde della Sala Operativa Regionale **803 555**. Saranno le autorità competenti, quando necessario, ad allertare e attivare le squadre di volontariato.
+Il Gruppo Comunale di Protezione Civile **non può essere attivato direttamente dai cittadini**. In caso di emergenza, contatta il **112**. Per le comunicazioni di protezione civile regionale è disponibile anche il numero verde della Sala Operativa Regionale **803&nbsp;555**. Saranno le autorità competenti, quando necessario, ad allertare e attivare le squadre di volontariato.
 
 ## Vedi anche
 
@@ -95,4 +111,3 @@ Il Gruppo Comunale di Protezione Civile **non può essere attivato direttamente 
 - [Contatti e sede](/contatti/) — sede, telefono, email del Gruppo
 - [Assistente virtuale](/assistente/) — guida passo-passo all'autoprotezione
 - [Allerte meteo](/allerte-meteo/) — stato di allerta in corso
-
