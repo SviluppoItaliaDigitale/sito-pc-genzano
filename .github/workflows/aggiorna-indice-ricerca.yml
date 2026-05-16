@@ -1,0 +1,88 @@
+name: "🔎 Aggiorna indice ricerca Pagefind"
+
+# Quando vengono pubblicati nuovi articoli o pagine, rigenera l'indice
+# Pagefind in static/pagefind/ e lo committa. Senza questo workflow,
+# l'indice di ricerca era "frozen" all'ultima rigenerazione manuale e i
+# nuovi articoli non comparivano nei risultati.
+#
+# Trigger: push su main con paths content/**/*.md (articoli o pagine).
+# Anti-loop: paths esclude commit a static/pagefind/** (i suoi stessi push).
+#
+# Storia: il 16/05/2026 l'utente ha chiesto auto-rigenerazione Pagefind
+# (workflow manuale prima richiedeva di lanciare scripts/genera-indice-
+# ricerca.sh in locale).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/**/*.md'
+      - 'scripts/genera-indice-ricerca.sh'
+      - '.github/workflows/aggiorna-indice-ricerca.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+# Concurrency: se arrivano push consecutivi, basta l'ultimo. L'indice è
+# una fotografia, vince sempre il più recente.
+concurrency:
+  group: pagefind-index
+  cancel-in-progress: true
+
+jobs:
+  rigenera:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "⚙️ Setup Hugo"
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.143.1'
+          extended: true
+
+      - name: "⚙️ Setup Node.js (per npx pagefind)"
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: "🔎 Rigenera indice Pagefind"
+        # Lo script: hugo build → npx pagefind public/ → copia in
+        # static/pagefind/. Idempotente se non ci sono cambi.
+        run: bash scripts/genera-indice-ricerca.sh
+
+      - name: "📝 Commit e push indice (se cambiato)"
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add static/pagefind/
+
+          if git diff --cached --quiet; then
+            echo "Indice già aggiornato, nessun commit da fare."
+            exit 0
+          fi
+
+          git commit -m "[skip-indice] Auto-rigenera indice ricerca Pagefind"
+
+          # Retry+rebase per evitare conflitti di concorrenza con altri workflow
+          for tentativo in 1 2 3; do
+            if git push 2>&1; then break; fi
+            echo "Push fallito (tentativo $tentativo), rebase..."
+            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+          done
+
+          # I push del GITHUB_TOKEN non auto-triggerano workflow su evento
+          # push, quindi triggera esplicitamente deploy.yml per portare il
+          # nuovo indice su Aruba.
+          echo "Trigger esplicito deploy.yml per portare l'indice su Aruba..."
+          gh workflow run deploy.yml
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
