@@ -23,17 +23,19 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon.png" | relURL }}">
   <link rel="stylesheet" href="{{ "vendor/bootstrap-italia/css/bootstrap-italia.min.css" | relURL }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  {{/* Cache-buster v=<unix build time>: Aruba serve `a11y-toolbar.css`
-       con cache-control: max-age=2592000 (30 giorni), quindi senza
-       cache-buster i cambi al toolbar accessibilità (e modalità lettura)
-       arrivano agli utenti che hanno già visitato il sito solo dopo 30
-       giorni o dopo un hard refresh. Aggiungiamo `?v={unix}` su CSS/JS
-       critici della toolbar accessibilità per invalidare la cache ad
-       ogni deploy. `custom.css` è incluso perché contiene anche stili
-       interdipendenti con a11y. */}}
-  {{- $v := now.Unix -}}
-  <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}?v={{ $v }}">
-  <link rel="stylesheet" href="{{ "css/a11y-toolbar.css" | relURL }}?v={{ $v }}">
+  {{/* Cache-buster v=<hash contenuto>: Aruba serve i CSS/JS critici con
+       cache-control: max-age=2592000 (30 giorni). L'hash FNV32a sul
+       contenuto del file fa cambiare l'URL SOLO quando il file cambia
+       davvero — non a ogni build. Risultato: la cache di 30 giorni è
+       effettiva fra deploy consecutivi che non toccano questi asset,
+       e l'utente di ritorno non riscarica 211 KB di CSS ad ogni visita.
+       Storia: fino al 16/05/2026 il cache-buster era `now.Unix`, che
+       invalidava la cache ad ogni build (50+ deploy/settimana). */}}
+  {{- $vCustomCss := readFile "themes/flavour-pcgenzano/static/css/custom.css" | crypto.FNV32a -}}
+  {{- $vA11yCss := readFile "themes/flavour-pcgenzano/static/css/a11y-toolbar.css" | crypto.FNV32a -}}
+  {{- $vA11yJs := readFile "themes/flavour-pcgenzano/static/js/a11y-toolbar.js" | crypto.FNV32a -}}
+  <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}?v={{ $vCustomCss }}">
+  <link rel="stylesheet" href="{{ "css/a11y-toolbar.css" | relURL }}?v={{ $vA11yCss }}">
   <link rel="canonical" href="{{ $canonicalURL }}">
   {{ partial "hreflang-tags.html" . }}
   {{/* Pre-rendering: applica subito le preferenze di accessibilità salvate
@@ -99,7 +101,7 @@
   </button>
   <script src="{{ "vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js" | relURL }}"></script>
   <script src="{{ "js/ext-widgets.js" | relURL }}" defer></script>
-  <script src="{{ "js/a11y-toolbar.js" | relURL }}?v={{ $v }}" defer></script>
+  <script src="{{ "js/a11y-toolbar.js" | relURL }}?v={{ $vA11yJs }}" defer></script>
   <script src="{{ "js/share.js" | relURL }}" defer></script>
   <script src="{{ "js/galleria-auto.js" | relURL }}" defer></script>
   {{/* Notifiche browser per l'allerta meteo (idea #2). URL endpoint + pagina

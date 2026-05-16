@@ -35,5 +35,5 @@
 /* Glossario inline — dati statici dal build Hugo */
 window.PCGENZANO_GLOSSARIO = {{ $entries | jsonify | safeJS }};
 </script>
-<script src="{{ "js/glossario-inline.js" | relURL }}?v={{ now.Format "20060102150405" }}" defer></script>
+<script src="{{ "js/glossario-inline.js" | relURL }}?v={{ readFile "static/js/glossario-inline.js" | crypto.FNV32a }}" defer></script>
 {{- end -}}
