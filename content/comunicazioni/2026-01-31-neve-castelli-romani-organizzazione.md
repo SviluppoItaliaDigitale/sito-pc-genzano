@@ -92,7 +92,7 @@ L'**ipotermia** è un rischio reale: si manifesta con pelle fredda, tremori che 
 ## Numeri utili in caso di neve
 
 - **112** — Numero Unico Emergenze (per persone in pericolo, incidenti, emergenze sanitarie).
-- **803 555** — Sala Operativa Protezione Civile Lazio.
+- **803&nbsp;555** — Sala Operativa Protezione Civile Lazio.
 - **Comune di Genzano** — per segnalazioni su strade comunali e servizi.
 - **Enel / gestore elettrico** — per blackout.
 - **Gestore idrico** — per perdite e guasti di rete.

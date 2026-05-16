@@ -112,7 +112,7 @@ La **prevenzione partecipativa** è uno degli strumenti più efficaci, perché r
 - **Centro Funzionale Lazio** — bollettini giornalieri regionali.
 - **Comune di Genzano** — ordinanze locali ed eventi estivi.
 - **Parco Regionale Castelli Romani** — avvisi e chiusure temporanee.
-- **Sala Operativa 803 555** — Regione Lazio, numero non urgente.
+- **Sala Operativa 803&nbsp;555** — Regione Lazio, numero non urgente.
 
 ## Per approfondire
 

@@ -16,7 +16,7 @@ language: "ro"
 <p>Numărul Unic de Urgență — pentru orice urgență</p>
 </div>
 <div class="col-md-6">
-<p class="fs-3 fw-bold text-danger mb-1">803 555</p>
+<p class="fs-3 fw-bold text-danger mb-1">803&nbsp;555</p>
 <p>Sala Operativă Protecția Civilă Lazio</p>
 </div>
 </div>

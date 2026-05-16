@@ -45,7 +45,7 @@ Imprima esta página (ou copie numa folha) e complete com os seus dados. Cole o 
 ### 4. Números de emergência
 
 - **112** — Número Único de Emergência
-- **803 555** — Proteção Civil Lácio
+- **803&nbsp;555** — Proteção Civil Lácio
 - **Telemóvel da mãe**: ____________________
 - **Telemóvel do pai**: ____________________
 

@@ -22,7 +22,7 @@ En la regiono Lazio, ekde 2017, **la sola numero por telefoni en urĝa kazo esta
 | Numero | Servo | Kiam telefoni |
 |---|---|---|
 | **112** | Unika Urĝa Numero (NUE) | Iu ajn urĝa kazo: sanitara, publika ordo, fajroj, teknika savado |
-| **803 555** | Operacia Salono Civila Protekto Lazio | Ne urĝaj raportoj kaj informoj pri regionaj urĝaj kazoj |
+| **803&nbsp;555** | Operacia Salono Civila Protekto Lazio | Ne urĝaj raportoj kaj informoj pri regionaj urĝaj kazoj |
 | **1530** | Marborda Gvardio | Urĝaj kazoj sur la maro kaj sur lagoj |
 
 ## Kontaktoj de la Grupo de Civila Protekto
@@ -40,4 +40,4 @@ Tiuj kontaktoj estas **por ne urĝaj informoj kaj petoj**. En urĝa kazo, ĉiam 
 
 ## En urĝa kazo
 
-La Komunuma Grupo de Civila Protekto **ne povas esti aktivigita rekte de la civitanoj**. En urĝa kazo, kontaktu **112** aŭ **803 555**: la kompetentaj aŭtoritatoj alarmos kaj aktivigos niajn teamojn.
+La Komunuma Grupo de Civila Protekto **ne povas esti aktivigita rekte de la civitanoj**. En urĝa kazo, kontaktu **112** aŭ **803&nbsp;555**: la kompetentaj aŭtoritatoj alarmos kaj aktivigos niajn teamojn.

@@ -22,7 +22,7 @@ dataUltimaRevisione: "2026-05-06"
 <p>Numero Unico Europeo per le emergenze: chiamalo se c'è un pericolo immediato per persone, edifici, viabilità o ambiente.</p>
 </div>
 <div class="col-md-6">
-<p class="fs-3 fw-bold text-danger mb-1">803 555</p>
+<p class="fs-3 fw-bold text-danger mb-1">803&nbsp;555</p>
 <p>Sala Operativa Regionale Protezione Civile Lazio, per segnalazioni secondo le indicazioni regionali.</p>
 </div>
 </div>

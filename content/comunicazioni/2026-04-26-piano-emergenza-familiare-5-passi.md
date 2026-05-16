@@ -68,7 +68,7 @@ Nel Lazio il numero unico di emergenza è il **112**. È l'unico da comunicare i
 Accanto al 112, tieni in agenda:
 
 - Il numero del Comune di Genzano di Roma (orari normali)
-- Sala Operativa Protezione Civile Lazio (segnalazioni non urgenti): **803 555**
+- Sala Operativa Protezione Civile Lazio (segnalazioni non urgenti): **803&nbsp;555**
 - Il medico curante
 - Un parente di riferimento fuori zona
 

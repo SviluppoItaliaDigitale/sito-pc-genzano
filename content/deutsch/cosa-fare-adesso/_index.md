@@ -16,7 +16,7 @@ language: "de"
 <p>Einheitliche Notrufnummer — für jeden Notfall</p>
 </div>
 <div class="col-md-6">
-<p class="fs-3 fw-bold text-danger mb-1">803 555</p>
+<p class="fs-3 fw-bold text-danger mb-1">803&nbsp;555</p>
 <p>Einsatzzentrale Zivilschutz Latium</p>
 </div>
 </div>

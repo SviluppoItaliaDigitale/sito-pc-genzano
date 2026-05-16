@@ -69,7 +69,7 @@ Chiama il **112** se:
 - Vedi qualcuno trascinato dall'acqua.
 - Un albero o una struttura sta per crollare su persone o auto.
 
-Per segnalazioni non urgenti (tombini saturi, strade bloccate ma senza pericolo immediato), usa i **canali del Comune** nelle ore normali, la **Sala Operativa della Protezione Civile Lazio (803 555)** per segnalazioni territoriali.
+Per segnalazioni non urgenti (tombini saturi, strade bloccate ma senza pericolo immediato), usa i **canali del Comune** nelle ore normali, la **Sala Operativa della Protezione Civile Lazio (803&nbsp;555)** per segnalazioni territoriali.
 
 ## Dopo l'evento
 

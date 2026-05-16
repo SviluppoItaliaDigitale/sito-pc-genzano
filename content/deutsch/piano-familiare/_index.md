@@ -45,7 +45,7 @@ Drucken Sie diese Seite (oder schreiben Sie auf einen Zettel ab) und vervollstä
 ### 4. Notrufnummern
 
 - **112** — Einheitliche Notrufnummer
-- **803 555** — Zivilschutz Latium
+- **803&nbsp;555** — Zivilschutz Latium
 - **Mama Handy**: ____________________
 - **Papa Handy**: ____________________
 

@@ -157,7 +157,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-emerg" href="/numeri-utili/">
   <div class="ms-card-icon"><i class="bi bi-telephone-fill"></i></div>
   <p class="ms-card-title">Numeri Utili</p>
-  <p class="ms-card-desc">112, ARES 118, 803 555, contatti del Comune e del Gruppo. Solo numeri verificati.</p>
+  <p class="ms-card-desc">112, ARES 118, 803&nbsp;555, contatti del Comune e del Gruppo. Solo numeri verificati.</p>
   <span class="ms-card-arrow">Apri →</span>
 </a>
 <a class="ms-card ms-emerg" href="/cosa-fare-adesso/">

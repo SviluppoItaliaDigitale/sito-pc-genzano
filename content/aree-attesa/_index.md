@@ -59,5 +59,5 @@ Avere una **area di attesa di riferimento** è uno dei punti del Piano Familiare
 - [Cartografia](/cartografia/) — mappa interattiva, aree di ammassamento, aree di ricovero, segnaletica
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni per tipo di emergenza
 - [Piano Familiare](/piano-familiare/) — compila il tuo piano
-- [Numeri Utili](/numeri-utili/) — emergenza 112, Sala Operativa PC Lazio 803 555
+- [Numeri Utili](/numeri-utili/) — emergenza 112, Sala Operativa PC Lazio 803&nbsp;555
 - [Piano di Emergenza Comunale](/piano-emergenza/) — il documento ufficiale

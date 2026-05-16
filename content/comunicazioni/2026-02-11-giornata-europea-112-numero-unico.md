@@ -75,7 +75,7 @@ Non chiamare il 112 per:
 - **Scherzi o chiamate anomale**: oltre a essere reato, sottraggono tempo a chi ne ha davvero bisogno.
 - **Problemi con servizi pubblici** (rifiuti, strade dissestate): usa i canali comunali.
 
-Per **segnalazioni non urgenti di Protezione Civile**, il numero della **Sala Operativa Regionale Lazio è 803 555**.
+Per **segnalazioni non urgenti di Protezione Civile**, il numero della **Sala Operativa Regionale Lazio è 803&nbsp;555**.
 
 ## Cosa dire al 112
 

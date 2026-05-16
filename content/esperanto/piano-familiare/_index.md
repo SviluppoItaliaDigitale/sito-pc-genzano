@@ -45,7 +45,7 @@ Printu tiun ĉi paĝon (aŭ kopiu sur folio) kaj kompletigu kun viaj datumoj. Al
 ### 4. Urĝaj numeroj
 
 - **112** — Unika Urĝa Numero
-- **803 555** — Civila Protekto Lazio
+- **803&nbsp;555** — Civila Protekto Lazio
 - **Patrina poŝtelefono**: ____________________
 - **Patra poŝtelefono**: ____________________
 

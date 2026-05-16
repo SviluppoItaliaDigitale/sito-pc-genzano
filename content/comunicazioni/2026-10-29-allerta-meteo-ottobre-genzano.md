@@ -71,7 +71,7 @@ Le squadre operative sono **preallertate**. Non è prevista attivazione formale,
 ## Numeri utili
 
 **112** per emergenze;
-**803 555** per la Sala Operativa di Protezione Civile della Regione Lazio (segnalazioni non urgenti).
+**803&nbsp;555** per la Sala Operativa di Protezione Civile della Regione Lazio (segnalazioni non urgenti).
 
 Per richieste di informazione (non emergenza), seguire i canali ufficiali del Gruppo e del Comune.
 

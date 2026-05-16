@@ -45,7 +45,7 @@ Printați această pagină (sau copiați pe o foaie) și completați cu datele d
 ### 4. Numere de urgență
 
 - **112** — Numărul Unic de Urgență
-- **803 555** — Protecția Civilă Lazio
+- **803&nbsp;555** — Protecția Civilă Lazio
 - **Mobil mama**: ____________________
 - **Mobil tata**: ____________________
 

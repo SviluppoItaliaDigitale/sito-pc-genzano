@@ -22,7 +22,7 @@ En la región del Lacio, desde 2017, **el único número al que llamar en caso d
 | Número | Servicio | Cuándo llamar |
 |---|---|---|
 | **112** | Número Único de Emergencia (NUE) | Cualquier emergencia: sanitaria, orden público, incendios, rescate técnico |
-| **803 555** | Sala Operativa Protección Civil Lacio | Avisos no urgentes e información sobre emergencias regionales |
+| **803&nbsp;555** | Sala Operativa Protección Civil Lacio | Avisos no urgentes e información sobre emergencias regionales |
 | **1530** | Guardacostas | Emergencias en el mar y en los lagos |
 
 ## Contactos del Grupo de Protección Civil
@@ -40,4 +40,4 @@ Estos contactos son **para información y solicitudes no urgentes**. En caso de 
 
 ## En caso de emergencia
 
-El Grupo Comunal de Protección Civil **no puede ser activado directamente por los ciudadanos**. En caso de emergencia, contacte el **112** o el **803 555**: las autoridades competentes alertarán y activarán nuestros equipos.
+El Grupo Comunal de Protección Civil **no puede ser activado directamente por los ciudadanos**. En caso de emergencia, contacte el **112** o el **803&nbsp;555**: las autoridades competentes alertarán y activarán nuestros equipos.
