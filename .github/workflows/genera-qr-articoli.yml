@@ -1,0 +1,79 @@
+name: "🔲 Genera QR code articoli (auto-commit)"
+
+# Quando viene pubblicato/modificato un articolo in content/comunicazioni/,
+# questo workflow genera i file QR mancanti in static/qr/<slug>.png + .svg
+# e li committa al repo, così repository e sito Aruba restano allineati
+# (non c'è asincronia tra "QR esiste sul sito" e "QR esiste nel repo").
+#
+# Lo step omologo dentro deploy.yml resta attivo come **fail-safe**: se per
+# qualunque motivo questo workflow fallisse (rate limit, errore segno,
+# regressione), il deploy genera comunque i QR al volo prima della build
+# Hugo e il sito non perde il bottone "Scarica QR".
+#
+# Anti-loop: il workflow committa solo in static/qr/**. Il path filter sotto
+# include solo content/comunicazioni/** e gli script/workflow correlati,
+# quindi i suoi stessi commit non lo re-triggerano.
+#
+# Storia: 16/05/2026 l'articolo Giro d'Italia Formia è andato live senza
+# bottone "Scarica QR" perché lo script genera-qr-articoli.py non era in CI
+# e nessuno l'aveva lanciato manualmente dopo le 5 PR di iterazione da mobile.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/comunicazioni/**.md'
+      - 'scripts/genera-qr-articoli.py'
+      - '.github/workflows/genera-qr-articoli.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  genera-qr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "🐍 Setup Python e dipendenze (segno per generazione QR)"
+        run: |
+          python3 -m pip install --break-system-packages segno
+
+      - name: "🔲 Genera QR code mancanti per gli articoli"
+        # Idempotente: salta i QR già in static/qr/, genera solo i nuovi.
+        # Output: static/qr/<slug>.png (raster 600x600) + .svg (vettoriale).
+        run: python3 scripts/genera-qr-articoli.py
+
+      - name: "📝 Commit e push QR generati (se ce ne sono)"
+        run: |
+          # Configura git con identità bot
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Stage solo static/qr/ (nient'altro)
+          git add static/qr/
+
+          # Esci pulito se non ci sono file nuovi da committare
+          if git diff --cached --quiet; then
+            echo "Nessun QR nuovo da committare. Tutti i file sono già presenti."
+            exit 0
+          fi
+
+          # Conta i file aggiunti per il commit message
+          NUOVI=$(git diff --cached --name-only --diff-filter=A | grep -c '^static/qr/.*\.png$' || true)
+
+          git commit -m "[skip-qr] Auto-genera QR articoli mancanti: ${NUOVI} nuovi"
+          git push
+
+          # I push fatti dal GITHUB_TOKEN non auto-triggerano i workflow su
+          # evento push, quindi triggera esplicitamente deploy.yml.
+          echo "Trigger esplicito di deploy.yml per portare i QR su Aruba..."
+          gh workflow run deploy.yml
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
