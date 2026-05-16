@@ -224,7 +224,7 @@ Risultato: il **9 maggio 2026** l'utente ha chiesto di rivedere AGID tutti gli a
 
 ## Agenti specializzati disponibili
 
-In `.claude/agents/` ci sono 13 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
+In `.claude/agents/` ci sono 14 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
 
 | Agent | Trigger naturali italiani |
 |---|---|
