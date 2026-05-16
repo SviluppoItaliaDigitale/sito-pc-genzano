@@ -28,25 +28,28 @@
 {{- $urlX        := printf "https://x.com/intent/post?text=%s&url=%s" $titleEnc $urlEnc -}}
 {{- $urlLinkedIn := printf "https://www.linkedin.com/sharing/share-offsite/?url=%s&title=%s&summary=%s&source=%s" $urlEnc $titleEnc $descEnc $sourceEnc -}}
 {{- $urlEmail    := printf "mailto:?subject=%s&body=%s" $titleEnc $bodyEmail -}}
-<div class="page-tools mt-4 pt-3 border-top" data-pagefind-ignore>
-  <div class="d-flex flex-wrap justify-content-between align-items-center">
-    <div class="small text-muted">
-      {{ if and (not .Params.dataUltimaRevisione) .Date (not (eq (.Date.Format "2006") "0001")) }}
+<div class="strumenti-articolo strumenti-azione" role="region" aria-label="Strumenti di condivisione e scarica dell'articolo" data-pagefind-ignore>
+  <div class="strumenti-articolo-header">
+    <i class="bi bi-info-circle me-2" aria-hidden="true"></i>
+    Condividi e scarica
+  </div>
+<div class="page-tools">
+  <div class="strumenti-articolo-body">
+    {{ if and (not .Params.dataUltimaRevisione) .Date (not (eq (.Date.Format "2006") "0001")) }}
+    <span class="reading-time" title="Data di ultimo aggiornamento dell'articolo">
       <i class="bi bi-clock me-1" aria-hidden="true"></i>
-      Ultimo aggiornamento: <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod | time.Format ":date_long" }}</time>
-      {{ end }}
-    </div>
-    <div class="d-flex flex-wrap gap-2">
-      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.print()" aria-label="Stampa questa pagina">
-        <i class="bi bi-printer me-1" aria-hidden="true"></i> Stampa
-      </button>
-      {{/* QR code dell'articolo: si auto-nasconde se il QR non è stato
-           generato (guardia fileExists nel partial). Solo /comunicazioni/. */}}
-      {{ partial "qr-articolo.html" . }}
-    </div>
+      <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod | time.Format ":date_long" }}</time>
+    </span>
+    {{ end }}
+    <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.print()" aria-label="Stampa questa pagina">
+      <i class="bi bi-printer me-1" aria-hidden="true"></i> Stampa
+    </button>
+    {{/* QR code dell'articolo: si auto-nasconde se il QR non è stato
+         generato (guardia fileExists nel partial). Solo /comunicazioni/. */}}
+    {{ partial "qr-articolo.html" . }}
   </div>
 
-  <div class="page-tools-share mt-3" role="group" aria-label="Condividi questa pagina">
+  <div class="page-tools-share mt-2" role="group" aria-label="Condividi questa pagina">
     <span class="page-tools-share-label">
       <i class="bi bi-share-fill me-1" aria-hidden="true"></i> Condividi:
     </span>
@@ -105,4 +108,5 @@
       <span class="visually-hidden">Altre app</span>
     </button>
   </div>
+</div>
 </div>

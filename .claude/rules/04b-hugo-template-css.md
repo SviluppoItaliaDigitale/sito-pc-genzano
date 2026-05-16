@@ -321,3 +321,25 @@ CSS scoped sezione **HOMEPAGE ENHANCEMENTS v1.0** in `custom.css` (~150 righe). 
 **Per estendere a un'altra pagina** (es. archivio comunicazioni): cambia la condizione in `baseof.html` o aggiungi una nuova body class, poi modifica i selettori CSS coerentemente.
 
 Specifiche operative complete in `MANUALE-SITO.md` Parte 15.
+
+## Strumenti articolo — box gemelli sopra/sotto (maggio 2026)
+
+Da maggio 2026 gli articoli `_default/single.html` mostrano due **box blu istituzionali** che raggruppano gli strumenti dell'articolo, con stile visivo unificato ma posizioni distinte per coerenza WCAG:
+
+**Box sopra il corpo** — `.strumenti-articolo.strumenti-lettura`:
+- Header: *"ℹ️ Leggi questo articolo in altri modi"*
+- Contenuto: reading-time pill (`~N min`) + `leggi-ad-alta-voce` (TTS + segmented Lento/Normale/Veloce) + `scarica-braille` + `scarica-trascrizione-pdf`
+- Condizione: `$ttsEnabled (gt .WordCount 30)` (stessa condizione del TTS legacy)
+- Logica WCAG: gli strumenti di **consumo accessibile** (TTS, braille, PDF) devono essere disponibili PRIMA del corpo, perché chi è cieco/dislessico/L2 deve trovarli subito.
+
+**Box sotto il corpo** — `.strumenti-articolo.strumenti-azione`:
+- Header: *"ℹ️ Condividi e scarica"*
+- Contenuto: data ultimo aggiornamento + Stampa + QR (auto-nascosto se file manca) + share buttons (WhatsApp/Telegram/FB/X/LinkedIn/Email/Copia/Altre app via Web Share API)
+- Renderizzato da `partials/page-tools.html` (riusato anche su pagine non-articolo: rischio, piano, pittogrammi, articoli-da-ascoltare)
+- Logica WCAG: gli strumenti di **azione post-lettura** (stampa, QR, condivisione) si usano DOPO aver letto l'articolo, non prima.
+
+CSS scoped sezione **STRUMENTI ARTICOLO v1.0** in `custom.css`. Box con sfondo `#e7f0fa`, bordo sinistro 4px `#003366`, border-radius 6px. I partial atomici interni (`tts-wrapper`, `braille-download`, `trascrizione-pdf-download`) hanno margine/padding/sfondo azzerati dentro al wrapper. Gli hint testuali ridondanti (`.braille-download-hint`, `.trascrizione-pdf-hint`) sono nascosti dentro il wrapper (l'utente ha chiesto 1-2 righe pulite, non hint sotto ogni bottone). Mobile: gap ridotto. Stampa: entrambi i box nascosti via `@media print`.
+
+**Storia del layout** (16/05/2026): l'utente ha segnalato che *"il bottone QR sta in fondo mentre tutti gli altri in alto..."*. Tre opzioni valutate: (A) tutto sopra in un unico box, (B) due box gemelli sopra/sotto, (C) tutto sopra + share sotto. Scelta (B) per mantenere la logica WCAG (accessibilità prima del contenuto) con stile coerente.
+
+**Per estendere/modificare**: il box sopra è renderizzato direttamente in `_default/single.html` (riga ~92). Il box sotto è in `partials/page-tools.html`. Aggiungere un nuovo strumento di lettura accessibile = nuovo partial atomico chiamato dentro `.strumenti-articolo-body` del box sopra. Aggiungere un nuovo strumento di condivisione = riga aggiuntiva nel box sotto. Non duplicare i bottoni nei due box: l'utente li trova solo dove servono.
