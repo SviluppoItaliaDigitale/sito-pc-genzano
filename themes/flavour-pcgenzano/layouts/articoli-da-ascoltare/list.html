@@ -9,133 +9,138 @@
   <div class="row">
     <div class="col-lg-10 mx-auto">
 
-      {{/* Intro pagina (frontmatter description + corpo Markdown) */}}
+      {{/* Box strumenti articolo standard (lettura + azione) — coerenza
+           con tutte le altre pagine del sito */}}
+      {{ $ttsBlacklist := slice "privacy" "note-legali" "accessibilita" "social-media-policy" "mappa-sito" "attribuzioni-pittogrammi" "cerca" "comunicazioni" "glossario" }}
+      {{ $isBlacklisted := false }}
+      {{ if eq .Kind "section" }}{{ range $ttsBlacklist }}{{ if eq $.Section . }}{{ $isBlacklisted = true }}{{ end }}{{ end }}{{ end }}
+      {{ $ttsEnabled := and (ne .Params.tts false) (not $isBlacklisted) }}
+
+      {{ if and $ttsEnabled (gt .WordCount 30) }}
+      <div class="strumenti-articolo strumenti-lettura" role="region" aria-label="Strumenti di lettura della pagina">
+        <div class="strumenti-articolo-header">
+          <i class="bi bi-info-circle me-2" aria-hidden="true"></i>
+          Leggi questa pagina in altri modi
+        </div>
+        <div class="strumenti-articolo-body">
+          <span class="reading-time" title="Tempo di lettura stimato">
+            <i class="bi bi-clock me-1" aria-hidden="true"></i>
+            ~{{ .ReadingTime }} min<span class="visually-hidden"> di lettura stimati</span>
+          </span>
+          {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".list-intro-content") }}
+          {{ partial "scarica-trascrizione-pdf.html" . }}
+        </div>
+      </div>
+      {{ end }}
+
       <div class="list-intro-content mb-4">
         {{ .Content }}
       </div>
 
-      {{/* Blacklist TTS (stessa di _default/single.html e _default/list.html).
-           Articoli su queste sezioni non hanno il bottone "Leggi ad alta voce",
-           quindi non li elenchiamo qui. La sezione comunicazioni è SEMPRE inclusa. */}}
+      {{/* ── 3 GRANDI CARD DI ACCESSO (azione, non lista lunga) ── */}}
+      {{/* Articoli ascoltabili: trova l'ULTIMO articolo pubblicato (per
+           bottone "Ascolta l'ultimo"). */}}
       {{ $allComunicazioni := where .Site.RegularPages "Section" "comunicazioni" }}
       {{ $articoli := where $allComunicazioni "Draft" "ne" true }}
       {{ $articoli = where $articoli "Params.tts" "ne" false }}
       {{ $articoli = where $articoli "WordCount" "gt" 30 }}
+      {{ $articoliOrd := $articoli.ByDate.Reverse }}
+      {{ $ultimoArt := index $articoliOrd 0 }}
+      {{ $countArticoli := len $articoliOrd }}
 
-      <p class="reading-meta-info small text-muted mb-4">
-        <i class="bi bi-info-circle me-1" aria-hidden="true"></i>
-        Le durate sono <strong>stimate</strong>: la voce italiana del browser (~150 parole al minuto)
-        impiega circa il <strong>33% in più</strong> di un lettore visivo medio
-        (~200 parole al minuto). La velocità "Veloce" del pannello accessibilità
-        riduce ulteriormente i tempi.
-      </p>
+      <section class="ascolta-cards row g-3 mb-5" aria-label="Tre modi per ascoltare il sito">
 
-      {{/* ── INDICE CHIP FILTRO PER BADGE ──
-           Stesso linguaggio visivo di /risorse-pronte/. Mostra ogni badge
-           usato dagli articoli ascoltabili con conteggio. Click filtra
-           via JS (data-filter attribute) sulla lista sotto. Click "Tutti"
-           ripristina la vista completa. */}}
-      {{ $conteggi := dict }}
-      {{ range $articoli }}
-        {{ $b := .Params.badge | default "Comunicazione" }}
-        {{ $n := add (index $conteggi $b | default 0) 1 }}
-        {{ $conteggi = merge $conteggi (dict $b $n) }}
-      {{ end }}
-
-      <nav class="risorse-indice mt-3 mb-4 articoli-da-ascoltare-filtri" aria-label="Filtra per categoria">
-        <p class="risorse-indice-label mb-2">
-          <i class="bi bi-funnel-fill me-1" aria-hidden="true"></i>
-          Filtra per categoria:
-        </p>
-        <div class="risorse-indice-chips" role="group" aria-label="Filtri categoria articoli">
-          <button type="button" class="risorse-chip is-active" data-badge-filter="tutti"
-                  aria-pressed="true" aria-label="Mostra tutti gli articoli">
-            <i class="bi bi-collection" aria-hidden="true"></i>
-            <span class="risorse-chip-label">Tutti</span>
-            <span class="risorse-chip-count" aria-hidden="true">{{ len $articoli }}</span>
-          </button>
-          {{ range $badge, $n := $conteggi }}
-          <button type="button" class="risorse-chip" data-badge-filter="{{ $badge }}"
-                  aria-pressed="false" aria-label="Mostra solo articoli {{ $badge }}, {{ $n }} disponibili">
-            <span class="risorse-chip-label">{{ $badge }}</span>
-            <span class="risorse-chip-count" aria-hidden="true">{{ $n }}</span>
-          </button>
-          {{ end }}
-        </div>
-      </nav>
-
-      <ul class="podcast-list list-unstyled" role="list" id="lista-articoli-ascoltabili">
-        {{ range $articoli.ByDate.Reverse }}
-        {{/* Durata stimata audio: ReadingTime * (200/150) = * 1.33, arrotondato. */}}
+        {{/* Card 1: Ultimo articolo */}}
+        {{ with $ultimoArt }}
         {{ $audioMin := math.Max 1 (int (math.Round (mul .ReadingTime 1.33))) }}
-        {{ $badge := .Params.badge | default "Comunicazione" }}
-        <li class="podcast-item card mb-3" role="listitem" data-badge="{{ $badge }}">
-          <div class="card-body p-3 d-flex flex-wrap align-items-start gap-3">
-            <div class="podcast-icon" aria-hidden="true">
-              <i class="bi bi-volume-up-fill"></i>
-            </div>
-            <div class="podcast-meta flex-grow-1">
-              <h2 class="h6 mb-1">
-                <a href="{{ .RelPermalink }}" class="stretched-link">{{ .Title }}</a>
-              </h2>
-              <p class="small text-muted mb-1">
-                <span class="me-2">{{ partial "badge.html" $badge }}</span>
-                <time datetime="{{ .Date.Format "2006-01-02" }}">
-                  <i class="bi bi-calendar3 me-1" aria-hidden="true"></i>{{ .Date | time.Format ":date_long" }}
-                </time>
+        <div class="col-md-4">
+          <a href="{{ .RelPermalink }}" class="card ascolta-card h-100 text-decoration-none">
+            <div class="card-body d-flex flex-column">
+              <div class="ascolta-card-icon" aria-hidden="true">
+                <i class="bi bi-volume-up-fill"></i>
+              </div>
+              <div class="ascolta-card-tipo">Ultimo articolo</div>
+              <h2 class="h6 ascolta-card-titolo">{{ .Title }}</h2>
+              <p class="ascolta-card-desc small text-muted flex-grow-1">
+                {{ with .Description }}{{ . | truncate 110 }}{{ else }}Apri l'articolo e clicca "Leggi ad alta voce" in cima.{{ end }}
               </p>
-              {{ with .Description }}<p class="small mb-0">{{ . }}</p>{{ end }}
+              <p class="ascolta-card-meta small mb-0">
+                <i class="bi bi-clock me-1" aria-hidden="true"></i>
+                ~{{ $audioMin }} {{ if eq $audioMin 1 }}minuto{{ else }}minuti{{ end }} di ascolto
+              </p>
+              <span class="ascolta-card-cta">
+                Ascolta ora <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+              </span>
             </div>
-            <div class="podcast-duration small text-end">
-              <i class="bi bi-clock me-1" aria-hidden="true"></i>
-              <strong>~{{ $audioMin }} {{ if eq $audioMin 1 }}minuto{{ else }}minuti{{ end }}</strong>
-              <span class="visually-hidden">di ascolto stimati</span>
-              <br>
-              <span class="small text-muted">audio</span>
-            </div>
-          </div>
-        </li>
+          </a>
+        </div>
         {{ end }}
-      </ul>
 
-      <p class="small text-muted mt-4" id="conteggio-articoli-visibili">
-        Trovi un totale di <strong>{{ len $articoli }}</strong> articoli ascoltabili sul sito.
-        Tutti rispondono alla stessa logica: bottone <em>Leggi ad alta voce</em> in cima
-        al testo, voce italiana del dispositivo, niente account.
-      </p>
+        {{/* Card 2: Podcast NotebookLM */}}
+        <div class="col-md-4">
+          <a href="{{ "podcast/" | relURL }}" class="card ascolta-card h-100 text-decoration-none">
+            <div class="card-body d-flex flex-column">
+              <div class="ascolta-card-icon" aria-hidden="true">
+                <i class="bi bi-headphones"></i>
+              </div>
+              <div class="ascolta-card-tipo">Podcast del Gruppo</div>
+              <h2 class="h6 ascolta-card-titolo">Episodi audio MP3 da scaricare</h2>
+              <p class="ascolta-card-desc small text-muted flex-grow-1">
+                Episodi di 20-25 minuti per ogni tema (rischio sismico, idrogeologico, incendi, allerta meteo, kit emergenza). Generati con NotebookLM, ascoltabili offline o tramite Spotify e Apple Podcasts.
+              </p>
+              <p class="ascolta-card-meta small mb-0">
+                <i class="bi bi-broadcast me-1" aria-hidden="true"></i>
+                Feed RSS iTunes-compatibile
+              </p>
+              <span class="ascolta-card-cta">
+                Vai al podcast <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+        </div>
 
-      <script>
-        // Filtri client-side per categoria. Vanilla JS, no librerie.
-        // Tastiera-friendly: i bottoni sono <button> nativi, focusabili,
-        // aggiornano aria-pressed e count visibili.
-        (function () {
-          var chips = document.querySelectorAll('.articoli-da-ascoltare-filtri .risorse-chip');
-          var items = document.querySelectorAll('#lista-articoli-ascoltabili .podcast-item');
-          var conteggio = document.getElementById('conteggio-articoli-visibili');
-          var conteggioStrong = conteggio ? conteggio.querySelector('strong') : null;
-          var totale = items.length;
-          chips.forEach(function (chip) {
-            chip.addEventListener('click', function () {
-              var filtro = chip.getAttribute('data-badge-filter');
-              chips.forEach(function (c) {
-                c.classList.toggle('is-active', c === chip);
-                c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
-              });
-              var visibili = 0;
-              items.forEach(function (item) {
-                var matcha = (filtro === 'tutti') || (item.getAttribute('data-badge') === filtro);
-                item.style.display = matcha ? '' : 'none';
-                if (matcha) visibili += 1;
-              });
-              if (conteggioStrong) conteggioStrong.textContent = visibili;
-              // Scroll smooth alla lista per dare conferma visiva
-              var lista = document.getElementById('lista-articoli-ascoltabili');
-              if (lista) lista.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-          });
-        })();
-      </script>
+        {{/* Card 3: Archivio completo */}}
+        <div class="col-md-4">
+          <a href="{{ "comunicazioni/" | relURL }}" class="card ascolta-card h-100 text-decoration-none">
+            <div class="card-body d-flex flex-column">
+              <div class="ascolta-card-icon" aria-hidden="true">
+                <i class="bi bi-collection"></i>
+              </div>
+              <div class="ascolta-card-tipo">Tutti gli articoli</div>
+              <h2 class="h6 ascolta-card-titolo">Archivio completo del Gruppo</h2>
+              <p class="ascolta-card-desc small text-muted flex-grow-1">
+                Sfoglia tutti gli articoli pubblicati, ordinati per data, filtrabili per categoria. Ogni articolo è ascoltabile cliccando "Leggi ad alta voce" in cima al testo.
+              </p>
+              <p class="ascolta-card-meta small mb-0">
+                <i class="bi bi-files me-1" aria-hidden="true"></i>
+                <strong>{{ $countArticoli }}</strong> articoli ascoltabili
+              </p>
+              <span class="ascolta-card-cta">
+                Vai all'archivio <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+        </div>
 
+      </section>
+
+      {{/* ── ISTRUZIONI OPERATIVE per chi è nuovo all'ascolto ── */}}
+      <section class="strumenti-articolo variant-avviso" role="region" aria-labelledby="come-funziona-h">
+        <div class="strumenti-articolo-header" id="come-funziona-h">
+          <i class="bi bi-question-circle me-2" aria-hidden="true"></i>
+          Come funziona in 3 passi
+        </div>
+        <ol class="ascolta-passi">
+          <li><strong>Apri un articolo</strong> qualsiasi del sito (o clicca una delle 3 card sopra).</li>
+          <li><strong>Clicca "Leggi ad alta voce"</strong> in cima al testo. Sentirai la voce italiana del tuo dispositivo.</li>
+          <li><strong>Regola la velocità</strong> con il selettore accanto (Lenta, Normale, Veloce). Puoi mettere in pausa e riprendere.</li>
+        </ol>
+        <p class="small text-muted mt-2 mb-0">
+          La lettura ad alta voce funziona offline sul tuo dispositivo. Niente account, niente cookie, niente connessione a server esterni.
+        </p>
+      </section>
+
+      {{ partial "materiali-correlati.html" . }}
       {{ partial "page-tools.html" . }}
     </div>
   </div>
