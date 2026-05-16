@@ -5909,3 +5909,53 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
   align-self: flex-start;
 }
 /* fine STRUMENTI ARTICOLO v1.1 */
+
+
+/* ==========================================================================
+   RISORSE PRONTE v1.0 — hub /risorse-pronte/ (maggio 2026)
+   ========================================================================== */
+.risorse-tema-titolo {
+  color: #003366;
+  border-left: 4px solid #003366;
+  padding-left: 0.7rem;
+  margin-top: 2rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.4rem;
+}
+.risorse-tema-desc { margin-bottom: 1rem; }
+.risorsa-card {
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.risorsa-card:hover,
+.risorsa-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 51, 102, 0.10);
+}
+.risorsa-tipo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #003366;
+  background: #e7f0fa;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+.risorsa-titolo { color: #1a1a1a; font-weight: 600; margin-bottom: 0.5rem; }
+.risorsa-anteprima {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #e0e6ed;
+}
+.risorsa-meta { color: #5a6470; }
+.risorsa-meta div { display: flex; gap: 0.3rem; }
+.risorsa-meta dt { font-weight: 600; margin: 0; }
+.risorsa-meta dd { margin: 0; }
+@media print { .risorse-tema { page-break-inside: avoid; } }
+/* fine RISORSE PRONTE v1.0 */

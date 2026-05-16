@@ -301,6 +301,15 @@ enableGitInfo = true
   parent = "risorse"
   weight = 6
 
+# Hub dei materiali multimediali pronti per download (podcast, infografiche,
+# presentazioni, quiz, flashcard) generati con NotebookLM e pubblicati con
+# licenza CC BY-NC-SA 4.0. Introdotto a maggio 2026.
+[[menus.main]]
+  name = "Materiali pronti"
+  url = "/risorse-pronte/"
+  parent = "risorse"
+  weight = 7
+
 # --- Voci dirette ---
 [[menus.main]]
   name = "Comunicazioni"
