@@ -1,0 +1,45 @@
+# Catalogo dei materiali multimediali pubblicati in /risorse-pronte/.
+# Popolato in automatico dallo script `scripts/pubblica-notebooklm-output.py`
+# quando l'utente carica gli output di NotebookLM nella drop zone
+# ~/Scrivania/notebooklm-output/<tema>/.
+#
+# Schema di ogni voce in `materiali`:
+#   id:                  identificatore univoco (slug)
+#   tema:                slug del tema (rischio-sismico, allerta-meteo, ...)
+#   tema_titolo:         titolo leggibile del tema
+#   tipo:                podcast | infografica | presentazione | quiz | flashcard
+#   titolo:              titolo del materiale visibile all'utente
+#   descrizione:         breve descrizione (1-2 frasi)
+#   file_url:            URL relativo del file da scaricare (es. /podcast/episodi/...)
+#   anteprima_url:       URL relativo dell'immagine di anteprima (opzionale)
+#   durata:              "22 minuti" per podcast (opzionale)
+#   dimensione:          "30 MB" (opzionale)
+#   data_pubblicazione:  AAAA-MM-GG
+#   licenza:             di solito "CC BY-NC-SA 4.0"
+
+# Definizione dei temi per il filtro sezione. Ordine = ordine di visualizzazione.
+temi:
+  - slug: rischio-sismico
+    titolo: "Rischio sismico"
+    icona: "bi-house-exclamation"
+    descrizione: "Terremoti nei Castelli Romani: cosa fare prima, durante e dopo."
+  - slug: rischio-idrogeologico
+    titolo: "Rischio idrogeologico"
+    icona: "bi-cloud-rain-heavy"
+    descrizione: "Frane e alluvioni sul nostro territorio."
+  - slug: rischio-incendio
+    titolo: "Rischio incendi boschivi"
+    icona: "bi-fire"
+    descrizione: "Estate sicura: prevenzione e comportamenti."
+  - slug: allerta-meteo
+    titolo: "Allerta meteo"
+    icona: "bi-cloud-lightning-rain"
+    descrizione: "Come leggere i bollettini e cosa fare per ogni codice colore."
+  - slug: kit-emergenza
+    titolo: "Kit emergenza famiglia"
+    icona: "bi-bag-check"
+    descrizione: "Tre kit (Vai, Casa, Auto): cosa preparare prima dell'evento."
+
+# I materiali partono vuoti — vengono aggiunti automaticamente dallo script
+# pubblica-notebooklm-output.py quando l'utente carica i file di NotebookLM.
+materiali: []
