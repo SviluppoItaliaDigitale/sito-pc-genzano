@@ -237,6 +237,15 @@ enableGitInfo = true
   parent = "volontariato"
   weight = 3
 
+# Aggiunto il 16/05/2026: hub esercitazioni e buone pratiche del Gruppo
+# (vetrina educativa, non diario operativo). Auto-popolato da articoli
+# /comunicazioni/ con badge "Esercitazione".
+[[menus.main]]
+  name = "Esercitazioni e buone pratiche"
+  url = "/esercitazioni/"
+  parent = "volontariato"
+  weight = 4
+
 # --- Dropdown: Risorse (6 voci, riorganizzato maggio 2026) ---
 # Riorganizzazione maggio 2026: il dropdown era cresciuto a 13 voci, oltre
 # il limite Miller 7±2. Strategia "accorpamento per hub":

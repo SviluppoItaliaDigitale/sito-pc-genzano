@@ -127,6 +127,7 @@ Scegli la situazione più vicina a quella che stai vivendo. Troverai indicazioni
 
 ## Vedi anche
 
+- [Schede "1 minuto per proteggerti"](/schede-1-minuto/) — sei azioni concrete in un minuto, stampabili e condivisibili
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
 - [Rischi e prevenzione](/rischi-prevenzione/) — comportamenti per ogni tipo di rischio
 - [Allerte meteo](/allerte-meteo/) — stato di allerta in corso

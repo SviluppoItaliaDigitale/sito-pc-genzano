@@ -357,6 +357,16 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Materiali pronti da scaricare</p>
   <p class="ms-card-desc">Podcast, infografiche, presentazioni divisi per tema di Protezione Civile (allerta meteo, kit emergenza, rischio sismico, idrogeologico, incendio). Liberamente scaricabili con licenza CC BY-NC-SA 4.0 per scuola, formazione e divulgazione.</p>
 </a>
+<a class="ms-card ms-edu" href="/schede-1-minuto/">
+  <div class="ms-card-icon"><i class="bi bi-stopwatch"></i></div>
+  <p class="ms-card-title">Schede "1 minuto per proteggerti"</p>
+  <p class="ms-card-desc">Sei micro-schede A5 stampabili con azioni concrete di autoprotezione in un minuto: torcia, 112, punto di ritrovo, kit auto, terremoto per bambini, documenti essenziali. Per casa, bacheca, sede.</p>
+</a>
+<a class="ms-card ms-edu" href="/esercitazioni/">
+  <div class="ms-card-icon"><i class="bi bi-list-task"></i></div>
+  <p class="ms-card-title">Esercitazioni e buone pratiche</p>
+  <p class="ms-card-desc">Vetrina educativa delle esercitazioni del Gruppo: antincendio boschivo, sismica, idrogeologica, radio, logistica, sanitaria. Resoconti divulgativi, non diari operativi riservati.</p>
+</a>
 <a class="ms-card ms-edu" href="/stato-sistema/">
   <div class="ms-card-icon"><i class="bi bi-activity"></i></div>
   <p class="ms-card-title">Stato del sistema</p>
