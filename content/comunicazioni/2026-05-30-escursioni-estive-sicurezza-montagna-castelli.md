@@ -1,6 +1,6 @@
 ---
 title: "Escursioni estive: sicurezza in montagna e nei sentieri"
-date: 2026-05-30
+date: 2026-05-30T00:01:00+02:00
 description: "Estate e stagione di escursioni. Preparazione, equipaggiamento, comportamento sul sentiero e gestione degli imprevisti: le regole per tornare a casa sicuri."
 badge: "Prevenzione"
 priorita: "normale"
