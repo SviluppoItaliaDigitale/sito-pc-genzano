@@ -156,6 +156,18 @@ Blocco di 13 iniziative dalla roadmap di evoluzione del sito (libreria prompt in
 - **#6 QR articoli** + **Open Data** reinserita (`/open-data/`).
 - Più: agent `pc-site-auditor`, workflow `backup-documenti-aruba.yml`, fix pipeline Telegram allerta.
 
+### Materiali pronti (`/risorse-pronte/`) — pipeline NotebookLM (maggio 2026)
+
+Hub pubblico in `/risorse-pronte/` che raccoglie podcast, infografiche e presentazioni divisi per tema (allerta meteo, kit emergenza, rischio sismico, idrogeologico, incendio). Tutti i materiali sono pubblicati con licenza **CC BY-NC-SA 4.0**, liberamente scaricabili e condivisibili per scuola, formazione e divulgazione.
+
+I materiali sono generati con [Google NotebookLM](https://notebooklm.google.com) partendo dalle fonti istituzionali del sito (DPC, INGV, ISPRA, CFR Lazio, standard ISO). Workflow:
+
+1. `scripts/prepara-pacchetto-notebooklm.py` → genera pacchetti pronti in `~/Scrivania/notebooklm-pacchetti/<tema>/` con fonti aggregate + prompt copia-incolla.
+2. L'utente carica le fonti in NotebookLM e genera podcast/infografica/presentazione (~30 min/tema).
+3. L'utente trascina i file scaricati in `~/Scrivania/notebooklm-output/<tema>/` con qualunque nome.
+4. `scripts/pubblica-notebooklm-output.py <tema>` → classifica per estensione, rinomina canonicamente, copia in `static/podcast/episodi/`, `static/infografiche/`, `static/presentazioni/`, aggiunge voci a `data/risorse_pronte.yaml`, crea `content/podcast/<slug>.md` per il feed RSS iTunes.
+5. Cross-link automatico: il partial `materiali-correlati.html` mostra "Materiali pronti su questo tema" in fondo alle pagine rischio/sezione tematica corrispondente.
+
 Architettura di dettaglio nella tabella "Architettura — riferimenti rapidi" di [`CLAUDE.md`](CLAUDE.md) e nelle rules `.claude/rules/04a` / `04b`. Riepilogo operativo in [`manuale/parte-29-iniziative-roadmap.md`](manuale/parte-29-iniziative-roadmap.md).
 
 ### File in `archetypes/` (template Hugo)

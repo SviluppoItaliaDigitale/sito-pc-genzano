@@ -535,8 +535,21 @@ Tu non devi fare nulla, succede in background.
 | Foto inline (Wikipedia/NASA/foto utente) | Su richiesta a Claude | Agent `pc-image-fixer`: scarica + fascia blu + shortcode `{{< foto >}}` nel corpo (mai nel banner) |
 | **Bozze social X/FB/IG/TG** | Push articolo | Crea `social-bozze/AAAA/MM/<slug>/*.txt` (richiede quota Gemini disponibile) |
 | **Immagini Instagram (post + carosello + story)** | Push articolo | Crea `social-bozze/AAAA/MM/<slug>/instagram-*.jpg` (Pillow, no rate limit) |
+| **Materiali pronti NotebookLM su `/risorse-pronte/`** | Quando lanci pubblica-notebooklm-output.py | Pubblica podcast, infografiche, presentazioni divisi per tema. Crea anche `content/podcast/<slug>.md` per il feed RSS iTunes. Cross-link auto sulle pagine rischio/sezione. |
 
 > **Nota Gemini API gratuita**: il tier free ha ~50 richieste/giorno. Una rigenerazione massiva di tutte le bozze testuali si esaurisce dopo ~50 articoli con HTTP 429 — si riprende il giorno dopo (reset a mezzanotte UTC). Il workflow normale (1 articolo/push) gira sempre. Specifiche in [`manuale/parte-16-bozze-social-gestione-quota-gemini-api.md`](manuale/parte-16-bozze-social-gestione-quota-gemini-api.md).
+
+### Materiali pronti NotebookLM (workflow da mobile + PC)
+
+Dato che NotebookLM è un'interfaccia web Google, non si può lanciare in autonomia da CI. Il workflow è ibrido (PC + mobile):
+
+1. **Sul PC** apri `~/Scrivania/notebooklm-pacchetti/<tema>/00-INDICE.md` per le istruzioni passo-passo. Su mobile puoi navigare lo stesso pacchetto tramite GitHub web (mai pubblicato sul sito).
+2. **In NotebookLM** (anche da mobile via browser, ma più comodo da PC) carichi il file aggregato + 4 URL fonti e generi podcast/infografica/presentazione.
+3. **Scarichi i file** sul dispositivo (qualunque nome auto-generato da Google va bene).
+4. **Trascini i file** dentro `~/Scrivania/notebooklm-output/<tema>/` sul PC, OPPURE li alleghi in chat con Claude.
+5. **Scrivi a Claude**: *"Pubblica gli output di NotebookLM per il tema X"*. Claude lancia lo script: classificazione auto per estensione, rinomina, copia, aggiorna yaml + crea content podcast + commit + push. In 5 minuti tutto live su `/risorse-pronte/` + feed RSS aggiornato.
+
+Specifiche complete in `~/Scrivania/GUIDA-NOTEBOOKLM-PC-GENZANO.md` e nei singoli `00-INDICE.md` per tema.
 
 ---
 
