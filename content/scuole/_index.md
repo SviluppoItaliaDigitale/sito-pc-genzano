@@ -17,7 +17,7 @@ Il Gruppo Comunale di Protezione Civile di Genzano di Roma offre **materiali did
 
 <div class="row row-cols-1 row-cols-md-2 g-4 my-4">
 
-<div class="col">
+<div class="col" id="docenti">
   <div class="card h-100 border-primary">
     <div class="card-body">
       <h2 class="h5 card-title"><i class="bi bi-mortarboard-fill text-primary me-2" aria-hidden="true"></i>Sono un/una docente</h2>
@@ -34,7 +34,7 @@ Il Gruppo Comunale di Protezione Civile di Genzano di Roma offre **materiali did
   </div>
 </div>
 
-<div class="col">
+<div class="col" id="dirigenti">
   <div class="card h-100 border-primary">
     <div class="card-body">
       <h2 class="h5 card-title"><i class="bi bi-building-fill text-primary me-2" aria-hidden="true"></i>Sono dirigente scolastico, RSPP, DSGA, DPO</h2>
@@ -49,7 +49,7 @@ Il Gruppo Comunale di Protezione Civile di Genzano di Roma offre **materiali did
   </div>
 </div>
 
-<div class="col">
+<div class="col" id="genitori">
   <div class="card h-100 border-success">
     <div class="card-body">
       <h2 class="h5 card-title"><i class="bi bi-people-fill text-success me-2" aria-hidden="true"></i>Sono un genitore</h2>
@@ -64,7 +64,7 @@ Il Gruppo Comunale di Protezione Civile di Genzano di Roma offre **materiali did
   </div>
 </div>
 
-<div class="col">
+<div class="col" id="studenti">
   <div class="card h-100 border-warning">
     <div class="card-body">
       <h2 class="h5 card-title"><i class="bi bi-controller text-warning me-2" aria-hidden="true"></i>Sono uno studente o studentessa</h2>

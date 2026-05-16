@@ -5740,6 +5740,10 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
 .profili-rapidi-card-scuola h3 { color: #146c43; }
 .profili-rapidi-card-caregiver { border: 2px solid #7c3aed; }
 .profili-rapidi-card-caregiver h3 { color: #6d28d9; }
+.profili-rapidi-card-genitore { border: 2px solid #fd7e14; }
+.profili-rapidi-card-genitore h3 { color: #c2410c; }
+.profili-rapidi-card-studente { border: 2px solid #0dcaf0; }
+.profili-rapidi-card-studente h3 { color: #0e7490; }
 /* Stampa: nasconde il blocco (non utile su carta) */
 @media print {
   .profili-rapidi-section { display: none !important; }
