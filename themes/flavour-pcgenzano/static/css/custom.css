@@ -6174,3 +6174,87 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
 }
 @media print { .ascolta-cards { display: none; } }
 /* fine ASCOLTA IL SITO v1.0 */
+
+
+/* ==========================================================================
+   EVENTO CARD v1.0 — shortcode {{< evento >}} (maggio 2026)
+   Scheda strutturata per articoli con badge "Evento" (Infiorata,
+   manifestazioni, open day, eventi sportivi). Coerente col sistema
+   istituzionale del sito (blu #003366, sfondo azzurrino #e7f0fa).
+   ========================================================================== */
+.evento-card {
+  background: #e7f0fa;
+  border-left: 4px solid #003366;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+}
+.evento-card-header {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 0.7rem;
+}
+.evento-card-header .bi { font-size: 1.15rem; }
+.evento-card-body {
+  margin: 0 0 0.6rem 0;
+}
+.evento-riga {
+  display: grid;
+  grid-template-columns: minmax(180px, 25%) 1fr;
+  gap: 0.5rem 1rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(0, 51, 102, 0.08);
+}
+.evento-riga:last-child { border-bottom: none; }
+.evento-riga dt {
+  font-weight: 600;
+  color: #003366;
+  margin: 0;
+}
+.evento-riga dd {
+  margin: 0;
+  color: #1a1a1a;
+}
+.evento-mappa-link {
+  display: inline-flex;
+  align-items: center;
+  color: #003366;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.evento-afflusso {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #e7f0fa;
+  color: #003366;
+}
+.afflusso-basso { background: #d1fae5; color: #065f46; }
+.afflusso-medio { background: #fef3c7; color: #92400e; }
+.afflusso-alto { background: #fed7aa; color: #9a3412; }
+.afflusso-molto-alto { background: #fecaca; color: #991b1b; }
+.evento-card-emergenza {
+  background: rgba(217, 54, 79, 0.08);
+  border-left: 3px solid #d9364f;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  color: #7f1d1d;
+}
+@media (max-width: 575.98px) {
+  .evento-riga {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+  .evento-riga dt { font-size: 0.85rem; opacity: 0.8; }
+}
+@media print {
+  .evento-card { background: white; border: 2px solid #003366; }
+  .evento-mappa-link::after { content: " (" attr(href) ")"; font-size: 0.8em; }
+}
+/* fine EVENTO CARD v1.0 */

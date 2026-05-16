@@ -1,0 +1,80 @@
+{{/* Shortcode: evento — scheda strutturata per articoli con badge "Evento"
+     (Infiorata, manifestazioni comunali, eventi sportivi, open day, ecc.).
+
+     Uso:
+       {{< evento
+           data="20 giugno 2026"
+           luogo="Via Italo Belardi, Genzano di Roma"
+           orario="dalle 09:00 alle 20:00"
+           mappa_url="https://maps.app.goo.gl/..."
+           afflusso="alto"
+           pc_presente="sì, presidio in piazza"
+       >}}
+
+     Tutti i parametri sono opzionali. Lo shortcode mostra solo i campi
+     popolati. Stile coerente con .strumenti-articolo (sistema design
+     istituzionale del sito).
+
+     Parametri:
+       data            — data evento in formato leggibile (es. "20 giugno 2026")
+       data_fine       — opzionale, per eventi multi-giorno
+       luogo           — indirizzo o piazza
+       orario          — "dalle HH:MM alle HH:MM"
+       mappa_url       — URL Google Maps o cartografia
+       afflusso        — "basso" | "medio" | "alto" | "molto alto"
+       pc_presente     — descrizione del presidio del Gruppo (o "no")
+*/}}
+<aside class="evento-card" role="region" aria-label="Scheda evento">
+  <div class="evento-card-header">
+    <i class="bi bi-calendar-event me-2" aria-hidden="true"></i>
+    Scheda evento
+  </div>
+  <dl class="evento-card-body">
+    {{- with .Get "data" }}
+    <div class="evento-riga">
+      <dt><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>Data</dt>
+      <dd>{{ . }}{{ with $.Get "data_fine" }} → {{ . }}{{ end }}</dd>
+    </div>
+    {{- end }}
+    {{- with .Get "orario" }}
+    <div class="evento-riga">
+      <dt><i class="bi bi-clock me-1" aria-hidden="true"></i>Orario</dt>
+      <dd>{{ . }}</dd>
+    </div>
+    {{- end }}
+    {{- with .Get "luogo" }}
+    <div class="evento-riga">
+      <dt><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>Luogo</dt>
+      <dd>
+        {{ . }}
+        {{- with $.Get "mappa_url" }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="evento-mappa-link ms-2">
+          <i class="bi bi-map me-1" aria-hidden="true"></i>Apri mappa
+        </a>
+        {{- end }}
+      </dd>
+    </div>
+    {{- end }}
+    {{- with .Get "afflusso" }}
+    {{- $cls := "afflusso-medio" }}
+    {{- if eq . "basso" }}{{ $cls = "afflusso-basso" }}{{ end }}
+    {{- if eq . "alto" }}{{ $cls = "afflusso-alto" }}{{ end }}
+    {{- if eq . "molto alto" }}{{ $cls = "afflusso-molto-alto" }}{{ end }}
+    <div class="evento-riga">
+      <dt><i class="bi bi-people-fill me-1" aria-hidden="true"></i>Afflusso atteso</dt>
+      <dd><span class="evento-afflusso {{ $cls }}">{{ . | title }}</span></dd>
+    </div>
+    {{- end }}
+    {{- with .Get "pc_presente" }}
+    <div class="evento-riga">
+      <dt><i class="bi bi-shield-check me-1" aria-hidden="true"></i>Presenza Protezione Civile</dt>
+      <dd>{{ . }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+  <p class="evento-card-emergenza small mb-0">
+    <i class="bi bi-telephone-fill me-1" aria-hidden="true"></i>
+    <strong>In caso di emergenza durante l'evento: 112.</strong>
+    Per segnalazioni non urgenti, rivolgiti al gazebo del Gruppo o a un volontario in divisa.
+  </p>
+</aside>
