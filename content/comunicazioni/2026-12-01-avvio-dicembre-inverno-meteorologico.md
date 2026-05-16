@@ -129,7 +129,7 @@ A Genzano: l'**ordinanza** sindacale pre-Capodanno sarà pubblicata a breve.
 
 ### Chi chiamare
 - **emergenza**: **112**;
-- **segnalazioni** non urgenti: **803 555** (Regione Lazio);
+- **segnalazioni** non urgenti: **803&nbsp;555** (Regione Lazio);
 - **informazioni** PC Genzano: tramite canali ufficiali.
 
 ### I nostri articoli di dicembre

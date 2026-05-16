@@ -19,7 +19,7 @@ dataUltimaRevisione: "2026-05-06"
 <p class="mb-0">Numero Unico Europeo per le emergenze</p>
 </div>
 <div class="col-md-6 mb-2">
-<p class="fs-3 fw-bold text-danger mb-0">803 555</p>
+<p class="fs-3 fw-bold text-danger mb-0">803&nbsp;555</p>
 <p class="mb-0">Sala Operativa Regionale Protezione Civile Lazio</p>
 </div>
 </div>
@@ -78,7 +78,7 @@ Segui i canali ufficiali per aggiornamenti, allerte e comunicazioni del Gruppo.
 <tbody>
 <tr><td><strong>Emergenza in corso</strong> (incendio, alluvione, terremoto, persona in pericolo)</td><td>Chiama il <strong>112</strong></td></tr>
 <tr><td><strong>Pericolo immediato</strong> (albero caduto su strada, smottamento, cavi pericolanti, incendio)</td><td>Chiama il <strong>112</strong></td></tr>
-<tr><td><strong>Comunicazioni di protezione civile regionale</strong></td><td>Fai riferimento alla Sala Operativa Regionale <strong>803 555</strong>, secondo le indicazioni ufficiali</td></tr>
+<tr><td><strong>Comunicazioni di protezione civile regionale</strong></td><td>Fai riferimento alla Sala Operativa Regionale <strong>803&nbsp;555</strong>, secondo le indicazioni ufficiali</td></tr>
 <tr><td><strong>Informazioni sul Gruppo</strong></td><td>Chiama o scrivi ai recapiti ordinari</td></tr>
 <tr><td><strong>Diventare volontario</strong></td><td>Vieni in sede, chiama o <a href="mailto:segreteria@protezionecivilegenzano.it">scrivi un'email</a></td></tr>
 <tr><td><strong>Collaborazione con scuole</strong></td><td>Scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></td></tr>

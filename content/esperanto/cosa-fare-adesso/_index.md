@@ -16,7 +16,7 @@ language: "eo"
 <p>Unika Urĝa Numero — por iu ajn urĝo</p>
 </div>
 <div class="col-md-6">
-<p class="fs-3 fw-bold text-danger mb-1">803 555</p>
+<p class="fs-3 fw-bold text-danger mb-1">803&nbsp;555</p>
 <p>Operacia Salono Civila Protekto Lazio</p>
 </div>
 </div>

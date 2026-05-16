@@ -16,7 +16,7 @@ language: "es"
 <p>Número Único de Emergencia — para cualquier emergencia</p>
 </div>
 <div class="col-md-6">
-<p class="fs-3 fw-bold text-danger mb-1">803 555</p>
+<p class="fs-3 fw-bold text-danger mb-1">803&nbsp;555</p>
 <p>Sala Operativa Protección Civil Lacio</p>
 </div>
 </div>

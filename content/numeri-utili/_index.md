@@ -28,7 +28,7 @@ Nel Lazio il numero da chiamare in caso di emergenza è il **112**. La centrale 
 </thead>
 <tbody>
 <tr><td><strong>112</strong></td><td>Numero Unico Europeo per le emergenze</td><td>Emergenza in corso, pericolo immediato, persone ferite, incendio, soccorso tecnico, sicurezza pubblica</td></tr>
-<tr><td><strong>803 555</strong></td><td>Sala Operativa Regionale Protezione Civile Lazio</td><td>Numero verde regionale di Protezione Civile. Per emergenze con pericolo immediato resta prioritario il 112</td></tr>
+<tr><td><strong>803&nbsp;555</strong></td><td>Sala Operativa Regionale Protezione Civile Lazio</td><td>Numero verde regionale di Protezione Civile. Per emergenze con pericolo immediato resta prioritario il 112</td></tr>
 <tr><td><strong>1530</strong></td><td>Guardia Costiera</td><td>Emergenze e soccorso in mare e nelle acque di competenza</td></tr>
 </tbody>
 </table>
@@ -87,7 +87,7 @@ Parla con calma e non chiudere la chiamata finché l'operatore non te lo dice.
 
 ## In caso di emergenza
 
-Il Gruppo Comunale di Protezione Civile **non può essere attivato direttamente dai cittadini**. In caso di emergenza, contatta il **112**. Per le comunicazioni di protezione civile regionale è disponibile anche il numero verde della Sala Operativa Regionale **803 555**. Saranno le autorità competenti, quando necessario, ad allertare e attivare le squadre di volontariato.
+Il Gruppo Comunale di Protezione Civile **non può essere attivato direttamente dai cittadini**. In caso di emergenza, contatta il **112**. Per le comunicazioni di protezione civile regionale è disponibile anche il numero verde della Sala Operativa Regionale **803&nbsp;555**. Saranno le autorità competenti, quando necessario, ad allertare e attivare le squadre di volontariato.
 
 ## Vedi anche
 

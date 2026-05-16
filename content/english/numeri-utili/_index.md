@@ -22,7 +22,7 @@ In the Lazio region, since 2017, **the only number to call in case of emergency 
 | Number | Service | When to call |
 |---|---|---|
 | **112** | Single Emergency Number (NUE) | Any emergency: medical, public order, fires, technical rescue |
-| **803 555** | Lazio Civil Protection Operations Room | Non-urgent reports and information on regional emergencies |
+| **803&nbsp;555** | Lazio Civil Protection Operations Room | Non-urgent reports and information on regional emergencies |
 | **1530** | Coast Guard | Emergencies at sea and on lakes |
 
 ## Civil Protection Group contacts
@@ -40,4 +40,4 @@ These contacts are **for non-urgent information and requests**. In case of emerg
 
 ## In case of emergency
 
-The Civil Protection Group **cannot be activated directly by citizens**. In case of emergency, contact **112** or **803 555**: the competent authorities will alert and dispatch our teams.
+The Civil Protection Group **cannot be activated directly by citizens**. In case of emergency, contact **112** or **803&nbsp;555**: the competent authorities will alert and dispatch our teams.

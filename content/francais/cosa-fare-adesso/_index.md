@@ -16,7 +16,7 @@ language: "fr"
 <p>Numéro Unique d'Urgence — pour toute urgence</p>
 </div>
 <div class="col-md-6">
-<p class="fs-3 fw-bold text-danger mb-1">803 555</p>
+<p class="fs-3 fw-bold text-danger mb-1">803&nbsp;555</p>
 <p>Salle Opérationnelle Protection Civile Latium</p>
 </div>
 </div>

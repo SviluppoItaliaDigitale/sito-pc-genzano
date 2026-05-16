@@ -141,7 +141,7 @@ Un ringraziamento particolare a:
 
 ### Emergenze
 - **in corso**: sempre e solo **112**;
-- **segnalazioni** non urgenti: **803 555** (Sala Operativa Regione).
+- **segnalazioni** non urgenti: **803&nbsp;555** (Sala Operativa Regione).
 
 ## Appuntamento a dicembre
 

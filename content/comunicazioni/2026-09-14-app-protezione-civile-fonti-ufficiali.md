@@ -51,7 +51,7 @@ In un mondo saturo di informazioni, **conoscere le fonti ufficiali** è essenzia
 - previsioni meteo, qualità dell'aria, radiazioni.
 
 ### Numero verde PC Lazio
-- **803 555**: segnalazioni non urgenti di Protezione Civile.
+- **803&nbsp;555**: segnalazioni non urgenti di Protezione Civile.
 
 ## I riferimenti — Comune di Genzano
 

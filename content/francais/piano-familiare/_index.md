@@ -45,7 +45,7 @@ Imprimez cette page (ou recopiez sur une feuille) et complétez avec vos donnée
 ### 4. Numéros d'urgence
 
 - **112** — Numéro Unique d'Urgence
-- **803 555** — Protection Civile Latium
+- **803&nbsp;555** — Protection Civile Latium
 - **Portable de maman** : ____________________
 - **Portable de papa** : ____________________
 

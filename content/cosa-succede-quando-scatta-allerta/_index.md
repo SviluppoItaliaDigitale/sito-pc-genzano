@@ -82,7 +82,7 @@ Niente di complicato:
 2. **Adotta i comportamenti consigliati** per il livello in corso. Se è giallo, evita di mettere mobili sul balcone in zone ventose. Se è arancione, sposta auto da sottopassi. Se è rosso, resta in casa.
 3. **Se hai preparato il [Piano Familiare](/piano-familiare/)**, ricorda ai familiari il punto di ritrovo, il contatto fuori zona e i farmaci essenziali.
 4. **Non chiamare il 112 per chiedere informazioni meteo.** Il 112 è per emergenze immediate (persona ferita, incendio in corso, pericolo concreto). Per informazioni usa il sito o il [canale Telegram](/numeri-utili/).
-5. **Se vedi una situazione pericolosa** (albero pericolante, tombino otturato, allagamento), segnalala alla **Sala Operativa Regionale 803 555** (per segnalazioni non urgenti) o al **Comune** in orario di ufficio.
+5. **Se vedi una situazione pericolosa** (albero pericolante, tombino otturato, allagamento), segnalala alla **Sala Operativa Regionale 803&nbsp;555** (per segnalazioni non urgenti) o al **Comune** in orario di ufficio.
 
 ## Cosa NON devi aspettarti
 
@@ -113,5 +113,5 @@ Per definizioni complete vedi il [Glossario](/glossario/).
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni per tipo di emergenza in atto
 - [Piano Familiare](/piano-familiare/) — prepararsi in tempo ordinario
 - [Aree di attesa](/aree-attesa/) — dove andare in caso di evacuazione
-- [Numeri Utili](/numeri-utili/) — 112, 803 555, recapiti Gruppo
+- [Numeri Utili](/numeri-utili/) — 112, 803&nbsp;555, recapiti Gruppo
 - [Chi Siamo](/chi-siamo/) — struttura del Gruppo, riferimenti istituzionali

@@ -100,7 +100,7 @@ Chiama il **112** se:
 - Persona ferita
 - Incendio innescato (linee elettriche danneggiate possono scintillare)
 
-Per segnalazioni non urgenti (albero caduto in strada senza feriti, ma blocca la viabilità), usa i canali del Comune o la Sala Operativa Regionale 803 555.
+Per segnalazioni non urgenti (albero caduto in strada senza feriti, ma blocca la viabilità), usa i canali del Comune o la Sala Operativa Regionale 803&nbsp;555.
 
 ## Il ruolo del volontariato
 

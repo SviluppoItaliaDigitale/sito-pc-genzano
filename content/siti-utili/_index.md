@@ -19,7 +19,7 @@ Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecn
 ## Numeri di emergenza
 
 - **112** — Numero Unico Europeo di Emergenza.
-- **803 555** — Sala Operativa Protezione Civile Lazio, per segnalazioni secondo le indicazioni regionali.
+- **803&nbsp;555** — Sala Operativa Protezione Civile Lazio, per segnalazioni secondo le indicazioni regionali.
 
 ## Siti istituzionali
 

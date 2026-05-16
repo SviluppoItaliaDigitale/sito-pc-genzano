@@ -45,7 +45,7 @@ Imprima esta página (o cópiela en una hoja) y complete con sus datos. Pegue el
 ### 4. Números de emergencia
 
 - **112** — Número Único de Emergencia
-- **803 555** — Protección Civil Lacio
+- **803&nbsp;555** — Protección Civil Lacio
 - **Móvil de mamá**: ____________________
 - **Móvil de papá**: ____________________
 

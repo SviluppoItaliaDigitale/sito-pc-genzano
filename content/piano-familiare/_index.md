@@ -143,7 +143,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato pu
 <div class="piano-numeri text-center mt-4 p-3">
 <strong>Numeri di emergenza</strong><br>
 <strong>112</strong> Numero Unico Europeo per le emergenze<br>
-<strong>803 555</strong> Sala Operativa Protezione Civile Lazio &mdash; segnalazioni secondo le indicazioni regionali<br>
+<strong>803&nbsp;555</strong> Sala Operativa Protezione Civile Lazio &mdash; segnalazioni secondo le indicazioni regionali<br>
 <small class="text-muted">Conservare in un luogo accessibile ai familiari ma protetto. Aggiornare almeno una volta all'anno.</small>
 </div>
 <div id="piano-print-appendice"></div>

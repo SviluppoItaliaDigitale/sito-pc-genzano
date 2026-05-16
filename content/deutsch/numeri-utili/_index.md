@@ -22,7 +22,7 @@ In der Region Latium ist seit 2017 **die einzige Notrufnummer die 112**. Alle An
 | Nummer | Dienst | Wann anrufen |
 |---|---|---|
 | **112** | Einheitliche Notrufnummer (NUE) | Jeder Notfall: Gesundheit, öffentliche Ordnung, Brände, technische Hilfe |
-| **803 555** | Einsatzzentrale Zivilschutz Latium | Nicht dringende Meldungen und Informationen zu regionalen Notfällen |
+| **803&nbsp;555** | Einsatzzentrale Zivilschutz Latium | Nicht dringende Meldungen und Informationen zu regionalen Notfällen |
 | **1530** | Küstenwache | Notfälle auf See und an Seen |
 
 ## Kontakte der Zivilschutzgruppe
@@ -40,4 +40,4 @@ Diese Kontakte sind **für nicht dringende Informationen und Anfragen**. Im Notf
 
 ## Im Notfall
 
-Die kommunale Zivilschutzgruppe **kann nicht direkt von Bürgern aktiviert werden**. Im Notfall kontaktieren Sie die **112** oder **803 555**: Die zuständigen Behörden werden unsere Teams alarmieren und einsetzen.
+Die kommunale Zivilschutzgruppe **kann nicht direkt von Bürgern aktiviert werden**. Im Notfall kontaktieren Sie die **112** oder **803&nbsp;555**: Die zuständigen Behörden werden unsere Teams alarmieren und einsetzen.

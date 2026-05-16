@@ -45,7 +45,7 @@ Print this page (or copy on a sheet of paper) and complete with your data. Stick
 ### 4. Emergency Numbers
 
 - **112** — Single Emergency Number (any urgent call)
-- **803 555** — Lazio Civil Protection
+- **803&nbsp;555** — Lazio Civil Protection
 - **Mom's mobile**: ____________________
 - **Dad's mobile**: ____________________
 

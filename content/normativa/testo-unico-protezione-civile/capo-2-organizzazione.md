@@ -20,7 +20,7 @@ In particolare, ciascuna Regione:
 - disciplina il **volontariato** regionale di protezione civile
 - può **dichiarare** lo stato di mobilitazione regionale
 
-Nel Lazio queste funzioni sono esercitate tramite l'**Agenzia Regionale di Protezione Civile** e la **Sala Operativa Regionale** (803 555).
+Nel Lazio queste funzioni sono esercitate tramite l'**Agenzia Regionale di Protezione Civile** e la **Sala Operativa Regionale** (803&nbsp;555).
 
 ## Articolo 15 — Le Città metropolitane e le Province
 

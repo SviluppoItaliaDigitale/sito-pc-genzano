@@ -22,7 +22,7 @@ Dans la région du Latium, depuis 2017, **le seul numéro à appeler en cas d'ur
 | Numéro | Service | Quand appeler |
 |---|---|---|
 | **112** | Numéro Unique d'Urgence (NUE) | Toute urgence : sanitaire, ordre public, incendies, secours technique |
-| **803 555** | Salle Opérationnelle Protection Civile Latium | Signalements non urgents et informations sur les urgences régionales |
+| **803&nbsp;555** | Salle Opérationnelle Protection Civile Latium | Signalements non urgents et informations sur les urgences régionales |
 | **1530** | Garde Côtière | Urgences en mer et sur les lacs |
 
 ## Contacts du Groupe de Protection Civile
@@ -40,4 +40,4 @@ Ces contacts sont **pour les informations et demandes non urgentes**. En cas d'u
 
 ## En cas d'urgence
 
-Le Groupe Communal de Protection Civile **ne peut pas être activé directement par les citoyens**. En cas d'urgence, contactez le **112** ou le **803 555** : les autorités compétentes alerteront et activeront nos équipes.
+Le Groupe Communal de Protection Civile **ne peut pas être activé directement par les citoyens**. En cas d'urgence, contactez le **112** ou le **803&nbsp;555** : les autorités compétentes alerteront et activeront nos équipes.

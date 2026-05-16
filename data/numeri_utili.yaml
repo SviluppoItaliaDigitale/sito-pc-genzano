@@ -13,7 +13,7 @@ emergenza:
     icona: "bi-telephone-fill"
     principale: true
 
-  - numero: "803 555"
+  - numero: "803 555"
     nome: "Sala Operativa Protezione Civile Lazio"
     descrizione: "Numero verde per segnalazioni non urgenti e informazioni su emergenze regionali"
     icona: "bi-shield-fill"
