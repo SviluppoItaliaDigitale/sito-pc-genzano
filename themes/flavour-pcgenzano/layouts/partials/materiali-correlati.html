@@ -24,6 +24,12 @@
 {{- else -}}
   {{- if $param -}}
     {{- $temaCandidate = $param -}}
+  {{- else if and (eq .Kind "section") .File -}}
+    {{/* Per _index.md di sezione (anche subsection): nome cartella
+         parent. Es. content/rischi-prevenzione/kit-emergenza/_index.md
+         → "kit-emergenza" (non "rischi-prevenzione" che è .Section
+         top-level e produrrebbe match sbagliato). */}}
+    {{- $temaCandidate = path.Base .File.Dir -}}
   {{- else if eq .Kind "section" -}}
     {{- $temaCandidate = .Section -}}
   {{- else if .File -}}
