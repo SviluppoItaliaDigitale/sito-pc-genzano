@@ -79,10 +79,10 @@ TEMI = {
     "rischio-sismico": {
         "titolo": "Rischio sismico nei Castelli Romani",
         "pagina_sito": f"{SITO_BASE}/rischi-prevenzione/rischio-sismico/",
+        # articoli_correlati: derivati AUTOMATICAMENTE dal filesystem
+        # via keyword matching su content/comunicazioni/*.md.
+        # Sempre URL reali, mai inventati.
         "articoli_correlati": [
-            f"{SITO_BASE}/comunicazioni/2026-11-23-irpinia-1980/",
-            f"{SITO_BASE}/comunicazioni/2026-04-06-aquila-2009/",
-            f"{SITO_BASE}/comunicazioni/2026-08-24-amatrice-2016/",
             f"{SITO_BASE}/glossario/",
         ],
         "fonti_istituzionali": [
@@ -129,8 +129,10 @@ TEMI = {
     "rischio-incendio": {
         "titolo": "Rischio incendi boschivi (AIB) sui Castelli Romani",
         "pagina_sito": f"{SITO_BASE}/rischi-prevenzione/rischio-incendio/",
+        # articoli_correlati: pagine canoniche del sito (sempre esistenti).
+        # Gli articoli /comunicazioni/ pertinenti vengono aggiunti dal
+        # keyword matching automatico (vedi trova_articoli_reali()).
         "articoli_correlati": [
-            f"{SITO_BASE}/comunicazioni/2026-06-15-campagna-aib/",
             f"{SITO_BASE}/allerte-meteo/",
             f"{SITO_BASE}/glossario/",
         ],
@@ -668,6 +670,46 @@ def indice_md(tema_slug: str, tema_data: dict) -> str:
     """)
 
 
+def trova_articoli_reali(tema_slug: str, max_articoli: int = 4) -> list[str]:
+    """Cerca in content/comunicazioni/ gli articoli più pertinenti al tema
+    via keyword matching su body+frontmatter. Ritorna lista di URL pubblici
+    REALI (mai inventati). Massimo `max_articoli` URL, ordinati per data
+    decrescente (più recenti prima).
+
+    Esclude draft e articoli senza data nel nome.
+    """
+    keywords = [kw.lower() for kw in KEYWORDS_TEMA.get(tema_slug, [])]
+    if not keywords:
+        return []
+    comunicazioni_dir = REPO_ROOT / "content" / "comunicazioni"
+    if not comunicazioni_dir.is_dir():
+        return []
+
+    matches = []
+    for f in comunicazioni_dir.glob("*.md"):
+        # Filtra per pattern data AAAA-MM-GG nel nome
+        if len(f.stem) < 10 or f.stem[4] != "-" or f.stem[7] != "-":
+            continue
+        try:
+            testo = f.read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError):
+            continue
+        if "draft: true" in testo:
+            continue
+        testo_lower = testo.lower()
+        # Conta quante keyword del tema appaiono (peso = pertinenza)
+        score = sum(1 for kw in keywords if kw in testo_lower)
+        if score > 0:
+            matches.append((f.stem, score))
+
+    # Ordina per score decrescente, poi per data decrescente (slug più recente in cima)
+    matches.sort(key=lambda x: (-x[1], -ord(x[0][0]) if x[0] else 0))  # placeholder
+    matches.sort(key=lambda x: x[0], reverse=True)  # data desc dal nome
+    matches.sort(key=lambda x: -x[1])  # poi per score desc
+
+    return [f"{SITO_BASE}/comunicazioni/{slug}/" for slug, _score in matches[:max_articoli]]
+
+
 def aggrega_fonti_sito(tema_slug: str, tema_data: dict) -> tuple[str, int]:
     """Genera un singolo file Markdown con tutti i contenuti del sito
     pertinenti al tema, da caricare in NotebookLM come fonte unica.
@@ -772,10 +814,20 @@ def scrivi_pacchetto(tema_slug: str, tema_data: dict) -> int:
         for u in urls:
             links_esterni.append(u)
     links_esterni.append("")
-    links_esterni.append("# === Articoli del sito (opzionali: già aggregati nel file MD principale) ===")
+    links_esterni.append("# === Pagine canoniche del nostro sito (sempre esistenti): ===")
     links_esterni.append(tema_data["pagina_sito"])
     for url in tema_data["articoli_correlati"]:
         links_esterni.append(url)
+
+    # Articoli /comunicazioni/ DERIVATI dal filesystem via keyword matching.
+    # SEMPRE URL reali (file .md effettivamente presenti in content/comunicazioni/).
+    articoli_reali = trova_articoli_reali(tema_slug, max_articoli=4)
+    if articoli_reali:
+        links_esterni.append("")
+        links_esterni.append("# === Articoli /comunicazioni/ pertinenti al tema ===")
+        links_esterni.append("# (Già aggregati nel file MD principale, qui solo come riferimento)")
+        for url in articoli_reali:
+            links_esterni.append(url)
 
     # Pulizia file ridondanti/deprecati da generazioni precedenti.
     # - 01-fonti.md → ridondante con AAA-FONTI + LINKS-DA-INCOLLARE
