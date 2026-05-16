@@ -35,6 +35,15 @@ Utile per chi non sente bene, per chi preferisce ascoltare mentre fa altro, per 
 
 Entrambe le opzioni sono **gratuite**, **accessibili** (WCAG 2.2 AA) e **rispettose della privacy**.
 
+## Podcast del Sistema nazionale di Protezione Civile
+
+Oltre al podcast del Gruppo, segnaliamo i **podcast originali del Dipartimento della Protezione Civile**. Sono produzioni nazionali con autori, ospiti e qualità audio di livello istituzionale, dedicate alla cultura della prevenzione e alle storie dei territori. Si ascoltano gratuitamente su Spotify:
+
+- **[DPC – Dove Parliamo di Clima](https://open.spotify.com/show/2SKlW0HuDknZj0KgIttEdB)** — condotto da **Filippo Thiery**, è lo spazio del DPC dedicato a clima e meteo: fenomeni atmosferici, effetti della crisi climatica, comportamenti consapevoli davanti agli eventi estremi.
+- **[Stringersi in una parola](https://open.spotify.com/show/2fVTNzs56LssvgICmMbSAp)** — il podcast del DPC che riflette su come le storie custodiscano la memoria delle emergenze. Ogni puntata parte da una parola che racchiude esperienze, emozioni e memorie di chi ha vissuto eventi reali.
+
+Sono podcast esterni: l'ascolto avviene sulla piattaforma Spotify, secondo la sua privacy policy.
+
 ## Vedi anche
 
 - [Materiali pronti da scaricare](/risorse-pronte/) — podcast tematici, infografiche, presentazioni divisi per rischio (sismico, idrogeologico, incendio, allerta meteo, kit emergenza). Licenza CC BY-NC-SA 4.0
