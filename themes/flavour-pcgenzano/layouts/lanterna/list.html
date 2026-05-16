@@ -40,6 +40,17 @@ h1{font-size:1.5rem;margin:1rem 0 .5rem;text-align:center}
 .rosa{font-size:4rem;display:inline-block;transition:transform .15s linear}
 .nota{font-size:.85rem;color:#fff6c2;margin:.3rem 0 1rem}
 .allerta{border:3px solid #ffd000;border-radius:10px;padding:.7rem 1rem;margin:1rem 0;font-size:1rem}
+/* fallback torcia: istruzioni quando permesso negato + bottone schermo bianco */
+.torcia-fallback{display:none;margin:.3rem 0 1rem;padding:.7rem .9rem;border:2px dashed #ffd000;border-radius:10px;font-size:.9rem;color:#fff6c2}
+.torcia-fallback.on{display:block}
+.torcia-fallback strong{color:#ffd000}
+.torcia-fallback .white-torch-btn{display:block;width:100%;margin-top:.6rem;background:#fff;color:#000;border:3px solid #ffd000;border-radius:10px;padding:.8rem;font-weight:900;font-size:1.05rem;cursor:pointer}
+.torcia-fallback .white-torch-btn:focus-visible{outline:4px solid #ffd000;outline-offset:2px}
+/* Modalità schermo bianco torcia: tutto bianco a luminosità massima */
+body.white-torch{background:#fff !important;color:#000 !important}
+body.white-torch *{visibility:hidden !important}
+body.white-torch::after{content:"";position:fixed;inset:0;background:#fff;z-index:9999;cursor:pointer}
+body.white-torch .wt-exit{visibility:visible !important;position:fixed;top:1rem;right:1rem;z-index:10000;background:#000;color:#fff;border:3px solid #d9000a;border-radius:10px;padding:.6rem 1rem;font-weight:900;font-size:1rem;cursor:pointer}
 /* link rapidi */
 h2{font-size:1.15rem;margin:1.4rem 0 .6rem;border-bottom:2px solid #ffd000;padding-bottom:.3rem}
 .links{list-style:none}
@@ -68,6 +79,10 @@ h2{font-size:1.15rem;margin:1.4rem 0 .6rem;border-bottom:2px solid #ffd000;paddi
     <button type="button" class="tool" id="t-torcia" aria-pressed="false">
       <span class="ico" aria-hidden="true">🔦</span> Torcia <span class="st" id="st-torcia">spenta</span>
     </button>
+    <div class="torcia-fallback" id="torcia-fallback" role="region" aria-label="Alternative se la torcia non funziona">
+      <strong>Torcia non disponibile?</strong> Se hai negato il permesso fotocamera, riabilitalo: tocca il <strong>lucchetto 🔒</strong> nella barra dell'indirizzo del browser → <em>Autorizzazioni</em> → <em>Fotocamera: Consenti</em> → ricarica la pagina. In alternativa usa lo schermo bianco a piena luminosità come torcia di emergenza:
+      <button type="button" class="white-torch-btn" id="white-torch-btn">💡 Usa schermo bianco come torcia</button>
+    </div>
     <button type="button" class="tool" id="t-bussola" aria-pressed="false">
       <span class="ico" aria-hidden="true">🧭</span> Bussola <span class="st" id="st-bussola">spenta</span>
     </button>
@@ -97,24 +112,65 @@ h2{font-size:1.15rem;margin:1.4rem 0 .6rem;border-bottom:2px solid #ffd000;paddi
 (function(){
   "use strict";
   // ── Torcia: getUserMedia + track torch constraint (Chrome Android) ──
+  // Se il permesso fotocamera è negato O il torch hardware non c'è,
+  // mostriamo il fallback "Schermo bianco torcia" (sempre disponibile,
+  // nessun permesso richiesto, funziona ovunque).
   var bT=document.getElementById('t-torcia'),sT=document.getElementById('st-torcia');
+  var fb=document.getElementById('torcia-fallback');
   var stream=null,track=null,torciaOn=false;
+  function mostraFallback(){if(fb)fb.classList.add('on');}
   bT.addEventListener('click',function(){
     if(torciaOn){spegniTorcia();return;}
-    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){sT.textContent='non disponibile';bT.disabled=true;return;}
+    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){
+      sT.textContent='non disponibile';bT.disabled=true;mostraFallback();return;
+    }
     navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}}).then(function(s){
       stream=s;track=s.getVideoTracks()[0];
       var cap=track.getCapabilities?track.getCapabilities():{};
-      if(!cap.torch){sT.textContent='non disponibile su questo dispositivo';try{track.stop();}catch(e){}return;}
+      if(!cap.torch){
+        sT.textContent='non disponibile su questo dispositivo';
+        try{track.stop();}catch(e){}
+        mostraFallback();return;
+      }
       track.applyConstraints({advanced:[{torch:true}]}).then(function(){
         torciaOn=true;bT.setAttribute('aria-pressed','true');sT.textContent='accesa';
-      }).catch(function(){sT.textContent='non disponibile';});
-    }).catch(function(){sT.textContent='permesso fotocamera negato';});
+        if(fb)fb.classList.remove('on');
+      }).catch(function(){sT.textContent='non disponibile';mostraFallback();});
+    }).catch(function(){sT.textContent='permesso negato — usa il fallback';mostraFallback();});
   });
   function spegniTorcia(){
     try{if(track)track.applyConstraints({advanced:[{torch:false}]});}catch(e){}
     try{if(track)track.stop();}catch(e){}
     torciaOn=false;track=null;stream=null;bT.setAttribute('aria-pressed','false');sT.textContent='spenta';
+  }
+
+  // ── Fallback: Schermo bianco come torcia (no permessi, no API) ──
+  // Modalità di sopravvivenza: bg #fff a piena luminosità, ovunque.
+  // Wake Lock attivato se disponibile per mantenere schermo acceso.
+  var btnWT=document.getElementById('white-torch-btn');
+  var wtLock=null;
+  if(btnWT){
+    btnWT.addEventListener('click',function(){
+      document.body.classList.add('white-torch');
+      // Crea pulsante "Spegni" con visibility:visible
+      if(!document.getElementById('wt-exit')){
+        var x=document.createElement('button');
+        x.id='wt-exit';x.className='wt-exit';x.type='button';
+        x.textContent='✕ Spegni';
+        x.setAttribute('aria-label','Spegni schermo bianco torcia');
+        x.addEventListener('click',function(ev){ev.stopPropagation();spegniWhiteTorch();});
+        document.body.appendChild(x);
+      }
+      // Wake Lock (Chrome/Edge moderni) per non far spegnere lo schermo
+      if('wakeLock' in navigator){
+        navigator.wakeLock.request('screen').then(function(l){wtLock=l;}).catch(function(){});
+      }
+    });
+  }
+  function spegniWhiteTorch(){
+    document.body.classList.remove('white-torch');
+    var x=document.getElementById('wt-exit');if(x)x.remove();
+    if(wtLock){try{wtLock.release();}catch(e){}wtLock=null;}
   }
 
   // ── Bussola: DeviceOrientation (iOS richiede permesso) ──
