@@ -6,6 +6,41 @@ Un articolo va nella cartella `content/comunicazioni/` e appare nella sezione "C
 del sito, in home come notizia recente, e negli RSS. Se devi creare una **pagina statica** (es.
 "Dove siamo", "Cosa facciamo"), vai direttamente alla **Parte 4**.
 
+## 🤖 Se lavori con Claude Code: automatismo totale
+
+Da maggio 2026 vale la **regola dell'automatismo totale**: tu fornisci a Claude **solo** il
+testo (o l'argomento + materia prima), eventuali foto, eventuali vincoli temporali. Claude
+decide **tutto il resto** automaticamente — incluse le scelte editoriali che prima erano tue
+(badge, versione facile A2, area, scadenza, `lis_section`). Se sbaglia, tu correggi e basta.
+**Non ti chiede prima di pubblicare** — pubblica, e a fine lavoro ti riassume in una riga
+cosa ha deciso.
+
+| Cosa fa Claude in automatico | Default |
+|---|---|
+| Sceglie il **badge** | Cascata operativa: Allerta > Emergenza > Aggiornamento > Esercitazione > Attività > Formazione > Volontariato > Radiocomunicazioni > Prevenzione > Evento > Avviso > Informazione > Comunicazione (fallback) |
+| Genera la **versione facile A2** | Sì se badge Allerta/Emergenza/Prevenzione, o procedure operative, o norme dense, o contenuti per categorie vulnerabili. No per bilanci, ricorrenze, eventi/feste, comunicati di servizio. |
+| Compila **`area`** | "Genzano di Roma" di default; cambia se altrove; vuoto se nazionale |
+| Compila **`scadenza`** | Vuoto di default; popolato solo se bandi/eventi/allerte con scadenza intrinseca |
+| Imposta **`tts: true`** | Sempre |
+| Compila **`lis_section`** | Solo se l'articolo è tematicamente legato a una delle 10 famiglie LIS di `data/lis.yaml` |
+| Genera **cover banner tipografica** | Sempre, prima del commit (`genera-cover.py`) |
+| Applica **fascia blu istituzionale** alle tue foto | Sempre (`applica-fascia-foto.sh`, idempotente) |
+| Inserisce foto nel corpo con **`{{< foto >}}`** | Sempre, caption + alt onesti dopo Read multimodale |
+| **Web check** delle entità citate (associazioni, sigle, persone) | Sempre (REGOLA 4 CLAUDE.md) |
+| Genera **QR code** | Sempre (`genera-qr-articoli.py`); doppia rete CI come fail-safe |
+| Aggiorna **indice di ricerca Pagefind** | Quando servizio richiede ricerca immediata |
+| Invoca il **gate AGID** (`pc-article-reviewer`) | Sempre, prima del `git add` |
+| **Commit + push + PR + merge** | In sequenza fino al sito live, su parola-trigger "pubblica/vai/procedi/sì" |
+
+**Cosa resta tuo** — fornire la materia prima, dare vincoli temporali se ci sono, dire
+"pubblica" quando vuoi che il sito vada live. Tutti gli altri passi sotto (1.1 → 1.15) sono
+**guida per pubblicazione manuale**: utili se vuoi capire cosa Claude sta facendo dietro
+le quinte, ma non sono passaggi che devi eseguire tu.
+
+Specifiche complete in `CLAUDE.md` § "Automatismo totale sugli articoli".
+
+---
+
 ### Passo 1.1 — Decidi se è davvero un articolo
 
 Un articolo è giustificato se risponde a una di queste domande:
@@ -19,6 +54,10 @@ evergreen), probabilmente va in una **pagina statica** sotto `/rischi-prevenzion
 un articolo.
 
 ### Passo 1.2 — Scegli la categoria (badge)
+
+🤖 **Con Claude Code questo passo è automatico** (vedi preambolo a inizio Parte). Claude
+applica la cascata operativa basandosi sul contenuto dell'articolo e ti comunica la scelta
+nel resoconto finale. Se non concordi, dici *"metti badge X"* e cambia.
 
 Il badge determina il colore e l'etichetta visibile. Scegli in base al contenuto, non alla
 "vibe" che vuoi dare:
