@@ -347,6 +347,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Feed RSS</p>
   <p class="ms-card-desc">Ricevi le notizie del Gruppo nel tuo aggregatore preferito (Feedly, Inoreader, Thunderbird, NetNewsWire). 14 feed dedicati per sezione del sito. Niente registrazione, niente cookie, niente dati personali.</p>
 </a>
+<a class="ms-card ms-edu" href="/risorse-pronte/">
+  <div class="ms-card-icon"><i class="bi bi-collection-play"></i></div>
+  <p class="ms-card-title">Materiali pronti da scaricare</p>
+  <p class="ms-card-desc">Podcast, infografiche, presentazioni divisi per tema di Protezione Civile (allerta meteo, kit emergenza, rischio sismico, idrogeologico, incendio). Liberamente scaricabili con licenza CC BY-NC-SA 4.0 per scuola, formazione e divulgazione.</p>
+</a>
 <a class="ms-card ms-edu" href="/stato-sistema/">
   <div class="ms-card-icon"><i class="bi bi-activity"></i></div>
   <p class="ms-card-title">Stato del sistema</p>
