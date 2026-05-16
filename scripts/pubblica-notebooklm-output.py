@@ -45,6 +45,7 @@ OUTPUT_DIR = HOME / "Scrivania" / "notebooklm-output"
 REPO_ROOT = Path(__file__).resolve().parent.parent
 STATIC = REPO_ROOT / "static"
 DATA_FILE = REPO_ROOT / "data" / "risorse_pronte.yaml"
+CONTENT_PODCAST = REPO_ROOT / "content" / "podcast"
 
 # Classificazione per ESTENSIONE — NotebookLM scarica i file con nomi
 # auto-generati arbitrari (es. "La_realtà_dietro_un_allerta_meteo.m4a",
@@ -251,6 +252,48 @@ def pubblica_tema(tema_slug: str, dry_run: bool = False) -> int:
             d = durata_audio(dest)
             if d:
                 voce["durata"] = d
+
+            # Crea anche il file content/podcast/<slug>.md così l'episodio
+            # appare sulla pagina /podcast/ + feed RSS iTunes.
+            CONTENT_PODCAST.mkdir(parents=True, exist_ok=True)
+            episodio_slug = f"{oggi}-{tema_slug}"
+            episodio_md = CONTENT_PODCAST / f"{episodio_slug}.md"
+            # Numero episodio: conta gli .md esistenti (escluso _index) + 1
+            num_episodio = 1 + sum(
+                1 for f in CONTENT_PODCAST.glob("*.md") if f.name != "_index.md"
+            )
+            audio_url = voce["file_url"]
+            podcast_md = f"""---
+title: "Podcast: {tema_info['titolo']}"
+date: {oggi}
+description: "Episodio podcast generato con NotebookLM sulla base delle fonti istituzionali del sito (CC BY-NC-SA 4.0). Ascoltabile online o scaricabile per ascolto offline."
+episodio: {num_episodio}
+audio: "{audio_url}"
+{f'durata: "{d}"' if d else ''}
+draft: false
+---
+
+Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sul tema **{tema_info['titolo']}**.
+
+Il podcast è generato automaticamente con [NotebookLM](https://notebooklm.google.com) partendo dalle fonti istituzionali raccolte dal sito (Dipartimento di Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO). I contenuti sono sempre verificati prima della pubblicazione.
+
+## Come ascoltare
+
+- **Ascolta direttamente** dal player audio sopra.
+- **Scarica il file** sul telefono per ascoltarlo offline (auto, palestra, casa).
+- **Iscriviti al [feed RSS]({{{{< ref "/podcast/index.xml" >}}}})** per riceverlo automaticamente nella tua app di podcast (Spotify, Apple Podcasts, Pocket Casts, AntennaPod, ecc.).
+
+## Licenza
+
+Materiale pubblicato con licenza Creative Commons **CC BY-NC-SA 4.0**: puoi ascoltarlo, condividerlo e riutilizzarlo per usi non commerciali (didattica, formazione interna, divulgazione) citando la fonte ("Protezione Civile Genzano di Roma").
+
+## Sul sito
+
+- [Tutti i materiali multimediali pronti](/risorse-pronte/) — podcast, infografiche, presentazioni divisi per tema
+- [{tema_info['titolo']}](/risorse-pronte/#tema-{tema_slug}) — gli altri materiali su questo tema
+"""
+            episodio_md.write_text(podcast_md, encoding="utf-8")
+            print(f"  ✓ {episodio_slug:35s} → content/podcast/{episodio_md.name} (episodio #{num_episodio})")
 
         nuove_voci.append(voce)
 
