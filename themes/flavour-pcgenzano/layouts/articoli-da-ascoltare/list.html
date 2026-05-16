@@ -30,11 +30,46 @@
         riduce ulteriormente i tempi.
       </p>
 
-      <ul class="podcast-list list-unstyled" role="list">
+      {{/* ── INDICE CHIP FILTRO PER BADGE ──
+           Stesso linguaggio visivo di /risorse-pronte/. Mostra ogni badge
+           usato dagli articoli ascoltabili con conteggio. Click filtra
+           via JS (data-filter attribute) sulla lista sotto. Click "Tutti"
+           ripristina la vista completa. */}}
+      {{ $conteggi := dict }}
+      {{ range $articoli }}
+        {{ $b := .Params.badge | default "Comunicazione" }}
+        {{ $n := add (index $conteggi $b | default 0) 1 }}
+        {{ $conteggi = merge $conteggi (dict $b $n) }}
+      {{ end }}
+
+      <nav class="risorse-indice mt-3 mb-4 articoli-da-ascoltare-filtri" aria-label="Filtra per categoria">
+        <p class="risorse-indice-label mb-2">
+          <i class="bi bi-funnel-fill me-1" aria-hidden="true"></i>
+          Filtra per categoria:
+        </p>
+        <div class="risorse-indice-chips" role="group" aria-label="Filtri categoria articoli">
+          <button type="button" class="risorse-chip is-active" data-badge-filter="tutti"
+                  aria-pressed="true" aria-label="Mostra tutti gli articoli">
+            <i class="bi bi-collection" aria-hidden="true"></i>
+            <span class="risorse-chip-label">Tutti</span>
+            <span class="risorse-chip-count" aria-hidden="true">{{ len $articoli }}</span>
+          </button>
+          {{ range $badge, $n := $conteggi }}
+          <button type="button" class="risorse-chip" data-badge-filter="{{ $badge }}"
+                  aria-pressed="false" aria-label="Mostra solo articoli {{ $badge }}, {{ $n }} disponibili">
+            <span class="risorse-chip-label">{{ $badge }}</span>
+            <span class="risorse-chip-count" aria-hidden="true">{{ $n }}</span>
+          </button>
+          {{ end }}
+        </div>
+      </nav>
+
+      <ul class="podcast-list list-unstyled" role="list" id="lista-articoli-ascoltabili">
         {{ range $articoli.ByDate.Reverse }}
         {{/* Durata stimata audio: ReadingTime * (200/150) = * 1.33, arrotondato. */}}
         {{ $audioMin := math.Max 1 (int (math.Round (mul .ReadingTime 1.33))) }}
-        <li class="podcast-item card mb-3" role="listitem">
+        {{ $badge := .Params.badge | default "Comunicazione" }}
+        <li class="podcast-item card mb-3" role="listitem" data-badge="{{ $badge }}">
           <div class="card-body p-3 d-flex flex-wrap align-items-start gap-3">
             <div class="podcast-icon" aria-hidden="true">
               <i class="bi bi-volume-up-fill"></i>
@@ -44,7 +79,7 @@
                 <a href="{{ .RelPermalink }}" class="stretched-link">{{ .Title }}</a>
               </h2>
               <p class="small text-muted mb-1">
-                {{ with .Params.badge }}<span class="me-2">{{ partial "badge.html" . }}</span>{{ end }}
+                <span class="me-2">{{ partial "badge.html" $badge }}</span>
                 <time datetime="{{ .Date.Format "2006-01-02" }}">
                   <i class="bi bi-calendar3 me-1" aria-hidden="true"></i>{{ .Date | time.Format ":date_long" }}
                 </time>
@@ -63,11 +98,43 @@
         {{ end }}
       </ul>
 
-      <p class="small text-muted mt-4">
+      <p class="small text-muted mt-4" id="conteggio-articoli-visibili">
         Trovi un totale di <strong>{{ len $articoli }}</strong> articoli ascoltabili sul sito.
         Tutti rispondono alla stessa logica: bottone <em>Leggi ad alta voce</em> in cima
         al testo, voce italiana del dispositivo, niente account.
       </p>
+
+      <script>
+        // Filtri client-side per categoria. Vanilla JS, no librerie.
+        // Tastiera-friendly: i bottoni sono <button> nativi, focusabili,
+        // aggiornano aria-pressed e count visibili.
+        (function () {
+          var chips = document.querySelectorAll('.articoli-da-ascoltare-filtri .risorse-chip');
+          var items = document.querySelectorAll('#lista-articoli-ascoltabili .podcast-item');
+          var conteggio = document.getElementById('conteggio-articoli-visibili');
+          var conteggioStrong = conteggio ? conteggio.querySelector('strong') : null;
+          var totale = items.length;
+          chips.forEach(function (chip) {
+            chip.addEventListener('click', function () {
+              var filtro = chip.getAttribute('data-badge-filter');
+              chips.forEach(function (c) {
+                c.classList.toggle('is-active', c === chip);
+                c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+              });
+              var visibili = 0;
+              items.forEach(function (item) {
+                var matcha = (filtro === 'tutti') || (item.getAttribute('data-badge') === filtro);
+                item.style.display = matcha ? '' : 'none';
+                if (matcha) visibili += 1;
+              });
+              if (conteggioStrong) conteggioStrong.textContent = visibili;
+              // Scroll smooth alla lista per dare conferma visiva
+              var lista = document.getElementById('lista-articoli-ascoltabili');
+              if (lista) lista.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+          });
+        })();
+      </script>
 
       {{ partial "page-tools.html" . }}
     </div>
