@@ -6,6 +6,7 @@ lis_section: "aree-emergenza"
 aliases:
   - /mappe.html
   - /mappe/
+risorse_tema: "rischio-idrogeologico"
 ---
 
 In questa sezione puoi consultare la **mappa interattiva** e le tabelle con i punti strategici previsti dal Piano di Emergenza Comunale.

@@ -37,6 +37,7 @@ Entrambe le opzioni sono **gratuite**, **accessibili** (WCAG 2.2 AA) e **rispett
 
 ## Vedi anche
 
+- [Materiali pronti da scaricare](/risorse-pronte/) — podcast tematici, infografiche, presentazioni divisi per rischio (sismico, idrogeologico, incendio, allerta meteo, kit emergenza). Licenza CC BY-NC-SA 4.0
 - [Strumenti di accessibilità](/accessibilita/) — toolbar di lettura su tutte le pagine
 - [Feed RSS](/feed-rss/) — sottoscriviti agli aggiornamenti
 - [Contenuti in LIS](/lis/) — articoli con lingua dei segni italiana

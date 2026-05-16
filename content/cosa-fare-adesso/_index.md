@@ -10,6 +10,7 @@ sitemap:
   priority: 0.8
   changefreq: monthly
 dataUltimaRevisione: "2026-05-06"
+risorse_tema: "allerta-meteo"
 ---
 <!-- cache-bust: 2026-05-13 forza re-upload FTP per allineare header/footer (audit 13/05) -->
 

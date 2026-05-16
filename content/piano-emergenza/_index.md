@@ -13,6 +13,7 @@ sitemap:
 toc: true
 tts: true
 dataUltimaRevisione: "2026-05-06"
+risorse_tema: "allerta-meteo"
 ---
 Il Piano di Emergenza Comunale stabilisce come organizzare i soccorsi in caso di calamità. Indica i rischi del territorio, le aree di emergenza, le procedure operative e i soggetti che coordinano gli interventi.
 

@@ -3,6 +3,7 @@ title: "Kit Didattico — Scuola Secondaria di Primo Grado"
 description: "Materiale didattico di protezione civile per studenti dagli 11 ai 14 anni: rischi del territorio, sistema di allertamento, piano di emergenza e autoprotezione."
 layout: "single"
 toc: true
+risorse_tema: "kit-emergenza"
 ---
 
 Questo kit è pensato per i docenti della **scuola secondaria di primo grado** che vogliono approfondire con i propri studenti i temi della protezione civile, della conoscenza del rischio e della cittadinanza attiva.

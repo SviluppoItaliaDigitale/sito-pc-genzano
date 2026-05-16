@@ -34,3 +34,9 @@ params:
 Si ascolta gratis, senza account. Puoi seguirlo dalla tua app preferita iscrivendoti al **feed RSS** qui sotto, oppure su Spotify e Apple Podcasts non appena il podcast sarà distribuito.
 
 Ogni episodio ha la **trascrizione completa** in pagina: per chi preferisce leggere, per chi non sente bene, e per ritrovare al volo un'informazione.
+
+## Altri materiali multimediali
+
+Oltre al podcast, sul sito trovi **infografiche, presentazioni e cover audio** per ogni tema di Protezione Civile. Tutti pubblicati con licenza CC BY-NC-SA 4.0, scaricabili per scuola, formazione e divulgazione.
+
+[**Vai a tutti i materiali pronti →**](/risorse-pronte/)

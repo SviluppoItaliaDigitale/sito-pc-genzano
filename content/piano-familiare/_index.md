@@ -8,6 +8,7 @@ aliases:
   - /pianofamiliare/
 toc: true
 dataUltimaRevisione: "2026-05-06"
+risorse_tema: "kit-emergenza"
 ---
 Compila il modulo per creare un piano di emergenza da stampare e conservare in casa. **I dati restano sul tuo computer**: non vengono inviati al sito, non vengono salvati online e non vengono trasmessi al Gruppo.
 
