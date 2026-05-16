@@ -393,3 +393,10 @@ dataUltimaRevisione: "2026-05-06"
 <p style="text-align: center;"><strong>Via Sicilia 13-15</strong><br>Genzano di Roma</p>
 <p>Se c'è un'emergenza, non scrivere email. Chiama il <strong>112</strong>.</p>
 </div>
+
+<div class="facile-blocco" style="background: #e7f0fa; border-color: #003366;">
+<h2 style="color: #003366;"><span class="icona" style="background: #003366;">🎧</span> Vuoi ascoltare invece di leggere?</h2>
+<p>Sul sito trovi <strong>podcast audio</strong>, <strong>infografiche</strong> e <strong>presentazioni</strong> sui temi importanti: terremoto, alluvione, incendio, allerta meteo, kit di emergenza.</p>
+<p>Puoi <strong>scaricarli</strong> sul telefono e ascoltarli quando vuoi.</p>
+<p style="text-align: center;"><a href="/risorse-pronte/"><strong>Vai ai materiali pronti</strong></a></p>
+</div>
