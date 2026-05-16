@@ -213,4 +213,4 @@ Questa pagina è progettata per essere **stampata in bianco e nero** su A4 front
 
 - [Capitolo 3 — Funzioni tecniche (rete TLC)](/formazione/manuale-campo/funzioni-tecniche/)
 - [Capitolo 5 — Schede tecniche (promemoria radio)](/formazione/manuale-campo/schede-tecniche/#scheda-10--comunicazione-radio-promemoria)
-- [Radiocomunicazioni — area tematica](/comunicazioni/?filter=Radiocomunicazioni)
+- [Radiocomunicazioni — area tematica](/comunicazioni/#cat=radiocomunicazioni)
