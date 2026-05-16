@@ -194,7 +194,8 @@
     }
 
     h += '<div class="quiz-azioni no-print">' +
-      '<button type="button" class="quiz-btn" data-az="badge">Scarica il badge</button>' +
+      '<button type="button" class="quiz-btn" data-az="attestato">Scarica attestato (A4)</button>' +
+      '<button type="button" class="quiz-btn" data-az="badge">Scarica badge (quadrato)</button>' +
       '<button type="button" class="quiz-btn" data-az="stampa">Stampa il piano</button>' +
       '<button type="button" class="quiz-btn quiz-btn-sec" data-az="rifai">Rifai il quiz</button>' +
       "</div>" +
@@ -209,6 +210,96 @@
     });
     app.querySelector('[data-az="stampa"]').addEventListener("click", function () { window.print(); });
     app.querySelector('[data-az="badge"]').addEventListener("click", function () { scaricaBadge(r, oggi); });
+    app.querySelector('[data-az="attestato"]').addEventListener("click", function () { scaricaAttestato(r, oggi); });
+  }
+
+  // ── Attestato simbolico A4 generato su canvas ───────────────────────────
+  // A4 verticale 210x297 mm → 2480x3508 px a 300 DPI. Usiamo 1240x1754
+  // (150 DPI, qualità sufficiente per stampa A4 con peso file basso).
+  // Layout: bordo doppio, intestazione istituzionale, titolo ATTESTATO,
+  // corpo con profilo e statistiche, data, disclaimer "non abilitante".
+  function scaricaAttestato(r, oggi) {
+    var W = 1240, H = 1754;
+    var c = document.createElement("canvas");
+    c.width = W; c.height = H;
+    var x = c.getContext("2d");
+    var col = r.tier.id === "alto" ? "#15803d" : (r.tier.id === "medio" ? "#003366" : "#b45309");
+    // Sfondo bianco
+    x.fillStyle = "#ffffff"; x.fillRect(0, 0, W, H);
+    // Bordo esterno doppio
+    x.strokeStyle = col; x.lineWidth = 8;
+    x.strokeRect(60, 60, W - 120, H - 120);
+    x.lineWidth = 2;
+    x.strokeRect(85, 85, W - 170, H - 170);
+    // Intestazione
+    x.fillStyle = col;
+    x.textAlign = "center";
+    x.font = "bold 38px Arial, sans-serif";
+    x.fillText("PROTEZIONE CIVILE", W / 2, 200);
+    x.font = "26px Arial, sans-serif";
+    x.fillText("Gruppo Comunale Volontari — Genzano di Roma", W / 2, 245);
+    // Linea separatore
+    x.strokeStyle = col; x.lineWidth = 2;
+    x.beginPath(); x.moveTo(W / 2 - 200, 290); x.lineTo(W / 2 + 200, 290); x.stroke();
+    // Titolo grande
+    x.fillStyle = "#1a1a1a";
+    x.font = "bold 72px Georgia, serif";
+    x.fillText("ATTESTATO SIMBOLICO", W / 2, 420);
+    x.font = "italic 28px Georgia, serif";
+    x.fillStyle = "#555";
+    x.fillText("di partecipazione al percorso di autovalutazione", W / 2, 470);
+    x.fillText('"Quanto sei preparato a un\'emergenza?"', W / 2, 510);
+    // Corpo: si attesta che...
+    x.fillStyle = "#1a1a1a";
+    x.font = "26px Arial, sans-serif";
+    wrap(x,
+      "Si attesta che il/la cittadino/a ha completato il percorso di autovalutazione della propria preparazione alle emergenze sui rischi del territorio dei Castelli Romani.",
+      W / 2, 660, W - 280, 38);
+    // Profilo di preparazione (riquadro colorato)
+    x.fillStyle = col;
+    x.fillRect(W / 2 - 350, 850, 700, 180);
+    x.fillStyle = "#ffffff";
+    x.font = "bold 30px Arial, sans-serif";
+    x.fillText("PROFILO DI PREPARAZIONE", W / 2, 900);
+    x.font = "bold 60px Arial, sans-serif";
+    wrap(x, r.tier.t.toUpperCase(), W / 2, 985, 660, 64);
+    // Statistiche
+    x.fillStyle = "#1a1a1a";
+    x.font = "24px Arial, sans-serif";
+    x.fillText(
+      r.forza.length + " punti di forza  ·  " + r.totLacune + " punti da rafforzare",
+      W / 2, 1110
+    );
+    // Data e luogo
+    x.font = "italic 22px Georgia, serif";
+    x.fillStyle = "#555";
+    x.fillText("Genzano di Roma, " + oggi, W / 2, 1220);
+    // Firma istituzionale
+    x.font = "bold 24px Arial, sans-serif";
+    x.fillStyle = col;
+    x.fillText("Il Gruppo Comunale Volontari", W / 2, 1380);
+    x.font = "italic 20px Arial, sans-serif";
+    x.fillStyle = "#555";
+    x.fillText("Protezione Civile di Genzano di Roma", W / 2, 1410);
+    // Disclaimer
+    x.fillStyle = "#666";
+    x.font = "italic 18px Arial, sans-serif";
+    wrap(x,
+      "Attestato simbolico, NON abilitante a funzioni di Protezione Civile. Non rilascia qualifiche operative né titoli di volontariato. Vale come riconoscimento personale di sensibilizzazione alla cultura del rischio.",
+      W / 2, 1530, W - 300, 24);
+    // URL del sito
+    x.fillStyle = col;
+    x.font = "bold 18px Arial, sans-serif";
+    x.fillText("protezionecivilegenzano.it", W / 2, 1680);
+    // Download
+    c.toBlob(function (blob) {
+      if (!blob) return;
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "attestato-preparazione-pc-genzano.png";
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    }, "image/png");
   }
 
   // ── Badge PNG generato su canvas (niente librerie) ───────────────────────
