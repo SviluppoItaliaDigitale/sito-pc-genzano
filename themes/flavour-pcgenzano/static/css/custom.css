@@ -6089,3 +6089,84 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
   .materiali-correlati { display: none; }  /* link interattivi non utili su carta */
 }
 /* fine MATERIALI CORRELATI v1.0 */
+
+
+/* ==========================================================================
+   ASCOLTA IL SITO v1.0 — pagina /articoli-da-ascoltare/ (maggio 2026)
+   3 grandi card di azione invece di lista lunga duplicato di /comunicazioni/.
+   Coerente col linguaggio visivo del sistema (blu istituzionale, hover lift).
+   ========================================================================== */
+.ascolta-card {
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  color: #1a1a1a;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.ascolta-card:hover,
+.ascolta-card:focus-within {
+  transform: translateY(-3px);
+  border-color: #003366;
+  box-shadow: 0 10px 28px rgba(0, 51, 102, 0.14);
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.ascolta-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #e7f0fa;
+  color: #003366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+.ascolta-card-tipo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #003366;
+  background: #e7f0fa;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+.ascolta-card-titolo {
+  color: #003366;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.ascolta-card-meta {
+  color: #5a6470;
+  margin-top: 0.3rem;
+}
+.ascolta-card-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.7rem;
+  font-weight: 600;
+  color: #003366;
+}
+.ascolta-card:hover .ascolta-card-cta,
+.ascolta-card:focus-within .ascolta-card-cta {
+  text-decoration: underline;
+}
+.ascolta-passi {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.4rem;
+}
+.ascolta-passi li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+@media (max-width: 575.98px) {
+  .ascolta-card-icon { width: 48px; height: 48px; font-size: 1.4rem; }
+}
+@media print { .ascolta-cards { display: none; } }
+/* fine ASCOLTA IL SITO v1.0 */
