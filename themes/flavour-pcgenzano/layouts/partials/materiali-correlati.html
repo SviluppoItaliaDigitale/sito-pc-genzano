@@ -30,11 +30,27 @@
     {{- $temaCandidate = .File.BaseFileName -}}
   {{- end -}}
 
+  {{/* Alias di compatibilità: nomi sezione del sito → slug tema NotebookLM */}}
+  {{- $aliases := dict
+      "allerte-meteo" "allerta-meteo"
+      "rischi-prevenzione" ""
+  -}}
+  {{- if isset $aliases $temaCandidate -}}
+    {{- $temaCandidate = index $aliases $temaCandidate -}}
+  {{- end -}}
+
   {{- $dati := site.Data.risorse_pronte -}}
   {{- if and $temaCandidate $dati -}}
-    {{- $materiali := where (default slice $dati.materiali) "tema" $temaCandidate -}}
+    {{- $allMateriali := slice -}}
+    {{- with $dati.materiali }}{{ $allMateriali = . }}{{ end -}}
+    {{- $materiali := slice -}}
+    {{- if $allMateriali }}{{ $materiali = where $allMateriali "tema" $temaCandidate }}{{ end -}}
     {{- if gt (len $materiali) 0 -}}
-      {{- $temaInfo := index (where (default slice $dati.temi) "slug" $temaCandidate) 0 -}}
+      {{- $allTemi := slice -}}
+      {{- with $dati.temi }}{{ $allTemi = . }}{{ end -}}
+      {{- $temaInfoList := where $allTemi "slug" $temaCandidate -}}
+      {{- $temaInfo := dict -}}
+      {{- if $temaInfoList }}{{ $temaInfo = index $temaInfoList 0 }}{{ end -}}
       <section class="materiali-correlati mt-5" aria-labelledby="mc-{{ $temaCandidate }}">
         <h2 id="mc-{{ $temaCandidate }}" class="materiali-correlati-titolo">
           <i class="bi bi-collection-play me-2" aria-hidden="true"></i>
@@ -56,7 +72,8 @@
                 <div class="risorsa-tipo mb-2">
                   {{ if eq .tipo "podcast" }}<i class="bi bi-headphones me-1" aria-hidden="true"></i>Podcast
                   {{ else if eq .tipo "infografica" }}<i class="bi bi-image me-1" aria-hidden="true"></i>Infografica
-                  {{ else if eq .tipo "presentazione" }}<i class="bi bi-file-earmark-slides me-1" aria-hidden="true"></i>Presentazione
+                  {{ else if eq .tipo "presentazione" }}<i class="bi bi-file-earmark-slides me-1" aria-hidden="true"></i>Presentazione PPTX
+                  {{ else if eq .tipo "presentazione-pdf" }}<i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i>Presentazione PDF
                   {{ else if eq .tipo "quiz" }}<i class="bi bi-check2-square me-1" aria-hidden="true"></i>Quiz
                   {{ else if eq .tipo "flashcard" }}<i class="bi bi-card-list me-1" aria-hidden="true"></i>Flashcard
                   {{ else }}<i class="bi bi-file-earmark me-1" aria-hidden="true"></i>{{ .tipo | title }}
