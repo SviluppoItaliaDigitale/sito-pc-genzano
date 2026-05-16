@@ -281,7 +281,7 @@ Il podcast è generato automaticamente con [NotebookLM](https://notebooklm.googl
 
 - **Ascolta direttamente** dal player audio sopra.
 - **Scarica il file** sul telefono per ascoltarlo offline (auto, palestra, casa).
-- **Iscriviti al [feed RSS]({{{{< ref "/podcast/index.xml" >}}}})** per riceverlo automaticamente nella tua app di podcast (Spotify, Apple Podcasts, Pocket Casts, AntennaPod, ecc.).
+- **Iscriviti al [feed RSS](/podcast/index.xml)** per riceverlo automaticamente nella tua app di podcast (Spotify, Apple Podcasts, Pocket Casts, AntennaPod, ecc.).
 
 ## Licenza
 
