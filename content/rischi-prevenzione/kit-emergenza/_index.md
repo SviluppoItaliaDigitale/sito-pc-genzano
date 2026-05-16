@@ -50,6 +50,8 @@ Inserisci:
 - occhiali di riserva, apparecchi acustici, batterie o ausili personali;
 - piccolo oggetto rassicurante per bambini.
 
+> **Peso indicativo dello zaino**: tendenzialmente non oltre il **15-20% del peso corporeo** di chi lo porta. Se non riesci a portarlo per mezz'ora a piedi, è troppo pesante: riducilo. Uno zaino con cinghie sul torace e fianchi distribuisce meglio il carico di una borsa a tracolla.
+
 ## Kit casa 72 ore
 
 Serve quando puoi restare in casa ma acqua, corrente, gas, telefono o negozi potrebbero non essere disponibili.
@@ -91,6 +93,22 @@ Inserisci:
 
 Non lasciare farmaci o alimenti sensibili al caldo in auto per lunghi periodi.
 
+### Adattamenti stagionali del kit auto
+
+In inverno (indicativamente novembre-marzo) aggiungi:
+
+- guanti pesanti, cappello, calze di ricambio;
+- catene da neve o pneumatici invernali, secondo l'ordinanza regionale in vigore;
+- coperta in pile in più rispetto a quella termica;
+- bottiglietta di acqua per il radiatore.
+
+In estate (indicativamente giugno-settembre) aggiungi:
+
+- parasole per il parabrezza;
+- scorta di acqua aumentata, soprattutto se viaggi con bambini, anziani o animali;
+- sali minerali e copricapo;
+- ventaglio o piccolo ventilatore a batteria.
+
 ## Quantità orientative
 
 Le quantità dipendono da età, salute, stagione, clima, attività fisica, farmaci, dieta e disponibilità di acqua sicura.
@@ -114,6 +132,23 @@ Questi valori non sono una regola valida per ogni famiglia, ma aiutano a capire 
 </div>
 
 Aumenta la quantità se ci sono caldo intenso, bambini piccoli, persone malate, gravidanza, allattamento, animali domestici o necessità igieniche particolari.
+
+<div class="table-responsive">
+<table>
+<caption>Esigenze idriche particolari da considerare in aggiunta alla stima base</caption>
+<thead>
+<tr><th scope="col">Caso particolare</th><th scope="col">Fabbisogno indicativo aggiuntivo</th></tr>
+</thead>
+<tbody>
+<tr><td>Bambino piccolo</td><td>L'acqua di igiene minima e il latte ricostituito assorbono quote ulteriori rispetto al solo bere.</td></tr>
+<tr><td>Persona anziana o con patologia cronica</td><td>Il fabbisogno per terapie, dialisi domiciliare o medicazioni può aumentare in modo significativo: chiedi indicazioni al medico curante.</td></tr>
+<tr><td>Gravidanza o allattamento</td><td>Il fabbisogno idrico aumenta, in particolare nei mesi caldi.</td></tr>
+<tr><td>Animale domestico</td><td>Il consumo dipende da specie, peso e temperatura; tieni una scorta dedicata oltre a quella per le persone.</td></tr>
+</tbody>
+</table>
+</div>
+
+Queste sono indicazioni di buon senso, non valori clinici: per casi delicati (lattanti, dialisi, terapie salvavita) chiedi al medico o al pediatra di riferimento.
 
 ## Adattamenti per bisogni specifici
 
@@ -157,13 +192,29 @@ Controlla il kit almeno due volte l'anno, ad esempio in primavera e in autunno:
 - materiali per animali;
 - bisogni sanitari o assistenziali cambiati.
 
+Un promemoria pratico è collegare il controllo ai **cambi dell'ora legale e solare** (l'ultima domenica di marzo e l'ultima domenica di ottobre): due appuntamenti fissi all'anno, distanziati di circa sei mesi, che il calendario ricorda da solo.
+
+Per una verifica strutturata puoi usare la **[checklist A4 stampabile](/formazione/schede-stampabili/checklist-kit-emergenza/)** da appendere accanto al kit.
+
 ## Vedi anche
 
 - [Piano di emergenza familiare](/piano-familiare/) — prepara il piano per la tua famiglia
 - [Cosa fare in caso di emergenza](/formazione/cosa-fare-in-caso-di/) — azioni pratiche per scenario
-- [Kit per persone fragili e bisogni specifici](/formazione/kit-fragilita-vulnerabilita/) — adattamenti per esigenze particolari
+- [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/) — anziani, persone con disabilità, terapie croniche
 - [Numeri utili](/numeri-utili/) — chi chiamare in emergenza
 - [Rischi e prevenzione](/rischi-prevenzione/) — guida ai principali rischi
+
+### Kit per situazioni vulnerabili specifiche
+
+Sul nostro sito trovi schede dedicate a chi vive in famiglia situazioni che richiedono materiali e attenzioni in più:
+
+- [Kit calamità — Bambini](/formazione/kit-calamita-bambini/)
+- [Kit calamità — Neonati e gravidanza](/formazione/kit-calamita-neonati/)
+- [Kit calamità — Anziani](/formazione/kit-calamita-anziani/)
+- [Kit calamità — Animali domestici](/formazione/kit-calamita-animali/)
+- [Kit calamità — Caregiver familiari](/formazione/kit-calamita-caregiver-familiari/)
+- [Kit calamità — Terapie salvavita](/formazione/kit-calamita-terapie-salvavita/)
+- [Tutti i Kit pronti per situazioni vulnerabili](/formazione/kit-calamita/)
 
 ## Fonti di riferimento
 
