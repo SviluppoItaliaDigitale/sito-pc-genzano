@@ -113,6 +113,10 @@ Questo è un **registro deliberatamente diverso** dall'AGID per il cittadino. La
 
 ## 25.6 Come generare una versione facile (workflow)
 
+🤖 **Da maggio 2026 con Claude Code la decisione è automatica.** Claude la genera **senza chiedere** quando l'articolo ha badge `Allerta`/`Emergenza`/`Prevenzione`, o cita norme dense, o riguarda categorie vulnerabili, o contiene procedure operative (NUE 112, IT-alert, kit emergenza, piano familiare). **Non la genera** per: bilanci, ricorrenze, eventi/feste, comunicati di servizio, `Aggiornamento` post-evento, `Radiocomunicazioni` tecnici. Se ti aspetti un comportamento diverso, lo dici a Claude e cambia. Specifiche complete in `CLAUDE.md` § "Automatismo totale sugli articoli".
+
+**Workflow manuale** (se generi la versione facile da solo, senza Claude):
+
 La generazione è **on-demand**, una conversazione alla volta con un'IA o riscrittura manuale:
 
 1. **Apri l'articolo standard** in `content/comunicazioni/<slug>.md`.

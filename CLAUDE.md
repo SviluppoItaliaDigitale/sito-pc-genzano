@@ -204,6 +204,52 @@ Risultato: il **9 maggio 2026** l'utente ha chiesto di rivedere AGID tutti gli a
 
 ---
 
+## Automatismo totale sugli articoli — Claude decide, l'utente corregge se dissente
+
+🟢 **Quando l'utente chiede di pubblicare un articolo nuovo, io eseguo da solo TUTTI i passaggi tecnici e editoriali senza chiedere conferma.** L'utente fornisce SOLO: il testo (o l'argomento + materia prima), eventuali foto, eventuali vincoli temporali ("deve uscire venerdì", "scadenza fra 7 giorni"). Tutto il resto, **incluse le scelte editoriali sul frontmatter**, è mio per default. Se sbaglio, l'utente me lo dice e correggo: ma il default è agire, non chiedere.
+
+**Cosa decido automaticamente** (senza domandare):
+
+| Campo | Logica di default |
+|---|---|
+| **Badge** | Cascata: `Allerta` (è previsto) → `Emergenza` (in corso) → `Aggiornamento` (concluso) → `Esercitazione` → `Attività` (intervento Gruppo) → `Formazione` → `Volontariato` → `Radiocomunicazioni` → `Prevenzione` → `Evento` → `Avviso` → `Informazione` → `Comunicazione` (fallback). Prevalgono i badge operativi. |
+| **Versione facile A2** (`<slug>-facile.md`) | **Genero automaticamente** se badge `Allerta`/`Emergenza`/`Prevenzione`, o cita norme dense (D.Lgs., L., DPCM con riferimenti), o riguarda categorie vulnerabili, o procedure operative (NUE 112, IT-alert, kit emergenza, piano familiare). **Non genero** per: bilanci, ricorrenze, eventi/feste, comunicati di servizio, `Aggiornamento` post-evento, `Radiocomunicazioni` tecnici. |
+| **`area`** | "Genzano di Roma" di default; cambio se l'articolo è chiaramente altrove (es. articolo Giro Formia → "Formia (LT)"); vuoto se nazionale/generico. |
+| **`scadenza`** | Vuoto di default; popolo solo per bandi/eventi/allerte con scadenza intrinseca. |
+| **`tts: true`** | Sempre. La blacklist su pagine legali è hard-coded nei template. |
+| **`lis_section`** | Popolo solo se l'articolo è tematicamente legato a una delle 10 famiglie LIS del catalogo `data/lis.yaml` (`rischio-sismico`, `rischio-vulcanico`, `rischio-idrogeologico`, `rischio-incendio`, `maremoto`, `allerte-meteo`, `gestione-emergenza`, `pianificazione`, `aree-emergenza`, `kit-emergenza`). Altrimenti ometto. |
+| **Cover banner tipografica** | Sempre. Lancio `python3 scripts/genera-cover.py <file>` e popolo `image:` + `image_alt:` nel frontmatter. REGOLA 1 di CLAUDE.md. |
+| **Foto fornite dall'utente** | Read multimodale → `bash scripts/applica-fascia-foto.sh` (idempotente, no doppia fascia) → shortcode `{{< foto >}}` con caption + alt onesti basati su ciò che si vede + attribuzione "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" (REGOLE 2 e 3). |
+| **Web check entità citate** | WebFetch su ogni associazione/sigla/persona prima di scriverla (REGOLA 4). |
+| **QR code** | `python3 scripts/genera-qr-articoli.py` (idempotente). Anche se dimentico, c'è doppia rete CI (`genera-qr-articoli.yml` + step in `deploy.yml`). |
+| **Indice ricerca Pagefind** | `bash scripts/genera-indice-ricerca.sh` quando servizio richiede ricerca immediata. |
+| **Gate AGID** | Invoco `pc-article-reviewer` prima del `git add` (gate obbligato, vedi sezione sopra). |
+| **Commit + push + (se autorizzato) PR + merge** | Tutto in sequenza fino al sito live. Parola-trigger "pubblica/vai/procedi/sì" autorizza fino al merge. |
+
+**Cosa NON decido in autonomia** (decisione editoriale dell'utente):
+
+- **Materia prima** dell'articolo (testo, foto, argomento).
+- **Vincoli temporali espliciti** ("deve uscire venerdì", "calendarizza il 15 giugno").
+- **Comandi di pubblicazione** ("pubblica", "vai") che autorizzano il merge su `main`.
+- **Genere alternativo** se l'utente chiede registro non-AGID (comunicato stampa, paper, ecc., vedi eccezione gate AGID sopra).
+
+**Cosa comunico all'utente a fine lavoro su un articolo:**
+
+Una riga sintetica con le decisioni prese: *"Badge: Attività — il Gruppo ha affiancato il dispositivo; versione facile: sì — contiene procedure operative; area: Formia (LT); scadenza: vuoto; lis_section: gestione-emergenza."*
+
+Se non concorda, corregge e basta. **Non chiedo PRIMA di pubblicare** — pubblico, poi se serve aggiusto.
+
+**Why esiste questa regola:**
+
+Il 16 maggio 2026 l'utente ha detto, frustrato, in tre messaggi consecutivi:
+1. *"deve essere fatto tutto in automatico! onestamente non posso ricordare ogni componente da inserire nell'articolo!"*
+2. *"mica dico di creare l'audio per l'articolo... o di generare la fascia nelle foto! lo fai te benissimo in automatico, ok? cosi anche per i qr code."*
+3. *"Quale badge / Versione italiano semplice A2 — anche queste devono essere fatte tutte in automatico! se io ti dico qualcosa di diverso, la fai! altrimenti fai tutto in automatico!"*
+
+Il problema concreto era duplice: (a) le 5 PR di iterazione mobile sull'articolo Giro Formia avevano lasciato il sito senza bottone "Scarica QR" perché nessuno aveva lanciato `scripts/genera-qr-articoli.py`; (b) per ogni articolo il flusso "Claude propone, utente sceglie" lo costringeva a una micro-decisione editoriale a turno. **Da maggio 2026 il default è: Claude decide, l'utente corregge se dissente.**
+
+---
+
 ## Regole di dettaglio (file separati)
 
 @.claude/rules/01-governance-pa.md
