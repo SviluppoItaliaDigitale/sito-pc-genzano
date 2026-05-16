@@ -26,8 +26,22 @@
   Compatibilità subpath: i percorsi degli asset passano per `relURL` così
   funzionano sia su Aruba (root) sia su GitHub Pages (subpath /sito-pc-genzano/).
 */}}
-{{- if .File -}}
-{{- $base := .File.BaseFileName -}}
+{{/* Naming dei file QR (allineato a scripts/genera-qr-articoli.py):
+     - Kind "home"    → "home"           (es. static/qr/home.png per /)
+     - Kind "section" → .Section         (es. static/qr/contatti.png per /contatti/)
+     - Kind "page"    → .File.BaseFileName (es. static/qr/2026-05-15-foo.png)
+     Storia: il 16/05/2026 l'utente ha chiesto QR su tutte le pagine, non solo
+     /comunicazioni/. Esteso partial + script Python alla stessa logica. */}}
+{{- $base := "" -}}
+{{- if eq .Kind "home" -}}
+  {{- $base = "home" -}}
+{{- else if eq .Kind "section" -}}
+  {{- $base = .Section -}}
+{{- else if .File -}}
+  {{- $base = .File.BaseFileName -}}
+{{- end -}}
+
+{{- if $base -}}
 {{- $qrPng := printf "static/qr/%s.png" $base -}}
 {{- $qrSvg := printf "static/qr/%s.svg" $base -}}
 {{- $hasQr := or (fileExists $qrPng) (fileExists $qrSvg) -}}

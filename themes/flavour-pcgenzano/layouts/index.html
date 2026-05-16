@@ -276,6 +276,15 @@
 {{/* Social + IT-alert */}}
 {{ partial "social-channels.html" . }}
 
+{{/* Box "Condividi e scarica" (QR + Stampa + share) — coerente con tutte
+     le pagine del sito da maggio 2026 (richiesta utente di uniformità).
+     Niente box "Leggi in altri modi" qui: la homepage è un launcher di
+     widget e card, non un articolo da leggere ad alta voce — TTS leggerebbe
+     menu/icone, valore zero. */}}
+<div class="container py-3">
+  {{ partial "page-tools.html" . }}
+</div>
+
 {{ end }}
 
 {{ end }}

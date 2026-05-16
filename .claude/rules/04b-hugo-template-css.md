@@ -324,7 +324,24 @@ Specifiche operative complete in `MANUALE-SITO.md` Parte 15.
 
 ## Strumenti articolo — box gemelli sopra/sotto (maggio 2026)
 
-Da maggio 2026 gli articoli `_default/single.html` mostrano due **box blu istituzionali** che raggruppano gli strumenti dell'articolo, con stile visivo unificato ma posizioni distinte per coerenza WCAG:
+Da maggio 2026 **tutte le pagine** del sito (articoli, sezioni con `_index.md`, homepage) mostrano i **box blu istituzionali** che raggruppano gli strumenti, con stile visivo unificato ma posizioni distinte per coerenza WCAG. Estensione del 16/05/2026 dopo richiesta utente di portare i 2 box "su tutte le pagine".
+
+**Dove appaiono i 2 box:**
+
+| Template | Box "Leggi" (sopra) | Box "Condividi e scarica" (sotto) |
+|---|---|---|
+| `_default/single.html` (articoli `/comunicazioni/`, e pagine con `layout: "single"` come `/contatti/`, `/glossario/`, `/privacy/`) | Sì, salvo blacklist + WordCount >30 | Sempre (via `page-tools.html`) |
+| `_default/list.html` (pagine sezione con `_index.md`: `/numeri-utili/`, `/chi-siamo/`, ecc.) | Sì, salvo blacklist + WordCount >30 | Sì, salvo blacklist + WordCount >30 |
+| `layouts/index.html` (homepage) | **NO** (è un launcher di card e widget, non un articolo: TTS leggerebbe nav/icone) | Sì (sempre, in fondo) |
+| Template specifici (`rischi-prevenzione/single.html`, `articoli-da-ascoltare/list.html`, `pittogrammi/single.html`) | Non ancora uniformati — eredita comportamento attuale del template, che usa `page-tools.html` per il box azione |
+
+**Blacklist TTS (per il box "Leggi"):**
+- Match basato su `.Section` + `.Kind == "section"` (NON su `.RelPermalink` come prima).
+- Sezioni in blacklist: `privacy`, `note-legali`, `accessibilita`, `social-media-policy`, `mappa-sito`, `attribuzioni-pittogrammi`, `cerca`, `glossario`, più `comunicazioni` (solo su list.html, perché è l'archivio di card, non un articolo).
+- Fix del 16/05/2026: il match precedente su `.RelPermalink` confrontato con stringhe tipo `/privacy/` falliva sui build GitHub Pages dove `.RelPermalink` ha il subpath `/sito-pc-genzano/privacy/`. Match su `.Section` è invariante rispetto al baseURL.
+- Articoli (`.Kind == "page"`) non sono mai blacklist: `.Section == "comunicazioni"` non blocca un singolo articolo, solo la list page.
+
+**Box sopra il corpo** — `.strumenti-articolo.strumenti-lettura`:
 
 **Box sopra il corpo** — `.strumenti-articolo.strumenti-lettura`:
 - Header: *"ℹ️ Leggi questo articolo in altri modi"*
@@ -340,6 +357,12 @@ Da maggio 2026 gli articoli `_default/single.html` mostrano due **box blu istitu
 
 CSS scoped sezione **STRUMENTI ARTICOLO v1.0** in `custom.css`. Box con sfondo `#e7f0fa`, bordo sinistro 4px `#003366`, border-radius 6px. I partial atomici interni (`tts-wrapper`, `braille-download`, `trascrizione-pdf-download`) hanno margine/padding/sfondo azzerati dentro al wrapper. Gli hint testuali ridondanti (`.braille-download-hint`, `.trascrizione-pdf-hint`) sono nascosti dentro il wrapper (l'utente ha chiesto 1-2 righe pulite, non hint sotto ogni bottone). Mobile: gap ridotto. Stampa: entrambi i box nascosti via `@media print`.
 
-**Storia del layout** (16/05/2026): l'utente ha segnalato che *"il bottone QR sta in fondo mentre tutti gli altri in alto..."*. Tre opzioni valutate: (A) tutto sopra in un unico box, (B) due box gemelli sopra/sotto, (C) tutto sopra + share sotto. Scelta (B) per mantenere la logica WCAG (accessibilità prima del contenuto) con stile coerente.
+**Storia del layout** (16/05/2026): l'utente ha segnalato che *"il bottone QR sta in fondo mentre tutti gli altri in alto..."*. Tre opzioni valutate: (A) tutto sopra in un unico box, (B) due box gemelli sopra/sotto, (C) tutto sopra + share sotto. Scelta (B) per mantenere la logica WCAG (accessibilità prima del contenuto) con stile coerente. Stessa data, l'utente ha chiesto di portare i 2 box **su tutte le pagine** (non solo articoli `/comunicazioni/`): estensione a `_default/list.html` (box lettura + box azione su pagine sezione tipo `/contatti/`, `/numeri-utili/`) e `layouts/index.html` (solo box azione, perché la homepage è un launcher non un articolo). Fix collaterale: blacklist TTS spostata da `.RelPermalink` a `.Section` per funzionare anche su GitHub Pages (subpath). Bottone QR cambiato da `btn-outline-secondary` a `btn-outline-primary` per coerenza visiva con Stampa.
+
+**Naming dei file QR** (allineato fra `qr-articolo.html` partial e `scripts/genera-qr-articoli.py`):
+- Kind `home` → `static/qr/home.png` (homepage)
+- Kind `section` → `static/qr/<section>.png` (es. `contatti.png` per `/contatti/`)
+- Kind `page` → `static/qr/<basename>.png` (es. `2026-05-15-foo.png` per articolo)
+- Sezioni multilingua (`english/`, `francais/`, `deutsch/`, `espanol/`, `portugues/`, `romana/`, `esperanto/`) **escluse** dalla generazione QR: i loro `_index.md` userebbero gli stessi nomi sezione delle versioni italiane creando conflitti (`/english/cosa-fare-adesso/` vs `/cosa-fare-adesso/`). Le traduzioni sono pagine secondarie, il QR per loro ha valore marginale.
 
 **Per estendere/modificare**: il box sopra è renderizzato direttamente in `_default/single.html` (riga ~92). Il box sotto è in `partials/page-tools.html`. Aggiungere un nuovo strumento di lettura accessibile = nuovo partial atomico chiamato dentro `.strumenti-articolo-body` del box sopra. Aggiungere un nuovo strumento di condivisione = riga aggiuntiva nel box sotto. Non duplicare i bottoni nei due box: l'utente li trova solo dove servono.

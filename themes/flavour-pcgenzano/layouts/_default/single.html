@@ -95,9 +95,16 @@
            tts: false nel frontmatter (vale anche per glossario inline).
            Blacklist hard-coded: pagine legali + tecniche + /glossario/
            stesso (regola 03-accessibility.md). */}}
-      {{ $ttsBlacklist := slice "/privacy/" "/note-legali/" "/accessibilita/" "/social-media-policy/" "/mappa-sito/" "/attribuzioni-pittogrammi/" "/cerca/" "/glossario/" }}
+      {{/* Blacklist TTS basata su .Section + .Kind (anziché .RelPermalink)
+           per evitare match fallito sui build con subpath (GH Pages
+           aggiunge /sito-pc-genzano/ davanti). Bug riscontrato il
+           16/05/2026: in GH Pages /privacy/ aveva il box TTS attivo,
+           in Aruba no. Match su .Section + Kind=section funziona su
+           entrambi i baseURL e NON blocca per errore gli articoli
+           dentro a sezioni omonime (.Kind="page" non è mai blacklisted). */}}
+      {{ $ttsBlacklist := slice "privacy" "note-legali" "accessibilita" "social-media-policy" "mappa-sito" "attribuzioni-pittogrammi" "cerca" "glossario" }}
       {{ $isBlacklisted := false }}
-      {{ range $ttsBlacklist }}{{ if eq $.RelPermalink . }}{{ $isBlacklisted = true }}{{ end }}{{ end }}
+      {{ if eq .Kind "section" }}{{ range $ttsBlacklist }}{{ if eq $.Section . }}{{ $isBlacklisted = true }}{{ end }}{{ end }}{{ end }}
       {{ $ttsEnabled := and (ne .Params.tts false) (not $isBlacklisted) }}
 
       {{/* ── BOX UNIFICATO "Leggi questo articolo in altri modi" ──
