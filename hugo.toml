@@ -133,22 +133,7 @@ enableGitInfo = true
   parent = "per-il-cittadino"
   weight = 7
 
-[[menus.main]]
-  name = "Quanto sei preparato? (quiz)"
-  url = "/quiz-preparazione/"
-  parent = "per-il-cittadino"
-  weight = 8
-
-# Spostata da "Risorse" a maggio 2026: la timeline storica del territorio
-# è contenuto narrativo per il cittadino, vive meglio qui che fra gli
-# strumenti di consultazione.
-[[menus.main]]
-  name = "Storia del territorio"
-  url = "/storia/"
-  parent = "per-il-cittadino"
-  weight = 9
-
-# --- Dropdown: Per le scuole (6 voci didattiche) ---
+# --- Dropdown: Per le scuole (7 voci didattiche) ---
 # (rinominato da "Educazione e Inclusione" a maggio 2026 — splittato per
 # alleggerire e separare le 3 vocazioni mescolate: didattica scolastica,
 # accessibilità trasversale, strumento di consultazione)
@@ -192,6 +177,15 @@ enableGitInfo = true
   url = "/giochi/"
   parent = "per-le-scuole"
   weight = 6
+
+# Spostato da "Per il Cittadino" a maggio 2026: il quiz è strumento
+# didattico naturale, vicino a "Giochi della Sicurezza" e "Storie e
+# Racconti". Resta accessibile anche dal cittadino comune via deep-link.
+[[menus.main]]
+  name = "Quanto sei preparato? (quiz)"
+  url = "/quiz-preparazione/"
+  parent = "per-le-scuole"
+  weight = 7
 
 # --- Dropdown: Accessibilità e Supporti (2 voci) ---
 # (nuovo dropdown maggio 2026 — separato da Educazione per dare visibilità
@@ -309,6 +303,15 @@ enableGitInfo = true
   url = "/risorse-pronte/"
   parent = "risorse"
   weight = 7
+
+# Spostato da "Per il Cittadino" a maggio 2026: la timeline storica
+# del territorio è strumento di consultazione/contesto narrativo, vive
+# meglio fra le risorse di approfondimento che fra le azioni operative.
+[[menus.main]]
+  name = "Storia del territorio"
+  url = "/storia/"
+  parent = "risorse"
+  weight = 8
 
 # --- Voci dirette ---
 [[menus.main]]

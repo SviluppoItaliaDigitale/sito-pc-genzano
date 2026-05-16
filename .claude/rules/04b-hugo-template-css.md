@@ -9,7 +9,7 @@ Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `the
 | Voce | Tipo | Contenuto |
 |---|---|---|
 | Home | diretta | `/` |
-| Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare, **Kit pronti per situazioni vulnerabili**, **Quanto sei preparato? (quiz)**, **Storia del territorio** |
+| Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare, **Kit pronti per situazioni vulnerabili** (7 voci, riordino v3.4 maggio 2026: Quiz → Per le scuole, Storia → Risorse) |
 | Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza |
 | Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere, **Contenuti in LIS** |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
