@@ -774,9 +774,14 @@ def scrivi_pacchetto(tema_slug: str, tema_data: dict) -> int:
     for url in tema_data["articoli_correlati"]:
         links_esterni.append(url)
 
+    # Rimosso 01-fonti.md (ridondante con AAA-FONTI-...md + LINKS-DA-INCOLLARE.txt).
+    # Se esiste da generazioni precedenti, lo cancelliamo qui per pulizia.
+    vecchio_fonti = cartella / "01-fonti.md"
+    if vecchio_fonti.exists():
+        vecchio_fonti.unlink()
+
     files = {
         "00-INDICE.md": indice_md(tema_slug, tema_data),
-        "01-fonti.md": fonti_md(tema_slug, tema_data),
         "02-prompt-podcast.md": prompt_podcast(tema_data),
         "03-prompt-infografica.md": prompt_infografica(tema_data),
         "04-prompt-presentazione.md": prompt_presentazione(tema_data),
