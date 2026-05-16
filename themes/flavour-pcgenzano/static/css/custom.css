@@ -5959,3 +5959,41 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
 .risorsa-meta dd { margin: 0; }
 @media print { .risorse-tema { page-break-inside: avoid; } }
 /* fine RISORSE PRONTE v1.0 */
+
+
+/* ==========================================================================
+   MATERIALI CORRELATI v1.0 — cross-link da pagine rischio/didattiche
+   verso /risorse-pronte/ filtrato per tema (maggio 2026)
+   ========================================================================== */
+.materiali-correlati { padding-top: 1rem; }
+.materiali-correlati-titolo {
+  color: #003366;
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+.materiali-correlati-intro { font-size: 0.92rem; margin-bottom: 1rem; }
+.materiali-correlati-card {
+  border: 1px solid #d9e2ec;
+  color: #1a1a1a;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.materiali-correlati-card:hover,
+.materiali-correlati-card:focus-within {
+  transform: translateY(-2px);
+  border-color: #003366;
+  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.10);
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.materiali-correlati-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: #003366;
+  text-decoration: none;
+}
+.materiali-correlati-link:hover { text-decoration: underline; }
+@media print {
+  .materiali-correlati { display: none; }  /* link interattivi non utili su carta */
+}
+/* fine MATERIALI CORRELATI v1.0 */

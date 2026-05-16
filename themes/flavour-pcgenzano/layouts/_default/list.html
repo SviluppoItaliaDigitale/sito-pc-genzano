@@ -89,6 +89,11 @@
       {{ end }}
       {{ template "_internal/pagination.html" . }}
 
+      {{/* ── MATERIALI CORRELATI da /risorse-pronte/ ──
+           Auto-discovery del tema da .Section (es. allerte-meteo).
+           Auto-protettivo: zero output se non ci sono materiali. */}}
+      {{ partial "materiali-correlati.html" . }}
+
       {{/* ── BOX UNIFICATO "Condividi e scarica" ──
            Stesso pattern di _default/single.html. Aggiunto il 16/05/2026
            dopo richiesta utente di portare i 2 box su tutte le pagine.

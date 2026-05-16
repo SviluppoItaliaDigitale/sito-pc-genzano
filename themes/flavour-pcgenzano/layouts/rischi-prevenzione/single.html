@@ -66,6 +66,12 @@
       {{/* Link correlati prevenzione */}}
       {{ partial "related-links.html" . }}
 
+      {{/* Materiali correlati (podcast/infografiche/quiz da risorse-pronte)
+           Auto-discovery via .File.BaseFileName (es. rischio-sismico.md
+           matcha tema "rischio-sismico" in data/risorse_pronte.yaml).
+           Auto-protettivo: zero output se non ci sono materiali. */}}
+      {{ partial "materiali-correlati.html" . }}
+
       {{/* Video correlati DPC/AaP (da data/video_correlati.yaml) */}}
       {{ partial "video-correlati.html" . }}
 

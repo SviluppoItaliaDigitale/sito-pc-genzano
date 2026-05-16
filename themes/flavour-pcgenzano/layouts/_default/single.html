@@ -179,6 +179,16 @@
       {{ partial "related-links.html" . }}
       {{ end }}
 
+      {{/* ── MATERIALI CORRELATI (podcast/infografiche/quiz da risorse-pronte) ──
+           Cross-link automatico dalle pagine rischio/kit/sezioni didattiche
+           verso /risorse-pronte/, filtrato per tema. Auto-discovery via
+           .File.BaseFileName per single (es. rischio-sismico.md → tema
+           rischio-sismico) o .Section per _index.md. Frontmatter override:
+           risorse_tema: "<slug>" forza il tema; risorse_tema: false disattiva.
+           Partial auto-protettivo: se non ci sono materiali per il tema,
+           non renderizza nulla. */}}
+      {{ partial "materiali-correlati.html" . }}
+
       {{/* ── VIDEO CORRELATI (DPC + AaP, da data/video_correlati.yaml) ── */}}
       {{ partial "video-correlati.html" . }}
 
