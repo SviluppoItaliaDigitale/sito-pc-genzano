@@ -16,8 +16,6 @@ Sono prodotti partendo da fonti istituzionali (Dipartimento di Protezione Civile
 - **Ascolta i podcast** sul telefono o in macchina, durano 20-25 minuti ciascuno.
 - **Scarica le infografiche** e condividile su WhatsApp, in classe, in famiglia.
 - **Usa le presentazioni** se sei un docente: sono pensate per un'ora di Educazione Civica.
-- **Gioca con i quiz** per verificare quanto sei preparato sui rischi del territorio.
-- **Stampa le flashcard** per studiare insieme ai ragazzi delle medie.
 
 ## Licenza di uso
 
