@@ -654,6 +654,70 @@ Riga visiva di pittogrammi inline ARASAAC per dare un colpo d'occhio immediato a
 
 CSS scoped in `custom.css` sezione **STRISCIA PITTOGRAMMI v1.0**.
 
+### 3.21 — Aggiungere foto dopo la pubblicazione dell'articolo
+
+**Caso d'uso normale, non eccezione.** Capita spesso di pubblicare un articolo prima di avere le foto: arrivano dopo (volontario che le invia da Telegram, ritardo della macchina fotografica, foto attesa dal Coordinamento). È un pattern di lavoro **legittimo e ricorrente**.
+
+#### Da PC (Claude Code CLI o terminale)
+
+1. **Salva la foto sorgente** in una cartella temporanea (es. `~/Downloads/` o `/tmp/`).
+
+2. **Backup difensivo** del file di destinazione, se esiste già:
+   ```bash
+   cp static/images/<nome>.webp /tmp/<nome>-OLD.webp
+   ```
+
+3. **Applica la fascia blu** via lo script idempotente:
+   ```bash
+   python3 scripts/applica-fascia-foto.py \
+     ~/Downloads/foto-originale.jpg \
+     2026-MM-GG-descrizione-specifica
+   ```
+   Lo script produce `static/images/2026-MM-GG-descrizione-specifica.webp` con fascia istituzionale.
+
+4. **Aggiungi nello shortcode** `{{< foto >}}` nel corpo articolo:
+   ```markdown
+   {{< foto src="/images/2026-MM-GG-descrizione-specifica.webp"
+            alt="Descrizione significativa per screen reader"
+            caption="Didascalia opzionale. Foto: Gruppo Comunale Volontari Protezione Civile Genzano di Roma." >}}
+   ```
+
+5. **Rigenera carosello Instagram + story**:
+   ```bash
+   python3 scripts/genera-immagini-social.py --force content/comunicazioni/<slug>.md
+   ```
+
+6. **Commit + push** come deploy normale.
+
+#### Da mobile (app GitHub web + Claude app)
+
+1. Carica la foto in un commit GitHub web direttamente in `static/images/` (con fascia già applicata, oppure senza fascia ma con nome chiaro).
+2. Se la foto è SENZA fascia: chiedi a Claude Code (sessione mobile o cloud) di applicare la fascia con lo script.
+3. Il workflow CI `scarica-foto-automatica.yml` step 2 genera la cover banner se mancante; il workflow `genera-social-bozze.yml` aggiorna le bozze IG.
+
+#### ⚠️ Errore da NON ripetere — doppia fascia (incident 16/05/2026)
+
+L'incident dell'articolo Giro d'Italia 2026 Formia ha lasciato per qualche minuto 3 foto inline con **due fasce blu sovrapposte** sotto la foto, visibili come 2 bande "PROTEZIONE CIVILE" identiche. Causa: check pixel a 92% h cadeva in zona di transizione foto/fascia, falso negativo, script applicava una seconda fascia.
+
+**Da v2 (16/05/2026) lo script è idempotente**: rileva se la sorgente ha già una fascia (pixel @98% h + @80% h, soglia `#003366 ± 30`) e in caso affermativo **stampa `[skip]` e non sovrascrive**.
+
+Output tipico di skip:
+```
+[skip] La foto sorgente 'X.webp' ha già una fascia blu istituzionale
+       (pixel @98%h=brand-blue, @80%h=pura).
+       Non applico una seconda fascia. Usa --force se vuoi davvero
+       sovrascrivere.
+```
+
+Se vedi `[skip]`, **non insistere col flag `--force`** a meno che tu non voglia esplicitamente rifare la fascia (es. cambiata grafica, fascia stretta da rifare più larga). In caso di dubbio: lascia stare, la foto è già a posto.
+
+**Flag `--force`**:
+```bash
+python3 scripts/applica-fascia-foto.py /tmp/foto.jpg nome-output --force
+```
+
+Bypassa il check di idempotenza. Da usare solo manualmente, mai dentro script automatici.
+
 ---
 
 _[Indice manuale](README.md)_
