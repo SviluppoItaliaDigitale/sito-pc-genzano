@@ -612,16 +612,20 @@ def indice_md(tema_slug: str, tema_data: dict) -> str:
         - Scegli **Italiano**
         - Salva
 
-        ### Passo 4 — Genera i 5 output
-        Apri gli altri 5 file di questa cartella nell'ordine:
+        ### Passo 4 — Genera i 3 output
+        Apri gli altri 3 file di questa cartella nell'ordine:
 
         1. `02-prompt-podcast.md` → clicca "Overview audio" nello Studio
-           a destra, poi "Personalizza", incolla il prompt, genera, scarica MP3
+           a destra, poi "Personalizza", incolla il prompt, genera, scarica audio
         2. `03-prompt-infografica.md` → clicca "Infografica", stesso
            procedimento, scarica PNG
-        3. `04-prompt-presentazione.md` → clicca "Presentazione", scarica PPTX
-        4. `05-prompt-quiz.md` → clicca "Quiz", esporta domande
-        5. `06-prompt-flashcard.md` → clicca "Flashcard", esporta PDF
+        3. `04-prompt-presentazione.md` → clicca "Presentazione", scarica
+           sia PPTX (per docenti che modificano) sia PDF (per chi vuole solo aprire)
+
+        ℹ️ Quiz e Flashcard saltati: NotebookLM non li scarica come file,
+        condivide solo un link che consumerebbe la quota PRO del tuo profilo
+        a ogni visita dei cittadini sul sito. Li valuteremo in futuro come
+        HTML statici nativi del sito.
 
         ---
 
@@ -633,11 +637,10 @@ def indice_md(tema_slug: str, tema_data: dict) -> str:
 
         Trascina lì i file scaricati da NotebookLM. Rinominali così:
 
-        - Podcast audio → `podcast.mp3`
+        - Podcast audio → `podcast.m4a` (NotebookLM lo dà in M4A) o `podcast.mp3`
         - Infografica → `infografica.png`
-        - Presentazione → `presentazione.pptx`
-        - Quiz (testo o JSON) → `quiz.txt` o `quiz.json`
-        - Flashcard PDF → `flashcard.pdf`
+        - Presentazione PPTX → `presentazione.pptx`
+        - Presentazione PDF (stesso contenuto in PDF) → `presentazione.pdf`
 
         Quando hai messo i file, scrivi a Claude:
 
@@ -774,19 +777,22 @@ def scrivi_pacchetto(tema_slug: str, tema_data: dict) -> int:
     for url in tema_data["articoli_correlati"]:
         links_esterni.append(url)
 
-    # Rimosso 01-fonti.md (ridondante con AAA-FONTI-...md + LINKS-DA-INCOLLARE.txt).
-    # Se esiste da generazioni precedenti, lo cancelliamo qui per pulizia.
-    vecchio_fonti = cartella / "01-fonti.md"
-    if vecchio_fonti.exists():
-        vecchio_fonti.unlink()
+    # Pulizia file ridondanti/deprecati da generazioni precedenti.
+    # - 01-fonti.md → ridondante con AAA-FONTI + LINKS-DA-INCOLLARE
+    # - 05-prompt-quiz.md / 06-prompt-flashcard.md → NotebookLM non fornisce
+    #   download diretto, solo link condivisi che consumerebbero quota PRO
+    #   del proprietario notebook ad ogni visita utente. Saltati per ora;
+    #   se servirà in futuro li gestiremo come HTML statici nativi del sito.
+    for vecchio_nome in ("01-fonti.md", "05-prompt-quiz.md", "06-prompt-flashcard.md"):
+        vecchio = cartella / vecchio_nome
+        if vecchio.exists():
+            vecchio.unlink()
 
     files = {
         "00-INDICE.md": indice_md(tema_slug, tema_data),
         "02-prompt-podcast.md": prompt_podcast(tema_data),
         "03-prompt-infografica.md": prompt_infografica(tema_data),
         "04-prompt-presentazione.md": prompt_presentazione(tema_data),
-        "05-prompt-quiz.md": prompt_quiz(tema_data),
-        "06-prompt-flashcard.md": prompt_flashcard(tema_data),
         f"AAA-FONTI-SITO-AGGREGATE-{tema_slug}.md": fonti_aggregate,
         "LINKS-DA-INCOLLARE.txt": "\n".join(links_esterni) + "\n",
     }
