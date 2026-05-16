@@ -25,4 +25,4 @@ Per uso commerciale o istituzionale fuori dal contesto della Protezione Civile, 
 
 ## Stiamo costruendo questa biblioteca
 
-I primi materiali stanno arrivando. Torna fra qualche giorno: pubblichiamo a ritmo settimanale.
+I primi materiali stanno arrivando. Torna fra qualche giorno: aggiorniamo periodicamente, compatibilmente con il tempo del volontariato.
