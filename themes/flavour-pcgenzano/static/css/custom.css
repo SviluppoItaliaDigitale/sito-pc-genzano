@@ -5863,4 +5863,56 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
 @media print {
   .strumenti-articolo { display: none !important; }
 }
-/* fine STRUMENTI ARTICOLO v1.0 */
+
+/* ── VARIANTI v1.1 (16/05/2026) ──
+   .strumenti-articolo è di fatto un box info-istituzionale riusabile.
+   Varianti per contesti diversi mantenendo coerenza visiva. */
+
+/* Variante "avviso" — bordo ambra, sfondo crema chiaro.
+   Per box di tipo IT-alert, notifiche di servizio, info segnaletiche.
+   Contrasto: testo #78350f su #fef3c7 = 8.4:1 (WCAG AAA). */
+.strumenti-articolo.variant-avviso {
+  background: #fef3c7;
+  border-left-color: #b45309;
+}
+.strumenti-articolo.variant-avviso .strumenti-articolo-header {
+  color: #78350f;
+}
+.strumenti-articolo.variant-avviso .strumenti-articolo-header .bi {
+  color: #b45309;
+}
+
+/* Sezione contenitore "Comunità" sulla homepage — colonne affiancate
+   per i 2 box (Seguici sui canali + IT-alert) su desktop, stack su mobile.
+   Il gap tra i due box è dato dal margin-bottom di .strumenti-articolo. */
+.homepage-comunita .row > [class*="col-"] > .strumenti-articolo {
+  margin-bottom: 0;  /* gap gestito dal Bootstrap g-3 del row */
+  height: 100%;
+}
+.homepage-comunita .canali-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.homepage-comunita .canali-descrizioni {
+  font-size: 0.82rem;
+  color: #003366;
+  margin-bottom: 0;
+  line-height: 1.45;
+}
+.homepage-comunita .it-alert-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.homepage-comunita .it-alert-body p {
+  font-size: 0.92rem;
+  color: #78350f;
+  margin: 0;
+  line-height: 1.45;
+}
+.homepage-comunita .it-alert-body .btn {
+  align-self: flex-start;
+}
+/* fine STRUMENTI ARTICOLO v1.1 */

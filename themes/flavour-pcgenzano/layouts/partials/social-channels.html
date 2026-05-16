@@ -1,33 +1,73 @@
-{{/* Canali social + IT-alert — pilotato da data/social_links.yaml
-     Usato in: homepage */}}
+{{/* Canali social + IT-alert — pilotato da data/social_links.yaml.
+     Usato in: homepage (sezione "Comunità").
+
+     Layout: 2 box affiancati con stesso linguaggio visivo del resto del
+     sito (.strumenti-articolo, sfondo blu tenue + bordo sinistro blu
+     istituzionale). IT-alert usa la variante "avviso" (ambra) per
+     differenziare il contesto pur restando coerente.
+     Restyling 16/05/2026 — richiesta utente di rendere i 2 box "più
+     carini e professionali, in tema col sito". */}}
 {{ $social := .Site.Data.social_links }}
-<section class="py-4 bg-white fade-in-up" aria-labelledby="social-heading">
+<section class="py-4 homepage-comunita fade-in-up" aria-labelledby="comunita-heading">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h2 id="social-heading" class="h5 fw-bold mb-3"><i class="bi bi-share me-2" aria-hidden="true"></i>Seguici sui nostri canali</h2>
-        <div class="d-flex flex-wrap gap-2">
-          {{ if $social }}
-          {{ range $social.canali }}
-          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="btn {{ .classe_btn }} btn-sm" aria-label="{{ .aria_label }}"><i class="bi {{ .icona }} me-1" aria-hidden="true"></i> {{ .nome }}</a>
-          {{ end }}
-          {{ else }}
-          <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="bi bi-facebook me-1"></i> Facebook</a>
-          <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-sm"><i class="bi bi-instagram me-1"></i> Instagram</a>
-          <a href="{{ .Site.Params.telegram }}" target="_blank" rel="noopener noreferrer" class="btn btn-info btn-sm text-white"><i class="bi bi-telegram me-1"></i> Telegram</a>
-          <a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm"><i class="bi bi-twitter-x me-1"></i> X</a>
-          {{ end }}
+    <h2 id="comunita-heading" class="visually-hidden">Comunità e canali</h2>
+    <div class="row g-3 align-items-stretch">
+
+      {{/* ── BOX 1: SEGUICI SUI NOSTRI CANALI (blu istituzionale) ── */}}
+      <div class="col-lg-7">
+        <div class="strumenti-articolo" role="region" aria-labelledby="canali-heading">
+          <div class="strumenti-articolo-header" id="canali-heading">
+            <i class="bi bi-share-fill me-2" aria-hidden="true"></i>
+            Seguici sui nostri canali
+          </div>
+          <div class="canali-list">
+            {{ if $social }}
+            {{ range $social.canali }}
+            <a href="{{ .url }}"
+               target="_blank" rel="noopener noreferrer"
+               class="btn {{ .classe_btn }} btn-sm"
+               aria-label="{{ .aria_label }} — si apre in una nuova finestra">
+              <i class="bi {{ .icona }} me-1" aria-hidden="true"></i> {{ .nome }}
+            </a>
+            {{ end }}
+            {{ else }}
+            <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="bi bi-facebook me-1" aria-hidden="true"></i> Facebook</a>
+            <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-sm"><i class="bi bi-instagram me-1" aria-hidden="true"></i> Instagram</a>
+            <a href="{{ .Site.Params.telegram }}" target="_blank" rel="noopener noreferrer" class="btn btn-info btn-sm text-white"><i class="bi bi-telegram me-1" aria-hidden="true"></i> Telegram</a>
+            <a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm"><i class="bi bi-twitter-x me-1" aria-hidden="true"></i> X</a>
+            {{ end }}
+          </div>
+          <p class="canali-descrizioni">
+            Avvisi di allerta, resoconti delle attività, foto e storie dal
+            campo. Scegli il canale che preferisci.
+          </p>
         </div>
       </div>
-      <div class="col-lg-4 mt-3 mt-lg-0">
-        <div class="card bg-warning bg-opacity-10 border-warning">
-          <div class="card-body p-3 d-flex align-items-center">
-            <i class="bi bi-phone-vibrate fs-3 text-warning me-3" aria-hidden="true"></i>
-            <div><strong class="small">IT-alert</strong><p class="small text-muted mb-0">Sistema di allarme pubblico.</p></div>
-            <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-warning ms-auto">Info</a>
+
+      {{/* ── BOX 2: IT-ALERT (ambra, variante avviso) ── */}}
+      <div class="col-lg-5">
+        <div class="strumenti-articolo variant-avviso" role="region" aria-labelledby="italert-heading">
+          <div class="strumenti-articolo-header" id="italert-heading">
+            <i class="bi bi-phone-vibrate-fill me-2" aria-hidden="true"></i>
+            IT-alert
+          </div>
+          <div class="it-alert-body">
+            <p>
+              <strong>Sistema nazionale di allarme pubblico</strong> per
+              gravi emergenze. Riceve notifiche dirette sul cellulare,
+              senza app né registrazione.
+            </p>
+            <a href="https://www.it-alert.it/it/"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-sm btn-outline-warning"
+               aria-label="Scopri come funziona IT-alert — si apre in una nuova finestra">
+              <i class="bi bi-info-circle me-1" aria-hidden="true"></i>
+              Scopri come funziona
+            </a>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
