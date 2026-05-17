@@ -16,7 +16,9 @@
 
 Questi punti vanno inseriti come istruzioni hard nel prompt (sezione "VINCOLI ASSOLUTI").
 
-I 4 elementi mancanti (stemma Comune Genzano + logo Gruppo PC Genzano + data revisione + URL stilizzato) li sovrappongo io in post-produzione con Pillow una volta che l'immagine è in `~/Scrivania/disegni/`, prima di pubblicarla.
+Gli elementi mancanti (**logo ufficiale del Gruppo Comunale** — già contiene lo stemma del Comune di Genzano al centro — + data revisione + URL stilizzato) li sovrappongo io in post-produzione con Pillow una volta che l'immagine è in `~/Scrivania/disegni/`, prima di pubblicarla.
+
+**Logo già pronto in repo**: `static/images/logo-pc-genzano-hires.png` (1080×1080 px, 127 KB) — versione alta risoluzione del logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Include già la corona civica + colonna SPQG + corona d'alloro + nastro tricolore del Comune. È un logo **tutto-in-uno**: non servono stemmi separati. Verrà posizionato centrato nella fascia superiore vuota delle schede generate dall'AI, dimensione finale ~250×250 px sull'A4 della scheda 1024×1536.
 
 ---
 
@@ -499,12 +501,15 @@ Per ogni scheda:
 
 ---
 
-## File checkpoint visivi che servirebbero in repo prima di partire
+## File checkpoint visivi disponibili in repo
 
-Per la post-produzione (sovrapposizione stemmi/logo), avrei bisogno di:
+✅ **Logo ufficiale del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**
+   - Path: `static/images/logo-pc-genzano-hires.png`
+   - Dimensione: 1080×1080 px, PNG RGBA con trasparenza, ~127 KB
+   - Contiene già lo stemma del Comune di Genzano al centro (corona civica + colonna SPQG + alloro + nastro tricolore) — non serve un secondo file separato
 
-1. **Logo ufficiale del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** — file PNG con trasparenza, alta risoluzione (~512x512 px).
-2. **Stemma del Comune di Genzano di Roma** — file PNG con trasparenza, alta risoluzione (~512x512 px).
-3. **Font ufficiale** (se diverso da Liberation Sans / Comic Sans).
+✅ **Versione web del logo** (per il sito):
+   - `static/images/logo-pc-genzano.png` 480×480 (236 KB) — usata in navbar, structured-data, kit
+   - `static/images/logo-pc-genzano.webp` 480×480 (54 KB) — versione WebP per browser moderni
 
-Se questi file non sono ancora nel repo, vanno trovati e aggiunti a `static/images/loghi/` PRIMA che inizi a generare le 14 schede in post-produzione.
+Tutti i file servono allo scopo, niente da recuperare a parte. Font tipografico per data/URL nel footer: **Liberation Sans Bold** (già nel sistema, usato anche da `genera-cover.py` per coerenza istituzionale).
