@@ -4,27 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scheda stampabile: Caso L'Aquila 2009 — Secondaria di primo grado</title>
-  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria I. Il terremoto de L'Aquila 6 aprile 2009: cronologia, comunicazione del rischio, processo Grandi Rischi, ricostruzione.">
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria I. Il terremoto de L'Aquila 6 aprile 2009: sciame sismico, Commissione Grandi Rischi, comunicazione del rischio, Progetto C.A.S.E., riforma della PC.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
-    .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; }
-    .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.92rem; margin-bottom: 0.2rem; }
-    .timeline-box .corpo { font-size: 0.92rem; line-height: 1.5; }
-    .due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0.5rem 0; }
-    .colonna-box { padding: 0.7rem 0.9rem; border-radius: 6px; border: 1.5px solid var(--scheda-bordo); }
+    .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.3rem 0; }
+    .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.88rem; margin-bottom: 0.15rem; }
+    .timeline-box .corpo { font-size: 0.88rem; line-height: 1.5; }
+    .nozione-box { background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55; }
+    .nozione-box .titolo-n { font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem; }
+    .nozione-box .fonte { font-style: italic; color: #495057; font-size: 0.78rem; }
+    .glossario-mini { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; }
+    .glossario-mini dt { font-weight: 700; color: var(--scheda-blu); white-space: nowrap; }
+    .glossario-mini dd { margin: 0; }
+    .due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.4rem 0; }
+    .colonna-box { padding: 0.55rem 0.8rem; border-radius: 6px; border: 1.5px solid var(--scheda-bordo); }
     .colonna-box.ok { background: #e8f5e9; border-color: #2e7d32; }
     .colonna-box.no { background: #fde8ea; border-color: #c1121f; }
-    .colonna-box .titolo-c { font-weight: 700; margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .colonna-box .titolo-c { font-weight: 700; margin-bottom: 0.3rem; font-size: 0.9rem; }
     .colonna-box.ok .titolo-c { color: #1b5e20; }
     .colonna-box.no .titolo-c { color: #842029; }
-    .colonna-box ul { margin: 0; padding-left: 1.2rem; font-size: 0.88rem; line-height: 1.5; }
-    .domanda-card { padding: 0.5rem 0.7rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin-bottom: 0.4rem; }
-    .domanda-card .num-q { width: 1.5rem; height: 1.5rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; margin-right: 0.4rem; }
-    .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
-    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
-    .istruzioni-prof { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
+    .colonna-box ul { margin: 0; padding-left: 1.1rem; font-size: 0.84rem; line-height: 1.45; }
+    .domanda-card { padding: 0.5rem 0.7rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin-bottom: 0.35rem; font-size: 0.9rem; }
+    .domanda-card .num-q { width: 1.4rem; height: 1.4rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem; margin-right: 0.35rem; }
+    .righe { display: grid; gap: 0.3rem; padding-left: 1.9rem; margin-top: 0.25rem; }
+    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.3rem; }
+    .istruzioni-prof { margin-top: 0.7rem; padding: 0.5rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.79rem; color: #664d03; line-height: 1.45; }
+    .scheda-h2 { font-size: 1rem; margin: 0.6rem 0 0.25rem; }
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -40,67 +47,89 @@
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">Caso L'Aquila — terremoto del 6 aprile 2009</h1>
+        <h1 class="scheda-titolo-principale">Caso L'Aquila — 6 aprile 2009</h1>
         <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di primo grado (11-13 anni)</div>
       </div>
     </header>
 
     <div class="scheda-meta">
       <span><strong>Destinatari:</strong> 11-13 anni</span>
-      <span><strong>Obiettivo:</strong> ricostruire un evento + analizzare la comunicazione del rischio</span>
-      <span><strong>Discipline:</strong> storia, scienze, educazione civica</span>
+      <span><strong>Obiettivo:</strong> capire lo sciame sismico + la riforma della comunicazione del rischio</span>
+      <span><strong>Discipline:</strong> scienze, storia, geografia, ed. civica</span>
     </div>
 
     <p class="scheda-intro">
-      Il <strong>terremoto de L'Aquila</strong> del 6 aprile 2009 è un caso di studio importante per la Protezione Civile italiana. Non solo per la tragedia (309 vittime), ma anche perché ha cambiato il modo in cui in Italia si <strong>comunica il rischio sismico</strong> ai cittadini. Leggi la cronologia e analizza con la classe.
+      Il <strong>terremoto de L'Aquila</strong> del 6 aprile 2009 (<strong>309 vittime</strong>) è un caso di studio importante per la Protezione Civile italiana. Non solo per la tragedia, ma anche perché ha cambiato il modo in cui in Italia si <strong>comunica il rischio sismico</strong>. Prima della cronologia, leggi due nozioni-chiave: cos'è uno sciame sismico e cosa fa la Commissione Grandi Rischi.
     </p>
+
+    <h2 class="scheda-h2">🔬 Due nozioni-chiave</h2>
+    <div class="nozione-box">
+      <div class="titolo-n">Lo sciame sismico</div>
+      Lo sciame sismico è una serie di scosse <strong>vicine nel tempo e nello spazio</strong> in cui di solito nessuna è molto più forte delle altre (a differenza di una sequenza con <em>mainshock</em>). A L'Aquila lo sciame durò da <strong>dicembre 2008 a marzo 2009</strong>: centinaia di scosse, perlopiù di magnitudo &lt; 4. Uno sciame non è un "preavviso" certo di un sisma maggiore: gli scienziati non possono predire <em>se</em> arriverà una scossa forte. Possono solo dire che la probabilità non è zero e che è prudente prepararsi.
+      <div class="fonte">Fonte: INGV — Catalogo CPTI15; ISPRA — Carta delle faglie attive.</div>
+    </div>
+    <div class="nozione-box">
+      <div class="titolo-n">La Commissione Grandi Rischi (CGR)</div>
+      La <strong>Commissione Nazionale per la Previsione e Prevenzione dei Grandi Rischi</strong> è un organo di consulenza tecnico-scientifica del Dipartimento Protezione Civile (oggi disciplinato dal D.Lgs. 1/2018). Riunisce sismologi, vulcanologi, idrogeologi. Il 31 marzo 2009 si riunì a L'Aquila per valutare lo sciame: il messaggio comunicato ai cittadini fu interpretato come "non c'è pericolo". Sei giorni dopo arrivò la scossa di Mw 6.3. Dopo L'Aquila la regola è cambiata: oggi gli esperti comunicano <strong>probabilità e incertezza</strong>, mai rassicurazioni.
+      <div class="fonte">Fonte: DPC — Commissione Grandi Rischi; sentenza Cassazione 2016.</div>
+    </div>
+
+    <h2 class="scheda-h2">📖 Glossario operativo</h2>
+    <dl class="glossario-mini">
+      <dt>Sciame sismico</dt><dd>serie di scosse vicine nel tempo e nello spazio, di solito di bassa magnitudo, senza un mainshock dominante.</dd>
+      <dt>Mw (Magnitudo momento)</dt><dd>misura dell'energia liberata. L'Aquila 2009: Mw 6.3.</dd>
+      <dt>CGR</dt><dd>Commissione Grandi Rischi: organo tecnico-scientifico del DPC che valuta i rischi naturali maggiori.</dd>
+      <dt>Progetto C.A.S.E.</dt><dd>Complessi Antisismici Sostenibili Ecocompatibili: 184 edifici antisismici provvisori a L'Aquila per ~15.000 sfollati.</dd>
+      <dt>MAP</dt><dd>Moduli Abitativi Provvisori: casette di legno per chi è in attesa di rientrare in casa.</dd>
+      <dt>Comunicazione del rischio</dt><dd>insieme di regole per parlare di pericoli naturali al pubblico in modo onesto, chiaro, non allarmistico ma neppure rassicurante.</dd>
+      <dt>Zona sismica</dt><dd>classificazione di un comune in base alla pericolosità sismica (1 = massima, 4 = minima). Genzano: Zona 2B.</dd>
+    </dl>
 
     <h2 class="scheda-h2">📅 Cronologia dell'evento</h2>
 
     <div class="timeline-box">
       <div class="data">Dicembre 2008 - marzo 2009</div>
-      <div class="corpo">Per mesi nell'Aquilano si registrano centinaia di piccole scosse (<strong>sciame sismico</strong>). La popolazione è preoccupata. Il 31 marzo 2009 si riunisce la <strong>Commissione Grandi Rischi</strong>: il messaggio comunicato ai cittadini fu rassicurante.</div>
+      <div class="corpo">Sciame sismico in Abruzzo. <strong>Centinaia di scosse</strong>, la popolazione è preoccupata. Il 31 marzo 2009 la <strong>CGR</strong> si riunisce a L'Aquila; la comunicazione pubblica viene percepita come rassicurante.</div>
     </div>
 
     <div class="timeline-box">
       <div class="data">6 aprile 2009 — ore 3:32</div>
-      <div class="corpo">Scossa di <strong>magnitudo 6.3</strong> a 9 km di profondità. Crolli nel centro storico de L'Aquila e in 50 paesi vicini. <strong>309 vittime</strong>, oltre 1.500 feriti, 80.000 sfollati.</div>
+      <div class="corpo">Scossa di <strong>Mw 6.3</strong>, ipocentro a <strong>9 km</strong> di profondità. Crolli nel centro storico e in 50 paesi vicini. <strong>309 vittime</strong>, 1.500 feriti, 65.000 sfollati.</div>
     </div>
 
     <div class="timeline-box">
       <div class="data">Aprile-dicembre 2009</div>
-      <div class="corpo">Mobilitazione di Protezione Civile mai vista prima: 13.000 volontari, 170 tendopoli per gli sfollati, scuole tenda. Si lavora alle <strong>"Case C.A.S.E."</strong>: 184 edifici antisismici provvisori per circa 15.000 persone.</div>
+      <div class="corpo">Mobilitazione di Protezione Civile mai vista prima: <strong>13.000 volontari</strong>, 170 tendopoli, scuole tenda. Si lavora al <strong>Progetto C.A.S.E.</strong>: 184 edifici antisismici provvisori per circa 15.000 persone.</div>
     </div>
 
     <div class="timeline-box">
-      <div class="data">2010-2012</div>
-      <div class="corpo">Processo penale alla Commissione Grandi Rischi. Nel 2014 i tecnici verranno assolti, ma l'evento cambia per sempre il modo di comunicare il rischio: oggi gli scienziati danno solo <strong>dati e probabilità</strong>, mai rassicurazioni.</div>
+      <div class="data">2010-2016</div>
+      <div class="corpo">Processo penale alla CGR. <strong>2012</strong>: condanna in primo grado. <strong>2014</strong>: assoluzione in appello dei 5 scienziati (resta la condanna del funzionario PC per la comunicazione pubblica). <strong>2016</strong>: Cassazione conferma.</div>
     </div>
 
     <div class="timeline-box">
-      <div class="data">2010-oggi</div>
-      <div class="corpo">Ricostruzione lenta. Nel 2025 il centro storico è quasi tutto restaurato, ma alcuni palazzi storici sono ancora in cantiere. L'Aquila è oggi laboratorio di buone pratiche antisismiche.</div>
+      <div class="data">2017-oggi</div>
+      <div class="corpo">Ricostruzione lenta del centro storico. Nasce <strong>IT-alert</strong> (2023). L'Aquila diventa laboratorio nazionale di buone pratiche antisismiche.</div>
     </div>
 
     <h2 class="scheda-h2">⚖️ Cosa ha funzionato e cosa no</h2>
-
     <div class="due-colonne">
       <div class="colonna-box ok">
-        <div class="titolo-c">✅ Cosa ha funzionato</div>
+        <div class="titolo-c">✅ Ha funzionato</div>
         <ul>
-          <li>Mobilitazione di Protezione Civile rapidissima (volontari da tutta Italia in 12 ore).</li>
-          <li>"Progetto C.A.S.E.": case antisismiche pronte in 6-9 mesi per gli sfollati.</li>
-          <li>Coordinamento INGV per il monitoraggio sismico continuo dello sciame.</li>
+          <li>Mobilitazione rapidissima: 13.000 volontari in 12 ore.</li>
+          <li>Progetto C.A.S.E.: case antisismiche pronte in 6-9 mesi.</li>
+          <li>Monitoraggio INGV continuo dello sciame e degli aftershock.</li>
           <li>Riforma della comunicazione del rischio (mai più "rassicurazioni").</li>
         </ul>
       </div>
       <div class="colonna-box no">
-        <div class="titolo-c">❌ Cosa NON ha funzionato</div>
+        <div class="titolo-c">❌ Non ha funzionato</div>
         <ul>
-          <li>Comunicazione del 31 marzo 2009 troppo rassicurante (Commissione Grandi Rischi).</li>
-          <li>Edifici storici non adeguati alle norme antisismiche moderne.</li>
-          <li>Ricostruzione iniziata fuori dal centro (effetto "ciambella": case nuove fuori, centro vuoto).</li>
-          <li>Lentezza burocratica: a 16 anni dall'evento alcuni palazzi sono ancora in cantiere.</li>
+          <li>Comunicazione pubblica del 31 marzo troppo rassicurante.</li>
+          <li>Edifici storici non adeguati alle norme antisismiche.</li>
+          <li>Effetto "ciambella": ricostruzione fuori dal centro, centro vuoto.</li>
+          <li>Lentezza burocratica: a 16 anni alcuni palazzi sono ancora in cantiere.</li>
         </ul>
       </div>
     </div>
@@ -108,47 +137,48 @@
     <h2 class="scheda-h2">✏️ Domande di analisi</h2>
 
     <div class="domanda-card">
-      <span class="num-q">1</span><strong>Cos'è uno "sciame sismico"? Come si differenzia da una singola scossa?</strong>
+      <span class="num-q">1</span><strong>Leggi il box "Lo sciame sismico". Spiega in 2 righe la differenza fra uno <em>sciame</em> e una <em>sequenza con mainshock</em>.</strong>
       <div class="righe"><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">2</span><strong>Cos'è la Commissione Grandi Rischi? Perché la sua riunione del 31 marzo 2009 è importante?</strong>
+      <span class="num-q">2</span><strong>Cos'è la CGR? Perché la sua riunione del 31 marzo 2009 è entrata nella storia della Protezione Civile?</strong>
       <div class="righe"><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">3</span><strong>Spiega cosa furono le "Case C.A.S.E.". Perché furono una soluzione innovativa?</strong>
+      <span class="num-q">3</span><strong>Cosa fu il <em>Progetto C.A.S.E.</em>? Perché fu una soluzione innovativa rispetto alla classica tendopoli? (Usa il glossario.)</strong>
       <div class="righe"><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">4</span><strong>Dopo L'Aquila, gli scienziati comunicano in modo diverso. Cosa è cambiato?</strong>
+      <span class="num-q">4</span><strong>Dopo L'Aquila, gli scienziati comunicano in modo diverso. Cosa è cambiato concretamente?</strong>
       <div class="righe"><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">5</span><strong>Cosa significa l'"effetto ciambella" nella ricostruzione? Quali svantaggi porta?</strong>
+      <span class="num-q">5</span><strong>Cosa significa "effetto ciambella" nella ricostruzione? Quali svantaggi porta per una città?</strong>
       <div class="righe"><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">6</span><strong>Genzano si trova in zona sismica 2B. Cosa puoi fare oggi per essere più preparato?</strong>
-      <div class="righe"><span class="r"></span><span class="r"></span></div>
+      <span class="num-q">6</span><strong>Genzano è in zona sismica 2B (pericolosità medio-alta). Indica almeno 3 azioni concrete che TU puoi fare oggi per essere più preparato.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="istruzioni-prof">
       <strong>Per il/la prof · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Risposte attese (1)</strong>: serie di scosse ripetute in poche settimane, di solito di bassa intensità · <strong>(2)</strong> organo che valuta i rischi naturali per la PC; la riunione fu poi al centro di un processo per "rassicurazioni" non scientificamente fondate · <strong>(3)</strong> case antisismiche provvisorie ma vere case (cucina, bagno, riscaldamento), pronte in 6-9 mesi per gli sfollati · <strong>(4)</strong> oggi gli esperti danno probabilità, dati, livelli di incertezza; mai rassicurazioni · <strong>(5)</strong> case nuove fuori città mentre il centro storico resta vuoto: si perde la "comunità urbana" · <strong>(6)</strong> risposta argomentativa: piano familiare, conoscere il punto di raccolta scolastico, mobilio fissato.</li>
-        <li><strong>Estensione</strong>: confrontare con <a href="/formazione/schede-stampabili/caso-aquila-primaria/">Primaria</a> e <a href="/formazione/schede-stampabili/caso-aquila-secondaria2/">Sec II</a>. Vedi anche pagine <a href="/rischi-prevenzione/sismico/">/rischi-prevenzione/sismico/</a>.</li>
-        <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Storia, Scienze, Cittadinanza. Legge 92/2019. D.M. 183/2024 — Costituzione (responsabilità degli organi tecnici).</li>
+        <li><strong>Risposte attese:</strong> <strong>(1)</strong> sciame = scosse tutte simili senza una "principale"; sequenza con mainshock = c'è una scossa nettamente più forte e poi le repliche (aftershock). <strong>(2)</strong> CGR = organo tecnico-scientifico del DPC; quella riunione fu poi al centro di un processo per "rassicurazioni" non scientificamente fondate. <strong>(3)</strong> case antisismiche vere (cucina, bagno, riscaldamento), pronte in 6-9 mesi: innovative perché abitative di buona qualità, non semplici tende. <strong>(4)</strong> oggi gli esperti danno probabilità e dati di incertezza, mai rassicurazioni; chi comunica al pubblico ha responsabilità diverse dallo scienziato. <strong>(5)</strong> nuove case fuori città mentre il centro resta vuoto: si rompe la trama sociale, si perde la vita comunitaria. <strong>(6)</strong> piano familiare, kit emergenza pronto, conoscere il punto di raccolta scolastico, fissare mobili pesanti, conoscere la mappa rischi del Comune.</li>
+        <li><strong>Lezione di sistema</strong>: i terremoti non si predicono, ci si <strong>prepara</strong>. La prevenzione si fa sulle case (norme antisismiche) e sulle persone (informazione, esercitazioni).</li>
+        <li><strong>Estensione</strong>: <a href="/formazione/schede-stampabili/caso-aquila-primaria/">Primaria</a>, <a href="/formazione/schede-stampabili/caso-aquila-secondaria2/">Sec II</a> (focus etica della comunicazione), <a href="/formazione/schede-stampabili/caso-amatrice-secondaria/">Amatrice</a>. Pagina <a href="/rischi-prevenzione/rischio-sismico/">/rischi-prevenzione/rischio-sismico/</a>.</li>
+        <li><strong>Riferimenti curricolari</strong>: IN 2012 — Scienze, Storia, Cittadinanza. L. 92/2019. D.M. 183/2024 — Costituzione (responsabilità degli organi tecnici).</li>
       </ul>
     </div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Caso L'Aquila 2009" · Secondaria I · storia/scienze/educazione civica · rev. 2026</span>
+      <span>Scheda "Caso L'Aquila 2009" · Secondaria I · scienze/storia/geografia/ed. civica · rev. 2026</span>
     </footer>
   </article>
 </body>
