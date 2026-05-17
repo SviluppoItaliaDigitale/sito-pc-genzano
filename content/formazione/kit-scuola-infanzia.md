@@ -300,6 +300,32 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Il mio amico pompiere**](/formazione/schede-stampabili/colorare-pompiere-infanzia/) — casco rosso, stivali, giubbino, idrante, il pompiere che salva.
 - 👉 [**Il mio amico volontario**](/formazione/schede-stampabili/colorare-volontario-infanzia/) — giubbino arancione, casco e radio, aiuto agli anziani, tende.
 - 👉 [**Come chiamo il 112**](/formazione/schede-stampabili/colorare-112-infanzia/) — sequenza in 6 passi: vedo l'emergenza, prendo il telefono, faccio 1-1-2, dico nome, dico dove sono, aspetto i soccorsi.
+- 👉 [**Il volontario e gli animali**](/formazione/schede-stampabili/volontario-animali-infanzia/) — aiutare cani spaventati e gatti, non toccare animali sconosciuti, avvisare un adulto, mettere l'animale al sicuro.
+
+*Conoscere i rischi e prepararsi*:
+
+- 👉 [**I pericoli naturali**](/formazione/schede-stampabili/pericoli-naturali-infanzia/) — panoramica dei sei rischi principali: terremoto, alluvione, frana, temporale, eruzione vulcanica, incendio boschivo.
+- 👉 [**Allerta e comunicazioni**](/formazione/schede-stampabili/allerta-comunicazioni-infanzia/) — ascoltare le allerte, ricevere informazioni dai canali ufficiali, parlare in famiglia, conoscere le vie di fuga, preparare lo zaino, chiamare il 112.
+- 👉 [**La sicurezza in casa**](/formazione/schede-stampabili/sicurezza-in-casa-infanzia/) — rilevatore di fumo, apparecchi elettrici, fornelli e gas, finestre, ordine, piano di evacuazione.
+- 👉 [**Il mio zainetto di emergenza**](/formazione/schede-stampabili/zainetto-emergenza-infanzia/) — kit personale del bambino: acqua, torcia, fischietto, copertina, numeri utili, peluche rassicurante.
+
+*Cosa faccio se… (emergenze specifiche)*:
+
+- 👉 [**Cosa faccio se mi perdo?**](/formazione/schede-stampabili/se-mi-perdo-infanzia/) — fermarsi, cercare un adulto in divisa, dire nome e cognome, restare in un posto sicuro, chiamare aiuto, aspettare i soccorsi.
+- 👉 [**Cosa faccio se sento odore di gas?**](/formazione/schede-stampabili/odore-gas-infanzia/) — non accendere luci, aprire le finestre con un adulto, uscire all'aperto, niente fiamme, chiamare il 112.
+- 👉 [**Cosa faccio se fa molto caldo?**](/formazione/schede-stampabili/ondata-calore-infanzia/) — bere acqua, stare all'ombra, cappellino, non correre sotto il sole, aiutare i nonni, cercare un posto fresco.
+- 👉 [**Pronto soccorso**](/formazione/schede-stampabili/pronto-soccorso-infanzia/) — valutare, chiamare il 112, controllare coscienza e respiro, pulire e coprire la ferita, rassicurare, attendere i soccorsi.
+
+*A scuola*:
+
+- 👉 [**A scuola in sicurezza**](/formazione/schede-stampabili/a-scuola-in-sicurezza-infanzia/) — cammino in fila, ascolto la maestra, conosco l'uscita di emergenza, vado al punto di raccolta, non spingo, aiuto i compagni.
+- 👉 [**Trova la strada per il punto di raccolta**](/formazione/schede-stampabili/labirinto-punto-raccolta-infanzia/) — gioco-labirinto: raggiungere il punto di raccolta evitando ascensore, fumo, pozzanghere, alberi caduti, transenne.
+
+*Valori e abilità del volontario*:
+
+- 👉 [**Aiuto e solidarietà**](/formazione/schede-stampabili/aiuto-solidarieta-infanzia/) — i valori del volontariato: gentilezza, cura, ascolto, lavoro di squadra, comunicazione rispettosa, solidarietà come gesto d'amore.
+- 👉 [**Volontariato e ambiente**](/formazione/schede-stampabili/volontariato-ambiente-infanzia/) — raccogliere rifiuti, piantare alberi, raccolta differenziata, non sprecare l'acqua, lavorare insieme, proteggere il pianeta.
+- 👉 [**I nodi che salvano**](/formazione/schede-stampabili/nodi-che-salvano-infanzia/) — fare un nodo semplice in 6 passi: corda resistente, anello, passare l'estremità, stringere, nodo finito, usare il nodo per aiutare.
 
 
 Queste schede sono pensate per essere **fotocopiate in bianco e nero** e consegnate ai bambini come attività di rinforzo individuale o di piccolo gruppo. Il disegno è sempre accompagnato da una breve consegna che la maestra legge ad alta voce.
