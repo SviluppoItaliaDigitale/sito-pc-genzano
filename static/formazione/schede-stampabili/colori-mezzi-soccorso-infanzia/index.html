@@ -3,176 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scheda stampabile: I colori dei mezzi di soccorso (Infanzia 3-4 anni)</title>
-  <meta name="description" content="Scheda fotocopiabile per la Scuola dell'Infanzia 3-4 anni. I colori dei 3 mezzi di soccorso (pompieri rosso, ambulanza bianca, volontari arancione) da abbinare e colorare.">
+  <title>Scheda da colorare: I colori dei mezzi di soccorso — Infanzia</title>
+  <meta name="description" content="Scheda fotocopiabile colorabile per la Scuola dell'Infanzia. 6 mezzi di soccorso da colorare con il colore giusto: camion pompieri rosso, ambulanza bianca, furgone PC arancione o blu, auto polizia blu, auto Carabinieri blu scuro, mezzo antincendio boschivo giallo.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
-    .mezzi-griglia {
-      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.7rem;
-      margin: 0.5rem 0;
-    }
-    .mezzo-card {
-      border: 2.5px solid var(--scheda-blu); border-radius: 12px;
-      padding: 0.7rem 0.5rem; background: #fff; text-align: center;
-      display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
-    }
-    .mezzo-card .emoji-grande { font-size: 3rem; line-height: 1; }
-    .mezzo-card .nome {
-      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
-      font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem;
-    }
-    .mezzo-card .pallino-colore {
-      width: 2.4rem; height: 2.4rem; border-radius: 50%;
-      border: 2px solid #444;
-    }
-    .mezzo-card .pallino-colore.rosso { background: #dc3545; }
-    .mezzo-card .pallino-colore.bianco { background: #fff; border-color: #555; }
-    .mezzo-card .pallino-colore.arancione { background: #fd7e14; }
-
-    .colora-card {
-      border: 2.5px dashed var(--scheda-blu); border-radius: 12px;
-      padding: 0.7rem; background: #fff; text-align: center;
-      display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
-    }
-
-    .colora-griglia {
-      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.7rem;
-      margin: 0.5rem 0;
-    }
-
-    .istruzioni-maestra {
-      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
-      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
-      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    body { margin: 0; padding: 0; background: #f4f7fb; }
+    .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
+    .scheda-immagine-wrapper img { width: 100%; height: auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border-radius: 4px; }
+    @media print {
+      body { background: #fff; }
+      .scheda-immagine-wrapper { max-width: 100%; margin: 0; padding: 0; }
+      .scheda-immagine-wrapper img { box-shadow: none; border-radius: 0; width: 100%; height: auto; max-height: 100vh; object-fit: contain; }
+      @page { size: A4 portrait; margin: 8mm; }
     }
   </style>
 </head>
 <body>
   <div class="scheda-toolbar no-print">
-    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
-    <span class="scheda-titolo">I colori dei mezzi di soccorso — Infanzia 3-4 anni</span>
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Da colorare: I colori dei mezzi di soccorso — Infanzia</span>
     <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
 
-  <article class="scheda-page">
-    <header class="scheda-header">
-      <div class="scheda-logo" aria-hidden="true">PC</div>
-      <div class="scheda-intestazione">
-        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">I colori dei mezzi di soccorso</h1>
-        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (3-4 anni)</div>
-      </div>
-    </header>
-
-    <div class="scheda-meta">
-      <span><strong>Destinatari:</strong> 3-4 anni</span>
-      <span><strong>Obiettivo:</strong> riconoscere i colori dei mezzi PC</span>
-      <span><strong>Servono:</strong> matita, pennarelli rosso, arancione, blu</span>
-    </div>
-
-    <p class="scheda-intro">
-      Quando senti la <strong>sirena</strong> e vedi un mezzo passare veloce, stai sicuro: stanno andando ad aiutare qualcuno! I mezzi di soccorso si riconoscono dal <strong>colore</strong>.
-    </p>
-
-    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🚨 I colori non sono a caso!</strong> Sono <strong>uguali in tutta Italia</strong> per legge, così tutti li riconoscono subito anche in un altro paese. <strong>Rosso</strong> = vigili del fuoco (come il fuoco). <strong>Bianco con striscia arancione e blu</strong> = ambulanza (118). <strong>Arancione</strong> = Protezione Civile (volontari). Anche le <strong>divise</strong> hanno questi colori. Quando senti la sirena ti devi spostare per lasciar passare il mezzo: è una regola della strada.
-    </div>
-
-    <h2 class="scheda-h2">I 3 mezzi e i loro colori</h2>
-    <div class="mezzi-griglia">
-
-      <div class="mezzo-card">
-        <span class="emoji-grande" aria-hidden="true">🚒</span>
-        <span class="nome">POMPIERE</span>
-        <span class="pallino-colore rosso" aria-hidden="true"></span>
-        <span style="font-size: 0.78rem; color: #495057;"><strong>ROSSO</strong></span>
-      </div>
-
-      <div class="mezzo-card">
-        <span class="emoji-grande" aria-hidden="true">🚑</span>
-        <span class="nome">AMBULANZA</span>
-        <span class="pallino-colore bianco" aria-hidden="true"></span>
-        <span style="font-size: 0.78rem; color: #495057;"><strong>BIANCO</strong></span>
-      </div>
-
-      <div class="mezzo-card">
-        <span class="emoji-grande" aria-hidden="true">🚐</span>
-        <span class="nome">VOLONTARI PC</span>
-        <span class="pallino-colore arancione" aria-hidden="true"></span>
-        <span style="font-size: 0.78rem; color: #495057;"><strong>ARANCIONE</strong></span>
-      </div>
-
-    </div>
-
-    <h2 class="scheda-h2">✏️ Colora i mezzi del colore giusto</h2>
-    <p class="scheda-intro" style="margin: 0.2rem 0;">
-      I mezzi qui sotto sono in bianco. Coloraci dentro con il colore giusto:
-      <strong>pompiere rosso</strong>, <strong>ambulanza bianca</strong> (lasciala così!),
-      <strong>furgone volontari arancione</strong>.
-    </p>
-    <div class="colora-griglia">
-
-      <div class="colora-card">
-        <svg viewBox="0 0 120 80" style="width:100px; height:auto;" role="img" aria-label="Sagoma di camion pompieri da colorare">
-          <rect x="10" y="20" width="100" height="40" fill="#fff" stroke="#000" stroke-width="2"/>
-          <rect x="60" y="10" width="40" height="20" fill="#fff" stroke="#000" stroke-width="2"/>
-          <circle cx="30" cy="65" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
-          <circle cx="90" cy="65" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
-          <text x="35" y="48" font-size="9" font-weight="700" fill="#000">VVF</text>
-        </svg>
-        <span style="font-family:'Comic Sans MS',sans-serif; font-weight:700; color:var(--scheda-blu); font-size:0.85rem; margin-top:0.3rem;">pompiere</span>
-      </div>
-
-      <div class="colora-card">
-        <svg viewBox="0 0 120 80" style="width:100px; height:auto;" role="img" aria-label="Sagoma di ambulanza">
-          <rect x="10" y="20" width="100" height="40" fill="#fff" stroke="#000" stroke-width="2"/>
-          <rect x="70" y="10" width="40" height="20" fill="#fff" stroke="#000" stroke-width="2"/>
-          <circle cx="30" cy="65" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
-          <circle cx="90" cy="65" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
-          <line x1="32" y1="40" x2="50" y2="40" stroke="#dc3545" stroke-width="3"/>
-          <line x1="41" y1="32" x2="41" y2="48" stroke="#dc3545" stroke-width="3"/>
-        </svg>
-        <span style="font-family:'Comic Sans MS',sans-serif; font-weight:700; color:var(--scheda-blu); font-size:0.85rem; margin-top:0.3rem;">ambulanza</span>
-      </div>
-
-      <div class="colora-card">
-        <svg viewBox="0 0 120 80" style="width:100px; height:auto;" role="img" aria-label="Sagoma di furgone volontari">
-          <rect x="10" y="22" width="100" height="38" fill="#fff" stroke="#000" stroke-width="2"/>
-          <rect x="70" y="12" width="40" height="22" fill="#fff" stroke="#000" stroke-width="2"/>
-          <circle cx="30" cy="65" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
-          <circle cx="90" cy="65" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
-          <text x="40" y="48" font-size="8" font-weight="700" fill="#000">PC</text>
-        </svg>
-        <span style="font-family:'Comic Sans MS',sans-serif; font-weight:700; color:var(--scheda-blu); font-size:0.85rem; margin-top:0.3rem;">volontari</span>
-      </div>
-
-    </div>
-
-    <h2 class="scheda-h2">Quale mezzo chiamo?</h2>
-    <p class="scheda-intro">
-      In ogni caso, basta chiamare il <strong>112</strong> e dire cosa è successo.
-      Saranno i grandi a decidere quale mezzo mandare!
-    </p>
-    <div style="display: flex; justify-content: center; align-items: center; gap: 0.8rem; padding: 0.5rem; background: #fff8e6; border: 2px dashed var(--scheda-oro); border-radius: 10px; margin: 0.4rem 0;">
-      <span style="font-size: 2rem;" aria-hidden="true">📞</span>
-      <span style="font-family:'Comic Sans MS',sans-serif; font-weight: 700; font-size: 2.5rem; color: var(--scheda-rosso); letter-spacing: 0.2em;">112</span>
-    </div>
-
-    <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro:</strong>
-      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>I 3 mezzi corrispondono ai 3 servizi raggiungibili dal NUE 112: vigili del fuoco, soccorso sanitario, volontari PC.</li>
-        <li><strong>Tecnica colorazione</strong>: insistere sul rispetto dei contorni — è anche un esercizio di motricità fine. Chi sbocca fuori non è un errore, è un'occasione per riprovare.</li>
-        <li><strong>Estensione</strong>: chiedere ai genitori di mostrare al bambino il <strong>mezzo del Gruppo PC Genzano</strong> (è arancione) la prossima volta che lo incontrano.</li>
-      </ul>
-    </div>
-
-    <footer class="scheda-footer">
-      <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Colori mezzi di soccorso" · Infanzia 3-4 anni · colori · rev. 2026</span>
-    </footer>
-  </article>
+  <main class="scheda-immagine-wrapper">
+    <img src="scheda-completa.png"
+         alt="Scheda da colorare: i colori dei mezzi di soccorso. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'I colori dei mezzi di soccorso'. Sottotitolo 'Colora ogni mezzo con il suo colore giusto!'. Sei mezzi numerati con didascalia del colore: 1) camion dei pompieri da colorare di rosso; 2) ambulanza bianca con strisce; 3) furgone della Protezione Civile con il triangolo PC sulla fiancata da colorare arancione o blu; 4) auto della polizia blu con strisce; 5) auto dei Carabinieri blu scuro; 6) mezzo antincendio boschivo giallo con un elicottero accanto. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
 </body>
 </html>
