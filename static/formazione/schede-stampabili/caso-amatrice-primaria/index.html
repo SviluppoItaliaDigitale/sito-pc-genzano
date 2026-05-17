@@ -4,19 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scheda stampabile: Caso Amatrice 2016 — Primaria 4ª-5ª</title>
-  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. Il terremoto del Centro Italia 2016: cronologia, l'aiuto dei volontari, la ricostruzione di Amatrice.">
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. Il terremoto del Centro Italia 2016: come funziona un terremoto, cronologia, l'aiuto dei volontari, la ricostruzione di Amatrice.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
-    .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; }
-    .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; margin-bottom: 0.3rem; }
-    .timeline-box .corpo { font-size: 0.95rem; line-height: 1.55; }
-    .domanda-card { padding: 0.55rem 0.75rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin-bottom: 0.4rem; }
-    .domanda-card .num-q { width: 1.5rem; height: 1.5rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem; margin-right: 0.4rem; }
-    .righe { display: grid; gap: 0.35rem; padding-left: 2rem; margin-top: 0.3rem; }
-    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
-    .istruzioni-maestra { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
+    .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.35rem 0; }
+    .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .timeline-box .corpo { font-size: 0.9rem; line-height: 1.5; }
+    .nozione-box { background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.6rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; font-size: 0.9rem; line-height: 1.55; }
+    .nozione-box .titolo-n { font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.25rem; font-size: 0.95rem; }
+    .glossario-mini { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 0.7rem; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; }
+    .glossario-mini dt { font-weight: 700; color: var(--scheda-blu); }
+    .glossario-mini dd { margin: 0; }
+    .tabella-confronto { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.4rem 0; }
+    .tabella-confronto th, .tabella-confronto td { border: 1.5px solid var(--scheda-bordo); padding: 0.35rem 0.55rem; text-align: left; }
+    .tabella-confronto th { background: var(--scheda-blu); color: #fff; font-weight: 700; }
+    .tabella-confronto tr:nth-child(even) td { background: #f4f7fb; }
+    .domanda-card { padding: 0.5rem 0.7rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin-bottom: 0.35rem; font-size: 0.92rem; }
+    .domanda-card .num-q { width: 1.4rem; height: 1.4rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem; margin-right: 0.4rem; }
+    .righe { display: grid; gap: 0.3rem; padding-left: 1.9rem; margin-top: 0.25rem; }
+    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.3rem; }
+    .istruzioni-maestra { margin-top: 0.7rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.8rem; color: #664d03; line-height: 1.45; }
+    .scheda-h2 { font-size: 1.02rem; margin: 0.7rem 0 0.3rem; }
   </style>
 </head>
 <body>
@@ -38,83 +48,106 @@
 
     <div class="scheda-meta">
       <span><strong>Destinatari:</strong> 9-11 anni</span>
-      <span><strong>Obiettivo:</strong> conoscere un evento recente + il valore della solidarietà</span>
-      <span><strong>Discipline:</strong> storia, geografia, ed. civica</span>
+      <span><strong>Obiettivo:</strong> capire come funziona un terremoto + il valore della solidarietà</span>
+      <span><strong>Discipline:</strong> storia, geografia, scienze, ed. civica</span>
     </div>
 
     <p class="scheda-intro">
-      Il <strong>24 agosto 2016</strong>, alle 3 e mezza di notte, un forte terremoto colpì <strong>Amatrice</strong>, un piccolo paese fra Lazio, Marche, Abruzzo e Umbria. È un'area con tanti borghi antichi e montagne. Tutta Italia ha aiutato Amatrice in poche ore: una squadra unita, anche se a distanza.
+      Il <strong>24 agosto 2016</strong>, alle 3:36 di notte, un forte terremoto colpì <strong>Amatrice</strong>, un piccolo paese sulle montagne fra Lazio, Marche, Abruzzo e Umbria. In pochi minuti l'Italia intera si è mossa per aiutare. Per capire cosa è successo, prima dobbiamo sapere <em>perché</em> succedono i terremoti.
     </p>
+
+    <div class="nozione-box">
+      <div class="titolo-n">🌍 Come funziona un terremoto</div>
+      La crosta della Terra è fatta di grandi pezzi di roccia che si chiamano <strong>placche</strong>. Si muovono lentamente, di pochi centimetri all'anno (più o meno come crescono le tue unghie). Quando due pezzi si bloccano e poi all'improvviso si liberano, la roccia si rompe in profondità lungo una <strong>faglia</strong>. L'energia esce verso la superficie come un'onda: questa è la <em>scossa</em> che sentiamo. Ad Amatrice la rottura era a circa <strong>8 km di profondità</strong>, una distanza piccola: per questo il movimento è arrivato così forte fino alle case.
+      <br><em>Fonte: INGV — Istituto Nazionale di Geofisica e Vulcanologia.</em>
+    </div>
+
+    <h2 class="scheda-h2">📖 Le parole nuove</h2>
+    <dl class="glossario-mini">
+      <dt>Faglia</dt><dd>linea sotto terra dove due pezzi di roccia si toccano e a volte si rompono di colpo.</dd>
+      <dt>Magnitudo (M)</dt><dd>numero che dice quanta energia ha la scossa. Più alto è il numero, più forte è il terremoto.</dd>
+      <dt>Epicentro</dt><dd>il punto sulla superficie esattamente sopra il luogo dove la roccia si è rotta sotto.</dd>
+      <dt>Sfollato</dt><dd>chi non può più tornare a casa perché la sua casa è pericolante o caduta.</dd>
+    </dl>
 
     <h2 class="scheda-h2">📅 Cronologia in breve</h2>
 
     <div class="timeline-box">
       <div class="data">24 agosto 2016 — ore 3:36 di notte</div>
-      <div class="corpo">Una scossa di magnitudo 6,0 colpisce Amatrice e i paesi vicini. Tanti edifici antichi crollano. È estate e in zona ci sono molti turisti.</div>
+      <div class="corpo">Scossa di <strong>magnitudo 6,0</strong>. Crollano interi quartieri di Amatrice, Accumoli, Arquata, Pescara del Tronto. Bilancio finale: <strong>299 vittime</strong>.</div>
     </div>
 
     <div class="timeline-box">
       <div class="data">Ore successive — 24-25 agosto</div>
-      <div class="corpo">In poche ore arrivano squadre di <strong>vigili del fuoco</strong>, <strong>volontari di Protezione Civile</strong>, sanitari del 118, alpini, soccorso alpino. Si lavora giorno e notte per cercare le persone sotto le macerie.</div>
+      <div class="corpo">In poche ore arrivano <strong>vigili del fuoco</strong>, <strong>volontari di Protezione Civile</strong>, sanitari del 118, alpini, soccorso alpino. Si lavora giorno e notte per cercare le persone sotto le macerie.</div>
     </div>
 
     <div class="timeline-box">
-      <div class="data">30 ottobre 2016</div>
-      <div class="corpo">Una nuova scossa più forte (magnitudo 6,5) colpisce ancora la stessa zona. Per fortuna le persone sono già state messe in salvo. Crollano altri edifici già danneggiati.</div>
+      <div class="data">30 ottobre 2016 — ore 7:40</div>
+      <div class="corpo">Una scossa ancora più forte (<strong>magnitudo 6,5</strong>) colpisce di nuovo la stessa zona. Crolla la basilica di Norcia. <strong>Nessuna vittima</strong>: le persone delle case più danneggiate erano già state portate via prima.</div>
     </div>
 
     <div class="timeline-box">
       <div class="data">2017-oggi</div>
-      <div class="corpo">Inizia la <strong>ricostruzione</strong>, lenta ma in corso. Famosi cuochi italiani fanno la "pasta all'amatriciana" in tante città per raccogliere fondi. Tanti bambini ricevono nuove scuole sicure.</div>
+      <div class="corpo">Inizia la <strong>ricostruzione</strong>, lenta ma in corso. I ristoranti d'Italia preparano la <em>pasta all'amatriciana</em> per raccogliere fondi. Vengono costruite scuole nuove e antisismiche.</div>
     </div>
 
-    <h2 class="scheda-h2">💡 Cosa abbiamo imparato</h2>
-    <ul style="font-size: 0.95rem; line-height: 1.6;">
-      <li>L'Italia è un Paese <strong>sismico</strong>: ci sono regioni dove i terremoti sono più frequenti, e bisogna costruire bene per essere pronti.</li>
-      <li>La <strong>solidarietà</strong> nasce dal cuore: anche fare un piatto di pasta o donare giochi può aiutare chi è in difficoltà.</li>
-      <li>I volontari sono <strong>persone normali</strong>, come i tuoi vicini di casa, che imparano a essere utili in emergenza.</li>
-    </ul>
+    <h2 class="scheda-h2">📊 Tre terremoti italiani a confronto</h2>
+    <table class="tabella-confronto">
+      <thead>
+        <tr><th>Terremoto</th><th>Anno</th><th>Magnitudo</th><th>Vittime</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Irpinia (Campania)</td><td>1980</td><td>6,9</td><td>circa 2.900</td></tr>
+        <tr><td>L'Aquila</td><td>2009</td><td>6,3</td><td>309</td></tr>
+        <tr><td>Amatrice (Centro Italia)</td><td>2016</td><td>6,0</td><td>299</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.82rem; color: #495057; margin: 0.2rem 0 0.6rem; font-style: italic;">
+      Stessa zona del mondo (Appennino), magnitudi vicine, vittime molto diverse: dipende anche da <em>come</em> sono costruite le case.
+    </p>
 
     <h2 class="scheda-h2">✏️ Rispondi alle domande</h2>
 
     <div class="domanda-card">
-      <span class="num-q">1</span><strong>In che data è avvenuto il primo terremoto di Amatrice?</strong>
+      <span class="num-q">1</span><strong>Leggi il box "Come funziona un terremoto". Come si chiama il pezzo di crosta che si rompe sotto terra?</strong>
       <div class="righe"><span class="r"></span></div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">2</span><strong>Quali regioni italiane sono state colpite?</strong>
-      <div class="righe"><span class="r"></span></div>
-    </div>
-
-    <div class="domanda-card">
-      <span class="num-q">3</span><strong>Come hanno aiutato i cuochi e i ristoranti italiani?</strong>
+      <span class="num-q">2</span><strong>Guarda la tabella dei tre terremoti. Quale ha avuto la magnitudo più alta? E quale ha avuto più vittime?</strong>
       <div class="righe"><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">4</span><strong>Cosa fa un volontario della Protezione Civile?</strong>
-      <div class="righe"><span class="r"></span></div>
+      <span class="num-q">3</span><strong>La scossa del 30 ottobre 2016 era più forte di quella del 24 agosto, ma non ha fatto vittime. Perché secondo te?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">5</span><strong>Tu come potresti aiutare chi vive un'emergenza?</strong>
+      <span class="num-q">4</span><strong>Cosa fa un volontario della Protezione Civile durante un terremoto? Scrivi due cose.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">5</span><strong>Tu come potresti aiutare i bambini che vivono un'emergenza? (anche senza essere ancora grande)</strong>
       <div class="righe"><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="istruzioni-maestra">
       <strong>Per la maestra/maestro · Soluzioni e note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Risposte:</strong> 1) 24 agosto 2016 · 2) Lazio, Marche, Abruzzo, Umbria · 3) hanno cucinato la pasta all'amatriciana per raccogliere fondi · 4) cerca persone sotto le macerie, monta tende, distribuisce cibo, aiuta i bambini · 5) risposta libera, valorizzare azioni concrete (donare, scrivere lettere, raccogliere materiale).</li>
-        <li><strong>Sensibilità</strong>: argomento recente per famiglie. Ricordare il messaggio positivo della solidarietà ("amatriciana fund-raising") e della ricostruzione in corso. Evitare descrizioni dettagliate delle vittime.</li>
-        <li><strong>Estensione</strong>: collegare con <a href="/formazione/schede-stampabili/caso-amatrice-secondaria/">Caso Amatrice (Sec I)</a> e <a href="/formazione/schede-stampabili/caso-amatrice-secondaria2/">Caso Amatrice (Sec II)</a>. Discipline: italiano, geografia (Appennino centrale), ed. civica (cittadinanza solidale).</li>
-        <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Storia, Geografia, Cittadinanza. Legge 92/2019. D.M. 183/2024 — Sostenibilità + Cittadinanza (Goal 11 Agenda 2030: città e comunità sostenibili).</li>
+        <li><strong>Risposte attese:</strong> 1) faglia · 2) Irpinia 1980 magnitudo 6,9 (la più alta) e anche più vittime (~2.900) · 3) le persone delle case pericolanti erano già state evacuate; le case dove ancora vivevano erano fra le poche rimaste in piedi · 4) cerca persone sotto le macerie, monta tende, distribuisce pasti, aiuta i bambini, dà informazioni alla popolazione · 5) risposta libera — valorizzare azioni concrete (donare, scrivere lettere, raccogliere giochi, gemellaggi scolastici).</li>
+        <li><strong>Collegamento scienze (geologia)</strong>: la Terra è un pianeta "vivo", le placche si muovono. L'Italia è schiacciata fra la placca africana e quella euroasiatica: per questo abbiamo terremoti e vulcani. Mappa di pericolosità sismica → <a href="https://www.ingv.it">ingv.it</a>.</li>
+        <li><strong>Sensibilità</strong>: argomento recente per le famiglie. Valorizzare il messaggio positivo della solidarietà (raccolte fondi, ricostruzione) ed evitare descrizioni dettagliate delle vittime. Verificare prima della classe la presenza di alunni con familiari coinvolti.</li>
+        <li><strong>Estensione</strong>: confronto con <a href="/formazione/schede-stampabili/caso-amatrice-secondaria/">Caso Amatrice (Sec I)</a> e <a href="/formazione/schede-stampabili/caso-amatrice-secondaria2/">Caso Amatrice (Sec II)</a>. Carta dell'Italia sismica: <a href="https://emidius.mi.ingv.it">emidius.mi.ingv.it</a> (catalogo storico).</li>
+        <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Storia, Geografia, Scienze, Cittadinanza. Legge 92/2019 (Ed. Civica). D.M. 183/2024 — Sostenibilità (Goal 11 Agenda 2030: città e comunità sostenibili).</li>
       </ul>
     </div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Caso Amatrice 2016" · Primaria 4ª-5ª · storia/geografia/ed. civica · rev. 2026</span>
+      <span>Scheda "Caso Amatrice 2016" · Primaria 4ª-5ª · storia/geografia/scienze/ed. civica · rev. 2026</span>
     </footer>
   </article>
 </body>
