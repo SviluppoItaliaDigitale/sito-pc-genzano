@@ -3,162 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scheda stampabile: Disegna il tuo aiutante (Infanzia 3-4 anni)</title>
-  <meta name="description" content="Scheda fotocopiabile per la Scuola dell'Infanzia 3-4 anni. Silhouette di un volontario PC con elementi tratteggiati da completare e colorare.">
+  <title>Scheda da colorare: Disegna il tuo aiutante — Infanzia</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola dell'Infanzia. Silhouette tratteggiata di un volontario di Protezione Civile da ricalcare e completare con occhi, bocca, oggetti in mano e colori, lasciando spazio all'immaginazione del bambino.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
-    .silhouette-wrap {
-      display: flex; justify-content: center; padding: 0.5rem 0;
-      background: #fff; border: 2px solid var(--scheda-blu); border-radius: 12px;
-      margin: 0.4rem 0;
-    }
-    .silhouette-wrap svg { width: 100%; max-width: 360px; height: auto; }
-
-    .legenda-elementi {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 0.7rem;
-      margin: 0.5rem 0;
-    }
-    .legenda-elementi .voce {
-      display: flex; align-items: center; gap: 0.5rem;
-      padding: 0.4rem 0.6rem; background: #fff;
-      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
-      font-size: 0.88rem;
-    }
-    .legenda-elementi .voce .num {
-      width: 1.4rem; height: 1.4rem; background: var(--scheda-blu); color: #fff;
-      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 0.78rem; flex-shrink: 0;
-    }
-    .legenda-elementi .voce strong { color: var(--scheda-blu); }
-
-    .istruzioni-maestra {
-      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
-      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
-      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    body { margin: 0; padding: 0; background: #f4f7fb; }
+    .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
+    .scheda-immagine-wrapper img { width: 100%; height: auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border-radius: 4px; }
+    @media print {
+      body { background: #fff; }
+      .scheda-immagine-wrapper { max-width: 100%; margin: 0; padding: 0; }
+      .scheda-immagine-wrapper img { box-shadow: none; border-radius: 0; width: 100%; height: auto; max-height: 100vh; object-fit: contain; }
+      @page { size: A4 portrait; margin: 8mm; }
     }
   </style>
 </head>
 <body>
   <div class="scheda-toolbar no-print">
-    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
-    <span class="scheda-titolo">Disegna il tuo aiutante — Infanzia 3-4 anni</span>
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Disegna il tuo aiutante — Infanzia</span>
     <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
 
-  <article class="scheda-page">
-    <header class="scheda-header">
-      <div class="scheda-logo" aria-hidden="true">PC</div>
-      <div class="scheda-intestazione">
-        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">Disegna il tuo aiutante</h1>
-        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (3-4 anni)</div>
-      </div>
-    </header>
-
-    <div class="scheda-meta">
-      <span><strong>Destinatari:</strong> 3-4 anni</span>
-      <span><strong>Obiettivo:</strong> riconoscere il volontario PC e i suoi strumenti</span>
-      <span><strong>Servono:</strong> matita, pennarelli arancione, blu, giallo</span>
-    </div>
-
-    <p class="scheda-intro">
-      Questo è un <strong>volontario della Protezione Civile</strong>! Ma mancano alcune cose. <strong>Completa il disegno</strong> seguendo le linee tratteggiate, poi <strong>coloralo</strong>!
-    </p>
-
-    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">👷‍♀️ Le 5 cose di un volontario PC:</strong> <strong>1)</strong> Casco bianco con scritta "PC". <strong>2)</strong> Gilet arancione con bande riflettenti. <strong>3)</strong> Scarponi robusti. <strong>4)</strong> Radio (per parlare con gli altri volontari). <strong>5)</strong> Tessera sul petto col proprio nome e quello del Gruppo. Tutto questo si chiama <strong>"dispositivi di protezione"</strong> ed è obbligatorio per la sicurezza del volontario.
-    </div>
-
-    <div class="silhouette-wrap">
-      <svg viewBox="0 0 360 480" role="img" aria-label="Silhouette di un volontario PC con elementi tratteggiati da completare">
-
-        <!-- testa -->
-        <circle cx="180" cy="80" r="40" fill="#fff" stroke="#000" stroke-width="2.5"/>
-        <circle cx="170" cy="76" r="3" fill="#000"/>
-        <circle cx="190" cy="76" r="3" fill="#000"/>
-        <path d="M 165,92 Q 180,100 195,92" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
-
-        <!-- numero 1 - casco da completare (tratteggio) -->
-        <path d="M 140,55 Q 180,25 220,55 L 220,42 Q 180,12 140,42 Z" fill="none" stroke="#003366" stroke-width="2.5" stroke-dasharray="5,4"/>
-        <text x="120" y="42" font-size="14" font-weight="700" fill="#003366">1</text>
-
-        <!-- collo -->
-        <rect x="170" y="118" width="20" height="20" fill="#fff" stroke="#000" stroke-width="2"/>
-
-        <!-- corpo (giubbotto da colorare arancione) -->
-        <path d="M 120,140 L 240,140 L 250,280 L 110,280 Z" fill="#fff" stroke="#000" stroke-width="2.5"/>
-        <text x="140" y="200" font-size="22" font-weight="700" fill="#fff" stroke="#003366" stroke-width="0.5">PC</text>
-        <text x="200" y="200" font-size="22" font-weight="700" fill="#fff" stroke="#003366" stroke-width="0.5">2</text>
-        <!-- bande riflettenti tratteggiate -->
-        <line x1="125" y1="220" x2="245" y2="220" stroke="#003366" stroke-width="2" stroke-dasharray="4,3"/>
-        <line x1="123" y1="245" x2="247" y2="245" stroke="#003366" stroke-width="2" stroke-dasharray="4,3"/>
-
-        <!-- braccia -->
-        <path d="M 120,140 L 90,250 L 100,260 L 130,160" fill="#fff" stroke="#000" stroke-width="2"/>
-        <path d="M 240,140 L 270,250 L 260,260 L 230,160" fill="#fff" stroke="#000" stroke-width="2"/>
-
-        <!-- mani: una con radio, una libera -->
-        <circle cx="92" cy="265" r="11" fill="#fff" stroke="#000" stroke-width="2"/>
-        <circle cx="268" cy="265" r="11" fill="#fff" stroke="#000" stroke-width="2"/>
-
-        <!-- numero 3 - radio tratteggiata da completare -->
-        <rect x="252" y="270" width="18" height="35" fill="none" stroke="#003366" stroke-width="2.5" stroke-dasharray="5,4"/>
-        <line x1="261" y1="265" x2="261" y2="258" stroke="#003366" stroke-width="2" stroke-dasharray="3,2"/>
-        <text x="290" y="290" font-size="14" font-weight="700" fill="#003366">3</text>
-
-        <!-- gambe -->
-        <rect x="135" y="280" width="40" height="140" fill="#fff" stroke="#000" stroke-width="2"/>
-        <rect x="185" y="280" width="40" height="140" fill="#fff" stroke="#000" stroke-width="2"/>
-
-        <!-- numero 4 - scarpe da completare (tratteggio) -->
-        <ellipse cx="155" cy="430" rx="22" ry="10" fill="none" stroke="#003366" stroke-width="2.5" stroke-dasharray="5,4"/>
-        <ellipse cx="205" cy="430" rx="22" ry="10" fill="none" stroke="#003366" stroke-width="2.5" stroke-dasharray="5,4"/>
-        <text x="115" y="445" font-size="14" font-weight="700" fill="#003366">4</text>
-
-      </svg>
-    </div>
-
-    <h2 class="scheda-h2">Cosa devi completare e colorare</h2>
-    <div class="legenda-elementi">
-      <div class="voce">
-        <span class="num">1</span>
-        <span><strong>Casco</strong> — ripassa le linee tratteggiate. Coloralo di <strong>blu</strong>.</span>
-      </div>
-      <div class="voce">
-        <span class="num">2</span>
-        <span><strong>Giubbotto</strong> — coloralo tutto di <strong>arancione</strong> (il colore della PC!).</span>
-      </div>
-      <div class="voce">
-        <span class="num">3</span>
-        <span><strong>Radio</strong> — ripassa il tratteggio e colora di <strong>nero</strong>.</span>
-      </div>
-      <div class="voce">
-        <span class="num">4</span>
-        <span><strong>Scarponcini</strong> — ripassa il tratteggio e colora di <strong>marrone</strong>.</span>
-      </div>
-    </div>
-
-    <p class="scheda-intro" style="margin-top: 0.6rem;">
-      Adesso il tuo volontario è pronto! È bello, vero? <strong>Grazie</strong>, piccolo
-      artista, perché disegnare i nostri aiutanti è un modo per dirgli grazie. 🤝
-    </p>
-
-    <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro:</strong>
-      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>Lavoro a doppio binario: <strong>pregrafismo</strong> (ripassa i tratteggi) + <strong>riconoscimento colori</strong>. Il giubbotto arancione è il marchio identificativo del volontario PC.</li>
-        <li><strong>Tecnica</strong>: per i 3 anni accettare colorature approssimative. Per i 4 anni insistere sul rispetto dei contorni.</li>
-        <li><strong>Estensione</strong>: dopo la scheda, mostrare una foto reale di un volontario di Genzano in divisa (le foto sono nelle <a href="/comunicazioni/">comunicazioni</a> del sito) — i bambini riconoscono gli stessi elementi.</li>
-        <li><strong>Bambini con DSA precoce o disabilità motoria</strong>: ammessa la colorazione "a campitura libera" (anche fuori dai contorni). Quello che conta è l'identificazione degli elementi.</li>
-      </ul>
-    </div>
-
-    <footer class="scheda-footer">
-      <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Disegna l'aiutante" · Infanzia 3-4 anni · disegno guidato · rev. 2026</span>
-    </footer>
-  </article>
+  <main class="scheda-immagine-wrapper">
+    <img src="scheda-completa.png"
+         alt="Scheda da colorare: disegna il tuo aiutante. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'Disegna il tuo aiutante'. Sottotitolo 'Come immagini il volontario che ti aiuta? Disegnalo tu!'. A sinistra una silhouette tratteggiata di un volontario PC da ricalcare e completare: casco con triangolo PC accennato, gilet con scritta PC, occhi suggeriti da piccoli cerchi tratteggiati. A destra quattro ovali etichettati 'Occhi', 'Bocca', 'Cosa tiene in mano?', 'I colori' dove il bambino completa il personaggio con la propria fantasia. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
 </body>
 </html>
