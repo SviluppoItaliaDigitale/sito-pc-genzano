@@ -58,8 +58,6 @@ Se l'utente ti chiede una **domanda di stato** sulla pubblicazione mentre ci son
 
 Non lasciare l'utente a doverlo chiedere come azione successiva. Se l'utente risponde «vai»/«sì»/«ok»/«procedi», quella è una conferma di pubblicazione e attiva la sequenza completa sopra (commit → push → PR → merge → deploy → comunica URL+ETA), senza altre fermate.
 
-**Storia della regola:** esiste perché il 2 maggio 2026 un agent si è fermato alla creazione della PR aspettando conferma — l'utente ha chiarito: «quando ti dico di pubblicare, devi fare in modo e maniera di pubblicare!». Il 9 maggio 2026 ChatGPT-cloud ha replicato lo stesso bug nonostante la regola: ha spiegato lo stato del branch *senza offrire l'azione*, poi non ha riconosciuto «Vai» come trigger. La sezione è stata riscritta per rendere impossibile fraintenderla.
-
 ---
 
 ## Fine sessione su feature branch — proponi sempre il merge
@@ -88,8 +86,6 @@ L'utente lavora **multi-device**: PC desktop a casa con Claude Code CLI, smartph
 - Non dire "fatto, pushato" come se fosse live: se sei su feature branch, il push è solo metà strada.
 - Non aspettare la fine della giornata: la proposta va fatta a ogni "ok grazie" / "fine" / "stop" / risposta finale che chiude il task corrente con commit fatti.
 
-Esiste perché il 4 maggio 2026 l'utente ha scoperto che 50+ commit accumulati su un branch mobile non erano mai stati pubblicati — pensava lo fossero perché aveva visto i push andare a buon fine. Questa regola impedisce il ripetersi.
-
 ---
 
 ## Foto utente e banner — guarda PRIMA, scrivi DOPO. Verifica visiva obbligata.
@@ -105,9 +101,7 @@ Quando crei un articolo nuovo in `content/comunicazioni/` con `image: ""` nel fr
 3. **Popola `image:`** nel frontmatter col path `/images/<slug>.webp` + `image_alt:` con `"Cover dell'articolo: <titolo>"`.
 4. Solo a quel punto procedi al commit.
 
-**Cosa NON fare:** affidarsi al workflow CI `scarica-foto-automatica.yml` step 2 (`auto-cover-mancanti.py`) per generare la cover post-push. Il workflow gira DOPO il `deploy.yml` standard, quindi il primo deploy del nuovo articolo può andare live con `images/notizia-default.svg` come fallback — un banner generico "PROTEZIONE CIVILE / Genzano di Roma" SENZA il titolo dell'articolo. È un errore visibile in homepage e in OG/Twitter Card delle anteprime social.
-
-**Causa root incidente 15 maggio 2026:** l'articolo Giro d'Italia è andato live con il banner default SVG senza titolo. Scoperto dall'utente in homepage e sulla pagina dell'articolo. Risolto generando la cover localmente e ri-deployando.
+**Cosa NON fare:** affidarsi al workflow CI `scarica-foto-automatica.yml` step 2 (`auto-cover-mancanti.py`) per generare la cover post-push. Il workflow gira DOPO il `deploy.yml` standard, quindi il primo deploy del nuovo articolo può andare live con `images/notizia-default.svg` come fallback — un banner generico SENZA il titolo dell'articolo, visibile in homepage e nelle anteprime OG/Twitter.
 
 ### REGOLA 2 — Read di OGNI foto fornita dall'utente prima di scrivere caption/alt
 
@@ -117,8 +111,6 @@ Quando l'utente fornisce foto (path filesystem o caricamento diretto):
 2. **Caption e alt devono descrivere SOLO ciò che si vede** nell'immagine — persone, oggetti, ambiente, espressioni, divise, badge, contesto visibile. **Mai inferenze testuali**: se nella foto non si vede "il briefing davanti alla Colonna Mobile", non scriverlo, anche se il contesto testuale del task lo suggerisce.
 3. **Niente fantasia, niente generalizzazioni**: se la foto mostra 3 persone, scrivi "tre persone". Se mostra un veicolo, scrivi che veicolo è. Se vedi un badge, leggi il badge.
 4. Se l'utente fornisce **N foto + M testi correlati**, i testi sono **contesto** dell'articolo, **non** descrizione delle foto. Tieni separate le 2 cose.
-
-**Causa root incidente 15 maggio 2026:** ho scritto caption tipo *"Il briefing operativo davanti alla Colonna Mobile Sala Operativa"* prendendo le parole dai testi FEPIVOL del task, mentre la foto mostrava in realtà due volontari del nostro Gruppo dentro un veicolo. Stesso errore sulla seconda foto: *"marea di volontari accorsi da molte parti del Lazio"* su una foto di 3 volontari nostri in posa davanti ai mezzi. Caption fabbricate, completamente scollegate dalla realtà visiva.
 
 ### REGOLA 3 — Attribuzione foto: default = "Foto: Gruppo Comunale Volontari PC Genzano"
 
@@ -132,8 +124,6 @@ Mai attribuire foto fornite dall'utente a soggetti terzi (Coordinamento FEPIVOL,
 - Foto chiaramente da canali social di terzi (file con nome tipo `699227882_*_n.jpg` = pattern Facebook/Instagram) → attribuibile alla fonte presunta con formula prudente *"Foto: dai canali del Coordinamento FE.PI.VOL."*
 - Foto scaricate da Wikimedia/NASA/USGS/NOAA via agent `pc-image-fixer` → attribuzione come da metadata fonte (autore + licenza).
 - Foto storiche con autore noto → autore + fonte.
-
-**Causa root incidente 15 maggio 2026:** ho attribuito *"Foto: Coordinamento FEPIVOL"* a foto che l'utente aveva fornito dicendo testualmente *"ti allego le nostre foto"*. Le foto erano dei NOSTRI volontari e dovevano essere attribuite al Gruppo Comunale.
 
 ### REGOLA 4 — Verifica web obbligata di OGNI entità citata (associazione, ente, persona, sigla)
 
@@ -153,8 +143,6 @@ Pattern operativi:
 - Sciogliere un acronimo "a senso" perché sembra plausibile.
 - Riportare un nome letto velocemente da un'immagine senza ricontrollare a piena risoluzione.
 - Citare una persona o un ruolo solo perché menzionato nei testi correlati al task, senza verificare che esista davvero in quella funzione.
-
-**Causa root incidente 15 maggio 2026 (didascalia briefing Formia):** ho letto da una foto il badge *"V.E.R. FORMIA (LT)"* e ho scritto *"E.R. Formia"* — perdendo la V iniziale. Né l'agent `pc-photo-caption-verifier` né io abbiamo fatto un check web per confermare che esistesse un'associazione con quel nome. L'utente l'ha corretto: *"il gruppo si chiama V.E.R. FORMIA. fai sempre un check sul web se effettivamente esiste o meno ciò che stai citando"*.
 
 ### Gate operativo
 
@@ -196,12 +184,6 @@ Se l'utente ti chiede esplicitamente di redigere un documento in un **registro d
 
 **L'eccezione la decide l'utente, non tu.** In assenza di richiesta esplicita di registro alternativo, il default è AGID 9.5/10 con gate obbligato.
 
-**Why esiste questa regola:**
-
-Le rules `02-content-design-pa.md` § "Livello qualitativo della redazione" e `CLAUDE.md` punto 4 («qualità ChatGPT 9.5/10») definivano già lo standard atteso. Il problema era che vivevano come **contesto di lettura**, non come **passo obbligato del flusso di pubblicazione**. Tra "ho generato il testo" e "lo committo" non c'era nulla che mi forzasse a rileggerlo da UX writer. L'agent `pc-article-reviewer` era pensato per essere invocato proattivamente, ma di fatto veniva attivato solo quando l'utente lo chiedeva esplicitamente, in revisione retroattiva.
-
-Risultato: il **9 maggio 2026** l'utente ha chiesto di rivedere AGID tutti gli articoli storici. Sono usciti **43 articoli rivisti** (2024 + 2025 + Q1 2026 + 2027 calendarizzati) in 8 PR consecutive, con interventi che andavano dal cosmetico al bloccante (badge `Allerta` improprio su campagna AIB stagionale, sigle mai sciolte, lede retorici, fonti istituzionali mai citate). Tutti debiti che si potevano evitare con un gate al momento della generazione. Da maggio 2026 il gate è obbligato per impedire che il debito si riformi.
-
 ---
 
 ## Gate di legalità — Circolare DPC 6/8/2018 su manifestazioni pubbliche
@@ -230,8 +212,6 @@ Sono compiti di **competenza esclusiva delle Forze dell'Ordine e della Polizia L
 Quando l'articolo è operativo, includere un **disclaimer normativo** con link alla [Circolare DPC 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/).
 
 Specifiche complete + tabella riformulazioni standard in `.claude/rules/06-protezione-civile-scientifica.md` § "Manifestazioni pubbliche — ruolo del volontariato di PC". L'agent `pc-article-reviewer` ha il gate di legalità come check § 9 e segnala i pattern velenosi come **BLOCCANTI**.
-
-**Why esiste questa regola**: il 16 maggio 2026 l'utente ha segnalato che un articolo descriveva il Gruppo come svolgesse viabilità, e che le circolari DPC lo vietano. Un sweep su `content/` ha trovato 5 articoli con il pattern "supporto alla viabilità" attribuito al volontariato. Tutti corretti contestualmente, e il gate è stato codificato per impedire che il pattern si ripresenti in articoli futuri.
 
 ---
 
@@ -269,15 +249,6 @@ Specifiche complete + tabella riformulazioni standard in `.claude/rules/06-prote
 Una riga sintetica con le decisioni prese: *"Badge: Attività — il Gruppo ha affiancato il dispositivo; versione facile: sì — contiene procedure operative; area: Formia (LT); scadenza: vuoto; lis_section: gestione-emergenza."*
 
 Se non concorda, corregge e basta. **Non chiedo PRIMA di pubblicare** — pubblico, poi se serve aggiusto.
-
-**Why esiste questa regola:**
-
-Il 16 maggio 2026 l'utente ha detto, frustrato, in tre messaggi consecutivi:
-1. *"deve essere fatto tutto in automatico! onestamente non posso ricordare ogni componente da inserire nell'articolo!"*
-2. *"mica dico di creare l'audio per l'articolo... o di generare la fascia nelle foto! lo fai te benissimo in automatico, ok? cosi anche per i qr code."*
-3. *"Quale badge / Versione italiano semplice A2 — anche queste devono essere fatte tutte in automatico! se io ti dico qualcosa di diverso, la fai! altrimenti fai tutto in automatico!"*
-
-Il problema concreto era duplice: (a) le 5 PR di iterazione mobile sull'articolo Giro Formia avevano lasciato il sito senza bottone "Scarica QR" perché nessuno aveva lanciato `scripts/genera-qr-articoli.py`; (b) per ogni articolo il flusso "Claude propone, utente sceglie" lo costringeva a una micro-decisione editoriale a turno. **Da maggio 2026 il default è: Claude decide, l'utente corregge se dissente.**
 
 ---
 
