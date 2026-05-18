@@ -90,72 +90,17 @@ L'utente lavora **multi-device**: PC desktop a casa con Claude Code CLI, smartph
 
 ## Foto utente e banner — guarda PRIMA, scrivi DOPO. Verifica visiva obbligata.
 
-🔴 **Tre regole cogenti, mai infrangibili, scritte dopo l'incidente del 15 maggio 2026 sull'articolo "Giro d'Italia 2026 a Formia".** L'utente non ha tutorato un sito di parrocchia: ha tutorato un sito istituzionale di Protezione Civile, dove un'immagine senza didascalia coerente o un banner senza titolo sono errori che non si possono ripetere.
+🔴 **Quattro regole cogenti, scritte dopo l'incidente del 15 maggio 2026 sull'articolo "Giro d'Italia 2026 a Formia".** Sito istituzionale di PC: un'immagine senza didascalia coerente o un banner senza titolo non si possono ripetere.
 
-### REGOLA 1 — Banner col titolo, sempre generato LOCALMENTE prima del commit
+**REGOLA 1 — Banner col titolo, generato LOCALMENTE prima del commit.** Per articolo nuovo con `image: ""`: prima del `git add` lancia `python3 scripts/genera-cover.py <file>` (o `auto-cover-mancanti.py` per tutti), Read della cover in `static/images/<slug>.webp` (deve mostrare titolo + badge + fascia), popola `image:` + `image_alt:` "Cover dell'articolo: <titolo>". Non affidarsi al workflow CI `scarica-foto-automatica.yml` step 2: gira DOPO `deploy.yml`, primo deploy può andare live con `notizia-default.svg`.
 
-Quando crei un articolo nuovo in `content/comunicazioni/` con `image: ""` nel frontmatter:
+**REGOLA 2 — Read di OGNI foto fornita dall'utente prima di scrivere caption/alt.** Read multimodale = vedi l'immagine. Caption e alt descrivono SOLO ciò che si vede (persone, oggetti, divise, badge), mai inferenze dal contesto testuale del task. Se 3 persone, scrivi "tre persone"; se vedi un badge, leggi il badge. N foto + M testi correlati: i testi sono **contesto** dell'articolo, **non** descrizione delle foto.
 
-1. **Prima del `git add`**, lancia `python3 scripts/genera-cover.py <file>` (per il singolo file) o `python3 scripts/auto-cover-mancanti.py` (per tutti gli articoli mancanti).
-2. **Read** della cover generata in `static/images/<slug>.webp` per verifica visiva: deve mostrare il titolo dell'articolo + il badge + la fascia istituzionale. Se manca uno solo di questi elementi, lo script ha fallito — diagnosi prima di committare.
-3. **Popola `image:`** nel frontmatter col path `/images/<slug>.webp` + `image_alt:` con `"Cover dell'articolo: <titolo>"`.
-4. Solo a quel punto procedi al commit.
+**REGOLA 3 — Attribuzione foto: default = "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma".** Quando l'utente fornisce foto direttamente, mai attribuirle a terzi (FEPIVOL, Comune, DPC) solo perché nel task ci sono loro testi. Eccezioni con evidenza certa: file con nome pattern social terzi (es. `699227882_*_n.jpg` → FE.PI.VOL.), Wikimedia/NASA/USGS/NOAA via `pc-image-fixer` (metadata fonte), foto storiche con autore noto.
 
-**Cosa NON fare:** affidarsi al workflow CI `scarica-foto-automatica.yml` step 2 (`auto-cover-mancanti.py`) per generare la cover post-push. Il workflow gira DOPO il `deploy.yml` standard, quindi il primo deploy del nuovo articolo può andare live con `images/notizia-default.svg` come fallback — un banner generico SENZA il titolo dell'articolo, visibile in homepage e nelle anteprime OG/Twitter.
+**REGOLA 4 — Verifica web obbligata di OGNI entità citata (associazione, ente, persona, sigla).** Prima di citare in testo/alt/caption: WebFetch su motori di ricerca con denominazione tra virgolette. Se 0 risultati ed è associazione locale poco indicizzata, **non sciogliere l'acronimo a indovinare**: cita solo la sigla come la leggi nella fonte. Casi tipici: badge da divisa (es. *"V.E.R. Formia"* non *"E.R. Formia"*), sigle in comunicati, nomi di funzionari nei testi correlati. Mai sciogliere acronimi "a senso", mai riportare nomi letti velocemente senza ricontrollare.
 
-### REGOLA 2 — Read di OGNI foto fornita dall'utente prima di scrivere caption/alt
-
-Quando l'utente fornisce foto (path filesystem o caricamento diretto):
-
-1. **Per ogni foto**, esegui il tool **Read** sul path della foto. Read è multimodale: vedi visivamente l'immagine.
-2. **Caption e alt devono descrivere SOLO ciò che si vede** nell'immagine — persone, oggetti, ambiente, espressioni, divise, badge, contesto visibile. **Mai inferenze testuali**: se nella foto non si vede "il briefing davanti alla Colonna Mobile", non scriverlo, anche se il contesto testuale del task lo suggerisce.
-3. **Niente fantasia, niente generalizzazioni**: se la foto mostra 3 persone, scrivi "tre persone". Se mostra un veicolo, scrivi che veicolo è. Se vedi un badge, leggi il badge.
-4. Se l'utente fornisce **N foto + M testi correlati**, i testi sono **contesto** dell'articolo, **non** descrizione delle foto. Tieni separate le 2 cose.
-
-### REGOLA 3 — Attribuzione foto: default = "Foto: Gruppo Comunale Volontari PC Genzano"
-
-Quando l'utente fornisce foto direttamente (anche solo dicendo *"ti allego le nostre foto"* o caricando file), **l'attribuzione di default è**:
-
-> *"Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma."*
-
-Mai attribuire foto fornite dall'utente a soggetti terzi (Coordinamento FEPIVOL, Comune, Regione, DPC, ecc.) **solo perché** nel task ci sono testi/contenuti di quei soggetti. Le foto del Gruppo restano del Gruppo, anche se accompagnate da testi di altre entità.
-
-**Eccezioni** (richiedono indicazione esplicita dell'utente o evidenza certa):
-- Foto chiaramente da canali social di terzi (file con nome tipo `699227882_*_n.jpg` = pattern Facebook/Instagram) → attribuibile alla fonte presunta con formula prudente *"Foto: dai canali del Coordinamento FE.PI.VOL."*
-- Foto scaricate da Wikimedia/NASA/USGS/NOAA via agent `pc-image-fixer` → attribuzione come da metadata fonte (autore + licenza).
-- Foto storiche con autore noto → autore + fonte.
-
-### REGOLA 4 — Verifica web obbligata di OGNI entità citata (associazione, ente, persona, sigla)
-
-Prima di citare in un articolo (testo, alt, caption) un'**associazione, ente, gruppo, sigla, persona, denominazione**, devi **verificare sul web che esista realmente con quel nome esatto**.
-
-Pattern operativi:
-- WebFetch su DuckDuckGo / motori di ricerca per la denominazione tra virgolette.
-- Se l'entità appare in canali ufficiali (FEPIVOL, DPC, Regione, Comuni, Forze dell'Ordine), riportala col nome esatto.
-- Se la verifica web restituisce 0 o pochissimi risultati ed è un'associazione locale poco indicizzata, **non sciogliere l'acronimo a indovinare**: cita solo la sigla come la leggi nella fonte (badge, gazebo, documento ufficiale), senza inventare l'espansione.
-
-**Casi tipici:**
-- Lettura da badge sulla divisa in foto → verifica web prima di citare (oggi *"V.E.R. Formia"* non *"E.R. Formia"* — letto male, smentito dall'utente).
-- Sigla di un gruppo trovata in un comunicato stampa → verifica web prima di scioglierla.
-- Nome di un funzionario citato in testi correlati → verifica funzione (memoria utente dice: niente nomi di persone non locali nel corpo).
-
-**Cosa NON fare:**
-- Sciogliere un acronimo "a senso" perché sembra plausibile.
-- Riportare un nome letto velocemente da un'immagine senza ricontrollare a piena risoluzione.
-- Citare una persona o un ruolo solo perché menzionato nei testi correlati al task, senza verificare che esista davvero in quella funzione.
-
-### Gate operativo
-
-Prima del commit di un articolo nuovo con foto utente, controlla mentalmente la sequenza:
-
-- [ ] Cover banner generata localmente con `genera-cover.py` e popolato `image:` nel frontmatter? *(REGOLA 1)*
-- [ ] **Read** di tutte le foto fornite dall'utente? *(REGOLA 2)*
-- [ ] Caption descrivono solo ciò che si vede, niente inferenze? *(REGOLA 2)*
-- [ ] Attribuzione foto utente = "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"? *(REGOLA 3)*
-- [ ] **Web check di OGNI entità citata** (associazione, ente, sigla, persona)? *(REGOLA 4)*
-- [ ] Gate AGID via `pc-article-reviewer` superato? *(regola sotto)*
-
-Se anche uno solo dei 6 punti non è verificato, **non committare**.
+**Gate operativo pre-commit articolo con foto utente:** (1) cover banner generata + `image:` popolato; (2) Read di tutte le foto utente; (3) caption descrivono solo il visibile; (4) attribuzione default Gruppo; (5) web check di ogni entità citata; (6) gate AGID via `pc-article-reviewer`. Anche un solo punto non verificato → **non committare**.
 
 ---
 
