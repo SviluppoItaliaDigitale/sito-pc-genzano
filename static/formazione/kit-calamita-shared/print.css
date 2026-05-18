@@ -254,17 +254,45 @@ ul.elenco-pratico li::before {
     box-shadow: none;
     width: auto;
     min-height: auto;
-    padding: 12mm;
+    padding: 6mm 10mm 6mm 10mm;
+    page-break-after: avoid;
   }
   .no-print { display: none !important; }
   @page {
     size: A4;
     /* margin: 5mm invece di 0: alcune stampanti fisiche hanno
        margini non stampabili e rischiano di tagliare il bordo.
-       Il padding interno della .scheda (12mm) compensa la perdita
+       Il padding interno della .scheda (8-12mm) compensa la perdita
        e il contenuto resta centrato. */
     margin: 5mm;
   }
+  /* Spazi verticali compatti per stare in A4 singola pagina */
+  .scheda-header { padding-bottom: 4mm; margin-bottom: 5mm; }
+  .scheda-header .logo { width: 14mm; height: 14mm; }
+  .scheda-title { font-size: 20pt; margin-bottom: 2mm; }
+  .scheda-eta { margin-bottom: 5mm; padding: 1mm 2.5mm; }
+  .scheda-istruzione {
+    padding: 3mm 4mm;
+    margin-bottom: 5mm;
+    font-size: 11pt;
+  }
+  .scheda-attivita { gap: 3mm; }
+  .scheda-footer { padding-top: 4mm; font-size: 7.5pt; page-break-inside: avoid; }
+  .scheda-footer .fonti { font-size: 7pt; }
+  /* SVG/immagini al cuore dell'attività: limite di sicurezza A4 */
+  .scheda-attivita > svg,
+  .scheda-attivita > figure > svg,
+  .scheda-attivita > img,
+  .scheda-attivita > figure > img { max-height: 180mm !important; }
+  /* Box riusabili più contenuti */
+  .box-disegno { min-height: 50mm; }
+  .box-prompt { min-height: 25mm; }
+  .linea-scrittura { height: 7mm; margin: 3mm 0; }
+  ul.elenco-pratico li { padding: 2mm 0 2mm 7mm; }
+  /* Griglie compatte (memory, segnali, simboli) */
+  .griglia-disegno { gap: 2mm; }
+  .cella-disegno { padding: 1.5mm; }
+  .cella-disegno .etichetta { font-size: 8pt; }
 }
 
 /* ── Bottone stampa (solo a video) ── */
