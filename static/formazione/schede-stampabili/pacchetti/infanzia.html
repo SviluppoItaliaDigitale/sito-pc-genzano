@@ -1,0 +1,2981 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pacchetto stampa: Scuola dell'Infanzia (3-6 anni) — 44 schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le 44 schede stampabili della Scuola dell'Infanzia (3-6 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    /* === Stili del pacchetto stampa (schermo) === */
+    body {
+      background: #eef2f7;
+      margin: 0;
+      padding: 0;
+      color: #212529;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    }
+    .pacchetto-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #c026d3;
+      color: #fff;
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+    .pacchetto-toolbar a,
+    .pacchetto-toolbar a:visited {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .pacchetto-toolbar a:hover,
+    .pacchetto-toolbar a:focus {
+      text-decoration: underline;
+      outline: 2px solid #ffbe2e;
+      outline-offset: 2px;
+    }
+    .pacchetto-titolo {
+      font-weight: 600;
+      font-size: 1.05rem;
+      flex: 1 1 auto;
+      text-align: center;
+      min-width: 240px;
+    }
+    .pacchetto-toolbar button {
+      background: #fff;
+      color: #c026d3;
+      border: 0;
+      border-radius: 6px;
+      padding: 0.6rem 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .pacchetto-toolbar button:hover,
+    .pacchetto-toolbar button:focus {
+      background: #f0f4f8;
+      outline: 2px solid #ffbe2e;
+      outline-offset: 2px;
+    }
+    .pacchetto-intro {
+      max-width: 21cm;
+      margin: 1.5rem auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .pacchetto-intro h1 {
+      color: #c026d3;
+      font-size: 1.4rem;
+      margin: 0 0 0.5rem 0;
+    }
+    .pacchetto-intro p {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin: 0.4rem 0;
+    }
+    .pacchetto-stampa-conferma {
+      background: #fde8ea;
+      border-left: 4px solid #c026d3;
+      padding: 0.8rem 1.1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.92rem;
+      margin: 0.6rem 0 0 0;
+    }
+    .pacchetto-stampa-conferma strong { color: #c026d3; }
+    .pacchetto-toc {
+      max-width: 21cm;
+      margin: 1.5rem auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .pacchetto-toc h2 {
+      color: #c026d3;
+      font-size: 1.1rem;
+      margin: 0 0 0.6rem 0;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #c026d3;
+    }
+    .pacchetto-toc ol {
+      margin: 0;
+      padding-left: 1.5rem;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      columns: 2;
+      column-gap: 1.5rem;
+    }
+    @media (max-width: 700px) {
+      .pacchetto-toc ol { columns: 1; }
+    }
+    .pacchetto-toc li {
+      margin: 0.15rem 0;
+      break-inside: avoid;
+    }
+    .pacchetto-toc a {
+      color: #c026d3;
+      text-decoration: none;
+    }
+    .pacchetto-toc a:hover,
+    .pacchetto-toc a:focus {
+      text-decoration: underline;
+      outline: 2px solid #ffbe2e;
+      outline-offset: 1px;
+    }
+    .pacchetto-toc .toc-meta {
+      color: #6c757d;
+      font-size: 0.85rem;
+    }
+
+    /* === Stampa: nascondi toolbar/intro/toc, forza page-break tra schede === */
+    @media print {
+      .pacchetto-toolbar,
+      .pacchetto-intro,
+      .pacchetto-toc,
+      .no-print {
+        display: none !important;
+      }
+      body { background: #fff; }
+      .pacchetto-scheda {
+        page-break-after: always;
+        break-after: page;
+      }
+      .pacchetto-scheda:last-of-type {
+        page-break-after: auto;
+        break-after: auto;
+      }
+    }
+  </style>
+  <style>
+/* === stili scheda 1 === */
+
+    .rubrica-tab { width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.78rem; }
+    .rubrica-tab th, .rubrica-tab td { border: 1.5px solid var(--scheda-bordo); padding: 0.4rem 0.5rem; vertical-align: top; text-align: left; }
+    .rubrica-tab th { background: #f0f4f8; color: var(--scheda-blu); font-weight: 700; text-align: center; }
+    .rubrica-tab td:first-child { background: #f8f9fb; font-weight: 600; color: var(--scheda-blu); width: 18%; }
+    .rubrica-tab .liv-1 { background: #fff5f5; }
+    .rubrica-tab .liv-2 { background: #fffaf0; }
+    .rubrica-tab .liv-3 { background: #f0fdf4; }
+    .istruzioni-prof { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
+  
+
+/* === stili scheda 2 === */
+
+    .vf-domanda {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 0.9rem 1rem;
+      margin-bottom: 0.8rem;
+      border: 2px solid var(--scheda-bordo);
+      border-radius: 10px;
+      background: #fff;
+    }
+    .vf-domanda .vf-num {
+      flex-shrink: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--scheda-blu);
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 2.5rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .vf-domanda .vf-testo {
+      flex: 1;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+    .vf-faccine {
+      display: flex;
+      gap: 0.7rem;
+      flex-shrink: 0;
+    }
+    .vf-faccia {
+      width: 3rem;
+      height: 3rem;
+      border: 2.5px solid var(--scheda-bordo);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 2.7rem;
+      font-size: 1.6rem;
+      background: #fff;
+    }
+  
+
+/* === stili scheda 3 === */
+
+    .lab-griglia {
+      display: grid;
+      grid-template-columns: repeat(11, 50px);
+      grid-template-rows: repeat(9, 50px);
+      gap: 0;
+      background: #fff;
+      border: 3px solid var(--scheda-blu);
+      border-radius: 6px;
+      margin: 0.8rem auto;
+      width: fit-content;
+    }
+    .lab-cella {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #dee2e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: #fff;
+    }
+    .lab-cella.muro {
+      background: #495057;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      color-adjust: exact;
+    }
+    .lab-cella.start {
+      background: #cfe2ff;
+      font-size: 1.8rem;
+    }
+    .lab-cella.end {
+      background: #d1e7dd;
+      font-size: 1.8rem;
+    }
+    .lab-cella.ostacolo {
+      background: #fff3cd;
+      font-size: 1.5rem;
+    }
+    .lab-cella.fuoco {
+      background: #f8d7da;
+      font-size: 1.5rem;
+    }
+    .lab-legenda {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .lab-legenda-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.6rem;
+      background: #f8f9fa;
+      border-radius: 12px;
+    }
+    .lab-legenda-icon {
+      font-size: 1.2rem;
+    }
+    @media print {
+      .lab-griglia {
+        grid-template-columns: repeat(11, 1.4cm);
+        grid-template-rows: repeat(9, 1.4cm);
+      }
+      .lab-cella {
+        width: 1.4cm;
+        height: 1.4cm;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+      }
+      .lab-cella.muro {
+        background: #495057 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        /* Fallback: pattern visibile anche se la stampante elimina lo sfondo */
+        background-image: repeating-linear-gradient(45deg, #000 0, #000 2px, transparent 2px, transparent 6px) !important;
+      }
+      .lab-cella.start, .lab-cella.end, .lab-cella.ostacolo, .lab-cella.fuoco {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+      }
+    }
+  
+
+/* === stili scheda 4 === */
+
+    .ts-grande {
+      text-align: center;
+      font-size: 6rem;
+      line-height: 1;
+      margin: 0.5rem 0;
+    }
+    .ts-regole {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+    .ts-regola {
+      border: 3px solid var(--scheda-blu);
+      border-radius: 12px;
+      padding: 0.8rem;
+      background: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .ts-regola .ts-num {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--scheda-blu);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+    .ts-regola .ts-emoji {
+      font-size: 3rem;
+      line-height: 1;
+    }
+    .ts-regola .ts-titolo {
+      font-weight: 700;
+      color: var(--scheda-blu);
+      font-size: 1.1rem;
+    }
+    .ts-regola .ts-frase {
+      font-size: 0.95rem;
+      line-height: 1.3;
+      color: #212529;
+    }
+    .ts-filastrocca {
+      background: #fff3cd;
+      border: 2px dashed var(--scheda-oro);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      font-style: italic;
+      color: #664d03;
+      margin-top: 0.8rem;
+    }
+  
+
+/* === stili scheda 5 === */
+
+    .tc-area {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 4rem;
+      margin-top: 1rem;
+      align-items: center;
+    }
+    .tc-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .tc-card {
+      background: #fff;
+      border: 2.5px solid var(--scheda-blu);
+      border-radius: 10px;
+      padding: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      min-height: 4rem;
+    }
+    .tc-card .tc-emoji {
+      font-size: 2.4rem;
+      flex-shrink: 0;
+      width: 3rem;
+      text-align: center;
+    }
+    .tc-card .tc-text {
+      font-size: 1rem;
+      line-height: 1.3;
+      font-weight: 600;
+      color: var(--scheda-blu);
+    }
+    .tc-card .tc-puntino {
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 2.5px solid var(--scheda-blu);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+    .tc-card.tc-card-dx .tc-puntino { margin-left: 0; margin-right: auto; order: -1; }
+    .tc-card.tc-card-dx { flex-direction: row-reverse; }
+  
+
+/* === stili scheda 6 === */
+
+    .vocali-griglia {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin: 0.6rem 0;
+    }
+    .vocale-riga {
+      display: grid;
+      grid-template-columns: 4.2rem 4.2rem 3rem 1fr;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.55rem 0.7rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 10px;
+      background: #fff;
+    }
+    .vocale-riga:nth-child(odd) {
+      background: #f4f7fb;
+    }
+    .vocale-ricalca {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-size: 3.6rem;
+      line-height: 1;
+      font-weight: 700;
+      text-align: center;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--scheda-blu);
+      text-stroke: 2px var(--scheda-blu);
+    }
+    .vocale-modello {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-size: 3.6rem;
+      line-height: 1;
+      font-weight: 700;
+      text-align: center;
+      color: var(--scheda-blu);
+    }
+    .vocale-emoji {
+      font-size: 2.2rem;
+      text-align: center;
+      line-height: 1;
+    }
+    .vocale-parola {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .vocale-parola .parola-modello {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.18em;
+      color: #b6c4d8;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .vocale-parola .parola-riga {
+      border-bottom: 1.5px dashed var(--scheda-bordo);
+      height: 1.6rem;
+    }
+    .vocale-parola .parola-iniziale {
+      color: var(--scheda-blu);
+    }
+    .esercizio-cerchia {
+      margin-top: 0.8rem;
+      padding: 0.7rem 0.9rem;
+      background: #fff8e6;
+      border: 2px dashed var(--scheda-oro);
+      border-radius: 10px;
+    }
+    .esercizio-cerchia .consegna {
+      font-weight: 700;
+      color: #664d03;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .esercizio-parole {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.4rem;
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--scheda-blu);
+      padding-left: 0.3rem;
+    }
+    .istruzioni-maestra {
+      margin-top: 0.8rem;
+      padding: 0.55rem 0.85rem;
+      background: #eaf2fb;
+      border-left: 4px solid var(--scheda-blu);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.82rem;
+      color: #29476f;
+      line-height: 1.45;
+    }
+    .istruzioni-maestra strong { color: var(--scheda-blu); }
+  
+
+/* === stili scheda 7 === */
+
+    .ri-griglia {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem 0.9rem;
+      margin: 0.6rem 0;
+    }
+    .ri-cella {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.6rem 0.8rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 10px;
+      background: #fff;
+    }
+    .ri-cella:nth-child(even) { background: #f4f7fb; }
+    .ri-emoji {
+      font-size: 2.6rem;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 3.2rem;
+      text-align: center;
+    }
+    .ri-parte-destra {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .ri-parola {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: #b6c4d8;
+      font-size: 1.25rem;
+      line-height: 1;
+      letter-spacing: 0.18em;
+    }
+    .ri-opzioni {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .ri-opzione {
+      width: 2.2rem;
+      height: 2.2rem;
+      border: 2.5px solid var(--scheda-blu);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--scheda-blu);
+      background: #fff;
+    }
+    .ri-consegna {
+      font-size: 0.95rem;
+      color: var(--scheda-blu);
+      background: #eaf2fb;
+      border-left: 4px solid var(--scheda-blu);
+      padding: 0.55rem 0.85rem;
+      border-radius: 0 6px 6px 0;
+      margin: 0.6rem 0 0.5rem 0;
+      font-weight: 600;
+    }
+    .ri-consegna .icon {
+      margin-right: 0.4rem;
+    }
+    .istruzioni-maestra {
+      margin-top: 0.8rem;
+      padding: 0.55rem 0.85rem;
+      background: #fff8e6;
+      border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.82rem;
+      color: #664d03;
+      line-height: 1.45;
+    }
+    .istruzioni-maestra strong { color: #664d03; }
+  
+
+/* === stili scheda 8 === */
+
+    .cpi-area {
+      display: grid;
+      grid-template-columns: 1fr 6rem 1fr;
+      gap: 0.6rem 0.4rem;
+      margin: 0.8rem 0;
+      align-items: center;
+    }
+    .cpi-area .col-titolo {
+      grid-column: span 1;
+      font-weight: 700;
+      color: var(--scheda-blu);
+      text-align: center;
+      font-size: 0.95rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--scheda-blu);
+      margin-bottom: 0.2rem;
+    }
+    .cpi-area .col-vuota { grid-column: span 1; }
+
+    .cpi-parola {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--scheda-blu);
+      font-size: 1.4rem;
+      padding: 0.5rem 0.8rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 8px;
+      background: #fff;
+      text-align: center;
+      line-height: 1;
+    }
+    .cpi-pallino {
+      width: 0.9rem;
+      height: 0.9rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 50%;
+      background: #fff;
+      justify-self: center;
+    }
+    .cpi-pallino.sx { justify-self: end; margin-right: 0.4rem; }
+    .cpi-pallino.dx { justify-self: start; margin-left: 0.4rem; }
+    .cpi-spazio-linee {
+      grid-column: 2;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ced4da;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+    .cpi-immagine {
+      font-size: 3rem;
+      text-align: center;
+      line-height: 1;
+      padding: 0.4rem 0.8rem;
+      background: #f4f7fb;
+      border: 2px solid var(--scheda-bordo);
+      border-radius: 8px;
+    }
+
+    /* Layout effettivo: 8 righe da 4 elementi: pallino_sx_riga | parola | linea | immagine | pallino_dx_riga
+       In realtà uso un grid 5 colonne per riga */
+    .cpi-griglia {
+      display: grid;
+      grid-template-columns: 1fr 1.2rem 4rem 1.2rem 5rem;
+      column-gap: 0.4rem;
+      row-gap: 0.55rem;
+      margin: 0.6rem 0;
+      align-items: center;
+    }
+    .cpi-griglia .h {
+      font-weight: 700;
+      color: var(--scheda-blu);
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid var(--scheda-blu);
+    }
+    .cpi-griglia .h.parola { grid-column: 1; }
+    .cpi-griglia .h.collega { grid-column: 2 / span 3; }
+    .cpi-griglia .h.figura { grid-column: 5; }
+
+    .cpi-griglia .parola-cella {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--scheda-blu);
+      font-size: 1.3rem;
+      padding: 0.45rem 0.7rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 8px;
+      background: #fff;
+      text-align: center;
+    }
+    .cpi-griglia .pallino {
+      width: 0.85rem;
+      height: 0.85rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 50%;
+      background: #fff;
+      justify-self: center;
+    }
+    .cpi-griglia .puntini {
+      text-align: center;
+      color: #ced4da;
+      font-size: 1.4rem;
+      letter-spacing: 0.15em;
+      line-height: 1;
+    }
+    .cpi-griglia .figura-cella {
+      font-size: 2.6rem;
+      text-align: center;
+      line-height: 1;
+      padding: 0.35rem 0;
+      background: #f4f7fb;
+      border: 2px solid var(--scheda-bordo);
+      border-radius: 8px;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem;
+      padding: 0.55rem 0.85rem;
+      background: #fff8e6;
+      border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.82rem;
+      color: #664d03;
+      line-height: 1.45;
+    }
+    .istruzioni-maestra strong { color: #664d03; }
+  
+
+/* === stili scheda 9 === */
+
+    .num-griglia { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.6rem 0; }
+    .num-riga {
+      display: grid;
+      grid-template-columns: 4.2rem 4.2rem 1fr 1fr;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.55rem 0.7rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 10px;
+      background: #fff;
+    }
+    .num-riga:nth-child(odd) { background: #f4f7fb; }
+    .num-ricalca {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-size: 3.6rem; line-height: 1; font-weight: 700;
+      text-align: center;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--scheda-blu);
+    }
+    .num-modello {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-size: 3.6rem; line-height: 1; font-weight: 700;
+      text-align: center;
+      color: var(--scheda-blu);
+    }
+    .num-oggetti {
+      font-size: 2rem;
+      line-height: 1.1;
+      letter-spacing: 0.18em;
+      text-align: center;
+    }
+    .num-riga-vuota {
+      border-bottom: 1.5px dashed var(--scheda-bordo);
+      height: 1.6rem;
+      align-self: center;
+    }
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+    .istruzioni-maestra strong { color: #664d03; }
+  
+
+/* === stili scheda 10 === */
+
+    .ciclo-griglia {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;
+      margin: 0.6rem 0;
+    }
+    .ciclo-cella {
+      border: 2.5px solid var(--scheda-blu);
+      border-radius: 12px; padding: 0.7rem;
+      background: #fff; text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+    }
+    .ciclo-cella .lettera {
+      width: 2rem; height: 2rem; background: var(--scheda-blu);
+      color: #fff; border-radius: 50%; display: inline-flex;
+      align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.1rem;
+      align-self: flex-start;
+    }
+    .ciclo-cella .emo { font-size: 4.5rem; line-height: 1; }
+    .ciclo-cella .didascalia {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-blu); font-size: 1.05rem;
+      letter-spacing: 0.04em;
+    }
+    .ciclo-cella .num-vuoto {
+      width: 2.4rem; height: 2.4rem; border: 2.5px dashed var(--scheda-oro);
+      border-radius: 8px; display: inline-flex;
+      align-items: center; justify-content: center;
+      background: #fff8e6;
+      font-family: "Comic Sans MS", sans-serif; font-weight: 700;
+      color: #ced4da; font-size: 1.1rem;
+    }
+
+    .ordine-righe {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.8rem; margin: 0.5rem 0;
+      font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--scheda-blu);
+    }
+    .ordine-righe .lettera-vuota {
+      width: 3rem; height: 3rem;
+      border: 2.5px solid var(--scheda-blu);
+      border-radius: 8px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #fff;
+    }
+    .ordine-righe .freccia { color: var(--scheda-grigio); font-size: 1.6rem; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  
+
+/* === stili scheda 11 === */
+
+    .triangolo-svg {
+      max-width: 360px; height: auto; margin: 0.4rem auto; display: block;
+    }
+    .elementi-griglia {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.55rem;
+      margin: 0.6rem 0;
+    }
+    .elemento-card {
+      border: 2.5px solid var(--scheda-rosso);
+      border-radius: 12px; padding: 0.6rem 0.5rem;
+      background: #fff; text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
+    }
+    .elemento-card .emo { font-size: 3rem; line-height: 1; }
+    .elemento-card .nome {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-rosso);
+      font-size: 1rem; letter-spacing: 0.06em;
+    }
+    .elemento-card .desc {
+      font-size: 0.78rem; color: #495057; line-height: 1.3;
+    }
+
+    .togli-elemento {
+      background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
+      padding: 0.55rem 0.85rem; border-radius: 0 6px 6px 0;
+      margin: 0.5rem 0;
+    }
+    .togli-elemento .domanda {
+      font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.4rem;
+    }
+    .togli-opz {
+      display: grid; gap: 0.35rem;
+    }
+    .togli-opz .opz {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0.6rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    .togli-opz .opz .quadro {
+      width: 1.2rem; height: 1.2rem; border: 2px solid var(--scheda-blu);
+      border-radius: 4px; flex-shrink: 0;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  
+
+/* === stili scheda 12 === */
+
+    .cartelli-griglia {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem;
+      margin: 0.5rem 0;
+    }
+    .cartello-card {
+      border: 2.5px solid var(--scheda-blu);
+      border-radius: 12px; padding: 0.7rem;
+      background: #fff; text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+    }
+
+    .cartello-svg { width: 100px; height: 100px; }
+
+    .cartello-card .nome {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-blu);
+      font-size: 0.95rem;
+    }
+    .cartello-card .desc {
+      font-size: 0.85rem; color: #495057; line-height: 1.35;
+    }
+
+    .abbina-griglia {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;
+      margin: 0.4rem 0;
+    }
+    .abbina-cella {
+      display: flex; align-items: center; gap: 0.7rem;
+      padding: 0.5rem 0.7rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px;
+    }
+    .abbina-cella .pallino {
+      width: 1.2rem; height: 1.2rem; border: 2px solid var(--scheda-blu);
+      border-radius: 50%; flex-shrink: 0;
+    }
+    .abbina-cella .testo { font-size: 0.88rem; line-height: 1.35; flex: 1; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  
+
+/* === stili scheda 13 === */
+
+    .rosa-svg { max-width: 320px; height: auto; margin: 0.5rem auto; display: block; }
+    .punti-griglia {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem;
+      margin: 0.5rem 0;
+    }
+    .punto-card {
+      border: 2.5px solid var(--scheda-blu);
+      border-radius: 10px; padding: 0.6rem;
+      background: #fff; display: flex; align-items: center; gap: 0.7rem;
+    }
+    .punto-card .lettera {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-blu); font-size: 2.2rem;
+      width: 2.6rem; text-align: center; flex-shrink: 0;
+    }
+    .punto-card .info { flex: 1; line-height: 1.35; }
+    .punto-card .nome {
+      font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem;
+    }
+    .punto-card .desc {
+      font-size: 0.85rem; color: #495057;
+    }
+
+    .scrivi-rosa {
+      max-width: 320px; height: auto; margin: 0.5rem auto; display: block;
+    }
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  
+
+/* === stili scheda 14 === */
+
+    .vign-griglia {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem;
+      margin: 0.6rem 0;
+    }
+    .vign-card {
+      border: 2.5px solid var(--scheda-blu); border-radius: 12px;
+      padding: 0.7rem; background: #fff;
+      display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+    }
+    .vign-card .lettera {
+      align-self: flex-start;
+      width: 2rem; height: 2rem; background: var(--scheda-blu);
+      color: #fff; border-radius: 50%; display: inline-flex;
+      align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.1rem;
+    }
+    .vign-card .scena { font-size: 4rem; line-height: 1; }
+    .vign-card .didascalia {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; text-align: center;
+      letter-spacing: 0.04em;
+    }
+    .vign-card .num-vuoto {
+      width: 2.4rem; height: 2.4rem; border: 2.5px dashed var(--scheda-oro);
+      border-radius: 8px; display: inline-flex; align-items: center;
+      justify-content: center; background: #fff8e6;
+      font-family: "Comic Sans MS", sans-serif; font-weight: 700;
+      color: #ced4da; font-size: 1.2rem;
+    }
+
+    .ordine-righe {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.5rem; margin: 0.5rem 0; flex-wrap: wrap;
+      font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+      font-size: 1.4rem; font-weight: 700; color: var(--scheda-blu);
+    }
+    .ordine-righe .lettera-vuota {
+      width: 2.8rem; height: 2.8rem; border: 2.5px solid var(--scheda-blu);
+      border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;
+      background: #fff;
+    }
+    .ordine-righe .freccia { color: var(--scheda-grigio); font-size: 1.4rem; }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  
+
+/* === stili scheda 15 === */
+
+    body { margin: 0; padding: 0; background: #f4f7fb; }
+    .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
+    .scheda-immagine-wrapper img { width: 100%; height: auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border-radius: 4px; }
+    @media print {
+      body { background: #fff; }
+      .scheda-immagine-wrapper { max-width: 100%; margin: 0; padding: 0; }
+      .scheda-immagine-wrapper img { box-shadow: none; border-radius: 0; width: 100%; height: auto; max-height: 100vh; object-fit: contain; }
+      @page { size: A4 portrait; margin: 8mm; }
+    }
+  
+
+/* === stili scheda 16 === */
+
+    .conta-griglia { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.5rem 0; }
+    .conta-card {
+      border: 2.5px solid var(--scheda-blu); border-radius: 12px;
+      padding: 0.8rem 0.5rem;
+      background: #fff;
+      display: flex; flex-direction: column; align-items: center; gap: 0.55rem;
+    }
+    .conta-card .oggetti {
+      font-size: 2.6rem; line-height: 1.1;
+      letter-spacing: 0.15em;
+      text-align: center;
+      min-height: 3rem;
+    }
+    .conta-card .domanda {
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-blu);
+      font-size: 0.95rem;
+    }
+    .conta-card .scelta {
+      display: flex; gap: 0.5rem;
+    }
+    .conta-card .num {
+      width: 2.6rem; height: 2.6rem; border: 2.5px solid var(--scheda-blu);
+      border-radius: 50%;
+      background: #fff;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: "Comic Sans MS", "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; color: var(--scheda-blu); font-size: 1.4rem;
+    }
+
+    .istruzioni-maestra {
+      margin-top: 0.8rem; padding: 0.55rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
+    }
+  
+  </style>
+</head>
+<body>
+
+  <header class="pacchetto-toolbar no-print" role="banner">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
+    <span class="pacchetto-titolo">Pacchetto stampa: Scuola dell'Infanzia · 44 schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 44 schede di Scuola dell'Infanzia">
+      🖨️ Stampa tutto (44 fogli A4)
+    </button>
+  </header>
+
+  <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
+    <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola dell'Infanzia</h1>
+    <p>
+      Questo pacchetto contiene <strong>44 schede stampabili</strong> della Scuola dell'Infanzia (3-6 anni),
+      per un totale di <strong>44 fogli A4</strong>.
+      Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
+      per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
+    </p>
+    <p>
+      Per stampare <strong>una singola scheda</strong>, torna alla
+      <a href="/formazione/schede-stampabili/">hub delle schede</a> e clicca quella che ti interessa.
+      Per il <strong>pacchetto offline ZIP</strong> con indice cliccabile, vedi i bottoni "Scarica pacchetto" nella stessa hub.
+    </p>
+    <p class="pacchetto-stampa-conferma">
+      <strong>Suggerimento per risparmiare carta:</strong> nella finestra di stampa imposta
+      <em>"Stampa fronte/retro"</em> per dimezzare l'uso di carta,
+      oppure <em>"2 pagine per foglio"</em> per ridurre l'ingombro nel raccoglitore.
+    </p>
+  </section>
+
+  <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
+    <h2>Indice — 44 schede in questo pacchetto</h2>
+    <ol>
+      <li><a href="#scheda-rubrica-valutativa-infanzia">Griglia di osservazione — Scuola dell'Infanzia</a></li>
+      <li><a href="#scheda-vero-falso-infanzia">Vero o Falso con le Faccine</a></li>
+      <li><a href="#scheda-labirinto-uscita">Il Labirinto dell'Uscita</a></li>
+      <li><a href="#scheda-tartaruga-saggia-infanzia">Le Regole della Tartaruga Saggia</a></li>
+      <li><a href="#scheda-trova-coppie-infanzia">Trova le Coppie</a></li>
+      <li><a href="#scheda-abc-vocali-infanzia">ABC delle vocali — Le parole che salvano</a></li>
+      <li><a href="#scheda-riconosci-iniziale-infanzia">Riconosci l'iniziale — Le parole della sicurezza</a></li>
+      <li><a href="#scheda-collega-parola-immagine-infanzia">Collega la parola all'immagine</a></li>
+      <li><a href="#scheda-numeri-pc-infanzia">I numeri della Protezione Civile</a></li>
+      <li><a href="#scheda-ciclo-acqua-infanzia">Il ciclo dell'acqua — Da dove arriva la pioggia?</a></li>
+      <li><a href="#scheda-triangolo-fuoco-infanzia">Cosa serve al fuoco per bruciare?</a></li>
+      <li><a href="#scheda-cartelli-sicurezza-infanzia">I cartelli della sicurezza</a></li>
+      <li><a href="#scheda-punti-cardinali-infanzia">I punti cardinali — Sapere dove andare</a></li>
+      <li><a href="#scheda-riordina-vignette-evacuazione-infanzia">Riordina le vignette — L'evacuazione a scuola</a></li>
+      <li><a href="#scheda-pregrafismo-linee-infanzia">Scheda da colorare: Pregrafismo</a></li>
+      <li><a href="#scheda-conta-puntini-infanzia">Conta gli oggetti — Cerchia il numero giusto</a></li>
+      <li><a href="#scheda-riconosci-forme-infanzia">Scheda da colorare: Le forme dei cartelli</a></li>
+      <li><a href="#scheda-colori-mezzi-soccorso-infanzia">Scheda da colorare: I colori dei mezzi di soccorso</a></li>
+      <li><a href="#scheda-filastrocca-illustrata-infanzia">Scheda da colorare: La filastrocca della Tartaruga</a></li>
+      <li><a href="#scheda-disegna-aiutante-infanzia">Scheda da colorare: Disegna il tuo aiutante</a></li>
+      <li><a href="#scheda-colorare-terremoto-infanzia">Scheda da colorare: Cosa faccio quando trema la terra?</a></li>
+      <li><a href="#scheda-colorare-alluvione-infanzia">Scheda da colorare: Cosa faccio se c'è una grande pioggia?</a></li>
+      <li><a href="#scheda-colorare-incendio-infanzia">Scheda da colorare: Cosa faccio se vedo del fumo?</a></li>
+      <li><a href="#scheda-colorare-temporale-infanzia">Scheda da colorare: Cosa faccio se c'è un temporale?</a></li>
+      <li><a href="#scheda-colorare-vento-infanzia">Scheda da colorare: Cosa faccio se c'è vento forte?</a></li>
+      <li><a href="#scheda-colorare-frana-infanzia">Scheda da colorare: Cosa faccio se vedo una frana?</a></li>
+      <li><a href="#scheda-colorare-neve-infanzia">Scheda da colorare: Cosa faccio se nevica forte?</a></li>
+      <li><a href="#scheda-colorare-pompiere-infanzia">Scheda da colorare: Il mio amico pompiere</a></li>
+      <li><a href="#scheda-colorare-volontario-infanzia">Scheda da colorare: Il volontario della Protezione Civile</a></li>
+      <li><a href="#scheda-colorare-112-infanzia">Scheda da colorare: Come chiamo il 112</a></li>
+      <li><a href="#scheda-volontario-animali-infanzia">Scheda da colorare: Il volontario e gli animali</a></li>
+      <li><a href="#scheda-pericoli-naturali-infanzia">Scheda da colorare: I pericoli naturali</a></li>
+      <li><a href="#scheda-allerta-comunicazioni-infanzia">Scheda da colorare: Allerta e comunicazioni</a></li>
+      <li><a href="#scheda-sicurezza-in-casa-infanzia">Scheda da colorare: La sicurezza in casa</a></li>
+      <li><a href="#scheda-zainetto-emergenza-infanzia">Scheda da colorare: Il mio zainetto di emergenza</a></li>
+      <li><a href="#scheda-se-mi-perdo-infanzia">Scheda da colorare: Cosa faccio se mi perdo?</a></li>
+      <li><a href="#scheda-odore-gas-infanzia">Scheda da colorare: Cosa faccio se sento odore di gas?</a></li>
+      <li><a href="#scheda-ondata-calore-infanzia">Scheda da colorare: Cosa faccio se fa molto caldo?</a></li>
+      <li><a href="#scheda-pronto-soccorso-infanzia">Scheda da colorare: Pronto soccorso</a></li>
+      <li><a href="#scheda-a-scuola-in-sicurezza-infanzia">Scheda da colorare: A scuola in sicurezza</a></li>
+      <li><a href="#scheda-labirinto-punto-raccolta-infanzia">Scheda da colorare: Trova la strada per il punto di raccolta</a></li>
+      <li><a href="#scheda-aiuto-solidarieta-infanzia">Scheda da colorare: Aiuto e solidarietà</a></li>
+      <li><a href="#scheda-volontariato-ambiente-infanzia">Scheda da colorare: Volontariato e ambiente</a></li>
+      <li><a href="#scheda-nodi-che-salvano-infanzia">Scheda da colorare: I nodi che salvano</a></li>
+    </ol>
+  </nav>
+
+  <main>
+<section id="scheda-rubrica-valutativa-infanzia" class="pacchetto-scheda" aria-label="Scheda: Griglia di osservazione — Scuola dell'Infanzia">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Griglia di osservazione — Scuola dell'Infanzia</h1>
+        <div class="scheda-sottotitolo">Educazione Civica nei Campi di Esperienza (D.M. 183/2024 + Indicazioni Nazionali Infanzia)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> bambini 3-5 anni</span>
+      <span><strong>Modalità:</strong> osservazione qualitativa, no voto</span>
+      <span><strong>Frequenza:</strong> due volte l'anno (dicembre e maggio)</span>
+    </div>
+
+    <p class="scheda-intro">
+      Nella Scuola dell'Infanzia non si esprime un voto, ma un'<strong>osservazione descrittiva</strong> sui Campi di Esperienza. Questa griglia aiuta l'insegnante a osservare i comportamenti del bambino su 6 aspetti chiave della formazione di base in Protezione Civile, attraverso livelli di sviluppo coerenti con la fascia d'età.
+    </p>
+
+    <div style="background:#eaf2fb; border-left:4px solid #003366; padding:0.55rem 0.85rem; border-radius:0 8px 8px 0; margin:0.4rem 0; font-size:0.86rem; line-height:1.5;">
+      <strong style="color:#003366;">📚 Quadro di riferimento normativo</strong> — <strong>Indicazioni Nazionali per il curricolo della scuola dell'infanzia 2012</strong> (5 Campi di Esperienza: il sé e l'altro; il corpo e il movimento; immagini, suoni, colori; i discorsi e le parole; la conoscenza del mondo). La PC si inserisce trasversalmente nel campo "il corpo e il movimento" (sicurezza personale) e "il sé e l'altro" (cittadinanza). Le linee guida <strong>D.M. 35/2020 sull'Educazione Civica</strong> raccomandano l'avvio precoce. Standard di osservazione: 3 livelli di sviluppo (in via di acquisizione / parzialmente acquisito / pienamente acquisito).
+    </div>
+
+    <h2 class="scheda-h2">🌱 I livelli di osservazione</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin: 0.6rem 0; font-size: 0.85rem;">
+      <div style="padding: 0.5rem; background: #fff5f5; border-left: 4px solid #c1121f; border-radius: 6px;"><strong>🌱 Sta scoprendo</strong><br>Il bambino comincia ad esplorare il tema, mostra curiosità ma necessita di supporto continuo.</div>
+      <div style="padding: 0.5rem; background: #fffaf0; border-left: 4px solid #b8860b; border-radius: 6px;"><strong>🌿 Sta imparando</strong><br>Il bambino riconosce e ripete i comportamenti appresi se sollecitato dalla maestra.</div>
+      <div style="padding: 0.5rem; background: #f0fdf4; border-left: 4px solid #15803d; border-radius: 6px;"><strong>🌳 Ha consolidato</strong><br>Il bambino agisce autonomamente nei contesti noti e mostra di aver fatto suoi i comportamenti.</div>
+    </div>
+
+    <h2 class="scheda-h2">📊 Griglia per indicatore</h2>
+
+    <table class="rubrica-tab">
+      <thead>
+        <tr>
+          <th>Aspetto osservato</th>
+          <th>🌱 Sta scoprendo</th>
+          <th>🌿 Sta imparando</th>
+          <th>🌳 Ha consolidato</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Riconoscere il pericolo</td>
+          <td class="liv-1">Mostra interesse alle storie e ai pittogrammi ma non riconosce ancora i pericoli.</td>
+          <td class="liv-2">Riconosce alcuni pittogrammi (fuoco, acqua) ma necessita ancora del supporto della maestra.</td>
+          <td class="liv-3">Indica autonomamente i pericoli nelle figure e li nomina (es. "fuoco caldo, scotta").</td>
+        </tr>
+        <tr>
+          <td>2. Posizione di sicurezza (terremoto)</td>
+          <td class="liv-1">Si avvicina alla maestra ma non sa cosa fare.</td>
+          <td class="liv-2">Sa "fare la tartaruga" sotto al banco se la maestra lo dice.</td>
+          <td class="liv-3">Va sotto al tavolo da solo al segnale, mette le manine sulla testa, aspetta.</td>
+        </tr>
+        <tr>
+          <td>3. Numero 112</td>
+          <td class="liv-1">Ascolta la filastrocca del 112 ma non la ripete.</td>
+          <td class="liv-2">Ripete "uno-uno-due" se sollecitato.</td>
+          <td class="liv-3">Sa che il 112 è "il numero che chiamano i grandi quando c'è bisogno di aiuto".</td>
+        </tr>
+        <tr>
+          <td>4. Pompieri/soccorritori amici</td>
+          <td class="liv-1">Mostra timore o sorpresa di fronte a divise e mezzi di soccorso.</td>
+          <td class="liv-2">Riconosce camion dei pompieri e ambulanza nelle figure.</td>
+          <td class="liv-3">Saluta volontariamente un pompiere durante una visita; sa che "sono amici che aiutano".</td>
+        </tr>
+        <tr>
+          <td>5. Aiutarsi tra compagni</td>
+          <td class="liv-1">Gioca da solo o piange se un compagno è in difficoltà.</td>
+          <td class="liv-2">Notando un compagno in difficoltà, chiama la maestra.</td>
+          <td class="liv-3">Aiuta spontaneamente un compagno (gli dà la mano, lo conforta) e lo accompagna dalla maestra.</td>
+        </tr>
+        <tr>
+          <td>6. Conoscere il proprio nome / indirizzo</td>
+          <td class="liv-1">Sa il proprio nome ma non il cognome né l'indirizzo.</td>
+          <td class="liv-2">Sa nome e cognome e dice "abito a Genzano".</td>
+          <td class="liv-3">Sa dire nome, cognome, "abito a Genzano in via X" (informazioni essenziali per dire dove sei).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="scheda-h2">📝 Esempio di osservazione descrittiva</h2>
+
+    <p style="font-size: 0.92rem; line-height: 1.55;">
+      <em>"Il bambino/a sta consolidando la consapevolezza dei comportamenti di sicurezza. Ha partecipato con entusiasmo alle storie con Tina la Tartaruga, ripete autonomamente la filastrocca del 112, va sotto al banco al segnale di esercitazione. Mostra empatia verso i compagni in difficoltà chiamando la maestra. Si suggerisce di lavorare ulteriormente sul ricordo dell'indirizzo di casa, da fare anche in collaborazione con la famiglia."</em>
+    </p>
+
+    <h2 class="scheda-h2">🎯 Campi di Esperienza coinvolti</h2>
+
+    <ul style="font-size: 0.9rem; line-height: 1.55; padding-left: 1.4rem;">
+      <li><strong>Il sé e l'altro</strong> (cura di sé, riconoscimento delle figure di aiuto, empatia)</li>
+      <li><strong>Il corpo e il movimento</strong> (posizione di sicurezza, evacuazione, fischietto)</li>
+      <li><strong>I discorsi e le parole</strong> (numeri di emergenza, lessico base)</li>
+      <li><strong>La conoscenza del mondo</strong> (fenomeni naturali, pittogrammi, codici colore)</li>
+      <li><strong>Immagini, suoni, colori</strong> (rappresentazione del rischio, suoni di sicurezza)</li>
+    </ul>
+
+    <div class="istruzioni-prof">
+      <strong>Per la maestra/maestro · Note operative:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Strumento di osservazione, non di valutazione</strong>: nella Scuola dell'Infanzia non si esprime un voto. Questa griglia accompagna l'osservazione qualitativa.</li>
+        <li><strong>Quando compilarla</strong>: due momenti l'anno (dicembre e maggio) per cogliere l'evoluzione del bambino.</li>
+        <li><strong>Materiali consigliati per ogni indicatore</strong>: fiabe della <a href="/formazione/storie-e-racconti/">biblioteca delle storie</a> con Tina la Tartaruga (storie), schede da colorare, attività di drammatizzazione, gioco "fischietto chiama aiuto".</li>
+        <li><strong>Coinvolgimento della famiglia</strong>: condividere con i genitori l'osservazione finale; il consolidamento del nome/indirizzo si fa anche a casa.</li>
+        <li><strong>Riferimenti normativi</strong>: D.M. 183/2024 + L. 92/2019 + Indicazioni Nazionali per il curricolo della Scuola dell'Infanzia (2012, integrate dai Nuovi Orientamenti 2024).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Griglia Ed. Civica · Infanzia · D.M. 183/2024 · rev. 2026-05</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-vero-falso-infanzia" class="pacchetto-scheda" aria-label="Scheda: Vero o Falso con le Faccine">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Vero o Falso con le Faccine</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (4-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 4-6 anni</span>
+      <span><strong>Durata:</strong> 15-20 min</span>
+      <span><strong>Servono:</strong> matita o pennarelli</span>
+    </div>
+
+    <p class="scheda-intro">
+      <strong>Il maestro o la maestra ti legge la frase.</strong> Tu colora <strong>la faccina felice 😊</strong> se la frase è vera (cosa giusta da fare), <strong>la faccina triste 😟</strong> se è falsa (cosa sbagliata).
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">✓✗ Vero o falso ti insegna a scegliere bene</strong> in caso di emergenza. Le frasi che senti non sono casuali: sono le <em>regole-base</em> che ogni bambino dovrebbe sapere — quando trema la terra non si corre fuori, quando c'è fumo ci si abbassa, il 112 si chiama solo per emergenze vere. Sono le stesse regole che il Dipartimento Protezione Civile insegna in tutta Italia con "<em>Io non rischio</em>".
+    </div>
+
+    <div class="vf-domanda">
+      <div class="vf-num">1</div>
+      <div class="vf-testo">Durante il terremoto esco di corsa fuori da scuola.</div>
+      <div class="vf-faccine">
+        <div class="vf-faccia">😊</div>
+        <div class="vf-faccia">😟</div>
+      </div>
+    </div>
+
+    <div class="vf-domanda">
+      <div class="vf-num">2</div>
+      <div class="vf-testo">Quando suona la sirena prendo per mano un amico.</div>
+      <div class="vf-faccine">
+        <div class="vf-faccia">😊</div>
+        <div class="vf-faccia">😟</div>
+      </div>
+    </div>
+
+    <div class="vf-domanda">
+      <div class="vf-num">3</div>
+      <div class="vf-testo">Il numero dell'emergenza è il <strong>112</strong>.</div>
+      <div class="vf-faccine">
+        <div class="vf-faccia">😊</div>
+        <div class="vf-faccia">😟</div>
+      </div>
+    </div>
+
+    <div class="vf-domanda">
+      <div class="vf-num">4</div>
+      <div class="vf-testo">Posso usare l'ascensore quando suona l'allarme.</div>
+      <div class="vf-faccine">
+        <div class="vf-faccia">😊</div>
+        <div class="vf-faccia">😟</div>
+      </div>
+    </div>
+
+    <div class="vf-domanda">
+      <div class="vf-num">5</div>
+      <div class="vf-testo">Quando piove forte sto dentro casa.</div>
+      <div class="vf-faccine">
+        <div class="vf-faccia">😊</div>
+        <div class="vf-faccia">😟</div>
+      </div>
+    </div>
+
+    <div class="vf-domanda">
+      <div class="vf-num">6</div>
+      <div class="vf-testo">Chiamo il 112 per dire che è bello il mio disegno.</div>
+      <div class="vf-faccine">
+        <div class="vf-faccia">😊</div>
+        <div class="vf-faccia">😟</div>
+      </div>
+    </div>
+
+    <div class="vf-domanda">
+      <div class="vf-num">7</div>
+      <div class="vf-testo">Quando sento tremare la terra mi metto sotto al banco.</div>
+      <div class="vf-faccine">
+        <div class="vf-faccia">😊</div>
+        <div class="vf-faccia">😟</div>
+      </div>
+    </div>
+
+    <div class="vf-domanda">
+      <div class="vf-num">8</div>
+      <div class="vf-testo">Se vedo del fumo grande in casa, esco e chiamo il 112.</div>
+      <div class="vf-faccine">
+        <div class="vf-faccia">😊</div>
+        <div class="vf-faccia">😟</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 1rem; padding: 0.8rem; background: #d1e7dd; border-radius: 8px; border-left: 4px solid var(--scheda-verde);">
+      <strong style="color: var(--scheda-verde);">Soluzioni</strong> (pagina del docente):
+      <span style="font-size: 0.9rem;">
+        1) 😟 falso · 2) 😊 vero · 3) 😊 vero · 4) 😟 falso ·
+        5) 😊 vero · 6) 😟 falso · 7) 😊 vero · 8) 😊 vero.
+      </span>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Vero o Falso con le Faccine" · Infanzia · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-labirinto-uscita" class="pacchetto-scheda" aria-label="Scheda: Il Labirinto dell'Uscita">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il Labirinto dell'Uscita</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (4-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 4-6 anni</span>
+      <span><strong>Durata:</strong> 10-15 min</span>
+      <span><strong>Servono:</strong> una matita o un pennarello colorato</span>
+    </div>
+
+    <p class="scheda-intro">
+      <strong>La maestra ti dice:</strong> «Suona la sirena di evacuazione! Il bambino 🧒 deve uscire dalla scuola e raggiungere il <strong>cartello verde dell'uscita</strong> 🚪.» Disegna con la matita il percorso, <strong>senza passare</strong> sopra agli ostacoli (gli zaini 🎒, i banchi rovesciati e il fuoco 🔥). <strong>Non correre</strong>: il percorso giusto è quello che evita gli ostacoli.
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">🚪 Regole d'oro dell'evacuazione:</strong> <strong>(1)</strong> Cammina, non correre. <strong>(2)</strong> Segui i compagni in fila. <strong>(3)</strong> Non tornare indietro per niente (zaino, giacca, oggetti). <strong>(4)</strong> Segui i <strong>cartelli verdi</strong> con l'omino che corre (sono fosforescenti). <strong>(5)</strong> Al punto di raccolta aspetta la maestra: deve fare l'<strong>appello</strong> per sapere che ci sei tu e gli altri.
+    </div>
+
+    <div class="lab-griglia" role="img" aria-label="Labirinto 11 colonne per 9 righe. Bambino in alto a sinistra, uscita in basso a destra.">
+      <!-- Riga 1 -->
+      <div class="lab-cella start">🧒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 2 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 3 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella fuoco">🔥</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <!-- Riga 4 -->
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 5 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 6 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 7 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 8 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella muro"></div>
+      <div class="lab-cella"></div>
+      <!-- Riga 9 -->
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella"></div>
+      <div class="lab-cella end">🚪</div>
+    </div>
+
+    <div class="lab-legenda">
+      <span class="lab-legenda-item"><span class="lab-legenda-icon">🧒</span> Bambino (parti da qui)</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon">🚪</span> Uscita (arriva qui)</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon">🎒</span> Zaino (non passare)</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon">🔥</span> Fuoco (pericolo)</span>
+      <span class="lab-legenda-item">⬛ Muro</span>
+    </div>
+
+    <h2 class="scheda-h2">Quando hai finito il labirinto, ricorda:</h2>
+    <ul style="padding-left: 1.3rem; line-height: 1.7;">
+      <li>Quando suona l'allarme <strong>cammina, non correre</strong>.</li>
+      <li>Tieni per mano un compagno e segui la maestra.</li>
+      <li>Non tornare indietro a prendere lo zaino.</li>
+      <li>Se vedi il fuoco 🔥, <strong>cerca un'altra strada</strong>.</li>
+    </ul>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il Labirinto dell'Uscita" · Infanzia · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-tartaruga-saggia-infanzia" class="pacchetto-scheda" aria-label="Scheda: Le Regole della Tartaruga Saggia">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Le Regole della Tartaruga Saggia</h1>
+        <div class="scheda-sottotitolo">Poster fotocopiabile — Scuola dell'Infanzia (3-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 3-6 anni</span>
+      <span><strong>Uso:</strong> da colorare e attaccare in classe</span>
+      <span><strong>Servono:</strong> matite o pennarelli colorati</span>
+    </div>
+
+    <p class="scheda-intro">
+      <strong>La Tartaruga Saggia</strong> sa cosa fare quando la terra trema. Quando sente la scossa, <strong>non scappa</strong>: si <strong>nasconde nel suo guscio</strong> e aspetta che tutto passi. Anche tu, quando senti la terra tremare, fai come lei!
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">📚 Per la maestra:</strong> il comportamento dei bambini in caso di scossa segue il protocollo internazionale <strong>"Drop, Cover, Hold On"</strong> (USGS, Earthquake Country Alliance): <em>abbassati, cuoperti, tieniti</em>. È riconosciuto come comportamento sicuro dal Dipartimento Protezione Civile italiano e usato nelle campagne <em>"Io non rischio terremoto"</em>. La metafora della tartaruga lo rende memorizzabile a 5-6 anni. Mai correre fuori, mai fermarsi sotto i portoni vecchi.
+    </div>
+
+    <div class="ts-grande" aria-hidden="true">🐢</div>
+
+    <h2 class="scheda-h2 text-center" style="text-align: center;">Le 4 regole della Tartaruga</h2>
+
+    <div class="ts-regole">
+      <div class="ts-regola">
+        <span class="ts-num">1</span>
+        <span class="ts-emoji">🪑</span>
+        <span class="ts-titolo">Mi nascondo</span>
+        <span class="ts-frase">Mi metto sotto al tavolo, al banco o vicino a un muro.</span>
+      </div>
+      <div class="ts-regola">
+        <span class="ts-num">2</span>
+        <span class="ts-emoji">🙇</span>
+        <span class="ts-titolo">Mi proteggo</span>
+        <span class="ts-frase">Metto le mani sulla testa per proteggermi.</span>
+      </div>
+      <div class="ts-regola">
+        <span class="ts-num">3</span>
+        <span class="ts-emoji">⏳</span>
+        <span class="ts-titolo">Aspetto</span>
+        <span class="ts-frase">Resto fermo finché smette di tremare.</span>
+      </div>
+      <div class="ts-regola">
+        <span class="ts-num">4</span>
+        <span class="ts-emoji">🚶‍♀️</span>
+        <span class="ts-titolo">Esco con calma</span>
+        <span class="ts-frase">Esco in fila con la maestra, senza correre.</span>
+      </div>
+    </div>
+
+    <div class="ts-filastrocca">
+      🐢 La tartaruga piccolina<br>
+      quando trema la cucina<br>
+      si nasconde piano piano<br>
+      sotto il tavolo o un divano.<br>
+      Dentro il guscio sta al sicuro<br>
+      e non ha proprio paura! 🐢
+    </div>
+
+    <h2 class="scheda-h2">Cosa NON fare</h2>
+    <ul style="padding-left: 1.3rem; line-height: 1.7;">
+      <li>❌ Non scappare in modo veloce e disordinato.</li>
+      <li>❌ Non usare l'ascensore.</li>
+      <li>❌ Non andare alle finestre.</li>
+      <li>❌ Non avere paura: ci sono i grandi che ti aiutano.</li>
+    </ul>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Le Regole della Tartaruga Saggia" · Infanzia · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-trova-coppie-infanzia" class="pacchetto-scheda" aria-label="Scheda: Trova le Coppie">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Trova le Coppie</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (4-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 4-6 anni</span>
+      <span><strong>Durata:</strong> 15-20 min</span>
+      <span><strong>Servono:</strong> matita o pennarelli colorati</span>
+    </div>
+
+    <p class="scheda-intro">
+      <strong>Collega con una linea</strong> ogni immagine a sinistra con quella che le corrisponde a destra. Sono <strong>8 coppie</strong>: oggetto e azione, pericolo e cosa fare.
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">🔗 Le coppie ti aiutano a ragionare per <em>causa-effetto</em>:</strong> a ogni <strong>pericolo</strong> corrisponde una <strong>azione giusta</strong>. <em>C'è il fuoco → chiamo i pompieri. Sento la scossa → mi nascondo sotto il tavolo. C'è un'inondazione → vado in alto.</em> È il modo di pensare che usano i grandi quando devono decidere in fretta!
+    </div>
+
+    <div class="tc-area">
+      <div class="tc-col">
+        <div class="tc-card"><span class="tc-emoji">🚪</span><span class="tc-text">Cartello uscita</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji">🧯</span><span class="tc-text">Estintore</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji">🐢</span><span class="tc-text">Tartaruga (terremoto)</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji">🤝</span><span class="tc-text">Mano di un amico</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji">☔</span><span class="tc-text">Pioggia forte</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji">📞</span><span class="tc-text">Telefono</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji">🔥</span><span class="tc-text">Fuoco</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji">👩‍🏫</span><span class="tc-text">Maestra</span><span class="tc-puntino"></span></div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-card tc-card-dx"><span class="tc-emoji">🚶</span><span class="tc-text">Mi metto in fila</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji">🪑</span><span class="tc-text">Mi nascondo sotto</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji">🏠</span><span class="tc-text">Sto dentro casa</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji">🆘</span><span class="tc-text">Spegne il fuoco</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji">➡️</span><span class="tc-text">Mostra dove si esce</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji">112</span><span class="tc-text">Numero emergenza</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji">👋</span><span class="tc-text">Lo prendo per mano</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji">😊</span><span class="tc-text">Mi aiuta sempre</span><span class="tc-puntino"></span></div>
+      </div>
+    </div>
+
+    <div style="margin-top: 1.2rem; padding: 0.8rem; background: #d1e7dd; border-radius: 8px; border-left: 4px solid var(--scheda-verde);">
+      <strong style="color: var(--scheda-verde);">Soluzioni</strong> (per il docente):
+      <span style="font-size: 0.9rem;">
+        🚪 → ➡️ &nbsp;·&nbsp; 🧯 → 🆘 &nbsp;·&nbsp; 🐢 → 🪑 &nbsp;·&nbsp; 🤝 → 👋 &nbsp;·&nbsp;
+        ☔ → 🏠 &nbsp;·&nbsp; 📞 → 112 &nbsp;·&nbsp; 🔥 → 🚶 (in fila esco) &nbsp;·&nbsp; 👩‍🏫 → 😊
+      </span>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Trova le Coppie" · Infanzia · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-abc-vocali-infanzia" class="pacchetto-scheda" aria-label="Scheda: ABC delle vocali — Le parole che salvano">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">ABC delle vocali — Le parole che salvano</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (5-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere e scrivere le 5 vocali</span>
+      <span><strong>Servono:</strong> matita, gomma, pennarelli</span>
+    </div>
+
+    <p class="scheda-intro">
+      Ogni vocale ha una parola amica della <strong>Protezione Civile</strong>. Ripassa la lettera grande con la matita, poi ricopia la parola sulla riga.
+    </p>
+
+    <div style="background:#eaf2fb; border-left:4px solid #003366; padding:0.5rem 0.8rem; border-radius:0 8px 8px 0; margin:0.4rem 0; font-size:0.92rem; line-height:1.5;">
+      <strong style="color:#003366;">🆘 Le 5 parole che impari</strong> con le vocali sono <strong>le 5 cose più importanti</strong> in caso di emergenza: chiedere <em>Aiuto</em>, proteggere la testa col l'<em>Elmetto</em>, sapere dov'è l'<em>Idrante</em>, andare in <em>Ospedale</em> se ci si fa male, riconoscere l'<em>Uscita</em> di emergenza. Mentre impari le vocali, impari anche queste 5 parole utili tutta la vita.
+    </div>
+
+    <div class="vocali-griglia">
+
+      <div class="vocale-riga">
+        <div class="vocale-ricalca" aria-hidden="true">A</div>
+        <div class="vocale-modello" aria-hidden="true">A</div>
+        <div class="vocale-emoji" aria-hidden="true">🆘</div>
+        <div class="vocale-parola">
+          <span class="parola-modello"><span class="parola-iniziale">A</span>IUTO</span>
+          <span class="parola-riga" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="vocale-riga">
+        <div class="vocale-ricalca" aria-hidden="true">E</div>
+        <div class="vocale-modello" aria-hidden="true">E</div>
+        <div class="vocale-emoji" aria-hidden="true">⛑️</div>
+        <div class="vocale-parola">
+          <span class="parola-modello"><span class="parola-iniziale">E</span>LMETTO</span>
+          <span class="parola-riga" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="vocale-riga">
+        <div class="vocale-ricalca" aria-hidden="true">I</div>
+        <div class="vocale-modello" aria-hidden="true">I</div>
+        <div class="vocale-emoji" aria-hidden="true">🚒</div>
+        <div class="vocale-parola">
+          <span class="parola-modello"><span class="parola-iniziale">I</span>DRANTE</span>
+          <span class="parola-riga" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="vocale-riga">
+        <div class="vocale-ricalca" aria-hidden="true">O</div>
+        <div class="vocale-modello" aria-hidden="true">O</div>
+        <div class="vocale-emoji" aria-hidden="true">🏥</div>
+        <div class="vocale-parola">
+          <span class="parola-modello"><span class="parola-iniziale">O</span>SPEDALE</span>
+          <span class="parola-riga" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="vocale-riga">
+        <div class="vocale-ricalca" aria-hidden="true">U</div>
+        <div class="vocale-modello" aria-hidden="true">U</div>
+        <div class="vocale-emoji" aria-hidden="true">🚪</div>
+        <div class="vocale-parola">
+          <span class="parola-modello"><span class="parola-iniziale">U</span>SCITA</span>
+          <span class="parola-riga" aria-hidden="true"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="esercizio-cerchia">
+      <div class="consegna">✏️ Cerchia tutte le vocali nelle parole qui sotto:</div>
+      <div class="esercizio-parole">
+        <span>CASCO</span>
+        <span>SIRENA</span>
+        <span>RADIO</span>
+        <span>FUOCO</span>
+        <span>MAPPA</span>
+      </div>
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong> nella prima colonna la lettera è da ricalcare con la matita
+      (contorno blu vuoto), nella seconda è il modello già scritto. Nella riga a destra il bambino
+      ripassa la parola sopra il modello tratteggiato e poi la riscrive sulla riga vuota.
+      Nell'esercizio finale può cerchiare con un colore diverso ogni vocale (A rosso, E blu, I verde, O giallo, U arancione).
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "ABC delle vocali" · Infanzia · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-riconosci-iniziale-infanzia" class="pacchetto-scheda" aria-label="Scheda: Riconosci l'iniziale — Le parole della sicurezza">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Riconosci l'iniziale — Le parole della sicurezza</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (5-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere la lettera iniziale di una parola</span>
+      <span><strong>Servono:</strong> matita o pennarello</span>
+    </div>
+
+    <p class="scheda-intro">
+      Guarda la figura, leggi la parola scritta sotto e <strong>cerchia</strong> la lettera con cui inizia, scegliendola fra i tre cerchietti.
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.9rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">🔤 Le parole della Protezione Civile</strong> di questa scheda iniziano con tante lettere diverse: <em>Ambulanza</em>, <em>Pompiere</em>, <em>Casco</em>, <em>Idrante</em>, <em>Radio</em>, <em>Mappa</em>… Imparare la lettera iniziale ti aiuta poi a riconoscere le parole nella scrittura. È un primo passo per leggere da solo!
+    </div>
+
+    <div class="ri-consegna"><span class="icon" aria-hidden="true">✏️</span>Cerchia la lettera giusta:</div>
+
+    <div class="ri-griglia">
+
+      <div class="ri-cella">
+        <span class="ri-emoji" aria-hidden="true">⛑️</span>
+        <div class="ri-parte-destra">
+          <span class="ri-parola">CASCO</span>
+          <div class="ri-opzioni">
+            <span class="ri-opzione">M</span>
+            <span class="ri-opzione">C</span>
+            <span class="ri-opzione">B</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ri-cella">
+        <span class="ri-emoji" aria-hidden="true">🚒</span>
+        <div class="ri-parte-destra">
+          <span class="ri-parola">SIRENA</span>
+          <div class="ri-opzioni">
+            <span class="ri-opzione">S</span>
+            <span class="ri-opzione">R</span>
+            <span class="ri-opzione">L</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ri-cella">
+        <span class="ri-emoji" aria-hidden="true">🔥</span>
+        <div class="ri-parte-destra">
+          <span class="ri-parola">FUOCO</span>
+          <div class="ri-opzioni">
+            <span class="ri-opzione">P</span>
+            <span class="ri-opzione">F</span>
+            <span class="ri-opzione">V</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ri-cella">
+        <span class="ri-emoji" aria-hidden="true">📡</span>
+        <div class="ri-parte-destra">
+          <span class="ri-parola">RADIO</span>
+          <div class="ri-opzioni">
+            <span class="ri-opzione">D</span>
+            <span class="ri-opzione">N</span>
+            <span class="ri-opzione">R</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ri-cella">
+        <span class="ri-emoji" aria-hidden="true">🗺️</span>
+        <div class="ri-parte-destra">
+          <span class="ri-parola">MAPPA</span>
+          <div class="ri-opzioni">
+            <span class="ri-opzione">M</span>
+            <span class="ri-opzione">N</span>
+            <span class="ri-opzione">P</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ri-cella">
+        <span class="ri-emoji" aria-hidden="true">🚪</span>
+        <div class="ri-parte-destra">
+          <span class="ri-parola">USCITA</span>
+          <div class="ri-opzioni">
+            <span class="ri-opzione">A</span>
+            <span class="ri-opzione">U</span>
+            <span class="ri-opzione">O</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ri-cella">
+        <span class="ri-emoji" aria-hidden="true">🔦</span>
+        <div class="ri-parte-destra">
+          <span class="ri-parola">TORCIA</span>
+          <div class="ri-opzioni">
+            <span class="ri-opzione">L</span>
+            <span class="ri-opzione">T</span>
+            <span class="ri-opzione">D</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ri-cella">
+        <span class="ri-emoji" aria-hidden="true">🤝</span>
+        <div class="ri-parte-destra">
+          <span class="ri-parola">AIUTO</span>
+          <div class="ri-opzioni">
+            <span class="ri-opzione">E</span>
+            <span class="ri-opzione">A</span>
+            <span class="ri-opzione">I</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ri-cella">
+        <span class="ri-emoji" aria-hidden="true">🎒</span>
+        <div class="ri-parte-destra">
+          <span class="ri-parola">ZAINO</span>
+          <div class="ri-opzioni">
+            <span class="ri-opzione">S</span>
+            <span class="ri-opzione">G</span>
+            <span class="ri-opzione">Z</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ri-cella">
+        <span class="ri-emoji" aria-hidden="true">🏥</span>
+        <div class="ri-parte-destra">
+          <span class="ri-parola">OSPEDALE</span>
+          <div class="ri-opzioni">
+            <span class="ri-opzione">O</span>
+            <span class="ri-opzione">A</span>
+            <span class="ri-opzione">U</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong> la maestra legge ad alta voce ciascuna parola
+      una volta sola, scandendo bene il primo suono. Il bambino cerchia la lettera.
+      <strong>Soluzioni:</strong> CASCO→C, SIRENA→S, FUOCO→F, RADIO→R, MAPPA→M, USCITA→U,
+      TORCIA→T, AIUTO→A, ZAINO→Z, OSPEDALE→O. Per i bambini che già riconoscono i suoni,
+      proponi di scrivere la lettera mancante in uno spazio bianco al posto della scelta multipla.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Riconosci l'iniziale" · Infanzia · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-collega-parola-immagine-infanzia" class="pacchetto-scheda" aria-label="Scheda: Collega la parola all'immagine">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Collega la parola all'immagine</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia / Primaria 1ª (5-7 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-7 anni</span>
+      <span><strong>Obiettivo:</strong> associare parola scritta e immagine</span>
+      <span><strong>Servono:</strong> matita o riga e matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Leggi le parole nella colonna a sinistra. Per ogni parola, traccia con la matita una linea fino al cerchietto della <strong>figura giusta</strong> a destra. Le immagini sono in ordine sparso!
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">🔍 Collegare parole e immagini</strong> è uno dei primi modi per leggere. Le parole che vedi sono tutte legate alla <strong>sicurezza</strong>: ambulanza, casco, idrante, mappa, allerta… Sono parole che troverai in tante storie e cartelli. Conoscere il loro significato è il primo passo per imparare a leggere da solo.
+    </div>
+
+    <div class="cpi-griglia">
+      <div class="h parola">PAROLA</div>
+      <div class="h collega">collega con una linea</div>
+      <div class="h figura">FIGURA</div>
+
+      <div class="parola-cella">CASCO</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">🚪</div>
+
+      <div class="parola-cella">SIRENA</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">🆘</div>
+
+      <div class="parola-cella">USCITA</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">🔦</div>
+
+      <div class="parola-cella">RADIO</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">⛑️</div>
+
+      <div class="parola-cella">112</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">🚒</div>
+
+      <div class="parola-cella">FUOCO</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">📡</div>
+
+      <div class="parola-cella">TORCIA</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">📞</div>
+
+      <div class="parola-cella">AIUTO</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="puntini" aria-hidden="true">· · · · ·</div>
+      <div class="pallino" aria-hidden="true"></div>
+      <div class="figura-cella" aria-hidden="true">🔥</div>
+
+    </div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong> i puntini fra parola e figura sono solo
+      una guida visiva: la linea può essere tracciata libera, anche curva o incrociata,
+      purché parta dal cerchietto sinistro e arrivi al cerchietto destro corretto.
+      <br>
+      <strong>Soluzioni:</strong> CASCO→⛑️, SIRENA→🚒, USCITA→🚪, RADIO→📡,
+      112→📞, FUOCO→🔥, TORCIA→🔦, AIUTO→🆘.
+      <br>
+      <strong>Estensione:</strong> dopo aver collegato tutte le parole, il bambino sceglie
+      una parola e prova a scriverla sul retro del foglio o su un quaderno a righe larghe.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Collega parola e immagine" · Infanzia / Primaria 1ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-numeri-pc-infanzia" class="pacchetto-scheda" aria-label="Scheda: I numeri della Protezione Civile">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">I numeri della Protezione Civile</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (5-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere e scrivere i numeri da 1 a 5</span>
+      <span><strong>Servono:</strong> matita, pennarelli</span>
+    </div>
+
+    <p class="scheda-intro">
+      Conta gli oggetti della <strong>Protezione Civile</strong>, ripassa con la matita la cifra grande con il contorno, poi riscrivila sulla riga vuota.
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">🔢 I numeri salvano la vita!</strong> Sai che il numero più importante della Protezione Civile è <strong>1, 1, 2</strong>? È il numero unico di emergenza europeo (NUE 112). Lo chiami quando ti serve aiuto: i pompieri, l'ambulanza, i carabinieri. Mentre impari a contare, ricorda questi <strong>tre numeri magici</strong>: 1-1-2.
+    </div>
+
+    <div class="num-griglia">
+      <div class="num-riga">
+        <div class="num-ricalca" aria-hidden="true">1</div>
+        <div class="num-modello" aria-hidden="true">1</div>
+        <div class="num-oggetti" aria-hidden="true">📞</div>
+        <span class="num-riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="num-riga">
+        <div class="num-ricalca" aria-hidden="true">2</div>
+        <div class="num-modello" aria-hidden="true">2</div>
+        <div class="num-oggetti" aria-hidden="true">⛑️ ⛑️</div>
+        <span class="num-riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="num-riga">
+        <div class="num-ricalca" aria-hidden="true">3</div>
+        <div class="num-modello" aria-hidden="true">3</div>
+        <div class="num-oggetti" aria-hidden="true">🚒 🚒 🚒</div>
+        <span class="num-riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="num-riga">
+        <div class="num-ricalca" aria-hidden="true">4</div>
+        <div class="num-modello" aria-hidden="true">4</div>
+        <div class="num-oggetti" aria-hidden="true">🔦 🔦 🔦 🔦</div>
+        <span class="num-riga-vuota" aria-hidden="true"></span>
+      </div>
+      <div class="num-riga">
+        <div class="num-ricalca" aria-hidden="true">5</div>
+        <div class="num-modello" aria-hidden="true">5</div>
+        <div class="num-oggetti" aria-hidden="true">🤝 🤝 🤝 🤝 🤝</div>
+        <span class="num-riga-vuota" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">Il numero importante della PC: <strong>112</strong></h2>
+    <p class="scheda-intro" style="margin-bottom:0.5rem;">
+      Questo è il numero che si chiama in caso di emergenza. Ripassalo con la matita.
+    </p>
+    <div class="num-modello" style="font-size: 4.5rem; color: transparent; -webkit-text-stroke: 2.5px var(--scheda-rosso); text-align: center; margin: 0.4rem 0;">1 1 2</div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong> il telefono (1) rappresenta la chiamata al 112,
+      i caschi (2) i pompieri al lavoro in coppia, le sirene (3) i mezzi di soccorso,
+      le torce (4) il kit di emergenza, i volontari (5) la squadra che aiuta.
+      Dopo la scheda, la classe può contare a voce alta gli oggetti del proprio kit
+      di classe (acqua, torcia, fischietto…). Per il 112 in fondo, alternare il rosso e il blu.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "I numeri della PC" · Infanzia · numeri · rev. 2026</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-ciclo-acqua-infanzia" class="pacchetto-scheda" aria-label="Scheda: Il ciclo dell'acqua — Da dove arriva la pioggia?">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il ciclo dell'acqua — Da dove arriva la pioggia?</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (5-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere le 4 fasi del ciclo dell'acqua</span>
+      <span><strong>Servono:</strong> matita, pennarelli azzurri</span>
+    </div>
+
+    <p class="scheda-intro">
+      L'acqua del mare e dei laghi sale in cielo, diventa <strong>nuvola</strong>, poi torna giù come <strong>pioggia</strong>. È un giro che non finisce mai! Guarda i 4 disegni qui sotto: sono in ordine sparso. Mettili in ordine tu.
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">💧 Perché impari il ciclo dell'acqua:</strong> ti aiuta a capire come funzionano i <strong>fiumi</strong> e perché a volte arriva un'<strong>alluvione</strong>. Quando piove tantissimo in un giorno, i fiumi non riescono a contenere tutta l'acqua e <em>escono</em> dal letto. I volontari di Protezione Civile sono pronti ad aiutare le persone proprio in queste situazioni.
+    </div>
+
+    <div class="ciclo-griglia">
+      <div class="ciclo-cella">
+        <span class="lettera" aria-hidden="true">A</span>
+        <span class="emo" aria-hidden="true">🌧️</span>
+        <span class="didascalia">PIOGGIA</span>
+        <span class="num-vuoto" aria-hidden="true">?</span>
+      </div>
+      <div class="ciclo-cella">
+        <span class="lettera" aria-hidden="true">B</span>
+        <span class="emo" aria-hidden="true">☀️</span>
+        <span class="didascalia">SOLE SUL MARE</span>
+        <span class="num-vuoto" aria-hidden="true">?</span>
+      </div>
+      <div class="ciclo-cella">
+        <span class="lettera" aria-hidden="true">C</span>
+        <span class="emo" aria-hidden="true">☁️</span>
+        <span class="didascalia">NUVOLA</span>
+        <span class="num-vuoto" aria-hidden="true">?</span>
+      </div>
+      <div class="ciclo-cella">
+        <span class="lettera" aria-hidden="true">D</span>
+        <span class="emo" aria-hidden="true">💨</span>
+        <span class="didascalia">VAPORE CHE SALE</span>
+        <span class="num-vuoto" aria-hidden="true">?</span>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">Scrivi la lettera giusta nell'ordine 1 → 2 → 3 → 4</h2>
+    <p class="scheda-intro" style="margin: 0.2rem 0;">Quale arriva prima? Scrivi la lettera (A, B, C, D) nei quadrati:</p>
+    <div class="ordine-righe">
+      <span>1</span>
+      <span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>2</span>
+      <span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>3</span>
+      <span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>4</span>
+      <span class="lettera-vuota" aria-hidden="true"></span>
+    </div>
+
+    <h2 class="scheda-h2">Cosa fa la Protezione Civile quando piove tanto?</h2>
+    <p class="scheda-intro">
+      Quando la <strong>pioggia</strong> è troppa, l'acqua può uscire dai fossi e
+      allagare le strade. La Protezione Civile <strong>controlla</strong>, mette i
+      <strong>cartelli di pericolo</strong> e aiuta le persone a stare al sicuro
+      ai piani alti delle case.
+    </p>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Soluzione</strong>: l'ordine corretto è <strong>B → D → C → A</strong>: il sole scalda il mare → l'acqua diventa vapore e sale → in cielo si formano le nuvole → le nuvole rilasciano la pioggia.</li>
+        <li>Per i 3-4 anni: limitarsi a 2 fasi (sole/pioggia) e farle ripetere oralmente. Per i 5-6: tutte le 4 fasi.</li>
+        <li><strong>Approfondimento</strong>: collegare al rischio idrogeologico di Genzano (i fossi dei Castelli Romani). La cartografia è in <a href="/cartografia/">/cartografia/</a>.</li>
+        <li>Dopo la scheda, fare un cartellone di classe disegnando il ciclo con frecce.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il ciclo dell'acqua" · Infanzia · scienze · rev. 2026</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-triangolo-fuoco-infanzia" class="pacchetto-scheda" aria-label="Scheda: Cosa serve al fuoco per bruciare?">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Cosa serve al fuoco per bruciare?</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (5-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere i 3 elementi del fuoco</span>
+      <span><strong>Servono:</strong> matita, pennarelli rossi e arancioni</span>
+    </div>
+
+    <p class="scheda-intro">
+      Il <strong>fuoco</strong> ha bisogno di <strong>tre cose</strong> per esistere. Se manca anche solo una, il fuoco si spegne! Guarda il triangolo del fuoco e i 3 elementi.
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">🚒 Lo sai che i pompieri</strong> usano questo triangolo per scegliere come spegnere un incendio? Spengono togliendo un solo lato del triangolo — con l'acqua, con la schiuma, con la coperta — e il fuoco si spegne subito! È <strong>scienza pura</strong> quella che usano i vigili del fuoco.
+    </div>
+
+    <svg class="triangolo-svg" viewBox="0 0 360 200" role="img" aria-label="Triangolo del fuoco con i tre elementi">
+      <polygon points="180,20 340,180 20,180" fill="#fff3cd" stroke="#dc3545" stroke-width="4"/>
+      <text x="180" y="105" text-anchor="middle" font-size="48" font-weight="700" fill="#dc3545">🔥</text>
+      <text x="180" y="14" text-anchor="middle" font-size="14" font-weight="700" fill="#dc3545">CALORE</text>
+      <text x="345" y="195" text-anchor="end" font-size="14" font-weight="700" fill="#dc3545">ARIA</text>
+      <text x="15" y="195" text-anchor="start" font-size="14" font-weight="700" fill="#dc3545">LEGNA</text>
+    </svg>
+
+    <h2 class="scheda-h2">I 3 elementi del fuoco</h2>
+    <div class="elementi-griglia">
+      <div class="elemento-card">
+        <span class="emo" aria-hidden="true">🪵</span>
+        <span class="nome">LEGNA</span>
+        <span class="desc">Una cosa che brucia (legna, carta, foglie secche).</span>
+      </div>
+      <div class="elemento-card">
+        <span class="emo" aria-hidden="true">💨</span>
+        <span class="nome">ARIA</span>
+        <span class="desc">Senza aria il fuoco non brucia.</span>
+      </div>
+      <div class="elemento-card">
+        <span class="emo" aria-hidden="true">🌡️</span>
+        <span class="nome">CALORE</span>
+        <span class="desc">La fiamma del fiammifero o la scintilla.</span>
+      </div>
+    </div>
+
+    <div class="togli-elemento">
+      <div class="domanda">✏️ Cosa fa il pompiere quando spegne un fuoco con l'acqua? Cerchia la risposta:</div>
+      <div class="togli-opz">
+        <div class="opz"><span class="quadro" aria-hidden="true"></span><span>Toglie la <strong>legna</strong> al fuoco.</span></div>
+        <div class="opz"><span class="quadro" aria-hidden="true"></span><span>Toglie il <strong>calore</strong> al fuoco (lo raffredda).</span></div>
+        <div class="opz"><span class="quadro" aria-hidden="true"></span><span>Toglie l'<strong>aria</strong> al fuoco.</span></div>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">Disegna o colora 🔥</h2>
+    <p class="scheda-intro">
+      Colora il triangolo con il rosso, e disegna nello spazio sotto un pompiere
+      con il suo <strong>idrante</strong> che spegne il fuoco.
+    </p>
+    <div class="scheda-box-disegno" style="min-height: 6rem;"></div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Soluzione</strong>: il pompiere con l'acqua <strong>toglie il calore</strong>. Per soffocare l'aria si usano coperte o estintori a CO₂.</li>
+        <li><strong>Esperienza concreta</strong>: con una candela e un bicchiere capovolto (mai con bambini direttamente!), mostrare che senza aria la candela si spegne.</li>
+        <li><strong>Regola d'oro</strong>: i bambini non devono mai accendere fuochi né toccare fiammiferi/accendini. Solo gli adulti.</li>
+        <li><strong>Collegamento</strong>: la versione completa per la primaria con esperimenti pratici è la scheda <a href="/formazione/schede-stampabili/triangolo-fuoco-primaria/">triangolo-fuoco-primaria</a> (esperimento candela + bicchiere, applicazione alle tecniche dei vigili del fuoco, quiz scientifico).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Cosa serve al fuoco" · Infanzia · scienze · rev. 2026</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-cartelli-sicurezza-infanzia" class="pacchetto-scheda" aria-label="Scheda: I cartelli della sicurezza">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">I cartelli della sicurezza</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (5-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere i 4 cartelli base</span>
+      <span><strong>Servono:</strong> matita, pennarelli rossi, verdi, gialli</span>
+    </div>
+
+    <p class="scheda-intro">
+      A scuola e per strada ci sono dei <strong>cartelli</strong> che ci dicono cose importanti. Ne devi imparare a riconoscere quattro. Guarda i disegni e pensa: cosa vuol dire?
+    </p>
+
+    <div style="background:#eaf2fb; border-left:4px solid #003366; padding:0.5rem 0.8rem; border-radius:0 8px 8px 0; margin:0.4rem 0; font-size:0.92rem; line-height:1.5;">
+      <strong style="color:#003366;">🚸 I cartelli di sicurezza sono uguali in tutto il mondo!</strong> Li ha decisi una grande organizzazione internazionale (la <strong>ISO</strong>) con la norma <strong>ISO 7010</strong>. Così se vai in vacanza in Spagna, in Francia o in Germania, riconosci i cartelli anche senza sapere la lingua. <strong>Il colore del cartello dice il tipo di messaggio:</strong> verde = sicurezza (uscita), rosso = divieto o antincendio, giallo = pericolo, blu = obbligo. Provali a casa: trova un cartello rosso e indovina cosa vuol dire!
+    </div>
+
+    <div class="cartelli-griglia">
+
+      <div class="cartello-card">
+        <svg class="cartello-svg" viewBox="0 0 100 100" role="img" aria-label="Cartello di uscita di emergenza, verde con omino bianco">
+          <rect x="5" y="5" width="90" height="90" rx="8" fill="#fff" stroke="#198754" stroke-width="3"/>
+          <rect x="10" y="10" width="80" height="80" rx="5" fill="#198754"/>
+          <text x="50" y="60" text-anchor="middle" font-size="40" fill="#fff">🏃</text>
+          <text x="50" y="83" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">USCITA</text>
+        </svg>
+        <span class="nome">USCITA DI EMERGENZA</span>
+        <span class="desc">Verde con omino che corre. Indica la porta da prendere se devo uscire in fretta.</span>
+      </div>
+
+      <div class="cartello-card">
+        <svg class="cartello-svg" viewBox="0 0 100 100" role="img" aria-label="Cartello idrante, quadrato rosso con goccia bianca">
+          <rect x="5" y="5" width="90" height="90" rx="8" fill="#fff" stroke="#dc3545" stroke-width="3"/>
+          <rect x="10" y="10" width="80" height="80" rx="5" fill="#dc3545"/>
+          <text x="50" y="60" text-anchor="middle" font-size="40" fill="#fff">🚰</text>
+          <text x="50" y="83" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">IDRANTE</text>
+        </svg>
+        <span class="nome">IDRANTE</span>
+        <span class="desc">Quadrato rosso. È il rubinetto a cui i pompieri attaccano la pompa per spegnere il fuoco.</span>
+      </div>
+
+      <div class="cartello-card">
+        <svg class="cartello-svg" viewBox="0 0 100 100" role="img" aria-label="Cartello di divieto, cerchio rosso con barra">
+          <circle cx="50" cy="50" r="42" fill="#fff" stroke="#dc3545" stroke-width="8"/>
+          <line x1="20" y1="80" x2="80" y2="20" stroke="#dc3545" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <span class="nome">DIVIETO</span>
+        <span class="desc">Cerchio rosso con barra. Vuol dire <strong>NON SI PUÒ FARE</strong>.</span>
+      </div>
+
+      <div class="cartello-card">
+        <svg class="cartello-svg" viewBox="0 0 100 100" role="img" aria-label="Cartello di pericolo, triangolo giallo con punto esclamativo">
+          <polygon points="50,12 92,82 8,82" fill="#ffc107" stroke="#000" stroke-width="4" stroke-linejoin="round"/>
+          <text x="50" y="73" text-anchor="middle" font-size="44" font-weight="700" fill="#000">!</text>
+        </svg>
+        <span class="nome">PERICOLO</span>
+        <span class="desc">Triangolo giallo con punto esclamativo. Vuol dire <strong>ATTENZIONE!</strong></span>
+      </div>
+
+    </div>
+
+    <h2 class="scheda-h2">Abbina ogni cartello al significato — disegna una linea</h2>
+    <div class="abbina-griglia">
+      <div class="abbina-cella">
+        <span class="pallino" aria-hidden="true"></span>
+        <span class="testo">🟢 Verde con omino</span>
+      </div>
+      <div class="abbina-cella">
+        <span class="pallino" aria-hidden="true"></span>
+        <span class="testo">"NON FARE!" (es. non toccare il fuoco)</span>
+      </div>
+      <div class="abbina-cella">
+        <span class="pallino" aria-hidden="true"></span>
+        <span class="testo">🔴 Cerchio rosso con barra</span>
+      </div>
+      <div class="abbina-cella">
+        <span class="pallino" aria-hidden="true"></span>
+        <span class="testo">"ATTENZIONE: stai attento!"</span>
+      </div>
+      <div class="abbina-cella">
+        <span class="pallino" aria-hidden="true"></span>
+        <span class="testo">🟡 Triangolo giallo con !</span>
+      </div>
+      <div class="abbina-cella">
+        <span class="pallino" aria-hidden="true"></span>
+        <span class="testo">"Esci di qua se serve uscire in fretta"</span>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Colora i cartelli con i colori giusti</h2>
+    <p class="scheda-intro">
+      I cartelli qui sopra sono già colorati per esempio. Disegna sotto un cartello
+      tu, della tua scuola, e coloralo con il colore giusto.
+    </p>
+    <div class="scheda-box-disegno" style="min-height: 5rem;"></div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Soluzioni abbinamento</strong>: verde-omino → "esci di qua" · cerchio rosso → "non fare" · triangolo giallo → "attenzione".</li>
+        <li><strong>Attività concreta</strong>: portare la classe a fare un giro nei corridoi della scuola e cercare i cartelli reali (sono lì per legge, D.Lgs. 81/2008). Per ogni cartello trovato, dire ad alta voce cosa vuol dire.</li>
+        <li><strong>Storia di Tina la tartaruga</strong>: collegare con la scheda <a href="/formazione/schede-stampabili/tartaruga-saggia-infanzia/">tartaruga-saggia-infanzia</a> per il comportamento di evacuazione.</li>
+        <li>Per i bambini con difficoltà di lettura: leggere voi le frasi e farli abbinare per <strong>colore</strong>.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "I cartelli della sicurezza" · Infanzia · territorio · rev. 2026</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-punti-cardinali-infanzia" class="pacchetto-scheda" aria-label="Scheda: I punti cardinali — Sapere dove andare">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">I punti cardinali — Sapere dove andare</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (5-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere i 4 punti cardinali e l'orientamento del sole</span>
+      <span><strong>Servono:</strong> matita, pennarelli</span>
+    </div>
+
+    <p class="scheda-intro">
+      I <strong>volontari della Protezione Civile</strong> devono sapere sempre dov'è il <strong>nord</strong>, dov'è il <strong>sud</strong>, dov'è l'<strong>est</strong> e dov'è l'<strong>ovest</strong>. Si chiamano <strong>punti cardinali</strong> e si disegnano con una stella che ha 4 punte.
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">🧭 La bussola dei pompieri</strong> — quando i vigili del fuoco o i volontari di PC vanno in un bosco grande o in montagna, hanno sempre con sé una <strong>bussola</strong> (un piccolo strumento con una freccia che indica sempre il nord). Così non si perdono. Anche tu, se conosci i punti cardinali, sai sempre da che parte sei: a nord ci sono le Alpi, a sud c'è il mare!
+    </div>
+
+    <h2 class="scheda-h2">La rosa dei venti</h2>
+    <svg class="rosa-svg" viewBox="0 0 240 240" role="img" aria-label="Rosa dei venti con N, S, E, O">
+      <!-- stella principale -->
+      <polygon points="120,20 130,110 220,120 130,130 120,220 110,130 20,120 110,110" fill="#003366" stroke="#003366" stroke-width="2"/>
+      <!-- ombra interna chiara -->
+      <polygon points="120,40 125,115 200,120 125,125 120,200 115,125 40,120 115,115" fill="#0066cc"/>
+      <!-- cerchio centrale -->
+      <circle cx="120" cy="120" r="14" fill="#fff" stroke="#003366" stroke-width="2"/>
+      <!-- lettere -->
+      <text x="120" y="14" text-anchor="middle" font-size="18" font-weight="700" fill="#003366">N</text>
+      <text x="120" y="236" text-anchor="middle" font-size="18" font-weight="700" fill="#003366">S</text>
+      <text x="234" y="125" text-anchor="middle" font-size="18" font-weight="700" fill="#003366">E</text>
+      <text x="6" y="125" text-anchor="middle" font-size="18" font-weight="700" fill="#003366">O</text>
+    </svg>
+
+    <div class="punti-griglia">
+      <div class="punto-card">
+        <span class="lettera" aria-hidden="true">N</span>
+        <div class="info">
+          <div class="nome">NORD</div>
+          <div class="desc">In alto. Verso le montagne.</div>
+        </div>
+      </div>
+      <div class="punto-card">
+        <span class="lettera" aria-hidden="true">S</span>
+        <div class="info">
+          <div class="nome">SUD</div>
+          <div class="desc">In basso. Verso il mare (Anzio).</div>
+        </div>
+      </div>
+      <div class="punto-card">
+        <span class="lettera" aria-hidden="true">E</span>
+        <div class="info">
+          <div class="nome">EST</div>
+          <div class="desc">A destra. Da dove sorge il sole 🌅</div>
+        </div>
+      </div>
+      <div class="punto-card">
+        <span class="lettera" aria-hidden="true">O</span>
+        <div class="info">
+          <div class="nome">OVEST</div>
+          <div class="desc">A sinistra. Dove il sole tramonta 🌇</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Scrivi tu le 4 lettere nella rosa dei venti</h2>
+    <p class="scheda-intro" style="margin: 0.2rem 0;">Ricorda: <strong>N</strong> in alto, <strong>S</strong> in basso, <strong>E</strong> a destra, <strong>O</strong> a sinistra.</p>
+    <svg class="scrivi-rosa" viewBox="0 0 240 240" role="img" aria-label="Rosa dei venti vuota da completare">
+      <polygon points="120,20 130,110 220,120 130,130 120,220 110,130 20,120 110,110" fill="#fff" stroke="#003366" stroke-width="2"/>
+      <circle cx="120" cy="120" r="14" fill="#fff" stroke="#003366" stroke-width="2"/>
+      <!-- box vuoti -->
+      <rect x="105" y="0" width="30" height="22" fill="#fff" stroke="#003366" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <rect x="105" y="218" width="30" height="22" fill="#fff" stroke="#003366" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <rect x="218" y="108" width="22" height="30" fill="#fff" stroke="#003366" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <rect x="0" y="108" width="22" height="30" fill="#fff" stroke="#003366" stroke-width="1.5" stroke-dasharray="3,2"/>
+    </svg>
+
+    <h2 class="scheda-h2">🌞 Il sole nel giorno</h2>
+    <p class="scheda-intro">
+      Il sole <strong>sorge a est</strong> la mattina e <strong>tramonta a ovest</strong>
+      la sera. Se sai dov'è il sole quando ti svegli, sai dov'è l'est!
+    </p>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Memo</strong>: <em>"NESO"</em> = Nord-Est-Sud-Ovest in senso orario, partendo dall'alto.</li>
+        <li><strong>Attività concreta</strong>: in cortile al mattino, far indicare ai bambini dov'è il sole. Quello è l'est. Spiegare che a casa dei nonni, in spiaggia, ovunque, il sole sorge sempre dalla stessa parte.</li>
+        <li><strong>Collegamento PC</strong>: i volontari usano la <strong>bussola</strong> e i punti cardinali per orientarsi nei boschi durante le ricerche di persone disperse.</li>
+        <li>A Genzano, il <strong>mare</strong> (Anzio, Lavinio, Nettuno) è a sud-ovest. I <strong>monti</strong> dei Castelli Romani sono attorno a noi.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "I punti cardinali" · Infanzia · territorio · rev. 2026</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-riordina-vignette-evacuazione-infanzia" class="pacchetto-scheda" aria-label="Scheda: Riordina le vignette — L'evacuazione a scuola">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Riordina le vignette — L'evacuazione a scuola</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (5-6 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere l'ordine corretto dei comportamenti in un'evacuazione</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Quando suona la <strong>sirena</strong> a scuola, dobbiamo uscire tutti insieme, con calma e in ordine. Le 4 vignette qui sotto mostrano i momenti di un'evacuazione, ma sono <strong>in ordine sparso</strong>! Mettile in ordine tu, da 1 a 4.
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">📣 Le 4 cose da fare quando suona la sirena:</strong> <strong>(1) Fermarsi</strong> e ascoltare la maestra. <strong>(2) Mettersi in fila</strong> dietro al primo compagno. <strong>(3) Camminare</strong> (NON correre) fino all'uscita seguendo i cartelli verdi. <strong>(4) Punto di raccolta</strong>: aspetta la maestra che fa l'appello. La sirena suona sia per la <em>prova</em> (2 volte all'anno) sia per <em>vera emergenza</em>: comportati sempre uguale.
+    </div>
+
+    <div class="vign-griglia">
+
+      <div class="vign-card">
+        <span class="lettera" aria-hidden="true">A</span>
+        <span class="scena" aria-hidden="true">🌳🧑‍🤝‍🧑</span>
+        <span class="didascalia">Tutti al punto di raccolta nel parco.</span>
+        <span class="num-vuoto" aria-hidden="true">?</span>
+      </div>
+
+      <div class="vign-card">
+        <span class="lettera" aria-hidden="true">B</span>
+        <span class="scena" aria-hidden="true">🚪🚶‍♀️🚶</span>
+        <span class="didascalia">Si esce in fila, piano piano, senza correre.</span>
+        <span class="num-vuoto" aria-hidden="true">?</span>
+      </div>
+
+      <div class="vign-card">
+        <span class="lettera" aria-hidden="true">C</span>
+        <span class="scena" aria-hidden="true">🔔📣</span>
+        <span class="didascalia">Suona la sirena dell'allarme!</span>
+        <span class="num-vuoto" aria-hidden="true">?</span>
+      </div>
+
+      <div class="vign-card">
+        <span class="lettera" aria-hidden="true">D</span>
+        <span class="scena" aria-hidden="true">👨‍🏫🧒👧</span>
+        <span class="didascalia">Ci si mette in fila con la maestra.</span>
+        <span class="num-vuoto" aria-hidden="true">?</span>
+      </div>
+
+    </div>
+
+    <h2 class="scheda-h2">✏️ Scrivi le lettere nell'ordine giusto</h2>
+    <p class="scheda-intro" style="margin: 0.2rem 0;">Cosa succede prima? Cosa succede dopo? Scrivi le lettere A, B, C, D in ordine:</p>
+    <div class="ordine-righe">
+      <span>1°</span>
+      <span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>2°</span>
+      <span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>3°</span>
+      <span class="lettera-vuota" aria-hidden="true"></span>
+      <span class="freccia" aria-hidden="true">→</span>
+      <span>4°</span>
+      <span class="lettera-vuota" aria-hidden="true"></span>
+    </div>
+
+    <h2 class="scheda-h2">Cosa NON fare</h2>
+    <ul style="padding-left: 1.3rem; line-height: 1.7;">
+      <li>❌ NON correre.</li>
+      <li>❌ NON tornare indietro a prendere lo zaino.</li>
+      <li>❌ NON usare l'ascensore.</li>
+      <li>❌ NON spingere i compagni.</li>
+    </ul>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Soluzione</strong>: ordine corretto = <strong>C → D → B → A</strong> (sirena → fila con maestra → uscita → punto di raccolta).</li>
+        <li>Dopo aver corretto la scheda, ripetere la sequenza con i bambini in piedi: simulare la sirena (con la voce o un fischietto), formare la fila, camminare lentamente, fermarsi al punto di raccolta della classe (un cerchio di moquette o un angolo predefinito).</li>
+        <li>Collegamento con la scheda <a href="/formazione/schede-stampabili/labirinto-uscita/">labirinto-uscita</a> per il percorso fisico.</li>
+        <li>Per i bambini di 3-4 anni: ridurre a 3 vignette (eliminare la "fila con maestra").</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Riordina l'evacuazione" · Infanzia · comprensione · rev. 2026</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-pregrafismo-linee-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Pregrafismo">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/pregrafismo-linee-infanzia/scheda-completa.png"
+         alt="Scheda di pregrafismo: le linee della Protezione Civile. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Le linee della Protezione Civile'. Sottotitolo 'Segui le linee tratteggiate con la matita!'. Quattro esercizi: 1) Linee dritte, illustrazione di un casco di sicurezza accanto a tre linee orizzontali tratteggiate; 2) Zig-zag, illustrazione di un fulmine accanto a due linee a zig-zag tratteggiate; 3) Onde, illustrazione di onde di mare accanto a due linee ondulate tratteggiate; 4) Spirali, illustrazione di un tornado accanto a tre spirali tratteggiate. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-conta-puntini-infanzia" class="pacchetto-scheda" aria-label="Scheda: Conta gli oggetti — Cerchia il numero giusto">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Conta gli oggetti — Cerchia il numero giusto</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia (3-4 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 3-4 anni</span>
+      <span><strong>Obiettivo:</strong> contare 1, 2, 3 oggetti</span>
+      <span><strong>Servono:</strong> matita o pennarello</span>
+    </div>
+
+    <p class="scheda-intro">
+      Quanti oggetti vedi in ogni quadrato? Conta a voce alta con la maestra, poi <strong>cerchia</strong> il numero giusto.
+    </p>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
+      <strong style="color: var(--scheda-blu);">🔢 Conta gli oggetti che salvano!</strong> Le cose che vedi in ogni quadrato sono le <strong>amiche della Protezione Civile</strong>: pompieri, ambulanze, idranti, caschi, torce. Mentre conti, impara i loro nomi.
+    </div>
+
+    <div class="conta-griglia">
+
+      <div class="conta-card">
+        <div class="oggetti" aria-hidden="true">⛑️</div>
+        <div class="domanda">Quanti caschi?</div>
+        <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
+      </div>
+
+      <div class="conta-card">
+        <div class="oggetti" aria-hidden="true">🚒 🚒</div>
+        <div class="domanda">Quante sirene?</div>
+        <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
+      </div>
+
+      <div class="conta-card">
+        <div class="oggetti" aria-hidden="true">🔦 🔦 🔦</div>
+        <div class="domanda">Quante torce?</div>
+        <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
+      </div>
+
+      <div class="conta-card">
+        <div class="oggetti" aria-hidden="true">🚪 🚪</div>
+        <div class="domanda">Quante uscite?</div>
+        <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
+      </div>
+
+      <div class="conta-card">
+        <div class="oggetti" aria-hidden="true">🤝</div>
+        <div class="domanda">Quanti volontari?</div>
+        <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
+      </div>
+
+      <div class="conta-card">
+        <div class="oggetti" aria-hidden="true">🚒 🚒 🚒</div>
+        <div class="domanda">Quanti pompieri?</div>
+        <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
+      </div>
+
+    </div>
+
+    <h2 class="scheda-h2">🌟 Disegna i tuoi numeri</h2>
+    <p class="scheda-intro" style="margin: 0.2rem 0;">
+      Disegna nello spazio sotto: 1 sole ☀️, 2 nuvole ☁️ e 3 gocce 💧.
+    </p>
+    <div class="scheda-box-disegno" style="min-height: 5rem;"></div>
+
+    <div class="istruzioni-maestra">
+      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li>1 casco · 2 sirene · 3 torce · 2 uscite · 1 volontario · 3 pompieri.</li>
+        <li><strong>Tecnica</strong>: contare a voce alta toccando con il dito ogni oggetto. Poi cerchiare il numero. Per i 3 anni: contare insieme; per i 4 anni: lasciare che ci provino da soli.</li>
+        <li><strong>Estensione</strong>: contare oggetti reali in classe (sedie, libri, bambini in fila).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Conta i puntini" · Infanzia 3-4 anni · numeri · rev. 2026</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-riconosci-forme-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Le forme dei cartelli">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/riconosci-forme-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: le forme dei cartelli. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Le forme dei cartelli'. Sottotitolo 'Ogni cartello ha la sua forma. Coloriamoli insieme!'. Sei cartelli da riconoscere: 1) cerchio con diagonale 'Il cerchio è un divieto'; 2) quadrato con figura che corre verso l'uscita 'Il quadrato mostra l'uscita'; 3) triangolo con punto esclamativo 'Il triangolo è un pericolo'; 4) cerchio vuoto 'Il cerchio blu è un obbligo'; 5) rettangolo con croce di pronto soccorso 'Il rettangolo è informazione'; 6) triangolo con triangolo PC all'interno 'Questo triangolo è la Protezione Civile'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colori-mezzi-soccorso-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: I colori dei mezzi di soccorso">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colori-mezzi-soccorso-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: i colori dei mezzi di soccorso. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'I colori dei mezzi di soccorso'. Sottotitolo 'Colora ogni mezzo con il suo colore giusto!'. Sei mezzi numerati con didascalia del colore: 1) camion dei pompieri da colorare di rosso; 2) ambulanza bianca con strisce; 3) furgone della Protezione Civile con il triangolo PC sulla fiancata da colorare arancione o blu; 4) auto della polizia blu con strisce; 5) auto dei Carabinieri blu scuro; 6) mezzo antincendio boschivo giallo con un elicottero accanto. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-filastrocca-illustrata-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: La filastrocca della Tartaruga">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/filastrocca-illustrata-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: la filastrocca della Tartaruga. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'La filastrocca della Tartaruga'. Sottotitolo 'Colora la tartaruga e impara cosa fare in un terremoto'. Al centro una grande tartaruga kawaii con guscio segmentato da colorare, circondata da stelle e cuori decorativi. Sotto il disegno la filastrocca in stampatello: 'Quando la terra trema un po, come la tartaruga io staro. Mi metto sotto il tavolino, le mani sulla testa con un bel filo. Aspetto ferma, non ho paura, la mia maestra mi fa sicura.'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-disegna-aiutante-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Disegna il tuo aiutante">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/disegna-aiutante-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: disegna il tuo aiutante. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'Disegna il tuo aiutante'. Sottotitolo 'Come immagini il volontario che ti aiuta? Disegnalo tu!'. A sinistra una silhouette tratteggiata di un volontario PC da ricalcare e completare: casco con triangolo PC accennato, gilet con scritta PC, occhi suggeriti da piccoli cerchi tratteggiati. A destra quattro ovali etichettati 'Occhi', 'Bocca', 'Cosa tiene in mano?', 'I colori' dove il bambino completa il personaggio con la propria fantasia. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colorare-terremoto-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Cosa faccio quando trema la terra?">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colorare-terremoto-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: cosa faccio quando trema la terra. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Cosa faccio quando trema la terra?'. Sei vignette numerate: 1) bambino accovacciato sotto a un tavolo con le mani sulla testa; 2) bambino in piedi con le mani sulla testa; 3) tartaruga kawaii sorridente nel suo guscio; 4) maestra cammina davanti a tre bambini che si tengono per mano in fila; 5) cartello di divieto sopra un ascensore con porte chiuse; 6) maestra con tre bambini accanto al cartello 'Punto di raccolta'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colorare-alluvione-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Cosa faccio se c'è una grande pioggia?">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colorare-alluvione-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: cosa faccio se c'è una grande pioggia. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'Cosa faccio se c'è una grande pioggia?'. Sottotitolo 'Colora i disegni e impara cosa fare in 6 passi facili'. Sei vignette numerate: 1) bambino sale le scale verso il piano alto mentre l'acqua sale; 2) sottopassaggio allagato con cartello di divieto; 3) scala che scende verso una cantina allagata con cartello di divieto; 4) bambina che stacca la spina di una presa elettrica; 5) bambino al telefono che compone il numero 112; 6) bambino che guarda fuori dalla finestra al sicuro mentre piove. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colorare-incendio-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Cosa faccio se vedo del fumo?">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colorare-incendio-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: cosa faccio se vedo del fumo. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Cosa faccio se vedo del fumo?'. Sei vignette numerate: 1) bambino indica del fumo dalla porta a una mamma; 2) bambino chiude una porta dietro di sé mentre c'è fumo dall'altra parte; 3) bambino striscia basso a terra con la mano davanti alla bocca, sotto una nuvola di fumo; 4) bambino cammina verso un cartello di uscita di emergenza; 5) bambino si allontana da un edificio con fumo, cartello di divieto sulla strada di ritorno; 6) maestra con un gruppo di bambini accanto al cartello 'Punto di raccolta'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colorare-temporale-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Cosa faccio se c'è un temporale?">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colorare-temporale-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: cosa faccio se c'è un temporale. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Cosa faccio se c'è un temporale?'. Sei vignette numerate: 1) bambino corre verso casa mentre piove e c'è un fulmine nel cielo; 2) adulto stacca la spina della TV durante il temporale; 3) un grande albero colpito da un fulmine con cartello di divieto; 4) piscina con pioggia e fulmini e cartello di divieto; 5) bambina seduta sul divano in casa con un cuscino mentre fuori piove; 6) bambino in stivali da pioggia accanto a una pozzanghera con cartello di divieto. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colorare-vento-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Cosa faccio se c'è vento forte?">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colorare-vento-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: cosa faccio se c'è vento forte. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Cosa faccio se c'è vento forte?'. Sei vignette numerate: 1) bambino dentro casa guarda dalla finestra alberi che si piegano per il vento; 2) bambina chiude la maniglia di una finestra; 3) un grande albero piegato dal vento con foglie che volano e cartello di divieto; 4) balcone con vasi di fiori rovesciati e cartello di divieto; 5) bambino mette giochi e bici al riparo nel garage; 6) bambina seduta sul divano in casa legge un libro mentre fuori il vento passa. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colorare-frana-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Cosa faccio se vedo una frana?">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colorare-frana-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: cosa faccio se vedo una frana. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'Cosa faccio se vedo una frana?'. Sottotitolo 'Colora i disegni e impara cosa fare in 6 passi facili'. Sei vignette numerate: 1) bambino vede sassi che cadono dalla collina; 2) bambino corre per allontanarsi subito; 3) bambino in casa indica e avvisa la mamma; 4) bambino fa il gesto di stop accanto a un cartello di divieto sulla frana; 5) bambino seduto al sicuro in casa con un libro in mano; 6) due volontari della Protezione Civile con casco bianco con triangolo PC e gilet PC arrivano per controllare. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colorare-neve-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Cosa faccio se nevica forte?">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colorare-neve-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: cosa faccio se nevica forte. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Cosa faccio se nevica forte?'. Sei vignette numerate: 1) bambino sorride vestito con cappello, sciarpa, guanti e giacca; 2) bambino cammina con cautela in una via innevata; 3) via innevata con auto e un pallone con cartello di divieto; 4) bambino dentro casa con una tazza calda accanto alla finestra con neve; 5) due bambini con pala spalano la neve davanti alla porta di casa; 6) smartphone con il numero 112 sullo schermo accanto a un fuoristrada della Protezione Civile sulla neve. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colorare-pompiere-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Il mio amico pompiere">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colorare-pompiere-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: il mio amico pompiere. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Il mio amico pompiere'. Sottotitolo 'Colora i disegni e conosci il pompiere e i suoi attrezzi'. Sei vignette numerate con gli attrezzi del pompiere: 1) casco con visiera in primo piano; 2) un paio di stivali grandi; 3) giacca da pompiere con strisce riflettenti; 4) pompiere con idrante spegne le fiamme; 5) pompiere salva un bambino tenendolo in braccio; 6) telefono con il numero 112 accanto a un camion dei pompieri. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colorare-volontario-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Il volontario della Protezione Civile">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colorare-volontario-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: il volontario della Protezione Civile. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'Il volontario della Protezione Civile'. Sottotitolo 'Colora i disegni e impara cosa fare in 6 passi facili'. Sei vignette numerate da 1 a 6, ciascuna con un volontario PC sorridente in casco bianco e gilet con scritta PC che mostrano: 1) saluta con la mano alzata, 2) parla con la radio, 3) aiuta un'anziana con il bastone, 4) distribuisce acqua e cibo a una mamma con bambini, 5) arriva con il furgone della Protezione Civile, 6) allestisce una tenda con un collega. In basso la dicitura 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-colorare-112-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Come chiamo il 112">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/colorare-112-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: come chiamo il 112. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Come chiamo il 112?'. Sei vignette numerate: 1) bambino vede del fumo e un altro bambino caduto a terra che si è fatto male; 2) bambino calmo prende il telefono da un tavolo; 3) tastiera del telefono con i numeri 1-1-2 evidenziati in alto; 4) bambino al telefono con cartellino del nome 'Flavio'; 5) bambino al telefono indica una mappa con un pin di posizione; 6) bambino aspetta sulla porta di casa mentre l'ambulanza arriva con la sirena. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-volontario-animali-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Il volontario e gli animali">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/volontario-animali-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: il volontario e gli animali. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Il volontario e gli animali'. Sottotitolo 'Colora i disegni e scopri come aiutare gli animali in sicurezza'. Sei vignette numerate: 1) volontario PC accovacciato accarezza un cane spaventato, 'Aiuta un cane spaventato'; 2) volontario PC offre una ciotola d'acqua a un gatto, 'Porta acqua a un gatto'; 3) bambino fermo davanti a un cane sconosciuto con segno di mano fermati, 'Non tocco animali sconosciuti da solo'; 4) bambino indica e parla alla mamma, 'Avviso subito un adulto'; 5) bambino al telefono con fumetto 112, 'Se serve, chiamo il 112'; 6) volontario PC trasporta un trasportino con un cane dentro verso una casa, 'Il volontario mette l'animale al sicuro'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-pericoli-naturali-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: I pericoli naturali">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/pericoli-naturali-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: i pericoli naturali. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'I pericoli naturali'. Sottotitolo 'Colora i disegni e impara cosa fare in 6 passi facili'. Sei vignette numerate da 1 a 6 con i pericoli naturali raffigurati e descritti: 1) terremoto, la terra trema con una casa e una crepa nel terreno; 2) alluvione, cade molta pioggia e l'acqua sale fino a coprire una casa; 3) frana, la terra e le rocce scivolano giù da una collina; 4) temporale, vento forte, tuoni e fulmini con una nuvola che soffia; 5) eruzione vulcanica, il vulcano sputa lava e cenere; 6) incendio boschivo, il fuoco brucia il bosco di alberi. In basso la dicitura 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-allerta-comunicazioni-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Allerta e comunicazioni">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/allerta-comunicazioni-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: allerta e comunicazioni. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'Allerta e comunicazioni'. Sottotitolo 'Colora i disegni e impara cosa fare in 6 passi facili'. Sei vignette numerate: 1) bambino guarda la TV con un giornalista che mostra il segnale di allerta; 2) bambino guarda uno smartphone con un'icona di altoparlante e il segnale di allerta; 3) bambino con i genitori intorno a una mappa parlano del piano di emergenza familiare; 4) bambino indica una piantina con il piano di evacuazione che mostra vie di fuga e punti di ritrovo; 5) bambino prepara uno zaino con bottiglia d'acqua, torcia, medicine e radio; 6) bambino al telefono con un fumetto che mostra il numero 112. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-sicurezza-in-casa-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: La sicurezza in casa">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/sicurezza-in-casa-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: la sicurezza in casa. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'La sicurezza in casa'. Sottotitolo 'Colora i disegni e impara cosa fare in 6 passi facili'. Sei vignette numerate: 1) bambino indica un rilevatore di fumo sul soffitto; 2) bambino scollega una spina dalla presa elettrica; 3) bambina vicino ai fornelli del gas con una pentola; 4) bambino vicino a una finestra aperta che dà sul giardino; 5) bambina che mette in ordine giocattoli in una cesta accanto a una libreria; 6) bambino indica un cartello con il piano di evacuazione e l'uscita di sicurezza. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-zainetto-emergenza-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Il mio zainetto di emergenza">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/zainetto-emergenza-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: il mio zainetto di emergenza. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Il mio zainetto di emergenza'. Sottotitolo 'Colora gli oggetti e scopri cosa c'è nel mio zainetto'. Al centro un grande zainetto con cuoricino sorridente. Intorno sei oggetti numerati con didascalia: 1) Acqua, bottiglia con didascalia 'Ho sempre una bottiglia d'acqua'; 2) Torcia, 'Mi illumina quando è buio'; 3) Fischietto, 'Fischio forte se ho bisogno di aiuto'; 4) Copertina, 'Mi tiene al caldo quando fa freddo'; 5) Numeri utili, quadernino con il numero 112, 'Conosco i numeri importanti'; 6) Peluche rassicurante, orsacchiotto, 'Il mio amico peluche mi fa sentire al sicuro'. Al centro un riquadro con cuori 'Il mio zainetto è sempre pronto per aiutarmi!'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-se-mi-perdo-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Cosa faccio se mi perdo?">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/se-mi-perdo-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: cosa faccio se mi perdo. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Cosa faccio se mi perdo?'. Sottotitolo 'Ricorda queste semplici regole'. Sei vignette numerate: 1) bambino fermo con mano alzata, 'Mi fermo e non corro via'; 2) bambino davanti a un agente in divisa, 'Cerco un adulto con la divisa'; 3) bambino accanto a una signora accovacciata, 'Dico il mio nome e cognome'; 4) bambino seduto su una panchina sotto un albero, 'Resto in un posto sicuro e aspetto'; 5) bambino con fumetto '112', 'Chiamo aiuto o faccio chiamare'; 6) bambino accanto a un soccorritore davanti a un mezzo di soccorso, 'Aspetto i soccorsi e resto calmo'. Riquadro finale 'Stai calmo, segui queste regole e sarai al sicuro'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-odore-gas-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Cosa faccio se sento odore di gas?">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/odore-gas-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: cosa faccio se sento odore di gas. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Cosa faccio se sento odore di gas?'. Sottotitolo 'Ricorda queste semplici regole e stai al sicuro'. Sei vignette numerate: 1) bambino con mano alzata davanti a un interruttore della luce con cartello di divieto, 'Non accendo luci e non premo interruttori'; 2) bambino apre una finestra insieme alla mamma, 'Apro le finestre con un adulto'; 3) bambino esce dalla porta di casa verso il giardino, 'Esco di casa e vado all'aperto'; 4) bambino con fumetto di esclamazione avvisa il papà, 'Avviso subito un adulto'; 5) candela, accendino, fiammifero con cartello di divieto, 'Non uso fiamme, accendini o fiammiferi'; 6) bambino al telefono con fumetto 112, 'Chiamo aiuto e il numero 112'. Riquadro finale 'Segui queste regole e sarai al sicuro'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-ondata-calore-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Cosa faccio se fa molto caldo?">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/ondata-calore-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: cosa faccio se fa molto caldo. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Cosa faccio se fa molto caldo?'. Sottotitolo 'Segui queste buone abitudini e stai bene'. Sei vignette numerate: 1) bambino beve da una bottiglia d'acqua, 'Bevo spesso acqua'; 2) bambino seduto sotto un grande albero, 'Sto all'ombra e mi riposo'; 3) bambino si mette il cappellino con il sole sullo sfondo, 'Metto il cappellino per proteggermi'; 4) bambino che corre sotto un sole stanco con cartello di divieto, 'Non corro sotto il sole'; 5) bambino porge un bicchiere d'acqua alla nonna seduta su una panchina, 'Aiuto i nonni e le persone anziane'; 6) bambino seduto all'ombra accanto a una finestra di un negozio, 'Cerco sempre un posto fresco'. Riquadro finale 'Con piccole attenzioni il caldo non è un problema'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-pronto-soccorso-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Pronto soccorso">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/pronto-soccorso-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: pronto soccorso. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'Pronto soccorso'. Sottotitolo 'Colora i disegni e impara cosa fare in 6 passi facili'. Sei vignette numerate: 1) bambino con una ferita al ginocchio accanto a una cassetta di pronto soccorso; 2) bambino al telefono che chiama il 112; 3) bambina che controlla coscienza e respiro di un altro bambino; 4) due bambini, uno pulisce e fascia con una garza la ferita dell'altro; 5) bambino avvolto in una coperta calda con bottiglia d'acqua; 6) ambulanza che arriva con sirena accesa. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-a-scuola-in-sicurezza-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: A scuola in sicurezza">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/a-scuola-in-sicurezza-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: a scuola in sicurezza. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'A scuola in sicurezza'. Sottotitolo 'Ricorda queste semplici regole per stare tutti al sicuro'. Sei vignette numerate: 1) tre bambini in fila in corridoio, 'Cammino in fila senza spingere'; 2) maestra con libro spiega a tre bambini, 'Ascolto la maestra e seguo le istruzioni'; 3) bambino indica un cartello 'Uscita di emergenza' su una porta, 'Conosco l'uscita di emergenza'; 4) tre bambini camminano verso il cartello 'Punto di raccolta', 'Vado al punto di raccolta'; 5) bambino su una scala con cartello di divieto, 'Non spingo e non corro'; 6) bambina aiuta un bambino seduto a terra con un cuoricino di empatia, 'Sono calmo e aiuto i compagni'. Riquadro finale con cuore e sorriso 'Insieme siamo più sicuri'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-labirinto-punto-raccolta-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Trova la strada per il punto di raccolta">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/labirinto-punto-raccolta-infanzia/scheda-completa.png"
+         alt="Scheda gioco-labirinto: trova la strada per il punto di raccolta. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Trova la strada per il punto di raccolta'. Sottotitolo 'Aiuta il bambino a raggiungere il punto di raccolta seguendo la strada giusta e evitando i pericoli'. A sinistra in alto un bambino con zainetto è il punto di partenza. Il labirinto presenta 5 pericoli marcati con una X da evitare: ascensore, fumo, pozzanghera con acqua, albero caduto con rami spezzati, transenne stradali. A destra in basso il cartello 'Punto di raccolta'. Riquadro finale con nuvoletta sorridente e cuore 'Ricorda stai calmo chiedi aiuto e vai sempre in un posto sicuro'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-aiuto-solidarieta-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Aiuto e solidarietà">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/aiuto-solidarieta-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: aiuto e solidarietà. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'Aiuto e solidarietà'. Sottotitolo 'Colora i disegni e impara cosa fare in 6 passi facili'. Sei vignette con volontari della PC (casco con triangolo e gilet con PC) che mostrano i valori del volontariato: 1) saluta gentilmente un bambino; 2) consegna una coperta a una persona anziana in un campo di accoglienza; 3) ascolta e consola un bambino con un orsetto; 4) due volontari sistemano insieme una scatola di rifornimenti; 5) volontaria comunica con sorriso a una famiglia; 6) volontario fa il segno del cuore con le mani davanti a una bandiera della PC. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-volontariato-ambiente-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: Volontariato e ambiente">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/volontariato-ambiente-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: volontariato e ambiente. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'Volontariato e ambiente'. Sottotitolo 'Colora i disegni e impara cosa fare in 6 passi facili'. Sei vignette con volontari della PC (casco con triangolo e gilet con PC) che mostrano gesti di rispetto per l'ambiente: 1) volontario raccoglie rifiuti nel prato con un sacco; 2) volontaria pianta un alberello accanto a un cartello 'Rispetta la natura'; 3) volontario fa la raccolta differenziata con tre bidoni etichettati Carta, Plastica, Vetro; 4) volontaria annaffia un fiore con un innaffiatoio; 5) due volontari ripuliscono insieme un'area con sacchi e pinza; 6) due volontari con il pollice in su mostrano il pianeta Terra che sorride. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+
+<section id="scheda-nodi-che-salvano-infanzia" class="pacchetto-scheda" aria-label="Scheda: Scheda da colorare: I nodi che salvano">
+  <main class="scheda-page scheda-immagine-wrapper">
+    <img src="/formazione/schede-stampabili/nodi-che-salvano-infanzia/scheda-completa.png"
+         alt="Scheda da colorare: i nodi che salvano. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'I nodi che salvano'. Sottotitolo 'Colora i disegni e impara cosa fare in 6 passi facili'. Sei vignette numerate che insegnano a fare un nodo semplice: 1) bambino tiene una corda fra le due mani; 2) bambino forma un anello con la corda; 3) bambino passa l'estremità libera dentro l'anello; 4) bambino tira le due estremità per stringere il nodo; 5) il nodo finito, forte e sicuro; 6) due bambini usano la corda annodata per legarsi a un albero. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
+  </main>
+</section>
+  </main>
+
+  <script>
+    // Auto-stampa se chiamato con ?autoprint=1
+    (function() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('autoprint') === '1') {
+          window.addEventListener('load', function() {
+            // Aspetta un attimo per il caricamento di font/immagini
+            setTimeout(function() { window.print(); }, 800);
+          });
+        }
+      } catch (e) {
+        /* Browser senza URLSearchParams: nessun problema, l'utente
+           può comunque cliccare il bottone Stampa */
+      }
+    })();
+  </script>
+
+</body>
+</html>

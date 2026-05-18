@@ -49,6 +49,15 @@ jobs:
         # Idempotente (mtime-based): solo articoli nuovi/modificati vengono rigenerati.
         run: python3 scripts/genera-braille.py
 
+      - name: "🖨️ Genera pacchetti HTML stampabili 1-click per fascia"
+        # Genera 4 file in static/formazione/schede-stampabili/pacchetti/ con tutte
+        # le schede di una fascia concatenate, pronte per la stampa diretta dal browser
+        # (bottone "Stampa tutto" sulla hub schede-stampabili).
+        # Fonte di verità: content/formazione/kit-scuola-<fascia>.md (la stessa usata
+        # per gli ZIP scaricabili offline). Idempotente: ricrea sempre da zero.
+        # Auto-aggiornamento: ogni push → pacchetti riflettono lo stato corrente.
+        run: python3 scripts/genera-pacchetti-schede.py
+
       - name: "🏗️ Build per Aruba"
         run: hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
 
