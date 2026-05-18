@@ -296,6 +296,68 @@ Specifiche operative complete + esempi di workflow combinati in `manuale/parte-1
 
 ---
 
+## Skill globali — invocazione obbligata col tool `Skill`
+
+🔴 **Hai ~100 skill installate in `~/.claude/skills/` dopo il cleanup conservativo del 18/05/2026.** Sono inutili se non le invochi. Quando lavori su questo repo, **prima di iniziare un task di una certa complessità (≥3 step o ≥3 tool call), fai mentalmente questo check di 10 secondi:**
+
+1. **C'è una skill che fa già questo lavoro?** Scorri la lista di skill nel system reminder.
+2. Se sì → **invocala col tool `Skill`** (non con Read+Bash). La skill ha già la procedura ottimizzata.
+3. Se no → procedi con i tool atomici (Read/Bash/Edit).
+
+Vietato dire *"so che esiste la skill X ma intanto procedo a mano"* — è esattamente il motivo per cui sono installate.
+
+### Routing rapido — task frequenti su questo repo → skill primaria
+
+| Quando l'utente chiede / il contesto è | Invoca skill | Note |
+|---|---|---|
+| Audit/scrittura di accessibility WCAG | `accessibility` (companion di `pc-accessibility-auditor`) | due livelli: skill = pattern generali, agent = check editoriale specifico del sito |
+| SEO tecnico, schema markup, AI Overviews | `seo` · `seo-audit` · `schema` · `ai-seo` | usa quella che matcha il taglio (audit completo / strutturato / GEO) |
+| Script Python (creare/modificare) | `python-patterns` poi `python-testing` | PEP 8, type hints, pytest |
+| Test e TDD | `tdd-workflow` · `verification-loop` · `eval-harness` | per nuove feature + bugfix |
+| Decisioni ambigue / multipli approcci validi | `council` | 4 voci adversariali |
+| Output ad alto rischio (lega/medicina/sicurezza) | `santa-method` | 2 review agent indipendenti |
+| Operazioni git non banali | `git-workflow` | rebase, conflict, conventional commits |
+| Issue/PR/CI GitHub | `github-ops` | gh CLI, triage, release |
+| Lookup API/framework | `documentation-lookup` (Context7) | invece di indovinare l'API |
+| Ricerca su web | `search-first` · `deep-research` · `exa-search` · `iterative-retrieval` | search-first per check pre-coding; deep-research per indagini estese |
+| Pre-push validation completa | `production-audit` · `pc-deploy-validator` | usa entrambi per pre-release importanti |
+| Sicurezza | `security-scan` · `security-review` · `ecc-security-review` | scan config + review modifiche + checklist |
+| Refactor / pulizia codice cambiato | `simplify` (built-in) | review dei diff |
+| Audit cross-stack del repo (asset, dipendenze) | `repo-scan` · `production-audit` | |
+| Modifiche a settings.json / hook / permessi | `update-config` (built-in) · `hookify-rules` · `fewer-permission-prompts` | |
+| Pianificare un task multi-step / multi-PR | `blueprint` · `plan-orchestrate` | |
+| Catturare una decisione architetturale presa | `architecture-decision-records` | scrivi ADR |
+| Distillare regole ricorrenti in `.claude/rules/` | `rules-distill` | |
+| Onboarding di nuovo collaboratore / contributor | `codebase-onboarding` · `code-tour` | |
+| Bug "il pulsante non funziona" dopo refactor | `click-path-audit` | traccia state change UI |
+| Errori da gestire bene in script | `error-handling` | typed errors, retries, circuit breakers |
+| Parsing testo strutturato | `regex-vs-llm-structured-text` | aiuta a scegliere regex vs LLM |
+| Audit budget contesto / token | `context-budget` · `token-budget-advisor` | quando context cresce o utente chiede short/long |
+| Recurring task / poll status | `loop` · `schedule` (built-in) | |
+| Setup ambiente Docker (raro qui) | `docker-patterns` | |
+| Browser testing UI | `browser-qa` · `e2e-testing` | post-deploy visual |
+| Workspace GSuite / Drive | `google-workspace-ops` | |
+| Capire l'ecosistema ECC stesso | `ecc-guide` | quando l'utente chiede "che skill ho?" o simili |
+| Audit/triage/eval di altre skill/agent | `skill-stocktake` · `skill-scout` · `skill-comply` · `agent-sort` · `agent-architecture-audit` | meta-work sui sub-agent del sistema |
+| Imparare dal lavoro fatto (extract instinct) | `continuous-learning-v2` | dopo task non-banali |
+
+### Cosa NON fare
+
+- ❌ Re-implementare a mano in Bash/Read/Edit ciò che una skill copre già con procedura migliore.
+- ❌ Citare il nome della skill all'utente ("la skill X farebbe questo") **senza invocarla**: o la usi o non la menzioni.
+- ❌ Invocare skill marketing (cold-email, page-cro, churn-prevention, ecc.) sui contenuti AGID del sito — sono globali ma fuori scope PA (regola memoria pre-esistente, vedi `feedback_skill_cleanup_conservativo`).
+- ❌ Inserire la skill nel routing in modo ostentato quando il task è banale (1-2 tool call, un fix mirato): per quelli i tool atomici bastano.
+
+### Quando agent custom + skill collaborano
+
+I 15 agent `pc-*` sono **persone con competenza editoriale del sito**; le skill globali sono **pattern tecnici trasversali**. Convivono — quando rilevanti, invocali in sequenza:
+
+- Revisione articolo: `pc-article-reviewer` (custom, AGID + frontmatter) → `pc-photo-caption-verifier` se ci sono foto → `accessibility` (skill, WCAG cross-cutting) → `seo-audit` (skill, SEO finale).
+- Pre-push importante: `pc-deploy-validator` (custom, regole repo) → `production-audit` (skill, readiness generale) → `security-scan` (skill, config).
+- Nuovo script Python: `search-first` (skill, esiste già qualcosa?) → `python-patterns` (skill, idioms) → `python-testing` (skill, test) → eventuale `pc-deploy-validator` se tocca pipeline.
+
+---
+
 ## Project overview
 
 Static website for the **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, built with Hugo using the custom theme `flavour-pcgenzano` (Bootstrap Italia 2.x).
