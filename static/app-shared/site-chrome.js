@@ -188,12 +188,12 @@
               '<p style="color:rgba(255,255,255,0.85);"><strong>Sede:</strong> Via Sicilia, 13-15 - 00045 Genzano Di Roma (RM)<br><strong>Telefono:</strong> <a href="tel:+39069362600" class="text-white fw-bold">+39 06 9362600</a><br><strong>Email:</strong> <a href="mailto:segreteria@protezionecivilegenzano.it" class="text-white fw-bold">segreteria@protezionecivilegenzano.it</a></p>' +
               '<p class="small" style="color:rgba(255,255,255,0.75);">14&deg; C.O.I. Prov. di Roma &mdash; Registro Regionale P.C. n.184<br>Iscritta al RUNTS sez. &laquo;Altri Enti del Terzo Settore&raquo; con determina n. G14230 del 28/10/2024<br>Aderente al Coordinamento FEPIVOL</p>' +
               '<div class="loghi-istituzionali d-flex align-items-center gap-3 flex-wrap mt-3" aria-label="Loghi istituzionali di appartenenza">' +
-                '<img src="' + SITE_URL + '/images/logo-snpc-volontariato.png" alt="Servizio Nazionale Protezione Civile — Volontariato" width="48" height="56" style="background:#fff; border-radius:4px; padding:2px;">' +
-                '<img src="' + SITE_URL + '/images/logo-pc-lazio.png" alt="Protezione Civile Regione Lazio" width="52" height="52" style="background:#fff; border-radius:50%; padding:2px;">' +
-                '<img src="' + SITE_URL + '/images/logo-fepivol.png" alt="Coordinamento FE.PI.VOL. — Federazione Pronto Intervento Volontariato ODV" width="52" height="52" style="background:#fff; border-radius:50%; padding:2px;">' +
+                '<img src="' + SITE_URL + '/images/logo-snpc-volontariato.png" alt="Servizio Nazionale Protezione Civile — Volontariato" width="96" height="112" style="background:#fff; border-radius:6px; padding:3px;">' +
+                '<img src="' + SITE_URL + '/images/logo-pc-lazio.png" alt="Protezione Civile Regione Lazio" width="104" height="104" style="background:#fff; border-radius:50%; padding:3px;">' +
+                '<img src="' + SITE_URL + '/images/logo-fepivol.png" alt="Coordinamento FE.PI.VOL. — Federazione Pronto Intervento Volontariato ODV" width="104" height="104" style="background:#fff; border-radius:50%; padding:3px;">' +
               '</div>' +
               '<div class="esc-quality-label d-flex align-items-center gap-2 mt-3">' +
-                '<img src="' + SITE_URL + '/images/quality-label-esc.png" alt="Quality Label European Solidarity Corps" width="56" height="56" style="background:#fff; border-radius:50%; padding:2px; flex-shrink:0;">' +
+                '<img src="' + SITE_URL + '/images/quality-label-esc.png" alt="Quality Label European Solidarity Corps" width="112" height="112" style="background:#fff; border-radius:50%; padding:3px; flex-shrink:0;">' +
                 '<span class="small" style="color:rgba(255,255,255,0.85); line-height:1.3;">Quality Label<br>European Solidarity Corps<br><span style="font-family: monospace; font-size: 0.85em;">Codice: E10435833</span></span>' +
               '</div>' +
             '</div>' +
