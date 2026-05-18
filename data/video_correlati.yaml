@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 370 / Video unici usati: 280 /
-# Link totali: 1060 (max 5 per pagina,
+# Pagine coperte: 376 / Video unici usati: 282 /
+# Link totali: 1073 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -17,7 +17,7 @@ canali:
   dpc-gov:
     nome: Dipartimento della Protezione Civile (PCM)
     url: https://www.youtube.com/@DPCgov/videos
-    video_count: 376
+    video_count: 382
   io-non-rischio:
     nome: Io non rischio
     url: https://www.youtube.com/@io_non_rischio/videos
@@ -800,8 +800,7 @@ pagine:
       overlap:
       - emergenza
       - europea
-      - mare
-      score: 4.6
+      score: 3.6
       titolo: 'JFWEDROP 2015: esercitazione europea sulle emergenze in mare'
       url: https://youtu.be/gA5H_FuzG-c
   comunicazioni/2026-02-21-carnevale-sicurezza-eventi-assembramenti:
@@ -3236,6 +3235,32 @@ pagine:
       score: 4.8
       titolo: 'Glossario in LIS: COC - Centro Operativo Comunale'
       url: https://youtu.be/Q9JaOMzqd1w
+  comunicazioni/2026-05-15-giro-italia-formia-blockhaus-sicurezza:
+    title: 'Giro d''Italia 2026 a Formia: il nostro Gruppo a supporto del dispositivo di sicurezza'
+    url: /comunicazioni/2026-05-15-giro-italia-formia-blockhaus-sicurezza/
+    video:
+    - anchored:
+      - supporto
+      canale: abili-a-proteggere
+      id: 6cdj_38nH9k
+      is_lis: false
+      overlap:
+      - comunicazione
+      - emergenza
+      - supporto
+      score: 2.2
+      titolo: '#NienteDiSpeciale: Intervista a Mario Nodari, resp. comunicazione Ass. Supporto Nazionale Emergenze​'
+      url: https://youtu.be/6cdj_38nH9k
+    - anchored:
+      - partenza
+      canale: dpc-gov
+      id: gYvw6oz4o3M
+      is_lis: false
+      overlap:
+      - partenza
+      score: 2.0
+      titolo: La partenza del team italiano – Ciclone Mozambico
+      url: https://youtu.be/gYvw6oz4o3M
   comunicazioni/2026-05-15-iso-22322-public-warning-it-alert:
     title: 'Come dovrebbe funzionare un sistema di allerta pubblica: ISO 22322 e IT-alert'
     url: /comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/
@@ -3252,6 +3277,71 @@ pagine:
       score: 4.6
       titolo: 'IT-alert: il sistema di allarme pubblico'
       url: https://youtu.be/P1LpgdnXPj8
+  comunicazioni/2026-05-16-salone-libro-torino-dpc:
+    title: 'Salone del Libro 2026: la Protezione Civile a Torino con \"Infiniti racconti, una sola storia\'
+    url: /comunicazioni/2026-05-16-salone-libro-torino-dpc/
+    video:
+    - anchored:
+      - podcast
+      canale: dpc-gov
+      id: NukrIN8jnE4
+      is_lis: false
+      overlap:
+      - clima
+      - dpc
+      - filippo
+      - parliamo
+      - podcast
+      - thiery
+      score: 7.0
+      titolo: La Protezione Civile racconta il podcast DPC - Dove Parliamo di Clima con Filippo Thiery
+      url: https://youtu.be/NukrIN8jnE4
+    - anchored:
+      - mostra
+      canale: dpc-gov
+      id: pgHPsSGI1HY
+      is_lis: false
+      overlap:
+      - allestimento
+      - dell
+      - mostra
+      - terremoto
+      score: 3.4
+      titolo: Il time-lapse dell'allestimento della mostra "Terremoti d'Italia" – EFDRR 2018
+      url: https://youtu.be/pgHPsSGI1HY
+    - anchored:
+      - mostra
+      canale: dpc-gov
+      id: 7RLK3dWVmdI
+      is_lis: false
+      overlap:
+      - allestimento
+      - mostra
+      - terremoto
+      score: 3.2
+      titolo: L'allestimento della mostra "Terremoti d'Italia" al Forum europeo – EFDRR 2018
+      url: https://youtu.be/7RLK3dWVmdI
+    - anchored:
+      - storia
+      canale: io-non-rischio
+      id: Pz5Dky_rvFI
+      is_lis: false
+      overlap:
+      - storia
+      score: 3.0
+      titolo: 'Vent''anni anni dallo tsunami di Stromboli: storia o attualità?'
+      url: https://youtu.be/Pz5Dky_rvFI
+    - anchored:
+      - cultura
+      canale: abili-a-proteggere
+      id: s7NyKK8EXFQ
+      is_lis: false
+      overlap:
+      - cultura
+      - prevenzione
+      score: 2.4
+      titolo: La cultura della prevenzione -  Titti Postiglione (Vice Capo del Dipartimento di Protezione Civile)
+      url: https://youtu.be/s7NyKK8EXFQ
   comunicazioni/2026-05-17-emilia-romagna-2023-alluvione-maggio:
     title: 'Alluvione dell''Emilia-Romagna, maggio 2023: il fango che ha cambiato la cultura del rischio in pianura'
     url: /comunicazioni/2026-05-17-emilia-romagna-2023-alluvione-maggio/
@@ -3811,6 +3901,20 @@ pagine:
       score: 2.6
       titolo: '#NienteDiSpeciale: Intervista a Mario Nodari, resp. comunicazione Ass. Supporto Nazionale Emergenze​'
       url: https://youtu.be/6cdj_38nH9k
+  comunicazioni/2026-05-30-infiorata-genzano-2026:
+    title: 'Infiorata di Genzano 2026: cosa sapere prima di venire'
+    url: /comunicazioni/2026-05-30-infiorata-genzano-2026/
+    video:
+    - anchored:
+      - italo
+      canale: dpc-gov
+      id: K2Il_Qdnrmg
+      is_lis: false
+      overlap:
+      - italo
+      score: 2.0
+      titolo: 'ODESCALCHI 2016: esercitazione transfrontaliera italo-svizzera'
+      url: https://youtu.be/K2Il_Qdnrmg
   comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi:
     title: '31 maggio: Giornata senza tabacco, mozziconi e rischio incendi'
     url: /comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi/
@@ -8786,9 +8890,10 @@ pagine:
       id: HqPjxdIZct4
       is_lis: false
       overlap:
+      - eventi
       - iniziative
       - terza
-      score: 3.0
+      score: 3.2
       titolo: Eventi e iniziative della terza edizione – Settimana Nazionale della Protezione Civile 2021
       url: https://youtu.be/HqPjxdIZct4
     - anchored:
@@ -10040,6 +10145,47 @@ pagine:
       score: 2.0
       titolo: 'Stromboli: l''attività vulcanica di luglio e agosto 2019 e l''impegno del sistema di protezione civile'
       url: https://youtu.be/2LkIejoezIM
+  esercitazioni:
+    title: Addestramento e buone pratiche
+    url: /esercitazioni/
+    video:
+    - anchored:
+      - buone
+      - pratiche
+      canale: dpc-gov
+      id: MzVgNeBjJSQ
+      is_lis: false
+      overlap:
+      - boschivo
+      - buone
+      - pratiche
+      score: 5.4
+      titolo: 'Incendi boschivi: le buone pratiche'
+      url: https://youtu.be/MzVgNeBjJSQ
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - esercitazione
+      - evacuazione
+      - procedure
+      score: 2.4
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      - evacuazione
+      score: 2.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
   facile-da-leggere:
     title: Facile da leggere
     url: /facile-da-leggere/
@@ -10729,18 +10875,6 @@ pagine:
       score: 2.2
       titolo: Io non rischio scuola - La presentazione di Roberto Giarola
       url: https://youtu.be/MX2yO6KHvns
-    - anchored:
-      - pratiche
-      canale: dpc-gov
-      id: MzVgNeBjJSQ
-      is_lis: false
-      overlap:
-      - boschivo
-      - incendio
-      - pratiche
-      score: 2.0
-      titolo: 'Incendi boschivi: le buone pratiche'
-      url: https://youtu.be/MzVgNeBjJSQ
   formazione/kit-scuola-secondaria-primo-grado:
     title: Kit Didattico — Scuola Secondaria di Primo Grado
     url: /formazione/kit-scuola-secondaria-primo-grado/
@@ -12671,6 +12805,45 @@ pagine:
       score: 2.4
       titolo: 'Glossario in LIS: Aree di attesa'
       url: https://youtu.be/-i75MR2EFGQ
+  risorse-pronte:
+    title: Materiali pronti da scaricare
+    url: /risorse-pronte/
+    video:
+    - anchored:
+      - podcast
+      canale: dpc-gov
+      id: NukrIN8jnE4
+      is_lis: false
+      overlap:
+      - dpc
+      - podcast
+      score: 3.0
+      titolo: La Protezione Civile racconta il podcast DPC - Dove Parliamo di Clima con Filippo Thiery
+      url: https://youtu.be/NukrIN8jnE4
+  schede-1-minuto:
+    title: Un minuto per proteggerti
+    url: /schede-1-minuto/
+    video:
+    - anchored:
+      - sede
+      canale: dpc-gov
+      id: 9agnufQ831k
+      is_lis: false
+      overlap:
+      - sede
+      score: 2.0
+      titolo: La visita di Conte alla sede operativa del Dpc – Benemerenze di protezione civile
+      url: https://youtu.be/9agnufQ831k
+    - anchored:
+      - sede
+      canale: dpc-gov
+      id: BooLyjLFbSM
+      is_lis: false
+      overlap:
+      - sede
+      score: 2.0
+      titolo: Mattarella visita la sede operativa del Dipartimento – Medaglia d'oro al Valore Civile
+      url: https://youtu.be/BooLyjLFbSM
   standard-iso:
     title: Standard ISO per la Protezione Civile
     url: /standard-iso/
@@ -13073,22 +13246,9 @@ pagine:
       titolo: Test comunicazione radio con veliero Amerigo Vespucci
       url: https://youtu.be/RlwTnpacmJI
   storia:
-    title: La storia del rischio nei Castelli Romani
+    title: Storia del rischio nei Castelli Romani — Genzano di Roma
     url: /storia/
     video:
-    - anchored:
-      - conoscere
-      - vulcanica
-      canale: io-non-rischio
-      id: esAjpZQ2C9E
-      is_lis: false
-      overlap:
-      - conoscere
-      - terremoto
-      - vulcanica
-      score: 3.6
-      titolo: Conoscere la caldera - Cosa fare in caso di terremoto, gas vulcanici ed eruzione vulcanica
-      url: https://youtu.be/esAjpZQ2C9E
     - anchored:
       - storia
       canale: io-non-rischio
@@ -13101,15 +13261,36 @@ pagine:
       url: https://youtu.be/Pz5Dky_rvFI
     - anchored:
       - vulcanica
+      canale: io-non-rischio
+      id: esAjpZQ2C9E
+      is_lis: false
+      overlap:
+      - terremoto
+      - vulcanica
+      score: 2.4
+      titolo: Conoscere la caldera - Cosa fare in caso di terremoto, gas vulcanici ed eruzione vulcanica
+      url: https://youtu.be/esAjpZQ2C9E
+    - anchored:
+      - vulcanica
       canale: dpc-gov
       id: 2LkIejoezIM
       is_lis: false
       overlap:
       - sistema
       - vulcanica
-      score: 2.4
+      score: 2.2
       titolo: 'Stromboli: l''attività vulcanica di luglio e agosto 2019 e l''impegno del sistema di protezione civile'
       url: https://youtu.be/2LkIejoezIM
+    - anchored:
+      - sismica
+      canale: abili-a-proteggere
+      id: ANy5seKbNAQ
+      is_lis: true
+      overlap:
+      - sismica
+      score: 2.0
+      titolo: 'Glossario in LIS: Classificazione sismica'
+      url: https://youtu.be/ANy5seKbNAQ
     - anchored:
       - vulcanica
       canale: abili-a-proteggere
@@ -13120,16 +13301,6 @@ pagine:
       score: 2.0
       titolo: 'Glossario in LIS: Eruzione vulcanica'
       url: https://youtu.be/kqLsEnanSKk
-    - anchored:
-      - futuro
-      canale: dpc-gov
-      id: -Q8ynNpWcQQ
-      is_lis: false
-      overlap:
-      - futuro
-      score: 2.0
-      titolo: 'La scienza nel futuro della protezione civile: intervista a Mauro Dolce'
-      url: https://youtu.be/-Q8ynNpWcQQ
   strumenti:
     title: Strumenti di consultazione in tempo reale
     url: /strumenti/
