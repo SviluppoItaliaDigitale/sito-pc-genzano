@@ -18,9 +18,12 @@ Redirect 301 /cerca.html /cerca/
 Redirect 301 /sitiutili.html /siti-utili/
 Redirect 301 /dichiarazione-accessibilita.html /accessibilita/
 Redirect 301 /areerischio.html /rischi-prevenzione/
+Redirect 301 /rischi.html /rischi-prevenzione/
 Redirect 301 /rischio-sismico.html /rischi-prevenzione/rischio-sismico/
 Redirect 301 /rischio-idrogeologico.html /rischi-prevenzione/rischio-idrogeologico/
 Redirect 301 /rischio-incendio.html /rischi-prevenzione/rischio-incendio/
+Redirect 301 /vulcano.html /rischi-prevenzione/rischio-vulcanico/
+Redirect 301 /sanitario.html /numeri-utili/
 Redirect 301 /cosafacciamo.html /chi-siamo/
 Redirect 301 /simulatore.html /
 
@@ -33,6 +36,16 @@ Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026.html /comunicazion
 Redirect 301 /assets/ /
 Redirect 301 /cache/ /
 Redirect 301 /immagini_web/ /
+
+# 410 Gone esplicito per i .php legacy del vecchio pannello admin Joomla
+# DEVE venire PRIMA del Redirect 301 della cartella /piano_protezione_civile/
+# altrimenti il 301 scavalca e Google segue alla destinazione, ottenendo
+# "soft 404" perché la query string (file=...&index=N) non viene preservata
+# dal 301 della cartella. Il 410 dice esplicitamente a Google "andato per
+# sempre, non re-crawlare". Report Search Console maggio 2026 mostrava
+# 7+ URL elimina.php?file=...&index=N classificati come Soft 404.
+RedirectMatch 410 ^/piano_protezione_civile/(elimina|aree|funzioni|scenari|genera_pdf|salva|modifica|carica)\.php(\?.*)?$
+
 Redirect 301 /piano_protezione_civile/ /piano-emergenza/
 Redirect 301 /sito_pc/ /
 Redirect 301 /sitovecchio/ /
