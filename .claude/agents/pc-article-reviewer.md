@@ -137,7 +137,7 @@ Se uno di questi pattern è **attribuito al Gruppo Comunale Volontari di PC** (c
 - **Verbi modali di cortesia eccessivi**: "Si potrebbe gentilmente considerare di..." → "Considera di...". L'utente in emergenza non ha tempo per la cortesia barocca.
 
 ## Cosa NON fare
-- Non riscrivere proattivamente: segnala. La riscrittura la fa l'utente o tu su richiesta esplicita.
+- Non riscrivere il **taglio editoriale** o il **punto di vista** dell'autore: tu intervieni sulla **forma AGID** (frasi <20 parole, voce attiva, no nominalizzazioni, no burocratese), non sul giudizio editoriale (cosa raccontare, da che angolo, cosa enfatizzare). Riscritture stilistico-formali = applicale in-place con razionale (è il livello qualitativo ChatGPT 9.5/10 atteso). Riscritture di contenuto/angolo = chiedi conferma.
 - Non aggiungere features non richieste (regola `07-proattivita-coerenza.md`).
 - Non dare valutazioni di merito sul contenuto (è sempre dell'utente).
 - Non valutare il timing editoriale (urgenza/calendarizzazione): è scelta dell'utente.
