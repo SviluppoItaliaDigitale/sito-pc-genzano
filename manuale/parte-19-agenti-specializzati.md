@@ -3,20 +3,23 @@ _[Indice manuale](README.md)_
 # Parte 19 — Agenti specializzati Claude Code (maggio 2026)
 
 A maggio 2026 sono stati installati nel repo **agenti specializzati**
-in `.claude/agents/` (**tredici al 15 maggio 2026**). Sono profili professionali
+in `.claude/agents/` (**quindici al 18 maggio 2026**). Sono profili professionali
 virtuali con cui Claude Code ti aiuta nei compiti ricorrenti del Gruppo,
 ognuno con un'expertise mirata. La progressione:
 
 - **8 agent dell'apertura** (maggio 2026): redazione AGID, art direction, gestione issue, deploy engineering, comunicazione di crisi, QA schede stampabili, audit di sistema, **gate visivo foto** (aggiunto il 15 maggio dopo l'incidente "Giro d'Italia 2026 a Formia": caption fabbricate dai testi di terzi invece che dalle foto reali).
 - **5 agent professionisti aggiuntivi** (15 maggio 2026, in risposta alla richiesta utente *"assumi le migliori professionalità per essere perfetti"*): accessibility auditor IAAP CPACC, content strategist editoriale (Repubblica.it/ANSA), glottologa italiano L2 (Univ. Stranieri Siena), SEO editor (La Stampa/Sole 24 Ore Digital), avvocato amministrativista (Camera Deputati). Ognuno con CV credibile e responsabilità chiara nel ciclo editoriale.
+- **2 agent aggiunti il 16-18 maggio 2026**: `pc-photo-caption-verifier` (gate visivo Read multimodale foto, codificato dopo l'incidente Formia), `pc-notebooklm-publisher` (publishing engineer dei materiali multimediali NotebookLM su `/risorse-pronte/`).
 
 **La parte importante:** non devi ricordare nessun nome tecnico. **Scrivi a
 Claude in italiano normale**, dicendo cosa vuoi fare, e Claude attiva da solo
 l'agente giusto.
 
+> ⚠️ **Da leggere insieme a questa Parte**: la **[Parte 31](parte-31-skill-globali-invocazione.md)** sulle **skill globali Claude Code** invocate col tool `Skill`. Gli agent `pc-*` e le ~100 skill globali sono **complementari**: gli agent sono profili professionali editoriali specifici del sito, le skill sono pattern tecnici trasversali (accessibilità, SEO, audit, ricerca, ecc.). Spesso vanno invocati in sequenza (es. revisione articolo: `pc-article-reviewer` → `pc-photo-caption-verifier` → skill `accessibility` → skill `seo-audit`).
+
 ---
 
-## 19.1 I tredici agenti e quando si attivano
+## 19.1 I quindici agenti e quando si attivano
 
 ### 1. Caporedattore (revisione articoli) — 🔴 GATE OBBLIGATO
 
