@@ -268,6 +268,35 @@ I contenuti operativi delle fonti (struttura messaggi, hashtag, accessibilità, 
 
 ---
 
+### 13.10 — Pubblicazione assistita delle bozze (human-in-the-loop)
+
+Da maggio 2026 il repo ha uno script che apre in sequenza i 4 canali ufficiali del Gruppo (X, Facebook, Instagram, Telegram) e mette il testo della bozza generata da Gemini negli **appunti di sistema**, in modo che il volontario debba fare solo `Ctrl+V` nel campo di compose e poi cliccare "Pubblica".
+
+**Comando:** dal menu `bash ~/gestione-sito.sh` voce **24) Pubblica bozze social di un articolo**, oppure direttamente:
+
+```bash
+bash scripts/pubblica-social-assistito.sh <slug-articolo>
+```
+
+**Cosa fa lo script:**
+1. Trova la cartella `social-bozze/AAAA/MM/<slug>/` (generata dal workflow `genera-social-bozze.yml` o dallo script locale `genera-social.sh`).
+2. Verifica la presenza dei 4 file `x.txt`, `facebook.txt`, `instagram.txt`, `telegram.txt` + le immagini Instagram (`instagram-post*.jpg`, `instagram-story.jpg`).
+3. Apre 4 tab di Chrome:
+   - `x.com/compose/post`
+   - pagina Facebook del Gruppo
+   - profilo Instagram del Gruppo
+   - canale Telegram del Gruppo su `web.telegram.org`
+4. Apre la cartella `social-bozze/.../<slug>/` nel file manager (per il drag delle immagini su Instagram).
+5. Guida il volontario in 4 step (1/4 X → 2/4 Facebook → 3/4 Instagram → 4/4 Telegram). Per ogni step copia il testo della bozza negli appunti e attende `INVIO` prima di passare al successivo.
+
+**Cosa lo script NON fa:** non clicca mai "Pubblica" in autonomia. Il click di conferma resta sempre del volontario. Coerente con la `social-media-policy/` pubblica e con le norme ISO 22329 + CWA CEN/CENELEC + AGID sulla supervisione umana dei post istituzionali di Protezione Civile.
+
+**Dipendenze:** `google-chrome` (già installato), `xdg-open`, `xclip` (su X11) o `wl-copy` (su Wayland), entrambi standard su Ubuntu.
+
+**Livello B (in standby):** esiste anche uno script più aggressivo (`scripts/pubblica-social-livello-b.sh`) che usa `opencli` per **compilare automaticamente** i campi testo e caricare le immagini, fermandosi prima del click "Pubblica". È pronto ma **non attivo** (guard `[STANDBY]` in cima al file): è fragile perché i selettori CSS di X/Facebook/Instagram cambiano ogni 3-6 mesi e quando cambiano lo script si rompe. Da attivare solo se l'esigenza di velocità giustifica la manutenzione periodica dei selettori. Per dettagli sul tool `opencli` sottostante: vedi Parte 14.12.
+
+---
+
 _[Indice manuale](README.md)_
 
 [← Parte 12 — Comunicati stampa (tempo ordinario e tempo emergenziale)](parte-12-comunicati-stampa-tempo-ordinario-e-tempo-emergenziale.md) · [↑ Indice](README.md) · [Parte 14 — Configurazione ambiente di sviluppo (Claude Code) →](parte-14-configurazione-ambiente-di-sviluppo-claude-code.md)
