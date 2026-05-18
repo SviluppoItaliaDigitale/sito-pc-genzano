@@ -328,6 +328,44 @@ Se l'estensione non è connessa: aprire `chrome://extensions/`, verificare che "
 
 **Note di sicurezza:** opencli ha permessi browser molto ampi (`debugger`, `tabs`, `cookies`, `<all_urls>`); è di fatto un sostituto programmabile dell'utente nel browser. Tienilo aggiornato e disattivalo se sospetti accessi non autorizzati al PC. Il daemon gira solo in locale (porta 19825 in loopback), nessun servizio cloud.
 
+### 14.13 — open-design (generatore locale di slide, PDF, mockup)
+
+Da maggio 2026 è installato sul PC desktop **open-design** (`nexu-io/open-design`), un generatore locale open-source (Apache-2.0) per slide deck, pagine editoriali, prototipi UI, immagini e video. Si integra direttamente con Claude Code (e con altri agenti CLI: Codex, Cursor, Gemini, Copilot, Hermes, Kimi). 19 skill + 71 design system "brand-grade". Esporta in HTML / PDF / PPTX / MP4 / ZIP / Markdown.
+
+**Posizionamento sul nostro repo:**
+
+- **Non sostituisce Hugo** per il sito web istituzionale. Il sito resta su Hugo + Bootstrap Italia.
+- **Strumento complementare** per materiale che oggi facciamo manualmente con Canva, PowerPoint o LibreOffice Impress:
+  - slide deck per **formazione volontari** (corso base, esercitazioni, kit calamità);
+  - **brochure stampabili** per eventi pubblici (open day, giornata europea della PC);
+  - presentazioni per le **scuole** in alternativa o affiancamento alle schede stampabili HTML del kit calamità bambini;
+  - prototipi di pagine prima di portarle in Hugo.
+
+**Dove è installato:** clone Git in `~/open-design/` (≈320 MB + node_modules dopo `pnpm install`). Repo originale: <https://github.com/nexu-io/open-design>.
+
+**Avvio quando serve (NON è un daemon sempre attivo):**
+
+```bash
+cd ~/open-design
+pnpm tools-dev run web          # avvia la UI web in primo piano
+# in alternativa:
+pnpm tools-dev start web        # daemon in background
+pnpm tools-dev logs             # vede cosa fa il daemon
+pnpm tools-dev stop             # spegne il daemon
+```
+
+L'app si apre su `http://localhost:<porta>` (la porta viene stampata in console). Da lì si crea un progetto, si seleziona uno dei 71 design system, si scrive il brief (in linguaggio naturale) e si esporta il risultato nel formato voluto.
+
+**A cosa NON deve essere usato (vincoli):**
+
+- Mai per generare contenuti che andranno **sul sito web** senza passare attraverso il flusso editoriale Hugo + Bootstrap Italia: l'identità visiva del sito è già definita e non si tocca dai generatori esterni.
+- Mai per produrre **bozze AGID** o **comunicati stampa**: quelli restano lavoro testuale di Claude Code con `pc-article-reviewer`.
+- I PDF/PPTX prodotti vanno comunque riletti da una persona prima di stamparli o presentarli — open-design è generativo e può inventare dati o numeri.
+
+**Aggiornamento:** `cd ~/open-design && git pull && corepack pnpm install`. La release v0.7.0 è del 13 maggio 2026; il repo ha 45k stelle ed è molto attivo (commit quotidiani).
+
+**Note di sicurezza:** open-design gira **solo in locale**, niente upload cloud. Le skill (in `tools/skills/`) sono codice JavaScript/TypeScript leggibile prima dell'uso. I design system sono dataset di token CSS, non eseguibili. Il pacchetto Apache-2.0 è verificabile su GitHub.
+
 ---
 
 ## Appendici
