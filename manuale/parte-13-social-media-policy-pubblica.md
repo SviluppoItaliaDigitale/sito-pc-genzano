@@ -268,32 +268,33 @@ I contenuti operativi delle fonti (struttura messaggi, hashtag, accessibilità, 
 
 ---
 
-### 13.10 — Pubblicazione assistita delle bozze (human-in-the-loop)
+### 13.10 — Pubblicazione assistita delle bozze (lo script che ti aiuta sui social)
 
-Da maggio 2026 il repo ha uno script che apre in sequenza i 4 canali ufficiali del Gruppo (X, Facebook, Instagram, Telegram) e mette il testo della bozza generata da Gemini negli **appunti di sistema**, in modo che il volontario debba fare solo `Ctrl+V` nel campo di compose e poi cliccare "Pubblica".
+**A cosa serve.** Quando pubblichi un nuovo articolo sul sito, lo script `genera-social-bozze.yml` produce in automatico 4 bozze (X, Facebook, Instagram, Telegram) e le mette in `social-bozze/AAAA/MM/<slug>/`. Fin qui è automatico. Poi però devi pubblicare a mano sui 4 canali, e ogni volta fai gli stessi gesti: copia, incolla, carica le foto, premi "Pubblica". Quattro volte.
 
-**Comando:** dal menu `bash ~/gestione-sito.sh` voce **24) Pubblica bozze social di un articolo**, oppure direttamente:
+Da maggio 2026 c'è uno script che ti accompagna in questi gesti: ti apre i 4 canali, ti mette il testo della bozza giusta negli appunti e ti dice cosa fare in ogni step. Tu fai solo `Ctrl+V` e premi "Pubblica".
+
+**Come si lancia.** Apri il menu con `bash ~/gestione-sito.sh` e scegli la **voce 24**. Ti chiede lo slug dell'articolo (es. `2026-05-18-titolo-articolo`) e parte. In alternativa da terminale:
 
 ```bash
-bash scripts/pubblica-social-assistito.sh <slug-articolo>
+bash scripts/pubblica-social-assistito.sh 2026-05-18-titolo-articolo
 ```
 
-**Cosa fa lo script:**
-1. Trova la cartella `social-bozze/AAAA/MM/<slug>/` (generata dal workflow `genera-social-bozze.yml` o dallo script locale `genera-social.sh`).
-2. Verifica la presenza dei 4 file `x.txt`, `facebook.txt`, `instagram.txt`, `telegram.txt` + le immagini Instagram (`instagram-post*.jpg`, `instagram-story.jpg`).
-3. Apre 4 tab di Chrome:
-   - `x.com/compose/post`
-   - pagina Facebook del Gruppo
-   - profilo Instagram del Gruppo
-   - canale Telegram del Gruppo su `web.telegram.org`
-4. Apre la cartella `social-bozze/.../<slug>/` nel file manager (per il drag delle immagini su Instagram).
-5. Guida il volontario in 4 step (1/4 X → 2/4 Facebook → 3/4 Instagram → 4/4 Telegram). Per ogni step copia il testo della bozza negli appunti e attende `INVIO` prima di passare al successivo.
+**Cosa succede in pratica.** Ti si aprono in fila:
 
-**Cosa lo script NON fa:** non clicca mai "Pubblica" in autonomia. Il click di conferma resta sempre del volontario. Coerente con la `social-media-policy/` pubblica e con le norme ISO 22329 + CWA CEN/CENELEC + AGID sulla supervisione umana dei post istituzionali di Protezione Civile.
+- una tab Chrome sulla pagina di scrittura post di X (Twitter);
+- una tab sulla pagina Facebook del Gruppo;
+- una tab sul profilo Instagram del Gruppo;
+- una tab sul canale Telegram del Gruppo (`web.telegram.org`);
+- una finestra del file manager sulla cartella delle immagini (utile per trascinare le foto su Instagram).
 
-**Dipendenze:** `google-chrome` (già installato), `xdg-open`, `xclip` (su X11) o `wl-copy` (su Wayland), entrambi standard su Ubuntu.
+Poi parte la sequenza guidata. Lo script ti dice: *"Step 1 di 4: X. Il testo è negli appunti. Vai sulla tab X, Ctrl+V, premi Pubblica. Quando hai finito premi INVIO per passare al prossimo."* E così per le 4 piattaforme.
 
-**Livello B (in standby):** esiste anche uno script più aggressivo (`scripts/pubblica-social-livello-b.sh`) che usa `opencli` per **compilare automaticamente** i campi testo e caricare le immagini, fermandosi prima del click "Pubblica". È pronto ma **non attivo** (guard `[STANDBY]` in cima al file): è fragile perché i selettori CSS di X/Facebook/Instagram cambiano ogni 3-6 mesi e quando cambiano lo script si rompe. Da attivare solo se l'esigenza di velocità giustifica la manutenzione periodica dei selettori. Per dettagli sul tool `opencli` sottostante: vedi Parte 14.12.
+**Quello che lo script non fa.** Non preme mai "Pubblica" al posto tuo. Quel click resta sempre tuo. È una scelta: gli account social del Gruppo sono istituzionali, e un post sbagliato pubblicato in automatico non si recupera. Vedi i principi più sopra nella stessa Parte 13.
+
+**Se qualcosa non funziona.** Lo script ha bisogno di tre programmi installati su Ubuntu: `google-chrome`, `xdg-open`, `xclip`. Sono già tutti presenti sul PC. Se per qualche motivo manca `xclip`, lo script te lo dice e ti chiede di copiare il testo a mano (basta aprire il file `.txt` corrispondente nella cartella `social-bozze/`).
+
+**Una versione più avanzata, per dopo.** Esiste anche una variante (`scripts/pubblica-social-livello-b.sh`) che compila i campi testo da sola e ti lascia solo i 4 click "Pubblica". È pronta ma **spenta** (c'è un blocco di sicurezza in cima al file). La teniamo spenta per ora perché è più fragile: si appoggia ai bottoni e ai campi delle pagine social, che ogni 3-6 mesi cambiano nome o posizione. Se vorrai accenderla in futuro, basta togliere il blocco di sicurezza e verificare che i "nomi tecnici" dei campi corrispondano ancora. I dettagli del motore sotto questa variante (un programma chiamato `opencli`) sono nella Parte 14.12.
 
 ---
 

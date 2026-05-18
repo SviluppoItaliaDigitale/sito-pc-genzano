@@ -286,85 +286,83 @@ Se il `git pull` fallisce (modifiche locali non committate, conflitti reali dive
 - Non posta nulla per conto dell'utente. È un copia-incolla (o drag-drop) guidato.
 - Non sostituisce Claude Code: fa parte di un workflow a due fasi.
 
-### 14.12 — opencli (installato, in attesa di uso)
+### 14.12 — opencli (un robottino che pilota il browser, oggi addormentato)
 
-Da maggio 2026 è installato sul PC desktop il tool **opencli** (`@jackwener/opencli` v1.7.22 via npm globale), un hub CLI universale per automazione browser e controllo app desktop. È pronto ma **al momento usato solo come motore opzionale** per il Livello B della pubblicazione social-assistita (vedi Parte 13.10).
+**A cosa serve.** Immagina di avere un piccolo robot che sa muovere il mouse e la tastiera al posto tuo, ma solo dentro il browser Chrome. Tu gli dici "vai su X e scrivi questo testo nel campo del post" e lui lo fa. Non è magico: lavora sulle pagine dove sei già loggato tu, quindi vede gli stessi siti che vedi tu.
 
-**Cosa è opencli:**
+Questo robottino si chiama **opencli**. L'abbiamo installato a maggio 2026 perché un giorno potremmo volere che, dopo aver pubblicato un articolo sul sito, lui scriva da solo le bozze sui campi di X/Facebook/Instagram, lasciando a noi solo l'ultimo click "Pubblica".
 
-- CLI Node.js (~17 pacchetti, ~1 MB) + estensione Chrome "Browser Bridge" (v1.0.15) caricata in modalità sviluppatore.
-- Daemon locale su porta `19825` che fa da ponte fra CLI e tab del browser dove l'utente è già loggato (Gmail, Facebook, Twitter, ecc.).
-- Catalogo di **136 adapter pre-configurati** per siti popolari (twitter, facebook, instagram, reddit, bilibili, linkedin, gov-policy, ecc.) + 12 external CLI (gh, discord, notion, tg, ecc.) + comandi primitivi `browser open/fill/click/upload` per qualsiasi sito non coperto da adapter.
+**Oggi però è addormentato.** Lo abbiamo voluto pronto, non attivo. Lo script che lo usa (`scripts/pubblica-social-livello-b.sh`) ha un freno a mano tirato. Lo accendi solo se decidi che ti conviene davvero. Vedi Parte 13.10 per quando e perché.
 
-**Verifica stato:**
+**Verifica che sia installato bene.**
 
 ```bash
 opencli doctor
 ```
 
-Risposta attesa quando tutto è ok:
+Se tutto è a posto vedi tre righe verdi:
 
 ```
 [OK] Daemon: running on port 19825 (v1.7.22)
 [OK] Extension: connected (v1.0.15)
 [OK] Connectivity: connected in 5.6s
-Everything looks good!
 ```
 
-Se l'estensione non è connessa: aprire `chrome://extensions/`, verificare che "OpenCLI" sia presente e abilitato. Se manca, ricaricarla da `~/opencli-extension/` (in modalità sviluppatore: toggle in alto a destra → "Carica estensione non pacchettizzata").
+Se l'estensione di Chrome risulta "non connessa", vai su `chrome://extensions/` e controlla che ci sia "OpenCLI" attivo. Se manca, ricaricala dalla cartella `~/opencli-extension/` (servono 3 click: in alto a destra accendi "Modalità sviluppatore", poi in alto a sinistra "Carica estensione non pacchettizzata", poi scegli la cartella).
 
-**A cosa serve oggi sul nostro repo:**
+**Cosa può fare opencli (in teoria, per quando lo useremo davvero).** Sa interagire con **136 siti** che ha già imparato (X, Facebook, Instagram, Reddit, LinkedIn, GitHub, e tanti altri). Per ognuno conosce i comandi tipo "leggi i post", "scrivi un nuovo post", "scarica un'immagine". Per i siti che non conosce, sa fare le cose base: "apri questa pagina", "scrivi qui", "clicca lì", "carica questo file".
 
-- Motore sottostante del Livello B di `scripts/pubblica-social-livello-b.sh` (in standby): compila automaticamente i campi di compose su X/Facebook/Instagram e si ferma prima del click "Pubblica".
-- A disposizione per script futuri di automazione browser-based (es. scraping di bollettini DPC complessi, controllo di app desktop di terzi, ecc.).
+**Cosa opencli NON farà mai sul nostro account.** Non pubblicherà mai un post sui nostri canali social senza che tu prema il bottone finale. Questa è una regola permanente, non una preferenza. Gli account social del Gruppo sono istituzionali, e la nostra policy pubblica (`/social-media-policy/`) promette al cittadino che dietro a ogni post c'è una persona che ha letto e confermato. Su quello non si transige.
 
-**A cosa NON deve essere usato (vincolo permanente):**
+**Aggiornamento.** Una volta ogni tanto:
 
-- Pubblicazione automatica diretta sui canali social del Gruppo (vietata dalla `social-media-policy/` pubblica e dalle norme ISO 22329 + CWA CEN/CENELEC sulla supervisione umana in crisis communication).
-- Sostituzione delle bozze Gemini con generazione real-time non supervisionata.
-- Operazioni che producono effetti su account istituzionali del Gruppo senza un click di conferma umano.
+```bash
+npm install -g @jackwener/opencli@latest
+```
 
-**Aggiornamento:** `npm install -g @jackwener/opencli@latest` (l'estensione Chrome si aggiorna manualmente scaricando l'ultima release da `gh release view --repo jackwener/opencli`).
+Per aggiornare anche l'estensione di Chrome, scarica l'ultimo zip dalla pagina rilasci del progetto su GitHub e ricarica la cartella da `chrome://extensions/`.
 
-**Note di sicurezza:** opencli ha permessi browser molto ampi (`debugger`, `tabs`, `cookies`, `<all_urls>`); è di fatto un sostituto programmabile dell'utente nel browser. Tienilo aggiornato e disattivalo se sospetti accessi non autorizzati al PC. Il daemon gira solo in locale (porta 19825 in loopback), nessun servizio cloud.
+**Sicurezza.** opencli ha permessi forti dentro al tuo Chrome (sa vedere le tab, i cookie, può cliccare ovunque). È normale: è quello che gli serve per fare il suo lavoro. Però significa che è un programma da tenere aggiornato. Tutto resta sul PC: niente viene mandato in cloud, il "ponte" tra opencli e il browser è una porta interna del PC (`19825`) raggiungibile solo da casa tua.
 
-### 14.13 — open-design (generatore locale di slide, PDF, mockup)
+### 14.13 — open-design (il "Canva" che gira sul tuo PC)
 
-Da maggio 2026 è installato sul PC desktop **open-design** (`nexu-io/open-design`), un generatore locale open-source (Apache-2.0) per slide deck, pagine editoriali, prototipi UI, immagini e video. Si integra direttamente con Claude Code (e con altri agenti CLI: Codex, Cursor, Gemini, Copilot, Hermes, Kimi). 19 skill + 71 design system "brand-grade". Esporta in HTML / PDF / PPTX / MP4 / ZIP / Markdown.
+**A cosa serve.** Hai presente Canva, quel sito dove fai slide e volantini? open-design fa una cosa simile ma sul tuo PC, gratis e in italiano. Gli racconti in parole semplici cosa ti serve (*"prepara 8 slide per il corso base dei nuovi volontari, sezione sismico"*) e lui te le fa, scegliendo lo stile da una libreria di 71 modelli già pronti. Poi le esporti in PowerPoint, in PDF, in immagine, in video. È perfetto quando devi preparare in fretta materiale per un corso, un open-day, una visita nelle scuole.
 
-**Posizionamento sul nostro repo:**
+L'abbiamo installato a maggio 2026 perché si **integra direttamente con Claude Code**: invece di smanettare con un'interfaccia, dici a Claude *"fammi le slide con open-design"* e lui le prepara per te.
 
-- **Non sostituisce Hugo** per il sito web istituzionale. Il sito resta su Hugo + Bootstrap Italia.
-- **Strumento complementare** per materiale che oggi facciamo manualmente con Canva, PowerPoint o LibreOffice Impress:
-  - slide deck per **formazione volontari** (corso base, esercitazioni, kit calamità);
-  - **brochure stampabili** per eventi pubblici (open day, giornata europea della PC);
-  - presentazioni per le **scuole** in alternativa o affiancamento alle schede stampabili HTML del kit calamità bambini;
-  - prototipi di pagine prima di portarle in Hugo.
+**A cosa NON deve servire.**
 
-**Dove è installato:** clone Git in `~/open-design/` (≈320 MB + node_modules dopo `pnpm install`). Repo originale: <https://github.com/nexu-io/open-design>.
+- **Non per il sito web.** Il sito di `protezionecivilegenzano.it` è fatto con Hugo + Bootstrap Italia secondo le linee guida AGID per la PA. Le pagine del sito si scrivono in Markdown nel repo, non si "generano" con tool esterni: l'identità visiva istituzionale è già decisa e non si tocca.
+- **Non per gli articoli AGID e i comunicati stampa.** Quelli restano lavoro di scrittura di Claude Code, con il gate del nostro `pc-article-reviewer`. open-design è per la grafica, non per il testo istituzionale.
+- **Niente in stampa o davanti al pubblico senza rileggere.** open-design può inventarsi un numero, una data, un nome: è un generatore. Prima di portare una slide in un corso o stamparla per un volantino, controlla i contenuti uno per uno.
 
-**Avvio quando serve (NON è un daemon sempre attivo):**
+**Dove sta sul PC.** Tutto dentro `~/open-design/` (circa 1,7 GB con le librerie). Repo originale: `https://github.com/nexu-io/open-design`.
+
+**Come si avvia (solo quando ti serve, non è sempre acceso).** Dal menu `bash ~/gestione-sito.sh` scegli la **voce 26**. In alternativa da terminale:
 
 ```bash
 cd ~/open-design
-pnpm tools-dev run web          # avvia la UI web in primo piano
-# in alternativa:
-pnpm tools-dev start web        # daemon in background
-pnpm tools-dev logs             # vede cosa fa il daemon
-pnpm tools-dev stop             # spegne il daemon
+pnpm tools-dev run web
 ```
 
-L'app si apre su `http://localhost:<porta>` (la porta viene stampata in console). Da lì si crea un progetto, si seleziona uno dei 71 design system, si scrive il brief (in linguaggio naturale) e si esporta il risultato nel formato voluto.
+Il comando stampa a video l'indirizzo della pagina web locale (qualcosa tipo `http://localhost:XXXX`). Aprila in Chrome: lì scegli un modello dalla galleria, scrivi il tuo brief in italiano normale, premi "Genera", aspetti qualche secondo, esporti nel formato che ti serve.
 
-**A cosa NON deve essere usato (vincoli):**
+Quando hai finito chiudilo, così libera memoria del PC:
 
-- Mai per generare contenuti che andranno **sul sito web** senza passare attraverso il flusso editoriale Hugo + Bootstrap Italia: l'identità visiva del sito è già definita e non si tocca dai generatori esterni.
-- Mai per produrre **bozze AGID** o **comunicati stampa**: quelli restano lavoro testuale di Claude Code con `pc-article-reviewer`.
-- I PDF/PPTX prodotti vanno comunque riletti da una persona prima di stamparli o presentarli — open-design è generativo e può inventare dati o numeri.
+```bash
+cd ~/open-design
+pnpm tools-dev stop
+```
 
-**Aggiornamento:** `cd ~/open-design && git pull && corepack pnpm install`. La release v0.7.0 è del 13 maggio 2026; il repo ha 45k stelle ed è molto attivo (commit quotidiani).
+**Aggiornamento (una volta ogni tanto).**
 
-**Note di sicurezza:** open-design gira **solo in locale**, niente upload cloud. Le skill (in `tools/skills/`) sono codice JavaScript/TypeScript leggibile prima dell'uso. I design system sono dataset di token CSS, non eseguibili. Il pacchetto Apache-2.0 è verificabile su GitHub.
+```bash
+cd ~/open-design
+git pull
+corepack pnpm install
+```
+
+**Sicurezza e licenze.** open-design gira **solo sul tuo PC**: niente è caricato su un cloud, i progetti restano dove li salvi tu. Il codice è open-source (licenza Apache 2.0), pubblicato su GitHub dove chiunque può controllarlo. I 71 "modelli grafici" sono solo file di stile (colori, font, dimensioni), non programmi che si eseguono. Buona pratica: una volta ogni due-tre mesi aggiorna il programma (i tre comandi qui sopra).
 
 ---
 
