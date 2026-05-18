@@ -286,6 +286,48 @@ Se il `git pull` fallisce (modifiche locali non committate, conflitti reali dive
 - Non posta nulla per conto dell'utente. È un copia-incolla (o drag-drop) guidato.
 - Non sostituisce Claude Code: fa parte di un workflow a due fasi.
 
+### 14.12 — opencli (installato, in attesa di uso)
+
+Da maggio 2026 è installato sul PC desktop il tool **opencli** (`@jackwener/opencli` v1.7.22 via npm globale), un hub CLI universale per automazione browser e controllo app desktop. È pronto ma **al momento usato solo come motore opzionale** per il Livello B della pubblicazione social-assistita (vedi Parte 13.10).
+
+**Cosa è opencli:**
+
+- CLI Node.js (~17 pacchetti, ~1 MB) + estensione Chrome "Browser Bridge" (v1.0.15) caricata in modalità sviluppatore.
+- Daemon locale su porta `19825` che fa da ponte fra CLI e tab del browser dove l'utente è già loggato (Gmail, Facebook, Twitter, ecc.).
+- Catalogo di **136 adapter pre-configurati** per siti popolari (twitter, facebook, instagram, reddit, bilibili, linkedin, gov-policy, ecc.) + 12 external CLI (gh, discord, notion, tg, ecc.) + comandi primitivi `browser open/fill/click/upload` per qualsiasi sito non coperto da adapter.
+
+**Verifica stato:**
+
+```bash
+opencli doctor
+```
+
+Risposta attesa quando tutto è ok:
+
+```
+[OK] Daemon: running on port 19825 (v1.7.22)
+[OK] Extension: connected (v1.0.15)
+[OK] Connectivity: connected in 5.6s
+Everything looks good!
+```
+
+Se l'estensione non è connessa: aprire `chrome://extensions/`, verificare che "OpenCLI" sia presente e abilitato. Se manca, ricaricarla da `~/opencli-extension/` (in modalità sviluppatore: toggle in alto a destra → "Carica estensione non pacchettizzata").
+
+**A cosa serve oggi sul nostro repo:**
+
+- Motore sottostante del Livello B di `scripts/pubblica-social-livello-b.sh` (in standby): compila automaticamente i campi di compose su X/Facebook/Instagram e si ferma prima del click "Pubblica".
+- A disposizione per script futuri di automazione browser-based (es. scraping di bollettini DPC complessi, controllo di app desktop di terzi, ecc.).
+
+**A cosa NON deve essere usato (vincolo permanente):**
+
+- Pubblicazione automatica diretta sui canali social del Gruppo (vietata dalla `social-media-policy/` pubblica e dalle norme ISO 22329 + CWA CEN/CENELEC sulla supervisione umana in crisis communication).
+- Sostituzione delle bozze Gemini con generazione real-time non supervisionata.
+- Operazioni che producono effetti su account istituzionali del Gruppo senza un click di conferma umano.
+
+**Aggiornamento:** `npm install -g @jackwener/opencli@latest` (l'estensione Chrome si aggiorna manualmente scaricando l'ultima release da `gh release view --repo jackwener/opencli`).
+
+**Note di sicurezza:** opencli ha permessi browser molto ampi (`debugger`, `tabs`, `cookies`, `<all_urls>`); è di fatto un sostituto programmabile dell'utente nel browser. Tienilo aggiornato e disattivalo se sospetti accessi non autorizzati al PC. Il daemon gira solo in locale (porta 19825 in loopback), nessun servizio cloud.
+
 ---
 
 ## Appendici
