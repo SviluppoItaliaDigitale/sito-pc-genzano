@@ -4,7 +4,7 @@ description: "Podcast, infografiche, presentazioni, quiz e flashcard sui rischi 
 layout: "list"
 tts: true
 toc: true
-dataUltimaRevisione: "2026-05-16"
+dataUltimaRevisione: "2026-05-18"
 ---
 
 In questa pagina trovi **materiali multimediali pronti da scaricare e condividere**, organizzati per tema di Protezione Civile.
@@ -26,6 +26,18 @@ Per uso commerciale o istituzionale fuori dal contesto della Protezione Civile, 
 ## Stiamo costruendo questa biblioteca
 
 I primi materiali stanno arrivando. Torna fra qualche giorno: aggiorniamo periodicamente, compatibilmente con il tempo del volontariato.
+
+Continueremo a pubblicare nuovi podcast, infografiche, presentazioni, quiz e flashcard su altri temi della Protezione Civile: rischio sismico, vulcanico, idrogeologico, incendi boschivi, IT-alert, kit di emergenza, piano comunale, comportamenti di autoprotezione, casi storici.
+
+### Hai un tema che vorresti vedere trattato?
+
+Scrivici a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it?subject=Richiesta%20materiale%20Risorse%20Pronte) indicando:
+
+- l'**argomento** (es. *fulmini*, *piano familiare*, *primo soccorso pediatrico*, *blackout*);
+- il **pubblico** a cui serve (docente, famiglia, volontario, studente, caregiver);
+- il **formato** preferito (podcast da ascoltare in macchina, infografica per WhatsApp, slide per la classe, quiz per ripasso).
+
+Valuteremo la richiesta nei prossimi aggiornamenti, **compatibilmente con il tempo del volontariato** e con la disponibilità di fonti istituzionali verificate (DPC, INGV, ISPRA, Regione Lazio, standard ISO). Non ci impegniamo su tempi certi: ogni materiale viene prodotto, riletto e verificato prima della pubblicazione.
 
 ## Altri materiali del sito
 
