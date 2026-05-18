@@ -7,7 +7,7 @@ aliases:
   - /sitiutili/
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-05-18"
 ---
 
 Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecniche e risorse educative. I link sono organizzati per tema, così puoi trovare più facilmente la fonte utile.
@@ -95,7 +95,7 @@ Le fonti seguenti sono utili per comunicazione pubblica, accessibilità e gestio
 
 ## Divulgazione scientifica
 
-- [Geopop](https://www.geopop.it/) — divulgazione delle scienze della Terra e dei fenomeni naturali.
+- [Geopop](https://www.geopop.it/) — divulgazione scientifica indipendente con video, articoli e infografiche su scienze della Terra, fenomeni naturali, rischi geologici (terremoti, vulcani, frane, alluvioni), meteorologia e cambiamento climatico. Linguaggio accessibile a tutti, fonti citate, comunicazione visiva curata. Utile per approfondire i temi di Protezione Civile in chiave divulgativa, anche per scuole, famiglie e persone che si avvicinano per la prima volta a questi temi. **Non è un sito istituzionale**: in caso di allerta, emergenza o decisioni operative consulta sempre i bollettini e gli avvisi ufficiali del [Centro Funzionale della Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti), del [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) e del Comune di Genzano di Roma.
 
 ## Associazioni e coordinamenti di volontariato
 
