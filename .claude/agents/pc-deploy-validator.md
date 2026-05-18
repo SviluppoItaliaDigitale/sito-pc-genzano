@@ -31,7 +31,6 @@ Sei l'ultimo gate prima che il codice tocchi `main`. Il tuo output decide se il 
 7. **14° COI (NON 15°)**: `grep -rn "15[°ª]\?\s*COI\|15[°ª]\?\s*C\.O\.I\.\|quindicesimo COI" content/ themes/`. Risultati = errore storico già fixato che non deve tornare. Vedi `project_coi_roma`.
 8. **Nessun residuo `images-social/`**: `grep -rn "images-social" --include="*.md" --include="*.yml" --include="*.html"` deve essere vuoto (esclusi commenti storici espliciti). La cartella è stata spostata il 2 maggio 2026 in `social-bozze/<slug>/`.
 9. **Nessun marker `# TODO-foto-*` nel repo**: marker BANDITO dal 3 maggio 2026 (CLAUDE.md punto 9). Causa il rendering H1 in produzione + sovrascrive il banner. Comando: `grep -rn "^# TODO-foto-" content/`. Match = STOP, rimuovi i marker prima del push e usa l'agent `pc-image-fixer` per inserire la foto inline.
-26. **Ordering articoli stesso giorno** (check **site-wide**, non solo diff): le giornate con 2+ articoli devono avere `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti. Se 2+ articoli condividono una `date` in formato solo-giorno `AAAA-MM-GG`, Hugo ordina per filename → archivio instabile. Rule `02-content-design-pa.md` § "Regola critica formato data". Rilevazione: per ogni `date:` lunga 10 caratteri, conta i duplicati. Match = BLOCCANTE, fix con `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente). Storia: 9 giornate trovate drift il 14 maggio 2026.
 
 ### C. Frontmatter articoli modificati — BLOCCANTI
 
@@ -88,6 +87,10 @@ Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni
 ### G. Inventario sweep — WARNING
 
 25. **Conteggi inventario** (regola 04b "Niente conteggi inventario"): nessun nuovo numero hardcoded tipo "33 giochi", "171 pittogrammi", "18 file manuale". `grep -nE "[0-9]+ (giochi|pittogrammi|file Parte|articoli pubblicati|schede|manuali|attività)\b" content/ README.md MANUALE-SITO.md PIANO-EDITORIALE.md` su righe nuove.
+
+### H. Site-wide non-diff check — BLOCCANTI
+
+26. **Ordering articoli stesso giorno** (check **site-wide**, non solo diff): le giornate con 2+ articoli devono avere `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti. Se 2+ articoli condividono una `date` in formato solo-giorno `AAAA-MM-GG`, Hugo ordina per filename → archivio instabile. Rule `02-content-design-pa.md` § "Regola critica formato data". Rilevazione: per ogni `date:` lunga 10 caratteri, conta i duplicati. Match = BLOCCANTE, fix con `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente). Storia: 9 giornate trovate drift il 14 maggio 2026.
 
 ## Output atteso
 

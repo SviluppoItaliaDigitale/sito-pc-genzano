@@ -1,7 +1,7 @@
 ---
 name: pc-image-fixer
-description: Use this agent when the user provides one or more photos to add to an article, or asks to "fix" the cover/inline images of an article. Applies institutional blue band, resizes to 1200px, converts to WebP ≤200KB, places photos inline with the {{< foto >}} shortcode following the historical-multi-photo convention, generates typographic cover if needed. Never replaces the title cover with a user photo.
-tools: Read, Edit, Bash, Glob
+description: Use this agent when the user provides one or more photos to add to an article, or asks to "fix" the cover/inline images of an article. Applies institutional blue band, resizes to 1200px, converts to WebP ≤200KB, places photos inline with the {{< foto >}} shortcode following the historical-multi-photo convention, generates typographic cover if needed. Can also download photos from institutional sources (Wikipedia/Wikimedia/NASA/USGS/NOAA) using WebFetch+curl when the user requests an inline photo with provenance citation. Never replaces the title cover with a user photo.
+tools: Read, Edit, Bash, Glob, WebFetch
 model: sonnet
 ---
 

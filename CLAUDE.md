@@ -272,7 +272,7 @@ Se non concorda, corregge e basta. **Non chiedo PRIMA di pubblicare** — pubbli
 
 ## Agenti specializzati disponibili
 
-In `.claude/agents/` ci sono 14 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
+In `.claude/agents/` ci sono 15 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
 
 | Agent | Trigger naturali italiani |
 |---|---|
@@ -284,12 +284,13 @@ In `.claude/agents/` ci sono 14 agenti custom da usare PROATTIVAMENTE quando la 
 | `pc-internal-linker` | "linkografia interna", "questo articolo ha abbastanza link interni?", "suggerisci link" — propone/applica link a glossario, kit, articoli correlati, standard ISO |
 | `pc-seo-checker` | "controlla il SEO", "meta description OK?", "Open Graph immagine giusta?" — verifica meta, OG, structured data, sitemap, slug, canonical |
 | `pc-normative-verifier` | "le norme citate sono vigenti?", "verifica leggi", "L. 225/1992 ancora valida?" — verifica vigenza norme statali (Normattiva) e regionali (BURL Lazio) |
-| `pc-image-fixer` | "ecco una foto", "queste immagini", "mettila nell'articolo", "applica fascia blu" |
+| `pc-image-fixer` | "ecco una foto", "queste immagini", "mettila nell'articolo", "applica fascia blu", "scarica una foto da Wikipedia/NASA/USGS/NOAA per questo articolo" |
 | `pc-issue-triage` | "controlla le issue", "fai pulizia tracker", "issue da chiudere?" |
 | `pc-deploy-validator` | "verifica prima del push", "controlla il deploy", "build OK?", "pubblico in sicurezza?" |
 | `pc-social-publisher` | "rivedi le bozze social", "pronti per pubblicare i social?", "controlla immagini Instagram" |
 | `pc-print-card-qa` | "controlla le schede stampabili", "QA del kit calamità", "i puzzle sono giocabili?" |
 | `pc-site-auditor` | "fammi un audit del sito", "audit approfondito", "controlla tutto il sito", "ci sono incongruenze?", "pro e contro" |
+| `pc-notebooklm-publisher` | "pubblica gli output di NotebookLM per il tema X", "ho caricato i file nella drop zone", "publish notebooklm <tema>" — automatizza il flusso di pubblicazione dei materiali multimediali NotebookLM (podcast, infografiche, presentazioni) nel sito |
 
 Specifiche operative complete + esempi di workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Quando aggiungi/modifichi un agent, aggiorna anche la Parte 19 e questa tabella.
 
