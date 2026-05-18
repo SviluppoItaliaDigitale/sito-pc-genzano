@@ -204,10 +204,10 @@ def page_excluded(url: str) -> bool:
 
 def main() -> int:
     p = argparse.ArgumentParser()
-    p.add_argument("--max-per-page", type=int, default=4,
-                   help="Max video correlati per pagina (default: 4)")
-    p.add_argument("--min-score", type=float, default=2.5,
-                   help="Punteggio minimo per accettare un match (default: 2.5)")
+    p.add_argument("--max-per-page", type=int, default=5,
+                   help="Max video correlati per pagina (default: 5)")
+    p.add_argument("--min-score", type=float, default=2.0,
+                   help="Punteggio minimo per accettare un match (default: 2.0)")
     p.add_argument("--output", default="data/video_correlati.yaml")
     args = p.parse_args()
 

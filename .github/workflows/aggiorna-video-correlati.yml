@@ -42,7 +42,16 @@ jobs:
         run: python3 scripts/scrape-catalogo-video.py
 
       - name: Genera mappa video correlati
-        run: python3 scripts/genera-video-correlati.py --min-score 3.0 --max-per-page 3
+        # Soglie di default dello script (--min-score 2.0 --max-per-page 5)
+        # corrispondono alla scelta editoriale "copertura completa sito 70%"
+        # del commit 78cf62b4 del 15/05/2026, su richiesta utente: "tutti
+        # i video devono poter essere inseriti in qualunque articolo,
+        # pagina e contenuto". Risultato atteso: ~370 pagine con video,
+        # ~1000 link totali (vs ~250 / ~585 con la versione 2.5/4 prece-
+        # dente, e ~150 con la versione 3.0/3 ancora più stringente).
+        # Non passare flag espliciti qui = fonte unica di verità nello
+        # script Python. Per restringere, modificare i default lì.
+        run: python3 scripts/genera-video-correlati.py
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
