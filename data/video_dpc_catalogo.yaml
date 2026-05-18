@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 597 video (3 canali).
+# Totale: 603 video (3 canali).
 
 canali:
   abili-a-proteggere:
@@ -13,7 +13,7 @@ canali:
   dpc-gov:
     nome: Dipartimento della Protezione Civile (PCM)
     url: https://www.youtube.com/@DPCgov/videos
-    video_count: 376
+    video_count: 382
   io-non-rischio:
     nome: Io non rischio
     url: https://www.youtube.com/@io_non_rischio/videos
@@ -749,6 +749,11 @@ video:
     id: 2iqDEZQh3a8
     titolo: Modello digitale 3D delle deformazioni – Naufragio Concordia
     url: https://youtu.be/2iqDEZQh3a8
+  dpc-gov-35A6DY4-hrs:
+    canale: dpc-gov
+    id: 35A6DY4-hrs
+    titolo: La Protezione Civile incontra Giulia Zoli
+    url: https://youtu.be/35A6DY4-hrs
   dpc-gov-3GBgFZJacIc:
     canale: dpc-gov
     id: 3GBgFZJacIc
@@ -834,6 +839,11 @@ video:
     id: 5Cds6O7BFp4
     titolo: Marco Rossari a partire da "Sotto il Vulcano" di Malcolm Lowry – SalTo24
     url: https://youtu.be/5Cds6O7BFp4
+  dpc-gov-5Ixvl_Px4uw:
+    canale: dpc-gov
+    id: 5Ixvl_Px4uw
+    titolo: La Protezione Civile incontra Vittorio Giacopini
+    url: https://youtu.be/5Ixvl_Px4uw
   dpc-gov-5M_Pqa1gcrk:
     canale: dpc-gov
     id: 5M_Pqa1gcrk
@@ -849,6 +859,11 @@ video:
     id: 5dOUHCl-d9E
     titolo: Le attività del Posto Medico Avanzato – Ciclone Mozambico
     url: https://youtu.be/5dOUHCl-d9E
+  dpc-gov-5nne-UO_Jg0:
+    canale: dpc-gov
+    id: 5nne-UO_Jg0
+    titolo: La Protezione Civile incontra Giorgio Zanchini
+    url: https://youtu.be/5nne-UO_Jg0
   dpc-gov-5podakAz7GI:
     canale: dpc-gov
     id: 5podakAz7GI
@@ -1099,6 +1114,11 @@ video:
     id: CVnJQ42uysc
     titolo: Titoli di coda diretta nazionale "Io Non Rischio" 2022
     url: https://youtu.be/CVnJQ42uysc
+  dpc-gov-Ca5wOJPV3Vk:
+    canale: dpc-gov
+    id: Ca5wOJPV3Vk
+    titolo: La Protezione Civile incontra Matilde Vigna
+    url: https://youtu.be/Ca5wOJPV3Vk
   dpc-gov-ClFIKEGjiX0:
     canale: dpc-gov
     id: ClFIKEGjiX0
@@ -1519,6 +1539,11 @@ video:
     id: RjCdoyyz3sQ
     titolo: Ricordo di Giuseppe Zamberletti
     url: https://youtu.be/RjCdoyyz3sQ
+  dpc-gov-RjkfVbDqsJo:
+    canale: dpc-gov
+    id: RjkfVbDqsJo
+    titolo: La Protezione Civile incontra Marco Cassini
+    url: https://youtu.be/RjkfVbDqsJo
   dpc-gov-RlwTnpacmJI:
     canale: dpc-gov
     id: RlwTnpacmJI
@@ -2209,6 +2234,11 @@ video:
     id: p8j5whUGlhI
     titolo: 'TEREX 2010: esercitazione internazionale sul rischio sismico'
     url: https://youtu.be/p8j5whUGlhI
+  dpc-gov-pLPXOQXEC3M:
+    canale: dpc-gov
+    id: pLPXOQXEC3M
+    titolo: La Protezione Civile incontra Alessandra Castellazzi
+    url: https://youtu.be/pLPXOQXEC3M
   dpc-gov-pgHPsSGI1HY:
     canale: dpc-gov
     id: pgHPsSGI1HY
