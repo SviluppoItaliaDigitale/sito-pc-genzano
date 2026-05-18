@@ -411,17 +411,35 @@ python3 scripts/fix-ordering-articoli-stesso-giorno.py
 
 ## 7. Agenti specializzati esistenti (riferimento)
 
-In `.claude/agents/` ci sono 5 agenti custom ottimizzati per Claude Code. **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte qui sotto. Le specifiche complete sono in `manuale/parte-19-agenti-specializzati.md`.
+In `.claude/agents/` ci sono **15 agenti custom** ottimizzati per Claude Code (al 18 maggio 2026). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
 
-| Agent | Trigger naturali | Cosa fa |
+| Agent | Trigger naturali | Cosa fa (sintesi) |
 |---|---|---|
-| `pc-article-reviewer` | "rivedi questo articolo", "controlla il frontmatter", "va bene per pubblicare?" | Verifica frontmatter completo, applica regole AGID, controlla badge correttezza, formato data, link interni validi, convenzioni foto, assenza dati fittizi. Restituisce punch list di issue da fixare PRIMA del commit |
-| `pc-image-fixer` | "ecco una foto", "queste immagini", "mettila nell'articolo", "applica fascia blu" | Applica fascia blu istituzionale, ridimensiona a 1200px, converte WebP ≤200 KB, posiziona foto inline con `{{< foto >}}` (mai nel banner), genera cover tipografica se serve |
-| `pc-issue-triage` | "controlla le issue", "fai pulizia tracker", "issue da chiudere?" | Audita stato issue aperte rispetto alla realtà del repo, distingue issue obsolete da reali, propone batch close + commit con commenti esplicativi |
-| `pc-deploy-validator` | "verifica prima del push", "controlla il deploy", "build OK?", "pubblico in sicurezza?" | Pre-push gate completo: build Hugo pulito, sanity JS/CSS, sweep broken-link, validazione frontmatter articoli modificati, regression header sicurezza, GDPR sweep, compliance rules. Restituisce GO/NO-GO con blocker espliciti vs warning |
-| `pc-social-publisher` | "rivedi le bozze social", "pronti per pubblicare?", "controlla immagini Instagram" | Rivede tono, accessibilità, hashtag, struttura crisi-comunicazione (ISO 22329 + CWA CEN/CENELEC), valida immagini Instagram per specs IG. Mai pubblica sui social — quello tocca all'umano |
+| `pc-article-reviewer` | "rivedi questo articolo", "controlla il frontmatter", "va bene per pubblicare?" | Gate AGID obbligato pre-commit: frontmatter, badge, data, link interni, convenzioni foto, qualità ChatGPT 9.5/10 |
+| `pc-photo-caption-verifier` | gate visivo richiamato da pc-article-reviewer quando l'articolo ha `{{< foto >}}` | Read multimodale di ogni foto, verifica che alt/caption descrivano ciò che si vede, attribuzione corretta, web-check entità citate |
+| `pc-accessibility-auditor` | "audit accessibilità", "controlla WCAG" | Audit contenuti markdown WCAG 2.2 AA (alt, heading, link, sigle, lingua, contrasto) — complementare a Lighthouse |
+| `pc-content-freshness` | "ci sono articoli vecchi?", "scadenze passate" | Sweep articoli con `scadenza:` superata, identifica articoli > 18 mesi con dati obsoleti |
+| `pc-italian-l2-writer` | "genera la versione facile", "italiano semplice A2" | Produce `<slug>-facile.md` con regole CEFR A2 (frasi 8-12 parole, lessico 2000 parole, sigle sciolte) |
+| `pc-internal-linker` | "linkografia interna", "questo articolo ha abbastanza link interni?" | Propone/applica link a glossario, kit, articoli correlati, standard ISO (rispetta regola AGID: interno prima di esterno) |
+| `pc-seo-checker` | "controlla il SEO", "meta description OK?", "Open Graph immagine giusta?" | Verifica meta description ≤160, OG image 1200×630, JSON-LD Article, slug, canonical, sitemap, RSS, lang |
+| `pc-normative-verifier` | "le norme citate sono vigenti?", "verifica leggi" | Verifica vigenza norme statali (Normattiva) e regionali (BURL Lazio) via WebFetch + conoscenza pregressa |
+| `pc-image-fixer` | "ecco una foto", "applica fascia blu", "scarica foto da Wikipedia per articolo X" | Applica fascia blu istituzionale via Pillow (1200px WebP ≤200 KB), posiziona inline con `{{< foto >}}` (mai banner), genera cover tipografica, scarica da Wikipedia/NASA/USGS/NOAA |
+| `pc-issue-triage` | "controlla le issue", "fai pulizia tracker" | Audita issue aperte vs realtà repo, distingue obsolete da reali, batch close con commenti tracciabili |
+| `pc-deploy-validator` | "verifica prima del push", "controlla il deploy", "build OK?" | Pre-push gate 26 check: Hugo build, YAML workflow, frontmatter, marker banditi, header sicurezza, mixed content, ordering articoli stesso giorno |
+| `pc-social-publisher` | "rivedi le bozze social", "controlla immagini Instagram" | Rivede tono, accessibilità, hashtag, struttura crisi ISO 22329 + CWA, valida immagini IG (1080×1080 post, 1080×1920 story). Mai pubblica |
+| `pc-print-card-qa` | "controlla le schede stampabili", "i puzzle sono giocabili?" | QA strutturale HTML + verifica giocabilità puzzle (labirinto BFS, word search, sudoku risolvibile, cruciverba celle ok) |
+| `pc-site-auditor` | "fammi un audit del sito", "controlla tutto" | Audit whole-site read-only: Hugo build, link interni (distingue rotti vs futuri), ordering, frontmatter, anti-pattern, coerenza cross-file |
+| `pc-notebooklm-publisher` | "pubblica gli output di NotebookLM per il tema X" | Pipeline pubblicazione automatica materiali NotebookLM su `/risorse-pronte/` (podcast, infografiche, presentazioni) |
 
 Quando l'utente fa una richiesta che corrisponde al trigger di uno di questi agenti, **applica i criteri descritti** anche se non puoi richiamare il sub-agent specifico.
+
+### 7.1 Skill globali Claude Code (parallelo per OpenAI: usa le tue specializzazioni native)
+
+Claude Code (sessioni CLI/mobile/cloud su Anthropic) ha installate **~100 skill globali** in `~/.claude/skills/` invocabili col tool `Skill`: pattern tecnici trasversali per accessibilità WCAG, SEO, audit del repo, ricerca multi-source, plan multi-step, sicurezza, gestione errori, ecc. La politica obbligata di invocazione è in `manuale/parte-31-skill-globali-invocazione.md` e in `CLAUDE.md` § *"Skill globali — invocazione obbligata col tool `Skill`"*.
+
+**Per te (ChatGPT/Codex)**: non hai il tool `Skill` con queste 100 skill curate. Lo **spirito della regola però vale**: prima di scrivere codice/audit/check a mano, considera se esistono **già pattern Anthropic/OpenAI o pacchetti Python/npm/ecc.** che fanno il lavoro. Esempio: per un SEO check non re-implementare meta-parsing a mano, usa `BeautifulSoup` o un tool simile noto. Per un audit accessibility usa `axe-core` se possibile via CI. Insomma: **search-first, code-second**, anche senza il tool `Skill`.
+
+Quando una sessione Claude Code lavora dopo di te, può subito invocare le skill specifiche se trova il pattern (es. `accessibility`, `seo-audit`, `python-patterns`, `tdd-workflow`, `git-workflow`). Vedi Parte 31 per il routing.
 
 ---
 
