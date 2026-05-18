@@ -247,14 +247,15 @@ ul.elenco-pratico li::before {
 @media print {
   html, body {
     background: #fff;
-    font-size: 12pt;
+    font-size: 11pt;
+    line-height: 1.35;
   }
   .scheda {
     margin: 0;
     box-shadow: none;
     width: auto;
     min-height: auto;
-    padding: 6mm 10mm 6mm 10mm;
+    padding: 5mm 9mm 5mm 9mm;
     page-break-after: avoid;
   }
   .no-print { display: none !important; }
@@ -262,37 +263,42 @@ ul.elenco-pratico li::before {
     size: A4;
     /* margin: 5mm invece di 0: alcune stampanti fisiche hanno
        margini non stampabili e rischiano di tagliare il bordo.
-       Il padding interno della .scheda (8-12mm) compensa la perdita
+       Il padding interno della .scheda (5-9mm) compensa la perdita
        e il contenuto resta centrato. */
-    margin: 5mm;
+    margin: 4mm;
   }
   /* Spazi verticali compatti per stare in A4 singola pagina */
-  .scheda-header { padding-bottom: 4mm; margin-bottom: 5mm; }
-  .scheda-header .logo { width: 14mm; height: 14mm; }
-  .scheda-title { font-size: 20pt; margin-bottom: 2mm; }
-  .scheda-eta { margin-bottom: 5mm; padding: 1mm 2.5mm; }
+  .scheda-header { padding-bottom: 3mm; margin-bottom: 3mm; }
+  .scheda-header .logo { width: 12mm; height: 12mm; }
+  .scheda-header .brand { font-size: 9pt; }
+  .scheda-header .brand small { font-size: 7pt; }
+  .scheda-header .kit-tag { font-size: 7pt; padding: 1mm 2mm; }
+  .scheda-title { font-size: 17pt; margin-bottom: 1mm; line-height: 1.1; }
+  .scheda-subtitle { font-size: 10pt; margin-bottom: 3mm; }
+  .scheda-eta { margin-bottom: 3mm; padding: 0.8mm 2mm; font-size: 8pt; }
   .scheda-istruzione {
-    padding: 3mm 4mm;
-    margin-bottom: 5mm;
-    font-size: 11pt;
+    padding: 2.5mm 3.5mm;
+    margin-bottom: 3mm;
+    font-size: 10pt;
+    line-height: 1.3;
   }
-  .scheda-attivita { gap: 3mm; }
-  .scheda-footer { padding-top: 4mm; font-size: 7.5pt; page-break-inside: avoid; }
-  .scheda-footer .fonti { font-size: 7pt; }
+  .scheda-attivita { gap: 2.5mm; }
+  .scheda-footer { padding-top: 3mm; font-size: 7pt; page-break-inside: avoid; }
+  .scheda-footer .fonti { font-size: 6.5pt; line-height: 1.3; }
   /* SVG/immagini al cuore dell'attività: limite di sicurezza A4 */
   .scheda-attivita > svg,
   .scheda-attivita > figure > svg,
   .scheda-attivita > img,
-  .scheda-attivita > figure > img { max-height: 180mm !important; }
+  .scheda-attivita > figure > img { max-height: 170mm !important; }
   /* Box riusabili più contenuti */
-  .box-disegno { min-height: 50mm; }
-  .box-prompt { min-height: 25mm; }
-  .linea-scrittura { height: 7mm; margin: 3mm 0; }
-  ul.elenco-pratico li { padding: 2mm 0 2mm 7mm; }
+  .box-disegno { min-height: 45mm; }
+  .box-prompt { min-height: 22mm; }
+  .linea-scrittura { height: 6mm; margin: 2mm 0; }
+  ul.elenco-pratico li { padding: 1.5mm 0 1.5mm 7mm; }
   /* Griglie compatte (memory, segnali, simboli) */
   .griglia-disegno { gap: 2mm; }
-  .cella-disegno { padding: 1.5mm; }
-  .cella-disegno .etichetta { font-size: 8pt; }
+  .cella-disegno { padding: 1mm; }
+  .cella-disegno .etichetta { font-size: 7.5pt; }
 }
 
 /* ── Bottone stampa (solo a video) ── */
