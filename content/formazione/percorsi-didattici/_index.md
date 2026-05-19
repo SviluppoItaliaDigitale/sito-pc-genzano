@@ -147,6 +147,10 @@ Il formato più richiesto dai docenti. Affronta un tema in modo strutturato e la
 - [Percorso 3 — Terremoto e piano scuola](#percorso-3) (2 ore + prova di evacuazione coordinata con il RSPP della scuola).
 - [Percorso 4 — Piano di emergenza familiare](#percorso-4) (2 ore in classe + compito a casa con i genitori).
 - [Percorso 5 — Fake news e comunicazione di crisi](#percorso-5) (3 ore). Riconoscere disinformazione, IT-alert, post di crisi sui social.
+- [Percorso 7 — Rischio idrogeologico e territorio](#percorso-7) (3 ore). Frane, alluvioni, allagamenti urbani, 16 zone di allerta del Lazio.
+- [Percorso 8 — Incendi boschivi e Castelli Romani](#percorso-8) (3 ore). Zona AIB 9, bollettino CFR, comportamenti corretti in estate.
+- [Percorso 10 — Volontariato e cittadinanza attiva](#percorso-10) (3 ore). Storia, sussidiarietà orizzontale, Codice del Terzo Settore.
+- [Percorso 11 — Protezione Civile europea e UCPM](#percorso-11) (2-3 ore). Meccanismo UCPM, ERCC, rescEU, Copernicus EMS.
 
 **Mini-moduli tematici (2 ore, pescano da 2 percorsi):**
 
@@ -163,11 +167,15 @@ Un'unità didattica vera, che attraversa più discipline e può integrare l'inco
 
 - [Percorso 1 — Protezione Civile di base](#percorso-1) (4 ore + visita opzionale al Gruppo). Fondamenta su PC, 112, rischi locali, volontariato.
 - [Percorso 6 — Sicurezza nei luoghi di lavoro e PCTO](#percorso-6) (4-6 ore, integrabile nel monte ore PCTO). Decreto 81/2008, rischi specifici, primo soccorso.
+- [Percorso 9 — Primo soccorso e cuore (introduttivo)](#percorso-9) (4 ore). PLS, RCP, DAE, manovre antisoffocamento. Adatto a un raccordo con corsi BLSD certificati.
+- [Percorso 10 — Volontariato e cittadinanza attiva con PCTO](#percorso-10) (3 ore + 30-50 ore di PCTO al Gruppo). Mappatura del territorio, supporto a esercitazioni, comunicazione del rischio.
 
 **Combinazioni di percorsi:**
 
 - **PC base + Piano famiglia + Cittadinanza digitale** = [Percorso 1](#percorso-1) + [Percorso 4](#percorso-4) + [Percorso 5](#percorso-5). Mini-curriculum di Educazione Civica su PC, famiglia e cittadinanza digitale (~9-10 ore totali).
 - **Rischio + Autoprotezione + Pianificazione** = [Percorso 2](#percorso-2) + [Percorso 3](#percorso-3) + [Percorso 4](#percorso-4). Tre percorsi per chi vuole partire dal rischio meteo, passare al terremoto, arrivare al piano famiglia. ~7-8 ore distribuite su un trimestre.
+- **Territorio + Comunità + Europa** = [Percorso 7](#percorso-7) + [Percorso 10](#percorso-10) + [Percorso 11](#percorso-11). Tre percorsi per leggere il rischio del proprio territorio, capire come si fa volontariato in Italia, vedere come si fa solidarietà in Europa. ~8-9 ore, adatto alla secondaria di II grado.
+- **Estate sicura** = [Percorso 8](#percorso-8) + sezione [Ondate di calore](/rischi-prevenzione/ondate-di-calore/) + sezione [Temporali intensi](/rischi-prevenzione/temporali-intensi/). Mini-curriculum stagionale per concludere l'anno scolastico prima della pausa estiva. ~5-6 ore.
 
 **Formati di progetto:**
 
@@ -185,6 +193,11 @@ Un'unità didattica vera, che attraversa più discipline e può integrare l'inco
 | 4 — [Piano di emergenza familiare](#percorso-4) | Primaria · Secondaria I | 2 ore + compito | Scheda famiglia, kit emergenza | L. 92/2019 art. 3 lett. h |
 | 5 — [Fake news e comunicazione di crisi](#percorso-5) | Secondaria I-II | 3 ore | Fonti ufficiali, IT-alert | L. 92/2019 (Cittadinanza digitale) |
 | 6 — [Sicurezza nei luoghi di lavoro e PCTO](#percorso-6) | Secondaria II | 4-6 ore | DPI, rischio operativo, L. 21/2025 | L. 92/2019 art. 3 lett. h-ter |
+| 7 — [Rischio idrogeologico e territorio](#percorso-7) | Primaria · Secondaria I | 3 ore | Frane, alluvioni, zone allerta Lazio | L. 92/2019 art. 3 lett. h |
+| 8 — [Incendi boschivi e Castelli Romani](#percorso-8) | Secondaria I-II | 3 ore | Zona AIB 9, bollettino, comportamenti | L. 353/2000 + L.R. Lazio 14/2008 |
+| 9 — [Primo soccorso e cuore (introduttivo)](#percorso-9) | Secondaria II | 4 ore | PLS, RCP, DAE, antisoffocamento | L. 116/2021 + linee guida IRC 2025 |
+| 10 — [Volontariato e cittadinanza attiva](#percorso-10) | Secondaria II | 3 ore + PCTO | Storia, sussidiarietà, Terzo Settore | D.Lgs. 117/2017 + D.Lgs. 1/2018 |
+| 11 — [Protezione Civile europea e UCPM](#percorso-11) | Secondaria II | 2-3 ore | UCPM, ERCC, rescEU, Copernicus | Decisione UE 1313/2013 + art. 11 Cost. |
 
 Ogni percorso è completo di: **prerequisiti**, **obiettivi di apprendimento**, **competenze chiave europee** mobilitate, **materiali linkati** (schede, storie, giochi), **modalità di valutazione**, **fonti e norme**.
 
@@ -427,6 +440,211 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 
 ---
 
+## Percorso 7 — Rischio idrogeologico e territorio {#percorso-7}
+
+**Destinatari**: Primaria classi IV-V · Secondaria di I grado.
+**Durata**: 3 ore (lezioni da 1 ora) + visita guidata facoltativa al territorio.
+**Disciplina prevalente**: Geografia · Scienze · Educazione Civica.
+**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità.
+
+### Prerequisiti
+
+- Sa leggere una cartina geografica regionale.
+- Conosce il concetto di "fiume", "bacino idrografico" e "versante".
+
+### Obiettivi di apprendimento
+
+- Distingue **frana**, **alluvione**, **allagamento urbano** in base a cause e tempi.
+- Conosce le **16 zone di allerta** del Lazio e individua la zona dei Castelli Romani.
+- Riconosce i **comportamenti corretti** se l'acqua entra in casa, davanti a un sottopasso allagato, vicino a un fiume in piena.
+- Sa che il **Piano di Assetto Idrogeologico (PAI)** classifica le aree per pericolosità e rischio.
+- Conosce le fonti istituzionali: **ISPRA** (mosaicatura nazionale del rischio idrogeologico), **Centro Funzionale Regionale Lazio** (bollettini), **CNR-IRPI** (ricerca scientifica).
+
+### Articolazione delle 3 ore
+
+| Ora | Attività | Materiali |
+|---|---|---|
+| 1 | Come funziona il dissesto idrogeologico: cause, tipi di frana, alluvione lampo | Pagina [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) + cartografia comunale |
+| 2 | Comportamenti corretti: acqua in casa, sottopassi, fiumi, tombini, garage seminterrati | Pagina [Rischi in parole semplici](/rischi-prevenzione/rischi-in-parole-semplici/) + scheda [Mappa cieca quartiere — Primaria](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/) |
+| 3 | Caso storico: la frana di Sarno (5 maggio 1998) come lezione di prevenzione | Articolo [Sarno 1998 — Frana e rischio idrogeologico](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/) + scheda [Sarno — Primaria](/formazione/schede-stampabili/caso-sarno-primaria/) |
+
+### Competenze chiave europee mobilitate
+
+Competenza matematica e in scienze · Competenza in materia di cittadinanza · Competenza personale, sociale.
+
+### Valutazione
+
+Rubrica fascia, indicatori 1 (autoprotezione), 3 (conoscenza del territorio), 4 (comportamento in emergenza). Possibile **prova autentica**: gli studenti producono una mappa illustrata del proprio quartiere con i punti potenzialmente pericolosi in caso di pioggia intensa, da consegnare alle famiglie.
+
+---
+
+## Percorso 8 — Incendi boschivi e Castelli Romani {#percorso-8}
+
+**Destinatari**: Secondaria di I e II grado.
+**Durata**: 3 ore. Consigliato fra **giugno e settembre**, durante la campagna AIB (anti-incendi boschivi) del Lazio.
+**Disciplina prevalente**: Scienze · Geografia · Educazione Civica.
+**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità.
+**Riferimento normativo specifico**: **L. 21 novembre 2000, n. 353** (Legge quadro in materia di incendi boschivi) e **L.R. Lazio 25 luglio 2008, n. 14** sul ruolo della Regione nella prevenzione AIB.
+
+### Prerequisiti
+
+- Conosce il numero unico 112 e sa quando chiamarlo.
+- Ha una nozione di "ecosistema boschivo" e di "pericolo".
+
+### Obiettivi di apprendimento
+
+- Sa che i **Castelli Romani sono Zona AIB 9** del Lazio (alta vulnerabilità).
+- Riconosce i quattro livelli del **Bollettino di pericolosità incendi** del CFR Lazio (basso, medio, moderato, elevato).
+- Conosce i **comportamenti vietati** in zona boschiva (accendere fuoco, gettare mozziconi, abbandonare rifiuti infiammabili) e le conseguenze penali della L. 353/2000.
+- Sa cosa fare se vede una colonna di fumo in passeggiata o dalle finestre di casa.
+- Riconosce le figure operative AIB: **DOS** (Direttore Operazioni Spegnimento), **VVF**, squadre AIB regionali, volontari, **Canadair** e **elicotteri DPC**.
+
+### Articolazione delle 3 ore
+
+| Ora | Attività | Materiali |
+|---|---|---|
+| 1 | L'ecosistema boschivo dei Castelli e la sua vulnerabilità estiva. Il triangolo del fuoco | Pagina [Rischio incendio](/rischi-prevenzione/rischio-incendio/) + articolo [Antincendio boschivo — Triangolo del fuoco](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/) |
+| 2 | Comportamenti corretti, prevenzione, divieti penali. Lettura del bollettino AIB del giorno | [Bollettino di pericolosità incendi del CFR Lazio](https://www.regione.lazio.it/cittadini/protezione-civile/bollettini/rischi-incendi) + pagina [Stato del sistema — Rischio incendi](/stato-sistema/) |
+| 3 | Filiera dello spegnimento: chi fa cosa, dal 112 al Canadair. Testimonianza di un volontario AIB del Gruppo | Articolo [Mezzi aerei AIB — Canadair ed elicotteri](/comunicazioni/2026-07-13-mezzi-aerei-aib-canadair-elicotteri/) + intervento in classe (facoltativo) |
+
+### Competenze chiave europee mobilitate
+
+Competenza in materia di cittadinanza · Competenza matematica e in scienze · Competenza personale, sociale.
+
+### Valutazione
+
+Rubrica fascia, indicatori 1 (autoprotezione), 5 (ruolo delle istituzioni). Possibile **prova autentica**: gli studenti producono un **poster o un decalogo** per la propria scuola sui comportamenti corretti nei boschi in estate.
+
+---
+
+## Percorso 9 — Primo soccorso e cuore (introduttivo) {#percorso-9}
+
+**Destinatari**: Scuola Secondaria di II grado. Particolarmente adatto a Licei delle Scienze Umane, Istituti Tecnici e Professionali con indirizzo sanitario.
+**Durata**: 4 ore (preferibilmente in due incontri da 2 ore).
+**Disciplina prevalente**: Educazione Civica · Scienze · Educazione fisica.
+**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà.
+**Riferimento normativo specifico**: **L. 4 agosto 2021, n. 116** sull'obbligo del **DAE** (Defibrillatore Automatico Esterno) negli spazi pubblici e sulla formazione del personale.
+
+⚠️ **Vincolo importante**: questo percorso è **introduttivo e didattico**. Non sostituisce un **corso BLSD certificato** (Basic Life Support and Defibrillation) né abilita all'esecuzione di manovre in contesti diversi dalla didattica. Per la certificazione formale gli studenti vanno indirizzati a Croce Rossa Italiana, ARES 118 o altri provider riconosciuti dalle linee guida **IRC** (Italian Resuscitation Council).
+
+### Prerequisiti
+
+- Ha letto la pagina [Primo soccorso](/formazione/primo-soccorso/) del sito.
+- Conosce il numero unico 112.
+
+### Obiettivi di apprendimento
+
+- Sa eseguire la **PLS** (Posizione Laterale di Sicurezza) su un compagno consenziente.
+- Riconosce un **arresto cardiaco** dai segni: assenza di coscienza, assenza di respiro normale.
+- Conosce la sequenza **RCP-D** (compressioni toraciche più DAE) secondo le **linee guida IRC 2025**.
+- Sa dove cercare un **DAE** in zona (database regionale Lazio e mappa locale del Gruppo).
+- Riconosce un **soffocamento** (segno universale, tosse inefficace) e conosce la manovra di **Heimlich** nell'adulto e la sua variante pediatrica.
+
+### Articolazione delle 4 ore
+
+| Ora | Attività | Materiali |
+|---|---|---|
+| 1 | Catena della sopravvivenza: 112, RCP precoce, DAE precoce, soccorso avanzato. Le tre tappe dell'osservazione (sicurezza, coscienza, respiro) | Pagina [Primo soccorso](/formazione/primo-soccorso/) + linee guida IRC 2025 |
+| 2 | PLS e respirazione: dimostrazione + esercitazione a coppie sotto supervisione del docente o di un volontario formato | Pagina [Massaggio cardiaco](/formazione/primo-soccorso/massaggio-cardiaco/) + manichini didattici (se disponibili) |
+| 3 | RCP e uso del DAE: sequenza, tempi, errori comuni | Pagina [Defibrillatore DAE](/formazione/primo-soccorso/defibrillatore-dae/) + DAE didattico (se disponibile) |
+| 4 | Manovre antisoffocamento: adulto, bambino, neonato. Riconoscere quando è ostruzione completa vs tosse efficace | Pagina [RCP bambini e neonati](/formazione/primo-soccorso/rcp-bambini-neonati/) + articolo [Manovre antisoffocamento pediatrico](/comunicazioni/2026-05-12-manovre-antisoffocamento-pediatrico/) |
+
+### Connessione con corsi BLSD certificati
+
+A fine percorso, gli studenti motivati possono iscriversi a un **corso BLSD certificato** presso Croce Rossa Italiana (CRI), ARES 118 o altri provider riconosciuti dall'IRC. Il Gruppo Comunale facilita il contatto con i partner sanitari del territorio.
+
+### Competenze chiave europee mobilitate
+
+Competenza personale, sociale · Competenza in materia di cittadinanza · Competenza matematica e in scienze.
+
+### Valutazione
+
+Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 1 (autoprotezione), 4 (comportamento in emergenza). **Non si valutano singolarmente** le manovre praticate (è formazione non certificativa): si valutano conoscenza della sequenza, capacità di descriverla, riconoscimento dei segnali di emergenza.
+
+---
+
+## Percorso 10 — Volontariato e cittadinanza attiva {#percorso-10}
+
+**Destinatari**: Scuola Secondaria di II grado. Integrabile nei PCTO.
+**Durata**: 3 ore in aula + visita facoltativa al Gruppo. **Versione PCTO**: 3 ore in aula + **30-50 ore di tirocinio** presso il Gruppo Comunale.
+**Disciplina prevalente**: Educazione Civica · Storia · Diritto.
+**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà.
+**Riferimento normativo specifico**: **artt. 2, 4 e 118 della Costituzione** (sussidiarietà orizzontale) · **D.Lgs. 3 luglio 2017, n. 117** (Codice del Terzo Settore) · **D.Lgs. 2 gennaio 2018, n. 1** (Codice della Protezione Civile, artt. 32-42 sul volontariato).
+
+### Prerequisiti
+
+- Conosce gli articoli 2 e 4 della Costituzione.
+- Ha una nozione di "Terzo Settore" e di "Ente del Terzo Settore (ETS)".
+
+### Obiettivi di apprendimento
+
+- Conosce la **storia del volontariato di PC** in Italia: dal Friuli 1976 (nascita del modello Zamberletti) al D.Lgs. 1/2018.
+- Distingue i **compiti consentiti e vietati** al volontariato di PC nelle manifestazioni pubbliche secondo la **Circolare DPC del 6 agosto 2018** (no regolazione del traffico, no servizi di polizia stradale, no palette dirigitraffico).
+- Conosce il **Codice del Terzo Settore** e la distinzione tra OdV (Organizzazioni di Volontariato), APS (Associazioni di Promozione Sociale), ETS in genere.
+- Sa come **diventare volontario** del Gruppo Comunale di Genzano: requisiti, formazione iniziale, attivazione.
+- Riconosce la **sussidiarietà orizzontale** (art. 118 Cost.) come fondamento del volontariato di PC: lo Stato non sostituisce, le associazioni di cittadini agiscono "in autonoma iniziativa" sull'interesse generale.
+
+### Articolazione delle 3 ore
+
+| Ora | Attività | Materiali |
+|---|---|---|
+| 1 | Storia del volontariato di PC: dal Vajont al Friuli, da Zamberletti al D.Lgs. 1/2018 | Articolo [Friuli 1976 — Nascita della PC moderna](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/) + scheda [Costituzione e PC — Secondaria](/formazione/schede-stampabili/costituzione-pc-secondaria/) |
+| 2 | Cosa fa (e cosa NON fa) un volontario: Circolare DPC 6/8/2018, ruolo nelle manifestazioni pubbliche, distinzione rispetto a Polizia Locale e Forze dell'Ordine | Pagina [Diventa volontario](/diventa-volontario/) + [Kit Calamità — Volontari PC](/formazione/kit-calamita-volontari-pc/) |
+| 3 | Codice del Terzo Settore, sussidiarietà orizzontale, percorso di iscrizione al Gruppo. Intervista a un volontario | Scheda [Intervista al volontario — Primaria](/formazione/schede-stampabili/intervista-volontario-primaria/) come canovaccio (adattare per secondaria) + intervento in classe |
+
+### Connessione con il PCTO
+
+Il percorso può aprire un **PCTO di 30-50 ore** con il Gruppo Comunale su attività di mappatura del territorio, supporto a esercitazioni, comunicazione del rischio. Procedura, sicurezza e condizioni nella [pagina docenti — sezione PCTO](/formazione/educazione-civica/#disponibilita-pcto). Il Gruppo affianca il tutor scolastico, non lo sostituisce.
+
+### Competenze chiave europee mobilitate
+
+Competenza in materia di cittadinanza · Competenza imprenditoriale · Competenza personale, sociale.
+
+### Valutazione
+
+Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 5 (ruolo delle istituzioni), 6 (cittadinanza attiva). Possibile **prova autentica**: gli studenti producono una **mini-presentazione di 5 minuti** sul volontariato di PC che potrebbero usare a una giornata di orientamento per gli studenti delle classi inferiori.
+
+---
+
+## Percorso 11 — Protezione Civile europea e Meccanismo UCPM {#percorso-11}
+
+**Destinatari**: Scuola Secondaria di II grado.
+**Durata**: 2-3 ore.
+**Disciplina prevalente**: Educazione Civica · Diritto · Geografia · Lingua inglese (lessico tecnico).
+**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà.
+**Riferimento normativo specifico**: **artt. 11 e 117 della Costituzione** (rapporti con l'Unione Europea) · **Decisione UE n. 1313/2013** sul Meccanismo unionale di protezione civile (UCPM, *Union Civil Protection Mechanism*).
+
+### Prerequisiti
+
+- Sa cos'è l'Unione Europea e conosce le sue istituzioni principali.
+- Ha sentito parlare di "solidarietà internazionale" e "aiuto umanitario".
+
+### Obiettivi di apprendimento
+
+- Sa cos'è il **Meccanismo Unionale di Protezione Civile (UCPM)** e a cosa serve.
+- Riconosce il **Centro di Coordinamento per la Risposta alle Emergenze (ERCC)** di Bruxelles come sala operativa europea attiva 24 ore su 24.
+- Conosce **rescEU**, la riserva strategica europea (Canadair, ospedali da campo, scorte mediche, decontaminazione CBRN — chimico, biologico, radiologico, nucleare).
+- Sa che la PC italiana è **operativa anche all'estero** in nome della solidarietà europea (terremoto Albania 2019, alluvioni Slovenia 2023, incendi Grecia, terremoto Turchia-Siria 2023).
+- Riconosce il servizio **Copernicus Emergency Management Service (EMS)**: mappe satellitari delle emergenze in tempo reale.
+
+### Articolazione delle 2-3 ore
+
+| Ora | Attività | Materiali |
+|---|---|---|
+| 1 | Nascita dell'UCPM, le tre fasi di un'attivazione, l'ERCC come "112 europea" dei 27 Stati membri + 10 Stati partecipanti | Articolo [Giornata dell'Europa — Meccanismo UCPM](/comunicazioni/2026-05-09-giornata-europa-meccanismo-protezione-civile-ue/) + [Sito UE Civil Protection](https://civil-protection-humanitarian-aid.ec.europa.eu/) |
+| 2 | rescEU: a cosa serve la riserva europea, casi reali di attivazione (incendi 2023, terremoto Turchia-Siria 2023) | Sito ufficiale UCPM + [Copernicus Emergency Management Service](https://emergency.copernicus.eu/) |
+| 3 (facoltativa) | Solidarietà internazionale: come funziona l'aiuto italiano all'estero. Lettura comparata in italiano e inglese di un comunicato ufficiale | Materiale bilingue del Gruppo + glossario tecnico EN/IT |
+
+### Competenze chiave europee mobilitate
+
+Competenza in materia di cittadinanza (cittadinanza europea) · Competenza multilinguistica · Competenza personale, sociale.
+
+### Valutazione
+
+Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 5 (ruolo delle istituzioni), 6 (cittadinanza attiva). Possibile **prova autentica**: gli studenti analizzano una **attivazione UCPM** recente, individuano gli attori coinvolti, descrivono la catena di comando in italiano e inglese (300 parole + 300 parole).
+
+---
+
 ## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>Domande frequenti dei docenti {#faq-docenti}
 <details class="faq-item">
 <summary><strong>Posso usare un percorso senza fare gli altri?</strong></summary>
@@ -467,5 +685,5 @@ Scrivere a **[segreteria@protezionecivilegenzano.it](mailto:segreteria@protezion
 
 ---
 
-**Ultimo aggiornamento**: 1 maggio 2026.
-**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h e h-ter) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 81/2008 · D.Lgs. 77/2005 (PCTO) · L. 145/2018 (art. 1 c. 785 monte ore PCTO) · D.M. 774/2019 (Linee guida PCTO) · D.Lgs. 62/2017 · D.M. 26/08/1992 (prevenzione incendi nelle scuole) · Raccomandazione UE 22 maggio 2018.
+**Ultimo aggiornamento**: 19 maggio 2026.
+**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h e h-ter) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 81/2008 · D.Lgs. 77/2005 (PCTO) · L. 145/2018 (art. 1 c. 785 monte ore PCTO) · D.M. 774/2019 (Linee guida PCTO) · D.Lgs. 62/2017 · D.M. 26/08/1992 (prevenzione incendi nelle scuole) · L. 353/2000 (Legge quadro incendi boschivi) · L.R. Lazio 14/2008 · L. 116/2021 (DAE) · D.Lgs. 117/2017 (Codice del Terzo Settore) · Decisione UE 1313/2013 (Meccanismo UCPM) · L. 107/2015 (autonomia scolastica) · Raccomandazione UE 22 maggio 2018.
