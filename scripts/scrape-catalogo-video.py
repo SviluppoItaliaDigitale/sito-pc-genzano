@@ -37,21 +37,77 @@ except ImportError:
     sys.exit(1)
 
 CANALI = {
+    # Tematici PC (no filtro lessicale: ogni loro video è pertinente)
     "io-non-rischio": {
         "nome": "Io non rischio",
         "url": "https://www.youtube.com/@io_non_rischio/videos",
+        "tematico_pc": True,
     },
     "dpc-gov": {
         "nome": "Dipartimento della Protezione Civile (PCM)",
         "url": "https://www.youtube.com/@DPCgov/videos",
+        "tematico_pc": True,
     },
     "abili-a-proteggere": {
         "nome": "Abili a Proteggere",
         "url": "https://www.youtube.com/@abiliaproteggere4520/videos",
+        "tematico_pc": True,
     },
+    "ingv-terremoti": {
+        "nome": "INGV — Istituto Nazionale di Geofisica e Vulcanologia",
+        "url": "https://www.youtube.com/@INGVterremoti/videos",
+        "tematico_pc": True,
+    },
+    "ingv-vulcani": {
+        "nome": "INGVvulcani — Osservatorio Vesuviano e Vulcani INGV",
+        "url": "https://www.youtube.com/@INGVvulcani/videos",
+        "tematico_pc": True,
+    },
+    "ispra-ambiente": {
+        "nome": "ISPRA — Istituto Superiore per la Protezione e la Ricerca Ambientale",
+        "url": "https://www.youtube.com/@ISPRAITALIA/videos",
+        "tematico_pc": True,
+    },
+    "vigili-del-fuoco": {
+        "nome": "Vigili del Fuoco",
+        "url": "https://www.youtube.com/@VigiliDelFuoco/videos",
+        "tematico_pc": True,
+    },
+    "croce-rossa": {
+        "nome": "Croce Rossa Italiana",
+        "url": "https://www.youtube.com/@crocerossaitaliana/videos",
+        "tematico_pc": True,
+    },
+    "cnr": {
+        "nome": "CNR — Consiglio Nazionale delle Ricerche",
+        "url": "https://www.youtube.com/@cnrweb/videos",
+        "tematico_pc": False,  # CNR copre tutta la ricerca: filtro PC necessario
+    },
+    # Divulgativi qualificati (con filtro lessicale PC, come Geopop)
     "geopop": {
         "nome": "Geopop — divulgazione scientifica",
         "url": "https://www.youtube.com/@geopop/videos",
+        "tematico_pc": False,
+    },
+    "natgeo-italia": {
+        "nome": "National Geographic Italia",
+        "url": "https://www.youtube.com/@natgeoit/videos",
+        "tematico_pc": False,
+    },
+    "rai-cultura": {
+        "nome": "Rai Cultura (documentari)",
+        "url": "https://www.youtube.com/@raicultura/videos",
+        "tematico_pc": False,
+    },
+    "cicap": {
+        "nome": "CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze",
+        "url": "https://www.youtube.com/@CICAP_it/videos",
+        "tematico_pc": False,
+    },
+    "link4universe": {
+        "nome": "Link4Universe — Adrian Fartade",
+        "url": "https://www.youtube.com/@link4universe/videos",
+        "tematico_pc": False,
     },
 }
 
@@ -104,6 +160,7 @@ def main() -> int:
             "nome": meta["nome"],
             "url": meta["url"],
             "video_count": len(videos),
+            "tematico_pc": meta.get("tematico_pc", False),
         }
         for v in videos:
             key = f"{ck}-{v['id']}"

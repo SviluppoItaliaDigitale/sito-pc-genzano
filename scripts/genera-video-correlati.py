@@ -127,17 +127,16 @@ LEMMA_PC = {
 }
 
 
-# Whitelist lessicale PC-specifica per Geopop. Geopop ha ~1260 video di
-# divulgazione scientifica generale (geologia, biologia, fisica, archeologia,
-# curiosità). Solo una frazione tratta temi di Protezione Civile, disastri,
-# eventi storici di interesse PC. Per evitare falsi positivi nel cross-match,
-# i video Geopop vengono ammessi al match SOLO se il titolo contiene almeno
-# una keyword di questa lista (case-insensitive, substring match).
+# Whitelist lessicale PC-specifica per i canali divulgativi non-tematici
+# (Geopop, Focus, NatGeo Italia, Rai Documentari, CICAP, Link4Universe,
+# CNR). Questi canali pubblicano molti contenuti fuori scope PC; vengono
+# ammessi al cross-match SOLO se il titolo contiene almeno una keyword di
+# questa lista (case-insensitive, substring match).
 #
-# Gli altri 3 canali (DPCgov, Io non rischio, Abili a Proteggere) sono
-# canali tematici PC e non hanno bisogno di filtro: ogni loro video è
-# pertinente per definizione.
-GEOPOP_PC_KEYWORDS = [
+# I canali tematici PC (DPCgov, Io non rischio, Abili a Proteggere, INGV,
+# ISPRA, VVF, CRI, CMCC) sono marcati tematico_pc=True nel catalogo e
+# entrano nel match senza filtro.
+DIVULGATIVO_PC_KEYWORDS = [
     # Sismico
     "terremot", "sism", "magnitud", "mercalli", "faglia", "faglie", "epicentr",
     "tettonic", "earthquake", "richter", "subduzion", "subduction",
@@ -207,6 +206,7 @@ GEOPOP_PC_KEYWORDS = [
     "chicxulub",
     # Cyber e infrastrutture digitali (di interesse PC)
     "cyberattacc", "cyberattack", "ransomware", "blackout informatic",
+    "infrastruttura critica", "critical infrastructure",
     # Eventi storici Italia (recuperati: erano falsi negativi nel test iniziale)
     "vermicino", "alfredino", "rampi",
     "torri gemelle", "world trade center", "twin towers", "9/11", "11 settembre",
@@ -220,15 +220,99 @@ GEOPOP_PC_KEYWORDS = [
     "crollo ", "collapse", "crollat",
     # Incidenti industriali
     "fabbrica esplosa", "industrial accident", "chemical spill",
+
+    # --- PC in senso ampio (estensione 2026-05-19): temi del sito che
+    # non ricadono nelle categorie "rischio naturale puro" ma sono parte
+    # integrante della Protezione Civile e della cittadinanza attiva. ---
+
+    # Operatività e mezzi
+    "primo soccorso", "first aid", "bls", "blsd", "dae", "defibrillator",
+    "defibrillator", "massaggio cardiaco", "rcp", "cpr", "rianimaz",
+    "antisoffocament", "heimlich", "manovre antisoffocamento",
+    "drone", "uav", "telerilevament", "remote sensing", "satellite",
+    "ricostruzione 3d", "3d reconstruction",
+    # Numeri e canali di emergenza
+    "numero unico", "single emergency number", "nue", "112", "118",
+    "it-alert", "cell broadcast", "wireless emergency alert",
+    "early warning", "sistema di allerta",
+    # Esercitazioni e formazione
+    "esercitazione ", "simulazione ", "drill ", "exercise ", "training ",
+    "addestrament", "formazione di emergenza",
+    # Volontariato e cittadinanza
+    "volontariat", "volunteer", "volunteering",
+    "cittadinanza attiv", "active citizenship",
+    "terzo settore", "third sector", "ets ",
+    "sussidiariet", "subsidiarit",
+    # PC europea
+    "ucpm", "ercc", "resceu", "rescue eu", "meccanismo unionale",
+    "civil protection mechanism", "european civil protection",
+    "copernicus ems", "copernicus emergency",
+    # Psicologia emergenza
+    "psicologia dell'emergenza", "psicologia emergenza",
+    "trauma psicologic", "stress post-traum", "ptsd",
+    "psychological first aid", "pfa ",
+    "resilienz", "resilience", "comunità resilienti",
+    # Inclusione e accessibilità
+    "disabilit", "disability", "inclusion", "inclusivit",
+    "accessibilit", "accessibility",
+    "persone vulnerabil", "vulnerable people", "vulnerabilit",
+    "didrr",
+    # Patrimonio culturale in emergenza
+    "patrimonio cultural", "cultural heritage in emergency",
+    "tutela beni cultural", "caschi blu cultura",
+    # Piano emergenza e kit
+    "piano di emergenza", "emergency plan", "emergency planning",
+    "kit di emergenza", "emergency kit", "go bag", "go-bag",
+    "piano comunale", "centro operativo comunale", "coc ",
+    "coi ", "centro operativo intercomunale",
+    "evacuazione", "evacuation", "evacuat",
+    # Cartografia e GIS
+    "cartografia", "mappa del rischio", "risk map", "gis ",
+    "carta tematic", "thematic map",
+    # Ricostruzione, recovery
+    "ricostruzione", "rebuilding", "post-disaster recovery", "ricostruir",
+    # Norme e codici
+    "codice della protezione civile", "civil protection code",
+    "io non rischio", "campagna io non rischio",
+    "sendai framework", "hyogo framework",
+    "iso 22324", "iso 22329", "iso 22361", "iso 22395", "iso 31000",
+    # Sicurezza nei luoghi di lavoro (collegato a PCTO)
+    "sicurezza sul lavoro", "workplace safety", "occupational safety",
+    "dlgs 81", "decreto 81", "d.lgs. 81",
+    "dpi ", "dispositivi protezione individual",
+    # Stradale (incidenti e gestione)
+    "incidente stradale", "road accident", "traffic accident",
+    "sicurezza stradale", "road safety",
+    # Antisismica e costruzione
+    "antisismic", "isolator", "base isolation", "miglioramento sismico",
+    "adeguamento sismic", "vulnerabilità sismic",
+    # Animali in emergenza
+    "animali in emergenza", "pets in emergency", "pet evacuation",
+    # Fake news e comunicazione di crisi
+    "fake news", "disinformazion", "disinformation", "misinformation",
+    "comunicazione di crisi", "crisis communication",
+    "verifica delle fonti", "fact check",
+    # Radiocomunicazioni
+    "radioamator", "ham radio", "banda cb", "vhf", "uhf",
+    "radio di emergenza",
+    # Allerta meteo (specifico PC)
+    "allerta meteo", "weather warning", "codice giallo", "codice arancion",
+    "codice rosso", "centro funzionale",
+    # Sicurezza ambientale e prevenzione
+    "prevenzione", "prevention", "mitigazione del rischio",
+    "risk mitigation", "early action",
 ]
 
 
-def _geopop_pc_relevant(title: str) -> bool:
-    """True se il titolo Geopop contiene almeno una keyword PC-tematica.
+def _divulgativo_pc_relevant(title: str) -> bool:
+    """True se il titolo di un canale divulgativo non-tematico contiene
+    almeno una keyword PC-tematica (in senso ampio: rischi naturali,
+    eventi storici, primo soccorso, volontariato, PC europea, psicologia
+    emergenza, inclusione, comunicazione di crisi, ecc.).
     Match case-insensitive su substring (non word-boundary, perché molte
     voci sono prefissi tipo 'terremot' per coprire terremoto/terremoti)."""
     t = title.lower()
-    return any(kw in t for kw in GEOPOP_PC_KEYWORDS)
+    return any(kw in t for kw in DIVULGATIVO_PC_KEYWORDS)
 
 
 def tokenize(text: str) -> set[str]:
@@ -372,14 +456,19 @@ def main() -> int:
     print(f"Pagine sito analizzate: {len(pages)}", file=sys.stderr)
 
     # Costruisci IDF dei video (frequenza delle keyword nei titoli video).
-    # Filtra a monte i video Geopop: solo quelli con titolo PC-pertinente
-    # entrano nel cross-match. Geopop ha ~80% di video fuori scope PC
-    # (archeologia, biologia, fisica generale, curiosità).
+    # Filtra a monte i video dei canali NON-TEMATICI: solo quelli con
+    # titolo PC-pertinente (whitelist DIVULGATIVO_PC_KEYWORDS) entrano
+    # nel cross-match. I canali tematici PC (DPCgov, INGV, ISPRA, VVF,
+    # CRI, CMCC, Io non rischio, Abili a Proteggere) sono marcati
+    # tematico_pc=True nel catalogo e passano senza filtro.
+    canali_tematici = {ck for ck, cm in catalogo.get("canali", {}).items()
+                       if cm.get("tematico_pc")}
     video_keywords = {}
-    skipped_geopop = 0
+    skipped_divulgativo = 0
     for key, v in videos.items():
-        if v.get("canale") == "geopop" and not _geopop_pc_relevant(v["titolo"]):
-            skipped_geopop += 1
+        ck = v.get("canale", "")
+        if ck not in canali_tematici and not _divulgativo_pc_relevant(v["titolo"]):
+            skipped_divulgativo += 1
             continue
         kw = tokenize(v["titolo"])
         if not kw:
@@ -390,7 +479,7 @@ def main() -> int:
             "is_lis": v["id"] in lis_video_ids,
         }
     print(f"Video candidati: {len(video_keywords)} "
-          f"(Geopop filtrati out per non-pertinenza PC: {skipped_geopop})",
+          f"(divulgativi filtrati out per non-pertinenza PC: {skipped_divulgativo})",
           file=sys.stderr)
 
     # IDF su pagine sito: parole molto frequenti = peso 0.2
@@ -430,12 +519,13 @@ def main() -> int:
                         if k in title_desc_kw and weights.get(k, 1.0) >= 0.5]
             if not anchored:
                 continue
-            # Vincolo extra per Geopop: visto che il canale ha titoli molto
-            # eterogenei (alcuni passano la whitelist PC ma toccano temi
-            # ortogonali tipo "10 curiosità sulla Sicilia"), serve un anchor
-            # più stringente. Almeno una keyword anchored deve avere peso
-            # IDF >= 0.7 (cioè parola tecnico-specifica, non comune nel sito).
-            if vdata["v"].get("canale") == "geopop":
+            # Vincolo extra per canali divulgativi non-tematici: visto che
+            # hanno titoli molto eterogenei (alcuni passano la whitelist PC
+            # ma toccano temi ortogonali tipo "10 curiosità sulla Sicilia"),
+            # serve un anchor più stringente. Almeno una keyword anchored
+            # deve avere peso IDF >= 0.7 (parola tecnico-specifica, non
+            # comune nel sito).
+            if vdata["v"].get("canale", "") not in canali_tematici:
                 strong_anchored = [k for k in anchored
                                    if weights.get(k, 1.0) >= 0.7]
                 if not strong_anchored:
