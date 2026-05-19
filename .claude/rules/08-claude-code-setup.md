@@ -1,6 +1,99 @@
 # Claude Code — Setup ambiente di sviluppo
 
-Questo file documenta come configurare l'ambiente di Claude Code per lavorare sul sito senza essere bloccato dalla sandbox di sicurezza, in particolare per il download di foto da fonti libere.
+Questo file documenta come configurare l'ambiente di Claude Code per lavorare sul sito senza essere bloccato dalla sandbox di sicurezza, in particolare per il download di foto da fonti libere e per la lettura di siti istituzionali con SPA JS o anti-bot.
+
+## Firecrawl MCP — canale primario per siti SPA/anti-bot/SSL-CA-restricted
+
+🟢 **Installato 19 maggio 2026** come MCP server stdio scope user (`firecrawl-mcp` v3.17.0 via `npx`, API key in env `FIRECRAWL_API_KEY`). Tier free: **500 pagine/mese**, 10 req/min.
+
+**Quando usare Firecrawl al posto di WebFetch:**
+
+- Siti **SPA JavaScript** (Next.js, React, Vue) dove WebFetch riceve solo "Loading..." o language selector
+- Siti con **anti-bot WAF** (Cloudflare, Akamai) che restituiscono 403 a WebFetch
+- Siti con **certificati SSL su CA non incluse nella sandbox** Claude Code (`.gov.it`/`.giustizia.it` con CA Sogei o simili) — Firecrawl gira su infra con CA store completo
+- Pagine di **bollettini PDF** rese dinamicamente dietro JS
+
+**Quando NON usare Firecrawl:**
+
+- Siti **già leggibili via WebFetch** (Normattiva, GU, Camera, Regione Lazio, Wikipedia): risparmia pagine del tier.
+- **Download diretto di file** (PDF, foto): usa `curl` con l'allowlist sandbox.
+- Siti con **DNS failure/ECONNREFUSED**: il sito è realmente offline, nessun proxy lo risuscita.
+
+**Quadro siti istituzionali al 19 maggio 2026 (test batch 13 URL):**
+
+| Sito | Pre-Firecrawl | Post-Firecrawl |
+|---|---|---|
+| DPC `www.protezionecivile.gov.it` | SPA "Loading..." | ✅ 11.458 char markdown |
+| EUR-Lex `eur-lex.europa.eu` | Contenuto vuoto | ✅ 6.085 char |
+| DG ECHO `civil-protection-humanitarian-aid.ec.europa.eu` | Solo language selector | ✅ Leggibile (poche righe per home, ma pagine interne OK) |
+| UNDRR `www.undrr.org` | 403 anti-bot | ✅ 13.204 char |
+| OCHA `www.unocha.org` | 403 anti-bot | ✅ 25.285 char |
+| Crusca `accademiadellacrusca.it` | 403 anti-bot | ✅ 12.386 char |
+| Europeana `www.europeana.eu` | 403 anti-bot | ✅ 22.147 char |
+| Library of Congress `www.loc.gov` | 403 anti-bot | ✅ 18.056 char |
+| Senato `www.senato.it` | 403 anti-bot | ✅ 17.303 char |
+| Quirinale `www.quirinale.it` | 403 anti-bot | ✅ 7.712 char |
+| Giustizia Amministrativa `www.giustizia-amministrativa.it` | SSL CA error | ✅ 33.583 char (era problema CA store sandbox) |
+| ENEA `www.enea.it` | SSL error | ✅ 36.086 char |
+| INGV terremoti `terremoti.ingv.it` | SSL error | ✅ 34.419 char con lista terremoti realtime |
+
+**Siti che restano inaccessibili anche con Firecrawl:**
+
+| Sito | Motivo | Note |
+|---|---|---|
+| **Geoportale Nazionale MASE** (`gn.mase.gov.it`) | WAF aggressivo (Access Denied 207 byte) | Sicurezza lato server, non risolvibile lato client |
+| **Cassazione SentenzeWeb** (`italgiure.giustizia.it`) | Timeout 30s (HTTP 408) | Sito raggiungibile ma lento; aumentare `timeout: 60000` nel JSON request o retry |
+| **Comune Genzano** (`www.comune.genzanodiroma.rm.it`) | DNS resolution failed | Dominio davvero non risponde — sito offline o cambio URL |
+| **USR Lazio** (`www.lazio.istruzione.it`) | ECONNREFUSED | Server offline; cercare endpoint alternativo |
+| **protezionecivile.regione.lazio.it** | ECONNREFUSED | Sotto-sito offline; usare `www.regione.lazio.it` |
+
+**Comando Firecrawl via MCP (sessione Claude Code):**
+
+Una volta riavviata la sessione dopo l'install, i tool MCP `mcp__firecrawl__scrape` (e `_crawl`, `_map`, `_search`) sono direttamente invocabili. Esempio in conversazione: *"usa Firecrawl per leggere la homepage DPC e estrarre allerta meteo nazionale"*.
+
+**Comando Firecrawl via curl (qualsiasi sessione, anche cloud-side):**
+
+```bash
+curl -s -X POST https://api.firecrawl.dev/v1/scrape \
+  -H "Authorization: Bearer $FIRECRAWL_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"url": "<URL>", "formats": ["markdown"], "onlyMainContent": true, "timeout": 30000}'
+```
+
+**Costo per pagina:** 1 page del tier free. Funzionalità avanzate (`crawl` multi-pagina, `search`, `extract` LLM-powered) consumano da 1 a 5 pagine per chiamata.
+
+**Workflow editoriale aggiornato:**
+
+1. **Lettura singola URL nota** (es. circolare DPC specifica, sentenza Corte Costituzionale): Firecrawl `scrape` → 1 page.
+2. **Sweep multi-pagina dello stesso dominio** (es. tutti i comunicati DPC del mese): Firecrawl `crawl` con `maxDepth: 2` e `limit: 20` → ~20 page.
+3. **Ricerca trasversale tematica** (es. "circolari volontariato PC 2026"): Firecrawl `search` → 5 page.
+4. **Estrazione strutturata** (es. tutti i numeri di articolo + data di un atto): Firecrawl `extract` con schema JSON → 1-5 page.
+
+**Aggiornamenti workflow CI futuri**: il workflow `.github/workflows/normativa-watcher.yml` può aggiungere il DPC come fonte monitorata (oggi è in whitelist `08-claude-code-setup.md` ma resta inutilizzabile via WebFetch). Costo stimato: ~10 page/mese sul tier free.
+
+## Playwright MCP — browser automation per smoke test post-deploy
+
+🟢 **Installato 19 maggio 2026** come MCP server stdio scope user (`@executeautomation/playwright-mcp-server` v1.0.12 via `npx`). Niente API key. Al primo uso scarica Chromium (~150 MB).
+
+**Quando usare Playwright al posto di WebFetch/Firecrawl:**
+
+- **Smoke test live post-deploy**: clic veri sui bottoni, scroll fino a certi elementi, verifica che JS lato client esegua, screenshot di pagine specifiche.
+- **Test interattivi del FAB accessibilità**: aprire il dialog, cambiare contrasto, verificare che il sito si ridipinga.
+- **Verifica funzionamento moduli JS** (assistente, Pagefind, glossario inline) con browser reale.
+- **Reproduce bug visual-only** che `pc-deploy-validator` (HTTP-only) e Lighthouse non catturano.
+
+**Quando NON usare Playwright:**
+
+- Per leggere contenuto testuale di una pagina (usa WebFetch o Firecrawl, molto più veloci).
+- Per audit accessibility (usa Lighthouse + axe-core, sono specifici).
+
+**Integrazione con agent esistenti:**
+- `pc-deploy-validator` (Bash-only oggi) può aggiungere uno step opzionale di smoke test interattivo prima dell'OK al merge.
+- `browser-qa` skill globale ECC trova qui il backend operativo concreto.
+
+---
+
+
 
 ## Sandbox CLOUD vs sandbox LOCALE — non sono la stessa cosa
 
@@ -239,29 +332,38 @@ Estensione della whitelist con 25 ulteriori siti istituzionali testati e funzion
 
 **Nessuna API key richiesta** per nessuna di queste fonti.
 
-### Siti testati che NON funzionano (motivo)
+### Siti testati che NON funzionavano via WebFetch (status aggiornato 19 maggio 2026)
 
-| Sito | Causa | Risolvibile dalla whitelist? |
+🟢 **Aggiornamento maggio 2026**: dopo l'installazione di Firecrawl MCP, **13 dei 18 siti** precedentemente bloccati sono ora leggibili tramite il canale Firecrawl (vedi sezione "Firecrawl MCP" in cima al file). Vincolo: 1 pagina del tier free (500/mese) per richiesta. Lista completa:
+
+| Sito | Causa originale (WebFetch) | Status ora |
 |---|---|---|
-| **Senato** (`www.senato.it`) | HTTP 403 Forbidden anti-bot | No — server-side |
-| **Quirinale** (`www.quirinale.it`) | HTTP 403 Forbidden anti-bot | No — server-side |
-| **Giustizia Amministrativa** (`www.giustizia-amministrativa.it`) | Errore certificato SSL (CA giustizia non riconosciuta) | No — infrastrutturale |
-| **Cassazione SentenzeWeb** (`www.italgiure.giustizia.it`) | Errore certificato SSL stessa CA | No — infrastrutturale |
-| **ENEA** (`www.enea.it`) | Errore certificato SSL | No — infrastrutturale |
-| **terremoti.ingv.it** | Errore certificato SSL | No — provare invece `www.ingv.it` |
-| **Parco Castelli Romani** (`www.parcocastelliromani.it`) | Errore certificato SSL | No — infrastrutturale |
-| **Comune Genzano** (`www.comune.genzanodiroma.rm.it`) | ECONNREFUSED | No — sito offline o cambio URL |
-| **USR Lazio** (`www.lazio.istruzione.it`) | ECONNREFUSED | No — server offline |
-| **protezionecivile.regione.lazio.it** | ECONNREFUSED | No — sottosito offline (usare `www.regione.lazio.it`) |
-| **DG ECHO** (`civil-protection-humanitarian-aid.ec.europa.eu`) | Solo language selector visibile | SPA JS — pagine specifiche potrebbero funzionare |
-| **EUR-Lex** (`eur-lex.europa.eu`) | Contenuto vuoto | SPA JS — pagine specifiche potrebbero funzionare |
-| **DPC** (`www.protezionecivile.gov.it`) | Solo "Loading..." | SPA JS — endpoint REST forse OK |
-| **UNDRR** (`www.undrr.org`) | HTTP 403 Forbidden | No — anti-bot |
-| **OCHA** (`www.unocha.org`) | HTTP 403 Forbidden | No — anti-bot |
-| **Crusca** (`accademiadellacrusca.it`) | HTTP 403 Forbidden | No — anti-bot |
-| **Europeana** (`www.europeana.eu`) | HTTP 403 Forbidden | No — anti-bot |
-| **Library of Congress** (`www.loc.gov`) | HTTP 403 Forbidden | No — anti-bot |
-| **Geoportale Nazionale MASE** (`gn.mase.gov.it`) | HTTP 403 Forbidden | No — anti-bot |
+| **DPC** (`www.protezionecivile.gov.it`) | Solo "Loading..." (SPA JS) | 🟢 Firecrawl OK (11.458 char) |
+| **EUR-Lex** (`eur-lex.europa.eu`) | Contenuto vuoto (SPA JS) | 🟢 Firecrawl OK (6.085 char) |
+| **DG ECHO** (`civil-protection-humanitarian-aid.ec.europa.eu`) | Solo language selector (SPA JS) | 🟢 Firecrawl OK (pagine interne) |
+| **UNDRR** (`www.undrr.org`) | HTTP 403 Forbidden anti-bot | 🟢 Firecrawl OK (13.204 char) |
+| **OCHA** (`www.unocha.org`) | HTTP 403 Forbidden anti-bot | 🟢 Firecrawl OK (25.285 char) |
+| **Crusca** (`accademiadellacrusca.it`) | HTTP 403 Forbidden anti-bot | 🟢 Firecrawl OK (12.386 char) |
+| **Europeana** (`www.europeana.eu`) | HTTP 403 Forbidden anti-bot | 🟢 Firecrawl OK (22.147 char) |
+| **Library of Congress** (`www.loc.gov`) | HTTP 403 Forbidden anti-bot | 🟢 Firecrawl OK (18.056 char) |
+| **Senato** (`www.senato.it`) | HTTP 403 Forbidden anti-bot | 🟢 Firecrawl OK (17.303 char) |
+| **Quirinale** (`www.quirinale.it`) | HTTP 403 Forbidden anti-bot | 🟢 Firecrawl OK (7.712 char) |
+| **Giustizia Amministrativa** (`www.giustizia-amministrativa.it`) | SSL CA error (CA giustizia non in sandbox) | 🟢 Firecrawl OK (33.583 char) — era problema CA store sandbox locale, non server |
+| **ENEA** (`www.enea.it`) | SSL CA error | 🟢 Firecrawl OK (36.086 char) |
+| **terremoti.ingv.it** | SSL CA error | 🟢 Firecrawl OK (34.419 char, lista terremoti realtime) |
+| **Cassazione SentenzeWeb** (`www.italgiure.giustizia.it`) | SSL CA error | 🟡 Firecrawl raggiunge ma va in timeout 30s (HTTP 408). Possibile con `timeout: 60000` + retry |
+| **Geoportale Nazionale MASE** (`gn.mase.gov.it`) | HTTP 403 Forbidden anti-bot | ❌ Firecrawl bloccato da WAF aggressivo (Access Denied 207 byte). Server-side hard-block |
+| **Parco Castelli Romani** (`www.parcocastelliromani.it`) | SSL CA error | ❓ Non testato post-Firecrawl, probabilmente OK come gli altri SSL CA |
+| **Comune Genzano** (`www.comune.genzanodiroma.rm.it`) | ECONNREFUSED | ❌ DNS resolution failed anche via Firecrawl — sito offline o cambio URL |
+| **USR Lazio** (`www.lazio.istruzione.it`) | ECONNREFUSED | ❌ Server offline; cercare endpoint alternativo |
+| **protezionecivile.regione.lazio.it** | ECONNREFUSED | ❌ Sotto-sito offline; usare `www.regione.lazio.it` |
+
+**Pattern interpretativi:**
+- **SPA JS** (DPC, EUR-Lex, DG ECHO): risolto da Firecrawl che renderizza Chromium headless lato server.
+- **403 anti-bot**: risolto da pool di proxy + browser fingerprint reali di Firecrawl.
+- **SSL CA error**: era problema della sandbox locale Claude Code (CA store incompleto), non del server. Firecrawl ha CA store completo.
+- **DNS failure / ECONNREFUSED**: il server è davvero down o ha cambiato URL — nessun canale lo risuscita.
+- **WAF aggressivo** (MASE Geoportale): firewall server-side che blocca anche Firecrawl. Hard-block, niente da fare lato client.
 
 ### Cosa funziona bene via WebFetch
 
