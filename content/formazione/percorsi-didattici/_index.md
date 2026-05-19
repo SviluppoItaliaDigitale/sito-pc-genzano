@@ -124,11 +124,18 @@ Scegli il riquadro che corrisponde al tempo che puoi davvero dedicare. I percors
 
 ### Se hai una sola ora {#tempo-1ora}
 
-Una buona ora vale più di tre ore distratte. Scegli **un solo tema**, lavoraci con calma, lascia 5-10 minuti finali per le domande dei ragazzi. Tre opzioni che funzionano:
+Una buona ora vale più di tre ore distratte. Scegli **un solo tema**, lavoraci con calma, lascia 5-10 minuti finali per le domande dei ragazzi. Le tracce qui sotto sono ordinate dalla fascia più piccola alla più grande e coprono autoprotezione, pianificazione, comunicazione, cittadinanza.
 
-- **Il 112** — Ora 2 del [Percorso 1 (Primaria)](#percorso-1) o Ora 1 di [chiamata 112 secondaria](/formazione/schede-stampabili/chiamo-112-secondaria/). Quando si chiama, cosa si dice, cosa NON si dice, simulazione.
-- **DROP-COVER-HOLD ON (terremoto)** — Lezione 1 del [Percorso 3](#percorso-3). I tre comportamenti corretti in casa, a scuola, all'aperto.
-- **Codici colore dell'allerta meteo** — Ora 1 del [Percorso 2](#percorso-2). Verde, giallo, arancione, rosso: cosa significano.
+- **La tartaruga saggia (terremoto raccontato come fiaba)** — Lezione 1 del [Percorso 3](#percorso-3) per la fascia infanzia. Scheda [Tartaruga saggia — Infanzia](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) + colorazione [Terremoto — Infanzia](/formazione/schede-stampabili/colorare-terremoto-infanzia/). Adatta a 5-7 anni.
+- **Il 112 — quando si chiama, cosa si dice, cosa NON si dice** — Ora 2 del [Percorso 1](#percorso-1) per la primaria o Ora 1 della scheda [Chiamo il 112 — Secondaria](/formazione/schede-stampabili/chiamo-112-secondaria/). Spiegazione + simulazione a coppie con un dispatcher fittizio.
+- **DROP-COVER-HOLD ON (terremoto)** — Lezione 1 del [Percorso 3](#percorso-3). I tre comportamenti corretti in casa, a scuola, all'aperto. Funziona dall'infanzia alla secondaria con materiali differenziati.
+- **Codici colore dell'allerta meteo** — Ora 1 del [Percorso 2](#percorso-2). Verde, giallo, arancione, rosso: cosa significano e che comportamento richiedono. Scheda [Codici allerta e numeri — Primaria](/formazione/schede-stampabili/codici-allerta-numeri-primaria/).
+- **Decodifica di un bollettino di allerta reale** — Ora 2 del [Percorso 2](#percorso-2). Si lavora su un bollettino del **Centro Funzionale Regionale Lazio** del giorno e si estraggono tipo di rischio, area, livello, finestra temporale. Adatta a primaria IV-V e secondaria I.
+- **Piano di emergenza familiare** — Lezione 1 del [Percorso 4](#percorso-4). Presentazione del modello + compilazione iniziale in classe della scheda [Piano familiare — Primaria](/formazione/schede-stampabili/piano-familiare-primaria/) o [Piano familiare — Secondaria I](/formazione/schede-stampabili/piano-familiare-secondaria/). Il completamento è compito a casa con i genitori.
+- **Vie di fuga e punto di raccolta della classe** — Lezione 2 del [Percorso 3](#percorso-3). Lettura del piano di evacuazione scolastico + scheda [Labirinto evacuazione](/formazione/schede-stampabili/labirinto-evacuazione-primaria/) o equivalente per fascia. Si svolge in classe senza coinvolgere il RSPP (non è una prova di evacuazione, è la sua preparazione concettuale).
+- **Riconoscere una fake news in emergenza** — Ora 1 del [Percorso 5](#percorso-5). Cinque criteri concreti (fonte, data, foto, account, link) applicati a esempi reali. Scheda [Fake news in emergenza — Secondaria I](/formazione/schede-stampabili/fake-news-emergenza-secondaria/). Adatta a secondaria I e II.
+- **IT-alert: perché suona, come si distingue dal phishing** — Ora 2 del [Percorso 5](#percorso-5). Cos'è il Cell Broadcast, perché non chiede password o dati, come riconoscere un messaggio vero. Scheda [IT-alert e comunicazioni ufficiali — Secondaria I](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) + articolo [IT-alert: storia, tecnologia, accessibilità e falsi miti](/comunicazioni/2026-05-19-it-alert-tecnologia-accessibilita-falsi-miti/).
+- **Il volontariato di PC: chi siamo, cosa NON facciamo** — Ora 4 del [Percorso 1](#percorso-1) o sezione cittadinanza della secondaria. I compiti consentiti e quelli vietati al volontariato di PC nelle manifestazioni pubbliche secondo la **Circolare DPC del 6 agosto 2018** (no regolazione del traffico, no palette dirigitraffico, no servizi di polizia stradale: sono delle Forze dell'Ordine e della Polizia Locale). Distinguere bene il proprio ruolo è la prima forma di rispetto delle altre istituzioni.
 
 ### Se hai 2-3 ore {#tempo-2-3ore}
 
