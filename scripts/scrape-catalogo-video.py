@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 scrape-catalogo-video.py — Scarica il catalogo completo (storico) di tutti
-i video dai 3 canali YouTube monitorati e salva il risultato in
+i video dai 4 canali YouTube monitorati e salva il risultato in
 data/video_dpc_catalogo.yaml.
 
 Usa yt-dlp per estrarre la lista video (extract_flat = no download, solo
@@ -9,9 +9,16 @@ metadata). I canali monitorati:
   - Io non rischio (DPC + ANPAS + INGV + RELUIS + CIMA)
   - DPCgov (Dipartimento Protezione Civile, PCM, canale ufficiale)
   - Abili a Proteggere (Cooperativa Sociale Europe Consulting)
+  - Geopop (divulgazione scientifica di disastri naturali, geologia,
+    vulcani, terremoti, eventi storici e antropici — fonte aggiunta a
+    maggio 2026 su richiesta editoriale per arricchire la sezione
+    "Approfondimenti video" sui contenuti del sito con ricostruzioni
+    divulgative dei principali eventi PC trattati)
 
 Il catalogo è poi usato da scripts/genera-video-correlati.py per il
-cross-match con i contenuti del sito.
+cross-match con i contenuti del sito. La selezione resta editoriale:
+i video Geopop fuori scope PC (archeologia, biologia, fisica generale)
+emergeranno con score basso nel cross-match e non verranno proposti.
 
 Uso: python3 scripts/scrape-catalogo-video.py [--limit N]
 """
@@ -41,6 +48,10 @@ CANALI = {
     "abili-a-proteggere": {
         "nome": "Abili a Proteggere",
         "url": "https://www.youtube.com/@abiliaproteggere4520/videos",
+    },
+    "geopop": {
+        "nome": "Geopop — divulgazione scientifica",
+        "url": "https://www.youtube.com/@geopop/videos",
     },
 }
 
@@ -106,12 +117,12 @@ def main() -> int:
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
-        f.write(f"# Catalogo completo dei video LIS + eventi sui 3 canali YouTube\n")
+        f.write(f"# Catalogo completo dei video divulgativi sui 4 canali YouTube\n")
         f.write(f"# monitorati. Generato da scripts/scrape-catalogo-video.py.\n")
         f.write(f"# Aggiornato periodicamente; usato da scripts/genera-video-correlati.py\n")
         f.write(f"# per il cross-match con i contenuti del sito.\n")
         f.write(f"#\n")
-        f.write(f"# Totale: {total} video (3 canali).\n\n")
+        f.write(f"# Totale: {total} video ({len(CANALI)} canali).\n\n")
         yaml.safe_dump(catalogo, f, allow_unicode=True, sort_keys=True, width=120)
     print(f"\n✓ Scritto {out_path} con {total} video totali", file=sys.stderr)
     return 0

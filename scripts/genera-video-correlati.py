@@ -45,7 +45,16 @@ nuovo nuova nuovi nuove sicurezza articolo articoli volontari volontariato
 gennaio febbraio marzo aprile maggio giugno luglio agosto settembre ottobre novembre
 dicembre notte giorno giorni mese mesi anno anni mattina pomeriggio sera notte
 ieri oggi domani lunedì martedì mercoledì giovedì venerdì sabato domenica
-attivazione gestione presentazione interno esterno""".split())
+attivazione gestione presentazione interno esterno
+home work much find very this that these those here there with into very like
+what when where which whose whom whose were have having does have did doing done
+just from over more most less least some many other another only also still both
+each every same well way ways things kind kinds type types whose really
+about across after again against among around because before behind below beside
+between beyond during except inside outside through under above against
+will would could should might must shall used find finding work works
+ourselves yourself himself herself itself themselves ones really since
+""".split())
 
 # Pagine del sito da escludere dal cross-match (non avrebbe senso linkare
 # video correlati a pagine legali, tecniche, di servizio).
@@ -116,6 +125,110 @@ LEMMA_PC = {
     "rischi": "rischio",
     "fenomeni": "fenomeno",
 }
+
+
+# Whitelist lessicale PC-specifica per Geopop. Geopop ha ~1260 video di
+# divulgazione scientifica generale (geologia, biologia, fisica, archeologia,
+# curiosità). Solo una frazione tratta temi di Protezione Civile, disastri,
+# eventi storici di interesse PC. Per evitare falsi positivi nel cross-match,
+# i video Geopop vengono ammessi al match SOLO se il titolo contiene almeno
+# una keyword di questa lista (case-insensitive, substring match).
+#
+# Gli altri 3 canali (DPCgov, Io non rischio, Abili a Proteggere) sono
+# canali tematici PC e non hanno bisogno di filtro: ogni loro video è
+# pertinente per definizione.
+GEOPOP_PC_KEYWORDS = [
+    # Sismico
+    "terremot", "sism", "magnitud", "mercalli", "faglia", "faglie", "epicentr",
+    "tettonic", "earthquake", "richter", "subduzion", "subduction",
+    # Vulcanico
+    "vulcan", "eruzion", "magma", "lava", "cratere", "vesuvio", "etna", "stromboli",
+    "campi flegrei", "marsili", "krakat", "pompei", "ercolan",
+    "colli albani", "kilauea", "fuji", "mauna loa", "santorini", "tambora",
+    "yellowstone", "phlegr", "ischia", "volcan", "eruption",
+    "piroclast", "pyroclast", "lapilli", "tefra", "tephra", "bradisism", "bradyseism",
+    # Tsunami / maremoto
+    "tsunami", "maremoto", "onda anomala", "megaonda", "megatsunami",
+    # Idrogeologico
+    "frana", "frane", "alluvion", "idrogeologic", "valanga", "smottament",
+    "dissest", "esondazion", "piena ", "allagament", "nubifrag",
+    "flood", "landslide", "mudslide", "rockslide", "rockfall", "debris flow",
+    "avalanche", "voragine", "sinkhole",
+    # Incendi
+    "incendi", "antincend", "divamp", "rogo ", "boschiv",
+    "wildfire", "bushfire", "vegetation fire", "forest fire",
+    # Meteorologia estrema
+    "ondata di caldo", "heatwave", "heat wave", "caldo estremo",
+    "temporal", "tempesta", "uragan", "ciclon", "tornad", "grandin",
+    "hurricane", "typhoon", "cyclone", "tornado", "thunderstorm",
+    "vento forte", "raffica", "raffiche", "bora", "scirocco", "libeccio", "tramontana",
+    "strong wind", "nevicat", "gelat", "blizzard",
+    # Blackout / infrastrutture
+    "blackout", "interruzione di corrente", "crisi energetica",
+    "power outage", "power cut", "grid failure",
+    "diga ", "dighe", "vajont", "dam break", "dam failure", "dam collapse",
+    "ponte crollato", "morandi", "bridge collapse", "viadotto",
+    # Chimico / radiologico / nucleare
+    "inquinament", "radioattiv", "radioactive", "nuclear", "nucleare", "atomic",
+    "chernobyl", "fukushima", "seveso", "bhopal", "three mile island",
+    "contaminaz", "diossina", "dioxin", "scoria", "hazmat", "fallout",
+    "rifiuti tossici",
+    # Disastri / emergenze
+    "disastro", "disastr", "calamit", "catastrof", "emergenz", " crisi ",
+    "disaster", "catastrophe", "emergency",
+    # Eventi storici italiani
+    "aquila", "amatrice", "norcia", "irpinia", "friuli", "belice",
+    "stava", "versilia", "rigopiano", "polesine", "messina", "molise",
+    "sarno", "salerno", "lazio", "abruzzo",
+    # Eventi internazionali memorabili
+    "haiti", "lisbon", "lisbona", "san francisco", "tohoku", "indonesia",
+    "kobe", "spitak", "northridge", "valdivia",
+    # Protezione civile
+    "protezione civile", "civil protection", "soccors", "evacuaz", "salvataggi",
+    "rescue", "first responder",
+    # Clima
+    "climatic", "cambiamento climatico", "climate change", "global warming",
+    "riscaldamento global", "siccit", "drought", "carestia", "famine",
+    "el nino", "la nina", "monsoni", "monsoon", "desertificaz",
+    # Pandemie / sanità di massa
+    "pandemi", "epidem", "spagnola", "peste nera", "black death", "plague",
+    "ebola", "covid", "sars", "vaiolo", "smallpox", "colera", "cholera",
+    "h1n1", "h5n1",
+    # "Cosa succede se" (pattern Geopop molto usato, pertinente PC)
+    "cosa succede se", "cosa succederebbe", "what happens if", "what would happen",
+    "what if a", "what if the", "what if an",
+    # Esplosioni
+    "esplosion", "explosion", "blast",
+    # Geofisica
+    "placca", "rift", "polo magnetico", "magnetic pole", "campo magnetico",
+    "magnetosfera", "ionosfera",
+    # Astronomia (impatti)
+    "asteroid", "meteorit", "comet ", "cometa", "impact crater", "tunguska",
+    "chicxulub",
+    # Cyber e infrastrutture digitali (di interesse PC)
+    "cyberattacc", "cyberattack", "ransomware", "blackout informatic",
+    # Eventi storici Italia (recuperati: erano falsi negativi nel test iniziale)
+    "vermicino", "alfredino", "rampi",
+    "torri gemelle", "world trade center", "twin towers", "9/11", "11 settembre",
+    "monte bianco", "mont blanc", "tunnel", "galleria",
+    "moby prince", "salermo", "linate",
+    "ustica",
+    # Geologia applicata
+    "geotermic", "geothermal", "stratovulcan", "calder",
+    "scossa", "ipocentro",
+    # Crollo di edifici/strutture
+    "crollo ", "collapse", "crollat",
+    # Incidenti industriali
+    "fabbrica esplosa", "industrial accident", "chemical spill",
+]
+
+
+def _geopop_pc_relevant(title: str) -> bool:
+    """True se il titolo Geopop contiene almeno una keyword PC-tematica.
+    Match case-insensitive su substring (non word-boundary, perché molte
+    voci sono prefissi tipo 'terremot' per coprire terremoto/terremoti)."""
+    t = title.lower()
+    return any(kw in t for kw in GEOPOP_PC_KEYWORDS)
 
 
 def tokenize(text: str) -> set[str]:
@@ -258,9 +371,16 @@ def main() -> int:
         })
     print(f"Pagine sito analizzate: {len(pages)}", file=sys.stderr)
 
-    # Costruisci IDF dei video (frequenza delle keyword nei titoli video)
+    # Costruisci IDF dei video (frequenza delle keyword nei titoli video).
+    # Filtra a monte i video Geopop: solo quelli con titolo PC-pertinente
+    # entrano nel cross-match. Geopop ha ~80% di video fuori scope PC
+    # (archeologia, biologia, fisica generale, curiosità).
     video_keywords = {}
+    skipped_geopop = 0
     for key, v in videos.items():
+        if v.get("canale") == "geopop" and not _geopop_pc_relevant(v["titolo"]):
+            skipped_geopop += 1
+            continue
         kw = tokenize(v["titolo"])
         if not kw:
             continue
@@ -269,7 +389,9 @@ def main() -> int:
             "kw": kw,
             "is_lis": v["id"] in lis_video_ids,
         }
-    print(f"Video candidati: {len(video_keywords)}", file=sys.stderr)
+    print(f"Video candidati: {len(video_keywords)} "
+          f"(Geopop filtrati out per non-pertinenza PC: {skipped_geopop})",
+          file=sys.stderr)
 
     # IDF su pagine sito: parole molto frequenti = peso 0.2
     df = defaultdict(int)
@@ -308,6 +430,16 @@ def main() -> int:
                         if k in title_desc_kw and weights.get(k, 1.0) >= 0.5]
             if not anchored:
                 continue
+            # Vincolo extra per Geopop: visto che il canale ha titoli molto
+            # eterogenei (alcuni passano la whitelist PC ma toccano temi
+            # ortogonali tipo "10 curiosità sulla Sicilia"), serve un anchor
+            # più stringente. Almeno una keyword anchored deve avere peso
+            # IDF >= 0.7 (cioè parola tecnico-specifica, non comune nel sito).
+            if vdata["v"].get("canale") == "geopop":
+                strong_anchored = [k for k in anchored
+                                   if weights.get(k, 1.0) >= 0.7]
+                if not strong_anchored:
+                    continue
             # Score posizionale: title × 3, desc × 2, body × 1
             score = 0.0
             for k in overlap:
