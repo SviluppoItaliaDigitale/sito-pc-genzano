@@ -63,26 +63,13 @@ CANALI = {
         "url": "https://www.youtube.com/@INGVvulcani/videos",
         "tematico_pc": True,
     },
-    "ispra-ambiente": {
-        "nome": "ISPRA — Istituto Superiore per la Protezione e la Ricerca Ambientale",
-        "url": "https://www.youtube.com/@ISPRAITALIA/videos",
-        "tematico_pc": True,
-    },
-    "vigili-del-fuoco": {
-        "nome": "Vigili del Fuoco",
-        "url": "https://www.youtube.com/@VigiliDelFuoco/videos",
-        "tematico_pc": True,
-    },
-    "croce-rossa": {
-        "nome": "Croce Rossa Italiana",
-        "url": "https://www.youtube.com/@crocerossaitaliana/videos",
-        "tematico_pc": True,
-    },
-    "cnr": {
-        "nome": "CNR — Consiglio Nazionale delle Ricerche",
-        "url": "https://www.youtube.com/@cnrweb/videos",
-        "tematico_pc": False,  # CNR copre tutta la ricerca: filtro PC necessario
-    },
+    # Canali istituzionali che NON hanno canale YouTube ricco al
+    # 2026-05-19 (verificato con yt-dlp): ISPRA (handle 404), Vigili del
+    # Fuoco (channel does not have videos tab), Croce Rossa Italiana (2
+    # video soli), CNR (4 video soli). Pubblicano principalmente su
+    # altri canali (siti istituzionali, social, archivi). Skip per ora.
+    # Saranno reinseriti se si trova un handle pertinente o se cambia
+    # la loro policy editoriale di pubblicazione video.
     # Divulgativi qualificati (con filtro lessicale PC, come Geopop)
     "geopop": {
         "nome": "Geopop — divulgazione scientifica",
@@ -107,6 +94,16 @@ CANALI = {
     "link4universe": {
         "nome": "Link4Universe — Adrian Fartade",
         "url": "https://www.youtube.com/@link4universe/videos",
+        "tematico_pc": False,
+    },
+    "wired-italia": {
+        "nome": "Wired Italia",
+        "url": "https://www.youtube.com/@WiredItalia/videos",
+        "tematico_pc": False,
+    },
+    "rai-news": {
+        "nome": "Rai News",
+        "url": "https://www.youtube.com/@RaiNews/videos",
         "tematico_pc": False,
     },
 }
