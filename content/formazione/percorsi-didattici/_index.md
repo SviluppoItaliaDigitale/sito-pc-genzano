@@ -120,6 +120,90 @@ Scegli il riquadro che corrisponde al tempo che puoi davvero dedicare. I percors
   .tempo-grid { gap: 0.5rem; }
   .tempo-card { box-shadow: none !important; transform: none !important; page-break-inside: avoid; }
 }
+
+/* Riga compatta di metadati per ciascun percorso */
+.percorso-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1.2rem;
+  font-size: 0.92rem;
+}
+.meta-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.meta-fascia { background: #e7f0fa; color: #003366; border: 1px solid #b3cce6; }
+.meta-durata { background: #fef6e4; color: #b45309; border: 1px solid #f0d99b; }
+.meta-disciplina { background: #f0f4ed; color: #15803d; border: 1px solid #c9ddc1; }
+.meta-nucleo { background: #f5f0fb; color: #6b21a8; border: 1px solid #d9c7e8; }
+.meta-norma { background: #f8f9fb; color: #1a1a1a; border: 1px solid #d0d4dc; }
+
+/* Riga di riferimento normativo, sotto i badge, sempre visibile */
+.percorso-norma {
+  font-size: 0.92rem;
+  color: #4a4a4a;
+  margin: -0.6rem 0 1rem;
+  padding-left: 0.2rem;
+  border-left: 3px solid #b3cce6;
+  padding-left: 0.7rem;
+}
+
+/* Callout per i vincoli legali importanti (P9 BLSD, P10 Circolare DPC) */
+.percorso-callout {
+  background: #fff4e5;
+  border-left: 4px solid #b45309;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.96rem;
+}
+.percorso-callout strong { color: #7a3b04; }
+
+/* Accordion dettagli percorso (prerequisiti, obiettivi, valutazione) */
+.percorso-dettagli {
+  margin: 1.2rem 0 0;
+}
+.percorso-dettagli summary {
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  background: #f4f7fb;
+  border-left: 4px solid #003366;
+  border-radius: 0 6px 6px 0;
+  font-weight: 600;
+}
+.percorso-dettagli summary:hover {
+  background: #e7f0fa;
+}
+.percorso-dettagli summary:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.percorso-dettagli[open] summary {
+  background: #003366;
+  color: #fff;
+  border-left-color: #003366;
+}
+.percorso-dettagli-body {
+  padding: 1rem 0 0.5rem;
+}
+.percorso-dettagli-body h4 {
+  font-size: 1.05rem;
+  color: #003366;
+  margin: 1rem 0 0.3rem;
+}
+.percorso-dettagli-body h4:first-child {
+  margin-top: 0;
+}
+@media print {
+  .percorso-dettagli summary { display: none; }
+  .percorso-dettagli[open] .percorso-dettagli-body,
+  .percorso-dettagli .percorso-dettagli-body { display: block !important; padding: 0; }
+}
 </style>
 
 ### Se hai una sola ora {#tempo-1ora}
@@ -215,24 +299,14 @@ Ogni percorso è completo di: **prerequisiti**, **obiettivi di apprendimento**, 
 
 ## Percorso 1 — Protezione Civile di base {#percorso-1}
 
-**Destinatari**: Scuola Primaria classi III-V (8-11 anni).
-**Durata**: 4 ore (lezioni da 1 ora) + eventuale incontro con i volontari del Gruppo.
-**Disciplina prevalente**: Educazione Civica · Storia · Geografia · Cittadinanza.
-**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà.
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Scuola Primaria classi III-V (8-11 anni)</span>
+<span class="meta-badge meta-durata">4 ore (lezioni da 1 ora) + eventuale incontro con i volontari del Gruppo</span>
+<span class="meta-badge meta-disciplina">Educazione Civica · Storia · Geografia · Cittadinanza</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà</span>
+</div>
 
-### Prerequisiti
-
-- Conosce il proprio indirizzo e il numero di telefono di un genitore.
-- Sa leggere un testo informativo breve.
-
-### Obiettivi di apprendimento
-
-- Sa cos'è la Protezione Civile e perché esiste (cenno storico: Vajont, Friuli, Irpinia, nascita del Dipartimento).
-- Sa che il **112** è il numero unico per qualsiasi emergenza nel Lazio e in Italia.
-- Riconosce le attività della PC: previsione, prevenzione, soccorso, superamento.
-- Capisce che il volontariato organizzato è un dovere di solidarietà (art. 2 Cost.) e non un favore.
-
-### Articolazione delle 4 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -241,36 +315,45 @@ Ogni percorso è completo di: **prerequisiti**, **obiettivi di apprendimento**, 
 | 3 | I rischi del nostro territorio (Castelli Romani: idrogeologico, sismico, AIB) | Scheda [Geografia sismica Italia — Primaria](/formazione/schede-stampabili/geografia-sismica-italia-primaria/) + cartografia comunale |
 | 4 | Volontariato: chi sono, cosa fanno, perché. Visita al Gruppo o intervista a un volontario | Scheda [Intervista al volontario — Primaria](/formazione/schede-stampabili/intervista-volontario-primaria/) + scheda [Costituzione e PC — Primaria](/formazione/schede-stampabili/costituzione-pc-primaria/) |
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Conosce il proprio indirizzo e il numero di telefono di un genitore.
+- Sa leggere un testo informativo breve.
+
+#### Obiettivi di apprendimento
+
+- Sa cos'è la Protezione Civile e perché esiste (cenno storico: Vajont, Friuli, Irpinia, nascita del Dipartimento).
+- Sa che il **112** è il numero unico per qualsiasi emergenza nel Lazio e in Italia.
+- Riconosce le attività della PC: previsione, prevenzione, soccorso, superamento.
+- Capisce che il volontariato organizzato è un dovere di solidarietà (art. 2 Cost.) e non un favore.
+
+#### Competenze chiave europee mobilitate
 
 Competenza personale, sociale e capacità di imparare a imparare · Competenza in materia di cittadinanza · Competenza alfabetica funzionale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica [Ed. Civica — Primaria](/formazione/schede-stampabili/rubrica-valutativa-primaria/), indicatori 1 (autoprotezione), 5 (ruolo delle istituzioni), 6 (cittadinanza attiva).
+
+</div>
+</details>
 
 ---
 
 ## Percorso 2 — Rischio meteo e allerta {#percorso-2}
 
-**Destinatari**: Primaria classi IV-V e Secondaria di I grado.
-**Durata**: 3 ore (lezioni da 1 ora).
-**Disciplina prevalente**: Scienze · Geografia · Educazione Civica.
-**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità.
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Primaria classi IV-V e Secondaria di I grado</span>
+<span class="meta-badge meta-durata">3 ore (lezioni da 1 ora)</span>
+<span class="meta-badge meta-disciplina">Scienze · Geografia · Educazione Civica</span>
+<span class="meta-badge meta-nucleo">2 — Sviluppo economico e sostenibilità</span>
+</div>
 
-### Prerequisiti
-
-- Sa leggere una cartina geografica regionale.
-- Conosce i quattro punti cardinali e l'idea di "fenomeno atmosferico".
-
-### Obiettivi di apprendimento
-
-- Riconosce i **quattro codici colore** delle allerte (verde, giallo, arancione, rosso) e li sa associare a comportamenti diversi.
-- Sa **leggere un bollettino di allerta** del Centro Funzionale Regionale Lazio individuando: tipo di rischio, area, finestra temporale, livello.
-- Capisce la differenza fra **previsione** (allerta) e **evento in corso** (emergenza).
-- Sa quali fonti seguire (CFR Lazio, DPC, Comune, Gruppo) e quali evitare (catene WhatsApp, post non firmati).
-
-### Articolazione delle 3 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -278,34 +361,43 @@ Rubrica [Ed. Civica — Primaria](/formazione/schede-stampabili/rubrica-valutati
 | 2 | Decodifica di un bollettino reale: estrarre area, livello, periodo | Scheda [Decodifica bollettino — Primaria](/formazione/schede-stampabili/decodifica-bollettino-primaria/) o [Decodifica bollettino — Secondaria I](/formazione/schede-stampabili/decodifica-bollettino-secondaria/) |
 | 3 | Riordino di un messaggio di allerta corretto + simulazione di "ricezione" | Scheda [Riordina frasi di allerta — Primaria](/formazione/schede-stampabili/riordina-frasi-allerta-primaria/) |
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Sa leggere una cartina geografica regionale.
+- Conosce i quattro punti cardinali e l'idea di "fenomeno atmosferico".
+
+#### Obiettivi di apprendimento
+
+- Riconosce i **quattro codici colore** delle allerte (verde, giallo, arancione, rosso) e li sa associare a comportamenti diversi.
+- Sa **leggere un bollettino di allerta** del Centro Funzionale Regionale Lazio individuando: tipo di rischio, area, finestra temporale, livello.
+- Capisce la differenza fra **previsione** (allerta) e **evento in corso** (emergenza).
+- Sa quali fonti seguire (CFR Lazio, DPC, Comune, Gruppo) e quali evitare (catene WhatsApp, post non firmati).
+
+#### Competenze chiave europee mobilitate
 
 Competenza matematica e in scienze · Competenza personale, sociale · Competenza in materia di cittadinanza.
 
-### Valutazione
+#### Valutazione
 
 Rubrica fascia, indicatori 2 (comunicazione del rischio), 3 (conoscenza del territorio).
+
+</div>
+</details>
 
 ---
 
 ## Percorso 3 — Terremoto e piano scuola {#percorso-3}
 
-**Destinatari**: Tutti i gradi (Infanzia · Primaria · Secondaria I e II), con materiali differenziati per fascia.
-**Durata**: 2 ore + 1 prova di evacuazione coordinata con il RSPP della scuola.
-**Disciplina prevalente**: Scienze · Educazione fisica · Educazione Civica.
-**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità.
-
-### Prerequisiti
-
-- Conosce le vie di fuga e il punto di raccolta della propria scuola.
-- (Sec I-II) Conosce la struttura della crosta terrestre e il concetto di placca tettonica.
-
-### Obiettivi di apprendimento
-
-- Conosce i **comportamenti corretti durante e dopo una scossa** (DROP-COVER-HOLD ON).
-- Sa che la fase più pericolosa è il **rientro precipitoso**.
-- Sa **evacuare in modo ordinato** seguendo il piano della propria scuola.
-- (Sec II) Conosce la differenza tra magnitudo e intensità (Mercalli) e i principali eventi sismici italiani (Belice, Friuli, Irpinia, Marsica, L'Aquila, Amatrice).
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Tutti i gradi (Infanzia · Primaria · Secondaria I e II), con materiali differenziati per fascia</span>
+<span class="meta-badge meta-durata">2 ore + 1 prova di evacuazione coordinata con il RSPP della scuola</span>
+<span class="meta-badge meta-disciplina">Scienze · Educazione fisica · Educazione Civica</span>
+<span class="meta-badge meta-nucleo">2 — Sviluppo economico e sostenibilità</span>
+</div>
 
 ### Articolazione
 
@@ -320,34 +412,43 @@ Rubrica fascia, indicatori 2 (comunicazione del rischio), 3 (conoscenza del terr
 
 **Prova reale** — Coordinata con il **RSPP** dell'istituto, in coerenza con il piano di emergenza scolastico (D.M. 26/08/1992 — Norme di prevenzione incendi per l'edilizia scolastica). Il Gruppo Comunale può **affiancare** la prova ma il regolamento e la responsabilità restano del dirigente scolastico e del RSPP.
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Conosce le vie di fuga e il punto di raccolta della propria scuola.
+- (Sec I-II) Conosce la struttura della crosta terrestre e il concetto di placca tettonica.
+
+#### Obiettivi di apprendimento
+
+- Conosce i **comportamenti corretti durante e dopo una scossa** (DROP-COVER-HOLD ON).
+- Sa che la fase più pericolosa è il **rientro precipitoso**.
+- Sa **evacuare in modo ordinato** seguendo il piano della propria scuola.
+- (Sec II) Conosce la differenza tra magnitudo e intensità (Mercalli) e i principali eventi sismici italiani (Belice, Friuli, Irpinia, Marsica, L'Aquila, Amatrice).
+
+#### Competenze chiave europee mobilitate
 
 Competenza personale, sociale · Competenza matematica e in scienze · Competenza in materia di cittadinanza.
 
-### Valutazione
+#### Valutazione
 
 Rubrica fascia, indicatori 1 (autoprotezione) e 4 (comportamento in emergenza). Voto autonomo — la prova di evacuazione **non è oggetto di valutazione individuale** (è prova di sicurezza, non test) ma può alimentare la valutazione di Educazione Civica.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 4 — Piano di emergenza familiare {#percorso-4}
 
-**Destinatari**: Primaria classi IV-V · Secondaria di I grado.
-**Durata**: 2 ore in classe + 1 compito a casa con la famiglia.
-**Disciplina prevalente**: Educazione Civica · Tecnologia · Italiano.
-**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità.
-
-### Prerequisiti
-
-- Sa il proprio indirizzo e il numero di telefono di almeno due familiari.
-- Conosce il numero di emergenza 112.
-
-### Obiettivi di apprendimento
-
-- Compila con la famiglia un **Piano di Emergenza Familiare** scritto e condiviso (chi, dove, come).
-- Identifica i punti di raccolta del proprio quartiere e le vie sicure di accesso.
-- Compone un **kit emergenza** essenziale per 72 ore di autonomia.
-- Mappa i rischi specifici della propria abitazione (gas, scaldabagno, mobili pesanti).
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Primaria classi IV-V · Secondaria di I grado</span>
+<span class="meta-badge meta-durata">2 ore in classe + 1 compito a casa con la famiglia</span>
+<span class="meta-badge meta-disciplina">Educazione Civica · Tecnologia · Italiano</span>
+<span class="meta-badge meta-nucleo">2 — Sviluppo economico e sostenibilità</span>
+</div>
 
 ### Articolazione
 
@@ -358,36 +459,45 @@ Rubrica fascia, indicatori 1 (autoprotezione) e 4 (comportamento in emergenza). 
 **A casa (compito)**
 - Compilazione effettiva del piano con i genitori. Restituzione in classe (lettura volontaria di alcuni piani anonimizzati, discussione delle differenze).
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Sa il proprio indirizzo e il numero di telefono di almeno due familiari.
+- Conosce il numero di emergenza 112.
+
+#### Obiettivi di apprendimento
+
+- Compila con la famiglia un **Piano di Emergenza Familiare** scritto e condiviso (chi, dove, come).
+- Identifica i punti di raccolta del proprio quartiere e le vie sicure di accesso.
+- Compone un **kit emergenza** essenziale per 72 ore di autonomia.
+- Mappa i rischi specifici della propria abitazione (gas, scaldabagno, mobili pesanti).
+
+#### Competenze chiave europee mobilitate
 
 Competenza personale, sociale · Competenza in materia di cittadinanza · Competenza alfabetica funzionale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica fascia, indicatori 1 (autoprotezione), 6 (cittadinanza attiva). Il piano compilato è un **documento autentico** — la qualità e la realismo della pianificazione possono entrare nella valutazione di Educazione Civica.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 5 — Fake news e comunicazione di crisi {#percorso-5}
 
-**Destinatari**: Secondaria di I e II grado.
-**Durata**: 3 ore (lezioni da 1 ora).
-**Disciplina prevalente**: Italiano · Tecnologia · Educazione Civica.
-**Nucleo concettuale D.M. 183/2024**: 3 — Cittadinanza digitale.
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Secondaria di I e II grado</span>
+<span class="meta-badge meta-durata">3 ore (lezioni da 1 ora)</span>
+<span class="meta-badge meta-disciplina">Italiano · Tecnologia · Educazione Civica</span>
+<span class="meta-badge meta-nucleo">3 — Cittadinanza digitale</span>
+</div>
 
-### Prerequisiti
-
-- Usa quotidianamente almeno una piattaforma social (WhatsApp, Instagram, TikTok).
-- Sa cos'è una "fonte" in Italiano e in Storia.
-
-### Obiettivi di apprendimento
-
-- Riconosce le caratteristiche di una **fonte istituzionale** (DPC, CFR Lazio, Comune, Gruppo) rispetto a una fonte non verificata.
-- Sa cos'è **IT-alert** (sistema italiano di allertamento via cellulare) e sa distinguerlo da messaggi falsi che lo imitano.
-- Conosce la **struttura standard di un messaggio di crisi** in 6 punti (tipo / livello / area+tempo / cosa fare / fonte / prossimo aggiornamento).
-- Sa che la **disinformazione in emergenza** non si combatte amplificandola, ma citando la fonte ufficiale.
-
-### Articolazione delle 3 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -395,39 +505,47 @@ Rubrica fascia, indicatori 1 (autoprotezione), 6 (cittadinanza attiva). Il piano
 | 2 | IT-alert: come funziona, chi lo invia, come distinguerlo dal phishing | Scheda [IT-alert e comunicazioni ufficiali — Secondaria I](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) |
 | 3 | (Sec II) Comunicazione di crisi sui social: alt text, max 2 emoji, livello scritto + colore | Scheda [Comunicazione di crisi — Secondaria II](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/) |
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Usa quotidianamente almeno una piattaforma social (WhatsApp, Instagram, TikTok).
+- Sa cos'è una "fonte" in Italiano e in Storia.
+
+#### Obiettivi di apprendimento
+
+- Riconosce le caratteristiche di una **fonte istituzionale** (DPC, CFR Lazio, Comune, Gruppo) rispetto a una fonte non verificata.
+- Sa cos'è **IT-alert** (sistema italiano di allertamento via cellulare) e sa distinguerlo da messaggi falsi che lo imitano.
+- Conosce la **struttura standard di un messaggio di crisi** in 6 punti (tipo / livello / area+tempo / cosa fare / fonte / prossimo aggiornamento).
+- Sa che la **disinformazione in emergenza** non si combatte amplificandola, ma citando la fonte ufficiale.
+
+#### Competenze chiave europee mobilitate
 
 Competenza digitale · Competenza alfabetica funzionale · Competenza in materia di cittadinanza.
 
-### Valutazione
+#### Valutazione
 
 Rubrica fascia, indicatori 2 (comunicazione del rischio), 6 (cittadinanza attiva). Possibile **prova autentica**: gli studenti producono un post social rispettoso delle regole della struttura standard a partire da un bollettino reale.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 6 — Sicurezza nei luoghi di lavoro e PCTO {#percorso-6}
 
-**Destinatari**: Scuola Secondaria di II grado (Licei, Istituti Tecnici, Professionali).
-**Durata**: 4-6 ore (a seconda dell'integrazione con i PCTO).
-**Disciplina prevalente**: Educazione Civica · Diritto · Discipline d'indirizzo (officina, laboratorio, cantiere).
-**Nucleo concettuale D.M. 183/2024**: 1 (Costituzione e legalità) + 2 (Sostenibilità).
-**Riferimento normativo specifico**: **Legge 17 febbraio 2025, n. 21**, che ha aggiunto la **lettera h-ter)** all'art. 3 della L. 92/2019: *"conoscenze di base in materia di sicurezza nei luoghi di lavoro"*.
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Scuola Secondaria di II grado (Licei, Istituti Tecnici, Professionali)</span>
+<span class="meta-badge meta-durata">4-6 ore (a seconda dell'integrazione con i PCTO)</span>
+<span class="meta-badge meta-disciplina">Educazione Civica · Diritto · Discipline d'indirizzo (officina, laboratorio, cantiere)</span>
+<span class="meta-badge meta-nucleo">1 (Costituzione e legalità) + 2 (Sostenibilità)</span>
+</div>
 
-### Prerequisiti
+<p class="percorso-norma"><strong>Riferimento normativo:</strong> **Legge 17 febbraio 2025, n. 21**, che ha aggiunto la **lettera h-ter)** all'art. 3 della L. 92/2019: *"conoscenze di base in materia di sicurezza nei luoghi di lavoro"*.</p>
 
-- Conosce gli articoli 32 e 35-41 della Costituzione (salute e lavoro).
-- Ha una nozione operativa di "rischio" (probabilità × danno).
-
-### Obiettivi di apprendimento
-
-- Conosce le **figure della sicurezza** previste dal **D.Lgs. 81/2008** (datore di lavoro, RSPP, RLS, medico competente, preposto, lavoratore).
-- Riconosce i **principali rischi** dei contesti di tirocinio/PCTO (caduta dall'alto, elettrico, chimico, biologico, movimentazione carichi, videoterminali).
-- Sa cos'è un **DPI** e quando è obbligatorio.
-- Conosce i **principi generali di prevenzione** (eliminazione del rischio alla fonte, sostituzione, protezione collettiva prima di quella individuale, formazione).
-- Distingue **infortunio** e **malattia professionale**, conosce l'**INAIL** come ente competente.
-- Comprende la connessione fra cultura della sicurezza nel lavoro e cultura della Protezione Civile (gestione del rischio, autoprotezione, responsabilità condivisa).
-
-### Articolazione delle 4-6 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -442,37 +560,47 @@ Rubrica fascia, indicatori 2 (comunicazione del rischio), 6 (cittadinanza attiva
 
 Il percorso può essere riconosciuto come parte delle ore di sicurezza obbligatorie nei PCTO, all'interno del **monte ore minimo triennale** previsto dall'art. 1 comma 785 della **L. 145/2018**: almeno **90 ore nei Licei**, **150 nei Tecnici**, **210 nei Professionali**. Il Gruppo Comunale è disponibile a **ospitare studenti** per moduli da 30-50 ore sui temi di **mappatura del territorio, comunicazione del rischio, supporto a esercitazioni**. Procedura, sicurezza e condizioni nella [pagina docenti — sezione PCTO](/formazione/educazione-civica/#disponibilita-pcto).
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Conosce gli articoli 32 e 35-41 della Costituzione (salute e lavoro).
+- Ha una nozione operativa di "rischio" (probabilità × danno).
+
+#### Obiettivi di apprendimento
+
+- Conosce le **figure della sicurezza** previste dal **D.Lgs. 81/2008** (datore di lavoro, RSPP, RLS, medico competente, preposto, lavoratore).
+- Riconosce i **principali rischi** dei contesti di tirocinio/PCTO (caduta dall'alto, elettrico, chimico, biologico, movimentazione carichi, videoterminali).
+- Sa cos'è un **DPI** e quando è obbligatorio.
+- Conosce i **principi generali di prevenzione** (eliminazione del rischio alla fonte, sostituzione, protezione collettiva prima di quella individuale, formazione).
+- Distingue **infortunio** e **malattia professionale**, conosce l'**INAIL** come ente competente.
+- Comprende la connessione fra cultura della sicurezza nel lavoro e cultura della Protezione Civile (gestione del rischio, autoprotezione, responsabilità condivisa).
+
+#### Competenze chiave europee mobilitate
 
 Competenza imprenditoriale · Competenza in materia di cittadinanza · Competenza personale, sociale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 1 (autoprotezione), 5 (ruolo delle istituzioni), 6 (cittadinanza attiva). Il percorso contribuisce alla **valutazione di Educazione Civica** (art. 2 L. 92/2019) e, se inserito in PCTO, **al voto di comportamento e al Curriculum dello studente**.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 7 — Rischio idrogeologico e territorio {#percorso-7}
 
-**Destinatari**: Primaria classi IV-V · Secondaria di I grado.
-**Durata**: 3 ore (lezioni da 1 ora) + visita guidata facoltativa al territorio.
-**Disciplina prevalente**: Geografia · Scienze · Educazione Civica.
-**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità.
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Primaria classi IV-V · Secondaria di I grado</span>
+<span class="meta-badge meta-durata">3 ore (lezioni da 1 ora) + visita guidata facoltativa al territorio</span>
+<span class="meta-badge meta-disciplina">Geografia · Scienze · Educazione Civica</span>
+<span class="meta-badge meta-nucleo">2 — Sviluppo economico e sostenibilità</span>
+</div>
 
-### Prerequisiti
-
-- Sa leggere una cartina geografica regionale.
-- Conosce il concetto di "fiume", "bacino idrografico" e "versante".
-
-### Obiettivi di apprendimento
-
-- Distingue **frana**, **alluvione**, **allagamento urbano** in base a cause e tempi.
-- Conosce le **16 zone di allerta** del Lazio e individua la zona dei Castelli Romani.
-- Riconosce i **comportamenti corretti** se l'acqua entra in casa, davanti a un sottopasso allagato, vicino a un fiume in piena.
-- Sa che il **Piano di Assetto Idrogeologico (PAI)** classifica le aree per pericolosità e rischio.
-- Conosce le fonti istituzionali: **ISPRA** (mosaicatura nazionale del rischio idrogeologico), **Centro Funzionale Regionale Lazio** (bollettini), **CNR-IRPI** (ricerca scientifica).
-
-### Articolazione delle 3 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -480,38 +608,48 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 | 2 | Comportamenti corretti: acqua in casa, sottopassi, fiumi, tombini, garage seminterrati | Pagina [Rischi in parole semplici](/rischi-prevenzione/rischi-in-parole-semplici/) + scheda [Mappa cieca quartiere — Primaria](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/) |
 | 3 | Caso storico: la frana di Sarno (5 maggio 1998) come lezione di prevenzione | Articolo [Sarno 1998 — Frana e rischio idrogeologico](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/) + scheda [Sarno — Primaria](/formazione/schede-stampabili/caso-sarno-primaria/) |
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Sa leggere una cartina geografica regionale.
+- Conosce il concetto di "fiume", "bacino idrografico" e "versante".
+
+#### Obiettivi di apprendimento
+
+- Distingue **frana**, **alluvione**, **allagamento urbano** in base a cause e tempi.
+- Conosce le **16 zone di allerta** del Lazio e individua la zona dei Castelli Romani.
+- Riconosce i **comportamenti corretti** se l'acqua entra in casa, davanti a un sottopasso allagato, vicino a un fiume in piena.
+- Sa che il **Piano di Assetto Idrogeologico (PAI)** classifica le aree per pericolosità e rischio.
+- Conosce le fonti istituzionali: **ISPRA** (mosaicatura nazionale del rischio idrogeologico), **Centro Funzionale Regionale Lazio** (bollettini), **CNR-IRPI** (ricerca scientifica).
+
+#### Competenze chiave europee mobilitate
 
 Competenza matematica e in scienze · Competenza in materia di cittadinanza · Competenza personale, sociale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica fascia, indicatori 1 (autoprotezione), 3 (conoscenza del territorio), 4 (comportamento in emergenza). Possibile **prova autentica**: gli studenti producono una mappa illustrata del proprio quartiere con i punti potenzialmente pericolosi in caso di pioggia intensa, da consegnare alle famiglie.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 8 — Incendi boschivi e Castelli Romani {#percorso-8}
 
-**Destinatari**: Secondaria di I e II grado.
-**Durata**: 3 ore. Consigliato fra **giugno e settembre**, durante la campagna AIB (anti-incendi boschivi) del Lazio.
-**Disciplina prevalente**: Scienze · Geografia · Educazione Civica.
-**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità.
-**Riferimento normativo specifico**: **L. 21 novembre 2000, n. 353** (Legge quadro in materia di incendi boschivi) e **L.R. Lazio 25 luglio 2008, n. 14** sul ruolo della Regione nella prevenzione AIB.
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Secondaria di I e II grado</span>
+<span class="meta-badge meta-durata">3 ore. Consigliato fra **giugno e settembre**, durante la campagna AIB (anti-incendi boschivi) del Lazio</span>
+<span class="meta-badge meta-disciplina">Scienze · Geografia · Educazione Civica</span>
+<span class="meta-badge meta-nucleo">2 — Sviluppo economico e sostenibilità</span>
+</div>
 
-### Prerequisiti
+<p class="percorso-norma"><strong>Riferimento normativo:</strong> **L. 21 novembre 2000, n. 353** (Legge quadro in materia di incendi boschivi) e **L.R. Lazio 25 luglio 2008, n. 14** sul ruolo della Regione nella prevenzione AIB.</p>
 
-- Conosce il numero unico 112 e sa quando chiamarlo.
-- Ha una nozione di "ecosistema boschivo" e di "pericolo".
-
-### Obiettivi di apprendimento
-
-- Sa che i **Castelli Romani sono Zona AIB 9** del Lazio (alta vulnerabilità).
-- Riconosce i quattro livelli del **Bollettino di pericolosità incendi** del CFR Lazio (basso, medio, moderato, elevato).
-- Conosce i **comportamenti vietati** in zona boschiva (accendere fuoco, gettare mozziconi, abbandonare rifiuti infiammabili) e le conseguenze penali della L. 353/2000.
-- Sa cosa fare se vede una colonna di fumo in passeggiata o dalle finestre di casa.
-- Riconosce le figure operative AIB: **DOS** (Direttore Operazioni Spegnimento), **VVF**, squadre AIB regionali, volontari, **Canadair** e **elicotteri DPC**.
-
-### Articolazione delle 3 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -519,40 +657,52 @@ Rubrica fascia, indicatori 1 (autoprotezione), 3 (conoscenza del territorio), 4 
 | 2 | Comportamenti corretti, prevenzione, divieti penali. Lettura del bollettino AIB del giorno | [Bollettino di pericolosità incendi del CFR Lazio](https://www.regione.lazio.it/cittadini/protezione-civile/bollettini/rischi-incendi) + pagina [Stato del sistema — Rischio incendi](/stato-sistema/) |
 | 3 | Filiera dello spegnimento: chi fa cosa, dal 112 al Canadair. Testimonianza di un volontario AIB del Gruppo | Articolo [Mezzi aerei AIB — Canadair ed elicotteri](/comunicazioni/2026-07-13-mezzi-aerei-aib-canadair-elicotteri/) + intervento in classe (facoltativo) |
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Conosce il numero unico 112 e sa quando chiamarlo.
+- Ha una nozione di "ecosistema boschivo" e di "pericolo".
+
+#### Obiettivi di apprendimento
+
+- Sa che i **Castelli Romani sono Zona AIB 9** del Lazio (alta vulnerabilità).
+- Riconosce i quattro livelli del **Bollettino di pericolosità incendi** del CFR Lazio (basso, medio, moderato, elevato).
+- Conosce i **comportamenti vietati** in zona boschiva (accendere fuoco, gettare mozziconi, abbandonare rifiuti infiammabili) e le conseguenze penali della L. 353/2000.
+- Sa cosa fare se vede una colonna di fumo in passeggiata o dalle finestre di casa.
+- Riconosce le figure operative AIB: **DOS** (Direttore Operazioni Spegnimento), **VVF**, squadre AIB regionali, volontari, **Canadair** e **elicotteri DPC**.
+
+#### Competenze chiave europee mobilitate
 
 Competenza in materia di cittadinanza · Competenza matematica e in scienze · Competenza personale, sociale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica fascia, indicatori 1 (autoprotezione), 5 (ruolo delle istituzioni). Possibile **prova autentica**: gli studenti producono un **poster o un decalogo** per la propria scuola sui comportamenti corretti nei boschi in estate.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 9 — Primo soccorso e cuore (introduttivo) {#percorso-9}
 
-**Destinatari**: Scuola Secondaria di II grado. Particolarmente adatto a Licei delle Scienze Umane, Istituti Tecnici e Professionali con indirizzo sanitario.
-**Durata**: 4 ore (preferibilmente in due incontri da 2 ore).
-**Disciplina prevalente**: Educazione Civica · Scienze · Educazione fisica.
-**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà.
-**Riferimento normativo specifico**: **L. 4 agosto 2021, n. 116** sull'obbligo del **DAE** (Defibrillatore Automatico Esterno) negli spazi pubblici e sulla formazione del personale.
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Scuola Secondaria di II grado. Particolarmente adatto a Licei delle Scienze Umane, Istituti Tecnici e Professionali con indirizzo sanitario</span>
+<span class="meta-badge meta-durata">4 ore (preferibilmente in due incontri da 2 ore)</span>
+<span class="meta-badge meta-disciplina">Educazione Civica · Scienze · Educazione fisica</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà</span>
+</div>
 
-⚠️ **Vincolo importante**: questo percorso è **introduttivo e didattico**. Non sostituisce un **corso BLSD certificato** (Basic Life Support and Defibrillation) né abilita all'esecuzione di manovre in contesti diversi dalla didattica. Per la certificazione formale gli studenti vanno indirizzati a Croce Rossa Italiana, ARES 118 o altri provider riconosciuti dalle linee guida **IRC** (Italian Resuscitation Council).
+<p class="percorso-norma"><strong>Riferimento normativo:</strong> **L. 4 agosto 2021, n. 116** sull'obbligo del **DAE** (Defibrillatore Automatico Esterno) negli spazi pubblici e sulla formazione del personale.</p>
 
-### Prerequisiti
+<div class="percorso-callout" role="note">
+<strong>⚠️ Vincolo importante</strong>: questo percorso è **introduttivo e didattico**. Non sostituisce un **corso BLSD certificato** (Basic Life Support and Defibrillation) né abilita all'esecuzione di manovre in contesti diversi dalla didattica. Per la certificazione formale gli studenti vanno indirizzati a Croce Rossa Italiana, ARES 118 o altri provider riconosciuti dalle linee guida **IRC** (Italian Resuscitation Council).
+</div>
 
-- Ha letto la pagina [Primo soccorso](/formazione/primo-soccorso/) del sito.
-- Conosce il numero unico 112.
-
-### Obiettivi di apprendimento
-
-- Sa eseguire la **PLS** (Posizione Laterale di Sicurezza) su un compagno consenziente.
-- Riconosce un **arresto cardiaco** dai segni: assenza di coscienza, assenza di respiro normale.
-- Conosce la sequenza **RCP-D** (compressioni toraciche più DAE) secondo le **linee guida IRC 2025**.
-- Sa dove cercare un **DAE** in zona (database regionale Lazio e mappa locale del Gruppo).
-- Riconosce un **soffocamento** (segno universale, tosse inefficace) e conosce la manovra di **Heimlich** nell'adulto e la sua variante pediatrica.
-
-### Articolazione delle 4 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -565,38 +715,48 @@ Rubrica fascia, indicatori 1 (autoprotezione), 5 (ruolo delle istituzioni). Poss
 
 A fine percorso, gli studenti motivati possono iscriversi a un **corso BLSD certificato** presso Croce Rossa Italiana (CRI), ARES 118 o altri provider riconosciuti dall'IRC. Il Gruppo Comunale facilita il contatto con i partner sanitari del territorio.
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Ha letto la pagina [Primo soccorso](/formazione/primo-soccorso/) del sito.
+- Conosce il numero unico 112.
+
+#### Obiettivi di apprendimento
+
+- Sa eseguire la **PLS** (Posizione Laterale di Sicurezza) su un compagno consenziente.
+- Riconosce un **arresto cardiaco** dai segni: assenza di coscienza, assenza di respiro normale.
+- Conosce la sequenza **RCP-D** (compressioni toraciche più DAE) secondo le **linee guida IRC 2025**.
+- Sa dove cercare un **DAE** in zona (database regionale Lazio e mappa locale del Gruppo).
+- Riconosce un **soffocamento** (segno universale, tosse inefficace) e conosce la manovra di **Heimlich** nell'adulto e la sua variante pediatrica.
+
+#### Competenze chiave europee mobilitate
 
 Competenza personale, sociale · Competenza in materia di cittadinanza · Competenza matematica e in scienze.
 
-### Valutazione
+#### Valutazione
 
 Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 1 (autoprotezione), 4 (comportamento in emergenza). **Non si valutano singolarmente** le manovre praticate (è formazione non certificativa): si valutano conoscenza della sequenza, capacità di descriverla, riconoscimento dei segnali di emergenza.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 10 — Volontariato e cittadinanza attiva {#percorso-10}
 
-**Destinatari**: Scuola Secondaria di II grado. Integrabile nei PCTO.
-**Durata**: 3 ore in aula + visita facoltativa al Gruppo. **Versione PCTO**: 3 ore in aula + **30-50 ore di tirocinio** presso il Gruppo Comunale.
-**Disciplina prevalente**: Educazione Civica · Storia · Diritto.
-**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà.
-**Riferimento normativo specifico**: **artt. 2, 4 e 118 della Costituzione** (sussidiarietà orizzontale) · **D.Lgs. 3 luglio 2017, n. 117** (Codice del Terzo Settore) · **D.Lgs. 2 gennaio 2018, n. 1** (Codice della Protezione Civile, artt. 32-42 sul volontariato).
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Scuola Secondaria di II grado. Integrabile nei PCTO</span>
+<span class="meta-badge meta-durata">3 ore in aula + visita facoltativa al Gruppo. **Versione PCTO**: 3 ore in aula + **30-50 ore di tirocinio** presso il Gruppo Comunale</span>
+<span class="meta-badge meta-disciplina">Educazione Civica · Storia · Diritto</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà</span>
+</div>
 
-### Prerequisiti
+<p class="percorso-norma"><strong>Riferimento normativo:</strong> **artt. 2, 4 e 118 della Costituzione** (sussidiarietà orizzontale) · **D.Lgs. 3 luglio 2017, n. 117** (Codice del Terzo Settore) · **D.Lgs. 2 gennaio 2018, n. 1** (Codice della Protezione Civile, artt. 32-42 sul volontariato).</p>
 
-- Conosce gli articoli 2 e 4 della Costituzione.
-- Ha una nozione di "Terzo Settore" e di "Ente del Terzo Settore (ETS)".
-
-### Obiettivi di apprendimento
-
-- Conosce la **storia del volontariato di PC** in Italia: dal Friuli 1976 (nascita del modello Zamberletti) al D.Lgs. 1/2018.
-- Distingue i **compiti consentiti e vietati** al volontariato di PC nelle manifestazioni pubbliche secondo la **Circolare DPC del 6 agosto 2018** (no regolazione del traffico, no servizi di polizia stradale, no palette dirigitraffico).
-- Conosce il **Codice del Terzo Settore** e la distinzione tra OdV (Organizzazioni di Volontariato), APS (Associazioni di Promozione Sociale), ETS in genere.
-- Sa come **diventare volontario** del Gruppo Comunale di Genzano: requisiti, formazione iniziale, attivazione.
-- Riconosce la **sussidiarietà orizzontale** (art. 118 Cost.) come fondamento del volontariato di PC: lo Stato non sostituisce, le associazioni di cittadini agiscono "in autonoma iniziativa" sull'interesse generale.
-
-### Articolazione delle 3 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -608,38 +768,48 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 
 Il percorso può aprire un **PCTO di 30-50 ore** con il Gruppo Comunale su attività di mappatura del territorio, supporto a esercitazioni, comunicazione del rischio. Procedura, sicurezza e condizioni nella [pagina docenti — sezione PCTO](/formazione/educazione-civica/#disponibilita-pcto). Il Gruppo affianca il tutor scolastico, non lo sostituisce.
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Conosce gli articoli 2 e 4 della Costituzione.
+- Ha una nozione di "Terzo Settore" e di "Ente del Terzo Settore (ETS)".
+
+#### Obiettivi di apprendimento
+
+- Conosce la **storia del volontariato di PC** in Italia: dal Friuli 1976 (nascita del modello Zamberletti) al D.Lgs. 1/2018.
+- Distingue i **compiti consentiti e vietati** al volontariato di PC nelle manifestazioni pubbliche secondo la **Circolare DPC del 6 agosto 2018** (no regolazione del traffico, no servizi di polizia stradale, no palette dirigitraffico).
+- Conosce il **Codice del Terzo Settore** e la distinzione tra OdV (Organizzazioni di Volontariato), APS (Associazioni di Promozione Sociale), ETS in genere.
+- Sa come **diventare volontario** del Gruppo Comunale di Genzano: requisiti, formazione iniziale, attivazione.
+- Riconosce la **sussidiarietà orizzontale** (art. 118 Cost.) come fondamento del volontariato di PC: lo Stato non sostituisce, le associazioni di cittadini agiscono "in autonoma iniziativa" sull'interesse generale.
+
+#### Competenze chiave europee mobilitate
 
 Competenza in materia di cittadinanza · Competenza imprenditoriale · Competenza personale, sociale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 5 (ruolo delle istituzioni), 6 (cittadinanza attiva). Possibile **prova autentica**: gli studenti producono una **mini-presentazione di 5 minuti** sul volontariato di PC che potrebbero usare a una giornata di orientamento per gli studenti delle classi inferiori.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 11 — Protezione Civile europea e Meccanismo UCPM {#percorso-11}
 
-**Destinatari**: Scuola Secondaria di II grado.
-**Durata**: 2-3 ore.
-**Disciplina prevalente**: Educazione Civica · Diritto · Geografia · Lingua inglese (lessico tecnico).
-**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà.
-**Riferimento normativo specifico**: **artt. 11 e 117 della Costituzione** (rapporti con l'Unione Europea) · **Decisione UE n. 1313/2013** sul Meccanismo unionale di protezione civile (UCPM, *Union Civil Protection Mechanism*).
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Scuola Secondaria di II grado</span>
+<span class="meta-badge meta-durata">2-3 ore</span>
+<span class="meta-badge meta-disciplina">Educazione Civica · Diritto · Geografia · Lingua inglese (lessico tecnico)</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà</span>
+</div>
 
-### Prerequisiti
+<p class="percorso-norma"><strong>Riferimento normativo:</strong> **artt. 11 e 117 della Costituzione** (rapporti con l'Unione Europea) · **Decisione UE n. 1313/2013** sul Meccanismo unionale di protezione civile (UCPM, *Union Civil Protection Mechanism*).</p>
 
-- Sa cos'è l'Unione Europea e conosce le sue istituzioni principali.
-- Ha sentito parlare di "solidarietà internazionale" e "aiuto umanitario".
-
-### Obiettivi di apprendimento
-
-- Sa cos'è il **Meccanismo Unionale di Protezione Civile (UCPM)** e a cosa serve.
-- Riconosce il **Centro di Coordinamento per la Risposta alle Emergenze (ERCC)** di Bruxelles come sala operativa europea attiva 24 ore su 24.
-- Conosce **rescEU**, la riserva strategica europea (Canadair, ospedali da campo, scorte mediche, decontaminazione CBRN — chimico, biologico, radiologico, nucleare).
-- Sa che la PC italiana è **operativa anche all'estero** in nome della solidarietà europea (terremoto Albania 2019, alluvioni Slovenia 2023, incendi Grecia, terremoto Turchia-Siria 2023).
-- Riconosce il servizio **Copernicus Emergency Management Service (EMS)**: mappe satellitari delle emergenze in tempo reale.
-
-### Articolazione delle 2-3 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -647,38 +817,48 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 | 2 | rescEU: a cosa serve la riserva europea, casi reali di attivazione (incendi 2023, terremoto Turchia-Siria 2023) | Sito ufficiale UCPM + [Copernicus Emergency Management Service](https://emergency.copernicus.eu/) |
 | 3 (facoltativa) | Solidarietà internazionale: come funziona l'aiuto italiano all'estero. Lettura comparata in italiano e inglese di un comunicato ufficiale | Materiale bilingue del Gruppo + glossario tecnico EN/IT |
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Sa cos'è l'Unione Europea e conosce le sue istituzioni principali.
+- Ha sentito parlare di "solidarietà internazionale" e "aiuto umanitario".
+
+#### Obiettivi di apprendimento
+
+- Sa cos'è il **Meccanismo Unionale di Protezione Civile (UCPM)** e a cosa serve.
+- Riconosce il **Centro di Coordinamento per la Risposta alle Emergenze (ERCC)** di Bruxelles come sala operativa europea attiva 24 ore su 24.
+- Conosce **rescEU**, la riserva strategica europea (Canadair, ospedali da campo, scorte mediche, decontaminazione CBRN — chimico, biologico, radiologico, nucleare).
+- Sa che la PC italiana è **operativa anche all'estero** in nome della solidarietà europea (terremoto Albania 2019, alluvioni Slovenia 2023, incendi Grecia, terremoto Turchia-Siria 2023).
+- Riconosce il servizio **Copernicus Emergency Management Service (EMS)**: mappe satellitari delle emergenze in tempo reale.
+
+#### Competenze chiave europee mobilitate
 
 Competenza in materia di cittadinanza (cittadinanza europea) · Competenza multilinguistica · Competenza personale, sociale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 5 (ruolo delle istituzioni), 6 (cittadinanza attiva). Possibile **prova autentica**: gli studenti analizzano una **attivazione UCPM** recente, individuano gli attori coinvolti, descrivono la catena di comando in italiano e inglese (300 parole + 300 parole).
+
+</div>
+</details>
 
 ---
 
 ## Percorso 12 — Rischio vulcanico: Colli Albani e Italia {#percorso-12}
 
-**Destinatari**: Scuola Secondaria di I e II grado.
-**Durata**: 3 ore (lezioni da 1 ora).
-**Disciplina prevalente**: Scienze · Geografia · Educazione Civica.
-**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità.
-**Riferimento normativo specifico**: **D.Lgs. 1/2018** (Codice della Protezione Civile) · **Piano nazionale di protezione civile per il rischio Vesuvio** e **Campi Flegrei** (aggiornamenti DPC).
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Scuola Secondaria di I e II grado</span>
+<span class="meta-badge meta-durata">3 ore (lezioni da 1 ora)</span>
+<span class="meta-badge meta-disciplina">Scienze · Geografia · Educazione Civica</span>
+<span class="meta-badge meta-nucleo">2 — Sviluppo economico e sostenibilità</span>
+</div>
 
-### Prerequisiti
+<p class="percorso-norma"><strong>Riferimento normativo:</strong> **D.Lgs. 1/2018** (Codice della Protezione Civile) · **Piano nazionale di protezione civile per il rischio Vesuvio** e **Campi Flegrei** (aggiornamenti DPC).</p>
 
-- Conosce la differenza tra "vulcano spento", "estinto" e "quiescente".
-- Ha studiato la struttura della crosta terrestre e le placche tettoniche.
-
-### Obiettivi di apprendimento
-
-- Sa che il **distretto vulcanico dei Colli Albani** è **quiescente**, non spento: l'attività eruttiva si è concentrata fra 600.000 e 36.000 anni fa, ma il sistema non è considerato estinto. Il Lago Albano e il Lago di Nemi sono **crateri di esplosione** della fase finale dell'attività.
-- Riconosce i **fenomeni di tipo secondario** osservati nell'area (emissioni di anidride carbonica dal suolo, lieve sismicità periodica, deformazioni del terreno) e il monitoraggio condotto dall'**INGV — Osservatorio Vesuviano**.
-- Conosce i **tre grandi vulcani attivi italiani**: Vesuvio, Campi Flegrei, Etna (più Stromboli e Vulcano).
-- Sa cos'è la **zona rossa** e la **zona gialla** del Piano nazionale Vesuvio, e come funziona l'evacuazione preventiva.
-- Riconosce il ruolo di **IT-alert** come canale di allerta in caso di evento vulcanico (testato a Stromboli e in esercitazione Campi Flegrei nel 2024).
-
-### Articolazione delle 3 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -686,38 +866,48 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 | 2 | I tre giganti italiani: Vesuvio, Campi Flegrei, Etna. Tipologie eruttive e pericoli | Schede [Vulcani d'Italia — Secondaria](/formazione/schede-stampabili/caso-vulcani-italia-secondaria/) e [Campi Flegrei — Secondaria](/formazione/schede-stampabili/caso-campi-flegrei-secondaria/) |
 | 3 | Pianificazione e allertamento: zona rossa/gialla del Vesuvio, esercitazione 2024 ai Campi Flegrei, ruolo di IT-alert | Sito [DPC — Rischio vulcanico](https://www.protezionecivile.gov.it/it/rischi/rischio-vulcanico/) + articolo [IT-alert: storia, tecnologia, accessibilità](/comunicazioni/2026-05-19-it-alert-tecnologia-accessibilita-falsi-miti/) |
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Conosce la differenza tra "vulcano spento", "estinto" e "quiescente".
+- Ha studiato la struttura della crosta terrestre e le placche tettoniche.
+
+#### Obiettivi di apprendimento
+
+- Sa che il **distretto vulcanico dei Colli Albani** è **quiescente**, non spento: l'attività eruttiva si è concentrata fra 600.000 e 36.000 anni fa, ma il sistema non è considerato estinto. Il Lago Albano e il Lago di Nemi sono **crateri di esplosione** della fase finale dell'attività.
+- Riconosce i **fenomeni di tipo secondario** osservati nell'area (emissioni di anidride carbonica dal suolo, lieve sismicità periodica, deformazioni del terreno) e il monitoraggio condotto dall'**INGV — Osservatorio Vesuviano**.
+- Conosce i **tre grandi vulcani attivi italiani**: Vesuvio, Campi Flegrei, Etna (più Stromboli e Vulcano).
+- Sa cos'è la **zona rossa** e la **zona gialla** del Piano nazionale Vesuvio, e come funziona l'evacuazione preventiva.
+- Riconosce il ruolo di **IT-alert** come canale di allerta in caso di evento vulcanico (testato a Stromboli e in esercitazione Campi Flegrei nel 2024).
+
+#### Competenze chiave europee mobilitate
 
 Competenza matematica e in scienze · Competenza in materia di cittadinanza · Competenza personale, sociale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica fascia, indicatori 1 (autoprotezione), 3 (conoscenza del territorio), 5 (ruolo delle istituzioni). Possibile **prova autentica**: gli studenti producono una **carta tematica** del distretto vulcanico dei Colli Albani con i punti di emissione gassosa, i due laghi craterici e i comuni più vicini.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 13 — Psicologia dell'emergenza e Psychological First Aid {#percorso-13}
 
-**Destinatari**: Scuola Secondaria di II grado, in particolare Licei delle Scienze Umane.
-**Durata**: 3 ore (lezioni da 1 ora). Estendibile a workshop di 6 ore con uno psicologo dell'emergenza.
-**Disciplina prevalente**: Educazione Civica · Scienze Umane · Italiano.
-**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà.
-**Riferimento normativo e tecnico**: **art. 32 Cost.** (diritto alla salute, anche mentale) · **WHO — Psychological First Aid: Guide for field workers** (2011) · **Sphere Standards 2018** sezione "Mental Health and Psychosocial Support" · **NCTSN** (National Child Traumatic Stress Network) per il PFA pediatrico.
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Scuola Secondaria di II grado, in particolare Licei delle Scienze Umane</span>
+<span class="meta-badge meta-durata">3 ore (lezioni da 1 ora). Estendibile a workshop di 6 ore con uno psicologo dell'emergenza</span>
+<span class="meta-badge meta-disciplina">Educazione Civica · Scienze Umane · Italiano</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà</span>
+</div>
 
-### Prerequisiti
+<p class="percorso-norma"><strong>Riferimento normativo:</strong> **art. 32 Cost.** (diritto alla salute, anche mentale) · **WHO — Psychological First Aid: Guide for field workers** (2011) · **Sphere Standards 2018** sezione "Mental Health and Psychosocial Support" · **NCTSN** (National Child Traumatic Stress Network) per il PFA pediatrico.</p>
 
-- Ha letto la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/) del sito.
-- Ha studiato gli articoli 2, 3 e 32 della Costituzione.
-
-### Obiettivi di apprendimento
-
-- Sa cosa significa **trauma** in psicologia dell'emergenza e distingue **reazione normale a evento anormale** vs **disturbo post-traumatico**.
-- Riconosce le **reazioni tipiche** nelle diverse fasce d'età (bambini, adolescenti, adulti, anziani).
-- Conosce il modello **Psychological First Aid (PFA)** del WHO: **Look** (osservare), **Listen** (ascoltare), **Link** (collegare ai servizi).
-- Sa cosa NON dire e NON fare a chi ha appena vissuto un'emergenza (errori comuni del "buon samaritano" non formato).
-- Riconosce il ruolo del **volontario di PC** come "primo aggancio relazionale" e i limiti del suo intervento: il PFA **non è psicoterapia**, è supporto umano nelle prime ore.
-
-### Articolazione delle 3 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -729,38 +919,48 @@ Rubrica fascia, indicatori 1 (autoprotezione), 3 (conoscenza del territorio), 5 
 
 Il percorso può essere esteso a un **workshop di 6 ore** con uno psicologo dell'emergenza dell'**Albo Psicologi Lazio** (sezione Emergenza) o di una delle équipe **EmergenSI** o **PsyPlus** territoriali. Il Gruppo Comunale può facilitare il contatto.
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Ha letto la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/) del sito.
+- Ha studiato gli articoli 2, 3 e 32 della Costituzione.
+
+#### Obiettivi di apprendimento
+
+- Sa cosa significa **trauma** in psicologia dell'emergenza e distingue **reazione normale a evento anormale** vs **disturbo post-traumatico**.
+- Riconosce le **reazioni tipiche** nelle diverse fasce d'età (bambini, adolescenti, adulti, anziani).
+- Conosce il modello **Psychological First Aid (PFA)** del WHO: **Look** (osservare), **Listen** (ascoltare), **Link** (collegare ai servizi).
+- Sa cosa NON dire e NON fare a chi ha appena vissuto un'emergenza (errori comuni del "buon samaritano" non formato).
+- Riconosce il ruolo del **volontario di PC** come "primo aggancio relazionale" e i limiti del suo intervento: il PFA **non è psicoterapia**, è supporto umano nelle prime ore.
+
+#### Competenze chiave europee mobilitate
 
 Competenza personale, sociale · Competenza in materia di cittadinanza · Competenza alfabetica funzionale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 4 (comportamento in emergenza), 6 (cittadinanza attiva). Possibile **prova autentica**: gli studenti scrivono una **lettera empatica** a un coetaneo immaginario che ha vissuto un terremoto, rispettando i principi del PFA (300 parole). Si valuta sul rispetto del modello, non sull'aderenza a un modello unico.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 14 — Rischio chimico-industriale e direttiva Seveso {#percorso-14}
 
-**Destinatari**: Scuola Secondaria di II grado, in particolare Istituti Tecnici a indirizzo chimico, biotecnologico, ambientale.
-**Durata**: 3 ore (lezioni da 1 ora).
-**Disciplina prevalente**: Chimica · Educazione Civica · Diritto.
-**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità (+ 1 per la parte normativa).
-**Riferimento normativo specifico**: **D.Lgs. 26 giugno 2015, n. 105** (attuazione della Direttiva **Seveso III** 2012/18/UE) · **Regolamento CE 1272/2008 (CLP)** sull'etichettatura delle sostanze pericolose · **art. 32 Cost.** (salute).
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Scuola Secondaria di II grado, in particolare Istituti Tecnici a indirizzo chimico, biotecnologico, ambientale</span>
+<span class="meta-badge meta-durata">3 ore (lezioni da 1 ora)</span>
+<span class="meta-badge meta-disciplina">Chimica · Educazione Civica · Diritto</span>
+<span class="meta-badge meta-nucleo">2 — Sviluppo economico e sostenibilità (+ 1 per la parte normativa)</span>
+</div>
 
-### Prerequisiti
+<p class="percorso-norma"><strong>Riferimento normativo:</strong> **D.Lgs. 26 giugno 2015, n. 105** (attuazione della Direttiva **Seveso III** 2012/18/UE) · **Regolamento CE 1272/2008 (CLP)** sull'etichettatura delle sostanze pericolose · **art. 32 Cost.** (salute).</p>
 
-- Ha studiato i pittogrammi CLP delle sostanze pericolose.
-- Conosce il concetto di "rischio" come probabilità × danno.
-
-### Obiettivi di apprendimento
-
-- Conosce la **Direttiva Seveso** e la sua origine storica: l'incidente di **Seveso del 10 luglio 1976** (rilascio di TCDD, prima diossina dell'industria europea).
-- Distingue **stabilimenti a soglia inferiore** e **soglia superiore** del D.Lgs. 105/2015.
-- Sa leggere i **pittogrammi GHS-CLP** sulle sostanze pericolose (esplosivo, infiammabile, comburente, gas sotto pressione, corrosivo, tossico, irritante, mutageno-cancerogeno-tossico per la riproduzione, pericoloso per l'ambiente, gas in bombole).
-- Conosce la differenza fra **stay-in** (rifugio al chiuso, chiudere finestre, spegnere ventilazione) e **go-out** (evacuazione verso area sicura) in caso di nube tossica.
-- Sa cos'è il **Piano di Emergenza Esterno (PEE)** che il Prefetto redige per ogni stabilimento Seveso.
-
-### Articolazione delle 3 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -768,36 +968,46 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 | 2 | Pittogrammi CLP e cartelli di pericolo. Riconoscere le sostanze nelle etichette di casa e nei trasporti | Articolo [Cartelli di pericolo sostanze pericolose](/comunicazioni/2026-05-24-cartelli-pericolo-sostanze-pericolose-riconoscere-agire/) + [Pittogrammi ISO 7010 del sito](/pittogrammi/) |
 | 3 | Stay-in vs Go-out: comportamenti corretti in caso di nube tossica. Il Piano di Emergenza Esterno del Prefetto | Articolo [Rischio chimico-industriale e cittadini](/comunicazioni/2026-05-24-rischio-chimico-industriale-cittadini/) + articolo [Rischio industriale Seveso](/comunicazioni/2026-10-20-rischio-industriale-seveso/) |
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Ha studiato i pittogrammi CLP delle sostanze pericolose.
+- Conosce il concetto di "rischio" come probabilità × danno.
+
+#### Obiettivi di apprendimento
+
+- Conosce la **Direttiva Seveso** e la sua origine storica: l'incidente di **Seveso del 10 luglio 1976** (rilascio di TCDD, prima diossina dell'industria europea).
+- Distingue **stabilimenti a soglia inferiore** e **soglia superiore** del D.Lgs. 105/2015.
+- Sa leggere i **pittogrammi GHS-CLP** sulle sostanze pericolose (esplosivo, infiammabile, comburente, gas sotto pressione, corrosivo, tossico, irritante, mutageno-cancerogeno-tossico per la riproduzione, pericoloso per l'ambiente, gas in bombole).
+- Conosce la differenza fra **stay-in** (rifugio al chiuso, chiudere finestre, spegnere ventilazione) e **go-out** (evacuazione verso area sicura) in caso di nube tossica.
+- Sa cos'è il **Piano di Emergenza Esterno (PEE)** che il Prefetto redige per ogni stabilimento Seveso.
+
+#### Competenze chiave europee mobilitate
 
 Competenza matematica e in scienze · Competenza in materia di cittadinanza · Competenza personale, sociale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 1 (autoprotezione), 5 (ruolo delle istituzioni). Possibile **prova autentica**: gli studenti producono un **decalogo "Stay-in"** per la propria scuola, da affiggere accanto al piano di evacuazione (regola visibile: non sostituisce il piano antincendio, lo affianca).
+
+</div>
+</details>
 
 ---
 
 ## Percorso 15 — Memoria dei disastri italiani {#percorso-15}
 
-**Destinatari**: Scuola Secondaria di II grado.
-**Durata**: 4 ore (lezioni da 1 ora) + eventuale visita a un luogo della memoria.
-**Disciplina prevalente**: Storia · Italiano · Educazione Civica · Geografia.
-**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà (+ 2 per la dimensione di sostenibilità del rischio).
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Scuola Secondaria di II grado</span>
+<span class="meta-badge meta-durata">4 ore (lezioni da 1 ora) + eventuale visita a un luogo della memoria</span>
+<span class="meta-badge meta-disciplina">Storia · Italiano · Educazione Civica · Geografia</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà (+ 2 per la dimensione di sostenibilità del rischio)</span>
+</div>
 
-### Prerequisiti
-
-- Ha studiato la storia repubblicana italiana dal 1945 ai giorni nostri.
-- Ha letto almeno un libro o un articolo di **storia dei disastri** o di **public history**.
-
-### Obiettivi di apprendimento
-
-- Conosce **sei disastri-chiave** della storia repubblicana italiana e le loro cause **non solo naturali**.
-- Distingue **pericolosità** (fattore naturale), **vulnerabilità** (fattore sociale e costruttivo), **esposizione** (fattore demografico): il **rischio** è il loro prodotto.
-- Sa che dopo ogni disastro è nata una **nuova norma** o una **nuova istituzione** (es. Friuli 1976 → modello regionale, Irpinia 1980 → DPC nazionale, Sarno 1998 → PAI).
-- Comprende il dovere di **memoria attiva**: non commemorare per ritualità, ma per **non ripetere**.
-
-### Articolazione delle 4 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -806,38 +1016,47 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 | 3 | **Sarno 5 maggio 1998** + **L'Aquila 6 aprile 2009** — la frana che si poteva evitare, il terremoto che ha cambiato l'urbanistica | Articolo [Sarno 1998](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/) + scheda [L'Aquila — Secondaria II](/formazione/schede-stampabili/caso-aquila-secondaria2/) |
 | 4 | **Amatrice 24 agosto 2016** + **Emilia 20-29 maggio 2012** — patrimonio storico perduto, resilienza comunitaria ritrovata | Articolo [Amatrice 2016 — 10° anniversario](/comunicazioni/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario/) + scheda [Amatrice — Secondaria II](/formazione/schede-stampabili/caso-amatrice-secondaria2/) + articolo [Emilia 2012](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/) |
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Ha studiato la storia repubblicana italiana dal 1945 ai giorni nostri.
+- Ha letto almeno un libro o un articolo di **storia dei disastri** o di **public history**.
+
+#### Obiettivi di apprendimento
+
+- Conosce **sei disastri-chiave** della storia repubblicana italiana e le loro cause **non solo naturali**.
+- Distingue **pericolosità** (fattore naturale), **vulnerabilità** (fattore sociale e costruttivo), **esposizione** (fattore demografico): il **rischio** è il loro prodotto.
+- Sa che dopo ogni disastro è nata una **nuova norma** o una **nuova istituzione** (es. Friuli 1976 → modello regionale, Irpinia 1980 → DPC nazionale, Sarno 1998 → PAI).
+- Comprende il dovere di **memoria attiva**: non commemorare per ritualità, ma per **non ripetere**.
+
+#### Competenze chiave europee mobilitate
 
 Competenza in materia di consapevolezza ed espressione culturali · Competenza alfabetica funzionale · Competenza in materia di cittadinanza · Competenza personale, sociale.
 
-### Valutazione
+#### Valutazione
 
 Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 5 (ruolo delle istituzioni), 6 (cittadinanza attiva). Possibile **prova autentica**: gli studenti scelgono **un** disastro dei sei e producono un **breve podcast (5-7 minuti)** che racconta cosa è successo, perché, cosa è cambiato dopo. Strumenti gratuiti (Audacity, smartphone). Pubblicabile sul sito del Gruppo previa revisione del docente.
+
+</div>
+</details>
 
 ---
 
 ## Percorso 16 — Inclusione e Protezione Civile accessibile {#percorso-16}
 
-**Destinatari**: Scuola Secondaria di I e II grado.
-**Durata**: 3 ore (lezioni da 1 ora).
-**Disciplina prevalente**: Educazione Civica · Italiano · Diritto · Scienze Umane.
-**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà (+ 3 per la cittadinanza digitale-comunicativa).
-**Riferimento normativo specifico**: **Convenzione ONU sui diritti delle persone con disabilità** (New York 13 dicembre 2006), ratificata dall'Italia con **L. 3 marzo 2009, n. 18** · **Sendai Framework for Disaster Risk Reduction 2015-2030** (target B e D, "Disability-Inclusive Disaster Risk Reduction") · **L. 9 gennaio 2004, n. 4** (Legge Stanca, accessibilità digitale) · **ISO 22395:2018** sulla comunicazione con persone vulnerabili in emergenza.
+<div class="percorso-meta">
+<span class="meta-badge meta-fascia">Scuola Secondaria di I e II grado</span>
+<span class="meta-badge meta-durata">3 ore (lezioni da 1 ora)</span>
+<span class="meta-badge meta-disciplina">Educazione Civica · Italiano · Diritto · Scienze Umane</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà (+ 3 per la cittadinanza digitale-comunicativa)</span>
+</div>
 
-### Prerequisiti
+<p class="percorso-norma"><strong>Riferimento normativo:</strong> **Convenzione ONU sui diritti delle persone con disabilità** (New York 13 dicembre 2006), ratificata dall'Italia con **L. 3 marzo 2009, n. 18** · **Sendai Framework for Disaster Risk Reduction 2015-2030** (target B e D, "Disability-Inclusive Disaster Risk Reduction") · **L. 9 gennaio 2004, n. 4** (Legge Stanca, accessibilità digitale) · **ISO 22395:2018** sulla comunicazione con persone vulnerabili in emergenza.</p>
 
-- Conosce gli articoli 2, 3 e 38 della Costituzione (uguaglianza sostanziale e diritti delle persone con disabilità).
-- Ha sentito parlare di "design universale" o di "accessibilità".
-
-### Obiettivi di apprendimento
-
-- Sa che la **Convenzione ONU 2006** ha introdotto il principio del **"niente su di noi senza di noi"**: le persone con disabilità sono **co-progettiste** dei servizi che le riguardano, non destinatarie passive.
-- Conosce il **Sendai Framework 2015-2030** dell'**UNDRR** e il principio della **Disability-Inclusive Disaster Risk Reduction (DiDRR)**.
-- Riconosce le diverse **categorie con bisogni specifici**: persone con disabilità sensoriali (cieche, sorde), motorie, cognitive, anziani fragili, bambini, parlanti italiano L2, persone senza fissa dimora, donne in gravidanza, neonati.
-- Conosce gli strumenti del **sito del Gruppo** per l'inclusione: pagine **Facile da Leggere**, **Abili a Proteggere**, **LIS**, **pittogrammi ARASAAC**, versioni **italiano L2** degli articoli.
-- Comprende che l'accessibilità **non è "un extra"** per pochi, ma **migliora l'esperienza di tutti** (curb cut effect).
-
-### Articolazione delle 3 ore
+### Articolazione
 
 | Ora | Attività | Materiali |
 |---|---|---|
@@ -845,13 +1064,33 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 | 2 | Categorie con bisogni specifici: disabilità sensoriali, motorie, cognitive, anziani, bambini, italiano L2. Tour dei Kit Calamità | Pagina [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/) + sezione [Kit Calamità](/formazione/kit-calamita/) (panoramica dei 12 kit) |
 | 3 | Comunicazione accessibile: Facile da Leggere, pittogrammi ARASAAC, LIS, italiano L2 | Pagina [Facile da Leggere](/facile-da-leggere/) + pagina [LIS](/lis/) + articolo [Autismo ed emergenze inclusive](/comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/) |
 
-### Competenze chiave europee mobilitate
+<details class="faq-item percorso-dettagli">
+<summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
+<div class="percorso-dettagli-body">
+
+#### Prerequisiti
+
+- Conosce gli articoli 2, 3 e 38 della Costituzione (uguaglianza sostanziale e diritti delle persone con disabilità).
+- Ha sentito parlare di "design universale" o di "accessibilità".
+
+#### Obiettivi di apprendimento
+
+- Sa che la **Convenzione ONU 2006** ha introdotto il principio del **"niente su di noi senza di noi"**: le persone con disabilità sono **co-progettiste** dei servizi che le riguardano, non destinatarie passive.
+- Conosce il **Sendai Framework 2015-2030** dell'**UNDRR** e il principio della **Disability-Inclusive Disaster Risk Reduction (DiDRR)**.
+- Riconosce le diverse **categorie con bisogni specifici**: persone con disabilità sensoriali (cieche, sorde), motorie, cognitive, anziani fragili, bambini, parlanti italiano L2, persone senza fissa dimora, donne in gravidanza, neonati.
+- Conosce gli strumenti del **sito del Gruppo** per l'inclusione: pagine **Facile da Leggere**, **Abili a Proteggere**, **LIS**, **pittogrammi ARASAAC**, versioni **italiano L2** degli articoli.
+- Comprende che l'accessibilità **non è "un extra"** per pochi, ma **migliora l'esperienza di tutti** (curb cut effect).
+
+#### Competenze chiave europee mobilitate
 
 Competenza in materia di cittadinanza · Competenza personale, sociale · Competenza alfabetica funzionale · Competenza in materia di consapevolezza ed espressione culturali.
 
-### Valutazione
+#### Valutazione
 
 Rubrica fascia, indicatori 5 (ruolo delle istituzioni), 6 (cittadinanza attiva). Possibile **prova autentica**: la classe identifica **una barriera comunicativa** nel proprio quartiere (un cartello illeggibile, un messaggio comunale solo audio, una mappa senza pittogrammi) e produce una **versione accessibile** (testo Facile da Leggere o pittogramma o trascrizione), da proporre al Comune.
+
+</div>
+</details>
 
 ---
 
