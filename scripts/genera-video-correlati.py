@@ -304,6 +304,46 @@ DIVULGATIVO_PC_KEYWORDS = [
 ]
 
 
+def _is_italian_title(title: str) -> bool:
+    """Heuristic per filtrare i titoli in inglese (Geopop e altri
+    canali divulgativi pubblicano spesso versione bilingue: i video
+    con titolo in inglese non hanno senso sul nostro sito italiano).
+
+    Rigetta se:
+    - inizia con tipiche parole inglesi (The, How, What, Why, Is, Are,
+      Can, Does, etc.)
+    - contiene pattern inglesi distintivi (' of the ', ' in the ',
+      ' how to ', ' it's ', etc.)
+    - >40% delle parole sono stopword inglesi pure"""
+    if not title:
+        return True
+    t = title.lower().strip()
+    en_prefixes = (
+        "the ", "how ", "what ", "why ", "is ", "are ", "can ",
+        "do ", "does ", "did ", "was ", "were ", "when ", "where ",
+        "with ", "from ", "this ", "these ", "those ", "that ",
+        "which ", "who ", "whose ", "every ", "any ", "no ",
+        "meet ", "let ", "let's ", "it's ", "here ", "there ",
+        "a guide ", "an introduction ",
+    )
+    if t.startswith(en_prefixes):
+        return False
+    en_patterns = (
+        " the ", " is ", " are ", " was ", " were ", " of the ",
+        " in the ", " on the ", " at the ", " to the ", " for the ",
+        " from the ", " with the ", " by the ", " and the ",
+        " how to ", " what's ", " it's ", " they're ", " we're ",
+        " you're ", " doesn't ", " don't ", " won't ", " can't ",
+        " could ", " would ", " should ", " might ", " must ",
+        " between ", " against ", " through ", " among ",
+        " because ", " however ", " although ", " whether ",
+        " who's ", " whose ", " where's ", " there's ",
+    )
+    if any(p in (" " + t + " ") for p in en_patterns):
+        return False
+    return True
+
+
 def _divulgativo_pc_relevant(title: str) -> bool:
     """True se il titolo di un canale divulgativo non-tematico contiene
     almeno una keyword PC-tematica (in senso ampio: rischi naturali,
@@ -465,7 +505,14 @@ def main() -> int:
                        if cm.get("tematico_pc")}
     video_keywords = {}
     skipped_divulgativo = 0
+    skipped_lingua = 0
     for key, v in videos.items():
+        # Vincolo lingua: il sito è in italiano, escludi i video con
+        # titolo in inglese (Geopop ne ha ~14% bilingue, anche altri
+        # canali divulgativi pubblicano in inglese per audience globale)
+        if not _is_italian_title(v["titolo"]):
+            skipped_lingua += 1
+            continue
         ck = v.get("canale", "")
         if ck not in canali_tematici and not _divulgativo_pc_relevant(v["titolo"]):
             skipped_divulgativo += 1
@@ -479,7 +526,8 @@ def main() -> int:
             "is_lis": v["id"] in lis_video_ids,
         }
     print(f"Video candidati: {len(video_keywords)} "
-          f"(divulgativi filtrati out per non-pertinenza PC: {skipped_divulgativo})",
+          f"(divulgativi filtrati out per non-pertinenza PC: {skipped_divulgativo}, "
+          f"video in inglese scartati: {skipped_lingua})",
           file=sys.stderr)
 
     # IDF su pagine sito: parole molto frequenti = peso 0.2
@@ -540,6 +588,15 @@ def main() -> int:
                     score += w * 2.0
                 else:
                     score += w * 1.0
+            # Bonus "match esatto titolo→titolo" per parole tecniche rare:
+            # quando una keyword RARA nel sito (peso IDF >= 0.9) appare sia
+            # nel titolo della pagina sia nel titolo del video, aggiungi +3
+            # al score. Serve per favorire match perfetti (es. articolo
+            # "Seveso 1976" vs video "The Seveso disaster") rispetto a
+            # match generici che pescano parole comuni nel body dell'articolo.
+            title_match = [k for k in (page["title_kw"] & vdata["kw"])
+                           if weights.get(k, 1.0) >= 0.9]
+            score += 3.0 * len(title_match)
             if score < args.min_score:
                 continue
             candidates.append({

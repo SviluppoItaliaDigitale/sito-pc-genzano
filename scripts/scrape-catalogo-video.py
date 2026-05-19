@@ -106,6 +106,16 @@ CANALI = {
         "url": "https://www.youtube.com/@RaiNews/videos",
         "tematico_pc": False,
     },
+    # SkyTG24 e TGCom24 erano stati aggiunti (2026-05-19), poi rimossi
+    # lo stesso giorno: rumore eccessivo. Producevano 63% di tutti i link
+    # del sistema con match generici tipo "Seveso esonda Milano" su
+    # articolo del disastro chimico di Seveso, "Tragedia funivia" su
+    # articolo Vajont, "Turchia incendio vigili del fuoco" su articolo
+    # terremoto Amatrice. Sono canali news con migliaia di clip brevi
+    # che condividono parole comuni ad alto score. Rai News (1489 video,
+    # 2% dei link, qualità decente) resta — è più editoriale e meno
+    # "cronaca-flash". Per re-includere SkyTG24/TGCom24 servirebbero
+    # filtri lessicali molto più stringenti.
 }
 
 
