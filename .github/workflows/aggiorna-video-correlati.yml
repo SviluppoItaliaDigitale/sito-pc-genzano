@@ -1,16 +1,32 @@
 name: Aggiorna catalogo video + cross-match
 
-# Re-scraping mensile dei 3 canali YouTube monitorati (Io non rischio,
-# DPCgov, Abili a Proteggere) e rigenerazione della mappa
-# pagina→video_correlati per integrazione automatica nelle pagine del sito.
+# Re-scraping mensile dei canali YouTube monitorati (al 2026-05-19: 5
+# tematici PC + 8 divulgativi non-tematici, totale 13 canali attivi) e
+# rigenerazione della mappa pagina→video_correlati per integrazione
+# automatica nelle sezioni "Approfondimenti video" delle pagine del sito.
+#
+# Canali tematici PC (no filtro lessicale, ogni video è pertinente):
+#   - Io non rischio (DPC + ANPAS + INGV + RELUIS + CIMA)
+#   - DPCgov (canale ufficiale Dipartimento Protezione Civile)
+#   - Abili a Proteggere (Cooperativa Europe Consulting, LIS)
+#   - INGV terremoti + INGV vulcani
+#
+# Canali divulgativi (con filtro DIVULGATIVO_PC_KEYWORDS — PC in senso ampio):
+#   - Geopop, National Geographic Italia, Rai Cultura, Rai News
+#   - CICAP, Link4Universe, Wired Italia, Sky TG24, TGCom24
 #
 # Logica:
 #  1. scrape-catalogo-video.py via yt-dlp → data/video_dpc_catalogo.yaml
-#  2. genera-video-correlati.py (IDF cross-match) → data/video_correlati.yaml
+#  2. genera-video-correlati.py (IDF cross-match + filtro PC sui divulgativi)
+#     → data/video_correlati.yaml
 #  3. Se ci sono diff, commit con [skip-aggiorna-video] + ri-trigger deploy
 #
 # Scaglionato 1° del mese 10:13 UTC (fuori quarti d'ora canonici, in mezzo
 # alla finestra di manutenzione).
+#
+# Per aggiungere/rimuovere un canale: modifica il dict CANALI in
+# scripts/scrape-catalogo-video.py (vedi manuale/parte-32 per la procedura
+# completa). Il prossimo run mensile fa il lavoro automaticamente.
 
 on:
   schedule:
