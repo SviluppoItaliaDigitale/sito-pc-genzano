@@ -5383,25 +5383,44 @@ html.a11y-pause-anim .pcg-timeline-voce {
 
 .video-correlati {
   margin: 2rem 0 1.5rem;
-  padding: 1.1rem 1.2rem;
-  background: #f5f7fa;
-  border: 1px solid #d0d7e2;
-  border-radius: 10px;
-  border-left: 4px solid #c026d3;   /* viola → "approfondimento multimediale" */
+  padding: 1.25rem 1.4rem;
+  /* Sfondo pastello AGID — lavanda chiarissima coerente con la palette
+     "approfondimento culturale/multimediale" del sito. Contrasto WCAG AAA
+     con testo nero (#1a1a1a su #f5f0fb ≈ 16:1). */
+  background: #f5f0fb;
+  border: 1px solid #d9c7e8;
+  border-radius: 12px;
+  border-left: 5px solid #6b21a8;   /* viola istituzionale → approfondimento multimediale */
+  position: relative;
+}
+
+.video-correlati::before {
+  /* Icona discreta in alto a destra: "play" pastello come watermark di sezione */
+  content: "\F4F4";              /* bi-play-circle-fill */
+  font-family: "bootstrap-icons";
+  position: absolute;
+  top: 0.95rem;
+  right: 1.1rem;
+  color: rgba(107, 33, 168, 0.18);
+  font-size: 2.2rem;
+  pointer-events: none;
+  line-height: 1;
 }
 
 .video-correlati h2 {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   margin: 0 0 0.4rem;
-  color: #003366;
-  border-left: none;          /* override .article-body h2 */
+  color: #4a1d96;              /* viola istituzionale più scuro per contrasto AAA */
+  border-left: none;           /* override .article-body h2 */
   padding-left: 0;
+  padding-right: 2.5rem;       /* spazio per il watermark a destra */
 }
 
 .video-correlati-intro {
-  margin: 0 0 0.85rem;
-  color: #333333;
+  margin: 0 0 0.95rem;
+  color: #3a2e4a;              /* viola desaturato, AGID-compatibile, contrasto AA su #f5f0fb */
   font-size: 0.95rem;
+  padding-right: 2.5rem;
 }
 
 .video-correlati-list {
@@ -5414,16 +5433,16 @@ html.a11y-pause-anim .pcg-timeline-voce {
 
 .video-correlati-item {
   background: #ffffff;
-  border: 1px solid #d0d7e2;
+  border: 1px solid #d9c7e8;
   border-radius: 8px;
   transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .video-correlati-item:hover,
 .video-correlati-item:focus-within {
-  border-color: #003366;
+  border-color: #6b21a8;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.08);
+  box-shadow: 0 4px 12px rgba(107, 33, 168, 0.12);
 }
 
 .video-correlati-link {
@@ -5438,7 +5457,7 @@ html.a11y-pause-anim .pcg-timeline-voce {
 .video-correlati-link:hover,
 .video-correlati-link:focus-visible {
   text-decoration: none;
-  background: #f0f7ff;
+  background: #faf6fe;          /* lavanda ancora più pastello al hover */
 }
 
 .video-correlati-link:focus-visible {
@@ -5449,7 +5468,7 @@ html.a11y-pause-anim .pcg-timeline-voce {
 
 .video-correlati-icona {
   font-size: 1.8rem;
-  color: #c026d3;
+  color: #6b21a8;               /* allineato al border-left */
   flex-shrink: 0;
   line-height: 1;
 }
