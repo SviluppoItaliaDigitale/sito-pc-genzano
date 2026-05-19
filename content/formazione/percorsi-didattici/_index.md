@@ -139,20 +139,42 @@ Una buona ora vale più di tre ore distratte. Scegli **un solo tema**, lavoraci 
 
 ### Se hai 2-3 ore {#tempo-2-3ore}
 
-Il formato più richiesto dai docenti. Affronta un tema in modo strutturato e lascia un segno duraturo:
+Il formato più richiesto dai docenti. Affronta un tema in modo strutturato e lascia un segno duraturo. Puoi scegliere un **percorso intero** o un **mini-modulo tematico** che pesca da percorsi diversi:
 
-- [Percorso 2 — Rischio meteo e allerta](#percorso-2) (3 ore)
-- [Percorso 3 — Terremoto e piano scuola](#percorso-3) (2 ore + prova di evacuazione)
-- [Percorso 4 — Piano di emergenza familiare](#percorso-4) (2 ore + compito a casa)
-- [Percorso 5 — Fake news e comunicazione di crisi](#percorso-5) (3 ore)
+**Percorsi completi:**
+
+- [Percorso 2 — Rischio meteo e allerta](#percorso-2) (3 ore). Codici colore, bollettino, simulazione.
+- [Percorso 3 — Terremoto e piano scuola](#percorso-3) (2 ore + prova di evacuazione coordinata con il RSPP della scuola).
+- [Percorso 4 — Piano di emergenza familiare](#percorso-4) (2 ore in classe + compito a casa con i genitori).
+- [Percorso 5 — Fake news e comunicazione di crisi](#percorso-5) (3 ore). Riconoscere disinformazione, IT-alert, post di crisi sui social.
+
+**Mini-moduli tematici (2 ore, pescano da 2 percorsi):**
+
+- **Terremoto + Piano famiglia** (2 ore, primaria IV-V e sec I) — Lezione 1 del [Percorso 3](#percorso-3) (DROP-COVER-HOLD ON) + Lezione 1 del [Percorso 4](#percorso-4) (introduzione al piano familiare). Cosa fare e dove ritrovarsi.
+- **Allerta meteo + IT-alert** (2 ore, sec I) — Ora 1 del [Percorso 2](#percorso-2) (codici colore) + Ora 2 del [Percorso 5](#percorso-5) (IT-alert e Cell Broadcast). Come arrivano le informazioni e come distinguerle dal phishing.
+- **Incendi boschivi (campagna AIB estiva)** (2 ore, primaria-sec, da svolgere fra giugno e settembre) — i Castelli Romani sono **Zona AIB 9** del Lazio. Comportamenti corretti in passeggiata e in casa, ruolo del 112, riferimento al [Bollettino di pericolosità incendi](https://www.regione.lazio.it/cittadini/protezione-civile/bollettini/rischi-incendi) del **Centro Funzionale Regionale Lazio**.
+- **Ondate di calore e salute** (2 ore, primaria-sec, da svolgere fra giugno e agosto) — autoprotezione, anziani fragili, riconoscere un colpo di calore. Riferimenti: [Piano nazionale prevenzione caldo](https://www.salute.gov.it/portale/caldo/) del **Ministero della Salute** e [WHO Heat-Health Action Plans](https://www.who.int/europe/news-room/fact-sheets/item/heat-and-health). Adatto come "lezione di servizio" prima della pausa estiva.
 
 ### Se vuoi fare un progetto completo {#tempo-progetto}
 
-Un'unità didattica vera, che attraversa più discipline e può integrare l'incontro con un volontario PC o un PCTO:
+Un'unità didattica vera, che attraversa più discipline e può integrare l'incontro con un volontario PC, un PCTO, o un'attività territoriale. Scegli **scala** e **ambizione** in base al tempo che hai:
 
-- [Percorso 1 — Protezione Civile di base](#percorso-1) (4 ore + visita opzionale al Gruppo)
-- [Percorso 6 — Sicurezza nei luoghi di lavoro e PCTO](#percorso-6) (4-6 ore, integrabile nel monte ore PCTO)
-- **Combinazione**: Percorso 1 + Percorso 4 + Percorso 5 = mini-curriculum di Educazione Civica su PC, famiglia e cittadinanza digitale (~9-10 ore).
+**Percorsi singoli ad alta intensità:**
+
+- [Percorso 1 — Protezione Civile di base](#percorso-1) (4 ore + visita opzionale al Gruppo). Fondamenta su PC, 112, rischi locali, volontariato.
+- [Percorso 6 — Sicurezza nei luoghi di lavoro e PCTO](#percorso-6) (4-6 ore, integrabile nel monte ore PCTO). Decreto 81/2008, rischi specifici, primo soccorso.
+
+**Combinazioni di percorsi:**
+
+- **PC base + Piano famiglia + Cittadinanza digitale** = [Percorso 1](#percorso-1) + [Percorso 4](#percorso-4) + [Percorso 5](#percorso-5). Mini-curriculum di Educazione Civica su PC, famiglia e cittadinanza digitale (~9-10 ore totali).
+- **Rischio + Autoprotezione + Pianificazione** = [Percorso 2](#percorso-2) + [Percorso 3](#percorso-3) + [Percorso 4](#percorso-4). Tre percorsi per chi vuole partire dal rischio meteo, passare al terremoto, arrivare al piano famiglia. ~7-8 ore distribuite su un trimestre.
+
+**Formati di progetto:**
+
+- **Settimana della Protezione Civile** (5 incontri × 1 ora + giornata finale di esercitazione). Ogni incontro è una delle tracce monolezione qui sopra, la giornata finale è una prova di evacuazione coordinata con il RSPP della scuola. Adatto a una settimana dedicata di tutto l'istituto.
+- **Compito di realtà — Bollettino di sicurezza della classe** (6-8 ore, multi-disciplinare). Per quattro settimane gli studenti producono un breve bollettino settimanale (cartaceo o digitale) che racconta un rischio della settimana alle famiglie. Combina Italiano (scrittura), Tecnologia (layout/grafica), Ed. Civica (cittadinanza). Si valuta come prodotto autentico.
+- **Coordinamento col piano di emergenza scolastico** (10-15 ore, anno intero). Workshop con dirigente, RSPP e Gruppo Comunale per aggiornare il piano di emergenza dell'istituto. Le classi producono mappe, schede e cartelli interni. Riferimenti normativi: **D.M. 26/08/1992** (prevenzione incendi edilizia scolastica) e **D.Lgs. 81/2008** (sicurezza luoghi di lavoro).
+- **Patto educativo territoriale "Genzano sicura"** (anno scolastico). Collaborazione formale fra scuola, Comune (Polizia Locale, Servizi Sociali, Edilizia scolastica), Parrocchie e oratori, Pro Loco, Gruppo Comunale Volontari PC. Quadro normativo: autonomia scolastica della **L. 107/2015** e patti educativi territoriali del **PNRR Missione 4**. Il Gruppo affianca, non sostituisce, le istituzioni con compiti di polizia o viabilità (vedi [Circolare DPC 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/)).
 
 ## <i class="bi bi-list-ol text-primary me-2" aria-hidden="true"></i>Riepilogo dei percorsi {#riepilogo}
 | Percorso | Destinatari | Durata | Tema | Riferimento normativo |
