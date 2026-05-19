@@ -30,8 +30,14 @@ jobs:
       - name: Installa dipendenze
         run: pip install feedparser
 
-      - name: Esegui sweep RSS
+      - name: Esegui sweep RSS + Firecrawl (se chiave disponibile)
         id: sweep
+        env:
+          # Se il secret FIRECRAWL_API_KEY è settato a livello repo, lo script
+          # aggiunge il DPC (home + Area stampa) come fonte monitorata via
+          # Firecrawl. Se assente, lo script salta gracefully (vedi rule 08
+          # § "Firecrawl MCP").
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
         run: |
           DAYS="${{ inputs.days }}"
           [ -z "$DAYS" ] && DAYS=7

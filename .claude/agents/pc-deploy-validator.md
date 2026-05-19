@@ -92,6 +92,39 @@ Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni
 
 26. **Ordering articoli stesso giorno** (check **site-wide**, non solo diff): le giornate con 2+ articoli devono avere `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti. Se 2+ articoli condividono una `date` in formato solo-giorno `AAAA-MM-GG`, Hugo ordina per filename → archivio instabile. Rule `02-content-design-pa.md` § "Regola critica formato data". Rilevazione: per ogni `date:` lunga 10 caratteri, conta i duplicati. Match = BLOCCANTE, fix con `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente). Storia: 9 giornate trovate drift il 14 maggio 2026.
 
+### I. Smoke test browser POST-DEPLOY — WARNING opzionale
+
+🎭 **Quando eseguirlo**: dopo che il `deploy.yml` ha completato e Aruba/GitHub Pages hanno servito la nuova versione (ETA ~3 min dal push). Non blocca il push: gira **dopo** per catturare regressioni JS-only che HTTP-only non vede.
+
+27. **Smoke test Playwright sul sito live**: lancia 6 scenari interattivi in Chromium headless contro `https://www.protezionecivilegenzano.it`. Comando:
+
+    ```bash
+    node scripts/smoke-test-playwright.js https://www.protezionecivilegenzano.it
+    ```
+
+    Setup una-tantum (~150 MB Chromium, ~30 MB pacchetto playwright):
+    ```bash
+    npm install --no-save playwright@1.60.0
+    npx playwright install chromium
+    ```
+
+    **Scenari coperti** (~3 secondi totali sul sito live):
+    - Home page load + title + H1 visibili
+    - FAB accessibilità (`#a11yToolbarOpen`) apre/chiude dialog correttamente
+    - Modal ricerca Pagefind (`#pcg-ricerca-dialog`) si apre con `Ctrl+K`
+    - Articolo recente: bottone TTS `.tts-wrapper` + pill `.reading-time` con "min"
+    - `/numeri-utili/`: almeno 5 link `tel:` visibili, encoding corretto (nessun `tel:+39%20` o `tel:+39 ...`), COC `tel:+39069362600` presente
+    - Footer: link `/feed-rss/` o `/index.xml` presente
+
+    **Quando fallisce un test**:
+    - `FAB a11y dialog non aperto` → JS toolbar a11y rotto. Probabile regressione su `static/js/a11y-toolbar.js` o asset non deployato (cache stale FTP, vedi rule `05` § "File stantii"). Lanciare cache-bust simultaneo su `cosa-fare-adesso/_index.md` + `accessibilita/_index.md` + redeploy.
+    - `Modal Pagefind non aperto Ctrl+K` → keybinding rotto. Verificare partial `partials/ricerca-modal.html` + script `static/pagefind/pagefind-ui.js`.
+    - `tel: encoding bug` → regressione fix 29/04/2026 (`printf "tel:%s" .Site.Params.telefono_tel | safeURL`). Verificare `partials/utility-bar.html` riga 19 + redeploy.
+    - `Pill reading-time non trovata` → template `_default/single.html` ha perso il blocco reading-time (introdotto rule 03), oppure articolo specifico ha `tts: false` (escluderebbe anche reading-time).
+    - `H1 mancante` → rendering rotto: questo è BLOCCANTE post-deploy, considera rollback.
+
+    **In CI**: integrabile come step opzionale in `smoke-test-post-deploy.yml` (oggi solo HTTP check). Costo runner: ~30 sec + ~200 MB browser cache. Non bloccante.
+
 ## Output atteso
 
 ```
