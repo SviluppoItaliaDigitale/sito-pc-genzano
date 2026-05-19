@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 486 / Video unici usati: 602 /
-# Link totali: 1880 (max 5 per pagina,
+# Pagine coperte: 491 / Video unici usati: 628 /
+# Link totali: 1915 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -20,16 +20,6 @@ canali:
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
     video_count: 622
-  cnr:
-    nome: CNR — Consiglio Nazionale delle Ricerche
-    tematico_pc: false
-    url: https://www.youtube.com/@cnrweb/videos
-    video_count: 4
-  croce-rossa:
-    nome: Croce Rossa Italiana
-    tematico_pc: true
-    url: https://www.youtube.com/@crocerossaitaliana/videos
-    video_count: 2
   dpc-gov:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
@@ -55,11 +45,6 @@ canali:
     tematico_pc: true
     url: https://www.youtube.com/@io_non_rischio/videos
     video_count: 97
-  ispra-ambiente:
-    nome: ISPRA — Istituto Superiore per la Protezione e la Ricerca Ambientale
-    tematico_pc: true
-    url: https://www.youtube.com/@ISPRAITALIA/videos
-    video_count: 0
   link4universe:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
@@ -75,11 +60,16 @@ canali:
     tematico_pc: false
     url: https://www.youtube.com/@raicultura/videos
     video_count: 10
-  vigili-del-fuoco:
-    nome: Vigili del Fuoco
-    tematico_pc: true
-    url: https://www.youtube.com/@VigiliDelFuoco/videos
+  rai-news:
+    nome: Rai News
+    tematico_pc: false
+    url: https://www.youtube.com/@RaiNews/videos
     video_count: 0
+  wired-italia:
+    nome: Wired Italia
+    tematico_pc: false
+    url: https://www.youtube.com/@WiredItalia/videos
+    video_count: 944
 pagine:
   area-volontari:
     title: Area Volontari
@@ -401,6 +391,17 @@ pagine:
       titolo: 'TUNGUSKA: Storia dell''IMPATTO contro la TERRA'
       url: https://youtu.be/m1NzSf-emEc
     - anchored:
+      - contro
+      canale: wired-italia
+      id: BHQH-McG5hM
+      is_lis: false
+      overlap:
+      - contro
+      - prevenzione
+      score: 3.2
+      titolo: Le giuste misure di prevenzione contro il Coronavirus | Wired Answers| Wired Italia
+      url: https://youtu.be/BHQH-McG5hM
+    - anchored:
       - presenta
       canale: cicap
       id: QyiudPPRQeE
@@ -421,16 +422,6 @@ pagine:
       score: 3.0
       titolo: Quanto costano le fake news sul cibo - con Andrea Pezzana
       url: https://youtu.be/t7DK18C67S4
-    - anchored:
-      - presenta
-      canale: dpc-gov
-      id: 6JuLpVcQurE
-      is_lis: false
-      overlap:
-      - presenta
-      score: 3.0
-      titolo: Il Capo Dipartimento presenta la Settimana – Settimana Nazionale della Protezione Civile 2020
-      url: https://youtu.be/6JuLpVcQurE
   comunicazioni/2025-03-10-cucina-emergenza-haccp-ruoli-volontari:
     title: 'Cucina in emergenza: chi fa cosa e perché la formazione HACCP è obbligatoria'
     url: /comunicazioni/2025-03-10-cucina-emergenza-haccp-ruoli-volontari/
@@ -962,6 +953,16 @@ pagine:
       score: 3.6
       titolo: Conoscere la caldera – Cosa devi ricordare e cosa puoi fare fin da subito
       url: https://youtu.be/phK5ETSeUwI
+    - anchored:
+      - memoria
+      canale: wired-italia
+      id: nm_19L5JQ98
+      is_lis: false
+      overlap:
+      - memoria
+      score: 3.0
+      titolo: 40 anni dal disastro nucleare di Chernobyl, racconti e memoria in una Ucraina che ancora resiste
+      url: https://youtu.be/nm_19L5JQ98
   comunicazioni/2026-01-31-neve-castelli-romani-organizzazione:
     title: 'Neve nei Castelli Romani: come ci organizziamo'
     url: /comunicazioni/2026-01-31-neve-castelli-romani-organizzazione/
@@ -2948,6 +2949,17 @@ pagine:
       titolo: 'Glossario in LIS: Bollettino di criticità/allerta'
       url: https://youtu.be/Ihj9G0pjOh4
     - anchored:
+      - previsioni
+      canale: wired-italia
+      id: y__8Y2xuxD8
+      is_lis: false
+      overlap:
+      - previsioni
+      - tempo
+      score: 3.2
+      titolo: Questo drone della Nasa sorvola gli uragani per migliorare le previsioni del tempo | Wired Italia
+      url: https://youtu.be/y__8Y2xuxD8
+    - anchored:
       - supercomputer
       canale: geopop
       id: edb77-kJMYY
@@ -2967,16 +2979,6 @@ pagine:
       score: 2.0
       titolo: 'Il terremoto de L''Aquila: i satelliti individuano la faglia'
       url: https://youtu.be/JrhWeWmFvJQ
-    - anchored:
-      - supercomputer
-      canale: ingv-vulcani
-      id: 544K9e0lHsc
-      is_lis: false
-      overlap:
-      - supercomputer
-      score: 2.0
-      titolo: Eruzioni virtuali al supercomputer
-      url: https://youtu.be/544K9e0lHsc
   comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica:
     title: 'Il kit di emergenza domestico: cosa mettere e dove tenerlo'
     url: /comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/
@@ -2993,6 +2995,18 @@ pagine:
       score: 4.0
       titolo: Le operazioni di carico del Posto Medico Avanzato – Ciclone Mozambico
       url: https://youtu.be/zDmfPr-Vdjs
+    - anchored:
+      - domestico
+      canale: wired-italia
+      id: frppwCyz7vY
+      is_lis: false
+      overlap:
+      - aria
+      - casa
+      - domestico
+      score: 3.8
+      titolo: 'WNF18 - Aria di casa: come combattere l''inquinamento domestico | Wired Italia'
+      url: https://youtu.be/frppwCyz7vY
     - anchored:
       - posto
       canale: dpc-gov
@@ -3026,18 +3040,6 @@ pagine:
       score: 3.0
       titolo: Cos'è un Posto Medico Avanzato di secondo livello – Ciclone Mozambico
       url: https://youtu.be/su6gTLmjvqY
-    - anchored:
-      - oggetti
-      canale: geopop
-      id: n0dBVjR1OrI
-      is_lis: false
-      overlap:
-      - degli
-      - oggetti
-      - serve
-      score: 2.4
-      titolo: 'Galleria del vento: a cosa serve e come funziona lo studio dell''aerodinamica degli oggetti'
-      url: https://youtu.be/n0dBVjR1OrI
   comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani:
     title: 'Giornata della Terra: il clima che cambia e i rischi sul nostro territorio'
     url: /comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani/
@@ -3054,6 +3056,18 @@ pagine:
       score: 5.0
       titolo: Scoprire la vita aliena esplorando laghi vulcanici estremi sulla Terra
       url: https://youtu.be/0fTelCqyoAU
+    - anchored:
+      - clima
+      - crisi
+      canale: wired-italia
+      id: pvqiL6WK5dY
+      is_lis: false
+      overlap:
+      - clima
+      - crisi
+      score: 5.0
+      titolo: 'Bertrand Piccard: non è troppo tardi per salvarci dalla crisi del clima! | The Big Interview'
+      url: https://youtu.be/pvqiL6WK5dY
     - anchored:
       - terra
       canale: geopop
@@ -3087,16 +3101,6 @@ pagine:
       score: 3.2
       titolo: 'TUNGUSKA: Storia dell''IMPATTO contro la TERRA'
       url: https://youtu.be/m1NzSf-emEc
-    - anchored:
-      - clima
-      canale: cicap
-      id: M5i7h2lN_VE
-      is_lis: false
-      overlap:
-      - clima
-      score: 3.0
-      titolo: Emergenza clima  fra scienza e responsabilità
-      url: https://youtu.be/M5i7h2lN_VE
   comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore:
     title: 'Proteggere cani e gatti dal caldo: le 10 regole del Ministero della Salute'
     url: /comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore/
@@ -3544,6 +3548,20 @@ pagine:
     - anchored:
       - chernobyl
       - disastro
+      canale: wired-italia
+      id: nm_19L5JQ98
+      is_lis: false
+      overlap:
+      - chernobyl
+      - disastro
+      - nucleare
+      - ucraina
+      score: 7.0
+      titolo: 40 anni dal disastro nucleare di Chernobyl, racconti e memoria in una Ucraina che ancora resiste
+      url: https://youtu.be/nm_19L5JQ98
+    - anchored:
+      - chernobyl
+      - disastro
       canale: geopop
       id: 4G-cqJy_6_o
       is_lis: false
@@ -3567,18 +3585,6 @@ pagine:
       score: 5.4
       titolo: 'Il disastro di Chernobyl: la comunicazione - con Giancarlo Sturloni'
       url: https://youtu.be/nDlIi_Y9agE
-    - anchored:
-      - chernobyl
-      - disastro
-      canale: cicap
-      id: SO4uSy_h7k8
-      is_lis: false
-      overlap:
-      - chernobyl
-      - disastro
-      score: 5.0
-      titolo: 'Il disastro di Chernobyl: il viaggio - con Silvia Kuna Ballero'
-      url: https://youtu.be/SO4uSy_h7k8
   comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi:
     title: Il piano di emergenza familiare in 5 passi
     url: /comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/
@@ -3605,6 +3611,17 @@ pagine:
       score: 3.0
       titolo: L'attività vulcanica nel mondo aumenta? Una conversazione a distanza fra vulcanologi
       url: https://youtu.be/B-eC1-bIj-g
+    - anchored:
+      - pronti
+      canale: wired-italia
+      id: XnWDpnRH74s
+      is_lis: false
+      overlap:
+      - emergenza
+      - pronti
+      score: 2.6
+      titolo: Siamo davvero pronti per la fase 2 dell'emergenza coronavirus?
+      url: https://youtu.be/XnWDpnRH74s
     - anchored:
       - arriva
       canale: natgeo-italia
@@ -5120,6 +5137,16 @@ pagine:
       score: 2.4
       titolo: 'Coronavirus: un''emergenza inattesa, da cui possiamo imparare molto'
       url: https://youtu.be/D1y5UTWuCrk
+    - anchored:
+      - imparare
+      canale: wired-italia
+      id: v1mVMcXGJOw
+      is_lis: false
+      overlap:
+      - imparare
+      score: 2.0
+      titolo: Un breve training per imparare a volare con la Nasa | Wired Italia
+      url: https://youtu.be/v1mVMcXGJOw
   comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione:
     title: 'Estintori: classi di fuoco, uso corretto e manutenzione'
     url: /comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/
@@ -5328,6 +5355,16 @@ pagine:
       titolo: 'Weather alert for Lombardy: here''s how Civil Protection is responding from the regional operation...'
       url: https://youtu.be/ZKQnxPX-Gqg
     - anchored:
+      - funzionare
+      canale: wired-italia
+      id: m_fnugU5koQ
+      is_lis: false
+      overlap:
+      - funzionare
+      score: 3.0
+      titolo: 'Covid-19: può funzionare l''immunità di gregge? | Wired Answers| Wired Italia'
+      url: https://youtu.be/m_fnugU5koQ
+    - anchored:
       - dice
       canale: geopop
       id: 08Vvlk2W_W8
@@ -5347,16 +5384,6 @@ pagine:
       score: 2.0
       titolo: RISCALDAMENTO GLOBALE- COSA DICE L'IPCC (ONU)
       url: https://youtu.be/602YQuR2pe4
-    - anchored:
-      - progetta
-      canale: geopop
-      id: HjhnA7sC1OU
-      is_lis: false
-      overlap:
-      - progetta
-      score: 2.0
-      titolo: PIANO DI EVACUAZIONE DEI CAMPI FLEGREI E VESUVIO - Intervista a chi li progetta
-      url: https://youtu.be/HjhnA7sC1OU
   comunicazioni/2026-05-16-salone-libro-torino-dpc:
     title: 'Salone del Libro 2026: la Protezione Civile a Torino con \"Infiniti racconti, una sola storia\'
     url: /comunicazioni/2026-05-16-salone-libro-torino-dpc/
@@ -5912,6 +5939,16 @@ pagine:
       titolo: Tanti terremoti ai Campi Flegrei, cosa succede e perché la scossa di M3.9 si è sentita così forte
       url: https://youtu.be/ROlhXYtdP_w
     - anchored:
+      - succede
+      canale: wired-italia
+      id: pKd1AS3TyDg
+      is_lis: false
+      overlap:
+      - succede
+      score: 3.0
+      titolo: Cosa succede se il calcestruzzo imita la barriera corallina | Wired Italia
+      url: https://youtu.be/pKd1AS3TyDg
+    - anchored:
       - boschi
       canale: ingv-terremoti
       id: WBqU2wHx5i4
@@ -5949,6 +5986,16 @@ pagine:
       score: 6.0
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - biodiversità
+      canale: wired-italia
+      id: m6C59tEGM8c
+      is_lis: false
+      overlap:
+      - biodiversità
+      score: 3.0
+      titolo: '#WNF16 Biodiversità architettoniche - Stefano Boeri | Wired Italia'
+      url: https://youtu.be/m6C59tEGM8c
     - anchored:
       - boschi
       canale: ingv-terremoti
@@ -6894,6 +6941,16 @@ pagine:
       score: 2.0
       titolo: Amplificazione locale delle onde sismiche e sviluppo urbano
       url: https://youtu.be/YSQVfqny4Rg
+    - anchored:
+      - pace
+      canale: wired-italia
+      id: qzHQj74L7bQ
+      is_lis: false
+      overlap:
+      - pace
+      score: 2.0
+      titolo: La crisi russa spiegata da Sergej Davidis, Nobel per la pace con la Ong Memorial | Wired Italia
+      url: https://youtu.be/qzHQj74L7bQ
   comunicazioni/2026-06-07-sicurezza-alimentare-emergenza-scorte:
     title: '7 giugno: sicurezza alimentare in emergenza'
     url: /comunicazioni/2026-06-07-sicurezza-alimentare-emergenza-scorte/
@@ -7065,6 +7122,16 @@ pagine:
       score: 2.0
       titolo: L'arrivo del team italiano a Maputo e il trasferimento a Beira – Ciclone Mozambico
       url: https://youtu.be/uadgyNJU2N0
+    - anchored:
+      - problema
+      canale: wired-italia
+      id: Zgt35_5EEag
+      is_lis: false
+      overlap:
+      - problema
+      score: 2.0
+      titolo: Nucleare, il complesso problema dei rifiuti radioattivi | Wired Italia
+      url: https://youtu.be/Zgt35_5EEag
   comunicazioni/2026-06-10-qualita-aria-estate-ozono-pm10:
     title: 'Qualità dell''aria in estate: ozono, PM10 e pollini'
     url: /comunicazioni/2026-06-10-qualita-aria-estate-ozono-pm10/
@@ -7585,6 +7652,16 @@ pagine:
       score: 3.0
       titolo: Cos'è un Posto Medico Avanzato di secondo livello – Ciclone Mozambico
       url: https://youtu.be/su6gTLmjvqY
+    - anchored:
+      - ufficio
+      canale: wired-italia
+      id: MXi5y4kbv6E
+      is_lis: false
+      overlap:
+      - ufficio
+      score: 3.0
+      titolo: In ufficio alla Nasa a caccia di asteroidi che minacciano la Terra | Wired Italia
+      url: https://youtu.be/MXi5y4kbv6E
   comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani:
     title: 'Microzonazione sismica dei Castelli Romani: cos''è e perché conta'
     url: /comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/
@@ -7686,6 +7763,17 @@ pagine:
       titolo: 'La temperatura dell''acciaio delle Torri Gemelle: approfondimento tecnico per capire come sono cadute'
       url: https://youtu.be/-TkUYKR7ojY
     - anchored:
+      - fase
+      canale: wired-italia
+      id: XnWDpnRH74s
+      is_lis: false
+      overlap:
+      - dell
+      - fase
+      score: 2.2
+      titolo: Siamo davvero pronti per la fase 2 dell'emergenza coronavirus?
+      url: https://youtu.be/XnWDpnRH74s
+    - anchored:
       - boschivo
       canale: dpc-gov
       id: 4UBxxIfaGL4
@@ -7721,18 +7809,6 @@ pagine:
       score: 2.0
       titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
       url: https://youtu.be/9tYSNBQY7OY
-    - anchored:
-      - boschivo
-      canale: io-non-rischio
-      id: pvk-P_5WBBw
-      is_lis: true
-      overlap:
-      - boschivo
-      - incendio
-      - rischio
-      score: 2.0
-      titolo: Io non rischio Incendi Boschivi – Domande e risposte
-      url: https://youtu.be/pvk-P_5WBBw
   comunicazioni/2026-06-21-giornata-contro-droga-resilienza-comunita:
     title: '26 giugno: Giornata contro la droga e resilienza di comunità'
     url: /comunicazioni/2026-06-21-giornata-contro-droga-resilienza-comunita/
@@ -7773,6 +7849,17 @@ pagine:
       url: https://youtu.be/m1NzSf-emEc
     - anchored:
       - contro
+      canale: wired-italia
+      id: BHQH-McG5hM
+      is_lis: false
+      overlap:
+      - contro
+      - prevenzione
+      score: 3.2
+      titolo: Le giuste misure di prevenzione contro il Coronavirus | Wired Answers| Wired Italia
+      url: https://youtu.be/BHQH-McG5hM
+    - anchored:
+      - contro
       canale: geopop
       id: QiLt_8rwC-s
       is_lis: false
@@ -7781,16 +7868,6 @@ pagine:
       score: 3.0
       titolo: Il gigantesco tunnel sotterraneo di Tokyo, come funziona il G-Cans Project contro le inondazioni
       url: https://youtu.be/QiLt_8rwC-s
-    - anchored:
-      - contro
-      canale: geopop
-      id: TI3hQOy0Mjo
-      is_lis: false
-      overlap:
-      - contro
-      score: 3.0
-      titolo: Incidente aereo contro elicottero a Washington, la ricostruzione 3D e la possibile dinamica
-      url: https://youtu.be/TI3hQOy0Mjo
   comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge:
     title: 'Rischio idrogeologico estivo: siccità e piogge brevi intense'
     url: /comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge/
@@ -9072,6 +9149,16 @@ pagine:
       score: 2.0
       titolo: Salvare la Terra... con un asteroide
       url: https://youtu.be/SaJ5K1icYj0
+    - anchored:
+      - imparare
+      canale: wired-italia
+      id: v1mVMcXGJOw
+      is_lis: false
+      overlap:
+      - imparare
+      score: 2.0
+      titolo: Un breve training per imparare a volare con la Nasa | Wired Italia
+      url: https://youtu.be/v1mVMcXGJOw
   comunicazioni/2026-07-19-stava-1985-frana-bacini-decantazione:
     title: 'Val di Stava, 19 luglio 1985: la tragedia industriale dimenticata che fece 268 vittime in cinque minuti'
     url: /comunicazioni/2026-07-19-stava-1985-frana-bacini-decantazione/
@@ -9315,6 +9402,17 @@ pagine:
       url: https://youtu.be/2oZHTrIAXi0
     - anchored:
       - disabilità
+      canale: wired-italia
+      id: it9NrBPZB0Y
+      is_lis: false
+      overlap:
+      - disabilità
+      - protesi
+      score: 4.0
+      titolo: Le protesi supertech che rivoluzionano il concetto di disabilità | Wired Italia
+      url: https://youtu.be/it9NrBPZB0Y
+    - anchored:
+      - disabilità
       canale: abili-a-proteggere
       id: b5W1-Cj7eu0
       is_lis: false
@@ -9324,17 +9422,6 @@ pagine:
       score: 3.4
       titolo: Giornata internazionale delle persone con disabilità
       url: https://youtu.be/b5W1-Cj7eu0
-    - anchored:
-      - disabilità
-      canale: dpc-gov
-      id: ZTDrRHbiR3M
-      is_lis: false
-      overlap:
-      - disabilità
-      - persone
-      score: 3.4
-      titolo: 'Giornata internazionale delle persone con disabilità: il messaggio di Borrelli'
-      url: https://youtu.be/ZTDrRHbiR3M
   comunicazioni/2026-07-24-comune-protezione-civile-ruolo-sindaco:
     title: 'Il Comune in Protezione Civile: il ruolo chiave del Sindaco'
     url: /comunicazioni/2026-07-24-comune-protezione-civile-ruolo-sindaco/
@@ -9721,6 +9808,16 @@ pagine:
       titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
       url: https://youtu.be/9tYSNBQY7OY
     - anchored:
+      - picco
+      canale: wired-italia
+      id: zr6L8DsvNtU
+      is_lis: false
+      overlap:
+      - picco
+      score: 3.0
+      titolo: Perché non possiamo prevedere quando sarà il picco dell'epidemia da coronavirus
+      url: https://youtu.be/zr6L8DsvNtU
+    - anchored:
       - cause
       canale: geopop
       id: VoGHbN_JnRI
@@ -9754,17 +9851,6 @@ pagine:
       score: 2.4
       titolo: Spot 2012 sul rischio incendi boschivi
       url: https://youtu.be/53yYyLsFW3Q
-    - anchored:
-      - boschivo
-      canale: dpc-gov
-      id: FPLoljB20QA
-      is_lis: false
-      overlap:
-      - boschivo
-      - incendio
-      score: 2.4
-      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
-      url: https://youtu.be/FPLoljB20QA
   comunicazioni/2026-08-04-idratazione-colpo-calore-sintomi:
     title: 'Idratazione e colpo di calore: riconoscere i sintomi in tempo'
     url: /comunicazioni/2026-08-04-idratazione-colpo-calore-sintomi/
@@ -9903,6 +9989,18 @@ pagine:
       score: 2.2
       titolo: Vi spiego dalla mappa dei terremoti in che zone si verificano maggiormente gli eventi sismici
       url: https://youtu.be/gw33yaQUXb0
+    - anchored:
+      - rete
+      canale: dpc-gov
+      id: vyTJcOxzntg
+      is_lis: false
+      overlap:
+      - emergenza
+      - radio
+      - rete
+      score: 2.0
+      titolo: Il futuro delle telecomunicazioni d'emergenza-Intitolazione a Zamberletti della Rete Radio Nazionale
+      url: https://youtu.be/vyTJcOxzntg
   comunicazioni/2026-08-08-turisti-nei-castelli-sicurezza:
     title: 'Turisti nei Castelli: sicurezza condivisa fra residenti e ospiti'
     url: /comunicazioni/2026-08-08-turisti-nei-castelli-sicurezza/
@@ -10278,6 +10376,18 @@ pagine:
       titolo: Conferenza stampa 14 agosto 2018 ore 18.00 – Crollo Ponte Morandi
       url: https://youtu.be/qhy_CnfT_SU
     - anchored:
+      - morandi
+      - ponte
+      canale: wired-italia
+      id: pNq9GFiOz2w
+      is_lis: false
+      overlap:
+      - morandi
+      - ponte
+      score: 6.0
+      titolo: La demolizione del Ponte Morandi raccontata da Danilo Coppe  | Wired Italia
+      url: https://youtu.be/pNq9GFiOz2w
+    - anchored:
       - crollo
       canale: geopop
       id: mithqKA-ee0
@@ -10288,17 +10398,6 @@ pagine:
       score: 4.0
       titolo: Il Crollo del Ghiacciaio della MARMOLADA, la Ricostruzione VIDEO 3D
       url: https://youtu.be/mithqKA-ee0
-    - anchored:
-      - crollo
-      canale: ingv-vulcani
-      id: NsWuW8WUIaI
-      is_lis: false
-      overlap:
-      - crollo
-      - dell
-      score: 3.2
-      titolo: Crollo dell'Hornito di Stromboli del 27 maggio 2024
-      url: https://youtu.be/NsWuW8WUIaI
   comunicazioni/2026-08-14-vigilia-ferragosto-stato-allerta:
     title: 'Vigilia di Ferragosto: massima attenzione sul territorio'
     url: /comunicazioni/2026-08-14-vigilia-ferragosto-stato-allerta/
@@ -11093,16 +11192,15 @@ pagine:
       titolo: 'Weather alert for Lombardy: here''s how Civil Protection is responding from the regional operation...'
       url: https://youtu.be/ZKQnxPX-Gqg
     - anchored:
-      - allarme
-      canale: io-non-rischio
-      id: 7MRMK51szxE
+      - test
+      canale: wired-italia
+      id: SlbZUyV1AhI
       is_lis: false
       overlap:
-      - allarme
-      - attenzione
-      score: 2.2
-      titolo: Io non rischio Vulcano  - Cosa fare in attenzione, preallarme e allarme
-      url: https://youtu.be/7MRMK51szxE
+      - test
+      score: 3.0
+      titolo: Covid-19, a cosa serviranno i test sierologici | Wired Answers| Wired Italia
+      url: https://youtu.be/SlbZUyV1AhI
   comunicazioni/2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno:
     title: 'Fossi, caditoie, grondaie: la manutenzione invisibile che evita l''allagamento'
     url: /comunicazioni/2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno/
@@ -11119,6 +11217,17 @@ pagine:
       score: 3.2
       titolo: 'TUNGUSKA: Storia dell''IMPATTO contro la TERRA'
       url: https://youtu.be/m1NzSf-emEc
+    - anchored:
+      - contro
+      canale: wired-italia
+      id: BHQH-McG5hM
+      is_lis: false
+      overlap:
+      - contro
+      - prevenzione
+      score: 2.4
+      titolo: Le giuste misure di prevenzione contro il Coronavirus | Wired Answers| Wired Italia
+      url: https://youtu.be/BHQH-McG5hM
     - anchored:
       - contro
       canale: geopop
@@ -11150,16 +11259,6 @@ pagine:
       score: 2.0
       titolo: Incidente aereo contro elicottero a Washington, la ricostruzione 3D e la possibile dinamica
       url: https://youtu.be/TI3hQOy0Mjo
-    - anchored:
-      - contro
-      canale: natgeo-italia
-      id: 5wyeQgsTaF4
-      is_lis: false
-      overlap:
-      - contro
-      score: 2.0
-      titolo: 'I segreti dello spazio: In corsa contro la lava'
-      url: https://youtu.be/5wyeQgsTaF4
   comunicazioni/2026-08-29-fine-estate-meteorologica-passaggio-autunno:
     title: 'Fine dell''estate meteorologica: cosa cambia nel rischio'
     url: /comunicazioni/2026-08-29-fine-estate-meteorologica-passaggio-autunno/
@@ -11449,6 +11548,17 @@ pagine:
     video:
     - anchored:
       - spiegate
+      canale: wired-italia
+      id: J6pzNnPfrUo
+      is_lis: false
+      overlap:
+      - spiegate
+      - uniti
+      score: 3.0
+      titolo: Le relazioni tra Cina e Stati Uniti spiegate dall'esperto Michael Beckley  | Wired Italia
+      url: https://youtu.be/J6pzNnPfrUo
+    - anchored:
+      - spiegate
       canale: geopop
       id: BpWiuulnSk4
       is_lis: false
@@ -11504,15 +11614,15 @@ pagine:
       titolo: Le 5 differenze tra neve e grandine
       url: https://youtu.be/JXmJa_Vo28o
     - anchored:
-      - proteggersi
-      canale: abili-a-proteggere
-      id: lQXiNcvR7jQ
+      - crescita
+      canale: wired-italia
+      id: hLsrq2cW-hQ
       is_lis: false
       overlap:
-      - proteggersi
-      score: 2.0
-      titolo: 'Ondate di calore: 10 consigli per proteggersi'
-      url: https://youtu.be/lQXiNcvR7jQ
+      - crescita
+      score: 3.0
+      titolo: Tra crescita e inflazione, Francesco Saraceno al Wired Next Fest Trentino 2024
+      url: https://youtu.be/hLsrq2cW-hQ
   comunicazioni/2026-09-06-rientro-scuola-prove-evacuazione:
     title: 'Primo giorno di scuola: le prove di evacuazione non sono un dettaglio'
     url: /comunicazioni/2026-09-06-rientro-scuola-prove-evacuazione/
@@ -12550,16 +12660,15 @@ pagine:
       titolo: Salvare la Terra... con un asteroide
       url: https://youtu.be/SaJ5K1icYj0
     - anchored:
-      - medici
-      canale: abili-a-proteggere
-      id: _SoXPt4FwdA
+      - imparare
+      canale: wired-italia
+      id: v1mVMcXGJOw
       is_lis: false
       overlap:
-      - famiglia
-      - medici
-      score: 2.6
-      titolo: '#NienteDiSpeciale: Intervista a Domenico Barbati, Ass. Medici di Famiglia Volontari per le Emergenze'
-      url: https://youtu.be/_SoXPt4FwdA
+      - imparare
+      score: 3.0
+      titolo: Un breve training per imparare a volare con la Nasa | Wired Italia
+      url: https://youtu.be/v1mVMcXGJOw
   comunicazioni/2026-09-26-marche-umbria-1997-basilica-assisi:
     title: 'Marche-Umbria, 26 settembre 1997: il terremoto che fece crollare la volta della Basilica di Assisi'
     url: /comunicazioni/2026-09-26-marche-umbria-1997-basilica-assisi/
@@ -13209,6 +13318,17 @@ pagine:
       titolo: 'La nuova Diga foranea di Genova, la più profonda d''Europa: come sarà costruita e perché'
       url: https://youtu.be/SPG1k8nnCeY
     - anchored:
+      - bomba
+      canale: wired-italia
+      id: bqXbYHziLHI
+      is_lis: false
+      overlap:
+      - bomba
+      - persone
+      score: 2.4
+      titolo: 'Lia Quartapelle: "Se non pensiamo alle persone da integrare, rischia di esplodere una ”bomba"'
+      url: https://youtu.be/bqXbYHziLHI
+    - anchored:
       - alluvione
       canale: io-non-rischio
       id: DbGSeVbDLCg
@@ -13220,16 +13340,6 @@ pagine:
       score: 2.2
       titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
       url: https://youtu.be/DbGSeVbDLCg
-    - anchored:
-      - bomba
-      canale: geopop
-      id: 6eyeiIbiKZU
-      is_lis: false
-      overlap:
-      - bomba
-      score: 2.0
-      titolo: Chi è Oppenheimer, il padre della bomba atomica
-      url: https://youtu.be/6eyeiIbiKZU
   comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare:
     title: 'Chiamare il 112: come fare bene una segnalazione di emergenza'
     url: /comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/
@@ -13982,6 +14092,20 @@ pagine:
       score: 3.0
       titolo: Il Capo Dipartimento presenta la Settimana – Settimana Nazionale della Protezione Civile 2020
       url: https://youtu.be/6JuLpVcQurE
+  comunicazioni/2026-10-19-rischio-incendi-autunnali-secondo-picco:
+    title: 'Incendi autunnali: perché anche in ottobre serve attenzione'
+    url: /comunicazioni/2026-10-19-rischio-incendi-autunnali-secondo-picco/
+    video:
+    - anchored:
+      - picco
+      canale: wired-italia
+      id: zr6L8DsvNtU
+      is_lis: false
+      overlap:
+      - picco
+      score: 2.0
+      titolo: Perché non possiamo prevedere quando sarà il picco dell'epidemia da coronavirus
+      url: https://youtu.be/zr6L8DsvNtU
   comunicazioni/2026-10-20-rischio-industriale-seveso:
     title: 'Rischio industriale: la direttiva Seveso e i piani di emergenza'
     url: /comunicazioni/2026-10-20-rischio-industriale-seveso/
@@ -14173,15 +14297,15 @@ pagine:
       url: https://youtu.be/rLr3ivU37tI
     - anchored:
       - crisi
-      canale: geopop
-      id: xbkBI9oAO9w
+      canale: wired-italia
+      id: pvqiL6WK5dY
       is_lis: false
       overlap:
+      - clima
       - crisi
-      - emergenza
-      score: 2.6
-      titolo: Cos'è il cuneo salino? Sintesi sull'emergenza siccità in Italia e la crisi idrica del Po
-      url: https://youtu.be/xbkBI9oAO9w
+      score: 3.0
+      titolo: 'Bertrand Piccard: non è troppo tardi per salvarci dalla crisi del clima! | The Big Interview'
+      url: https://youtu.be/pvqiL6WK5dY
   comunicazioni/2026-10-25-cambio-ora-solare-preparazione-sera:
     title: 'Cambio ora solare: cosa cambia per la sicurezza serale'
     url: /comunicazioni/2026-10-25-cambio-ora-solare-preparazione-sera/
@@ -14941,6 +15065,16 @@ pagine:
       titolo: Mattarella visita la sede operativa del Dipartimento – Medaglia d'oro al Valore Civile
       url: https://youtu.be/BooLyjLFbSM
     - anchored:
+      - memoria
+      canale: wired-italia
+      id: nm_19L5JQ98
+      is_lis: false
+      overlap:
+      - memoria
+      score: 3.0
+      titolo: 40 anni dal disastro nucleare di Chernobyl, racconti e memoria in una Ucraina che ancora resiste
+      url: https://youtu.be/nm_19L5JQ98
+    - anchored:
       - valore
       canale: io-non-rischio
       id: 68qIeYfIEjY
@@ -14951,16 +15085,6 @@ pagine:
       score: 2.2
       titolo: Il valore della semplicità nella comunicazione del rischio
       url: https://youtu.be/68qIeYfIEjY
-    - anchored:
-      - valore
-      canale: dpc-gov
-      id: 3qWdsc994kk
-      is_lis: false
-      overlap:
-      - valore
-      score: 2.0
-      titolo: Mattarella consegna la Medaglia al Valore al Dipartimento – Medaglia d'oro al Valore Civile
-      url: https://youtu.be/3qWdsc994kk
   comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre:
     title: 'Pneumatici invernali e catene: le regole dal 15 novembre'
     url: /comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/
@@ -14990,6 +15114,16 @@ pagine:
       score: 2.0
       titolo: Il sismoscopio di Zhang Heng, l'antica tecnologia cinese che anticipò il sismografo moderno
       url: https://youtu.be/VdpcA9qi_B8
+    - anchored:
+      - catastrofe
+      canale: wired-italia
+      id: Htx_XZfTbLU
+      is_lis: false
+      overlap:
+      - catastrofe
+      score: 2.0
+      titolo: 'Philippe Daverio: "Gli opinion leader sono la nostra catastrofe" | Wired Italia'
+      url: https://youtu.be/Htx_XZfTbLU
   comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano:
     title: 'Genova, 4 novembre 2011: l''alluvione del Fereggiano e la lezione dei rii tombati'
     url: /comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano/
@@ -15035,15 +15169,16 @@ pagine:
       titolo: 'Codice rosso - Salvataggi in mare: Genova. Pericolo in fondo al mare'
       url: https://youtu.be/0D9l-vhRadU
     - anchored:
-      - sede
-      canale: dpc-gov
-      id: 9agnufQ831k
+      - bomba
+      canale: wired-italia
+      id: bqXbYHziLHI
       is_lis: false
       overlap:
-      - sede
-      score: 2.0
-      titolo: La visita di Conte alla sede operativa del Dpc – Benemerenze di protezione civile
-      url: https://youtu.be/9agnufQ831k
+      - bomba
+      - persone
+      score: 2.2
+      titolo: 'Lia Quartapelle: "Se non pensiamo alle persone da integrare, rischia di esplodere una ”bomba"'
+      url: https://youtu.be/bqXbYHziLHI
   comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani:
     title: 'Ondate di freddo: come prepararsi e proteggere gli anziani'
     url: /comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/
@@ -15116,6 +15251,16 @@ pagine:
       score: 3.0
       titolo: Di quanti reattori nucleari avrebbe bisogno l'Italia per sostituire il gas russo?
       url: https://youtu.be/0SSDzDoyU8s
+    - anchored:
+      - bisogno
+      canale: wired-italia
+      id: wuyIcfaCZIY
+      is_lis: false
+      overlap:
+      - bisogno
+      score: 3.0
+      titolo: Di quali informazioni avremmo bisogno per capire meglio l'epidemia di nuovo coronavirus?
+      url: https://youtu.be/wuyIcfaCZIY
   comunicazioni/2026-11-07-esercitazione-radio-inter-comunale:
     title: 'Esercitazione radio inter-comunale: i Castelli in rete'
     url: /comunicazioni/2026-11-07-esercitazione-radio-inter-comunale/
@@ -15256,6 +15401,17 @@ pagine:
       url: https://youtu.be/D1y5UTWuCrk
     - anchored:
       - possiamo
+      canale: wired-italia
+      id: zr6L8DsvNtU
+      is_lis: false
+      overlap:
+      - dell
+      - possiamo
+      score: 3.6
+      titolo: Perché non possiamo prevedere quando sarà il picco dell'epidemia da coronavirus
+      url: https://youtu.be/zr6L8DsvNtU
+    - anchored:
+      - possiamo
       canale: ingv-terremoti
       id: Yw23gwK3DaY
       is_lis: false
@@ -15284,16 +15440,6 @@ pagine:
       score: 2.0
       titolo: Oltre il riscaldamento globale - con Elisa Palazzi
       url: https://youtu.be/HUU5_C2TEeg
-    - anchored:
-      - riscaldamento
-      canale: geopop
-      id: -4WN_BqdaNk
-      is_lis: false
-      overlap:
-      - riscaldamento
-      score: 2.0
-      titolo: IL CICLO DEL CARBONIO - come si svolge e perché serve a capire il riscaldamento globale
-      url: https://youtu.be/-4WN_BqdaNk
   comunicazioni/2026-11-10-volontariato-giovane-studenti:
     title: 'Volontariato per studenti: perché iniziare da giovane'
     url: /comunicazioni/2026-11-10-volontariato-giovane-studenti/
@@ -15380,6 +15526,26 @@ pagine:
       score: 2.0
       titolo: La Protezione Civile racconta il podcast DPC - Dove Parliamo di Clima con Filippo Thiery
       url: https://youtu.be/NukrIN8jnE4
+    - anchored:
+      - insegnano
+      canale: wired-italia
+      id: 8Z1dqZ3LqiA
+      is_lis: false
+      overlap:
+      - insegnano
+      score: 2.0
+      titolo: Le querce ti insegnano a resistere agli uragani | Wired Italia
+      url: https://youtu.be/8Z1dqZ3LqiA
+    - anchored:
+      - clima
+      canale: wired-italia
+      id: pvqiL6WK5dY
+      is_lis: false
+      overlap:
+      - clima
+      score: 2.0
+      titolo: 'Bertrand Piccard: non è troppo tardi per salvarci dalla crisi del clima! | The Big Interview'
+      url: https://youtu.be/pvqiL6WK5dY
   comunicazioni/2026-11-12-nebbia-rischio-viabilita:
     title: 'Nebbia e visibilità ridotta: come guidare in sicurezza'
     url: /comunicazioni/2026-11-12-nebbia-rischio-viabilita/
@@ -15899,6 +16065,17 @@ pagine:
       titolo: 'I segreti dello spazio: In corsa contro la lava'
       url: https://youtu.be/5wyeQgsTaF4
     - anchored:
+      - contro
+      canale: wired-italia
+      id: BHQH-McG5hM
+      is_lis: false
+      overlap:
+      - contro
+      - prevenzione
+      score: 3.2
+      titolo: Le giuste misure di prevenzione contro il Coronavirus | Wired Answers| Wired Italia
+      url: https://youtu.be/BHQH-McG5hM
+    - anchored:
       - donne
       canale: dpc-gov
       id: QhVWOEPOvd8
@@ -15918,16 +16095,6 @@ pagine:
       score: 3.0
       titolo: Dissalare l'acqua di mare può essere una soluzione alla crisi idrica? Pro e contro dei dissalatori
       url: https://youtu.be/PvY7kRxwOGI
-    - anchored:
-      - contro
-      canale: geopop
-      id: QiLt_8rwC-s
-      is_lis: false
-      overlap:
-      - contro
-      score: 3.0
-      titolo: Il gigantesco tunnel sotterraneo di Tokyo, come funziona il G-Cans Project contro le inondazioni
-      url: https://youtu.be/QiLt_8rwC-s
   comunicazioni/2026-11-26-friuli-1976-memoria-terremoto:
     title: 'Friuli 1976: la ricostruzione che divenne modello nazionale'
     url: /comunicazioni/2026-11-26-friuli-1976-memoria-terremoto/
@@ -16635,6 +16802,16 @@ pagine:
       score: 2.0
       titolo: La crisi fra Russia e Ucraina decreta la fine della ISS?
       url: https://youtu.be/rLr3ivU37tI
+    - anchored:
+      - breve
+      canale: wired-italia
+      id: v1mVMcXGJOw
+      is_lis: false
+      overlap:
+      - breve
+      score: 2.0
+      titolo: Un breve training per imparare a volare con la Nasa | Wired Italia
+      url: https://youtu.be/v1mVMcXGJOw
   comunicazioni/2026-12-16-pacchi-natalizi-logistica-corriere:
     title: 'Pacchi di Natale: logistica corrieri e sicurezza consegne'
     url: /comunicazioni/2026-12-16-pacchi-natalizi-logistica-corriere/
@@ -16662,6 +16839,17 @@ pagine:
       titolo: G-Cans Project, il sistema di tunnel sotterranei di Tokyo per prevenire il rischio di inondazioni
       url: https://youtu.be/MHBASM4gwyI
     - anchored:
+      - picco
+      canale: wired-italia
+      id: zr6L8DsvNtU
+      is_lis: false
+      overlap:
+      - dell
+      - picco
+      score: 2.2
+      titolo: Perché non possiamo prevedere quando sarà il picco dell'epidemia da coronavirus
+      url: https://youtu.be/zr6L8DsvNtU
+    - anchored:
       - incidenti
       canale: geopop
       id: ANiHwHZTFeU
@@ -16681,10 +16869,48 @@ pagine:
       score: 2.0
       titolo: Prevenire è necessario
       url: https://youtu.be/_L64AntzfPY
+  comunicazioni/2026-12-18-influenza-picco-stagionale:
+    title: 'Influenza stagionale: picco di dicembre-gennaio'
+    url: /comunicazioni/2026-12-18-influenza-picco-stagionale/
+    video:
+    - anchored:
+      - picco
+      canale: wired-italia
+      id: zr6L8DsvNtU
+      is_lis: false
+      overlap:
+      - coronavirus
+      - dell
+      - picco
+      score: 4.2
+      titolo: Perché non possiamo prevedere quando sarà il picco dell'epidemia da coronavirus
+      url: https://youtu.be/zr6L8DsvNtU
   comunicazioni/2026-12-19-esodo-natalizio-traffico-autostrade:
     title: 'Esodo natalizio: traffico e sicurezza sulle autostrade'
     url: /comunicazioni/2026-12-19-esodo-natalizio-traffico-autostrade/
     video:
+    - anchored:
+      - picco
+      canale: wired-italia
+      id: zr6L8DsvNtU
+      is_lis: false
+      overlap:
+      - dell
+      - picco
+      score: 2.4
+      titolo: Perché non possiamo prevedere quando sarà il picco dell'epidemia da coronavirus
+      url: https://youtu.be/zr6L8DsvNtU
+    - anchored:
+      - previsioni
+      canale: wired-italia
+      id: y__8Y2xuxD8
+      is_lis: false
+      overlap:
+      - previsioni
+      - tempo
+      score: 2.2
+      titolo: Questo drone della Nasa sorvola gli uragani per migliorare le previsioni del tempo | Wired Italia
+      url: https://youtu.be/y__8Y2xuxD8
     - anchored:
       - consigli
       canale: abili-a-proteggere
@@ -17555,6 +17781,16 @@ pagine:
       titolo: COSA FA UN GEOLOGO? NON SOLO FRANE, VULCANI ...
       url: https://youtu.be/WI0S15ShvsM
     - anchored:
+      - succede
+      canale: wired-italia
+      id: pKd1AS3TyDg
+      is_lis: false
+      overlap:
+      - succede
+      score: 3.0
+      titolo: Cosa succede se il calcestruzzo imita la barriera corallina | Wired Italia
+      url: https://youtu.be/pKd1AS3TyDg
+    - anchored:
       - decide
       canale: geopop
       id: gX3OYwOOg9k
@@ -17565,16 +17801,6 @@ pagine:
       score: 2.2
       titolo: 'Razionamento del gas: cos''è, chi lo decide e cosa prevede il piano di emergenza'
       url: https://youtu.be/gX3OYwOOg9k
-    - anchored:
-      - non
-      canale: geopop
-      id: LDAOFY5RUVo
-      is_lis: false
-      overlap:
-      - non
-      score: 2.0
-      titolo: PER NON FARE CONFUSIONE SUI RIFIUTI RADIOATTIVI
-      url: https://youtu.be/LDAOFY5RUVo
   diventa-volontario:
     title: Diventa volontario
     url: /diventa-volontario/
@@ -18106,6 +18332,30 @@ pagine:
       score: 2.0
       titolo: I ragazzi del Servizio Civile raccontano l'esperienza in Dipartimento
       url: https://youtu.be/XJrslXpfc5Y
+  formazione/kit-calamita-caregiver-familiari:
+    title: Kit Calamità per caregiver familiari
+    url: /formazione/kit-calamita-caregiver-familiari/
+    video:
+    - anchored:
+      - terapie
+      canale: wired-italia
+      id: LWRFwaFmkeE
+      is_lis: false
+      overlap:
+      - terapie
+      score: 2.0
+      titolo: Quali terapie contro l'infezione da Sars-Cov-2 ? | Wired Answers | Wired Italia
+      url: https://youtu.be/LWRFwaFmkeE
+    - anchored:
+      - terapie
+      canale: wired-italia
+      id: titNp22c9kc
+      is_lis: false
+      overlap:
+      - terapie
+      score: 2.0
+      titolo: Covid-19 visto dalle terapie intensive | Wired Answers| Wired Italia
+      url: https://youtu.be/titNp22c9kc
   formazione/kit-calamita-disabilita-adulti:
     title: Kit Calamità per persone con disabilità adulte
     url: /formazione/kit-calamita-disabilita-adulti/
@@ -18310,6 +18560,26 @@ pagine:
     title: Kit Calamità per pazienti con terapie salvavita continuative
     url: /formazione/kit-calamita-terapie-salvavita/
     video:
+    - anchored:
+      - terapie
+      canale: wired-italia
+      id: LWRFwaFmkeE
+      is_lis: false
+      overlap:
+      - terapie
+      score: 3.0
+      titolo: Quali terapie contro l'infezione da Sars-Cov-2 ? | Wired Answers | Wired Italia
+      url: https://youtu.be/LWRFwaFmkeE
+    - anchored:
+      - terapie
+      canale: wired-italia
+      id: titNp22c9kc
+      is_lis: false
+      overlap:
+      - terapie
+      score: 3.0
+      titolo: Covid-19 visto dalle terapie intensive | Wired Answers| Wired Italia
+      url: https://youtu.be/titNp22c9kc
     - anchored:
       - malattie
       canale: cicap
@@ -19466,6 +19736,16 @@ pagine:
       score: 2.0
       titolo: Paolo Attivissimo ha perso la sua relazione...
       url: https://youtu.be/wD6OKiujKN8
+    - anchored:
+      - relazione
+      canale: wired-italia
+      id: eNftGxz23B8
+      is_lis: false
+      overlap:
+      - relazione
+      score: 2.0
+      titolo: Cosa racconta lo studio sulla relazione tra fumo e coronavirus
+      url: https://youtu.be/eNftGxz23B8
   formazione/radiocomunicazioni-emergenza/tecniche-operative:
     title: Capitolo 2 — Tecniche operative di base
     url: /formazione/radiocomunicazioni-emergenza/tecniche-operative/
@@ -19535,6 +19815,16 @@ pagine:
       score: 2.0
       titolo: 'MEDUSA: misure innovative di deformazione fondo-mare della caldera vulcanica dei Campi Flegrei'
       url: https://youtu.be/-4yy9ReSARM
+    - anchored:
+      - misure
+      canale: wired-italia
+      id: BHQH-McG5hM
+      is_lis: false
+      overlap:
+      - misure
+      score: 2.0
+      titolo: Le giuste misure di prevenzione contro il Coronavirus | Wired Answers| Wired Italia
+      url: https://youtu.be/BHQH-McG5hM
   formazione/rischio-incendio/procedure-emergenza:
     title: Capitolo 5 — Procedure di emergenza
     url: /formazione/rischio-incendio/procedure-emergenza/
@@ -19623,6 +19913,16 @@ pagine:
       titolo: 'MEDUSA: misure innovative di deformazione fondo-mare della caldera vulcanica dei Campi Flegrei'
       url: https://youtu.be/-4yy9ReSARM
     - anchored:
+      - misure
+      canale: wired-italia
+      id: BHQH-McG5hM
+      is_lis: false
+      overlap:
+      - misure
+      score: 3.0
+      titolo: Le giuste misure di prevenzione contro il Coronavirus | Wired Answers| Wired Italia
+      url: https://youtu.be/BHQH-McG5hM
+    - anchored:
       - idrica
       canale: geopop
       id: PvY7kRxwOGI
@@ -19633,17 +19933,6 @@ pagine:
       score: 2.2
       titolo: Dissalare l'acqua di mare può essere una soluzione alla crisi idrica? Pro e contro dei dissalatori
       url: https://youtu.be/PvY7kRxwOGI
-    - anchored:
-      - idrica
-      canale: geopop
-      id: uVI6qn8B4L8
-      is_lis: false
-      overlap:
-      - idrica
-      - persone
-      score: 2.2
-      titolo: 'Esperimento sociale: abbiamo simulato una crisi idrica nel villaggio. Le reazioni delle persone'
-      url: https://youtu.be/uVI6qn8B4L8
   formazione/rischio-incendio/protezione-passiva:
     title: Capitolo 3 — Misure di protezione passiva
     url: /formazione/rischio-incendio/protezione-passiva/
@@ -19670,6 +19959,16 @@ pagine:
       titolo: 'MEDUSA: misure innovative di deformazione fondo-mare della caldera vulcanica dei Campi Flegrei'
       url: https://youtu.be/-4yy9ReSARM
     - anchored:
+      - misure
+      canale: wired-italia
+      id: BHQH-McG5hM
+      is_lis: false
+      overlap:
+      - misure
+      score: 3.0
+      titolo: Le giuste misure di prevenzione contro il Coronavirus | Wired Answers| Wired Italia
+      url: https://youtu.be/BHQH-McG5hM
+    - anchored:
       - reazione
       canale: geopop
       id: DdSUTw-a4Ls
@@ -19689,16 +19988,6 @@ pagine:
       score: 2.0
       titolo: '▶️LAVA vs ICE: LA REAZIONE |GeologiaPOP🌍'
       url: https://youtu.be/EyTuiDntnlA
-    - anchored:
-      - reazione
-      canale: geopop
-      id: o9AKgqvEI4E
-      is_lis: false
-      overlap:
-      - reazione
-      score: 2.0
-      titolo: Fusione nucleare USA, perché sono tutti così eccitati per la scoperta? Ecco la reazione in 3D
-      url: https://youtu.be/o9AKgqvEI4E
   formazione/schede-didattiche-giochi:
     title: Schede didattiche dei giochi
     url: /formazione/schede-didattiche-giochi/
@@ -19908,6 +20197,20 @@ pagine:
       score: 3.0
       titolo: Spot 2009 "Gli strumenti per ripartire"
       url: https://youtu.be/K1A4EjpdzCo
+  mappa-sito/nuovi-contenuti-prevenzione:
+    title: Nuovi contenuti di prevenzione
+    url: /mappa-sito/nuovi-contenuti-prevenzione/
+    video:
+    - anchored:
+      - contenuti
+      canale: wired-italia
+      id: 2RMUJ12aU-4
+      is_lis: false
+      overlap:
+      - contenuti
+      score: 3.0
+      titolo: I 5 migliori Auricolari con cui ascoltare musica e contenuti multimediali | 5 Gadgets | Wired Italia
+      url: https://youtu.be/2RMUJ12aU-4
   normativa/evoluzione-procedure-emergenza:
     title: 'Come sono evolute le procedure di emergenza: dalla direttiva Bertolaso 1996 alla direttiva 2021'
     url: /normativa/evoluzione-procedure-emergenza/
@@ -20438,6 +20741,17 @@ pagine:
     video:
     - anchored:
       - disabilità
+      canale: wired-italia
+      id: it9NrBPZB0Y
+      is_lis: false
+      overlap:
+      - concetto
+      - disabilità
+      score: 3.0
+      titolo: Le protesi supertech che rivoluzionano il concetto di disabilità | Wired Italia
+      url: https://youtu.be/it9NrBPZB0Y
+    - anchored:
+      - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
       is_lis: false
@@ -20479,16 +20793,6 @@ pagine:
       score: 2.0
       titolo: '#NienteDiSpeciale: Intervista a Carmine Lizza su Anpas e disabilità'
       url: https://youtu.be/88NyIgS1PbE
-    - anchored:
-      - disabilità
-      canale: abili-a-proteggere
-      id: Ia_Uf9i6BTk
-      is_lis: false
-      overlap:
-      - disabilità
-      score: 2.0
-      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
-      url: https://youtu.be/Ia_Uf9i6BTk
   quiz-preparazione:
     title: Quanto sei preparato a un'emergenza?
     url: /quiz-preparazione/
@@ -20725,6 +21029,17 @@ pagine:
       url: https://youtu.be/RdomcSSu6PY
     - anchored:
       - disabilità
+      canale: wired-italia
+      id: it9NrBPZB0Y
+      is_lis: false
+      overlap:
+      - disabilità
+      - protesi
+      score: 3.0
+      titolo: Le protesi supertech che rivoluzionano il concetto di disabilità | Wired Italia
+      url: https://youtu.be/it9NrBPZB0Y
+    - anchored:
+      - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
       is_lis: false
@@ -20745,17 +21060,6 @@ pagine:
       score: 2.6
       titolo: Giornata internazionale delle persone con disabilità
       url: https://youtu.be/b5W1-Cj7eu0
-    - anchored:
-      - disabilità
-      canale: dpc-gov
-      id: ZTDrRHbiR3M
-      is_lis: false
-      overlap:
-      - disabilità
-      - persone
-      score: 2.6
-      titolo: 'Giornata internazionale delle persone con disabilità: il messaggio di Borrelli'
-      url: https://youtu.be/ZTDrRHbiR3M
   rischi-prevenzione/rischi-in-parole-semplici:
     title: Rischi principali in parole semplici
     url: /rischi-prevenzione/rischi-in-parole-semplici/
@@ -21142,6 +21446,18 @@ pagine:
     url: /risorse-pronte/
     video:
     - anchored:
+      - pronti
+      canale: wired-italia
+      id: XnWDpnRH74s
+      is_lis: false
+      overlap:
+      - dell
+      - emergenza
+      - pronti
+      score: 3.4
+      titolo: Siamo davvero pronti per la fase 2 dell'emergenza coronavirus?
+      url: https://youtu.be/XnWDpnRH74s
+    - anchored:
       - podcast
       canale: dpc-gov
       id: NukrIN8jnE4
@@ -21208,6 +21524,16 @@ pagine:
       score: 2.0
       titolo: Perché il maltempo insiste sull'Emilia Romagna? I motivi geologici dell'emergenza alluvione
       url: https://youtu.be/rZAULVvWwnI
+    - anchored:
+      - breve
+      canale: wired-italia
+      id: v1mVMcXGJOw
+      is_lis: false
+      overlap:
+      - breve
+      score: 2.0
+      titolo: Un breve training per imparare a volare con la Nasa | Wired Italia
+      url: https://youtu.be/v1mVMcXGJOw
   schede-1-minuto:
     title: Un minuto per proteggerti
     url: /schede-1-minuto/
@@ -21584,6 +21910,16 @@ pagine:
       score: 3.0
       titolo: 'Dentro la Casa Bianca, la ricostruzione 3D: com''è fatta e il funzionamento dei sistemi di sicurezza'
       url: https://youtu.be/goV6NqHdNnc
+    - anchored:
+      - risponde
+      canale: wired-italia
+      id: _rMxsOBvXVY
+      is_lis: false
+      overlap:
+      - risponde
+      score: 2.0
+      titolo: Uno storico del nucleare risponde alle domande sulla guerra nucleare | Tech Support | Wired Italia
+      url: https://youtu.be/_rMxsOBvXVY
   standard-iso/iso-22320:
     title: ISO 22320 — Gestione operativa dell'incidente
     url: /standard-iso/iso-22320/
@@ -21674,6 +22010,30 @@ pagine:
       score: 2.0
       titolo: 14 milioni di alberi abbattuti e 3 miliardi di euro di danni, analizziamo la Tempesta Vaia del 2018
       url: https://youtu.be/cmEzpKqaTEU
+  standard-iso/iso-22324:
+    title: ISO 22324 — Allerte a codice colore
+    url: /standard-iso/iso-22324/
+    video:
+    - anchored:
+      - aiutano
+      canale: wired-italia
+      id: FC71pLVfvJU
+      is_lis: false
+      overlap:
+      - aiutano
+      score: 2.0
+      titolo: I numeri ci aiutano davvero a contenere Covid-19? | Wired Answers| Wired Italia
+      url: https://youtu.be/FC71pLVfvJU
+    - anchored:
+      - aiutano
+      canale: wired-italia
+      id: zf91CMDOSDI
+      is_lis: false
+      overlap:
+      - aiutano
+      score: 2.0
+      titolo: Covid-19, i numeri ci aiutano davvero a capire la pandemia? | Wired Answers | Wired Italia
+      url: https://youtu.be/zf91CMDOSDI
   standard-iso/iso-22325:
     title: ISO 22325 — Auto-valutazione delle capacità di emergency management
     url: /standard-iso/iso-22325/
@@ -22016,6 +22376,18 @@ pagine:
       score: 2.0
       titolo: 'Dentro la Casa Bianca, la ricostruzione 3D: com''è fatta e il funzionamento dei sistemi di sicurezza'
       url: https://youtu.be/goV6NqHdNnc
+    - anchored:
+      - sala
+      canale: ingv-terremoti
+      id: lr0Zh9Hs79E
+      is_lis: false
+      overlap:
+      - collegamento
+      - dell
+      - sala
+      score: 2.0
+      titolo: I terremoti dell'11 maggio 2011 - Ultimo collegamento dalla Sala Sismica INGV
+      url: https://youtu.be/lr0Zh9Hs79E
   standard-iso/iso-22361:
     title: ISO 22361 — Gestione delle crisi
     url: /standard-iso/iso-22361/
@@ -22505,6 +22877,16 @@ pagine:
       score: 3.0
       titolo: 'Tactical nuclear bombs: What are the weapons Putin may test on the Ukrainian border?'
       url: https://youtu.be/-WPh8rT0wH8
+    - anchored:
+      - test
+      canale: wired-italia
+      id: SlbZUyV1AhI
+      is_lis: false
+      overlap:
+      - test
+      score: 3.0
+      titolo: Covid-19, a cosa serviranno i test sierologici | Wired Answers| Wired Italia
+      url: https://youtu.be/SlbZUyV1AhI
   standard-iso/uni-pdr:
     title: UNI/PdR — Prassi di Riferimento (gratuite)
     url: /standard-iso/uni-pdr/
