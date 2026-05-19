@@ -151,6 +151,10 @@ Il formato più richiesto dai docenti. Affronta un tema in modo strutturato e la
 - [Percorso 8 — Incendi boschivi e Castelli Romani](#percorso-8) (3 ore). Zona AIB 9, bollettino CFR, comportamenti corretti in estate.
 - [Percorso 10 — Volontariato e cittadinanza attiva](#percorso-10) (3 ore). Storia, sussidiarietà orizzontale, Codice del Terzo Settore.
 - [Percorso 11 — Protezione Civile europea e UCPM](#percorso-11) (2-3 ore). Meccanismo UCPM, ERCC, rescEU, Copernicus EMS.
+- [Percorso 12 — Rischio vulcanico: Colli Albani e Italia](#percorso-12) (3 ore). Il nostro vulcano quiescente, Vesuvio, Campi Flegrei, Etna.
+- [Percorso 13 — Psicologia dell'emergenza e Psychological First Aid](#percorso-13) (3 ore). Cosa prova chi vive una crisi, modello WHO "Look-Listen-Link".
+- [Percorso 14 — Rischio chimico-industriale e direttiva Seveso](#percorso-14) (3 ore). Seveso 1976, cartelli di pericolo, stay-in vs go-out.
+- [Percorso 16 — Inclusione e Protezione Civile accessibile](#percorso-16) (3 ore). Convenzione ONU 2006, Sendai DiDRR, persone vulnerabili.
 
 **Mini-moduli tematici (2 ore, pescano da 2 percorsi):**
 
@@ -169,6 +173,7 @@ Un'unità didattica vera, che attraversa più discipline e può integrare l'inco
 - [Percorso 6 — Sicurezza nei luoghi di lavoro e PCTO](#percorso-6) (4-6 ore, integrabile nel monte ore PCTO). Decreto 81/2008, rischi specifici, primo soccorso.
 - [Percorso 9 — Primo soccorso e cuore (introduttivo)](#percorso-9) (4 ore). PLS, RCP, DAE, manovre antisoffocamento. Adatto a un raccordo con corsi BLSD certificati.
 - [Percorso 10 — Volontariato e cittadinanza attiva con PCTO](#percorso-10) (3 ore + 30-50 ore di PCTO al Gruppo). Mappatura del territorio, supporto a esercitazioni, comunicazione del rischio.
+- [Percorso 15 — Memoria dei disastri italiani](#percorso-15) (4 ore). Vajont 1963, Friuli 1976, Irpinia 1980, Sarno 1998, L'Aquila 2009, Amatrice 2016. Imparare dalla storia per non ripeterla.
 
 **Combinazioni di percorsi:**
 
@@ -176,6 +181,8 @@ Un'unità didattica vera, che attraversa più discipline e può integrare l'inco
 - **Rischio + Autoprotezione + Pianificazione** = [Percorso 2](#percorso-2) + [Percorso 3](#percorso-3) + [Percorso 4](#percorso-4). Tre percorsi per chi vuole partire dal rischio meteo, passare al terremoto, arrivare al piano famiglia. ~7-8 ore distribuite su un trimestre.
 - **Territorio + Comunità + Europa** = [Percorso 7](#percorso-7) + [Percorso 10](#percorso-10) + [Percorso 11](#percorso-11). Tre percorsi per leggere il rischio del proprio territorio, capire come si fa volontariato in Italia, vedere come si fa solidarietà in Europa. ~8-9 ore, adatto alla secondaria di II grado.
 - **Estate sicura** = [Percorso 8](#percorso-8) + sezione [Ondate di calore](/rischi-prevenzione/ondate-di-calore/) + sezione [Temporali intensi](/rischi-prevenzione/temporali-intensi/). Mini-curriculum stagionale per concludere l'anno scolastico prima della pausa estiva. ~5-6 ore.
+- **Memoria + Salute mentale + Inclusione** = [Percorso 15](#percorso-15) + [Percorso 13](#percorso-13) + [Percorso 16](#percorso-16). Tre percorsi per imparare dalla storia dei disastri, capire cosa si prova in emergenza, includere chi resta indietro. ~10 ore, fortemente trasversale (Storia, Italiano, Diritto, Psicologia, Educazione Civica). Adatto a un anno scolastico di una sola classe.
+- **Vulcani + Sismi + Idrogeologico** = [Percorso 12](#percorso-12) + [Percorso 3](#percorso-3) + [Percorso 7](#percorso-7). I tre rischi naturali italiani affrontati come laboratorio scientifico. ~8 ore, adatto a Licei Scientifici e Istituti Tecnici a indirizzo CAT-Geometra-Costruzioni.
 
 **Formati di progetto:**
 
@@ -198,6 +205,11 @@ Un'unità didattica vera, che attraversa più discipline e può integrare l'inco
 | 9 — [Primo soccorso e cuore (introduttivo)](#percorso-9) | Secondaria II | 4 ore | PLS, RCP, DAE, antisoffocamento | L. 116/2021 + linee guida IRC 2025 |
 | 10 — [Volontariato e cittadinanza attiva](#percorso-10) | Secondaria II | 3 ore + PCTO | Storia, sussidiarietà, Terzo Settore | D.Lgs. 117/2017 + D.Lgs. 1/2018 |
 | 11 — [Protezione Civile europea e UCPM](#percorso-11) | Secondaria II | 2-3 ore | UCPM, ERCC, rescEU, Copernicus | Decisione UE 1313/2013 + art. 11 Cost. |
+| 12 — [Rischio vulcanico: Colli Albani e Italia](#percorso-12) | Secondaria I-II | 3 ore | Colli Albani quiescenti, Vesuvio, Campi Flegrei | D.Lgs. 1/2018 + Piani DPC |
+| 13 — [Psicologia dell'emergenza e PFA](#percorso-13) | Secondaria II | 3 ore | Reazioni a crisi, modello WHO Look-Listen-Link | art. 32 Cost. + WHO PFA + Sphere 2018 |
+| 14 — [Rischio chimico-industriale e Seveso](#percorso-14) | Secondaria II | 3 ore | CLP, Stay-in vs Go-out, PEE | D.Lgs. 105/2015 + Reg. CE 1272/2008 |
+| 15 — [Memoria dei disastri italiani](#percorso-15) | Secondaria II | 4 ore | Vajont, Friuli, Irpinia, Sarno, Aquila, Amatrice | L. 92/2019 art. 3 lett. h (memoria) |
+| 16 — [Inclusione e PC accessibile](#percorso-16) | Secondaria I-II | 3 ore | Convenzione ONU 2006, Sendai DiDRR | L. 18/2009 + L. 4/2004 + ISO 22395 |
 
 Ogni percorso è completo di: **prerequisiti**, **obiettivi di apprendimento**, **competenze chiave europee** mobilitate, **materiali linkati** (schede, storie, giochi), **modalità di valutazione**, **fonti e norme**.
 
@@ -645,6 +657,204 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 
 ---
 
+## Percorso 12 — Rischio vulcanico: Colli Albani e Italia {#percorso-12}
+
+**Destinatari**: Scuola Secondaria di I e II grado.
+**Durata**: 3 ore (lezioni da 1 ora).
+**Disciplina prevalente**: Scienze · Geografia · Educazione Civica.
+**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità.
+**Riferimento normativo specifico**: **D.Lgs. 1/2018** (Codice della Protezione Civile) · **Piano nazionale di protezione civile per il rischio Vesuvio** e **Campi Flegrei** (aggiornamenti DPC).
+
+### Prerequisiti
+
+- Conosce la differenza tra "vulcano spento", "estinto" e "quiescente".
+- Ha studiato la struttura della crosta terrestre e le placche tettoniche.
+
+### Obiettivi di apprendimento
+
+- Sa che il **distretto vulcanico dei Colli Albani** è **quiescente**, non spento: l'attività eruttiva si è concentrata fra 600.000 e 36.000 anni fa, ma il sistema non è considerato estinto. Il Lago Albano e il Lago di Nemi sono **crateri di esplosione** della fase finale dell'attività.
+- Riconosce i **fenomeni di tipo secondario** osservati nell'area (emissioni di anidride carbonica dal suolo, lieve sismicità periodica, deformazioni del terreno) e il monitoraggio condotto dall'**INGV — Osservatorio Vesuviano**.
+- Conosce i **tre grandi vulcani attivi italiani**: Vesuvio, Campi Flegrei, Etna (più Stromboli e Vulcano).
+- Sa cos'è la **zona rossa** e la **zona gialla** del Piano nazionale Vesuvio, e come funziona l'evacuazione preventiva.
+- Riconosce il ruolo di **IT-alert** come canale di allerta in caso di evento vulcanico (testato a Stromboli e in esercitazione Campi Flegrei nel 2024).
+
+### Articolazione delle 3 ore
+
+| Ora | Attività | Materiali |
+|---|---|---|
+| 1 | Il "nostro" vulcano: i Colli Albani come sistema quiescente. Storia geologica, i laghi craterici di Albano e Nemi | Pagina [Rischio vulcanico](/rischi-prevenzione/rischio-vulcanico/) + articolo [Sicurezza sui laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/) |
+| 2 | I tre giganti italiani: Vesuvio, Campi Flegrei, Etna. Tipologie eruttive e pericoli | Schede [Vulcani d'Italia — Secondaria](/formazione/schede-stampabili/caso-vulcani-italia-secondaria/) e [Campi Flegrei — Secondaria](/formazione/schede-stampabili/caso-campi-flegrei-secondaria/) |
+| 3 | Pianificazione e allertamento: zona rossa/gialla del Vesuvio, esercitazione 2024 ai Campi Flegrei, ruolo di IT-alert | Sito [DPC — Rischio vulcanico](https://www.protezionecivile.gov.it/it/rischi/rischio-vulcanico/) + articolo [IT-alert: storia, tecnologia, accessibilità](/comunicazioni/2026-05-19-it-alert-tecnologia-accessibilita-falsi-miti/) |
+
+### Competenze chiave europee mobilitate
+
+Competenza matematica e in scienze · Competenza in materia di cittadinanza · Competenza personale, sociale.
+
+### Valutazione
+
+Rubrica fascia, indicatori 1 (autoprotezione), 3 (conoscenza del territorio), 5 (ruolo delle istituzioni). Possibile **prova autentica**: gli studenti producono una **carta tematica** del distretto vulcanico dei Colli Albani con i punti di emissione gassosa, i due laghi craterici e i comuni più vicini.
+
+---
+
+## Percorso 13 — Psicologia dell'emergenza e Psychological First Aid {#percorso-13}
+
+**Destinatari**: Scuola Secondaria di II grado, in particolare Licei delle Scienze Umane.
+**Durata**: 3 ore (lezioni da 1 ora). Estendibile a workshop di 6 ore con uno psicologo dell'emergenza.
+**Disciplina prevalente**: Educazione Civica · Scienze Umane · Italiano.
+**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà.
+**Riferimento normativo e tecnico**: **art. 32 Cost.** (diritto alla salute, anche mentale) · **WHO — Psychological First Aid: Guide for field workers** (2011) · **Sphere Standards 2018** sezione "Mental Health and Psychosocial Support" · **NCTSN** (National Child Traumatic Stress Network) per il PFA pediatrico.
+
+### Prerequisiti
+
+- Ha letto la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/) del sito.
+- Ha studiato gli articoli 2, 3 e 32 della Costituzione.
+
+### Obiettivi di apprendimento
+
+- Sa cosa significa **trauma** in psicologia dell'emergenza e distingue **reazione normale a evento anormale** vs **disturbo post-traumatico**.
+- Riconosce le **reazioni tipiche** nelle diverse fasce d'età (bambini, adolescenti, adulti, anziani).
+- Conosce il modello **Psychological First Aid (PFA)** del WHO: **Look** (osservare), **Listen** (ascoltare), **Link** (collegare ai servizi).
+- Sa cosa NON dire e NON fare a chi ha appena vissuto un'emergenza (errori comuni del "buon samaritano" non formato).
+- Riconosce il ruolo del **volontario di PC** come "primo aggancio relazionale" e i limiti del suo intervento: il PFA **non è psicoterapia**, è supporto umano nelle prime ore.
+
+### Articolazione delle 3 ore
+
+| Ora | Attività | Materiali |
+|---|---|---|
+| 1 | Cosa prova chi vive un'emergenza. Reazioni tipiche per età, segni di stress acuto e cronico | Pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/) + lettura di testimonianze (Friuli 1976, L'Aquila 2009) |
+| 2 | Psychological First Aid (PFA) del WHO: Look-Listen-Link. I 5 elementi di Hobfoll (sicurezza, calma, autoefficacia, connessione, speranza) | Materiale WHO + scheda interna del Gruppo per simulazione |
+| 3 | Resilienza individuale e comunitaria. Caso Emilia 2012: la ricostruzione partecipata. Limiti del volontario non sanitario | Articolo [Emilia 2012 — Memoria e resilienza](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/) + articolo [Emilia 2012 — Resilienza comunitaria](/comunicazioni/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria/) |
+
+### Connessione con un workshop esperto
+
+Il percorso può essere esteso a un **workshop di 6 ore** con uno psicologo dell'emergenza dell'**Albo Psicologi Lazio** (sezione Emergenza) o di una delle équipe **EmergenSI** o **PsyPlus** territoriali. Il Gruppo Comunale può facilitare il contatto.
+
+### Competenze chiave europee mobilitate
+
+Competenza personale, sociale · Competenza in materia di cittadinanza · Competenza alfabetica funzionale.
+
+### Valutazione
+
+Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 4 (comportamento in emergenza), 6 (cittadinanza attiva). Possibile **prova autentica**: gli studenti scrivono una **lettera empatica** a un coetaneo immaginario che ha vissuto un terremoto, rispettando i principi del PFA (300 parole). Si valuta sul rispetto del modello, non sull'aderenza a un modello unico.
+
+---
+
+## Percorso 14 — Rischio chimico-industriale e direttiva Seveso {#percorso-14}
+
+**Destinatari**: Scuola Secondaria di II grado, in particolare Istituti Tecnici a indirizzo chimico, biotecnologico, ambientale.
+**Durata**: 3 ore (lezioni da 1 ora).
+**Disciplina prevalente**: Chimica · Educazione Civica · Diritto.
+**Nucleo concettuale D.M. 183/2024**: 2 — Sviluppo economico e sostenibilità (+ 1 per la parte normativa).
+**Riferimento normativo specifico**: **D.Lgs. 26 giugno 2015, n. 105** (attuazione della Direttiva **Seveso III** 2012/18/UE) · **Regolamento CE 1272/2008 (CLP)** sull'etichettatura delle sostanze pericolose · **art. 32 Cost.** (salute).
+
+### Prerequisiti
+
+- Ha studiato i pittogrammi CLP delle sostanze pericolose.
+- Conosce il concetto di "rischio" come probabilità × danno.
+
+### Obiettivi di apprendimento
+
+- Conosce la **Direttiva Seveso** e la sua origine storica: l'incidente di **Seveso del 10 luglio 1976** (rilascio di TCDD, prima diossina dell'industria europea).
+- Distingue **stabilimenti a soglia inferiore** e **soglia superiore** del D.Lgs. 105/2015.
+- Sa leggere i **pittogrammi GHS-CLP** sulle sostanze pericolose (esplosivo, infiammabile, comburente, gas sotto pressione, corrosivo, tossico, irritante, mutageno-cancerogeno-tossico per la riproduzione, pericoloso per l'ambiente, gas in bombole).
+- Conosce la differenza fra **stay-in** (rifugio al chiuso, chiudere finestre, spegnere ventilazione) e **go-out** (evacuazione verso area sicura) in caso di nube tossica.
+- Sa cos'è il **Piano di Emergenza Esterno (PEE)** che il Prefetto redige per ogni stabilimento Seveso.
+
+### Articolazione delle 3 ore
+
+| Ora | Attività | Materiali |
+|---|---|---|
+| 1 | Seveso 1976: cosa è successo, cosa abbiamo imparato. La nascita della Direttiva Seveso | Articolo [Seveso 1976 — 50 anni di Direttiva europea](/comunicazioni/2026-07-10-seveso-1976-cinquant-anni-direttiva-europea/) |
+| 2 | Pittogrammi CLP e cartelli di pericolo. Riconoscere le sostanze nelle etichette di casa e nei trasporti | Articolo [Cartelli di pericolo sostanze pericolose](/comunicazioni/2026-05-24-cartelli-pericolo-sostanze-pericolose-riconoscere-agire/) + [Pittogrammi ISO 7010 del sito](/pittogrammi/) |
+| 3 | Stay-in vs Go-out: comportamenti corretti in caso di nube tossica. Il Piano di Emergenza Esterno del Prefetto | Articolo [Rischio chimico-industriale e cittadini](/comunicazioni/2026-05-24-rischio-chimico-industriale-cittadini/) + articolo [Rischio industriale Seveso](/comunicazioni/2026-10-20-rischio-industriale-seveso/) |
+
+### Competenze chiave europee mobilitate
+
+Competenza matematica e in scienze · Competenza in materia di cittadinanza · Competenza personale, sociale.
+
+### Valutazione
+
+Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 1 (autoprotezione), 5 (ruolo delle istituzioni). Possibile **prova autentica**: gli studenti producono un **decalogo "Stay-in"** per la propria scuola, da affiggere accanto al piano di evacuazione (regola visibile: non sostituisce il piano antincendio, lo affianca).
+
+---
+
+## Percorso 15 — Memoria dei disastri italiani {#percorso-15}
+
+**Destinatari**: Scuola Secondaria di II grado.
+**Durata**: 4 ore (lezioni da 1 ora) + eventuale visita a un luogo della memoria.
+**Disciplina prevalente**: Storia · Italiano · Educazione Civica · Geografia.
+**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà (+ 2 per la dimensione di sostenibilità del rischio).
+
+### Prerequisiti
+
+- Ha studiato la storia repubblicana italiana dal 1945 ai giorni nostri.
+- Ha letto almeno un libro o un articolo di **storia dei disastri** o di **public history**.
+
+### Obiettivi di apprendimento
+
+- Conosce **sei disastri-chiave** della storia repubblicana italiana e le loro cause **non solo naturali**.
+- Distingue **pericolosità** (fattore naturale), **vulnerabilità** (fattore sociale e costruttivo), **esposizione** (fattore demografico): il **rischio** è il loro prodotto.
+- Sa che dopo ogni disastro è nata una **nuova norma** o una **nuova istituzione** (es. Friuli 1976 → modello regionale, Irpinia 1980 → DPC nazionale, Sarno 1998 → PAI).
+- Comprende il dovere di **memoria attiva**: non commemorare per ritualità, ma per **non ripetere**.
+
+### Articolazione delle 4 ore
+
+| Ora | Attività | Materiali |
+|---|---|---|
+| 1 | **Vajont, 9 ottobre 1963** — la tragedia annunciata. Diga, frana del Monte Toc, mancato ascolto dei tecnici | Articolo [Vajont 1963 — La tragedia prevista](/comunicazioni/2026-10-09-vajont-1963-tragedia-prevista/) + scheda [Vajont — Secondaria II](/formazione/schede-stampabili/caso-vajont-secondaria2/) |
+| 2 | **Friuli 6 maggio 1976** + **Irpinia 23 novembre 1980** — dalla solidarietà spontanea alla PC moderna. Zamberletti | Articolo [Friuli 1976 — 50 anni di PC](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/) + scheda [Irpinia — Secondaria II](/formazione/schede-stampabili/caso-irpinia-secondaria2/) |
+| 3 | **Sarno 5 maggio 1998** + **L'Aquila 6 aprile 2009** — la frana che si poteva evitare, il terremoto che ha cambiato l'urbanistica | Articolo [Sarno 1998](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/) + scheda [L'Aquila — Secondaria II](/formazione/schede-stampabili/caso-aquila-secondaria2/) |
+| 4 | **Amatrice 24 agosto 2016** + **Emilia 20-29 maggio 2012** — patrimonio storico perduto, resilienza comunitaria ritrovata | Articolo [Amatrice 2016 — 10° anniversario](/comunicazioni/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario/) + scheda [Amatrice — Secondaria II](/formazione/schede-stampabili/caso-amatrice-secondaria2/) + articolo [Emilia 2012](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/) |
+
+### Competenze chiave europee mobilitate
+
+Competenza in materia di consapevolezza ed espressione culturali · Competenza alfabetica funzionale · Competenza in materia di cittadinanza · Competenza personale, sociale.
+
+### Valutazione
+
+Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-valutativa-secondaria2/), indicatori 5 (ruolo delle istituzioni), 6 (cittadinanza attiva). Possibile **prova autentica**: gli studenti scelgono **un** disastro dei sei e producono un **breve podcast (5-7 minuti)** che racconta cosa è successo, perché, cosa è cambiato dopo. Strumenti gratuiti (Audacity, smartphone). Pubblicabile sul sito del Gruppo previa revisione del docente.
+
+---
+
+## Percorso 16 — Inclusione e Protezione Civile accessibile {#percorso-16}
+
+**Destinatari**: Scuola Secondaria di I e II grado.
+**Durata**: 3 ore (lezioni da 1 ora).
+**Disciplina prevalente**: Educazione Civica · Italiano · Diritto · Scienze Umane.
+**Nucleo concettuale D.M. 183/2024**: 1 — Costituzione, diritto, legalità e solidarietà (+ 3 per la cittadinanza digitale-comunicativa).
+**Riferimento normativo specifico**: **Convenzione ONU sui diritti delle persone con disabilità** (New York 13 dicembre 2006), ratificata dall'Italia con **L. 3 marzo 2009, n. 18** · **Sendai Framework for Disaster Risk Reduction 2015-2030** (target B e D, "Disability-Inclusive Disaster Risk Reduction") · **L. 9 gennaio 2004, n. 4** (Legge Stanca, accessibilità digitale) · **ISO 22395:2018** sulla comunicazione con persone vulnerabili in emergenza.
+
+### Prerequisiti
+
+- Conosce gli articoli 2, 3 e 38 della Costituzione (uguaglianza sostanziale e diritti delle persone con disabilità).
+- Ha sentito parlare di "design universale" o di "accessibilità".
+
+### Obiettivi di apprendimento
+
+- Sa che la **Convenzione ONU 2006** ha introdotto il principio del **"niente su di noi senza di noi"**: le persone con disabilità sono **co-progettiste** dei servizi che le riguardano, non destinatarie passive.
+- Conosce il **Sendai Framework 2015-2030** dell'**UNDRR** e il principio della **Disability-Inclusive Disaster Risk Reduction (DiDRR)**.
+- Riconosce le diverse **categorie con bisogni specifici**: persone con disabilità sensoriali (cieche, sorde), motorie, cognitive, anziani fragili, bambini, parlanti italiano L2, persone senza fissa dimora, donne in gravidanza, neonati.
+- Conosce gli strumenti del **sito del Gruppo** per l'inclusione: pagine **Facile da Leggere**, **Abili a Proteggere**, **LIS**, **pittogrammi ARASAAC**, versioni **italiano L2** degli articoli.
+- Comprende che l'accessibilità **non è "un extra"** per pochi, ma **migliora l'esperienza di tutti** (curb cut effect).
+
+### Articolazione delle 3 ore
+
+| Ora | Attività | Materiali |
+|---|---|---|
+| 1 | La PC che include tutti. Convenzione ONU 2006, Sendai Framework, DiDRR | Articolo [UNDRR Sendai Framework — Riduzione del rischio disastri](/comunicazioni/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri/) + articolo [ISO 22395 — Persone vulnerabili](/comunicazioni/2026-05-29-iso-22395-persone-vulnerabili/) |
+| 2 | Categorie con bisogni specifici: disabilità sensoriali, motorie, cognitive, anziani, bambini, italiano L2. Tour dei Kit Calamità | Pagina [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/) + sezione [Kit Calamità](/formazione/kit-calamita/) (panoramica dei 12 kit) |
+| 3 | Comunicazione accessibile: Facile da Leggere, pittogrammi ARASAAC, LIS, italiano L2 | Pagina [Facile da Leggere](/facile-da-leggere/) + pagina [LIS](/lis/) + articolo [Autismo ed emergenze inclusive](/comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/) |
+
+### Competenze chiave europee mobilitate
+
+Competenza in materia di cittadinanza · Competenza personale, sociale · Competenza alfabetica funzionale · Competenza in materia di consapevolezza ed espressione culturali.
+
+### Valutazione
+
+Rubrica fascia, indicatori 5 (ruolo delle istituzioni), 6 (cittadinanza attiva). Possibile **prova autentica**: la classe identifica **una barriera comunicativa** nel proprio quartiere (un cartello illeggibile, un messaggio comunale solo audio, una mappa senza pittogrammi) e produce una **versione accessibile** (testo Facile da Leggere o pittogramma o trascrizione), da proporre al Comune.
+
+---
+
 ## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>Domande frequenti dei docenti {#faq-docenti}
 <details class="faq-item">
 <summary><strong>Posso usare un percorso senza fare gli altri?</strong></summary>
@@ -686,4 +896,4 @@ Scrivere a **[segreteria@protezionecivilegenzano.it](mailto:segreteria@protezion
 ---
 
 **Ultimo aggiornamento**: 19 maggio 2026.
-**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h e h-ter) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 81/2008 · D.Lgs. 77/2005 (PCTO) · L. 145/2018 (art. 1 c. 785 monte ore PCTO) · D.M. 774/2019 (Linee guida PCTO) · D.Lgs. 62/2017 · D.M. 26/08/1992 (prevenzione incendi nelle scuole) · L. 353/2000 (Legge quadro incendi boschivi) · L.R. Lazio 14/2008 · L. 116/2021 (DAE) · D.Lgs. 117/2017 (Codice del Terzo Settore) · Decisione UE 1313/2013 (Meccanismo UCPM) · L. 107/2015 (autonomia scolastica) · Raccomandazione UE 22 maggio 2018.
+**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h e h-ter) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 81/2008 · D.Lgs. 77/2005 (PCTO) · L. 145/2018 (art. 1 c. 785 monte ore PCTO) · D.M. 774/2019 (Linee guida PCTO) · D.Lgs. 62/2017 · D.M. 26/08/1992 (prevenzione incendi nelle scuole) · L. 353/2000 (Legge quadro incendi boschivi) · L.R. Lazio 14/2008 · L. 116/2021 (DAE) · D.Lgs. 117/2017 (Codice del Terzo Settore) · Decisione UE 1313/2013 (Meccanismo UCPM) · L. 107/2015 (autonomia scolastica) · Raccomandazione UE 22 maggio 2018 · **D.Lgs. 105/2015** (Seveso III) · **Reg. CE 1272/2008** (CLP) · **L. 18/2009** (ratifica Convenzione ONU disabilità 2006) · **L. 4/2004** (Legge Stanca, accessibilità digitale) · **ISO 22395:2018** (comunicazione persone vulnerabili in emergenza) · **Sendai Framework 2015-2030** (UNDRR) · **WHO Psychological First Aid Guide 2011** · **Sphere Standards 2018**.
