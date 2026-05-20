@@ -33,7 +33,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 >
 > Risultato: -2 workflow, 1 issue settimanale invece di 3, stessa copertura.
 
-> **Auto-risoluzione issue video (pre-autorizzata):** quando `check-video-lis.yml`, `check-video-dpc-eventi.yml` o `aggiorna-video-correlati.yml` aprono un'issue su un nuovo video, la sessione Claude la risolve **da sola, senza chiedere l'OK** (istruzione permanente dell'utente del 20/05/2026), integrando il video dove pertinente e pubblicando fino a live. Vincolo cogente: **video pertinente o niente** — se il video non tratta una tematica del sito NON va allegato (fuori contesto). Specifiche complete in `CLAUDE.md` § "Auto-risoluzione delle issue sui video".
+> **Auto-integrazione approfondimenti (pre-autorizzata):** quando `check-video-lis.yml`, `check-video-dpc-eventi.yml` o `aggiorna-video-correlati.yml` aprono un'issue su un nuovo video — o quando un articolo merita approfondimenti via link ai siti della nostra lista — la sessione Claude integra **da sola, senza chiedere l'OK** (istruzione permanente dell'utente del 20/05/2026) il video/link dove pertinente e pubblica fino a live. Vincolo cogente: **approfondimento pertinente o niente** — se non tratta una tematica del sito NON va allegato (fuori contesto). Specifiche complete in `CLAUDE.md` § "Auto-integrazione di approfondimenti pertinenti (video + link)".
 
 ## Key operational notes
 

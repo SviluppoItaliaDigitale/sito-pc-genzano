@@ -197,9 +197,11 @@ Se non concorda, corregge e basta. **Non chiedo PRIMA di pubblicare** — pubbli
 
 ---
 
-## Auto-risoluzione delle issue sui video (LIS + Approfondimenti video) — pre-autorizzata
+## Auto-integrazione di approfondimenti pertinenti (video + link) — pre-autorizzata
 
-🟢 **Istruzione permanente dell'utente (20/05/2026): quando un workflow apre un'issue che segnala un nuovo video integrabile, risolvila da sola — senza chiedere conferma.** L'autorizzazione è data a monte, una volta per tutte, e vale per ogni sessione futura (CLI desktop, mobile, cloud). Non serve l'OK per-issue.
+🟢 **Istruzione permanente dell'utente (20/05/2026): integra da sola gli approfondimenti pertinenti — sia i video sia i link a siti della nostra lista — negli articoli e nelle pagine, senza chiedere conferma per-caso.** L'autorizzazione è data a monte, una volta per tutte, e vale per ogni sessione futura (CLI desktop, mobile, cloud). Non serve l'OK caso per caso.
+
+### A) Video (LIS + Approfondimenti video)
 
 **Trigger** — issue aperte dai workflow di monitoraggio video:
 - `check-video-lis.yml` — nuovi video LIS dai canali "Io non rischio", "Abili a Proteggere", "DPCgov".
@@ -212,15 +214,29 @@ Se non concorda, corregge e basta. **Non chiedo PRIMA di pubblicare** — pubbli
    - **Video LIS** → nuova voce in `data/lis.yaml` (famiglia tematica corretta + `fonte`); il badge "video LIS disponibili" e il conteggio dell'hub `/lis/` si aggiornano da soli. Aggiorna i conteggi nei commenti/doc per coerenza (rule 07).
    - **Video divulgativi / correlati** → i fix di classificazione vanno nel **generatore** `scripts/genera-video-correlati.py` (`DENY_VIDEO_IDS`, keyword, gate tematico), MAI solo in `data/video_correlati.yaml` (rule 10 — rigenerato ogni mese, il fix nel solo YAML andrebbe perso).
    - Eventuale **callout/link contestuale** sulla pagina o sull'articolo a tema (senza alterare la struttura fissa delle pagine-rischio, rule 06).
-3. Pulisci l'URL dai parametri di tracking (`?si=`, `?is=`, ecc.).
-4. Pubblica fino a live: commit → push → PR → merge → deploy (la pre-autorizzazione copre anche il merge per questa categoria di task).
-5. **Chiudi l'issue** citando il commit/PR di fix.
+3. **Chiudi l'issue** citando il commit/PR di fix.
 
-🔴 **GATE DI PERTINENZA — vincolo cogente (richiesto esplicitamente dall'utente).** Un video si allega **solo se tratta una tematica realmente coperta da un articolo o una pagina del sito**. Se è fuori contesto (nessuna tematica del sito corrisponde), **NON allegarlo**: chiudi l'issue spiegando perché non è stato integrato. Vale il principio già stabilito in rule 10: **"video pertinente o niente"** — meglio nessun video che un video fuori contesto.
+### B) Approfondimenti via link negli articoli
 
-**Eccezione — quando fermarsi e chiedere:** se la classificazione è **ambigua** (famiglia LIS incerta, canale/titolo non identificabili con certezza, dubbio reale sulla pertinenza), non forzare un inserimento sbagliato: chiedi. Il default è agire, ma di fronte a un dubbio genuino meglio chiedere che sbagliare contesto.
+Molti articoli **non hanno un video** ma meritano una sezione **"Per approfondire"** con link curati. Modello di riferimento: l'articolo del 20/05/2026 sugli sciami d'api (`content/comunicazioni/2026-05-20-sciami-api-estate-recupero-genzano.md`), che chiude con tre blocchi nell'ordine AGID:
 
-**Limite tecnico noto:** l'apertura dell'issue su GitHub non avvia da sola una sessione Claude (nessun hook reagisce alle issue). Questa regola garantisce che **quando** una sessione incontra l'issue — perché l'utente la apre, o tramite il babysitting/subscribe di una PR collegata — la risolva senza altri OK. Non è un cron autonomo lato Claude.
+1. **Sul nostro sito** — linkografia interna (articoli correlati ≤ 24 mesi, kit calamità, schede stampabili, glossario, standard ISO, pagine rischio). **Sempre per prima** (AGID, rule 02 § "Livello qualitativo della redazione" punto 4: valorizzare la linkografia interna prima delle fonti esterne; agent `pc-internal-linker`).
+2. **Fonti istituzionali** — link alla nostra lista di siti istituzionali (`content/siti-utili/_index.md`: DPC, Regione Lazio, VVF + Open Data VVF, INGV, ISPRA, FAO, Normattiva, ASL Roma 6, ecc.) pertinenti al tema dell'articolo.
+3. **Approfondimenti divulgativi** — link agli **articoli/pagine** dei canali divulgativi qualificati che già monitoriamo per i video (Geopop, NatGeo Italia, Rai Cultura, Rai News, CICAP, Link4Universe, Wired Italia), qui in versione sito/articolo. Etichetta sempre la fonte (es. "Approfondimenti scientifici (Geopop)").
+
+**Azione pre-autorizzata** quando scrivi/rivedi un articolo, o quando un workflow (es. `normativa-watcher.yml`) segnala una fonte pertinente: aggiungi/aggiorna la sezione "Per approfondire" con i link curati pertinenti, rispettando l'ordine AGID (interno → istituzionale → divulgativo), poi pubblica.
+
+### Gate, eccezione, regole comuni (validi per A e B)
+
+🔴 **GATE DI PERTINENZA — vincolo cogente (richiesto esplicitamente dall'utente).** Video o link si aggiungono **solo se trattano una tematica realmente coperta dall'articolo/pagina**. Fuori contesto = **non si allega** (vale per i video, vale per i link: niente link "di riempimento", niente fonte divulgativa generica non attinente). Principio: **"approfondimento pertinente o niente"** — meglio nulla che un link fuori contesto. Coerente con rule 10 (video) e con l'anti-pattern "foto stock generiche per macro-tema" di rule 02 (no risorse generiche spruzzate su più articoli).
+
+**Eccezione — quando fermarsi e chiedere:** se la pertinenza o la classificazione è **ambigua** (famiglia LIS incerta, canale/titolo non identificabili con certezza, dubbio reale se un link sia attinente), non forzare un inserimento sbagliato: chiedi. Il default è agire, ma di fronte a un dubbio genuino meglio chiedere che sbagliare contesto.
+
+**Pulizia URL:** rimuovi sempre i parametri di tracking dai link (`?si=`, `?is=`, `utm_*`, ecc.).
+
+**Pubblicazione:** la pre-autorizzazione copre l'intero flusso fino a live (commit → push → PR → merge → deploy) per questa categoria di task.
+
+**Limite tecnico noto:** l'apertura di un'issue su GitHub non avvia da sola una sessione Claude (nessun hook reagisce alle issue). Questa regola garantisce che **quando** una sessione incontra l'issue o lavora su un articolo, applichi la policy senza altri OK. Non è un cron autonomo lato Claude.
 
 ---
 
