@@ -197,6 +197,33 @@ Se non concorda, corregge e basta. **Non chiedo PRIMA di pubblicare** — pubbli
 
 ---
 
+## Auto-risoluzione delle issue sui video (LIS + Approfondimenti video) — pre-autorizzata
+
+🟢 **Istruzione permanente dell'utente (20/05/2026): quando un workflow apre un'issue che segnala un nuovo video integrabile, risolvila da sola — senza chiedere conferma.** L'autorizzazione è data a monte, una volta per tutte, e vale per ogni sessione futura (CLI desktop, mobile, cloud). Non serve l'OK per-issue.
+
+**Trigger** — issue aperte dai workflow di monitoraggio video:
+- `check-video-lis.yml` — nuovi video LIS dai canali "Io non rischio", "Abili a Proteggere", "DPCgov".
+- `check-video-dpc-eventi.yml` — video DPCgov correlabili a contenuti del sito.
+- `aggiorna-video-correlati.yml` — re-scraping mensile dei 12 canali italiani (DPCgov, Io non rischio, Abili a Proteggere, INGV terremoti, INGV vulcani + Geopop, NatGeo Italia, Rai Cultura, Rai News, CICAP, Link4Universe, Wired Italia).
+
+**Azione pre-autorizzata:**
+1. Valuta la **pertinenza tematica** del video (vedi gate sotto).
+2. Se pertinente, integralo dove serve:
+   - **Video LIS** → nuova voce in `data/lis.yaml` (famiglia tematica corretta + `fonte`); il badge "video LIS disponibili" e il conteggio dell'hub `/lis/` si aggiornano da soli. Aggiorna i conteggi nei commenti/doc per coerenza (rule 07).
+   - **Video divulgativi / correlati** → i fix di classificazione vanno nel **generatore** `scripts/genera-video-correlati.py` (`DENY_VIDEO_IDS`, keyword, gate tematico), MAI solo in `data/video_correlati.yaml` (rule 10 — rigenerato ogni mese, il fix nel solo YAML andrebbe perso).
+   - Eventuale **callout/link contestuale** sulla pagina o sull'articolo a tema (senza alterare la struttura fissa delle pagine-rischio, rule 06).
+3. Pulisci l'URL dai parametri di tracking (`?si=`, `?is=`, ecc.).
+4. Pubblica fino a live: commit → push → PR → merge → deploy (la pre-autorizzazione copre anche il merge per questa categoria di task).
+5. **Chiudi l'issue** citando il commit/PR di fix.
+
+🔴 **GATE DI PERTINENZA — vincolo cogente (richiesto esplicitamente dall'utente).** Un video si allega **solo se tratta una tematica realmente coperta da un articolo o una pagina del sito**. Se è fuori contesto (nessuna tematica del sito corrisponde), **NON allegarlo**: chiudi l'issue spiegando perché non è stato integrato. Vale il principio già stabilito in rule 10: **"video pertinente o niente"** — meglio nessun video che un video fuori contesto.
+
+**Eccezione — quando fermarsi e chiedere:** se la classificazione è **ambigua** (famiglia LIS incerta, canale/titolo non identificabili con certezza, dubbio reale sulla pertinenza), non forzare un inserimento sbagliato: chiedi. Il default è agire, ma di fronte a un dubbio genuino meglio chiedere che sbagliare contesto.
+
+**Limite tecnico noto:** l'apertura dell'issue su GitHub non avvia da sola una sessione Claude (nessun hook reagisce alle issue). Questa regola garantisce che **quando** una sessione incontra l'issue — perché l'utente la apre, o tramite il babysitting/subscribe di una PR collegata — la risolva senza altri OK. Non è un cron autonomo lato Claude.
+
+---
+
 ## Regole di dettaglio (file separati)
 
 @.claude/rules/01-governance-pa.md
