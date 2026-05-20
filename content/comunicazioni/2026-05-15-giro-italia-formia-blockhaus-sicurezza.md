@@ -62,7 +62,7 @@ Una giornata di sport e di lavoro collettivo — silenzioso, coordinato, profess
 ## Sul nostro sito
 
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo Comunale di Genzano di Roma.
-- [Chi siamo](/chi-siamo/) — la nostra adesione al 14° C.O.I. e al Coordinamento FEPIVOL.
+- [Chi siamo](/chi-siamo/) — la nostra adesione al 14° COI e al Coordinamento FEPIVOL.
 - [Piano di Emergenza Comunale](/piano-emergenza/) — come si organizza un Centro Operativo Comunale.
 - [Maxi emergenze e colonne mobili FEPIVOL Lazio](/comunicazioni/2026-04-12-maxi-emergenze-colonne-mobili-coordinamenti-fepivol-lazio/) — come si organizza un'attivazione regionale fuori dal territorio comunale.
 - [La catena delle comunicazioni: DPC, COR, COM, COI, COC](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/) — i livelli di coordinamento citati in questo articolo.

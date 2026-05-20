@@ -66,6 +66,13 @@ def process():
     by_date: dict[str, list[Path]] = defaultdict(list)
     for md in md_files:
         text = md.read_text(encoding="utf-8")
+        # Escludi le versioni "italiano semplice" (build.list: never): sono
+        # nascoste da homepage/archivio/feed, quindi non partecipano mai
+        # all'ordering visibile. Includerle creava churn inutile (orari
+        # assegnati a file nascosti) e rompeva la convenzione "data del
+        # facile identica all'originale".
+        if re.search(r'^\s*list:\s*never\s*$', text, re.MULTILINE):
+            continue
         m = DATE_RE.search(text)
         if m:
             by_date[m.group(2)].append(md)
