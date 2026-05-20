@@ -2,20 +2,26 @@
 """
 Genera cover grafiche istituzionali per gli articoli del sito.
 - Sfondo: gradiente blu istituzionale + accent color per badge
-- Titolo dell'articolo centrato
+- Titolo dell'articolo centrato (safe-zone composer Facebook mobile)
 - Fascia blu istituzionale inferiore con logo + dicitura
+
+Composizione in Python+Pillow (non ImageMagick) per essere cross-platform e
+indipendente dalla fragilità ImageMagick v6/v7 (delegate WebP, font discovery,
+sintassi diversa). Stessa scelta gia' adottata per applica-fascia-foto.py.
+Dipendenze: python3-pil (Pillow) + font Liberation Sans (fonts-liberation).
 
 Uso:
     python3 scripts/genera-cover.py content/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica.md
     python3 scripts/genera-cover.py --all
+    python3 scripts/genera-cover.py --all --force
 """
 
 import argparse
-import os
 import re
-import subprocess
 import sys
 from pathlib import Path
+
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = ROOT / "content" / "comunicazioni"
@@ -42,11 +48,58 @@ BADGE_COLORS = {
     "Comunicazione": "#263238",
 }
 
-FONT_BOLD = "Liberation-Sans-Bold"
-FONT_REGULAR = "Liberation-Sans"
-
 W, H = 1200, 630
 BAND_H = 100
+
+# Liberation Sans: ricerca robusta del file TTF su Linux/CI/macOS/Windows.
+_FONT_DIRS = [
+    "/usr/share/fonts/truetype/liberation",
+    "/usr/share/fonts/truetype/liberation2",
+    "/usr/share/fonts/liberation",
+    "/usr/share/fonts/TTF",
+    "/usr/share/fonts/truetype/dejavu",
+    "/Library/Fonts",
+    "/System/Library/Fonts/Supplemental",
+    "C:/Windows/Fonts",
+]
+_FONT_FILES = {
+    True: ["LiberationSans-Bold.ttf", "DejaVuSans-Bold.ttf", "Arial Bold.ttf", "arialbd.ttf"],
+    False: ["LiberationSans-Regular.ttf", "DejaVuSans.ttf", "Arial.ttf", "arial.ttf"],
+}
+_font_cache: dict = {}
+
+
+def _font_path(bold: bool) -> str | None:
+    for d in _FONT_DIRS:
+        for name in _FONT_FILES[bold]:
+            p = Path(d) / name
+            if p.exists():
+                return str(p)
+    for name in _FONT_FILES[bold]:  # fallback: lascia risolvere a fontconfig
+        try:
+            ImageFont.truetype(name, 10)
+            return name
+        except Exception:
+            continue
+    return None
+
+
+def font(bold: bool, size: int) -> ImageFont.FreeTypeFont:
+    key = (bold, size)
+    if key not in _font_cache:
+        path = _font_path(bold)
+        if path is None:
+            print("[warn] font Liberation Sans non trovato, uso il font di default Pillow",
+                  file=sys.stderr)
+            _font_cache[key] = ImageFont.load_default()
+        else:
+            _font_cache[key] = ImageFont.truetype(path, size)
+    return _font_cache[key]
+
+
+def _rgb(value: str) -> tuple:
+    value = value.lstrip("#")
+    return tuple(int(value[i:i + 2], 16) for i in (0, 2, 4))
 
 
 def parse_frontmatter(md_path: Path) -> dict:
@@ -62,7 +115,7 @@ def parse_frontmatter(md_path: Path) -> dict:
     return fm
 
 
-def wrap_title(title: str, max_chars: int = 28) -> str:
+def wrap_title(title: str, max_chars: int = 28) -> list:
     words = title.split()
     lines = []
     cur = ""
@@ -75,7 +128,7 @@ def wrap_title(title: str, max_chars: int = 28) -> str:
             cur = w
     if cur:
         lines.append(cur)
-    return "\n".join(lines[:4])
+    return lines[:4]
 
 
 def slug_from_filename(path: Path) -> str:
@@ -86,7 +139,7 @@ def output_path(md_path: Path) -> Path:
     return IMAGES_DIR / f"{md_path.stem}.webp"
 
 
-def generate_cover(md_path: Path, force: bool = False) -> Path:
+def generate_cover(md_path: Path, force: bool = False) -> Path | None:
     fm = parse_frontmatter(md_path)
     if not fm:
         print(f"[skip] {md_path.name}: no frontmatter")
@@ -100,95 +153,69 @@ def generate_cover(md_path: Path, force: bool = False) -> Path:
         print(f"[exists] {out.name}")
         return out
 
-    accent = BADGE_COLORS.get(badge, PRIMARY)
-    # Wrap a 24 caratteri (era 26): titolo più stretto = sta nella safe zone
-    # centrale di 75% richiesta da Facebook composer mobile (incident 16/05/2026
-    # "preview ingrandita Giro d'Italia tagliata ai lati").
-    wrapped = wrap_title(title, 24)
+    accent = _rgb(BADGE_COLORS.get(badge, PRIMARY))
+    primary = _rgb(PRIMARY)
+    primary_dark = _rgb(PRIMARY_DARK)
+    white = _rgb(WHITE)
 
-    # Step 1: build base PNG with gradient + badges + title + band + text
+    img = Image.new("RGB", (W, H))
+    d = ImageDraw.Draw(img, "RGBA")
+
+    # Gradiente verticale PRIMARY -> PRIMARY_DARK (una linea per riga)
+    for y in range(H):
+        t = y / (H - 1)
+        d.line([(0, y), (W, y)], fill=(
+            round(primary[0] + (primary_dark[0] - primary[0]) * t),
+            round(primary[1] + (primary_dark[1] - primary[1]) * t),
+            round(primary[2] + (primary_dark[2] - primary[2]) * t),
+        ))
+
+    # Accent line in alto + decorazione diagonale in alto a destra
+    d.rectangle([0, 0, W, 8], fill=accent)
+    d.polygon([(W - 180, 0), (W, 0), (W, 220), (W - 20, 220)], fill=accent)
+
+    # Badge pill
     badge_w = 40 + 12 * len(badge)
-    base_cmd = [
-        "magick",
-        "-size", f"{W}x{H}",
-        f"gradient:{PRIMARY}-{PRIMARY_DARK}",
-        # Accent line top
-        "-fill", accent,
-        "-draw", f"rectangle 0,0 {W},8",
-        # Accent diagonal decoration
-        "-fill", accent,
-        "-draw", f"polygon {W-180},0 {W},0 {W},220 {W-20},220",
-        # Badge pill
-        "-fill", accent,
-        "-draw", f"roundrectangle 80,70 {80 + badge_w},120 10,10",
-        "-fill", WHITE,
-        "-font", FONT_BOLD,
-        "-pointsize", "22",
-        "-gravity", "NorthWest",
-        "-annotate", f"+100+82", badge.upper(),
-        # Separator line above band
-        "-fill", "rgba(255,255,255,0.15)",
-        "-draw", f"rectangle 80,{H-BAND_H-30} 1120,{H-BAND_H-29}",
-        # Title — centrato per safe zone Facebook composer mobile.
-        # Prima era "gravity West +80-30" → fuori dalla safe zone centrale 75%
-        # → tagliato nel composer FB mobile. Ora "Center +0-30" → titolo
-        # leggibile sia nel post pubblicato 1.91:1 sia nel composer ingrandito.
-        # Incident 16/05/2026 "preview Giro d'Italia tagliata ai lati".
-        "-fill", WHITE,
-        "-font", FONT_BOLD,
-        "-pointsize", "50",
-        "-interline-spacing", "16",
-        "-gravity", "Center",
-        "-annotate", f"+0-30", wrapped,
-        # Bottom blue band
-        "-fill", PRIMARY,
-        "-draw", f"rectangle 0,{H-BAND_H} {W},{H}",
-        "-fill", "rgba(255,255,255,0.25)",
-        "-draw", f"rectangle 0,{H-BAND_H} {W},{H-BAND_H+2}",
-        # Text in band
-        "-fill", WHITE,
-        "-font", FONT_BOLD,
-        "-pointsize", "26",
-        "-gravity", "NorthWest",
-        "-annotate", f"+180+{H-BAND_H+22}", "PROTEZIONE CIVILE",
-        "-fill", "rgba(255,255,255,0.85)",
-        "-font", FONT_REGULAR,
-        "-pointsize", "16",
-        "-annotate", f"+180+{H-BAND_H+60}", "Gruppo Comunale Volontari \u2014 Genzano di Roma",
-        "PNG:-",
-    ]
+    d.rounded_rectangle([80, 70, 80 + badge_w, 120], radius=10, fill=accent)
+    d.text((80 + badge_w / 2, 95), badge.upper(), font=font(True, 22),
+           fill=white, anchor="mm")
 
-    # Step 2: composite logo onto base, then export WebP
-    base = subprocess.run(base_cmd, capture_output=True)
-    if base.returncode != 0:
-        print(f"[error] base {md_path.name}: {base.stderr.decode('utf-8', 'ignore')}")
-        return None
+    # Linea separatrice sopra la banda
+    d.rectangle([80, H - BAND_H - 30, 1120, H - BAND_H - 29], fill=(255, 255, 255, 38))
 
-    logo_y = H - BAND_H + 15
-    composite_cmd = [
-        "magick",
-        "PNG:-",
-        "(", str(LOGO), "-resize", "72x72", ")",
-        "-geometry", f"+90+{logo_y}",
-        "-composite",
-        "-quality", "85",
-        "-define", "webp:method=6",
-        str(out),
-    ]
-    result = subprocess.run(composite_cmd, input=base.stdout, capture_output=True)
-    if result.returncode != 0:
-        print(f"[error] {md_path.name}: {result.stderr}")
-        return None
+    # Titolo centrato (safe-zone composer Facebook mobile: incident 16/05/2026
+    # "preview Giro d'Italia tagliata ai lati" quando il titolo era a sinistra).
+    # Wrap a 24 caratteri per stare nella safe zone centrale del 75%.
+    lines = wrap_title(title, 24)
+    line_h = 50 + 16
+    cy = (H // 2) - 30 - (line_h * len(lines)) // 2 + line_h // 2
+    for i, ln in enumerate(lines):
+        d.text((W / 2, cy + i * line_h), ln, font=font(True, 50),
+               fill=white, anchor="mm")
 
-    size_kb = out.stat().st_size // 1024
-    if size_kb > 200:
-        # Recompress at lower quality
-        subprocess.run([
-            "magick", str(out), "-quality", "75", "-define", "webp:method=6", str(out)
-        ], check=False)
-        size_kb = out.stat().st_size // 1024
+    # Banda blu inferiore + linea chiara di stacco
+    d.rectangle([0, H - BAND_H, W, H], fill=primary)
+    d.rectangle([0, H - BAND_H, W, H - BAND_H + 2], fill=(255, 255, 255, 64))
 
-    print(f"[ok] {out.name}  ({size_kb} KB)")
+    # Testo nella banda
+    d.text((180, H - BAND_H + 22), "PROTEZIONE CIVILE", font=font(True, 26),
+           fill=white, anchor="la")
+    d.text((180, H - BAND_H + 60), "Gruppo Comunale Volontari — Genzano di Roma",
+           font=font(False, 16), fill=(255, 255, 255, 217), anchor="la")
+
+    # Logo nella banda
+    if LOGO.exists():
+        logo = Image.open(LOGO).convert("RGBA").resize((72, 72))
+        img.paste(logo, (90, H - BAND_H + 15), logo)
+
+    # Export WebP, ricomprimi progressivamente se supera 200 KB
+    quality = 85
+    img.save(out, "WEBP", quality=quality, method=6)
+    while out.stat().st_size > 200 * 1024 and quality > 40:
+        quality -= 10
+        img.save(out, "WEBP", quality=quality, method=6)
+
+    print(f"[ok] {out.name}  ({out.stat().st_size // 1024} KB)")
     return out
 
 
