@@ -7,6 +7,7 @@ priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-09-temporali-intensi-comportamenti-corretti.webp"
 image_alt: "Cover dell'articolo: Temporali intensi: come riconoscerli e cosa fare"
+versione_facile: "2026-05-09-temporali-intensi-comportamenti-corretti-facile"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

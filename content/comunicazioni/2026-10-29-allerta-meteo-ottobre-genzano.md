@@ -11,6 +11,7 @@ scadenza: "2026-10-30"
 area: "Castelli Romani"
 allegati: []
 draft: false
+versione_facile: "2026-10-29-allerta-meteo-ottobre-genzano-facile"
 ---
 
 Il **Centro Funzionale Regionale del Lazio** ha emesso **allerta gialla** per **temporali** sul territorio dei **Castelli Romani**, con durata prevista dalle prossime ore fino a **giovedì 30 ottobre** sera. Il Gruppo Comunale Volontari di PC di Genzano segue l'evoluzione e coordina con il Comune.

@@ -10,6 +10,8 @@ image_alt: "Cover dell'articolo: Terremoto: cosa fare durante la scossa e nei mi
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa-facile"
+tts: true
 draft: false
 ---
 

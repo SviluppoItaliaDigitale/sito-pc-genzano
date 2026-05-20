@@ -10,6 +10,8 @@ image_alt: "Cover dell'articolo: Il kit di emergenza domestico: cosa mettere e d
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-04-21-kit-emergenza-domestico-guida-pratica-facile"
+tts: true
 draft: false
 ---
 
