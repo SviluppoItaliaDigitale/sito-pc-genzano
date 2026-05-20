@@ -1,0 +1,17 @@
+id,tipo,nome,indirizzo,lat,lon,verified
+AA1,AA,Palazzo Sforza Cesarini,Piazza Tommaso Frasconi,41.707567,12.692586,true
+AA2,AA,Via Piave,Parcheggio Via Piave,41.713063,12.685408,true
+AA3,AA,Via Toscana,Parcheggio incrocio Via Toscana / Via Lazio,41.695774,12.697296,true
+AA4,AA,Via Enrico Mattei,Parcheggio Via Enrico Mattei,41.6974,12.696344,true
+AA5,AA,Via Napoli,Parcheggio incrocio Via Napoli / Via Emilia Romagna,41.702022,12.685094,true
+AA6,AA,Palazzetto dello Sport,Parcheggio Via G. di Vittorio,41.701107,12.693919,true
+AA7,AA,Carlo Alberto dalla Chiesa,"Parcheggio Scuola C. A. dalla Chiesa, Via Appia Vecchia",41.710288,12.68485,true
+AA8,AA,Zona Industriale,Parcheggio Via del Lavoro,41.691866,12.69578,true
+AA9,AA,Colli di Cicerone,Parcheggio Via Colli di Cicerone,41.656804,12.734351,true
+AA10,AA,Landi,Piazzale Frazione Landi,41.649318,12.71569,true
+AS1,AS,Via del Lavoro,Via del Lavoro (Zona Industriale),41.691205,12.693232,true
+AS2,AS,Viale Mazzini,Viale G. Mazzini,41.710486,12.68952,true
+AR1,AR,Palazzetto dello Sport,"Area esterna Palazzetto dello Sport, Via G. di Vittorio",41.701505,12.693323,true
+AR2,AR,Campo Sportivo Via Sicilia,"Via Sicilia (nel testo del Piano è indicata come Via Piemonte; sul territorio l'accesso reale è in Via Sicilia, dove è installata la segnaletica)",41.701023,12.694646,true
+AR3,AR,Campo Sportivo Via Sardegna,Via Sardegna,41.700808,12.69702,true
+AR4,AR,Campo Sportivo Don Bosco (Salesiani),Viale Piave angolo Via Lega Latina,41.712941,12.68793,true

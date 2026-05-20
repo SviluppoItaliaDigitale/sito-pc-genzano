@@ -13,6 +13,7 @@ Per evitare che nuovi file finiscano in cartelle escluse dal deploy FTP (vedi re
 | Comunicati stampa firmati | `static/comunicati/AAAA/` | `/comunicati/AAAA/nome.pdf` |
 | Segnaletica aree di emergenza | `static/cartelli/` | `/cartelli/nome.png` |
 | Copertine e foto evento | `static/images/` | `/images/nome.webp` |
+| Dataset aperti CSV/JSON (da `scripts/genera-open-data.py`) | `static/open-data/` | `/open-data/nome.csv` · `/open-data/nome.json` |
 | Archivio storico immagini | `static/images/archivio-storico/` | `/images/archivio-storico/nome.ext` |
 | Pittogrammi ISO 7010 | `static/pittogrammi/iso7010/` | `/pittogrammi/iso7010/nome.svg` |
 | Pittogrammi ARASAAC | `static/pittogrammi/arasaac/` | `/pittogrammi/arasaac/nome.png` |

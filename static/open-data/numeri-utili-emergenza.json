@@ -1,0 +1,14 @@
+[
+  {
+    "numero": "112",
+    "nome": "Numero Unico Emergenza (NUE)",
+    "descrizione": "Unico numero per qualsiasi emergenza nel Lazio: sanitaria, ordine pubblico, incendi, soccorso tecnico",
+    "principale": true
+  },
+  {
+    "numero": "803 555",
+    "nome": "Sala Operativa Protezione Civile Lazio",
+    "descrizione": "Numero verde per segnalazioni non urgenti e informazioni su emergenze regionali",
+    "principale": true
+  }
+]
