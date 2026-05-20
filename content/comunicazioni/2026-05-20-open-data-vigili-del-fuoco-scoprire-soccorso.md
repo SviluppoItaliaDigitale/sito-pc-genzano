@@ -15,6 +15,8 @@ draft: false
 
 Il **Corpo Nazionale dei Vigili del Fuoco** ha un portale di **dati aperti**: [opendata.vigilfuoco.it](https://opendata.vigilfuoco.it/). Pubblica in formato libero le informazioni sugli **interventi e sulle attività di soccorso** del Corpo. Chiunque può scaricarne i dati, senza registrazione, e scoprire come lavorano i Vigili del Fuoco e quanto incidono sulla sicurezza del Paese.
 
+{{< foto src="/images/2026-05-20-vigili-del-fuoco-soccorso-portale-opendata.webp" alt="Due vigili del fuoco in tuta protettiva scura, con caschi e bande catarifrangenti gialle e argento, manovrano una manichetta antincendio con lancia rossa; sulla destra è visibile il getto d'acqua nebulizzato" caption="L'immagine di apertura del portale Open Data dei Vigili del Fuoco. Foto: Corpo Nazionale dei Vigili del Fuoco — opendata.vigilfuoco.it." >}}
+
 ## Cosa sono gli open data
 
 Gli **open data** (dati aperti) sono informazioni pubbliche rese disponibili in un formato che chiunque può scaricare, leggere e riutilizzare gratuitamente. Non servono permessi né registrazioni.
