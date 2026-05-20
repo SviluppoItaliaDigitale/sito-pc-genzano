@@ -131,6 +131,44 @@ def wrap_title(title: str, max_chars: int = 28) -> list:
     return lines[:4]
 
 
+def _wrap_words(title: str, max_chars: int) -> list:
+    words = title.split()
+    lines = []
+    cur = ""
+    for w in words:
+        if len(cur) + len(w) + 1 <= max_chars:
+            cur = (cur + " " + w).strip()
+        else:
+            if cur:
+                lines.append(cur)
+            cur = w
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def fit_title(title: str):
+    """Auto-fit: il titolo INTERO deve sempre starci, senza mai essere troncato.
+    Ritorna (corpo, interlinea, righe).
+    - Titoli che entrano in <=4 righe a corpo 50 restano IDENTICI a prima.
+    - Titoli piu' lunghi riducono progressivamente corpo e interlinea (e usano
+      piu' righe) finche' il blocco sta nello spazio verticale disponibile.
+    Cosi' la fine del titolo non viene mai scartata (era il vecchio bug del
+    cap a 4 righe)."""
+    BOX_H = 372  # spazio verticale per il blocco titolo (tra badge e banda)
+    base = _wrap_words(title, 24)
+    if len(base) <= 4:
+        return 50, 16, base
+    for size in (46, 42, 38, 34, 30, 28):
+        interline = round(size * 16 / 50)
+        max_chars = round(24 * 50 / size)  # font piu' piccolo => piu' caratteri/riga
+        lines = _wrap_words(title, max_chars)
+        if len(lines) * (size + interline) <= BOX_H:
+            return size, interline, lines
+    # estremo improbabile: corpo minimo, titolo comunque integro
+    return 28, 9, _wrap_words(title, round(24 * 50 / 28))
+
+
 def slug_from_filename(path: Path) -> str:
     return path.stem
 
@@ -185,12 +223,12 @@ def generate_cover(md_path: Path, force: bool = False) -> Path | None:
 
     # Titolo centrato (safe-zone composer Facebook mobile: incident 16/05/2026
     # "preview Giro d'Italia tagliata ai lati" quando il titolo era a sinistra).
-    # Wrap a 24 caratteri per stare nella safe zone centrale del 75%.
-    lines = wrap_title(title, 24)
-    line_h = 50 + 16
+    # Auto-fit: il titolo intero deve sempre starci, mai troncato in fondo.
+    title_size, interline, lines = fit_title(title)
+    line_h = title_size + interline
     cy = (H // 2) - 30 - (line_h * len(lines)) // 2 + line_h // 2
     for i, ln in enumerate(lines):
-        d.text((W / 2, cy + i * line_h), ln, font=font(True, 50),
+        d.text((W / 2, cy + i * line_h), ln, font=font(True, title_size),
                fill=white, anchor="mm")
 
     # Banda blu inferiore + linea chiara di stacco
