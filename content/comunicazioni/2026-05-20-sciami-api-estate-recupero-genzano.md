@@ -141,6 +141,12 @@ Fonti istituzionali:
 - [Legge 313/2004](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2004-12-24;313): Disciplina dell'apicoltura italiana.
 - [Vigili del Fuoco](https://www.vigilfuoco.it/): per recupero sciami chiamare il 112.
 
+Approfondimenti scientifici (Geopop):
+
+- [Perché le api sono così importanti per la vita sulla Terra e per l'ambiente](https://www.geopop.it/perche-le-api-sono-cosi-importanti-per-la-vita-sulla-terra-e-per-lambiente/): il valore ecologico delle api e dell'impollinazione.
+- [La società delle api: regina, operaie e fuchi](https://www.geopop.it/la-societa-delle-api-come-e-composta-e-come-e-organizzata-la-gerarchia-tra-regina-operaia-e-fuco/): come è organizzata una colonia, utile per capire cos'è uno sciame.
+- [Il linguaggio delle api: la danza per comunicare](https://www.geopop.it/danzare-per-comunicare-il-linguaggio-delle-api/): come le api esploratrici comunicano e scelgono la nuova casa durante la sciamatura.
+
 Le api non sono un nemico. Sono uno dei **servizi ecosistemici** più preziosi che esistano. Quando ne incontri uno sciame, hai davanti decine di migliaia di lavoratrici stagionali che chiedono solo di passare un'ora e poi andarsene. Lasciale fare, oppure chiamaci: in un modo o nell'altro, si trasferiscono in un posto migliore.
 
 Buona Giornata Mondiale delle Api a chi le custodisce, le studia e le rispetta.
