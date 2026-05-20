@@ -5,8 +5,8 @@ description: "Come il Gruppo di Protezione Civile aiuta in caso di allagamento, 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici-facile.webp"
+image_alt: "Cover dell'articolo: Allagamenti, alluvioni e alberi pericolanti: cosa facciamo"
 scadenza: ""
 area: "Territorio comunale di Genzano di Roma"
 allegati: []

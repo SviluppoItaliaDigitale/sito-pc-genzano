@@ -5,8 +5,8 @@ description: "La neve può arrivare. Ecco come prepararsi e cosa fare durante la
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-31-neve-castelli-romani-organizzazione-facile.webp"
+image_alt: "Cover dell'articolo: Neve ai Castelli Romani: cosa fare"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

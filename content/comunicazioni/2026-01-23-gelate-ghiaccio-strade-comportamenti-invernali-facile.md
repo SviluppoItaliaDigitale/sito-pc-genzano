@@ -5,8 +5,8 @@ description: "Nei giorni freddi il ghiaccio è pericoloso. Ecco come muoversi a 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-23-gelate-ghiaccio-strade-comportamenti-invernali-facile.webp"
+image_alt: "Cover dell'articolo: Ghiaccio sulle strade: cosa fare in inverno"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

@@ -5,8 +5,8 @@ description: "La Regione Lazio ha dato un defibrillatore al nostro Gruppo. Cos'Ã
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-03-16-defibrillatori-regione-lazio-protezione-civile-facile.webp"
+image_alt: "Cover dell'articolo: Il nostro Gruppo ha ricevuto un defibrillatore"
 scadenza: ""
 area: "Sede della Regione Lazio, Roma"
 allegati: []

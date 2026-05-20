@@ -5,8 +5,8 @@ description: "Cosa fare durante e dopo un terremoto. Regole semplici del Diparti
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa-facile.webp"
+image_alt: "Cover dell'articolo: Terremoto: cosa fare durante e dopo la scossa"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

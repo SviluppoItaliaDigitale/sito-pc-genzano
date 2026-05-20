@@ -5,8 +5,8 @@ description: "In primavera devi pulire il tuo terreno. Così riduci il rischio d
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera-facile.webp"
+image_alt: "Cover dell'articolo: Pulire il terreno previene gli incendi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

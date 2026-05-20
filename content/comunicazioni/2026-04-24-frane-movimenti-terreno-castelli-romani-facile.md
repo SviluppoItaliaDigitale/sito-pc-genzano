@@ -5,8 +5,8 @@ description: "Il terreno dei Castelli Romani può franare. Ecco i segnali e cosa
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-24-frane-movimenti-terreno-castelli-romani-facile.webp"
+image_alt: "Cover dell'articolo: Frane ai Castelli Romani: cosa sono e cosa fare"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

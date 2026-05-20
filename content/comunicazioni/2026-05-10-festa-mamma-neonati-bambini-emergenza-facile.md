@@ -5,8 +5,8 @@ description: "Cosa mettere nello zaino di emergenza se hai un bambino piccolo o 
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-10-festa-mamma-neonati-bambini-emergenza-facile.webp"
+image_alt: "Cover dell'articolo: Kit di emergenza per i bambini piccoli"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

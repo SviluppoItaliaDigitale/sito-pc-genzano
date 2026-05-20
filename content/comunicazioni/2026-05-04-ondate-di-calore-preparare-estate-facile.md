@@ -5,8 +5,8 @@ description: "Cosa sono le ondate di calore. Chi è a rischio. Cosa fare per sta
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-04-ondate-di-calore-preparare-estate-facile.webp"
+image_alt: "Cover dell'articolo: Le ondate di calore: come proteggersi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
