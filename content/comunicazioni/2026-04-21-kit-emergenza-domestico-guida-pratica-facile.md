@@ -5,8 +5,8 @@ description: "Come preparare lo zaino di emergenza per la tua famiglia. Lista se
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-21-kit-emergenza-domestico-guida-pratica-facile.webp"
+image_alt: "Cover dell'articolo: Lo zaino di emergenza: cosa mettere dentro"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

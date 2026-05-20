@@ -5,8 +5,8 @@ description: "Spiegazione semplice: come nasce una previsione meteo e cosa signi
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-20-previsioni-meteo-bollettini-come-funzionano-facile.webp"
+image_alt: "Cover dell'articolo: Le previsioni meteo e le allerte: come funzionano"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

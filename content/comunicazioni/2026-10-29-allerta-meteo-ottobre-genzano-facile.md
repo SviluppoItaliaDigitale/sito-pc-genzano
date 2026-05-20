@@ -5,8 +5,8 @@ description: "C'è allerta gialla per temporali. Scopri cosa fare per stare al s
 badge: "Allerta"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-10-29-allerta-meteo-ottobre-genzano-facile.webp"
+image_alt: "Cover dell'articolo: Allerta gialla per temporali a Genzano"
 scadenza: "2026-10-30"
 area: "Castelli Romani"
 allegati: []
