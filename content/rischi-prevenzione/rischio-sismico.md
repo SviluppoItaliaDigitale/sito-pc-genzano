@@ -39,6 +39,8 @@ Il Comune di Genzano di Roma è classificato in **zona sismica 2B** (media sismi
 
 > ℹ️ **Sismicità e vulcanismo dei Colli Albani**: il Vulcano Laziale è quiescente, non spento; la sismicità di bassa magnitudo che caratterizza il territorio è in parte di origine vulcano-tettonica. Per il contesto vulcanologico, le emissioni di CO₂ in spazi confinati e le indicazioni operative dedicate vedi la pagina [Rischio Vulcanico (Colli Albani)](/rischi-prevenzione/rischio-vulcanico/).
 
+> 🤟 **In Lingua dei Segni**: cosa significa "magnitudo"? Il [Glossario in LIS sul rischio sismico](/lis/#rischio-sismico) spiega in Lingua Italiana dei Segni i termini chiave dei terremoti — magnitudo, epicentro, classificazione sismica, fenomeni precursori, reti di monitoraggio.
+
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. Diffida di chi afferma di poter prevedere un terremoto. L'unico approccio efficace è **essere sempre preparati**.
 
