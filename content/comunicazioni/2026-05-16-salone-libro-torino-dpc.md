@@ -1,7 +1,7 @@
 ---
 title: "Salone del Libro 2026: la Protezione Civile a Torino con \"Infiniti racconti, una sola storia\""
-date: 2026-05-16T00:02:00+02:00
-description: "Dal 14 al 18 maggio 2026 il Dipartimento della Protezione Civile è al Salone Internazionale del Libro di Torino con lo stand H146-J145 (Padiglione 2): mostra, podcast e incontri sulla cultura della prevenzione."
+date: 2026-05-16T00:03:00+02:00
+description: "Dal 14 al 18 maggio 2026 il Dipartimento della Protezione Civile è al Salone del Libro di Torino: stand H146-J145, mostra, podcast e incontri sulla prevenzione."
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

@@ -185,8 +185,8 @@
             '<div class="col-lg-4 col-md-4 pb-2">' +
               '<h2 class="h4 text-white">Protezione Civile</h2>' +
               '<p class="text-white">Gruppo Comunale Volontari di Genzano di Roma</p>' +
-              '<p style="color:rgba(255,255,255,0.85);"><strong>Sede:</strong> Via Sicilia, 13-15 - 00045 Genzano Di Roma (RM)<br><strong>Telefono:</strong> <a href="tel:+39069362600" class="text-white fw-bold">+39 06 9362600</a><br><strong>Email:</strong> <a href="mailto:segreteria@protezionecivilegenzano.it" class="text-white fw-bold">segreteria@protezionecivilegenzano.it</a></p>' +
-              '<p class="small" style="color:rgba(255,255,255,0.75);">14&deg; C.O.I. Prov. di Roma &mdash; Registro Regionale P.C. n.184<br>Iscritta al RUNTS sez. &laquo;Altri Enti del Terzo Settore&raquo; con determina n. G14230 del 28/10/2024<br>Aderente al Coordinamento FEPIVOL</p>' +
+              '<p style="color:rgba(255,255,255,0.85);"><strong>Sede:</strong> Via Sicilia, 13-15 - 00045 Genzano di Roma (RM)<br><strong>Telefono:</strong> <a href="tel:+39069362600" class="text-white fw-bold">+39 06 9362600</a><br><strong>Email:</strong> <a href="mailto:segreteria@protezionecivilegenzano.it" class="text-white fw-bold">segreteria@protezionecivilegenzano.it</a></p>' +
+              '<p class="small" style="color:rgba(255,255,255,0.75);">14&deg; COI Prov. di Roma &mdash; Registro Regionale P.C. n.184<br>Iscritta al RUNTS sez. &laquo;Altri Enti del Terzo Settore&raquo; con determina n. G14230 del 28/10/2024<br>Aderente al Coordinamento FEPIVOL</p>' +
               '<div class="loghi-istituzionali d-flex align-items-center gap-3 flex-wrap mt-3" aria-label="Loghi istituzionali di appartenenza">' +
                 '<img src="' + SITE_URL + '/images/logo-snpc-volontariato.png" alt="Servizio Nazionale Protezione Civile — Volontariato" width="96" height="112" style="background:#fff; border-radius:6px; padding:3px;">' +
                 '<img src="' + SITE_URL + '/images/logo-pc-lazio.png" alt="Protezione Civile Regione Lazio" width="104" height="104" style="background:#fff; border-radius:50%; padding:3px;">' +

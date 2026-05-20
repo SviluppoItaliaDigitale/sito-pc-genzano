@@ -31,9 +31,9 @@
        e l'utente di ritorno non riscarica 211 KB di CSS ad ogni visita.
        Storia: fino al 16/05/2026 il cache-buster era `now.Unix`, che
        invalidava la cache ad ogni build (50+ deploy/settimana). */}}
-  {{- $vCustomCss := readFile "themes/flavour-pcgenzano/static/css/custom.css" | crypto.FNV32a -}}
-  {{- $vA11yCss := readFile "themes/flavour-pcgenzano/static/css/a11y-toolbar.css" | crypto.FNV32a -}}
-  {{- $vA11yJs := readFile "themes/flavour-pcgenzano/static/js/a11y-toolbar.js" | crypto.FNV32a -}}
+  {{- $vCustomCss := readFile "themes/flavour-pcgenzano/static/css/custom.css" | hash.FNV32a -}}
+  {{- $vA11yCss := readFile "themes/flavour-pcgenzano/static/css/a11y-toolbar.css" | hash.FNV32a -}}
+  {{- $vA11yJs := readFile "themes/flavour-pcgenzano/static/js/a11y-toolbar.js" | hash.FNV32a -}}
   <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}?v={{ $vCustomCss }}">
   <link rel="stylesheet" href="{{ "css/a11y-toolbar.css" | relURL }}?v={{ $vA11yCss }}">
   <link rel="canonical" href="{{ $canonicalURL }}">
