@@ -93,10 +93,10 @@ fonte:
     canale_url: "https://www.youtube.com/@DPCgov"
     licenza: "Video del Dipartimento di Protezione Civile — riuso secondo i termini istituzionali."
 
-# Elenco dei video (58 voci).
+# Elenco dei video (59 voci).
 video:
 
-  # ─── RISCHIO SISMICO — 10 video ─────────────────────────────────────
+  # ─── RISCHIO SISMICO — 11 video ─────────────────────────────────────
   inr-terremoto-cosa-sapere:
     titolo: "Io non rischio Terremoto — Cosa sapere e cosa fare fin da subito"
     famiglia: "rischio-sismico"
@@ -159,6 +159,13 @@ video:
     fonte: "abili-a-proteggere"
     youtube_url: "https://youtu.be/U1ogOp6cKAk"
     durata: "30 secondi"
+
+  aap-magnitudo:
+    titolo: "Glossario in LIS — Magnitudo"
+    famiglia: "rischio-sismico"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/CQss6KZmrbY"
+    durata: ""
 
   inr-attimo-rischio-terremoto:
     titolo: "L'attimo decisivo — Il rischio terremoto"
