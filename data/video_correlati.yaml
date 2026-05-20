@@ -5913,60 +5913,6 @@ pagine:
       score: 2.2
       titolo: 'Una caldissima estate vulcanica: l''eruzione dell''Etna di agosto 2025 (parte 3: 28 agosto 2025)'
       url: https://youtu.be/y4MmRZ3S-3k
-  comunicazioni/2026-05-20-sciami-api-estate-recupero-genzano:
-    title: 'Sciami d''api in estate: cosa fare, chi chiamare, perché non hanno bisogno della nostra paura'
-    url: /comunicazioni/2026-05-20-sciami-api-estate-recupero-genzano/
-    video:
-    - anchored:
-      - bisogno
-      canale: geopop
-      id: 0SSDzDoyU8s
-      is_lis: false
-      overlap:
-      - bisogno
-      score: 6.0
-      titolo: Di quanti reattori nucleari avrebbe bisogno l'Italia per sostituire il gas russo?
-      url: https://youtu.be/0SSDzDoyU8s
-    - anchored:
-      - nostra
-      canale: geopop
-      id: W-r3Vkn-naA
-      is_lis: false
-      overlap:
-      - nostra
-      score: 6.0
-      titolo: 'I numeri della popolazione italiana: dati, grafici e statistiche della nostra demografia'
-      url: https://youtu.be/W-r3Vkn-naA
-    - anchored:
-      - nostra
-      canale: geopop
-      id: ogsZv_kQVZ4
-      is_lis: false
-      overlap:
-      - nostra
-      score: 6.0
-      titolo: 'Chernobyl 35 anni dopo: come il disastro nucleare ha cambiato oggi la nostra concezione del nucleare'
-      url: https://youtu.be/ogsZv_kQVZ4
-    - anchored:
-      - sciami
-      canale: ingv-terremoti
-      id: 0GhmsBHH3XI
-      is_lis: false
-      overlap:
-      - sciami
-      score: 6.0
-      titolo: Dove registriamo gli sciami sismici? Where do we record earthquake swarms?
-      url: https://youtu.be/0GhmsBHH3XI
-    - anchored:
-      - sciami
-      canale: ingv-terremoti
-      id: RC_9S1DAcTA
-      is_lis: false
-      overlap:
-      - sciami
-      score: 6.0
-      titolo: Sciami sismici, un incontro internazionale
-      url: https://youtu.be/RC_9S1DAcTA
   comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza:
     title: '20 maggio 2012: il terremoto in Emilia e la memoria che diventa prevenzione'
     url: /comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/
