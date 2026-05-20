@@ -1,0 +1,146 @@
+[
+  {
+    "id": "AA1",
+    "tipo": "AA",
+    "nome": "Palazzo Sforza Cesarini",
+    "indirizzo": "Piazza Tommaso Frasconi",
+    "lat": 41.707567,
+    "lon": 12.692586,
+    "verified": true
+  },
+  {
+    "id": "AA2",
+    "tipo": "AA",
+    "nome": "Via Piave",
+    "indirizzo": "Parcheggio Via Piave",
+    "lat": 41.713063,
+    "lon": 12.685408,
+    "verified": true
+  },
+  {
+    "id": "AA3",
+    "tipo": "AA",
+    "nome": "Via Toscana",
+    "indirizzo": "Parcheggio incrocio Via Toscana / Via Lazio",
+    "lat": 41.695774,
+    "lon": 12.697296,
+    "verified": true
+  },
+  {
+    "id": "AA4",
+    "tipo": "AA",
+    "nome": "Via Enrico Mattei",
+    "indirizzo": "Parcheggio Via Enrico Mattei",
+    "lat": 41.6974,
+    "lon": 12.696344,
+    "verified": true
+  },
+  {
+    "id": "AA5",
+    "tipo": "AA",
+    "nome": "Via Napoli",
+    "indirizzo": "Parcheggio incrocio Via Napoli / Via Emilia Romagna",
+    "lat": 41.702022,
+    "lon": 12.685094,
+    "verified": true
+  },
+  {
+    "id": "AA6",
+    "tipo": "AA",
+    "nome": "Palazzetto dello Sport",
+    "indirizzo": "Parcheggio Via G. di Vittorio",
+    "lat": 41.701107,
+    "lon": 12.693919,
+    "verified": true
+  },
+  {
+    "id": "AA7",
+    "tipo": "AA",
+    "nome": "Carlo Alberto dalla Chiesa",
+    "indirizzo": "Parcheggio Scuola C. A. dalla Chiesa, Via Appia Vecchia",
+    "lat": 41.710288,
+    "lon": 12.68485,
+    "verified": true
+  },
+  {
+    "id": "AA8",
+    "tipo": "AA",
+    "nome": "Zona Industriale",
+    "indirizzo": "Parcheggio Via del Lavoro",
+    "lat": 41.691866,
+    "lon": 12.69578,
+    "verified": true
+  },
+  {
+    "id": "AA9",
+    "tipo": "AA",
+    "nome": "Colli di Cicerone",
+    "indirizzo": "Parcheggio Via Colli di Cicerone",
+    "lat": 41.656804,
+    "lon": 12.734351,
+    "verified": true
+  },
+  {
+    "id": "AA10",
+    "tipo": "AA",
+    "nome": "Landi",
+    "indirizzo": "Piazzale Frazione Landi",
+    "lat": 41.649318,
+    "lon": 12.71569,
+    "verified": true
+  },
+  {
+    "id": "AS1",
+    "tipo": "AS",
+    "nome": "Via del Lavoro",
+    "indirizzo": "Via del Lavoro (Zona Industriale)",
+    "lat": 41.691205,
+    "lon": 12.693232,
+    "verified": true
+  },
+  {
+    "id": "AS2",
+    "tipo": "AS",
+    "nome": "Viale Mazzini",
+    "indirizzo": "Viale G. Mazzini",
+    "lat": 41.710486,
+    "lon": 12.68952,
+    "verified": true
+  },
+  {
+    "id": "AR1",
+    "tipo": "AR",
+    "nome": "Palazzetto dello Sport",
+    "indirizzo": "Area esterna Palazzetto dello Sport, Via G. di Vittorio",
+    "lat": 41.701505,
+    "lon": 12.693323,
+    "verified": true
+  },
+  {
+    "id": "AR2",
+    "tipo": "AR",
+    "nome": "Campo Sportivo Via Sicilia",
+    "indirizzo": "Via Sicilia (nel testo del Piano è indicata come Via Piemonte; sul territorio l'accesso reale è in Via Sicilia, dove è installata la segnaletica)",
+    "lat": 41.701023,
+    "lon": 12.694646,
+    "verified": true
+  },
+  {
+    "id": "AR3",
+    "tipo": "AR",
+    "nome": "Campo Sportivo Via Sardegna",
+    "indirizzo": "Via Sardegna",
+    "lat": 41.700808,
+    "lon": 12.69702,
+    "verified": true
+  },
+  {
+    "id": "AR4",
+    "tipo": "AR",
+    "nome": "Campo Sportivo Don Bosco (Salesiani)",
+    "indirizzo": "Viale Piave angolo Via Lega Latina",
+    "lat": 41.712941,
+    "lon": 12.68793,
+    "verified": true
+  }
+]

@@ -4,16 +4,33 @@ description: "Dataset aperti delle attività del Gruppo Comunale Volontari di Pr
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-15"
+dataUltimaRevisione: "2026-05-20"
 ---
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** pubblica i dati delle proprie attività in **formato aperto** (CSV + JSON), riusabili da chiunque sotto **licenza Creative Commons BY 4.0** ai sensi del **D.Lgs. 36/2006** ("Codice di riutilizzo dell'informazione del settore pubblico") e della direttiva **(UE) 2019/1024** sui dati aperti.
 
-## Stato attuale
+## Dataset disponibili
 
-Questa pagina è la **piattaforma di pubblicazione** dei dataset, predisposta secondo lo schema sotto descritto. **I file CSV/JSON saranno pubblicati progressivamente** man mano che il Gruppo completerà la trasformazione del registro interno (cartaceo + foglio elettronico) in formato aperto strutturato.
+I seguenti dataset sono pubblicati **ora**, con dati reali e verificati, in formato **CSV** e **JSON**. Ogni file è scaricabile e riutilizzabile sotto licenza CC BY 4.0 (vedi sezione *Licenza*).
 
-## Schema dei dataset
+| Dataset | Contenuto | Record | Scarica |
+|---|---|---|---|
+| **Aree di emergenza** | Aree di attesa della popolazione e di ammassamento soccorritori del Piano comunale, con coordinate GPS verificate sul campo | 16 | [CSV](/open-data/aree-emergenza.csv) · [JSON](/open-data/aree-emergenza.json) |
+| **Numeri utili di emergenza** | Numeri di emergenza validi nel Lazio | 2 | [CSV](/open-data/numeri-utili-emergenza.csv) · [JSON](/open-data/numeri-utili-emergenza.json) |
+| **Codici colore allerta** | Significato e comportamenti dei livelli di allerta meteo della Regione Lazio | 4 | [CSV](/open-data/codici-colore-allerta.csv) · [JSON](/open-data/codici-colore-allerta.json) |
+| **Timeline storica del rischio** | Eventi geologici, sismici, idrogeologici, normativi dei Castelli Romani, ognuno con fonte istituzionale | 12 | [CSV](/open-data/eventi-storici-castelli-romani.csv) · [JSON](/open-data/eventi-storici-castelli-romani.json) |
+
+> Il dataset **Aree di emergenza** è il riferimento per altri Comuni, enti e applicazioni di terzi: contiene le coordinate GPS, verificate sul campo, dei punti del Piano comunale (aree di attesa della popolazione e aree di ammassamento dei soccorritori).
+
+I file sono rigenerati dallo script `scripts/genera-open-data.py` a partire dai dati strutturati del sito.
+
+### In preparazione
+
+Altri dataset **operativi** (interventi, ore di volontariato, esercitazioni, formazione, dotazioni) sono in pubblicazione progressiva, man mano che il Gruppo completa la trasformazione del registro interno in formato aperto. Lo schema dei campi è documentato qui sotto.
+
+I dataset su **defibrillatori (DAE)** e **idranti antincendio** saranno pubblicati **solo dopo** la ricezione dei dati ufficiali da ASL Roma 6 (Centrale 118) e dal Comando provinciale dei Vigili del Fuoco: il sito non pubblica posizioni non verificate.
+
+## Schema dei dataset operativi (in preparazione)
 
 ### 1. Interventi operativi
 
@@ -112,6 +129,10 @@ Eventuali microdati sensibili sono **aggregati** a livello mensile o di macro-ar
 
 | Dataset | Frequenza | Stato |
 |---|---|---|
+| `aree-emergenza.{csv,json}` | a ogni variazione del Piano comunale | **pubblicato** |
+| `numeri-utili-emergenza.{csv,json}` | a ogni variazione | **pubblicato** |
+| `codici-colore-allerta.{csv,json}` | a ogni variazione | **pubblicato** |
+| `eventi-storici-castelli-romani.{csv,json}` | a ogni nuovo evento documentato | **pubblicato** |
 | `interventi-AAAA.csv` | mensile | in predisposizione |
 | `ore-volontariato-AAAA.csv` | mensile | in predisposizione |
 | `esercitazioni-AAAA.csv` | trimestrale | in predisposizione |
