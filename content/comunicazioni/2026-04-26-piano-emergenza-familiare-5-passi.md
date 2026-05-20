@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-04-26-piano-emergenza-familiare-5-passi-facile"
 ---
 
 Un terremoto alle tre di notte. Un'alluvione quando i figli sono a scuola. Un blackout di un intero quartiere. In questi momenti, sapere **cosa fare** e **dove ritrovarsi** cambia tutto. Il **piano di emergenza familiare** è un documento semplice che ogni famiglia può scrivere in un'ora e aggiornare una volta all'anno.

@@ -11,6 +11,8 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-01-23-gelate-ghiaccio-strade-comportamenti-invernali-facile"
+tts: true
 ---
 
 Nei Castelli Romani, tra fine gennaio e inizio febbraio, le **gelate notturne** sono frequenti. Le temperature scendono sotto zero durante la notte e risalgono lentamente al mattino. In queste ore il **ghiaccio sulle strade** — anche poco visibile — è una delle prime cause di incidenti stradali e cadute.

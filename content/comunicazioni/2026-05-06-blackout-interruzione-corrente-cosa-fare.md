@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-06-blackout-interruzione-corrente-cosa-fare-facile"
 ---
 
 La corrente che salta per qualche minuto è un fastidio quotidiano. Un blackout che dura **ore o giorni** è una vera emergenza. Si blocca il riscaldamento o la climatizzazione, si fermano frigo e congelatori, cellulari si scaricano, ascensori restano bloccati, semafori si spengono. Negli ultimi anni, con eventi meteo più intensi e reti sempre più sollecitate, gli episodi di lunga durata sono diventati più frequenti anche in Italia.
