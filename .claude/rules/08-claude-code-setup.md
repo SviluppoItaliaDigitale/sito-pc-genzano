@@ -294,7 +294,7 @@ Estensione della whitelist con 25 ulteriori siti istituzionali testati e funzion
 
 | Sito | Dominio | Uso tipico |
 |---|---|---|
-| **Vigili del Fuoco** | `www.vigilfuoco.it` | VVF nazionale, statistiche interventi, comunicati |
+| **Vigili del Fuoco** | `www.vigilfuoco.it`, `opendata.vigilfuoco.it` | VVF nazionale, statistiche interventi, comunicati; portale Open Data (dataset aperti su interventi di soccorso) |
 | **ANPAS** | `www.anpas.org` | Pubbliche assistenze, partner DPC su "Io non rischio" |
 | **Carabinieri** | `www.carabinieri.it` | Arma dei Carabinieri (Carabinieri Forestali, ordine pubblico in emergenza) |
 
