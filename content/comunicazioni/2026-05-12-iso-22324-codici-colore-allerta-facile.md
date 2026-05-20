@@ -5,8 +5,8 @@ description: "Versione semplificata (italiano A2) dell'articolo sui codici color
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-12-iso-22324-codici-colore-allerta-facile.webp"
+image_alt: "Cover dell'articolo: Perché le allerte hanno colori? Versione facile da leggere"
 scadenza: ""
 area: "Lazio"
 allegati: []

@@ -5,8 +5,8 @@ description: "Il 112 è il numero gratuito per le emergenze in tutta Europa. Chi
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-02-11-giornata-europea-112-numero-unico-facile.webp"
+image_alt: "Cover dell'articolo: Il 112: il numero per le emergenze"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

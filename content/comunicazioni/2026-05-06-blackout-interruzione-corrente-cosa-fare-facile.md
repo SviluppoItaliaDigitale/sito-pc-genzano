@@ -5,8 +5,8 @@ description: "Cosa fare quando la corrente si interrompe. Consigli semplici prim
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-06-blackout-interruzione-corrente-cosa-fare-facile.webp"
+image_alt: "Cover dell'articolo: Blackout: cosa fare quando non c'è corrente"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

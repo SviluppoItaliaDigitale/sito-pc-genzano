@@ -5,8 +5,8 @@ description: "Versione semplice (A2): cosa fare durante un temporale, in casa, f
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-09-temporali-intensi-comportamenti-corretti-facile.webp"
+image_alt: "Cover dell'articolo: Temporale: cosa fare. Versione facile da leggere"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
