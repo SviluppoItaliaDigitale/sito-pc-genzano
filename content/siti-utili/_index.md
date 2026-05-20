@@ -7,7 +7,7 @@ aliases:
   - /sitiutili/
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-18"
+dataUltimaRevisione: "2026-05-20"
 ---
 
 Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecniche e risorse educative. I link sono organizzati per tema, così puoi trovare più facilmente la fonte utile.
@@ -55,6 +55,7 @@ Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecn
 ## Enti operativi e di ricerca
 
 - [Corpo Nazionale dei Vigili del Fuoco](https://www.vigilfuoco.it/) — soccorso tecnico urgente.
+- [Open Data dei Vigili del Fuoco](https://opendata.vigilfuoco.it/) — dati aperti del Corpo Nazionale dei Vigili del Fuoco su interventi e attività di soccorso.
 - [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/) — monitoraggio sismico e vulcanico.
 - [ISPRA — Istituto Superiore per la Protezione e la Ricerca Ambientale](https://www.isprambiente.gov.it/it) — ricerca e dati ambientali.
 - [CNR — Consiglio Nazionale delle Ricerche](https://www.cnr.it/) — ente pubblico di ricerca.

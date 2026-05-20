@@ -151,6 +151,10 @@ Per chi vuole consultare i dati senza scaricare i file:
 
 Se hai un'esigenza particolare (ricerca accademica, articolo giornalistico, comparazione tra Comuni, tesi universitaria), scrivici: <segreteria@protezionecivilegenzano.it>.
 
+## Dati aperti di altri enti
+
+Per i dati aperti su soccorso ed emergenze a livello nazionale, il riferimento istituzionale per il nostro settore è il portale **[Open Data dei Vigili del Fuoco](https://opendata.vigilfuoco.it/)**: pubblica statistiche e dataset aperti del Corpo Nazionale dei Vigili del Fuoco sugli interventi di soccorso. È una fonte utile per chi vuole inquadrare i dati locali del Gruppo nel contesto nazionale del sistema di emergenza.
+
 ## Vedi anche
 
 - [Trasparenza](/trasparenza/) — quadro istituzionale e documenti

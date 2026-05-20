@@ -61,3 +61,5 @@ Non chiamare direttamente il Gruppo Comunale per segnalare un incendio in corso:
 ## Fonte
 
 *Manuale addetti antincendio* — Corpo Nazionale dei Vigili del Fuoco (aggiornamento 2010-2019). Disponibile sul [portale vigilfuoco.it](https://www.vigilfuoco.it/).
+
+Per i dati statistici sugli interventi di soccorso e antincendio, vedi il portale **[Open Data dei Vigili del Fuoco](https://opendata.vigilfuoco.it/)** — dataset aperti del Corpo Nazionale dei Vigili del Fuoco.
