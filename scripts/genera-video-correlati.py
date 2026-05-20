@@ -95,6 +95,8 @@ SKIP_PAGE_PATTERNS = [
     r"^/?english/", r"^/?francais/", r"^/?deutsch/", r"^/?espanol/",
     r"^/?portugues/", r"^/?romana/", r"^/?esperanto/",  # traduzioni
     r"^/?formazione/?$",  # hub formazione (ne ha già molti link nei kit)
+    r"^/?storia/?$",      # hub timeline storia del territorio (narrativo,
+                          # nessun video locale; agganciava Stromboli a sproposito)
     # Articoli senza video pertinenti nei canali monitorati: il cross-match
     # produce solo falsi positivi (parole generiche o omonimie). Escludi per
     # non mostrare "Approfondimenti video" fuori tema (rule: niente sezione
@@ -102,6 +104,11 @@ SKIP_PAGE_PATTERNS = [
     #  - sciami d'api: "sciami" agganciava video INGV su SCIAMI SISMICI,
     #    "bisogno"/"nostra" agganciavano video su nucleare/demografia (20/05/2026).
     r"^/?comunicazioni/2026-05-20-sciami-api-estate-recupero-genzano/?$",
+    #  - balneazione laghi Nemi/Albano: l'articolo parla di sicurezza in
+    #    acqua; i laghi sono di ORIGINE vulcanica, quindi l'ancora "vulcanico"
+    #    pesca l'intero catalogo di video su eruzioni/gas (fuori tema). Nessun
+    #    video di balneazione nei canali → niente sezione (20/05/2026).
+    r"^/?comunicazioni/2026-08-12-balneazione-laghi-nemi-albano-sicurezza/?$",
 ]
 
 
@@ -364,6 +371,21 @@ DENY_VIDEO_IDS = {
     "WtnfQiTiDm0",  # "Trump all'ONU: ho fatto finire 7 guerre" (climatico, politica)
     "DGA46S82EMw",  # "Una giornata con i Masai in Kenya" (siccità, reportage)
     "srrLwK0ybVE",  # "Forio d'Ischia: Man kills his ex-wife's mother" (ischia, cronaca, EN)
+    # Audit 20/05/2026 — falsi positivi su parola topica ma contesto diverso:
+    "HQ_Q_hYO0Os",  # "Il cerino in mano del piromane: incendio in Irpinia" (arson, su articoli TERREMOTO Irpinia)
+    "MkOC31Yfhjs",  # "Cosa accadrebbe se la Terra colpita da tempesta solare" (tempesta SOLARE su Vaia, vento)
+    "uvuPi3HQgLU",  # "Dirotta un aereo e sparisce nella tempesta" (dirottamento)
+    "8MjAWLhRIWk",  # "L'aurora boreale durante la tempesta [geomagnetica]" (tempesta solare)
+    "ngOlPmFgpXE",  # "Ischia, Capri, Procida: mare in tempesta" (mareggiata, su Vaia/Ischia-terremoto)
+    "-Jcz-q5tih4",  # "Ponte sullo stretto di Messina: sarebbe un'assurdità" (politica, su Messina-terremoto)
+    "bwPQHnbeYpo",  # "Ponte sullo Stretto di Messina: il progetto" (infrastruttura)
+    "1CGJQMQiurQ",  # "Earthquake 4.6 in Naples" (titolo EN)
+    "49g9E2959gc",  # "Myanmar M7.7 Earthquake - A Geological Look" (titolo EN)
+    "ssk5ngl30us",  # "MappaMondi - Myanmar hit by war and earthquake" (titolo EN)
+    "v088X7C49fk",  # "La neve di primavera: il drone in Alta Badia" (scenico, non emergenza)
+    "RdomcSSu6PY",  # "Come lo sport elimina ogni disabilità" (sport, non emergenza)
+    "it9NrBPZB0Y",  # "Le protesi supertech" (tech, non emergenza)
+    "SPG1k8nnCeY",  # "La nuova Diga foranea di Genova" (frangiflutti, non alluvione/diga-disastro)
 }
 
 
@@ -375,6 +397,10 @@ TOPICAL_BROAD_STEMS = {
     "crisi", "disastro", "disastr", "disaster", "catastrof", "catastrophe",
     "ricostruzion", "ricostruzione", "ricostruir", "tragedia", "tragedi",
     "emergency", "evento", "eventi", "incidente", "incidenti",
+    # "crollo" generico agganciava crollo di ghiacciai/archi naturali ad
+    # articoli su terremoti (crollo edifici). Valido solo con co-aggancio
+    # specifico (es. "morandi", "ponte morandi").
+    "crollo", "crollat", "collapse",
 }
 
 

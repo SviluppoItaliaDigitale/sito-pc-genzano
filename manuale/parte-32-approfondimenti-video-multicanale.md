@@ -113,7 +113,7 @@ Per ogni pagina del sito:
    - **Score >= 2.0**.
 6. **Ordina** i video per score decrescente, prende i **top 5**.
 
-> **Principio editoriale (regola permanente, 20/05/2026): video pertinente o niente sezione.** Se nessun video del catalogo condivide con la pagina un'ancora PC-tematica specifica, la pagina **non ha** la sezione "Approfondimenti video". Vale per tutti gli articoli, passati e futuri: meglio nessun video che un video sbagliato. È il motivo per cui la copertura è scesa da ~494 a ~125 pagine il 20/05/2026 (le pagine non-topiche — auguri, bilanci, ricorrenze — correttamente non hanno video).
+> **Principio editoriale (regola permanente, 20/05/2026): video pertinente o niente sezione.** Se nessun video del catalogo condivide con la pagina un'ancora PC-tematica specifica, la pagina **non ha** la sezione "Approfondimenti video". Vale per tutti gli articoli, passati e futuri: meglio nessun video che un video sbagliato. È il motivo per cui la copertura è scesa da ~494 a ~123 pagine il 20/05/2026 (le pagine non-topiche — auguri, bilanci, ricorrenze — correttamente non hanno video).
 
 Risultato: la mappa `data/video_correlati.yaml` ha per ogni `key` (path della pagina) la lista dei top 5 video con score, overlap, anchor.
 
