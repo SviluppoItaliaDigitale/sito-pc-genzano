@@ -11,6 +11,7 @@ scadenza: ""
 area: "Territorio comunale di Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici-facile"
 ---
 
 **Pioggia battente per sei ore e il garage si riempie. Una tromba d'aria spezza un platano e un ramo resta sospeso sopra la strada. Il torrente rompe l'argine e trascina fango in paese.** Sono tre scenari che il Gruppo Comunale di Genzano affronta regolarmente — alcuni ogni autunno, altri solo dopo eventi estremi. Questa guida spiega che differenza c'è tra un allagamento e un'alluvione, quali attrezzature usiamo, e perché un volontario con una motosega non sale mai su una pianta senza indossare la giacca antitaglio.

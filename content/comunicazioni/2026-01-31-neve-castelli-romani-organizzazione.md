@@ -11,6 +11,8 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-01-31-neve-castelli-romani-organizzazione-facile"
+tts: true
 ---
 
 Nei **Castelli Romani** la neve non è la regola, ma nemmeno un'eccezione. Genzano è a circa 435 m s.l.m. Le correnti fredde da nord rendono possibili nevicate **tra gennaio e inizio marzo**. Quando arrivano — spesso inattese — possono causare **disagi seri**: strade bloccate, scuole chiuse, difficoltà per persone fragili e servizi essenziali.
