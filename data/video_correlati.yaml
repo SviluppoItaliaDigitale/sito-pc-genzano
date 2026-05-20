@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 125 / Video unici usati: 161 /
-# Link totali: 451 (max 5 per pagina,
+# Pagine coperte: 123 / Video unici usati: 136 /
+# Link totali: 419 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -212,16 +212,6 @@ pagine:
       score: 6.0
       titolo: Le 5 differenze tra neve e grandine
       url: https://youtu.be/JXmJa_Vo28o
-    - anchored:
-      - neve
-      canale: rai-news
-      id: v088X7C49fk
-      is_lis: false
-      overlap:
-      - neve
-      score: 6.0
-      titolo: 'La neve di primavera: il drone in volo in Alta Badia'
-      url: https://youtu.be/v088X7C49fk
     - anchored:
       - montagna
       canale: geopop
@@ -454,17 +444,6 @@ pagine:
       score: 6.2
       titolo: 'SHAKEMOVIE: propagazione onde sismiche del terremoto Mw 6.9 del 23/11/1980 in Irpinia e Basilicata'
       url: https://youtu.be/NfgA9KZ3IWo
-    - anchored:
-      - irpinia
-      canale: rai-news
-      id: HQ_Q_hYO0Os
-      is_lis: false
-      overlap:
-      - incendio
-      - irpinia
-      score: 6.2
-      titolo: 'Il cerino in mano del piromane: incendio in Irpinia, 58enne incastrato dalle telecamere'
-      url: https://youtu.be/HQ_Q_hYO0Os
   comunicazioni/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici:
     title: 'Allagamenti, alluvioni e alberi pericolanti: gli interventi tecnici del Gruppo Comunale'
     url: /comunicazioni/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici/
@@ -1053,17 +1032,6 @@ pagine:
       score: 2.2
       titolo: Terremoto Irpinia 1980 - GLI ASPETTI  IMPORTANTI CHE NON SENTO AI TG
       url: https://youtu.be/sKCtoD0pay8
-    - anchored:
-      - irpinia
-      canale: rai-news
-      id: HQ_Q_hYO0Os
-      is_lis: false
-      overlap:
-      - incendio
-      - irpinia
-      score: 2.2
-      titolo: 'Il cerino in mano del piromane: incendio in Irpinia, 58enne incastrato dalle telecamere'
-      url: https://youtu.be/HQ_Q_hYO0Os
   comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio:
     title: 'Rete Zamberletti: svolta la 499ª esercitazione radio nazionale'
     url: /comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/
@@ -2312,18 +2280,6 @@ pagine:
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
       - disabilità
-      canale: geopop
-      id: RdomcSSu6PY
-      is_lis: false
-      overlap:
-      - disabilità
-      - inclusività
-      - protesi
-      score: 8.0
-      titolo: 'Come lo sport elimina ogni disabilità: il racconto di Bebe Vio tra protesi e inclusività'
-      url: https://youtu.be/RdomcSSu6PY
-    - anchored:
-      - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
       is_lis: false
@@ -2335,17 +2291,6 @@ pagine:
       url: https://youtu.be/2oZHTrIAXi0
     - anchored:
       - disabilità
-      canale: wired-italia
-      id: it9NrBPZB0Y
-      is_lis: false
-      overlap:
-      - disabilità
-      - protesi
-      score: 7.0
-      titolo: Le protesi supertech che rivoluzionano il concetto di disabilità | Wired Italia
-      url: https://youtu.be/it9NrBPZB0Y
-    - anchored:
-      - disabilità
       canale: abili-a-proteggere
       id: 88NyIgS1PbE
       is_lis: false
@@ -2354,6 +2299,26 @@ pagine:
       score: 6.0
       titolo: '#NienteDiSpeciale: Intervista a Carmine Lizza su Anpas e disabilità'
       url: https://youtu.be/88NyIgS1PbE
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: b5W1-Cj7eu0
+      is_lis: false
+      overlap:
+      - disabilità
+      score: 6.0
+      titolo: Giornata internazionale delle persone con disabilità
+      url: https://youtu.be/b5W1-Cj7eu0
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: e_bwJY-3fh8
+      is_lis: false
+      overlap:
+      - disabilità
+      score: 6.0
+      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+      url: https://youtu.be/e_bwJY-3fh8
   comunicazioni/2026-07-28-val-pola-1987-frana-monitoraggio-continuo:
     title: 'Val Pola, 28 luglio 1987: la frana della Valtellina che insegnò all''Italia il monitoraggio continuo dei versanti'
     url: /comunicazioni/2026-07-28-val-pola-1987-frana-monitoraggio-continuo/
@@ -2538,66 +2503,6 @@ pagine:
       score: 2.0
       titolo: Le 5 differenze tra neve e grandine
       url: https://youtu.be/JXmJa_Vo28o
-  comunicazioni/2026-08-12-balneazione-laghi-nemi-albano-sicurezza:
-    title: 'Balneazione nei laghi di Nemi e Albano: le regole per l''estate'
-    url: /comunicazioni/2026-08-12-balneazione-laghi-nemi-albano-sicurezza/
-    video:
-    - anchored:
-      - laghi
-      - vulcanico
-      canale: ingv-vulcani
-      id: 0fTelCqyoAU
-      is_lis: false
-      overlap:
-      - laghi
-      - vulcanico
-      score: 8.0
-      titolo: Scoprire la vita aliena esplorando laghi vulcanici estremi sulla Terra
-      url: https://youtu.be/0fTelCqyoAU
-    - anchored:
-      - vulcanico
-      canale: ingv-vulcani
-      id: bX1TRrVkbfo
-      is_lis: false
-      overlap:
-      - vivere
-      - vulcanico
-      score: 3.0
-      titolo: Vivere con gas vulcanici  (VolFilm)
-      url: https://youtu.be/bX1TRrVkbfo
-    - anchored:
-      - vulcanico
-      canale: dpc-gov
-      id: ShU_V_7SUQA
-      is_lis: false
-      overlap:
-      - rischio
-      - vulcanico
-      score: 2.4
-      titolo: Il rischio vulcanico nei Campi Flegrei e la risposta di protezione civile – EXE Flegrei 2019
-      url: https://youtu.be/ShU_V_7SUQA
-    - anchored:
-      - vulcanico
-      canale: dpc-gov
-      id: _AYUUv69F3U
-      is_lis: false
-      overlap:
-      - rischio
-      - vulcanico
-      score: 2.4
-      titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
-      url: https://youtu.be/_AYUUv69F3U
-    - anchored:
-      - vulcanico
-      canale: geopop
-      id: KG8xHth3n_8
-      is_lis: false
-      overlap:
-      - rischio
-      - vulcanico
-      score: 2.4
-      titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
-      url: https://youtu.be/KG8xHth3n_8
   comunicazioni/2026-08-14-morandi-genova-2018-infrastrutture-manutenzione:
     title: 'Ponte Morandi, 14 agosto 2018: il crollo che ha riscritto la cultura della manutenzione delle infrastrutture in
       Italia'
@@ -2692,16 +2597,6 @@ pagine:
     url: /comunicazioni/2026-08-21-ischia-2017-terremoto-isolano/
     video:
     - anchored:
-      - ischia
-      canale: rai-news
-      id: ngOlPmFgpXE
-      is_lis: false
-      overlap:
-      - ischia
-      score: 6.0
-      titolo: 'Ischia, Capri, Procida: mare in tempesta'
-      url: https://youtu.be/ngOlPmFgpXE
-    - anchored:
       - magnitudo
       canale: ingv-terremoti
       id: 2ZVvY4ufdYM
@@ -2751,6 +2646,18 @@ pagine:
       score: 3.2
       titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
       url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      is_lis: false
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
   comunicazioni/2026-08-23-pizzo-cengalo-bondo-2017-permafrost-cambiamento-climatico:
     title: 'Pizzo Cengalo, 23 agosto 2017: la frana di Bondo che ha mostrato i nuovi rischi alpini del cambiamento climatico'
     url: /comunicazioni/2026-08-23-pizzo-cengalo-bondo-2017-permafrost-cambiamento-climatico/
@@ -3242,53 +3149,6 @@ pagine:
       score: 6.2
       titolo: Intervista a David Piccinini - Direttore Generale servizio protezione civile regione Marche
       url: https://youtu.be/jJpZO_erLUQ
-    - anchored:
-      - crollo
-      canale: ingv-vulcani
-      id: tKc732QM2po
-      is_lis: false
-      overlap:
-      - crollo
-      - dell
-      - droni
-      - riprese
-      score: 4.2
-      titolo: 'Stromboli: riprese da droni dopo il crollo parziale dell''hornito del 27 maggio 2024'
-      url: https://youtu.be/tKc732QM2po
-    - anchored:
-      - crollo
-      canale: rai-news
-      id: r7IaYjUj1kE
-      is_lis: false
-      overlap:
-      - crollo
-      - dell
-      - immagini
-      score: 3.2
-      titolo: Maltempo - Crollo dell'arco faraglioni Sant'Andrea a Melendugno, le immagini dal drone
-      url: https://youtu.be/r7IaYjUj1kE
-    - anchored:
-      - crollo
-      canale: geopop
-      id: mithqKA-ee0
-      is_lis: false
-      overlap:
-      - crollo
-      - ricostruzione
-      score: 3.0
-      titolo: Il Crollo del Ghiacciaio della MARMOLADA, la Ricostruzione VIDEO 3D
-      url: https://youtu.be/mithqKA-ee0
-    - anchored:
-      - crollo
-      canale: dpc-gov
-      id: 3nXk4GzmP_M
-      is_lis: false
-      overlap:
-      - crollo
-      - sistema
-      score: 2.2
-      titolo: Il racconto delle attività del sistema di protezione civile – Crollo Ponte Morandi
-      url: https://youtu.be/3nXk4GzmP_M
   comunicazioni/2026-10-07-dighe-sicurezza-grandi-opere:
     title: 'Dighe e grandi opere: la sicurezza del sistema italiano'
     url: /comunicazioni/2026-10-07-dighe-sicurezza-grandi-opere/
@@ -3320,16 +3180,6 @@ pagine:
       titolo: 'Codice rosso - Salvataggi in mare: Genova. Pericolo in fondo al mare'
       url: https://youtu.be/0D9l-vhRadU
     - anchored:
-      - genova
-      canale: geopop
-      id: SPG1k8nnCeY
-      is_lis: false
-      overlap:
-      - genova
-      score: 6.0
-      titolo: 'La nuova Diga foranea di Genova, la più profonda d''Europa: come sarà costruita e perché'
-      url: https://youtu.be/SPG1k8nnCeY
-    - anchored:
       - alluvione
       canale: io-non-rischio
       id: DbGSeVbDLCg
@@ -3358,16 +3208,6 @@ pagine:
       score: 13.0
       titolo: 'Il disastro del Vajont: l’analisi geologica e la ricostruzione della tragedia del 9 ottobre 1963'
       url: https://youtu.be/xUtCwhN8-pQ
-    - anchored:
-      - diga
-      canale: geopop
-      id: SPG1k8nnCeY
-      is_lis: false
-      overlap:
-      - diga
-      score: 2.0
-      titolo: 'La nuova Diga foranea di Genova, la più profonda d''Europa: come sarà costruita e perché'
-      url: https://youtu.be/SPG1k8nnCeY
   comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione:
     title: '9 ottobre 1963: il Vajont, 63 anni dopo, insegna ancora'
     url: /comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/
@@ -3750,47 +3590,6 @@ pagine:
       score: 14.6
       titolo: 14 milioni di alberi abbattuti e 3 miliardi di euro di danni, analizziamo la Tempesta Vaia del 2018
       url: https://youtu.be/cmEzpKqaTEU
-    - anchored:
-      - tempesta
-      canale: geopop
-      id: MkOC31Yfhjs
-      is_lis: false
-      overlap:
-      - tempesta
-      - terra
-      score: 7.0
-      titolo: Cosa accadrebbe se la Terra fosse colpita oggi dalla tempesta solare più violenta mai registrata
-      url: https://youtu.be/MkOC31Yfhjs
-    - anchored:
-      - tempesta
-      canale: geopop
-      id: uvuPi3HQgLU
-      is_lis: false
-      overlap:
-      - tempesta
-      score: 6.0
-      titolo: 'Dirotta un aereo e sparisce nella tempesta con 200 mila dollari: l''assurda storia di D.B. Cooper'
-      url: https://youtu.be/uvuPi3HQgLU
-    - anchored:
-      - tempesta
-      canale: rai-news
-      id: 8MjAWLhRIWk
-      is_lis: false
-      overlap:
-      - tempesta
-      score: 6.0
-      titolo: 'L’aurora boreale vista dallo spazio durante la tempesta solare: “Era come navigare dentro la luce”'
-      url: https://youtu.be/8MjAWLhRIWk
-    - anchored:
-      - tempesta
-      canale: rai-news
-      id: ngOlPmFgpXE
-      is_lis: false
-      overlap:
-      - tempesta
-      score: 6.0
-      titolo: 'Ischia, Capri, Procida: mare in tempesta'
-      url: https://youtu.be/ngOlPmFgpXE
   comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia:
     title: 'Norcia, 30 ottobre 2016: la scossa più forte d''Italia degli ultimi 30 anni'
     url: /comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia/
@@ -3893,42 +3692,10 @@ pagine:
       score: 3.0
       titolo: 'L''ULTIMA SCOSSA A COSENZA: Magnitudo 4.4 - SPIEGAZIONE DEL CONTESTO GEOLOGICO'
       url: https://youtu.be/fB9CFe5-yR8
-    - anchored:
-      - crollo
-      canale: rai-news
-      id: dsjISifPZBk
-      is_lis: false
-      overlap:
-      - crollo
-      - polizia
-      score: 2.6
-      titolo: Crollo del ghiacciaio, in Svizzera elitrasportate anche le auto della polizia rimaste bloccate
-      url: https://youtu.be/dsjISifPZBk
-    - anchored:
-      - crollo
-      canale: ingv-vulcani
-      id: NsWuW8WUIaI
-      is_lis: false
-      overlap:
-      - crollo
-      - dell
-      score: 2.2
-      titolo: Crollo dell'Hornito di Stromboli del 27 maggio 2024
-      url: https://youtu.be/NsWuW8WUIaI
   comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano:
     title: 'Genova, 4 novembre 2011: l''alluvione del Fereggiano e la lezione dei rii tombati'
     url: /comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano/
     video:
-    - anchored:
-      - genova
-      canale: geopop
-      id: SPG1k8nnCeY
-      is_lis: false
-      overlap:
-      - genova
-      score: 6.0
-      titolo: 'La nuova Diga foranea di Genova, la più profonda d''Europa: come sarà costruita e perché'
-      url: https://youtu.be/SPG1k8nnCeY
     - anchored:
       - genova
       canale: natgeo-italia
@@ -4061,16 +3828,6 @@ pagine:
       score: 6.6
       titolo: Terremoto Irpinia 1980 - GLI ASPETTI  IMPORTANTI CHE NON SENTO AI TG
       url: https://youtu.be/sKCtoD0pay8
-    - anchored:
-      - irpinia
-      canale: rai-news
-      id: HQ_Q_hYO0Os
-      is_lis: false
-      overlap:
-      - irpinia
-      score: 6.0
-      titolo: 'Il cerino in mano del piromane: incendio in Irpinia, 58enne incastrato dalle telecamere'
-      url: https://youtu.be/HQ_Q_hYO0Os
   comunicazioni/2026-12-02-neve-e-ghiaccio-preparazione:
     title: 'Neve e ghiaccio: prepararsi per l''inverno rigido'
     url: /comunicazioni/2026-12-02-neve-e-ghiaccio-preparazione/
@@ -4085,16 +3842,6 @@ pagine:
       score: 6.0
       titolo: Le 5 differenze tra neve e grandine
       url: https://youtu.be/JXmJa_Vo28o
-    - anchored:
-      - neve
-      canale: rai-news
-      id: v088X7C49fk
-      is_lis: false
-      overlap:
-      - neve
-      score: 6.0
-      titolo: 'La neve di primavera: il drone in volo in Alta Badia'
-      url: https://youtu.be/v088X7C49fk
   comunicazioni/2026-12-03-giornata-persone-disabilita:
     title: '3 dicembre: Giornata internazionale delle persone con disabilità'
     url: /comunicazioni/2026-12-03-giornata-persone-disabilita/
@@ -4253,28 +4000,6 @@ pagine:
       titolo: Identificata la faglia del Terremoto di Messina del 1908 - Vi spiego tutto
       url: https://youtu.be/4cJ9IdeTZ2A
     - anchored:
-      - messina
-      canale: geopop
-      id: -Jcz-q5tih4
-      is_lis: false
-      overlap:
-      - messina
-      - stretto
-      score: 7.0
-      titolo: 'Ponte sullo stretto di Messina: sarebbe un''assurdità dal punto di vista geologico ?'
-      url: https://youtu.be/-Jcz-q5tih4
-    - anchored:
-      - messina
-      canale: geopop
-      id: bwPQHnbeYpo
-      is_lis: false
-      overlap:
-      - messina
-      - stretto
-      score: 7.0
-      titolo: 'Ponte sullo Stretto di Messina: il progetto costruttivo ufficiale e le altre alternative'
-      url: https://youtu.be/bwPQHnbeYpo
-    - anchored:
       - magnitudo
       - scossa
       canale: geopop
@@ -4286,6 +4011,30 @@ pagine:
       score: 4.0
       titolo: 'L''ULTIMA SCOSSA A COSENZA: Magnitudo 4.4 - SPIEGAZIONE DEL CONTESTO GEOLOGICO'
       url: https://youtu.be/fB9CFe5-yR8
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      is_lis: false
+      overlap:
+      - finale
+      - scossa
+      - terremoto
+      score: 3.6
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - scossa
+      canale: geopop
+      id: ssHdkhrAvz0
+      is_lis: false
+      overlap:
+      - scossa
+      - successo
+      - terremoto
+      score: 3.6
+      titolo: Terremoti in Adriatico - 100 scosse in 3 giorni. Cosa è successo? La spiegazione geologica completa
+      url: https://youtu.be/ssHdkhrAvz0
   comunicazioni/2027-01-13-avezzano-1915-terremoto-marsica:
     title: 'Avezzano, 13 gennaio 1915: il terremoto della Marsica e la sua eredità'
     url: /comunicazioni/2027-01-13-avezzano-1915-terremoto-marsica/
@@ -4560,16 +4309,6 @@ pagine:
       score: 2.2
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
-    - anchored:
-      - neve
-      canale: rai-news
-      id: v088X7C49fk
-      is_lis: false
-      overlap:
-      - neve
-      score: 2.0
-      titolo: 'La neve di primavera: il drone in volo in Alta Badia'
-      url: https://youtu.be/v088X7C49fk
   formazione/easy-to-read-scuola:
     title: Easy-to-Read per le scuole
     url: /formazione/easy-to-read-scuola/
@@ -4907,17 +4646,6 @@ pagine:
     video:
     - anchored:
       - disabilità
-      canale: wired-italia
-      id: it9NrBPZB0Y
-      is_lis: false
-      overlap:
-      - concetto
-      - disabilità
-      score: 3.0
-      titolo: Le protesi supertech che rivoluzionano il concetto di disabilità | Wired Italia
-      url: https://youtu.be/it9NrBPZB0Y
-    - anchored:
-      - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
       is_lis: false
@@ -4956,6 +4684,16 @@ pagine:
       score: 2.0
       titolo: Giornata internazionale delle persone con disabilità
       url: https://youtu.be/b5W1-Cj7eu0
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: e_bwJY-3fh8
+      is_lis: false
+      overlap:
+      - disabilità
+      score: 2.0
+      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+      url: https://youtu.be/e_bwJY-3fh8
   rischi-prevenzione/kit-emergenza:
     title: 'Kit di emergenza: casa, evacuazione e auto'
     url: /rischi-prevenzione/kit-emergenza/
@@ -4989,28 +4727,6 @@ pagine:
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
       - disabilità
-      canale: geopop
-      id: RdomcSSu6PY
-      is_lis: false
-      overlap:
-      - disabilità
-      - protesi
-      score: 3.0
-      titolo: 'Come lo sport elimina ogni disabilità: il racconto di Bebe Vio tra protesi e inclusività'
-      url: https://youtu.be/RdomcSSu6PY
-    - anchored:
-      - disabilità
-      canale: wired-italia
-      id: it9NrBPZB0Y
-      is_lis: false
-      overlap:
-      - disabilità
-      - protesi
-      score: 3.0
-      titolo: Le protesi supertech che rivoluzionano il concetto di disabilità | Wired Italia
-      url: https://youtu.be/it9NrBPZB0Y
-    - anchored:
-      - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
       is_lis: false
@@ -5029,6 +4745,26 @@ pagine:
       score: 2.0
       titolo: '#NienteDiSpeciale: Intervista a Carmine Lizza su Anpas e disabilità'
       url: https://youtu.be/88NyIgS1PbE
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: b5W1-Cj7eu0
+      is_lis: false
+      overlap:
+      - disabilità
+      score: 2.0
+      titolo: Giornata internazionale delle persone con disabilità
+      url: https://youtu.be/b5W1-Cj7eu0
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: e_bwJY-3fh8
+      is_lis: false
+      overlap:
+      - disabilità
+      score: 2.0
+      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+      url: https://youtu.be/e_bwJY-3fh8
   rischi-prevenzione/rischi-in-parole-semplici:
     title: Rischi principali in parole semplici
     url: /rischi-prevenzione/rischi-in-parole-semplici/
@@ -5585,17 +5321,6 @@ pagine:
       url: https://youtu.be/0GhmsBHH3XI
     - anchored:
       - earthquake
-      canale: rai-news
-      id: 1CGJQMQiurQ
-      is_lis: false
-      overlap:
-      - earthquake
-      - ingv
-      score: 3.0
-      titolo: 'Earthquake 4.6 in Naples. INGV: ‘Crust uplift of 1.5 cm per month'''
-      url: https://youtu.be/1CGJQMQiurQ
-    - anchored:
-      - earthquake
       canale: ingv-terremoti
       id: KslHsZKGaqM
       is_lis: false
@@ -5605,26 +5330,6 @@ pagine:
       score: 2.2
       titolo: Terremoto a Roma l'11 maggio 2011? An earthquake in Rome on May 11, 2001?
       url: https://youtu.be/KslHsZKGaqM
-    - anchored:
-      - earthquake
-      canale: geopop
-      id: 49g9E2959gc
-      is_lis: false
-      overlap:
-      - earthquake
-      score: 2.0
-      titolo: Myanmar M7.7 Earthquake - A Geological Look
-      url: https://youtu.be/49g9E2959gc
-    - anchored:
-      - earthquake
-      canale: rai-news
-      id: ssk5ngl30us
-      is_lis: false
-      overlap:
-      - earthquake
-      score: 2.0
-      titolo: MappaMondi - Myanmar hit by war and earthquake
-      url: https://youtu.be/ssk5ngl30us
   standard-iso/iso-22329:
     title: ISO 22329 — Uso dei social media in emergenza
     url: /standard-iso/iso-22329/
@@ -5715,63 +5420,3 @@ pagine:
       score: 2.0
       titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
       url: https://youtu.be/e_bwJY-3fh8
-  storia:
-    title: Storia del rischio nei Castelli Romani — Genzano di Roma
-    url: /storia/
-    video:
-    - anchored:
-      - vulcanica
-      canale: geopop
-      id: _6QHp5XkI0Q
-      is_lis: false
-      overlap:
-      - formato
-      - vulcanica
-      - vulcano
-      score: 4.0
-      titolo: 'La storia vulcanica di Stromboli: come e quando si è formato il vulcano delle Eolie?'
-      url: https://youtu.be/_6QHp5XkI0Q
-    - anchored:
-      - vulcanica
-      canale: io-non-rischio
-      id: esAjpZQ2C9E
-      is_lis: false
-      overlap:
-      - terremoto
-      - vulcanica
-      score: 2.4
-      titolo: Conoscere la caldera - Cosa fare in caso di terremoto, gas vulcanici ed eruzione vulcanica
-      url: https://youtu.be/esAjpZQ2C9E
-    - anchored:
-      - vulcanica
-      canale: dpc-gov
-      id: 2LkIejoezIM
-      is_lis: false
-      overlap:
-      - sistema
-      - vulcanica
-      score: 2.2
-      titolo: 'Stromboli: l''attività vulcanica di luglio e agosto 2019 e l''impegno del sistema di protezione civile'
-      url: https://youtu.be/2LkIejoezIM
-    - anchored:
-      - vulcanica
-      canale: ingv-vulcani
-      id: BnEMEPdLPWQ
-      is_lis: false
-      overlap:
-      - dell
-      - vulcanica
-      score: 2.2
-      titolo: 'Una caldissima estate vulcanica: l''eruzione dell''Etna di agosto 2025 (parte 2: 21 agosto 2025)'
-      url: https://youtu.be/BnEMEPdLPWQ
-    - anchored:
-      - vulcanica
-      canale: ingv-vulcani
-      id: x8_d2mtpvVE
-      is_lis: false
-      overlap:
-      - dell
-      - vulcanica
-      score: 2.2
-      titolo: 'Una caldissima estate vulcanica: l''eruzione dell''Etna di agosto 2025 (parte 1: 20 agosto 2025)'
-      url: https://youtu.be/x8_d2mtpvVE
