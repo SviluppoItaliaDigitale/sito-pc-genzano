@@ -54,6 +54,22 @@ about across after again against among around because before behind below beside
 between beyond during except inside outside through under above against
 will would could should might must shall used find finding work works
 ourselves yourself himself herself itself themselves ones really since
+parole astratte/comuni/geografiche non-topiche: non devono MAI ancorare
+da sole un video correlato. Aggiunte 20/05/2026 dopo l'audit dei falsi
+positivi (es. "sciami d'api"->"sciami sismici", "Haiti 2010"->"curiosità
+sul Lazio", "piano emergenza condominio"->"reattori nucleari"): l'IDF è
+calcolato solo sul corpus del sito, quindi parole generiche ma rare
+negli articoli PC prendevano peso pieno e diventavano ancore forti.
+bisogno nostra nostro nostre nostri vostra vostro vostre vostri
+proprio propria propri proprie stesso stessa stessi stesse paura
+volta volte modo modi grande grandi piccolo piccola piccoli piccole
+bene meglio peggio forse magari davvero soprattutto oppure invece
+mentre quindi parte parti caso casi vero vera veri vere poco poca
+pochi poche tanto tanta tanti tante molto molta molti molte ecco
+contro storia storie settimana versione mondo morti morto feriti
+ferito citta città persone persona paese paesi milioni miliardi
+numero numeri record curiosita curiosità europa europea europeo
+europei europee qualcuno qualcosa niente nulla nessuno troppo
 """.split())
 
 # Pagine del sito da escludere dal cross-match (non avrebbe senso linkare
@@ -311,6 +327,84 @@ DIVULGATIVO_PC_KEYWORDS = [
 ]
 
 
+# Gate tematico sull'ANCORA: un match pagina↔video è valido solo se almeno
+# una parola-ancora (dal lato pagina) è realmente PC-tematica. È la difesa
+# strutturale contro gli agganci su parole generiche che, essendo rare nel
+# corpus del sito, prendevano peso IDF pieno e diventavano "ancore forti"
+# pur non c'entrando nulla (es. "presenta", "fatta", "europa", "storia",
+# "morti", "bisogno"). La whitelist delle stop-words da sola era whack-a-mole:
+# ogni rigenero faceva emergere un nuovo strato di parole generiche.
+# Gli stem topici a parola singola sono derivati da DIVULGATIVO_PC_KEYWORDS
+# (terremot, alluvion, vulcan, frana, soccors, evacuaz, aquila, fukushima…)
+# + un set curato di luoghi/sigle PC legittimi non presenti nel vocabolario.
+TOPICAL_ANCHOR_STEMS = {
+    kw.strip() for kw in DIVULGATIVO_PC_KEYWORDS
+    if " " not in kw.strip() and len(kw.strip()) >= 4
+    and re.fullmatch(r"[a-zàèéìòù]+", kw.strip())
+} | {
+    # luoghi/termini disastro legittimi assenti dal vocabolario divulgativo
+    "emilia", "marche", "umbria", "liguria", "genova", "nemi", "albano",
+    "castelli", "genzano", "montagna", "neve", "gelo", "fulmine",
+    "mareggiata", "mareggiate", "grandinata",
+}
+# Sigle/termini brevi (< 4 char) PC-tematici, accettati come match esatto.
+TOPICAL_ANCHOR_SHORT = {
+    "coc", "coi", "dpc", "vvf", "dae", "rcp", "cpr", "bls", "blsd", "nue",
+    "112", "118", "gis", "ets", "odv", "sar", "ptsd", "ucpm", "ercc", "dpi",
+}
+
+# Denylist di VIDEO specifici (per ID YouTube): controllo finale di ultimo
+# miglio per i falsi positivi che hanno una parola topica ma un contesto
+# NON di protezione civile (la parola è usata in senso non-PC). Nessun
+# algoritmo a keyword li distingue, quindi si escludono a mano. Persiste ai
+# rigeneri mensili (a differenza della rimozione manuale dal file YAML).
+# Aggiungere qui l'ID quando si trova un video fuori tema nella mappa.
+DENY_VIDEO_IDS = {
+    "A1QE73885gQ",  # "Una battaglia di palle di neve" (neve, ma è svago)
+    "WtnfQiTiDm0",  # "Trump all'ONU: ho fatto finire 7 guerre" (climatico, politica)
+    "DGA46S82EMw",  # "Una giornata con i Masai in Kenya" (siccità, reportage)
+    "srrLwK0ybVE",  # "Forio d'Ischia: Man kills his ex-wife's mother" (ischia, cronaca, EN)
+}
+
+
+# Termini PC ma TROPPO astratti per ancorare da soli: agganciano qualsiasi
+# cosa (es. "crisi" → 9/11 ↔ "crisi energetica"; "disastro" → canadair AIB ↔
+# "disastro delle Ande"; "ricostruzione" → Friuli 1976 ↔ "esplosione Beirut").
+# Valgono SOLO se nel match c'è anche un'ancora topica specifica.
+TOPICAL_BROAD_STEMS = {
+    "crisi", "disastro", "disastr", "disaster", "catastrof", "catastrophe",
+    "ricostruzion", "ricostruzione", "ricostruir", "tragedia", "tragedi",
+    "emergency", "evento", "eventi", "incidente", "incidenti",
+}
+
+
+def _anchor_is_broad(w: str) -> bool:
+    for s in TOPICAL_BROAD_STEMS:
+        if w == s or (len(s) >= 5 and w.startswith(s)):
+            return True
+    return False
+
+
+def _anchor_is_topical(w: str) -> bool:
+    """True se la parola-ancora è PC-tematica (rischio, soccorso, disastro,
+    luogo di un evento, sigla operativa). Stem ≥5 char → prefix match
+    (terremoto→terremot); stem 4 char e sigle brevi → solo match esatto
+    (evita falsi positivi tipo 'lavandino' che inizia per 'lava')."""
+    if w in TOPICAL_ANCHOR_SHORT:
+        return True
+    for s in TOPICAL_ANCHOR_STEMS:
+        if w == s:
+            return True
+        if len(s) >= 5 and w.startswith(s):
+            return True
+    return False
+
+
+def _anchor_is_topical_specific(w: str) -> bool:
+    """Ancora topica E specifica (non un termine PC troppo astratto)."""
+    return _anchor_is_topical(w) and not _anchor_is_broad(w)
+
+
 def _is_italian_title(title: str) -> bool:
     """Heuristic per filtrare i titoli in inglese (Geopop e altri
     canali divulgativi pubblicano spesso versione bilingue: i video
@@ -514,6 +608,9 @@ def main() -> int:
     skipped_divulgativo = 0
     skipped_lingua = 0
     for key, v in videos.items():
+        # Denylist video di ultimo miglio (falsi positivi a contesto non-PC)
+        if v["id"] in DENY_VIDEO_IDS:
+            continue
         # Vincolo lingua: il sito è in italiano, escludi i video con
         # titolo in inglese (Geopop ne ha ~14% bilingue, anche altri
         # canali divulgativi pubblicano in inglese per audience globale)
@@ -573,6 +670,23 @@ def main() -> int:
             anchored = [k for k in overlap
                         if k in title_desc_kw and weights.get(k, 1.0) >= 0.5]
             if not anchored:
+                continue
+            # Gate tematico (difesa strutturale): almeno una parola-ancora
+            # dev'essere PC-tematica (terremoto, alluvione, soccorso, dae,
+            # evacuazione, nome di un disastro…). Senza questo, parole
+            # generiche rare nel corpus del sito ("presenta", "fatta",
+            # "europa", "storia", "morti", "bisogno") prendevano peso IDF
+            # pieno e agganciavano video fuori tema. Vale per TUTTI i canali.
+            # Principio editoriale: video pertinente o niente sezione video.
+            # Il termine PC dev'essere tra le ancore di titolo/descrizione
+            # (non incidentale nel corpo): garantisce che il SOGGETTO della
+            # pagina, non un termine di passaggio, sia ciò che lega il video.
+            # Es.: un libro sul risparmio alimentare che cita "incendio" nel
+            # corpo NON deve agganciare un video sugli incendi boschivi.
+            # Inoltre l'ancora topica dev'essere SPECIFICA: i termini PC
+            # troppo astratti (crisi, disastro, ricostruzione, tragedia)
+            # non bastano da soli, servono con un co-aggancio specifico.
+            if not any(_anchor_is_topical_specific(k) for k in anchored):
                 continue
             # Vincolo extra per canali divulgativi non-tematici: visto che
             # hanno titoli molto eterogenei (alcuni passano la whitelist PC
