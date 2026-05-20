@@ -79,6 +79,13 @@ SKIP_PAGE_PATTERNS = [
     r"^/?english/", r"^/?francais/", r"^/?deutsch/", r"^/?espanol/",
     r"^/?portugues/", r"^/?romana/", r"^/?esperanto/",  # traduzioni
     r"^/?formazione/?$",  # hub formazione (ne ha già molti link nei kit)
+    # Articoli senza video pertinenti nei canali monitorati: il cross-match
+    # produce solo falsi positivi (parole generiche o omonimie). Escludi per
+    # non mostrare "Approfondimenti video" fuori tema (rule: niente sezione
+    # video se non ci sono video davvero pertinenti).
+    #  - sciami d'api: "sciami" agganciava video INGV su SCIAMI SISMICI,
+    #    "bisogno"/"nostra" agganciavano video su nucleare/demografia (20/05/2026).
+    r"^/?comunicazioni/2026-05-20-sciami-api-estate-recupero-genzano/?$",
 ]
 
 
