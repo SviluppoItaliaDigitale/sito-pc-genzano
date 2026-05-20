@@ -107,9 +107,13 @@ Per ogni pagina del sito:
 5. **Filtri qualità**:
    - **Anchor**: almeno una keyword in overlap deve essere nel titolo o description della pagina (non solo nel corpo).
    - **Anchor IDF >= 0.5**: l'anchor non deve essere una parola super-generica.
+   - **🔴 Gate tematico (difesa strutturale, 20/05/2026)**: almeno una parola-ancora dev'essere **PC-tematica e specifica**. Si verifica con `_anchor_is_topical_specific()`, che usa gli stem topici derivati da `DIVULGATIVO_PC_KEYWORDS` + `TOPICAL_ANCHOR_SHORT` (sigle: coc, dae, 112…) + luoghi-disastro (`emilia`, `genova`, `nemi`…). I termini PC **troppo astratti** (`TOPICAL_BROAD_STEMS`: crisi, disastro, ricostruzione, tragedia, emergency…) **non bastano da soli**: servono con un co-aggancio specifico. Questo impedisce gli agganci su parole generiche che, essendo rare nel corpus del sito, prendevano peso IDF pieno e diventavano "ancore forti" pur non c'entrando nulla (l'IDF è calcolato solo sul sito). La sola whitelist `STOPWORDS_IT` era whack-a-mole.
    - **Per canali divulgativi non-tematici**: vincolo extra `IDF >= 0.7` sull'anchor (parola tecnica, non comune).
+   - **Denylist video** (`DENY_VIDEO_IDS`): esclusione per ID YouTube dei falsi positivi di ultimo miglio (parola topica ma contesto non-PC: "palle di neve", "Masai Kenya"…).
    - **Score >= 2.0**.
 6. **Ordina** i video per score decrescente, prende i **top 5**.
+
+> **Principio editoriale (regola permanente, 20/05/2026): video pertinente o niente sezione.** Se nessun video del catalogo condivide con la pagina un'ancora PC-tematica specifica, la pagina **non ha** la sezione "Approfondimenti video". Vale per tutti gli articoli, passati e futuri: meglio nessun video che un video sbagliato. È il motivo per cui la copertura è scesa da ~494 a ~125 pagine il 20/05/2026 (le pagine non-topiche — auguri, bilanci, ricorrenze — correttamente non hanno video).
 
 Risultato: la mappa `data/video_correlati.yaml` ha per ogni `key` (path della pagina) la lista dei top 5 video con score, overlap, anchor.
 
@@ -203,34 +207,37 @@ Se la risposta è `ERROR ... 404` o `does not have videos tab`, l'handle non fun
 
 ## 32.8 Come escludere un falso positivo
 
-Se il cross-match propone un video chiaramente non pertinente su una pagina (es. video sull'aquila uccello su articolo Terremoto dell'Aquila), si può:
+🔴 **Regola: meglio nulla che un video sbagliato.** Se un match non è chiaramente pertinente, va tolto; se una pagina non ha video pertinenti, resta senza sezione. Niente "riempitivi".
 
-**Opzione A — rimuovere il singolo match** dal file:
+⚠️ **NON** usare `data/video_correlati.yaml` come unico punto di fix: è **rigenerato** ogni mese dal workflow, quindi una rimozione manuale dal file viene **persa**. I fix vanno nel **generatore** (`scripts/genera-video-correlati.py`), così persistono.
 
-```yaml
-# Edita data/video_correlati.yaml manualmente, rimuovi la voce errata.
-# Il prossimo workflow mensile rigenererà il file (il fix viene perso),
-# a meno che si arricchisca anche la blacklist del filtro.
-```
+**Opzione A — denylist del singolo video (preferita per il falso positivo "di ultimo miglio")**
 
-**Opzione B — arricchire la blacklist del filtro** (preferito per casi ricorrenti):
+Quando un video ha una parola topica ma un contesto non-PC (es. "Una battaglia di palle di neve" su `neve`, "Una giornata con i Masai" su `siccità`), nessun filtro a keyword lo distingue. Si esclude per ID YouTube:
 
 ```python
-# In scripts/genera-video-correlati.py aggiungi a STOPWORDS_IT le parole
-# che generano falsi positivi (es. "aquila" come uccello, "stretto" come
-# uno stretto di mare):
-STOPWORDS_IT = set("""... aquila stretto messina cucina cibo ...""".split())
+# In scripts/genera-video-correlati.py:
+DENY_VIDEO_IDS = {
+    "A1QE73885gQ",  # palle di neve (svago, non emergenza)
+    # ...aggiungi qui l'ID del video fuori tema.
+}
 ```
 
-**Opzione C — restringere la whitelist PC**:
+L'ID è nel campo `url: https://youtu.be/<ID>` della voce nel file YAML.
 
-```python
-# In DIVULGATIVO_PC_KEYWORDS rimuovi keyword troppo generiche
-# (es. "nuclear" senza contesto → falsi positivi su "tactical nuclear bombs").
-# Lascia solo "incidente nucleare", "centrale nucleare", "Chernobyl", "Fukushima".
-```
+**Opzione B — parola generica che ancora troppo: aggiungila a `STOPWORDS_IT`**
 
-Il fix automatico si propaga al prossimo workflow mensile.
+Solo per parole **davvero non-topiche** (astratte/comuni: "presenta", "fatta", "europa", "storia"). ⚠️ **Mai** mettere in stopword un termine PC o un luogo-disastro (es. `aquila`, `emilia`, `vajont`): serve come ancora topica legittima.
+
+**Opzione C — termine PC troppo astratto che aggancia tutto: spostalo in `TOPICAL_BROAD_STEMS`**
+
+Se un termine PC reale ma generico (es. `crisi`, `disastro`, `ricostruzione`) aggancia pagine non correlate, va in `TOPICAL_BROAD_STEMS`: resta valido solo con un co-aggancio specifico, mai da solo.
+
+**Opzione D — keyword di vocabolario troppo larga: restringila in `DIVULGATIVO_PC_KEYWORDS`**
+
+Per i canali divulgativi, sostituisci keyword generiche con forme contestualizzate (es. `"nuclear"` → `"incidente nucleare"`, `"chernobyl"`, `"fukushima"`).
+
+Dopo ogni fix: `python3 scripts/genera-video-correlati.py` → verifica il diff → commit. Il fix si propaga automaticamente ai rigeneri mensili successivi.
 
 ---
 
