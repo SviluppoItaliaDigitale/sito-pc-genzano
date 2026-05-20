@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Giornata per la consapevolezza sull'autismo: em
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-04-02-consapevolezza-autismo-emergenze-inclusive-facile"
 draft: false
 ---
 

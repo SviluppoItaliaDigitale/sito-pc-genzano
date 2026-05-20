@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-10-festa-mamma-neonati-bambini-emergenza-facile"
 ---
 
 La **Festa della Mamma** è una buona occasione per mettere ordine nelle cose pratiche di casa. Una di queste è il **piano di emergenza familiare**: per neonati e bambini piccoli servono attenzioni in più, perché hanno bisogni specifici, non sanno spiegare cosa sentono e dipendono dagli adulti.

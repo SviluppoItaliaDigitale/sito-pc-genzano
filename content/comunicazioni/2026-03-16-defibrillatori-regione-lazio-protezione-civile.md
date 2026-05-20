@@ -11,6 +11,7 @@ scadenza: ""
 area: "Sede della Regione Lazio, Roma"
 allegati: []
 draft: false
+versione_facile: "2026-03-16-defibrillatori-regione-lazio-protezione-civile-facile"
 ---
 
 Il 16 marzo 2026, presso la sede della Regione Lazio, sono stati consegnati 100 defibrillatori alle associazioni e ai gruppi comunali di Protezione Civile del territorio regionale. Hanno presieduto la cerimonia il Presidente **Francesco Rocca** e l'Assessore alla Protezione Civile **Pasquale Ciacciarelli**.
