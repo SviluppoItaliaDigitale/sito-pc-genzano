@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-04-23-prevenzione-incendi-pulizia-terreni-primavera-facile"
 ---
 
 La stagione degli incendi boschivi, nel Lazio, si concentra tra **giugno e settembre**. Ma la prevenzione non comincia a giugno: comincia adesso, in primavera, quando le sterpaglie sono ancora verdi e i terreni si possono pulire senza rischio. Ogni proprietario di un terreno che confina con boschi, strade o case ha una **responsabilità civile e penale** sulla sicurezza del proprio fondo.
