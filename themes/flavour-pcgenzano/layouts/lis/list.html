@@ -79,7 +79,11 @@
                aria-label="Apri su YouTube: {{ $v.titolo }} (si apre in nuova scheda)">
               <span class="lis-video-titolo">{{ $v.titolo }}</span>
               <span class="lis-video-meta">
-                {{- with $v.durata }}<span class="lis-video-durata">{{ . }}</span> · {{ end -}}
+                {{- /* Durata nascosta per uniformità: è valorizzata solo su ~metà
+                   dei video (le altre sono difficili da recuperare in modo
+                   affidabile da YouTube). I valori restano in data/lis.yaml: per
+                   riattivare la durata su TUTTI, completare i campi `durata` vuoti
+                   e ripristinare: {{ with $v.durata }}<span class="lis-video-durata">{{ . }}</span> · {{ end }} */ -}}
                 <span class="lis-video-fonte">{{ $fonte.nome }}</span>
                 <span class="lis-video-arrow" aria-hidden="true">↗</span>
               </span>
