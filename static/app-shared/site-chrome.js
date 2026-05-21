@@ -392,4 +392,14 @@
   } else {
     injectChrome();
   }
+
+  // Statistiche anonime senza cookie (GoatCounter), come sulle pagine Hugo.
+  // Le pagine statiche non passano da baseof.html: lo iniettiamo qui.
+  if (!document.querySelector('script[data-goatcounter]')) {
+    var gc = document.createElement('script');
+    gc.async = true;
+    gc.src = '//gc.zgo.at/count.js';
+    gc.setAttribute('data-goatcounter', 'https://apicuollo.goatcounter.com/count');
+    (document.body || document.documentElement).appendChild(gc);
+  }
 })();
