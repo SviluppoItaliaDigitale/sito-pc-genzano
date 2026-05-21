@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-08-13-casa-vacanze-affittate-sicurezza-facile"
 ---
 
 Il mercato degli **affitti brevi** — case vacanze, B&B, affitti fra privati — è cresciuto molto negli anni. Non tutte le strutture sono equiparabili agli alberghi in termini di dotazioni di sicurezza. Alcune verifiche rapide, al momento dell'arrivo, riducono i rischi durante il soggiorno.
