@@ -27,7 +27,7 @@ Un articolo **decisivo** per chi è volontario di protezione civile e svolge anc
 - le **modalità di rimborso** al datore di lavoro pubblico o privato
 - le tutele **assicurative** (INAIL e polizza di protezione civile) in caso di infortuni durante l'attività di volontariato
 
-Queste tutele si applicano sia alle **esercitazioni** autorizzate sia alle **emergenze reali**, nelle modalità definite dalle direttive del Capo Dipartimento e dal D.P.R. 194/2001. Per i nostri volontari sono garanzie importanti: partecipare alle attività del Gruppo non deve mai significare perdere la retribuzione o la copertura assicurativa.
+Queste tutele si applicano sia alle **esercitazioni** autorizzate sia alle **emergenze reali**, nelle modalità definite dagli articoli 39-40 del D.Lgs. 1/2018 (che hanno sostituito il D.P.R. 194/2001) e dalle direttive del Capo Dipartimento. Per i nostri volontari sono garanzie importanti: partecipare alle attività del Gruppo non deve mai significare perdere la retribuzione o la copertura assicurativa.
 
 ## Articolo 45 — Regime finanziario
 
