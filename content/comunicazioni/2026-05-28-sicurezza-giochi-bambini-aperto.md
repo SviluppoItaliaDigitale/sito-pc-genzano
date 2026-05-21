@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-28-sicurezza-giochi-bambini-aperto-facile"
 ---
 
 L'estate e la fine della scuola portano i bambini **all'aperto**: parchi, cortili, strade, piscine gonfiabili, biciclette, giochi in campagna. È una benedizione per la loro salute fisica e mentale. Ma è anche la stagione in cui **aumentano gli incidenti domestici e del tempo libero**: cadute, ferite, annegamenti, punture, colpi di calore.
