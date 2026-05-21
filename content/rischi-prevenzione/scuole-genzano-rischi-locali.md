@@ -8,11 +8,11 @@ toc: true
 
 La scuola è uno dei luoghi più importanti della prevenzione. Bambini, ragazzi, docenti, personale ATA e famiglie devono sapere prima cosa fare in caso di emergenza, senza improvvisare durante l'evento.
 
-Questa pagina raccoglie indicazioni pratiche per collegare il lavoro educativo delle scuole di Genzano di Roma ai principali rischi trattati dal sito e agli strumenti già disponibili per cittadini, famiglie e docenti.
+Questa pagina collega il lavoro educativo delle scuole di Genzano di Roma ai principali rischi del territorio. Trovi qui gli strumenti già disponibili per cittadini, famiglie e docenti.
 
 ## Come è stata costruita questa pagina
 
-Questa pagina non contiene dati inventati su singoli istituti scolastici, indirizzi, responsabili, punti di raccolta interni o procedure specifiche di una scuola.
+Questa pagina non riporta dati di singoli istituti scolastici, indirizzi, responsabili, punti di raccolta interni né procedure specifiche di una scuola.
 
 Le indicazioni sono una sintesi divulgativa basata su:
 
@@ -22,43 +22,43 @@ Le indicazioni sono una sintesi divulgativa basata su:
 - principi generali di sicurezza scolastica, prove di evacuazione, inclusione e comunicazione alle famiglie;
 - materiali didattici e schede stampabili pubblicati su questo sito.
 
-Per le procedure operative interne, ogni istituto scolastico deve fare riferimento al proprio piano di emergenza, alle indicazioni del Dirigente scolastico, del RSPP e degli addetti designati.
+Per le procedure interne, ogni istituto deve consultare il proprio piano di emergenza. Il riferimento sono il Dirigente scolastico, il RSPP e gli addetti designati.
 
 ## Perché una pagina dedicata alle scuole
 
-Le scuole sono luoghi con molte persone, orari definiti, procedure di evacuazione e bisogni diversi: bambini piccoli, studenti con disabilità, persone con difficoltà motorie, alunni con italiano L2, docenti e operatori scolastici.
+Le scuole ospitano molte persone con bisogni diversi: bambini piccoli, studenti con disabilità o difficoltà motorie, alunni con italiano L2, docenti e operatori scolastici. Hanno orari definiti e procedure di evacuazione proprie.
 
-Per questo la prevenzione scolastica deve essere semplice, ripetuta e comprensibile. Non basta sapere che esiste un piano: ogni classe deve conoscere i comportamenti essenziali e ogni famiglia deve sapere dove informarsi.
+Per questo la prevenzione scolastica deve essere semplice, ripetuta e comprensibile. Sapere che esiste un piano non basta. Ogni classe deve conoscere i comportamenti essenziali. Ogni famiglia deve sapere dove informarsi.
 
 ## Rischi da conoscere anche a scuola
 
 ### Terremoto
 
-Il rischio sismico deve essere conosciuto anche a scuola. È fondamentale provare periodicamente le procedure previste dall'istituto: proteggersi durante la scossa, attendere le indicazioni degli adulti, uscire solo quando previsto, raggiungere il punto di raccolta senza correre e senza tornare indietro.
+Il rischio sismico deve essere conosciuto anche a scuola. Prova periodicamente le procedure dell'istituto: proteggiti durante la scossa, attendi le indicazioni degli adulti, esci solo quando previsto. Raggiungi il punto di raccolta senza correre e senza tornare indietro.
 
 Consulta anche la pagina [Rischio sismico](/rischi-prevenzione/rischio-sismico/).
 
 ### Piogge intense, allagamenti e frane
 
-Durante piogge intense, allagamenti o criticità idrogeologiche, le scuole devono evitare spostamenti non necessari e seguire le comunicazioni ufficiali del Comune, della scuola e della Protezione Civile.
+Durante piogge intense, allagamenti o criticità idrogeologiche, evita gli spostamenti non necessari. Segui le comunicazioni ufficiali del Comune, della scuola e della Protezione Civile.
 
 Consulta anche la pagina [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
 
 ### Incendi boschivi e fumo
 
-In caso di incendi, fumo o odore di bruciato, è importante che studenti e personale scolastico seguano le indicazioni degli adulti e dei soccorritori, senza avvicinarsi alle aree interessate e senza diffondere informazioni non verificate.
+In caso di incendi, fumo o odore di bruciato, segui le indicazioni degli adulti e dei soccorritori. Non avvicinarti alle aree interessate. Non diffondere informazioni non verificate.
 
 Consulta anche la pagina [Rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/).
 
 ### Temporali, vento forte e caduta oggetti
 
-Temporali intensi, raffiche di vento e grandine possono rendere pericolosi cortili, alberature, cancelli, pensiline e spostamenti a piedi. In caso di allerta o peggioramento rapido del tempo, è meglio restare in luoghi chiusi e sicuri, lontano da finestre e oggetti instabili.
+Temporali intensi, raffiche di vento e grandine possono rendere pericolosi cortili, alberature, cancelli, pensiline e spostamenti a piedi. In caso di allerta o peggioramento rapido del tempo, resta in luoghi chiusi e sicuri. Stai lontano da finestre e oggetti instabili.
 
 Consulta anche la pagina [Allerte meteo](/allerte-meteo/).
 
 ### Caldo intenso
 
-Durante le ondate di calore, le attività all'aperto devono essere valutate con prudenza, soprattutto per bambini piccoli, studenti fragili e persone con patologie. Acqua, ombra, pause e ambienti ventilati sono misure semplici ma importanti.
+Durante le ondate di calore, valuta con prudenza le attività all'aperto. Fai attenzione a bambini piccoli, studenti fragili e persone con patologie. Acqua, ombra, pause e ambienti ventilati sono misure semplici ma importanti.
 
 ## Cosa deve sapere ogni classe
 
@@ -80,7 +80,7 @@ Famiglie e personale scolastico possono consultare la [Cartografia operativa](/c
 
 ## Kit consigliato per attività scolastiche
 
-Per laboratori, prove di evacuazione, incontri con le classi o attività di educazione civica è utile avere un piccolo kit didattico e operativo:
+Per laboratori, prove di evacuazione, incontri con le classi o attività di educazione civica, è utile un piccolo kit didattico e operativo:
 
 - elenco aggiornato degli studenti e dei contatti di emergenza;
 - torcia e power bank;
@@ -94,7 +94,7 @@ Per le famiglie è utile anche il [Kit di emergenza: casa, evacuazione e auto](/
 
 ## Materiali didattici pronti da stampare
 
-Il sito mette a disposizione schede A4 per aiutare bambini, famiglie e operatori a parlare di emergenza in modo semplice e non traumatico:
+Il sito ha schede A4 pronte per aiutare bambini, famiglie e operatori a parlare di emergenza in modo semplice:
 
 - [Kit Calamità per Bambini](/formazione/kit-calamita-bambini/);
 - [Kit Calamità — raccolta completa](/formazione/kit-calamita/);
@@ -116,7 +116,7 @@ Le istruzioni devono essere brevi, visive e ripetute. Nei casi più delicati è 
 
 Durante un'emergenza, la prima cosa da fare è seguire le comunicazioni ufficiali. Telefonate e messaggi ripetuti possono intasare le linee e creare confusione. Le famiglie devono sapere in anticipo quali canali usa la scuola e quali canali usa il Comune.
 
-Preparare prima un piano familiare aiuta anche i bambini: sapere chi li prende, dove andare e quali numeri chiamare riduce paura e improvvisazione.
+Preparare un piano familiare aiuta anche i bambini. Sapere chi li viene a prendere, dove andare e quali numeri chiamare riduce paura e improvvisazione.
 
 ## Fonti e riferimenti
 

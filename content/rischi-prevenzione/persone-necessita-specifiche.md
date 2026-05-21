@@ -6,9 +6,9 @@ weight: 9
 toc: true
 tts: true
 ---
-In ogni emergenza, le persone con necessità specifiche sono le più vulnerabili. Pianificare in anticipo le loro esigenze è fondamentale per garantirne la sicurezza. Questa pagina raccoglie indicazioni pratiche per chi si prende cura di persone fragili e per le persone stesse.
+In un'emergenza, le persone con necessità specifiche hanno bisogno di cure e attenzione particolari. Pianifica ora, prima che accada qualcosa: le misure preventive fanno la differenza.
 
-Il principio dell'attenzione prioritaria alle persone con esigenze specifiche durante l'evacuazione è recepito dalla norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*, che riconosce queste categorie come la priorità nella pianificazione dei soccorsi. La normativa italiana (Codice della Protezione Civile, **D.Lgs. 1/2018**) e le linee guida del **Dipartimento della Protezione Civile** ne definiscono l'applicazione operativa nei piani comunali di emergenza.
+La norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning* indica queste persone come priorità nell'evacuazione. In Italia, il **D.Lgs. 1/2018** (Codice della Protezione Civile) e le linee guida del **Dipartimento della Protezione Civile** stabiliscono come i piani comunali di emergenza devono tutelarle.
 
 ## <i class="bi bi-people-fill text-primary me-2" aria-hidden="true"></i>Chi sono le persone con necessità specifiche {#chi-sono}
 - **Anziani**, soprattutto se soli o con difficoltà motorie
@@ -27,7 +27,7 @@ Il principio dell'attenzione prioritaria alle persone con esigenze specifiche du
 - Prepara un [kit di emergenza](/rischi-prevenzione/kit-emergenza/) personalizzato con i medicinali, le protesi, gli ausili necessari
 - Tieni una lista scritta delle terapie in corso, dei medici curanti e dei numeri da chiamare
 - Individua i vicini o le persone di fiducia che possono intervenire rapidamente
-- Se la persona dipende da apparecchiature elettriche (ventilatori, dialisi), contatta la ASL per l'iscrizione alla lista delle utenze non disalimentabili
+- Se la persona usa apparecchiature elettriche salvavita (ventilatore, dialisi), contatta la ASL di riferimento per farti iscrivere nella lista delle utenze prioritarie in caso di blackout.
 
 ### Per le persone anziane che vivono sole
 
@@ -45,8 +45,8 @@ Il principio dell'attenzione prioritaria alle persone con esigenze specifiche du
 
 ### Per le persone con disabilità sensoriale
 
-- **Non udenti:** tieni un dispositivo con vibrazione o lampeggiante per le allerte; verifica di avere l'app IT-alert attiva
-- **Non vedenti:** memorizza i percorsi di uscita dalla casa e dal luogo di lavoro; tieni il bastone sempre vicino; segui le indicazioni tattili dove presenti
+- **Persone non udenti:** tieni un dispositivo con vibrazione o segnale luminoso per le allerte; verifica di avere l'app IT-alert (sistema nazionale di allarme pubblico) attiva sul telefono.
+- **Persone non vedenti:** memorizza i percorsi di uscita da casa e dal luogo di lavoro; tieni il bastone sempre a portata di mano; segui le indicazioni tattili dove presenti.
 
 ### Per i bambini
 
@@ -61,10 +61,10 @@ La comunità è la prima risorsa in emergenza. Se conosci persone fragili nel tu
 - Presentati e scambia i numeri di telefono
 - Offriti di verificare il loro stato in caso di allerta
 - Segnala eventuali situazioni critiche al Comune o ai servizi sociali
-- Durante le ondate di calore o il freddo intenso, una telefonata o una visita possono salvare una vita
+- Nelle ondate di calore o nel freddo intenso, chiama o passa a trovarli: può fare la differenza.
 
 ## <i class="bi bi-bookmark-star-fill text-primary me-2" aria-hidden="true"></i>Risorse utili {#risorse}
 - [Piano Familiare — crea il tuo](/piano-familiare/)
 - [Kit di Emergenza — cosa preparare](/rischi-prevenzione/kit-emergenza/)
-- [Piano di Emergenza Comunale](/piano-emergenza/)
-- [Contatti e numeri utili](/contatti/)
+- [Piano di Emergenza Comunale — cosa prevede per Genzano](/piano-emergenza/)
+- [Numeri utili e contatti del Comune](/contatti/)

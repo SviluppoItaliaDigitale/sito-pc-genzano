@@ -18,7 +18,7 @@ dataUltimaRevisione: "2026-05-16"
 
 ## Numeri di emergenza e soccorso
 
-Nel Lazio il numero da chiamare in caso di emergenza è il **112**. La centrale indirizza la chiamata verso il servizio competente in base alla situazione: soccorso sanitario, Vigili del Fuoco, Forze dell'Ordine o altro servizio di emergenza.
+Nel Lazio il numero da chiamare in caso di emergenza è il **112**. La centrale smista la chiamata al servizio competente: soccorso sanitario, Vigili del Fuoco, Forze dell'Ordine o altro ente di soccorso.
 
 <div class="row g-3 my-3">
 <div class="col-md-4">
@@ -84,14 +84,13 @@ Per informazioni sanitarie ordinarie, prenotazioni, certificazioni e ufficio rel
 
 ## Prima di chiamare
 
-Quando contatti un numero di emergenza, prepara queste informazioni:
+Prima di chiamare tieni pronte queste informazioni:
 
 1. **dove ti trovi**, con indirizzo o riferimenti chiari;
 2. **cosa è successo**, in modo semplice e preciso;
 3. **se ci sono feriti** o persone in pericolo;
-4. **se ci sono rischi aggiuntivi**, come fumo, gas, cavi elettrici, acqua alta o ostacoli sulla strada.
-
-Parla con calma e non chiudere la chiamata finché l'operatore non te lo dice.
+4. **se ci sono rischi aggiuntivi**, come fumo, gas, cavi elettrici, acqua alta o ostacoli sulla strada;
+5. **parla con calma** e non chiudere la chiamata finché l'operatore non te lo dice.
 
 ## In caso di emergenza
 
