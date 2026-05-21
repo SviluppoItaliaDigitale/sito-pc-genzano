@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-10-27-manutenzione-caldaia-controllo-annuale-facile"
 ---
 
 Con l'avvicinarsi dell'inverno e l'accensione degli impianti termici, ricordiamo che la **manutenzione** della **caldaia** e del **circuito di riscaldamento** non è una scelta. È un **obbligo normativo** e, soprattutto, una questione di **sicurezza**.
