@@ -19,10 +19,10 @@ Questa pagina raccoglie i principali riferimenti normativi utili per collaborazi
 
 | Norma | Cosa stabilisce | Dove incide |
 |---|---|---|
+| D.Lgs. 2 gennaio 2018, n. 1 | Codice della protezione civile. Definisce ruoli, attività e principi del Servizio nazionale. | Quadro generale |
 | L. 20 agosto 2019, n. 92 | Introduce l'educazione civica. L'art. 3, lett. h, richiama la formazione di base in materia di protezione civile. | Tutti gli ordini di scuola |
 | D.M. 7 settembre 2024, n. 183 | Definisce le Linee guida nazionali per l'educazione civica dall'a.s. 2024/2025. | Tutti gli ordini di scuola |
-| L. 17 febbraio 2025, n. 21 | Introduce conoscenze di base sulla sicurezza nei luoghi di lavoro nell'educazione civica. | Secondaria II grado e PCTO |
-| D.Lgs. 2 gennaio 2018, n. 1 | Codice della protezione civile. Definisce ruoli, attività e principi del Servizio nazionale. | Quadro generale |
+| L. 17 febbraio 2025, n. 21 | Aggiunge l'art. 3, lett. h-ter, alla L. 92/2019: conoscenze di base sulla sicurezza nei luoghi di lavoro nell'educazione civica. | Tutti gli ordini, con particolare rilevanza per la secondaria di II grado e l'alternanza scuola-lavoro |
 
 Per esempi didattici consulta [Educazione civica e protezione civile](/formazione/educazione-civica/).
 
