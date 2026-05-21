@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-12-manovre-antisoffocamento-pediatrico-facile"
 ---
 
 **Questo articolo non sostituisce un corso di primo soccorso pediatrico.** Le manovre antisoffocamento richiedono pratica guidata su manichino: leggere o guardare un video non basta. Se un bambino smette di respirare, chiama subito il **112**: l'operatore ti guida per telefono fino all'arrivo dei soccorsi.

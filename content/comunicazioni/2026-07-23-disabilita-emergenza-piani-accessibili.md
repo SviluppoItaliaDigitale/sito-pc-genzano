@@ -10,6 +10,7 @@ image_alt: "Persona in carrozzina durante un'esercitazione di evacuazione con su
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-07-23-disabilita-emergenza-piani-accessibili-facile"
 draft: false
 ---
 

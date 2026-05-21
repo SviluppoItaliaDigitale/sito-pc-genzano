@@ -10,6 +10,7 @@ image_alt: "Sala operativa comunale con Sindaco e tecnici durante il coordinamen
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-07-24-comune-protezione-civile-ruolo-sindaco-facile"
 draft: false
 ---
 

@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Rischio chimico e industriale: cosa deve sapere
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-05-24-rischio-chimico-industriale-cittadini-facile"
 draft: false
 ---
 

@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-06-04-tutela-minori-emergenze-bambini-vittime-facile"
 ---
 
 Il **4 giugno** è la [Giornata internazionale dei bambini vittime innocenti di aggressione](https://www.un.org/en/observances/children-victims-day) istituita dalle **Nazioni Unite** nel 1982. La ricorrenza nasce per sensibilizzare sulle sofferenze dei bambini coinvolti in conflitti e situazioni di violenza. La cornice è molto ampia, ma tocca anche un tema di Protezione Civile: la **tutela specifica dei minori negli scenari di emergenza**.

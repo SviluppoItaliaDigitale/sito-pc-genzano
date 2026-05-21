@@ -11,6 +11,7 @@ scadenza: ""
 area: "Comune di Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere-facile"
 ---
 
 **Il Piano di Emergenza Familiare digitale del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma ha ottenuto una citazione importante.** Il portale [Abili a proteggere](https://www.abiliaproteggere.net/2026/04/13/genzano-di-roma-piano-di-emergenza-familiare-digitale-e-inclusivo/) è realizzato in collaborazione con il Dipartimento della Protezione Civile della Presidenza del Consiglio dei Ministri. Ha dedicato un articolo al nostro strumento, descrivendone le caratteristiche e l'approccio inclusivo.

@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Where Are U: l'app del 112 che ti localizza in 
 scadenza: ""
 area: "Lazio"
 allegati: []
+versione_facile: "2026-04-27-app-where-are-u-112-localizzazione-emergenza-facile"
 draft: false
 ---
 
