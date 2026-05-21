@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-13-incendi-domestici-cucina-elettrodomestici-facile"
 ---
 
 Ogni anno i [Vigili del Fuoco](https://www.vigilfuoco.it/) intervengono per migliaia di incendi domestici in Italia. La cucina e gli impianti elettrici sono le due cause principali. Con poche attenzioni, quasi tutti si possono evitare.

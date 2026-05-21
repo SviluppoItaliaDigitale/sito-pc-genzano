@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa-facile"
 ---
 
 Con l'intensificarsi di **piogge concentrate in poche ore**, anche i centri abitati più lontani da fiumi possono sperimentare allagamenti. Tombini saturi, canali di scolo ostruiti, strade trasformate in torrenti sono scenari sempre più frequenti in tutta Italia, Castelli Romani inclusi. Conoscere i comportamenti corretti può ridurre molto i danni e soprattutto i rischi per le persone.

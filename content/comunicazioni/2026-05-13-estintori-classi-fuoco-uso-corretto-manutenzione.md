@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione-facile"
 ---
 
 Ogni estintore è progettato per un tipo specifico di fuoco. Usarlo male è **inefficace o pericoloso**. Usarlo bene, al momento giusto, può fermare un principio di incendio prima che diventi un'emergenza.
