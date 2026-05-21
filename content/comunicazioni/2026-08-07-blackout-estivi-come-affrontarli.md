@@ -11,6 +11,8 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-08-07-blackout-estivi-come-affrontarli-facile"
+tts: true
 ---
 
 Nei mesi estivi, soprattutto nelle ore pomeridiane, la rete elettrica locale può cedere. I **blackout** in genere durano pochi minuti, ma nei casi gravi possono prolungarsi per ore. I Castelli Romani, per densità di popolazione e picchi di consumo dovuti al turismo, sono zona sensibile.

@@ -11,6 +11,8 @@ scadenza: ""
 area: "Lazio"
 allegati: []
 draft: false
+tts: true
+versione_facile: "2026-08-18-siccita-lazio-risorsa-idrica-facile"
 ---
 
 L'estate 2026 conferma una tendenza ormai strutturale per il Lazio: **ridotta disponibilità idrica**, **siccità prolungata**, **pressione sul sistema acquedottistico**. Se da un lato la gestione della risorsa è competenza di gestori e autorità, dall'altro ogni famiglia può fare molto con comportamenti semplici.
