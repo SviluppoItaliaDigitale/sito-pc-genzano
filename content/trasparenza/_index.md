@@ -4,10 +4,10 @@ description: "Natura giuridica del Gruppo Comunale Volontari di Protezione Civil
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-12"
+dataUltimaRevisione: "2026-05-21"
 ---
 
-Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è un'**articolazione operativa del Comune** costituita ai sensi della **Legge Regionale Lazio 26 giugno 2017 n. 9** (artt. 31 e seguenti) e del **D.Lgs. 2 gennaio 2018 n. 1** (Codice della Protezione Civile).
+Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è un'**articolazione operativa del Comune** costituita ai sensi della **Legge Regionale Lazio 26 febbraio 2014, n. 2** (art. 10, che autorizza i Comuni a istituire gruppi comunali di volontariato di protezione civile) e del **D.Lgs. 2 gennaio 2018 n. 1** (Codice della Protezione Civile).
 
 Dal **28 ottobre 2024** il Gruppo è anche **iscritto al RUNTS** (Registro Unico Nazionale del Terzo Settore) — sezione *"Altri Enti del Terzo Settore"* — con **determina n. G14230**.
 
@@ -21,7 +21,7 @@ Dal **28 ottobre 2024** il Gruppo è anche **iscritto al RUNTS** (Registro Unico
 | Iscrizione RUNTS | Sezione *"Altri Enti del Terzo Settore"*, determina n. G14230 del 28/10/2024 |
 | Coordinamento operativo | 14° COI — Centro Operativo Intercomunale della Provincia di Roma |
 | Coordinamento regionale | Aderente al coordinamento **FEPIVOL** |
-| Quadro normativo | D.Lgs. 117/2017 (Codice del Terzo Settore) + D.Lgs. 1/2018 (Codice della Protezione Civile) + L.R. Lazio 9/2017 + Direttiva PCM 30/04/2021 |
+| Quadro normativo | D.Lgs. 117/2017 (Codice del Terzo Settore) + D.Lgs. 1/2018 (Codice della Protezione Civile) + L.R. Lazio 2/2014 + Direttiva PCM 30/04/2021 |
 
 ## Statuto, atto costitutivo e iscrizione
 
