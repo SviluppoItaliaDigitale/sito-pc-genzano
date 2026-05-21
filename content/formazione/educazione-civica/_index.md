@@ -19,10 +19,10 @@ Questa pagina aiuta dirigenti, docenti coordinatori di educazione civica e inseg
 
 L'educazione civica nelle scuole italiane è regolata principalmente da:
 
+- **D.Lgs. 2 gennaio 2018, n. 1** — Codice della protezione civile, cornice generale del Servizio nazionale.
 - **Legge 20 agosto 2019, n. 92** — introduce l'insegnamento scolastico dell'educazione civica. L'articolo 3, lettera h, richiama la formazione di base in materia di protezione civile.
 - **D.M. 7 settembre 2024, n. 183** — definisce le Linee guida nazionali per l'insegnamento dell'educazione civica, applicabili dall'anno scolastico 2024/2025.
 - **Legge 17 febbraio 2025, n. 21** — introduce conoscenze di base sulla sicurezza nei luoghi di lavoro, con particolare rilievo per la secondaria di secondo grado e per i PCTO.
-- **D.Lgs. 2 gennaio 2018, n. 1** — Codice della protezione civile, cornice generale del Servizio nazionale.
 
 L'educazione civica prevede almeno **33 ore annuali**, con valutazione autonoma e contributo di più docenti del consiglio di classe.
 
