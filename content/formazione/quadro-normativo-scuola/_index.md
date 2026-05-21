@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-05-21"
 ---
 
 Questa pagina raccoglie i principali riferimenti normativi utili per collaborazioni tra scuole e Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. È pensata per Dirigenti scolastici, DSGA, DPO, RSPP, ASPP e docenti referenti.
@@ -75,7 +75,7 @@ Materiali collegati:
 |---|---|---|
 | Regolamento UE 2016/679, GDPR | Protezione dei dati personali, basi giuridiche, diritti, informative e trattamento dei dati dei minori. | Tutte le attività |
 | D.Lgs. 196/2003, modificato dal D.Lgs. 101/2018 | Codice privacy italiano. | Trattamento dati personali |
-| D.Lgs. 30 marzo 2001, n. 39 | Regole su atti pubblici e firma autografa sostituita a mezzo stampa. | Documentazione amministrativa |
+| D.P.R. 28 dicembre 2000, n. 445 (TUDA) | Testo Unico sulla documentazione amministrativa: disciplina la firma autografa e la sua sostituzione a mezzo stampa negli atti della PA. | Documentazione amministrativa |
 
 Per foto, video e dati degli studenti il riferimento resta sempre il DPO dell'istituto. Eventuali fac-simile forniti dal Gruppo devono essere verificati e adattati dalla scuola.
 
