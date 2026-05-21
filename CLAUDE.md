@@ -412,6 +412,16 @@ bash scripts/genera-social.sh --since 2026-04-01               # da una data
 bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
 # Richiede: GEMINI_API_KEY in env (gratis: aistudio.google.com/apikey).
 # Da mobile/cloud: il workflow genera-social-bozze.yml fa lo stesso lavoro.
+
+# Genera microtext / microstampa (filigrane anti-falsificazione)
+python3 scripts/genera-microtext.py text --macro "PROTEZIONE|CIVILE" --out static/images/microtext/banner.png
+python3 scripts/genera-microtext.py image --in <foto> --out <out.png>
+python3 scripts/genera-microtext.py watermark --in <cover.webp> --out <out.png>
+# Da lontano sembra testo/immagine normale, da vicino le linee sono micro-testo
+# personalizzato. Frase di default univoca col dominio. Stack Pillow. Vedi manuale/parte-33.
+
+# Notifica IndexNow (Bing/Yandex) delle URL modificate (di norma gira via workflow)
+python3 scripts/indexnow-ping.py
 ```
 
 ## Architettura — riferimenti rapidi
@@ -419,6 +429,8 @@ bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
 | Cosa | Dove |
 |---|---|
 | Homepage dual-mode (normale / emergenza) | `themes/flavour-pcgenzano/layouts/index.html` + `data/emergenza.json`. Dettagli in `04-hugo-architecture.md` § "Homepage dual-mode" |
+| Autorevolezza (E-E-A-T) e GEO/AI-SEO: pagina `/metodo-editoriale/`, `static/llms.txt`, analytics GoatCounter (param `goatcounter` in `hugo.toml`, script in `baseof.html`), IndexNow, schema FAQPage opt-in (`faq_schema: true`), "Pagina rivista il" sulle pagine rischio | `content/metodo-editoriale/`, `static/llms.txt`, `partials/structured-data.html`, `.github/workflows/indexnow.yml` — vedi `manuale/parte-33-autorevolezza-geo.md` |
+| Microtext / microstampa (filigrane anti-falsificazione): da lontano testo/immagine normale, da vicino micro-testo | `scripts/genera-microtext.py` + integrazione attestati `static/giochi/assets/js/attestato.js` (copre anche `attestato-inclusivo.js`) e `static/js/quiz-preparazione.js` — vedi `manuale/parte-33-autorevolezza-geo.md` |
 | Data files (`emergenza.json`, `allerta.json`, `risk_cards.yaml`, `numeri_utili.yaml`, `quick_links.yaml`, `social_links.yaml`, `codici_colore.yaml`, `glossario.yaml`, `aree_emergenza.yaml`, `dae.yaml`, `idranti.yaml`, `stato-sistema.json`, `eventi_storici.yaml`, `lis.yaml`) | `data/` — vedi `04-hugo-architecture.md` § "Contenuti dinamici via data files" |
 | Articoli `comunicazioni/` (frontmatter, badge, palette categorie, formato data) | `02-content-design-pa.md` |
 | Badge categorie articoli (dichiarati in `themes/flavour-pcgenzano/layouts/partials/badge.html`): **Allerta · Avviso · Comunicazione · Attività · Formazione · Evento · Volontariato · Radiocomunicazioni · Prevenzione · Esercitazione · Aggiornamento · Informazione · Emergenza** — palette completa con hex e contrasto WCAG in `02-content-design-pa.md` § "Frontmatter obbligatorio" | `02-content-design-pa.md` |
