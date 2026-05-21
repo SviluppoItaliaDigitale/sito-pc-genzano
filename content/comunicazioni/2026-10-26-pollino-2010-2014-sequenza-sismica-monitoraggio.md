@@ -62,6 +62,11 @@ Anche il nostro territorio ha **sismicità di fondo** legata al sistema vulcanic
 
 L'esperienza del Pollino è una lezione importante per noi: anche zone considerate "non massimamente esposte" possono attraversare **periodi prolungati di sismicità diffusa** che richiedono pazienza, informazione corretta, ascolto delle istituzioni. Il [Piano di Emergenza Comunale](/piano-emergenza/) tiene conto di questi scenari.
 
+## Sul nostro sito
+
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — La sismicità nei Castelli Romani, il sistema vulcanico dei Colli Albani e cosa fare in caso di scossa.
+- [Rischio vulcanico](/rischi-prevenzione/rischio-vulcanico/) — Il vulcanismo dei Colli Albani: attività bradisismica e monitoraggio INGV nel nostro territorio.
+
 ## Per saperne di più
 
 - [INGV — Catalogo Sismico Italiano](https://terremoti.ingv.it/)

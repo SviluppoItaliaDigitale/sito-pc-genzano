@@ -75,6 +75,10 @@ Chi è interessato a inserirsi nelle attività di supporto alla ristorazione in 
 
 Per informazioni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
+## Sul nostro sito
+
+- [Diventa volontario](/diventa-volontario/) — Come entrare nel Gruppo Comunale: percorso di adesione, formazione e specializzazioni operative disponibili.
+
 ## Riferimenti
 
 - D.Lgs. 81/2008, artt. 28-30, in materia di valutazione dei rischi sul lavoro.

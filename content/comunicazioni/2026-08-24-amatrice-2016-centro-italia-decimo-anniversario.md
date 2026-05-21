@@ -49,6 +49,10 @@ Il sisma del Centro Italia ha consolidato alcune lezioni della Protezione Civile
 
 Genzano si trova in **zona sismica 2B** secondo la classificazione regionale. Anche se la pericolosità è inferiore a quella dell'Appennino, lo stesso meccanismo tettonico (faglie distensive lungo l'arco appenninico) interessa il nostro territorio. Per questo il Gruppo Comunale forma i propri volontari sulla risposta sismica e collabora con la scuola attraverso i [kit didattici](/formazione/) sui rischi naturali.
 
+## Sul nostro sito
+
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — Il rischio sismico nei Castelli Romani: faglie, zona 2B, cosa fare prima e durante una scossa.
+
 ## Per saperne di più
 
 - [Memoria del terremoto del Centro Italia — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/it/approfondimento/terremoto-centro-italia-2016-2017)

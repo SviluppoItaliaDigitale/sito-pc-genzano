@@ -45,3 +45,8 @@ Per chi desidera approfondire — biografia, processo di canonizzazione, testo d
 ## Un pensiero ai volontari
 
 Il 23 settembre è anche un'occasione per ricordare i **volontari e le volontarie** di tutta Italia che nel corso dell'anno hanno servito le proprie comunità — durante un'allerta, un soccorso, una formazione, una serata in radio, un turno notturno in piazza durante un evento. È un mestiere fatto di poche luci e molte ore. A tutti loro, il pensiero del Gruppo Comunale di Genzano di Roma.
+
+## Sul nostro sito
+
+- [Diventa volontario](/diventa-volontario/) — Come entrare nel Gruppo Comunale: percorso, formazione, ruoli operativi.
+- [Chi siamo](/chi-siamo/) — La storia del Gruppo Comunale di Genzano, la sua struttura e la sua adesione al sistema nazionale di PC.

@@ -47,6 +47,10 @@ Quando, vent'anni dopo Firenze, prese forma il sistema italiano di Protezione Ci
 
 Se vuoi continuare quella tradizione, scopri come [diventare volontario](/diventa-volontario/).
 
+## Sul nostro sito
+
+- [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — Alluvioni, frane e piene improvvise: il rischio idrogeologico e come prepararsi sul nostro territorio.
+
 ## Per saperne di più
 
 - [4 novembre 1966 — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/it/notizia/4-novembre-1966-l-alluvione-di-firenze)

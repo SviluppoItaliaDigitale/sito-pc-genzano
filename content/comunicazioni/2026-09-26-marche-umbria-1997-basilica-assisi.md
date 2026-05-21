@@ -48,6 +48,10 @@ Molti di questi strumenti sono stati riutilizzati e raffinati nelle emergenze su
 
 Anche Genzano custodisce un patrimonio storico-artistico vulnerabile: la **Collegiata di Santa Maria della Cima**, le chiese del centro storico, edifici di valore monumentale lungo la via Italo Belardi. Una scossa significativa potrebbe danneggiarli. Per questo il [Piano di Emergenza](/piano-emergenza/) comunale prevede l'attivazione di sopralluoghi mirati al patrimonio in caso di evento sismico, con il coordinamento della Soprintendenza.
 
+## Sul nostro sito
+
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — Pericolosità sismica nei Castelli Romani, cosa fare prima, durante e dopo una scossa, numeri utili.
+
 ## Per saperne di più
 
 - [Sequenza sismica Umbria-Marche 1997 — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)

@@ -58,6 +58,10 @@ Il nostro Gruppo Comunale è nato come risposta civica a una **debolezza struttu
 
 Per [diventare volontario](/diventa-volontario/), è il momento giusto per dare anche tu un contributo a questa rete.
 
+## Sul nostro sito
+
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — Il rischio sismico nei Castelli Romani e come prepararsi: classificazione sismica, autoprotezione, numeri utili.
+
 ## Per saperne di più
 
 - [Memoria del terremoto del Belice — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)

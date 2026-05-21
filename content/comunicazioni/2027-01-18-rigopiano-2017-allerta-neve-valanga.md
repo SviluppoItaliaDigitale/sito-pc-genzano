@@ -57,6 +57,10 @@ Tre lezioni per la Protezione Civile contemporanea:
 
 Genzano non è in territorio montano e il rischio valanghivo non ci riguarda. Ma il principio della **multi-rischiosità** vale anche da noi: una giornata di allerta meteo arancione può cumularsi con problemi di traffico, blackout, eventi locali. Il [Piano Familiare](/piano-familiare/) serve esattamente a essere pronti per scenari combinati, non solo per quello "ideale".
 
+## Sul nostro sito
+
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — La sismicità nei Castelli Romani: cosa sapere quando un evento sismico si cumula con altri rischi meteo.
+
 ## Per saperne di più
 
 - [Memoria del disastro di Rigopiano — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)
