@@ -1,6 +1,7 @@
 ---
 
 title: "Rischio Incendi Boschivi"
+dataUltimaRevisione: "2026-05-21"
 description: "Cosa fare per prevenire gli incendi boschivi e come comportarsi in caso di emergenza sul territorio di Genzano di Roma."
 tts: true
 lis_section: "rischio-incendio"

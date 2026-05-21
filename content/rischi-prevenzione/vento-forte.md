@@ -1,6 +1,7 @@
 ---
 
 title: "Vento Forte"
+dataUltimaRevisione: "2026-05-21"
 description: "Cosa fare prima, durante e dopo episodi di vento forte e raffiche violente sul territorio di Genzano di Roma."
 tts: true
 weight: 4

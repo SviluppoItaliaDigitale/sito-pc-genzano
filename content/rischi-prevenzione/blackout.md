@@ -1,6 +1,7 @@
 ---
 
 title: "Blackout e Interruzione Servizi"
+dataUltimaRevisione: "2026-05-21"
 description: "Cosa fare in caso di interruzione dell'energia elettrica, dell'acqua o delle telecomunicazioni."
 tts: true
 weight: 7

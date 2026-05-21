@@ -1,6 +1,7 @@
 ---
 
 title: "Temporali Intensi"
+dataUltimaRevisione: "2026-05-21"
 description: "Norme di comportamento in caso di temporali violenti, fulmini, grandine e piogge intense."
 tts: true
 weight: 5

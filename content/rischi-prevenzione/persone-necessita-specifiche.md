@@ -1,6 +1,7 @@
 ---
 
 title: "Persone con Necessità Specifiche"
+dataUltimaRevisione: "2026-05-21"
 description: "Indicazioni per la sicurezza di anziani, persone con disabilità, bambini e altre persone in condizioni di fragilità durante le emergenze."
 weight: 9
 toc: true

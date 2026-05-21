@@ -1,5 +1,6 @@
 ---
 title: "Kit di emergenza economico e progressivo"
+dataUltimaRevisione: "2026-05-21"
 description: "Come costruire un kit di emergenza poco alla volta, partendo dagli oggetti più importanti e senza spese inutili."
 tts: true
 weight: 10

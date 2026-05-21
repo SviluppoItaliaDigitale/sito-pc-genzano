@@ -1,6 +1,7 @@
 ---
 
 title: "Ondate di Calore"
+dataUltimaRevisione: "2026-05-21"
 description: "Come proteggersi dal caldo estremo: consigli per anziani, bambini e persone fragili."
 tts: true
 weight: 6
