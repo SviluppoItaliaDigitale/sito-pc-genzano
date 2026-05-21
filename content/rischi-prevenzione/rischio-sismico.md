@@ -93,4 +93,24 @@ I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. D
 - **Non diffondere notizie non verificate**: segui solo le fonti ufficiali
 {{< /cosa-non-fare >}}
 
+## <i class="bi bi-link-45deg text-primary me-2" aria-hidden="true"></i>Fonti e approfondimenti {#fonti}
+
+**Sul nostro sito**
+
+- [Rischio vulcanico (Colli Albani)](/rischi-prevenzione/rischio-vulcanico/) — contesto vulcano-tettonico del nostro territorio
+- [Cartografia](/cartografia/) — aree di attesa e di emergenza
+- [Piano Familiare](/piano-familiare/) e [Glossario sismico in LIS](/lis/#rischio-sismico)
+
+**Fonti istituzionali**
+
+- [INGV — Terremoti in tempo reale](https://terremoti.ingv.it/) — eventi sismici localizzati in Italia
+- [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/) — monitoraggio e ricerca sismica
+- [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — scheda nazionale sul rischio sismico
+- [CNR-IGAG](https://www.igag.cnr.it/) — microzonazione sismica e geoingegneria
+- [Io non rischio — terremoto](https://www.iononrischio.it/) — buone pratiche di autoprotezione
+
+**Approfondimenti divulgativi**
+
+- [Geopop](https://www.geopop.it/) — come funzionano i terremoti, magnitudo e faglie. Non è una fonte istituzionale: in caso di evento segui sempre i canali ufficiali.
+
 {{< chi-chiamare >}}
