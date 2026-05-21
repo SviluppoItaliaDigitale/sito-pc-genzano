@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: 31 maggio: Giornata senza tabacco, mozziconi e 
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-05-31-giornata-senza-tabacco-mozziconi-incendi-facile"
 draft: false
 ---
 

@@ -10,6 +10,7 @@ image_alt: "Scaffale di dispensa con barattoli, scatolette, bottiglie d'acqua or
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-06-07-sicurezza-alimentare-emergenza-scorte-facile"
 draft: false
 ---
 

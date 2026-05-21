@@ -10,6 +10,8 @@ image_alt: "Cover dell'articolo: Escursioni estive: sicurezza in montagna e nei 
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-05-30-escursioni-estive-sicurezza-montagna-castelli-facile"
+tts: true
 draft: false
 ---
 

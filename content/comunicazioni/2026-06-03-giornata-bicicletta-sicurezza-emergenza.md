@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-06-03-giornata-bicicletta-sicurezza-emergenza-facile"
 ---
 
 Il **3 giugno** è la [Giornata mondiale della bicicletta](https://www.un.org/en/observances/bicycle-day) delle **Nazioni Unite**, istituita nel 2018. È una giornata che celebra un mezzo di trasporto semplice, economico e a basso impatto. Ma è anche un'occasione per parlare di **sicurezza stradale** e di un aspetto meno noto: la **resilienza della mobilità ciclabile in emergenza**.
