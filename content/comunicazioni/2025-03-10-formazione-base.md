@@ -13,6 +13,8 @@ allegati: []
 draft: false
 ---
 
+> ℹ️ **Nota**: questa pagina si riferisce al ciclo di formazione di **marzo 2025**. Per i corsi e le iscrizioni attualmente in programma consulta la pagina [Diventa volontario](/diventa-volontario/).
+
 Il Gruppo organizza un nuovo **Corso di Formazione Base** per i volontari iscritti di recente.
 
 Le lezioni si tengono nella sede di Via Sicilia 13-15.
