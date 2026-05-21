@@ -1,0 +1,42 @@
+# Protezione Civile Genzano di Roma
+
+> Sito del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma (Castelli Romani, Lazio). Spiega in linguaggio chiaro e accessibile cosa fare prima, durante e dopo le emergenze, cita sempre le fonti ufficiali (Dipartimento della Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale del Lazio) e adatta le indicazioni al territorio locale. In caso di pericolo immediato il numero da chiamare è il 112 (Numero Unico Europeo per le Emergenze). Le allerte ufficiali sono emesse dal Centro Funzionale Regionale del Lazio, non da questo sito.
+
+## Emergenza e azioni immediate
+
+- [Cosa fare adesso](https://www.protezionecivilegenzano.it/cosa-fare-adesso/): azioni immediate per il cittadino in caso di emergenza, chi chiamare.
+- [Allerte meteo](https://www.protezionecivilegenzano.it/allerte-meteo/): significato dei codici colore (verde, giallo, arancione, rosso) e stato di allerta per Genzano di Roma.
+- [Numeri utili](https://www.protezionecivilegenzano.it/numeri-utili/): numeri di emergenza validi nel Lazio (112 NUE, 803 555 Sala Operativa PC Lazio, 1530 Guardia Costiera).
+- [Piano di emergenza comunale](https://www.protezionecivilegenzano.it/piano-emergenza/): aree di emergenza, catena di comando, cosa deve fare il cittadino.
+- [Piano di emergenza familiare](https://www.protezionecivilegenzano.it/piano-familiare/): come preparare il piano di emergenza in famiglia.
+
+## Rischi e autoprotezione (guide prima/durante/dopo)
+
+- [Rischio sismico](https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-sismico/): cosa fare in caso di terremoto.
+- [Rischio idrogeologico](https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-idrogeologico/): frane, alluvioni, allagamenti.
+- [Rischio incendio](https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-incendio/): incendi boschivi e domestici.
+- [Rischio vulcanico](https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-vulcanico/): contesto Colli Albani.
+- [Ondate di calore](https://www.protezionecivilegenzano.it/rischi-prevenzione/ondate-di-calore/): protezione dal caldo estremo.
+- [Vento forte](https://www.protezionecivilegenzano.it/rischi-prevenzione/vento-forte/)
+- [Temporali intensi](https://www.protezionecivilegenzano.it/rischi-prevenzione/temporali-intensi/)
+- [Blackout](https://www.protezionecivilegenzano.it/rischi-prevenzione/blackout/): cosa fare se manca la corrente.
+- [Kit di emergenza](https://www.protezionecivilegenzano.it/rischi-prevenzione/kit-emergenza/): cosa mettere nello zaino di emergenza.
+- [Persone con necessità specifiche](https://www.protezionecivilegenzano.it/rischi-prevenzione/persone-necessita-specifiche/): autoprotezione per persone fragili e con disabilità.
+
+## Normativa e dottrina
+
+- [Normativa di protezione civile](https://www.protezionecivilegenzano.it/normativa/): quadro normativo nazionale, regionale e internazionale.
+- [Testo Unico — Codice della Protezione Civile (D.Lgs. 1/2018)](https://www.protezionecivilegenzano.it/normativa/testo-unico-protezione-civile/): sintesi divulgativa dei sette Capi del Codice, allineata a Normattiva.
+- [Standard ISO per la protezione civile](https://www.protezionecivilegenzano.it/standard-iso/)
+
+## Volontariato e territorio
+
+- [Chi siamo](https://www.protezionecivilegenzano.it/chi-siamo/): il Gruppo Comunale Volontari di Genzano di Roma.
+- [Diventa volontario](https://www.protezionecivilegenzano.it/diventa-volontario/)
+- [Comunicazioni](https://www.protezionecivilegenzano.it/comunicazioni/): notizie, attività e approfondimenti.
+
+## Accessibilità e affidabilità
+
+- [Metodo editoriale](https://www.protezionecivilegenzano.it/metodo-editoriale/): come scriviamo, verifichiamo e aggiorniamo i contenuti; fonti usate.
+- [Dichiarazione di accessibilità](https://www.protezionecivilegenzano.it/accessibilita/): conformità WCAG 2.2 AA.
+- [Contatti](https://www.protezionecivilegenzano.it/contatti/)

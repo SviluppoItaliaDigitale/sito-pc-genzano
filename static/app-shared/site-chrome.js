@@ -215,6 +215,7 @@
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/note-legali/" style="color:rgba(255,255,255,0.85);">Note Legali</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/privacy/" style="color:rgba(255,255,255,0.85);">Privacy</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/accessibilita/" style="color:rgba(255,255,255,0.85);">Accessibilit&agrave;</a></li>' +
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/metodo-editoriale/" style="color:rgba(255,255,255,0.85);">Metodo editoriale</a></li>' +
                 /* Trasparenza + Stato del Sito spostati da "Risorse" a maggio 2026:
                    accountability istituzionale, coerenti nel footer accanto a
                    Note Legali / Privacy / Accessibilità. */
@@ -244,6 +245,7 @@
             '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/note-legali/" style="color:rgba(255,255,255,0.85);">Note legali</a></li>' +
             '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/privacy/" style="color:rgba(255,255,255,0.85);">Privacy e cookie</a></li>' +
             '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/accessibilita/" style="color:rgba(255,255,255,0.85);">Accessibilit&agrave;</a></li>' +
+            '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/metodo-editoriale/" style="color:rgba(255,255,255,0.85);">Metodo editoriale</a></li>' +
           '</ul>' +
           '<p class="mt-2 mb-0 small" style="color:rgba(255,255,255,0.75);">&copy; ' + new Date().getFullYear() + ' Gruppo Comunale Volontari di Protezione Civile Genzano di Roma &mdash; C.F. 92011880588<br>I contenuti di questo sito, salvo diversa indicazione, sono distribuiti con licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer license" style="color:rgba(255,255,255,0.85);">CC BY 4.0</a>.<br>Sito Web ideato e realizzato da Alessandro Cuollo - Alfa 19 - IU0QVW.</p>' +
         '</div>' +
