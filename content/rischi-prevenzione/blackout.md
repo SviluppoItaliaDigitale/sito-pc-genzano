@@ -10,38 +10,38 @@ howto_prima: "Tieni sempre a portata di mano una torcia elettrica con pile di sc
 howto_durante: "Non farti prendere dal panico: i blackout sono generalmente temporanei. Scollega gli elettrodomestici per evitare danni da sbalzi al ritorno della corrente (lascia accesa una luce per sapere quando torna). Non aprire frigorifero e congelatore se non strettamente necessario (il cibo si conserva per ore). Usa torce elettriche, non candele (rischio incendio). Se sei bloccato in ascensore, premi il pulsante di allarme e attendi i soccorsi. Non usare generatori a combustibile all'interno di locali chiusi (rischio monossido di carbonio)."
 howto_dopo: "Riaccendi gli elettrodomestici uno alla volta per evitare sovraccarichi. Verifica lo stato degli alimenti nel congelatore: se lo hai tenuto chiuso, il cibo può resistere anche 24 ore. Controlla eventuali danni all'impianto elettrico. Segnala al fornitore eventuali ritardi nel ripristino del servizio. Se hai usato apparecchiature elettromedicali, verifica che funzionino correttamente."
 ---
-Un blackout prolungato può derivare da eventi meteorologici estremi, guasti alla rete o sovraccarichi. L'interruzione dell'energia elettrica può causare disagi significativi e, in alcuni casi, situazioni di pericolo, soprattutto per le persone che dipendono da apparecchiature elettromedicali.
+Un blackout può durare ore. Gli eventi meteorologici estremi, i guasti alla rete e i sovraccarichi ne sono le cause più frequenti. Chi usa apparecchiature elettromedicali è esposto a rischi aggiuntivi: prepararsi in anticipo riduce i danni.
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
-Il territorio di Genzano, con la sua rete di distribuzione che attraversa aree boschive e collinari, può essere soggetto a interruzioni durante eventi meteo intensi, soprattutto per la caduta di alberi o rami sulle linee elettriche.
+A Genzano la rete di distribuzione attraversa aree boschive e collinari. Durante eventi meteo intensi, alberi e rami caduti sulle linee elettriche causano interruzioni frequenti.
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è pensato esattamente per questo. Acqua, alimenti che non richiedono cottura, torce, radio a pile, power bank: tutto quello che ti permette di stare autonomo per 3 giorni senza corrente. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA — Preparati {#cosa-fare-prima}
-- Tieni sempre a portata di mano una **torcia elettrica** con pile di scorta
-- Disponi di una **radio a pile** per ricevere comunicazioni ufficiali
-- Carica preventivamente telefono e power bank quando sono previste allerte
-- Tieni in casa una scorta minima di acqua potabile (almeno 2 litri a persona)
-- Se usi apparecchiature elettromedicali, informa la tua ASL e il tuo fornitore di energia per la lista delle utenze non disalimentabili
+- Tieni sempre a portata di mano una **torcia elettrica** con pile di scorta.
+- Disponi di una **radio a pile** per ricevere comunicazioni ufficiali.
+- Carica telefono e power bank quando sono previste allerte.
+- Tieni in casa almeno 2 litri di acqua potabile a persona.
+- Se usi apparecchiature elettromedicali, informa la tua ASL e il tuo fornitore di energia: esiste una lista di utenze non disalimentabili.
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE il blackout {#cosa-fare-durante}
-- **Non farti prendere dal panico**: i blackout sono generalmente temporanei
-- Scollega gli elettrodomestici per evitare danni da sbalzi al ritorno della corrente (lascia accesa una luce per sapere quando torna)
-- Non aprire frigorifero e congelatore se non strettamente necessario (il cibo si conserva per ore)
-- Usa torce elettriche, non candele (rischio incendio)
-- Se sei bloccato in ascensore, premi il pulsante di allarme e attendi i soccorsi senza tentare di uscire
-- Non usare generatori a combustibile all'interno di locali chiusi (rischio monossido di carbonio)
+- Mantieni la calma: i blackout sono di solito temporanei.
+- **Scollega gli elettrodomestici** per evitare danni agli sbalzi di tensione al ritorno della corrente; lascia accesa una sola lampada per accorgerti del ripristino.
+- Tieni chiusi frigorifero e congelatore: il cibo si conserva per molte ore senza aprirli.
+- Usa la **torcia elettrica**, non le candele (rischio incendio).
+- Se sei bloccato in ascensore, premi il pulsante di allarme e attendi i soccorsi senza tentare di uscire.
+- Non usare generatori a combustibile in locali chiusi: producono monossido di carbonio, gas inodore e letale.
 
 ## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO il ripristino {#cosa-fare-dopo}
-- Riaccendi gli elettrodomestici uno alla volta per evitare sovraccarichi
-- Verifica lo stato degli alimenti nel congelatore: se lo hai tenuto chiuso, il cibo può resistere anche 24 ore
-- Controlla eventuali danni all'impianto elettrico
+- Riaccendi gli elettrodomestici uno alla volta per evitare sovraccarichi.
+- Controlla il congelatore: se lo hai tenuto chiuso, il cibo resiste fino a 24 ore.
+- Verifica l'impianto elettrico domestico; in caso di bruciature o odore di bruciato chiama il 112.
 
 ## <i class="bi bi-droplet-half text-primary me-2" aria-hidden="true"></i>In caso di interruzione dell'acqua {#interruzione-acqua}
-- Usa con parsimonia le scorte disponibili
-- Privilegia l'acqua per bere e cucinare
-- Non usare l'acqua del rubinetto dopo il ripristino finché non sei certo che sia tornata limpida
-- Segui le comunicazioni del gestore idrico
+- Usa le scorte con parsimonia.
+- Dai priorità all'acqua per bere e cucinare.
+- Dopo il ripristino, usa l'acqua del rubinetto solo quando il gestore conferma la potabilità.
+- Segui le comunicazioni del gestore idrico.
 
 {{< cosa-non-fare titolo="Cosa NON fare durante un blackout" >}}
 - **Non usare mai candele incustodite** come illuminazione di emergenza

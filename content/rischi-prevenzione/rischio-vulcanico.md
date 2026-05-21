@@ -11,12 +11,12 @@ howto_durante: "Esci immediatamente all'aria aperta se senti odore strano o male
 howto_dopo: "Segnala al Comune e all'ARPA Lazio la presenza di anomalie ambientali persistenti (animali morti, vegetazione secca a macchia, bolle in sorgenti) per attivare il monitoraggio scientifico. Per il sistema sismico consulta INGV su terremoti.ingv.it per verificare se la scossa è stata registrata. Verifica eventuali danni strutturali alla casa (crepe nuove, infissi disallineati). Non entrare in cantine, pozzi, scantinati o spazi confinati non aerati. Non tentare il soccorso entrando in uno spazio confinato senza autorespiratore."
 ---
 
-Il **Vulcano Laziale** è il complesso vulcanico dei **Colli Albani** che ha originato Genzano di Roma e l'intero territorio dei Castelli Romani. È **quiescente**, non spento: secondo l'**INGV** (Istituto Nazionale di Geofisica e Vulcanologia) e il **CNR**, la sua ultima fase eruttiva risale a circa 36.000 anni fa, ma il sistema è tuttora **monitorato** perché manifesta attività residua nota (sismicità di bassa magnitudo, deformazioni del suolo, emissioni di gas dalle aree di degassamento).
+Il **Vulcano Laziale** dei **Colli Albani** è **quiescente**, non spento. Secondo l'**INGV** e il **CNR**, la sua ultima fase eruttiva risale a circa 36.000 anni fa. Il sistema è tuttora **monitorato**: mostra sismicità di bassa magnitudo, deformazioni del suolo ed emissioni di gas in aree localizzate.
 
-Questa pagina spiega in modo prudente e verificato cosa significa "vulcano quiescente", quali sono i fenomeni che il cittadino può incontrare nel territorio (in particolare le **emissioni di anidride carbonica — CO₂** in alcune zone localizzate), come comportarsi.
+Questa pagina descrive i fenomeni concreti che il cittadino può incontrare — in particolare le **emissioni di anidride carbonica (CO₂)** — e cosa fare.
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
-Il **Vulcano Laziale** ha una storia eruttiva di oltre 600.000 anni. Le sue eruzioni hanno costruito tutto il paesaggio: gli alti rilievi del **Tuscolano-Artemisio**, le caldere di **Albano** e **Nemi** (oggi laghi), la **Faete** (cuore del centro vulcanico più recente), i banchi di tufo su cui sorgono Genzano, Ariccia, Velletri.
+Il **Vulcano Laziale** ha una storia eruttiva di oltre 600.000 anni. Le sue eruzioni hanno costruito tutto il paesaggio dei Castelli Romani: i rilievi del **Tuscolano-Artemisio**, le caldere di **Albano** e **Nemi** (oggi laghi), la **Faete**, i banchi di tufo su cui sorgono Genzano, Ariccia, Velletri.
 
 Il sistema è classificato dall'INGV come:
 
@@ -59,21 +59,21 @@ L'aria all'aperto, ventilata, **non** è un problema: il pericolo è confinato.
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Vai"](/rischi-prevenzione/kit-emergenza/#kit-vai) per un'eventuale evacuazione preventiva e il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) per restare autonomi se la situazione lo richiede. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
-- Conoscere il proprio territorio: se vivi o lavori vicino a Cava dei Selci, Solforata di Pomezia o aree note, informati presso il Comune e l'ARPA Lazio.
-- **Areare cantine, scantinati e seminterrati** prima di entrarci dopo periodi di chiusura prolungata. Mai entrare in spazi sigillati senza aerare.
-- **Mai entrare in pozzi** senza autorizzazione e senza presenza di personale specializzato con strumentazione (ossimetro). Le morti in pozzo sono spesso da CO₂, non da affogamento.
-- Mantenere ben ventilate le caldaie, gli scaldabagni a gas, gli ambienti dove si bruciano combustibili: la CO₂ di origine antropica si somma a qualsiasi residuo geologico.
-- Sapere come si raggiunge il **112** dal proprio quartiere e segnare nel piano familiare la presenza di scantinati o cantine.
-- Per chi ha bambini piccoli o animali domestici: tenere sempre chiuse le cantine non aerate.
+- Conosci il tuo territorio: se vivi o lavori vicino a Cava dei Selci, Solforata di Pomezia o aree note, informati presso il Comune e l'ARPA Lazio.
+- **Areare cantine, scantinati e seminterrati** prima di entrarci dopo periodi di chiusura prolungata. Non entrare in spazi sigillati senza aerare prima.
+- **Non entrare mai in pozzi** senza autorizzazione e senza personale specializzato con ossimetro. Le morti in pozzo sono spesso da CO₂, non da affogamento.
+- Mantieni ben ventilate le caldaie, gli scaldabagni a gas e gli ambienti dove si bruciano combustibili: la CO₂ di origine antropica si somma a qualsiasi residuo geologico.
+- Segna nel piano familiare la presenza di scantinati o cantine e tieni il **112** sempre a portata.
+- Se hai bambini piccoli o animali domestici: tieni sempre chiuse le cantine non aerate.
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE — sospetto di accumulo di CO₂ {#durante-co2}
 Se entrando in uno spazio confinato senti **mancanza d'aria, capogiro, nausea, mal di testa improvviso**, oppure trovi un animale morto o una persona priva di sensi:
 
 - **Esci immediatamente** all'aria aperta. Non tornare indietro a "controllare meglio".
-- **Non aiutare** una persona priva di sensi entrando dentro: sarebbe la **seconda vittima**. Le statistiche mondiali mostrano che il 60% delle vittime in pozzi e spazi confinati è composta da soccorritori improvvisati che hanno tentato il salvataggio senza protezione.
-- Chiama il **112**: arriveranno i Vigili del Fuoco con autorespiratori. Specifica "sospetto di gas in spazio confinato".
-- Mantieni l'area **isolata**: nessuno deve entrare. Allontana le persone curiose.
-- Se sei in casa e senti l'odore strano (ricorda: la CO₂ pura è inodore, ma in casa potrebbe essere monossido di carbonio CO da malfunzionamento caldaia, anch'esso pericoloso): apri tutte le finestre, esci, chiama il 112.
+- **Non soccorrere** una persona priva di sensi entrando nello spazio confinato: diventeresti la seconda vittima. Il 60% delle vittime in pozzi e spazi confinati sono soccorritori improvvisati senza protezione (fonte: DPC).
+- Chiama il **112** specificando "sospetto di gas in spazio confinato": arriveranno i Vigili del Fuoco con autorespiratori.
+- Mantieni l'area **isolata** e allontana le persone curiose. Nessuno deve entrare.
+- Se sei in casa e senti odore strano: apri tutte le finestre, esci, chiama il 112. Potrebbe essere monossido di carbonio (CO) da caldaia, anch'esso pericoloso.
 
 ## <i class="bi bi-activity text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE — sospetto di scossa sismica {#durante-sismico}
 Le scosse di origine vulcano-tettonica del Vulcano Laziale sono in larghissima maggioranza di **magnitudo bassa** (M < 3.0). I comportamenti corretti sono quelli del rischio sismico:
