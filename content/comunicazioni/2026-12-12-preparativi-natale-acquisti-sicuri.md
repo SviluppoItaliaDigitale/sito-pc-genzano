@@ -10,6 +10,7 @@ image_alt: "Famiglia italiana che prepara decorazioni natalizie e pacchetti rega
 scadenza: "2026-12-25"
 area: "Lazio"
 allegati: []
+versione_facile: "2026-12-12-preparativi-natale-acquisti-sicuri-facile"
 draft: false
 ---
 

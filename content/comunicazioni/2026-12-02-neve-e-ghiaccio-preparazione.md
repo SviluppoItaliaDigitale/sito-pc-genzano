@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-12-02-neve-e-ghiaccio-preparazione-facile"
 ---
 
 A **Genzano di Roma**, **430 metri** slm, la **neve** in inverno è **rara** ma non impossibile. Negli ultimi decenni ricordiamo febbraio 2012 e febbraio 2018 con nevicate significative. Il **ghiaccio** notturno è invece **più frequente**. Come prepararsi e cosa fare.

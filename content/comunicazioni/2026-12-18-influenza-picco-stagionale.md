@@ -10,6 +10,7 @@ image_alt: "Paziente a letto durante influenza stagionale con tisana calda e faz
 scadenza: ""
 area: "Lazio"
 allegati: []
+versione_facile: "2026-12-18-influenza-picco-stagionale-facile"
 draft: false
 ---
 

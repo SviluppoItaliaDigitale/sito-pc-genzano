@@ -10,6 +10,7 @@ image_alt: "Stalla agricola con animali bovini e recinzioni in ordine, con segna
 scadenza: ""
 area: "Castelli Romani"
 allegati: []
+versione_facile: "2026-11-28-sicurezza-animali-stalla-fattorie-facile"
 draft: false
 ---
 

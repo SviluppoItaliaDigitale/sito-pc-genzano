@@ -10,6 +10,7 @@ image_alt: "Quadro elettrico domestico ordinato con interruttori differenziali e
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-11-14-sicurezza-impianti-elettrici-casa-facile"
 draft: false
 ---
 

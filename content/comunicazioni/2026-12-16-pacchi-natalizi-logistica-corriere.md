@@ -10,6 +10,7 @@ image_alt: "Corriere che consegna pacchi natalizi a destinatario italiano davant
 scadenza: "2026-12-25"
 area: "Lazio"
 allegati: []
+versione_facile: "2026-12-16-pacchi-natalizi-logistica-corriere-facile"
 draft: false
 ---
 

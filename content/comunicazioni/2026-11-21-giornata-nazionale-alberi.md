@@ -10,6 +10,7 @@ image_alt: "Bosco autunnale con sottobosco curato e sentiero in mezzo ad alberi 
 scadenza: ""
 area: "Lazio"
 allegati: []
+versione_facile: "2026-11-21-giornata-nazionale-alberi-facile"
 draft: false
 ---
 

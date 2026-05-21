@@ -11,6 +11,8 @@ scadenza: ""
 area: "Lazio"
 allegati: []
 draft: false
+versione_facile: "2026-11-09-qualita-aria-pm10-inverno-facile"
+tts: true
 ---
 
 Con l'arrivo dell'inverno si registra un **peggioramento** della qualità dell'aria. L'**inversione termica**, i **riscaldamenti** a pieno regime e il **traffico** contribuiscono ad accumulare **polveri sottili**. Il PM10 è uno degli indicatori più monitorati — e più sottovalutati come rischio per la salute.
