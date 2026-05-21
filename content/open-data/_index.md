@@ -162,3 +162,4 @@ Per i dati aperti su soccorso ed emergenze a livello nazionale, il riferimento i
 - [Area download](/area-download/) — documenti normativi e manuali
 - [Privacy](/privacy/) — politica di protezione dati
 - [Accessibilità](/accessibilita/) — dichiarazione AGID
+- [Metodo editoriale](/metodo-editoriale/) — fonti, verifica e aggiornamento dei contenuti
