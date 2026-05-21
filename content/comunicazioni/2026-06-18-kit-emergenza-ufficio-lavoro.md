@@ -10,6 +10,7 @@ image_alt: "Scrivania ordinata di un ufficio con sopra una borsa compatta conten
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-06-18-kit-emergenza-ufficio-lavoro-facile"
 draft: false
 ---
 

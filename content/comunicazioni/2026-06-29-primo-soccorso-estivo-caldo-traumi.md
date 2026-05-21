@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-06-29-primo-soccorso-estivo-caldo-traumi-facile"
 ---
 
 L'estate porta attività all'aperto e rischi sanitari specifici: **colpi di calore**, **traumi** da sport, **annegamenti** sfiorati, **punture di insetti**, **reazioni allergiche**. Il **primo soccorso** nei primi minuti può fare la differenza. Ecco una guida essenziale: utile in casa, in vacanza e come richiamo per chi ha già seguito corsi BLSD o simili.

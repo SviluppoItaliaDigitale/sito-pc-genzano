@@ -11,6 +11,8 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-06-15-ondate-calore-anziani-fragili-proteggere-facile"
+tts: true
 ---
 
 Con il **15 giugno** entriamo nel cuore della stagione delle **ondate di calore**. Il dato statistico è netto: in Italia, in estate, le **morti in eccesso** durante ondate prolungate di caldo superano quelle dei terremoti in anni non sismici. Sono decessi spesso invisibili, concentrati tra **anziani soli, persone con patologie croniche, bambini piccolissimi**. Molti sarebbero evitabili con un po' di attenzione di rete.

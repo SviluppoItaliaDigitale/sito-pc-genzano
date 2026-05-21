@@ -10,6 +10,8 @@ image_alt: "Sentiero tra faggi e castagni nel Parco dei Castelli Romani con luce
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-06-16-estate-boschi-castelli-escursionismo-sicuro-facile"
+tts: true
 draft: false
 ---
 

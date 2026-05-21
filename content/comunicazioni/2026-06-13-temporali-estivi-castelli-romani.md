@@ -10,6 +10,7 @@ image_alt: "Nuvolone a sviluppo verticale sopra i Castelli Romani alla luce del 
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-06-13-temporali-estivi-castelli-romani-facile"
 draft: false
 ---
 

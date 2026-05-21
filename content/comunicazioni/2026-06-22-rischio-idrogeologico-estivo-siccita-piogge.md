@@ -10,6 +10,7 @@ image_alt: "Terreno arido e screpolato vicino a un fiume in secca, con cielo scu
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-06-22-rischio-idrogeologico-estivo-siccita-piogge-facile"
 draft: false
 ---
 
