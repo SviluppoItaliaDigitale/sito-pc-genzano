@@ -34,7 +34,7 @@ enableGitInfo = true
   # Inserisci SOLO il codice del tuo sito GoatCounter (la parte prima di
   # ".goatcounter.com"). Lascia vuoto per disattivare. Sito gratuito (account
   # "non-commercial") su https://www.goatcounter.com/ — poi rimetti qui il codice.
-  goatcounter = ""
+  goatcounter = "apicuollo"
   pec = ""
   facebook = "https://www.facebook.com/protezionecivilegenzanodiroma"
   instagram = "https://www.instagram.com/protezionecivilegenzano/"

@@ -1,0 +1,31 @@
+name: IndexNow — notifica motori di ricerca
+
+# Avvisa Bing/Yandex (IndexNow) quando esce o cambia un articolo, così le
+# notizie vengono indicizzate in minuti invece che in giorni. Gira in parallelo
+# al deploy: aspetta qualche minuto perché le URL siano live, poi invia il ping.
+# Non blocca mai nulla: un errore di ping è ininfluente.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/comunicazioni/**.md'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Attendi il deploy (le URL devono essere raggiungibili)
+        run: sleep 180
+      - name: Ping IndexNow per gli articoli modificati
+        run: python3 scripts/indexnow-ping.py
