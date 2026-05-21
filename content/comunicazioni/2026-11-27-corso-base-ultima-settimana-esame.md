@@ -19,7 +19,7 @@ Il **corso base di Protezione Civile** avviato il **23 ottobre** si avvia verso 
 
 In 5 settimane di corso sono stati affrontati:
 
-- **normativa** di PC (L. 225/1992, D.Lgs. 1/2018);
+- **normativa** di PC (D.Lgs. 1/2018 — Codice della Protezione Civile, e cenni sull'evoluzione storica dalla L. 225/1992);
 - **sistema** nazionale e ruolo del volontariato;
 - **rischi** del territorio di Genzano e Castelli Romani;
 - **primo soccorso** e BLSD;

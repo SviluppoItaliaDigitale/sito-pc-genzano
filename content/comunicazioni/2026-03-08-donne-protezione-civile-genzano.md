@@ -21,7 +21,7 @@ L'**8 marzo**, **Giornata internazionale della donna**, è l'occasione per dirlo
 
 Il volontariato italiano ha avuto, storicamente, una componente femminile molto forte. Dalle **crocerossine** dei conflitti mondiali alle **angele del fango** di Firenze 1966, le donne sono sempre state presenti nelle emergenze italiane.
 
-Nel sistema moderno di Protezione Civile, **la legge 225/1992** e il **D.Lgs. 1/2018** (Codice della Protezione Civile) parlano di **volontari**, senza distinzioni di genere. La cultura operativa ha però impiegato anni per superare gli stereotipi di un settore percepito come "maschile": divisa, lavoro fisico, reperibilità notturna, esercitazioni in luoghi impervi.
+Nel sistema moderno di Protezione Civile, il **D.Lgs. 1/2018** (Codice della Protezione Civile — che ha sostituito la legge 225/1992) parla di **volontari**, senza distinzioni di genere. La cultura operativa ha però impiegato anni per superare gli stereotipi di un settore percepito come "maschile": divisa, lavoro fisico, reperibilità notturna, esercitazioni in luoghi impervi.
 
 Oggi nei gruppi comunali e nelle associazioni la **presenza femminile è alta e crescente**. In alcune realtà supera il 50%. Nei ruoli di coordinamento, le donne portano competenze di **gestione**, **comunicazione**, **relazione con la cittadinanza** — competenze essenziali in ogni emergenza.
 
