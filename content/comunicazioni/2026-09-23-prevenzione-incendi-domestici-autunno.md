@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-09-23-prevenzione-incendi-domestici-autunno-facile"
 ---
 
 Gli **incendi domestici** in Italia causano ogni anno centinaia di vittime. I mesi più a rischio sono quelli del riscaldamento. Settembre è il momento giusto per fare i **controlli** che, a novembre, sarà troppo tardi rimpiangere di non aver fatto.

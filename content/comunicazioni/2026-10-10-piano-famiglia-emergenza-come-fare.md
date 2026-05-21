@@ -11,6 +11,8 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-10-10-piano-famiglia-emergenza-come-fare-facile"
+tts: true
 ---
 
 La **Protezione Civile non è solo** un apparato pubblico. È anche ciò che ogni famiglia fa **a casa propria** per essere preparata a un'emergenza. Lo strumento principe, semplice e sottovalutato, è il **Piano di Emergenza Familiare**: un foglio scritto insieme una volta, che può fare la differenza in momenti critici.

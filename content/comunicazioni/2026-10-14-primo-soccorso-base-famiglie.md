@@ -10,6 +10,7 @@ image_alt: "Kit di primo soccorso domestico aperto con bende, cerotti, disinfett
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-10-14-primo-soccorso-base-famiglie-facile"
 draft: false
 ---
 

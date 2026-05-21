@@ -10,6 +10,8 @@ image_alt: "Campo a riposo autunnale con residui vegetali secchi e albero spogli
 scadenza: ""
 area: "Castelli Romani"
 allegati: []
+versione_facile: "2026-10-19-rischio-incendi-autunnali-secondo-picco-facile"
+tts: true
 draft: false
 ---
 

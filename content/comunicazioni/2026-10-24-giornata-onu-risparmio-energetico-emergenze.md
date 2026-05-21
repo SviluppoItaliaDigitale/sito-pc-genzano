@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-10-24-giornata-onu-risparmio-energetico-emergenze-facile"
 ---
 
 Il **risparmio energetico** non è solo una questione di bollette o di ambiente. Una famiglia che consuma **meno energia** è una famiglia **più autonoma** — e quindi **più resiliente** a black-out, ondate di freddo, crisi di approvvigionamento. Anche la Protezione Civile può parlare di energia.

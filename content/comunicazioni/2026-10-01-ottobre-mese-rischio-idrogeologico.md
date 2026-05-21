@@ -11,6 +11,7 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+versione_facile: "2026-10-01-ottobre-mese-rischio-idrogeologico-facile"
 ---
 
 Con l'ingresso di ottobre si apre, nel Lazio, il **periodo di maggiore attenzione per il rischio idrogeologico**. Le prime piogge intense, i venti atlantici, le prime situazioni di saturazione dei terreni richiedono l'attenzione costante di cittadini, enti e volontari di Protezione Civile.
