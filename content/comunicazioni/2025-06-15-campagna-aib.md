@@ -11,6 +11,8 @@ scadenza: ""
 area: "Territorio comunale di Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2025-06-15-campagna-aib-facile"
+tts: true
 ---
 
 Con l'arrivo dell'estate aumenta il rischio di incendi boschivi (AIB — antincendio boschivo). Dal 15 giugno al 30 settembre è il **periodo di massima pericolosità** sul territorio comunale, come previsto dalla normativa regionale del Lazio.

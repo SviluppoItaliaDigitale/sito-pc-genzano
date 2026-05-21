@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-03-29-ora-legale-cambi-stagionali-preparazione-primavera-facile"
 ---
 
 L'**ultima domenica di marzo** si passa dall'**ora solare** all'**ora legale**: le lancette avanzano di un'ora.

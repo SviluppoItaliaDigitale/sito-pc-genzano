@@ -13,6 +13,8 @@ allegati:
   - titolo: "Manuale di Cucina in Emergenza — DSEFIC / Federazione Italiana Cuochi"
     url: "/manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf"
     dimensione: "3,8 MB"
+versione_facile: "2025-07-14-alimentazioni-speciali-campo-accoglienza-facile"
+tts: true
 draft: false
 ---
 
