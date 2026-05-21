@@ -202,10 +202,12 @@
               '<nav aria-label="Servizi nel footer"><ul class="footer-list" role="list">' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/piano-emergenza/" style="color:rgba(255,255,255,0.85);">Piano di Emergenza</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" style="color:rgba(255,255,255,0.85);">Piano Familiare</a></li>' +
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/allerte-meteo/" style="color:rgba(255,255,255,0.85);">Allerte Meteo</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/area-download/" style="color:rgba(255,255,255,0.85);">Area Download</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cartografia/" style="color:rgba(255,255,255,0.85);">Cartografia Operativa</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cosa-fare-adesso/" style="color:rgba(255,255,255,0.85);">Cosa Fare Adesso</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/numeri-utili/" style="color:rgba(255,255,255,0.85);">Numeri Utili</a></li>' +
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/faq/" style="color:rgba(255,255,255,0.85);">FAQ</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/formazione/" style="color:rgba(255,255,255,0.85);">Formazione</a></li>' +
               '</ul></nav>' +
             '</div>' +
@@ -245,7 +247,8 @@
             '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/note-legali/" style="color:rgba(255,255,255,0.85);">Note legali</a></li>' +
             '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/privacy/" style="color:rgba(255,255,255,0.85);">Privacy e cookie</a></li>' +
             '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/accessibilita/" style="color:rgba(255,255,255,0.85);">Accessibilit&agrave;</a></li>' +
-            '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/metodo-editoriale/" style="color:rgba(255,255,255,0.85);">Metodo editoriale</a></li>' +
+            '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/social-media-policy/" style="color:rgba(255,255,255,0.85);">Social Media Policy</a></li>' +
+            '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/attribuzioni-pittogrammi/" style="color:rgba(255,255,255,0.85);">Attribuzioni pittogrammi</a></li>' +
           '</ul>' +
           '<p class="mt-2 mb-0 small" style="color:rgba(255,255,255,0.75);">&copy; ' + new Date().getFullYear() + ' Gruppo Comunale Volontari di Protezione Civile Genzano di Roma &mdash; C.F. 92011880588<br>I contenuti di questo sito, salvo diversa indicazione, sono distribuiti con licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer license" style="color:rgba(255,255,255,0.85);">CC BY 4.0</a>.<br>Sito Web ideato e realizzato da Alessandro Cuollo - Alfa 19 - IU0QVW.</p>' +
         '</div>' +
