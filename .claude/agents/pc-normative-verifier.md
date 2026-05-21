@@ -88,12 +88,17 @@ Per evitare WebFetch inutili, conosci a memoria lo stato di norme PC fondamental
 | **L. 225/1992** | ❌ ABROGATA | Sostituita dal D.Lgs. 1/2018 (non citare come vigente) |
 | **Direttiva PCM 30/04/2021** | ✅ VIGENTE | Servizio nazionale PC |
 | **L. 996/1970** | ❌ ABROGATA | Antica legge soccorso, abrogata da norme successive |
+| **D.Lgs. 267/2000 (TUEL)** | ✅ VIGENTE (modificato) | Testo Unico Enti Locali — fonte delle competenze di Comuni e Sindaci |
+| **L. 265/1999** | ❌ ABROGATA | Confluita nel D.Lgs. 267/2000 (TUEL); non citare come fonte vigente delle competenze comunali |
 | **D.Lgs. 117/2017** | ✅ VIGENTE | Codice Terzo Settore (RUNTS) |
 | **L. 4/2004 (Stanca)** | ✅ VIGENTE | Accessibilità |
 | **D.Lgs. 106/2018** | ✅ VIGENTE | Recepimento direttiva UE accessibilità web |
 | **D.Lgs. 33/2013** | ✅ VIGENTE (modificato) | Trasparenza — varie modifiche, controllare versione consolidata |
 | **L.R. Lazio 2/2014** | ✅ VIGENTE | Sistema integrato regionale PC — **è QUESTA la legge regionale PC** (art. 10: gruppi comunali; art. 13: programma triennale; art. 136 bis: sindaco autorità territoriale) |
 | ~~L.R. Lazio 9/2017~~ | ⚠️ NON è la legge PC | La L.R. Lazio n. 9 del **14 agosto 2017** è "Misure in materia di finanza pubblica regionale", **estranea alla protezione civile**. Errore storico (corretto 21/05/2026): era citata come legge del volontariato/sistema regionale. Per la PC regionale citare **sempre la L.R. 2/2014**. |
+| **L.R. Lazio 7/1996** | ❌ ABROGATA | Vecchia legge regionale PC del Lazio, abrogata dall'art. 36 della L.R. 2/2014. Per la PC regionale usare L.R. 2/2014 |
+| **L.R. Lazio 39/2002** | ✅ VIGENTE | Legge forestale regionale Lazio — **riferimento AIB incendi boschivi** (art. 64: Piano regionale AIB; art. 65: periodo a rischio). ⚠️ NON è la "L.R. 14/2008" (numero errato circolato sul sito, corretto 21/05/2026) |
+| **L.R. Lazio 17/2022** | ✅ VIGENTE | Apicoltura Lazio (istituisce l'albo apicoltori regionale). ⚠️ NON è la "L.R. 23/2014" (numero errato, corretto 21/05/2026) |
 | **DGR Lazio 865/2019** | ✅ VIGENTE | Zone allerta meteo Lazio (Genzano in Zona F) |
 | **WCAG 2.2** | ✅ Standard W3C corrente | (non norma italiana ma standard tecnico) |
 | **D.M. 183/2024** | ✅ VIGENTE | Educazione civica (Ministero Istruzione e Merito) |
