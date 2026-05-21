@@ -1,5 +1,6 @@
 ---
 title: "Allerte meteo"
+faq_schema: true
 description: "Consulta le allerte meteo per Genzano di Roma e capisci il significato dei codici colore."
 tts: true
 lis_section: "allerte-meteo"
