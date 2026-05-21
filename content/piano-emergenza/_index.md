@@ -20,7 +20,7 @@ Il Piano di Emergenza Comunale stabilisce come organizzare i soccorsi in caso di
 ## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>A cosa serve il Piano? {#a-cosa-serve}
 Il Piano serve prima di tutto a **proteggere la popolazione**. Definisce chi fa cosa, quali risorse usare e come coordinare i soccorsi. Individua anche le **aree di emergenza**, cioè i luoghi da usare per l'attesa, il ricovero temporaneo e il supporto ai soccorritori.
 
-L'impianto del Piano segue il **D.Lgs. 1/2018** (Codice della Protezione Civile) e le **direttive del Dipartimento della Protezione Civile**. La parte sull'evacuazione di massa, la pianificazione dei punti di raccolta e l'attenzione alle persone con esigenze specifiche recepisce inoltre i principi della norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*.
+L'impianto del Piano segue il **D.Lgs. 1/2018** (Codice della Protezione Civile) e le **direttive del Dipartimento della Protezione Civile**. Sull'evacuazione di massa segue anche la norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*. Da questa norma riprende i criteri per i punti di raccolta e per l'attenzione alle persone con esigenze specifiche.
 
 ## <i class="bi bi-book-fill text-primary me-2" aria-hidden="true"></i>Come leggere il Piano {#come-leggere}
 Il Piano di Emergenza è un documento tecnico. Per il cittadino, però, le informazioni principali sono poche:
