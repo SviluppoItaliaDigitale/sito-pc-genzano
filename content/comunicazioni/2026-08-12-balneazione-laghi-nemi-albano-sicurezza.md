@@ -11,6 +11,7 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+versione_facile: "2026-08-12-balneazione-laghi-nemi-albano-sicurezza-facile"
 ---
 
 I laghi di **Nemi** e **Albano** sono fra gli specchi d'acqua vulcanici più noti del Lazio. Meta estiva di romani e turisti stranieri, accolgono ogni anno migliaia di bagnanti. La balneazione è consentita in alcune zone e in condizioni precise: conoscerle aiuta a vivere la giornata in sicurezza.

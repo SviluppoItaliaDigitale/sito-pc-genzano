@@ -11,6 +11,7 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+versione_facile: "2026-08-05-temporali-pomeridiani-castelli-romani-facile"
 ---
 
 L'estate nei **Castelli Romani** porta con sé, accanto al caldo persistente, il rischio di **temporali pomeridiani improvvisi**. Sono fenomeni tipici delle zone collinari: l'aria calda risale lungo i versanti, condensa in cumulonembi e può scaricare in poche decine di minuti piogge violente, grandine, raffiche di vento e fulmini. Riconoscerli in anticipo aiuta a proteggersi.

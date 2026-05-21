@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-08-06-kit-emergenza-vacanze-come-prepararlo-facile"
 ---
 
 Partire per le vacanze è un'occasione per pensare alla **propria preparazione agli imprevisti**. Un piccolo **kit di emergenza**, da tenere in casa o da portare con sé, permette di affrontare meglio blackout, allagamenti, evacuazioni improvvise, traumi di piccola entità. Non serve essere survivalisti: bastano poche cose ben scelte.

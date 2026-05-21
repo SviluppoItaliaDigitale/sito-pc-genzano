@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-08-17-controesodo-viabilita-sicurezza-facile"
 ---
 
 Il **controesodo** è il fenomeno dei rientri dalle vacanze estive. I primi flussi iniziano nelle giornate successive al Ferragosto, con picchi nell'ultima settimana di agosto e nei primi giorni di settembre. Per chi parte e per chi percorre strade regionali e autostradali nel periodo, alcune regole di base riducono il rischio di incidenti.

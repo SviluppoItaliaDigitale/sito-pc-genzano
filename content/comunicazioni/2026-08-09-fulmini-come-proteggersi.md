@@ -11,6 +11,7 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+versione_facile: "2026-08-09-fulmini-come-proteggersi-facile"
 ---
 
 Un fulmine è una scarica elettrica che può raggiungere i **30.000 gradi** e **30.000 ampere**. In Italia cade in media un fulmine ogni pochi secondi durante i temporali estivi, e alcuni provocano vittime. I Castelli Romani, per la loro altitudine e morfologia, sono area di frequente attività temporalesca. Conoscere le regole base aiuta a ridurre il rischio.
