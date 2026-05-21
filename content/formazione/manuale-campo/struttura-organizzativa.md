@@ -166,6 +166,6 @@ Chi non ha risposte chiare a questi sette punti **non è pronto a partire**.
 ## Leggi anche
 
 - [Capo I del Codice PC](/normativa/testo-unico-protezione-civile/capo-1-finalita/)
-- [Capo VI — Volontariato](/normativa/testo-unico-protezione-civile/capo-6-volontariato/)
+- [Capo V — Volontariato](/normativa/testo-unico-protezione-civile/capo-5-volontariato/)
 - [Scouting e valutazione iniziale](/formazione/manuale-campo/scouting/)
 - [Piano di Emergenza Comunale](/piano-emergenza/)

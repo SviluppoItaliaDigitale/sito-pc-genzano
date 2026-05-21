@@ -218,7 +218,7 @@ Collaborano con le **Unità di Crisi Regionali per i Beni Culturali** (UCR), ist
 
 ## Leggi anche
 
-- [Capo V del Codice PC — Emergenze di rilievo nazionale](/normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali/)
+- [Capo IV del Codice PC — Emergenze di rilievo nazionale](/normativa/testo-unico-protezione-civile/capo-4-emergenze-nazionali/)
 - [Manuale da Campo — Funzioni di servizio](/formazione/manuale-campo/funzioni-servizio/)
 - [Rischio sismico — cosa sapere](/rischi-prevenzione/)
 - [Evoluzione delle procedure di emergenza 1996-2026](/normativa/evoluzione-procedure-emergenza/)

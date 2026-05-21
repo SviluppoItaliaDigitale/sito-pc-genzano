@@ -65,7 +65,7 @@ Il manuale è un **documento vivo**: ogni esercitazione, ogni missione reale, og
 ## Leggi anche
 
 - [Codice della Protezione Civile — Capo I](/normativa/testo-unico-protezione-civile/capo-1-finalita/)
-- [Codice della Protezione Civile — Capo VI (Volontariato)](/normativa/testo-unico-protezione-civile/capo-6-volontariato/)
+- [Codice della Protezione Civile — Capo V (Volontariato)](/normativa/testo-unico-protezione-civile/capo-5-volontariato/)
 - [Evoluzione delle procedure di emergenza 1996-2026](/normativa/evoluzione-procedure-emergenza/)
 - [Piano di Emergenza Comunale](/piano-emergenza/)
 - [Area Formazione](/formazione/)

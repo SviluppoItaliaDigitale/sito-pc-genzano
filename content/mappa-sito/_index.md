@@ -546,7 +546,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-doc" href="/normativa/testo-unico-protezione-civile/">
   <div class="ms-card-icon"><i class="bi bi-book-fill"></i></div>
   <p class="ms-card-title">Codice della Protezione Civile</p>
-  <p class="ms-card-desc">D.Lgs. 1/2018 spiegato in 7 Capi: finalità, organizzazione, previsione, pianificazione, emergenze, volontariato.</p>
+  <p class="ms-card-desc">D.Lgs. 1/2018 spiegato in 7 Capi: finalità, organizzazione, previsione, emergenze, volontariato, fondi.</p>
   <span class="ms-card-arrow">Apri →</span>
 </a>
 <a class="ms-card ms-doc" href="/normativa/testo-unico-protezione-civile/capo-3-previsione-prevenzione/">
@@ -555,15 +555,15 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-desc">Sistema di allertamento, comunicazione del rischio, formazione: il cuore della cultura di protezione civile.</p>
   <span class="ms-card-arrow">Leggi →</span>
 </a>
-<a class="ms-card ms-doc" href="/normativa/testo-unico-protezione-civile/capo-4-pianificazione/">
+<a class="ms-card ms-doc" href="/normativa/testo-unico-protezione-civile/capo-4-emergenze-nazionali/">
   <div class="ms-card-icon"><i class="bi bi-clipboard-data-fill"></i></div>
-  <p class="ms-card-title">Capo IV — Pianificazione</p>
-  <p class="ms-card-desc">Piano nazionale, regionale, provinciale e comunale: come si pianifica una emergenza prima che accada.</p>
+  <p class="ms-card-title">Capo IV — Gestione delle emergenze nazionali</p>
+  <p class="ms-card-desc">Stato di mobilitazione, stato di emergenza nazionale, ordinanze di protezione civile, rientro nell'ordinario.</p>
   <span class="ms-card-arrow">Leggi →</span>
 </a>
-<a class="ms-card ms-doc" href="/normativa/testo-unico-protezione-civile/capo-6-volontariato/">
+<a class="ms-card ms-doc" href="/normativa/testo-unico-protezione-civile/capo-5-volontariato/">
   <div class="ms-card-icon"><i class="bi bi-person-hearts"></i></div>
-  <p class="ms-card-title">Capo VI — Volontariato</p>
+  <p class="ms-card-title">Capo V — Volontariato</p>
   <p class="ms-card-desc">Diritti e doveri del volontario di Protezione Civile: tutele lavorative, rimborsi, formazione.</p>
   <span class="ms-card-arrow">Leggi →</span>
 </a>
