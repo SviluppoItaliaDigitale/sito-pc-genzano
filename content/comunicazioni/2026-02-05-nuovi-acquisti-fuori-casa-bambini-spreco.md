@@ -13,6 +13,7 @@ allegati:
   - titolo: "Il Libro del Risparmio — 120 azioni contro lo spreco alimentare (Fondazione Barilla)"
     url: "/manuali/FondazioneBarilla_Libro_del_Risparmio.pdf"
     dimensione: "27,3 MB"
+versione_facile: "2026-02-05-nuovi-acquisti-fuori-casa-bambini-spreco-facile"
 draft: false
 ---
 

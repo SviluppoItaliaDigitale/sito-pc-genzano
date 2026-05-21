@@ -14,6 +14,7 @@ allegati:
     url: "/manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf"
     dimensione: "4,1 MB"
 draft: false
+versione_facile: "2026-03-18-semaforo-attenzione-alimenti-recupero-solidarieta-facile"
 ---
 
 Chiudiamo la serie sul [manuale Caritas-Banco Alimentare](/comunicazioni/2024-11-26-manuale-caritas-banco-alimentare-presentazione/) con il capitolo 9, lo strumento operativo più utile per chi recupera alimenti a fini di solidarietà: il **semaforo di attenzione**.
