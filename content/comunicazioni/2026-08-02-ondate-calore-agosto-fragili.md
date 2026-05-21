@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-08-02-ondate-calore-agosto-fragili-facile"
 ---
 
 Le **ondate di calore** sono la prima causa di decessi evitabili fra le persone fragili durante l'estate italiana. A Genzano, pur godendo del microclima dei Castelli Romani, le temperature di agosto possono superare i 35 °C per più giorni consecutivi. Proteggere anziani, bambini piccoli e persone con patologie croniche è una responsabilità condivisa fra famiglie, vicinato, servizi sociali e Protezione Civile.

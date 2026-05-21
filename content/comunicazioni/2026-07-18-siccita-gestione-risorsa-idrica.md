@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-07-18-siccita-gestione-risorsa-idrica-facile"
 ---
 
 La **siccità** è una delle manifestazioni più evidenti del cambiamento climatico in Italia. Gli ultimi anni hanno visto **estati sempre più asciutte**, con conseguenze su agricoltura, approvvigionamento idrico, ecosistemi, rischio incendi. Ma il cittadino non è spettatore: ha un ruolo concreto nella **gestione della risorsa idrica**.

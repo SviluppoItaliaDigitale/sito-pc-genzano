@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-08-04-idratazione-colpo-calore-sintomi-facile"
 ---
 
 In estate l'organismo perde acqua attraverso sudorazione, respirazione e urine. Se la perdita non è compensata, si arriva prima alla **disidratazione** e poi, nei casi più gravi, al **colpo di calore**, che è un'emergenza medica. Conoscere i segnali precoci permette di intervenire prima.
