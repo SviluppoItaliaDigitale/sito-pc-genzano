@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 1 — Struttura organizzativa e catena di comando"
-description: "Dalla struttura nazionale al Centro Operativo Comunale di Genzano: chi fa cosa in emergenza secondo il Codice della Protezione Civile e il metodo Augustus aggiornato."
+description: "Dalla struttura nazionale al COC di Genzano: chi fa cosa in emergenza secondo il Codice PC e il metodo Augustus aggiornato."
 layout: "single"
 toc: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Rianimazione nei bambini e nei neonati"
-description: "Le specificità della rianimazione cardiopolmonare in età pediatrica e neonatale: differenze rispetto all'adulto, rapporto compressioni-ventilazioni, precauzioni."
+description: "Specificità della RCP in età pediatrica e neonatale: differenze rispetto all'adulto, rapporto compressioni-ventilazioni e precauzioni per bambini e neonati."
 layout: "single"
 ---
 

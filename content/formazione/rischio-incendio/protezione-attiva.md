@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 4 — Misure di protezione attiva"
-description: "Estintori portatili e carrellati, rete idrica antincendio, idranti e naspi, impianti sprinkler, rilevatori di fumo e calore, sistemi di allarme, segnaletica di sicurezza."
+description: "Estintori, rete idrica, idranti, sprinkler, rilevatori di fumo e calore, sistemi di allarme e segnaletica: guida agli impianti di protezione attiva antincendio."
 layout: "single"
 toc: true
 ---

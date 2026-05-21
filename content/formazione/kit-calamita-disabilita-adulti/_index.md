@@ -1,6 +1,6 @@
 ---
 title: "Kit Calamità per persone con disabilità adulte"
-description: "Schede stampabili A4 per persone adulte con disabilità in caso di emergenza: informazioni personali, ausili, farmaci, bisogni essenziali e checklist evacuazione."
+description: "Schede A4 per persone adulte con disabilità in emergenza: informazioni personali, ausili, farmaci, bisogni essenziali e checklist evacuazione."
 layout: "single"
 ---
 

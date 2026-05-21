@@ -1,7 +1,7 @@
 ---
 
 title: "Capo IV — Gestione delle emergenze di rilievo nazionale (articoli 23-30)"
-description: "Il Capo IV del Codice della Protezione Civile: stato di mobilitazione, deliberazione dello stato di emergenza nazionale, ordinanze di protezione civile, rientro nell'ordinario, contabilità speciali, interventi internazionali."
+description: "Capo IV del Codice PC: mobilitazione, stato di emergenza nazionale, ordinanze, rientro nell'ordinario, contabilità speciali, interventi internazionali."
 toc: true
 aliases:
   - "/normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali/"

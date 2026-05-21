@@ -1,6 +1,6 @@
 ---
 title: "Dichiarazione di accessibilità"
-description: "Dichiarazione di accessibilità conforme al modello AGID. Stato di conformità, contenuti non accessibili, modalità di valutazione, obiettivi annuali, feedback e contatti."
+description: "Dichiarazione di accessibilità AGID: stato di conformità, contenuti non accessibili, modalità di valutazione, obiettivi annuali, feedback e contatti."
 layout: "single"
 toc: true
 tts: true

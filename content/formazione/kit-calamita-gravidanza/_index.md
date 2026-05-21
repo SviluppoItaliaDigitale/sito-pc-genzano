@@ -1,6 +1,6 @@
 ---
 title: "Kit Calamità per gravidanza e neomamme"
-description: "Schede stampabili A4 per donne in gravidanza, parto, post-parto e neomamme in caso di calamità: informazioni sanitarie essenziali, segnali di attenzione, borsa nascita ed evacuazione."
+description: "Schede A4 per donne in gravidanza e neomamme in caso di calamità: informazioni sanitarie, segnali di attenzione, borsa nascita ed evacuazione."
 layout: "single"
 ---
 

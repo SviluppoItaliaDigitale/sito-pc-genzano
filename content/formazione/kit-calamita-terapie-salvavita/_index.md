@@ -1,6 +1,6 @@
 ---
 title: "Kit Calamità per pazienti con terapie salvavita continuative"
-description: "Schede stampabili A4 per pazienti con terapie salvavita: dialisi, ossigenoterapia, oncologia, trapianti, malattie rare, farmaci essenziali e dispositivi elettromedicali."
+description: "Schede A4 per pazienti con terapie salvavita: dialisi, ossigenoterapia, oncologia, trapianti, farmaci essenziali e dispositivi elettromedicali."
 layout: "single"
 ---
 

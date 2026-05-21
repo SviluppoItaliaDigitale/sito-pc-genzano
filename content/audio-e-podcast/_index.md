@@ -1,6 +1,6 @@
 ---
 title: "Audio e podcast"
-description: "Due modi per ascoltare i contenuti del Gruppo Comunale di Protezione Civile di Genzano: il podcast con episodi dedicati e tutti gli articoli letti ad alta voce dal browser."
+description: "Due modi per ascoltare i contenuti della PC di Genzano: podcast con episodi dedicati e articoli letti ad alta voce dal browser, senza app."
 layout: "single"
 toc: false
 tts: true

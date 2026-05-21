@@ -1,6 +1,6 @@
 ---
 title: "Kit di emergenza: casa, evacuazione e auto"
-description: "Guida pratica per preparare tre kit: evacuazione rapida, casa 72 ore e auto. Con quantità orientative, manutenzione e adattamenti per bambini, anziani, persone fragili e animali."
+description: "Guida pratica per tre kit di emergenza: evacuazione rapida, casa 72 ore e auto. Quantità orientative e adattamenti per bambini, anziani, fragili e animali."
 date: 2026-05-05
 draft: false
 type: "page"

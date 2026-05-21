@@ -1,7 +1,7 @@
 ---
 
 title: "Capo VII — Norme transitorie, di coordinamento e finali (articoli 47-50)"
-description: "Il settimo e ultimo Capo del Codice della Protezione Civile: coordinamento dei riferimenti normativi, abrogazioni, invarianza finanziaria, norme transitorie e finali, entrata in vigore."
+description: "Capo VII del Codice PC: coordinamento normativo, abrogazioni, invarianza finanziaria, norme transitorie e finali, entrata in vigore del D.Lgs. 1/2018."
 toc: true
 ---
 Il **Capo VII** del Codice della Protezione Civile (articoli 47-50) è la sezione **conclusiva** del decreto legislativo. Raccoglie le **norme transitorie, di coordinamento e finali**: serve a chiudere il cerchio giuridico, a raccordare il Codice con la normativa preesistente e a garantire che il passaggio dalla **Legge 225/1992** al nuovo Codice avvenga senza vuoti.

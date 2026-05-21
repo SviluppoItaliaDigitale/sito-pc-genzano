@@ -1,7 +1,7 @@
 ---
 
 title: "Capo III — Previsione e prevenzione dei rischi (articoli 16-22)"
-description: "Il Capo III del Codice della Protezione Civile: tipologia dei rischi, sistemi di allertamento, pianificazione, ruolo della comunità scientifica, Commissione Grandi Rischi, centri di competenza, prevenzione strutturale e non strutturale."
+description: "Capo III del Codice PC: rischi, allertamento, pianificazione, Commissione Grandi Rischi, centri di competenza, prevenzione strutturale e non strutturale."
 toc: true
 aliases:
   - "/normativa/testo-unico-protezione-civile/capo-4-pianificazione/"

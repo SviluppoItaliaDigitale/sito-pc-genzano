@@ -1,6 +1,6 @@
 ---
 title: "Cosa succede quando scatta un'allerta"
-description: "Il percorso completo di un'allerta meteo dal Dipartimento di Protezione Civile fino al cittadino: chi decide, chi attiva, chi comunica, cosa devi fare e cosa NON aspettarti dal volontariato."
+description: "Percorso di un'allerta meteo dal DPC al cittadino: chi decide, chi attiva, chi comunica, cosa fare e cosa NON aspettarti dal volontariato di Protezione Civile."
 layout: "single"
 toc: true
 tts: true

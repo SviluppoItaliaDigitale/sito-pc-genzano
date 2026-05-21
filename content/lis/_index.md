@@ -1,6 +1,6 @@
 ---
 title: "Contenuti in Lingua Italiana dei Segni (LIS)"
-description: "I video in Lingua Italiana dei Segni del Gruppo Comunale di Protezione Civile di Genzano: i contenuti vitali sulla sicurezza accessibili alle persone sorde segnanti."
+description: "Video LIS sulla Protezione Civile di Genzano: contenuti sulla sicurezza accessibili alle persone sorde segnanti, dai canali DPC e Abili a Proteggere."
 type: "lis"
 layout: "list"
 sitemap:

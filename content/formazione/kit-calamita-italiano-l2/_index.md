@@ -1,6 +1,6 @@
 ---
 title: "Kit Calamità per persone straniere e italiano L2"
-description: "Schede stampabili A4 per facilitare la comunicazione con persone straniere o con italiano come seconda lingua in caso di calamità: carta multilingua, bisogni essenziali e frasario di emergenza."
+description: "Schede A4 per comunicare con persone straniere o con italiano L2 in caso di calamità: carta multilingua, bisogni essenziali e frasario di emergenza."
 layout: "single"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Kit Calamità per neonati e prima infanzia (0-3 anni)"
-description: "Schede stampabili A4 per protezione, alimentazione, igiene, termoregolazione e informazioni essenziali per neonati e bambini sotto i 3 anni in caso di emergenza."
+description: "Schede A4 per protezione, alimentazione, igiene e termoregolazione di neonati e bambini sotto i 3 anni in caso di emergenza. Liberamente stampabili."
 layout: "single"
 ---
 

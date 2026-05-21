@@ -1,6 +1,6 @@
 ---
 title: "Social Media Policy"
-description: "Come il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma comunica sui social. Canali ufficiali, orari di presìdio, netiquette, moderazione, licenza dei contenuti."
+description: "Come il Gruppo PC di Genzano comunica sui social: canali ufficiali, orari di presìdio, netiquette, moderazione e licenza dei contenuti."
 layout: "single"
 dataUltimaRevisione: "2026-05-06"
 toc: true

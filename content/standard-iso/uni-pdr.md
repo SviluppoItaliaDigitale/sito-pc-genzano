@@ -1,6 +1,6 @@
 ---
 title: "UNI/PdR — Prassi di Riferimento (gratuite)"
-description: "Le UNI/PdR sono documenti pre-normativi pubblicati gratuitamente da UNI: cornici, linee guida e framework che precedono o accompagnano le norme. Una risorsa accessibile per cittadini, enti locali e organizzazioni di volontariato."
+description: "Le UNI/PdR sono documenti pre-normativi di UNI, gratuiti: linee guida e framework per cittadini, enti locali e organizzazioni di volontariato."
 layout: "single"
 ---
 

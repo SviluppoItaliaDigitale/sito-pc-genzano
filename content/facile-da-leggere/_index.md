@@ -1,6 +1,6 @@
 ---
 title: "Facile da leggere"
-description: "Le informazioni più importanti di protezione civile in versione semplice: 112, terremoto, pioggia forte, incendio, temporale, vento, blackout, caldo e zaino di emergenza."
+description: "Protezione civile in versione semplice: 112, terremoto, pioggia forte, incendio, temporale, vento, blackout, caldo e zaino di emergenza. Testi brevi e facili."
 tts: true
 layout: "single"
 aliases:
