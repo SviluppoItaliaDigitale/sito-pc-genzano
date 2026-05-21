@@ -41,7 +41,7 @@ L'articolo disciplina i **meccanismi finanziari** ordinari del Servizio Nazional
 
 Il Codice si applica alle **Regioni a statuto speciale** (Valle d'Aosta, Trentino-Alto Adige, Friuli-Venezia Giulia, Sicilia, Sardegna) e alle **Province autonome** (Trento, Bolzano) **compatibilmente con i rispettivi statuti**. Le specificità locali sono salvaguardate: non si sovrappone il Codice ad autonomie speciali costituzionalmente garantite.
 
-Per il Lazio — Regione a statuto ordinario — il Codice si applica in pieno, integrato dalla **Legge Regionale Lazio 22/2019** e dal relativo regolamento.
+Per il Lazio — Regione a statuto ordinario — il Codice si applica in pieno, integrato dalla **Legge Regionale Lazio 26 febbraio 2014, n. 2** sul sistema integrato regionale di protezione civile.
 
 ## Articolo 48 — Clausola di invarianza per le Forze Armate e di Polizia
 

@@ -12,7 +12,7 @@ Il volontariato è citato come **"componente del Servizio nazionale"** fin dall'
 
 Richiama il **principio costituzionale di sussidiarietà orizzontale** (art. 118 Cost.): le autorità pubbliche **favoriscono** l'iniziativa autonoma dei cittadini, singoli o associati, per lo svolgimento di attività di interesse generale — inclusa la protezione civile.
 
-Le **attività di volontariato** di protezione civile sono **gratuite** e **personali**: nessun volontario può ricevere compenso per l'attività svolta (diverso è il **rimborso spese**, trattato all'art. 39).
+Le **attività di volontariato** di protezione civile sono **gratuite** e **personali**: nessun volontario può ricevere compenso per l'attività svolta (diverso è il **rimborso spese**, trattato all'art. 40).
 
 ## Articolo 32 — Forme associative del volontariato
 
@@ -78,40 +78,28 @@ Il Codice promuove **esercitazioni** periodiche per mantenere **efficienza opera
 
 La **formazione** dei volontari è responsabilità congiunta delle Regioni e delle organizzazioni di appartenenza, sulla base di **standard nazionali** definiti con direttive del Presidente del Consiglio.
 
-## Articolo 38 — Benefici dei volontari: art. 39 del Codice
+## Articolo 38 — Partecipazione del volontariato alla pianificazione
+
+Le organizzazioni di volontariato di protezione civile partecipano all'elaborazione e all'attuazione dei piani di protezione civile. Possono richiedere copia degli studi pubblici in materia. Il Dipartimento Nazionale coordina, con le Regioni, le iniziative di formazione per valorizzare la partecipazione dei volontari nella pianificazione.
+
+## Articolo 39 — Tutele e strumenti per la partecipazione effettiva dei volontari
 
 Questo articolo è **cruciale** per chi svolge attività di volontariato. Stabilisce che, durante attività **pianificate e autorizzate**, i volontari iscritti hanno diritto a:
 
-- **Mantenimento del posto di lavoro** — il datore di lavoro è tenuto a concedere i permessi retribuiti per partecipare alle attività di protezione civile
-- **Integrazione della retribuzione** — il datore viene rimborsato dallo Stato per i giorni in cui il lavoratore è impegnato
-- **Mantenimento della copertura previdenziale e assicurativa**
-- **Rimborso delle spese** sostenute
+- **Mantenimento del posto di lavoro** pubblico o privato — il datore di lavoro è tenuto a concedere i permessi per partecipare alle attività di protezione civile
+- **Mantenimento del trattamento economico e previdenziale** — il datore viene rimborsato dallo Stato per i giorni in cui il lavoratore è impegnato (o il lavoratore autonomo riceve un'indennità giornaliera)
+- **Copertura assicurativa** per infortuni e responsabilità civile verso terzi durante l'attività
+- **Limiti di attivazione**: fino a 30 giorni consecutivi e 90 giorni annui nelle attività ordinarie; fino a 60 giorni consecutivi e 180 giorni annui nelle emergenze nazionali
 
-Questi diritti si applicano solo per attività **ufficialmente attivate** (con nota di attivazione) e **svolte sotto il coordinamento** di un'autorità competente. Per questo ogni intervento del nostro Gruppo deve essere **tracciato**.
+Questi diritti si applicano solo per attività **ufficialmente attivate** (con nota di attivazione) e **svolte sotto il coordinamento** di un'autorità competente. Partecipare ad attività **non autorizzate** può far venir meno la copertura. Per questo ogni intervento del nostro Gruppo deve essere **tracciato**.
 
-## Articolo 39 — Copertura assicurativa
+## Articolo 40 — Rimborso delle spese al volontariato organizzato
 
-Tutti i volontari iscritti e attivati sono coperti da **assicurazione** per:
+Le organizzazioni di volontariato iscritte e i datori di lavoro possono richiedere il **rimborso delle spese autorizzate** per attività di pianificazione, emergenza, addestramento e formazione, e diffusione della cultura di protezione civile. Le istanze sono presentate al soggetto che ha emesso la comunicazione di attivazione entro due anni dalla conclusione dell'attività.
 
-- **Infortuni** che accadono durante l'attività di protezione civile
-- **Responsabilità civile** verso terzi
+## Articolo 41 — Modalità di intervento in emergenza
 
-La copertura è garantita dall'organizzazione di appartenenza, dalla Regione o dal Dipartimento Nazionale — a seconda della natura dell'attività. Partecipare ad attività **non autorizzate** o svolte fuori dai canoni previsti **può far venir meno** la copertura: è una delle ragioni per cui nessun volontario dovrebbe mai agire di propria iniziativa in scenari di rischio.
-
-## Articolo 40 — Contributi e finanziamenti
-
-Le organizzazioni di volontariato iscritte possono ricevere **contributi** finanziari per:
-
-- **Acquisto** di mezzi e attrezzature
-- **Formazione** e addestramento
-- **Esercitazioni**
-- **Manutenzione** del parco mezzi
-
-I contributi sono erogati dal Dipartimento Nazionale o dalle Regioni secondo bandi pubblici e criteri di priorità.
-
-## Articolo 41 — Comunicazioni in emergenza
-
-Le organizzazioni possono gestire, coordinandosi con le autorità competenti, **sistemi di comunicazione** in emergenza (radio, telefonia alternativa, ponti radio). Il nostro Gruppo, come molti gruppi comunali, dispone di una **squadra radiocomunicazioni** con apparati HF/VHF/UHF abilitati alle frequenze di emergenza.
+Le organizzazioni di volontariato prestano la propria opera su richiesta delle **autorità competenti**, in coordinamento con le strutture regionali (per gli elenchi territoriali) o con il Dipartimento Nazionale (per l'elenco centrale). In via eccezionale, i volontari già presenti sul luogo dell'evento possono prestare soccorso immediato anche prima del contatto con l'autorità, a condizione di comunicarlo tempestivamente alle strutture di coordinamento competenti. Il nostro Gruppo, come molti gruppi comunali, dispone di una **squadra radiocomunicazioni** con apparati HF/VHF/UHF abilitati alle frequenze di emergenza per supportare questo coordinamento.
 
 ## Articolo 42 — Disposizioni finali del Capo VI
 

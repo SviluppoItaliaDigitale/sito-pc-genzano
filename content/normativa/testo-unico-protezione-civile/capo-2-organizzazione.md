@@ -42,7 +42,7 @@ Il **Comune** è il livello **più vicino al cittadino** ed è il perno operativ
 - **informa** la popolazione sui rischi e sui comportamenti di autoprotezione
 - **istituisce** il **Centro Operativo Comunale (COC)** o struttura equivalente
 - può costituire un **Gruppo Comunale di Volontariato** di protezione civile
-- **attiva** in emergenza le funzioni di supporto secondo il Metodo Augustus
+- **attiva** in emergenza le funzioni di supporto secondo il Metodo Augustus (aggiornato dalla **Direttiva PCM 30 aprile 2021** sulla pianificazione di protezione civile, che costituisce il riferimento normativo vigente)
 
 Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma nasce proprio da questa previsione: è una delle forme con cui il Comune esercita la funzione di protezione civile locale.
 
