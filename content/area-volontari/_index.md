@@ -1,5 +1,6 @@
 ---
 title: "Area Volontari"
+faq_schema: true
 description: "Accesso alla piattaforma operativa Activepager riservata ai volontari del Gruppo Comunale di Protezione Civile di Genzano di Roma."
 layout: "single"
 toc: false

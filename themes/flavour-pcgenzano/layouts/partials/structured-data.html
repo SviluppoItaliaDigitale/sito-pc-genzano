@@ -267,6 +267,32 @@
 }
 </script>
 {{ end }}
+{{/* FAQPage automatico: pagine NON-/faq/ con accordion <details class="faq-item">.
+     Estrae domanda (<summary>) e risposta e genera JSON-LD FAQPage, utile per
+     citazioni AI e Google. | jsonify | safeJS per evitare il doppio escape
+     contestuale dentro <script>. */}}
+{{ if and (not $isFAQ) .Params.faq_schema }}
+{{ $faqs := findRESubmatch `(?s)<details[^>]*faq-item[^>]*>\s*<summary>(.*?)</summary>(.*?)</details>` .Content }}
+{{ if $faqs }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": {{ .Title | jsonify | safeJS }},
+  "url": {{ $prodURL | jsonify | safeJS }},
+  "mainEntity": [
+{{- range $i, $m := $faqs }}{{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ index $m 1 | plainify | htmlUnescape | chomp | jsonify | safeJS }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ index $m 2 | plainify | htmlUnescape | chomp | jsonify | safeJS }} }
+    }
+{{- end }}
+  ]
+}
+</script>
+{{ end }}
+{{ end }}
 {{/* HowTo — schema aggiuntivo per pagine procedure di emergenza con
      struttura PRIMA/DURANTE/DOPO esplicitata nel frontmatter.
      Attivato dai 3 campi `howto_prima` / `howto_durante` / `howto_dopo`.
