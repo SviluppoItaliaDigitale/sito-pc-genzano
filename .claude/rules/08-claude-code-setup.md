@@ -73,7 +73,17 @@ curl -s -X POST https://api.firecrawl.dev/v1/scrape \
 
 ## Playwright MCP — browser automation per smoke test post-deploy
 
-🟢 **Installato 19 maggio 2026** come MCP server stdio scope user (`@executeautomation/playwright-mcp-server` v1.0.12 via `npx`). Niente API key. Al primo uso scarica Chromium (~150 MB).
+🟢 **Installato 19 maggio 2026** come MCP server stdio scope user. Niente API key.
+
+⚠️ **Riconfigurato 21 maggio 2026 — usa il Google Chrome di sistema (non il browser-bundle).** Su **Ubuntu 26.04** il browser-bundle di Playwright NON è installabile: `npx playwright install chromium` fallisce con `ERROR: Playwright does not support chromium on ubuntu26.04-x64` (vale anche per playwright 1.60). Per questo il vecchio server `@executeautomation/playwright-mcp-server` andava in `✗ Failed to connect`. Fix applicato (persistente in `~/.claude.json`, scope user):
+
+```bash
+claude mcp remove playwright -s user
+claude mcp add playwright -s user -- npx -y @playwright/mcp@latest --browser chrome --no-sandbox
+claude mcp list   # deve mostrare: playwright ... ✓ Connected
+```
+
+Ora usa il **Google Chrome di sistema** (`/usr/bin/google-chrome-stable`, Chrome 141; headless verificato su Normattiva). Browser disponibili sulla macchina: `google-chrome-stable` (deb) e `chromium` (snap). **I tool `mcp__playwright__*` (e `mcp__firecrawl__*`) compaiono nella sessione solo dopo un riavvio di Claude Code** (gli MCP si agganciano all'avvio). Insieme a Firecrawl (JS-render + anti-bot + SSL) coprono la lettura *verbatim* dei siti istituzionali, incluse le pagine dinamiche con click (es. scheda "Aggiornamenti all'atto" di Normattiva) — utile per la verifica normativa anti-allucinazione.
 
 **Quando usare Playwright al posto di WebFetch/Firecrawl:**
 
