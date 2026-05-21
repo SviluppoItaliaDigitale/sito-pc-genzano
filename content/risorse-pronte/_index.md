@@ -1,6 +1,6 @@
 ---
 title: "Materiali pronti da scaricare"
-description: "Podcast, infografiche, presentazioni, quiz e flashcard sui rischi del territorio. Liberamente scaricabili, condivisibili, riutilizzabili per scuola, formazione e divulgazione."
+description: "Podcast, infografiche, quiz e flashcard sui rischi del territorio. Liberamente scaricabili e riutilizzabili per scuola, formazione e divulgazione."
 layout: "list"
 tts: true
 toc: true

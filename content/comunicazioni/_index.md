@@ -1,6 +1,6 @@
 ---
 title: "Comunicazioni e Notizie"
-description: "Archivio degli avvisi, delle attività e delle comunicazioni pubblicate dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e dai suoi canali social ufficiali."
+description: "Avvisi, attività e comunicazioni del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Aggiornamenti operativi e notizie dal territorio."
 aliases:
   - /comunicazioni.html
 sitemap:

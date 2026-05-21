@@ -1,6 +1,6 @@
 ---
 title: "Kit Calamità — schede stampabili per emergenza"
-description: "Kit stampabili A4 per bambini, anziani, RSA, disabilità, neonati, gravidanza, caregiver, terapie salvavita, italiano L2, persone senza dimora, animali domestici e volontari."
+description: "Kit stampabili A4 per categorie vulnerabili: bambini, anziani, RSA, disabilità, neonati, caregiver, terapie salvavita, italiano L2, senza dimora, animali."
 layout: "single"
 toc: true
 ---

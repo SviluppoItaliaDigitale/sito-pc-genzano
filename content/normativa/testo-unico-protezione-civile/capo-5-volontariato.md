@@ -1,7 +1,7 @@
 ---
 
 title: "Capo V — Partecipazione dei cittadini e volontariato organizzato (articoli 31-42)"
-description: "Il Capo V del Codice della Protezione Civile disciplina la cittadinanza attiva e il volontariato organizzato: gruppi comunali, organizzazioni, elenco nazionale, tutele, rimborsi, Comitato nazionale del volontariato."
+description: "Capo V del Codice PC: volontariato organizzato, gruppi comunali, elenco nazionale, tutele, rimborsi, Comitato nazionale del volontariato."
 toc: true
 aliases:
   - "/normativa/testo-unico-protezione-civile/capo-6-volontariato/"

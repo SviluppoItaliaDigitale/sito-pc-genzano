@@ -1,6 +1,6 @@
 ---
 title: "Quanto sei preparato a un'emergenza?"
-description: "Un quiz breve e non giudicante per scoprire cosa ti manca per essere davvero preparato a un'emergenza. Le domande si adattano alla tua situazione. Risultato e piano d'azione su misura, tutto sul tuo dispositivo."
+description: "Quiz non giudicante per capire se sei pronto a un'emergenza. Le domande si adattano alla tua situazione. Piano d'azione su misura, sul tuo dispositivo."
 type: "quiz-preparazione"
 layout: "list"
 sitemap:

@@ -1,6 +1,6 @@
 ---
 title: "Storia del rischio nei Castelli Romani — Genzano di Roma"
-description: "Linea del tempo verificata della Protezione Civile di Genzano di Roma e dei Castelli Romani: origine vulcanica, terremoto del 1806 (VIII MCS), crisi sismica 1989-90, alluvioni, tempeste, Giubileo 2025."
+description: "Linea del tempo della PC di Genzano e dei Castelli Romani: origine vulcanica, terremoto del 1806, crisi sismica 1989-90, alluvioni, tempeste, Giubileo 2025."
 keywords: ["storia protezione civile genzano di roma", "rischi territorio castelli romani", "terremoto 1806 castelli romani", "crisi sismica colli albani 1989", "vulcano laziale", "lago di nemi"]
 type: "storia"
 layout: "list"

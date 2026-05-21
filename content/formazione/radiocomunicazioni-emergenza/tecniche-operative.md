@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 2 — Tecniche operative di base"
-description: "Ascolto, uso del microfono, brevità, linguaggio piano, fonetica NATO, pro-words, nominativi tattici, identificazione di stazione. Le abitudini da evitare in emergenza."
+description: "Tecniche operative radio in emergenza: ascolto, fonetica NATO, pro-words, nominativi tattici, identificazione di stazione e abitudini da evitare."
 layout: "single"
 toc: true
 ---

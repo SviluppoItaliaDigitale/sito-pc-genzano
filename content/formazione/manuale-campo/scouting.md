@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 2 — Scouting e valutazione iniziale"
-description: "Il nucleo di valutazione è la prima squadra che raggiunge l'area colpita: procedure, azioni prima/durante/dopo l'evento e sette check-list operative per il campo."
+description: "Il nucleo di valutazione è la prima squadra sull'area colpita: procedure, azioni prima/durante/dopo l'evento e check-list operative per il campo."
 layout: "single"
 toc: true
 ---

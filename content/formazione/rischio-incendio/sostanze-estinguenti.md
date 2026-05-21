@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 2 — Sostanze estinguenti"
-description: "Acqua, schiuma, polveri, CO₂, gas inerti e sostituti degli halon: proprietà, azione estinguente, classi di fuoco compatibili e divieti di impiego su apparecchiature in tensione."
+description: "Acqua, schiuma, polveri, CO₂, gas inerti e sostituti degli halon: proprietà, classi di fuoco compatibili e divieti su apparecchiature in tensione."
 layout: "single"
 toc: true
 ---

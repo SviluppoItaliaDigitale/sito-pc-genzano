@@ -1,6 +1,6 @@
 ---
 title: "Kit Didattico — Scuola Secondaria di Secondo Grado"
-description: "Materiale didattico di protezione civile per studenti dai 14 ai 19 anni: approfondimenti scientifici, quadro normativo, comunicazione del rischio e volontariato."
+description: "Materiale PC per studenti 14-19 anni: approfondimenti scientifici, quadro normativo, comunicazione del rischio e volontariato di protezione civile."
 layout: "single"
 toc: true
 risorse_tema: "kit-emergenza"

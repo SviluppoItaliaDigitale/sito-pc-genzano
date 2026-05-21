@@ -1,6 +1,6 @@
 ---
 title: "Kit Calamità per persone senza fissa dimora"
-description: "Schede stampabili A4 per persone senza fissa dimora o in grave marginalità in caso di calamità: identificazione minima, bisogni essenziali, servizi, salute, contatti e animali al seguito."
+description: "Schede A4 per persone senza fissa dimora in caso di calamità: identificazione, bisogni essenziali, servizi, salute, contatti e animali. Liberamente stampabili."
 layout: "single"
 ---
 

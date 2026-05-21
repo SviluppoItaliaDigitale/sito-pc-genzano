@@ -1,6 +1,6 @@
 ---
 title: "Stato del sistema"
-description: "Cruscotto pubblico di trasparenza tecnica e operativa: stato di allerta, modalità del sito, automazioni di manutenzione e conformità del sito della Protezione Civile di Genzano di Roma."
+description: "Cruscotto di trasparenza tecnica: stato di allerta, modalità del sito, automazioni di manutenzione e conformità. Protezione Civile Genzano di Roma."
 type: "stato-sistema"
 layout: "list"
 sitemap:

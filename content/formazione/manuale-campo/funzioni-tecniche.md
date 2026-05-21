@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 3 — Funzioni tecniche"
-description: "Gli impianti e le strutture di emergenza: rete radio, elettrico, idrico e fognario, tende e tensostrutture, ristorazione, magazzini, servizi igienici e sicurezza."
+description: "Impianti e strutture di emergenza: rete radio, elettrico, idrico, tende, tensostrutture, ristorazione, magazzini, servizi igienici e sicurezza del campo."
 layout: "single"
 toc: true
 ---

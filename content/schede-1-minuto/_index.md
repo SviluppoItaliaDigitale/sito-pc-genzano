@@ -1,6 +1,6 @@
 ---
 title: "Un minuto per proteggerti"
-description: "Sei micro-schede di autoprotezione in un minuto: torcia, 112, punto di ritrovo, kit auto, terremoto per bambini, documenti essenziali. Stampabili A5 per bacheca, casa, sede."
+description: "Sei micro-schede di autoprotezione: torcia, 112, punto di ritrovo, kit auto, terremoto per bambini, documenti essenziali. Stampabili A5 per bacheca, casa, sede."
 type: "schede-1-minuto"
 layout: "single"
 toc: false

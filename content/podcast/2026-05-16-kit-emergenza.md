@@ -1,7 +1,7 @@
 ---
 title: "Podcast: Kit emergenza famiglia"
 date: 2026-05-16T00:01:00+02:00
-description: "Episodio podcast sui tre kit di emergenza (Vai, Casa, Auto): cosa preparare prima dell'evento, quantità per persona, manutenzione, adattamenti per categorie vulnerabili."
+description: "Podcast sui tre kit di emergenza (Vai, Casa, Auto): cosa preparare, quantità per persona, manutenzione e adattamenti per categorie vulnerabili."
 episodio: 2
 audio: "/podcast/episodi/2026-05-16-kit-emergenza-podcast.m4a"
 draft: false

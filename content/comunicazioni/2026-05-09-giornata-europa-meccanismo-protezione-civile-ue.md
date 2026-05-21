@@ -1,7 +1,7 @@
 ---
 title: "Giornata dell'Europa: il Meccanismo Unionale di Protezione Civile"
 date: 2026-05-09T00:03:00+02:00
-description: "Il 9 maggio si celebra la Giornata dell'Europa. Cos'è il Meccanismo Unionale di Protezione Civile, come funziona l'ERCC e perché riguarda anche i territori locali."
+description: "Il 9 maggio è la Giornata dell'Europa. Cos'è il Meccanismo Unionale di Protezione Civile, come funziona l'ERCC e perché riguarda anche i territori locali."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

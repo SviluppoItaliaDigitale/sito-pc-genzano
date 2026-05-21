@@ -1,6 +1,6 @@
 ---
 title: "Schede didattiche dei giochi"
-description: "Tabella riepilogativa dei giochi educativi del sito: obiettivo, età consigliata, durata, competenze di Educazione Civica, accessibilità. Materiale per docenti e formatori."
+description: "Tabella dei giochi educativi: obiettivo, età consigliata, durata, competenze di Ed. Civica, accessibilità. Materiale per docenti e formatori PC."
 layout: "single"
 toc: true
 tts: true

@@ -1,6 +1,6 @@
 ---
 title: "Addestramento e buone pratiche"
-description: "Come si addestra il Gruppo Comunale di Protezione Civile di Genzano: addestramento continuo nei turni operativi, esercitazioni programmate, formazione su mezzi e attrezzature. Vetrina educativa, non diario operativo."
+description: "Come si addestra il Gruppo PC di Genzano: turni, esercitazioni programmate, formazione su mezzi e attrezzature. Vetrina educativa, non diario operativo."
 type: "esercitazioni"
 layout: "list"
 sitemap:

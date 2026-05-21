@@ -1,7 +1,7 @@
 ---
 
 title: "Capo VI — Misure e strumenti organizzativi e finanziari (articoli 43-46)"
-description: "Il Capo VI del Codice della Protezione Civile disciplina i fondi e gli strumenti finanziari del Servizio nazionale: Fondo nazionale per previsione e prevenzione, Fondo per le emergenze nazionali, Fondo regionale, strumenti organizzativi."
+description: "Il Capo VI del Codice PC disciplina i fondi del Servizio nazionale: Fondo prevenzione, Fondo emergenze nazionali, Fondo regionale e altri strumenti finanziari."
 toc: true
 ---
 Il **Capo VI** del Codice della Protezione Civile (articoli 43-46) disciplina le **misure e gli strumenti organizzativi e finanziari** che rendono concretamente possibili le attività di protezione civile. Stabilisce un principio chiaro: la protezione civile è **finanziata**, non volontaristica. Senza risorse adeguate il sistema non funziona.

@@ -1,6 +1,6 @@
 ---
 title: "Kit per persone fragili e bisogni specifici"
-description: "Punto di accesso ai kit per anziani, persone con disabilità, caregiver, terapie salvavita, gravidanza, neonati, bambini, animali domestici e difficoltà comunicative."
+description: "Kit di emergenza per anziani, disabilità, caregiver, terapie salvavita, gravidanza, neonati, bambini, animali domestici e difficoltà comunicative."
 date: 2026-05-05
 draft: false
 type: "page"

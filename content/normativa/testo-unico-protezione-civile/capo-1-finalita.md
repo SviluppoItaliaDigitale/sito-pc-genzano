@@ -1,7 +1,7 @@
 ---
 
 title: "Capo I — Finalità, attività e composizione del SNPC (articoli 1-6)"
-description: "Il primo Capo del Codice della Protezione Civile definisce cos'è il Servizio Nazionale, quali attività svolge, da chi è composto e quali sono le attribuzioni del Presidente del Consiglio e delle autorità territoriali."
+description: "Capo I del Codice PC: cos'è il Servizio Nazionale, le attività, la composizione e le attribuzioni del Presidente del Consiglio e delle autorità territoriali."
 toc: true
 ---
 Il **Capo I** del Codice della Protezione Civile (articoli da 1 a 6) è la sezione "fondativa": definisce **che cos'è** il Servizio Nazionale della Protezione Civile, **quali attività** svolge, **da chi è composto** e **quali sono le attribuzioni** delle autorità di vertice e di quelle territoriali. Senza queste definizioni il resto del Codice non si capirebbe.

@@ -1,6 +1,6 @@
 ---
 title: "Podcast — Voci dalla Protezione Civile di Genzano"
-description: "Il podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma: divulgazione dei rischi locali, racconti di esercitazioni, interviste a volontari ed esperti. Ascoltabile su Spotify, Apple Podcasts e da qualsiasi app con il feed RSS."
+description: "Podcast del Gruppo PC di Genzano: rischi locali, esercitazioni, interviste a esperti. Ascoltabile su Spotify, Apple Podcasts e via feed RSS."
 type: "podcast"
 layout: "list"
 outputs:

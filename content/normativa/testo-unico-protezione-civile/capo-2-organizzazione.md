@@ -1,7 +1,7 @@
 ---
 
 title: "Capo II — Organizzazione del Servizio nazionale (articoli 7-15)"
-description: "Il Capo II del Codice della Protezione Civile: tipologia degli eventi, funzioni di Dipartimento, Prefetto, Vigili del Fuoco, Regioni e Comuni, strutture operative, Comitato operativo e direttive."
+description: "Capo II del Codice PC: tipologia degli eventi, funzioni di Dipartimento, Prefetto, VVF, Regioni e Comuni, strutture operative, Comitato operativo e direttive."
 toc: true
 ---
 Il **Capo II** del Codice della Protezione Civile (articoli 7-15) disegna **l'impalcatura operativa** del Servizio Nazionale. Risponde a una domanda semplice: di fronte a un evento, **chi fa cosa**. Il Codice lo organizza in tre Sezioni: gli **eventi** (art. 7), le **funzioni** dei diversi soggetti (artt. 8-13) e gli **strumenti di coordinamento** (artt. 14-15).

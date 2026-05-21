@@ -1,6 +1,6 @@
 ---
 title: "Kit Calamità per caregiver familiari"
-description: "Schede stampabili A4 per chi assiste a casa un familiare non autosufficiente in caso di calamità: informazioni essenziali, piano di emergenza, terapie, ausili e rete di supporto."
+description: "Schede A4 per caregiver familiari in caso di calamità: piano di emergenza, terapie, ausili e rete di supporto per chi assiste un familiare non autosufficiente."
 layout: "single"
 ---
 

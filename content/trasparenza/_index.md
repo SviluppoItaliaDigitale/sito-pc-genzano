@@ -1,6 +1,6 @@
 ---
 title: "Trasparenza"
-description: "Natura giuridica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, iscrizione al RUNTS, accesso ai documenti istituzionali e procedura di accesso civico."
+description: "Natura giuridica del Gruppo PC di Genzano, iscrizione al RUNTS, accesso ai documenti istituzionali e procedura di accesso civico."
 layout: "single"
 toc: true
 tts: true

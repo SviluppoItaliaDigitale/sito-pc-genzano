@@ -1,6 +1,6 @@
 ---
 title: "Ascolta il sito"
-description: "Tutto il sito può essere ascoltato ad alta voce: articoli, pagine, podcast. Niente app, niente account. Pensato per anziani, ipovedenti, dislessici e persone in mobilità."
+description: "Tutto il sito può essere ascoltato ad alta voce. Niente app, niente account. Pensato per anziani, ipovedenti, dislessici e persone in mobilità."
 type: "articoli-da-ascoltare"
 layout: "list"
 aliases:

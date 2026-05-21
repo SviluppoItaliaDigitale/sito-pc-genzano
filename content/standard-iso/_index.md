@@ -1,6 +1,6 @@
 ---
 title: "Standard ISO per la Protezione Civile"
-description: "Repertorio degli standard internazionali ISO rilevanti per la Protezione Civile italiana: emergency management, gestione del rischio, comunicazione di crisi, segnaletica, adattamento climatico, resilienza."
+description: "Standard internazionali ISO per la Protezione Civile: emergency management, gestione del rischio, comunicazione di crisi, segnaletica e resilienza."
 layout: "single"
 toc: true
 dataUltimaRevisione: "2026-05-09"
