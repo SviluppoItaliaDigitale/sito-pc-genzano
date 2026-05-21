@@ -285,7 +285,7 @@ Un'unità didattica vera, che attraversa più discipline e può integrare l'inco
 | 5 — [Fake news e comunicazione di crisi](#percorso-5) | Secondaria I-II | 3 ore | Fonti ufficiali, IT-alert | L. 92/2019 (Cittadinanza digitale) |
 | 6 — [Sicurezza nei luoghi di lavoro e PCTO](#percorso-6) | Secondaria II | 4-6 ore | DPI, rischio operativo, L. 21/2025 | L. 92/2019 art. 3 lett. h-ter |
 | 7 — [Rischio idrogeologico e territorio](#percorso-7) | Primaria · Secondaria I | 3 ore | Frane, alluvioni, zone allerta Lazio | L. 92/2019 art. 3 lett. h |
-| 8 — [Incendi boschivi e Castelli Romani](#percorso-8) | Secondaria I-II | 3 ore | Zona AIB 9, bollettino, comportamenti | L. 353/2000 + L.R. Lazio 14/2008 |
+| 8 — [Incendi boschivi e Castelli Romani](#percorso-8) | Secondaria I-II | 3 ore | Zona AIB 9, bollettino, comportamenti | L. 353/2000 + L.R. Lazio 39/2002 |
 | 9 — [Primo soccorso e cuore (introduttivo)](#percorso-9) | Secondaria II | 4 ore | PLS, RCP, DAE, antisoffocamento | L. 116/2021 + linee guida IRC 2025 |
 | 10 — [Volontariato e cittadinanza attiva](#percorso-10) | Secondaria II | 3 ore + PCTO | Storia, sussidiarietà, Terzo Settore | D.Lgs. 117/2017 + D.Lgs. 1/2018 |
 | 11 — [Protezione Civile europea e UCPM](#percorso-11) | Secondaria II | 2-3 ore | UCPM, ERCC, rescEU, Copernicus | Decisione UE 1313/2013 + art. 11 Cost. |
@@ -647,7 +647,7 @@ Rubrica fascia, indicatori 1 (autoprotezione), 3 (conoscenza del territorio), 4 
 <span class="meta-badge meta-nucleo">2 — Sviluppo economico e sostenibilità</span>
 </div>
 
-<p class="percorso-norma"><strong>Riferimento normativo:</strong> **L. 21 novembre 2000, n. 353** (Legge quadro in materia di incendi boschivi) e **L.R. Lazio 25 luglio 2008, n. 14** sul ruolo della Regione nella prevenzione AIB.</p>
+<p class="percorso-norma"><strong>Riferimento normativo:</strong> **L. 21 novembre 2000, n. 353** (Legge quadro in materia di incendi boschivi) e **L.R. Lazio 28 ottobre 2002, n. 39** (legge forestale regionale, art. 64 sulla prevenzione e lotta attiva agli incendi boschivi).</p>
 
 ### Articolazione
 
@@ -1135,4 +1135,4 @@ Scrivere a **[segreteria@protezionecivilegenzano.it](mailto:segreteria@protezion
 ---
 
 **Ultimo aggiornamento**: 19 maggio 2026.
-**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h e h-ter) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 81/2008 · D.Lgs. 77/2005 (PCTO) · L. 145/2018 (art. 1 c. 785 monte ore PCTO) · D.M. 774/2019 (Linee guida PCTO) · D.Lgs. 62/2017 · D.M. 26/08/1992 (prevenzione incendi nelle scuole) · L. 353/2000 (Legge quadro incendi boschivi) · L.R. Lazio 14/2008 · L. 116/2021 (DAE) · D.Lgs. 117/2017 (Codice del Terzo Settore) · Decisione UE 1313/2013 (Meccanismo UCPM) · L. 107/2015 (autonomia scolastica) · Raccomandazione UE 22 maggio 2018 · **D.Lgs. 105/2015** (Seveso III) · **Reg. CE 1272/2008** (CLP) · **L. 18/2009** (ratifica Convenzione ONU disabilità 2006) · **L. 4/2004** (Legge Stanca, accessibilità digitale) · **ISO 22395:2018** (comunicazione persone vulnerabili in emergenza) · **Sendai Framework 2015-2030** (UNDRR) · **WHO Psychological First Aid Guide 2011** · **Sphere Standards 2018**.
+**Riferimenti normativi**: L. 92/2019 (art. 3 lett. h e h-ter) · D.M. 7 settembre 2024 n. 183 (a.s. 2024/2025) · L. 17 febbraio 2025 n. 21 · D.Lgs. 1/2018 · D.Lgs. 81/2008 · D.Lgs. 77/2005 (PCTO) · L. 145/2018 (art. 1 c. 785 monte ore PCTO) · D.M. 774/2019 (Linee guida PCTO) · D.Lgs. 62/2017 · D.M. 26/08/1992 (prevenzione incendi nelle scuole) · L. 353/2000 (Legge quadro incendi boschivi) · L.R. Lazio 39/2002 (legge forestale regionale, AIB) · L. 116/2021 (DAE) · D.Lgs. 117/2017 (Codice del Terzo Settore) · Decisione UE 1313/2013 (Meccanismo UCPM) · L. 107/2015 (autonomia scolastica) · Raccomandazione UE 22 maggio 2018 · **D.Lgs. 105/2015** (Seveso III) · **Reg. CE 1272/2008** (CLP) · **L. 18/2009** (ratifica Convenzione ONU disabilità 2006) · **L. 4/2004** (Legge Stanca, accessibilità digitale) · **ISO 22395:2018** (comunicazione persone vulnerabili in emergenza) · **Sendai Framework 2015-2030** (UNDRR) · **WHO Psychological First Aid Guide 2011** · **Sphere Standards 2018**.
