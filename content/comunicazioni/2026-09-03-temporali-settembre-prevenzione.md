@@ -10,6 +10,7 @@ image_alt: "Nube temporalesca a forma di incudine sulle colline dei Castelli Rom
 scadenza: ""
 area: "Castelli Romani"
 allegati: []
+versione_facile: "2026-09-03-temporali-settembre-prevenzione-facile"
 draft: false
 ---
 

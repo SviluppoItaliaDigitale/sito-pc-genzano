@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-08-26-scuole-ripresa-settembre-prepararsi-facile"
 ---
 
 A settembre ogni scuola del territorio riapre le sue porte a migliaia di bambini e ragazzi. È il momento giusto per ricordare che **ogni istituto scolastico è tenuto ad avere un Piano di Emergenza** aggiornato, prove periodiche di evacuazione, personale formato, planimetrie visibili. Un promemoria utile per famiglie, insegnanti, dirigenti e personale ATA.

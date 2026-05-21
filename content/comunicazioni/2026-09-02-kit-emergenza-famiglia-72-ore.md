@@ -10,6 +10,7 @@ image_alt: "Zaino di emergenza aperto con borraccia, radio a pile, torcia, kit m
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-09-02-kit-emergenza-famiglia-72-ore-facile"
 draft: false
 ---
 

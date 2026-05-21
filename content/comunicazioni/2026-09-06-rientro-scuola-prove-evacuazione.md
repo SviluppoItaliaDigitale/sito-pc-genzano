@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-09-06-rientro-scuola-prove-evacuazione-facile"
 ---
 
 Con la ripresa delle attività scolastiche, molte scuole del territorio effettuano, nei primi giorni o entro ottobre, la **prima prova di evacuazione** dell'anno. Non è una formalità: è un momento fondamentale per la sicurezza di bambini, ragazzi e personale. Ecco cosa devono sapere alunni, insegnanti e famiglie.
