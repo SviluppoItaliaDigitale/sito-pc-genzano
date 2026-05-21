@@ -13,7 +13,7 @@ howto_prima: "Fissa alle pareti mobili alti, librerie e scaffali con tasselli o 
 howto_durante: "Se sei in un luogo chiuso, cerca riparo sotto un tavolo robusto, una scrivania o vicino a un muro portante. Proteggiti la testa con un cuscino o con le braccia. NON precipitarti fuori durante la scossa. Non usare le scale e non usare l'ascensore. Allontanati da finestre, vetri, specchi e mobili pesanti che possono cadere. Se sei all'aperto, allontanati da edifici, alberi, lampioni, linee elettriche e cartelloni; cerca un'area aperta e attendi la fine della scossa."
 howto_dopo: "Assicurati dello stato di salute delle persone intorno a te. Esci con prudenza, indossando le scarpe (possono esserci vetri e calcinacci). Raggiungi le aree di attesa previste dal Piano di Emergenza Comunale. Non rientrare in casa finché le autorità non lo consentono. Non usare il telefono se non per reali necessità, per non intasare le linee. Chiudi il gas e l'interruttore generale dell'elettricità prima di uscire. Stai lontano da costruzioni danneggiate. Ascolta le notizie fornite dalle autorità tramite radio o canali ufficiali."
 ---
-Il terremoto è un evento naturale non prevedibile. L'unica difesa possibile è la prevenzione, la conoscenza delle corrette norme di comportamento e la preparazione.
+Il terremoto non si può prevedere. L'unica difesa è prepararsi prima: sapere cosa fare, avere il kit pronto, conoscere le vie di fuga.
 
 ## <i class="bi bi-broadcast text-primary me-2" aria-hidden="true"></i>Terremoti recenti in Italia {#terremoti-recenti}
 Mappa e lista degli eventi sismici recenti rilevati dall'**Istituto Nazionale di Geofisica e Vulcanologia (INGV)** — fonte scientifica ufficiale in Italia. La vista mostra tutti i terremoti localizzati sul territorio nazionale; usa il menu interno per filtrare per magnitudo, profondità e periodo.
@@ -42,55 +42,55 @@ Il Comune di Genzano di Roma è classificato in **zona sismica 2B** (media sismi
 > 🤟 **In Lingua dei Segni**: cosa significa "magnitudo"? Il [Glossario in LIS sul rischio sismico](/lis/#rischio-sismico) spiega in Lingua Italiana dei Segni i termini chiave dei terremoti — magnitudo, epicentro, classificazione sismica, fenomeni precursori, reti di monitoraggio.
 
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
-I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. Diffida di chi afferma di poter prevedere un terremoto. L'unico approccio efficace è **essere sempre preparati**.
+I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. Non fidarti di chi dice di saper prevedere un terremoto. L'unico approccio efficace è **essere sempre preparati**.
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Vai" — evacuazione rapida](/rischi-prevenzione/kit-emergenza/#kit-vai) è essenziale per il rischio sismico. Tienilo pronto vicino all'ingresso, con scarpe robuste e torcia accessibili anche al buio. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA del terremoto {#cosa-fare-prima}
-- Fissa alle pareti mobili alti, librerie e scaffali con tasselli o staffe
-- Allontana gli oggetti pesanti dai letti e dai divani
-- Tieni a portata di mano un [kit di emergenza](/rischi-prevenzione/kit-emergenza/) con torcia, radio a pile, acqua e medicinali
-- Individua i punti sicuri della tua casa (sotto un tavolo robusto, contro un muro portante, vicino a una trave)
-- Individua le vie di fuga e le [aree di attesa](/cartografia/) più vicine
-- Compila il tuo [Piano Familiare](/piano-familiare/) e condividilo con tutti i componenti della famiglia
+- Fissa alle pareti mobili alti, librerie e scaffali con tasselli o staffe.
+- Allontana gli oggetti pesanti dai letti e dai divani.
+- Tieni a portata di mano un [kit di emergenza](/rischi-prevenzione/kit-emergenza/) con torcia, radio a pile, acqua e medicinali.
+- Individua i punti sicuri della tua casa (sotto un tavolo robusto, contro un muro portante, vicino a una trave).
+- Individua le vie di fuga e le [aree di attesa](/cartografia/) più vicine.
+- Compila il tuo [Piano Familiare](/piano-familiare/) e condividilo con tutti i componenti della famiglia.
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE la scossa {#cosa-fare-durante}
 **Se sei in un luogo chiuso:**
 
-- Cerca riparo sotto un tavolo robusto, una scrivania o vicino a un muro portante
-- Proteggiti la testa con un cuscino o con le braccia
-- **Non precipitarti fuori** durante la scossa
-- Non usare le scale e non usare l'ascensore
-- Allontanati da finestre, vetri, specchi e mobili pesanti che possono cadere
+- Cerca riparo sotto un tavolo robusto, una scrivania o vicino a un muro portante.
+- Proteggiti la testa con un cuscino o con le braccia.
+- **Non precipitarti fuori** durante la scossa.
+- Non usare le scale e non usare l'ascensore.
+- Allontanati da finestre, vetri, specchi e mobili pesanti che possono cadere.
 
 **Se sei all'aperto:**
 
-- Allontanati da edifici, alberi, lampioni, linee elettriche e cartelloni
-- Cerca un'area aperta e attendi la fine della scossa
-- Non fermarti sotto ponti, cavalcavia o strutture sopraelevate
+- Allontanati da edifici, alberi, lampioni, linee elettriche e cartelloni.
+- Cerca un'area aperta e attendi la fine della scossa.
+- Non fermarti sotto ponti, cavalcavia o strutture sopraelevate.
 
 **Se sei in auto:**
 
-- Accosta al lato della strada, lontano da ponti, cavalcavia e edifici
-- Non scendere dall'auto durante la scossa
-- Dopo la scossa, evita di percorrere ponti e sopraelevate che potrebbero essere danneggiati
+- Accosta al lato della strada, lontano da ponti, cavalcavia e edifici.
+- Non scendere dall'auto durante la scossa.
+- Dopo la scossa, evita di percorrere ponti e sopraelevate che potrebbero essere danneggiati.
 
 ## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO la scossa {#cosa-fare-dopo}
-- Assicurati dello stato di salute delle persone intorno a te
-- Esci con prudenza, **indossando le scarpe** (possono esserci vetri e calcinacci)
-- Raggiungi le [aree di attesa](/cartografia/) previste dal Piano di Emergenza Comunale
-- Non rientrare in casa finché le autorità non lo consentono
-- Non usare il telefono se non per reali necessità, per non intasare le linee
-- Chiudi il gas e l'interruttore generale dell'elettricità prima di uscire
-- Stai lontano da costruzioni danneggiate
-- Ascolta le notizie fornite dalle autorità tramite radio o canali ufficiali
+- Verifica che le persone intorno a te stiano bene.
+- Esci con prudenza, **indossando le scarpe** (possono esserci vetri e calcinacci).
+- Raggiungi le [aree di attesa](/cartografia/) previste dal Piano di Emergenza Comunale.
+- Non rientrare in casa finché le autorità non lo consentono.
+- Usa il telefono solo in caso di vera emergenza, per non intasare le linee.
+- Chiudi il gas e l'interruttore generale dell'elettricità prima di uscire.
+- Stai lontano da costruzioni danneggiate.
+- Segui le informazioni delle autorità via radio o canali ufficiali.
 
 {{< cosa-non-fare titolo="Cosa NON fare in caso di terremoto" >}}
-- **Non correre fuori durante la scossa**: la maggior parte delle vittime è colpita da calcinacci e oggetti in caduta
-- **Non usare gli ascensori**: possono bloccarsi e lasciarti intrappolato
-- **Non usare il telefono per curiosità**: lascia le linee libere per le emergenze reali
-- **Non rientrare in edifici danneggiati** per recuperare oggetti
-- **Non diffondere notizie non verificate**: segui solo le fonti ufficiali
+- **Non correre fuori durante la scossa**: calcinacci e oggetti in caduta causano la maggior parte delle vittime.
+- **Non usare gli ascensori**: possono bloccarsi e lasciarti intrappolato.
+- **Non usare il telefono per curiosità**: lascia le linee libere per le emergenze reali.
+- **Non rientrare in edifici danneggiati** per recuperare oggetti.
+- **Non diffondere notizie non verificate**: segui solo le fonti ufficiali.
 {{< /cosa-non-fare >}}
 
 ## <i class="bi bi-link-45deg text-primary me-2" aria-hidden="true"></i>Fonti e approfondimenti {#fonti}
