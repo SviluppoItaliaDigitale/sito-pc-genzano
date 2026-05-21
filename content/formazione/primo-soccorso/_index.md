@@ -25,12 +25,12 @@ Sei sottopagine divulgative, scritte in linguaggio semplice, per capire **cosa f
 
 | Tema | Pagina |
 |---|---|
-| Riconoscere un arresto cardiaco e chiamare il 112 | [Leggi](riconoscere-arresto/) |
-| Massaggio cardiaco: come si fa la rianimazione | [Leggi](massaggio-cardiaco/) |
-| Defibrillatore (DAE): come si usa e dove trovarlo | [Leggi](defibrillatore-dae/) |
-| Soffocamento: manovre di disostruzione | [Leggi](soffocamento-disostruzione/) |
-| Emorragie, ustioni, traumi: primo soccorso base | [Leggi](emorragie-ustioni-traumi/) |
-| Rianimazione nei bambini e nei neonati | [Leggi](rcp-bambini-neonati/) |
+| Riconoscere un arresto cardiaco e chiamare il 112 | [Riconoscere un arresto cardiaco](riconoscere-arresto/) |
+| Massaggio cardiaco: come si fa la rianimazione | [Massaggio cardiaco e rianimazione](massaggio-cardiaco/) |
+| Defibrillatore (DAE): come si usa e dove trovarlo | [Defibrillatore (DAE): uso e localizzazione](defibrillatore-dae/) |
+| Soffocamento: manovre di disostruzione | [Soffocamento: manovre di disostruzione](soffocamento-disostruzione/) |
+| Emorragie, ustioni, traumi: primo soccorso base | [Emorragie, ustioni e traumi: primo soccorso](emorragie-ustioni-traumi/) |
+| Rianimazione nei bambini e nei neonati | [Rianimazione nei bambini e nei neonati](rcp-bambini-neonati/) |
 
 ## Le Linee Guida IRC 2025 — testi ufficiali
 
@@ -38,13 +38,13 @@ I documenti ufficiali sono pubblicati da **Italian Resuscitation Council (IRC)**
 
 | Capitolo | Titolo | Revisori | PDF ufficiale |
 |---|---|---|---|
-| 2 | Epidemiologia della rianimazione | C. Sorlini, M. Tumolo | [Scarica](https://www.ircouncil.it/wp-content/uploads/2026/02/CAPITOLO_2-EPIDEMIOLOGIA-1.pdf) |
-| 3 | Sistemi che salvano vite | — | [Scarica](https://www.ircouncil.it/wp-content/uploads/2026/03/CAPITOLO_3-SISTEMI-CHE-SALVANO-VITE.pdf) |
-| 4 | Basic Life Support (adulto) | R. Cusmà Piccione, R. Giudici | [Scarica](https://www.ircouncil.it/wp-content/uploads/2026/02/CAPITOLO_4-BLS-ADULTO.pdf) |
-| 8 | Supporto vitale del neonato | D. Silvagni | [Scarica](https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_8-NLS_13.04.2026.pdf) |
-| 9 | Supporto alle funzioni vitali in età pediatrica | M. Tumolo | [Scarica](https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_9-BLS_PEDIATRICO_02.04.2026.pdf) |
-| 11 | Etica nella rianimazione | C. Sorlini | [Scarica](https://www.ircouncil.it/wp-content/uploads/2026/02/CAPITOLO_11-ETICA.pdf) |
-| 12 | Primo soccorso | A. Boccuzzi, F. Palmisano | [Scarica](https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_12-PRIMO-SOCCORSO_15.04.2026.pdf) |
+| 2 | Epidemiologia della rianimazione | C. Sorlini, M. Tumolo | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/02/CAPITOLO_2-EPIDEMIOLOGIA-1.pdf) |
+| 3 | Sistemi che salvano vite | — | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/03/CAPITOLO_3-SISTEMI-CHE-SALVANO-VITE.pdf) |
+| 4 | Basic Life Support (adulto) | R. Cusmà Piccione, R. Giudici | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/02/CAPITOLO_4-BLS-ADULTO.pdf) |
+| 8 | Supporto vitale del neonato | D. Silvagni | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_8-NLS_13.04.2026.pdf) |
+| 9 | Supporto alle funzioni vitali in età pediatrica | M. Tumolo | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_9-BLS_PEDIATRICO_02.04.2026.pdf) |
+| 11 | Etica nella rianimazione | C. Sorlini | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/02/CAPITOLO_11-ETICA.pdf) |
+| 12 | Primo soccorso | A. Boccuzzi, F. Palmisano | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_12-PRIMO-SOCCORSO_15.04.2026.pdf) |
 
 I capitoli 1, 5, 6, 7 e 10 sono in corso di rilascio sul sito IRC.
 
