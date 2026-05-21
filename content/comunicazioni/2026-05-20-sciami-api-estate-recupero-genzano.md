@@ -73,7 +73,7 @@ Il **Corpo Nazionale dei Vigili del Fuoco** è il riferimento istituzionale per 
 
 ### Seconda opzione — apicoltori professionisti di zona
 
-Per situazioni non urgenti (sciame in giardino, in basso su un ramo, su una recinzione), la via più rapida ed efficace è contattare direttamente un **apicoltore professionista** del territorio. A Genzano di Roma e nei Castelli Romani esistono diversi apicoltori iscritti all'**Albo Apicoltori Regionale del Lazio** (ai sensi della *L.R. 23/2014*). Un apicoltore di zona di solito recupera lo sciame **gratuitamente** o con un piccolo rimborso spese: non è un disturbo, è un **alveare in più** per la sua produzione.
+Per situazioni non urgenti (sciame in giardino, in basso su un ramo, su una recinzione), la via più rapida ed efficace è contattare direttamente un **apicoltore professionista** del territorio. A Genzano di Roma e nei Castelli Romani esistono diversi apicoltori iscritti all'**Albo Apicoltori Regionale del Lazio** (ai sensi della *L.R. Lazio 25 ottobre 2022, n. 17* sull'apicoltura). Un apicoltore di zona di solito recupera lo sciame **gratuitamente** o con un piccolo rimborso spese: non è un disturbo, è un **alveare in più** per la sua produzione.
 
 Trovi gli apicoltori della zona nell'**Albo Regionale del Lazio** (link in fondo all'articolo) o tramite le associazioni di categoria locali.
 
