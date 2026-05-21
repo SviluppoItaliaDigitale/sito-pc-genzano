@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-19-sicurezza-laghi-nemi-albano-facile"
 ---
 
 I **laghi di Nemi** e di **Albano** sono un patrimonio naturale unico dei Castelli Romani. Conche vulcaniche profonde, con acque fredde anche d'estate, sponde ricche di vegetazione. Con l'arrivo del caldo cresce la frequentazione e, con essa, la necessità di conoscere **le regole di sicurezza** specifiche di questi ambienti.

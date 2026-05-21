@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-04-25-caldo-bambini-ministero-salute-facile"
 ---
 
 I **bambini piccoli** e i **neonati** sono tra le categorie più vulnerabili al caldo estivo. Ma non solo: in estate aumentano anche i rischi legati all'**esposizione ai raggi solari (UV)**, all'**ozono** nelle aree urbane, agli **incendi boschivi** e alla **contaminazione degli alimenti**. Il loro sistema di termoregolazione non è ancora maturo, la pelle è più delicata, l'apparato respiratorio è in sviluppo.

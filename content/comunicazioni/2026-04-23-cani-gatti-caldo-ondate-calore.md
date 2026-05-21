@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-04-23-cani-gatti-caldo-ondate-calore-facile"
 ---
 
 Con **l'avvicinarsi della stagione calda**, anche nei Castelli Romani le temperature iniziano a salire. Il caldo non è un rischio solo per le persone: anche **cani e gatti** sono esposti a colpi di calore che, se sottovalutati, possono diventare un'emergenza sanitaria vera e propria.

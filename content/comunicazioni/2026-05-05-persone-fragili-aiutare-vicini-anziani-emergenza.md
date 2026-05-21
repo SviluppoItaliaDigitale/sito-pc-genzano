@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza-facile"
 ---
 
 Durante un'emergenza, prima che arrivino le istituzioni, sono spesso i **vicini** a fare la differenza. Un familiare lontano, un figlio all'estero, un figlio in viaggio non possono intervenire: il vicino sì. Per questo il sistema di Protezione Civile moderno riconosce grande valore alla **rete di prossimità**: parenti, amici, vicini che conoscono le persone fragili e sanno come aiutarle.
