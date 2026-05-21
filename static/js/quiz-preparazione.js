@@ -218,6 +218,34 @@
   // (150 DPI, qualità sufficiente per stampa A4 con peso file basso).
   // Layout: bordo doppio, intestazione istituzionale, titolo ATTESTATO,
   // corpo con profilo e statistiche, data, disclaimer "non abilitante".
+  // Frase microtext (microstampa) personalizzabile, riferimento univoco al Gruppo.
+  var MICRO_PHRASE = "Protezione Civile Genzano di Roma · protezionecivilegenzano.it · ";
+
+  // Filigrana di micro-testo su canvas: velo diagonale tenue, leggibile da
+  // vicino/in stampa, disegnato sotto i contenuti (non riduce la leggibilità).
+  function microtextCanvas(ctx, W, H, opts) {
+    opts = opts || {};
+    var size = opts.size || 13;
+    ctx.save();
+    ctx.globalAlpha = opts.opacity || 0.06;
+    ctx.fillStyle = opts.color || "#003366";
+    ctx.font = size + "px monospace";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "alphabetic";
+    ctx.translate(W / 2, H / 2);
+    ctx.rotate(-24 * Math.PI / 180);
+    var diag = Math.sqrt(W * W + H * H);
+    var lineH = size * 1.7;
+    var phrase = opts.phrase || MICRO_PHRASE;
+    var charW = ctx.measureText(phrase).width || size * phrase.length * 0.5;
+    var reps = Math.ceil((diag * 1.4) / charW) + 2;
+    var line = ""; for (var i = 0; i < reps; i++) line += phrase;
+    for (var y = -diag / 2; y < diag / 2; y += lineH) {
+      ctx.fillText(line, -diag / 2, y);
+    }
+    ctx.restore();
+  }
+
   function scaricaAttestato(r, oggi) {
     var W = 1240, H = 1754;
     var c = document.createElement("canvas");
@@ -226,6 +254,8 @@
     var col = r.tier.id === "alto" ? "#15803d" : (r.tier.id === "medio" ? "#003366" : "#b45309");
     // Sfondo bianco
     x.fillStyle = "#ffffff"; x.fillRect(0, 0, W, H);
+    // Filigrana microtext (sotto i contenuti)
+    microtextCanvas(x, W, H);
     // Bordo esterno doppio
     x.strokeStyle = col; x.lineWidth = 8;
     x.strokeRect(60, 60, W - 120, H - 120);
@@ -313,6 +343,10 @@
     x.fillStyle = col; x.fillRect(0, 0, S, S);
     x.fillStyle = "#ffffff";
     x.fillRect(40, 40, S - 80, S - 80);
+    // Filigrana microtext nell'area bianca interna
+    x.save(); x.beginPath(); x.rect(40, 40, S - 80, S - 80); x.clip();
+    microtextCanvas(x, S, S, { size: 12 });
+    x.restore();
     x.fillStyle = col;
     x.textAlign = "center";
     x.font = "bold 34px Arial, sans-serif";

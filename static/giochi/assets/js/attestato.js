@@ -24,6 +24,37 @@
     return 'Gioco della Sicurezza';
   }
 
+  // Frase di microstampa (microtext): personalizzabile via AttestatoPC.setMicroPhrase.
+  // Riferimento univoco al Gruppo + dominio ufficiale => impronta anti-falsificazione.
+  var MICRO_PHRASE = 'Protezione Civile Genzano di Roma · protezionecivilegenzano.it · ';
+
+  // Filigrana di micro-testo vettoriale: da lontano un velo tenue, da vicino
+  // (o in stampa) le linee sono testo leggibile. Vettoriale => nitido a ogni
+  // risoluzione di stampa. Resta sotto i contenuti, opacita' bassa: non riduce
+  // la leggibilita' dell'attestato.
+  function microtextLayer(phrase) {
+    phrase = phrase || MICRO_PHRASE;
+    var W = 842, H = 595, size = 6.5, op = 0.09, angle = -24;
+    var lineH = size * 1.5;
+    var diag = Math.sqrt(W * W + H * H);
+    var charW = size * 0.5;                 // stima larghezza carattere monospace
+    var reps = Math.ceil((diag * 1.5) / (phrase.length * charW)) + 2;
+    var longLine = '';
+    for (var i = 0; i < reps; i++) longLine += phrase;
+    longLine = escapeXml(longLine);
+    var x0 = -((diag - W) / 2) - 60;
+    var y0 = -((diag - H) / 2) - 40;
+    var n = Math.ceil((diag * 1.5) / lineH);
+    var lines = '';
+    for (var j = 0; j < n; j++) {
+      lines += '<text x="' + x0.toFixed(1) + '" y="' + (y0 + j * lineH).toFixed(1)
+        + '" font-family="Courier New, monospace" font-size="' + size
+        + '" fill="#003366" xml:space="preserve">' + longLine + '</text>';
+    }
+    return '<g opacity="' + op + '" clip-path="url(#mtClip)" transform="rotate('
+      + angle + ' ' + (W / 2) + ' ' + (H / 2) + ')">' + lines + '</g>';
+  }
+
   // A4 landscape a 72 dpi: 842 x 595 pt
   // tipo: "completato" (>=80%) | "partecipazione" (<80%) | "incluso" (giochi
   //        accessibili senza scoring: chi partecipa riceve l'attestato pieno)
@@ -61,9 +92,12 @@
       + '<linearGradient id="fascia" x1="0" y1="0" x2="1" y2="0">'
       + '<stop offset="0" stop-color="#003366"/><stop offset="1" stop-color="#0066CC"/>'
       + '</linearGradient>'
+      + '<clipPath id="mtClip"><rect x="34" y="34" width="774" height="527"/></clipPath>'
       + '</defs>'
       // Sfondo
       + '<rect width="842" height="595" fill="url(#sfondo)"/>'
+      // Filigrana microtext (sotto i contenuti)
+      + microtextLayer()
       // Cornice decorativa
       + '<rect x="22" y="22" width="798" height="551" fill="none" stroke="#003366" stroke-width="3"/>'
       + '<rect x="32" y="32" width="778" height="531" fill="none" stroke="#0066CC" stroke-width="1"/>'
@@ -151,6 +185,7 @@
     genera: generaAttestato,
     stampa: stampaAttestato,
     anteprima: anteprimaAttestato,
-    sanitizzaNome: sanitizzaNome
+    sanitizzaNome: sanitizzaNome,
+    setMicroPhrase: function (p) { if (p) MICRO_PHRASE = String(p); }
   };
 })(typeof window !== 'undefined' ? window : this);
