@@ -305,14 +305,15 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 
 **CV**: laurea Giurisprudenza LUISS con dottorato Diritto Amministrativo Sapienza, 14 anni consulente legislativo **Camera dei Deputati** (Ufficio Studi e Documentazione, specializzazione PC + ambiente), autore manuale **"La Protezione Civile dopo il D.Lgs. 1/2018"** (Giuffrè, 2023).
 
-**Quando lo attivi**: vuoi sapere se le norme citate in un articolo sono ancora vigenti — utile per articoli vecchi e per nuovi articoli che citano normativa specifica.
+**Quando lo attivi**: vuoi sapere se le norme citate in un articolo sono ancora vigenti — utile per articoli vecchi e per nuovi articoli che citano normativa specifica. Verifica anche la **fedeltà strutturale** delle pagine che *riproducono* una norma articolo per articolo (tabelle Capo/articoli, sintesi per articolo): Capi, intervalli e rubriche devono combaciare con la fonte primaria.
 
 **Frasi naturali che lo attivano automaticamente**:
 - *"Le norme citate qui sono ancora vigenti?"*
 - *"Controlla i riferimenti di legge."*
 - *"La L. 225/1992 vale ancora?"* (no, è abrogata dal D.Lgs. 1/2018)
+- *"La struttura del Codice (Capi/articoli) è corretta?"*
 
-**Cosa fa**: estrae citazioni normative dal corpo (D.Lgs., L., L.R., DGR, DPCM, D.M.), verifica via WebFetch su **Normattiva** / **Gazzetta Ufficiale** / **Consiglio regionale Lazio** / **BURL Lazio** se ogni norma è vigente, abrogata o modificata. Conoscenza pregressa di norme PC fondamentali (D.Lgs. 1/2018 vigente, L. 225/1992 abrogata, L.R. Lazio 9/2017 vigente, ecc.) per evitare WebFetch inutili. Suggerisce sostituzioni dove abrogata.
+**Cosa fa**: estrae citazioni normative dal corpo (D.Lgs., L., L.R., DGR, DPCM, D.M.), verifica via WebFetch/Firecrawl su **Normattiva** / **Gazzetta Ufficiale** / **Consiglio regionale Lazio** / **BURL Lazio** se ogni norma è vigente, abrogata o modificata. Conoscenza pregressa di norme PC fondamentali (D.Lgs. 1/2018 vigente, L. 225/1992 abrogata, **L.R. Lazio 2/2014 = legge regionale PC vigente**, ecc.) per evitare WebFetch inutili. Per le pagine che riproducono una norma confronta Capi/articoli/rubriche con la fonte primaria (Normattiva per le statali, Consiglio regionale per le L.R. — Normattiva non contiene le regionali). Suggerisce sostituzioni dove abrogata o **riallinea le strutture fabbricate**.
 
 **Identità tecnica**: `pc-normative-verifier`.
 
