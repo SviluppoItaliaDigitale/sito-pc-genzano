@@ -10,6 +10,7 @@ image_alt: "Smartphone posato su un tavolo che mostra un'allerta di prova IT-ale
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-06-11-it-alert-come-funziona-reagire-facile"
 draft: false
 ---
 

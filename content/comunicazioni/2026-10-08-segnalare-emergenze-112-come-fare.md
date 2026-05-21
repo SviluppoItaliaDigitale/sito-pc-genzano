@@ -11,6 +11,7 @@ scadenza: ""
 area: "Lazio"
 allegati: []
 draft: false
+versione_facile: "2026-10-08-segnalare-emergenze-112-come-fare-facile"
 ---
 
 **Chiamare il 112** è, nel Lazio, l'unico modo per attivare soccorsi di emergenza. Tutte le chiamate arrivano alla **Centrale Unica di Risposta del NUE** (Numero Unico Europeo), che smista all'ente competente: Vigili del Fuoco, emergenza sanitaria, Forze dell'Ordine, squadre AIB. Una chiamata ben fatta velocizza l'intervento. Una chiamata confusa lo rallenta. Ecco come fare.

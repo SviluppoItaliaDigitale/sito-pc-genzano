@@ -10,6 +10,7 @@ image_alt: "Schermo di smartphone che visualizza un messaggio IT-alert di test c
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-07-10-app-it-alert-test-nazionale-facile"
 draft: false
 ---
 

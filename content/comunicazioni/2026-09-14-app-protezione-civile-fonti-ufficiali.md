@@ -10,6 +10,7 @@ image_alt: "Schermo di cellulare con icone delle principali app istituzionali di
 scadenza: ""
 area: "Lazio"
 allegati: []
+versione_facile: "2026-09-14-app-protezione-civile-fonti-ufficiali-facile"
 draft: false
 ---
 

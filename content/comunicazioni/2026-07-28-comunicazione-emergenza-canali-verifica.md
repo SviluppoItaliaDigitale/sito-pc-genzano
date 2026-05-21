@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-07-28-comunicazione-emergenza-canali-verifica-facile"
 ---
 
 In **emergenza** circolano molte informazioni, non tutte affidabili. Notizie rapide, messaggi WhatsApp, post social, titoli sensazionalistici: chi deve decidere cosa fare per la propria famiglia rischia di essere confuso. Sapere quali sono i **canali ufficiali** e come **verificare le fonti** è un gesto di **autoprotezione** tanto concreto quanto avere un kit di emergenza.

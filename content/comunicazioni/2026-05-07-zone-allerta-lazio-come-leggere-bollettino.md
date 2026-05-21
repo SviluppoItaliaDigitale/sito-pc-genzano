@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Le zone di allerta del Lazio: come leggere il b
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-05-07-zone-allerta-lazio-come-leggere-bollettino-facile"
 draft: false
 ---
 

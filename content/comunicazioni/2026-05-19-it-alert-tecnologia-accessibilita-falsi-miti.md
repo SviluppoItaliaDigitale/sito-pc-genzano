@@ -11,6 +11,7 @@ scadenza: ""
 area: "Italia"
 allegati: []
 draft: false
+versione_facile: "2026-05-19-it-alert-tecnologia-accessibilita-falsi-miti-facile"
 tts: true
 lis_section: "gestione-emergenza"
 ---

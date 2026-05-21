@@ -11,6 +11,7 @@ image_alt: "Cover dell'articolo: Il Centro Operativo Comunale (COC), il coordina
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-05-14-centro-operativo-comunale-coc-facile"
 draft: false
 ---
 

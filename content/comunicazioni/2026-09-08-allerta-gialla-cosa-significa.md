@@ -10,6 +10,7 @@ image_alt: "Bollettino di allerta meteo della Regione Lazio con simbolo giallo d
 scadenza: ""
 area: "Lazio"
 allegati: []
+versione_facile: "2026-09-08-allerta-gialla-cosa-significa-facile"
 draft: false
 ---
 

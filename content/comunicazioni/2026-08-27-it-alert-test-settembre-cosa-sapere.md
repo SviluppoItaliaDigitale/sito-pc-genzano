@@ -10,6 +10,7 @@ image_alt: "Schermo di cellulare che mostra una notifica IT-Alert di test con te
 scadenza: ""
 area: "Lazio"
 allegati: []
+versione_facile: "2026-08-27-it-alert-test-settembre-cosa-sapere-facile"
 draft: false
 ---
 

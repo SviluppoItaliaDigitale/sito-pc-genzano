@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Malori estivi, segnali da riconoscere e quando 
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus-facile"
 draft: false
 ---
 
