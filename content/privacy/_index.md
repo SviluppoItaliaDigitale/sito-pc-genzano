@@ -4,7 +4,7 @@ description: "Informativa sul trattamento dei dati personali e sull'uso dei cook
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-05-21"
 ---
 
 Questa pagina spiega quali dati possono essere trattati durante la navigazione del sito e come sono gestiti cookie, widget esterni e strumenti interattivi.
@@ -79,6 +79,16 @@ Questo sito usa solo cookie tecnici necessari al funzionamento. Non usa cookie d
 </div>
 
 La disabilitazione dei cookie tecnici può compromettere alcune funzionalità del sito.
+
+## Statistiche di visita anonime
+
+Per capire quali contenuti sono più utili ai cittadini, il sito misura le visite con **GoatCounter**, uno strumento di statistica rispettoso della privacy:
+
+- **non usa cookie** e non richiede il tuo consenso;
+- **non raccoglie dati personali** e non ti traccia tra siti diversi;
+- registra solo dati aggregati e anonimi (pagina visitata, provenienza generica, tipo di dispositivo).
+
+Puoi consultare il sito senza essere identificato. I dati statistici sono ospitati dal servizio GoatCounter.
 
 ## Widget di terze parti
 
