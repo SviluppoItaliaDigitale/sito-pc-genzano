@@ -60,6 +60,10 @@ Anche il nostro Gruppo Comunale fa parte di una **rete operativa nazionale** che
 
 Per chi vuole intraprendere un percorso che potrebbe portare anche a queste esperienze, vedi come [diventare volontario](/diventa-volontario/) e quali sono i [percorsi formativi](/formazione/) disponibili.
 
+## Sul nostro sito
+
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — Il rischio sismico nei Castelli Romani: pericolosità, classificazione sismica, cosa fare prima e durante una scossa.
+
 ## Per saperne di più
 
 - [EU Civil Protection Mechanism](https://civil-protection-humanitarian-aid.ec.europa.eu/what/civil-protection_en)

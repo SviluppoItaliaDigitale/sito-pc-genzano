@@ -51,6 +51,10 @@ Il Vajont è il caso scuola della **comunicazione del rischio mancata**. Tre lez
 
 La giornalista **Tina Merlin** dell'Unità denunciò per anni i rischi del Vajont, basandosi sulle parole degli abitanti e degli operai. Fu querelata per "diffusione di notizie false e tendenziose" e assolta nel 1960. **Tre anni prima** della tragedia. La sua memoria è oggi un riferimento per il giornalismo civico e per chi si occupa di rischio territoriale.
 
+## Sul nostro sito
+
+- [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — Frane, alluvioni e piene improvvise: il rischio idrogeologico nel territorio dei Castelli Romani.
+
 ## Per saperne di più
 
 - [Memoria del Vajont — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/it/notizia/9-ottobre-1963-9-ottobre-2023-vajont-60-anni-fa)

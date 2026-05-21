@@ -53,6 +53,11 @@ Il nostro territorio si trova in **zona sismica 2B** ed è caratterizzato da edi
 
 Per chi non sa da dove partire: il [Comune di Genzano](https://www.comune.genzanodiroma.roma.it/) può fornire informazioni sulla classificazione del proprio edificio e sui contributi disponibili.
 
+## Sul nostro sito
+
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — Cosa sapere sul terremoto: pericolosità nei Castelli Romani, cosa fare prima, durante e dopo una scossa.
+- [Piano Familiare di Emergenza](/piano-familiare/) — Lo strumento operativo per ogni famiglia: cosa fare in caso di sisma, dove ritrovarsi, cosa portare.
+
 ## Per saperne di più
 
 - [Sequenza sismica di Casamicciola — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)

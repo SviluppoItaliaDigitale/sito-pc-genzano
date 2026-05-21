@@ -68,6 +68,11 @@ Genzano non ha la specificità geografica di Genova (versanti scoscesi al mare, 
 - Le **aree storicamente sensibili agli allagamenti urbani** (Piazzale della Vittoria, via Italo Belardi, area di San Gennaro) sono note al Comune
 - In caso di **allerta arancione/rossa**, le indicazioni operative per il cittadino sono nella sezione [Cosa Fare Adesso](/cosa-fare-adesso/)
 
+## Sul nostro sito
+
+- [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — Alluvioni, frane, esondazioni: il rischio idrogeologico nei Castelli Romani e come prepararsi.
+- [Allerte meteo](/allerte-meteo/) — Il sistema di allertamento regionale: codici colore, cosa significano, come ricevere le notifiche.
+
 ## Per saperne di più
 
 - [Memoria dell'alluvione di Genova 1970 — Comune di Genova](https://www.comune.genova.it/)

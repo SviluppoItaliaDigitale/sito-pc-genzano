@@ -55,6 +55,10 @@ Anche se siamo un piccolo Gruppo Comunale, facciamo parte di una **rete nazional
 
 Per partecipare, vedi come [diventare volontario](/diventa-volontario/).
 
+## Sul nostro sito
+
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — Il rischio sismico: cosa determina i danni di un terremoto e come prepararsi anche sul nostro territorio.
+
 ## Per saperne di più
 
 - [INSARAG — International Search and Rescue Advisory Group (ONU)](https://www.insarag.org/)

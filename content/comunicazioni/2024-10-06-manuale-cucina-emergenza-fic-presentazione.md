@@ -45,6 +45,10 @@ Il manuale è organizzato in sei capitoli:
 
 Il **manuale completo** è disponibile in allegato a questo articolo e nella pagina [Area Download](/area-download/).
 
+## Sul nostro sito
+
+- [Diventa volontario](/diventa-volontario/) — Come entrare nel Gruppo Comunale di Genzano: percorso di adesione, ruoli operativi e formazione, incluso il supporto alla ristorazione in emergenza.
+
 ## Riferimenti
 
 - **Curatore:** DSEFIC — Dipartimento Solidarietà Emergenze, Federazione Italiana Cuochi.

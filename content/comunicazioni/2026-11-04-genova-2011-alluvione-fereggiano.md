@@ -62,6 +62,11 @@ In caso di **allerta arancione o rossa** sul nostro Comune (vedi sempre la barra
 - **Sali ai piani alti** se l'acqua entra in casa
 - **Allontana i bambini** da finestre e porte d'ingresso durante l'evento intenso
 
+## Sul nostro sito
+
+- [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — Alluvioni e piene improvvise: il rischio nel territorio dei Castelli Romani e le regole di autoprotezione.
+- [Allerte meteo](/allerte-meteo/) — Come funziona il sistema di allertamento: codici colore, cosa significano e come ricevere le notifiche.
+
 ## Per saperne di più
 
 - [Memoria dell'alluvione di Genova — Comune di Genova](https://www.comune.genova.it/)

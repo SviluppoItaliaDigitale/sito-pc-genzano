@@ -57,6 +57,10 @@ Genzano ha la sua memoria della Resistenza e della guerra: come tutti i comuni d
 
 Per partecipare oggi a questa tradizione, vedi come [diventare volontario](/diventa-volontario/).
 
+## Sul nostro sito
+
+- [Chi siamo](/chi-siamo/) — La storia del Gruppo Comunale Volontari di PC Genzano: radici civiche, struttura e adesione al sistema nazionale.
+
 ## Per saperne di più
 
 - [Museo Storico della Resistenza di Sant'Anna di Stazzema](https://www.santannadistazzema.org/)

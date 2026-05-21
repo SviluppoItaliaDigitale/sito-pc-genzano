@@ -61,6 +61,10 @@ Il caso emiliano è importante per noi perché dimostra che **la classificazione
 - Quando si valuta un'abitazione: chiedere la **classe di rischio sismico** (esiste una scala A → G dal 2017)
 - Quando si pianifica un intervento: valutare il **Sismabonus** (D.L. 63/2013 e aggiornamenti) per gli interventi di adeguamento
 
+## Sul nostro sito
+
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — Pericolosità sismica dei Castelli Romani, classificazione zona 2B, cosa fare prima e durante una scossa.
+
 ## Per saperne di più
 
 - [INGV — Catalogo Sismico Italiano](https://terremoti.ingv.it/)

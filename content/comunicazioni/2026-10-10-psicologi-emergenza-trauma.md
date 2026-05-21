@@ -92,6 +92,12 @@ Se sei un volontario o un operatore, dopo un intervento difficile è normale pro
 
 Il Gruppo Comunale di Volontari sta lavorando — in coordinamento con l'**ASL Roma 6** e con l'Ordine degli Psicologi del Lazio — per definire una procedura interna di supporto agli operatori dopo interventi significativi. Per chi soffre, anche solo un confronto con un collega che ha vissuto eventi simili può fare una differenza importante.
 
+## Sul nostro sito
+
+- [Diventa volontario](/diventa-volontario/) — Il percorso per entrare nel Gruppo Comunale, che include formazione sul supporto post-intervento.
+- [Chi siamo](/chi-siamo/) — La storia e la struttura del Gruppo Comunale di Genzano.
+- [Kit per i volontari di PC](/formazione/kit-calamita-volontari-pc/) — Risorse operative per volontari, incluse indicazioni sul benessere in emergenza.
+
 ## Risorse utili
 
 - [Consiglio Nazionale dell'Ordine degli Psicologi](https://www.psy.it/) — Sezione "Psicologia dell'emergenza".

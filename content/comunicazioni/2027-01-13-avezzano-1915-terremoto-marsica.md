@@ -50,6 +50,10 @@ Anche se geograficamente distanti, i Castelli Romani e la Marsica condividono la
 
 Il [Piano di Emergenza Comunale](/piano-emergenza/) considera questi scenari di riferimento. Per le famiglie, il [Piano Familiare](/piano-familiare/) è lo strumento operativo personale.
 
+## Sul nostro sito
+
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — Pericolosità sismica nei Castelli Romani, storia delle scosse locali e cosa fare prima e durante un terremoto.
+
 ## Per saperne di più
 
 - [Catalogo Parametrico Terremoti Italiani — INGV](https://emidius.mi.ingv.it/CPTI15-DBMI15/)

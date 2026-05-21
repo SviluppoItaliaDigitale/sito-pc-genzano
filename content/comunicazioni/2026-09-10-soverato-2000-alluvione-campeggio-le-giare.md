@@ -51,6 +51,11 @@ A Genzano e nei Castelli Romani non abbiamo la specificità geografica di Sovera
 
 Il nostro [Piano di Emergenza](/piano-emergenza/) considera questi aspetti.
 
+## Sul nostro sito
+
+- [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — Alluvioni, frane e piene improvvise: come riconoscere il rischio, cosa fare prima e durante.
+- [Kit per persone con disabilità](/formazione/kit-calamita-disabilita-adulti/) — Risorse specifiche per adulti con disabilità in caso di emergenza: evacuazione, contatti, bisogni essenziali.
+
 ## Per saperne di più
 
 - [Piano di Assetto Idrogeologico — Autorità di Bacino Distrettuali](https://www.autoritabacino.it/)

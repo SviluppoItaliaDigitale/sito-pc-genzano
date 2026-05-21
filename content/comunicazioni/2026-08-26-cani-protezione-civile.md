@@ -62,6 +62,11 @@ Per chi avesse un cane adatto e voglia di un percorso impegnativo, le opzioni so
 
 È un impegno notevole, ma chi lo intraprende parla di un legame con il proprio cane che cambia entrambe le vite.
 
+## Sul nostro sito
+
+- [Diventa volontario](/diventa-volontario/) — Come entrare nel Gruppo Comunale di Genzano: formazione, ruoli e percorso di adesione.
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — I cani da macerie lavorano principalmente dopo i terremoti: cosa sapere sul rischio sismico nei Castelli Romani.
+
 ## Per saperne di più
 
 - [Dipartimento di Protezione Civile — Volontariato](https://www.protezionecivile.gov.it/it/normative/volontariato/) — Riferimenti normativi sul volontariato, comprese le unità cinofile.
