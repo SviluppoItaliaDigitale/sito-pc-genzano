@@ -11,6 +11,7 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+versione_facile: "2026-09-10-vento-forte-terrazzi-balconi-facile"
 ---
 
 Le **raffiche di vento forte**, tipiche dell'autunno, causano ogni anno danni e, in alcuni casi, feriscono persone. Molti di questi episodi si possono **prevenire** con poche attenzioni domestiche: vasi, mobili leggeri, ombrelloni, panni stesi, cartelli, teloni pubblicitari possono trasformarsi in **oggetti in volo** pericolosi.

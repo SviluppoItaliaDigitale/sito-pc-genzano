@@ -10,6 +10,7 @@ image_alt: "Fulmine che colpisce la campagna con cielo carico di nubi nere"
 scadenza: ""
 area: "Castelli Romani"
 allegati: []
+versione_facile: "2026-09-04-fulmini-protezione-civile-autoprotezione-facile"
 draft: false
 ---
 

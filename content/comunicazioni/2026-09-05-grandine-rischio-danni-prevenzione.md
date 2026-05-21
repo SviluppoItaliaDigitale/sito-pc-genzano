@@ -11,6 +11,8 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+versione_facile: "2026-09-05-grandine-rischio-danni-prevenzione-facile"
+tts: true
 ---
 
 Negli ultimi anni anche nel Lazio si registrano **grandinate intense**, con chicchi che superano i 5 centimetri. Non è più un fenomeno solo alpino: i temporali di fine estate e inizio autunno producono grandine severa anche nell'Italia centrale. Di seguito le regole base per riconoscere il pericolo, proteggersi e limitare i danni.

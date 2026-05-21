@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-08-21-animali-domestici-caldo-proteggerli-facile"
 ---
 
 In agosto gli animali domestici sono esposti agli stessi rischi da caldo che colpiscono le persone, ma con meccanismi di termoregolazione diversi. Cani e gatti, in particolare, dissipano calore quasi esclusivamente attraverso la respirazione e poche zone cutanee glabre. Le strategie di protezione vanno adattate.
