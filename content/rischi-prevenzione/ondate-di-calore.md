@@ -58,4 +58,23 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 
 Se conosci persone anziane o fragili nel tuo vicinato, una telefonata o una visita possono fare la differenza.
 
+## <i class="bi bi-link-45deg text-primary me-2" aria-hidden="true"></i>Fonti e approfondimenti {#fonti}
+
+**Sul nostro sito**
+
+- [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/) — protezione di anziani, bambini e persone fragili
+- [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — scorta d'acqua e farmaci
+- [Numeri utili](/numeri-utili/)
+
+**Fonti istituzionali**
+
+- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/) — bollettini giornalieri sulle ondate di calore per le città (Roma inclusa)
+- [Istituto Superiore di Sanità (ISS)](https://www.iss.it/) — sorveglianza e raccomandazioni sulle ondate di calore
+- [ASL Roma 6](https://www.aslroma6.it/) — azienda sanitaria competente per Genzano di Roma
+- [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — rischio sanitario e ondate di calore
+
+**Approfondimenti divulgativi**
+
+- [Geopop](https://www.geopop.it/) — ondate di calore e cambiamento climatico. Non è una fonte istituzionale: in caso di allerta consulta sempre i bollettini ufficiali.
+
 {{< chi-chiamare >}}

@@ -72,4 +72,23 @@ Genzano di Roma si trova su un territorio collinare di origine vulcanica, con ve
 - **Non ostruire tombini e caditoie** con rifiuti o foglie
 {{< /cosa-non-fare >}}
 
+## <i class="bi bi-link-45deg text-primary me-2" aria-hidden="true"></i>Fonti e approfondimenti {#fonti}
+
+**Sul nostro sito**
+
+- [Allerte meteo](/allerte-meteo/) — bollettini e codici colore del Centro Funzionale Regione Lazio
+- [Cartografia del territorio](/cartografia/) — aree e zone di allerta
+- [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) e [Piano di emergenza comunale](/piano-emergenza/)
+
+**Fonti istituzionali**
+
+- [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — scheda nazionale sul rischio idrogeologico
+- [Centro Funzionale Regione Lazio — bollettini di allertamento](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
+- [ISPRA — IdroGEO](https://idrogeo.isprambiente.it/) — cartografia nazionale su frane e alluvioni
+- [CNR-IRPI](https://www.irpi.cnr.it/) — ricerca su frane, alluvioni e dissesti
+
+**Approfondimenti divulgativi**
+
+- [Geopop](https://www.geopop.it/) — frane e alluvioni spiegate in modo accessibile. Non è una fonte istituzionale: in caso di allerta consulta sempre i bollettini ufficiali.
+
 {{< chi-chiamare >}}

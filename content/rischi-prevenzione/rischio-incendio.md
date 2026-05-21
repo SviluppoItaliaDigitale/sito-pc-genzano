@@ -68,4 +68,24 @@ Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani
 - **Non lasciare rifiuti o materiali infiammabili** nelle aree boschive
 {{< /cosa-non-fare >}}
 
+## <i class="bi bi-link-45deg text-primary me-2" aria-hidden="true"></i>Fonti e approfondimenti {#fonti}
+
+**Sul nostro sito**
+
+- [Allerte meteo](/allerte-meteo/) — bollettino rischio incendi del Lazio (Genzano è in Zona AIB 9)
+- [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — il Kit "Vai" per l'evacuazione rapida
+- [Numeri utili](/numeri-utili/)
+
+**Fonti istituzionali**
+
+- [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — scheda nazionale sul rischio incendi boschivi
+- [Centro Funzionale Regione Lazio — bollettini](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — bollettino di pericolosità da incendi boschivi
+- [Corpo Nazionale dei Vigili del Fuoco](https://www.vigilfuoco.it/) — soccorso tecnico urgente
+- [Io non rischio — incendi boschivi](https://www.iononrischio.it/) — buone pratiche di prevenzione
+- [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/s/92003020580/) — tutela del territorio boschivo
+
+**Approfondimenti divulgativi**
+
+- [Geopop](https://www.geopop.it/) — come nascono e si propagano gli incendi. Non è una fonte istituzionale: in caso di allerta segui sempre i canali ufficiali.
+
 {{< chi-chiamare >}}
