@@ -10,6 +10,7 @@ image_alt: "Cane che beve acqua da una ciotola all'ombra di un albero in un pome
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-07-16-animali-domestici-caldo-proteggere-facile"
 draft: false
 ---
 

@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-07-14-anziani-caldo-come-aiutare-vicini-facile"
 ---
 
 Ogni estate in Italia si registrano **decessi** per complicazioni da caldo estremo in anziani soli. Spesso si tratta di persone che abitano **accanto a noi**: alla porta di fronte, al piano di sotto, nell'appartamento con le persiane sempre chiuse. Un piccolo gesto di cura di vicinato può davvero fare la differenza. E non serve essere operatori sanitari.

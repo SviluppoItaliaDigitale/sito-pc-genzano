@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-07-08-bambini-in-estate-sicurezza-sorveglianza-facile"
 ---
 
 D'estate i **bambini** cambiano routine: scuole chiuse, campi estivi, vacanze, piscine, sagre, parchi gioco affollati. Il loro mondo si allarga. Con più opportunità arrivano anche più **rischi**. Poche attenzioni mirate aumentano molto la sicurezza, senza trasformare l'estate in un elenco di divieti.

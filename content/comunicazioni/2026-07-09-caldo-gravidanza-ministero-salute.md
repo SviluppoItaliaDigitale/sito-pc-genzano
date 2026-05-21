@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-07-09-caldo-gravidanza-ministero-salute-facile"
 ---
 
 In estate il **caldo** può rappresentare un rischio per la **donna in gravidanza**: l'aumento del volume del sangue materno richiede un'idratazione adeguata, la disidratazione può favorire infezioni urinarie e, nei casi più delicati, aumentare il rischio di **parto prematuro**. Alcune semplici precauzioni permettono di vivere l'estate serenamente, tutelando la salute della futura mamma e del suo bambino.
