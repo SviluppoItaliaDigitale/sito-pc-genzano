@@ -5,6 +5,7 @@ description: "Cosa fare prima, durante e dopo episodi di vento forte e raffiche 
 tts: true
 weight: 4
 toc: true
+lis_section: "allerte-meteo"
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
 howto_prima: "Verifica la stabilità di tende da sole, persiane, antenne e oggetti sui balconi. Fissa o metti al riparo vasi, sedie e oggetti leggeri esposti al vento. Parcheggia l'auto lontano da alberi, impalcature e strutture precarie. Controlla lo stato di allerta sul Bollettino Regionale del Centro Funzionale Regionale Lazio."
 howto_durante: "Rimani in casa se possibile, lontano da finestre e vetrate. Se sei all'aperto, allontanati da alberi, pali della luce, impalcature e cartelloni pubblicitari. Non sostare sotto cornicioni o strutture sospese. In auto rallenta e fai attenzione a oggetti trasportati dal vento; evita strade alberate. Tieni chiuse porte e finestre."
