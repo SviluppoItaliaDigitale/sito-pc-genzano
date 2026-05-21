@@ -188,3 +188,4 @@ Di seguito sono riportati alcuni eventi e calamità in cui il Gruppo ha partecip
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo
 - [Formazione e scuole](/formazione/) — materiali didattici e percorsi formativi
 - [Piano di emergenza comunale](/piano-emergenza/) — ruoli, aree e procedure del Piano
+- [Metodo editoriale](/metodo-editoriale/) — come scriviamo, verifichiamo e aggiorniamo i contenuti
