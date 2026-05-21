@@ -8,7 +8,7 @@
       {{ with .Params.dataUltimaRevisione }}
       <div class="alert alert-light border" role="note" aria-label="Data ultima revisione della pagina">
         <i class="bi bi-calendar-check me-2" aria-hidden="true"></i>
-        Pagina rivista il <strong><time datetime="{{ . }}">{{ dateFormat "2 January 2006" . }}</time></strong>.
+        Pagina rivista il <strong><time datetime="{{ . }}">{{ time.Format "2 January 2006" . }}</time></strong>.
       </div>
       {{ end }}
 

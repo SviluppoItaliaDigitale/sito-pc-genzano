@@ -11,7 +11,7 @@
 
       <p class="pcg-podcast-ep-meta">
         {{- with .Params.episodio }}<span class="pcg-podcast-ep-num">Episodio {{ . }}</span> · {{ end -}}
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "2 January 2006" .Date }}</time>
         {{- with .Params.durata }} · {{ . }}{{ end -}}
       </p>
 
