@@ -150,7 +150,6 @@ In tutti questi casi, **vittime** con **diritti violati** e sistemi che dovetter
 ### Cornice normativa
 - **Costituzione** Italiana: dignità e uguaglianza (art. 3);
 - **D.Lgs. 1/2018**: Codice della Protezione Civile, principio di solidarietà;
-- **L. 225/1992**: Servizio Nazionale della Protezione Civile;
 - **Convenzione** Nazioni Unite sui Diritti del Fanciullo;
 - **Convenzione** ONU sui Diritti delle Persone con Disabilità.
 

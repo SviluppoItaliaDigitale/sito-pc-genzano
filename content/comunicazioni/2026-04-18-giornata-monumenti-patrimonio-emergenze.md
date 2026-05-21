@@ -19,7 +19,7 @@ In Italia, dove la **densità di patrimonio culturale** è tra le più alte al m
 
 ## Protezione Civile e beni culturali
 
-Il **Servizio Nazionale della Protezione Civile** italiano include, tra le sue componenti, la **tutela del patrimonio culturale** in emergenza. La legge 225/1992 e il Codice 2018 riconoscono esplicitamente il ruolo di:
+Il **Servizio Nazionale della Protezione Civile** italiano include, tra le sue componenti, la **tutela del patrimonio culturale** in emergenza. Il **D.Lgs. 1/2018** (Codice della Protezione Civile) riconosce esplicitamente il ruolo di:
 
 - **Ministero della Cultura (MiC)** — attraverso le Soprintendenze.
 - **Unità di Crisi Coordinamento Regionale UCCR-MiC**.

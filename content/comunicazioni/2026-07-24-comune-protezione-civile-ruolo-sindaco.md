@@ -19,8 +19,8 @@ Nel sistema italiano di **Protezione Civile** il **Sindaco** è l'**autorità co
 
 Il ruolo del Sindaco è definito da:
 - **D.Lgs. 1/2018** (Codice della Protezione Civile).
-- **Legge 265/1999** sulle competenze comunali.
-- **Leggi regionali** (per il Lazio: **L.R. 7/1996** e s.m.i.).
+- **D.Lgs. 267/2000** (TUEL — Testo Unico delle Leggi sull'Ordinamento degli Enti Locali) per le competenze comunali.
+- **Leggi regionali** (per il Lazio: **L.R. 26 febbraio 2014, n. 2** — Sistema integrato regionale di protezione civile).
 - **Piano Comunale di Protezione Civile**.
 - **Regolamenti** comunali specifici.
 
