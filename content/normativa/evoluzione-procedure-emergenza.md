@@ -77,9 +77,9 @@ La grande novità non sta nelle lettere, ma nelle **procedure**: oggi la dichiar
 
 ### 4. Ruolo del volontariato: da "ausiliario" a "componente"
 
-Nel 1996 il volontariato era citato come **supporto** o **ausiliario** del sistema. Il Codice del 2018 (art. 3, e tutto il Capo VI) classifica le **organizzazioni di volontariato** come **componente** a pieno titolo del Servizio Nazionale. Non ospiti, ma **parte dell'organismo**.
+Nel 1996 il volontariato era citato come **supporto** o **ausiliario** del sistema. Il Codice del 2018 (art. 3, e tutto il Capo V) classifica le **organizzazioni di volontariato** come **componente** a pieno titolo del Servizio Nazionale. Non ospiti, ma **parte dell'organismo**.
 
-Questa evoluzione si riflette anche nelle tutele: assicurazioni, permessi retribuiti, rimborsi, formazione strutturata (cfr. [Capo VI — Volontariato](/normativa/testo-unico-protezione-civile/capo-6-volontariato/)).
+Questa evoluzione si riflette anche nelle tutele: assicurazioni, permessi retribuiti, rimborsi, formazione strutturata (cfr. [Capo V — Volontariato](/normativa/testo-unico-protezione-civile/capo-5-volontariato/)).
 
 ### 5. Allertamento: da fax a IT-alert
 
@@ -127,5 +127,5 @@ Chi opera in protezione civile dovrebbe conoscere **entrambi i testi**: l'uno co
 
 - [Il Codice della Protezione Civile (D.Lgs. 1/2018)](/normativa/testo-unico-protezione-civile/)
 - [Capo I del Codice — Finalità, attività e composizione del SNPC](/normativa/testo-unico-protezione-civile/capo-1-finalita/)
-- [Capo VI del Codice — Volontariato di protezione civile](/normativa/testo-unico-protezione-civile/capo-6-volontariato/)
+- [Capo V del Codice — Volontariato di protezione civile](/normativa/testo-unico-protezione-civile/capo-5-volontariato/)
 - [Piano di emergenza comunale di Genzano di Roma](/piano-emergenza/)

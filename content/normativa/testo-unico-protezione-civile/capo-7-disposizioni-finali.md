@@ -1,85 +1,53 @@
 ---
 
-title: "Capo VII — Disposizioni transitorie e finali (articoli 43-50)"
-description: "Il settimo e ultimo Capo del Codice della Protezione Civile: abrogazioni, copertura finanziaria, tutela dei lavoratori, transizione dalla Legge 225/1992, entrata in vigore."
+title: "Capo VII — Norme transitorie, di coordinamento e finali (articoli 47-50)"
+description: "Il settimo e ultimo Capo del Codice della Protezione Civile: coordinamento dei riferimenti normativi, abrogazioni, invarianza finanziaria, norme transitorie e finali, entrata in vigore."
 toc: true
 ---
-Il **Capo VII** del Codice della Protezione Civile (articoli 43-50) è la sezione **conclusiva** del decreto legislativo. Raccoglie le **disposizioni transitorie, finanziarie e finali**: serve a chiudere il cerchio giuridico, a raccordare il Codice con la normativa preesistente e a garantire che il passaggio dalla **Legge 225/1992** al nuovo Codice avvenga senza vuoti.
+Il **Capo VII** del Codice della Protezione Civile (articoli 47-50) è la sezione **conclusiva** del decreto legislativo. Raccoglie le **norme transitorie, di coordinamento e finali**: serve a chiudere il cerchio giuridico, a raccordare il Codice con la normativa preesistente e a garantire che il passaggio dalla **Legge 225/1992** al nuovo Codice avvenga senza vuoti.
 
-Sono articoli meno "narrati" rispetto ai Capi precedenti, ma contengono punti **concreti** che riguardano i volontari, i lavoratori, il finanziamento e l'applicazione effettiva del Codice.
+Sono articoli meno "narrati" rispetto ai Capi precedenti, ma garantiscono la **continuità** e l'applicazione effettiva del Codice.
 
-## Articolo 43 — Abrogazioni
+## Articolo 47 — Coordinamento dei riferimenti normativi
 
-L'articolo 43 è l'articolo delle **pulizie**. Elenca tutte le norme **abrogate** dal Codice, che non sono più in vigore dalla sua entrata in vigore (6 febbraio 2018):
+Disciplina il **raccordo** tra il Codice e la normativa preesistente non abrogata. In particolare, i **riferimenti** alla L. 225/1992 e alle altre norme sostituite, contenuti in leggi o atti ancora vigenti, **si intendono fatti al Codice** e alle sue corrispondenti disposizioni. È la norma che evita vuoti interpretativi durante la transizione.
+
+## Articolo 48 — Abrogazioni
+
+È l'articolo delle **pulizie**. Elenca le norme **abrogate** dal Codice, non più in vigore dalla sua entrata in vigore (6 febbraio 2018):
 
 - la storica **Legge 24 febbraio 1992, n. 225** — "Istituzione del Servizio Nazionale della Protezione Civile"
 - gran parte del **D.L. 7 settembre 2001, n. 343** conv. L. 401/2001
 - numerosi articoli di altri decreti legge e leggi speciali
 
-L'abrogazione della Legge 225/1992 ha un significato **simbolico**: la legge che aveva creato il Servizio Nazionale dopo il terremoto dell'Irpinia del 1980 viene sostituita dal Codice del 2018, che raccoglie venticinque anni di prassi operativa e normativa. La continuità sostanziale del sistema è assicurata dalla norma di interpretazione dell'articolo 49 (vedi sotto).
+L'abrogazione della Legge 225/1992 ha un significato **simbolico**: la legge nata dopo il terremoto dell'Irpinia del 1980 viene sostituita dal Codice del 2018, che consolida venticinque anni di prassi operativa e normativa. La continuità sostanziale del sistema è assicurata dagli articoli 47 e 50.
 
-## Articolo 44 — Tutela dei lavoratori volontari
+## Articolo 49 — Clausola di invarianza finanziaria
 
-Un articolo **decisivo** per chi è volontario di protezione civile e svolge anche un'attività lavorativa. Disciplina:
+È una clausola tipica della legislazione italiana: l'attuazione del Codice non deve comportare **nuovi o maggiori oneri** per la finanza pubblica oltre quelli previsti. Le amministrazioni provvedono "con le risorse umane, strumentali e finanziarie disponibili a legislazione vigente". È una clausola di responsabilità di bilancio (da non confondere con i **fondi** del Capo VI, che disciplinano le risorse ordinarie del sistema).
 
-- il **diritto** del volontario **all'assenza dal lavoro** durante le attività di protezione civile autorizzate
-- il **mantenimento** del trattamento economico durante le attivazioni
-- le **modalità di rimborso** al datore di lavoro pubblico o privato
-- le tutele **assicurative** (INAIL e polizza di protezione civile) in caso di infortuni durante l'attività di volontariato
+## Articolo 50 — Norme transitorie e finali
 
-Queste tutele si applicano sia alle **esercitazioni** autorizzate sia alle **emergenze reali**, nelle modalità definite dagli articoli 39-40 del D.Lgs. 1/2018 (che hanno sostituito il D.P.R. 194/2001) e dalle direttive del Capo Dipartimento. Per i nostri volontari sono garanzie importanti: partecipare alle attività del Gruppo non deve mai significare perdere la retribuzione o la copertura assicurativa.
+Chiude il Codice assicurando la **continuità** del sistema durante il passaggio dal vecchio al nuovo quadro:
 
-## Articolo 45 — Regime finanziario
+- gli **atti amministrativi**, i **piani** e i provvedimenti adottati sotto la normativa previgente **restano validi** finché non modificati;
+- le **organizzazioni di volontariato** già iscritte e le **strutture operative** continuano a operare, con adeguamento progressivo al Codice;
+- le disposizioni si applicano alle **Regioni a statuto speciale** e alle **Province autonome** di Trento e di Bolzano **compatibilmente con i rispettivi statuti** di autonomia.
 
-L'articolo disciplina i **meccanismi finanziari** ordinari del Servizio Nazionale: fondi assegnati al Dipartimento, alle Regioni, ai Comuni, risorse per la formazione e per il volontariato. Il Codice stabilisce il principio che le attività di protezione civile sono **finanziate**, non volontaristiche: senza risorse adeguate il sistema non funziona.
+Il Codice è entrato in vigore il **6 febbraio 2018**, il quindicesimo giorno successivo alla pubblicazione in Gazzetta Ufficiale del 22 gennaio 2018. Da quella data — senza soluzione di continuità con il passato — il Servizio Nazionale opera in base al nuovo Codice.
 
-## Articolo 46 — Invarianza finanziaria
-
-È una delle clausole tipiche della legislazione italiana. Significa che l'attuazione del Codice non deve comportare **nuovi o maggiori oneri** per la finanza pubblica **oltre quelli previsti**: le strutture devono operare "con le risorse umane, strumentali e finanziarie disponibili a legislazione vigente". È una clausola di responsabilità di bilancio.
-
-## Articolo 47 — Clausola di salvaguardia per le Regioni a statuto speciale
-
-Il Codice si applica alle **Regioni a statuto speciale** (Valle d'Aosta, Trentino-Alto Adige, Friuli-Venezia Giulia, Sicilia, Sardegna) e alle **Province autonome** (Trento, Bolzano) **compatibilmente con i rispettivi statuti**. Le specificità locali sono salvaguardate: non si sovrappone il Codice ad autonomie speciali costituzionalmente garantite.
-
-Per il Lazio — Regione a statuto ordinario — il Codice si applica in pieno, integrato dalla **Legge Regionale Lazio 26 febbraio 2014, n. 2** sul sistema integrato regionale di protezione civile.
-
-## Articolo 48 — Clausola di invarianza per le Forze Armate e di Polizia
-
-Il coinvolgimento di Forze Armate e Forze di Polizia nelle attività di protezione civile avviene **senza pregiudizio** per le loro ordinarie funzioni di difesa e sicurezza pubblica. L'articolo riconosce il ruolo costitutivo di queste strutture nel Servizio Nazionale (articolo 13 del Capo I), ma ricorda che i loro compiti istituzionali principali restano quelli propri.
-
-## Articolo 49 — Norme di coordinamento
-
-Disciplina il **raccordo** tra il Codice e la normativa preesistente non abrogata. Tra l'altro:
-
-- i **riferimenti** alla L. 225/1992 contenuti in altre leggi si intendono fatti al Codice
-- gli **atti amministrativi** adottati sotto la vecchia normativa restano validi finché non modificati
-- le **strutture operative**, i **piani** e le **organizzazioni di volontariato** continuano a operare secondo le norme vigenti al momento della loro costituzione, fino all'adeguamento al Codice
-
-È la norma che garantisce la **continuità** del sistema durante la transizione.
-
-## Articolo 50 — Entrata in vigore
-
-L'articolo finale. Il Codice è entrato in vigore il **6 febbraio 2018** (il quindicesimo giorno successivo alla pubblicazione in Gazzetta Ufficiale del 22 gennaio 2018). Da quella data — senza soluzione di continuità con il passato — il Servizio Nazionale opera in base al nuovo Testo Unico.
-
-## Perché leggere anche le "code" del Codice
-
-Il Capo VII è spesso trascurato perché sembra tecnico. In realtà contiene:
-
-- la **tutela giuridica** del volontario lavoratore (articolo 44) — una delle ragioni pratiche per cui si può "fare i volontari" senza rovinarsi
-- la **disciplina finanziaria** del sistema — senza la quale non ci sarebbero ambulanze, mezzi, formazione
-- la **continuità storica** del Servizio Nazionale — il Codice non cancella la storia della protezione civile italiana, la consolida
-
-Conoscere il Capo VII significa capire **come un sistema pubblico complesso si regge in piedi**: regole, risorse, raccordi, tutele.
+Per il **Lazio** — Regione a statuto ordinario — il Codice si applica in pieno, integrato dalla **Legge Regionale Lazio 26 febbraio 2014, n. 2** sul sistema integrato regionale di protezione civile.
 
 ## Il cerchio del Codice si chiude
 
-Dalla lettura dei sette Capi emerge un sistema **articolato ma coerente**: finalità (Capo I), organizzazione (Capo II), prevenzione (Capo III), pianificazione (Capo IV), gestione dell'emergenza nazionale (Capo V), partecipazione civica e volontariato (Capo VI), disposizioni finali (Capo VII). Ogni Capo rimanda agli altri, e ciascuno trova senso nel quadro complessivo.
+Dalla lettura dei sette Capi emerge un sistema **articolato ma coerente**: finalità e composizione (Capo I), organizzazione (Capo II), previsione e prevenzione (Capo III), gestione delle emergenze nazionali (Capo IV), partecipazione civica e volontariato (Capo V), misure e strumenti finanziari (Capo VI), norme transitorie e finali (Capo VII). Ogni Capo rimanda agli altri e trova senso nel quadro complessivo.
 
-Il Codice non è un libro da leggere tutto d'un fiato. È uno **strumento di consultazione**. Ma conoscerne la struttura — e avere, per ciascun Capo, una sintesi divulgativa di riferimento — è il primo passo per un cittadino che voglia esercitare pienamente il diritto a una protezione civile informata e partecipata.
+Il Codice non è un libro da leggere tutto d'un fiato: è uno **strumento di consultazione**. Conoscerne la struttura — e avere, per ciascun Capo, una sintesi divulgativa di riferimento — è il primo passo per un cittadino che voglia esercitare pienamente il diritto a una protezione civile informata e partecipata.
 
 ## Leggi anche
 
 - [Panoramica del Codice della Protezione Civile](/normativa/testo-unico-protezione-civile/)
 - [Capo I — Finalità, attività e composizione del SNPC](/normativa/testo-unico-protezione-civile/capo-1-finalita/)
-- [Capo VI — Volontariato di protezione civile](/normativa/testo-unico-protezione-civile/capo-6-volontariato/)
+- [Capo V — Partecipazione dei cittadini e volontariato](/normativa/testo-unico-protezione-civile/capo-5-volontariato/)
+- [Capo VI — Misure e strumenti organizzativi e finanziari](/normativa/testo-unico-protezione-civile/capo-6-misure-strumenti/)
 - [Diventa volontario a Genzano di Roma](/diventa-volontario/)

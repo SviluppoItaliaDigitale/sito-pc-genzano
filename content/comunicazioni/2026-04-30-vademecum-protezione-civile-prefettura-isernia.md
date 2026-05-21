@@ -113,8 +113,8 @@ Sul nostro sito:
 
 - [Il Codice della Protezione Civile (D.Lgs. 1/2018)](/normativa/testo-unico-protezione-civile/).
 - [Capo II — Organizzazione del Servizio nazionale](/normativa/testo-unico-protezione-civile/capo-2-organizzazione/).
-- [Capo IV — Pianificazione di protezione civile](/normativa/testo-unico-protezione-civile/capo-4-pianificazione/).
-- [Capo V — Gestione delle emergenze di rilievo nazionale](/normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali/).
+- [Capo III — Previsione e prevenzione dei rischi](/normativa/testo-unico-protezione-civile/capo-3-previsione-prevenzione/).
+- [Capo IV — Gestione delle emergenze di rilievo nazionale](/normativa/testo-unico-protezione-civile/capo-4-emergenze-nazionali/).
 - [Piano Comunale di Emergenza di Genzano di Roma](/piano-emergenza/).
 - [Catena delle comunicazioni in PC: DPC-COR-COM-COC](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/).
 - [Cos'è la protezione civile in Italia](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/).
