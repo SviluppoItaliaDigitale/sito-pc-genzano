@@ -354,6 +354,15 @@ bash scripts/genera-social.sh --dry-run <file>.md
 # Richiede GEMINI_API_KEY in env (gratuita: aistudio.google.com/apikey).
 ```
 
+### Microtext / microstampa (filigrane anti-falsificazione)
+
+```bash
+python3 scripts/genera-microtext.py text --macro "PROTEZIONE|CIVILE" --out static/images/microtext/banner.png
+python3 scripts/genera-microtext.py image --in <foto> --out <out.png>
+python3 scripts/genera-microtext.py watermark --in <cover.webp> --out <out.png>
+```
+Da lontano sembra testo/immagine normale, da vicino le linee sono micro-testo personalizzato. Già integrato negli attestati dei giochi e del quiz. Dettagli in `manuale/parte-33-autorevolezza-geo.md`.
+
 ### Versione Braille degli articoli (BRF)
 
 ```bash
@@ -466,6 +475,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (40 sezioni)**: contenuti, codice/template, governance docs, audit aggiuntivo, link critici normativa, **audit grammaticale italiano** (apostrofi finti, accenti mancanti, errori italiani tipici via `audit-grammatica-italiana.py`). Fusi `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026, sezione 40 grammaticale aggiunta il 29 aprile 2026. |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo lychee: tutti i link (interni + esterni) |
 | `genera-social-bozze.yml` | Push su `content/comunicazioni/**.md` o `.claude/rules/**.md` (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini Instagram (post 1080x1080 + carosello + story 1080x1920). Output **tutto insieme** in `social-bozze/<slug>/` (testi e immagini). Tier gratuito Gemini, costo zero. |
+| `indexnow.yml` | Push su `content/comunicazioni/**.md` | Avvisa Bing/Yandex (IndexNow) degli articoli nuovi o aggiornati: attende il deploy e invia gli URL via `scripts/indexnow-ping.py`. Notizie indicizzate in minuti invece che in giorni. Ping non bloccante. |
 | `scarica-foto-automatica.yml` | Push su `content/comunicazioni/**` o sui suoi script foto | Step 2 attivo: cover tipografica auto col titolo per articoli con `image:""` (`auto-cover-mancanti.py` + protezione regenerate-missing). **Step 1 marker `# TODO-foto-*` deprecato** dal 3 maggio 2026 (CLAUDE.md punto 9: il marker veniva reso da Hugo come H1 in produzione + sovrascriveva il banner col foto, contro la regola "BANNER COL TITOLO INTOCCABILE"). Per inserire foto da fonti ufficiali nel corpo articolo, usare l'agent `pc-image-fixer` (procedura WebFetch + curl + applica-fascia + shortcode `{{< foto >}}` inline). |
 
 Le issue generate automaticamente compaiono nella [tab Issues](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/issues) con label `manutenzione`, `documentazione`, `link-rotti`, ecc.
