@@ -355,6 +355,13 @@ enableGitInfo = true
   url = "/accessibilita/"
   weight = 3
 
+# Trasparenza editoriale (E-E-A-T): come scriviamo e verifichiamo i contenuti.
+# Accanto a Trasparenza/Accessibilità nella colonna "Link Utili".
+[[menus.footer]]
+  name = "Metodo editoriale"
+  url = "/metodo-editoriale/"
+  weight = 3
+
 # Spostata da "Risorse" a maggio 2026: la Trasparenza è obbligo istituzionale
 # di accountability — vive coerente accanto a Note Legali / Privacy /
 # Accessibilità nel footer.
@@ -426,6 +433,12 @@ enableGitInfo = true
   name = "Formazione"
   url = "/formazione/"
   weight = 8
+
+# Allerte Meteo — pagina-chiave per il cittadino, in evidenza tra i Servizi.
+[[menus.servizi]]
+  name = "Allerte Meteo"
+  url = "/allerte-meteo/"
+  weight = 5
 
 # Tassonomie
 [taxonomies]
