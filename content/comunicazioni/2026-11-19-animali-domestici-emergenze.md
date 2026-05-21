@@ -10,6 +10,7 @@ image_alt: "Cane di famiglia con trasportino, ciotole e documenti veterinari pro
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-11-19-animali-domestici-emergenze-facile"
 draft: false
 ---
 

@@ -10,6 +10,7 @@ image_alt: "Cucina domestica ordinata in preparazione di pranzo festivo con pent
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-11-24-sicurezza-cucina-festivita-facile"
 draft: false
 ---
 

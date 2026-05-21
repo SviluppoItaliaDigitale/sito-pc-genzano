@@ -10,6 +10,7 @@ image_alt: "Schermo di computer con finestre di shopping online e simboli di all
 scadenza: "2026-12-01"
 area: "Lazio"
 allegati: []
+versione_facile: "2026-11-22-truffe-online-black-friday-facile"
 draft: false
 ---
 

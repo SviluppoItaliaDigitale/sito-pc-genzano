@@ -10,6 +10,7 @@ image_alt: "Segnale di divieto di botti e fuochi d'artificio in piazza italiana 
 scadenza: "2027-01-02"
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-12-30-capodanno-petardi-sicurezza-facile"
 draft: false
 ---
 

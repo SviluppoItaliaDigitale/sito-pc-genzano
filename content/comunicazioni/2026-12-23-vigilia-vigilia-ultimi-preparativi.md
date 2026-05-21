@@ -10,6 +10,7 @@ image_alt: "Famiglia italiana fa spesa finale in supermercato affollato il 23 di
 scadenza: "2026-12-25"
 area: "Lazio"
 allegati: []
+versione_facile: "2026-12-23-vigilia-vigilia-ultimi-preparativi-facile"
 draft: false
 ---
 

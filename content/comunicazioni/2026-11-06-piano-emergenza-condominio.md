@@ -10,6 +10,7 @@ image_alt: "Palazzo residenziale con segnaletica di uscita di emergenza nel cort
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-11-06-piano-emergenza-condominio-facile"
 draft: false
 ---
 

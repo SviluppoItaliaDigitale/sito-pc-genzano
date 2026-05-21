@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-12-04-riscaldamento-sicuro-dicembre-facile"
 ---
 
 A **dicembre** il **riscaldamento** funziona a pieno regime. È anche il mese di picco per **incidenti domestici** legati a stufe, camini, caldaie. Un ripasso delle regole di **sicurezza** è sempre utile.

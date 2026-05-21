@@ -10,6 +10,7 @@ image_alt: "Autostrada italiana con traffico di rientro del martedì post Immaco
 scadenza: "2026-12-10"
 area: "Lazio"
 allegati: []
+versione_facile: "2026-12-09-rientro-post-ponte-sicurezza-stradale-facile"
 draft: false
 ---
 

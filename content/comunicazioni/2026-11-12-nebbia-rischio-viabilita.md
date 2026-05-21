@@ -10,6 +10,7 @@ image_alt: "Strada avvolta da nebbia densa con sagome sfumate di veicoli e fari 
 scadenza: ""
 area: "Lazio"
 allegati: []
+versione_facile: "2026-11-12-nebbia-rischio-viabilita-facile"
 draft: false
 ---
 

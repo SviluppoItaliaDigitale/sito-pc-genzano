@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-12-17-anziani-soli-feste-attenzione-facile"
 ---
 
 Il **Natale** è tempo di **famiglia**, **tavole imbandite**, **calore**. Ma per molti **anziani soli** è anche il momento in cui la **solitudine** si fa più pesante. Come **riconoscere** e **aiutare**.

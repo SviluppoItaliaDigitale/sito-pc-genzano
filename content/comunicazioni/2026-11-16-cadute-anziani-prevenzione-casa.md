@@ -10,6 +10,7 @@ image_alt: "Bagno domestico adattato per anziani con maniglioni di sicurezza, ta
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-11-16-cadute-anziani-prevenzione-casa-facile"
 draft: false
 ---
 

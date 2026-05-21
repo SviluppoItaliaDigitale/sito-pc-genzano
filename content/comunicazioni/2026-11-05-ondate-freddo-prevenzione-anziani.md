@@ -10,6 +10,7 @@ image_alt: "Anziana donna con coperta calda sul divano di casa mentre controlla 
 scadenza: ""
 area: "Lazio"
 allegati: []
+versione_facile: "2026-11-05-ondate-freddo-prevenzione-anziani-facile"
 draft: false
 ---
 

@@ -10,6 +10,7 @@ image_alt: "Pneumatico invernale con marcatura M+S e simbolo del fiocco di neve 
 scadenza: "2026-11-15"
 area: "Lazio"
 allegati: []
+versione_facile: "2026-11-03-pneumatici-invernali-catene-novembre-facile"
 draft: false
 ---
 
