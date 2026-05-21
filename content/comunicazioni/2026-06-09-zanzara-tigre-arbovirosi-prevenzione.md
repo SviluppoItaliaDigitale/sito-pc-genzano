@@ -10,6 +10,7 @@ image_alt: "Sottovaso su un davanzale con piante in fiore e assenza di ristagni 
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-06-09-zanzara-tigre-arbovirosi-prevenzione-facile"
 draft: false
 ---
 

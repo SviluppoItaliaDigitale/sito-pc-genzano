@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-26-check-casa-prima-estate-prevenzione-facile"
 ---
 
 L'estate porta rischi specifici per la casa: **ondate di calore**, **blackout**, **temporali intensi**, **incendi** vicini, **zanzare** e uso prolungato di condizionatori e ventilatori. Una check-list pre-estiva, fatta con calma prima che arrivi il caldo, permette di correggere piccole criticità che potrebbero diventare problemi.

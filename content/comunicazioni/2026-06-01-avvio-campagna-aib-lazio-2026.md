@@ -10,6 +10,7 @@ image_alt: "Bosco dei Castelli Romani in estate con luce pomeridiana sulle chiom
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-06-01-avvio-campagna-aib-lazio-2026-facile"
 draft: false
 ---
 
