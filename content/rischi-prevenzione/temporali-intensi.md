@@ -63,4 +63,23 @@ L'area dei Castelli Romani è particolarmente soggetta a temporali convettivi, s
 - **Non sottovalutare la grandine**: può causare danni a persone e veicoli
 {{< /cosa-non-fare >}}
 
+## <i class="bi bi-link-45deg text-primary me-2" aria-hidden="true"></i>Fonti e approfondimenti {#fonti}
+
+**Sul nostro sito**
+
+- [Allerte meteo](/allerte-meteo/) — bollettini e codici colore del Centro Funzionale Regione Lazio
+- [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — allagamenti lampo che i temporali possono innescare
+- [Kit di emergenza](/rischi-prevenzione/kit-emergenza/)
+
+**Fonti istituzionali**
+
+- [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — rischio meteo-idro
+- [Centro Funzionale Regione Lazio — bollettini di allertamento](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
+- [Piattaforma Radar Nazionale](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/) — monitoraggio delle precipitazioni in tempo reale
+- [Meteo Aeronautica Militare](https://www.meteoam.it/it/home) — previsioni meteorologiche ufficiali
+
+**Approfondimenti divulgativi**
+
+- [Geopop](https://www.geopop.it/) — come si formano temporali, fulmini e grandine. Non è una fonte istituzionale: in caso di allerta consulta sempre i bollettini ufficiali.
+
 {{< chi-chiamare >}}

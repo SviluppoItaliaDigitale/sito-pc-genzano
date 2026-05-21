@@ -43,4 +43,21 @@ Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare d
 - **Non ignorare le allerte meteo**: il vento può essere più pericoloso di quanto sembri
 {{< /cosa-non-fare >}}
 
+## <i class="bi bi-link-45deg text-primary me-2" aria-hidden="true"></i>Fonti e approfondimenti {#fonti}
+
+**Sul nostro sito**
+
+- [Allerte meteo](/allerte-meteo/) — avvisi per vento forte del Centro Funzionale Regione Lazio
+- [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) e [Numeri utili](/numeri-utili/)
+
+**Fonti istituzionali**
+
+- [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — rischio meteo
+- [Centro Funzionale Regione Lazio — bollettini di allertamento](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — avvisi per vento forte
+- [Meteo Aeronautica Militare](https://www.meteoam.it/it/home) — previsioni meteorologiche ufficiali
+
+**Approfondimenti divulgativi**
+
+- [Geopop](https://www.geopop.it/) — come si formano i venti e le perturbazioni. Non è una fonte istituzionale: in caso di allerta consulta sempre i bollettini ufficiali.
+
 {{< chi-chiamare >}}
