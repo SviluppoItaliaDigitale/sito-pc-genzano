@@ -101,7 +101,7 @@ Per un volontario di protezione civile, per un amministratore locale, per uno st
 
 Il Vademecum è stato scritto **in Molise** e fa esempi che talvolta rimandano a quel territorio. Questo **non toglie validità** all'impianto generale, che si applica a tutte le Prefetture italiane, ma consiglia al lettore di integrare la lettura con le specificità del proprio territorio:
 
-- per i riferimenti **regionali** vanno consultati la **L.R. Lazio 22/2019** e i documenti dell'**Agenzia Regionale di Protezione Civile**
+- per i riferimenti **regionali** vanno consultati la **L.R. Lazio 2/2014** e i documenti dell'**Agenzia Regionale di Protezione Civile**
 - per gli aspetti **provinciali** valgono le procedure della **Prefettura di Roma**
 - per la dimensione **comunale** fa riferimento il **Piano di Emergenza Comunale di Genzano di Roma**
 
