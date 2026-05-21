@@ -63,7 +63,7 @@
       <section class="stato-panel" aria-labelledby="stato-deploy-h">
         <h2 id="stato-deploy-h" class="stato-panel-title"><i class="bi bi-arrow-repeat me-2" aria-hidden="true"></i>Aggiornamento del sito</h2>
         <p class="stato-allerta-riga"><span class="stato-badge stato-success">Online</span></p>
-        <p class="stato-panel-desc">Questa pagina è stata generata il <strong>{{ now.Format "2 January 2006 alle 15:04" }}</strong>. Il sito viene ricostruito e ripubblicato a ogni modifica approvata e ogni mattina per gli articoli programmati.</p>
+        <p class="stato-panel-desc">Questa pagina è stata generata il <strong>{{ now | time.Format "2 January 2006" }} alle {{ now.Format "15:04" }}</strong>. Il sito viene ricostruito e ripubblicato a ogni modifica approvata e ogni mattina per gli articoli programmati.</p>
       </section>
 
       {{/* ─── Automazioni di manutenzione ─── */}}
@@ -97,13 +97,13 @@
         {{- with $prossime }}
         <h3 class="stato-sub">Prossime</h3>
         <ul class="stato-link-list">
-          {{- range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time></li>{{ end -}}
+          {{- range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "2 January 2006" .Date }}</time></li>{{ end -}}
         </ul>
         {{- end }}
         {{- with $svolte }}
         <h3 class="stato-sub">Ultime svolte</h3>
         <ul class="stato-link-list">
-          {{- range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time></li>{{ end -}}
+          {{- range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format "2 January 2006" .Date }}</time></li>{{ end -}}
         </ul>
         {{- end }}
         {{- if and (not $prossime) (not $svolte) }}
