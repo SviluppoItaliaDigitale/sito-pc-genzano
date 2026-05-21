@@ -30,6 +30,11 @@ enableGitInfo = true
   # Formato E.164 per attributo href="tel:..." (solo cifre, nessuno spazio)
   telefono_tel = "+39069362600"
   email = "segreteria@protezionecivilegenzano.it"
+  # GoatCounter — statistiche di visita anonime e SENZA cookie (privacy-first, GDPR).
+  # Inserisci SOLO il codice del tuo sito GoatCounter (la parte prima di
+  # ".goatcounter.com"). Lascia vuoto per disattivare. Sito gratuito (account
+  # "non-commercial") su https://www.goatcounter.com/ — poi rimetti qui il codice.
+  goatcounter = ""
   pec = ""
   facebook = "https://www.facebook.com/protezionecivilegenzanodiroma"
   instagram = "https://www.instagram.com/protezionecivilegenzano/"
