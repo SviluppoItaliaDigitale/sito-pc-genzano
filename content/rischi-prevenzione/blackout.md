@@ -50,4 +50,18 @@ Il territorio di Genzano, con la sua rete di distribuzione che attraversa aree b
 - **Non dare per scontato che il blackout sia breve**: preparati sempre al peggio
 {{< /cosa-non-fare >}}
 
+## <i class="bi bi-link-45deg text-primary me-2" aria-hidden="true"></i>Fonti e approfondimenti {#fonti}
+
+**Sul nostro sito**
+
+- [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — il Kit "Casa 72 ore" per restare autonomi senza corrente
+- [Cosa fare adesso](/cosa-fare-adesso/) e [Numeri utili](/numeri-utili/)
+
+**Fonti istituzionali**
+
+- [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — rischi tecnologici e infrastrutture critiche
+- [Terna](https://www.terna.it/) — gestore della rete elettrica nazionale, stato del sistema elettrico
+- [ARERA](https://www.arera.it/) — Autorità per energia, reti e ambiente: diritti degli utenti e continuità del servizio
+- [Corpo Nazionale dei Vigili del Fuoco](https://www.vigilfuoco.it/) — soccorso in caso di persone bloccate in ascensore o rischio da monossido
+
 {{< chi-chiamare >}}
