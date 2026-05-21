@@ -1,10 +1,10 @@
 ---
 
 title: "Il Codice della Protezione Civile (D.Lgs. 1/2018)"
-description: "Guida completa al Testo Unico della Protezione Civile: struttura, finalità, organizzazione del Servizio Nazionale, volontariato, gestione delle emergenze."
+description: "Guida divulgativa al Codice della Protezione Civile: struttura in sette Capi, finalità, organizzazione del Servizio Nazionale, previsione, emergenze, volontariato, fondi."
 toc: true
 ---
-Il **Decreto Legislativo 2 gennaio 2018, n. 1** — comunemente chiamato **Codice della Protezione Civile** o **Testo Unico della Protezione Civile** — è la legge che disciplina il **Servizio Nazionale della Protezione Civile** (SNPC). Ha sostituito la storica **Legge 225 del 1992**, riordinando venticinque anni di norme e prassi in un unico testo organico.
+Il **Decreto Legislativo 2 gennaio 2018, n. 1** — comunemente chiamato **Codice della Protezione Civile** — è la legge che disciplina il **Servizio Nazionale della Protezione Civile** (SNPC). Ha sostituito la storica **Legge 225 del 1992**, riordinando venticinque anni di norme e prassi in un unico testo organico.
 
 In questa sezione trovi una **sintesi divulgativa**, articolo per articolo, pensata per cittadini, volontari e amministratori locali. Non sostituisce il testo ufficiale: per un uso professionale consulta sempre il testo aggiornato su [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
 
@@ -16,29 +16,29 @@ In questa sezione trovi una **sintesi divulgativa**, articolo per articolo, pens
 
 ## La struttura del Codice
 
-Il Codice è suddiviso in **sette Capi**, con **50 articoli** complessivi. Ogni Capo ha una sua logica:
+Il Codice è suddiviso in **sette Capi**, con **50 articoli** complessivi. La ripartizione che segue rispecchia il testo vigente pubblicato su Normattiva:
 
 | Capo | Titolo | Articoli | Contenuto |
 |---|---|---|---|
-| **Capo I** | Finalità, attività e composizione del Servizio nazionale | 1 – 13 | Definizione, attività, diritti del cittadino, composizione del SNPC |
-| **Capo II** | Organizzazione del Servizio nazionale | 14 – 16 | Ruoli di Dipartimento Nazionale, Regioni, Città metropolitane, Comuni |
-| **Capo III** | Attività per la previsione e prevenzione dei rischi | 17 – 21 | Allertamento, sistemi di monitoraggio, formazione |
-| **Capo IV** | Pianificazione di protezione civile | 22 – 23 | Piani nazionali, regionali e comunali |
-| **Capo V** | Gestione delle emergenze di rilievo nazionale | 24 – 30 | Dichiarazione stato di emergenza, ordinanze, DI.COMA.C. |
-| **Capo VI** | Partecipazione dei cittadini e volontariato | 31 – 42 | Volontariato organizzato, gruppi comunali, ONLUS, diritti |
-| **Capo VII** | Disposizioni transitorie e finali | 43 – 50 | Coperture finanziarie, abrogazioni, disposizioni finali |
+| **Capo I** | Finalità, attività e composizione del Servizio nazionale | 1 – 6 | Definizione e finalità, attività di protezione civile, composizione del SNPC, attribuzioni del Presidente del Consiglio e delle autorità territoriali |
+| **Capo II** | Organizzazione del Servizio nazionale | 7 – 15 | Tipologia degli eventi; funzioni di Dipartimento, Prefetto, Vigili del Fuoco, Regioni e Comuni; strutture operative; Comitato operativo e direttive |
+| **Capo III** | Attività per la previsione e prevenzione dei rischi | 16 – 22 | Tipologia dei rischi, sistemi di allertamento, pianificazione, comunità scientifica, Commissione Grandi Rischi, prevenzione strutturale e non strutturale |
+| **Capo IV** | Gestione delle emergenze di rilievo nazionale | 23 – 30 | Stato di mobilitazione, stato di emergenza nazionale, ordinanze, rientro nell'ordinario, contabilità speciali, interventi internazionali |
+| **Capo V** | Partecipazione dei cittadini e volontariato organizzato | 31 – 42 | Cittadinanza attiva, volontariato organizzato, elenco nazionale, gruppi comunali, tutele dei volontari, rimborsi, Comitato nazionale del volontariato |
+| **Capo VI** | Misure e strumenti organizzativi e finanziari | 43 – 46 | Fondo nazionale per previsione e prevenzione, Fondo per le emergenze nazionali, Fondo regionale, strumenti organizzativi |
+| **Capo VII** | Norme transitorie, di coordinamento e finali | 47 – 50 | Coordinamento dei riferimenti normativi, abrogazioni, invarianza finanziaria, norme transitorie e finali |
 
 ## Approfondimenti
 
 Abbiamo preparato una sintesi dedicata per ciascun Capo del Codice, con linguaggio chiaro e riferimento puntuale agli articoli.
 
-- [Capo I — Finalità, attività e composizione del SNPC (articoli 1-13)](/normativa/testo-unico-protezione-civile/capo-1-finalita/)
-- [Capo II — Organizzazione del Servizio nazionale (articoli 14-16)](/normativa/testo-unico-protezione-civile/capo-2-organizzazione/)
-- [Capo III — Previsione e prevenzione dei rischi (articoli 17-21)](/normativa/testo-unico-protezione-civile/capo-3-previsione-prevenzione/)
-- [Capo IV — Pianificazione di protezione civile (articoli 22-23)](/normativa/testo-unico-protezione-civile/capo-4-pianificazione/)
-- [Capo V — Gestione delle emergenze di rilievo nazionale (articoli 24-30)](/normativa/testo-unico-protezione-civile/capo-5-emergenze-nazionali/)
-- [Capo VI — Volontariato di protezione civile (articoli 31-42)](/normativa/testo-unico-protezione-civile/capo-6-volontariato/)
-- [Capo VII — Disposizioni finali (articoli 43-50)](/normativa/testo-unico-protezione-civile/capo-7-disposizioni-finali/)
+- [Capo I — Finalità, attività e composizione del SNPC (articoli 1-6)](/normativa/testo-unico-protezione-civile/capo-1-finalita/)
+- [Capo II — Organizzazione del Servizio nazionale (articoli 7-15)](/normativa/testo-unico-protezione-civile/capo-2-organizzazione/)
+- [Capo III — Previsione e prevenzione dei rischi (articoli 16-22)](/normativa/testo-unico-protezione-civile/capo-3-previsione-prevenzione/)
+- [Capo IV — Gestione delle emergenze di rilievo nazionale (articoli 23-30)](/normativa/testo-unico-protezione-civile/capo-4-emergenze-nazionali/)
+- [Capo V — Partecipazione dei cittadini e volontariato (articoli 31-42)](/normativa/testo-unico-protezione-civile/capo-5-volontariato/)
+- [Capo VI — Misure e strumenti organizzativi e finanziari (articoli 43-46)](/normativa/testo-unico-protezione-civile/capo-6-misure-strumenti/)
+- [Capo VII — Norme transitorie, di coordinamento e finali (articoli 47-50)](/normativa/testo-unico-protezione-civile/capo-7-disposizioni-finali/)
 
 ## Perché leggere il Codice
 
