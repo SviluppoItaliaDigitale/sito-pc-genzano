@@ -132,5 +132,9 @@
     (function(){var e=document.querySelectorAll('.fade-in-up');if(!e.length)return;var o=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});e.forEach(function(el){o.observe(el)})})();
   </script>
   {{ block "scripts" . }}{{ end }}
+  {{/* Statistiche anonime senza cookie — attive solo se params.goatcounter è valorizzato */}}
+  {{ with site.Params.goatcounter }}
+  <script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  {{ end }}
 </body>
 </html>
