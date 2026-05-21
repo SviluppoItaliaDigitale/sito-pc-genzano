@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-07-25-zanzare-rischio-sanitario-prevenzione-facile"
 ---
 
 Le **zanzare** sono spesso percepite come fastidio estivo. In realtà sono **vettori** di malattie che in Italia negli ultimi anni hanno registrato **casi crescenti**: **West Nile**, **Dengue**, **Chikungunya**, **Zika**. Il cambiamento climatico ha allargato gli areali di specie invasive come la **zanzara tigre**. La prevenzione individuale e collettiva è **sanità pubblica**.

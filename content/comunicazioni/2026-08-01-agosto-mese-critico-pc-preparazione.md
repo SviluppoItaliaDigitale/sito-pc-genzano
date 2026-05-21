@@ -10,6 +10,7 @@ image_alt: "Campi assolati e vegetazione secca nei Castelli Romani all'inizio di
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-08-01-agosto-mese-critico-pc-preparazione-facile"
 draft: false
 ---
 

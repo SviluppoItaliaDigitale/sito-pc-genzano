@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-16-vento-forte-prima-durante-dopo-facile"
 ---
 
 Il vento non è solo il "fastidioso soffio" delle giornate di scirocco o tramontana. Quando raggiunge intensità elevate — raffiche superiori a **60-80 km/h** — diventa un **rischio serio** per persone e cose. Ogni anno, in Italia, si registrano incidenti anche mortali per alberi caduti, cornicioni staccati, tegole scagliate, auto investite da oggetti volanti.

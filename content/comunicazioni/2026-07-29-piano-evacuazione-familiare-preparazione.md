@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-07-29-piano-evacuazione-familiare-preparazione-facile"
 ---
 
 In caso di **emergenza** — un incendio, un terremoto, una fuga di gas, un'alluvione — pochi minuti possono fare la differenza tra salvezza e tragedia. Ogni famiglia dovrebbe avere un **piano di evacuazione** chiaro, condiviso con tutti i membri e praticato regolarmente. Non è un esercizio ansiogeno: è un atto di cura verso chi si ama.

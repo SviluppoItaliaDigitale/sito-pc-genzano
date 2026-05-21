@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-07-19-colpo-calore-riconoscere-primo-soccorso-facile"
 ---
 
 Il **colpo di calore** è un'**emergenza medica** che può avere conseguenze gravi, anche fatali. Si manifesta quando il corpo non riesce più a raffreddarsi e la temperatura interna sale oltre **i 40 °C**. Riconoscerlo tempestivamente e intervenire nel modo giusto può salvare una vita. Ogni cittadino dovrebbe conoscerne le basi.

@@ -11,6 +11,8 @@ scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
+versione_facile: "2026-08-03-rischio-incendi-agosto-picco-facile"
+tts: true
 ---
 
 La campagna regionale **Anti Incendi Boschivi (AIB)** del Lazio prevede il periodo di **massima pericolosità dal 15 giugno al 30 settembre**. Il picco statistico cade in agosto: temperature alte, vegetazione secca, venti occidentali e presenza turistica elevata. Una combinazione di fattori che richiede attenzione da parte di tutti.
