@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-06-28-rete-vicinato-attivo-resilienza-quartiere-facile"
 ---
 
 Dopo ogni grande emergenza — terremoti, alluvioni, incendi — gli studi concordano: i **primi soccorsi** nelle prime ore arrivano quasi sempre da **vicini di casa e passanti**, non dalle squadre ufficiali. Questo significa che la **rete sociale di quartiere** è uno dei più potenti strumenti di Protezione Civile. Crearla e mantenerla è una forma di prevenzione concreta.

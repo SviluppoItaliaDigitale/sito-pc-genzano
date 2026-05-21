@@ -10,6 +10,7 @@ image_alt: "Sole al tramonto sopra campi aridi ai Castelli Romani in una giornat
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-06-20-solstizio-estate-massima-attenzione-incendi-facile"
 draft: false
 ---
 

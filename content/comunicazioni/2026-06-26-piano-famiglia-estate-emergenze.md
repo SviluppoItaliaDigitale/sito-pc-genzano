@@ -11,6 +11,8 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-06-26-piano-famiglia-estate-emergenze-facile"
+tts: true
 ---
 
 L'estate non è solo una vacanza: è una stagione con **rischi specifici** (incendi, temporali, ondate di calore) e **cambiamenti di ritmo** (viaggi, bambini a casa, giornate fuori). Un **piano familiare di emergenza** adeguato all'estate è semplice da preparare e **molto utile** quando serve.
