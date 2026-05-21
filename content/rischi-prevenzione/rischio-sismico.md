@@ -1,6 +1,7 @@
 ---
 
 title: "Rischio Sismico: Cosa Fare"
+dataUltimaRevisione: "2026-05-21"
 description: "Cosa fare prima, durante e dopo una scossa di terremoto per la sicurezza della tua famiglia."
 tts: true
 lis_section: "rischio-sismico"

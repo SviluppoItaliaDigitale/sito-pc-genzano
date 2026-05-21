@@ -1,6 +1,7 @@
 ---
 
 title: "Rischio Idrogeologico"
+dataUltimaRevisione: "2026-05-21"
 description: "Le norme di comportamento da adottare in caso di alluvioni, frane e temporali intensi sul territorio di Genzano di Roma."
 tts: true
 lis_section: "rischio-idrogeologico"
