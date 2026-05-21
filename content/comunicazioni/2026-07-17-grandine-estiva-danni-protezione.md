@@ -10,6 +10,7 @@ image_alt: "Chicchi di grandine accumulati su un prato dopo un violento temporal
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-07-17-grandine-estiva-danni-protezione-facile"
 draft: false
 ---
 

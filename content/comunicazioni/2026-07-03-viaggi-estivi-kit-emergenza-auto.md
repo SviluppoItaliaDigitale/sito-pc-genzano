@@ -10,6 +10,7 @@ image_alt: "Baule di un'auto aperto con kit di emergenza, acqua e giubbotto ad a
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+versione_facile: "2026-07-03-viaggi-estivi-kit-emergenza-auto-facile"
 draft: false
 ---
 
