@@ -130,6 +130,7 @@ Scegli la situazione più vicina a quella che stai vivendo. Troverai indicazioni
 - [Schede "1 minuto per proteggerti"](/schede-1-minuto/) — sei azioni concrete in un minuto, stampabili e condivisibili
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
 - [Rischi e prevenzione](/rischi-prevenzione/) — comportamenti per ogni tipo di rischio
+- [Dopo l'emergenza](/rischi-prevenzione/dopo-emergenza/) — cosa fare quando l'evento è passato
 - [Allerte meteo](/allerte-meteo/) — stato di allerta in corso
 - [Piano familiare](/piano-familiare/) — preparare il piano di emergenza in famiglia
 

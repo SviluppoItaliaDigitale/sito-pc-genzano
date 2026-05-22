@@ -27,6 +27,7 @@ Queste pagine aiutano a orientarsi in pochi minuti, anche senza conoscenze tecni
 - [Scuole di Genzano e rischi locali](/rischi-prevenzione/scuole-genzano-rischi-locali/) — riferimenti generali per famiglie e personale scolastico, da integrare con il piano di emergenza del singolo istituto.
 - [Sicurezza sullo scuolabus](/rischi-prevenzione/sicurezza-scuolabus/) — cosa fare in emergenza durante il tragitto: regole per bambini, autista e genitori.
 - [Kit di emergenza economico e progressivo](/rischi-prevenzione/kit-emergenza-economico-progressivo/) — come comporre il kit un pezzo alla volta, senza marchi né prodotti specifici.
+- [Dopo l'emergenza](/rischi-prevenzione/dopo-emergenza/) — rientro sicuro, verifica di gas, luce e acqua, animali e notizie false quando l'evento è passato.
 
 ## Principali rischi
 
@@ -75,6 +76,7 @@ Tutti gli articoli su rischi e prevenzione sono filtrabili nell'[archivio delle 
 ## Vedi anche
 
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate in caso di emergenza
+- [Dopo l'emergenza](/rischi-prevenzione/dopo-emergenza/) — cosa fare quando l'evento è passato
 - [Allerte meteo](/allerte-meteo/) — stato e significato delle allerte
 - [Piano di emergenza](/piano-emergenza/) — aree e procedure comunali
 - [Piano familiare](/piano-familiare/) — organizzare la famiglia prima dell'emergenza

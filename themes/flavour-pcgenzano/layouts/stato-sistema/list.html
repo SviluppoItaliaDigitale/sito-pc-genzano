@@ -35,7 +35,7 @@
           <strong>{{ .titolo | default "Stato non disponibile" }}</strong>
         </p>
         {{- with .descrizione }}<p class="stato-panel-desc">{{ . }}</p>{{ end -}}
-        {{- with .ultimo_controllo }}<p class="stato-meta">Verificato: <time datetime="{{ . }}">{{ time.Format "2 January 2006, 15:04" . }}</time> (ora italiana)</p>{{ end -}}
+        {{- with .ultimo_controllo }}<p class="stato-meta">Ultimo bollettino verificato: <time datetime="{{ . }}">{{ time.Format "2 January 2006, 15:04" . }}</time> (ora italiana)</p>{{ end -}}
         {{- else -}}
         <p class="stato-panel-desc">Dati di allerta non disponibili.</p>
         {{- end }}
@@ -80,12 +80,12 @@
             <span class="stato-workflow-testo">
               <strong>{{ .nome }}</strong>
               <span class="stato-workflow-desc">{{ .descrizione }}</span>
-              {{- with .ultimo_run }}<span class="stato-meta">Ultimo controllo: <time datetime="{{ . }}">{{ time.Format "2 January 2006, 15:04" . }}</time></span>{{ end -}}
+              {{- with .ultimo_run }}<span class="stato-meta">Ultima esecuzione automatica: <time datetime="{{ . }}">{{ time.Format "2 January 2006, 15:04" . }}</time></span>{{ end -}}
             </span>
           </li>
           {{- end -}}
         </ul>
-        <p class="stato-meta">Stato aggiornato il <time datetime="{{ .aggiornato }}">{{ time.Format "2 January 2006, 15:04" .aggiornato }}</time>.</p>
+        <p class="stato-meta">Dati delle automazioni aggiornati il <time datetime="{{ .aggiornato }}">{{ time.Format "2 January 2006, 15:04" .aggiornato }}</time>.</p>
         {{- else }}
         <p class="stato-panel-desc">Dati delle automazioni non ancora disponibili.</p>
         {{- end }}
