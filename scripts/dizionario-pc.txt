@@ -1,0 +1,135 @@
+# Dizionario-allowlist del sito Protezione Civile Genzano
+# Parole valide ma non presenti nel dizionario hunspell it_IT (nomi propri,
+# sigle minuscole/miste, termini tecnici, parole inglesi d'uso comune).
+# Una parola per riga, minuscolo. Le righe con # sono commenti.
+# Lo script check-refusi.py salta già le sigle TUTTE MAIUSCOLE (DPC, NUE, ISO...).
+# Aggiungi qui SOLO parole davvero corrette segnalate come sospette.
+#
+# === Toponimi / territorio ===
+genzano
+genzanese
+castelli
+romani
+nemi
+ariccia
+albano
+laziale
+marino
+cava
+selci
+lazio
+aprilia
+cecchina
+appennino
+amatrice
+norcia
+visso
+capitignano
+aquila
+irpinia
+sarno
+flegrei
+pozzuoli
+bagnoli
+vesuviano
+vesuvio
+etna
+stromboli
+belardi
+livia
+sforza
+cesarini
+frasconi
+buozzi
+olmata
+cynthianum
+zena
+traversara
+modigliana
+romagna
+emilia
+tohoku
+fukushima
+gorkha
+rigopiano
+soverato
+belice
+avezzano
+marsica
+versilia
+cardoso
+stazzema
+fereggiano
+casamicciola
+#
+# === Nomi propri / persone ===
+zamberletti
+pappalardo
+malagnini
+mecheri
+olivelli
+giulivo
+ceccato
+ciciliano
+torti
+mascalucia
+#
+# === Sigle e marchi (minuscoli o misti) ===
+activepager
+arasaac
+aedes
+it-alert
+pagefind
+geopop
+notebooklm
+firecrawl
+involcan
+fepivol
+saforprociv
+goatcounter
+indexnow
+opendyslexic
+#
+# === Termini tecnici / inglesi d'uso ===
+shakemap
+bradisismo
+telesismi
+telesisma
+receiver
+drop
+cover
+hold
+flash
+flood
+canadair
+webp
+online
+offline
+kit
+app
+social
+drone
+droni
+lockdown
+briefing
+hashtag
+podcast
+brainstorming
+checklist
+washback
+spelluccamento
+infioratori
+infiorata
+infioratrici
+maestre
+#
+# === Parole italiane valide che hunspell it_IT non riconosce ===
+autoprotezione
+fotocopiabile
+memorizzabile
+rev
+#
+# === Parole inglesi minuscole d'uso (titoli di riviste/enti restano maiuscoli, già saltati) ===
+the
+of
+and

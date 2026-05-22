@@ -202,6 +202,7 @@ Specifiche complete + tabella riformulazioni standard in `.claude/rules/06-prote
 | **Web check entità citate** | WebFetch su ogni associazione/sigla/persona prima di scriverla (REGOLA 4). |
 | **QR code** | `python3 scripts/genera-qr-articoli.py` (idempotente). Anche se dimentico, c'è doppia rete CI (`genera-qr-articoli.yml` + step in `deploy.yml`). |
 | **Indice ricerca Pagefind** | `bash scripts/genera-indice-ricerca.sh` quando servizio richiede ricerca immediata. |
+| **Spell-check refusi** | Prima del `git add` lancio `python3 scripts/check-refusi.py <file>` sul file nuovo/modificato: correggo i refusi reali (es. "cuoperti"→"copriti") e aggiungo a `scripts/dizionario-pc.txt` gli eventuali falsi positivi (nomi propri/sigle/termini tecnici). Così l'articolo nasce già pulito. |
 | **Gate AGID** | Invoco `pc-article-reviewer` prima del `git add` (gate obbligato, vedi sezione sopra). |
 | **Commit + push + (se autorizzato) PR + merge** | Tutto in sequenza fino al sito live. Parola-trigger "pubblica/vai/procedi/sì" autorizza fino al merge. |
 
@@ -284,7 +285,7 @@ Molti articoli **non hanno un video** ma meritano una sezione **"Per approfondir
 
 ## Agenti specializzati disponibili
 
-In `.claude/agents/` ci sono 15 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
+In `.claude/agents/` ci sono 16 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
 
 | Agent | Trigger naturali italiani |
 |---|---|
@@ -303,6 +304,7 @@ In `.claude/agents/` ci sono 15 agenti custom da usare PROATTIVAMENTE quando la 
 | `pc-print-card-qa` | "controlla le schede stampabili", "QA del kit calamità", "i puzzle sono giocabili?" |
 | `pc-site-auditor` | "fammi un audit del sito", "audit approfondito", "controlla tutto il sito", "ci sono incongruenze?", "pro e contro" |
 | `pc-notebooklm-publisher` | "pubblica gli output di NotebookLM per il tema X", "ho caricato i file nella drop zone", "publish notebooklm <tema>" — automatizza il flusso di pubblicazione dei materiali multimediali NotebookLM (podcast, infografiche, presentazioni) nel sito |
+| `pc-correttore-bozze` | "controlla i refusi", "cerca errori di battitura/ortografia", "rileggi per refusi", "bonifica le schede" — caccia refusi e errori ortografici/grammaticali su QUALSIASI contenuto, **incluse le schede statiche HTML** (`static/formazione/`, `static/giochi/`) che gli altri agent non coprono. Usa `scripts/check-refusi.py` (hunspell it_IT) + lettura umana per accordi/grammatica |
 
 Specifiche operative complete + esempi di workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Quando aggiungi/modifichi un agent, aggiorna anche la Parte 19 e questa tabella.
 
@@ -362,7 +364,7 @@ Vietato dire *"so che esiste la skill X ma intanto procedo a mano"* — è esatt
 
 ### Quando agent custom + skill collaborano
 
-I 15 agent `pc-*` sono **persone con competenza editoriale del sito**; le skill globali sono **pattern tecnici trasversali**. Convivono — quando rilevanti, invocali in sequenza:
+I 16 agent `pc-*` sono **persone con competenza editoriale del sito**; le skill globali sono **pattern tecnici trasversali**. Convivono — quando rilevanti, invocali in sequenza:
 
 - Revisione articolo: `pc-article-reviewer` (custom, AGID + frontmatter) → `pc-photo-caption-verifier` se ci sono foto → `accessibility` (skill, WCAG cross-cutting) → `seo-audit` (skill, SEO finale).
 - Pre-push importante: `pc-deploy-validator` (custom, regole repo) → `production-audit` (skill, readiness generale) → `security-scan` (skill, config).
