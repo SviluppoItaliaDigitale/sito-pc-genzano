@@ -42,7 +42,9 @@ Il tema di quest'anno è **«Fiorita nella pace: 80 anni della Repubblica italia
 
 ## Programma della manifestazione
 
-Di seguito il programma diffuso dal **Comune di Genzano di Roma**. È un programma **in aggiornamento**: per orari e dettagli definitivi controlla i canali ufficiali (vedi *Fonti ufficiali* a fine pagina).
+Di seguito il programma diffuso dal **Comune di Genzano di Roma**. È un programma **in aggiornamento**.
+
+> ⚠️ **Per eventuali variazioni al programma fai sempre riferimento al [sito ufficiale del Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).** Il Gruppo Comunale di Protezione Civile riporta qui il programma a titolo informativo e **non risponde di modifiche** decise dall'organizzazione.
 
 ### Venerdì 12 giugno
 
