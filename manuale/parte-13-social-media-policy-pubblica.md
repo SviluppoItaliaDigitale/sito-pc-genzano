@@ -274,7 +274,7 @@ I contenuti operativi delle fonti (struttura messaggi, hashtag, accessibilità, 
 
 Da maggio 2026 c'è uno script che ti accompagna in questi gesti: ti apre i 4 canali, ti mette il testo della bozza giusta negli appunti e ti dice cosa fare in ogni step. Tu fai solo `Ctrl+V` e premi "Pubblica".
 
-**Come si lancia.** Apri il menu con `bash ~/gestione-sito.sh` e scegli la **voce 24**. Ti chiede lo slug dell'articolo (es. `2026-05-18-titolo-articolo`) e parte. In alternativa da terminale:
+**Come si lancia.** Apri il menu con `bash ~/gestione-sito.sh` e scegli la **voce 26**. Ti chiede lo slug dell'articolo (es. `2026-05-18-titolo-articolo`) e parte. In alternativa da terminale:
 
 ```bash
 bash scripts/pubblica-social-assistito.sh 2026-05-18-titolo-articolo
