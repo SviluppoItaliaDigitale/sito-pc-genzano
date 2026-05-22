@@ -1,7 +1,7 @@
 ---
 title: "Infiorata di Genzano 2026: cosa sapere prima di venire"
 date: 2026-05-22T00:09:00+02:00
-description: "L'Infiorata di Genzano torna dal 13 al 15 giugno 2026: 248ª edizione, via Italo Belardi. Indicazioni pratiche per il cittadino e il visitatore."
+description: "Infiorata di Genzano 2026, 248ª edizione dal 13 al 15 giugno: programma completo degli eventi giorno per giorno e indicazioni pratiche per il visitatore."
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -22,7 +22,7 @@ L'evento attira decine di migliaia di visitatori da tutta Italia e dall'estero, 
     data="13 giugno 2026"
     data_fine="15 giugno 2026"
     luogo="Via Italo Belardi, Genzano di Roma"
-    orario="apertura al pubblico in fase di definizione"
+    orario="programma da venerdì 12 a lunedì 15 giugno · inaugurazione domenica 14 giugno ore 11:00"
     mappa_url="https://www.google.com/maps/search/?api=1&query=Via+Italo+Belardi+Genzano+di+Roma"
     afflusso="molto alto"
     pc_presente="sì, presidio del Gruppo Comunale lungo il percorso"
@@ -37,6 +37,50 @@ L'evento attira decine di migliaia di visitatori da tutta Italia e dall'estero, 
 La via Italo Belardi viene **chiusa al traffico** per consentire la realizzazione dei quadri floreali. Gli infioratori lavorano nelle ore notturne tra sabato e domenica per comporre i disegni con petali e materiali naturali. Il tappeto è visitabile dalla domenica mattina, quando viene attraversato dalla processione del Corpus Domini, fino al lunedì sera quando la festa si conclude con lo "spallamento" dei bambini che attraversano l'opera.
 
 L'edizione 2026 cade su un fine settimana lungo che porta in città un afflusso particolarmente elevato di visitatori, soprattutto nella giornata di **domenica 14 giugno**.
+
+Il tema di quest'anno è **«Fiorita nella pace: 80 anni della Repubblica italiana»**. La via Italo Belardi ospita un tappeto di petali di circa **1.890 metri quadri** lungo **250 metri**, composto da sedici quadri infiorati.
+
+## Programma della manifestazione
+
+Di seguito il programma diffuso dal **Comune di Genzano di Roma**. È un programma **in aggiornamento**: per orari e dettagli definitivi controlla i canali ufficiali (vedi *Fonti ufficiali* a fine pagina).
+
+### Venerdì 12 giugno
+
+- **ore 6:00** — Cortile comunale: *"spelluccamento"* dei fiori e preparazione delle essenze vegetali.
+- **ore 10:00-13:00** — Palazzo Comunale, Sala Belvedere: esposizione dei bozzetti.
+- **dalle ore 19:00** — Via Italo Belardi: inizio dei disegni a terra da parte delle Maestre e dei Maestri Infioratori.
+- **ore 21:00** — Piazza Tommaso Frasconi: concerto.
+
+### Sabato 13 giugno
+
+- **ore 6:00** — Cortile comunale: *"spelluccamento"* e preparazione delle essenze.
+- **ore 10:00-19:00** (ultimo ingresso 18:30) — Palazzo e Parco Sforza Cesarini: visite guidate al Palazzo e alle mostre.
+- **dalle ore 10:00** — Chiesa SS. Trinità: realizzazione della striscia infiorata in Collegiata.
+- **ore 17:00-23:00** — Sala Belvedere: esposizione dei bozzetti.
+- **ore 19:00** — Via Italo Belardi: inizio della posa dei petali.
+- **ore 19:00** — Piazza Tommaso Frasconi: concerto.
+- **ore 20:00-21:00** — Piazza Tommaso Frasconi: spettacolo.
+- **ore 21:00** — Piazzale Sforza Cesarini: XXIX sfilata di moda *"Sotto il cielo di Genzano 2026"*.
+
+### Domenica 14 giugno
+
+- **ore 8:00-19:00** — Olmata (Viale Vittorio Veneto): mercatino *"Mercatus Cynthianum"*.
+- **ore 9:00-23:00** — Sala Belvedere: esposizione dei bozzetti.
+- **ore 9:00-23:00** — Grotte comunali: visite ai luoghi dove si conservano petali ed essenze.
+- **ore 10:00-24:00** (ultimo ingresso 23:30) — Palazzo Sforza Cesarini: visite guidate.
+- **ore 11:00** — Piazzale Sforza Cesarini: **inaugurazione ufficiale della 248ª edizione**, alla presenza delle autorità civili, militari e religiose.
+- **ore 18:00** — Parrocchia SS. Trinità: Celebrazione Eucaristica e, a seguire, **processione del Corpus Domini** sull'Infiorata e sulle vie cittadine.
+- **ore 21:00** — Piazza Tommaso Frasconi: concerto del Complesso bandistico Città di Genzano.
+- **ore 22:00** — Spettacolo pirotecnico (visibile da Piazza Tommaso Frasconi).
+
+### Lunedì 15 giugno
+
+- **ore 9:00-17:00** — Sala Belvedere: esposizione dei bozzetti.
+- **ore 9:00-17:00** — Grotte comunali: visite.
+- **ore 10:00-17:00** (ultimo ingresso 16:30) — Palazzo Sforza Cesarini: visite guidate.
+- **ore 18:00** — Vie cittadine: sfilata storica in costume *"A ritroso nel paese dell'Infiorata"*.
+- **ore 18:30** — Concerto itinerante del Complesso bandistico Città di Genzano.
+- **ore 19:00** — Via Italo Belardi: cerimonia dello *"spallamento"* da parte dei bambini, che chiude la manifestazione.
 
 ## Indicazioni per il cittadino e il visitatore
 
