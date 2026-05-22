@@ -104,8 +104,8 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/educazione-civica/" role="menuitem"><span>Per i docenti — Ed. Civica</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/storie-e-racconti/" role="menuitem"><span>Storie e Racconti</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi della Sicurezza</span></a></li>' +
-                    /* Spostato da "Per il Cittadino" maggio 2026: quiz strumento didattico naturale */
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/quiz-preparazione/" role="menuitem"><span>Quanto sei preparato? (quiz)</span></a></li>' +
+                    /* Quiz "Quanto sei preparato?" rimosso dal menu il 22 maggio 2026:
+                       ancorato come strumento dentro /piano-familiare/ (autovalutazione del cittadino). */
                   '</ul></div></div>' +
                 '</li>' +
                 /* Dropdown: Accessibilità e Supporti (2 voci trasversali, nuovo maggio 2026) */
