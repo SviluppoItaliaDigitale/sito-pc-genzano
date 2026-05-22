@@ -1,0 +1,89 @@
+name: Controllo refusi (spell-check)
+
+# Spell-check italiano sui contenuti modificati di recente (articoli .md +
+# schede statiche .html). Pesca refusi/non-parole tipo "cuoperti" → "copriti".
+# Controlla SOLO i file modificati negli ultimi 7 giorni: l'issue resta piccola
+# e utile (il legacy si bonifica on-demand con l'agent pc-correttore-bozze).
+# Per bonificare tutto: python3 scripts/check-refusi.py  (sweep completo).
+
+on:
+  schedule:
+    - cron: "40 10 * * 1"   # lunedì 10:40 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  refusi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Installa dizionario italiano + spylls
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq hunspell-it
+          pip install --quiet spylls
+
+      - name: Raccogli i file modificati negli ultimi 7 giorni
+        id: changed
+        run: |
+          git log --since="7 days ago" --diff-filter=AM --name-only --pretty=format: \
+            | grep -E '\.(md|html)$' \
+            | grep -E '^(content/|static/formazione/|static/giochi/)' \
+            | sort -u > /tmp/changed.txt || true
+          echo "Trovati $(wc -l < /tmp/changed.txt) file modificati da controllare:"
+          cat /tmp/changed.txt
+
+      - name: Spell-check sui file modificati
+        id: check
+        run: |
+          if [ ! -s /tmp/changed.txt ]; then
+            echo "Nessun file modificato negli ultimi 7 giorni. Niente da controllare."
+            echo "found=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          set +e
+          xargs -a /tmp/changed.txt python3 scripts/check-refusi.py > /tmp/refusi-report.txt 2>&1
+          rc=$?
+          set -e
+          cat /tmp/refusi-report.txt
+          if [ "$rc" -eq 1 ]; then
+            echo "found=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=0" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Apri/aggiorna issue se ci sono sospetti
+        if: steps.check.outputs.found == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BODY=$(cat <<'EOF'
+          Il controllo settimanale dei refusi ha trovato **parole sospette** nei contenuti modificati negli ultimi 7 giorni.
+
+          Sono parole non riconosciute dal dizionario italiano (escluse sigle MAIUSCOLE e nomi propri con la maiuscola). Possono essere:
+          - **refusi veri** (es. `cuoperti` → `copriti`) → da correggere;
+          - **falsi positivi** (nomi propri minuscoli, sigle miste, termini tecnici/inglesi) → da aggiungere a `scripts/dizionario-pc.txt`.
+
+          Per la revisione assistita: invoca l'agent **pc-correttore-bozze** sui file elencati.
+
+          ```
+          EOF
+          )
+          REPORT=$(cat /tmp/refusi-report.txt)
+          FULL="${BODY}
+          ${REPORT}
+          \`\`\`"
+          TITLE="🔤 Refusi sospetti nei contenuti recenti ($(date +%Y-%m-%d))"
+          EXISTING=$(gh issue list --label refusi --state open --limit 1 --json number --jq '.[0].number' 2>/dev/null || echo "")
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$FULL"
+          else
+            gh issue create --title "$TITLE" --label "automazione,refusi" --body "$FULL" || \
+            gh issue create --title "$TITLE" --body "$FULL"
+          fi
