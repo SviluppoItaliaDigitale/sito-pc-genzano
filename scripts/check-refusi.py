@@ -58,7 +58,7 @@ ELISIONI = {
     "l", "un", "d", "c", "po", "mo", "gl", "agl", "dagl", "negl", "begl",
     "dell", "sull", "all", "nell", "dall", "quell", "bell", "sant", "anch",
     "buon", "grand", "mezz", "senz", "tutt", "quest", "cent", "vent", "sett",
-    "fin", "fra", "sovra", "intern",
+    "fin", "fra", "sovra", "intern", "dov", "com", "cos", "nient",
 }
 
 def strip_markdown(t):

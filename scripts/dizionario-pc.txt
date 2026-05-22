@@ -133,3 +133,7 @@ rev
 the
 of
 and
+hub
+#
+# === Abbreviazioni d'uso ===
+min
