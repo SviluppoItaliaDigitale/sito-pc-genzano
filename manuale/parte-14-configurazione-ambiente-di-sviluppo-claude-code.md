@@ -200,9 +200,9 @@ Per evitare di dover ricordare comandi come `cd ~/sito-pc-genzano && claude` opp
 |---|---|
 | Icona desktop | Doppio click su **Claude PC Genzano** (`~/Scrivania/Claude-PC-Genzano.desktop`, icona terminale) |
 | Alias da terminale | Scrivi `claude-protezionecivile` (autocomplete: `cl` + TAB) |
-| Voce menu gestione | Voce **20 — Avvia Claude Code** dentro `gestione-sito.sh` (quando esci con `/exit` torni al menu) |
+| Voce menu gestione | Voce **24 — Avvia Claude Code** dentro `gestione-sito.sh` (quando esci con `/exit` torni al menu) |
 
-**Strumento 2 — Menu interattivo gestione sito** (23 voci: contenuti, emergenze, allerte, deploy, ChatGPT/Gemini):
+**Strumento 2 — Menu interattivo gestione sito** (30 voci: comunicazioni, bozze, pagine, emergenze, allerte, deploy, link rapidi, AI esterne, social, slide, guide):
 
 | Modo | Come si attiva |
 |---|---|
@@ -231,15 +231,66 @@ alias menu-protezionecivile='bash ~/gestione-sito.sh'
 
 E creare i 2 file `.desktop` in `~/Scrivania/` (template in questa stessa parte del manuale, sezione precedente non necessaria — gli script wrapper sono già nel repo).
 
+**Le 30 voci del menu (v3.0 — 22 maggio 2026).** Lo script è organizzato in sezioni tematiche con numerazione continua 1→30. Dalla v3.0 è tornata la **gestione bozze** (voci 5-8), con un'architettura che tiene le bozze fuori dal sito (vedi sotto).
+
+| # | Voce | Cosa fa |
+|---|---|---|
+| **COMUNICAZIONI** | | |
+| 1 | Crea nuova comunicazione | Nuovo articolo guidato, **pubblicato o calendarizzato** (`draft: false`) |
+| 2 | Crea comunicazione da file Word | Mostra i comandi `pandoc` per convertire un `.docx` |
+| 3 | Modifica comunicazione | Apre con nano un articolo del sito |
+| 4 | Elimina comunicazione | Cancella definitivamente un articolo |
+| **BOZZE** (lavori in corso, **mai online**) | | |
+| 5 | Crea bozza | Scrivi con calma in `bozze/`, fuori dal sito |
+| 6 | Modifica bozza | Apre con nano una bozza esistente |
+| 7 | Pubblica bozza | **Sposta** la bozza in `content/comunicazioni/<data>-<slug>.md` con la data scelta |
+| 8 | Elimina bozza | Cancella una bozza in lavorazione |
+| **PAGINE** | | |
+| 9 | Modifica qualsiasi pagina | Apre con nano una pagina del sito (escluse le comunicazioni) |
+| 10 | Crea nuova pagina | Genera `content/<sezione>/_index.md` con frontmatter base |
+| 11 | Elimina pagina | Cancella una pagina (attenzione alle pagine principali) |
+| **EMERGENZA** | | |
+| 12 | Attiva emergenza | Mostra il banner rosso in homepage e attiva la modalità emergenza |
+| 13 | Modifica emergenza attiva | Apre `data/emergenza.json` con nano |
+| 14 | Sospendi emergenza | Nasconde il banner; i dati restano per riattivarla |
+| **ALLERTA METEO** | | |
+| 15 | Imposta livello allerta | Scrive `data/allerta.json`: verde / gialla / arancione / rossa |
+| **PUBBLICA E TESTA** | | |
+| 16 | Test sito in locale | `hugo server` su `http://localhost:1313` |
+| 17 | **Pubblica modifiche online** | `git add + commit + push` → deploy Aruba in 2-3 minuti |
+| 18 | Stato repository | `git status` + ultimi 10 commit |
+| **LINK RAPIDI** | | |
+| 19 | Sito produzione | Apre `protezionecivilegenzano.it` |
+| 20 | GitHub Actions | Stato dei deploy e dei workflow automatici |
+| 21 | Repository GitHub | Codice sorgente del sito |
+| 22 | Bollettino Lazio | Centro Funzionale Regionale: allerte ufficiali |
+| 23 | Smoke test sito | Verifica che le pagine principali rispondano 200 OK |
+| 24 | Avvia Claude Code | Lancia l'assistente AI nel progetto (`/exit` per tornare al menu) |
+| **ALTRE AI** | | |
+| 25 | Esporta contesto per altra AI | Scegli AI → genera + copia in appunti + apre il sito (vedi § 14.11) |
+| **SOCIAL** | | |
+| 26 | Pubblica bozze social di un articolo | Apre 4 tab + appunti, tu fai Ctrl+V e Pubblica |
+| 27 | Stato opencli | Verifica daemon + estensione Chrome + livello B (vedi § 14.12) |
+| **SLIDE E PDF** | | |
+| 28 | Avvia open-design | Web UI locale per slide/PDF/mockup (vedi § 14.13) |
+| **GUIDE** | | |
+| 29 | Struttura del sito | Panoramica menu, badge, workflow, data files |
+| 30 | Guida pubblicazione | Apre questo manuale con `less` |
+| 0 | Esci | Chiude il menu |
+
+**Come funzionano le bozze (voci 5-8).** Una bozza è un articolo **non ancora pronto**: la scrivi con calma senza che vada online per sbaglio. Le bozze vivono nella cartella `bozze/` alla radice del repo, che **Hugo non costruisce mai** (stesso meccanismo di `riferimenti-interni/`): finché una bozza sta lì, non esiste per il sito. Quando è pronta, **voce 7 — Pubblica bozza** ti chiede la data (oggi, oppure futura per calendarizzare), imposta `draft: false` e **sposta** il file in `content/comunicazioni/<data>-<slug>.md`. Da quel momento è un articolo normale: per mandarlo davvero online sul sito usi la **voce 17 — Pubblica modifiche online**. Le bozze sono sincronizzate via git, quindi una bozza iniziata sul PC la ritrovi anche da mobile. Dettagli in `bozze/README.md` e nella regola `04c-hugo-static-cartelle.md`.
+
+> ⚠️ Le bozze **non** usano `draft: true` dentro `content/`: quel pattern è vietato dalla regola di progetto (le bozze dimenticate si accumulavano e rischiavano di andare live). Tenerle in `bozze/` fuori da `content/` rispetta la regola e azzera il rischio.
+
 ### 14.11 — Workflow ibrido con AI esterne (Gemini, ChatGPT, Claude web)
 
-Da maggio 2026, il menu di gestione (voce **21**) include un meccanismo automatico per **delegare la stesura dei testi** a una qualunque AI esterna che l'utente preferisce, mantenendo Claude Code come strumento di rifinitura tecnica.
+Da maggio 2026, il menu di gestione (voce **25**) include un meccanismo automatico per **delegare la stesura dei testi** a una qualunque AI esterna che l'utente preferisce, mantenendo Claude Code come strumento di rifinitura tecnica.
 
 **Perché più AI invece di una.** Ogni LLM ha una sua "voce". ChatGPT è particolarmente forte nella stesura narrativa lunga e nella riformulazione. Gemini è ottimo per riassunti tecnici e citazioni normative, e ha la finestra di contesto più ampia (2M token). Claude è preciso sulle regole strutturate e sui dettagli del repo (frontmatter, shortcode, link, CSS scoped). Usarli **in catena** dà la qualità migliore: una scrive, l'altra rifinisce, l'utente sceglie cosa tenere.
 
 **Il limite di contesto cambia tutto.** Il file `CONTESTO-AI.md` con tutta la documentazione del sito è ~810 KB / ~200.000 token. Non tutte le AI lo accettano in paste:
 
-| AI | Contesto max | Strategia voce 21 |
+| AI | Contesto max | Strategia voce 25 |
 |---|---|---|
 | **Gemini** (gratis) | 1M-2M token | FULL via paste — entra tutto |
 | **ChatGPT Plus** (GPT-4o) | 128k token | SLIM via paste (~64k token) **OPPURE** FULL come allegato drag-drop (RAG interno) |
@@ -249,7 +300,7 @@ Da maggio 2026, il menu di gestione (voce **21**) include un meccanismo automati
 
 **Il flusso operativo (zero errori se segui i passi):**
 
-1. Apri il menu (`menu-protezionecivile`) e scegli **voce 21 — Esporta contesto per altra AI**.
+1. Apri il menu (`menu-protezionecivile`) e scegli **voce 25 — Esporta contesto per altra AI**.
 2. **Lo script fa automaticamente `git pull --ff-only`** sul repo, per recuperare modifiche fatte da altre sessioni (Claude mobile/cloud, altri device). In questo modo il contesto generato riflette sempre lo stato di GitHub, non quello locale stantio. Se ci sono modifiche locali pending o conflitti, lo script avvisa con un warning giallo e procede col contenuto locale (`--ff-only` non fa mai merge automatici, è sicuro).
 3. **Lo script chiede quale AI userai** (1=Gemini, 2=ChatGPT, 3=Claude web). In base alla scelta:
    - **Gemini** → genera FULL, copia in clipboard, apre `gemini.google.com`.
@@ -263,25 +314,26 @@ Da maggio 2026, il menu di gestione (voce **21**) include un meccanismo automati
    - *"Genera bozze social X/Facebook/Instagram/Telegram per l'articolo sull'allerta gialla di domani."*
 7. L'AI produce il testo seguendo le regole del sito (frontmatter completo, badge giusto, formato data, niente foto stock generiche, ecc.).
 8. Copi il testo e:
-   - **Per pubblicarlo**: torni al menu, voce **1 — Crea nuova comunicazione**, e incolli il corpo dentro nano. Oppure salvi come file `content/comunicazioni/AAAA-MM-GG-slug.md` direttamente.
-   - **Per rifinitura tecnica** (foto inline, link, audit pre-push): voce **20 — Avvia Claude Code**, e dici *"ho appena scritto questo articolo con [AI esterna], fai i controlli e pubblica"*. Claude legge il file, applica le rules del repo nel dettaglio, committa e pusha.
+   - **Per pubblicarlo subito**: torni al menu, voce **1 — Crea nuova comunicazione**, e incolli il corpo dentro nano. Oppure salvi come file `content/comunicazioni/AAAA-MM-GG-slug.md` direttamente.
+   - **Per rifinirlo con calma prima**: voce **5 — Crea bozza**, incolli il testo, e lo pubblichi quando è pronto con la voce **7 — Pubblica bozza**.
+   - **Per rifinitura tecnica** (foto inline, link, audit pre-push): voce **24 — Avvia Claude Code**, e dici *"ho appena scritto questo articolo con [AI esterna], fai i controlli e pubblica"*. Claude legge il file, applica le rules del repo nel dettaglio, committa e pusha.
 
 **Il file `scripts/prompt-istruzioni-ai.md`.** È il "system prompt" che vincola l'AI esterna. Definisce: il ruolo (assistente editoriale del Gruppo, non sviluppatore), le regole AGID obbligatorie, il formato del frontmatter, la palette dei badge, il divieto foto stock generiche, il numero 112 come unico riferimento per il cittadino, il divieto di inventare URL/numeri/persone, la struttura ISO 22329 per post di crisi sui social, il formato dei 4 testi social. Quando aggiorni le rules del progetto, ricontrolla anche questo file: deve restare allineato.
 
-**File temporanei prodotti dalla voce 21:**
+**File temporanei prodotti dalla voce 25:**
 - `CONTESTO-AI.md` o `CONTESTO-AI-slim.md` nella root del repo (entrambi in `.gitignore`).
 - `/tmp/pcgenzano-contesto-per-ai.md` (combinato `prompt + contesto`, va negli appunti).
 - `~/Scrivania/contesto-pc-genzano-completo.md` (solo se scegli ChatGPT, per drag-drop).
 
-**Sovrascrittura silenziosa dei file Scrivania.** Il file `contesto-pc-genzano-completo.md` ha **sempre lo stesso nome** ed è **sovrascritto silenziosamente** ad ogni rilancio della voce 21 con scelta ChatGPT. Niente accumulo di file vecchi sulla Scrivania, niente confusione su quale sia l'ultima versione. Se vuoi conservare una versione specifica (per riproducibilità), rinominala manualmente prima di rilanciare.
+**Sovrascrittura silenziosa dei file Scrivania.** Il file `contesto-pc-genzano-completo.md` ha **sempre lo stesso nome** ed è **sovrascritto silenziosamente** ad ogni rilancio della voce 25 con scelta ChatGPT. Niente accumulo di file vecchi sulla Scrivania, niente confusione su quale sia l'ultima versione. Se vuoi conservare una versione specifica (per riproducibilità), rinominala manualmente prima di rilanciare.
 
-**Workflow multi-device (mobile/cloud → desktop).** Se modifichi rules, manuale o `prompt-istruzioni-ai.md` da una sessione Claude mobile o cloud, le modifiche finiscono su GitHub al merge. La voce 21 desktop, **prima** di rigenerare il contesto, esegue automaticamente `git pull --ff-only` per recuperare quelle modifiche. Quindi il file Scrivania riflette sempre lo stato di GitHub, non lo stato locale del PC che potrebbe essere indietro.
+**Workflow multi-device (mobile/cloud → desktop).** Se modifichi rules, manuale o `prompt-istruzioni-ai.md` da una sessione Claude mobile o cloud, le modifiche finiscono su GitHub al merge. La voce 25 desktop, **prima** di rigenerare il contesto, esegue automaticamente `git pull --ff-only` per recuperare quelle modifiche. Quindi il file Scrivania riflette sempre lo stato di GitHub, non lo stato locale del PC che potrebbe essere indietro.
 
 Se il `git pull` fallisce (modifiche locali non committate, conflitti reali divergenti), lo script ti avvisa con un warning giallo ma procede comunque con il contenuto locale: non perdi mai lavoro, decidi tu se risolvere il conflitto e rilanciare oppure usare il contesto stantio.
 
 **Quando NON usare AI esterne.** Per articoli su eventi in corso (allerta meteo attiva, emergenza dichiarata, intervento appena concluso) il rischio "AI inventa dati" è alto. In quei casi: scrivi direttamente con Claude Code (che ha accesso al repo e può verificare `data/allerta.json`, `data/emergenza.json`, recenti commit). Le AI esterne sono perfette per articoli **redazionali** (memoria storica, formazione, prevenzione, schede tematiche, riepiloghi attività).
 
-**Cosa NON fa la voce 21:**
+**Cosa NON fa la voce 25:**
 - Non chiama API a pagamento. Apre solo il sito web — l'utente usa il proprio account gratuito (Gemini è gratis senza limiti pratici di contesto) o gli abbonamenti ChatGPT Plus / Claude Pro personali.
 - Non posta nulla per conto dell'utente. È un copia-incolla (o drag-drop) guidato.
 - Non sostituisce Claude Code: fa parte di un workflow a due fasi.
@@ -338,7 +390,7 @@ L'abbiamo installato a maggio 2026 perché si **integra direttamente con Claude 
 
 **Dove sta sul PC.** Tutto dentro `~/open-design/` (circa 1,7 GB con le librerie). Repo originale: `https://github.com/nexu-io/open-design`.
 
-**Come si avvia (solo quando ti serve, non è sempre acceso).** Dal menu `bash ~/gestione-sito.sh` scegli la **voce 26**. In alternativa da terminale:
+**Come si avvia (solo quando ti serve, non è sempre acceso).** Dal menu `bash ~/gestione-sito.sh` scegli la **voce 28**. In alternativa da terminale:
 
 ```bash
 cd ~/open-design
