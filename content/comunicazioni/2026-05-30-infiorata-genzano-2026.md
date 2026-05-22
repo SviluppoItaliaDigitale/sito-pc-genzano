@@ -1,6 +1,6 @@
 ---
 title: "Infiorata di Genzano 2026: cosa sapere prima di venire"
-date: 2026-05-30T00:02:00+02:00
+date: 2026-05-22T00:09:00+02:00
 description: "L'Infiorata di Genzano torna dal 13 al 15 giugno 2026: 248ª edizione, via Italo Belardi. Indicazioni pratiche per il cittadino e il visitatore."
 badge: "Evento"
 priorita: "normale"
