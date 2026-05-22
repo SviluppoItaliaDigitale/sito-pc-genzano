@@ -92,4 +92,8 @@ Genzano di Roma si trova su un territorio collinare di origine vulcanica, con ve
 
 - [Geopop](https://www.geopop.it/) — frane e alluvioni spiegate in modo accessibile. Non è una fonte istituzionale: in caso di allerta consulta sempre i bollettini ufficiali.
 
+**Approfondimenti video**
+
+- [Un funzionario di Protezione Civile spiega come funziona una barriera anti-esondazione](https://www.localteam.it/video/ravenna-funzionario-protcivile-spiega-funzionamento-barriera) — come si difende un territorio dalle piene (Local Team).
+
 {{< chi-chiamare >}}
