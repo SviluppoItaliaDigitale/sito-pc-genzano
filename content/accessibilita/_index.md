@@ -4,7 +4,7 @@ description: "Dichiarazione di accessibilità AGID: stato di conformità, conten
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-12"
+dataUltimaRevisione: "2026-05-22"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
@@ -24,15 +24,15 @@ Il sito è **parzialmente conforme** ai requisiti previsti dalla **WCAG 2.2 live
 - **SEO: 100/100** mediana stabile.
 - **Performance: 95/100** mediana stabile (LCP 2.3 s, TBT 70-130 ms, CLS 0.024-0.058 — Web Vitals tutti "Good").
 - **Contrasto colore WCAG AA**: tutti gli elementi testuali del sito hanno contrasto ≥ 4.5:1 verificato.
-- **Navigazione da tastiera**: l'intero sito è navigabile con Tab/Shift+Tab/Enter/Esc, nessuna trappola da tastiera.
+- **Navigazione da tastiera**: le pagine sono navigabili con Tab/Shift+Tab/Enter/Esc, senza trappole da tastiera. Sulle mini-app interattive (giochi, quiz, schede stampabili) la navigazione completa richiede JavaScript attivo.
 - **Focus visibile**: ogni elemento interattivo ha outline visibile (3px) al focus.
-- **Skip link**: "Vai al contenuto principale" presente in cima a tutte le pagine.
-- **Landmark ARIA**: header/nav/main/footer presenti su tutte le pagine.
+- **Skip link**: "Vai al contenuto principale" presente in cima alle pagine generate dal sito; sulle mini-app interattive è fornito via JavaScript insieme al resto dell'intestazione.
+- **Landmark ARIA**: header/nav/main/footer presenti nativamente sulle pagine generate dal sito; sulle mini-app interattive (giochi, quiz, schede stampabili) sono iniettati via JavaScript e richiedono quindi JavaScript attivo.
 - **Alt text**: tutte le immagini informative hanno descrizione testuale, le decorative hanno `alt=""`.
 - **Lingua dichiarata**: ogni pagina dichiara `<html lang>` correttamente, anche per le 7 traduzioni.
 - **`<th scope="col">` automatico**: tutte le 400+ tabelle Markdown del sito sono rese con intestazioni accessibili.
 - **Pittogrammi standardizzati**: 46 segnali ISO 7010 + 125 ARASAAC integrati per supportare comprensione cognitiva (bambini, anziani, italiano L2, persone con disabilità cognitive).
-- **TTS "Leggi ad alta voce"** nativo (Web Speech API) attivo su tutte le pagine non legali e funzionali.
+- **TTS "Leggi ad alta voce"** nativo (Web Speech API) attivo sulle pagine editoriali del sito (escluse le pagine legali e puramente funzionali).
 - **Toolbar di accessibilità** utente con 11 preferenze persistenti (dimensione testo, contrasto invertito, scala di grigi, font ad alta leggibilità, spaziatura, animazioni, evidenza link, cursore grande, ecc.).
 - **Selettore velocità TTS** (lento/normale/veloce) persistito in `localStorage`.
 - **Hreflang + `<html lang>` dinamico**: le 7 traduzioni dichiarano correttamente la lingua nel markup.
