@@ -3482,8 +3482,13 @@ html.a11y-contrast-invert .tts-fallback-msg strong {
    il triangolino non punterebbe più correttamente al termine. */
 .gloss-popover::before { display: none; }
 .gloss-popover.is-flipped-up {
-  top: auto;
-  bottom: calc(100% + 6px);
+  /* Posizione gestita INTERAMENTE dal JS via inline top/left (position: fixed).
+     NON reimpostare top/bottom qui: con `top` inline (px) + `bottom` CSS su un
+     elemento fixed il box viene stirato fra le due coordinate, l'altezza si
+     rompe e il testo esce dallo sfondo opaco → bleed-through con la pagina
+     (bug del 22/05/2026, popover aperto verso l'alto su termini in fondo pagina).
+     Lasciamo `bottom: auto` esplicito per neutralizzare regole ereditate. */
+  bottom: auto;
 }
 .gloss-popover.is-flipped-up::before {
   top: auto;
