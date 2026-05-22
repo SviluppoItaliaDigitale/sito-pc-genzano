@@ -13,9 +13,9 @@ allegati: []
 draft: false
 ---
 
-Il **30 e 31 maggio 2026** torna a Genzano la **22ª Infiorata dei Ragazzi**, l'edizione dedicata alle bambine e ai bambini delle scuole della città. Il tappeto di fiori si realizza su **via Bruno Buozzi** (l'antica via Sforza), la stessa strada della prima Infiorata.
+Il **30 e 31 maggio 2026** torna a Genzano la **22ª Infiorata dei Ragazzi**, l'edizione dedicata alle bambine e ai bambini delle scuole della città. Il tappeto di fiori copre **via Bruno Buozzi** (l'antica via Sforza), la stessa strada della prima Infiorata.
 
-Il tema di quest'anno è **«Inno al Creato: il Cantico delle Creature»**, un omaggio a San Francesco d'Assisi nell'ottavo centenario della morte. I quadri sono realizzati dalle alunne e dagli alunni di tutte le scuole, guidati dall'**Associazione Accademia dei Maestri Infioratori** e dagli insegnanti.
+Il tema di quest'anno è **«Inno al Creato: il Cantico delle Creature»**, omaggio a San Francesco d'Assisi nell'ottavo centenario della morte. I quadri sono realizzati dagli alunni di tutte le scuole, con la guida dell'**Associazione Accademia dei Maestri Infioratori** e degli insegnanti.
 
 {{< foto src="/images/comune-infiorata-ragazzi-2026.webp"
          alt="Locandina della 22ª Infiorata dei Ragazzi di Genzano 2026: illustrazione colorata con bambini, una volpe, uccelli e un sole, su sfondo verde, con le date 30 e 31 maggio 2026"
@@ -31,11 +31,16 @@ Il programma completo è pubblicato dal Comune di Genzano di Roma.
 
 ## Il Gruppo a supporto dell'evento
 
-Il **Gruppo Comunale Volontari di Protezione Civile** è presente durante la manifestazione **a supporto della popolazione**, sulla base del Piano Comunale di Protezione Civile e del coordinamento con il Comune e con le altre componenti del sistema di soccorso.
+Il **Gruppo Comunale Volontari di Protezione Civile** è presente durante la manifestazione a supporto della popolazione. Agisce su coordinamento del Comune e delle altre componenti del sistema di Protezione Civile, nel quadro del Piano Comunale.
 
-In concreto, il Gruppo si occupa di **assistenza alle persone** (in particolare bambini, anziani e persone fragili), **informazione al pubblico** sui percorsi e gli accessi alle aree dell'evento, **prima assistenza** in raccordo con il 118 e **collegamento radio** con la centrale di coordinamento.
+Le attività del Gruppo durante l'evento:
 
-Il supporto del Gruppo **non comprende la regolazione del traffico né servizi di polizia stradale**: sono compiti di competenza esclusiva delle Forze dell'Ordine e della Polizia Locale, come stabilito dagli **articoli 11 e 12 del Codice della Strada** (D.Lgs. 285/1992) e ribadito dalla [Circolare del 6 agosto 2018 del Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) sulle manifestazioni pubbliche. È vietato anche l'uso delle palette dirigitraffico.
+- **Assistenza alle persone** — in particolare bambini, anziani e persone fragili.
+- **Informazione al pubblico** — percorsi e accessi alle aree dell'evento.
+- **Prima assistenza** — in raccordo con il 118.
+- **Collegamento radio** — con la centrale di coordinamento.
+
+Il volontariato di Protezione Civile **non può svolgere la regolazione del traffico né servizi di polizia stradale**: sono compiti di competenza esclusiva delle Forze dell'Ordine e della Polizia Locale, ai sensi degli **articoli 11 e 12 del Codice della Strada** (D.Lgs. 285/1992) e della [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/). È vietato anche l'uso delle palette dirigitraffico.
 
 Il Gruppo **non è attivabile direttamente dai cittadini**: in caso di emergenza il riferimento resta sempre il **112**.
 
