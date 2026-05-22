@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Perché si fanno le esercitazioni di Protezione
 scadenza: ""
 area: "Italia"
 allegati: []
+versione_facile: "2026-05-26-iso-22398-esercitazioni-protezione-civile-facile"
 draft: false
 ---
 

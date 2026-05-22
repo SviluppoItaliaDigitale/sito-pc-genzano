@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Quei segnali che vediamo ovunque: ISO 7010 spie
 scadenza: ""
 area: "Italia"
 allegati: []
+versione_facile: "2026-06-09-iso-7010-segnaletica-sicurezza-facile"
 draft: false
 ---
 

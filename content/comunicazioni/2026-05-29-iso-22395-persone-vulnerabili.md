@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Nessuno indietro: ISO 22395 e il supporto inclu
 scadenza: ""
 area: "Italia"
 allegati: []
+versione_facile: "2026-05-29-iso-22395-persone-vulnerabili-facile"
 draft: false
 ---
 
