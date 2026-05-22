@@ -122,6 +122,32 @@ Il sito è progettato per facilitare la consultazione da computer, tablet e smar
 - evita, dove possibile, testi troppo lunghi o tecnici;
 - rispetta le preferenze di sistema per movimento ridotto e tema colore (`prefers-reduced-motion`, `prefers-color-scheme`).
 
+## Criteri AAA soddisfatti oltre l'obbligo
+
+Il livello di conformità richiesto per i siti della Pubblica Amministrazione è **WCAG 2.2 AA**, ed è quello che il sito persegue. Il livello **AAA** non è un obbligo di legge e — come precisa lo stesso W3C — non è raccomandato come requisito per un intero sito, perché alcuni criteri AAA non sono soddisfacibili per certi tipi di contenuto. Tuttavia il sito **soddisfa già diversi criteri di livello AAA**, che dichiariamo qui per trasparenza. Non costituiscono una dichiarazione di conformità AAA complessiva.
+
+**Criteri AAA verificati come soddisfatti:**
+
+- **2.4.8 Posizione** — ogni pagina mostra un percorso di navigazione (breadcrumb) che indica dove ci si trova nel sito.
+- **2.4.10 Intestazioni di sezione** — i contenuti sono organizzati con intestazioni di sezione ordinate (H2/H3).
+- **3.1.3 Parole inusuali** — il glossario inline con finestra di approfondimento spiega i termini tecnici alla prima occorrenza.
+- **3.1.4 Abbreviazioni** — lo stesso glossario scioglie le sigle (DPC, COC, IT-alert, NUE, ecc.).
+- **2.3.2 Tre lampi** — nessun contenuto del sito lampeggia.
+- **2.5.6 Meccanismi di input simultanei** — il sito si usa indifferentemente con mouse, tastiera o touch, senza vincolare a un solo metodo.
+
+**Criteri AAA soddisfatti in parte (oltre l'AA, ma non sull'intero sito):**
+
+- **1.4.6 Contrasto migliorato (7:1)** — il **testo principale di lettura** è già ben oltre i 7:1: corpo del testo 17,4:1, blu istituzionale di titoli e link 12,6:1, testo informativo 7,56:1. Restano sotto la soglia 7:1 — pur rispettando l'AA 4,5:1 — solo elementi accessori: alcuni badge di categoria, le barre di allerta colorate e il testo secondario.
+- **1.4.8 Presentazione visiva** — la *Modalità lettura* e i cinque contrasti selezionabili del pannello di accessibilità coprono la maggior parte dei requisiti (sfondo/testo scelti dall'utente, riga di ~65 caratteri, interlinea aumentata, allineamento a sinistra).
+- **3.1.5 Livello di lettura** — i contenuti più critici (allerte, autoprotezione, procedure) hanno una **versione in italiano semplice (A2 CEFR)** affiancata; non ancora su tutti gli articoli.
+
+**Criteri AAA che il sito sceglie consapevolmente di non perseguire** (per non confliggere con l'identità istituzionale o per limiti oggettivi):
+
+- **1.4.6 Contrasto 7:1 su tutti gli elementi** — la palette istituzionale dei badge e delle allerte è calibrata sull'AA (4,5:1); portarla a 7:1 ne snaturerebbe i colori riconoscibili.
+- **1.4.9 Immagini di testo (nessuna eccezione)** — le copertine degli articoli riportano il titolo come immagine tipografica, scelta di identità visiva. Il titolo è comunque sempre presente anche come testo reale nella pagina.
+- **2.5.5 Dimensione target (44px)** — alcuni controlli secondari (filtri dell'archivio, bottoni compatti) sono sotto i 44px; è invece soddisfatto il criterio AA 2.5.8 (24px minimo).
+- **1.2.6 Lingua dei segni (LIS) per tutti i contenuti** — il sito offre un hub dedicato di video in LIS, ma non un'interpretazione LIS per ogni contenuto audio/video.
+
 ## Strumenti di accessibilità del sito
 
 In ogni pagina, in basso a sinistra, trovi un pulsante rotondo blu con l'icona di accessibilità. Aprendo il pannello puoi:
