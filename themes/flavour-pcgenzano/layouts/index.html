@@ -9,8 +9,10 @@
 {{ $emergenza := .Site.Data.emergenza }}
 {{ $isEmergenza := and $emergenza $emergenza.attiva }}
 
-{{/* ── BANNER EMERGENZA (se attiva, sopra tutto) ── */}}
-{{ partial "emergency-banner.html" . }}
+{{/* ── BANNER EMERGENZA ──
+     Renderizzato SITE-WIDE da baseof.html (subito dopo la navbar, fuori da
+     <main>), così compare su ogni pagina durante un'emergenza, non solo qui.
+     NON va richiamato di nuovo qui: creerebbe un doppione in homepage. */}}
 
 {{/* ── BARRA NUMERI EMERGENZA ── */}}
 {{ partial "numbers-emergency.html" . }}
