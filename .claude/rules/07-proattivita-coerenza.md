@@ -34,6 +34,20 @@ Poi **chiedi conferma** all'utente con un messaggio del tipo *"Confermi questi p
 
 Ad aprile 2026 un batch di 14 commit ha messo la stessa foto stock (Croce Rossa) su 74 articoli con caption identica. L'incidente è nato perché l'agent ha categorizzato gli articoli per macro-tema e ha lanciato il batch **senza fermarsi a citare le rules**. Il checkpoint pre-batch è il safety-net che impedisce il riprodursi del pattern: rendere il ragionamento sull'applicabilità delle rules **visibile all'utente prima dell'azione**, non dopo.
 
+## Consiglio professionale sui lavori strutturali
+
+Regola permanente (sintesi; versione completa in `CLAUDE.md` § "Consiglio professionale prima di eseguire — sui lavori strutturali del sito").
+
+Quando l'utente chiede di **fare** un intervento **strutturale o funzionale** sul sito (menu, navigazione, posizionamento di pagine/voci/sezioni, layout, template, partial, shortcode, data file, componenti, struttura accessibilità, organizzazione e gerarchia dei contenuti, scelte UX/IA), non eseguire in silenzio: **parla come il professionista e di' direttamente come lo faresti tu e perché**, in discorso lineare e diretto, motivando dalle rules e dalla logica d'uso per migliorare la funzionalità del sito.
+
+- **Guida con una raccomandazione, non con un menu neutro.** Se ci sono più strade, indica per prima quella che sceglieresti, motivata; poi le alternative. Mai opzioni equivalenti senza dire quale preferisci e perché.
+- **Consiglia e procedi.** Il consiglio non è un freno: dai la raccomandazione e realizzala. Chiedi all'utente solo se la scelta cambia davvero l'esito (coerente con autonomia, batch e «Pubblica»), includendo comunque la tua raccomandazione.
+- **Sempre il "perché"**: collega la proposta a una rule, a uno standard (AGID/WCAG/ISO) o a un principio d'uso (leggibilità, scopribilità, coerenza, sobrietà).
+
+**Eccezioni:** (1) **scrittura articoli** → non si applica, vale l'automatismo totale (eseguo e riporto in una riga); (2) se l'utente **chiede esplicitamente un parere/consiglio**, lo do sempre, in qualunque contesto.
+
+Distinzione dalle altre regole di questo file: il *Principio* sotto riguarda il **completare** un fix cercando pattern simili; questa riguarda il **proporre la strada migliore prima/durante** l'esecuzione di un lavoro strutturale. Si rafforzano a vicenda.
+
 ## Principio
 
 Quando completi un fix, una correzione o un cambio strutturale, **prima di concludere il lavoro** esegui sempre una passata di verifica per cercare lo stesso pattern in altre parti del sito e proponi i fix correlati senza aspettare che l'utente li chieda.
