@@ -12,6 +12,13 @@ dataUltimaRevisione: "2026-05-13"
 
 Questa pagina spiega cos'è l'**Area Volontari** e ti porta alla piattaforma esterna su cui i volontari del Gruppo consultano turni, attivazioni, comunicazioni interne e moduli.
 
+<div class="text-center my-4">
+<a href="https://activepager.com/auth/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+  <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Accedi alla piattaforma Activepager
+</a>
+<p class="small text-muted mt-2 mb-0">Accesso rapido riservato ai volontari. Apre il sito esterno <strong>activepager.com</strong> in una nuova scheda. <a href="#cosa-viene-trasferito-al-momento-del-reindirizzamento">Quali dati vengono trasferiti</a>.</p>
+</div>
+
 ## A chi è riservata
 
 L'Area Volontari è **riservata ai volontari iscritti** al Gruppo Comunale di Protezione Civile di Genzano di Roma. Non è uno strumento per il cittadino. Le credenziali sono distribuite dalla segreteria al momento dell'iscrizione, dopo la formazione di base.
