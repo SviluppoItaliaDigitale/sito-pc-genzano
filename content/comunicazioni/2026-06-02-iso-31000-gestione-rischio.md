@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Cos'è davvero un rischio? ISO 31000 spiegato a
 scadenza: ""
 area: "Italia"
 allegati: []
+versione_facile: "2026-06-02-iso-31000-gestione-rischio-facile"
 draft: false
 ---
 

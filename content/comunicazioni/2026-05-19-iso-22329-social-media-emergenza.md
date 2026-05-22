@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Social media in emergenza: cosa dice lo standar
 scadenza: ""
 area: "Lazio"
 allegati: []
+versione_facile: "2026-05-19-iso-22329-social-media-emergenza-facile"
 draft: false
 ---
 

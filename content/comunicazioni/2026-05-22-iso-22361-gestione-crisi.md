@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Quando l'emergenza diventa crisi, lo standard I
 scadenza: ""
 area: "Italia"
 allegati: []
+versione_facile: "2026-05-22-iso-22361-gestione-crisi-facile"
 draft: false
 ---
 
