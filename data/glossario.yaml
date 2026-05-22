@@ -684,12 +684,12 @@
   definizione: "Insieme di interventi che riducono gli effetti di un evento dannoso (es. argini, edifici antisismici). Distinta dalla prevenzione, che mira a evitare l'evento."
   link: "/glossario/#mitigazione"
 
-- id: esposizione
-  termine: "Esposizione"
-  varianti:
-    - "esposizione"
-  definizione: "Quantità e valore di persone, edifici e beni presenti in un'area a rischio. Insieme a pericolosità e vulnerabilità è una delle tre componenti del rischio."
-  link: "/glossario/#esposizione"
+# NB: la voce "esposizione" è stata RIMOSSA dall'aggancio inline il 22/05/2026.
+# La parola "esposizione" è troppo polisemica (mostra, esposizione mezzi/bozzetti)
+# e il matcher inline, agganciando la prima occorrenza, mostrava la definizione
+# di rischio anche su "esposizione dei bozzetti" / "esposizione grandi mezzi".
+# Il termine di rischio resta definito nella pagina /glossario/#esposizione.
+# Non reinserirlo qui con la variante nuda "esposizione".
 
 - id: triage
   termine: "Triage"
