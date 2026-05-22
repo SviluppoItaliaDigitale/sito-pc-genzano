@@ -13,9 +13,9 @@ allegati: []
 draft: false
 ---
 
-**Domenica 24 maggio 2026, dalle 10:00 alle 18:00**, a **Cava dei Selci** (Comune di Marino) si tiene l'**esposizione dei grandi mezzi di soccorso**. L'appuntamento è in **via Pajella Catullo**, vicino al Parco della Pace, all'interno del programma del *Marino Village*.
+**Domenica 24 maggio 2026, dalle 10:00 alle 18:00**, a **Cava dei Selci (Marino)** si tiene l'**esposizione dei grandi mezzi di soccorso**. Appuntamento in **via Pajella Catullo**, vicino al Parco della Pace, nel programma del *Marino Village*.
 
-L'iniziativa è organizzata dalla **Protezione Civile del Comune di Marino**. Tra le squadre presenti c'è anche il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, insieme ai gruppi di **Albano, Ariccia e Nemi**.
+L'iniziativa è organizzata dalla **Protezione Civile del Comune di Marino**. Partecipano i gruppi di **Albano, Ariccia, Genzano di Roma e Nemi**.
 
 {{< foto src="/images/comune-marino-esposizione-mezzi-2026.webp"
          alt="Locandina del Comune di Marino per l'esposizione dei grandi mezzi di soccorso del 24 maggio 2026: fotografie di mezzi e volontari della Protezione Civile (Marino, Nemi, Albano) con data, orario e luogo dell'evento"
@@ -25,11 +25,11 @@ L'iniziativa è organizzata dalla **Protezione Civile del Comune di Marino**. Tr
 
 L'esposizione fa conoscere da vicino il lavoro dei volontari e i veicoli speciali usati nelle emergenze. Dietro ogni intervento c'è uno sforzo logistico, una tecnologia e una capacità di risposta che spesso restano invisibili: vederli da vicino aiuta a capirli.
 
-Durante la giornata sono previste anche **attività dedicate ai più piccoli**, pensate per avvicinare bambine e bambini ai temi della prevenzione e della sicurezza.
+Durante la giornata ci sono anche **attività per i più piccoli**: avvicinare bambine e bambini ai temi della prevenzione e della sicurezza.
 
 ## Una rete che cresce sui Castelli Romani
 
-La presenza dei gruppi di Albano, Ariccia, Genzano, Marino e Nemi mostra una collaborazione sempre più solida tra i Comuni del territorio. Lavorare in rete è la forza del sistema di Protezione Civile: in caso di emergenza, le squadre dei diversi Comuni si conoscono già e operano insieme.
+I cinque gruppi dei Castelli Romani — Albano, Ariccia, Genzano, Marino e Nemi — mostrano una collaborazione sempre più solida. Lavorare in rete è la forza del sistema di Protezione Civile: in caso di emergenza, le squadre si conoscono già e operano insieme.
 
 Per il Gruppo di Genzano è anche un'occasione di **divulgazione**: spiegare ai cittadini come funziona la Protezione Civile e perché la prevenzione riguarda tutti.
 
