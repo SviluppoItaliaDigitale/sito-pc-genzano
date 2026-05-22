@@ -28,6 +28,10 @@ L'evento attira decine di migliaia di visitatori da tutta Italia e dall'estero, 
     pc_presente="sì, presidio del Gruppo Comunale lungo il percorso"
 >}}
 
+{{< foto src="/images/comune-infiorata-genzano-2026.webp"
+         alt="Locandina della 248ª Tradizionale Infiorata di Genzano 2026: illustrazione di via Italo Belardi ricoperta dal tappeto di fiori, con colombe bianche, le date 13, 14 e 15 giugno e il tema dedicato agli 80 anni della Repubblica italiana"
+         caption="Locandina ufficiale della 248ª Tradizionale Infiorata di Genzano di Roma, dal 13 al 15 giugno 2026. Tema: «Fiorita nella pace: 80 anni della Repubblica italiana». Immagine: Comune di Genzano di Roma." >}}
+
 ## Cosa succede in città
 
 La via Italo Belardi viene **chiusa al traffico** per consentire la realizzazione dei quadri floreali. Gli infioratori lavorano nelle ore notturne tra sabato e domenica per comporre i disegni con petali e materiali naturali. Il tappeto è visitabile dalla domenica mattina, quando viene attraversato dalla processione del Corpus Domini, fino al lunedì sera quando la festa si conclude con lo "spallamento" dei bambini che attraversano l'opera.
