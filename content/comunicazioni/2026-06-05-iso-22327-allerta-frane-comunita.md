@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Frane e allerta locale: ISO 22327 e il ruolo de
 scadenza: ""
 area: "Castelli Romani"
 allegati: []
+versione_facile: "2026-06-05-iso-22327-allerta-frane-comunita-facile"
 draft: false
 ---
 

@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Quando il clima cambia, cambia anche la PC: ISO
 scadenza: ""
 area: "Italia"
 allegati: []
+versione_facile: "2026-06-12-iso-14090-adattamento-clima-facile"
 draft: false
 ---
 

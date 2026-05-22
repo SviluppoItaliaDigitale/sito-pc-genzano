@@ -10,6 +10,7 @@ image_alt: "Cover dell'articolo: Come dovrebbe funzionare un sistema di allerta 
 scadenza: ""
 area: "Italia"
 allegati: []
+versione_facile: "2026-05-15-iso-22322-public-warning-it-alert-facile"
 draft: false
 ---
 
