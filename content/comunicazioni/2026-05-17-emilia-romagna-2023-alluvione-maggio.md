@@ -103,3 +103,7 @@ Fonti istituzionali:
 - [Dipartimento di Protezione Civile](https://www.protezionecivile.gov.it/).
 - [Autorità di Bacino Distrettuale del Fiume Po — PGRA](https://www.adbpo.it/).
 - [ISPRA — Dissesto idrogeologico in Italia](https://www.isprambiente.gov.it/).
+
+Approfondimenti video:
+
+- [La Val di Zena a nove mesi dall'alluvione: immagini dal drone](https://www.localteam.it/video/la-val-di-zena-a-9-mesi-dallultima-alluvione-immagini-dal-drone) — riprese documentarie delle ferite lasciate sul territorio dalle alluvioni del 2023 (Local Team).
