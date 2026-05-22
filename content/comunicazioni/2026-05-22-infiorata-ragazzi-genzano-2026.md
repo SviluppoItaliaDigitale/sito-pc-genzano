@@ -21,13 +21,26 @@ Il tema di quest'anno è **«Inno al Creato: il Cantico delle Creature»**, omag
          alt="Locandina della 22ª Infiorata dei Ragazzi di Genzano 2026: illustrazione colorata con bambini, una volpe, uccelli e un sole, su sfondo verde, con le date 30 e 31 maggio 2026"
          caption="Locandina ufficiale della 22ª Infiorata dei Ragazzi di Genzano di Roma, 30 e 31 maggio 2026. Immagine: Comune di Genzano di Roma." >}}
 
-## Il programma in breve
+## Programma della manifestazione
 
-- **Venerdì 29 maggio** — nel cortile comunale inizia lo *"spelluccamento"* dei fiori con le scuole dell'infanzia.
-- **Sabato 30 maggio** — preparazione delle essenze, disegni a terra e posa dei petali su via Bruno Buozzi, fino al completamento delle opere.
-- **Domenica 31 maggio** — in Piazza Tommaso Frasconi attività e giochi per i più piccoli, spettacolo di musica e danza delle scuole, consegna degli attestati e cerimonia dello *"spallamento"* da parte dei bambini.
+Di seguito il programma diffuso dal **Comune di Genzano di Roma**.
 
-Il programma completo è pubblicato dal Comune di Genzano di Roma.
+### Venerdì 29 maggio
+
+- **ore 16:30** — Cortile comunale: *"spelluccamento"* dei fiori con le scuole dell'infanzia.
+
+### Sabato 30 maggio
+
+- **ore 8:30** — Cortile del Palazzo Comunale: *"spelluccamento"* dei fiori e preparazione delle essenze e dei semi.
+- **dalla mattina** — Via Bruno Buozzi (già via Sforza): inizio dei disegni a terra e posa dei petali.
+- **ore 15:00-19:00** — completamento delle opere infiorate.
+
+### Domenica 31 maggio — Piazza Tommaso Frasconi
+
+- **ore 11:00** — *Piste di circo & Kapla Game*: percorsi colorati e costruzioni creative per grandi e piccoli.
+- **ore 16:30-18:00** — spettacolo di musica e danza degli Istituti Comprensivi "F. De Sanctis" e "G. Garibaldi".
+- **ore 18:00** — consegna degli attestati di partecipazione e, a seguire, cerimonia dello *"spallamento"* da parte dei bambini.
+- **ore 20:00** — Auditorium dell'Infiorata: *"La notte più bella"*, drammatizzazione teatrale sulla vita di San Francesco, a cura di UniAppia con la Compagnia Teatrale "InSeme".
 
 > ⚠️ **Per eventuali variazioni fai sempre riferimento al [sito ufficiale del Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).** Il Gruppo riporta il programma a titolo informativo e **non risponde di modifiche** decise dall'organizzazione.
 
