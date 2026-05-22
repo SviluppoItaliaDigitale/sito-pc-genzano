@@ -7,7 +7,7 @@ aliases:
   - /pianofamiliare.html
   - /pianofamiliare/
 toc: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-05-22"
 risorse_tema: "kit-emergenza"
 ---
 Compila il modulo per creare un piano di emergenza da stampare e conservare in casa. **I dati restano sul tuo computer**: non vengono inviati al sito, non vengono salvati online e non vengono trasmessi al Gruppo.
@@ -15,6 +15,12 @@ Compila il modulo per creare un piano di emergenza da stampare e conservare in c
 Un piano familiare aiuta tutti a sapere cosa fare se non c'è tempo per decidere con calma. È utile soprattutto quando in famiglia ci sono bambini, anziani, persone con disabilità, terapie da seguire o animali domestici.
 
 > Compila il piano insieme alla famiglia. Rileggilo almeno una volta l'anno e aggiornalo quando cambiano casa, scuola, lavoro, numeri di telefono, farmaci, ausili o composizione del nucleo familiare.
+
+<div class="card border-primary shadow-sm p-3 mb-4" role="note">
+
+**Non sai da dove partire?** Prima di compilare il piano, scopri **quanto sei già preparato**: il [quiz "Quanto sei preparato?"](/quiz-preparazione/) ti fa qualche domanda e ti restituisce un punteggio con i consigli su cosa migliorare. È il modo più veloce per capire cosa ti manca, prima di mettere nero su bianco il tuo piano.
+
+</div>
 
 ## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>Perché serve un piano familiare {#perche-serve-piano-familiare}
 
@@ -311,6 +317,7 @@ function stampaPiano(){
 
 ## Vedi anche
 
+- [Quanto sei preparato? (quiz)](/quiz-preparazione/) — verifica in pochi minuti il tuo livello di preparazione e ricevi consigli su cosa migliorare
 - [Schede "1 minuto per proteggerti"](/schede-1-minuto/) — sei azioni concrete di autoprotezione in un minuto, stampabili A5 per casa e bacheca
 - [Rischi e prevenzione](/rischi-prevenzione/) — i rischi del territorio di Genzano
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — cosa preparare per casa, auto ed evacuazione
