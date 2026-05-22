@@ -183,6 +183,23 @@ Ad aprile 2026 si è scoperto che Hugo, con due articoli a `date: AAAA-MM-GG` id
 - Verifica sempre ortografia, grammatica, punteggiatura e accenti.
 - Se il testo originale non rispetta queste regole, riscrivilo prima di proporre pubblicazione.
 
+## Programmi di eventi — disclaimer obbligatorio "fai riferimento al sito ufficiale"
+
+🔴 **Ogni articolo che riporta il programma, il calendario o gli orari di un evento organizzato da un ente terzo** (Comune di Genzano di Roma, Comune di Marino, parrocchie, associazioni, ecc.) **DEVE includere un disclaimer** che:
+
+1. invita a fare **sempre riferimento al sito ufficiale dell'ente organizzatore** per eventuali variazioni al programma;
+2. chiarisce che il Gruppo riporta il programma **a titolo informativo** e **non risponde di modifiche** decise dall'organizzazione.
+
+**Formato** (callout blockquote, posizionato vicino al programma/calendario):
+
+```markdown
+> ⚠️ **Per eventuali variazioni fai sempre riferimento al [sito ufficiale del Comune di <organizzatore>](URL).** Il Gruppo riporta il programma a titolo informativo e **non risponde di modifiche** decise dall'organizzazione.
+```
+
+**Il riferimento è il sito dell'ente che ORGANIZZA l'evento**: Comune di Genzano (`https://www.comune.genzanodiroma.roma.it/`) per gli eventi di Genzano, Comune di Marino (`https://www.comune.marino.rm.it/`) per quelli di Marino, ecc. Non il nostro sito.
+
+**Why:** i programmi degli eventi cambiano spesso fino all'ultimo momento e non sono sotto il controllo del Gruppo. Il Gruppo non deve assumersi responsabilità per cambi che non gestisce. Richiesto dall'utente il 22/05/2026 dopo l'integrazione dei programmi delle Infiorate. Vale anche quando il programma è "in aggiornamento" sul sito dell'ente.
+
 ## Sincronizzazione automatica con gli aggiornamenti AGID
 
 Le linee guida AGID e Designers Italia **si aggiornano nel tempo**. Il sito ha un'automazione settimanale che monitora le 10 fonti ufficiali (Linee guida design PA, Designers Italia home + Writing Toolkit + Content Toolkit + UI Kit, Bootstrap Italia, Accessibilità AGID, Dichiarazione accessibilità, DPC) tramite hash SHA-256 con BeautifulSoup: workflow `.github/workflows/aggiorna-manuale.yml`, ogni lunedì 06:00 UTC.

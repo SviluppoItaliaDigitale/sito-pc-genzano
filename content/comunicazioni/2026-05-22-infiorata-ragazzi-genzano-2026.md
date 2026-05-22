@@ -29,6 +29,8 @@ Il tema di quest'anno è **«Inno al Creato: il Cantico delle Creature»**, omag
 
 Il programma completo è pubblicato dal Comune di Genzano di Roma.
 
+> ⚠️ **Per eventuali variazioni fai sempre riferimento al [sito ufficiale del Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).** Il Gruppo riporta il programma a titolo informativo e **non risponde di modifiche** decise dall'organizzazione.
+
 ## Il Gruppo a supporto dell'evento
 
 Il **Gruppo Comunale Volontari di Protezione Civile** è presente durante la manifestazione a supporto della popolazione. Agisce su coordinamento del Comune e delle altre componenti del sistema di Protezione Civile, nel quadro del Piano Comunale.
