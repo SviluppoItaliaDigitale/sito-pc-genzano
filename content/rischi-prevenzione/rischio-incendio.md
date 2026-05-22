@@ -89,4 +89,8 @@ Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani
 
 - [Geopop](https://www.geopop.it/) — come nascono e si propagano gli incendi. Non è una fonte istituzionale: in caso di allerta segui sempre i canali ufficiali.
 
+**Approfondimenti video**
+
+- [Grosso incendio boschivo sul monte Faeta, Canadair in volo](https://www.localteam.it/video/grosso-incendio-sul-monte-faeta-la-colonna-di-fumo-canadair-in-volo-1777562563138) — riprese documentarie di un vasto rogo boschivo e dell'intervento aereo di spegnimento (Local Team).
+
 {{< chi-chiamare >}}

@@ -109,6 +109,10 @@ Per i comportamenti completi vedi la pagina dedicata: [Rischio Sismico — cosa 
 - [ARPA Lazio](https://www.arpalazio.it/) — qualità dell'aria e monitoraggio ambientale regionale
 - [Dipartimento di Protezione Civile — Rischio vulcanico](https://www.protezionecivile.gov.it/it/rischio/rischio-vulcanico/) — quadro nazionale dei vulcani italiani
 
+**Approfondimenti video**
+
+- [Eruzione dell'Etna: un vulcanologo dell'INGV spiega il flusso lavico](https://www.localteam.it/video/eruzione-etna-vulcanolgo-ingv-flusso-lavico-ben-alimentato) — un esperto dell'Istituto Nazionale di Geofisica e Vulcanologia commenta una colata in corso (Local Team).
+
 ## <i class="bi bi-mortarboard-fill text-primary me-2" aria-hidden="true"></i>Approfondimenti per le scuole {#scuole}
 Sulle pagine dedicate ai docenti sono disponibili materiali specifici per fascia:
 
