@@ -118,6 +118,8 @@ Durante un'emergenza, la prima cosa da fare è seguire le comunicazioni ufficial
 
 Preparare un piano familiare aiuta anche i bambini. Sapere chi li viene a prendere, dove andare e quali numeri chiamare riduce paura e improvvisazione.
 
+Anche il tragitto casa-scuola fa parte della prevenzione: vedi la pagina [Sicurezza sullo scuolabus](/rischi-prevenzione/sicurezza-scuolabus/).
+
 ## Fonti e riferimenti
 
 - Dipartimento della Protezione Civile — norme di comportamento per i principali rischi;

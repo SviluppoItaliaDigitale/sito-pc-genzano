@@ -256,6 +256,193 @@
     '</footer>' +
     '<button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina" title="Torna su"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>';
 
+  /* ----------------------------------------------------------------
+     SOS 112 + Strumenti di accessibilità per le pagine statiche.
+     Sulle pagine Hugo questi componenti arrivano da baseof.html
+     (partial sos-112.html + accessibility-toolbar.html + a11y-toolbar.js).
+     Le pagine statiche (giochi, quizpc, formazionepc, schede stampabili,
+     abili-a-proteggere, ...) non passano da Hugo: senza questo blocco
+     restavano prive del pulsante SOS 112 e della toolbar a11y, a differenza
+     del resto del sito. Aggiunto dopo l'audit del 2026-05-22.
+     MARKUP DA TENERE ALLINEATO con i partial Hugo citati sopra.
+     ---------------------------------------------------------------- */
+  var SOS_HTML =
+    '<button type="button" id="sos-button" class="sos-button" aria-label="Chiama il numero unico di emergenza 112 (con conferma)" aria-haspopup="dialog" aria-controls="sos-modal">' +
+      '<span class="sos-icon" aria-hidden="true">SOS</span>' +
+      '<span class="sos-label">112</span>' +
+    '</button>' +
+    '<div id="sos-modal" class="sos-modal" role="dialog" aria-modal="true" aria-labelledby="sos-modal-title" aria-describedby="sos-modal-desc" hidden>' +
+      '<div class="sos-modal-backdrop" data-sos-close="true" aria-hidden="true"></div>' +
+      '<div class="sos-modal-dialog" role="document">' +
+        '<div class="sos-modal-header">' +
+          '<h2 id="sos-modal-title" class="sos-modal-title"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Stai per chiamare il <strong>112</strong></h2>' +
+        '</div>' +
+        '<div class="sos-modal-body">' +
+          '<p id="sos-modal-desc" class="sos-modal-desc">Il <strong>112</strong> è il <strong>Numero Unico di Emergenza</strong>: chiamalo <strong>solo se c\'è una vera emergenza</strong> (incidente, incendio, ferito grave, evento naturale in corso).</p>' +
+          '<p class="sos-modal-info">Se confermi, parte la chiamata. Una volta connesso, parla con calma: di\' <strong>cosa è successo</strong> e <strong>dove sei</strong>. Non riagganciare prima dell\'operatore.</p>' +
+          '<div class="sos-modal-warning"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Le chiamate al 112 per scherzo o per motivi non urgenti sono <strong>punite per legge</strong> (art. 658 Codice penale).</div>' +
+          '<p class="sos-modal-alt"><i class="bi bi-question-circle-fill" aria-hidden="true"></i> <strong>Non sei sicuro che sia un\'emergenza?</strong> Usa l\'<strong>assistente guidato</strong>: ti accompagna con domande semplici fino alla risposta giusta.</p>' +
+        '</div>' +
+        '<div class="sos-modal-footer">' +
+          '<button type="button" id="sos-modal-cancel" class="btn btn-outline-secondary btn-lg sos-modal-btn-cancel" data-sos-close="true"><i class="bi bi-x-lg me-1" aria-hidden="true"></i> Annulla</button>' +
+          '<a href="' + SITE_URL + '/assistente/" id="sos-modal-guide" class="btn btn-outline-primary btn-lg sos-modal-btn-guide"><i class="bi bi-question-circle-fill me-1" aria-hidden="true"></i> Cosa devo fare?</a>' +
+          '<a href="tel:112" id="sos-modal-call" class="btn btn-danger btn-lg sos-modal-btn-call"><i class="bi bi-telephone-fill me-1" aria-hidden="true"></i> Sì, chiama il 112</a>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+
+  var A11Y_HTML =
+    '<button type="button" id="a11yToolbarOpen" class="a11y-fab" aria-label="Apri strumenti di accessibilità" aria-haspopup="dialog" aria-controls="a11yDialog" title="Strumenti di accessibilità">' +
+      '<i class="bi bi-universal-access" aria-hidden="true"></i><span class="visually-hidden">Strumenti di accessibilità</span>' +
+    '</button>' +
+    '<div class="a11y-backdrop" id="a11yBackdrop" hidden></div>' +
+    '<div class="a11y-dialog" id="a11yDialog" role="dialog" aria-modal="true" aria-labelledby="a11yDialogTitle" hidden>' +
+      '<header class="a11y-dialog-header">' +
+        '<h2 id="a11yDialogTitle" class="a11y-dialog-title"><i class="bi bi-universal-access me-2" aria-hidden="true"></i> Strumenti di accessibilità</h2>' +
+        '<button type="button" id="a11yDialogClose" class="a11y-close" aria-label="Chiudi strumenti di accessibilità"><i class="bi bi-x-lg" aria-hidden="true"></i></button>' +
+      '</header>' +
+      '<div class="a11y-dialog-body">' +
+        '<p class="a11y-intro">Personalizza la lettura del sito. Le tue scelte vengono ricordate sul tuo dispositivo.</p>' +
+        '<fieldset class="a11y-section">' +
+          '<legend class="a11y-section-title"><i class="bi bi-fonts me-2" aria-hidden="true"></i>Testo</legend>' +
+          '<div class="a11y-control"><span class="a11y-control-label" id="a11yLblTextSize">Dimensione del testo</span>' +
+            '<div class="a11y-segments" role="radiogroup" aria-labelledby="a11yLblTextSize">' +
+              '<button type="button" class="a11y-seg" data-pref="textSize" data-value="0" aria-pressed="true">100%</button>' +
+              '<button type="button" class="a11y-seg" data-pref="textSize" data-value="1" aria-pressed="false">110%</button>' +
+              '<button type="button" class="a11y-seg" data-pref="textSize" data-value="2" aria-pressed="false">125%</button>' +
+              '<button type="button" class="a11y-seg" data-pref="textSize" data-value="3" aria-pressed="false">150%</button>' +
+            '</div></div>' +
+          '<div class="a11y-control"><span class="a11y-control-label" id="a11yLblTextAlign">Allineamento del testo</span>' +
+            '<div class="a11y-segments" role="radiogroup" aria-labelledby="a11yLblTextAlign">' +
+              '<button type="button" class="a11y-seg" data-pref="textAlign" data-value="default" aria-pressed="true">Predefinito</button>' +
+              '<button type="button" class="a11y-seg" data-pref="textAlign" data-value="left" aria-pressed="false">A sinistra</button>' +
+              '<button type="button" class="a11y-seg" data-pref="textAlign" data-value="justify" aria-pressed="false">Giustificato</button>' +
+            '</div></div>' +
+          '<div class="a11y-control"><span class="a11y-control-label" id="a11yLblFontFamily">Tipo carattere</span>' +
+            '<div class="a11y-segments a11y-segments-stack" role="radiogroup" aria-labelledby="a11yLblFontFamily">' +
+              '<button type="button" class="a11y-seg" data-pref="fontFamily" data-value="default" aria-pressed="true">Predefinito</button>' +
+              '<button type="button" class="a11y-seg" data-pref="fontFamily" data-value="readable" aria-pressed="false">Alta leggibilità</button>' +
+              '<button type="button" class="a11y-seg" data-pref="fontFamily" data-value="dyslexic" aria-pressed="false">Per dislessia (OpenDyslexic)</button>' +
+            '</div></div>' +
+          '<button type="button" class="a11y-toggle" data-pref="spacing" aria-pressed="false"><i class="bi bi-distribute-vertical me-2" aria-hidden="true"></i><span class="a11y-toggle-text">Spaziatura ampia (righe e lettere)</span><span class="a11y-toggle-state" aria-hidden="true">Off</span></button>' +
+          '<button type="button" class="a11y-toggle" data-pref="readingMode" aria-pressed="false"><i class="bi bi-book me-2" aria-hidden="true"></i><span class="a11y-toggle-text">Modalità lettura (sfondo crema + spaziatura)</span><span class="a11y-toggle-state" aria-hidden="true">Off</span></button>' +
+        '</fieldset>' +
+        '<fieldset class="a11y-section">' +
+          '<legend class="a11y-section-title"><i class="bi bi-volume-up-fill me-2" aria-hidden="true"></i>Lettura ad alta voce</legend>' +
+          '<div class="a11y-control"><span class="a11y-control-label" id="a11yLblTtsRate">Velocità di lettura</span>' +
+            '<div class="a11y-segments" role="radiogroup" aria-labelledby="a11yLblTtsRate">' +
+              '<button type="button" class="a11y-seg" data-pref="ttsRate" data-value="0.75" aria-pressed="false">Lenta</button>' +
+              '<button type="button" class="a11y-seg" data-pref="ttsRate" data-value="0.95" aria-pressed="true">Normale</button>' +
+              '<button type="button" class="a11y-seg" data-pref="ttsRate" data-value="1.15" aria-pressed="false">Veloce</button>' +
+            '</div></div>' +
+        '</fieldset>' +
+        '<fieldset class="a11y-section">' +
+          '<legend class="a11y-section-title"><i class="bi bi-eye-fill me-2" aria-hidden="true"></i>Visivo</legend>' +
+          '<div class="a11y-control"><span class="a11y-control-label" id="a11yLblContrast">Contrasto</span>' +
+            '<div class="a11y-segments a11y-segments-stack" role="radiogroup" aria-labelledby="a11yLblContrast">' +
+              '<button type="button" class="a11y-seg" data-pref="contrast" data-value="default" aria-pressed="true">Predefinito</button>' +
+              '<button type="button" class="a11y-seg" data-pref="contrast" data-value="high" aria-pressed="false">Alto (nero su bianco)</button>' +
+              '<button type="button" class="a11y-seg" data-pref="contrast" data-value="invert" aria-pressed="false">Invertito (bianco su nero)</button>' +
+              '<button type="button" class="a11y-seg" data-pref="contrast" data-value="yellow-black" aria-pressed="false">Giallo su nero</button>' +
+              '<button type="button" class="a11y-seg" data-pref="contrast" data-value="blue-cream" aria-pressed="false">Blu su crema</button>' +
+            '</div></div>' +
+          '<button type="button" class="a11y-toggle" data-pref="grayscale" aria-pressed="false"><i class="bi bi-circle-half me-2" aria-hidden="true"></i><span class="a11y-toggle-text">Scala di grigi</span><span class="a11y-toggle-state" aria-hidden="true">Off</span></button>' +
+          '<button type="button" class="a11y-toggle" data-pref="hideImages" aria-pressed="false"><i class="bi bi-image me-2" aria-hidden="true"></i><span class="a11y-toggle-text">Nascondi immagini decorative</span><span class="a11y-toggle-state" aria-hidden="true">Off</span></button>' +
+          '<button type="button" class="a11y-toggle" data-pref="pauseAnimations" aria-pressed="false"><i class="bi bi-pause-circle me-2" aria-hidden="true"></i><span class="a11y-toggle-text">Pausa animazioni</span><span class="a11y-toggle-state" aria-hidden="true">Off</span></button>' +
+        '</fieldset>' +
+        '<fieldset class="a11y-section">' +
+          '<legend class="a11y-section-title"><i class="bi bi-compass me-2" aria-hidden="true"></i>Orientamento</legend>' +
+          '<button type="button" class="a11y-toggle" data-pref="highlightLinks" aria-pressed="false"><i class="bi bi-link-45deg me-2" aria-hidden="true"></i><span class="a11y-toggle-text">Evidenzia tutti i link</span><span class="a11y-toggle-state" aria-hidden="true">Off</span></button>' +
+          '<button type="button" class="a11y-toggle" data-pref="bigCursor" aria-pressed="false"><i class="bi bi-cursor-fill me-2" aria-hidden="true"></i><span class="a11y-toggle-text">Cursore grande</span><span class="a11y-toggle-state" aria-hidden="true">Off</span></button>' +
+          '<a class="a11y-link-page" href="' + SITE_URL + '/accessibilita/"><i class="bi bi-info-circle me-2" aria-hidden="true"></i> Vai alla pagina Accessibilità del sito <i class="bi bi-arrow-right ms-auto" aria-hidden="true"></i></a>' +
+        '</fieldset>' +
+        '<fieldset class="a11y-section">' +
+          '<legend class="a11y-section-title"><i class="bi bi-square me-2" aria-hidden="true"></i>Pulsanti flottanti</legend>' +
+          '<button type="button" class="a11y-toggle" data-pref="hideAssistantFab" aria-pressed="false"><i class="bi bi-chat-dots me-2" aria-hidden="true"></i><span class="a11y-toggle-text">Nascondi pulsante Assistente virtuale</span><span class="a11y-toggle-state" aria-hidden="true">Off</span></button>' +
+          '<button type="button" class="a11y-toggle" data-pref="hideSosFab" aria-pressed="false"><i class="bi bi-telephone me-2" aria-hidden="true"></i><span class="a11y-toggle-text">Nascondi pulsante SOS 112</span><span class="a11y-toggle-state" aria-hidden="true">Off</span></button>' +
+        '</fieldset>' +
+        '<div class="a11y-status" role="status" aria-live="polite" id="a11yStatus"></div>' +
+      '</div>' +
+      '<footer class="a11y-dialog-footer">' +
+        '<button type="button" id="a11yReset" class="a11y-btn a11y-btn-secondary"><i class="bi bi-arrow-counterclockwise me-1" aria-hidden="true"></i> Reimposta tutto</button>' +
+        '<button type="button" id="a11yDialogCloseFooter" class="a11y-btn a11y-btn-primary"><i class="bi bi-check-lg me-1" aria-hidden="true"></i> Chiudi</button>' +
+      '</footer>' +
+    '</div>';
+
+  function wireSos() {
+    var btn = document.getElementById('sos-button');
+    var modal = document.getElementById('sos-modal');
+    var cancelBtn = document.getElementById('sos-modal-cancel');
+    var callBtn = document.getElementById('sos-modal-call');
+    if (!btn || !modal) return;
+    var lastFocused = null;
+    var focusableSel = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    function openModal() {
+      lastFocused = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setTimeout(function () { if (cancelBtn) cancelBtn.focus(); }, 30);
+      document.addEventListener('keydown', onKeyDown);
+    }
+    function closeModal() {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKeyDown);
+      if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    }
+    function onKeyDown(e) {
+      if (e.key === 'Escape') { e.preventDefault(); closeModal(); return; }
+      if (e.key === 'Tab') {
+        var focusables = modal.querySelectorAll(focusableSel);
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+    btn.addEventListener('click', openModal);
+    modal.querySelectorAll('[data-sos-close="true"]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        if (el.classList.contains('sos-modal-backdrop') && e.target !== el) return;
+        closeModal();
+      });
+    });
+    if (callBtn) callBtn.addEventListener('click', function () { setTimeout(closeModal, 800); });
+  }
+
+  function injectA11yAndSos() {
+    // Idempotente: se la pagina ha già SOS o toolbar (es. include propri), non duplico.
+    if (document.getElementById('sos-button') || document.getElementById('a11yToolbarOpen')) return;
+
+    var sosWrap = document.createElement('div');
+    sosWrap.innerHTML = SOS_HTML;
+    while (sosWrap.firstChild) document.body.appendChild(sosWrap.firstChild);
+    wireSos();
+
+    var a11yWrap = document.createElement('div');
+    a11yWrap.innerHTML = A11Y_HTML;
+    while (a11yWrap.firstChild) document.body.appendChild(a11yWrap.firstChild);
+
+    // CSS della toolbar (file dedicato, non in custom.css).
+    if (!document.querySelector('link[data-a11y-toolbar]')) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = SITE_URL + '/css/a11y-toolbar.css';
+      link.setAttribute('data-a11y-toolbar', '1');
+      document.head.appendChild(link);
+    }
+    // JS della toolbar: applica le preferenze salvate su <html> e fa il
+    // wireup del dialog appena iniettato. Gestisce da sé il caso DOM già
+    // pronto (else { onReady() }), quindi va bene caricarlo dopo il markup.
+    if (!document.querySelector('script[data-a11y-toolbar]')) {
+      var sc = document.createElement('script');
+      sc.src = SITE_URL + '/js/a11y-toolbar.js';
+      sc.setAttribute('data-a11y-toolbar', '1');
+      document.body.appendChild(sc);
+    }
+  }
+
   function injectChrome() {
     var main = document.querySelector('main') || document.getElementById('main-content');
     if (!main) return;
@@ -323,6 +510,9 @@
     // Si attiva SOLO se la pagina ha marker tipici di un'app interattiva
     // (schermate intro/game/end). Esclude pagine hub e statiche.
     aggiungiPulsanteEsciGioco();
+
+    // SOS 112 + toolbar accessibilità anche sulle pagine statiche (audit 2026-05-22).
+    injectA11yAndSos();
   }
 
   function aggiungiPulsanteEsciGioco() {

@@ -242,6 +242,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Scuole di Genzano e rischi locali</p>
   <p class="ms-card-desc">Riferimenti generali per famiglie e personale scolastico, da integrare con il piano di emergenza del singolo istituto.</p>
 </a>
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/sicurezza-scuolabus/">
+  <div class="ms-card-icon"><i class="bi bi-bus-front"></i></div>
+  <p class="ms-card-title">Sicurezza sullo scuolabus</p>
+  <p class="ms-card-desc">Cosa fare in emergenza durante il tragitto: regole per bambini, autista e genitori, e quando chiamare il 112.</p>
+</a>
 </div>
 
 <div class="ms-section"><span class="ms-section-icon" style="background:#7c3aed"><i class="bi bi-mortarboard-fill"></i></span><h2>Formazione e didattica</h2></div>
