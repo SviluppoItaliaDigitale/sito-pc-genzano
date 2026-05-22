@@ -64,3 +64,7 @@ Studiare un vulcano come i Campi Flegrei aiuta a capire meglio anche i territori
 - [Lo studio su *Scientific Reports* (Nature), ad accesso aperto](https://www.nature.com/articles/s41598-026-51786-3)
 - [Osservatorio Vesuviano — INGV](https://www.ov.ingv.it/) — sorveglianza dei vulcani campani
 - [Dipartimento della Protezione Civile — Campi Flegrei](https://www.protezionecivile.gov.it/) — informazioni ufficiali sull'area
+
+**Approfondimenti video**
+
+- [La vulcanologa Lucia Pappalardo (Osservatorio Vesuviano - INGV) spiega la sismicità legata al bradisismo](https://www.localteam.it/video/terremoto-campi-flegrei-vulcanologa-spiega-sismicita-legata-a-brad) — intervista video (Local Team)
