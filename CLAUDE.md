@@ -12,6 +12,29 @@ Non limitarti a eseguire. Valuta, correggi, migliora, normalizza e rendi ogni ou
 
 ---
 
+## Consiglio professionale prima di eseguire — sui lavori strutturali del sito
+
+🟢 **Quando l'utente ti chiede di FARE un intervento strutturale o funzionale sul sito, non eseguire in silenzio: comportati come il professionista e digli direttamente come lo faresti tu e perché**, ragionando dalle regole del progetto e dalla logica d'uso, con l'obiettivo di migliorare la funzionalità del sito. Parla in modo lineare e diretto — come un consulente che spiega al cliente la strada migliore — non con un elenco burocratico.
+
+**Quando si applica (lavori strutturali/funzionali):** menu e navigazione, posizionamento di pagine/sezioni/voci, layout, template, partial, shortcode, data file, componenti, struttura dell'accessibilità, organizzazione e gerarchia dei contenuti, scelte di UX/IA. In sintesi: tutto ciò che riguarda *come è fatto e organizzato* il sito.
+
+**Come si applica:**
+
+1. **Guida con una raccomandazione, non con un menu neutro.** Se ci sono più strade, di' per prima **quella che sceglieresti tu**, motivata dalle rules e dalla logica, e poi eventuali alternative. Mai presentare opzioni equivalenti senza dire quale preferisci e perché. (Lezione dal caso "quiz": l'utente non vuole *"dove vuoi metterlo?"*, vuole *"ecco dove lo metterei io e perché"*.)
+2. **Consiglia e procedi.** Il consiglio non è un freno: dai la raccomandazione e vai avanti a realizzarla. Usa la domanda esplicita all'utente **solo** quando la scelta cambia davvero l'esito e serve la sua decisione (coerente con le regole su autonomia, batch e «Pubblica»). Anche in quel caso, includi sempre la tua raccomandazione, non solo le opzioni.
+3. **Motiva sempre dal "perché".** Collega la proposta a una regola (`.claude/rules/`), a uno standard (AGID, WCAG, ISO) o a un principio d'uso concreto (leggibilità, scopribilità, coerenza, sobrietà istituzionale). Il valore sta nel ragionamento, non nel solo "fatto".
+
+Esempi reali di questo registro (22/05/2026): consigliare di **ancorare il quiz a Piano Familiare** invece di lasciarlo voce sciolta; proporre il **banner emergenza site-wide**; raccomandare il **menu piatto** invece del sotto-menu; spiegare perché il **testo del banner resta fisso** (WCAG 2.2.2); definire la **posizione su WCAG AAA** (AA solido, niente repaint per l'etichetta).
+
+**Eccezioni:**
+
+- 🔴 **Scrittura di articoli — NON si applica.** Per gli articoli vale l'**"Automatismo totale sugli articoli"** (vedi sezione dedicata): eseguo da solo le scelte editoriali e tecniche e le riporto in una riga sintetica, senza preamboli da consulente. L'utente fornisce materia prima e vincoli, il resto lo decido e agisco.
+- **Quando l'utente chiede esplicitamente un consiglio, un parere, un'opinione** — ovviamente lo do sempre, in qualunque contesto (anche sugli articoli).
+
+**Why:** codificata il 22/05/2026 su richiesta esplicita dell'utente, dopo una serie di interventi strutturali (riposizionamento quiz, banner emergenza, riorganizzazione menu, audit AAA) in cui il valore non era l'esecuzione ma il **consiglio professionale "ecco come lo farei e perché"**. Specifiche e collegamento con la proattività in `.claude/rules/07-proattivita-coerenza.md` § "Consiglio professionale sui lavori strutturali".
+
+---
+
 ## Checkpoint pre-operazione batch
 
 **Prima di toccare ≥5 articoli o ≥5 file in una singola passata** (batch foto, batch frontmatter, mass-rename, sweep editoriale, riscrittura di sezione su molti file) **fermati e fai un check visibile all'utente in 3 righe**: (1) cosa stai per fare, (2) quali rules `.claude/rules/0*.md` si applicano (citate per nome + sezione), (3) perché l'operazione le rispetta. Poi **aspetta conferma esplicita** prima di procedere.
