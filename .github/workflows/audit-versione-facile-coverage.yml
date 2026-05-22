@@ -1,0 +1,68 @@
+name: Audit copertura versione facile
+
+# Audit settimanale della copertura delle versioni "italiano semplice" (A2).
+# Scansiona content/comunicazioni/ e individua gli articoli che — per i criteri
+# editoriali del progetto (CLAUDE.md § "Automatismo totale" + manuale/parte-25
+# § 25.7) — dovrebbero avere una versione facile `<slug>-facile.md` ma ne sono
+# privi. Apre/aggiorna un'issue con l'elenco dei candidati per revisione
+# editoriale (la decisione finale resta umana: possibili falsi positivi).
+#
+# Nasce dopo l'audit del 22 maggio 2026 in cui l'intera serie ISO risultava
+# scoperta tranne il pilota: serve a far emergere i buchi senza dipendere dalla
+# memoria. Scaglionato lunedì 10:37 UTC, dopo l'audit glossario.
+
+on:
+  schedule:
+    - cron: '37 10 * * 1'   # Lunedì 10:37 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  audit-versione-facile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run coverage check
+        id: check
+        run: |
+          set -uo pipefail
+          OUTPUT=$(python3 scripts/check-versione-facile-coverage.py 2>/dev/null || true)
+          echo "$OUTPUT"
+          FIRST=$(echo "$OUTPUT" | head -1)
+          if [ "$FIRST" = "OK_NO_MISSING" ]; then
+            echo "has_missing=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_missing=true" >> "$GITHUB_OUTPUT"
+            echo "$OUTPUT" | tail -n +2 > /tmp/issue-body.md
+          fi
+
+      - name: Crea/aggiorna issue
+        if: steps.check.outputs.has_missing == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # Assicura l'esistenza della label dedicata (idempotente)
+          gh label create "versione-facile" \
+            --color "fbca04" \
+            --description "Copertura versioni italiano semplice A2" 2>/dev/null || true
+          TITLE="Versione facile: articoli candidati ancora scoperti"
+          EXISTING=$(gh issue list --label "automazione" --label "versione-facile" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body-file /tmp/issue-body.md
+          else
+            gh issue create \
+              --title "$TITLE" \
+              --body-file /tmp/issue-body.md \
+              --label "automazione" \
+              --label "versione-facile"
+          fi
+
+      - name: Nessun candidato scoperto
+        if: steps.check.outputs.has_missing == 'false'
+        run: echo "✓ Tutti gli articoli che qualificano hanno già la versione facile."
