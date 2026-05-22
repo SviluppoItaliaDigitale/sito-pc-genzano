@@ -91,9 +91,11 @@ sito-pc-genzano/
 
 La homepage ha due layout distinti controllati da `data/emergenza.json`:
 - `"attiva": false` → layout normale (hero → servizi → news → card rischi → link rapidi)
-- `"attiva": true` → layout emergenza (banner emergenza + azioni → hero compatto → news)
+- `"attiva": true` → layout emergenza (azioni → hero compatto → news)
 
 Non modificare questa logica senza valutare l'impatto su entrambe le modalità.
+
+**Banner emergenza SITE-WIDE (da 22 maggio 2026).** Il `partial "emergency-banner.html"` è chiamato in `_default/baseof.html` (subito dopo la navbar, **fuori** da `<main>` per non essere indicizzato da Pagefind), quindi quando `data/emergenza.json` ha `attiva: true` il banner compare su **ogni** pagina del sito, non solo in homepage — così chi atterra su una pagina interna durante un'emergenza vede comunque l'avviso. Esclusioni: la pagina lite `/emergenza/` (guard `{{ if ne .Type "emergenza" }}` in baseof, perché ha già la sua gestione interna del banner) e `/lanterna/` (standalone, non usa baseof). `index.html` **non** richiama più il partial (lo farebbe due volte). Il partial si auto-nasconde se l'emergenza non è attiva.
 
 ### Contenuti dinamici via data files
 
