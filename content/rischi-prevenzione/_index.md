@@ -25,6 +25,7 @@ Queste pagine aiutano a orientarsi in pochi minuti, anche senza conoscenze tecni
 
 - [Rischi principali in parole semplici](/rischi-prevenzione/rischi-in-parole-semplici/) — spiegazione accessibile per bambini, persone con bisogni cognitivi e parlanti italiano L2.
 - [Scuole di Genzano e rischi locali](/rischi-prevenzione/scuole-genzano-rischi-locali/) — riferimenti generali per famiglie e personale scolastico, da integrare con il piano di emergenza del singolo istituto.
+- [Sicurezza sullo scuolabus](/rischi-prevenzione/sicurezza-scuolabus/) — cosa fare in emergenza durante il tragitto: regole per bambini, autista e genitori.
 - [Kit di emergenza economico e progressivo](/rischi-prevenzione/kit-emergenza-economico-progressivo/) — come comporre il kit un pezzo alla volta, senza marchi né prodotti specifici.
 
 ## Principali rischi
